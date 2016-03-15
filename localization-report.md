@@ -5,13 +5,13 @@
  -------- | ----- 
  Total Files | 1910
 [ Handoff Failed Files ](#handoff-failed-list)| 5
-[ Handoff Success Files ](#handoff-success-list)| 1520
+[ Handoff Success Files ](#handoff-success-list)| 1518
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 0
 [ In Sync Handback Files ](#insync-handback-success-list)| 0
-[ Ignored Files ](#ignored-list)| 385
+[ Ignored Files ](#ignored-list)| 387
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
  Source File | Status | Details 
@@ -182,7 +182,6 @@
  [InTuneDocs\GetStarted\pilot.md](https://github.com/Microsoft/IntuneDocs-pr/blob/b7f349fd284235c77062c8daebddc7e603bdf349/InTuneDocs/GetStarted/pilot.md) | HandedOffSuccess | [Details](#e5e1b3ad1c59e01540392cc00dca04890b83a62d170)
  [InTuneDocs\GetStarted\policy-rollout.md](https://github.com/Microsoft/IntuneDocs-pr/blob/11091bc5fb451cfaf6eaa923eafe6df506324960/InTuneDocs/GetStarted/policy-rollout.md) | HandedOffSuccess | [Details](#a9dd55237160648a2a66ab4e1a5b2cbd3159e412171)
  [InTuneDocs\GetStarted\post-configuration-tasks.md](https://github.com/Microsoft/IntuneDocs-pr/blob/7e5c904508998a992d8e5c8493dd74dede87c556/InTuneDocs/GetStarted/post-configuration-tasks.md) | HandedOffSuccess | [Details](#34fd633cfd4bfe423815b5789093c88b08e00baa172)
- [InTuneDocs\GetStarted\previous-intune-releases.md](https://github.com/Microsoft/IntuneDocs-pr/blob/35871ed46a63620d61b81f06eba23f6afcac1090/InTuneDocs/GetStarted/previous-intune-releases.md) | HandedOffSuccess | [Details](#9819f41c85576bcb66c4290ec7779b8ed034edef173)
  [InTuneDocs\GetStarted\project-scope.md](https://github.com/Microsoft/IntuneDocs-pr/blob/b7f349fd284235c77062c8daebddc7e603bdf349/InTuneDocs/GetStarted/project-scope.md) | HandedOffSuccess | [Details](#9b3500f5e17e8aecc46712d08c6d05b0e95cb580174)
  [InTuneDocs\GetStarted\proof-of-concept.md](https://github.com/Microsoft/IntuneDocs-pr/blob/b7f349fd284235c77062c8daebddc7e603bdf349/InTuneDocs/GetStarted/proof-of-concept.md) | HandedOffSuccess | [Details](#0dee7ba0baccf2e3c2c56b7d34ccca3d9794ac1a175)
  [InTuneDocs\GetStarted\renew-a-symantec-code-signing-certificate.md](https://github.com/Microsoft/IntuneDocs-pr/blob/7e5c904508998a992d8e5c8493dd74dede87c556/InTuneDocs/GetStarted/renew-a-symantec-code-signing-certificate.md) | HandedOffSuccess | [Details](#dd7ba6417d8cd38d1eb07822aab05cef77000be3176)
@@ -198,7 +197,6 @@
  [InTuneDocs\GetStarted\specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md](https://github.com/Microsoft/IntuneDocs-pr/blob/762493412a3e240c14fcc8a9085d77cb0a8117cd/InTuneDocs/GetStarted/specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md) | HandedOffSuccess | [Details](#ba0bc3a5d9349bc1ae31afb3e2621bfa59ec59d8186)
  [InTuneDocs\GetStarted\start-a-microsoft-intune-trial-and-deploy-ios-pin-policy.md](https://github.com/Microsoft/IntuneDocs-pr/blob/7e5c904508998a992d8e5c8493dd74dede87c556/InTuneDocs/GetStarted/start-a-microsoft-intune-trial-and-deploy-ios-pin-policy.md) | HandedOffSuccess | [Details](#d686f3240763875d3f5bfee61c7b99ca90b996b6187)
  [InTuneDocs\GetStarted\TOC.md](https://github.com/Microsoft/IntuneDocs-pr/blob/6cbdd1be1bee7af43207951334a2389976f7fbdf/InTuneDocs/GetStarted/TOC.md) | HandedOffSuccess | [Details](#126a87ad4879ca2f4db6ae7ef53dd4d87c4e109e188)
- [InTuneDocs\GetStarted\what-s-new-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/6cbdd1be1bee7af43207951334a2389976f7fbdf/InTuneDocs/GetStarted/what-s-new-in-microsoft-intune.md) | HandedOffSuccess | [Details](#065a1bad4c74275963ebd768cad442f9b1367d1c190)
  [InTuneDocs\GetStarted\whats-new-in-microsoft-intune-december-2015.md](https://github.com/Microsoft/IntuneDocs-pr/blob/5de35c05884902678b29ee14bc89ddb3b446bfe1/InTuneDocs/GetStarted/whats-new-in-microsoft-intune-december-2015.md) | HandedOffSuccess | [Details](#2ad31e89c938b33afe0e375b36b0381c8b1e3731192)
  [InTuneDocs\GetStarted\whats-new-in-microsoft-intune-january-2106.md](https://github.com/Microsoft/IntuneDocs-pr/blob/5de35c05884902678b29ee14bc89ddb3b446bfe1/InTuneDocs/GetStarted/whats-new-in-microsoft-intune-january-2106.md) | HandedOffSuccess | [Details](#c4d5fdd7a648583067bc9734533301df0bac72d2193)
  [InTuneDocs\GetStarted\whats-new-in-microsoft-intune-november-2015.md](https://github.com/Microsoft/IntuneDocs-pr/blob/5de35c05884902678b29ee14bc89ddb3b446bfe1/InTuneDocs/GetStarted/whats-new-in-microsoft-intune-november-2015.md) | HandedOffSuccess | [Details](#57db74a1fa4a8cd955861d69690b5297c576b6b2194)
@@ -1572,6 +1570,8 @@
  [InTuneDocs\GetStarted\media\IntuneSA1bSetupExchangeConnection.png](https://github.com/Microsoft/IntuneDocs-pr/blob/11091bc5fb451cfaf6eaa923eafe6df506324960/InTuneDocs/GetStarted/media/IntuneSA1bSetupExchangeConnection.png) | Ignored | [Details](#6dfc87c3aca94cbe08860f07d25b712327eca9c6158)
  [InTuneDocs\GetStarted\media\IntuneSA1cOnpremConnector.png](https://github.com/Microsoft/IntuneDocs-pr/blob/11091bc5fb451cfaf6eaa923eafe6df506324960/InTuneDocs/GetStarted/media/IntuneSA1cOnpremConnector.png) | Ignored | [Details](#f71f97da9e2c57e8ec7c9cfd67f8cb467e5d42ca159)
  [InTuneDocs\GetStarted\media\Windows-Device-Enrollment.png](https://github.com/Microsoft/IntuneDocs-pr/blob/11091bc5fb451cfaf6eaa923eafe6df506324960/InTuneDocs/GetStarted/media/Windows-Device-Enrollment.png) | Ignored | [Details](#8424e87bd47f3f7f08fd4a3ff62f6f43e6c2f160163)
+ [InTuneDocs\GetStarted\previous-intune-releases.md](https://github.com/Microsoft/IntuneDocs-pr/blob/11091bc5fb451cfaf6eaa923eafe6df506324960/InTuneDocs/GetStarted/previous-intune-releases.md) | Ignored | [Details](#5b6d1923e8a9c6251ff5d18eea465530e2442961173)
+ [InTuneDocs\GetStarted\what-s-new-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/11091bc5fb451cfaf6eaa923eafe6df506324960/InTuneDocs/GetStarted/what-s-new-in-microsoft-intune.md) | Ignored | [Details](#3e8040985325c76ece937251295ed0b52ec5be75190)
  [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-13-enbl-ios-plat.png](https://github.com/Microsoft/IntuneDocs-pr/blob/11091bc5fb451cfaf6eaa923eafe6df506324960/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-13-enbl-ios-plat.png) | Ignored | [Details](#b3a60bde0102f405e115743da44fe7b71c503d07366)
  [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-21-CSRfile-open.png](https://github.com/Microsoft/IntuneDocs-pr/blob/11091bc5fb451cfaf6eaa923eafe6df506324960/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-21-CSRfile-open.png) | Ignored | [Details](#5f0f94df8b553992406aaee1d98129c87db82c87374)
  [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-24-json-save-loc.png](https://github.com/Microsoft/IntuneDocs-pr/blob/11091bc5fb451cfaf6eaa923eafe6df506324960/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-24-json-save-loc.png) | Ignored | [Details](#b5a72a38f881e9d3e20e656a970743b2022bed0d377)
@@ -4035,12 +4035,12 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='9819f41c85576bcb66c4290ec7779b8ed034edef173'></a> Source: [InTuneDocs\GetStarted\previous-intune-releases.md](https://github.com/Microsoft/IntuneDocs-pr/blob/35871ed46a63620d61b81f06eba23f6afcac1090/InTuneDocs/GetStarted/previous-intune-releases.md)
-* Status: HandedOffSuccess
+##### <a name='5b6d1923e8a9c6251ff5d18eea465530e2442961173'></a> Source: [InTuneDocs\GetStarted\previous-intune-releases.md](https://github.com/Microsoft/IntuneDocs-pr/blob/11091bc5fb451cfaf6eaa923eafe6df506324960/InTuneDocs/GetStarted/previous-intune-releases.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [previous-intune-releases.d2e14ae16b7b541791b20be4f94053dae7d8e30b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/677dfa33fc4a7bc332506a95a67c4a894da14009/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/previous-intune-releases.d2e14ae16b7b541791b20be4f94053dae7d8e30b.cs-cz.xlf)
-* Handoff Datetime: 2016-03-14 22:24:04
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
@@ -4227,12 +4227,12 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='065a1bad4c74275963ebd768cad442f9b1367d1c190'></a> Source: [InTuneDocs\GetStarted\what-s-new-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/6cbdd1be1bee7af43207951334a2389976f7fbdf/InTuneDocs/GetStarted/what-s-new-in-microsoft-intune.md)
-* Status: HandedOffSuccess
+##### <a name='3e8040985325c76ece937251295ed0b52ec5be75190'></a> Source: [InTuneDocs\GetStarted\what-s-new-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/11091bc5fb451cfaf6eaa923eafe6df506324960/InTuneDocs/GetStarted/what-s-new-in-microsoft-intune.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [what-s-new-in-microsoft-intune.a0a1836a60d484044604ee0943e1edab160c837c.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/db2872023ef3735ad6b403b830f3b3eb510ab53f/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/what-s-new-in-microsoft-intune.a0a1836a60d484044604ee0943e1edab160c837c.cs-cz.xlf)
-* Handoff Datetime: 2016-03-14 20:53:38
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
