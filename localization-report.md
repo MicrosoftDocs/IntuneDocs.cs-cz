@@ -5,13 +5,13 @@
  -------- | ----- 
  Total Files | 2105
 [ Handoff Failed Files ](#handoff-failed-list)| 4
-[ Handoff Success Files ](#handoff-success-list)| 1698
+[ Handoff Success Files ](#handoff-success-list)| 1697
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 0
 [ In Sync Handback Files ](#insync-handback-success-list)| 0
-[ Ignored Files ](#ignored-list)| 403
+[ Ignored Files ](#ignored-list)| 404
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
  Source File | Status | Details 
@@ -267,7 +267,6 @@
  [InTuneDocs\DeployUse\use-the-sdk-to-enable-apps-for-mobile-application-management.md](https://github.com/Microsoft/IntuneDocs-pr/blob/7e5c904508998a992d8e5c8493dd74dede87c556/InTuneDocs/DeployUse/use-the-sdk-to-enable-apps-for-mobile-application-management.md) | HandedOffSuccess | [Details](#22a9582c9ef2c0804c18c1cd69100a2d657b8e11298)
  [InTuneDocs\DeployUse\vpn-connections-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/10893ebf7f31b2b0d874b1d91329c92271632c3e/InTuneDocs/DeployUse/vpn-connections-in-microsoft-intune.md) | HandedOffSuccess | [Details](#2e31a61bf97ce9cf5f21cbc53dd3aa4767cf2f31299)
  [InTuneDocs\DeployUse\what-s-new-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/927949370320779681480002c080b7706286823f/InTuneDocs/DeployUse/what-s-new-in-microsoft-intune.md) | HandedOffSuccess | [Details](#abbe47ea9ab7373c746940604d1b0d8bf55aa8e5301)
- [InTuneDocs\DeployUse\what-s-new-in-microsoft-intune-test.md](https://github.com/Microsoft/IntuneDocs-pr/blob/9d6ea3d55b21321f2d865afaf34f11762f1874bc/InTuneDocs/DeployUse/what-s-new-in-microsoft-intune-test.md) | HandedOffSuccess | [Details](#abf3161f7bfbf965c42243bb5a4fcb9c000fe347300)
  [InTuneDocs\DeployUse\when-to-use-the-intune-app-wrapping-tool-vs.-the-intune-app-sdk.md](https://github.com/Microsoft/IntuneDocs-pr/blob/6396b4071e0c7292fabe0004c141e30dbc962899/InTuneDocs/DeployUse/when-to-use-the-intune-app-wrapping-tool-vs.-the-intune-app-sdk.md) | HandedOffSuccess | [Details](#347c5303bb115d951958a36fbd993009be45957a302)
  [InTuneDocs\DeployUse\wi-fi-connections-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/10893ebf7f31b2b0d874b1d91329c92271632c3e/InTuneDocs/DeployUse/wi-fi-connections-in-microsoft-intune.md) | HandedOffSuccess | [Details](#462e6cb310fdc1874bb419bf749d5dac217b422d303)
  [InTuneDocs\DeployUse\windows-10-configuration-policy-settings-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/73c07957e1f423f8fe3fe8bb4c259c258bca4c95/InTuneDocs/DeployUse/windows-10-configuration-policy-settings-in-microsoft-intune.md) | HandedOffSuccess | [Details](#6c5412f096299aef38504c13ead2210b4a3a1c64304)
@@ -1794,6 +1793,7 @@
  [InTuneDocs\DeployUse\media\SCEP_Registry_editor_MSCEP.png](https://github.com/Microsoft/IntuneDocs-pr/blob/6396b4071e0c7292fabe0004c141e30dbc962899/InTuneDocs/DeployUse/media/SCEP_Registry_editor_MSCEP.png) | Ignored | [Details](#bfc8fc4530e19362ec49490a1f70ed336477d701235)
  [InTuneDocs\DeployUse\media\SCEP_Registry_MDM.png](https://github.com/Microsoft/IntuneDocs-pr/blob/6396b4071e0c7292fabe0004c141e30dbc962899/InTuneDocs/DeployUse/media/SCEP_Registry_MDM.png) | Ignored | [Details](#ba3a1aa88585ec5753eb25d94943732d57ab652c236)
  [InTuneDocs\DeployUse\media\SCEP_SSL_settings.png](https://github.com/Microsoft/IntuneDocs-pr/blob/6396b4071e0c7292fabe0004c141e30dbc962899/InTuneDocs/DeployUse/media/SCEP_SSL_settings.png) | Ignored | [Details](#fd444a39ea7fdea011b5ba7d32147e684a6a1e32237)
+ [InTuneDocs\DeployUse\what-s-new-in-microsoft-intune-test.md](https://github.com/Microsoft/IntuneDocs-pr/blob/6396b4071e0c7292fabe0004c141e30dbc962899/InTuneDocs/DeployUse/what-s-new-in-microsoft-intune-test.md) | Ignored | [Details](#b4b6f826cac51056c178a8d9e466f98819f4a978300)
  [InTuneDocs\docfx.json](https://github.com/Microsoft/IntuneDocs-pr/blob/6396b4071e0c7292fabe0004c141e30dbc962899/InTuneDocs/docfx.json) | Ignored | [Details](#25d6a6e70df1727fb84a1deb9c3efc99bc990ab2313)
  [InTuneDocs\EndUser\docfx.json](https://github.com/Microsoft/IntuneDocs-pr/blob/6396b4071e0c7292fabe0004c141e30dbc962899/InTuneDocs/EndUser/docfx.json) | Ignored | [Details](#7b0885b6fc884f750560f0ad7cbe12d6cd66fdd0332)
  [InTuneDocs\EndUser\media\andr_verbose_logging-and-send-diag-data.png](https://github.com/Microsoft/IntuneDocs-pr/blob/6396b4071e0c7292fabe0004c141e30dbc962899/InTuneDocs/EndUser/media/andr_verbose_logging-and-send-diag-data.png) | Ignored | [Details](#c731f6ba43cc20467593b1c05d920c05e14f1f0a372)
@@ -5847,12 +5847,12 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='abf3161f7bfbf965c42243bb5a4fcb9c000fe347300'></a> Source: [InTuneDocs\DeployUse\what-s-new-in-microsoft-intune-test.md](https://github.com/Microsoft/IntuneDocs-pr/blob/9d6ea3d55b21321f2d865afaf34f11762f1874bc/InTuneDocs/DeployUse/what-s-new-in-microsoft-intune-test.md)
-* Status: HandedOffSuccess
+##### <a name='b4b6f826cac51056c178a8d9e466f98819f4a978300'></a> Source: [InTuneDocs\DeployUse\what-s-new-in-microsoft-intune-test.md](https://github.com/Microsoft/IntuneDocs-pr/blob/6396b4071e0c7292fabe0004c141e30dbc962899/InTuneDocs/DeployUse/what-s-new-in-microsoft-intune-test.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [what-s-new-in-microsoft-intune-test.809411aecc9f1ed3a5f5571059bea583181c9c39.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/c2e2a164d7dc785a3573dfa997522382d4d29096/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/what-s-new-in-microsoft-intune-test.809411aecc9f1ed3a5f5571059bea583181c9c39.cs-cz.xlf)
-* Handoff Datetime: 2016-03-31 19:51:44
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
