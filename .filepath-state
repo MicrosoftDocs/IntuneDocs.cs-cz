@@ -974,6 +974,9 @@
   "d686f3240763875d3f5bfee61c7b99ca90b996b6": [
     "InTuneDocs\\Understand\\start-a-microsoft-intune-trial-and-deploy-ios-pin-policy.md"
   ],
+  "c329eb2a36347c3348fc5eb12f7020ae94738b14": [
+    "InTuneDocs\\GetStarted\\TOC.md"
+  ],
   "cba7c710ad3d317106ce4828244cb8c17cfcee69": [
     "InTuneDocs\\GetStarted\\TOC.md"
   ],
@@ -1855,6 +1858,9 @@
   "ea475d8b7f3d0d8db4ab9433b5df441cc88fefb1": [
     "InTuneDocs\\PlanDesign\\plan-for-app-deployment-in-microsoft-intune.md"
   ],
+  "896ed49ff1063d3bb6c0bafce666cc977caddd40": [
+    "InTuneDocs\\PlanDesign\\TOC.md"
+  ],
   "767bb68412b17a60e4a8f3fe9c668ed9b10cc8d3": [
     "InTuneDocs\\PlanDesign\\TOC.md"
   ],
@@ -2230,6 +2236,9 @@
   "84889dbdc5b1f00821c10dcdf957c9d8afe38c6e": [
     "InTuneDocs\\Understand\\mobile-device-management-capabilities-in-microsoft-intune.md"
   ],
+  "7b44f25befa4b2418121541b1e6754be11e5ab5d": [
+    "InTuneDocs\\Understand\\TOC.md"
+  ],
   "599d763a587b3fd826e72e00dfe718ec7893b0ad": [
     "InTuneDocs\\Understand\\TOC.md"
   ],
@@ -2283,18 +2292,6 @@
   ],
   "56018ac13cadea7395ee565dfb1887cf7b501892": [
     "InTuneDocs\\Understand\\TOC.md"
-  ],
-  "1fab7bf6009bf12cf84fdd04f7021a23db97fcf7": [
-    "InTuneDocs\\Understand\\ways-to-do-enterprise-mobility.md"
-  ],
-  "ee650d25f3c0501b8ccc7c82d4edd19e9a456ec8": [
-    "InTuneDocs\\Understand\\ways-to-do-enterprise-mobility.md"
-  ],
-  "f96d6b5925e5ce9904137e921d02167a7d7f56c0": [
-    "InTuneDocs\\Understand\\ways-to-do-enterprise-mobility.md"
-  ],
-  "5dadbf711c89170d12a5614cb6ae4a9594f39157": [
-    "InTuneDocs\\Understand\\ways-to-do-enterprise-mobility.md"
   ],
   "c52b2e5f265f3a6fa7bd1f1225e02bdbb4f0f838": [
     "InTuneDocs\\Understand\\windows-pc-management-capabilities-in-microsoft-intune.md"
@@ -2540,6 +2537,9 @@
   ],
   "6dd24480ad7926e0c3cd9765dc386a3cf88dfcff": [
     "README.md"
+  ],
+  "fc8e1d39b6957cf03a11e113e5a0db666dfe2748": [
+    "InTuneDocs\\Understand\\get-started-with-a-30-day-trial-of-microsoft-intune.md"
   ],
   "1c128431cfeb56b59ea6b826238bf9985e9d85fb": [
     "InTuneDocs\\Understand\\get-started-with-a-30-day-trial-of-microsoft-intune.md"
@@ -4882,5 +4882,41 @@
   ],
   "5f6877d384db80143c34573c1dd341e37636bcfd": [
     "InTuneDocs\\media\\IntuneSASharePointOnlineCAPolicy.png"
+  ],
+  "788378cc4b228ffe1a07d278756c2694f5adb6fe": [
+    "InTuneDocs\\PlanDesign\\choose-manage-devices.md"
+  ],
+  "2437cca096ca215f8c5dc1595054d705c8b34678": [
+    "InTuneDocs\\PlanDesign\\choose-manage-PCs.md"
+  ],
+  "89649f51fe795e4ed4239ebb26b746f238d9d1c2": [
+    "InTuneDocs\\PlanDesign\\choose-mdm-solution.md"
+  ],
+  "0798676f8956468282bc2b3e23c39cbcf6794cf7": [
+    "InTuneDocs\\PlanDesign\\ways-to-do-enterprise-mobility.md"
+  ],
+  "39c7cbc267c1da53a8e0d1ab83e63de68cfe8b8e": [
+    "InTuneDocs\\Understand\\get-started-with-a-30-day-trial-of-microsoft-intune-step1.md"
+  ],
+  "2d802d7af1bd609ba95f92c8d4cc06c62c85320e": [
+    "InTuneDocs\\Understand\\get-started-with-a-30-day-trial-of-microsoft-intune-step2.md"
+  ],
+  "77480cadab9afd20241ff68161f6dbf8ca6b0dd3": [
+    "InTuneDocs\\Understand\\get-started-with-a-30-day-trial-of-microsoft-intune-step3.md"
+  ],
+  "e434d7ad203a82810c92671b26bc61644e1d8a4a": [
+    "InTuneDocs\\Understand\\get-started-with-a-30-day-trial-of-microsoft-intune-step4.md"
+  ],
+  "a3d87a4a7427c8e230feb4df3318bef573907cf2": [
+    "InTuneDocs\\Understand\\get-started-with-a-30-day-trial-of-microsoft-intune-step5.md"
+  ],
+  "7e0cb3bde9eae0221e0c14c4a933084f4fb12280": [
+    "InTuneDocs\\Understand\\get-started-with-a-30-day-trial-of-microsoft-intune-step6.md"
+  ],
+  "e992f9284aecd2ed48045d848c3430790ad8cbcf": [
+    "InTuneDocs\\Understand\\get-started-with-a-30-day-trial-of-microsoft-intune-step7.md"
+  ],
+  "004198428d35a3eedd6be98b14aeae364c121b70": [
+    "InTuneDocs\\Understand\\get-started-with-a-30-day-trial-of-microsoft-intune-step8.md"
   ]
 }
