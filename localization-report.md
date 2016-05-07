@@ -23188,7 +23188,7 @@
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
 * Archive File: [1511---Restrict-access-to-Office-365-services.b67050f94f6abf3fb478ab3a1c8b72dbe49e5464.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/1511---Restrict-access-to-Office-365-services.b67050f94f6abf3fb478ab3a1c8b72dbe49e5464.cs-cz.xlf)
-* Archive Datetime: 2016-05-07 02:30:15
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -23284,7 +23284,7 @@
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
 * Archive File: [Best-practices-for-rolling-out-apps-with-Microsoft-Intune.e6f5d235d10f4a08e272e852af1af8400efa7d7f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Best-practices-for-rolling-out-apps-with-Microsoft-Intune.e6f5d235d10f4a08e272e852af1af8400efa7d7f.cs-cz.xlf)
-* Archive Datetime: 2016-05-07 02:30:15
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -23308,7 +23308,7 @@
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
 * Archive File: [Best-practices-for-rolling-out-policies-with-Microsoft-Intune.0f6115ef06ca448b862293d4bfd755ff654fcbd5.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Best-practices-for-rolling-out-policies-with-Microsoft-Intune.0f6115ef06ca448b862293d4bfd755ff654fcbd5.cs-cz.xlf)
-* Archive Datetime: 2016-05-07 02:30:15
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -23392,7 +23392,7 @@
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
 * Archive File: [Configure-mobile-app-configuration-policies.ad4f4037b35808a0619a8453423be15c5669f9f2.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Configure-mobile-app-configuration-policies.ad4f4037b35808a0619a8453423be15c5669f9f2.cs-cz.xlf)
-* Archive Datetime: 2016-05-07 02:30:15
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -23404,7 +23404,7 @@
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
 * Archive File: [Configure-mobile-device-management-for-Microsoft-Intune.d7c58ca954897dee1b5366754b050271c21bc285.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Configure-mobile-device-management-for-Microsoft-Intune.d7c58ca954897dee1b5366754b050271c21bc285.cs-cz.xlf)
-* Archive Datetime: 2016-05-07 02:30:15
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -23440,7 +23440,7 @@
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
 * Archive File: [Deploy-apps.b6cdb072b9520e576bfa4495a41047e59c3dc0f7.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Deploy-apps.b6cdb072b9520e576bfa4495a41047e59c3dc0f7.cs-cz.xlf)
-* Archive Datetime: 2016-05-07 02:30:15
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -23452,7 +23452,7 @@
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
 * Archive File: [Deploy-Conditional-Access--Microsoft-Intune-with-System-Center-Configuration-Manager---deleted.8ab900efb414fae44686893d578df696fb6c1379.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Deploy-Conditional-Access--Microsoft-Intune-with-System-Center-Configuration-Manager---deleted.8ab900efb414fae44686893d578df696fb6c1379.cs-cz.xlf)
-* Archive Datetime: 2016-05-07 02:30:15
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -23464,7 +23464,7 @@
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
 * Archive File: [Deployment-Guide--Protect-corporate-email-and-documents.0a640a519a897735afe32ff7e6c82c13321d7701.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Deployment-Guide--Protect-corporate-email-and-documents.0a640a519a897735afe32ff7e6c82c13321d7701.cs-cz.xlf)
-* Archive Datetime: 2016-05-07 02:30:15
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24207,8 +24207,8 @@
 * Handoff File: [Mobile-app-management---deleted.cc02991452b97dbc7dd67ac5f93139f46706e21f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Mobile-app-management---deleted.cc02991452b97dbc7dd67ac5f93139f46706e21f.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Mobile-app-management---deleted.cc02991452b97dbc7dd67ac5f93139f46706e21f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Mobile-app-management---deleted.cc02991452b97dbc7dd67ac5f93139f46706e21f.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [Mobile-app-management---deleted.cc02991452b97dbc7dd67ac5f93139f46706e21f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Mobile-app-management---deleted.cc02991452b97dbc7dd67ac5f93139f46706e21f.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24219,8 +24219,8 @@
 * Handoff File: [Mobile-app-management-policies-in-the-Intune-Console.66b82cdc24ef789e857b2c9fa6070da11fa5380c.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Mobile-app-management-policies-in-the-Intune-Console.66b82cdc24ef789e857b2c9fa6070da11fa5380c.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Mobile-app-management-policies-in-the-Intune-Console.66b82cdc24ef789e857b2c9fa6070da11fa5380c.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Mobile-app-management-policies-in-the-Intune-Console.66b82cdc24ef789e857b2c9fa6070da11fa5380c.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [Mobile-app-management-policies-in-the-Intune-Console.66b82cdc24ef789e857b2c9fa6070da11fa5380c.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Mobile-app-management-policies-in-the-Intune-Console.66b82cdc24ef789e857b2c9fa6070da11fa5380c.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24231,8 +24231,8 @@
 * Handoff File: [Mobile-Device-Management-With-Microsoft-Intune-and-System-Center-Configuration-Manager.1b12c2bf598f5c08b1b8fb0a6c03ce970cd47a1f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Mobile-Device-Management-With-Microsoft-Intune-and-System-Center-Configuration-Manager.1b12c2bf598f5c08b1b8fb0a6c03ce970cd47a1f.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Mobile-Device-Management-With-Microsoft-Intune-and-System-Center-Configuration-Manager.1b12c2bf598f5c08b1b8fb0a6c03ce970cd47a1f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Mobile-Device-Management-With-Microsoft-Intune-and-System-Center-Configuration-Manager.1b12c2bf598f5c08b1b8fb0a6c03ce970cd47a1f.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [Mobile-Device-Management-With-Microsoft-Intune-and-System-Center-Configuration-Manager.1b12c2bf598f5c08b1b8fb0a6c03ce970cd47a1f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Mobile-Device-Management-With-Microsoft-Intune-and-System-Center-Configuration-Manager.1b12c2bf598f5c08b1b8fb0a6c03ce970cd47a1f.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24243,8 +24243,8 @@
 * Handoff File: [Mobile-device-security-policy-settings-in-Microsoft-Intune.94abcaf54ecec612de1ccab8d4887d9667bcfcce.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Mobile-device-security-policy-settings-in-Microsoft-Intune.94abcaf54ecec612de1ccab8d4887d9667bcfcce.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Mobile-device-security-policy-settings-in-Microsoft-Intune.94abcaf54ecec612de1ccab8d4887d9667bcfcce.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Mobile-device-security-policy-settings-in-Microsoft-Intune.94abcaf54ecec612de1ccab8d4887d9667bcfcce.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Mobile-device-security-policy-settings-in-Microsoft-Intune.94abcaf54ecec612de1ccab8d4887d9667bcfcce.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Mobile-device-security-policy-settings-in-Microsoft-Intune.94abcaf54ecec612de1ccab8d4887d9667bcfcce.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24255,8 +24255,8 @@
 * Handoff File: [Monitoring-and-reports-with-Microsoft-Intune.c4d3d3606013b332ed598d0a416a7572aedfb310.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Monitoring-and-reports-with-Microsoft-Intune.c4d3d3606013b332ed598d0a416a7572aedfb310.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Monitoring-and-reports-with-Microsoft-Intune.c4d3d3606013b332ed598d0a416a7572aedfb310.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Monitoring-and-reports-with-Microsoft-Intune.c4d3d3606013b332ed598d0a416a7572aedfb310.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Monitoring-and-reports-with-Microsoft-Intune.c4d3d3606013b332ed598d0a416a7572aedfb310.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Monitoring-and-reports-with-Microsoft-Intune.c4d3d3606013b332ed598d0a416a7572aedfb310.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24267,8 +24267,8 @@
 * Handoff File: [NathBarn-test.ec67e0bed5bdd47284a8fa7db5ec696c819fa963.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/NathBarn-test.ec67e0bed5bdd47284a8fa7db5ec696c819fa963.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [NathBarn-test.ec67e0bed5bdd47284a8fa7db5ec696c819fa963.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/NathBarn-test.ec67e0bed5bdd47284a8fa7db5ec696c819fa963.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [NathBarn-test.ec67e0bed5bdd47284a8fa7db5ec696c819fa963.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/NathBarn-test.ec67e0bed5bdd47284a8fa7db5ec696c819fa963.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24279,8 +24279,8 @@
 * Handoff File: [Old---Computer-capabilities-in-Intune.529b6fbe733b9ca9344bb8313a5ab40329aacb93.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Old---Computer-capabilities-in-Intune.529b6fbe733b9ca9344bb8313a5ab40329aacb93.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Old---Computer-capabilities-in-Intune.529b6fbe733b9ca9344bb8313a5ab40329aacb93.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Old---Computer-capabilities-in-Intune.529b6fbe733b9ca9344bb8313a5ab40329aacb93.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Old---Computer-capabilities-in-Intune.529b6fbe733b9ca9344bb8313a5ab40329aacb93.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Old---Computer-capabilities-in-Intune.529b6fbe733b9ca9344bb8313a5ab40329aacb93.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24291,8 +24291,8 @@
 * Handoff File: [Overview-of-the-Microsoft-Intune-App-SDK.9c4ff700a935a8d0dba62630d51205ca5816d419.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/676f47abf6639f180fedd9de71ef75d4c9ba8f6a/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Overview-of-the-Microsoft-Intune-App-SDK.9c4ff700a935a8d0dba62630d51205ca5816d419.cs-cz.xlf)
 * Handoff Datetime: 2016-04-22 16:41:15
 * Handoff Reason: Include
-* Archive File: [Overview-of-the-Microsoft-Intune-App-SDK.9c4ff700a935a8d0dba62630d51205ca5816d419.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Overview-of-the-Microsoft-Intune-App-SDK.9c4ff700a935a8d0dba62630d51205ca5816d419.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Overview-of-the-Microsoft-Intune-App-SDK.9c4ff700a935a8d0dba62630d51205ca5816d419.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Overview-of-the-Microsoft-Intune-App-SDK.9c4ff700a935a8d0dba62630d51205ca5816d419.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24303,8 +24303,8 @@
 * Handoff File: [Partner-Content.e9edc1c7ac3c3947eb3520f2393df802ac029351.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/676f47abf6639f180fedd9de71ef75d4c9ba8f6a/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Partner-Content.e9edc1c7ac3c3947eb3520f2393df802ac029351.cs-cz.xlf)
 * Handoff Datetime: 2016-04-22 16:41:15
 * Handoff Reason: Include
-* Archive File: [Partner-Content.e9edc1c7ac3c3947eb3520f2393df802ac029351.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Partner-Content.e9edc1c7ac3c3947eb3520f2393df802ac029351.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Partner-Content.e9edc1c7ac3c3947eb3520f2393df802ac029351.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Partner-Content.e9edc1c7ac3c3947eb3520f2393df802ac029351.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24315,8 +24315,8 @@
 * Handoff File: [Passcode-reset-and-remote-lock.3d4d9e3b4eaea388a1f2b700205145a5a6b37b05.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Passcode-reset-and-remote-lock.3d4d9e3b4eaea388a1f2b700205145a5a6b37b05.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Passcode-reset-and-remote-lock.3d4d9e3b4eaea388a1f2b700205145a5a6b37b05.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Passcode-reset-and-remote-lock.3d4d9e3b4eaea388a1f2b700205145a5a6b37b05.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Passcode-reset-and-remote-lock.3d4d9e3b4eaea388a1f2b700205145a5a6b37b05.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Passcode-reset-and-remote-lock.3d4d9e3b4eaea388a1f2b700205145a5a6b37b05.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24327,8 +24327,8 @@
 * Handoff File: [Pilot.76472b0d4b41f4f3144a946e0ab75efab6d0c733.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Pilot.76472b0d4b41f4f3144a946e0ab75efab6d0c733.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Pilot.76472b0d4b41f4f3144a946e0ab75efab6d0c733.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Pilot.76472b0d4b41f4f3144a946e0ab75efab6d0c733.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Pilot.76472b0d4b41f4f3144a946e0ab75efab6d0c733.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Pilot.76472b0d4b41f4f3144a946e0ab75efab6d0c733.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24339,8 +24339,8 @@
 * Handoff File: [Placeholder.2744bc05be26573d263c202eca914f84a34c12cd.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Placeholder.2744bc05be26573d263c202eca914f84a34c12cd.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Placeholder.2744bc05be26573d263c202eca914f84a34c12cd.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Placeholder.2744bc05be26573d263c202eca914f84a34c12cd.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Placeholder.2744bc05be26573d263c202eca914f84a34c12cd.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Placeholder.2744bc05be26573d263c202eca914f84a34c12cd.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24351,8 +24351,8 @@
 * Handoff File: [Placeholder-3716.9518bc485abd8d612c91372ad68be112eb7c779c.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Placeholder-3716.9518bc485abd8d612c91372ad68be112eb7c779c.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Placeholder-3716.9518bc485abd8d612c91372ad68be112eb7c779c.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Placeholder-3716.9518bc485abd8d612c91372ad68be112eb7c779c.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Placeholder-3716.9518bc485abd8d612c91372ad68be112eb7c779c.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Placeholder-3716.9518bc485abd8d612c91372ad68be112eb7c779c.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24363,8 +24363,8 @@
 * Handoff File: [Placeholder-so-I-can-paste-other-topics-into-this-folder.aca4e0142e881ce25a54300dc52abc84489bb5c9.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Placeholder-so-I-can-paste-other-topics-into-this-folder.aca4e0142e881ce25a54300dc52abc84489bb5c9.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Placeholder-so-I-can-paste-other-topics-into-this-folder.aca4e0142e881ce25a54300dc52abc84489bb5c9.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Placeholder-so-I-can-paste-other-topics-into-this-folder.aca4e0142e881ce25a54300dc52abc84489bb5c9.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [Placeholder-so-I-can-paste-other-topics-into-this-folder.aca4e0142e881ce25a54300dc52abc84489bb5c9.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Placeholder-so-I-can-paste-other-topics-into-this-folder.aca4e0142e881ce25a54300dc52abc84489bb5c9.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24375,8 +24375,8 @@
 * Handoff File: [Plan-for-apps.22e7ae4f1242becc49c79fcf06572c9ac32e0c6e.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Plan-for-apps.22e7ae4f1242becc49c79fcf06572c9ac32e0c6e.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Plan-for-apps.22e7ae4f1242becc49c79fcf06572c9ac32e0c6e.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Plan-for-apps.22e7ae4f1242becc49c79fcf06572c9ac32e0c6e.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [Plan-for-apps.22e7ae4f1242becc49c79fcf06572c9ac32e0c6e.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Plan-for-apps.22e7ae4f1242becc49c79fcf06572c9ac32e0c6e.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24387,8 +24387,8 @@
 * Handoff File: [Plan-your-user-and-device-groups.16ac3e17f2b5e2681c34ba766cd7a93ffc4db78d.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Plan-your-user-and-device-groups.16ac3e17f2b5e2681c34ba766cd7a93ffc4db78d.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Plan-your-user-and-device-groups.16ac3e17f2b5e2681c34ba766cd7a93ffc4db78d.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Plan-your-user-and-device-groups.16ac3e17f2b5e2681c34ba766cd7a93ffc4db78d.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Plan-your-user-and-device-groups.16ac3e17f2b5e2681c34ba766cd7a93ffc4db78d.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Plan-your-user-and-device-groups.16ac3e17f2b5e2681c34ba766cd7a93ffc4db78d.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24399,8 +24399,8 @@
 * Handoff File: [Policy-rollout.52a00c96efab5acebde631b49a15ed72913881fd.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/24cf04a904e0e02404ad97868bcea3fb766c98e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Policy-rollout.52a00c96efab5acebde631b49a15ed72913881fd.cs-cz.xlf)
 * Handoff Datetime: 2016-04-18 17:05:12
 * Handoff Reason: Include
-* Archive File: [Policy-rollout.52a00c96efab5acebde631b49a15ed72913881fd.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Policy-rollout.52a00c96efab5acebde631b49a15ed72913881fd.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Policy-rollout.52a00c96efab5acebde631b49a15ed72913881fd.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Policy-rollout.52a00c96efab5acebde631b49a15ed72913881fd.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24411,8 +24411,8 @@
 * Handoff File: [Prepare-Android-apps-for-mobile-app-management.4b14664460a524e97ba75073f08c53bc5fe4a3a7.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/676f47abf6639f180fedd9de71ef75d4c9ba8f6a/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Prepare-Android-apps-for-mobile-app-management.4b14664460a524e97ba75073f08c53bc5fe4a3a7.cs-cz.xlf)
 * Handoff Datetime: 2016-04-22 16:41:15
 * Handoff Reason: Include
-* Archive File: [Prepare-Android-apps-for-mobile-app-management.4b14664460a524e97ba75073f08c53bc5fe4a3a7.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Prepare-Android-apps-for-mobile-app-management.4b14664460a524e97ba75073f08c53bc5fe4a3a7.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Prepare-Android-apps-for-mobile-app-management.4b14664460a524e97ba75073f08c53bc5fe4a3a7.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Prepare-Android-apps-for-mobile-app-management.4b14664460a524e97ba75073f08c53bc5fe4a3a7.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24423,8 +24423,8 @@
 * Handoff File: [Prepare-iOS-apps-for-mobile-app-management.75694f7cdbd815c6bbfc059da4f71fd8e383acaa.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/676f47abf6639f180fedd9de71ef75d4c9ba8f6a/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Prepare-iOS-apps-for-mobile-app-management.75694f7cdbd815c6bbfc059da4f71fd8e383acaa.cs-cz.xlf)
 * Handoff Datetime: 2016-04-22 16:41:15
 * Handoff Reason: Include
-* Archive File: [Prepare-iOS-apps-for-mobile-app-management.75694f7cdbd815c6bbfc059da4f71fd8e383acaa.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Prepare-iOS-apps-for-mobile-app-management.75694f7cdbd815c6bbfc059da4f71fd8e383acaa.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Prepare-iOS-apps-for-mobile-app-management.75694f7cdbd815c6bbfc059da4f71fd8e383acaa.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Prepare-iOS-apps-for-mobile-app-management.75694f7cdbd815c6bbfc059da4f71fd8e383acaa.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24435,8 +24435,8 @@
 * Handoff File: [Project-scope.ea01b9fd9bc3b9ac2368fb8a4a201a8a706c7eb7.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Project-scope.ea01b9fd9bc3b9ac2368fb8a4a201a8a706c7eb7.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:22
 * Handoff Reason: Include
-* Archive File: [Project-scope.ea01b9fd9bc3b9ac2368fb8a4a201a8a706c7eb7.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Project-scope.ea01b9fd9bc3b9ac2368fb8a4a201a8a706c7eb7.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Project-scope.ea01b9fd9bc3b9ac2368fb8a4a201a8a706c7eb7.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Project-scope.ea01b9fd9bc3b9ac2368fb8a4a201a8a706c7eb7.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24447,8 +24447,8 @@
 * Handoff File: [Proof-of-concept.2d41720637e0f5048123ff7cecd58e918bbb5990.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Proof-of-concept.2d41720637e0f5048123ff7cecd58e918bbb5990.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Proof-of-concept.2d41720637e0f5048123ff7cecd58e918bbb5990.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Proof-of-concept.2d41720637e0f5048123ff7cecd58e918bbb5990.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Proof-of-concept.2d41720637e0f5048123ff7cecd58e918bbb5990.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Proof-of-concept.2d41720637e0f5048123ff7cecd58e918bbb5990.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24459,8 +24459,8 @@
 * Handoff File: [Protect-company-data-on-personal-Windows-10-devices-with-Enterprise-Data-Protection-in-Microsoft-Intune.775996a9dd721f94b966a711b1d348615390d203.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Protect-company-data-on-personal-Windows-10-devices-with-Enterprise-Data-Protection-in-Microsoft-Intune.775996a9dd721f94b966a711b1d348615390d203.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Protect-company-data-on-personal-Windows-10-devices-with-Enterprise-Data-Protection-in-Microsoft-Intune.775996a9dd721f94b966a711b1d348615390d203.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Protect-company-data-on-personal-Windows-10-devices-with-Enterprise-Data-Protection-in-Microsoft-Intune.775996a9dd721f94b966a711b1d348615390d203.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Protect-company-data-on-personal-Windows-10-devices-with-Enterprise-Data-Protection-in-Microsoft-Intune.775996a9dd721f94b966a711b1d348615390d203.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Protect-company-data-on-personal-Windows-10-devices-with-Enterprise-Data-Protection-in-Microsoft-Intune.775996a9dd721f94b966a711b1d348615390d203.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24471,8 +24471,8 @@
 * Handoff File: [Protect-data-and-devices-with-Microsoft-Intune.5b27b4d5501fadd1617cf37d078e571c9441a3d0.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Protect-data-and-devices-with-Microsoft-Intune.5b27b4d5501fadd1617cf37d078e571c9441a3d0.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:22
 * Handoff Reason: Include
-* Archive File: [Protect-data-and-devices-with-Microsoft-Intune.5b27b4d5501fadd1617cf37d078e571c9441a3d0.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Protect-data-and-devices-with-Microsoft-Intune.5b27b4d5501fadd1617cf37d078e571c9441a3d0.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Protect-data-and-devices-with-Microsoft-Intune.5b27b4d5501fadd1617cf37d078e571c9441a3d0.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Protect-data-and-devices-with-Microsoft-Intune.5b27b4d5501fadd1617cf37d078e571c9441a3d0.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24483,8 +24483,8 @@
 * Handoff File: [Protect-Windows-devices-with-multi-factor-authentication.a4c5de78bda3d68629f6a02a9787231514c117ec.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Protect-Windows-devices-with-multi-factor-authentication.a4c5de78bda3d68629f6a02a9787231514c117ec.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Protect-Windows-devices-with-multi-factor-authentication.a4c5de78bda3d68629f6a02a9787231514c117ec.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Protect-Windows-devices-with-multi-factor-authentication.a4c5de78bda3d68629f6a02a9787231514c117ec.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Protect-Windows-devices-with-multi-factor-authentication.a4c5de78bda3d68629f6a02a9787231514c117ec.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Protect-Windows-devices-with-multi-factor-authentication.a4c5de78bda3d68629f6a02a9787231514c117ec.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24495,8 +24495,8 @@
 * Handoff File: [RASK-core-components.75d4f8f1ade1feab47e4d641cfb50638a32962b3.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/RASK-core-components.75d4f8f1ade1feab47e4d641cfb50638a32962b3.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [RASK-core-components.75d4f8f1ade1feab47e4d641cfb50638a32962b3.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/RASK-core-components.75d4f8f1ade1feab47e4d641cfb50638a32962b3.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [RASK-core-components.75d4f8f1ade1feab47e4d641cfb50638a32962b3.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/RASK-core-components.75d4f8f1ade1feab47e4d641cfb50638a32962b3.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24507,8 +24507,8 @@
 * Handoff File: [Real-world-solutions-to-help-you-manage-mobile-devices.d046ae81fa2d822de30dc091841338b3b70b7c4d.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Real-world-solutions-to-help-you-manage-mobile-devices.d046ae81fa2d822de30dc091841338b3b70b7c4d.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Real-world-solutions-to-help-you-manage-mobile-devices.d046ae81fa2d822de30dc091841338b3b70b7c4d.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Real-world-solutions-to-help-you-manage-mobile-devices.d046ae81fa2d822de30dc091841338b3b70b7c4d.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Real-world-solutions-to-help-you-manage-mobile-devices.d046ae81fa2d822de30dc091841338b3b70b7c4d.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Real-world-solutions-to-help-you-manage-mobile-devices.d046ae81fa2d822de30dc091841338b3b70b7c4d.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24519,8 +24519,8 @@
 * Handoff File: [Reference-for-the-Microsoft-Intune-administrative-consoles.d7f1013a2fe41863ab6edda07374837bd77a9f57.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Reference-for-the-Microsoft-Intune-administrative-consoles.d7f1013a2fe41863ab6edda07374837bd77a9f57.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Reference-for-the-Microsoft-Intune-administrative-consoles.d7f1013a2fe41863ab6edda07374837bd77a9f57.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Reference-for-the-Microsoft-Intune-administrative-consoles.d7f1013a2fe41863ab6edda07374837bd77a9f57.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [Reference-for-the-Microsoft-Intune-administrative-consoles.d7f1013a2fe41863ab6edda07374837bd77a9f57.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Reference-for-the-Microsoft-Intune-administrative-consoles.d7f1013a2fe41863ab6edda07374837bd77a9f57.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24531,8 +24531,8 @@
 * Handoff File: [Remote-Assistance-via-Microsoft-Easy-Assist.b1376b2b0cce090d4bd2209ba918c4c7760b379f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Remote-Assistance-via-Microsoft-Easy-Assist.b1376b2b0cce090d4bd2209ba918c4c7760b379f.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Remote-Assistance-via-Microsoft-Easy-Assist.b1376b2b0cce090d4bd2209ba918c4c7760b379f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Remote-Assistance-via-Microsoft-Easy-Assist.b1376b2b0cce090d4bd2209ba918c4c7760b379f.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Remote-Assistance-via-Microsoft-Easy-Assist.b1376b2b0cce090d4bd2209ba918c4c7760b379f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Remote-Assistance-via-Microsoft-Easy-Assist.b1376b2b0cce090d4bd2209ba918c4c7760b379f.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24543,8 +24543,8 @@
 * Handoff File: [Resources-to-help-you-solve-problems-during-setup-of-Microsoft-Intune.8e1453eedf5da06d86890958634e2a391d6ad0d9.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Resources-to-help-you-solve-problems-during-setup-of-Microsoft-Intune.8e1453eedf5da06d86890958634e2a391d6ad0d9.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Resources-to-help-you-solve-problems-during-setup-of-Microsoft-Intune.8e1453eedf5da06d86890958634e2a391d6ad0d9.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Resources-to-help-you-solve-problems-during-setup-of-Microsoft-Intune.8e1453eedf5da06d86890958634e2a391d6ad0d9.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Resources-to-help-you-solve-problems-during-setup-of-Microsoft-Intune.8e1453eedf5da06d86890958634e2a391d6ad0d9.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Resources-to-help-you-solve-problems-during-setup-of-Microsoft-Intune.8e1453eedf5da06d86890958634e2a391d6ad0d9.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24555,8 +24555,8 @@
 * Handoff File: [Restrict-web-content-to-display-in-the-Managed-Browser-with-Microsoft-Intune---deleted.7fb7be58c84c71761a4699da3f193e29dcdbdfa3.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Restrict-web-content-to-display-in-the-Managed-Browser-with-Microsoft-Intune---deleted.7fb7be58c84c71761a4699da3f193e29dcdbdfa3.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Restrict-web-content-to-display-in-the-Managed-Browser-with-Microsoft-Intune---deleted.7fb7be58c84c71761a4699da3f193e29dcdbdfa3.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Restrict-web-content-to-display-in-the-Managed-Browser-with-Microsoft-Intune---deleted.7fb7be58c84c71761a4699da3f193e29dcdbdfa3.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Restrict-web-content-to-display-in-the-Managed-Browser-with-Microsoft-Intune---deleted.7fb7be58c84c71761a4699da3f193e29dcdbdfa3.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Restrict-web-content-to-display-in-the-Managed-Browser-with-Microsoft-Intune---deleted.7fb7be58c84c71761a4699da3f193e29dcdbdfa3.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24567,8 +24567,8 @@
 * Handoff File: [Retire-apps.cb58d1a9e0460425b47e552de2f62456ced0c176.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/676f47abf6639f180fedd9de71ef75d4c9ba8f6a/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Retire-apps.cb58d1a9e0460425b47e552de2f62456ced0c176.cs-cz.xlf)
 * Handoff Datetime: 2016-04-22 16:41:15
 * Handoff Reason: Include
-* Archive File: [Retire-apps.cb58d1a9e0460425b47e552de2f62456ced0c176.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Retire-apps.cb58d1a9e0460425b47e552de2f62456ced0c176.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Retire-apps.cb58d1a9e0460425b47e552de2f62456ced0c176.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Retire-apps.cb58d1a9e0460425b47e552de2f62456ced0c176.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24579,8 +24579,8 @@
 * Handoff File: [Retire-company-owned-PCs-and-mobile-devices.2e2f933d220687bc8ce4b67bdee483fb94abf09d.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/074d26de33a1773e77709ce83f5bb28d5f4c7379/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Retire-company-owned-PCs-and-mobile-devices.2e2f933d220687bc8ce4b67bdee483fb94abf09d.cs-cz.xlf)
 * Handoff Datetime: 2016-04-20 21:44:15
 * Handoff Reason: Include
-* Archive File: [Retire-company-owned-PCs-and-mobile-devices.2e2f933d220687bc8ce4b67bdee483fb94abf09d.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Retire-company-owned-PCs-and-mobile-devices.2e2f933d220687bc8ce4b67bdee483fb94abf09d.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Retire-company-owned-PCs-and-mobile-devices.2e2f933d220687bc8ce4b67bdee483fb94abf09d.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Retire-company-owned-PCs-and-mobile-devices.2e2f933d220687bc8ce4b67bdee483fb94abf09d.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24591,8 +24591,8 @@
 * Handoff File: [Retire-data-and-devices-from-Microsoft-Intune-management.220a5193b08256856a6ffd6ed543e28ed1775713.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Retire-data-and-devices-from-Microsoft-Intune-management.220a5193b08256856a6ffd6ed543e28ed1775713.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Retire-data-and-devices-from-Microsoft-Intune-management.220a5193b08256856a6ffd6ed543e28ed1775713.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Retire-data-and-devices-from-Microsoft-Intune-management.220a5193b08256856a6ffd6ed543e28ed1775713.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Retire-data-and-devices-from-Microsoft-Intune-management.220a5193b08256856a6ffd6ed543e28ed1775713.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Retire-data-and-devices-from-Microsoft-Intune-management.220a5193b08256856a6ffd6ed543e28ed1775713.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24603,8 +24603,8 @@
 * Handoff File: [Rolling-out-apps-with-Microsoft-Intune.0fe65912dc54ca3f0c3311a8b9947c30de6a05f4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Rolling-out-apps-with-Microsoft-Intune.0fe65912dc54ca3f0c3311a8b9947c30de6a05f4.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Rolling-out-apps-with-Microsoft-Intune.0fe65912dc54ca3f0c3311a8b9947c30de6a05f4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Rolling-out-apps-with-Microsoft-Intune.0fe65912dc54ca3f0c3311a8b9947c30de6a05f4.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Rolling-out-apps-with-Microsoft-Intune.0fe65912dc54ca3f0c3311a8b9947c30de6a05f4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Rolling-out-apps-with-Microsoft-Intune.0fe65912dc54ca3f0c3311a8b9947c30de6a05f4.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24615,8 +24615,8 @@
 * Handoff File: [Rolling-out-Microsoft-Intune-policies.51ee9fc5dbde3229b198d4374e6cdd8a879a0691.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Rolling-out-Microsoft-Intune-policies.51ee9fc5dbde3229b198d4374e6cdd8a879a0691.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Rolling-out-Microsoft-Intune-policies.51ee9fc5dbde3229b198d4374e6cdd8a879a0691.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Rolling-out-Microsoft-Intune-policies.51ee9fc5dbde3229b198d4374e6cdd8a879a0691.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Rolling-out-Microsoft-Intune-policies.51ee9fc5dbde3229b198d4374e6cdd8a879a0691.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Rolling-out-Microsoft-Intune-policies.51ee9fc5dbde3229b198d4374e6cdd8a879a0691.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24627,8 +24627,8 @@
 * Handoff File: [Rollout-phases-for-Microsoft-Intune-deployment.112b34227fc961de9f39627d00b6ffe8baf4717b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Rollout-phases-for-Microsoft-Intune-deployment.112b34227fc961de9f39627d00b6ffe8baf4717b.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Rollout-phases-for-Microsoft-Intune-deployment.112b34227fc961de9f39627d00b6ffe8baf4717b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Rollout-phases-for-Microsoft-Intune-deployment.112b34227fc961de9f39627d00b6ffe8baf4717b.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Rollout-phases-for-Microsoft-Intune-deployment.112b34227fc961de9f39627d00b6ffe8baf4717b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Rollout-phases-for-Microsoft-Intune-deployment.112b34227fc961de9f39627d00b6ffe8baf4717b.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24639,8 +24639,8 @@
 * Handoff File: [Run-state.f27875d0386e3d65aed4590480bb1396c5ad39ac.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Run-state.f27875d0386e3d65aed4590480bb1396c5ad39ac.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Run-state.f27875d0386e3d65aed4590480bb1396c5ad39ac.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Run-state.f27875d0386e3d65aed4590480bb1396c5ad39ac.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Run-state.f27875d0386e3d65aed4590480bb1396c5ad39ac.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Run-state.f27875d0386e3d65aed4590480bb1396c5ad39ac.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24651,8 +24651,8 @@
 * Handoff File: [Set-mobile-device-management-authority-and-configure-Microsoft-Intune.eeab23b5bce9ad37042f593a10c72cf32315fdf8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Set-mobile-device-management-authority-and-configure-Microsoft-Intune.eeab23b5bce9ad37042f593a10c72cf32315fdf8.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Set-mobile-device-management-authority-and-configure-Microsoft-Intune.eeab23b5bce9ad37042f593a10c72cf32315fdf8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Set-mobile-device-management-authority-and-configure-Microsoft-Intune.eeab23b5bce9ad37042f593a10c72cf32315fdf8.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Set-mobile-device-management-authority-and-configure-Microsoft-Intune.eeab23b5bce9ad37042f593a10c72cf32315fdf8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Set-mobile-device-management-authority-and-configure-Microsoft-Intune.eeab23b5bce9ad37042f593a10c72cf32315fdf8.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24663,8 +24663,8 @@
 * Handoff File: [Set-up-Computer-device-management-with-Microsoft-Intune.6f531072b8b92fbf3d12a8498ef110e50652e3f0.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Set-up-Computer-device-management-with-Microsoft-Intune.6f531072b8b92fbf3d12a8498ef110e50652e3f0.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Set-up-Computer-device-management-with-Microsoft-Intune.6f531072b8b92fbf3d12a8498ef110e50652e3f0.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Set-up-Computer-device-management-with-Microsoft-Intune.6f531072b8b92fbf3d12a8498ef110e50652e3f0.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [Set-up-Computer-device-management-with-Microsoft-Intune.6f531072b8b92fbf3d12a8498ef110e50652e3f0.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Set-up-Computer-device-management-with-Microsoft-Intune.6f531072b8b92fbf3d12a8498ef110e50652e3f0.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24675,8 +24675,8 @@
 * Handoff File: [Set-up-email-access-for-iOS-devices-using-Microsoft-Intune.9d0306f1ffa14ad6ccd3caadb7a397795258741a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Set-up-email-access-for-iOS-devices-using-Microsoft-Intune.9d0306f1ffa14ad6ccd3caadb7a397795258741a.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Set-up-email-access-for-iOS-devices-using-Microsoft-Intune.9d0306f1ffa14ad6ccd3caadb7a397795258741a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Set-up-email-access-for-iOS-devices-using-Microsoft-Intune.9d0306f1ffa14ad6ccd3caadb7a397795258741a.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Set-up-email-access-for-iOS-devices-using-Microsoft-Intune.9d0306f1ffa14ad6ccd3caadb7a397795258741a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Set-up-email-access-for-iOS-devices-using-Microsoft-Intune.9d0306f1ffa14ad6ccd3caadb7a397795258741a.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24687,8 +24687,8 @@
 * Handoff File: [Set-your-MDM-Management-Authority.97c87392d55fcd3d6980038bda7c7310884d064a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Set-your-MDM-Management-Authority.97c87392d55fcd3d6980038bda7c7310884d064a.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Set-your-MDM-Management-Authority.97c87392d55fcd3d6980038bda7c7310884d064a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Set-your-MDM-Management-Authority.97c87392d55fcd3d6980038bda7c7310884d064a.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Set-your-MDM-Management-Authority.97c87392d55fcd3d6980038bda7c7310884d064a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Set-your-MDM-Management-Authority.97c87392d55fcd3d6980038bda7c7310884d064a.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24699,8 +24699,8 @@
 * Handoff File: [Specify-corporate-owned-devices-with-international-mobile-equipment-identity--IMEI--numbers.3e26db1e2b0def80e322716c94c1f95b9a20afd6.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/676f47abf6639f180fedd9de71ef75d4c9ba8f6a/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Specify-corporate-owned-devices-with-international-mobile-equipment-identity--IMEI--numbers.3e26db1e2b0def80e322716c94c1f95b9a20afd6.cs-cz.xlf)
 * Handoff Datetime: 2016-04-22 16:41:15
 * Handoff Reason: Include
-* Archive File: [Specify-corporate-owned-devices-with-international-mobile-equipment-identity--IMEI--numbers.3e26db1e2b0def80e322716c94c1f95b9a20afd6.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Specify-corporate-owned-devices-with-international-mobile-equipment-identity--IMEI--numbers.3e26db1e2b0def80e322716c94c1f95b9a20afd6.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Specify-corporate-owned-devices-with-international-mobile-equipment-identity--IMEI--numbers.3e26db1e2b0def80e322716c94c1f95b9a20afd6.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Specify-corporate-owned-devices-with-international-mobile-equipment-identity--IMEI--numbers.3e26db1e2b0def80e322716c94c1f95b9a20afd6.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24711,8 +24711,8 @@
 * Handoff File: [staging.412d320a6f8115e696e1af151986c09a6bcd5226.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/staging.412d320a6f8115e696e1af151986c09a6bcd5226.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [staging.412d320a6f8115e696e1af151986c09a6bcd5226.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/staging.412d320a6f8115e696e1af151986c09a6bcd5226.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [staging.412d320a6f8115e696e1af151986c09a6bcd5226.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/staging.412d320a6f8115e696e1af151986c09a6bcd5226.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24723,8 +24723,8 @@
 * Handoff File: [Start-using-Microsoft-Intune.e7a0da2799a79cfdc6a79ac01db5016f204cbe20.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Start-using-Microsoft-Intune.e7a0da2799a79cfdc6a79ac01db5016f204cbe20.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Start-using-Microsoft-Intune.e7a0da2799a79cfdc6a79ac01db5016f204cbe20.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Start-using-Microsoft-Intune.e7a0da2799a79cfdc6a79ac01db5016f204cbe20.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Start-using-Microsoft-Intune.e7a0da2799a79cfdc6a79ac01db5016f204cbe20.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Start-using-Microsoft-Intune.e7a0da2799a79cfdc6a79ac01db5016f204cbe20.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24735,8 +24735,8 @@
 * Handoff File: [Start-using-Microsoft-Intune--test-.2187478929535fdeb17a542c98a593bf449235d8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Start-using-Microsoft-Intune--test-.2187478929535fdeb17a542c98a593bf449235d8.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Start-using-Microsoft-Intune--test-.2187478929535fdeb17a542c98a593bf449235d8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Start-using-Microsoft-Intune--test-.2187478929535fdeb17a542c98a593bf449235d8.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Start-using-Microsoft-Intune--test-.2187478929535fdeb17a542c98a593bf449235d8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Start-using-Microsoft-Intune--test-.2187478929535fdeb17a542c98a593bf449235d8.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24747,8 +24747,8 @@
 * Handoff File: [System-Overview.859e4b625e602179d389e9328a2b4132f9f9b409.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/074d26de33a1773e77709ce83f5bb28d5f4c7379/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/System-Overview.859e4b625e602179d389e9328a2b4132f9f9b409.cs-cz.xlf)
 * Handoff Datetime: 2016-04-20 21:44:15
 * Handoff Reason: Include
-* Archive File: [System-Overview.859e4b625e602179d389e9328a2b4132f9f9b409.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/System-Overview.859e4b625e602179d389e9328a2b4132f9f9b409.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [System-Overview.859e4b625e602179d389e9328a2b4132f9f9b409.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/System-Overview.859e4b625e602179d389e9328a2b4132f9f9b409.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24759,8 +24759,8 @@
 * Handoff File: [Terms-of-Delegated-Administration-for-Microsoft-Intune.8b65ff7b9c90da9a8b09760daeedf47e57bc8f5a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Terms-of-Delegated-Administration-for-Microsoft-Intune.8b65ff7b9c90da9a8b09760daeedf47e57bc8f5a.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Terms-of-Delegated-Administration-for-Microsoft-Intune.8b65ff7b9c90da9a8b09760daeedf47e57bc8f5a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Terms-of-Delegated-Administration-for-Microsoft-Intune.8b65ff7b9c90da9a8b09760daeedf47e57bc8f5a.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Terms-of-Delegated-Administration-for-Microsoft-Intune.8b65ff7b9c90da9a8b09760daeedf47e57bc8f5a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Terms-of-Delegated-Administration-for-Microsoft-Intune.8b65ff7b9c90da9a8b09760daeedf47e57bc8f5a.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24771,8 +24771,8 @@
 * Handoff File: [test.5fce5f31e4055d50fbc11fabd0bfbcb82f2ee2ae.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/test.5fce5f31e4055d50fbc11fabd0bfbcb82f2ee2ae.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:22
 * Handoff Reason: Include
-* Archive File: [test.5fce5f31e4055d50fbc11fabd0bfbcb82f2ee2ae.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/test.5fce5f31e4055d50fbc11fabd0bfbcb82f2ee2ae.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [test.5fce5f31e4055d50fbc11fabd0bfbcb82f2ee2ae.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/test.5fce5f31e4055d50fbc11fabd0bfbcb82f2ee2ae.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24783,8 +24783,8 @@
 * Handoff File: [This-is-a-test-for-Nathan-s-Markdown.bd04970995052f1560b01e169a5166281223a4f0.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/This-is-a-test-for-Nathan-s-Markdown.bd04970995052f1560b01e169a5166281223a4f0.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [This-is-a-test-for-Nathan-s-Markdown.bd04970995052f1560b01e169a5166281223a4f0.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/This-is-a-test-for-Nathan-s-Markdown.bd04970995052f1560b01e169a5166281223a4f0.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [This-is-a-test-for-Nathan-s-Markdown.bd04970995052f1560b01e169a5166281223a4f0.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/This-is-a-test-for-Nathan-s-Markdown.bd04970995052f1560b01e169a5166281223a4f0.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24795,8 +24795,8 @@
 * Handoff File: [TOC.555921af03c020c43e63ccd83bd67e42f137c089.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/TOC.555921af03c020c43e63ccd83bd67e42f137c089.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [TOC.555921af03c020c43e63ccd83bd67e42f137c089.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/TOC.555921af03c020c43e63ccd83bd67e42f137c089.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [TOC.555921af03c020c43e63ccd83bd67e42f137c089.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/TOC.555921af03c020c43e63ccd83bd67e42f137c089.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24807,8 +24807,8 @@
 * Handoff File: [Top-node.b3091afe6b458149e02c268848f0faf4fa9b24b3.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/c9a3cf4401ea870bf23032a30625b0a3dfd88a9d/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Top-node.b3091afe6b458149e02c268848f0faf4fa9b24b3.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 19:45:13
 * Handoff Reason: Include
-* Archive File: [Top-node.b3091afe6b458149e02c268848f0faf4fa9b24b3.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Top-node.b3091afe6b458149e02c268848f0faf4fa9b24b3.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Top-node.b3091afe6b458149e02c268848f0faf4fa9b24b3.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Top-node.b3091afe6b458149e02c268848f0faf4fa9b24b3.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24819,8 +24819,8 @@
 * Handoff File: [Troubleshoot-app-deployment-problems-in-Microsoft-Intune.c7b84a29522571db6b1fc2523db6cb83e294cb9a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Troubleshoot-app-deployment-problems-in-Microsoft-Intune.c7b84a29522571db6b1fc2523db6cb83e294cb9a.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Troubleshoot-app-deployment-problems-in-Microsoft-Intune.c7b84a29522571db6b1fc2523db6cb83e294cb9a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-app-deployment-problems-in-Microsoft-Intune.c7b84a29522571db6b1fc2523db6cb83e294cb9a.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Troubleshoot-app-deployment-problems-in-Microsoft-Intune.c7b84a29522571db6b1fc2523db6cb83e294cb9a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-app-deployment-problems-in-Microsoft-Intune.c7b84a29522571db6b1fc2523db6cb83e294cb9a.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24831,8 +24831,8 @@
 * Handoff File: [Troubleshoot-client-setup-in-Microsoft-Intune.33b7732662cf4a81af733a85cdb5498edfb4a33c.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Troubleshoot-client-setup-in-Microsoft-Intune.33b7732662cf4a81af733a85cdb5498edfb4a33c.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Troubleshoot-client-setup-in-Microsoft-Intune.33b7732662cf4a81af733a85cdb5498edfb4a33c.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-client-setup-in-Microsoft-Intune.33b7732662cf4a81af733a85cdb5498edfb4a33c.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Troubleshoot-client-setup-in-Microsoft-Intune.33b7732662cf4a81af733a85cdb5498edfb4a33c.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-client-setup-in-Microsoft-Intune.33b7732662cf4a81af733a85cdb5498edfb4a33c.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24843,8 +24843,8 @@
 * Handoff File: [Troubleshoot-company-resource-access-problems-with-Microsoft-Intune.787e9bdf602f9095d062e10eb64aef0b13f86056.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Troubleshoot-company-resource-access-problems-with-Microsoft-Intune.787e9bdf602f9095d062e10eb64aef0b13f86056.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Troubleshoot-company-resource-access-problems-with-Microsoft-Intune.787e9bdf602f9095d062e10eb64aef0b13f86056.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-company-resource-access-problems-with-Microsoft-Intune.787e9bdf602f9095d062e10eb64aef0b13f86056.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Troubleshoot-company-resource-access-problems-with-Microsoft-Intune.787e9bdf602f9095d062e10eb64aef0b13f86056.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-company-resource-access-problems-with-Microsoft-Intune.787e9bdf602f9095d062e10eb64aef0b13f86056.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24855,8 +24855,8 @@
 * Handoff File: [Troubleshoot-device-enrollment-in-Intune.30f4d9c447dc5f70ae94ba38ff8166fbf0ebb42f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Troubleshoot-device-enrollment-in-Intune.30f4d9c447dc5f70ae94ba38ff8166fbf0ebb42f.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Troubleshoot-device-enrollment-in-Intune.30f4d9c447dc5f70ae94ba38ff8166fbf0ebb42f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-device-enrollment-in-Intune.30f4d9c447dc5f70ae94ba38ff8166fbf0ebb42f.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Troubleshoot-device-enrollment-in-Intune.30f4d9c447dc5f70ae94ba38ff8166fbf0ebb42f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-device-enrollment-in-Intune.30f4d9c447dc5f70ae94ba38ff8166fbf0ebb42f.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24867,8 +24867,8 @@
 * Handoff File: [Troubleshoot-email-profiles-in-Microsoft-Intune.3381f82577153faaef6164f1da18ca45e4b200f8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/24cf04a904e0e02404ad97868bcea3fb766c98e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Troubleshoot-email-profiles-in-Microsoft-Intune.3381f82577153faaef6164f1da18ca45e4b200f8.cs-cz.xlf)
 * Handoff Datetime: 2016-04-18 17:05:12
 * Handoff Reason: Include
-* Archive File: [Troubleshoot-email-profiles-in-Microsoft-Intune.3381f82577153faaef6164f1da18ca45e4b200f8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-email-profiles-in-Microsoft-Intune.3381f82577153faaef6164f1da18ca45e4b200f8.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Troubleshoot-email-profiles-in-Microsoft-Intune.3381f82577153faaef6164f1da18ca45e4b200f8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-email-profiles-in-Microsoft-Intune.3381f82577153faaef6164f1da18ca45e4b200f8.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24879,8 +24879,8 @@
 * Handoff File: [Troubleshoot-Endpoint-Protection-in-Microsoft-Intune.8fafd24eb82691aa057f6738ae1166f0ce0b1d4f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Troubleshoot-Endpoint-Protection-in-Microsoft-Intune.8fafd24eb82691aa057f6738ae1166f0ce0b1d4f.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Troubleshoot-Endpoint-Protection-in-Microsoft-Intune.8fafd24eb82691aa057f6738ae1166f0ce0b1d4f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-Endpoint-Protection-in-Microsoft-Intune.8fafd24eb82691aa057f6738ae1166f0ce0b1d4f.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Troubleshoot-Endpoint-Protection-in-Microsoft-Intune.8fafd24eb82691aa057f6738ae1166f0ce0b1d4f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-Endpoint-Protection-in-Microsoft-Intune.8fafd24eb82691aa057f6738ae1166f0ce0b1d4f.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24891,8 +24891,8 @@
 * Handoff File: [Troubleshoot-Microsoft-Intune.45286198d5fe3d7d501aa8a8b920c4d157618492.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Troubleshoot-Microsoft-Intune.45286198d5fe3d7d501aa8a8b920c4d157618492.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Troubleshoot-Microsoft-Intune.45286198d5fe3d7d501aa8a8b920c4d157618492.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-Microsoft-Intune.45286198d5fe3d7d501aa8a8b920c4d157618492.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Troubleshoot-Microsoft-Intune.45286198d5fe3d7d501aa8a8b920c4d157618492.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-Microsoft-Intune.45286198d5fe3d7d501aa8a8b920c4d157618492.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24903,8 +24903,8 @@
 * Handoff File: [Troubleshoot-policies-in-Microsoft-Intune.1474c1b986f5e65ef6943971e50860b38534ccd8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Troubleshoot-policies-in-Microsoft-Intune.1474c1b986f5e65ef6943971e50860b38534ccd8.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Troubleshoot-policies-in-Microsoft-Intune.1474c1b986f5e65ef6943971e50860b38534ccd8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-policies-in-Microsoft-Intune.1474c1b986f5e65ef6943971e50860b38534ccd8.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Troubleshoot-policies-in-Microsoft-Intune.1474c1b986f5e65ef6943971e50860b38534ccd8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-policies-in-Microsoft-Intune.1474c1b986f5e65ef6943971e50860b38534ccd8.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24915,8 +24915,8 @@
 * Handoff File: [Troubleshoot-policies-in-Microsoft-Intune---deleted.8d9904fc3171c6297801665049d6dbd25cd89497.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Troubleshoot-policies-in-Microsoft-Intune---deleted.8d9904fc3171c6297801665049d6dbd25cd89497.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Troubleshoot-policies-in-Microsoft-Intune---deleted.8d9904fc3171c6297801665049d6dbd25cd89497.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-policies-in-Microsoft-Intune---deleted.8d9904fc3171c6297801665049d6dbd25cd89497.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [Troubleshoot-policies-in-Microsoft-Intune---deleted.8d9904fc3171c6297801665049d6dbd25cd89497.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-policies-in-Microsoft-Intune---deleted.8d9904fc3171c6297801665049d6dbd25cd89497.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24927,8 +24927,8 @@
 * Handoff File: [Troubleshoot-software-updates-in-Microsoft-Intune.02371f6cce072290693d554f3d3a717b1f1718f4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Troubleshoot-software-updates-in-Microsoft-Intune.02371f6cce072290693d554f3d3a717b1f1718f4.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Troubleshoot-software-updates-in-Microsoft-Intune.02371f6cce072290693d554f3d3a717b1f1718f4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-software-updates-in-Microsoft-Intune.02371f6cce072290693d554f3d3a717b1f1718f4.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Troubleshoot-software-updates-in-Microsoft-Intune.02371f6cce072290693d554f3d3a717b1f1718f4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-software-updates-in-Microsoft-Intune.02371f6cce072290693d554f3d3a717b1f1718f4.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24939,8 +24939,8 @@
 * Handoff File: [Understand-your-devices-with-inventory-in-Microsoft-Intune.4b60699b90b58ef65fc165a4aef7c375c38bb441.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Understand-your-devices-with-inventory-in-Microsoft-Intune.4b60699b90b58ef65fc165a4aef7c375c38bb441.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Understand-your-devices-with-inventory-in-Microsoft-Intune.4b60699b90b58ef65fc165a4aef7c375c38bb441.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Understand-your-devices-with-inventory-in-Microsoft-Intune.4b60699b90b58ef65fc165a4aef7c375c38bb441.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Understand-your-devices-with-inventory-in-Microsoft-Intune.4b60699b90b58ef65fc165a4aef7c375c38bb441.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Understand-your-devices-with-inventory-in-Microsoft-Intune.4b60699b90b58ef65fc165a4aef7c375c38bb441.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24951,8 +24951,8 @@
 * Handoff File: [Understand-your-devices-with-inventory-in-Microsoft-Intune---deleted.b6139e3e9eaed8dffc057f5c24fd1290dd7b009b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Understand-your-devices-with-inventory-in-Microsoft-Intune---deleted.b6139e3e9eaed8dffc057f5c24fd1290dd7b009b.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Understand-your-devices-with-inventory-in-Microsoft-Intune---deleted.b6139e3e9eaed8dffc057f5c24fd1290dd7b009b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Understand-your-devices-with-inventory-in-Microsoft-Intune---deleted.b6139e3e9eaed8dffc057f5c24fd1290dd7b009b.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Understand-your-devices-with-inventory-in-Microsoft-Intune---deleted.b6139e3e9eaed8dffc057f5c24fd1290dd7b009b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Understand-your-devices-with-inventory-in-Microsoft-Intune---deleted.b6139e3e9eaed8dffc057f5c24fd1290dd7b009b.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24963,8 +24963,8 @@
 * Handoff File: [Update-apps.c6003d336f162c8bdf298e79fda0dcd0ca1302d2.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/676f47abf6639f180fedd9de71ef75d4c9ba8f6a/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Update-apps.c6003d336f162c8bdf298e79fda0dcd0ca1302d2.cs-cz.xlf)
 * Handoff Datetime: 2016-04-22 16:41:15
 * Handoff Reason: Include
-* Archive File: [Update-apps.c6003d336f162c8bdf298e79fda0dcd0ca1302d2.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Update-apps.c6003d336f162c8bdf298e79fda0dcd0ca1302d2.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Update-apps.c6003d336f162c8bdf298e79fda0dcd0ca1302d2.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Update-apps.c6003d336f162c8bdf298e79fda0dcd0ca1302d2.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24975,8 +24975,8 @@
 * Handoff File: [Use-groups-to-manage-users-and-devices-with-Microsoft-Intune.276ce6095c5d3bc691fe3760803bfc6cd77bc4b4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Use-groups-to-manage-users-and-devices-with-Microsoft-Intune.276ce6095c5d3bc691fe3760803bfc6cd77bc4b4.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Use-groups-to-manage-users-and-devices-with-Microsoft-Intune.276ce6095c5d3bc691fe3760803bfc6cd77bc4b4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Use-groups-to-manage-users-and-devices-with-Microsoft-Intune.276ce6095c5d3bc691fe3760803bfc6cd77bc4b4.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Use-groups-to-manage-users-and-devices-with-Microsoft-Intune.276ce6095c5d3bc691fe3760803bfc6cd77bc4b4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Use-groups-to-manage-users-and-devices-with-Microsoft-Intune.276ce6095c5d3bc691fe3760803bfc6cd77bc4b4.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24987,8 +24987,8 @@
 * Handoff File: [Use-mobile-application-management-policies.e1d719f251acd7a8244ac9d3f2f748a1baa2f33e.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Use-mobile-application-management-policies.e1d719f251acd7a8244ac9d3f2f748a1baa2f33e.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Use-mobile-application-management-policies.e1d719f251acd7a8244ac9d3f2f748a1baa2f33e.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Use-mobile-application-management-policies.e1d719f251acd7a8244ac9d3f2f748a1baa2f33e.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Use-mobile-application-management-policies.e1d719f251acd7a8244ac9d3f2f748a1baa2f33e.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Use-mobile-application-management-policies.e1d719f251acd7a8244ac9d3f2f748a1baa2f33e.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -24999,8 +24999,8 @@
 * Handoff File: [Use-Mobile-Application-Management-policies_deleted.50da266395c96ee5c0a448f48c0495b0bbcfb059.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Use-Mobile-Application-Management-policies_deleted.50da266395c96ee5c0a448f48c0495b0bbcfb059.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Use-Mobile-Application-Management-policies_deleted.50da266395c96ee5c0a448f48c0495b0bbcfb059.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Use-Mobile-Application-Management-policies_deleted.50da266395c96ee5c0a448f48c0495b0bbcfb059.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Use-Mobile-Application-Management-policies_deleted.50da266395c96ee5c0a448f48c0495b0bbcfb059.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Use-Mobile-Application-Management-policies_deleted.50da266395c96ee5c0a448f48c0495b0bbcfb059.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25011,8 +25011,8 @@
 * Handoff File: [Use-the-SDK-to-enable-apps-for-mobile-application-management.2044b6920f77445c3291973d40d5e4e074d91822.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Use-the-SDK-to-enable-apps-for-mobile-application-management.2044b6920f77445c3291973d40d5e4e074d91822.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Use-the-SDK-to-enable-apps-for-mobile-application-management.2044b6920f77445c3291973d40d5e4e074d91822.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Use-the-SDK-to-enable-apps-for-mobile-application-management.2044b6920f77445c3291973d40d5e4e074d91822.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Use-the-SDK-to-enable-apps-for-mobile-application-management.2044b6920f77445c3291973d40d5e4e074d91822.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Use-the-SDK-to-enable-apps-for-mobile-application-management.2044b6920f77445c3291973d40d5e4e074d91822.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25023,8 +25023,8 @@
 * Handoff File: [Using-a-Product-Key-to-Set-Up-a-Customer-Account.4ae0afcde3abf56f44351031745d80634dc7a89b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Using-a-Product-Key-to-Set-Up-a-Customer-Account.4ae0afcde3abf56f44351031745d80634dc7a89b.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [Using-a-Product-Key-to-Set-Up-a-Customer-Account.4ae0afcde3abf56f44351031745d80634dc7a89b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Using-a-Product-Key-to-Set-Up-a-Customer-Account.4ae0afcde3abf56f44351031745d80634dc7a89b.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Using-a-Product-Key-to-Set-Up-a-Customer-Account.4ae0afcde3abf56f44351031745d80634dc7a89b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Using-a-Product-Key-to-Set-Up-a-Customer-Account.4ae0afcde3abf56f44351031745d80634dc7a89b.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25035,8 +25035,8 @@
 * Handoff File: [What-s-coming-in-Microsoft-Intune.d9b61dd2cde5dc9243d6556fa521b206c9f25551.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/What-s-coming-in-Microsoft-Intune.d9b61dd2cde5dc9243d6556fa521b206c9f25551.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [What-s-coming-in-Microsoft-Intune.d9b61dd2cde5dc9243d6556fa521b206c9f25551.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/What-s-coming-in-Microsoft-Intune.d9b61dd2cde5dc9243d6556fa521b206c9f25551.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [What-s-coming-in-Microsoft-Intune.d9b61dd2cde5dc9243d6556fa521b206c9f25551.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/What-s-coming-in-Microsoft-Intune.d9b61dd2cde5dc9243d6556fa521b206c9f25551.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25047,8 +25047,8 @@
 * Handoff File: [What-s-coming-in-Microsoft-Intune_deleted.2deb58531f8b876280743d2891d15d8a1fe9daf6.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b62fe2714cabcf8b264df864855a202e9124f1b1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/What-s-coming-in-Microsoft-Intune_deleted.2deb58531f8b876280743d2891d15d8a1fe9daf6.cs-cz.xlf)
 * Handoff Datetime: 2016-04-20 18:44:23
 * Handoff Reason: Include
-* Archive File: [What-s-coming-in-Microsoft-Intune_deleted.2deb58531f8b876280743d2891d15d8a1fe9daf6.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/What-s-coming-in-Microsoft-Intune_deleted.2deb58531f8b876280743d2891d15d8a1fe9daf6.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [What-s-coming-in-Microsoft-Intune_deleted.2deb58531f8b876280743d2891d15d8a1fe9daf6.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/What-s-coming-in-Microsoft-Intune_deleted.2deb58531f8b876280743d2891d15d8a1fe9daf6.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25059,8 +25059,8 @@
 * Handoff File: [What-s-new-in-Microsoft-Intune.18d34a28dc21aa039035de4d09ea7193956ee4fb.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a131a68466fd30b0d51a1ac19db82dcb79dc4f94/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/What-s-new-in-Microsoft-Intune.18d34a28dc21aa039035de4d09ea7193956ee4fb.cs-cz.xlf)
 * Handoff Datetime: 2016-03-14 23:58:23
 * Handoff Reason: Include
-* Archive File: [What-s-new-in-Microsoft-Intune.18d34a28dc21aa039035de4d09ea7193956ee4fb.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/What-s-new-in-Microsoft-Intune.18d34a28dc21aa039035de4d09ea7193956ee4fb.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [What-s-new-in-Microsoft-Intune.18d34a28dc21aa039035de4d09ea7193956ee4fb.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/What-s-new-in-Microsoft-Intune.18d34a28dc21aa039035de4d09ea7193956ee4fb.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25071,8 +25071,8 @@
 * Handoff File: [Wipe-company-data-from-devices.032ed96ae68101f7b3baf16958201943fb573f0b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/074d26de33a1773e77709ce83f5bb28d5f4c7379/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Wipe-company-data-from-devices.032ed96ae68101f7b3baf16958201943fb573f0b.cs-cz.xlf)
 * Handoff Datetime: 2016-04-20 21:44:15
 * Handoff Reason: Include
-* Archive File: [Wipe-company-data-from-devices.032ed96ae68101f7b3baf16958201943fb573f0b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Wipe-company-data-from-devices.032ed96ae68101f7b3baf16958201943fb573f0b.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Wipe-company-data-from-devices.032ed96ae68101f7b3baf16958201943fb573f0b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Wipe-company-data-from-devices.032ed96ae68101f7b3baf16958201943fb573f0b.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25108,8 +25108,8 @@
 * Handoff File: [benefits-of-intune-app-sdk.37f797b22d296593bf2d62746af648f251a53577.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/88e52e12f6c035804c60703c312e3ca23d9ef454/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/benefits-of-intune-app-sdk.37f797b22d296593bf2d62746af648f251a53577.cs-cz.xlf)
 * Handoff Datetime: 2016-04-26 13:50:25
 * Handoff Reason: Include
-* Archive File: [benefits-of-intune-app-sdk.37f797b22d296593bf2d62746af648f251a53577.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/benefits-of-intune-app-sdk.37f797b22d296593bf2d62746af648f251a53577.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [benefits-of-intune-app-sdk.37f797b22d296593bf2d62746af648f251a53577.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/benefits-of-intune-app-sdk.37f797b22d296593bf2d62746af648f251a53577.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25120,8 +25120,8 @@
 * Handoff File: [getting-started-and-faq.cd9f78686ad03776f38c36db007ae57004b42c5c.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/bec3b393ad1dd29ba144911b7960786dd1b50059/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/getting-started-and-faq.cd9f78686ad03776f38c36db007ae57004b42c5c.cs-cz.xlf)
 * Handoff Datetime: 2016-04-26 19:41:49
 * Handoff Reason: Include
-* Archive File: [getting-started-and-faq.cd9f78686ad03776f38c36db007ae57004b42c5c.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/getting-started-and-faq.cd9f78686ad03776f38c36db007ae57004b42c5c.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [getting-started-and-faq.cd9f78686ad03776f38c36db007ae57004b42c5c.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/getting-started-and-faq.cd9f78686ad03776f38c36db007ae57004b42c5c.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25132,8 +25132,8 @@
 * Handoff File: [getting-started-with-the-microsoft-intune-app-sdk.59a47620d4edb70a80053a9b177662ac3d8b3e41.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/88e52e12f6c035804c60703c312e3ca23d9ef454/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/getting-started-with-the-microsoft-intune-app-sdk.59a47620d4edb70a80053a9b177662ac3d8b3e41.cs-cz.xlf)
 * Handoff Datetime: 2016-04-26 13:50:25
 * Handoff Reason: Include
-* Archive File: [getting-started-with-the-microsoft-intune-app-sdk.59a47620d4edb70a80053a9b177662ac3d8b3e41.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/getting-started-with-the-microsoft-intune-app-sdk.59a47620d4edb70a80053a9b177662ac3d8b3e41.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [getting-started-with-the-microsoft-intune-app-sdk.59a47620d4edb70a80053a9b177662ac3d8b3e41.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/getting-started-with-the-microsoft-intune-app-sdk.59a47620d4edb70a80053a9b177662ac3d8b3e41.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25157,8 +25157,8 @@
 * Handoff File: [jeffs-sandbox.2b9101bad83533ddf51f2d89fac7694cb6fbd99a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/jeffs-sandbox.2b9101bad83533ddf51f2d89fac7694cb6fbd99a.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [jeffs-sandbox.2b9101bad83533ddf51f2d89fac7694cb6fbd99a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/jeffs-sandbox.2b9101bad83533ddf51f2d89fac7694cb6fbd99a.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [jeffs-sandbox.2b9101bad83533ddf51f2d89fac7694cb6fbd99a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/jeffs-sandbox.2b9101bad83533ddf51f2d89fac7694cb6fbd99a.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25169,8 +25169,8 @@
 * Handoff File: [microsoft-intune-app-sdk.e34dcaa89fc921dc20f23f438a09e0ee302242b8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/88e52e12f6c035804c60703c312e3ca23d9ef454/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/microsoft-intune-app-sdk.e34dcaa89fc921dc20f23f438a09e0ee302242b8.cs-cz.xlf)
 * Handoff Datetime: 2016-04-26 13:50:25
 * Handoff Reason: Include
-* Archive File: [microsoft-intune-app-sdk.e34dcaa89fc921dc20f23f438a09e0ee302242b8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/microsoft-intune-app-sdk.e34dcaa89fc921dc20f23f438a09e0ee302242b8.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [microsoft-intune-app-sdk.e34dcaa89fc921dc20f23f438a09e0ee302242b8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/microsoft-intune-app-sdk.e34dcaa89fc921dc20f23f438a09e0ee302242b8.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25181,8 +25181,8 @@
 * Handoff File: [microsoft-intune-app-sdk-for-android-developer-guide.4fc50a672c23471bfbfc1ff38ab4033d23a66dae.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/88e52e12f6c035804c60703c312e3ca23d9ef454/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/microsoft-intune-app-sdk-for-android-developer-guide.4fc50a672c23471bfbfc1ff38ab4033d23a66dae.cs-cz.xlf)
 * Handoff Datetime: 2016-04-26 13:50:25
 * Handoff Reason: Include
-* Archive File: [microsoft-intune-app-sdk-for-android-developer-guide.4fc50a672c23471bfbfc1ff38ab4033d23a66dae.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/microsoft-intune-app-sdk-for-android-developer-guide.4fc50a672c23471bfbfc1ff38ab4033d23a66dae.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [microsoft-intune-app-sdk-for-android-developer-guide.4fc50a672c23471bfbfc1ff38ab4033d23a66dae.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/microsoft-intune-app-sdk-for-android-developer-guide.4fc50a672c23471bfbfc1ff38ab4033d23a66dae.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25193,8 +25193,8 @@
 * Handoff File: [microsoft-intune-app-sdk-for-ios-developer-guide.1a7a618f2a8e02071115b9ce68cdcec4b5a0512e.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/88e52e12f6c035804c60703c312e3ca23d9ef454/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/microsoft-intune-app-sdk-for-ios-developer-guide.1a7a618f2a8e02071115b9ce68cdcec4b5a0512e.cs-cz.xlf)
 * Handoff Datetime: 2016-04-26 13:50:25
 * Handoff Reason: Include
-* Archive File: [microsoft-intune-app-sdk-for-ios-developer-guide.1a7a618f2a8e02071115b9ce68cdcec4b5a0512e.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/microsoft-intune-app-sdk-for-ios-developer-guide.1a7a618f2a8e02071115b9ce68cdcec4b5a0512e.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [microsoft-intune-app-sdk-for-ios-developer-guide.1a7a618f2a8e02071115b9ce68cdcec4b5a0512e.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/microsoft-intune-app-sdk-for-ios-developer-guide.1a7a618f2a8e02071115b9ce68cdcec4b5a0512e.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25205,8 +25205,8 @@
 * Handoff File: [microsoft-intune-app-sdk-frequently-asked-questions.7b9b0c68e3964a7defa666f80e725198d51016d5.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/88e52e12f6c035804c60703c312e3ca23d9ef454/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/microsoft-intune-app-sdk-frequently-asked-questions.7b9b0c68e3964a7defa666f80e725198d51016d5.cs-cz.xlf)
 * Handoff Datetime: 2016-04-26 13:50:25
 * Handoff Reason: Include
-* Archive File: [microsoft-intune-app-sdk-frequently-asked-questions.7b9b0c68e3964a7defa666f80e725198d51016d5.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/microsoft-intune-app-sdk-frequently-asked-questions.7b9b0c68e3964a7defa666f80e725198d51016d5.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [microsoft-intune-app-sdk-frequently-asked-questions.7b9b0c68e3964a7defa666f80e725198d51016d5.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/microsoft-intune-app-sdk-frequently-asked-questions.7b9b0c68e3964a7defa666f80e725198d51016d5.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25332,8 +25332,8 @@
 * Handoff File: [help-secure-access-from-hotel-kiosks.93f74a31200b427c2cf46850d5758d2a872939e9.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/88e52e12f6c035804c60703c312e3ca23d9ef454/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/help-secure-access-from-hotel-kiosks.93f74a31200b427c2cf46850d5758d2a872939e9.cs-cz.xlf)
 * Handoff Datetime: 2016-04-26 13:50:25
 * Handoff Reason: Include
-* Archive File: [help-secure-access-from-hotel-kiosks.93f74a31200b427c2cf46850d5758d2a872939e9.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/help-secure-access-from-hotel-kiosks.93f74a31200b427c2cf46850d5758d2a872939e9.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [help-secure-access-from-hotel-kiosks.93f74a31200b427c2cf46850d5758d2a872939e9.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/help-secure-access-from-hotel-kiosks.93f74a31200b427c2cf46850d5758d2a872939e9.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25344,8 +25344,8 @@
 * Handoff File: [help-secure-office-365.d166aed58a31c61ce38d8d3ba1b3f8618cc751a7.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/88e52e12f6c035804c60703c312e3ca23d9ef454/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/help-secure-office-365.d166aed58a31c61ce38d8d3ba1b3f8618cc751a7.cs-cz.xlf)
 * Handoff Datetime: 2016-04-26 13:50:25
 * Handoff Reason: Include
-* Archive File: [help-secure-office-365.d166aed58a31c61ce38d8d3ba1b3f8618cc751a7.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/help-secure-office-365.d166aed58a31c61ce38d8d3ba1b3f8618cc751a7.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [help-secure-office-365.d166aed58a31c61ce38d8d3ba1b3f8618cc751a7.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/help-secure-office-365.d166aed58a31c61ce38d8d3ba1b3f8618cc751a7.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25356,8 +25356,8 @@
 * Handoff File: [help-secure-on-premises-resources.59e9823277a287a171782ddb73ddc2f23f3bf859.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/88e52e12f6c035804c60703c312e3ca23d9ef454/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/help-secure-on-premises-resources.59e9823277a287a171782ddb73ddc2f23f3bf859.cs-cz.xlf)
 * Handoff Datetime: 2016-04-26 13:50:25
 * Handoff Reason: Include
-* Archive File: [help-secure-on-premises-resources.59e9823277a287a171782ddb73ddc2f23f3bf859.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/help-secure-on-premises-resources.59e9823277a287a171782ddb73ddc2f23f3bf859.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [help-secure-on-premises-resources.59e9823277a287a171782ddb73ddc2f23f3bf859.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/help-secure-on-premises-resources.59e9823277a287a171782ddb73ddc2f23f3bf859.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25368,8 +25368,8 @@
 * Handoff File: [manage-corporate-owned-mobile-devices.6e645af84089b86058fcb0e0507aafb5cb95c8bb.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/88e52e12f6c035804c60703c312e3ca23d9ef454/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/manage-corporate-owned-mobile-devices.6e645af84089b86058fcb0e0507aafb5cb95c8bb.cs-cz.xlf)
 * Handoff Datetime: 2016-04-26 13:50:25
 * Handoff Reason: Include
-* Archive File: [manage-corporate-owned-mobile-devices.6e645af84089b86058fcb0e0507aafb5cb95c8bb.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/manage-corporate-owned-mobile-devices.6e645af84089b86058fcb0e0507aafb5cb95c8bb.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [manage-corporate-owned-mobile-devices.6e645af84089b86058fcb0e0507aafb5cb95c8bb.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/manage-corporate-owned-mobile-devices.6e645af84089b86058fcb0e0507aafb5cb95c8bb.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25380,8 +25380,8 @@
 * Handoff File: [manage-shared-retail-tablet-devices.57b624e98b30687ccaf992837542f6a2b6680295.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/88e52e12f6c035804c60703c312e3ca23d9ef454/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/manage-shared-retail-tablet-devices.57b624e98b30687ccaf992837542f6a2b6680295.cs-cz.xlf)
 * Handoff Datetime: 2016-04-26 13:50:25
 * Handoff Reason: Include
-* Archive File: [manage-shared-retail-tablet-devices.57b624e98b30687ccaf992837542f6a2b6680295.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/manage-shared-retail-tablet-devices.57b624e98b30687ccaf992837542f6a2b6680295.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [manage-shared-retail-tablet-devices.57b624e98b30687ccaf992837542f6a2b6680295.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/manage-shared-retail-tablet-devices.57b624e98b30687ccaf992837542f6a2b6680295.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25393,7 +25393,7 @@
 * Handoff Datetime: 2016-05-01 16:59:58
 * Handoff Reason: Include
 * Archive File: [Sample.9ef8f6baac9c7681956404230a5a71b10dfa7236.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Sample.9ef8f6baac9c7681956404230a5a71b10dfa7236.cs-cz.xlf)
-* Archive Datetime: 2016-05-07 01:52:41
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25404,8 +25404,8 @@
 * Handoff File: [support-byod.fa07e5789cb2896b71a6b9b3afef836a4c483fa4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/88e52e12f6c035804c60703c312e3ca23d9ef454/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/support-byod.fa07e5789cb2896b71a6b9b3afef836a4c483fa4.cs-cz.xlf)
 * Handoff Datetime: 2016-04-26 13:50:25
 * Handoff Reason: Include
-* Archive File: [support-byod.fa07e5789cb2896b71a6b9b3afef836a4c483fa4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/support-byod.fa07e5789cb2896b71a6b9b3afef836a4c483fa4.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [support-byod.fa07e5789cb2896b71a6b9b3afef836a4c483fa4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/support-byod.fa07e5789cb2896b71a6b9b3afef836a4c483fa4.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25416,8 +25416,8 @@
 * Handoff File: [plan-your-user-and-device-groups.2522060de8b28d313782cfe246a45799390885f7.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/555da463d8648e6d91188b29dc1f4b3d499f8125/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/plan-your-user-and-device-groups.2522060de8b28d313782cfe246a45799390885f7.cs-cz.xlf)
 * Handoff Datetime: 2016-04-26 21:49:47
 * Handoff Reason: Include
-* Archive File: [plan-your-user-and-device-groups.2522060de8b28d313782cfe246a45799390885f7.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/plan-your-user-and-device-groups.2522060de8b28d313782cfe246a45799390885f7.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [plan-your-user-and-device-groups.2522060de8b28d313782cfe246a45799390885f7.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/plan-your-user-and-device-groups.2522060de8b28d313782cfe246a45799390885f7.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25428,8 +25428,8 @@
 * Handoff File: [ts-sum.cf2b9c5d4827780ce5b1e69ef5df1810045e6ef5.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/ts-sum.cf2b9c5d4827780ce5b1e69ef5df1810045e6ef5.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [ts-sum.cf2b9c5d4827780ce5b1e69ef5df1810045e6ef5.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/ts-sum.cf2b9c5d4827780ce5b1e69ef5df1810045e6ef5.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [ts-sum.cf2b9c5d4827780ce5b1e69ef5df1810045e6ef5.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/ts-sum.cf2b9c5d4827780ce5b1e69ef5df1810045e6ef5.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25440,8 +25440,8 @@
 * Handoff File: [ts-sum-client-loc-request.72e4e9763558f13aac1149d89da0376b7754f358.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/ts-sum-client-loc-request.72e4e9763558f13aac1149d89da0376b7754f358.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [ts-sum-client-loc-request.72e4e9763558f13aac1149d89da0376b7754f358.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/ts-sum-client-loc-request.72e4e9763558f13aac1149d89da0376b7754f358.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [ts-sum-client-loc-request.72e4e9763558f13aac1149d89da0376b7754f358.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/ts-sum-client-loc-request.72e4e9763558f13aac1149d89da0376b7754f358.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25452,8 +25452,8 @@
 * Handoff File: [ts-sum-client-scanning.30abe9b9a12b39ac1226696c1d36e59be0217654.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/ts-sum-client-scanning.30abe9b9a12b39ac1226696c1d36e59be0217654.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [ts-sum-client-scanning.30abe9b9a12b39ac1226696c1d36e59be0217654.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/ts-sum-client-scanning.30abe9b9a12b39ac1226696c1d36e59be0217654.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [ts-sum-client-scanning.30abe9b9a12b39ac1226696c1d36e59be0217654.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/ts-sum-client-scanning.30abe9b9a12b39ac1226696c1d36e59be0217654.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25464,8 +25464,8 @@
 * Handoff File: [ts-sum-success.bd09cd97784b2ebe481b1265cdc54c50a24236fb.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/ts-sum-success.bd09cd97784b2ebe481b1265cdc54c50a24236fb.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [ts-sum-success.bd09cd97784b2ebe481b1265cdc54c50a24236fb.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/ts-sum-success.bd09cd97784b2ebe481b1265cdc54c50a24236fb.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [ts-sum-success.bd09cd97784b2ebe481b1265cdc54c50a24236fb.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/ts-sum-success.bd09cd97784b2ebe481b1265cdc54c50a24236fb.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25476,8 +25476,8 @@
 * Handoff File: [template.12b03ec855505fd1042cbbbe12a9fd6139a0ec6a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/8da26e249cda6d5c234906616f27f474bbf003d5/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/template.12b03ec855505fd1042cbbbe12a9fd6139a0ec6a.cs-cz.xlf)
 * Handoff Datetime: 2016-04-05 18:02:16
 * Handoff Reason: Include
-* Archive File: [template.12b03ec855505fd1042cbbbe12a9fd6139a0ec6a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/template.12b03ec855505fd1042cbbbe12a9fd6139a0ec6a.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [template.12b03ec855505fd1042cbbbe12a9fd6139a0ec6a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/template.12b03ec855505fd1042cbbbe12a9fd6139a0ec6a.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25489,7 +25489,7 @@
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
 * Archive File: [1511---Restrict-access-to-Office-365-services.b67050f94f6abf3fb478ab3a1c8b72dbe49e5464.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/1511---Restrict-access-to-Office-365-services.b67050f94f6abf3fb478ab3a1c8b72dbe49e5464.cs-cz.xlf)
-* Archive Datetime: 2016-05-07 02:30:15
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25500,8 +25500,8 @@
 * Handoff File: [30-day-trial-revision.d2b4bb5924f8fe2dcd10ccdf3b455fda3cd8e489.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/30-day-trial-revision.d2b4bb5924f8fe2dcd10ccdf3b455fda3cd8e489.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [30-day-trial-revision.d2b4bb5924f8fe2dcd10ccdf3b455fda3cd8e489.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/30-day-trial-revision.d2b4bb5924f8fe2dcd10ccdf3b455fda3cd8e489.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [30-day-trial-revision.d2b4bb5924f8fe2dcd10ccdf3b455fda3cd8e489.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/30-day-trial-revision.d2b4bb5924f8fe2dcd10ccdf3b455fda3cd8e489.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25512,8 +25512,8 @@
 * Handoff File: [android-custom-policy-settings-in-microsoft-intune.0fe3bdbae1fb272642bdd714d1ae99580215a47f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/android-custom-policy-settings-in-microsoft-intune.0fe3bdbae1fb272642bdd714d1ae99580215a47f.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [android-custom-policy-settings-in-microsoft-intune.0fe3bdbae1fb272642bdd714d1ae99580215a47f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/android-custom-policy-settings-in-microsoft-intune.0fe3bdbae1fb272642bdd714d1ae99580215a47f.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [android-custom-policy-settings-in-microsoft-intune.0fe3bdbae1fb272642bdd714d1ae99580215a47f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/android-custom-policy-settings-in-microsoft-intune.0fe3bdbae1fb272642bdd714d1ae99580215a47f.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25524,8 +25524,8 @@
 * Handoff File: [android-custom-policy-settings-in-microsoft-intune-deleted.44ed9a7c0afad70db3bb1b85dd68c2a52d0659e4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/android-custom-policy-settings-in-microsoft-intune-deleted.44ed9a7c0afad70db3bb1b85dd68c2a52d0659e4.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [android-custom-policy-settings-in-microsoft-intune-deleted.44ed9a7c0afad70db3bb1b85dd68c2a52d0659e4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/android-custom-policy-settings-in-microsoft-intune-deleted.44ed9a7c0afad70db3bb1b85dd68c2a52d0659e4.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [android-custom-policy-settings-in-microsoft-intune-deleted.44ed9a7c0afad70db3bb1b85dd68c2a52d0659e4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/android-custom-policy-settings-in-microsoft-intune-deleted.44ed9a7c0afad70db3bb1b85dd68c2a52d0659e4.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -25536,8 +25536,8 @@
 * Handoff File: [android-custom-policy-settings-in-microsoft-intune-deleted.44ed9a7c0afad70db3bb1b85dd68c2a52d0659e4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/android-custom-policy-settings-in-microsoft-intune-deleted.44ed9a7c0afad70db3bb1b85dd68c2a52d0659e4.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [android-custom-policy-settings-in-microsoft-intune-deleted.44ed9a7c0afad70db3bb1b85dd68c2a52d0659e4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/android-custom-policy-settings-in-microsoft-intune-deleted.44ed9a7c0afad70db3bb1b85dd68c2a52d0659e4.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [android-custom-policy-settings-in-microsoft-intune-deleted.44ed9a7c0afad70db3bb1b85dd68c2a52d0659e4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/android-custom-policy-settings-in-microsoft-intune-deleted.44ed9a7c0afad70db3bb1b85dd68c2a52d0659e4.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26536,8 +26536,8 @@
 * Handoff File: [architecture-guidance-for-protecting-company-email-and-documents.4f96371e33b0ff28623b0c90f3af560b35b20ee5.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/architecture-guidance-for-protecting-company-email-and-documents.4f96371e33b0ff28623b0c90f3af560b35b20ee5.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [architecture-guidance-for-protecting-company-email-and-documents.4f96371e33b0ff28623b0c90f3af560b35b20ee5.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/architecture-guidance-for-protecting-company-email-and-documents.4f96371e33b0ff28623b0c90f3af560b35b20ee5.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [architecture-guidance-for-protecting-company-email-and-documents.4f96371e33b0ff28623b0c90f3af560b35b20ee5.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/architecture-guidance-for-protecting-company-email-and-documents.4f96371e33b0ff28623b0c90f3af560b35b20ee5.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26549,7 +26549,7 @@
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
 * Archive File: [Best-practices-for-rolling-out-apps-with-Microsoft-Intune.e6f5d235d10f4a08e272e852af1af8400efa7d7f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Best-practices-for-rolling-out-apps-with-Microsoft-Intune.e6f5d235d10f4a08e272e852af1af8400efa7d7f.cs-cz.xlf)
-* Archive Datetime: 2016-05-07 02:30:15
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26560,8 +26560,8 @@
 * Handoff File: [best-practices-for-rolling-out-policies-and-apps-with-intune.c75e6e4d967182d801d3887f713fa2a25bd1d27b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/best-practices-for-rolling-out-policies-and-apps-with-intune.c75e6e4d967182d801d3887f713fa2a25bd1d27b.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [best-practices-for-rolling-out-policies-and-apps-with-intune.c75e6e4d967182d801d3887f713fa2a25bd1d27b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/best-practices-for-rolling-out-policies-and-apps-with-intune.c75e6e4d967182d801d3887f713fa2a25bd1d27b.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [best-practices-for-rolling-out-policies-and-apps-with-intune.c75e6e4d967182d801d3887f713fa2a25bd1d27b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/best-practices-for-rolling-out-policies-and-apps-with-intune.c75e6e4d967182d801d3887f713fa2a25bd1d27b.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26573,7 +26573,7 @@
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
 * Archive File: [Best-practices-for-rolling-out-policies-with-Microsoft-Intune.0f6115ef06ca448b862293d4bfd755ff654fcbd5.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Best-practices-for-rolling-out-policies-with-Microsoft-Intune.0f6115ef06ca448b862293d4bfd755ff654fcbd5.cs-cz.xlf)
-* Archive Datetime: 2016-05-07 02:30:15
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26610,8 +26610,8 @@
 * Handoff File: [cancel-my-subscription-for-microsoft-intune.bbaae6559723685d923269c7064b9b34dd79f38c.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/cancel-my-subscription-for-microsoft-intune.bbaae6559723685d923269c7064b9b34dd79f38c.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [cancel-my-subscription-for-microsoft-intune.bbaae6559723685d923269c7064b9b34dd79f38c.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/cancel-my-subscription-for-microsoft-intune.bbaae6559723685d923269c7064b9b34dd79f38c.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [cancel-my-subscription-for-microsoft-intune.bbaae6559723685d923269c7064b9b34dd79f38c.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/cancel-my-subscription-for-microsoft-intune.bbaae6559723685d923269c7064b9b34dd79f38c.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26622,8 +26622,8 @@
 * Handoff File: [categorize-devices-with-device-group-mapping-in-microsoft-intune.bfa3d63d2923eeee5def67694636d9c766d3eaf7.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/categorize-devices-with-device-group-mapping-in-microsoft-intune.bfa3d63d2923eeee5def67694636d9c766d3eaf7.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [categorize-devices-with-device-group-mapping-in-microsoft-intune.bfa3d63d2923eeee5def67694636d9c766d3eaf7.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/categorize-devices-with-device-group-mapping-in-microsoft-intune.bfa3d63d2923eeee5def67694636d9c766d3eaf7.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [categorize-devices-with-device-group-mapping-in-microsoft-intune.bfa3d63d2923eeee5def67694636d9c766d3eaf7.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/categorize-devices-with-device-group-mapping-in-microsoft-intune.bfa3d63d2923eeee5def67694636d9c766d3eaf7.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26634,8 +26634,8 @@
 * Handoff File: [choose-between-intune-and-hybrid.4b7706cf1dabd3ab7c31f06e1b9140d0ae054d81.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/20761fe2e3ce202147063e1b9653a99433ba6823/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/choose-between-intune-and-hybrid.4b7706cf1dabd3ab7c31f06e1b9140d0ae054d81.cs-cz.xlf)
 * Handoff Datetime: 2016-05-01 16:59:59
 * Handoff Reason: Include
-* Archive File: [choose-between-intune-and-hybrid.4b7706cf1dabd3ab7c31f06e1b9140d0ae054d81.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/choose-between-intune-and-hybrid.4b7706cf1dabd3ab7c31f06e1b9140d0ae054d81.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [choose-between-intune-and-hybrid.4b7706cf1dabd3ab7c31f06e1b9140d0ae054d81.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/choose-between-intune-and-hybrid.4b7706cf1dabd3ab7c31f06e1b9140d0ae054d81.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26646,8 +26646,8 @@
 * Handoff File: [choose-between-intune-and-mdm-for-office-365.6a945f5243b6cea6791d5425e873d5f07b5d0801.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/20761fe2e3ce202147063e1b9653a99433ba6823/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/choose-between-intune-and-mdm-for-office-365.6a945f5243b6cea6791d5425e873d5f07b5d0801.cs-cz.xlf)
 * Handoff Datetime: 2016-05-01 16:59:58
 * Handoff Reason: Include
-* Archive File: [choose-between-intune-and-mdm-for-office-365.6a945f5243b6cea6791d5425e873d5f07b5d0801.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/choose-between-intune-and-mdm-for-office-365.6a945f5243b6cea6791d5425e873d5f07b5d0801.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [choose-between-intune-and-mdm-for-office-365.6a945f5243b6cea6791d5425e873d5f07b5d0801.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/choose-between-intune-and-mdm-for-office-365.6a945f5243b6cea6791d5425e873d5f07b5d0801.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26658,8 +26658,8 @@
 * Handoff File: [choose-manage-devices.a349a89f4bf8c4a1be9b25f3d795e542d25cbfa8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/20761fe2e3ce202147063e1b9653a99433ba6823/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/choose-manage-devices.a349a89f4bf8c4a1be9b25f3d795e542d25cbfa8.cs-cz.xlf)
 * Handoff Datetime: 2016-05-01 16:59:59
 * Handoff Reason: Include
-* Archive File: [choose-manage-devices.a349a89f4bf8c4a1be9b25f3d795e542d25cbfa8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/choose-manage-devices.a349a89f4bf8c4a1be9b25f3d795e542d25cbfa8.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [choose-manage-devices.a349a89f4bf8c4a1be9b25f3d795e542d25cbfa8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/choose-manage-devices.a349a89f4bf8c4a1be9b25f3d795e542d25cbfa8.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26670,8 +26670,8 @@
 * Handoff File: [choose-manage-PCs.29c0cd7bdcff67b2df465fb0a51bb5ee7373e324.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/20761fe2e3ce202147063e1b9653a99433ba6823/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/choose-manage-PCs.29c0cd7bdcff67b2df465fb0a51bb5ee7373e324.cs-cz.xlf)
 * Handoff Datetime: 2016-05-01 16:59:59
 * Handoff Reason: Include
-* Archive File: [choose-manage-PCs.29c0cd7bdcff67b2df465fb0a51bb5ee7373e324.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/choose-manage-PCs.29c0cd7bdcff67b2df465fb0a51bb5ee7373e324.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [choose-manage-PCs.29c0cd7bdcff67b2df465fb0a51bb5ee7373e324.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/choose-manage-PCs.29c0cd7bdcff67b2df465fb0a51bb5ee7373e324.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26682,8 +26682,8 @@
 * Handoff File: [choose-mdm-solution.832e7e0e9b5bf00900b76dcbee0485ae3a5ed8d6.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/20761fe2e3ce202147063e1b9653a99433ba6823/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/choose-mdm-solution.832e7e0e9b5bf00900b76dcbee0485ae3a5ed8d6.cs-cz.xlf)
 * Handoff Datetime: 2016-05-01 16:59:58
 * Handoff Reason: Include
-* Archive File: [choose-mdm-solution.832e7e0e9b5bf00900b76dcbee0485ae3a5ed8d6.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/choose-mdm-solution.832e7e0e9b5bf00900b76dcbee0485ae3a5ed8d6.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [choose-mdm-solution.832e7e0e9b5bf00900b76dcbee0485ae3a5ed8d6.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/choose-mdm-solution.832e7e0e9b5bf00900b76dcbee0485ae3a5ed8d6.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26694,8 +26694,8 @@
 * Handoff File: [choose-the-right-microsoft-intune-policy-to-use-deleted.fcf0c439643419550ef74da4d8fd48a0eff81184.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/choose-the-right-microsoft-intune-policy-to-use-deleted.fcf0c439643419550ef74da4d8fd48a0eff81184.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [choose-the-right-microsoft-intune-policy-to-use-deleted.fcf0c439643419550ef74da4d8fd48a0eff81184.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/choose-the-right-microsoft-intune-policy-to-use-deleted.fcf0c439643419550ef74da4d8fd48a0eff81184.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [choose-the-right-microsoft-intune-policy-to-use-deleted.fcf0c439643419550ef74da4d8fd48a0eff81184.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/choose-the-right-microsoft-intune-policy-to-use-deleted.fcf0c439643419550ef74da4d8fd48a0eff81184.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26706,8 +26706,8 @@
 * Handoff File: [Choose-the-right-Microsoft-Intune-policy-to-use---deleted.fad1d011d4c7db2065fd8ccecd6cf3f42902169a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Choose-the-right-Microsoft-Intune-policy-to-use---deleted.fad1d011d4c7db2065fd8ccecd6cf3f42902169a.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Choose-the-right-Microsoft-Intune-policy-to-use---deleted.fad1d011d4c7db2065fd8ccecd6cf3f42902169a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Choose-the-right-Microsoft-Intune-policy-to-use---deleted.fad1d011d4c7db2065fd8ccecd6cf3f42902169a.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Choose-the-right-Microsoft-Intune-policy-to-use---deleted.fad1d011d4c7db2065fd8ccecd6cf3f42902169a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Choose-the-right-Microsoft-Intune-policy-to-use---deleted.fad1d011d4c7db2065fd8ccecd6cf3f42902169a.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26718,8 +26718,8 @@
 * Handoff File: [Common-Microsoft-Intune-evaluation-tasks.96ae7a2d5c19028d6805971a923cf724215b6fbd.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Common-Microsoft-Intune-evaluation-tasks.96ae7a2d5c19028d6805971a923cf724215b6fbd.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Common-Microsoft-Intune-evaluation-tasks.96ae7a2d5c19028d6805971a923cf724215b6fbd.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Common-Microsoft-Intune-evaluation-tasks.96ae7a2d5c19028d6805971a923cf724215b6fbd.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Common-Microsoft-Intune-evaluation-tasks.96ae7a2d5c19028d6805971a923cf724215b6fbd.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Common-Microsoft-Intune-evaluation-tasks.96ae7a2d5c19028d6805971a923cf724215b6fbd.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26730,8 +26730,8 @@
 * Handoff File: [Common-Windows-PC-management-tasks-with-the-Microsoft-Intune-computer-client.55d2ab0bf7dfa419cbe29821f1260bda23d3eae6.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Common-Windows-PC-management-tasks-with-the-Microsoft-Intune-computer-client.55d2ab0bf7dfa419cbe29821f1260bda23d3eae6.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Common-Windows-PC-management-tasks-with-the-Microsoft-Intune-computer-client.55d2ab0bf7dfa419cbe29821f1260bda23d3eae6.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Common-Windows-PC-management-tasks-with-the-Microsoft-Intune-computer-client.55d2ab0bf7dfa419cbe29821f1260bda23d3eae6.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Common-Windows-PC-management-tasks-with-the-Microsoft-Intune-computer-client.55d2ab0bf7dfa419cbe29821f1260bda23d3eae6.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Common-Windows-PC-management-tasks-with-the-Microsoft-Intune-computer-client.55d2ab0bf7dfa419cbe29821f1260bda23d3eae6.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26742,8 +26742,8 @@
 * Handoff File: [Company-Portal-app-not-supported.81ac3b220b8996dc768b832245c8e8df07cb8ea5.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/676f47abf6639f180fedd9de71ef75d4c9ba8f6a/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Company-Portal-app-not-supported.81ac3b220b8996dc768b832245c8e8df07cb8ea5.cs-cz.xlf)
 * Handoff Datetime: 2016-04-22 16:41:15
 * Handoff Reason: Include
-* Archive File: [Company-Portal-app-not-supported.81ac3b220b8996dc768b832245c8e8df07cb8ea5.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Company-Portal-app-not-supported.81ac3b220b8996dc768b832245c8e8df07cb8ea5.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Company-Portal-app-not-supported.81ac3b220b8996dc768b832245c8e8df07cb8ea5.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Company-Portal-app-not-supported.81ac3b220b8996dc768b832245c8e8df07cb8ea5.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26754,8 +26754,8 @@
 * Handoff File: [Company-Portal-Frequently-Asked-Questions.77bde8f488e757870e6f302191451239718c7ab4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Company-Portal-Frequently-Asked-Questions.77bde8f488e757870e6f302191451239718c7ab4.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Company-Portal-Frequently-Asked-Questions.77bde8f488e757870e6f302191451239718c7ab4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Company-Portal-Frequently-Asked-Questions.77bde8f488e757870e6f302191451239718c7ab4.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Company-Portal-Frequently-Asked-Questions.77bde8f488e757870e6f302191451239718c7ab4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Company-Portal-Frequently-Asked-Questions.77bde8f488e757870e6f302191451239718c7ab4.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26766,8 +26766,8 @@
 * Handoff File: [computer-management-capabilities-in-microsoft-intune-deleted.60e6fc0c856bc340ee7c51138af033cc0ecc31b5.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/computer-management-capabilities-in-microsoft-intune-deleted.60e6fc0c856bc340ee7c51138af033cc0ecc31b5.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [computer-management-capabilities-in-microsoft-intune-deleted.60e6fc0c856bc340ee7c51138af033cc0ecc31b5.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/computer-management-capabilities-in-microsoft-intune-deleted.60e6fc0c856bc340ee7c51138af033cc0ecc31b5.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [computer-management-capabilities-in-microsoft-intune-deleted.60e6fc0c856bc340ee7c51138af033cc0ecc31b5.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/computer-management-capabilities-in-microsoft-intune-deleted.60e6fc0c856bc340ee7c51138af033cc0ecc31b5.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26778,8 +26778,8 @@
 * Handoff File: [Computer-management-capabilities-in-Microsoft-Intune---deleted.e9f2bf3de67497b97b2dd32ec1ece8a775b933dd.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Computer-management-capabilities-in-Microsoft-Intune---deleted.e9f2bf3de67497b97b2dd32ec1ece8a775b933dd.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Computer-management-capabilities-in-Microsoft-Intune---deleted.e9f2bf3de67497b97b2dd32ec1ece8a775b933dd.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Computer-management-capabilities-in-Microsoft-Intune---deleted.e9f2bf3de67497b97b2dd32ec1ece8a775b933dd.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Computer-management-capabilities-in-Microsoft-Intune---deleted.e9f2bf3de67497b97b2dd32ec1ece8a775b933dd.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Computer-management-capabilities-in-Microsoft-Intune---deleted.e9f2bf3de67497b97b2dd32ec1ece8a775b933dd.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26907,8 +26907,8 @@
 * Handoff File: [configure-and-manage-devices-with-microsoft-intune.23bfa086eadcc2ccb2e8d67a18e8ffa52ccf603a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/configure-and-manage-devices-with-microsoft-intune.23bfa086eadcc2ccb2e8d67a18e8ffa52ccf603a.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [configure-and-manage-devices-with-microsoft-intune.23bfa086eadcc2ccb2e8d67a18e8ffa52ccf603a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/configure-and-manage-devices-with-microsoft-intune.23bfa086eadcc2ccb2e8d67a18e8ffa52ccf603a.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [configure-and-manage-devices-with-microsoft-intune.23bfa086eadcc2ccb2e8d67a18e8ffa52ccf603a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/configure-and-manage-devices-with-microsoft-intune.23bfa086eadcc2ccb2e8d67a18e8ffa52ccf603a.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26919,8 +26919,8 @@
 * Handoff File: [Configure-apps-with-Microsoft-Intune.d099e8830dad65022ed6ea0253ba48208439bf0f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Configure-apps-with-Microsoft-Intune.d099e8830dad65022ed6ea0253ba48208439bf0f.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Configure-apps-with-Microsoft-Intune.d099e8830dad65022ed6ea0253ba48208439bf0f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Configure-apps-with-Microsoft-Intune.d099e8830dad65022ed6ea0253ba48208439bf0f.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Configure-apps-with-Microsoft-Intune.d099e8830dad65022ed6ea0253ba48208439bf0f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Configure-apps-with-Microsoft-Intune.d099e8830dad65022ed6ea0253ba48208439bf0f.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26931,8 +26931,8 @@
 * Handoff File: [configure-apps-with-mobile-app-configuration-policies-in-microsoft-intune.fdf754873832907a6926a5e9785fe8ab4436a747.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/configure-apps-with-mobile-app-configuration-policies-in-microsoft-intune.fdf754873832907a6926a5e9785fe8ab4436a747.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [configure-apps-with-mobile-app-configuration-policies-in-microsoft-intune.fdf754873832907a6926a5e9785fe8ab4436a747.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/configure-apps-with-mobile-app-configuration-policies-in-microsoft-intune.fdf754873832907a6926a5e9785fe8ab4436a747.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [configure-apps-with-mobile-app-configuration-policies-in-microsoft-intune.fdf754873832907a6926a5e9785fe8ab4436a747.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/configure-apps-with-mobile-app-configuration-policies-in-microsoft-intune.fdf754873832907a6926a5e9785fe8ab4436a747.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26944,7 +26944,7 @@
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
 * Archive File: [Configure-mobile-app-configuration-policies.ad4f4037b35808a0619a8453423be15c5669f9f2.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Configure-mobile-app-configuration-policies.ad4f4037b35808a0619a8453423be15c5669f9f2.cs-cz.xlf)
-* Archive Datetime: 2016-05-07 02:30:15
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26956,7 +26956,7 @@
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
 * Archive File: [Configure-mobile-device-management-for-Microsoft-Intune.d7c58ca954897dee1b5366754b050271c21bc285.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Configure-mobile-device-management-for-Microsoft-Intune.d7c58ca954897dee1b5366754b050271c21bc285.cs-cz.xlf)
-* Archive Datetime: 2016-05-07 02:30:15
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26967,8 +26967,8 @@
 * Handoff File: [Control-Microsoft-Passport-settings-on-devices-with-Microsoft-Intune.a2ef937014357b60899528ab5e83893fbfe0428a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Control-Microsoft-Passport-settings-on-devices-with-Microsoft-Intune.a2ef937014357b60899528ab5e83893fbfe0428a.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Control-Microsoft-Passport-settings-on-devices-with-Microsoft-Intune.a2ef937014357b60899528ab5e83893fbfe0428a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Control-Microsoft-Passport-settings-on-devices-with-Microsoft-Intune.a2ef937014357b60899528ab5e83893fbfe0428a.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Control-Microsoft-Passport-settings-on-devices-with-Microsoft-Intune.a2ef937014357b60899528ab5e83893fbfe0428a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Control-Microsoft-Passport-settings-on-devices-with-Microsoft-Intune.a2ef937014357b60899528ab5e83893fbfe0428a.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26979,8 +26979,8 @@
 * Handoff File: [Control-what-admins-can-see-in-the-Microsoft-Intune-admin-console.bf53b0438103a72ebd36c019b4965439571da934.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Control-what-admins-can-see-in-the-Microsoft-Intune-admin-console.bf53b0438103a72ebd36c019b4965439571da934.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Control-what-admins-can-see-in-the-Microsoft-Intune-admin-console.bf53b0438103a72ebd36c019b4965439571da934.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Control-what-admins-can-see-in-the-Microsoft-Intune-admin-console.bf53b0438103a72ebd36c019b4965439571da934.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Control-what-admins-can-see-in-the-Microsoft-Intune-admin-console.bf53b0438103a72ebd36c019b4965439571da934.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Control-what-admins-can-see-in-the-Microsoft-Intune-admin-console.bf53b0438103a72ebd36c019b4965439571da934.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -26991,8 +26991,8 @@
 * Handoff File: [Custom-URI-settings-for-Windows-10-devices.e2ddf9463a0de760fceaa22ecff9c314ffc6f367.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5a8e9de76aade6e41a36869e2cb6b6c262d9ccfc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Custom-URI-settings-for-Windows-10-devices.e2ddf9463a0de760fceaa22ecff9c314ffc6f367.cs-cz.xlf)
 * Handoff Datetime: 2016-04-23 00:26:18
 * Handoff Reason: Include
-* Archive File: [Custom-URI-settings-for-Windows-10-devices.e2ddf9463a0de760fceaa22ecff9c314ffc6f367.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Custom-URI-settings-for-Windows-10-devices.e2ddf9463a0de760fceaa22ecff9c314ffc6f367.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Custom-URI-settings-for-Windows-10-devices.e2ddf9463a0de760fceaa22ecff9c314ffc6f367.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Custom-URI-settings-for-Windows-10-devices.e2ddf9463a0de760fceaa22ecff9c314ffc6f367.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -27003,8 +27003,8 @@
 * Handoff File: [data-security-with-intune.974f52f9938c0084feeb77c18fee85ccd56b125d.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/data-security-with-intune.974f52f9938c0084feeb77c18fee85ccd56b125d.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [data-security-with-intune.974f52f9938c0084feeb77c18fee85ccd56b125d.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/data-security-with-intune.974f52f9938c0084feeb77c18fee85ccd56b125d.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [data-security-with-intune.974f52f9938c0084feeb77c18fee85ccd56b125d.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/data-security-with-intune.974f52f9938c0084feeb77c18fee85ccd56b125d.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -27015,8 +27015,8 @@
 * Handoff File: [Decide-how-to-prepare-apps-for-mobile-application-management-with-Microsoft-Intune.17d71b874d804b93724efb58af09cc323e78bcbc.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Decide-how-to-prepare-apps-for-mobile-application-management-with-Microsoft-Intune.17d71b874d804b93724efb58af09cc323e78bcbc.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Decide-how-to-prepare-apps-for-mobile-application-management-with-Microsoft-Intune.17d71b874d804b93724efb58af09cc323e78bcbc.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Decide-how-to-prepare-apps-for-mobile-application-management-with-Microsoft-Intune.17d71b874d804b93724efb58af09cc323e78bcbc.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Decide-how-to-prepare-apps-for-mobile-application-management-with-Microsoft-Intune.17d71b874d804b93724efb58af09cc323e78bcbc.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Decide-how-to-prepare-apps-for-mobile-application-management-with-Microsoft-Intune.17d71b874d804b93724efb58af09cc323e78bcbc.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -27027,8 +27027,8 @@
 * Handoff File: [Deploy-and-configure-apps-with-Microsoft-Intune.1f9438d6ac5d5352da802a09a5dbc64a5bb2f778.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Deploy-and-configure-apps-with-Microsoft-Intune.1f9438d6ac5d5352da802a09a5dbc64a5bb2f778.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Deploy-and-configure-apps-with-Microsoft-Intune.1f9438d6ac5d5352da802a09a5dbc64a5bb2f778.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Deploy-and-configure-apps-with-Microsoft-Intune.1f9438d6ac5d5352da802a09a5dbc64a5bb2f778.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Deploy-and-configure-apps-with-Microsoft-Intune.1f9438d6ac5d5352da802a09a5dbc64a5bb2f778.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Deploy-and-configure-apps-with-Microsoft-Intune.1f9438d6ac5d5352da802a09a5dbc64a5bb2f778.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -27040,7 +27040,7 @@
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
 * Archive File: [Deploy-apps.b6cdb072b9520e576bfa4495a41047e59c3dc0f7.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Deploy-apps.b6cdb072b9520e576bfa4495a41047e59c3dc0f7.cs-cz.xlf)
-* Archive Datetime: 2016-05-07 02:30:15
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -27051,8 +27051,8 @@
 * Handoff File: [Deploy-apps-to-Windows-PCs-in-Microsoft-Intune.9addee7b6f52775eafe563cce2912f800658eb89.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Deploy-apps-to-Windows-PCs-in-Microsoft-Intune.9addee7b6f52775eafe563cce2912f800658eb89.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Deploy-apps-to-Windows-PCs-in-Microsoft-Intune.9addee7b6f52775eafe563cce2912f800658eb89.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Deploy-apps-to-Windows-PCs-in-Microsoft-Intune.9addee7b6f52775eafe563cce2912f800658eb89.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [Deploy-apps-to-Windows-PCs-in-Microsoft-Intune.9addee7b6f52775eafe563cce2912f800658eb89.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Deploy-apps-to-Windows-PCs-in-Microsoft-Intune.9addee7b6f52775eafe563cce2912f800658eb89.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -27064,7 +27064,7 @@
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
 * Archive File: [Deploy-Conditional-Access--Microsoft-Intune-with-System-Center-Configuration-Manager---deleted.8ab900efb414fae44686893d578df696fb6c1379.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Deploy-Conditional-Access--Microsoft-Intune-with-System-Center-Configuration-Manager---deleted.8ab900efb414fae44686893d578df696fb6c1379.cs-cz.xlf)
-* Archive Datetime: 2016-05-07 02:30:15
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -27076,7 +27076,7 @@
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
 * Archive File: [Deployment-Guide--Protect-corporate-email-and-documents.0a640a519a897735afe32ff7e6c82c13321d7701.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Deployment-Guide--Protect-corporate-email-and-documents.0a640a519a897735afe32ff7e6c82c13321d7701.cs-cz.xlf)
-* Archive Datetime: 2016-05-07 02:30:15
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -27087,8 +27087,8 @@
 * Handoff File: [dougs-sandbox.3e896c6ce8630a481b40a95f9603ad5610697898.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/dougs-sandbox.3e896c6ce8630a481b40a95f9603ad5610697898.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [dougs-sandbox.3e896c6ce8630a481b40a95f9603ad5610697898.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/dougs-sandbox.3e896c6ce8630a481b40a95f9603ad5610697898.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [dougs-sandbox.3e896c6ce8630a481b40a95f9603ad5610697898.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/dougs-sandbox.3e896c6ce8630a481b40a95f9603ad5610697898.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -27099,8 +27099,8 @@
 * Handoff File: [enable-access-to-company-resources-with-microsoft-intune-deleted.d205f83605fbb410a928cb28e5add565b5e3fb74.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/enable-access-to-company-resources-with-microsoft-intune-deleted.d205f83605fbb410a928cb28e5add565b5e3fb74.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [enable-access-to-company-resources-with-microsoft-intune-deleted.d205f83605fbb410a928cb28e5add565b5e3fb74.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/enable-access-to-company-resources-with-microsoft-intune-deleted.d205f83605fbb410a928cb28e5add565b5e3fb74.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [enable-access-to-company-resources-with-microsoft-intune-deleted.d205f83605fbb410a928cb28e5add565b5e3fb74.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/enable-access-to-company-resources-with-microsoft-intune-deleted.d205f83605fbb410a928cb28e5add565b5e3fb74.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -27111,8 +27111,8 @@
 * Handoff File: [enable-mobile-device-enrollment-with-the-microsoft-intune-account-portal.c4e7d1bdcc7aaa414ff2ebfca0443533d563783b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/enable-mobile-device-enrollment-with-the-microsoft-intune-account-portal.c4e7d1bdcc7aaa414ff2ebfca0443533d563783b.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [enable-mobile-device-enrollment-with-the-microsoft-intune-account-portal.c4e7d1bdcc7aaa414ff2ebfca0443533d563783b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/b9ad7742f4d55ff8bf848044b6681f95bb0741c1/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/enable-mobile-device-enrollment-with-the-microsoft-intune-account-portal.c4e7d1bdcc7aaa414ff2ebfca0443533d563783b.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 16:47:12
+* Archive File: [enable-mobile-device-enrollment-with-the-microsoft-intune-account-portal.c4e7d1bdcc7aaa414ff2ebfca0443533d563783b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/enable-mobile-device-enrollment-with-the-microsoft-intune-account-portal.c4e7d1bdcc7aaa414ff2ebfca0443533d563783b.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -28661,8 +28661,8 @@
 * Handoff File: [Mobile-app-management---deleted.cc02991452b97dbc7dd67ac5f93139f46706e21f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Mobile-app-management---deleted.cc02991452b97dbc7dd67ac5f93139f46706e21f.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Mobile-app-management---deleted.cc02991452b97dbc7dd67ac5f93139f46706e21f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Mobile-app-management---deleted.cc02991452b97dbc7dd67ac5f93139f46706e21f.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [Mobile-app-management---deleted.cc02991452b97dbc7dd67ac5f93139f46706e21f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Mobile-app-management---deleted.cc02991452b97dbc7dd67ac5f93139f46706e21f.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -28673,8 +28673,8 @@
 * Handoff File: [Mobile-app-management-policies-in-the-Intune-Console.66b82cdc24ef789e857b2c9fa6070da11fa5380c.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Mobile-app-management-policies-in-the-Intune-Console.66b82cdc24ef789e857b2c9fa6070da11fa5380c.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Mobile-app-management-policies-in-the-Intune-Console.66b82cdc24ef789e857b2c9fa6070da11fa5380c.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Mobile-app-management-policies-in-the-Intune-Console.66b82cdc24ef789e857b2c9fa6070da11fa5380c.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [Mobile-app-management-policies-in-the-Intune-Console.66b82cdc24ef789e857b2c9fa6070da11fa5380c.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Mobile-app-management-policies-in-the-Intune-Console.66b82cdc24ef789e857b2c9fa6070da11fa5380c.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -28721,8 +28721,8 @@
 * Handoff File: [Mobile-Device-Management-With-Microsoft-Intune-and-System-Center-Configuration-Manager.1b12c2bf598f5c08b1b8fb0a6c03ce970cd47a1f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Mobile-Device-Management-With-Microsoft-Intune-and-System-Center-Configuration-Manager.1b12c2bf598f5c08b1b8fb0a6c03ce970cd47a1f.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Mobile-Device-Management-With-Microsoft-Intune-and-System-Center-Configuration-Manager.1b12c2bf598f5c08b1b8fb0a6c03ce970cd47a1f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Mobile-Device-Management-With-Microsoft-Intune-and-System-Center-Configuration-Manager.1b12c2bf598f5c08b1b8fb0a6c03ce970cd47a1f.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [Mobile-Device-Management-With-Microsoft-Intune-and-System-Center-Configuration-Manager.1b12c2bf598f5c08b1b8fb0a6c03ce970cd47a1f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Mobile-Device-Management-With-Microsoft-Intune-and-System-Center-Configuration-Manager.1b12c2bf598f5c08b1b8fb0a6c03ce970cd47a1f.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -28897,8 +28897,8 @@
 * Handoff File: [Placeholder-so-I-can-paste-other-topics-into-this-folder.aca4e0142e881ce25a54300dc52abc84489bb5c9.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Placeholder-so-I-can-paste-other-topics-into-this-folder.aca4e0142e881ce25a54300dc52abc84489bb5c9.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Placeholder-so-I-can-paste-other-topics-into-this-folder.aca4e0142e881ce25a54300dc52abc84489bb5c9.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Placeholder-so-I-can-paste-other-topics-into-this-folder.aca4e0142e881ce25a54300dc52abc84489bb5c9.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [Placeholder-so-I-can-paste-other-topics-into-this-folder.aca4e0142e881ce25a54300dc52abc84489bb5c9.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Placeholder-so-I-can-paste-other-topics-into-this-folder.aca4e0142e881ce25a54300dc52abc84489bb5c9.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -28933,8 +28933,8 @@
 * Handoff File: [Plan-for-apps.22e7ae4f1242becc49c79fcf06572c9ac32e0c6e.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Plan-for-apps.22e7ae4f1242becc49c79fcf06572c9ac32e0c6e.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Plan-for-apps.22e7ae4f1242becc49c79fcf06572c9ac32e0c6e.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Plan-for-apps.22e7ae4f1242becc49c79fcf06572c9ac32e0c6e.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [Plan-for-apps.22e7ae4f1242becc49c79fcf06572c9ac32e0c6e.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Plan-for-apps.22e7ae4f1242becc49c79fcf06572c9ac32e0c6e.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -29029,8 +29029,8 @@
 * Handoff File: [RASK-core-components.75d4f8f1ade1feab47e4d641cfb50638a32962b3.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/RASK-core-components.75d4f8f1ade1feab47e4d641cfb50638a32962b3.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [RASK-core-components.75d4f8f1ade1feab47e4d641cfb50638a32962b3.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/RASK-core-components.75d4f8f1ade1feab47e4d641cfb50638a32962b3.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [RASK-core-components.75d4f8f1ade1feab47e4d641cfb50638a32962b3.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/RASK-core-components.75d4f8f1ade1feab47e4d641cfb50638a32962b3.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -29065,8 +29065,8 @@
 * Handoff File: [Reference-for-the-Microsoft-Intune-administrative-consoles.d7f1013a2fe41863ab6edda07374837bd77a9f57.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Reference-for-the-Microsoft-Intune-administrative-consoles.d7f1013a2fe41863ab6edda07374837bd77a9f57.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Reference-for-the-Microsoft-Intune-administrative-consoles.d7f1013a2fe41863ab6edda07374837bd77a9f57.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Reference-for-the-Microsoft-Intune-administrative-consoles.d7f1013a2fe41863ab6edda07374837bd77a9f57.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [Reference-for-the-Microsoft-Intune-administrative-consoles.d7f1013a2fe41863ab6edda07374837bd77a9f57.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Reference-for-the-Microsoft-Intune-administrative-consoles.d7f1013a2fe41863ab6edda07374837bd77a9f57.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -29366,7 +29366,7 @@
 * Handoff Datetime: 2016-05-01 16:59:58
 * Handoff Reason: Include
 * Archive File: [Sample.9ef8f6baac9c7681956404230a5a71b10dfa7236.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Sample.9ef8f6baac9c7681956404230a5a71b10dfa7236.cs-cz.xlf)
-* Archive Datetime: 2016-05-07 01:52:41
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -29401,8 +29401,8 @@
 * Handoff File: [Set-up-Computer-device-management-with-Microsoft-Intune.6f531072b8b92fbf3d12a8498ef110e50652e3f0.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Set-up-Computer-device-management-with-Microsoft-Intune.6f531072b8b92fbf3d12a8498ef110e50652e3f0.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Set-up-Computer-device-management-with-Microsoft-Intune.6f531072b8b92fbf3d12a8498ef110e50652e3f0.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Set-up-Computer-device-management-with-Microsoft-Intune.6f531072b8b92fbf3d12a8498ef110e50652e3f0.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [Set-up-Computer-device-management-with-Microsoft-Intune.6f531072b8b92fbf3d12a8498ef110e50652e3f0.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Set-up-Computer-device-management-with-Microsoft-Intune.6f531072b8b92fbf3d12a8498ef110e50652e3f0.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -29521,8 +29521,8 @@
 * Handoff File: [staging.412d320a6f8115e696e1af151986c09a6bcd5226.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/staging.412d320a6f8115e696e1af151986c09a6bcd5226.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [staging.412d320a6f8115e696e1af151986c09a6bcd5226.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/staging.412d320a6f8115e696e1af151986c09a6bcd5226.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [staging.412d320a6f8115e696e1af151986c09a6bcd5226.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/staging.412d320a6f8115e696e1af151986c09a6bcd5226.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -29641,8 +29641,8 @@
 * Handoff File: [This-is-a-test-for-Nathan-s-Markdown.bd04970995052f1560b01e169a5166281223a4f0.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/This-is-a-test-for-Nathan-s-Markdown.bd04970995052f1560b01e169a5166281223a4f0.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [This-is-a-test-for-Nathan-s-Markdown.bd04970995052f1560b01e169a5166281223a4f0.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/This-is-a-test-for-Nathan-s-Markdown.bd04970995052f1560b01e169a5166281223a4f0.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [This-is-a-test-for-Nathan-s-Markdown.bd04970995052f1560b01e169a5166281223a4f0.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/This-is-a-test-for-Nathan-s-Markdown.bd04970995052f1560b01e169a5166281223a4f0.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -29665,8 +29665,8 @@
 * Handoff File: [Troubleshoot-policies-in-Microsoft-Intune---deleted.8d9904fc3171c6297801665049d6dbd25cd89497.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3eeb3614c11c7d80e549ecb255502fa719bc09e2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/Troubleshoot-policies-in-Microsoft-Intune---deleted.8d9904fc3171c6297801665049d6dbd25cd89497.cs-cz.xlf)
 * Handoff Datetime: 2016-04-21 20:17:21
 * Handoff Reason: Include
-* Archive File: [Troubleshoot-policies-in-Microsoft-Intune---deleted.8d9904fc3171c6297801665049d6dbd25cd89497.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/5e3cbbc8642c0b06bab40e08cac1c988e2ef4d5b/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-policies-in-Microsoft-Intune---deleted.8d9904fc3171c6297801665049d6dbd25cd89497.cs-cz.xlf)
-* Archive Datetime: 2016-05-06 17:53:48
+* Archive File: [Troubleshoot-policies-in-Microsoft-Intune---deleted.8d9904fc3171c6297801665049d6dbd25cd89497.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/Troubleshoot-policies-in-Microsoft-Intune---deleted.8d9904fc3171c6297801665049d6dbd25cd89497.cs-cz.xlf)
+* Archive Datetime: 2016-05-07 03:33:20
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
