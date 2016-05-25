@@ -7,10 +7,10 @@
 [ Handoff Failed Files ](#handoff-failed-list)| 2
 [ Handoff Success Files ](#handoff-success-list)| 711
 [ Archive Failed Files ](#archive-failed-list)| 0
-[ Archive Success Files ](#archive-success-list)| 263
+[ Archive Success Files ](#archive-success-list)| 262
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 2
-[ In Sync Handback Files ](#insync-handback-success-list)| 13
+[ In Sync Handback Files ](#insync-handback-success-list)| 14
 [ Ignored Files ](#ignored-list)| 238
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -938,7 +938,6 @@
  [InTuneDocs\includes\nextref_server_7_md.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/nextref_server_7_md.md) | ArchivedSuccess | [Details](#4cbb5695d57f7e07523eab7e4db7a7c8f05a0bcc593)
  [InTuneDocs\includes\nextref_vista.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/nextref_vista.md) | ArchivedSuccess | [Details](#0e0d453a927f125a58d1b307ba93e97993ed8a9c594)
  [InTuneDocs\includes\nextref_vista_md.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/nextref_vista_md.md) | ArchivedSuccess | [Details](#44e64345682fc26ddae6f1bc70290bd2bf84369d595)
- [InTuneDocs\includes\sccmshortname.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/sccmshortname.md) | ArchivedSuccess | [Details](#cad3187986387bfe5f86110f478472b563645089596)
  [InTuneDocs\includes\sccmshortname_md.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/sccmshortname_md.md) | ArchivedSuccess | [Details](#20a783276163d706389339c9aac1f842a67b9530597)
  [InTuneDocs\includes\sco_dm_2.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/sco_dm_2.md) | ArchivedSuccess | [Details](#fc2812773cc47aea0a10db21ce53670c3a0dd87c598)
  [InTuneDocs\includes\sco_dm_2_md.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/sco_dm_2_md.md) | ArchivedSuccess | [Details](#1202b6045bb557987046393241d45a6c4e1a9be5599)
@@ -1027,6 +1026,7 @@
  [InTuneDocs\includes\cm5long_md.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/cm5long_md.md) | InSyncHandedBackSuccess | [Details](#85880c99684adf143d786a2a492500c45e97d35b573)
  [InTuneDocs\includes\cm5short_md.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/cm5short_md.md) | InSyncHandedBackSuccess | [Details](#b70ed7a9f0369fdbe357006f156325aaaaa554da575)
  [InTuneDocs\includes\cmshort_md.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/cmshort_md.md) | InSyncHandedBackSuccess | [Details](#506d830e0cbc622ea3c0637656d5c60c9a6b38f8577)
+ [InTuneDocs\includes\sccmshortname.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/sccmshortname.md) | InSyncHandedBackSuccess | [Details](#cad3187986387bfe5f86110f478472b563645089596)
 
 ## <a name='ignored-list'></a> Ignored File List
  Source File | Status | Details 
@@ -8617,15 +8617,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='cad3187986387bfe5f86110f478472b563645089596'></a> Source: [InTuneDocs\includes\sccmshortname.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/sccmshortname.md)
-* Status: ArchivedSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [InTuneDocs\includes\sccmshortname.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/2602caae66cfb9f7dcc7ef2666da032409f41c07/InTuneDocs/includes/sccmshortname.md)
 * Handoff File: [sccmshortname.e2c299d134eed8e2fd1631c4bdf1855f8db3513b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/20761fe2e3ce202147063e1b9653a99433ba6823/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/sccmshortname.e2c299d134eed8e2fd1631c4bdf1855f8db3513b.cs-cz.xlf)
 * Handoff Datetime: 2016-05-01 16:59:59
 * Handoff Reason: Include
 * Archive File: [sccmshortname.e2c299d134eed8e2fd1631c4bdf1855f8db3513b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7905280ce6ac371572a3e487adfbe0a35ac510bc/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/sccmshortname.e2c299d134eed8e2fd1631c4bdf1855f8db3513b.cs-cz.xlf)
 * Archive Datetime: 2016-05-07 02:30:15
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [sccmshortname.e2c299d134eed8e2fd1631c4bdf1855f8db3513b.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/dc2d7a77e5cd1139af9aef2d72f87bb661e6dadc/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/sccmshortname.e2c299d134eed8e2fd1631c4bdf1855f8db3513b.cs-cz.xlf)
+* Handback Datetime: 2016-05-25 03:50:33
 * [Back to Top](#report-top)
 
 ##### <a name='20a783276163d706389339c9aac1f842a67b9530597'></a> Source: [InTuneDocs\includes\sccmshortname_md.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/sccmshortname_md.md)
