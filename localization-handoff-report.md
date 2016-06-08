@@ -1,32 +1,19 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [InTuneDocs\EndUser\encrypt-your-device-android.md](https://github.com/Microsoft/IntuneDocs-pr/blob/39bcea03cad061e5b84e073cc5affcdd14fc6015/InTuneDocs/EndUser/encrypt-your-device-android.md) | HandedOffSuccess | [Details](#22e9071171d2dc63562e94cabe2abdec3b2bd85e287)
- [InTuneDocs\EndUser\password-does-not-meet-it-administrator-requirements.md](https://github.com/Microsoft/IntuneDocs-pr/blob/39bcea03cad061e5b84e073cc5affcdd14fc6015/InTuneDocs/EndUser/password-does-not-meet-it-administrator-requirements.md) | HandedOffSuccess | [Details](#e22fe3d41f93788f0b4d0f3e639d046f4dff1171416)
+ [InTuneDocs\DeployUse\vpn-connections-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/95abe7b12e68755f3c95f91888efd3e85c057119/InTuneDocs/DeployUse/vpn-connections-in-microsoft-intune.md) | HandedOffSuccess | [Details](#b55cf263611d6e90805cad9985eb8a5e7ebeb4a0253)
 
 ## Item Details
-##### <a name='22e9071171d2dc63562e94cabe2abdec3b2bd85e287'></a> Source: [InTuneDocs\EndUser\encrypt-your-device-android.md](https://github.com/Microsoft/IntuneDocs-pr/blob/39bcea03cad061e5b84e073cc5affcdd14fc6015/InTuneDocs/EndUser/encrypt-your-device-android.md)
+##### <a name='b55cf263611d6e90805cad9985eb8a5e7ebeb4a0253'></a> Source: [InTuneDocs\DeployUse\vpn-connections-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/95abe7b12e68755f3c95f91888efd3e85c057119/InTuneDocs/DeployUse/vpn-connections-in-microsoft-intune.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [encrypt-your-device-android.d420ebcfddd36ee683f96baad70eddbd1d5b95b8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/addc7f659a475b985a4d87cf169c51a62cfc9844/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/encrypt-your-device-android.d420ebcfddd36ee683f96baad70eddbd1d5b95b8.cs-cz.xlf)
-* Handoff Datetime: 2016-06-07 22:41:27
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='e22fe3d41f93788f0b4d0f3e639d046f4dff1171416'></a> Source: [InTuneDocs\EndUser\password-does-not-meet-it-administrator-requirements.md](https://github.com/Microsoft/IntuneDocs-pr/blob/39bcea03cad061e5b84e073cc5affcdd14fc6015/InTuneDocs/EndUser/password-does-not-meet-it-administrator-requirements.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [password-does-not-meet-it-administrator-requirements.02c9ca97ffe1759953549b28fa49accc84c26580.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/addc7f659a475b985a4d87cf169c51a62cfc9844/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/password-does-not-meet-it-administrator-requirements.02c9ca97ffe1759953549b28fa49accc84c26580.cs-cz.xlf)
-* Handoff Datetime: 2016-06-07 22:41:27
+* Handoff File: [vpn-connections-in-microsoft-intune.fb1020834695c6cc29b0f170f5683cc0f44eee15.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/60bc86cc78720773bd6b1ca3f5354739ab52f495/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/vpn-connections-in-microsoft-intune.fb1020834695c6cc29b0f170f5683cc0f44eee15.cs-cz.xlf)
+* Handoff Datetime: 2016-06-08 16:39:14
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
