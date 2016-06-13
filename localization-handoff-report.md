@@ -1,22 +1,20 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 4
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [InTuneDocs\DeployUse\whats-coming-in-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/36d0af2f2221404410d9b7c7837fca062dadea1c/InTuneDocs/DeployUse/whats-coming-in-intune.md) | HandedOffSuccess | [Details](#e8860142f163fbea4f766422477b1458dd4dee19256)
- [InTuneDocs\EndUser\what-happens-if-you-unenroll-your-device-from-intune-windows.md](https://github.com/Microsoft/IntuneDocs-pr/blob/1244d931d1bd3db012fbcfe0bd055d1fd4f2d88a/InTuneDocs/EndUser/what-happens-if-you-unenroll-your-device-from-intune-windows.md) | HandedOffSuccess | [Details](#f0108b884439aac9661c9f36f85b47d80209d155464)
- [InTuneDocs\GetStarted\start-with-a-paid-subscription-to-microsoft-intune-step-4.md](https://github.com/Microsoft/IntuneDocs-pr/blob/1244d931d1bd3db012fbcfe0bd055d1fd4f2d88a/InTuneDocs/GetStarted/start-with-a-paid-subscription-to-microsoft-intune-step-4.md) | HandedOffSuccess | [Details](#adefe438da1150cc0f305795f01d77caa78722f4525)
- [InTuneDocs\GetStarted\TOC.md](https://github.com/Microsoft/IntuneDocs-pr/blob/f7b360dc30497a3d0cdc4d2698016c1d360dec0c/InTuneDocs/GetStarted/TOC.md) | HandedOffSuccess | [Details](#0dc04c1bba266fdba3fd6326f7cb6908a41e8c2d533)
+ [InTuneDocs\DeployUse\android-policy-settings-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/c2d3e81b310302d387121a919ac9510c261f897f/InTuneDocs/DeployUse/android-policy-settings-in-microsoft-intune.md) | HandedOffSuccess | [Details](#28b5351be7d4fa46b4dee0b6145c5e9f81fe15af15)
+ [InTuneDocs\DeployUse\ios-policy-settings-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/b6c33f6e49277a00d18a0dd38450d3343090954d/InTuneDocs/DeployUse/ios-policy-settings-in-microsoft-intune.md) | HandedOffSuccess | [Details](#b105eca7a93b8648e832e422239709b284b5f0ef62)
 
 ## Item Details
-##### <a name='e8860142f163fbea4f766422477b1458dd4dee19256'></a> Source: [InTuneDocs\DeployUse\whats-coming-in-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/36d0af2f2221404410d9b7c7837fca062dadea1c/InTuneDocs/DeployUse/whats-coming-in-intune.md)
+##### <a name='28b5351be7d4fa46b4dee0b6145c5e9f81fe15af15'></a> Source: [InTuneDocs\DeployUse\android-policy-settings-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/c2d3e81b310302d387121a919ac9510c261f897f/InTuneDocs/DeployUse/android-policy-settings-in-microsoft-intune.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [whats-coming-in-intune.c079f8f5234a0d7a8e61907e1283976112f63eb6.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7b3d3097dcffa963ffc854a2a35a5a384ec96617/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/whats-coming-in-intune.c079f8f5234a0d7a8e61907e1283976112f63eb6.cs-cz.xlf)
-* Handoff Datetime: 2016-06-10 22:33:22
+* Handoff File: [android-policy-settings-in-microsoft-intune.8f414b9a3fca5f90980cebf974537ff460a5b0f4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/ec123e72aa039c1e75760dfb49d40c78df46bc46/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/android-policy-settings-in-microsoft-intune.8f414b9a3fca5f90980cebf974537ff460a5b0f4.cs-cz.xlf)
+* Handoff Datetime: 2016-06-13 18:32:04
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -24,35 +22,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='f0108b884439aac9661c9f36f85b47d80209d155464'></a> Source: [InTuneDocs\EndUser\what-happens-if-you-unenroll-your-device-from-intune-windows.md](https://github.com/Microsoft/IntuneDocs-pr/blob/1244d931d1bd3db012fbcfe0bd055d1fd4f2d88a/InTuneDocs/EndUser/what-happens-if-you-unenroll-your-device-from-intune-windows.md)
+##### <a name='b105eca7a93b8648e832e422239709b284b5f0ef62'></a> Source: [InTuneDocs\DeployUse\ios-policy-settings-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/b6c33f6e49277a00d18a0dd38450d3343090954d/InTuneDocs/DeployUse/ios-policy-settings-in-microsoft-intune.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [what-happens-if-you-unenroll-your-device-from-intune-windows.a19c13b1e17f77a473e5acc0fbc7565d8c9fb210.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7b3d3097dcffa963ffc854a2a35a5a384ec96617/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/what-happens-if-you-unenroll-your-device-from-intune-windows.a19c13b1e17f77a473e5acc0fbc7565d8c9fb210.cs-cz.xlf)
-* Handoff Datetime: 2016-06-10 22:33:22
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='adefe438da1150cc0f305795f01d77caa78722f4525'></a> Source: [InTuneDocs\GetStarted\start-with-a-paid-subscription-to-microsoft-intune-step-4.md](https://github.com/Microsoft/IntuneDocs-pr/blob/1244d931d1bd3db012fbcfe0bd055d1fd4f2d88a/InTuneDocs/GetStarted/start-with-a-paid-subscription-to-microsoft-intune-step-4.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [start-with-a-paid-subscription-to-microsoft-intune-step-4.78910944c8d80959439df1c9a4c91e117cb929c2.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7b3d3097dcffa963ffc854a2a35a5a384ec96617/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/start-with-a-paid-subscription-to-microsoft-intune-step-4.78910944c8d80959439df1c9a4c91e117cb929c2.cs-cz.xlf)
-* Handoff Datetime: 2016-06-10 22:33:22
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='0dc04c1bba266fdba3fd6326f7cb6908a41e8c2d533'></a> Source: [InTuneDocs\GetStarted\TOC.md](https://github.com/Microsoft/IntuneDocs-pr/blob/f7b360dc30497a3d0cdc4d2698016c1d360dec0c/InTuneDocs/GetStarted/TOC.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [TOC.fa7452f10c1ac8148ce488a34d334ba7b01068f4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/7b3d3097dcffa963ffc854a2a35a5a384ec96617/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/TOC.fa7452f10c1ac8148ce488a34d334ba7b01068f4.cs-cz.xlf)
-* Handoff Datetime: 2016-06-10 22:33:22
+* Handoff File: [ios-policy-settings-in-microsoft-intune.0589807be996775555db57853ccb4e27d60aa604.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/ec123e72aa039c1e75760dfb49d40c78df46bc46/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/ios-policy-settings-in-microsoft-intune.0589807be996775555db57853ccb4e27d60aa604.cs-cz.xlf)
+* Handoff Datetime: 2016-06-13 18:32:04
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
