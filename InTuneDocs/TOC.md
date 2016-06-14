@@ -1,4 +1,9 @@
-# [Understand and Explore](/intune/understand-explore/introduction-to-microsoft-intune.md)
-# [Get Started](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
-# [Deploy and Use](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
-# [Troubleshoot](/intune/troubleshoot/how-to-get-support-for-microsoft-intune)
+# [Porozumění a prozkoumávání](/intune/understand-explore/introduction-to-microsoft-intune.md)
+# [Začínáme](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
+# [Nasazení a používání](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
+# [Řešení problémů](/intune/troubleshoot/how-to-get-support-for-microsoft-intune)
+
+
+<!--HONumber=Apr16_HO4-->
+
+
