@@ -1,20 +1,26 @@
-# [Understand and Explore](introduction-to-microsoft-intune.md)
-## [Introduction to Intune](introduction-to-microsoft-intune.md)
-## [Intune evaluation guide](get-started-with-a-30-day-trial-of-microsoft-intune.md)
-### [Sign in or sign up for a 30-day evaluation](get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md)
-### [Add users](get-started-with-a-30-day-trial-of-microsoft-intune-step-2.md)
-### [Create groups to organize users & devices](get-started-with-a-30-day-trial-of-microsoft-intune-step-3.md)
-### [Create policies and publish an app](get-started-with-a-30-day-trial-of-microsoft-intune-step-4.md)
-### [Enroll mobile devices & install an app](get-started-with-a-30-day-trial-of-microsoft-intune-step-5.md)
-### [Other options and extras](get-started-with-a-30-day-trial-of-microsoft-intune-step-6.md)
-### [Next steps](get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)
-<!--- ## [Common Intune evaluation tasks](common-microsoft-intune-evaluation-tasks.md)
-### [Start a trial & deploy iOS PIN policy](start-a-microsoft-intune-trial-and-deploy-ios-pin-policy.md)
-### [Set up email access for iOS devices](set-up-email-access-for-ios-devices-using-microsoft-intune.md)--->
-## [Common scenarios](common-ways-to-use-intune.md)
+# [Porozumění a prozkoumávání](introduction-to-microsoft-intune.md)
+## [Úvod do služby Intune](introduction-to-microsoft-intune.md)
+## [Příručka pro testování Intune](get-started-with-a-30-day-trial-of-microsoft-intune.md)
+### [Registrace nebo přihlášení k 30dennímu testování](get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md)
+### [Přidávání uživatelů](get-started-with-a-30-day-trial-of-microsoft-intune-step-2.md)
+### [Vytvoření skupiny pro uspořádání uživatelů a zařízení](get-started-with-a-30-day-trial-of-microsoft-intune-step-3.md)
+### [Vytvoření zásad a publikování aplikace](get-started-with-a-30-day-trial-of-microsoft-intune-step-4.md)
+### [Registrace mobilních zařízení a instalace aplikace](get-started-with-a-30-day-trial-of-microsoft-intune-step-5.md)
+### [Další možnosti a funkce](get-started-with-a-30-day-trial-of-microsoft-intune-step-6.md)
+### [Další kroky](get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)
+## [Běžné úlohy hodnocení služby Intune](common-microsoft-intune-evaluation-tasks.md)
+### [Spuštění zkušební verze a nasazení zásad kódu PIN systému iOS](start-a-microsoft-intune-trial-and-deploy-ios-pin-policy.md)
+### [Nastavení přístupu k e-mailu pro zařízení s iOS](set-up-email-access-for-ios-devices-using-microsoft-intune.md)
+## [Typické scénáře](common-ways-to-use-intune.md)
+
 <!--- ## [Intune FAQ](frequently-asked-questions-for-microsoft-intune.md)--->
 
-# [Get Started](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
+# [Začínáme](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
-# [Deploy and Use](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
-# [Troubleshoot](/intune/troubleshoot/how-to-get-support-for-microsoft-intune)
+# [Nasazení a používání](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
+# [Řešení problémů](/intune/troubleshoot/how-to-get-support-for-microsoft-intune)
+
+
+<!--HONumber=May16_HO1-->
+
+

@@ -1,17 +1,33 @@
 ---
-title: Kontaktujte telefonickou odbornou pomoc pro Microsoft Intune
-ms.custom: na
-ms.reviewer: na
-ms.service: microsoft-intune
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 01c096eb-088b-4d2b-a1fa-dce6cdb12294
-author: Nbigman
----
-# Kontaktujte telefonickou odbornou pomoc pro Microsoft Intune
+# required metadata
 
-## V následující tabulce jsou uvedena telefonní čísla a pracovní doby.
+title: Kontaktujte odbornou telefonickou podporu | Microsoft Intune
+description:
+keywords:
+author: Nbigman
+manager: jeffgilb
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod:
+ms.service: microsoft-intune
+ms.technology:
+ms.assetid: 01c096eb-088b-4d2b-a1fa-dce6cdb12294
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: jeffgilb
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
+# Kontaktujte odbornou telefonickou podporu pro Microsoft Intune
+
+## Telefonní čísla a pracovní doba
 
 |Země/oblast|Hodiny technické podpory|Pracovní doba|Podporované jazyky|Bezplatná telefonní čísla|Místní telefonní čísla|
 |------------------|---------------------------|------------------|-----------------------|---------------------------|-----------------------|
@@ -107,6 +123,6 @@ author: Nbigman
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO1-->
 
 

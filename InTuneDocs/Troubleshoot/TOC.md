@@ -1,15 +1,20 @@
-# [Understand and Explore](/intune/understand-explore/introduction-to-microsoft-intune)
-# [Get Started](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
+# [Porozumění a prozkoumávání](/intune/understand-explore/introduction-to-microsoft-intune)
+# [Začínáme](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
-# [Deploy and Use](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
+# [Nasazení a používání](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
 
-# [Troubleshoot](how-to-get-support-for-microsoft-intune.md)
-## [How to get support](how-to-get-support-for-microsoft-intune.md)
-## [Troubleshoot endpoint protection](Troubleshoot-Endpoint-Protection-in-microsoft-intune.md)
-## [Troubleshoot company resource access problems](Troubleshoot-company-resource-access-problems-with-microsoft-intune.md)
-## [Troubleshoot app deployment problems](Troubleshoot-app-deployment-problems-in-microsoft-intune.md)
-## [Troubleshoot device enrollment](troubleshoot-device-enrollment-in-intune.md)
-## [Troubleshoot policies](Troubleshoot-policies-in-microsoft-intune.md)
-## [Troubleshoot client setup](Troubleshoot-client-setup-in-microsoft-intune.md)
-## [Troubleshoot software updates](Troubleshoot-software-updates-in-microsoft-intune.md)
-## [Troubleshoot email profiles](Troubleshoot-email-profiles-in-microsoft-intune.md)
+# [Řešení problémů](how-to-get-support-for-microsoft-intune.md)
+## [Jak získat podporu](how-to-get-support-for-microsoft-intune.md)
+## [Řešení potíží se službou Endpoint Protection](Troubleshoot-Endpoint-Protection-in-microsoft-intune.md)
+## [Řešení problémů s přístupem k prostředkům společnosti](Troubleshoot-company-resource-access-problems-with-microsoft-intune.md)
+## [Řešení problémů s nasazením aplikací](Troubleshoot-app-deployment-problems-in-microsoft-intune.md)
+## [Řešení potíží s registrací](troubleshoot-device-enrollment-in-intune.md)
+## [Řešení potíží se zásadami](Troubleshoot-policies-in-microsoft-intune.md)
+## [Řešení potíží s klientským nastavením](Troubleshoot-client-setup-in-microsoft-intune.md)
+## [Řešení potíží s aktualizacemi softwaru](Troubleshoot-software-updates-in-microsoft-intune.md)
+## [Řešení potíží s e-mailovými profily](Troubleshoot-email-profiles-in-microsoft-intune.md)
+
+
+<!--HONumber=May16_HO1-->
+
+
