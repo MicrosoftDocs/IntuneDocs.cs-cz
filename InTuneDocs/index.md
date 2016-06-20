@@ -2,231 +2,249 @@
 asset_id: 3414479e-e548-4753-bcf7-6322b43221fd
 layout: HubPage
 
-title: Microsoft Intune Documentation
-description: Technical documentation for Microsoft Intune - Mobile Device and Application Management
+title: Dokumentace k Microsoft Intune
+description: Technická dokumentace k Microsoft Intune – Správa mobilních zařízení a aplikací
 keywords: intune documentation, MDM documentation, Mobile Device Management Documentation, Mobile Device and Application Management Documentation
 author: jeffgilb
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: hubpage
-ms.prod: 
+ms.prod:
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology:
 ms.suite: ems
 ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
 
 ---
-# Microsoft Intune Documentation
+# Dokumentace k Microsoft Intune
 <article id="main">
     <section id="hero-content">
-      <h1>Microsoft Intune Documentation</h1>
-      <h2>Learn how to deploy and manage Microsoft Intune, a mobile device and application management service.</h2>
-      <h3>Manage Intune with Configuration Manager? <a href="https://technet.microsoft.com/en-us/library/mt627883.aspx" target="_blank">View Configuration Manager Documentation &rarr;</a></h3>
+      <h1>Dokumentace k Microsoft Intune</h1>
+      <h2>Postup nasazení a správy Microsoft Intune, služby pro správu mobilních zařízení a aplikací.</h2>
+      <h3>Chcete spravovat Intune s Configuration Managerem? <a href="https://technet.microsoft.com/en-us/library/mt627883.aspx" target="_blank">Zobrazit dokumentaci ke Configuration Manageru &rarr;</a></h3>
     </section>
     <section id="featured" class="container">
-      <h2 class="section-heading"><span class="icon icon-warning"></span> Featured Content</h2>
+      <h2 class="section-heading"><span class="icon icon-warning"></span> Vybraný obsah</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="/intune/understand-explore/introduction-to-microsoft-intune">Introduction to Microsoft Intune</a></li>
-          <li><a href="/intune/understand-explore/common-ways-to-use-intune">Common scenarios that rely on Intune</a></li>
-          <li><a href="/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune">Start with a paid subscription</a></li>
+          <li><a href="/intune/understand-explore/introduction-to-microsoft-intune">Úvod do Microsoft Intune</a></li>
+          <li><a href="/intune/understand-explore/common-ways-to-use-intune">Typické scénáře využívající Intune</a></li>
+          <li><a href="/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune">Úvodní příručka služby Intune</a></li>
         </ul>
         <ul class="column column-half">
-          <li><a href="/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune">Overview of device and app lifecycles</a></li>
-          <li><a href="/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune">Protect app data</a></li>
-          <li><a href="/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune">What to tell your end users about Intune</a></li>
+          <li><a href="/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune">Přehled životních cyklů zařízení a aplikací</a></li>
+          <li><a href="/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune">Ochrana dat aplikací</a></li>
+          <li><a href="/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune">Co říct koncovým uživatelům o Intune</a></li>
         </ul>
       </div>
     </section>
-
     <div id="journeys">
       <section class="container">
         <!-- <h2 class="section-heading"><span class="icon icon-inheritance"></span> Stages</h2> -->
         <ul class="journeys-list">
-
           <li class="journey-step">
-
             <header class="journey-step-header row">
               <a href="/intune/understand-explore/introduction-to-microsoft-intune">
                 <div class="title column-third">
                   <span class="step-number">1</span>
-                  <p>Understand &amp; Explore</p>
+                  <p>Porozumění a prozkoumávání</p>
                 </div>
-                <p class="description column-two-thirds">Learn the basic concepts and capabilities of Microsoft Intune.
+                <p class="description column-two-thirds">Naučte se základní koncepty a funkce Microsoft Intune.
                 </p>
               </a>
             </header>
-
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
                   <a href="/intune/understand-explore/introduction-to-microsoft-intune">
-                    <h3>Introduction to Intune</h3>
-                    <p>Learn about how Intune provides device, app, and data management capabilities for mobile devices (iOS devices, Android devices, Windows phones) and Windows PCs.</p>
+                    <h3>Úvod do služby Intune</h3>
+                    <p>Získejte informace o tom, jak Intune poskytuje možnosti správy zařízení a aplikací a dat pro správu mobilních zařízení (zařízení s iOS, zařízení s Androidem, telefony s Windows) a počítačů s Windows.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune">
-                    <h3>Intune evaluation guide</h3>
-                    <p>Use the trial guide to walk through the steps to get your trial set up with up to 100 users and devices.</p>
+                    <h3>Příručka pro testování Intune</h3>
+                    <p>Příručka pro zkušební verzi vás provede nastavením zkušební verze pro až 100 uživatelů a zařízení.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/understand-explore/common-ways-to-use-intune">
-                    <h3>Common scenarios</h3>
-                    <p>Consider how Intune is commonly used to solve real-world business problems.</p>
+                    <h3>Typické scénáře</h3>
+                    <p>Podívejte se, jak se Intune běžně používá k řešení reálných obchodních problémů.</p>
                   </a>
                 </li>
               </ul>
             </section>
           </li>
-
           <li class="journey-step">
-
             <header class="journey-step-header row">
               <a href="/intune/get-started/what-to-know-before-you-start-microsoft-intune">
                 <div class="title column-third">
                   <span class="step-number">2</span>
-                  <p>Get Started</p>
+                  <p>Začínáme</p>
                 </div>
-                <p class="description column-two-thirds">Get your environment set up.
+                <p class="description column-two-thirds">Nastavení vašeho prostředí
                 </p>
               </a>
             </header>
-
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
                   <a href="/intune/get-started/what-to-know-before-you-start-microsoft-intune">
-                    <h3>What to know before you start</h3>
-                    <p>Quickly familiarize yourself with the baseline requirements for any Intune deployment.</p>
+                    <h3>Co potřebujete vědět, než začnete</h3>
+                    <p>Rychle se seznamte se základními požadavky pro jednotlivá nasazení Intune.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune">
-                    <h3>Get started with a paid subscription</h3>
-                    <p>Building on the 30-day trial guide, this topic walks you through Azure Active Directory synchronization, domain and DNS considerations, and other Intune customizations.</p>
+                    <h3>Úvodní příručka služby Intune</h3>
+                    <p>Toto téma, které navazuje na příručku pro 30denní zkušební verzi, vás provede synchronizací služby Azure Active Directory, aspekty týkajícími se domény a DNS a dalšími přizpůsobeními Intune.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/get-started/rollout-phases-for-microsoft-intune-deployment">
-                    <h3>Rollout phases</h3>
-                    <p>Define your Intune goals, architecture, pilot, and production rollout plans.</p>
+                    <h3>Fáze uvedení</h3>
+                    <p>Definice cílů, architektury, pilotního nasazení a produkčních plánů uvedení Intune</p>
                   </a>
                 </li>
               </ul>
             </section>
           </li>
-
           <li class="journey-step">
             <header class="journey-step-header row">
               <a href="/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune">
                 <div class="title column-third">
                   <span class="step-number">3</span>
-                  <p>Deploy &amp; Use</p>
+                  <p>Nasazení a používání</p>
                 </div>
-                <p class="description column-two-thirds">Manage devices, apps, and data with Intune.
+                <p class="description column-two-thirds">Správa zařízení, aplikací a dat s Intune
                 </p>
               </a>
             </header>
-
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
                   <a href="/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune">
-                    <h3>Overview of device and app lifecycles</h3>
-                    <p>Learn about the typical phases involved with managing devices and apps using Intune.</p>
+                    <h3>Přehled životních cyklů zařízení a aplikací</h3>
+                    <p>Získejte informace o běžných fázích, které jsou součástí správy zařízení a aplikací pomocí Intune.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/deploy-use/enroll-devices-in-microsoft-intune">
-                    <h3>Enroll devices</h3>
-                    <p>Learn the various ways to enroll mobile devices and Windows PCs into management with Intune.</p>
+                    <h3>Registrovat zařízení</h3>
+                    <p>Zjistěte informace o různých způsobech registrace mobilních zařízení a počítačů s Windows pro správu pomocí Intune.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune">
-                    <h3>What to tell your end users</h3>
-                    <p>Understand the steps your end users need to perform to use their devices with Intune and share this information with end users to help them complete tasks on their own.</p>
+                    <h3>Co říct koncovým uživatelům</h3>
+                    <p>Pochopte kroky, které koncoví uživatelé musí provést, pokud chtějí používat svá zařízení s Intune, a sdílejte tyto informace s koncovými uživateli, abyste jim usnadnili provádění úloh samostatně.</p>
                   </a>
                 </li>
               </ul>
-
-	      <ul class="row">
+          <ul class="row">
                 <li class="column-third">
                   <a href="/intune/deploy-use/introduction-to-device-compliance-policies-in-microsoft-intune">
-                    <h3>Device compliance policies</h3>
-                    <p>Create and use compliance policies that protect your apps and data.</p>
+                    <h3>Zásady dodržování předpisů pro zařízení</h3>
+                    <p>Vytvářejte a používejte zásady dodržování předpisů, které chrání vaše aplikace a data.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune">
-                    <h3>Restrict access to email and O365 services</h3>
-                    <p>Use Intune's conditional access capability to restrict access to company email and Office 365 services.</p>
+                    <h3>Omezení přístupu k e-mailu a službám O365</h3>
+                    <p>Pomocí možnosti podmíněného přístupu Intune můžete omezit přístup k e-mailu společnosti a službám Office 365.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies">
-                    <h3>Manage settings and features on your devices</h3>
-                    <p>Use Intune policies to control settings and features on your devices and computers.</p>
+                    <h3>Správa nastavení a funkcí v zařízeních</h3>
+                    <p>Pomocí zásad Intune můžete ovládat nastavení a funkce svých zařízení a počítačů.</p>
                   </a>
                 </li>
               </ul>
-
                 <ul class="row">
                 <li class="column-third">
                   <a href="/intune/deploy-use/deploy-apps-in-microsoft-intune">
-                    <h3>Deploy apps to devices and PCs</h3>
-                    <p>Deploy an app to selected devices and users.</p>
+                    <h3>Nasazení aplikací do zařízení a počítačů</h3>
+                    <p>Nasaďte aplikace pro vybraná zařízení a uživatele.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune">
-                    <h3>Protect app data</h3>
-                    <p>Use Intune’s Mobile App Management (MAM) policies to help protect app data.</p>
+                    <h3>Ochrana dat aplikací</h3>
+                    <p>Zásady správy mobilních aplikací (MAM) Intune vám pomohou chránit data vaší společnosti.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/deploy-use/use-remote-lock-and-passcode-reset-in-microsoft-intune">
-                    <h3>Remote lock and passcode reset</h3>
-                    <p>Protect remote or lost devices by using remote lock and passcode capabilities.</p>
+                    <h3>Vzdálené uzamčení a resetování hesla</h3>
+                    <p>Chraňte vzdálená nebo ztracená zařízení s použitím možností vzdáleného uzamčení a hesla.</p>
                   </a>
                 </li>
               </ul>
-
-	    </section>
+        </section>
           </li>
-
-
-
           <li class="journey-step">
+            <header class="journey-step-header row">
+              <a href="/intune/develop/intune-app-sdk">
+                <div class="title column-third">
+                  <span class="step-number">4</span>
+                  <p>Vývoj a přizpůsobení aplikací</p>
+                </div>
+                <p class="description column-two-thirds">Povolení správy mobilních aplikací pro iOS a Android</p>
+              </a>
+            </header>
+            <section class="journey-step-elements content">
+              <ul class="row">
+                <li class="column-third">
+                  <a href="/intune/develop/intune-app-sdk-get-started">
+                    <h3>Začínáme s Microsoft Intune App SDK</h3>
+                    <p>Tento průvodce vás provede důležitými kroky potřebnými k povolení správy mobilních aplikací ve vaší aplikaci pomocí Microsoft Intune.</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="/intune/develop/intune-app-sdk-ios">
+                    <h3>Intune App SDK pro iOS – Příručka pro vývojáře</h3>
+                    <p>Intune App SDK pro iOS zahrnuje statickou knihovnu, soubory prostředků, záhlaví API, seznam vlastností (plist) s nastavením pro ladění a nástroj konfigurátoru.</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="/intune/develop/intune-app-sdk-android">
+                    <h3>Intune App SDK pro Android – Příručka pro vývojáře</h3>
+                    <p>Intune App SDK pro Android je standardní knihovna pro Android, která nemá žádné externí závislosti.</p>
+                  </a>
+                </li>
+              </ul>
+            </section>
+            </li>
+      <li class="journey-step">
             <header class="journey-step-header row">
               <a href="/intune/troubleshoot/how-to-get-support-for-microsoft-intune">
                 <div class="title column-third">
-                  <span class="step-number">4</span>
-                  <p>Troubleshoot</p>
+                  <span class="step-number">5</span>
+                  <p>Řešení problémů</p>
                 </div>
-                <p class="description column-two-thirds">Resources to help you troubleshoot Intune.</p>
+                <p class="description column-two-thirds">Prostředky, které vám pomohou při odstraňování potíží s Intune</p>
               </a>
             </header>
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
                   <a href="/intune/troubleshoot/how-to-get-support-for-microsoft-intune">
-                    <h3>How to get support for Intune</h3>
-                    <p>Get familiar with different ways Microsoft provides global technical, pre-sales, and billing support.</p>
+                    <h3>Jak získat podporu pro Intune</h3>
+                    <p>Seznamte se s různými způsoby, kterými Microsoft poskytuje globální technickou podporu, předprodejní podporu a podporu fakturace.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/troubleshoot/troubleshoot-device-enrollment-in-intune">
-                    <h3>Troubleshoot device enrollment</h3>
-                    <p>Solve problems encountered when enrolling devices.</p>
+                    <h3>Řešení potíží při registraci zařízení</h3>
+                    <p>Řešte problémy vzniklé při registraci zařízení.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/troubleshoot/troubleshoot-app-deployment-problems-in-microsoft-intune">
-                    <h3>Troubleshoot app deployment problems in Intune</h3>
-                    <p>Solve common app deployment problems.</p>
+                    <h3>Řešení problémů s nasazením aplikací v Intune</h3>
+                    <p>Řešte běžné problémy s nasazením aplikací.</p>
                   </a>
                 </li>
               </ul>
@@ -235,29 +253,33 @@ ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
         </ul>
       </section>
     </div>
-
     <div class="section-border">
       <section class="resources container">
-      <h2 class="section-heading"><span class="icon icon-note"></span>Additional resources for Intune</h2>
+      <h2 class="section-heading"><span class="icon icon-note"></span>Další zdroje pro Intune</h2>
       <div class="resource-list row">
           <ul class="column-half">
-          <li><a href="https://microsoftintune.uservoice.com/" target="_blank">Give feedback on Intune functionality</a></li>
-          <li><a href="https://microsoftintune.uservoice.com/forums/297408-issues/category/113871-documentation" target="_blank">Give feedback on Intune documentation</a></li>
-          <li><a href="https://gallery.technet.microsoft.com/site/search?f%5B0%5D.Type=User&f%5B0%5D.Value=ECM%20Docs%20Team%20-%20MSFT" target="_blank">Intune documentation downloads</a></li>
+          <li><a href="https://microsoftintune.uservoice.com/" target="_blank">Váš názor na funkce Intune</a></li>
+          <li><a href="https://microsoftintune.uservoice.com/forums/297408-issues/category/113871-documentation" target="_blank">Váš názor na dokumentaci k Intune</a></li>
+          <li><a href="https://gallery.technet.microsoft.com/site/search?f%5B0%5D.Type=User&f%5B0%5D.Value=ECM%20Docs%20Team%20-%20MSFT" target="_blank">Dokumentace k Intune ke stažení</a></li>
           </ul>
           <ul class="column-half">
-          <li><a href="/enterprise-mobility/solutions/fasttrack-center-benefit-for-enterprise-mobility-suite-ems" target="_blank">Fast Track Center for Enterprise Mobility Suite</a></li>
-          <li><a href="https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc" target="_blank">Microsoft Intune TechNet forum</a></li>
-          <li><a href="https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/default.aspx" target="_blank">Intune product page</a></li>
+          <li><a href="/enterprise-mobility/solutions/fasttrack-center-benefit-for-enterprise-mobility-suite-ems" target="_blank">Centrum Fast Track pro sadu Enterprise Mobility Suite</a></li>
+          <li><a href="https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc" target="_blank">Fórum Microsoft TechNet o Intune</a></li>
+          <li><a href="https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/default.aspx" target="_blank">Stránka produktu Intune</a></li>
           </ul>
       </div>
       </section>
     </div>
     <aside class="alert alert-social">
-      <p>Keep up-to-date on Intune</p>
+      <p>Zachovejte si přehled o Intune</p>
       <ol class="action-list">
-        <li><a href="https://blogs.technet.com/b/microsoftintune/" target="_blank" class="button-bordered button-translucent">Intune team blog</a></li>
-        <li><a href="https://twitter.com/msintune/" target="_blank" class="button-bordered button-translucent">@MSIntune on Twitter</a></li>
+        <li><a href="https://blogs.technet.com/b/microsoftintune/" target="_blank" class="button-bordered button-translucent">Blog týmu Intune</a></li>
+        <li><a href="https://twitter.com/msintune/" target="_blank" class="button-bordered button-translucent">@MSIntune na Twitteru</a></li>
       </ol>
     </aside>
 </article>
+
+
+<!--HONumber=Jun16_HO2-->
+
+
