@@ -1,25 +1,25 @@
 ---
 # required metadata
 
-title: [Ochrana obchodních aplikací a dat na nezaregistrovaných zařízeních | Microsoft Intune]
+title: Ochrana obchodních aplikací a dat na nezaregistrovaných zařízeních | Microsoft Intune
 description:
 keywords:
-author: [karthikaraman]
-manager: [jeffgilb]
+author: karthikaraman
+manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod:
 ms.service:
 ms.technology:
-ms.assetid: [00219467-a62e-43b6-954b-3084f54c45ba]
+ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 #ms.devlang:
-#ms.reviewer: [joglocke]
-#ms.suite: ems
+ms.reviewer: joglocke
+ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
@@ -52,6 +52,11 @@ Pokud chcete ke svým obchodním aplikacím přidružit zásady MAM, musíte do 
 
 ## Krok 3: Použití zásad MAM
 Jakmile se metadata aplikace odešlou do služby, aplikace se zobrazí v seznamu aplikací.  Nyní můžete [vytvořit novou zásadu nebo vzít už existující](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md) a použít ji pro obchodní aplikaci, kterou jste přidali v kroku 2.
+
+>[!IMPORTANT]
+>Zásady MAM je potřeba cílit na uživatele, kteří budou zabalenou aplikaci používat.  Uživatelé, kteří tuto zásadu nemají nasazenou, nebudou moct aplikaci používat.
+
+
   ![Snímek okna Cílové aplikace se zobrazením nových obchodních aplikací](../media/mam-azure-portal-lob-on-targeted-app-list.png)
 ## Krok 4: Distribuce aplikace
 Aplikace můžete koncovým uživatelům nasadit následujícími způsoby:
@@ -75,6 +80,6 @@ Obchodní aplikaci můžete ze seznamu aplikací odebrat.  Tato operace odebere 
   Tato akce odebere aplikaci ze seznamu obchodních aplikací a ze seznamu cílových aplikací v zásadách MAM.
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO2-->
 
 

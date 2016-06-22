@@ -18,7 +18,7 @@ ms.assetid: 0775107a-6662-41c8-9404-be14bbb599f3
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -27,12 +27,12 @@ ms.suite: ems
 
 # Zásady dodržování předpisů pro zařízení v Microsoft Intune
 ## Co je zásada dodržování předpisů?
-Chcete-li chránit data společnosti, ujistěte se, že zařízení používaná k přístupu k firemním aplikacím a datům dodržují určitá pravidla, jako jsou použití kódu PIN pro přístup k zařízení a šifrování dat uložených v zařízení. Sada těchto pravidel je označovaná jako zásada dodržování předpisů.
+Pokud chcete ochránit data společnosti, ujistěte se, že zařízení používaná k přístupu k firemním aplikacím a datům dodržují určitá pravidla, jako jsou použití kódu PIN pro přístup k zařízení a šifrování dat uložených v zařízení. Sada takových pravidel se označuje jako zásada dodržování předpisů.
 
 ## Jak mám použít zásady dodržování předpisů?
-Zásady dodržování předpisů spolu se zásadami podmíněného přístupu slouží k omezení přístupu k zařízením, která jsou v souladu s pravidly zásad dodržování předpisů. Pro pochopení jak používat obě zásady společně si přečtěte článek [Omezení přístupu k e-mailu a službám O365](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+Zásady dodržování předpisů spolu se zásadami podmíněného přístupu umožňují povolit přístup k e-mailu a dalším službám jenom zařízením, která jsou v souladu s pravidly zásad dodržování předpisů. Přečtěte si článek [Omezení přístupu k e-mailu a službám O365](restrict-access-to-email-and-o365-services-with-microsoft-intune.md), abyste pochopili, jak oba druhy zásad používat.
 
-Zásady dodržování předpisů mohou být použité nezávisle na podmíněném přístupu. Při nezávislém použití jsou cílová zařízení vyhodnocená a nahlášená společně se stavem dodržování předpisů. Například můžete chtít zjistit, kolik zařízení není šifrovaných nebo která zařízení jsou s jailbreakem nebo rootem. Pokud jsou však použity nezávisle, nefunguje omezení přístupu k prostředkům společnosti.
+Zásady dodržování předpisů se můžou používat nezávisle na podmíněném přístupu. Při nezávislém použití se cílová zařízení vyhodnotí a nahlásí se jejich stav dodržování předpisů. Můžete třeba chtít zjistit, kolik zařízení není šifrovaných nebo která zařízení mají jailbreak nebo root. Pokud ale tyto zásady použijete nezávisle, nefunguje žádné omezení přístupu k prostředkům společnosti.
 
 Zásady dodržování předpisů nasazujete uživatelům. Po nasazení zásady dodržování předpisů uživateli se u jeho zařízení kontroluje dodržování předpisů.
 
@@ -63,10 +63,10 @@ Následující tabulka uvádí typy zařízení podporované zásadami dodržov�
 
 [Nasazení a monitorování zásady dodržování předpisů pro zařízení](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md)
 
-### Související témata
+### Viz taky
 [Omezení přístupu k e-mailu a službám O365](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

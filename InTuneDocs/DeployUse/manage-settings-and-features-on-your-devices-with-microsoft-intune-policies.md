@@ -6,7 +6,7 @@ description:
 keywords:
 author: robstackmsft
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 09bae0b9-4f79-4658-8ca1-a71ab992c1b2
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: heenamac
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -50,17 +50,17 @@ Podrobnosti najdete v tématu [Povolení přístupu k prostředkům společnosti
 
 ## Vytvoření zásady konfigurace
 
-1.  V [konzole správce Microsoft Intune](https://manage.microsoft.com/) klikněte na **Zásady** &gt; **Zásady konfigurace** &gt; **Přidat**.
+1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) vyberte **Zásady** &gt; **Zásady konfigurace** &gt; **Přidat**.
 
 2.  Zvolte požadovanou zásadu a vyberte doporučené nastavení pro tuto zásady (pokud je dostupné; toto nastavení pak můžete později změnit), nebo vytvořte vlastní zásadu s vlastním nastavením.
 
     > [!TIP] Pokud potřebujete pomoc s výběrem správné zásady, projděte si téma [Odkazy na zásady Microsoft služby Intune](microsoft-intune-policy-reference.md).
 
-3.  Až budete připravení, klikněte na **Vytvořit zásadu**.
+3.  Až budete připravení, vyberte **Vytvořit zásadu**.
 
 4.  Na obrazovce **Vytvořit zásadu** nakonfigurujte název a volitelný popis zásady.
 
-5.  Nakonfigurujte požadovaná nastavení a pak klikněte na **Uložit zásadu**.
+5.  Nakonfigurujte požadovaná nastavení a pak vyberte **Uložit zásadu**.
 
     Pokud potřebujete pomoc s nastavením zásad, vyberte v následujícím seznamu typ své zásady:
 
@@ -72,11 +72,11 @@ Podrobnosti najdete v tématu [Povolení přístupu k prostředkům společnosti
     - [Nastavení pro zařízení Windows Team](windows-team-configuration-policy-settings-in-microsoft-intune.md)
     - [Nastavení pro upgrade edice systému Windows](edition-upgrade-policy-settings-in-microsoft-intune.md)
     - [Nastavení pro zařízení Mac OS X](mac-os-x-policy-settings-in-microsoft-intune.md)
-    - [Nastavení pro protokol Exchange ActiveSync](exchange-activesync-policy-settings-in-microsoft-intune.md)
-    - [Nastavení pro zásady podmínek a ujednání](terms-and-condition-policy-settings-in-microsoft-intune.md)
-    - [Obecné nastavení pro mobilní zařízení (zastaralé)](mobile-device-security-policy-settings-in-microsoft-intune.md)
+    - [Nastavení pro Exchange ActiveSync](exchange-activesync-policy-settings-in-microsoft-intune.md)
+    - [Nastavení pro zásadu podmínek a ujednání](terms-and-condition-policy-settings-in-microsoft-intune.md)
+    - [Obecná nastavení pro mobilní zařízení (zastaralé)](mobile-device-security-policy-settings-in-microsoft-intune.md)
 
-4.  Kliknutím na tlačítko **Ano** v potvrzovacím dialogovém okně zásadu hned nasadíte, kliknutím na **Ne** zásadu vytvoříte, ale nenasadíte ji.
+4.  Výběrem možnosti **Ano** v potvrzovacím dialogu zásadu hned nasadíte, výběrem možnosti **Ne** zásadu vytvoříte, ale nenasadíte ji.
 
 Novou zásadu můžete zobrazit a upravit tak, že si projdete oddíly pro každý typ zásad v pracovním prostoru **Zásady** .
 
@@ -89,35 +89,26 @@ Teď když je zásada vytvořená, budete ji obvykle chtít nasadit do jedné ne
 
 ## Nasazení zásady konfigurace
 
-1.  V pracovním prostoru **Zásady** vyberte zásadu, kterou chcete nasadit, a pak klikněte na **Spravovat nasazení**.
+1.  V pracovním prostoru **Zásady** vyberte zásadu, kterou chcete nasadit, a potom vyberte **Spravovat nasazení**.
 
 2.  V dialogovém okně **Spravovat nasazení** :
 
-    -   **Pokud chcete zásadu nasadit** – vyberte jednu nebo víc skupin, do kterých chcete zásady nasadit, a pak klikněte na **Přidat** &gt; **OK**.
+    -   **Pokud chcete zásadu nasadit** – Vyberte jednu nebo víc skupin, do kterých chcete zásady nasadit, a pak vyberte **Přidat** &gt; **OK**.
 
-    -   **Pokud chcete dialogové okno zavřít bez nasazení zásady** – klikněte na **Zrušit**.
+    -   **Pokud chcete dialogové okno zavřít bez nasazení zásady** – Zvolte **Zrušit**.
 
 Když vyberete nasazenou zásadu, zobrazí se v dolní části seznamu zásad další informace o tomto nasazení.
 
 ## Správa zásad
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/)klikněte na **Zásady**a vyhledejte a vyberte zásadu, kterou chcete spravovat.
+1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) vyberte **Zásady** a vyhledejte a vyberte zásadu, kterou chcete spravovat.
 
 2.  Vyberte jednu z následujících akcí:
 
 - **Upravit**: Otevře vlastnosti vybrané zásady a umožní vám provádět změny.
 - **Odstranit**: Odstraní vybranou zásadu.<br>Pokud zásadu odstraníte, odebere se ze všech skupin, ve kterých byla nasazená.
-- **Spravovat nasazení**: Vyberte skupinu, do které chcete zásadu nasadit, a klikněte na **Přidat**.
+- **Spravovat nasazení**: Vyberte skupinu, do které chcete zásadu nasadit, a vyberte **Přidat**.
 
-## Úlohy pro zásady Intune
-
-### Aktualizace zásad na zařízení k zajištění jejich aktuálnosti (platí jenom pro počítače s Windows a klientským softwarem Intune)
-
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/)klikněte na **Skupiny**a pak vyberte skupinu zařízení.
-
-2.  Vyberte zařízení, na kterých chcete zásady aktualizovat, a pak klikněte na **Vzdálené úlohy** &gt; **Obnovit zásady**.
-
-3.  V pravém dolním rohu okna konzoly správce Intune klikněte na **Vzdálené úlohy** a zkontrolujte stav úlohy.
 
 ## Nejčastější dotazy týkající se zásad Intune
 
@@ -187,25 +178,7 @@ Pokud odstraníte zásadu nebo odeberete zařízení ze skupiny, na kterou byla 
         - Vyžadovaný typ hesla
         - Vypršení platnosti hesla (dny)
         - Pamatovat si historii hesel
-        - Počet povolených opakovaných neúspěšných přihlášení, než bude zařízení vymazáno
-        - Počet minut nečinnosti před vyžadováním hesla
-        - Typ požadovaného hesla – minimální počet znaků
-        - Povolit fotoaparát
-        - Vyžadovat šifrování u mobilního zařízení
-        - Povolit vyměnitelné úložiště
-        - Povolit webový prohlížeč
-        - Povolit obchod s aplikacemi
-        - Povolit snímek obrazovky
-        - Povolit zeměpisnou polohu
-        - Povolit účet Microsoft
-        - Povolit kopírování a vkládání
-        - Povolit sdílení internetového připojení přes Wi-Fi
-        - Povolit automatické připojení k bezplatným Wi-Fi hotspotům
-        - Povolit oznamování Wi-Fi hotspotů
-        - Povolit obnovení továrního nastavení
-        - Povolit Bluetooth
-        - Povolit komunikaci NFC
-        - Povolit Wi-Fi
+        - Počet povolených opakovaných neúspěšných přihlášení, než se zařízení vymaže - Počet minut nečinnosti před vyžádáním hesla - Vyžadovaný typ hesla - Minimální počet znakových sad - Povolit fotoaparát - Vyžadovat šifrování u mobilního zařízení - Povolit vyměnitelné úložiště - Povolit webový prohlížeč - Povolit obchod s aplikacemi - Povolit snímek obrazovky - Povolit informace o zeměpisné poloze - Povolit účet Microsoft - Povolit kopírování a vkládání - Povolit Wi-Fi tethering - Povolit automatické připojení k bezplatným Wi-Fi hotspotům - Povolit hlášení hotspotů Wi-Fi - Povolit obnovení do výrobního nastavení - Povolit Bluetooth - Povolit používání technologie NFC - Povolit Wi-Fi
     
     - **iOS** – odeberou se všechna nastavení s těmito výjimkami:
         - Povolit hlasový roaming
@@ -220,9 +193,16 @@ Pokud odstraníte zásadu nebo odeberete zařízení ze skupiny, na kterou byla 
 - **Nastavení brány Windows Firewall** – nastavení se obnoví na výchozí hodnoty pro operační systém počítače. Podrobnosti najdete v tématu [Pomoc se zabezpečením počítačů s Windows pomocí služby Endpoint Protection pro Microsoft Intune](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md).
 
 
+### Postup aktualizace zásad na zařízení k zajištění jejich aktuálnosti (platí jenom pro počítače s Windows a klientským softwarem Intune)
+
+1.  V kterékoli skupině zařízení vyberte zařízení, na kterých chcete zásady aktualizovat, a potom vyberte **Vzdálené úlohy** &gt; **Obnovit zásady**.
+2.  V pravém dolním rohu okna konzoly pro správu Intune vyberte **Vzdálené úlohy** a zkontrolujte stav úlohy.
+
+### Kde najdu nápovědu k odstraňování potíží se zásadami?
+
+Projděte si téma [Řešení potíží se zásadami v Microsoft Intune](/troubleshoot/troubleshoot-policies-in-microsoft-intune.md).
 
 
-
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO2-->
 
 

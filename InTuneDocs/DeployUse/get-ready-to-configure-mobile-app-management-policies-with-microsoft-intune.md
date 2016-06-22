@@ -18,7 +18,7 @@ ms.assetid: 7e6a85e7-e007-41b6-9034-64d77f547b87
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: joglocke
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -27,44 +27,58 @@ ms.suite: ems
 
 # Příprava před konfigurací zásad správy mobilních aplikací pomocí Microsoft Intune
 Toto téma popisuje, co je třeba provést před vytvořením zásad správy mobilních aplikací (MAM) na portálu Azure.
-Pokud aktuálně ke správě svých zařízení používáte **Konzolu správce Intune**, můžete zásadu MAM podporující aplikace pro zařízení zaregistrovaná v Intune vytvořit pomocí [Konzoly správce Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md)..
+
+Portál Azure je nová konzola pro správu, která slouží k vytváření zásad MAM, a doporučujeme tento portál při vytváření zásad MAM používat. Portál Azure podporuje následující scénáře MAM:
+- Zařízení zaregistrovaná v Intune
+- Zařízení spravovaná řešením MDM třetí strany
+- Zařízení, která nejsou spravována žádným řešením MDM (BYOD).
+
+Pokud s používáním portálu Azure teprve začínáte, přečtěte si téma [Portál Azure pro zásady MAM v Microsoft Intune](azure-portal-for-microsoft-intune-mam-policies.md), které vám zajistí rychlý přehled.
+
+Pokud zatím ke správě zařízení používáte **konzolu pro správu Intune**, můžete pomocí **konzoly pro správu Intune** vytvářet zásady MAM podporující aplikace pro zařízení zaregistrovaná v Intune, ale i pro zařízení zaregistrovaná v Intune doporučujeme používat portál Azure. Pokyny pro vytvoření zásady MAM pomocí konzoly pro správu Intune najdete [tady](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
+
 >[!IMPORTANT]
-> V Konzole správce Intune nemusíte vidět všechna nastavení zásad MAM. Portál Azure je nová konzola správce pro vytváření zásad MAM.
+> V Konzole správce Intune nemusíte vidět všechna nastavení zásad MAM. Pokud vytváříte zásady MAM v konzole pro správu Intune i na portálu Azure, pro aplikace se použije a pro uživatele se nasadí zásada na portálu Azure.
+
 
 ##  Podporované platformy
 - iOS 8.1 nebo novější
 
 - Android 4 nebo novější
 
+V současné době není dostupná podpora zařízení s Windows.
 ##  Podporované aplikace
-Úplný seznam podporovaných aplikací najdete v galerii mobilních aplikací Microsoft Intune na stránce [aplikací pro Microsoft Intune od partnerů](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx).
-Pokud kliknete na aplikaci, můžete zjistit podporované scénáře, platformy a to, jestli aplikace podporuje víc identit.
+* **Aplikace Microsoftu:** Tyto aplikace mají integrovanou sadu Intune App SDK a před použitím zásad MAM nevyžadují žádné další zpracování.
+Úplný seznam podporovaných aplikací Microsoftu najdete v galerii mobilních aplikací Microsoft Intune na stránce [galerie mobilních aplikací pro Microsoft Intune](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx). Pokud na aplikaci kliknete, můžete zjistit podporované scénáře, platformy a to, jestli aplikace podporuje víc identit.
+* Vaše interní sestavené **obchodní aplikace:** Před použitím zásad MAM vyžadují, abyste aplikaci připravili tak, aby obsahovala sadu Intune App SDK.
 
-**Předtím**, než můžete nakonfigurovat zásady MAM, potřebujete následující:
+  * Pokud máte zařízení spravovaná pomocí Intune, projděte si téma [Rozhodnutí o způsobu přípravy aplikací na správu MAM](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md).
+  * Pokud máte zařízení, která nejsou spravovaná jako zařízení vlastněná zaměstnanci, nebo zařízení spravovaná externím řešením správy mobilních zařízení, projděte si téma [Ochrana obchodních aplikací a dat na zařízeních nezaregistrovaných v Intune](protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune.md).
 
--   **Předplatné Microsoft Intune**.    Koncoví uživatelé potřebují licence [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] k získání aplikací se zásadami MAM.
+**Před tím**, než můžete nakonfigurovat zásady MAM, potřebujete toto:
 
--   **Autoritu pro správu mobilních zařízení** je potřeba nastavit buď na **Intune**, nebo **Configuration Manager**, a to v závislosti na tom, jestli ke správě mobilních zařízení používáte jen Intune, nebo Configuration Manager integrovaný s Intune. Pokud používáte správu mobilních zařízení integrovanou v O365, musíte koupit předplatné Intune a [nastavit autoritu pro správu mobilních zařízení na Intune](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority)..
--   Předplatné **Office 365 (O365)**, které je vyžadováno pro následující:
-  - Chcete-li zásady MAM použít pro aplikace s podporou víc identit.
-  - Chcete-li vytvořit pracovní účty SharePoint Online a Exchange Online. Místní Exchange a místní SharePoint nejsou podporovány.
+-   **Předplatné Microsoft Intune**.    Koncoví uživatelé potřebují k získání aplikací se zásadami MAM licence [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+
+-   Předplatné **Office 365 (O365)**, které je potřeba v těchto případech:
+  - Chcete použít zásady MAM pro aplikace s podporou víc identit.
+  - Chcete vytvořit pracovní účty SharePoint Online a Exchange Online. Místní Exchange a místní SharePoint nejsou podporovány.
+-    **Povolit moderní ověřování** pro **Online Skype pro firmy**. Pokud se chcete zaregistrovat do programu moderního ověřování, přihlaste se k Microsoft Connect a vyplňte [tento formulář](https://connect.microsoft.com/office/Survey/NominationSurvey.aspx?SurveyID=17299&ProgramID=8715).
 
 
-- **Azure Active Directory (Azure AD)** pro vytváření uživatelů. Služba Azure AD ověřuje uživatele při spuštění aplikace a zadání přihlašovacích údajů.
+- **Azure Active Directory (Azure AD)** pro vytváření uživatelů. Služba Azure AD ověřuje uživatele při spuštění aplikace a zadání pracovních přihlašovacích údajů.
 
-    > [!NOTE]
-    > Pokud nastavujete uživatele pomocí konzoly [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], uvědomte si, že konfigurace zásad MAM se od nynějška přesouvá na portál Azure. Chcete-li používat tento portál, je nutné nastavit skupiny uživatelů Azure AD pomocí portálu Office 365.
+    > [!NOTE] Pokud nastavujete uživatele pomocí konzoly nástroje [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], uvědomte si, že konfigurace zásad MAM se od nynějška přesouvá na portál Azure. Pokud chcete používat tento portál, je potřeba nastavit skupiny uživatelů Azure AD pomocí portálu Office 365.
 
 
 ## Vytvoření uživatelů a přiřazení licencí Microsoft Intune
 
-1. Potřebujete předplatné Intune: Pokud používáte [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] ke správě svých zařízení, již předplatné [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] máte.  Pokud jste zakoupili licenci EMS, předplatné [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] již také máte. Pokud zkoušíte [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], abyste se seznámili s funkcemi MAM, můžete [tady](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/) získat zkušební účet..
+1. Potřebujete předplatné Intune: Pokud používáte [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] ke správě svých zařízení, předplatné [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] už máte.  Pokud jste si zakoupili licenci EMS, předplatné [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] už také máte. Pokud službu [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] teprv zkoušíte, abyste se seznámili s funkcemi MAM, [tady](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/) můžete získat zkušební účet.
 
-    Chcete-li ověřit, zda předplatné [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] máte, přejděte na portálu Office na stránku Fakturace.  Předplatné služby [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] by mělo být označené jako **Aktivní**.
+    Pokud chcete ověřit, jestli máte předplatné [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], přejděte na portálu Office na stránku Fakturace.  Předplatné služby [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] by mělo být označené jako **Aktivní**.
 
 2.  Přihlaste se na   [portál Office](http://portal.office.com) pomocí svých přihlašovacích údajů správce.
 
-3.  Chcete-li přidat uživatele a přiřadit licence [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], přejděte na stránku **Aktivní uživatelé**.
+3.  Pokud chcete přidat uživatele a přiřadit licence [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], přejděte na stránku **Aktivní uživatelé**.
 
     ![Stránka Přidat uživatele portálu Office](../media/AppManagement/OfficePortal_AddUsers.png)
 
@@ -72,11 +86,11 @@ Pokud kliknete na aplikaci, můžete zjistit podporované scénáře, platformy 
 
     ![Snímek obrazovky zobrazující stránku Aktivní uživatelé portálu Office ](../media/AppManagement/OfficePortal_AddRoletoUser.png)
 
-5.  Zásady MAM jsou nasazené pro skupiny uživatelů ve službě Azure Active Directory. Chcete-li vytvořit skupiny uživatelů v souladu se zásadami MAM, přejděte na stránku **Skupiny** na **portálu Office** a kliknutím na ikonu **+** vytvořte novou skupinu zabezpečení.  Zadejte název a popis a klikněte na **Vytvořit**. Do vytvořené skupiny můžete přidávat uživatele kliknutím na volbu **Upravit členy** v nově vytvořené skupině zabezpečení. Skupina zabezpečení je vytvořená ve službě Azure Active Directory.
+5.  Zásady MAM jsou nasazené pro skupiny uživatelů ve službě Azure Active Directory. Pokud chcete vytvořit skupiny uživatelů v souladu se zásadami MAM, přejděte na stránku **Skupiny** na **portálu Office** a kliknutím na ikonu **+** vytvořte novou skupinu zabezpečení.  Zadejte název a popis a klikněte na **Vytvořit**. Do vytvořené skupiny můžete přidávat uživatele kliknutím na volbu **Upravit členy** v nově vytvořené skupině zabezpečení. Skupina zabezpečení je vytvořená ve službě Azure Active Directory.
 
     ![Obrazovka stránky zobrazující výběr role Globální správce na stránce Upravit uživatelské role](../media/AppManagement/OfficePortal_CreateGroups.png)
 
-V následující tabulce naleznete přehled rolí a oprávnění, které můžete přiřazovat správcům.
+V následující tabulce najdete přehled rolí a oprávnění, které můžete přiřazovat správcům.
 
 |||
 |--|----|
@@ -87,16 +101,16 @@ V následující tabulce naleznete přehled rolí a oprávnění, které můžet
 
 ## Přiřazení role Přispěvatel uživateli
 
-**Globální správci** mají přístup k portálu Azure.  Chcete-li, aby ostatní správci mohli konfigurovat zásady a provádět i další úkoly správy mobilních aplikací, můžete jim přiřadit **roli přispěvatele** podle pokynů níže:
+**Globální správci** mají přístup k [portálu Azure](https://portal.azure.com).  Chcete-li, aby ostatní správci mohli konfigurovat zásady a provádět i další úkoly správy mobilních aplikací, můžete jim přiřadit **roli přispěvatele** podle pokynů níže:
 
 
-1.  V okně **Nastavení** v části **Správa prostředků** klikněte na **Uživatelé**..
+1.  V okně **Nastavení** v části **Správa prostředků** klikněte na **Uživatelé**.
 
     ![Snímek obrazovky okna Uživatelé na portálu Azure](../media/AppManagement/AzurePortal_MAM_AddUsers.png)
 
 2.  Kliknutím na **Přidat** otevřete okno **Přidat přístup** .
 
-3.  Klikněte na **Vybrat roli** a poté na **Role Přispěvatel**..
+3.  Klikněte na **Vybrat roli**a poté na **role Přispěvatel**.
 
     ![Snímek obrazovky okna Vybrat roli na portálu Azure](../media/AppManagement/AzurePortal_MAM_AddRole.png)
 
@@ -104,13 +118,12 @@ V následující tabulce naleznete přehled rolí a oprávnění, které můžet
 
     ![Snímek obrazovky okna Přidat uživatele na portálu Azure](../media/AppManagement/AzurePortal_MAM_AddusertoRole.png)
 
-    > [!IMPORTANT]
-    > Pokud vyberete uživatele, který nemá přiřazenou licenci [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], nebude moci získat přístup k portálu.
+    > [!IMPORTANT] Pokud vyberete uživatele, který nemá přiřazenou licenci [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], nebude moct získat přístup k portálu.
 
 ## Další kroky
 [Vytvoření a nasazení zásad správy mobilních aplikací pomocí Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

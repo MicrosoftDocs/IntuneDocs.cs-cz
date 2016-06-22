@@ -18,7 +18,7 @@ ms.assetid: c564d292-b83b-440d-bf08-3f5b299b7a5e
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -40,13 +40,13 @@ Obvyklý průběh podmíněného přístupu:
 ![Diagram zobrazuje body rozhodování používané k určení, jestli má zařízení přístup ke službě povolený, nebo blokovaný](./media/ConditionalAccess4.png)
 
 ## Postup konfigurace podmíněného přístupu
-Pro správu přístupu k **místnímu systému Microsoft Exchange**, **systému Exchange Online**, **systému Exchange Online Dedicated**, **SharePointu Online** a **Online Skypu pro firmy** použijte podmíněný přístup..
+Pro správu přístupu k **místnímu systému Microsoft Exchange**, **systému Exchange Online**, **systému Exchange Online Dedicated**, **SharePointu Online** a **Online Skypu pro firmy** použijte podmíněný přístup.
 
 Abyste mohli nastavit podmíněný přístup, nakonfigurujte pro zařízení zásadu dodržování předpisů a zásadu podmíněného přístupu.
 
-Zásada dodržování předpisů zahrnuje nastavení, jako je heslo, šifrování a to, zda má zařízení jailbreak. Zařízení musí tyto pravidla splňovat, aby mohlo být považované za vyhovující.
+Zásada dodržování předpisů zahrnuje nastavení, jako je heslo, šifrování a to, jestli má zařízení jailbreak. Zařízení musí tyto pravidla splňovat, aby mohlo být považované za vyhovující.
 
-Můžete nastavit zásadu podmíněného přístupu, abyste omezili přístup, na základě následujícího:
+Můžete nastavit zásadu podmíněného přístupu, abyste omezili přístup, na základě těchto položek:
 - Stav dodržování předpisů pro zařízení
 - Platforma spuštěná v zařízení
 - Typ aplikace použitý pro přístup ke službám
@@ -69,6 +69,6 @@ Na rozdíl od jiných zásad služby Intune zásady podmíněného přístupu ne
   - [Vytvoření zásady podmíněného přístupu pro Online Skype pro firmy](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

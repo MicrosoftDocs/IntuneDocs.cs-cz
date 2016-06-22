@@ -1,13 +1,27 @@
 ---
-title: Nasazení aplikací v Microsoft Intune | Microsoft Intune
-ms.custom: na
-ms.reviewer: na
-ms.service: microsoft-intune
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 3b42019e-73da-4538-a496-212f11d5bf9b
+# required metadata
+
+title: Nasazení aplikací | Microsoft Intune
+description:
+keywords:
 author: robstackmsft
+manager: jeffgilb
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod:
+ms.service: microsoft-intune
+ms.technology:
+ms.assetid: 3b42019e-73da-4538-a496-212f11d5bf9b
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mghadial
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
 ---
 # Nasazení aplikací v Microsoft Intune
 
@@ -17,22 +31,22 @@ Informace v tomto tématu vám pomůžou nasadit aplikace Microsoft Intune.
 ## Nasazení aplikace
 V tomto postupu aplikaci nasadíte na vybraná zařízení nebo vybraným uživatelům.
 
-### Nasazení aplikace
+### Postup nasazení aplikace
 
 1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) klikněte na **Aplikace** &gt; **Aplikace**. Zobrazí se seznam spravovaných aplikací.
 
-2.  Vyberte aplikaci, kterou chcete nasadit, a pak klikněte na **Spravovat nasazení**..
+2.  Vyberte aplikaci, kterou chcete nasadit, a potom klikněte na **Spravovat nasazení**.
 
-3.  V dialogovém okně *&lt;název aplikace&gt;* napřed na stránce **Vybrat skupiny** vyberte skupiny uživatelů nebo zařízení, kterým chcete aplikaci nasadit.
+3.  V dialogu *&lt;název aplikace&gt;* nejdřív na stránce **Vybrat skupiny** vyberte skupiny uživatelů nebo zařízení, pro které chcete aplikaci nasadit.
 
-4.  Na stránce **Akce nasazení** nakonfigurujte následující nastavení:
+4.  Na stránce **Akce nasazení** nakonfigurujte toto nastavení:
 
     - **Schválení** – Zvolte, jestli je nasazení:
         - **Požadované** (povinná instalace)
         - **K dispozici** (uživatelé můžou instalovat aplikaci na vyžádání z portálu společnosti)
         - **Nelze použít** (aplikace není nainstalovaná nebo se na portálu společnosti nezobrazuje)
         - **Odinstalovat** (aplikace bude z cílových zařízení odinstalovaná)
-    - **Termín** – U povinných instalací vyberte, dokdy má být aplikace nasazená. Můžete si vybrat z předem definovaných hodnot nebo vybrat **Vlastní** a nakonfigurovat vlastní termín.
+    - **Termín** – U povinných instalací vyberte, do jaké doby se má aplikace nasadit. Můžete si vybrat z předem definovaných hodnot nebo vybrat **Vlastní** a nakonfigurovat vlastní termín.
 
 5. Pokud nasazujete aplikaci, která se dá nakonfigurovat pomocí zásad správy mobilní aplikace, zobrazí se stránka **Správa mobilních aplikací**. Na této stránce zvolte zásady správy mobilní aplikace, které chcete přidružit k této aplikaci.
 
@@ -55,6 +69,6 @@ Pokud je aplikace nasazená jako **Požadovaná**, dostane uživatel oznámení,
 Po nasazení aplikace můžete monitorovat její postup. Další informace najdete v tématu [Monitorování aplikací v Microsoft Intune](monitor-apps-in-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

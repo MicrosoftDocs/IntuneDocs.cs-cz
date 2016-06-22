@@ -18,7 +18,7 @@ ms.assetid: 2742e1d5-d2d5-42cd-b719-665dd6e0a0e9
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: joglocke
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -40,15 +40,15 @@ Pokud chcete provést selektivní vymazání dat aplikací společnosti, vytvoř
 
     ![Snímek obrazovky okna Správa mobilních aplikací Intune s dlaždicí souhrnu](../media/AppManagement/AzurePortal_MAM_WipeRequests.png)
 
-2.  Vyberte **Nové žádosti o vymazání**..
+2.  Vyberte **Nová žádost o vymazání**.
 
     ![Snímek obrazovky okna Nová žádost o vymazání](../media/AppManagement/AzurePortal_MAM_NewWipeRequest.png)
 
-3.  V okně **Nová žádost o vymazání** výběrem **Uživatel** otevřete okno **Uživatel** , poté vyberte uživatele, jehož data aplikací chcete vymazat.
+3.  V okně **Nová žádost o vymazání** výběrem možnosti **Uživatel** otevřete okno **Uživatel** a potom vyberte uživatele, jehož data aplikací chcete vymazat.
 
 4.  Vyberte **Zařízení**.  Otevře se okno **Zařízení** , ve kterém jsou uvedena všechny zařízení přidružená k vybranému uživateli.  Vyberte zařízení, které chcete vymazat.
 
-5.  Teď jste zpět v okně **Nová žádost o vymazání**. Pokud chcete vytvořit žádost o vymazání, vyberte **Ok**. Služba vytvoří a sleduje samostatnou žádost o vymazání pro každou chráněnou aplikaci na zařízení.
+5.  Teď jste zpátky v okně **Nová žádost o vymazání**. Pokud chcete vytvořit žádost o vymazání, vyberte **OK**. Služba vytvoří a sleduje samostatnou žádost o vymazání pro každou chráněnou aplikaci na zařízení.
 
 
 ![Snímek obrazovky dlaždice Žádosti o vymazání ](../media/AppManagement/AzurePortal_MAM_WipeRequestsSummary.png)
@@ -58,14 +58,14 @@ Okno **Správa mobilních aplikací Intune** obsahuje souhrnnou sestavu o dlažd
 
 1.  V okně **Správa mobilních aplikací Intune** výběrem dlaždice **Žádost o vymazání** otevřete okno **Žádost o vymazání**.
 
-2.  V okně **Žádost o vymazání** můžete zobrazit seznam žádostí seskupených podle uživatele.  Protože systém vytvoří žádost o vymazání pro každou chráněnou aplikaci spuštěnou na zařízení, může být u uživatele více žádostí.  Stav označuje, zda je žádost **nevyřízená**, **selhala**nebo byla **úspěšná**..
+2.  V okně **Žádost o vymazání** můžete zobrazit seznam žádostí seskupených podle uživatele.  Protože systém vytvoří žádost o vymazání pro každou chráněnou aplikaci spuštěnou na zařízení, může být u uživatele více žádostí.  Stav označuje, zda je žádost **nevyřízená**, **selhala**nebo byla **úspěšná**.
 
-### Související témata
+### Viz taky
 [Ochrana aplikačních dat pomocí zásad správy mobilních aplikací ](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 
 [Použití portálu Azure](azure-portal-for-microsoft-intune-mam-policies.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -18,7 +18,7 @@ ms.assetid: 1dafc28a-7f8b-4fe0-8619-f977c93d1140
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -46,28 +46,29 @@ Než začnete, musíte od společnosti Apple získat token VPP a odeslat ho do s
 * Ve výchozím nastavení se Intune synchronizuje se službou Apple VPP dvakrát denně. Ruční synchronizaci ale můžete spustit kdykoli.
 * Po naimportování tokenu VPP do Intune neimportujte stejný token do žádného jiného řešení správy zařízení. Pokud byste to udělali, mohli byste ztratit přiřazení licence a uživatelských záznamů.
 * Než začnete používat iOS VPP s Intune, odeberte všechny existující uživatelské účty VPP vytvořené pomocí jiných dodavatelů MDM. V rámci bezpečnostních opatření nebude Intune synchronizovat tyto uživatelské účty do Intune. Intune bude synchronizovat jen ta data ze služby Apple VPP, která byla vytvořená pomocí Intune. 
+* Aplikace iOS VPP se nedají nasadit na zařízení zaregistrovaná pomocí programu DEP (Device Enrollment Protocol).
 
 ## Získání a odeslání tokenu Apple VPP
 
-1.  V [konzole správce Microsoft Intune](https://manage.microsoft.com) klikněte na **Správce** &gt; **iOS a Mac OS X** &gt; **VPP (Volume Purchase Program)**.
+1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) klikněte na **Správce** &gt; **iOS a Mac OS X** &gt; **VPP (Volume Purchase Program)**.
 
-2.  Klikněte na odkaz **Účet Apple VPP** a pokud jste to ještě neudělali, zaregistrujte se do programu Volume Purchase Program pro firmy. Po přihlášení stáhněte token Apple VPP pro svůj účet.
+2.  Vyberte odkaz **Účet Apple VPP**, a pokud jste to ještě neudělali, zaregistrujte se do programu Volume Purchase Program pro firmy. Po přihlášení stáhněte token Apple VPP pro svůj účet.
 
-3.  Na kartě **Spravovat Apple VPP (Volume Purchase Program)** v konzole Intune klikněte na **Odeslat token VPP**.
+3.  Na stránce **Spravovat Apple VPP (Volume Purchase Program)** v konzole Intune vyberte **Odeslat token VPP**.
 
-4.  V dialogovém okně **Odeslat token VPP** zadejte nebo vložte název tokenu VPP a vaše Apple ID a potom klikněte na **Nahrát**.
+4.  V dialogu **Odeslat token VPP** zadejte nebo vložte název tokenu VPP a vaše Apple ID a potom vyberte **Odeslat**.
 
-5.  V dialogovém okně s upozorněním zaškrtněte políčko s informací o tom, že později nebude možné přejít k jinému účtu VPP, a potom klikněte na **Ano**.
+5.  V dialogu s upozorněním zaškrtněte políčko s informací o tom, že později nebude možné přejít k jinému účtu VPP, a potom vyberte **Ano**.
 
 Na kartě **VPP (Volume Purchase Program)** si můžete prohlédnout informace o tokenu Apple VPP, včetně data jeho poslední aktualizace, data vypršení a data poslední synchronizace s Intune.
 
-Data ukládaná společností Apple můžete kdykoli synchronizovat s Intune kliknutím na **Synchronizovat nyní**.
+Data ukládaná společností Apple můžete kdykoli synchronizovat s Intune výběrem položky **Synchronizovat nyní**.
 
 ## Nasazení hromadně koupené aplikace
 
-1.  V [konzole správce Microsoft Intune](https://manage.microsoft.com) klikněte na **Aplikace** &gt; **Spravovaný software** &gt; **Hromadně zakoupené aplikace**. Tento seznam obsahuje všechny aplikace, které byly synchronizovány ze služby Apple VPP.
+1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) klikněte na **Aplikace** &gt; **Spravovaný software** &gt; **Multilicenční aplikace**. Tento seznam obsahuje všechny aplikace, které byly synchronizovány ze služby Apple VPP.
 
-2.  Vyberte aplikaci, kterou chcete nasadit, klikněte na **Spravovat nasazení**, a pak postupujte podle pokynů v tématu [Nasazení aplikací v Microsoft Intune](deploy-apps-in-microsoft-intune.md) a dokončete odeslání, vytvoření a nasazení aplikace.
+2.  Vyberte aplikaci, kterou chcete nasadit, klikněte na **Spravovat nasazení** a potom postupujte podle pokynů v tématu [Nasazení aplikací v Microsoft Intune](deploy-apps-in-microsoft-intune.md) a dokončete odeslání, vytvoření a nasazení aplikace.
 
 Když nasazujete aplikaci s typem instalace **Požadovaná**, použije jednu licenci každý uživatel, který aplikaci nainstaluje.
 
@@ -84,11 +85,11 @@ Které aplikace VPP jsou nasazené a kolik licencí je už využito, můžete sl
 
 > [!TIP] Můžete také použít **filtry** aplikací pro zjištění stavu instalace konkrétních aplikací.
 
-### Viz také
+### Viz taky
 [Nasazení aplikací v Microsoft Intune](deploy-apps-in-microsoft-intune.md)
 
 
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -18,7 +18,7 @@ ms.assetid: 7d6dae94-a833-40b7-9016-14ea234bb33c
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: joglocke
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -27,30 +27,30 @@ ms.suite: ems
 
 # Portál Azure pro zásady MAM v Microsoft Intune
 ## Přístup k portálu Azure
-**Portál Azure** umožňuje vytvářet a spravovat zásady správy mobilní aplikace.
+**Portál Azure** umožňuje vytvářet a spravovat zásady správy mobilních aplikací.
 
 Portál Azure podporuje vytváření zásad MAM pro:
-- Aplikace běžící v zařízeních **zaregistrovaných a spravovaných v Intune**.
+- Aplikace běžící v zařízeních **zaregistrovaných a spravovaných v Intune**
 - Aplikace běžící v zařízeních, která **nejsou zaregistrovaná** v žádném řešení MDM
-- Aplikace běžící v zařízeních, která jsou **zaregistrovaná v řešení MDM třetí strany**.
+- Aplikace běžící v zařízeních, která jsou **zaregistrovaná v řešení MDM třetí strany**
 
-Pokud aktuálně ke správě svých zařízení používáte **Konzolu správce Intune**, můžete zásadu MAM podporující aplikace pro zařízení zaregistrovaná v Intune vytvořit pomocí [Konzoly správce Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md)..
+Pokud teď ke správě svých zařízení používáte **konzolu pro správu Intune**, můžete zásadu MAM podporující aplikace pro zařízení zaregistrovaná v Intune vytvořit pomocí [konzoly pro správu Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
 >[!IMPORTANT]
-> V Konzole správce Intune nemusíte vidět všechna nastavení zásad MAM. Portál Azure je nová konzola správce pro vytváření zásad MAM.
+> V Konzole správce Intune nemusíte vidět všechna nastavení zásad MAM. Portál Azure je nové konzola pro správu, která umožňuje vytváření zásad MAM. Pokud vytváříte zásady MAM v konzole pro správu Intune i na portálu Azure, pro aplikace se použije a pro uživatele se nasadí zásada na portálu Azure.
 
-## Přihlášení na portál Azure a přizpůsobení úvodní stránku
+## Přihlášení na portál Azure a přizpůsobení úvodní stránky
 
-1.  Přejděte na [portál Azure](https://portal.azure.com) a přihlaste se pomocí svých přihlašovacích údajů pro [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+1.  Přejděte na [portál Azure](https://portal.azure.com) a přihlaste se pomocí svých přihlašovacích údajů služby [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
     ![Snímek obrazovky přihlašovací stránky portálu Azure](../media/AppManagement/AzurePortal_MAMSigninPage.png)
 
-2.  Po přihlášení se vám zobrazí **Řídící panel**. Stránka **Řídící panel** obsahuje sadu výchozích dlaždic. Přidáním nových dlaždic nebo jejich odebráním si stránku můžete přizpůsobit.
+2.  Po úspěšném přihlášení se zobrazí **Řídicí panel**. Stránka **Řídicí panel** obsahuje sadu výchozích dlaždic. Přidáním nových dlaždic nebo jejich odebráním si stránku můžete přizpůsobit.
 
-    ![Snímek obrazovky řídícího panelu portálu Azure](../media/AppManagement/AzurePortal_MAMStartboard_NoMAM.png)
+    ![Snímek obrazovky Řídicí panel portálu Azure](../media/AppManagement/AzurePortal_MAMStartboard_NoMAM.png)
 
-3.  Z nabídky **Procházet** vyberte **Intune**.![Snímek obrazovky nabídky Procházet se zvýrazněným Intune](../media/AppManagement/AzurePortal_MAM_Browse_Intune.png)
+3.  V nabídce **Procházet** vyberte **Intune**.![Snímek obrazovky nabídky Procházet se zvýrazněnou službou Intune](../media/AppManagement/AzurePortal_MAM_Browse_Intune.png)
 
-4.  Klikněte na **Intune > Správa mobilních aplikací Intune > Nastavení**..
+4.  Klikněte na **Intune > Správa mobilních aplikací Intune > Nastavení**.
 
     ![Snímek obrazovky okna Správa mobilních aplikací Intune](../media/AppManagement/AzurePortal_MAM_Mainblade.png)
 
@@ -59,11 +59,11 @@ Pokud aktuálně ke správě svých zařízení používáte **Konzolu správce 
 
     ![Snímek obrazovky okna Správa mobilních aplikací Intune se zvýrazněnou ikonou připnutí](../media/AppManagement/AzurePortal_MAM_PinBladeAction.png)
 
-    ![Snímek obrazovky řídicího panelu s připnutou dlaždicí Intune](../media/AppManagement/AzurePortal_MAM_Startboard_withMAM.png)
+    ![Snímek obrazovky Řídicí panel s připnutou dlaždicí Intune](../media/AppManagement/AzurePortal_MAM_Startboard_withMAM.png)
 ## Další kroky
 [Příprava před konfigurací zásad správy mobilních aplikací](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

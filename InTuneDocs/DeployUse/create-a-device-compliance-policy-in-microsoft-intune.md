@@ -18,7 +18,7 @@ ms.assetid: 5336dac0-a2cc-4cd4-8511-67e4f95bd700
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -26,24 +26,24 @@ ms.suite: ems
 ---
 
 # Vytvoření zásady dodržování předpisů pro zařízení v Microsoft Intune
-Toto téma popisuje kroky, které můžete použít k vytvoření zásady dodržování předpisů, kterou musí zařízení splňovat, aby bylo považováno za vyhovující.
+Toto téma popisuje kroky, které můžete použít k vytvoření zásady dodržování předpisů, kterou musí zařízení splňovat, aby bylo považované za vyhovující.
 
 ##  Krok 1: Přidání nové zásady
-  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Zásady dodržování předpisů** &gt; **Přidat**..
+  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte **Zásady** &gt; **Zásady dodržování předpisů** &gt; **Přidat**.
 
-  ![Snímek obrazovky stránky zásad dodržování předpisů v konzole správce Intune zobrazující možnost přidat v nabídce v horní části stránky](./media/intune-sa-3a-add-compliance-policy.png)
+  ![Snímek obrazovky stránky zásad dodržování předpisů v konzole pro správu Intune zobrazující možnost Přidat v nabídce v horní části stránky](./media/intune-sa-3a-add-compliance-policy.png)
 
 ##  Krok 2: Konfigurace nastavení
 Na stránce **Vytvořit zásadu** povolte požadovaná nastavení:
-  -   Nastavení zabezpečení systému, jako heslo a šifrování
-  -   Nastavení stavu zařízení, jako jestli má zařízení jailbreak, nebo jestli ho služba ověření stavu zařízení ve Windows nahlásila jako zařízení, které je v pořádku.
-  -   Nastavení vlastností zařízení, jako minimální požadovaná verze operačního systému nebo maximální povolená verze operačního systému
+  -   Nastavení zabezpečení systému jako heslo a šifrování
+  -   Nastavení stavu zařízení, jako jestli má zařízení jailbreak nebo jestli ho služba ověření stavu zařízení ve Windows nahlásila jako zařízení, které je v pořádku
+  -   Nastavení vlastností zařízení jako minimální požadovaná verze operačního systému nebo maximální povolená verze operačního systému
 ![Snímek obrazovky s kartou Obecné na stránce Vytvořit zásadu ](./media/intune-sa-3b-create-policy.png)
 
 ##  Krok 3: Uložení zásady
-Po dokončení klikněte na **Uložit zásadu**..
+Po dokončení klikněte na **Uložit zásadu**.
 
-Máte možnost nasadit zásadu ihned po uložení, nebo můžete zvolit pozdější nasazení. Nová zásada se zobrazí v uzlu **Zásady dodržování předpisů** pracovního prostoru **Zásady**.
+Máte možnost nasadit zásadu hned po uložení, nebo můžete zvolit pozdější nasazení. Nová zásada se zobrazí v uzlu **Zásady dodržování předpisů** pracovního prostoru **Zásady**.
 
 ## Nastavení podporovaných zásad
 Následující tabulka uvádí nastavení zásad dodržování předpisů a platformy, na kterých jsou podporované.
@@ -58,7 +58,7 @@ Následující tabulka uvádí nastavení zásad dodržování předpisů a plat
 |Minimální počet znakových sad|iOS 6 nebo novější|Není k dispozici|Windows Phone 8 a novější <br>Windows RT<br> Windows RT 8.1 <br>Windows 8.1|
 |Kvalita hesla|Není k dispozici|Android 4.0 nebo novější <br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Není k dispozici|
 |Počet minut nečinnosti před vyžadováním hesla|iOS 6 nebo novější|Android 4.0 nebo novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Windows Phone 8 a novější<br>Windows RT a Windows RT 8.1<br>Windows 8.1|
-|Omezená platnost hesla (ve dnech)|iOS 6 nebo novější|Android 4.0 nebo novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Windows Phone 8 a novější<br>Windows RT a Windows RT 8.1<br>Windows 8.1|
+|Vypršení platnosti hesla (dny)|iOS 6 nebo novější|Android 4.0 nebo novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Windows Phone 8 a novější<br>Windows RT a Windows RT 8.1<br>Windows 8.1|
 |Pamatovat si historii hesel|iOS 6 nebo novější|Android 4.0 nebo novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Windows Phone 8 a novější<br>Windows RT a Windows RT 8.1<br>Windows 8.1|
 |Zakázat opakované použití předchozích hesel|iOS 6 nebo novější|Android 4.0 nebo novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Windows Phone 8 a novější<br>Windows RT a Windows RT 8.1<br>Windows 8.1|
 |Po návratu zařízení ze stavu nečinnosti vyžadovat heslo| Není k dispozici| Není k dispozici|Windows 10 Mobile|
@@ -70,7 +70,7 @@ Následující tabulka uvádí nastavení zásad dodržování předpisů a plat
 |Minimální požadovaný operační systém|iOS 6 nebo novější|Android 4.0 nebo novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější| Windows Phone 8 a novější<br>Windows 8.1|
 |Maximální povolená verze operačního systému|iOS 6 nebo novější|Android 4.0 nebo novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Windows Phone 8 a novější<br>Windows 8.1|
 
-Další informace o nastavení dodržování předpisů, které jsou podporovány na jednotlivých platformách, získáte výběrem jedné z následujících možností:
+Další informace o nastavení dodržování předpisů podporovaném na jednotlivých platformách získáte výběrem jedné z následujících možností:
 > [!div class="op_single_selector"]
 - [Nastavení zásad dodržování předpisů pro zařízení s iOS](ios-compliance-policy-settings-in-microsoft-intune.md)
 - [Nastavení zásad dodržování předpisů pro zařízení s Androidem](android-compliance-policy-settings-in-microsoft-intune.md)
@@ -80,10 +80,10 @@ Další informace o nastavení dodržování předpisů, které jsou podporován
 ## Další kroky
 [Nasazení a monitorování zásady dodržování předpisů](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md)
 
-### Související témata
+### Viz taky
 [Úvod do zásad dodržování předpisů zařízení](introduction-to-device-compliance-policies-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 
