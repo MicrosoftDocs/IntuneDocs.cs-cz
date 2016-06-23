@@ -1,39 +1,22 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 6
+ Total Files | 4
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [InTuneDocs\DeployUse\prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md](https://github.com/Microsoft/IntuneDocs-pr/blob/e91193523284113c2029e0762dfc48ddc15540d4/InTuneDocs/DeployUse/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) | OutofSyncHandedBackSuccess | [Details](#4342a00029c4943f67ff0420d43f885153f579e5216)
- [InTuneDocs\DeployUse\restrict-access-to-networks.md](https://github.com/Microsoft/IntuneDocs-pr/blob/1b40082878c3598aa1a0a83223bea6dd77083017/InTuneDocs/DeployUse/restrict-access-to-networks.md) | HandedOffSuccess | [Details](#3c35ffb62aadc67bdf25322e0c35efee1f2d2be8232)
- [InTuneDocs\DeployUse\TOC.md](https://github.com/Microsoft/IntuneDocs-pr/blob/99c0a51beb89cfe14faef20b7cde2afca41b490f/InTuneDocs/DeployUse/TOC.md) | OutofSyncHandedBackSuccess | [Details](#56a2caeb6f74f3d53870e46d9c95482f0e882354248)
- [InTuneDocs\EndUser\you-see-errors-while-trying-to-enroll-your-device-in-intune-ios.md](https://github.com/Microsoft/IntuneDocs-pr/blob/e91193523284113c2029e0762dfc48ddc15540d4/InTuneDocs/EndUser/you-see-errors-while-trying-to-enroll-your-device-in-intune-ios.md) | OutofSyncHandedBackSuccess | [Details](#c105d7c907a119fd10762608e8cc86548bda7a24474)
- [InTuneDocs\GetStarted\supported-mobile-devices-and-computers.md](https://github.com/Microsoft/IntuneDocs-pr/blob/e91193523284113c2029e0762dfc48ddc15540d4/InTuneDocs/GetStarted/supported-mobile-devices-and-computers.md) | HandedOffSuccess | [Details](#d908654b30a29e3b1e3a52096767d42019af772f539)
- [InTuneDocs\media\cisco-ise-user-iphone.png](https://github.com/Microsoft/IntuneDocs-pr/blob/9d05865d8b3416c77c59fe8fea1db2269a4e61d8/InTuneDocs/media/cisco-ise-user-iphone.png) | HandedOffSuccess | [Details](#8471cf936ddec250b27f302153551c9b7f96ca23843)
+ [InTuneDocs\DeployUse\manage-data-transfer-between-ios-apps-with-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/002ebec14a089754849024916590b787431c7efe/InTuneDocs/DeployUse/manage-data-transfer-between-ios-apps-with-microsoft-intune.md) | HandedOffSuccess | [Details](#fce0081fc1ecb92acf539a2d69f0493fb30ee41869)
+ [InTuneDocs\DeployUse\protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/002ebec14a089754849024916590b787431c7efe/InTuneDocs/DeployUse/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md) | OutofSyncHandedBackSuccess | [Details](#48b15b00d1dd52d799193839d562cccf766b2cb1220)
+ [InTuneDocs\DeployUse\restrict-access-to-networks.md](https://github.com/Microsoft/IntuneDocs-pr/blob/a67f7c883a9703123d6c50ec5e51e68e17c2745c/InTuneDocs/DeployUse/restrict-access-to-networks.md) | HandedOffSuccess | [Details](#c7b96e2b7c3051f472ce2b909c66cc3d1dd1e990232)
+ [InTuneDocs\index.md](https://github.com/Microsoft/IntuneDocs-pr/blob/e8f9d974947835d5ec5a356bea6b4261960277ef/InTuneDocs/index.md) | OutofSyncHandedBackSuccess | [Details](#b6e3e5189a1567dd5b13017d275ff4bd548e5fa1656)
 
 ## Item Details
-##### <a name='4342a00029c4943f67ff0420d43f885153f579e5216'></a> Source: [InTuneDocs\DeployUse\prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md](https://github.com/Microsoft/IntuneDocs-pr/blob/e91193523284113c2029e0762dfc48ddc15540d4/InTuneDocs/DeployUse/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.616f51519eb2c73576b2d965d4745db81c21828d.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/104aa347d2e53998dbb1dbaa56f81b605422331c/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.616f51519eb2c73576b2d965d4745db81c21828d.cs-cz.xlf)
-* Handoff Datetime: 2016-06-23 16:53:53
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\DeployUse\prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/75e78f241f4a54550945fe1116834b157df160f4/InTuneDocs/DeployUse/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)
-* Current Handback File: [prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.616f51519eb2c73576b2d965d4745db81c21828d.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/cbffacc094e2347eeeef322e16b75dd7b26f4153/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.616f51519eb2c73576b2d965d4745db81c21828d.cs-cz.xlf)
-* Current Handback Datetime: 2016-06-17 22:47:43
-* [Back to Top](#report-top)
-
-##### <a name='3c35ffb62aadc67bdf25322e0c35efee1f2d2be8232'></a> Source: [InTuneDocs\DeployUse\restrict-access-to-networks.md](https://github.com/Microsoft/IntuneDocs-pr/blob/1b40082878c3598aa1a0a83223bea6dd77083017/InTuneDocs/DeployUse/restrict-access-to-networks.md)
+##### <a name='fce0081fc1ecb92acf539a2d69f0493fb30ee41869'></a> Source: [InTuneDocs\DeployUse\manage-data-transfer-between-ios-apps-with-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/002ebec14a089754849024916590b787431c7efe/InTuneDocs/DeployUse/manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [restrict-access-to-networks.ee8e70c9a46d32ebc56bf20f0e254932308131d8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/104aa347d2e53998dbb1dbaa56f81b605422331c/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/restrict-access-to-networks.ee8e70c9a46d32ebc56bf20f0e254932308131d8.cs-cz.xlf)
-* Handoff Datetime: 2016-06-23 16:53:53
+* Handoff File: [manage-data-transfer-between-ios-apps-with-microsoft-intune.4d7d42c1c13c5828eddcc758ffdd84e3d34f1a88.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/055f5a701b447b47d77c0c0a6f3257dde2bb09af/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/manage-data-transfer-between-ios-apps-with-microsoft-intune.4d7d42c1c13c5828eddcc758ffdd84e3d34f1a88.cs-cz.xlf)
+* Handoff Datetime: 2016-06-23 22:54:13
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -41,59 +24,46 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='56a2caeb6f74f3d53870e46d9c95482f0e882354248'></a> Source: [InTuneDocs\DeployUse\TOC.md](https://github.com/Microsoft/IntuneDocs-pr/blob/99c0a51beb89cfe14faef20b7cde2afca41b490f/InTuneDocs/DeployUse/TOC.md)
+##### <a name='48b15b00d1dd52d799193839d562cccf766b2cb1220'></a> Source: [InTuneDocs\DeployUse\protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/002ebec14a089754849024916590b787431c7efe/InTuneDocs/DeployUse/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [TOC.d669f1ddce84ce475f1caaaba10ea2dad4bca1c5.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/104aa347d2e53998dbb1dbaa56f81b605422331c/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/TOC.d669f1ddce84ce475f1caaaba10ea2dad4bca1c5.cs-cz.xlf)
-* Handoff Datetime: 2016-06-23 16:53:53
+* Handoff File: [protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.15f06b9c8d51a84c2a07952aff97cfb36cf2d229.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/055f5a701b447b47d77c0c0a6f3257dde2bb09af/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.15f06b9c8d51a84c2a07952aff97cfb36cf2d229.cs-cz.xlf)
+* Handoff Datetime: 2016-06-23 22:54:13
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\DeployUse\TOC.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/75e78f241f4a54550945fe1116834b157df160f4/InTuneDocs/DeployUse/TOC.md)
-* Current Handback File: [TOC.d669f1ddce84ce475f1caaaba10ea2dad4bca1c5.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/cbffacc094e2347eeeef322e16b75dd7b26f4153/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/TOC.d669f1ddce84ce475f1caaaba10ea2dad4bca1c5.cs-cz.xlf)
-* Current Handback Datetime: 2016-06-17 22:47:43
+* Current Target File: [InTuneDocs\DeployUse\protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/8cc1241e8adf85fb93708fa1e42e68ecce82e4c0/InTuneDocs/DeployUse/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
+* Current Handback File: [protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.15f06b9c8d51a84c2a07952aff97cfb36cf2d229.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/65768ff5876fe60d9612ec5103539c4510a1262b/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.15f06b9c8d51a84c2a07952aff97cfb36cf2d229.cs-cz.xlf)
+* Current Handback Datetime: 2016-06-22 14:49:15
 * [Back to Top](#report-top)
 
-##### <a name='c105d7c907a119fd10762608e8cc86548bda7a24474'></a> Source: [InTuneDocs\EndUser\you-see-errors-while-trying-to-enroll-your-device-in-intune-ios.md](https://github.com/Microsoft/IntuneDocs-pr/blob/e91193523284113c2029e0762dfc48ddc15540d4/InTuneDocs/EndUser/you-see-errors-while-trying-to-enroll-your-device-in-intune-ios.md)
+##### <a name='c7b96e2b7c3051f472ce2b909c66cc3d1dd1e990232'></a> Source: [InTuneDocs\DeployUse\restrict-access-to-networks.md](https://github.com/Microsoft/IntuneDocs-pr/blob/a67f7c883a9703123d6c50ec5e51e68e17c2745c/InTuneDocs/DeployUse/restrict-access-to-networks.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [restrict-access-to-networks.ee8e70c9a46d32ebc56bf20f0e254932308131d8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/055f5a701b447b47d77c0c0a6f3257dde2bb09af/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/restrict-access-to-networks.ee8e70c9a46d32ebc56bf20f0e254932308131d8.cs-cz.xlf)
+* Handoff Datetime: 2016-06-23 22:54:13
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='b6e3e5189a1567dd5b13017d275ff4bd548e5fa1656'></a> Source: [InTuneDocs\index.md](https://github.com/Microsoft/IntuneDocs-pr/blob/e8f9d974947835d5ec5a356bea6b4261960277ef/InTuneDocs/index.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [you-see-errors-while-trying-to-enroll-your-device-in-intune-ios.6eac219c556cfc7ae7341602a5988dc71415dcee.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/104aa347d2e53998dbb1dbaa56f81b605422331c/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/you-see-errors-while-trying-to-enroll-your-device-in-intune-ios.6eac219c556cfc7ae7341602a5988dc71415dcee.cs-cz.xlf)
-* Handoff Datetime: 2016-06-23 16:53:53
+* Handoff File: [index.404579aeff405d27d9820f60e5e015fb7352d33a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/055f5a701b447b47d77c0c0a6f3257dde2bb09af/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/index.404579aeff405d27d9820f60e5e015fb7352d33a.cs-cz.xlf)
+* Handoff Datetime: 2016-06-23 22:54:13
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\EndUser\you-see-errors-while-trying-to-enroll-your-device-in-intune-ios.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/75e78f241f4a54550945fe1116834b157df160f4/InTuneDocs/EndUser/you-see-errors-while-trying-to-enroll-your-device-in-intune-ios.md)
-* Current Handback File: [you-see-errors-while-trying-to-enroll-your-device-in-intune-ios.6eac219c556cfc7ae7341602a5988dc71415dcee.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/cbffacc094e2347eeeef322e16b75dd7b26f4153/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/you-see-errors-while-trying-to-enroll-your-device-in-intune-ios.6eac219c556cfc7ae7341602a5988dc71415dcee.cs-cz.xlf)
-* Current Handback Datetime: 2016-06-17 22:47:43
-* [Back to Top](#report-top)
-
-##### <a name='d908654b30a29e3b1e3a52096767d42019af772f539'></a> Source: [InTuneDocs\GetStarted\supported-mobile-devices-and-computers.md](https://github.com/Microsoft/IntuneDocs-pr/blob/e91193523284113c2029e0762dfc48ddc15540d4/InTuneDocs/GetStarted/supported-mobile-devices-and-computers.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [supported-mobile-devices-and-computers.7b8ed1a1ec9f3de87f727f19f6c303032a353450.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/104aa347d2e53998dbb1dbaa56f81b605422331c/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/supported-mobile-devices-and-computers.7b8ed1a1ec9f3de87f727f19f6c303032a353450.cs-cz.xlf)
-* Handoff Datetime: 2016-06-23 16:53:53
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='8471cf936ddec250b27f302153551c9b7f96ca23843'></a> Source: [InTuneDocs\media\cisco-ise-user-iphone.png](https://github.com/Microsoft/IntuneDocs-pr/blob/9d05865d8b3416c77c59fe8fea1db2269a4e61d8/InTuneDocs/media/cisco-ise-user-iphone.png)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [8471cf936ddec250b27f302153551c9b7f96ca23.png](https://github.com/Microsoft/EM.handoff/blob/104aa347d2e53998dbb1dbaa56f81b605422331c/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/8471cf936ddec250b27f302153551c9b7f96ca23.png)
-* Handoff Datetime: 2016-06-23 16:53:53
-* Handoff Reason: IsDependency
-* Dependency From: InTuneDocs\DeployUse\restrict-access-to-networks.md
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [InTuneDocs\index.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/c0d55c9587001c3276f0a00c89199f7bebcba9ca/InTuneDocs/index.md)
+* Current Handback File: [index.404579aeff405d27d9820f60e5e015fb7352d33a.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/66a334e19578d5edeb71961e1728abdcf2c0e973/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/index.404579aeff405d27d9820f60e5e015fb7352d33a.cs-cz.xlf)
+* Current Handback Datetime: 2016-06-20 12:42:45
 * [Back to Top](#report-top)
 
 
