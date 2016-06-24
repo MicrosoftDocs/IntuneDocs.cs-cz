@@ -18,7 +18,7 @@ ms.assetid: c6a97c74-c35c-4977-b925-6efe01e31d3c
 ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -46,9 +46,11 @@ Po zrušení registrace zařízení s iOS v Intune:
 
 Návod ke zrušení registrace najdete v tématu [Zrušení registrace zařízení v Intune](unenroll-your-device-from-intune-ios.md).
 
+Pokud máte nějaké otázky, na které byste potřebovali odpověď, a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+
 ### Související témata
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

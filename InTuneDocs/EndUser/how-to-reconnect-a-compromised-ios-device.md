@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/06/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 09e97df0-d032-48ff-ab8a-8c2c4ec29897
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -26,12 +26,12 @@ ms.suite: ems
 ---
 
 # Opakované připojení k ohroženému zařízení se systémem iOS
-Váš správce IT zjistil, že používáte zařízení s jailbreakem. Tato konfigurace může ohrozit bezpečnost a znamenat hrozbu pro vaše podnikové prostředky.
+Váš správce IT zjistil, že používáte zařízení s jailbreakem. To, že má zařízení s iOS „jailbreak“, znamená, že má odebraná softwarová omezení, což může ohrozit zabezpečení a znamenat hrozbu pro vaše podnikové prostředky. Pokud k tomu dojde, nebude už vaše zařízení mít přístup k prostředkům společnosti.
 
-O pomoc s opětovným připojením svého zařízení požádejte správce IT.
+O pomoc s opětovným připojením svého zařízení požádejte správce IT. Pokud nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

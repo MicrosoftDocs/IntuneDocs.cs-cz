@@ -18,7 +18,7 @@ ms.assetid: dea37b91-33fa-4d4a-ac44-560b450c02a6
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -26,10 +26,12 @@ ms.suite: ems
 ---
 
 # Aplikace Portál společnosti není podporovaná
-Tato verze portálu společnosti se už nedá používat. Jestli chcete pokračovat, nainstalujte si aplikaci **Portál společnosti** z Windows Storu.
+Tato verze Portálu společnosti se už nedá používat. Jestli chcete pokračovat, nainstalujte si nejnovější verzi aplikace **Portál společnosti** z Windows Storu.
 
 
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO2-->
 
 

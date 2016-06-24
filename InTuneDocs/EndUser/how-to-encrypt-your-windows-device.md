@@ -6,7 +6,7 @@ description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/30/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 7d9645a9-6058-4112-aa31-8cdbccdc5463
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: priyar
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -26,28 +26,19 @@ ms.suite: ems
 ---
 
 # Postup zašifrování zařízení s Windows
-Abyste se mohli znovu připojit k práci, budete si muset zašifrovat zařízení podle následujícího postupu:
 
-## Možnost 1 – přidání účtu Microsoft
+K zabezpečení dat vaší společnosti nebo školy může správce IT vyžadovat šifrování zařízení s Windows. Pokud máte Windows Phone a zaregistrovali jste si ho, zařízení se vám automaticky zašifruje, pokud se vyžaduje šifrování.
 
-1.  Vyhledejte a pak spusťte aplikaci **Nastavení počítače** .
+Pokud máte desktopové zařízení, zašifrujte ho podle pokynů níže. 
 
-2.  Klikněte na **Účty** &gt; **Váš účet** a pak klikněte na **Připojit k účtu Microsoft**..
+1.  Vyhledejte a pak spusťte aplikaci **Správa nástroje BitLocker**.
 
-3.  Postupujte podle zobrazených pokynů.
+2.  Klikněte na **Zapnout nástroj BitLocker** a pak podle zobrazených pokynů zašifrujte jednotlivé jednotky.
 
-4.  Podle pokynů v části [Registrace zařízení pro použití v práci ](http://go.microsoft.com/fwlink/?LinkId=519071)zkontrolujte, že je zařízení zaregistrováno pomocí Intune..
-
-## Možnost 2 – povolení nástroje BitLocker:
-
-1.  Vyhledejte a pak spusťte aplikaci **Správa nástroje BitLocker** .
-
-2.  Klikněte na **Zapnout nástroj BitLocker**a pak podle zobrazených pokynů zašifrujte jednotlivé jednotky.
-
-3.  Podle pokynů v části [Registrace zařízení pro použití v práci ](http://go.microsoft.com/fwlink/?LinkId=519071)zkontrolujte, že je zařízení zaregistrováno pomocí Intune..
+Pokud potřebujete pomoc a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

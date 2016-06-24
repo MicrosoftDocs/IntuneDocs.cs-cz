@@ -18,7 +18,7 @@ ms.assetid: 85c868e7-8d63-480c-9770-4e99614a5c94
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -34,19 +34,19 @@ Zapnutí podrobného protokolování:
 
 1.  Otevřete aplikaci Portál společnosti.
 
-2.  Klepněte na **Nabídka** &gt;  **Nastavení**..
+2.  Klepněte na **Nabídka** &gt; **Nastavení**.
 
     > [!NOTE] 
     > Podle toho, jaké zařízení se systémem Android máte, může být **Nabídka** buď softwarové, nebo hardwarové tlačítko.
 
-3.  V části **Diagnostická data** klepněte na **Odeslat data**..
+3.  V části **Diagnostická data** klepněte na **Odeslat data**.
 
     > [!NOTE]
-    > **Jenom pokud používáte zařízení se systémem Android 6.0 nebo novějším:** Když klepnete na **Odeslat data**, zobrazí se zpráva **Povolit pro Portál společnosti přístup k fotkám, médiím a souborům ve vašem zařízení?**.. 
+    > **Jenom pokud používáte zařízení se systémem Android 6.0 nebo novějším:** Když klepnete na **Odeslat data**, zobrazí se zpráva **Povolit pro Portál společnosti přístup k fotkám, médiím a souborům ve vašem zařízení**. 
 
     Tato zpráva je zavádějící, protože **Microsoft nikdy nezískává přístup k fotografiím, médiím a souborům na vašem zařízení!** Text zprávy určuje společnost Google a Microsoft ho nemůže změnit.  Když povolíte přístup, povolíte na svém zařízení jenom zápis datových protokolů na kartu SD zařízení, takže tyto protokoly můžete přesouvat pomocí kabelu USB.
 
-    Pokud přístup odepřete, při příštím klepnutí na **Odeslat data** se zpráva zobrazí znovu, ale další zprávy už můžete vypnout zaškrtnutím políčka **Příště se už neptat**.  Pokud se rozhodnete povolit přístup později, přejděte na **Nastavení** &gt; **Aplikace** &gt; **Portál společnosti** &gt; **Oprávnění** &gt; **Úložiště** a toto oprávnění aktivujte.
+    Pokud přístup odepřete, při příštím klepnutí na **Odeslat data** se zpráva zobrazí znovu, ale další zprávy už můžete vypnout zaškrtnutím políčka **Příště se už neptat**.  Pokud se později rozhodnete povolit přístup, použijte možnost **Nastavení** &gt; **Aplikace** &gt; **Portál společnosti** &gt; **Oprávnění** &gt; **Úložiště** a pak tato oprávnění aktivujte.
 
 4.  Podle pokynů vyberte e-mailovou aplikaci, pomocí které odešlete protokoly správci IT. Aplikace vytvoří předem adresovaný e-mail, ve kterém už budou jako přílohy připojené všechny protokoly.
 
@@ -54,6 +54,6 @@ Zapnutí podrobného protokolování:
 ### Související témata
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

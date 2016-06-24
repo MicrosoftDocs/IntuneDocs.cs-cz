@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Hledání identity aplikace (PFN) pro síť VPN pro aplikaci |Microsoft Intune|
+title: Hledání identity aplikace (PFN) pro síť VPN pro aplikaci | Microsoft Intune
 description:
 keywords:
 author: nbigman
@@ -18,7 +18,7 @@ ms.assetid: 74643d1d-4fd9-4cff-ac79-1a42281d2f76
 #ROBOTS:
 #audience:
 #ms.devlang:
-#ms.reviewer: [ALIAS]
+#ms.reviewer: tycast
 #ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -42,7 +42,7 @@ Syntaxe pro Get-AppxPackage:
 
 Chcete-li například získat informace o všech univerzálních aplikacích nainstalovaných na počítače, použijte `Get-AppxPackage`.
 
-Chcete-li získat informace o aplikaci, jejíž název nebo část názvu znáte, použijte `Get-AppxPackage *<app_name>`. Všimněte si použití zástupného znaku, které je zvláště užitečné, pokud si nejste jisti úplným názvem aplikace. Například chcete-li získat informace pro aplikaci OneNote, použijte `Get-AppxPackage *OneNote`.
+Chcete-li získat informace o aplikaci, jejíž název nebo část názvu znáte, použijte `Get-AppxPackage *<app_name>`. Všimněte si použití zástupného znaku, které je zvláště užitečné, pokud si nejste jisti úplným názvem aplikace. Pokud chcete například získat informace pro aplikaci OneNote, použijte `Get-AppxPackage *OneNote`.
 
 
 Zde jsou informace načtené pro OneNote:
@@ -75,7 +75,7 @@ Zde jsou informace načtené pro OneNote:
 
 1.  Přejděte na adresu https://www.microsoft.com/en-us/store/apps.
 2.  Zadejte název aplikace v panelu vyhledávání. V našem příkladu hledejte OneNote.
-3.  Klikněte na odkaz na aplikaci. Všimněte si, že adresa URL, ke které přistupujete, má na konci řadu písmen. V našem příkladu vypadá adresu URL takto:
+3.  Klikněte na odkaz na aplikaci. Všimněte si, že adresa URL, ke které přistupujete, má na konci řadu písmen. V našem příkladu vypadá adresa URL takto:
 `https://www.microsoft.com/en-us/store/apps/onenote/9wzdncrfhvjl`
 4.  Na jiné kartě vložte následující adresu URL, `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`, ve které nahradíte `<app id>` pomocí ID aplikace, které jste získali z adresy https://www.microsoft.com/en-us/store/apps (to je ta řada písmen na konci adresy URL v kroku 3). V našem příkladu (pro OneNote) byste vložili adresu `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
 
@@ -91,6 +91,6 @@ V Edgi se požadované informace zobrazí, v Internet Exploreru je zobrazíte kl
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO1-->
 
 

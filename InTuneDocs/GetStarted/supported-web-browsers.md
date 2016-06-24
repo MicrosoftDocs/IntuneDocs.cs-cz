@@ -6,7 +6,7 @@ description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/06/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -27,13 +27,12 @@ ms.suite: ems
 
 # Webové prohlížeče podporované Microsoft Intune
 
-Před nastavením Intune si přečtěte toto téma a další požadavky uvedené v tématu [Co potřebujete vědět, než začnete](what-to-know-before-you-start-microsoft-intune.md)..
+Před nastavením Intune si přečtěte toto téma a další požadavky uvedené v tématu [Co potřebujete vědět, než začnete](what-to-know-before-you-start-microsoft-intune.md).
 
 |Funkce Intune |Podporované prohlížeče|
 |---------|---------|
 |Konzola správce Intune     |  Internet Explorer 10 nebo novější<br /><br />Google Chrome (verze starší než verze 42)<br /><br />Mozilla Firefox <br /><br />**Poznámka:** Edge není pro konzolu správce v současné době podporován.                      
-|Portál účtů Intune     | Internet Explorer 10 nebo novější<br /><br />Google Chrome  <br /><br />Mozilla Firefox<br /><br />**Poznámka:** Pokud používáte portál správy Office 365, který nahrazuje portál účtů Intune, níže najdete seznam prohlížečů portálu správy Office 365.    
-|Portál správy Office 365     |Internet Explorer 10 nebo novější<br /><br />Google Chrome <br /><br />Mozilla Firefox <br /><br />Microsoft Edge  |
+|Portál správy Office 365     |Všechny prohlížeče  |
 |Web portálu společnosti     |**Na mobilních zařízeních:** používejte výchozí webový prohlížeč pro příslušnou podporovanou platformu.   <br /><br />**Na počítačích s Windows:** Internet Explorer 10 nebo novější nebo Microsoft Edge<br /><br />**Pro Mac OS X 10.9 nebo novější:** Apple Safari    |
 
 
@@ -43,6 +42,6 @@ Před nastavením Intune si přečtěte toto téma a další požadavky uvedené
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Povolení přístupu k firemním prostředkům pomocí profilů certifikátů v Microsoft Intune | Microsoft Intune
+title: Povolení přístupu k firemním prostředkům pomocí profilů certifikátů |Microsoft Intune
 description:
 keywords:
 author: Nbigman
@@ -18,7 +18,7 @@ ms.assetid: 8cbb8499-611d-4217-a7b4-e9b864785dd0
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: kmyrup
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -28,7 +28,7 @@ ms.suite: ems
 # Zabezpečení přístupu k prostředkům pomocí profilů certifikátů v Microsoft Intune
 Když povolíte přístup k podnikovým prostředkům prostřednictvím sítě VPN, Wi-Fi nebo e-mailových profilů, máte možnost zabezpečit tento přístup pomocí certifikátu nainstalovaného na každém uživatelském zařízení. Funguje to takhle:
 
-1. Ujistěte se, že máte zavedenou správnou infrastrukturu certifikátu, jak je popsáno v tématu [Konfigurace infrastruktury certifikátu](configure-certificate-infrastructure.md)..
+1. Ujistěte se, že máte zavedenou správnou infrastrukturu certifikátu, jak je popsáno v tématu [Konfigurace infrastruktury certifikátu](configure-certificate-infrastructure.md).
 
 2. Na každé zařízení nainstalujete kořenový certifikát (nebo certifikát zprostředkující certifikační autority), aby zařízení rozpoznalo legitimitu vaší certifikační autority. To provedete tak, že vytvoříte a nasadíte **profil důvěryhodného certifikátu**. Když tento profil nasadíte, budou zařízení, která spravujete v Intune, požadovat a přijímat kořenový certifikát. Pro každou platformu budete muset vytvořit samostatný profil. **Profil důvěryhodného certifikátu** je dostupný pro tyto platformy:
  -  iOS 7.1 nebo novější
@@ -53,7 +53,7 @@ Pro každou platformu budete muset vytvořit samostatný profil. Při vytvářen
 > -    Pokud nemáte certifikační autoritu organizace, musíte ji vytvořit. 
 >- Pokud se na základě platforem zařízení rozhodnete použít profil protokolu SCEP (Simplified Certificate Enrollment Protocol), musíte taky nakonfigurovat server Služby zápisu síťových zařízení.
 >-  Bez ohledu na to, jestli plánujete používat profily SCEP, nebo .PFX, musíte stáhnout a nakonfigurovat konektor Microsoft Intune Certificate Connector.
-> Všechny tyto konfigurace jsou popsané v tématu [Konfigurace infrastruktury certifikátů](configure-certificate-infrastructure.md)..
+> Všechny tyto konfigurace jsou popsané v tématu [Konfigurace infrastruktury certifikátů](configure-certificate-infrastructure.md).
 
 ### Další kroky
 - [Konfigurace infrastruktury certifikátu](configure-certificate-infrastructure.md)
@@ -61,6 +61,6 @@ Pro každou platformu budete muset vytvořit samostatný profil. Při vytvářen
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

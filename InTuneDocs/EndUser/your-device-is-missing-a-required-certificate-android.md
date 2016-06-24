@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/05/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 9081b1d8-50e8-4bc2-ba37-766421364213
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -33,7 +33,7 @@ Pokud zařízení s Androidem není zaregistrované v Intune a chybí mu certifi
 
 Pokud chcete problém vyřešit a získat požadovaný certifikát:
 
-1.  V prohlížeči přejděte na tuto [stránku certifikátu Digicert](https://www.digicert.com/digicert-root-certificates.htm)..
+1.  V prohlížeči přejděte na tuto [stránku certifikátu Digicert](https://www.digicert.com/digicert-root-certificates.htm).
 
 2.  Vyhledejte certifikát Baltimore CyberTrust Root (https://www.digicert.com/CACerts/BaltimoreCyberTrustRoot.crt) a stáhněte ho.
 
@@ -41,7 +41,7 @@ Pokud chcete problém vyřešit a získat požadovaný certifikát:
 
 4.  Na obrazovce **Název certifikátu** přijměte výchozí název certifikátu.
 
-5. Ujistěte se, že **Použití přihlašovacích údajů** je nastavené na **Použito pro VPN a aplikace** a potom klepněte na **OK**.
+5. Ujistěte se, že **Použití přihlašovacích údajů** je nastavené na **Použito pro VPN a aplikace**, a potom klepněte na **OK**.
 
     ![andr-cert-install-add-cert-name](./media/andr-cert_install-2-add_cert_name.png)
 
@@ -49,6 +49,8 @@ Pokud chcete problém vyřešit a získat požadovaný certifikát:
 
 7. Aplikaci Portál společnosti znovu otevřete. Teď už by mělo být možné se k aplikaci Portál společnosti přihlásit. Pokud potřebujete pomoc, obraťte se na správce IT.
 
-<!--HONumber=May16_HO1-->
+Pokud potřebujete pomoc a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+
+<!--HONumber=Jun16_HO1-->
 
 

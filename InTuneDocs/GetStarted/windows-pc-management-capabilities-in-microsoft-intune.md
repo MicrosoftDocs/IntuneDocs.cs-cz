@@ -18,7 +18,7 @@ ms.assetid: 77fa5c66-a87c-47df-964c-800eea509b33
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: owenyen
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -34,7 +34,7 @@ Ve většině scénářů si svoje zařízení zaregistrujete v Microsoft Intune
 
 -   **Ochrana proti malwaru.** Součástí Intune je služba Endpoint Protection, která pomáhá chránit počítače před malwarem.
 
--   **Vzdálená pomoc.** Intune umožňuje uživatelům kontaktovat pracovníky technické podpory, kteří jim pak můžou pomoct prostřednictvím funkce vzdálené plochy, která je součástí Intune (vyžaduje software TeamViewer).
+-   **Vzdálená pomoc:** Intune umožňuje uživatelům kontaktovat pracovníky technické podpory, kteří jim pak můžou pomoct prostřednictvím funkce vzdálené plochy, která je součástí Intune <!--- (requires TeamViewer software)--->.
 
 -   **Správa licencí na software.** Můžete sledovat, kolik licencí softwaru je dostupných a kolik z nich se právě používá.
 -   **Nasazení aplikací.** Do počítačů, které spravujete, můžete nasadit software. Pokud ke správě počítačů použijete klientský software, některé funkce správy nejsou dostupné.
@@ -77,6 +77,6 @@ Toto jsou požadavky na software pro instalaci počítačového klienta Intune:
 [Možnosti správy mobilních zařízení v Microsoft Intune](./mobile-device-management-capabilities-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO2-->
 
 

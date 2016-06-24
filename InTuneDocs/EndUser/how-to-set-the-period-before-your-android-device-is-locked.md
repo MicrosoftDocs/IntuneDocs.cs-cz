@@ -18,7 +18,7 @@ ms.assetid: 98034875-cd3a-4367-a8d7-c5d4a438d496
 ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -30,14 +30,14 @@ Abyste se mohli znovu připojit ke své práci, budete muset na svém zařízen�
 
 1.  V **Nastavení** zařízení klikněte na **Zabezpečení** &gt; **Automatické uzamčení** (na některých zařízeních se zobrazuje jako **Uzamknout telefon po**).
 
-    Pokud se **Automatické uzamčení** (**Uzamknout telefon po** na některých zařízeních) nezobrazí, zkontrolujte, jestli jste v části **Nastavení** &gt; **Zámek obrazovky** &gt; **Heslo nastavili platné heslo**.
+    Pokud se **Automatické uzamčení** (**Uzamknout telefon po** na některých zařízeních) nezobrazí, zkontrolujte, jestli jste v části **Nastavení** &gt; **Zámek obrazovky** &gt; **Heslo** nastavili platné heslo.
 
 2.  Zadejte hodnotu časového limitu hesla.
 
 3.  Podle pokynů v části [Registrace zařízení pro použití v práci](http://go.microsoft.com/fwlink/?LinkId=519071) zkontrolujte, že je zařízení zaregistrováno pomocí Intune.
 
+Pokud potřebujete pomoc a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

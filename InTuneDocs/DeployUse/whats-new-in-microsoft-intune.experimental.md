@@ -27,11 +27,20 @@ ms.suite: ems
 ---
 
 # Co je nového v Microsoft Intune
+## Červen 2016
+
+### Aktualizace Portálu společnosti
+
+#### Aplikace Portál společnosti pro iOS
+
+- Když budou koncoví uživatelé instalovat podnikové aplikace, bude se jim nyní zobrazovat vylepšené prostředí instalace aplikace. Pokud instalace aplikace trvá příliš dlouho, uživatelé si můžou zařízení synchronizovat ručně, aby se vynutilo pokračování procesu synchronizace. Pokud si chcete projít pokyny pro koncové uživatele, najdete je v tématu [Ruční synchronizace zařízení s iOS](/Intune/EndUser/sync-your-device-manually-ios.md).
+
+- Aplikace Portál společnosti Microsoft Intune pro iOS je aktualizovaná tak, aby podporovala iOS verze 8.0 a novější. Aktualizace znamená, že můžou koncoví uživatelé nainstalovat aplikaci Portál společnosti a zaregistrovat nová zařízení v Intune, jenom když se na zařízení používá iOS verze 8.0 nebo novější. Uživatelé, kteří už mají zaregistrovaná zařízení používaná v nepodporované verzi iOS, můžou nadále používat aplikaci Firemní portál nainstalovanou na jejich zařízeních.
 
 ## Květen 2016
 
 
-S výjimkou integrace TeamVieweru jsou všechny tyto funkce podporované také pro hybridní nasazení (Configuration Manager s Intune). Další informace o nových funkcích pro hybridní nasazení najdete na naší stránce věnované [novinkám pro hybridní nasazení](https://technet.microsoft.com/en-us/library/mt718155.aspx).
+Všechny tyto funkce jsou také podporovány pro hybridní nasazení (nástroj Configuration Manager s Intune). Další informace o nových funkcích pro hybridní nasazení najdete na naší stránce věnované [novinkám pro hybridní nasazení](https://technet.microsoft.com/en-us/library/mt718155.aspx).
 
 ### Dokumentace
 
@@ -52,16 +61,13 @@ Další informace najdete v [tomto příspěvku blogu](https://blogs.technet.mic
 
 - **Pro správu pomocí zásad MAM jsou teď dostupné nové aplikace.** Na zařízeních, která nejsou zaregistrovaná v Intune, je teď možné přidružit k zásadám MAM aplikace Microsoft Word, Excel a PowerPoint pro Android. Úplný seznam podporovaných aplikací najdete v galerii mobilních aplikací Microsoft Intune na stránce [aplikací pro Microsoft Intune od partnerů](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx).
 
-### Správa zařízení
 
-- **Relace vzdálené pomoci pro počítače s Windows.** Integrace TeamVieweru pro počítače s Windows spravované klientským softwarem Intune vám umožní navázání relací vzdálené pomoci s počítači s Windows z důvodu podpory oddělení helpdesku. Mezi podporované počítače patří počítače s Windows 7, 8, 8.1 a Windows 10.
-Podrobnosti najdete v tématu [Běžné úlohy správy počítačů s Windows pomocí počítačového klienta Microsoft Intune](/intune/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client#respond-to-a-remote-assistance-request).
 
 ### Aktualizace Portálu společnosti
 
 #### Aplikace Portál společnosti pro Android
 
-- **Informační zprávy pro koncové uživatele:** Koncoví uživatelé nyní uvidí informační zprávy aplikace Portál společnosti pro Android, když registrují svoje zařízení nebo je odebírají z portálu společnosti.
+- **Informační zprávy pro koncové uživatele:** Koncoví uživatelé nyní uvidí informační zprávy aplikace Portál společnosti pro Android, když registrují svoje zařízení nebo je odebírají z Portálu společnosti.
 
 - **Změny účtů správců registrace zařízení v aplikaci Portál společnosti pro Android.** Za účelem zvýšení výkonu a možností škálování už Intune v aplikaci Portál společnosti pro Android v podokně Moje zařízení nezobrazuje všechna zařízení správce registrace zařízení (DEM). Zobrazí se pouze místní zařízení, na kterém aplikace běží, a to pouze v případě, že je zaregistrováno prostřednictvím aplikace Portál společnosti. Uživatel Správce registrace zařízení může na místním zařízení provádět různé akce, ale vzdálenou správu jiných zaregistrovaných zařízení je možné provádět pouze z konzoly správce Intune.
 -
@@ -75,18 +81,18 @@ Podrobnosti najdete v tématu [Běžné úlohy správy počítačů s Windows po
 - **Přechod k uživatelskému rozhraní Centra zpráv**. V rámci migrace Intune do [portálu pro správu Office 365](https://portal.office.com/) začneme pro oznamování nových funkcí a pro další oznámení využívat výhod Centra zpráv. Také můžete nainstalováním mobilní doprovodné aplikace Správce Office 365 dostávat oznámení na mobilní telefon a snadno všechny zprávy přeposílat uživatelům nebo na alias distribučního seznamu.
 Centrum zpráv začneme používat od květnové verze. Oznámíme vám tímto způsobem, že byly dokončeny aktualizace, a přidáme také informace o nových a vylepšených funkcích Intune. Na Centrum zpráv se můžete podívat již dnes, a to tak, že se přihlásíte na [portál pro správu Office 365](https://portal.office.com/) a v levém navigačním podokně zvolíte CENTRUM ZPRÁV.
 
-- **Změny účtů Správců registrace zařízení**. Za účelem zvýšení výkonu a možností škálování už Intune v aplikaci Portál společnosti v iOS v podokně **Moje zařízení** nezobrazuje **všechna** zařízení správce registrace zařízení (DEM). Zobrazí se pouze místní zařízení, na kterém aplikace běží, a to pouze v případě, že je zaregistrováno prostřednictvím aplikace Portál společnosti. Uživatel Správce registrace zařízení může na místním zařízení provádět různé akce, ale vzdálenou správu jiných zaregistrovaných zařízení je možné provádět pouze z konzoly správce Intune. Kromě toho se v Intune místo účtů DEM začne používat buď program Apple DEP (Device Enrollment Program), nebo nástroj Apple Configurator. Obě tyto metody registrace již pro sdílená zařízení s iOS podporují registrace bez zásahu uživatele. Účty Správce registrace zařízení používejte pouze v případě, že registrace sdílených zařízení bez zásahu uživatele není dostupná.
+- **Změny účtů Správců registrace zařízení**. Za účelem zvýšení výkonu a možností škálování už Intune v aplikaci Portál společnosti v iOS v podokně **Moje zařízení** nezobrazuje **všechna** zařízení správce registrace zařízení (DEM). Zobrazí se pouze místní zařízení, na kterém aplikace běží, a to pouze v případě, že je zaregistrováno prostřednictvím aplikace Portál společnosti. Uživatel Správce registrace zařízení může na místním zařízení provádět různé akce, ale vzdálenou správu jiných zaregistrovaných zařízení je možné provádět pouze z konzoly správce Intune. Kromě toho se v Intune místo účtů DEM začne používat buď program Apple DEP (Device Enrollment Program), nebo nástroj Apple Configurator. Obě tyto metody registrace již podporují registrace bez zásahu uživatele pro sdílená zařízení s iOS. Účty Správce registrace zařízení používejte pouze v případě, že registrace sdílených zařízení bez zásahu uživatele není dostupná.
 
 ### Průvodce cloudem
 Udržujte si přehled o budoucích novinkách pro Intune díky [průvodci cloudovou platformou](http://www.microsoft.com/en-us/server-cloud/roadmap/Indevelopment.aspx?TabIndex=0&dropValue=Intune).
 
-### Zastarání služeb
+### Zastaralá služba
 - **Aplikace Intune Viewer.** V souvislosti s vydáním nové aplikace Sdílení RMS odebíráme od srpna 2016 následující aplikace Intune Viewer:
     - Intune AV Viewer
     - Intune PDF Viewer
     - Intune Image Viewer pro Android z Google Play
 
-  Místo použití aplikací Intune Viewer vám doporučujeme používat novou aplikaci Rights Management (Sdílení RMS) pro Android, která pro bezpečné prohlížení firemních souborů na zařízeních s Androidem umožňuje nasadit jednu aplikaci (namísto tří samostatných aplikací). Přečtěte si víc o aplikaci Sdílení RMS (s odkazem na dokumentaci).
+  Místo použití aplikací Intune Viewer vám doporučujeme používat novou aplikaci Rights Management (sdílení RMS) pro Android, která pro bezpečné prohlížení firemních souborů na zařízeních s Androidem umožňuje nasadit jednu aplikaci (namísto tří samostatných aplikací). Přečtěte si víc o aplikaci Sdílení RMS (s odkazem na dokumentaci).
 
 - **Odebrání možnosti cílení pravidel oznámení na vlastní skupiny.**
 Pravidla oznámení Intune definují, komu se budou z Intune odesílat e-mailové výstrahy. V současnosti můžete nakonfigurovat pravidla oznámení pro odesílání e-mailů všem uživatelům zařízení nebo skupině zařízení služby Intune, kterou jste vytvořili. Přibližně od 1. června 2016 se už cílení na uživatelsky vytvořené skupiny nebude podporovat.
@@ -125,6 +131,6 @@ Informace o tom, co bylo vydáno v rámci Intune během posledních šest měsí
 * [Plán cloudové platformy](http://www.microsoft.com/en-us/server-cloud/roadmap/Indevelopment.aspx?TabIndex=0&dropValue=Intune)
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

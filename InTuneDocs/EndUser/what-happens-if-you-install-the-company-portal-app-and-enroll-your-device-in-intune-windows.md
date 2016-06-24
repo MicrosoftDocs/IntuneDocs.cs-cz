@@ -18,7 +18,7 @@ ms.assetid: d65e3452-5bbf-4d26-a06e-401ddcc47f39
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: priyar
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -124,6 +124,8 @@ Když přidáte počítač:
 -   Může do vašeho počítače instalovat aplikace a aktualizace.
 
 -   Může ve vašem počítači vynutit dodržování určitých zásad. Například může vyžadovat, abyste si v počítači nastavili heslo nebo PIN kód, přičemž v případě příliš velkého počtu chybných pokusů o zadání hesla může dojít k zablokování počítače nebo odstranění všech dat z pevného disku počítače.
+
+Pokud máte nějaké otázky, na které byste potřebovali odpověď, a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)

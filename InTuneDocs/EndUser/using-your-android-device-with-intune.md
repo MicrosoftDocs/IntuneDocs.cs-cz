@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/03/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -28,11 +28,11 @@ ms.suite: ems
 
 # Použití zařízení Android s Intune
 
-Tyto kroky použijte pro úlohy, které musíte udělat na zařízení s Androidem, když vaše společnost používá Microsoft Intune:
+Tyto kroky použijte pro úlohy, které musíte udělat na zařízení s Androidem, když vaše společnost používá Microsoft Intune.
 
 ## Instalace aplikace Portál společnosti a registrace ve službě Intune
 
-Informace v této části vám pomůžou s instalací portálu společnosti Intune a registrací zařízení pro zařízení s iOS.
+Informace v této části vám pomůžou s instalací Portálu společnosti Intune a registrací zařízení pro zařízení s iOS.
 
 - [Registrace zařízení v Intune](enroll-your-device-in-Intune-android.md)</br>
 - [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
@@ -43,10 +43,10 @@ Informace v této části vám pomůžou s akcemi, které můžete provést po r
 
 - [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-android.md)</br>
 - [Zašifrování zařízení](encrypt-your-device-android.md)</br>
-- [Nastavení PINu nebo hesla](set-your-pin-or-password-android.md)</br>
+- [Nastavení PIN kódu nebo hesla](set-your-pin-or-password-android.md)</br>
 - [Instalace firemní virtuální privátní sítě (VPN)](install-your-companys-virtual-private-network-VPN-android.md)</br>
 - [Nastavení časového intervalu před zablokováním zařízení](set-the-amount-of-time-before-your-device-is-locked-android.md)</br>
-- [Reset (vymazání) ztraceného nebo odcizeného zařízení](reset-erase-your-lost-or-stolen-device-android.md)</br>
+- [Resetování (vymazání) ztraceného nebo odcizeného zařízení](reset-erase-your-lost-or-stolen-device-android.md)</br>
 - [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-android.md)</br>
 - [Zrušení registrace zařízení v Intune](unenroll-your-device-from-intune-android.md)</br>
 - [Zrušení registrace zařízení, pokud odmítnete podmínky použití](unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)</br>
@@ -63,11 +63,12 @@ Informace v této části vám pomůžou s opravit problémy, se kterými se mů
 - [Odeslání chyb registrace zařízení správci IT](send-enrollment-errors-to-your-it-administrator-android.md)</br>
 - [Zařízení nemá požadovanou minimální verzi operačního systému](device-doesnt-have-the-required-minimum-operating-system-version-android.md)</br>
 - [Zařízení nevyhovuje maximální verzi operačního systému](device-doesnt-comply-with-maximum-operating-system-version-android.md)</br>
-- [Zařízení obsahuje root a nemůže se připojit](your-device-is-rooted-and-you-cant-connect-android.md)
-- [Zařízení nemá požadovaný certifikát](your-device-is-missing-a-required-certificate-android.md)
+- [Zařízení obsahuje root a nemůže se připojit](your-device-is-rooted-and-you-cant-connect-android.md)</br>
+- [Zařízení nemá požadovaný certifikát](your-device-is-missing-a-required-certificate-android.md)</br>
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO1-->
 
 

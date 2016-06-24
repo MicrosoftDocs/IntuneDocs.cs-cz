@@ -18,7 +18,7 @@ ms.assetid: c4801a78-580e-4e3d-beca-0b09b9b2437c
 #ROBOTS:
 #audience:
 #ms.devlang:
-#ms.reviewer: [ALIAS]
+#ms.reviewer: priyar
 #ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -29,7 +29,7 @@ ms.assetid: c4801a78-580e-4e3d-beca-0b09b9b2437c
 
 Pokud zařízení s Windows není v souladu se zásadami pro heslo správce IT, zobrazí se zpráva, která stručně popisuje problém a vysvětluje, co musíte udělat, aby byly splněny požadavky na heslo.
 
-Správce IT může nastavit více než jeden požadavek na heslo. Například heslo musí mít určitý počet znaků a musí být kombinací číslic a písmen atd. Vzhledem k tomu, že může být nastaveno víc požadavků, tyto pokyny mohou vysvětlovat jenom to, jak jde heslo nastavit nebo změnit. Nevysvětlují všechny možné kombinace požadavků. 
+Správce IT může nastavit více než jeden požadavek na heslo. Heslo musí mít například určitý počet znaků a musí být kombinací číslic a písmen atd. Vzhledem k tomu, že může být nastaveno víc požadavků, tyto pokyny mohou vysvětlovat jenom to, jak jde heslo nastavit nebo změnit. Nevysvětlují všechny možné kombinace požadavků. 
 
 Pokud máte potíže při nastavení hesla, které splňuje všechny požadavky na heslo, požádejte o pomoc správce IT.
 
@@ -48,9 +48,11 @@ Pokud máte potíže při nastavení hesla, které splňuje všechny požadavky 
 4. Do pole **Nové heslo** zadejte nové heslo a znovu nové heslo zadejte v poli **Potvrzení hesla**.
 4. Klepněte na **Hotovo**.
 
+Pokud potřebujete pomoc a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+
 ### Související témata
 [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

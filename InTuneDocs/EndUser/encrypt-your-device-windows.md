@@ -6,7 +6,7 @@ description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/03/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 8d022ea7-d9b6-43c4-adcd-4f6421606a7f
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: priyar
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -27,32 +27,21 @@ ms.suite: ems
 
 
 # Šifrování zařízení s Windows
-K zabezpečení dat vaší společnosti nebo školy může správce IT vyžadovat šifrování zařízení s Windows. Pokud se vám zobrazí zpráva oznamující, že musíte používat šifrování, správce IT by vám měl sdělit, které níže uvedené kroky máte použít k zašifrování svého zařízení.
 
-Zařízení můžete zašifrovat přidáním účtu Microsoft nebo povolením nástroje BitLocker.
+K zabezpečení dat vaší společnosti nebo školy může správce IT vyžadovat šifrování zařízení s Windows. Pokud máte Windows Phone a zaregistrovali jste si ho, zařízení se vám automaticky zašifruje, pokud se vyžaduje šifrování.
 
-**Možnost 1: Přidat účet Microsoft**
-
-1.  Vyhledejte a pak spusťte aplikaci **Nastavení počítače**.
-
-2.  Klepněte na **Účty** &gt; **Váš účet** a pak klepněte na **Připojit k účtu Microsoft**..
-
-3.  Postupujte podle zobrazených pokynů.
-
-4.  Podle pokynů v části [Registrace zařízení s Windows v Intune](enroll-your-device-in-intune-windows.md) zkontrolujte, jestli je zařízení zaregistrované v Intune..
-
-**Možnost 2: Povolení nástroje BitLocker**
+Pokud máte desktopové zařízení, zašifrujte ho podle pokynů níže. 
 
 1.  Vyhledejte a pak spusťte aplikaci **Správa nástroje BitLocker**.
 
 2.  Klikněte na **Zapnout nástroj BitLocker** a pak podle zobrazených pokynů zašifrujte jednotlivé jednotky.
 
-3.  Podle pokynů v části [Registrace zařízení s Windows v Intune](enroll-your-device-in-intune-windows.md) zkontrolujte, jestli je zařízení zaregistrované v Intune..
-
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
+[Registrace zařízení se systémem Windows do Intune](enroll-your-device-in-intune-windows.md)</br>
 [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

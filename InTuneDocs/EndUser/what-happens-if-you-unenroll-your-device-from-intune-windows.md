@@ -18,7 +18,7 @@ ms.assetid: 47e03edb-0c57-4e25-8e89-4a1069267b8c
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: priyar
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -37,11 +37,11 @@ Když odinstalujete aplikaci Portál společnosti ze svého zařízení, zruší
 
 ## Windows 10, Windows 8.1, Windows 8, Windows 7, Vista
 
--   Vaše zařízení se už nebude zobrazovat na portálu společnosti a z tohoto portálu už nebudete moct instalovat aplikace.
+-   Vaše zařízení se už nebude zobrazovat na Portálu společnosti a z tohoto portálu už nebudete moct instalovat aplikace.
 
 -   Pokud jste nainstalovali klientský software Intune, bude z počítače odebrán.
 
--   Z počítače se odebere software Intune Endpoint Protection. Pokud je v počítači nainstalovaný jiný software antivirové ochrany a je zakázaný, může být po odebrání softwaru Intune Endpoint Protection znovu povolený. Po odebrání z portálu společnosti byste měli počítač zkontrolovat.
+-   Z počítače se odebere software Intune Endpoint Protection. Pokud je v počítači nainstalovaný jiný software antivirové ochrany a je zakázaný, může být po odebrání softwaru Intune Endpoint Protection znovu povolený. Po odebrání z Portálu společnosti byste měli počítač zkontrolovat.
 
     > [!IMPORTANT] Pokud tento jiný software antivirové ochrany nebude znovu povolený a není nainstalovaný žádný jiný software antivirové ochrany, může být počítač od daného okamžiku ohrožen a zvýší se tím riziko napadení viry a malwarem.
 
@@ -61,7 +61,7 @@ Kromě toho pro Windows 8.1 platí:
 
 ## Windows 10 Mobile, Windows Phone 8.1 nebo Windows Phone 8
 
--   Ze zařízení se odinstaluje aplikace Portál společnosti. To znamená, že už se vaše zařízení nebude zobrazovat na portálu společnosti a nebudete moct instalovat aplikace z aplikace nebo webu Portál společnosti.
+-   Ze zařízení se odinstaluje aplikace Portál společnosti. To znamená, že už se vaše zařízení nebude zobrazovat na Portálu společnosti a nebudete moct instalovat aplikace z aplikace nebo webu Portál společnosti.
 
 -   Nebudete již moci v zařízení používat aplikace a data společnosti.
 
@@ -72,7 +72,7 @@ Kromě toho pro Windows 8.1 platí:
 
 ## Windows RT se systémem Windows 8.1 nebo Windows RT
 
--   Ze zařízení se odinstaluje aplikace Portál společnosti. To znamená, že už se vaše zařízení nebude zobrazovat na portálu společnosti a nebudete z něj moct instalovat aplikace.
+-   Ze zařízení se odinstaluje aplikace Portál společnosti. To znamená, že už se vaše zařízení nebude zobrazovat na Portálu společnosti a nebudete z něj moct instalovat aplikace.
 
 -   Nebudete již moci v zařízení používat aplikace a data společnosti.
 
@@ -86,16 +86,17 @@ Kromě toho pro Windows 8.1 platí:
 
 Při odebrání zařízení se systémem Windows RT dojde k následujícímu:
 
--   Ze zařízení se odinstaluje aplikace Portál společnosti. To znamená, že už se vaše zařízení nebude zobrazovat na portálu společnosti a nebudete z něj moct instalovat aplikace.
+-   Ze zařízení se odinstaluje aplikace Portál společnosti. To znamená, že už se vaše zařízení nebude zobrazovat na Portálu společnosti a nebudete z něj moct instalovat aplikace.
 
 -   Nebudete již moci v zařízení používat aplikace a data společnosti.
 
 -   Nastavení, která byla v zařízení změněna od jeho přidání, například zakázání fotoaparátu/kamery nebo vyžadování určité délky hesla, již nebudou platit.
 
+Pokud máte nějaké otázky, na které byste potřebovali odpověď, a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO1-->
 
 

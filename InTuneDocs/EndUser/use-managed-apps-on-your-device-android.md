@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/11/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: ed10a62c-b026-4ad3-ac41-641933522df2
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: maxles
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -39,7 +39,7 @@ Při přístupu k firemním datům ve spravované aplikaci se zobrazí zpráva p
 ## Jak získám spravované aplikace?
 Spravované aplikace můžete získat několika různými způsoby:
 
--   Při registraci zařízení v Microsoft Intune buď nainstalujete aplikaci z aplikace Portál společnosti nebo webu Portál společnosti, nebo ji na vaše zařízení nainstaluje správce IT. Informace o registraci najdete v tématu [Registrace zařízení v Intune](enroll-your-device-in-Intune-android.md)..
+-   Při registraci zařízení v Microsoft Intune buď nainstalujete aplikaci z aplikace Portál společnosti nebo webu Portál společnosti, nebo ji na vaše zařízení nainstaluje správce IT. Informace o registraci najdete v tématu [Registrace zařízení v Intune](enroll-your-device-in-Intune-android.md).
 
 -   Nainstalujte aplikaci z obchodu Play a potom se přihlaste pomocí svého firemního uživatelského účtu spravovaného službou Intune.
 
@@ -76,12 +76,12 @@ Některé běžné aplikace, které může spravovat vaše oddělení IT:
 
 -   Microsoft Word, Excel, PowerPoint
 
-Další informace o spravovaných aplikacích na vašem zařízení vám poskytne správce IT.
+Další informace o spravovaných aplikacích na vašem zařízení vám poskytne správce IT. Pokud nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 ### Související témata
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

@@ -6,7 +6,7 @@ description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/18/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 6eeec7aa-1b07-4ce3-894c-13e09b89bdd4
 ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -33,11 +33,12 @@ Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svoje 
 Pokud se snažíte zaregistrovat zařízení s Mac OS X, přečtěte si téma [Registrace zařízení s Mac OS X v Intune](enroll-your-device-in-intune-mac-os-x.md).
 
 
+
 **Pro registraci zařízení s iOS:**
 
 1.  Postupujte podle návodu v tématu [Instalace a přihlášení do aplikace Portál společnosti Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md).
 
-2. Na stránce **Nastavení firemního přístupu** klepněte na **Začít**
+2. Na stránce **Nastavení firemního přístupu** klepněte na **Začít**.
 
     ![ios-enroll-comp-access-setup-begin](./media/ios-enroll-1a-comp-access-setup.png) 
 
@@ -45,7 +46,7 @@ Pokud se snažíte zaregistrovat zařízení s Mac OS X, přečtěte si téma [R
 
     ![ios-enroll-why-enroll](./media/ios-enroll-1b-why-enroll.png) 
 
-4. Přečtěte si informace o tom, co správce IT uvidí nebo neuvidí ve vašem zařízení, a klepněte na **Pokračovat**
+4. Přečtěte si informace o tom, co správce IT uvidí nebo neuvidí ve vašem zařízení, a klepněte na **Pokračovat**.
 
     ![ios-enroll-what-it-can-see](./media/ios-enroll-1c-we-care-privacy.png) 
 
@@ -75,7 +76,7 @@ Pokud se snažíte zaregistrovat zařízení s Mac OS X, přečtěte si téma [R
 
     Na obrazovce se objeví zpráva „Registrování zařízení“.
 
-11.  Po zobrazení zprávy s dotazem, zda chcete otevřít stránku v Portálu společnosti, klepněte na **Otevřít**
+11.  Po zobrazení zprávy s dotazem, zda chcete otevřít stránku v Portálu společnosti, klepněte na **Otevřít**.
 
     ![ios-enroll-open-comp-portal](./media/ios-enroll-7-open-cp.png) 
 
@@ -89,13 +90,11 @@ Pokud se snažíte zaregistrovat zařízení s Mac OS X, přečtěte si téma [R
 
 Zařízení je nyní zaregistrováno v Intune a budete přesměrováni zpět do aplikace Portál společnosti.
 
-    
-
-  
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
-[Použití zařízení iOS nebo Mac OS X s Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
+[Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO2-->
 
 

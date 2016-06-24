@@ -16,7 +16,7 @@ ms.assetid: 2c543a02-44a5-4964-8000-a45e3bf2cc69
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: 
+ms.reviewer: vinaybha
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -43,7 +43,7 @@ Pokud chcete používat profily certifikátů .PFX, kromě certifikační autori
     Pokud certifikační autorita používá Windows Server 2008 R2, musíte [instalovat opravu hotfix z KB2483564](http://support.microsoft.com/kb/2483564/).
 
  -  **Počítač, který může komunikovat s certifikační autoritou**: Můžete taky použít přímo počítač certifikační autority.
--  **Microsoft Intune Certificate Connector**: Prostřednictvím konzoly správce Intune můžete stáhnout instalační program konektoru **Certificate Connector** (**ndesconnectorssetup.exe**). Pak můžete soubor **ndesconnectorssetup.exe** spustit na počítači, kde chcete konektor Certificate Connector nainstalovat. V případě profilů certifikátů .PFX nainstalujte Certificate Connector v počítači, který komunikuje s certifikační autoritou.
+-  **Microsoft Intune Certificate Connector**: Prostřednictvím konzoly pro správu Intune můžete stáhnout instalační program konektoru **Certificate Connector** (**ndesconnectorssetup.exe**). Pak můžete soubor **ndesconnectorssetup.exe** spustit na počítači, kde chcete konektor Certificate Connector nainstalovat. V případě profilů certifikátů .PFX nainstalujte Certificate Connector v počítači, který komunikuje s certifikační autoritou.
 -  **Proxy server webových aplikací** (volitelné): Jako proxy server služby Proxy webových aplikací (WAP) můžete použít server se systémem Windows Server 2012 R2 nebo novějším. Tato konfigurace:
     -  Umožňuje zařízením získat certifikáty pomocí připojení k internetu.
     -  Je doporučeným zabezpečením v případě, že se zařízení připojují prostřednictvím internetu za účelem příjmu a obnovení certifikátů.
@@ -85,7 +85,7 @@ V této úloze budete publikovat šablony certifikátu.
         > [!IMPORTANT] V případě šablon certifikátů pro iOS a Mac OS X na kartě **Rozšíření** upravte **Použití klíče** a ujistěte se, že není vybraná možnost **Podpis je důkazem původu**.
 
 
-3.  Zkontrolujte **Období platnosti** na kartě **Obecné** šablony. Ve výchozím nastavení Intune používá hodnotu nakonfigurovanou v šabloně. Máte ale možnost konfigurovat, aby certifikační autorita žadateli umožňovala určit jinou hodnotu, kterou pak můžete nastavit v konzole správce Intune. Pokud chcete vždy používat hodnotu v šabloně, zbývající část tohoto kroku přeskočte.
+3.  Zkontrolujte **Období platnosti** na kartě **Obecné** šablony. Ve výchozím nastavení Intune používá hodnotu nakonfigurovanou v šabloně. Máte ale možnost konfigurovat, aby certifikační autorita žadateli umožňovala určit jinou hodnotu, kterou pak můžete nastavit v konzole pro správu Intune. Pokud chcete vždy používat hodnotu v šabloně, zbývající část tohoto kroku přeskočte.
 
     > [!IMPORTANT] Platformy iOS a Mac OS X vždycky používají hodnotu nastavenou v šabloně bez ohledu na ostatní konfigurace, které provedete.
 
@@ -105,7 +105,7 @@ V této úloze budete publikovat šablony certifikátu.
 
 5.  Na počítači certifikační autority (CA) zkontrolujte, že má počítač, který je hostitelem Certificate Connectoru, oprávnění k registraci, aby měl přístup k šabloně použité při vytváření profilu .PFX. Nastavte tato oprávnění na kartě **Zabezpečení** vlastností počítače certifikační autority.
 
-### Úloha 4 – Povolení, instalace a konfigurace Intune Certificate Connectoru
+### Úloha 2 – Povolení, instalace a konfigurace Intune Certificate Connectoru
 V této úloze:
 
 Stažení, instalace a konfigurace Certificate Connectoru
@@ -140,7 +140,7 @@ Stažení, instalace a konfigurace Certificate Connectoru
 
 5.  V uživatelském rozhraní **Certificate Connectoru** :
 
-    Klikněte na **Přihlásit** a zadejte své přihlašovací údaje správce služby Intune nebo přihlašovací údaje správce tenanta s oprávněním pro globální správu.
+    Klikněte na **Přihlásit** a zadejte své přihlašovací údaje správce služby Intune nebo přihlašovací údaje správce klienta s oprávněním pro globální správu.
 
   <!--  If your organization uses a proxy server and the proxy is needed for the NDES server to access the Internet, click **Use proxy server** and then provide the proxy server name, port, and account credentials to connect.-->
 
@@ -158,6 +158,6 @@ Pokud chcete ověřit, jestli je služba spuštěná, spusťte prohlížeč a za
 Teď jste připravení konfigurovat profily certifikátů podle návodu v tématu [Konfigurace profilů certifikátů](Configure-Intune-certificate-profiles.md).
 
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

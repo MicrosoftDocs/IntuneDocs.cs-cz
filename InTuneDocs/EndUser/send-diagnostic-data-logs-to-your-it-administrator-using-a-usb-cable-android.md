@@ -18,7 +18,7 @@ ms.assetid: c46775c2-9d2a-4a88-89f0-4104a462b898
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -34,13 +34,15 @@ Pokud nepoužíváte mobilní zařízení, ale počítač, a chcete odeslat prot
 
 2.  Připojte zařízení s Androidem k počítači pomocí kabelu USB.
 
-3.  V počítači vyhledejte adresář, který má název vašeho telefonu. V tomto adresáři vyhledejte složku &lt;zařízení s Androidem&gt;\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\.
+3.  V počítači vyhledejte adresář, který má název vašeho telefonu. V tomto adresáři vyhledejte složku &lt;zařízení s Androidem&gt;\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\.\.
 
 4.  Všechny soubory připojte k e-mailu a odešlete je správci IT.
+
+Pokud nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

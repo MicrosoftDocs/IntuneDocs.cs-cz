@@ -18,7 +18,7 @@ ms.assetid: 01247881-452c-4da8-93ca-66b5e65c5317
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre 
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -28,8 +28,10 @@ ms.suite: ems
 # Počkejte na vyhodnocení zařízení
 Pořád ještě vyhodnocujeme, jestli vaše zařízení dodržuje zásady. Počkejte několik minut, než se kontrola dodržování zásad dokončí.
 
+Pokud potřebujete pomoc a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO1-->
 
 

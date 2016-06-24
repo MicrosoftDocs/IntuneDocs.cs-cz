@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/03/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 81f8a990-d172-47f4-91b4-cb49652accf6
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -31,10 +31,10 @@ Vaše zařízení bylo shledané nekompatibilním s jednou nebo více zásad spo
 
 Jestli chcete tento problém vyřešit, počkejte několik minut a potom klepněte na **Kontrola dodržování předpisů**.
 
-Pokud problém přetrvá, kontaktujte správce IT.
+Pokud problém přetrvá, kontaktujte správce IT. Pokud nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

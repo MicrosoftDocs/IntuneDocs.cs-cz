@@ -6,7 +6,7 @@ description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/18/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 443c6de7-5187-4dc4-b844-6085a0c659bd
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: priyar
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -27,7 +27,7 @@ ms.suite: ems
 
 
 # Ruční synchronizace zařízení
-Pokud instalace aplikací trvá příliš dlouho, použijte následující pokyny k ruční synchronizaci zařízení s Windows, která vám může pomoci instalaci zrychlit. Použijte postup odpovídající typu vašeho zařízení:
+Pokud instalace aplikací trvá příliš dlouho, použijte následující pokyny k ruční synchronizaci zařízení s Windows, která vám může pomoci instalaci zrychlit. Uvedené jsou pouze podporované verze. Použijte odkaz odpovídající používanému typu zařízení výše v části V tomto článku:
 
 * [Windows 10 Mobile](#windows-10-mobile)
 * [Windows 10 Desktop](#windows-10-desktop)
@@ -37,11 +37,11 @@ Pokud instalace aplikací trvá příliš dlouho, použijte následující pokyn
 ## Windows 10 Mobile
 Chcete-li ručně synchronizovat mobilní zařízení s Windows 10 pro urychlení pomalé instalace aplikací:
 
-1. Přejděte na **Všechny aplikace** > **Nastavení** > **Účty**..
+1. Přejděte na **Všechny aplikace** > **Nastavení** > **Účty**.
 
     ![win10m-sync-1-settings-accounts](./media/win10m-sync-1-settings-accounts.png)
     
-2. Klepněte na **Přístup do práce**..
+2. Klepněte na **Přístup do práce**.
 
     ![win10m-sync-2-work-access](./media/win10m-sync-2-work-access.png)
     
@@ -58,15 +58,15 @@ Chcete-li ručně synchronizovat mobilní zařízení s Windows 10 pro urychlen�
 ## Stolní počítač s Windows 10
 Chcete-li provést ruční synchronizaci stolního počítače s Windows 10 pro urychlení pomalé instalace aplikací:
 
-1. Vyberte tlačítko **Start**, viz následující příklad, a pak vyberte **Nastavení**..
+1. Vyberte tlačítko **Start**, viz následující příklad, a pak vyberte **Nastavení**.
 
     ![win10pc-sync-1-start-button](./media/win10pc-sync-1-start-button.png)
     
-2. Na stránce **Nastavení** vyberte **Účty**..
+2. Na stránce **Nastavení** vyberte **Účty**.
  
     ![win10pc-sync-2-settings-accounts](./media/win10pc-sync-2-settings-accounts.png)
     
-3. Na stránce **Účty** vyberte **Přístup do práce**..
+3. Na stránce **Účty** vyberte **Přístup do práce**.
     
     ![win10pc-sync-3-work-access](./media/win10pc-sync-3-work-access.png)
     
@@ -83,7 +83,7 @@ Chcete-li provést ruční synchronizaci stolního počítače s Windows 10 pro 
 ## Windows Phone 8.1
 Chcete-li provést ruční synchronizaci mobilního zařízení s Windows 8.1 pro urychlení pomalé instalace aplikací:
 
-1. Přejděte na **Všechny aplikace** > **Nastavení** > **Pracoviště**..
+1. Přejděte na **Všechny aplikace** > **Nastavení** > **Pracoviště**.
 
     ![wp81-1-sync-settings-workplace](./media/wp81-1-sync-settings-workplace.png)
     
@@ -102,6 +102,6 @@ Chcete-li provést ruční synchronizaci mobilního zařízení s Windows 8.1 pr
 [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

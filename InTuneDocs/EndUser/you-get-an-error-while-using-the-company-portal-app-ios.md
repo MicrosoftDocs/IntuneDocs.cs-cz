@@ -6,7 +6,7 @@ description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/04/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 09cd4ed6-1ce4-4530-9753-59808f01c6d7
 ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -34,12 +34,12 @@ Pokud při použití aplikace Portál společnosti v zařízení s iOS dojde k c
 
 -   Klepnutím na **Odeslat diagnostickou zprávu** na obrazovce **O aplikaci** v aplikaci Portál společnosti
 
--   Tím, že zatřesete zařízením se spuštěnou aplikací Portál společnosti a po zobrazení diagnostické výstrahy klepnete na **E-mail** Pokud zatřesete zařízením, ale žádná výstraha se nezobrazí, otevřete **Nastavení** &gt; **Portál společnosti** a zkontrolujte, jestli je zapnutá možnost **Gesto zatřesením**.
+-   Tím, že zatřesete zařízením se spuštěnou aplikací Portál společnosti a po zobrazení diagnostické výstrahy klepnete na **E-mail**. Pokud zatřesete zařízením, ale žádná výstraha se nezobrazí, otevřete **Nastavení** &gt; **Portál společnosti** a zkontrolujte, jestli je zapnutá možnost **Gesto zatřesením**.
 
 
 ### Související témata
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

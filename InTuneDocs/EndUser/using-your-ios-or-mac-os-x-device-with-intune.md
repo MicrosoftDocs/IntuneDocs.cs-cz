@@ -6,7 +6,7 @@ description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/03/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -15,10 +15,10 @@ ms.assetid: 3d648819-b866-412b-bd19-ac4505eb5eaf
 
 # optional metadata
 
-ROBOTS: noindex
+ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -27,11 +27,11 @@ ms.suite: ems
 
 # Using your iOS or Mac OS X device with Intune
 
-Tyto kroky použijte pro úlohy, které musíte udělat na zařízení s iOS nebo Mac OS X, když vaše společnost používá Microsoft Intune:
+Tyto kroky použijte pro úlohy, které musíte udělat na zařízení s iOS nebo Mac OS X, když vaše společnost používá Microsoft Intune.
 
 ## Instalace aplikace Portál společnosti a registrace ve službě Intune
 
-Informace v této části vám pomůžou s instalací portálu společnosti Intune a registrací zařízení pro zařízení s iOS.
+Informace v této části vám pomůžou s instalací Portálu společnosti Intune a registrací zařízení pro zařízení s iOS.
 
 - [Instalace a přihlášení do aplikace Portál společnosti Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md)</br>
 - [Registrace zařízení se systémem iOS do Intune](enroll-your-device-in-intune-ios.md)</br>
@@ -43,11 +43,12 @@ Informace v této části vám pomůžou s instalací portálu společnosti Intu
 Informace v této části vám pomůžou s akcemi, které můžete provést po registraci zařízení s iOS v Intune.
 
 - [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-ios.md)</br>
-- [Reset (vymazání) ztraceného nebo odcizeného zařízení](reset-erase-your-lost-or-stolen-device-ios.md)</br>
+- [Nastavení nebo změna vašeho přístupového kódu](set-or-change-your-passcode-ios.md)</br>
+- [Resetování (vymazání) ztraceného nebo odcizeného zařízení](reset-erase-your-lost-or-stolen-device-ios.md)</br>
 - [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-ios.md)</br>
 - [Zrušení registrace zařízení v Intune](unenroll-your-device-from-intune-ios.md)</br>
 - [Co se stane, když zrušíte registraci zařízení v Intune?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)</br>
-- [Co se stane, když resetujete zařízení pomocí portálu společnosti?](what-happens-if-you-reset-your-device-using-the-company-portal-ios.md)</br>
+- [Co se stane, když resetujete zařízení pomocí Portálu společnosti?](what-happens-if-you-reset-your-device-using-the-company-portal-ios.md)</br>
 - [Ruční synchronizace zařízení](sync-your-device-manually-ios.md)
 
 ## Oprava problémů se zařízením
@@ -65,6 +66,6 @@ Informace v této části vám pomůžou s opravit problémy, se kterými se mů
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

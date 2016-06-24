@@ -18,7 +18,7 @@ ms.assetid: 0321062d-1363-4ac3-81d4-5405f3b79481
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -44,9 +44,11 @@ Pokud je vaše zařízení nastavené jenom tak, aby mohlo přijímat firemní e
 
 Návod ke zrušení registrace najdete v tématu [Zrušení registrace zařízení v Intune pomocí aplikace Portál společnosti](unenroll-your-device-from-intune-android.md).
 
+Pokud máte nějaké otázky, na které byste potřebovali odpověď, a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+
 ### Související témata
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO1-->
 
 

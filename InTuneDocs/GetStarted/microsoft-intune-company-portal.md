@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Firemní portál Microsoft Intune
 
-Před nastavením [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)] si přečtěte toto téma a další požadavky uvedené v tématu [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md).
+Před nastavením Intune si přečtěte toto téma a další požadavky uvedené v tématu [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md).
 
 Portál společnosti Intune je nástroj, který poskytuje uživatelům přístup k firemním datům a aplikacím. Portál společnosti je dostupný ve dvou formách:
 
@@ -58,6 +58,6 @@ Než bude moct uživatel přistupovat k Portálu společnosti, musí mít jeho �
 [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO2-->
 
 

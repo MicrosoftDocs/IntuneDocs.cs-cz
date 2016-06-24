@@ -18,7 +18,7 @@ ms.assetid: abc57093-7351-408f-9f41-a30877f96f73
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: karanda
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -48,16 +48,20 @@ Intune podporuje vytváření profilů VPN, které používají následující t
 
 
 
-Typ připojení |iOS a Mac OS X  |Android  |Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1  |Windows 10 Desktop a Mobile |
----------|---------|---------|---------|---------|---------
-Cisco AnyConnect |Ano |Ano   |Ne    |     Ne    |Ne  |Ne    | Ano, (OMA-URI, jenom Mobile)|     
-Pulse Secure |Ano  |Ano |Ano   |Ne  |Ano  |Ano| Ano|        
-F5 Edge Client |Ano |Ano |Ano |Ne  |Ano  |   Ano |  Ano|   
-Dell SonicWALL Mobile Connect |Ano |Ano |Ano |Ne  |Ano |Ano |Ano|         
-CheckPoint Mobile VPN |Ano |Ano |Ano |Ano |Ano|Ano|Ano|
+Typ připojení |iOS a Mac OS X  |Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop a Mobile |
+----------------|------------------|-------|-----------|----------|--------------|-----------------|----------------------|
+Cisco AnyConnect|Ano |Ano   |Ne    |     Ne    |Ne  |Ne    | Ano, (OMA-URI, jenom Mobile)|     
+Pulse Secure|Ano  |Ano |Ano   |Ne  |Ano  |Ano| Ano|        
+F5 Edge Client|Ano |Ano |Ano |Ne  |Ano  |   Ano |  Ano|   
+Dell SonicWALL Mobile Connect|Ano |Ano |Ano |Ne  |Ano |Ano |Ano|         
+CheckPoint Mobile VPN|Ano |Ano |Ano |Ano |Ano|Ano|Ano|
+Protokol SSL společnosti Microsoft (SSTP)|Ne |Ne |Ne |Ne |Ne|Ne|VPNv1 OMA-URI*|
+Automaticky pomocí technologie Microsoft|Ne |Ne |Ne |Ne |Ne|Ano (OMA-URI)|Ano|
+IKEv2|Vlastní profil iOS |Ne |Ne |Ne |Ne|Ano (OMA-URI)|Ano|
+PPTP|Vlastní profil iOS |Ne |Ne |Ne |Ne|Ne|Ano|
+L2TP|Vlastní profil iOS |Ne |Ne |Ne |Ne|Ano (OMA-URI)|Ano|
 
-
-
+\* Bez dalších nastavení, která jsou jinak k dispozici pro Windows 10
 
 > [!IMPORTANT] Před použitím profilů VPN nasazených do zařízení je nutné nainstalovat příslušnou aplikaci VPN pro profil. Informace z tématu [Nasazení aplikací v Microsoft Intune](deploy-apps-in-microsoft-intune.md) vám můžou pomoct s nasazením správné aplikace pomocí Intune.  
 
@@ -81,7 +85,7 @@ Uživatel se ověřuje na serveru sítě VPN zadáním uživatelského jména a 
 
 ## Vytvoření profilu sítě VPN
 
-1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com)klikněte na **Zásady > Přidat zásadu**..
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Zásady > Přidat zásadu**.
 2. Vyberte šablonu pro nové zásady rozšířením příslušného typu zařízení a potom vyberte profil sítě VPN pro toto zařízení:
     * **Profil VPN (Android 4 a novější)**
     * **Profil VPN (iOS 7.1 a novější)**
@@ -102,15 +106,15 @@ Název nastavení  |Další informace
 **Typ připojení**     |  Vyberte jeden z následujících typů připojení pro použití s profilem VPN: **Cisco AnyConnect** (není k dispozici pro Windows 8.1 nebo Windows Phone 8.1), **Pulse Secure**, **F5 Edge Client**, **Dell SonicWALL Mobile Connect**, **CheckPoint Mobile VPN**.
 **Popis serveru VPN**     | Zadejte popis serveru VPN, ke kterému se budou zařízení připojovat. **Příklad:** Contoso VPN Server. Pokud je typ připojení **F5 Edge Client**, použijte pro zadání seznamu popisů a IP adres serveru pole **Seznam serverů**.
 **IP adresa nebo plně kvalifikovaný název domény (FQDN) serveru**    |Zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se bude zařízení připojovat. **Příklady:** 192.168.1.1, vpn.contoso.com.  Pokud je typ připojení **F5 Edge Client**, použijte pro zadání seznamu popisů a IP adres serveru pole **Seznam serverů**.         |         
-**Seznam serverů**     |Kliknutím na **Přidat** přidejte nový server sítě VPN určený pro připojení k síti VPN. Můžete taky určit, který server bude pro připojení výchozí. Tato možnost se zobrazí, jenom když je typ připojení **F5 Edge Client**..         
+**Seznam serverů**     |Zvolením možnosti **Přidat** přidejte nový server sítě VPN určený pro připojení k síti VPN. Můžete taky určit, který server bude pro připojení výchozí. Tato možnost se zobrazí, jenom když je typ připojení **F5 Edge Client**.         
 **Odesílat veškerý přenos v síti prostřednictvím připojení VPN**     |Pokud vyberete tuto možnost, všechny síťové přenosy se budou odesílat prostřednictvím připojení VPN. Pokud tuto možnost nevyberete, klient bude dynamicky vyjednávat trasy pro dělené tunelové propojení při připojování k serveru sítě VPN třetí strany. Prostřednictvím tunelu VPN se odesílají pouze připojení k firemní síti. Tunelové propojení VPN se nepoužívá při připojení k prostředkům na Internetu.
 **Metoda ověření**| Vyberte metodu ověřování používanou pro připojení VPN: **Certifikáty** nebo **Uživatelské jméno a heslo**. (Nastavení Uživatelské jméno a heslo není dostupné, pokud je typ připojení Cisco AnyConnect.) Možnost **Metoda ověřování** není dostupná pro Windows 8.1
 **Pamatovat přihlašovací údaje uživatele při každém přihlašování**|Výběrem této možnosti zajistíte, že se přihlašovací údaje uživatele uloží, takže je uživatel nebude muset zadávat při každém navázání připojení.
-**Vybrat klientský certifikát pro ověřování klientů (certifikát identity)**|Vyberte certifikát klienta SCEP, který jste dříve vytvořili a který se použije k ověření připojení VPN. Další informace o použití profilů certifikátů v Intune najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů v Microsoft Intune](secure-resource-access-with-certificate-profiles.md) Tato možnost se zobrazí jenom v případě, že jste vybrali metodu ověřování **Certifikáty**.
-**Role**| Zadejte název role uživatele, který má přístup k tomuto připojení. Role uživatele definuje osobní nastavení, možnosti a povolí nebo zakáže určité funkce přístupu. Tato možnost se zobrazí jenom v případě, že typ připojení je **Pulse Secure**..
-**Sféra**|Zadejte název sféry ověření, kterou chcete použít. Sféra ověření je seskupení prostředků ověření používaných typem připojení Pulse Secure. Tato možnost se zobrazí jenom v případě, že typ připojení je **Pulse Secure**..
-**Doména nebo skupina přihlášení**|Zadejte název domény nebo skupiny přihlášení, k níž se chcete připojit. Tato možnost se zobrazí jenom v případě, že se je typ připojení **Dell SonicWALL Mobile Connect**..
-**Otisk prstu**|Zadejte řetězec, například Kód otisku prstu Contoso, který bude použit k ověření, že je možné serveru VPN důvěřovat. Otisk prstu se může odeslat klientovi, aby věděl, že může důvěřovat jakémukoli serveru, který při připojování nabízí ten samý otisk. Pokud zařízení ještě otisk prstu nemá, vyzve uživatele, aby důvěřoval serveru VPN, ke kterému se připojuje. Současně přitom zobrazuje otisk prstu (uživatel ho ručně ověří a klikne na možnost **důvěřovat** připojení). Tato možnost se zobrazuje jenom v případě, že je typ připojení **Kontrolní bod – mobilní síť VPN**..
+**Vybrat klientský certifikát pro ověřování klientů (certifikát identity)**|Vyberte certifikát klienta SCEP, který jste dříve vytvořili a který se použije k ověření připojení VPN. Další informace o použití profilů certifikátů v Intune najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů v Microsoft Intune](secure-resource-access-with-certificate-profiles.md). Tato možnost se zobrazí jenom v případě, že je metoda ověřování **Certifikáty**.
+**Role**| Zadejte název role uživatele, který má přístup k tomuto připojení. Role uživatele definuje osobní nastavení, možnosti a povolí nebo zakáže určité funkce přístupu. Tato možnost se zobrazí jenom v případě, že typ připojení je **Pulse Secure**.
+**Sféra**|Zadejte název sféry ověření, kterou chcete použít. Sféra ověření je seskupení prostředků ověření používaných typem připojení Pulse Secure. Tato možnost se zobrazí jenom v případě, že typ připojení je **Pulse Secure**.
+**Doména nebo skupina přihlášení**|Zadejte název domény nebo skupiny přihlášení, k níž se chcete připojit. Tato možnost se zobrazí jenom v případě, že se je typ připojení **Dell SonicWALL Mobile Connect**.
+**Otisk prstu**|Zadejte řetězec, například Kód otisku prstu Contoso, který bude použit k ověření, že je možné serveru VPN důvěřovat. Otisk prstu se může odeslat klientovi, aby věděl, že může důvěřovat jakémukoli serveru, který při připojování nabízí ten samý otisk. Pokud zařízení ještě otisk prstu nemá, vyzve uživatele, aby důvěřoval serveru VPN, ke kterému se připojuje. Současně přitom zobrazuje otisk prstu (uživatel ho ručně ověří a rozhodne se **důvěřovat** připojení). Tato možnost se zobrazuje jenom v případě, že je typ připojení **Kontrolní bod – mobilní síť VPN**.
 **VPN na aplikaci**|Tuto možnost vyberte, pokud chcete toto připojení VPN přidružit k aplikaci pro iOS nebo Mac OS X tak, aby se připojení otevřelo při spuštění aplikace. Profil VPN je možné přidružit k aplikaci při nasazení softwaru. Další informace najdete v tématu [Nasazení aplikací v Microsoft Intune](deploy-apps-in-microsoft-intune.md)
 **Automaticky zjišťovat nastavení proxy** (jenom iOS, Mac OS X, Windows 8.1 a Windows Phone 8.1)|Pokud VPN server vyžaduje pro připojení proxy server, zadejte, určete, jestli mají zařízení automaticky zjišťovat nastavení připojení. Další informace najdete v dokumentaci k Windows Serveru.
 **Použít automatický konfigurační skript** (jenom iOS, Mac OS X, Windows 8.1 a Windows Phone 8.1)|Pokud server VPN vyžaduje pro připojení proxy server, určete, jestli chcete k definování nastavení použít automatický konfigurační skript, a pak zadejte adresu URL souboru, který obsahuje nastavení. Další informace najdete v dokumentaci k Windows Serveru.
@@ -131,6 +135,8 @@ Název nastavení  |Další informace
 **Přidružené aplikace**     | Můžete zadat seznam aplikací, které budou automaticky používat připojení k síti VPN. Typ aplikace bude určovat identifikátor aplikace. Pro univerzální aplikace zadejte identitu aplikace (PFN) a pro desktopové aplikace zadejte cestu k souboru aplikace.          
 
 
+> [!IMPORTANT] Doporučujeme zabezpečit všechny seznamy aplikací, které zkompilujete pro použití v konfiguraci sítě VPN pro jednotlivé aplikace. Pokud seznam upraví neoprávněný uživatel a vy seznam naimportujete do seznamu aplikací sítě VPN pro jednotlivé aplikace, potenciálně tím autorizujete přístup k síti VPN pro aplikace, které by přístup mít neměly. Jedním ze způsobů, jak zabezpečit seznamy aplikací, je použít seznam řízení přístupu (ACL).
+
 Tady je příklad, kdy můžete použít nastavení podnikových hranic. Když chcete povolit VPN jenom pro vzdálenou plochu, vytvoříte pravidlo pro provoz sítě, které umožňuje přenos pro protokol číslo 27 na externím portu 3996. Žádný jiný provoz nebude síť VPN používat.
 
 Definování tras v podnikových hranicích je užitečné, když typ připojení VPN neumožňuje určit, jak se provoz zpracovává při děleném tunelovém propojení. V takovém případě použijte **Trasy** k výpisu tras, které budou používat síť VPN.
@@ -141,21 +147,24 @@ Nová zásada se zobrazí v uzlu **Zásady konfigurace** pracovního prostoru **
 
 ## Nasazení zásady
 
-1.  V pracovním prostoru **Zásady** vyberte zásadu, kterou chcete nasadit, a potom klikněte na **Spravovat nasazení**..
+1.  V pracovním prostoru **Zásady** vyberte zásadu, kterou chcete nasadit, a potom vyberte **Spravovat nasazení**.
 
 2.  V dialogovém okně **Spravovat nasazení** :
 
-    -   **Pokud chcete zásadu nasadit** – vyberte jednu nebo víc skupin, do kterých chcete zásady nasadit, a potom klikněte na **Přidat** &gt; **OK**..
+    -   **Pokud chcete zásadu nasadit** – vyberte jednu nebo víc skupin, do kterých chcete zásady nasadit, a pak zvolte **Přidat** &gt; **OK**.
 
-    -   **Pokud chcete dialogové okno zavřít bez nasazení zásady** – klikněte na **Zrušit**..
+    -   **Pokud chcete dialogové okno zavřít bez nasazení zásady** – zvolte **Zrušit**.
 
 
 Po úspěšné nasazení se uživatelům zobrazí název připojení VPN, který jste zadali v seznamu připojení VPN na jejich zařízeních.
 
 Shrnutí stavu a výstrahy na stránce **Přehled** v pracovním prostoru **Zásady** identifikují problémy se zásadami, které vyžadují vaši pozornost. Kromě toho se v pracovním prostoru Řídicí panel zobrazí shrnutí stavu.
 
+### Související témata
+[Vlastní konfigurace pro profily VPN](Custom-configurations-for-VPN-profiles.md)
+[VPN pro aplikaci pro Android pomocí Pulse Secure](per-app-vpn-for-android-pulse-secure.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

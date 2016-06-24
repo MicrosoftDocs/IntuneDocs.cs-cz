@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/10/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 5f365c7d-5889-4072-a994-613ce3c26ce4
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -30,16 +30,18 @@ ms.suite: ems
 
 Aby vaše data na zařízení s Androidem byla ve větším bezpečí, správce IT může nastavit zásady, které vyžadují nastavení doby, po kterou může být zařízení neaktivní před automatickým zamčením. Pomocí těchto kroků můžete nastavte dobu, než se zařízení zamkne.
  
-1.  V **Nastavení zařízení** klikněte na **Zabezpečení** &gt; **Automatické uzamčení** (na některých zařízeních se zobrazuje jako **Uzamknout telefon po**).
+1.  V **Nastavení** zařízení klikněte na **Zabezpečení** &gt; **Automatické uzamčení** (na některých zařízeních se zobrazuje jako **Uzamknout telefon po**).
 
 2.  Zadejte hodnotu časového limitu hesla.
 
-3.  Podle pokynů v části [Registrace zařízení v Intune](enroll-your-device-in-Intune-android.md) zkontrolujte, jestli je zařízení zaregistrované v Intune..
+3.  Podle pokynů v části [Registrace zařízení v Intune](enroll-your-device-in-Intune-android.md) zkontrolujte, jestli je zařízení zaregistrované v Intune.
+
+Pokud potřebujete pomoc a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

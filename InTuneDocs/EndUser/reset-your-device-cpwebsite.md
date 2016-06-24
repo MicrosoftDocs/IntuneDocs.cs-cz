@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Reset zařízení z webu portálu společnosti | Microsoft Intune
+title: Resetování zařízení z webu Portál společnosti | Microsoft Intune
 description:
 keywords:
 author: Staciebarker
@@ -18,7 +18,7 @@ ms.assetid: d3182a85-328b-45b4-bf7a-9f6249984641
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mamoriss
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -26,26 +26,28 @@ ms.suite: ems
 ---
 
 
-# Reset zařízení z webu portálu společnosti
+# Resetování zařízení z webu Portál společnosti
 
-V případě ztráty nebo odcizení zařízení může být vhodné restovat jeho tovární nastavení za účelem zabránění neoprávněného přístupu k vašim údajům. Můžete taky vzdáleně resetovat zařízení pomocí [webu portálu společnosti](http://portal.manage.microsoft.com) Web portálu společnosti je webová stránka, kterou můžete použít ke správě počítačů a zařízení, které jste registrovali v Intune, a k provádění většiny úloh, které můžete provádět pomocí aplikace Portál společnosti.
+V případě ztráty nebo odcizení zařízení může být vhodné restovat jeho tovární nastavení za účelem zabránění neoprávněného přístupu k vašim údajům. Můžete taky vzdáleně resetovat zařízení pomocí [webu Portál společnosti](http://portal.manage.microsoft.com). Web Portál společnosti je webová stránka, kterou můžete použít ke správě počítačů a zařízení, které jste registrovali v Intune, a k provádění většiny úloh, které můžete provádět pomocí aplikace Portál společnosti.
 
-Pokud zařízení resetujete, nebude již uvedené na portálu společnosti a bude restované do výchozího továrního nastavení. 
+Pokud zařízení resetujete, nebude již uvedené na Portálu společnosti a bude restované do výchozího továrního nastavení. 
 
 Resetování zařízení:
 
-1.  Otevřete [web portálu společnosti](http://portal.manage.microsoft.com) a klepněte na zařízení, jehož název chcete změnit.
+1.  Otevřete [web Portál společnosti](http://portal.manage.microsoft.com) a klepněte na zařízení, jehož název chcete změnit.
 
-2.  Klepněte na **Resetovat**..
+2.  Klepněte na **Resetovat**.
 
     ![reset-device](./media//iwp-1-tap-reset-passcode.png)
 
-Zařízení bylo resetované.
+Zařízení se resetovalo.
+
+Pokud potřebujete pomoc a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Použití webu Portál společnosti Intune](using-the-intune-company-portal-website.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

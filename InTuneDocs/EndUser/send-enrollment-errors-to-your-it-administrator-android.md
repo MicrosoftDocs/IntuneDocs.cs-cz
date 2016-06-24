@@ -18,7 +18,7 @@ ms.assetid: d7c871b8-e5d8-4912-b87f-7e6bc59897be
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Odeslání chyb registrace zařízení správci IT
 
-Pokud při pokusu o registraci zařízení s Androidem do služby Intune dojde k chybě, můžete to zkusit znovu klepnutím na **Opakovat** nebo poslat informace o chybě e-mailem správci IT klepnutím na **Odeslat informace**.. 
+Pokud při pokusu o registraci zařízení s Androidem do služby Intune dojde k chybě, můžete to zkusit znovu klepnutím na **Opakovat** nebo poslat informace o chybě e-mailem správci IT klepnutím na **Odeslat informace**. 
 
 Automaticky se vytvoří e-mail adresovaný vašemu správci IT a obsahující protokoly, které správce IT potřebuje k tomu, aby vám mohl pomoct řešit problémy s vaším zařízením.
 
@@ -40,6 +40,6 @@ Existují různé způsoby odeslání datových protokolů zařízení správci 
 ### Související témata
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

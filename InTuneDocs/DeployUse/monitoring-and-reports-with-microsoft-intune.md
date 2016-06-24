@@ -18,7 +18,7 @@ ms.assetid: 0f7dc155-cb8e-477b-ba02-2623194a9575
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: pbala
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -33,10 +33,10 @@ Jako správce IT potřebujete monitorovat stav zařízení ve vaší organizaci.
 
 -   **[Výstrahy](get-notified-by-microsoft-intune-alerts.md)** pomáhají s monitorováním stavu zařízení, která spravuje Intune (včetně stavu ochrany koncových bodů a upozornění zajišťujících výstrahy na malware a upozornění souvisejících s nedostatkem místa na disku nebo připojením k síti).
 
--   Zařízení a počítače spravované Intune vrací podrobné informace o svých vlastnostech a nainstalovaném softwaru.  Intune nabízí nástroje a sestavy sloužící ke zkoumání a zobrazení těchto dat. Podrobnosti najdete v tématu [Seznámení se zařízeními s inventářem v Microsoft Intune](understand-your-devices-with-inventory-in-microsoft-intune.md)..
+-   Zařízení a počítače spravované Intune vrací podrobné informace o svých vlastnostech a nainstalovaném softwaru.  Intune nabízí nástroje a sestavy sloužící ke zkoumání a zobrazení těchto dat. Podrobnosti najdete v tématu [Seznámení se zařízeními s inventářem v Microsoft Intune](understand-your-devices-with-inventory-in-microsoft-intune.md).
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

@@ -18,7 +18,7 @@ ms.assetid: 8d3a40f5-99e9-48dc-9706-f7a3a23e5704
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -28,18 +28,18 @@ ms.suite: ems
 
 # Váš počítač je už zaregistrovaný.
 
-Pokud obdržíte chybu, že váš počítač je už zaregistrovaný, znamená to, že váš počítač již byl přidán na portál společnosti, ale zatím není propojený s vaším uživatelským účtem. Pomocí následujícího postupu propojíte počítač se svým uživatelským účtem a dokončíte proces.
+Pokud obdržíte chybu, že váš počítač je už zaregistrovaný, znamená to, že váš počítač již byl přidán na Portál společnosti, ale zatím není propojený s vaším uživatelským účtem. Pomocí následujícího postupu propojíte počítač se svým uživatelským účtem a dokončíte proces.
 
 Postup propojení počítače:
 
 1.  V počítači, který chcete propojit se svým účtem, klikněte na **Start** a pak na **Microsoft Intune Center**.
 
-2.  Otevřete portál společnosti.
+2.  Otevřete Portál společnosti.
 
 3.  Postupujte podle pokynů k propojení počítače s uživatelským účtem.
 
+Pokud potřebujete pomoc a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

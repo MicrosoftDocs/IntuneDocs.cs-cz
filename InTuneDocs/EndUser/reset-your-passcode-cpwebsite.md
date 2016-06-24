@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Reset hesla zařízení z webu portálu společnosti | Microsoft Intune
+title: Resetování hesla zařízení z webu Portál společnosti | Microsoft Intune
 description:
 keywords:
 author: Staciebarker
@@ -18,7 +18,7 @@ ms.assetid: 4fa3255b-9d1e-42d5-bd8b-70963dcf2d86
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mamoriss
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -26,16 +26,15 @@ ms.suite: ems
 ---
 
 
-# Reset hesla zařízení z webu portálu společnosti
+# Resetování hesla zařízení z webu Portál společnosti
 
-Pokud ztratíte kód PIN nebo heslo zařízení, které jste zaregistrovali v Intune, můžete použít [web portálu společnosti](http://portal.manage.microsoft.com) k jeho resetování. Web portálu společnosti je webová stránka, kterou můžete použít ke správě počítačů a zařízení, které jste registrovali v Intune, a k provádění většiny úloh, které můžete provádět pomocí aplikace Portál společnosti.
+Pokud ztratíte kód PIN nebo heslo zařízení, které jste zaregistrovali v Intune, můžete použít [web Portál společnosti](http://portal.manage.microsoft.com) k jeho resetování. Web Portál společnosti je webová stránka, kterou můžete použít ke správě počítačů a zařízení, které jste registrovali v Intune, a k provádění většiny úloh, které můžete provádět pomocí aplikace Portál společnosti.
 
-> [!NOTE] 
-> V závislosti na tom, jak váš správce Intune konfiguroval Intune, se na webu portálu společnosti nemusí tlačítko Resetovat heslo zobrazit. Restování hesla není podporované u zařízení s Windows 8.1 a Windows RT.
+> [!NOTE] V závislosti na tom, jak váš správce nakonfiguroval Intune, se na webu Portál společnosti nemusí tlačítko Resetovat heslo zobrazit. Restování hesla není podporované u zařízení s Windows 8.1 a Windows RT.
 
 Resetování hesla:
 
-1.  Otevřete [web portálu společnosti](http://portal.manage.microsoft.com) a klepněte na zařízení, jehož heslo chcete resetovat.
+1.  Otevřete [web Portál společnosti](http://portal.manage.microsoft.com) a klepněte na zařízení, jehož heslo chcete resetovat.
 
 2.  Klepněte na **Resetovat heslo**.
 
@@ -61,11 +60,13 @@ Resetování hesla:
 
 5.  Odemkněte zařízení a nastavte nové heslo nebo změňte dočasné heslo pomocí nabídky **Nastavení** vašeho zařízení.
 
-    Pokud chcete zobrazit potvrzení, že bylo heslo úspěšně resetované, klikněte na příznak oznámení v pravé horní části webu portálu společnosti.
+    Pokud chcete zobrazit potvrzení, že bylo heslo úspěšně resetované, klikněte na příznak oznámení v pravé horní části webu Portál společnosti.
+
+Pokud potřebujete pomoc a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Použití webu Portál společnosti Intune](using-the-intune-company-portal-website.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

@@ -6,7 +6,7 @@ description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/03/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: a26d9e3c-8f58-4494-9571-fc88ba91852e
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mamoriss
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -42,7 +42,7 @@ Na webu Portál společnosti můžete provádět tyto kroky:
 
 -   [Ruční synchronizace zařízení ke zrychlení pomalé instalace aplikací](sync-your-device-manually-cpwebsite.md)
 
--   Najít kontaktní informace na správce IT, pokud je váš správce IT nakonfiguroval
+-   Najděte kontaktní informace na správce IT, pokud je váš správce IT nakonfiguroval. Pokud budete mít problém je najít, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 -   Zobrazit podrobnosti o zařízení, včetně toho, jestli zařízení dodržuje zásady společnosti nebo školy
 
@@ -52,9 +52,9 @@ Většinu úloh můžete provést jak na **webu Portál společnosti** , tak v *
 
 - [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 - [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
-- [Použití zařízení Android s Intune](using-your-windows-device-with-intune.md)
+- [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

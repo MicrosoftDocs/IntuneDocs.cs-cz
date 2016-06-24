@@ -18,7 +18,7 @@ ms.assetid: 365f72a6-564d-4cbd-8f0a-70ec80b6e253
 #ROBOTS:
 #audience:
 #ms.devlang:
-#ms.reviewer: [ALIAS]
+#ms.reviewer: esmich
 #ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -29,7 +29,7 @@ ms.assetid: 365f72a6-564d-4cbd-8f0a-70ec80b6e253
 
 Pokud zařízení s iOS není v souladu se zásadami pro přístupový kód správce IT, zobrazí se zpráva, která stručně popisuje problém a vysvětluje, co musíte udělat, aby byly splněny požadavky na přístupový kód.
 
-Správce IT může nastavit více než jeden požadavek na přístupový kód. Například přístupový kód musí mít určitý počet znaků a musí být kombinací číslic a písmen atd. Vzhledem k tomu, že může být nastaveno víc požadavků, tyto pokyny mohou vysvětlovat jenom to, jak jde přístupový kód nastavit nebo změnit. Nevysvětlují všechny možné kombinace požadavků. 
+Správce IT může nastavit více než jeden požadavek na přístupový kód. Přístupový kód musí mít například určitý počet znaků a musí být kombinací číslic a písmen atd. Vzhledem k tomu, že může být nastaveno víc požadavků, tyto pokyny mohou vysvětlovat jenom to, jak jde přístupový kód nastavit nebo změnit. Nevysvětlují všechny možné kombinace požadavků. 
 
 Pokud máte potíže při nastavení přístupového kódu, které splňuje všechny požadavky na přístupový kód, požádejte o pomoc správce IT.
 
@@ -46,9 +46,11 @@ Pokud máte potíže při nastavení přístupového kódu, které splňuje vše
 2. Klepněte na **Change Passcode** (Změnit přístupový kód) a zadejte svoje staré heslo.
 3. Zadejte nový přístupový kód, který splňuje požadavky správce IT, a potom ho zadejte znovu k ověření.
 
+Pokud potřebujete pomoc a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+
 ### Související témata
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

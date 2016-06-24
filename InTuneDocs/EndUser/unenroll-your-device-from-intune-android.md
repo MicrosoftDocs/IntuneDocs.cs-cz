@@ -18,7 +18,7 @@ ms.assetid: f40aab26-7613-48cc-a74e-de83df9465a4
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Zrušení registrace zařízení v Intune
 
-Když zrušíte registraci zařízení s Androidem v Intune, zařízení už nebude mít přístup k prostředkům společnosti.  Další informace o tom, co se stane, pokud zrušíte registraci, najdete v tématu [Co se stane, když zrušíte registraci zařízení v Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)..
+Když zrušíte registraci zařízení s Androidem v Intune, zařízení už nebude mít přístup k prostředkům společnosti.  Další informace o tom, co se stane, když zrušíte registraci, najdete v tématu [Co se stane, když zrušíte registraci zařízení v Intune](what-happens-if-you-unenroll-your-device-from-intune-android.md).
 
 Pokud chcete zrušit registraci zařízení v Intune a odinstalovat aplikaci Portál společnosti, postupujte podle následujícího návodu nebo si pusťte toto [video](http://aka.ms/gyq2du):
 
@@ -46,10 +46,11 @@ Pokud chcete zrušit registraci zařízení v Intune a odinstalovat aplikaci Por
 
     ![android-company-portal-unenroll-warning](./media/andr-3-warning-about-remove.png)
 
+Pokud potřebujete pomoc a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 
