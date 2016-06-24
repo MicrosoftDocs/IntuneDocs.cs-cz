@@ -21,7 +21,7 @@ ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
     <section id="hero-content">
       <h1>Dokumentace k Microsoft Intune</h1>
       <h2>Postup nasazení a správy Microsoft Intune, služby pro správu mobilních zařízení a aplikací.</h2>
-      <h3>Chcete spravovat Intune s Configuration Managerem? <a href="https://technet.microsoft.com/en-us/library/mt627883.aspx" target="_blank">Zobrazit dokumentaci ke Configuration Manageru &rarr;</a></h3>
+      <h3>Chcete spravovat Intune s Configuration Managerem? <a href="http://go.microsoft.com/fwlink/?LinkId=816854" target="_blank">Zobrazit dokumentaci ke Configuration Manageru &rarr;</a></h3>
     </section>
     <section id="featured" class="container">
       <h2 class="section-heading"><span class="icon icon-warning"></span> Vybraný obsah</h2>
@@ -280,6 +280,6 @@ ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
 </article>
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 
