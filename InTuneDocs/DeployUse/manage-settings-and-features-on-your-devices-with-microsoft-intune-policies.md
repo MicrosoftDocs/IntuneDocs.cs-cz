@@ -200,9 +200,9 @@ Pokud odstraníte zásadu nebo odeberete zařízení ze skupiny, na kterou byla 
 
 ### Kde najdu nápovědu k odstraňování potíží se zásadami?
 
-Projděte si téma [Řešení potíží se zásadami v Microsoft Intune](/troubleshoot/troubleshoot-policies-in-microsoft-intune.md).
+Projděte si téma [Řešení potíží se zásadami v Microsoft Intune](../Troubleshoot/troubleshoot-policies-in-microsoft-intune).
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 
