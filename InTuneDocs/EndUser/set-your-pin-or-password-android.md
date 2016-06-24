@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/31/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -34,15 +34,12 @@ Správce IT může při používání Intune k přístupu k pracovním nebo ško
 
 2.  Zvolte a potvrďte nové heslo.
 
-3.  Podle pokynů v části [Registrace zařízení v Microsoft Intune](enroll-your-device-in-Intune-android.md) zkontrolujte, jestli je zařízení zaregistrované v Microsoft Intune.
 
-4.  Klepněte na **ZÍSKAT** &gt; **NAINSTALOVAT**.
-
-Pokud potřebujete pomoc a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

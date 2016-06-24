@@ -97,11 +97,12 @@ Chcete-li provést ruční synchronizaci mobilního zařízení s Windows 8.1 pr
     
    V horní části obrazovky se až do skončení synchronizace zařízení zobrazí zpráva „Probíhá synchronizace účtu“.
 
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

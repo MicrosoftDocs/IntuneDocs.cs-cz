@@ -42,7 +42,7 @@ Na webu Portál společnosti můžete provádět tyto kroky:
 
 -   [Ruční synchronizace zařízení ke zrychlení pomalé instalace aplikací](sync-your-device-manually-cpwebsite.md)
 
--   Najděte kontaktní informace na správce IT, pokud je váš správce IT nakonfiguroval. Pokud budete mít problém je najít, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+-   Najděte kontaktní informace na správce IT, pokud je váš správce IT nakonfiguroval. 
 
 -   Zobrazit podrobnosti o zařízení, včetně toho, jestli zařízení dodržuje zásady společnosti nebo školy
 
@@ -55,6 +55,6 @@ Většinu úloh můžete provést jak na **webu Portál společnosti** , tak v *
 - [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

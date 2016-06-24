@@ -36,10 +36,10 @@ Už máte e-mailový účet společnosti. Pokud se chcete dále připojovat k e-
 
 3.  Po chvilce se pro vaše zařízení automaticky použije nové nastavení e-mailu.
 
-Pokud se po chvíli nezobrazí nové nastavení e-mailu, kontaktujte správce IT. Pokud nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud se po chvíli nezobrazí nové nastavení e-mailu, kontaktujte správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -30,11 +30,11 @@ ms.suite: ems
 
 Na zařízení se systémem iOS 7.1 nebo novějším klepněte na ikonu **Nastavení**, klepněte na **Obecné** > **O zařízení** a potom přejděte dolů na položku **Sériové číslo**.
 
-Pokud potřebujete pomoc a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

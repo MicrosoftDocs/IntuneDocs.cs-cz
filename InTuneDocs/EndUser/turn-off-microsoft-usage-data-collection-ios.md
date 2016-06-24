@@ -32,9 +32,11 @@ Microsoft automaticky shromažďuje anonymní informace o spolehlivosti, výkon
 
 Shromažďování těchto dat na zařízení iOS můžete vypnout pomocí nastavení **Údaje o používání** v aplikaci Portál společnosti. Správci IT nemají nad shromažďováním údajů žádnou kontrolu a nemůžou u tohoto nastavení změnit vaši volbu.
 
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+
 ### Související témata
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

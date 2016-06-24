@@ -47,7 +47,7 @@ Apple AppStore vás upozorní, jakmile bude k dispozici nová verze aplikace Por
     > [!NOTE] Pokud se nemůžete do Windows Storu dostat, obraťte se na správce IT.
 
 
-Pokud potřebujete pomoc a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 Informace o dalších úlohách, které můžete v zařízení provést, najdete pomocí odkazu, který odpovídá vašemu typu zařízení:
 
@@ -57,6 +57,6 @@ Informace o dalších úlohách, které můžete v zařízení provést, najdete
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -34,11 +34,11 @@ Pokud se pokoušíte zaregistrovat zařízení s iOS nebo Mac OS X v Intune a ob
 2. Klepněte na **Pokračovat**.
 3. Zadejte poslední čtyři znaky sériového čísla zařízení, aby mohla služba Intune ověřit, jestli už je zařízení zaregistrované. Návod k nalezení sériového čísla najdete v tématu [Jak na zařízení najdu sériové číslo?](how-do-i-find-the-serial-number-on-my-device-ios.md).
 
-Pokud potřebujete pomoc a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

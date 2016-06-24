@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/31/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -32,9 +32,11 @@ Pokud je vaše zařízení s Androidem zaregistrované ve službě Intune, můž
 
 Pokud chcete funkci **Podrobné protokolování** zapnout nebo vypnout, přihlaste se do aplikace Portál společnosti pomocí svých pracovních nebo školních přihlašovacích údajů, klepněte na **Nastavení** a potom klepněte na tlačítko pro zapnutí/vypnutí vedle položky **Podrobné protokolování**.
 
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+
 ### Související témata
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

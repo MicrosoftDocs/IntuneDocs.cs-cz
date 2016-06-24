@@ -36,8 +36,8 @@ Abyste se mohli znovu připojit ke své práci, budete muset na svém zařízen�
 
 3.  Podle pokynů v části [Registrace zařízení pro použití v práci](http://go.microsoft.com/fwlink/?LinkId=519071) zkontrolujte, že je zařízení zaregistrováno pomocí Intune.
 
-Pokud potřebujete pomoc a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

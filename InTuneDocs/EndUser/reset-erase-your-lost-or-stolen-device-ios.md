@@ -45,11 +45,11 @@ Pokud chcete resetovat zařízení pomocí webu Portál společnosti, postupujte
 
 2.  Klepněte na **Resetovat** &gt; **Resetovat**.
 > [!NOTE]
-> Pokud se vám ztracené nebo ukradené zařízení nedaří resetovat, požádejte IT správce, aby to udělal za vás. Pokud nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+> Pokud se vám ztracené nebo ukradené zařízení nedaří resetovat, požádejte IT správce, aby to udělal za vás. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

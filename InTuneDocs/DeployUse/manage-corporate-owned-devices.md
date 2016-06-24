@@ -83,7 +83,6 @@ Přečtěte si další informace o [DEP](ios-device-enrollment-program-in-micros
 
 ### USB (SA)
 Registrace prostřednictvím Pomocníka s nastavením přes připojení USB. Správce vytvoří zásadu Intune a vyexportuje ji do Apple Configuratoru. Zařízení připojená přes USB mají připravené zásady Intune. Správce musí každé zařízení zaregistrovat ručně. Uživatelé dostanou svoje zařízení a spuštěním Pomocníka s nastavením je zaregistrují. Tato metoda podporuje režim **iOS – Pod dohledem**, který pak povoluje následující funkce:
-  - Registrace uzamčeného zařízení
   - Podmíněný přístup
   - Detekce jailbreaků
   - Správa mobilních aplikací
@@ -112,6 +111,6 @@ Určuje, jestli jde zařízení zamknout a zabránit tak uživateli odebrání z
 ([Zpět k tabulce](#overview-of corporate-owned-device-enrollment-methods)) ([Zpět k tabulce](#overview-of corporate-owned-device-enrollment-methods))
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO3-->
 
 

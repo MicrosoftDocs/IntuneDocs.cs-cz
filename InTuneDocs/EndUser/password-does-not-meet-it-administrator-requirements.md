@@ -44,8 +44,8 @@ Informace o nastavení PIN kódu či hesla nebo dalších úlohách, které mů�
 - [Nastavení nebo změna přístupového kódu na zařízení s iOS](set-or-change-your-passcode-ios.md)
 - [Nastavení nebo změna hesla na zařízení s Windows](set-or-change-your-password-windows.md)
 
-Pokud máte potíže s tím, jak vytvořit heslo v souladu s požadavky, obraťte se na správce IT. Pokud nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud máte potíže s tím, jak vytvořit heslo v souladu s požadavky, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

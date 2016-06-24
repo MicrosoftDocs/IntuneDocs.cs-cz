@@ -41,11 +41,11 @@ Pokud registrované zařízení s Windows ztratíte nebo vám ho někdo ukradne,
 3.  Klepněte na **Resetovat** &gt; **Resetovat**.
 
 > [!NOTE]
-> Pokud se vám ztracené nebo ukradené zařízení nedaří resetovat, požádejte správce IT, aby to udělal za vás. Pokud nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+> Pokud se vám ztracené nebo ukradené zařízení nedaří resetovat, požádejte správce IT, aby to udělal za vás. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

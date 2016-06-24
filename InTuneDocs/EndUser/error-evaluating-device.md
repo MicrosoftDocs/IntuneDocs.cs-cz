@@ -31,10 +31,10 @@ Vaše zařízení bylo shledané nekompatibilním s jednou nebo více zásad spo
 
 Jestli chcete tento problém vyřešit, počkejte několik minut a potom klepněte na **Kontrola dodržování předpisů**.
 
-Pokud problém přetrvá, kontaktujte správce IT. Pokud nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud problém přetrvá, kontaktujte správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

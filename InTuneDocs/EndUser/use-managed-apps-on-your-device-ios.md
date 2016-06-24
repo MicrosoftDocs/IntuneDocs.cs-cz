@@ -64,23 +64,12 @@ Tady jsou některé příklady možností, které může správce IT spravovat v
 
 -   Požadavky na šifrování dat
 
-Některé běžné aplikace, které může spravovat vaše oddělení IT:
 
--   Spravovaný webový prohlížeč
-
--   Spravovaný prohlížeč obrázků
-
--   Spravovaný prohlížeč souborů PDF
-
--   Spravovaný přehrávač audiovizuálních souborů
-
--   Microsoft Word, Excel, PowerPoint
-
-Další informace o spravovaných aplikacích na vašem zařízení vám poskytne správce IT. Pokud nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Další informace o spravovaných aplikacích na vašem zařízení vám poskytne správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -40,11 +40,11 @@ Přejmenování zařízení:
 
 3.  Do pole, ve kterém se zobrazí aktuální název zařízení, zadejte nový název pro zařízení a potom klepněte na tlačítko **Přejmenovat**. Zařízení se teď zobrazí s novým názvem.
 
-Pokud potřebujete pomoc a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Použití webu Portál společnosti Intune](using-the-intune-company-portal-website.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

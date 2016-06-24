@@ -46,11 +46,11 @@ Pokud máte potíže při nastavení přístupového kódu, které splňuje vše
 2. Klepněte na **Change Passcode** (Změnit přístupový kód) a zadejte svoje staré heslo.
 3. Zadejte nový přístupový kód, který splňuje požadavky správce IT, a potom ho zadejte znovu k ověření.
 
-Pokud potřebujete pomoc a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -36,11 +36,11 @@ Pokud správce IT nakonfiguroval aplikaci VPN, která vám umožní připojit se
 
 3.  Klepněte na **Instalovat profil firemní sítě VPN**, podle pokynů přijměte aplikaci a aktivujte ji.
 
-Pokud potřebujete pomoc a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

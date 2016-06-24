@@ -48,11 +48,11 @@ Pokud máte potíže při nastavení hesla, které splňuje všechny požadavky 
 4. Do pole **Nové heslo** zadejte nové heslo a znovu nové heslo zadejte v poli **Potvrzení hesla**.
 4. Klepněte na **Hotovo**.
 
-Pokud potřebujete pomoc a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 
