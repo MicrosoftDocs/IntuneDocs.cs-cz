@@ -1,27 +1,43 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [InTuneDocs\Understand\microsoft-intune-service-description.md](https://github.com/Microsoft/IntuneDocs-pr/blob/4794a22b3bdd1f28e6951b81e8379dc208fffc89/InTuneDocs/Understand/microsoft-intune-service-description.md) | OutofSyncHandedBackSuccess | [Details](#6cab0bacd9157323e342662609de8c9f20550d781251)
+ [InTuneDocs\DeployUse\help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/9b96e6c49ec9122961588156d77bf94cdbccd787/InTuneDocs/DeployUse/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md) | OutofSyncHandedBackSuccess | [Details](#b1b1cc90672903ac0336151373272b5e20e5616548)
+ [InTuneDocs\GetStarted\domain-names-for-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/d5be97583a3666748b0e83c3689fa3dabf5569f3/InTuneDocs/GetStarted/domain-names-for-microsoft-intune.md) | OutofSyncHandedBackSuccess | [Details](#0c48a016da0ca2e393ed3ce6d6e2187d9f752364496)
 
 ## Item Details
-##### <a name='6cab0bacd9157323e342662609de8c9f20550d781251'></a> Source: [InTuneDocs\Understand\microsoft-intune-service-description.md](https://github.com/Microsoft/IntuneDocs-pr/blob/4794a22b3bdd1f28e6951b81e8379dc208fffc89/InTuneDocs/Understand/microsoft-intune-service-description.md)
+##### <a name='b1b1cc90672903ac0336151373272b5e20e5616548'></a> Source: [InTuneDocs\DeployUse\help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/9b96e6c49ec9122961588156d77bf94cdbccd787/InTuneDocs/DeployUse/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [microsoft-intune-service-description.3bc765c5cdef218de681700b62ddae25f1de13e5.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/496788b4557b755b9deb1a8a61d5407e2a57a580/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/microsoft-intune-service-description.3bc765c5cdef218de681700b62ddae25f1de13e5.cs-cz.xlf)
-* Handoff Datetime: 2016-06-29 17:49:41
+* Handoff File: [help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.f31eb4f83f44d42dc29dcadd580408a97d0a1bad.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/83613a92081610f303f0003a5d56368f60043aa3/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.f31eb4f83f44d42dc29dcadd580408a97d0a1bad.cs-cz.xlf)
+* Handoff Datetime: 2016-06-29 19:47:14
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\Understand\microsoft-intune-service-description.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/57b5e7b8822574112a3575e51760d0ed3d00810b/InTuneDocs/Understand/microsoft-intune-service-description.md)
-* Current Handback File: [microsoft-intune-service-description.3bc765c5cdef218de681700b62ddae25f1de13e5.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/2e056571c019613c60380c4a085e86f0deb8efae/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/microsoft-intune-service-description.3bc765c5cdef218de681700b62ddae25f1de13e5.cs-cz.xlf)
+* Current Target File: [InTuneDocs\DeployUse\help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/57b5e7b8822574112a3575e51760d0ed3d00810b/InTuneDocs/DeployUse/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)
+* Current Handback File: [help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.f31eb4f83f44d42dc29dcadd580408a97d0a1bad.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/2e056571c019613c60380c4a085e86f0deb8efae/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.f31eb4f83f44d42dc29dcadd580408a97d0a1bad.cs-cz.xlf)
 * Current Handback Datetime: 2016-06-13 11:33:42
+* [Back to Top](#report-top)
+
+##### <a name='0c48a016da0ca2e393ed3ce6d6e2187d9f752364496'></a> Source: [InTuneDocs\GetStarted\domain-names-for-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/d5be97583a3666748b0e83c3689fa3dabf5569f3/InTuneDocs/GetStarted/domain-names-for-microsoft-intune.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [domain-names-for-microsoft-intune.833377949cd1fba68aa1070015f9e8204d7c5407.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/83613a92081610f303f0003a5d56368f60043aa3/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/domain-names-for-microsoft-intune.833377949cd1fba68aa1070015f9e8204d7c5407.cs-cz.xlf)
+* Handoff Datetime: 2016-06-29 19:47:14
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [InTuneDocs\GetStarted\domain-names-for-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/75e78f241f4a54550945fe1116834b157df160f4/InTuneDocs/GetStarted/domain-names-for-microsoft-intune.md)
+* Current Handback File: [domain-names-for-microsoft-intune.833377949cd1fba68aa1070015f9e8204d7c5407.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/cbffacc094e2347eeeef322e16b75dd7b26f4153/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/domain-names-for-microsoft-intune.833377949cd1fba68aa1070015f9e8204d7c5407.cs-cz.xlf)
+* Current Handback Datetime: 2016-06-17 22:47:43
 * [Back to Top](#report-top)
 
 
