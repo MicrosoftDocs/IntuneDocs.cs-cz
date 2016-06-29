@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 121
+ Total Files | 140
 
 ## File List
  Source File | Status | Details 
@@ -25,11 +25,14 @@
  [InTuneDocs\DeployUse\media\intune-sa-3c-deploy-compliance-policy2.PNG](https://github.com/Microsoft/IntuneDocs-pr/blob/7eeb9c845875211ed68f90416b90431f2341bf6b/InTuneDocs/DeployUse/media/intune-sa-3c-deploy-compliance-policy2.PNG) | HandedBackFailed | [Details](#63f8ddc53128c377aed176dd03ce30f9c5c69ae0158)
  [InTuneDocs\DeployUse\media\iOS_FacebookPasteCompany.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/DeployUse/media/iOS_FacebookPasteCompany.png) | HandedBackFailed | [Details](#fe87d24bbadb6ae9b727db1be469a8d147d9f5e6167)
  [InTuneDocs\DeployUse\media\iOS_WordCopyCompany.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/DeployUse/media/iOS_WordCopyCompany.png) | HandedBackFailed | [Details](#57fa4be193c7773386318c037dabdde5346ceafb173)
+ [InTuneDocs\DeployUse\media\MAM_BYOD_November.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/DeployUse/media/MAM_BYOD_November.png) | HandedBackFailed | [Details](#1b8c364e396cb2f1c54c21971a41e4dd65cd3322182)
  [InTuneDocs\DeployUse\media\OfficePortal_CreateGroups.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/DeployUse/media/OfficePortal_CreateGroups.png) | HandedBackFailed | [Details](#b1e3dbe8fd1f2cce4c21ae83b0f4fdc87e0f0055188)
  [InTuneDocs\DeployUse\media\pol-sa-terms-conditions.png](https://github.com/Microsoft/IntuneDocs-pr/blob/f5980368496b1d1886f4652eae1c7943f9a7ad8f/InTuneDocs/DeployUse/media/pol-sa-terms-conditions.png) | HandedBackFailed | [Details](#204ed85ed1c4dea12212eea34b080998af6cc211194)
  [InTuneDocs\DeployUse\media\team-viewer.png](https://github.com/Microsoft/IntuneDocs-pr/blob/b9c8e67e70be825368e016749164b19386082c5e/InTuneDocs/DeployUse/media/team-viewer.png) | HandedBackFailed | [Details](#c49da9a0a811d8c1bfb2f20b64a694558d09313b197)
  [InTuneDocs\EndUser\media\and-enroll-2-cp-sign-in.png](https://github.com/Microsoft/IntuneDocs-pr/blob/59cb9c26f96352831d7190ea50e4d7c48c16d4f9/InTuneDocs/EndUser/media/and-enroll-2-cp-sign-in.png) | HandedBackFailed | [Details](#e256cb6a104706c8e1d861dc565b88abb00e6652323)
  [InTuneDocs\EndUser\media\and-enroll-3-accept-terms.png](https://github.com/Microsoft/IntuneDocs-pr/blob/59cb9c26f96352831d7190ea50e4d7c48c16d4f9/InTuneDocs/EndUser/media/and-enroll-3-accept-terms.png) | HandedBackFailed | [Details](#e9fd27ac80a101d2e8b5bbd65249913b45111a16324)
+ [InTuneDocs\EndUser\media\and-enroll-7-cert-native.png](https://github.com/Microsoft/IntuneDocs-pr/blob/59cb9c26f96352831d7190ea50e4d7c48c16d4f9/InTuneDocs/EndUser/media/and-enroll-7-cert-native.png) | HandedBackFailed | [Details](#1c2bee86afe3f6283751d7d9b7bd2c307272c4d9336)
+ [InTuneDocs\EndUser\media\and-enroll-8-device-enrolling.png](https://github.com/Microsoft/IntuneDocs-pr/blob/59cb9c26f96352831d7190ea50e4d7c48c16d4f9/InTuneDocs/EndUser/media/and-enroll-8-device-enrolling.png) | HandedBackFailed | [Details](#860b55577989a3daf5b2a79bbfdf870cb859200b338)
  [InTuneDocs\EndUser\media\and-enroll-9-comp-access-setup.png](https://github.com/Microsoft/IntuneDocs-pr/blob/59cb9c26f96352831d7190ea50e4d7c48c16d4f9/InTuneDocs/EndUser/media/and-enroll-9-comp-access-setup.png) | HandedBackFailed | [Details](#1da6df49bf5fc92a2e5ed0f693424c795e894a16339)
  [InTuneDocs\EndUser\media\andr-1-my-devices-choose.png](https://github.com/Microsoft/IntuneDocs-pr/blob/59cb9c26f96352831d7190ea50e4d7c48c16d4f9/InTuneDocs/EndUser/media/andr-1-my-devices-choose.png) | HandedBackFailed | [Details](#1d96acea0475ff448c6895f38dfbf2305fd4edca341)
  [InTuneDocs\EndUser\media\ios-enroll-1a-comp-access-setup.png](https://github.com/Microsoft/IntuneDocs-pr/blob/59cb9c26f96352831d7190ea50e4d7c48c16d4f9/InTuneDocs/EndUser/media/ios-enroll-1a-comp-access-setup.png) | HandedBackFailed | [Details](#e2fcef5e5c2f66244aa0abae89be31fef029c182365)
@@ -42,14 +45,18 @@
  [InTuneDocs\EndUser\media\W81-5-enrolled-done.png](https://github.com/Microsoft/IntuneDocs-pr/blob/71af89a1feb73bccae1f07007bb5c30ea3f7950e/InTuneDocs/EndUser/media/W81-5-enrolled-done.png) | HandedBackFailed | [Details](#7ffcfdd5ad6412f6ddd1c69d443bf1f99bfafd3e397)
  [InTuneDocs\EndUser\media\win10m-sync-1-settings-accounts.png](https://github.com/Microsoft/IntuneDocs-pr/blob/e50c3401ce0b8e5e1e10e196b3d9e00c71de884d/InTuneDocs/EndUser/media/win10m-sync-1-settings-accounts.png) | HandedBackFailed | [Details](#70c5571fc6e0788c16a97d18e073a7edfe91e213399)
  [InTuneDocs\EndUser\media\win10m-sync-2-work-access.png](https://github.com/Microsoft/IntuneDocs-pr/blob/e50c3401ce0b8e5e1e10e196b3d9e00c71de884d/InTuneDocs/EndUser/media/win10m-sync-2-work-access.png) | HandedBackFailed | [Details](#de1b6e8c42582c49d5c47a1cb7634cbd34f40f34400)
+ [InTuneDocs\EndUser\media\win10pc-sync-3-work-access.png](https://github.com/Microsoft/IntuneDocs-pr/blob/e50c3401ce0b8e5e1e10e196b3d9e00c71de884d/InTuneDocs/EndUser/media/win10pc-sync-3-work-access.png) | HandedBackFailed | [Details](#156544ef08e4a76dcf3c635c102d510d008a3033405)
  [InTuneDocs\EndUser\media\WP81-1-CP-search-store-v2.png](https://github.com/Microsoft/IntuneDocs-pr/blob/71af89a1feb73bccae1f07007bb5c30ea3f7950e/InTuneDocs/EndUser/media/WP81-1-CP-search-store-v2.png) | HandedBackFailed | [Details](#20b6e13bfa1e9852a927586c3357d460c444eb90408)
+ [InTuneDocs\EndUser\media\wp81-1-sync-settings-workplace.png](https://github.com/Microsoft/IntuneDocs-pr/blob/e50c3401ce0b8e5e1e10e196b3d9e00c71de884d/InTuneDocs/EndUser/media/wp81-1-sync-settings-workplace.png) | HandedBackFailed | [Details](#8623ced5f051ffe942a2558ab072af1c8b0a2765410)
  [InTuneDocs\EndUser\media\WP81-enroll-1-swipe-my-devices.png](https://github.com/Microsoft/IntuneDocs-pr/blob/71af89a1feb73bccae1f07007bb5c30ea3f7950e/InTuneDocs/EndUser/media/WP81-enroll-1-swipe-my-devices.png) | HandedBackFailed | [Details](#88a1101825e9ecf41e5f2e308e3f4f90ba395977414)
  [InTuneDocs\EndUser\media\WP81-enroll-2-enroll-this-device.png](https://github.com/Microsoft/IntuneDocs-pr/blob/71af89a1feb73bccae1f07007bb5c30ea3f7950e/InTuneDocs/EndUser/media/WP81-enroll-2-enroll-this-device.png) | HandedBackFailed | [Details](#bcab588dd1d00990681d0d9d3c09a5bb14af020e415)
  [InTuneDocs\EndUser\media\WP81-enroll-3-workplace-add-acct.png](https://github.com/Microsoft/IntuneDocs-pr/blob/71af89a1feb73bccae1f07007bb5c30ea3f7950e/InTuneDocs/EndUser/media/WP81-enroll-3-workplace-add-acct.png) | HandedBackFailed | [Details](#cddb4c0bba4880b1370c3ff6b683ce9f18bc7b80416)
  [InTuneDocs\GetStarted\media\POLICY.PNG](https://github.com/Microsoft/IntuneDocs-pr/blob/6fabcc6928f90bdab9b1a400e2641758095abb5f/InTuneDocs/GetStarted/media/POLICY.PNG) | HandedBackFailed | [Details](#ca1cfbb4f83a6e26059fcfb35b5850aafefb81f2510)
+ [InTuneDocs\GetStarted\media\Windows-Device-Enrollment.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/GetStarted/media/Windows-Device-Enrollment.png) | HandedBackFailed | [Details](#8424e87bd47f3f7f08fd4a3ff62f6f43e6c2f160512)
  [InTuneDocs\GetStarted\media\Windows-Phone-Enrollment.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/GetStarted/media/Windows-Phone-Enrollment.png) | HandedBackFailed | [Details](#3f9a65b1057f766025d4f3a37fdea7df0c7e5592513)
  [InTuneDocs\GetStarted\media\wit_.gif](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/GetStarted/media/wit_.gif) | HandedBackFailed | [Details](#a3713304193d4562fb5784b2e0ec7730ac5e796e514)
  [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-13-enbl-ios-plat.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-13-enbl-ios-plat.png) | HandedBackFailed | [Details](#b3a60bde0102f405e115743da44fe7b71c503d07662)
+ [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-17-id-passw-signin.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-17-id-passw-signin.png) | HandedBackFailed | [Details](#1f93d9ac0e0c6b52b287ef040a0f172c4ecfc693666)
  [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-18-create-cert.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-18-create-cert.png) | HandedBackFailed | [Details](#5f0dfccd8ffa52ef1ce6d37bc0bd5101237c3a01667)
  [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-22-upld-reqst.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-22-upld-reqst.png) | HandedBackFailed | [Details](#98b53b0abe3287761ebdf1733d238a1d6b24bf45671)
  [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-23-json-saveas.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-23-json-saveas.png) | HandedBackFailed | [Details](#d50500c0c45a1e12b8e8c7dea977e68530e4b151672)
@@ -60,6 +67,7 @@
  [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-32-pem-upload.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-32-pem-upload.png) | HandedBackFailed | [Details](#408dc406883e78023a0ea7f36f3d45c5a3ac20f1681)
  [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-34-clk-groups.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-34-clk-groups.png) | HandedBackFailed | [Details](#ddc3f13655fafe60b36797b50b15de52fd3a0bcb683)
  [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-38-clk-policy.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-38-clk-policy.png) | HandedBackFailed | [Details](#273d642653e763d86a86fbcba353035eb7c6c9fa687)
+ [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-40-gen_cfg_pol.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-40-gen_cfg_pol.png) | HandedBackFailed | [Details](#16b3da1c4bf72207e82f739e7514ca8213734d0e689)
  [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-43-add-pol-to-grp.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-43-add-pol-to-grp.png) | HandedBackFailed | [Details](#3d880c7dd363e7ad24a3e00bdd3ee15620112b31692)
  [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-44-policy-applied.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-44-policy-applied.png) | HandedBackFailed | [Details](#d4a93a9b08ecde57a51dfe1a7eb942d30ab107f0693)
  [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-46-cportal-signin.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-46-cportal-signin.png) | HandedBackFailed | [Details](#7196b2358287e632baa768f60014b78ca7810d2e695)
@@ -67,6 +75,7 @@
  [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-54-passcode-req-cont.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-54-passcode-req-cont.png) | HandedBackFailed | [Details](#8afe928fe21b830b9475d6fff1a46fc927a04c80703)
  [InTuneDocs\media\30-day-trial-walkthrus\30day-crt-user-9-close-confirm.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-crt-user-9-close-confirm.png) | HandedBackFailed | [Details](#7c536f6c9c63f7d58cfcd3825b8acad3569ad8da709)
  [InTuneDocs\media\30-day-trial-walkthrus\30day-start-trial-3-createID.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-start-trial-3-createID.png) | HandedBackFailed | [Details](#b66f27911ef0c49c280c7206bcccd777476c5268712)
+ [InTuneDocs\media\android_per_app_vpn_oma_uri.PNG](https://github.com/Microsoft/IntuneDocs-pr/blob/d5c48a4cead6250864f5b10444d99d062441bd99/InTuneDocs/media/android_per_app_vpn_oma_uri.PNG) | HandedBackFailed | [Details](#3d897adfae78fa4be7946051155da197121b1213717)
  [InTuneDocs\media\AppManagement\Android_OneDriveSetPIN.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/AppManagement/Android_OneDriveSetPIN.png) | HandedBackFailed | [Details](#c9de22ab98a68249887572a1fbfdd9f11b02faad733)
  [InTuneDocs\media\AppManagement\Android_SwitchUser.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/AppManagement/Android_SwitchUser.png) | HandedBackFailed | [Details](#80790af1e5cf9d6bb0340f1dac46e27f6af540c4735)
  [InTuneDocs\media\AppManagement\AzurePortal_MAM_AddPolicy.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/AppManagement/AzurePortal_MAM_AddPolicy.png) | HandedBackFailed | [Details](#a587ef3d06e4b1b9e22f2366fcd801c61778586e748)
@@ -85,8 +94,10 @@
  [InTuneDocs\media\dev-sa-ios-dep.png](https://github.com/Microsoft/IntuneDocs-pr/blob/1a21f2c8f9da9827b4214d1f1300bd6697434e79/InTuneDocs/media/dev-sa-ios-dep.png) | HandedBackFailed | [Details](#eca341e075c54bd11ce80916237eaf81723ec103856)
  [InTuneDocs\media\dev-sa-wipe.png](https://github.com/Microsoft/IntuneDocs-pr/blob/1a21f2c8f9da9827b4214d1f1300bd6697434e79/InTuneDocs/media/dev-sa-wipe.png) | HandedBackFailed | [Details](#cd9cbfed5ec82b480656983649fd5a2db0731a92857)
  [InTuneDocs\media\Email-Walkthrough\Email-Walkthrough-10.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/media/Email-Walkthrough/Email-Walkthrough-10.png) | HandedBackFailed | [Details](#ddde252b39eb9f14daf8aacc6d8f08325fc14741864)
+ [InTuneDocs\media\Email-Walkthrough\Email-Walkthrough-11.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/media/Email-Walkthrough/Email-Walkthrough-11.png) | HandedBackFailed | [Details](#eb9548ac782d7a41b782c682cee305e41fc5a171865)
  [InTuneDocs\media\Email-Walkthrough\Email-Walkthrough-3.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/media/Email-Walkthrough/Email-Walkthrough-3.png) | HandedBackFailed | [Details](#f363094808565774a0bcc3663d2d926a4cb85354867)
  [InTuneDocs\media\Email-Walkthrough\Email-Walkthrough-4.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/media/Email-Walkthrough/Email-Walkthrough-4.png) | HandedBackFailed | [Details](#0e6ac2466bc2469d109450fa78c9387b7687062f868)
+ [InTuneDocs\media\em-vision.png](https://github.com/Microsoft/IntuneDocs-pr/blob/3804733fbe9db4af3db9c8080dbfb6baed2c7f60/InTuneDocs/media/em-vision.png) | HandedBackFailed | [Details](#19064a8aaede330ac742af6e3a735598ac868733861)
  [InTuneDocs\media\ExchangeConnector.gif](https://github.com/Microsoft/IntuneDocs-pr/blob/5a4b0884718f4225e8a5c84bed3bbab64159df0e/InTuneDocs/media/ExchangeConnector.gif) | HandedBackFailed | [Details](#1cfe860fc52a522303a284b97130acb358004630877)
  [InTuneDocs\media\intune-app-sdk-ios-keychain-sharing.png](https://github.com/Microsoft/IntuneDocs-pr/blob/dd584e3da358c699f493d1a65f32bf022583b0da/InTuneDocs/media/intune-app-sdk-ios-keychain-sharing.png) | HandedBackFailed | [Details](#f7cf545dd7f51df5f9b4b1c3a382d17f3eb3bd7c903)
  [InTuneDocs\media\Intune-MDM-Authority.png](https://github.com/Microsoft/IntuneDocs-pr/blob/1a21f2c8f9da9827b4214d1f1300bd6697434e79/InTuneDocs/media/Intune-MDM-Authority.png) | HandedBackFailed | [Details](#82372661288da89bb59e04aa02fec9bf08b59ea6910)
@@ -94,19 +105,24 @@
  [InTuneDocs\media\IntuneSA2cViewReport.PNG](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/IntuneSA2cViewReport.PNG) | HandedBackFailed | [Details](#3b916bb8399396ca26426ac7ee5a362834f1e3cd934)
  [InTuneDocs\media\IntuneSA3cDeployCompliancePolicy2.PNG](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/media/IntuneSA3cDeployCompliancePolicy2.PNG) | HandedBackFailed | [Details](#63f8ddc53128c377aed176dd03ce30f9c5c69ae0937)
  [InTuneDocs\media\IntuneSA5bExchangeOnPremPolicy.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/IntuneSA5bExchangeOnPremPolicy.png) | HandedBackFailed | [Details](#bac9420657d6e709a3f3e93d0fc386b9870cb135942)
+ [InTuneDocs\media\MAM_BYOD_November.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/MAM_BYOD_November.png) | HandedBackFailed | [Details](#1b8c364e396cb2f1c54c21971a41e4dd65cd3322964)
  [InTuneDocs\media\mam-azure-portal-add-app-details.png](https://github.com/Microsoft/IntuneDocs-pr/blob/4b8d9f3034bf96ee6854524d12409ac1c6eaaa67/InTuneDocs/media/mam-azure-portal-add-app-details.png) | HandedBackFailed | [Details](#e8d616862134044dd2989069528b02dce3158e22953)
  [InTuneDocs\media\mam-azure-portal-lob-context-menu.png](https://github.com/Microsoft/IntuneDocs-pr/blob/4b8d9f3034bf96ee6854524d12409ac1c6eaaa67/InTuneDocs/media/mam-azure-portal-lob-context-menu.png) | HandedBackFailed | [Details](#2415ec9b08debedea47e3ec5343224e924f205d1959)
  [InTuneDocs\media\Microsoft-Connect.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/Microsoft-Connect.png) | HandedBackFailed | [Details](#f4d5c5fef97041f56707e5ef5b29d189f28c283a979)
+ [InTuneDocs\media\SCEP_IIS_max_URL.png](https://github.com/Microsoft/IntuneDocs-pr/blob/f843e206803a11f5d85c416bc831617893e132de/InTuneDocs/media/SCEP_IIS_max_URL.png) | HandedBackFailed | [Details](#5ec77117337cc48dbabaa2e5326d26ae72999eb81051)
  [InTuneDocs\media\scep_ndes_extensions.jpg](https://github.com/Microsoft/IntuneDocs-pr/blob/42d517e2955be404ca8f6854a83beb339ca61e96/InTuneDocs/media/scep_ndes_extensions.jpg) | HandedBackFailed | [Details](#c2b1925fbc54bd76795cf5a05d67e90eede9dbde1054)
  [InTuneDocs\media\scep_ndes_issuance_reqs.jpg](https://github.com/Microsoft/IntuneDocs-pr/blob/42d517e2955be404ca8f6854a83beb339ca61e96/InTuneDocs/media/scep_ndes_issuance_reqs.jpg) | HandedBackFailed | [Details](#1fdfd4a4b0c286678dd2473f928c43ca67d6572e1056)
  [InTuneDocs\media\scep_ndes_request_handling.png](https://github.com/Microsoft/IntuneDocs-pr/blob/42d517e2955be404ca8f6854a83beb339ca61e96/InTuneDocs/media/scep_ndes_request_handling.png) | HandedBackFailed | [Details](#5716ecd3293eb0cca3012fb904a5c67bede6eb231058)
  [InTuneDocs\media\scep_ndes_security.jpg](https://github.com/Microsoft/IntuneDocs-pr/blob/42d517e2955be404ca8f6854a83beb339ca61e96/InTuneDocs/media/scep_ndes_security.jpg) | HandedBackFailed | [Details](#d9f855bd8ed1be5b04f9b41e64bf1b029f480a571059)
+ [InTuneDocs\media\scep_ndes_subject_name.jpg](https://github.com/Microsoft/IntuneDocs-pr/blob/42d517e2955be404ca8f6854a83beb339ca61e96/InTuneDocs/media/scep_ndes_subject_name.jpg) | HandedBackFailed | [Details](#f137a08c583910b12138f0d94f34506f831b8d771060)
  [InTuneDocs\media\SCEP_NDES_URL.png](https://github.com/Microsoft/IntuneDocs-pr/blob/f843e206803a11f5d85c416bc831617893e132de/InTuneDocs/media/SCEP_NDES_URL.png) | HandedBackFailed | [Details](#cc76f1067638bc79cd2654f89c1a2a8642256eb91061)
  [InTuneDocs\media\team-viewer.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/media/team-viewer.png) | HandedBackFailed | [Details](#c49da9a0a811d8c1bfb2f20b64a694558d09313b1072)
+ [InTuneDocs\media\Windows-Device-Enrollment.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/Windows-Device-Enrollment.png) | HandedBackFailed | [Details](#8424e87bd47f3f7f08fd4a3ff62f6f43e6c2f1601077)
  [InTuneDocs\media\Windows-Phone-Enrollment.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/Windows-Phone-Enrollment.png) | HandedBackFailed | [Details](#3f9a65b1057f766025d4f3a37fdea7df0c7e55921078)
  [InTuneDocs\media\wit.gif](https://github.com/Microsoft/IntuneDocs-pr/blob/458b886eb616cd1343a67a02b8cd0d065e2c95a3/InTuneDocs/media/wit.gif) | HandedBackFailed | [Details](#a3713304193d4562fb5784b2e0ec7730ac5e796e1080)
  [InTuneDocs\Troubleshoot\media\CM_With_Intune_Unknown_App_Deleted_Device.jpg](https://github.com/Microsoft/IntuneDocs-pr/blob/057e945deac1ab0352f89923d646361fd0b99e3e/InTuneDocs/Troubleshoot/media/CM_With_Intune_Unknown_App_Deleted_Device.jpg) | HandedBackFailed | [Details](#22db1dd77d3769ddf32deb8ee796acdb61baee4f1153)
  [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-cfg-pol-13-enbl-ios-plat.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/Understand/media/30-day-trial-walkthrus/30day-cfg-pol-13-enbl-ios-plat.png) | HandedBackFailed | [Details](#b3a60bde0102f405e115743da44fe7b71c503d071181)
+ [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-cfg-pol-17-id-passw-signin.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/Understand/media/30-day-trial-walkthrus/30day-cfg-pol-17-id-passw-signin.png) | HandedBackFailed | [Details](#1f93d9ac0e0c6b52b287ef040a0f172c4ecfc6931185)
  [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-cfg-pol-18-create-cert.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/Understand/media/30-day-trial-walkthrus/30day-cfg-pol-18-create-cert.png) | HandedBackFailed | [Details](#5f0dfccd8ffa52ef1ce6d37bc0bd5101237c3a011186)
  [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-cfg-pol-22-upld-reqst.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/Understand/media/30-day-trial-walkthrus/30day-cfg-pol-22-upld-reqst.png) | HandedBackFailed | [Details](#98b53b0abe3287761ebdf1733d238a1d6b24bf451190)
  [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-cfg-pol-23-json-saveas.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/Understand/media/30-day-trial-walkthrus/30day-cfg-pol-23-json-saveas.png) | HandedBackFailed | [Details](#d50500c0c45a1e12b8e8c7dea977e68530e4b1511191)
@@ -117,6 +133,7 @@
  [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-cfg-pol-32-pem-upload.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/Understand/media/30-day-trial-walkthrus/30day-cfg-pol-32-pem-upload.png) | HandedBackFailed | [Details](#408dc406883e78023a0ea7f36f3d45c5a3ac20f11200)
  [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-cfg-pol-34-clk-groups.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/Understand/media/30-day-trial-walkthrus/30day-cfg-pol-34-clk-groups.png) | HandedBackFailed | [Details](#ddc3f13655fafe60b36797b50b15de52fd3a0bcb1202)
  [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-cfg-pol-38-clk-policy.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/Understand/media/30-day-trial-walkthrus/30day-cfg-pol-38-clk-policy.png) | HandedBackFailed | [Details](#273d642653e763d86a86fbcba353035eb7c6c9fa1206)
+ [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-cfg-pol-40-gen_cfg_pol.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/Understand/media/30-day-trial-walkthrus/30day-cfg-pol-40-gen_cfg_pol.png) | HandedBackFailed | [Details](#16b3da1c4bf72207e82f739e7514ca8213734d0e1208)
  [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-cfg-pol-43-add-pol-to-grp.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/Understand/media/30-day-trial-walkthrus/30day-cfg-pol-43-add-pol-to-grp.png) | HandedBackFailed | [Details](#3d880c7dd363e7ad24a3e00bdd3ee15620112b311211)
  [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-cfg-pol-44-policy-applied.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/Understand/media/30-day-trial-walkthrus/30day-cfg-pol-44-policy-applied.png) | HandedBackFailed | [Details](#d4a93a9b08ecde57a51dfe1a7eb942d30ab107f01212)
  [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-cfg-pol-46-cportal-signin.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/Understand/media/30-day-trial-walkthrus/30day-cfg-pol-46-cportal-signin.png) | HandedBackFailed | [Details](#7196b2358287e632baa768f60014b78ca7810d2e1214)
@@ -125,8 +142,10 @@
  [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-crt-user-9-close-confirm.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/Understand/media/30-day-trial-walkthrus/30day-crt-user-9-close-confirm.png) | HandedBackFailed | [Details](#7c536f6c9c63f7d58cfcd3825b8acad3569ad8da1234)
  [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-start-trial-3-createID.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/Understand/media/30-day-trial-walkthrus/30day-start-trial-3-createID.png) | HandedBackFailed | [Details](#b66f27911ef0c49c280c7206bcccd777476c52681237)
  [InTuneDocs\Understand\media\Email-Walkthrough\Email-Walkthrough-10.png](https://github.com/Microsoft/IntuneDocs-pr/blob/857cae72431286cc3e67b8b649bcc99c81d216c7/InTuneDocs/Understand/media/Email-Walkthrough/Email-Walkthrough-10.png) | HandedBackFailed | [Details](#ddde252b39eb9f14daf8aacc6d8f08325fc147411242)
+ [InTuneDocs\Understand\media\Email-Walkthrough\Email-Walkthrough-11.png](https://github.com/Microsoft/IntuneDocs-pr/blob/857cae72431286cc3e67b8b649bcc99c81d216c7/InTuneDocs/Understand/media/Email-Walkthrough/Email-Walkthrough-11.png) | HandedBackFailed | [Details](#eb9548ac782d7a41b782c682cee305e41fc5a1711243)
  [InTuneDocs\Understand\media\Email-Walkthrough\Email-Walkthrough-3.png](https://github.com/Microsoft/IntuneDocs-pr/blob/857cae72431286cc3e67b8b649bcc99c81d216c7/InTuneDocs/Understand/media/Email-Walkthrough/Email-Walkthrough-3.png) | HandedBackFailed | [Details](#f363094808565774a0bcc3663d2d926a4cb853541245)
  [InTuneDocs\Understand\media\Email-Walkthrough\Email-Walkthrough-4.png](https://github.com/Microsoft/IntuneDocs-pr/blob/857cae72431286cc3e67b8b649bcc99c81d216c7/InTuneDocs/Understand/media/Email-Walkthrough/Email-Walkthrough-4.png) | HandedBackFailed | [Details](#0e6ac2466bc2469d109450fa78c9387b7687062f1246)
+ [InTuneDocs\Understand\media\em-vision.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/Understand/media/em-vision.png) | HandedBackFailed | [Details](#19064a8aaede330ac742af6e3a735598ac8687331240)
 
 ## Item Details
 ##### <a name='c9de22ab98a68249887572a1fbfdd9f11b02faad82'></a> Source: [InTuneDocs\DeployUse\media\Android_OneDriveSetPIN.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/DeployUse/media/Android_OneDriveSetPIN.png)
@@ -395,6 +414,20 @@
 * Handback Error: [handback_transform_failed](#57fa4be193c7773386318c037dabdde5346ceafb173handback_transform_failed)
 * [Back to Top](#report-top)
 
+##### <a name='1b8c364e396cb2f1c54c21971a41e4dd65cd3322182'></a> Source: [InTuneDocs\DeployUse\media\MAM_BYOD_November.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/DeployUse/media/MAM_BYOD_November.png)
+* Status: HandedBackFailed
+* Target File: 
+* Handoff File: [1b8c364e396cb2f1c54c21971a41e4dd65cd3322.png](https://github.com/Microsoft/EM.handoff/blob/c7ac82507c4ca54985fb55a11b9b62e43004fabd/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/1b8c364e396cb2f1c54c21971a41e4dd65cd3322.png)
+* Handoff Datetime: 2016-05-13 16:01:06
+* Handoff Reason: IsDependency
+* Dependency From: migrated-03-14\Topic\Configure-data-loss-prevention-app-policies-with-Microsoft-Intune.md, InTuneDocs\DeployUse\configure-data-loss-prevention-app-policies-with-microsoft-intune.md, InTuneDocs\DeployUse\introduction-to-mobile-app-management-policies-with-microsoft-intune.md, InTuneDocs\DeployUse\protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Error: [handback_transform_failed](#1b8c364e396cb2f1c54c21971a41e4dd65cd3322182handback_transform_failed)
+* [Back to Top](#report-top)
+
 ##### <a name='b1e3dbe8fd1f2cce4c21ae83b0f4fdc87e0f0055188'></a> Source: [InTuneDocs\DeployUse\media\OfficePortal_CreateGroups.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/DeployUse/media/OfficePortal_CreateGroups.png)
 * Status: HandedBackFailed
 * Target File: 
@@ -463,6 +496,34 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Error: [handback_transform_failed](#e9fd27ac80a101d2e8b5bbd65249913b45111a16324handback_transform_failed)
+* [Back to Top](#report-top)
+
+##### <a name='1c2bee86afe3f6283751d7d9b7bd2c307272c4d9336'></a> Source: [InTuneDocs\EndUser\media\and-enroll-7-cert-native.png](https://github.com/Microsoft/IntuneDocs-pr/blob/59cb9c26f96352831d7190ea50e4d7c48c16d4f9/InTuneDocs/EndUser/media/and-enroll-7-cert-native.png)
+* Status: HandedBackFailed
+* Target File: 
+* Handoff File: [1c2bee86afe3f6283751d7d9b7bd2c307272c4d9.png](https://github.com/Microsoft/EM.handoff/blob/c7ac82507c4ca54985fb55a11b9b62e43004fabd/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/1c2bee86afe3f6283751d7d9b7bd2c307272c4d9.png)
+* Handoff Datetime: 2016-05-13 16:01:06
+* Handoff Reason: IsDependency
+* Dependency From: InTuneDocs\EndUser\enroll-your-device-in-Intune-android.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Error: [handback_transform_failed](#1c2bee86afe3f6283751d7d9b7bd2c307272c4d9336handback_transform_failed)
+* [Back to Top](#report-top)
+
+##### <a name='860b55577989a3daf5b2a79bbfdf870cb859200b338'></a> Source: [InTuneDocs\EndUser\media\and-enroll-8-device-enrolling.png](https://github.com/Microsoft/IntuneDocs-pr/blob/59cb9c26f96352831d7190ea50e4d7c48c16d4f9/InTuneDocs/EndUser/media/and-enroll-8-device-enrolling.png)
+* Status: HandedBackFailed
+* Target File: 
+* Handoff File: [860b55577989a3daf5b2a79bbfdf870cb859200b.png](https://github.com/Microsoft/EM.handoff/blob/c7ac82507c4ca54985fb55a11b9b62e43004fabd/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/860b55577989a3daf5b2a79bbfdf870cb859200b.png)
+* Handoff Datetime: 2016-05-13 16:01:06
+* Handoff Reason: IsDependency
+* Dependency From: InTuneDocs\EndUser\enroll-your-device-in-Intune-android.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Error: [handback_transform_failed](#860b55577989a3daf5b2a79bbfdf870cb859200b338handback_transform_failed)
 * [Back to Top](#report-top)
 
 ##### <a name='1da6df49bf5fc92a2e5ed0f693424c795e894a16339'></a> Source: [InTuneDocs\EndUser\media\and-enroll-9-comp-access-setup.png](https://github.com/Microsoft/IntuneDocs-pr/blob/59cb9c26f96352831d7190ea50e4d7c48c16d4f9/InTuneDocs/EndUser/media/and-enroll-9-comp-access-setup.png)
@@ -633,6 +694,20 @@
 * Handback Error: [handback_transform_failed](#de1b6e8c42582c49d5c47a1cb7634cbd34f40f34400handback_transform_failed)
 * [Back to Top](#report-top)
 
+##### <a name='156544ef08e4a76dcf3c635c102d510d008a3033405'></a> Source: [InTuneDocs\EndUser\media\win10pc-sync-3-work-access.png](https://github.com/Microsoft/IntuneDocs-pr/blob/e50c3401ce0b8e5e1e10e196b3d9e00c71de884d/InTuneDocs/EndUser/media/win10pc-sync-3-work-access.png)
+* Status: HandedBackFailed
+* Target File: 
+* Handoff File: [156544ef08e4a76dcf3c635c102d510d008a3033.png](https://github.com/Microsoft/EM.handoff/blob/c7ac82507c4ca54985fb55a11b9b62e43004fabd/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/156544ef08e4a76dcf3c635c102d510d008a3033.png)
+* Handoff Datetime: 2016-05-13 16:01:06
+* Handoff Reason: IsDependency
+* Dependency From: InTuneDocs\EndUser\sync-your-device-manually-windows.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Error: [handback_transform_failed](#156544ef08e4a76dcf3c635c102d510d008a3033405handback_transform_failed)
+* [Back to Top](#report-top)
+
 ##### <a name='20b6e13bfa1e9852a927586c3357d460c444eb90408'></a> Source: [InTuneDocs\EndUser\media\WP81-1-CP-search-store-v2.png](https://github.com/Microsoft/IntuneDocs-pr/blob/71af89a1feb73bccae1f07007bb5c30ea3f7950e/InTuneDocs/EndUser/media/WP81-1-CP-search-store-v2.png)
 * Status: HandedBackFailed
 * Target File: 
@@ -645,6 +720,20 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Error: [handback_transform_failed](#20b6e13bfa1e9852a927586c3357d460c444eb90408handback_transform_failed)
+* [Back to Top](#report-top)
+
+##### <a name='8623ced5f051ffe942a2558ab072af1c8b0a2765410'></a> Source: [InTuneDocs\EndUser\media\wp81-1-sync-settings-workplace.png](https://github.com/Microsoft/IntuneDocs-pr/blob/e50c3401ce0b8e5e1e10e196b3d9e00c71de884d/InTuneDocs/EndUser/media/wp81-1-sync-settings-workplace.png)
+* Status: HandedBackFailed
+* Target File: 
+* Handoff File: [8623ced5f051ffe942a2558ab072af1c8b0a2765.png](https://github.com/Microsoft/EM.handoff/blob/c7ac82507c4ca54985fb55a11b9b62e43004fabd/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/8623ced5f051ffe942a2558ab072af1c8b0a2765.png)
+* Handoff Datetime: 2016-05-13 16:01:06
+* Handoff Reason: IsDependency
+* Dependency From: InTuneDocs\EndUser\sync-your-device-manually-windows.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Error: [handback_transform_failed](#8623ced5f051ffe942a2558ab072af1c8b0a2765410handback_transform_failed)
 * [Back to Top](#report-top)
 
 ##### <a name='88a1101825e9ecf41e5f2e308e3f4f90ba395977414'></a> Source: [InTuneDocs\EndUser\media\WP81-enroll-1-swipe-my-devices.png](https://github.com/Microsoft/IntuneDocs-pr/blob/71af89a1feb73bccae1f07007bb5c30ea3f7950e/InTuneDocs/EndUser/media/WP81-enroll-1-swipe-my-devices.png)
@@ -703,6 +792,20 @@
 * Handback Error: [handback_transform_failed](#ca1cfbb4f83a6e26059fcfb35b5850aafefb81f2510handback_transform_failed)
 * [Back to Top](#report-top)
 
+##### <a name='8424e87bd47f3f7f08fd4a3ff62f6f43e6c2f160512'></a> Source: [InTuneDocs\GetStarted\media\Windows-Device-Enrollment.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/GetStarted/media/Windows-Device-Enrollment.png)
+* Status: HandedBackFailed
+* Target File: 
+* Handoff File: [8424e87bd47f3f7f08fd4a3ff62f6f43e6c2f160.png](https://github.com/Microsoft/EM.handoff/blob/c7ac82507c4ca54985fb55a11b9b62e43004fabd/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/8424e87bd47f3f7f08fd4a3ff62f6f43e6c2f160.png)
+* Handoff Datetime: 2016-05-13 16:01:06
+* Handoff Reason: IsDependency
+* Dependency From: InTuneDocs\GetStarted\set-up-windows-phone-management-with-microsoft-intune.md, InTuneDocs\DeployUse\set-up-windows-phone-management-with-microsoft-intune.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Error: [handback_transform_failed](#8424e87bd47f3f7f08fd4a3ff62f6f43e6c2f160512handback_transform_failed)
+* [Back to Top](#report-top)
+
 ##### <a name='3f9a65b1057f766025d4f3a37fdea7df0c7e5592513'></a> Source: [InTuneDocs\GetStarted\media\Windows-Phone-Enrollment.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/GetStarted/media/Windows-Phone-Enrollment.png)
 * Status: HandedBackFailed
 * Target File: 
@@ -743,6 +846,20 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Error: [handback_transform_failed](#b3a60bde0102f405e115743da44fe7b71c503d07662handback_transform_failed)
+* [Back to Top](#report-top)
+
+##### <a name='1f93d9ac0e0c6b52b287ef040a0f172c4ecfc693666'></a> Source: [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-17-id-passw-signin.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-17-id-passw-signin.png)
+* Status: HandedBackFailed
+* Target File: 
+* Handoff File: [1f93d9ac0e0c6b52b287ef040a0f172c4ecfc693.png](https://github.com/Microsoft/EM.handoff/blob/c7ac82507c4ca54985fb55a11b9b62e43004fabd/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/1f93d9ac0e0c6b52b287ef040a0f172c4ecfc693.png)
+* Handoff Datetime: 2016-05-13 16:01:06
+* Handoff Reason: IsDependency
+* Dependency From: migrated-03-14\Topic\Start-a-Microsoft-Intune-trial-and-deploy-iOS-PIN-policy.md, InTuneDocs\Understand\start-a-microsoft-intune-trial-and-deploy-ios-pin-policy.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Error: [handback_transform_failed](#1f93d9ac0e0c6b52b287ef040a0f172c4ecfc693666handback_transform_failed)
 * [Back to Top](#report-top)
 
 ##### <a name='5f0dfccd8ffa52ef1ce6d37bc0bd5101237c3a01667'></a> Source: [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-18-create-cert.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-18-create-cert.png)
@@ -885,6 +1002,20 @@
 * Handback Error: [handback_transform_failed](#273d642653e763d86a86fbcba353035eb7c6c9fa687handback_transform_failed)
 * [Back to Top](#report-top)
 
+##### <a name='16b3da1c4bf72207e82f739e7514ca8213734d0e689'></a> Source: [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-40-gen_cfg_pol.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-40-gen_cfg_pol.png)
+* Status: HandedBackFailed
+* Target File: 
+* Handoff File: [16b3da1c4bf72207e82f739e7514ca8213734d0e.png](https://github.com/Microsoft/EM.handoff/blob/c7ac82507c4ca54985fb55a11b9b62e43004fabd/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/16b3da1c4bf72207e82f739e7514ca8213734d0e.png)
+* Handoff Datetime: 2016-05-13 16:01:06
+* Handoff Reason: IsDependency
+* Dependency From: InTuneDocs\Understand\start-a-microsoft-intune-trial-and-deploy-ios-pin-policy.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Error: [handback_transform_failed](#16b3da1c4bf72207e82f739e7514ca8213734d0e689handback_transform_failed)
+* [Back to Top](#report-top)
+
 ##### <a name='3d880c7dd363e7ad24a3e00bdd3ee15620112b31692'></a> Source: [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-43-add-pol-to-grp.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-43-add-pol-to-grp.png)
 * Status: HandedBackFailed
 * Target File: 
@@ -981,6 +1112,20 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Error: [handback_transform_failed](#b66f27911ef0c49c280c7206bcccd777476c5268712handback_transform_failed)
+* [Back to Top](#report-top)
+
+##### <a name='3d897adfae78fa4be7946051155da197121b1213717'></a> Source: [InTuneDocs\media\android_per_app_vpn_oma_uri.PNG](https://github.com/Microsoft/IntuneDocs-pr/blob/d5c48a4cead6250864f5b10444d99d062441bd99/InTuneDocs/media/android_per_app_vpn_oma_uri.PNG)
+* Status: HandedBackFailed
+* Target File: 
+* Handoff File: [3d897adfae78fa4be7946051155da197121b1213.PNG](https://github.com/Microsoft/EM.handoff/blob/80f8e1022e27d6f0fcd1a9d5e3c5d8b2cf168962/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/3d897adfae78fa4be7946051155da197121b1213.PNG)
+* Handoff Datetime: 2016-05-22 17:05:46
+* Handoff Reason: IsDependency
+* Dependency From: InTuneDocs\DeployUse\per-app-vpn-for-android-pulse-secure.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Error: [handback_transform_failed](#3d897adfae78fa4be7946051155da197121b1213717handback_transform_failed)
 * [Back to Top](#report-top)
 
 ##### <a name='c9de22ab98a68249887572a1fbfdd9f11b02faad733'></a> Source: [InTuneDocs\media\AppManagement\Android_OneDriveSetPIN.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/AppManagement/Android_OneDriveSetPIN.png)
@@ -1235,6 +1380,20 @@
 * Handback Error: [handback_transform_failed](#ddde252b39eb9f14daf8aacc6d8f08325fc14741864handback_transform_failed)
 * [Back to Top](#report-top)
 
+##### <a name='eb9548ac782d7a41b782c682cee305e41fc5a171865'></a> Source: [InTuneDocs\media\Email-Walkthrough\Email-Walkthrough-11.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/media/Email-Walkthrough/Email-Walkthrough-11.png)
+* Status: HandedBackFailed
+* Target File: 
+* Handoff File: [eb9548ac782d7a41b782c682cee305e41fc5a171.png](https://github.com/Microsoft/EM.handoff/blob/c7ac82507c4ca54985fb55a11b9b62e43004fabd/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/eb9548ac782d7a41b782c682cee305e41fc5a171.png)
+* Handoff Datetime: 2016-05-13 16:01:06
+* Handoff Reason: IsDependency
+* Dependency From: InTuneDocs\Understand\set-up-email-access-for-ios-devices-using-microsoft-intune.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Error: [handback_transform_failed](#eb9548ac782d7a41b782c682cee305e41fc5a171865handback_transform_failed)
+* [Back to Top](#report-top)
+
 ##### <a name='f363094808565774a0bcc3663d2d926a4cb85354867'></a> Source: [InTuneDocs\media\Email-Walkthrough\Email-Walkthrough-3.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/media/Email-Walkthrough/Email-Walkthrough-3.png)
 * Status: HandedBackFailed
 * Target File: 
@@ -1261,6 +1420,20 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Error: [handback_transform_failed](#0e6ac2466bc2469d109450fa78c9387b7687062f868handback_transform_failed)
+* [Back to Top](#report-top)
+
+##### <a name='19064a8aaede330ac742af6e3a735598ac868733861'></a> Source: [InTuneDocs\media\em-vision.png](https://github.com/Microsoft/IntuneDocs-pr/blob/3804733fbe9db4af3db9c8080dbfb6baed2c7f60/InTuneDocs/media/em-vision.png)
+* Status: HandedBackFailed
+* Target File: 
+* Handoff File: [19064a8aaede330ac742af6e3a735598ac868733.png](https://github.com/Microsoft/EM.handoff/blob/c7ac82507c4ca54985fb55a11b9b62e43004fabd/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/19064a8aaede330ac742af6e3a735598ac868733.png)
+* Handoff Datetime: 2016-05-13 16:01:06
+* Handoff Reason: IsDependency
+* Dependency From: InTuneDocs\Understand\introduction-to-microsoft-intune.md, InTuneDocs\Understand\introduction-to-microsoft-intune-draft.md, InTuneDocs\Understand\introduction-to-microsoft-intune-old.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Error: [handback_transform_failed](#19064a8aaede330ac742af6e3a735598ac868733861handback_transform_failed)
 * [Back to Top](#report-top)
 
 ##### <a name='1cfe860fc52a522303a284b97130acb358004630877'></a> Source: [InTuneDocs\media\ExchangeConnector.gif](https://github.com/Microsoft/IntuneDocs-pr/blob/5a4b0884718f4225e8a5c84bed3bbab64159df0e/InTuneDocs/media/ExchangeConnector.gif)
@@ -1361,6 +1534,20 @@
 * Handback Error: [handback_transform_failed](#bac9420657d6e709a3f3e93d0fc386b9870cb135942handback_transform_failed)
 * [Back to Top](#report-top)
 
+##### <a name='1b8c364e396cb2f1c54c21971a41e4dd65cd3322964'></a> Source: [InTuneDocs\media\MAM_BYOD_November.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/MAM_BYOD_November.png)
+* Status: HandedBackFailed
+* Target File: 
+* Handoff File: [1b8c364e396cb2f1c54c21971a41e4dd65cd3322.png](https://github.com/Microsoft/EM.handoff/blob/c7ac82507c4ca54985fb55a11b9b62e43004fabd/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/1b8c364e396cb2f1c54c21971a41e4dd65cd3322.png)
+* Handoff Datetime: 2016-05-13 16:01:06
+* Handoff Reason: IsDependency
+* Dependency From: migrated-03-14\Topic\Configure-data-loss-prevention-app-policies-with-Microsoft-Intune.md, InTuneDocs\DeployUse\configure-data-loss-prevention-app-policies-with-microsoft-intune.md, InTuneDocs\DeployUse\introduction-to-mobile-app-management-policies-with-microsoft-intune.md, InTuneDocs\DeployUse\protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Error: [handback_transform_failed](#1b8c364e396cb2f1c54c21971a41e4dd65cd3322964handback_transform_failed)
+* [Back to Top](#report-top)
+
 ##### <a name='e8d616862134044dd2989069528b02dce3158e22953'></a> Source: [InTuneDocs\media\mam-azure-portal-add-app-details.png](https://github.com/Microsoft/IntuneDocs-pr/blob/4b8d9f3034bf96ee6854524d12409ac1c6eaaa67/InTuneDocs/media/mam-azure-portal-add-app-details.png)
 * Status: HandedBackFailed
 * Target File: 
@@ -1401,6 +1588,20 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Error: [handback_transform_failed](#f4d5c5fef97041f56707e5ef5b29d189f28c283a979handback_transform_failed)
+* [Back to Top](#report-top)
+
+##### <a name='5ec77117337cc48dbabaa2e5326d26ae72999eb81051'></a> Source: [InTuneDocs\media\SCEP_IIS_max_URL.png](https://github.com/Microsoft/IntuneDocs-pr/blob/f843e206803a11f5d85c416bc831617893e132de/InTuneDocs/media/SCEP_IIS_max_URL.png)
+* Status: HandedBackFailed
+* Target File: 
+* Handoff File: [5ec77117337cc48dbabaa2e5326d26ae72999eb8.png](https://github.com/Microsoft/EM.handoff/blob/2e0e6d5c8853c0bbd58f932f26b6e7e9f4a5e4a6/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/5ec77117337cc48dbabaa2e5326d26ae72999eb8.png)
+* Handoff Datetime: 2016-05-17 16:02:02
+* Handoff Reason: IsDependency
+* Dependency From: InTuneDocs\DeployUse\Configure-certificate-infrastructure-for-scep.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Error: [handback_transform_failed](#5ec77117337cc48dbabaa2e5326d26ae72999eb81051handback_transform_failed)
 * [Back to Top](#report-top)
 
 ##### <a name='c2b1925fbc54bd76795cf5a05d67e90eede9dbde1054'></a> Source: [InTuneDocs\media\scep_ndes_extensions.jpg](https://github.com/Microsoft/IntuneDocs-pr/blob/42d517e2955be404ca8f6854a83beb339ca61e96/InTuneDocs/media/scep_ndes_extensions.jpg)
@@ -1459,6 +1660,20 @@
 * Handback Error: [handback_transform_failed](#d9f855bd8ed1be5b04f9b41e64bf1b029f480a571059handback_transform_failed)
 * [Back to Top](#report-top)
 
+##### <a name='f137a08c583910b12138f0d94f34506f831b8d771060'></a> Source: [InTuneDocs\media\scep_ndes_subject_name.jpg](https://github.com/Microsoft/IntuneDocs-pr/blob/42d517e2955be404ca8f6854a83beb339ca61e96/InTuneDocs/media/scep_ndes_subject_name.jpg)
+* Status: HandedBackFailed
+* Target File: 
+* Handoff File: [f137a08c583910b12138f0d94f34506f831b8d77.jpg](https://github.com/Microsoft/EM.handoff/blob/2e0e6d5c8853c0bbd58f932f26b6e7e9f4a5e4a6/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/f137a08c583910b12138f0d94f34506f831b8d77.jpg)
+* Handoff Datetime: 2016-05-17 16:02:02
+* Handoff Reason: IsDependency
+* Dependency From: InTuneDocs\DeployUse\Configure-certificate-infrastructure-for-scep.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Error: [handback_transform_failed](#f137a08c583910b12138f0d94f34506f831b8d771060handback_transform_failed)
+* [Back to Top](#report-top)
+
 ##### <a name='cc76f1067638bc79cd2654f89c1a2a8642256eb91061'></a> Source: [InTuneDocs\media\SCEP_NDES_URL.png](https://github.com/Microsoft/IntuneDocs-pr/blob/f843e206803a11f5d85c416bc831617893e132de/InTuneDocs/media/SCEP_NDES_URL.png)
 * Status: HandedBackFailed
 * Target File: 
@@ -1485,6 +1700,20 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Error: [handback_transform_failed](#c49da9a0a811d8c1bfb2f20b64a694558d09313b1072handback_transform_failed)
+* [Back to Top](#report-top)
+
+##### <a name='8424e87bd47f3f7f08fd4a3ff62f6f43e6c2f1601077'></a> Source: [InTuneDocs\media\Windows-Device-Enrollment.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/Windows-Device-Enrollment.png)
+* Status: HandedBackFailed
+* Target File: 
+* Handoff File: [8424e87bd47f3f7f08fd4a3ff62f6f43e6c2f160.png](https://github.com/Microsoft/EM.handoff/blob/c7ac82507c4ca54985fb55a11b9b62e43004fabd/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/8424e87bd47f3f7f08fd4a3ff62f6f43e6c2f160.png)
+* Handoff Datetime: 2016-05-13 16:01:06
+* Handoff Reason: IsDependency
+* Dependency From: InTuneDocs\GetStarted\set-up-windows-phone-management-with-microsoft-intune.md, InTuneDocs\DeployUse\set-up-windows-phone-management-with-microsoft-intune.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Error: [handback_transform_failed](#8424e87bd47f3f7f08fd4a3ff62f6f43e6c2f1601077handback_transform_failed)
 * [Back to Top](#report-top)
 
 ##### <a name='3f9a65b1057f766025d4f3a37fdea7df0c7e55921078'></a> Source: [InTuneDocs\media\Windows-Phone-Enrollment.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/Windows-Phone-Enrollment.png)
@@ -1541,6 +1770,20 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Error: [handback_transform_failed](#b3a60bde0102f405e115743da44fe7b71c503d071181handback_transform_failed)
+* [Back to Top](#report-top)
+
+##### <a name='1f93d9ac0e0c6b52b287ef040a0f172c4ecfc6931185'></a> Source: [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-cfg-pol-17-id-passw-signin.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/Understand/media/30-day-trial-walkthrus/30day-cfg-pol-17-id-passw-signin.png)
+* Status: HandedBackFailed
+* Target File: 
+* Handoff File: [1f93d9ac0e0c6b52b287ef040a0f172c4ecfc693.png](https://github.com/Microsoft/EM.handoff/blob/c7ac82507c4ca54985fb55a11b9b62e43004fabd/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/1f93d9ac0e0c6b52b287ef040a0f172c4ecfc693.png)
+* Handoff Datetime: 2016-05-13 16:01:06
+* Handoff Reason: IsDependency
+* Dependency From: migrated-03-14\Topic\Start-a-Microsoft-Intune-trial-and-deploy-iOS-PIN-policy.md, InTuneDocs\Understand\start-a-microsoft-intune-trial-and-deploy-ios-pin-policy.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Error: [handback_transform_failed](#1f93d9ac0e0c6b52b287ef040a0f172c4ecfc6931185handback_transform_failed)
 * [Back to Top](#report-top)
 
 ##### <a name='5f0dfccd8ffa52ef1ce6d37bc0bd5101237c3a011186'></a> Source: [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-cfg-pol-18-create-cert.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/Understand/media/30-day-trial-walkthrus/30day-cfg-pol-18-create-cert.png)
@@ -1683,6 +1926,20 @@
 * Handback Error: [handback_transform_failed](#273d642653e763d86a86fbcba353035eb7c6c9fa1206handback_transform_failed)
 * [Back to Top](#report-top)
 
+##### <a name='16b3da1c4bf72207e82f739e7514ca8213734d0e1208'></a> Source: [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-cfg-pol-40-gen_cfg_pol.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/Understand/media/30-day-trial-walkthrus/30day-cfg-pol-40-gen_cfg_pol.png)
+* Status: HandedBackFailed
+* Target File: 
+* Handoff File: [16b3da1c4bf72207e82f739e7514ca8213734d0e.png](https://github.com/Microsoft/EM.handoff/blob/c7ac82507c4ca54985fb55a11b9b62e43004fabd/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/16b3da1c4bf72207e82f739e7514ca8213734d0e.png)
+* Handoff Datetime: 2016-05-13 16:01:06
+* Handoff Reason: IsDependency
+* Dependency From: InTuneDocs\Understand\start-a-microsoft-intune-trial-and-deploy-ios-pin-policy.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Error: [handback_transform_failed](#16b3da1c4bf72207e82f739e7514ca8213734d0e1208handback_transform_failed)
+* [Back to Top](#report-top)
+
 ##### <a name='3d880c7dd363e7ad24a3e00bdd3ee15620112b311211'></a> Source: [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-cfg-pol-43-add-pol-to-grp.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/Understand/media/30-day-trial-walkthrus/30day-cfg-pol-43-add-pol-to-grp.png)
 * Status: HandedBackFailed
 * Target File: 
@@ -1795,6 +2052,20 @@
 * Handback Error: [handback_transform_failed](#ddde252b39eb9f14daf8aacc6d8f08325fc147411242handback_transform_failed)
 * [Back to Top](#report-top)
 
+##### <a name='eb9548ac782d7a41b782c682cee305e41fc5a1711243'></a> Source: [InTuneDocs\Understand\media\Email-Walkthrough\Email-Walkthrough-11.png](https://github.com/Microsoft/IntuneDocs-pr/blob/857cae72431286cc3e67b8b649bcc99c81d216c7/InTuneDocs/Understand/media/Email-Walkthrough/Email-Walkthrough-11.png)
+* Status: HandedBackFailed
+* Target File: 
+* Handoff File: [eb9548ac782d7a41b782c682cee305e41fc5a171.png](https://github.com/Microsoft/EM.handoff/blob/c7ac82507c4ca54985fb55a11b9b62e43004fabd/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/eb9548ac782d7a41b782c682cee305e41fc5a171.png)
+* Handoff Datetime: 2016-05-13 16:01:06
+* Handoff Reason: IsDependency
+* Dependency From: InTuneDocs\Understand\set-up-email-access-for-ios-devices-using-microsoft-intune.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Error: [handback_transform_failed](#eb9548ac782d7a41b782c682cee305e41fc5a1711243handback_transform_failed)
+* [Back to Top](#report-top)
+
 ##### <a name='f363094808565774a0bcc3663d2d926a4cb853541245'></a> Source: [InTuneDocs\Understand\media\Email-Walkthrough\Email-Walkthrough-3.png](https://github.com/Microsoft/IntuneDocs-pr/blob/857cae72431286cc3e67b8b649bcc99c81d216c7/InTuneDocs/Understand/media/Email-Walkthrough/Email-Walkthrough-3.png)
 * Status: HandedBackFailed
 * Target File: 
@@ -1821,6 +2092,20 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Error: [handback_transform_failed](#0e6ac2466bc2469d109450fa78c9387b7687062f1246handback_transform_failed)
+* [Back to Top](#report-top)
+
+##### <a name='19064a8aaede330ac742af6e3a735598ac8687331240'></a> Source: [InTuneDocs\Understand\media\em-vision.png](https://github.com/Microsoft/IntuneDocs-pr/blob/8036d724b60c4bf06a25674f8272a8549ff60a1f/InTuneDocs/Understand/media/em-vision.png)
+* Status: HandedBackFailed
+* Target File: 
+* Handoff File: [19064a8aaede330ac742af6e3a735598ac868733.png](https://github.com/Microsoft/EM.handoff/blob/c7ac82507c4ca54985fb55a11b9b62e43004fabd/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/19064a8aaede330ac742af6e3a735598ac868733.png)
+* Handoff Datetime: 2016-05-13 16:01:06
+* Handoff Reason: IsDependency
+* Dependency From: InTuneDocs\Understand\introduction-to-microsoft-intune.md, InTuneDocs\Understand\introduction-to-microsoft-intune-draft.md, InTuneDocs\Understand\introduction-to-microsoft-intune-old.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Error: [handback_transform_failed](#19064a8aaede330ac742af6e3a735598ac8687331240handback_transform_failed)
 * [Back to Top](#report-top)
 
 
@@ -1939,6 +2224,12 @@
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\57fa4be193c7773386318c037dabdde5346ceafb.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
 
+##### <a name='1b8c364e396cb2f1c54c21971a41e4dd65cd3322182handback_transform_failed'></a> Source: [InTuneDocs\DeployUse\media\MAM_BYOD_November.png](#1b8c364e396cb2f1c54c21971a41e4dd65cd3322182)
+* Error Code: handback_transform_failed
+* Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\1b8c364e396cb2f1c54c21971a41e4dd65cd3322.png failed.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\1b8c364e396cb2f1c54c21971a41e4dd65cd3322.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
+
 ##### <a name='b1e3dbe8fd1f2cce4c21ae83b0f4fdc87e0f0055188handback_transform_failed'></a> Source: [InTuneDocs\DeployUse\media\OfficePortal_CreateGroups.png](#b1e3dbe8fd1f2cce4c21ae83b0f4fdc87e0f0055188)
 * Error Code: handback_transform_failed
 * Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\b1e3dbe8fd1f2cce4c21ae83b0f4fdc87e0f0055.png failed.
@@ -1968,6 +2259,18 @@
 * Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\e9fd27ac80a101d2e8b5bbd65249913b45111a16.png failed.
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\e9fd27ac80a101d2e8b5bbd65249913b45111a16.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
+
+##### <a name='1c2bee86afe3f6283751d7d9b7bd2c307272c4d9336handback_transform_failed'></a> Source: [InTuneDocs\EndUser\media\and-enroll-7-cert-native.png](#1c2bee86afe3f6283751d7d9b7bd2c307272c4d9336)
+* Error Code: handback_transform_failed
+* Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\1c2bee86afe3f6283751d7d9b7bd2c307272c4d9.png failed.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\1c2bee86afe3f6283751d7d9b7bd2c307272c4d9.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
+
+##### <a name='860b55577989a3daf5b2a79bbfdf870cb859200b338handback_transform_failed'></a> Source: [InTuneDocs\EndUser\media\and-enroll-8-device-enrolling.png](#860b55577989a3daf5b2a79bbfdf870cb859200b338)
+* Error Code: handback_transform_failed
+* Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\860b55577989a3daf5b2a79bbfdf870cb859200b.png failed.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\860b55577989a3daf5b2a79bbfdf870cb859200b.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
 
 ##### <a name='1da6df49bf5fc92a2e5ed0f693424c795e894a16339handback_transform_failed'></a> Source: [InTuneDocs\EndUser\media\and-enroll-9-comp-access-setup.png](#1da6df49bf5fc92a2e5ed0f693424c795e894a16339)
 * Error Code: handback_transform_failed
@@ -2041,11 +2344,23 @@
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\de1b6e8c42582c49d5c47a1cb7634cbd34f40f34.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
 
+##### <a name='156544ef08e4a76dcf3c635c102d510d008a3033405handback_transform_failed'></a> Source: [InTuneDocs\EndUser\media\win10pc-sync-3-work-access.png](#156544ef08e4a76dcf3c635c102d510d008a3033405)
+* Error Code: handback_transform_failed
+* Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\156544ef08e4a76dcf3c635c102d510d008a3033.png failed.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\156544ef08e4a76dcf3c635c102d510d008a3033.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
+
 ##### <a name='20b6e13bfa1e9852a927586c3357d460c444eb90408handback_transform_failed'></a> Source: [InTuneDocs\EndUser\media\WP81-1-CP-search-store-v2.png](#20b6e13bfa1e9852a927586c3357d460c444eb90408)
 * Error Code: handback_transform_failed
 * Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\20b6e13bfa1e9852a927586c3357d460c444eb90.png failed.
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\20b6e13bfa1e9852a927586c3357d460c444eb90.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
+
+##### <a name='8623ced5f051ffe942a2558ab072af1c8b0a2765410handback_transform_failed'></a> Source: [InTuneDocs\EndUser\media\wp81-1-sync-settings-workplace.png](#8623ced5f051ffe942a2558ab072af1c8b0a2765410)
+* Error Code: handback_transform_failed
+* Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\8623ced5f051ffe942a2558ab072af1c8b0a2765.png failed.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\8623ced5f051ffe942a2558ab072af1c8b0a2765.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
 
 ##### <a name='88a1101825e9ecf41e5f2e308e3f4f90ba395977414handback_transform_failed'></a> Source: [InTuneDocs\EndUser\media\WP81-enroll-1-swipe-my-devices.png](#88a1101825e9ecf41e5f2e308e3f4f90ba395977414)
 * Error Code: handback_transform_failed
@@ -2071,6 +2386,12 @@
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\ca1cfbb4f83a6e26059fcfb35b5850aafefb81f2.PNG failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
 
+##### <a name='8424e87bd47f3f7f08fd4a3ff62f6f43e6c2f160512handback_transform_failed'></a> Source: [InTuneDocs\GetStarted\media\Windows-Device-Enrollment.png](#8424e87bd47f3f7f08fd4a3ff62f6f43e6c2f160512)
+* Error Code: handback_transform_failed
+* Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\8424e87bd47f3f7f08fd4a3ff62f6f43e6c2f160.png failed.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\8424e87bd47f3f7f08fd4a3ff62f6f43e6c2f160.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
+
 ##### <a name='3f9a65b1057f766025d4f3a37fdea7df0c7e5592513handback_transform_failed'></a> Source: [InTuneDocs\GetStarted\media\Windows-Phone-Enrollment.png](#3f9a65b1057f766025d4f3a37fdea7df0c7e5592513)
 * Error Code: handback_transform_failed
 * Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\3f9a65b1057f766025d4f3a37fdea7df0c7e5592.png failed.
@@ -2088,6 +2409,12 @@
 * Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\b3a60bde0102f405e115743da44fe7b71c503d07.png failed.
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\b3a60bde0102f405e115743da44fe7b71c503d07.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
+
+##### <a name='1f93d9ac0e0c6b52b287ef040a0f172c4ecfc693666handback_transform_failed'></a> Source: [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-17-id-passw-signin.png](#1f93d9ac0e0c6b52b287ef040a0f172c4ecfc693666)
+* Error Code: handback_transform_failed
+* Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\1f93d9ac0e0c6b52b287ef040a0f172c4ecfc693.png failed.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\1f93d9ac0e0c6b52b287ef040a0f172c4ecfc693.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
 
 ##### <a name='5f0dfccd8ffa52ef1ce6d37bc0bd5101237c3a01667handback_transform_failed'></a> Source: [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-18-create-cert.png](#5f0dfccd8ffa52ef1ce6d37bc0bd5101237c3a01667)
 * Error Code: handback_transform_failed
@@ -2149,6 +2476,12 @@
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\273d642653e763d86a86fbcba353035eb7c6c9fa.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
 
+##### <a name='16b3da1c4bf72207e82f739e7514ca8213734d0e689handback_transform_failed'></a> Source: [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-40-gen_cfg_pol.png](#16b3da1c4bf72207e82f739e7514ca8213734d0e689)
+* Error Code: handback_transform_failed
+* Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\16b3da1c4bf72207e82f739e7514ca8213734d0e.png failed.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\16b3da1c4bf72207e82f739e7514ca8213734d0e.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
+
 ##### <a name='3d880c7dd363e7ad24a3e00bdd3ee15620112b31692handback_transform_failed'></a> Source: [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-43-add-pol-to-grp.png](#3d880c7dd363e7ad24a3e00bdd3ee15620112b31692)
 * Error Code: handback_transform_failed
 * Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\3d880c7dd363e7ad24a3e00bdd3ee15620112b31.png failed.
@@ -2190,6 +2523,12 @@
 * Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\b66f27911ef0c49c280c7206bcccd777476c5268.png failed.
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\b66f27911ef0c49c280c7206bcccd777476c5268.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
+
+##### <a name='3d897adfae78fa4be7946051155da197121b1213717handback_transform_failed'></a> Source: [InTuneDocs\media\android_per_app_vpn_oma_uri.PNG](#3d897adfae78fa4be7946051155da197121b1213717)
+* Error Code: handback_transform_failed
+* Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\3d897adfae78fa4be7946051155da197121b1213.PNG failed.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\3d897adfae78fa4be7946051155da197121b1213.PNG failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
 
 ##### <a name='c9de22ab98a68249887572a1fbfdd9f11b02faad733handback_transform_failed'></a> Source: [InTuneDocs\media\AppManagement\Android_OneDriveSetPIN.png](#c9de22ab98a68249887572a1fbfdd9f11b02faad733)
 * Error Code: handback_transform_failed
@@ -2293,11 +2632,23 @@
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\cd9cbfed5ec82b480656983649fd5a2db0731a92.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
 
+##### <a name='19064a8aaede330ac742af6e3a735598ac868733861handback_transform_failed'></a> Source: [InTuneDocs\media\em-vision.png](#19064a8aaede330ac742af6e3a735598ac868733861)
+* Error Code: handback_transform_failed
+* Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\19064a8aaede330ac742af6e3a735598ac868733.png failed.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\19064a8aaede330ac742af6e3a735598ac868733.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
+
 ##### <a name='ddde252b39eb9f14daf8aacc6d8f08325fc14741864handback_transform_failed'></a> Source: [InTuneDocs\media\Email-Walkthrough\Email-Walkthrough-10.png](#ddde252b39eb9f14daf8aacc6d8f08325fc14741864)
 * Error Code: handback_transform_failed
 * Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\ddde252b39eb9f14daf8aacc6d8f08325fc14741.png failed.
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\ddde252b39eb9f14daf8aacc6d8f08325fc14741.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
+
+##### <a name='eb9548ac782d7a41b782c682cee305e41fc5a171865handback_transform_failed'></a> Source: [InTuneDocs\media\Email-Walkthrough\Email-Walkthrough-11.png](#eb9548ac782d7a41b782c682cee305e41fc5a171865)
+* Error Code: handback_transform_failed
+* Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\eb9548ac782d7a41b782c682cee305e41fc5a171.png failed.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\eb9548ac782d7a41b782c682cee305e41fc5a171.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
 
 ##### <a name='f363094808565774a0bcc3663d2d926a4cb85354867handback_transform_failed'></a> Source: [InTuneDocs\media\Email-Walkthrough\Email-Walkthrough-3.png](#f363094808565774a0bcc3663d2d926a4cb85354867)
 * Error Code: handback_transform_failed
@@ -2365,11 +2716,23 @@
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\2415ec9b08debedea47e3ec5343224e924f205d1.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
 
+##### <a name='1b8c364e396cb2f1c54c21971a41e4dd65cd3322964handback_transform_failed'></a> Source: [InTuneDocs\media\MAM_BYOD_November.png](#1b8c364e396cb2f1c54c21971a41e4dd65cd3322964)
+* Error Code: handback_transform_failed
+* Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\1b8c364e396cb2f1c54c21971a41e4dd65cd3322.png failed.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\1b8c364e396cb2f1c54c21971a41e4dd65cd3322.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
+
 ##### <a name='f4d5c5fef97041f56707e5ef5b29d189f28c283a979handback_transform_failed'></a> Source: [InTuneDocs\media\Microsoft-Connect.png](#f4d5c5fef97041f56707e5ef5b29d189f28c283a979)
 * Error Code: handback_transform_failed
 * Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\f4d5c5fef97041f56707e5ef5b29d189f28c283a.png failed.
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\f4d5c5fef97041f56707e5ef5b29d189f28c283a.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
+
+##### <a name='5ec77117337cc48dbabaa2e5326d26ae72999eb81051handback_transform_failed'></a> Source: [InTuneDocs\media\SCEP_IIS_max_URL.png](#5ec77117337cc48dbabaa2e5326d26ae72999eb81051)
+* Error Code: handback_transform_failed
+* Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\5ec77117337cc48dbabaa2e5326d26ae72999eb8.png failed.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\5ec77117337cc48dbabaa2e5326d26ae72999eb8.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
 
 ##### <a name='c2b1925fbc54bd76795cf5a05d67e90eede9dbde1054handback_transform_failed'></a> Source: [InTuneDocs\media\scep_ndes_extensions.jpg](#c2b1925fbc54bd76795cf5a05d67e90eede9dbde1054)
 * Error Code: handback_transform_failed
@@ -2395,6 +2758,12 @@
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\d9f855bd8ed1be5b04f9b41e64bf1b029f480a57.jpg failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
 
+##### <a name='f137a08c583910b12138f0d94f34506f831b8d771060handback_transform_failed'></a> Source: [InTuneDocs\media\scep_ndes_subject_name.jpg](#f137a08c583910b12138f0d94f34506f831b8d771060)
+* Error Code: handback_transform_failed
+* Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\f137a08c583910b12138f0d94f34506f831b8d77.jpg failed.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\f137a08c583910b12138f0d94f34506f831b8d77.jpg failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
+
 ##### <a name='cc76f1067638bc79cd2654f89c1a2a8642256eb91061handback_transform_failed'></a> Source: [InTuneDocs\media\SCEP_NDES_URL.png](#cc76f1067638bc79cd2654f89c1a2a8642256eb91061)
 * Error Code: handback_transform_failed
 * Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\cc76f1067638bc79cd2654f89c1a2a8642256eb9.png failed.
@@ -2406,6 +2775,12 @@
 * Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\c49da9a0a811d8c1bfb2f20b64a694558d09313b.png failed.
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\c49da9a0a811d8c1bfb2f20b64a694558d09313b.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
+
+##### <a name='8424e87bd47f3f7f08fd4a3ff62f6f43e6c2f1601077handback_transform_failed'></a> Source: [InTuneDocs\media\Windows-Device-Enrollment.png](#8424e87bd47f3f7f08fd4a3ff62f6f43e6c2f1601077)
+* Error Code: handback_transform_failed
+* Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\8424e87bd47f3f7f08fd4a3ff62f6f43e6c2f160.png failed.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\8424e87bd47f3f7f08fd4a3ff62f6f43e6c2f160.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
 
 ##### <a name='3f9a65b1057f766025d4f3a37fdea7df0c7e55921078handback_transform_failed'></a> Source: [InTuneDocs\media\Windows-Phone-Enrollment.png](#3f9a65b1057f766025d4f3a37fdea7df0c7e55921078)
 * Error Code: handback_transform_failed
@@ -2430,6 +2805,12 @@
 * Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\b3a60bde0102f405e115743da44fe7b71c503d07.png failed.
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\b3a60bde0102f405e115743da44fe7b71c503d07.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
+
+##### <a name='1f93d9ac0e0c6b52b287ef040a0f172c4ecfc6931185handback_transform_failed'></a> Source: [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-cfg-pol-17-id-passw-signin.png](#1f93d9ac0e0c6b52b287ef040a0f172c4ecfc6931185)
+* Error Code: handback_transform_failed
+* Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\1f93d9ac0e0c6b52b287ef040a0f172c4ecfc693.png failed.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\1f93d9ac0e0c6b52b287ef040a0f172c4ecfc693.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
 
 ##### <a name='5f0dfccd8ffa52ef1ce6d37bc0bd5101237c3a011186handback_transform_failed'></a> Source: [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-cfg-pol-18-create-cert.png](#5f0dfccd8ffa52ef1ce6d37bc0bd5101237c3a011186)
 * Error Code: handback_transform_failed
@@ -2491,6 +2872,12 @@
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\273d642653e763d86a86fbcba353035eb7c6c9fa.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
 
+##### <a name='16b3da1c4bf72207e82f739e7514ca8213734d0e1208handback_transform_failed'></a> Source: [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-cfg-pol-40-gen_cfg_pol.png](#16b3da1c4bf72207e82f739e7514ca8213734d0e1208)
+* Error Code: handback_transform_failed
+* Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\16b3da1c4bf72207e82f739e7514ca8213734d0e.png failed.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\16b3da1c4bf72207e82f739e7514ca8213734d0e.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
+
 ##### <a name='3d880c7dd363e7ad24a3e00bdd3ee15620112b311211handback_transform_failed'></a> Source: [InTuneDocs\Understand\media\30-day-trial-walkthrus\30day-cfg-pol-43-add-pol-to-grp.png](#3d880c7dd363e7ad24a3e00bdd3ee15620112b311211)
 * Error Code: handback_transform_failed
 * Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\3d880c7dd363e7ad24a3e00bdd3ee15620112b31.png failed.
@@ -2533,11 +2920,23 @@
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\b66f27911ef0c49c280c7206bcccd777476c5268.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
 
+##### <a name='19064a8aaede330ac742af6e3a735598ac8687331240handback_transform_failed'></a> Source: [InTuneDocs\Understand\media\em-vision.png](#19064a8aaede330ac742af6e3a735598ac8687331240)
+* Error Code: handback_transform_failed
+* Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\19064a8aaede330ac742af6e3a735598ac868733.png failed.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\19064a8aaede330ac742af6e3a735598ac868733.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
+
 ##### <a name='ddde252b39eb9f14daf8aacc6d8f08325fc147411242handback_transform_failed'></a> Source: [InTuneDocs\Understand\media\Email-Walkthrough\Email-Walkthrough-10.png](#ddde252b39eb9f14daf8aacc6d8f08325fc147411242)
 * Error Code: handback_transform_failed
 * Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\ddde252b39eb9f14daf8aacc6d8f08325fc14741.png failed.
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\ddde252b39eb9f14daf8aacc6d8f08325fc14741.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
+
+##### <a name='eb9548ac782d7a41b782c682cee305e41fc5a1711243handback_transform_failed'></a> Source: [InTuneDocs\Understand\media\Email-Walkthrough\Email-Walkthrough-11.png](#eb9548ac782d7a41b782c682cee305e41fc5a1711243)
+* Error Code: handback_transform_failed
+* Error Message: Handback file: C:\ol\master\EM.handback\d39e40\ol-handback\Microsoft\IntuneDocs-pr.cs-cz\master\eb9548ac782d7a41b782c682cee305e41fc5a171.png failed.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\EM.handback\\d39e40\\ol-handback\\Microsoft\\IntuneDocs-pr.cs-cz\\master\\eb9548ac782d7a41b782c682cee305e41fc5a171.png failed.","internal_error_retriable":false,"exception_message":"Invalid character in the given encoding. Line 1, position 1.","exception_type":"System.Xml.XmlException","stack_trace":"   at System.Xml.XmlTextReaderImpl.Throw(Exception e)\r\n   at System.Xml.XmlTextReaderImpl.InvalidCharRecovery(Int32& bytesCount, Int32& charsCount)\r\n   at System.Xml.XmlTextReaderImpl.GetChars(Int32 maxCharsCount)\r\n   at System.Xml.XmlTextReaderImpl.ReadData()\r\n   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)\r\n   at System.Xml.XmlTextReaderImpl.Read()\r\n   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)\r\n   at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.ValidateHandbackFile(TranslationStateItem translationStateItem, String filePath, String handbackPriority, String handoffFilePath) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 205\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 396","extended_information":null}
 
 ##### <a name='f363094808565774a0bcc3663d2d926a4cb853541245handback_transform_failed'></a> Source: [InTuneDocs\Understand\media\Email-Walkthrough\Email-Walkthrough-3.png](#f363094808565774a0bcc3663d2d926a4cb853541245)
 * Error Code: handback_transform_failed
