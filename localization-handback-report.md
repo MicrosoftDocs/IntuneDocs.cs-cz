@@ -1,39 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [InTuneDocs\GetStarted\start-with-a-paid-subscription-to-microsoft-intune-step-6.md](https://github.com/Microsoft/IntuneDocs-pr/blob/2847c9af38ae0ddddc8d76d548ae7abddc63e4c1/InTuneDocs/GetStarted/start-with-a-paid-subscription-to-microsoft-intune-step-6.md) | InSyncHandedBackSuccess | [Details](#b3b65a1fd1e426bf566f39382321a29e913f102c533)
- [InTuneDocs\GetStarted\supported-web-browsers.md](https://github.com/Microsoft/IntuneDocs-pr/blob/2847c9af38ae0ddddc8d76d548ae7abddc63e4c1/InTuneDocs/GetStarted/supported-web-browsers.md) | InSyncHandedBackSuccess | [Details](#2524ff0c6139029b162fd58ed209e2d1c284df76538)
 
 ## Item Details
-##### <a name='b3b65a1fd1e426bf566f39382321a29e913f102c533'></a> Source: [InTuneDocs\GetStarted\start-with-a-paid-subscription-to-microsoft-intune-step-6.md](https://github.com/Microsoft/IntuneDocs-pr/blob/2847c9af38ae0ddddc8d76d548ae7abddc63e4c1/InTuneDocs/GetStarted/start-with-a-paid-subscription-to-microsoft-intune-step-6.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [InTuneDocs\GetStarted\start-with-a-paid-subscription-to-microsoft-intune-step-6.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/9457e504936c2a98b1ad85d6e073b703347935d1/InTuneDocs/GetStarted/start-with-a-paid-subscription-to-microsoft-intune-step-6.md)
-* Handoff File: [start-with-a-paid-subscription-to-microsoft-intune-step-6.26bbca609d76d1fb1a0590400838975852c4a6ca.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/1235c94e37fba53b6f4f500a324e36b2adf5acde/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/start-with-a-paid-subscription-to-microsoft-intune-step-6.26bbca609d76d1fb1a0590400838975852c4a6ca.cs-cz.xlf)
-* Handoff Datetime: 2016-06-16 22:58:51
-* Handoff Reason: Include
-* Archive File: [start-with-a-paid-subscription-to-microsoft-intune-step-6.26bbca609d76d1fb1a0590400838975852c4a6ca.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/60858f7ed26490c72e3cd7520f63982000da90c5/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/start-with-a-paid-subscription-to-microsoft-intune-step-6.26bbca609d76d1fb1a0590400838975852c4a6ca.cs-cz.xlf)
-* Archive Datetime: 2016-06-17 00:27:33
-* Handback File: [start-with-a-paid-subscription-to-microsoft-intune-step-6.26bbca609d76d1fb1a0590400838975852c4a6ca.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/9f29619618dd41368c3b2a7066e3ee516ea4a94a/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/start-with-a-paid-subscription-to-microsoft-intune-step-6.26bbca609d76d1fb1a0590400838975852c4a6ca.cs-cz.xlf)
-* Handback Datetime: 2016-06-30 22:10:37
-* [Back to Top](#report-top)
-
-##### <a name='2524ff0c6139029b162fd58ed209e2d1c284df76538'></a> Source: [InTuneDocs\GetStarted\supported-web-browsers.md](https://github.com/Microsoft/IntuneDocs-pr/blob/2847c9af38ae0ddddc8d76d548ae7abddc63e4c1/InTuneDocs/GetStarted/supported-web-browsers.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [InTuneDocs\GetStarted\supported-web-browsers.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/9457e504936c2a98b1ad85d6e073b703347935d1/InTuneDocs/GetStarted/supported-web-browsers.md)
-* Handoff File: [supported-web-browsers.694fda57d2613d074bb746c8ebba4386a7a3c754.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/1235c94e37fba53b6f4f500a324e36b2adf5acde/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/supported-web-browsers.694fda57d2613d074bb746c8ebba4386a7a3c754.cs-cz.xlf)
-* Handoff Datetime: 2016-06-16 22:58:51
-* Handoff Reason: Include
-* Archive File: [supported-web-browsers.694fda57d2613d074bb746c8ebba4386a7a3c754.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/60858f7ed26490c72e3cd7520f63982000da90c5/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/supported-web-browsers.694fda57d2613d074bb746c8ebba4386a7a3c754.cs-cz.xlf)
-* Archive Datetime: 2016-06-17 00:27:33
-* Handback File: [supported-web-browsers.694fda57d2613d074bb746c8ebba4386a7a3c754.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/9f29619618dd41368c3b2a7066e3ee516ea4a94a/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/supported-web-browsers.694fda57d2613d074bb746c8ebba4386a7a3c754.cs-cz.xlf)
-* Handback Datetime: 2016-06-30 22:10:37
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
