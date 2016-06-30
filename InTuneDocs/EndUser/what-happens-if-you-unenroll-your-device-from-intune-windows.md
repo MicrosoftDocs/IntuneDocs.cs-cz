@@ -1,34 +1,27 @@
 ---
-# required metadata
-
-title: Co se stane, když zrušíte registraci zařízení v Intune? | Microsoft Intune
-description:
-keywords:
+title: "Co se stane, když zrušíte registraci zařízení v Intune? | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 47e03edb-0c57-4e25-8e89-4a1069267b8c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: priyar
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 1244d931d1bd3db012fbcfe0bd055d1fd4f2d88a
+ms.openlocfilehash: f0108b884439aac9661c9f36f85b47d80209d155
+
 
 ---
 
 
 # Co se stane, když zrušíte registraci zařízení v Intune?
 
-Když odinstalujete aplikaci Portál společnosti ze svého zařízení, zruší se také jeho registrace v Intune. Další informace najdete pomocí odkazu v části V tomto článku, který odpovídá použitému zařízení.
+Další informace najdete pomocí odkazu v části V tomto článku, který odpovídá použitému zařízení.
 
 - [Windows 10 Mobile, 8.1, Windows 8, Windows 7, Vista](#windows-10-mobile--8-1,-windows-8,-windows-7,-vista)
 - [Windows 10, Windows 8.1 nebo Windows Phone 8](#windows-10--windows-8-1-or-windows-phone-8)
@@ -92,11 +85,12 @@ Při odebrání zařízení se systémem Windows RT dojde k následujícímu:
 
 -   Nastavení, která byla v zařízení změněna od jeho přidání, například zakázání fotoaparátu/kamery nebo vyžadování určité délky hesla, již nebudou platit.
 
-Pokud máte nějaké otázky, na které byste potřebovali odpověď, a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO2-->
 
 

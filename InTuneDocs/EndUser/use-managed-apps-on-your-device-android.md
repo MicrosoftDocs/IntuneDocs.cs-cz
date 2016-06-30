@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Použití spravovaných aplikací na zařízení | Microsoft Intune
-description:
-keywords:
+title: "Použití spravovaných aplikací na zařízení | Microsoft Intune"
+description: 
+keywords: 
 author: staciebarker
 manager: jeffgilb
-ms.date: 05/11/2016
+ms.date: 05/31/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: ed10a62c-b026-4ad3-ac41-641933522df2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: maxles
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 0bb435b87c937ea118a0794c8332b9a8f268d36e
+ms.openlocfilehash: 5a25d845113ef6a3cb402923ef451fab63138979
+
 
 ---
 
@@ -66,22 +59,23 @@ Tady jsou některé příklady možností, které může správce IT spravovat v
 
 Některé běžné aplikace, které může spravovat vaše oddělení IT:
 
--   Spravovaný webový prohlížeč
+-   Intune Managed Browser
 
--   Spravovaný prohlížeč obrázků
+-   Intune Image Viewer
 
--   Spravovaný prohlížeč souborů PDF
+-   Intune PDF Viewer
 
--   Spravovaný přehrávač audiovizuálních souborů
+-   Intune AV Player
 
 -   Microsoft Word, Excel, PowerPoint
 
-Další informace o spravovaných aplikacích na vašem zařízení vám poskytne správce IT. Pokud nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Další informace o spravovaných aplikacích na vašem zařízení vám poskytne správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 ### Související témata
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO2-->
 
 

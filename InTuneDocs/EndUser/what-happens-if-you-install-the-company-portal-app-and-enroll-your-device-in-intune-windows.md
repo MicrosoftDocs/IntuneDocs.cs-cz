@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune? | Microsoft Intune
-description:
-keywords:
+title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune? | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: d65e3452-5bbf-4d26-a06e-401ddcc47f39
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: priyar
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
+ms.openlocfilehash: e2da1f39d0cfe05bb0ea1c149c91e5ff82312c01
+
 
 ---
 
@@ -125,12 +118,13 @@ Když přidáte počítač:
 
 -   Může ve vašem počítači vynutit dodržování určitých zásad. Například může vyžadovat, abyste si v počítači nastavili heslo nebo PIN kód, přičemž v případě příliš velkého počtu chybných pokusů o zadání hesla může dojít k zablokování počítače nebo odstranění všech dat z pevného disku počítače.
 
-Pokud máte nějaké otázky, na které byste potřebovali odpověď, a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO2-->
 
 

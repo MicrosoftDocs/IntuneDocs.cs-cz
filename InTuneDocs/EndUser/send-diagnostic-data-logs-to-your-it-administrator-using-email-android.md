@@ -1,34 +1,27 @@
 ---
-# required metadata
-
-title: Odeslání protokolů s diagnostickými daty ze zařízení správci IT e-mailem | Microsoft Intune
-description:
-keywords:
+title: "Odeslání protokolů s diagnostickými daty ze zařízení správci IT e-mailem | Microsoft Intune"
+description: 
+keywords: 
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/31/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 85c868e7-8d63-480c-9770-4e99614a5c94
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: arnab
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 0bb435b87c937ea118a0794c8332b9a8f268d36e
+ms.openlocfilehash: 57646f103fb0520295729a89a30692c657896e55
+
 
 ---
 
 
 # Odeslání protokolů s diagnostickými daty ze zařízení správci IT e-mailem
 
-Pokud při práci se školními nebo podnikovými aplikacemi nebo s aplikací Portál společnosti dojde k chybě v zařízení s Androidem, můžete odeslat protokoly s diagnostickými daty, které vašemu správci IT pomůžou chybu pochopit a vyřešit. Pokud chcete do protokolů zahrnout všechny podrobnosti, které vašemu správci IT pomůžou problém pochopit, zapněte funkci Podrobné protokolování.
+Pokud při práci se školními nebo podnikovými aplikacemi nebo s aplikací Portál společnosti dojde k chybě v zařízení s Androidem, můžete odeslat protokoly s diagnostickými daty, které vašemu správci IT pomůžou chybu pochopit a vyřešit. Pokud chcete do protokolů zahrnout všechny podrobnosti, které vašemu správci IT pomůžou problém pochopit, zapněte funkci Podrobné protokolování. O [podrobném protokolování](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md) si můžete přečíst víc.
 
 Zapnutí podrobného protokolování:
 
@@ -54,6 +47,7 @@ Zapnutí podrobného protokolování:
 ### Související témata
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO2-->
 
 

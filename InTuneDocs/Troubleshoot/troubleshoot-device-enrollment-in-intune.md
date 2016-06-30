@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Řešení potíží s registrací | Microsoft Intune
-description:
-keywords:
+title: "Řešení potíží s registrací | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 05/26/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 502fb25c0dc050fb3f08fbba4d02148add3faf8e
+ms.openlocfilehash: ae2b35321b0664c5b54708d7389e9eb0262bb2d6
+
 
 ---
 
@@ -144,29 +137,6 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 
 **Řešení:** Zákazníci, kteří mají předplatné Microsoft Office 365, využívají jednotné přihlašování (SSO) prostřednictvím služby AD FS 2.0 a mají pro přípony UPN uživatelů v rámci organizace více domén nejvyšší úrovně (například @contoso.com nebo @fabrikam.com), musí pro každou příponu nasadit samostatnou instanci federační služby AD FS 2.0.  K dispozici je nyní [kumulativní aktualizace pro službu AD FS 2.0](http://support.microsoft.com/kb/2607496), která ve spojení s přepínačem **SupportMultipleDomain** umožňuje zajistit, aby AD FS server tento scénář podporoval bez vyžadování dalších serverů služby AD FS 2.0. Další informace najdete na [tomto blogu](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
 
-### Počítač už je zaregistrovaný – chyba hr 0x8007064c
-**Problém:** Registrace selže s chybou **Počítač už je zaregistrovaný**. V protokolu registrace se zobrazuje chyba **hr 0x8007064c**.
-  
-Důvodem může být to, že již byl počítač zaregistrován dříve nebo je na něm klonovaná image počítače, který už je zaregistrovaný. Na počítači se stále nachází certifikát předchozího účtu.
-
-
-
-**Řešení:** 
-
-1. V nabídce **Start** zvolte **Spustit** -> **MMC**. 
-1. **Soubor** -> **Přidat/odebrat modul snap-in**.
-1. Poklikejte na **Certifikáty**, zvolte **Účet počítače**, **Další**, vyberte **Místní počítač**.
-1. Poklikejte na **Certifikáty (místní počítač)**, zvolte **Osobní/Certifikáty**. 
-1. Vyhledejte certifikát Intune, který vystavila certifikační autorita Sc_Online_Issuing. Pokud existuje, odstraňte ho.
-1. Pokud existuje tento klíč registru: ** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey**, odstraňte ho a s ním i všechny podklíče.
-1. Pokuste se o opětovnou registraci. 
-1. Pokud ani tak počítač není možné zaregistrovat, vyhledejte a odstraňte tento klíč, pokud existuje: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**. 
-1. Pokuste se o opětovnou registraci. 
-
-    > [!IMPORTANT]
-    > Tato část, metoda nebo úloha obsahují kroky, které vám pomohou s úpravou registru. Pokud ale budete měnit registr a uděláte tam něco špatně, můžete mít velké problémy s počítačem. Proto je důležité, abyste pečlivě postupovali podle těchto kroků. Než začnete registr měnit, pro jistotu si ho zazálohujte. Pak budete moct v případě problémů registr obnovit.
-    > Další informace o tom, jak zálohovat a obnovovat registr, najdete v tématu [Postup zálohování a obnovení registru v systému Windows](https://support.microsoft.com/en-us/kb/322756).
-
 
 ## Problémy na zařízeních s Androidem
 ### Neúspěch instalace profilu
@@ -249,6 +219,31 @@ Důvodem může být to, že již byl počítač zaregistrován dříve nebo je 
 ### Další chyby registrace zařízení s iOS
 Seznam chyb registrace iOS je uvedený v dokumentaci pro uživatele zařízení v části [Při pokusu o registraci zařízení v Intune se zobrazí chyby](/intune/enduser/using-your-ios-or-mac-os-x-device-with-intune).
 
+## Potíže s počítačem
+
+### Počítač už je zaregistrovaný – chyba hr 0x8007064c
+**Problém:** Registrace selže s chybou **Počítač už je zaregistrovaný**. V protokolu registrace se zobrazuje chyba **hr 0x8007064c**.
+  
+Důvodem může být to, že již byl počítač zaregistrován dříve nebo je na něm klonovaná image počítače, který už je zaregistrovaný. Na počítači se stále nachází certifikát předchozího účtu.
+
+
+
+**Řešení:** 
+
+1. V nabídce **Start** zvolte **Spustit** -> **MMC**. 
+1. **Soubor** -> **Přidat/odebrat modul snap-in**.
+1. Poklikejte na **Certifikáty**, zvolte **Účet počítače**, **Další**, vyberte **Místní počítač**.
+1. Poklikejte na **Certifikáty (místní počítač)**, zvolte **Osobní/Certifikáty**. 
+1. Vyhledejte certifikát Intune, který vystavila certifikační autorita Sc_Online_Issuing. Pokud existuje, odstraňte ho.
+1. Pokud existuje tento klíč registru: ** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey**, odstraňte ho a s ním i všechny podklíče.
+1. Pokuste se o opětovnou registraci. 
+1. Pokud ani tak počítač není možné zaregistrovat, vyhledejte a odstraňte tento klíč, pokud existuje: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**. 
+1. Pokuste se o opětovnou registraci. 
+
+    > [!IMPORTANT]
+    > Tato část, metoda nebo úloha obsahují kroky, které vám pomohou s úpravou registru. Pokud ale budete měnit registr a uděláte tam něco špatně, můžete mít velké problémy s počítačem. Proto je důležité, abyste pečlivě postupovali podle těchto kroků. Než začnete registr měnit, pro jistotu si ho zazálohujte. Pak budete moct v případě problémů registr obnovit.
+    > Další informace o tom, jak zálohovat a obnovovat registr, najdete v tématu [Postup zálohování a obnovení registru v systému Windows](https://support.microsoft.com/en-us/kb/322756).
+
 ## Obecné kódy chyb registrace
 
 |Kód chyby|Možný problém|Navržené řešení|
@@ -276,6 +271,7 @@ Seznam chyb registrace iOS je uvedený v dokumentaci pro uživatele zařízení 
 
 ### Další kroky
 Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+
 
 
 <!--HONumber=Jun16_HO2-->

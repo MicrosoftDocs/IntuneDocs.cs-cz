@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune? | Microsoft Intune
-description:
-keywords:
+title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune? | Microsoft Intune"
+description: 
+keywords: 
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/31/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: d22f5aea-7be4-419b-b51b-a522ca037b69
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: arnab
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 0bb435b87c937ea118a0794c8332b9a8f268d36e
+ms.openlocfilehash: e2f5849a63dceabb42b910b50f0257bc823a251a
+
 
 ---
 
@@ -38,7 +31,7 @@ Když nainstalujete aplikaci Portál společnosti a potom v ní zaregistrujete s
 
 -   Obnovení továrního nastavení telefonu v případě ztráty nebo odcizení
 
-Když přidáte zařízení se systémem Android, udělujete správci IT oprávnění k přístupu k zařízení. Může provádět například následující akce:
+Když zaregistrujete zařízení se systémem Android, udělujete správci IT oprávnění pro přístup k zařízení. Může provádět například následující akce:
 
 -   Obnovit v zařízení výchozí tovární nastavení. To je užitečné v případě ztráty nebo odcizení zařízení.
 
@@ -60,11 +53,12 @@ Když přidáte zařízení se systémem Android, udělujete správci IT oprávn
 
     -   Odeslání všech aktualizací inventáře aplikací společnosti (tyto aktualizace neobsahují osobní informace).
 
-Pokud máte nějaké otázky, na které byste potřebovali odpověď, a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO2-->
 
 

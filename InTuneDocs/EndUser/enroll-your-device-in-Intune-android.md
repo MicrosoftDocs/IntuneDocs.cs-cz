@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Registrace zařízení s Androidem v Intune | Microsoft Intune
-description:
-keywords:
+title: "Registrace zařízení s Androidem v Intune | Microsoft Intune"
+description: 
+keywords: 
 author: staciebarker
 manager: jeffgilb
-ms.date: 05/24/2016
+ms.date: 06/14/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 0ed3a002-7533-4001-ae24-e10b64b66620
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: arnab
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 0bb435b87c937ea118a0794c8332b9a8f268d36e
+ms.openlocfilehash: 76cc1a43e09039285be76858155ef22f7b41cf9b
+
 
 ---
 
@@ -30,7 +23,7 @@ ms.suite: ems
 
 Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svoje zařízení s Androidem zaregistrovat a získat tak přístup k e-mailům, souborům a dalším prostředkům společnosti. Registrace zařízení umožní vašemu IT oddělení spravovat tyto školní nebo firemní prostředky a zajistit jejich zabezpečení a současně vám dá volnost, abyste ke své práci využívali zařízení, kterému dáváte přednost. Další informace o registraci najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-android.md).
 
-Tyto pokyny pro registraci jsou určené pro zařízení Samsung Knox s Androidem a „nativní“ zařízení s Androidem (jiná než Samsung Knox). Pokud chcete zjistit, jestli máte zařízení Samsung Knox, přejděte na **Nastavení** &gt; **O telefonu**. Pokud se tu nezobrazí slovo Knox, máte nativní zařízení s Androidem.
+Tyto pokyny pro registraci jsou určené pro zařízení Samsung Knox s Androidem a „nativní“ zařízení s Androidem (jiná než Samsung Knox). Pokud chcete zjistit, jestli máte zařízení Samsung Knox, přejděte na **Nastavení** &gt; **O zařízení**. Pokud se tu nezobrazí verze Knoxu, máte nativní zařízení s Androidem.
 
 Před registrací nebo po ní se může zobrazit výzva k výběru kategorie, která nejlépe vystihuje způsob použití vašeho zařízení. Váš správce IT pomocí této aplikace určuje, ke kterým aplikacím máte mít přístup.
 
@@ -57,7 +50,7 @@ Pokud při pokusu o registraci zařízení do služby Intune dojde k chybě, pro
 
     ![android-company-portal-sign-in](./media/and-enroll-3a-allow-phone-access.png)
 
-    Pokud se zobrazí tato zpráva, klepněte na **POVOLIT**. Klepnout na POVOLIT je bezpečné, protože **Microsoft nikdy netelefonuje ani nespravuje telefonní hovory**. Text zprávy určuje společnost Google a Microsoft ho nemůže změnit. Když povolíte přístup, povolíte na svém zařízení jenom zápis datových protokolů na kartu SD zařízení, takže tyto protokoly můžete přesouvat pomocí kabelu USB. Tato funkce se využije k odeslání protokolů správci IT, pokud máte s používáním aplikace Portál společnosti potíže. Informace o [odeslání chyb registrace správci IT](send-enrollment-errors-to-your-it-administrator-android.md).
+    Pokud se zobrazí tato zpráva, klepněte na **POVOLIT**. Klepnout na POVOLIT je bezpečné, protože **Microsoft nikdy netelefonuje ani nespravuje telefonní hovory**. Text zprávy určuje společnost Google a Microsoft ho nemůže změnit. Když povolíte přístup, povolíte na svém zařízení jenom zápis datových protokolů na kartu SD zařízení, takže tyto protokoly můžete přesouvat pomocí kabelu USB.
 
     Pokud přístup odepřete, při příštím přihlášení k portálu společnosti se zpráva zobrazí znovu, ale další zprávy už můžete vypnout zaškrtnutím políčka **Příště se už neptat**.  Pokud se později rozhodnete povolit přístup, použijte možnost **Nastavení** &gt; **Aplikace** &gt; **Portál společnosti** &gt; **Oprávnění** &gt; **Telefon** a tato oprávnění aktivujte.
 
@@ -65,7 +58,7 @@ Pokud při pokusu o registraci zařízení do služby Intune dojde k chybě, pro
 
     ![android-company-portal-sign-in](./media/and-enroll-3b-allow-contacts-access.png)
 
-    Pokud se zobrazí tato zpráva, klepněte na **POVOLIT**. Klepnout na POVOLIT je bezpečné, protože **Microsoft nikdy nevyužívá přístup k vašim kontaktům**. Text zprávy určuje společnost Google a Microsoft ho nemůže změnit. Když povolíte přístup, umožňuje aplikaci Portál společnosti přístup jenom k datovým protokolům při řešení problémů s vaším zařízením.
+    Pokud se zobrazí tato zpráva, klepněte na **POVOLIT**. Klepnout na POVOLIT je bezpečné, protože **Microsoft nikdy nevyužívá přístup k vašim kontaktům**. Text zprávy určuje společnost Google a Microsoft ho nemůže změnit. Když povolíte přístup, umožňuje aplikaci Portál společnosti jenom vytvářet, používat a spravovat váš pracovní účet.
 
     Pokud přístup odepřete, při příštím klepnutí na **Odeslat data** se zpráva zobrazí znovu, ale další zprávy už můžete vypnout zaškrtnutím políčka **Příště se už neptat**. Pokud se později rozhodnete povolit přístup, použijte možnost **Nastavení** &gt; **Aplikace** &gt; **Portál společnosti** &gt; **Oprávnění** &gt; **Úložiště** a pak tato oprávnění aktivujte.
 
@@ -97,7 +90,7 @@ Pokud při pokusu o registraci zařízení do služby Intune dojde k chybě, pro
 
     ![Zadání kódu PIN nebo hesla](./media/and-enroll-6-PIN-native.png)
 
-13.  Postupujte podle pokynů níže, které odpovídají typu používaného zařízení (nativní Android nebo Samsung Knox). Pokud chcete zjistit, jestli máte zařízení Samsung Knox, přejděte na **Nastavení** &gt; **O telefonu**. Pokud se tu nezobrazí slovo Knox, máte nativní zařízení s Androidem.
+13.  Postupujte podle pokynů níže, které odpovídají typu používaného zařízení (nativní Android nebo Samsung Knox). Pokud chcete zjistit, jestli máte zařízení Samsung Knox, přejděte na **Nastavení** &gt; **O zařízení**. Pokud se tu nezobrazí verze Knoxu, máte nativní zařízení s Androidem.
 
     -   Nativní zařízení (jiné než Samsung Knox): Na obrazovce **Název certifikátu** přijměte výchozí certifikát klepnutím na **OK**.
 
@@ -119,12 +112,13 @@ Pokud při pokusu o registraci zařízení do služby Intune dojde k chybě, pro
 
     ![Obrazovka Nastavení firemního přístupu je hotové](./media/and-enroll-10-comp-access-setup-complete.png)
 
-Než začnete instalovat firemní aplikace, přejděte na **Nastavení** &gt; **Zabezpečení** a zapněte **Neznámé zdroje**. Pokud před zahájením instalace firemních aplikací tuto možnost nezapnete, zobrazí se zpráva „Instalace blokována. Z důvodů zabezpečení je v telefonu nastavené blokování instalací pro aplikace získané z neznámého zdroje.“ Klepnutím na **Nastavení** v chybovém dialogovém okně můžete přejít na možnost **Neznámé zdroje**.
+Než začnete instalovat firemní aplikace, přejděte na **Nastavení** &gt; **Zabezpečení** a zapněte **Neznámé zdroje**. Pokud před zahájením instalace firemních aplikací tuto možnost nezapnete, zobrazí se zpráva „Instalace blokována. Z důvodů zabezpečení je v zařízení nastavené blokování instalací pro aplikace získané z neznámého zdroje.“ Klepnutím na **Nastavení** v chybovém dialogovém okně můžete přejít na možnost **Neznámé zdroje**.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
+
 
 
 <!--HONumber=Jun16_HO2-->

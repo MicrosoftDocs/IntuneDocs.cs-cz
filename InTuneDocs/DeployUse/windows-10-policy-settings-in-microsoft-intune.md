@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Nastavení zásad pro Windows 10 | Microsoft Intune
-description:
-keywords:
+title: "Nastavení zásad pro Windows 10 | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: heenamac
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: b41c9f0d7c449d83f8359aaea21b880b557a55de
+ms.openlocfilehash: 0f2bdbf972ab953ff8a403c6eb9f484bb0a409a9
+
 
 ---
 
@@ -31,7 +24,7 @@ Nastavení zásad, která jsou uvedena v tomto tématu, vám pomohou nakonfiguro
 
 ## Obecná nastavení zásad konfigurace
 
-Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 10 Desktop a Windows 10 Mobile použijte **obecné zásady konfigurace** služby Microsoft Intune pro Windows 10:
+Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 10 Desktop a Windows 10 Mobile použijte **obecné zásady konfigurace** služby Microsoft Intune pro Windows 10. Tyto zásady nejde použít, pokud spravujete počítače se systémem Windows 10 pomocí klientského softwaru Intune.
 
 
 ### Heslo
@@ -332,6 +325,7 @@ Pokud chcete používat vlastní zásadu URI Windows, musí se všechna zaříze
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO2-->
 
 

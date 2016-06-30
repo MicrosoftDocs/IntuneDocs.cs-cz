@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune? | Microsoft Intune
-description:
-keywords:
+title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune? | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: a2467c02-aac5-41c8-b788-cbda830941ef
-
-# optional metadata
-
-ROBOTS:
-#audience:
-#ms.devlang:
+ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
+ms.openlocfilehash: a83edd3ed51bddafd6f057ed9ae2bb0958c88fe4
+
 
 ---
 
@@ -100,11 +94,12 @@ Po registraci vašeho zařízení může správce IT provádět tyto kroky:
 
 Kroky postupu registrace zařízení najdete v tématu [Registrace zařízení se systémem Mac OS X v Intune](enroll-your-device-in-intune-ios.md) nebo [Registrace zařízení se systémem iOS do Intune](enroll-your-device-in-intune-mac-os-x.md).
 
-Pokud máte nějaké otázky, na které byste potřebovali odpověď, a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO2-->
 
 

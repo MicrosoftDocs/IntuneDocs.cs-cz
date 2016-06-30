@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Co se stane, když resetujete zařízení pomocí Portálu společnosti? | Microsoft Intune
-description:
-keywords:
+title: "Co se stane, když resetujete zařízení pomocí Portálu společnosti? | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: db99c3eb-4813-4c8b-8e32-958e983b7f0f
-
-# optional metadata
-
-ROBOTS:
-#audience:
-#ms.devlang:
+ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
+ms.openlocfilehash: a9512738cd48438d85c7a98b0d533fbe6e6b8ba2
+
 
 ---
 
@@ -42,11 +36,12 @@ Pokud ve svém zařízení iPhone nebo iPad obnovíte výchozí tovární nastav
 
 -   Bude odstraněn e-mailový účet společnosti včetně všech neuložených e-mailů.
 
-Pokud máte nějaké otázky, na které byste potřebovali odpověď, a nemůžete najít kontaktní údaje správce IT, podívejte se, jestli nejsou na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO2-->
 
 
