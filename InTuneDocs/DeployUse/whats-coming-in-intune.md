@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Co připravujeme | Microsoft Intune
-description:
-keywords:
+title: "Co připravujeme | Microsoft Intune"
+description: 
+keywords: 
 author: Lindavr
 manager: jeffgilb
-ms.date: 05/17/2016
-ms.topic: get-started-article
-ms.prod:
+ms.date: 06/10/2016
+ms.topic: article
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: f49650f4-31fa-406c-a4da-d8c9a4a8384d
-
-# optional metadata
-
 ROBOTS: noindex,nofollow
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mamoriss
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: bdd6726590d6f13d1ec0d6e2ad030667d5bab414
+ms.openlocfilehash: 4c95a6cd426e4bc15c0a130293a859af9c8b0eb1
+
 
 ---
 
@@ -34,7 +28,8 @@ Následující změny v Intune jsou ve vývoji. Všechny tyto funkce budou také
 
 
 ## Správa aplikací
-- **Změny zásad podnikových dat ve Windows 10.** Z důvodu vylepšení zásad aplikace dochází v rámci zásad podnikových dat ve Windows 10 k tomu, že když uložíte zásadu, pro kterou jsou nakonfigurovaná pravidla aplikace (dříve se používalo označení chráněná aplikace), přijdete o všechna existující pravidla, která jste nakonfigurovali. Abyste mohli pokračovat, budete muset tato pravidla aplikací znovu nakonfigurovat.
+- **Vylepšení prostředí pro konfiguraci datových zásad systému Windows 10 Enterprise.** Vylepšili jsme prostředí pro konfiguraci datových zásad systému Windows 10 Enterprise související s vytvářením pravidel aplikací a zadáváním definice mezí sítě a dalších nastavení pro ochranu podnikových dat.
+<!---TFS 1303011--->
 
 - **Podmíněný přístup pro prohlížeč.** Bude moct nastavit zásady podmíněného přístupu pro Exchange Online a SharePoint Online, na základě kterých k nim bude možné získat přístup pouze ze spravovaných zařízení s iOS a s Androidem, která splňují pravidla zásad dodržování předpisů. Koncoví uživatelé, kteří se pokusí přihlásit k aplikaci Outlook Web Access (OWA) a webům služby SharePoint pomocí zařízení s iOS a Androidem, budou vyzváni, aby před přihlášením svoje zařízení zaregistrovali v Intune a opravili všechny problémy, kvůli kterým zařízení nesplňuje pravidla zásad dodržování předpisů.
 <!---TFS 1175844--->
@@ -43,17 +38,31 @@ Následující změny v Intune jsou ve vývoji. Všechny tyto funkce budou také
 <!---TFS1295358--->
 
 ### Podpora pro Xamarin
-Sada SDK pro aplikace pro Microsoft Intune teď podporuje aplikace vyvíjené v Xamarinu v těchto scénářích:
+Sada SDK pro aplikace pro Microsoft Intune bude podporovat aplikace vyvíjené v Xamarinu v těchto scénářích:
 
-- Vytváření nových aplikací nebo změna kódu existující podnikových aplikací pomocí sady Intune SDK. Modul plug-in můžete získat na stránce [Microsoft Intune Github](https://github.com/msintuneappsdk).
+- Vytváření nových aplikací nebo změna kódu existující podnikových aplikací pomocí sady Intune SDK. Tento modul plug-in budete moci získat na stránce [Microsoft Intune Github](https://github.com/msintuneappsdk).
 - Přidání podpory správy mobilních aplikací (MAM) do existujících podnikových aplikací pomocí nástroje Intune App Wrapping
 
 Při rozhodování o tom, jakou metodu použít, vám pomůžou informace v tématu [Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune).
 <!--- TFS 1061478 & TFS 1152340--->
 
+## Správa zařízení
+- **Nastavení zásad programu Windows Defender pro ochranu proti potenciálně nežádoucím aplikacím.** Do obecné konfigurace zásady pro Windows 10 Desktop a Mobile bylo přidáno nové nastavení programu Windows Defender nazvané **Detekce potenciálně nežádoucích aplikací**. Pomocí tohoto nastavení můžete ochránit zaregistrované stolní počítače s Windows před spuštěním softwaru, který Windows Defender klasifikuje jako potenciálně nežádoucí. Můžete nastavit ochranu před spuštěním těchto aplikací nebo pomocí režimu auditu upozornit, když se potenciálně nežádoucí aplikace nainstaluje.
+<!---TFS 1244478--->
+
+## Podmíněný přístup
+**Zásady řízení přístupu k síti Cisco ISE pro Intune.**  Zákazníci, kteří používají Cisco Identity Service Engine (ISE) 2.1 a také Microsoft Intune, mohou v modulu ISE nastavit zásady řízení přístupu k síti.
+
+Když se použijí tyto zásady, zařízení, která se připojují k síti pomocí WiFi nebo VPN, musí splňovat následující podmínky, jinak jim nebude povolen přístup:
+
+* Musí být spravovaná pomocí Intune.
+* Musí splňovat veškeré nasazené zásady dodržování předpisů Intune.
+
+Koncovým uživatelům nevyhovujících zařízení se zobrazí výzva k registraci. Pokud chtějí získat přístup, musí všechny problémy s dodržováním předpisů vyřešit.
+<!---TFS 1299144--->
 
 ## Portál společnosti
-**Změny účtů Správců registrace zařízení v aplikaci Portál společnosti pro iOS.** Za účelem zvýšení výkonu a možností škálování už Intune v aplikaci Portál společnosti v iOS v podokně Moje zařízení nezobrazuje všechna zařízení správce registrace zařízení (DEM). Zobrazí se pouze místní zařízení, na kterém aplikace běží, a to pouze v případě, že je zaregistrováno prostřednictvím aplikace Portál společnosti. Uživatel Správce registrace zařízení může na místním zařízení provádět různé akce, ale vzdálenou správu jiných zaregistrovaných zařízení je možné provádět pouze z konzoly správce Intune.  Kromě toho se v Intune místo účtů DEM začne používat buď program Apple DEP (Device Enrollment Program), nebo nástroj Apple Configurator. Obě tyto metody registrace již podporují registrace bez zásahu uživatele pro sdílená zařízení s iOS.  Účty Správce registrace zařízení používejte pouze v případě, že registrace sdílených zařízení bez zásahu uživatele není dostupná.
+**Změny účtů Správců registrace zařízení v aplikaci Portál společnosti pro iOS.** Za účelem zvýšení výkonu a možností škálování již nebude Intune v aplikaci Portál společnosti pro iOS v podokně Moje zařízení zobrazovat všechna zařízení Správce registrace zařízení. Zobrazí se pouze místní zařízení, na kterém aplikace běží, a to jenom v případě, že je zaregistrované prostřednictvím aplikace Portál společnosti. Uživatel Správce registrace zařízení může na místním zařízení provádět různé akce, ale vzdálená správa jiných zaregistrovaných zařízení se bude provádět jenom z konzoly správce Intune.  Kromě toho se v Intune místo účtů DEM začne používat buď program Apple DEP (Device Enrollment Program), nebo nástroj Apple Configurator. Obě tyto metody registrace již podporují registrace bez zásahu uživatele pro sdílená zařízení s iOS. Účty Správce registrace zařízení používejte pouze v případě, že registrace sdílených zařízení bez zásahu uživatele není dostupná.
 <!---TFS 1233681--->
 
 ## Zastaralá služba
@@ -64,13 +73,13 @@ Při rozhodování o tom, jakou metodu použít, vám pomůžou informace v tém
 Pravidla oznámení Intune definují, komu se budou z Intune odesílat e-mailové výstrahy. V současnosti můžete nakonfigurovat pravidla oznámení pro odesílání e-mailů všem uživatelům zařízení nebo skupině zařízení služby Intune, kterou jste vytvořili. Přibližně od 1. června 2016 se už cílení na uživatelsky vytvořené skupiny nebude podporovat.
 
 Předběžná časová osa pro tuto změnu je následující:
-- V červnu 2016 se novým tenantům v Průvodci vytvořením pravidla oznámení nezobrazí krok 2. Stávající tenanty to neovlivní.
-- Zhruba v srpnu 2016 se některým tenantům v tomto průvodci nezobrazí možnost Vybrat skupiny zařízení.
-- Přibližně od října 2016 očekáváme, že se možnost Vybrat skupiny zařízení v tomto průvodci nezobrazí žádným tenantům.
-
+- V srpnu 2016 se novým tenantům v Průvodci vytvořením pravidla oznámení nezobrazí krok 2. Stávající tenanty to neovlivní.
+- Zhruba v září 2016 se některým tenantům v tomto průvodci nezobrazí možnost Vybrat skupiny zařízení.
+- Přibližně od listopadu 2016 očekáváme, že se možnost Vybrat skupiny zařízení v tomto průvodci nezobrazí žádným tenantům.
 <!---   TFS 1278864--->
+
 **Změny v podpoře pro aplikaci Portál společnosti pro iOS.**
-Uživatelé si musí aplikaci Portál společnosti pro iOS aktualizovat na nejnovější verzi. V nadcházejících měsících se začne vyžadovat, aby všichni uživatelé aplikace Portál společnosti Microsoft Intune pro iOS používali její nejnovější verzi. Noví uživatelé si budou moct stáhnout jenom nejnovější verzi a aktuální uživatelé si budou muset aplikaci aktualizovat. Nejnovější verze vyžaduje iOS 8.0 nebo novější, takže zařízení se starší verzí iOS nebudou moct Portál společnosti používat ani nebudou moct zařízení zaregistrovat, dokud si v něm neaktualizují operační systém na iOS 8.0 nebo novější a následně neaktualizují i aplikaci Portál společnosti na nejnovější verzi. Zaregistrovaná zařízení se systémem iOS starším 8.0 se budou spravovat i nadále a budou se zobrazovat v konzole správce Intune.  
+Od července se začne vyžadovat, aby všichni uživatelé aplikace Portál společnosti Microsoft Intune pro iOS používali její nejnovější verzi. Noví uživatelé si budou moct stáhnout jenom nejnovější verzi a aktuální uživatelé si budou muset aplikaci aktualizovat. Nejnovější verze vyžaduje iOS 8.0 nebo novější, takže zařízení se starší verzí iOS nebudou moct Portál společnosti používat ani nebudou moct zařízení zaregistrovat, dokud si v něm neaktualizují operační systém na iOS 8.0 nebo novější a následně neaktualizují i aplikaci Portál společnosti na nejnovější verzi. Zaregistrovaná zařízení se systémem iOS starším 8.0 se budou spravovat i nadále a budou se zobrazovat v konzole správce Intune.  
 
 **Aplikace Intune Viewer.** V souvislosti s vydáním nové aplikace Sdílení RMS odebíráme od srpna 2016 následující aplikace Intune Viewer:
 - Intune AV Viewer
@@ -84,6 +93,7 @@ Místo použití aplikací Intune Viewer vám doporučujeme používat novou apl
 Podrobnosti o posledním vývoji najdete v tématu [Co je nového v Microsoft Intune](whats-new-in-microsoft-intune.md).
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 
