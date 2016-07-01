@@ -787,9 +787,6 @@
   "2e3ad016a7788378e7fb8daa48c1536a46a38059": [
     "InTuneDocs\\EndUser\\media\\W81-1-workplacejoin.png"
   ],
-  "26ce9402b45ed2170bdb32ec6a30d357fe4045f2": [
-    "InTuneDocs\\EndUser\\media\\W81-1-workplacejoin.png"
-  ],
   "f72a46e34a3fb5466e44478d45449a6c04ca8ad2": [
     "InTuneDocs\\EndUser\\media\\W81-2-workplacesettings_signin.png"
   ],
@@ -835,13 +832,7 @@
   "e256cb6a104706c8e1d861dc565b88abb00e6652": [
     "InTuneDocs\\EndUser\\media\\and-enroll-2-cp-sign-in.png"
   ],
-  "e76c105cd90d2172c2d80565e54573995b0087a5": [
-    "InTuneDocs\\EndUser\\media\\and-enroll-2-cp-sign-in.png"
-  ],
   "e9fd27ac80a101d2e8b5bbd65249913b45111a16": [
-    "InTuneDocs\\EndUser\\media\\and-enroll-3-accept-terms.png"
-  ],
-  "9a0b75f97efb0fca001ea4d6cd5f8b582c059615": [
     "InTuneDocs\\EndUser\\media\\and-enroll-3-accept-terms.png"
   ],
   "1d96acea0475ff448c6895f38dfbf2305fd4edca": [
@@ -1180,9 +1171,6 @@
   "d9951555e2388362cd3c15eaa35b8d063da9ec39": [
     "InTuneDocs\\EndUser\\media\\iwp-3-tap-reset-passcode-after-signin.png"
   ],
-  "4fea71a05f8f48a12977e8b0fccab3b915b5f5d3": [
-    "InTuneDocs\\EndUser\\media\\iwp-3-tap-reset-passcode-after-signin.png"
-  ],
   "4622897f5e32514ad80b5000732cf6835224160a": [
     "InTuneDocs\\EndUser\\using-your-android-device-with-intune.md"
   ],
@@ -1430,9 +1418,6 @@
     "InTuneDocs\\media\\AppManagement\\AzurePortal_MAM_WipeRequestsSummary.png"
   ],
   "82372661288da89bb59e04aa02fec9bf08b59ea6": [
-    "InTuneDocs\\media\\Intune-MDM-Authority.png"
-  ],
-  "fd228641a36b69f77af54b978b5a70379e20f636": [
     "InTuneDocs\\media\\Intune-MDM-Authority.png"
   ],
   "64f06d45481657e65ee924d286623dc83a514f40": [
@@ -2405,18 +2390,6 @@
   "4c95a6cd426e4bc15c0a130293a859af9c8b0eb1": [
     "InTuneDocs\\DeployUse\\whats-coming-in-intune.md"
   ],
-  "deb801b87c9e34601379f0e83524a37587da8afc": [
-    "InTuneDocs\\DeployUse\\whats-coming-in-intune.md"
-  ],
-  "e1e25cacfdd99f4e1db6f2eff762781a04adbc86": [
-    "InTuneDocs\\DeployUse\\whats-coming-in-intune.md"
-  ],
-  "e8860142f163fbea4f766422477b1458dd4dee19": [
-    "InTuneDocs\\DeployUse\\whats-coming-in-intune.md"
-  ],
-  "4a3a4ef00610db6f7819295975f69be4f4330d62": [
-    "InTuneDocs\\DeployUse\\whats-coming-in-intune.md"
-  ],
   "e5ea21d877c2828545436b211d4e62adc4de402c": [
     "InTuneDocs\\EndUser\\you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md"
   ],
@@ -2727,9 +2700,6 @@
     "InTuneDocs\\DeployUse\\manage-data-transfer-between-ios-apps-with-microsoft-intune.md"
   ],
   "17c994b410342e96f734afe63b28392a7fe7ed28": [
-    "InTuneDocs\\media\\mam-azure-portal-app-reporting-by-user.png"
-  ],
-  "adc15aa0f53c35d42cf97f95d8b2fb9ed345348c": [
     "InTuneDocs\\media\\mam-azure-portal-app-reporting-by-user.png"
   ],
   "69f39c0fa233ffb62173bd3c434b7ac1b0f949d6": [
