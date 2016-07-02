@@ -1,32 +1,26 @@
 ---
-# required metadata
-
-title: Jak uživatelé s Androidem získají svoje aplikace | Microsoft Intune
-description:
-keywords:
+title: "Jak uživatelé s Windows získávají svoje aplikace | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: e471fed8-19f0-4b37-aaa2-65f28a6b4794
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 9d867202b8b3cc5e6ed77d97bcfddce2beabdd40
+ms.openlocfilehash: f226ea2a7be64ef759f61c61903bb0dc964c1410
+
 
 ---
 
 
-# Jak uživatelé s Androidem získají svoje aplikace
+# Jak uživatelé s Windows získávají svoje aplikace
 
 Tyto informace slouží k pochopení toho, jak a kde koncoví uživatelé získávají aplikace, které distribuujete pomocí Microsoft Intune. 
 
@@ -38,10 +32,12 @@ Tyto informace slouží k pochopení toho, jak a kde koncoví uživatelé získ�
 
 **Nespravované aplikace** – Aplikace, které jde spravovat pomocí zásad a které nejsou zabalené službou Intune nebo které nejsou sestavené pomocí sady Intune MAM SDK. Na tyto aplikace nejdou aplikovat zásady použití.
 
-###Viz také [Jak uživatelé s Androidem získají svoje aplikace](how-your-android-users-get-their-apps.md).</br>
+###Související témata
+[Jak uživatelé s Androidem získávají svoje aplikace](how-your-android-users-get-their-apps.md)</br>
 [Jak uživatelé systému iOS získávají svoje aplikace](how-your-ios-users-get-their-apps.md)
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

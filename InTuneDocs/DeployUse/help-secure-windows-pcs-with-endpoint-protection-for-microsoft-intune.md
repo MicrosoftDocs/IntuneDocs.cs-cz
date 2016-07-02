@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Endpoint Protection pro počítače se systémem Windows | Microsoft Intune
-description:
-keywords:
+title: "Endpoint Protection pro počítače se systémem Windows | Microsoft Intune"
+description: 
+keywords: 
 author: NathBarn
-manager: jeffgilb
+manager: muhosabe
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 002241bf-6cd0-4c75-a4f0-891ac7e6721a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 9b96e6c49ec9122961588156d77bf94cdbccd787
+ms.openlocfilehash: b1b1cc90672903ac0336151373272b5e20e56165
+
 
 ---
 
@@ -52,7 +46,8 @@ Pokud chcete přejít ze současné aplikace koncové ochrany na Microsoft Intun
 
     -   Ručním odebráním aplikace koncové ochrany třetí strany.
 
-> [!NOTE] Intune aplikace koncové ochrany jiného výrobce automaticky neodinstaluje.
+> [!NOTE]
+> Intune aplikace koncové ochrany třetích stran automaticky neodinstaluje.
 
 ## Jak nakonfigurovat Microsoft Intune Endpoint Protection
 Následující postup vám pomůže nakonfigurovat Endpoint Protection pro Microsoft Intune.
@@ -162,7 +157,8 @@ Stav malwaru na počítačích se sleduje pomocí pracovního prostoru **Ochrana
   - **Zobrazit vlastnosti** – otevře stránku s dalšími informacemi o vybraném malwaru.
   - **Další informace o tomto malwaru** – otevře téma z Centra společnosti Microsoft pro ochranu před škodlivým softwarem s dalšími informacemi o malwaru.
 
-> [!IMPORTANT] Pracovní prostor **Ochrana** se v konzole pro správu nezobrazí, dokud nenainstalujete klienta a nebudete spravovat aspoň jeden klientský počítač.
+> [!IMPORTANT]
+> Pracovní prostor **Ochrana** se v konzole pro správu nezobrazí, dokud nenainstalujete klienta a nebudete spravovat aspoň na jeden počítač.
 
   ![Sledování služby Endpoint Protection](./media/pol-sa-ep-monitor.png)
 
@@ -181,7 +177,7 @@ Intune může na vzdáleném spravovaném počítači, na kterém je nainstalova
 1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) přejděte na **Skupiny** > **Přehled** > **Všechna zařízení** > **Všechny počítač** a vyberte počítač, na který chcete cílit.
 
 2. Klikněte na rozevírací seznam **Vzdálené úlohy** a vyberte požadovanou úlohu. Úloha pro spuštění na vzdáleném počítači:
-![Spuštění vzdálené kontroly malwaru](../media/ep_sa_malwarescan.png)
+
 
 
 
@@ -192,6 +188,7 @@ Další pomoc a podporu najdete v tématu [Řešení potíží se službou Endpo
 [Zásady ochrany počítačů se systémem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO5-->
 
 

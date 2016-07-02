@@ -13,6 +13,7 @@ ms.assetid: c6a97c74-c35c-4977-b925-6efe01e31d3c
 ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
+translationtype: Human Translation
 ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
 ms.openlocfilehash: 073c94e51f61e091f0055c96e8ad183e57fafabd
 
@@ -46,6 +47,6 @@ Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na spr�
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jun16_HO5-->
 
 

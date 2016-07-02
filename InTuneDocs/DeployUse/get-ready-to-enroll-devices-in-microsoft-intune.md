@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Příprava registrace zařízení | Microsoft Intune
-description:
-keywords:
+title: "Příprava registrace zařízení | Microsoft Intune"
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 71077d9f86a53cc66536928e4799fa4b1a51cdf0
+ms.openlocfilehash: 86d3b7894eca70454fa82393c4d06eab5a99246f
+
 
 ---
 
@@ -48,7 +42,8 @@ Autorita MDM definuje službu správy s oprávněními ke správě skupiny zař�
 
 Portál společnosti v Intune je místem, kde uživatelé přistupují k podnikovým datům a kde můžou dělat běžné úkoly, jako je registrace zařízení, instalace aplikací nebo vyhledání informací pro oddělení IT v případě žádosti o podporu.
 
-> [!TIP] Když si portál společnosti přizpůsobíte, bude se vaše konfigurace vztahovat na web Portál společnosti i na aplikace Portál společnosti.
+> [!TIP]
+> Když si portál společnosti přizpůsobíte, bude se vaše konfigurace vztahovat na web portálu společnosti i na aplikace Portál společnosti.
 
 Přizpůsobení Portálu společnosti pomáhá poskytnout známé a užitečné prostředí pro koncové uživatele. Pro přizpůsobení se přihlaste do [konzoly správce Microsoft Intune](https://manage.microsoft.com) jako tenant nebo správce služby, zvolte **Správce** &gt; **Portál společnosti** a konfigurujte nastavení portálu společnosti.
 
@@ -113,6 +108,7 @@ Rovněž můžete:
  - [Určit zařízení ve vlastnictví společnosti pomocí kódů IMEI](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md) k usnadnění registrace zařízení a cílových zásad
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

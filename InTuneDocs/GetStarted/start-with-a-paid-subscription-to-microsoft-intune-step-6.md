@@ -12,6 +12,7 @@ ms.technology:
 ms.assetid: e0d8e98f-7dd8-4cbf-887c-a9af63ffe970
 ms.reviewer: jeffgilb
 ms.suite: ems
+translationtype: Human Translation
 ms.sourcegitcommit: 2847c9af38ae0ddddc8d76d548ae7abddc63e4c1
 ms.openlocfilehash: b3b65a1fd1e426bf566f39382321a29e913f102c
 
@@ -56,7 +57,8 @@ Vaše zásada se zobrazí v seznamu zásad konfigurace a byla nasazena do skupin
 
     ![admin-console-apps-workspace](./media/apps.png)
 
-    > [!NOTE] Při prvním spuštění **vydavatele softwaru Intune** může instalace aplikace chvíli trvat.
+    > [!NOTE]
+    > Při prvním spuštění **Intune Software Publisheru** může instalace aplikace chvíli trvat.
 
 2.  Přečtěte si upozornění zabezpečení a vyberte **Spustit**.
 
@@ -108,6 +110,6 @@ Gratulujeme! Právě jste dokončili krok 6 *úvodní příručky Intune*.
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO5-->
 
 

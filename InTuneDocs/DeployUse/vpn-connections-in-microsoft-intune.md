@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Připojení VPN | Microsoft Intune
-description:
-keywords:
+title: "Připojení VPN | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: abc57093-7351-408f-9f41-a30877f96f73
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: karanda
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 95abe7b12e68755f3c95f91888efd3e85c057119
+ms.openlocfilehash: b55cf263611d6e90805cad9985eb8a5e7ebeb4a0
+
 
 ---
 
@@ -151,7 +145,7 @@ Nová zásada se zobrazí v uzlu **Zásady konfigurace** pracovního prostoru **
 
 2.  V dialogovém okně **Spravovat nasazení** :
 
-    -   **Pokud chcete zásadu nasadit** – vyberte jednu nebo víc skupin, do kterých chcete zásady nasadit, a pak zvolte **Přidat** &gt; **OK**.
+    -   **Pokud chcete zásadu nasadit** – Vyberte jednu nebo víc skupin, do kterých chcete zásady nasadit, a pak vyberte **Přidat** &gt; **OK**.
 
     -   **Pokud chcete dialogové okno zavřít bez nasazení zásady** – zvolte **Zrušit**.
 
@@ -165,6 +159,7 @@ Shrnutí stavu a výstrahy na stránce **Přehled** v pracovním prostoru **Zás
 [VPN pro aplikaci pro Android pomocí Pulse Secure](per-app-vpn-for-android-pulse-secure.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

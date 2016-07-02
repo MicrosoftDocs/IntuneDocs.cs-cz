@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Možnosti správy mobilních zařízení | Microsoft Intune
-description:
-keywords:
+title: "Možnosti správy mobilních zařízení | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: f23b3ee7-78da-4e53-9fc2-78e58401bcf9
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f33a86c51320c75ce74d20e0cac2b9581990ecec
+ms.openlocfilehash: 0f460165f251acf95f4af36afa39409d3eb21162
+
 
 ---
 # Možnosti správy mobilních zařízení v Microsoft Intune
@@ -66,13 +60,14 @@ Operace správy, inventáře, nasazování aplikací, zřizování a vyřazován
 
 |Funkce|Podrobnosti|Další informace|
 |--------------|-----------|--------------------|
-|Inventář a vytváření sestav|Vyhledejte informace o vámi spravovaných zařízeních a softwaru, který používají.|[Seznámení se zařízeními s inventářem v Microsoft Intune](./deploy-use/understand-your-devices-with-inventory-in-microsoft-intune)|
+|Inventář a vytváření sestav|Vyhledejte informace o vámi spravovaných zařízeních a softwaru, který používají.|[Seznámení se zařízeními s inventářem v Microsoft Intune](/intune/deploy-use/understand-your-devices-with-inventory-in-microsoft-intune)|
 
 
 ### Související témata
-[Možnosti správy počítačů s Windows v Microsoft Intune](./windows-pc-management-capabilities-in-microsoft-intune.md)
+[Možnosti správy počítačů s Windows v Microsoft Intune](windows-pc-management-capabilities-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

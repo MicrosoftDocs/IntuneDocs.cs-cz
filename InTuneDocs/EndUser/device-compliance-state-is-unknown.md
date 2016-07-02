@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Stav dodržování předpisů zařízení je neznámý | Microsoft Intune
-description:
-keywords:
+title: "Stav dodržování předpisů zařízení je neznámý | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 06/06/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 796297c4-02a1-4d7a-aec1-bae63727ffd3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: chrisgre
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f83a539e9bec5207d7c1c682942b4bb6797d616c
+ms.openlocfilehash: 89b8ffcb9b8064fa95eefaa1d9e93f3fb46a9d34
+
 
 ---
 
@@ -33,6 +27,7 @@ Pokud se v zařízení zobrazí zpráva „Stav dodržování předpisů je nezn
 Pokud stále nemáte přístup k prostředkům společnosti, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

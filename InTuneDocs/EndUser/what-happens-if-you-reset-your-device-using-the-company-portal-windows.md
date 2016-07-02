@@ -12,6 +12,7 @@ ms.technology:
 ms.assetid: 1ee6e275-d1ec-4da3-bbef-d5da2c61a02a
 ms.reviewer: priyar
 ms.suite: ems
+translationtype: Human Translation
 ms.sourcegitcommit: 39e810466d3a98789f0f1338f68d2be80d757d39
 ms.openlocfilehash: 9ff73d6e2066b0fb3d2e8ca9d7732d4685e258fd
 
@@ -35,6 +36,6 @@ Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na spr�
 [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jun16_HO5-->
 
 

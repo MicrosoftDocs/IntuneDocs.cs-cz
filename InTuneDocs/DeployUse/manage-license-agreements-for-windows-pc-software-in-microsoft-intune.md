@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Správa licenčních smluv pro software počítačů s Windows | Microsoft Intune
-description:
-keywords:
+title: "Správa licenčních smluv pro software počítačů s Windows | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: c59d8635-3f66-40f5-824a-a71c738e0341
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 42e21b802fb605c98f688485c3b77703b3950e94
+ms.openlocfilehash: 575b8525b8b99d06358a911b8deb24ee5de48fe1
+
 
 ---
 
@@ -45,7 +39,8 @@ Akce, které je možné provést v konzole pro správu Intune v pracovním prost
 
 Můžete taky generovat sestavy, které u softwarových titulů zobrazují počty instalací a licencí. Sestavy licencí vám můžou pomoct vyhodnotit vaši kompletní licenční pozici pro software Microsoftu a software jiných společností.
 
-> [!TIP] Pracovní prostor **Licence** se v konzole správce nezobrazí, pokud nespravujete aspoň jeden počítač s Windows a klientem Intune pro počítače s Windows.
+> [!TIP]
+> Pracovní prostor **Licence** se v konzole správce nezobrazí, pokud nespravujete aspoň jeden počítač s Windows a klientem Intune pro počítače s Windows.
 
 ## Přidání multilicenčních smluv uzavřených s Microsoftem
 Multilicenční smlouvy Intune poskytují informace o licenci pro software, který je zakoupený prostřednictvím multilicenčních smluv s Microsoftem. Multilicenční smlouvy s Microsoftem můžete přidat do Intune tak, že zadáte odpovídající páry čísel smluv. Čísla smluv nebo autorizační čísla musí odpovídat správným číslům licencí nebo registrací. Páry čísel smluv získáte při nákupu vašich licenčních smluv na webu [Volume Licensing Service Center (VLSC)](http://go.microsoft.com/fwlink/?LinkID=223842).
@@ -94,11 +89,12 @@ Multilicenční smlouvy Intune poskytují informace o licenci pro software, kter
 
         -   **Autorizační číslo nebo číslo smlouvy** – zadejte autorizační číslo nebo číslo smlouvy, které odpovídá licenčnímu páru.
 
-        -   **Číslo licence, prováděcí smlouvy nebo zákazníka** – zadejte číslo licence, prováděcí smlouvy nebo zákazníka, které odpovídá licenčnímu páru.
+        -   **Číslo licence, prováděcí smlouvy nebo zákazníka** – zadejte číslo licence, prováděcí smlouvy nebo zákazníka, které odpovídá páru licencí.
 
-        > [!NOTE] Pokud přidáte několik párů čísel smluv, Intune vytvoří jednu smlouvu s vámi určeným názvem a všechny vámi přidané páry budou součástí této smlouvy.
+        > [!NOTE]
+        > Pokud přidáte několik párů čísel smluv, Intune vytvoří jednu smlouvu s vámi určeným názvem a všechny vámi přidané páry budou součástí této smlouvy.
 
-    Kliknutím na **+** přidáte další pár čísel smlouvy. Kliknutím na **-** zadaný pár čísel smlouvy odeberete.
+    Kliknutím na **+** přidáte jinou dvojici čísel smlouvy. Kliknutím na **-** odeberete zadanou dvojici čísel smlouvy.
 
 4.  V oblasti **Vybrat skupinu licencí** proveďte některou z těchto akcí:
 
@@ -114,7 +110,8 @@ Zobrazí se seznam **Všechny smlouvy** a služba Intune se připojí k centru M
 
 Pokud chcete po přidání licenčních smluv v Intune aktualizovat informace o multilicencích, klikněte na stránce **Přehled licencí** na **Aktualizovat**. Tato akce načte aktuální informace o licenci z centra [Microsoft Volume Licensing Service Center (VLSC)](http://go.microsoft.com/fwlink/?LinkId=223842).
 
-> [!IMPORTANT] Dokud neaktualizujete informace o multilicencích, můžou se vám v seznamu smluv a informacích o nárocích na stránce **Přehled smluv** zobrazovat rozdílné informace.
+> [!IMPORTANT]
+> Dokud neaktualizujete informace o multilicencích, můžou se vám v seznamu smluv a informacích o nárocích na stránce **Přehled smluv** zobrazovat rozdílné informace.
 
 Jakmile informace o multilicencích aktualizujete, můžete je v pracovním prostoru **Aplikace** porovnat se zjištěným softwarem od Microsoftu. Můžete taky spustit následující licenční sestavy:
 
@@ -122,7 +119,8 @@ Jakmile informace o multilicencích aktualizujete, můžete je v pracovním pros
 
 -   **Sestavy nainstalovaných licencí** – pomáhají zjistit, jestli je pokrytí licenčními smlouvami dostatečné.
 
-> [!NOTE] **Název produktu** zobrazený pro všechny multilicenční smlouvy s Microsoftem je **Není k dispozici**.
+> [!NOTE]
+> **Název produktu** zobrazený pro všechny multilicenční smlouvy s Microsoftem je **Není k dispozici**.
 
 ## Přidávání a úprava licenčních smluv k jinému softwaru
 Kromě multilicenčních smluv uzavřených s Microsoftem můžete do Intune přidávat i jiné typy licenčních smluv. Tyto smlouvy můžou zahrnovat software jiného výrobce nebo software Microsoftu zakoupený prostřednictvím prodejce.
@@ -184,6 +182,7 @@ Licenční smlouvy na software se dají přidat do skupin licencí. Skupiny lice
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
