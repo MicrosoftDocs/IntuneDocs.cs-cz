@@ -12,6 +12,7 @@ ms.technology:
 ms.assetid: 0321062d-1363-4ac3-81d4-5405f3b79481
 ms.reviewer: arnab
 ms.suite: ems
+translationtype: Human Translation
 ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
 ms.openlocfilehash: f0465d4302bda3df82c994043df52c27761a8345
 
@@ -43,6 +44,6 @@ Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na spr�
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jun16_HO5-->
 
 

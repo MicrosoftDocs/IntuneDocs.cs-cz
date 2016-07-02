@@ -6,6 +6,6 @@
 >Ve službě Azure Active Directory se dá na základě názvu podnikového profil zápisu definovat nové dynamické přiřazení do skupin zařízení. Tento proces slouží k tomu, aby se zařízení předběžně zařazená do určité skupiny zařízení automaticky zaregistrovala do této skupiny s nasazenými zásadami a aplikacemi. Brzy zveřejníme další podrobnosti.
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

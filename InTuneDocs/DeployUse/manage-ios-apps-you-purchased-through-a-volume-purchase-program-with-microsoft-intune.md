@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Správa aplikací pro iOS nakoupených prostřednictvím programu hromadného nákupu | Microsoft Intune
-description:
-keywords:
+title: "Správa aplikací pro iOS nakoupených prostřednictvím programu hromadného nákupu | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 1dafc28a-7f8b-4fe0-8619-f977c93d1140
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ccb494f64426e6c2f21a59d8f52b84afe534d721
+ms.openlocfilehash: 65ceaa5a8f6604463463820545a9d108839c00c1
+
 
 ---
 
@@ -76,20 +70,23 @@ Když chcete licenci získat zpět, je třeba nastavit typ instalace na **Odinst
 
 Když se uživatel s oprávněným zařízením poprvé pokusí o instalaci aplikace VPP, požádá se o připojení k programu Apple Volume Purchase. To je třeba provést před instalací aplikace.
 
-> [!TIP] Podívejte se na sloupec **Stav podmínek VPP**, který obsahuje stav přijetí pro každého uživatele, pro kterého byla aplikace nasazená.
+> [!TIP]
+> Podívejte se na sloupec **Stav podmínek VPP**, který obsahuje stav přijetí pro každého uživatele, pro kterého byla aplikace nasazená.
 
 Pokud jsou k dispozici žádné další licence, nasazení se nepovede.
 
 ## Monitorování aplikací Apple VPP
 Které aplikace VPP jsou nasazené a kolik licencí je už využito, můžete sledovat v pracovním prostoru **Aplikace** v uzlu **Spravovaný software** &gt; **Hromadně zakoupené aplikace**.
 
-> [!TIP] Můžete také použít **filtry** aplikací pro zjištění stavu instalace konkrétních aplikací.
+> [!TIP]
+> Můžete také použít **filtry** aplikací pro zjištění stavu instalace konkrétních aplikací.
 
-### Viz taky
+### Související témata
 [Nasazení aplikací v Microsoft Intune](deploy-apps-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
