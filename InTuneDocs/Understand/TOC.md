@@ -18,9 +18,10 @@
 # [Začínáme](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
 # [Nasazení a používání](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
-# [Řešení problémů](/intune/troubleshoot/how-to-get-support-for-microsoft-intune)
+# [Vývoj a přizpůsobení aplikací](/intune/develop/intune-app-sdk)
+# [Řešení problémů](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Jak získat podporu | Microsoft Intune
-description:
-keywords:
+title: "Jak získat podporu | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 05/26/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 4682b6b6-c9ef-483e-a6de-b8830cb98b63
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 632115d1010217f927e20a7e9532311d48f2b106
+ms.openlocfilehash: a6cb77b441c7c44f33c0353232409f8d7b2daa6a
+
 
 ---
 
@@ -91,7 +84,7 @@ Případům podpory, které obdržíme, přiřazujeme různé priority a nejnal�
 Úspěch technické podpory závisí na spolupráci mezi oddělením podpory společnosti Microsoft a oddělením IT ve vaší společnosti.  Problémy se můžou rychle vyřešit díky počátečnímu úsilí o řešení potíží ve vaší organizaci v kombinaci s efektivní komunikací mezi vašimi správci a společností Microsoft.
 
 ### Čím můžou přispět vaši správci
-Uživatelé s rolí správce Intune (včetně správců tenantů a správců služeb) mají oprávnění k přístupu ke konzole správce Intune a k přímé komunikaci se společností Microsoft o žádostech souvisejících s Intune. Mezi tyto správce můžou taky patřit partneři Microsoftu, které jste zadali jako delegované správce.
+Uživatelé s rolí správce Intune (včetně správců tenantů a správců služeb) mají oprávnění k přístupu ke konzole pro správu Intune a k přímé komunikaci se společností Microsoft o žádostech souvisejících s Intune. Mezi tyto správce můžou taky patřit partneři Microsoftu, které jste zadali jako delegované správce.
 
 Správce:
 
@@ -144,9 +137,7 @@ Součásti naší role:
 [Řešení potíží s aktualizacemi softwaru ve službě Microsoft Intune](troubleshoot-software-updates-in-microsoft-intune.md)
 
 
-[Nejčastější dotazy k Microsoft Intune](/intune/understand-explore/frequently-asked-questions-for-microsoft-intune)
 
-
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO3-->
 
 
