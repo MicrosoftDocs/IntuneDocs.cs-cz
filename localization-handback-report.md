@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [InTuneDocs\includes\accessibility5_md.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/accessibility5_md.md) | InSyncHandedBackSuccess | [Details](#f410f8314e8f5c884080b71f6146cedb4eadfb56579)
 
 ## Item Details
+##### <a name='f410f8314e8f5c884080b71f6146cedb4eadfb56579'></a> Source: [InTuneDocs\includes\accessibility5_md.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/accessibility5_md.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [InTuneDocs\includes\accessibility5_md.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/574d4208944bfedda8c6f05bcf79f810d1ec5342/InTuneDocs/includes/accessibility5_md.md)
+* Handoff File: [accessibility5_md.8da259ce60dd4ca7d2c4bcd793bad65d68eb41f1.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3774776b6d8c533d70c375a1042dac80efce57f3/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/accessibility5_md.8da259ce60dd4ca7d2c4bcd793bad65d68eb41f1.cs-cz.xlf)
+* Handoff Datetime: 2016-06-27 10:28:47
+* Handoff Reason: Include
+* Archive File: [accessibility5_md.8da259ce60dd4ca7d2c4bcd793bad65d68eb41f1.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/263e8608869fe91246c5434e4dd1aeb051f8b7c5/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/accessibility5_md.8da259ce60dd4ca7d2c4bcd793bad65d68eb41f1.cs-cz.xlf)
+* Archive Datetime: 2016-07-02 00:54:54
+* Handback File: [accessibility5_md.8da259ce60dd4ca7d2c4bcd793bad65d68eb41f1.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/a2bf497aa343d4fee31fd4de1e5d3fa0502b3ffb/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/accessibility5_md.8da259ce60dd4ca7d2c4bcd793bad65d68eb41f1.cs-cz.xlf)
+* Handback Datetime: 2016-07-02 12:55:39
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
