@@ -1,26 +1,21 @@
 ---
-title: Konfigurace infrastruktury certifikátů pro SCEP |Microsoft Intune
-description:
-keywords:
+title: "Konfigurace infrastruktury certifikátů pro SCEP |Microsoft Intune"
+description: 
+keywords: 
 author: nbigman
 manager: jeffgilb
 ms.date: 05/16/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 4ae137ae-34e5-4a45-950c-983de831270f
-
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: kmyrup
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0ca06fa26127935e08f35006730dd367fb8f6669
+ms.openlocfilehash: 942bdc4e1629a9d7e16d0994f27dab4424670a4f
+
 ---
 # Konfigurace infrastruktury certifikátů pro SCEP
 Toto téma popisuje, jakou infrastrukturu potřebujete k vytvoření a nasazení profilů certifikátů.
@@ -42,7 +37,7 @@ I
  > [!NOTE]           
 > -    Server, který je hostitelem WAP, [musí nainstalovat aktualizaci](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) umožňující podporu dlouhých adres URL, které používá služba zápisu síťových zařízení. Tato aktualizace je součástí [kumulativní aktualizace z prosince 2014](http://support.microsoft.com/kb/3013769)nebo jde instalovat jednotlivě z [KB3011135](http://support.microsoft.com/kb/3011135).
 >-  Server hostující službu WAP musí mít také certifikát SSL odpovídající názvu publikovanému do externích klientů a musí důvěřovat certifikátu SSL, který se používá na serveru NDES. Tyto certifikáty umožňují serveru WAP ukončit připojení protokolem SSL od klientů a vytvořit nové připojení SSL k serveru NDES.
-Informace o certifikátech pro službu WAP najdete v části **Plánování certifikátů** tématu [Plánování publikování aplikací pomocí serveru proxy webových aplikací](https://technet.microsoft.com/library/dn383650.aspx). Obecné informace o serverech WAP najdete v tématu [Práce se serverem proxy webových aplikací](http://technet.microsoft.com/library/dn584113.aspx).|
+    Informace o certifikátech pro službu WAP najdete v části **Plánování certifikátů** tématu [Plánování publikování aplikací pomocí serveru proxy webových aplikací](https://technet.microsoft.com/library/dn383650.aspx). Obecné informace o serverech WAP najdete v tématu [Práce se serverem proxy webových aplikací](http://technet.microsoft.com/library/dn584113.aspx).|
 
 ### Požadavky sítě
 
@@ -107,15 +102,18 @@ V této úloze:
 
     -   Na kartě **Rozšíření** zkontrolujte, jestli **Popis zásad použití** obsahuje **Ověření klienta**.
 
-        > [!IMPORTANT] V případě šablon certifikátů pro iOS a Mac OS X na kartě **Rozšíření** upravte **Použití klíče** a ujistěte se, že není vybraná možnost **Podpis je důkazem původu**.
+        > [!IMPORTANT]
+        > V případě šablon certifikátů pro iOS a Mac OS X na kartě **Rozšíření** upravte **Použití klíče** a ujistěte se, že není vybraná možnost **Podpis je důkazem původu** .
 
     -   Na kartě **Zabezpečení** přidejte účet služby NDES a poskytněte šabloně oprávnění k **zápisu**. Správci služby Intune, kteří vytvoří profily SCEP, vyžaduje práva pro **čtení**, aby při vytváření profilů SCEP mohli procházet šablony.
     
-    > [!NOTE] K odvolání certifikátů vyžaduje účet služby NDES oprávnění *Vydávat a spravovat certifikáty* ke každé šabloně certifikátu používané profilem certifikátu.
+    > [!NOTE]
+    > K odvolání certifikátů vyžaduje účet služby NDES oprávnění *Vydávat a spravovat certifikáty* ke každé šabloně certifikátu používané profilem certifikátu.
 
 3.  Zkontrolujte **Období platnosti** na kartě **Obecné** šablony. Ve výchozím nastavení Intune používá hodnotu nakonfigurovanou v šabloně. Máte ale možnost konfigurovat, aby certifikační autorita žadateli umožňovala určit jinou hodnotu, kterou pak můžete nastavit v konzole pro správu Intune. Pokud chcete vždy používat hodnotu v šabloně, zbývající část tohoto kroku přeskočte.
 
-    > [!IMPORTANT] Platformy iOS a Mac OS X vždycky používají hodnotu nastavenou v šabloně bez ohledu na ostatní konfigurace, které provedete.
+    > [!IMPORTANT]
+    > Platformy iOS a Mac OS X vždycky používají hodnotu nastavenou v šabloně bez ohledu na ostatní konfigurace, které provedete.
 
 Tady jsou snímky obrazovky ukázkové konfigurace šablony.
 
@@ -260,7 +258,8 @@ V této úloze:
 
     3.  Jako **Certifikát SSL**zadejte ověřovací certifikát serverů.
 
-        > [!NOTE] Pokud server NDES používá externí i interní název pro jednu síťovou adresu, musí mít ověřovací certifikát serverů nastavený **Název subjektu** s názvem externího veřejného serveru a **Alternativní název subjektu**, který obsahuje název interního serveru.
+        > [!NOTE]
+        > Pokud server NDES používá externí i interní název pro jednu síťovou adresu, musí mít ověřovací certifikát serverů **Název subjektu** s názvem externího veřejného serveru a **Alternativní název subjektu** , který obsahuje název interního serveru.
 
 2.  Na serveru NDES vyžádejte a nainstalujte certifikát pro **ověřování klientů** z vaší interní certifikační autority nebo z veřejné certifikační autority. Může to být stejný certifikát jako ověřovací certifikát serverů, pokud má tento certifikát obě schopnosti.
 
@@ -322,7 +321,8 @@ Stáhnete, nainstalujete a nakonfigurujete Certificate Connector na serveru NDES
 
 4.  Po dokončení průvodce klikněte před jeho zavřením na **Spustit uživatelské rozhraní konektoru Certificate Connector**.
 
-    > [!TIP] Pokud průvodce zavřete před spuštěním uživatelského rozhraní Certificate Connectoru, můžete ho znovu otevřít spuštěním následujícího příkazu:
+    > [!TIP]
+    > Pokud průvodce zavřete před spuštěním uživatelského rozhraní konektoru Certificate Connector, můžete ho znovu otevřít spuštěním následujícího příkazu:
     >
     > **&lt;cesta_k_instalaci&gt;\NDESConnectorUI\NDESConnectorUI.exe**
 
@@ -346,6 +346,7 @@ Pokud chcete ověřit, jestli je služba spuštěná, spusťte prohlížeč a za
 Teď jste připravení konfigurovat profily certifikátů podle návodu v tématu [Konfigurace profilů certifikátů](Configure-Intune-certificate-profiles.md).
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 
