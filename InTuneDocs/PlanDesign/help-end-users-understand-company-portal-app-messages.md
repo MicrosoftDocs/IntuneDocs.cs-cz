@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Vysvětlení zpráv aplikace Portál společnosti pro koncové uživatele | Microsoft Intune
-description:
-keywords:
+title: "Vysvětlení zpráv aplikace Portál společnosti pro koncové uživatele | Microsoft Intune"
+description: 
+keywords: 
 author: staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 3df993aa-48c5-4799-b68d-c85fe4f7b02c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 79617dd41e51402a73759da792f581028095a2f5
+ms.openlocfilehash: 40f2ead80326a451dfd59a4969191009dc35deef
+
 
 ---
 
@@ -73,16 +67,17 @@ Pokud uživatel povolí přístup, protokoly se zkopírují na kartu SD.
 
 Pokud uživatel zakáže přístup, může i dál posílat datové protokoly, ale tyto protokoly se nezkopírují na kartu SD zařízení.
 
-Při druhém přihlášení k aplikaci Portál společnosti po odepření přístupu se ve zprávě zobrazí zaškrtávací políčko **Příště se už neptat**, takže uživatel může určit, že se tato zpráva už nebude zobrazovat. Pokud uživatel povolí přístup, ale později ho odepře, tato zpráva se zobrazí při příštím pokusu o odeslání protokolu. Pokud se uživatelé rozhodnou povolit přístup později, mohou přejít na **Nastavení** > **Aplikace** > **Portál společnosti** > **Oprávnění** > **Úložiště** a toto oprávnění zapnout.
+Při druhém přihlášení k aplikaci Portál společnosti po odepření přístupu se ve zprávě zobrazí zaškrtávací políčko **Příště se už neptat**, takže uživatel může určit, že se tato zpráva už nebude zobrazovat. Pokud uživatel povolí přístup, ale později ho odepře, tato zpráva se zobrazí při příštím pokusu o odeslání protokolů. Pokud se uživatelé rozhodnou povolit přístup později, mohou přejít na **Nastavení** > **Aplikace** > **Portál společnosti** > **Oprávnění** > **Úložiště** a toto oprávnění zapnout.
 
 ### Kam nasměrovat uživatele, pokud potřebují další informace
 [Odeslání protokolů s diagnostickými daty e-mailem vašemu správci IT](/Intune/EndUser/send-diagnostic-data-logs-to-your-it-administrator-using-email-android)
 
 
 ### Související témata
-[Co říct koncovým uživatelům o používání služby Intune](/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune.md)
+[Co říct koncovým uživatelům o používání služby Intune](/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jul16_HO1-->
 
 

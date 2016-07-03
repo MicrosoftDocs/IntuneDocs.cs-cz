@@ -12,6 +12,7 @@ ms.technology:
 ms.assetid: 47e03edb-0c57-4e25-8e89-4a1069267b8c
 ms.reviewer: priyar
 ms.suite: ems
+translationtype: Human Translation
 ms.sourcegitcommit: 1244d931d1bd3db012fbcfe0bd055d1fd4f2d88a
 ms.openlocfilehash: f0108b884439aac9661c9f36f85b47d80209d155
 
@@ -34,9 +35,10 @@ Další informace najdete pomocí odkazu v části V tomto článku, který odpo
 
 -   Pokud jste nainstalovali klientský software Intune, bude z počítače odebrán.
 
--   Z počítače se odebere software Intune Endpoint Protection. Pokud je v počítači nainstalovaný jiný software antivirové ochrany a je zakázaný, může být po odebrání softwaru Intune Endpoint Protection znovu povolený. Po odebrání z Portálu společnosti byste měli počítač zkontrolovat.
+-   Z počítače se odebere software Intune Endpoint Protection. Pokud je v počítači nainstalovaný jiný software antivirové ochrany a je zakázaný, může být po odebrání softwaru Intune Endpoint Protection znovu povolený. Po odebrání počítače z portálu společnosti byste měli počítač zkontrolovat.
 
-    > [!IMPORTANT] Pokud tento jiný software antivirové ochrany nebude znovu povolený a není nainstalovaný žádný jiný software antivirové ochrany, může být počítač od daného okamžiku ohrožen a zvýší se tím riziko napadení viry a malwarem.
+    > [!IMPORTANT]
+    > Pokud tento jiný software antivirové ochrany nebude znovu povolen a nebude nainstalován žádný jiný software antivirové ochrany, může být počítač od daného okamžiku ohrožen a zvýší se tím riziko napadení viry a malwarem.
 
 -   Už nebudou platit nastavení, která se v zařízení změnila od jeho přidání (třeba zakázání fotoaparátu/kamery).
 
@@ -91,6 +93,6 @@ Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na spr�
 [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Ochrana zařízení s Windows pomocí vícefaktorového ověřování | Microsoft Intune
-description:
-keywords:
+title: "Ochrana zařízení s Windows pomocí vícefaktorového ověřování | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 9b4f197d-bc10-4bee-91c9-19bcc8287d36
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: vinaybha
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 2023d7bc1d35b423a216ece195cdca9a6a542446
+ms.openlocfilehash: 15e546b93c2a3aff551efa36ac80ff212ada5812
+
 
 ---
 
@@ -40,7 +34,8 @@ Všechny výš uvedené servery musí splňovat požadavky na systém, které na
 #### MFA s Intune
 Pokud má vaše organizace místní infrastrukturu IT, která zahrnuje doménu Active Directory se službou Active Directory Federation Services (ADFS), můžete nakonfigurovat MFA na federačním serveru a potom povolit MFA pro registraci v Intune. Konfigurací MFA v Intune povolíte uživatelům jedno ověření během registrace a poté přístup k prostředkům společnosti bez nutnosti vždy opakovat proces MFA.
 
->[!NOTE] Vícefaktorové ověřování se může na serveru ADFS vyžadovat po jednotlivých uživatelích nebo skupinách.  
+>[!NOTE]
+>Vícefaktorové ověřování může být na serveru ADFS vyžadované po jednotlivých uživatelích nebo skupinách.  
 
 #### MFA bez Intune
 Pokud vícefaktorové ověřování nakonfigurujete na federačním serveru, ale nepovolíte ho pro registraci ve službě Intune, budou uživatelé muset použít vícefaktorové ověřování při každém přístupu k prostředkům společnosti (nikoli pouze při registraci zařízení).
@@ -60,6 +55,7 @@ Informace o tom, jak zapnout MFA v ADFS najdete v tématu [Přehled řízení ri
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

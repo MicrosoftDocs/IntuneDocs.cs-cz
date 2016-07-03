@@ -1,28 +1,19 @@
 ---
-# required metadata
-
-title: Heslo nesplňuje požadavky správce IT | Microsoft Intune
-description:
-keywords:
+title: "Heslo nesplňuje požadavky správce IT | Microsoft Intune"
+description: 
+keywords: 
 author: staciebarker
 manager: jeffgilb
 ms.date: 05/26/2016
 ms.topic: article
-ms.prod:
-ms.service:
-ms.technology:
+ms.prod: 
+ms.service: 
+ms.technology: 
 ms.assetid: efb3c261-1f6c-4d39-bfa4-18661f8c59c7
+translationtype: Human Translation
+ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
+ms.openlocfilehash: cf6a7a005aaf703f2dfc20b89236056dff84e137
 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: chrisgre
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 
 ---
 
@@ -46,6 +37,7 @@ Informace o nastavení PIN kódu či hesla nebo dalších úlohách, které mů�
 
 Pokud máte potíže s tím, jak vytvořit heslo v souladu s požadavky, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
