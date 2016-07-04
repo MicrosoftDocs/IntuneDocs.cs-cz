@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Nastavení zásad pro Windows Phone 8.1 | Microsoft Intune
-description:
-keywords:
+title: "Nastavení zásad pro Windows Phone 8.1 | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 83f7469c-272e-43f2-8139-b0d7bc34f43f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: a280fcbecf82e6ff27e40d2d53331b3988953ff7
+ms.openlocfilehash: fe685da41bb5379526bdc28c2f9cceb6b7800703
+
 
 ---
 
@@ -127,7 +121,8 @@ V seznamu **Kompatibilní a nekompatibilní aplikace** zadejte seznam kompatibil
 |**Importovat aplikace**|Importuje seznam aplikací, které jste zadali v souboru hodnot oddělených čárkami. V souboru použijte formát, název aplikace, vydavatele, adresu URL aplikace.|
 |**Upravit**|Tady můžete upravit název, vydavatele a adresu URL vybrané aplikace.|
 |**Odstranit**|Odstraní vybranou aplikaci ze seznamu.|
-> [!IMPORTANT] Pokud zadáváte seznam aplikací povolených pro zařízení s Windows Phone 8.1, je potřeba přidat do tohoto seznamu aplikaci Portál společnosti, jinak se zablokuje.
+> [!IMPORTANT]
+> Pokud zadáváte seznam aplikací povolených pro zařízení Windows Phone 8.1, je potřeba přidat do tohoto seznamu aplikaci Portál společnosti, jinak se zablokuje.
 
 
 ### Referenční informace pro aplikace nesplňující předpisy
@@ -142,7 +137,7 @@ Otevřete stránku aplikace a zkopírujte adresu URL do schránky. Tu teď můž
 **Příklad:** Vyhledání aplikace Skype ve Storu. Použijete adresu URL **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.
 
 ## Nastavení vlastních zásad 
-Pomocí možnosti **Vlastní zásady konfigurace pro Windows Phone** služby Microsoft Intune nasaďte nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier), které se dá používat k ovládání funkcí na **zařízeních s Windows Phone 8.1**. Jsou to standardní nastavení, která k ovládání funkcí zařízení používá spousta výrobců mobilních zařízení.
+Pomocí možnosti **Vlastní zásady konfigurace pro Windows Phone** Microsoft Intune nasaďte nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier), které se dá používat k ovládání funkcí na **zařízeních s Windows Phone 8.1**. Jsou to standardní nastavení, která k ovládání funkcí zařízení používá spousta výrobců mobilních zařízení.
 
 Díky této vlastnosti můžete nasadit nastavení Windows Phone, která nejdou konfigurovat obecnými zásadami konfigurace Intune. Informace o nastaveních, která můžete pomocí těchto zásad konfigurovat, najdete v tématu [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
@@ -152,7 +147,7 @@ Nápovědu k vytváření nastavení OMA-URI pro zařízení Windows Phone, najd
 
 |Název nastavení|Podrobnosti|
 |----------------|--------------------|
-|**Název**|Zadejte jedinečný název zásady, abyste ji mohli v konzole Intune snadno identifikovat.|
+|**Název**|Zadejte jedinečný název vlastní zásady, abyste ji mohli v konzole Intune snadno identifikovat.|
 |**Popis**|Zadejte popis, který zásadu vystihne, a uveďte jakékoli další důležité informace, které vám pomůžou zásadu najít.|
 
 ### Nastavení OMA-URI
@@ -174,6 +169,7 @@ V dialogovém okně **Přidat nebo upravit nastavení OMA-URI** zadejte následu
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
