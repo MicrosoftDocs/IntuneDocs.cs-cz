@@ -1501,9 +1501,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\DeployUse\azure-portal-for-microsoft-intune-mam-policies.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/1a20ccbf740a1a98891e59fa41caf8bc26ef4ce1/InTuneDocs/DeployUse/azure-portal-for-microsoft-intune-mam-policies.md)
-* Current Handback File: [azure-portal-for-microsoft-intune-mam-policies.d79360cf342fc6271d499db2e776b3adc200e795.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/916b2db14fb971bb05d671e1b347fe2dd14b844d/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/azure-portal-for-microsoft-intune-mam-policies.d79360cf342fc6271d499db2e776b3adc200e795.cs-cz.xlf)
-* Current Handback Datetime: 2016-07-03 00:22:18
+* Current Target File: [InTuneDocs\DeployUse\azure-portal-for-microsoft-intune-mam-policies.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/c71546d139ae859cd340cba8dd593e8416c53f2d/InTuneDocs/DeployUse/azure-portal-for-microsoft-intune-mam-policies.md)
+* Current Handback File: [azure-portal-for-microsoft-intune-mam-policies.d79360cf342fc6271d499db2e776b3adc200e795.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/19bd6813aa4f0f48ab23f2668baf2a026108681c/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/azure-portal-for-microsoft-intune-mam-policies.d79360cf342fc6271d499db2e776b3adc200e795.cs-cz.xlf)
+* Current Handback Datetime: 2016-07-05 15:41:46
 * [Back to Top](#report-top)
 
 ##### <a name='55f811153bf37048a4fcdfc6da301a5f181700c316'></a> Source: [InTuneDocs\DeployUse\categorize-devices-with-device-group-mapping-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/bb30b8e61a768b15e2f09993f4dceae8f4e1bd8a/InTuneDocs/DeployUse/categorize-devices-with-device-group-mapping-in-microsoft-intune.md)
