@@ -1,29 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [InTuneDocs\DeployUse\azure-portal-for-microsoft-intune-mam-policies.md](https://github.com/Microsoft/IntuneDocs-pr/blob/0a38b0ef301559209acab0611cfe3da69b468ff7/InTuneDocs/DeployUse/azure-portal-for-microsoft-intune-mam-policies.md) | OutofSyncHandedBackSuccess | [Details](#7d27f131b07ccc8d2904b10c51e0b8936cc34f5915)
 
 ## Item Details
-##### <a name='7d27f131b07ccc8d2904b10c51e0b8936cc34f5915'></a> Source: [InTuneDocs\DeployUse\azure-portal-for-microsoft-intune-mam-policies.md](https://github.com/Microsoft/IntuneDocs-pr/blob/0a38b0ef301559209acab0611cfe3da69b468ff7/InTuneDocs/DeployUse/azure-portal-for-microsoft-intune-mam-policies.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [azure-portal-for-microsoft-intune-mam-policies.d79360cf342fc6271d499db2e776b3adc200e795.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3411045172d58c287638368c9c73afd76a846ba6/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/azure-portal-for-microsoft-intune-mam-policies.d79360cf342fc6271d499db2e776b3adc200e795.cs-cz.xlf)
-* Handoff Datetime: 2016-07-02 02:19:16
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\DeployUse\azure-portal-for-microsoft-intune-mam-policies.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/c71546d139ae859cd340cba8dd593e8416c53f2d/InTuneDocs/DeployUse/azure-portal-for-microsoft-intune-mam-policies.md)
-* Current Handback File: [azure-portal-for-microsoft-intune-mam-policies.d79360cf342fc6271d499db2e776b3adc200e795.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/19bd6813aa4f0f48ab23f2668baf2a026108681c/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/azure-portal-for-microsoft-intune-mam-policies.d79360cf342fc6271d499db2e776b3adc200e795.cs-cz.xlf)
-* Current Handback Datetime: 2016-07-05 15:41:46
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
