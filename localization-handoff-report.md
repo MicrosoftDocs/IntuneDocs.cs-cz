@@ -1,37 +1,54 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 4
+ Total Files | 6
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [InTuneDocs\DeployUse\decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/93f69c39393bc6c875773fc682a57fe9c29e2f68/InTuneDocs/DeployUse/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md) | OutofSyncHandedBackSuccess | [Details](#ca4142b0c9e2dff0848fa38d2a7b99e8fa727db829)
- [InTuneDocs\DeployUse\prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md](https://github.com/Microsoft/IntuneDocs-pr/blob/93f69c39393bc6c875773fc682a57fe9c29e2f68/InTuneDocs/DeployUse/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) | OutofSyncHandedBackSuccess | [Details](#4e84faa9ca496aa027e438115e5e0e1d650c2ff5214)
- [InTuneDocs\DeployUse\prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md](https://github.com/Microsoft/IntuneDocs-pr/blob/93f69c39393bc6c875773fc682a57fe9c29e2f68/InTuneDocs/DeployUse/prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) | HandedOffSuccess | [Details](#a200306633e9f1984d979da8b70db0f40ca198f7216)
- [InTuneDocs\DeployUse\use-the-sdk-to-enable-apps-for-mobile-application-management.md](https://github.com/Microsoft/IntuneDocs-pr/blob/93f69c39393bc6c875773fc682a57fe9c29e2f68/InTuneDocs/DeployUse/use-the-sdk-to-enable-apps-for-mobile-application-management.md) | OutofSyncHandedBackSuccess | [Details](#93c5993d843e498aaa623e0f55ea9046de9b40d8253)
+ [InTuneDocs\DeployUse\how-your-android-users-get-their-apps.md](https://github.com/Microsoft/IntuneDocs-pr/blob/842522811ec239e47da64f6914c568943550fcce/InTuneDocs/DeployUse/how-your-android-users-get-their-apps.md) | OutofSyncHandedBackSuccess | [Details](#24b746a8d2677d9f85f74c1714fe9c08d489727a49)
+ [InTuneDocs\DeployUse\monitor-mobile-app-management-policies-with-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/4595d0e79b0b7dbfc9d34baaba5bd30121582326/InTuneDocs/DeployUse/monitor-mobile-app-management-policies-with-microsoft-intune.md) | OutofSyncHandedBackSuccess | [Details](#5cf2e058cc03e4793d8a617c14d2a9c3fa9b740e203)
+ [InTuneDocs\DeployUse\prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md](https://github.com/Microsoft/IntuneDocs-pr/blob/4595d0e79b0b7dbfc9d34baaba5bd30121582326/InTuneDocs/DeployUse/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) | OutofSyncHandedBackSuccess | [Details](#18a22db09f7e9887a5aeb467fbd25331da3dcd8a214)
+ [InTuneDocs\develop\intune-app-sdk-android.md](https://github.com/Microsoft/IntuneDocs-pr/blob/51f7734e2acced469ec3520d74a8079dac8223f2/InTuneDocs/develop/intune-app-sdk-android.md) | OutofSyncHandedBackSuccess | [Details](#bcb62e9c99c1f5a5b53ada688ef39a59674dea04268)
+ [InTuneDocs\EndUser\install-a-new-version-of-the-company-portal-app.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ebc237b402da7a4d1850be0b16a4f0cdd87458a6/InTuneDocs/EndUser/install-a-new-version-of-the-company-portal-app.md) | OutofSyncHandedBackSuccess | [Details](#25752f1d96dafb4c4778820f75cb3eff1b45067d307)
+ [InTuneDocs\GetStarted\choose-how-to-enroll-devices.md](https://github.com/Microsoft/IntuneDocs-pr/blob/fee47110b482285a63843f02d67670fefd04343a/InTuneDocs/GetStarted/choose-how-to-enroll-devices.md) | OutofSyncHandedBackSuccess | [Details](#5197a9f00fcbe7ae15c893c8c1a92ab960fca6c0493)
 
 ## Item Details
-##### <a name='ca4142b0c9e2dff0848fa38d2a7b99e8fa727db829'></a> Source: [InTuneDocs\DeployUse\decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/93f69c39393bc6c875773fc682a57fe9c29e2f68/InTuneDocs/DeployUse/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md)
+##### <a name='24b746a8d2677d9f85f74c1714fe9c08d489727a49'></a> Source: [InTuneDocs\DeployUse\how-your-android-users-get-their-apps.md](https://github.com/Microsoft/IntuneDocs-pr/blob/842522811ec239e47da64f6914c568943550fcce/InTuneDocs/DeployUse/how-your-android-users-get-their-apps.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.0b8a5fca6a4b115e0247c86132e68528ae2848e6.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/2f8351742f480ac26fc1de4c1478ede7bd7747a2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.0b8a5fca6a4b115e0247c86132e68528ae2848e6.cs-cz.xlf)
-* Handoff Datetime: 2016-07-06 21:20:41
+* Handoff File: [how-your-android-users-get-their-apps.b3db6a6f5e34a50522804167256fb8771547c48f.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/c10a8ecbae2e084b51b9cdace9f378730625b7fa/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/how-your-android-users-get-their-apps.b3db6a6f5e34a50522804167256fb8771547c48f.cs-cz.xlf)
+* Handoff Datetime: 2016-07-06 23:25:37
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\DeployUse\decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/75e78f241f4a54550945fe1116834b157df160f4/InTuneDocs/DeployUse/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md)
-* Current Handback File: [decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.0b8a5fca6a4b115e0247c86132e68528ae2848e6.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/cbffacc094e2347eeeef322e16b75dd7b26f4153/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.0b8a5fca6a4b115e0247c86132e68528ae2848e6.cs-cz.xlf)
+* Current Target File: [InTuneDocs\DeployUse\how-your-android-users-get-their-apps.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/75e78f241f4a54550945fe1116834b157df160f4/InTuneDocs/DeployUse/how-your-android-users-get-their-apps.md)
+* Current Handback File: [how-your-android-users-get-their-apps.b3db6a6f5e34a50522804167256fb8771547c48f.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/cbffacc094e2347eeeef322e16b75dd7b26f4153/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/how-your-android-users-get-their-apps.b3db6a6f5e34a50522804167256fb8771547c48f.cs-cz.xlf)
 * Current Handback Datetime: 2016-06-17 22:47:43
 * [Back to Top](#report-top)
 
-##### <a name='4e84faa9ca496aa027e438115e5e0e1d650c2ff5214'></a> Source: [InTuneDocs\DeployUse\prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md](https://github.com/Microsoft/IntuneDocs-pr/blob/93f69c39393bc6c875773fc682a57fe9c29e2f68/InTuneDocs/DeployUse/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)
+##### <a name='5cf2e058cc03e4793d8a617c14d2a9c3fa9b740e203'></a> Source: [InTuneDocs\DeployUse\monitor-mobile-app-management-policies-with-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/4595d0e79b0b7dbfc9d34baaba5bd30121582326/InTuneDocs/DeployUse/monitor-mobile-app-management-policies-with-microsoft-intune.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.616f51519eb2c73576b2d965d4745db81c21828d.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/2f8351742f480ac26fc1de4c1478ede7bd7747a2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.616f51519eb2c73576b2d965d4745db81c21828d.cs-cz.xlf)
-* Handoff Datetime: 2016-07-06 21:20:41
+* Handoff File: [monitor-mobile-app-management-policies-with-microsoft-intune.c66af86c5d28374930c6e9c7e761080155045d75.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/c10a8ecbae2e084b51b9cdace9f378730625b7fa/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/monitor-mobile-app-management-policies-with-microsoft-intune.c66af86c5d28374930c6e9c7e761080155045d75.cs-cz.xlf)
+* Handoff Datetime: 2016-07-06 23:25:37
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [InTuneDocs\DeployUse\monitor-mobile-app-management-policies-with-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/3e67580b6573fea3970c424407b8b4150dc0305e/InTuneDocs/DeployUse/monitor-mobile-app-management-policies-with-microsoft-intune.md)
+* Current Handback File: [monitor-mobile-app-management-policies-with-microsoft-intune.c66af86c5d28374930c6e9c7e761080155045d75.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/d04715ee42d2e6447381e90912ae76439bfaf3a4/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/monitor-mobile-app-management-policies-with-microsoft-intune.c66af86c5d28374930c6e9c7e761080155045d75.cs-cz.xlf)
+* Current Handback Datetime: 2016-07-02 09:48:52
+* [Back to Top](#report-top)
+
+##### <a name='18a22db09f7e9887a5aeb467fbd25331da3dcd8a214'></a> Source: [InTuneDocs\DeployUse\prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md](https://github.com/Microsoft/IntuneDocs-pr/blob/4595d0e79b0b7dbfc9d34baaba5bd30121582326/InTuneDocs/DeployUse/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.616f51519eb2c73576b2d965d4745db81c21828d.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/c10a8ecbae2e084b51b9cdace9f378730625b7fa/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.616f51519eb2c73576b2d965d4745db81c21828d.cs-cz.xlf)
+* Handoff Datetime: 2016-07-06 23:25:37
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -42,31 +59,49 @@
 * Current Handback Datetime: 2016-06-17 22:47:43
 * [Back to Top](#report-top)
 
-##### <a name='a200306633e9f1984d979da8b70db0f40ca198f7216'></a> Source: [InTuneDocs\DeployUse\prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md](https://github.com/Microsoft/IntuneDocs-pr/blob/93f69c39393bc6c875773fc682a57fe9c29e2f68/InTuneDocs/DeployUse/prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.4831931e1f3b985f24251fb4f18e4604c7b08413.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/2f8351742f480ac26fc1de4c1478ede7bd7747a2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.4831931e1f3b985f24251fb4f18e4604c7b08413.cs-cz.xlf)
-* Handoff Datetime: 2016-07-06 21:20:41
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='93c5993d843e498aaa623e0f55ea9046de9b40d8253'></a> Source: [InTuneDocs\DeployUse\use-the-sdk-to-enable-apps-for-mobile-application-management.md](https://github.com/Microsoft/IntuneDocs-pr/blob/93f69c39393bc6c875773fc682a57fe9c29e2f68/InTuneDocs/DeployUse/use-the-sdk-to-enable-apps-for-mobile-application-management.md)
+##### <a name='bcb62e9c99c1f5a5b53ada688ef39a59674dea04268'></a> Source: [InTuneDocs\develop\intune-app-sdk-android.md](https://github.com/Microsoft/IntuneDocs-pr/blob/51f7734e2acced469ec3520d74a8079dac8223f2/InTuneDocs/develop/intune-app-sdk-android.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [use-the-sdk-to-enable-apps-for-mobile-application-management.957dd4da47464bad824794b58d85764ae46f9aa0.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/2f8351742f480ac26fc1de4c1478ede7bd7747a2/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/use-the-sdk-to-enable-apps-for-mobile-application-management.957dd4da47464bad824794b58d85764ae46f9aa0.cs-cz.xlf)
-* Handoff Datetime: 2016-07-06 21:20:41
+* Handoff File: [intune-app-sdk-android.13ba26a9f5060cab39ff9d68283cfc8d10856886.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/c10a8ecbae2e084b51b9cdace9f378730625b7fa/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/intune-app-sdk-android.13ba26a9f5060cab39ff9d68283cfc8d10856886.cs-cz.xlf)
+* Handoff Datetime: 2016-07-06 23:25:37
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\DeployUse\use-the-sdk-to-enable-apps-for-mobile-application-management.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/75e78f241f4a54550945fe1116834b157df160f4/InTuneDocs/DeployUse/use-the-sdk-to-enable-apps-for-mobile-application-management.md)
-* Current Handback File: [use-the-sdk-to-enable-apps-for-mobile-application-management.957dd4da47464bad824794b58d85764ae46f9aa0.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/cbffacc094e2347eeeef322e16b75dd7b26f4153/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/use-the-sdk-to-enable-apps-for-mobile-application-management.957dd4da47464bad824794b58d85764ae46f9aa0.cs-cz.xlf)
-* Current Handback Datetime: 2016-06-17 22:47:43
+* Current Target File: [InTuneDocs\develop\intune-app-sdk-android.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/57b5e7b8822574112a3575e51760d0ed3d00810b/InTuneDocs/develop/intune-app-sdk-android.md)
+* Current Handback File: [intune-app-sdk-android.13ba26a9f5060cab39ff9d68283cfc8d10856886.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/2e056571c019613c60380c4a085e86f0deb8efae/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/intune-app-sdk-android.13ba26a9f5060cab39ff9d68283cfc8d10856886.cs-cz.xlf)
+* Current Handback Datetime: 2016-06-13 11:33:42
+* [Back to Top](#report-top)
+
+##### <a name='25752f1d96dafb4c4778820f75cb3eff1b45067d307'></a> Source: [InTuneDocs\EndUser\install-a-new-version-of-the-company-portal-app.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ebc237b402da7a4d1850be0b16a4f0cdd87458a6/InTuneDocs/EndUser/install-a-new-version-of-the-company-portal-app.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [install-a-new-version-of-the-company-portal-app.cd7e62e3bb2f58ce38e6486582b748ce07bae5a7.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/c10a8ecbae2e084b51b9cdace9f378730625b7fa/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/install-a-new-version-of-the-company-portal-app.cd7e62e3bb2f58ce38e6486582b748ce07bae5a7.cs-cz.xlf)
+* Handoff Datetime: 2016-07-06 23:25:37
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [InTuneDocs\EndUser\install-a-new-version-of-the-company-portal-app.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/68154aaec7759b32f8e7782a982891df553ca5ce/InTuneDocs/EndUser/install-a-new-version-of-the-company-portal-app.md)
+* Current Handback File: [install-a-new-version-of-the-company-portal-app.cd7e62e3bb2f58ce38e6486582b748ce07bae5a7.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/e6f4fd9487510482abb6e411365d15d990950922/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/install-a-new-version-of-the-company-portal-app.cd7e62e3bb2f58ce38e6486582b748ce07bae5a7.cs-cz.xlf)
+* Current Handback Datetime: 2016-06-24 16:15:25
+* [Back to Top](#report-top)
+
+##### <a name='5197a9f00fcbe7ae15c893c8c1a92ab960fca6c0493'></a> Source: [InTuneDocs\GetStarted\choose-how-to-enroll-devices.md](https://github.com/Microsoft/IntuneDocs-pr/blob/fee47110b482285a63843f02d67670fefd04343a/InTuneDocs/GetStarted/choose-how-to-enroll-devices.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [choose-how-to-enroll-devices.9709d9a703247aec224c0d9748801283759de71d.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/c10a8ecbae2e084b51b9cdace9f378730625b7fa/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/choose-how-to-enroll-devices.9709d9a703247aec224c0d9748801283759de71d.cs-cz.xlf)
+* Handoff Datetime: 2016-07-06 23:25:37
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [InTuneDocs\GetStarted\choose-how-to-enroll-devices.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/0ebab481f63da10e2aa3184cac84e74b9b446e3f/InTuneDocs/GetStarted/choose-how-to-enroll-devices.md)
+* Current Handback File: [choose-how-to-enroll-devices.9709d9a703247aec224c0d9748801283759de71d.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/293f455b0e82233120eead5ca873577259c12f53/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/choose-how-to-enroll-devices.9709d9a703247aec224c0d9748801283759de71d.cs-cz.xlf)
+* Current Handback Datetime: 2016-06-30 20:24:05
 * [Back to Top](#report-top)
 
 
