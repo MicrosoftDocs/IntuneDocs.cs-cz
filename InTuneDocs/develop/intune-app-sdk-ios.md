@@ -1,33 +1,28 @@
 ---
-# required metadata
-
-title: Microsoft Intune App SDK pro iOS – Příručka pro vývojáře | Microsoft Intune
-description:
-keywords:
+title: "Microsoft Intune App SDK pro iOS – Příručka pro vývojáře | Microsoft Intune"
+description: 
+keywords: 
 author: Msmbaldwin
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: b7f62c5ee18d8f69fa174f09a1c46b6925c7517c
+ms.openlocfilehash: 820ec2da0554f0af383895482241be7d1c0cf305
+
 
 ---
 
 # Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
-> [!NOTE]Možná si budete chtít nejdřív přečíst příručku [Začínáme s Intune App SDK](intune-app-sdk-get-started.md), která vysvětluje přípravu integrace na jednotlivých podporovaných platformách.* 
+> [!NOTE]
+> Možná si budete chtít nejdřív přečíst příručku [Začínáme s Intune App SDK](intune-app-sdk-get-started.md), která vysvětluje postup přípravy integrace na jednotlivých podporovaných platformách.* 
 
 Microsoft Intune App SDK pro iOS umožňuje začlenit správu mobilních aplikací (MAM) Intune do vaší aplikace pro iOS. Aplikace s podporou MAM je integrovaná se sadou Intune App SDK a umožňuje správcům IT nasadit zásady do mobilní aplikace, když je aktivně spravovaná.
 
@@ -232,7 +227,8 @@ Před testováním aplikace s podporou MAM pomocí Microsoft Intune můžete v X
 
 * Spusťte aplikaci (v prostředí Xcode nebo mimo něj). Ověřte, že PIN funguje podle očekávání.
 
-> [!NOTE] Nastavení -> Název_aplikace -> Povolit zásady testování teď můžete použít k povolení a přepínání nastavení.
+> [!NOTE]
+> Teď můžete prostřednictvím možností „Nastavení -> Název_aplikace -> Povolit zásady testování“ povolit a přepínat nastavení.
 
 # Doporučené osvědčené postupy pro iOS
 
@@ -244,6 +240,7 @@ Pokud má Xcode potíže s vyhledáním `libIntuneMAM.a`, můžete je vyřešit 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

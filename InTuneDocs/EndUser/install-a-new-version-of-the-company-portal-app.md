@@ -1,28 +1,19 @@
 ---
-# required metadata
-
-title: Instalace nové verze aplikace Portál společnosti | Microsoft Intune
-description:
-keywords:
+title: "Instalace nové verze aplikace Portál společnosti | Microsoft Intune"
+description: 
+keywords: 
 author: staciebarker
 manager: jeffgilb
 ms.date: 05/30/2016
 ms.topic: article
-ms.prod:
-ms.service:
-ms.technology:
+ms.prod: 
+ms.service: 
+ms.technology: 
 ms.assetid: c002bcb2-ae37-478d-acf3-2bf51faae490
+translationtype: Human Translation
+ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
+ms.openlocfilehash: 29d409f272800e0c5ccaf71494b5e98d1edaae4e
 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: priyar
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 
 ---
 
@@ -44,7 +35,8 @@ Apple AppStore vás upozorní, jakmile bude k dispozici nová verze aplikace Por
 
 2.  Postupujte podle pokynů k instalaci.
 
-    > [!NOTE] Pokud se nemůžete do Windows Storu dostat, obraťte se na správce IT.
+    > [!NOTE]
+    > Pokud se nemůžete do Windows Storu dostat, obraťte se na správce IT.
 
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
@@ -57,6 +49,7 @@ Informace o dalších úlohách, které můžete v zařízení provést, najdete
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

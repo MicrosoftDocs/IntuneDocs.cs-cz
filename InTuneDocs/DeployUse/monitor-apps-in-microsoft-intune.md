@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Monitorování nasazení aplikací | Microsoft Intune
-description:
-keywords:
+title: "Monitorování nasazení aplikací | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 5daad56d-71c8-455b-8a55-f8b33e279a8a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
+ms.openlocfilehash: c92b7de51de0ac0115dd53e421d4852bed8d729a
+
 
 ---
 
@@ -44,7 +38,7 @@ Zobrazí se seznam spravovaných aplikací. Když kliknete na některou aplikaci
 Přehled aplikací a jejich stavu se zobrazuje i v pracovním prostoru **Řídicí panel**. Pokud kliknete na libovolné místo v přehledu, přejdete do seznamu aplikací.
 
 ## Zobrazení podrobnějších informací o aplikaci
-Ze seznamu aplikací vyberte některou aplikaci a pak klikněte na **Zobrazit vlastnosti**..
+Ze seznamu aplikací vyberte některou aplikaci a pak klikněte na **Zobrazit vlastnosti**.
 
 Na stránce **Vlastnosti softwaru**klikněte na některou z těchto karet: **Obecné** – zobrazuje obecné informace o aplikaci a stavu její instalace, **Zařízení** – zobrazuje zařízení s úspěšně nainstalovanou a nasazenou aplikací, **Uživatelé** – zobrazuje uživatele s úspěšně nainstalovanou a nasazenou aplikací.
 
@@ -54,6 +48,7 @@ I tady můžete použít rozevírací seznam **Filtry** ke konfiguraci hodnot, k
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

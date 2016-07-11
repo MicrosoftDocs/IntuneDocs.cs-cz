@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Ochrana aplikačních dat pomocí zásad správy mobilních aplikací | Microsoft Intune
-description:
-keywords:
+title: "Ochrana aplikačních dat pomocí zásad správy mobilních aplikací | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: joglocke
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 5a445f06d6c2328f7689468ca4d68a969af1e825
+ms.openlocfilehash: 161351164d9e99abb867aa34721ef4f992fb14fa
+
 
 ---
 
@@ -33,15 +27,16 @@ Vaši zaměstnanci používají mobilní zařízení pro osobní a pracovní úk
 Zásady správy mobilních aplikací (MAM) služby Intune vám pomohou vaše firemní data ochránit. Protože se zásady MAM Intune dají používat nezávisle na řešení správy mobilních zařízení (MDM), můžete je použít k ochraně firemních dat i bez registrace zařízení do řešení správy zařízení. Implementací **zásad na úrovni aplikace** můžete omezit přístup k prostředkům společnosti a ponechat data v kompetenci IT oddělení.
 
 Zásady MAM podporují aplikace běžící na:
+> [!IMPORTANT]
+> Můžete vytvářet zásady správy mobilních aplikací pro mobilní aplikace Office, které se připojují ke službám Office 365. Zásady MAM se nepodporují pro aplikace, které se připojují k místním službám Exchange nebo SharePoint.
 
--   **Zařízení, která jsou spravovaná a zaregistrovaná** ve službě [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Do této kategorie obvykle spadají podniková zařízení.
 
-  > [!IMPORTANT]
-  > Pokud používáte Intune ke správě zařízení se systémem iOS a Android, můžete vytvořit zásady správy mobilních aplikací pro mobilní aplikace Office, které se připojují ke službám Office 365. Zásady MAM se nepodporují pro aplikace, které se připojují k místním službám Exchange nebo SharePoint.
+- **Zařízení, která jsou spravovaná a zaregistrovaná v Microsoft Intune**. Do této kategorie obvykle spadají podniková zařízení.
 
 -   **Zařízení, která jsou spravovaná a zaregistrovaná do řešení správy mobilních zařízení třetích stran**.   Do této kategorie obvykle spadají podniková zařízení.
 
-  > [!NOTE] Zásady správy mobilních aplikací není vhodné používat s řešeními pro správu mobilních aplikací třetích stran nebo zabezpečeného kontejneru.
+  > [!NOTE]
+  > Zásady správy mobilních aplikací není vhodné používat s řešeními pro správu mobilních aplikací třetích stran nebo zabezpečeného kontejneru.
 
 -   **Zařízení, která nejsou spravovaná**.  Do této kategorie obvykle spadají zařízení vlastněná zaměstnanci,která nejsou spravovaná ani zaregistrovaná v Intune nebo jiných řešeních MDM.
 
@@ -137,6 +132,7 @@ Všechny mobilní aplikace Office podporují více identit.
 [Vytvoření a nasazení zásad správy mobilních aplikací pomocí Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

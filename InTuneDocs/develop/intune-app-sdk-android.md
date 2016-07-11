@@ -1,38 +1,32 @@
 ---
-# required metadata
-
-title: Microsoft Intune App SDK pro Android – Příručka pro vývojáře | Microsoft Intune
-description:
-keywords:
+title: "Microsoft Intune App SDK pro Android – Příručka pro vývojáře | Microsoft Intune"
+description: 
+keywords: 
 author: Msmbaldwin
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 2915cca314b489bbcb590d01b03a0b38134fa619
+ms.openlocfilehash: d2e4b6903d86b79edd9c758b2ce51733831e785a
+
 
 ---
 
 # Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
-> [!NOTE] Možná si budete chtít nejdřív přečíst [přehled sady Intune App SDK](intune-app-sdk.md), který vysvětluje aktuální funkce sady SDK a přípravu integrace na jednotlivých podporovaných platformách. 
+> [!NOTE]
+> Možná si budete chtít nejdřív přečíst článek [Přehled sady Intune App SDK](intune-app-sdk.md), který vysvětluje aktuální funkce sady SDK a popisuje postup přípravy integrace na jednotlivých podporovaných platformách. 
 
 # Co je v sadě SDK 
 
-Intune App SDK pro Android je standardní knihovna pro Android, která nemá žádné externí závislosti. 
-Sadu SDK tvoří:  
+Intune App SDK pro Android je standardní knihovna pro Android, která nemá žádné externí závislosti. Sadu SDK tvoří:  
 
 * **`Microsoft.Intune MAM.SDK.jar`**: Rozhraní nutná pro povolení MAM v aplikaci. Povolují taky interoperabilitu s aplikací Portál společnosti Microsoft Intune. Aplikace je musí uvádět jako odkazy na knihovnu pro Android.
 
@@ -370,6 +364,7 @@ Intune SDK udržuje kontrakt poskytovaný rozhraním Android API, i když podmí
 * Vyhněte se použití jakéhokoli rozhraní API nejednoznačný způsobem. Například `Activity.startActivityForResult/onActivityResult` bez kontroly requestCode způsobí neobvyklé chování.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,27 +1,22 @@
 ---
-# required metadata
-
-title: Správa výstrah | Microsoft Intune
-description:
-keywords:
+title: "Správa výstrah | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 74dc4ce4-21da-4f40-a07f-3eea34561eee
-
-# optional metadata
-
 ROBOTS: noindex,nofollow
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f33a86c51320c75ce74d20e0cac2b9581990ecec
+ms.openlocfilehash: bfea7213f67b55807045bfd8b29fdb083b841a56
+
 
 ---
 
@@ -61,7 +56,7 @@ Výstrahy na vývěsce poskytují důležitá oznámení o službách, napříkl
 
 #### Zobrazení a správa výstrah na vývěsce
 
-1.  V konzole správce Intune klikněte na **Přehled systému**..
+1.  V konzole správce Intune klikněte na **Přehled systému**.
 
 2.  Pokud existují důležitá oznámení týkající se služeb, jsou zobrazená v oblasti **Vývěska**.
 
@@ -72,7 +67,7 @@ V pracovním prostoru **Přehled systému** si můžete zobrazit souhrny Stavu s
 
 #### Zobrazení stavu předplatného
 
-1.  V konzole správce Intune klikněte na **Přehled systému**..
+1.  V konzole správce Intune klikněte na **Přehled systému**.
 
 2.  V **oblasti Stav systému** můžete zkontrolovat stav různých součástí Microsoft Intune. Mnoho položek obsahuje odkazy, které umožňují zobrazit další informace. Třeba v části **Endpoint Protection** můžete výběrem počtu instancí zobrazit pracovní prostor **Endpoint Protection** se seznamem zjištěného malwaru. Výběrem počtu zařízení zobrazíte pracovní prostor **Skupiny** se seznamem zařízení, na kterých byl zjištěn malware.
 
@@ -91,9 +86,9 @@ Výstrahy, které jsou označené jako zavřené, se po 90 dnech trvale odstran�
 
 1.  V konzole správce Intune proveďte jednu z těchto věcí:
 
-    1.  **Zavření výstrahy ze seznamu výstrah** – klikněte na **Výstrahy &gt; Všechny výstrahy**. Vyberte výstrahu a pak klikněte na **Zavřít výstrahu**..
+    1.  **Zavření výstrahy ze seznamu výstrah** – klikněte na **Výstrahy &gt; Všechny výstrahy**. Vyberte výstrahu a pak klikněte na **Zavřít výstrahu**.
 
-    2.  **Zavření výstrahy pro konkrétní zařízení** – klikněte na **Skupiny &gt; Všechna zařízení**. Vyberte zařízení a klikněte na **Zobrazit vlastnosti**. Pak na kartě **Výstrahy** vyberte výstrahu a klikněte na **Zavřít výstrahu**..
+    2.  **Zavření výstrahy pro konkrétní zařízení** – klikněte na **Skupiny &gt; Všechna zařízení**. Vyberte zařízení a klikněte na **Zobrazit vlastnosti**. Pak na kartě **Výstrahy** vyberte výstrahu a klikněte na **Zavřít výstrahu**.
 
     3.  **Zavření výstrahy na vývěsce** – klikněte na **Přehled systému**. Klikněte na **X** vedle výstrahy na vývěsce.
 
@@ -101,17 +96,18 @@ Výstrahy, které jsou označené jako zavřené, se po 90 dnech trvale odstran�
 
 1.  V konzole správce Intune klikněte na **Výstrahy&gt; Všechny výstrahy**.
 
-2.  Na seznamu **Filtry** klikněte na **Zavřené**..
+2.  V seznamu **Filtry** klikněte na **Zavřené**.
 
     V podokně seznamu pro správu se zobrazí názvy a další informace o výstrahách. Podrobnosti o zvolené výstraze se zobrazí v podokně náhledu.
 
-3.  Pokud chcete zvolenou výstrahu znovu aktivovat, klikněte na **Znovu aktivovat výstrahu**..
+3.  Pokud chcete vybranou výstrahu znovu aktivovat, klikněte na **Znovu aktivovat výstrahu**.
 
 ### Související témata
-[Upozorňování pomocí výstrah služby Microsoft Intune](get-notified-by-microsoft-intune-alerts.md)
+[Upozorňování pomocí výstrah služby Microsoft Intune](get-notified-by-alerts.md)
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

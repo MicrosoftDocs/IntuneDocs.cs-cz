@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Nastavení zásad pro Mac OS X | Microsoft Intune
-description:
-keywords:
+title: "Nastavení zásad pro Mac OS X | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 98b2f19b-bee8-42d7-a215-a716d56a25a3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 8c1f4f209c5ec704290882b8f6f71e0b1b01d21c
+ms.openlocfilehash: bbbb666fdc34a82d247d760d156d48c5ac72374c
+
 
 ---
 
@@ -67,7 +60,8 @@ V seznamu **kompatibilních a nekompatibilních aplikací pro Mac OS X** aktivuj
 |**Importovat aplikace**|Importuje seznam aplikací, které jste zadali v souboru hodnot oddělených čárkami. Použije se formát, název aplikace, vydavatel a ID sady aplikace v souboru.|
 |**Upravit**|Umožňuje upravit název, vydavatele a ID sady vybrané aplikace.|
 |**Odstranit**|Odstraní vybranou aplikaci ze seznamu.|
-> [!TIP] Další informace o sestavách Intune najdete v tématu [Pochopení operací Microsoft Intune pomocí sestav](understand-microsoft-intune-operations-by-using-reports.md).
+> [!TIP]
+> Další informace o sestavách Intune najdete v tématu [Pochopení operací Microsoft Intune pomocí sestav](understand-microsoft-intune-operations-by-using-reports.md).
 
 > [!IMPORTANT]
 > Když je zařízení Mac OS X v režimu spánku, zásady a profily nejdou doručovat ani inventarizovat. Konzola Intune tak může dočasně zobrazovat stav **Nastavení zásad obsahující chybu**, dokud se zařízení nevzbudí z režimu spánku.
@@ -105,7 +99,7 @@ Než začnete, je potřeba nainstalovat Apple Configurator a vytvořit konfigura
 |Název nastavení|Podrobnosti|
     |----------------|--------------------|
     |**Vlastní název konfiguračního profilu (zobrazený uživatelům)**|Zadejte název zásady tak, jak se bude zobrazovat na zařízení a v sestavách zásad Intune.|
-    |**Soubor konfiguračního profilu**|Klikněte na **Importovat**a potom vyhledejte konfigurační profil, který jste vytvořili pomocí nástroje Apple Configurator. **Tip:** Informace o vytváření konfiguračního profilu najdete v tématu [Vytvoření souboru konfiguračního profilu](#BKMK_Prof).|
+    |**Soubor konfiguračního profilu**|Klikněte na **Importovat**a potom vyhledejte konfigurační profil, který jste vytvořili pomocí nástroje Apple Configurator. **Tip:** Nápovědu pro vytváření konfiguračního profilu najdete v tématu **Vytvoření souboru konfiguračního profilu**.|
     |**Podrobnosti konfiguračního profilu**|Zobrazí kód XML pro konfigurační profil, který jste importovali.|
 
 
@@ -126,6 +120,7 @@ Soubor konfiguračního profilu používaný vlastními zásadami můžete vytvo
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

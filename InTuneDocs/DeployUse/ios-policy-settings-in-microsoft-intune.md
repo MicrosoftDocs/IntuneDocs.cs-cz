@@ -1,37 +1,33 @@
 ---
-# required metadata
-
-title: Nastavení zásad pro iOS | Microsoft Intune
-description:
-keywords:
+title: "Nastavení zásad pro iOS | Microsoft Intune"
+description: "Vytvořte zásady, které řídí nastavení a funkce na zařízeních s iOS, která spravujete pomocí Intune."
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: heenamac
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9a492a16605130743b943f6aa49d1d633eb97d4
+ms.openlocfilehash: 3292df922eeb53108f2b34d4113b0b6c5a114564
+
 
 ---
 
 # Nastavení zásad pro iOS v Microsoft Intune
 
+Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete konfigurovat v zařízeních s iOS. Navíc můžete použít nástroj Apple Configurator k vytvoření vlastních nastavení, která nejsou k dispozici prostřednictvím Intune.
+
 ## Obecná nastavení zásad konfigurace
 
 Pomocí **zásad obecné konfigurace pro iOS** v Microsoft Intune můžete nakonfigurovat nastavení pro:
 
--   **Nastavení zabezpečení mobilního zařízení** – Zvolte ze seznamu předdefinovaných nastavení, která umožňují v zařízení ovládat celou řadu funkcí.
+-   **Obecná nastavení zařízení a zabezpečení** – Zvolte ze seznamu předdefinovaných nastavení, která umožňují ovládat celou řadu funkcí v zařízení.
 
 -   **Celoobrazovkový režim** – Umožňuje uzamknout zařízení a povolit fungování jenom některých funkcí. Můžete třeba povolit, aby v zařízení běžela jenom jedna vámi určená spravovaná aplikace, nebo můžete zakázat tlačítka hlasitosti na zařízení. Tato nastavení se dají používat pro ukázkový model zařízení nebo zařízení, které může provádět jenom jednu funkci, jako je třeba zařízení POS.
 
@@ -48,7 +44,7 @@ Pokud v tomto tématu není uvedené nastavení, které hledáte, je možné, ž
 |----------------|-------|
 |**Vyžadovat heslo k odemknutí mobilních zařízení**|Zadejte, jestli uživatelé při přístupu ke svému zařízení musí zadat heslo.|Ano|
 |**Vyžadovaný typ hesla**|Určuje typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.|Ano|
-|**Vyžadovaný typ hesla – Minimální počet znakových sad**|Používají se čtyři znakové sady: malá písmena, velká písmena, číslice a symboly. Toto nastavení určuje, kolik různých znakových sad musí být v hesle zahrnutých). Pro zařízení s iOS ale určuje počet znaků symbolu, které musí být v hesle.)|Ano|
+|**Vyžadovaný typ hesla – Minimální počet znakových sad**|Určuje počet znaků symbolu (jako například **#** nebo **@**), které musí heslo obsahovat.|Ano|
 |**Minimální délka hesla**|Určuje minimální počet znaků v hesle.|Ano|
 |**Povolit jednoduchá hesla**|Umožňuje použití jednoduchých hesel, jako je třeba 0000 nebo 1234.|Ano|
 |**Počet povolených opakovaných neúspěšných přihlášení, než bude zařízení vymazáno**|Vymaže zařízení, pokud tento počet pokusů o přihlášení selže.|Ano|
@@ -77,7 +73,7 @@ Pokud v tomto tématu není uvedené nastavení, které hledáte, je možné, ž
 |Název nastavení|Podrobnosti|iOS|
 |----------------|-------|
 |**Povolit zálohování na iCloud**|Povolí uživateli zálohování zařízení do iCloudu.|Ano|
-|**Povolit synchronizaci dokumentů s iCloudem**|Povolí synchronizaci dokumentu a párů klíč-hodnota s úložným prostorem iCloudu. Ano|
+|**Povolit synchronizaci dokumentů s iCloudem**|Povolí synchronizaci dokumentu a párů klíč-hodnota s úložným prostorem iCloudu.|Ano|
 |**Povolit synchronizaci datového proudu fotografií s iCloudem**|Povolí synchronizaci fotografií na zařízení s iCloudem.|Ano|
 |**Vyžadovat šifrované zálohování**|Vyžaduje, aby všechny zálohy zařízení byly šifrované.|Ano|
 
@@ -97,7 +93,7 @@ Pokud v tomto tématu není uvedené nastavení, které hledáte, je možné, ž
 |Název nastavení|Podrobnosti|iOS|
 |----------------|-------|
 |**Povolit obchod s aplikacemi**|Povolí zařízení přístup k obchodu s aplikacemi.|Ano|
-|**Vyžadovat heslo pro přístup do obchodu s aplikacemi**|Ano|
+|**Vyžadovat heslo pro přístup do obchodu s aplikacemi**|Vyžaduje, aby uživatel zadal heslo, než bude moci navštívit obchod s aplikacemi.|Ano|
 |**Povolit nákupy v aplikaci**|Povolí ve spuštěné aplikaci nákupy v obchodě.|Ano|
 |**Povolit spravované dokumenty v jiných nespravovaných aplikacích**|Povolí prohlížení podnikových dokumentů v libovolné aplikaci.<br>**Příklad:** Chcete zabránit uživatelům v ukládání souborů z aplikace OneDrive na Dropbox. U tohoto nastavení vyberte možnost Ne. Až zařízení zásadu obdrží (třeba po restartování), už nebude povolovat ukládání.|iOS 7.1 nebo novější|
 |**Povolit nespravované dokumenty v jiných spravovaných aplikacích**|Povolí prohlížení libovolného dokumentu ve spravovaných podnikových aplikacích.|iOS 7.1 nebo novější|
@@ -170,7 +166,8 @@ V seznamu **Kompatibilní a nekompatibilní aplikace** zadejte seznam kompatibil
 |**Povolit usnadnění dotykového ovládání**|Povolí nebo zakáže nastavení usnadnění **dotykového ovládání** , která uživatelům pomáhá provádět na obrazovce gesta, která by se jim mohla těžko provádět.|
 |**Povolit úpravy usnadnění dotykového ovládání**|Povolí nebo zakáže úpravy usnadnění dotykového ovládání, které umožňují upravit funkce usnadnění dotykového ovládání.|
 |**Povolit výběr řeči**|Povolí nebo zakáže nastavení usnadnění **Výběr řeči** , které může nahlas přečíst vybraný text.|
-> [!NOTE] Následující poznámky platí pro nastavení celoobrazovkového režimu na zařízeních iOS:
+> [!NOTE]
+> Následující poznámky platí pro nastavení celoobrazovkového režimu na zařízeních iOS:
 > 
 > -   Než budete moct nakonfigurovat nastavení zařízení iOS pro celoobrazovkový režim, musíte převést zařízení do režimu dohledu pomocí [nástroje Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) nebo manažera registrace zařízení. Další informace o nástroji Apple Configurator získáte v dokumentaci Apple.
 > -   Pokud je určená aplikace pro iOS nainstalovaná až po nasazení zásad konfigurace, zařízení nepřejde do celoobrazovkového, dokud ho nerestartujete.
@@ -195,7 +192,8 @@ Zkopírujte adresu URL stránky a použijte ji jako URL ke konfiguraci seznamu k
 
 **Příklad:** Vyhledejte **Microsoft Word pro iPad**. Použitá adresa URL bude **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
 
-> [!NOTE] Pomocí softwaru iTunes taky můžete najít aplikaci a pomocí příkazu **Kopírovat odkaz** získat adresu URL aplikace.
+> [!NOTE]
+> Pomocí softwaru iTunes taky můžete najít aplikaci a pomocí příkazu **Kopírovat odkaz** získat adresu URL aplikace.
 
 
 ## Nastavení vlastních zásad
@@ -230,6 +228,7 @@ Než začnete, je potřeba nainstalovat Apple Configurator a vytvořit konfigura
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

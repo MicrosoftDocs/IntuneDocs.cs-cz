@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Konfigurace konektoru Microsoft Intune Exchange Connector pro hostovaný Exchange | Microsoft Intune
-description:
-keywords:
+title: "Konfigurace konektoru Microsoft Intune Exchange Connector pro hostovaný Exchange | Microsoft Intune"
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 05fa5dc9-9bad-4557-987a-9b8ce4edebb0
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 6951ccdb0e37489217ef939f0cbf6fc1133a6d3c
+ms.openlocfilehash: 6cfc532cba2f53034c4c3ef0c2df3d6c1e6e7841
+
 
 ---
 
@@ -54,21 +48,22 @@ Musíte taky vytvořit uživatelský účet Exchange Online, který bude konekto
 
 1. Otevřete [konzolu pro správu Microsoft Intune](http://manage.microsoft.com) s uživatelským účtem s právy a oprávněními správce Exchange pro [výše](#exchange-cmdlet-requirements) uvedené rutiny. Microsoft Intune používá e-mailovou adresu aktuálně přihlášeného uživatele k nastavení připojení.
 
-2.  V podokně zástupců pracovních prostorů vyberte **SPRÁVCE** a přejděte na **Správa mobilních zařízení** > **Microsoft Exchange** > **Nastavit připojení k systému Exchange**.
+2.  V podokně zástupců pracovních prostorů zvolte **SPRÁVCE** a přejděte do části **Správa mobilních zařízení** > **Microsoft Exchange** > **Nastavit připojení k systému Exchange**.
 ![Nastavit konektor Service to Service Connector](../media/intunesa5cservicetoserviceconnector.png)
 
-3.  Na stránce **Nastavit připojení k systému Exchange** vyberte **Nastavit konektor Service to Service Connector**..
+3.  Na stránce **Nastavit připojení k systému Exchange** vyberte **Nastavit konektor Service to Service Connector**.
 
 
 Konektor Service to Service Connector se automaticky nakonfiguruje a synchronizuje s prostředím hostovaného Exchange.
 
 ## Ověření připojení k Exchangi
 
-konektoru systému Exchange vyberte v konzole správce Intune pracovní prostor **SPRÁVCE** a přejděte na **Správa mobilního zařízení** > **Microsoft Exchange** a ověřte, že se v části **Informace o připojení systému Exchange** zobrazují podrobnosti, které jste zadali..
+Po úspěšném nakonfigurování připojení Exchange Connector v konzole správce Intune zvolte pracovní prostor **SPRÁVCE**, přejděte do části **Správa mobilních zařízení** > **Microsoft Exchange** a ověřte, že se v části **Informace o připojení systému Exchange** zobrazují podrobnosti, které jste zadali.
 
 Můžete se taky podívat na datum a čas posledního úspěšného pokusu o synchronizaci.
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

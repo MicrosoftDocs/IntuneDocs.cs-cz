@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Popis služby | Microsoft Intune
-description:
-keywords:
+title: "Popis služby | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 40fa5a2e-6c0f-4150-9740-d5ddc0cdbda0
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 4794a22b3bdd1f28e6951b81e8379dc208fffc89
+ms.openlocfilehash: 6cab0bacd9157323e342662609de8c9f20550d78
+
 
 ---
 
@@ -29,7 +23,7 @@ ms.suite: ems
 
 Microsoft Intune je cloudová služba, která pomáhá spravovat počítače se systémem Windows a mobilní zařízení se systémy iOS, Android a Windows. Intune také pomáhá chránit podnikové aplikace a data. Službu Intune můžete používat samostatně, nebo ji integrovat s nástrojem System Center 2012 R2 Configuration Manager, abyste získali další možnosti správy.
 
-Společnost Microsoft nabízí pro Intune adaptační benefity pro příslušné služby v rámci příslušných plánů. Adaptační benefity vám umožní vzdáleně pracovat s odborníky Microsoftu na přípravě vašeho prostředí Intune k použití. Další informace najdete v tématu [Popis adaptačních benefitů pro Microsoft Intune](http://go.microsoft.com/fwlink/?LinkId=619281).
+Microsoft nabízí pro Intune adaptační benefity pro příslušné služby v rámci příslušných plánů. Adaptační benefity vám umožní vzdáleně pracovat s odborníky Microsoftu na přípravě vašeho prostředí Intune k použití. Další informace najdete v tématu [Popis adaptačních benefitů pro Microsoft Intune](http://go.microsoft.com/fwlink/?LinkId=619281).
 
 Můžete začít používat 30denní bezplatnou zkušební verzi Intune, která zahrnuje 100 uživatelských licencí. Jestli chcete začít používat bezplatnou zkušební verzi, [kliknutím sem navštivte registrační stránku Intune](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/). Jestli má organizace uzavřenou smlouvu Enterprise nebo jinou rovnocennou multilicenční smlouvu, požádejte o nastavení bezplatné zkušební verze zástupce Microsoftu.
 
@@ -38,7 +32,7 @@ Můžete začít používat 30denní bezplatnou zkušební verzi Intune, která 
 
 Seznam konfigurovatelných nastavení mobilních zařízení je tady:
 
--   [Možnosti správy mobilních zařízení v Microsoft Intune](mobile-device-management-capabilities-in-microsoft-intune.md)
+-   [Možnosti správy mobilních zařízení v Microsoft Intune](/intune/get-started/mobile-device-management-capabilities-in-microsoft-intune)
 
 -   [Obecná nastavení pro mobilní zařízení v nástroji Configuration Manager](https://technet.microsoft.com/en-us/library/dn376523.aspx)
 
@@ -56,13 +50,13 @@ O důležitých aktualizacích softwaru se také dozvíte prostřednictvím cent
 > [!NOTE] Stav služby Intune je možné monitorovat na [portálu pro správu Office 365](https://portal.office.com/Admin/Default.aspx). Zvolte **Stav služby** v levém podokně.  
 
 Toto jsou typy oznámení, které společnost Microsoft o službě Intune poskytuje:
--   Abychom vám pomohli připravit se na změny službu, upozorníme vás minimálně 30–90 dní před upgradem služby, v závislosti na závažnosti dopadu změn. Oznámení proběhne prostřednictvím komunikačních kanálů v produktu, jako jsou výstrahy na vývěsce. Tyto změny mohou zahrnovat:
+-   Abychom vám pomohli připravit se na změny služby, upozorníme vás minimálně 30–90 dní před upgradem služby, v závislosti na závažnosti dopadu změn. Oznámení proběhne prostřednictvím komunikačních kanálů v produktu, jako jsou výstrahy na vývěsce. Tyto změny mohou zahrnovat:
 * Aktualizace s možným dopadem na dodržování předpisů nebo zákonných požadavků
 * Změny činnosti koncového uživatele, uživatelského rozhraní a pracovních postupů
 * Nové nebo změněné rozhraní API – upozornění, že je potřeba provést testování, aby se zajistila zpětná kompatibilita vlastních aplikací
 * Změny požadavků na systém, například minimální požadované verze prohlížeče
 * Aktualizace, které od vás vyžadují zásah, abyste funkci povolili nebo zabránili přerušení služby
--   Společnost Microsoft poskytuje informace o nových funkcích a vylepšeních stávajících funkcí jako součást měsíční aktualizace služeb. Obecně platí, že Microsoft vydává aktualizace služeb zhruba v půlce měsíce. Aktualizace jsou popsané v tématu [Co je nového v Microsoft Intune](/intune/deploy-use/whats-new-in-microsoft-intune.md).
+-   Microsoft poskytuje informace o nových funkcích a vylepšeních stávajících funkcí jako součást měsíční aktualizace služeb. Obecně platí, že Microsoft vydává aktualizace služeb zhruba v půlce měsíce. Aktualizace jsou popsané v tématu [Co je nového v Microsoft Intune](/intune/deploy-use/whats-new-in-microsoft-intune).
 -   V případě vyřazení služby Intune byste dostali upozornění 12 měsíců předem.
 
 ## Výběr správného řešení pro správu
@@ -70,24 +64,24 @@ Službu Intune můžete pro účely správy a ochrany firemních mobilních zař
 
 -   **Samostatná konfigurace Intune.** Ke správě zařízení organizace v Intune se používá webová konzola pro správu. Intune můžete použít i bez místní infrastruktury IT, ale když Intune použijete se službou Active Directory Domain Services, můžete v Intune použít doménové uživatelské účty spravované ve službě Domain Services.
 
--   **Intune s nástrojem System Center Configuration Manager.** Ke správě počítačů a mobilních zařízení organizace se používá konzola pro správu Configuration Manageru . Při této konfiguraci můžete ke správě všech zařízení organizace používat jedinou konzolu správce Configuration Manageru. Configuration Manager podporuje velké počty mobilních zařízení, serverů a počítačů. Další informace najdete v tématu [Správa mobilních zařízení pomocí Configuration Manageru a Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=271118) v [knihovně dokumentace k System Center 2012 Configuration Manageru](https://technet.microsoft.com/library/gg682041.aspx).  Další pomoc při rozhodování o tom, jaký přístup je pro vás správný, najdete v tématu [Způsoby zajištění podnikové mobility](/intune/plan-design/ways-to-do-enterprise-mobility.md).
+-   **Intune s nástrojem System Center Configuration Manager.** Ke správě počítačů a mobilních zařízení organizace se používá konzola pro správu Configuration Manageru. Při této konfiguraci můžete ke správě všech zařízení organizace používat jedinou konzolu správce Configuration Manageru. Configuration Manager podporuje velké počty mobilních zařízení, serverů a počítačů. Další informace najdete v tématu [Správa mobilních zařízení pomocí Configuration Manageru a Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=271118) v [knihovně dokumentace k System Center 2012 Configuration Manageru](https://technet.microsoft.com/library/gg682041.aspx).  Další pomoc při rozhodování o tom, jaký přístup je pro vás správný, najdete v tématu [Volba mezi samostatnou a hybridní správou mobilních zařízení v Microsoft Intune s nástrojem Configuration Manager](https://technet.microsoft.com/en-us/library/mt706478.aspx).
 
--   Správa mobilních zařízení poskytovaná v rámci služeb Office 365. Popis najdete v tématu [Způsoby zajištění podnikové mobility](/intune/plan-design/ways-to-do-enterprise-mobility.md).
 
 ## Další informace o Intune
 Další informace o službě Intune můžete získat z těchto zdrojů:
 
 -   [Centrum zabezpečení pro Microsoft Intune](http://www.microsoft.com/en-us/server-cloud/products/intune-trust-center/) poskytuje informace o zabezpečení, ochraně osobních údajů a dodržování předpisů ve službě Intune a obsahuje také popis některých certifikátů služby Intune.
 
--   [Možnosti správy mobilních zařízení v Microsoft Intune](/intune/understand-explore/mobile-device-management-capabilities-in-microsoft-intune.md)
+-   [Možnosti správy mobilních zařízení v Microsoft Intune](/intune/understand-explore/mobile-device-management-capabilities-in-microsoft-intune)
 
 ### Související témata
 [Microsoft Intune](https://docs.microsoft.com/intune/)
 [Knihovna dokumentace k System Center 2012 Configuration Manageru](https://technet.microsoft.com/library/gg682041.aspx)
 
-[Co je nového v Microsoft Intune](/intune/deploy-use/whats-new-in-microsoft-intune.md)
+[Co je nového v Microsoft Intune](/intune/deploy-use/whats-new-in-microsoft-intune)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO5-->
 
 

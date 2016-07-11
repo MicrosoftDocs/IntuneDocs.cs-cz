@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Wi-Fi pomocí PSK | Microsoft Intune
+title: "Wi-Fi pomocí PSK | Microsoft Intune"
 description: 
-keywords:
+keywords: 
 author: nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: 
+ms.reviewer: karanda
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 066baae17da1fd399f4f7d10784719e3dc46f235
+ms.openlocfilehash: 632adf3dccf40dd2b361d170f501a851bf0fda38
+
 
 
 ---
@@ -46,7 +40,7 @@ Poznámka:
 
    c.   **Datový typ:** Nastavte na Řetězec (XML).
 
-   d.   **OMA-URI:** ./Vendor/MSFT/Wi-Fi /Profile/<SSID>/Settings
+   d.   **OMA-URI**: ./Vendor/MSFT/Wi-Fi /Profile/<SSID>/Settings
 
 Poznámka: Nezapomeňte použít tečku na začátku.
 
@@ -188,13 +182,13 @@ Můžete také vytvořit soubor XML z existujícího připojení Wi-Fi:
 
 ## Nasazení zásady
 
-1.  V pracovním prostoru **Zásady** vyberte zásadu, kterou chcete nasadit, a potom klikněte na **Spravovat nasazení**..
+1.  V pracovním prostoru **Zásady** vyberte zásadu, kterou chcete nasadit, a pak klikněte na **Spravovat nasazení**.
 
 2.  V dialogovém okně **Spravovat nasazení** :
 
-    -   **Pokud chcete zásadu nasadit** – vyberte jednu nebo víc skupin, do kterých chcete zásady nasadit, a potom klikněte na **Přidat** &gt; **OK**..
+    -   **Pokud chcete zásadu nasadit** – vyberte jednu nebo víc skupin, do kterých chcete zásady nasadit, a pak klikněte na **Přidat** &gt; **OK**.
 
-    -   **Pokud chcete dialogové okno zavřít bez nasazení zásady** – klikněte na **Zrušit**..
+    -   **Pokud chcete dialogové okno zavřít bez nasazení zásady** – klikněte na **Zrušit**.
 
 Když vyberete nasazenou zásadu, zobrazí se v dolní části seznamu zásad další informace o tomto nasazení.
 
@@ -202,6 +196,7 @@ Když vyberete nasazenou zásadu, zobrazí se v dolní části seznamu zásad da
 [Připojení Wi-Fi v Microsoft Intune](wi-fi-connections-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Nastavení zásad konfigurace pro Android a Samsung KNOX | Microsoft Intune
-description:
-keywords:
+title: "Nastavení zásad konfigurace pro Android a Samsung KNOX | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 71cc39cf-e726-40fd-8d08-78776e099a4b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: heenamac
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 62beaec31a0cdc3c28fd3eed820a6771e42ef3e7
+ms.openlocfilehash: f4c0eccb0cd30daaba97e8f34eea69e3d0e8e0ad
+
 
 ---
 
@@ -55,6 +49,7 @@ Pokud se v tomto tématu nezobrazí nastavení, které hledáte, je možné, že
 |**Pamatovat si historii hesel** – **Zabránit opětovnému použití předchozích hesel**|Zabraňuje opakovanému použití už použitých hesel.|Ano|Ano|
 |**Kvalita hesla**|Vyberte požadovanou úroveň složitosti hesla a taky to, jestli se můžou používat biometrická zařízení.|Ano|Ano|
 |**Povolit odemknutí otiskem prstu**|Povolí odemknutí zařízení otiskem prstu.|Ne|Ano|
+|**Povolit Smart Lock a další důvěryhodné agenty**<br>(Android 5 nebo novější)|Umožňuje řídit funkci Smart Lock v kompatibilních zařízeních s Androidem. Tato funkce telefonů, které se někdy říká agenti pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo uzamčené obrazovky zařízení, pokud se zařízení nachází v důvěryhodném umístění, třeba pokud je připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC. Pomocí tohoto nastavení můžete koncovým uživatelům zabránit v konfiguraci funkce Smart Lock.|Ano|Ne|
 
 ### Nastavení šifrování
 
@@ -73,7 +68,7 @@ Pokud se v tomto tématu nezobrazí nastavení, které hledáte, je možné, že
 
 ### Nastavení cloudu – dokumenty a data
 
-|Název nastavení|Podrobnosti|Android a Samsung KNOX|Android 4.0+|
+|Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX|
 |----------------|----------------------------|----------------|
 |**Povolit zálohování Google**|Povoluje použití zálohování Google.|Ne|Ano|
 
@@ -95,7 +90,7 @@ Pokud se v tomto tématu nezobrazí nastavení, které hledáte, je možné, že
 
 ### Nastavení aplikace – aplikace
 
-|Název nastavení|Android 4.0+|Samsung KNOX|
+|Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX|
 |----------------|----------------|----------------|
 |**Povolit Google Play Store**|Povolí uživatelům na zařízení přístup do obchodu Google Play.|Ne|Ano|
 
@@ -179,7 +174,8 @@ Pomocí možnosti Microsoft Intune **Zásady vlastní konfigurace pro Android** 
 
 Díky této vlastnosti můžete nasadit nastavení Androidu, která nejde konfigurovat se zásadami Intune.
 
-> [!NOTE] Vlastní zásady Androidu v současné době podporují konfiguraci nastavení Wi-Fi jenom pro taková zařízení s Androidem, která obsahují předsdílený klíč.
+> [!NOTE]
+> Vlastní zásady Androidu v současné době podporují konfiguraci nastavení Wi-Fi jenom pro taková zařízení s Androidem, která obsahují předsdílený klíč.
 
 ### Obecná nastavení
 
@@ -257,6 +253,7 @@ I když Intune podporuje profily Wi-Fi pro zařízení s Androidem, tato funkce 
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

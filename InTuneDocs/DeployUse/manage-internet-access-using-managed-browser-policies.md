@@ -1,38 +1,30 @@
 ---
-# required metadata
-
-title: Správa přístupu k internetu pomocí zásad spravované prohlížeče | Microsoft Intune
-description:
-keywords:
+title: "Správa přístupu k internetu pomocí zásad spravované prohlížeče | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: dc946303-e09b-4d73-8bf4-87742299bc54
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 2df44199ecd904dcfb6774a942244338c1384186
+ms.openlocfilehash: c4462af584d54225084159dfa35f5e1d07c36397
+
 
 ---
 
 # Správa přístupu k internetu pomocí zásad spravované prohlížeče v Microsoft Intune
 Spravovaný prohlížeč je aplikace procházení webu, kterou můžete nasadit v organizaci pomocí Microsoft Intune. Zásady spravovaného prohlížeče konfigurují seznam povolených nebo blokovaných webů. Tyto seznamy omezují weby, které můžou uživatelé spravovaného prohlížeče navštívit.
 
-Vzhledem k tomu, že je tato aplikace spravovaná, můžete u ní použít taky zásady správy mobilních aplikací, jako je třeba řízení použití operací vyjmutí, kopírování a vložení, prevence pořizování snímků obrazovky nebo taky zajištění, že když uživatel klikne na odkaz, otevře se obsah v určených spravovaných aplikacích. Podrobnosti najdete v tématu [Konfigurace a nasazení zásad správy mobilních aplikací v konzole Microsoft Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md)..
+Vzhledem k tomu, že je tato aplikace spravovaná, můžete u ní použít taky zásady správy mobilních aplikací, jako je třeba řízení použití operací vyjmutí, kopírování a vložení, prevence pořizování snímků obrazovky nebo taky zajištění, že když uživatel klikne na odkaz, otevře se obsah v určených spravovaných aplikacích. Podrobnosti najdete v tématu [Konfigurace a nasazení zásad správy mobilních aplikací v konzole Microsoft Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
 
 > [!IMPORTANT]
->Pokud uživatelé nainstalují spravovaný prohlížeč z App Storu a ten není spravovaný pomocí Intune, platí toto chování:
-iOS – Aplikace spravovaného prohlížeče se dá používat jako základní webový prohlížeč, ale nebudou v ní dostupné některé funkce a nebude moct získat přístup k datům z jiných aplikací spravovaných pomocí Intune.
+>Pokud uživatelé nainstalují spravovaný prohlížeč z App Storu a prohlížeč není spravován pomocí Intune, uplatňuje se následující chování: iOS – Aplikace spravovaného prohlížeče se dá používat jako základní webový prohlížeč, ale nebudou v ní dostupné některé funkce a nebude moct získat přístup k datům z jiných aplikací spravovaných pomocí Intune.
 Android – Aplikace spravovaného prohlížeče se nedá používat.
 Pokud uživatelé sami nainstalují spravovaný prohlížeč na zařízení s iOS starší verze než iOS 9, nebude spravovaný žádnými zásadami, které vytvoříte. Aby se zajistilo, že bude prohlížeč spravovat služba Intune, musí uživatelé aplikaci nejdřív odinstalovat a potom jim tuto aplikaci můžete nasadit jako spravovanou aplikaci. Pokud uživatel sám nainstaluje spravovaný prohlížeč v systému iOS 9 a novějším, zobrazí se mu výzva k povolení správy tohoto prohlížeče na základě zásad.
 
@@ -42,11 +34,11 @@ Zásady spravovaného prohlížeče můžete vytvořit pro následující typy z
 
 -   Zařízení se systémem iOS 7.1 nebo novější verzí
 
-Intune Managed Browser podporuje otevírání webového obsahu od [partnerů aplikací Microsoft Intune](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx)..
+Intune Managed Browser podporuje otevírání webového obsahu od [partnerů aplikací Microsoft Intune](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx).
 
 ## Vytvoření zásady spravovaného prohlížeče
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) klikněte na **Zásady** &gt; **Přidat zásadu**..
+1.  V [konzole správce Microsoft Intune](https://manage.microsoft.com) klikněte na **Zásady** &gt; **Přidat zásadu**.
 
 2.  Nakonfigurujte jeden z následujících typů zásad pro **Software** :
 
@@ -64,7 +56,7 @@ Intune Managed Browser podporuje otevírání webového obsahu od [partnerů apl
     |**Popis**|Zadejte popis, který bude shrnovat účel zásady spravovaného prohlížeče, a uveďte jakékoli další důležité informace, které vám pomůžou zásadu najít.|
     |**Povolte seznamu povolených nebo blokovaných webů omezovat adresy URL, které půjdou ve spravovaném prohlížeči otevřít.**|Vyberte jednu z následujících možností:<br /><br />**Povolit spravovanému prohlížeči otevření jenom dole vypsaných adres URL** – Určete seznam adres URL, které se dají ve spravovaném prohlížeči otevřít.<br /><br />**Blokovat spravovanému prohlížeči otevření dole vypsaných adres URL** – Určete seznam adres URL, které nepůjdou ve spravovaném prohlížeči otevřít z důvodu blokování. **Poznámka:** Do jedné zásady spravovaného prohlížeče nemůžete zahrnout seznam povolených i blokovaných adres URL.<br />Další informace o formátech adres URL, které se dají určit, najdete v části **Formát adres URL pro povolené a blokované adresy URL** v tomto tématu.|
 
-4.  Po dokončení klikněte na **Uložit zásadu**..
+4.  Po dokončení klikněte na **Uložit zásadu**.
 
 Nová zásada se zobrazí v uzlu **Zásady konfigurace** pracovního prostoru **Zásady** .
 
@@ -76,7 +68,7 @@ Po vytvoření zásady spravovaného prohlížeče můžete vytvořit nasazení 
 
 Nasaďte aplikaci a na stránce **Správa mobilních aplikací** vyberte zásadu spravovaného prohlížeče, kterou chcete k aplikaci přidružit.
 
-Další informace o tom, jak nasadit aplikace, najdete v tématu [Nasazení aplikací v Microsoft Intune](deploy-apps-in-microsoft-intune.md)..
+Další informace o tom, jak nasadit aplikace, najdete v tématu [Nasazení aplikací v Microsoft Intune](deploy-apps-in-microsoft-intune.md).
 
 ## Zabezpečení a ochrana osobních údajů pro spravovaný prohlížeč
 
@@ -108,7 +100,7 @@ V následující části najdete informace o povolených formátech a zástupný
 
     -   Port 443 pro protokol HTTPS
 
-    Použití zástupných znaků pro čísla portů se nepodporuje – třeba **http://www.contoso.com:*;** a **http://www.contoso.com: /*;**
+    Použití zástupných znaků pro čísla portů se nepodporuje. Příklad: **http&colon;//www&period;contoso&period;com:*;** nebo **http&colon;//www&period;contoso&period;com: /*;**
 
 -   Informace o povolených vzorech, které můžete použít při zadávání adres URL, najdete v následující tabulce:
 
@@ -157,6 +149,7 @@ Pokud je na zařízení nasazených víc zásad spravovaného prohlížeče a do
 -   Pokud už zařízení zásady spravovaného prohlížeče obdrželo a nasazuje se druhá zásada s konfliktním nastavením, zůstanou na zařízení původní nastavení. K zobrazení konfliktů použijte uzel **Konflikty zásad** pracovního prostoru **Zásady** .
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

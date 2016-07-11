@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Připojení Wi-Fi | Microsoft Intune
-description:
-keywords:
+title: "Připojení Wi-Fi | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 0b1b86ed-2e80-474d-8437-17dd4bc07b55
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: karanda
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 910ccd7c91593114ddf57c842c0bf9c9ffa54fdc
+ms.openlocfilehash: 1282ec1214a2c499166299a0a13b0bd3bfc7f3b2
+
 
 ---
 
@@ -44,7 +38,7 @@ Profily Wi-Fi můžete nasadit na následujících platformách:
 
 -   Mac OS X 10.9 a novější
 
-U zařízení, na kterých běží Windows 8.1 a vyšší, můžete importovat konfigurační profil Wi-Fi, který jste předtím exportovali do souboru. Podrobnosti najdete v části Import profilu Wi-Fi v tomto tématu.
+U zařízení, na kterých běží Windows 8.1. nebo Windows 10 Desktop či Mobile, můžete importovat konfigurační profil Wi-Fi, který jste předtím exportovali do souboru. Podrobnosti najdete v části **Import profilu Wi-Fi** uvedené dále v tomto tématu.
 
 ## Postup při vytvoření profilu Wi-Fi
 
@@ -64,20 +58,39 @@ U zařízení, na kterých běží Windows 8.1 a vyšší, můžete importovat k
 
 4. Zadejte hodnoty **Síťových připojení** :
 
-  |Nastavení|Další imformace| |-----------|--------------------|
-|**Název sítě**|Zadejte popisný název bezdrátové sítě. Je to název, který se zobrazí v zařízení uživatele, když vybírá bezdrátovou síť.| |**Identifikátor SSID (Service Set Identifier)**|Zadejte identifikátor SSID bezdrátové sítě, ke které se mají zařízení připojovat. SSID rozlišuje malá a velká písmena a nezobrazuje se uživatelům.| |**Připojit automaticky, pokud je tato síť v dosahu**|Tuto možnost vyberte, pokud chcete, aby se zařízení automaticky připojovala k bezdrátové síti, pokud je v dosahu.| |**Připojit, pokud síť nevysílá svůj název (SSID)**|Po zvolení této možnosti se zařízení můžou připojit k síti, když není zobrazená v seznamu sítí (protože je skrytá a nevysílá svůj název).|
+  |Nastavení|Další informace|
+|-----------|--------------------|
+|**Název sítě**|Zadejte popisný název bezdrátové sítě. Je to název, který se zobrazí v zařízení uživatele, když vybírá bezdrátovou síť.|
+|**Identifikátor SSID (Service Set Identifier)**|Zadejte identifikátor SSID bezdrátové sítě, ke které se mají zařízení připojovat. SSID rozlišuje malá a velká písmena a nezobrazuje se uživatelům.|
+|**Připojit automaticky, pokud je tato síť v dosahu**|Vyberte tuto možnost, pokud chcete, aby se zařízení automaticky připojovala k bezdrátové síti, pokud je v dosahu.|
+|**Připojit, pokud síť nevysílá svůj název (SSID)**|Po zvolení této možnosti se zařízení můžou připojit k síti, když není zobrazená v seznamu sítí (protože je skrytá a nevysílá svůj název).|
 
 5. Nakonfigurujte **Nastavení zabezpečení** pro vybranou platformu. Dostupná nastavení závisí na typu zabezpečení, které vyberete.
 
   #### Zařízení s Androidem
 
-  |Název nastavení|Další informace|Použijte v této situaci:| |----------------|--------------------|-------------|
-|**Typ zabezpečení**|Vyberte protokol zabezpečení bezdrátové sítě:<br /><br />-   **WPA-Enterprise/WPA2-Enterprise**<br />-   **Bez ověřování (otevřené)**, pokud síť není zabezpečená|Vždy||**Typ protokolu EAP**|Zvolte typ protokolu EAP pro ověřování zabezpečených bezdrátových připojení:<br /><br />-   **EAP-TLS**<br />-   **PEAP**<br />-   **EAP-TTLS**|Vybrali jste typ zabezpečení **WPA-Enterprise/WPA2-Enterprise**.| |**Vyberte kořenové certifikáty pro ověření serveru**|Klikněte na **Vybrat** a potom zvolte profil důvěryhodných kořenových certifikátů pro ověření připojení. **Důležité:** Pokud chcete vytvořit profil důvěryhodných kořenových certifikátů, přečtěte si téma [Povolení přístupu k prostředkům pomocí profilů certifikátů](secure-resource-access-with-certificate-profiles.md).|Je vybraný libovolný **Typ protokolu EAP**.| |**Metoda ověřování**|Vyberte metodu ověřování připojení:<br /><br />-   **Certifikáty** – pokud chcete zadat klientský certifikát.<br />-   **Uživatelské jméno a heslo**, pokud chcete zadat jinou metodu ověřování.|**Typ protokolu EAP** je **PEAP** nebo **EAP-TTLS**.| |**Vybrat pro ověřování metodu bez protokolu EAP (vnitřní identita)**|Vyberte metodu ověřování připojení:<br /><br />-   **Žádné**<br />-   **Nezašifrované heslo (PAP)**<br />-   **Protokol CHAP (Challenge Handshake Authentication Protocol)**<br />-   **Protokol Microsoft CHAP (MS-CHAP)**<br />-   **Protokol MS-CHAP v2 (Microsoft CHAP verze 2)**<br /><br />Dostupné možnosti závisí na zvoleném typu protokolu EAP.|**Metoda ověřování** je **Uživatelské jméno a heslo**.| |**Povolit ochranu identity (vnější identita)**|Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.|**Typ protokolu EAP** je **PEAP** nebo **EAP-TTLS**.| |**Vybrat klientský certifikát pro ověřování klientů (certifikát identity)**|Klikněte na **Vybrat** a potom zvolte profil certifikátu SCEP použitý k ověření připojení. **Důležité:** Pokud chcete vytvořit profil certifikátu SCEP, přečtěte si téma [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů](secure-resource-access-with-certificate-profiles.md).|Typ zabezpečení je **WPA-Enterprise/WPA2-Enterprise** a je vybraný kterýkoli **Typ protokolu EAP**.|
+  |Název nastavení|Další informace|Použijte, když:|
+|----------------|--------------------|-------------|
+|**Typ zabezpečení**|Vyberte protokol zabezpečení bezdrátové sítě:<br /><br />-   **WPA-Enterprise/WPA2-Enterprise**<br />-   **Bez ověřování (otevřené)**, pokud síť není zabezpečená.|Vždy|
+|**Typ protokolu EAP**|Zvolte typ protokolu EAP pro ověřování zabezpečených bezdrátových připojení:<br /><br />-   **EAP-TLS**<br />-   **PEAP**<br />-   **EAP-TTLS**|Vybrali jste typ zabezpečení **WPA-Enterprise/WPA2-Enterprise**.|
+|**Vybrat kořenové certifikáty pro ověření serveru**|Klikněte na **Vybrat**, pak zvolte profil důvěryhodných kořenových certifikátů pro ověření připojení. **Důležité:** Pokud chcete vytvořit profil důvěryhodných kořenových certifikátů, přečtěte si téma [Povolení přístupu k prostředkům pomocí profilů certifikátů](secure-resource-access-with-certificate-profiles.md).|Je vybraný jakýkoliv **typ protokolu EAP** .|
+|**Metoda ověření**|Vyberte metodu ověřování připojení:<br /><br />-   **Certifikáty** – pokud chcete zadat klientský certifikát.<br />-   **Uživatelské jméno a heslo** – pokud chcete zadat jinou metodu ověřování.|**Typ protokolu EAP** je **PEAP** nebo **EAP-TTLS**.|
+|**Vybrat pro ověřování metodu bez protokolu EAP (vnitřní identita)**|Vyberte metodu ověřování připojení:<br /><br />-   **Žádné**<br />-   **Nezašifrované heslo (PAP)**<br />-   **Protokol CHAP (Challenge Handshake Authentication Protocol)**<br />-   **Protokol Microsoft CHAP (MS-CHAP)**<br />-   **Protokol MS-CHAP v2 (Microsoft CHAP verze 2)**<br /><br />Dostupné možnosti závisí na typu EAP, který jste vybrali.| **Metoda ověřování** je **Uživatelské jméno a heslo**.|
+|**Povolit ochranu identity (vnější identita)**|Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.|**Typ protokolu EAP** je **PEAP** nebo **EAP-TTLS**.|
+|**Vybrat klientský certifikát pro ověřování klientů (certifikát identity)**|Klikněte na **Vybrat**, pak zvolte profil certifikátu SCEP pro ověření připojení. **Důležité:** Pokud chcete vytvořit profil certifikátu SCEP, přečtěte si téma [Povolení přístupu k prostředkům pomocí profilů certifikátů](secure-resource-access-with-certificate-profiles.md).|Typ zabezpečení je **WPA-Enterprise/WPA2-Enterprise** a je vybraný jakýkoliv **typ protokolu EAP**.|
 
   #### Pro zařízení iOS a Mac OS X
 
-  |Název nastavení|Další informace|Použijte v této situaci:| |----------------|--------------------|-------------|
-|**Typ zabezpečení**|Vyberte protokol zabezpečení bezdrátové sítě:<br /><br />-   **WPA-Personal/WPA2-Personal**<br />-   **WPA-Enterprise/WPA2-Enterprise**<br />-   **WEP**<br />-   **Bez ověřování (otevřené)**, pokud síť není zabezpečená|Vždy||**Typ protokolu EAP**|Zvolte typ protokolu EAP pro ověřování zabezpečených bezdrátových připojení:<br /><br />-   **EAP-TLS**<br />-   **PEAP**<br />-   **EAP-TLS**<br />-   **EAP-AST**<br />-   **LEAP**<br />-   **EAP-SIM**|Vybrali jste typ zabezpečení **WPA-Enterprise/WPA2-Enterprise**.| |**Názvy důvěryhodných certifikátů serveru**|Vyberte profil důvěryhodného kořenového certifikátu, který se používá k ověření připojení. **Důležité:** Pokud chcete vytvořit profil důvěryhodných kořenových certifikátů, přečtěte si téma [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů](secure-resource-access-with-certificate-profiles.md).|Je vybraný kterýkoli Typ protokolu EAP: **EAP-TLS**, **PEAP**, **EAP-TTLS** nebo **EAP-FAST**.| |**Použít PAC (Protected Access Credential)**|Toto nastavení vyberte, pokud chcete použít přihlašovací údaje chráněného přístupu k navázání ověřeného tunelového propojení mezi klientem a serverem ověřování. Použije se stávající soubor PAC, pokud je dostupný.|**Typ protokolu EAP** je **EAP-FAST**.| |**Zřídit PAC**|Zřídí soubor PAC ve vašich zařízeních.<br /><br />Pokud použijete toto nastavení, můžete taky vybrat **Zřídit PAC anonymně** , aby se soubor PAC mohl zřizovat bez ověřování serveru.|Je vybraná možnost **Použít PAC (Protected Access Credential)**.| |**Metoda ověřování**|Vyberte metodu ověřování připojení:<br /><br /><ul><li>**Certifikáty** – pokud chcete zadat klientský certifikát.</li><li>**Uživatelské jméno a heslo** – pokud chcete zadat jednu z následujících metod ověřování bez protokolu EAP (označuje se taky jako vnitřní identita):<br /><br /><ul><li>**Žádné**</li><li>**Nezašifrované heslo (PAP)**</li><li>**Protokol CHAP (Challenge Handshake Authentication Protocol)**</li><li>**Protokol Microsoft CHAP (MS-CHAP)**</li><li>**Protokol MS-CHAP v2 (Microsoft CHAP verze 2)**</li><li>**EAP-TLS**</li></ul></li></ul>|**Typ EAP** je **PEAP** nebo **EAP-TTLS**.| |**	Vyberte klientský certifikát pro ověření klienta (certifikát identity)**|Vyberte profil certifikátu SCEP použitý k ověření připojení. **Důležité:** Pokud chcete vytvořit profil certifikátu SCEP, přečtěte si téma [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů](secure-resource-access-with-certificate-profiles.md).|Typ zabezpečení je **WPA-Enterprise/WPA2-Enterprise** a jako **Typ protokolu EAP** je vybraná možnost **EAP-TLS**, **PEAP** nebo **EAP-TTLS**.| |**Povolit ochranu osobních údajů v rámci identity (vnější identita)**|Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota.<br /><br />Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.|**Typ protokolu EAP** je **PEAP**, **EAP-TTLS** nebo **EAP-FAST**.|
+  |Název nastavení|Další informace|Použijte, když:|
+|----------------|--------------------|-------------|
+|**Typ zabezpečení**|Vyberte protokol zabezpečení bezdrátové sítě:<br /><br />-   **WPA-Personal/WPA2-Personal**<br />-   **WPA-Enterprise/WPA2-Enterprise**<br />-   **WEP**<br />-   **Bez ověřování (otevřené)**, pokud síť není zabezpečená.|Vždy|
+|**Typ protokolu EAP**|Zvolte typ protokolu EAP pro ověřování zabezpečených bezdrátových připojení:<br /><br />-   **EAP-TLS**<br />-   **PEAP**<br />-   **EAP-TLS**<br />-   **EAP-AST**<br />-   **LEAP**<br />-   **EAP-SIM**|Vybrali jste typ zabezpečení **WPA-Enterprise/WPA2-Enterprise**.|
+|**Názvy certifikátů důvěryhodných serverů**|Vyberte profil důvěryhodných kořenových certifikátů pro ověření připojení. **Důležité:** Pokud chcete vytvořit profil důvěryhodných kořenových certifikátů, přečtěte si téma [Povolení přístupu k prostředkům pomocí profilů certifikátů](secure-resource-access-with-certificate-profiles.md).|Vybrali jste typ protokolu EAP **EAP-TLS**, **PEAP**, **EAP-TTLS** nebo **EAP-FAST**.|
+|**Použít ověření PAC (Protected Access Credential)**|Toto nastavení vyberte, pokud chcete použít přihlašovací údaje chráněného přístupu k navázání ověřeného tunelového propojení mezi klientem a serverem ověřování. Použije se stávající soubor PAC, pokud je dostupný.|**Typ protokolu EAP** je **EAP-FAST**.|
+|**Zřízení PAC**|Zřídí soubor PAC ve vašich zařízeních.<br /><br />Pokud použijete toto nastavení, můžete taky vybrat **Zřídit PAC anonymně** , aby se soubor PAC mohl zřizovat bez ověřování serveru.|Je vybraný typ zabezpečení**Použít ověření PAC (Protected Access Credential)** .|
+|**Metoda ověření**|Vyberte metodu ověřování připojení:<br /><br /><ul><li>**Certifikáty** – pokud chcete zadat klientský certifikát.</li><li>**Uživatelské jméno a heslo** – pokud chcete zadat jednu z následujících metod ověřování bez protokolu EAP (označuje se taky jako vnitřní identita):<br /><br /><ul><li>**Žádné**</li><li>**Nezašifrované heslo (PAP)**</li><li>**Protokol CHAP (Challenge Handshake Authentication Protocol)**</li><li>**Protokol Microsoft CHAP (MS-CHAP)**</li><li>**Protokol MS-CHAP v2 (Microsoft CHAP verze 2)**</li><li>**EAP-TLS**</li></ul></li></ul>|**Typ protokolu EAP** je **PEAP** nebo **EAP-TTLS**.|
+|**Vybrat klientský certifikát pro ověřování klientů (certifikát identity)**|Vyberte profil certifikátu SCEP použitý k ověření připojení. **Důležité:** Pokud chcete vytvořit profil certifikátu SCEP, přečtěte si téma [Povolení přístupu k prostředkům pomocí profilů certifikátů](secure-resource-access-with-certificate-profiles.md).|Pokud je typ zabezpečení **WPA-Enterprise/WPA2-Enterprise** a **Typ protokolu EAP** je **EAP-TLS**, **protokol PEAP** nebo **EAP-TTLS**.|
+|**Povolit ochranu identity (vnější identita)**|Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota.<br /><br />Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.|Pokud je **typ protokolu EAP** nastavený na **PEAP**, **EAP-TTLS** nebo **EAP-FAST**.|
 
 6. (Jenom iOS a MAC OS X) Konfigurace **nastavení proxy**
 
@@ -104,14 +117,17 @@ Ve Windows můžete pomocí nástroje **netsh wlan** exportovat stávající pro
 
 4.  Spusťte tento příkaz: `netsh wlan export profile name="ProfileName" folder=c:\Wifi`. Ten vytvoří v cílové složce soubor profilu Wi-Fi s názvem Wi-Fi-WiFiNázev.xml.
 
-## Import profilu Wi-Fi
-Pomocí **Zásady importu Wi-Fi pro Windows** importujte sadu nastavení Wi-Fi, kterou pak můžete nasadit do požadovaných skupin uživatelů nebo zařízení. Postup exportování profilu je popsaný v tématu
+### Import profilu Wi-Fi
+Pomocí **Zásady importu Wi-Fi pro Windows** importujte sadu nastavení Wi-Fi, kterou pak můžete nasadit do požadovaných skupin uživatelů nebo zařízení.
+
 
 1.  V [konzole správce Microsoft Intune](https://manage.microsoft.com) klikněte na **Zásady** &gt; **Přidat zásadu**.
 
-2.  Nakonfigurujte zásady typu **Windows** &gt; **Zásady importu Wi-Fi pro Windows**.
+2.  Nakonfigurujte zásady typu **Windows** &gt; **Import Wi-Fi (Windows 8.1 a novější)**.
 
-    Vytvářet a nasazovat můžete jenom vlastní zásady importu Wi-Fi pro Windows. Doporučená nastavení nejsou dostupná.
+    Tuto zásadu lze použít pro zařízení se systémem Windows 8.1 a Windows 10 Desktop nebo Mobile. 
+    
+    Vytvářet a nasazovat můžete jenom *vlastní* zásady importu Wi-Fi pro Windows. Doporučená nastavení nejsou dostupná.
 
 3.  Zadejte následující obecné hodnoty pro nastavení Zásady importu Wi-Fi pro Windows:
 
@@ -149,6 +165,7 @@ Shrnutí stavu a výstrahy na stránce **Přehled** v pracovním prostoru **Zás
 Postup vytvoření profilu Wi-Fi s předsdíleným klíčem najdete v tématu věnovaném [vytvoření profilu Wi-Fi s předsdíleným klíčem](pre-shared-key-wi-fi-profile.md).
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

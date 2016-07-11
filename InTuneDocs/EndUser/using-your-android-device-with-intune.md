@@ -12,8 +12,9 @@ ms.technology:
 ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
 ms.reviewer: arnab
 ms.suite: ems
-ms.sourcegitcommit: 0bb435b87c937ea118a0794c8332b9a8f268d36e
-ms.openlocfilehash: 537cb3277a9a334e6e7bfcbfb6606e934c70e705
+translationtype: Human Translation
+ms.sourcegitcommit: 24573d04c319e359b810b6fdf607b44db19306e9
+ms.openlocfilehash: 4622897f5e32514ad80b5000732cf6835224160a
 
 
 ---
@@ -45,6 +46,7 @@ Informace v této části vám pomůžou s akcemi, které můžete provést po r
 - [Zrušení registrace zařízení, pokud odmítnete podmínky použití](unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)
 - [Co se stane, když zrušíte registraci zařízení v Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
 - [Co se stane, když resetujete zařízení s Androidem pomocí aplikace Portál společnosti?](what-happens-if-you-reset-your-device-using-the-company-portal-android.md)
+<!--- - [What is the Rights Management sharing app?](what-is-the-rms-sharing-app-android.md) --->
 
 ## Oprava problémů se zařízením
 
@@ -58,11 +60,16 @@ Informace v této části vám pomůžou opravit problémy, se kterými se můž
 - [Zařízení nevyhovuje maximální verzi operačního systému](device-doesnt-comply-with-maximum-operating-system-version-android.md)
 - [Zařízení obsahuje root a nemůže se připojit](your-device-is-rooted-and-you-cant-connect-android.md)
 - [Zařízení nemá požadovaný certifikát](your-device-is-missing-a-required-certificate-android.md)
+- [Jste vyzváni k vypnutí možnosti Neznámé zdroje](you-are-asked-to-turn-off-unknown-sources-android.md)
+- [Jste vyzváni k vypnutí ladění USB](you-are-asked-to-turn-off-usb-debugging-android.md)
+- [Jste vyzváni k zapnutí nastavení Vyhledat v zařízení bezpečnostní hrozby](you-are-asked-to-turn-on-scan-device-for-security-threats-android.md)
+- [Vaše zařízení nesplňuje požadavek na minimální úroveň opravy zabezpečení](your-device-does-not-meet-the-minimum-security-patch-android.md)
 
 
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO5-->
 
 

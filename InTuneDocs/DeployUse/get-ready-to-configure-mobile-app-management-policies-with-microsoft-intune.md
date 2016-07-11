@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Příprava před konfigurací zásad správy mobilních aplikací | Microsoft Intune
-description:
-keywords:
+title: "Příprava před konfigurací zásad správy mobilních aplikací | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 7e6a85e7-e007-41b6-9034-64d77f547b87
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: joglocke
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 6a989482e9c3c35c1f377e0b32bf04beb89e60a3
+ms.openlocfilehash: da4020eb71432f9bccb52909272d027da64ee47c
+
 
 ---
 
@@ -36,6 +29,8 @@ Portál Azure je nová konzola pro správu, která slouží k vytváření zása
 Pokud s používáním portálu Azure teprve začínáte, přečtěte si téma [Portál Azure pro zásady MAM v Microsoft Intune](azure-portal-for-microsoft-intune-mam-policies.md), které vám zajistí rychlý přehled.
 
 Pokud zatím ke správě zařízení používáte **konzolu pro správu Intune**, můžete pomocí **konzoly pro správu Intune** vytvářet zásady MAM podporující aplikace pro zařízení zaregistrovaná v Intune, ale i pro zařízení zaregistrovaná v Intune doporučujeme používat portál Azure. Pokyny pro vytvoření zásady MAM pomocí konzoly pro správu Intune najdete [tady](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
+
+Zásady MAM vytvořené v konzole pro správu Intune nelze importovat do portálu Azure.  Zásady MAM je nutné znovu vytvořit na portálu Azure.
 
 >[!IMPORTANT]
 > V Konzole správce Intune nemusíte vidět všechna nastavení zásad MAM. Pokud vytváříte zásady MAM v konzole pro správu Intune i na portálu Azure, pro aplikace se použije a pro uživatele se nasadí zásada na portálu Azure.
@@ -62,7 +57,7 @@ V současné době není dostupná podpora zařízení s Windows.
 -   Předplatné **Office 365 (O365)**, které je potřeba v těchto případech:
   - Chcete použít zásady MAM pro aplikace s podporou víc identit.
   - Chcete vytvořit pracovní účty SharePoint Online a Exchange Online. Místní Exchange a místní SharePoint nejsou podporovány.
--    **Povolit moderní ověřování** pro **Online Skype pro firmy**. Pokud se chcete zaregistrovat do programu moderního ověřování, přihlaste se k Microsoft Connect a vyplňte [tento formulář](https://connect.microsoft.com/office/Survey/NominationSurvey.aspx?SurveyID=17299&ProgramID=8715).
+-    [Povolení moderního ověřování](http://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx.md) pro **Online Skype pro firmy**.
 
 
 - **Azure Active Directory (Azure AD)** pro vytváření uživatelů. Služba Azure AD ověřuje uživatele při spuštění aplikace a zadání pracovních přihlašovacích údajů.
@@ -124,6 +119,7 @@ V následující tabulce najdete přehled rolí a oprávnění, které můžete 
 [Vytvoření a nasazení zásad správy mobilních aplikací pomocí Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

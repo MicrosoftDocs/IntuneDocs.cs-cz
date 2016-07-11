@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Registrace Pomocníka s nastavením pro zařízení s iOS v Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Registrace Pomocníka s nastavením pro zařízení s iOS v Microsoft Intune | Microsoft Intune"
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 46e5b027-4280-4809-b45f-651a6ab6d0cd
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: dagerrit
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f3637e79e7b6f93820e775932653c41879f369fe
+ms.openlocfilehash: b9cb10ccb26d4f61d63fb2dc6c18be48cc0a3182
+
 
 ---
 
@@ -67,6 +61,9 @@ Pomocí Apple Configuratoru můžete v zařízeních s iOS obnovit tovární nas
             -   **Bez přidružení uživatele** – Zařízení nemá určeného uživatele. Toto spřažení použijte u zařízení určených k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, které vyžadují spřažení s uživatelem, jsou zakázané nebo nefungují.
 
         -   **Předběžné přiřazení skupiny zařízení** – Do této skupiny na začátku patří všechna zařízení nasazená s tímto profilem. Po registraci můžete zařízení přiřadit někomu jinému.
+
+        >[!Important]
+        >Přiřazení skupiny způsobí přesun z Intune do Azure Active Directory. [Další informace](http://go.microsoft.com/fwlink/?LinkID=787064)
 
           -  **Program DEP (Device Enrollment Program)** – Program Apple DEP (Device Enrollment Program) se při registraci prostřednictvím Pomocníka s nastavením nedá použít. Zkontrolujte, jestli je přepínač nastavený do polohy **Vypnuto**.
 
@@ -155,6 +152,7 @@ Pomocí Apple Configuratoru můžete v zařízeních s iOS obnovit tovární nas
 [Příprava registrace zařízení](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jul16_HO1-->
 
 

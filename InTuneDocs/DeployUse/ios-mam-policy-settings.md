@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Nastavení zásad MAM pro iOS | Microsoft Intune
-description:
-keywords:
+title: "Nastavení zásad MAM pro iOS | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 673ff872-943c-4076-931c-0be90363aea9
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: andcerat
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 5a445f06d6c2328f7689468ca4d68a969af1e825
+ms.openlocfilehash: b3df4b35dbe2710157b88a4e7fdba9734f8b998b
+
 
 ---
 
@@ -83,7 +77,7 @@ Výrazem **aplikace spravované podle zásad** se označují aplikace, které ma
   Pokud povolíte toto nastavení, musí si koncový uživatel nastavit kód PIN a používat ho pro přístup k zařízení.  Pokud není kód PIN pro přístup k zařízení nastavený, aplikace se nespustí a koncovému uživateli se místo toho zobrazí zpráva s informacemi o tom, že jeho společnost vyžaduje, aby pro přístup k dané aplikaci nejprve povolil kód PIN zařízení.
 
   **Výchozí hodnota – Možnost šifrování není vybraná.**
-- **ContactSyncDisabled**: Pokud chcete zabránit v synchronizaci kontaktních informací do nativní aplikace adresáře na zařízení, vyberte **Ano**. Pokud vyberete **Ne**, aplikace uloží kontaktní informace do nativní aplikace adresáře na zařízení.
+- **Zakázat synchronizaci kontaktů:** Pokud chcete zabránit synchronizaci kontaktních informací do nativní aplikace adresáře na zařízení, zvolte **Ano**. Pokud vyberete **Ne**, aplikace uloží kontaktní informace do nativní aplikace adresáře na zařízení.
 
   Když k odebrání firemních dat použijete selektivní vymazání, dojde k odebrání kontaktů přímo synchronizovaných z aplikace do nativního adresáře. Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. To se v současné době týká jenom aplikace **Microsoft Outlook**.
 
@@ -117,6 +111,7 @@ V zařízeních s iOS můžete uživatelům povolit, aby se místo číselného 
   **Výchozí hodnota = 90 dní**
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

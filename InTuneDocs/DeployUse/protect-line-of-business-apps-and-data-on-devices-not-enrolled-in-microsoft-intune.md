@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Ochrana obchodních aplikací a dat na nezaregistrovaných zařízeních | Microsoft Intune
-description:
-keywords:
+title: "Ochrana obchodních aplikací a dat na nezaregistrovaných zařízeních | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
-ms.service:
-ms.technology:
+ms.prod: 
+ms.service: 
+ms.technology: 
 ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: joglocke
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 8c1f4f209c5ec704290882b8f6f71e0b1b01d21c
+ms.openlocfilehash: 5e8b2a3f830016bbcd1965898dcf7b5d9a0597b5
+
 
 ---
 
@@ -64,7 +57,7 @@ Aplikace můžete koncovým uživatelům nasadit následujícími způsoby:
 * Pro zařízení nespravovaná žádným řešením MDM budete potřebovat vlastní řešení. Koncoví uživatelé si musí aplikaci stáhnout a nainstalovat do svého zařízení.
 
 ## Změna metadat
-Pokud potřebujete změnit podrobnosti o aplikaci, jako je třeba název aplikace nebo identifikátor balíku, musíte [aplikaci odebrat](#remove-apps) a [přidat ji](#add-the-app) s novými metadaty.
+Pokud potřebujete změnit podrobnosti o aplikaci, jako je třeba název aplikace nebo identifikátor balíku, musíte [aplikaci odebrat](#remove-apps) a [přidat ji](#step-2-add-the-app) s novými metadaty.
 
 ##  Odebrání aplikací
 Obchodní aplikaci můžete ze seznamu aplikací odebrat.  Tato operace odebere aplikaci ze seznamu a odebere přidružení se zásadami MAM. ale nezpůsobí odebrání nebo odinstalaci aplikace ze zařízení koncového uživatele.  
@@ -80,6 +73,7 @@ Obchodní aplikaci můžete ze seznamu aplikací odebrat.  Tato operace odebere 
   Tato akce odebere aplikaci ze seznamu obchodních aplikací a ze seznamu cílových aplikací v zásadách MAM.
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

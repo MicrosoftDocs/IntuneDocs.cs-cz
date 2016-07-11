@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Registrace 30denního testování Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Registrace 30denního testování Microsoft Intune | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: dad88d43-0054-4be6-9e5d-ada5a957dd6c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: fe1587bead9e4cd350f5ffcf925fe04afd824ea0
+ms.openlocfilehash: f97b619d2b82556685cf0e247700d1fd8c8d4369
+
 
 ---
 
@@ -41,11 +35,11 @@ Ještě než se zaregistrujete nebo přihlásíte k Intune, měli byste si odpov
 
 |Pokud platí některá z následujících věcí, zaregistrujte si NOVÝ účet:|Přihlaste se pomocí svého PRACOVNÍHO nebo ŠKOLNÍHO účtu, pokud:|
 |-----------------------------------------------------------------|------------------------------------------------|
-|**Nemáte pracovní nebo školní účet.** Pracovní nebo školní účet získáte při podpisu multilicenční smlouvy s Microsoftem nebo přihlášení k odběru Office 365. Pokud vaše organizace neuzavřela s Microsoftem smlouvu Enterprise nebo podobnou multilicenční smlouvu (nebo má účet Office 365), nemáte účet služeb Microsoft Online Services, který můžete použít pro přihlášení ke službám Microsoft Online Services.<br /><br />**Po skončení platnosti 30denního testování se váš tenant Intune zruší.** Pokud používáte bezplatné předplatné testování Intune jenom pro účely hodnocení a chcete se po skončení testování vrátit ke svému nastavení služby Intune a zřizování zařízení, musíte si zaregistrovat nový účet. Tato možnost se doporučuje, když chcete používat Intune s nástrojem System Center Configuration Manager 2012.<br /><br />Pokud registrujete nový účet, nebudete moct později použít stávající pracovní nebo školní účet ke správě tohoto účtu, nebo ho spojovat se stávajícími multilicenčními smlouvami.|**Máte pracovní nebo školní účet s multilicenční smlouvou nebo předplatné Office 365 a používáte toto testování k hodnocení Intune.**<br /><br />Pokud nastavujete Intune ve stávajícím účtu, doporučujeme vám přečíst si téma [Volba způsobu správy zařízení](choose-how-to-manage-devices.md), než budete pokračovat v těchto krocích.|
+|**Nemáte pracovní nebo školní účet.** Pracovní nebo školní účet získáte při podpisu multilicenční smlouvy s Microsoftem nebo přihlášení k odběru Office 365. Pokud vaše organizace neuzavřela s Microsoftem smlouvu Enterprise nebo podobnou multilicenční smlouvu (nebo má účet Office 365), nemáte účet služeb Microsoft Online Services, který můžete použít pro přihlášení ke službám Microsoft Online Services.<br /><br />**Po skončení platnosti 30denního testování se váš tenant Intune zruší.** Pokud používáte bezplatné předplatné testování Intune jenom pro účely hodnocení a chcete se po skončení testování vrátit ke svému nastavení služby Intune a zřizování zařízení, musíte si zaregistrovat nový účet. Tato možnost se doporučuje, když chcete používat Intune s nástrojem System Center Configuration Manager 2012.<br /><br />Pokud registrujete nový účet, nebudete moct později použít stávající pracovní nebo školní účet ke správě tohoto účtu, nebo ho spojovat se stávajícími multilicenčními smlouvami.|**Máte pracovní nebo školní účet s multilicenční smlouvou nebo předplatné Office 365 a používáte toto testování k hodnocení Intune.**<br /><br />Pokud nastavujete Intune pro stávající účet, doporučujeme vám přečíst si téma [Volba způsobu správy zařízení](/intune/get-started/choose-how-to-manage-devices), než budete pokračovat v těchto krocích.|
 
 ## Registrace nebo přihlášení k Intune
 
-1.  Nejdřív [kliknutím sem přejděte na stránku registrace Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20)..
+1.  Nejdřív [kliknutím sem přejděte na stránku registrace pro Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20).
 
 2.  Na stránce **Registrovat** máte dvě možnosti:
 
@@ -63,9 +57,10 @@ Gratulujeme! Právě jste dokončili krok 1 příručky pro *testování Microso
 
 >[!div class="step-by-step"]
 
->[&larr; **Začínáme**](.\get-started-with-a-30-day-trial-of-microsoft-intune.md)     [**Přidat uživatele** &rarr;](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-2.md)  
+>[&larr; **Začínáme**](get-started-with-a-30-day-trial-of-microsoft-intune.md)     [**Přidávání uživatelů** &rarr;](get-started-with-a-30-day-trial-of-microsoft-intune-step-2.md)  
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO1-->
 
 

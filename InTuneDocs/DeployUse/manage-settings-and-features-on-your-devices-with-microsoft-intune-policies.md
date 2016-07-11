@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Správa nastavení a funkcí v zařízeních pomocí zásad | Microsoft Intune
-description:
-keywords:
+title: "Správa nastavení a funkcí v zařízeních pomocí zásad | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 06/14/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 09bae0b9-4f79-4658-8ca1-a71ab992c1b2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: heenamac
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f33a86c51320c75ce74d20e0cac2b9581990ecec
+ms.openlocfilehash: ab570d551189ec71b54081229b93d7b4ce8d58d5
+
 
 ---
 
@@ -54,7 +48,8 @@ Podrobnosti najdete v tématu [Povolení přístupu k prostředkům společnosti
 
 2.  Zvolte požadovanou zásadu a vyberte doporučené nastavení pro tuto zásady (pokud je dostupné; toto nastavení pak můžete později změnit), nebo vytvořte vlastní zásadu s vlastním nastavením.
 
-    > [!TIP] Pokud potřebujete pomoc s výběrem správné zásady, projděte si téma [Odkazy na zásady Microsoft služby Intune](microsoft-intune-policy-reference.md).
+    > [!TIP]
+    > Pokud potřebujete pomoc s výběrem správné zásady, projděte si téma [Referenční informace o zásadách Intune](microsoft-intune-policy-reference.md).
 
 3.  Až budete připravení, vyberte **Vytvořit zásadu**.
 
@@ -72,9 +67,9 @@ Podrobnosti najdete v tématu [Povolení přístupu k prostředkům společnosti
     - [Nastavení pro zařízení Windows Team](windows-team-configuration-policy-settings-in-microsoft-intune.md)
     - [Nastavení pro upgrade edice systému Windows](edition-upgrade-policy-settings-in-microsoft-intune.md)
     - [Nastavení pro zařízení Mac OS X](mac-os-x-policy-settings-in-microsoft-intune.md)
-    - [Nastavení pro Exchange ActiveSync](exchange-activesync-policy-settings-in-microsoft-intune.md)
-    - [Nastavení pro zásadu podmínek a ujednání](terms-and-condition-policy-settings-in-microsoft-intune.md)
-    - [Obecná nastavení pro mobilní zařízení (zastaralé)](mobile-device-security-policy-settings-in-microsoft-intune.md)
+    - [Nastavení pro protokol Exchange ActiveSync](exchange-activesync-policy-settings-in-microsoft-intune.md)
+    - [Nastavení pro zásady podmínek a ujednání](terms-and-condition-policy-settings-in-microsoft-intune.md)
+    - [Obecné nastavení pro mobilní zařízení (zastaralé)](mobile-device-security-policy-settings-in-microsoft-intune.md)
 
 4.  Výběrem možnosti **Ano** v potvrzovacím dialogu zásadu hned nasadíte, výběrem možnosti **Ne** zásadu vytvoříte, ale nenasadíte ji.
 
@@ -119,7 +114,7 @@ Pokud se zařízení neohlásí po odeslání prvního oznámení, následují 3
 
 V takovém případě zařízení získá zásadu při dalším plánovaném ohlášení své přítomnosti ve službě Intune:
 
-- iOS – každých 6 hodin
+- iOS a Mac OS X – každých 6 hodin
 - Android – každých 8 hodin
 - Windows Phone – každých 8 hodin
 - Zaregistrovaná zařízení s Windows RT – každých 24 hodin
@@ -127,10 +122,10 @@ V takovém případě zařízení získá zásadu při dalším plánovaném ohl
 
 Pokud se zařízení právě zaregistrovalo, četnost ohlašování bude vyšší:
 
-- iOS – prvních 6 hodin každých 15 minut a potom každých 6 hodin
+- iOS a Mac OS X – prvních 6 hodin každých 15 minut a potom každých 6 hodin
 - Android – prvních 15 minut každé 3 minuty, další 2 hodiny každých 15 minut a potom každých 8 hodin
 - Windows Phone – prvních 15 minut každých 5 minut, další 2 hodiny každých 15 minut a potom každých 8 hodin
-- Počítače s Windows zaregistrované jako zařízení – prvních 30 minut každé 3 minuty a potom každých 24 hodin
+- Počítače s Windows zaregistrované jako zařízení – prvních 30 minut každé 3 minuty a potom každých 8 hodin
 
 Uživatelé můžou taky spustit aplikaci Portál společnosti a synchronizovat zařízení. Zásady se tak zkontrolují hned.
 
@@ -149,7 +144,7 @@ Je důležité vědět, že pokud se pro stejného uživatele nebo zařízení n
 
 -   Nejvíc omezující nastavení zásad dodržování předpisů se použije při vyhodnocení proti stejnému nastavení v jiné zásadě dodržování předpisů.
 
--   Nejvíc omezující nastavení zásad konfigurace se použije při vyhodnocení proti stejnému nastavení v jiné zásadě konfigurace.
+-   Pokud je nastavení zásady konfigurace v konfliktu s nastavením v rámci jiné zásady konfigurace, zobrazí se tento konflikt v konzole Intune. Takové konflikty je třeba vyřešit ručně.
 
 ### Co se stane, když jsou zásady správy mobilních aplikací (MAM) ve vzájemném konfliktu? Která se použije pro příslušnou aplikaci?
 Nejvíc omezující nastavení v zásadách správy mobilních aplikací jsou konfliktní hodnoty, s výjimkou polí s počtem zadání (jako jsou pokusy o zadání PINu před resetováním).  Pole s počtem zadání se nastaví na stejnou hodnotu, jako když zásadu MAM vytvoříte v konzole pomocí možnosti doporučeného nastavení.
@@ -178,7 +173,25 @@ Pokud odstraníte zásadu nebo odeberete zařízení ze skupiny, na kterou byla 
         - Vyžadovaný typ hesla
         - Vypršení platnosti hesla (dny)
         - Pamatovat si historii hesel
-        - Počet povolených opakovaných neúspěšných přihlášení, než se zařízení vymaže - Počet minut nečinnosti před vyžádáním hesla - Vyžadovaný typ hesla - Minimální počet znakových sad - Povolit fotoaparát - Vyžadovat šifrování u mobilního zařízení - Povolit vyměnitelné úložiště - Povolit webový prohlížeč - Povolit obchod s aplikacemi - Povolit snímek obrazovky - Povolit informace o zeměpisné poloze - Povolit účet Microsoft - Povolit kopírování a vkládání - Povolit Wi-Fi tethering - Povolit automatické připojení k bezplatným Wi-Fi hotspotům - Povolit hlášení hotspotů Wi-Fi - Povolit obnovení do výrobního nastavení - Povolit Bluetooth - Povolit používání technologie NFC - Povolit Wi-Fi
+        - Počet povolených opakovaných neúspěšných přihlášení, než bude zařízení vymazáno
+        - Počet minut nečinnosti před vyžadováním hesla
+        - Typ požadovaného hesla – minimální počet znaků
+        - Povolit fotoaparát
+        - Vyžadovat šifrování u mobilního zařízení
+        - Povolit vyměnitelné úložiště
+        - Povolit webový prohlížeč
+        - Povolit obchod s aplikacemi
+        - Povolit snímek obrazovky
+        - Povolit zeměpisnou polohu
+        - Povolit účet Microsoft
+        - Povolit kopírování a vkládání
+        - Povolit sdílení internetového připojení přes Wi-Fi
+        - Povolit automatické připojení k bezplatným Wi-Fi hotspotům
+        - Povolit oznamování Wi-Fi hotspotů
+        - Povolit obnovení továrního nastavení
+        - Povolit Bluetooth
+        - Povolit komunikaci NFC
+        - Povolit Wi-Fi
     
     - **iOS** – odeberou se všechna nastavení s těmito výjimkami:
         - Povolit hlasový roaming
@@ -200,9 +213,10 @@ Pokud odstraníte zásadu nebo odeberete zařízení ze skupiny, na kterou byla 
 
 ### Kde najdu nápovědu k odstraňování potíží se zásadami?
 
-Projděte si téma [Řešení potíží se zásadami v Microsoft Intune](../Troubleshoot/troubleshoot-policies-in-microsoft-intune).
+Projděte si téma [Řešení potíží se zásadami v Microsoft Intune](/intune/troubleshoot/troubleshoot-policies-in-microsoft-intune).
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

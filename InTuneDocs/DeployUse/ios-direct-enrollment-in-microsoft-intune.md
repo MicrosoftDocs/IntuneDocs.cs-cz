@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Přímá registrace zařízení s iOS | Microsoft Intune
-description:
-keywords:
+title: "Přímá registrace zařízení s iOS | Microsoft Intune"
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: a692b90c-72ae-47d1-ba9c-67a2e2576cc2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: dagerrit
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 1b942c7e09e59de59e3e406b84a21a712c0e973a
+ms.openlocfilehash: 8fea0f7f87972bc643bbb20348095e05f701287e
+
 
 ---
 
@@ -46,6 +40,8 @@ Intune podporuje registraci firemních zařízení s iOS pomocí nástroje [Appl
 
         -   **Předběžné přiřazení skupiny zařízení** – Do této skupiny na začátku patří všechna zařízení nasazená s tímto profilem. Po registraci můžete zařízení přiřadit někomu jinému.
 
+        >[!Important]
+        >Přiřazení skupiny způsobí přesun z Intune do Azure Active Directory. [Další informace](http://go.microsoft.com/fwlink/?LinkID=787064)
     3.  Profil přidáte kliknutím na **Uložit profil**.
 
 5.  **Exportujte profil jako soubor .mobileconfig pro nasazení na zařízení iOS.** Vyberte profil zařízení, který jste vytvořili. Vyberte **Exportovat…** na hlavním panelu. Vyberte **Stáhnout profil** a uložte stažený soubor .mobileconfig.
@@ -89,6 +85,7 @@ Intune podporuje registraci firemních zařízení s iOS pomocí nástroje [Appl
 [Příprava registrace zařízení](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jul16_HO1-->
 
 

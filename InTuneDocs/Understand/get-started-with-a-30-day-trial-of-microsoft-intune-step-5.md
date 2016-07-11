@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Registrace mobilních zařízení testování | Microsoft Intune
-description:
-keywords:
+title: "Registrace mobilních zařízení testování | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 47806f69-303d-41d9-9b0e-9b9445ea24ac
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 9755499575118feecf33780ee29a70525f95508e
+ms.openlocfilehash: f26b64015f483eb5b6a6efbaa6fe6730dde7dac9
+
 
 ---
 
@@ -32,17 +26,17 @@ Abyste v Intune nastavili správu mobilních zařízení, musíte nejdřív nast
 
 1.  **Nastavení Intune jako autority pro správu mobilního zařízení**
 
-    V [konzole pro správu Intune](https://manage.microsoft.com/) vyberte **Správce** &gt; **Správa mobilních zařízení**. Vyberte **Úlohy** > **Nastavit autoritu MDM** a potom vyberte **Ano** v dialogovém okně **Autorita MDM**.
+    V [konzole pro správu Intune](https://manage.microsoft.com/) zvolte **Správce** &gt; **Správa mobilních zařízení**. Vyberte **Úlohy** > **Nastavit autoritu MDM** a potom vyberte **Ano** v dialogovém okně **Autorita MDM**.
 
 2.  **Povolení MDM pro platformu zařízení**
 
     Povolte správu mobilních zařízení pro platformu zařízení, kterou chcete spravovat. V závislosti na platformě je potřeba splnit různé požadavky:
 
-    -   **iOS a Mac OS X**: Viz [Nastavení správy pro iOS a Mac pomocí Microsoft Intune](/Intune/Deploy-Use/set-up-ios-and-mac-management-with-microsoft-intune).
+    -   **iOS a Mac OS X**: Další informace najdete v tématu [Nastavení správy pro iOS a Mac pomocí Microsoft Intune](/Intune/Deploy-Use/set-up-ios-and-mac-management-with-microsoft-intune).
 
     -   **Android**: Mobilní zařízení s Androidem umožňují uživatelům registraci pomocí aplikace Portál společnosti dostupné na webu Google Play. Žádná další konfigurace v Intune se nevyžaduje.
 
-    -   **Windows Phone**: Viz [Nastavení správy pro zařízení Windows Phone v Microsoft Intune](/Intune/Deploy-Use/set-up-windows-phone-management-with-microsoft-intune).
+    -   **Windows Phone**: Další informace najdete v tématu [Nastavení správy pro zařízení Windows Phone v Microsoft Intune](/Intune/Deploy-Use/set-up-windows-phone-management-with-microsoft-intune).
 
 ## Registrace testovacích zařízení
 
@@ -56,13 +50,13 @@ Nainstalujte si aplikaci **Portál společnosti Intune** od Microsoft Corporatio
 Uživatelé si instalují aplikaci **Portál společnosti** od Microsoft Corporation dostupnou na Windows Phone Storu a přihlašují se pomocí uživatelských přihlašovacích údajů Intune přidaných nahoře.  Abyste přidali svoje zařízení, zobrazte **Registrovaná zařízení** .
 
  ### Windows Phone 8.0
- Uživatelé kliknou na**Nastavení systému** &gt; **Firemní aplikace** a přihlásí se pomocí uživatelských přihlašovacích údajů Intune přidaných výše. Aplikace Portál společnosti se nasadí na váš telefon.
+ Uživatelé kliknou na **Nastavení systému** &gt; **Firemní aplikace** a přihlásí se pomocí uživatelských přihlašovacích údajů Intune přidaných výše. Aplikace Portál společnosti se nasadí na váš telefon.
 
 Pokud se vám zobrazí výzva, abyste zadali **adresu serveru**, zadejte manage.microsoft.com.
 
 
 ## Instalace dříve nasazené aplikace
-Na mobilním zařízení otevřete portál společnosti, zvolte **Aplikace**a pak nainstalujte **Microsoft Skype**..
+Na mobilním zařízení otevřete portál společnosti, zvolte **Aplikace** a pak nainstalujte **Microsoft Skype**.
 
 Další informace o správě mobilních zařízení pomocí Intune najdete v tématu [Příprava registrace zařízení v Microsoft Intune](/Intune/deploy-use/get-ready-to-enroll-devices-in-microsoft-intune).
 
@@ -71,9 +65,10 @@ Gratulujeme! Právě jste dokončili krok 5 příručky pro *testování Microso
 
 >[!div class="step-by-step"]
 
->[&larr; **Vytvořit zásady**](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-4.md)     [**Možnosti a funkce** &rarr;](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-6.md)  
+>[&larr;**Vytváření zásad**](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-4.md)     [**Možnosti a funkce** &rarr;](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-6.md)  
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

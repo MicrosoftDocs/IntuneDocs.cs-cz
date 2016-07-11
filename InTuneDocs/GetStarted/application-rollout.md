@@ -1,32 +1,26 @@
 ---
-# required metadata
-
-title: Zavedení aplikace | Microsoft Intune
-description:
-keywords:
+title: "Zavedení aplikace | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 0fc32ed3-bcf4-472a-80e7-eb20986f78fa
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: tscott
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d82d0ae4820d2e2141848235b8741abccaec3bc6
+ms.openlocfilehash: 4a237942b4bc1e411cf55bc34c7b86d2249c526e
+
 
 ---
 
 # Zavedení aplikace
-Toto téma poskytuje konkrétní doporučení pro postupné zavádění aplikací v Microsoft Intune. Obecné informace o fázích zavedení najdete v tématu věnovaném [fázím zavedení pro nasazení Microsoft Intune](rollout-phases-for-microsoft-intune-deployment.md)..
+Toto téma poskytuje konkrétní doporučení pro postupné zavádění aplikací v Microsoft Intune. Obecné informace o fázích zavedení najdete v tématu [Fáze zavedení pro nasazení Microsoft Intune](rollout-phases-for-microsoft-intune-deployment.md).
 
 ### Fáze zavedení aplikace
 Fáze zavedení aplikace jsou následující:
@@ -54,12 +48,15 @@ Vezměte v úvahu tyto informace:
 
 -   Ujistěte se, že je typ aplikace podporovaný v Intune.
 
--   Zkontrolujte, že máte v cloudovém úložišti dost místa pro nahrání aplikace. Pokyny k nákupu dalšího úložiště jsou uvedeny v tématu [Přidávání aplikací s Microsoft Intune](/intune/deploy-use/add-apps)..
+-   Zkontrolujte, že máte v cloudovém úložišti dost místa pro nahrání aplikace. Pokyny k nákupu dalšího úložiště jsou uvedeny v tématu [Přidávání aplikací s Microsoft Intune](/intune/deploy-use/add-apps).
+
+> [!NOTE]           
+> Můžete si stáhnout tuto [šablonu plánování pro mobilní aplikace](https://gallery.technet.microsoft.com/Mobile-app-planning-18689d59), která vám usnadní proces zavádění.
 
 ## Ověření konceptu
 Ve fázi ověření konceptu otestujte nasazení aplikace v testovacím prostředí na zařízeních a uživatelích, které jste nakonfigurovali výhradně pro účely testování.
 
--   Do této fáze zapojte helpdesk, abyste zjistili, jaké problémy můžou nastat během pilotního a produkčního nasazení. Informace o odstraňování potíží jsou k dispozici v tématu [Řešení problémů s nasazením aplikací v Microsoft Intune](/intune/troubleshoot/troubleshoot-app-deployment-problems-in-microsoft-intune)..
+-   Do této fáze zapojte helpdesk, abyste zjistili, jaké problémy můžou nastat během pilotního a produkčního nasazení. Informace o řešení potíží jsou k dispozici v tématu [Řešení problémů s nasazením aplikací v Microsoft Intune](/intune/troubleshoot/troubleshoot-app-deployment-problems-in-microsoft-intune).
 
 -   V tomto okamžiku byste měli vytvořit informační plány pro uživatele v pilotním i produkčním nasazení. Tyto plány by měly minimálně zahrnovat to, jaká aplikace se nasazuje, jak a kdy ji uživatelé obdrží, jaký je obchodní účel tohoto nasazení a co dělat, když narazí na problémy (informace o samoobslužné pomoci i postup kontaktování helpdesku).
 
@@ -97,6 +94,7 @@ V průběhu pilotní fáze nasadíte aplikaci pro malou skupinu testovacích už
 [Řešení problémů s nasazením aplikací v Microsoft Intune](/intune/troubleshoot/troubleshoot-app-deployment-problems-in-microsoft-intune)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

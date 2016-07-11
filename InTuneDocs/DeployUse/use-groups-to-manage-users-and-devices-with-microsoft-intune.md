@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Použití skupin pro správu uživatelů a zařízení | Microsoft Intune
-description:
-keywords:
+title: "Použití skupin pro správu uživatelů a zařízení | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: eb9b01ce-9b9b-4c2a-bf99-3879c0bdaba5
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: cc64e51499908d08823429871cda91dfb0078b1e
+ms.openlocfilehash: a1f6dfc7629481403c40a1ce927b588f67e5fa74
+
 
 ---
 
@@ -43,16 +37,16 @@ Hierarchie skupiny se navíc zobrazí se souhrny stavu, které vám pomohou iden
 >
 > Budete chtít nejspíš vytvořit výchozí zásadu, která platí pro všechny skupiny a zařízení, pro zajištění základních požadavků na dodržování předpisů ve vaší společnosti. Potom vytvořte konkrétnější zásady pro nejširší kategorie uživatele a zařízení, například zásady e-mailu pro každý operační systém zařízení.
 >
-> Pečlivě zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrý název zásady je třeba **Zásada e-mailů WP pro celou firmu**..
+> Pečlivě zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrý název zásady je třeba **Zásada e-mailů WP pro celou firmu**.
 >
 > Při každém vytvoření omezující zásady budete chtít tuto zásadu sdělit uživatelům, takže doporučujeme, abyste po vytvoření obecnějších skupin a zásad věnovali pozornost tomu, jak vytváříte menší skupiny, aby se redukovala zbytečná komunikace.
 
 
 ## Vytvoření skupiny zařízení
 
-1.  V konzole pro správu Intune vyberte **Skupiny** &gt; **Přehled** &gt; **Vytvořit skupinu**..
+1.  V konzole pro správu Intune zvolte **Skupiny** &gt; **Přehled** &gt; **Vytvořit skupinu**.
 
-2.  Zadejte název skupiny a její nepovinný popis a vyberte skupinu zařízení jako nadřazenou skupinu. Klikněte na **Další**..
+2.  Zadejte název skupiny a její nepovinný popis a vyberte skupinu zařízení jako nadřazenou skupinu. Vyberte **Další**.
 
 3.  Na stránce **Definovat kritéria členství** vyberte typ zařízení, který bude skupina obsahovat. Další možnosti konfigurace skupiny závisí na vybraném typu zařízení:
 
@@ -65,15 +59,15 @@ Hierarchie skupiny se navíc zobrazí se souhrny stavu, které vám pomohou iden
 4.  Na stránce **Definovat přímé členství** zahrňte nebo vylučte jednotlivá zařízení, která určíte kliknutím na **Procházet**. Pokud použijete možnost pro výběr zařízení, která nejsou ve vámi určené nadřazené skupině, přidají se tato zařízení do nadřazené skupiny automaticky.
 
 
-5.  Na stránce **Souhrn** si prohlédněte akce, které se provedou. Klikněte na **Dokončit**..
+5.  Na stránce **Souhrn** si prohlédněte akce, které se provedou. Klikněte na **Dokončit**.
 
 Nově vytvořenou skupinu najdete v seznamu **Skupiny** v pracovním prostoru **Skupiny** v rámci nadřazené skupiny. Tady můžete skupinu i upravit nebo odstranit.
 
 ## Vytvoření skupiny uživatelů
 
-1.  V konzole pro správu Intune vyberte **Skupiny** &gt; **Přehled** &gt; **Vytvořit skupinu**..
+1.  V konzole pro správu Intune zvolte **Skupiny** &gt; **Přehled** &gt; **Vytvořit skupinu**.
 
-2.  Zadejte název skupiny a její nepovinný popis a vyberte skupinu uživatelů jako nadřazenou skupinu. Klikněte na **Další**..
+2.  Zadejte název skupiny a její nepovinný popis a vyberte skupinu uživatelů jako nadřazenou skupinu. Vyberte **Další**.
 
 3.  Na stránce **Definovat kritéria členství** určete, jestli se mají zahrnout všichni členové nadřazené skupiny, nebo jestli se má začít s prázdnou skupinou.  Potom můžete zahrnout nebo vyloučit členy na základě nastavení **Skupiny uživatelů**, které ručně nakonfigurujete v [Centru pro správu Office 365](http://go.microsoft.com/fwlink/?LinkId=698854) nebo které se synchronizuje z vaší místní služby Active Directory. Pokud se změní členství ve skupině zabezpečení, může se změnit i členství ve skupinách uživatelů založených na této skupině zabezpečení.
 
@@ -81,13 +75,13 @@ Nově vytvořenou skupinu najdete v seznamu **Skupiny** v pracovním prostoru **
     > Teď platí, že pokud vaše skupina obsahuje členy z konkrétní skupiny zabezpečení nebo manažera a zároveň vyloučíte členy z konkrétních skupin, dojde k odebrání členů, které jste na začátku zahrnuli. Pokud chcete vytvořit skupinu, která má zahrnuté i vyloučené členy, doporučujeme nejdřív vytvořit nadřazenou skupinu se zahrnutými členy a pak k této skupině vytvořit podřízenou skupinu, ve které uvedete vyloučené členy. Podřízenou skupinu pak můžete podle potřeby využít pro zásady Intune, profily a distribuci aplikací.
 
     > [!NOTE]
-    > Na portálu pro správu Azure můžete vytvořit skupinu podle manažera, kterému uživatelé podléhají. Skupina se bude dynamicky měnit podle toho, jak se do týmu daného manažera ve službě Azure Active Directory přidávají zaměstnanci nebo se z něj naopak odebírají. Postup pro vytvoření skupiny Azure podle manažera najdete v tématu [Vytváření rozšířených pravidel pomocí atributů](https://azure.microsoft.com/en-us/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/) v části **Konfigurace skupiny manažera**..
+    > Na portálu pro správu Azure můžete vytvořit skupinu podle manažera, kterému uživatelé podléhají. Skupina se bude dynamicky měnit podle toho, jak se do týmu daného manažera ve službě Azure Active Directory přidávají zaměstnanci nebo se z něj naopak odebírají. Postup pro vytvoření skupiny Azure podle manažera najdete v článku [Vytváření rozšířených pravidel pomocí atributů](https://azure.microsoft.com/en-us/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/) v části **Konfigurace skupiny manažera**.
 
 
 4.  Na stránce **Definovat přímé členství** zahrňte nebo vylučte jednotlivé uživatele, které určíte kliknutím na **Procházet**. Pokud použijete možnost pro výběr uživatelů, kteří nejsou ve vámi určené nadřazené skupině, přidají se tito uživatelé do nadřazené skupiny automaticky. V dolní části dialogového okna **Vybrat členy** najdete možnost ručního přidání uživatele. To je užitečné, pokud chcete přidat uživatele, který dosud nemá zaregistrované zařízení.
 
 
-5.  Na stránce **Souhrn** si prohlédněte akce, které se provedou. Klikněte na **Dokončit**..
+5.  Na stránce **Souhrn** si prohlédněte akce, které se provedou. Klikněte na **Dokončit**.
 
 Nově vytvořenou skupinu najdete v seznamu **Skupiny** v pracovním prostoru **Skupiny** v rámci nadřazené skupiny. Tady můžete skupinu i upravit nebo odstranit.
 
@@ -101,7 +95,7 @@ Filtrovaná zobrazení skupin vám umožní přizpůsobit zobrazení, která spr
 
 -   Chcete pro každého správce IT zobrazit jenom relevantní skupiny.
 
-Filtrovaná zobrazení skupin pro správce služeb můžete nakonfigurovat v konzole pro správu Intune. Podrobnosti najdete v tématu [Co potřebujete vědět, než začnete](/intune/get-started/what-to-know-before-you-start-microsoft-intune)..
+Filtrovaná zobrazení skupin pro správce služeb můžete nakonfigurovat v konzole pro správu Intune. Podrobnosti najdete v tématu [Co potřebujete vědět, než začnete s Microsoft Intune](/intune/get-started/what-to-know-before-you-start-microsoft-intune).
 
 Po dokončení konfigurace filtrovaných zobrazení skupin pro správce služby tento správce:
 
@@ -123,11 +117,11 @@ Po dokončení konfigurace filtrovaných zobrazení skupin pro správce služby 
 
 ### Konfigurace filtrovaných zobrazení skupin
 
-1.  V konzole pro správu Intune zvolte **Správce** &gt; **Správa správců** &gt; **Správci služeb**..
+1.  V konzole pro správu Intune zvolte **Správce** &gt; **Správa správců** &gt; **Správci služeb**.
 
-2.  Vyberte správce služeb, pro kterého chcete filtrovat skupiny, a pak klikněte na **Spravovat skupiny**..
+2.  Vyberte správce služeb, pro kterého chcete filtrovat skupiny, a pak klikněte na **Spravovat skupiny**.
 
-3.  V dialogovém okně **Vyberte skupiny, které budou pro tohoto správce služeb viditelné** přidejte skupiny, ke kterým bude moct vybraný správce služeb přistupovat, a pak klikněte na **OK**..
+3.  V dialogovém okně **Vyberte skupiny, které budou pro tohoto správce služeb viditelné** přidejte skupiny, ke kterým bude moct vybraný správce služeb přistupovat, a pak klikněte na **OK**.
 
 Po dokončení konfigurace filtrovaných zobrazení skupiny, bude správce IT moct zobrazit a vybrat jenom vámi zvolené skupiny.
 
@@ -141,7 +135,7 @@ Skupinu, která už neslouží potřebám vaší organizace, můžete odstranit.
 ## Další kroky
 
 ### Kontrola návrhu
-Po nastavení skupin a zásad ověřte praktický dopad vytvořeného návrhu kontrolou **určené hodnoty** a **stavu**..
+Po nastavení skupin a zásad ověřte praktický dopad vytvořeného návrhu kontrolou položek **Zamýšlená hodnota** a **Stav**.
 
 1. Vyberte jakákoli zařízení ze skupiny zařízení a procházejte kategorie informací v horní části obrazovky.
 2. Vyberte **Zásada** . Zobrazí se snímek obrazovky nastavení zásady zařízení Android podobný následujícímu.
@@ -158,6 +152,7 @@ Každá zásada má **určenou hodnotu** a **Stav**. Určená hodnota označuje 
 > Mějte na paměti, že když použijete dvě zásady s různými úrovněmi omezení na stejné zařízení nebo uživatele, v praxi se uplatní víc omezující zásada.
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

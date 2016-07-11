@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Využití šířky pásma Intune | Microsoft Intune
-description:
-keywords:
+title: "Využití šířky pásma Intune | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 0f737d48-24bc-44cd-aadd-f0a1d59f6893
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
+ms.openlocfilehash: e104dc52a8a9bdda4b2edb2939d8c7c36e8ecc12
+
 
 ---
 
@@ -83,15 +77,16 @@ Další informace o službě BITS a počítačích s Windows najdete v části [
 
 -   [!INCLUDE[winblue_client_2](../includes/winblue_client_2_md.md)]
 
-Abyste mohli BranchCache používat, musíte na klientském počítači povolit BranchCache a pak ho nakonfigurovat pro **režim distribuované mezipaměti**..
+Abyste mohli BranchCache používat, musíte na klientském počítači povolit BranchCache a pak ho nakonfigurovat pro **režim distribuované mezipaměti**.
 
 Ve výchozím nastavení jsou BranchCache a režim distribuované mezipaměti na počítači povolené při instalaci klienta [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Pokud už ale klient má zásady skupiny zakazující BranchCache, [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] nemůže tyto zásady přepsat a služba BranchCache zůstane na tomto počítači zakázaná.
 
-Pokud používáte BranchCache, měli byste komunikovat s ostatními správci ve vaší organizaci, kteří spravují zásady skupiny a zásady brány firewall pro [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)], a zajistit, aby nenasazovali zásady zakazující BranchCache nebo výjimky brány firewall. Další informace najdete v tématu [BranchCache – přehled](http://technet.microsoft.com/library/hh831696.aspx).
+Pokud používáte BranchCache, měli byste komunikovat s ostatními správci ve vaší organizaci, kteří spravují zásady skupiny a zásady brány firewall pro [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)], a zajistit, aby nenasazovali zásady zakazující BranchCache nebo výjimky brány firewall. Další informace o BranchCache najdete v tématu [BranchCache – přehled](http://technet.microsoft.com/library/hh831696.aspx).
 
 ### Související témata
 [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

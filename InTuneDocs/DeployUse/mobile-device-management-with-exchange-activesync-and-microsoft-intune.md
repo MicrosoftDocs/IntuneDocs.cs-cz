@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Správa mobilních zařízení pomocí protokolu Exchange ActiveSync a Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Správa mobilních zařízení pomocí protokolu Exchange ActiveSync a Microsoft Intune | Microsoft Intune"
+description: 
+keywords: 
 author: nathbarn
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 14f5cf53-6764-4e22-a18b-fa750b3acd41
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
+ms.openlocfilehash: d24395786daa7aec103ec754895868a75983e099
+
 
 ---
 
@@ -41,7 +35,7 @@ Konektor Exchange Connector vám umožňuje spravovat nasazení Exchange v konzo
 -   [Konfigurace konektoru Intune Service to Service Connector pro hostovaný Exchange](intune-service-to-service-exchange-connector.md)
 
 ## Použití zásad pro mobilní zařízení spravovaná Exchangem
-Nastavení zásad se dá použít prostřednictvím konzoly Intune. Podívejte se na téma [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md). Seznam nastavení zásad protokolu Exchange ActiveSync a funkcí podporovaných konkrétními mobilními zařízeními najdete v tématu [Srovnávací tabulka klientů protokolu Exchange ActiveSync](http://go.microsoft.com/fwlink/?LinkId=247270)..
+Nastavení zásad se dá použít prostřednictvím konzoly Intune. Podívejte se na téma [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md). Seznam nastavení zásad protokolu Exchange ActiveSync a funkcí podporovaných konkrétními mobilními zařízeními najdete v tématu [Srovnávací tabulka klientů protokolu Exchange ActiveSync](http://go.microsoft.com/fwlink/?LinkId=247270).
 
 > [!NOTE]
 > Po připojení Intune k prostředí Microsoft Exchange budou mít všichni uživatelé spravovaní přes Intune svoje zásady EAS nastavené na aktuální výchozí zásady na serveru Microsoft Exchange (pokud nejsou v Intune definované nějaké specifičtější zásady).
@@ -50,6 +44,7 @@ Nastavení zásad se dá použít prostřednictvím konzoly Intune. Podívejte s
 Nakonec, když už se nepoužívají nebo došlo ke ztrátě nebo odcizení zařízení, můžete [vymazat podniková data z mobilních zařízení spravovaných protokolem EAS](wipe-for-exchange-managed-mobile-devices.md).
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

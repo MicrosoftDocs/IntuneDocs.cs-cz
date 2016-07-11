@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Obecné tipy pro odstraňování potíží | Microsoft Intune
-description:
-keywords:
+title: "Obecné tipy pro odstraňování potíží | Microsoft Intune"
+description: 
+keywords: 
 author: nbigman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/26/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: c86a4e4a-6b9f-4835-a3d3-61a3f5f4c1ec
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 79617dd41e51402a73759da792f581028095a2f5
+ms.openlocfilehash: 6b2d1d5eecb543e45fca5fbb8aa1854c88ec4f9c
+
 
 ---
 
@@ -29,7 +23,7 @@ ms.suite: ems
 Po nasazení Microsoft Intune můžete zjistit, že máte problémy s konfigurací nebo s klienty. Níže uvedené zdroje informací a materiály vám můžou pomoci zjistit, co by mohlo být příčinou problému, abyste ho mohli vyřešit.
 
 > [!NOTE]
-> Pokud chcete vytvořit žádost o podporu nebo pokud chcete zobrazit stávající požadavek, kliknutím [sem](https://portal.office.com/admin/default.aspx) přejděte do Centra pro správu Office 365. Další informace o možnostech podpory najdete v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md)..
+> Pokud chcete vytvořit žádost o podporu nebo pokud chcete zobrazit stávající požadavek, [přejděte do Centra pro správu Office 365](https://portal.office.com/admin/default.aspx). Další informace o možnostech podpory najdete v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 ## Definování problému
 
 -   O jaké chování jde?
@@ -46,15 +40,17 @@ Po nasazení Microsoft Intune můžete zjistit, že máte problémy s konfigurac
 
 -   Nemůže jít o problém s ověřováním uživatele? Pokud jde o reálnou možnost, zkontrolujte, jestli se uživatel může přihlásit k dalším službám, které používají Azure Active Directory. Zkontrolujte také, jestli se uživatel může přihlásit z jiného zařízení.
 
+-   Zkontrolovali jste stav služby? Stav služby Intune je možné monitorovat na [portálu pro správu Office 365](https://portal.office.com/Admin/Default.aspx). Zvolte **Stav služby** v levém podokně.
+
 ## Shromažďování dostupných dat
 
 -   Protokoly ze zařízení. Postup shromažďování protokolů ze zařízení:
   - [Odeslání protokolů s diagnostickými daty ze zařízení s Androidem správci IT pomocí kabelu USB](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
   - [Odeslání protokolů s diagnostickými daty ze zařízení s Androidem správci IT e-mailem](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-email-android)
   - [Odeslání chyb registrace zařízení s Androidem správci IT](/intune/enduser/send-enrollment-errors-to-your-it-administrator-android)
-  - [Odeslání chyb registrace zařízení s iOS správci IT](/intune/enduser/send-errors-to-your-it-admin-ios.md)
+  - [Odeslání chyb registrace zařízení s iOS správci IT](/intune/enduser/send-errors-to-your-it-admin-ios)
 
--   Data konzoly pro správu, například při potížích s implementací zásad byste měli zkontrolovat požadované zásady a stav těchto zásad, jak se popisuje v tématu [Použití skupin pro správu uživatelů a zařízení s Microsoft Intune](/indune/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune)..
+-   Data konzoly správce: Například při potížích s implementací zásad byste měli zkontrolovat požadované zásady a stav těchto zásad, jak se popisuje v tématu [Použití skupin pro správu uživatelů a zařízení s Microsoft Intune](/intune/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
 
 ## Vyhledání řešení
 
@@ -64,7 +60,7 @@ Po nasazení Microsoft Intune můžete zjistit, že máte problémy s konfigurac
 
 -   Můžete otevřít žádost o podporu. Podpora Intune vám bude moct lépe pomoct s řešením potíží, když budete mít problém dobře definovaný a když shromáždíte všechna dostupná data.
 
-    Pokud chcete vytvořit žádost o podporu, kliknutím [sem](https://portal.office.com/admin/default.aspx) přejděte do Centra pro správu Office 365. Další informace o možnostech podpory najdete v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md)..
+    Pokud chcete vytvořit žádost o podporu, [přejděte do Centra pro správu Office 365](https://portal.office.com/admin/default.aspx). Další informace o možnostech podpory najdete v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 ## Zdroje informací a materiály z komunity
 Další užitečné informace možná najdete v těchto zdrojích informací komunity:
@@ -77,8 +73,8 @@ Další užitečné informace možná najdete v těchto zdrojích informací kom
 
 -   [Fóra služby Intune](https://social.technet.microsoft.com/Forums/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
 
-## Další kroky
-Témata uvedená níže obsahují nápovědu pro řešení specifických problémů. Pokud vám tyto informace nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md)..
+### Další kroky
+Témata uvedená níže obsahují nápovědu pro řešení specifických problémů. Pokud vám tyto informace nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 [Troubleshoot Endpoint Protection in Microsoft Intune](troubleshoot-endpoint-protection-in-microsoft-intune.md)
 
@@ -93,9 +89,9 @@ Témata uvedená níže obsahují nápovědu pro řešení specifických problé
 [Řešení potíží s instalací klientů v Microsoft Intune](troubleshoot-client-setup-in-microsoft-intune.md)
 
 [Řešení potíží s aktualizacemi softwaru ve službě Microsoft Intune](troubleshoot-software-updates-in-microsoft-intune.md)
-g
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO1-->
 
 

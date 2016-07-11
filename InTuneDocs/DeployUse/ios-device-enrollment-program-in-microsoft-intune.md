@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Správa Apple DEP pro zařízení s iOS pomocí Microsoft Intune| Microsoft Intune
-description:
-keywords:
+title: "Správa Apple DEP pro zařízení s iOS pomocí Microsoft Intune| Microsoft Intune"
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: dagerrit
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 1b942c7e09e59de59e3e406b84a21a712c0e973a
+ms.openlocfilehash: cd763f9fa0b08cc7b822eccbd043a5b9cd355d0f
+
 
 ---
 
@@ -59,6 +53,12 @@ Abyste mohli v programu DEP registrovat zařízení iOS vlastněná společnost�
       - **Vyzvat k přidružení uživatele**: Při počátečním nastavení je možné zařízení spojit s uživatelem a potom mu umožnit přístup k firemním datům a e-mailu.  Pro zařízení spravovaná pomocí programu DEP, která patří uživatelům a potřebují používat portál společnosti (tj. instalovat aplikace), by se mělo nakonfigurovat **přidružení uživatele**.
       - **Bez přidružení uživatele**: K zařízení není přidružený žádný uživatel. Toto spřažení použijte u zařízení určených k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, které vyžadují přidružení uživatele, včetně aplikace Portál společnosti používané k instalaci obchodních aplikací, nebudou fungovat.
 
+    Můžete také vybrat možnost **Přiřadit zařízení k této skupině**. Klikněte na **Vybrat** a zvolte skupinu.
+
+    >[!Important]
+    >Přiřazení skupiny způsobí přesun z Intune do Azure Active Directory. [Další informace](#changes-to-intune-group-assignments)
+
+
     Dál povolte nastavení **Nakonfigurujte nastavení DEP (Device Enrollment Program) pro tuto zásadu**, které zajistí podporu programu DEP.
 
       ![Podokno Pomocníka s nastavením](../media/pol-sa-corp-enroll.png)
@@ -78,8 +78,16 @@ Abyste mohli v programu DEP registrovat zařízení iOS vlastněná společnost�
         - **Zjišťování polohy** – Pokud je toto nastavení povolené, Pomocník s nastavením zobrazí při aktivaci výzvu služby.
         - **Obnovit** – Pokud je toto nastavení povolené, Pomocník s nastavením zobrazí při aktivaci výzvu k zálohování do úložiště iCloud.
         - **Apple ID** – Ke stahování aplikací z iOS App Storu, včetně aplikací instalovaných Intune, je potřeba Apple ID. Pokud je povolené, při pokusu Intune o instalaci aplikace bez ID zobrazí iOS uživatelům výzvu k zadání Apple ID.
-        - **Podmínky a ujednání** – Pokud je toto nastavení povolené, Pomocník s nastavením při aktivaci vyzve uživatele k přijetí podmínek a ujednání společnosti Apple. - **Dotykový identifikátor** – Pokud je toto nastavení povolené, Pomocník s nastavením při aktivaci zobrazí výzvu této služby. - **Apple Pay** – Pokud je toto nastavení povolené, Pomocník s nastavením při aktivaci zobrazí výzvu této služby. - **Lupa** – Pokud je toto nastavení povolené, Pomocník s nastavením při aktivaci zobrazí výzvu této služby. - **Siri** – Pokud je toto nastavení povolené, Pomocník s nastavením při aktivaci zobrazí výzvu této služby. - **Poslat diagnostická data do Applu** – Pokud je toto nastavení povolené, Pomocník s nastavením při aktivaci zobrazí výzvu této služby. -  **Povolí podrobnější správu přes Apple Configurator** – Nastavte **Zakázat**, pokud chcete zabránit synchronizaci souborů s iTunes nebo správu prostřednictvím Apple Configuratoru. Společnost Microsoft doporučuje nepoužívat toto nastavení k povolení ručního nasazení s certifikátem nebo bez něj a místo toho nastavit možnost **Zakázat**, exportovat případnou další konfiguraci z Apple Configuratoru a potom ji nasadit jako vlastní profil konfigurace pro iOS prostřednictvím Intune.
-        - **Zakázat** – Zabrání zařízení v komunikaci přes rozhraní USB (zakáže párování). - **Povolit** – Umožní zařízení komunikovat přes připojení USB k počítači PC nebo Mac. - **Vyžadovat certifikát** – Povolí párování s počítačem Mac s certifikátem importovaným do registračního profilu.
+        - **Podmínky a ujednání** – V případě povolení Pomocník nastavení vyzve uživatele k přijetí podmínek a ujednání společnosti Apple během aktivace.
+        - **Dotykový identifikátor** – V případě povolení Pomocník s nastavením zobrazí během aktivace výzvu pro tuto službu.
+        - **Dotykový identifikátor** – V případě povolení Pomocník s nastavením zobrazí během aktivace výzvu pro tuto službu.
+        - **Zvětšení** – V případě povolení Pomocník s nastavením zobrazí během aktivace výzvu pro tuto službu.
+        - **Siri** – V případě povolení Pomocník s nastavením zobrazí během aktivace výzvu pro tuto službu.
+        - **Posílat diagnostická data do Applu** – V případě povolení Pomocník s nastavením zobrazí během aktivace výzvu pro tuto službu.
+     -  **Povolí podrobnější správu přes Apple Configurator** –Nastavení možnosti **Zakázat** zabrání synchronizaci souborů s iTunes nebo správu přes Apple Configurator. Společnost Microsoft doporučuje nepoužívat toto nastavení k povolení ručního nasazení s certifikátem nebo bez něj a místo toho nastavit možnost **Zakázat**, exportovat případnou další konfiguraci z Apple Configuratoru a potom ji nasadit jako vlastní profil konfigurace pro iOS prostřednictvím Intune.
+        - **Zakázat** –Brání zařízení v komunikaci přes USB (zakáže párování).
+        - **Povolit** – Povoluje komunikaci zařízení prostřednictvím připojení USB pro kterýkoli počítač PC nebo Mac.
+        - **Vyžadovat certifikát** – Umožňuje párování s počítačem Mac s certifikátem importovaným do profilu registrace.
 
 6.  **Přiřazení zařízení DEP pro správu** Přejděte na [portál programu Device Enrollment Program](https://deploy.apple.com) (https://deploy.apple.com) a přihlaste se pomocí firemního Apple ID. Přejděte na **Program nasazení** &gt; **Device Enrollment Program** &gt; **Spravovat zařízení**. Zadejte, jak budete **volit zařízení**a zadejte podrobné informace o zařízení: **Sériové číslo**, **Číslo objednávky**nebo **Nahrát soubor CSV**. Potom vyberte **Přiřadit k serveru** a vyberte &lt;název_serveru&gt; zadaný pro Microsoft Intune. Potom klikněte na **OK**.
 
@@ -91,12 +99,15 @@ Abyste mohli v programu DEP registrovat zařízení iOS vlastněná společnost�
 
 8.  **Distribuování zařízení uživatelům** Zařízení vlastněná vaší společností se teď dají distribuovat uživatelům. Pokud je zařízení s iOS zapnuté, zaregistruje se jeho správa službou Intune.
 
+## Změny v přiřazení skupiny pro Intune
 
+Od září se správa skupin zařízení přesune do služby Azure Active Directory. Po přechodu na skupiny Azure Active Directory se už přiřazení skupin nebude zobrazovat mezi možnostmi v části **Podnikový profil zápisu**. Jelikož se tato změna bude zavádět několik měsíců, je možné, že ji nezaznamenáte okamžitě. Brzy zveřejníme další podrobnosti.
 
-### Viz taky
+### Související témata
 [Příprava registrace zařízení](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO1-->
 
 

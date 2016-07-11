@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Nastavení zásad MAM pro Android | Microsoft Intune
-description:
-keywords:
+title: "Nastavení zásad MAM pro Android | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 5dbb702a-1df5-4637-95c9-77a5f0b1a0e3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: andcerat
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 5a445f06d6c2328f7689468ca4d68a969af1e825
+ms.openlocfilehash: 3f43dc871dc0b0a81a6d0b05376a1254957fc35b
+
 
 ---
 
@@ -65,11 +59,12 @@ Výrazem **aplikace spravované podle zásad** se označují aplikace, které ma
 
     **Výchozí hodnota = Ano**
 - **Šifrovat data aplikace**: Pokud chcete povolit šifrování, vyberte **Ano**. Když je toto nastavení povolené, pro aplikace, které jsou přidružené k zásadám správy mobilních aplikací, zajišťuje šifrování Microsoft. Data jsou mezi vstupně-výstupními operacemi souborů synchronně šifrovaná. Obsah v úložišti zařízení je zašifrovaný vždycky.
-  >[!NOTE] Metoda šifrování nemá certifikaci FIPS 140-2.
+  >[!NOTE]
+  >Metoda šifrování nemá certifikaci FIPS 140-2
 
   **Výchozí hodnota = Ano**
 
-- **ContactSyncDisabled:** Pokud chcete zabránit v synchronizaci kontaktních informací do nativní aplikace adresáře na zařízení, vyberte **Ano**. Pokud vyberete **Ne**, aplikace uloží kontaktní informace do nativní aplikace adresáře na zařízení.<br/>Když k odebrání firemních dat použijete selektivní vymazání, dojde k odebrání kontaktů přímo synchronizovaných z aplikace do nativního adresáře. Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. To se v současné době týká jenom aplikace **Microsoft Outlook**.
+- **Zakázat synchronizaci kontaktů:** Pokud chcete zabránit synchronizaci kontaktních informací do nativní aplikace adresáře na zařízení, zvolte **Ano**. Pokud vyberete **Ne**, aplikace uloží kontaktní informace do nativní aplikace adresáře na zařízení.<br/>Když k odebrání firemních dat použijete selektivní vymazání, dojde k odebrání kontaktů přímo synchronizovaných z aplikace do nativního adresáře. Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. To se v současné době týká jenom aplikace **Microsoft Outlook**.
 
   **Výchozí hodnota = Ano**
 
@@ -100,6 +95,7 @@ Výrazem **aplikace spravované podle zásad** se označují aplikace, které ma
 - **Blokovat snímek obrazovky a Android Assistant (Android Marshmallow 6 nebo novější)**: Pokud chcete na zařízení zablokovat snímky obrazovky a funkci **Android Assistant** při použití této aplikace, vyberte **Ano**.
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
