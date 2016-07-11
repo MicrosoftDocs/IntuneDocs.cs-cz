@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Instalace klienta na počítači s Windows pomocí Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Instalace klienta na počítači s Windows pomocí Microsoft Intune | Microsoft Intune"
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 1bdcfa71aab0918fba1f59bd0782fc63eef6994e
+ms.openlocfilehash: 723bef398338946e085e9d04d57a85b433ebc1c8
+
 
 ---
 
@@ -46,11 +40,11 @@ Pak klienta nechte nainstalovat pomocí jednoho nebo více z těchto způsobů:
 
 -   [Instalace klientského softwaru Microsoft Intune v rámci bitové kopie](#install-the-microsoft-intune-client-software-as-part-of-an-image)
 
-Pokud už počítač s Intune spravovat nepotřebujete, můžete ho vyřadit. Tím se taky z počítače odebere klientský software. Další informace najdete v tématu [Běžné úlohy správy počítačů s Windows pomocí počítačového klienta Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)..
+Pokud už počítač s Intune spravovat nepotřebujete, můžete ho vyřadit. Tím se taky z počítače odebere klientský software. Další informace najdete v tématu [Běžné úlohy správy počítačů s Windows pomocí počítačového klienta Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 
 ### Stažení klientského softwaru
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) klikněte na **Správce** &gt; **Stažení klientského softwaru**
+1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) klikněte na **Správce** &gt; **Stažení klientského softwaru**.
 
   ![Stažení počítačového klienta Intune](./media/pc-SA-client-download.png)
 
@@ -102,13 +96,13 @@ Uživatelé můžou své počítače sami zaregistrovat pomocí portálu společ
 
 1.  Přihlaste se k firemnímu portálu z počítače, který chcete zaregistrovat.
 
-2.  Klikněte na **Přidat zařízení**..
+2.  Klikněte na **Přidat zařízení**.
 
-3.  Klikněte na **Stáhnout software** a potom na **Spustit**..
+3.  Klikněte na **Stáhnout software** a potom na **Spustit**.
 
 4.  Kliknutím na **Další** spusťte průvodce instalací Microsoft Intune.
 
-5.  Po dokončení průvodce instalací klikněte na **Dokončit**..
+5.  Po dokončení průvodce instalací klikněte na **Dokončit**.
 
 ### Instalace klientského softwaru Microsoft Intune v rámci bitové kopie
 Klientský software Intune můžete do počítačů nasadit v rámci bitové kopie operačního systému. Jako příklad poslouží tento základní postup:
@@ -145,7 +139,7 @@ Pomocí některého z následujících postupů můžete sledovat a ověřit ús
 
 ### Ověření instalace klientského softwaru v konzole správce Microsoft Intune
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/), klikněte na **Skupiny** &gt; **Všechna zařízení** &gt; **Všechny počítače**.
+1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) klikněte na **Skupiny** &gt; **Všechna zařízení** &gt; **Všechny počítače**.
 
 2.  Projděte dolů seznam a vyhledejte spravované počítače, které komunikují s Intune, nebo konkrétní spravované počítač zadáním názvu počítače nebo libovolné části názvu do pole **Hledat zařízení**.
 
@@ -153,9 +147,9 @@ Pomocí některého z následujících postupů můžete sledovat a ověřit ús
 
 ### Vytvoření sestavy inventáře počítače pro zobrazení všech zaregistrovaných počítačů
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) klikněte na **Sestavy** &gt; **Sestavy inventáře počítače**..
+1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) klikněte na **Sestavy** &gt; **Sestavy inventáře počítače**.
 
-2.  Na stránce **Vytvořit novou sestavu** nechte ve všech polích výchozí hodnoty (pokud nechcete použít filtry) a klikněte na **Zobrazit sestavu**..
+2.  Na stránce **Vytvořit novou sestavu** nechte ve všech polích výchozí hodnoty (pokud nechcete použít filtry) a klikněte na **Zobrazit sestavu**.
 
 3.  Stránka **Sestava inventáře počítače** se otevře v novém okně s uvedením všech počítačů, které jsou úspěšně zaregistrované v Intune.
 
@@ -167,6 +161,7 @@ Pomocí některého z následujících postupů můžete sledovat a ověřit ús
 [Správa počítačů s Windows pomocí Intune](manage-windows-pcs-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

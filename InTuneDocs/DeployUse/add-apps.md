@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Přidávání aplikací | Microsoft Intune
-description:
-keywords:
+title: "Přidávání aplikací | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 2b770f4f-6d36-41e4-b535-514b46e29aaa
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f85e91b985d9d30c71dff9e0d910293354fc40b7
+ms.openlocfilehash: 119a795697feb0cdbc2b93293cd66df7e77147cf
+
 
 ---
 
@@ -83,6 +76,32 @@ Aplikace založené na externích odkazech nejsou uložené v cloudovém úloži
 Umožňuje vám spravovat a nasazovat bezplatné aplikace pro systém iOS z App Storu. Také vám umožňuje přidružit [zásady správy mobilních aplikací](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) [aplikacím, které splňují předpisy](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx), a zkontrolovat jejich stav v konzole pro správu.<br /><br />Spravované aplikace pro iOS nejsou uložené v cloudovém úložišti Intune.
 > [!TIP] Možnosti pro mobilní zařízení nejsou dostupné, dokud [nenastavíte autoritu pro správu mobilních zařízení](get-ready-to-enroll-devices-in-microsoft-intune.md) na Intune.
 
+## Vydavatel softwaru Intune
+Když přidáváte nebo odebíráte aplikace pomocí konzoly pro správu Microsoft Intune, spouští se **Vydavatel softwaru Microsoft Intune**. Od vydavatele vyberete a nakonfigurujete typ instalačního programu, který bude buď nahrávat aplikace (pro počítače nebo pro mobilní zařízení) k uložení do cloudového úložiště Intune, nebo bude odkazovat na online obchod s aplikacemi nebo webovou aplikaci.
+
+### Požadavky
+Než začnete používat vydavatele softwaru Microsoft Intune, musíte nainstalovat plnou verzi [rozhraní Microsoft .NET Framework 4.0](https://www.microsoft.com/download/details.aspx?id=17851). Po instalaci může být nutný restart počítače, aby se vydavatel softwaru otevřel správně.
+
+## Prostor v cloudovém úložišti
+Všechny aplikace, které vytváříte s použitím instalace typu Instalační program softwaru (například obchodní aplikace), se zabalí a nahrají do cloudového úložiště Microsoft Intune. Zkušební předplatné Intune zahrnuje 2 gigabajty (GB) cloudového úložiště, které se používá k ukládání spravovaných aplikací a aktualizací. Placené předplatné zahrnuje 20 GB s možností přikoupit další prostor.
+
+Objem využitého úložiště a možnost zakoupení dalšího prostoru jsou dostupné v uzlu **Využití úložiště** pracovního prostoru **Správce**.
+
+Při nákupu dalšího cloudového úložiště pro Intune platí následující pravidla:
+
+-   Nákup dalšího úložiště vyžaduje aktivní placené předplatné.
+
+-   Další úložiště můžou nakupovat jenom správci fakturace nebo globální správci služby Microsoft Online Services přes portál pro správu služeb Office 365. Tyto správce může přidávat, odstraňovat nebo spravovat jenom globální správce přihlášený k portálu pro správu služeb Office 365.
+
+-   Pokud jste zákazník s multilicenční smlouvou, který si koupil Intune nebo doplněk Microsoft Intune v rámci smlouvy Enterprise, zeptejte se na informace o cenách a možnost přikoupení úložiště account manažera nebo partnera Microsoftu.
+
+#### Požadavky na cloudové úložiště
+
+-   Ověřte, že jsou všechny instalační soubory umístěné stejné složce.
+
+-   Maximální velikost kteréhokoli nahraného souboru je 2 GB.
+
+
 ## Podpora aplikací pro Univerzální platformu Windows
 Počítače s Windows 10 nevyžadují k instalaci obchodních aplikací klíč pro zkušební načtení. Kvůli povolení zkušebního načtení ale musí mít klíč registru **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps** hodnotu **1**.
 
@@ -96,6 +115,8 @@ V zařízeních se systémem Windows 10 Mobile můžete k podepisování univerz
 
 Před nasazením aplikací je dále musíte přidat do konzoly Intune. Můžete přidávat aplikace pro [registrovaná zařízení](add-apps-for-mobile-devices-in-microsoft-intune.md) nebo pro [počítače s Windows spravované klientským softwarem Intune](add-apps-for-windows-pcs-in-microsoft-intune.md).
 
-<!--HONumber=Jun16_HO2-->
+
+
+<!--HONumber=Jun16_HO3-->
 
 
