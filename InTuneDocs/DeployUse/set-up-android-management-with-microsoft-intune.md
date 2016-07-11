@@ -26,7 +26,7 @@ Pokud chcete získat další informace, vyberte z následujících možností pl
 
 > [!div class="op_single_selector"]
 - [Nastavení správy systému Android pomocí Microsoft Intune](set-up-android-management-with-microsoft-intune.md)
-- [Set up iOS and Mac management with Microsoft Intune](set-up-ios-and-mac-management-with-microsoft-intune.md)
+- [Nastavení správy pro iOS a Mac pomocí Microsoft Intune](set-up-ios-and-mac-management-with-microsoft-intune.md)
 - [Nastavení správy pro zařízení Windows Phone v Microsoft Intune](set-up-windows-phone-management-with-microsoft-intune.md)
 - [Nastavení správy pro zařízení Windows v Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md)
 
