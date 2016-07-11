@@ -1,39 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [InTuneDocs\DeployUse\previous-intune-releases.md](https://github.com/Microsoft/IntuneDocs-pr/blob/3080d23f464e96315ed9e5fd59774ba9f1b2dd86/InTuneDocs/DeployUse/previous-intune-releases.md) | InSyncHandedBackSuccess | [Details](#65d582958d77150091880cce72e079b87308209f217)
- [InTuneDocs\DeployUse\restrict-access-to-dynamics-crm-online-with-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/89e522a99687fc9b6e82db9f721858d17afdce6a/InTuneDocs/DeployUse/restrict-access-to-dynamics-crm-online-with-microsoft-intune.md) | InSyncHandedBackSuccess | [Details](#8f90f99d621d7edebcb7a4c67e0774da59098df7226)
 
 ## Item Details
-##### <a name='65d582958d77150091880cce72e079b87308209f217'></a> Source: [InTuneDocs\DeployUse\previous-intune-releases.md](https://github.com/Microsoft/IntuneDocs-pr/blob/3080d23f464e96315ed9e5fd59774ba9f1b2dd86/InTuneDocs/DeployUse/previous-intune-releases.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [InTuneDocs\DeployUse\previous-intune-releases.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/15c4a69215686107ac6e9c6523cb5e5e8be94ab2/InTuneDocs/DeployUse/previous-intune-releases.md)
-* Handoff File: [previous-intune-releases.bfee8a546524d237ebe8b6adb9d63cdf229089a4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/694c71f9a3aa3c160a2c0717a3dff8062448852a/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/previous-intune-releases.bfee8a546524d237ebe8b6adb9d63cdf229089a4.cs-cz.xlf)
-* Handoff Datetime: 2016-06-20 22:49:58
-* Handoff Reason: Include
-* Archive File: [previous-intune-releases.bfee8a546524d237ebe8b6adb9d63cdf229089a4.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/263e8608869fe91246c5434e4dd1aeb051f8b7c5/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/previous-intune-releases.bfee8a546524d237ebe8b6adb9d63cdf229089a4.cs-cz.xlf)
-* Archive Datetime: 2016-07-02 00:54:54
-* Handback File: [previous-intune-releases.bfee8a546524d237ebe8b6adb9d63cdf229089a4.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/2c01fd4d596e52e3b087b58627e8b890b86e1f80/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/previous-intune-releases.bfee8a546524d237ebe8b6adb9d63cdf229089a4.cs-cz.xlf)
-* Handback Datetime: 2016-07-11 12:14:36
-* [Back to Top](#report-top)
-
-##### <a name='8f90f99d621d7edebcb7a4c67e0774da59098df7226'></a> Source: [InTuneDocs\DeployUse\restrict-access-to-dynamics-crm-online-with-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/89e522a99687fc9b6e82db9f721858d17afdce6a/InTuneDocs/DeployUse/restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [InTuneDocs\DeployUse\restrict-access-to-dynamics-crm-online-with-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/15c4a69215686107ac6e9c6523cb5e5e8be94ab2/InTuneDocs/DeployUse/restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
-* Handoff File: [restrict-access-to-dynamics-crm-online-with-microsoft-intune.63a06fa65b3885b65232a7d7f933171332012652.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/694c71f9a3aa3c160a2c0717a3dff8062448852a/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/restrict-access-to-dynamics-crm-online-with-microsoft-intune.63a06fa65b3885b65232a7d7f933171332012652.cs-cz.xlf)
-* Handoff Datetime: 2016-06-20 22:49:58
-* Handoff Reason: Include
-* Archive File: [restrict-access-to-dynamics-crm-online-with-microsoft-intune.63a06fa65b3885b65232a7d7f933171332012652.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/263e8608869fe91246c5434e4dd1aeb051f8b7c5/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/restrict-access-to-dynamics-crm-online-with-microsoft-intune.63a06fa65b3885b65232a7d7f933171332012652.cs-cz.xlf)
-* Archive Datetime: 2016-07-02 00:54:54
-* Handback File: [restrict-access-to-dynamics-crm-online-with-microsoft-intune.63a06fa65b3885b65232a7d7f933171332012652.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/2c01fd4d596e52e3b087b58627e8b890b86e1f80/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/restrict-access-to-dynamics-crm-online-with-microsoft-intune.63a06fa65b3885b65232a7d7f933171332012652.cs-cz.xlf)
-* Handback Datetime: 2016-07-11 12:14:36
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
