@@ -1,11 +1,42 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 2
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [InTuneDocs\DeployUse\add-apps.md](https://github.com/Microsoft/IntuneDocs-pr/blob/f85e91b985d9d30c71dff9e0d910293354fc40b7/InTuneDocs/DeployUse/add-apps.md) | InSyncHandedBackSuccess | [Details](#119a795697feb0cdbc2b93293cd66df7e77147cf11)
+ [InTuneDocs\DeployUse\install-the-windows-pc-client-with-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/400f8351f2f6cac002a0f27045eb0c1daf63ab79/InTuneDocs/DeployUse/install-the-windows-pc-client-with-microsoft-intune.md) | OutofSyncHandedBackSuccess | [Details](#02fb630881ed077929f3e23fcf857e66e7ee19b252)
 
 ## Item Details
+##### <a name='119a795697feb0cdbc2b93293cd66df7e77147cf11'></a> Source: [InTuneDocs\DeployUse\add-apps.md](https://github.com/Microsoft/IntuneDocs-pr/blob/f85e91b985d9d30c71dff9e0d910293354fc40b7/InTuneDocs/DeployUse/add-apps.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [InTuneDocs\DeployUse\add-apps.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/1c532ec31ce7bfcf892dddfef97807c8854b8450/InTuneDocs/DeployUse/add-apps.md)
+* Handoff File: [add-apps.adb93928651b2f01c7d38a4b8d96ec12d43848e9.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/173cb57dc95b754aa338781505a08a8a36eef72c/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/add-apps.adb93928651b2f01c7d38a4b8d96ec12d43848e9.cs-cz.xlf)
+* Handoff Datetime: 2016-06-20 16:51:12
+* Handoff Reason: Include
+* Archive File: [add-apps.adb93928651b2f01c7d38a4b8d96ec12d43848e9.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/263e8608869fe91246c5434e4dd1aeb051f8b7c5/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/add-apps.adb93928651b2f01c7d38a4b8d96ec12d43848e9.cs-cz.xlf)
+* Archive Datetime: 2016-07-02 00:54:54
+* Handback File: [add-apps.adb93928651b2f01c7d38a4b8d96ec12d43848e9.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/7dfdb30f337c69c234649e77a17627f260a1b809/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/add-apps.adb93928651b2f01c7d38a4b8d96ec12d43848e9.cs-cz.xlf)
+* Handback Datetime: 2016-07-11 17:00:41
+* [Back to Top](#report-top)
+
+##### <a name='02fb630881ed077929f3e23fcf857e66e7ee19b252'></a> Source: [InTuneDocs\DeployUse\install-the-windows-pc-client-with-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/400f8351f2f6cac002a0f27045eb0c1daf63ab79/InTuneDocs/DeployUse/install-the-windows-pc-client-with-microsoft-intune.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [install-the-windows-pc-client-with-microsoft-intune.dc9b83719b1dcf7e98b9ec2bd44ba8cb9362391a.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/a9bea952e3bb52e4484ccb1a1ba67cfc1d07b994/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/install-the-windows-pc-client-with-microsoft-intune.dc9b83719b1dcf7e98b9ec2bd44ba8cb9362391a.cs-cz.xlf)
+* Handoff Datetime: 2016-07-08 05:40:58
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [InTuneDocs\DeployUse\install-the-windows-pc-client-with-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/1c532ec31ce7bfcf892dddfef97807c8854b8450/InTuneDocs/DeployUse/install-the-windows-pc-client-with-microsoft-intune.md)
+* Current Handback File: [install-the-windows-pc-client-with-microsoft-intune.dc9b83719b1dcf7e98b9ec2bd44ba8cb9362391a.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/7dfdb30f337c69c234649e77a17627f260a1b809/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/install-the-windows-pc-client-with-microsoft-intune.dc9b83719b1dcf7e98b9ec2bd44ba8cb9362391a.cs-cz.xlf)
+* Current Handback Datetime: 2016-07-11 17:00:41
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
