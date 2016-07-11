@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Volba způsobu správy zařízení | Microsoft Intune
-description:
-keywords:
+title: "Volba způsobu správy zařízení | Microsoft Intune"
+description: 
+keywords: 
 author: jeffgilb
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 770aad50-fd7a-4cf1-a793-f95fe47fc3f8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f33a86c51320c75ce74d20e0cac2b9581990ecec
+ms.openlocfilehash: c9b34408e4af34dafc700d016304a6d29c2e8585
+
 
 ---
 
@@ -75,16 +69,17 @@ Použití počítačového klienta Intune zvažte, pokud chcete:
 ## Správa Exchange ActiveSync
 Ke správě zařízení můžete taky využít Exchange ActiveSync. Vyžaduje to instalaci konektoru On-Premises Connector nebo použití integrovaného konektoru Service to Service Connector pro připojení k Exchange Serveru.
 
-Další informace o požadavcích na hardware a software pro instalaci konektoru On-Premises Connector najdete v tématu [Požadavky na konektor On-Premises Connector](../deploy-use/intune-on-premises-exchange-connector#requirements-for-the-on-premises-connector).
+Další informace o požadavcích na hardware a software pro instalaci softwaru On-Premises Connector najdete v tématu [Požadavky na konektor On-Premises Connector](/intune/deploy-use/intune-on-premises-exchange-connector#requirements-for-the-on-premises-connect).
 
-Další informace o použití konektoru On-Premises Connector nebo Service to Service Connector se serverem Exchange najdete v tématu [Správa mobilních zařízení pomocí protokolu Exchange ActiveSync a služby Microsoft Intune](../deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune).
+Další informace o použití softwaru On-Premises Connector nebo Service to Service Connector se serverem Exchange najdete v tématu [Správa mobilních zařízení pomocí protokolu Exchange ActiveSync a služby Microsoft Intune](/intune/deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune).
 
 
 
 ## Další kroky
-Nyní jste se seznámili s některými možnostmi, které můžete použít při registraci zařízení v [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Potom budete muset [zaregistrovat svoje zařízení](../deploy-use/enroll-devices-in-microsoft-intune). Po dokončení registrace zařízení můžete využít výhod všech funkcí, o kterých jste se v tomto tématu dočetli. <!--lindavr: There's a logical flaw in our "get to know/get started" content. You can take the path in this topic or you can take the path in the What to know before your get started topic. And they don't cover the same ground. -->
+Nyní jste se seznámili s některými možnostmi, které můžete použít při registraci zařízení v [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Potom budete muset [zaregistrovat svá zařízení](/intune/deploy-use/enroll-devices-in-microsoft-intune). Po dokončení registrace zařízení můžete využít výhod všech funkcí, o kterých jste se v tomto tématu dočetli. <!--lindavr: There's a logical flaw in our "get to know/get started" content. You can take the path in this topic or you can take the path in the What to know before your get started topic. And they don't cover the same ground. -->
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Činnost koncového uživatele v aplikacích s podporou správy mobilních aplikací (MAM) | Microsoft Intune
-description:
-keywords:
+title: "Činnost koncového uživatele v aplikacích s podporou správy mobilních aplikací (MAM) | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: b57e6525-b57c-4cb4-a84c-9f70ba1e8e19
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: andcerat
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 3f797e3ef4a7e2d1b27ce6b1ed6e5322343c6cff
+ms.openlocfilehash: 9b557c272c9d740792560a392d52efff6a7deed1
+
 
 ---
 
@@ -41,6 +34,7 @@ Zásady správy mobilních aplikací (MAM) se použijí jenom v případě, že 
     ![Snímek obrazovky s přihlašovací stránkou služeb O365](../media/AppManagement/iOS_O365SignInPage.png)
 
 3.  Po úspěšném ověření přihlašovacích údajů Azure AD se použijí zásady MAM a budete požádáni o restartování aplikace **OneDrive** .
+  >[POZNÁMKA!] Dialogové okno s informacemi o vyžadovaném restartování se zobrazí pouze na zařízeních, která nejsou zaregistrovaná v Intune.
 
     ![Snímek obrazovky s dialogem Vyžaduje se restartování](../media/AppManagement/iOS_AppRestartforMAM.png)
 
@@ -79,7 +73,7 @@ Zásady správy mobilních aplikací (MAM) se použijí jenom v případě, že 
 
     ![Snímek obrazovky aplikace Portál společnosti](../media/AppManagement/Android_CompanyPortalInstall.png)
 
-5.  Po dokončení instalace přijměte podmínky kliknutím na **Přijmout** .
+5.  Po dokončení instalace přijměte podmínky zvolením **Přijmout** .
 
 6.  Aplikace **OneDrive** se spustí automaticky.
 
@@ -136,7 +130,7 @@ Přečtěte si níže uvedený ukázkový scénář, abyste lépe pochopili, jak
 Uživatel A pracuje ve dvou společnostech, **společnosti X** a **společnosti Y**. Uživatel A má pro každou společnost pracovní účet a obě společnosti používají Intune k nasazení zásad MAM. **Společnost X** nasadí zásady MAM **dřív než** **společnost Y**. Účet přidružený ke **společnosti X** získá zásady MAM, ale účet přidružený ke společnosti Y ne. Pokud chcete, aby byl účet přidružený ke společnosti Y spravovaný pomocí zásad MAM, musíte odebrat uživatelský účet přidružený ke společnosti X.
 ### Přidání druhého účtu
 #### iOS
-Pokud používáte zařízení se systémem iOS, při pokusu o přidání druhého pracovního účtu na stejném zařízení se může zobrazit zpráva o blokování.  Taky se zobrazí možnost odebrat existující účet a přidat nový. To můžete provést kliknutím na volbu **Ano**.
+Pokud používáte zařízení se systémem iOS, při pokusu o přidání druhého pracovního účtu na stejném zařízení se může zobrazit zpráva o blokování.  Taky se zobrazí možnost odebrat existující účet a přidat nový. To můžete provést zvolením **Ano**.
 
 ![Snímek obrazovky s dialogem obsahujícím zprávu o blokování a možnosti Ano a Ne](../media/AppManagement/iOS_SwitchUser.PNG)
 ####  Android
@@ -149,6 +143,18 @@ Pokud chcete na zařízení se systémem Android zobrazit podnikové audiovizuá
 
 Tuto aplikaci si můžete stáhnout z obchodu Google Play.  Jakmile se aplikace nainstaluje do zařízení, spusťte ji a proveďte ověření pomocí svých podnikových přihlašovacích údajů. Teď byste měli být schopní zobrazit nechráněné i chráněné soubory z jiných aplikací spravovaných zásadami.
 
+Podporovány jsou následující typy souborů:
+
+* **Zvuk:** AAC LC, HE-AACv1 (AAC+), HE-AACv2 (rozšířené AAC+), AAC ELD (rozšířené AAC s malým zpožděním), AMR-NB, AMR-WB, FLAC, MP3, MIDI, Vorbis, PCM/WAVE.
+* **Video:** H.263, H.264 AVC, MPEG-4 SP, VP8.
+* **Obrázky:** jpg, pjpg, png, ppng, bmp, pbmp, gif, pgif, jpeg, pjpeg.
+* PDF, PPDF
+
+------------
+|**pfile**|**text**|
+|----|----|
+|Pfile je obecný „obálkový“ formát pro chráněné soubory, který zapouzdřuje šifrovaný obsah a licence služby RMS a lze jej použít pro ochranu libovolného typu souboru.|Textové soubory včetně souborů XML, CSV atd. lze otevřít pro zobrazení v aplikaci, i když jsou chráněny. Typy souborů: txt, ptxt, csv, pcsv, log, plog, xml, pxml.|
+---------------
 **Zařízení se systémem Android, která nejsou zaregistrovaná v Intune**
 
 Než budete moct využít aplikaci Sdílení RMS k zobrazení souborů z jiných aplikací spravovaných pomocí Intune, spusťte aplikaci RMS proveďte ověření pomocí svého pracovního účtu.  Když se přihlásíte, následující zpráva se zobrazí, **jenom pokud nemáte licenci RMS**:
@@ -162,6 +168,7 @@ To vám nebrání využívat aplikaci Sdílení RMS k zobrazení firemních soub
 [Vytvoření a nasazení zásad správy mobilních aplikací pomocí Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

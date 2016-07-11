@@ -1,31 +1,24 @@
 ---
-# required metadata
-
-title: Omezení přístupu k e-mailu a službám O365 | Microsoft Intune
-description:
-keywords:
+title: "Omezení přístupu k e-mailu a službám O365 | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/16/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: c564d292-b83b-440d-bf08-3f5b299b7a5e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: chrisgre
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f770bdc312879d1c833e8861494ecd2204ea603a
+ms.openlocfilehash: ebce26b0e09bb5282475cb1a39c8070a5d5b44aa
+
 
 ---
 
-# Omezení přístupu k e-mailu a službám O365 pomocí Microsoft Intune
+# Omezení přístupu k e-mailu, O365 a dalším službám pomocí Microsoft Intune
 Pomocí podmíněného přístupu Intune můžete omezit přístup k e-mailu a službám O365. Funkce podmíněného přístupu Intune umožňuje zajistit, aby přístup k e-mailu a službám O365 společnosti byl omezen na zařízení, která vyhovují nastaveným pravidlům.
 ## Jak podmíněný přístup funguje?
 K vyhodnocení stavu kompatibility zařízení se používají nastavení zásad dodržování předpisů. Zásada podmíněného přístupu používá vyhodnocení k omezení nebo povolení přístupu ke konkrétní službě. Pokud se zásada podmíněného přístupu použije v kombinaci se zásadou dodržování předpisů, budou mít přístup povolený jenom zařízení, která vyhovují.
@@ -37,7 +30,7 @@ Pokud zařízení nesplňuje podmínky nakonfigurované v zásadách, koncový u
 
 Obvyklý průběh podmíněného přístupu:
 
-![Diagram zobrazuje body rozhodování používané k určení, jestli má zařízení přístup ke službě povolený, nebo blokovaný](./media/ConditionalAccess4.png)
+![Diagram zobrazuje rozhodovací body používané k určení, jestli má zařízení přístup ke službě povolený, nebo blokovaný.](../media/ConditionalAccess4.png)
 
 ## Postup konfigurace podmíněného přístupu
 Pro správu přístupu k **místnímu systému Microsoft Exchange**, **systému Exchange Online**, **systému Exchange Online Dedicated**, **SharePointu Online** a **Online Skypu pro firmy** použijte podmíněný přístup.
@@ -67,8 +60,10 @@ Na rozdíl od jiných zásad služby Intune zásady podmíněného přístupu ne
   - [Vytvoření zásady podmíněného přístupu pro starší verzi Exchange Online Dedicated](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
   - [Vytvoření zásady podmíněného přístupu pro SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
   - [Vytvoření zásady podmíněného přístupu pro Online Skype pro firmy](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
+  - [Vytvoření zásad podmíněného přístupu pro Dynamic CRM Online](restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

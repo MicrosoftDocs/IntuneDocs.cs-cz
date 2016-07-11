@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Nastavení správy pro zařízení s Windows v Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Nastavení správy pro zařízení s Windows v Microsoft Intune | Microsoft Intune"
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 9a18c0fe-9f03-4e84-a4d0-b63821bf5d25
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 6951ccdb0e37489217ef939f0cbf6fc1133a6d3c
+ms.openlocfilehash: c18445385e8361cf01948b583f08e992658a8762
+
 
 ---
 
@@ -39,20 +33,21 @@ Vytvořením DNS CNAME uživatelům usnadníte připojení a registraci v Intune
   |CNAME|EnterpriseEnrollment.doména_společnosti.com|EnterpriseEnrollment-s.manage.microsoft.com |1 hodina|
   |CNAME|EnterpriseRegistration.doména_společnosti.com|EnterpriseRegistration.windows.net|1 hodina|
 
-    DNS record changes might take up to 72 hours to propagate. You cannot verify the DNS change in Intune until the DNS record propagates.
+    Rozšíření změn záznamu DNS můžou trvat až 72 hodin. Před rozšířením záznamu DNS nemůžete v Intune ověřit změny DNS.
 
-    **EnterpriseEnrollment-s.manage.microsoft.com** – Supports a redirect to the Intune service with domain recognition from the email’s domain name
+    **EnterpriseEnrollment-s.manage.microsoft.com** – Podporuje přesměrování na služby Intune s rozpoznáním domény z doménového názvu e-mailu.
 
-    **EnterpriseRegistration.windows.net** – Supports Windows 8.1 and Windows 10 Mobile devices that will register with Azure Active Directory using their work or school account
+    **EnterpriseRegistration.windows.net** – Podporuje zařízení s Windows 8.1 a Windows 10 Mobile, které se registrují s Azure Active Directory s použitím pracovního nebo školního účtu.
 
-  2.  V [konzole pro správu Intune](http://manage.microsoft.com) klikněte na **Správa** &gt; **Správa mobilních zařízení** &gt; **Windows**..
+  2.  V [konzole pro správu Intune](http://manage.microsoft.com) klikněte na **Správa** &gt; **Správa mobilních zařízení** &gt; **Windows**.
   ![Dialogové okno správy zařízení s Windows](../media/enroll-intune-winenr.png)
-  3.  Zadejte adresu URL ověřené domény webu společnosti do pole **Zadat název ověřené domény** a klikněte na **Test automatického zjištění**..
+  3.  Zadejte adresu URL ověřené domény webu společnosti do pole **Zadejte název ověřené domény** a klikněte na **Test automatického zjištění**.
 
 ### Související témata
 [Příprava registrace zařízení v Microsoft Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

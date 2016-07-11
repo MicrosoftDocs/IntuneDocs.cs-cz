@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Konfigurace a nasazení zásad správy mobilních aplikací v konzole Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Konfigurace a nasazení zásad správy mobilních aplikací v konzole Microsoft Intune | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: b4fb33a8-a2fa-4353-bd89-5bda48b68e83
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: joglocke
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f33a86c51320c75ce74d20e0cac2b9581990ecec
+ms.openlocfilehash: a140a2f634397440b35786e7afb3165dccc7d93e
+
 
 ---
 
@@ -34,7 +28,8 @@ Podpora zásad správy mobilní aplikace:
 
 -   Zařízení se systémem iOS 7 nebo novější verzí
 
-> [!TIP] Zásady správy mobilních zařízení podporují zařízení zaregistrovaná v Intune.
+> [!TIP]
+> Zásady správy mobilních zařízení podporují zařízení zaregistrovaná v Intune.
 >
 > Pokud hledáte informace o tom, jak vytvořit zásady správy aplikací pro zařízení, která nespravuje Intune, přečtěte si téma [Ochrana aplikačních dat pomocí zásad správy mobilních aplikací v Microsoft Intune](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
 
@@ -46,9 +41,9 @@ Pokud chcete u aplikace použít omezení, musí aplikace obsahovat sadu Microso
 
 -   **Použití „zabalené“ aplikace** – Aplikace, které jsou znovu zabalené, aby používaly sadu App SDK, pomocí nástroje **Microsoft Intune App Wrapping Tool**. Tento nástroj se obvykle používá ke zpracování interně vytvořených podnikových aplikací. Nedá se použít ke zpracování aplikací stažených z App Storu. Projděte si témata [Příprava aplikací pro iOS na správu mobilních aplikací nástrojem Microsoft Intune App Wrapping Tool](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) a [Příprava aplikací pro Android na správu mobilních aplikací nástrojem Microsoft Intune App Wrapping Tool](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md).
 
-- **Napsání vlastní aplikace, která zahrnuje sadu Inune App SDK** – Sada Intune App SDK umožňuje začlenit funkce správy aplikací do aplikace, kterou píšete. Další informace najdete v tématu [Přehled sady Intune App SDK](/develop/intune-app-sdk).
+- **Napsání vlastní aplikace, která zahrnuje sadu Inune App SDK** – Sada Intune App SDK umožňuje začlenit funkce správy aplikací do aplikace, kterou píšete. Další informace najdete v tématu [Přehled sady Intune App SDK](/intune/develop/intune-app-sdk).
 
-Při rozhodování mezi nástrojem App Wrapping Tool a sadou Intune App SDK vám pomůžou informace v tématu [Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune](/deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune).
+Při rozhodování mezi nástrojem App Wrapping Tool a sadou Intune App SDK vám pomůžou informace v tématu [Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md).
 
 Některé spravované aplikace, třeba Outlook pro iOS a Android, podporují **víc identit**. To znamená, že Intune v dané aplikaci aplikuje nastavení správy jenom na podnikové účty nebo data.
 
@@ -60,7 +55,8 @@ Například v případě aplikace Outlook:
 
 -   Použitý podnikový účet musí být ten samý účet, který byl použitý k registraci zařízení v Intune.
 
-> [!TIP] Pokud službu Intune používáte s nástrojem Configuration Manager, projděte si téma [Jak ovládat aplikace pomocí zásad správy mobilních aplikací v Configuration Manageru](https://technet.microsoft.com/library/mt131414.aspx).
+> [!TIP]
+> Pokud službu Intune používáte s nástrojem Configuration Manager, projděte si téma [Jak ovládat aplikace pomocí zásad správy mobilních aplikací v Configuration Manageru](https://technet.microsoft.com/library/mt131414.aspx).
 
 ## Vytvoření a nasazení aplikace pomocí zásady správy mobilní aplikace
 
@@ -152,7 +148,8 @@ Nasaďte aplikaci a na stránce **Správa mobilních aplikací** vyberte zásadu
 
 Podrobnosti najdete v tématu [Nasazení aplikací v Microsoft Intune](deploy-apps.md).
 
-> [!IMPORTANT] Pro zařízení, která používají operační systémy starší než iOS 7.1, nebudou při odinstalaci aplikace přidružené zásady odebrané.
+> [!IMPORTANT]
+> Pro zařízení, která používají operační systémy starší než iOS 7.1, nebudou při odinstalaci aplikace přidružené zásady odebrané.
 >
 > Pokud zrušíte registraci zařízení v Intune, z aplikací se neodeberou zásady. Všechny aplikace s použitými zásadami si zachovají nastavení zásad i po odinstalaci a opakované instalaci aplikace.
 
@@ -163,7 +160,8 @@ V takovém případě musíte požádat uživatele o ruční odinstalaci nesprav
 
 Pro zařízení se systémem iOS 9 a novějším ale Intune automaticky požádá uživatele o souhlas s převzetím správy stávající aplikace. Pokud souhlasí, stane se aplikace spravovanou aplikací služby Intune a použijí se taky všechny zásady správy mobilních aplikací přidružené aplikaci.
 
-> [!TIP] Když je zařízení v dohledovém režimu, Intune převezme správu stávající aplikace bez předchozího souhlasu uživatele.
+> [!TIP]
+> Když je zařízení v dohledovém režimu, Intune převezme správu stávající aplikace bez předchozího souhlasu uživatele.
 
 ## **Krok 5:** Monitorujte nasazení aplikace.
 Po vytvoření a nasazení aplikace přidružené k zásadě správy mobilní aplikace použijte následující postupy ke sledování aplikace a vyřešení konfliktů zásad.
@@ -198,6 +196,7 @@ V případech, kdy zařízení nebo uživatel obdrží dvě konfliktní zásady,
 -   Pokud ještě na zařízení nebyla nasazená žádná zásada a nasadí se dvě konfliktní nastavení, použije se výchozí nastavení zařízení.
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

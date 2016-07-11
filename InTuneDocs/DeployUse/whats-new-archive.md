@@ -1,47 +1,40 @@
 ---
-# required metadata
-
 title: Archiv novinek | Microsoft Intune
-description:
-keywords:
+description: 
+keywords: 
 author: Lindavr
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: ed2db991-4729-49a7-a1e6-be2ffa0d03d1
-
-# optional metadata
-
 ROBOTS: noindex,nofollow
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
+ms.openlocfilehash: 051d06afb0f29f2a97c1f06dc1102138e5f2be8f
+
 
 ---
 
 
 ## Září 2015
 ### Aktualizace správy mobilních zařízení a aplikací
-**Všechny funkce všechny správy systému iOS v Intune teď podporují iOS 9**
-Podrobnosti o možnostech správy systému iOS 9 najdete v [tomto příspěvku na blogu](http://blogs.technet.com/b/microsoftintune/archive/2015/09/09/day-zero-support-for-ios-9-with-intune.aspx)..
+**Všechny funkce správy Intune pro iOS teď podporují iOS 9** Podrobnosti o možnostech správy v systému iOS 9 najdete v [tomto příspěvku na blogu](http://blogs.technet.com/b/microsoftintune/archive/2015/09/09/day-zero-support-for-ios-9-with-intune.aspx).
 
-**Nové zásady konfigurace mobilních aplikací pro iOS**
-Nová zásada konfigurace mobilních aplikací umožňuje automaticky zadat nastavení, které můžou aplikace iOS vyžadovat při spuštění. Můžete třeba zadat síťový port nebo uživatelské jméno. Podrobnosti najdete v tématu [Konfigurace aplikací pomocí zásad konfigurace mobilních aplikací v Microsoft Intune](https://technet.microsoft.com/library/mt481447.aspx)..
+**Nové zásady konfigurace mobilních aplikací pro iOS** Nové zásady konfigurace mobilních aplikací umožňují automaticky zadat nastavení, které může aplikace systému iOS vyžadovat při spuštění. Můžete třeba zadat síťový port nebo uživatelské jméno. Podrobnosti najdete v tématu [Konfigurace aplikací pomocí zásad konfigurace mobilních aplikací v Microsoft Intune](https://technet.microsoft.com/library/mt481447.aspx).
 
 **Snazší správa aplikací pro uživatele iOS 9**
- V této verzi můžete zahrnout už nasazené aplikace uživatelů systému iOS 9 pod správu službou Intune. U starších verzí systému iOS platí, že pokud nasazujete aplikaci a na zařízení je už nainstalovaná nespravovaná verze aplikace, budete nejdřív muset požádat uživatele, aby aplikaci ručně odinstaloval, a teprve potom bude moct služba Intune nainstalovat spravovanou aplikaci.
+ V této verzi můžete převést dříve nasazené aplikace pro uživatele systému iOS 9 pod správu Intune. U starších verzí systému iOS platí, že pokud nasazujete aplikaci a na zařízení je už nainstalovaná nespravovaná verze aplikace, budete nejdřív muset požádat uživatele, aby aplikaci ručně odinstaloval, a teprve potom bude moct služba Intune nainstalovat spravovanou aplikaci.
 
  Od této verze služby Intune ale můžete uživatele zařízení se systémem iOS 9 vyzvat, aby službě Intune umožnili převzít správu aplikace, a použít všechny příslušné zásady správy mobilních aplikací.
 
  **Správa systému Windows 10** Pomocí nové [obecné zásady konfigurace pro Windows 10](https://technet.microsoft.com/library/mt404697.aspx) můžete konfigurovat heslo, zařízení, prohlížeč a další nastavení pro zaregistrovaná zařízení se systémy Windows 10 a Windows 10 Mobile.
 
- **Vytváření a nasazení aplikací do zaregistrovaných zařízení s Windows 10** Nový typ instalačního programu softwaru, Instalační služba systému Windows přes MDM (&#42;.msi), umožňuje vytvářet a nasazovat aplikace Instalační služby systému Windows pro zaregistrovaná zařízení se systémem Windows 10. Podrobnosti najdete v tématu [Začínáme s nasazováním aplikací v Microsoft Intune](https://technet.microsoft.com/library/dn646955.aspx)..
+ **Vytváření a nasazení aplikací do zaregistrovaných zařízení s Windows 10** Nový typ instalačního programu softwaru, Instalační služba systému Windows přes MDM (&#42;.msi), umožňuje vytvářet a nasazovat aplikace Instalační služby systému Windows pro zaregistrovaná zařízení se systémem Windows 10. Podrobnosti najdete v tématu [Začínáme s nasazováním aplikací v Microsoft Intune](https://technet.microsoft.com/library/dn646955.aspx).
 
 ### Změny a aktualizace aplikací portálů společnosti Microsoft
 V této verzi se provedly následující změny aplikací portálu společnosti:
@@ -68,10 +61,10 @@ V této verzi se provedly následující změny aplikací portálu společnosti:
 ## Srpen 2015
 ### Aktualizace správy mobilních zařízení a aplikací
 * **Podmínky a ujednání** pro registraci v rámci služby Intune a přístup společnosti [jsou teď spravované pomocí zásad](https://technet.microsoft.com/library/mt405893.aspx). Můžete zacílit různé sady podmínek a ujednání, které budou odpovídat požadavkům konkrétní skupiny uživatelů. Například můžete nasadit podmínky a ujednání v různých jazycích pro geograficky vymezené uživatelské skupiny. Můžete také [upravit podmínky a ujednání](https://technet.microsoft.com/library/mt405893.aspx#BKMK_TCVers) a rozhodnout, jestli se má zvýšit číslo verze, a vyžádat si souhlas uživatelů s novými podmínkami a ujednáními před použitím portálu společnosti.
-* **Řada zásad Intune byla přejmenovaná** , aby byly víc konzistentní v rámci celého produktu a snáz se vyhledávaly. Seznam všech dostupných zásad služby Intune najdete v tématu [Používání zásad ke správě počítačů a mobilních zařízení pomocí Microsoft Intune](https://technet.microsoft.com/library/dn743712.aspx)..
+* **Řada zásad Intune byla přejmenovaná** , aby byly víc konzistentní v rámci celého produktu a snáz se vyhledávaly. Seznam všech dostupných zásad služby Intune najdete v tématu [Používání zásad ke správě počítačů a mobilních zařízení pomocí Microsoft Intune](https://technet.microsoft.com/library/dn743712.aspx).
 * **Profily certifikátů PKCS #12 (.PFX)** jsou dostupné pro Android 4.0 nebo novější a pro Windows 10 (ve verzi pro stolní počítače i mobilní zařízení) a novější. Použití .PFX nevyžaduje server NDES. V tématu [Povolení přístupu k firemním prostředkům pomocí profilů certifikátů v Microsoft Intune](http://technet.microsoft.com/library/dn818904.aspx) se naučíte používat profily certifikátů .PFX.
 * **Nastavení hranic podnikové sítě pro stolní počítače a mobilní zařízení s Windows 10** umožňuje podrobné nastavení sítě VPN, jak se píše v tématu [Pomoc uživatelům s připojením k práci pomocí profilů sítě VPN v Microsoft Intune](https://technet.microsoft.com/library/dn818905.aspx).
-* **Aplikace OneDrive pro Android nově podporuje víc identit**. Tato a další aktualizace zásad správy mobilních aplikací jsou popsané [v seznamu aplikací Microsoftu, které můžete spravovat](https://technet.microsoft.com/library/dn708489.aspx)..
+* **Aplikace OneDrive pro Android nově podporuje víc identit**. Tato a další aktualizace zásad správy mobilních aplikací jsou popsané [v seznamu aplikací Microsoftu, které můžete spravovat](https://technet.microsoft.com/library/dn708489.aspx).
 * **Vyřazení zámku aktivace na zařízeních iOS**. Pokud je zařízení s iOS, které je majetkem společnosti, chráněné tzv. zámkem aktivace, musíte před vymazáním a opětovnou aktivací zařízení zadat Apple ID a heslo uživatele. To může být problém, pokud již uživatel ze společnosti odešel a vrátil zařízení vlastněné společností, aniž by zámek aktivace vypnul. Problém můžete vyřešit tak, že použijete funkci [Vynechat zámek aktivace služby Intune](https://technet.microsoft.com/library/mt414176.aspx).
 
 ### Podmíněný přístup pro osobní počítače
@@ -115,6 +108,7 @@ The following changes have been made to the company portal apps in this release.
 Microsoft automatically collects anonymous data about the performance and use of the company portal to improve Microsoft products and services. End users can turn off data collection by using the Usage Data setting on their device, but administrators have no control over the data collection and cannot change the end user’s selection for this setting.--->
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

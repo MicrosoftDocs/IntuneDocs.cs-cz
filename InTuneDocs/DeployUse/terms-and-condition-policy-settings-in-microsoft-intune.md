@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Nastavení zásad podmínek a ujednání v Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Nastavení zásad podmínek a ujednání v Microsoft Intune | Microsoft Intune"
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 6edf0ac1-4f46-4543-a9e5-f484ac37e9a5
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
+ms.openlocfilehash: 8079ca5abcedbe024fb6347e02c7cf61ae541a30
+
 
 ---
 
@@ -32,7 +26,7 @@ Můžete vytvořit a nasadit různé zásady obsahující různé podmínky a uj
 
 ## Vytvoření zásad podmínek a ujednání
 
-1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) klikněte na **Zásady** &gt; **Podmínky a ujednání**..
+1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) klikněte na **Zásady** &gt; **Podmínky a ujednání**.
 
     ![Snímky obrazovky podmínek a ujednání](./media/pol-sa-terms-conditions.png)
 
@@ -54,17 +48,17 @@ Můžete vytvořit a nasadit různé zásady obsahující různé podmínky a uj
 
 ## Nasazení zásady podmínek a ujednání
 
-1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) klikněte na **Zásady** &gt; **Podmínky a ujednání**..
+1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) klikněte na **Zásady** &gt; **Podmínky a ujednání**.
 
-2.  V seznamu **Zásady podmínek a ujednání** vyberte zásadu, kterou chcete nasadit, a klikněte na **Spravovat nasazení**..
+2.  V seznamu **Zásady podmínek a ujednání** vyberte zásadu, kterou chcete nasadit, a klikněte na **Spravovat nasazení**.
 
-3.  V dialogovém okně **Spravovat nasazení** vyberte skupiny uživatelů, pro které chcete zásadu nasadit, a potom klikněte na **OK**..
+3.  V dialogovém okně **Spravovat nasazení** vyberte skupiny uživatelů, pro které chcete zásadu nasadit, a potom klikněte na **OK**.
 
     Když cíloví uživatelé použijí Portál společnosti, zobrazí se jim podmínky a ujednání služby Intune, které jste nasadili. Uživatelé tyto podmínky musí přijmout, aby mohli mít přístup k prostředkům společnosti.
 
 ## Monitorování zásad podmínek a ujednání
 
-1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) klikněte na **Zásady** &gt; **Podmínky a ujednání**..
+1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) klikněte na **Zásady** &gt; **Podmínky a ujednání**.
 
 2.  V okně **Vytvořit novou sestavu** klikněte na **Zobrazit sestavu**. Sestava se otevře s podrobnostmi o tom, kteří uživatelé přijali podmínky a ujednání, které jste nasadili.
 
@@ -73,9 +67,9 @@ Při úpravách existujících zásad podmínek a ujednání můžete zvolit cho
 
 ## Jak pracovat s více verzemi podmínek a ujednání
 
-1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) klikněte na **Zásady** &gt; **Podmínky a ujednání**..
+1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) klikněte na **Zásady** &gt; **Podmínky a ujednání**.
 
-2.  Vyberte zásadu podmínek a ujednání, kterou chcete upravit, a potom klikněte na **Upravit**..
+2.  Vyberte zásadu podmínek a ujednání, kterou chcete upravit, a potom klikněte na **Upravit**.
 
 3.  Na stránce **Upravit podmínky a ujednání** proveďte veškeré požadované úpravy a pak určete, jestli tato nová verze vyžaduje, aby podmínky a ujednání přijali všichni uživatelé, nebo jestli se nová verze zobrazí jenom novým uživatelům.
 
@@ -85,6 +79,7 @@ Při úpravách existujících zásad podmínek a ujednání můžete zvolit cho
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

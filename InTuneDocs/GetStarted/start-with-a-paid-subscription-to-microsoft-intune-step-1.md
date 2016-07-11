@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Registrace nebo přihlášení k Intune | Microsoft Intune
-description:
-keywords:
+title: "Registrace nebo přihlášení k Intune | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 0f3ce07a-b718-42a9-bace-f99a8b8abd94
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed26d65b98a0ae1bbc4fbac682fb53fddd50b4e5
+ms.openlocfilehash: 1a67e22ef8f2b9d0c8bf0c816c774a15acc24f35
+
 
 ---
 
@@ -56,6 +50,7 @@ Gratulujeme! Právě jste dokončili krok 1 *úvodní příručky Intune*.
 >[&larr; **Začínáme**](.\start-with-a-paid-subscription-to-microsoft-intune.md)     [**Nastavení domény** &rarr;](.\start-with-a-paid-subscription-to-microsoft-intune-step-2.md)  
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

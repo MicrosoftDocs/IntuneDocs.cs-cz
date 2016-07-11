@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Nastavení správy pro zařízení Windows Phone 8.0 | Microsoft Intune
-description:
-keywords:
+title: "Nastavení správy pro zařízení Windows Phone 8.0 | Microsoft Intune"
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 06/09/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 61e9b6c3-8795-49b0-8ab2-a9a05ee3ea1f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: priyar
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: eed5855f3e27460146703ddf40fd935229a974e5
+ms.openlocfilehash: 02f9b7c7abe2daf942299015bfdfb052755ec2de
+
 
 ---
 
@@ -29,7 +23,8 @@ ms.suite: ems
 
 Windows Phone 8.0 vyžaduje k instalaci aplikace Portál společnosti Intune a k povolení správy zařízení certifikát Symantec. Certifikát je také nutný k podepsání obchodních aplikací. Následující téma se týká jenom systému Windows Phone 8.0. Informace o správě systému Windows Phone 8.1 nebo novějšího, včetně systému Windows 10 Mobile, najdete v tématu [Nastavení registrace Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md).
 
-> [!IMPORTANT] Od září 2016 už pro systémy Windows 8.0 a Windows Phone 8.0 nebude dostupná ke stažení aplikace Portál společnosti.
+> [!IMPORTANT]
+> Od září 2016 už pro systémy Windows 8.0 a Windows Phone 8.0 nebude dostupná ke stažení aplikace Portál společnosti.
 
 -   **Windows Phone 8** – Je nutný certifikát.
 -   **Windows Phone 8.1 a Windows 10 Mobile** vyžadují certifikáty pouze v následujících případech:
@@ -41,7 +36,8 @@ Windows Phone 8.0 vyžaduje k instalaci aplikace Portál společnosti Intune a k
 
 ![Diagram požadavků na certifikát](../media/wpcertreqs.png)
 
-  > [!IMPORTANT] Certifikát od Symantecu použitý ke správě určitých mobilních zařízení s Windows a Windows Phone [se musí pravidelně obnovovat](renew-a-symantec-code-signing-certificate.md).
+  > [!IMPORTANT]
+  > Certifikát od Symantecu použitý ke správě určitých mobilních zařízení s Windows a Windows Phone [se musí pravidelně obnovovat](renew-a-symantec-code-signing-certificate.md).
 
 Nastavení požadavků pro správu mobilních zařízení Windows Phone závisí na tom, jak budete zařízení spravovat.  Nastavení dvou záznamů CNAME v registraci DNS vaší společnosti usnadňuje uživatelům registraci zařízení. Pokud vaši uživatelé budou stahovat aplikaci Portál společnosti ze Storu, pak po konfiguraci nastavení DNS bude třeba jen nastavit firemní portál a informovat uživatele o tom, jak se zaregistrovat.  U Windows Phone 8.0 nebo Windows Phone 8.1, kde nasadíte Portál společnosti, budete pro podepsání kódu aplikace potřebovat certifikát Symantec.
 
@@ -186,6 +182,7 @@ Aplikaci Portál společnosti můžete místo instalace z Windows Phone Store na
     > -   Pokud musíte nainstalovat zkušebně načtené aplikace a zařízení Windows Phone 8.0 musí zaregistrovat a přijmout soubor ssp.xap, vytvořte nové nasazení softwaru ze souboru ssp.xap a nasaďte je akcí **odinstalace** . Zařízení Windows Phone 8.0 nepodporují vynucené instalace nebo odinstalace aplikací, takže budou nasazení ignorovat. Zařízení Windows Phone 8.1 podporují akci odinstalace a odeberou soubor ssp.xap.
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

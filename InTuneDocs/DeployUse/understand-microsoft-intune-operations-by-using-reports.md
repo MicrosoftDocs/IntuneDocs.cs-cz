@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Pochopení operací pomocí sestav | Microsoft Intune
-description:
-keywords:
+title: "Pochopení operací pomocí sestav | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/21/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 857309c2-61c9-4c22-becf-4839fedeaece
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: pbala
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 617f1cd42de49f0c8675bd450591a390af674e73
+ms.openlocfilehash: b8af36cef1bcb9077d0ab611a14fb88c0f458ece
+
 
 ---
 
@@ -43,8 +36,9 @@ Sestavy Intune obsahují informace o softwaru, hardwaru a licencích k softwaru 
 |**Sestavy instalací licencí**|Porovnávají software nainstalovaný na počítačích ve vaší organizaci s aktuálními licenčními smlouvami podle webu VLSC (Volume Licensing Service Center). Filtry zahrnují:<br /><br />**Všechny smlouvy** – zobrazí všechny licencované softwarové produkty, které jsou spravované prostřednictvím Intune.<br /><br />**Multilicenční smlouvy** – zobrazí jenom softwarové produkty VLSC.<br /><br />**Licenční smlouvy na ostatní software** – zobrazí softwarové produkty, které jsou spravované mimo VLSC.|
 |**Sestavy podmínek a ujednání**|Zobrazují, jestli uživatelé přijali podmínky a ujednání, které jste nasadili, a kterou verzi přijali. Můžete zadat až 10 uživatelů, u nichž se zobrazí jejich přijetí všech podmínek a ujednání, které jim byly nasazené, nebo zobrazit stav přijetí pro konkrétní nasazenou podmínku.|
 |**Sestavy nekompatibilních aplikací**|Zobrazují informace o uživatelích s nainstalovanými aplikacemi, které jsou na vašem seznamu kompatibilních a nekompatibilních aplikací. Tato sestava slouží k vyhledání uživatelů a zařízení, která nejsou v souladu s vašimi firemními zásadami pro aplikace.|
-|**Sestavy o shodě certifikátů**|Zobrazují, které certifikáty byly vydané uživatelům a zařízením prostřednictvím SCEP nebo PKCS #12 (.PFX). Tato sestava slouží k vyhledání certifikátů, které jsou vydané, mají ukončenou platnost nebo jsou odvolané.|
+|**Sestavy o shodě certifikátů**|Zobrazují, které certifikáty byly vydané uživatelům a zařízením prostřednictvím SCEP nebo PKCS 12 (PFX). Tato sestava slouží k vyhledání certifikátů, které jsou vydané, mají ukončenou platnost nebo jsou odvolané.|
 |**Sestavy o historii zařízení**|Zobrazují historický protokol akcí vyřazení, vymazání a odstranění. Tato sestava slouží k zobrazení, kdo v minulosti akce v zařízeních inicioval.|
+|**Sestavy ověření stavu**|Zobrazují stav mobilních zařízení.|
 |**Mac OS X – sestava hardwaru**|Zobrazuje podrobnosti o hardwaru všech registrovaných zařízení se systémem Mac OS X ve vybraných skupinách. Informace o inventáři hardwaru shromážděné z těchto zařízení najdete v tématu [Seznámení se zařízeními s inventářem v Microsoft Intune](understand-your-devices-with-inventory-in-microsoft-intune.md).|
 |**Mac OS X – sestava softwaru**|Zobrazuje software nainstalovaný na všech zařízeních se systémem Mac OS X ve vybraných skupinách. V sestavě se uvádí název softwaru (jako ID sady), zkrácený (nebo uživatelsky přívětivý) název, verze a počet zařízení s nainstalovaným softwarem.|
 
@@ -74,6 +68,7 @@ Sestavy navíc podporují následující akce:
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO3-->
 
 

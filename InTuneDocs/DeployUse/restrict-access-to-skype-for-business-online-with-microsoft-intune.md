@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Omezení přístupu ke službě Online Skype pro firmy | Microsoft Intune
-description:
-keywords:
+title: "Omezení přístupu ke službě Online Skype pro firmy | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 1b2d7125-f63f-43cf-ac1e-94fbedf2a7e8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: chrisgre
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 5cbf748ffee8fbb53f7e64a5499f06d5bd89c415
+ms.openlocfilehash: c26f3b732eb42903c72e8655542ee1ed586f5c67
+
 
 ---
 
@@ -39,7 +32,7 @@ Když se cílový uživatel na svém zařízení pokusí použít službu Online
 **Dřív** než nakonfigurujete zásady podmíněného přístupu pro Online Skype pro firmy, musíte:
 - Mít **předplatné Online Skype pro firmy ** a přiřadit licenci Online Skype pro firmy uživatelům.
 - Mít předplatné **Enterprise Mobility Suite** nebo **Azure Active Directory Premium**.
--   **Povolit moderní ověřování** pro Online Skype pro firmy. Pokud se chcete zaregistrovat do programu moderního ověřování, přihlaste se k Microsoft Connect a vyplňte [tento formulář](https://connect.microsoft.com/office/Survey/NominationSurvey.aspx?SurveyID=17299&ProgramID=8715).
+-   [Povolit moderní ověřování](https://docs.microsoft.com/en-us/intune/deploy-use/restrict-access-to-skype-for-business-online-with-microsoft-intune) pro Online Skype pro firmy. 
 -  Všichni koncoví uživatelé musí používat **Online Skype pro firmy**. Pokud máte nasazení s Online Skypem pro firmy i místním Skypem pro firmy, zásady podmíněného přístupu se na koncové uživatele nepoužijí.
 
     Zařízení, které potřebuje přístup k Online Skype pro firmy, musí splňovat následující kritéria:
@@ -119,6 +112,7 @@ Vyberte libovolnou skupinu mobilních zařízení a pak na kartě **Zařízení*
 * **Zařízení zaregistrovaná v AAD a vyhovující předpisům:** Tato zařízení mají přístup k Online Skype pro firmy.
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

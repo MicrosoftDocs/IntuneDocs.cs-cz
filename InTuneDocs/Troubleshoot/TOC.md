@@ -2,8 +2,9 @@
 # [Začínáme](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
 # [Nasazení a používání](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
+# [Vývoj a přizpůsobení aplikací](/intune/develop/intune-app-sdk)
 
-# [Řešení problémů](how-to-get-support-for-microsoft-intune.md)
+# [Řešení problémů](general-troubleshooting-tips-for-microsoft-intune.md)
 ## [Jak získat podporu](how-to-get-support-for-microsoft-intune.md)
 ## [Řešení potíží se službou Endpoint Protection](Troubleshoot-Endpoint-Protection-in-microsoft-intune.md)
 ## [Řešení problémů s přístupem k prostředkům společnosti](Troubleshoot-company-resource-access-problems-with-microsoft-intune.md)
@@ -13,8 +14,8 @@
 ## [Řešení potíží s klientským nastavením](Troubleshoot-client-setup-in-microsoft-intune.md)
 ## [Řešení potíží s aktualizacemi softwaru](Troubleshoot-software-updates-in-microsoft-intune.md)
 ## [Řešení potíží s e-mailovými profily](Troubleshoot-email-profiles-in-microsoft-intune.md)
+## [Řešení potíží s podmíněným přístupem](troubleshoot-conditional-access.md)
 
-
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO4-->
 
 

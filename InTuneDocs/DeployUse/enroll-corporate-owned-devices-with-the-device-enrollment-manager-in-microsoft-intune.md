@@ -1,32 +1,26 @@
 ---
-# required metadata
-
-title: Registrace firemních zařízení pomocí správce registrace zařízení v Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Přihlášení zařízení vlastněných podnikem pomocí správce registrace zařízení | Microsoft Intune"
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: a23abc61-69ed-44f1-9b71-b86aefc6ba03
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: dagerrit
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 7b0154d73ab540e7543fab9088463ed8b61b45a0
+ms.openlocfilehash: 74ff3209d00dee0b5ddd14e107b5544b364d08f7
+
 
 ---
 
+
 # Přihlášení firemních zařízení pomocí manažera registrace zařízení v Microsoft Intune
-Organizace můžou pomocí Intune spravovat velké počty mobilních zařízení s jediným uživatelským účtem. Účet *manažera registrace zařízení* je speciální účet Intune s oprávněním přihlásit víc než pět zařízení. Manažerovi nebo vedoucímu obchodu třeba můžete přidělit uživatelský účet manažera registrace zařízení, který mu pomůže s následujícím:
+Organizace můžou pomocí Intune spravovat velké počty mobilních zařízení s jediným uživatelským účtem. Účet *správce registrace zařízení* je speciální účet Intune s oprávněním přihlásit až 1000 zařízení. Zařízení zaregistrovaná pomocí účtu správce registrace zařízení používejte jako sdílená zařízení, nikoli jako osobní zařízení („BYOD“). Uživatelé například nebudou moci používat „nativní“ e-mailové aplikace. Manažerovi nebo vedoucímu obchodu třeba můžete přidělit uživatelský účet manažera registrace zařízení, který mu pomůže s následujícím:
 
 -   Registrace zařízení v Intune
 
@@ -41,16 +35,17 @@ Organizace můžou pomocí Intune spravovat velké počty mobilních zařízení
 
 Správce nebo manažer může do zařízení restaurace nasadit aplikace specifické pro role. Správce taky může vybrat zařízení v konzole služby Intune a vyřadit ho ze správy mobilních zařízení pomocí konzoly pro správu.
 
-Zařízení zaregistrovaná pomocí účtu správce registrace zařízení (DEM) mají následující omezení:
+Zařízení zaregistrovaná pomocí účtu správce registrace zařízení mají následující omezení:
   - Neexistuje konkrétní uživatel, takže všechna zařízení jsou „bez uživatele“. Proto není přístup k e-mailu nebo datům společnosti, i když například síť VPN může stále poskytovat aplikace pro zařízení s přístupem k datům.
   - Neexistuje podmíněný přístup, protože se jedná o scénáře pro uživatele.
   - Zařízení nejde resetovat z portálu společnosti.
+  - V aplikaci nebo na webu Portál společnosti se zobrazí pouze místní zařízení.
   - Nejsou k dispozici aplikace v rámci programu Apple Volume Purchase Program (VPP), protože jsou pro správu aplikací vyžadována Apple ID na uživatele.
   - Nelze také provést registraci pomocí Apple Configuratoru nebo programu Apple Device Enrollment Program (zařízení s iOS).
 
 > [!NOTE]
-> Uživatelské účty manažera registrace zařízení s víc než 20 registrovanými zařízeními můžou mít problém při používání aplikace portálu společnosti. Pokud chcete nasadit aplikace společnosti na zařízení spravovaná manažerem registrace zařízení, nasaďte aplikace portálu společnosti jako **požadovanou instalaci** pro uživatelský účet manažera registrace zařízení.
-> Aby se zvýšil výkon, při zobrazení aplikace Portál společnosti na zařízení DEM se zobrazí pouze místní zařízení, a to jen v případě, že bylo zaregistrováno pomocí aplikace Portál společnosti. Vzdálenou správu jiných zařízení DEM lze provést jenom v konzole Intune.
+> Pokud chcete nasadit aplikace společnosti na zařízení spravovaná manažerem registrace zařízení, nasaďte aplikace portálu společnosti jako **požadovanou instalaci** pro uživatelský účet manažera registrace zařízení.
+> Kvůli zvýšení výkonu se při zobrazení aplikace Portál společnosti v zařízení správce registrace zařízení zobrazuje pouze místní zařízení. Vzdálenou správu jiných zařízení správce registrace zařízení lze provádět jenom v konzole správce Intune.
 
 ## Vytvoření účtů správce registrace zařízení
 Účty manažera registrace zařízení jsou uživatelské účty s oprávněním registrovat velká množství zařízení vlastněných společností. Manažeři registrace zařízení můžou být jenom uživatelé v konzole Intune.
@@ -59,17 +54,17 @@ Zařízení zaregistrovaná pomocí účtu správce registrace zařízení (DEM)
 
 1.  Přejděte na [portál účtů Microsoft Intune](http://go.microsoft.com/fwlink/?LinkId=698854) a přihlaste se k účtu správce.
 
-2.  Klikněte na **Přidat uživatele**.
+2.  Zvolte **Přidat uživatele**.
 
-3.  Ověřte, že je uvedený uživatelský účet, který bude manažer registrace zařízení. Pokud ne, přidejte uživatele kliknutím na **Nový** a dokončením procesu přidání uživatele. Každý uživatel, který službu používá, potřebuje licenci předplatného a *manažer registrace zařízení* nemůže být správce Intune. Určete, jestli před používáním této funkce budete muset přidat další licence.
+3.  Ověřte, že je uvedený uživatelský účet, který bude manažer registrace zařízení. Pokud ne, přidejte uživatele zvolením možnosti **Nový** a dokončením procesu přidání uživatele. Každý uživatel, který službu používá, potřebuje licenci předplatného a *manažer registrace zařízení* nemůže být správce Intune. Určete, jestli před používáním této funkce budete muset přidat další licence.
 
 4.  Přihlaste se ke [konzole pro správu Microsoft Intune](http://manage.microsoft.com) pomocí přihlašovacích údajů správce.
 
-5.  V navigačním podokně klikněte na **Správce**, přejděte na **Správa správců** a vyberte **Manažer registrace zařízení**. Otevře se stránka manažera registrace zařízení.
+5.  V navigačním podokně zvolte **Správce**, přejděte do části **Správa správců** a vyberte **Správce registrace zařízení**. Otevře se stránka manažera registrace zařízení.
 
-6.  Klikněte na **Přidat...**. Otevře se dialog **Přidat manažera registrace zařízení** .
+6.  Zvolte **Přidat**. Otevře se dialog **Přidat manažera registrace zařízení** .
 
-7.  Zadejte **ID uživatele** účtu Intune a klikněte na **OK**. Manažer registrace zařízení nemůže být správce služby Intune.
+7.  Zadejte **ID uživatele** účtu Intune a zvolte **OK**. Manažer registrace zařízení nemůže být správce služby Intune.
 
 8.  Manažer registrace zařízení teď může registrovat mobilní zařízení stejným postupem, jaký používá koncový uživatel ve scénáři BYOD na podnikovém portálu.
 
@@ -77,11 +72,11 @@ Zařízení zaregistrovaná pomocí účtu správce registrace zařízení (DEM)
 
 1.  Přihlaste se na [portál pro správu Microsoft Intune](http://manage.microsoft.com) pomocí přihlašovacích údajů správce.
 
-2.  V navigačním podokně klikněte na **Správce** , přejděte na **Správa správců** a vyberte **Manažer registrace zařízení**. Otevře se stránka manažera registrace zařízení.
+2.  V navigačním podokně zvolte **Správce**, přejděte do části **Správa správců** a vyberte **Správce registrace zařízení**. Otevře se stránka manažera registrace zařízení.
 
-3.  Vyberte **uživatele** – manažera registrace zařízení, kterého chcete odstranit, a klikněte na **Odstranit**. Uživatel se neodstraní ze služby Intune a zařízení, která spravuje, zůstanou v Intune zaregistrovaná. Odstranění manažera registrace zabrání tomuto uživateli registrovat v Intune víc zařízení.
+3.  V poli **Uživatel** vyberte uživatele správce registrace zařízení, kterého chcete odstranit, a pak zvolte **Odstranit**. Uživatel se neodstraní ze služby Intune a zařízení, která spravuje, zůstanou v Intune zaregistrovaná. Odstranění manažera registrace zabrání tomuto uživateli registrovat v Intune víc zařízení.
 
-4.  Kliknutím na **Ano** potvrďte, že chcete odstranit manažera registrace zařízení.
+4.  Zvolením **Ano** potvrďte, že chcete správce registrace zařízení odstranit.
 
 Odstranění manažera registrace zařízení nemá vliv na zaregistrovaná zařízení. Po odstranění manažera registrace zařízení:
 
@@ -96,6 +91,6 @@ Odstranění manažera registrace zařízení nemá vliv na zaregistrovaná zař
 -   Vztah odstraněného účtu manažera registrace zařízení k zaregistrovaným zařízením trvá, ale nebudou se registrovat žádná další zařízení.
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO3-->
 
 

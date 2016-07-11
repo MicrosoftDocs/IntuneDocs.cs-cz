@@ -30,7 +30,7 @@
 
 ### [Správa nastavení a funkcí v zařízeních pomocí zásad](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
 #### [Nastavení iOS](ios-policy-settings-in-microsoft-intune.md)
-#### [Nastavení Androidu](android-policy-settings-in-microsoft-intune.md)
+#### [Nastavení Androidu a Samsung KNOX](android-policy-settings-in-microsoft-intune.md)
 #### [Nastavení Windows 8 a Windows 8.1](windows-configuration-policy-settings-in-microsoft-intune.md)
 #### [Nastavení Windows Phone 8.1](windows-phone-8-1-policy-settings-in-microsoft-intune.md)
 #### [Nastavení Windows 10 Desktop a Mobile](windows-10-policy-settings-in-microsoft-intune.md)
@@ -47,6 +47,7 @@
 #### [Připojení VPN v Intune](vpn-connections-in-microsoft-intune.md)
 #### [E-mailové profily v Intune](configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune.md)
 ### [Použití skupin pro správu uživatelů a zařízení](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
+### [Mapování zařízení na skupiny](categorize-devices-with-device-group-mapping-in-microsoft-intune.md)
 ### [Seznámení se zařízeními s inventářem](understand-your-devices-with-inventory-in-microsoft-intune.md)
 ### [Běžné úlohy správy počítačů](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
 
@@ -86,14 +87,19 @@
 #### [Pro Windows a Windows Phone](windows-compliance-policy-settings-in-microsoft-intune.md)
 #### [Nasazení zásad dodržování předpisů pro zařízení](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md)
 
-### [Omezení přístupu k e-mailu a službám O365](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
+### [Omezení přístupu k e-mailu, O365 a dalším službám](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
+
+
 #### [Exchange Online a nová verze Exchange Online Dedicated](restrict-access-to-exchange-online-with-microsoft-intune.md)
 #### [Místní Exchange a starší verze Exchange Online Dedicated](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
 #### [SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 #### [Online Skype pro firmy](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
+#### [Dynamics CRM Online](restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
 #### [Omezení přístupu k e-mailu: příklady](restrict-email-access-example-scenarios.md)
 
-### [Ochrana dat aplikací](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
+### [Omezení přístupu k sítím (Cisco ISE)](restrict-access-to-networks.md)
+
+### [Ochrana dat aplikací pomocí MAM](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Portál Azure pro zásady MAM](azure-portal-for-microsoft-intune-mam-policies.md)
 #### [Příprava ke konfiguraci zásad MAM](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Vytvoření a nasazení zásad MAM](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
@@ -102,10 +108,12 @@
 #### [Sledování dodržování zásad](monitor-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Správa přenosu dat mezi aplikacemi pro iOS](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 #### [Činnost koncového uživatele](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md)
+#### [Konzola pro správu Intune pro zásady MAM](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md)
 
 ### [Příprava obchodních aplikací pro MAM](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md)
 #### [Zabalení aplikací pro iOS](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)
 #### [Zabalení aplikací pro Android](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)
+#### [Obchodní aplikace na zařízeních nespravovaných pomocí Intune](protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune.md)
 #### [Použití sady SDK při psaní aplikace](use-the-sdk-to-enable-apps-for-mobile-application-management.md)
 
 
@@ -120,9 +128,11 @@
 
 ## [Co je nového](whats-new-in-microsoft-intune.md)
 
-# [Řešení problémů](/intune/troubleshoot/how-to-get-support-for-microsoft-intune)
+# [Vývoj a přizpůsobení aplikací](/intune/develop/intune-app-sdk)
+
+# [Řešení problémů](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO5-->
 
 

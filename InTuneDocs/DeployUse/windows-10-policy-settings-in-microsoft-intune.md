@@ -12,8 +12,8 @@ ms.technology:
 ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ms.reviewer: heenamac
 ms.suite: ems
-ms.sourcegitcommit: b41c9f0d7c449d83f8359aaea21b880b557a55de
-ms.openlocfilehash: 0f2bdbf972ab953ff8a403c6eb9f484bb0a409a9
+ms.sourcegitcommit: 1cccafa5f740bad50779ae36c899fd23ee7dc5f3
+ms.openlocfilehash: 70347776f72a3534a4c384957aef01a909767b99
 
 
 ---
@@ -161,6 +161,7 @@ Všechna nastavení jsou jenom pro Windows 10 Desktop.
 |**Interval aktualizace signatur**|Zadejte interval, ve kterém bude Defender zjišťovat dostupnost nových souborů signatur.|
 |**Povolit cloudovou ochranu**|Umožňuje službě Microsoft Active Protection Service povolit nebo blokovat příjem informací o činnosti malwaru ze zařízení, která spravujete. Tyto informace slouží k budoucímu vylepšování služby.|
 |**Dotázat se uživatelů na odesílání vzorků**|Určuje, jestli se mají do Microsoftu automaticky odesílat soubory, které by mohly vyžadovat další analýzu, aby bylo určeno, zda jsou škodlivé.|
+|**Detekce potenciálně nežádoucích aplikací**|Pomocí tohoto nastavení lze chránit zaregistrované stolní počítače s Windows před spuštěním softwaru, který Windows Defender klasifikuje jako potenciálně nežádoucí. Můžete nastavit ochranu před spuštěním těchto aplikací nebo pomocí režimu auditu upozornit, když se potenciálně nežádoucí aplikace nainstaluje.|
 |**Soubory a složky, které mají být vyloučeny z kontroly a ochrany v reálném čase**|Umožňuje do seznamu vyloučení přidat soubory a složky, například **C:\Cesta** nebo **%ProgramFiles%\Cesta\název_souboru.exe**. Tyto soubory a složky nebudou zahrnuty do kontrol probíhajících v reálném čase ani do plánovaných kontrol.|
 |**Vyloučit přípony souborů při použití prověřování nebo ochrany v reálném čase**|Umožňuje do seznamu vyloučení přidat přípony souborů, například **jpg** nebo **txt**. Soubory s těmito příponami nebudou zahrnuty do kontrol probíhajících v reálném čase ani do plánovaných kontrol.|
 |**Vyloučit procesy při použití prověřování nebo ochrany v reálném čase**|Umožňuje do seznamu vyloučení přidat procesy typu **.exe**, **.com** nebo **.scr**. Tyto procesy nebudou zahrnuty do kontrol probíhajících v reálném čase ani do plánovaných kontrol.| 
@@ -326,6 +327,6 @@ Pokud chcete používat vlastní zásadu URI Windows, musí se všechna zaříze
 
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 

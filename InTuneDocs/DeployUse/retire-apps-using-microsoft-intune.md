@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Vyřazení aplikací | Microsoft Intune
-description:
-keywords:
+title: "Vyřazení aplikací | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 6fbf0805-1144-4e08-bafd-4f181d932bf2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
+ms.openlocfilehash: 4857e2ff34175ee6daa64e6f95a59faaaaa3b322
+
 
 ---
 
@@ -31,9 +25,9 @@ Pokud chcete vyřadit aplikaci, stačí ji odinstalovat. Při nasazování a spr
 
 ## Odinstalace aplikace
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com)vyberte **Aplikace** &gt; **Aplikace**..
+1.  V [konzole správce Microsoft Intune](https://manage.microsoft.com) zvolte **Aplikace**&gt;**Aplikace**.
 
-2.  Vyberte aplikaci, kterou chcete odinstalovat (aplikaci, kterou jste předtím nasadili), a potom vyberte **Spravovat nasazení**..
+2.  Vyberte aplikaci, kterou chcete odinstalovat (aplikaci, kterou jste předtím nasadili), a potom zvolte **Spravovat nasazení**.
 
 3.  Na stránce **Akce nasazení** vyberte **Odinstalovat** ve sloupci **Schválení** .
 
@@ -43,6 +37,7 @@ Aplikace se odinstaluje, až bude zařízení nebo počítač příště aplikac
 [Přidání aplikací v Microsoft Intune](add-apps.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

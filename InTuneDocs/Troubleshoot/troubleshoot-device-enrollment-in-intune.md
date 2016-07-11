@@ -10,27 +10,38 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
-ms.reviewer: jeffgilb
+ms.reviewer: damionw
 ms.suite: ems
-ms.sourcegitcommit: 502fb25c0dc050fb3f08fbba4d02148add3faf8e
-ms.openlocfilehash: ae2b35321b0664c5b54708d7389e9eb0262bb2d6
+translationtype: Human Translation
+ms.sourcegitcommit: d12a31eb0727f7ca0c460049ac6fffb314daf70e
+ms.openlocfilehash: 62668c607bc3064cf8148fd7929b3c1268b721d7
 
 
 ---
 
 # Řešení potíží s registrací do služby Intune
 
-Tady najdete některé problémy s registrací zařízení a způsoby, jak je vyřešit.
-
-> [!NOTE]
-> Uživatelé spravovaných zařízení můžou pro vaši potřebu shromažďovat protokoly registrace a diagnostiky. Pokyny pro uživatele ke shromažďování protokolů najdete tady:
->- [Odeslání protokolů s diagnostickými daty ze zařízení s Androidem správci IT pomocí kabelu USB](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
->- [Odeslání protokolů s diagnostickými daty ze zařízení s Androidem správci IT e-mailem](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-email-android)
->- [Odeslání chyb registrace zařízení s Androidem správci IT](/intune/enduser/send-enrollment-errors-to-your-it-administrator-android)
->- [Odeslání chyb registrace zařízení s iOS správci IT](/intune/enduser/send-errors-to-your-it-admin-ios)
+Toto téma obsahuje doporučení pro řešení potíží s registrací zařízení. Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md), ve kterém najdete další způsoby, jak získat nápovědu.
 
 
-Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md), ve kterém najdete další způsoby, jak získat nápovědu.
+## První kroky při řešení potíží
+
+Než začnete řešit potíže, ujistěte se, že jste správně nakonfigurovali Intune pro povolení registrace. Můžete si prostudovat informace o těchto požadavcích na konfiguraci:
+
+-   [Příprava registrace zařízení v Microsoft Intune](/intune/deploy-use/get-ready-to-enroll-devices-in-microsoft-intune)
+-   [Nastavení správy zařízení s iOS a Mac](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
+-   [Nastavení správy pro Windows Phone a Windows 10 Mobile v Microsoft Intune](/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
+-   [Nastavení správy pro zařízení Windows](/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
+
+
+Uživatelé spravovaných zařízení můžou pro vaši potřebu shromažďovat protokoly registrace a diagnostiky. Pokyny pro uživatele ke shromažďování protokolů najdete tady:
+
+- [Odeslání protokolů s diagnostickými daty ze zařízení s Androidem správci IT pomocí kabelu USB](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
+- [Odeslání protokolů s diagnostickými daty ze zařízení s Androidem správci IT e-mailem](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-email-android)
+- [Odeslání chyb registrace zařízení s Androidem správci IT](/intune/enduser/send-enrollment-errors-to-your-it-administrator-android)
+- [Odeslání chyb registrace zařízení s iOS správci IT](/intune/enduser/send-errors-to-your-it-admin-ios)
+
+
 
 ## Obecné problémy s registrací
 K těmto problémům může docházet na všech platformách zařízení.
@@ -96,7 +107,8 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 
 1.  Zkontrolujte, jestli je nastavená správná autorita pro správu mobilních zařízení (MDM) pro verzi služby Intune, kterou používáte, tedy pro Intune, O365 MDM, nebo System Center Configuration Manager se službou Intune. V případě služby Intune se autorita MDM nastavuje v části **Správce** &gt; **Správa mobilních zařízení**. V případě využívání nástroje Configuration Manager s Intune se nastavuje při konfiguraci konektoru Intune a v O365 jde o nastavení **Mobilní zařízení**.
 
-    > [!NOTE] Jakmile jednou nastavíte autoritu MDM, můžete ji změnit jedině tak, že se obrátíte na podporu, jak je popsáno v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+    > [!NOTE]
+    > Jakmile jednou nastavíte autoritu MDM, můžete ji změnit jedině tak, že se obrátíte na podporu, jak je popsáno v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 2.  Ověřte správnou synchronizaci přihlašovacích údajů uživatele se službou Azure Active Directory tím, že zkontrolujete, jestli hlavní název uživatele (UPN) odpovídá údajům služby Active Directory na portálu účtů.
     Pokud hlavní název uživatele neodpovídá údajům služby Active Directory:
@@ -248,8 +260,7 @@ Důvodem může být to, že již byl počítač zaregistrován dříve nebo je 
 
 |Kód chyby|Možný problém|Navržené řešení|
 |--------------|--------------------|----------------------------------------|
-|0x80CF0437 |Na hodinách klientského počítače není nastavený správný čas.|Zkontrolujte, jestli jsou na klientském počítači správně nastavené hodiny a časové pásmo.
-|
+|0x80CF0437 |Na hodinách klientského počítače není nastavený správný čas.|Zkontrolujte, jestli jsou na klientském počítači správně nastavené hodiny a časové pásmo.|
 |0x80240438, 0x80CF0438, 0x80CF402C|Nedá se připojit ke službě Intune. Zkontrolujte nastavení proxy serveru klienta.|Ověřte, že Intune konfiguraci proxy serveru na klientském počítači podporuje a že má klientský počítač přístup na internet.|
 |0x80240438, 0x80CF0438|Není nakonfigurované nastavení proxy serveru v Internet Exploreru a v místním systému.|Nedá se připojit ke službě Intune. Zkontrolujte nastavení proxy serveru klienta a ověřte, že Intune konfiguraci proxy serveru na klientském počítači podporuje a že má klientský počítač přístup na internet.|
 |0x80043001, 0x80CF3001, 0x80043004, 0x80CF3004|Registrační balíček je zastaralý.|Z pracovního prostoru Správa si stáhněte aktuální balíček klientského softwaru a nainstalujte ho.|
@@ -274,6 +285,6 @@ Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podpor
 
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jul16_HO1-->
 
 

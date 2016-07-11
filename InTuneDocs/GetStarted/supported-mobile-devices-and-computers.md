@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Podporovaná mobilní zařízení a počítače | Microsoft Intune
-description:
-keywords:
+title: "Podporovaná mobilní zařízení a počítače | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 06/08/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: aeeccfa4-0f14-447e-a3df-c8435c8a4bb2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: e91193523284113c2029e0762dfc48ddc15540d4
+ms.openlocfilehash: d908654b30a29e3b1e3a52096767d42019af772f
+
 
 ---
 
@@ -33,12 +26,13 @@ Můžete spravovat následující mobilní zařízení a počítače:
 
 [!INCLUDE[mdm-supported-devices](../includes/mdm-supported-devices.md)] 
 
-Můžete spravovat tato zařízení a počítače, a to i když nejsou připojené k doméně nebo v místním režimu. Další informace o správě zařízení najdete v tématu [Volba způsobu správy zařízení](/Intune/Deploy-use/choose-how-to-manage-devices).
+Můžete spravovat tato zařízení a počítače, a to i když nejsou připojené k doméně nebo v místním režimu. Další informace o správě zařízení najdete v tématu [Volba způsobu správy zařízení](/Intune/get-started/choose-how-to-manage-devices).
 
 
 ### Související témata
 [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

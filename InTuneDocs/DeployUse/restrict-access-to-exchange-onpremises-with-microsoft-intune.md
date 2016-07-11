@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Omezení přístupu k e-mailu v místním systému Exchange a starším vyhrazeném prostředí Exchange Online | Microsoft Intune
-description:
-keywords:
+title: "Omezení přístupu k e-mailu v místním systému Exchange a starším vyhrazeném prostředí Exchange Online | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: a55071f5-101e-4829-908d-07d3414011fc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: chrisgre
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ded7bd6c971a9448ad6e6492ebc5e42dfcb5d76e
+ms.openlocfilehash: 6bc85a0291fa62069ba6a0f63fdd9306db3c4195
+
 
 ---
 
@@ -75,7 +69,8 @@ Následující diagram znázorňuje postup, který zásady podmíněného přís
 -   Nativní e-mailová aplikace v systému iOS
 
 -   Nativní e-mailová aplikace v systému Android 4 nebo novějším
-> [!NOTE] Aplikace Microsoft Outlook pro Android a iOS se nepodporuje.
+> [!NOTE]
+> Aplikace Microsoft Outlook pro Android a iOS se nepodporuje.
 
 ## Podpora počítačů
 
@@ -104,7 +99,8 @@ Aplikace **Mail** v systému Windows 8 a novějším (při registraci v [!INCLU
 >Pokud chcete před udělením přístupu k e-mailům nejdřív zablokovat všechna zařízení, vyberte možnosti Blokovat přístup nebo Umístit do karantény. Výchozí pravidlo se použije pro všechny typy zařízení. To znamená, že se použije i pro typy zařízení, které jste nakonfigurovali jako výjimky platformy a které [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] nepodporuje.
 
   - **Oznámení uživatele:** Kromě e-mailu s oznámením odeslaného z Exchange odešle Intune e-mail, který můžete konfigurovat a který obsahuje postup odblokování zařízení. Výchozí zprávu můžete upravit a přizpůsobit svým potřebám. Vzhledem k tomu, že se e-mail s oznámením Intune obsahující pokyny k nápravě doručuje do poštovní schránky Exchange uživatele, může uživatel v případě, že se jeho zařízení před obdržením této e-mailové zprávy zablokuje, použít pro přístup k Exchangi a zobrazení zprávy odblokované zařízení nebo jinou metodu. To platí hlavně v případě, že je **Výchozí pravidlo** nastavené na blokování nebo umístění do karantény.  V takovém případě bude muset koncový uživatel přejít na web App Store, stáhnout aplikaci Portál společnosti od Microsoftu a zaregistrovat své zařízení. To se vztahuje na zařízení se systémy iOS, Windows a řešením Samsung KNOX.  U zařízení Android, která nepoužívají řešení Samsung KNOX, budete muset odeslat e-mail o karanténě na alternativní e-mailový účet, který pak bude muset koncový uživatel zkopírovat do svého zablokovaného zařízení, aby se mohl dokončit proces registrace a dodržování předpisů.
-  > [!NOTE] Aby systém Exchange mohl e-mail s oznámením odeslat, musíte určit účet, který se má k odeslání e-mailu s oznámením použít.
+  > [!NOTE]
+  > Aby systém Exchange mohl e-mail s oznámením odeslat, musíte určit účet, který se má k odeslání e-mailu s oznámením použít.
   >
   > Podrobnosti najdete v článku o [konfiguraci místního konektoru Exchange pro místní nebo hostovaný Exchange](intune-on-premises-exchange-connector.md).
 
@@ -126,6 +122,7 @@ Aplikace **Mail** v systému Windows 8 a novějším (při registraci v [!INCLU
 [Omezení přístupu ke službě Online Skype pro firmy](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

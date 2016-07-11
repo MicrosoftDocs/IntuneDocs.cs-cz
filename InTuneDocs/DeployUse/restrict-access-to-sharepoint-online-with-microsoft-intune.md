@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Omezení přístupu ke službě SharePoint Online | Microsoft Intune
-description:
-keywords:
+title: "Omezení přístupu ke službě SharePoint Online | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/16/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: chrisgre
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 5a445f06d6c2328f7689468ca4d68a969af1e825
+ms.openlocfilehash: f8fcb01629c68e9c04b0e0319b937178859877ec
+
 
 ---
 
@@ -30,7 +24,7 @@ Pro řízení přístupu k souborům umístěným ve službě SharePoint online 
 Podmíněný přístup má dvě součásti:
 - Zásady dodržování předpisů zařízení, které zařízení musí dodržovat, aby mohlo být považované za vyhovující.
 - Zásady podmíněného přístupu, kde můžete určit podmínky, které zařízení musí splňovat pro přístup ke službě.
-Další informace o tom, jak podmíněný přístup funguje, najdete v tématu věnovaném [omezení přístupu k e-mailu a službám O365](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+Další informace o tom, jak podmíněný přístup funguje, najdete v tématu ohledně [omezení přístupu k e-mailu, O365 a dalším službám](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
 Když se uživatel na svém zařízení pokusí připojit k souboru pomocí podporované aplikace, jako je třeba OneDrive, dojde k následujícímu vyhodnocení:
 
@@ -66,6 +60,13 @@ Pokud není podmínka splněná, zobrazí se uživateli při přihlášení jedn
 - Android 4.0 nebo novější, Samsung Knox Standard 4.0 nebo novější
 - Windows Phone 8.1 nebo novější
 
+Můžete omezit přístup k SharePoint Online při přístupu z prohlížeče v zařízení s **iOS** a **Androidem**.  Přístup bude povolen pouze z podporovaných prohlížečů ve vyhovujících zařízeních:
+* Safari (iOS)
+* Chrome (Android)
+* Spravovaný prohlížeč (iOS a Android)
+
+**Nepodporované prohlížeče budou zablokovány**.
+
 ## Podpora počítačů
 - Windows 8.1 nebo novější (při registraci v Intune)
 - Windows 7.0 nebo Windows 8.1 (při připojení k doméně)
@@ -97,11 +98,13 @@ Pokud je uživatel v obou skupinách, bude ze zásad vyloučený.
 ### Krok 2: Konfigurace a nasazení zásad dodržování předpisů
 Pokud jste to ještě neudělali, vytvořte a nasaďte zásady dodržování předpisů pro uživatele, na které bude zásada SharePointu Online cílit.
 
-> [!NOTE] Zásady dodržování předpisů se nasadí do skupin [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] a zásady podmíněného přístupu cílí na skupiny zabezpečení služby Azure Active Directory.
+> [!NOTE]
+> Zásady dodržování předpisů se nasadí do skupin [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] a zásady podmíněného přístupu cílí na skupiny zabezpečení služby Azure Active Directory.
 
 Podrobnosti o konfiguraci zásad dodržování předpisů najdete v tématu věnovaném [vytvoření zásad dodržování předpisů](create-a-device-compliance-policy-in-microsoft-intune.md).
 
-> [!IMPORTANT] Pokud jste zásady dodržování předpisů nenasadili, budou se zařízení považovat za vyhovující.
+> [!IMPORTANT]
+> Pokud jste zásady dodržování předpisů nenasadili, budou se zařízení považovat za vyhovující.
 
 Až budete připravení, pokračujte **Krokem 3**.
 
@@ -110,8 +113,8 @@ V dalším kroku nakonfigurujte zásadu, která bude vyžadovat, aby měla k Sha
 
 #### <a name="bkmk_spopolicy"></a>
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) klikněte na **Zásady** > **Podmíněný přístup** > **Zásady pro SharePoint Online**.
-![Snímek stránky zásad SharePointu Online](../media/IntuneSASharePointOnlineCAPolicy.png)
+1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Zásady** > **Podmíněný přístup** > **Zásady pro SharePoint Online**.
+![Snímek stránky zásad SharePointu Online](../media/mdm-ca-spo-policy-configuration.png)
 
 2.  Vyberte **Zapnout zásady podmíněného přístupu pro SharePoint Online**.
 
@@ -120,6 +123,10 @@ V dalším kroku nakonfigurujte zásadu, která bude vyžadovat, aby měla k Sha
     -   **Všechny platformy**
 
         To vyžaduje, aby každé zařízení používané pro přístup k **SharePointu Online** bylo registrované v Intune a dodržovalo tyto zásady.  Všechny klientské aplikace používající **moderní ověřování** podléhají zásadám podmíněného přístupu. Pokud Intune příslušnou platformu aktuálně nepodporuje, přístup k **SharePointu Online** je zablokovaný.
+
+        Výběr volby **Všechny platformy** způsobí, že Azure Active Directory uplatní tyto zásady na všechny požadavky na ověření bez ohledu na platformu, která je ohlášena klientskou aplikací.  Pro všechny platformy bude vyžadována registrace a shoda s výjimkou následujících bodů:
+        *   Zařízení s Windows budou muset být zaregistrovaná a vyhovující, doména bude muset být spojena s místním Active Directory nebo obojí
+        * Nepodporované platformy jako Mac.  Aplikace používající moderní ověřování pocházející z těchto platforem však budou i nadále zablokovány.
         >[!TIP]
         >Pokud ještě nepoužíváte podmíněný přístup pro počítače PC, nemusí se vám tato možnost zobrazit.  Místo toho použijte možnost **Specifické platformy**. Podmíněný přístup pro počítače PC není aktuálně k dispozici všem zákazníkům Intune.   Další informace o známých problémech a o tom, jak k této funkci získat přístup, najdete na [webu Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=761472).
 
@@ -135,11 +142,28 @@ V dalším kroku nakonfigurujte zásadu, která bude vyžadovat, aby měla k Sha
 
      -   **Zařízení musí splňovat předpisy.** Tuto možnost vyberte, pokud chcete, aby počítače musely být zaregistrované v [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] a splňovat předpisy. Pokud počítač není zaregistrovaný, zobrazí se zpráva s pokyny, jak registraci provést.
 
-4.  V části **Cílové skupiny**klikněte na **Upravit** a vyberte skupiny zabezpečení Active Directory, na které se zásady vztahují. Můžete cílit na všechny uživatele nebo vybrané skupiny uživatelů.
+4.   V části **Přístup z prohlížeče** pro SharePoint Online a OneDrive pro firmy můžete zvolit povolení přístupu k Exchange Online pouze prostřednictvím podporovaných prohlížečích: Safari (iOS) a Chrome (Android). Přístup z jiných prohlížečů bude blokován.  Omezení platformy, která jste vybrali pro přístup z aplikace pro OneDrive, budou použita i zde.
 
-5.  V případě potřeby v části **Vyloučené skupiny**klikněte na **Upravit** a vyberte skupiny zabezpečení Azure Active Directory, na které se tyto zásady nevztahují.
+  V zařízeních s **Androidem** musí uživatelé povolit přístup pro prohlížeč.  Při tomto postupu musí koncový uživatel povolit možnost „Povolit přístup z prohlížeče“ v zaregistrovaném zařízení následujícím způsobem:
+  1.    Spusťte **aplikaci Portál společnosti**.
+  2.    Přejděte na stránku **Nastavení** stránku prostřednictvím tlačítka se třemi tečkami (...) nebo hardwarového tlačítka nabídky.
+  3.    Stiskněte tlačítko **Povolit přístup z prohlížeče**.
+  4.  V prohlížeči Chrome se odhlaste z Office 365 a znovu spusťte Chrome.
 
-6.  Po dokončení klikněte na **Uložit**.
+  Na platformách **iOS a Android**: Kvůli identifikaci zařízení použitého pro přístup ke službě vydá Azure Active Directory pro příslušné zařízení certifikát TLS (Transport Layer Security).  Zařízení zobrazí certifikát s výzvou pro koncového uživatele k výběru certifikát, jak je vidět na následujících snímcích obrazovky. Koncový uživatele musí tento certifikát vybrat, než bude moci pokračovat v používání prohlížeče.
+
+  **iOS**
+
+  ![snímek obrazovky s výzvou ohledně certifikátu řádku v zařízení iPad](../media/mdm-browser-ca-ios-cert-prompt.png)
+
+  **Android**
+
+  ![snímek obrazovky s výzvou ohledně certifikátu řádku v zařízení s Androidem](../media/mdm-browser-ca-android-cert-prompt.png)
+5.  V části **Cílové skupiny** zvolte **Upravit** a vyberte skupiny zabezpečení Azure Active Directory, na které se zásady vztahují. Můžete cílit na všechny uživatele nebo vybrané skupiny uživatelů.
+
+6.  V případě potřeby v části **Vyloučené skupiny** zvolte **Upravit** a vyberte skupiny zabezpečení Azure Active Directory, na které se tyto zásady nevztahují.
+
+6.  Po dokončení vyberte **Uložit**.
 
 Zásady podmíněného přístupu není potřeba nasazovat, projeví se okamžitě.
 
@@ -158,6 +182,7 @@ Vyberte libovolnou skupinu mobilních zařízení a pak na kartě **Zařízení*
 [Omezení přístupu k e-mailu a službám O365 pomocí Microsoft Intune](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

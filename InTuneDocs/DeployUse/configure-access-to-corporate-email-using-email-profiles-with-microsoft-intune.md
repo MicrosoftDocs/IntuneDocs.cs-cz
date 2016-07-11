@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Konfigurace přístupu k podnikovému e-mailu pomocí e-mailových profilů | Microsoft Intune
-description:
-keywords:
+title: "Konfigurace přístupu k podnikovému e-mailu pomocí e-mailových profilů | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 05/05/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: karanda
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8a3df01e9c02af7c43cdadc6d202bc6d74a000da
+ms.openlocfilehash: d0fa235b7b25fe71a4e3b4b0bf68cd2db31b1f18
+
 
 ---
 
@@ -89,9 +83,10 @@ Heslo není součástí e-mailového profilu, uživatel ho tedy musí zadat při
     |**Plán synchronizace** (Samsung KNOX, Windows Phone 8 a novější, Windows 10)|Vyberte plán, podle kterého budou zařízení synchronizovat data z Exchange Serveru. Můžete taky vybrat **Při doručování zpráv**, aby se data synchronizovala hned po doručení, nebo **Ruční**, aby musel synchronizaci zahájit uživatel zařízení.|
     |**Použít protokol SSL**|Při posílání a přijímání e-mailů a komunikaci se Exchange Serverem použijte komunikaci SSL (Secure Sockets Layer).<br /><br />U zařízení, na kterých běží Samsung KNOX 4.0 nebo novější, musíte exportovat certifikát SSL Exchange Serveru a v Intune ho nasadit jako profil důvěryhodného certifikátu pro Android. Intune nepodporuje přístup k tomuto certifikátu, pokud je na Exchange Serveru nainstalovaný jiným způsobem.|
     |**Typ obsahu, který se má synchronizovat**|Vyberte typy obsahu, které se mají na zařízeních synchronizovat.| 
-    |**Povolit odesílání e-mailů z aplikací jiných výrobců** (jenom iOS)|Můžete aplikacím jiných výrobců povolit otevírání e-mailu v nativní e-mailové aplikaci, třeba za účelem připojení souborů k e-mailu.|
+    |**Povolit odesílání e-mailů z aplikací jiných výrobců** (jenom iOS)|Můžete povolit uživateli, aby tento profil vybral jako výchozí účet pro odesílání e-mailů, a povolit aplikacím třetích stran otevírání e-mailů v nativních e-mailových aplikacích, například připojování souborů k e-mailům.|
 
-    > [!IMPORTANT] Pokud nasadíte e-mailový profil a potom chcete změnit hodnoty nastavení **Hostitel** nebo **E-mailová adresa**, je potřeba odstranit stávající e-mailový profil a vytvořit nový s požadovanými hodnotami.
+    > [!IMPORTANT]
+    > Pokud jste nasadili e-mailový profil a potom chcete změnit hodnoty nastavení **Hostitel** nebo **E-mailová adresa**, je potřeba odstranit stávající e-mailový profil a vytvořit nový s požadovanými hodnotami.
 
 4.  Po dokončení klikněte na **Uložit zásadu**.
 
@@ -109,11 +104,13 @@ Nová zásada se zobrazí v uzlu **Zásady konfigurace** pracovního prostoru **
 
 Shrnutí stavu a výstrahy na stránce **Přehled** v pracovním prostoru **Zásady** identifikují problémy se zásadami, které vyžadují vaši pozornost. Kromě toho se v pracovním prostoru Řídicí panel zobrazí shrnutí stavu.
 
-> [!NOTE] Pokud byste chtěli e-mailový profil ze zařízení odebrat, upravte nasazení a odeberte všechny skupiny, kterých je zařízení členem.
+> [!NOTE]
+> Pokud byste chtěli e-mailový profil ze zařízení odebrat, upravte nasazení a odeberte všechny skupiny, ve kterých je zařízení členem.
 
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

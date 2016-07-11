@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 8c1f4f209c5ec704290882b8f6f71e0b1b01d21c
+ms.openlocfilehash: 986d864a3169fa3b094241a3522e3f25b7bfe349
+
 
 ---
 
@@ -29,7 +22,7 @@ ms.suite: ems
 Svým aplikacím můžete umožnit použití zásad správy mobilních aplikací buď prostřednictvím nástroje Intune App Wrapping, nebo pomocí sady Intune App SDK. V tomto tématu se dozvíte, co tyto dvě metody obnáší a kdy je použít.
 
 ## Nástroj Intune App Wrapping
-Nástroj App Wrapping se používá hlavně pro interní obchodní aplikace. Je to aplikace příkazového řádku, která vytvoří kolem aplikace obálku, a ta potom umožní správu aplikace pomocí zásad správy mobilních aplikací v Intune. K použití nástroje nepotřebujete zdrojový kód, ale potřebujete přihlašovací údaje k podepisování.  Další informace o přihlašovacích údajích k podepisování najdete na [blogu o Intune](http://blogs.technet.com/b/microsoftintune/archive/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios.aspx). Dokumentaci k nástroji App Wrapping najdete v tématech [Nástroj App Wrapping pro Android](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) a [Nástroj App Wrapping pro iOS](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)..
+Nástroj App Wrapping se používá hlavně pro interní obchodní aplikace. Je to aplikace příkazového řádku, která vytvoří kolem aplikace obálku, a ta potom umožní správu aplikace pomocí zásad správy mobilních aplikací v Intune. K použití nástroje nepotřebujete zdrojový kód, ale potřebujete přihlašovací údaje k podepisování.  Další informace o přihlašovacích údajích k podepisování najdete v [blogu o Intune](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). Dokumentaci k nástroji App Wrapping najdete v tématech [Nástroj App Wrapping pro Android](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) a [Nástroj App Wrapping pro iOS](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md).
 
 Nástroj App Wrapping nepodporuje aplikace v App Storu a Play Storu ani funkce, které vyžadují integraci doby vývoje (projděte si následující tabulku s porovnáním funkcí).
 
@@ -38,7 +31,7 @@ Pokud už je aplikace napsaná nebo pokud není dostupný zdrojový kód, použi
 ## Sada Intune App SDK
 Sada App SDK je určená hlavně zákazníkům, kteří mají aplikace v App Storu nebo Play Storu a chtějí je moct spravovat pomocí Intune. Integraci sady SDK ale může využít jakákoli aplikace, třeba i obchodní aplikace.
 
-K integraci sady SDK potřebujete přístup ke zdrojovému kódu aplikace. Pokyny k integraci sady SDK najdete v tématu [Microsoft Intune App SDK](https://msdn.microsoft.com/library/mt627769.aspx)..
+Další informace o sadě SDK najdete v tématu [Přehled](/intune/develop/intune-app-sdk). Pokud chcete začít používat sadu SDK, přečtěte si téma [Začínáme s Microsoft Intune App SDK](/intune/develop/intune-app-sdk-get-started).
 
 ## Porovnání funkcí
 Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a nástroji App Wrapping.
@@ -74,6 +67,7 @@ Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a 
 [Použití sady SDK k povolení správy mobilních aplikací pro aplikace](use-the-sdk-to-enable-apps-for-mobile-application-management.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

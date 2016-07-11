@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Řešení potíží s aktualizacemi softwaru | Microsoft Intune
-description:
-keywords:
+title: "Řešení potíží s aktualizacemi softwaru | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: d17b70f4-17b4-4d89-88fd-70fa4f34fbea
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ca4d4197ac1ece3e9abf44ad462d8ec7a807b4b2
+ms.openlocfilehash: d8470be236ac7b7a9431e07c5ca651cb6bd9fbc0
+
 
 ---
 
@@ -30,7 +24,9 @@ Informace uvedené v této části vám můžou pomoct při řešení potíží 
 
 Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md), ve kterém najdete další způsoby, jak získat nápovědu.
 
-Kódy chyb agenta Intune **Update Agent** jsou uvedené v následující tabulce. Pokud určitý kód chyby v této tabulce nenajdete, podívejte se na téma [Windows Update Agent Result Codes](http://go.microsoft.com/fwlink/?LinkID=221542) (Kódy výsledků agenta Windows Update Agent)..
+## Aktualizace kódů chyb agenta
+
+Kódy chyb agenta Intune **Update Agent** jsou uvedené v následující tabulce. Pokud určitý kód chyby v této tabulce nenajdete, podívejte se na téma [Kódy výsledků agenta služby Windows Update](http://go.microsoft.com/fwlink/?LinkID=221542).
 
 |Kód chyby|Symbolický název|Další informace|
 |--------------|-----------------|--------------------|
@@ -250,24 +246,25 @@ Kódy chyb agenta Intune **Update Agent** jsou uvedené v následující tabulce
 - Dojde k vysoké využití procesoru.
 - Aplikace instalované prostřednictvím portálu služby Intune se instalují pomalu. 
 - Microsoft Intune Center generuje následující chybu: *Při aktualizaci počítače došlo k chybě. Nalezená chyba: Kód 0x800705b4*.
-- Pole stavu v konzole správce Intune v části Skupiny > Všechna zařízení zobrazuje: *Minimálně u jednoho agenta nainstalovaného v tomto počítači došlo k chybám. Informace pro tento počítač nemusí být přesné nebo aktuální.*.
+- Pole stavu v konzole správce Intune v části Skupiny > Všechna zařízení zobrazuje: *Minimálně u jednoho agenta nainstalovaného v tomto počítači došlo k chybám. Informace pro tento počítač nemusí být přesné nebo aktuální*.
 
 K tomuto problému může dojít, pokud nahrazené aktualizace (aktualizace, které byly nahrazeny jinou aktualizací) nebyly odmítnuty po delší dobu. Během některých procesů, například při instalaci aplikace, systém Windows kontroluje všechny nahrazené aktualizace v příslušném pořadí, aby bylo možné správně mapovat aktualizace a jejich následníky. Pokud seznam nahrazených aktualizací příliš naroste, tato kontrola může způsobit vysoké využití procesoru z důvodu zatížení a potřebného času. Tento problém se týká především klientů s Windows 7, protože je pro Windows 7 k dispozici velký počet nahrazených aktualizací. Pro Windows 8 a novější operační systémy není k dispozici tolik nahrazených aktualizací, a proto nejsou tak náchylné k tomuto problému.
 
 **Řešení:** Tento problém vyřešíte podle těchto pokynů:
-1. Přihlaste se ke [konzole správce Intune](https://manage.microsoft.com)..
-2. Vyberte **Aktualizace** > **Všechny aktualizace**..
+1. Přihlaste se ke [konzole správce Intune](https://manage.microsoft.com).
+2. Vyberte **Aktualizace** > **Všechny aktualizace**.
 3. K filtrování nahrazených aktualizací použijte možnost filtru v horním panelu nástrojů.
 4. Zamítněte všechny nahrazené aktualizace, které se mohou vztahovat na Windows 7 nebo na aplikace (například Microsoft Office), které byly nainstalovány na příslušné klienty. 
 5. Restartujte příslušné klienty.
 
-Pokud používáte systém Windows 7, ujistěte se ještě, že je nainstalována následující aktualizace: [3050265 Windows Update Client pro Windows 7: červen 2015](https://support.microsoft.com/kb/3050265)..
+Pokud používáte systém Windows 7, ujistěte se ještě, že je nainstalována následující aktualizace: [3050265 Windows Update Client pro Windows 7: červen 2015](https://support.microsoft.com/kb/3050265).
 
 ### Další kroky
-Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md)..
+Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO5-->
 
 

@@ -12,6 +12,7 @@ ms.technology:
 ms.assetid: 8bb47a5c-f66d-491b-b909-e6a8844f773a
 ms.reviewer: arnab
 ms.suite: ems
+translationtype: Human Translation
 ms.sourcegitcommit: 0bb435b87c937ea118a0794c8332b9a8f268d36e
 ms.openlocfilehash: 63799f8242db4618ea7b71af9608e30b98a8a27a
 
@@ -25,7 +26,8 @@ Pokud telefon s Androidem ztratíte nebo vám ho někdo odcizí, můžete ho res
 
 Další informace o tom, co se stane, když zařízení resetujete, najdete v tématu [Co se stane, když resetuji svoje zařízení pomocí portálu společnosti](what-happens-if-you-reset-your-device-using-the-company-portal-android.md).
 
-> [!WARNING] Když v zařízení obnovíte výchozí nastavení výrobce, odeberete z něj jak svoje osobní, tak i pracovní nebo školní informace.
+> [!WARNING] 
+> Když v zařízení obnovíte výchozí nastavení výrobce, odeberete z něj jak svoje osobní, tak i pracovní nebo školní informace.
 
 1.  V prohlížeči otevřete [web Portál společnosti](http://portal.manage.microsoft.com) a přihlaste se ke svému pracovnímu nebo školnímu účtu.
 
@@ -41,6 +43,6 @@ Pokud se vám ztracené nebo ukradené zařízení nedaří resetovat, požádej
 
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jun16_HO5-->
 
 

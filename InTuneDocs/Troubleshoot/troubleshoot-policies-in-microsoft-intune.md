@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Řešení potíží se zásadami | Microsoft Intune
-description:
-keywords:
+title: "Řešení potíží se zásadami | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/26/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 99fb6db6-21c5-46cd-980d-50f063ab8ab8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: ac3417781df0a5b092a70620aa7343849b1e8c82
+ms.openlocfilehash: 3ac6b06b7eb85503786b4d8b0b9bd2a30d2a15e6
+
 
 ---
 
@@ -53,31 +46,29 @@ Na tomto snímku obrazovky vidíte dva jasné příklady:
 
 ![Zásady zařízení Intune](../media/Intune-Device-Policy-v.2.jpg)
 
-> [!NOTE]
-> Mějte na paměti, že když použijete dvě zásady s různými úrovněmi omezení na stejné zařízení nebo uživatele, v praxi se uplatní víc omezující zásada.
+> [!NOTE] Mějte na paměti, že když použijete dvě zásady s různými úrovněmi omezení na stejné zařízení nebo uživatele, v praxi se uplatní víc omezující zásada.
 
 ## Obnovení zásad a intervaly aktualizace
 Upozorňujeme, že zásady se pravidelně obnovují a aktualizují. Obecně platí, že zásady by se měly na zařízeních zaregistrovat do 15 minut od provedení změny. Tady jsou další podrobnosti o pravidelných intervalech obnovení zásad:
 
--   **Zařízení s Windows zaregistrovaná pro správu MDM**: Spouští se na zařízení každý den prostřednictvím naplánované úlohy ve 3:00 místního času.
+-   **Zařízení s Windows zaregistrovaná pro MDM**: Zásady se aktualizují každých 8 hodin pro zařízení s Windows 8.1 a Windows 10 a každých 24 hodin pro zařízení s Windows RT.
 
--   **Windows Phone**: Zásada se aktualizuje každých 8 hodin. To se dá vynutit obnovením na portálu společnosti v části **Nastavení**..
+-   **Windows Phone**: Zásada se aktualizuje každých 8 hodin. To se dá vynutit obnovením na portálu společnosti v části **Nastavení**.
 
--   **iOS**: Zásada se aktualizuje jednou denně v náhodném časovém intervalu. To se dá taky vynutit otevřením portálu společnosti, výběrem zařízení a kliknutím na **Synchronizace**..
+-   **iOS**: Zásada se aktualizuje jednou denně v náhodném časovém intervalu. Tuto akci je možné vynutit také otevřením portálu společnosti, výběrem zařízení a zvolením **Synchronizace**.
 
--   **Android**: Zásada se aktualizuje jednou denně v náhodném časovém intervalu. To se dá taky vynutit otevřením portálu společnosti, výběrem zařízení a kliknutím na **Synchronizace**..
+-   **Android**: Zásada se aktualizuje jednou denně v náhodném časovém intervalu. Tuto akci je možné vynutit také otevřením portálu společnosti, výběrem zařízení a zvolením **Synchronizace**.
 
 ## Chyby související se zásadami Microsoft Intune v souboru policyplatform.log
 U zařízení s Windows nespravovaných pomocí MDM můžou být chyby zásad v souboru policyplatform.log výsledkem jiného než výchozího nastavení nástroje Řízení uživatelských účtů v systému Windows (UAC) v zařízení. Některá nevýchozí nastavení UAC můžou ovlivnit zpracování zásad a instalace klientů Microsoft Intune.
 
 ### Řešení potíží s UAC
 
-1.  Vyřaďte počítač, jak je popsané v tématu [Vyřazení zařízení ze správy službou Microsoft Intune](/intune/deploy-use/retire-devices-from-microsoft-intune-management)..
+1.  Vyřaďte počítač, jak je popsané v tématu [Vyřazení zařízení ze správy službou Microsoft Intune](/intune/deploy-use/retire-devices-from-microsoft-intune-management).
 
 2.  Počkejte 20 minut, než se odebere klientský software.
 
-    > [!NOTE]
-    > Nepokoušejte se klienta odebrat pomocí panelu Programy a funkce.
+    > [!NOTE] Nepokoušejte se klienta odebrat pomocí panelu Programy a funkce.
 
 3.  V nabídce Start zadejte **UAC**. Otevře se nastavení nástroje Řízení uživatelských účtů.
 
@@ -102,8 +93,8 @@ Pokud chcete tento problém vyřešit, nastavte místní čas počítače co nej
 Zařízení se systémy Windows Phone a Windows RT neumožňují snížení zásad zabezpečení nastavených prostřednictvím MDM nebo EAS, jakmile je nastavíte. Nastavíte třeba **Minimální počet znaků hesla** na hodnotu 8 a tu se pak pokusíte snížit na 4. V zařízení se už ale používá více omezující zásada.
 
 Pokud chcete zásadu změnit na méně zabezpečenou hodnotu, v závislosti na platformě zařízení může být potřeba resetovat zásady zabezpečení.
-Třeba v systému Windows RT potáhněte na ploše prstem zprava. Otevře se panel **Ovládací tlačítka** a v něm klikněte na **Nastavení** &gt; **Ovládací panely**.  Vyberte aplet **Uživatelské účty** .
-V navigační nabídce vlevo najdete dole odkaz **Resetovat zásady zabezpečení** . Klikněte na něj a potom klikněte na tlačítko **Resetovat zásady** .
+Třeba v systému Windows RT potáhněte na ploše prstem zprava. Otevře se panel **Ovládací tlačítka** a v něm zvolte **Nastavení** &gt; **Ovládací panely**.  Vyberte aplet **Uživatelské účty** .
+V navigační nabídce vlevo najdete dole odkaz **Resetovat zásady zabezpečení** . Zvolte jej a potom zvolte tlačítko **Resetovat zásady** .
 Jiná zařízení MDM, třeba zařízení se systémy Android, Windows Phone 8.1 (a novějšími) a iOS, může být potřeba vyřadit a znovu zaregistrovat do služby, abyste mohli použít méně omezující zásadu.
 
 ## Zařízení se systémem Android nevynucují změny zásad zabezpečení bez přijetí koncovým uživatelem
@@ -115,9 +106,10 @@ Zařízení MDM se systémem Android na rozdíl od ostatních platforem nepovolu
 **Řešení:** V [Centru pro správu Office 365](https://portal.office.com/) odeberte zvláštní znaky z názvu společnosti a uložte informace o společnosti.
 
 ### Další kroky
-Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md)..
+Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO3-->
 
 

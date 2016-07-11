@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Přizpůsobení zobrazení konzoly pro role | Microsoft Intune
-description:
-keywords:
+title: "Přizpůsobení zobrazení konzoly pro role | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: e0783eaa-67dc-410e-9e80-4d3aa72f36d8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
+ms.openlocfilehash: 52a77e50b3dde24ba270766d4472bdd6176cc415
+
 
 ---
 
@@ -30,9 +24,9 @@ Můžete filtrovat zobrazení konzoly správce Microsoft Intune a povolit správ
 
 ## Vytvoření vlastního zobrazení
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte **Správce** &gt; **Správci služeb**..
+1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Správce**&gt;**Správci služeb**.
 
-2.  Ze seznamu správců služeb vyberte uživatele, u kterého chcete změnit označení, a vyberte **Spravovat přístup**..
+2.  Ze seznamu správců služeb zvolte uživatele, u kterého chcete změnit označení, a pak vyberte **Spravovat přístup**.
 
 3.  V dialogu **Spravovat přístup** vyberte úroveň přístupu, kterou chcete vybranému uživateli přidělit. Na výběr máte tyto:
 
@@ -44,7 +38,7 @@ Můžete filtrovat zobrazení konzoly správce Microsoft Intune a povolit správ
 
     **Helpdesk – uzel Skupiny** omezuje to, co mohou správci zobrazovat a dělat s následujícími položkami:
 
-    -   Zobrazení seznamu uživatelů a zařízení Správce nemůže používat filtry k úpravě zařízení. Můžete ale pomocí filtrování skupiny změnit, co správce uvidí. Další informace najdete v tématu [Použití skupin pro správu uživatelů a zařízení s Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)..
+    -   Zobrazení seznamu uživatelů a zařízení Správce nemůže používat filtry k úpravě zařízení. Můžete ale pomocí filtrování skupiny změnit, co správce uvidí. Další informace najdete v tématu [Použití skupin pro správu uživatelů a zařízení s Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md).
 
     -   Tisk seznamu uživatelů a zařízení
 
@@ -73,6 +67,7 @@ Můžete filtrovat zobrazení konzoly správce Microsoft Intune a povolit správ
 Když nakonfigurovaný správce později otevře konzolu správce Intune , bude mu udělená úroveň přístupu, kterou jste určili.
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

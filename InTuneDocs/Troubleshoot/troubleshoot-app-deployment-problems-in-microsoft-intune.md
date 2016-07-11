@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Řešení problémů s nasazením aplikací | Microsoft Intune
-description:
-keywords:
+title: "Řešení problémů s nasazením aplikací | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/26/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 28ac298e-fb73-4c1c-b3fd-8336639e05e6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 327c3aaf42aaf7f97e2b78d5ae38584bc13773e1
+ms.openlocfilehash: dc782a54983e4db39a029a15183834a925d0e00c
+
 
 ---
 
@@ -37,13 +30,13 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 
 1.  Zkontrolujte, jestli váš účet existuje v [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) nebo jestli není zakázaný.
 
-2.  Ujistěte se, že je pro vás tento účet zřízený v [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)..
+2.  Ujistěte se, že je pro vás tento účet zřízený v [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854).
 
-3.  V [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) se ujistěte, že pro přihlášení do Intune používáte správné uživatelské jméno a heslo ve formátu: **joe@domain.com**..
+3.  V [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) se ujistěte, že pro přihlášení do Intune používáte správné uživatelské jméno a heslo ve formátu: **joe@domain.com**.
 
 ### Pokud v aplikaci Portál společnosti chybí kontaktní informace na IT oddělení
 
-1.  V konzole správce Intune klikněte na **Správa** &gt; **Portál společnosti**..
+1.  V konzole správce Intune zvolte **Správa** &gt; **Portál společnosti**.
 
 2.  Nastavte kontaktní údaje pro **kontaktování IT oddělení** .
 
@@ -63,7 +56,7 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 
 4.  Pokud indikátor průběhu stahování iOS aplikace ukazuje dokončení, ale aplikace nejde nainstalovat, bude nejspíš chyba v souborech aplikace, které jste dali k dispozici.
 
-### Pokud kliknutím na odkaz na iOS aplikaci přejdete do předchozího umístění v iTunes App Storu
+### Pokud prostřednictvím odkazu na aplikaci iOS přejdete do předchozího umístění v iTunes App Storu
 
 1.  Aktuální relace iTunes App Storu se otevírá na předchozí stránce aplikace.
 
@@ -87,13 +80,13 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 
 ### Chyba: Vydavatel neexistuje.
 Používáte funkci **Přidat smlouvu na ostatní software** pro přidání licenční smlouvy třetí strany. Pokoušíte se přidat vydavatele přes stránku **Licenční smlouva na ostatní software**. Stránka poskytuje seznam existujících vydavatelů v abecedním pořadí.
-Zadali jste chybějícího vydavatele, ale zobrazí se chybová zpráva **Vydavatel neexistuje**.. 
+Zadali jste chybějícího vydavatele, ale zobrazí se chybová zpráva **Vydavatel neexistuje**. 
 
 Jedná se o účel. Intune poskytuje sledování licencí pouze pro oblíbené softwarové produkty. Intune vyžaduje, aby software nahlásily nejméně 4 samostatné účty předtím, než je k dispozici jako volba v procesu licencování.
 
 ### Pokud spravované aplikace nehlásí stav instalace
 
-Stav instalace se pro instalace spravovaných aplikací před aktualizací služby Microsoft Intune v listopadu 2014 neshromažďoval. Pro zařízení, na které se nainstalovaly spravované aplikace před aktualizací této služby, aktualizujte nasazení každé přidružené aktualizace pomocí odpovídající akce nasazení (například **Dostupná instalace**). Každé zařízení aplikaci aktualizuje během automatického zjišťování dostupnosti aplikací. Další informace najdete v článku [Aktualizace aplikací pomocí služby Microsoft Intune](/intune/deploy-use/update-apps-using-microsoft-intune)..
+Stav instalace se pro instalace spravovaných aplikací před aktualizací služby Microsoft Intune v listopadu 2014 neshromažďoval. Pro zařízení, na které se nainstalovaly spravované aplikace před aktualizací této služby, aktualizujte nasazení každé přidružené aktualizace pomocí odpovídající akce nasazení (například **Dostupná instalace**). Každé zařízení aplikaci aktualizuje během automatického zjišťování dostupnosti aplikací. Další informace najdete v tématu [Aktualizace aplikací pomocí Microsoft Intune](/intune/deploy-use/update-apps-using-microsoft-intune).
 
 ## <a name="BKMK_SoftDistErrorCodes"></a>Kódy chyb nasazení aplikací
 V následující tabulce najdete běžné chyby, ke kterým může dojít během nasazování aplikací v Intune, pravděpodobné příčiny a možná řešení.
@@ -104,11 +97,13 @@ V následující tabulce najdete běžné chyby, ke kterým může dojít během
 |0x80073CF0|Balíček se nepodařilo otevřít.|Možné příčiny:<br /><br />-   Balíček není podepsaný.<br />-   Název vydavatele neodpovídá subjektu podpisového certifikátu.<br /><br />Další informace najdete v protokolu událostí AppxPackagingOM.|
 |0x80073CF3|Selhalo ověření aktualizace, závislostí nebo konfliktů balíčku.|Možné příčiny:<br /><br />-   Příchozí balíček je v konfliktu s nainstalovaným balíčkem.<br />-   Nebyla nalezena zadaná závislost balíčku.<br />-   Balíček nepodporuje správnou architekturu procesoru.<br /><br />Další informace najdete v protokolu událostí AppXDeployment-Server.|
 |0x80073CFB|Zadaný balíček je už nainstalovaný a přeinstalace balíčku je blokovaná.|Tato chybová zpráva se může zobrazit při instalaci balíčku, který není totožný s balíčkem, který už je nainstalovaný. Potvrďte, že součástí balíčku je i digitální podpis. Pokud se balíček znovu vytvoří nebo znovu podepíše, nebude už tento balíček při bitovém porovnání totožný s dříve nainstalovaným balíčkem. Tuto chybu můžete odstranit jedním ze dvou způsobů:<br /><br />-   Zvýšíte číslo verze aplikace a pak balíček znova sestavíte a podepíšete.<br />-   Než budete instalovat nový balíček, odeberte starý balíček pro každého uživatele v systému.|
+|0x87D1041C|Instalace aplikace úspěšně proběhla, ale není zjištěna aplikace.|- Uživatel nainstaloval aplikaci z portálu společnosti a potom ji odinstaloval přímo ze zařízení. Znovu nainstalujte aplikaci z portálu společnosti.<br /><br />- Je možné, že se číslo verze obchodní aplikace rozpoznané v Intune liší od verze nainstalované v zařízení. Ujistěte se, že je v Intune uvedena správná verze, a nainstalujte aplikaci znovu.|
 
 ### Další kroky
-Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md)..
+Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO3-->
 
 

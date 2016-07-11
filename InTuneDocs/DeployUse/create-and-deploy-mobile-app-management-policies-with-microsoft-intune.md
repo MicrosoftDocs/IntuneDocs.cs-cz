@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Vytvoření a nasazení zásad MAM | Microsoft Intune
-description:
-keywords:
+title: "Vytvoření a nasazení zásad MAM | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: c1b9a343-1737-4a65-a9c6-aca48acad11c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: joglocke
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 3f79de38ce7fc9a5434033ee45ddf43f22517356
+ms.openlocfilehash: f1b9216c673039f8600e07508b255e12cc30bf3f
+
 
 ---
 
@@ -34,6 +27,8 @@ Toto téma popisuje proces vytváření zásad MAM na **Portálu Azure**. Portá
 - Zařízení, která nejsou spravována žádným řešením MDM (BYOD).
 
 Pokud teď ke správě svých zařízení používáte **konzolu pro správu Intune**, můžete zásadu MAM podporující aplikace pro zařízení zaregistrovaná v Intune vytvořit pomocí [konzoly pro správu Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
+Zásady MAM vytvořené v konzole pro správu Intune nelze importovat do portálu Azure.  Zásady MAM je nutné znovu vytvořit na portálu Azure.
+
 >[!IMPORTANT]
 > V Konzole správce Intune nemusíte vidět všechna nastavení zásad MAM. Na Portálu Azure najdete novou konzolu pro správu, kterou je možné používat pro vytváření zásad MAM. Pokud vytváříte zásady MAM v konzole pro správu Intune i na portálu Azure, pro aplikace se použije a pro uživatele se nasadí zásada na portálu Azure.
 
@@ -49,7 +44,8 @@ Před vytvořením zásady MAM si projděte informace o [požadavcích a podpoř
 
     ![Snímek obrazovky okna Správa mobilních aplikací Intune](../media/AppManagement/AzurePortal_MAM_Mainblade.png)
 
-    > [!TIP] Pokud portál Azure používáte poprvé, přečtěte si článek [Portál Azure pro zásady Microsoft Intune MAM](azure-portal-for-microsoft-intune-mam-policies.md) a seznamte se s tím, jak portál funguje.
+    > [!TIP]
+    > Pokud Portál Azure používáte poprvé, přečtěte si článek [Portál Azure pro zásady Microsoft Intune MAM](azure-portal-for-microsoft-intune-mam-policies.md) a seznamte se s tím, jak portál funguje.
 
 2.  V okně **Nastavení** zvolte **Zásady aplikací**.  Otevře se okno **Zásady aplikací** , kde můžete vytvářet nové zásady a upravovat zásady, které už existují.
 
@@ -65,7 +61,8 @@ Před vytvořením zásady MAM si projděte informace o [požadavcích a podpoř
 
 5.  Zvolením možnosti **Aplikace** otevřete **okno Aplikace**, kde se zobrazí seznam dostupných aplikací. Ze seznamu můžete vybrat jednu nebo několik aplikací a přidružit je k zásadě, kterou vytváříte. Jakmile vyberete aplikace, uložte svůj výběr zvolením tlačítka **Vybrat** v dolní části okna **Aplikace**.
 
-    > [!IMPORTANT] Při vytváření zásady musíte vybrat aspoň jednu aplikaci.
+    > [!IMPORTANT]
+    > Při vytváření zásady musíte vybrat aspoň jednu aplikaci.
 
 6.  V **okně Přidat zásadu** zvolte **Konfigurovat požadované nastavení**. Otevře se okno nastavení zásad.
 
@@ -108,7 +105,8 @@ Zásada není po vytvoření pomocí výš uvedeného postupu nasazená pro žá
 
 Tyto zásady ovlivní jen uživatele, kteří mají přiřazené licence [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].  Uživatele, kteří jsou ve skupinách zabezpečení, které jste vybrali, a kteří nemají přiřazenou licenci [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], tyto zásady neovlivní.
 
-Pokud ke správě zařízení s iOS a Androidem používáte Intune s Configuration Managerem, zásady se použijí jenom pro uživatele přímo ve skupinách, které jste vybrali.  Členy podřízených skupin vnořených ve skupinách, které jste vybrali, tyto zásady neovlivní.
+>[!IMPORTANT]
+> Pokud ke správě zařízení s iOS a Androidem používáte Intune s Configuration Managerem, zásady se použijí jenom pro uživatele přímo ve skupinách, které jste vybrali.  Členy podřízených skupin vnořených ve skupinách, které jste vybrali, tyto zásady neovlivní.
 
 Koncoví uživatelé můžou stahovat aplikace z App Storu nebo Google Play. Podrobně vás tím, jak MAM chrání data společnosti na zařízení, provede téma [Činnost koncového uživatele v aplikacích s podporou správy mobilních aplikací (MAM)](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md).
 
@@ -167,6 +165,7 @@ Pokud chcete zobrazit úplný seznam nastavení zásad pro iOS a Android, vybert
 [Činnost koncového uživatele v aplikacích s podporou správy mobilních aplikací (MAM)](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
