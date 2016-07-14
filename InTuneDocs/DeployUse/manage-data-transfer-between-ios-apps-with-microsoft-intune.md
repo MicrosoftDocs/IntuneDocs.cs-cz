@@ -74,6 +74,6 @@ Tato konfigurace je nutná pro zařízení spravovaná pomocí řešení MDM jin
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

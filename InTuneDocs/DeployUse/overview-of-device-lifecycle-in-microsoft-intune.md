@@ -45,6 +45,6 @@ Když dojde ke ztrátě nebo odcizení zařízení, když je potřeba zařízen�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

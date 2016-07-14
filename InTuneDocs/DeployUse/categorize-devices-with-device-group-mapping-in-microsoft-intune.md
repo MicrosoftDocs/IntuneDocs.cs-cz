@@ -52,6 +52,6 @@ Když nyní uživatelé registrují svá zařízení, zobrazí se jim seznam nak
 [Použití skupin pro správu uživatelů a zařízení s Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 

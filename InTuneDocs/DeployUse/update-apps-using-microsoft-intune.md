@@ -49,6 +49,6 @@ V případě aplikací nasazených jako odkaz na obchod je aktualizace spravová
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 
