@@ -104,6 +104,6 @@ Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podpor
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 

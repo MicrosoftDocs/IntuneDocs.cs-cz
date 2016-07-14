@@ -79,6 +79,6 @@ Zobrazí se odkaz s informacemi o postupu upgradu. Koncový uživatel si může 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

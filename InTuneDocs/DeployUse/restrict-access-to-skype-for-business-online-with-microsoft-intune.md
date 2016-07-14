@@ -68,9 +68,11 @@ Pokud je uživatel v obou skupinách, bude ze zásad vyloučený.
 ### Krok 2: Konfigurace a nasazení zásad dodržování předpisů
 [Vytvořte](create-a-device-compliance-policy-in-microsoft-intune.md) a [nasaďte](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md) zásady dodržování přepisů na všechna zařízení, která budou zásadami ovlivněná. To jsou všechna zařízení, která uživatelé používají v **cílových skupinách**.
 
+> [!NOTE]
 > [!NOTE] Zásady dodržování předpisů se nasadí do skupin [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] a zásady podmíněného přístupu cílí na skupiny zabezpečení služby Azure Active Directory.
 
 
+> [!IMPORTANT]
 > [!IMPORTANT] Pokud jste zásady dodržování předpisů nenasadili, budou se zařízení považovat za vyhovující.
 
 Až budete připravení, pokračujte **Krokem 3**.
@@ -113,6 +115,6 @@ Vyberte libovolnou skupinu mobilních zařízení a pak na kartě **Zařízení*
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 
