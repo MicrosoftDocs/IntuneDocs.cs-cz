@@ -28,6 +28,7 @@ Při nasazování aplikací můžete zvolit jednu z následujících akcí nasaz
 
 -   **Požadovaná instalace** – Aplikace se nainstaluje do zařízení bez nutnosti zásahu koncového uživatele.
 
+    > [!TIP]
     > [!TIP] Pro zařízení s iOS, která nejsou v dohledovém režimu, a pro všechna zařízení s Androidem musí uživatel aplikaci před instalací přijmout.
     > 
     >  Pokud koncový uživatel odinstaluje aplikaci, která jste nasadili jako požadovanou instalaci, Intune ji při příštím cyklu inventáře, který obvykle probíhá každých 7 dní, znovu automaticky nainstaluje.
@@ -52,6 +53,7 @@ Při nasazování aplikací můžete zvolit jednu z následujících akcí nasaz
 |Externí odkaz (nasazený pro skupinu zařízení)|Ne|Ne|Ne|Ne|
 |Spravovaná aplikace pro iOS z App Storu (nasazené pro skupinu uživatelů)|Ano|Ano|Ano|Ano|
 |Spravovaná aplikace pro iOS z App Storu (nasazené pro skupinu zařízení)|Ano|Ne|Ano|Ano|
+> [!TIP]
 > [!TIP] Když nasazujete aplikace a vyberete jak skupiny uživatelů, tak zařízení, můžete aplikaci nasadit jenom s možností **Dostupná instalace**.
 
 ## Konflikty nasazení
@@ -70,6 +72,6 @@ Přečtěte si, jak [nasazovat aplikace v Microsoft Intune](deploy-apps-in-micro
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 

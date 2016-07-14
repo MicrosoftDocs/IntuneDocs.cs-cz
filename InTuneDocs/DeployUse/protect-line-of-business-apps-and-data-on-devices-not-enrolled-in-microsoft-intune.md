@@ -74,6 +74,6 @@ Obchodní aplikaci můžete ze seznamu aplikací odebrat.  Tato operace odebere 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 
