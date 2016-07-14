@@ -94,6 +94,6 @@ Podrobnosti o posledním vývoji najdete v tématu [Co je nového v Microsoft In
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO1-->
 
 
