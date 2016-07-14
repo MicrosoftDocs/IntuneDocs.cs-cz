@@ -34,6 +34,7 @@ Informace o samoobslužné nápovědě Intune najdete v tématu [Obecné tipy pr
 
     -   V případě všech ostatních problémů s Intune vyberte možnost **Správa mobilních zařízení**. Tato možnost platí i pro Office 365 MDM a nástroj System Center Configuration Manager s Intune.
 
+    > [!NOTE]
     > [!NOTE] Možná budete muset kliknout na tlačítko **Další** pod seznamem, aby se zobrazily všechny kategorie.
 
 3.  Na stránce **Identifikovat problém** vyberte položky **Funkce** a **Příznak**, se kterými potřebujete pomoct. Zobrazí se výzva k zadání informací do polí **Shrnutí problémů** a **Podrobnosti o problému**.
@@ -51,7 +52,8 @@ V tématu [Kontaktujte telefonickou odbornou pomoc pro Microsoft Intune](contact
 Pokud chcete sledovat své žádosti, přejděte do [Centra pro správu Office 365](https://portal.office.com/admin/default.aspx). V dolní části seznamu **Vytvořit žádost o službu** klikněte na **Zobrazit všechny lístky podpory**. Ve výchozím nastavení se zobrazí všechny žádosti o služby, které jsou v otevřeném stavu. Pokud chcete změnit nastavení zobrazených žádostí, například aby se zobrazovaly zavřené žádosti, klikněte na ikonu filtru v horním navigačním panelu a vyberte požadované zobrazení.
 
 > [!NOTE]
-> **Pokud používáte Microsoft System Center Configuration Manager** nebo **Microsoft System Center Endpoint Protection:** Technickou podporu pro Configuration Manager nebo Endpoint Protection získáte od svého partnera, případně přejděte do [Centra řešení Microsoft System Center Configuration Manager a System Center Endpoint Protection](http://www.microsoft.com/en-us/server-cloud/products/system-center-2012-r2/resources.aspx), kde najdete řadu materiálů pro svépomocné řešení a taky možnost otevření žádosti o podporu online nebo po telefonu.
+> [!NOTE]
+**Pokud používáte Microsoft System Center Configuration Manager** nebo **Microsoft System Center Endpoint Protection:** Technickou podporu pro Configuration Manager nebo Endpoint Protection získáte od svého partnera, případně přejděte do [Centra řešení Microsoft System Center Configuration Manager a System Center Endpoint Protection](http://www.microsoft.com/en-us/server-cloud/products/system-center-2012-r2/resources.aspx), kde najdete řadu materiálů pro svépomocné řešení a taky možnost otevření žádosti o podporu online nebo po telefonu.
 >
 > Technická podpora pro System Center Configuration Manager nebo System Center Endpoint Protection vyžaduje buď platbu nebo se odečte od stávajících licenčních smluv nebo smluv Premier Support.
 
@@ -138,6 +140,6 @@ Součásti naší role:
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO1-->
 
 
