@@ -74,6 +74,6 @@ Shrnutí stavu a výstrahy na stránce **Přehled** v pracovním prostoru **Zás
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 
