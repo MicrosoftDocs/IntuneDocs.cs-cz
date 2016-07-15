@@ -133,6 +133,6 @@ Můžete se taky podívat na datum a čas posledního úspěšného pokusu o syn
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 
