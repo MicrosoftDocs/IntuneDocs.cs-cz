@@ -5040,9 +5040,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\EndUser\device-doesnt-have-secure-boot-enabled-windows.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/24ef074b748cec6b358ef4067e73847dca718c25/InTuneDocs/EndUser/device-doesnt-have-secure-boot-enabled-windows.md)
-* Current Handback File: [device-doesnt-have-secure-boot-enabled-windows.8ba1f81cb03db1e8d5a8d36049db35b3fbaad0ea.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/f59b37532dab53b5f3991483665473c3a6c5323a/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/device-doesnt-have-secure-boot-enabled-windows.8ba1f81cb03db1e8d5a8d36049db35b3fbaad0ea.cs-cz.xlf)
-* Current Handback Datetime: 2016-07-03 01:03:22
+* Current Target File: [InTuneDocs\EndUser\device-doesnt-have-secure-boot-enabled-windows.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/1c5d487fa64e5801a7d44d41a8492dd42d6465f7/InTuneDocs/EndUser/device-doesnt-have-secure-boot-enabled-windows.md)
+* Current Handback File: [device-doesnt-have-secure-boot-enabled-windows.8ba1f81cb03db1e8d5a8d36049db35b3fbaad0ea.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/865814f023d45aaffbb5fadd590b83dd32170e3e/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/device-doesnt-have-secure-boot-enabled-windows.8ba1f81cb03db1e8d5a8d36049db35b3fbaad0ea.cs-cz.xlf)
+* Current Handback Datetime: 2016-07-15 12:18:25
 * [Back to Top](#report-top)
 
 ##### <a name='61bed789f9eedcd15c400e58b4158fe3cb78b981280'></a> Source: [InTuneDocs\EndUser\device-doesnt-have-the-required-minimum-operating-system-version-android.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ea35d0222f33a0babb8bdc4fb30f0f5a405214a2/InTuneDocs/EndUser/device-doesnt-have-the-required-minimum-operating-system-version-android.md)
@@ -5187,9 +5187,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\EndUser\enroll-your-device-in-intune-mac-os-x.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/24ef074b748cec6b358ef4067e73847dca718c25/InTuneDocs/EndUser/enroll-your-device-in-intune-mac-os-x.md)
-* Current Handback File: [enroll-your-device-in-intune-mac-os-x.4f13bd894e063db711302a6090fb7a631d192418.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/f59b37532dab53b5f3991483665473c3a6c5323a/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/enroll-your-device-in-intune-mac-os-x.4f13bd894e063db711302a6090fb7a631d192418.cs-cz.xlf)
-* Current Handback Datetime: 2016-07-03 01:03:22
+* Current Target File: [InTuneDocs\EndUser\enroll-your-device-in-intune-mac-os-x.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/1c5d487fa64e5801a7d44d41a8492dd42d6465f7/InTuneDocs/EndUser/enroll-your-device-in-intune-mac-os-x.md)
+* Current Handback File: [enroll-your-device-in-intune-mac-os-x.4f13bd894e063db711302a6090fb7a631d192418.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/865814f023d45aaffbb5fadd590b83dd32170e3e/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/enroll-your-device-in-intune-mac-os-x.4f13bd894e063db711302a6090fb7a631d192418.cs-cz.xlf)
+* Current Handback Datetime: 2016-07-15 12:18:25
 * [Back to Top](#report-top)
 
 ##### <a name='e9315be912ae5ded6401c842351138aed927fdd8290'></a> Source: [InTuneDocs\EndUser\enroll-your-device-in-intune-windows.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ea35d0222f33a0babb8bdc4fb30f0f5a405214a2/InTuneDocs/EndUser/enroll-your-device-in-intune-windows.md)
@@ -7500,9 +7500,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\EndUser\what-happens-if-you-reset-your-device-using-the-company-portal-ios.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/3e67580b6573fea3970c424407b8b4150dc0305e/InTuneDocs/EndUser/what-happens-if-you-reset-your-device-using-the-company-portal-ios.md)
-* Current Handback File: [what-happens-if-you-reset-your-device-using-the-company-portal-ios.1551b69b3a18b008653bdd636eba859a204a4c33.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/d04715ee42d2e6447381e90912ae76439bfaf3a4/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/what-happens-if-you-reset-your-device-using-the-company-portal-ios.1551b69b3a18b008653bdd636eba859a204a4c33.cs-cz.xlf)
-* Current Handback Datetime: 2016-07-02 09:48:52
+* Current Target File: [InTuneDocs\EndUser\what-happens-if-you-reset-your-device-using-the-company-portal-ios.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/1c5d487fa64e5801a7d44d41a8492dd42d6465f7/InTuneDocs/EndUser/what-happens-if-you-reset-your-device-using-the-company-portal-ios.md)
+* Current Handback File: [what-happens-if-you-reset-your-device-using-the-company-portal-ios.1551b69b3a18b008653bdd636eba859a204a4c33.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/865814f023d45aaffbb5fadd590b83dd32170e3e/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/what-happens-if-you-reset-your-device-using-the-company-portal-ios.1551b69b3a18b008653bdd636eba859a204a4c33.cs-cz.xlf)
+* Current Handback Datetime: 2016-07-15 12:18:25
 * [Back to Top](#report-top)
 
 ##### <a name='dfebe4854a1a073acd8a9e2c17b56cc1c2969f48461'></a> Source: [InTuneDocs\EndUser\what-happens-if-you-reset-your-device-using-the-company-portal-windows.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ea35d0222f33a0babb8bdc4fb30f0f5a405214a2/InTuneDocs/EndUser/what-happens-if-you-reset-your-device-using-the-company-portal-windows.md)
@@ -8963,14 +8963,14 @@
 
 ##### <a name='4a7accd0ebf4e231104a6d61faa68bf4a03fe7ff575'></a> Source: [InTuneDocs\includes\accessibility3_md.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/accessibility3_md.md)
 * Status: InSyncHandedBackSuccess
-* Target File: [InTuneDocs\includes\accessibility3_md.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/1a20ccbf740a1a98891e59fa41caf8bc26ef4ce1/InTuneDocs/includes/accessibility3_md.md)
+* Target File: [InTuneDocs\includes\accessibility3_md.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/1c5d487fa64e5801a7d44d41a8492dd42d6465f7/InTuneDocs/includes/accessibility3_md.md)
 * Handoff File: [accessibility3_md.ba86abddab907a791e45ea498c35ea76267a9082.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3774776b6d8c533d70c375a1042dac80efce57f3/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/accessibility3_md.ba86abddab907a791e45ea498c35ea76267a9082.cs-cz.xlf)
 * Handoff Datetime: 2016-06-27 10:28:47
 * Handoff Reason: Include
 * Archive File: [accessibility3_md.ba86abddab907a791e45ea498c35ea76267a9082.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/263e8608869fe91246c5434e4dd1aeb051f8b7c5/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/archive/accessibility3_md.ba86abddab907a791e45ea498c35ea76267a9082.cs-cz.xlf)
 * Archive Datetime: 2016-07-02 00:54:54
-* Handback File: [accessibility3_md.ba86abddab907a791e45ea498c35ea76267a9082.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/916b2db14fb971bb05d671e1b347fe2dd14b844d/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/accessibility3_md.ba86abddab907a791e45ea498c35ea76267a9082.cs-cz.xlf)
-* Handback Datetime: 2016-07-03 00:22:18
+* Handback File: [accessibility3_md.ba86abddab907a791e45ea498c35ea76267a9082.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/865814f023d45aaffbb5fadd590b83dd32170e3e/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/accessibility3_md.ba86abddab907a791e45ea498c35ea76267a9082.cs-cz.xlf)
+* Handback Datetime: 2016-07-15 12:18:25
 * [Back to Top](#report-top)
 
 ##### <a name='5f5570d77261f22d8f4e391a5fb03feb99c8d8a0576'></a> Source: [InTuneDocs\includes\accessibility4.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/accessibility4.md)
