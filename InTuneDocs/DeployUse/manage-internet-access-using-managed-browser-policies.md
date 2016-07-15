@@ -150,6 +150,6 @@ Pokud je na zařízení nasazených víc zásad spravovaného prohlížeče a do
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 
