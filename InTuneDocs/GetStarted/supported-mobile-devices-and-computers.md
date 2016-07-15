@@ -33,6 +33,6 @@ Můžete spravovat tato zařízení a počítače, a to i když nejsou připojen
 [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

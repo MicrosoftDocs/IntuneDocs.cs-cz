@@ -91,6 +91,6 @@ Odstranění manažera registrace zařízení nemá vliv na zaregistrovaná zař
 -   Vztah odstraněného účtu manažera registrace zařízení k zaregistrovaným zařízením trvá, ale nebudou se registrovat žádná další zařízení.
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 
