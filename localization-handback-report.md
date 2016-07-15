@@ -1,11 +1,29 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [InTuneDocs\develop\intune-app-sdk-android.md](https://github.com/Microsoft/IntuneDocs-pr/blob/51f7734e2acced469ec3520d74a8079dac8223f2/InTuneDocs/develop/intune-app-sdk-android.md) | OutofSyncHandedBackSuccess | [Details](#bcb62e9c99c1f5a5b53ada688ef39a59674dea04264)
 
 ## Item Details
+##### <a name='bcb62e9c99c1f5a5b53ada688ef39a59674dea04264'></a> Source: [InTuneDocs\develop\intune-app-sdk-android.md](https://github.com/Microsoft/IntuneDocs-pr/blob/51f7734e2acced469ec3520d74a8079dac8223f2/InTuneDocs/develop/intune-app-sdk-android.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [intune-app-sdk-android.13ba26a9f5060cab39ff9d68283cfc8d10856886.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/c10a8ecbae2e084b51b9cdace9f378730625b7fa/ol-handoff/Microsoft/IntuneDocs-pr.cs-cz/master/intune-app-sdk-android.13ba26a9f5060cab39ff9d68283cfc8d10856886.cs-cz.xlf)
+* Handoff Datetime: 2016-07-06 23:25:37
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [InTuneDocs\develop\intune-app-sdk-android.md](https://github.com/Microsoft/IntuneDocs-pr.cs-cz/blob/f6c0fa6678a1281c1453f042dc41c579565afd70/InTuneDocs/develop/intune-app-sdk-android.md)
+* Current Handback File: [intune-app-sdk-android.13ba26a9f5060cab39ff9d68283cfc8d10856886.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/b97eb587a72f1db6fa2a19d6b25f9447ee036a71/ol-handback/Microsoft/IntuneDocs-pr.cs-cz/master/intune-app-sdk-android.13ba26a9f5060cab39ff9d68283cfc8d10856886.cs-cz.xlf)
+* Current Handback Datetime: 2016-07-15 02:06:28
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
