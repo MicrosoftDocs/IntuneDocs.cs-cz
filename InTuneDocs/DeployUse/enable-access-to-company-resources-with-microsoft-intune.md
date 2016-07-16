@@ -55,6 +55,6 @@ Pomozte zabezpečit přístup k prostředkům společnosti, včetně bezdrátov�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

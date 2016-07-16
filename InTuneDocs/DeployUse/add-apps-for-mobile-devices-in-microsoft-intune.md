@@ -103,6 +103,6 @@ Dalším krokem po vytvoření aplikace je její nasazení. Další informace na
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 
