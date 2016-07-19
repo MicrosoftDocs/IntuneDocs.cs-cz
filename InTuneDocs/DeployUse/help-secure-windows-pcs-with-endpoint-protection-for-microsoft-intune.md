@@ -176,7 +176,7 @@ Intune může na vzdáleném spravovaném počítači, na kterém je nainstalova
 
 1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) přejděte na **Skupiny** > **Přehled** > **Všechna zařízení** > **Všechny počítač** a vyberte počítač, na který chcete cílit.
 
-2. Klikněte na rozevírací seznam **Vzdálené úlohy** a vyberte požadovanou úlohu. Úloha pro spuštění na vzdáleném počítači:
+2. Klikněte na rozevírací seznam **Vzdálené úlohy** a vyberte požadovanou úlohu. Úloha pro spuštění na vzdáleném počítači.
 
 
 
