@@ -45,6 +45,6 @@ Nakonec, když už se nepoužívají nebo došlo ke ztrátě nebo odcizení zař
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

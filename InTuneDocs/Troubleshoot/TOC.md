@@ -16,6 +16,6 @@
 ## [Řešení potíží s e-mailovými profily](Troubleshoot-email-profiles-in-microsoft-intune.md)
 ## [Řešení potíží s podmíněným přístupem](troubleshoot-conditional-access.md)
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

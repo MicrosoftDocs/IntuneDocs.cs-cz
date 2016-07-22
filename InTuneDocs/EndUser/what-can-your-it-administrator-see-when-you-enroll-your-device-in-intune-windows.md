@@ -3,18 +3,19 @@ title: "Co správce IT uvidí při registraci zařízení v Intune? | Microsoft 
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 05/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 12655728-a1af-4d89-97bc-925fe36c0dc4
+ROBOTS: noindex,nofollow
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 04131fc569c904cf948683089933c38786a9b847
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: be6932d34d33439c628dc4a3ec8ec27fec428da2
 
 
 ---
@@ -63,6 +64,6 @@ Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na spr�
 [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,1 +1,5 @@
-Microsoft Intune account portal
+Portál účtu Microsoft Intune
+
+<!--HONumber=Jul16_HO3-->
+
+

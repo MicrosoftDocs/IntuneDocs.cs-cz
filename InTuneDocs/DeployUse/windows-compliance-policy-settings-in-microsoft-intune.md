@@ -140,6 +140,6 @@ K vyhledání verze operačního systému, kterou máte použít v nastaveních 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

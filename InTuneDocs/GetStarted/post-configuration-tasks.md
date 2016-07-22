@@ -30,6 +30,6 @@ Po dokončení kroků počáteční konfigurace pro placené předplatné Intune
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

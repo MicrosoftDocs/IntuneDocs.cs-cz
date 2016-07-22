@@ -3,16 +3,18 @@ title: "Omezení přístup k sítím s Cisco ISE | Microsoft Intune"
 description: "Použijte Cisco ISE s Intune, aby zařízení byla zaregistrovaná v Intune a vyhovovala zásadám, než se pokusí o přístup k WiFi a VPN řízeným Cisco ISE."
 keywords: 
 author: nbigman
-manager: jeffgilb
+manager: Arob98
 ms.date: 06/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
+ms.reviewer: muhosabe
+ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f33a86c51320c75ce74d20e0cac2b9581990ecec
-ms.openlocfilehash: 78945498a951e7b897164ae6f33c4e87d521ca5b
+ms.sourcegitcommit: 72288296d966b9b9fae4fd721b4460528213f626
+ms.openlocfilehash: 9e90971a9997e65e98a8c55b24fb70a42da93702
 
 
 ---
@@ -52,8 +54,8 @@ Chcete-li tuto integraci povolit, nemusíte v tenantovi Intune provádět žádn
     d. Zvolte certifikát a pak zvolte **Exportovat**.  
 
 
-> [!IMPORTANT]
-> Zkontrolujte datum vypršení platnosti certifikátu, protože po vypršení platnosti tohoto certifikátu bude třeba exportovat a importovat nový certifikát.
+    > [!IMPORTANT]
+    > Zkontrolujte datum vypršení platnosti certifikátu, protože po vypršení platnosti tohoto certifikátu bude třeba exportovat a importovat nový certifikát.
 
     
 
@@ -126,10 +128,10 @@ Když se uživatel pokusí o přístup k prostředkům z nezaregistrovaného za�
 
 Když uživatel zvolí registraci, bude přesměrován na proces registrace v Intune. Aspekty registrace uživatele pro Intune jsou popsány v těchto tématech:
 
-- [Registrace zařízení se systémem Android do Intune](/intune/end-user/enroll-your-device-in-Intune-android)</br>
-- [Registrace zařízení se systémem iOS do Intune](/intune/end-user/enroll-your-device-in-intune-ios)</br>
-- [Registrace zařízení se systémem Mac OS X v Intune](/intune/end-user/enroll-your-device-in-intune-mac-os-x)</br>
-- [Registrace zařízení se systémem Windows do Intune](/intune/end-user/enroll-your-device-in-intune-windows)</br> 
+- [Registrace zařízení se systémem Android do Intune](/intune/enduser/enroll-your-device-in-Intune-android)</br>
+- [Registrace zařízení se systémem iOS do Intune](/intune/enduser/enroll-your-device-in-intune-ios)</br>
+- [Registrace zařízení se systémem Mac OS X v Intune](/intune/enduser/enroll-your-device-in-intune-mac-os-x)</br>
+- [Registrace zařízení se systémem Windows do Intune](/intune/enduser/enroll-your-device-in-intune-windows)</br> 
 
 K dispozici je také [sada pokynů pro registraci ke stažení](https://gallery.technet.microsoft.com/End-user-Intune-enrollment-55dfd64a), kterou můžete použít k vytvoření vlastních pokynů pro činnost uživatele.
 
@@ -141,6 +143,6 @@ K dispozici je také [sada pokynů pro registraci ke stažení](https://gallery.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

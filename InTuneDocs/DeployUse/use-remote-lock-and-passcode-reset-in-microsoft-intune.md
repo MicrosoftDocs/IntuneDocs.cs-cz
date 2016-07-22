@@ -72,6 +72,6 @@ Pokud uživatel zapomene heslo, můžete mu pomoct odebráním hesla ze zaříze
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -42,6 +42,6 @@ V některých případech zařízení samotné dosáhne konce své životnosti. 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
