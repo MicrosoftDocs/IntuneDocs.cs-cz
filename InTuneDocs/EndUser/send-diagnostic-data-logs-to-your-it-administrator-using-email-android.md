@@ -3,7 +3,7 @@ title: "Odeslání protokolů s diagnostickými daty ze zařízení správci IT 
 description: 
 keywords: 
 author: staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 05/31/2016
 ms.topic: article
 ms.prod: 
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 30d325a9f5b920176ed5f4c9ce003564dcc6d3b5
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 00e23b0094ee03c2a54bf6d12295e9f38781373f
 
 
 ---
@@ -31,13 +31,13 @@ Zapnutí podrobného protokolování:
 
 2.  Klepněte na **Nabídka** &gt; **Nastavení**.
 
-    > [!NOTE] 
+    > [!NOTE]
     > Podle toho, jaké zařízení se systémem Android máte, může být **Nabídka** buď softwarové, nebo hardwarové tlačítko.
 
 3.  V části **Diagnostická data** klepněte na **Odeslat data**.
 
     > [!NOTE]
-    > **Jenom pokud používáte zařízení se systémem Android 6.0 nebo novějším:** Když klepnete na **Odeslat data**, zobrazí se zpráva **Povolit pro Portál společnosti přístup k fotkám, médiím a souborům ve vašem zařízení?**. 
+    > **Jenom pokud používáte zařízení se systémem Android 6.0 nebo novějším:** Když klepnete na **Odeslat data**, zobrazí se zpráva **Povolit pro Portál společnosti přístup k fotkám, médiím a souborům ve vašem zařízení?**.
 
     Tato zpráva je zavádějící, protože **Microsoft nikdy nezískává přístup k fotografiím, médiím a souborům na vašem zařízení!** Text zprávy určuje společnost Google a Microsoft ho nemůže změnit.  Když povolíte přístup, povolíte na svém zařízení jenom zápis datových protokolů na kartu SD zařízení, takže tyto protokoly můžete přesouvat pomocí kabelu USB.
 
@@ -50,6 +50,7 @@ Zapnutí podrobného protokolování:
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jul16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

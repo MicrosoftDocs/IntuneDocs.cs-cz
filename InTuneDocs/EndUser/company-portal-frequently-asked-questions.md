@@ -3,7 +3,7 @@ title: "Informace o Portálu společnosti | Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 06/01/2016
 ms.topic: article
 ms.prod: 
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 299d45f707602cc547fbad4186b8c857864ee5c9
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 609ed567e40cc35a6e36539ca58165f9193cec65
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: 299d45f707602cc547fbad4186b8c857864ee5c9
 Portál společnosti Microsoft Intune vám zajistí přístup k datům a aplikacím vaší společnosti nebo školy. Můžete ho získat jedním ze dvou způsobů:
 
 - Nainstalováním aplikace Portál společnosti do zařízení. Standardně se do zařízení instaluje z obchodu s aplikacemi pro dané zařízení, správce IT vám ji ale také může nainstalovat jiným způsobem.
-- Zobrazením [webu Portál společnosti](http://portal.manage.microsoft.com), který pro vás správce IT nastavil. 
+- Zobrazením [webu Portál společnosti](http://portal.manage.microsoft.com), který pro vás správce IT nastavil.
 
 Mezi aplikací Portál společnosti a webem Portál společnosti jsou drobné rozdíly, většina úloh, které je pomocí nich možné provést, je ale stejná. Tady je pár příkladů:
 
@@ -100,10 +100,6 @@ Pokud potřebujete pomoc, obraťte se na správce IT. Jeho kontaktní údaje naj
 
 
 
-
-
-
-
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

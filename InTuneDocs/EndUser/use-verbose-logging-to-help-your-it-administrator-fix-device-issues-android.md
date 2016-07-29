@@ -3,7 +3,7 @@ title: "Použití podrobného protokolování k asistenci správci IT s opravou 
 description: 
 keywords: 
 author: staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 05/31/2016
 ms.topic: article
 ms.prod: 
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 13311e562427ef66572fd53c6f0409f9fbc1b25b
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: a1c7b3c02409a49114848864cbb00d0dee9a98a1
 
 
 ---
@@ -33,6 +33,7 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní 
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jul16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

@@ -3,7 +3,7 @@ title: "Nastavení časového intervalu před zablokováním zařízení | Micro
 description: 
 keywords: 
 author: staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 05/31/2016
 ms.topic: article
 ms.prod: 
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: fe54897fe42d07040b873d6112e34830652fdf20
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: df24ef5c0562d04c1f9aaf08c5905e4928b6c4fa
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: fe54897fe42d07040b873d6112e34830652fdf20
 # Nastavení časového intervalu před zablokováním zařízení
 
 Aby vaše data na zařízení s Androidem byla ve větším bezpečí, správce IT může nastavit zásady, které vyžadují nastavení doby, po kterou může být zařízení neaktivní před automatickým zamčením. Pomocí těchto kroků můžete nastavte dobu, než se zařízení zamkne.
- 
+
 1.  V **Nastavení** zařízení klikněte na **Zabezpečení** &gt; **Automatické uzamčení** (na některých zařízeních se zobrazuje jako **Uzamknout telefon po**).
 
 2.  Zadejte hodnotu časového limitu hesla.
@@ -36,6 +36,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

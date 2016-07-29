@@ -3,7 +3,7 @@ title: "Nastavení nebo změna vašeho přístupového kódu | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 5/25/2016
 ms.topic: article
 ms.prod: 
@@ -12,8 +12,8 @@ ms.technology:
 ms.assetid: c4801a78-580e-4e3d-beca-0b09b9b2437c
 ROBOTS: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 4ea67ffbc51a359723411938f95697cfeaf6fc3f
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 791d9e4d5817acfa8b11b1f5ed570df5e38718d7
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: 4ea67ffbc51a359723411938f95697cfeaf6fc3f
 
 Pokud zařízení s Windows není v souladu se zásadami pro heslo správce IT, zobrazí se zpráva, která stručně popisuje problém a vysvětluje, co musíte udělat, aby byly splněny požadavky na heslo.
 
-Správce IT může nastavit více než jeden požadavek na heslo. Heslo musí mít například určitý počet znaků a musí být kombinací číslic a písmen atd. Vzhledem k tomu, že může být nastaveno víc požadavků, tyto pokyny mohou vysvětlovat jenom to, jak jde heslo nastavit nebo změnit. Nevysvětlují všechny možné kombinace požadavků. 
+Správce IT může nastavit více než jeden požadavek na heslo. Heslo musí mít například určitý počet znaků a musí být kombinací číslic a písmen atd. Vzhledem k tomu, že může být nastaveno víc požadavků, tyto pokyny mohou vysvětlovat jenom to, jak jde heslo nastavit nebo změnit. Nevysvětlují všechny možné kombinace požadavků.
 
 Pokud máte potíže při nastavení hesla, které splňuje všechny požadavky na heslo, požádejte o pomoc správce IT.
 
@@ -30,7 +30,7 @@ Pokud máte potíže při nastavení hesla, které splňuje všechny požadavky 
 
 1. Z **domovské** obrazovky klepněte na **Nastavení** a pak vyberte **Zamykací obrazovka**.
 2. Přejděte dolů na **Heslo** a přesuňte ovladač pro **Heslo** do polohy **Zapnuto**.
-3. Do pole **Nové heslo** zadejte nové heslo a potvrďte ho v poli **Potvrzení hesla**. 
+3. Do pole **Nové heslo** zadejte nové heslo a potvrďte ho v poli **Potvrzení hesla**.
 4. Klepněte na **Hotovo**.
 
 ## Postup změny hesla na Windows Phone 8 nebo 8.1:
@@ -47,6 +47,7 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní 
 [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jul16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

@@ -3,7 +3,7 @@ title: "Nastavení nebo změna vašeho přístupového kódu | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 5/25/2016
 ms.topic: article
 ms.prod: 
@@ -12,8 +12,8 @@ ms.technology:
 ms.assetid: 365f72a6-564d-4cbd-8f0a-70ec80b6e253
 ROBOTS: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 25c1da243f5d0ccde54a9b1c70c300e64f76ea34
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 94c2282688e73a8ab95599b1f7beb05e98eb103a
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: 25c1da243f5d0ccde54a9b1c70c300e64f76ea34
 
 Pokud zařízení s iOS není v souladu se zásadami pro přístupový kód správce IT, zobrazí se zpráva, která stručně popisuje problém a vysvětluje, co musíte udělat, aby byly splněny požadavky na přístupový kód.
 
-Správce IT může nastavit více než jeden požadavek na přístupový kód. Přístupový kód musí mít například určitý počet znaků a musí být kombinací číslic a písmen atd. Vzhledem k tomu, že může být nastaveno víc požadavků, tyto pokyny mohou vysvětlovat jenom to, jak jde přístupový kód nastavit nebo změnit. Nevysvětlují všechny možné kombinace požadavků. 
+Správce IT může nastavit více než jeden požadavek na přístupový kód. Přístupový kód musí mít například určitý počet znaků a musí být kombinací číslic a písmen atd. Vzhledem k tomu, že může být nastaveno víc požadavků, tyto pokyny mohou vysvětlovat jenom to, jak jde přístupový kód nastavit nebo změnit. Nevysvětlují všechny možné kombinace požadavků.
 
 Pokud máte potíže při nastavení přístupového kódu, které splňuje všechny požadavky na přístupový kód, požádejte o pomoc správce IT.
 
@@ -45,6 +45,7 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní 
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jul16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

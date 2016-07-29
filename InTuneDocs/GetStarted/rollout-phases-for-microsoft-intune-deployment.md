@@ -3,8 +3,8 @@ title: "Fáze zavedení pro nasazení Microsoft Intune | Microsoft Intune"
 description: "Typické fáze technického nasazení jsou: stanovení rozsahu projektu, testování konceptu, pilotní nasazení, podnikové zavedení a stav běhu."
 keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 9fe7eec1-2a6f-404e-8614-977527a7a15b
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c1e215320168c659d5f838355f6350111d6979b0
-ms.openlocfilehash: c20f96481916d5e9468eade65d8aa0c1133646ef
+ms.sourcegitcommit: 2a192c71b1b82f59b34ea614d09d895174f8112b
+ms.openlocfilehash: fda1e32c2b1be260c1d2c1b26f2415105d3fc10a
 
 
 ---
@@ -26,11 +26,11 @@ Typické fáze technického nasazení jsou: stanovení rozsahu projektu, testov�
 -   [Rozsah projektu](project-scope.md): Nastavení metriky cíle, časového harmonogramu a úspěchu, definování klíčových faktorů připravenosti organizace, sestavení projektového týmu a zahájení počátečních příprav pro všechny fáze spojené s úspěšným zavedením Microsoft Intune v celé organizaci.
      > [!NOTE]           
        Tyto šablony můžou být užitečné při práci na rozsahu projektu:
-        
+
     >- [Šablona rozhodování pro Intune nebo Intune s nástrojem Configuration Manager](https://gallery.technet.microsoft.com/Intune-or-Intune-with-900e8a78)
     >- [Šablona plánování pro mobilní aplikace](https://gallery.technet.microsoft.com/Mobile-app-planning-18689d59)
     >- [Šablona plánování pro obecnou správu zařízení](https://gallery.technet.microsoft.com/General-device-management-334c3792)
-    
+
 
 -   [Testování konceptu](proof-of-concept.md): Testování technického nasazení a architektury sítě a určení schopnosti vašeho nasazení plnit požadavky vaší společnosti. Tato fáze zahrnuje jednoduchou topologie určenou k ověření konkrétních technických scénářů.  
 
@@ -62,6 +62,6 @@ These topics will help you plan for the rollout of new policies and apps:
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

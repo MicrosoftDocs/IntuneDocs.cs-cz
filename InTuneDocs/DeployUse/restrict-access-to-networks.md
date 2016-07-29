@@ -3,7 +3,7 @@ title: "Omezení přístup k sítím s Cisco ISE | Microsoft Intune"
 description: "Použijte Cisco ISE s Intune, aby zařízení byla zaregistrovaná v Intune a vyhovovala zásadám, než se pokusí o přístup k WiFi a VPN řízeným Cisco ISE."
 keywords: 
 author: nbigman
-manager: Arob98
+manager: angrobe
 ms.date: 06/24/2016
 ms.topic: article
 ms.prod: 
@@ -13,42 +13,42 @@ ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 72288296d966b9b9fae4fd721b4460528213f626
-ms.openlocfilehash: 9e90971a9997e65e98a8c55b24fb70a42da93702
+ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
+ms.openlocfilehash: c516cffe416559d1d239010605227eda76c32c1b
 
 
 ---
 
 # Použití Cisco ISE s Microsoft Intune
-Integrace Intune s Cisco ISE umožňuje vytvářet zásady sítě v prostředí ISE na základě stavu registrace zařízení v Intune a jejich stavu dodržování předpisů. Prostřednictvím těchto zásad lze zajistit, aby byl přístup k síti vaší společnosti omezen na zařízení, která jsou spravována pomocí Intune a vyhovují zásadám Intune. 
+Integrace Intune s Cisco ISE umožňuje vytvářet zásady sítě v prostředí ISE na základě stavu registrace zařízení v Intune a jejich stavu dodržování předpisů. Prostřednictvím těchto zásad lze zajistit, aby byl přístup k síti vaší společnosti omezen na zařízení, která jsou spravována pomocí Intune a vyhovují zásadám Intune.
 
 ## Konfigurace
 
-Chcete-li tuto integraci povolit, nemusíte v tenantovi Intune provádět žádné nastavení. Bude třeba poskytnout oprávnění k serveru Cisco ISE pro přístup k tenantovi Intune. Zbývající část nastavení se potom provede na serveru Cisco ISE. Tento článek obsahuje pokyny pro poskytnutí oprávnění pro přístup k vašemu tenantovi Intune pro váš server ISE. 
+Chcete-li tuto integraci povolit, nemusíte v tenantovi Intune provádět žádné nastavení. Bude třeba poskytnout oprávnění k serveru Cisco ISE pro přístup k tenantovi Intune. Zbývající část nastavení se potom provede na serveru Cisco ISE. Tento článek obsahuje pokyny pro poskytnutí oprávnění pro přístup k vašemu tenantovi Intune pro váš server ISE.
 
 ### Krok 1: Správa certifikátů
-1. V konzole Azure Active Directory (AAD) exportujte certifikát. 
+1. V konzole Azure Active Directory (AAD) exportujte certifikát.
 
     #### Internet Explorer 11
-        
+
     a. Spusťte Internet Explorer jako správce a přihlaste se ke konzole AAD.
-  
+
     b. Zvolte ikonu zámku na panelu Adresa a pak zvolte **Zobrazit certifikáty**.
-    
+
     c. Na kartě **Podrobnosti** v rámci vlastností certifikátu zvolte **Kopírovat do souboru**.
 
-    d. Na úvodní stránce **Průvodce exportem certifikátu** zvolte **Další**. 
+    d. Na úvodní stránce **Průvodce exportem certifikátu** zvolte **Další**.
 
     e. Na stránce **Formát souboru pro export** ponechte výchozí nastavení **Binární x.509, kódování DER (CER)** a zvolte **Další**.  
 
     f. Na stránce **Soubor k exportu** zvolte **Procházet**, vyberte umístění, do kterého chcete soubor uložit, a zadejte název souboru. Ačkoli se zdá, že vybíráte soubor pro export, ve skutečnosti pojmenováváte soubor, do kterého bude exportovaný certifikát uložen. Zvolte **Další** &gt; **Dokončit**.
 
     #### Safari
-    
+
     a. Přihlaste se ke konzole AAD.
 
     b. Zvolte ikonu zámku &gt;  **Další informace**.
-    
+
     c. Zvolte **Zobrazit certifikát** &gt; **Podrobnosti**.
 
     d. Zvolte certifikát a pak zvolte **Exportovat**.  
@@ -57,7 +57,7 @@ Chcete-li tuto integraci povolit, nemusíte v tenantovi Intune provádět žádn
     > [!IMPORTANT]
     > Zkontrolujte datum vypršení platnosti certifikátu, protože po vypršení platnosti tohoto certifikátu bude třeba exportovat a importovat nový certifikát.
 
-    
+
 
 2. Z konzoly ISE importujte certifikát Intune (soubor, který jste exportovali) do úložiště **Důvěryhodné certifikáty**.
 3. V konzole ISE přejděte do části **Správa** > **Certifikáty** > **Systémové certifikáty**.
@@ -76,7 +76,7 @@ Chcete-li tuto integraci povolit, nemusíte v tenantovi Intune provádět žádn
 6. Poskytněte své aplikaci oprávnění pro rozhraní API Microsoft Intune a Microsoft Graph.
     1. Pro Microsoft Graph vyberte následující:
         - **Oprávnění aplikací**: Čtení dat adresáře
-        - **Delegovaná oprávnění**: 
+        - **Delegovaná oprávnění**:
             - Časově neomezený přístup k datům uživatele
           - Přihlášení uživatelů
    2. Pro rozhraní API Microsoft Intune v části **Oprávnění aplikací** zvolte **Zjistit stav zařízení a jeho stav dodržování předpisů z služby Intune**.
@@ -90,8 +90,8 @@ Chcete-li tuto integraci povolit, nemusíte v tenantovi Intune provádět žádn
 |Aktualizace kódu s použitím ID klienta|ID klienta|
 
 
-### Krok 3: Konfigurace nastavení ISE 
-2. V konzole správce ISE zadejte tyto hodnoty nastavení: 
+### Krok 3: Konfigurace nastavení ISE
+2. V konzole správce ISE zadejte tyto hodnoty nastavení:
   - **Typ serveru**: Správce mobilních zařízení
   - **Typ ověřování**: OAuth – pověření klienta
   - **Automatické zjišťování**: Ano
@@ -112,12 +112,12 @@ Tato tabulka uvádí informace sdílené mezi vaším tenantem Intune a vaším 
 |serialNumber|Sériové číslo zařízení. Týká se pouze zařízení s iOS.|
 |imei|Kód IMEI (15 desítkových číslic: 14 číslic plus kontrolní číslice) nebo IMEISV (16 číslic) obsahuje informace o původu, modelu a sériovém čísle zařízení. Struktura kódu IMEI/SV je popsána ve specifikaci 3GPP TS 23.003. Týká se pouze zařízení s kartami SIM.)|
 |udid|Jedinečný identifikátor zařízení: posloupnost 40 písmen a číslic specifická pro zařízení iOS.|
-|meid|Identifikátor mobilního zařízení: globálně jedinečné číslo identifikující fyzickou část zařízení mobilní stanice CDMA. Formát čísla je definován specifikací 3GPP2, sestava S. R0048. V praxi však na ně lze nahlížet jako kód IMEI obsahující šestnáctkové číslice. Kód MEID má délku 56 bitů (14 šestnáctkových číslic). Sestává ze tří polí představujících 8bitový kód regionu (RR), 24bitový kód výrobce a 24bitové sériové číslo přiřazené výrobcem.| 
+|meid|Identifikátor mobilního zařízení: globálně jedinečné číslo identifikující fyzickou část zařízení mobilní stanice CDMA. Formát čísla je definován specifikací 3GPP2, sestava S. R0048. V praxi však na ně lze nahlížet jako kód IMEI obsahující šestnáctkové číslice. Kód MEID má délku 56 bitů (14 šestnáctkových číslic). Sestává ze tří polí představujících 8bitový kód regionu (RR), 24bitový kód výrobce a 24bitové sériové číslo přiřazené výrobcem.|
 |osVersion| Verze operačního systému pro příslušné zařízení.
 |model|Model zařízení.
 |manufacturer|Výrobce zařízení.
 |azureDeviceId| ID zařízení po připojení pracovního místa k Azure Active Directory. V případě nepřipojených zařízení bude použit prázdný identifikátor guid.|
-|lastContactTimeUtc|Datum a čas, kdy zařízení naposled navázalo kontakt se službou správy Intune. 
+|lastContactTimeUtc|Datum a čas, kdy zařízení naposled navázalo kontakt se službou správy Intune.
 
 
 ## Činnost koncového uživatele
@@ -131,7 +131,7 @@ Když uživatel zvolí registraci, bude přesměrován na proces registrace v In
 - [Registrace zařízení se systémem Android do Intune](/intune/enduser/enroll-your-device-in-Intune-android)</br>
 - [Registrace zařízení se systémem iOS do Intune](/intune/enduser/enroll-your-device-in-intune-ios)</br>
 - [Registrace zařízení se systémem Mac OS X v Intune](/intune/enduser/enroll-your-device-in-intune-mac-os-x)</br>
-- [Registrace zařízení se systémem Windows do Intune](/intune/enduser/enroll-your-device-in-intune-windows)</br> 
+- [Registrace zařízení se systémem Windows do Intune](/intune/enduser/enroll-your-device-in-intune-windows)</br>
 
 K dispozici je také [sada pokynů pro registraci ke stažení](https://gallery.technet.microsoft.com/End-user-Intune-enrollment-55dfd64a), kterou můžete použít k vytvoření vlastních pokynů pro činnost uživatele.
 
@@ -142,7 +142,6 @@ K dispozici je také [sada pokynů pro registraci ke stažení](https://gallery.
 
 
 
-
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
