@@ -3,7 +3,7 @@ title: "Jste vyzváni k vypnutí ladění USB | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 06/16/2016
 ms.topic: article
 ms.prod: 
@@ -12,17 +12,17 @@ ms.technology:
 ms.assetid: f250f455-898d-46fe-93ac-2b3aec6a0b71
 ROBOTS: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: eb3c46be463a355c920b4a5b5960464d2ab11f91
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: bfbeed3c09bdc93dfd3a8151d8107bdc6636e981
 
 
 ---
 
 # Zobrazí se výzva k vypnutí ladění USB
 
-Pokud se zobrazí zpráva „Musí se zakázat ladění USB.“, musíte přejít do části **Nastavení** > **Možnosti pro vývojáře** a vypnout nastavení **Ladění USB**. 
+Pokud se zobrazí zpráva „Musí se zakázat ladění USB.“, musíte přejít do části **Nastavení** > **Možnosti pro vývojáře** a vypnout nastavení **Ladění USB**.
 
-Váš správce IT vyžaduje, aby toto nastavení bylo vypnuté, kvůli ochraně podnikových dat ve vašem zařízení s Androidem. 
+Váš správce IT vyžaduje, aby toto nastavení bylo vypnuté, kvůli ochraně podnikových dat ve vašem zařízení s Androidem.
 
 Pokud je nastavení **Ladění USB** zapnuto, jsou data zařízení méně bezpečná, pokud je připojeno zařízení USB.
 
@@ -35,6 +35,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaj
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -3,7 +3,7 @@ title: "Vaše zařízení nesplňuje požadavek na minimální úroveň opravy z
 description: 
 keywords: 
 author: staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 06/16/2016
 ms.topic: article
 ms.prod: 
@@ -12,8 +12,8 @@ ms.technology:
 ms.assetid: b3e5994c-d215-4c72-8915-349bd0b2504d
 ROBOTS: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 4710a94b8772c064881137a273dd6d0d0ca7d37a
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 9405fdf219a1882cbfa2326c22325545ecec5080
 
 
 ---
@@ -32,7 +32,7 @@ Umístění aktuální úrovně opravy zabezpečení se může lišit v závislo
 
 **Při instalaci požadované opravy zabezpečení postupujte takto:**
 
-- Jiná zařízení než Samsung Knox: Přejděte do části **Nastavení** > **O telefonu** > **Aktualizace softwaru**. 
+- Jiná zařízení než Samsung Knox: Přejděte do části **Nastavení** > **O telefonu** > **Aktualizace softwaru**.
 
 - Zařízení Samsung Knox: Přejděte do části **Nastavení** > **Aktualizace systému** > **Zkontrolovat novou aktualizaci systému**.
 
@@ -43,6 +43,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaj
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
