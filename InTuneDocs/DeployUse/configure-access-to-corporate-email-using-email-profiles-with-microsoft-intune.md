@@ -3,7 +3,7 @@ title: "Přístup k podnikovému e-mailu pomocí e-mailových profilů | Microso
 description: "Nastavení e-mailového profilu se dá použít ke konfiguraci nastavení přístupu k e-mailům pro určité e-mailové klienty na mobilních zařízeních."
 keywords: 
 author: Nbigman
-manager: Arob98
+manager: angrobe
 ms.date: 07/021/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 72288296d966b9b9fae4fd721b4460528213f626
-ms.openlocfilehash: c7a3ca7b0390a001624871342c9aa04802be27ff
+ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
+ms.openlocfilehash: 878172811c7899237b5ebf5db9a443f10fea42dd
 
 
 ---
@@ -82,7 +82,7 @@ Heslo není součástí e-mailového profilu, uživatel ho tedy musí zadat při
     |**Počet dnů, za které se mají e-maily synchronizovat**|Vyberte počet dnů, za který se mají e-maily synchronizovat, nebo vyberte **Neomezený**, pokud chcete synchronizovat všechny dostupné e-maily.|
     |**Plán synchronizace** (Samsung KNOX, Windows Phone 8 a novější, Windows 10)|Vyberte plán, podle kterého budou zařízení synchronizovat data z Exchange Serveru. Můžete taky vybrat **Při doručování zpráv**, aby se data synchronizovala hned po doručení, nebo **Ruční**, aby musel synchronizaci zahájit uživatel zařízení.|
     |**Použít protokol SSL**|Při posílání a přijímání e-mailů a komunikaci se Exchange Serverem použijte komunikaci SSL (Secure Sockets Layer).<br /><br />U zařízení, na kterých běží Samsung KNOX 4.0 nebo novější, musíte exportovat certifikát SSL Exchange Serveru a v Intune ho nasadit jako profil důvěryhodného certifikátu pro Android. Intune nepodporuje přístup k tomuto certifikátu, pokud je na Exchange Serveru nainstalovaný jiným způsobem.|
-    |**Typ obsahu, který se má synchronizovat**|Vyberte typy obsahu, které se mají na zařízeních synchronizovat.| 
+    |**Typ obsahu, který se má synchronizovat**|Vyberte typy obsahu, které se mají na zařízeních synchronizovat.|
     |**Povolit odesílání e-mailů z aplikací jiných výrobců** (jenom iOS)|Můžete povolit uživateli, aby tento profil vybral jako výchozí účet pro odesílání e-mailů, a povolit aplikacím třetích stran otevírání e-mailů v nativních e-mailových aplikacích, například připojování souborů k e-mailům.|
 
     > [!IMPORTANT]
@@ -109,8 +109,6 @@ Shrnutí stavu a výstrahy na stránce **Přehled** v pracovním prostoru **Zás
 
 
 
-
-
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

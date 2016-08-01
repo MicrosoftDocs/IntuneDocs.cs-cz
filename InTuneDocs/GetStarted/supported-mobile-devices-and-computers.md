@@ -3,7 +3,7 @@ title: "Podporovaná mobilní zařízení a počítače | Microsoft Intune"
 description: "Mobilní zařízení a počítače, které Intune podporuje"
 keywords: 
 author: Staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 06/08/2016
 ms.topic: get-started-article
 ms.prod: 
@@ -13,19 +13,19 @@ ms.assetid: aeeccfa4-0f14-447e-a3df-c8435c8a4bb2
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 506d8be071d94ac8cdcf536010acd322fc77fea2
+ms.sourcegitcommit: 2a192c71b1b82f59b34ea614d09d895174f8112b
+ms.openlocfilehash: c795d3ca2901f93dff204d9ba9017596708d888d
 
 
 ---
 
 # Podporovaná mobilní zařízení a počítače
 
-Před nastavením Microsoft Intune si přečtěte toto téma a další požadavky uvedené v tématu [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md). 
+Před nastavením Microsoft Intune si přečtěte toto téma a další požadavky uvedené v tématu [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md).
 
 Můžete spravovat následující mobilní zařízení a počítače:
 
-[!INCLUDE[mdm-supported-devices](../includes/mdm-supported-devices.md)] 
+[!INCLUDE[mdm-supported-devices](../includes/mdm-supported-devices.md)]
 
 Můžete spravovat tato zařízení a počítače, a to i když nejsou připojené k doméně nebo v místním režimu. Další informace o správě zařízení najdete v tématu [Volba způsobu správy zařízení](/Intune/get-started/choose-how-to-manage-devices).
 
@@ -34,6 +34,7 @@ Můžete spravovat tato zařízení a počítače, a to i když nejsou připojen
 [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
 
-<!--HONumber=Jul16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

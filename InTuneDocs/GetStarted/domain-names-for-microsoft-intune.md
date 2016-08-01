@@ -13,8 +13,8 @@ ms.assetid: c3c136f0-330d-432a-a91f-16f7dd097e55
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 32723f5b2c92073dda43a0b1f36a48ded0e13ba3
-ms.openlocfilehash: 2adbe1e4a92af5302550a8b78069bc49d725dbc3
+ms.sourcegitcommit: 3eb096fea4569be24cf1ea42088705f0d5da38a4
+ms.openlocfilehash: 176da99a198b0a8167ac5d7992a751f2c965f0ac
 
 
 ---
@@ -23,8 +23,6 @@ ms.openlocfilehash: 2adbe1e4a92af5302550a8b78069bc49d725dbc3
 
 # Názvy vlastních domén s Microsoft Intune
 
-Postup pro přidání a ověření vlastní domény může být případně [proveden v Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-add-domain/).
-
 Pokud si vaše organizace zaregistruje cloudovou službu Microsoftu, třeba Intune, získáte počáteční název domény, jejímž hostitelem je Azure Active Directory. Název může vypadat takhle: **vaše_doména.onmicrosoft.com**. V tomhle příkladu je **vaše_doména** název domény, který jste si zvolili při registraci, a **onmicrosoft.com** je přípona přiřazená účtům přidaným do vašeho předplatného.
 
 Tento počáteční název domény nelze přejmenovat ani odebrat. Můžete však přidat, ověřit nebo odebrat své vlastní názvy domén, které chcete používat s Intune, což je užitečné, pokud chcete zachovat svou obchodní identitu.
@@ -32,16 +30,19 @@ Tento počáteční název domény nelze přejmenovat ani odebrat. Můžete vša
 ## Přidání a ověření vlastní domény 
 
 1. Přejděte na [portál pro správu Office 365](https://portal.office.com/Admin/Default.aspx) a přihlaste se k účtu správce.
-    > [!IMPORTANT]
-    > V oznámení     [Portál účtů Intune se sloučil s portálem pro správu Office 365](https://docs.microsoft.com/en-us/intune/deploy-use/account-portal-merged-with-Office-365) najdete podrobnější informace o umístění, ve kterém můžete spravovat uživatele, skupiny a domény Microsoft Intune.
+
 2. V navigačním podokně zvolte **Nastavení** &gt; **Domény**.
+
 3. Zvolte **Přidat doménu** a zadejte vlastní název domény.
+
 4. Otevře se dialogové okno **Ověřit doménu** s hodnotami pro vytvoření záznamu TXT u poskytovatele hostingu DNS.
     - **Uživatelé GoDaddy:** Portál pro správu Office 365 vás přesměruje na přihlašovací stránku služby GoDaddy. Po zadání přihlašovacích údajů a přijetí smlouvy o oprávnění ke změně domény se záznam TXT vytvoří automaticky. Případně můžete [záznam TXT vytvořit](https://support.office.com/en-us/article/Create-DNS-records-at-GoDaddy-for-Office-365-f40a9185-b6d5-4a80-bb31-aa3bb0cab48a?ui=en-US&rs=en-US&ad=US).
     - **Uživatelé Register.com:** Postupujte podle [podrobných pokynů](https://support.office.com/en-us/article/Create-DNS-records-at-Register-com-for-Office-365-55bd8c38-3316-48ae-a368-4959b2c1684e?ui=en-US&rs=en-US&ad=US#BKMK_verify) k vytvoření záznamu TXT.
 
     > [!TIP] 
     > Při provádění změn v rámci poskytovatele hostingu DNS ověřte, že jste vytvořili alias DNS (CNAME) pro [registraci zařízení s Windows](/Intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune).
+
+Postup pro přidání a ověření vlastní domény může být případně [proveden v Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-add-domain/).
 
 V případě hybridního cloudu můžete po přidání vlastního názvu domény a ověření, že vaše organizace je jeho vlastníkem, pokračovat ve správě uživatelských účtů v místním Active Directory a pak je synchronizovat s Azure AD.
 
@@ -60,6 +61,6 @@ V případě hybridního cloudu můžete po přidání vlastního názvu domény
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
