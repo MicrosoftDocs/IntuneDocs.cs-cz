@@ -1,10 +1,10 @@
 ---
-title: "Správa aplikací pro iOS nakoupených prostřednictvím programu hromadného nákupu | Microsoft Intune"
-description: 
+title: "Správa hromadně koupených aplikací pro iOS | Microsoft Intune"
+description: "Použijte Intune ke správě aplikací, které jste koupili od Applu, importováním licenčních informací z App Storu, sledováním, kolik licencí jste už použili, a zabráněním instalaci víc aplikací, než na kolik máte licence."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,16 +13,16 @@ ms.assetid: 1dafc28a-7f8b-4fe0-8619-f977c93d1140
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ccb494f64426e6c2f21a59d8f52b84afe534d721
-ms.openlocfilehash: 65ceaa5a8f6604463463820545a9d108839c00c1
+ms.sourcegitcommit: c1850e89830de61ccdeb81cb6ee9cc0f0c1d237a
+ms.openlocfilehash: 6e179ce99dbda518dbefcaab6f502cc24498d7a3
 
 
 ---
 
 # Správa aplikací pro iOS nakoupených prostřednictvím programu hromadného nákupu pomocí Microsoft Intune
-Některé App Story umožňují pro aplikace, které chcete spouštět ve vaší společnosti, nakoupit víc licencí. Můžete tak snížit administrativní režii při sledování několika kopií koupených aplikací.
+App Store pro iOS umožňuje pro aplikace, které chcete spouštět ve vaší společnosti, nakoupit víc licencí. Můžete tak snížit administrativní režii při sledování několika kopií koupených aplikací.
 
-Microsoft Intune vám pomůže spravovat aplikace, které jste koupili prostřednictvím takového programu, importováním licenčních informací z App Storu, sledováním, kolik licencí jste už použili a zabráněním v instalace víc aplikací, než na kolik máte licence.
+Microsoft Intune vám pomůže spravovat aplikace, které jste koupili prostřednictvím tohoto programu, importováním licenčních informací z App Storu, sledováním, kolik licencí jste už použili, a zabráněním instalaci víc aplikací, než na kolik máte licence.
 
 > [!Important]
 > V současné době Intune přiřazuje licence aplikací VPP iOS uživatelům, nikoli zařízením. Z tohoto důvodu musí koncoví uživatelé před instalací aplikace zadat heslo Apple ID.
@@ -87,6 +87,6 @@ Které aplikace VPP jsou nasazené a kolik licencí je už využito, můžete sl
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

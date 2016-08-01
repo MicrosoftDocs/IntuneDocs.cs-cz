@@ -1,26 +1,27 @@
 ---
-title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune? | Microsoft Intune"
+title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Androidem v Intune? | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 05/31/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: d22f5aea-7be4-419b-b51b-a522ca037b69
+ROBOTS: noindex,nofollow
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0bb435b87c937ea118a0794c8332b9a8f268d36e
-ms.openlocfilehash: e2f5849a63dceabb42b910b50f0257bc823a251a
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: 39aafbccda265ee24c7561440a11f1b22fef6170
 
 
 ---
 
 
-# Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune?
+# Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Androidem v Intune?
 
 Když nainstalujete aplikaci Portál společnosti a potom v ní zaregistrujete své zařízení s Androidem v Intune, můžete v aplikaci Portál společnosti provádět tyto kroky:
 
@@ -54,12 +55,13 @@ Když zaregistrujete zařízení se systémem Android, udělujete správci IT op
 
     -   Odeslání všech aktualizací inventáře aplikací společnosti (tyto aktualizace neobsahují osobní informace).
 
-Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete pomoc? Obraťte se na správce IT (vyhledejte kontaktní informace na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište týmu Microsoft Android na adresu wintunedroidfbk@microsoft.com.
+
 
 ### Související témata
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

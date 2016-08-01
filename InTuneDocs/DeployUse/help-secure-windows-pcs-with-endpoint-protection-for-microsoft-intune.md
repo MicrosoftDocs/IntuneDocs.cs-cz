@@ -1,20 +1,20 @@
 ---
 title: "Endpoint Protection pro počítače se systémem Windows | Microsoft Intune"
-description: 
+description: "Chraňte své spravované počítače pomocí služby Endpoint Protection, která poskytuje ochranu proti malwarovým hrozbám v reálném čase."
 keywords: 
 author: NathBarn
-manager: muhosabe
+manager: arob98
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 002241bf-6cd0-4c75-a4f0-891ac7e6721a
-ms.reviewer: jeffgilb
+ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9b96e6c49ec9122961588156d77bf94cdbccd787
-ms.openlocfilehash: b1b1cc90672903ac0336151373272b5e20e56165
+ms.sourcegitcommit: 1e0d05a4f229e2a8e72d1d60021b159f12dfa0d1
+ms.openlocfilehash: 2e0abfb92ef9ecc302e686ea9f30584b9f38d3b0
 
 
 ---
@@ -176,7 +176,7 @@ Intune může na vzdáleném spravovaném počítači, na kterém je nainstalova
 
 1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) přejděte na **Skupiny** > **Přehled** > **Všechna zařízení** > **Všechny počítač** a vyberte počítač, na který chcete cílit.
 
-2. Klikněte na rozevírací seznam **Vzdálené úlohy** a vyberte požadovanou úlohu. Úloha pro spuštění na vzdáleném počítači:
+2. Klikněte na rozevírací seznam **Vzdálené úlohy** a vyberte požadovanou úlohu. Úloha pro spuštění na vzdáleném počítači.
 
 
 
@@ -189,6 +189,6 @@ Další pomoc a podporu najdete v tématu [Řešení potíží se službou Endpo
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,20 +1,20 @@
 ---
-title: "Instalace klienta na počítači s Windows pomocí Microsoft Intune | Microsoft Intune"
-description: 
+title: "Instalace klienta na počítači s Windows | Microsoft Intune"
+description: "Tento průvodce vám pomůže se správou počítače s Windows klientským softwarem Microsoft Intune."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
-ms.reviewer: jeffgilb
+ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1bdcfa71aab0918fba1f59bd0782fc63eef6994e
-ms.openlocfilehash: 723bef398338946e085e9d04d57a85b433ebc1c8
+ms.sourcegitcommit: 1e0d05a4f229e2a8e72d1d60021b159f12dfa0d1
+ms.openlocfilehash: 3cb693eff7545fe4de8e5c082cfa3ab088c005db
 
 
 ---
@@ -35,8 +35,6 @@ Pak klienta nechte nainstalovat pomocí jednoho nebo více z těchto způsobů:
 -   [Ruční nasazení klientského softwaru](#to-manually-deploy-the-client-software)
 
 -   [Automatické nasazení klientského softwaru pomocí zásad skupiny](#to-automatically-deploy-the-client-software-by-using-group-policy)
-
--   [Jak můžou uživatelé svoje počítače sami zaregistrovat](#how-users-can-self-enroll-their-computers)
 
 -   [Instalace klientského softwaru Microsoft Intune v rámci bitové kopie](#install-the-microsoft-intune-client-software-as-part-of-an-image)
 
@@ -81,28 +79,6 @@ Pokud už počítač s Intune spravovat nepotřebujete, můžete ho vyřadit. T�
 3.  Pomocí zásad skupiny nasaďte software do počítačů v síti.
 
     Další informace o tom, jak automaticky nasadit software pomocí zásad skupiny, najdete v dokumentaci k Windows Serveru.
-
-### Jak můžou uživatelé svoje počítače sami zaregistrovat
-Uživatelé můžou své počítače sami zaregistrovat pomocí portálu společnosti Intune. Každý zaregistrovaný počítač se propojí s uživatelským účtem použitým při instalaci klientského softwaru.
-
-> [!NOTE]
-> -   Aby mohl uživatel klientský software nainstalovat, musí být na počítači správcem.
-> -   Vlastní registrace uživatelem vyžaduje, aby byl na klientském počítači nainstalovaný Internet Explorer.
-> -   Pokaždé, když uživatel sám zaregistruje počítač, použije se licence Intune.
-> -   Pro vlastní registraci počítače musíte použít pracovní nebo školní účet. Pomocí účtu Microsoft sami počítač zaregistrovat nemůžete.
-> -   Pokud je už klientský software na počítači nainstalovaný, koncovému uživateli se zobrazí chyba.
-
-### Vlastní registrace počítače (informace pro koncové uživatele)
-
-1.  Přihlaste se k firemnímu portálu z počítače, který chcete zaregistrovat.
-
-2.  Klikněte na **Přidat zařízení**.
-
-3.  Klikněte na **Stáhnout software** a potom na **Spustit**.
-
-4.  Kliknutím na **Další** spusťte průvodce instalací Microsoft Intune.
-
-5.  Po dokončení průvodce instalací klikněte na **Dokončit**.
 
 ### Instalace klientského softwaru Microsoft Intune v rámci bitové kopie
 Klientský software Intune můžete do počítačů nasadit v rámci bitové kopie operačního systému. Jako příklad poslouží tento základní postup:
@@ -159,9 +135,10 @@ Pomocí některého z následujících postupů můžete sledovat a ověřit ús
 
 ### Viz také
 [Správa počítačů s Windows pomocí Intune](manage-windows-pcs-with-microsoft-intune.md)
+[Řešení potíží s instalací klientů](../troubleshoot/troubleshoot-client-setup-in-microsoft-intune)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

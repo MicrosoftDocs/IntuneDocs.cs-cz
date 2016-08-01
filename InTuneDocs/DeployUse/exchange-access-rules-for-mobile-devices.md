@@ -1,26 +1,26 @@
 ---
-title: "Pravidla přístupu k Exchangi pro mobilní zařízení spravovaná Microsoft Intune | Microsoft Intune"
-description: 
+title: "Pravidla přístupu k Exchangi pro mobilní zařízení | Microsoft Intune"
+description: "Pravidla přístupu k Exchange ActiveSync pro správu mobilních zařízení (MDM) určují úroveň přístupu k Exchangi, kterou tato zařízení mají."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 208b9f45-02d9-413a-b86a-8bad9b5008fa
-ms.reviewer: jeffgilb
+ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
-ms.openlocfilehash: ef0b9901e340aec8b2b516f0180133e37833bf37
+ms.sourcegitcommit: 1e0d05a4f229e2a8e72d1d60021b159f12dfa0d1
+ms.openlocfilehash: f69c086333e359f7d1bf202a8d13667779bd3c86
 
 
 ---
 
 # Pravidla přístupu k Exchangi pro mobilní zařízení
-Pravidla přístupu k Exchangi pro mobilní zařízení určují úroveň přístupu k Exchangi, kterou tato zařízení mají. Tato nastavení ovlivňují všechna mobilní zařízení včetně zařízení, která nejsou registrovaná v Microsoft Intune. Můžete začít tak, že definujete **Výchozí pravidlo** , které bude platit pro všechna mobilní zařízení, u kterých se nepoužívá vlastní pravidlo. Úrovně přístupu spravované protokolem Exchange ActiveSync jsou uvedené v následující tabulce:
+Pravidla přístupu k Exchangi pro mobilní zařízení určují úroveň přístupu k Exchange ActiveSync, kterou tato zařízení mají. Tato nastavení ovlivňují všechna mobilní zařízení včetně zařízení, která nejsou registrovaná v Microsoft Intune. Můžete začít tak, že definujete **Výchozí pravidlo** , které bude platit pro všechna mobilní zařízení, u kterých se nepoužívá vlastní pravidlo. Úrovně přístupu spravované protokolem Exchange ActiveSync jsou uvedené v následující tabulce:
 
 |Úroveň přístupu|Popis|
 |----------------|---------------|
@@ -53,6 +53,6 @@ Postup vytvoření vlastního pravidla je popsaný v následující části.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

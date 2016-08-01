@@ -1,32 +1,26 @@
 ---
-# required metadata
-
-title: Požadavky na síťovou infrastrukturu | Microsoft Intune
-description:
-keywords:
+title: "Požadavky na síťovou infrastrukturu | Microsoft Intune"
+description: "Požadavky na bránu firewall, porty, doménu a proxy server služby Intune"
+keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 074de65b-84a5-4a01-a824-18ffd838eab0
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: 8088765d726a9042b69fb12235994320e732459b
+
 
 ---
 
 # Požadavky na síťovou infrastrukturu pro Microsoft Intune
-Před nastavením Microsoft Intune si přečtěte toto téma a další požadavky uvedené v tématu [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)..
+Před nastavením Microsoft Intune si přečtěte toto téma a další požadavky uvedené v tématu [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md).
 
 Toto téma uvádí požadavky služby Intune, které umožňují, aby infrastruktura vaší sítě přenášela komunikaci mezi zařízeními, která spravujete a používáte ke správě předplatného, a internetovými weby používanými cloudovou službou.
 
@@ -169,20 +163,11 @@ Nastavení proxy serveru můžete upravit na jednotlivých klientských počíta
 Můžete použít i proxy server, který ukládá obsah do mezipaměti, a tím [zmenšuje šířku pásma](network-bandwidth-use.md) používanou klienty Intune.
 
 
-
-## Požadavky na konektor Service to Service Connector
-Konektor Service to Service Connector podporuje jenom cloudový Exchange a nemá žádné požadavky na místní infrastrukturu.
-
-Pokud chcete použít tento konektor, musí být splněné tyto požadavky:
-
--   Máte předplatné Office 365 obsahující klienta Exchange Serveru 2013. Pokud je tenant Exchange Server 2013, konektor podporuje Exchange Server 2010 ve stejném prostředí.
-
--   Uživatelský účet, který použijete k instalaci konektoru On-Premises Connector, musí být správce tenanta pro Intune a správce v tenantovi Exchange s licencí k používání Exchange Serveru 2013.
-
 ### Související témata
 [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

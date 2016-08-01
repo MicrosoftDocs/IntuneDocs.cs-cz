@@ -1,9 +1,9 @@
 ---
-title: "Zrušení registrace zařízení v Intune | Microsoft Intune"
-description: 
+title: "Zrušení registrace zařízení s Windows v Intune | Microsoft Intune"
+description: "Popisuje zrušení registrace zařízení s Windows v Intune."
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
@@ -13,14 +13,14 @@ ms.assetid: 018bda65-7238-41f5-b92a-e5f67b7fe085
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: c323aed2b4fbac831ae4919c8145b7253eb97ace
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: e510d9800fde2f1f10c583da273dc28739044009
 
 
 ---
 
 
-# Zrušení registrace zařízení v Intune
+# Zrušení registrace zařízení s Windows v Intune
 
 Jestli jste se zaregistrovali v Intune, ale zařízení s Windows už nechcete v práci nebo ve škole využívat a nepotřebujete přístup k pracovním nebo školním e-mailům, aplikacím nebo jiným prostředkům, musíte zrušit registraci zařízení. Jakmile zrušíte registraci zařízení v Intune, tyto prostředky už pro vás nebudou přístupné. Další informace o tom, co se stane, pokud zrušíte registraci svého zařízení, najdete v tématu [Co se stane, když zrušíte registraci zařízení v Intune](what-happens-if-you-unenroll-your-device-from-intune-windows.md).
 
@@ -66,6 +66,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní 
 [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

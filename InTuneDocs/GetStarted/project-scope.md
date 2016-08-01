@@ -1,6 +1,6 @@
 ---
 title: "Stanovení oboru projektu | Microsoft Intune"
-description: 
+description: "Doporučení pro fázi rozsahu projektu nasazení Intune"
 keywords: 
 author: Nbigman
 manager: jeffgilb
@@ -13,13 +13,13 @@ ms.assetid: 71488dad-2f78-478c-a505-5cb9410eec07
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9218b1f58032c07eddf84f04a667e2c56b5463ed
-ms.openlocfilehash: cf9b8bf9a07e4d5a29637fe52a0bfb6e0191478e
+ms.sourcegitcommit: c1e215320168c659d5f838355f6350111d6979b0
+ms.openlocfilehash: 8bd547eb70f1b933a9dee578a9f843b4cbdd7b57
 
 
 ---
 
-# Stanovení oboru projektu
+# Stanovení rozsahu projektu
 Ve fázi stanovení oboru projektu nastavíte metriky cíle, časového harmonogramu a úspěchu, nadefinujete klíčové faktory připravenosti organizace, sestavíte projektový tým a začnete s počátečními přípravami pro všechny fáze spojené s úspěšným zavedením Microsoft Intune v organizaci a zajištěním optimálního uživatelského prostředí.
 Vynaložte odpovídající čas a úsilí na nadefinování toho, jak vypadá dlouhodobá úspěšnost, aby váš plán odrážel všechny kroky na cestě k dosažení této vize. Vždy máte sice možnost cokoliv průběžně vylaďovat, komplexní plán připravenosti, který je naprosto v souladu s nasazením základního technického řešení, je ale klíčovým faktorem k dosažení celkového úspěchu.
 
@@ -113,6 +113,6 @@ Tady jsou některé běžné problémy, na které můžete ve fázi **stanovová
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

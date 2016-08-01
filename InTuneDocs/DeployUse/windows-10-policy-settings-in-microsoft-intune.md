@@ -1,10 +1,10 @@
 ---
 title: "Nastavení zásad pro Windows 10 | Microsoft Intune"
-description: 
+description: "Nastavení zásad, která jsou uvedena v tomto tématu, vám pomohou nakonfigurovat předdefinovaná a vlastní nastavení pro zaregistrované počítače s Windows 10 a zařízení Windows 10 Mobile."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,19 +12,24 @@ ms.technology:
 ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ms.reviewer: heenamac
 ms.suite: ems
-ms.sourcegitcommit: 1cccafa5f740bad50779ae36c899fd23ee7dc5f3
-ms.openlocfilehash: 70347776f72a3534a4c384957aef01a909767b99
+translationtype: Human Translation
+ms.sourcegitcommit: 01356d08257cf381d1a981f749702800c173de33
+ms.openlocfilehash: 08336c56f4e099c8cd0a0152364824455cae0f03
 
 
 ---
 
 # Nastavení zásad pro Windows 10 v Microsoft Intune
 
-Nastavení zásad, která jsou uvedena v tomto tématu, vám pomohou nakonfigurovat nastavení pro zaregistrované počítače s Windows 10 a zařízení Windows 10 Mobile.
+Nastavení zásad, která jsou uvedena v tomto tématu, vám pomohou nakonfigurovat předdefinovaná a vlastní nastavení pro zaregistrované počítače s Windows 10 a zařízení Windows 10 Mobile.
+
+> [!IMPORTANT]
+> Počítače s Windows 10 můžete spravovat dvěma způsoby – jejich registrací, nebo instalací klientského počítačového softwaru Intune. Každá metoda nabízí různé možnosti (další informace najdete v tématu [Volba způsobu správy zařízení](/intune/get-started/choose-how-to-manage-devices)).
+> Pokud spravujete počítače s Windows 10 pomocí klientského počítačového softwaru Intune, nemůžete používat zásady a nastavení podrobně popsané v tomto tématu. Chcete-li použít tato nastavení, musí být zařízení s Windows 10 registrované v Intune.
 
 ## Obecná nastavení zásad konfigurace
 
-Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 10 Desktop a Windows 10 Mobile použijte **obecné zásady konfigurace** služby Microsoft Intune pro Windows 10. Tyto zásady nejde použít, pokud spravujete počítače se systémem Windows 10 pomocí klientského softwaru Intune.
+Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 10 Desktop a Windows 10 Mobile použijte **obecné zásady konfigurace** služby Microsoft Intune pro Windows 10. 
 
 
 ### Heslo
@@ -161,7 +166,7 @@ Všechna nastavení jsou jenom pro Windows 10 Desktop.
 |**Interval aktualizace signatur**|Zadejte interval, ve kterém bude Defender zjišťovat dostupnost nových souborů signatur.|
 |**Povolit cloudovou ochranu**|Umožňuje službě Microsoft Active Protection Service povolit nebo blokovat příjem informací o činnosti malwaru ze zařízení, která spravujete. Tyto informace slouží k budoucímu vylepšování služby.|
 |**Dotázat se uživatelů na odesílání vzorků**|Určuje, jestli se mají do Microsoftu automaticky odesílat soubory, které by mohly vyžadovat další analýzu, aby bylo určeno, zda jsou škodlivé.|
-|**Detekce potenciálně nežádoucích aplikací**|Pomocí tohoto nastavení lze chránit zaregistrované stolní počítače s Windows před spuštěním softwaru, který Windows Defender klasifikuje jako potenciálně nežádoucí. Můžete nastavit ochranu před spuštěním těchto aplikací nebo pomocí režimu auditu upozornit, když se potenciálně nežádoucí aplikace nainstaluje.|
+|**Detekce potenciálně nežádoucích aplikací**|Pomocí tohoto nastavení lze chránit zaregistrovaná stolní zařízení s Windows před spuštěním softwaru, který Windows Defender klasifikuje jako potenciálně nežádoucí. Můžete nastavit ochranu před spuštěním těchto aplikací nebo pomocí režimu auditu upozornit, když se potenciálně nežádoucí aplikace nainstaluje.|
 |**Soubory a složky, které mají být vyloučeny z kontroly a ochrany v reálném čase**|Umožňuje do seznamu vyloučení přidat soubory a složky, například **C:\Cesta** nebo **%ProgramFiles%\Cesta\název_souboru.exe**. Tyto soubory a složky nebudou zahrnuty do kontrol probíhajících v reálném čase ani do plánovaných kontrol.|
 |**Vyloučit přípony souborů při použití prověřování nebo ochrany v reálném čase**|Umožňuje do seznamu vyloučení přidat přípony souborů, například **jpg** nebo **txt**. Soubory s těmito příponami nebudou zahrnuty do kontrol probíhajících v reálném čase ani do plánovaných kontrol.|
 |**Vyloučit procesy při použití prověřování nebo ochrany v reálném čase**|Umožňuje do seznamu vyloučení přidat procesy typu **.exe**, **.com** nebo **.scr**. Tyto procesy nebudou zahrnuty do kontrol probíhajících v reálném čase ani do plánovaných kontrol.| 
@@ -327,6 +332,6 @@ Pokud chcete používat vlastní zásadu URI Windows, musí se všechna zaříze
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO3-->
 
 

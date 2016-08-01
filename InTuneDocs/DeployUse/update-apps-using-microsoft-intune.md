@@ -1,10 +1,10 @@
 ---
 title: "Aktualizace aplikací | Microsoft Intune"
-description: 
+description: "Informace v tomto tématu vám můžou pomoct pochopit, jak můžete aktualizovat aplikace, pokud je vyžadována novější verze."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,8 +12,9 @@ ms.technology:
 ms.assetid: beee6933-876a-4be0-b395-4c24cfbd519b
 ms.reviewer: mghadial
 ms.suite: ems
-ms.sourcegitcommit: 0581d1476fba5bedcdd4446df20f8f92b151f41b
-ms.openlocfilehash: 9e5b8f4a467e8e58cc2f8fa495b5f008eee7e35b
+translationtype: Human Translation
+ms.sourcegitcommit: a409d36c1c5fcfd3d81ce0cbdf1f69af4747157a
+ms.openlocfilehash: bb077902e33d6ab18dea33a6ab2d1ff9a70ce937
 
 
 ---
@@ -23,6 +24,16 @@ Microsoft Intune může pomoci při správě aktualizací aplikací. Informace v
 
 ## Jak aplikace aktualizovat
 Po vydání nové verze aplikace, kterou máte nasazenou, vám Intune umožní aktualizovat a nasadit novější verze aplikace. Nasazení můžete nahradit jedině novější verzi stejné aplikace (pomocí stejného identifikátoru). Aktualizace aplikací nejde použít k aktualizaci nasazení s jiným balíčkem aplikace.
+
+### Identifikátory aplikací
+Identifikátor aplikace je vlastnost, která jednoznačně identifikuje aplikaci. Nejde nainstalovat víc kopií aplikace se stejným identifikátorem. Například:
+
+- **iOS** – ID sady (například: com.microsoft.excel)
+- **Android** – ID balíčku (například: com.microsoft.excel)
+- **Windows Phone** – (instalační program xap), použijte ID produktu (GUID)
+- **Windows** – (appx/appxbundle), použijte úplný název balíčku
+
+
 
 > [!IMPORTANT]
 > Když nasadíte aplikaci pomocí akce nasazení **Požadovaná instalace** a později změníte akci nasazení na **Dostupná instalace**, nenainstalují se aktualizace aplikace automaticky na zařízení, na která se aplikace nainstalovala ještě před provedením změny nasazení. Pokud budete chtít tento problém vyřešit, můžete udělat toto:
@@ -49,6 +60,6 @@ V případě aplikací nasazených jako odkaz na obchod je aktualizace spravová
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

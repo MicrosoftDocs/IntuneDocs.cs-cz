@@ -1,27 +1,27 @@
 ---
-title: "Referenční informace o zásadách Microsoft Intune | Microsoft Intune"
-description: 
+title: "Referenční informace o zásadách konfigurace | Microsoft Intune"
+description: "Informace v tomto tématu vám pomohou rozhodnout, jaké zásady Microsoft Intune byste měli používat ke správě svých zařízení."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: d27f2739-9791-4aae-a9db-01a4e59ccfe5
-ms.reviewer: jeffgilb
+ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
-ms.openlocfilehash: 3d9e03a3c89af72caeaa9c9c47426f331adb0fca
+ms.sourcegitcommit: a409d36c1c5fcfd3d81ce0cbdf1f69af4747157a
+ms.openlocfilehash: cce19141ef25a8cca785d6ae80d1fe03ab352a8e
 
 
 ---
 
 # Referenční informace o zásadách Microsoft Intune
 
-Informace v tomto tématu vám pomohou rozhodnout, jaké zásady Microsoft Intune byste měli používat ke správě svých zařízení.
+Informace v tomto tématu vám pomohou rozhodnout, které zásady konfigurace Microsoft Intune byste měli používat ke správě svých zařízení.
 
 > [!TIP]
 > Podrobnější informace o používání zásad najdete v tématu [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
@@ -47,11 +47,14 @@ Informace v tomto tématu vám pomohou rozhodnout, jaké zásady Microsoft Intun
 |**Vlastní konfigurace (iOS 7.1 a novější)**|Nasaďte konfigurační profily do zařízení s iOS vytvořených pomocí nástroje Apple Configurator. To je užitečné, když nastavení, které potřebujete, není k dispozici v zásadách konfigurace.<br /><br />Podrobnosti najdete v tématu [Nastavení zásad pro iOS v Microsoft Intune](ios-policy-settings-in-microsoft-intune.md).|
 |**E-mailový profil (iOS 7.1 a novější)**|Vytvořit, nasadit a monitorovat nastavení e-mailů Exchange ActiveSync na spravovaných zařízeních. Díky tomu mají uživatelé na svých osobních zařízeních přístup k podnikovému e-mailu, bez nutnosti něco nastavovat.<br /><br />Podrobnosti najdete v tématu [Konfigurace přístupu k podnikovému e-mailu pomocí e-mailových profilů v Microsoft Intune](configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune.md).|
 |**Obecná konfigurace (iOS 7.1 a novější)**|Nakonfigurovat zabezpečení mobilního zařízení a funkční nastavení<br />-   Zadat aplikace, které jsou (nebo nejsou) v souladu s předpisy, a zobrazit zprávu o jejich používání<br />Nakonfigurovat celoobrazovkový režim, ve kterém můžete zařízení zamknout, a povolit fungování jenom některých funkcí, třeba můžete povolit, aby na zařízení běžela jenom jedna aplikace, nebo můžete zakázat tlačítka hlasitosti.<br /><br />Podrobnosti najdete v tématu [Nastavení zásad pro iOS v Microsoft Intune](ios-policy-settings-in-microsoft-intune.md).|
+|**Zásady konfigurace mobilních aplikací (iOS 7.1 a novější)**|Použít zásady konfigurace mobilních aplikací k automatickému poskytování zásad, které se můžou požadovat, když uživatel spustí aplikaci pro iOS.<br /><br />Podrobnosti najdete v tématu [Konfigurace aplikací pro iOS pomocí zásad konfigurace mobilních aplikací v Microsoft Intune](configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune.md).|
+|**Zásady mobilních zřizovacích profilů (iOS 7.1 a novější)**|Mobilní obchodní aplikace pro Apple iOS obsahují zřizovací profil a kód podepsaný certifikátem. Když se taková aplikace spustí na zařízení s iOS, iOS potvrdí její integritu a vynutí zásady jejím definované zřizovacím profilem.<br><br>Podpisový certifikát společnosti, který se používá k podepisování aplikací, má obvykle platnost 3 roky. Platnost zřizovacího profilu ale vyprší už po jednom roce. Pomocí těchto zásad můžete proaktivně nasadit nové zásady zřizovacích profilů do zařízení, ve kterých se aplikace blíží vypršení data platnosti, ale certifikát je stále platný.<br><br>Další podrobnosti najdete v tématu [Použití mobilních zásad zřizovacích profilů pro iOS k tomu, aby se zabránilo vypršení platnosti aplikací](ios-mobile-app-provisioning-profiles.md).|
+|**Profil certifikátu PKCS #12 (.PFX) (iOS 7.1 a novější)**|Použít tento profil k vytvoření a nasazení nastavení PFX pro požadavky certifikátů zařízení.<br /><br />Podrobnosti najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů v Microsoft Intune](secure-resource-access-with-certificate-profiles.md).|
 |**Profil certifikátu SCEP (iOS 7.1 a novější)**|Nakonfigurujte certifikát protokolu SCEP, který můžete použít společně s certifikátem důvěryhodného mobilního zařízení k ověřování mobilních zařízení a povolení jejich přístupu k síťovým prostředkům, například nakonfigurovaným profily Wi-Fi a VPN.<br /><br />Podrobnosti najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů v Microsoft Intune](secure-resource-access-with-certificate-profiles.md).|
 |**Profil důvěryhodného certifikátu (iOS 7.1 a novější)**|Nakonfigurujte certifikát důvěryhodného mobilního zařízení, který můžete použít k ověřování mobilních zařízení a povolení jejich přístupu k síťovým prostředkům, například nakonfigurovaným profily Wi-Fi a VPN.<br /><br />Podrobnosti najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů v Microsoft Intune](secure-resource-access-with-certificate-profiles.md).|
 |**Profil VPN (iOS 7.1 a novější)**|Nakonfigurujte a nasaďte nastavení, která uživatelům umožňují zabezpečený přístup k podnikové síti z jejich mobilních zařízení. Nasazením těchto nastavení minimalizujete úsilí koncových uživatelů potřebné pro připojení k jejich práci.<br /><br />Podrobnosti najdete v tématu [Připojení VPN v Microsoft Intune](vpn-connections-in-microsoft-intune.md).|
 |**Profil Wi-Fi (iOS 7.1 a novější)**|Nakonfigurujte a nasaďte nastavení bezdrátové sítě na uživatele ve vaší organizaci. Nasazením těchto nastavení minimalizujete úsilí koncových uživatelů potřebné k připojení k bezdrátové síti.<br /><br />Podrobnosti najdete v tématu [Připojení Wi-Fi v Microsoft Intune](wi-fi-connections-in-microsoft-intune.md).|
-|**Zásady konfigurace mobilních aplikací (iOS 7.1 a novější)**|Použít zásady konfigurace mobilních aplikací k automatickému poskytování zásad, které se můžou požadovat, když uživatel spustí aplikaci pro iOS.<br /><br />Podrobnosti najdete v tématu [Konfigurace aplikací pro iOS pomocí zásad konfigurace mobilních aplikací v Microsoft Intune](configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune.md).|
+
 
 ## Zásady konfigurace pro Mac OS X
 
@@ -82,6 +85,8 @@ Platí jenom pro Windows Phone a zaregistrovaná zařízení s Windows.
 |**Profil důvěryhodného certifikátu (Windows 8.1 a novější)**<br /><br />**Profil důvěryhodného certifikátu (Windows Phone 8.1 a novější)**|Nakonfigurujte certifikát důvěryhodného mobilního zařízení, který můžete použít k ověřování mobilních zařízení a povolení jejich přístupu k síťovým prostředkům, například nakonfigurovaným profily Wi-Fi a VPN.<br /><br />Podrobnosti najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů v Microsoft Intune](secure-resource-access-with-certificate-profiles.md).|
 |**Profil VPN (Windows 10 Desktop a Mobile a novější)**<br /><br />**Profil VPN (Windows Phone 8.1 a novější)**<br /><br />**Profil VPN (Windows Phone 8.1 a novější)**|Nakonfigurujte a nasaďte nastavení, která uživatelům umožňují zabezpečený přístup k podnikové síti z jejich mobilních zařízení. Nasazením těchto nastavení minimalizujete úsilí koncových uživatelů potřebné pro připojení k jejich práci.<br /><br />Podrobnosti najdete v tématu [Připojení VPN v Microsoft Intune](vpn-connections-in-microsoft-intune.md).|
 |**Import ve Wi-Fi**|Importujte a nasaďte konfigurace Wi-Fi pro Windows, které jste předtím exportovali do souboru.<br /><br />Podrobnosti najdete v tématu [Připojení Wi-Fi v Microsoft Intune](wi-fi-connections-in-microsoft-intune.md).|
+|**Windows Information Protection**<br>(dříve označované jako ochrana podnikových dat)|S nárůstem počtu zařízení vlastněných zaměstnanci, která se v podnicích využívají, vzrůstá také riziko náhodných úniků dat prostřednictvím aplikací a služeb, jako jsou e-mail, sociální média a veřejný cloud, které jsou mimo kontrolu příslušného podniku. Jsou to situace, kdy uživatel například odešle nejnovější technické výkresy ze svého osobního e-mailového účtu, zkopíruje informace o produktu a vloží je do tweetu nebo uloží aktuální zprávu o prodeji do veřejného cloudového úložiště.<br><br>Služba Windows Information Protection pomáhá před těmito potenciálními úniky dat chránit, aniž by jinak zasahovala do činnosti zaměstnanců. Pomáhá také chránit podnikové aplikace a data před náhodnými úniky dat na zařízeních ve vlastnictví společnosti a osobních zařízeních, která si uživatelé přinesou do práce, a nevyžaduje přitom žádné změny prostředí nebo ostatních aplikací.<br><br>Tyto zásady Intune spravují seznam aplikací chráněných službou Windows Information Protection, umístění v podnikové síti, úroveň ochrany a nastavení šifrování.<br><br>Další informace najdete v tématu věnovaném [ochraně podnikových dat pomocí služby Windows Information Protection](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-edp).|
+
 
 ## Softwarové zásady
 
@@ -129,7 +134,6 @@ Platí jenom pro Windows Phone a zaregistrovaná zařízení s Windows.
 
 
 
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

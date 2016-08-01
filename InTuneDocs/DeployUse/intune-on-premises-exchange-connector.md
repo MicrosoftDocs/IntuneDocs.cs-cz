@@ -1,19 +1,20 @@
 ---
-title: "Instalace konektoru Microsoft Intune Exchange Connector pro místní Exchange | Microsoft Intune"
-description: 
+title: "Exchange Connector pro místní EAS | Microsoft Intune"
+description: "Použijte nástroj Connector k umožnění komunikace mezi konzolou správce Intune a místním Exchange Serverem pro Exchange ActiveSync MDM."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 41ff4212-a6f5-4374-8731-631f7560cff1
-ms.reviewer: jeffgilb
+ms.reviewer: muhosabe
 ms.suite: ems
-ms.sourcegitcommit: 8c1f4f209c5ec704290882b8f6f71e0b1b01d21c
-ms.openlocfilehash: 45f815ea379007b75316552d34f5bd8669b2ccef
+translationtype: Human Translation
+ms.sourcegitcommit: 1e0d05a4f229e2a8e72d1d60021b159f12dfa0d1
+ms.openlocfilehash: 233aae987467a574c34aa06168a3c6d59eab663c
 
 
 ---
@@ -36,7 +37,6 @@ V následující tabulce jsou uvedené požadavky na počítač, na který insta
 |Další software|Počítač hostující konektor musí mít úplnou instalaci rozhraní Microsoft .NET Framework 4 a musí na něm být nainstalované prostředí Windows PowerShell 2.0.|
 |Síť|Počítač, na který jste nainstalovali konektor, musí být v doméně, která má vztah důvěryhodnosti k doméně hostující váš Exchange Server.<br /><br />Počítač vyžaduje konfigurace, které mu umožňují přístup ke službě Intune přes brány firewall nebo proxy servery přes porty 80 a 443. Mezi domény používané službu Intune patří tyto: manage.microsoft.com, &#42;manage.microsoft.com a &#42;.manage.microsoft.com.|
 |Nakonfigurovaný a spuštěný hostovaný systém Exchange|Další informace najdete v tématu [Exchange Server 2016](https://technet.microsoft.com/library/mt170645.aspx). |
-|Nastavení autority pro správu mobilních zařízení na Intune|[Nastavení autority pro správu mobilních zařízení na Intune](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority)|
 
 ### Požadavky rutin systému Exchange
 
@@ -58,16 +58,14 @@ Musíte vytvořit uživatelský účet služby Active Directory, který bude kon
 
 ## Stažení instalačního balíčku softwaru On-Premises Exchange Connector
 
-1. V podporovaném operačním systému pro On-Premises Exchange Connector otevřete [konzolu pro správu Microsoft Intune](http://manage.microsoft.com) (http://manage.microsoft.com) pomocí uživatelského účtu, který je správcem klienta Exchange s licencí k používání systému Exchange Server.
+1. V podporovaném operačním systému Windows Serveru pro místní Exchange Connector otevřete [konzolu pro správu Microsoft Intune](http://manage.microsoft.com) (http://manage.microsoft.com) pomocí uživatelského účtu, který je správcem klienta Exchange s licencí k používání systému Exchange Server.
 ![Otevření nastaveného připojení k systému Exchange](../media/ExchangeConnector.gif)
 
-2.  V podokně zástupců pracovních prostorů klikněte na **SPRÁVCE**.
+2.  V podokně zástupců pracovních prostorů zvolte **Správce**, zvolte **Správa mobilních zařízení** > **Microsoft Exchange**, a pak zvolte **Nastavit připojení k systému Exchange**.
 
-3.  V navigačním podokně rozbalte v části **Správa mobilních zařízení** položku **Microsoft Exchange** a potom zvolte **Nastavit připojení k systému Exchange**.
+3.  Na stránce **Nastavit připojení k systému Exchange** vyberte **Stáhnout software On-Premises Connector**.
 
-4.  Na stránce **Nastavit připojení k systému Exchange** vyberte **Stáhnout software On-Premises Connector**.
-
-5.  Software On-Premises Exchange Connector je v komprimované složce (.zip), která se dá otevřít nebo uložit. V dialogovém okně **Stažení souboru** vyberte na **Uložit** a uložte komprimovanou složku do zabezpečeného umístění.
+4.  Software On-Premises Exchange Connector je v komprimované složce (.zip), která se dá otevřít nebo uložit. V dialogovém okně **Stažení souboru** vyberte na **Uložit** a uložte komprimovanou složku do zabezpečeného umístění.
 
 > [!IMPORTANT]
 > Soubory ve složce softwaru On-Premises Exchange Connector nepřejmenovávejte ani nepřesouvejte. Přesunutím nebo přejmenováním obsahu složky instalaci porušíte.
@@ -133,6 +131,6 @@ Můžete se taky podívat na datum a čas posledního úspěšného pokusu o syn
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

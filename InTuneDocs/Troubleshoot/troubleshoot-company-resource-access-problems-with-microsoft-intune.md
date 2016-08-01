@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Řešení problémů s přístupem k prostředkům společnosti | Microsoft Intune
-description:
-keywords:
+title: "Řešení problémů s přístupem k prostředkům společnosti | Microsoft Intune"
+description: "Kódy stavů a chyb z tohoto tématu použijte k vyřešení problémů s přístupem k prostředkům."
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 40622ced-6029-4abf-873e-b51d2b51934c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c1e215320168c659d5f838355f6350111d6979b0
+ms.openlocfilehash: 9a4dce9d7b963e03ceeeba35ba1e529384f42d06
+
 
 ---
 
@@ -374,9 +368,10 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 |-2016346011|0x87D10065|Zadaný příkaz SyncML se provádí, ale zatím není dokončený.|
 
 ### Další kroky
-Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md)..
+Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

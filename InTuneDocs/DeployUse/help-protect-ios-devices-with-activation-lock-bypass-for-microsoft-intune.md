@@ -1,20 +1,20 @@
 ---
-title: "Pomoc při ochraně zařízení s iOS pomocí funkce Vynechat zámek aktivace | Microsoft Intune"
-description: 
+title: "Správa zámku aktivace iOS na zařízeních | Microsoft Intune"
+description: "Microsoft Intune vám může pomoci spravovat zámek aktivace v iOS – funkci aplikace Najít iPhone pro zařízení s iOS 7.1 a novějším."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: bb49e926-15c4-4f01-b6eb-cee6f7ee1984
-ms.reviewer: jeffgilb
+ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 496679a196dc3e84c6b16ad0d3b830c81f12631b
-ms.openlocfilehash: 7bbd761b13f110297959a036ec15cafe1396377e
+ms.sourcegitcommit: c1850e89830de61ccdeb81cb6ee9cc0f0c1d237a
+ms.openlocfilehash: 724186bdff1ae40e956c1f1c49476d80c7e1d657
 
 
 ---
@@ -82,12 +82,16 @@ To, která zařízení zámek aktivace používají, můžete zjistit dvěma zp�
 
     Pokud vyberete zařízení v uzlu **Všechna zařízení ve vlastnictví firmy** a zámek aktivace je pro zařízení povolený, uvidíte také kód pro vyřazení zámku. Pomocí tohoto kódu je možné ručně vyřadit zámek aktivace.
 
+    > [!IMPORTANT]
+    >Intune přebírá inventář ze zařízení kvůli zámku aktivace každých 7 dní. Z tohoto důvodu se zařízení nemusí v konzole Intune okamžitě zobrazit s jejich stavem zámku aktivace stav.
+
+
 ### Související témata
 [Vyřazení zařízení](retire-devices-from-microsoft-intune-management.md)
 [Chraňte svá zařízení pomocí vzdáleného zámku a resetování hesla](use-remote-lock-and-passcode-reset-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

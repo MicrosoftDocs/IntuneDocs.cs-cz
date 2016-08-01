@@ -1,10 +1,10 @@
 ---
-title: "Konfigurace přístupu k podnikovému e-mailu pomocí e-mailových profilů | Microsoft Intune"
-description: 
+title: "Přístup k podnikovému e-mailu pomocí e-mailových profilů | Microsoft Intune"
+description: "Nastavení e-mailového profilu se dá použít ke konfiguraci nastavení přístupu k e-mailům pro určité e-mailové klienty na mobilních zařízeních."
 keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 05/05/2016
+manager: Arob98
+ms.date: 07/021/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8a3df01e9c02af7c43cdadc6d202bc6d74a000da
-ms.openlocfilehash: d0fa235b7b25fe71a4e3b4b0bf68cd2db31b1f18
+ms.sourcegitcommit: 72288296d966b9b9fae4fd721b4460528213f626
+ms.openlocfilehash: c7a3ca7b0390a001624871342c9aa04802be27ff
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: d0fa235b7b25fe71a4e3b4b0bf68cd2db31b1f18
 
 Pokud potřebujete další ochranu před únikem informací, vyberte [Podmíněný přístup](restrict-access-to-email-and-o365-services-with-microsoft-intune.md), který určuje přístup do poštovní schránky uživatele pro všechny e-mailové klienty, včetně nativních e-mailových klientů.
 
-Nastavení e-mailového profilu se dá použít ke konfiguraci nastavení přístupu k e-mailům pro určité e-mailové klienty na mobilních zařízeních.   Většina mobilních platforem zahrnuje *nativního* e-mailového klienta, který se dodává v rámci operačního systému.  Na podporovaných platformách se dají nativní e-mailoví klienti nakonfigurovat v Microsoft Intune tak, aby uživatelům umožňovali přístup k firemnímu e-mailu z osobních zařízení bez jakéhokoli nastavování.  
+Nastavení e-mailového profilu se dá použít ke konfiguraci nastavení přístupu k e-mailům pro určité e-mailové klienty na mobilních zařízeních. Většina mobilních platforem zahrnuje *nativního* e-mailového klienta, který se dodává v rámci operačního systému.  Na podporovaných platformách se dají nativní e-mailoví klienti nakonfigurovat v Microsoft Intune tak, aby uživatelům umožňovali přístup k firemnímu e-mailu z osobních zařízení bez jakéhokoli nastavování.  
 
 Správci IT nebo uživatelé si také můžou nainstalovat alternativní e-mailové klienty, třeba Microsoft Outlook pro Android nebo iOS.  Tito e-mailoví klienti nemusí e-mailové profily podporovat a nemusí umožňovat konfiguraci pomocí e-mailových profilů Microsoft Intune.  
 
@@ -111,6 +111,6 @@ Shrnutí stavu a výstrahy na stránce **Přehled** v pracovním prostoru **Zás
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

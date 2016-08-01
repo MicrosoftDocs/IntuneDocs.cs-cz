@@ -1,6 +1,6 @@
 ---
 title: "Zavedení aplikace | Microsoft Intune"
-description: 
+description: "Doporučení pro postupné zavádění aplikací v Microsoft Intune"
 keywords: 
 author: Nbigman
 manager: jeffgilb
@@ -13,8 +13,8 @@ ms.assetid: 0fc32ed3-bcf4-472a-80e7-eb20986f78fa
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d82d0ae4820d2e2141848235b8741abccaec3bc6
-ms.openlocfilehash: 4a237942b4bc1e411cf55bc34c7b86d2249c526e
+ms.sourcegitcommit: 2427768c0ca73d20140462946ba2984b7999d864
+ms.openlocfilehash: d72247936a0dec8e2e00d107c0d52c1568a92c03
 
 
 ---
@@ -44,7 +44,7 @@ Vezměte v úvahu tyto informace:
 
 -   Zkontrolujte, že instalační program aplikace, který jste zvolili, je podporován distribucí aplikací Intune, jak je popsáno v tématu [Přidávání aplikací s Microsoft Intune](/intune/deploy-use/add-apps).
 
--   Ověřte, že jsou nainstalované požadavky distribuce aplikací. <!---, as described in [Plan for app deployment in Microsoft Intune](plan-for-app-deployment-in-microsoft-intune.md--->).
+-   Ověřte, že jsou nainstalované požadavky distribuce aplikací. <!---, as described in [Plan for app deployment in Microsoft Intune](plan-for-app-deployment-in-microsoft-intune.md).--->
 
 -   Ujistěte se, že je typ aplikace podporovaný v Intune.
 
@@ -95,6 +95,6 @@ V průběhu pilotní fáze nasadíte aplikaci pro malou skupinu testovacích už
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

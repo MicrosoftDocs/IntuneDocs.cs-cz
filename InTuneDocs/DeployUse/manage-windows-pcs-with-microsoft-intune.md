@@ -1,5 +1,5 @@
 ---
-title: "Správa počítačů s Windows pomocí Intune | Microsoft Intune"
+title: "Správa počítačů s Windows pomocí počítačového klienta Intune | Microsoft Intune"
 description: 
 keywords: 
 author: nathbarn
@@ -13,21 +13,23 @@ ms.assetid: 3b8d22fe-c318-4796-b760-44f1ccf34312
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0335b80afa8e330263baad054f0e902f019f75bb
-ms.openlocfilehash: 92f4ddde3336fd4cf07c701596f5ebe4c0aeb49f
+ms.sourcegitcommit: e09381bbcf073baa67a431546059272e629b5423
+ms.openlocfilehash: d22714f7b6eda1632892785568463fc5bafce8d0
 
 
 ---
 
-# Správa počítačů s Windows pomocí Intune
-Intune můžete kromě registrace mobilních zařízení použít taky ke správě počítačů Windows s podporovaným operačním systémem pomocí klientského softwaru Intune počítače s Windows. Požadavky na hardware a software pro spuštění počítačového klienta jsou minimální, dá se říct, že je podporovaný libovolný systém schopný spustit Windows 7 nebo novější verzi.  Klientský software se taky dá snadno nainstalovat do počítačů připojených k doméně (v libovolné doméně) i do počítačů, které do žádné domény připojené nejsou.
+# Správa počítačů s Windows pomocí klientského počítačového softwaru Intune
+Namísto [registrace počítačů s Windows jako mobilních zařízení](set-up-windows-device-management-with-microsoft-intune.md) můžete spravovat počítače s Windows pomocí instalace klientského softwaru Intune. 
 
 Intune spravuje počítače s Windows pomocí zásad podobně jako objekty zásad skupiny (GPO) služby AD DS (Active Directory Domain Services) Windows Serveru. Pokud budete počítače připojené k doméně Active Directory spravovat pomocí Intune, měli byste [ověřit, že zásady Intune nejsou v konfliktu se žádnými objekty zásad skupiny](resolve-gpo-and-microsoft-intune-policy-conflicts.md), které jsou nastavené pro vaši organizaci.
 
-> [!NOTE]
-> Microsoft Intune jako samostatná služba nabízí tyto funkce pro správu počítačů. Zařízení se systémem Windows 8.1 můžete spravovat pomocí klienta Intune nebo je můžete zaregistrovat jako mobilní zařízení. Níže uvedené informace platí pro počítače, které používají klienta Intune.
+I když klient Intune podporuje [zásady, které pomáhají chránit počítače](policies-to-protect-windows-pcs-in-microsoft-intune.md) pomocí správy aktualizací softwaru, brány Windows Firewall a Endpoint Protection, počítače spravované pomocí klienta Intune nemůžou být cílem dalších zásad Intune.
 
-## Požadavky na správu stolních počítačů Intune
+> [!NOTE]
+> Zařízení se systémem Windows 8.1 můžete spravovat pomocí klienta Intune nebo je můžete zaregistrovat jako mobilní zařízení. Níže uvedené informace platí pro počítače, které používají klienta Intune. Instalace počítačového klienta Intune současně s registrací zařízení s Windows ke správě mobilních zařízení není podporována.
+
+## Požadavky na správu počítačového klienta Intune
 
 **Hardware**: Toto jsou minimální požadavky na hardware pro instalaci klienta Intune:
 
@@ -41,20 +43,19 @@ Intune spravuje počítače s Windows pomocí zásad podobně jako objekty zása
 
 |Požadavek|Další informace|
 |---------------|--------------------|
-|Oprávnění správce|Účet, který instaluje klientský software, musí mít oprávnění místního správce k tomuto počítači.|
+|Operační systém | Zařízení s Windows se systémem Windows 7 nebo novějším. |
+|Oprávnění správce|Účet, který instaluje klientský software, musí mít oprávnění místního správce pro toto zařízení.|
 |Instalační služba systému Windows verze 3.1|Na počítači musí být Instalační služba systému Windows minimálně verze 3.1.<br /><br />Pokud chcete zobrazit verzi Instalační služby systému Windows na počítači:<br /><br />-   Na počítači klikněte pravým tlačítkem na **%windir%\System32\msiexec.exe** a potom klikněte na **Vlastnosti**.<br /><br />Nejnovější verzi Instalační služby systému Windows můžete stáhnout ze stránky [Windows Installer Redistributables](http://go.microsoft.com/fwlink/?LinkID=234258) na webu Microsoft Developer Network.|
 |Odebrání nekompatibilního klientského softwaru|Před instalací klientského softwaru Intune musíte z daného počítače odinstalovat veškerý klientský software Configuration Manageru a System Management Serveru.|
 
 ## Instalace počítačového klienta Intune
-Prvním krokem při správě počítačů s Windows pomocí Intune je instalace klienta. Klientský software se dá nainstalovat, když je počítač zaregistrovaný v Intune jedním z následujících způsobů:
+Klientský software Intune lze nainstalovat jedním z následujících způsobů:
 
--   Můžete [ručně nasadit klientský software Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md#to-manually-deploy-the-client-software). U tohoto typu nasazení správce stáhne klientský software Intune a ručně ho nainstaluje do všech počítačů.
+-   [Ruční nasazení klientského softwaru Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md#to-manually-deploy-the-client-software) U tohoto typu nasazení správce stáhne klientský software Intune a ručně ho nainstaluje do všech počítačů.
 
-    Pokud chcete stáhnout klientský software Intune, otevřete konzolu správy Intune a v části Stažení klientského softwaru stáhněte balíček klientského softwaru. Po dokončení instalace klientského softwaru Intune automaticky nainstaluje další software nezbytný ke správě počítače.
+  Pokud chcete stáhnout klientský software Intune, otevřete [konzolu správy Intune](https://manage.microsoft.com), zvolte **Správce**  >  **Stažení klientského softwaru** a klikněte na **Stáhnout klientský software**.
 
 -   Stejné soubory, které jste stáhli pro ruční instalaci klienta Intune, můžete použít pro [nasazení klienta do počítačů připojených k doméně pomocí objektů zásad skupiny Active Directory](install-the-windows-pc-client-with-microsoft-intune.md#to-automatically-deploy-the-client-software-by-using-group-policy).
-
--   [Koncoví uživatelé můžou své počítače sami zaregistrovat](install-the-windows-pc-client-with-microsoft-intune.md#how-users-can-self-enroll-their-computers) pomocí portálu společnosti Intune. Každý zaregistrovaný počítač se pak automaticky propojí s uživatelským účtem použitým při instalaci klientského softwaru Intune.
 
 -   Klientský software Intune můžete do počítačů taky nasadit jako součást [nasazení operačního systému](install-the-windows-pc-client-with-microsoft-intune.md#install-the-microsoft-intune-client-software-as-part-of-an-image).
 
@@ -85,6 +86,6 @@ Klientský agent Intune obvykle běží tiše na pozadí a nevyžaduje skoro ž�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

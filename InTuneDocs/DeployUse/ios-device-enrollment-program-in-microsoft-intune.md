@@ -1,10 +1,10 @@
 ---
-title: "Správa Apple DEP pro zařízení s iOS pomocí Microsoft Intune| Microsoft Intune"
-description: 
+title: "Správa Apple DEP pro zařízení s iOS | Microsoft Intune"
+description: "Nasaďte profil registrace, který „vzduchem“ zaregistruje zařízení s iOS zakoupená prostřednictvím programu DEP (Device Enrollment Program), aby bylo možné spravovat zařízení Apple."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1b942c7e09e59de59e3e406b84a21a712c0e973a
-ms.openlocfilehash: cd763f9fa0b08cc7b822eccbd043a5b9cd355d0f
+ms.sourcegitcommit: 1e0d05a4f229e2a8e72d1d60021b159f12dfa0d1
+ms.openlocfilehash: c63badfcbc736476f17b39e09ef189eb4d2c08ef
 
 
 ---
@@ -55,9 +55,7 @@ Abyste mohli v programu DEP registrovat zařízení iOS vlastněná společnost�
 
     Můžete také vybrat možnost **Přiřadit zařízení k této skupině**. Klikněte na **Vybrat** a zvolte skupinu.
 
-    >[!Important]
-    >Přiřazení skupiny způsobí přesun z Intune do Azure Active Directory. [Další informace](#changes-to-intune-group-assignments)
-
+    [!INCLUDE[groups deprecated](../includes/group-deprecation.md)]
 
     Dál povolte nastavení **Nakonfigurujte nastavení DEP (Device Enrollment Program) pro tuto zásadu**, které zajistí podporu programu DEP.
 
@@ -101,13 +99,13 @@ Abyste mohli v programu DEP registrovat zařízení iOS vlastněná společnost�
 
 ## Změny v přiřazení skupiny pro Intune
 
-Od září se správa skupin zařízení přesune do služby Azure Active Directory. Po přechodu na skupiny Azure Active Directory se už přiřazení skupin nebude zobrazovat mezi možnostmi v části **Podnikový profil zápisu**. Jelikož se tato změna bude zavádět několik měsíců, je možné, že ji nezaznamenáte okamžitě. Brzy zveřejníme další podrobnosti.
+Od září se správa skupin zařízení přesune do služby Azure Active Directory. Po přechodu na skupiny Azure Active Directory se už přiřazení skupin nebude zobrazovat mezi možnostmi v části **Podnikový profil zápisu**. Jelikož se tato změna bude zavádět několik měsíců, je možné, že ji nezaznamenáte okamžitě. Ve službě Azure Active Directory se dá na základě názvu podnikového profil zápisu definovat nové dynamické přiřazení do skupin zařízení. Tento proces slouží k tomu, aby se zařízení předběžně zařazená do určité skupiny zařízení automaticky zaregistrovala do této skupiny s nasazenými zásadami a aplikacemi. [Další informace o skupinách Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
 
 ### Související témata
 [Příprava registrace zařízení](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO3-->
 
 

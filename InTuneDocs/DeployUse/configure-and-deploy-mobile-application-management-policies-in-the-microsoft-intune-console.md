@@ -1,10 +1,10 @@
 ---
-title: "Konfigurace a nasazení zásad správy mobilních aplikací v konzole Microsoft Intune | Microsoft Intune"
-description: 
+title: "Konfigurace zásad MAM v konzole Intune | Microsoft Intune"
+description: "Zásady správy mobilních aplikací ve službě Microsoft Intune umožňují upravovat funkce aplikací, které nasazujete, a přizpůsobit je zásadám dodržování předpisů a zabezpečení vaší společnosti."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: b4fb33a8-a2fa-4353-bd89-5bda48b68e83
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f33a86c51320c75ce74d20e0cac2b9581990ecec
-ms.openlocfilehash: a140a2f634397440b35786e7afb3165dccc7d93e
+ms.sourcegitcommit: c1850e89830de61ccdeb81cb6ee9cc0f0c1d237a
+ms.openlocfilehash: df75c3512091dff55ace65ef6106dc2cbc503bd2
 
 
 ---
@@ -126,7 +126,7 @@ Po ověření úspěšného nahrání aplikace pokračujte krokem 3.
     |**Popis**|V případě potřeby zadejte popis pro tuto zásadu.|
     |**Omezit zobrazování obsahu webu jenom na podnikový spravovaný prohlížeč**|Když je toto nastavení povolené, otevřou se ve spravované prohlížeči jakékoli odkazy v aplikaci. Aby tato možnost fungovala, musíte mít tuto aplikaci nasazenou na zařízeních.|
     |**Zabránit zálohám Androidu** nebo **Zabránit zálohám iTunes a iCloudu**|Zakáže zálohování jakýchkoliv informací z aplikace.|
-    |**Povolit aplikaci přenos dat do ostatních aplikací**|Určuje aplikace, do kterých může tato aplikace může odesílat data. Můžete si vybrat, že nepovolíte přenos dat do žádné aplikace, povolíte přenos jenom do dalších spravovaných aplikací, nebo povolíte přenos do všech aplikací. Toto nastavení neřídí použití funkce **Otevřít v** na mobilních zařízeních.<br /><br />Například když nepovolíte přenos dat, omezíte přenos dat na služby, jako je zasílání zpráv SMS, přiřazování obrázků kontaktům a publikování na Facebooku nebo Twitteru.<br /><br />Pro zařízení s iOS platí, že aby se zabránilo přenosu dokumentu mezi spravovanými a nespravovanými aplikacemi, je potřeba nakonfigurovat a nasadit taky zásady zabezpečení mobilních zařízení, které zakazují nastavení **Povolit spravované dokumenty v jiných nespravovaných aplikacích**. Pokud vyberete možnost povolit jenom přenos do ostatních spravovaných aplikací, použije se k otevření obsahu příslušného typu prohlížeč Intune PDF a prohlížeč obrázků (pokud je nasazený).<br /><br />Pokud nastavíte tuto možnost na hodnotu **Aplikace spravované podle zásad** nebo **Žádné**, zablokuje se funkce iOS 9, která umožňuje vyhledávání dat Spotlight Search v rámci aplikací.|
+    |**Povolit aplikaci přenos dat do ostatních aplikací**|Určuje aplikace, do kterých může tato aplikace může odesílat data. Můžete si vybrat, že nepovolíte přenos dat do žádné aplikace, povolíte přenos jenom do dalších spravovaných aplikací, nebo povolíte přenos do všech aplikací. Toto nastavení neřídí použití funkce **Otevřít v** na mobilních zařízeních.<br /><br />Například když nepovolíte přenos dat, omezíte přenos dat na služby, jako je zasílání zpráv SMS, přiřazování obrázků kontaktům a publikování na Facebooku nebo Twitteru.<br /><br />Pro zařízení s iOS platí, že aby se zabránilo přenosu dokumentu mezi spravovanými a nespravovanými aplikacemi, je potřeba nakonfigurovat a nasadit taky zásady zabezpečení mobilních zařízení, které zakazují nastavení **Povolit spravované dokumenty v jiných nespravovaných aplikacích**. Pokud vyberete možnost povolit jenom přenos do ostatních spravovaných aplikací, použije se k otevření obsahu příslušného typu prohlížeč Intune PDF a prohlížeč obrázků (pokud je nasazený).<br /><br />Pokud nastavíte tuto možnost na hodnotu **Aplikace spravované podle zásad** nebo **Žádné**, bude blokovaná funkce iOS 9, která umožňuje vyhledávání Spotlight dat v rámci aplikací.<br><br>**Toto nastavení neřídí použití funkce Otevřít v na mobilních zařízeních. Informace ke správě funkce Otevřít v najdete [zde](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)**.|
     |**Povolit aplikaci, aby přijímala data z jiných aplikací**|Určuje aplikace, ze kterých může tato aplikace přijímat data. Můžete si vybrat, že nepovolíte přenos dat ze žádné aplikace, povolíte přenos jenom z dalších spravovaných aplikací, nebo povolíte přenos ze všech aplikací.<br /><br />Pro aplikace iOS, které podporují víc identit (kde Intune uplatňuje nastavení správy jenom na podnikové účty nebo data v aplikaci), v zaregistrovaných zařízeních s použitými zásadami správy mobilních aplikací platí, že když uživatel získá přístup k datům z aplikace, kterou nespravují zásady správy mobilních aplikací, bude se s daty zacházet jako s podnikovými daty chráněnými zásadami.|
     |**Zabránit možnosti Uložit jako**|Zakáže použít možnost **Uložit jako** k uložení dat do osobního cloudového úložiště (třeba na osobní OneDrive nebo na Dropbox) v jakékoli aplikaci, která tuto zásadu používá.|
     |**Omezit vyjmutí, kopírování a vkládání v ostatních aplikacích**|Určuje, jak se v aplikaci dají používat operace vyjmutí, kopírování a vložení. Vybírejte z těchto možností:<br /><br />**Blokované** – Nepovolujte operace vyjmutí, kopírování a vložení mezi touto a jinými aplikacemi.<br /><br />**Aplikace spravované podle zásad** – Povolí jenom operace vyjmutí, kopírování a vložení mezi touto a jinými spravovanými aplikacemi.<br /><br />**Aplikace s vložením spravované podle zásad** – Povolí vložení dat vyjmutých nebo zkopírovaných z této aplikace jenom do jiných spravovaných aplikací. Povolí vložení dat vyjmutých nebo zkopírovaných z jakékoliv aplikace do této aplikace.<br /><br />**Libovolná aplikace** – Žádná omezení operací vyjímání, kopírování a vkládání v této aplikaci.<br /><br />Aby bylo možné kopírovat a vkládat data mezi spravovanými aplikacemi, musí mít obě aplikace nakonfigurované buď nastavení **Aplikace spravované podle zásad**, nebo nastavení **Aplikace s vložením spravované podle zásad**.|
@@ -197,6 +197,6 @@ V případech, kdy zařízení nebo uživatel obdrží dvě konfliktní zásady,
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: "Vytvoření zásady dodržování předpisů pro zařízení v Microsoft Intune | Microsoft Intune"
-description: 
+title: "Vytvoření zásady dodržování předpisů pro zařízení | Microsoft Intune"
+description: "Vytvořte zásadu dodržování předpisů, která pomáhá zabezpečit mobilní zařízení a počítače používané pro přístup k firemním datům."
 keywords: 
 author: karthikaraman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 5336dac0-a2cc-4cd4-8511-67e4f95bd700
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ded7bd6c971a9448ad6e6492ebc5e42dfcb5d76e
-ms.openlocfilehash: f4f036fc1b6fe2394e05907e2d14289c9fba3426
+ms.sourcegitcommit: c72c8e1a764af73ba4d421ca6637ee91ab7bca0a
+ms.openlocfilehash: 67d9b0e0231b8165500f6995d5c058fb5c3f2df1
 
 
 ---
@@ -32,12 +32,20 @@ Na stránce **Vytvořit zásadu** povolte požadovaná nastavení:
   -   Nastavení zabezpečení systému jako heslo a šifrování
   -   Nastavení stavu zařízení, jako jestli má zařízení jailbreak nebo jestli ho služba ověření stavu zařízení ve Windows nahlásila jako zařízení, které je v pořádku
   -   Nastavení vlastností zařízení jako minimální požadovaná verze operačního systému nebo maximální povolená verze operačního systému
-![Snímek obrazovky s kartou Obecné na stránce Vytvořit zásadu ](./media/intune-sa-3b-create-policy.png)
+![Karta Obecné na stránce Vytvořit zásadu ](./media/intune-sa-3b-create-policy.png)
+
 
 ##  Krok 3: Uložení zásady
 Po dokončení klikněte na **Uložit zásadu**.
 
 Máte možnost nasadit zásadu hned po uložení, nebo můžete zvolit pozdější nasazení. Nová zásada se zobrazí v uzlu **Zásady dodržování předpisů** pracovního prostoru **Zásady**.
+
+##  Krok 4: Nastavení doby platnosti stavu dodržování předpisů
+Chcete-li určit čas, kdy zařízení má na registraci, než je považováno za nekompatibilní, přejděte na nastavení zásad dodržování předpisů a aktualizujte čas.  Ve výchozím nastavení je to 30 dní.
+
+![možnost nastavení zásad dodržování předpisů v panelu nabídek zásad](../media/mdm-compliance-policy-settings.png)
+
+![dialogové okno zásad dodržování předpisů](../media/mdm-ca-compliance-status-validity-period.png)
 
 ## Nastavení podporovaných zásad
 Následující tabulka uvádí nastavení zásad dodržování předpisů a platformy, na kterých jsou podporované.
@@ -79,6 +87,6 @@ Další informace o nastavení dodržování předpisů podporovaném na jednotl
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Konfigurace aplikací pro iOS pomocí zásad konfigurace mobilních aplikací v Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Použití zásad konfigurace mobilních aplikací pro iOS | Microsoft Intune"
+description: "Zásady konfigurace mobilních aplikací v Intune slouží k poskytování nastavení, která se můžou požadovat, když uživatel spustí aplikaci pro iOS."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: fc6b645a-e837-4b2a-a10f-144065cbd8dd
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c1850e89830de61ccdeb81cb6ee9cc0f0c1d237a
+ms.openlocfilehash: faf65ddbb4772f8c0ce0a4125bb108b3b1bcfb5c
+
 
 ---
 
@@ -48,13 +42,13 @@ Tyto zásady nenasazujte přímo na uživatele a zařízení. Místo toho přidr
 > -   **Spravované aplikace pro iOS z obchodu s aplikacemi**
 > -   **Balíček aplikace pro iOS**
 > 
-> Další informace o typech instalace aplikací najdete v tématu [Nasazení aplikací pomocí Microsoft Intune](deploy-apps.md)..
+> Další informace o typech instalace aplikací najdete v tématu [Nasazení aplikací pomocí Microsoft Intune](deploy-apps.md).
 
 ## Konfigurace zásady konfigurace mobilních aplikací
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) klikněte na **Zásady** &gt; **Přehled** &gt; **Přidat zásadu**..
+1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) klikněte na **Zásady** &gt; **Přehled** &gt; **Přidat zásadu**.
 
-2.  V seznamu zásad rozbalte **iOS**, klikněte na **Konfigurace mobilních aplikací**a pak klikněte na **Vytvořit zásadu**..
+2.  V seznamu zásad rozbalte **iOS**, klikněte na **Konfigurace mobilních aplikací**a pak klikněte na **Vytvořit zásadu**.
 
     > [!TIP]
     > Můžete konfigurovat jenom vlastní nastavení pro tento typ zásad. Doporučená nastavení nejsou dostupná.
@@ -70,10 +64,10 @@ Tyto zásady nenasazujte přímo na uživatele a zařízení. Místo toho přidr
     > 
     > Intune podporuje v seznamu vlastností následující typy dat:
     > 
-    > &lt;celé číslo&gt;
-    > &lt;reálné číslo&gt;
-    > &lt;řetězec&gt;
-    > &lt;pole&gt;
+    > &lt;integer&gt;
+    > &lt;real&gt;
+    > &lt;string&gt;
+    > &lt;array&gt;
     > &lt;dict&gt;
     > &lt;true /&gt; nebo &lt;false /&gt;
     > 
@@ -81,15 +75,7 @@ Tyto zásady nenasazujte přímo na uživatele a zařízení. Místo toho přidr
     >
         > Intune dál v seznamu vlastností podporuje následující typy tokenů:
     >    
-    > \{\{userprincipalname\}\} – (příklad: **John@contoso.com**))
-    > \{\{mail\}\} – (příklad: **John@contoso.com**))
-    > \{\{partialupn\}\} – (příklad: **John**))
-    > \{\{accountid\}\} – (příklad: **fc0dc142-71d8-4b12-bbea-bae2a8514c81**))
-    > \{\{deviceid\}\} – (příklad: **b9841cd9-9843-405f-be28-b2265c59ef97**))
-    > \{\{userid\}\} – (příklad: **3ec2c00f-b125-4519-acf0-302ac3761822**))
-    > \{\{username\}\} – (příklad: **John Doe**))
-    > \{\{serialnumber\}\} – (příklad: **F4KN99ZUG5V2**) pro zařízení s iOS
-    > \{\{serialnumberlast4digits\}\} – (příklad: **G5V2**) pro zařízení s iOS
+    > \{\{userprincipalname\}\} – (Příklad: **John@contoso.com**) \{\{mail\}\} – (Příklad: **John@contoso.com**) \{\{partialupn\}\} – (Příklad: **John**) \{\{accountid\}\} – (Příklad: **fc0dc142-71d8-4b12-bbea-bae2a8514c81**) \{\{deviceid\}\} – (Příklad: **b9841cd9-9843-405f-be28-b2265c59ef97**) \{\{userid\}\} – (Příklad: **3ec2c00f-b125-4519-acf0-302ac3761822**) \{\{username\}\} – (Příklad: **John Doe**) \{\{serialnumber\}\} – (Příklad: **F4KN99ZUG5V2**) pro zařízení s iOS \{\{serialnumberlast4digits\}\} – (Příklad: **G5V2**) pro zařízení s iOS
 >
 > Znaky \{\{ a \}\} se používají jenom pro typy tokenů a nesmí se používat pro jiné účely.
 
@@ -101,7 +87,7 @@ Tyto zásady nenasazujte přímo na uživatele a zařízení. Místo toho přidr
     > [!IMPORTANT]
     > Když kliknete na **Ověřit**, Intune zkontroluje, že zadaný kód XML má platný formát. Nekontroluje, že seznam vlastností XML bude fungovat s aplikací, ke které je přidružen.
 
-6.  Po dokončení klikněte na **Uložit zásadu**..
+6.  Po dokončení klikněte na **Uložit zásadu**.
 
 Nová zásada se zobrazí v uzlu **Zásady konfigurace** .
 
@@ -115,7 +101,7 @@ Potom pokračujte v nasazení a monitorování nasazení aplikace obvyklým způ
 Při spuštění aplikace nasazené do zařízení se aplikace spustí s nastavením, které jste nakonfigurovali v zásadě konfigurace mobilních aplikací.
 
 > [!TIP]
-> V případě konfliktu jedné nebo více zásad konfigurace mobilních aplikací se nevynutí ani jedna zásada a konflikt se ohlásí v **Řídicím panelu **konzoly pro správu..
+> V případě konfliktu jedné nebo více zásad konfigurace mobilních aplikací se nevynutí ani jedna zásada a konflikt se ohlásí v **Řídicím panelu** konzoly pro správu Intune.
 
 ## Příklad formátu pro soubor XML konfigurace mobilních aplikací
 
@@ -150,6 +136,7 @@ Když vytvoříte soubor konfigurace mobilních aplikací, můžete pomocí toho
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

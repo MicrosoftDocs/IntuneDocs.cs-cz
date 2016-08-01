@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Přehled životního cyklu aplikace | Microsoft Intune
-description:
-keywords:
+title: "Přehled životního cyklu aplikace | Microsoft Intune"
+description: "Přečtěte si informace o životním cyklu aplikací spravovaných pomocí Intune od jejich přidávání po jejich případné vyřazení z provozu."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/13/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 60347012-bc3f-4b9a-a4f4-6d3c5021a6e6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: a409d36c1c5fcfd3d81ce0cbdf1f69af4747157a
+ms.openlocfilehash: 86d9de9992003ffd163291035174c8d1e822929a
+
 
 ---
 
@@ -29,11 +23,11 @@ ms.suite: ems
 
 Životní cyklus aplikace Intune začíná, když je aplikace přidána, a postupuje dalšími fázemi, dokud ji neodeberete.
 
-![Životní cyklus aplikace](./media/applifecycle_nobg.png "the Intune app lifecycle")
+![Životní cyklus aplikace](./media/app-lifecycle.png "the Intune app lifecycle")
 
 ## Přidat
 
-Prvním krokem při nasazení aplikace je přidání aplikací, které chcete spravovat a nasazovat, do Intune. Existuje mnoho různých typů aplikací, se kterými můžete pracovat, ale základní postupy jsou stejné. Intune umožňuje přidávat aplikace pro [registrovaná zařízení](add-apps-for-mobile-devices-in-microsoft-intune.md) i pro [počítače s Windows spravované klientským softwarem Intune](add-apps-for-windows-pcs-in-microsoft-intune.md)..
+Prvním krokem při nasazení aplikace je přidání aplikací, které chcete spravovat a nasazovat, do Intune. Existuje mnoho různých typů aplikací, se kterými můžete pracovat, ale základní postupy jsou stejné. Intune umožňuje přidávat aplikace pro [registrovaná zařízení](add-apps-for-mobile-devices-in-microsoft-intune.md) i pro [počítače s Windows spravované klientským softwarem Intune](add-apps-for-windows-pcs-in-microsoft-intune.md).
 
 ## Nasadit
 
@@ -53,9 +47,10 @@ Intune poskytuje mnoho způsobů, jak pomoci chránit data ve vašich aplikacíc
 
 ## Vyřadit
 
-Nakonec je pravděpodobné, že aplikace, které jste nasadili, začnou být zastaralé a je třeba je odebrat. Intune umožňuje snadno [vyřazovat aplikace z provozu](retire-apps-using-microsoft-intune.md)..
+Nakonec je pravděpodobné, že aplikace, které jste nasadili, začnou být zastaralé a je třeba je odebrat. Intune umožňuje snadno [vyřazovat aplikace z provozu](retire-apps-using-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Řešení potíží s registrací | Microsoft Intune"
-description: 
+description: "Doporučení pro řešení potíží s registrací zařízení"
 keywords: 
 author: Nbigman
 manager: jeffgilb
@@ -13,8 +13,8 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d12a31eb0727f7ca0c460049ac6fffb314daf70e
-ms.openlocfilehash: 62668c607bc3064cf8148fd7929b3c1268b721d7
+ms.sourcegitcommit: c1e215320168c659d5f838355f6350111d6979b0
+ms.openlocfilehash: 4c728b4fbb68d64d4e06845eca08b1b2d8d1a92a
 
 
 ---
@@ -160,8 +160,29 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 
 2.  Zkontrolujte, jestli už není zařízení zaregistrované pomocí jiného poskytovatele správy mobilních zařízení (MDM) a jestli už v něm není nainstalovaný profil správy.
 
-
 4.  Potvrďte, že Chrome pro Android je výchozím prohlížečem a že jsou povolené soubory cookie.
+
+### Problémy s certifikáty Androidu
+
+**Problém:** Uživatel obdrží na zařízení následující zprávu: *Nemůžete se přihlásit, protože vašemu zařízení chybí požadovaný certifikát.*
+
+**Řešení:** 
+
+- Uživatel by mohl být schopný načíst chybějící certifikát pomocí [těchto pokynů](/intune/enduser/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator).
+- Pokud uživatel nemůže načíst certifikát, pravděpodobně na serveru AD FS chybí zprostředkující certifikáty. Zprostředkující certifikáty jsou nutné pro Android, aby důvěřoval serveru. 
+
+Certifikáty do úložiště zprostředkujících certifikátů na serveru AD FS nebo proxy serverech můžete importovat následujícím způsobem:
+
+1.  Na serveru AD FS spusťte **konzolu Microsoft Management Console** a přidejte modul snap-in Certifikáty pro **Účet počítače**. 
+5.  Najděte certifikát, který používá vaše služba AD FS, a zobrazte jeho nadřazený certifikát.
+6.  Zkopírujte nadřazený certifikát a vložte ho do větve **Computer\Intermediate Certification Authorities\Certificates**.
+7.  Zkopírujte certifikát služby AD FS, dešifrovací certifikát AD FS a certifikát podpisu ADFS a vložte je do osobního úložiště pro službu AD FS.
+8.  Restartujte servery AD FS.
+
+Teď už by měl uživatel být schopný se ze zařízení s Androidem k aplikaci Portál společnosti přihlásit.
+
+
+
 ## Problémy na zařízeních s iOS
 ### Neúspěch instalace profilu
 **Problém:** V zařízení s iOS se zobrazí chyba **Instalace profilu se nezdařila**.
@@ -285,6 +306,6 @@ Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podpor
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: "Nasazení aplikací | Microsoft Intune"
-description: 
+title: "Postup nasazení aplikací | Microsoft Intune"
+description: "Informace v tomto tématu vám pomůžou nasadit aplikace pomocí Microsoft Intune."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,17 +13,17 @@ ms.assetid: 3b42019e-73da-4538-a496-212f11d5bf9b
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c95a776e79cf3e1c7009d6e27f8f50482434d298
-ms.openlocfilehash: 46562ed3463c4a23a511eb5c7f28a0b11e84f421
+ms.sourcegitcommit: 5ef1d2d69acfeea9670324f580d33b191001ffa9
+ms.openlocfilehash: 8ab2517a11ecb6ae5395814472dfbb3e83da132b
 
 ---
 # Nasazení aplikací v Microsoft Intune
 
-Informace v tomto tématu vám pomůžou nasadit aplikace Microsoft Intune.
+Informace v tomto tématu vám pomůžou nasadit aplikace pomocí Microsoft Intune.
 
 
 ## Nasazení aplikace
-V tomto postupu aplikaci nasadíte na vybraná zařízení nebo vybraným uživatelům.
+V tomto postupu aplikaci nasadíte pro vybrané skupiny zařízení nebo uživatelů.
 
 ### Postup nasazení aplikace
 
@@ -52,11 +52,11 @@ V tomto postupu aplikaci nasadíte na vybraná zařízení nebo vybraným uživa
 ## Příklad
 
 V tomto příkladu jste nasadili aplikace jako **K dispozici** do zařízení s iOS.
-Aplikace se zobrazí na portálu společnosti v zařízeních uživatelů, ze kterých můžou aplikaci nainstalovat. Například na tomto snímku obrazovky je aplikace Bing for iOS nasazená pomocí typu instalace **Externí odkaz**, s vlastní ikonou a vybranou možností **Zobrazit tuto aplikaci jako doporučenou aplikaci a zvýraznit ji na portálu společnosti**.
-    ![Dostupná aplikace pro iOS](./media/available-install-on-iOS.png)
+Aplikace se zobrazí na portálu společnosti v zařízeních uživatelů, ze kterých můžou aplikaci nainstalovat. Například na tomto snímku obrazovky je aplikace Bing for iOS nasazená pomocí typu instalace **Externí odkaz**, s vlastní ikonou a vybranou možností **Zobrazit tuto aplikaci jako doporučenou aplikaci a zvýraznit ji na portálu společnosti**.  
+![Dostupná aplikace pro iOS](./media/available-install-on-iOS.png)
 
-Pokud je aplikace nasazená jako **Požadovaná**, dostane uživatel oznámení, že je aplikace připravená k instalaci. Například na tomto snímku obrazovky je aplikace Work Folders for iOS nasazená pomocí typu instalace **Spravované aplikace pro iOS z App Storu**.
-    ![Požadovaná aplikace pro iOS](./media/iOS-Required-install.PNG)
+Pokud je aplikace nasazená jako **Požadovaná**, dostane uživatel oznámení, že je aplikace připravená k instalaci. Například na tomto snímku obrazovky je aplikace Work Folders for iOS nasazená pomocí typu instalace **Spravované aplikace pro iOS z App Storu**.  
+![Požadovaná aplikace pro iOS](./media/iOS-Required-install.PNG)
 
 ## Další kroky
 
@@ -64,6 +64,6 @@ Po nasazení aplikace můžete monitorovat její postup. Další informace najde
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

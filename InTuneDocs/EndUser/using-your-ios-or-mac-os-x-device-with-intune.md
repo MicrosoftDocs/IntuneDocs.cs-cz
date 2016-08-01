@@ -1,9 +1,9 @@
 ---
 title: "Použití zařízení iOS nebo Mac OS X s Intune | Microsoft Intune"
-description: 
+description: "Obsahuje seznam odkazů na úlohy, které můžete dělat v mobilních zařízení s iOS nebo Mac OS X, když je zařízení registrované v Intune."
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 06/03/2016
 ms.topic: article
 ms.prod: 
@@ -14,13 +14,13 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 24573d04c319e359b810b6fdf607b44db19306e9
-ms.openlocfilehash: bf298bace896a666d1f2992f2921ebf5a15f05f7
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: 6c3d8b3a64d98357b7aac2a9f000ca33125c1858
 
 
 ---
 
-# Using your iOS or Mac OS X device with Intune
+# Použití zařízení iOS nebo Mac OS X s Intune
 
 Tyto kroky použijte pro úlohy, které musíte udělat na zařízení s iOS nebo Mac OS X, když vaše společnost používá Microsoft Intune.
 
@@ -50,7 +50,7 @@ Informace v této části vám pomůžou s akcemi, které můžete provést po r
 
 Informace v této části vám pomůžou s opravit problémy, se kterými se můžete setkat, když je zařízení s iOS registrované v Intune.
 
-- [Opakované připojení k ohroženému zařízení se systémem iOS](how-to-reconnect-a-compromised-ios-device)
+- [Opakované připojení k ohroženému zařízení se systémem iOS](how-to-reconnect-a-compromised-ios-device.md)
 - [Odeslání chyb správci IT](send-errors-to-your-it-admin-ios.md)
 - [Při použití aplikace Portál společnosti se zobrazí chyba](you-get-an-error-while-using-the-company-portal-app-ios.md)
 - [Při pokusu o registraci zařízení v Intune se zobrazí chyby](you-see-errors-while-trying-to-enroll-your-device-in-intune-ios.md)
@@ -63,6 +63,6 @@ Informace v této části vám pomůžou s opravit problémy, se kterými se mů
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

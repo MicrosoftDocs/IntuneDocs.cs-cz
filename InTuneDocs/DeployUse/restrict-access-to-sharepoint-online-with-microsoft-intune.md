@@ -1,10 +1,10 @@
 ---
 title: "Omezení přístupu ke službě SharePoint Online | Microsoft Intune"
-description: 
+description: "Chraňte a kontrolujte přístup k podnikovým datům na SharePoint Online pomocí podmíněného přístupu."
 keywords: 
 author: karthikaraman
 manager: jeffgilb
-ms.date: 06/16/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5a445f06d6c2328f7689468ca4d68a969af1e825
-ms.openlocfilehash: f8fcb01629c68e9c04b0e0319b937178859877ec
+ms.sourcegitcommit: c72c8e1a764af73ba4d421ca6637ee91ab7bca0a
+ms.openlocfilehash: 334eb869ddbc67767a6e9ed6711bd9135ceb558b
 
 
 ---
@@ -25,6 +25,8 @@ Podmíněný přístup má dvě součásti:
 - Zásady dodržování předpisů zařízení, které zařízení musí dodržovat, aby mohlo být považované za vyhovující.
 - Zásady podmíněného přístupu, kde můžete určit podmínky, které zařízení musí splňovat pro přístup ke službě.
 Další informace o tom, jak podmíněný přístup funguje, najdete v tématu ohledně [omezení přístupu k e-mailu, O365 a dalším službám](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+
+Zásady dodržování předpisů a podmíněného přístupu se nasadí pro uživatele. Jakékoli zařízení, které uživatel používá pro přístup ke službám, se kontroluje na dodržování předpisů se zásadami.
 
 Když se uživatel na svém zařízení pokusí připojit k souboru pomocí podporované aplikace, jako je třeba OneDrive, dojde k následujícímu vyhodnocení:
 
@@ -55,6 +57,10 @@ Pokud není podmínka splněná, zobrazí se uživateli při přihlášení jedn
 
 -   Pokud zařízení není kompatibilní, zobrazí se zpráva, která uživatele přesměruje na web portálu společnosti [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] , kde najde informace o problému a jeho řešení.
 
+**Podmíněný přístup se vynucuje pro všechny weby SharePointu a externí sdílení je blokované.**
+
+>[!NOTE]
+>Pokud povolíte podmíněný přístup pro SharePoint Online, doporučujeme zakázat doménu v seznamu, jak je popsáno v tématu [Remove-SPOTenantSyncClientRestriction](https://technet.microsoft.com/en-us/library/dn917451.aspx).  
 ## Podpora mobilních zařízení
 - iOS 7.1 nebo novější
 - Android 4.0 nebo novější, Samsung Knox Standard 4.0 nebo novější
@@ -183,6 +189,6 @@ Vyberte libovolnou skupinu mobilních zařízení a pak na kartě **Zařízení*
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

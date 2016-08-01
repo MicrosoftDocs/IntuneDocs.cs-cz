@@ -1,6 +1,6 @@
 ---
 title: "Řešení potíží se zásadami | Microsoft Intune"
-description: 
+description: "Řešení potíží s konfigurací zásad"
 keywords: 
 author: Nbigman
 manager: jeffgilb
@@ -12,8 +12,9 @@ ms.technology:
 ms.assetid: 99fb6db6-21c5-46cd-980d-50f063ab8ab8
 ms.reviewer: jeffgilb
 ms.suite: ems
-ms.sourcegitcommit: ac3417781df0a5b092a70620aa7343849b1e8c82
-ms.openlocfilehash: 3ac6b06b7eb85503786b4d8b0b9bd2a30d2a15e6
+translationtype: Human Translation
+ms.sourcegitcommit: c1e215320168c659d5f838355f6350111d6979b0
+ms.openlocfilehash: 64518fc58a97c0d5060d909b60df565c19498389
 
 
 ---
@@ -46,7 +47,8 @@ Na tomto snímku obrazovky vidíte dva jasné příklady:
 
 ![Zásady zařízení Intune](../media/Intune-Device-Policy-v.2.jpg)
 
-> [!NOTE] Mějte na paměti, že když použijete dvě zásady s různými úrovněmi omezení na stejné zařízení nebo uživatele, v praxi se uplatní víc omezující zásada.
+> [!NOTE]
+> Mějte na paměti, že když použijete dvě zásady s různými úrovněmi omezení na stejné zařízení nebo uživatele, v praxi se uplatní víc omezující zásada.
 
 ## Obnovení zásad a intervaly aktualizace
 Upozorňujeme, že zásady se pravidelně obnovují a aktualizují. Obecně platí, že zásady by se měly na zařízeních zaregistrovat do 15 minut od provedení změny. Tady jsou další podrobnosti o pravidelných intervalech obnovení zásad:
@@ -68,7 +70,8 @@ U zařízení s Windows nespravovaných pomocí MDM můžou být chyby zásad v 
 
 2.  Počkejte 20 minut, než se odebere klientský software.
 
-    > [!NOTE] Nepokoušejte se klienta odebrat pomocí panelu Programy a funkce.
+    > [!NOTE]
+    > Nepokoušejte se klienta odebrat pomocí panelu Programy a funkce.
 
 3.  V nabídce Start zadejte **UAC**. Otevře se nastavení nástroje Řízení uživatelských účtů.
 
@@ -110,6 +113,6 @@ Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podpor
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO3-->
 
 

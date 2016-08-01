@@ -1,10 +1,10 @@
 ---
-title: "Nasazení a monitorování zásad dodržování předpisů v Microsoft Intune | Microsoft Intune"
-description: 
+title: "Nasazení a monitorování zásad dodržování předpisů | Microsoft Intune"
+description: "Podrobné pokyny v tomto tématu slouží k nasazení a monitorování zásad dodržování předpisů pro zařízení."
 keywords: 
 author: karthikaraman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 07/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: d8f246d4-0d86-4c8b-a1bf-9977985506d8
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ded7bd6c971a9448ad6e6492ebc5e42dfcb5d76e
-ms.openlocfilehash: 52da5cf6d14a5fc3ff3db6bdb07823d3bf373466
+ms.sourcegitcommit: c72c8e1a764af73ba4d421ca6637ee91ab7bca0a
+ms.openlocfilehash: 42d326dbe937724141213dacc133aefe5020a61d
 
 
 ---
@@ -31,7 +31,8 @@ Nasaďte vámi [vytvořenou](create-a-device-compliance-policy-in-microsoft-intu
 
 Pomocí shrnutí stavu a výstrah na stránce **Přehled** v pracovním prostoru **Zásady** můžete identifikovat problémy se zásadami, které vyžadují vaši pozornost. Kromě toho se v pracovním prostoru **Řídicí panel** zobrazí shrnutí stavu.
 
-> [!IMPORTANT]Pokud jste zásady dodržování předpisů nenasadili a povolíte zásady podmíněného přístupu Exchange, budou mít všechna cílová zařízení přístup povolený.
+> [!IMPORTANT]
+> Pokud jste zásady dodržování předpisů nenasadili a povolíte zásady podmíněného přístupu Exchange, budou mít všechna cílová zařízení přístup povolený.
 
 ## Způsob řešení konfliktů zásad Intune
 Konflikty zásad můžou vzniknout kvůli použití více zásad Intune na zařízení. Pokud se nastavení zásad překrývají, Intune vyřeší všechny konflikty s použitím následujících pravidel:
@@ -71,6 +72,6 @@ Teď už můžete používat zásady dodržování předpisů spolu se zásadami
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

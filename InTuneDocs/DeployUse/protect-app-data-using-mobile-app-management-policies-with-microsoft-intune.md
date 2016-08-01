@@ -1,10 +1,10 @@
 ---
-title: "Ochrana aplikačních dat pomocí zásad správy mobilních aplikací | Microsoft Intune"
-description: 
+title: "Ochrana aplikačních dat pomocí zásad MAM | Microsoft Intune"
+description: "Toto téma vysvětluje, jak zásady správy mobilních aplikací můžou pomoct chránit firemní data, bránit ztrátě dat a oddělovat osobní a pracovní informace."
 keywords: 
 author: karthikaraman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 07/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5a445f06d6c2328f7689468ca4d68a969af1e825
-ms.openlocfilehash: 161351164d9e99abb867aa34721ef4f992fb14fa
+ms.sourcegitcommit: ce0bc5d1256e96e04e5d59420baed2117cb4854d
+ms.openlocfilehash: 0ba8e40b06452002f33b09b37e399c62da54c352
 
 
 ---
@@ -24,21 +24,21 @@ ms.openlocfilehash: 161351164d9e99abb867aa34721ef4f992fb14fa
 ## Způsob ochrany dat aplikací
 Vaši zaměstnanci používají mobilní zařízení pro osobní a pracovní úkoly.  Chcete, aby vaši zaměstnanci byli produktivní, ale také chcete zabránit případným záměrným či neúmyslným ztrátám dat.  Kromě toho chcete mít možnost chránit firemní data při přístupu pomocí zařízení i v případě, že tato zařízení nespravujete.
 
-Zásady správy mobilních aplikací (MAM) služby Intune vám pomohou vaše firemní data ochránit. Protože se zásady MAM Intune dají používat nezávisle na řešení správy mobilních zařízení (MDM), můžete je použít k ochraně firemních dat i bez registrace zařízení do řešení správy zařízení. Implementací **zásad na úrovni aplikace** můžete omezit přístup k prostředkům společnosti a ponechat data v kompetenci IT oddělení.
+Zásady správy mobilních aplikací (MAM) služby Intune vám pomohou vaše firemní data ochránit. Protože se zásady MAM Intune dají používat **nezávisle na řešení správy mobilních zařízení (MDM)**, můžete je použít k ochraně firemních dat i bez registrace zařízení do řešení správy zařízení. Implementací **zásad na úrovni aplikace** můžete omezit přístup k prostředkům společnosti a ponechat data v kompetenci IT oddělení.
 
-Zásady MAM podporují aplikace běžící na:
-> [!IMPORTANT]
-> Můžete vytvářet zásady správy mobilních aplikací pro mobilní aplikace Office, které se připojují ke službám Office 365. Zásady MAM se nepodporují pro aplikace, které se připojují k místním službám Exchange nebo SharePoint.
+Zásady MAM lze konfigurovat pro aplikace běžící na zařízeních, která jsou:
 
+- **Zaregistrovaná v Microsoft Intune:** Do této kategorie obvykle spadají zařízení vlastněná společností.
 
-- **Zařízení, která jsou spravovaná a zaregistrovaná v Microsoft Intune**. Do této kategorie obvykle spadají podniková zařízení.
-
--   **Zařízení, která jsou spravovaná a zaregistrovaná do řešení správy mobilních zařízení třetích stran**.   Do této kategorie obvykle spadají podniková zařízení.
+-   **Zaregistrovaná v rámci řešení pro správu mobilních zařízení (MDM) třetích stran:** Do této kategorie obvykle spadají zařízení vlastněná společností.
 
   > [!NOTE]
   > Zásady správy mobilních aplikací není vhodné používat s řešeními pro správu mobilních aplikací třetích stran nebo zabezpečeného kontejneru.
 
--   **Zařízení, která nejsou spravovaná**.  Do této kategorie obvykle spadají zařízení vlastněná zaměstnanci,která nejsou spravovaná ani zaregistrovaná v Intune nebo jiných řešeních MDM.
+-   **Neregistrovaná v žádném řešení pro správu mobilních zařízení:** Do této kategorie obvykle spadají zařízení vlastněná zaměstnanci, která nejsou spravovaná ani zaregistrovaná v Intune nebo jiných řešeních MDM.
+
+> [!IMPORTANT]
+> Můžete vytvářet zásady správy mobilních aplikací pro mobilní aplikace Office, které se připojují ke službám Office 365. Zásady MAM se nepodporují pro aplikace, které se připojují k místním službám Exchange, Skype pro firmy nebo SharePoint.
 
 **Důležité výhody použití zásad MAM:**
 
@@ -133,6 +133,6 @@ Všechny mobilní aplikace Office podporují více identit.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

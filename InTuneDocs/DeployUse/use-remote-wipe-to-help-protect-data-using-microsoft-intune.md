@@ -13,8 +13,8 @@ ms.assetid: 8519e411-3d48-44eb-9b41-3e4fd6a93112
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aa4dc77c66a34d9d50b83d072ed5e03674b4d293
-ms.openlocfilehash: bfb82684d8c4347297c3ed8659cc44e70ad4706c
+ms.sourcegitcommit: 06f144693fe4e535b2ed423c95f5431e391f316f
+ms.openlocfilehash: 077f35afc5084b0381fd330236e45d62e1242484
 
 
 ---
@@ -29,6 +29,9 @@ Stejně jako u zařízení se v určitém okamžiku stane, že potřebujete nebo
 
 
 **Úplné vymazání** na zařízení obnoví výchozí nastavení od výrobce a odebere všechna firemní a uživatelská data a nastavení. Zařízení se odebere ze služby Intune. Plné vymazání je užitečné k tomu, aby se zařízení resetovalo, než se předá novému uživateli, a v případech, kdy došlo ke ztrátě nebo odcizení zařízení.  **Volbu úplného vymazání používejte velmi opatrně. Data v zařízení nejde obnovit.**
+
+> [!Warning]
+> Zařízení s Windows 10 RTM (tj. starší než Windows 10 verze 1511) s méně než 4 GB paměti RAM se mohou stát po vymazání nedostupná. Když chcete přistupovat k zařízením s Windows 10, která přestala reagovat, můžete zařízení spustit z jednotky USB nebo použít podobné náhradní řešení.
 
 ## Selektivní vymazání
 
@@ -55,7 +58,7 @@ Stejně jako u zařízení se v určitém okamžiku stane, že potřebujete nebo
 |Nespravované aplikace Google Play|Aplikace a data zůstanou nainstalované.|Aplikace a data zůstanou nainstalované.|
 |Nespravované obchodní aplikace|Aplikace a data zůstanou nainstalované.|Aplikace se odinstalují a následkem toho se odeberou data, která jsou pro tuto aplikaci místní. Neodeberou se žádná data mimo aplikaci (karta SD atd.).|
 |Spravované aplikace Google Play|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (karta SD atd.) zůstávají šifrovaná a nepoužitelná, ale neodeberou se.|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (karta SD atd.) zůstávají šifrovaná, ale neodeberou se.|
-|Spravované obchodní aplikace|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (karta SD atd.) zůstávají šifrovaná a nepoužitelná, ale neodeberou se.|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (karta SD atd.) zůstávají šifrovaná, ale neodeberou se.|
+|Spravované obchodní aplikace|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (karta SD atd.) zůstávají šifrovaná a nepoužitelná, ale neodeberou se.|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (karta SD atd.) zůstávají šifrovaná a nepoužitelná, ale neodeberou se.|
 |Nastavení|Konfigurace, které byly nastavené zásadami Intune, už nebudou vynucené a uživatelé můžou nastavení změnit.|Konfigurace, které byly nastavené zásadami Intune, už nebudou vynucené a uživatelé můžou nastavení změnit.|
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrané|Odebrané|
 |Nastavení profilu certifikátu|Certifikáty se zruší, ale neodeberou.|Certifikáty se odeberou a zruší.|
@@ -139,6 +142,6 @@ Pokud chcete získat sestavu zařízení, která se vyřadila z provozu, vymazal
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

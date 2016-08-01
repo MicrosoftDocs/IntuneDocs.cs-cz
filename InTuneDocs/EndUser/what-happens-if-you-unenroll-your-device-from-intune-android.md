@@ -1,26 +1,27 @@
 ---
-title: "Co se stane, když zrušíte registraci zařízení v Intune? | Microsoft Intune"
+title: "Co se stane, když zrušíte registraci zařízení s Androidem v Intune? | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 0321062d-1363-4ac3-81d4-5405f3b79481
+ROBOTS: noindex,nofollow
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: f0465d4302bda3df82c994043df52c27761a8345
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: 55bb03075da7fab06196857c1d5e5a95befc248d
 
 
 ---
 
 
-# Co se stane, když zrušíte registraci zařízení v Intune?
+# Co se stane, když zrušíte registraci zařízení s Androidem v Intune?
 
 Po zrušení registrace zařízení s Androidem v Intune:
 
@@ -38,12 +39,13 @@ Pokud je vaše zařízení nastavené jenom tak, aby mohlo přijímat firemní e
 
 Návod ke zrušení registrace najdete v tématu [Zrušení registrace zařízení v Intune pomocí aplikace Portál společnosti](unenroll-your-device-from-intune-android.md).
 
-Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete pomoc? Obraťte se na správce IT (vyhledejte kontaktní informace na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište týmu Microsoft Android na adresu wintunedroidfbk@microsoft.com.
+
 
 ### Související témata
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

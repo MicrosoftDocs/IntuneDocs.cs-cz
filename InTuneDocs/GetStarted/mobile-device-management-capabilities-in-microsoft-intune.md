@@ -1,10 +1,10 @@
 ---
 title: "Možnosti správy mobilních zařízení | Microsoft Intune"
-description: 
+description: "Přečtěte si toto téma a zjistěte, jak vám může Intune pomoct spravovat mobilní zařízení registrovaná ve službě."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: f23b3ee7-78da-4e53-9fc2-78e58401bcf9
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f33a86c51320c75ce74d20e0cac2b9581990ecec
-ms.openlocfilehash: 0f460165f251acf95f4af36afa39409d3eb21162
+ms.sourcegitcommit: 23054b2f02d11ca19cd0902ebc1e6fdcf499d1f1
+ms.openlocfilehash: 8f44256fe249c60df8e910858516a25463c8e875
 
 
 ---
@@ -42,7 +42,8 @@ Operace správy, inventáře, nasazování aplikací, zřizování a vyřazován
 |Správa a nasazení aplikací|Poskytuje řadu nástrojů, které vám pomůžou spravovat mobilní aplikace v průběhu jejich životního cyklu, včetně nasazení aplikací z instalačních souborů a obchodů s aplikacemi, podrobného sledování stavu aplikací a jejich odebrání.|[Nasazení aplikací v Microsoft Intune](/intune/deploy-use/deploy-apps)|
 |Kompatibilní a nekompatibilní aplikace|Umožňuje určit seznam kompatibilních aplikací (které uživatelé můžou nainstalovat) a nekompatibilních aplikací (které uživatelé nesmí nainstalovat).|[Nastavení zásad pro iOS v Microsoft Intune](/intune/deploy-use/ios-policy-settings-in-microsoft-intune)|
 |Správa mobilních aplikací|Nakonfigurujte omezení pro aplikace pomocí správy mobilních aplikací jak pro zařízení, která spravujete v Intune, tak pro zařízení, která Intune nespravuje. Umožňuje zvýšit zabezpečení firemních dat omezením operací, jako jsou třeba kopírování a vkládání, externí zálohování dat a přenos dat mezi aplikacemi.|[Configure and deploy mobile application management policies in the Microsoft Intune console](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console)<br><br>[Vytvoření a nasazení zásad správy mobilních aplikací pomocí Microsoft Intune](/intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune)<br /><br />[Příprava aplikací pro iOS na správu mobilních aplikací nástrojem Microsoft Intune App Wrapping Tool](/intune/deploy-use/prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool)<br /><br />[Příprava aplikací pro Android na správu mobilních aplikací nástrojem Microsoft Intune App Wrapping Tool](/intune/deploy-use/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool)|
-|Konfigurace mobilních aplikací|Zásady konfigurace mobilních aplikací slouží k poskytování nastavení, která se můžou požadovat, když uživatel spustí aplikaci pro iOS. Aplikace může například vyžadovat, aby uživatel zadal číslo portu pro přihlašovací informace. To může usnadnit konfiguraci aplikace a omezit počet volání služby helpdesk.|[Konfigurace aplikací pro iOS pomocí zásad konfigurace mobilních aplikací v Microsoft Intune](/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune)|
+|Konfigurace mobilních aplikací pro iOS|Zásady konfigurace mobilních aplikací slouží k poskytování nastavení, která se můžou požadovat, když uživatel spustí aplikaci pro iOS. Aplikace může například vyžadovat, aby uživatel zadal číslo portu pro přihlašovací informace. To může usnadnit konfiguraci aplikace a omezit počet volání služby helpdesk.|[Konfigurace aplikací pro iOS pomocí zásad konfigurace mobilních aplikací v Microsoft Intune](/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune)|
+|Profily zřizování mobilních aplikací pro iOS|Intune poskytuje nástroje k proaktivnímu nasazování zřizovacích profilů pro aplikace iOS, u kterých se blíží vypršení platnosti.|[Pomocí mobilních zásad zřizovacích profilů pro iOS zabráníte vypršení platnosti aplikací.](/intune/deploy-use/ios-mobile-app-provisioning-profiles)|
 |Spravovaný prohlížeč|Po nasazení spravovaného prohlížeče pro uživatele můžete nakonfigurovat zásadu spravovaného prohlížeče pro řízení webů, které můžou uživatelé navštěvovat. Pro spravovaný prohlížeč můžete taky použít zásady správy mobilních aplikací.|[Správa přístupu k internetu pomocí zásad spravované prohlížeče v Microsoft Intune](/intune/deploy-use/manage-internet-access-using-managed-browser-policies)|
 |Microsoft Passport|Intune umožňuje integraci se službou Microsoft Passport for Work. Tato alternativní metoda pro přihlašování do Windows 10 pomocí účtu služby Active Directory nebo Azure Active Directory může nahradit hesla, čipové karty a virtuální čipové karty.|[Kontrola nastavení Microsoft Passportu v zařízeních s Microsoft Intune](/intune/deploy-use/control-microsoft-passport-settings-on-devices-with-microsoft-intune)|
 
@@ -68,6 +69,6 @@ Operace správy, inventáře, nasazování aplikací, zřizování a vyřazován
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

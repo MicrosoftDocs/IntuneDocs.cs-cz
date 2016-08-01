@@ -1,9 +1,9 @@
 ---
 title: "Jak uživatelé systému iOS získávají svoje apikace| Microsoft Intune"
-description: 
+description: "Metody zpřístupnění aplikací pro iOS koncovým uživatelům"
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 7e3135c1-df26-48c9-aa4c-cdab6168897a
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
-ms.openlocfilehash: f36bc73d3397fef5bebe6896d91bcffcd5507cfc
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: cce64fef4a7e6d81024794ab3f535e907e501bd8
 
 
 ---
@@ -37,6 +37,6 @@ Tyto informace slouží k pochopení toho, jak a kde koncoví uživatelé získ�
 [Jak uživatelé s Windows získávají svoje aplikace](how-your-windows-users-get-their-apps.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

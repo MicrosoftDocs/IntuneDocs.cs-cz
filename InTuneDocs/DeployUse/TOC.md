@@ -24,6 +24,7 @@
 #### [Pravidla přístupu pro Exchange](exchange-access-rules-for-mobile-devices.md)
 ### [Správa počítačů](manage-windows-pcs-with-microsoft-intune.md)
 #### [Instalace klientského počítače](install-the-windows-pc-client-with-microsoft-intune.md)
+#### [Běžné úlohy správy počítačů](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
 #### [Řešení konfliktů zásad počítačů](resolve-gpo-and-microsoft-intune-policy-conflicts.md)
 
 ## [Konfigurace zařízení](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
@@ -49,7 +50,7 @@
 ### [Použití skupin pro správu uživatelů a zařízení](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
 ### [Mapování zařízení na skupiny](categorize-devices-with-device-group-mapping-in-microsoft-intune.md)
 ### [Seznámení se zařízeními s inventářem](understand-your-devices-with-inventory-in-microsoft-intune.md)
-### [Běžné úlohy správy počítačů](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
+
 
 ## [Ochrana zařízení](protect-your-devices-with-microsoft-intune.md)
 ### [Vzdálené uzamčení a resetování hesla](use-remote-lock-and-passcode-reset-in-microsoft-intune.md)
@@ -76,6 +77,7 @@
 ## [Konfigurace aplikací](update-apps-using-microsoft-intune.md)
 ### [Aktualizace aplikací ](update-apps-using-microsoft-intune.md)
 ### [Zásady konfigurace aplikací pro iOS](configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune.md)
+### [Profily zřizování mobilních aplikací pro iOS](ios-mobile-app-provisioning-profiles.md)
 ### [Správa přístupu k internetu](manage-internet-access-using-managed-browser-policies.md)
 
 
@@ -133,6 +135,6 @@
 # [Řešení problémů](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

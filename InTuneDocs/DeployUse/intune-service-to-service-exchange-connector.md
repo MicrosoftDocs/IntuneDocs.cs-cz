@@ -1,20 +1,20 @@
 ---
-title: "Konfigurace konektoru Microsoft Intune Exchange Connector pro hostovaný Exchange | Microsoft Intune"
-description: 
+title: "Exchange Connector pro hostovaný Exchange | Microsoft Intune"
+description: "Připojte Intune ke službě Office 365 Exchange, abyste podporovali správu mobilních zařízení Exchange ActiveSync (MDM)."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 05fa5dc9-9bad-4557-987a-9b8ce4edebb0
-ms.reviewer: jeffgilb
+ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6951ccdb0e37489217ef939f0cbf6fc1133a6d3c
-ms.openlocfilehash: 6cfc532cba2f53034c4c3ef0c2df3d6c1e6e7841
+ms.sourcegitcommit: 1e0d05a4f229e2a8e72d1d60021b159f12dfa0d1
+ms.openlocfilehash: 63697222f024169d9450b9f4fea8c666353e72cc
 
 
 ---
@@ -58,12 +58,12 @@ Konektor Service to Service Connector se automaticky nakonfiguruje a synchronizu
 
 ## Ověření připojení k Exchangi
 
-Po úspěšném nakonfigurování připojení Exchange Connector v konzole správce Intune zvolte pracovní prostor **SPRÁVCE**, přejděte do části **Správa mobilních zařízení** > **Microsoft Exchange** a ověřte, že se v části **Informace o připojení systému Exchange** zobrazují podrobnosti, které jste zadali.
+Po úspěšném nakonfigurování připojení Exchange Connector v [konzole správce Microsoft Intune](http://manage.microsoft.com) zvolte **Správce**, přejděte do části **Správa mobilních zařízení** > **Microsoft Exchange** a ověřte, že se v části **Informace o připojení systému Exchange** zobrazují podrobnosti, které jste zadali.
 
 Můžete se taky podívat na datum a čas posledního úspěšného pokusu o synchronizaci.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

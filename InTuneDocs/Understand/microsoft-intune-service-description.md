@@ -1,6 +1,6 @@
 ---
 title: "Popis služby | Microsoft Intune"
-description: 
+description: "Intune je cloudová služba, která pomáhá spravovat počítače se systémem Windows a mobilní zařízení se systémy iOS, Mac OS X, Android a Windows."
 keywords: 
 author: Nbigman
 manager: jeffgilb
@@ -13,8 +13,8 @@ ms.assetid: 40fa5a2e-6c0f-4150-9740-d5ddc0cdbda0
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4794a22b3bdd1f28e6951b81e8379dc208fffc89
-ms.openlocfilehash: 6cab0bacd9157323e342662609de8c9f20550d78
+ms.sourcegitcommit: c1e215320168c659d5f838355f6350111d6979b0
+ms.openlocfilehash: 98a5013ef42732e6a1a541e128986bedbb004611
 
 
 ---
@@ -34,7 +34,7 @@ Seznam konfigurovatelných nastavení mobilních zařízení je tady:
 
 -   [Možnosti správy mobilních zařízení v Microsoft Intune](/intune/get-started/mobile-device-management-capabilities-in-microsoft-intune)
 
--   [Obecná nastavení pro mobilní zařízení v nástroji Configuration Manager](https://technet.microsoft.com/en-us/library/dn376523.aspx)
+-   [Obecná nastavení pro mobilní zařízení v nástroji Configuration Manager](https://technet.microsoft.com/library/dn376523.aspx)
 
 Informace o System Center 2012 R2 Configuration Manageru najdete v tématu [Knihovna dokumentace pro System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg682041.aspx).
 
@@ -45,9 +45,10 @@ Informace v tomto tématu vám pomůžou pochopit četnost těchto aktualizací 
 
 Informace o změnách ve službě Intune najdete v tématu [Co je nového v Microsoft Intune](/intune/deploy-use/Whats-new-in-microsoft-intune.md). Změny ve službě se probírají také na [blogu Microsoft Intune](http://blogs.technet.com/b/microsoftintune/). Najdete tam i užitečné tipy, jak využívat Intune na maximum.
 
-O důležitých aktualizacích softwaru se také dozvíte prostřednictvím centra zpráv na [portálu pro správu Office 365](https://portal.office.com/Admin/Default.aspx). Pokud si nainstalujete doprovodnou [mobilní aplikaci pro správu Office 365](https://support.office.com/en-us/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), můžete dostat oznámení na svém mobilním zařízení.
+O důležitých aktualizacích softwaru se také dozvíte prostřednictvím centra zpráv na [portálu pro správu Office 365](https://portal.office.com/Admin/Default.aspx). Pokud si nainstalujete doprovodnou [mobilní aplikaci pro správu Office 365](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), můžete přijímat oznámení na svém mobilním zařízení.
 
-> [!NOTE] Stav služby Intune je možné monitorovat na [portálu pro správu Office 365](https://portal.office.com/Admin/Default.aspx). Zvolte **Stav služby** v levém podokně.  
+> [!NOTE]
+> Stav služby Intune je možné monitorovat na [portálu pro správu Office 365](https://portal.office.com/Admin/Default.aspx). Zvolte **Stav služby** v levém podokně.  
 
 Toto jsou typy oznámení, které společnost Microsoft o službě Intune poskytuje:
 -   Abychom vám pomohli připravit se na změny služby, upozorníme vás minimálně 30–90 dní před upgradem služby, v závislosti na závažnosti dopadu změn. Oznámení proběhne prostřednictvím komunikačních kanálů v produktu, jako jsou výstrahy na vývěsce. Tyto změny mohou zahrnovat:
@@ -82,6 +83,6 @@ Další informace o službě Intune můžete získat z těchto zdrojů:
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

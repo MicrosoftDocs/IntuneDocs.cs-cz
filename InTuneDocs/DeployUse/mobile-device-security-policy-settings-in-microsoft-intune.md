@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Nastavení zásad zabezpečení mobilního zařízení v Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Nastavení zásad zabezpečení mobilního zařízení | Microsoft Intune"
+description: "Intune můžete použít ke konfiguraci široké škály nastavení, která se dají nasadit na spravovaných zařízeních v organizaci."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/12/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: e5ab3b76-08af-4893-b294-fb6627fdc4c6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: heenamac
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: a409d36c1c5fcfd3d81ce0cbdf1f69af4747157a
+ms.openlocfilehash: 41813b383003311e68f2a7fb50d42638434649f7
+
 
 ---
 
@@ -72,7 +66,7 @@ Když nasadíte zásadu délky hesel na zařízení se systémem Windows RT, bud
 
 |Název nastavení|Windows 8.1 a Windows RT 8.1|Windows RT|Windows Phone 8 a Windows Phone 8.1|iOS|Android a Samsung KNOX|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
-|**Vyžadovat šifrování u mobilního zařízení**<sup>1</sup><br /><br />Pro zařízení s Windows Phone 8 je potřeba nastavit hodnotu **Ano**..<br /><br />Pokud chcete povolit šifrování na zařízeních s iOS, povolte nastavení **Vyžadovat heslo k odemknutí mobilních zařízení**..|Ano|Ne|Ano|Ne|Ano|
+|**Vyžadovat šifrování u mobilního zařízení**<sup>1</sup><br /><br />Pro zařízení s Windows Phone 8 je potřeba nastavit hodnotu **Ano**.<br /><br />Pokud chcete povolit šifrování na zařízeních iOS, povolte nastavení **Vyžadovat heslo k odemknutí mobilních zařízení**.|Ano|Ne|Ano|Ne|Ano|
 |**Vyžadovat šifrování u paměťových karet**<br /><br />Platí taky pro zařízení, která spravuje Exchange ActiveSync.|není k dispozici|není k dispozici|není k dispozici (aplikace a související data se šifrují automaticky)|není k dispozici|Ano|
 Další informace pro zařízení s Windows 8.1
 
@@ -217,6 +211,7 @@ Další informace pro zařízení s Windows 8.1
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

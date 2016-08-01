@@ -1,6 +1,6 @@
 ---
 title: "Portál Azure pro zásady MAM | Microsoft Intune"
-description: 
+description: "Vytvořte zásady správy mobilních aplikací pomocí portálu Azure. Zásady, které zde vytvoříte, lze použít na zařízení s registrací v Intune nebo bez ní."
 keywords: 
 author: karthikaraman
 manager: jeffgilb
@@ -13,8 +13,8 @@ ms.assetid: 7d6dae94-a833-40b7-9016-14ea234bb33c
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ded7bd6c971a9448ad6e6492ebc5e42dfcb5d76e
-ms.openlocfilehash: 519bde55966d88f516553d509af60e34a6af62a9
+ms.sourcegitcommit: 359f76daa35a14e4107a9e03c6a1b1f4d1215777
+ms.openlocfilehash: c466a854474c1c5ba3270f848caa51edcd5b6856
 
 
 ---
@@ -28,8 +28,10 @@ Portál Azure podporuje vytváření zásad MAM pro:
 - Aplikace běžící v zařízeních, která **nejsou zaregistrovaná** v žádném řešení MDM
 - Aplikace běžící v zařízeních, která jsou **zaregistrovaná v řešení MDM třetí strany**
 
-Pokud teď ke správě svých zařízení používáte **konzolu pro správu Intune**, můžete zásadu MAM podporující aplikace pro zařízení zaregistrovaná v Intune vytvořit pomocí [konzoly pro správu Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
 >[!IMPORTANT]
+
+> Pokud teď ke správě svých zařízení používáte [konzolu pro správu Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md), můžete zásadu MAM podporující aplikace pro zařízení zaregistrovaná v Intune vytvořit pomocí konzoly pro správu Intune.
+
 > V Konzole správce Intune nemusíte vidět všechna nastavení zásad MAM. Portál Azure je nové konzola pro správu, která umožňuje vytváření zásad MAM. Pokud vytváříte zásady MAM v konzole pro správu Intune i na portálu Azure, pro aplikace se použije a pro uživatele se nasadí zásada na portálu Azure.
 
 ## Přihlášení na portál Azure a přizpůsobení úvodní stránky
@@ -59,6 +61,6 @@ Pokud teď ke správě svých zařízení používáte **konzolu pro správu Int
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

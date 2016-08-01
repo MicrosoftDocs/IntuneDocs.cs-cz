@@ -1,10 +1,10 @@
 ---
 title: "Správa zařízení ve vlastnictví firmy | Microsoft Intune"
-description: 
+description: "Zařízení vlastněná společností (COD) mohou být spravovaná několika různými způsoby v závislosti na zařízení, způsobu jeho koupě a potřebách organizace."
 keywords: 
 author: NathBarn
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 07/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 2b60bbff-25e6-489b-9621-c71b4275fa06
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 69cf07aa0747448e0ef3384b5b5132e0e76aed45
-ms.openlocfilehash: e07053b9b26afacc03e45f2cb104eda6088a1e05
+ms.sourcegitcommit: 26ac7d52c0ad3e37e517b60d448a94849c0f4b30
+ms.openlocfilehash: 6cf620a96b39540c8b7ca618936af1367971bb8f
 
 
 ---
@@ -32,13 +32,27 @@ Organizace mohou pomocí Intune spravovat velké počty mobilních zařízení s
 
 [Registrace firemních zařízení pomocí správce registrace zařízení](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)
 
-## Číslo IMEI (International Mobile Equipment Identity)
-Čísla IMEI jsou běžnou vlastností zařízení u celé řady výrobců mobilních zařízení. Správci Intune mohou importovat čísla IMEI pro zařízení, která společnost vlastní. Když se stane zařízení spravovaným v Intune, může být označené jako zařízení vlastněné společností a být cílem příslušné zásady.
+## Registrace firemních stolních počítačů s Windows 10
+
+Pokud má vaše organizace Azure Active Directory Premium (AADP) nebo Enterprise Management Suite (EMS), můžete [zaregistrovat Windows 10 pro podniky](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview), takže budou automaticky označené jako „vlastněné společností“, když uživatelé přidají svůj pracovní nebo školní účet.
+
+## Identifikace zařízení jako vlastněných společností
+
+Zařízení vlastněná společností jsou v seznamech zařízení uvedená v oddílu **Vlastnictví** jako **Firemní**. Zařízení je možné identifikovat jako vlastněná společností následujícími způsoby:
+
+ - [Registrovaná pomocí správce registrace zařízení (DEM)](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)
+ - Registrovaná pomocí [programu DEP](ios-device-enrollment-program-in-microsoft-intune.md) společnosti Apple nebo nástroje [Apple Configurator](ios-setup-assistant-enrollment-in-microsoft-intune.md)
+ - [Předem deklarovaná zařízení pomocí kódů IMEI](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md)
+ - [Registrace Azure Active Directory/Enterprise Management Suite zařízení s Windows 10](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview)
+
+### Číslo IMEI (International Mobile Equipment Identity)
+
+Čísla IMEI jsou běžnou vlastností zařízení u celé řady výrobců mobilních zařízení. Správci Intune mohou importovat čísla IMEI pro zařízení, která společnost vlastní. Když se stane zařízení spravovaným v Intune, je označené jako zařízení vlastněné společností.
 
 [Určení podnikem vlastněných zařízení podle kódů IMEI (International Mobile Equipment Identity)](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md)
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

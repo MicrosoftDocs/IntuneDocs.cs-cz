@@ -3,33 +3,40 @@ title: "Instalace nové verze aplikace Portál společnosti | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 05/30/2016
 ms.topic: article
 ms.prod: 
 ms.service: 
 ms.technology: 
 ms.assetid: c002bcb2-ae37-478d-acf3-2bf51faae490
+ROBOTS: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 29d409f272800e0c5ccaf71494b5e98d1edaae4e
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: 529d8020ffda5ffe32542b670a75fd0faa5d6ffe
 
 
 ---
 
 # Instalace nové verze aplikace Portál společnosti
 
-Pokud už vaše verze aplikace Portál společnosti není podporovaná nebo je dispozici novější verze aplikace Portál společnosti, aktualizujte svoje zařízení následujícími postupy.
+Pokud už vaše verze aplikace Portál společnosti není podporovaná nebo je dispozici novější verze aplikace Portál společnosti, musíte aktualizovat aplikaci Portál společnosti na novější verzi. Použijte uvedený postup odpovídající typu zařízení, které máte.
 
-## Postup při aktualizaci zařízení s Androidem
+## Aktualizace aplikace Portál společnosti na zařízení s Androidem
 
 Obchod Play vás upozorní, jakmile bude k dispozici nová verze aplikace Portál společnosti. Neuvidíte výzvu v samotné aplikaci Portál společnosti. Aktualizujte zařízení podle pokynů v upozornění.
 
-## Aktualizace zařízení s iOS
+## Aktualizace aplikace Portál společnosti na zařízení s iOS
 
-Apple AppStore vás upozorní, jakmile bude k dispozici nová verze aplikace Portál společnosti. Aktualizujte zařízení podle pokynů v upozornění.
+App Store vás upozorní, jakmile bude k dispozici nová verze aplikace Portál společnosti. 
 
-## Aktualizace zařízení s Windows
+Aktualizace aplikace Portál společnosti:
+
+1. Otevřete App Store a vyhledejte řetězec **intune**.
+
+2. Až aplikaci najdete, klepněte na tlačítko **Aktualizovat** vpravo od názvu aplikace.
+
+## Aktualizace aplikace Portál společnosti na zařízení s Windows
 
 1.  Přejděte do Windows Storu a vyhledejte **Portál společnosti**.
 
@@ -50,6 +57,6 @@ Informace o dalších úlohách, které můžete v zařízení provést, najdete
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
