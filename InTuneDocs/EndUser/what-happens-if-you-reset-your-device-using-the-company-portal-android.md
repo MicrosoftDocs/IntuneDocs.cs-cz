@@ -3,7 +3,7 @@ title: "Co se stane, když resetujete zařízení s Androidem pomocí Portálu s
 description: 
 keywords: 
 author: staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 05/25/2016
 ms.topic: article
 ms.prod: 
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: ccadd02107f96c680cadd4e3b7a337292c530bae
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 19618f98a951648b47f07ebda1d7a2ed682dcc27
 
 
 ---
@@ -37,6 +37,7 @@ Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na spr�
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jul16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

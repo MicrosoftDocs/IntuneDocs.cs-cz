@@ -3,7 +3,7 @@ title: "Co připravujeme | Microsoft Intune"
 description: 
 keywords: 
 author: Lindavr
-manager: jeffgilb
+manager: angrobe
 ms.date: 07/07/2016
 ms.topic: article
 ms.prod: 
@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 35ee5d0c8898c95898c0527a623cf13c454387f2
-ms.openlocfilehash: 831cec6cd0e02a94c1a3f67d4adf5a5dcbb01449
+ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
+ms.openlocfilehash: 9b536372623632b609433c49991a8bdc70e6da49
 
 
 ---
@@ -79,7 +79,7 @@ Na webu Portál společnosti byly zjednodušené kroky registrace pro Windows 8.
 Za účelem zvýšení výkonu a možností škálování již nebude Intune v aplikaci Portál společnosti pro iOS v podokně Moje zařízení zobrazovat všechna zařízení Správce registrace zařízení. Zobrazí se pouze místní zařízení, na kterém aplikace běží, a to jenom v případě, že je zaregistrované prostřednictvím aplikace Portál společnosti. Uživatel Správce registrace zařízení může na místním zařízení provádět různé akce, ale vzdálená správa jiných zaregistrovaných zařízení se bude provádět jenom z konzoly správce Intune.  Kromě toho se v Intune místo účtů DEM začne používat buď program Apple DEP (Device Enrollment Program), nebo nástroj Apple Configurator. Obě tyto metody registrace již podporují registrace bez zásahu uživatele pro sdílená zařízení s iOS. Účty Správce registrace zařízení používejte pouze v případě, že registrace sdílených zařízení bez zásahu uživatele není dostupná.
 <!---TFS 1233681--->
 ### Omezení instalací zkušebně načtených aplikací jenom na registrovaná zařízení s Androidem
-Zařízení s Androidem už nemohou instalovat aplikace prostřednictvím webu Portál společnosti, pokud nejsou v Intune zaregistrovaná pomocí aplikace Portál společnosti Intune pro Android. 
+Zařízení s Androidem už nemohou instalovat aplikace prostřednictvím webu Portál společnosti, pokud nejsou v Intune zaregistrovaná pomocí aplikace Portál společnosti Intune pro Android.
 <!---TFS 1299082--->
 
 ## Zastaralá služba
@@ -113,6 +113,6 @@ Podrobnosti o posledním vývoji najdete v tématu [Co je nového v Microsoft In
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

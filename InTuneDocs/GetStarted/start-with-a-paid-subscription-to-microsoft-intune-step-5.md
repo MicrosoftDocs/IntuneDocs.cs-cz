@@ -3,7 +3,7 @@ title: "Vytvoření skupiny pro uspořádání uživatelů a zařízení | Micro
 description: "Vysvětluje způsob vytvoření uživatelů a skupin pro vaše předplatné Intune."
 keywords: 
 author: Staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 5fdf98c8-fe67-4d7a-9837-ed1234348014
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 8c6620d5d8f0d927da6328ea844625957ba2d240
+ms.sourcegitcommit: 2a192c71b1b82f59b34ea614d09d895174f8112b
+ms.openlocfilehash: afdff3d04fa0b6aeba44a3296147ebf207319c49
 
 
 ---
@@ -75,6 +75,6 @@ Gratulujeme! Právě jste dokončili krok 5 *úvodní příručky Intune*.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

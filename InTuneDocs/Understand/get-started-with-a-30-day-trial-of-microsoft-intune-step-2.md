@@ -3,7 +3,7 @@ title: "Přidání uživatelů do 30denního testování Intune | Microsoft Intu
 description: "Postup přidání uživatelů, jednotlivě nebo hromadně, při registraci bezplatné 30denní zkušební verze Intune"
 keywords: 
 author: Staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 9e40999b-46f7-447b-8974-72af82bec7ef
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 5a5ebe474580b98a3696bbd970c889837283b6f0
+ms.sourcegitcommit: 60ee39a7eeeb9068a7350ec87f60e7148ccb7826
+ms.openlocfilehash: fb9c1cde3288b090961b46f0b47b32bfb67b6828
 
 
 ---
@@ -79,6 +79,6 @@ Gratulujeme! Právě jste dokončili krok 2 příručky pro *testování Microso
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

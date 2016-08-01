@@ -3,7 +3,7 @@ title: "Hledání identity aplikace (PFN) pro síť VPN pro aplikaci | Microsoft
 description: "Najděte PFN, abyste mohli konfigurovat síť VPN pro aplikaci."
 keywords: 
 author: nbigman
-manager: Arob98
+manager: angrobe
 ms.date: 07/20/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 74643d1d-4fd9-4cff-ac79-1a42281d2f76
 ms.reviewer: tycast
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9a049127d79098bfb8992055a0a8b20fbfafd8c9
-ms.openlocfilehash: 980611a6c1fafdbc990f30d3144766abc97e632b
+ms.sourcegitcommit: 9a124663a80bb477d0312faa0fb43e4457ba8246
+ms.openlocfilehash: 0bbb8aef7929ac09ef5f6a5a466d66b5df03e921
 
 
 ---
@@ -23,7 +23,7 @@ ms.openlocfilehash: 980611a6c1fafdbc990f30d3144766abc97e632b
 
 Existují dva způsoby jak najít PFN, abyste mohli konfigurovat síť VPN pro aplikaci.
 
-## Hledání PFN pro aplikaci, která je nainstalovaná na počítači s Windows 10 
+## Hledání PFN pro aplikaci, která je nainstalovaná na počítači s Windows 10
 
 Pokud pracujete s aplikací, která je již nainstalována v počítači s Windows 10, můžete k získání PFN použít rutinu PowerShellu [Get-AppxPackage](https://technet.microsoft.com/library/hh856044.aspx).
 
@@ -74,7 +74,7 @@ Zde jsou informace načtené pro OneNote:
 4.  Na jiné kartě vložte následující adresu URL, `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`, ve které nahradíte `<app id>` pomocí ID aplikace, které jste získali z adresy https://www.microsoft.com/en-us/store/apps (to je ta řada písmen na konci adresy URL v kroku 3). V našem příkladu (pro OneNote) byste vložili adresu `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
 
 V Edgi se požadované informace zobrazí, v Internet Exploreru je zobrazíte kliknutím na **Otevřít**. Hodnota PFN je uvedena na prvním řádku. Zde jsou uvedené výsledky pro náš příklad:
- 
+
 
 `{`
 `  "packageFamilyName": "Microsoft.Office.OneNote_8wekyb3d8bbwe",`
@@ -85,7 +85,6 @@ V Edgi se požadované informace zobrazí, v Internet Exploreru je zobrazíte kl
 
 
 
-
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

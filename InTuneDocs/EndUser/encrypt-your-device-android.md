@@ -3,7 +3,7 @@ title: "Šifrování zařízení | Microsoft Intune"
 description: "Popisuje šifrování zařízení s Androidem."
 keywords: 
 author: staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 06/07/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: a69d4c3432867e3b4a808d71645d6a976a9f1c2e
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 777b87328e12b4d6b3de1b338fe802d92c1138a1
 
 
 ---
@@ -24,9 +24,9 @@ ms.openlocfilehash: a69d4c3432867e3b4a808d71645d6a976a9f1c2e
 
 Pokud vaše společnost nebo organizace vyžaduje, abyste si před přístupem k firemním souborům, e-mailu nebo datům zašifrovali zařízení s Androidem, postupujte podle níže uvedeného postupu. Před šifrováním můžete být požádáni o nastavení PIN kódu nebo hesla, pokud ho správce IT vyžaduje.
 
-Pokud byste pak někdy v budoucnosti chtěli registraci telefonu zrušit, zůstane zašifrovaný. 
+Pokud byste pak někdy v budoucnosti chtěli registraci telefonu zrušit, zůstane zašifrovaný.
 
-1.  Zkontrolujte, že je pro vaše zařízení nastavený kód PIN nebo heslo zamykací obrazovky. 
+1.  Zkontrolujte, že je pro vaše zařízení nastavený kód PIN nebo heslo zamykací obrazovky.
 
 2.  V **Nastavení** klikněte na **Zabezpečení** &gt; **Šifrovat telefon**.
     (Na některých telefonech budete muset najít možnost Šifrovat tak, že kliknete na **Úložiště** &gt; **Šifrování úložiště** nebo **Úložiště** &gt; **Zamykací obrazovka a zabezpečení** &gt; **Další nastavení zabezpečení**).
@@ -47,7 +47,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT (vyhledejte konta
 
 
 
-
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

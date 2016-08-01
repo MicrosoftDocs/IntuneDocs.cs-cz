@@ -3,8 +3,8 @@ title: "Registrace zařízení s Androidem v Intune | Microsoft Intune"
 description: "Popisuje registraci zařízení s Androidem v Intune."
 keywords: 
 author: staciebarker
-manager: arob98
-ms.date: 06/14/2016
+manager: angrobe
+ms.date: 07/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 0ed3a002-7533-4001-ae24-e10b64b66620
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: d979334c792ba604fe142c62b17f1af4f9e69db7
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 8f342183590c1099661a0121c1d99c2aa3aa0ba4
 
 
 ---
@@ -44,7 +44,27 @@ Pokud při pokusu o registraci zařízení do služby Intune dojde k chybě, pro
 
     ![android-company-portal-sign-in](./media/and-enroll-3-accept-terms.png)
 
-5.  Pokud používáte Android 6.0 nebo novější, proveďte tento krok. V opačném případě přejděte k dalšímu kroku. 
+5.  Přihlaste se k aplikaci Portál společnosti zadáním svého pracovního nebo školního účtu a hesla a potom klepněte na **Přihlásit**.
+
+    ![android-company-portal-sign-in](./media/and-enroll-2-cp-sign-in.png)
+
+6.  Na obrazovce **Nastavení firemního přístupu** klepněte na **ZAČÍT**.
+
+    ![Obrazovka nastavení přístupu společnosti](./media/and-enroll-4a-comp-access-setup.png)
+
+7.  Na obrazovce **Proč zařízení registrovat?** si přečtěte informace o tom, co vám registrace zařízení umožní, a potom klepněte na **POKRAČOVAT**.
+
+    ![Obrazovka Proč zařízení registrovat](./media/and-enroll-4b-why-enroll.png)
+
+8.  Přečtěte si informace o tom, co správce IT uvidí nebo neuvidí ve vašem zařízení, a klepněte na **POKRAČOVAT**.
+
+    ![Nastavení ochrany osobních údajů](./media/and-enroll-4c-we-care-privacy.png)
+
+9.  Na obrazovce **Co dál?** si přečtěte, co probíhá při registraci, a potom klepněte na **REGISTROVAT**.
+
+    ![Obrazovka Co dál](./media/and-enroll-4d-what-comes-next.png)
+
+10.  Pokud používáte Android 6.0 nebo novější, proveďte tento krok. V opačném případě přejděte k dalšímu kroku.
 
     Pokud správce IT nastavil konkrétní zásady, mohou se zobrazit následující zprávy:
     -   **Povolit pro Portál společnosti telefonování a správu telefonních hovorů?**
@@ -62,26 +82,6 @@ Pokud při pokusu o registraci zařízení do služby Intune dojde k chybě, pro
     Pokud se zobrazí tato zpráva, klepněte na **POVOLIT**. Klepnout na POVOLIT je bezpečné, protože **Microsoft nikdy nevyužívá přístup k vašim kontaktům**. Text zprávy určuje společnost Google a Microsoft ho nemůže změnit. Když povolíte přístup, umožňuje aplikaci Portál společnosti jenom vytvářet, používat a spravovat váš pracovní účet.
 
     Pokud přístup odepřete, při příštím klepnutí na **Odeslat data** se zpráva zobrazí znovu, ale další zprávy už můžete vypnout zaškrtnutím políčka **Příště se už neptat**. Pokud se později rozhodnete povolit přístup, použijte možnost **Nastavení** &gt; **Aplikace** &gt; **Portál společnosti** &gt; **Oprávnění** &gt; **Úložiště** a pak tato oprávnění aktivujte.
-
-6.  Přihlaste se k aplikaci Portál společnosti zadáním svého pracovního nebo školního účtu a hesla a potom klepněte na **Přihlásit**.
-
-    ![android-company-portal-sign-in](./media/and-enroll-2-cp-sign-in.png)
-
-7.  Na obrazovce **Nastavení firemního přístupu** klepněte na **ZAČÍT**.
-
-    ![Obrazovka nastavení přístupu společnosti](./media/and-enroll-4a-comp-access-setup.png)
-
-8.  Na obrazovce **Proč zařízení registrovat?** si přečtěte informace o tom, co vám registrace zařízení umožní, a potom klepněte na **POKRAČOVAT**.
-
-    ![Obrazovka Proč zařízení registrovat](./media/and-enroll-4b-why-enroll.png)
-
-9.  Přečtěte si informace o tom, co správce IT uvidí nebo neuvidí ve vašem zařízení, a klepněte na **POKRAČOVAT**.
-
-    ![Nastavení ochrany osobních údajů](./media/and-enroll-4c-we-care-privacy.png)
-
-10.  Na obrazovce **Co dál?** si přečtěte, co probíhá při registraci, a potom klepněte na **REGISTROVAT**.
-
-    ![Obrazovka Co dál](./media/and-enroll-4d-what-comes-next.png)
 
 11.  Na obrazovce **Aktivovat správce zařízení** klepněte na **Aktivovat**.
 
@@ -123,6 +123,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT (vyhledejte konta
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

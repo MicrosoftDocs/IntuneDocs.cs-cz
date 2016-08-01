@@ -3,7 +3,7 @@ title: "Použití webu Portál společnosti Intune | Microsoft Intune"
 description: "Popisuje web Portál společnosti a poskytuje odkazy na kroky pro úlohy, které můžete na webu provést."
 keywords: 
 author: Staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 06/03/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: a26d9e3c-8f58-4494-9571-fc88ba91852e
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 118a25b6ebb156c4ed642fee8802ef6a54582f8e
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: bfce55b6d23554d1c3df2b62d6bf5fdd4607974b
 
 
 ---
@@ -24,19 +24,19 @@ ms.openlocfilehash: 118a25b6ebb156c4ed642fee8802ef6a54582f8e
 
 Na webu Portál společnosti můžete provádět tyto kroky:
 
--   [Resetování hesla zařízení](reset-your-passcode-cpwebsite.md)
-
 -   [Přejmenovat zařízení](rename-your-device-cpwebsite.md)
 
 -   [Přejmenování zařízení](remove-your-device-cpwebsite.md)
 
 -   [Resetování zařízení](reset-your-device-cpwebsite.md)
 
+-   [Resetování hesla zařízení](reset-your-passcode-cpwebsite.md)
+
 -   [Vzdálené zamknutí zařízení](remote-lock-your-device-cpwebsite.md)
 
 -   [Ruční synchronizace zařízení ke zrychlení pomalé instalace aplikací](sync-your-device-manually-cpwebsite.md)
 
--   Najděte kontaktní informace na správce IT, pokud je váš správce IT nakonfiguroval. 
+-   Najděte kontaktní informace na správce IT, pokud je váš správce IT nakonfiguroval.
 
 -   Zobrazit podrobnosti o zařízení, včetně toho, jestli zařízení dodržuje zásady společnosti nebo školy
 
@@ -50,6 +50,6 @@ Většinu úloh můžete provést jak na **webu Portál společnosti** , tak v *
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

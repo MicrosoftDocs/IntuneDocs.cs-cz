@@ -3,7 +3,7 @@ title: "Zrušení registrace zařízení s Androidem v Intune | Microsoft Intune
 description: "Popisuje zrušení registrace zařízení s Androidem v Intune."
 keywords: 
 author: staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: f40aab26-7613-48cc-a74e-de83df9465a4
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 18b34de09cc24730cca6eacb0d5d2c5f99c24d1e
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 1586e72eef5afdc0baefde8e5a3c105af22edb62
 
 
 ---
@@ -26,7 +26,7 @@ Když zrušíte registraci zařízení s Androidem v Intune, zařízení už neb
 
 Pokud chcete zrušit registraci zařízení v Intune a odinstalovat aplikaci Portál společnosti, postupujte podle následujícího návodu nebo si pusťte toto video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/watch?v=K-Vi7lNfaMk&feature=youtu.be" frameborder="0" allowfullscreen></iframe> 
+<iframe width="675" height="379" src="https://www.youtube.com/embed/K-Vi7lNfaMk" frameborder="0" allowfullscreen></iframe>
 
 1.  Přihlaste se do aplikace Portál společnosti.
 
@@ -49,6 +49,7 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT (vyhledejte konta
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jul16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

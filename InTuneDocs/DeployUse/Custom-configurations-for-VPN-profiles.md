@@ -3,18 +3,18 @@ title: "Vlastní konfigurace pro profily VPN | Microsoft Intune"
 description: "Vlastní konfigurace slouží k vytvoření profilů VPN v Intune."
 keywords: 
 author: Nbigman
-manager: Arob98
+manager: angrobe
 ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4c0bd439-3b58-420b-9a9a-282886986786
-ms.reviewer: jeffgilb
+ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 72288296d966b9b9fae4fd721b4460528213f626
-ms.openlocfilehash: b61a4c90cfed9922df151a6c1ac93e276db18623
+ms.sourcegitcommit: 9a124663a80bb477d0312faa0fb43e4457ba8246
+ms.openlocfilehash: ae5ac5c697195f8b45f500cfa9d0de24953f8cb0
 
 
 ---
@@ -86,19 +86,19 @@ Eap ./Vendor/MSFT/VPNv2/ContosoVPN/NativeProfile/Authentication/Eap/Configuratio
 Další informace týkající se používání těchto nastavení a další podrobnosti o tom, co dělají, uživatelé najdou v dokumentaci CSP: https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776(v=vs.85).aspx
 
 ## Nastavení identifikátorů URI pro VPN pro aplikace pro Android na PulseSecure
-### VLASTNÍ IDENTIFIKÁTORY URI PRO SEZNAM BALÍKŮ 
+### VLASTNÍ IDENTIFIKÁTORY URI PRO SEZNAM BALÍKŮ
 -  Datový typ = Řetězec
--  OMA-URI = ./Vendor/MSFT/VPN/Profile/<Name>/PackageList 
+-  OMA-URI = ./Vendor/MSFT/VPN/Profile/<Name>/PackageList
 -  Hodnota = Seznam balíčků oddělený oddělovači.
    - Oddělovače: středník (;), dvojtečka (:), čárka (,), svislá čára (|)
 
-Příklady: 
+Příklady:
 - com.android.chrome
 - com.android.chrome;com.android.browser
 
 ### VLASTNÍ IDENTIFIKÁTOR URI PRO REŽIM (VOLITELNÉ)
 - Datový typ = Řetězec
-- OMA-URI = ./Vendor/MSFT/VPN/Profile/NAME/Mode 
+- OMA-URI = ./Vendor/MSFT/VPN/Profile/NAME/Mode
 
 > Poznámky
 > - Použijte stejný *název*, který jste přiřadili k vlastními profilu.
@@ -112,6 +112,6 @@ Příklady:
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

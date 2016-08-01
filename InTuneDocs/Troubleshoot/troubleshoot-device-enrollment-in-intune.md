@@ -3,7 +3,7 @@ title: "Řešení potíží s registrací | Microsoft Intune"
 description: "Doporučení pro řešení potíží s registrací zařízení"
 keywords: 
 author: Nbigman
-manager: jeffgilb
+manager: angrobe
 ms.date: 05/26/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c1e215320168c659d5f838355f6350111d6979b0
-ms.openlocfilehash: 4c728b4fbb68d64d4e06845eca08b1b2d8d1a92a
+ms.sourcegitcommit: 9915b275101e287498217c4f35e1c0e56d2425c2
+ms.openlocfilehash: e10ef68d97127b848a7d624ba40d219ffed3d06d
 
 
 ---
@@ -144,7 +144,7 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 **Řešení:** V [Centru pro správu Office 365](https://portal.office.com/) odeberte zvláštní znaky z názvu společnosti a uložte informace o společnosti.
 
 ### Pokud máte více ověřených domén, není možné se přihlásit nebo zaregistrovat zařízení
-**Problém:** Pokud do AD FS přidáte druhou ověřenou doménu, nemusí být uživatelé s příponou hlavního názvu uživatele (UPN) druhé domény schopni se přihlásit na portály nebo zaregistrovat zařízení. 
+**Problém:** Pokud do AD FS přidáte druhou ověřenou doménu, nemusí být uživatelé s příponou hlavního názvu uživatele (UPN) druhé domény schopni se přihlásit na portály nebo zaregistrovat zařízení.
 
 
 **Řešení:** Zákazníci, kteří mají předplatné Microsoft Office 365, využívají jednotné přihlašování (SSO) prostřednictvím služby AD FS 2.0 a mají pro přípony UPN uživatelů v rámci organizace více domén nejvyšší úrovně (například @contoso.com nebo @fabrikam.com), musí pro každou příponu nasadit samostatnou instanci federační služby AD FS 2.0.  K dispozici je nyní [kumulativní aktualizace pro službu AD FS 2.0](http://support.microsoft.com/kb/2607496), která ve spojení s přepínačem **SupportMultipleDomain** umožňuje zajistit, aby AD FS server tento scénář podporoval bez vyžadování dalších serverů služby AD FS 2.0. Další informace najdete na [tomto blogu](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
@@ -166,14 +166,14 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 
 **Problém:** Uživatel obdrží na zařízení následující zprávu: *Nemůžete se přihlásit, protože vašemu zařízení chybí požadovaný certifikát.*
 
-**Řešení:** 
+**Řešení:**
 
 - Uživatel by mohl být schopný načíst chybějící certifikát pomocí [těchto pokynů](/intune/enduser/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator).
-- Pokud uživatel nemůže načíst certifikát, pravděpodobně na serveru AD FS chybí zprostředkující certifikáty. Zprostředkující certifikáty jsou nutné pro Android, aby důvěřoval serveru. 
+- Pokud uživatel nemůže načíst certifikát, pravděpodobně na serveru AD FS chybí zprostředkující certifikáty. Zprostředkující certifikáty jsou nutné pro Android, aby důvěřoval serveru.
 
 Certifikáty do úložiště zprostředkujících certifikátů na serveru AD FS nebo proxy serverech můžete importovat následujícím způsobem:
 
-1.  Na serveru AD FS spusťte **konzolu Microsoft Management Console** a přidejte modul snap-in Certifikáty pro **Účet počítače**. 
+1.  Na serveru AD FS spusťte **konzolu Microsoft Management Console** a přidejte modul snap-in Certifikáty pro **Účet počítače**.
 5.  Najděte certifikát, který používá vaše služba AD FS, a zobrazte jeho nadřazený certifikát.
 6.  Zkopírujte nadřazený certifikát a vložte ho do větve **Computer\Intermediate Certification Authorities\Certificates**.
 7.  Zkopírujte certifikát služby AD FS, dešifrovací certifikát AD FS a certifikát podpisu ADFS a vložte je do osobního úložiště pro službu AD FS.
@@ -200,34 +200,34 @@ Teď už by měl uživatel být schopný se ze zařízení s Androidem k aplikac
 ### Zaregistrovaná zařízení s iOS se při používání nástroje System Center Configuration Manager se službou Intune nezobrazí v konzole
 **Problém:** Uživatel registruje zařízení s iOS, to se ale nezobrazí v konzole pro správu nástroje Configuration Manager. Zařízení neindikuje, že je zaregistrované. Možné příčiny:
 
-- Je možné, že jste konektor služby Intune zaregistrovali na jednom účtu a potom jste ho zaregistrovali na jiném účtu. 
+- Je možné, že jste konektor služby Intune zaregistrovali na jednom účtu a potom jste ho zaregistrovali na jiném účtu.
 - Mohli jste si stáhnout certifikát MDM z jednoho účtu a použít ho na jiný účet.
 
 
 **Řešení:** Proveďte tyto kroky:
 
-1. Zakažte iOS v rámci konektoru služby Windows Intune. 
+1. Zakažte iOS v rámci konektoru služby Windows Intune.
     1. Pravým tlačítkem klikněte na předplatné služby Intune a vyberte **Vlastnosti**.
     1. Na kartě iOS zrušte zaškrtnutí políčka Povolit registraci zařízení se systémem iOS.
 
 
 
 1. V SQL spusťte následující kroky pro databázi CAS DB.
-  
-    1. update SC_ClientComponent_Property set Value2 = '' where Name like '%APNS%' 
-    1. delete from MDMPolicy where PolicyType = 7 
+
+    1. update SC_ClientComponent_Property set Value2 = '' where Name like '%APNS%'
+    1. delete from MDMPolicy where PolicyType = 7
     1. delete from MDMPolicyAssignment where PolicyType = 7
-    1. update SC_ClientComponent_Property set Value2 = '' where Name like '%APNS%' 
-    1. delete from MDMPolicy where PolicyType = 11 
-    1. delete from MDMPolicyAssignment where PolicyType = 11 
+    1. update SC_ClientComponent_Property set Value2 = '' where Name like '%APNS%'
+    1. delete from MDMPolicy where PolicyType = 11
+    1. delete from MDMPolicyAssignment where PolicyType = 11
     1. DELETE Drs_Signals
-1. Restartujte službu SMS Executive nebo restartujte CM Server. 
+1. Restartujte službu SMS Executive nebo restartujte CM Server.
 
 
 
 1. Získejte nový certifikát APN a nahrajte ho: klikněte pravým tlačítkem na předplatné služby Intune v levém podokně nástroje Configuration Manager. Vyberte **Vytvořit žádost o certifikát APNs** a postupujte podle pokynů.
 ## Problémy při použití nástroje System Center Configuration Manager se službou Intune
-### Mobilní zařízení zmizí 
+### Mobilní zařízení zmizí
 **Problém:** Po úspěšné registraci mobilního zařízení do Configuration Manageru dané zařízení zmizí z kolekce mobilních zařízení, ale pořád má profil pro správu a je uvedené v bráně CSS.
 
 **Řešení:** K této situaci může dojít, protože máte vlastní proces, který odebírá zařízení nepřipojená k doméně, nebo protože uživatel vyřadil zařízení z předplatného. Pokud chcete ověřit a zkontrolovat, který proces nebo uživatelský účet odebral zařízení z konzoly nástroje Configuration Manager, postupujte podle následujících kroků.
@@ -256,22 +256,22 @@ Seznam chyb registrace iOS je uvedený v dokumentaci pro uživatele zařízení 
 
 ### Počítač už je zaregistrovaný – chyba hr 0x8007064c
 **Problém:** Registrace selže s chybou **Počítač už je zaregistrovaný**. V protokolu registrace se zobrazuje chyba **hr 0x8007064c**.
-  
+
 Důvodem může být to, že již byl počítač zaregistrován dříve nebo je na něm klonovaná image počítače, který už je zaregistrovaný. Na počítači se stále nachází certifikát předchozího účtu.
 
 
 
-**Řešení:** 
+**Řešení:**
 
-1. V nabídce **Start** zvolte **Spustit** -> **MMC**. 
+1. V nabídce **Start** zvolte **Spustit** -> **MMC**.
 1. **Soubor** -> **Přidat/odebrat modul snap-in**.
 1. Poklikejte na **Certifikáty**, zvolte **Účet počítače**, **Další**, vyberte **Místní počítač**.
-1. Poklikejte na **Certifikáty (místní počítač)**, zvolte **Osobní/Certifikáty**. 
+1. Poklikejte na **Certifikáty (místní počítač)**, zvolte **Osobní/Certifikáty**.
 1. Vyhledejte certifikát Intune, který vystavila certifikační autorita Sc_Online_Issuing. Pokud existuje, odstraňte ho.
 1. Pokud existuje tento klíč registru: ** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey**, odstraňte ho a s ním i všechny podklíče.
-1. Pokuste se o opětovnou registraci. 
-1. Pokud ani tak počítač není možné zaregistrovat, vyhledejte a odstraňte tento klíč, pokud existuje: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**. 
-1. Pokuste se o opětovnou registraci. 
+1. Pokuste se o opětovnou registraci.
+1. Pokud ani tak počítač není možné zaregistrovat, vyhledejte a odstraňte tento klíč, pokud existuje: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**.
+1. Pokuste se o opětovnou registraci.
 
     > [!IMPORTANT]
     > Tato část, metoda nebo úloha obsahují kroky, které vám pomohou s úpravou registru. Pokud ale budete měnit registr a uděláte tam něco špatně, můžete mít velké problémy s počítačem. Proto je důležité, abyste pečlivě postupovali podle těchto kroků. Než začnete registr měnit, pro jistotu si ho zazálohujte. Pak budete moct v případě problémů registr obnovit.
@@ -306,6 +306,6 @@ Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podpor
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
