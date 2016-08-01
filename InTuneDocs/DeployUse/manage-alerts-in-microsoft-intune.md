@@ -3,19 +3,19 @@ title: "Správa výstrah | Microsoft Intune"
 description: "Používejte pracovní prostor Výstrahy k posouzení celkového stavu zařízení ve vaší organizaci."
 keywords: 
 author: Nbigman
-manager: Arob98
+manager: angrobe
 ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 74dc4ce4-21da-4f40-a07f-3eea34561eee
-ROBOTS: noindex,nofollow
-ms.reviewer: jeffgilb
+ROBOTS: NOINDEX,NOFOLLOW
+ms.reviewer: pbala
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 72288296d966b9b9fae4fd721b4460528213f626
-ms.openlocfilehash: 47667501cf8235ed59e3915ec8f745381a37ab35
+ms.sourcegitcommit: 9a124663a80bb477d0312faa0fb43e4457ba8246
+ms.openlocfilehash: 54dd8c6bae6c02e7dde3582b439d106261bc490b
 
 
 ---
@@ -33,12 +33,12 @@ K posouzení celkového stavu zařízení ve vaší organizaci a identifikaci pr
 
         > [!NOTE]
         > V některých případech se typ výstrahy může na seznamu **Souhrn výstrah podle typu** zobrazovat více než jednou.
-        > 
+        >
         > Na seznamu se můžou zobrazit třeba následující instance typu výstrahy Volného místa logického disku:
-        > 
+        >
         > -   3 Volné místo logického disku
         > -   2 Volné místo logického disku
-        > 
+        >
         > K tomuto chování dochází při vygenerování výstrahy stejného typu pro zařízení, která používají různé operační systémy. V uvedeném příkladu mohla být první instance typu výstrahy Volné místo logického disku, 3 Volné místo logického disku, vygenerovaná počítači s Windows® 7. Druhou instanci typu výstrahy Volné místo logického disku mohly vygenerovat počítače s Windows Vista®.
 
     -   **Pokud chcete zobrazit všechny aktivní výstrahy**, klikněte na **Výstrahy &gt; Všechny výstrahy**. Na stránce **Výstrahy** se zobrazí seznam všech aktivních výstrah s těmito sloupci:
@@ -107,7 +107,6 @@ Výstrahy, které jsou označené jako zavřené, se po 90 dnech trvale odstran�
 
 
 
-
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -3,7 +3,7 @@ title: "Co se stane, když zrušíte registraci zařízení s Androidem v Intune
 description: 
 keywords: 
 author: staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 55bb03075da7fab06196857c1d5e5a95befc248d
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 3bb5d0dd3fbb48a2645922b550b2ffff295bec59
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: 55bb03075da7fab06196857c1d5e5a95befc248d
 
 Po zrušení registrace zařízení s Androidem v Intune:
 
--   Rušíte registraci zařízení ze služby Intune, což znamená, že váš správce IT již zařízení nespravuje. 
+-   Rušíte registraci zařízení ze služby Intune, což znamená, že váš správce IT již zařízení nespravuje.
 
 -   Ztratíte přístup k firemním datům a prostředkům.
 
@@ -35,7 +35,7 @@ Po zrušení registrace zařízení s Androidem v Intune:
 
 -   Nastavení, která byla v zařízení změněna od jeho přidání, například zakázání fotoaparátu/kamery nebo vyžadování určité délky hesla, již nebudou platit.
 
-Pokud je vaše zařízení nastavené jenom tak, aby mohlo přijímat firemní e-maily, a vy zrušíte jeho registraci, zařízení se už nebude zobrazovat na portálu společnosti. 
+Pokud je vaše zařízení nastavené jenom tak, aby mohlo přijímat firemní e-maily, a vy zrušíte jeho registraci, zařízení se už nebude zobrazovat na portálu společnosti.
 
 Návod ke zrušení registrace najdete v tématu [Zrušení registrace zařízení v Intune pomocí aplikace Portál společnosti](unenroll-your-device-from-intune-android.md).
 
@@ -46,6 +46,7 @@ Potřebujete pomoc? Obraťte se na správce IT (vyhledejte kontaktní informace 
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jul16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

@@ -3,7 +3,7 @@ title: "Zařízení nemá požadovaný certifikát | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 7/7/2016
 ms.topic: article
 ms.prod: 
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 61dda32b55e108b340923f4ff2a86163da2971dc
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 220d877763352e62c4057494b69633356ef081c6
 
 
 ---
@@ -74,7 +74,7 @@ Pokud chcete tyto potíže vyřešit a získat požadovaný certifikát, musíte
 
     ![screenshot-internet-explorer-view-certificates-button-on-website-identification-dialog](./media/andr-missg-cert-ie-view-cert-button.png)
 
-5. V dialogovém okně **Certifikáty** klikněte na kartu **Cesta k certifikátu** a potom určete certifikát, který potřebujete získat z internetu. Název certifikátu, který potřebujete se zobrazí na stejné pozici jako název zvýrazněný výš na snímku obrazovky s příkladem. 
+5. V dialogovém okně **Certifikáty** klikněte na kartu **Cesta k certifikátu** a potom určete certifikát, který potřebujete získat z internetu. Název certifikátu, který potřebujete se zobrazí na stejné pozici jako název zvýrazněný výš na snímku obrazovky s příkladem.
 
 ### Stažení a instalace chybějícího certifikátu na mobilním zařízení s Androidem
 
@@ -94,12 +94,13 @@ Pokud chcete tyto potíže vyřešit a získat požadovaný certifikát, musíte
 
 7. Aplikaci Portál společnosti znovu otevřete. Teď už by mělo být možné se k aplikaci Portál společnosti přihlásit. Pokud potřebujete pomoc, obraťte se na správce IT.
 
-Pokud se vám stejná zpráva typu Chybějící certifikát už zobrazila a už jste použili postup popsaný výš, pravděpodobně to znamená, že je ještě další certifikát, s jehož instalací vám musí pomoct správce IT. Kontaktujte správce IT a poskytněte mu tento [odkaz](/intune/troubleshoot/troubleshoot-device-enrollment-in-intune#android-certificate-issues), který obsahuje kroky pro řešení těchto potíží. 
+Pokud se vám stejná zpráva typu Chybějící certifikát už zobrazila a už jste použili postup popsaný výš, pravděpodobně to znamená, že je ještě další certifikát, s jehož instalací vám musí pomoct správce IT. Kontaktujte správce IT a poskytněte mu tento [odkaz](/intune/troubleshoot/troubleshoot-device-enrollment-in-intune#android-certificate-issues), který obsahuje kroky pro řešení těchto potíží.
 
 ### Související témata
 [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jul16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

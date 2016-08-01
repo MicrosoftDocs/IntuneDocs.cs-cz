@@ -3,7 +3,7 @@ title: "Správa licenčních smluv pro software počítačů | Microsoft Intune"
 description: "Intune umožňuje spravovat licenční smlouvy pro software zakoupený prostřednictvím multilicenční smlouvy s Microsoftem i pro jinak zakoupený software."
 keywords: 
 author: robstackmsft
-manager: arob98
+manager: angrobe
 ms.date: 07/12/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: c59d8635-3f66-40f5-824a-a71c738e0341
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c1850e89830de61ccdeb81cb6ee9cc0f0c1d237a
-ms.openlocfilehash: 6570c0cd42102e45171a39ccbaef609a494a27d6
+ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
+ms.openlocfilehash: 73fcb4c984f57834655d5d1df14425a66afa2cec
 
 
 ---
@@ -183,6 +183,6 @@ Licenční smlouvy na software se dají přidat do skupin licencí. Skupiny lice
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

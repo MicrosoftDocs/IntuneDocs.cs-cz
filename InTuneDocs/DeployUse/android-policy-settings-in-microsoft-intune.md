@@ -1,10 +1,10 @@
 ---
 title: "Nastavení zásad konfigurace pro Android a Samsung KNOX | Microsoft Intune"
-description: 
+description: "Vytvořte zásady, které řídí nastavení a funkce na zařízeních s Androidem, která spravujete pomocí Intune."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +13,15 @@ ms.assetid: 71cc39cf-e726-40fd-8d08-78776e099a4b
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 62beaec31a0cdc3c28fd3eed820a6771e42ef3e7
-ms.openlocfilehash: f4c0eccb0cd30daaba97e8f34eea69e3d0e8e0ad
+ms.sourcegitcommit: c1850e89830de61ccdeb81cb6ee9cc0f0c1d237a
+ms.openlocfilehash: e983f4ac4e396a30db19e5a0d487ac0f9c25ff14
 
 
 ---
 
 # Nastavení zásad konfigurace pro Android a Samsung KNOX v Microsoft Intune
+
+Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete konfigurovat v zařízeních s Androidem. Navíc můžete určit hodnoty OMA-URI k vytvoření vlastních nastavení, která nejsou k dispozici prostřednictvím Intune.
 
 ## Zásady obecné konfigurace
 
@@ -254,6 +256,6 @@ I když Intune podporuje profily Wi-Fi pro zařízení s Androidem, tato funkce 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
