@@ -3,8 +3,8 @@ title: "Použití zařízení s Androidem v Intune | Microsoft Intune"
 description: "Obsahuje seznam odkazů na úlohy, které můžete dělat v mobilních zařízení s Androidem, když je zařízení registrované v Intune."
 keywords: 
 author: staciebarker
-manager: arob98
-ms.date: 06/14/2016
+manager: angrobe
+ms.date: 07/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: e0ff9b0b1c31e0037f34e223ff26c2b111c5a0aa
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 3dfe3f8a0a8538d14acddb9a7c9541bae928b6e6
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: e0ff9b0b1c31e0037f34e223ff26c2b111c5a0aa
 
 # Použití zařízení Android s Intune
 
-Tyto kroky použijte pro úlohy, které musíte udělat na zařízení s Androidem, když vaše společnost používá Microsoft Intune.
+Tato stránka obsahuje odkazy na všechny úlohy, které můžou provést koncoví uživatelé na svých zařízeních spravovaných Intune. Správci IT se můžou odkazovat na tyto informace, aby viděli kroky, podle kterých uživatelé postupují, aby provedli různé úlohy, které jsou seskupené do kategorií: informace týkající se registrace, úlohy správy a problémy s kompatibilitou.
 
 ## Instalace aplikace Portál společnosti a registrace ve službě Intune
 
@@ -67,9 +67,6 @@ Informace v této části vám pomůžou opravit problémy, se kterými se můž
 
 
 
-
-
-
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

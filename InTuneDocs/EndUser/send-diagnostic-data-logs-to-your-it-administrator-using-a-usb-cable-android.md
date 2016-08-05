@@ -3,8 +3,8 @@ title: "Odeslání protokolů s diagnostickými daty ze zařízení správci IT 
 description: 
 keywords: 
 author: staciebarker
-manager: arob98
-ms.date: 07/20/2016
+manager: angrobe
+ms.date: 07/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f1fd60348f5e18344a2ce63311cef7a551f355d3
-ms.openlocfilehash: b1bec5b968c0fa3a86e08801d9802ba443cf01d6
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 6cd0c267dc93d08369ecfb10939af8140b3c57e9
 
 
 ---
@@ -23,9 +23,11 @@ ms.openlocfilehash: b1bec5b968c0fa3a86e08801d9802ba443cf01d6
 
 # Odeslání protokolů s diagnostickými daty ze zařízení správci IT pomocí kabelu USB
 
-Pokud chcete odesílat protokol dat správci IT, abyste získali pomoc s problémem, můžete protokoly odeslat pomocí počítače a kabelu USB, místo abyste odesílali protokoly z mobilního zařízení. Tady je postup:
+Pokud chcete odesílat protokoly dat správci IT, abyste získali pomoc s problémem, můžete protokoly odeslat pomocí počítače a kabelu USB, místo abyste odesílali protokoly z mobilního zařízení. Tady je postup:
 
-1.  Než začnete, ujistěte se, že máte e-mailovou adresu správce IT. Tu většinou najdete na webu portálu společnosti nebo v aplikaci Portál společnosti.
+1.  Na chybové obrazovce klepněte na **Odeslat informace**. Když se zobrazí zpráva s dotazem, jakou metodu chcete použít k odeslání protokolů, zvolte možnost, která uloží soubory do vašeho zařízení.
+
+2.  Než začnete, ujistěte se, že máte e-mailovou adresu správce IT, která je obvykle uvedená na vašem webu [Portál společnosti](http://portal.manage.microsoft.com) nebo v aplikaci Portál společnosti.
 
 2.  Připojte zařízení s Androidem k počítači pomocí kabelu USB.
 
@@ -33,12 +35,13 @@ Pokud chcete odesílat protokol dat správci IT, abyste získali pomoc s problé
 
 4.  Všechny soubory připojte k e-mailu a odešlete je správci IT.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jul16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

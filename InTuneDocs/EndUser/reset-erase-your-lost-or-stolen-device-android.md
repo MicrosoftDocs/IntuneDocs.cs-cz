@@ -3,8 +3,8 @@ title: "Resetování (vymazání) ztraceného nebo odcizeného zařízení s And
 description: 
 keywords: 
 author: staciebarker
-manager: arob98
-ms.date: 05/31/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 9797eb4b7b18527d13fc1f0a9cbcc900d76dc54f
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: d9f31b48fb1b44a0bdf07a6eee3fe5b19f7bf610
 
 
 ---
@@ -27,12 +27,12 @@ Pokud se telefon zaregistrovaný v Intune ztratí nebo vám ho někdo ukradne, m
 
 Další informace o tom, co se stane, když zařízení resetujete, najdete v tématu [Co se stane, když resetuji svoje zařízení pomocí portálu společnosti](what-happens-if-you-reset-your-device-using-the-company-portal-android.md).
 
-> [!WARNING] 
+> [!WARNING]
 > Když v zařízení obnovíte výchozí nastavení výrobce, odeberete z něj jak svoje osobní, tak i pracovní nebo školní informace.
 
 ## Postup resetování zařízení z aplikace Portál společnosti
 
-1.  V prohlížeči otevřete [web Portál společnosti](http://portal.manage.microsoft.com) a přihlaste se ke svému pracovnímu nebo školnímu účtu.
+1.  Z jiného registrovaného zařízení otevřete aplikaci Portál společnosti a přihlaste se pomocí svého pracovního nebo školního účtu.
 
 2.  Klepněte na **Moje zařízení** a vyberte název ztraceného nebo ukradeného zařízení.
 
@@ -42,7 +42,7 @@ Další informace o tom, co se stane, když zařízení resetujete, najdete v t�
 
 Můžete použít následující kroky nebo přehrát toto video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/watch?v=K-Vi7lNfaMk&feature=youtu.be" frameborder="0" allowfullscreen></iframe> 
+<iframe width="675" height="379" src="https://www.youtube.com/embed/6e73o7f8gxE" frameborder="0" allowfullscreen></iframe>
 
 1.  V prohlížeči otevřete [web Portál společnosti](http://portal.manage.microsoft.com) a přihlaste se ke svému pracovnímu účtu.
 
@@ -57,7 +57,6 @@ Pokud se vám ztracené nebo ukradené zařízení nedaří resetovat, požádej
 
 
 
-
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -3,8 +3,8 @@ title: "Resetování (vymazání) ztraceného nebo odcizeného zařízení s iOS
 description: 
 keywords: 
 author: Staciebarker
-manager: arob98
-ms.date: 05/09/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 9ab65b409bbb2168e3457050202d6e88db0472d2
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: f6e7e40973428762995feceac109a8367813dadd
 
 
 ---
@@ -30,7 +30,7 @@ Pokud se telefon zaregistrovaný v Intune ztratí nebo vám ho někdo ukradne, m
 
 ## Postup resetování zařízení pomocí aplikace Portál společnosti
 
-1.  V prohlížeči otevřete portálu společnosti a přihlaste se ke svému pracovnímu účtu.
+1.  Z jiného registrovaného zařízení otevřete aplikaci Portál společnosti a přihlaste se pomocí svého pracovního nebo školního účtu.
 
 2.  V části **Moje zařízení** vyberte ztracené nebo odcizené zařízení.
 
@@ -40,7 +40,7 @@ Pokud se telefon zaregistrovaný v Intune ztratí nebo vám ho někdo ukradne, m
 
 Můžete použít následující kroky nebo přehrát toto video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/watch?v=6UFtBrBWUUI&feature=youtu.be" frameborder="0" allowfullscreen></iframe>
+<iframe width="675" height="379" src="https://www.youtube.com/embed/3rrXe8XmtgU" frameborder="0" allowfullscreen></iframe>
 
 1.  Na [webu Portál společnosti](http://portal.manage.microsoft.com) vyberte zařízení, které chcete vymazat.
 
@@ -52,6 +52,7 @@ Pokud se vám ztracené nebo ukradené zařízení nedaří resetovat, požádej
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jul16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

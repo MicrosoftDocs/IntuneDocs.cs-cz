@@ -3,7 +3,7 @@ title: "Nastavení zásad dodržování předpisů pro zařízení s Androidem |
 description: "Toto téma popisuje nastavení zásad dodržování předpisů pro zařízení s Androidem."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
+manager: arob98
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: e721c5c7-9678-4f3b-81d4-564da5efd337
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 359f76daa35a14e4107a9e03c6a1b1f4d1215777
-ms.openlocfilehash: 38763f73ebb3e6d629c2e7ea43ad34514a8b3ad5
+ms.sourcegitcommit: 465a5f305ac191fdf761997df565423f4349ff91
+ms.openlocfilehash: ed358c07594507d3a9144e9c686b54dcbd30aede
 
 
 ---
@@ -56,9 +56,17 @@ Pokud hledáte informace o jiných platformách, vyberte jednu z těchto možnos
 ### Šifrování
 - **Vyžadovat šifrování u mobilního zařízení:** Nastavte možnost **Ano**, pokud chcete, aby musela být zařízení vyžadující přístup k prostředkům šifrovaná. Zařízení se šifrují, pokud nakonfigurujete nastavení **Vyžadovat heslo k odemknutí mobilních zařízení**.
 
-## Nastavení stavu zařízení
+## Stav zařízení a nastavení zabezpečení
 
 - **Zařízení nesmí mít jailbreak ani root:** Pokud povolíte toto nastavení, budou se zařízení s jailbreakem považovat za nevyhovující předpisům.
+- **Požadovat, aby zařízení bránila instalaci aplikací z neznámých zdrojů (Android 4.0 nebo novější):** Pokud chcete blokovat zařízení, která mají povolenou možnost **Zabezpečení > Neznámé zdroje**, toto nastavení povolte a nastavte ho na **Ano**.  
+>[!IMPORTANT]
+>Zkušební načtení aplikací vyžaduje, aby bylo nastavení **Neznámé zdroje** povolené.  Tuto zásadu dodržování předpisů byste měl vynucovat, jenom když na zařízeních neprovádíte zkušební načtení aplikací pro Android.
+
+- **Požadovat, aby ladění USB bylo zakázané (Android 4.2 nebo novější):** Toto nastavení určuje, jestli se má zjišťovat, zda je na zařízení povolená možnost ladění USB.
+- **Požadovat, aby zařízení měla povolené nastavení Vyhledat v zařízení bezpečnostní hrozby (Android 4.2-4.4):** Toto nastavení určuje, že je v zařízení povolená funkce **Ověřovat aplikace**.
+- **Minimální úroveň oprav zabezpečení Androidu (Android 6.0 nebo novější):** Toto nastavení použijte k určení minimální úrovně oprav Androidu.  Zařízení, která nejsou alespoň na této úrovni oprav, budou kompatibilní. Datum musí být zadáno ve formátu RRRR-MM-DD.
+
 
 ## Nastavení vlastností zařízení
 - **Minimální požadovaný operační systém:** Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, uvede se jako nekompatibilní.
@@ -68,6 +76,6 @@ Pokud hledáte informace o jiných platformách, vyberte jednu z těchto možnos
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

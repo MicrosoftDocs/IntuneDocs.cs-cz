@@ -3,7 +3,7 @@ title: "Portál společnosti Microsoft Intune | Microsoft Intune"
 description: "nastavení Portálu společnosti Intune"
 keywords: 
 author: Staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 4dc3d084-0394-4ee7-b7fa-a72523928627
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: b7c8cc22f744449ce83084be88cfb4547e28779b
+ms.sourcegitcommit: 2a192c71b1b82f59b34ea614d09d895174f8112b
+ms.openlocfilehash: 743be083ca9e8bed989982092f103b18f8f73582
 
 
 ---
@@ -28,7 +28,7 @@ Portál společnosti Intune je nástroj, který poskytuje uživatelům přístup
 -   **Aplikace Portál společnosti**: Aplikace, která je dostupná na zařízeních spravovaných službou [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Další informace o aplikacích Portál společnosti pro [Android](/Intune/EndUser/using-your-android-device-with-intune), [iOS](/Intune/EndUser/using-your-ios-or-mac-os-x-device-with-intune) a [Windows](/Intune/EndUser/using-your-windows-device-with-intune).
 
 
-- **Web Portál společnosti**: Web, který zajišťuje přístup z [podporovaného prohlížeče](supported-web-browsers.md). Adresa URL je [https://portal.office.com/Admin/Default.aspx](https://portal.office.com/Admin/Default.aspx). Další informace o tomto webu najdete v tématu [Použití webu Portál společnosti Intune](/Intune/EndUser/using-the-intune-company-portal-website).
+- **Web Portál společnosti:** Web, který je přístupný pomocí [podporovaného prohlížeče](supported-web-browsers.md) a který umožňuje koncovým uživatelům provádět většinu úloh, které lze provádět z aplikace Portál společnosti pro jejich specifickou platformu. Adresa URL je [http://portal.manage.microsoft.com](http://portal.manage.microsoft.com). Další informace o tomto webu najdete v tématu [Použití webu Portál společnosti Intune](/Intune/EndUser/using-the-intune-company-portal-website).
 
 Některé úlohy, které uživatelé mohou provést na Portálu společnosti:
 
@@ -53,6 +53,6 @@ Než bude moct uživatel přistupovat k Portálu společnosti, musí mít jeho �
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

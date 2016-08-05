@@ -3,8 +3,8 @@ title: "Konfigurace profilů certifikátů | Microsoft Intune"
 description: "Přečtěte si, jak vytvořit profil certifikátu Intune."
 keywords: 
 author: nbigman
-manager: Arob98
-ms.date: 07/21/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 679a20a1-e66f-4b6b-bd8f-896daf1f8175
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 72288296d966b9b9fae4fd721b4460528213f626
-ms.openlocfilehash: 40ae2ce3ea4393d24770c010bf5292ca1829a7f1
+ms.sourcegitcommit: 6a7f2eeb0114f525890d1dcb61344d60a19943d1
+ms.openlocfilehash: 14419092edc77b2229cf980a74e81048941a2c28
 
 
 ---
@@ -54,7 +54,18 @@ Před vytvořením profilu certifikátu SCEP nebo. PFX musíte vytvořit **Profi
 
     Další informace: [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
-3.  Poskytněte požadované informace pro konfiguraci nastavení profilu důvěryhodného certifikátu pro Android, iOS, Mac OS X, Windows 8.1 nebo Windows Phone 8.1. V nastavení **Soubor certifikátu** importujte certifikát důvěryhodné certifikační autority (**.cer**), který jste exportovali z vydávající certifikační autority. Nastavení **Cílové úložiště** se použije jen na zařízení se systémem Windows 8.1 a novějším a jen v případě, že má zařízení víc než jedno úložiště certifikátů.
+3.  Poskytněte požadované informace pro konfiguraci nastavení profilu důvěryhodného certifikátu pro Android, iOS, Mac OS X, Windows 8.1 nebo Windows Phone 8.1. 
+
+    - V nastavení **Soubor certifikátu** importujte certifikát důvěryhodné certifikační autority (**.cer**), který jste exportovali z vydávající certifikační autority. Nastavení **Cílové úložiště** se použije jen na zařízení se systémem Windows 8.1 a novějším a jen v případě, že má zařízení víc než jedno úložiště certifikátů.
+
+    
+    - V části **Formát názvu subjektu**, vyberte **Vlastní**, abyste zadali vlastní formát názvu subjektu.  
+
+        Dvě proměnné, které jsou aktuálně podporované pro vlastní formát, jsou **Common Name (CN)** a **Email (E)**. Pomocí kombinace těchto proměnných a statických řetězců můžete vytvořit vlastní formát názvu subjektu, jak je uvedeno v tomto příkladu:  
+
+        `CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US`  
+
+        V příkladu správce vytvořil formát názvu subjektu, který kromě proměnných CN a E používá řetězce pro organizační jednotky, organizaci, umístění, stav a zemi. Seznam podporovaných řetězců je uvedený v tématu [Funkce CertStrToName](https://msdn.microsoft.com/en-us/library/windows/desktop/aa377160.aspx).  
 
 
 4.  Po dokončení klikněte na **Uložit zásadu**.
@@ -83,6 +94,15 @@ Po vytvoření profilu certifikátu důvěryhodné certifikační autority vytvo
     Další informace: [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
 3.  Pokud chcete konfigurovat nastavení profilu certifikátu SCEP, postupujte podle pokynů na stránce konfigurace profilu.
+    > [!NOTE]
+    > 
+    > V části **Formát názvu subjektu**, vyberte **Vlastní**, abyste zadali vlastní formát názvu subjektu.
+    > 
+    >  Dvě proměnné, které jsou aktuálně podporované pro vlastní formát, jsou Common Name (CN) a Email (E). Pomocí kombinace těchto proměnných a statických řetězců můžete vytvořit vlastní formát názvu subjektu, jak je uvedeno v tomto příkladu:
+    
+    >     CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US
+    
+    >    V příkladu správce vytvořil formát názvu subjektu, který kromě proměnných *CN* a *E* používá řetězce pro organizační jednotky, organizaci, umístění, stav a zemi. Seznam podporovaných řetězců je uvedený v tématu [Funkce CertStrToName](https://msdn.microsoft.com/en-us/library/windows/desktop/aa377160.aspx).
 
 4.  Po dokončení klikněte na **Uložit zásadu**.
 
@@ -145,6 +165,6 @@ Teď můžete používat certifikáty k usnadnění zabezpečení profilů e-mai
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

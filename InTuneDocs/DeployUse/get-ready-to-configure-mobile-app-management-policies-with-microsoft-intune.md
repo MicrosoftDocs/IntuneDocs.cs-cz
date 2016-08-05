@@ -3,8 +3,8 @@ title: "Příprava ke konfiguraci zásad MAM | Microsoft Intune"
 description: "Toto téma popisuje požadavky a nastavení uživatelů, aby bylo možné vytvořit zásady správy mobilních aplikací."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 7e6a85e7-e007-41b6-9034-64d77f547b87
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c72c8e1a764af73ba4d421ca6637ee91ab7bca0a
-ms.openlocfilehash: ca84a9ce4a1a418c1107f11dbb66cf64362a77f5
+ms.sourcegitcommit: 2038ed6219a94dc4285891d71ce00fd51310f3e3
+ms.openlocfilehash: 39af738fe83ec6ea2e963d857cc233332063c80b
 
 
 ---
@@ -79,11 +79,13 @@ V současné době není dostupná podpora zařízení s Windows.
 
     ![Stránka Aktivní uživatelé na portálu Office](../media/AppManagement/OfficePortal_AddUsers.png)
 
+    ![Stránka Upravit uživatele na portálu Office](../media/AppManagement/OfficePortal_AssignLicenses.png)
+
 4.  Pokud chcete, aby uživatel měl přístup na portály Office, Azure AD a Azure, přiřaďte mu roli **Globální správce**.
 
     ![Stránka pro úpravu rolí uživatelů na portálu Office](../media/AppManagement/OfficePortal_AddRoletoUser.png)
 
-5.  Zásady MAM jsou nasazené pro skupiny uživatelů ve službě Azure Active Directory. Pokud chcete vytvořit skupiny uživatelů pro zásady MAM, na portálu Office přejděte na stránku **Skupiny** a kliknutím na ikonu **+** vytvořte novou skupinu zabezpečení.  Zadejte název a popis a potom klikněte na **Vytvořit**. Do vytvořené skupiny můžete přidávat uživatele kliknutím na **Upravit členy**. Skupina zabezpečení je vytvořená ve službě Azure Active Directory.
+5.  Zásady MAM jsou nasazené pro skupiny uživatelů ve službě Azure Active Directory. Pokud chcete vytvořit skupiny uživatelů pro zásady MAM, na portálu Office přejděte na stránku **Skupiny** a výběrem možnosti **Přidat skupinu** v horní nabídce vytvořte novou skupinu zabezpečení.  Zadejte název a popis a potom klikněte na **Vytvořit**. Do vytvořené skupiny můžete přidávat uživatele kliknutím na **Upravit členy**. Skupina zabezpečení je vytvořená ve službě Azure Active Directory.
 
     ![Stránka pro skupiny zabezpečení na portálu Office](../media/AppManagement/OfficePortal_CreateGroups.png)
 
@@ -123,6 +125,6 @@ Globální správci mají přístup k [portálu Azure](https://portal.azure.com)
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

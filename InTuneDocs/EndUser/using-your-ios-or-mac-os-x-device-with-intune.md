@@ -3,8 +3,8 @@ title: "Použití zařízení iOS nebo Mac OS X s Intune | Microsoft Intune"
 description: "Obsahuje seznam odkazů na úlohy, které můžete dělat v mobilních zařízení s iOS nebo Mac OS X, když je zařízení registrované v Intune."
 keywords: 
 author: Staciebarker
-manager: arob98
-ms.date: 06/03/2016
+manager: angrobe
+ms.date: 07/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,15 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 6c3d8b3a64d98357b7aac2a9f000ca33125c1858
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: c91355b77850acbb76cd028bffb231e2ba1a5174
 
 
 ---
 
-# Použití zařízení iOS nebo Mac OS X s Intune
+# Using your iOS or Mac OS X device with Intune
 
-Tyto kroky použijte pro úlohy, které musíte udělat na zařízení s iOS nebo Mac OS X, když vaše společnost používá Microsoft Intune.
+Tato stránka obsahuje odkazy na všechny úlohy, které můžou provést koncoví uživatelé na svých zařízeních spravovaných Intune. Správci IT se můžou odkazovat na tyto informace, aby viděli kroky, podle kterých uživatelé postupují, aby provedli různé úlohy, které jsou seskupené do kategorií: informace týkající se registrace, úlohy správy a problémy s kompatibilitou.
 
 ## Instalace aplikace Portál společnosti a registrace ve službě Intune
 
@@ -61,8 +61,6 @@ Informace v této části vám pomůžou s opravit problémy, se kterými se mů
 
 
 
-
-
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
