@@ -1,9 +1,9 @@
 ---
-title: "Nastavení zásad podmínek a ujednání v Microsoft Intune | Microsoft Intune"
+title: "Nastavení zásad pro podmínky a ujednání | Microsoft Intune"
 description: "Pro skupiny uživatelů můžete nasadit podmínky a ujednání Intune a vysvětlit jim tak, jaký vliv má registrace, přístup k pracovním prostředkům a používání aplikace Portálu společnosti na zařízení a uživatele."
 keywords: 
 author: NathBarn
-manager: jeffgilb
+manager: angrobe
 ms.date: 07/11/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 6edf0ac1-4f46-4543-a9e5-f484ac37e9a5
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ac41e0e65a4687262d76b01ee4e1b7356c76650c
-ms.openlocfilehash: c805d664fe85b206fc1019114ee17514ef49df0f
+ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
+ms.openlocfilehash: b6eff361a30afc965d0a1375d25232833acab03d
 
 
 ---
@@ -80,6 +80,6 @@ Při úpravách existujících zásad podmínek a ujednání můžete zvolit cho
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -3,8 +3,8 @@ title: "Našel se existující e-mailový účet společnosti | Microsoft Intune
 description: 
 keywords: 
 author: Staciebarker
-manager: arob98
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: cca55c987b42894547977d94bd549342b4ca4bd8
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 05a0f33fa62d3f614437a54441dcb796c51c0f91
 
 
 ---
@@ -31,11 +31,10 @@ Už máte e-mailový účet společnosti. Pokud se chcete dále připojovat k e-
 
 3.  Po chvilce se pro vaše zařízení automaticky použije nové nastavení e-mailu.
 
-Pokud se po chvíli nezobrazí nové nastavení e-mailu, kontaktujte správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud se po chvíli nezobrazí nové nastavení e-mailu, kontaktujte správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
