@@ -12,8 +12,8 @@ ms.technology:
 ms.assetid: c4801a78-580e-4e3d-beca-0b09b9b2437c
 ROBOTS: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
-ms.openlocfilehash: 791d9e4d5817acfa8b11b1f5ed570df5e38718d7
+ms.sourcegitcommit: 80ebf1a56106ad4e66d2d791ab98edae1ab11505
+ms.openlocfilehash: 0bfb636b68aa691234b51264d261888322dba11c
 
 
 ---
@@ -26,19 +26,19 @@ Správce IT může nastavit více než jeden požadavek na heslo. Heslo musí m�
 
 Pokud máte potíže při nastavení hesla, které splňuje všechny požadavky na heslo, požádejte o pomoc správce IT.
 
-## Postup nastavení hesla na Windows Phone 8 nebo 8.1:
-
-1. Z **domovské** obrazovky klepněte na **Nastavení** a pak vyberte **Zamykací obrazovka**.
-2. Přejděte dolů na **Heslo** a přesuňte ovladač pro **Heslo** do polohy **Zapnuto**.
-3. Do pole **Nové heslo** zadejte nové heslo a potvrďte ho v poli **Potvrzení hesla**.
-4. Klepněte na **Hotovo**.
-
 ## Postup změny hesla na Windows Phone 8 nebo 8.1:
 
 1. Z **domovské** obrazovky klepněte na **Nastavení** a pak vyberte **Zamykací obrazovka**.
 2. Přejděte dolů na **Heslo** a klepněte na **Změnit heslo**.
 3. Zadejte aktuální heslo do pole **Aktuální heslo**.
 4. Do pole **Nové heslo** zadejte nové heslo a znovu nové heslo zadejte v poli **Potvrzení hesla**.
+4. Klepněte na **Hotovo**.
+
+## Postup nastavení hesla na Windows Phone 8 nebo 8.1:
+
+1. Z **domovské** obrazovky klepněte na **Nastavení** a pak vyberte **Zamykací obrazovka**.
+2. Přejděte dolů na **Heslo** a přesuňte ovladač pro **Heslo** do polohy **Zapnuto**.
+3. Do pole **Nové heslo** zadejte nové heslo a potvrďte ho v poli **Potvrzení hesla**.
 4. Klepněte na **Hotovo**.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
@@ -48,6 +48,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 
