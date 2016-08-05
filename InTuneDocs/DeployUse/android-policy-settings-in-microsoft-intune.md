@@ -5,7 +5,7 @@ description: "Vytvořte zásady, které řídí nastavení a funkce na zařízen
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 08/03/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 71cc39cf-e726-40fd-8d08-78776e099a4b
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6e3e81f37e677a016ac49240cc70602a568afcd5
-ms.openlocfilehash: 9385ca0e5aa9dd8fc2daf79c57b47951bcd5c0cb
+ms.sourcegitcommit: 8465ab2ead21b825141c1aa6e77c02a9b7061a66
+ms.openlocfilehash: 5e7ba0d4546c13106e32359c9578a6f0a49d6de7
 
 
 ---
@@ -197,65 +197,16 @@ Díky této vlastnosti můžete nasadit nastavení Androidu, která nejde konfig
     |**OMA-URI (rozlišuje velká a malá písmena)**|Zadejte OMA-URI, pro který chcete zadat nastavení.|
     |**Hodnota**|Zadejte hodnotu pro přidružení k OMA-URI, který jste zadali dřív.|
 
-### Příklad: Konfigurace vlastního profilu Wi-Fi s předsdíleným klíčem
-I když Intune podporuje profily Wi-Fi pro zařízení s Androidem, tato funkce v současné době nepodporuje zahrnutí předsdíleného klíče do konfigurace. V tomto příkladu se dozvíte, jak vytvořit vlastní zásadu pro Android, která vytvoří profil Wi-Fi s předsdíleným klíčem na zařízení s Androidem.
+### Příklady
 
-#### Vytvoření profilu Wi-Fi s předsdíleným klíčem
+- [Vytvoření profilu Wi-Fi s předsdíleným klíčem](pre-shared-key-wi-fi-profile.md)
+- [Použití vlastních zásad pro vytvoření profilu sítě VPN pro aplikaci pro zařízení se systémem Android](per-app-vpn-for-android-pulse-secure.md)
 
-1.  Ověřte, jestli uživatelé mají nejnovější verzi aplikace [Firemní portál Intune](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) pro Android.
-
-2.  Vytvořte vlastní zásadu pro Android a přidejte následující nastavení:
-
-|Název nastavení|Podrobnosti|
-|----------------|--------------------|
-|**Název nastavení**|Zadejte název svého výběru pro nastavení.|
-|**Popis nastavení**|Zadejte popis nastavení.|
-|**Datový typ**|Vyberte **Řetězec (XML)**.|
-|**OMA-URI**|Zadejte následující: ./Vendor/MSFT/WiFi/Profile/*&lt;váš profil Wi-Fi&gt;*/Settings|
-
-3.  Do položky **Hodnota** zkopírujte a vložte následující kód XML:
-
-    ```
-    <!--
-    WEP Wifi Profile
-                    <Name of wifi profile> = Name of profile
-                    <SSID of wifi profile> = Plain text version of SSID. Does not need to be escaped, could be <name>Your Company's Network</name>
-                    <WEP password> = Password to connect to the network
-    -->
-    <WLANProfile
-    xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
-      <name><Name of wifi profile></name>
-      <SSIDConfig>
-        <SSID>
-          <name><SSID of wifi profile></name>
-        </SSID>
-      </SSIDConfig>
-      <connectionType>ESS</connectionType>
-      <MSM>
-        <security>
-          <authEncryption>
-            <authentication>open</authentication>
-            <encryption>WEP</encryption>
-            <useOneX>false</useOneX>
-          </authEncryption>
-          <sharedKey>
-            <keyType>networkKey</keyType>
-            <protected>false</protected>
-            <keyMaterial><WEP password></keyMaterial>
-          </sharedKey>
-          <keyIndex>0</keyIndex>
-        </security>
-      </MSM>
-    </WLANProfile>
-    ```
-
-4.  Po dokončení uložte zásadu a nasaďte ji na požadovaná zařízení s Androidem. Nový profil Wi-Fi se zobrazí v seznamu připojení na zařízení.
-
-### Související témata
+### Viz taky
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 
