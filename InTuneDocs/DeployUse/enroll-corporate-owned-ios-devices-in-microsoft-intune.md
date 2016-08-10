@@ -3,7 +3,7 @@ title: "Registrace zařízení iOS vlastněných společností | Microsoft Intun
 description: "Registrace zařízení iOS vlastněných společností pomocí programu Apple DEP (Device Enrollment Program) nebo nástroje Apple Configurator"
 keywords: 
 author: NathBarn
-manager: arob98
+manager: angrobe
 ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 2d3ca4ab-f20c-4d56-9413-f8ef19cf0722
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8a124eb41789053451e0c709188430b1e043d435
-ms.openlocfilehash: 872be93241c84a8334e4415f00b1383da7b15a61
+ms.sourcegitcommit: 9b7b8f6e5182e228458f5ea75e804a638f1e2a2b
+ms.openlocfilehash: ca05e94e72269c11db24b667f1d113c794cd8b23
 
 
 ---
@@ -22,17 +22,19 @@ ms.openlocfilehash: 872be93241c84a8334e4415f00b1383da7b15a61
 # Registrace zařízení iOS vlastněných společností v Microsoft Intune
 Microsoft Intune podporuje registraci firemních zařízení iOS prostřednictvím programu Apple Device Enrollment Program (DEP) nebo pomocí nástroje [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) spuštěného na počítači Mac.
 
+**Předpoklad:**  [Certifikát služby Apple Push Notification](set-up-ios-and-mac-management-with-microsoft-intune.md)
+
 Existují tři způsoby registrace firmou zaregistrovaných zařízení iOS:
 
 -   **Apple Configurator** – Zařízení s iOS lze registrovat exportováním podnikového registračního profilu a následným připojením těchto mobilních zařízení k nástroji Apple Configurator spuštěném na počítači Mac. Apple Configurator podporuje dva způsoby registrace:
 
-    - **Registrace v průvodci nastavením** – Obnoví tovární nastavení a připraví zařízení k nastavení jeho novým uživatelem. Tato metoda vyžaduje, aby se správce připojil pomocí USB k počítači Mac, na které je spuštěný nástroj Apple Configurator, a předkonfiguroval registraci. Zařízení jsou potom doručovaná uživatelům, kteří spustí proces průvodce nastavením a nakonfigurují zařízení svými pracovními nebo školními pověřovacími údaji a dokončí proces registrace. [Registrace zařízení s iOS pomocí nástroje Apple Configurator a Průvodce nastavením](ios-setup-assistant-enrollment-in-microsoft-intune.md)
+    - **Registrace v průvodci nastavením** – Obnoví tovární nastavení a připraví zařízení k nastavení jeho novým uživatelem. Tato metoda vyžaduje, aby se správce pomocí USB připojil k počítači Mac, na kterém je spuštěný nástroj [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017), a předkonfiguroval registraci. Zařízení jsou potom doručovaná uživatelům, kteří spustí proces průvodce nastavením a nakonfigurují zařízení svými pracovními nebo školními pověřovacími údaji a dokončí proces registrace. [Registrace zařízení s iOS pomocí nástroje Apple Configurator a Průvodce nastavením](ios-setup-assistant-enrollment-in-microsoft-intune.md)
 
-    - **Přímá registrace** – Vytvoří soubor kompatibilní s Apple Configuratorem, který můžete použít při přípravě zařízení. Zaregistrované zařízení nemá obnovené tovární nastavení a nemá přiřazeného uživatele. Tato metoda vyžaduje, aby se správce připojil pomocí USB k počítači Mac, na které je spuštěný nástroj Apple Configurator, a registroval zařízení. [Registrace zařízení s iOS pomocí přímé registrace nástroje Apple Configurator](ios-direct-enrollment-in-microsoft-intune.md)
+    - **Přímá registrace** – Vytvoří soubor kompatibilní s Apple Configuratorem, který můžete použít při přípravě zařízení. Zaregistrované zařízení nemá obnovené tovární nastavení a nemá přiřazeného uživatele. Tato metoda vyžaduje, aby se správce pomocí USB připojil k počítači Mac, na kterém je spuštěný nástroj [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017), a zaregistroval zařízení. [Registrace zařízení s iOS pomocí přímé registrace nástroje Apple Configurator](ios-direct-enrollment-in-microsoft-intune.md)
 
 -   **Program registrace zařízení (DEP)** – Nasadí do zařízení koupeného prostřednictvím programu registrace zařízení Apple profil pro registraci „vzduchem“. Když uživatel na zařízení spustí průvodce nastavením, zařízení se registruje v Intune.  U zařízení zaregistrovaných v programu DEP uživatelé nemůžou registraci zrušit. [Registrace zařízení s iOS pomocí programu registrace zařízení DEP](ios-device-enrollment-program-in-microsoft-intune.md)
 
-## Přidružení uživatele pro zařízení iOS vlastněná společností pomocí Portálu společnosti
+## Použití Portálu společnosti v zařízeních zaregistrovaných v programu DEP nebo Apple Configuratoru
 
 Zařízení nakonfigurovaná s přidružením uživatele umožňují instalaci a spuštění aplikace Portál společnosti, která slouží ke stahování aplikací a správě zařízení. Až uživatelé obdrží zařízení, musí provést určitý počet dodatečných kroků, aby dokončili postup Pomocníka s nastavením a nainstalovali aplikaci Portál společnosti.
 
@@ -68,6 +70,6 @@ Zařízení nakonfigurovaná bez přidružení uživatele nepodporují aplikaci 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO1-->
 
 

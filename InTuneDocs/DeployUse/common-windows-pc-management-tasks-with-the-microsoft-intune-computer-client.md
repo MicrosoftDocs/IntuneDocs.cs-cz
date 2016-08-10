@@ -2,9 +2,9 @@
 title: "Běžné úlohy správy počítačů s Windows | Microsoft Intune"
 description: "Když si přečtete informace uvedené v tomto tématu, dozvíte se, jak spravovat počítače, na kterých běží software počítačového klienta Intune."
 keywords: 
-author: robstackmsft
+author: NathBarn
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 08/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: eb912c73-54d2-4d78-ac34-3cbe825804c7
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 385ed597e4af569dc5a2b559d693b6c8421f86fa
-ms.openlocfilehash: e08fe1cdaa45ba957986511afb60a54da8152677
+ms.sourcegitcommit: 6ddb0fda0e818b09d274276076fd6310d29b99cb
+ms.openlocfilehash: 8ce6b10478927177e5d6d8de0677cf06bed00f08
 
 
 ---
@@ -36,7 +36,7 @@ Microsoft Intune Center uživatelům umožňuje:
 
 -   Spravovat Microsoft Intune Endpoint Protection
 
-<!--- -   Request remote assistance.--->
+-  Žádat o vzdálenou pomoc
 
 Microsoft Intune Center se nainstaluje na všech spravovaných počítačích. V zásadách Intune můžete nakonfigurovat následující nastavení, která se uživatelům zobrazí v centru Microsoft Intune Center:
 
@@ -160,61 +160,57 @@ Abyste mohli nasadit software pro uživatele, musíte uživatele propojit s poč
 > [!TIP]
 > Když chcete koncovým uživatelům omezit schopnosti propojení vlastních účtů s počítači, povolte možnost **Omezit schopnosti uživatelů propojit s počítači vlastní účet** v zásadách **Nastavení agenta Microsoft Intune**.
 
-<!--- ## Request and provide remote assistance to Windows PCs that use the Intune client software
+## Vyžádání a poskytnutí vzdálené pomoci počítačům s Windows, které využívají klientský software Intune
 
-> [!IMPORTANT]
-> You might not see the options to configure TeamViewer integration for remote assistance in the Intune admin console. This capability is not currently available to all customers, but will be rolling our more widely soon.
-
-
-Microsoft Intune can use the [TeamViewer](https://www.teamviewer.com) software to let users of PCs that run the Intune client software get remote assistance help from you. When a user requests help from the Microsoft Intune Center, you are informed by an alert, can accept the request, and then provide assistance.
-This functionality replaces the existing Windows Remote Assistance functionality in Intune.
+Microsoft Intune může využívat software [TeamViewer](https://www.teamviewer.com), který umožní uživatelům počítačů s klientským softwarem Intune, aby od vás získali vzdálenou pomoc. Když si uživatel vyžádá pomoc od centra Microsoft Intune Center, budete o tom informováni prostřednictvím výstrahy. Můžete tuto žádost přijmout a potom poskytnout pomoc.
+Tato funkce nahrazuje stávající funkci Vzdálená pomoc pro Windows v Intune.
 
 
-### Before you start
+### Než začnete
 
-Before you begin to establish and respond to remote assistance requests, you must ensure the following prerequisites are in place:
+Než začnete reagovat na požadavky na vzdálenou pomoc, je nutné zajistit splnění těchto požadavků:
 
-- You must have [signed up for a TeamViewer account](https://login.teamviewer.com/LogOn#register) to log into the TeamViewer website.
-- Windows PCs that you want to administer must be [managed by the Windows PC client](manage-windows-pcs-with-microsoft-intune.md)
-- All Windows PC operating systems supported by Intune can be administered.
+- Musíte mít [zaregistrovaný účet TeamViewer](https://login.teamviewer.com/LogOn#register) pro přihlášení k webu TeamViewer.
+- Počítač s Windows, které chcete spravovat, musí být [spravovaný prostřednictvím klienta na počítači s Windows](manage-windows-pcs-with-microsoft-intune.md).
+- Spravovat je možné všechny operační systémy Windows pro počítače, které Intune podporuje.
 
-### Configure the TeamViewer Connector
+### Konfigurace Konektoru pro TeamViewer
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com), choose **Admin**.
-2. In the **Admin** workspace, choose **TeamViewer**.
-3. On the **TeamViewer** page, under **TeamViewer Connector**, choose **Enable**.
-4. In the **Enable TeamViewer** dialog box, view, then **Accept** the license terms. If you don't already own a TeamViewer license, choose **Purchase a TeamViewer license**.
-5. After the TeamViewer browser window opens, sign into the site with your TeamViewer credentials.
-6. On the TeamViewer site, read, then accept the options to allow Intune to connect with TeamViewer.
-7. In the Intune console, verify that the **TeamViewer Connector** item shows as **Enabled**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Správce**.
+2. V pracovním prostoru **Správa** zvolte **TeamViewer**.
+3. Na stránce **TeamViewer** vyberte v části **Konektor pro TeamViewer** možnost **Povolit**.
+4. V dialogovém okně **Povolit TeamViewer** si přečtěte licenční podmínky a potom je **přijměte**. Pokud ještě nemáte licenci TeamVieweru, zvolte **Koupit licenci na TeamViewer**.
+5. Když se otevře okno prohlížeče TeamViewer, přihlaste se k tomuto webu pomocí svých přihlašovacích údajů pro TeamViewer.
+6. Na webu TeamVieweru si přečtěte a potom přijměte možnosti, které službě Intune umožňují připojit se k TeamVieweru.
+7. V konzole Intune ověřte, že se položka **Konektor pro TeamViewer** zobrazuje jako **povolená**.
 
 
-### Open a remote assistance request (end user)
+### Otevření žádosti o vzdálenou pomoc (koncový uživatel)
 
-1. On a client Windows PC, open the **Microsoft Intune Center**.
-2. Under **Remote Assistance**, choose **Request Remote Assistance**.
-3. After you approve the request (see below), TeamViewer opens on the client. The user must accept any messages indicating that the web browser is trying to open the TeamViewer application.
-4. The user sees a message asking if you can control their PC. They must accept this message to continue.
-5. During the remote assistance session, the user sees a window that shows them you are connected. If they close this window, the remote session ends.
+1. Na klientském počítači s Windows otevřete **Microsoft Intune Center**.
+2. V části **Vzdálená pomoc** zvolte **Požádat o vzdálenou pomoc**.
+3. Jakmile žádost schválíte (viz níže), na klientovi se otevře TeamViewer. Uživatel musí přijmout všechny zprávy informující o tom, že se webový prohlížeč pokouší otevřít aplikaci TeamViewer.
+4. Uživateli se zobrazí zpráva s dotazem, jestli můžete převzít kontrolu nad jeho počítačem. Tuto zprávu musí přijmout, aby bylo možné pokračovat.
+5. Během relace vzdálené pomoci se uživateli zobrazí okno, které ukazuje, že jste připojeni. Pokud toto okno zavře, vzdálená relace se ukončí.
 
-### Respond to a remote assistance request
+### Odpověď na žádost o vzdálenou pomoc
 
-1. When a user submits a remote assistance request, you can view it in the **Alerts** workspace, under **Monitoring** > **Remote Assistance**. For example:
-> ![Screenshot of a remote assistance request](./media/team-viewer.png)
+1. Když uživatel odešle žádost o vzdálenou pomoc, můžete ji zobrazit v pracovním prostoru **Výstrahy** v části **Monitorování** > **Vzdálená pomoc**. Například:
+> ![Snímek obrazovky žádosti o vzdálenou pomoc](./media/team-viewer.png)
 
-<br>If a request goes unanswered for more than 4 hours, it is removed.
-2. To accept the request, choose **Approve request and launch Remote Assistance**.
-3. In the **A New Remote Assistance Request is Pending** dialog box, choose **Accept the remote assistance request**. If it's not already installed, TeamViewer will install any necessary apps on your computer.
-4. TeamViewer then notifies the end user that you want to take control of their PC. After the user has accepted the request, the TeamViewer windows opens, and you can control the PC.
+<br>Pokud žádost zůstane nezodpovězená víc než 4 hodiny, odebere se.
+2. Pokud chcete žádost přijmout, zvolte **Schválit požadavek a spustit vzdálenou pomoc**.
+3. V dialogovém okně **Nová žádost o vzdálenou pomoc čeká na vyřízení** zvolte **Žádost o vzdálenou pomoc přijměte**. TeamViewer nainstaluje na váš počítač všechny nezbytné aplikace, pokud ještě nejsou nainstalované.
+4. TeamViewer potom upozorní koncového uživatele, že chcete převzít kontrolu nad jeho počítačem. Když uživatel tuto žádost přijme, otevře se okno TeamViewer a máte kontrolu nad jeho počítačem.
 
-While in a remote assistance session, you can use all available TeamViewer commands to control the remote PC. For help with these commands, download the [Manual for remote control](http://www.teamviewer.com/en/support/documents/) from the TeamViewer website.
+Během relace vzdálené pomoci můžete k řízení vzdáleného počítače využívat všechny dostupné příkazy TeamVieweru. Pokud s těmito příkazy potřebujete pomoci, stáhněte si [příručku pro vzdálené řízení](http://www.teamviewer.com/en/support/documents/) z webu TeamVieweru.
 
-### Close the remote assistance session
+### Zavření relace vzdálené pomoci
 
-From the **Actions** menu of the **TeamViewer** window, choose **End Session**.--->
+V nabídce **Akce** v okně **TeamViewer** zvolte **Ukončit relaci**.
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

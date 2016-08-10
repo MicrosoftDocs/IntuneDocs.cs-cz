@@ -13,14 +13,16 @@ ms.assetid: f5615051-2dd1-453b-9872-d3fdcefb2cb8
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: cc928e4facf592ca0f7398b374242a7a07ae193e
+ms.sourcegitcommit: 06d6c8ce97ba6a259055e94f0eba87f7c5a96531
+ms.openlocfilehash: 344f1cf4367deb12288f9c361e043d345f9846bb
 
 
 ---
 
 
 # Nastavení správy pro Windows Phone a Windows 10 Mobile v Microsoft Intune
+Pokud chcete nastavit zařízení s Windows, najdete pomoc [tady](../enduser/using-your-windows-device-with-intune.md).
+
 Před spravováním zařízení s Windows 10 Mobile nebo Windows Phone s Microsoft Intune musí být zařízení schopné komunikovat s Intune. Pro zjednodušení můžete vytvořit záznam DNS, aby uživatelé nemuseli zadávat adresu serveru. Níže uvedené kroky popisují způsoby zjednodušení registrace pro uživatele.  
 
 Pro většinu scénářů si uživatelé mohou nainstalovat aplikaci Portál společnosti z Windows Storu. Pokud spravujete zařízení s Windows Phone 8.0 nebo potřebujete nasadit portál společnosti na zařízení s Windows Phone, musíte si také stáhnout aplikaci Portál společnosti a podepsat ji. Viz [Nastavení správy pro zařízení Windows Phone 8.0](set-up-windows-phone-8.0-management-with-microsoft-intune.md).
@@ -50,12 +52,16 @@ Pro většinu scénářů si uživatelé mohou nainstalovat aplikaci Portál spo
 
     3.  Zadejte adresu URL ověřené domény webu společnosti do pole **Zadejte název ověřené domény** a klikněte na **Test automatického zjištění**.
 
+    4.  Uživatelé budou potřebovat vědět, jak mají registrovat svá zařízení a co mají očekávat po začlenění do správy.
+        - [Co říct koncovým uživatelům o používání služby Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+        - [Pokyny k zařízení s Windows pro koncové uživatele](../enduser/using-your-windows-device-with-intune.md)
+
 
 
 Pokud jste nenasadili portál společnosti na zařízení, nejsou vyžadované žádné další kroky.  Kroky 2 a 3 v konzole správce můžete ignorovat.
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

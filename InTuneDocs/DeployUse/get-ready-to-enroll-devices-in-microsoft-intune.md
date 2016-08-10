@@ -3,7 +3,7 @@ title: "Příprava registrace zařízení | Microsoft Intune"
 description: "Nastavte požadavky správy mobilních zařízení a připravte registraci různých operačních systémů."
 keywords: 
 author: NathBarn
-manager: arob98
+manager: angrobe
 ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
@@ -13,14 +13,14 @@ ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f6f98d582ce9a686ca02682a9066d8b2162d6ab
-ms.openlocfilehash: 24b8434993d7661e12172ac0e5fe58d1e6621558
+ms.sourcegitcommit: 9b7b8f6e5182e228458f5ea75e804a638f1e2a2b
+ms.openlocfilehash: 7e3e29113dd03ea25f102d7f71c63e5c3faefad8
 
 
 ---
 
 # Příprava registrace zařízení v Microsoft Intune
-Pokud chcete zaměstnancům umožnit registraci mobilních zařízení (včetně zařízení s [Androidem](set-up-android-management-with-microsoft-intune.md), [zařízení s iOS a počítačů Mac](set-up-ios-and-mac-management-with-microsoft-intune.md) a [Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md) a [počítačů s Windows](set-up-windows-device-management-with-microsoft-intune.md)) pomocí Intune, musíte povolit registraci zařízení. Pokud chcete povolit registraci, musíte nastavit autoritu správy mobilních zařízení, nakonfigurovat Portál společnosti Intune, přiřadit licence a povolit registraci pro platformu zařízení.
+Pokud chcete zaměstnancům umožnit registraci mobilních zařízení (včetně zařízení s [Androidem](set-up-android-management-with-microsoft-intune.md), [zařízení s iOS a počítačů Mac](set-up-ios-and-mac-management-with-microsoft-intune.md) a [Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md) a [počítačů s Windows](set-up-windows-device-management-with-microsoft-intune.md)) pomocí Intune nebo spravovat zařízení vlastněná společností, musíte povolit registraci zařízení. Pokud chcete povolit registraci, musíte nastavit autoritu správy mobilních zařízení, nakonfigurovat Portál společnosti Intune, přiřadit licence a povolit registraci pro platformu zařízení.
 
 ## Nastavení autority pro správu mobilních zařízení
 Autorita MDM definuje službu správy s oprávněním ke správě skupiny zařízení. Příklady možných autorit MDM zahrnují Intune samostatně a Configuration Manager s Intune. Pokud nastavíte Configuration Manager jako autoritu správy, ke správě mobilních zařízení nejde použít žádnou jinou službu.
@@ -109,6 +109,6 @@ Rovněž můžete:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

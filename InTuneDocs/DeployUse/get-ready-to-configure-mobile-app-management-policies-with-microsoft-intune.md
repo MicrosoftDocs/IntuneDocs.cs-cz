@@ -3,7 +3,7 @@ title: "Příprava ke konfiguraci zásad MAM | Microsoft Intune"
 description: "Toto téma popisuje požadavky a nastavení uživatelů, aby bylo možné vytvořit zásady správy mobilních aplikací."
 keywords: 
 author: karthikaraman
-manager: arob98
+manager: angrobe
 ms.date: 07/22/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 7e6a85e7-e007-41b6-9034-64d77f547b87
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2038ed6219a94dc4285891d71ce00fd51310f3e3
-ms.openlocfilehash: 39af738fe83ec6ea2e963d857cc233332063c80b
+ms.sourcegitcommit: bebf57269ae41f04a47240063cde4a4dd0bf334f
+ms.openlocfilehash: aeaa64124384a71126eeca7339416b80d395d07d
 
 
 ---
@@ -58,7 +58,7 @@ V současné době není dostupná podpora zařízení s Windows.
 -   Předplatné Office 365, které je potřeba v těchto případech:
   - Chcete použít zásady MAM pro aplikace s podporou víc identit.
   - Chcete vytvořit pracovní účty SharePoint Online a Exchange Online. Místní Exchange a místní SharePoint se nepodporují.
--   Nastavení Online Skypu pro firmy pro moderní ověřování. Další informace najdete v tématu [Povolení moderního ověřování](http://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx.md).
+-   Nastavení Online Skypu pro firmy pro moderní ověřování. Další informace najdete v tématu [Povolení moderního ověřování](http://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx).
 
 
 - Azure Active Directory (Azure AD) pro vytváření uživatelů. Azure AD ověří uživatele, když otevřou aplikaci a zadají svoje pracovní přihlašovací údaje.
@@ -125,6 +125,6 @@ Globální správci mají přístup k [portálu Azure](https://portal.azure.com)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

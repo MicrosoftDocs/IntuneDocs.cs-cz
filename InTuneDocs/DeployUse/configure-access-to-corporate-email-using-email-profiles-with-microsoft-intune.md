@@ -13,8 +13,8 @@ ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: 878172811c7899237b5ebf5db9a443f10fea42dd
+ms.sourcegitcommit: eeb0aeac2f94dfde50d9398b09c6b21c7ae40624
+ms.openlocfilehash: cddc1a68b14520774555416dcd496a06a0f89385
 
 
 ---
@@ -36,6 +36,18 @@ E-mailové profily můžete použít ke konfiguraci nativních e-mailových klie
 
 
 Kromě nakonfigurování e-mailového účtu na zařízení můžete taky nakonfigurovat nastavení synchronizace, jako třeba kolik e-mailů se má synchronizovat, a v závislosti na typu zařízení i typy synchronizovaného obsahu.
+>[!NOTE]
+>
+>Pokud uživatel nainstaloval e-mailový profil dřív, než profil zřídila služba Intune, výsledek nasazení e-mailového profilu Intune bude záviset na platformě zařízení:
+
+>-**iOS**: Intune detekuje stávající duplicitní e-mailový profil na základě názvu hostitele a e-mailové adresy. Duplicitní e-mailový profil vytvořený uživatelem bude blokovat nasazení profilu Intune vytvořeného správcem. Tento problém je běžný, protože uživatelé s iOS obvykle vytvoří e-mailový profil a potom se zaregistrují. Portál společnosti bude uživatele informovat o tom, že požadavky nejsou splněny kvůli ručně nakonfigurovanému e-mailovému profilu a vyzve uživatele k odebrání příslušného profilu. Uživatel by měl svůj e-mailový profil odebrat, aby bylo možné nasadit profil Intune. Pokud chcete problémům zabránit, požádejte své uživatele, aby se zaregistrovali před instalací e-mailového profilu a aby Intune povolili nasazení profilu.
+
+>-**Windows**: Intune detekuje stávající duplicitní e-mailový profil na základě názvu hostitele a e-mailové adresy. Intune přepíše existující e-mailový profil vytvořený uživatelem.
+
+>-**Samsung KNOX**: Intune rozpozná duplicitní e-mailový profil na základě e-mailové adresy a přepíše ho profilem Intune. Pokud uživatel tento účet nakonfiguruje, profil Intune ho znovu přepíše. Poznámka: Uživateli potom nemusí být úplně jasné, která konfigurace účtu se přepíše.
+
+>Vzhledem k tomu, že Samsung KNOX nevyužívá k identifikaci profilu název hostitele, doporučujeme nevytvářet několik e-mailových profilů pro nasazení se stejnou e-mailovou adresou na různých hostitelích, protože by se vzájemně přepsaly.
+    
 
 ## Zabezpečení e-mailových profilů
 E-mailové profily se dají zabezpečit jedním ze dvou způsobů:
@@ -109,6 +121,6 @@ Shrnutí stavu a výstrahy na stránce **Přehled** v pracovním prostoru **Zás
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 947328a5c28839d8227a9e5ae0dd8b1fc5ad8e81
-ms.openlocfilehash: 63bc2cedf8d81b050a384a947a0b43827de5c352
+ms.sourcegitcommit: bc5ff023b5d29ded999c7e49c5e7c2aee8a23bba
+ms.openlocfilehash: e71cc1e8e2cb0f46507ff63d962f3d477acfb72e
 
 
 ---
@@ -27,32 +27,32 @@ Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete 
 
 Pomocí **zásad obecné konfigurace pro iOS** v Microsoft Intune můžete nakonfigurovat nastavení pro:
 
--   **Obecná nastavení zařízení a zabezpečení** – Zvolte ze seznamu předdefinovaných nastavení, která umožňují ovládat celou řadu funkcí v zařízení.
+-   **Obecná nastavení zařízení a zabezpečení** Vyberte možnost ze seznamu předdefinovaných nastavení, která umožňují kontrolovat celou řadu vlastností a funkcí zařízení.
 
--   **Celoobrazovkový režim** – Umožňuje uzamknout zařízení a povolit fungování jenom některých funkcí. Můžete třeba povolit, aby v zařízení běžela jenom jedna vámi určená spravovaná aplikace, nebo můžete zakázat tlačítka hlasitosti na zařízení. Tato nastavení se dají používat pro ukázkový model zařízení nebo zařízení, které může provádět jenom jednu funkci, jako je třeba zařízení POS.
+-   **Celoobrazovkový režim** Umožňuje uzamknout zařízení a povolit fungování jenom některých funkcí. Můžete třeba povolit, aby v zařízení běžela jenom jedna vámi určená spravovaná aplikace, nebo můžete na zařízení zakázat tlačítka hlasitosti. Tato nastavení se dají používat pro ukázkový model zařízení nebo pro zařízení, které je vyhrazené jenom pro jednu funkci, jako je třeba zařízení POS.
 
--   **Seznam aplikací dodržujících a nedodržujících předpisy** – Určete seznam aplikací, které splňují nebo nesplňují předpisy ve vaší společnosti. Na zařízeních s Androidem a iOS je možné používat **Sestavu nekompatibilních aplikací** k zobrazení kompatibility aplikací, které jste uvedli v seznamu, s aplikacemi, které nainstalovali uživatelé (ale nemůžete ve skutečnosti zablokovat instalaci aplikace).
+-   **Kompatibilní a nekompatibilní aplikace** Umožňuje určit seznam aplikací pro iOS, které vyhovují nebo nevyhovují předpisům ve vaší společnosti. Na zařízeních s Androidem a iOS je možné použít **aplikací nesplňujících požadavky** k zobrazení shody aplikací, které zadáte v seznamu, s aplikacemi, které si uživatelé nainstalovali (sestava neslouží ke skutečnému zablokování instalace aplikací).
 
 > [!TIP]
-> Můžete nakonfigurovat podmínky pro uživatele a zajistit tak jejich informovanost o tom, že aplikace na jejich zařízení, včetně osobních aplikací, se budou hodnotit, a nekompatibilní aplikace se zablokují nebo nahlásí jako nevyhovující. Uživatelé musí přijmout tyto podmínky předtím, než můžou zaregistrovat své zařízení a používat firemní portál k získání aplikací. Další informace o podmínkách a ujednáních týkajících se použití najdete v tématu [Nastavení zásad podmínek a ujednání v Microsoft Intune](terms-and-condition-policy-settings-in-microsoft-intune.md).
+> Můžete nakonfigurovat podmínky pro uživatele a zajistit tak, aby věděli, že aplikace na jejich zařízení (včetně osobních aplikací) se vyhodnotí a nekompatibilní aplikace se zablokují nebo nahlásí jako nevyhovující. Uživatelé musí přijmout tyto podmínky předtím, než můžou zaregistrovat své zařízení a používat firemní portál k získání aplikací. Další informace o podmínkách a ujednáních týkajících se použití najdete v tématu [Nastavení zásad podmínek a ujednání v Microsoft Intune](terms-and-condition-policy-settings-in-microsoft-intune.md).
 
-Pokud v tomto tématu není uvedené nastavení, které hledáte, je možné, že ho budete moct vytvořit pomocí vlastních zásad pro iOS, které vám umožní naimportovat nastavení vytvořená pomocí nástroje [Apple Configurator Tool](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12). Další informace najdete v tématu **Nastavení vlastních zásad** dál v tomto tématu.
+Pokud v tomto tématu není uvedené nastavení, které hledáte, je možné, že ho budete moct vytvořit pomocí vlastních zásad pro iOS, které vám umožní naimportovat nastavení vytvořená pomocí [nástroje Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12). Další informace najdete v části Nastavení vlastních zásad dál v tomto tématu.
 
 ### Nastavení zabezpečení
 Všechna nastavení platí pro iOS 7.1 a novější.
 
 |Název nastavení|Podrobnosti|
 |----------------|-------|
-|**Vyžadovat heslo k odemknutí mobilních zařízení**|Zadejte, jestli uživatelé při přístupu ke svému zařízení musí zadat heslo.|
-|**Vyžadovaný typ hesla**|Určuje typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.|
-|**Počet složitých znaků požadovaných v hesle**|Určuje počet znaků symbolu (jako například **#** nebo **@**), které musí heslo obsahovat.|
-|**Minimální délka hesla**|Určuje minimální počet znaků v hesle.|
-|**Povolit jednoduchá hesla**|Umožňuje použití jednoduchých hesel, jako je třeba 0000 nebo 1234.|
-|**Počet povolených opakovaných neúspěšných přihlášení, než bude zařízení vymazáno**|Vymaže zařízení, pokud tento počet pokusů o přihlášení selže.|
-|**Počet minut nečinnosti před vyžadováním hesla**<sup>1</sup>|Určuje, jak dlouho může zařízení zůstat nečinné, než uživatel musí znovu zadat heslo.|
-|**Omezená platnost hesla (ve dnech)**|Určuje počet dní, než bude nutné změnit heslo zařízení.|
-|**Pamatovat si historii hesel**|Určuje, jestli uživatel může použít hesla, která už použil.|
-|**Pamatovat si historii hesel** – **Zabránit opětovnému použití předchozích hesel**|Určuje počet dříve použitých hesel, která se na zařízení zapamatovávají.|
+|**Vyžadovat heslo k odemknutí mobilních zařízení**|Určete, jestli uživatel při přístupu ke svému zařízení musí zadat heslo.|
+|**Vyžadovaný typ hesla**|Zadejte typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.|
+|**Počet složitých znaků požadovaných v hesle**|Zadejte počet znaků symbolu (jako například **#** nebo **@**), které musí heslo obsahovat.|
+|**Minimální délka hesla**|Zadejte minimální počet znaků v hesle.|
+|**Povolit jednoduchá hesla**|Umožňuje použití jednoduchých hesel, jako je třeba **0000** nebo **1234**.|
+|**Počet povolených opakovaných neúspěšných přihlášení, než bude zařízení vymazáno**|Zadejte počet neúspěšných pokusů o přihlášení, než toto nastavení vymaže zařízení.|
+|**Počet minut nečinnosti před vyžadováním hesla**<sup>1</sup>|Zadejte, jak dlouho může zařízení zůstat nečinné, než uživatel musí znovu zadat heslo.|
+|**Omezená platnost hesla (ve dnech)**|Zadejte počet dní, než bude nutné změnit heslo zařízení.|
+|**Pamatovat si historii hesel**|Určete, jestli uživatel může použít hesla, která už použil.|
+|**Pamatovat si historii hesel** – **Zabránit opětovnému použití předchozích hesel**|Zadejte počet dříve použitých hesel, která si zařízení pamatuje.|
 |**Počet minut nečinnosti před vypnutím displeje**<sup>1</sup>|Zadejte počet minut, než se displej zařízení vypne.|
 |**Povolit odemknutí otiskem prstu**|Povolí odemknutí zařízení otiskem prstu.|
 <sup>1</sup> Pokud pro zařízení s iOS nakonfigurujete nastavení **Počet minut nečinnosti před vypnutím displeje** a **Počet minut nečinnosti před vyžadováním hesla**, tato nastavení se použijí v uvedeném pořadí. Pokud například pro obě nastavení nastavíte hodnotu **5** minut, obrazovka se po 5 minutách automaticky vypne a po dalších 5 minutách se zařízení zamkne. Pokud ale uživatel vypne obrazovku ručně, druhé nastavení se použije okamžitě. V tomto příkladě se zařízení po tom, co uživatel vypne obrazovku, zamkne po 5 minutách.
@@ -62,39 +62,39 @@ Všechna nastavení platí pro iOS 7.1 a novější.
 
 |Název nastavení|Podrobnosti|
 |----------------|-------|
-|**Povolit snímek obrazovky**|Povolí uživateli zachytit obsahu obrazovky jako obrázek.|
-|**Povolit řídicí centrum na zamykací obrazovce**|Určuje, jestli je přístup k aplikaci řídicího centra, když je zařízení zamčené.|
+|**Povolit snímek obrazovky**|Povolí uživateli zachytit obsah obrazovky jako obrázek.|
+|**Povolit řídicí centrum na zamykací obrazovce**|Povolí uživateli přístup k aplikaci řídicího centra, když je zařízení uzamčené.|
 |**Povolit zobrazení oznámení na zamykací obrazovce**|Povolí uživateli přístup k zobrazení oznámení bez odemknutí zařízení.|
-|**Povolit zobrazení informací o dnešku na zamykací obrazovce**|Určuje, jestli jde zobrazit oznámení, když je zařízení zamčené.|
+|**Povolit zobrazení informací o dnešku na zamykací obrazovce**|Povolí uživateli zobrazit oznámení, když je zařízení uzamčené.|
 |**Povolit nedůvěryhodné certifikáty TLS**|Povolí v zařízení nedůvěryhodné certifikáty protokolu TLS (Transport Layer Security).|
 |**Povolit odeslání diagnostických dat**|Povolí nebo blokuje odesílání diagnostických dat ze zařízení do společnosti Apple.|
 |**Povolit aplikaci Passbook při uzamčení**|Povolí uživateli přístup k aplikaci Passbook, když je zařízení uzamčené.|
 
-### Nastavení cloudu – dokumenty a data
+### Nastavení cloudu pro dokumenty a data
 Všechna nastavení platí pro iOS 7.1 a novější.
 
 |Název nastavení|Podrobnosti|
 |----------------|-------|
-|**Povolit zálohování na iCloud**|Povolí uživateli zálohování zařízení do iCloudu.|
+|**Povolit zálohování na iCloud**|Povolí uživateli zálohovat zařízení do iCloudu.|
 |**Povolit synchronizaci dokumentů s iCloudem**|Povolí synchronizaci dokumentu a párů klíč-hodnota s úložným prostorem iCloudu.|
 |**Povolit synchronizaci datového proudu fotografií s iCloudem**|Povolí synchronizaci fotografií na zařízení s iCloudem.|
 |**Vyžadovat šifrované zálohování**|Vyžaduje, aby všechny zálohy zařízení byly šifrované.|
 |**Povolit spravovaným aplikacím synchronizaci dat s iCloudem**|Povolí aplikacím, které spravujete přes Intune, synchronizaci dat s uživatelským účtem iCloudu.|
-|**Povolit, aby Handoff pokračoval v činnosti na jiném zařízení**|Handoff vám umožní pokračovat v práci, kterou jste zahájili na zařízení s iOS, na jiném zařízení s iOS nebo Mac OS X.|
+|**Povolit, aby Handoff pokračoval v činnosti na jiném zařízení**|Umožní uživateli, aby v práci, kterou zahájil na zařízení s iOS, pokračoval na jiném zařízení s iOS nebo Mac OS X.|
 
-### Nastavení aplikace – prohlížeč
+### Nastavení aplikace pro prohlížeč
 Všechna nastavení platí pro iOS 7.1 a novější.
 
 |Název nastavení|Podrobnosti|
 |----------------|-------|
 |**Povolit Safari**|Určete, jestli se na zařízení může používat prohlížeč Safari.|
-|**Povolit automatické vyplňování**|Uživatel může změnit nastavení automatického dokončování v prohlížeči.|
+|**Povolit automatické vyplňování**|Umožňuje uživateli změnit nastavení automatického dokončování v prohlížeči.|
 |**Povolit blokování automaticky otevíraných oken**|Povolí nebo zakáže blokování automaticky otevíraných oken v prohlížeči.|
-|**Povolit soubory cookie**|Povolí webovému prohlížeči v zařízení používat soubory cookie.|
+|**Povolit soubory cookie**|Povolí prohlížeči používat soubory cookie.|
 |**Povolit skriptování v Javě**|Povolí v prohlížeči spuštění skriptů jazyka Java.|
-|**Povolit upozornění na podvod**|Povolí upozornění na podvod v prohlížeči zařízení.|
+|**Povolit upozornění na podvod**|Povolí v prohlížeči upozornění na podvod.|
 
-### Nastavení aplikace – aplikace
+### Nastavení aplikací pro aplikace
 Všechna nastavení platí pro iOS 7.1 a novější.
 
 |Název nastavení|Podrobnosti|
@@ -102,13 +102,13 @@ Všechna nastavení platí pro iOS 7.1 a novější.
 |**Povolit obchod s aplikacemi**|Povolí zařízení přístup k obchodu s aplikacemi.|
 |**Vyžadovat heslo pro přístup do obchodu s aplikacemi**|Vyžaduje, aby uživatel zadal heslo, než bude moci navštívit obchod s aplikacemi.|
 |**Povolit nákupy v aplikaci**|Povolí ve spuštěné aplikaci nákupy v obchodě.|
-|**Povolit spravované dokumenty v jiných nespravovaných aplikacích**|Povolí prohlížení podnikových dokumentů v libovolné aplikaci.<br>**Příklad:** Chcete zabránit uživatelům v ukládání souborů z aplikace OneDrive na Dropbox. U tohoto nastavení vyberte možnost Ne. Až zařízení zásadu obdrží (třeba po restartování), už nebude povolovat ukládání.|
+|**Povolit spravované dokumenty v jiných nespravovaných aplikacích**|Povolí prohlížení podnikových dokumentů v jakékoliv aplikaci.<br>**Příklad:** Chcete zabránit uživatelům v ukládání souborů z aplikace OneDrive do Dropboxu. U tohoto nastavení vyberte možnost Ne. Až zařízení zásadu obdrží (třeba po restartování), už nebude povolovat ukládání.|
 |**Povolit nespravované dokumenty v jiných spravovaných aplikacích**|Povolí prohlížení libovolného dokumentu ve spravovaných podnikových aplikacích.|
 |**Povolit videokonference**|Povolí na zařízení videokonferenční aplikace, jako je třeba Facetime.|
 |**Povolit obsah pro dospělé v obchodě s mediálním obsahem**|Povolí zařízení přístup k obsahu úložiště, který je označený jako obsah pro dospělé.|
 |**Povolit uživateli stažení obsahu z obchodu iBooks, který má označení „erotika“**|Povolí uživateli stahování knih z kategorie „erotika“.|
 
-### Nastavení aplikace – hry
+### Nastavení aplikací pro hry
 Všechna nastavení platí pro iOS 7.1 a novější.
 
 |Název nastavení|Podrobnosti|
@@ -116,15 +116,15 @@ Všechna nastavení platí pro iOS 7.1 a novější.
 |**Povolit přidávání přátel v herním centru**|Povolí uživateli přidat přátele z herního centra.|
 |**Povolit hru s více hráči**|Povolí uživateli hrát na zařízení hry pro víc hráčů.|
 
-### Nastavení možností zařízení – hardware
+### Nastavení možností zařízení pro hardware
 Všechna nastavení platí pro iOS 7.1 a novější.
 
 |Název nastavení|Podrobnosti|
 |----------------|-------|
-|**Povolit fotoaparát**|Určuje, jestli je možné použít fotoaparát v zařízení.|
-|**Vyžadovat párovací heslo pro odchozí požadavky AirPlay**|Airplay umožňuje streamovat obsah do jiných zařízení Apple. Pomocí tohoto nastavení můžete vyžadovat párovací heslo pro připojení k jiným zařízením.|
+|**Povolit fotoaparát**|Určete, jestli je možné použít fotoaparát v zařízení.|
+|**Vyžadovat párovací heslo pro odchozí požadavky AirPlay**|Vyžaduje párovací heslo, pokud uživatel použije AirPlay ke streamování obsahu do dalších zařízení Apple.|
 
-### Nastavení možností zařízení – mobilní
+### Nastavení možností zařízení pro mobilní funkce
 Všechna nastavení platí pro iOS 7.1 a novější.
 
 |Název nastavení|Podrobnosti|
@@ -133,7 +133,7 @@ Všechna nastavení platí pro iOS 7.1 a novější.
 |**Povolit datový roaming**|Povolí datový roaming, když je zařízení v mobilní síti.|
 |**Povolit globální načítání na pozadí při roamingu**|Povolí zařízení, aby při roamingu v mobilní síti načítalo data na pozadí, třeba e-maily.|
 
-### Nastavení možností zařízení – funkce
+### Nastavení možností zařízení pro funkce
 Všechna nastavení platí pro iOS 7.1 a novější.
 
 |Název nastavení|Podrobnosti|
@@ -144,27 +144,27 @@ Všechna nastavení platí pro iOS 7.1 a novější.
 
 
 ### Nastavení pro aplikace dodržující a nedodržující předpisy
-V seznamu **Kompatibilní a nekompatibilní aplikace** zadejte seznam kompatibilních a nekompatibilních aplikací s využitím následujících informací:
+V seznamu **Kompatibilní a nekompatibilní aplikace** zadejte seznam kompatibilních a nekompatibilních aplikací s využitím následujících informací.
 
 > [!NOTE]
-> Jedna zásada může obsahovat seznam jenom kompatibilních, nebo jenom nekompatibilních aplikací. Nejde zadat oba seznamy v jedné zásadě.
+> Jedna zásada může obsahovat seznam jenom kompatibilních aplikací, nebo jenom nekompatibilních aplikací. Nejde zadat oba seznamy v jedné zásadě.
 
 |Název nastavení|Podrobnosti|
 |----------------|--------------------|
-|**Ohlásit nekompatibilitu, když uživatelé nainstalují aplikace ze seznamu**|Zobrazí seznam aplikací, které Intune nespravuje a které nemají uživatelé dovolené nainstalovat a spustit.|
+|**Ohlásit nekompatibilitu, když uživatelé nainstalují aplikace ze seznamu**|Zobrazí seznam aplikací (nespravovaných pomocí Intune), které nemají uživatelé dovolené nainstalovat a spustit.|
 |**Ohlásit nekompatibilitu, když uživatelé nainstalují aplikace, které nejsou na seznamu**|Zobrazí seznam aplikací, které mají uživatelé dovoleno instalovat. Aby byla zachovaná kompatibilita, uživatelé nesmí instalovat aplikace, které nejsou v seznamu. Aplikace, které spravuje Intune, jsou povolené automaticky.|
-|**Přidat**|Přidá aplikaci do vybraného seznamu. Zadejte název podle své volby, volitelně vydavatele aplikaci a adresu URL aplikace v úložišti aplikací. Další pomoc najdete v části **Určení adres URL na obchody s aplikacemi** dál v tomto tématu.|
-|**Importovat aplikace**|Importuje seznam aplikací, které jste zadali v souboru hodnot oddělených čárkami. V souboru použijte formát, název aplikace, vydavatele, adresu URL aplikace.|
-|**Upravit**|Tady můžete upravit název, vydavatele a adresu URL vybrané aplikace.|
+|**Přidat**|Přidá aplikaci do vybraného seznamu. Zadejte název podle své volby, volitelně vydavatele aplikaci a adresu URL aplikace v úložišti aplikací. Další pomoc najdete v části Určení adres URL na obchody s aplikacemi dál v tomto tématu.|
+|**Importovat aplikace**|Importuje seznam aplikací, které jste zadali v souboru hodnot oddělených čárkami. V souboru použijte tento formát: název aplikace, vydavatel, adresa URL aplikace.|
+|**Upravit**|Upraví název, vydavatele a adresu URL vybrané aplikace.|
 |**Odstranit**|Odstraní vybranou aplikaci ze seznamu.|
 
 ### Nastavení celoobrazovkovém režimu
 
 |Název nastavení|Podrobnosti|
 |----------------|--------------------|
-|**Vyberte spravovanou aplikaci, která se bude moct spustit, když je zařízení v celoobrazovkovém režimu**|Vyberte **Procházet** a zadejte spravovanou aplikaci nebo aplikaci z obchodu, která se bude moct spouštět, když je zařízení v celoobrazovkovém režimu. Žádné jiné aplikace nebudou mít dovoleno se na zařízení spouštět. Další nápovědu najdete v části **Určení adres URL na obchody s aplikacemi** dál v tomto tématu.|
-|**Povolit dotykové ovládání**|Povolí nebo zakáže dotykovou obrazovku na zařízení.|
-|**Povolit otočení obrazovky**|Povolí nebo zakáže změnu orientace obrazovky při otočení zařízení.|
+|**Vyberte spravovanou aplikaci, která se bude moct spustit, když je zařízení v celoobrazovkovém režimu**|Vyberte **Procházet** a zadejte spravovanou aplikaci nebo aplikaci z obchodu, která se bude moct spouštět, když je zařízení v celoobrazovkovém režimu. Žádné jiné aplikace nebudou mít dovoleno se na zařízení spouštět. Další nápovědu najdete v části Určení adres URL na obchody s aplikacemi dál v tomto tématu.|
+|**Povolit dotykové ovládání**|Na příslušném zařízení povolí nebo zakáže dotykovou obrazovku.|
+|**Povolit otočení obrazovky**|Povolí nebo zakáže změnu orientace obrazovky, když uživatel otočí zařízení.|
 |**Povolit tlačítka hlasitosti**|Povolí nebo zakáže použití tlačítek hlasitosti na zařízení.|
 |**Povolit přepínač vyzvánění**|Povolí nebo zakáže přepínač vyzvánění (ztlumení) na zařízení.|
 |**Povolit tlačítko probuzení z režimu spánku obrazovky**|Povolí nebo zakáže na zařízení tlačítko probuzení z režimu spánku obrazovky.|
@@ -172,36 +172,35 @@ V seznamu **Kompatibilní a nekompatibilní aplikace** zadejte seznam kompatibil
 |**Povolit mono zvuk**|Povolí nebo zakáže nastavení usnadnění **Mono zvuk**.|
 |**Povolit hlasitý přednes**|Povolí nebo zakáže nastavení usnadnění **VoiceOver**, které předčítá text na displeji zařízení.|
 |**Povolit úpravy hlasového přednesu**|Povolí nebo zakáže úpravy hlasového přednesu, které umožňují nastavit funkci nástroje VoiceOver (například rychlost čtení textu na obrazovce).|
-|**Povolit zvětšení**|Povolí nebo zakáže nastavení usnadnění **Zvětšení**, které vám umožní používat dotykové ovládání pro zvětšení zobrazení zařízení.|
-|**Povolit úpravy zvětšení**|Povolí nebo zakáže úpravy zvětšení, které umožňují nastavit funkci zvětšení.|
-|**Povolit inverzi barev**|Povolí nebo zakáže nastavení usnadnění **Invertovat barvy**, které upraví displej tak, aby pomáhal uživatelům se zrakovým postižením.|
-|**Povolit úpravy inverze barev**|Povolí nebo zakáže úpravy inverze barev, které umožňuje nastavit funkci inverze barev.|
-|**Povolit usnadnění dotykového ovládání**|Povolí nebo zakáže nastavení usnadnění **dotykového ovládání**, která uživatelům pomáhá provádět na obrazovce gesta, která by se jim mohla těžko provádět.|
-|**Povolit úpravy usnadnění dotykového ovládání**|Povolí nebo zakáže úpravy usnadnění dotykového ovládání, které umožňují upravit funkce usnadnění dotykového ovládání.|
-|**Povolit výběr řeči**|Povolí nebo zakáže nastavení usnadnění **Výběr řeči**, které může nahlas přečíst vybraný text.|
+|**Povolit zvětšení**|Povolí nebo zakáže nastavení usnadnění **Zvětšení**, které vám umožní používat na displeji zařízení funkci zvětšení zobrazení dotykem.|
+|**Povolit úpravy zvětšení**|Povolí nebo zakáže úpravy zvětšení, které uživateli umožňují nastavit funkci zvětšení.|
+|**Povolit inverzi barev**|Povolí nebo zakáže nastavení usnadnění **Invertovat barvy**, které upraví displej pro potřeby uživatelů se zrakovým postižením.|
+|**Povolit úpravy inverze barev**|Povolí nebo zakáže úpravy inverze barev, které uživateli umožňují nastavit funkci inverze barev.|
+|**Povolit usnadnění dotykového ovládání**|Povolí nebo zakáže nastavení usnadnění **dotykového ovládání**, která uživateli pomáhá provádět na obrazovce gesta, která by pro něho mohla být obtížná.|
+|**Povolit úpravy usnadnění dotykového ovládání**|Povolí nebo zakáže úpravy usnadnění dotykového ovládání, které uživateli umožňují upravit funkce usnadnění dotykového ovládání.|
+|**Povolit výběr řeči**|Povolí nebo zakáže nastavení usnadnění **Výběr řeči**, které může nahlas přečíst text vybraný uživatelem.|
 > [!NOTE]
 > Následující poznámky platí pro nastavení celoobrazovkového režimu na zařízeních iOS:
-> 
+>
 > -   Než budete moct nakonfigurovat nastavení zařízení iOS pro celoobrazovkový režim, musíte převést zařízení do režimu dohledu pomocí [nástroje Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) nebo manažera registrace zařízení. Další informace o nástroji Apple Configurator získáte v dokumentaci Apple.
-> -   Pokud je určená aplikace pro iOS nainstalovaná až po nasazení zásad konfigurace, zařízení nepřejde do celoobrazovkového, dokud ho nerestartujete.
+> -   Pokud se určená aplikace pro iOS nainstaluje až po nasazení zásad konfigurace, zařízení nepřejde do celoobrazovkového režimu, dokud ho nerestartujete.
 
 ### Referenční informace pro aplikace nesplňující předpisy
 
-#### Monitorování aplikací, které splňují a nesplňují předpisy
 Pomocí **sestavy nekompatibilních aplikací** zobrazte kompatibilitu povolených a blokovaných aplikací.
 
 ##### Spuštění sestavy nekompatibilních aplikací
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte **Sestavy** &gt; **Sestava aplikací nedodržujících předpisy**.
 
-2.  Vyberte skupiny zařízení, které chcete zkontrolovat, určete, jestli se mají kontrolovat aplikace dodržující předpisy, aplikace nedodržující předpisy nebo obojí a potom vyberte **Zobrazit sestavu**.
+2.  Vyberte skupiny zařízení, které chcete zkontrolovat, určete, jestli se mají kontrolovat aplikace dodržující předpisy, aplikace nedodržující předpisy nebo obojí, a potom vyberte **Zobrazit sestavu**.
 
 #### Určení adres URL na obchody s aplikacemi
 Pokud chcete zadat adresu URL aplikace do seznamu kompatibilních a nekompatibilních aplikací nebo použít možnost **Vybrat spravovanou aplikaci, která se může spouštět, když je zařízení v celoobrazovkovém režimu** (jenom iOS), použijte následující formát:
 
-Pomocí vyhledávacího modulu najděte aplikaci, kterou chcete použít v iTunes App Storu, a otevřete stránku pro aplikaci.
+1. Pomocí vyhledávacího modulu najděte aplikaci, kterou chcete použít v iTunes App Storu, a otevřete stránku pro tuto aplikaci.
 
-Zkopírujte adresu URL stránky a použijte ji jako URL ke konfiguraci seznamu kompatibilních nebo nekompatibilních aplikací nebo aplikace, kterou chcete spustit v celoobrazovkovém režimu.
+2. Zkopírujte adresu URL stránky a použijte ji jako URL ke konfiguraci seznamu kompatibilních nebo nekompatibilních aplikací nebo aplikace, kterou chcete spustit v celoobrazovkovém režimu.
 
 **Příklad:** Vyhledejte **Microsoft Word pro iPad**. Použitá adresa URL bude **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
 
@@ -216,21 +215,21 @@ Všechna nastavení platí pro iOS 7.1 a novější.
 |**Povolit zámek aktivace, když je zařízení v režimu pod dohledem**|Povolí zámek aktivace na zařízeních s iOS, které jsou pod dohledem.|
 
 ### Dohled
-Na zařízeních s iOS 7.1 a novějšími, které jsou v režimu pod dohledem, je možné nakonfigurovat následující nastavení.
+Na zařízeních se systémem iOS 7.1 a novějším, které jsou v režimu pod dohledem, je možné nakonfigurovat následující nastavení.
 
 |Název nastavení|Podrobnosti|
 |----------------|--------------------|
 |**Povolit změnu účtu**|Povolí uživateli změnu nastavení účtu, jako je například konfigurace e-mailu.|
 |**Povolit AirDrop**|Povolí použití funkce Airdrop k výměně obsahu s blízkými zařízeními.|
 |**Povolit změny nastavení využití mobilních dat v aplikaci**|Umožní uživateli řídit, které aplikace můžou používat mobilní data.|
-|**Povolit Siri dotazování na uživatelem generovaný obsah z internetu**|Umožní Siri získání přístupu k webům, aby mohla odpovídat na otázky.|
+|**Povolit Siri dotazování na uživatelem generovaný obsah z internetu**|Umožní aplikaci Siri získat přístup k webům, aby mohla odpovídat na otázky.|
 |**Povolit přístup k obchodu iBooks**|Umožní uživateli procházení a nákup knih z úložiště iBooks.|
 |**Povolit změny v nastavení aplikace Find My Friends**|Umožní uživateli změnu nastavení pro aplikaci Find My Friends.|
 |**Povolit použití možnosti pro vymazání veškerého obsahu a nastavení na zařízení**|Zpřístupní uživateli možnost pro vymazání veškerého obsahu a nastavení na zařízení.|
-|**Povolit uživateli aktivaci omezení v nastavení zařízení**|Umožní uživateli konfiguraci omezení zařízení (rodičovské kontroly) na zařízení.|
-|**Povolit vrácení výsledků z internetu pomocí vyhledávání Spotlight**|Při vyhledávání Spotlight umožní připojení k internetu, aby bylo možné poskytnout další výsledky.|
+|**Povolit uživateli aktivaci omezení v nastavení zařízení**|Umožní uživateli konfigurovat omezení (rodičovské kontroly) na zařízení.|
+|**Povolit vrácení výsledků z internetu pomocí vyhledávání Spotlight**|Povolí vyhledávání Spotlight připojit se k internetu, aby bylo možné poskytnout další výsledky.|
 |**Povolit použití aplikace Herní centrum**|Povolí použití aplikace Herní centrum.|
-|**Povolit určování zařízení, s nimiž se může zařízení s iOS párovat, podle hostitelského párování**|Díky hostitelskému párování může správce řídit zařízení, s nimiž je možné spárovat zařízení s iOS 7.|
+|**Povolit určování zařízení, s nimiž se může zařízení s iOS párovat, podle hostitelského párování**|Povolí hostitelské párování, díky kterému může správce určit, se kterými zařízeními se dá spárovat zařízení s iOS 7.|
 |**Povolit uživateli instalaci konfiguračních profilů a certifikátů**|Povolí uživateli instalaci konfiguračních profilů a certifikátů.|
 |**Povolit použití aplikace Zprávy na zařízení**|Povolit použití aplikace Zprávy k posílání textových zpráv.|
 
@@ -242,7 +241,7 @@ Pomocí **vlastní zásady iOS** služby Microsoft Intune nasaďte do zařízen�
 Díky této funkci můžete nasadit nastavení iOS, která nejdou konfigurovat pomocí obecných zásad konfigurace Intune.
 
 ### Požadavky
-Než začnete, je potřeba nainstalovat Apple Configurator a vytvořit konfigurační soubor s nastaveními, která chcete nasadit pro uživatele nebo zařízení. Apple Configurator si můžete stáhnout z [Mac App Storu](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12), kde taky najdete informace o něm.
+Než začnete, je potřeba nainstalovat Apple Configurator a vytvořit konfigurační soubor s nastaveními, která chcete nasadit pro uživatele nebo zařízení. Apple Configurator si můžete stáhnout z [Mac App Storu](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12), kde o něm také najdete další informace.
 
 > [!NOTE]
 > Intune nevytváří sestavu dodržování předpisů pro jednotlivá nastavení vlastní zásady iOS. Vytvoří se ale sestava celkového dodržování zásad.
@@ -259,7 +258,7 @@ Než začnete, je potřeba nainstalovat Apple Configurator a vytvořit konfigura
 |Název nastavení|Podrobnosti|
     |----------------|--------------------|
 |**Vlastní název konfiguračního profilu (zobrazený uživatelům)**|Zadejte název zásady tak, jak se bude zobrazovat na zařízení a v sestavách zásad Intune.|
-|**Soubor konfiguračního profilu**|Vyberte **Importovat** a potom vyhledejte konfigurační profil, který jste vytvořili pomocí nástroje Apple Configurator. **Poznámka:** Nastavení, které exportujete z nástroje Apple Configurator, musí být kompatibilní s verzí iOS na zařízeních, na která nasazujete vlastní zásady pro iOS. Informace o tom, jak se řeší nekompatibilní nastavení, najdete v **referenci na konfigurační profil** a **referenci na protokol správy mobilního zařízení** na [webu pro vývojáře Apple](https://developer.apple.com/).|
+|**Soubor konfiguračního profilu**|Vyberte **Importovat** a potom vyhledejte konfigurační profil, který jste vytvořili pomocí nástroje Apple Configurator. **Poznámka:** Nastavení, které exportujete z nástroje Apple Configurator, musí být kompatibilní s verzí iOS na zařízeních, na která nasazujete vlastní zásady pro iOS. Informace o tom, jak se řeší nekompatibilní nastavení, najdete v **referenčních materiálech ke konfiguračnímu profil** a **referenčních materiálech k protokolu správy mobilního zařízení** na [webu pro vývojáře Apple](https://developer.apple.com/).|
     |**Podrobnosti konfiguračního profilu**|Zobrazí kód XML pro konfigurační profil, který jste importovali.|
 
 ### Související témata
@@ -267,7 +266,6 @@ Než začnete, je potřeba nainstalovat Apple Configurator a vytvořit konfigura
 
 
 
-
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

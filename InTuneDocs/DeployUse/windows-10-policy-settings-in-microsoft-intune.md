@@ -4,7 +4,7 @@ description: "Nastavení zásad, která jsou uvedena v tomto tématu, vám pomoh
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 07/31/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: bb08ea54b24e0395972ce29ae05ff2b7b6ee4220
+ms.sourcegitcommit: 7ef205aece89667ea84b9b73e42e71fc540fa257
+ms.openlocfilehash: cbfd2da544814dc93a818a1ca5bd0496a268634b
 
 
 ---
@@ -45,7 +45,6 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 |**Omezená platnost hesla (ve dnech)**|Toto nastavení určuje dobu, po jejímž uplynutí je třeba změnit heslo k zařízení.|
 |**Pamatovat si historii hesel**|Určuje, jestli chcete uživatelům zabránit ve vytváření hesel, která používali dřív.|
 |**Pamatovat si historii hesel** - **Zabránit opětovnému použití předchozích hesel**|Určuje počet dříve použitých hesel, která se na zařízení zapamatovávají.|
-|**Povolit obrázkové heslo a PIN**|Umožňuje použít pro přihlášení jednoduchá gesta na obrázku nebo jednoduchý PIN kód.<br>(jenom Windows 10 Desktop)|
 |**Po návratu zařízení ze stavu nečinnosti vyžadovat heslo**|Pokud je povoleno, musí uživatel zadat heslo k odemknutí zařízení ze stavu nečinnosti.<br>(jenom Windows 10 Mobile)|
 
 ### Encryption
@@ -71,14 +70,6 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 |**Povolit účet Microsoft**|Umožňuje uživateli přidružit k zařízení účet Microsoft.|
 |**Povolit ruční přidávání jiných účtů, než jsou účty Microsoft**|Umožní uživateli přidat do zařízení e-mailové účty, které nejsou přidružené k účtu Microsoft.|
 |**Povolit synchronizaci nastavení u účtů Microsoft**|Povolí synchronizaci nastavení zařízení a aplikací přidružených k účtu Microsoft mezi zařízeními.|
-
-### Nastavení e-mailu
-
-|Název nastavení|Podrobnosti|
-|----------------|----------------------|---------------------|
-|**Nastavit účet Microsoft jako volitelný v aplikaci Windows Pošta**|Nakonfigurováním této možnosti odeberete požadavek na používání účtu Microsoft v aplikaci Pošta Windows.<br>Jenom Windows 10 Desktop|
-
-
 
 ### Microsoft Edge
 
@@ -127,7 +118,6 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 |**Povolit Bluetooth**|Umožňuje na zařízení využívat možnosti Bluetooth.|
 |**Povolit zjistitelný režim Bluetooth**|Umožňuje nastavit, aby bylo toto zařízení zjistitelné jinými zařízeními podporujícími technologii Bluetooth.|
 |**Povolit reklamu přes Bluetooth**|Umožňuje zařízení přijímat reklamu přes Bluetooth.|
-|**Povolit režim umožňující připojení k Bluetooth**|**Důležité:** Toto nastavení už Windows 10 nepodporuje a v budoucnu se odebere.|
 |**Povolit obnovení továrního nastavení telefonu**|Určuje, jestli uživatel může na svém zařízení obnovit tovární nastavení.|
 |**Povolit připojení USB**|Určuje, jestli má zařízení přístup k zařízením externího úložiště prostřednictvím připojení USB.|
 |**Povolit režim AntiTheft**|Umožňuje nakonfigurovat, jestli má být povolený režim Windows Antitheft.|
@@ -177,6 +167,7 @@ Všechna nastavení jsou jenom pro Windows 10 Desktop.
 |Název nastavení|Podrobnosti|
 |----------------|---------------|
 |**Povolit automatické aktualizace**|Toto nastavení povolte, pokud chcete povolit automatické aktualizace. Pak nakonfigurováním jedno z následujících nastavení můžete řídit chování aktualizací:<br /><br />**Upozornění na stahování**<br /><br />**Automaticky nainstalovat v době údržby**<br /><br />**Automaticky nainstalovat a restartovat v době údržby**<br /><br />**Automaticky nainstalovat a restartovat v plánovaném čase** **Poznámka:** Pokud je vybraná tato možnost, můžete také nakonfigurovat nastavení **Potlačit oznámení pro koncového uživatele** a **Definujte den instalace pro plánované aktualizace**.<br>(jenom Windows 10 Desktop)|
+|**Povolit předběžné verze funkcí**|Umožňuje Microsoftu do zařízení nasadit předběžné funkce a nastavení do zařízení s Windows 10. Můžete vybrat, že se povolí jenom nastavení, nebo že se nainstalují všechny předběžné funkce a nastavení.|
 
 ## Nastavení vlastních zásad
 Pomocí **vlastní zásady konfigurace** Microsoft Intune systémů Windows 10 a Windows 10 Mobile nasaďte nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier), které se dá používat k ovládání funkcí na zařízeních s Windows 10 a Windows 10 Mobile. Jsou to standardní nastavení, která k ovládání funkcí zařízení používá spousta výrobců mobilních zařízení.
@@ -332,6 +323,6 @@ Pokud chcete používat vlastní zásadu URI Windows, musí se všechna zaříze
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

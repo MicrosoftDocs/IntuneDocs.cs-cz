@@ -13,8 +13,8 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: matgates
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 19a5b8f8260bace2bbe3626da3df281306f53024
-ms.openlocfilehash: ebd68513da55b8bb1715d2c82636abf791cae1ff
+ms.sourcegitcommit: bebf57269ae41f04a47240063cde4a4dd0bf334f
+ms.openlocfilehash: 3d9def8f906746cf6e3d014d251b94406d839067
 
 
 ---
@@ -27,12 +27,13 @@ Tento nástroj je aplikace příkazového řádku Mac OS, která kolem aplikace 
 Nástroj si můžete stáhnout na stránce [Microsoft Intune App Wrapping pro iOS](http://www.microsoft.com/en-us/download/details.aspx?id=45218).
 
 ## Krok 1: Splnění požadavků na používání nástroje App Wrapping
+Další informace o požadavcích a postupu při jejich nastavení najdete v [tomto příspěvku blogu](http://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx).
 
 |Požadavek|Další informace|
 |---------------|--------------------------------|
 |Podporované operační systémy a sady nástrojů|Nástroj pro zabalení aplikace musíte spustit na počítači Mac se systémem OS X 10.8.5 nebo novějším, na kterém je nainstalovaná sada nástrojů XCode verze 5 nebo novější.|
 |Podpisový certifikát a profil pro zřizování|Musíte mít podpisový certifikát Apple a profil pro zřizování. Informace najdete v [dokumentaci pro vývojáře Apple](https://developer.apple.com/).|
-|Zpracování aplikace pomocí nástroje App Wrapping|Aplikace musela vyvinout a podepsat vaše společnost nebo nezávislý dodavatel softwaru (ISV). Tento nástroj se nedá používat ke zpracování aplikací z Apple Storu. Aplikace musí být napsané pro iOS 7.0 nebo novější. Aplikace také musí být ve formátu Position Independent Executable (PIE). Další informace o formátu PIE najdete v dokumentaci pro vývojáře Apple. A konečně aplikace musí mít příponu **.app**nebo **.ipa** .|
+|Zpracování aplikace pomocí nástroje App Wrapping|Aplikace musela vyvinout a podepsat vaše společnost nebo nezávislý dodavatel softwaru (ISV). Tento nástroj se nedá používat ke zpracování aplikací z Apple Storu. Aplikace musí být napsané pro iOS 7.1 nebo novější. Aplikace také musí být ve formátu Position Independent Executable (PIE). Další informace o formátu PIE najdete v dokumentaci pro vývojáře Apple. A konečně aplikace musí mít příponu **.app**nebo **.ipa** .|
 |Aplikace, které nástroj App Wrapping nedokáže zpracovat|Zašifrované aplikace, nepodepsané aplikace a aplikace s rozšířenými atributy souborů.|
 |Aplikace, které používají knihovnu ADAL (Azure Active Directory Library)|Pokud vaše aplikace používá ADAL, aplikace musí mít verzi ADAL nejméně 1.0.2 a vývojář musí aplikaci udělit přístup k prostředku Správa mobilních aplikací Intune.<br /><br />Informace o použití ADAL najdete v tomto článku v části [Informace pro aplikace, které využívají knihovnu Azure Active Directory Library](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md#information-for-apps-that-use-the-azure-active-directory-library).|
 |Nastavení oprávnění pro vaši aplikaci|Před zabalením aplikace je potřeba nastavit oprávnění, která poskytnou aplikaci další práva a schopnosti nad běžný rámec. Pokyny najdete v části [Nastavení oprávnění aplikace](#setting-app-entitlements).|
@@ -292,6 +293,6 @@ Při používání nástroje pro zabalení aplikace použijte následující dop
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

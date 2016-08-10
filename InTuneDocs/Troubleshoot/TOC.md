@@ -15,7 +15,8 @@
 ## [Řešení potíží s aktualizacemi softwaru](Troubleshoot-software-updates-in-microsoft-intune.md)
 ## [Řešení potíží s e-mailovými profily](Troubleshoot-email-profiles-in-microsoft-intune.md)
 ## [Řešení potíží s podmíněným přístupem](troubleshoot-conditional-access.md)
+## [Poradce při potížích s konektorem Exchange](troubleshoot-exchange-connector.md)
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO1-->
 
 

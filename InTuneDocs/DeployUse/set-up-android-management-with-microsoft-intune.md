@@ -13,13 +13,15 @@ ms.assetid: dbe5cad1-3e0d-41a9-966b-738156089700
 ms.reviewer: lacranda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: 147765f6e8225e8e1d9d8e64473e8b6988256b03
+ms.sourcegitcommit: d8e524b267622f91ed0c2ed854f931299f316312
+ms.openlocfilehash: e42f49558ea9744b59693be873aa5130c7e1a0c3
 
 
 ---
 
 # Nastavení správy zařízení s Androidem
+Pokud chcete nastavit zařízení s Windows, najdete pomoc [tady](../enduser/using-your-android-device-with-intune.md).
+
 S Microsoft Intune můžete povolit model BYOD (Přineste si vlastní zařízení) pro zařízení s Androidem bez další zátěže pro platformu.
 
 Pokud chcete získat další informace, vyberte z následujících možností platforem zařízení:
@@ -41,11 +43,15 @@ Mobilní zařízení s Androidem umožňují uživatelům registraci pomocí apl
 3.  **Informování uživatelů, jak pomocí portálu společnosti získat přístup k firemním prostředkům**<br>
     Uživatelé budou potřebovat vědět, jak mají registrovat svá zařízení a co mají očekávat po začlenění do správy. [Co říct koncovým uživatelům o používání služby Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
 
-### Související témata
+4.  Uživatelé budou potřebovat vědět, jak mají registrovat svá zařízení a co mají očekávat po začlenění do správy.
+        - [Co říct koncovým uživatelům o používání služby Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+        - [Pokyny k zařízení s Windows pro koncové uživatele](../enduser/using-your-android-device-with-intune.md)
+
+### Viz taky
 [Příprava registrace zařízení v Microsoft Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

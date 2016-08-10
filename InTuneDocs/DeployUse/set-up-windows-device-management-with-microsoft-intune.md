@@ -13,13 +13,15 @@ ms.assetid: 9a18c0fe-9f03-4e84-a4d0-b63821bf5d25
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: 79377078bf5b4c6dad0a3dc4a07a2e84aa2563f8
+ms.sourcegitcommit: 06d6c8ce97ba6a259055e94f0eba87f7c5a96531
+ms.openlocfilehash: fae2aa496ec38d9ddc2cb6800bed10ccb32fd154
 
 
 ---
 
 # Nastavení správy pro zařízení Windows
+Pokud chcete nastavit zařízení s Windows, najdete pomoc [tady](../enduser/using-your-windows-device-with-intune.md).
+
 Ve službě Intune můžete pro registraci zařízení počítače s Windows povolit funkci Přineste si vlastní zařízení (BYOD), která zajistí přístup k podnikovým e-mailům a aplikacím. Když se tato funkce použije s Azure Active Directory, poskytuje také rychlý a bezdotykový způsob správy zařízení s Windows 10 a přístup k firemním prostředkům bez nutnosti vytvořit novou image počítače. Po registraci se mohou uživatelů přihlásit a na jejich zařízení se můžou použít zásady, aplikace a nasazení s použitím konzoly pro správu Intune. Může být také vhodné [nastavit správu Windows Phone pomocí Microsoft Intune](set-up-windows-phone-management-with-microsoft-intune.md) nebo [spravovat počítače s klientským softwarem Intune](manage-windows-pcs-with-microsoft-intune.md) s použitím klienta Intune.
 
 Vytvořením DNS CNAME uživatelům usnadníte připojení a registraci v Intune bez nutnosti zadávat název serveru.
@@ -43,13 +45,18 @@ Vytvořením DNS CNAME uživatelům usnadníte připojení a registraci v Intune
 
   2.  V [konzole pro správu Intune](http://manage.microsoft.com) klikněte na **Správa** &gt; **Správa mobilních zařízení** &gt; **Windows**.
   ![Dialogové okno správy zařízení s Windows](../media/enroll-intune-winenr.png)
+
   3.  Zadejte adresu URL ověřené domény webu společnosti do pole **Zadejte název ověřené domény** a klikněte na **Test automatického zjištění**.
+
+  4.  Uživatelé budou potřebovat vědět, jak mají registrovat svá zařízení a co mají očekávat po začlenění do správy.
+      - [Co říct koncovým uživatelům o používání služby Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+      - [Pokyny k zařízení s Windows pro koncové uživatele](../enduser/using-your-windows-device-with-intune.md)
 
 ### Související témata
 [Příprava registrace zařízení v Microsoft Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

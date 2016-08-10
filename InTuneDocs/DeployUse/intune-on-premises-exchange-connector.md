@@ -3,8 +3,8 @@ title: "Exchange Connector pro místní EAS | Microsoft Intune"
 description: "Použijte nástroj Connector k umožnění komunikace mezi konzolou správce Intune a místním Exchange Serverem pro Exchange ActiveSync MDM."
 keywords: 
 author: NathBarn
-manager: arob98
-ms.date: 07/19/2016
+manager: angrobe
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 41ff4212-a6f5-4374-8731-631f7560cff1
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1e0d05a4f229e2a8e72d1d60021b159f12dfa0d1
-ms.openlocfilehash: 233aae987467a574c34aa06168a3c6d59eab663c
+ms.sourcegitcommit: de3296e81c88b3ac04e3ba3f3d3ca222a59df7bd
+ms.openlocfilehash: 18614cc272323b8031c94b8e582f80aa5c06d9d3
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: 233aae987467a574c34aa06168a3c6d59eab663c
 # Instalace místního konektoru Intune Exchange Connector
 
 
-Pokud chcete nastavit připojení umožňující komunikaci Microsoft Intune s Exchange Serverem, který je hostitelem poštovních schránek mobilních zařízení, musíte si z konzoly pro správu Intune stáhnout software On-Premises Connector a nakonfigurovat ho.
+Pokud chcete nastavit připojení umožňující komunikaci Microsoft Intune s Exchange Serverem, který je hostitelem poštovních schránek mobilních zařízení, musíte si z konzoly pro správu Intune stáhnout software On-Premises Connector a nakonfigurovat ho. Intune podporuje pro každé předplatné jenom jedno připojení konektoru Exchange libovolného typu.
 
 ## Požadavky na konektor On-Premises Connector
 V následující tabulce jsou uvedené požadavky na počítač, na který instalujete místní Exchange Connector.
@@ -30,7 +30,7 @@ V následující tabulce jsou uvedené požadavky na počítač, na který insta
 |Požadavek|Další informace|
 |---------------|--------------------|
 |operační systémy;|Intune podporuje místní Exchange Connector na počítači, na kterém běží kterákoli edice systému Windows Server 2008 SP2 (64bitová verze), Windows Server 2008 R2, Windows Server 2012 nebo Windows Server 2012 R2.<br /><br />Konektor není podporovaný v žádné instalaci jádra serveru.|
-|Verze Microsoft Exchange|On-Premises Connector vyžaduje Microsoft Exchange 2010 SP1 nebo novější.|
+|Verze Microsoft Exchange|On-Premises Connector vyžaduje Microsoft Exchange 2010 SP1 nebo novější, nebo starší Exchange Online Dedicated. Pokud chcete zjistit, jestli je vaše prostředí Exchange Online Dedicated v **nové** nebo **starší** konfiguraci, kontaktujte vašeho account manažera.|
 |Autorita pro správu mobilních zařízení| [Nastavte autoritu pro správu mobilních zařízení na Intune](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority).|
 |Hardware|Počítač, na který nainstaluje konektor, musí mít minimálně 1,6GHz procesor s 2 GB paměti RAM a 10 GB volného místa na disku.|
 |Synchronizace se službou Active Directory|Než použijete některý z konektorů k připojení Intune ke svému Exchange Serveru, je potřeba [nastavit synchronizaci služby Active Directory](/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3) tak, aby byli místní uživatelé a skupiny zabezpečení synchronizovaní s vaší instancí Azure Active Directory.|
@@ -131,6 +131,6 @@ Můžete se taky podívat na datum a čas posledního úspěšného pokusu o syn
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

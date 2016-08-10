@@ -13,8 +13,8 @@ ms.assetid: fab51ee0-638d-4dd4-8d8f-1f263bc11e5c
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: ef0210d7ca2d44608c5baa8f48ef56a2b9b5ce3a
+ms.sourcegitcommit: b93c6fe16e598c6f4b0d87981de8655f3de9c8d3
+ms.openlocfilehash: 051f2994c59b2886a81a50d7c72f51627064bc6a
 
 
 ---
@@ -24,6 +24,15 @@ Zjistěte, co je nového v této verzi Microsoft Intune. Můžete také získat 
 
 Všechny tyto funkce budou posléze podporované pro zákazníky využívající hybridní nasazení (Configuration Manager s Intune). Další informace o nových funkcích pro hybridní nasazení najdete na naší [stránce Co je nového pro hybridní nasazení](https://technet.microsoft.com/en-US/library/mt718155(TechNet.10).aspx).
 
+## Srpen 2016
+## Aktualizace Portálu společnosti
+
+### Android
+- **Aplikace Portál společnosti pro Android**<br/>
+Aplikace Portál společnosti pro Android služby Intune poskytuje podporu „dne 0“ pro chystaný operační systém Android 7.0 pro mobilní zařízení.  
+
+- **Odebrání funkce pro vzdálené resetování hesla v zařízeních se systémem Android 7.0**<br/>
+V zařízeních s Androidem 7.0 nebudou koncoví uživatelé a správci IT služby Intune IT moct vzdáleně resetovat heslo zařízení, protože společnost Google tuto možnost pro zařízení se systémem Android 7.0 odebrala. U dřívějších verzí, než je Android 7.0, budou mít správci IT i nadále možnost vzdáleně resetovat heslo uživatele a koncoví uživatelé budou také moct resetovat svoje heslo pomocí webu Portál společnosti.
 
 ## Červenec 2016
 ## Správa aplikací
@@ -41,7 +50,9 @@ Komponenta Intune App SDK Xamarin umožňuje v mobilních aplikacích pro iOS a 
 Služba Intune zvýšila maximální limit pro registraci zařízení z 5 na 15 zařízení na uživatele.
 <!---TFS 1289896 --->
 
-
+### Integrace TeamVieweru pro počítače s Windows a klientským softwarem Intune
+Integrace [TeamVieweru](https://www.teamviewer.com) pro počítače s Windows a klientským softwarem Intune vám umožní navázání relací vzdálené pomoci s počítači s Windows v rámci podpory, kterou oddělení helpdesku poskytují koncovým uživatelů. To zahrnuje systém Windows 7, 8, 8.1 a Windows 10. Podrobnosti najdete v tématu [Běžné úlohy správy počítačů s Windows pomocí počítačového klienta Microsoft Intune](intune/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client).
+<!---TFS 1284856--->
 
 ## Aktualizace Portálu společnosti
 ### Web portálu společnosti
@@ -93,7 +104,7 @@ Kromě změn ve správě skupin se také přestanou používat následující fu
 Další informace o tom, jak je možné dopady těchto vyřazení zmírnit, budou vydány v srpnu.
 
 ### Přidání oznámení na Portál společnosti pro Android
-V srpnu vydáváme aktualizaci Portálu společnosti pro Android, která zavádí novou ikonu **Oznámení** na domovské stránce. Klepnutí na tuto ikonu zpřístupní stránku **Oznámení**, kde se koncovým uživatelům zobrazí všechny položky, které v aplikaci Portál společnosti vyžadují pozornost, jako je třeba to, že zařízení nedodržuje předpisy, aktualizace nebo aktivace registrace. Pokud používáte také aplikaci Portál společnosti pro iOS, už jste se s těmito oznámeními setkali. Po zavedení stránky **Oznámení** se při každém spuštění nebo obnovení Portálu společnosti pro Android už nezobrazí stránka **Nastavení firemního přístupu**, pokud je zařízení už zaregistrované. Slyšeli jsme, že celá řada z vás vytvořila pokyny pro koncové uživatele a oceníte, pokud vás předem upozorníme, že vaše pokyny nebo snímky obrazovky mohou vyžadovat aktualizaci. Proveďte prosím aktualizaci dokumentace tak, aby tuto chystanou změnu odrážela. Aktualizované snímky obrazovky najdete tady: https://aka.ms/androidcpupdate.  
+V září vydáváme aktualizaci Portálu společnosti pro Android, která zavádí novou ikonu **Oznámení** na domovské stránce. Klepnutí na tuto ikonu zpřístupní stránku **Oznámení**, kde se koncovým uživatelům zobrazí všechny položky, které v aplikaci Portál společnosti vyžadují pozornost, jako je třeba to, že zařízení nedodržuje předpisy, aktualizace nebo aktivace registrace. Pokud používáte také aplikaci Portál společnosti pro iOS, už jste se s těmito oznámeními setkali. Po zavedení stránky **Oznámení** se při každém spuštění nebo obnovení Portálu společnosti pro Android už nezobrazí stránka **Nastavení firemního přístupu**, pokud je zařízení už zaregistrované. Slyšeli jsme, že celá řada z vás vytvořila pokyny pro koncové uživatele a oceníte, pokud vás předem upozorníme, že vaše pokyny nebo snímky obrazovky mohou vyžadovat aktualizaci. Proveďte prosím aktualizaci dokumentace tak, aby tuto chystanou změnu odrážela. Aktualizované snímky obrazovky najdete tady: https://aka.ms/androidcpupdate.  
 
 
 
@@ -147,6 +158,6 @@ Informace o tom, co bylo vydáno v rámci Intune během posledních šest měsí
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

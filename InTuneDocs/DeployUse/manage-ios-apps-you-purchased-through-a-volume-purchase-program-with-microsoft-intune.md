@@ -4,7 +4,7 @@ description: "Použijte Intune ke správě aplikací, které jste koupili od App
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/13/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 1dafc28a-7f8b-4fe0-8619-f977c93d1140
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: 8f7e77f00e6082c5b272a7ec2be835bc1ef97a28
+ms.sourcegitcommit: c64fb33893027d0000cae4cc3d9c3ed28cc38901
+ms.openlocfilehash: 5db23913601973630a4d013aae86cf26af337c4b
 
 
 ---
@@ -64,6 +64,9 @@ Data ukládaná společností Apple můžete kdykoli synchronizovat s Intune vý
 
 2.  Vyberte aplikaci, kterou chcete nasadit, klikněte na **Spravovat nasazení** a potom postupujte podle pokynů v tématu [Nasazení aplikací v Microsoft Intune](deploy-apps-in-microsoft-intune.md) a dokončete odeslání, vytvoření a nasazení aplikace.
 
+> [!TIP]
+> Musíte vybrat akci nasazení s nastavením **Požadované**. Dostupné instalace se v současnosti nepodporují.
+
 Když nasazujete aplikaci s typem instalace **Požadovaná**, použije jednu licenci každý uživatel, který aplikaci nainstaluje.
 
 Když chcete licenci získat zpět, je třeba nastavit typ instalace na **Odinstalovat**. Až se aplikace odinstaluje, licence se uvolní.
@@ -87,6 +90,6 @@ Které aplikace VPP jsou nasazené a kolik licencí je už využito, můžete sl
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

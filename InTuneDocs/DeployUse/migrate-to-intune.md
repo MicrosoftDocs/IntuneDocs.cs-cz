@@ -13,8 +13,8 @@ ms.assetid: 88936b8a-7453-4410-b6db-29f636ba3e72
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8c1f4f209c5ec704290882b8f6f71e0b1b01d21c
-ms.openlocfilehash: 20394c243b9355cd3f4e30f170dfd00d10e1153f
+ms.sourcegitcommit: 317b8cc277eb8dffc1cb29739f3f78cfa3241602
+ms.openlocfilehash: c6bd34c910f56e7dfad142034ef6fd7a027cd2c4
 
 
 ---
@@ -44,7 +44,7 @@ Než se zařízení zaregistrují v Intune, je potřeba zrušit jejich registrac
 
 ## Registrace zařízení v Intune
 
-Uživatelé, u kterých je naplánovaná migrace, by se měli okamžitě zaregistrovat v Intune, aby znovu získali přístup k podnikovým prostředkům, e-mailu a aplikacím, případně aby o něj nepřišli. Pokud nakonfigurujete podmíněný přístup a uživatelé se pokusí připojit k e-mailu dřív, než se zaregistrují v Intune, jejich přístup se zablokuje a dostanou e-mail s informacemi o registraci. Tento e-mail bude obsahovat pokyny k registraci jejich zařízení v Intune.  Uživatelé se také můžou do Intune zaregistrovat prostřednictvím aplikace Portál společnosti Intune nebo nativně prostřednictvím operačního systému ve Windows 8.1 a Windows 10 Mobile. Další informace o krocích registrace podle jednotlivých platforem najdete v tématu [Co říct koncovým uživatelům o používání služby Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md).
+Uživatelé, u kterých je naplánovaná migrace, by se měli okamžitě zaregistrovat v Intune, aby znovu získali přístup k podnikovým prostředkům, e-mailu a aplikacím, případně aby o něj nepřišli. Pokud nakonfigurujete podmíněný přístup a uživatelé se pokusí připojit k e-mailu dřív, než se zaregistrují v Intune, jejich přístup se zablokuje a dostanou e-mail s informacemi o registraci. Tento e-mail je provede registrací jejich zařízení v Intune.  Uživatelé se také můžou do Intune zaregistrovat prostřednictvím aplikace Portál společnosti Intune nebo nativně prostřednictvím operačního systému ve Windows 8.1 a Windows 10 Mobile. Další informace o krocích registrace podle jednotlivých platforem najdete v tématu [Co říct koncovým uživatelům o používání služby Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md).
 
 ## Konfigurace podmíněného přístupu v Intune (volitelné)
 
@@ -73,6 +73,6 @@ Verzi celého průvodce ke stažení najdete v [Galerii TechNetu](https://galler
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO1-->
 
 

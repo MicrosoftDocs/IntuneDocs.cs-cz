@@ -4,7 +4,7 @@ description: "Přečtěte si o možnostech Intune, když spravujete počítače 
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 08/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 77fa5c66-a87c-47df-964c-800eea509b33
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: b2e5b04df846db1a0076da7db63a5906fbd25558
+ms.sourcegitcommit: 49a236359692a5bbccf9ee0bb263094434049a91
+ms.openlocfilehash: f5ade985900e2387b19b4ed2786f22d8a216d8d8
 
 
 ---
@@ -28,7 +28,7 @@ Ve většině scénářů si svoje zařízení zaregistrujete v Microsoft Intune
 
 -   **Ochrana proti malwaru.** Součástí Intune je služba Endpoint Protection, která pomáhá chránit počítače před malwarem.
 
--   **Vzdálená pomoc:** Intune umožňuje uživatelům kontaktovat pracovníky technické podpory, kteří jim pak můžou pomoct prostřednictvím funkce vzdálené plochy, která je součástí Intune <!--- (requires TeamViewer software)--->.
+-   **Vzdálená pomoc.** Intune umožňuje uživatelům kontaktovat pracovníky technické podpory, kteří jim pak můžou pomoct prostřednictvím funkce vzdálené plochy, která je součástí Intune (vyžaduje software TeamViewer).
 
 -   **Správa licencí na software.** Můžete sledovat, kolik licencí softwaru je dostupných a kolik z nich se právě používá.
 -   **Nasazení aplikací.** Do počítačů, které spravujete, můžete nasadit software. Pokud ke správě počítačů použijete klientský software, některé funkce správy nejsou dostupné.
@@ -48,7 +48,7 @@ Intune může spravovat počítače s následujícími verzemi Windows (x86 i x6
 
 -   **Windows 8.1** – verze Pro a Enterprise
 
-- **Windows 10** – verze Home, Pro, Education a Enterprise
+- **Windows 10** – verze Pro, Education a Enterprise
 
 
 ## Minimální požadavky na hardware
@@ -74,6 +74,6 @@ Toto jsou požadavky na software pro instalaci počítačového klienta Intune:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

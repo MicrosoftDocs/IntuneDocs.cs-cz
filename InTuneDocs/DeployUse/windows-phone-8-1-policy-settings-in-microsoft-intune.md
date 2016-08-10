@@ -4,7 +4,7 @@ description: "Intune poskytuje řadu předdefinovaných obecných nastavení, kt
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 07/30/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 83f7469c-272e-43f2-8139-b0d7bc34f43f
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: 04fca72cd426ee4718e100cb2633ca2c967b4c05
+ms.sourcegitcommit: 1648a070cc2d318df4d434955f6068cd4b42690c
+ms.openlocfilehash: 87021459424c84feed3b676364cf890f43ff32d9
 
 
 ---
@@ -109,11 +109,11 @@ Ke konfiguraci následujících nastavení pro zařízení s Windows Phone 8.1 p
 |----------------|-----------------------------------------|
 |**Povolit kopírování a vkládání**|Povolí funkci kopírování a vkládání na zařízeních.|Ne|Ano|
 
-### Nastavení pro aplikace dodržující a nedodržující předpisy
-V seznamu **Kompatibilní a nekompatibilní aplikace** zadejte seznam kompatibilních a nekompatibilních aplikací s využitím následujících informací:
+### Nastavení pro povolené a blokované aplikace
+V seznamu **Povolené a blokované aplikace** zadejte seznam aplikací, které chcete povolit nebo blokovat, s využitím těchto informací:
 
 > [!NOTE]
-> Jedna zásada může obsahovat seznam jenom kompatibilních, nebo jenom nekompatibilních aplikací. Nejde zadat oba seznamy v jedné zásadě.
+> Jedna zásada může obsahovat seznam jenom povolených, nebo jenom blokovaných aplikací. Nejde zadat oba seznamy v jedné zásadě.
 
 |Název nastavení|Podrobnosti|
 |----------------|--------------------|
@@ -127,14 +127,14 @@ V seznamu **Kompatibilní a nekompatibilní aplikace** zadejte seznam kompatibil
 > Pokud zadáváte seznam aplikací povolených pro zařízení Windows Phone 8.1, je potřeba přidat do tohoto seznamu aplikaci Portál společnosti, jinak se zablokuje.
 
 
-### Referenční informace pro aplikace nesplňující předpisy
+### Referenční informace pro povolené a blokované aplikace
 
 #### Určení adres URL na obchody s aplikacemi
-Pokud chcete zadat adresu URL aplikace do seznamu kompatibilních a nekompatibilních aplikací, použijte následující formát:
+Pokud chcete zadat adresu URL aplikace do seznamu povolených a blokovaných aplikací, použijte následující formát:
 
 Na [stránce Aplikace a hry pro Windows Phone](http://www.windowsphone.com/en-us/store/overview) najděte aplikaci, kterou chcete použít.
 
-Otevřete stránku aplikace a zkopírujte adresu URL do schránky. Tu teď můžete použít jako adresu URL v seznamu kompatibilních nebo nekompatibilních aplikací.
+Otevřete stránku aplikace a zkopírujte adresu URL do schránky. Tu teď můžete použít jako adresu URL v seznamu povolených nebo blokovaných aplikací.
 
 **Příklad:** Vyhledání aplikace Skype ve Storu. Použijete adresu URL **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.
 
@@ -172,6 +172,6 @@ V dialogovém okně **Přidat nebo upravit nastavení OMA-URI** zadejte následu
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 
