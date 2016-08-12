@@ -13,8 +13,8 @@ ms.assetid: ac65e906-3922-429f-8d9c-d313d3126645
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 52d9d2ad912de7bc775cde2c40c8de27a09ba2af
-ms.openlocfilehash: d37630d2aaf4a260acf98a57aa2d38c95711f12b
+ms.sourcegitcommit: 87aea89a323fb05087322fb117d0be2e579a06ff
+ms.openlocfilehash: 6eda2828a801700e885d1bed667f9260f325e175
 
 
 ---
@@ -23,7 +23,7 @@ ms.openlocfilehash: d37630d2aaf4a260acf98a57aa2d38c95711f12b
 
 Pro zařízení s Androidem spravovaná pomocí Intune můžete vytvořit profil VPN pro aplikaci. Nejdřív vytvoříte profil VPN, který používá typ připojení Pulse Secure, a potom vlastní zásadu konfigurace, která přidruží tento profil ke konkrétním aplikacím. Po nasazení těchto zásad do skupin uživatelů nebo zařízení s Androidem, otevření jedné ze zadaných aplikací na těchto zařízeních způsobí, že se pro tuto aplikaci otevře připojení VPN.
 
-> [POZNÁMKA]
+> [!NOTE]
 > 
 > Pro tento profil se podporuje jenom připojení Pulse Secure.
 
@@ -37,7 +37,8 @@ Pro zařízení s Androidem spravovaná pomocí Intune můžete vytvořit profil
 4. Dokončete profil VPN a uložte ho. Další podrobnosti o profilech VPN najdete v tématu [Připojení VPN](vpn-connections-in-microsoft-intune.md).
 
 > [!NOTE]
-Poznamenejte si název profilu sítě VPN, abyste ho mohli použít v dalším kroku. Příklad: **profil_VPN_pro_moje_aplikace**.
+> 
+> Poznamenejte si název profilu sítě VPN, abyste ho mohli použít v dalším kroku.   Příklad: **profil_VPN_pro_moje_aplikace**.
 
 ### Krok 2: Vytvoření vlastní zásady konfigurace
 
@@ -81,6 +82,6 @@ Shrnutí stavu a výstrahy na stránce **Přehled** v pracovním prostoru **Zás
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO2-->
 
 

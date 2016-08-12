@@ -145,7 +145,7 @@ Pokud chcete odeslat obecnou zpětnou vazbu ke službě Microsoft Intune, včetn
 * [Vymazání dat ze spravovaných firemních aplikací pomocí Microsoft Intune](https://technet.microsoft.com/library/mt627826.aspx): Popisuje, jak odebrat data z podnikových aplikací.
 
 **Aktualizovaný obsah**
-* [Nastavení zásad konfigurace Windows 10 v Microsoft Intune](https://technet.microsoft.com/library/mt404697.aspx): Přibylo nové nastavení prohlížeče Edge.
+* [Nastavení zásad konfigurace Windows 10 v Microsoft Intune](https://technet.microsoft.com/library/mt404697.aspx): Přibylo nové nastavení prohlížeče Microsoft Edge.
 * [Nastavení správy pro iOS a Mac v Microsoft Intune](http://technet.microsoft.com/library/dn408185.aspx): Přibyly informace o registraci zařízení se systémem Mac OS X.
 * [Pochopení vašeho zařízení s inventářem v Microsoft Intune](https://technet.microsoft.com/library/jj733634.aspx): Přibyly informace o inventáři shromážděném ze zařízení se systémem Mac OS X. Také došlo k aktualizaci tématu, takže teď obsahuje nejnovější informace o všech platformách zařízení.
 * [Pochopení operací Microsoft Intune pomocí sestav](https://technet.microsoft.com/library/dn646977.aspx): Přibyly informace o dvou nových sestavách, které slouží k zobrazení informací o spravovaných zařízeních se systémem Mac OS X.

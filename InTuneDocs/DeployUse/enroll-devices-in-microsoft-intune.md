@@ -13,8 +13,8 @@ ms.assetid: 8fc415f7-0053-4aa5-8d2b-03202eca4b87
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d8e524b267622f91ed0c2ed854f931299f316312
-ms.openlocfilehash: 15f4af1f870d619f4fd51e88d1aef91b0b45e66d
+ms.sourcegitcommit: 7bea7ba4ef59c6b1400414b59456e19dc1c152fb
+ms.openlocfilehash: 41c21da7c95ef15f817aa344aa5b2d6479b65922
 
 
 ---
@@ -27,6 +27,31 @@ Správa mobilních zařízení Microsoft Intune (MDM) využívá registraci pro 
 Intune může spravovat tyto platformy zařízení:
 
 [!INCLUDE[mdm-supported-devices](../includes/mdm-supported-devices.md)]
+
+## Nastavení autority pro správu mobilních zařízení
+Autorita MDM definuje službu správy s oprávněním ke správě skupiny zařízení. Příklady možných autorit MDM zahrnují Intune samostatně a Configuration Manager s Intune. Pokud nastavíte Configuration Manager jako autoritu správy, ke správě mobilních zařízení nejde použít žádnou jinou službu.
+
+>[!IMPORTANT]
+> Důkladně zvažte, jestli chcete spravovat mobilní zařízení jenom pomocí Intune (online služba), nebo pomocí System Center Configuration Manageru s Intune (místní softwarové řešení ve spojení s online službou). Když nastavíte autoritu správy mobilních zařízení, už ji nemůžete změnit.
+
+1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) zvolte **Správce** &gt; **Správa mobilních zařízení**.
+
+2.  V seznamu **Úkoly** klikněte na **Nastavit autoritu pro správu mobilních zařízení**. Otevře se dialogové okno **nastavení autority pro správu mobilních zařízení** .
+
+    ![Dialogové okno nastavení autority pro správu mobilních zařízení](../media/intune-mdm-authority.png)
+
+3.  Intune požádá o potvrzení, že chcete Intune používat jako autoritu pro správu mobilních zařízení. Jestli chcete ke správě mobilních zařízení používat Microsoft Intune, zaškrtněte políčko a zvolte **Ano**.
+
+## Nakonfigurování Portálu společnosti Intune
+
+Portál společnosti v Intune je místem, kde uživatelé přistupují k podnikovým datům a kde můžou dělat běžné úkoly, jako je registrace zařízení, instalace aplikací nebo vyhledání informací pro oddělení IT v případě žádosti o podporu.
+
+> [!TIP]
+> Když si portál společnosti přizpůsobíte, bude se vaše konfigurace vztahovat na web portálu společnosti i na aplikace Portál společnosti.
+
+Přizpůsobení Portálu společnosti pomáhá poskytnout známé a užitečné prostředí pro koncové uživatele. Pro přizpůsobení se přihlaste do [konzoly správce Microsoft Intune](https://manage.microsoft.com) jako tenant nebo správce služby, zvolte **Správce** &gt; **Portál společnosti** a konfigurujte nastavení portálu společnosti.
+
+![admin-console-admin-workspace-comp-portal-settings](../media/cp_sa_cpsetup.PNG)
 
 ## Přehled metod registrace zařízení
 
@@ -124,6 +149,6 @@ Počítače spravované pomocí klientského softwaru Intune nejde selektivně v
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO2-->
 
 
