@@ -2,7 +2,7 @@
 title: "Řešení problémů s nasazením aplikací | Microsoft Intune"
 description: "Tento článek vám pomůže při řešení problémů s nasazením aplikací pomocí Microsoft Intune."
 keywords: 
-author: robstack
+author: robstackmsft
 manager: angrobe
 ms.date: 08/02/2016
 ms.topic: article
@@ -13,29 +13,24 @@ ms.assetid: 28ac298e-fb73-4c1c-b3fd-8336639e05e6
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7b16c19c95384655e170c199597dd6bd31afb90d
-ms.openlocfilehash: 44af28c18980e549924139badd8f3ca439dc29b3
+ms.sourcegitcommit: bbee6d3fec02a4d96b31a44a31218f684e0267c8
+ms.openlocfilehash: ed961a945d0b7872553f2be2917ba273709b6d35
 
 
 ---
 
 # Řešení problémů s nasazením aplikací v Microsoft Intune
-Tento článek vám pomůže při řešení problémů s nasazením aplikací pomocí Microsoft Intune.
+Pokud máte potíže s nasazením a správou aplikací v Intune, začněte zde. Toto téma popisuje některé běžné problémy, na které můžete narazit, a jejich řešení.
 
-Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md), ve kterém najdete další způsoby, jak získat nápovědu.
+## Běžné problémy s nasazením aplikací
 
+### Uživatelé se nemůžou přihlásit do portálu společnosti Intune
 
-## Obvyklé problémy s nasazováním aplikací
+1.  Zkontrolujte, že účet uživatele v [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) existuje a je povolený.
 
-### Pokud se nemůžete přihlásit do portálu společnosti Microsoft Intune
+3.  V [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) se ujistěte, že pro přihlášení do Intune uživatel používá správné uživatelské jméno ve formátu: **joe@domain.com**. Pokud se zdá, že uživatel zadává nesprávné heslo, požádejte ho, aby heslo resetoval.
 
-1.  Zkontrolujte, jestli váš účet existuje v [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) nebo jestli není zakázaný.
-
-2.  Ujistěte se, že je pro vás tento účet zřízený v [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854).
-
-3.  V [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) se ujistěte, že pro přihlášení do Intune používáte správné uživatelské jméno a heslo ve formátu: **joe@domain.com**.
-
-### Pokud v aplikaci Portál společnosti chybí kontaktní informace na IT oddělení
+### V Portálu společnosti chybí kontaktní údaje oddělení IT
 
 1.  V konzole správce Intune zvolte **Správa** &gt; **Portál společnosti**.
 
@@ -105,6 +100,6 @@ Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podpor
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO2-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7ef205aece89667ea84b9b73e42e71fc540fa257
-ms.openlocfilehash: cbfd2da544814dc93a818a1ca5bd0496a268634b
+ms.sourcegitcommit: 0178bba517b0fc9e02ba67e6f3aba7a8a0ee445f
+ms.openlocfilehash: 9daab32361cfdf8567d03a8ea6e6438e34b61aad
 
 
 ---
@@ -32,7 +32,7 @@ Nastavení zásad, která jsou uvedena v tomto tématu, vám pomohou nakonfiguro
 Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 10 Desktop a Windows 10 Mobile použijte **obecné zásady konfigurace** služby Microsoft Intune pro Windows 10. 
 
 
-### Heslo
+## - Heslo
 
 |Název nastavení|Podrobnosti|
 |----------------|----------------------|
@@ -47,13 +47,13 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 |**Pamatovat si historii hesel** - **Zabránit opětovnému použití předchozích hesel**|Určuje počet dříve použitých hesel, která se na zařízení zapamatovávají.|
 |**Po návratu zařízení ze stavu nečinnosti vyžadovat heslo**|Pokud je povoleno, musí uživatel zadat heslo k odemknutí zařízení ze stavu nečinnosti.<br>(jenom Windows 10 Mobile)|
 
-### Encryption
+## - Šifrování
 
 |Název nastavení|Podrobnosti|
 |----------------|----------------------|
 |**Vyžadovat šifrování u mobilního zařízení**|Povoluje šifrování na cílových zařízeních.<br>(jenom Windows 10 Mobile)|
 
-### Systému
+## - Systém
 
 |Název nastavení|Podrobnosti|
 |----------------|----------------------|
@@ -63,7 +63,7 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 |**Povolit odesílání diagnostických dat a dat o použití do Microsoftu**|Určuje objem diagnostických dat a dat využití, který se odesílá společnosti Microsoft ze zařízení.<br><br>**Ne:** Microsoftu se neodešlou žádná data.<br>**Základní:** Zařízení odesílá Microsoftu jenom omezené množství informací.<br>**Rozšířené:** Odesílá Microsoftu rozšířená diagnostická data.<br>**Úplné (doporučeno):** Odešle stejná data jako možnost **Rozšířené** a k tomu navíc údaje o stavu zařízení.|
 
 
-### Účet a synchronizace
+## - Účet a synchronizace
 
 |Název nastavení|Podrobnosti|
 |----------------|----------------------|---------------------|
@@ -71,7 +71,7 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 |**Povolit ruční přidávání jiných účtů, než jsou účty Microsoft**|Umožní uživateli přidat do zařízení e-mailové účty, které nejsou přidružené k účtu Microsoft.|
 |**Povolit synchronizaci nastavení u účtů Microsoft**|Povolí synchronizaci nastavení zařízení a aplikací přidružených k účtu Microsoft mezi zařízeními.|
 
-### Microsoft Edge
+## - Microsoft Edge
 
 |Název nastavení|Podrobnosti|
 |----------------|----------------------|
@@ -87,7 +87,7 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 |**Povolit správce hesel**|Umožňuje povolit nebo zakázat funkci Povolit správce hesel.|
 |**Umístění webů podnikového režimu**|Určuje, kde najít seznam webů, které se otevřou v podnikovém režimu. Uživatelé nemohou tento seznam upravovat.<br>(jenom Windows 10 Desktop)|
 
-### Aplikace
+## - Aplikace
 
 |Název nastavení|Podrobnosti|
 |----------------|----------------------|---------------------|
@@ -95,7 +95,7 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 
 
 
-### Mobilní služby
+## - Mobilní služby
 
 |Název nastavení|Podrobnosti|
 |----------------|----------------------|---------------------|
@@ -103,7 +103,7 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 |**Povolit VPN v mobilní síti**|Určuje, jestli zařízení může při připojení k mobilní síti získat přístup k připojením VPN.|
 |**Povolit VPN v mobilní síti v roamingu**|Určuje, jestli zařízení může při roamingu v mobilní síti získat přístup k připojením VPN.|
 
-### Hardware
+## - Hardware
 
 |Název nastavení|Podrobnosti|
 |----------------|----------------------|
@@ -122,7 +122,7 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 |**Povolit připojení USB**|Určuje, jestli má zařízení přístup k zařízením externího úložiště prostřednictvím připojení USB.|
 |**Povolit režim AntiTheft**|Umožňuje nakonfigurovat, jestli má být povolený režim Windows Antitheft.|
 
-### Funkce:
+## - Funkce
 
 |Název nastavení|Podrobnosti|
 |----------------|----------------------|---------------------|
@@ -131,7 +131,7 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 |**Povolit Cortanu**|Povolí nebo zakáže hlasového asistenta Cortany.|
 |**Povolit oznámení centra akcí**|Povolí nebo zakáže oznámení Centra akcí na zamykací obrazovce zařízení.<br>(jenom Windows 10 Mobile)|
 
-### Defender
+## - Windows Defender
 
 Všechna nastavení jsou jenom pro Windows 10 Desktop.
 
@@ -162,7 +162,7 @@ Všechna nastavení jsou jenom pro Windows 10 Desktop.
 |**Vyloučit procesy při použití prověřování nebo ochrany v reálném čase**|Umožňuje do seznamu vyloučení přidat procesy typu **.exe**, **.com** nebo **.scr**. Tyto procesy nebudou zahrnuty do kontrol probíhajících v reálném čase ani do plánovaných kontrol.| 
 
 
-### Nastavení aktualizací
+## - Aktualizace
 
 |Název nastavení|Podrobnosti|
 |----------------|---------------|
@@ -176,14 +176,14 @@ Díky této vlastnosti můžete nasadit nastavení Windows 10, která nejdou kon
 
 
 
-### Obecná nastavení vlastních zásad
+## - Obecné
 
 |Název nastavení|Podrobnosti|
     |----------------|--------------------|
     |**Název**|Zadejte jedinečný název vlastní zásady, abyste ji mohli v konzole Intune snadno identifikovat.|
     |**Popis**|Zadejte popis, který zásadu vystihne, a uveďte jakékoli další důležité informace, které vám pomůžou zásadu najít.|
 
-### Nastavení OMA-URI vlastních zásad
+## - Nastavení OMA-URI
 
 |Název nastavení|Podrobnosti|
     |--------|--------------------|
@@ -194,12 +194,12 @@ Díky této vlastnosti můžete nasadit nastavení Windows 10, která nejdou kon
     |**Hodnota**|Zadejte hodnotu pro přidružení k OMA-URI, který jste zadali dřív.|
 
 
-## Vlastní nastavení URI pro zařízení s Windows 10
+## - Nastavení Windows 10 URI
 Toto téma obsahuje seznam nastavení, která se dají konfigurovat pro zařízení s Windows 10 a Windows 10 Mobile ve **vlastních zásadách Microsoft Intune pro Windows 10**.
 
 Pokud chcete používat vlastní zásadu URI Windows, musí se všechna zařízení zaregistrovat v Intune.
 
-### Nastavení URI zásady
+## - Zásady
 
 |Název zásady|Podrobnosti|
 |---------------|------------|-----------|
@@ -272,7 +272,7 @@ Pokud chcete používat vlastní zásadu URI Windows, musí se všechna zaříze
 |**Update/DeferUpgradePeriod**<br>(Desktop a Mobile)|**Popis:** Zásada umožňující odložení upgradu funkcí až o 8 měsíců<br /><br />**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Update/DeferUpgradePeriod<br /><br />**Datový typ:** Celé číslo<br /><br />**Povolené hodnoty:**<br>**0**: Použít aktualizace okamžitě (výchozí)<br>**1**-**8**: Počet měsíců odložení upgradu funkcí<br /><br />Více informací najdete v následujících tématech:<br>[Úvod do údržby Windows 10](https://technet.microsoft.com/library/mt598226.aspx)<br>[Plán pro nasazení Windows 10](https://technet.microsoft.com/library/mt574241.aspx)|
 |**Update/PauseDeferrals**<br>(Desktop a Mobile)|**Popis:** Umožňuje počítači CBB zastavit přijímání aktualizací a upgradů až po dobu 5 týdnů. Tato možnost by měla být použitá v případě, že nastane problém s aktualizací.<br /><br />**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Update/PauseDeferrals<br /><br />**Datový typ:** Celé číslo<br /><br />**Povolené hodnoty:**<br>**0**: Použít aktualizace okamžitě (výchozí)<br>**1**: Pozastavit aktualizace a upgrady (platnost po 5 týdnech vyprší)|
 
-### Nastavení URI programu Windows Defender
+## - Windows Defender
 
 |Název zásady|Podrobnosti|
 |---------------|-----------|
@@ -302,7 +302,7 @@ Pokud chcete používat vlastní zásadu URI Windows, musí se všechna zaříze
 |**ExcludedPaths**<br>(jenom Desktop)|**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Defender/ExcludedPaths<br /><br />**Datový typ:** Řetězec<br /><br />**Povolené hodnoty:**<br /><br />*&lt;seznam cest oddělený středníkem&gt;*<br /><br />Příklad: **c:\test;c:\test1.exe**<br /><br />**Výchozí hodnota:** Nevylučují se žádné cesty.|
 |**ExcludedProcesses**<br>(jenom Desktop)|**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Defender/ExcludedProcesses<br /><br />**Datový typ:** Řetězec<br /><br />**Povolené hodnoty:**<br>*&lt;seznam cest oddělený středníkem&gt;*<br>Příklad: **c:\test.exe;c:\test1.exe**<br>**Výchozí hodnota:** Nevylučují se žádné procesy.|
 
-### Nastavení URI prohlížeče Edge
+## - Prohlížeč Edge
 
 |Název zásady|Podrobnosti|
 |---------------|------------|-----------|
@@ -323,6 +323,6 @@ Pokud chcete používat vlastní zásadu URI Windows, musí se všechna zaříze
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO2-->
 
 

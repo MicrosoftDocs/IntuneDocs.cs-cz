@@ -13,8 +13,8 @@ ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 80ebf1a56106ad4e66d2d791ab98edae1ab11505
-ms.openlocfilehash: 9c89a70f8d9625504f6c710fe29f308dfd34530a
+ms.sourcegitcommit: 6c6a6fed876e49888d8fda1fd93b39313387ba38
+ms.openlocfilehash: 6cb6c0b8a8f4c1b88565ce4b7a5690406b4ddf40
 
 
 ---
@@ -34,13 +34,29 @@ Pokud byste pak někdy v budoucnosti chtěli registraci telefonu zrušit, zůsta
 3.  Postupujte podle pokynů na obrazovce. Během šifrování se zařízení může několikrát restartovat.
 
 ### Co dělat v případě problémů
-**Problém:** Zařízení jste už zašifrovali a dojde k jedné z těchto věcí:
+**Problém:** Zařízení jste už zašifrovali a dojde k jedné z těchto situací:
 
 - Tlačítko pro šifrování je zakázané.
 - Zobrazí se zpráva s informacemi o tom, že je stále nutné nastavit šifrování.
 - Bude docházet k chybám při pokusu o použití aplikace Portál společnosti.
 
-**Co dělat:** Zkontrolujte, že jste nastavili PIN kód nebo heslo na zařízení.
+**Možná řešení**: 
+
+1. Ujistěte se, že je zařízení nabité a připojené k nabíječce.
+
+2. Zkontrolujte, že jste na zařízení nastavili PIN kód nebo heslo.
+
+3. Pokud jste už na zařízení nastavili kód PIN nebo heslo, zkuste následující kroky, pokud váš správce IT může vyžadovat kvůli lepšímu zabezpečení zařízení. Názvy nabídek, které vidíte, se můžou mírně lišit od těch v postupu, v závislosti na typu zařízení se systémem Android, které máte.
+
+    a. Přejděte k položce **Nastavení** > **Zabezpečení** > **Zamykací obrazovka**. Potvrďte aktuální PIN kód nebo heslo.
+
+    b. Na obrazovce **Vyberte zámek obrazovky** vyberte typ zámku obrazovky, který chcete použít.
+
+    c. Na obrazovce **Bezpečné spuštění** klepněte na **Při spuštění zařízení požadovat kód PIN** a pak na **Pokračovat**.
+
+    d. Zvolte kód PIN (můžete zadat stejný jako ten, který jste zadali dříve) a klepněte na **Potvrďte kód PIN**.
+
+    e. Otevřete Portál společnosti, vyberte své zařízení a klepněte na možnost **Kontrola dodržování předpisů**.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT (vyhledejte kontaktní informace na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište týmu Microsoft Android na adresu wintunedroidfbk@microsoft.com.
 
@@ -49,6 +65,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT (vyhledejte konta
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO2-->
 
 

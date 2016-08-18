@@ -13,8 +13,8 @@ ms.assetid: 09bae0b9-4f79-4658-8ca1-a71ab992c1b2
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: 70b980c045d8d37aa4ea5bee5858c0c728d54114
+ms.sourcegitcommit: a083684da6abe9617f8b27604450c2a3b996b7cf
+ms.openlocfilehash: eeacb3f0898f2a1375a4119e01c939dd11d43940
 
 
 ---
@@ -108,7 +108,7 @@ Když vyberete nasazenou zásadu, zobrazí se v dolní části seznamu zásad da
 ## Nejčastější dotazy týkající se zásad Intune
 
 ### Jak dlouho trvá mobilnímu zařízení, než získá zásadu nebo aplikaci potom, co byly nasazené?
-Po nasazení zásady nebo aplikace se Intune hned začne pokoušet upozornit zařízení, že se mělo ohlásit službě Intune. To obvykle trvá méně než 5 minut.
+Po nasazení zásady nebo aplikace se Intune hned začne pokoušet upozornit zařízení, že se mělo ohlásit službě Intune. To obvykle trvá méně než pět minut.
 
 Pokud se zařízení neohlásí po odeslání prvního oznámení, Intune provede tři další pokusy.  Když je zařízení offline (je třeba vypnuté nebo není připojené k síti), nemusí oznámení vůbec dostat. V takovém případě zařízení získá zásadu při dalším plánovaném ohlášení své přítomnosti ve službě Intune:
 
@@ -152,7 +152,7 @@ Konflikt nastane, když je nastavení dvou zásad stejné.  Představte si třeb
 Pokud se jedna zásada nasadí do aplikace a uplatní se a pak se nasadí druhá zásada, bude mít první zásada přednost a zůstane nasazená, a u druhé se zobrazí konflikt. Když se obě nasadí současně, to znamená, že není žádná předchozí zásada, budou v konfliktu obě. Všechna konfliktní nastavení se nastaví na nejvíc omezující hodnoty.
 
 ### Co se stane při konfliktu vlastních zásad iOS?
-Intune nevyhodnocuje datovou část konfiguračních souborů Apple nebo vlastní zásady OMA-URI. Slouží jenom jako mechanismus doručování.
+Intune nevyhodnocuje datovou část konfiguračních souborů Apple nebo vlastní zásady OMA-URI (Open Mobile Alliance Uniform Resource Identifier). Slouží jenom jako mechanismus doručování.
 
 Když nasadíte vlastní zásadu, zkontrolujte, jestli nakonfigurované nastavení není v konfliktu se zásadami dodržování předpisů, konfiguračními zásadami nebo jinými vlastními zásadami. Při konfliktu mezi nastavením a vlastní zásadou je pořadí použití nastavení náhodné.
 
@@ -215,6 +215,6 @@ Projděte si téma [Řešení potíží se zásadami v Microsoft Intune](/intune
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

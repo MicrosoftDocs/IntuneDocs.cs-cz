@@ -13,8 +13,8 @@ ms.assetid: 0ed3a002-7533-4001-ae24-e10b64b66620
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
-ms.openlocfilehash: 8f342183590c1099661a0121c1d99c2aa3aa0ba4
+ms.sourcegitcommit: 46479cfe3d2648eefbaefd0a831af2412b509fce
+ms.openlocfilehash: e920f133aeaf0b0a938e07b4923869318a902d57
 
 
 ---
@@ -91,17 +91,11 @@ Pokud při pokusu o registraci zařízení do služby Intune dojde k chybě, pro
 
     ![Zadání kódu PIN nebo hesla](./media/and-enroll-6-PIN-native.png)
 
-13.  Postupujte podle pokynů níže, které odpovídají typu používaného zařízení (nativní Android nebo Samsung Knox). Pokud chcete zjistit, jestli máte zařízení Samsung Knox, přejděte na **Nastavení** &gt; **O zařízení**. Pokud se tu nezobrazí verze Knoxu, máte nativní zařízení s Androidem.
-
-    -   Nativní zařízení (jiné než Samsung Knox): Na obrazovce **Název certifikátu** přijměte výchozí certifikát klepnutím na **OK**.
-
-    ![Obrazovka Název certifikátu](./media/and-enroll-7-cert-native.png)
-
-    -   Zařízení Samsung Knox: Přijměte zásady ochrany osobních údajů a klepněte na **POTVRDIT**.
+13.  Pokud používáte zařízení s funkcí Samsung Knox, klepněte na **Potvrdit** a zobrazí se zpráva o registraci zařízení. Pokud používáte nativní zařízení Android, na obrazovce uvedené dole jen zkontrolujte, že bylo zařízení zaregistrováno.
 
     ![Zásady ochrany osobních údajů Samsung KNOX](./media/and-enroll-7-knox-privacy-policy.png)
 
-    Při registraci zařízení v Intune se na obrazovce zobrazí tato zpráva.
+    Tato obrazovka informuje o registraci zařízení.
 
     ![Obrazovka registrace zařízení](./media/and-enroll-8-device-enrolling.png)
 
@@ -123,6 +117,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT (vyhledejte konta
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

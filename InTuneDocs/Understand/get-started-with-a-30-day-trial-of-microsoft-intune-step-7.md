@@ -2,9 +2,9 @@
 title: "Další kroky po dokončení testování Intune | Microsoft Intune"
 description: "Co potřebujete vědět o předplatných a licencování po nastavení bezplatné 30denní zkušební verze Intune"
 keywords: 
-author: Staciebarker
+author: lindavr
 manager: angrobe
-ms.date: 04/28/2016
+ms.date: 08/09/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: cad9ae15-26e5-418d-8ce5-c2dafc2071f0
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 60ee39a7eeeb9068a7350ec87f60e7148ccb7826
-ms.openlocfilehash: 3edd1821f910f9c2ea9e8324a3ac08e373ec7b0a
+ms.sourcegitcommit: 51fba2b01d8978bc062c50c4388714609be0fdf0
+ms.openlocfilehash: 1c99894eeb63ea047887f3e3b9bdec68ff095d94
 
 
 ---
@@ -28,12 +28,12 @@ Bezplatnou testovací verzi Intune můžete převést na placené předplatné n
 
 -   **Enterprise Mobility Suite** – Poskytuje služby Intune, Azure Active Directory Premium a Azure RMS. Další informace vám poskytne váš account manažer Microsoftu nebo místní prodejce. Můžete si taky přečíst další [informace o sadě Enterprise Mobility](https://www.microsoft.com/en-us/server-cloud/enterprise-mobility/overview.aspx) a podívat se na [ceny sady Enterprise Mobility](http://www.microsoft.com/en-us/server-cloud/products/enterprise-mobility-suite/Purchasing.aspx).
 
--   **Smlouva Enterprise Agreement** (více než 250 uživatelů) – Ideální licenční program pro organizace s víc než 250 uživateli. Poskytuje vám flexibilitu zvolit si takový místní software a online služby, které nejvíc vyhovují potřebám vašich uživatelů a pomáhají vám optimalizovat náklady na technologie. Další informace vám poskytne váš account manažer Microsoftu nebo místní prodejce nebo navštivte [web multilicenčního programu Enterprise](http://www.microsoft.com/licensing/licensing-options/enterprise.aspx).
+-   **Smlouva Enterprise Agreement** (&gt;více než 250 uživatelů) – Ideální licenční program pro organizace s víc než 250 uživateli. Poskytuje vám flexibilitu zvolit si takový místní software a online služby, které nejvíc vyhovují potřebám vašich uživatelů a pomáhají vám optimalizovat náklady na technologie. Další informace vám poskytne váš account manažer Microsoftu nebo místní prodejce nebo navštivte [web multilicenčního programu Enterprise](http://www.microsoft.com/licensing/licensing-options/enterprise.aspx).
 
--   **Online program předplatných** (méně než 250 uživatelů) – [Program multilicencí online služeb](http://www.microsoft.com/licensing/online-services/default.aspx) je určený speciálně pro organizace s méně než 250 uživateli. Tento program můžete použít pro předplatné, správu a nasazení služeb Intune.
+-   **Online program předplatných** (&lt;250 uživatelů) – [Program multilicencí online služeb](http://www.microsoft.com/licensing/online-services/default.aspx) je určený speciálně pro organizace s méně než 250 uživateli. Tento program můžete použít pro předplatné, správu a nasazení služeb Intune.
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

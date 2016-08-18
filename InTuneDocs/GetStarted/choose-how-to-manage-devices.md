@@ -13,8 +13,8 @@ ms.assetid: 770aad50-fd7a-4cf1-a793-f95fe47fc3f8
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 76d0d9c620000864a4a554600985ba351c18d359
-ms.openlocfilehash: 067838593f7a222b5949cbfaf20744104030aee6
+ms.sourcegitcommit: 7c244554eb4b6ae5a248b53a7b4b6171807f4bfa
+ms.openlocfilehash: e353391375ce7b54f0be479607349e5618de1c37
 
 
 ---
@@ -42,7 +42,7 @@ Mobilní zařízení s operačními systémy včetně systému iOS, Android a Wi
 |**Popis**|Osobní zařízení zaregistrované pomocí Microsoft Intune|Zařízení jediného uživatele vlastněné společností|Zařízení vlastněné společností, sdílené mnoha uživateli a spravované účtem správce|Zařízení bez uživatele vlastněné společností a používané mnoha uživateli|
 |**Uživatel zařízení**|Vlastník|Přiřazený uživatel|Žádný účet specifický pro uživatele|Bez konkrétního uživatele|
 |**Kdo se registruje**|Vlastník|Správce|Správce zařízení|Kdokoliv|
-|**Kdo ruší registraci**|Vlastník nebo správce|Správce|Správce|Správce|
+|**Kdo ruší registraci**|Vlastník nebo správce|Platforma |Správce nebo uživatel|Správce nebo uživatel|
 |**Kdo může resetovat**|Vlastník nebo správce|Správce|Správce|Správce|
 
 <div class="alert alert-tip">
@@ -80,6 +80,6 @@ Nyní jste se seznámili s některými možnostmi, které můžete použít při
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: 674c8f4c-00be-4c69-85b7-cf7bdaa71c94
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: 6da7393834b7cb14085e090a014e030d2df3ff2f
+ms.sourcegitcommit: 533163d58b3d5f838074c31832ea5500aaef36c2
+ms.openlocfilehash: 9735708dc636f015e259eb4a852ddd57b90f1b92
 
 
 ---
@@ -27,7 +27,7 @@ Microsoft Intune vám pomůže spravovat aplikace, které jste koupili prostřed
 
 ## Jaké typy aplikací můžete spravovat?
 
-Intune vám v současné době umožňuje spravovat hromadně zakoupené aplikace z App Storu iOS a Windows Storu pro firmy.
+S Intune v současné době můžete spravovat hromadně zakoupené aplikace z App Storu iOS a Windows Storu pro firmy.
 Způsob správy licencovaných aplikací z jednotlivých obchodů najdete v tématech níže:
 
 - [Správa hromadně zakoupených aplikací iOS](manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune.md)
@@ -35,9 +35,6 @@ Způsob správy licencovaných aplikací z jednotlivých obchodů najdete v tém
 
 
 
-
-
-
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

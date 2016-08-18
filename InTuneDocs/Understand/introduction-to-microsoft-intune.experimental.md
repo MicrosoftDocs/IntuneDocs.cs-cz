@@ -1,5 +1,4 @@
 ---
-experimental: true
 experiment_id: kgremban_images_080416
 title: "Úvod do Microsoft Intune | Microsoft Intune"
 description: "Přečtěte si o tom, jak je Intune komponentou správy mobilních zařízení v řešení Enterprise Mobility + Security."
@@ -15,8 +14,8 @@ ms.assetid: 3b4e778d-ac13-4c23-974f-5122f74626bc
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f88c9f6b856f91db8c9218ab41a87bc95f45a578
-ms.openlocfilehash: efc6fed1d9e0766dd0deb24e8f5f422d1f60f568
+ms.sourcegitcommit: dbb8a8fdcc39aa91f4d2c0a671447e44daf8570d
+ms.openlocfilehash: 1b5549e4e0ad7652ed39659d7ebe7b95049dcbe6
 
 
 ---
@@ -25,8 +24,6 @@ ms.openlocfilehash: efc6fed1d9e0766dd0deb24e8f5f422d1f60f568
 Microsoft Intune má v sadě Microsoft Enterprise Mobility + Security (EMS, dříve Enterprise Mobility Suite) na starosti správu. Podniková mobilita se točí kolem toho, jak zaměstnancům zajistit produktivitu na všech zařízeních a zajistit přitom ochranu firemních informací.  
 
 EMS je kompletní integrovaná sada nástrojů pro podnikovou mobilitu, která se zaměřuje na produktivitu, identity, řízení přístupu, správu a ochranu dat. Nabízí efektivní způsob, jak nasadit a provozovat řešení mobility ve vaší organizaci.  
-
-![Obrázek vize podnikové mobility](..\media\em-vision.png)
 
 Intune pomáhá spravovat mobilní zařízení a mobilní aplikace. Těsně se integruje se službou Azure Active Directory (Azure AD) pro řízení přístupu a identit a se službou Azure Rights Management (Azure RMS) pro ochranu dat.  
 
@@ -38,6 +35,8 @@ Mezi běžné obchodní problémy, které Intune pomáhá vyřešit, patří:
 * Poskytování „sdílených zařízení“ s omezeným využitím pro úkolové pracovníky
 * Implementace bezpečné strategie Přineste si vlastní zařízení (BYOD) nebo strategie využití osobních zařízení
 * Podpora zaměstnanců při přístupu ke službě Office 365 ze zařízení a aplikací, nad kterými nemáte kontrolu, jako je třeba stánek na veletrhu
+
+![Obrázek vize podnikové mobility](..\media\em-vision.png)
 
 Mezi primární nástroje, které Intune nabízí, patří:
 * **Správa mobilních zařízení (MDM):** Možnost zaregistrovat zařízení v Intune, takže můžete tato zařízení zřizovat, konfigurovat a monitorovat a provádět s nimi akce, jako je vymazání.

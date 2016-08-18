@@ -13,30 +13,30 @@ ms.assetid: e76af5b7-e933-442c-a9d3-3b42c5f5868b
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: 70e5920679149791c4856a1db905e564dc1278bd
+ms.sourcegitcommit: e64c4e077a3d2b75a8c246f097fcf7472d7edac6
+ms.openlocfilehash: 286f159e57820a8c8723004c167ae7296626894c
 
 
 ---
 
 # Řešení konfliktů objektů zásad skupiny (GPO) a zásad Microsoft Intune
-Intune používá zásady, které vám pomůžou spravovat nastavení na počítačích s Windows, které spravujete. Pomocí zásad můžete třeba na počítačích řídit nastavení brány Windows Firewall. Hodně nastavení služby Intune se podobá nastavením, která nejspíš konfigurujete pomocí zásad skupiny Windows. Někdy se ale může stát, že se tyto dvě metody dostanou vzájemně do konfliktu.
+Intune používá zásady, které vám pomůžou spravovat nastavení na počítačích s Windows. Pomocí zásad můžete třeba na počítačích řídit nastavení brány Windows Firewall. Mnohá nastavení služby Intune se podobají nastavením, která nejspíš konfigurujete pomocí zásad skupiny Windows. Někdy se ale může stát, že se tyto dvě metody dostanou vzájemně do konfliktu.
 
 V případě konfliktu mají před zásadami Intune přednost zásady skupiny na úrovni domény mimo případů, kdy se počítač nemůže přihlásit do domény. V takovém případě se na klientském počítači použijí zásady Intune.
 
 ## Co je potřeba udělat, když používáte zásady skupiny
-Zkontrolujte, že žádné zásady, které používáte, nejsou spravované zásadami skupiny. Abyste líp zabránili konfliktům, můžete využít některé z těchto metod:
+Zkontrolujte, že žádné zásady, které používáte, nejsou spravované zásadami skupiny. Abyste lépe zabránili konfliktům, můžete využít některé z těchto metod:
 
 -   Před instalací klienta Intune přesuňte počítače do organizační jednotky služby Active Directory, u které se nepoužívá nastavení zásad skupiny. V organizačních jednotkách obsahujících počítače zaregistrované v Intune, u kterých nechcete používat nastavení zásad skupiny, můžete taky zablokovat dědičnost zásad skupiny.
 
--   Pomocí filtru skupiny zabezpečení omezte objekty GPO jenom na počítače, které nespravuje Intune. 
+-   Pomocí filtru skupiny zabezpečení omezte objekty GPO jenom na počítače, které nespravuje Intune.
 
 -   Zakažte nebo odeberte objekty zásad skupiny, které jsou v konfliktu se zásadami Intune.
 
 Další informace o službě Active Directory a zásadách skupiny Windows najdete v dokumentaci k Windows Serveru.
 
 ## Jak filtrovat stávající objekty GPO, aby nedocházelo ke konfliktům se zásadami Intune
-Pokud jste našli objekty GPO s nastavením, které je v konfliktu s nastavením zásad Intune, můžete pomocí filtrů skupiny zabezpečení omezit tyto objekty zásad skupiny jenom na počítače, které nespravuje Intune.
+Pokud jste našli objekty GPO s nastavením, které je v konfliktu se zásadami Intune, můžete pomocí filtrů skupiny zabezpečení omezit tyto objekty zásad skupiny jenom na počítače, které nespravuje Intune.
 
 <!--- ### Use WMI filters
 WMI filters selectively apply GPOs to computers that satisfy the conditions of a query. To apply a WMI filter, deploy a WMI class instance to all PCs in the enterprise before you enroll any PCs in the Intune service.
@@ -102,13 +102,13 @@ WMI filters selectively apply GPOs to computers that satisfy the conditions of a
 For more information about how to apply WMI filters in Group Policy, see the blog post [Security Filtering, WMI Filtering, and Item-level Targeting in Group Policy Preferences](http://go.microsoft.com/fwlink/?LinkId=177883). --->
 
 
-Zásady skupiny umožňují používat objekty zásad skupiny jenom u skupin zabezpečení, které jsou pro vybraný objekt zásad skupiny zadané v oblasti **Filtrování zabezpečení** konzoly pro správu zásad skupiny. Objekty zásad skupiny se ve výchozím nastavení používají u skupiny **Authenticated Users**.
+Můžete použít objekty zásad skupiny jenom na skupiny zabezpečení, které jsou pro vybraný objekt zásad skupiny zadané v oblasti **Filtrování zabezpečení** konzoly pro správu zásad skupiny. Objekty zásad skupiny se ve výchozím nastavení používají pro skupinu *Authenticated Users*.
 
--   V modulu snap-in **Uživatelé a počítače služby Active Directory** vytvořte novou skupinu zabezpečení obsahující účty počítačů a uživatelské účty, které nechcete spravovat pomocí Intune. Vaše skupina by třeba mohla mít název **Nespravovat v Microsoft Intune**.
+-   V modulu snap-in **Uživatelé a počítače služby Active Directory** vytvořte novou skupinu zabezpečení obsahující účty počítačů a uživatelské účty, které nechcete spravovat pomocí Intune. Vaši skupinu můžete třeba pojmenovat *Není v Microsoft Intune*.
 
 -   V konzole pro správu zásad skupiny klikněte na kartě **Delegování** pro vybraný objekt zásad skupiny pravým tlačítkem na novou skupinu zabezpečení a udělte uživatelům i počítačům v této skupině zabezpečení příslušná oprávnění **Číst** a **Používat zásady skupiny**. (Oprávnění**Používat zásady skupiny** jsou dostupná v dialogovém okně **Upřesnit** .)
 
--   Pak u vybraného objektu zásad skupiny použijte nový filtr skupin zabezpečení a odeberte výchozí filtr **Authenticated Users** .
+-   Pak u vybraného objektu zásad skupiny použijte nový filtr skupin zabezpečení a odeberte výchozí filtr **Authenticated Users**.
 
 S novou skupinou zabezpečení se musí ve změnách služby Intune nakládat jako s registrací.
 
@@ -117,6 +117,6 @@ S novou skupinou zabezpečení se musí ve změnách služby Intune nakládat ja
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

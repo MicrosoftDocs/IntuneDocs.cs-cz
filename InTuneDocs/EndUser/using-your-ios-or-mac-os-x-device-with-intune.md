@@ -4,7 +4,7 @@ description: "Obsahuje seznam odkazů na úlohy, které můžete dělat v mobiln
 keywords: 
 author: Staciebarker
 manager: angrobe
-ms.date: 07/26/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,18 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
-ms.openlocfilehash: c91355b77850acbb76cd028bffb231e2ba1a5174
+ms.sourcegitcommit: 5c11b33ef2986ef3a88823c34900663a7f8195ac
+ms.openlocfilehash: d40620c3b4384e178af9c84bae85bcb09b4ffeee
 
 
 ---
 
 # Using your iOS or Mac OS X device with Intune
 
-Tato stránka obsahuje odkazy na všechny úlohy, které můžou provést koncoví uživatelé na svých zařízeních spravovaných Intune. Správci IT se můžou odkazovat na tyto informace, aby viděli kroky, podle kterých uživatelé postupují, aby provedli různé úlohy, které jsou seskupené do kategorií: informace týkající se registrace, úlohy správy a problémy s kompatibilitou.
+Tento článek obsahuje odkazy na všechny úlohy, které můžou provést koncoví uživatelé na svých zařízeních spravovaných Intune. Správci IT můžou z těchto informací zjistit kroky, podle kterých uživatelé postupují při provádění různých úloh, seskupených do kategorií: 
+- Instalace aplikace Portál společnosti a registrace ve službě Intune 
+- Úlohy správy po registraci
+- Problémy se shodou
 
 ## Instalace aplikace Portál společnosti a registrace ve službě Intune
 
@@ -61,6 +64,6 @@ Informace v této části vám pomůžou s opravit problémy, se kterými se mů
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

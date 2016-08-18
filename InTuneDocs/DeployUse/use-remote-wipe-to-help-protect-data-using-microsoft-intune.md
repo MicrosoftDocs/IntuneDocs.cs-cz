@@ -13,25 +13,55 @@ ms.assetid: 8519e411-3d48-44eb-9b41-3e4fd6a93112
 ms.reviewer: lancecra
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: c61fd1070f84f359ac6abe9ff48e51d2787c4eb4
+ms.sourcegitcommit: dcfa3af374a7e64e931508e1a8022bf8a50c71a7
+ms.openlocfilehash: a09c9b55d7906ab792bda90b172a36b3656ed6dd
 
 
 ---
 
 # Lepší ochrana dat s využitím plného nebo selektivního vymazání pomocí Microsoft Intune
-Stejně jako u zařízení se v určitém okamžiku stane, že potřebujete nebo chcete [vyřadit aplikace](retire-apps-using-microsoft-intune.md), které jste nasadili do počítačů a zařízení, protože už nejsou potřeba. Může být taky potřeba odebrat ze zařízení firemní data. K tomuto účelu Intune poskytuje možnosti selektivního a úplného vymazání. Protože mobilní zařízení můžou ukládat citlivá firemní data a poskytovat přístup ke spoustě firemních prostředků, můžete z rozhraní Intune odeslat příkaz pro vzdálené vymazání zařízení a ztracené nebo odcizené zařízení vymazat. Příkaz pro vzdálené vymazání zařízení můžou taky zadat uživatelé z Intune na soukromých zařízeních, která jsou v Intune zaregistrovaná.
+Ať už zařízení není nadále potřebné, bude předáno někomu jinému nebo se ztratilo, můžete z něj (pokud je spravováno v Intune) vzdáleně vymazat aplikace a data. K tomuto účelu Intune poskytuje možnosti selektivního a úplného vymazání. Příkaz pro vzdálené vymazání zařízení můžou taky zadat uživatelé z portálu společnosti Intune pro soukromá zařízení, která jsou v Intune zaregistrovaná.
 
   > [!NOTE]
-  > Toto téma se věnuje jenom vymazání zařízení spravovaných přes Intune. K [vymazání firemních dat z aplikace](wipe-managed-company-app-data-with-microsoft-intune.md) můžete taky použít [portál Azure Preview](https://portal.azure.com).
+  > Toto téma se věnuje jenom vymazání zařízení registrovaných ve správě mobilních zařízení Intune. K [vymazání firemních dat z aplikace](wipe-managed-company-app-data-with-microsoft-intune.md) můžete taky použít [portál Azure Preview](https://portal.azure.com). Je rovněž možné [vyřadit počítače spravované klientským softwarem Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client#retire-a-computer.md).
 
 ## Úplné vymazání
 
-
 **Úplné vymazání** na zařízení obnoví výchozí nastavení od výrobce a odebere všechna firemní a uživatelská data a nastavení. Zařízení se odebere ze služby Intune. Plné vymazání je užitečné k tomu, aby se zařízení resetovalo, než se předá novému uživateli, a v případech, kdy došlo ke ztrátě nebo odcizení zařízení.  **Volbu úplného vymazání používejte velmi opatrně. Data v zařízení nejde obnovit.**
+
 
 > [!Warning]
 > Zařízení s Windows 10 RTM (tj. starší než Windows 10 verze 1511) s méně než 4 GB paměti RAM se mohou stát po vymazání nedostupná. Když chcete přistupovat k zařízením s Windows 10, která přestala reagovat, můžete zařízení spustit z jednotky USB nebo použít podobné náhradní řešení.
+
+### Vzdálené vymazání zařízení z konzoly správce Intune
+
+1.  Vyberte zařízení, která se mají vymazat. Můžete je vyhledat podle uživatele nebo podle zařízení.
+
+    -   **Podle uživatele:**
+
+        1.  V [konzole správce Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všichni uživatelé**.
+
+        2.  Zvolte jméno uživatele, pro kterého chcete vymazat mobilní zařízení. Vyberte **Zobrazit vlastnosti**.
+
+        3.  Na stránce **Vlastnosti** tohoto uživatele zvolte **Zařízení** a pak klikněte na název mobilního zařízení, které chcete vymazat. Když chcete vybrat víc zařízení, klikejte na ně se stisknutou klávesou Ctrl.
+
+    -   **Podle zařízení:**
+
+        1.  V [konzole správce Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všechna mobilní zařízení**.
+
+      ![Zahájení operace vymazání nebo vyřazení](../media/dev-sa-wipe.png)
+
+        2.  Zvolte **Zařízení** a pak vyberte název mobilního zařízení, které chcete vymazat. Když chcete vybrat víc zařízení, klikejte na ně se stisknutou klávesou Ctrl.
+
+2.  Zvolte **Vyřadit z provozu či vymazat**.
+
+3.  Zobrazí se zpráva s požadavkem, abyste potvrdili, jestli chcete zařízení vyřadit z provozu.
+
+    -   Pokud chcete provést **Selektivní vymazání**, které odebere jenom firemní aplikace a data, zvolte **Ano**.
+
+    -   Pokud chcete provést **Úplné vymazání**, který vymaže všechny aplikace a data a vrátí zařízení do výchozího nastavení z výroby, vyberte **Před vyřazením z provozu zařízení vymazat**. Tato akce se vztahuje na všechny platformy kromě Windows 8.1. **Data odebraná pomocí úplného vymazání nejde obnovit**.
+
+Za předpokladu, že je zařízení zapnuté a připojené k internetu, trvá vymazání všech typů zařízení méně než 15 minut.
 
 ## Selektivní vymazání
 
@@ -78,36 +108,6 @@ Stejně jako u zařízení se v určitém okamžiku stane, že potřebujete nebo
 |E-mailu|Odebere e-mail s povoleným systémem souborů EFS, což zahrnuje e-maily a přílohy aplikace Pošta pro Windows.|Není podporované|E-mailové profily, které jsou zřízené prostřednictvím Intune, se odeberou a e-maily v mezipaměti zařízení se odstraní.|Odebere e-mail s povoleným systémem souborů EFS, což zahrnuje e-maily a přílohy aplikace Pošta pro Windows. Odebere e-mailové účty, které byly zřízené Intune.|
 |Zrušení služby Azure Active Directory (AAD)|Ne|Ne|Záznam AAD se odebere|Nelze použít. Windows 10 nepodporuje selektivní vymazání pro zařízení připojená k Azure Active Directory.|
 
-### Vzdálené vymazání zařízení z konzoly správce Intune
-
-1.  Vyberte zařízení, která se mají vymazat. Můžete je vyhledat podle uživatele nebo podle zařízení.
-
-    -   **Podle uživatele:**
-
-        1.  V [konzole správce Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všichni uživatelé**.
-
-        2.  Zvolte jméno uživatele, pro kterého chcete vymazat mobilní zařízení. Vyberte **Zobrazit vlastnosti**.
-
-        3.  Na stránce **Vlastnosti** tohoto uživatele zvolte **Zařízení** a pak klikněte na název mobilního zařízení, které chcete vymazat. Když chcete vybrat víc zařízení, klikejte na ně se stisknutou klávesou Ctrl.
-
-    -   **Podle zařízení:**
-
-        1.  V [konzole správce Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všechna mobilní zařízení**.
-
-      ![Zahájení operace vymazání nebo vyřazení](../media/dev-sa-wipe.png)
-
-        2.  Zvolte **Zařízení** a pak vyberte název mobilního zařízení, které chcete vymazat. Když chcete vybrat víc zařízení, klikejte na ně se stisknutou klávesou Ctrl.
-
-2.  Zvolte **Vyřadit z provozu či vymazat**.
-
-3.  Zobrazí se zpráva s požadavkem, abyste potvrdili, jestli chcete zařízení vyřadit z provozu.
-
-    -   Pokud chcete provést **Selektivní vymazání**, které odebere jenom firemní aplikace a data, zvolte **Ano**.
-
-    -   Pokud chcete provést **Úplné vymazání**, který vymaže všechny aplikace a data a vrátí zařízení do výchozího nastavení z výroby, vyberte **Před vyřazením z provozu zařízení vymazat**. Tato akce se vztahuje na všechny platformy kromě Windows 8.1. **Data odebraná pomocí úplného vymazání nejde obnovit**.
-
-Vymazání všech typů zařízení trvá méně než 15 minut.
-
 ## Vymazání obsahu s povoleným šifrováním systému souborů EFS (Encryption File System)
 Selektivní vymazání obsahu zašifrovaného systémem souborů EFS podporuje Windows 8.1 a Windows RT 8.1. Pro selektivní vymazání obsahu s povoleným systémem souborů EFS platí následující:
 
@@ -142,6 +142,6 @@ Pokud chcete získat sestavu zařízení, která se vyřadila z provozu, vymazal
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 
