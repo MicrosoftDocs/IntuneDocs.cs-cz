@@ -75,12 +75,12 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 
 |Název nastavení|Podrobnosti|
 |----------------|----------------------|
-|**Povolit webový prohlížeč**|Umožňuje na zařízení používat webový prohlížeč Edge.<br>(jenom Windows 10 Mobile)|
+|**Povolit webový prohlížeč**|Umožňuje na zařízení používat webový prohlížeč Microsoft Edge.<br>(jenom Windows 10 Mobile)|
 |**Povolit návrhy vyhledávání v panelu Adresa**|Umožňuje, aby vám vyhledávací web při psaní hledaného textu navrhoval weby.|
 |**Povolit odesílání intranetového provozu do Internet Exploreru**|Umožňuje uživatelům otevírat intranetové weby v Internet Exploreru.<br>(jenom Windows 10 Desktop)|
-|**Povolit Do Not Track**|Nakonfiguruje prohlížeč Edge tak, aby se webům, které uživatelé navštíví, odesílaly hlavičky DNT (Do Not Track).|
+|**Povolit Do Not Track**|Nakonfiguruje prohlížeč Microsoft Edge tak, aby se webům, které uživatelé navštíví, odesílaly hlavičky DNT (Do Not Track).|
 |**Povolit SmartScreen**|Povoluje na zařízeních nastavení SmartScreen prohlížeče.|
-|**Povolit aktivní skriptování**|Umožňuje, aby se v prohlížeči Edge mohly spustit skripty, například Javascripty.|
+|**Povolit aktivní skriptování**|Umožňuje, aby se v prohlížeči Microsoft Edge mohly spustit skripty, například Javascripty.|
 |**Povolit automaticky otevíraná okna**|Povolí nebo zakáže blokování automaticky otevíraných oken v prohlížeči.<br>(jenom Windows 10 Desktop)|
 |**Povolit soubory cookie**|Povolí nebo zakáže soubory cookie.|
 |**Povolit automatické vyplňování**|Umožňuje uživatelům změnit nastavení automatického dokončování v prohlížeči.<br>(jenom Windows 10 Desktop)|
@@ -308,7 +308,7 @@ Pokud chcete používat vlastní zásadu URI Windows, musí se všechna zaříze
 |---------------|------------|-----------|
 |**Povolit prohlížeč**<br>(jenom Mobile)|**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Browser/AllowBrowser<br /><br />**Datový typ:** Celé číslo<br /><br />**Povolené hodnoty:**<br>**0** – Procházení je vypnuté.<br>**1** – Procházení je zapnuté (výchozí).|
 |**AllowSearchSuggestionsinAddressBar**<br>(Desktop a Mobile)|**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Browser/AllowSearchSuggestionsinAddressBar<br /><br />**Datový typ:** Celé číslo<br /><br />**Povolené hodnoty:**<br>**0** – Nezobrazovat návrhy vyhledávání<br>**1** – Zobrazovat návrhy vyhledávání (výchozí)|
-|**SendIntranetTraffictoInternetExplorer**<br>(jenom Desktop)|**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Browser/SendIntranetTraffictoInternetExplorer<br /><br />**Datový typ:** Celé číslo<br /><br />**Povolené hodnoty:**<br>**0** – Zakázáno (otevřít intranetové servery v prohlížeči Edge)<br>**1**– Povoleno (otevřít intranetové servery v Internet Exploreru)|
+|**SendIntranetTraffictoInternetExplorer**<br>(jenom Desktop)|**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Browser/SendIntranetTraffictoInternetExplorer<br /><br />**Datový typ:** Celé číslo<br /><br />**Povolené hodnoty:**<br>**0** – Zakázáno (otevřít intranetové servery v prohlížeči Microsoft Edge)<br>**1**– Povoleno (otevřít intranetové servery v Internet Exploreru)|
 |**Povolit Do Not Track**<br>(Desktop a Mobile)|**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Browser/AllowDoNotTrack<br /><br />**Datový typ:** Celé číslo<br /><br />**Povolené hodnoty:**<br>**0** – Zakázáno (DNT se neodešle – výchozí)<br>**1** – Povoleno (odeslat DNT)|
 |**Konfigurovat SmartScreen**<br>(Desktop a Mobile)|**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Browser/AllowSmartScreen<br /><br />**Datový typ:** Celé číslo<br /><br />**Povolené hodnoty:**<br>**0** – Nepovolit<br>**1** – Povolit (výchozí)|
 |**Povolit automaticky otevíraná okna**<br>(jenom Desktop)|**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Browser/AllowPopups<br /><br />**Datový typ:** Celé číslo<br /><br />**Povolené hodnoty:**<br>**0** – Blokovat automaticky otevíraná okna (výchozí)<br>**1** – Povolit automaticky otevíraná okna|
