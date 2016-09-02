@@ -13,13 +13,68 @@ ms.assetid: eb9b01ce-9b9b-4c2a-bf99-3879c0bdaba5
 ms.reviewer: lpatha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: 53a7bda5dd5adcac512c413c7069723ae638f279
+ms.sourcegitcommit: 5ab9592c253238fd832f8b48372e5474fcfc5331
+ms.openlocfilehash: 96b0cd997544b2013efaca818d614c9802baaa46
 
 
 ---
+## Oznámení o připravovaných vylepšeních správy skupin
+
+Na základě vašich žádostí o jednotnou správu skupin a cílů v oblastech Enterprise Mobility a Security převádíme skupiny Intune na skupiny zabezpečení založené na Azure Active Directory. Tím se sjednotí správa skupin v rámci Intune a Azure Active Directory (Azure AD). Toto nové prostředí vás zbaví nutnosti mít v jednotlivých službách duplicitní skupiny a zajistí možnosti rozšíření prostřednictvím PowerShellu a Graphu. 
+
+### Co to pro mne teď znamená?
+Tato změna vás teď nijak neovlivní, ale přesto vám můžete říct, co vás čeká:
+
+-   V září budou nové účty, které budou zřízené po vydání měsíční aktualizace služby, používat skupiny zabezpečení služby Azure AD, nikoli skupiny uživatelů Intune.   
+-   V říjnu budou nové účty, které budou zřízené po vydání měsíční aktualizace služby, spravovat jak skupiny uživatelů, tak i skupiny zařízení v portálu Azure AD. Žádný dopad na stávající zákazníky
+-   V listopadu začne produktový tým Intune s migrací stávajících zákazníků na novou správu skupin Azure AD. Všechny současné skupiny uživatelů a zařízení v Intune budou převedeny na skupiny zabezpečení Azure AD. Migrace bude provedena v dávkách a zahájena bude v listopadu. S migrací nezačneme, dokud si nebudeme jistí, že dopad na každodenní provoz bude minimální a že změnu nepocítí koncoví uživatelé. Před zahájením migrace vašeho účtu vás upozorníme.
+
+
+### Jak a kdy bude můj účet migrován do nového prostředí skupin?
+Aktuální zákazníci budou migrovány postupně v určitém časovém intervalu. Plán této migrace právě dokončujeme a během několika týdnů přineseme další informace. Na zahájení migrace budete s předstihem upozorněni. Pokud máte k migraci jakékoli otázky, obraťte se na náš tým migrace na adrese [intunegrps@microsoft.com](intunegrps@microsoft.com).
+
+### Co se stane s mými existujícími skupinami uživatelů a zařízení?
+ Současné skupiny uživatelů a zařízení v Intune budou migrovány na skupiny zabezpečení Azure AD. Výchozí skupiny Intune, jako například Všichni uživatelé, budou migrovány pouze pokud je v okamžiku migrace používáte ve svém nasazení. Migrace může být pro některé skupiny složitější a upozorníme vás, když bude při migraci nutné provést nějaké další kroky.
+
+### Jaké nové funkce mi změna přinese?
+Tady je přehled nových funkcí:
+
+-    Skupiny zabezpečení služby Azure AD budou v Intune podporované pro všechny typy nasazení.
+-    Skupiny zabezpečení služby Azure AD budou podporovat seskupování zařízení (vedle uživatelů).
+-    Skupiny zabezpečení služby Azure AD budou podporovat dynamické skupiny s atributy zařízení z Intune. Například budete moci dynamicky seskupit zařízení podle platformy, například iOS. To znamená, že při registraci nového zařízení iOS ve vaší organizaci bude zařízení automaticky přidáno do dynamické skupiny zařízení iOS.
+-    Sjednocené prostředí správy skupin v Azure AD a Intune.
+- Do Azure AD bude přidána *role Správce služby Intune*, aby správci služby Intune mohli provádět úlohy správy skupin v Azure AD.
+
+
+
+
+### Které funkce Intune přestanou být dostupné?
+Ačkoli se prostředí správy skupin zlepší, po migraci přestanou být dostupné některé současné funkce Intune.
+
+#### Funkce správy skupin
+
+-   Při vytváření nové skupiny nebude možné vyloučit členy nebo skupiny. Funkce dynamických skupin Azure AD vám ale umožní použít atributy k vytvoření rozšířených pravidel vylučujících členy na základě kritérií.
+-   Nebudou podporované skupiny **Neseskupení uživatelé** a **Neseskupená zařízení**. Tyto skupiny nebudou migrovány.
+
+
+#### Funkce závislé na konkrétních skupinách
+
+-   Role Správce služby nebude mít oprávnění **Správa skupin**.
+-   Nebude možné vytvořit skupinu zařízení Exchange ActiveSync.  Vaše skupina **všech zařízení spravovaných pomocí EAS** bude ze skupiny převedena na zobrazení sestavy.
+-  Přesun skupin v sestavách nebude dostupný.
+-  Vlastní pravidla cílení oznámení na skupiny nebudou dostupná.
+
+### Jak se mám na tyto změny připravit?
+ Máme několik doporučení, která vám tento přechod usnadní:
+
+- Před migrací odstraňte všechny nežádoucí nebo nepotřebné skupiny Intune.
+- Vyhodnoťte využívání funkce vyloučení ve skupinách a zvažte změnu návrhu skupin, abyste se bez této funkce obešli.
+-  Pokud máte správce, kteří nemají oprávnění k vytváření skupin ve službě Azure AD, požádejte správce Azure AD o jejich přidání do role **Správce služby Intune** v Azure AD.
+
 
 # Vytvoření skupin pro správu uživatelů a zařízení s Microsoft Intune
+
+Tato část popisuje, jak vytvořit skupiny Intune v konzole pro správu Intune.
 
 Pokud chcete vytvořit a spravovat skupiny, použijte pracovní prostor **Skupiny** v konzole pro správu Microsoft Intune. Stránka **Přehled skupin** obsahuje souhrny stavů, které vám pomůžou identifikovat problémy vyžadující vaši pozornost a určit jejich prioritu:
 
@@ -153,6 +208,6 @@ Každá zásada má **určenou hodnotu** a **Stav**. Určená hodnota označuje 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

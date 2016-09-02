@@ -13,8 +13,8 @@ ms.assetid: 4c0bd439-3b58-420b-9a9a-282886986786
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9a124663a80bb477d0312faa0fb43e4457ba8246
-ms.openlocfilehash: ae5ac5c697195f8b45f500cfa9d0de24953f8cb0
+ms.sourcegitcommit: 374a56612b5c2a4dfd65d920307d5a4deb709b9b
+ms.openlocfilehash: e96daf7f10db82adf0f4f92412128fabbe652d51
 
 
 ---
@@ -24,23 +24,23 @@ ms.openlocfilehash: ae5ac5c697195f8b45f500cfa9d0de24953f8cb0
 ## Vytvoření vlastní konfigurace
 Vlastní konfigurace můžete použít k vytvoření profilů VPN v Intune. Vytvoření vlastní konfigurace:
 
-   1. V konzole správce Intune vyberte **Zásady** -> **Přidat zásadu** -> *<Expand platform>* -> **Vlastní konfigurace** -> **Vytvořit zásadu**.
+   1. V konzole správce Intune vyberte **Zásady** > **Přidat zásadu** > *<Expand platform>* > **Vlastní konfigurace** > **Vytvořit zásadu**.
    2. Zadejte název pro tuto zásadu.
-   3. U každého nastavení identifikátoru URI klikněte na **Přidat** a zadejte požadované informace. Tady je příklad:
+   3. U každého nastavení identifikátoru URI zvolte **Přidat** a zadejte požadované informace. Tady je příklad:
 
    ![Dialogové okno vlastní konfigurace profilu VPN](./media/Intune_Add_VPN_URI.png)
 
-   4.  Po zadání všech nastavení identifikátorů URI klikněte na **Uložit zásadu** a potom nasaďte zásadu.
+   4.  Po zadání všech nastavení identifikátorů URI zvolte **Uložit zásadu** a potom zásadu nasaďte.
 
 ## Nasazení zásady konfigurace
 
-1.  V pracovním prostoru **Zásady** vyberte zásadu, kterou chcete nasadit, a pak klikněte na **Spravovat nasazení**.
+1.  V pracovním prostoru **Zásady** vyberte zásadu, kterou chcete nasadit, a potom zvolte **Spravovat nasazení**.
 
 2.  V dialogovém okně **Spravovat nasazení** :
 
-    -   **Pokud chcete zásadu nasadit** – vyberte jednu nebo víc skupin, do kterých chcete zásady nasadit, a pak klikněte na **Přidat** &gt; **OK**.
+    -   **Pokud chcete zásadu nasadit**, vyberte jednu nebo několik skupin, do kterých chcete zásady nasadit, a potom vyberte **Přidat** &gt; **OK**.
 
-    -   **Pokud chcete dialogové okno zavřít bez nasazení zásady** – klikněte na **Zrušit**.
+    -   **Pokud chcete dialogové okno zavřít bez nasazení zásady** – zvolte **Zrušit**.
 
 Když vyberete nasazenou zásadu, zobrazí se v dolní části seznamu zásad další informace o tomto nasazení.
 
@@ -83,7 +83,7 @@ Eap ./Vendor/MSFT/VPNv2/ContosoVPN/NativeProfile/Authentication/Eap/Configuratio
 
 **./Vendor/MSFT/VPNv2/ContosoVPN/TrafficFilterList/1/App/Id** Microsoft.MicrosoftEdge_8wekyb3d8bbwe
 
-Další informace týkající se používání těchto nastavení a další podrobnosti o tom, co dělají, uživatelé najdou v dokumentaci CSP: https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776(v=vs.85).aspx
+Další informace týkající se používání těchto nastavení a další podrobnosti o tom, co dělají, můžou zákazníci najít v dokumentaci poskytovatele konfigurační služby CSP: https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776(v=vs.85).aspx.
 
 ## Nastavení identifikátorů URI pro VPN pro aplikace pro Android na PulseSecure
 ### VLASTNÍ IDENTIFIKÁTORY URI PRO SEZNAM BALÍKŮ
@@ -107,11 +107,11 @@ Příklady:
 > - Pokud je poskytnutá hodnota PackageList, výchozí hodnota je *WHITELIST*.
 
 
-### Související témata
+### Viz taky
 (Připojení VPN v Microsoft Intune)[vpn-connections-in-microsoft-intune.md]
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

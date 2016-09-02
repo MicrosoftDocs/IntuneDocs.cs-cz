@@ -13,8 +13,8 @@ ms.assetid: 9b4f197d-bc10-4bee-91c9-19bcc8287d36
 ms.reviewer: vinaybha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: c1f9c60a1c79d23bab62617ed237ad982e82c39d
+ms.sourcegitcommit: 4993982adcfbc960ad71022268cc44d216d1c585
+ms.openlocfilehash: fb4ae43ffcbec24147e2e3ce3c96ec795289c925
 
 
 ---
@@ -29,10 +29,10 @@ Pro nastavení vícefaktorového ověřování potřebujete:
 
 -   **Server služby Active Directory Federation Services (ADFS) nakonfigurovaný pro MFA.** Server se systémem Windows Server 2012 R2 nastavený jako server ADFS. Další informace najdete v tématu [Zabezpečení cloudových a místních prostředků pomocí Azure Multi-Factor Authentication Serveru s Windows Server 2012 R2 AD FS](https://azure.microsoft.com/en-us/documentation/articles/multi-factor-authentication-get-started-adfs-w2k12/)
 
-Všechny výš uvedené servery musí splňovat požadavky na systém, které najdete v části [Požadavky na systém a informace o instalaci pro Windows Server 2012 R2](http://technet.microsoft.com/library/dn303418.aspx).
+Všechny výše uvedené servery musí splňovat požadavky na systém, které najdete v tématu [Požadavky na systém a informace o instalaci pro Windows Server 2012 R2](http://technet.microsoft.com/library/dn303418.aspx).
 
 #### MFA s Intune
-Pokud má vaše organizace místní infrastrukturu IT, která zahrnuje doménu Active Directory se službou Active Directory Federation Services (ADFS), můžete nakonfigurovat MFA na federačním serveru a potom povolit MFA pro registraci v Intune. Konfigurací MFA v Intune povolíte uživatelům jedno ověření během registrace a poté přístup k prostředkům společnosti bez nutnosti vždy opakovat proces MFA.
+Pokud má vaše organizace místní infrastrukturu IT, která zahrnuje doménu Active Directory se službou Active Directory Federation Services (ADFS), můžete nakonfigurovat MFA na federačním serveru a potom povolit MFA pro registraci v Intune. Konfigurací MFA v Intune umožníte uživatelům po jednom ověření během registrace přístup k prostředkům společnosti bez nutnosti vždy opakovat proces MFA.
 
 >[!NOTE]
 >Vícefaktorové ověřování může být na serveru ADFS vyžadované po jednotlivých uživatelích nebo skupinách.  
@@ -40,7 +40,7 @@ Pokud má vaše organizace místní infrastrukturu IT, která zahrnuje doménu A
 #### MFA bez Intune
 Pokud vícefaktorové ověřování nakonfigurujete na federačním serveru, ale nepovolíte ho pro registraci ve službě Intune, budou uživatelé muset použít vícefaktorové ověřování při každém přístupu k prostředkům společnosti (nikoli pouze při registraci zařízení).
 
-Vícefaktorové ověřování služby Azure Active Directory (AAD) můžete také nastavit tak, aby se vyžadovalo při každém přístupu uživatelů k firemním prostředkům (dá se nastavit pro každého uživatele zvlášť). AAD MFA je cloudová služba, která nevyžaduje žádnou místní infrastrukturu IT. Informace o nastavení vícefaktorového ověřování pro službu AAD najdete v tématu [Začínáme se službou Azure Multi-Factor Authentication v cloudu](https://azure.microsoft.com/en-us/documentation/articles/multi-factor-authentication-get-started-cloud/).
+Vícefaktorové ověřování služby Azure Active Directory (Azure AD) můžete také nastavit tak, aby se vyžadovalo pro jednotlivé uživatele při každém přístupu k firemním prostředkům. Azure AD MFA je cloudová služba, která nevyžaduje žádnou místní infrastrukturu IT. Informace o nastavení vícefaktorového ověřování pro službu Azure AD najdete v tématu [Začínáme se službou Azure Multi-Factor Authentication v cloudu](https://azure.microsoft.com/en-us/documentation/articles/multi-factor-authentication-get-started-cloud/).
 
 ## Vyžadování vícefaktorového ověřování služby ADFS při registraci zařízení se systémem Windows
 Informace o tom, jak zapnout MFA v ADFS najdete v tématu [Přehled řízení rizik pomocí dodatečného vícefaktorového ověřování citlivých aplikací](http://technet.microsoft.com/library/dn280949.aspx).
@@ -49,12 +49,12 @@ Informace o tom, jak zapnout MFA v ADFS najdete v tématu [Přehled řízení ri
 >[!Important]  
 >Než budete vícefaktorové ověřování vyžadovat pro registraci zařízení s Windows do služby Intune, povolte vícefaktorové ověřování v klientovi služby Azure AD nebo místním prostředí. Pokud to neuděláte, uživatelé obdrží při pokusu o registraci svých zařízení s Windows nebo při pokusu o připojení svých zařízení ke službě Azure AD, pokud je nakonfigurovaná automatická registrace během připojení ke službě Azure AD, chybovou zprávu.
 
-1.  V konzole pro správu Intune klikněte na **Správce** &gt; **Správa mobilních zařízení** &gt; **Vícefaktorové ověřování**.
+1.  V konzole pro správu Intune zvolte **Správce** &gt; **Správa mobilních zařízení** &gt; **Vícefaktorové ověřování**.
 
-2.  Klikněte na **Konfigurace vícefaktorového ověřování** a potom na **Povolit vícefaktorové ověřování**.
+2.  Vyberte možnost **Konfigurace vícefaktorového ověřování** a potom **Povolit vícefaktorové ověřování**.
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

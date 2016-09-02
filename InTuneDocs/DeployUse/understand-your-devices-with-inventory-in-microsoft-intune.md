@@ -4,7 +4,7 @@ description: "Použijte Intune k zobrazení informací o hardwaru zařízení, k
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/13/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 312911fe-b963-4949-9911-ae425e0590b2
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: 7d11642f13dfbe554661ecc4149c3aaf3e7448c2
+ms.sourcegitcommit: df4e0bc8a818f22d6f7327f9f1348f67882e0c49
+ms.openlocfilehash: 80b157c021099513854b8ffc1fe09cd2922ee0c2
 
 
 ---
@@ -42,10 +42,10 @@ Pokud chcete zobrazit inventář, který shromažďují mobilní zařízení, sp
 |**ID protokolu Exchange ActiveSync**|Všechna zařízení|
 |**Zařízení s jailbreakem nebo rootem**|Pouze zařízení s iOS a Androidem|
 |**Jedinečné ID zařízení**|Všechna zařízení kromě Exchange ActiveSync|
-|**Sériové číslo**|Zařízení s iOS, Mac OS X, Androidem, Windows 8.1, Windows 10|
-|**Celkový úložný prostor**|Zařízení s iOS, Mac OS X, Windows 8.1, Windows 10|
-|**Volný úložný prostor**|Zařízení s iOS, Mac OS X, Windows 8.1, Windows 10|
-|**Telefonní číslo**<br>Telefony zařazené do kategorie Podnikové jsou označeny úplným telefonním číslem, když například spustíte sestavu inventáře mobilních zařízení. Telefonní čísla vlastních zařízení zaměstnanců (BYOD) jsou maskována pomocí &#42;, zobrazují se pouze poslední 4 číslice.|Zařízení s iOS, Androidem a Windows Phone|
+|**Sériové číslo**|Zařízení s iOS, Mac OS X, Androidem, Windows 8.1 a Windows 10|
+|**Celkový úložný prostor**|Zařízení s iOS, Mac OS X, Windows 8.1 a Windows 10|
+|**Volný úložný prostor**|Zařízení s iOS, Mac OS X, Windows 8.1 a Windows 10|
+|**Telefonní číslo**<br>Telefony zařazené do kategorie Podnikové jsou identifikovány úplným telefonním číslem (například když spustíte sestavu inventáře mobilních zařízení). Telefonní čísla vlastních zařízení zaměstnanců (BYOD) jsou maskována pomocí znaků &#42;, zobrazují se pouze poslední 4 číslice.|Zařízení s iOS, Androidem a Windows Phone|
 |**IMEI**|Zařízení s Exchange ActiveSync, iOS, Androidem a Windows Phone|
 |**MEID**<br>Identifikátor mobilního zařízení|Pouze zařízení s iOS|
 |**Wi-Fi MAC**|Všechna zařízení kromě Exchange ActiveSync|
@@ -59,7 +59,7 @@ Pokud chcete zobrazit inventář, který shromažďují mobilní zařízení, sp
 |**Zámek aktivace povolený**|Pouze zařízení s iOS|
 |**Šifrování povolené**|Všechna zařízení|
 
-## Co je shromažďováno z počítačů s Windows
+## Co je shromažďováno z počítačů s Windows?
 > [!IMPORTANT]
 > Tato část se týká pouze počítačů s Windows, na kterých je spuštěn klientský software Windows PC Intune.
 
@@ -114,6 +114,6 @@ Chcete-li zobrazit inventář shromážděný z počítačů s Windows, spusťte
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

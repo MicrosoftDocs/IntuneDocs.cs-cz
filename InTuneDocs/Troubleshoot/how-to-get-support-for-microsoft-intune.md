@@ -13,8 +13,8 @@ ms.assetid: 4682b6b6-c9ef-483e-a6de-b8830cb98b63
 ms.reviewer: cacamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9915b275101e287498217c4f35e1c0e56d2425c2
-ms.openlocfilehash: d22fc07989feb7d74a7e576b7a69ae026fd60c48
+ms.sourcegitcommit: f400f8b2ffd85b6328eceb74b97de1e67203ee6b
+ms.openlocfilehash: 3342ee86179348dbff880cb5884bf2975d26b50d
 
 
 ---
@@ -25,6 +25,11 @@ ms.openlocfilehash: d22fc07989feb7d74a7e576b7a69ae026fd60c48
 V tomto tématu najdete pokyny k otevření žádosti o službu nebo volání telefonické podpory v mnoha jazycích.
 
 Informace o samoobslužné nápovědě Intune najdete v tématu [Obecné tipy pro odstraňování potíží v Microsoft Intune](general-troubleshooting-tips-for-microsoft-intune.md) nebo libovolném tématu o odstraňování potíží pro specifické problémy uvedené v části **Související témata** tohoto tématu.
+
+>[!NOTE]
+>
+>Zákazníci s plánem Premier můžou otevřít lístek podpory služby Intune na [stránce podpory Premier](https://support.microsoft.com/en-us/premier/contacts).
+
 ## Vytvoření online žádosti o službu
 
 1.  Přihlaste se k [Centru pro správu Office 365](https://portal.office.com/admin/default.aspx#Overview_SupportPage_AltUSupportPage) pomocí svých přihlašovacích údajů Intune.
@@ -140,6 +145,6 @@ Součásti naší role:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

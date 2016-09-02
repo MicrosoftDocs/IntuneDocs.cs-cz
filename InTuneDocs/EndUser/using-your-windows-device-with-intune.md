@@ -13,15 +13,18 @@ ms.assetid: 0de5f03a-c288-423b-b9ea-493a39eb715a
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
-ms.openlocfilehash: 85e6b4c4e507b83ba4a5f104e552e5a4f1fd68f2
+ms.sourcegitcommit: 11760810110ddb34e1a5371ce45206212eab0790
+ms.openlocfilehash: ba1e9ae9b17b6cb3ef9bccdcd19bafd9443915ff
 
 
 ---
 
 # Použití zařízení Windows s Intune
 
-Tato stránka obsahuje odkazy na všechny úlohy, které můžou provést koncoví uživatelé na svých zařízeních spravovaných Intune. Správci IT se můžou odkazovat na tyto informace, aby viděli kroky, podle kterých uživatelé postupují, aby provedli různé úlohy, které jsou seskupené do kategorií: informace týkající se registrace, úlohy správy a problémy s kompatibilitou.
+Tento článek obsahuje odkazy na všechny úlohy, které můžou provést koncoví uživatelé na svých zařízeních spravovaných Intune. Správci IT můžou z těchto informací zjistit kroky, podle kterých uživatelé postupují při provádění různých úloh, seskupených do kategorií: 
+- Instalace aplikace Portál společnosti a registrace ve službě Intune 
+- Úlohy správy po registraci
+- Problémy se shodou
 
 ## Instalace aplikace Portál společnosti a registrace ve službě Intune
 
@@ -57,6 +60,6 @@ Informace v této části vám pomůžou s opravit problémy, se kterými se mů
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

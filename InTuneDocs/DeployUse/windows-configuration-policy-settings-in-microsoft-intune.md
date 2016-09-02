@@ -13,14 +13,14 @@ ms.assetid: 6982a2bc-aafa-475a-9236-4840b709e5a1
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: 809c8dc87e9b7c2f27e8015a55606e376c5319ab
+ms.sourcegitcommit: 7fdfe64a18fe359ee4b3b4507ef4108ad65ab573
+ms.openlocfilehash: 3102e4637c61bbae002fb30947acd1f82204ac93
 
 
 ---
 
 # Nastavení zásad pro Windows v Microsoft Intune
-Ke konfiguraci následujících nastavení pro registrovaná zařízení s Windows 8 a Windows 8.1 použijte **obecné zásady konfigurace Windows (Windows 8.1 a novější)** Microsoft Intune:
+Pro konfiguraci následujících nastavení pro registrovaná zařízení s Windows 8 a Windows 8.1 použijte **obecné zásady konfigurace Windows (Windows 8.1 a novější)** Microsoft Intune:
 
 ## Nastavení použitelnosti
 
@@ -32,15 +32,15 @@ Ke konfiguraci následujících nastavení pro registrovaná zařízení s Windo
 
 |Název nastavení|Podrobnosti|Windows 8.1 a Windows RT 8.1|Windows RT|
 |----------------|----------------------------------|--------------|
-|**Vyžadovaný typ hesla**|Určuje typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.|Ano|Ano|
-|**Vyžadovaný typ hesla – Minimální počet znakových sad**|Používají se čtyři znakové sady: malá písmena, velká písmena, číslice a symboly. Toto nastavení určuje, kolik různých znakových sad musí být v hesle zahrnutých. Pro zařízení s iOS ale určuje počet znaků symbolu, které musí být v hesle.|Ano|Ano|
-|**Minimální délka hesla**<sup>1</sup>|Konfiguruje minimální vyžadovanou délku hesla (ve znacích) pro zařízení.|Ano|Ano|
-|**Počet povolených opakovaných neúspěšných přihlášení, než bude zařízení vymazáno**|Vymaže zařízení, pokud tento počet pokusů o přihlášení selže.|Ano|Ano|
-|**Počet minut nečinnosti před vypnutím displeje**|Vyberte počet minut, po které musí být zařízení nečinné, než bude vyžadované heslo pro odemčení.| Ano|Ano|
+|**Vyžadovaný typ hesla**|Určuje vyžadované vlastnosti hesla, například jenom číslice nebo alfanumerické znaky.|Ano|Ano|
+|**Vyžadovaný typ hesla – Minimální počet znakových sad**|Určuje, kolik různých znakových sad musí být v hesle zahrnutých. Používají se čtyři znakové sady: malá písmena, velká písmena, číslice a symboly. Pro zařízení s iOS ale toto nastavení určuje počet symbolů, které musí heslo obsahovat.|Ano|Ano|
+|**Minimální délka hesla**<sup>1</sup>|Konfiguruje minimální vyžadovanou délku hesla (ve znacích).|Ano|Ano|
+|**Počet povolených opakovaných neúspěšných přihlášení, než bude zařízení vymazáno**|Vymaže zařízení po zadaném počtu neúspěšných pokusů o přihlášení.|Ano|Ano|
+|**Počet minut nečinnosti před vypnutím displeje**|Určuje počet minut, po které musí být zařízení nečinné, než bude vyžadované heslo pro odemčení.| Ano|Ano|
 |**Omezená platnost hesla (ve dnech)**|Určuje počet dní, než bude nutné změnit heslo zařízení.|Ano|Ano|
 |**Pamatovat si historii hesel**|Určuje, jestli uživatel může konfigurovat dříve použitá hesla.|Ano|Ano|
 |**Pamatovat si historii hesel** – **Zabránit opětovnému použití předchozích hesel**|Určuje počet dříve použitých hesel, která se na zařízení zapamatovávají.|Ano|Ano|
-|**Povolit obrázkové heslo a PIN**|Povolí použití obrázkového hesla a kódu PIN v zařízení. Obrázkové heslo umožňuje uživateli přihlášení pomocí gesta na obrázku. Kód PIN umožňuje uživatelům rychlé přihlášení pomocí 4ciferného kódu.|Ano|Ano|
+|**Povolit obrázkové heslo a PIN**|Povolí použití obrázkového hesla a kódu PIN. Obrázkové heslo umožňuje uživateli přihlášení pomocí gesta na obrázku. Kód PIN umožňuje uživatelům rychlé přihlášení pomocí čtyřmístného kódu.|Ano|Ano|
 <sup>1</sup> Když nasadíte zásadu délky hesel na zařízení se systémem Windows RT, budou uživatelé přinucení změnit heslo, i když jejich aktuální heslo odpovídá požadavkům zásady.
 
 ## Nastavení šifrování
@@ -63,16 +63,16 @@ Ke konfiguraci následujících nastavení pro registrovaná zařízení s Windo
 |Název nastavení|Podrobnosti|Windows 8.1 a Windows RT 8.1|Windows RT|
 |----------------|----------------------------------|--------------|
 |**Vyžadovat síťovou bránu firewall**|Vyžaduje zapnutí brány Windows Firewall.|Ano|Ne|
-|**Povolit SmartScreen**|Vyžaduje použití filtru Windows SmartScreen v zařízeních.|Ano|Ne|
+|**Povolit SmartScreen**|Vyžaduje použití filtru Windows SmartScreen.|Ano|Ne|
 
 ## Nastavení systému
 
 |Název nastavení|Podrobnosti|Windows 8.1 a Windows RT 8.1|Windows RT|
 |----------------|----------------------------------|--------------|
-|**Vyžadovat automatické aktualizace**|Zapne nastavení automatických aktualizací v zařízeních.|Ano|Ne|
-|**Vyžadovat automatické aktualizace – automatická instalace minimální klasifikace aktualizací**|Vyberte klasifikace aktualizací, které se instalují automaticky:<br /><br />-   **Důležité** – Nainstaluje všechny aktualizace klasifikované jako důležité.<br />-   **Doporučené** – Nainstaluje všechny aktualizace klasifikované jako důležité nebo doporučené.|Ano|Ne|
-|**Řízení uživatelských účtů**|Vyžaduje použití řízení uživatelských účtů v zařízeních.|Ano|Ne|
-|**Povolit odeslání diagnostických dat**|Povoluje zařízením odesílat diagnostické informace Microsoftu.|Ano|Ne|
+|**Vyžadovat automatické aktualizace**|Zapne v zařízeních nastavení automatických aktualizací.|Ano|Ne|
+|**Vyžadovat automatické aktualizace – automatická instalace minimální klasifikace aktualizací**|Umožňuje vybrat klasifikaci aktualizací, které se budou instalovat automaticky:<br /><br />-   **Důležité** – Nainstaluje všechny aktualizace klasifikované jako důležité.<br />-   **Doporučené** – Nainstaluje všechny aktualizace klasifikované jako důležité nebo doporučené.|Ano|Ne|
+|**Řízení uživatelských účtů**|Vyžaduje použití řízení uživatelských účtů (UAC) v zařízeních.|Ano|Ne|
+|**Povolit odeslání diagnostických dat**|Povolí zařízení odesílat diagnostické informace Microsoftu.|Ano|Ne|
 
 
 ## Nastavení cloudu – dokumenty a data
@@ -91,19 +91,19 @@ Ke konfiguraci následujících nastavení pro registrovaná zařízení s Windo
 
 |Název nastavení|Podrobnosti|Windows 8.1 a Windows RT 8.1|Windows RT|
 |----------------|----------------------------------|--------------|
-|**Povolit automatické vyplňování**|Uživatel může změnit nastavení automatického dokončování v prohlížeči.|Ano|Ne|
+|**Povolit automatické vyplňování**|Povolí uživatelům změnit nastavení automatického dokončování v prohlížeči.|Ano|Ne|
 |**Povolit blokování automaticky otevíraných oken**|Povolí nebo zakáže blokování automaticky otevíraných oken v prohlížeči.|Ano|Ne|
-|**Povolit moduly plug-in**|Uživatelé můžou přidávat do Internet Exploreru moduly plug-in.|Ano|Ne|
-|**Povolit aktivní skriptování**|Prohlížeč může spouštět skripty, jako třeba skripty Active X.|Ano|Ne|
+|**Povolit moduly plug-in**|Umožní uživatelům přidávat do Internet Exploreru moduly plug-in.|Ano|Ne|
+|**Povolit aktivní skriptování**|Povolí prohlížeči spouštění skriptů, jako třeba skriptů Active X.|Ano|Ne|
 |**Povolit upozornění na podvod**|Povolí nebo zakáže upozornění na potenciální podvodné weby.|Ano|Ne|
 |**Povolit intranetovému serveru zadání jednoslovné položky**|Umožňuje použití jednoho slova pro přesměrování Internet Exploreru na web, jako třeba Bing.|Ano|Ne|
 |**Povolit automatické zjišťování sítě intranet**|Pomáhá konfigurovat zabezpečení intranetových serverů v Internet Exploreru.|Ano|Ne|
 |**Úroveň zabezpečení pro internet**|Nastaví úroveň zabezpečení internetových serverů v Internet Exploreru.|Ano|Ne|
-|**Úroveň zabezpečení pro intranet**|Nastaví úroveň zabezpečení intranetových sítí v Internet Exploreru.|Ano|Ne|
+|**Úroveň zabezpečení pro intranet**|Nastaví úroveň zabezpečení intranetových serverů v Internet Exploreru.|Ano|Ne|
 |**Úroveň zabezpečení pro důvěryhodné lokality**|Nakonfiguruje úroveň zabezpečení pro zónu důvěryhodných lokalit.|Ano|Ne|
 |**Úroveň zabezpečení pro lokality s omezeným přístupem**|Nakonfiguruje úroveň zabezpečení pro zónu lokalit s omezeným přístupem.|Ano|Ne|
 |**Odesílat hlavičku DNT (Do Not Track)**|Odesílá v Internet Exploreru hlavičku DNT (do not track) navštíveným webům.|Ano|Ne|
-|**Povolit přístup nabídky podnikového režimu**|Umožňuje uživatelům přistupovat k možnostem nabídky podnikového režimu z Internet Exploreru.<br>Pokud je tato volba vybraná, můžete také určit **Umístění sestavy protokolování**, které obsahuje adresu URL sestavy, která zobrazuje weby, pro které uživatelé zapnuli přístup v podnikovém režimu.|Ano|Ne|
+|**Povolit přístup nabídky podnikového režimu**|Umožňuje uživatelům přistupovat k možnostem nabídky podnikového režimu z Internet Exploreru.<br>Když zapnete toto nastavení můžete také určit **Umístění sestavy protokolování**, které obsahuje adresu URL sestavy, která zobrazuje weby, pro které uživatelé zapnuli přístup v podnikovém režimu.|Ano|Ne|
 |**Umístění webů podnikového režimu**|Určuje umístění seznamu webů, které budou používat podnikový režim, pokud bude aktivní.|Ano|Ne|
 
 ## Nastavení možností zařízení – mobilní
@@ -119,7 +119,6 @@ Ke konfiguraci následujících nastavení pro registrovaná zařízení s Windo
 
 
 
-
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

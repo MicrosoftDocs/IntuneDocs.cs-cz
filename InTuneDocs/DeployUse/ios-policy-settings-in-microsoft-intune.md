@@ -13,8 +13,8 @@ ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bc5ff023b5d29ded999c7e49c5e7c2aee8a23bba
-ms.openlocfilehash: e71cc1e8e2cb0f46507ff63d962f3d477acfb72e
+ms.sourcegitcommit: 65d2c9c1f5d81dae33422bd4bf7c0e2e21bb96e4
+ms.openlocfilehash: 13b8bd8c3269be60d66c4e79551f662205afcea0
 
 
 ---
@@ -233,6 +233,77 @@ Na zařízeních se systémem iOS 7.1 a novějším, které jsou v režimu pod d
 |**Povolit uživateli instalaci konfiguračních profilů a certifikátů**|Povolí uživateli instalaci konfiguračních profilů a certifikátů.|
 |**Povolit použití aplikace Zprávy na zařízení**|Povolit použití aplikace Zprávy k posílání textových zpráv.|
 
+### Zobrazit nebo skrýt aplikace
+
+Pomocí seznamu **Skryté a zobrazené aplikace** můžete na dozorovaných zařízeních se systémem iOS 9.3 kontrolovat následující:
+
+- Určení seznamu aplikací, které budou uživatelům skryté. Uživatelé nebudou moci tyto aplikace zobrazit ani spustit.
+- Určení seznamu aplikací, které uživatelé mohou zobrazit a spustit. Žádné jiné aplikace nebude možné zobrazit ani spustit.
+
+
+#### Jak vytvořit seznamy skrytých nebo zobrazených aplikací
+
+Určete následující nastavení:
+
+|Název nastavení|Podrobnosti|
+|-|-|
+|**Seznam skrytých a zobrazených aplikací**|Povolte toto nastavení, jestli chcete vytvořit seznamy skrytých nebo zobrazených aplikací.|
+|**Skrýt aplikace uvedené v seznamu pro uživatele**|Vyberte tuto možnost, pokud chcete vytvořit seznam aplikací, které budou před uživateli skryté.|
+|**Zobrazit uživatelům jenom aplikace uvedené v seznamu**|Vyberte tuto možnost, pokud chcete vytvořit seznam aplikací, které budou pro uživatele viditelné.<br>Když vytvoříte tento seznam, budou všechny v něm neuvedené aplikace kromě **Nastavení** a **Telefon** (pro iPhony) skryté.<br>Kromě toho je do seznamu nutné přidat aplikaci portálu společnosti a všechny nasazené aplikace, spravované v Intune.|
+|**Přidání**|Přidá aplikaci do vybraného seznamu.<br>Pro seznam skrytých aplikací je třeba uvést **Název**, **Vydavatele** a **Adresu URL nebo ID sady aplikace** každé aplikace, kterou chcete skrýt.<br>Pro seznam zobrazených aplikací můžete buď **Vybrat spravovanou aplikaci** ze seznamu aplikací, které spravujete v Intune, nebo vybrat aplikaci ze Storu, pro kterou je pak nutné zadat **Název**, **Vydavatele** a **Adresu URL nebo ID sady aplikace**.|
+|**Importovat aplikace**|Importuje seznam aplikací, které jste zadali v souboru hodnot oddělených čárkami. V souboru použijte formát, název aplikace, vydavatele, adresu URL aplikace.|
+|**Upravit**|Tady můžete upravit název, vydavatele a adresu URL vybrané aplikace.|
+|**Odstranit**|Odstraní vybranou aplikaci ze seznamu.|
+
+#### Informace o aplikaci pro vestavěné aplikace iOS
+
+Informace z tohoto seznamu můžete použít k identifikaci názvu, vydavatele a adresy URL nebo ID sady aplikace pro vestavěné aplikace iOS, které chcete skrýt nebo zobrazit. Pokud chcete zobrazit nebo skrýt všechny aplikace v seznamu, můžete zkopírovat následující data do textového souboru s příponou **.csv** a pak pomocí možnosti **Importovat aplikace** naimportovat všechny najednou.
+
+```
+App Store,Apple,com.apple.AppStore
+Calculator,Apple,com.apple.calculator
+Calendar,Apple,com.apple.mobilecal
+Camera,Apple,com.apple.camera
+Clock,Apple,com.apple.mobiletimer
+Compass,Apple,com.apple.compass
+Contacts,Apple,com.apple.MobileAddressBook
+FaceTime,Apple,com.apple.facetime
+Find Friends,Apple,com.apple.mobileme.fmf1
+Find iPhone,Apple,com.apple.mobileme.fmip1
+Game Center,Apple,com.apple.gamecenter
+GarageBand,Apple,com.apple.mobilegarageband
+Health,Apple,com.apple.Health
+iBooks,Apple,com.apple.iBooks
+iTunes Store,Apple,com.apple.MobileStore
+iTunes U,Apple,com.apple.itunesu
+Keynote,Apple,com.apple.Keynote
+Mail,Apple,com.apple.mobilemail
+Maps,Apple,com.apple.Maps
+Messages,Apple,com.apple.MobileSMS
+Music,Apple,com.apple.Music
+News,Apple,com.apple.news
+Notes,Apple,com.apple.mobilenotes
+Numbers,Apple,com.apple.Numbers
+Pages,Apple,com.apple.Pages
+Photo Booth,Apple,com.apple.Photo-Booth
+Photos,Apple,com.apple.mobileslideshow
+Podcasts,Apple,com.apple.podcasts
+Reminders,Apple,com.apple.reminders
+Safari,Apple,com.apple.mobilesafari
+Settings,Apple,com.apple.Preferences
+Stocks,Apple,com.apple.stocks
+Tips,Apple,com.apple.tips
+Videos,Apple,com.apple.videos
+VoiceMemos,Apple,com.apple.VoiceMemos
+Wallet,Apple,com.apple.Passbook
+Watch,Apple,com.apple.Bridge
+Weather,Apple,com.apple.weather
+
+
+```
+
+
+
 
 ## Nastavení vlastních zásad
 
@@ -266,6 +337,6 @@ Než začnete, je potřeba nainstalovat Apple Configurator a vytvořit konfigura
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 
