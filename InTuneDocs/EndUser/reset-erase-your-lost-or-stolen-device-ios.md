@@ -10,12 +10,12 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 70788dca-765f-47a7-9994-a286f8a88588
-ROBOTS: noindex,nofollow
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
-ms.openlocfilehash: f6e7e40973428762995feceac109a8367813dadd
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: 192c61fb06a8af4c40e228aafbd383fd21142c57
 
 
 ---
@@ -48,11 +48,11 @@ Můžete použít následující kroky nebo přehrát toto video:
 
 Pokud se vám ztracené nebo ukradené zařízení nedaří resetovat, požádejte IT správce, aby to udělal za vás. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
-### Související témata
+### Viz taky
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

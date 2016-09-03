@@ -8,9 +8,6 @@
 ### [Registrace mobilních zařízení a instalace aplikace](get-started-with-a-30-day-trial-of-microsoft-intune-step-5.md)
 ### [Další možnosti a funkce](get-started-with-a-30-day-trial-of-microsoft-intune-step-6.md)
 ### [Další kroky](get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)
-## [Běžné úlohy hodnocení služby Intune](common-microsoft-intune-evaluation-tasks.md)
-### [Spuštění zkušební verze a nasazení zásad kódu PIN systému iOS](start-a-microsoft-intune-trial-and-deploy-ios-pin-policy.md)
-### [Nastavení přístupu k e-mailu pro zařízení s iOS](set-up-email-access-for-ios-devices-using-microsoft-intune.md)
 ## [Typické scénáře](common-ways-to-use-intune.md)
 ## [Úvodní příručky](prevent-company-data-leaks-from-Office-365-mobile-apps.md)
 ### [Prevence úniků firemních dat z mobilních aplikací Office 365](prevent-company-data-leaks-from-Office-365-mobile-apps.md)
@@ -25,6 +22,6 @@
 # [Řešení problémů](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

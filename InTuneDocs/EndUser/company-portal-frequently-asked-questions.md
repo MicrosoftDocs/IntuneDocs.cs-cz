@@ -10,12 +10,12 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 523caa6b-d792-4bb6-bddb-24b2479932d8
-ROBOTS: noindex,nofollow
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
-ms.openlocfilehash: 609ed567e40cc35a6e36539ca58165f9193cec65
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: fcc0395815499f3a46dafa55c0c74834e37bed97
 
 
 ---
@@ -65,7 +65,7 @@ Pokud vás zajímá, co váš správce IT uvidí nebo naopak neuvidí na vašem 
     -   10 Mobile
     -   Windows 10 Desktop
     -   Windows Phone 8.1
-    -   Windows 8.1
+    -   Windows 8.1
     -   Zařízení s Windows RT
     -   Windows Phone 8
     -   iPhony, iPady a Mac OS X
@@ -100,6 +100,6 @@ Pokud potřebujete pomoc, obraťte se na správce IT. Jeho kontaktní údaje naj
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

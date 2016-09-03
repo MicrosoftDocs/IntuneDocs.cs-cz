@@ -4,7 +4,7 @@ description: "Řešení potíží s konfigurací zásad"
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/01/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 99fb6db6-21c5-46cd-980d-50f063ab8ab8
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 436d0c40ef317e1d258654d2164e7a1f8c35c5e1
-ms.openlocfilehash: 6bfa9bab46248be802679e70de18ff117171a1fb
+ms.sourcegitcommit: 1f133d31311706365888cf33ceb4c4412deec333
+ms.openlocfilehash: a8afc681b8b12e1e760dea3f784e4beac4697242
 
 
 ---
@@ -46,17 +46,6 @@ Na tomto snímku obrazovky vidíte dva jasné příklady:
 
 > [!NOTE]
 > Mějte na paměti, že když použijete dvě zásady s různými úrovněmi omezení na stejné zařízení nebo uživatele, v praxi se uplatní víc omezující zásada.
-
-## Obnovení zásad a intervaly aktualizace
-Upozorňujeme, že zásady se pravidelně obnovují a aktualizují. Obecně platí, že zásady by se měly na zařízeních zaregistrovat do 15 minut od provedení změny. Tady jsou další podrobnosti o pravidelných intervalech obnovení zásad:
-
--   **Zařízení s Windows zaregistrovaná pro MDM**: Zásady se aktualizují každých 8 hodin pro zařízení s Windows 8.1 a Windows 10 a každých 24 hodin pro zařízení s Windows RT.
-
--   **Windows Phone**: Zásada se aktualizuje každých 8 hodin. To se dá vynutit obnovením na portálu společnosti v části **Nastavení**.
-
--   **iOS**: Zásada se aktualizuje jednou denně v náhodném časovém intervalu. Tuto akci je možné vynutit také otevřením portálu společnosti, výběrem zařízení a zvolením **Synchronizace**.
-
--   **Android**: Zásada se aktualizuje jednou denně v náhodném časovém intervalu. Tuto akci je možné vynutit také otevřením portálu společnosti, výběrem zařízení a zvolením **Synchronizace**.
 
 ## Chyby související se zásadami Microsoft Intune v souboru policyplatform.log
 U zařízení s Windows nespravovaných pomocí MDM můžou být chyby zásad v souboru policyplatform.log výsledkem jiného než výchozího nastavení nástroje Řízení uživatelských účtů v systému Windows (UAC) v zařízení. Některá nevýchozí nastavení UAC můžou ovlivnit zpracování zásad a instalace klientů Microsoft Intune.
@@ -93,9 +82,6 @@ Třeba v systému Windows RT potáhněte na ploše prstem zprava. Otevře se pan
 V navigační nabídce vlevo najdete dole odkaz **Resetovat zásady zabezpečení** . Zvolte jej a potom zvolte tlačítko **Resetovat zásady** .
 Jiná zařízení MDM, třeba zařízení se systémy Android, Windows Phone 8.1 (a novějšími) a iOS, může být potřeba vyřadit a znovu zaregistrovat do služby, abyste mohli použít méně omezující zásadu.
 
-## Zařízení se systémem Android nevynucují změny zásad zabezpečení bez přijetí koncovým uživatelem
-Zařízení MDM se systémem Android na rozdíl od ostatních platforem nepovolují službě vynucovat v zařízení počáteční změny zásad. Důvodem jsou funkce systému Android, ne služba Intune. Zařízení se systémem Android zobrazí koncovému uživateli okno s upozorněním na výzvu týkající se dané změny zásad (třeba heslo, šifrování atd.).  Koncový uživatel musí na výzvu odpovědět, a až ji přijme, měla by se zásada použít.
-
 ## Pokud název společnosti obsahuje speciální znaky, není možné vytvořit zásadu ani registrovat klienty
 **Problém:** Nemůžete vytvořit zásadu nebo zaregistrovat klienty.
 
@@ -106,6 +92,6 @@ Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podpor
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 
