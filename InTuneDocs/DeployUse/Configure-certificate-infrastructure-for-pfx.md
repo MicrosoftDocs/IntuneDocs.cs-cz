@@ -1,10 +1,10 @@
 ---
 title: "Konfigurace infrastruktury certifikátů pro PFX | Microsoft Intune"
-description: 
+description: "Vytvoření a nasazení profilů certifikátů .PFX"
 keywords: 
 author: nbigman
-manager: jeffgilb
-ms.date: 05/16/2016
+manager: angrobe
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,14 @@ ms.assetid: 2c543a02-44a5-4964-8000-a45e3bf2cc69
 ms.reviewer: vinaybha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6edb37708d26033358af30c47e955b20caedb6fd
-ms.openlocfilehash: 51def9dc80043bbf5a71578fb44cae9259fd48b1
+ms.sourcegitcommit: 07d719cadf9c80540ef36f3b6a9187012d715a75
+ms.openlocfilehash: 3086bcfd493b45fad3ba2c1bf553203e3396e97c
 
 
 
 ---
-# Konfigurace infrastruktury certifikátu
-Toto téma popisuje, co potřebujete k vytvoření a nasazení profilů certifikátů.
+# Konfigurace infrastruktury certifikátů pro PFX
+Toto téma popisuje, co potřebujete k vytvoření a nasazení profilů certifikátů .PFX.
 
 Pokud chcete v rámci své organizace používat ověření na základě certifikátů, potřebujete certifikační autoritu organizace.
 
@@ -158,6 +158,6 @@ Teď jste připravení konfigurovat profily certifikátů podle návodu v témat
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

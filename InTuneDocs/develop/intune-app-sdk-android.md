@@ -13,8 +13,8 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2915cca314b489bbcb590d01b03a0b38134fa619
-ms.openlocfilehash: d2e4b6903d86b79edd9c758b2ce51733831e785a
+ms.sourcegitcommit: 51f7734e2acced469ec3520d74a8079dac8223f2
+ms.openlocfilehash: bcb62e9c99c1f5a5b53ada688ef39a59674dea04
 
 
 ---
@@ -220,7 +220,7 @@ V některých případech je metoda dostupná ve třídě Androidu označená v 
 
 # Ochrana dat zálohy 
 
-Od verze Android Marshmallow (API 23) má Android dva způsoby, kterými aplikace můžou zálohovat svá data. Tyto možnosti můžete ve své aplikaci využít, ale vyžadují různé kroky, které zajišťují, aby se ochrana dat MAM použila správně. Stručný přehled akcí požadovaných pro správné chování ochrany dat najdete v tabulce níž.  Další informace o zálohování v Androidu najdete v [příručce zálohování dat pro vývojáře v Androidu](http://developer.android.com/guide/topics/data/backup.html.). 
+Od verze Android Marshmallow (API 23) má Android dva způsoby, kterými aplikace můžou zálohovat svá data. Tyto možnosti můžete ve své aplikaci využít, ale vyžadují různé kroky, které zajišťují, aby se ochrana dat MAM použila správně. Stručný přehled akcí požadovaných pro správné chování ochrany dat najdete v tabulce níž.  Další informace o zálohování v Androidu najdete v [příručce zálohování dat pro vývojáře v Androidu](http://developer.android.com/guide/topics/data/backup.html). 
 
 ## Automatické úplné zálohování
 
@@ -365,6 +365,6 @@ Intune SDK udržuje kontrakt poskytovaný rozhraním Android API, i když podmí
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

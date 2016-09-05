@@ -3,18 +3,19 @@ title: "Instalace firemní virtuální privátní sítě (VPN) | Microsoft Intun
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 7/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: ed4a9f15-72fb-4171-84cb-63d2f1a6d04c
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: d4c0e05002b3d6f2785b401159c2872d93313524
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: aea4ebfce23397ce93305e1ed68f71cd9d7289f9
 
 
 ---
@@ -28,7 +29,9 @@ Pokud správce IT nakonfiguroval aplikaci VPN, která vám umožní připojit se
 
 2.  V obchodě **Play Store** klepněte na **INSTALOVAT** a při instalaci aplikace postupujte podle pokynů.
 
-3.  Klepněte na **Instalovat profil firemní sítě VPN**, podle pokynů přijměte aplikaci a aktivujte ji.
+3.  Klepněte na **Instalovat profil firemní sítě VPN** a postupujte podle pokynů. Postup instalace se může mírně lišit podle toho, kterého zprostředkovatele sítě VPN vaše společnost používá.
+
+
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
@@ -36,6 +39,7 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní 
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO4-->
 
 

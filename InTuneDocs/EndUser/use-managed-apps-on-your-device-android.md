@@ -1,26 +1,27 @@
 ---
-title: "Použití spravovaných aplikací na zařízení | Microsoft Intune"
+title: "Použití spravovaných aplikací na zařízení s Androidem | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 05/31/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: ed10a62c-b026-4ad3-ac41-641933522df2
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: maxles
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0bb435b87c937ea118a0794c8332b9a8f268d36e
-ms.openlocfilehash: 5a25d845113ef6a3cb402923ef451fab63138979
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: 4e4b2f6e94819320072b045fa2265018a89ff88a
 
 
 ---
 
 
-# Použití spravovaných aplikací na zařízení
+# Použití spravovaných aplikací na zařízení s Androidem
 
 Spravované aplikace jsou aplikace, které může váš správce IT nakonfigurovat tak, aby lépe chránily firemní data, ke kterým v této aplikaci získáváte přístup. Pokud získáváte přístup k datům ve spravované aplikaci v zařízení s Androidem, můžete si všimnout, že aplikace funguje trochu jinak, než čekáte. Nebudete třeba moct kopírovat a vkládat chráněná firemní data nebo tato data nebudete moct uložit do určitých umístění.
 
@@ -73,10 +74,11 @@ Některé běžné aplikace, které může spravovat vaše oddělení IT:
 Další informace o spravovaných aplikacích na vašem zařízení vám poskytne správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
-### Související témata
+### Viz taky
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO4-->
 
 

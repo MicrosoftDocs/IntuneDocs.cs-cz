@@ -1,9 +1,9 @@
 ---
-title: "Účty pro správu, weby a oprávnění v Microsoft Intune | Microsoft Intune"
-description: 
+title: "Účty pro správu, weby a oprávnění | Microsoft Intune"
+description: "účty pro správu weby oprávnění"
 keywords: 
-author: Staciebarker
-manager: jeffgilb
+author: barlanmsft
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: db3075e7-38fd-4dfe-b266-26aed10ac8ea
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
-ms.openlocfilehash: a8d9cf5d36107c54b97d2b5a5250645dc735a8da
+ms.sourcegitcommit: 6d1c7c670341692d4ea0c823e4a9a96746b83067
+ms.openlocfilehash: 017de4d0cc65c00129a45f140eebea11a61154af
 
 
 ---
@@ -94,6 +94,6 @@ Přečtěte si další informace o [přidávání uživatelů k vašemu předpla
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

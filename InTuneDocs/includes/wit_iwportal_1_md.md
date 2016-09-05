@@ -1,1 +1,5 @@
-Microsoft Intune company portal
+Firemní portál Microsoft Intune
+
+<!--HONumber=Jul16_HO3-->
+
+

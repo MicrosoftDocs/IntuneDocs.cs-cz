@@ -1,75 +1,68 @@
 ---
 title: "Volba způsobu správy zařízení | Microsoft Intune"
-description: 
+description: "Přečtěte si o různých způsobech, jakými můžete registrovat a spravovat zařízení."
 keywords: 
-author: jeffgilb
-manager: jeffgilb
-ms.date: 04/28/2016
+author: robstackmsft
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 770aad50-fd7a-4cf1-a793-f95fe47fc3f8
-ms.reviewer: jeffgilb
+ms.reviewer: angrobe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f33a86c51320c75ce74d20e0cac2b9581990ecec
-ms.openlocfilehash: c9b34408e4af34dafc700d016304a6d29c2e8585
+ms.sourcegitcommit: c329bd08aaf72ae2acaa03dcb12c911d84b46b4e
+ms.openlocfilehash: cfd9df3814d0d306a254a5566155a91ce5d0ca16
 
 
 ---
 
 # Volba způsobu správy zařízení
-[!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] umožňuje spravovat řadu zařízení tím, že je *zaregistruje*. Uživatelé pak můžou použít *portál společnosti* k provedení řady operací, jako je třeba registrace zařízení, procházení a instalace aplikací, zajištění kompatibility zařízení se zásadami společnosti a kontaktování podpory IT.
+Intune umožňuje spravovat řadu zařízení tím, že je *zaregistruje*. Uživatelé pak můžou použít *portál společnosti* k provedení řady operací, jako je třeba registrace zařízení, procházení a instalace aplikací, zajištění kompatibility zařízení se zásadami společnosti a kontaktování podpory IT.
 
 ## Způsoby správy mobilních zařízení
-[!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] může spravovat tyto platformy zařízení:
+Intune může spravovat tyto platformy zařízení:
 
 [!INCLUDE[mdm-supported-devices](../includes/mdm-supported-devices.md)]
 
-<div class="alert alert-tip">
-  <h5><span class="icon-tip"></span> Tip</h5>
-  <p>Pokud jste dřív registrovali zařízení, která používají starší verzi systému iOS, než je uvedená podporovaná verze, zůstanou tato zařízení zaregistrovaná. V dokumentaci pro službu [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] ale zkontrolujte, že tato verze iOS se pro příslušnou funkci podporuje.</p>
-</div>
+> [!NOTE]
+> Pokud jste dřív registrovali zařízení, která používají starší verzi systému iOS, než je uvedená podporovaná verze, zůstanou tato zařízení zaregistrovaná. V dokumentaci ověřte, že funkce podporuje danou verzi iOS.
 
-[!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] umožňuje spravovat zařízení uživatelů (často se používá označení „Přineste si vlastní zařízení“ (BYOD – Bring Your Own Device). Umožňuje také spravovat zařízení v majetku společnosti, včetně situací, kdy dá společnost uživatelům seznam zařízení, ze kterého mohou vybírat (CYOD – Choose Your Own Device).
+Intune může spravovat zařízení uživatelů (často se používá označení „Přineste si vlastní zařízení“, BYOD – Bring Your Own Device). Umožňuje také spravovat zařízení v majetku společnosti, včetně situací, kdy dá společnost uživatelům seznam zařízení, ze kterého mohou vybírat (CYOD – Choose Your Own Device).
 
 ### Registrace zařízení do správy
-Mobilní zařízení s operačními systémy včetně systému iOS, Android a Windows Phone musíte vždycky registrovat. Způsob registrace zařízení ale závisí na potřebách vaší organizace:
+Mobilní zařízení s operačními systémy včetně systému iOS, Android a Windows Phone musíte vždycky registrovat. Způsob registrace zařízení závisí na potřebách vaší organizace:
 
 |Typ registrace|Uživatelé s vlastním zařízením|Uživatelé s firemním zařízením|Sdílené zařízení s účtem správce|Sdílené zařízení bez účtu správce|
 |-------------------|--------|--------|--------------------------------------|----------------------------------------|
 |**Popis**|Osobní zařízení zaregistrované pomocí Microsoft Intune|Zařízení jediného uživatele vlastněné společností|Zařízení vlastněné společností, sdílené mnoha uživateli a spravované účtem správce|Zařízení bez uživatele vlastněné společností a používané mnoha uživateli|
 |**Uživatel zařízení**|Vlastník|Přiřazený uživatel|Žádný účet specifický pro uživatele|Bez konkrétního uživatele|
 |**Kdo se registruje**|Vlastník|Správce|Správce zařízení|Kdokoliv|
-|**Kdo ruší registraci**|Vlastník nebo správce|Správce|Správce|Správce|
+|**Kdo ruší registraci**|Vlastník nebo správce|Platforma |Správce nebo uživatel|Správce nebo uživatel|
 |**Kdo může resetovat**|Vlastník nebo správce|Správce|Správce|Správce|
 
-<div class="alert alert-tip">
-  <h5><span class="icon-tip"></span> Tip</h5>
-  <p>Úplný seznam možností, které vám registrace zařízení dává, najdete v tématu [Možnosti správy mobilních zařízení](mobile-device-management-capabilities-in-microsoft-intune.md).</p>
-</div>
+Další informace najdete v článku [Volba způsobu registrace mobilních zařízení](/intune/get-started/choose-how-to-enroll-devices1).
 
-
+> [!NOTE]
+> Úplný seznam možností, které vám registrace zařízení dává, najdete v tématu [Možnosti správy mobilních zařízení](mobile-device-management-capabilities-in-microsoft-intune.md).
 
 ## Způsob správy počítačů s Windows
-[!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] může spravovat počítače se systémem Windows Vista a novějšími systémy Windows pomocí počítačového klienta Intune. U počítačů s Windows si můžete zvolit, jestli je zaregistrujete nebo jestli nainstalujete počítačový klientský software [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], který nabízí několik možností, které při registraci zařízení nejsou k dispozici. Ve většině scénářů si svoje zařízení s Windows zaregistrujete ve službě Microsoft Intune, která poskytuje větší sadu funkcí než počítačový klient.
+Intune může spravovat počítače se systémem Windows Vista a novějšími systémy Windows pomocí počítačového klienta Intune. U počítačů s Windows si můžete zvolit, jestli je zaregistrujete nebo jestli nainstalujete počítačový klientský software Intune, který nabízí několik možností, které při registraci zařízení nejsou k dispozici. Ve většině scénářů si svoje zařízení s Windows zaregistrujete ve službě Microsoft Intune, která poskytuje větší sadu funkcí než počítačový klient.
 
 Použití počítačového klienta Intune zvažte, pokud chcete:
-<ul>
-<li>Použít libovolnou z funkcí podporovaných počítačovým klientem Microsoft Intune ke správě svých počítačů s Windows.</li>
-<li>Spravovat počítač s Windows, ve kterém běží operační systém, pro který není podporovaná registrace.</li>
-</ul>
 
-<div class="alert alert-tip">
-  <h5><span class="icon-tip"></span> Tip</h5>
-  <p>Úplný seznam funkcí, které vám instalace počítačového klienta Intune do počítače s Windows dává, najdete v tématu [Možnosti správy počítačů s Windows](windows-pc-management-capabilities-in-microsoft-intune.md).</p>
-</div>
+- Použít libovolnou z funkcí podporovaných počítačovým klientem Microsoft Intune ke správě svých počítačů s Windows.
+- Spravovat počítač s Windows, ve kterém běží operační systém, pro který není registrace podporovaná.
+
+> [!NOTE]
+> Úplný seznam funkcí, které vám instalace počítačového klienta Intune do počítače s Windows dává, najdete v tématu [Možnosti správy počítačů s Windows](windows-pc-management-capabilities-in-microsoft-intune.md).
 
 ## Správa Exchange ActiveSync
 Ke správě zařízení můžete taky využít Exchange ActiveSync. Vyžaduje to instalaci konektoru On-Premises Connector nebo použití integrovaného konektoru Service to Service Connector pro připojení k Exchange Serveru.
 
-Další informace o požadavcích na hardware a software pro instalaci softwaru On-Premises Connector najdete v tématu [Požadavky na konektor On-Premises Connector](/intune/deploy-use/intune-on-premises-exchange-connector#requirements-for-the-on-premises-connect).
+Další informace o požadavcích na hardware a software pro instalaci softwaru On-Premises Connector najdete v tématu [Požadavky na konektor On-Premises Connector](/intune/deploy-use/intune-on-premises-exchange-connector#requirements-for-the-on-premises-connector).
 
 Další informace o použití softwaru On-Premises Connector nebo Service to Service Connector se serverem Exchange najdete v tématu [Správa mobilních zařízení pomocí protokolu Exchange ActiveSync a služby Microsoft Intune](/intune/deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune).
 
@@ -80,6 +73,6 @@ Nyní jste se seznámili s některými možnostmi, které můžete použít při
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Přidání uživatelů do 30denního testování Microsoft Intune | Microsoft Intune
-description:
-keywords:
-author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+title: "Přidání uživatelů do 30denního testování Intune | Microsoft Intune"
+description: "Postup přidání uživatelů, jednotlivě nebo hromadně, při registraci bezplatné 30denní zkušební verze Intune"
+keywords: 
+author: lindavr
+manager: angrobe
+ms.date: 08/09/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 9e40999b-46f7-447b-8974-72af82bec7ef
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 51fba2b01d8978bc062c50c4388714609be0fdf0
+ms.openlocfilehash: 4276d0fed0fc30490a640a067d78096ff0cf78ae
+
 
 ---
 
@@ -37,7 +31,7 @@ Pomocí konzoly pro správu služby Intune je možné zobrazit informace správc
 ## Přidání jednotlivých uživatelských účtů
 Pomocí následujících kroků můžete ve zkušební verzi tenanta vytvořit další uživatelské účty. Pamatujte si, že každý přidaný uživatelský účet se počítá jako jedna ze 100 licencí, které jste získali v rámci bezplatné zkušební verze Intune.
 
-1.  V [centru pro správu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) zvolte **Přidat uživatele** &gt; **Nový**&gt; **Uživatel** a spusťte průvodce **Noví uživatelé**.
+1.  V [centru pro správu Office 365](http://go.microsoft.com/fwlink/?LinkID=787455) zvolte **Přidat uživatele** &gt; **Nový** &gt; **Uživatel** a spusťte průvodce **Noví uživatelé**.
 
 2.  Na stránce **Podrobnosti** vyplňte požadovaná pole.
 
@@ -51,14 +45,14 @@ Pomocí následujících kroků můžete ve zkušební verzi tenanta vytvořit d
 
 7.  Až se nový uživatel zobrazí v centru pro správu Office 365, ověřte, že byl nový uživatel úspěšně vytvořený:
 
-    1.  V [konzole pro správu Intune](https://manage.microsoft.com/) zvolte **Správa** &gt; **Portál společnosti** a posuňte se k dolnímu okraji obrazovky. Zkopírujte adresu URL v části **Portál společnosti Intune**..
+    1.  V [konzole pro správu Intune](https://manage.microsoft.com/) zvolte **Správa** &gt; **Portál společnosti** a posuňte se k dolnímu okraji obrazovky. Zkopírujte adresu URL v části **Portál společnosti Intune**.
 
     2.  Otevřete nové okno prohlížeče v režimu ochrany osobních údajů (v Internet Exploreru zvolte **Nástroje** &gt; **Procházení se službou InPrivate**) nebo otevřete nové okno prohlížeče na jiném zařízení a potom přejděte na adresu URL, kterou jste zkopírovali v předchozím kroku. Pokud se uživatel přihlašuje poprvé, musí zadat nové heslo účtu.
 
 ## Hromadné přidání uživatelů
-Pro hromadné přidání uživatelů do Intune použijte **Průvodce hromadným přidáním uživatelů**, kde můžete nahrát textový soubor s oddělovači (CSV) obsahující uživatelská data. Odkazy v průvodci umožňují stáhnout prázdnou šablonu a ukázkový soubor CSV. První řádek souboru CSV musí ve správném pořadí obsahovat popisky jednotlivých sloupců dat uživatele. Pak musíte pro každého uživatele v souboru CSV uvést **uživatelské jméno** (třeba **jan@contoso.com**) a **zobrazované jméno** (třeba **Macek Jan**).).
+Pro hromadné přidání uživatelů do Intune použijte **Průvodce hromadným přidáním uživatelů**, kde můžete nahrát textový soubor s oddělovači (CSV) obsahující uživatelská data. Odkazy v průvodci umožňují stáhnout prázdnou šablonu a ukázkový soubor CSV. První řádek souboru CSV musí ve správném pořadí obsahovat popisky jednotlivých sloupců dat uživatele. Pak musíte pro každého uživatele v souboru .csv uvést **uživatelské jméno** (třeba **jan@contoso.com**) a **zobrazované jméno** (třeba **Macek Jan**).
 
-1.  V [centru pro správu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) zvolte **Uživatelé** &gt; **Nový**..
+1.  V [centru pro správu Office 365](http://go.microsoft.com/fwlink/?LinkID=787455) zvolte **Uživatelé**&gt;**Nový**.
 
 2.  Volbou **Hromadné přidání** spustíte Průvodce hromadným přidáním uživatelů.
 
@@ -84,6 +78,7 @@ Gratulujeme! Právě jste dokončili krok 2 příručky pro *testování Microso
 >[&larr; **Registrace k vyhodnocení**](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md)     [**Vytvoření skupin** &rarr;](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-3.md)  
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Aug16_HO2-->
 
 

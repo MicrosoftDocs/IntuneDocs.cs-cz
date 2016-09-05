@@ -1,10 +1,10 @@
 ---
 title: "Přímá registrace zařízení s iOS | Microsoft Intune"
-description: 
+description: "Použijte nástroj Apple Configurator k přímé registraci zařízení s iOS vlastněných společností pomocí předdefinované zásady tak, že je připojíte přes USB do počítače Mac."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,18 +13,16 @@ ms.assetid: a692b90c-72ae-47d1-ba9c-67a2e2576cc2
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1b942c7e09e59de59e3e406b84a21a712c0e973a
-ms.openlocfilehash: 8fea0f7f87972bc643bbb20348095e05f701287e
+ms.sourcegitcommit: aabe68a3621a02b8f3142ab3f593190cc23053dd
+ms.openlocfilehash: 17836bc826bc89e3f041f7b369be09c1cce9ea4f
 
 
 ---
 
 # Přímá registrace zařízení s iOS pomocí nástroje Apple Configurator
-Intune podporuje registraci firemních zařízení s iOS pomocí nástroje [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) spuštěného na počítači Mac. Tento proces neprovede reset továrního nastavení zařízení a registruje ho s předdefinovanými zásadami. Tato metoda je určená pro počítače s nastavením **Bez přidružení uživatele** a vyžaduje, abyste zařízení s iOS připojili pomocí USB k počítači Mac a nastavili firemní registraci. Aplikace Portál společnosti se pro zařízení s přímou registrací nepodporuje. Tyto pokyny předpokládají, že používáte Apple Configurator 2.0 na počítači Mac.
+Intune podporuje registraci firemních zařízení s iOS pomocí nástroje [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) spuštěného na počítači Mac. Tento proces neprovede reset továrního nastavení zařízení a zaregistruje ho s předdefinovanými zásadami. Tato metoda je určená pro počítače s nastavením **Bez přidružení uživatele** a vyžaduje, abyste zařízení s iOS připojili pomocí USB k počítači Mac a nastavili firemní registraci. Když zařízení s iOS registrujte přímo, můžete ho registrovat bez získání sériového čísla zařízení. Můžete také zařízení pro potřeby identifikace pojmenovat před tím, než Intune zachytí název zařízení během registrace. Aplikace Portál společnosti se pro zařízení s přímou registrací nepodporuje. Tyto pokyny předpokládají, že používáte Apple Configurator 2.0 na počítači Mac.
 
 1.  **Vytvořte profil zařízení.** Profil registrace zařízení definuje nastavení, která se pro zařízení použijí. Jestli jste to ještě neudělali, vytvořte profil registrace zařízení pro zařízení iOS zaregistrovaná v Apple Configuratoru.
-
-    #### Vytvoření profilu
 
     1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) přejděte na **Zásady** &gt; **Registrace podnikového zařízení** a klikněte na **Přidat…**.
 
@@ -40,8 +38,8 @@ Intune podporuje registraci firemních zařízení s iOS pomocí nástroje [Appl
 
         -   **Předběžné přiřazení skupiny zařízení** – Do této skupiny na začátku patří všechna zařízení nasazená s tímto profilem. Po registraci můžete zařízení přiřadit někomu jinému.
 
-        >[!Important]
-        >Přiřazení skupiny způsobí přesun z Intune do Azure Active Directory. [Další informace](http://go.microsoft.com/fwlink/?LinkID=787064)
+            [!INCLUDE[groups deprecated](../includes/group-deprecation.md)]
+
     3.  Profil přidáte kliknutím na **Uložit profil**.
 
 5.  **Exportujte profil jako soubor .mobileconfig pro nasazení na zařízení iOS.** Vyberte profil zařízení, který jste vytvořili. Vyberte **Exportovat…** na hlavním panelu. Vyberte **Stáhnout profil** a uložte stažený soubor .mobileconfig.
@@ -61,8 +59,6 @@ Intune podporuje registraci firemních zařízení s iOS pomocí nástroje [Appl
 
 8.  **Nainstalujte profil.** Teď můžete profil nainstalovat na zařízení s iOS. Je potřeba, aby už byl v zařízení dokončený Pomocník s nastavením a aby bylo připravené k použití.  Pokud registrace zahrnuje nasazení aplikací, zařízení by mělo mít nastavené Apple ID, protože při nasazení aplikace bude potřeba přihlásit se do obchodu App Store pomocí Apple ID.
 
-    ###### Dokončení přijetí profil pro zařízení s iOS bez dohledu
-
     1.  Odemkněte zařízení s iOS.
 
     2.  V dialogovém okně **Nainstalovat profil** pro **Profil správy** klepněte na **Instalovat**.
@@ -81,11 +77,7 @@ Intune podporuje registraci firemních zařízení s iOS pomocí nástroje [Appl
 10. **Distribuujte zařízení** Zařízení s iOS je teď zaregistrované v Intune a spravované.
 
 
-### Viz taky
-[Příprava registrace zařízení](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
-
-
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO1-->
 
 

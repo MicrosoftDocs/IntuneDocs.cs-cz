@@ -1,10 +1,10 @@
 ---
 title: "Řešení problémů s nasazením aplikací | Microsoft Intune"
-description: 
+description: "Tento článek vám pomůže při řešení problémů s nasazením aplikací pomocí Microsoft Intune."
 keywords: 
-author: Nbigman
-manager: jeffgilb
-ms.date: 05/26/2016
+author: robstackmsft
+manager: angrobe
+ms.date: 08/02/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,29 +12,25 @@ ms.technology:
 ms.assetid: 28ac298e-fb73-4c1c-b3fd-8336639e05e6
 ms.reviewer: mghadial
 ms.suite: ems
-ms.sourcegitcommit: 327c3aaf42aaf7f97e2b78d5ae38584bc13773e1
-ms.openlocfilehash: dc782a54983e4db39a029a15183834a925d0e00c
+translationtype: Human Translation
+ms.sourcegitcommit: bbee6d3fec02a4d96b31a44a31218f684e0267c8
+ms.openlocfilehash: ed961a945d0b7872553f2be2917ba273709b6d35
 
 
 ---
 
 # Řešení problémů s nasazením aplikací v Microsoft Intune
-Tento článek vám pomůže při řešení problémů s nasazením aplikací pomocí Microsoft Intune.
+Pokud máte potíže s nasazením a správou aplikací v Intune, začněte zde. Toto téma popisuje některé běžné problémy, na které můžete narazit, a jejich řešení.
 
-Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md), ve kterém najdete další způsoby, jak získat nápovědu.
+## Běžné problémy s nasazením aplikací
 
+### Uživatelé se nemůžou přihlásit do portálu společnosti Intune
 
-## Obvyklé problémy s nasazováním aplikací
+1.  Zkontrolujte, že účet uživatele v [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) existuje a je povolený.
 
-### Pokud se nemůžete přihlásit do portálu společnosti Microsoft Intune
+3.  V [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) se ujistěte, že pro přihlášení do Intune uživatel používá správné uživatelské jméno ve formátu: **joe@domain.com**. Pokud se zdá, že uživatel zadává nesprávné heslo, požádejte ho, aby heslo resetoval.
 
-1.  Zkontrolujte, jestli váš účet existuje v [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) nebo jestli není zakázaný.
-
-2.  Ujistěte se, že je pro vás tento účet zřízený v [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854).
-
-3.  V [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) se ujistěte, že pro přihlášení do Intune používáte správné uživatelské jméno a heslo ve formátu: **joe@domain.com**.
-
-### Pokud v aplikaci Portál společnosti chybí kontaktní informace na IT oddělení
+### V Portálu společnosti chybí kontaktní údaje oddělení IT
 
 1.  V konzole správce Intune zvolte **Správa** &gt; **Portál společnosti**.
 
@@ -80,7 +76,7 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 
 ### Chyba: Vydavatel neexistuje.
 Používáte funkci **Přidat smlouvu na ostatní software** pro přidání licenční smlouvy třetí strany. Pokoušíte se přidat vydavatele přes stránku **Licenční smlouva na ostatní software**. Stránka poskytuje seznam existujících vydavatelů v abecedním pořadí.
-Zadali jste chybějícího vydavatele, ale zobrazí se chybová zpráva **Vydavatel neexistuje**. 
+Zadali jste chybějícího vydavatele, ale zobrazí se chybová zpráva **Vydavatel neexistuje**.
 
 Jedná se o účel. Intune poskytuje sledování licencí pouze pro oblíbené softwarové produkty. Intune vyžaduje, aby software nahlásily nejméně 4 samostatné účty předtím, než je k dispozici jako volba v procesu licencování.
 
@@ -104,6 +100,6 @@ Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podpor
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO2-->
 
 

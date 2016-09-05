@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Použití sady SDK k povolení správy mobilních aplikací pro aplikace | Microsoft Intune
-description:
-keywords:
-author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+title: "Použití sady SDK k povolení MAM pro aplikace | Microsoft Intune"
+description: 
+keywords: 
+author: karthikaraman
+manager: angrobe
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 26b00081-7c05-4969-ace1-0585e44d5cd2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: eec08a92ff38f55ca04e9c1822c041e8bd0273fd
+ms.openlocfilehash: 5c7f25b31288a112fbfb1744c061c4cc2eb73e49
+
 
 ---
 
@@ -38,13 +32,13 @@ Použití sady Microsoft Intune App SDK k povolení správy určitých funkcí m
 
 K použití sady SDK potřebujete přístup ke zdrojovému kódu aplikace, ale můžete povolit většinu funkcí sady SDK bez nutnosti změny chování aplikace.
 
-Přehled sady SDK najdete na stránce [Přehled](https://msdn.microsoft.com/en-us/library/mt627767.aspx). Pokud chcete začít používat sadu Intune App SDK, přečtěte si téma [Začínáme s Microsoft Intune App SDK](https://msdn.microsoft.com/library/mt627766.aspx).
+Přehled sady SDK najdete na stránce [Přehled](/intune/develop/intune-app-sdk). Pokud chcete začít používat sadu Intune App SDK, přečtěte si téma [Začínáme s Microsoft Intune App SDK](/intune/develop/intune-app-sdk-get-started).
 
 ### Související témata
 [Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md)
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

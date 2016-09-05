@@ -1,27 +1,27 @@
 ---
 title: "Zásady ochrany počítačů s Windows | Microsoft Intune"
-description: 
+description: "Tyto zásady použijte, aby vám pomohly při zajišťování zabezpečení počítačů s Windows, které jsou spravovány klientským softwarem Intune."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: d081f466-45dd-41d1-ab25-6d974c72a52a
-ms.reviewer: jeffgilb
+ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
-ms.openlocfilehash: 8d1bad7af972a32ce3509d67edab3f4f9c9df299
+ms.sourcegitcommit: 321a19c38a4b69f5d16f10f054dd517b696b44eb
+ms.openlocfilehash: e649db8209f6c3c99af3353188fb8ebf463d922f
 
 
 ---
 
 # Použijte zásady k ochraně počítačů s Windows, na nichž běží klientský software Intune.
 
-Microsoft Intune nabízí tři zásady, které pomáhají při zajišťování zabezpečení počítačů s Windows, které jsou spravovány [klientským softwarem Intune](manage-windows-pcs-with-microsoft-intune.md). 
+Microsoft Intune nabízí tři zásady, které pomáhají při zajišťování zabezpečení počítačů s Windows, které jsou spravovány [klientským softwarem Intune](manage-windows-pcs-with-microsoft-intune.md).
 
 
 ## Aktualizace softwaru
@@ -30,7 +30,7 @@ Intune umožňuje snadnou [aktualizaci spravovaných počítačů s Windows](kee
 
 ## Brána Windows Firewall
 
-Brána Windows Firewall pomáhá chránit počítače s Windows proti hackerům, malwaru a dalším hrozbám. Intune vám umožňuje [spravovat nastavení a funkce pro bránu Windows Firewall](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) na všech počítačích, které spravujete.
+Brána Windows Firewall pomáhá chránit počítače s Windows proti hackerům, malwaru a dalším hrozbám. S Intune můžete [spravovat nastavení a funkce pro bránu Windows Firewall](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) na všech počítačích, které spravujete.
 
 ## Endpoint Protection
 
@@ -38,12 +38,11 @@ Jedna z vašich nejdůležitějších priorit jako správce IT je [udržovat po�
 
 
 
-### Viz také
+### Viz taky
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
 
 
 
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

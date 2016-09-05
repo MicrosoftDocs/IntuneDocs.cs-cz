@@ -1,10 +1,10 @@
 ---
 title: "Řešení potíží s aktualizacemi softwaru | Microsoft Intune"
-description: 
+description: "Řešte problémy s aktualizacemi softwaru ve službě Microsoft Intune."
 keywords: 
-author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+author: robstackmsft
+manager: angrobe
+ms.date: 08/02/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: d17b70f4-17b4-4d89-88fd-70fa4f34fbea
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ca4d4197ac1ece3e9abf44ad462d8ec7a807b4b2
-ms.openlocfilehash: d8470be236ac7b7a9431e07c5ca651cb6bd9fbc0
+ms.sourcegitcommit: 906371576609152aaf61e033da5ce60744ddd255
+ms.openlocfilehash: 07e5737b75870319445f5af4d7038916b155d083
 
 
 ---
@@ -244,7 +244,7 @@ Kódy chyb agenta Intune **Update Agent** jsou uvedené v následující tabulce
 **Problém:** Mohou nastat situace, kdy klienti Microsoft Intune zaznamenají jeden nebo více z následujících příznaků:
 - Náhle přestanou předávat hlášení konzole správce Microsoft.  
 - Dojde k vysoké využití procesoru.
-- Aplikace instalované prostřednictvím portálu služby Intune se instalují pomalu. 
+- Aplikace instalované prostřednictvím portálu služby Intune se instalují pomalu.
 - Microsoft Intune Center generuje následující chybu: *Při aktualizaci počítače došlo k chybě. Nalezená chyba: Kód 0x800705b4*.
 - Pole stavu v konzole správce Intune v části Skupiny > Všechna zařízení zobrazuje: *Minimálně u jednoho agenta nainstalovaného v tomto počítači došlo k chybám. Informace pro tento počítač nemusí být přesné nebo aktuální*.
 
@@ -254,7 +254,7 @@ K tomuto problému může dojít, pokud nahrazené aktualizace (aktualizace, kte
 1. Přihlaste se ke [konzole správce Intune](https://manage.microsoft.com).
 2. Vyberte **Aktualizace** > **Všechny aktualizace**.
 3. K filtrování nahrazených aktualizací použijte možnost filtru v horním panelu nástrojů.
-4. Zamítněte všechny nahrazené aktualizace, které se mohou vztahovat na Windows 7 nebo na aplikace (například Microsoft Office), které byly nainstalovány na příslušné klienty. 
+4. Zamítněte všechny nahrazené aktualizace, které se mohou vztahovat na Windows 7 nebo na aplikace (například Microsoft Office), které byly nainstalovány na příslušné klienty.
 5. Restartujte příslušné klienty.
 
 Pokud používáte systém Windows 7, ujistěte se ještě, že je nainstalována následující aktualizace: [3050265 Windows Update Client pro Windows 7: červen 2015](https://support.microsoft.com/kb/3050265).
@@ -264,7 +264,6 @@ Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podpor
 
 
 
-
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

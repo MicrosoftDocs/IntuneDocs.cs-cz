@@ -1,10 +1,10 @@
 ---
-title: "Vymazání dat spravovaných aplikací společnosti s Microsoft Intune | Microsoft Intune"
-description: 
+title: "Vymazání dat spravovaných aplikací společnosti | Microsoft Intune"
+description: "Přečtěte si, jak můžete selektivně odebrat data společnosti ze zařízení vzdáleně."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +13,13 @@ ms.assetid: 2742e1d5-d2d5-42cd-b719-665dd6e0a0e9
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ded7bd6c971a9448ad6e6492ebc5e42dfcb5d76e
-ms.openlocfilehash: ebc83611679f5128df45e4ca6b2f3b745f47061d
+ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
+ms.openlocfilehash: 3d52345b043115185e667c41d3f09d8257792002
 
 
 ---
 
-# Vymazání data spravovaných aplikací společnosti s Microsoft Intune
+# Vymazání dat spravovaných aplikací společnosti s Microsoft Intune
 V případě ztráty nebo odcizení zařízení nebo když zaměstnanec opouští společnost, je vhodné se ujistit, že byla ze zařízení odebraná firemní data. Nemusí ale být vhodné odebrat ze zařízení osobní data, zejména pokud se jedná o zařízení vlastněné zaměstnancem.
 
 Pokud chcete provést selektivní vymazání dat aplikací společnosti, vytvořte žádost o vymazání pomocí kroků popsaných v části **Vytvoření žádosti o vymazání** v tomto tématu.  Po dokončení žádosti se při příštím spuštění aplikace na zařízení z aplikace odeberou data společnosti.
@@ -61,6 +61,6 @@ Okno **Správa mobilních aplikací Intune** obsahuje souhrnnou sestavu o dlažd
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

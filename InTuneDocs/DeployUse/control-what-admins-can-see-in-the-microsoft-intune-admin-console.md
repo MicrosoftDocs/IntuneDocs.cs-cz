@@ -1,10 +1,10 @@
 ---
 title: "Přizpůsobení zobrazení konzoly pro role | Microsoft Intune"
-description: 
+description: "Toto téma vám může pomoct filtrovat zobrazení konzoly správce Intune a povolit správcům zobrazení pouze těch položek, které potřebují kvůli své roli."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,14 @@ ms.assetid: e0783eaa-67dc-410e-9e80-4d3aa72f36d8
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
-ms.openlocfilehash: 52a77e50b3dde24ba270766d4472bdd6176cc415
+ms.sourcegitcommit: 217655d3c33ac88672f0739302f182cf6a6ae335
+ms.openlocfilehash: dc9bb2992d3e3ed8134cfa2146295e16edf4e459
 
 
 ---
 
 # Přizpůsobení zobrazení konzoly Intune podle rolí administrátora
-Můžete filtrovat zobrazení konzoly správce Microsoft Intune a povolit správcům zobrazení pouze těch položek, které potřebují kvůli své roli. Můžete třeba povolit aktualizace definic malwaru nebo obnovování hesel pro zařízení jenom operátorům konzoly pro správu. To provedete pomocí přednastavených **označení**, která přiřadíte konkrétním uživatelům. Když pak tito uživatelé přejdou do konzoly pro správu, uvidí jenom položky specifické pro své označení.
+Můžete filtrovat zobrazení konzoly pro správu Microsoft Intune a povolit správcům zobrazení pouze těch položek, které potřebují kvůli své roli. Můžete třeba povolit aktualizace definic malwaru nebo obnovování hesel pro zařízení jenom operátorům konzoly pro správu. To provedete pomocí přednastavených **označení**, která přiřadíte konkrétním uživatelům. Když pak tito uživatelé přejdou do konzoly pro správu, uvidí jenom položky specifické pro své označení.
 
 ## Vytvoření vlastního zobrazení
 
@@ -60,14 +60,14 @@ Můžete filtrovat zobrazení konzoly správce Microsoft Intune a povolit správ
 
         -   Aktualizovat inventáře
 
-        -   Vzdáleně uzamknout zařízení
+        -   Vzdálené zamknutí zařízení
 
         -   Resetování hesla
 
-Když nakonfigurovaný správce později otevře konzolu správce Intune , bude mu udělená úroveň přístupu, kterou jste určili.
+Když nakonfigurovaný správce později otevře konzolu pro správu Intune, bude mu udělená úroveň přístupu, kterou jste určili.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

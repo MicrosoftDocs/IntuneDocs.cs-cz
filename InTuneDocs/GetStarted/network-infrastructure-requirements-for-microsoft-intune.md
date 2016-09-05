@@ -1,32 +1,26 @@
 ---
-# required metadata
-
-title: Požadavky na síťovou infrastrukturu | Microsoft Intune
-description:
-keywords:
-author: Staciebarker
-manager: jeffgilb
+title: "Požadavky na síťovou infrastrukturu | Microsoft Intune"
+description: "Požadavky na bránu firewall, porty, doménu a proxy server služby Intune"
+keywords: 
+author: barlanmsft
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 074de65b-84a5-4a01-a824-18ffd838eab0
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 6d1c7c670341692d4ea0c823e4a9a96746b83067
+ms.openlocfilehash: d77d33f0c849be6b9edcbe977900fd5dac6c4e2f
+
 
 ---
 
 # Požadavky na síťovou infrastrukturu pro Microsoft Intune
-Před nastavením Microsoft Intune si přečtěte toto téma a další požadavky uvedené v tématu [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)..
+Před nastavením Microsoft Intune si přečtěte toto téma a další požadavky uvedené v tématu [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md).
 
 Toto téma uvádí požadavky služby Intune, které umožňují, aby infrastruktura vaší sítě přenášela komunikaci mezi zařízeními, která spravujete a používáte ke správě předplatného, a internetovými weby používanými cloudovou službou.
 
@@ -141,6 +135,7 @@ Následující tabulka obsahuje seznam portů a služeb, ke kterým přistupuje 
 |status.manage.microsoft.com|80 a 443|157.55.99.170
 |swda01.manage.microsoft.com<br>swda02.manage.microsoft.com<br>swdb01.manage.microsoft.com<br>swdb02.manage.microsoft.com<br>swdc01.manage.microsoft.com<br>swdc02.manage.microsoft.com|80 a 443|93.184.215.200
 |*.microsoftonline-p.com|80 a 443||
+|has.spserv.microsoft.com<br>Požadované pro službu ověření stavu zařízení|443||
 |*.microsoftonline-p.net|80 a 443||
 |*.portal.office.com|80 a 443||
 |*.spynet2.microsoft.com|443||
@@ -153,6 +148,7 @@ Následující tabulka obsahuje seznam portů a služeb, ke kterým přistupuje 
 |Služba Microsoft Update|\*.update.microsoft.com<br>download.microsoft.com<br>update.microsoft.com<br>\*.download.windowsupdate.com<br>download.windowsupdate.com<br>\*.windowsupdate.com<br>windowsupdate.microsoft.com<br>ntservicepack.microsoft.com|80 a 443|
 |Požadavky na vyhledávání DNS|manage.microsoft.com.nsatc.net|80|
 |Komunikace zařízení Samsung KNOX přes bránu firewall|Pokud chcete zařízením Samsung KNOX povolit, aby kontaktovala servery KNOX přes bránu firewall, postupujte podle pokynů v části Nejčastější dotazy pro Samsung KNOX.||
+|Komunikace s podmíněným přístupem|443|204.79.197.200|
 |Dokumentace, nápověda a podpora:</br></br>*.livemeeting.com<br>\*.microsoftonline.com<br>\*.social.technet.microsoft.com<br>blogs.technet.com<br>go.microsoft.com<br>onlinehelp.microsoft.com<br>www.microsoft.com|80|||
 
 
@@ -169,20 +165,11 @@ Nastavení proxy serveru můžete upravit na jednotlivých klientských počíta
 Můžete použít i proxy server, který ukládá obsah do mezipaměti, a tím [zmenšuje šířku pásma](network-bandwidth-use.md) používanou klienty Intune.
 
 
-
-## Požadavky na konektor Service to Service Connector
-Konektor Service to Service Connector podporuje jenom cloudový Exchange a nemá žádné požadavky na místní infrastrukturu.
-
-Pokud chcete použít tento konektor, musí být splněné tyto požadavky:
-
--   Máte předplatné Office 365 obsahující klienta Exchange Serveru 2013. Pokud je tenant Exchange Server 2013, konektor podporuje Exchange Server 2010 ve stejném prostředí.
-
--   Uživatelský účet, který použijete k instalaci konektoru On-Premises Connector, musí být správce tenanta pro Intune a správce v tenantovi Exchange s licencí k používání Exchange Serveru 2013.
-
 ### Související témata
 [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Aug16_HO4-->
 
 

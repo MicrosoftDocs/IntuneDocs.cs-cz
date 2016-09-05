@@ -1,10 +1,10 @@
 ---
-title: "Monitorování zásad správy mobilních aplikací s Microsoft Intune | Microsoft Intune"
-description: 
+title: "Monitorování zásad MAM s Microsoft Intune | Microsoft Intune"
+description: "Podívejte se, kolik uživatelů má zásady, a přechodem k podrobnostem zjistěte další informace."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: d3aa6c74-6b5d-4b50-aa66-a040ec44393e
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ded7bd6c971a9448ad6e6492ebc5e42dfcb5d76e
-ms.openlocfilehash: 99b50bd040bbbdfa3ad7937d7703700526c9c4d5
+ms.sourcegitcommit: 644860abcd351d24f08d7a517a3a4b5f44824689
+ms.openlocfilehash: 1d22d26c1a1c52dda4f9b01658d22f8de8187f0f
 
 
 ---
@@ -49,6 +49,9 @@ Můžete vyhledat jednoho uživatele a podívat se na stav dodržování předpi
 
   **Není zaregistrováno:** Znamená, že došlo k nasazení zásady pro uživatele, ale aplikace se od té doby nepoužila v pracovním kontextu.
 
+>[!NOTE]
+> Pokud uživatel, kterého jste hledali, nemá nasazené zásady MAM, zobrazí se zpráva oznamující, že uživatel není cílem žádné zásady pro aplikace.
+
 Pokud chcete zobrazit vytváření sestav pro uživatele, postupujte takto:
 
 **Krok 1:** Pokud chcete vybrat uživatele, klikněte na dlaždici souhrnu nebo zvolte možnost **VYTVÁŘENÍ SESTAV APLIKACE UŽIVATELEM** v okně **Nastavení**, jak je uvedeno níže:
@@ -72,6 +75,6 @@ V podrobném zobrazení se zobrazí chybová zpráva, aplikace, ke které se př
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

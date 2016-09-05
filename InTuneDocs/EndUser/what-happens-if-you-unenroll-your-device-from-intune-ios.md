@@ -1,27 +1,27 @@
 ---
-title: "Co se stane, když zrušíte registraci zařízení v Intune? | Microsoft Intune"
+title: "Co se stane, když zrušíte registraci zařízení s iOS v Intune? | Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: c6a97c74-c35c-4977-b925-6efe01e31d3c
-ROBOTS: 
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 073c94e51f61e091f0055c96e8ad183e57fafabd
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: a0a23db190efc915625058983f564e892c542259
 
 
 ---
 
 
-# Co se stane, když zrušíte registraci zařízení v Intune?
+# Co se stane, když zrušíte registraci zařízení s iOS v Intune?
 
 Po zrušení registrace zařízení s iOS v Intune:
 
@@ -43,10 +43,11 @@ Návod ke zrušení registrace najdete v tématu [Zrušení registrace zařízen
 
 Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
-### Související témata
+### Viz taky
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO4-->
 
 

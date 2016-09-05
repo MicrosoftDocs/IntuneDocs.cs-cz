@@ -1,26 +1,27 @@
 ---
-title: "Co se stane, když resetujete zařízení pomocí Portálu společnosti? | Microsoft Intune"
+title: "Co se stane, když resetujete zařízení s Windows pomocí Portálu společnosti? | Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 05/31/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 1ee6e275-d1ec-4da3-bbef-d5da2c61a02a
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 39e810466d3a98789f0f1338f68d2be80d757d39
-ms.openlocfilehash: 9ff73d6e2066b0fb3d2e8ca9d7732d4685e258fd
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: 63e35b89d443600409eb1b9375d06b9d52b72b27
 
 
 ---
 
 
-# Co se stane, když resetujete zařízení pomocí Portálu společnosti?
+# Co se stane, když resetujete zařízení s Windows pomocí Portálu společnosti?
 
 Když k resetování zařízení se systémem Windows použijete aplikaci Portál společnosti nebo [web Portál společnosti](reset-your-device-cpwebsite.md), v zařízení se obnoví tovární nastavení a odstraní se všechny aplikace, nastavení a data, včetně vašich osobních údajů. Co se u jednotlivých zařízení stane, závisí na typu zařízení a způsobu jeho použití, jak popisuje následující tabulka. Pokyny, jak resetovat ztracené nebo odcizené zařízení, najdete v části [Resetování (vymazání) ztraceného nebo odcizeného zařízení](reset-erase-your-lost-or-stolen-device-windows.md).
 
@@ -36,6 +37,7 @@ Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na spr�
 [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO4-->
 
 

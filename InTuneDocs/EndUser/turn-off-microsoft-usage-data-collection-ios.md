@@ -1,21 +1,21 @@
 ---
-title: "Vypnutí shromažďování dat Microsoftu o využití | Microsoft Intune"
+title: "Vypnutí shromažďování dat Microsoftu o využití pro iOS | Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 6515f4c4-3821-49b0-9bfe-abdf8143c8d1
-ROBOTS: 
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 99e60934ecd280b5dd38ebe65f5a60fee576f77f
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: cecb9c936c077efe2390faccdd53f4b06d7f9094
 
 
 ---
@@ -23,16 +23,19 @@ ms.openlocfilehash: 99e60934ecd280b5dd38ebe65f5a60fee576f77f
 
 # Vypnutí shromažďování dat Microsoftu o využití
 
-Microsoft automaticky shromažďuje anonymní informace o spolehlivosti, výkonu a použití aplikace Portál společnosti za účelem zlepšení svých produktů a služeb. 
+Microsoft automaticky shromažďuje anonymní informace o spolehlivosti, výkonu a použití aplikace Portál společnosti za účelem zlepšení svých produktů a služeb.
 
-Shromažďování těchto dat na zařízení iOS můžete vypnout pomocí nastavení **Údaje o používání** v aplikaci Portál společnosti. Správci IT nemají nad shromažďováním údajů žádnou kontrolu a nemůžou u tohoto nastavení změnit vaši volbu.
+Pokud chcete vypnout shromažďování dat o použití na zařízení iOS, přejděte na **Nastavení**, klepněte na **Portál společnosti** a pak vypněte nastavení **Data o využití**.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Správci IT nemají nad shromažďováním údajů žádnou kontrolu a nemůžou u tohoto nastavení změnit vaši volbu.
+
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO4-->
 
 

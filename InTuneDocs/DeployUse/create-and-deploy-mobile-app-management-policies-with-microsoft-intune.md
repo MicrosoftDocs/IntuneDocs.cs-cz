@@ -1,10 +1,10 @@
 ---
 title: "Vytvoření a nasazení zásad MAM | Microsoft Intune"
-description: 
+description: "Podle podrobného postupu v tomto tématu můžete vytvořit a nasadit zásady správy mobilních aplikací."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,8 +12,9 @@ ms.technology:
 ms.assetid: c1b9a343-1737-4a65-a9c6-aca48acad11c
 ms.reviewer: joglocke
 ms.suite: ems
-ms.sourcegitcommit: 3f79de38ce7fc9a5434033ee45ddf43f22517356
-ms.openlocfilehash: f1b9216c673039f8600e07508b255e12cc30bf3f
+translationtype: Human Translation
+ms.sourcegitcommit: 74d9c9843fd6119095c9670a76afd26443bcc796
+ms.openlocfilehash: dab86ce2210c1f0cec81e402d730a6b996db64fc
 
 
 ---
@@ -26,11 +27,17 @@ Toto téma popisuje proces vytváření zásad MAM na **Portálu Azure**. Portá
 - Zařízení spravovaná řešením MDM třetí strany
 - Zařízení, která nejsou spravována žádným řešením MDM (BYOD).
 
-Pokud teď ke správě svých zařízení používáte **konzolu pro správu Intune**, můžete zásadu MAM podporující aplikace pro zařízení zaregistrovaná v Intune vytvořit pomocí [konzoly pro správu Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
-Zásady MAM vytvořené v konzole pro správu Intune nelze importovat do portálu Azure.  Zásady MAM je nutné znovu vytvořit na portálu Azure.
-
 >[!IMPORTANT]
-> V Konzole správce Intune nemusíte vidět všechna nastavení zásad MAM. Na Portálu Azure najdete novou konzolu pro správu, kterou je možné používat pro vytváření zásad MAM. Pokud vytváříte zásady MAM v konzole pro správu Intune i na portálu Azure, pro aplikace se použije a pro uživatele se nasadí zásada na portálu Azure.
+Pokud při správě zařízení používáte **konzolu správce Intune** zvažte následující:
+
+> * Pomocí [konzoly pro správu Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) můžete vytvořit zásadu MAM podporující aplikace pro zařízení zaregistrovaná v Intune.
+> * Zásady MAM vytvořené v konzole pro správu Intune nelze importovat do portálu Azure.  Zásady MAM je nutné znovu vytvořit na portálu Azure.
+
+> * V Konzole správce Intune nemusíte vidět všechna nastavení zásad MAM. Na Portálu Azure najdete novou konzolu pro správu, kterou je možné používat pro vytváření zásad MAM.
+
+> * Pro nasazení spravovaných aplikací musíte vytvořit zásadu MAM pomocí konzoly pro správu Intune. V takovém případě můžete chtít vytvořit zásady MAM jak v konzole správce Intune, tak i na webu Azure Portal. V konzole proto, abyste si zajistili možnost nasazení spravovaných aplikací a na webu Azure Portal proto, že je to nová konzola pro správu obsahující všechna nastavení zásad MAM.
+
+> * Pokud vytváříte zásady MAM v konzole pro správu Intune i na webu Azure Portal, pro aplikace se použije zásada z webu Azure Portal.
 
 Pokud chcete zobrazit seznam nastavení zásad, která jsou podporována pro platformy Android a iOS, vyberte jednu z následujících možností:
 
@@ -47,24 +54,20 @@ Před vytvořením zásady MAM si projděte informace o [požadavcích a podpoř
     > [!TIP]
     > Pokud Portál Azure používáte poprvé, přečtěte si článek [Portál Azure pro zásady Microsoft Intune MAM](azure-portal-for-microsoft-intune-mam-policies.md) a seznamte se s tím, jak portál funguje.
 
-2.  V okně **Nastavení** zvolte **Zásady aplikací**.  Otevře se okno **Zásady aplikací** , kde můžete vytvářet nové zásady a upravovat zásady, které už existují.
-
-    ![Snímek obrazovky okna Zásady aplikací zobrazující seznam existujících zásad](../media/AppManagement/AzurePortal_MAM_AppPolicy.png)
-
-3.  Zvolte **Přidat zásadu**.
+2.  V okně **Nastavení** zvolte **Zásady aplikací**.  Otevře se okno **Zásady aplikací**, kde můžete vytvářet nové zásady a upravovat zásady, které už existují. Zvolte **Přidat zásadu**.
 
     ![Snímek obrazovky okna Přidat zásadu se zvýrazněnou možností nabídky Přidat zásadu ](../media/AppManagement/AzurePortal_MAM_AddPolicy.png)
 
-4.  Zadejte název zásady, přidejte stručný popis a vyberte, jestli se má zásada vytvořit pro platformu iOS nebo Android.  Pro každou platformu můžete vytvořit několik zásad.
+3.  Zadejte název zásady, přidejte stručný popis a vyberte, jestli se má zásada vytvořit pro platformu iOS nebo Android.  Pro každou platformu můžete vytvořit několik zásad.
 
     ![Snímek obrazovky okna Přidat zásadu](../media/AppManagement/AzurePortal_MAM_AddPolicy_only.png)
 
-5.  Zvolením možnosti **Aplikace** otevřete **okno Aplikace**, kde se zobrazí seznam dostupných aplikací. Ze seznamu můžete vybrat jednu nebo několik aplikací a přidružit je k zásadě, kterou vytváříte. Jakmile vyberete aplikace, uložte svůj výběr zvolením tlačítka **Vybrat** v dolní části okna **Aplikace**.
+4.  Zvolením možnosti **Aplikace** otevřete **okno Aplikace**, kde se zobrazí seznam dostupných aplikací. Ze seznamu můžete vybrat jednu nebo několik aplikací a přidružit je k zásadě, kterou vytváříte. Jakmile vyberete aplikace, uložte svůj výběr zvolením tlačítka **Vybrat** v dolní části okna **Aplikace**.
 
     > [!IMPORTANT]
     > Při vytváření zásady musíte vybrat aspoň jednu aplikaci.
 
-6.  V **okně Přidat zásadu** zvolte **Konfigurovat požadované nastavení**. Otevře se okno nastavení zásad.
+5.  V **okně Přidat zásadu** zvolte **Konfigurovat požadované nastavení**. Otevře se okno nastavení zásad.
 
     Existují dvě kategorie nastavení zásad, **Přemístění dat** a **Přístup**.  Zásady přemístění dat platí pro přesun dat do aplikace a z aplikace, zatímco zásady přístupu určují, jak koncový uživatel přistupuje k aplikaci v pracovním kontextu.
     Nastavením zásad jsou pro začátek přiřazené výchozí hodnoty.  Pokud tyto výchozí hodnoty splňují vaše požadavky, nemusíte nic měnit.
@@ -74,11 +77,11 @@ Před vytvořením zásady MAM si projděte informace o [požadavcích a podpoř
 
     ![Snímek obrazovky okna nastavení společně s oknem Přidat zásadu](../media/AppManagement/AzurePortal_MAM_PolicySettings.png)
 
-7.  Tuto konfiguraci uložíte zvolením tlačítka **OK**.  A jste zpátky v okně **Přidat zásadu**. Zvolením možnosti **Vytvořit** vytvoříte zásadu a uložíte své nastavení.
+6.  Tuto konfiguraci uložíte zvolením tlačítka **OK**.  A jste zpátky v okně **Přidat zásadu**. Zvolením možnosti **Vytvořit** vytvoříte zásadu a uložíte své nastavení.
 
     ![Snímek obrazovky okna Přidat zásadu znázorňující, že byly nakonfigurovány aplikace a nastavení](../media/AppManagement/AzurePortal_MAM_CreatePolicy.png)
 
-    ![Snímek obrazovky okna Zásady aplikace s oznámením Přidávání zásady ](../media/AppManagement/AzurePortal_MAM_AddingPolicyNotification.png)
+
 
 Zásada není po vytvoření pomocí výš uvedeného postupu nasazená pro žádného uživatele.  Pokud ji chcete nasadit, použijte následující postup.
 
@@ -155,8 +158,8 @@ Pokud koncový uživatel chcete, aby se změny zásady projevily hned, musí se 
 Pokud chcete zobrazit úplný seznam nastavení zásad pro iOS a Android, vyberte jednu z následujících možností:
 
 > [!div class="op_single_selector"]
-  - [Zásady pro iOS](ios-mam-policy-settings.md)
-  - [Zásady pro Android](android-mam-policy-settings.md)
+- [Zásady pro iOS](ios-mam-policy-settings.md)
+- [Zásady pro Android](android-mam-policy-settings.md)
 
 ## Další kroky
 [Monitorování stavu dodržování předpisů a uživatele](monitor-mobile-app-management-policies-with-microsoft-intune.md)
@@ -166,6 +169,6 @@ Pokud chcete zobrazit úplný seznam nastavení zásad pro iOS a Android, vybert
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

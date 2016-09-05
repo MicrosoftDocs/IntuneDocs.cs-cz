@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Seznámení se zařízeními s inventářem v Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Seznámení se zařízeními s inventářem | Microsoft Intune"
+description: "Použijte Intune k zobrazení informací o hardwaru zařízení, která spravujete."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 08/17/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 312911fe-b963-4949-9911-ae425e0590b2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: df4e0bc8a818f22d6f7327f9f1348f67882e0c49
+ms.openlocfilehash: 80b157c021099513854b8ffc1fe09cd2922ee0c2
+
 
 ---
 
@@ -48,10 +42,10 @@ Pokud chcete zobrazit inventář, který shromažďují mobilní zařízení, sp
 |**ID protokolu Exchange ActiveSync**|Všechna zařízení|
 |**Zařízení s jailbreakem nebo rootem**|Pouze zařízení s iOS a Androidem|
 |**Jedinečné ID zařízení**|Všechna zařízení kromě Exchange ActiveSync|
-|**Sériové číslo**|Zařízení s iOS, Mac OS X, Androidem, Windows 8.1, Windows 10|
-|**Celkový úložný prostor**|Zařízení s iOS, Mac OS X, Windows 8.1, Windows 10|
-|**Volný úložný prostor**|Zařízení s iOS, Mac OS X, Windows 8.1, Windows 10|
-|**Telefonní číslo**<br>Telefony zařazené do kategorie Podnikové jsou označeny úplným telefonním číslem, když například spustíte sestavu inventáře mobilních zařízení. Telefonní čísla vlastních zařízení zaměstnanců (BYOD) jsou maskována pomocí &#42;, zobrazují se pouze poslední 4 číslice.|Zařízení s iOS, Androidem a Windows Phone|
+|**Sériové číslo**|Zařízení s iOS, Mac OS X, Androidem, Windows 8.1 a Windows 10|
+|**Celkový úložný prostor**|Zařízení s iOS, Mac OS X, Windows 8.1 a Windows 10|
+|**Volný úložný prostor**|Zařízení s iOS, Mac OS X, Windows 8.1 a Windows 10|
+|**Telefonní číslo**<br>Telefony zařazené do kategorie Podnikové jsou identifikovány úplným telefonním číslem (například když spustíte sestavu inventáře mobilních zařízení). Telefonní čísla vlastních zařízení zaměstnanců (BYOD) jsou maskována pomocí znaků &#42;, zobrazují se pouze poslední 4 číslice.|Zařízení s iOS, Androidem a Windows Phone|
 |**IMEI**|Zařízení s Exchange ActiveSync, iOS, Androidem a Windows Phone|
 |**MEID**<br>Identifikátor mobilního zařízení|Pouze zařízení s iOS|
 |**Wi-Fi MAC**|Všechna zařízení kromě Exchange ActiveSync|
@@ -65,7 +59,7 @@ Pokud chcete zobrazit inventář, který shromažďují mobilní zařízení, sp
 |**Zámek aktivace povolený**|Pouze zařízení s iOS|
 |**Šifrování povolené**|Všechna zařízení|
 
-## Co je shromažďováno z počítačů s Windows
+## Co je shromažďováno z počítačů s Windows?
 > [!IMPORTANT]
 > Tato část se týká pouze počítačů s Windows, na kterých je spuštěn klientský software Windows PC Intune.
 
@@ -113,11 +107,13 @@ Chcete-li zobrazit inventář shromážděný z počítačů s Windows, spusťte
 
 -   **Poslední aktualizace**
 
-### Viz také
-[Monitorování a sestavy v Microsoft Intune](monitoring-and-reports-with-microsoft-intune.md)
+<!-- this section below belongs in the planning journey
+### See Also
+[Monitoring and reports with Microsoft Intune](monitoring-and-reports-with-microsoft-intune.md)
+-->
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

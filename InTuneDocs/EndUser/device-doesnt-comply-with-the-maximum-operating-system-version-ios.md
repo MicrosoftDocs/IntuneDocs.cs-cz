@@ -1,35 +1,35 @@
 ---
-title: "Zařízení nevyhovuje maximální verzi operačního systému | Microsoft Intune"
+title: "Zařízení s iOS nevyhovuje maximální verzi operačního systému | Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 06/03/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: ada223d7-2a80-4415-bd85-5bdf9eca7ace
-ROBOTS: 
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f83a539e9bec5207d7c1c682942b4bb6797d616c
-ms.openlocfilehash: 6d1d1a382b8b10426f73fba3c579765dbf6f4af3
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: 0ad952f8d887d7ee728193f555e247e9ef810c30
 
 
 ---
 
 
-# Zařízení nevyhovuje maximální verzi operačního systému
+# Zařízení s iOS nevyhovuje maximální verzi operačního systému
 
 Zařízení iOS nevyhovuje zásadám vašeho správce IT, které se týkají maximální verze operačního systému. Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
-### Související témata
+### Viz taky
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

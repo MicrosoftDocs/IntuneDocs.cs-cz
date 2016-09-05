@@ -1,10 +1,10 @@
 ---
 title: "Omezení přístupu k e-mailu na Dynamics CRM Online | Microsoft Intune"
-description: 
+description: "Chraňte a kontrolujte přístup k Dynamics CRM Online pomocí podmíněného přístupu."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 06/16/2016
+manager: angrobe
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,8 +12,9 @@ ms.technology:
 ms.assetid: f1c4522b-5a34-4f5a-89d2-7809c4352af7
 ms.reviewer: chrisgre
 ms.suite: ems
-ms.sourcegitcommit: 89e522a99687fc9b6e82db9f721858d17afdce6a
-ms.openlocfilehash: 8f90f99d621d7edebcb7a4c67e0774da59098df7
+translationtype: Human Translation
+ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
+ms.openlocfilehash: 875da922b311b06fa8a1eb8ba7207108684825d5
 
 
 ---
@@ -55,10 +56,10 @@ Pokud je uživatel v obou skupinách, bude ze zásad vyloučený.
 [Vytvořte](create-a-device-compliance-policy-in-microsoft-intune.md) a [nasaďte](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md) zásady dodržování přepisů na všechna zařízení, která budou zásadami ovlivněná. Toto jsou všechna zařízení, která uživatelé používají v cílových skupinách.
 
 > [!NOTE]
-> [!NOTE] Zásady dodržování předpisů se nasadí do skupin Microsoft Intune a zásady podmíněného přístupu cílí na skupiny zabezpečení Azure Active Directory.
+> Zásady dodržování předpisů se nasadí do skupin Microsoft Intune a zásady podmíněného přístupu cílí na skupiny zabezpečení Azure Active Directory.
 
 > [!IMPORTANT]
-> [!IMPORTANT] Pokud jste zásady dodržování předpisů nenasadili, budou se zařízení považovat za vyhovující.
+> Pokud jste zásady dodržování předpisů nenasadili, budou se zařízení považovat za vyhovující.
 
 Až budete připravení, pokračujte Krokem 3.
 ### Krok 3: Konfigurace zásad Dynamics CRM
@@ -96,6 +97,6 @@ Vyberte libovolnou skupinu mobilních zařízení a pak na kartě **Zařízení*
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO5-->
 
 

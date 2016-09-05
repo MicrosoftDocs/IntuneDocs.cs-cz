@@ -1,10 +1,10 @@
 ---
 title: "Nastavení zásad pro Windows 10 | Microsoft Intune"
-description: 
+description: "Nastavení zásad, která jsou uvedena v tomto tématu, vám pomohou nakonfigurovat předdefinovaná a vlastní nastavení pro zaregistrované počítače s Windows 10 a zařízení Windows 10 Mobile."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/31/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,22 +12,27 @@ ms.technology:
 ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ms.reviewer: heenamac
 ms.suite: ems
-ms.sourcegitcommit: 1cccafa5f740bad50779ae36c899fd23ee7dc5f3
-ms.openlocfilehash: 70347776f72a3534a4c384957aef01a909767b99
+translationtype: Human Translation
+ms.sourcegitcommit: 0178bba517b0fc9e02ba67e6f3aba7a8a0ee445f
+ms.openlocfilehash: 9daab32361cfdf8567d03a8ea6e6438e34b61aad
 
 
 ---
 
 # Nastavení zásad pro Windows 10 v Microsoft Intune
 
-Nastavení zásad, která jsou uvedena v tomto tématu, vám pomohou nakonfigurovat nastavení pro zaregistrované počítače s Windows 10 a zařízení Windows 10 Mobile.
+Nastavení zásad, která jsou uvedena v tomto tématu, vám pomohou nakonfigurovat předdefinovaná a vlastní nastavení pro zaregistrované počítače s Windows 10 a zařízení Windows 10 Mobile.
+
+> [!IMPORTANT]
+> Počítače s Windows 10 můžete spravovat dvěma způsoby – jejich registrací, nebo instalací klientského počítačového softwaru Intune. Každá metoda nabízí různé možnosti (další informace najdete v tématu [Volba způsobu správy zařízení](/intune/get-started/choose-how-to-manage-devices)).
+> Pokud spravujete počítače s Windows 10 pomocí klientského počítačového softwaru Intune, nemůžete používat zásady a nastavení podrobně popsané v tomto tématu. Chcete-li použít tato nastavení, musí být zařízení s Windows 10 registrované v Intune.
 
 ## Obecná nastavení zásad konfigurace
 
-Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 10 Desktop a Windows 10 Mobile použijte **obecné zásady konfigurace** služby Microsoft Intune pro Windows 10. Tyto zásady nejde použít, pokud spravujete počítače se systémem Windows 10 pomocí klientského softwaru Intune.
+Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 10 Desktop a Windows 10 Mobile použijte **obecné zásady konfigurace** služby Microsoft Intune pro Windows 10. 
 
 
-### Heslo
+## - Heslo
 
 |Název nastavení|Podrobnosti|
 |----------------|----------------------|
@@ -40,16 +45,15 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 |**Omezená platnost hesla (ve dnech)**|Toto nastavení určuje dobu, po jejímž uplynutí je třeba změnit heslo k zařízení.|
 |**Pamatovat si historii hesel**|Určuje, jestli chcete uživatelům zabránit ve vytváření hesel, která používali dřív.|
 |**Pamatovat si historii hesel** - **Zabránit opětovnému použití předchozích hesel**|Určuje počet dříve použitých hesel, která se na zařízení zapamatovávají.|
-|**Povolit obrázkové heslo a PIN**|Umožňuje použít pro přihlášení jednoduchá gesta na obrázku nebo jednoduchý PIN kód.<br>(jenom Windows 10 Desktop)|
 |**Po návratu zařízení ze stavu nečinnosti vyžadovat heslo**|Pokud je povoleno, musí uživatel zadat heslo k odemknutí zařízení ze stavu nečinnosti.<br>(jenom Windows 10 Mobile)|
 
-### Encryption
+## - Šifrování
 
 |Název nastavení|Podrobnosti|
 |----------------|----------------------|
 |**Vyžadovat šifrování u mobilního zařízení**|Povoluje šifrování na cílových zařízeních.<br>(jenom Windows 10 Mobile)|
 
-### Systému
+## - Systém
 
 |Název nastavení|Podrobnosti|
 |----------------|----------------------|
@@ -59,7 +63,7 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 |**Povolit odesílání diagnostických dat a dat o použití do Microsoftu**|Určuje objem diagnostických dat a dat využití, který se odesílá společnosti Microsoft ze zařízení.<br><br>**Ne:** Microsoftu se neodešlou žádná data.<br>**Základní:** Zařízení odesílá Microsoftu jenom omezené množství informací.<br>**Rozšířené:** Odesílá Microsoftu rozšířená diagnostická data.<br>**Úplné (doporučeno):** Odešle stejná data jako možnost **Rozšířené** a k tomu navíc údaje o stavu zařízení.|
 
 
-### Účet a synchronizace
+## - Účet a synchronizace
 
 |Název nastavení|Podrobnosti|
 |----------------|----------------------|---------------------|
@@ -67,31 +71,23 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 |**Povolit ruční přidávání jiných účtů, než jsou účty Microsoft**|Umožní uživateli přidat do zařízení e-mailové účty, které nejsou přidružené k účtu Microsoft.|
 |**Povolit synchronizaci nastavení u účtů Microsoft**|Povolí synchronizaci nastavení zařízení a aplikací přidružených k účtu Microsoft mezi zařízeními.|
 
-### Nastavení e-mailu
-
-|Název nastavení|Podrobnosti|
-|----------------|----------------------|---------------------|
-|**Nastavit účet Microsoft jako volitelný v aplikaci Windows Pošta**|Nakonfigurováním této možnosti odeberete požadavek na používání účtu Microsoft v aplikaci Pošta Windows.<br>Jenom Windows 10 Desktop|
-
-
-
-### Microsoft Edge
+## - Microsoft Edge
 
 |Název nastavení|Podrobnosti|
 |----------------|----------------------|
-|**Povolit webový prohlížeč**|Umožňuje na zařízení používat webový prohlížeč Edge.<br>(jenom Windows 10 Mobile)|
+|**Povolit webový prohlížeč**|Umožňuje na zařízení používat webový prohlížeč Microsoft Edge.<br>(jenom Windows 10 Mobile)|
 |**Povolit návrhy vyhledávání v panelu Adresa**|Umožňuje, aby vám vyhledávací web při psaní hledaného textu navrhoval weby.|
 |**Povolit odesílání intranetového provozu do Internet Exploreru**|Umožňuje uživatelům otevírat intranetové weby v Internet Exploreru.<br>(jenom Windows 10 Desktop)|
-|**Povolit Do Not Track**|Nakonfiguruje prohlížeč Edge tak, aby se webům, které uživatelé navštíví, odesílaly hlavičky DNT (Do Not Track).|
+|**Povolit Do Not Track**|Nakonfiguruje prohlížeč Microsoft Edge tak, aby se webům, které uživatelé navštíví, odesílaly hlavičky DNT (Do Not Track).|
 |**Povolit SmartScreen**|Povoluje na zařízeních nastavení SmartScreen prohlížeče.|
-|**Povolit aktivní skriptování**|Umožňuje, aby se v prohlížeči Edge mohly spustit skripty, například Javascripty.|
+|**Povolit aktivní skriptování**|Umožňuje, aby se v prohlížeči Microsoft Edge mohly spustit skripty, například Javascripty.|
 |**Povolit automaticky otevíraná okna**|Povolí nebo zakáže blokování automaticky otevíraných oken v prohlížeči.<br>(jenom Windows 10 Desktop)|
 |**Povolit soubory cookie**|Povolí nebo zakáže soubory cookie.|
 |**Povolit automatické vyplňování**|Umožňuje uživatelům změnit nastavení automatického dokončování v prohlížeči.<br>(jenom Windows 10 Desktop)|
 |**Povolit správce hesel**|Umožňuje povolit nebo zakázat funkci Povolit správce hesel.|
 |**Umístění webů podnikového režimu**|Určuje, kde najít seznam webů, které se otevřou v podnikovém režimu. Uživatelé nemohou tento seznam upravovat.<br>(jenom Windows 10 Desktop)|
 
-### Aplikace
+## - Aplikace
 
 |Název nastavení|Podrobnosti|
 |----------------|----------------------|---------------------|
@@ -99,7 +95,7 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 
 
 
-### Mobilní služby
+## - Mobilní služby
 
 |Název nastavení|Podrobnosti|
 |----------------|----------------------|---------------------|
@@ -107,7 +103,7 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 |**Povolit VPN v mobilní síti**|Určuje, jestli zařízení může při připojení k mobilní síti získat přístup k připojením VPN.|
 |**Povolit VPN v mobilní síti v roamingu**|Určuje, jestli zařízení může při roamingu v mobilní síti získat přístup k připojením VPN.|
 
-### Hardware
+## - Hardware
 
 |Název nastavení|Podrobnosti|
 |----------------|----------------------|
@@ -122,12 +118,11 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 |**Povolit Bluetooth**|Umožňuje na zařízení využívat možnosti Bluetooth.|
 |**Povolit zjistitelný režim Bluetooth**|Umožňuje nastavit, aby bylo toto zařízení zjistitelné jinými zařízeními podporujícími technologii Bluetooth.|
 |**Povolit reklamu přes Bluetooth**|Umožňuje zařízení přijímat reklamu přes Bluetooth.|
-|**Povolit režim umožňující připojení k Bluetooth**|**Důležité:** Toto nastavení už Windows 10 nepodporuje a v budoucnu se odebere.|
 |**Povolit obnovení továrního nastavení telefonu**|Určuje, jestli uživatel může na svém zařízení obnovit tovární nastavení.|
 |**Povolit připojení USB**|Určuje, jestli má zařízení přístup k zařízením externího úložiště prostřednictvím připojení USB.|
 |**Povolit režim AntiTheft**|Umožňuje nakonfigurovat, jestli má být povolený režim Windows Antitheft.|
 
-### Funkce:
+## - Funkce
 
 |Název nastavení|Podrobnosti|
 |----------------|----------------------|---------------------|
@@ -136,7 +131,7 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 |**Povolit Cortanu**|Povolí nebo zakáže hlasového asistenta Cortany.|
 |**Povolit oznámení centra akcí**|Povolí nebo zakáže oznámení Centra akcí na zamykací obrazovce zařízení.<br>(jenom Windows 10 Mobile)|
 
-### Defender
+## - Windows Defender
 
 Všechna nastavení jsou jenom pro Windows 10 Desktop.
 
@@ -161,17 +156,18 @@ Všechna nastavení jsou jenom pro Windows 10 Desktop.
 |**Interval aktualizace signatur**|Zadejte interval, ve kterém bude Defender zjišťovat dostupnost nových souborů signatur.|
 |**Povolit cloudovou ochranu**|Umožňuje službě Microsoft Active Protection Service povolit nebo blokovat příjem informací o činnosti malwaru ze zařízení, která spravujete. Tyto informace slouží k budoucímu vylepšování služby.|
 |**Dotázat se uživatelů na odesílání vzorků**|Určuje, jestli se mají do Microsoftu automaticky odesílat soubory, které by mohly vyžadovat další analýzu, aby bylo určeno, zda jsou škodlivé.|
-|**Detekce potenciálně nežádoucích aplikací**|Pomocí tohoto nastavení lze chránit zaregistrované stolní počítače s Windows před spuštěním softwaru, který Windows Defender klasifikuje jako potenciálně nežádoucí. Můžete nastavit ochranu před spuštěním těchto aplikací nebo pomocí režimu auditu upozornit, když se potenciálně nežádoucí aplikace nainstaluje.|
+|**Detekce potenciálně nežádoucích aplikací**|Pomocí tohoto nastavení lze chránit zaregistrovaná stolní zařízení s Windows před spuštěním softwaru, který Windows Defender klasifikuje jako potenciálně nežádoucí. Můžete nastavit ochranu před spuštěním těchto aplikací nebo pomocí režimu auditu upozornit, když se potenciálně nežádoucí aplikace nainstaluje.|
 |**Soubory a složky, které mají být vyloučeny z kontroly a ochrany v reálném čase**|Umožňuje do seznamu vyloučení přidat soubory a složky, například **C:\Cesta** nebo **%ProgramFiles%\Cesta\název_souboru.exe**. Tyto soubory a složky nebudou zahrnuty do kontrol probíhajících v reálném čase ani do plánovaných kontrol.|
 |**Vyloučit přípony souborů při použití prověřování nebo ochrany v reálném čase**|Umožňuje do seznamu vyloučení přidat přípony souborů, například **jpg** nebo **txt**. Soubory s těmito příponami nebudou zahrnuty do kontrol probíhajících v reálném čase ani do plánovaných kontrol.|
 |**Vyloučit procesy při použití prověřování nebo ochrany v reálném čase**|Umožňuje do seznamu vyloučení přidat procesy typu **.exe**, **.com** nebo **.scr**. Tyto procesy nebudou zahrnuty do kontrol probíhajících v reálném čase ani do plánovaných kontrol.| 
 
 
-### Nastavení aktualizací
+## - Aktualizace
 
 |Název nastavení|Podrobnosti|
 |----------------|---------------|
 |**Povolit automatické aktualizace**|Toto nastavení povolte, pokud chcete povolit automatické aktualizace. Pak nakonfigurováním jedno z následujících nastavení můžete řídit chování aktualizací:<br /><br />**Upozornění na stahování**<br /><br />**Automaticky nainstalovat v době údržby**<br /><br />**Automaticky nainstalovat a restartovat v době údržby**<br /><br />**Automaticky nainstalovat a restartovat v plánovaném čase** **Poznámka:** Pokud je vybraná tato možnost, můžete také nakonfigurovat nastavení **Potlačit oznámení pro koncového uživatele** a **Definujte den instalace pro plánované aktualizace**.<br>(jenom Windows 10 Desktop)|
+|**Povolit předběžné verze funkcí**|Umožňuje Microsoftu do zařízení nasadit předběžné funkce a nastavení do zařízení s Windows 10. Můžete vybrat, že se povolí jenom nastavení, nebo že se nainstalují všechny předběžné funkce a nastavení.|
 
 ## Nastavení vlastních zásad
 Pomocí **vlastní zásady konfigurace** Microsoft Intune systémů Windows 10 a Windows 10 Mobile nasaďte nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier), které se dá používat k ovládání funkcí na zařízeních s Windows 10 a Windows 10 Mobile. Jsou to standardní nastavení, která k ovládání funkcí zařízení používá spousta výrobců mobilních zařízení.
@@ -180,14 +176,14 @@ Díky této vlastnosti můžete nasadit nastavení Windows 10, která nejdou kon
 
 
 
-### Obecná nastavení vlastních zásad
+## - Obecné
 
 |Název nastavení|Podrobnosti|
     |----------------|--------------------|
     |**Název**|Zadejte jedinečný název vlastní zásady, abyste ji mohli v konzole Intune snadno identifikovat.|
     |**Popis**|Zadejte popis, který zásadu vystihne, a uveďte jakékoli další důležité informace, které vám pomůžou zásadu najít.|
 
-### Nastavení OMA-URI vlastních zásad
+## - Nastavení OMA-URI
 
 |Název nastavení|Podrobnosti|
     |--------|--------------------|
@@ -198,12 +194,12 @@ Díky této vlastnosti můžete nasadit nastavení Windows 10, která nejdou kon
     |**Hodnota**|Zadejte hodnotu pro přidružení k OMA-URI, který jste zadali dřív.|
 
 
-## Vlastní nastavení URI pro zařízení s Windows 10
+## - Nastavení Windows 10 URI
 Toto téma obsahuje seznam nastavení, která se dají konfigurovat pro zařízení s Windows 10 a Windows 10 Mobile ve **vlastních zásadách Microsoft Intune pro Windows 10**.
 
 Pokud chcete používat vlastní zásadu URI Windows, musí se všechna zařízení zaregistrovat v Intune.
 
-### Nastavení URI zásady
+## - Zásady
 
 |Název zásady|Podrobnosti|
 |---------------|------------|-----------|
@@ -276,7 +272,7 @@ Pokud chcete používat vlastní zásadu URI Windows, musí se všechna zaříze
 |**Update/DeferUpgradePeriod**<br>(Desktop a Mobile)|**Popis:** Zásada umožňující odložení upgradu funkcí až o 8 měsíců<br /><br />**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Update/DeferUpgradePeriod<br /><br />**Datový typ:** Celé číslo<br /><br />**Povolené hodnoty:**<br>**0**: Použít aktualizace okamžitě (výchozí)<br>**1**-**8**: Počet měsíců odložení upgradu funkcí<br /><br />Více informací najdete v následujících tématech:<br>[Úvod do údržby Windows 10](https://technet.microsoft.com/library/mt598226.aspx)<br>[Plán pro nasazení Windows 10](https://technet.microsoft.com/library/mt574241.aspx)|
 |**Update/PauseDeferrals**<br>(Desktop a Mobile)|**Popis:** Umožňuje počítači CBB zastavit přijímání aktualizací a upgradů až po dobu 5 týdnů. Tato možnost by měla být použitá v případě, že nastane problém s aktualizací.<br /><br />**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Update/PauseDeferrals<br /><br />**Datový typ:** Celé číslo<br /><br />**Povolené hodnoty:**<br>**0**: Použít aktualizace okamžitě (výchozí)<br>**1**: Pozastavit aktualizace a upgrady (platnost po 5 týdnech vyprší)|
 
-### Nastavení URI programu Windows Defender
+## - Windows Defender
 
 |Název zásady|Podrobnosti|
 |---------------|-----------|
@@ -306,13 +302,13 @@ Pokud chcete používat vlastní zásadu URI Windows, musí se všechna zaříze
 |**ExcludedPaths**<br>(jenom Desktop)|**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Defender/ExcludedPaths<br /><br />**Datový typ:** Řetězec<br /><br />**Povolené hodnoty:**<br /><br />*&lt;seznam cest oddělený středníkem&gt;*<br /><br />Příklad: **c:\test;c:\test1.exe**<br /><br />**Výchozí hodnota:** Nevylučují se žádné cesty.|
 |**ExcludedProcesses**<br>(jenom Desktop)|**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Defender/ExcludedProcesses<br /><br />**Datový typ:** Řetězec<br /><br />**Povolené hodnoty:**<br>*&lt;seznam cest oddělený středníkem&gt;*<br>Příklad: **c:\test.exe;c:\test1.exe**<br>**Výchozí hodnota:** Nevylučují se žádné procesy.|
 
-### Nastavení URI prohlížeče Edge
+## - Prohlížeč Edge
 
 |Název zásady|Podrobnosti|
 |---------------|------------|-----------|
 |**Povolit prohlížeč**<br>(jenom Mobile)|**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Browser/AllowBrowser<br /><br />**Datový typ:** Celé číslo<br /><br />**Povolené hodnoty:**<br>**0** – Procházení je vypnuté.<br>**1** – Procházení je zapnuté (výchozí).|
 |**AllowSearchSuggestionsinAddressBar**<br>(Desktop a Mobile)|**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Browser/AllowSearchSuggestionsinAddressBar<br /><br />**Datový typ:** Celé číslo<br /><br />**Povolené hodnoty:**<br>**0** – Nezobrazovat návrhy vyhledávání<br>**1** – Zobrazovat návrhy vyhledávání (výchozí)|
-|**SendIntranetTraffictoInternetExplorer**<br>(jenom Desktop)|**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Browser/SendIntranetTraffictoInternetExplorer<br /><br />**Datový typ:** Celé číslo<br /><br />**Povolené hodnoty:**<br>**0** – Zakázáno (otevřít intranetové servery v prohlížeči Edge)<br>**1**– Povoleno (otevřít intranetové servery v Internet Exploreru)|
+|**SendIntranetTraffictoInternetExplorer**<br>(jenom Desktop)|**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Browser/SendIntranetTraffictoInternetExplorer<br /><br />**Datový typ:** Celé číslo<br /><br />**Povolené hodnoty:**<br>**0** – Zakázáno (otevřít intranetové servery v prohlížeči Microsoft Edge)<br>**1**– Povoleno (otevřít intranetové servery v Internet Exploreru)|
 |**Povolit Do Not Track**<br>(Desktop a Mobile)|**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Browser/AllowDoNotTrack<br /><br />**Datový typ:** Celé číslo<br /><br />**Povolené hodnoty:**<br>**0** – Zakázáno (DNT se neodešle – výchozí)<br>**1** – Povoleno (odeslat DNT)|
 |**Konfigurovat SmartScreen**<br>(Desktop a Mobile)|**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Browser/AllowSmartScreen<br /><br />**Datový typ:** Celé číslo<br /><br />**Povolené hodnoty:**<br>**0** – Nepovolit<br>**1** – Povolit (výchozí)|
 |**Povolit automaticky otevíraná okna**<br>(jenom Desktop)|**Úplná cesta URI:** ./Vendor/MSFT/Policy/Config/Browser/AllowPopups<br /><br />**Datový typ:** Celé číslo<br /><br />**Povolené hodnoty:**<br>**0** – Blokovat automaticky otevíraná okna (výchozí)<br>**1** – Povolit automaticky otevíraná okna|
@@ -327,6 +323,6 @@ Pokud chcete používat vlastní zásadu URI Windows, musí se všechna zaříze
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Aug16_HO2-->
 
 

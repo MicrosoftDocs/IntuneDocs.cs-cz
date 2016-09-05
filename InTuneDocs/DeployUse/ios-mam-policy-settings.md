@@ -1,10 +1,10 @@
 ---
 title: "Nastavení zásad MAM pro iOS | Microsoft Intune"
-description: 
+description: "Toto téma popisuje nastavení zásad správy mobilních aplikací pro zařízení s iOS."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 673ff872-943c-4076-931c-0be90363aea9
 ms.reviewer: andcerat
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5a445f06d6c2328f7689468ca4d68a969af1e825
-ms.openlocfilehash: b3df4b35dbe2710157b88a4e7fdba9734f8b998b
+ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
+ms.openlocfilehash: ba258bfb3140ffc79aa38ef2f46497346cdc6bfa
 
 
 ---
@@ -37,6 +37,8 @@ Výrazem **aplikace spravované podle zásad** se označují aplikace, které ma
   - **Žádné**: Nepovoluje přenos dat do žádné aplikace, včetně ostatních aplikací spravovaných podle zásad.
 
   Pokud nastavíte tuto možnost na hodnotu **Aplikace spravované podle zásad** nebo **Žádné**, bude blokovaná funkce iOS 9, která umožňuje vyhledávání Spotlight dat v rámci aplikací.
+
+  **Toto nastavení neřídí použití funkce Otevřít v na mobilních zařízeních. Informace ke správě funkce Otevřít v najdete [zde](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)**.
 
   **Výchozí hodnota = Aplikace spravované podle zásad**
 
@@ -112,6 +114,6 @@ V zařízeních s iOS můžete uživatelům povolit, aby se místo číselného 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

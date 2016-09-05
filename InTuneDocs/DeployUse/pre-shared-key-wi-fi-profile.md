@@ -1,10 +1,10 @@
 ---
 title: "Wi-Fi pomocí PSK | Microsoft Intune"
-description: 
+description: "Použijte vlastní konfiguraci k vytvoření profilu sítě Wi-Fi s předsdíleným klíčem."
 keywords: 
 author: nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 066baae17da1fd399f4f7d10784719e3dc46f235
-ms.openlocfilehash: 632adf3dccf40dd2b361d170f501a851bf0fda38
+ms.sourcegitcommit: 8fe47a5843414fbe4add7f77df63c0d6466273cd
+ms.openlocfilehash: f15fce6890d6e5850d12115a97bf7331ce515508
 
 
 
@@ -40,12 +40,15 @@ Poznámka:
 
    c.   **Datový typ:** Nastavte na Řetězec (XML).
 
-   d.   **OMA-URI**: ./Vendor/MSFT/Wi-Fi /Profile/<SSID>/Settings
+   d.   **OMA-URI:** 
+        
+- **Pro Android:** ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
+- **Pro Windows:** ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
 
 Poznámka: Nezapomeňte použít tečku na začátku.
 
 SSID je identifikátor SSID, pro který vytváříte zásadu. Příklad:
-`./Vendor/MSFT/Wi-Fi/Profile/Hotspot-1/Settings`
+`./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`
 
   e.    Hodnota pole: Sem vkládáte svůj kód XML. Tady je příklad. Každá hodnota by měla být přizpůsobena nastavení sítě. Nějaké pokyny najdete v sekci komentáře ke kódu.
 
@@ -197,6 +200,6 @@ Když vyberete nasazenou zásadu, zobrazí se v dolní části seznamu zásad da
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

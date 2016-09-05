@@ -1,26 +1,27 @@
 ---
-title: "Ruční synchronizace zařízení | Microsoft Intune"
+title: "Ruční synchronizace zařízení s iOS | Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 06/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 2780101b-f703-4b78-9d33-f68490b9382d
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 3cb6b8236afc227df9df34848cb81bcbe82a612e
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: b178444418f783d4678c39c8c4c2156ed197de18
 
 
 ---
 
 
-# Ruční synchronizace zařízení
+# Ruční synchronizace zařízení s iOS
 
 Pokud instalace aplikací trvá příliš dlouho, použijte následující pokyny k ruční synchronizaci zařízení s iOS, která vám může pomoci instalaci zrychlit. Funkce synchronizace se vztahuje jenom na systém iOS, nikoli na Mac OS X.
 
@@ -38,10 +39,11 @@ Do dokončení synchronizace se na obrazovce zobrazí točící se kruh.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
-### Související témata
+### Viz taky
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO4-->
 
 

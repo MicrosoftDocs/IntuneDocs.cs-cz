@@ -3,18 +3,19 @@ title: "Resetování hesla zařízení z webu Portál společnosti | Microsoft I
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4fa3255b-9d1e-42d5-bd8b-70963dcf2d86
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 31023a2d51d4dd4cb854c1fa077f5a9910232bb4
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: 5f1392517a5a0a1dfcf75e464477c1671134b157
 
 
 ---
@@ -24,7 +25,7 @@ ms.openlocfilehash: 31023a2d51d4dd4cb854c1fa077f5a9910232bb4
 
 Pokud ztratíte kód PIN nebo heslo zařízení, které jste zaregistrovali v Intune, můžete použít [web Portál společnosti](http://portal.manage.microsoft.com) k jeho resetování. Web Portál společnosti je webová stránka, kterou můžete použít ke správě počítačů a zařízení, které jste registrovali v Intune, a k provádění většiny úloh, které můžete provádět pomocí aplikace Portál společnosti.
 
-> [!NOTE] 
+> [!NOTE]
 > V závislosti na tom, jak váš správce nakonfiguroval Intune, se na webu Portál společnosti nemusí tlačítko Resetovat heslo zobrazit. Restování hesla není podporované u zařízení s Windows 8.1 a Windows RT.
 
 Resetování hesla:
@@ -33,7 +34,7 @@ Resetování hesla:
 
 2.  Klepněte na **Resetovat heslo**.
 
-    ![tap-passcode-to-reset](./media/iwp-1-tap-reset-passcode.png)
+    ![resetp-passcode-option-on-company-portal-website](./media/iwp-screen-with-all-options.png)
 
 3.  Klepněte na **Odhlásit se** a potom se znovu přihlaste s pracovními nebo školními přihlašovacími údaji. Musíte se znovu přihlásit do pěti minut.
 
@@ -48,7 +49,7 @@ Resetování hesla:
     |Platforma|Support|
     |------------|-----------|
     |Android|Vytvoří nové dočasné alfanumerické heslo.|
-    |iOS|Odebere heslo ze zařízení a nevytvoří nové dočasné heslo. Poku používáte Touch ID, musíte ho v zařízení znovu nainstalovat, protože se při resetování hesla odebere.|
+    |iOS|Odebere heslo ze zařízení a nevytvoří nové dočasné heslo. Pokud používáte Touch ID, musíte ho v zařízení znovu nainstalovat, protože se při resetování hesla odebere.|
     |Windows 10 (pouze mobilní zařízení)|Vytvoří nové dočasné alfanumerické heslo. Windows Hello je podporované.|
     |Windows Phone 8.1|Vytvoří nové dočasné číselné heslo.|
     Po odemčení zařízení můžete nastavit nové heslo pomocí nabídky **Nastavení** vašeho zařízení.
@@ -59,10 +60,11 @@ Resetování hesla:
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
-### Související témata
+### Viz taky
 [Použití webu Portál společnosti Intune](using-the-intune-company-portal-website.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO4-->
 
 

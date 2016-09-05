@@ -3,18 +3,19 @@ title: "Vzdálené uzamčení zařízení z webu Portál společnosti | Microsof
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: adc6af23-b22f-42e5-955a-4dffbdb8b42b
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 7e5d48d35e8216bac2fae8e2f9a1ba82d3493acc
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: 19369b8914eee60eececd3e749eae12891cd1a2e
 
 
 ---
@@ -42,24 +43,29 @@ Postup použití vzdáleného uzamčení k uzamčení zařízení:
 
 2.  Klepněte na **Vzdálené uzamčení**.
 
+    ![remote-lock-option-on-company-portal-website](./media/iwp-screen-with-all-options.png)
+
+3.  Přečtěte si upozornění, které vás varuje, že se chystáte zařízení uzamknout, a potom klepnutím na **Vzdálené uzamčení** dejte webu Portál společnosti pokyn, aby se pokusil o uzamčení zařízení.
+
     Po klepnutí na **Vzdálené uzamčení** se zobrazí stav Vzdálené uzamčení čeká na vyřízení.  Pokud je vzdálené uzamčení úspěšné, stav se změní na Vzdálené uzamčení bylo úspěšné.
 
     Stav vzdáleného uzamčení se zobrazuje na třech místech:
 
-    * Oblast oznámení na webu. 
+    * Oblast oznámení na webu.
     * Stránka Podrobnosti zařízení.
     * Dlaždice zobrazující název zařízení v části stránky Moje zařízení.
 
-    Pokud se zobrazí oznámení Vzdálené uzamčení se nezdařilo, počkejte několik minut a zkuste zařízení znovu zamknout. Po klepnutí na volbu pro další pokus se stav změní zpět na Vzdálené uzamčení čeká na vyřízení. 
+    Pokud se zobrazí oznámení Vzdálené uzamčení se nezdařilo, počkejte několik minut a zkuste zařízení znovu zamknout. Po klepnutí na volbu pro další pokus se stav změní zpět na Vzdálené uzamčení čeká na vyřízení.
 
     Pokud další pokus nefunguje, kontaktujte správce IT. Pokud najdete své zařízení a chcete ho odemknout po použití vzdáleného uzamčení, stačí zadat heslo.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
-### Související témata
+### Viz taky
 [Použití webu Portál společnosti Intune](using-the-intune-company-portal-website.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,10 +1,10 @@
 ---
 title: "Zásady dodržování předpisů pro zařízení | Microsoft Intune"
-description: 
+description: "Toto téma vysvětluje koncepty, které vám pomohou pochopit, co jsou zásady dodržování předpisů zařízení a jak pracují."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 0775107a-6662-41c8-9404-be14bbb599f3
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9e069a2887b812b30c620634a8e0d093093b460
-ms.openlocfilehash: c443bb51ba05161c5088475e528e6ada28c105a5
+ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
+ms.openlocfilehash: b17a47a2924ef36df69db2aa852f0b225471ecd1
 
 
 ---
@@ -62,6 +62,6 @@ Následující tabulka uvádí typy zařízení podporované zásadami dodržov�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

@@ -1,10 +1,10 @@
 ---
 title: "Monitorování a sestavy | Microsoft Intune"
-description: 
+description: "Funkce tvorby sestav a monitorování v Intune můžete použít ke sledování stavu zařízení ve vaší organizaci."
 keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,25 +13,24 @@ ms.assetid: 0f7dc155-cb8e-477b-ba02-2623194a9575
 ms.reviewer: pbala
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f33a86c51320c75ce74d20e0cac2b9581990ecec
-ms.openlocfilehash: ffbcc48e909887647a2c1b7f7c40bde5682cddea
+ms.sourcegitcommit: 79e7113b2b4d5f0d049f22b05db0a8f24e4de570
+ms.openlocfilehash: c1a810bd8c6df05ccc35efbbfd4d9cfdc8fcd614
 
 
 ---
 
 # Monitorování a sestavy v Microsoft Intune
-Jako správce IT potřebujete monitorovat stav zařízení ve vaší organizaci. Microsoft Intune nabízí dva způsoby, jak můžete monitorovat zařízení, stav licencí softwaru a akce, které zařízení ovlivňují (třeba vymazání obsahu zařízení).
+Intune nabízí správcům IT dva způsoby, jak sledovat zařízení v organizaci. Monitorování zahrnuje stav licencí k softwaru a také akce, které zařízení ovlivňují, třeba vymazání obsahu zařízení.
 
--   **[Sestavy](understand-microsoft-intune-operations-by-using-reports.md)** pomáhají s monitorováním stavu zařízení, která spravuje Intune (včetně stavu aktualizace softwaru, nainstalovaného softwaru a shody certifikátů). 
-     Tyto sestavy vám také umožní zkoumat inventář hardwaru a softwaru, který shromažďují zařízení a počítače.
+-   **[Sestavy](../deploy-use/understand-microsoft-intune-operations-by-using-reports.md)** vám pomůžou sledovat stav zařízení spravovaných pomocí Intune. To zahrnuje stav aktualizací softwaru, inventarizaci nainstalovaného softwaru a shodu certifikátů s předpisy.
+     Sestavy Intune vám také umožní zkoumat inventář hardwaru pro všechna zařízení a počítače.
 
--   **[Výstrahy](get-notified-by-alerts.md)** pomáhají s monitorováním stavu zařízení, která spravuje Intune (včetně stavu služby Endpoint Protection, upozornění na malware a upozornění souvisejících s nedostatkem místa na disku nebo připojením k síti).
+-   **[Výstrahy](../deploy-use/get-notified-by-alerts.md)** umožňují monitorování stavu zařízení spravovaných službou Intune. Zahrnují stav ochrany koncových bodů a oznámení, která vás upozorní na malware, stejně jako varování o nedostatku místa na disku nebo chybách připojení k síti.
 
--   Zařízení a počítače spravované Intune vrací podrobné informace o svých vlastnostech a nainstalovaném softwaru.  Intune nabízí nástroje a sestavy sloužící ke zkoumání a zobrazení těchto dat. Podrobnosti najdete v tématu [Seznámení se zařízeními s inventářem v Microsoft Intune](understand-your-devices-with-inventory-in-microsoft-intune.md).
-
-
+Zařízení a počítače spravované Intune vrací podrobné informace o svých vlastnostech a nainstalovaném softwaru. Intune nabízí nástroje a sestavy sloužící ke zkoumání a zobrazení těchto dat. Podrobnosti najdete v tématu [Seznámení se zařízeními s inventářem v Microsoft Intune](../deploy-use/understand-your-devices-with-inventory-in-microsoft-intune.md).
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO3-->
 
 

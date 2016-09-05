@@ -1,10 +1,10 @@
 ---
-title: "Povolení přístupu k firemním prostředkům pomocí profilů certifikátů | Microsoft Intune"
-description: 
+title: "Profily certifikátů pro přístup k prostředkům | Microsoft Intune"
+description: "Zabezpečte sítě VPN, Wi-Fi a přístup k e-mailu pomocí certifikátu nainstalovaného na každé zařízení uživatele."
 keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 8cbb8499-611d-4217-a7b4-e9b864785dd0
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 79617dd41e51402a73759da792f581028095a2f5
-ms.openlocfilehash: 1d2e6676714daba76a9b54553b4ad1af23a0f880
+ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
+ms.openlocfilehash: 98c32f924b60734d9a592ebdd7e00429dc32af26
 
 
 ---
@@ -47,7 +47,7 @@ Pro každou platformu budete muset vytvořit samostatný profil. Při vytvářen
 > -    Pokud nemáte certifikační autoritu organizace, musíte ji vytvořit.
 >- Pokud se na základě platforem zařízení rozhodnete použít profil protokolu SCEP (Simplified Certificate Enrollment Protocol), musíte taky nakonfigurovat server Služby zápisu síťových zařízení.
 >-  Bez ohledu na to, jestli plánujete používat profily SCEP, nebo .PFX, musíte stáhnout a nakonfigurovat konektor Microsoft Intune Certificate Connector.
-> Všechny tyto konfigurace jsou popsané v tématu [Konfigurace infrastruktury certifikátů](configure-certificate-infrastructure.md).
+> Veškerá konfigurace je popsaná v tématech [Konfigurace infrastruktury certifikátů pro SCEP](configure-certificate-infrastructure-for-scep.md) a [Konfigurace infrastruktury certifikátů pro PFX](configure-certificate-infrastructure-for-pfx.md).
 
 ### Další kroky
 - [Konfigurace infrastruktury certifikátů pro SCEP](configure-certificate-infrastructure-for-scep.md)
@@ -56,6 +56,6 @@ Pro každou platformu budete muset vytvořit samostatný profil. Při vytvářen
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO4-->
 
 

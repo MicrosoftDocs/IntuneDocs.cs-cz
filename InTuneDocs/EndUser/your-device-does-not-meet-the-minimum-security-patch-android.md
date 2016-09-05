@@ -3,15 +3,17 @@ title: "Vaše zařízení nesplňuje požadavek na minimální úroveň opravy z
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 06/16/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: b3e5994c-d215-4c72-8915-349bd0b2504d
-ms.sourcegitcommit: b76c04545b9b26a0e2470b95a3f5ac0a81b07817
-ms.openlocfilehash: a4788340b36c7d04ff1a62844aea7dba06079a2b
+ROBOTS: NOINDEX,NOFOLLOW
+translationtype: Human Translation
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: 83fd5ebdabe092c46cb17aee5cc5c603386b1b70
 
 
 ---
@@ -30,7 +32,7 @@ Umístění aktuální úrovně opravy zabezpečení se může lišit v závislo
 
 **Při instalaci požadované opravy zabezpečení postupujte takto:**
 
-- Jiná zařízení než Samsung Knox: Přejděte do části **Nastavení** > **O telefonu** > **Aktualizace softwaru**. 
+- Jiná zařízení než Samsung Knox: Přejděte do části **Nastavení** > **O telefonu** > **Aktualizace softwaru**.
 
 - Zařízení Samsung Knox: Přejděte do části **Nastavení** > **Aktualizace systému** > **Zkontrolovat novou aktualizaci systému**.
 
@@ -41,6 +43,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaj
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 
