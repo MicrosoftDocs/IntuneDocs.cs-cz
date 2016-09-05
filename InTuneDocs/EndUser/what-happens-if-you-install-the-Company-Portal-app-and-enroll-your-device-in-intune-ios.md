@@ -1,27 +1,27 @@
 ---
-title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune? | Microsoft Intune"
+title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s iOS nebo Mac OS X v Intune? | Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 7/7/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: a2467c02-aac5-41c8-b788-cbda830941ef
-ROBOTS: 
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: a83edd3ed51bddafd6f057ed9ae2bb0958c88fe4
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: 3f9f985e2e40d67bedf8eb37125274ea029e602a
 
 
 ---
 
 
-# Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune?
+# Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s iOS nebo Mac OS X v Intune?
 
 Když nainstalujete aplikaci Portál společnosti a potom v ní zaregistrujete své zařízení s iOS nebo Mac OS X v Intune, můžete v aplikaci Portál společnosti provádět tyto kroky:
 
@@ -29,9 +29,9 @@ Když nainstalujete aplikaci Portál společnosti a potom v ní zaregistrujete s
 
 -   Získání aplikací společnosti z Portálu společnosti
 
--   Automatická konfigurace e-mailového účtu vaší společnosti
+-   Vzdálené obnovení továrního nastavení telefonu v případě ztráty nebo odcizení
 
--   Obnovení továrního nastavení telefonu v případě ztráty nebo odcizení
+-   Automatická konfigurace e-mailového účtu vaší společnosti
 
 Když své zařízení zaregistrujete do služby Intune, správci IT tím udělíte oprávnění ke správě vašich zařízení, aby bylo možné lépe chránit informace společnosti na daném zařízení.
 
@@ -65,8 +65,6 @@ Když své zařízení zaregistrujete do služby Intune, správci IT tím uděl�
 
 -   Název zařízení
 
--   Výrobce
-
 Po registraci vašeho zařízení může správce IT provádět tyto kroky:
 
 -   Obnovit výchozí tovární nastavení v případě ztráty nebo odcizení zařízení.
@@ -97,10 +95,11 @@ Kroky postupu registrace zařízení najdete v tématu [Registrace zařízení s
 
 Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
-### Související témata
+### Viz taky
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO4-->
 
 

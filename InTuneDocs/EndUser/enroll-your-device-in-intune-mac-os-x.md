@@ -1,9 +1,9 @@
 ---
 title: "Registrace zařízení Mac OS X v Intune | Microsoft Intune"
-description: 
+description: "Popisuje způsob registrace zařízení s Mac OS X v Intune."
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 05/30/2016
 ms.topic: article
 ms.prod: 
@@ -14,8 +14,8 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f83a539e9bec5207d7c1c682942b4bb6797d616c
-ms.openlocfilehash: b85d2ac62ca313f0740c68ff6d85918ff7bcd55a
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 9e3c351591f496fbc7be3fefdc320af9caaae726
 
 
 ---
@@ -34,19 +34,19 @@ Postup registrace zařízení se systémem Mac OS X:
 
 2.  Klepněte na text **Toto zařízení buď není zaregistrované, nebo ho Portál společnosti nedokáže identifikovat**.
 
-    ![device-not-enrolled](./media/1-macosx-enroll-tap-enroll.png) 
+    ![device-not-enrolled](./media/1-macosx-enroll-tap-enroll.png)
 
 3.  Klepnutím na **Instalovat** zahajte registraci svého zařízení.
 
-    ![tap-install-to-enroll](./media/2-macosx-enroll--install-button.png) 
+    ![tap-install-to-enroll](./media/2-macosx-enroll--install-button.png)
 
 4.  V dialogovém okně **Instalovat profil správy** klepněte na **Instalovat**. Pokud se zobrazí dialogové okno s výzvou k zadání přihlašovacích údajů, zadejte svoje uživatelské jméno a heslo a potom klepněte na **Pokračovat** &gt; **Instalovat**.
 
-    ![install-management-profile](./media/3-macosx-enroll-tap-install.png) 
+    ![install-management-profile](./media/3-macosx-enroll-tap-install.png)
 
     Po dokončení registrace se zobrazí stránka profilu správy s informací, že proběhlo ověření vašeho profilu.
 
-    ![management-profile-verified](./media/4-macosx-enroll-done.png) 
+    ![management-profile-verified](./media/4-macosx-enroll-done.png)
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
@@ -54,6 +54,7 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní 
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO4-->
 
 

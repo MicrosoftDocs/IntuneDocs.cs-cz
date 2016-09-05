@@ -1,9 +1,9 @@
 ---
 title: "Využití šířky pásma Intune | Microsoft Intune"
-description: 
+description: "využití šířky pásma Intune"
 keywords: 
-author: Staciebarker
-manager: jeffgilb
+author: barlanmsft
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 0f737d48-24bc-44cd-aadd-f0a1d59f6893
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
-ms.openlocfilehash: e104dc52a8a9bdda4b2edb2939d8c7c36e8ecc12
+ms.sourcegitcommit: 6d1c7c670341692d4ea0c823e4a9a96746b83067
+ms.openlocfilehash: 6534eb7bbff2fba39e1dfa9be4ad01196156cc15
 
 
 ---
@@ -87,6 +87,7 @@ Pokud používáte BranchCache, měli byste komunikovat s ostatními správci ve
 [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,9 +1,9 @@
 ---
 title: "Vytvoření zásad a publikování aplikace | Microsoft Intune"
-description: 
+description: "Vysvětluje, jak vytvořit zásady a publikovat ukázkovou aplikaci pro vaše předplatné Intune."
 keywords: 
-author: Staciebarker
-manager: jeffgilb
+author: barlanmsft
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: e0d8e98f-7dd8-4cbf-887c-a9af63ffe970
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2847c9af38ae0ddddc8d76d548ae7abddc63e4c1
-ms.openlocfilehash: b3b65a1fd1e426bf566f39382321a29e913f102c
+ms.sourcegitcommit: 6d1c7c670341692d4ea0c823e4a9a96746b83067
+ms.openlocfilehash: da46c83d43f4ce4c5ae22b87638ad747a57b9e3f
 
 
 ---
@@ -23,11 +23,6 @@ ms.openlocfilehash: b3b65a1fd1e426bf566f39382321a29e913f102c
 Intune nabízí nastavení, které pomáhá řídit nastavení zabezpečení na mobilních zařízeních, spravovat nastavení brány Windows Firewall a Endpoint Protection pro počítače a nasazovat aplikace. Další informace najdete v tématech [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](/Intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) a [Pomoc se zabezpečením počítačů s Windows pomocí služby Endpoint Protection pro Microsoft Intune](/Intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune).
 
 Pomocí Intune můžete provádět dva typy instalace aplikací. První je **požadovaná instalace**, která aplikaci automaticky nasadí do spravovaných počítačů. Druhá je **dostupná instalace**, která nasadí aplikaci nebo odkaz na aplikaci na Portálu společnosti Intune, aby si mohli uživatelé vybrat, jestli ji chtějí mít nainstalovanou na počítači nebo na mobilním zařízení.
-
-<!-- this section really isn't necessary and confuses a lot of people because most mobile device apps aren't licensed this way (and our licensing/reporting features aren't super helpful). I think it's best to avoid this during a quick start guide.
-
-Before using Intune to deploy apps, make sure that you have the appropriate licenses to publish, distribute, and use the app. The Licenses workspace lets you add and manage license agreement information for apps or software purchased through Microsoft Volume Licensing agreements, and for Microsoft or non-Microsoft software that was purchased by other means. You can then create license reports that display managed license usage information throughout your company to stay informed of license usage activity.
--->
 
 V následujícím postupu nastavíte zásady konfigurace mobilních zařízení a zásady brány firewall počítače s Windows a nakonfigurujete Skype jako instalaci dostupnou pro mobilní zařízení po jejich registraci.
 
@@ -46,6 +41,10 @@ V následujícím postupu nastavíte zásady konfigurace mobilních zařízení 
 3.  V seznamu **Úlohy** na stránce **Přehled zásad** vyberte **Přidat zásadu**.
 
 4.  V seznamu zásad rozbalte platformu, pro kterou chcete vytvořit zásadu, a pak vyberte **Všeobecná konfigurace** > **Vytvoření a nasazení zásad s doporučeným nastavením** > **Vytvořit zásadu**.
+
+> [!NOTE]
+> Vzhledem k tomu, že existuje mnoho možností, ze kterých můžete vybírat, nejsou žádná doporučená nastavení pro zásady konfigurace zařízení. Musíte vytvořit vlastní zásadu konfigurace zařízení.
+
 
 5.  Při zobrazení výzvy **Vyberte skupiny, do kterých chcete nasadit tuto zásadu** zvolte skupinu v seznamu dostupných skupin a potom vyberte **Přidat** > **OK**.
 
@@ -110,6 +109,6 @@ Gratulujeme! Právě jste dokončili krok 6 *úvodní příručky Intune*.
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO4-->
 
 

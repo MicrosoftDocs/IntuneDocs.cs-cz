@@ -1,9 +1,9 @@
 ---
 title: "Portál společnosti Microsoft Intune | Microsoft Intune"
-description: 
+description: "nastavení Portálu společnosti Intune"
 keywords: 
-author: Staciebarker
-manager: jeffgilb
+author: barlanmsft
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 4dc3d084-0394-4ee7-b7fa-a72523928627
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 65769fade08dea34b3e788628e578d58f90389f3
-ms.openlocfilehash: 815e36569e17bde750b49c7d7b10744a9b614635
+ms.sourcegitcommit: 6d1c7c670341692d4ea0c823e4a9a96746b83067
+ms.openlocfilehash: b6dc2a6b9f8464bb6accbbc5163700a6d7da1fdb
 
 
 ---
@@ -28,7 +28,7 @@ Portál společnosti Intune je nástroj, který poskytuje uživatelům přístup
 -   **Aplikace Portál společnosti**: Aplikace, která je dostupná na zařízeních spravovaných službou [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Další informace o aplikacích Portál společnosti pro [Android](/Intune/EndUser/using-your-android-device-with-intune), [iOS](/Intune/EndUser/using-your-ios-or-mac-os-x-device-with-intune) a [Windows](/Intune/EndUser/using-your-windows-device-with-intune).
 
 
-- **Web Portál společnosti**: Web, který zajišťuje přístup z [podporovaného prohlížeče](supported-web-browsers.md). Adresa URL je [https://portal.office.com/Admin/Default.aspx](https://portal.office.com/Admin/Default.aspx). Další informace o tomto webu najdete v tématu [Použití webu Portál společnosti Intune](/Intune/EndUser/using-the-intune-company-portal-website).
+- **Web Portál společnosti:** Web, který je přístupný pomocí [podporovaného prohlížeče](supported-web-browsers.md) a který umožňuje koncovým uživatelům provádět většinu úloh, které lze provádět z aplikace Portál společnosti pro jejich specifickou platformu. Adresa URL je [http://portal.manage.microsoft.com](http://portal.manage.microsoft.com). Další informace o tomto webu najdete v tématu [Použití webu Portál společnosti Intune](/Intune/EndUser/using-the-intune-company-portal-website).
 
 Některé úlohy, které uživatelé mohou provést na Portálu společnosti:
 
@@ -53,6 +53,6 @@ Než bude moct uživatel přistupovat k Portálu společnosti, musí mít jeho �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

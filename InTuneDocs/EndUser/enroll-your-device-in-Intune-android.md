@@ -1,10 +1,10 @@
 ---
 title: "Registrace zařízení s Androidem v Intune | Microsoft Intune"
-description: 
+description: "Popisuje registraci zařízení s Androidem v Intune."
 keywords: 
 author: staciebarker
-manager: jeffgilb
-ms.date: 06/14/2016
+manager: angrobe
+ms.date: 07/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 0ed3a002-7533-4001-ae24-e10b64b66620
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0bb435b87c937ea118a0794c8332b9a8f268d36e
-ms.openlocfilehash: 76cc1a43e09039285be76858155ef22f7b41cf9b
+ms.sourcegitcommit: 46479cfe3d2648eefbaefd0a831af2412b509fce
+ms.openlocfilehash: e920f133aeaf0b0a938e07b4923869318a902d57
 
 
 ---
@@ -44,7 +44,27 @@ Pokud při pokusu o registraci zařízení do služby Intune dojde k chybě, pro
 
     ![android-company-portal-sign-in](./media/and-enroll-3-accept-terms.png)
 
-5.  Pokud používáte Android 6.0 nebo novější, proveďte tento krok. V opačném případě přejděte k dalšímu kroku. 
+5.  Přihlaste se k aplikaci Portál společnosti zadáním svého pracovního nebo školního účtu a hesla a potom klepněte na **Přihlásit**.
+
+    ![android-company-portal-sign-in](./media/and-enroll-2-cp-sign-in.png)
+
+6.  Na obrazovce **Nastavení firemního přístupu** klepněte na **ZAČÍT**.
+
+    ![Obrazovka nastavení přístupu společnosti](./media/and-enroll-4a-comp-access-setup.png)
+
+7.  Na obrazovce **Proč zařízení registrovat?** si přečtěte informace o tom, co vám registrace zařízení umožní, a potom klepněte na **POKRAČOVAT**.
+
+    ![Obrazovka Proč zařízení registrovat](./media/and-enroll-4b-why-enroll.png)
+
+8.  Přečtěte si informace o tom, co správce IT uvidí nebo neuvidí ve vašem zařízení, a klepněte na **POKRAČOVAT**.
+
+    ![Nastavení ochrany osobních údajů](./media/and-enroll-4c-we-care-privacy.png)
+
+9.  Na obrazovce **Co dál?** si přečtěte, co probíhá při registraci, a potom klepněte na **REGISTROVAT**.
+
+    ![Obrazovka Co dál](./media/and-enroll-4d-what-comes-next.png)
+
+10.  Pokud používáte Android 6.0 nebo novější, proveďte tento krok. V opačném případě přejděte k dalšímu kroku.
 
     Pokud správce IT nastavil konkrétní zásady, mohou se zobrazit následující zprávy:
     -   **Povolit pro Portál společnosti telefonování a správu telefonních hovorů?**
@@ -63,26 +83,6 @@ Pokud při pokusu o registraci zařízení do služby Intune dojde k chybě, pro
 
     Pokud přístup odepřete, při příštím klepnutí na **Odeslat data** se zpráva zobrazí znovu, ale další zprávy už můžete vypnout zaškrtnutím políčka **Příště se už neptat**. Pokud se později rozhodnete povolit přístup, použijte možnost **Nastavení** &gt; **Aplikace** &gt; **Portál společnosti** &gt; **Oprávnění** &gt; **Úložiště** a pak tato oprávnění aktivujte.
 
-6.  Přihlaste se k aplikaci Portál společnosti zadáním svého pracovního nebo školního účtu a hesla a potom klepněte na **Přihlásit**.
-
-    ![android-company-portal-sign-in](./media/and-enroll-2-cp-sign-in.png)
-
-7.  Na obrazovce **Nastavení firemního přístupu** klepněte na **ZAČÍT**.
-
-    ![Obrazovka nastavení přístupu společnosti](./media/and-enroll-4a-comp-access-setup.png)
-
-8.  Na obrazovce **Proč zařízení registrovat?** si přečtěte informace o tom, co vám registrace zařízení umožní, a potom klepněte na **POKRAČOVAT**.
-
-    ![Obrazovka Proč zařízení registrovat](./media/and-enroll-4b-why-enroll.png)
-
-9.  Přečtěte si informace o tom, co správce IT uvidí nebo neuvidí ve vašem zařízení, a klepněte na **POKRAČOVAT**.
-
-    ![Nastavení ochrany osobních údajů](./media/and-enroll-4c-we-care-privacy.png)
-
-10.  Na obrazovce **Co dál?** si přečtěte, co probíhá při registraci, a potom klepněte na **REGISTROVAT**.
-
-    ![Obrazovka Co dál](./media/and-enroll-4d-what-comes-next.png)
-
 11.  Na obrazovce **Aktivovat správce zařízení** klepněte na **Aktivovat**.
 
     ![Obrazovka Aktivovat správce zařízení](./media/and-enroll-5-activate.png)
@@ -91,17 +91,11 @@ Pokud při pokusu o registraci zařízení do služby Intune dojde k chybě, pro
 
     ![Zadání kódu PIN nebo hesla](./media/and-enroll-6-PIN-native.png)
 
-13.  Postupujte podle pokynů níže, které odpovídají typu používaného zařízení (nativní Android nebo Samsung Knox). Pokud chcete zjistit, jestli máte zařízení Samsung Knox, přejděte na **Nastavení** &gt; **O zařízení**. Pokud se tu nezobrazí verze Knoxu, máte nativní zařízení s Androidem.
-
-    -   Nativní zařízení (jiné než Samsung Knox): Na obrazovce **Název certifikátu** přijměte výchozí certifikát klepnutím na **OK**.
-
-    ![Obrazovka Název certifikátu](./media/and-enroll-7-cert-native.png)
-
-    -   Zařízení Samsung Knox: Přijměte zásady ochrany osobních údajů a klepněte na **POTVRDIT**.
+13.  Pokud používáte zařízení s funkcí Samsung Knox, klepněte na **Potvrdit** a zobrazí se zpráva o registraci zařízení. Pokud používáte nativní zařízení Android, na obrazovce uvedené dole jen zkontrolujte, že bylo zařízení zaregistrováno.
 
     ![Zásady ochrany osobních údajů Samsung KNOX](./media/and-enroll-7-knox-privacy-policy.png)
 
-    Při registraci zařízení v Intune se na obrazovce zobrazí tato zpráva.
+    Tato obrazovka informuje o registraci zařízení.
 
     ![Obrazovka registrace zařízení](./media/and-enroll-8-device-enrolling.png)
 
@@ -115,13 +109,14 @@ Pokud při pokusu o registraci zařízení do služby Intune dojde k chybě, pro
 
 Než začnete instalovat firemní aplikace, přejděte na **Nastavení** &gt; **Zabezpečení** a zapněte **Neznámé zdroje**. Pokud před zahájením instalace firemních aplikací tuto možnost nezapnete, zobrazí se zpráva „Instalace blokována. Z důvodů zabezpečení je v zařízení nastavené blokování instalací pro aplikace získané z neznámého zdroje.“ Klepnutím na **Nastavení** v chybovém dialogovém okně můžete přejít na možnost **Neznámé zdroje**.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT (vyhledejte kontaktní informace na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište týmu Microsoft Android na adresu wintunedroidfbk@microsoft.com.
+
 
 ### Související témata
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

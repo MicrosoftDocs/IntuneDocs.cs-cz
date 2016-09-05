@@ -1,10 +1,10 @@
 ---
 title: "Činnost koncového uživatele v aplikacích s podporou správy mobilních aplikací (MAM) | Microsoft Intune"
-description: 
+description: "Toto téma popisuje, co máte očekávat, když je vaše aplikace spravovaná pomocí zásad správy mobilních aplikací."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,8 +12,9 @@ ms.technology:
 ms.assetid: b57e6525-b57c-4cb4-a84c-9f70ba1e8e19
 ms.reviewer: andcerat
 ms.suite: ems
-ms.sourcegitcommit: 3f797e3ef4a7e2d1b27ce6b1ed6e5322343c6cff
-ms.openlocfilehash: 9b557c272c9d740792560a392d52efff6a7deed1
+translationtype: Human Translation
+ms.sourcegitcommit: a1a8d80ad2b0ee66101ad9e67532e806ebc4b690
+ms.openlocfilehash: 3361c9069a3258621b9349a0cf332a38c206d041
 
 
 ---
@@ -46,7 +47,8 @@ Zásady správy mobilních aplikací (MAM) se použijí jenom v případě, že 
 
     ![Snímek obrazovky znázorňující otevřené umístění souborů se seznamem existujících souborů](../media/AppManagement/iOS_OneDriveSuccess.png)
 
-    > [!NOTE] Pokud změníte nasazené zásady, změny se použijí při příštím otevření aplikace.
+    > [!NOTE]
+    > Při změně nasazených zásad se změny použijí při příštím otevření aplikace.
 
 ##  Přístup k OneDrivu na zařízení se systémem Android
 
@@ -169,6 +171,6 @@ To vám nebrání využívat aplikaci Sdílení RMS k zobrazení firemních soub
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

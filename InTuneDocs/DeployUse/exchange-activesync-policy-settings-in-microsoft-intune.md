@@ -1,20 +1,20 @@
 ---
 title: "Nastavení zásad Exchange ActiveSync | Microsoft Intune"
-description: 
+description: "Pomocí zásady Intune pro Exchange ActiveSync můžete nakonfigurovat nastavení, které vám umožní ovládat funkce v zařízeních spravovaných protokolem Exchange ActiveSync."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: e9cbb826-b155-4df6-abf3-60c6f05b2783
-ms.reviewer: jeffgilb
+ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 42e21b802fb605c98f688485c3b77703b3950e94
-ms.openlocfilehash: 7ab9c5f283f65c82e1713d29923fa16a6a542352
+ms.sourcegitcommit: 72e6bcd3fd480c1ed8558fefd3958b4bbf3184c2
+ms.openlocfilehash: 39a844db56edf18f25996c1aaf52223ac80f8071
 
 
 ---
@@ -27,11 +27,11 @@ Pomocí zásady pro Microsoft Intune **Exchange ActiveSync** můžete nakonfigur
 
 |Název nastavení|Podrobnosti
 |----------------|
-|**Vyžadovat heslo k odemknutí mobilních zařízení**|Určuje, jestli zařízení musí být zamčená s použitím hesla.<br>(nevztahuje se na zařízení s Windows RT)|
+|**Vyžadovat heslo k odemknutí mobilních zařízení**|Určuje, jestli zařízení musí být zamčená s použitím hesla.<br>(Nevztahuje se na zařízení s Windows RT.)|
 |**Vyžadovaný typ hesla**|Určuje typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.|
 |**Minimální délka hesla**|Určuje minimální počet znaků, které musí heslo zařízení obsahovat.|
-|**Povolit jednoduchá hesla**|Příklady jednoduchých hesel: 0000 a 1234.|
-|**Počet povolených opakovaných neúspěšných přihlášení, než bude zařízení vymazáno**|Povolí toto množství pokusů na zadání správného hesla před vymazáním zařízení.|
+|**Povolit jednoduchá hesla**|Určuje, jestli můžete používat jednoduchá hesla, jako 0000 a 1234.|
+|**Počet povolených opakovaných neúspěšných přihlášení, než bude zařízení vymazáno**|Určuje, kolikrát může uživatel zadat nesprávné heslo, než se zařízení vymaže.|
 |**Omezená platnost hesla (ve dnech)**|Určuje počet dní, po jejichž uplynutí bude nutné změnit heslo zařízení.
 |**Pamatovat si historii hesel**|Určuje, jestli má být povolené použití dříve použitých hesel.|
 |**Pamatovat si historii hesel** – **Zabránit opětovnému použití předchozích hesel**|Určuje počet dříve použitých hesel, které nejde znovu použít.|
@@ -41,37 +41,37 @@ Pomocí zásady pro Microsoft Intune **Exchange ActiveSync** můžete nakonfigur
 
 |Název nastavení|Podrobnosti|
 |----------------|
-|**Vyžadovat šifrování u mobilního zařízení**<sup>1</sup>|Je-li to podporováno, vyžaduje se šifrování dat v zařízení.<br>Pro zařízení s Windows Phone 8 je potřeba nastavit hodnotu **Ano**.<br /><br />Pokud chcete povolit šifrování na zařízeních iOS, povolte nastavení **Vyžadovat heslo k odemknutí mobilních zařízení**.|
+|**Vyžadovat šifrování u mobilního zařízení**<sup>1</sup>|Vyžaduje šifrování dat na zařízení, pokud je podporované.<br><br>Pro zařízení s Windows Phone 8 je potřeba nastavit hodnotu **Ano**.<br /><br />Pokud chcete povolit šifrování na zařízeních iOS, povolte nastavení **Vyžadovat heslo k odemknutí mobilních zařízení**.|
 |**Vyžadovat šifrování u paměťových karet**|Vyžaduje šifrování dat uložených v externích úložištích, jako je karta SD (u podporovaných zařízení).
 <sup>1</sup> Další informace pro zařízení s Windows 8.1
 
--   K vynucení šifrování na zařízeních s Windows 8.1 je potřeba na každé zařízení nainstalovat [aktualizaci MDM klienta pro Windows z prosince 2014](http://support.microsoft.com/kb/3013816) .
+-   Pokud chcete vynutit šifrování na zařízeních s Windows 8.1, musíte na každé zařízení nainstalovat [aktualizaci MDM klienta pro Windows z prosince 2014](http://support.microsoft.com/kb/3013816).
 
 -   Pokud toto nastavení povolíte pro zařízení s Windows 8.1, všichni uživatelé zařízení musí mít účet Microsoft.
 
--   Šifrování funguje, jenom když zařízení splňuje hardwarové požadavky certifikace Microsoft [InstantGo](http://blogs.windows.com/bloggingwindows/2014/06/19/instantgo-a-better-way-to-sleep/) .
+-   Pokud chcete, aby šifrování fungovalo pro zařízení s Windows 8.1, musí splňovat hardwarové požadavky certifikace Microsoft [InstantGo](http://blogs.windows.com/bloggingwindows/2014/06/19/instantgo-a-better-way-to-sleep/).
 
--   Pokud vynutíte šifrování na zařízení, je obnovovací klíč přístupný jenom uživatelům s účtem Microsoft, ke kterému přistupují z účtu na Onedrivu. Tento klíč se nedá obnovit jménem uživatele.
+-   Pokud vynutíte šifrování na zařízení s Windows 8.1, je obnovovací klíč přístupný jenom uživatelům s účtem Microsoft, ke kterému přistupují z účtu OneDrive. Tento klíč se nedá obnovit jménem uživatele.
 
 ## Nastavení e-mailu
 
 |Název nastavení|Podrobnosti
 |----------------|
 |**Povolit uživatelům stahovat přílohy e-mailů**|Určuje, jestli lze do zařízení stahovat přílohy e-mailu.|
-|**Interval synchronizace e-mailu**|Vyberte počet dnů přijatých e-mailů, které budou synchronizované v zařízení.
+|**Interval synchronizace e-mailu**|Určuje počet dnů přijatých e-mailů, které budou synchronizované v zařízení.
 |**Povolit mobilním zařízením, která plně nepodporují nastavení Exchange ActiveSync, synchronizaci se serverem Exchange**|Určuje, jestli má mít Exchange povolený přístup k zařízením, která nepodporují jedno nebo více nastavení Exchange ActiveSync.
 
 ## Nastavení prohlížeče
 
 |Název nastavení|Podrobnosti
 |----------------|-
-|**Povolit webový prohlížeč**|Určuje, jestli je možné použít webový prohlížeč v zařízení.<br>(není dostupné pro Windows RT nebo Windows Phone)
+|**Povolit webový prohlížeč**|Určuje, jestli je možné použít webový prohlížeč v zařízení.<br>(Není dostupné pro Windows RT nebo Windows Phone.)
 
 ## Nastavení hardwaru
 
 |Název nastavení|Podrobnosti
 |----------------|
-|**Povolit fotoaparát**|Určuje, jestli je možné použít fotoaparát v zařízení.<br>(není dostupné pro Windows RT nebo Windows Phone)
+|**Povolit fotoaparát**|Určuje, jestli je možné použít fotoaparát v zařízení.<br>(Není dostupné pro Windows RT nebo Windows Phone.)
 
 
 
@@ -80,7 +80,6 @@ Pomocí zásady pro Microsoft Intune **Exchange ActiveSync** můžete nakonfigur
 
 
 
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: "Registrace Pomocníka s nastavením pro zařízení s iOS v Microsoft Intune | Microsoft Intune"
-description: 
+title: "Registrace zařízení s iOS pomocí Pomocníka s nastavením | Microsoft Intune"
+description: "Zaregistruje zařízení iOS vlastněná společností pomocí nástroje Apple Configurator, aby došlo k obnovení továrního nastavení zařízení, a připraví je na spuštění Pomocníka s nastavením."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 46e5b027-4280-4809-b45f-651a6ab6d0cd
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f3637e79e7b6f93820e775932653c41879f369fe
-ms.openlocfilehash: b9cb10ccb26d4f61d63fb2dc6c18be48cc0a3182
+ms.sourcegitcommit: ecfeb73efed4a47256275120c52de232c556adfe
+ms.openlocfilehash: 01d87b95d2599f75161c9a95ff4cf94375eedb60
 
 
 ---
@@ -27,6 +27,7 @@ Intune podporuje registraci firemních zařízení s iOS pomocí nástroje [Appl
 Pomocí Apple Configuratoru můžete v zařízeních s iOS obnovit tovární nastavení a připravit je pro nového uživatele.  Tato metoda předpokládá, že používáte Apple Configurator 2.0, a vyžaduje, abyste zařízení s iOS připojili k počítači Mac pomocí USB a nastavili firemní registraci. K povolení aplikace Portál společnosti Intune většina scénářů vyžaduje, aby zásady použité na zařízení s iOS zahrnovaly *přidružení uživatele*.
 
 **Požadavky**
+* [Registrace iOS povolená](set-up-ios-and-mac-management-with-microsoft-intune.md) nainstalováním certifikátu služby APN
 * Fyzický přístup k zařízením s iOS – Zařízení musí být nenakonfigurovaná (obnovení továrního nastavení) a nesmí být chráněná heslem.
 * Sériová čísla zařízení – [Jak zjistit sériové číslo systému iOS](https://support.apple.com/en-us/HT204308)
 * Propojovací kabely USB
@@ -37,10 +38,7 @@ Pomocí Apple Configuratoru můžete v zařízeních s iOS obnovit tovární nas
 
 2.  **Vytvořte profil zařízení.** Profil registrace zařízení definuje nastavení, která se použijí pro skupinu zařízení. Jestli jste to ještě neudělali, vytvořte profil registrace zařízení pro zařízení iOS zaregistrovaná v Apple Configuratoru.
 
-    ###### Vytvoření profilu
-
-    1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) přejděte na **Zásady** &gt; **Zařízení ve vlastnictví firmy** a vyberte **Přidat…**.
-
+    1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) přejděte na **Zásady** &gt; **Registrace podnikového zařízení** a klikněte na **Přidat…**.
     ![Vytvoření profilu registrace zařízení](../media/pol-sa-corp-enroll.png)
 
     2.  Zadejte podrobnosti profilů zařízení:
@@ -51,19 +49,13 @@ Pomocí Apple Configuratoru můžete v zařízeních s iOS obnovit tovární nas
 
         -   **Podrobnosti registrace** – Určují, jak se budou zařízení registrovat.
 
-            -   **Výzva k přidružení uživatele** – Při počátečním nastavení zařízení s iOS se dá zařízení spojit s uživatelem a potom mu umožnit přístup k firemním datům a e-mailu. Ve většině scénářů použití Pomocníka s nastavením je vhodná možnost **Výzva k přidružení uživatele**.
-            Tento režim podporuje různé scénáře:
+            -   **Vyzvat k přidružení uživatele** – Při počátečním nastavení je možné zařízení spojit s uživatelem a potom mu umožnit přístup k firemním datům a e-mailu. Pro zařízení spravovaná pomocí programu DEP, která patří uživatelům a potřebují používat portál společnosti (tj. instalovat aplikace), by se mělo nakonfigurovat **přidružení uživatele**.
 
-                -   **Osobní zařízení vlastněné společností** – „Vyberte si vlastní zařízení“ (CYOD). Podobá se vlastním soukromým nebo osobním zařízením s tím, že správce má určitá privilegia, třeba právo zařízení vymazat, resetovat, spravovat nebo zrušit jeho registraci. Uživatel zařízení může instalovat aplikace a má i většinu dalších oprávnění k používání zařízení, pokud je neblokují zásady správy.
-
-                -   **Účet správce registrace zařízení** – K registraci zařízení se použije zvláštní účet správce Intune. Zařízení je možné spravovat jako soukromý účet, ale instalovat aplikace, vymazat, resetovat nebo spravovat zařízení nebo zrušit jeho registraci může jenom uživatel, který zná pověřovací údaje správce registrace. Informace o registraci zařízení sdíleného mnoha uživateli prostřednictvím společného účtu najdete v tématu [Registrace zařízení vlastněných společností pomocí správce registrace zařízení v Microsoft Intune](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md).
-
-            -   **Bez přidružení uživatele** – Zařízení nemá určeného uživatele. Toto spřažení použijte u zařízení určených k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, které vyžadují spřažení s uživatelem, jsou zakázané nebo nefungují.
+            -   **Bez přidružení uživatele** – K zařízení není přidružený žádný uživatel. Toto spřažení použijte u zařízení určených k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, které vyžadují přidružení uživatele, včetně aplikace Portál společnosti používané k instalaci obchodních aplikací, nebudou fungovat.
 
         -   **Předběžné přiřazení skupiny zařízení** – Do této skupiny na začátku patří všechna zařízení nasazená s tímto profilem. Po registraci můžete zařízení přiřadit někomu jinému.
 
-        >[!Important]
-        >Přiřazení skupiny způsobí přesun z Intune do Azure Active Directory. [Další informace](http://go.microsoft.com/fwlink/?LinkID=787064)
+            [!INCLUDE[groups deprecated](../includes/group-deprecation.md)]
 
           -  **Program DEP (Device Enrollment Program)** – Program Apple DEP (Device Enrollment Program) se při registraci prostřednictvím Pomocníka s nastavením nedá použít. Zkontrolujte, jestli je přepínač nastavený do polohy **Vypnuto**.
 
@@ -123,26 +115,24 @@ Pomocí Apple Configuratoru můžete v zařízeních s iOS obnovit tovární nas
 
     3. Pro server MDM z kroku 6 výše zadejte položky **Název** a **Enrollment URL** (Adresa URL pro registraci). Jako adresu URL pro registraci zadejte adresu URL profilu pro registraci exportovanou z Intune. Vyberte **Další**.  
 
-       Pokud se zobrazí upozornění týkající se požadavků na profil důvěryhodnosti Apple TV, můžete možnost **Profil důvěryhodnosti** klidně zrušit výběrem šedého symbolu „X“. Také můžete klidně ignorovat všechna upozornění týkající se certifikátu ukotvení. Pokračujte výběrem položky **Další** až do ukončení průvodce.
+       Pokud se zobrazí upozornění, že adresa URL serveru není ověřená, můžete to upozornění bezpečně ignorovat. Pokračujte výběrem položky **Další** až do ukončení průvodce.
 
-    4.  V podokně **Servery** vyberte Upravit vedle profilu nového serveru. Ujistěte se, že adresa URL pro registraci přesně odpovídá adrese URL exportované z Intune. Pokud se adresy liší, znovu zadejte původní adresu URL a kliknutím na **Uložit** uložte profil registrace exportovaný z Intune.
-
-    5.  Mobilní zařízení iOS připojte adaptérem USB k počítači Apple.
+    4.  Mobilní zařízení iOS připojte adaptérem USB k počítači Apple.
 
         > [!WARNING]
         > V průběhu registrace bude v zařízeních obnovená tovární konfigurace. Doporučuje se zařízení resetovat a zapnout ho. Doporučuje se, aby byla při spouštění Pomocníka s nastavením na zařízení zobrazená **úvodní obrazovka**.
 
-    6.  Vyberte **Připravit**. V podokně **Připravit zařízení iOS** vyberte možnost **Ručně** a vyberte **Další**.
+    5.  Vyberte **Připravit**. V podokně **Připravit zařízení iOS** vyberte možnost **Ručně** a vyberte **Další**.
 
-    7. V podokně **Enrollment URL** (Zaregistrovat na serveru MDM) vyberte název serveru, který jste vytvořili, a vyberte **Další**.
+    6. V podokně **Enrollment URL** (Zaregistrovat na serveru MDM) vyberte název serveru, který jste vytvořili, a vyberte **Další**.
 
-    8. V podokně **Supervise Devices** (Dohled nad zařízeními) vyberte úroveň dohledu a potom vyberte **Další**.
+    7. V podokně **Supervise Devices** (Dohled nad zařízeními) vyberte úroveň dohledu a potom vyberte **Další**.
 
-    9. V podokně **Vytvořit organizaci** vyberte **organizaci** nebo vytvořte novou a potom vyberte **Další**.
+    8. V podokně **Vytvořit organizaci** vyberte **organizaci** nebo vytvořte novou a potom vyberte **Další**.
 
-    10. V podokně **Configure iOS Setup Assistant** (Konfigurovat Pomocníka s nastavením iOS) vyberte kroky, které se budou zobrazovat uživateli, a potom vyberte **Připravit**. Pokud se zobrazí výzva, proveďte ověření, aby se aktualizovalo nastavení důvěry.  
+    9. V podokně **Configure iOS Setup Assistant** (Konfigurovat Pomocníka s nastavením iOS) vyberte kroky, které se budou zobrazovat uživateli, a potom vyberte **Připravit**. Pokud se zobrazí výzva, proveďte ověření, aby se aktualizovalo nastavení důvěry.  
 
-    11. Až se dokončí příprava zařízení s iOS, můžete odpojit kabel USB.  
+    10. Až se dokončí příprava zařízení s iOS, můžete odpojit kabel USB.  
 
 8.  **Distribuujte zařízení.** Zařízení jsou připravená na registraci ve společnosti. Vypněte zařízení a rozdejte je uživatelům. Po zapnutí zařízení se spustí Pomocník s nastavením.
 
@@ -153,6 +143,6 @@ Pomocí Apple Configuratoru můžete v zařízeních s iOS obnovit tovární nas
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO4-->
 
 

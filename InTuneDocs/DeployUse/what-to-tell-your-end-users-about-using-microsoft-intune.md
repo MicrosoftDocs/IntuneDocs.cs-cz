@@ -1,9 +1,9 @@
 ---
-title: "Co říct koncovým uživatelům o používání služby Microsoft Intune"
-description: 
+title: "Co říct koncovým uživatelům o používání služby Intune | Microsoft Intune"
+description: "Odkazy na informace, které můžete sdílet se svými koncovými uživateli"
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 48914533-f138-4dc0-8b93-4cea3ac61f7b
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 83f029c97cf34b6c96c6b2ef16cc65ab839c1d55
-ms.openlocfilehash: 893e896fc52e6e883fcd151db2c47030113502a2
+ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
+ms.openlocfilehash: e904f7e7e91d86359a0fd818032833caa382edcc
 
 
 ---
@@ -61,6 +61,6 @@ Chcete-li pomoci uživatelům s řešením problémů, které mohou nastat běhe
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

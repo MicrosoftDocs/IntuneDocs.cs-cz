@@ -1,10 +1,10 @@
 ---
 title: "Ochrana dat a aplikací | Microsoft Intune"
 description: 
-keywords: 
+keywords: "Toto téma popisuje různé funkce a možnosti Intune, které jsou k dispozici, aby pomáhaly chránit vaše firemní aplikace a data."
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 5c46e188-87eb-4ce2-b184-24809e8bf783
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ded7bd6c971a9448ad6e6492ebc5e42dfcb5d76e
-ms.openlocfilehash: 9445b4b171eb2102d73cf0e866e85b535274eee2
+ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
+ms.openlocfilehash: cf2ef1510aa9dafeddf54855123c826c9ccc2fd0
 
 
 ---
@@ -39,7 +39,9 @@ Zabezpečení přístupu k prostředkům společnosti je jenom prvním krokem p�
 - Zabezpečit přístup k aplikacím chráněným MAM tím, že se vyžaduje zadání kódu PIN, hesla nebo firemních přihlašovacích údajů.
 - Otvírat všechny webové odkazy v prohlížeči Intune Managed Browser.
 
-Tyto sady pravidel se označují jako [zásady správy mobilních aplikací (MAM)](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).  Zásady správy mobilních aplikací (MAM) je možné použít pro aplikace běžící na zařízení, která mohou nebo nemusí být spravovaná vámi.  Firemní data můžete chránit pomocí zásad MAM pro zařízení, která jsou zaregistrovaná v Intune, zařízení, která jsou zaregistrovaná a spravovaná jiným řešením MDM třetí strany, nebo zařízení, která nemusí být spravovaná vámi, jako jsou třeba vlastní zařízení jednotlivých zaměstnanců.
+Tyto sady pravidel se označují jako [zásady správy mobilních aplikací (MAM)](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).  Zásady správy mobilních aplikací (MAM) je možné použít pro aplikace běžící na zařízení, která mohou nebo nemusí být spravovaná vámi.  
+
+Firemní data můžete chránit pomocí zásad MAM pro zařízení, která jsou **zaregistrovaná v Intune**, zařízení, která jsou **zaregistrovaná a spravovaná jiným řešením MDM třetí strany**, nebo zařízení, která **nejsou registrovaná v žádném řešení MDM**, jako jsou třeba vlastní zařízení jednotlivých zaměstnanců.
 
 Aby bylo možné aplikaci přidružit k zásadě MAM, musí mít začleněnou sadu Microsoft Intune App Software Development Kit (SDK) nebo používat nástroj App Wrapping.
 
@@ -51,6 +53,6 @@ Když dojde ke ztrátě nebo odcizení zařízení nebo když uživatel přestan
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

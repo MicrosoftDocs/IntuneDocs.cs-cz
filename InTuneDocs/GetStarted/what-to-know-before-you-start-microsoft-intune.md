@@ -1,9 +1,9 @@
 ---
 title: "Co potřebujete vědět, než začnete s Microsoft Intune | Microsoft Intune"
-description: 
+description: "Stránka s odkazy na požadavky a předpoklady Intune"
 keywords: 
-author: Staciebarker
-manager: jeffgilb
+author: barlanmsft
+manager: angrobe
 ms.date: 06/08/2016
 ms.topic: get-started-article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 09caaa76d08f99b0d455d291fbd4002289f2f11c
-ms.openlocfilehash: fe2ebc32005d04e92b93fd817981aa2a632c2288
+ms.sourcegitcommit: 6d1c7c670341692d4ea0c823e4a9a96746b83067
+ms.openlocfilehash: cd9c0a27a9cded6049b472a0327349a9c847ea35
 
 
 ---
@@ -30,18 +30,13 @@ Než začnete s nastavováním Microsoft Intune, projděte si všechny následuj
 - [Firemní portál Microsoft Intune](microsoft-intune-company-portal.md)
 - [Integrace Intune s cloudovými službami a produkty Microsoftu](integration-with-cloud-services.md)
 - [Využití šířky pásma Intune](network-bandwidth-use.md)
-- [Správa vlastních domén s Microsoft Intune](domain-names-for-microsoft-intune.md)
+- [Názvy vlastních domén s Microsoft Intune](domain-names-for-microsoft-intune.md)
 
 
 Než začnete používat Intune, můžete si také projít [možnosti správy mobilních zařízení v Microsoft Intune](/intune/get-started/mobile-device-management-capabilities-in-microsoft-intune). Pokud začnete se zkušební verzí předplatného, můžete ji později převést na plnou verzi. Viz [Jak koupit Microsoft Intune](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/Purchasing.aspx).
 
 
 
-
-
-
-
-
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO4-->
 
 

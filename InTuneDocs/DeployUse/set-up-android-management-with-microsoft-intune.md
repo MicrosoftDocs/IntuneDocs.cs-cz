@@ -1,10 +1,10 @@
 ---
-title: "Nastavení správy systému Android pomocí Microsoft Intune | Microsoft Intune"
-description: 
+title: "Nastavení správy systému Android | Microsoft Intune"
+description: "Povolte správu mobilních zařízení (MDM) pro zařízení s Androidem a KNOXem pomocí služby Microsoft Intune."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,20 +13,22 @@ ms.assetid: dbe5cad1-3e0d-41a9-966b-738156089700
 ms.reviewer: lacranda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f1dc713099c982d6e32c87b814dd3f55b1656eda
-ms.openlocfilehash: 5f65887345c1a650c6d80863e42f447035c789f7
+ms.sourcegitcommit: 08d4352ef88a266d05047d386247815f3765f552
+ms.openlocfilehash: 947a7ba62d817e6b02d8a6bb0a0d0bddf53e7d4e
 
 
 ---
 
 # Nastavení správy zařízení s Androidem
+Pokud chcete nastavit zařízení s Windows, najdete pomoc [tady](../enduser/using-your-android-device-with-intune.md).
+
 S Microsoft Intune můžete povolit model BYOD (Přineste si vlastní zařízení) pro zařízení s Androidem bez další zátěže pro platformu.
 
 Pokud chcete získat další informace, vyberte z následujících možností platforem zařízení:
 
 > [!div class="op_single_selector"]
 - [Nastavení správy systému Android pomocí Microsoft Intune](set-up-android-management-with-microsoft-intune.md)
-- [Nastavení správy pro iOS a Mac pomocí Microsoft Intune](set-up-ios-and-mac-management-with-microsoft-intune.md)
+- [Set up iOS and Mac management with Microsoft Intune](set-up-ios-and-mac-management-with-microsoft-intune.md)
 - [Nastavení správy pro zařízení Windows Phone v Microsoft Intune](set-up-windows-phone-management-with-microsoft-intune.md)
 - [Nastavení správy pro zařízení Windows v Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md)
 
@@ -41,11 +43,15 @@ Mobilní zařízení s Androidem umožňují uživatelům registraci pomocí apl
 3.  **Informování uživatelů, jak pomocí portálu společnosti získat přístup k firemním prostředkům**<br>
     Uživatelé budou potřebovat vědět, jak mají registrovat svá zařízení a co mají očekávat po začlenění do správy. [Co říct koncovým uživatelům o používání služby Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
 
+4.  Uživatelé budou potřebovat vědět, jak mají registrovat svá zařízení a co mají očekávat po začlenění do správy.
+  - [Co říct koncovým uživatelům o používání služby Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+  - [Pokyny k zařízení s Windows pro koncové uživatele](../enduser/using-your-android-device-with-intune.md)
+
 ### Související témata
 [Příprava registrace zařízení v Microsoft Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

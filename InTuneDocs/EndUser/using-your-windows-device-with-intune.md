@@ -1,10 +1,10 @@
 ---
 title: "Použití zařízení s Windows v Intune | Microsoft Intune"
-description: 
+description: "Obsahuje seznam odkazů na úlohy, které můžete dělat v zařízení s Windows, když je zařízení registrované v Intune."
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,15 +13,18 @@ ms.assetid: 0de5f03a-c288-423b-b9ea-493a39eb715a
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 24573d04c319e359b810b6fdf607b44db19306e9
-ms.openlocfilehash: f5170f9230812e4c4606dac5258cde1da6b99089
+ms.sourcegitcommit: 11760810110ddb34e1a5371ce45206212eab0790
+ms.openlocfilehash: ba1e9ae9b17b6cb3ef9bccdcd19bafd9443915ff
 
 
 ---
 
 # Použití zařízení Windows s Intune
 
-Tyto kroky použijte pro úlohy, které musíte udělat v počítači nebo na zařízení s Windows, když vaše společnost používá Microsoft Intune.
+Tento článek obsahuje odkazy na všechny úlohy, které můžou provést koncoví uživatelé na svých zařízeních spravovaných Intune. Správci IT můžou z těchto informací zjistit kroky, podle kterých uživatelé postupují při provádění různých úloh, seskupených do kategorií: 
+- Instalace aplikace Portál společnosti a registrace ve službě Intune 
+- Úlohy správy po registraci
+- Problémy se shodou
 
 ## Instalace aplikace Portál společnosti a registrace ve službě Intune
 
@@ -57,8 +60,6 @@ Informace v této části vám pomůžou s opravit problémy, se kterými se mů
 
 
 
-
-
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

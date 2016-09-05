@@ -1,19 +1,20 @@
 ---
 title: "Jak získat podporu | Microsoft Intune"
-description: 
+description: "Podpora je k dispozici online a po telefonu pro placené i zkušební předplatné."
 keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 05/26/2016
+manager: angrobe
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4682b6b6-c9ef-483e-a6de-b8830cb98b63
-ms.reviewer: jeffgilb
+ms.reviewer: cacamp
 ms.suite: ems
-ms.sourcegitcommit: 632115d1010217f927e20a7e9532311d48f2b106
-ms.openlocfilehash: a6cb77b441c7c44f33c0353232409f8d7b2daa6a
+translationtype: Human Translation
+ms.sourcegitcommit: f400f8b2ffd85b6328eceb74b97de1e67203ee6b
+ms.openlocfilehash: 3342ee86179348dbff880cb5884bf2975d26b50d
 
 
 ---
@@ -24,36 +25,40 @@ ms.openlocfilehash: a6cb77b441c7c44f33c0353232409f8d7b2daa6a
 V tomto tématu najdete pokyny k otevření žádosti o službu nebo volání telefonické podpory v mnoha jazycích.
 
 Informace o samoobslužné nápovědě Intune najdete v tématu [Obecné tipy pro odstraňování potíží v Microsoft Intune](general-troubleshooting-tips-for-microsoft-intune.md) nebo libovolném tématu o odstraňování potíží pro specifické problémy uvedené v části **Související témata** tohoto tématu.
+
+>[!NOTE]
+>
+>Zákazníci s plánem Premier můžou otevřít lístek podpory služby Intune na [stránce podpory Premier](https://support.microsoft.com/en-us/premier/contacts).
+
 ## Vytvoření online žádosti o službu
 
-1.  Přihlaste se k Intune a potom navštivte [Centrum pro správu Office 365](https://portal.office.com/Support/SupportEntry.aspx).
+1.  Přihlaste se k [Centru pro správu Office 365](https://portal.office.com/admin/default.aspx#Overview_SupportPage_AltUSupportPage) pomocí svých přihlašovacích údajů Intune.
 
 2.  V části **Vytvořit žádost o službu** vyberte kategorii problému, pro který chcete otevřít lístek:
 
-    -   V případě problémů s fakturací a licencemi vyberte položku **Informace o fakturaci a produktech**.
+    -   V případě problémů s fakturací, licencemi nebo účtem vyberte položku **Informace o fakturaci a produktech**.
 
-    -   V případě všech ostatních problémů s Intune vyberte možnost **Správa mobilních zařízení**. Tato možnost platí i pro Office 365 MDM a nástroj System Center Configuration Manager s Intune.
+    -   V případě všech ostatních problémů s Intune vyberte možnost **Správa mobilních zařízení**.
 
     > [!NOTE]
-    > [!NOTE] Možná budete muset kliknout na tlačítko **Další** pod seznamem, aby se zobrazily všechny kategorie.
+    > Možná budete muset zvolit **Další** pod seznamem, aby se zobrazily všechny kategorie.
 
 3.  Na stránce **Identifikovat problém** vyberte položky **Funkce** a **Příznak**, se kterými potřebujete pomoct. Zobrazí se výzva k zadání informací do polí **Shrnutí problémů** a **Podrobnosti o problému**.
 
-4.  Na stránce **Zkontrolujte návrhy** najdete odkazy na obsah, pomocí kterého možná zvládnete vyřešit problém sami.  Pokud problém nevyřešíte sami, můžete kliknout na **Ano, pokračovat** v dolní části stránky a odeslat žádost o službu.
+4.  Na stránce **Zkontrolujte návrhy** najdete odkazy na obsah, pomocí kterého možná zvládnete vyřešit problém sami.  Pokud problém nevyřešíte sami, můžete zvolit **Ano, pokračovat** v dolní části stránky a odeslat žádost o službu.
 
-5.  Na stránce **Přidat podrobnosti** zadejte požadované informace. Kliknutím na **Připojit soubor** můžete připojit snímky obrazovky nebo jiné dokumenty.
+5.  Na stránce **Přidat podrobnosti** zadejte požadované informace. Volbou **Připojit soubor** můžete připojit snímky obrazovky nebo jiné dokumenty.
 
-6.  Na stránce **Potvrdit a odeslat** zadejte kontaktní údaje, zkontrolujte svoji žádost a klikněte na **Odeslat žádost**. Po odeslání žádosti se zobrazí seznam vašich žádosti o služby.
+6.  Na stránce **Potvrdit a odeslat** zadejte kontaktní údaje, zkontrolujte svoji žádost a zvolte **Odeslat žádost**. Po odeslání žádosti se zobrazí seznam vašich žádosti o služby.
 
 ## Podpora po telefonu
 V tématu [Kontaktujte telefonickou odbornou pomoc pro Microsoft Intune](contact-assisted-phone-support-for-microsoft-intune.md) najdete seznam telefonních čísel podpory podle zemí a oblastí, pracovní dobu podpory a podporované jazyky pro každou oblast.
 
 ## Sledování žádostí o služby
-Pokud chcete sledovat své žádosti, přejděte do [Centra pro správu Office 365](https://portal.office.com/admin/default.aspx). V dolní části seznamu **Vytvořit žádost o službu** klikněte na **Zobrazit všechny lístky podpory**. Ve výchozím nastavení se zobrazí všechny žádosti o služby, které jsou v otevřeném stavu. Pokud chcete změnit nastavení zobrazených žádostí, například aby se zobrazovaly zavřené žádosti, klikněte na ikonu filtru v horním navigačním panelu a vyberte požadované zobrazení.
+Pokud chcete sledovat své žádosti, přejděte do [Centra pro správu Office 365](https://portal.office.com/admin/default.aspx). V dolní části seznamu **Vytvořit žádost o službu** zvolte **Zobrazit všechny lístky podpory**. Ve výchozím nastavení se zobrazí všechny žádosti o služby, které jsou v otevřeném stavu. Pokud chcete změnit nastavení zobrazených žádostí, například aby se zobrazovaly zavřené žádosti, zvolte ikonu filtru v horním navigačním panelu a vyberte požadované zobrazení.
 
 > [!NOTE]
-> [!NOTE]
-**Pokud používáte Microsoft System Center Configuration Manager** nebo **Microsoft System Center Endpoint Protection:** Technickou podporu pro Configuration Manager nebo Endpoint Protection získáte od svého partnera, případně přejděte do [Centra řešení Microsoft System Center Configuration Manager a System Center Endpoint Protection](http://www.microsoft.com/en-us/server-cloud/products/system-center-2012-r2/resources.aspx), kde najdete řadu materiálů pro svépomocné řešení a taky možnost otevření žádosti o podporu online nebo po telefonu.
+> **Pokud používáte Microsoft System Center Configuration Manager** nebo **Microsoft System Center Endpoint Protection:** Technickou podporu pro Configuration Manager nebo Endpoint Protection získáte od svého partnera, případně přejděte do [Centra řešení Microsoft System Center Configuration Manager a System Center Endpoint Protection](http://www.microsoft.com/en-us/server-cloud/products/system-center-2012-r2/resources.aspx), kde najdete řadu materiálů pro svépomocné řešení a taky možnost otevření žádosti o podporu online nebo po telefonu.
 >
 > Technická podpora pro System Center Configuration Manager nebo System Center Endpoint Protection vyžaduje buď platbu nebo se odečte od stávajících licenčních smluv nebo smluv Premier Support.
 
@@ -140,6 +145,6 @@ Součásti naší role:
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -9,7 +9,7 @@
 ### [Portál společnosti](microsoft-intune-company-portal.md)
 ### [Integrace s cloudovými službami a produkty Microsoftu](integration-with-cloud-services.md)
 ### [Využití šířky pásma sítě](network-bandwidth-use.md)
-### [Názvy domén](domain-names-for-microsoft-intune.md)
+### [Názvy vlastních domén](domain-names-for-microsoft-intune.md)
 
 ## [Úvodní příručka služby Intune](start-with-a-paid-subscription-to-microsoft-intune.md)
 ### [Přihlášení k Intune](start-with-a-paid-subscription-to-microsoft-intune-step-1.md)
@@ -39,6 +39,6 @@
 # [Řešení problémů](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO3-->
 
 

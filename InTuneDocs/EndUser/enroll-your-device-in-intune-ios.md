@@ -1,9 +1,9 @@
 ---
 title: "Registrace zařízení se systémem iOS do Intune | Microsoft Intune"
-description: 
+description: "Popisuje registraci zařízení s iOS v Intune."
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 05/18/2016
 ms.topic: article
 ms.prod: 
@@ -14,8 +14,8 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f83a539e9bec5207d7c1c682942b4bb6797d616c
-ms.openlocfilehash: 305308aa94a7650df8b44710025620906714421b
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 7bc57a9416023077d22323d4e88d1464304e21ea
 
 
 ---
@@ -35,53 +35,53 @@ Pokud se snažíte zaregistrovat zařízení s Mac OS X, přečtěte si téma [R
 
 2. Na stránce **Nastavení firemního přístupu** klepněte na **Začít**.
 
-    ![ios-enroll-comp-access-setup-begin](./media/ios-enroll-1a-comp-access-setup.png) 
+    ![ios-enroll-comp-access-setup-begin](./media/ios-enroll-1a-comp-access-setup.png)
 
 3. Na obrazovce **Proč zařízení registrovat?** si přečtěte informace o tom, co vám registrace zařízení umožní, a potom klepněte na **Pokračovat**.
 
-    ![ios-enroll-why-enroll](./media/ios-enroll-1b-why-enroll.png) 
+    ![ios-enroll-why-enroll](./media/ios-enroll-1b-why-enroll.png)
 
 4. Přečtěte si informace o tom, co správce IT uvidí nebo neuvidí ve vašem zařízení, a klepněte na **Pokračovat**.
 
-    ![ios-enroll-what-it-can-see](./media/ios-enroll-1c-we-care-privacy.png) 
+    ![ios-enroll-what-it-can-see](./media/ios-enroll-1c-we-care-privacy.png)
 
 5.  Na obrazovce **Co dál?** si přečtěte, co probíhá při registraci, a potom klepněte na **Registrovat**.
 
-    ![ios-enroll-what-comes-next](./media/ios-enroll-1d-what-comes-next.png) 
+    ![ios-enroll-what-comes-next](./media/ios-enroll-1d-what-comes-next.png)
 
 6.  Na obrazovce **Nainstalovat profil** klepněte na **Instalovat**, a pokud se zobrazí výzva, zadejte své heslo.
 
-    ![ios-enroll-install-profile](./media/ios-enroll-2-mgt-profile-install.png) 
-  
+    ![ios-enroll-install-profile](./media/ios-enroll-2-mgt-profile-install.png)
+
 7.  Klepněte na **Instalovat**.
 
     ![ios-enroll-tap-install](./media/ios-enroll-3-mgt-profile-install-2.png)    
 
 8.  Klepnutím na **Instalovat** dejte najevo, že jste si přečetli upozornění.
 
-    ![ios-enroll-tap-install-after-warning](./media/ios-enroll-4-warning.png) 
+    ![ios-enroll-tap-install-after-warning](./media/ios-enroll-4-warning.png)
 
 9.  Klepněte na **Důvěřovat**.
 
-    ![ios-enroll-tap-trust](./media/ios-enroll-5-trust.png) 
+    ![ios-enroll-tap-trust](./media/ios-enroll-5-trust.png)
 
 10.  Po změně obrazovky a dokončení instalace profilu klepněte na **Hotovo**.
 
-    ![ios-enroll-tap-done](./media/ios-enroll-6-done.png) 
+    ![ios-enroll-tap-done](./media/ios-enroll-6-done.png)
 
     Na obrazovce se objeví zpráva „Registrování zařízení“.
 
 11.  Po zobrazení zprávy s dotazem, zda chcete otevřít stránku v Portálu společnosti, klepněte na **Otevřít**.
 
-    ![ios-enroll-open-comp-portal](./media/ios-enroll-7-open-cp.png) 
+    ![ios-enroll-open-comp-portal](./media/ios-enroll-7-open-cp.png)
 
 12. Na obrazovce **Nastavení firemního přístupu** klepněte na **Pokračovat**. Pokud váš správce IT nastavil dodatečné požadavky na zabezpečení, jako třeba nutnost nastavení hesla, pokračujte dle pokynů na obrazovce, dokud nebudete splňovat všechny požadavky dodržování předpisů. Budete vráceni na obrazovku Nastavení přístupu společnosti, poté klepněte na **Pokračovat**.
 
-    ![ios-enroll-comp-access-tap-continue](./media/ios-enroll-8-comp-access-setup-compliance.png) 
+    ![ios-enroll-comp-access-tap-continue](./media/ios-enroll-8-comp-access-setup-compliance.png)
 
-13. Klepněte na **Hotovo**. 
+13. Klepněte na **Hotovo**.
 
-    ![ios-enroll-tap-done](./media/ios-enroll-9-comp-access-setup-complete.png) 
+    ![ios-enroll-tap-done](./media/ios-enroll-9-comp-access-setup-complete.png)
 
 Zařízení je nyní zaregistrováno v Intune a budete přesměrováni zpět do aplikace Portál společnosti.
 
@@ -91,6 +91,7 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní 
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO4-->
 
 

@@ -1,9 +1,9 @@
 ---
 title: "Registrace nebo přihlášení k Intune | Microsoft Intune"
-description: 
+description: "Jak se registrovat k předplatnému Intune nebo jak se přihlásit, pokud už předplatné máte"
 keywords: 
-author: Staciebarker
-manager: jeffgilb
+author: barlanmsft
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 0f3ce07a-b718-42a9-bace-f99a8b8abd94
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed26d65b98a0ae1bbc4fbac682fb53fddd50b4e5
-ms.openlocfilehash: 1a67e22ef8f2b9d0c8bf0c816c774a15acc24f35
+ms.sourcegitcommit: 6d1c7c670341692d4ea0c823e4a9a96746b83067
+ms.openlocfilehash: d3f261c7d721301084ffbaf17b1f9173940ac506
 
 
 ---
@@ -51,6 +51,6 @@ Gratulujeme! Právě jste dokončili krok 1 *úvodní příručky Intune*.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

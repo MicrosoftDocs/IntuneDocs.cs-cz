@@ -1,9 +1,9 @@
 ---
 title: "Šifrování zařízení | Microsoft Intune"
-description: 
+description: "Popisuje šifrování zařízení s Androidem."
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 06/07/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 39bcea03cad061e5b84e073cc5affcdd14fc6015
-ms.openlocfilehash: 22e9071171d2dc63562e94cabe2abdec3b2bd85e
+ms.sourcegitcommit: 6c6a6fed876e49888d8fda1fd93b39313387ba38
+ms.openlocfilehash: 6cb6c0b8a8f4c1b88565ce4b7a5690406b4ddf40
 
 
 ---
@@ -24,9 +24,9 @@ ms.openlocfilehash: 22e9071171d2dc63562e94cabe2abdec3b2bd85e
 
 Pokud vaše společnost nebo organizace vyžaduje, abyste si před přístupem k firemním souborům, e-mailu nebo datům zašifrovali zařízení s Androidem, postupujte podle níže uvedeného postupu. Před šifrováním můžete být požádáni o nastavení PIN kódu nebo hesla, pokud ho správce IT vyžaduje.
 
-Pokud byste pak někdy v budoucnosti chtěli registraci telefonu zrušit, zůstane zašifrovaný. 
+Pokud byste pak někdy v budoucnosti chtěli registraci telefonu zrušit, zůstane zašifrovaný.
 
-1.  Zkontrolujte, že je pro vaše zařízení nastavený kód PIN nebo heslo zamykací obrazovky. 
+1.  Zkontrolujte, že je pro vaše zařízení nastavený kód PIN nebo heslo zamykací obrazovky.
 
 2.  V **Nastavení** klikněte na **Zabezpečení** &gt; **Šifrovat telefon**.
     (Na některých telefonech budete muset najít možnost Šifrovat tak, že kliknete na **Úložiště** &gt; **Šifrování úložiště** nebo **Úložiště** &gt; **Zamykací obrazovka a zabezpečení** &gt; **Další nastavení zabezpečení**).
@@ -34,20 +34,37 @@ Pokud byste pak někdy v budoucnosti chtěli registraci telefonu zrušit, zůsta
 3.  Postupujte podle pokynů na obrazovce. Během šifrování se zařízení může několikrát restartovat.
 
 ### Co dělat v případě problémů
-**Problém:** Zařízení jste už zašifrovali a dojde k jedné z těchto věcí: - Tlačítko pro šifrování je zakázané (vyšedlé).
-- Zobrazí se zpráva s informacemi o tom, že stále nutné nastavit šifrování.
+**Problém:** Zařízení jste už zašifrovali a dojde k jedné z těchto situací:
+
+- Tlačítko pro šifrování je zakázané.
+- Zobrazí se zpráva s informacemi o tom, že je stále nutné nastavit šifrování.
 - Bude docházet k chybám při pokusu o použití aplikace Portál společnosti.
 
-**Co dělat:** Zkontrolujte, že jste nastavili PIN kód nebo heslo na zařízení.
+**Možná řešení**: 
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+1. Ujistěte se, že je zařízení nabité a připojené k nabíječce.
+
+2. Zkontrolujte, že jste na zařízení nastavili PIN kód nebo heslo.
+
+3. Pokud jste už na zařízení nastavili kód PIN nebo heslo, zkuste následující kroky, pokud váš správce IT může vyžadovat kvůli lepšímu zabezpečení zařízení. Názvy nabídek, které vidíte, se můžou mírně lišit od těch v postupu, v závislosti na typu zařízení se systémem Android, které máte.
+
+    a. Přejděte k položce **Nastavení** > **Zabezpečení** > **Zamykací obrazovka**. Potvrďte aktuální PIN kód nebo heslo.
+
+    b. Na obrazovce **Vyberte zámek obrazovky** vyberte typ zámku obrazovky, který chcete použít.
+
+    c. Na obrazovce **Bezpečné spuštění** klepněte na **Při spuštění zařízení požadovat kód PIN** a pak na **Pokračovat**.
+
+    d. Zvolte kód PIN (můžete zadat stejný jako ten, který jste zadali dříve) a klepněte na **Potvrďte kód PIN**.
+
+    e. Otevřete Portál společnosti, vyberte své zařízení a klepněte na možnost **Kontrola dodržování předpisů**.
+
+Potřebujete ještě další pomoc? Obraťte se na správce IT (vyhledejte kontaktní informace na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište týmu Microsoft Android na adresu wintunedroidfbk@microsoft.com.
 
 ### Související témata
 [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
 
 
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

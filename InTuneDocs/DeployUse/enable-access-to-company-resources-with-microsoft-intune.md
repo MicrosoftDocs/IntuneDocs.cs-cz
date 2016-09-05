@@ -1,10 +1,10 @@
 ---
 title: "Povolení přístupu k prostředkům společnosti | Microsoft Intune"
-description: 
+description: "Profily Wi-Fi, VPN a e-mailu společně pomáhají zajistit uživatelům přístup k potřebným souborům a prostředkům."
 keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,8 +12,9 @@ ms.technology:
 ms.assetid: 3dd8dd4e-e165-4d0c-97b7-b3e86ebab909
 ms.reviewer: jeffgilb
 ms.suite: ems
-ms.sourcegitcommit: 8c1f4f209c5ec704290882b8f6f71e0b1b01d21c
-ms.openlocfilehash: 556b9ea5ac5edcc1126dbcc6310ab7dfa917cb56
+translationtype: Human Translation
+ms.sourcegitcommit: 167db9027e69dd6419d5deec758a8a0a0b119a97
+ms.openlocfilehash: 8605a665a0033fdc9b05ba452f5bf966e76699ca
 
 
 ---
@@ -23,15 +24,15 @@ Profily Wi-Fi, VPN a e-mailu Microsoft Intune společně pomáhají zajistit už
 
 ## [Profily Wi-Fi ](wi-fi-connections-in-microsoft-intune.md) a podporované platformy
 
-Nasaďte uživatelům nastavení bezdrátové sítě. Nasazením těchto nastavení minimalizujete úsilí koncových uživatelů potřebné k připojení k firemní síti.
+Nasaďte uživatelům nastavení bezdrátové sítě. Tato nastavení usnadňují uživatelům připojení k firemní síti.
 #### Podporované platformy
 
 |Windows 8.1 a vyšší|Windows Phone 8.1 nebo novější|iOS|Android|Samsung KNOX|
 |---------------------|---------------------------|---|-------|------------|
-|Ano (můžete naimportovat profil sítě Wi-Fi systému Windows)|Ano (můžete nakonfigurovat OMA URI) |Ano|Ano|Ano|
+|Ano (Můžete naimportovat profil sítě Wi-Fi systému Windows.)|Ano (Můžete nakonfigurovat OMA URI.) |Ano|Ano|Ano|
 
 ## [Profily VPN](vpn-connections-in-microsoft-intune.md) a podporované platformy
-Nasaďte uživatelům nastavení virtuální privátní sítě (VPN). Nasazením těchto nastavení zjednodušíte koncovým uživatelům připojování k prostředkům v podnikové síti.
+Nasaďte uživatelům nastavení virtuální privátní sítě (VPN). Tato nastavení usnadňují uživatelům připojení k prostředkům v podnikové síti.
 
 |Windows 8.1 a vyšší|Windows Phone 8.1 nebo novější|iOS|Android|Samsung KNOX|
 |---------------------|---------------------------|---|-------|------------|
@@ -55,6 +56,6 @@ Pomozte zabezpečit přístup k prostředkům společnosti, včetně bezdrátov�
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

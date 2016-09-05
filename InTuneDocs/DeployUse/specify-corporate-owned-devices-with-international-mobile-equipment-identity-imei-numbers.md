@@ -1,25 +1,26 @@
 ---
-title: "Určení podnikem vlastněných zařízení podle kódů IMEI (International Mobile Equipment Identity) | Microsoft Intune"
-description: 
+title: "Zadání kódů IMEI | Microsoft Intune"
+description: "Microsoft Intune umožňuje správcům importovat kódy IMEI pro platformy mobilních zařízení, které usnadňují identifikaci mobilních zařízení ve firemním vlastnictví."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 1712bd39-562b-4409-9cec-155d5f4d8a39
-ms.reviewer: jeffgilb
+ms.reviewer: dagerrit
 ms.suite: ems
-ms.sourcegitcommit: 398d93d4e2317d00a2f9d5f89966aaec3b942504
-ms.openlocfilehash: af4b87eb8082ee5ff11cd2d42b788ad17b334bcb
+translationtype: Human Translation
+ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
+ms.openlocfilehash: 4e2092182dbda4523c19afeabc34aa0166962c40
 
 
 ---
 
 # Určení podnikem vlastněných zařízení podle kódů IMEI (International Mobile Equipment Identity)
-Microsoft Intune umožňuje správcům importovat identifikační kódy IMEI (International Mobile Equipment Identity) pro platformy mobilních zařízení vybavených kódy IMEI. Ty jim pomůžou identifikovat mobilní zařízení patřící společnosti. Po registraci v Intune lze zařízení s importovanými čísly IMEI zobrazit v části **Skupiny** > **Přehled** > **Všechna zařízení** > **Firemní předregistrovaná zařízení** > **Podle IMEI (všechny platformy)**.
+Microsoft Intune umožňuje správcům importovat identifikační kódy IMEI (International Mobile Equipment Identity) pro platformy mobilních zařízení vybavených kódy IMEI. Ty jim pomůžou identifikovat mobilní zařízení patřící společnosti. Po registraci v Intune je možné zařízení s importovanými čísly IMEI zobrazit v části **Skupiny** > **Přehled** > **Všechna zařízení**. **Skupiny zařízení** uvádějí zobrazovací zařízení s naimportovanými kódy IMEI jako **Firemní** ve sloupci **Vlastnictví**.
 
 1. V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) zvolte **Skupiny** &gt; **Všechna zařízení** &gt; **Firemní předregistrovaná zařízení ** &gt; **Podle IMEI (všechny platformy)** a pak zvolte **Přidat zařízení**. Zařízení můžete přidat dvěma způsoby:
 
@@ -48,6 +49,6 @@ Při registraci zařízení s tímto kódem IMEI, nejčastěji při instalaci ap
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

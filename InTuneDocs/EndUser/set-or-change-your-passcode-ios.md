@@ -3,16 +3,17 @@ title: "Nastavení nebo změna vašeho přístupového kódu | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 5/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 365f72a6-564d-4cbd-8f0a-70ec80b6e253
+ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: ca7c8d3f87c90b5f586af6b43d214edb3b99ce4a
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: dca7579ff5cd2ae45616797314195f83ae6571bd
 
 
 ---
@@ -21,7 +22,7 @@ ms.openlocfilehash: ca7c8d3f87c90b5f586af6b43d214edb3b99ce4a
 
 Pokud zařízení s iOS není v souladu se zásadami pro přístupový kód správce IT, zobrazí se zpráva, která stručně popisuje problém a vysvětluje, co musíte udělat, aby byly splněny požadavky na přístupový kód.
 
-Správce IT může nastavit více než jeden požadavek na přístupový kód. Přístupový kód musí mít například určitý počet znaků a musí být kombinací číslic a písmen atd. Vzhledem k tomu, že může být nastaveno víc požadavků, tyto pokyny mohou vysvětlovat jenom to, jak jde přístupový kód nastavit nebo změnit. Nevysvětlují všechny možné kombinace požadavků. 
+Správce IT může nastavit více než jeden požadavek na přístupový kód. Přístupový kód musí mít například určitý počet znaků a musí být kombinací číslic a písmen atd. Vzhledem k tomu, že může být nastaveno víc požadavků, tyto pokyny mohou vysvětlovat jenom to, jak jde přístupový kód nastavit nebo změnit. Nevysvětlují všechny možné kombinace požadavků.
 
 Pokud máte potíže při nastavení přístupového kódu, které splňuje všechny požadavky na přístupový kód, požádejte o pomoc správce IT.
 
@@ -40,10 +41,11 @@ Pokud máte potíže při nastavení přístupového kódu, které splňuje vše
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
-### Související témata
+### Viz taky
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO4-->
 
 

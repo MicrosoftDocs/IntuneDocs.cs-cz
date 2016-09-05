@@ -1,26 +1,27 @@
 ---
-title: "Ruční synchronizace zařízení | Microsoft Intune"
+title: "Ruční synchronizace zařízení s Windows | Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 05/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 443c6de7-5187-4dc4-b844-6085a0c659bd
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: fbe46abe0b13e8972a5e9fa09566dff0c09b9939
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: 7798a186d7c7563b4b62bf87382b81f044635b87
 
 
 ---
 
 
-# Ruční synchronizace zařízení
+# Ruční synchronizace zařízení s Windows
 Pokud instalace aplikací trvá příliš dlouho, použijte následující pokyny k ruční synchronizaci zařízení s Windows, která vám může pomoci instalaci zrychlit. Uvedené jsou pouze podporované verze. Použijte odkaz odpovídající používanému typu zařízení výše v části V tomto článku:
 
 * [Windows 10 Mobile](#windows-10-mobile)
@@ -34,19 +35,19 @@ Chcete-li ručně synchronizovat mobilní zařízení s Windows 10 pro urychlen�
 1. Přejděte na **Všechny aplikace** > **Nastavení** > **Účty**.
 
     ![win10m-sync-1-settings-accounts](./media/win10m-sync-1-settings-accounts.png)
-    
+
 2. Klepněte na **Přístup do práce**.
 
     ![win10m-sync-2-work-access](./media/win10m-sync-2-work-access.png)
-    
+
 3. V části **Zaregistrovat ke správě zařízení**, klepněte na název společnosti, viz následující příklad.
 
     ![win10m-sync-3-tap-comp-name](./media/win10m-sync-3-tap-comp-name.png)
-    
+
 4. Klepněte na ikonu **Synchronizovat**.
 
     ![win10m-sync-4-tap-sync](./media/win10m-sync-4-tap-sync.png)
-    
+
     V horní části obrazovky se zobrazí zpráva „Probíhá synchronizace účtu“. Tlačítko Synchronizovat je zobrazeno šedě, dokud neskončí synchronizace vašeho zařízení.
 
 ## Stolní počítač s Windows 10
@@ -55,23 +56,23 @@ Chcete-li provést ruční synchronizaci stolního počítače s Windows 10 pro 
 1. Vyberte tlačítko **Start**, viz následující příklad, a pak vyberte **Nastavení**.
 
     ![win10pc-sync-1-start-button](./media/win10pc-sync-1-start-button.png)
-    
+
 2. Na stránce **Nastavení** vyberte **Účty**.
- 
+
     ![win10pc-sync-2-settings-accounts](./media/win10pc-sync-2-settings-accounts.png)
-    
+
 3. Na stránce **Účty** vyberte **Přístup do práce**.
-    
+
     ![win10pc-sync-3-work-access](./media/win10pc-sync-3-work-access.png)
-    
+
 4. V části **Zaregistrovat ke správě zařízení** klikněte na název vaší společnosti, viz modře zvýrazněný příklad níže.
-    
+
     ![win10pc-sync-4-tap-com-name](./media/win10pc-sync-4-tap-com-name.png)
-   
+
 5. Vyberte tlačítko **Synchronizovat**.
-    
+
     ![win10pc-sync-5-tap-sync](./media/win10pc-sync-5-tap-sync.png)
-   
+
    Tlačítko se změní na šedé, dokud neskončí synchronizace.
 
 ## Windows Phone 8.1
@@ -80,15 +81,15 @@ Chcete-li provést ruční synchronizaci mobilního zařízení s Windows 8.1 pr
 1. Přejděte na **Všechny aplikace** > **Nastavení** > **Pracoviště**.
 
     ![wp81-1-sync-settings-workplace](./media/wp81-1-sync-settings-workplace.png)
-    
+
 2. Klepněte na název vaší společnosti, viz modře zvýrazněný příklad níže.
 
     ![wp81-2-sync-tap-compname](./media/wp81-2-sync-tap-compname.png)
-   
+
 3. Klepněte na ikonu **Synchronizovat**.
 
     ![wp81-3-sync-tap-sync-button](./media/wp81-3-sync-tap-sync-button.png)
-    
+
    V horní části obrazovky se až do skončení synchronizace zařízení zobrazí zpráva „Probíhá synchronizace účtu“.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
@@ -98,6 +99,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

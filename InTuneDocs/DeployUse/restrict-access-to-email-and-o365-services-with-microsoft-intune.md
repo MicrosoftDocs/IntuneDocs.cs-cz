@@ -1,9 +1,9 @@
 ---
 title: "Omezení přístupu k e-mailu a službám O365 | Microsoft Intune"
-description: 
+description: "Toto téma popisuje, jak lze pomocí podmíněného přístupu povolit přístup k firemnímu e-mailu a firemním datům v SharePoint Online a dalších službách jenom kompatibilním zařízením."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
+manager: angrobe
 ms.date: 06/16/2016
 ms.topic: article
 ms.prod: 
@@ -12,8 +12,9 @@ ms.technology:
 ms.assetid: c564d292-b83b-440d-bf08-3f5b299b7a5e
 ms.reviewer: chrisgre
 ms.suite: ems
-ms.sourcegitcommit: f770bdc312879d1c833e8861494ecd2204ea603a
-ms.openlocfilehash: ebce26b0e09bb5282475cb1a39c8070a5d5b44aa
+translationtype: Human Translation
+ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
+ms.openlocfilehash: 536d34e618efdc78b3103a3b1b36f13fb784781c
 
 
 ---
@@ -21,9 +22,9 @@ ms.openlocfilehash: ebce26b0e09bb5282475cb1a39c8070a5d5b44aa
 # Omezení přístupu k e-mailu, O365 a dalším službám pomocí Microsoft Intune
 Pomocí podmíněného přístupu Intune můžete omezit přístup k e-mailu a službám O365. Funkce podmíněného přístupu Intune umožňuje zajistit, aby přístup k e-mailu a službám O365 společnosti byl omezen na zařízení, která vyhovují nastaveným pravidlům.
 ## Jak podmíněný přístup funguje?
-K vyhodnocení stavu kompatibility zařízení se používají nastavení zásad dodržování předpisů. Zásada podmíněného přístupu používá vyhodnocení k omezení nebo povolení přístupu ke konkrétní službě. Pokud se zásada podmíněného přístupu použije v kombinaci se zásadou dodržování předpisů, budou mít přístup povolený jenom zařízení, která vyhovují.
+K vyhodnocení stavu kompatibility zařízení se používají nastavení zásad dodržování předpisů. Zásada podmíněného přístupu používá vyhodnocení k omezení nebo povolení přístupu ke konkrétní službě. Pokud se zásada podmíněného přístupu použije v kombinaci se zásadou dodržování předpisů, budou mít přístup povolený jenom zařízení, která vyhovují. Zásada dodržování předpisů a zásada podmíněného přístupu se nasadí pro uživatele. Jakékoli zařízení, které uživatel používá pro přístup ke službám, se kontroluje na dodržování předpisů se zásadami.
 
-Mějte na paměti, že uživatel, který zařízení používá, musí mít také nasazenou zásadu dodržování předpisů, aby se u zařízení vyhodnocovala shoda.
+Mějte na paměti, že uživatel, který zařízení používá, musí mít nasazenou zásadu dodržování předpisů, aby se u zařízení vyhodnocovala shoda.
 Pokud na uživatele nejsou nasazené žádné zásady dodržování předpisů, pak se zařízení považuje za vyhovující a žádná omezení přístupu se neuplatní.
 
 Pokud zařízení nesplňuje podmínky nakonfigurované v zásadách, koncový uživatel je proveden procesem jeho registrace a opravy problému, který tomuto zařízení brání v dodržení předpisů.
@@ -64,6 +65,6 @@ Na rozdíl od jiných zásad služby Intune zásady podmíněného přístupu ne
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

@@ -3,19 +3,19 @@ title: "Opakované připojení k ohroženému zařízení se systémem Android |
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 06/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: ade7353e-7338-484d-a50f-b91146d5fc46
-ROBOTS: 
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: c089b36676feb4caa7064738d6ef4b709139ab49
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: b8c66bc186e5253270c6c6aa6f41e099734a0f35
 
 
 ---
@@ -23,11 +23,10 @@ ms.openlocfilehash: c089b36676feb4caa7064738d6ef4b709139ab49
 # Opakované připojení k ohroženému zařízení se systémem Android
 Váš správce IT zjistil, že používáte zařízení s rootem. To, že je zařízení tzv. „rootované“, znamená, že se pozměnilo, aby byl povolený přístup k operačnímu systému, což může ohrozit zabezpečení a znamenat hrozbu pro vaše podnikové prostředky. Pokud k tomu dojde, nebude už vaše zařízení mít přístup k prostředkům společnosti.
 
-O pomoc s opětovným připojením svého zařízení požádejte správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete pomoc? Obraťte se na správce IT (vyhledejte kontaktní informace na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište týmu Microsoft Android na adresu wintunedroidfbk@microsoft.com.
 
 
 
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

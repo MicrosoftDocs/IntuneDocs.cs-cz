@@ -1,47 +1,67 @@
 ---
 title: "Vyřazení zařízení | Microsoft Intune"
-description: 
+description: "Při odebírání zařízení ze správy Intune podporuje tato služba selektivní i úplné vymazání, přičemž se odeberou příslušné zásady a portál společnosti."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 3dbec400-5d8a-47be-b892-7745811d9de2
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
-ms.openlocfilehash: c06f1fc1168b0dde515eaa82d15095ec4d73d1cf
+ms.sourcegitcommit: 7bea7ba4ef59c6b1400414b59456e19dc1c152fb
+ms.openlocfilehash: ad5e9453f8132d383f8c23886e48505769c7f44b
 
 
 ---
 
 # Vyřazení zařízení ze správy Intune
 
-Ať jsou zařízení vlastněná firmou nebo v osobním vlastnictví, existuje chvíle, kdy musí být spravované zařízení vyřazené ze správy v Intune. Vyřazení zařízení je poměrně jednoduché, můžete provést buď selektivní vymazání nebo úplné vymazání.
+Ať jsou zařízení vlastněná firmou nebo v osobním vlastnictví, nakonec přijde chvíle, kdy musí být spravované zařízení vyřazené ze správy v Intune. Vyřazení zařízení je poměrně jednoduché. U mobilních zařízení můžete provést buď selektivní vymazání, nebo úplné vymazání. Pomocí klientského softwaru Intune můžete také vyřadit počítače s Windows.
+
 ## Vymazání dat a aplikací ze zařízení
 Selektivní vymazání i úplné vymazání odebere zařízení ze správy Intune odebráním zásad a portálu společnosti, což znamená, že zařízení už nemá pověřovací údaje potřebné k přihlášení k firemním prostředkům, jako je Microsoft SharePoint, e-mail nebo Office 365.
 
 [Selektivní vymazání](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#selective-wipe) by se mělo upřednostňovat u zaměstnanců, kteří mají v Intune zaregistrované své vlastní zařízení, protože vymazání dat se v tomto případě nedotkne osobních údajů uložených na zařízení. Odeberou se jenom firemní data.
 
-Pro zařízení vlastněná společností můžete také použít [úplné vymazání](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#full-wipe), které resetuje zařízení do továrního nastavení.
+Pro zařízení, která je třeba přiřadit někomu jinému, můžete také použít [úplné vymazání](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#full-wipe), které resetuje zařízení do továrního nastavení.
 
-## Odvolání přístupu k síti společnosti
-V případě, že vyřazujete zařízení, protože zaměstnanec odchází ze společnosti a nevrátil hardware vlastněný společností, můžete zařízení také [vzdáleně uzamknout](use-remote-lock-and-passcode-reset-in-microsoft-intune.md). Tím se zajistí, že budou jak informace společnosti, tak i její hardware chráněny před zneužitím, i když může být nutné zařízení odepsat jako ztrátu.
+## Odstranění zařízení na portálu služby Azure Active Directory
 
-Také můžete chtít odvolat licenci pro uživatelský účet Intune zaměstnance. Tím se licence uvolní a je možné ji přiřadit novému uživatelskému účtu.
+1.  Přihlaste se s přihlašovacími údaji vaší společnosti na adrese [http://aka.ms/accessaad](http://aka.ms/accessaad) nebo [https://portal.office.com](https://portal.office.com) a vyberte možnost **Centra pro správu** &gt; **Azure AD**.
+
+2.  Pokud nemáte předplatné Azure, vytvořte ho. Pokud máte placený účet, neměli byste potřebovat platební kartu ani zadání platby (zvolte odkaz pro předplatné **Zdarma zaregistrovat službu Azure Active Directory**).
+
+4.  Vyberte možnost **Active Directory** a potom vyberte svoji organizaci.
+
+5.  Vyberte kartu **Uživatelé** .
+
+6.  Vyberte uživatele, jehož zařízení chcete odstranit.
+
+7.  Zvolte **Zařízení**.
+
+8.  Vyberte požadované zařízení a zvolte **Odstranit zařízení**. Zařízení se vymaže při příští synchronizaci se službou Active Directory. To obvykle proběhne do 4 hodin. Po synchronizaci se zařízení vyřadí ze správy. Tím se také odebere jedno zařízení z limitu počtu zařízení pro daného uživatele.
+
+## Vyřazení spravovaných počítačů
+Počítače spravované klientským softwarem Intune je možné odebrat ze správy pomocí konzoly Správce Intune. Tím se také z počítače odinstaluje klientský software a odstraní zásady Intune. Viz informace o [vyřazení počítačů spravovaných pomocí klientského softwaru Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client#retire-a-computer.md).
+
+## Zablokování přístupu k zařízení
+V případě ztráty zařízení nebo když potřebujete vyřadit zařízení v majetku společnosti, které odcházející zaměstnanec nevrátil, můžete také [resetovat heslo a vzdáleně uzamknout](use-remote-lock-and-passcode-reset-in-microsoft-intune.md) zařízení. Tím se zajistí ochrana informací společnosti před zneužitím, i když může být nutné zařízení odepsat jako ztrátu.
+
+Také můžete chtít odvolat licenci pro uživatelský účet Intune zaměstnance. Tím se licence uvolní a bude možné ji přiřadit novému uživatelskému účtu.
 
 ## Vyřazení zařízení
 V některých případech zařízení samotné dosáhne konce své životnosti. V takových případech [obnovením zařízení do továrního nastavení](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md) s plným vymazáním odeberete všechna data a také odebere zařízení ze služby Intune. Pak můžete hardware vyřadit z evidence podle zásad vaší společnosti.
 
-### Související témata
+### Viz taky
 [Lepší ochrana dat s využitím úplného nebo selektivního vymazání](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

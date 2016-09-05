@@ -1,20 +1,20 @@
 ---
 title: "Monitorování nasazení aplikací | Microsoft Intune"
-description: 
+description: "Přečtěte si, jak monitorovat aplikace, které jste nasadili s Intune."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 5daad56d-71c8-455b-8a55-f8b33e279a8a
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
-ms.openlocfilehash: c92b7de51de0ac0115dd53e421d4852bed8d729a
+ms.sourcegitcommit: d3412150f96f81937b6ea471d4a27ac42da875f8
+ms.openlocfilehash: a0fd24b430cce49cf7d3ba395341ed07912b9404
 
 
 ---
@@ -26,29 +26,26 @@ ms.openlocfilehash: c92b7de51de0ac0115dd53e421d4852bed8d729a
 V konzole správy Intune můžete zobrazit spravované aplikace a stav libovolného nasazení.
 
 ### Prohlížení spravovaných aplikací a jejich stavu
-V pracovním prostoru **Aplikace** klikněte na uzel **Aplikace** a potom klikněte na **Aplikace**.
+V pracovním prostoru **Aplikace** vyberte uzel **Aplikace** a potom klikněte na **Aplikace**.
 
-Zobrazí se seznam spravovaných aplikací. Když kliknete na některou aplikaci, zobrazí se dole v podokně oken konzoly stav instalace. Další podrobnosti zobrazíte, když kliknete na stav. Když se třeba ve stavu zobrazuje **Počet uživatelů, kteří mají tento software k dispozici: 1**, můžete na zprávu kliknout a podívat se na jméno uživatele.
+Zobrazí se seznam spravovaných aplikací. Když vyberete některou aplikaci, zobrazí se dole v podokně okna konzoly stav instalace. Další podrobnosti uvidíte, když kliknete na stav. Když se třeba ve stavu zobrazuje **Počet uživatelů, kteří mají tento software k dispozici: 1**, můžete na zprávu kliknout a podívat se na jméno uživatele.
 
 > [!TIP]
 > K zobrazení aplikací, které splňují zadaná kritéria, můžete použít rozevírací seznam **Filtry**. Můžete třeba zobrazit aplikace, které se nepodařilo nainstalovat, nebo úspěšně nasazené aplikace.
-> 
+>
 > ![Příklad filtrů aplikace](./media/app-filters.png)
 
 Přehled aplikací a jejich stavu se zobrazuje i v pracovním prostoru **Řídicí panel**. Pokud kliknete na libovolné místo v přehledu, přejdete do seznamu aplikací.
 
 ## Zobrazení podrobnějších informací o aplikaci
-Ze seznamu aplikací vyberte některou aplikaci a pak klikněte na **Zobrazit vlastnosti**.
+Ze seznamu aplikací vyberte některou aplikaci a pak vyberte **Zobrazit vlastnosti**.
 
-Na stránce **Vlastnosti softwaru**klikněte na některou z těchto karet: **Obecné** – zobrazuje obecné informace o aplikaci a stavu její instalace, **Zařízení** – zobrazuje zařízení s úspěšně nainstalovanou a nasazenou aplikací, **Uživatelé** – zobrazuje uživatele s úspěšně nainstalovanou a nasazenou aplikací.
+Na stránce **Vlastnosti softwaru** vyberte některou z těchto karet: **Obecné** – zobrazuje obecné informace o aplikaci a stavu její instalace, **Zařízení** – zobrazuje zařízení s úspěšně nainstalovanou a nasazenou aplikací a **Uživatelé** – zobrazuje uživatele s úspěšně nainstalovanou a nasazenou aplikací.
 
 I tady můžete použít rozevírací seznam **Filtry** ke konfiguraci hodnot, které se zobrazí na každé kartě.
 
 
 
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

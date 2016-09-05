@@ -1,26 +1,27 @@
 ---
-title: "Co se stane, když zrušíte registraci zařízení v Intune? | Microsoft Intune"
+title: "Co se stane, když zrušíte registraci zařízení s Windows v Intune? | Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 05/28/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 47e03edb-0c57-4e25-8e89-4a1069267b8c
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1244d931d1bd3db012fbcfe0bd055d1fd4f2d88a
-ms.openlocfilehash: f0108b884439aac9661c9f36f85b47d80209d155
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: ac421a7745082568b69a6229125021373aefedb4
 
 
 ---
 
 
-# Co se stane, když zrušíte registraci zařízení v Intune?
+# Co se stane, když zrušíte registraci zařízení s Windows v Intune?
 
 Další informace najdete pomocí odkazu v části V tomto článku, který odpovídá použitému zařízení.
 
@@ -93,6 +94,7 @@ Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na spr�
 [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO4-->
 
 

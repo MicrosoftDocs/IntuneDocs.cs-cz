@@ -1,9 +1,9 @@
 ---
 title: "Synchronizace služby Active Directory a přidání uživatelů do Intune | Microsoft Intune"
-description: 
+description: "Popisuje synchronizaci místních uživatelů s Azure AD a udělení oprávnění správce pro vaše předplatné Intune."
 keywords: 
-author: Staciebarker
-manager: jeffgilb
+author: barlanmsft
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 6e9ec662-465b-4ed4-94c1-cff0fe18f126
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed26d65b98a0ae1bbc4fbac682fb53fddd50b4e5
-ms.openlocfilehash: 70a2d32de67f0a69bbc29ca68a1c831c9cf38796
+ms.sourcegitcommit: 6d1c7c670341692d4ea0c823e4a9a96746b83067
+ms.openlocfilehash: fb38e2ba5ffcff202504ee1ebb934000c1f074f1
 
 
 ---
@@ -48,6 +48,6 @@ Gratulujeme! Právě jste dokončili krok 3 *úvodní příručky Intune*.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

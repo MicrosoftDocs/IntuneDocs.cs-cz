@@ -1,29 +1,27 @@
 ---
 title: "Řešení potíží se zásadami | Microsoft Intune"
-description: 
+description: "Řešení potíží s konfigurací zásad"
 keywords: 
-author: Nbigman
-manager: jeffgilb
-ms.date: 05/26/2016
+author: robstackmsft
+manager: angrobe
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 99fb6db6-21c5-46cd-980d-50f063ab8ab8
-ms.reviewer: jeffgilb
+ms.reviewer: tscott
 ms.suite: ems
-ms.sourcegitcommit: ac3417781df0a5b092a70620aa7343849b1e8c82
-ms.openlocfilehash: 3ac6b06b7eb85503786b4d8b0b9bd2a30d2a15e6
+translationtype: Human Translation
+ms.sourcegitcommit: 1f133d31311706365888cf33ceb4c4412deec333
+ms.openlocfilehash: a8afc681b8b12e1e760dea3f784e4beac4697242
 
 
 ---
 
 # Řešení potíží se zásadami v Microsoft Intune
 
-Tady jsou některé problémy, které může způsobit vaše konfigurace zásad služby Microsoft Intune, a jejich doporučená řešení.
-
-Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md), ve kterém najdete další způsoby, jak získat nápovědu.
-
+Pokud máte potíže s nasazením a správou zásad v Intune, začněte zde. Toto téma popisuje některé běžné problémy, na které můžete narazit, a jejich řešení.
 
 ## Používají se v zařízení zásady?
 **Problém:** Není jasné, jestli se v určitém zařízení používá určitá zásada, nebo jestli se zařízení chová v rozporu s touto zásadou.
@@ -46,18 +44,8 @@ Na tomto snímku obrazovky vidíte dva jasné příklady:
 
 ![Zásady zařízení Intune](../media/Intune-Device-Policy-v.2.jpg)
 
-> [!NOTE] Mějte na paměti, že když použijete dvě zásady s různými úrovněmi omezení na stejné zařízení nebo uživatele, v praxi se uplatní víc omezující zásada.
-
-## Obnovení zásad a intervaly aktualizace
-Upozorňujeme, že zásady se pravidelně obnovují a aktualizují. Obecně platí, že zásady by se měly na zařízeních zaregistrovat do 15 minut od provedení změny. Tady jsou další podrobnosti o pravidelných intervalech obnovení zásad:
-
--   **Zařízení s Windows zaregistrovaná pro MDM**: Zásady se aktualizují každých 8 hodin pro zařízení s Windows 8.1 a Windows 10 a každých 24 hodin pro zařízení s Windows RT.
-
--   **Windows Phone**: Zásada se aktualizuje každých 8 hodin. To se dá vynutit obnovením na portálu společnosti v části **Nastavení**.
-
--   **iOS**: Zásada se aktualizuje jednou denně v náhodném časovém intervalu. Tuto akci je možné vynutit také otevřením portálu společnosti, výběrem zařízení a zvolením **Synchronizace**.
-
--   **Android**: Zásada se aktualizuje jednou denně v náhodném časovém intervalu. Tuto akci je možné vynutit také otevřením portálu společnosti, výběrem zařízení a zvolením **Synchronizace**.
+> [!NOTE]
+> Mějte na paměti, že když použijete dvě zásady s různými úrovněmi omezení na stejné zařízení nebo uživatele, v praxi se uplatní víc omezující zásada.
 
 ## Chyby související se zásadami Microsoft Intune v souboru policyplatform.log
 U zařízení s Windows nespravovaných pomocí MDM můžou být chyby zásad v souboru policyplatform.log výsledkem jiného než výchozího nastavení nástroje Řízení uživatelských účtů v systému Windows (UAC) v zařízení. Některá nevýchozí nastavení UAC můžou ovlivnit zpracování zásad a instalace klientů Microsoft Intune.
@@ -68,16 +56,13 @@ U zařízení s Windows nespravovaných pomocí MDM můžou být chyby zásad v 
 
 2.  Počkejte 20 minut, než se odebere klientský software.
 
-    > [!NOTE] Nepokoušejte se klienta odebrat pomocí panelu Programy a funkce.
+    > [!NOTE]
+    > Nepokoušejte se klienta odebrat pomocí panelu Programy a funkce.
 
 3.  V nabídce Start zadejte **UAC**. Otevře se nastavení nástroje Řízení uživatelských účtů.
 
 4.  Nastavte posuvník oznámení na výchozí nastavení.
 
-## Chyba 0x87D1FDE8 v zařízení KNOX
-**Problém**: Po vytvoření a nasazení e-mailového profilu Exchange Active Sync pro platformu Samsung KNOX do různých zařízení se systémem Android hlásí zařízení chybu **0x87D1FDE8** nebo **Náprava se nezdařila** na kartě vlastností &gt; zásad.
-
-Zkontrolujte konfiguraci svého profilu EAS pro zařízení Samsung KNOX a zdroj zásad. Už není dostupná podpora možnosti synchronizace poznámek Samsung a ve vašem profilu by tato možnost neměla být vybraná. Dopřejte zařízením dostatek času na zpracování zásady, a to až 24 hodin.
 
 ## Výstraha: Uložení pravidel přístupu do systému Exchange se nezdařilo
 **Problém**: V konzole pro správu se objeví výstraha **Uložení pravidel přístupu do systému Exchange se nezdařilo**  .
@@ -97,9 +82,6 @@ Třeba v systému Windows RT potáhněte na ploše prstem zprava. Otevře se pan
 V navigační nabídce vlevo najdete dole odkaz **Resetovat zásady zabezpečení** . Zvolte jej a potom zvolte tlačítko **Resetovat zásady** .
 Jiná zařízení MDM, třeba zařízení se systémy Android, Windows Phone 8.1 (a novějšími) a iOS, může být potřeba vyřadit a znovu zaregistrovat do služby, abyste mohli použít méně omezující zásadu.
 
-## Zařízení se systémem Android nevynucují změny zásad zabezpečení bez přijetí koncovým uživatelem
-Zařízení MDM se systémem Android na rozdíl od ostatních platforem nepovolují službě vynucovat v zařízení počáteční změny zásad. Důvodem jsou funkce systému Android, ne služba Intune. Zařízení se systémem Android zobrazí koncovému uživateli okno s upozorněním na výzvu týkající se dané změny zásad (třeba heslo, šifrování atd.).  Koncový uživatel musí na výzvu odpovědět, a až ji přijme, měla by se zásada použít.
-
 ## Pokud název společnosti obsahuje speciální znaky, není možné vytvořit zásadu ani registrovat klienty
 **Problém:** Nemůžete vytvořit zásadu nebo zaregistrovat klienty.
 
@@ -110,6 +92,6 @@ Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podpor
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

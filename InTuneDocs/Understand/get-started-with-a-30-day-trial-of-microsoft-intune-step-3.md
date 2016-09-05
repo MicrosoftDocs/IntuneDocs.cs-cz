@@ -1,10 +1,10 @@
 ---
-title: "Vytvoření skupiny pro uspořádání uživatelů a zařízení pro testovací předplatné | Microsoft Intune"
-description: 
+title: "Vytvoření skupiny pro uspořádání uživatelů a zařízení | Microsoft Intune"
+description: "Vytvoření skupin zařízení a skupin uživatelů při registraci bezplatné 30denní zkušební verze Intune"
 keywords: 
-author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+author: lindavr
+manager: angrobe
+ms.date: 08/09/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 7162cad3-5c14-43f3-a760-833ffd7786b1
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9755499575118feecf33780ee29a70525f95508e
-ms.openlocfilehash: f438b2b5e53d9bc119341effae1533d26cc9a47b
+ms.sourcegitcommit: 51fba2b01d8978bc062c50c4388714609be0fdf0
+ms.openlocfilehash: 6cab173d7ef4a1d7bcea3193265e0729c93a214e
 
 
 ---
@@ -65,6 +65,6 @@ Gratulujeme! Právě jste dokončili krok 3 příručky pro *testování Microso
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

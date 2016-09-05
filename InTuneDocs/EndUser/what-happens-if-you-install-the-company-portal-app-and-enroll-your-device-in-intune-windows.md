@@ -1,123 +1,86 @@
 ---
-title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune? | Microsoft Intune"
+title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Windows v Intune? | Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 7/8/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: d65e3452-5bbf-4d26-a06e-401ddcc47f39
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: e2da1f39d0cfe05bb0ea1c149c91e5ff82312c01
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: 840d985fd2c4771831f722cdff214026a383f606
 
 
 ---
 
 
-# Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune?
+# Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Windows v Intune?
 
-Informace o tom, co se stane po instalaci aplikace Portál společnosti a registraci zařízení, získáte prostřednictvím odkazu, který je zobrazen výše v části V tomto článku a který odpovídá používanému zařízení. Informace o zařízeních s Windows 10 najdete na [této stránce](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md).
+Když nainstalujete aplikaci Portálu společnosti a pak ji použijete k registraci zařízení s Windows nebo Windows Phone, povolíte správci IT spravovat zařízení, aby byla data společnosti nebo školy udržována v bezpečí, jak je popsáno dál pro zařízení starší než Windows 10. Informace o zařízeních s Windows 10 najdete na [této stránce](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md).
 
-## Windows 8.1 a Windows RT
-Když nainstalujete aplikaci portálu společnosti a pak v ní zaregistrujete své zařízení se systémem Windows 8.1 Enterprise nebo Professional nebo Windows RT do služby Intune, můžete v aplikaci Portál společnosti provádět tyto kroky:
-
--   Přístup k podnikové síti, e-mailu a dalším pracovním souborům
-
--   Získání aplikací společnosti z Portálu společnosti
-
--   Automatická konfigurace e-mailového účtu vaší společnosti
-
--   Obnovení továrního nastavení telefonu v případě ztráty nebo odcizení
-
-Kroky registrace najdete v tématu [Registrace zařízení s Windows v Intune](enroll-your-device-in-intune-windows.md). Informace o tom, co váš správce IT uvidí a neuvidí na vašem zařízení, najdete v části [Co všechno uvidí správce IT, když zaregistruji své zařízení do služby Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
-
-Když přidáte počítač:
-
--   Budete mít v počítači nainstalovaný software, prostřednictvím kterého bude moci správce IT počítač spravovat a díky kterému budete mít přístup k prostředkům společnosti, jako jsou aplikace a informace o podpoře. Správce IT může tento software automaticky aktualizovat.
-
--   V počítači může být nainstalovaná taky služba Intune Endpoint Protection. Tento software v počítači zjišťuje přítomnost virů a malwaru.
-
--   Správce IT může inventarizovat veškerý software nainstalovaný v počítači, včetně softwaru, který jste doinstalovali vy.
-
--   Může se vyžadovat, abyste přijali smluvní podmínky.
-
--   Správce IT může shromažďovat nebo odstraňovat data z pevného disku vašeho počítače. Může dokonce odstranit celý obsah vašeho pevného disku.
-
--   Může do vašeho počítače instalovat aplikace a aktualizace.
-
--   Může ve vašem počítači vynutit dodržování určitých zásad. Například může vyžadovat, abyste si v počítači nastavili heslo nebo PIN kód, přičemž v případě příliš velkého počtu chybných pokusů o zadání hesla může dojít k zablokování počítače nebo odstranění všech dat z pevného disku počítače.
-
-## Windows Phone 8.1 a Windows Phone 8
-Když nainstalujete aplikaci Portál společnosti a potom v ní zaregistrujete své zařízení se systémem Windows Phone 8.1 nebo Windows Phone 8 do služby Intune, můžete v aplikaci Portál společnosti provádět tyto kroky:
+## Co se stane všem zařízením s Windows po registraci
+Po registraci zařízení s Windows nebo Windows Phone v Intune získáte tyto možnosti:
 
 -   Přístup k podnikové síti, e-mailu a dalším pracovním souborům
 
--   Získání aplikací společnosti z Portálu společnosti
+-   Získání firemních aplikací z webu Portál společnosti (u systémů Windows 7 a Vista můžete získat firemní aplikace jenom z webu Portál společnosti)
 
--   Automatická konfigurace e-mailového účtu vaší společnosti
+-   Automatická konfigurace e-mailového účtu vaší společnosti nebo školy
 
 -   Obnovení továrního nastavení telefonu v případě ztráty nebo odcizení
 
-Kroky registrace najdete v tématu [Registrace zařízení s Windows v Intune](enroll-your-device-in-intune-windows.md). Informace o tom, co váš správce IT uvidí a neuvidí na vašem zařízení, najdete v části [Co všechno uvidí správce IT, když zaregistruji své zařízení do služby Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
-
-Když přidáte zařízení Windows Phone, udělujete správci IT oprávnění k přístupu k zařízení. Může provádět například následující akce:
+Když zaregistrujete zařízení, udělujete správci IT oprávnění provést následující akce:
 
 -   Obnovit v zařízení výchozí tovární nastavení. To je užitečné v případě ztráty nebo odcizení zařízení.
 
 -   Odebrat veškerá firemní data a všechny nainstalované firemní aplikace. Vaše osobní údaje a nastavení se při tom neodeberou.
 
+-   Správce IT může inventarizovat veškerý software nainstalovaný v počítači, včetně softwaru, který jste doinstalovali vy.
+
 -   Požadovat, abyste si v zařízení nastavili heslo nebo PIN kód, přičemž v případě příliš velkého počtu chybných pokusů o zadání hesla může dojít k zablokování zařízení nebo obnovení zařízení do výchozího továrního nastavení.
 
--   Vynutit šifrování všech dat v zařízení. Tím jsou data chráněna v případě ztráty nebo odcizení zařízení.
+-   Vynutit šifrování všech dat v zařízení, což pomáhá chránit data v případě ztráty nebo odcizení zařízení.
 
 -   Vyžadovat, abyste přijali smluvní podmínky.
 
+-   Může ve vašem počítači vynutit dodržování určitých zásad. Například může vyžadovat, abyste si v počítači nastavili heslo nebo PIN kód, přičemž v případě příliš velkého počtu chybných pokusů o zadání hesla může dojít k zablokování počítače nebo odstranění všech dat z pevného disku počítače.
+
 -   Zakázat používání SD karet.
 
--   Instalovat do zařízení aktualizace aplikací. Platí pouze pro aktualizace. Správce IT nemůže vynutit instalace nových aplikací do vašeho zařízení, můžete si však podle vlastního výběru nainstalovat aplikace, které vidíte na portálu společnosti.
+## Co se stane všem počítačům s Windows po registraci
 
--   Jakmile je zařízení přidáno na portál společnosti, pak přibližně každých 8 hodin proběhne následující:
+-  Budete mít v počítači nainstalovaný software, prostřednictvím kterého bude moci správce IT počítač spravovat a díky kterému budete mít přístup k prostředkům společnosti, jako jsou aplikace a informace o podpoře. Správce IT může tento software automaticky aktualizovat.
 
-    -   Stažení všech zásad nebo aktualizací aplikací, které vám správce IT zpřístupnil.
+-  V počítači může být nainstalovaná taky služba Intune Endpoint Protection. Tento software v počítači zjišťuje přítomnost virů a malwaru.
 
-    -   Odeslání všech aktualizací inventáře hardwaru.
+-  Správce IT může inventarizovat veškerý software nainstalovaný v počítači, včetně softwaru, který jste doinstalovali vy.
 
-    -   Odeslání všech aktualizací inventáře aplikací společnosti.
+-  Může se vyžadovat, abyste přijali smluvní podmínky.
 
-## Windows 7 a Vista
-Když nainstalujete aplikaci Portál společnosti a potom v ní zaregistrujete své zařízení se systémem Windows 7 nebo Vista do služby Intune, můžete v aplikaci Portál společnosti provádět tyto kroky:
+-  Správce IT může shromažďovat nebo odstraňovat data z pevného disku vašeho počítače. Může také odstranit celý obsah vašeho pevného disku.
 
--   Přístup k podnikové síti, e-mailu a dalším pracovním souborům
+-  Může do vašeho počítače instalovat aplikace a aktualizace.
 
--   Získání aplikací společnosti z Portálu společnosti
+-  Může ve vašem počítači vynutit dodržování určitých zásad. Například může vyžadovat, abyste si v počítači nastavili heslo nebo PIN kód, přičemž v případě příliš velkého počtu chybných pokusů o zadání hesla může dojít k zablokování počítače nebo odstranění všech dat z pevného disku počítače.
 
--   Automatická konfigurace e-mailového účtu vaší společnosti
 
--   Obnovení továrního nastavení telefonu v případě ztráty nebo odcizení
+## Co se stane každých 8 hodin po registraci zařízení
+Přibližně každých 8 hodin se na zaregistrovaných zařízeních provede následující:
 
-Informace o tom, co váš správce IT uvidí a neuvidí na vašem zařízení, najdete v části [Co všechno uvidí správce IT, když zaregistruji své zařízení do služby Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
+-   Stažení všech zásad nebo aktualizací aplikací, které vám správce IT zpřístupnil.
 
-Když přidáte počítač:
+-   Odeslání všech aktualizací inventáře hardwaru.
 
--   Budete mít v počítači nainstalovaný software, prostřednictvím kterého bude moci správce IT počítač spravovat a díky kterému budete mít přístup k prostředkům společnosti, jako jsou aplikace a informace o podpoře. Správce IT může tento software automaticky aktualizovat.
+-   Odeslání všech aktualizací inventáře aplikací společnosti.
 
--   V počítači může být nainstalovaná taky služba Intune Endpoint Protection. Tento software v počítači zjišťuje přítomnost virů a malwaru.
-
--   Správce IT může inventarizovat veškerý software nainstalovaný v počítači, včetně softwaru, který jste doinstalovali vy.
-
--   Může se vyžadovat, abyste přijali smluvní podmínky.
-
--   Správce IT může shromažďovat nebo odstraňovat data z pevného disku vašeho počítače. Může dokonce odstranit celý obsah vašeho pevného disku.
-
--   Může do vašeho počítače instalovat aplikace a aktualizace.
-
--   Může ve vašem počítači vynutit dodržování určitých zásad. Například může vyžadovat, abyste si v počítači nastavili heslo nebo PIN kód, přičemž v případě příliš velkého počtu chybných pokusů o zadání hesla může dojít k zablokování počítače nebo odstranění všech dat z pevného disku počítače.
+Kroky registrace najdete v tématu [Registrace zařízení s Windows v Intune](enroll-your-device-in-intune-windows.md). Informace o tom, co váš správce IT uvidí a neuvidí na vašem zařízení, najdete v části [Co všechno uvidí správce IT, když zaregistruji své zařízení do služby Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
 Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
@@ -126,6 +89,6 @@ Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na spr�
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO4-->
 
 

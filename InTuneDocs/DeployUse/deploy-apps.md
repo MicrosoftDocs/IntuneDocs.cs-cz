@@ -1,10 +1,10 @@
 ---
 title: "Nasazení aplikací | Microsoft Intune"
-description: 
+description: "Toto téma vysvětluje koncepty, kterým je třeba porozumět před zahájením nasazování aplikací s Intune."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,8 +12,9 @@ ms.technology:
 ms.assetid: ad5ea85c-aa2e-4110-a184-172cd0b8f270
 ms.reviewer: mghadial
 ms.suite: ems
-ms.sourcegitcommit: e6b995118e66fd146a68b49ce4decdcbd1fe3572
-ms.openlocfilehash: a68cb85602bd585539147c7d7d38c0d906f2b1f7
+translationtype: Human Translation
+ms.sourcegitcommit: c4a760b6362356a6bafa8b6acc69299647a5e0f3
+ms.openlocfilehash: 377597aabc03c020060e2851c6fc25e0c780ea51
 
 
 ---
@@ -26,14 +27,14 @@ Toto téma vysvětluje některé koncepty, kterým je třeba porozumět před za
 ## Akce nasazení aplikace
 Při nasazování aplikací můžete zvolit jednu z následujících akcí nasazení:
 
--   **Požadovaná instalace** – Aplikace se nainstaluje do zařízení bez nutnosti zásahu koncového uživatele.
+-   **Požadovaná instalace** – Aplikace se nainstaluje do zařízení bez nutnosti zásahu uživatele.
 
     > [!TIP]
-    > [!TIP] Pro zařízení s iOS, která nejsou v dohledovém režimu, a pro všechna zařízení s Androidem musí uživatel aplikaci před instalací přijmout.
-    > 
-    >  Pokud koncový uživatel odinstaluje aplikaci, která jste nasadili jako požadovanou instalaci, Intune ji při příštím cyklu inventáře, který obvykle probíhá každých 7 dní, znovu automaticky nainstaluje.
+    > Pro zařízení s iOS, která nejsou v dohledovém režimu, a pro všechna zařízení s Androidem, musí uživatel aplikaci před instalací přijmout.
+    >
+    >  Pokud uživatel odinstaluje aplikaci, kterou jste nasadili jako požadovanou instalaci, Intune ji při příštím cyklu inventáře, který obvykle probíhá každých sedm dní, znovu automaticky nainstaluje.
 
--   **Dostupná instalace** – Aplikace se zobrazuje na podnikovém portálu a koncoví uživatelé ji můžou instalovat na vyžádání.
+-   **Dostupná instalace** – Aplikace se zobrazuje na podnikovém portálu a uživatelé ji můžou instalovat na vyžádání.
 
 -   **Odinstalace** – Aplikace se ze zařízení odinstaluje.
 
@@ -54,7 +55,7 @@ Při nasazování aplikací můžete zvolit jednu z následujících akcí nasaz
 |Spravovaná aplikace pro iOS z App Storu (nasazené pro skupinu uživatelů)|Ano|Ano|Ano|Ano|
 |Spravovaná aplikace pro iOS z App Storu (nasazené pro skupinu zařízení)|Ano|Ne|Ano|Ano|
 > [!TIP]
-> [!TIP] Když nasazujete aplikace a vyberete jak skupiny uživatelů, tak zařízení, můžete aplikaci nasadit jenom s možností **Dostupná instalace**.
+> Když nasazujete aplikace a vyberete jak skupiny uživatelů, tak zařízení, můžete aplikaci nasadit jenom s možností **Dostupná instalace**.
 
 ## Konflikty nasazení
 Při dvou nasazeních platí při přijetí stejné akce nasazení na zařízení následující pravidla:
@@ -63,7 +64,7 @@ Při dvou nasazeních platí při přijetí stejné akce nasazení na zařízen�
 
 -   Akce instalace má přednost před akcí odinstalace.
 
--   Pokud zařízení přijme požadovanou i dostupnou instalaci, akce se zkombinují (aplikace je požadovaná i dostupná – jinými slovy, koncový uživatel může ji nainstalovat z portálu společnosti před zahájením požadované instalace).
+-   Pokud zařízení přijme požadovanou i dostupnou instalaci, akce se zkombinují. Jinými slovy uživatel může nainstalovat dostupnou aplikaci z Portálu společnosti před zahájením požadované instalace.
 
 
 ## Další kroky
@@ -72,6 +73,6 @@ Přečtěte si, jak [nasazovat aplikace v Microsoft Intune](deploy-apps-in-micro
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO4-->
 
 
