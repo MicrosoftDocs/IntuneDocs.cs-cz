@@ -13,14 +13,14 @@ ms.assetid: dbe5cad1-3e0d-41a9-966b-738156089700
 ms.reviewer: lacranda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 08d4352ef88a266d05047d386247815f3765f552
-ms.openlocfilehash: 947a7ba62d817e6b02d8a6bb0a0d0bddf53e7d4e
+ms.sourcegitcommit: 95b3401b66256ef44623b74e6e0b549ec1e7fc2c
+ms.openlocfilehash: 27af2b714ff51f8710f67e7445225366d2722fb7
 
 
 ---
 
 # Nastavení správy zařízení s Androidem
-Pokud chcete nastavit zařízení s Windows, najdete pomoc [tady](../enduser/using-your-android-device-with-intune.md).
+Pokud chcete nastavit zařízení s Androidem, najdete pomoc [tady](../enduser/using-your-android-device-with-intune.md).
 
 S Microsoft Intune můžete povolit model BYOD (Přineste si vlastní zařízení) pro zařízení s Androidem bez další zátěže pro platformu.
 
@@ -52,6 +52,6 @@ Mobilní zařízení s Androidem umožňují uživatelům registraci pomocí apl
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

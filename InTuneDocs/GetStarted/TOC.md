@@ -23,11 +23,11 @@
 ### [Úlohy po konfiguraci](post-configuration-tasks.md)
 
 ## [Volba způsobu správy zařízení](choose-how-to-manage-devices.md)
-### [Možnosti správy mobilních zařízení](mobile-device-management-capabilities-in-microsoft-intune.md)
-### [Možnosti správy počítačů s Windows](windows-pc-management-capabilities-in-microsoft-intune.md)
+### [Možnosti správy zaregistrovaných zařízení](mobile-device-management-capabilities-in-microsoft-intune.md)
+### [Možnosti softwarového klienta Intune pro počítače](windows-pc-management-capabilities-in-microsoft-intune.md)
 
 ## [Fáze uvedení pro nasazení Intune](rollout-phases-for-microsoft-intune-deployment.md)
-### [Stanovení oboru projektu](project-scope.md)
+### [Stanovení rozsahu projektu](project-scope.md)
 ### [Ověření konceptu](proof-of-concept.md)
 ### [Pilotní nasazení](pilot.md)
 ### [Podnikové zavedení](enterprise-rollout.md)
@@ -39,6 +39,6 @@
 # [Řešení problémů](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

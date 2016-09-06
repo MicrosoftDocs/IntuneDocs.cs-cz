@@ -13,8 +13,8 @@ ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 5e94a6575627d295efa592522a1fa28bfcd358a6
+ms.sourcegitcommit: e285cadd63e711ddf5d37b878d298b47bacf3333
+ms.openlocfilehash: 38273970b6bb6f576786e6a7a2aeaaa65ee07d37
 
 
 ---
@@ -29,7 +29,7 @@ Další informace o tom, jak podmíněný přístup funguje, najdete v článku 
 >[!IMPORTANT]
 >Podmíněný přístup pro počítače PC a zařízení Windows 10 Mobile s aplikacemi využívajícími moderní ověřování není aktuálně dostupný pro všechny zákazníky využívající Intune. Pokud tyto funkce využíváte, nemusíte provádět žádnou akci. Můžete je dál používat.
 
->Pokud jste pro počítače PC nebo zařízení Windows 10 Mobile pro aplikace využívající moderní ověřování nevytvořili zásady podmíněného přístupu a chcete to udělat, musíte odeslat žádost.  Další informace o známých problémech a o tom, jak k této funkci získat přístup, najdete na [webu Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=761472).
+>Pokud jste nevytvořili zásady podmíněného přístupu pro počítače nebo Windows 10 Mobile pro aplikace využívající moderní ověřování a teď to chcete udělat, zaregistrujte si verzi Public Preview služby Azure Active Directory, která zahrnuje podmíněný přístup pro zařízení spravovaná pomocí Intune nebo počítače s Windows připojené k doméně. Další informace najdete v [tomto příspěvku blogu](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azuread-conditional-access-policies-for-ios-android-and-windows-are-in-preview/).  
 
 **Než** nakonfigurujete podmíněný přístup:
 
@@ -196,7 +196,7 @@ Vyhodnocují se jenom skupiny, které jsou cílem zásad podmíněného přístu
         * Nepodporované platformy jako Mac OS.  Aplikace používající moderní ověřování pocházející z těchto platforem však budou i nadále zablokovány.
 
         >[!TIP]
-           Pokud ještě nepoužíváte podmíněný přístup pro počítače PC, nemusí se vám tato možnost zobrazit.  Místo toho použijte možnost **Specifické platformy**. Podmíněný přístup pro počítače PC není aktuálně k dispozici všem zákazníkům Intune.   Další informace o známých problémech a o tom, jak k této funkci získat přístup, najdete na [webu Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=761472).
+           Pokud ještě nepoužíváte podmíněný přístup pro počítače PC, nemusí se vám tato možnost zobrazit.  Místo toho použijte možnost **Specifické platformy**. Podmíněný přístup pro počítače PC není aktuálně k dispozici všem zákazníkům Intune.   Další informace o získání přístupu k této funkci najdete [v tomto příspěvku blogu](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azuread-conditional-access-policies-for-ios-android-and-windows-are-in-preview/).
 
     -   **Specifické platformy**
 
@@ -260,6 +260,6 @@ Na řídicím panelu [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] zvol
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

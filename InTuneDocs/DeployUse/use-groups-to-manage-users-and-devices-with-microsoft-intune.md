@@ -13,11 +13,15 @@ ms.assetid: eb9b01ce-9b9b-4c2a-bf99-3879c0bdaba5
 ms.reviewer: lpatha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5ab9592c253238fd832f8b48372e5474fcfc5331
-ms.openlocfilehash: 96b0cd997544b2013efaca818d614c9802baaa46
+ms.sourcegitcommit: e7c680c43b8c9120755ec3c652cf7ec1cbcc3472
+ms.openlocfilehash: b13e2ff2f4822d71ef8cff9d835e32b99cb3e4ab
 
 
 ---
+# Použití skupin pro správu uživatelů a zařízení v Microsoft Intune
+
+Toto téma popisuje, jak vytvořit skupiny v Intune. Poskytuje také informace o změně správy skupin, která se chystá v nadcházejících měsících. Další informace o *aktuálním* přístupu ke správě skupin najdete v části [Vytvoření skupin pro správu uživatelů a zařízení s Microsoft Intune](#Create-groups-to-manage-users-and-devices-with-Microsoft-Intune) v tomto tématu.
+
 ## Oznámení o připravovaných vylepšeních správy skupin
 
 Na základě vašich žádostí o jednotnou správu skupin a cílů v oblastech Enterprise Mobility a Security převádíme skupiny Intune na skupiny zabezpečení založené na Azure Active Directory. Tím se sjednotí správa skupin v rámci Intune a Azure Active Directory (Azure AD). Toto nové prostředí vás zbaví nutnosti mít v jednotlivých službách duplicitní skupiny a zajistí možnosti rozšíření prostřednictvím PowerShellu a Graphu. 
@@ -72,7 +76,7 @@ Ačkoli se prostředí správy skupin zlepší, po migraci přestanou být dostu
 -  Pokud máte správce, kteří nemají oprávnění k vytváření skupin ve službě Azure AD, požádejte správce Azure AD o jejich přidání do role **Správce služby Intune** v Azure AD.
 
 
-# Vytvoření skupin pro správu uživatelů a zařízení s Microsoft Intune
+## Vytvoření skupin pro správu uživatelů a zařízení s Microsoft Intune
 
 Tato část popisuje, jak vytvořit skupiny Intune v konzole pro správu Intune.
 
@@ -208,6 +212,6 @@ Každá zásada má **určenou hodnotu** a **Stav**. Určená hodnota označuje 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

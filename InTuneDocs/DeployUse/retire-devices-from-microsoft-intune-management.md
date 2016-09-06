@@ -13,15 +13,22 @@ ms.assetid: 3dbec400-5d8a-47be-b892-7745811d9de2
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7bea7ba4ef59c6b1400414b59456e19dc1c152fb
-ms.openlocfilehash: ad5e9453f8132d383f8c23886e48505769c7f44b
+ms.sourcegitcommit: cf471320f122eea7804ff6cd6cad208f8cd5a692
+ms.openlocfilehash: 29d13dcbc367c18d64f9522fa9a3b962226feebb
 
 
 ---
 
 # Vyřazení zařízení ze správy Intune
 
-Ať jsou zařízení vlastněná firmou nebo v osobním vlastnictví, nakonec přijde chvíle, kdy musí být spravované zařízení vyřazené ze správy v Intune. Vyřazení zařízení je poměrně jednoduché. U mobilních zařízení můžete provést buď selektivní vymazání, nebo úplné vymazání. Pomocí klientského softwaru Intune můžete také vyřadit počítače s Windows.
+Ať jsou zařízení vlastněná firmou nebo v osobním vlastnictví, nakonec přijde chvíle, kdy musí být spravované zařízení vyřazené ze správy v Intune. Zařízení může být vyřazené z různých důvodů:
+
+-   Uživatel opustí společnost plánovaným způsobem („spravovaný“ odchod).
+-   Uživatel opustí společnost náhle (dostane výpověď, skončí atd.).
+-   Dojde ke ztrátě zařízení.
+-   Zařízení se začne používat jinak (přesune se k jinému uživateli, začne se používat jiným způsobem atd.).
+
+U mobilních zařízení můžete provést buď selektivní vymazání, nebo úplné vymazání. Další možností je zamknout zařízení a resetovat heslo. Pokud zařízení vymažete, uvolníte tak předplatné příslušného uživatele pro jiné zařízení. Pomocí klientského softwaru Intune můžete také vyřadit počítače s Windows.
 
 ## Vymazání dat a aplikací ze zařízení
 Selektivní vymazání i úplné vymazání odebere zařízení ze správy Intune odebráním zásad a portálu společnosti, což znamená, že zařízení už nemá pověřovací údaje potřebné k přihlášení k firemním prostředkům, jako je Microsoft SharePoint, e-mail nebo Office 365.
@@ -62,6 +69,6 @@ V některých případech zařízení samotné dosáhne konce své životnosti. 
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 
