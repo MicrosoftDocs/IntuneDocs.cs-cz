@@ -4,7 +4,7 @@ description: "Před nasazením aplikace je třeba přidat ji do Intune. Pak je k
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: f5b1f1ae-f177-450a-9af9-936a02d052e3
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: 72d2974b5aa9ca334b59d8a1d28a175b190ba533
+ms.sourcegitcommit: 727d28cff074124b5401f6c2931f87df3a9d2d23
+ms.openlocfilehash: 0951a8c8ae635fed089e7bbf87018282a73daf74
 
 
 ---
@@ -38,7 +38,7 @@ Pomocí Vydavatele softwaru Microsoft Intune nakonfigurujete vlastnosti aplikace
 2.  Na stránce **Instalace softwaru** ve vydavateli vyberte u položky **Vyberte, jakým způsobem má být tento software zpřístupněn pro zařízení** jednu z těchto možností:
     - **Instalační program softwaru** – u aplikací s příponou **.msi** nebo **.exe**:
         - **Vyberte typ souboru instalačního programu softwaru**. Označuje typ softwaru, který chcete nasadit. Pokud třeba chcete instalovat aplikaci pro iOS, zvolte **Balíček aplikace pro systém iOS (soubor &#42;.ipa)**.
-        - **Zadejte umístění instalačních souborů softwaru**. Zadejte umístění instalačních souborů nebo zvolte **Procházet** a vyberte umístění ze seznamu.
+        - **Zadejte umístění instalačních souborů softwaru**. Zadejte umístění instalačních souborů, nebo zvolte **Procházet** a vyberte umístění ze seznamu.
         - **Zahrňte další soubory a podsložky ze stejné složky**. Tato možnost je jen pro typ souboru **Instalační služby systému Windows**.<br>Software, který používá Instalační službu systému Windows, někdy potřebuje podpůrné soubory. Ty se většinou nacházejí ve stejné složce jako instalační soubory. Tuto možnost vyberte, když chcete tyto soubory i nasadit.<br>U tohoto typu instalace se využívá část prostoru cloudového úložiště.
 
   -   **Externí odkaz** – u aplikací, které chcete vytvořit zadáním odkazu na obchod s aplikacemi:
@@ -63,11 +63,11 @@ Pomocí Vydavatele softwaru Microsoft Intune nakonfigurujete vlastnosti aplikace
     > Některé hodnoty můžou být vyplněné automaticky v závislosti na používaném typu instalačního programu.
 
     - **Vydavatel:** Zadejte název vydavatele aplikace.
-    - **Název:** Zadejte název aplikace, který se zobrazí na portálu společnosti.<br>Ověřte, že názvy všech používaných aplikací jsou jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
-    - **Popis:** Zadejte popis aplikace. Zobrazí se uživatelům na portálu společnosti.
+    - **Název**. Zadejte název aplikace, který se zobrazí na portálu společnosti.<br>Ověřte, že názvy všech používaných aplikací jsou jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
+    - **Popis**. Zadejte popis aplikace. Zobrazí se uživatelům na portálu společnosti.
     - **Adresa URL informací o softwaru:** Ta je k dispozici jenom v případě, že jste vybrali **Instalační program softwaru**. Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
     - **Adresa URL zásad ochrany osobních údajů:** Ta je k dispozici jenom v případě, že jste vybrali **Instalační program softwaru**. Volitelně můžete zadat adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
-    - **Kategorie** (volitelné): Vyberte jednu z předdefinovaných kategorií aplikací. Uživatelé ji budou moct při procházení portálu snáz najít.
+    - **Kategorie** (volitelné). Vyberte jednu z předdefinovaných kategorií aplikací. Uživatelé ji budou moct při procházení portálu snáz najít.
     - **Zobrazit jako doporučenou aplikaci a upozornit na ni na portálu společnosti:** Když uživatelé hledají aplikace, zobrazí se aplikace výrazně na hlavní stránce portálu společnosti.
     - **Ikona** (volitelné): Nahrajte ikonu, která bude k aplikaci přidružená. Tato ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
 
@@ -99,6 +99,6 @@ Dalším krokem po vytvoření aplikace je její nasazení. Další informace na
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 
