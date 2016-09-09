@@ -13,8 +13,8 @@ ms.assetid: 83f7469c-272e-43f2-8139-b0d7bc34f43f
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4279ecd098ddaa6d6eb239ee71f9c3f7d450ab3f
-ms.openlocfilehash: f2ccc52ceae6bbb63ea76ff4391922099c69f4dd
+ms.sourcegitcommit: c6b3f193606f13427a68c561d688b75d38221950
+ms.openlocfilehash: 315e492b301387c2030440e7188dfdb35a99ddd9
 
 
 ---
@@ -40,7 +40,7 @@ Ke konfiguraci následujících nastavení pro zařízení s Windows Phone 8.1 p
 ### Nastavení hesla
 
 |Název nastavení|Podrobnosti|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----------------------------------------|
+|----------------|------|-----|------------------------------|
 |**Vyžadovat heslo k odemknutí mobilních zařízení**|Zadejte, jestli uživatelé při přístupu ke svému zařízení musí zadat heslo.|Ano|Ano|
 |**Vyžadovaný typ hesla**|Určuje typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.|Ano|Ano|
 |**Vyžadovaný typ hesla – Minimální počet znakových sad**|Určuje, kolik různých znakových sad musí být v hesle zahrnutých. Používají se čtyři znakové sady: malá písmena, velká písmena, číslice a symboly. Pro zařízení s iOS ale toto nastavení určuje počet symbolů, které musí heslo obsahovat.|Ano|Ano|
@@ -55,44 +55,44 @@ Ke konfiguraci následujících nastavení pro zařízení s Windows Phone 8.1 p
 ### Nastavení šifrování
 
 |Název nastavení|Podrobnosti|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----------------------------------------|
+|----------------|------|------|-----------------------------|
 |**Vyžadovat šifrování u mobilního zařízení**|Vyžaduje, aby data na podporovaných mobilních zařízeních byla šifrovaná.<br>Pro zařízení s Windows Phone 8 je potřeba nastavit hodnotu **Ano**.|Ano|Ano|
 
 ### Nastavení systému
 
 |Název nastavení|Podrobnosti|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----------------------------------------|
+|----------------|-----|------|------------------------------|
 |**Povolit snímek obrazovky**|Povolí uživateli zachytit obsah obrazovky jako obrázek.|Ne|Ano|
 |**Povolit odeslání diagnostických dat**|Povolí zařízení odesílat diagnostické informace Microsoftu.|Ne|Ano|
 
 ### Nastavení cloudu – účty a synchronizace
 
 |Název nastavení|Podrobnosti|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----------------------------------------|
+|----------------|------|-----|------------------------------|
 |**Povolit účet Microsoft**|Povolí propojení účtu Microsoft se zařízením.|Ne|Ano|
 
 ### Nastavení e-mailu
 
 |Název nastavení|Podrobnosti|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----------------------------------------|
+|----------------|-----|-----|-------------------------------|
 |**Povolit vlastní e-mailové účty**|Povolí zařízení připojit se k e-mailovým účtům jiným než Microsoftu.|Ne|Ano|
 
 ### Nastavení aplikace – prohlížeč
 
 |Název nastavení|Podrobnosti|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----------------------------------------|
+|----------------|-----|-----|-------------------------------|
 |**Povolit webový prohlížeč**|Povolí nebo zablokuje integrovaný webový prohlížeč v zařízeních.|Ne|Ano|
 
 ### Nastavení aplikace – aplikace
 
 |Název nastavení|Podrobnosti|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----------------------------------------|
+|----------------|-----|------|------------------------------|
 |**Povolit obchod s aplikacemi**|Umožňuje uživatelům připojit se ze zařízení k obchodu s aplikacemi.|Ne|Ano|
 
 ### Nastavení možností zařízení – hardware
 
 |Název nastavení|Podrobnosti|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----------------------------------------|
+|----------------|-----|----|--------------------------------|
 |**Povolit fotoaparát**|Povolí nebo zablokuje fotoaparát zařízení.|Ne|Ano|
 |**Povolit vyměnitelné úložiště**|Povolí použití vyměnitelného úložiště v zařízení, třeba SD karty.|Ano|Ano|
 |**Povolit Wi-Fi**|Povolí nebo zakáže funkce sítě Wi-Fi v zařízení.|Ne|Ano|
@@ -106,7 +106,7 @@ Ke konfiguraci následujících nastavení pro zařízení s Windows Phone 8.1 p
 ### Nastavení možností zařízení – funkce
 
 |Název nastavení|Podrobnosti|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----------------------------------------|
+|----------------|----|------|-------------------------------|
 |**Povolit kopírování a vkládání**|Povolí funkci kopírování a vkládání na zařízeních.|Ne|Ano|
 
 ### Nastavení pro povolené a blokované aplikace
@@ -171,6 +171,6 @@ V dialogovém okně **Přidat nebo upravit nastavení OMA-URI** zadejte následu
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO2-->
 
 
