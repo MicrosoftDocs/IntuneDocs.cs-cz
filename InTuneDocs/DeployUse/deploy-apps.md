@@ -4,7 +4,7 @@ description: "Toto téma vysvětluje koncepty, kterým je třeba porozumět pře
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: ad5ea85c-aa2e-4110-a184-172cd0b8f270
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c4a760b6362356a6bafa8b6acc69299647a5e0f3
-ms.openlocfilehash: 377597aabc03c020060e2851c6fc25e0c780ea51
+ms.sourcegitcommit: 727d28cff074124b5401f6c2931f87df3a9d2d23
+ms.openlocfilehash: ef042e24af2300250cf2bd1bf9803678e252b773
 
 
 ---
@@ -42,7 +42,7 @@ Při nasazování aplikací můžete zvolit jednu z následujících akcí nasaz
 
 #### Zjistěte, které akce nasazení jsou dostupné pro jednotlivé typy instalačních programů:
 
-|Typ instalačního programu|Požadovaná instalace|Dostupná instalace|Odinstalace|Není k dispozici|
+|Typ instalačního programu|Požadovaná instalace|Dostupná instalace|Odinstalovat|Není k dispozici|
 |------------------|--------------------|---------------------|-------------|------------------|
 |Balíček aplikací pro Windows (nasazený pro skupinu uživatelů)|Ano|Ano|Ano|Ano|
 |Balíček aplikací pro Windows (nasazený pro skupinu zařízení)|Ano|Ne|Ano|Ano|
@@ -73,6 +73,6 @@ Přečtěte si, jak [nasazovat aplikace v Microsoft Intune](deploy-apps-in-micro
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

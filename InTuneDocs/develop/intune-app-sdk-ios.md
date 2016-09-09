@@ -13,8 +13,8 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b7f62c5ee18d8f69fa174f09a1c46b6925c7517c
-ms.openlocfilehash: 820ec2da0554f0af383895482241be7d1c0cf305
+ms.sourcegitcommit: 63d94a83a3a5ad9520abab3ef25e8d9690c26ce7
+ms.openlocfilehash: 512ef2416e14f2a44e1c46e996c8519b5776581f
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: 820ec2da0554f0af383895482241be7d1c0cf305
 
 Microsoft Intune App SDK pro iOS umožňuje začlenit správu mobilních aplikací (MAM) Intune do vaší aplikace pro iOS. Aplikace s podporou MAM je integrovaná se sadou Intune App SDK a umožňuje správcům IT nasadit zásady do mobilní aplikace, když je aktivně spravovaná.
 
-# Co je v sadě SDK
+## Co je v sadě SDK
 
 Intune App SDK pro iOS zahrnuje statickou knihovnu, soubory prostředků, záhlaví API, seznam vlastností (plist) s nastavením pro ladění a nástroj konfigurátoru. Mobilní aplikace můžou pro vynucení většiny zásady jednoduše zahrnout soubory prostředků a staticky se propojit ke knihovnám. Pokročilé funkce Intune MAM se vynucují prostřednictvím rozhraní API.
 Tato příručka popisuje použití následujících objektů při integraci Intune App SDK pro iOS:
@@ -37,13 +37,13 @@ Tato příručka popisuje použití následujících objektů při integraci Int
 
 * **Hlavičky**: Zveřejňují rozhraní API sady Intune App SDK. Pokud použijete rozhraní API, musíte zahrnout soubor hlaviček, který toto rozhraní API obsahuje. 
 
-# Jak Intune App SDK funguje
+## Jak Intune App SDK funguje
 
 Cílem sady Intune App SDK pro iOS je doplnit do aplikací pro iOS možnosti správy s minimálními změnami kódu. Omezení změn kódu zkracuje dobu uvedení na trh a současně zvyšuje konzistenci a stabilitu mobilní aplikace. 
 
 Aplikace musí být propojená se statickou knihovnou a musí zahrnovat balíček prostředků. Soubor MAMDebugSettings.plist je volitelný a může být v balíčku zahrnutý proto, aby simuloval použití zásad MAM v aplikaci, aniž by ji bylo nutné nasazovat pomocí Microsoft Intune. Dál se v sestavení pro ladění zásady v souboru MAMDebugSettings.plist můžou použít tak, že se soubor MAMDebugSettings.plist přenese do adresáře dokumentů aplikace pomocí sdílení souborů iTunes.
 
-# Sestavení aplikace pomocí Intune App SDK 
+## Sestavení aplikace pomocí Intune App SDK 
 
 Dokončením tohoto postupu povolíte Intune App SDK:
 
@@ -133,7 +133,7 @@ Dokončením tohoto postupu povolíte Intune App SDK:
 
 Pokud mobilní aplikace využívá ADAL k vlastnímu ověřování, přečtěte si v tomto článku část Konfigurace nastavení knihovny pro ověřování Azure Directory.
 
-## Telemetrie 
+### Telemetrie 
 
 Intune App SDK pro iOS ve výchozím nastavení protokoluje telemetrická data týkající se událostí použití, která se posílají Microsoft Intune.
 
@@ -155,15 +155,15 @@ Následující kroky jsou nutné, pokud aplikace využívá ADAL pro vlastní ov
 
 2. V souboru `Info.plist`projektu ve slovníku `IntuneMAMSettings` s názvem klíče `ADALRedirectUri`zadejte identifikátor URI přesměrování, který se má použít pro volání ADAL. Budete možná muset zadat taky `ADALRedirectScheme` . To záleží na formátu identifikátoru URI přesměrování vaší aplikace.
 
-## Sestavování rozšíření (volitelné) 
+### Sestavování rozšíření (volitelné) 
 
 Při sestavování rozšíření použijte stejné pokyny jako pro sestavení mobilní aplikace, které jsou uvedené  v tomto článku v části Sestavení aplikace pomocí Intune App SDK. Dál aktualizujte soubor info.plist jednotlivých rozšíření tak, že do slovníku IntuneMAMSettings přidáte klíč ContainingAppBundleId s hodnotou obsahující ID sady aplikace.
 
-## Sestavování architektur (volitelné)
+### Sestavování architektur (volitelné)
 
 Vzhledem k nejnovějším změnám Intune App SDK už nemusíte mobilní aplikaci, která obsahuje vložené architektury aplikace, kompilovat s konkrétními příznaky linkeru. 
 
-## Soubory obrázků při spuštění (volitelné)
+### Soubory obrázků při spuštění (volitelné)
 
 Když je aplikace s podporou MAM aktivně spravovaná službou Microsoft Intune, Intune App SDK zobrazí při spuštění aplikace úvodní obrazovku a informuje tak uživatele, že aplikace je spravovaná. Pokud chcete. můžete přidat soubory obrázků, které se zobrazí na úvodní stránce Spravuje vaše společnost. Pro obrázky použijte následující pokyny:
 
@@ -179,7 +179,7 @@ Když je aplikace s podporou MAM aktivně spravovaná službou Microsoft Intune,
 
 **Poznámka**: Toto okno se aktivuje při spuštění, ale uživatel ho může trvale vynechat.
 
-# Konfigurace nastavení Intune App SDK
+## Konfigurace nastavení Intune App SDK
 
 Ke konfiguraci Intune App SDK se používá slovník `IntuneMAMSettings` , který je obsažený v souboru `info.plist` aplikace. Dál je uvedený seznam všech podporovaných nastavení. 
 
@@ -197,7 +197,7 @@ SplashIconFile <br>SplashIconFile~ipad  | Řetězec  | Určuje soubor úvodní i
 SplashDuration | Číslo | Minimální doba v sekundách, po kterou se při spuštění aplikace zobrazí úvodní obrazovka Intune. Výchozí hodnota je 1,5. | Volitelný parametr.
 ADALLogOverrideDisabled | Logická hodnota  | Určuje, jestli SDK bude všechny protokoly ADAL (včetně všech případných volání ADAL z aplikace) směrovat do vlastního souboru protokolu. Výchozí hodnota je NE. Pokud aplikace chce nastavit vlastní zpětné volání protokolu ADAL, nastaví se  ANO. | Volitelný parametr.
 
-# Hlavičky pro Intune App SDK 
+## Hlavičky pro Intune App SDK 
 
 Následující hlavičky zahrnují volání funkcí API nutné k povolení funkcí Intune App SDK. 
 
@@ -209,7 +209,7 @@ Následující hlavičky zahrnují volání funkcí API nutné k povolení funkc
     IntuneMAMPolicyDelegate.h
     IntuneMAMLogger.h
 
-# Ladění Intune App SDK v Xcode
+## Ladění Intune App SDK v Xcode
 
 Před testováním aplikace s podporou MAM pomocí Microsoft Intune můžete v Xcode použít `Settings.bundle` . Můžete tak nastavit zásady testování a není potřeba připojení k Intune. Postup při povolení:
 
@@ -230,7 +230,7 @@ Před testováním aplikace s podporou MAM pomocí Microsoft Intune můžete v X
 > [!NOTE]
 > Teď můžete prostřednictvím možností „Nastavení -> Název_aplikace -> Povolit zásady testování“ povolit a přepínat nastavení.
 
-# Doporučené osvědčené postupy pro iOS
+## Doporučené osvědčené postupy pro iOS
 
 Dál jsou uvedené některé doporučené osvědčené postupy při vývoji pro iOS:
 
@@ -241,6 +241,6 @@ Pokud má Xcode potíže s vyhledáním `libIntuneMAM.a`, můžete je vyřešit 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO5-->
 
 

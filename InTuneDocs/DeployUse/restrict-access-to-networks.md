@@ -13,8 +13,8 @@ ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ede9c4db136eb0498cad6d196488d03768741328
-ms.openlocfilehash: 382dd93a5aec7415e5fb738f3068820e36d8ae06
+ms.sourcegitcommit: 281557e7b9c4b2ed1ff6122dbd574df4a2601a8c
+ms.openlocfilehash: 3d62fe870a609af982435bd3f482fcc18beecdb1
 
 
 ---
@@ -29,33 +29,34 @@ Chcete-li tuto integraci povolit, nemusíte v tenantovi Intune provádět žádn
 ### Krok 1: Správa certifikátů
 1. V konzole Azure Active Directory (Azure AD) exportujte certifikát.
 
-    #### Internet Explorer 11
+#### Internet Explorer 11
 
 
-    a. Spusťte Internet Explorer jako správce a přihlaste se ke konzole Azure AD.
+   a. Spusťte Internet Explorer jako správce a přihlaste se ke konzole Azure AD.
 
-    b. Zvolte ikonu zámku na panelu Adresa a pak zvolte **Zobrazit certifikáty**.
+   b. Zvolte ikonu zámku na panelu Adresa a pak zvolte **Zobrazit certifikáty**.
 
-    c. Na kartě **Podrobnosti** v rámci vlastností certifikátu zvolte **Kopírovat do souboru**.
+   c. Na kartě **Podrobnosti** v rámci vlastností certifikátu zvolte **Kopírovat do souboru**.
 
-    d. Na úvodní stránce **Průvodce exportem certifikátu** zvolte **Další**.
+   d. Na úvodní stránce **Průvodce exportem certifikátu** zvolte **Další**.
 
-    e. Na stránce **Formát souboru pro export** ponechte výchozí nastavení **Binární x.509, kódování DER (CER)** a zvolte **Další**.  
+   e. Na stránce **Formát souboru pro export** ponechte výchozí nastavení **Binární x.509, kódování DER (CER)** a zvolte **Další**.  
 
-    f. Na stránce **Soubor k exportu** zvolte **Procházet**, vyberte umístění, do kterého chcete soubor uložit, a zadejte název souboru. Ačkoli se zdá, že vybíráte soubor pro export, ve skutečnosti pojmenováváte soubor, do kterého bude exportovaný certifikát uložen. Zvolte **Další** &gt; **Dokončit**.
+   f. Na stránce **Soubor k exportu** zvolte **Procházet**, vyberte umístění, do kterého chcete soubor uložit, a zadejte název souboru. Ačkoli se zdá, že vybíráte soubor pro export, ve skutečnosti pojmenováváte soubor, do kterého bude exportovaný certifikát uložen. Zvolte **Další** &gt; **Dokončit**.
 
-    #### Safari
+#### Safari
 
-    a. Přihlaste se ke konzole Azure AD.
+ a. Přihlaste se ke konzole Azure AD.
 
-    b. Zvolte ikonu zámku &gt;  **Další informace**.
+b. Zvolte ikonu zámku &gt;  **Další informace**.
 
-    c. Zvolte **Zobrazit certifikát** &gt; **Podrobnosti**.
+   c. Zvolte **Zobrazit certifikát** &gt; **Podrobnosti**.
 
-    d. Zvolte certifikát a pak zvolte **Exportovat**.  
+   d. Zvolte certifikát a pak zvolte **Exportovat**.  
 
-    > [!IMPORTANT]
-    > Zkontrolujte datum vypršení platnosti certifikátu, protože po vypršení platnosti tohoto certifikátu bude třeba exportovat a importovat nový certifikát.
+> [!IMPORTANT]
+>
+> Zkontrolujte datum vypršení platnosti certifikátu, protože po vypršení platnosti tohoto certifikátu bude třeba exportovat a importovat nový certifikát.
 
 
 2. Z konzoly ISE importujte certifikát Intune (soubor, který jste exportovali) do úložiště **Důvěryhodné certifikáty**.
@@ -146,6 +147,6 @@ K dispozici je také [sada pokynů pro registraci ke stažení](https://gallery.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO5-->
 
 
