@@ -14,8 +14,8 @@ ms.assetid: 71cc39cf-e726-40fd-8d08-78776e099a4b
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 727d28cff074124b5401f6c2931f87df3a9d2d23
-ms.openlocfilehash: 1809f619173ca57868cfd2b8466e6e2bcf05f0c7
+ms.sourcegitcommit: 073e3df63a5de9cf92c739c1ced858e21a9ac351
+ms.openlocfilehash: 870d735644f08e3eca8c72bca2b156947d798cb5
 
 
 ---
@@ -57,14 +57,14 @@ Pokud se v tomto tématu nezobrazí nastavení, které hledáte, je možné, že
 ### Nastavení šifrování
 
 |Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|---|-------------|----------------|
 |**Vyžadovat šifrování u mobilního zařízení**|Vyžaduje, aby soubory v mobilním zařízení byly šifrované.|Ano|Ano|
 |**Vyžadovat šifrování u paměťových karet**|Určuje, jestli musí být paměťová karta zařízení šifrovaná.|Ne|Ano|
 
 ### Nastavení systému
 
 |Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|---|-------------|----------------|
 |**Povolit snímek obrazovky**|Umožňuje uživateli zachytit obsah obrazovky v podobě obrázku.|Ne|Ano|
 |**Povolit odeslání diagnostických dat**|Umožňuje zařízení odesílat diagnostické informace Googlu.|Ne|Ano|
 |**Povolit obnovení továrního nastavení**|Umožňuje uživateli obnovit v zařízení výrobní nastavení.|Ne|Ano|
@@ -72,19 +72,19 @@ Pokud se v tomto tématu nezobrazí nastavení, které hledáte, je možné, že
 ### Nastavení cloudu – dokumenty a data
 
 |Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX|
-|----------------|----------------------------|----------------|
+|----------------|----|------------------------|----------------|
 |**Povolit zálohování Google**|Povoluje použití zálohování Google.|Ne|Ano|
 
 ### Nastavení cloudu – účty a synchronizace
 
 |Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|-----|-----------|----------------|
 |**Povolit automatickou synchronizaci účtu Google**|Povoluje automatickou synchronizaci nastavení účtu Google.|Ne|Ano|
 
 ### Nastavení aplikace – prohlížeč
 
 |Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|-----|-----------|----------------|
 |**Povolit webový prohlížeč**|Určuje, jestli je možné použít výchozí webový prohlížeč zařízení.|Ne|Ano|
 |**Povolit automatické vyplňování**|Umožňuje používání funkce automatického vyplňování webového prohlížeče.|Ne|Ano|
 |**Povolit blokování automaticky otevíraných oken**|Povolí používání blokování automaticky otevíraných oken ve webovém prohlížeči.|Ne|Ano|
@@ -94,13 +94,13 @@ Pokud se v tomto tématu nezobrazí nastavení, které hledáte, je možné, že
 ### Nastavení aplikace – aplikace
 
 |Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|----|------------|----------------|
 |**Povolit Google Play Store**|Povolí uživatelům na zařízení přístup do obchodu Google Play.|Ne|Ano|
 
 ### Nastavení možností zařízení – hardware
 
 |Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|-----|-----------|----------------|
 |**Povolit fotoaparát**|Umožňuje použití fotoaparátu v zařízení.|Ano|Ano|
 |**Povolit vyměnitelné úložiště**|Povolí použití vyjímatelného úložiště v zařízení, třeba SD karty.|Ne|Ano|
 |**Povolit Wi-Fi**|Povolí použití možností Wi-Fi zařízení.|Ne|Ano|
@@ -113,7 +113,7 @@ Pokud se v tomto tématu nezobrazí nastavení, které hledáte, je možné, že
 ### Nastavení možností zařízení – mobilní
 
 |Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|---|-------------|----------------|
 |**Povolit hlasový roaming**|Povolí hlasový roaming, když je zařízení v mobilní síti.|Ne|Ano|
 |**Povolit datový roaming**|Povolí datový roaming, když je zařízení v mobilní síti.|Ne|Ano|
 |**Povolit SMS a MMS zprávy**|Povolí zařízení použití SMS a MMS zpráv.|Ne|Ano|
@@ -121,7 +121,7 @@ Pokud se v tomto tématu nezobrazí nastavení, které hledáte, je možné, že
 ### Nastavení možností zařízení – funkce
 
 |Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|----|------------|----------------|
 |**Povolit hlasového asistenta**|Povolí použití softwaru hlasového asistenta v zařízení.|Ne|Ano|
 |**Povolit hlasové vytáčení**|Povolí nebo zakáže použití funkce hlasového vytáčení v zařízení.|Ne|Ano|
 |**Povolit kopírování a vkládání**|Povolí v zařízení funkce kopírování a vkládání.|Ne|Ano|
@@ -208,6 +208,6 @@ Díky této vlastnosti můžete nasadit nastavení Androidu, která nejde konfig
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 
