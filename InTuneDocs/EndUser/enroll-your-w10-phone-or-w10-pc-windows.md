@@ -13,8 +13,8 @@ ms.assetid: 36250832-c6fd-4e8d-b681-de735023ebc3
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 80ebf1a56106ad4e66d2d791ab98edae1ab11505
-ms.openlocfilehash: 8dd807aa18f7e5729ae1ab1435c3196e324ffe44
+ms.sourcegitcommit: 02287eb01598c28906045fd8def9e8b4660e3da5
+ms.openlocfilehash: 8806231f8d02885a192053a35559694a8984d2f5
 
 
 ---
@@ -29,25 +29,64 @@ Registrace zařízení s Windows 10 Mobile nebo Windows 10 Desktop:
 
 1.  Ve Windows přejděte do **Nastavení** a klepněte na **Účty**.
 
-    ![settings-accounts](./media/W10-enroll-1-settings-accounts.png)
+    ![settings-accounts](./media/w10-enroll-rs1-settings-accounts.png)
+
+2.  Podívejte se na další dvě obrazovky a najděte tu, která vypadá stejně jako to, co vidíte ve svém zařízení. Použijte postup odpovídající této obrazovce.
+
+    Pokud se zobrazí tato obrazovka, použijte postup v tématu [Postup, pokud se zobrazí Přístup do práce nebo do školy](#steps-to-follow-if-you-see-access-work-or-school).
+
+    ![connect-to-work-or-school](./media/w10-enroll-rs1-connect-to-work-or-school.png)
+
+    Pokud se zobrazí tato obrazovka, použijte postup v tématu [Postup, pokud se zobrazí Váš účet](#steps-to-follow-if-you-see-your-account).
+
+    ![your-account](./media/w10-enroll-2-accounts-your-account.png)
+
+## Postup, pokud se zobrazí Přístup do práce nebo do školy
+
+1.  Klepněte na **Přístup do práce nebo do školy**.
+
+    ![tap-access-work-school-account](./media/w10-enroll-rs1-connect-to-work-or-school.png)
+
+2.  Zadejte svůj pracovní nebo školní e-mail a klepněte na **Další**.
+
+    ![enter-your-work-or-school-account](./media/w10-enroll-rs1-set-up-work-or-school-account.png)
+
+3. Přihlaste se k Intune ze svého pracovního nebo školního účtu.
+
+    ![add-work-school-account](./media/w10-enroll-rs1-enter-your-credentials.png)
+
+    Zobrazí se zpráva, že organizace nebo škola registruje vaše zařízení.
+
+4. Když se zobrazí stránka **Všechno máte nastavené**, klepněte na **Zavřít**. Máte hotovo.
+
+  ![tap-close-on-you-are-all-set-screen](./media/w10-enroll-rs1-youre-all-set.png)
+
+5. Pokud chcete zkontrolovat, že připojení je v pořádku, vraťte se k **Nastavení** a přesvědčte se, že je tam váš pracovní nebo školní účet uvedený.
+
+    ![validate-that-connection-was-set-up-correctly](./media/w10-enroll-rs1-validate-successful-enrollment.png)
+
+Pokud jste použili výše uvedené kroky, ale pořád nemáte přístup ke svému pracovnímu e-mailu nebo souborům, použijte kroky v části [Postup řešení potíží, pokud se zobrazí Přístup do práce nebo do školy](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
+
+
+## Postup, pokud se zobrazí Váš účet
+
+1.  Ve Windows přejděte do **Nastavení** a klepněte na **Účty**.
+
+    ![go-to-settings-accounts](./media/W10-enroll-1-settings-accounts.png)
 
 2.  Klepněte na **Váš účet**.
 
-    ![your-account](./media/W10-enroll-2-accounts-your-account.png)
+    ![tap-your-account](./media/W10-enroll-2-accounts-your-account.png)
 
 3.  Klepněte na **Přidat pracovní nebo školní účet**.
 
-    ![add-work-school-account](./media/W10-enroll-3-add-work-school-acct.png)
+    ![add-work-or-school-account](./media/w10-enroll-3-add-work-school-acct.png)
 
 4.  Přihlaste se pomocí přihlašovacích údajů svého pracovního nebo školního účtu.
 
     ![sign-in](./media/W10-enroll-4-sign-in.png)
 
-Pokud jste použili tento postup, ale pořád nemáte přístup k pracovnímu nebo školnímu e-mailu, souborům a dalším datům, přejděte zpátky k položce **Účty** a klepněte na **Přístup do práce**.
-
--   Pokud vidíte svůj pracovní nebo školní účet, gratulujeme. Jste připojení.
-
--   Pokud svůj pracovní nebo školní účet nevidíte, klepněte na **Připojit** a přihlaste se pomocí přihlašovacích údajů svého pracovního nebo školního účtu.
+Pokud jste použili výše uvedené kroky, ale pořád nemáte přístup ke svému pracovnímu e-mailu, souborům a dalším datům, použijte kroky v části [Postup řešení potíží, pokud se zobrazí Váš účet](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account).
 
 Doporučujeme také nainstalovat aplikaci Portál společnosti, která vám umožní snadno identifikovat a instalovat podnikové aplikace, které jsou relevantní pro vás i vaši roli. V závislosti na tom, jak vaše společnost službu Intune nakonfigurovala, už aplikace Portál společnosti může být nainstalovaná jako součást procesu registrace. Pokud chcete zjistit, jestli aplikaci máte, hledejte v seznamu aplikací aplikaci **Portál společnosti**. Pokud aplikaci Portál společnosti v seznamu nenajdete, nainstalujte ji podle následujícího postupu.
 
@@ -62,11 +101,10 @@ Doporučujeme také nainstalovat aplikaci Portál společnosti, která vám umo�
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 ### Související témata
-[Registrace zařízení se systémem Windows do Intune](enroll-your-device-in-intune-windows.md)</br>
 [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

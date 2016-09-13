@@ -10,17 +10,17 @@ ms.prod:
 ms.service: 
 ms.technology: 
 ms.assetid: efb3c261-1f6c-4d39-bfa4-18661f8c59c7
-ROBOTS: noindex,nofollow
+ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
-ms.openlocfilehash: 927bf3c21f94ca311a7324d22f05f047dba94982
+ms.sourcegitcommit: 96e8db7415e48a77f3e789aecddebe407e9a4b00
+ms.openlocfilehash: 37c5809e86d466717268f6fdec0c22f6bad2ac61
 
 
 ---
 
 # Heslo nesplňuje požadavky správce IT
 
-Heslo, které používáte k přístupu k prostředkům společnosti nebo školy, nesplňuje některé z požadavků, které správce IT nastavil pro vaše zařízení. V závislosti na zásadách, které správce IT vytvořil, mohl nastat jeden nebo kombinace těchto problémů:
+Heslo, které používáte k přístupu k prostředkům společnosti nebo školy, nesplňuje některé z požadavků, které správce IT nastavil pro vaše zařízení. V závislosti na zásadách, které správce IT vytvořil, mohl nastat jeden z těchto problémů nebo jejich kombinace:
 
 - Heslo neobsahuje složité znaky.
 - Heslo je příliš jednoduché a není dostatečně zabezpečené.
@@ -30,7 +30,7 @@ Heslo, které používáte k přístupu k prostředkům společnosti nebo školy
 - Heslo bylo použité příliš nedávno.
 - Heslo není dostatečně složité, aby splňoval požadavky.
 
-Informace o nastavení PIN kódu či hesla nebo dalších úlohách, které můžete v zařízení provést, najdete pomocí odkazu, který odpovídá vašemu typu zařízení:
+Informace o nastavení PIN kódu nebo hesla a dalších úlohách, které můžete v zařízení provést, najdete pomocí odkazu, který odpovídá vašemu typu zařízení:
 
 - [Nastavení PIN kódu nebo hesla na zařízení s Androidem](set-your-pin-or-password-android.md)
 - [Nastavení nebo změna přístupového kódu na zařízení s iOS](set-or-change-your-passcode-ios.md)
@@ -40,6 +40,6 @@ Pokud máte potíže s tím, jak vytvořit heslo v souladu s požadavky, obraťt
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

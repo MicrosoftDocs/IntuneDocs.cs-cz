@@ -4,7 +4,7 @@ description: "Přečtěte si, jak lze automaticky upgradovat zařízení s Windo
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 8589866a-3f13-489b-a5cd-cee017d16d54
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2a08ace43fb61f57a9d29b119c59698bc50e7af8
-ms.openlocfilehash: 49bc54f36b281d85c9667c51fb6ddbe0d454b4d1
+ms.sourcegitcommit: 06a9c78300d7ff384299957102114c69c43a1ad5
+ms.openlocfilehash: 45130e3e12968d9df579a7a9d0cade0343b7c165
 
 
 ---
@@ -23,12 +23,13 @@ ms.openlocfilehash: 49bc54f36b281d85c9667c51fb6ddbe0d454b4d1
 **Zásady upgradu edice** Intune umožňují automaticky upgradovat zařízení s některou z následujících verzí systému Windows 10 na novější edici:
 * Windows 10 Desktop
 * Windows 10 Holographic
+* Windows 10 Mobile
 
 ## Než začnete
 Před zahájením upgradu zařízení na nejnovější verzi budete potřebovat:
-* Kód Product Key, který opravňuje k instalaci nové verze Windows ve všech zařízeních, na která touto zásadou cílíte (pro edice Windows 10 Desktop).
-* Licenční soubor od Microsoftu, který obsahuje licenční informace pro instalaci nové verze Windows ve všech zařízeních, na která touto zásadou cílíte (pro edice Windows 10 Mobile a Windows 10 Holographic).
-* Cílová zařízení Windows 10 musí být registrovaná v Microsoft Intune.
+* Kód Product Key, který opravňuje k instalaci nové verze Windows ve všech zařízeních, na která touto zásadou cílíte (pro edice Windows 10 Desktop). Můžete využít klíče k vícenásobné aktivaci (MAK) nebo kódy serveru správy klíčů (KMS).
+**nebo** Licenční soubor od Microsoftu, který obsahuje licenční informace pro instalaci nové verze Windows ve všech zařízeních, na která touto zásadou cílíte (pro edice Windows 10 Mobile a Windows 10 Holographic).
+* Cílová zařízení Windows 10 musí být registrovaná v Microsoft Intune. Zásady upgradu edice nejde použít pro počítače s klientským softwarem Intune pro počítače.
 
 ## Nastavení zásad upgradu edice
 
@@ -45,6 +46,6 @@ Před zahájením upgradu zařízení na nejnovější verzi budete potřebovat:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 
