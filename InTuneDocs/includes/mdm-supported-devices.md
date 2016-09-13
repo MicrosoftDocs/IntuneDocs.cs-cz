@@ -10,6 +10,6 @@
 [Klientský software Intune](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune) může spravovat počítač s operačním systémem Windows 7 a novějším. Zákazníci s Enterprise Management Suite (EMS) můžou také [používat Azure Active Directory (AAD) k registraci zařízení s Windows 10](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview).
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Sep16_HO1-->
 
 

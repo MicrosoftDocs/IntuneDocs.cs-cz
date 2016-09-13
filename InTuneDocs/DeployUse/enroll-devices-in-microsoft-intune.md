@@ -13,8 +13,8 @@ ms.assetid: 8fc415f7-0053-4aa5-8d2b-03202eca4b87
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c329bd08aaf72ae2acaa03dcb12c911d84b46b4e
-ms.openlocfilehash: 9d624da7931c56476b476b7a9fd5711f398052c4
+ms.sourcegitcommit: a7a0f834df939432910e32e6e635a70f021b37a9
+ms.openlocfilehash: 63405b43609eda515656ad397c5c7ff4253a8167
 
 
 ---
@@ -76,7 +76,7 @@ Následující tabulka popisuje metody registrace zařízení ve vlastnictví sp
 |**[Uživatelé s vlastním zařízením](#BYOD)** | Ne|    Ano |   Ne |
 |**[DEM](#DEM)**|   Ne |Ne |Ne  |
 
-**Metody registrace pro zařízení ve vlastnictví společnosti**
+**Způsoby registrace zařízení**
 
 ### Uživatelé s vlastním zařízením
 Funkce Přineste si vlastní zařízení. Uživatelé si nainstalují aplikaci Portál společnosti a zaregistrují svoje zařízení. Registrace zařízení na Portálu společnosti zajistí jeho připojení k pracovišti. Registrace zařízení s iOS pomocí Portálu společnosti vyžaduje Apple ID. Funkce Přineste si vlastní zařízení nevyžaduje další konfiguraci pro zařízení ve vlastnictví firmy. Prohlédněte si postup [nastavení správy zařízení](get-ready-to-enroll-devices-in-microsoft-intune.md#set-up-device-management). ([Zpět k tabulce](#overview-of-device-enrollment-methods))
@@ -151,6 +151,6 @@ Počítače spravované pomocí klientského softwaru Intune nejde selektivně v
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

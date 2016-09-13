@@ -4,7 +4,7 @@ description: "Pomocí zásady Intune pro Exchange ActiveSync můžete nakonfigur
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: e9cbb826-b155-4df6-abf3-60c6f05b2783
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 72e6bcd3fd480c1ed8558fefd3958b4bbf3184c2
-ms.openlocfilehash: 39a844db56edf18f25996c1aaf52223ac80f8071
+ms.sourcegitcommit: 073e3df63a5de9cf92c739c1ced858e21a9ac351
+ms.openlocfilehash: 9a481e1ce7815a0411651fc724e3fc2f5d374eac
 
 
 ---
@@ -26,7 +26,7 @@ Pomocí zásady pro Microsoft Intune **Exchange ActiveSync** můžete nakonfigur
 ## Nastavení hesla
 
 |Název nastavení|Podrobnosti
-|----------------|
+|----------------|---|
 |**Vyžadovat heslo k odemknutí mobilních zařízení**|Určuje, jestli zařízení musí být zamčená s použitím hesla.<br>(Nevztahuje se na zařízení s Windows RT.)|
 |**Vyžadovaný typ hesla**|Určuje typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.|
 |**Minimální délka hesla**|Určuje minimální počet znaků, které musí heslo zařízení obsahovat.|
@@ -40,7 +40,7 @@ Pomocí zásady pro Microsoft Intune **Exchange ActiveSync** můžete nakonfigur
 ## Nastavení šifrování
 
 |Název nastavení|Podrobnosti|
-|----------------|
+|----------------|---|
 |**Vyžadovat šifrování u mobilního zařízení**<sup>1</sup>|Vyžaduje šifrování dat na zařízení, pokud je podporované.<br><br>Pro zařízení s Windows Phone 8 je potřeba nastavit hodnotu **Ano**.<br /><br />Pokud chcete povolit šifrování na zařízeních iOS, povolte nastavení **Vyžadovat heslo k odemknutí mobilních zařízení**.|
 |**Vyžadovat šifrování u paměťových karet**|Vyžaduje šifrování dat uložených v externích úložištích, jako je karta SD (u podporovaných zařízení).
 <sup>1</sup> Další informace pro zařízení s Windows 8.1
@@ -56,7 +56,7 @@ Pomocí zásady pro Microsoft Intune **Exchange ActiveSync** můžete nakonfigur
 ## Nastavení e-mailu
 
 |Název nastavení|Podrobnosti
-|----------------|
+|----------------|---|
 |**Povolit uživatelům stahovat přílohy e-mailů**|Určuje, jestli lze do zařízení stahovat přílohy e-mailu.|
 |**Interval synchronizace e-mailu**|Určuje počet dnů přijatých e-mailů, které budou synchronizované v zařízení.
 |**Povolit mobilním zařízením, která plně nepodporují nastavení Exchange ActiveSync, synchronizaci se serverem Exchange**|Určuje, jestli má mít Exchange povolený přístup k zařízením, která nepodporují jedno nebo více nastavení Exchange ActiveSync.
@@ -64,13 +64,13 @@ Pomocí zásady pro Microsoft Intune **Exchange ActiveSync** můžete nakonfigur
 ## Nastavení prohlížeče
 
 |Název nastavení|Podrobnosti
-|----------------|-
+|----------------|---|
 |**Povolit webový prohlížeč**|Určuje, jestli je možné použít webový prohlížeč v zařízení.<br>(Není dostupné pro Windows RT nebo Windows Phone.)
 
 ## Nastavení hardwaru
 
 |Název nastavení|Podrobnosti
-|----------------|
+|----------------|---|
 |**Povolit fotoaparát**|Určuje, jestli je možné použít fotoaparát v zařízení.<br>(Není dostupné pro Windows RT nebo Windows Phone.)
 
 
@@ -80,6 +80,6 @@ Pomocí zásady pro Microsoft Intune **Exchange ActiveSync** můžete nakonfigur
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

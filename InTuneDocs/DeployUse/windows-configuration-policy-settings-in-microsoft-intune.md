@@ -13,8 +13,8 @@ ms.assetid: 6982a2bc-aafa-475a-9236-4840b709e5a1
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7fdfe64a18fe359ee4b3b4507ef4108ad65ab573
-ms.openlocfilehash: 3102e4637c61bbae002fb30947acd1f82204ac93
+ms.sourcegitcommit: 073e3df63a5de9cf92c739c1ced858e21a9ac351
+ms.openlocfilehash: 6b2d805561067d2dc0de70d93c45622a951e5981
 
 
 ---
@@ -31,7 +31,7 @@ Pro konfiguraci následujících nastavení pro registrovaná zařízení s Wind
 ## Nastavení zabezpečení
 
 |Název nastavení|Podrobnosti|Windows 8.1 a Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|------|----------------------------|--------------|
 |**Vyžadovaný typ hesla**|Určuje vyžadované vlastnosti hesla, například jenom číslice nebo alfanumerické znaky.|Ano|Ano|
 |**Vyžadovaný typ hesla – Minimální počet znakových sad**|Určuje, kolik různých znakových sad musí být v hesle zahrnutých. Používají se čtyři znakové sady: malá písmena, velká písmena, číslice a symboly. Pro zařízení s iOS ale toto nastavení určuje počet symbolů, které musí heslo obsahovat.|Ano|Ano|
 |**Minimální délka hesla**<sup>1</sup>|Konfiguruje minimální vyžadovanou délku hesla (ve znacích).|Ano|Ano|
@@ -46,7 +46,7 @@ Pro konfiguraci následujících nastavení pro registrovaná zařízení s Wind
 ## Nastavení šifrování
 
 |Název nastavení|Podrobnosti|Windows 8.1 a Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|-----|-----------------------------|--------------|
 |**Vyžadovat šifrování u mobilního zařízení**<sup>1</sup>|Vyžaduje, aby soubory v zařízení byly šifrované.<br>Pro zařízení s Windows Phone 8 je potřeba nastavit hodnotu **Ano**.|Ano|Ne|
 <sup>1</sup> Další informace pro zařízení s Windows 8.1
 
@@ -61,14 +61,14 @@ Pro konfiguraci následujících nastavení pro registrovaná zařízení s Wind
 ## Nastavení ochrany proti malwaru
 
 |Název nastavení|Podrobnosti|Windows 8.1 a Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|-----|-----------------------------|--------------|
 |**Vyžadovat síťovou bránu firewall**|Vyžaduje zapnutí brány Windows Firewall.|Ano|Ne|
 |**Povolit SmartScreen**|Vyžaduje použití filtru Windows SmartScreen.|Ano|Ne|
 
 ## Nastavení systému
 
 |Název nastavení|Podrobnosti|Windows 8.1 a Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|-------|---------------------------|--------------|
 |**Vyžadovat automatické aktualizace**|Zapne v zařízeních nastavení automatických aktualizací.|Ano|Ne|
 |**Vyžadovat automatické aktualizace – automatická instalace minimální klasifikace aktualizací**|Umožňuje vybrat klasifikaci aktualizací, které se budou instalovat automaticky:<br /><br />-   **Důležité** – Nainstaluje všechny aktualizace klasifikované jako důležité.<br />-   **Doporučené** – Nainstaluje všechny aktualizace klasifikované jako důležité nebo doporučené.|Ano|Ne|
 |**Řízení uživatelských účtů**|Vyžaduje použití řízení uživatelských účtů (UAC) v zařízeních.|Ano|Ne|
@@ -78,19 +78,19 @@ Pro konfiguraci následujících nastavení pro registrovaná zařízení s Wind
 ## Nastavení cloudu – dokumenty a data
 
 |Název nastavení|Podrobnosti|Windows 8.1 a Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|------|----------------------------|--------------|
 |**Adresa URL pracovních složek**|Nastaví adresu URL pracovní složky, aby bylo možné synchronizovat dokumenty na všech zařízeních.|Ano|Ne|
 
 ## Nastavení e-mailu
 
 |Název nastavení|Podrobnosti|Windows 8.1 a Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|-----|-----------------------------|--------------|
 |**Nastavit účet Microsoft jako volitelný v aplikaci Windows Pošta**|Povolí přístup k aplikaci Windows Mail bez účtu Microsoft.|Ano|Ne|
 
 ## Nastavení aplikace – prohlížeč
 
 |Název nastavení|Podrobnosti|Windows 8.1 a Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|-----|-----------------------------|--------------|
 |**Povolit automatické vyplňování**|Povolí uživatelům změnit nastavení automatického dokončování v prohlížeči.|Ano|Ne|
 |**Povolit blokování automaticky otevíraných oken**|Povolí nebo zakáže blokování automaticky otevíraných oken v prohlížeči.|Ano|Ne|
 |**Povolit moduly plug-in**|Umožní uživatelům přidávat do Internet Exploreru moduly plug-in.|Ano|Ne|
@@ -109,7 +109,7 @@ Pro konfiguraci následujících nastavení pro registrovaná zařízení s Wind
 ## Nastavení možností zařízení – mobilní
 
 |Název nastavení|Podrobnosti|Windows 8.1 a Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|----|------------------------------|--------------|
 |**Povolit datový roaming**|Povolí datový roaming, když je zařízení v mobilní síti.|Ano|Ne|
 
 
@@ -119,6 +119,6 @@ Pro konfiguraci následujících nastavení pro registrovaná zařízení s Wind
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO2-->
 
 

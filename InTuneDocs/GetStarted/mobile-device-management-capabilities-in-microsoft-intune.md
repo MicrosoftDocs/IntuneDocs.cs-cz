@@ -1,10 +1,10 @@
 ---
-title: "Možnosti správy mobilních zařízení | Microsoft Intune"
-description: "Přečtěte si toto téma a zjistěte, jak vám může Intune pomoct spravovat mobilní zařízení registrovaná ve službě."
+title: "Možnosti správy zaregistrovaných zařízení | Microsoft Intune"
+description: "Přečtěte si toto téma a zjistěte, jak vám může Intune pomoct spravovat zaregistrovaná zařízení."
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 08/23/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.assetid: f23b3ee7-78da-4e53-9fc2-78e58401bcf9
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2ef264e963f689bb5a47a795170e0b9915848eec
-ms.openlocfilehash: efe86b7fd56603de2b910a8ec76b6de91db3b698
+ms.sourcegitcommit: a09c5e3349945cfdcb4ae9d3aa51aa3f7024330a
+ms.openlocfilehash: eab582d30408d1a57643e30ba4965bd08f6ce847
 
 
 ---
-# Možnosti správy mobilních zařízení v Microsoft Intune
+# Možnosti správy zaregistrovaných zařízení v Microsoft Intune
 
 Microsoft Intune umožňuje spravovat řadu zařízení tím, že je *zaregistruje*. Některé typy zařízení můžete zaregistrovat sami, nebo je můžou zaregistrovat uživatelé pomocí *portálové aplikace společnosti*. Ta jim taky umožní řadu dalších činností, jako je procházení a instalace aplikací, kontrola kompatibility zařízení se zásadami společnosti a kontaktování podpory IT.
 
@@ -70,6 +70,6 @@ Operace správy, inventáře, nasazování aplikací, zřizování a vyřazován
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

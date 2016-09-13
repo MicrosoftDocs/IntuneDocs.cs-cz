@@ -13,8 +13,8 @@ ms.assetid: 0775107a-6662-41c8-9404-be14bbb599f3
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: b17a47a2924ef36df69db2aa852f0b225471ecd1
+ms.sourcegitcommit: 44443db664753b202cc3fa07f8b76894320dc55d
+ms.openlocfilehash: f3bb686dda7bdf1e9557be2b5f5e0da2fb4d27e4
 
 
 ---
@@ -35,7 +35,7 @@ Následující tabulka uvádí typy zařízení podporované zásadami dodržov�
 --------------
 
 |Nastavení zásady| Windows 8.1 a vyšší| Windows Phone 8.1 nebo novější| iOS 6.0 nebo novější|Android 4.0 nebo novější<br/>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|
-|-----|----|----|----|
+|-----|----|----|----|----|
 |**Konfigurace kódu PIN nebo hesla** |Opravené|Opravené|Opravené|V karanténě|
 |**Šifrování zařízení**|Není k dispozici|Opravené|Opravené (nastavením PIN kódu)|V karanténě|
 |**Zařízení s jailbreakem nebo rootem**|Není k dispozici|Není k dispozici|V karanténě (není nastavení)|V karanténě (není nastavení)|
@@ -62,6 +62,6 @@ Následující tabulka uvádí typy zařízení podporované zásadami dodržov�
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Sep16_HO1-->
 
 

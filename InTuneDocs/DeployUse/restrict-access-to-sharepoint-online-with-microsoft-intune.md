@@ -13,8 +13,8 @@ ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: d233ea540d7db00d9df5b5ed1f5db2cff6cd7b9e
+ms.sourcegitcommit: e285cadd63e711ddf5d37b878d298b47bacf3333
+ms.openlocfilehash: ab765d181cb2eb9e3e6a9c79c597241c4fd5985f
 
 
 ---
@@ -35,7 +35,7 @@ Když se uživatel na svém zařízení pokusí připojit k souboru pomocí podp
 >[!IMPORTANT]
 >Podmíněný přístup pro počítače PC a zařízení Windows 10 Mobile s aplikacemi využívajícími moderní ověřování není aktuálně dostupný pro všechny zákazníky využívající Intune. Pokud tyto funkce využíváte, nemusíte provádět žádnou akci. Můžete je dál používat.
 
->Pokud jste pro počítače nebo zařízení s Windows 10 Mobile pro aplikace využívající moderní ověřování nevytvořili zásady podmíněného přístupu a chcete to udělat, musíte odeslat žádost.  Další informace o známých problémech a o tom, jak k této funkci získat přístup, najdete na [webu Connect](http://go.microsoft.com/fwlink/?LinkId=761472).
+>Pokud jste nevytvořili zásady podmíněného přístupu pro počítače nebo Windows 10 Mobile pro aplikace využívající moderní ověřování a teď to chcete udělat, zaregistrujte si verzi Public Preview služby Azure Active Directory, která zahrnuje podmíněný přístup pro zařízení spravovaná pomocí Intune nebo počítače s Windows připojené k doméně. Další informace najdete v [tomto příspěvku blogu](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azuread-conditional-access-policies-for-ios-android-and-windows-are-in-preview/).
 
 **Dřív** než nakonfigurujete zásady podmíněného přístupu pro SharePoint Online, musíte:
 - Mít předplatné **SharePointu Online** a uživatelé musí mít licenci SharePointu Online.
@@ -134,7 +134,7 @@ V dalším kroku nakonfigurujte zásadu, která bude vyžadovat, aby měla k Sha
         *   Zařízení s Windows budou muset být zaregistrovaná a vyhovující, doména bude muset být spojena s místním Active Directory nebo obojí
         * Nepodporované platformy jako Mac.  Aplikace používající moderní ověřování pocházející z těchto platforem však budou i nadále zablokovány.
         >[!TIP]
-        >Pokud ještě nepoužíváte podmíněný přístup pro počítače PC, nemusí se vám tato možnost zobrazit.  Místo toho použijte možnost **Specifické platformy**. Podmíněný přístup pro počítače PC není aktuálně k dispozici všem zákazníkům Intune.   Další informace o známých problémech a o tom, jak k této funkci získat přístup, najdete na [webu Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=761472).
+        >Pokud ještě nepoužíváte podmíněný přístup pro počítače PC, nemusí se vám tato možnost zobrazit.  Místo toho použijte možnost **Specifické platformy**. Podmíněný přístup pro počítače PC není aktuálně k dispozici všem zákazníkům Intune.   Další informace o získání přístupu k této funkci najdete [v tomto příspěvku blogu](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azuread-conditional-access-policies-for-ios-android-and-windows-are-in-preview/).
 
     -   **Specifické platformy**
 
@@ -189,6 +189,6 @@ Vyberte libovolnou skupinu mobilních zařízení a pak na kartě **Zařízení*
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

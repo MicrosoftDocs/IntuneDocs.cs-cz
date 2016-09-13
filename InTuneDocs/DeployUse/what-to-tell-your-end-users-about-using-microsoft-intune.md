@@ -4,7 +4,7 @@ description: "Odkazy na informace, které můžete sdílet se svými koncovými 
 keywords: 
 author: staciebarker
 manager: angrobe
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 48914533-f138-4dc0-8b93-4cea3ac61f7b
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: e904f7e7e91d86359a0fd818032833caa382edcc
+ms.sourcegitcommit: 9f1946c02c6267a22844106e8f72555ec5e9cabb
+ms.openlocfilehash: d29649c204f50aec1d1604b55bebc6018a3c7ef2
 
 
 ---
@@ -33,7 +33,9 @@ Nezapomeňte při [přizpůsobování Portálu společnosti](/Intune/get-started
 
 ## Kde můžou koncoví uživatelé najít informace o běžných úlohách
 
-Pokud vaši koncoví uživatelé hledají informace o používání Intune na svých zařízeních, poskytněte jim následující odkazy na nápovědu pro koncové uživatele. Na těchto odkazech naleznou uživatelé kroky popisující instalaci aplikace Portál společnosti, registraci svých zařízení, získání spravovaných aplikací, řešení problémů a další.
+Když zaregistrovaní uživatelé potřebují pomoc s Intune, obvykle se jim na webu Portál společnosti nebo v aplikaci Portál společnosti zobrazuje odkaz, který je odkáže na konkrétní článek s postupem pro řešení potíží nebo dokončení úlohy. Pokud se třeba uživatelům s Androidem zobrazí zpráva, že jim chybí požadovaný certifikát, můžou klepnutím na odkaz Jak to vyřešit přejít na článek s postupem, jak tento certifikát získat. 
+
+Odkazy níž jsou pro správce IT. Tato stránka obsahuje odkazy na všechny články, na které jsou uživatelé nasměrovaní z webu nebo aplikace Portál společnosti. Tyto odkazy se rozdělené do několika skupin: instalace aplikace Portál společnosti a registrace ve službě Intune, úlohy, které uživatelé můžou provádět na svých zařízeních, jako je třeba použití spravovaných aplikací nebo ruční synchronizace zařízení, a řešení potíží.
 
 - [Použití zařízení Android s Intune](/Intune/EndUser/using-your-android-device-with-intune)
 - [Using your iOS or Mac OS X device with Intune](/Intune/EndUser/using-your-ios-or-mac-os-x-device-with-intune)
@@ -59,8 +61,10 @@ Pro pochopení, jak koncoví uživatelé získávají svoje aplikace, vyberte z 
 
 Chcete-li pomoci uživatelům s řešením problémů, které mohou nastat během používání Portálu společnosti, prohlédněte si [seznam zpráv, které se mohou zobrazit v Portálu společnosti](/Intune/Plan-Design/help-end-users-understand-company-portal-app-messages).
 
+Pokud byste chtěli, aby tento článek obsahoval ještě další informace, uveďte svoje návrhy do pole Komentář v dolní části tohoto tématu. Děkujeme.
 
 
-<!--HONumber=Jul16_HO4-->
+
+<!--HONumber=Aug16_HO4-->
 
 
