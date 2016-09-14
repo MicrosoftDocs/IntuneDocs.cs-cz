@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0d70a46d9c13aad1bc0a940836d83a99b93bb95e
-ms.openlocfilehash: 7f84ad1566431a7a72897750fadbc90cb56ec5ce
+ms.sourcegitcommit: 500cc93b595e04cea987bda699abf94ae010443a
+ms.openlocfilehash: f45fc02003c6b40cc15fabeffff35cf0cde1a830
 
 
 ---
@@ -90,7 +90,7 @@ V září vydáváme aktualizaci Portálu společnosti pro Android, která zavá
 ### Vylepšení toho, jak koncoví uživatelé iOS získají svoje aplikace
 Pro dlaždice aplikací v aplikaci Portál společnosti pro iOS se budou v září provádět následující změny tak, aby uživatele u všech aplikací odkazovaly na různá zobrazení v jednom umístění – na webu Portál společnosti. Apple v současnosti zakazuje, aby se obchodní a spravované aplikace z App Storu zobrazovaly v aplikaci Portál společnosti. Uživatel tak k vyhledání všech svých aplikací musí použít několik zobrazení.
 
-- Dlaždice **Portál společnosti** v současnosti odkazuje na seznam všech aplikací na kartě VŠE na webu Portál společnosti a bude tak fungovat i dál. Název této dlaždice se změní na **Všechny aplikace**.
+- Dlaždice **Firemní aplikace** v současnosti odkazuje na seznam všech aplikací na kartě VŠE na webu Portál společnosti a bude tak fungovat i dál. Název této dlaždice se změní na **Všechny aplikace**.
 - Dlaždice **Ostatní aplikace** v současnosti odkazuje v aplikaci Portál společnosti na zobrazení, ve kterém je uvedený seznam všech aplikací, které Apple aplikaci Portál společnosti povoluje zobrazit. Název dlaždice se změní na **Doporučené aplikace**. Po klepnutí na tuto dlaždici uživatelé přejdou na kartu DOPORUČENÉ na webu Portál společnosti.
 -  Dlaždice **Kategorie** v současnosti odkazuje v aplikaci Portál společnosti na zobrazení, ve kterém je uvedený seznam kategorií aplikací. Název této dlaždice se nezmění, ale bude teď na webu Portál společnosti odkazovat na kartu KATEGORIE.
 Aktualizované snímky obrazovky najdete [tady](https://gallery.technet.microsoft.com/Improvements-in-how-iOS-d1104186).
@@ -102,7 +102,7 @@ Pokud jste nakonfigurovali webový klip tak, aby se otevíral jenom ve spravovan
 
 ## Zastaralá služba
 ### Aplikace Portál společnosti pro Windows 8 a Windows Phone 8 se od září 2016 přestávají používat
-Od září 2016 přestane Microsoft Intune podporovat aplikace Portál společnosti Microsoft Intune pro platformy Windows Phone 8 a Windows 8. Pokud budete chtít do zařízení s těmito systémy dál distribuovat aplikace, aktualizujte si zařízení na Windows 8.1 a Windows Phone 8.1 a začněte používat odpovídající aplikaci Portál společnosti pro Windows 8.1 a Windows Phone 8.1.
+Od října 2016 přestane Microsoft Intune poskytovat podporu aplikacím Portál společnosti pro Windows 8 a Windows Phone 8. Microsoft Intune také přestat poskytovat podporu pro platformu Windows Phone 8. V důsledku toho nebude možné registrovat ani aktualizovat žádná zařízení Windows Phone 8. Zařízení Windows Phone 8 a Windows 8, která jsou již zaregistrována, můžete nadále spravovat. Pokud budete chtít do zařízení s těmito systémy dál bez přerušení distribuovat aplikace, aktualizujte si zařízení Windows 8 a Windows Phone 8 na Windows 8.1 a Windows Phone 8.1 a začněte používat odpovídající aplikaci Portál společnosti pro Windows 8.1 a Windows Phone 8.1.
 <!---TFS 1255391--->
 
 ### Odebrání možnosti cílení pravidel oznámení na vlastní skupiny
@@ -135,6 +135,6 @@ Podrobnosti o posledním vývoji najdete v tématu [Co je nového v Microsoft In
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

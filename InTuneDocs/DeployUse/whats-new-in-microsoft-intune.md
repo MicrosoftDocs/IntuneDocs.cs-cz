@@ -13,8 +13,8 @@ ms.assetid: fab51ee0-638d-4dd4-8d8f-1f263bc11e5c
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0d70a46d9c13aad1bc0a940836d83a99b93bb95e
-ms.openlocfilehash: a753ecfa08adcd27049c70889c50e10618ecddba
+ms.sourcegitcommit: 500cc93b595e04cea987bda699abf94ae010443a
+ms.openlocfilehash: 1f6a4b3988dbebce23a59b4ba14c79cd28cf6882
 
 
 ---
@@ -24,6 +24,11 @@ Zjistěte, co je nového v této verzi Microsoft Intune. Můžete také získat 
 
 Všechny tyto funkce budou posléze podporované pro zákazníky využívající hybridní nasazení (Configuration Manager s Intune). Další informace o nových funkcích pro hybridní nasazení najdete na naší [stránce Co je nového pro hybridní nasazení](https://technet.microsoft.com/en-US/library/mt718155(TechNet.10).aspx).
 <!---@Barry, the above blurb stays in each version, but make sure Tyler signs off each time. Also, remember to set the ms.date in the metadata to the sprint release. --->
+
+>[!IMPORTANT] 
+>Příspěvek blogu – aktualizace mobilních zařízení pomocí Microsoft Intune<br>
+>S ohledem na nedávné útoky malwaru Trident na zařízení s iOS jsme zveřejnili nový příspěvek blogu věnovaný [zajištění aktuálnosti mobilních zařízení pomocí Microsoft Intune](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/26/ensuring-mobile-devices-are-up-to-date-using-microsoft-intune/). Pomůže vám seznámit se s různými způsoby, kterými Intune může zajistit zabezpečení a aktuálnost vašich zařízení.
+
 
 ## Srpen 2016
 ## Správa aplikací
@@ -122,8 +127,8 @@ Od září se začne vyžadovat, aby všichni uživatelé aplikace Portál spole
 V srpnu Intune vydá aktualizovanou aplikaci Microsoft Intune Managed Browser pro iOS, která bude podporovat jenom zařízení se systémem iOS 8.0 nebo novějším. Přestože v zařízeních s iOS 7.1 bude i dál možné využívat stávající aplikaci Managed Browser, doporučte prosím svým uživatelům, aby aktualizovali na iOS 8.0 nebo novější a mohli plně využít výhody nových funkcí Managed Browseru.  
 <!---TFS 1313253--->
 
-- **Aplikace Portál společnosti pro Windows 8 a Windows Phone 8 se od září 2016 přestanou používat** <br/>
-Od září 2016 přestane Microsoft Intune podporovat aplikace Portál společnosti Microsoft Intune pro platformy Windows Phone 8 a Windows 8. Pokud budete chtít do zařízení s těmito systémy dál distribuovat aplikace, aktualizujte si zařízení na Windows 8.1 a Windows Phone 8.1 a začněte používat odpovídající aplikaci Portál společnosti pro Windows 8.1 a Windows Phone 8.1.
+- **Aplikace Portál společnosti pro Windows 8 a Windows Phone 8 se přestanou používat** <br/>
+Od října 2016 přestane Microsoft Intune poskytovat podporu aplikacím Portál společnosti pro Windows 8 a Windows Phone 8. Microsoft Intune také přestat poskytovat podporu pro platformu Windows Phone 8. V důsledku toho nebude možné registrovat ani aktualizovat žádná zařízení Windows Phone 8. Zařízení Windows Phone 8 a Windows 8, která jsou již zaregistrována, můžete nadále spravovat. Pokud budete chtít do zařízení s těmito systémy dál bez přerušení distribuovat aplikace, aktualizujte si zařízení Windows 8 a Windows Phone 8 na Windows 8.1 a Windows Phone 8.1 a začněte používat odpovídající aplikaci Portál společnosti pro Windows 8.1 a Windows Phone 8.1.
 <!---TFS 1255391--->
 
 <!--- - **Custom Group Targeting of Notification Rules Removal.**<br/>
@@ -153,6 +158,6 @@ Informace o tom, co bylo vydáno v rámci Intune během posledních šest měsí
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

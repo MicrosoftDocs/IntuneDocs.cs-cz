@@ -13,8 +13,8 @@ ms.assetid: 24b8ecbf-7336-4543-8094-32688bda0b8f
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 translationtype: Human Translation
-ms.sourcegitcommit: e1fe6b167b7d46f03472833bc1c3c19030f47bce
-ms.openlocfilehash: 498e1a68c2c87e57851e229d55e5054060affa81
+ms.sourcegitcommit: a5f80058e004f119acc9a918123c897b72b71314
+ms.openlocfilehash: 43bbb8590738182a26efcbeead1e59eff9e5f20d
 
 
 ---
@@ -25,7 +25,7 @@ Vaše odpovědi na tuto řadu otázek vám pomohou určit nejlepší metody regi
 ## **Jak se zařízení ve vlastnictví společnosti využívají? Jsou sdílená nebo je využívá vždycky jenom jeden konkrétní uživatel?**
 
 > [!div class="button"]
-[Sdílené >](choose-how-to-enroll-devices4.md)   [Vyhrazené >](choose-how-to-enroll-devices6.md)
+[Sdílené >](choose-how-to-enroll-devices4.md)<br>[Vyhrazené >](choose-how-to-enroll-devices6.md)
 
 - **Sdílená zařízení vlastněná společností:** Tato zařízení nemají jenom jednoho konkrétního uživatele a obvykle nejsou nakonfigurovaná pro přístup k e-mailu. O taková zařízení jde například v případě zařízení sloužících jako veřejný terminál nebo v případě zařízení, která si uživatelé vždy pouze vypůjčí na konkrétní úkol. Doporučené metody registrace závisí na platformě zařízení.
 
@@ -36,6 +36,6 @@ Vaše odpovědi na tuto řadu otázek vám pomohou určit nejlepší metody regi
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

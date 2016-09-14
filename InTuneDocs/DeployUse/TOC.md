@@ -9,8 +9,9 @@
 ## [Registrovat zařízení](enroll-devices-in-microsoft-intune.md)
 ### [Příprava registrace zařízení v Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
 #### [Správa iOS a Mac](set-up-ios-and-mac-management-with-microsoft-intune.md)
-#### [Windows 10 Mobile a Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md)
+#### [Správa Androidu](set-up-android-management-with-microsoft-intune.md)
 #### [Správa zařízení s Windows ](set-up-windows-device-management-with-microsoft-intune.md)
+#### [Windows 10 Mobile a Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md)
 ### [Správa zařízení vlastněných společností](manage-corporate-owned-devices.md)
 #### [Registrace zařízení iOS vlastněných společností](enroll-corporate-owned-ios-devices-in-microsoft-intune.md)
 ##### [Registrace průvodce nastavením iOS](ios-setup-assistant-enrollment-in-microsoft-intune.md)
@@ -107,6 +108,7 @@
 #### [Vytvoření a nasazení zásad MAM](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Zásady MAM pro Android](android-mam-policy-settings.md)
 #### [Zásady MAM pro iOS](ios-mam-policy-settings.md)
+#### [Ověření zásad MAM](validate-mobile-application-management.md)
 #### [Sledování dodržování zásad](monitor-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Správa přenosu dat mezi aplikacemi pro iOS](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 #### [Činnost koncového uživatele](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md)
@@ -135,6 +137,6 @@
 # [Řešení problémů](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Sep16_HO1-->
 
 

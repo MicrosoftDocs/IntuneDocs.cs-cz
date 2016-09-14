@@ -4,7 +4,7 @@ description: "Pro zařízení s Androidem spravovaná pomocí Intune můžete vy
 keywords: 
 author: nbigman
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 08/28/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,15 +13,17 @@ ms.assetid: ac65e906-3922-429f-8d9c-d313d3126645
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a2464a9d2276319f75a3da7db70c2613152bed9b
-ms.openlocfilehash: 177ed5f693b8f1ce16d96e1b3e729630d661475f
+ms.sourcegitcommit: eb2260f6bd37647d34871c9776dba3628d0aa8f6
+ms.openlocfilehash: a2af91827f3a5ebc549e7f474943f1b0cc6208dd
 
 
 ---
 
 # Použití vlastních zásad pro vytvoření profilu sítě VPN pro aplikaci pro zařízení se systémem Android
 
-Pro zařízení s Androidem spravovaná pomocí Intune můžete vytvořit profil VPN pro jednotlivé aplikace. Nejdřív vytvoříte profil VPN, který používá typ připojení Pulse Secure. Potom vytvoříte vlastní zásadu konfigurace, která přidruží tento profil ke konkrétním aplikacím. Po nasazení těchto zásad do skupin uživatelů nebo zařízení s Androidem způsobí otevření jedné ze zadaných aplikací, že se pro tuto aplikaci otevře spojení VPN.
+Pro zařízení s Androidem verze 5.0 a novější spravovaná pomocí Intune můžete vytvořit profil VPN pro jednotlivé aplikace. Nejdřív vytvoříte profil VPN, který používá typ připojení Pulse Secure. Potom vytvoříte vlastní zásadu konfigurace, která přidruží tento profil ke konkrétním aplikacím. 
+
+Po nasazení zásad pro skupiny zařízení nebo uživatelů Android by uživatelé měli spustit PulseSecure VPN. PulseSecure pak umožní provoz pouze z určených aplikací, které budou moci používat otevřené připojení VPN.
 
 > [!NOTE]
 >
@@ -49,8 +51,7 @@ Pro zařízení s Androidem spravovaná pomocí Intune můžete vytvořit profil
    6. Pro **OMA-URI** zadejte tento řetězec: **./Vendor/MSFT/VPN/Profile/*název*/PackageList**, kde *název* je název profilu VPN, který jste si poznamenali v kroku 1. V našem příkladu by se tedy použil řetězec **./Vendor/MSFT/VPN/Profile/profil_VPN_pro_moje_aplikace/PackageList**.
    7.   Do pole **Hodnota** zadejte seznam balíčků (oddělených středníkem), které mají být k tomuto profilu přidružené. Pokud třeba chcete, aby připojení VPN používal Excel a prohlížeč Google Chrome, zadejte **com.microsoft.office.excel;com.android.chrome**.
 
-
-    ![Příklad vlastní zásady VPN pro aplikaci pro Android](..\media\android_per_app_vpn_oma_uri.png)
+![Příklad vlastní zásady VPN pro aplikaci pro Android](./media/android_per_app_vpn_oma_uri.png)
 
 #### Nastavení seznamu aplikací jako zakázaných nebo povolených (volitelné)
   Pomocí hodnoty *BLACKLIST* můžete určit, že jde o seznam aplikací, pro které **není povoleno** použít připojení VPN. Ostatní aplikace se budou připojovat prostřednictvím VPN.
@@ -76,6 +77,6 @@ Shrnutí stavu a výstrahy na stránce **Přehled** v pracovním prostoru **Zás
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO5-->
 
 
