@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 500cc93b595e04cea987bda699abf94ae010443a
-ms.openlocfilehash: f45fc02003c6b40cc15fabeffff35cf0cde1a830
+ms.sourcegitcommit: b0653af30aa6e75888dd72c5b3a4afa0b2b1d596
+ms.openlocfilehash: a3cc5ea639c31e3fec08e86f27f118e193b8f4b3
 
 
 ---
@@ -84,9 +84,6 @@ Kromě změn ve správě skupin se také **přestanou používat následující 
 Web Portál společnosti nyní koncovým uživatelům umožní klepnout na nový odkaz Zpětná vazba v dolní části stránky a poslat společnosti Microsoft svoje názory na tuto stránku a zkušenosti s ní. Shromážděná anonymizovaná zpětná vazba pomůže Microsoftu zlepšit prostředí webu Portál společnosti.
 <!--- TFS 1313657--->
 
-### Přidání oznámení na Portál společnosti pro Android
-V září vydáváme aktualizaci Portálu společnosti pro Android, která zavádí novou ikonu **Oznámení** na domovské stránce. Klepnutí na tuto ikonu zpřístupní stránku **Oznámení**, kde se koncovým uživatelům zobrazí všechny položky, které v aplikaci Portál společnosti vyžadují pozornost, jako je třeba to, že zařízení nedodržuje předpisy, aktualizace nebo aktivace registrace. Pokud používáte také aplikaci Portál společnosti pro iOS, už jste se s těmito oznámeními setkali. Po zavedení stránky **Oznámení** se při každém spuštění nebo obnovení Portálu společnosti pro Android už nezobrazí stránka **Nastavení firemního přístupu**, pokud je zařízení už zaregistrované. Slyšeli jsme, že celá řada z vás vytvořila pokyny pro koncové uživatele a oceníte, pokud vás předem upozorníme, že vaše pokyny nebo snímky obrazovky mohou vyžadovat aktualizaci. Proveďte prosím aktualizaci dokumentace tak, aby tuto chystanou změnu odrážela. Aktualizované snímky obrazovky najdete tady: https://aka.ms/androidcpupdate.  
-
 ### Vylepšení toho, jak koncoví uživatelé iOS získají svoje aplikace
 Pro dlaždice aplikací v aplikaci Portál společnosti pro iOS se budou v září provádět následující změny tak, aby uživatele u všech aplikací odkazovaly na různá zobrazení v jednom umístění – na webu Portál společnosti. Apple v současnosti zakazuje, aby se obchodní a spravované aplikace z App Storu zobrazovaly v aplikaci Portál společnosti. Uživatel tak k vyhledání všech svých aplikací musí použít několik zobrazení.
 
@@ -135,6 +132,6 @@ Podrobnosti o posledním vývoji najdete v tématu [Co je nového v Microsoft In
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 
