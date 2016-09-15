@@ -12,15 +12,15 @@ ms.technology:
 ms.assetid: 970f8c81-7c7f-4789-9ed4-2133d50b9db6
 ms.reviewer: chrisgre
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: c2b4b6308569e1e67a1c3da18c12d19bdeecf08e
+ms.sourcegitcommit: 899f50cfec9e7c20d2981c077f93e0fccf37dc2b
+ms.openlocfilehash: 0b52bd8360f11e226674aefe80a578c451c2679d
 
 ---
 # Chraňte svá zařízení pomocí vzdáleného zámku a resetování hesla
 Microsoft Intune poskytuje možnosti pro vzdálený zámek i resetování hesla.
 
 ## Vzdálené zamknutí zařízení
-Pokud uživatel zařízení ztratí, můžete ho vzdáleně zamknout. Následující tabulka uvádí, jak vzdálené uzamčení funguje na různých mobilních platformách.
+Pokud uživatel zařízení ztratí, můžete ho vzdáleně zamknout. Následující tabulka uvádí, jak vzdálené uzamčení funguje na různých mobilních platformách. Vzdálené uzamčení není podporované
 
 |Platforma|Vzdálené uzamčení|
 |------------|---------------|
@@ -29,8 +29,9 @@ Pokud uživatel zařízení ztratí, můžete ho vzdáleně zamknout. Následuj�
 |Windows 10 a Windows 10 Mobile|Podporováno|
 |Windows Phone 8 a Windows Phone 8.1|Podporováno|
 |Windows RT 8.1 a Windows RT|Podporované, pokud je aktuální uživatel zařízení stejný jako uživatel, který ho zaregistroval.|
-|Windows 8.1|Podporované, pokud je aktuální uživatel zařízení stejný jako uživatel, který ho zaregistroval.|
+|Windows 8.1|Podporované, pokud je aktuální uživatel zařízení stejný jako uživatel, který ho zaregistroval.|
 
+Vzdálené uzamčení není podporované u počítačů s Windows, které jsou registrované pomocí klientského softwaru Intune.
 
 ### Vzdálené zamknutí mobilního zařízení pomocí konzoly Intune
 
@@ -53,7 +54,9 @@ Pokud uživatel zapomene heslo, můžete mu pomoct odebráním hesla ze zaříze
 |Windows 10 Mobile|Podporováno|
 |Windows Phone 8 a Windows Phone 8.1|Podporováno|
 |Windows RT 8.1 a Windows RT|Není podporované|
-|Windows 8.1|Není podporované|
+|Windows 8.1|Není podporované|
+
+Resetování hesla není podporované u počítačů s Windows, které jsou registrované pomocí klientského softwaru Intune.
 
 ### Resetování hesla:
 
@@ -73,6 +76,6 @@ Pokud uživatel zapomene heslo, můžete mu pomoct odebráním hesla ze zaříze
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 
