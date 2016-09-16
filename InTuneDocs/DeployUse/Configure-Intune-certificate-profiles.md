@@ -4,7 +4,7 @@ description: "Přečtěte si, jak vytvořit profil certifikátu Intune."
 keywords: 
 author: nbigman
 manager: angrobe
-ms.date: 07/25/2016
+ms.date: 09/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 679a20a1-e66f-4b6b-bd8f-896daf1f8175
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8e3f7cac8eb3495aad3835ec4713d67a58383c66
-ms.openlocfilehash: 8b08f8fde6136b8eca61f6ae7a8c21635f7d452e
+ms.sourcegitcommit: 55d3bd060b5567e98ca9ee6f4c4a003ce40a0371
+ms.openlocfilehash: 370a21f559fd1f86f60aeef5cbddea05d6fea682
 
 
 ---
@@ -48,15 +48,9 @@ Profil důvěryhodného certifikátu je nutné vytvořit před vytvořením prof
 
     Další informace: [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
-3.  Zadejte informace požadované pro konfiguraci nastavení profilu důvěryhodného certifikátu pro Android, iOS, Mac OS X, Windows 8.1 nebo Windows Phone 8.1.
-
-    - V nastavení **Soubor certifikátu** importujte certifikát důvěryhodné kořenové certifikační autority (soubor .cer), který jste exportovali z vydávající certifikační autority. Nastavení **Cílové úložiště** se použije jen na zařízení se systémem Windows 8.1 a novějším a jen v případě, že má zařízení víc než jedno úložiště certifikátů.
-    -  Pokud chcete zadat vlastní formát názvu subjektu, v části **Formát názvu subjektu** vyberte **Vlastní**.  
-        Vlastní formát je aktuálně možné použít pro dvě proměnné, a to `Common Name (CN)` a `Email (E)`. Kombinací těchto proměnných a statických řetězců můžete vytvořit vlastní formát názvu subjektu, jako je třeba tenhle:  
-
-        `CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US`  
-
-        V příkladu správce vytvořil formát názvu subjektu, který kromě proměnných `CN` a `E` používá řetězce pro hodnoty Organizační jednotka (OU), Organizace (O), Umístění (L), Oblast (S) a Země (C). Výčet podporovaných řetězců je uveden v popisu [funkce CertStrToName](https://msdn.microsoft.com/en-us/library/windows/desktop/aa377160.aspx).  
+3.  Zadejte informace požadované pro konfiguraci nastavení profilu důvěryhodného certifikátu pro Android, iOS, Mac OS X, Windows 8.1 nebo Windows Phone 8.1. 
+4.  V nastavení **Soubor certifikátu** importujte certifikát důvěryhodné kořenové certifikační autority (soubor .cer), který jste exportovali z vydávající certifikační autority. Nastavení **Cílové úložiště** se použije jen na zařízení se systémem Windows 8.1 a novějším a jen v případě, že má zařízení víc než jedno úložiště certifikátů.
+    
 4.  Vyberte možnost **Uložit zásadu**.
 
 Nová zásada se zobrazí v pracovním prostoru **Zásady**. Teď ji můžete nasadit.
@@ -79,7 +73,7 @@ Po vytvoření profilu certifikátu důvěryhodné certifikační autority vytvo
 3.  Pokud chcete konfigurovat nastavení profilu certifikátu SCEP, postupujte podle pokynů na stránce konfigurace profilu.
     > [!NOTE]
     >
-    > Pokud chcete zadat vlastní formát názvu subjektu, v části **Formát názvu subjektu** vyberte **Vlastní**.
+    > Pokud chcete zadat vlastní formát názvu subjektu (jenom profily iOS), v části **Formát názvu subjektu** vyberte **Vlastní**.
     >
     > Vlastní formát je aktuálně možné použít pro dvě proměnné, a to `Common Name (CN)` a `Email (E)`. Kombinací těchto proměnných a statických řetězců můžete vytvořit vlastní formát názvu subjektu, jako je třeba tenhle:
 
@@ -136,6 +130,6 @@ Dál zjistěte, jak pomocí certifikátů zabezpečit profily e-mailu, Wi-Fi a V
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

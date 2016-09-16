@@ -56,7 +56,7 @@
 ## [Ochrana zařízení](protect-your-devices-with-microsoft-intune.md)
 ### [Vzdálené uzamčení a resetování hesla](use-remote-lock-and-passcode-reset-in-microsoft-intune.md)
 ### [Ochrana zařízení s Windows pomocí MFA](protect-windows-devices-with-multi-factor-authentication.md)
-### [Kontrola nastavení Microsoft Passportu v zařízeních](control-microsoft-passport-settings-on-devices-with-microsoft-intune.md)
+### [Nastavení Windows Hello pro firmy](control-microsoft-passport-settings-on-devices-with-microsoft-intune.md)
 ### [Vynechání zámku aktivace v iOS](help-protect-ios-devices-with-activation-lock-bypass-for-microsoft-intune.md)
 ### [Zásady ochrany počítačů s Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)
 #### [Aktualizace softwaru](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)

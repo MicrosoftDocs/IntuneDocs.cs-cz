@@ -4,7 +4,7 @@ description: "Tento článek vám pomůže při řešení problémů s nasazení
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/02/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 28ac298e-fb73-4c1c-b3fd-8336639e05e6
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aa96cf3a1909e3ea2187a3beb0aede3228894504
-ms.openlocfilehash: 9f4b91bd523c82665bcac54902b2e8cc9c72ef75
+ms.sourcegitcommit: a5256d4decfcd14de2d50a32a0906b6894639010
+ms.openlocfilehash: 552514971a64b16f88a7d83a0f7d66a0c00b61b0
 
 
 ---
@@ -22,49 +22,7 @@ ms.openlocfilehash: 9f4b91bd523c82665bcac54902b2e8cc9c72ef75
 # Řešení problémů s nasazením aplikací v Microsoft Intune
 Pokud máte potíže s nasazením a správou aplikací v Intune, začněte zde. Toto téma popisuje některé běžné problémy, na které můžete narazit, a jejich řešení.
 
-## Běžné problémy s nasazením aplikací
-
-### V Portálu společnosti chybí kontaktní údaje oddělení IT
-
-1.  V konzole správce Intune zvolte **Správa** &gt; **Portál společnosti**.
-
-2.  Nastavte kontaktní údaje pro **kontaktování IT oddělení** .
-
-### Pokud nevidíte konkrétní aplikace v seznamu
-
-1.  Ujistěte se, že se díváte seznam aplikací pro uživatele nebo zařízení, pro které se aplikace nasadila.
-
-2.  Ujistěte se, že zařízení splňuje požadavky na aplikaci.
-
-### Pokud se vám při stahování aplikace zobrazí chybová zpráva
-
-1.  Ujistěte se, že neprobíhá více než jedno souběžné stahování na jednoho uživatele. Každý uživatel může najednou stahovat jenom jednu aplikaci.
-
-2.  Ujistěte se, že na jednotlivé účty nepřipadá moc velký počet souběžných stahování. Počkejte několik minut a potom to zkuste znova.
-
-3.  Pokud se zobrazí nativní zpráva iOS s informacemi o tom, že nemůžete instalovat, že instalace je zrušená nebo že to musíte zkusit znova, může to být způsobené aktuálně vysokým přenosem. Počkejte několik minut a potom to zkuste znova.
-
-4.  Pokud indikátor průběhu stahování iOS aplikace ukazuje dokončení, ale aplikace nejde nainstalovat, bude nejspíš chyba v souborech aplikace, které jste dali k dispozici.
-
-
-### Pokud se vám aplikace „zasekne“ při nahrávání
-
-1.  Při nahrávání aplikace se nejdřív přidají metadata a pak balíček aplikace. Až se nahrají metadata, začne se aktualizovat průběh nahrávání aplikace. Pokud zjistíte, že se vám aplikace v průběhu nahrávání „zasekla“ na neobvykle dlouhou dobu, odstraňte aplikaci a nahrajte ji znovu.
-
-2.  Pokud takto aplikace takto zůstane viset, nespravujte její nasazení.
-
-### Pokud dojde k chybě při instalaci iOS aplikace
-
-1.  Ujistěte se, že brána firewall vaší organizace umožňuje přístup na weby zřizování a certifikace společnosti Apple.
-
-2.  Další informace najdete v dokumentaci pro vývojáře Apple.
-
-### Pokud spravované aplikace nehlásí stav instalace
-
-Stav instalace se pro instalace spravovaných aplikací před aktualizací služby Microsoft Intune v listopadu 2014 neshromažďoval. Pro zařízení, na které se nainstalovaly spravované aplikace před aktualizací této služby, aktualizujte nasazení každé přidružené aktualizace pomocí odpovídající akce nasazení (například **Dostupná instalace**). Každé zařízení aplikaci aktualizuje během automatického zjišťování dostupnosti aplikací. Další informace najdete v tématu [Aktualizace aplikací pomocí Microsoft Intune](/intune/deploy-use/update-apps-using-microsoft-intune).
-
-## <a name="BKMK_SoftDistErrorCodes"></a>Kódy chyb nasazení aplikací
-V následující tabulce najdete běžné chyby, ke kterým může dojít během nasazování aplikací v Intune, pravděpodobné příčiny a možná řešení.
+## Běžné chybové kódy při nasazování aplikací
 
 |Kód chyby|Možný problém|Navržené řešení|
 |--------------|--------------------|------------------------|
@@ -79,6 +37,6 @@ Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podpor
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO1-->
 
 

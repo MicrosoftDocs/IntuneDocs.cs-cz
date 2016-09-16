@@ -13,8 +13,8 @@ ms.assetid: fab51ee0-638d-4dd4-8d8f-1f263bc11e5c
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 500cc93b595e04cea987bda699abf94ae010443a
-ms.openlocfilehash: 1f6a4b3988dbebce23a59b4ba14c79cd28cf6882
+ms.sourcegitcommit: c636efee82331d6feac75153b872526f7af7c882
+ms.openlocfilehash: 814312b0ac6055ffff2efad2ddbdaa8664f84fde
 
 
 ---
@@ -29,6 +29,21 @@ Všechny tyto funkce budou posléze podporované pro zákazníky využívající
 >Příspěvek blogu – aktualizace mobilních zařízení pomocí Microsoft Intune<br>
 >S ohledem na nedávné útoky malwaru Trident na zařízení s iOS jsme zveřejnili nový příspěvek blogu věnovaný [zajištění aktuálnosti mobilních zařízení pomocí Microsoft Intune](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/26/ensuring-mobile-devices-are-up-to-date-using-microsoft-intune/). Pomůže vám seznámit se s různými způsoby, kterými Intune může zajistit zabezpečení a aktuálnost vašich zařízení.
 
+## Září 2016
+
+## Aktualizace Portálu společnosti
+### Android
+
+**Přidání oznámení do aplikace Portál společnosti pro Android**
+
+Na domovskou stránku aplikace Portál společnosti pro Android byla přidaná nová ikona oznámení. Klepnutí na tuto ikonu otevře stránku Oznámení, kde se koncovým uživatelům zobrazí všechny položky, které v aplikaci Portál společnosti vyžadují pozornost (například že nějaké zařízení nedodržuje předpisy, zpráva o aktualizaci registrací nebo aktivaci registrací). Aplikace Portál společnosti pro iOS už tato oznámení má. Po zavedení stránky Oznámení se už při každém spuštění nebo obnovení aplikace Portál společnosti pro Android nezobrazí stránka Nastavení firemního přístupu, pokud je zařízení už zaregistrované. Pokud vytvoříte vlastní návod pro koncové uživatele, nezapomeňte tuto změnu do dokumentace promítnout. Aktualizované snímky obrazovky najdete [tady](https://aka.ms/androidcpupdate).  
+<!---TFS 1095560--->
+
+### Windows
+**Přidání tlačítka pro odeslání zpětné vazby do aplikace Portál společnosti pro Windows Phone 8.1**
+
+Portál společnosti pro Windows Phone 8.1 koncovým uživatelům umožňuje odeslat zpětnou vazbu o aplikaci. Slouží k tomu tlačítko „Odeslat názor“. Tlačítko najdete tak, že klepnete na třítečkovou nabídku v dolní pravé části obrazovky aplikace Portál společnosti a potom na **Odeslat názor**. Shromážděná anonymizovaná zpětná vazba pomůže Microsoftu zlepšit prostředí aplikace Portál společnosti.
+<!---TFS 1317806--->
 
 ## Srpen 2016
 ## Správa aplikací
@@ -87,6 +102,10 @@ Aplikaci Microsoft Intune Managed Browser pro iOS byla aktualizována a podporuj
 <!---TFS 1313253 checked--->
 
 ## Co připravujeme
+
+### Podpora pro iOS 10
+Intune bude plně podporovat iOS 10. Další informace zveřejníme po vydání iOS 10.
+
 ### Přechod od skupin Intune ke skupinám Azure Active Directory od září 2016
 Intune vytváří nové prostředí pro správu skupin, které využívá skupiny zabezpečení Azure Active Directory (AAD) a skupiny uživatelů a zařízení v Intune. Tyto skupiny se budou využívat pro veškerou správu skupin a nasazování zásad a profilů, **až zavedeme nový portál pro správu Intune s využitím Azure**.
 
@@ -158,6 +177,6 @@ Informace o tom, co bylo vydáno v rámci Intune během posledních šest měsí
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 
