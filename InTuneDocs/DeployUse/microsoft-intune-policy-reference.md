@@ -4,7 +4,7 @@ description: "Informace v tomto tématu vám pomohou rozhodnout, jaké zásady M
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +13,13 @@ ms.assetid: d27f2739-9791-4aae-a9db-01a4e59ccfe5
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5a8d2702037b7b96b454078e991dea429143e733
-ms.openlocfilehash: aa081dd17c0067082e314ac45d2a52792f66b8d6
+ms.sourcegitcommit: 06a9c78300d7ff384299957102114c69c43a1ad5
+ms.openlocfilehash: 06616ba43069cc6e81692a4c638f2bf8b072fdc1
 
 
 ---
 
-# Referenční informace o zásadách Microsoft Intune
+# Referenční informace o zásadách konfigurace služby Intune
 
 Informace v tomto tématu vám pomohou rozhodnout, které zásady konfigurace Microsoft Intune byste měli používat ke správě svých zařízení.
 
@@ -74,7 +74,7 @@ Platí jenom pro Windows Phone a zaregistrovaná zařízení s Windows.
 |---------------|------------------------|
 |**Vlastní konfigurace (Windows 10 Desktop a Mobile a novější)**|Nasadit nastavení OMA URI, která se dají použít k řízení funkcí zařízení. To je užitečné, když nastavení, které potřebujete, není k dispozici v zásadách konfigurace.<br />    Podrobnosti najdete v tématu [Nastavení zásad pro Windows 10 v Microsoft Intune](windows-10-policy-settings-in-microsoft-intune.md).|
 |**Vlastní konfigurace (Windows Phone 8.1 a novější)**|Nasadit nastavení OMA URI, která se dají použít k řízení funkcí zařízení. To je užitečné, když nastavení, které potřebujete, není k dispozici v zásadách konfigurace.<br /><br />Podrobnosti najdete v tématu [Nastavení zásad pro Windows Phone 8.1 v Microsoft Intune](windows-phone-8-1-policy-settings-in-microsoft-intune.md).|
-|**Zásady upgradu edice (Windows 10 Desktop nebo novější)**<br><br>**Zásady upgradu edice (Windows 10 Holographic nebo novější)**|Konfigurovat a nasadit zásady obsahujících informace o licenčním kódu a kódu Product Key, který se používá k aktualizaci zařízení s Windows 10 na novější verzi.<br><br>Podrobnosti najdete v tématu [Nastavení zásad upgradu edice v Microsoft Intune](edition-upgrade-policy-settings-in-microsoft-intune.md).|  
+|**Zásady upgradu edice (Windows 10 Desktop nebo novější)**<br><br>**Zásady upgradu edice (Windows 10 Holographic nebo novější)**<br><br>**Zásady upgradu edice (Windows 10 Mobile nebo novější)**|Konfigurovat a nasadit zásady obsahujících informace o licenčním kódu a kódu Product Key, který se používá k aktualizaci zařízení s Windows 10 na novější verzi.<br><br>Podrobnosti najdete v tématu [Nastavení zásad upgradu edice v Microsoft Intune](edition-upgrade-policy-settings-in-microsoft-intune.md).|  
 |**E-mailový profil (Windows Phone 8 a novější)**<br /><br />**E-mailový profil (Windows 10 Desktop a Mobile a novější)**|Vytvořit, nasadit a monitorovat nastavení e-mailů Exchange ActiveSync na spravovaných zařízeních. Díky tomu mají uživatelé na svých osobních zařízeních přístup k podnikovému e-mailu, bez nutnosti něco nastavovat.<br /><br />Podrobnosti najdete v tématu [Konfigurace přístupu k podnikovému e-mailu pomocí e-mailových profilů v Microsoft Intune](configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune.md).|
 |**Obecná konfigurace (Windows 10 Desktop a Mobile a novější)**|Konfigurovat zabezpečení mobilních zařízení a funkční nastavení pro zaregistrovaná zařízení s Windows 10 Desktop a Mobile.<br /><br />Podrobnosti najdete v tématu [Nastavení zásad pro Windows 10 v Microsoft Intune](windows-10-policy-settings-in-microsoft-intune.md).|
 |**Obecná konfigurace (Windows 10 Team a novější)**|Nakonfigurujte nastavení funkcí a zabezpečení zařízení pro registrovaná zařízení se systémem Windows 10 Team (například zařízení Surface Hub).<br /><br />Podrobnosti najdete v tématu [Nastavení zásad konfigurace pro Windows Team v Microsoft Intune](windows-team-configuration-policy-settings-in-microsoft-intune.md).|
@@ -104,25 +104,7 @@ Platí jenom pro Windows Phone a zaregistrovaná zařízení s Windows.
 > [!IMPORTANT]
 Microsoft Intune teď nabízí oddělené **zásady konfigurace** pro každou platformu zařízení a tyto zásady obsahují nejaktuálnější nastavení, které můžete použít. Můžete pokračovat v používání zásad zabezpečení mobilních zařízení a všechna existující nasazení budou i nadále fungovat, měli byste ale naplánovat, aby se v co nejbližší době provedla migrace na nové zásady konfigurace.<br />Podrobnosti najdete v tématu [Zásady zabezpečení mobilních zařízení v Microsoft Intune](mobile-device-security-policy-settings-in-microsoft-intune.md).|
 
-## Zásady podmíněného přístupu a zásady dodržování předpisů
-
-### Podmíněný přístup
-
-|Název zásady|Použijte v případě, že chcete|
-|---------------|------------------------|
-|**Zásady Exchange Online**<br /><br />**Zásady místního systému Exchange**|Spravovat přístup k e-mailům Microsoft Exchange ze zařízení, která nespravuje Intune nebo která nevyhovují vytvořeným zásadám dodržování předpisů.<br /><br />Podrobnosti najdete v tématu [Omezení e-mailového přístupu k Exchangi Online a novému vyhrazenému prostředí Exchange Online s Intune](restrict-access-to-exchange-online-with-microsoft-intune.md).|
-|**Zásady SharePointu Online**|Spravovat přístup k SharePointu Online ze zařízení, která nespravuje Intune nebo která nevyhovují vytvořeným zásadám dodržování předpisů.<br /><br />Podrobnosti najdete v tématu [Omezení přístupu k SharePoint Online pomocí Microsoft Intune](restrict-access-to-sharepoint-online-with-microsoft-intune.md).|
-|**Skype pro firmy**|Spravovat přístup ke Skypu pro firmy ze zařízení, která nespravuje Intune nebo která nevyhovují vytvořeným zásadám dodržování předpisů.<br /><br />Podrobnosti najdete v tématu [Omezení přístupu k SharePoint Online pomocí Microsoft Intune](restrict-access-to-skype-for-business-online-with-microsoft-intune.md).|
-> [!NOTE]
-> Zásady podmíněného přístupu nenasazujte na uživatele a zařízení. Namísto toho nakonfigurujte požadované zásady, které se použijí na všechny cílové skupiny v zásadách.
-
-### Zásady slučitelnosti
-
-|Název zásady|Použijte v případě, že chcete|
-|---------------|------------------------|
-|**Zásady slučitelnosti**|Definovat úroveň souladu s předpisy pro zařízení a vytvářet zprávy o zařízeních, která nejsou v souladu s předpisy. Tyto zásady se společně s podmíněným přístupem používají k vyhodnocení zařízení, u kterých se mají blokovat služby.<br /><br />Podrobnosti najdete v tématu [Zásady dodržování předpisů u zařízení v Microsoft Intune](introduction-to-device-compliance-policies-in-microsoft-intune.md).|
-
-## Správa počítačů s Windows
+## Zásady pro počítače s Windows spravované softwarovým klientem Intune
 
 |Název zásady|Použijte v případě, že chcete|
 |---------------|------------------------|
@@ -136,6 +118,6 @@ Microsoft Intune teď nabízí oddělené **zásady konfigurace** pro každou pl
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

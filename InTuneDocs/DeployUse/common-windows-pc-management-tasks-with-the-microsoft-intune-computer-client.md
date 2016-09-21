@@ -1,6 +1,6 @@
 ---
 title: "Běžné úlohy správy počítačů s Windows | Microsoft Intune"
-description: "Když si přečtete informace uvedené v tomto tématu, dozvíte se, jak spravovat počítače, na kterých běží software počítačového klienta Intune."
+description: "Když si přečtete informace uvedené v tomto tématu, dozvíte se, jak spravovat počítače se systémem Windows, na kterých běží klientský software Intune."
 keywords: 
 author: NathBarn
 manager: angrobe
@@ -13,22 +13,24 @@ ms.assetid: eb912c73-54d2-4d78-ac34-3cbe825804c7
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: dcfa3af374a7e64e931508e1a8022bf8a50c71a7
-ms.openlocfilehash: 93d5718fcd9949945180434b0f89eea96e92bbc6
+ms.sourcegitcommit: 16be49504b24269f9463905ab5767acbda136a0a
+ms.openlocfilehash: 9ef18ee054928fcfb12a36fe8ac3ad3c2909f6c1
 
 
 ---
 
-# Běžné úlohy správy počítačů s Windows pomocí počítačového klienta Microsoft Intune
-Když si přečtete informace uvedené v tomto tématu, dozvíte se, jak spravovat počítače, na kterých běží software počítačového klienta Intune. Pokud jste ještě na svých počítačích klienta nenainstalovali, přečtěte si téma [Instalace klienta na počítači s Windows pomocí Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
+# Běžné úlohy správy počítačů s Windows pomocí klientského softwaru Intune
+Když si přečtete informace uvedené v tomto tématu, dozvíte se, jak spravovat počítače, na kterých běží klientský software Intune. Pokud jste ještě na svých počítačích tohoto klienta nenainstalovali, přečtěte si téma [Instalace klientského softwaru Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
 
 ## Použití zásad ke zjednodušení správy počítačů
-### Správa brány Windows Firewall
-Zásady zjednodušují správu nastavení brány Windows Firewall na spravovaných počítačích. Podrobné informace najdete v tématu [Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall v Microsoft Intune](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md).
+
+Na počítačích s Windows se dá klientský software Intune spravovat přes zásady **Správa počítače**.
+
+![Šablony zásad pro počítače s Windows](../media/pc_policy_template.png)
 
 ### Správa centra Microsoft Intune Center
-Microsoft Intune Center uživatelům umožňuje:
+Klientský software Intune se uživatelům zobrazí jako **Microsoft Intune Center**. Microsoft Intune Center uživatelům umožňuje:
 
 -   Získávat aplikace z portálu společnosti
 
@@ -49,11 +51,14 @@ Microsoft Intune Center se nainstaluje na všech spravovaných počítačích. V
 |**Adresa URL webu**|Adresa URL vašeho webu podpory<br /><br />Maximální délka: 150 znaků|
 |**Poznámky**|Poznámka, která se zobrazuje uživatelům<br /><br />Maximální délka: 120 znaků|
 
-### Správa nastavení aktualizací softwaru
-Pomocí zásad můžete nakonfigurovat nastavení, která budou spravované počítače používat k hledání a stahování aktualizací softwaru od Microsoftu i jiných výrobců. Další informace najdete v tématu [Udržování počítačů s Windows v aktuálním stavu díky softwarovým aktualizacím v Microsoft Intune](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md).
+## Nastavení aktualizací softwaru
+Pomocí zásad můžete nakonfigurovat nastavení, která budou spravované počítače používat k hledání a stahování aktualizací softwaru od Microsoftu i jiných výrobců. Tyto aktualizace nezahrnují upgrade operačního systému, tj. upgrade z Windows 7 na Windows 10 nebo upgrade starší verze Windows 10 na verzi novější. Další informace najdete v tématu [Udržování počítačů s Windows v aktuálním stavu díky softwarovým aktualizacím v Microsoft Intune](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md).
 
-### Správa nastavení služby Endpoint Protection
+### Nastavení služby Endpoint Protection
 Pomocí zásad můžete nakonfigurovat nastavení pro službu Endpoint Protection a potom je můžete nasadit na spravované počítače. Můžou to být třeba plány kontrol, akce, které se mají udělat v případě detekce malwaru, a další věci. Další informace najdete v tématu [Pomoc se zabezpečením počítačů s Windows pomocí služby Endpoint Protection pro Microsoft Intune](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md).
+
+## Nastavení brány Windows Firewall
+Zásady zjednodušují správu nastavení brány Windows Firewall na spravovaných počítačích. Podrobné informace najdete v tématu [Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall v Microsoft Intune](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md).
 
 ## Zobrazení inventáře hardwaru a softwaru
 Intune shromažďuje podrobné informace o hardwaru a softwaru spravovaných počítačů. V následujících postupech se dozvíte toto:
@@ -113,13 +118,13 @@ Intune shromažďuje podrobné informace o hardwaru a softwaru spravovaných po�
 
 2.  Vyberte zařízení, která chcete vyřadit, a potom zvolte **Vyřadit z provozu či vymazat**.
 
-Když budete chtít počítač do služby Intune znovu zaregistrovat, přeinstalujte na počítači klientský software, a to podle informací uvedených v tématu [Instalace klienta na počítači s Windows pomocí Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
+Když budete chtít počítač do služby Intune znovu zaregistrovat, přeinstalujte na počítači klientský software, a to podle pokynů uvedených v tématu [Instalace klienta na počítači s Windows pomocí Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
 Když se nějaký počítač nemůže k Intune připojit, v pracovním prostoru **Řídicí panel** se zobrazí zpráva.
 
 Při vyřazení počítače s stane toto:
 
--   Počítač se odebere z inventáře a správy Intune a licence, které jsou k němu přiřazené, se uvolní pro nové použití. Vyřazení z provozu či vymazání odebere klientský software Intune, ale neodstraní z počítače aplikace a data.
+-   Počítač se odebere z inventáře a správy Intune a licence, které jsou k němu přiřazené, se uvolní pro nové použití. Vyřazení z provozu či vymazání odebere klientský software Intune, ale neodstraní z počítače aplikace a data. Toto vyřazení neodstraní z počítače úplně všechna data.
 
 -   Jeho stav se už nebude zobrazovat v konzole Intune.
 
@@ -160,9 +165,9 @@ Abyste mohli nasadit software pro uživatele, musíte uživatele propojit s poč
 > [!TIP]
 > Když chcete koncovým uživatelům omezit schopnosti propojení vlastních účtů s počítači, povolte možnost **Omezit schopnosti uživatelů propojit s počítači vlastní účet** v zásadách **Nastavení agenta Microsoft Intune**.
 
-## Vyžádání a poskytnutí vzdálené pomoci počítačům s Windows, které využívají klientský software Intune
+## Žádost a poskytnutí vzdálené pomoci na počítačích s Windows
 
-Microsoft Intune může využívat software [TeamViewer](https://www.teamviewer.com), který umožní uživatelům počítačů s klientským softwarem Intune, aby od vás získali vzdálenou pomoc. Když si uživatel vyžádá pomoc od centra Microsoft Intune Center, budete o tom informováni prostřednictvím výstrahy. Můžete tuto žádost přijmout a potom poskytnout pomoc.
+Microsoft Intune může využívat software [TeamViewer](https://www.teamviewer.com), který je třeba zakoupit zvlášť. Ten umožňuje uživatelům počítačů s klientským softwarem Intune, aby od vás získali vzdálenou pomoc. Když si uživatel vyžádá pomoc od centra Microsoft Intune Center, budete o tom informováni prostřednictvím výstrahy. Můžete tuto žádost přijmout a potom poskytnout pomoc.
 Tato funkce nahrazuje stávající funkci Vzdálená pomoc pro Windows v Intune.
 
 
@@ -211,6 +216,6 @@ V nabídce **Akce** v okně **TeamViewer** zvolte **Ukončit relaci**.
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Sep16_HO1-->
 
 

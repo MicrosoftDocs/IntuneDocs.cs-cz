@@ -4,7 +4,7 @@ description: "Použijte Intune k zobrazení informací o hardwaru zařízení, k
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/17/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,15 @@ ms.assetid: 312911fe-b963-4949-9911-ae425e0590b2
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: df4e0bc8a818f22d6f7327f9f1348f67882e0c49
-ms.openlocfilehash: 80b157c021099513854b8ffc1fe09cd2922ee0c2
+ms.sourcegitcommit: 18ef1ca18244b202a35fc8fc23fc994105b7b47e
+ms.openlocfilehash: ff55533499494488cd4cd692c6e36fe547ade3e4
 
 
 ---
 
 # Seznámení se zařízeními s inventářem v Microsoft Intune
 Microsoft Intune umožňuje zobrazit inventář zaregistrovaných zařízení a počítačů s Windows, na kterých je spuštěn klientský software Intune.
+Intune obvykle shromažďuje inventář ze spravovaných zařízení každých 7 dní. Z tohoto důvodu může dojít ke zpoždění, než sestavy ukážou výsledky nedávných změn, ke kterým na zařízeních došlo, například ke změně názvu zařízení nebo změně volného úložného prostoru.
 
 ## Co se shromažďuje ze zaregistrovaných zařízení?
 Pokud chcete zobrazit inventář, který shromažďují mobilní zařízení, spusťte [Sestavy inventáře mobilních zařízení](understand-microsoft-intune-operations-by-using-reports.md). Intune shromažďuje ze zaregistrovaných zařízení následující inventář:
@@ -114,6 +115,6 @@ Chcete-li zobrazit inventář shromážděný z počítačů s Windows, spusťte
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO5-->
 
 

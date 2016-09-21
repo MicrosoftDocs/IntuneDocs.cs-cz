@@ -4,7 +4,7 @@ description: "K nasazení nastavení VPN pro uživatele a zařízení ve vaší 
 keywords: 
 author: Nbigman
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: abc57093-7351-408f-9f41-a30877f96f73
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: 475c68f8812627cd58f86bb74d8c48988f53f7ed
+ms.sourcegitcommit: 957edcf6910dd15f15ab5020773233c6a6ba0ea7
+ms.openlocfilehash: fb5fbbe50295d3fc26f3cd4def4f40898bb6ffd2
 
 
 ---
@@ -27,7 +27,7 @@ Chcete třeba zřizovat všechna zařízení s iOS s nastavením požadovaným p
 Pomocí profilů VPN můžete konfigurovat následující typy zařízení:
 
 * Zařízení se systémem Android 4 nebo novější verzí
-* Zařízení se systémem iOS 7.1 nebo novější verzí
+* Zařízení se systémem iOS 8.0 nebo novější verzí
 * Zařízení se systémem Mac OS X 10.9 nebo novější verzí
 * Zaregistrovaná zařízení se systémem Windows 8.1 a novějším
 * Zařízení s Windows Phone 8.1 a novějším
@@ -45,6 +45,8 @@ Intune podporuje vytváření profilů VPN, které používají následující t
 Typ připojení |iOS a Mac OS X  |Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop a Mobile |
 ----------------|------------------|-------|-----------|----------|--------------|-----------------|----------------------|
 Cisco AnyConnect|Ano |Ano   |Ne    |     Ne    |Ne  |Ne    | Ano (OMA-URI, jenom Mobile)|     
+Cisco (IPsec)|Ano |Ne   |Ne  |  Ne|Ne  |Ne | Ne|
+Citrix|Ano |Ne   |Ne  |  Ne|Ne  |Ne | Ne|
 Pulse Secure|Ano  |Ano |Ano   |Ne  |Ano  |Ano| Ano|        
 F5 Edge Client|Ano |Ano |Ano |Ne  |Ano  |   Ano |  Ano|   
 Dell SonicWALL Mobile Connect|Ano |Ano |Ano |Ne  |Ano |Ano |Ano|         
@@ -83,7 +85,7 @@ Uživatel se ověřuje na serveru sítě VPN zadáním uživatelského jména a 
 1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Zásady** > **Přidat zásadu**.
 2. Vyberte šablonu pro nové zásady rozšířením příslušného typu zařízení a potom vyberte profil sítě VPN pro toto zařízení:
     * **Profil VPN (Android 4 a novější)**
-    * **Profil VPN (iOS 7.1 a novější)**
+    * **Profil VPN (iOS 8.0 a novější)**
     * **Profil sítě VPN (Mac OS X 10.9 a novější)**
     * **Profil VPN (Windows Phone 8.1 a novější)**
     * **Profil VPN (Windows Phone 8.1 a novější)**
@@ -111,6 +113,7 @@ Název nastavení  |Další informace
 **Doména nebo skupina přihlášení**|Zadejte název domény nebo skupiny přihlášení, k níž se chcete připojit. Tato možnost se zobrazí jenom v případě, že se je typ připojení **Dell SonicWALL Mobile Connect**.
 **Otisk prstu**|Zadejte řetězec, například „Kód otisku prstu Contoso“, který se použije k ověření, že je možné serveru VPN důvěřovat. Otisk prstu se může odeslat klientovi, aby věděl, že může důvěřovat jakémukoli serveru, který při připojování nabízí ten samý otisk. Pokud zařízení ještě otisk prstu nemá, vyzve uživatele, aby důvěřoval serveru VPN, ke kterému se připojuje. Současně přitom zobrazuje otisk prstu. (Uživatel ho ručně ověří a zvolí **důvěryhodnost** připojení.) Tato možnost se zobrazuje jenom v případě, že je typ připojení **Kontrolní bod – mobilní síť VPN**.
 **VPN na aplikaci**|Tuto možnost vyberte, pokud chcete toto připojení VPN přidružit k aplikaci pro iOS nebo Mac OS X tak, aby se připojení otevřelo při spuštění aplikace. Profil VPN je možné přidružit k aplikaci při nasazení softwaru. Další informace najdete v tématu [Nasazení aplikací v Microsoft Intune](deploy-apps-in-microsoft-intune.md).
+**VPN na vyžádání**|VPN na vyžádání můžete nastavit pro zařízení s iOS 8.0 a novější verzí. Pokyny pro toto nastavení jsou uvedené v článku [VPN na vyžádání pro zařízení s iOS](#on-demand-vpn-for-ios-devices).
 **Automaticky zjišťovat nastavení proxy** (jenom iOS, Mac OS X, Windows 8.1 a Windows Phone 8.1)|Pokud server VPN vyžaduje pro připojení proxy server, zadejte, určete, jestli mají zařízení automaticky zjišťovat nastavení připojení. Další informace najdete v dokumentaci k Windows Serveru.
 **Použít automatický konfigurační skript** (jenom iOS, Mac OS X, Windows 8.1 a Windows Phone 8.1)|Pokud server VPN vyžaduje pro připojení proxy server, určete, jestli chcete k definování nastavení použít automatický konfigurační skript, a pak zadejte adresu URL souboru, který obsahuje nastavení. Další informace najdete v dokumentaci k Windows Serveru.
 **Použít proxy server** (jenom iOS, Mac OS X, Windows 8.1 a Windows Phone 8.1)|Pokud server VPN vyžaduje pro připojení proxy server, vyberte tuto možnost a potom zadejte adresu a číslo portu proxy serveru. Další informace najdete v dokumentaci k Windows Serveru.
@@ -141,6 +144,32 @@ Vytvořením vlastního nastavení OMA-URI můžete omezit využití sítě VPN 
 
 Nová zásada se zobrazí v uzlu **Zásady konfigurace** pracovního prostoru **Zásady**.
 
+### VPN na vyžádání pro zařízení s iOS
+VPN na vyžádání můžete konfigurovat pro zařízení s iOS 8.0 a novější verzí.
+
+> [!NOTE]
+>  
+> VPN pro aplikaci a VPN na vyžádání nemůžete použít ve stejných zásadách.
+ 
+1. Na stránce konfigurace zásad najděte **Pravidla pro připojení na vyžádání pro toto připojení VPN**. Sloupce jsou označeny **Shoda** – podmínka, kterou pravidla kontrolují, a **Akce** – akce, kterou zásady spustí při splnění podmínky. 
+2. Zvolte **Přidat** a vytvořte pravidlo. Existují dva typy shod, které v pravidle můžete nastavit. V jednotlivém pravidle můžete konfigurovat pouze jeden z těchto typů.
+  - **SSID**, který odkazuje na bezdrátové sítě. 
+  - **Domény pro hledání DNS**, které jsou...  Můžete použít plně kvalifikované názvy domény, například *team. corp.contoso.com*, nebo můžete použít domény, například *contoso.com*, které jsou obdobou použití * *.contoso.com*.
+3. Volitelné: Zadejte test řetězce adresy URL, což je adresa URL, kterou pravidlo používá jako test. Pokud zařízení, na kterém je tento profil nainstalovaný, má k této adrese URL přístup bez přesměrování, naváže se připojení VPN a zařízení se připojí k cílové adrese URL. Uživatel neuvidí web testu řetězce adresy URL. Příkladem testu řetězce adresy URL je adresa auditujícího webového serveru, který zkontroluje splnění bezpečnostních předpisů zařízením předtím, než ho připojí k VPN. Další možností je, že adresa URL otestuje schopnost VPN připojit se k webu předtím, než se zařízení připojí k cílové adrese URL skrze VPN.
+4. Vyberte jednu z těchto akcí:
+  - **Připojit**
+  - **Vyhodnotit připojení**, která má tři nastavení. a. **Akce domény** – zvolte **Připojit v případě potřeby** nebo **Nikdy nepřipojovat**.
+     b. **Čárkami oddělený seznam domén** – toto konfigurujete jenom v případě, že zvolíte **Akce domény** v možnosti **Připojit v případě potřeby**.  
+     c. **Požadovaný test řetězce adresy URL** – adresa URL protokolu HTTP nebo HTTPS (upřednostňováno), například *https://vpntestprobe.contoso.com*. Pravidlo zkontroluje, jestli z této adresy přichází odezva. Pokud ne a **Akce domény** je nastavená na **Připojit v případě potřeby**, spustí se VPN.
+     > [!TIP]
+     >
+     >Příkladem použití této akce je situace, kdy některé weby v podnikové síti vyžadují přímé připojení nebo VPN připojení k podnikové síti, ale jiné to nepožadují. Pokud v **Čárkami odděleném seznamu domén pro hledání DNS** uvedete *corp.contoso.com*, můžete zvolit **Připojit v případě potřeby** a potom uvést seznam konkrétních webů v rámci této sítě, které mohou vyžadovat VPN, například *sharepoint.corp.contoso.com*. Pravidlo potom zkontrolujte dostupnost adresy *vpntestprobe.contoso.com*. V případě nedostupnosti se aktivuje VPN pro daný web SharePoint.
+  - **Ignorovat** – způsobí ignorování jakýchkoli změn v připojení VPN. Pokud je VPN připojená, nechat ji připojenou, pokud není připojená, nepřipojovat. Můžete mít například pravidlo, které připojuje VPN pro všechny interní podnikové weby, ale chcete jeden z těchto interních webů zpřístupnit jenom v případě, kdy je zařízení skutečně připojené k podnikové síti. V takovém případě vytvoříte pravidlo ignorování pro tento jeden web.
+  - **Odpojit** – při splnění podmínek odpojí zařízení od VPN. Do pole **SSID** můžete například uvést podnikové bezdrátové sítě a vytvořit pravidlo, které zařízení odpojí od VPN, když se připojí k jedné z těchto sítí.
+
+Pravidla pro konkrétní domény se vyhodnocují před pravidly pro všechny domény. 
+
+
 ## Nasazení zásady
 
 1.  V pracovním prostoru **Zásady** vyberte zásadu, kterou chcete nasadit, a potom vyberte **Spravovat nasazení**.
@@ -163,6 +192,6 @@ Shrnutí stavu a výstrahy na stránce **Přehled** v pracovním prostoru **Zás
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

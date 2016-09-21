@@ -13,22 +13,22 @@ ms.assetid: 0de5f03a-c288-423b-b9ea-493a39eb715a
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 11760810110ddb34e1a5371ce45206212eab0790
-ms.openlocfilehash: ba1e9ae9b17b6cb3ef9bccdcd19bafd9443915ff
+ms.sourcegitcommit: d0cc50bb5d79f4840afee7984cf3f58f6dd26dac
+ms.openlocfilehash: 8832235ffdc8cd0b5b3eec244315711cfa59e069
 
 
 ---
 
 # Použití zařízení Windows s Intune
 
-Tento článek obsahuje odkazy na všechny úlohy, které můžou provést koncoví uživatelé na svých zařízeních spravovaných Intune. Správci IT můžou z těchto informací zjistit kroky, podle kterých uživatelé postupují při provádění různých úloh, seskupených do kategorií: 
-- Instalace aplikace Portál společnosti a registrace ve službě Intune 
+Tento článek obsahuje odkazy na všechny úlohy, které můžou provést koncoví uživatelé na svých zařízeních spravovaných Intune. Správci IT můžou z těchto informací zjistit kroky, podle kterých uživatelé musí postupovat při provádění různých úloh seskupených do následujících kategorií:
+- Instalace aplikace Portál společnosti a registrace ve službě Intune
 - Úlohy správy po registraci
 - Problémy se shodou
 
 ## Instalace aplikace Portál společnosti a registrace ve službě Intune
 
-Informace v této části vám pomůžou s instalací Portálu společnosti Intune a registrací zařízení pro zařízení s Windows.
+Informace v této části vám pomůžou s instalací aplikace Portál společnosti služby Intune a registrací zařízení pro zařízení s Windows.
 
 - [Registrace zařízení se systémem Windows do Intune](enroll-your-device-in-intune-windows.md)
 - [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
@@ -47,9 +47,9 @@ Informace v této části vám pomůžou s akcemi, které můžete provést po r
 - [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-windows.md)
 - [Ruční synchronizace zařízení](sync-your-device-manually-windows.md)
 
-## Oprava problémů se zařízením
+## Postup opravy problémů se zařízením
 
-Informace v této části vám pomůžou s opravit problémy, se kterými se můžete setkat, když je zařízení s Windows registrované v Intune.
+Informace v této části vám pomůžou s opravit problémy, se kterými se můžete setkat, když je zařízení Windows registrované v Intune.
 
 - [Zařízení nemá požadovanou minimální verzi operačního systému](device-doesnt-have-the-required-minimum-operating-system-version-windows.md)
 - [Zařízení nevyhovuje maximální verzi operačního systému](device-doesnt-comply-with-maximum-operating-system-version-windows.md)
@@ -60,6 +60,6 @@ Informace v této části vám pomůžou s opravit problémy, se kterými se mů
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 
