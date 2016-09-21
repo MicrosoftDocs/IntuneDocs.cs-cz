@@ -4,17 +4,17 @@ description: "Přečtěte si toto téma a zjistěte, jak vám může Intune pomo
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/23/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: f23b3ee7-78da-4e53-9fc2-78e58401bcf9
-ms.reviewer: jeffgilb
+ms.reviewer: angrobe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a09c5e3349945cfdcb4ae9d3aa51aa3f7024330a
-ms.openlocfilehash: eab582d30408d1a57643e30ba4965bd08f6ce847
+ms.sourcegitcommit: ff6bfdc079e00f8a39cc532d1f6f9049aa6a32c8
+ms.openlocfilehash: 10dfecd41e68440a4c27aa7358dbbc88b6106001
 
 
 ---
@@ -46,7 +46,8 @@ Operace správy, inventáře, nasazování aplikací, zřizování a vyřazován
 |Konfigurace mobilních aplikací pro iOS|Využívá zásady konfigurace mobilních aplikací k poskytování nastavení, která se můžou požadovat, když uživatel spustí aplikaci pro iOS. Aplikace může například vyžadovat, aby uživatel zadal číslo portu nebo přihlašovací informace. To může usnadnit konfiguraci aplikace a omezit počet volání služby helpdesk.|[Konfigurace aplikací pro iOS pomocí zásad konfigurace mobilních aplikací v Microsoft Intune](/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune)|
 |Profily zřizování mobilních aplikací pro iOS|Pomáhá při nasazování zřizovacích profilů pro aplikace iOS, u kterých se blíží vypršení platnosti. |[Pomocí mobilních zásad zřizovacích profilů pro iOS zabráníte vypršení platnosti aplikací.](/intune/deploy-use/ios-mobile-app-provisioning-profiles)|
 |Spravovaný prohlížeč|Konfiguruje zásady spravovaného prohlížeče pro kontrolu nad weby, které uživatelé můžou navštěvovat. Pro spravovaný prohlížeč můžete taky použít zásady správy mobilních aplikací.|[Správa přístupu k internetu pomocí zásad spravované prohlížeče v Microsoft Intune](/intune/deploy-use/manage-internet-access-using-managed-browser-policies)|
-|Microsoft Passport|Umožňuje integraci se službou Microsoft Passport for Work. Tato alternativní metoda pro přihlašování do Windows 10 pomocí místní služby Active Directory nebo Azure Active Directory může nahradit hesla, čipové karty a virtuální čipové karty.|[Kontrola nastavení Microsoft Passportu v zařízeních s Microsoft Intune](/intune/deploy-use/control-microsoft-passport-settings-on-devices-with-microsoft-intune)|
+|Windows Hello pro firmy|Umožňuje integraci se službou Microsoft Hello pro firmy. Tato alternativní metoda pro přihlašování do Windows 10 pomocí místní služby Active Directory nebo Azure Active Directory může nahradit hesla, čipové karty a virtuální čipové karty.|[Řízení nastavení Windows Hello pro firmy na zařízeních pomocí Microsoft Intune](/intune/deploy-use/control-microsoft-passport-settings-on-devices-with-microsoft-intune)|
+|Hromadně zakoupené aplikace|Pomůže spravovat aplikace, které jste koupili prostřednictvím programu hromadného nákupu, importováním licenčních informací z App Storu, sledováním, kolik licencí jste už použili, a zabráněním instalace více aplikací, než na kolik máte licence.|[Správa hromadně koupených aplikací v Microsoft Intune](/intune/deploy-use/manage-volume-purchased-apps-in-microsoft-intune)|
 
 ## Přístup k prostředkům společnosti
 
@@ -70,6 +71,6 @@ Operace správy, inventáře, nasazování aplikací, zřizování a vyřazován
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

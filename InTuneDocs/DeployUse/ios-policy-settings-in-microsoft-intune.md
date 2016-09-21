@@ -4,7 +4,7 @@ description: "Vytvořte zásady, které řídí nastavení a funkce na zařízen
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/26/2016
+ms.date: 08/30/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 65d2c9c1f5d81dae33422bd4bf7c0e2e21bb96e4
-ms.openlocfilehash: 13b8bd8c3269be60d66c4e79551f662205afcea0
+ms.sourcegitcommit: cac39b60226939334032d954eb49d1417493b28d
+ms.openlocfilehash: 00e3a1b65c8475384bb05e64a4ef9f5d9de348ff
 
 
 ---
@@ -81,6 +81,8 @@ Všechna nastavení platí pro iOS 7.1 a novější.
 |**Vyžadovat šifrované zálohování**|Vyžaduje, aby všechny zálohy zařízení byly šifrované.|
 |**Povolit spravovaným aplikacím synchronizaci dat s iCloudem**|Povolí aplikacím, které spravujete přes Intune, synchronizaci dat s uživatelským účtem iCloudu.|
 |**Povolit, aby Handoff pokračoval v činnosti na jiném zařízení**|Umožní uživateli, aby v práci, kterou zahájil na zařízení s iOS, pokračoval na jiném zařízení s iOS nebo Mac OS X.|
+|**Povolit sdílení fotek na iCloudu**|Povolí používání sdíleného streamu fotografií iOS.|
+|**Povolit Knihovnu fotografií na iCloudu**|Umožní uživateli ukládat fotky na iCloud. Pokud se zakáže, všechny dříve uložené fotky na iCloudu budou odebrány.|
 
 ### Nastavení aplikace pro prohlížeč
 Všechna nastavení platí pro iOS 7.1 a novější.
@@ -99,14 +101,14 @@ Všechna nastavení platí pro iOS 7.1 a novější.
 
 |Název nastavení|Podrobnosti|
 |----------------|-------|
-|**Povolit obchod s aplikacemi**|Povolí zařízení přístup k obchodu s aplikacemi.|
+|**Povolit instalaci aplikací**|Povolí zařízení přistupovat k obchodu s aplikacemi a instalovat aplikace.|
 |**Vyžadovat heslo pro přístup do obchodu s aplikacemi**|Vyžaduje, aby uživatel zadal heslo, než bude moci navštívit obchod s aplikacemi.|
 |**Povolit nákupy v aplikaci**|Povolí ve spuštěné aplikaci nákupy v obchodě.|
 |**Povolit spravované dokumenty v jiných nespravovaných aplikacích**|Povolí prohlížení podnikových dokumentů v jakékoliv aplikaci.<br>**Příklad:** Chcete zabránit uživatelům v ukládání souborů z aplikace OneDrive do Dropboxu. U tohoto nastavení vyberte možnost Ne. Až zařízení zásadu obdrží (třeba po restartování), už nebude povolovat ukládání.|
 |**Povolit nespravované dokumenty v jiných spravovaných aplikacích**|Povolí prohlížení libovolného dokumentu ve spravovaných podnikových aplikacích.|
 |**Povolit videokonference**|Povolí na zařízení videokonferenční aplikace, jako je třeba Facetime.|
-|**Povolit obsah pro dospělé v obchodě s mediálním obsahem**|Povolí zařízení přístup k obsahu úložiště, který je označený jako obsah pro dospělé.|
-|**Povolit uživateli stažení obsahu z obchodu iBooks, který má označení „erotika“**|Povolí uživateli stahování knih z kategorie „erotika“.|
+|**Povolit uživateli důvěřovat autorům nových podnikových aplikací**|Umožní uživateli vybrat možnost, že důvěřuje aplikacím, které nebyly staženy z App Store.|
+
 
 ### Nastavení aplikací pro hry
 Všechna nastavení platí pro iOS 7.1 a novější.
@@ -116,12 +118,23 @@ Všechna nastavení platí pro iOS 7.1 a novější.
 |**Povolit přidávání přátel v herním centru**|Povolí uživateli přidat přátele z herního centra.|
 |**Povolit hru s více hráči**|Povolí uživateli hrát na zařízení hry pro víc hráčů.|
 
+### Nastavení aplikací pro mediální obsah
+Všechna nastavení platí pro iOS 7.1 a novější.
+
+|Název nastavení|Podrobnosti|
+|----------------|-------|
+|**Oblast hodnocení**|Vyberte oblast a pak vyberte, s jakým maximálním hodnocením můžou uživatelé stahovat obsah v kategoriích **Filmy**, **TV pořady** a **Aplikace**.|
+|**Povolit obsah pro dospělé v obchodě s mediálním obsahem**|Povolí zařízení přístup k obsahu úložiště, který je označený jako obsah pro dospělé.|
+|**Povolit uživateli stažení obsahu z obchodu iBooks, který má označení „erotika“**|Povolí uživateli stahování knih z kategorie „erotika“.|
+
+
 ### Nastavení možností zařízení pro hardware
 Všechna nastavení platí pro iOS 7.1 a novější.
 
 |Název nastavení|Podrobnosti|
 |----------------|-------|
 |**Povolit fotoaparát**|Určete, jestli je možné použít fotoaparát v zařízení.|
+|**Vynutit u spárovaných Apple Watch používání detekce zápěstí**|Když se povolí, Apple Watch nebudou zobrazovat oznámení, dokud si je uživatel nenasadí.|
 |**Vyžadovat párovací heslo pro odchozí požadavky AirPlay**|Vyžaduje párovací heslo, pokud uživatel použije AirPlay ke streamování obsahu do dalších zařízení Apple.|
 
 ### Nastavení možností zařízení pro mobilní funkce
@@ -141,6 +154,7 @@ Všechna nastavení platí pro iOS 7.1 a novější.
 |**Povolit Siri**|Povolí v zařízení používání hlasového pomocníka Siri.|
 |**Povolit Siri při uzamčení zařízení**|Povolí používání hlasového pomocníka Siri, když je zařízení zamčené.|
 |**Povolit hlasové vytáčení**|Umožňuje používat v zařízení funkci hlasového vytáčení.|
+|**Nepovolovat AirDrop ze spravovaných aplikací**|Znemožní spravovaným aplikacím posílat data přes  AirDrop.|
 
 
 ### Nastavení pro aplikace dodržující a nedodržující předpisy
@@ -214,24 +228,55 @@ Všechna nastavení platí pro iOS 7.1 a novější.
 |----------------|--------------------|
 |**Povolit zámek aktivace, když je zařízení v režimu pod dohledem**|Povolí zámek aktivace na zařízeních s iOS, které jsou pod dohledem.|
 
-### Dohled
+### Nastavení režimu dohledu
 Na zařízeních se systémem iOS 7.1 a novějším, které jsou v režimu pod dohledem, je možné nakonfigurovat následující nastavení.
+
+### Nastavení režimu dohledu – omezení zařízení
 
 |Název nastavení|Podrobnosti|
 |----------------|--------------------|
 |**Povolit změnu účtu**|Povolí uživateli změnu nastavení účtu, jako je například konfigurace e-mailu.|
-|**Povolit AirDrop**|Povolí použití funkce Airdrop k výměně obsahu s blízkými zařízeními.|
 |**Povolit změny nastavení využití mobilních dat v aplikaci**|Umožní uživateli řídit, které aplikace můžou používat mobilní data.|
-|**Povolit Siri dotazování na uživatelem generovaný obsah z internetu**|Umožní aplikaci Siri získat přístup k webům, aby mohla odpovídat na otázky.|
-|**Povolit přístup k obchodu iBooks**|Umožní uživateli procházení a nákup knih z úložiště iBooks.|
-|**Povolit změny v nastavení aplikace Find My Friends**|Umožní uživateli změnu nastavení pro aplikaci Find My Friends.|
 |**Povolit použití možnosti pro vymazání veškerého obsahu a nastavení na zařízení**|Zpřístupní uživateli možnost pro vymazání veškerého obsahu a nastavení na zařízení.|
 |**Povolit uživateli aktivaci omezení v nastavení zařízení**|Umožní uživateli konfigurovat omezení (rodičovské kontroly) na zařízení.|
-|**Povolit vrácení výsledků z internetu pomocí vyhledávání Spotlight**|Povolí vyhledávání Spotlight připojit se k internetu, aby bylo možné poskytnout další výsledky.|
-|**Povolit použití aplikace Herní centrum**|Povolí použití aplikace Herní centrum.|
-|**Povolit určování zařízení, s nimiž se může zařízení s iOS párovat, podle hostitelského párování**|Povolí hostitelské párování, díky kterému může správce určit, se kterými zařízeními se dá spárovat zařízení s iOS 7.|
+|**Povolit určování zařízení, s nimiž se může zařízení s iOS párovat, podle hostitelského párování**|Povolí hostitelské párování, díky kterému může správce určit, se kterými zařízeními se dá spárovat zařízení s iOS.|
 |**Povolit uživateli instalaci konfiguračních profilů a certifikátů**|Povolí uživateli instalaci konfiguračních profilů a certifikátů.|
+|**Povolit úpravy názvu zařízení**|Umožní uživateli změnit název zařízení.|
+|**Povolit úpravu hesla**|Povolí přidání, úpravu a odebrání hesla zařízení.|
+|**Povolit spárování Apple Watch**|Povolí zařízení spárovat se s Apple Watch.|
+|**Povolit úpravy nastavení oznámení**|Umožní uživateli přenastavit v zařízení oznámení.|
+|**Povolit úpravy tapety**|Umožní uživateli změnit v zařízení tapetu.|
+
+### Nastavení režimu dohledu – omezení funkcí
+
+|Název nastavení|Podrobnosti|
+|----------------|--------------------|
+|**Povolit AirDrop**|Povolí použití funkce Airdrop k výměně obsahu s blízkými zařízeními.|
+|**Povolit Siri dotazování na uživatelem generovaný obsah z internetu**|Umožní aplikaci Siri získat přístup k webům, aby mohla odpovídat na otázky.|
+|**Používat filtr vulgárních výrazů v Siri**|Zabrání Siri diktovat a vyslovovat vulgární výrazy.|
+|**Povolit vrácení výsledků z internetu pomocí vyhledávání Spotlight**|Povolí vyhledávání Spotlight připojit se k internetu, aby bylo možné poskytnout další výsledky.|
+|**Povolit vyhledávání definic slov**|Povolit funkci iOS, která umožňuje zvýraznit slovo a vyhledat jeho definici.|
+|**Povolit prediktivní klávesnice**|Povolí používání prediktivních klávesnic, které uživateli navrhují slova, co by se mu mohla hodit.|
+|**Povolit automatické opravy**|Povolí zařízení automaticky opravovat slova s překlepem.|
+|**Povolit kontrolu pravopisu klávesnice**|Povolí v zařízení kontrolu pravopisu.|
+|**Povolit klávesové zkratky**|Umožní používání klávesových zkratek.|
+
+### Nastavení režimu dohledu – omezení aplikací
+
+|Název nastavení|Podrobnosti|
+|----------------|--------------------|
+|**Povolit úpravy nastavení vztahu důvěryhodnosti u podnikových aplikací**||
+|**Povolit instalaci aplikací pouze pomocí konfigurace Apple a iTunes**||
+|**Povolit automatické stahování aplikací**||
+|**Povolit změny v nastavení aplikace Find My Friends**|Umožní uživateli změnu nastavení pro aplikaci Find My Friends.|
+|**Povolit přístup k obchodu iBooks**|Umožní uživateli procházení a nákup knih z úložiště iBooks.|
 |**Povolit použití aplikace Zprávy na zařízení**|Povolit použití aplikace Zprávy k posílání textových zpráv.|
+|**Povolit používání Podcastů**|Povolí používání aplikace Podcasty.|
+|**Povolit používání služby Music**|Povolí používání aplikace Apple Music.|
+|**Povolit službu iTunes Radio**|Povolí používání aplikace iTunes Radio.|
+|**Povolit Apple News**|Povolí používání aplikace Apple News.|
+|**Povolit Game Center**|Povolí použití aplikace Herní centrum.|
+
 
 ### Zobrazit nebo skrýt aplikace
 
@@ -337,6 +382,6 @@ Než začnete, je potřeba nainstalovat Apple Configurator a vytvořit konfigura
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO5-->
 
 

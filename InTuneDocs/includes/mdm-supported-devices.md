@@ -7,9 +7,9 @@
   - Počítače se systémem Windows 10 (verze Home, Pro, Education a Enterprise)
   - Mac OS X 10.9 a novější
 
-[Klientský software Intune](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune) může spravovat počítač s operačním systémem Windows 7 a novějším. Zákazníci s Enterprise Management Suite (EMS) můžou také [používat Azure Active Directory (AAD) k registraci zařízení s Windows 10](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview).
+[Softwarový klient Intune](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune) může spravovat počítače s Windows s verzí Windows Vista nebo novější, ale s výjimkou všech edicí Home, které nejsou podporovány.  Zákazníci se službou Enterprise Management + Security (EMS) mohou také [používat Azure Active Directory (AAD) k registraci zařízení s Windows 10](set-up-windows-device-management-with-microsoft-intune.md#azure-active-directory-enrollment).
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

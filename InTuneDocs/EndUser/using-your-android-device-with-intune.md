@@ -13,8 +13,8 @@ ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 11760810110ddb34e1a5371ce45206212eab0790
-ms.openlocfilehash: ba7ac081f2b8b2228b0052a1d288957bfc11267f
+ms.sourcegitcommit: 63f86f135d369d8c96903c0add1e194fd9d5ded2
+ms.openlocfilehash: e98aa19d38af47ba2d19a2a67b7a836796aded2a
 
 
 ---
@@ -22,22 +22,22 @@ ms.openlocfilehash: ba7ac081f2b8b2228b0052a1d288957bfc11267f
 
 # Použití zařízení Android s Intune
 
-Tento článek obsahuje odkazy na všechny úlohy, které můžou provést koncoví uživatelé na svých zařízeních spravovaných Intune. Správci IT můžou z těchto informací zjistit kroky, podle kterých uživatelé postupují při provádění různých úloh, seskupených do kategorií: 
+Tento článek obsahuje odkazy na všechny úlohy, které můžou provést koncoví uživatelé na svých zařízeních spravovaných Intune. Správci IT můžou z těchto informací zjistit kroky, podle kterých uživatelé musí postupovat při provádění různých úloh seskupených do následujících kategorií:
 
-- Instalace aplikace Portál společnosti a registrace ve službě Intune 
+- Instalace aplikace Portál společnosti a registrace ve službě Intune
 - Úlohy správy po registraci
 - Problémy se shodou
 
 ## Instalace aplikace Portál společnosti a registrace ve službě Intune
 
-Informace v této části vám pomůžou s instalací Portálu společnosti Intune a registrací zařízení s Androidem.
+Informace v této části vám pomůžou s instalací Portálu společnosti Intune a registrací zařízení pro zařízení Android.
 
 - [Registrace zařízení v Intune](enroll-your-device-in-Intune-android.md)
 - [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
 
 ## Kroky, které můžete provést po registraci zařízení do služby Intune
 
-Informace v této části vám pomůžou s akcemi, které můžete provést po registraci zařízení s Androidem v Intune.
+Informace v této části vám pomůžou s akcemi, které můžete provést po registraci zařízení Android v Intune.
 
 - [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-android.md)
 - [Zašifrování zařízení](encrypt-your-device-android.md)
@@ -54,7 +54,7 @@ Informace v této části vám pomůžou s akcemi, které můžete provést po r
 
 ## Oprava problémů se zařízením
 
-Informace v této části vám pomůžou opravit problémy, se kterými se můžete setkat, když je zařízení s Androidem registrované v Intune.
+Informace v této části vám pomůžou s opravit problémy, se kterými se můžete setkat, když je zařízení Android registrované v Intune.
 
 - [Použití podrobného protokolování k asistenci správci IT s opravou problémů zařízení](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
 - [Odeslání protokolů s diagnostickými daty ze zařízení správci IT e-mailem](send-diagnostic-data-logs-to-your-it-administrator-using-email-android.md)
@@ -71,6 +71,6 @@ Informace v této části vám pomůžou opravit problémy, se kterými se můž
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

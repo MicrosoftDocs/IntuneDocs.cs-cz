@@ -4,7 +4,7 @@ description: "Přečtěte si, jak vytvořit profil certifikátu Intune."
 keywords: 
 author: nbigman
 manager: angrobe
-ms.date: 07/25/2016
+ms.date: 09/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,151 +13,116 @@ ms.assetid: 679a20a1-e66f-4b6b-bd8f-896daf1f8175
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6a7f2eeb0114f525890d1dcb61344d60a19943d1
-ms.openlocfilehash: 14419092edc77b2229cf980a74e81048941a2c28
+ms.sourcegitcommit: 55d3bd060b5567e98ca9ee6f4c4a003ce40a0371
+ms.openlocfilehash: 370a21f559fd1f86f60aeef5cbddea05d6fea682
 
 
 ---
 
 # Konfigurace profilů certifikátů Intune
-Po konfiguraci infrastruktury a certifikátů, jak je popsáno v tématu [Konfigurace infrastruktury certifikátů pro SCEP](configure-certificate-infrastructure-for-scep.md) nebo [Konfigurace infrastruktury certifikátů pro PFX](configure-certificate-infrastructure-for-pfx.md), můžete konfigurovat profily certifikátů:
+Po konfiguraci infrastruktury a certifikátů, jak je popsáno v tématu [Konfigurace infrastruktury certifikátů pro SCEP](configure-certificate-infrastructure-for-scep.md) nebo [Konfigurace infrastruktury certifikátů pro PFX](configure-certificate-infrastructure-for-pfx.md), můžete vytvořit profily certifikátů. Postup je následující:
 
-**Úloha 1** – export certifikátu důvěryhodné kořenové certifikační autority **Úloha 2** – vytvoření profilů certifikátů důvěryhodné certifikační autority **Úloha 3** – Jedna ze dvou možností:
+- **Úloha 1**: Export certifikátu důvěryhodné kořenové certifikační autority
+- **Úloha 2**: Vytvoření profilů důvěryhodných certifikátů
+- **Úloha 3**: Vytvoření jednoho ze dvou typů profilu:
+  - Profily certifikátů SCEP
+  - Profily certifikátů .PFX
 
-Vytvoření profilů certifikátů SCEP
+## **Úloha 1**: Export certifikátu důvěryhodné kořenové certifikační autority
+Exportujte certifikát důvěryhodné kořenové certifikační autority jako soubor **.cer** z vydávající certifikační autority nebo z jakéhokoli zařízení, které vaší vydávající certifikační agentuře důvěřuje. Privátní klíč neexportujte.
 
-Vytvoření profilů certifikátů .PFX
+Tento certifikát budete importovat při nastavování profilu důvěryhodného certifikátu.
 
-### Úloha 1 – export důvěryhodného kořenového certifikátu
-Exportujte certifikát důvěryhodné kořenové certifikační autority jako soubor **.cer** z vydávající certifikační autority nebo jakéhokoli zařízení, které vaší vydávající certifikační agentuře důvěřuje. Privátní klíč neexportujete.
+## **Úloha 2**: Vytvoření profilů důvěryhodných certifikátů
+Profil důvěryhodného certifikátu je nutné vytvořit před vytvořením profilu certifikátu protokolu SCEP (Simple Certificate Enrollment Protocol) či standardu PKCS #12 (.PFX). Potřebujete profil důvěryhodného certifikátu a profil SCEP nebo .PFX pro každou platformu mobilních zařízení.
 
-Tento certifikát budete importovat při konfiguraci profilu důvěryhodného certifikátu.
+### Vytvoření profilu důvěryhodného certifikátu
 
-### Úloha 2 – vytvoření profilů důvěryhodných certifikátů
-Před vytvořením profilu certifikátu SCEP nebo. PFX musíte vytvořit **Profil důvěryhodného certifikátu**. Potřebujete profil důvěryhodného certifikátu a profil SCEP nebo.PFS pro každou platformu mobilních zařízení.
-
-##### Vytvoření profilu důvěryhodného certifikátu
-
-1.  Otevřete [konzolu pro správu Intune](https://manage.microsoft.com) a klikněte na **Zásady** &gt; **Přidat zásadu**.
-
-2.  Nakonfigurujte jeden z následujících typů zásad:
-
-    **Android &gt; profil důvěryhodného certifikátu (Android 4 a novější)**
-
-    **iOS &gt; Profil důvěryhodného certifikátu (iOS 7.1 a novější)**
-
-    **Mac OS X &gt; Profil důvěryhodného certifikátu (Mac OS X 10.9 a novější)**
-
-    **Windows &gt; Profil důvěryhodného certifikátu (Windows 8.1 a novější)**
-
-    **Windows &gt; Profil důvěryhodného certifikátu (Windows Phone 8.1 a novější)**
+1.  V [konzole pro správu Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Přidat zásadu**.
+2.  Přidejte jeden z těchto typů zásad:
+    - **Android &gt; profil důvěryhodného certifikátu (Android 4 a novější)**
+    - **iOS &gt; Profil důvěryhodného certifikátu (iOS 7.1 a novější)**
+    - **Mac OS X &gt; Profil důvěryhodného certifikátu (Mac OS X 10.9 a novější)**
+    - **Windows &gt; Profil důvěryhodného certifikátu (Windows 8.1 a novější)**
+    - **Windows &gt; Profil důvěryhodného certifikátu (Windows Phone 8.1 a novější)**
 
     Další informace: [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
-3.  Poskytněte požadované informace pro konfiguraci nastavení profilu důvěryhodného certifikátu pro Android, iOS, Mac OS X, Windows 8.1 nebo Windows Phone 8.1. 
-
-    - V nastavení **Soubor certifikátu** importujte certifikát důvěryhodné certifikační autority (**.cer**), který jste exportovali z vydávající certifikační autority. Nastavení **Cílové úložiště** se použije jen na zařízení se systémem Windows 8.1 a novějším a jen v případě, že má zařízení víc než jedno úložiště certifikátů.
-
+3.  Zadejte informace požadované pro konfiguraci nastavení profilu důvěryhodného certifikátu pro Android, iOS, Mac OS X, Windows 8.1 nebo Windows Phone 8.1. 
+4.  V nastavení **Soubor certifikátu** importujte certifikát důvěryhodné kořenové certifikační autority (soubor .cer), který jste exportovali z vydávající certifikační autority. Nastavení **Cílové úložiště** se použije jen na zařízení se systémem Windows 8.1 a novějším a jen v případě, že má zařízení víc než jedno úložiště certifikátů.
     
-    - V části **Formát názvu subjektu**, vyberte **Vlastní**, abyste zadali vlastní formát názvu subjektu.  
+4.  Vyberte možnost **Uložit zásadu**.
 
-        Dvě proměnné, které jsou aktuálně podporované pro vlastní formát, jsou **Common Name (CN)** a **Email (E)**. Pomocí kombinace těchto proměnných a statických řetězců můžete vytvořit vlastní formát názvu subjektu, jak je uvedeno v tomto příkladu:  
+Nová zásada se zobrazí v pracovním prostoru **Zásady**. Teď ji můžete nasadit.
 
-        `CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US`  
+## **Úloha 3**: Vytvoření profilů certifikátů SCEP nebo .PFX
+Po vytvoření profilu certifikátu důvěryhodné certifikační autority vytvořte profily certifikátů SCEP nebo .PFX pro každou platformu, kterou chcete použít. Při vytváření profilu certifikátu SCEP musíte zadat profil důvěryhodného certifikátu pro stejnou platformu. Tím se oba profily certifikátů propojí, ale přesto musíte každý profil nasadit samostatně.
 
-        V příkladu správce vytvořil formát názvu subjektu, který kromě proměnných CN a E používá řetězce pro organizační jednotky, organizaci, umístění, stav a zemi. Seznam podporovaných řetězců je uvedený v tématu [Funkce CertStrToName](https://msdn.microsoft.com/en-us/library/windows/desktop/aa377160.aspx).  
+### Vytvoření profilu certifikátu SCEP
 
-
-4.  Po dokončení klikněte na **Uložit zásadu**.
-
-Nové zásady se zobrazí v pracovním prostoru **Zásady** a můžete je teď nasadit.
-
-### Úloha 3 – Vytvoření profilů certifikátů SCEP nebo .PFX
-Po vytvoření profilu certifikátu důvěryhodné certifikační autority vytvořte profily certifikátů SCEP nebo .PFX pro každou platformu, kterou chcete použít. Při vytváření profilu certifikátu SCEP musíte zadat profil důvěryhodného certifikátu pro stejnou platformu. Tím se oba profily certifikátů propojí, ačkoliv každý profil musíte nasadit samostatně.
-
-##### Vytvoření profilu certifikátu SCEP
-
-1.  Otevřete [konzolu pro správu Intune](https://manage.microsoft.com), klikněte na **Zásady** &gt; **Přidat zásadu**.
-
-2.  Nakonfigurujte jeden z následujících typů zásad:
-
-    **Android &gt; Profil certifikátu SCEP (Android 4 a novější)**
-
-    **iOS &gt; Profil certifikátu SCEP (iOS 7.1 a novější)**
-
-    **Mac OS X &gt; Profil certifikátu SCEP (Mac OS X 10.9 a novější)**
-
-    **Windows &gt; Profil certifikátu SCEP (Windows 8.1 a novější)**
-
-    **Windows &gt; Profil certifikátu SCEP (Windows Phone 8.1 a novější)**
+1.  V [konzole pro správu Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Přidat zásadu**.
+2.  Přidejte jeden z těchto typů zásad:
+    - **Android &gt; Profil certifikátu SCEP (Android 4 a novější)**
+    - **iOS &gt; Profil certifikátu SCEP (iOS 7.1 a novější)**
+    - **Mac OS X &gt; Profil certifikátu SCEP (Mac OS X 10.9 a novější)**
+    - **Windows &gt; Profil certifikátu SCEP (Windows 8.1 a novější)**
+    - **Windows &gt; Profil certifikátu SCEP (Windows Phone 8.1 a novější)**
 
     Další informace: [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
 3.  Pokud chcete konfigurovat nastavení profilu certifikátu SCEP, postupujte podle pokynů na stránce konfigurace profilu.
     > [!NOTE]
-    > 
-    > V části **Formát názvu subjektu**, vyberte **Vlastní**, abyste zadali vlastní formát názvu subjektu.
-    > 
-    >  Dvě proměnné, které jsou aktuálně podporované pro vlastní formát, jsou Common Name (CN) a Email (E). Pomocí kombinace těchto proměnných a statických řetězců můžete vytvořit vlastní formát názvu subjektu, jak je uvedeno v tomto příkladu:
-    
+    >
+    > Pokud chcete zadat vlastní formát názvu subjektu (jenom profily iOS), v části **Formát názvu subjektu** vyberte **Vlastní**.
+    >
+    > Vlastní formát je aktuálně možné použít pro dvě proměnné, a to `Common Name (CN)` a `Email (E)`. Kombinací těchto proměnných a statických řetězců můžete vytvořit vlastní formát názvu subjektu, jako je třeba tenhle:
+
     >     CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US
-    
-    >    V příkladu správce vytvořil formát názvu subjektu, který kromě proměnných *CN* a *E* používá řetězce pro organizační jednotky, organizaci, umístění, stav a zemi. Seznam podporovaných řetězců je uvedený v tématu [Funkce CertStrToName](https://msdn.microsoft.com/en-us/library/windows/desktop/aa377160.aspx).
 
-4.  Po dokončení klikněte na **Uložit zásadu**.
+    > V příkladu správce vytvořil formát názvu subjektu, který kromě proměnných `CN` a `E` používá řetězce pro hodnoty Organizační jednotka (OU), Organizace (O), Umístění (L), Oblast (S) a Země (C). Výčet podporovaných řetězců je uveden v popisu [funkce CertStrToName](https://msdn.microsoft.com/en-us/library/windows/desktop/aa377160.aspx).
 
-Nové zásady se zobrazí v pracovním prostoru **Zásady** a můžete je teď nasadit.
+4.  Vyberte možnost **Uložit zásadu**.
 
-##### Vytvoření profilu certifikátu .PFX
+Nová zásada se zobrazí v pracovním prostoru **Zásady**. Teď ji můžete nasadit.
 
-1.  Otevřete [konzolu pro správu Intune](https://manage.microsoft.com) a klikněte na **Zásady** &gt; **Přidat zásadu**.
+### Vytvoření profilu certifikátu .PFX
 
-2.  Nakonfigurujte jeden z následujících typů zásad:
-
-
-
--   **Android &gt; Profil certifikátu .PFX (Android 4 a novější)**
-
-    -   **Windows &gt; Profil certifikátu PKCS #12 (.PFX)  (Windows 10 a novější)**
-
-    -   **Windows &gt; Profil certifikátu PKCS #12 (.PFX)  (Windows 10 a novější)**
-
-    -    **iOS > Profil certifikátu PKCS #12 (.PFX) (iOS 7.1 a novější)**    
-
+1.  V [konzole pro správu Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Přidat zásadu**.
+2.  Přidejte jeden z těchto typů zásad:
+  - **Android &gt; Profil certifikátu .PFX (Android 4 a novější)**
+  - **Windows &gt; Profil certifikátu PKCS #12 (.PFX) (Windows 10 a novější)**
+  - **Windows &gt; Profil certifikátu PKCS #12 (.PFX) (Windows Phone 10 a novější)**
+  - **iOS > Profil certifikátu PKCS #12 (.PFX) (iOS 7.1 a novější)**    
     Další informace: [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
+3.  Do formuláře zásad zadejte požadované informace.
+4.  Vyberte možnost **Uložit zásadu**.
 
-3.  Zadejte požadované informace do formuláře zásad.
-
-4.  Po dokončení klikněte na **Uložit zásadu**.
-
-Nové zásady se zobrazí v pracovním prostoru **Zásady** a můžete je teď nasadit.
+Nová zásada se zobrazí v pracovním prostoru **Zásady**. Teď ji můžete nasadit.
 
 ## Nasazení profilů certifikátů
-Když nasadíte profily certifikátů, soubor certifikátu z profilu certifikátu důvěryhodné certifikační autority se nainstaluje do zařízení a zařízení použije profil certifikátu SCEP nebo .PFX k vytvoření žádosti o certifikát.
+Při nasazení profilu certifikátu se soubor certifikátu z profilu důvěryhodné certifikační autority nainstaluje na zařízení. Zařízení profil certifikátu SCEP nebo .PFX použije k vytvoření vlastní žádosti o certifikát.
 
-Profily certifikátů se nainstalují jenom na příslušná zařízení podle platformy, kterou použijete při vytváření profilu.
+Profily certifikátů se nainstalují jenom na zařízení té platformy, kterou použijete při vytváření profilu.
 
--   Profily certifikátů můžete nasadit na kolekce uživatelů nebo kolekce zařízení.
+-   Profily certifikátů můžete nasadit do kolekce uživatelů nebo do kolekce zařízení.
 
     > [!TIP]
-    > Pokud chcete umožnit, aby se certifikáty do zařízení publikovaly rychle po zaregistrování zařízení, nasaďte profil certifikátu do skupiny uživatelů (ne skupiny zařízení). Pokud ho nasadíte do skupiny zařízení, musí proběhnout úplná registrace zařízení, než zařízení obdrží zásady.
+    > Pokud chcete do zařízení po jeho registraci certifikát rychle publikovat, nasaďte profil certifikátu do skupinu uživatelů (ne zařízení). Pokud ho nasadíte do skupiny zařízení, budete je muset před obdržením zásad plně zaregistrovat.
 
--   Přestože se každý profil nasazuje samostatně, musí se nasadit jak profil důvěryhodného kořenového certifikátu i profil SCEP/.PFX, jinak se zásady certifikátu SCEP/.PFX nezdaří.
+-   I když se každý profil nasazuje samostatně, je třeba nasadit jak důvěryhodnou kořenovou certifikační autoritu, tak profil SCEP nebo .PFX. Jinak zásady certifikátu SCEP nebo .PFX nebudou fungovat.
 
-Profily certifikátů se nasazují stejným způsobem jako jiné zásady pro Intune.
+Profily certifikátů nasaďte stejným způsobem jako jiné zásady pro Intune:
 
-1.  V pracovním prostoru **Zásady** vyberte zásadu, kterou chcete nasadit, a pak klikněte na **Spravovat nasazení**.
-
+1.  V pracovním prostoru **Zásady** vyberte zásadu, kterou chcete nasadit, a potom vyberte **Spravovat nasazení**.
 2.  V dialogovém okně **Spravovat nasazení** :
+    -   **Pokud chcete nasadit zásadu**, vyberte jednu nebo víc skupin, do kterých ji chcete nasadit, a klikněte na **Přidat**&gt;**OK**.
+    -   **Pokud chcete dialogové okno zavřít bez nasazení**, klikněte na **Zrušit**.
 
-    -   **Pokud chcete zásadu nasadit** – vyberte jednu nebo víc skupin, do kterých chcete zásady nasadit, a pak klikněte na **Přidat** &gt; **OK**.
+Když vyberete nasazenou zásadu, v dolní části seznamu zásad se zobrazí další informace o nasazení.
 
-    -   **Pokud chcete dialogové okno zavřít bez nasazení zásady** – klikněte na **Zrušit**.
+### Další kroky
 
-Když vyberete nasazenou zásadu, zobrazí se v dolní části seznamu zásad další informace o tomto nasazení.
-###  Další kroky
-
-Teď můžete používat certifikáty k usnadnění zabezpečení profilů e-mailu, Wi-Fi a VPN?
+Dál zjistěte, jak pomocí certifikátů zabezpečit profily e-mailu, Wi-Fi a VPN.
 
 -  [Konfigurace přístupu k podnikovému e-mailu pomocí e-mailových profilů](configure-access-to-corporate-email-using-email-profiles-with-Microsoft-Intune.md)
 -  [Připojení Wi-Fi v Microsoft Intune](wi-fi-connections-in-microsoft-intune.md)
@@ -165,6 +130,6 @@ Teď můžete používat certifikáty k usnadnění zabezpečení profilů e-mai
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 
