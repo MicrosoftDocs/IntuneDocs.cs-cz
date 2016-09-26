@@ -2,7 +2,7 @@
 title: "Plánování skupin uživatelů a zařízení | Microsoft Intune"
 description: "Naplánujte skupiny tak, aby to vyhovovalo potřebám vaší organizace."
 keywords: 
-author: nbigman
+author: sanchusa
 manager: angrobe
 ms.date: 07/21/2016
 ms.topic: article
@@ -13,8 +13,8 @@ ms.assetid: f11bb256-1094-4f7e-b826-1314c57f3356
 ms.reviewer: lpatha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 55e21f56c3d1b73427e4019054a0f9fab862f26d
-ms.openlocfilehash: 70949301499efedd99eeddb60dd2fa0efc6d2309
+ms.sourcegitcommit: 0ea1aeee65381420af8662e7c0e16741879948e2
+ms.openlocfilehash: 9fc92c7724a9e1f256faa8b028bcf93e354e7997
 
 
 ---
@@ -156,7 +156,7 @@ V našem příkladu jsme také vytvořili skupinu **MEA** pro Střední východ 
 > Pokud se do části členství ve skupině automaticky nezadají informace na základě členství ve skupině zabezpečení, zkontrolujte, jestli jste těmto členům přiřadili licence služby Intune.
 
 ### Skupiny pro konkrétní hardware
-Pokud vaše organizace potřebuje zásady, které se budou uplatňovat na konkrétní typy hardwaru, můžete vytvořit skupiny založené na tomto požadavku. Zásady můžete založit na konkrétních skupinách, které už možná máte vytvořené v místní službě Active Directory, a synchronizovat je se službou Azure Active Directory. Skupiny podle oblastí můžete také vytvořit přímo v Azure Active Directory. V tomto příkladu používáme skupinu **US User groups** jako nadřazenou pro skupinu **Laptop Users** (Uživatelé přenosných počítačů).
+Pokud vaše organizace potřebuje zásady, které se budou uplatňovat na konkrétní typy hardwaru, můžete vytvořit skupiny založené na tomto požadavku. Zásady můžete založit na konkrétních skupinách, které už možná máte vytvořené v místní službě Active Directory, a synchronizovat je se službou Azure Active Directory. Skupiny podle oblastí můžete také vytvořit přímo v Azure Active Directory. V tomto příkladu používáme skupinu **US User Group** jako nadřazenou pro skupinu **Laptop Users** (Uživatelé přenosných počítačů).
 
 ![Dialog Vybrat skupinu zabezpečení](../media/Intune_Planning_Groups_Laptop_small.png)
 
@@ -174,7 +174,7 @@ Použitím stejného postupu jako v předchozích příkladech můžete vytvoři
 >
 > Dynamické zřizování skupin na základě operačního systému zařízení není možné. Místo toho použijte skupiny zabezpečení Active Directory nebo Azure Active Directory.
 
-![Skupina Uživatelé přenosných počítačů](../media/Intune_Planning_Groups_OS_Hierachy_small.png)
+![Skupina Laptop Users (Uživatelé přenosných počítačů)](../media/Intune_Planning_Groups_OS_Hierachy_small.png)
 
 Po zaplnění všech skupin uživatelů na základě požadavků organizace by vaše hierarchie skupin měla vypadat přibližně takto:
 
@@ -215,6 +215,6 @@ Když zásady pojmenujete tímto způsobem, budete je moct snadno identifikovat 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO3-->
 
 
