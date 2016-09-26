@@ -1,5 +1,5 @@
 
-  - Apple iOS 7.1 a novější
+  - Apple iOS 8.0 a novější
   - Google Android 4.0 nebo novější (včetně Samsung KNOX SDK 4.0 a vyšší)
   - Windows Phone 8.0 nebo novější
   - Windows RT a Windows 8.1 RT

@@ -13,8 +13,8 @@ ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a1d0b330b42ea920af9512552a9f3d9c875e99da
-ms.openlocfilehash: 9e2b16a2ea16417864b82f4b025053d9c87fcb14
+ms.sourcegitcommit: 4f98937d7adfc0c1584625303da3350785af8169
+ms.openlocfilehash: 2bbb17881a1e40cd6552fe4303d55bd0cb4ffcf6
 
 
 ---
@@ -67,7 +67,7 @@ Následující diagram znázorňuje tok používaný v rámci zásad podmíněn�
 Můžete omezit přístup k e-mailům na Exchangi Online z **Outlooku** a dalších **aplikací, které využívají moderní ověřování**:-
 
 - Android 4.0 nebo novější, Samsung Knox Standard 4.0 nebo novější
-- iOS 7.1 nebo novější
+- iOS 8.0 a novější
 - Windows Phone 8.1 nebo novější
 
 **Moderní ověřování** integruje do klientů Microsoft Office přihlašování založené na knihovně ADAL (Active Directory Authentication Library).
@@ -93,7 +93,7 @@ Přístup k e-mailu na Exchangi můžete omezit z integrovaného **e-mailovéh
 
 - Android 4.0 nebo novější, Samsung Knox Standard 4.0 nebo novější
 
-- iOS 7.1 nebo novější
+- iOS 8.0 a novější
 
 - Windows Phone 8.1 nebo novější
 
@@ -262,6 +262,6 @@ Na řídicím panelu [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] zvol
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

@@ -4,23 +4,23 @@ description: "Informace v tomto tématu vám pomohou rozhodnout, kdy byste měli
 keywords: 
 author: karthikaraman
 manager: angrobe
-ms.date: 07/13/2016
+ms.date: 09/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
-ms.reviewer: jeffgilb
+ms.reviewer: oldang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: d2d11cc8bed7575b2fe818c9aa5b2359a62a77e0
+ms.sourcegitcommit: 70f9fb5580b114fe1ba14a1bd05de58467d5cd00
+ms.openlocfilehash: b5dd5bec0910a8ce3a940b5ed288907aba0f7ee4
 
 
 ---
 
 # Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune
-Svým aplikacím můžete umožnit použití zásad správy mobilních aplikací buď prostřednictvím nástroje Intune App Wrapping, nebo pomocí sady Intune App SDK. V tomto tématu se dozvíte, co tyto dvě metody obnáší a kdy je použít.
+Svým aplikacím můžete umožnit použití zásad správy mobilních aplikací (MAM) buď prostřednictvím nástroje Intune App Wrapping, nebo pomocí sady Intune App SDK. V tomto tématu se dozvíte, co tyto dvě metody obnáší a kdy je použít.
 
 ## Nástroj Intune App Wrapping
 Nástroj App Wrapping se používá hlavně pro interní obchodní aplikace. Je to aplikace příkazového řádku, která vytvoří kolem aplikace obálku, a ta potom umožní správu aplikace pomocí zásad správy mobilních aplikací v Intune. K použití nástroje nepotřebujete zdrojový kód, ale potřebujete přihlašovací údaje k podepisování.  Další informace o přihlašovacích údajích k podepisování najdete v [blogu o Intune](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). Dokumentaci k nástroji App Wrapping najdete v tématech [Nástroj App Wrapping pro Android](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) a [Nástroj App Wrapping pro iOS](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md).
@@ -29,10 +29,24 @@ Nástroj App Wrapping nepodporuje aplikace v App Storu a Play Storu ani funkce, 
 
 Pokud už je aplikace napsaná nebo pokud není dostupný zdrojový kód, použijte raději nástroj App Wrapping, ne sadu SDK.
 
+**Nástroj App Wrapping pro MAM na zařízeních, která nejsou registrovaná do Intune, je aktuálně podporován ve veřejné verzi Preview. Další informace najdete v tématu [Ochrana aplikací LOB na zařízeních neregistrovaných do Intune](protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune.md)**.
+
+### Podporované platformy
+
+|**Nástroj App Wrapping** | **Xamarin** |**Cordova** |
+|------|----|----|
+|**iOS** |Ano|Ano|
+|**Android**| Ne |Ano|
 ## Sada Intune App SDK
 Sada App SDK je určená hlavně zákazníkům, kteří mají aplikace v App Storu nebo Play Storu a chtějí je moct spravovat pomocí Intune. Integraci sady SDK ale může využít jakákoli aplikace, třeba i obchodní aplikace.
 
 Další informace o sadě SDK najdete v tématu [Přehled](/intune/develop/intune-app-sdk). Pokud chcete začít používat sadu SDK, přečtěte si téma [Začínáme s Microsoft Intune App SDK](/intune/develop/intune-app-sdk-get-started).
+
+### Podporované platformy
+|**Sada Intune App SDK** |**Xamarin** |**Cordova**
+|------|----|----|
+|**iOS**|Ano – použijte komponentu Xamarin sady Intune App SDK|Ano –použijte plugin Cordova sady Intune App SDK|
+|**Android**| Ano – použijte komponentu Xamarin sady Intune App SDK|Ano –použijte plugin Cordova sady Intune App SDK|
 
 ## Porovnání funkcí
 Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a nástroji App Wrapping.
@@ -61,14 +75,14 @@ Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a 
 |Selektivní vymazání <br></br>**Poznámka:** V iOS platí, že při odebrání profilu pro správu se odebere taky příslušná aplikace.|X||
 |Zabránit možnosti Uložit jako |X||
 |Podpora víc identit|X||
+### Viz taky
 
-### Související témata
 [Nástroj nástroje pro zabalení aplikace Android](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)</br>
 [Nástroj nástroje pro zabalení aplikace iOS](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)</br>
 [Použití sady SDK k povolení správy mobilních aplikací pro aplikace](use-the-sdk-to-enable-apps-for-mobile-application-management.md)
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

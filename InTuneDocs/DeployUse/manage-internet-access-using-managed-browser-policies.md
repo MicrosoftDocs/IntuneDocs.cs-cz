@@ -4,7 +4,7 @@ description: "Nasaďte aplikaci spravovaného prohlížeče, abyste omezili proc
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/03/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: dc946303-e09b-4d73-8bf4-87742299bc54
 ms.reviewer: maxles
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2fcd53d335aa18701ba0b8c3c75569febbee2cd5
-ms.openlocfilehash: d07a5dde05055c54f5b89c8aa5f49203d0a22b97
+ms.sourcegitcommit: d9e08429fb6c834476fd0029d559059c5132afca
+ms.openlocfilehash: d4d05508e44fe0864ce6dabf0864f6ed67109a7c
 
 
 ---
@@ -34,7 +34,7 @@ Zásady spravovaného prohlížeče můžete vytvořit pro následující typy z
 
 -   Zařízení se systémem Android 4 nebo novější verzí
 
--   Zařízení se systémem iOS 7.1 nebo novější verzí
+-   Zařízení se systémem iOS 8.0 nebo novější verzí
 
 Intune Managed Browser podporuje otevírání webového obsahu od [partnerů nabízejících aplikace pro Microsoft Intune](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx).
 
@@ -44,9 +44,9 @@ Intune Managed Browser podporuje otevírání webového obsahu od [partnerů nab
 
 2.  Nakonfigurujte jeden z následujících typů zásad pro **Software** :
 
-    -   **Zásady spravovaného prohlížeče (Android 4 a novější)**
+    -   **Spravovaný prohlížeč (Android 4 a novější)**
 
-    -   **Zásady spravovaného prohlížeče (iOS 7.1 a novější)**
+    -   **Spravovaný prohlížeč (iOS 8.0 a novější)**
 
     Další informace o vytvoření a nasazení zásad najdete v tématu [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
@@ -154,6 +154,6 @@ Pokud je na zařízení nasazených víc zásad spravovaného prohlížeče a do
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

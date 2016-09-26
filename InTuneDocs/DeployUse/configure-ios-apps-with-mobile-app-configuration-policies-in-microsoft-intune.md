@@ -4,7 +4,7 @@ description: "Zásady konfigurace mobilních aplikací v Intune slouží k posky
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 06/09/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: fc6b645a-e837-4b2a-a10f-144065cbd8dd
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 727d28cff074124b5401f6c2931f87df3a9d2d23
-ms.openlocfilehash: 917761ab6be2ccd94f32e7d2f12c0ed18d335d41
+ms.sourcegitcommit: d9e08429fb6c834476fd0029d559059c5132afca
+ms.openlocfilehash: 9b70517251c6225afee719c7e3380c584785251b
 
 
 ---
@@ -37,7 +37,7 @@ Zásady konfigurace mobilních aplikací pomůžou tyto problémy eliminovat tí
 Tyto zásady nenasazujte přímo na uživatele a zařízení. Místo toho přidružíte zásadu k aplikaci, a pak nasadíte aplikaci. Nastavení zásad se použije vždy, když je aplikace zkontroluje (obvykle při prvním spuštění).
 
 > [!TIP]
-> Tento typ zásad je nyní k dispozici pouze pro zařízení se systémem iOS 7.1 a novějším. Podporuje následující typy instalací aplikací:
+> Tento typ zásad je nyní k dispozici pouze pro zařízení se systémem iOS 8.0 a novějším. Podporuje následující typy instalací aplikací:
 >
 > -   **Spravované aplikace pro iOS z obchodu s aplikacemi**
 > -   **Balíček aplikace pro iOS**
@@ -139,6 +139,6 @@ Když vytvoříte soubor konfigurace mobilních aplikací, můžete pomocí toho
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 
