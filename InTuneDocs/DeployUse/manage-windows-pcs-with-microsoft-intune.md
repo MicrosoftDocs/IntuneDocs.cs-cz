@@ -13,8 +13,8 @@ ms.assetid: 3b8d22fe-c318-4796-b760-44f1ccf34312
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 16be49504b24269f9463905ab5767acbda136a0a
-ms.openlocfilehash: a13c03cde29c46a78577b58f85daad30a076bf89
+ms.sourcegitcommit: a4cc8b7e34e8809eebd7fdec8ffac0599c96d309
+ms.openlocfilehash: ce27fc737fdf47903d7554eb15f24f07b3524406
 
 
 ---
@@ -43,7 +43,7 @@ I když softwarový klient Intune podporuje [zásady, které pomáhají chránit
 
 |Požadavek|Další informace|
 |---------------|--------------------|
-|Operační systém | Zařízení s Windows se systémem Windows 7 nebo novějším. |
+|Operační systém | Zařízení s Windows se systémem Windows Vista nebo novějším. Verze Home Edition nejsou podporovány.|
 |Oprávnění správce|Účet, který instaluje klientský software, musí mít oprávnění místního správce pro toto zařízení.|
 |Instalační služba systému Windows verze 3.1|Na počítači musí být Instalační služba systému Windows minimálně verze 3.1.<br /><br />Pokud chcete zobrazit verzi Instalační služby systému Windows na počítači:<br /><br />-   Na počítači klikněte pravým tlačítkem na **%windir%\System32\msiexec.exe** a potom klikněte na **Vlastnosti**.<br /><br />Nejnovější verzi Instalační služby systému Windows můžete stáhnout ze stránky [Windows Installer Redistributables](http://go.microsoft.com/fwlink/?LinkID=234258) na webu Microsoft Developer Network.|
 |Odebrání nekompatibilního klientského softwaru|Před instalací klientského softwaru Intune musíte z daného počítače odinstalovat veškerý klientský software Configuration Manageru a System Management Serveru.|
@@ -75,6 +75,6 @@ Klientský agent Intune obvykle běží tiše na pozadí a nevyžaduje skoro ž�
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

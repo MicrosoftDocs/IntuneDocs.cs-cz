@@ -13,8 +13,8 @@ ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bf8da72092a2380e73cfbed2a693831706b40d23
-ms.openlocfilehash: c005a1b38289580b1543e0e62cbb4cd00cb22c47
+ms.sourcegitcommit: 0ced62efd04803943cbbfd8cecef907409a03c0b
+ms.openlocfilehash: daecea644300ee1e47db9b028b72d71b3211f46d
 
 
 
@@ -55,12 +55,18 @@ Nezapomeňte použít tečku na začátku.
 4. Zvolte **OK** a uložení. Poté zásadu nasaďte.
 
     > [!NOTE]
-Tuto zásadu lze nasadit pouze do skupin uživatelů.
+    > Tuto zásadu lze nasadit pouze do skupin uživatelů.
 
 Pro každé zařízení, které se příště vrátí se změnami, se použijí zásady a vytvoří se pro ně profil Wi-Fi. Zařízení se bude moct připojit k síti automaticky.
 ## Profil Wi-Fi pro Android nebo Windows
 
 Zde je příklad kódu XML pro profil Wi-Fi pro Android nebo Windows:
+
+> [!IMPORTANT]
+> 
+> `<protected>false</protected>`: Nastavte na **nepravda**, protože hodnota **pravda** by mohla způsobit, že zařízení by očekávalo šifrované heslo, následně by se ho pokoušelo dešifrovat a to by vedlo k selhání připojení.
+> 
+>  `<hex>53534944</hex>` má být nastaveno na šestnáctkovou hodnotu `<name><SSID of wifi profile></name>`.
 
     <!--
     <Name of wifi profile> = Name of profile
@@ -70,6 +76,7 @@ Zde je příklad kódu XML pro profil Wi-Fi pro Android nebo Windows:
     <Type of encryption> = Type of encryption used by the network
     <protected>false</protected> do not change this value, as true could cause device to expect an encrypted password and then try to decrypt it, which may result in a failed connection.
     <password> = Password to connect to the network
+    <hex>53534944</hex> should be set to the hexadecimal value of <name><SSID of wifi profile></name>
     -->
     <WLANProfile
     xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
@@ -207,6 +214,6 @@ Když vyberete nasazenou zásadu, zobrazí se v dolní části seznamu zásad da
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO3-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 08d4352ef88a266d05047d386247815f3765f552
-ms.openlocfilehash: affcca7ea406ea8a9d60f29add4385998b0ae29d
+ms.sourcegitcommit: e2daff5dae435df55c866adbf602f554500d50e0
+ms.openlocfilehash: e898d070eb61583ff379821c9bf24f3997ae177e
 
 
 ---
@@ -50,7 +50,7 @@ Abyste mohli v programu DEP registrovat zařízení iOS vlastněná společnost�
 5.  **Přidání zásad registrace podnikových zařízení** V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) přejděte na **Zásady** &gt; **Registrace podnikového zařízení** a potom klikněte na **Přidat**.
 
     Zadejte **obecné** podrobnosti, včetně **názvu** a **popisu**, a určete, jestli mají zařízení přiřazená k profilu uživatele přidružení uživatele, nebo jestli patří do skupiny.
-      - **Vyzvat k přidružení uživatele**: Při počátečním nastavení je možné zařízení spojit s uživatelem a potom mu umožnit přístup k firemním datům a e-mailu.  Pro zařízení spravovaná pomocí programu DEP, která patří uživatelům a potřebují používat portál společnosti (tj. instalovat aplikace), by se mělo nakonfigurovat **přidružení uživatele**.
+      - **Vyzvat k přidružení uživatele**: Při počátečním nastavení je možné zařízení spojit s uživatelem a potom mu umožnit přístup k firemním datům a e-mailu.  Pro zařízení spravovaná pomocí programu DEP, která patří uživatelům a potřebují používat portál společnosti (tj. instalovat aplikace), by se mělo nakonfigurovat **přidružení uživatele**. **Poznámka:** Zařízení DEP s přidružením uživatele nemohou podporovat vícefaktorové ověřování.
       - **Bez přidružení uživatele**: K zařízení není přidružený žádný uživatel. Toto spřažení použijte u zařízení určených k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, které vyžadují přidružení uživatele, včetně aplikace Portál společnosti používané k instalaci obchodních aplikací, nebudou fungovat.
 
     Můžete také vybrat možnost **Přiřadit zařízení k této skupině**. Klikněte na **Vybrat** a zvolte skupinu.
@@ -89,7 +89,7 @@ Abyste mohli v programu DEP registrovat zařízení iOS vlastněná společnost�
 
 6.  **Přiřazení zařízení DEP pro správu** Přejděte na [portál programu Device Enrollment Program](https://deploy.apple.com) (https://deploy.apple.com) a přihlaste se pomocí firemního Apple ID. Přejděte na **Program nasazení** &gt; **Device Enrollment Program** &gt; **Spravovat zařízení**. Zadejte, jak budete **volit zařízení**a zadejte podrobné informace o zařízení: **Sériové číslo**, **Číslo objednávky**nebo **Nahrát soubor CSV**. Potom vyberte **Přiřadit k serveru** a vyberte &lt;název_serveru&gt; zadaný pro Microsoft Intune. Potom klikněte na **OK**.
 
-7.  **Synchronizace zařízení spravovaných programem DEP** Přihlaste se jako uživatel s oprávněními správce a otevřete [konzolu pro správu Microsoft Intune](http://manage.microsoft.com). Přejděte na **Správa** &gt; **Správa mobilních zařízení** &gt; **iOS** &gt; **Device Enrollment Program** a klikněte na **Synchronizovat**. Žádost o synchronizaci se pošle společnosti Apple. Pokud chcete po synchronizaci zobrazit zařízení spravovaná programem DEP, přejděte v [konzole pro správu Microsoft Intune](http://manage.microsoft.com) na **Skupiny** &gt; **Všechna zařízení ve vlastnictví firmy**. V pracovním prostoru **Všechna zařízení ve vlastnictví firmy** mají spravovaná zařízení u položky **Stav** nastavení „Nekontaktované“, dokud se zařízení nezapne a nespustí se Pomocník s nastavením pro registraci zařízení.
+7.  **Synchronizace zařízení spravovaných programem DEP** Přihlaste se jako uživatel s oprávněními správce a otevřete [konzolu pro správu Microsoft Intune](http://manage.microsoft.com). Přejděte na **Správa** &gt; **Správa mobilních zařízení** &gt; **iOS** &gt; **Device Enrollment Program** a klikněte na **Synchronizovat**. Žádost o synchronizaci se pošle společnosti Apple. Pokud chcete po synchronizaci zobrazit zařízení spravovaná programem DEP, přejděte v [konzole pro správu Microsoft Intune](http://manage.microsoft.com) na **Skupiny** &gt; **Všechna zařízení** &gt; **Firemní předregistrovaná zařízení** &gt; **Podle sériového čísla iOS**. V pracovním prostoru **Podle sériového čísla iOS** mají spravovaná zařízení u položky **Stav** nastavení „Nekontaktované“, dokud se zařízení nezapne a nespustí se Pomocník s nastavením pro registraci zařízení.
 
     Pro dosažení souladu s podmínkami společnosti Apple pro přijatelné přenosy v rámci DEP platí v Intune následující omezení:
      -  Úplná synchronizace DEP může být spuštěna maximálně jednou za 7 dní. Během úplné synchronizace Intune aktualizuje všechna sériová čísla, která společnost Apple přiřadila Intune, bez ohledu na to, jestli už byla dříve synchronizovaná. Pokud dojde k pokusu o úplnou synchronizaci do 7 dnů od předchozí úplné synchronizace, aktualizuje Intune jenom sériová čísla, která ještě nejsou uvedená v Intune.
@@ -99,13 +99,13 @@ Abyste mohli v programu DEP registrovat zařízení iOS vlastněná společnost�
 
 ## Změny v přiřazení skupiny pro Intune
 
-Od října se správa skupin zařízení přesune do služby Azure Active Directory. Po přechodu na skupiny Azure Active Directory se už přiřazení skupin nebude zobrazovat mezi možnostmi v části **Podnikový profil zápisu**. Jelikož se tato změna bude zavádět několik měsíců, je možné, že ji nezaznamenáte okamžitě. Po přesunu do nového portálu bude možné na základě názvů podnikových profilů registrace definovat nová dynamická přiřazení do skupin zařízení. Tento proces slouží k tomu, aby se zařízení předběžně zařazená do určité skupiny zařízení automaticky zaregistrovala do této skupiny s nasazenými zásadami a aplikacemi. [Další informace o skupinách Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
+Od listopadu se správa skupin zařízení přesune do služby Azure Active Directory. Po přechodu na skupiny Azure Active Directory se už přiřazení skupin nebude zobrazovat mezi možnostmi v části **Podnikový profil zápisu**. Jelikož se tato změna bude zavádět několik měsíců, je možné, že ji nezaznamenáte okamžitě. Po přesunu do nového portálu bude možné na základě názvů podnikových profilů registrace definovat nová dynamická přiřazení do skupin zařízení. Tento proces slouží k tomu, aby se zařízení předběžně zařazená do určité skupiny zařízení automaticky zaregistrovala do této skupiny s nasazenými zásadami a aplikacemi. [Další informace o skupinách Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
 
 ### Související témata
 [Příprava registrace zařízení](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Sep16_HO2-->
 
 

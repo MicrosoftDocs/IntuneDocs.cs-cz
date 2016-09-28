@@ -4,7 +4,7 @@ description: "Vytvořte zásady, které řídí nastavení a funkce na zařízen
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/30/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: cac39b60226939334032d954eb49d1417493b28d
-ms.openlocfilehash: 00e3a1b65c8475384bb05e64a4ef9f5d9de348ff
+ms.sourcegitcommit: cd5930995a6da130fedcb6d89851460e6f0614eb
+ms.openlocfilehash: 24540a74ce98adbf3f908cbea401328f027867ca
 
 
 ---
@@ -39,7 +39,7 @@ Pomocí **zásad obecné konfigurace pro iOS** v Microsoft Intune můžete nakon
 Pokud v tomto tématu není uvedené nastavení, které hledáte, je možné, že ho budete moct vytvořit pomocí vlastních zásad pro iOS, které vám umožní naimportovat nastavení vytvořená pomocí [nástroje Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12). Další informace najdete v části Nastavení vlastních zásad dál v tomto tématu.
 
 ### Nastavení zabezpečení
-Všechna nastavení platí pro iOS 7.1 a novější.
+Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
 |----------------|-------|
@@ -58,7 +58,7 @@ Všechna nastavení platí pro iOS 7.1 a novější.
 <sup>1</sup> Pokud pro zařízení s iOS nakonfigurujete nastavení **Počet minut nečinnosti před vypnutím displeje** a **Počet minut nečinnosti před vyžadováním hesla**, tato nastavení se použijí v uvedeném pořadí. Pokud například pro obě nastavení nastavíte hodnotu **5** minut, obrazovka se po 5 minutách automaticky vypne a po dalších 5 minutách se zařízení zamkne. Pokud ale uživatel vypne obrazovku ručně, druhé nastavení se použije okamžitě. V tomto příkladě se zařízení po tom, co uživatel vypne obrazovku, zamkne po 5 minutách.
 
 ### Nastavení systému
-Všechna nastavení platí pro iOS 7.1 a novější.
+Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
 |----------------|-------|
@@ -71,7 +71,7 @@ Všechna nastavení platí pro iOS 7.1 a novější.
 |**Povolit aplikaci Passbook při uzamčení**|Povolí uživateli přístup k aplikaci Passbook, když je zařízení uzamčené.|
 
 ### Nastavení cloudu pro dokumenty a data
-Všechna nastavení platí pro iOS 7.1 a novější.
+Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
 |----------------|-------|
@@ -85,7 +85,7 @@ Všechna nastavení platí pro iOS 7.1 a novější.
 |**Povolit Knihovnu fotografií na iCloudu**|Umožní uživateli ukládat fotky na iCloud. Pokud se zakáže, všechny dříve uložené fotky na iCloudu budou odebrány.|
 
 ### Nastavení aplikace pro prohlížeč
-Všechna nastavení platí pro iOS 7.1 a novější.
+Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
 |----------------|-------|
@@ -97,7 +97,7 @@ Všechna nastavení platí pro iOS 7.1 a novější.
 |**Povolit upozornění na podvod**|Povolí v prohlížeči upozornění na podvod.|
 
 ### Nastavení aplikací pro aplikace
-Všechna nastavení platí pro iOS 7.1 a novější.
+Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
 |----------------|-------|
@@ -111,7 +111,7 @@ Všechna nastavení platí pro iOS 7.1 a novější.
 
 
 ### Nastavení aplikací pro hry
-Všechna nastavení platí pro iOS 7.1 a novější.
+Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
 |----------------|-------|
@@ -119,7 +119,7 @@ Všechna nastavení platí pro iOS 7.1 a novější.
 |**Povolit hru s více hráči**|Povolí uživateli hrát na zařízení hry pro víc hráčů.|
 
 ### Nastavení aplikací pro mediální obsah
-Všechna nastavení platí pro iOS 7.1 a novější.
+Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
 |----------------|-------|
@@ -129,7 +129,7 @@ Všechna nastavení platí pro iOS 7.1 a novější.
 
 
 ### Nastavení možností zařízení pro hardware
-Všechna nastavení platí pro iOS 7.1 a novější.
+Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
 |----------------|-------|
@@ -138,7 +138,7 @@ Všechna nastavení platí pro iOS 7.1 a novější.
 |**Vyžadovat párovací heslo pro odchozí požadavky AirPlay**|Vyžaduje párovací heslo, pokud uživatel použije AirPlay ke streamování obsahu do dalších zařízení Apple.|
 
 ### Nastavení možností zařízení pro mobilní funkce
-Všechna nastavení platí pro iOS 7.1 a novější.
+Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
 |----------------|-------|
@@ -147,14 +147,14 @@ Všechna nastavení platí pro iOS 7.1 a novější.
 |**Povolit globální načítání na pozadí při roamingu**|Povolí zařízení, aby při roamingu v mobilní síti načítalo data na pozadí, třeba e-maily.|
 
 ### Nastavení možností zařízení pro funkce
-Všechna nastavení platí pro iOS 7.1 a novější.
+Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
 |----------------|-------|
 |**Povolit Siri**|Povolí v zařízení používání hlasového pomocníka Siri.|
 |**Povolit Siri při uzamčení zařízení**|Povolí používání hlasového pomocníka Siri, když je zařízení zamčené.|
 |**Povolit hlasové vytáčení**|Umožňuje používat v zařízení funkci hlasového vytáčení.|
-|**Nepovolovat AirDrop ze spravovaných aplikací**|Znemožní spravovaným aplikacím posílat data přes  AirDrop.|
+|**Nepovolovat AirDrop ze spravovaných aplikací**|Znemožní spravovaným aplikacím posílat data přes Airdrop.|
 
 
 ### Nastavení pro aplikace dodržující a nedodržující předpisy
@@ -196,7 +196,7 @@ V seznamu **Kompatibilní a nekompatibilní aplikace** zadejte seznam kompatibil
 > [!NOTE]
 > Následující poznámky platí pro nastavení celoobrazovkového režimu na zařízeních iOS:
 >
-> -   Než budete moct nakonfigurovat nastavení zařízení iOS pro celoobrazovkový režim, musíte převést zařízení do režimu dohledu pomocí [nástroje Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) nebo manažera registrace zařízení. Další informace o nástroji Apple Configurator získáte v dokumentaci Apple.
+> -   Než budete moct nakonfigurovat nastavení zařízení iOS pro celoobrazovkový režim, musíte převést zařízení do režimu dohledu pomocí nástroje [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) nebo [Programu registrace zařízení Apple](ios-device-enrollment-program-in-microsoft-intune). Další informace o nástroji Apple Configurator získáte v dokumentaci Apple.
 > -   Pokud se určená aplikace pro iOS nainstaluje až po nasazení zásad konfigurace, zařízení nepřejde do celoobrazovkového režimu, dokud ho nerestartujete.
 
 ### Referenční informace pro aplikace nesplňující předpisy
@@ -222,14 +222,14 @@ Pokud chcete zadat adresu URL aplikace do seznamu kompatibilních a nekompatibil
 > Pomocí softwaru iTunes taky můžete najít aplikaci a pomocí příkazu **Kopírovat odkaz** získat adresu URL aplikace.
 
 ### Nastavení registrace
-Všechna nastavení platí pro iOS 7.1 a novější.
+Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
 |----------------|--------------------|
 |**Povolit zámek aktivace, když je zařízení v režimu pod dohledem**|Povolí zámek aktivace na zařízeních s iOS, které jsou pod dohledem.|
 
 ### Nastavení režimu dohledu
-Na zařízeních se systémem iOS 7.1 a novějším, které jsou v režimu pod dohledem, je možné nakonfigurovat následující nastavení.
+Na zařízeních se systémem iOS 8.0 a novějším, která jsou v režimu pod dohledem, je možné nakonfigurovat následující nastavení.
 
 ### Nastavení režimu dohledu – omezení zařízení
 
@@ -265,9 +265,9 @@ Na zařízeních se systémem iOS 7.1 a novějším, které jsou v režimu pod d
 
 |Název nastavení|Podrobnosti|
 |----------------|--------------------|
-|**Povolit úpravy nastavení vztahu důvěryhodnosti u podnikových aplikací**||
-|**Povolit instalaci aplikací pouze pomocí konfigurace Apple a iTunes**||
-|**Povolit automatické stahování aplikací**||
+|**Povolit úpravy nastavení vztahu důvěryhodnosti u podnikových aplikací**|Umožňuje uživatelům změnit nastavení vztahu důvěryhodnosti pro podnikové aplikace.|
+|**Povolit instalaci aplikací pouze pomocí Apple Configuration a iTunes**|Povolí nebo zakáže App Store z domovské obrazovky zařízení. Uživatelé mohou nadále instalovat a aktualizovat aplikace pomocí iTunes nebo nástroje Apple Configurator.|
+|**Povolit automatické stahování aplikací**|Povolit, aby aplikace zakoupené na jiných zařízeních byly automaticky staženy na toto zařízení. Toto nastavení nemá vliv na aktualizace aplikací.|
 |**Povolit změny v nastavení aplikace Find My Friends**|Umožní uživateli změnu nastavení pro aplikaci Find My Friends.|
 |**Povolit přístup k obchodu iBooks**|Umožní uživateli procházení a nákup knih z úložiště iBooks.|
 |**Povolit použití aplikace Zprávy na zařízení**|Povolit použití aplikace Zprávy k posílání textových zpráv.|
@@ -382,6 +382,6 @@ Než začnete, je potřeba nainstalovat Apple Configurator a vytvořit konfigura
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

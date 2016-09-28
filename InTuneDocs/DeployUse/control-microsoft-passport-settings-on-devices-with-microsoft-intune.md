@@ -4,7 +4,7 @@ description: "Přečtěte si, jak Intune umožňuje integraci se službou Window
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 09/02/2016
+ms.date: 09/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 402bc5a1-ada3-4c4c-a0de-292d026b4444
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3d212869051719b6b1f1d527ee52044420df0c14
-ms.openlocfilehash: c2c2774dd85d8ce9c056248f801220e06f17063b
+ms.sourcegitcommit: 73379311acad6f2a7054e262dea701d3e7b9ad45
+ms.openlocfilehash: 40344947d7c94c90258c967da36c09c95a54335c
 
 
 ---
@@ -29,6 +29,18 @@ Intune se s Hello pro firmy integruje dvěma způsoby:
 -   Pomocí zásady Intune můžete řídit, která gesta uživatel může nebo nemůže používat k přihlášení.
 
 -   Ověřovací certifikáty můžete uložit ve zprostředkovateli úložiště klíčů (KSP) služby Windows Hello pro firmy. Další informace najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů v Microsoft Intune](secure-resource-access-with-certificate-profiles.md).
+
+> [!IMPORTANT]
+> V desktopových a mobilních verzích Windows 10 před Anniversary Update šlo nastavit dva různé kódy PIN, které se daly použít k ověření prostředků:
+- **PIN zařízení** se používal k odemknutí zařízení a připojení k prostředkům cloudu.
+- **Pracovní PIN** se používal pro přístup k prostředkům Azure AD na uživatelově osobním zařízení (BYOD).
+
+>Anniversary Update sloučil tyhle dva kódy do jediného PIN zařízení.
+Veškeré zásady konfigurace Intune, které mají nastaveno, že ovládají PIN zařízení, a také jakékoli nakonfigurované zásady Windows Hello pro firmy teď nastavují hodnotu tohoto nového kódu PIN.
+Pokud jste o obou typů zásad nastavili, že ovládají kód PIN, použijí se na desktopových i mobilních zařízeních s Windows 10 zásady Windows Hello pro firmy.
+Abyste předešli konfliktům mezi zásadami a zajistili, že zásady kódu PIN se budou aplikovat správně, aktualizujte zásady Windows Hello pro firmy, tak aby odpovídaly nastavení zásad konfigurace. Potom požádejte uživatele, aby si svá zařízení synchronizovali v aplikaci Portál společnosti.
+
+
 
 ## Vytvoření zásad pro službu Windows Hello pro firmy
 
@@ -67,6 +79,6 @@ Další informace o službě Microsoft Passport najdete v [příručce](https://
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

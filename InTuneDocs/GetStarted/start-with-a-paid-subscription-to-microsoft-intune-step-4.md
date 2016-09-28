@@ -92,6 +92,6 @@ Gratulujeme! Právě jste dokončili krok 4 *úvodní příručky Intune*.
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

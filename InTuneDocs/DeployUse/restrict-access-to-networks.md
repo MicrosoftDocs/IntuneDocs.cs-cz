@@ -4,7 +4,7 @@ description: "Použijte Cisco ISE s Intune, aby zařízení byla zaregistrovaná
 keywords: 
 author: nbigman
 manager: angrobe
-ms.date: 06/24/2016
+ms.date: 09/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 40194f4359d0889806e080a4855b8e1934b667f9
-ms.openlocfilehash: 9d6b7198e3c2e30898a8ec83785c7f3b777eda5f
+ms.sourcegitcommit: ecaf92b327538e3da4df268e4c67c73af262b731
+ms.openlocfilehash: fa73c5e2b4e6737377acd206807399b31df37364
 
 
 ---
@@ -27,7 +27,7 @@ Integrace Intune s Cisco ISE (Identity Services Engine) umožňuje vytvářet z�
 Chcete-li tuto integraci povolit, nemusíte v tenantovi Intune provádět žádné nastavení. Bude třeba poskytnout serveru Cisco ISE oprávnění pro přístup k tenantovi Intune. Zbývající část nastavení se potom provede na serveru Cisco ISE. Tento článek obsahuje pokyny pro poskytnutí oprávnění pro přístup k vašemu tenantovi Intune pro váš server ISE.
 
 ### Krok 1: Správa certifikátů
-1. V konzole Azure Active Directory (Azure AD) exportujte certifikát.
+Exportujte certifikát z konzoly Azure Active Directory (Azure AD) a importujte jej do úložiště důvěryhodných certifikátů konzoly ISE:
 
 #### Internet Explorer 11
 
@@ -44,22 +44,23 @@ Chcete-li tuto integraci povolit, nemusíte v tenantovi Intune provádět žádn
 
    f. Na stránce **Soubor k exportu** zvolte **Procházet**, vyberte umístění, do kterého chcete soubor uložit, a zadejte název souboru. Ačkoli se zdá, že vybíráte soubor pro export, ve skutečnosti pojmenováváte soubor, do kterého bude exportovaný certifikát uložen. Zvolte **Další** &gt; **Dokončit**.
 
+   g. Z konzoly ISE importujte certifikát Intune (soubor, který jste exportovali) do úložiště **Důvěryhodné certifikáty**.
+
 #### Safari
 
  a. Přihlaste se ke konzole Azure AD.
 
-b. Zvolte ikonu zámku &gt;  **Další informace**.
+b. Zvolte ikonu zámku &gt; **Další informace**.
 
    c. Zvolte **Zobrazit certifikát** &gt; **Podrobnosti**.
 
-   d. Zvolte certifikát a pak zvolte **Exportovat**.  
+   d. Zvolte certifikát a pak zvolte **Exportovat**. 
+
+   e. Z konzoly ISE importujte certifikát Intune (soubor, který jste exportovali) do úložiště **Důvěryhodné certifikáty**.
 
 > [!IMPORTANT]
 >
 > Zkontrolujte datum vypršení platnosti certifikátu, protože po vypršení platnosti tohoto certifikátu bude třeba exportovat a importovat nový certifikát.
-
-
-2. Z konzoly ISE importujte certifikát Intune (soubor, který jste exportovali) do úložiště **Důvěryhodné certifikáty**.
 
 
 ### Získání certifikátu podepsaného svým držitelem ze systému ISE 
@@ -97,8 +98,57 @@ Ověřte, že veškerý text leží na jednom řádku.
 |Koncový bod tokenu OAuth 2.0|Adresa URL pro vydávání tokenů|
 |Aktualizace kódu s použitím ID klienta|ID klienta|
 
+### Krok 4: Nahrání certifikátu podepsaného svým držitelem z ISE do aplikace ISE, kterou jste vytvořili ve službě Azure AD
+1.     Získejte hodnotu zakódovaného certifikátu base64 a kryptografický otisk ze souboru certifikátu .cer X509. V tomto příkladu je používáno prostředí PowerShell:
+   
+      
+    `$cer = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2`
+     `$cer.Import(“mycer.cer”)`
+      `$bin = $cer.GetRawCertData()`
+      `$base64Value = [System.Convert]::ToBase64String($bin)`
+      `$bin = $cer.GetCertHash()`
+      `$base64Thumbprint = [System.Convert]::ToBase64String($bin)`
+      `$keyid = [System.Guid]::NewGuid().ToString()`
+ 
+    Uložte hodnoty pro $base64Thumbprint, $base64Value a $keyid, které použijete v dalším kroku.
+2.       Nahrajte certifikát prostřednictvím souboru manifestu. Přihlaste se k [portálu pro správu Azure](https://manage.windowsazure.com)
+2.      Ve snapinu služby Azure AD najděte aplikaci, kterou chcete nakonfigurovat pomocí certifikátu X.509.
+3.      Stáhněte si soubor manifestu aplikace. 
+5.      Nahraďte prázdnou vlastnost “KeyCredentials”: [] následujícím formátem JSON.  Komplexní typ s názvem KeyCredentials je zdokumentován v [ Referenčních informacích k entitám a komplexním typům](https://msdn.microsoft.com/library/azure/ad/graph/api/entity-and-complex-type-reference#KeyCredentialType).
 
-### Krok 3: Konfigurace nastavení ISE
+ 
+    `“keyCredentials“: [`
+    `{`
+     `“customKeyIdentifier“: “$base64Thumbprint_from_above”,`
+     `“keyId“: “$keyid_from_above“,`
+     `“type”: “AsymmetricX509Cert”,`
+     `“usage”: “Verify”,`
+     `“value”:  “$base64Value_from_above”`
+     `}2. `
+     `], `
+ 
+Například:
+ 
+    `“keyCredentials“: [`
+    `{`
+    `“customKeyIdentifier“: “ieF43L8nkyw/PEHjWvj+PkWebXk=”,`
+    `“keyId“: “2d6d849e-3e9e-46cd-b5ed-0f9e30d078cc”,`
+    `“type”: “AsymmetricX509Cert”,`
+    `“usage”: “Verify”,`
+    `“value”: “MIICWjCCAgSgAwIBA***omitted for brevity***qoD4dmgJqZmXDfFyQ”`
+    `}`
+    `],`
+ 
+6.      Uložte změny do souboru manifestu aplikace.
+7.      Nahrajte upravený soubor manifestu aplikace prostřednictvím Portálu pro správu Azure.
+8.      Volitelné: Znovu si stáhněte manifest a zkontrolujte, jestli aplikace obsahuje váš certifikát X.509.
+
+>[!NOTE]
+>
+> KeyCredentials je kolekce, což znamená, že můžete nahrát více certifikátů X.509 pro scénáře změny klíčů nebo odstranit certifikáty ve scénářích ohrožení.
+
+
+### Krok 4: Konfigurace nastavení ISE
 V konzole správce ISE zadejte tyto hodnoty nastavení:
   - **Typ serveru**: Správce mobilních zařízení
   - **Typ ověřování**: OAuth – pověření klienta
@@ -150,6 +200,6 @@ K dispozici je také [sada pokynů pro registraci ke stažení](https://gallery.
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

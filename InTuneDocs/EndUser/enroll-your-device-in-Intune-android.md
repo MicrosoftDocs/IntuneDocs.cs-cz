@@ -4,7 +4,7 @@ description: "Popisuje registraci zařízení s Androidem v Intune."
 keywords: 
 author: staciebarker
 manager: angrobe
-ms.date: 07/26/2016
+ms.date: 09/09/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 0ed3a002-7533-4001-ae24-e10b64b66620
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 08eeb1f330ed8fcea5da41f71ded0ccf124da7c5
-ms.openlocfilehash: 6fa1e13b6b0e29144c3740f00b232807e6e4e984
+ms.sourcegitcommit: 47f9654af126d0e83890f797c321100f40ae497b
+ms.openlocfilehash: 3d06e55607172d52538c7f4ec7aed843b64e3f53
 
 
 ---
@@ -71,7 +71,7 @@ Pokud při pokusu o registraci zařízení do služby Intune dojde k chybě, pro
 
     ![android-company-portal-sign-in](./media/and-enroll-3a-allow-phone-access.png)
 
-    Pokud se zobrazí tato zpráva, klepněte na **POVOLIT**. Klepnout na POVOLIT je bezpečné, protože **Microsoft nikdy netelefonuje ani nespravuje telefonní hovory**. Text zprávy určuje společnost Google a Microsoft ho nemůže změnit. Když povolíte přístup, povolíte na svém zařízení jenom zápis datových protokolů na kartu SD zařízení, takže tyto protokoly můžete přesouvat pomocí kabelu USB.
+    Pokud se zobrazí tato zpráva, klepněte na **POVOLIT**. Klepnout na POVOLIT je bezpečné, protože **Microsoft nikdy netelefonuje ani nespravuje telefonní hovory**. Text zprávy určuje společnost Google a Microsoft ho nemůže změnit. Když povolujete přístup, povolujte tím zařízení jen odesílat kód IMEI zařízení do Intune. IMEI je číslo (podobné sériovému číslu), které jedinečně identifikuje mobilní zařízení.
 
     Pokud přístup odepřete, při příštím přihlášení k portálu společnosti se zpráva zobrazí znovu, ale další zprávy už můžete vypnout zaškrtnutím políčka **Příště se už neptat**.  Pokud se později rozhodnete povolit přístup, použijte možnost **Nastavení** &gt; **Aplikace** &gt; **Portál společnosti** &gt; **Oprávnění** &gt; **Telefon** a tato oprávnění aktivujte.
 
@@ -81,7 +81,7 @@ Pokud při pokusu o registraci zařízení do služby Intune dojde k chybě, pro
 
     Pokud se zobrazí tato zpráva, klepněte na **POVOLIT**. Klepnout na POVOLIT je bezpečné, protože **Microsoft nikdy nevyužívá přístup k vašim kontaktům**. Text zprávy určuje společnost Google a Microsoft ho nemůže změnit. Když povolíte přístup, umožňuje aplikaci Portál společnosti jenom vytvářet, používat a spravovat váš pracovní účet.
 
-    Pokud přístup odepřete, při příštím klepnutí na **Odeslat data** se zpráva zobrazí znovu, ale další zprávy už můžete vypnout zaškrtnutím políčka **Příště se už neptat**. Pokud se později rozhodnete povolit přístup, použijte možnost **Nastavení** &gt; **Aplikace** &gt; **Portál společnosti** &gt; **Oprávnění** &gt; **Úložiště** a pak tato oprávnění aktivujte.
+    Pokud přístup odepřete, při příštím přihlášení k portálu společnosti se zpráva zobrazí znovu, ale další zprávy už můžete vypnout zaškrtnutím políčka **Příště se už neptat**.  Pokud se později rozhodnete povolit přístup, použijte možnost **Nastavení** &gt; **Aplikace** &gt; **Portál společnosti** &gt; **Oprávnění** &gt; **Telefon** a tato oprávnění aktivujte.
 
 11.  Na obrazovce **Aktivovat správce zařízení** klepněte na **Aktivovat**.
 
@@ -116,6 +116,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT (vyhledejte konta
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

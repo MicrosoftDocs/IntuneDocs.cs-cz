@@ -13,14 +13,14 @@ ms.assetid: bb49e926-15c4-4f01-b6eb-cee6f7ee1984
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d0e2b79a19dfce1541506bc1da89cb716a1d0af
-ms.openlocfilehash: c03c309e1e27a47b65a87aae8833b88680b0d8e8
+ms.sourcegitcommit: d9e08429fb6c834476fd0029d559059c5132afca
+ms.openlocfilehash: 2b44779fdac0764a3e7a18f1c365050e9800f902
 
 
 ---
 
 # Pomoc při ochraně zařízení s iOS pomocí funkce Vynechat zámek aktivace pro Microsoft Intune
-Microsoft Intune vám může pomoci spravovat zámek aktivace v iOS – funkci aplikace Najít iPhone pro zařízení s iOS 7.1 a novějším. Zámek aktivace je automaticky zapnutý, když uživatel na zařízení otevře aplikaci Najít iPhone. Když je tato funkce povolená, musí se zadat Apple ID a heslo uživatele, aby bylo možné: 
+Microsoft Intune vám může pomoci spravovat zámek aktivace v iOS – funkci aplikace Najít iPhone pro zařízení s iOS 8.0 a novějším. Zámek aktivace je automaticky zapnutý, když uživatel na zařízení otevře aplikaci Najít iPhone. Když je tato funkce povolená, musí se zadat Apple ID a heslo uživatele, aby bylo možné: 
 
 -   Vypnout aplikaci Můj iPhone
 
@@ -43,7 +43,7 @@ Aby bylo možné tyto problémy vyřešit, společnost Apple vydala v iOS 7.1 fu
 > Režim Pod dohledem pro zařízení s iOS vám umožňuje pomocí Apple Configuratoru zařízení zamknout a omezit tak jeho funkčnost jenom na konkrétní firemní účely. Dozorový režim je obecně určený výhradně pro zařízení v majetku podniků.
 
 ## Jak Intune pomáhá se správou zámku aktivace
-Intune může požádat o stav zámku aktivace jak u dozorovaných, tak i u nedozorovaných zařízení, na kterých běží iOS 7.1 a novější. Pouze pro dozorovaná zařízení může služba Intune získat kód pro vyřazení zámku aktivace a přímo ho předat zařízení. Pokud bylo zařízení vymazáno, můžete k zařízení získat přístup tak, že jako uživatelské jméno zadáte tento kód a heslo necháte prázdné.
+Intune může požádat o stav zámku aktivace jak u dozorovaných, tak i u nedozorovaných zařízení, na kterých běží iOS 8.0 a novější. Pouze pro dozorovaná zařízení může služba Intune získat kód pro vyřazení zámku aktivace a přímo ho předat zařízení. Pokud bylo zařízení vymazáno, můžete k zařízení získat přístup tak, že jako uživatelské jméno zadáte tento kód a heslo necháte prázdné.
 
 **Pro firmy to má tyto výhody**:
 
@@ -76,7 +76,7 @@ To, která zařízení zámek aktivace používají, můžete zjistit dvěma zp�
 
     -   Nepovolené
 
-    U zařízení, na kterých neběží iOS 7.1 nebo novější, je pole **Stav zámku aktivace** prázdné.
+    U zařízení, která nepoužívají iOS 8.0 nebo novější, je pole **Stav zámku aktivace** prázdné.
 
 -   V zobrazení skupin vyberte zařízení. Stav aktivace zámku uvidíte v podokně podrobností o zařízení.
 
@@ -92,6 +92,6 @@ To, která zařízení zámek aktivace používají, můžete zjistit dvěma zp�
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

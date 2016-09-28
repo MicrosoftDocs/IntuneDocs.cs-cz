@@ -13,8 +13,8 @@ ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 3e09af2cd329d556a9a0a1b2fb4750856e336ab1
+ms.sourcegitcommit: 45c6622624230e3486d2498b1b023f2efcdc2970
+ms.openlocfilehash: eb04f0e7b9627ad1869ef677f1b32380db868490
 
 
 ---
@@ -27,7 +27,7 @@ Toto téma vysvětluje kroky nutné k použití zásad MAM pro aplikace, které 
 ##  Krok 1: Příprava aplikace
 Před nasazením zásad MAM musíte aplikaci nejdřív zabalit pomocí nástroje Microsoft Intune App Wrapping.  Pokyny k instalaci a použití nástroje pro zabalení aplikace jsou součástí staženého souboru.  
 >[!IMPORTANT]  
->Tato verze nástroje pro balení aplikací s podporou zařízení, která nejsou zaregistrovaná v Intune, bude v následujících týdnech dostupná ve verzi Private Preview. Pokud se chcete zapojit, zašlete e-mail se žádostí o další informace na adresu msintuneappsdk@microsoft.com.
+>Tato verze nástroje pro balení aplikací s podporou zařízení, která nejsou zaregistrovaná v Intune, je dostupná ve veřejné verzi Preview. Pokud se chcete účastnit na zkušebním používání této veřejné verze Preview, můžete si nástroj stáhnout z [této stránky GitHub](https://github.com/msintuneappsdk/intune-app-wrapper-ios-preview) pro iOS a [této stránky GitHub](https://github.com/msintuneappsdk/intune-app-wrapper-android-preview) pro Android.
 
 ## Krok 2: Přidání aplikace
 
@@ -75,6 +75,6 @@ Obchodní aplikaci můžete ze seznamu aplikací odebrat.  Tato operace odebere 
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 
