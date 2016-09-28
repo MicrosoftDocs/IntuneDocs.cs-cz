@@ -4,7 +4,7 @@ description: "Kódy stavů a chyb z tohoto tématu použijte k vyřešení pro
 keywords: 
 author: Nbigman
 manager: angrobe
-ms.date: 08/02/2016
+ms.date: 09/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 40622ced-6029-4abf-873e-b51d2b51934c
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb0aeac2f94dfde50d9398b09c6b21c7ae40624
-ms.openlocfilehash: 144fa2e18670805ef46cf2d3db86ec254cdfdf77
+ms.sourcegitcommit: 03f7433bc46d6a24498104bed7e5f1f366aca890
+ms.openlocfilehash: 114d4107dc73b3ad905de3fe02ffb81fa2e0e954
 
 
 ---
@@ -33,7 +33,7 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 |30 (APP_CI_ENFORCEMENT_ERROR_RETRIEVING_CONTENT)|Načítá se obsah|Pravděpodobná příčina: Stav úlohy 30 označuje, že se uživateli nepodařilo stáhnout aplikaci.<br /><br />Toto jsou pravděpodobné příčiny:<br /><br />V průběhu stahování zařízení ztratilo připojení k internetu.<br /><br />Mohlo dojít k vypršení platnosti certifikátu vydaného pro zařízení v době registrace.<br /><br />Snížení rizika:<br /><br />Spuštěním Aplikací společnosti z ovládacích panelů na zařízení potvrďte, že platnost certifikátu zařízení nevypršela. Pokud platnost vypršela, bude nutné zařízení znovu zaregistrovat.<br /><br />Potvrďte, že zařízení je připojené k internetu , a zkuste znovu požádat o aplikaci.|
 |40 (APP_CI_ENFORCEMENT_IN_PROGRESS_CONTENT_DOWNLOADED)|Stahování obsahu se dokončilo||
 |50 (APP_CI_ENFORCEMENT_IN_PROGRESS_INSTALLING)|Probíhá instalace||
-|60 (APP_CI_ENFORCEMENT_ERROR_INSTALLING)|Instalace Došlo k chybě|Aplikaci se po stažení nepodařilo nainstalovat.<br /><br />Certifikát pro podpis kódu, kterým je aplikace podepsaná, se v zařízení nenachází.<br /><br />Závislost architektury, na které je aplikace závislá, není na zařízení nainstalovaná.<br /><br />Ujistěte se, že certifikát pro podpis kódu, se kterým je aplikace podepsaná, v zařízení existuje, a u správce ověřte, že tento certifikát je určený pro všechna zapsaná podniková zařízení s Windows RT.<br /><br />V případě, že je chyba instalace způsobená chybějící závislostí architektury, bude muset správce aplikaci znovu publikovat v balíčku společně s aplikací.<br /><br />Stažený balíček aplikace není platným balíčkem, je poškozený, nebo není kompatibilní s verzí operačního systému zařízení.|
+|60 (APP_CI_ENFORCEMENT_ERROR_INSTALLING)|Při instalaci došlo k chybě|Aplikaci se po stažení nepodařilo nainstalovat.<br /><br />Certifikát pro podpis kódu, kterým je aplikace podepsaná, se v zařízení nenachází.<br /><br />Závislost architektury, na které je aplikace závislá, není na zařízení nainstalovaná.<br /><br />Ujistěte se, že certifikát pro podpis kódu, se kterým je aplikace podepsaná, v zařízení existuje, a u správce ověřte, že tento certifikát je určený pro všechna zapsaná podniková zařízení s Windows RT.<br /><br />V případě, že je chyba instalace způsobená chybějící závislostí architektury, bude muset správce aplikaci znovu publikovat v balíčku společně s aplikací.<br /><br />Stažený balíček aplikace není platným balíčkem, je poškozený, nebo není kompatibilní s verzí operačního systému zařízení.|
 |70 (APP_CI_ENFORCEMENT_SUCCEEDED)|Instalace byla úspěšná||
 |80 (APP_CI_ENFORCEMENT_IN_PROGRESS)|Probíhá odinstalace||
 |90 (APP_CI_ENFORCEMENT_ERROR)|Došlo k chybě odinstalace||
@@ -127,7 +127,7 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 |-2016314112|0x87D17D00|22000:Neplatné použití klíče|
 |-2016315105|0x87D1791F|21007:Nejde ověřit účet.|
 |-2016315106|0x87D1791E|21006:Nejde dešifrovat certifikát.|
-|-2016315107|0x87D1791D|21005:Účet není jedinečný.|
+|-2016315107|0x87D1791D|21005:Účet není jedinečný (e-mailový profil už na zařízení existuje)|
 |-2016315108|0x87D1791C|21004:Nejde vytvořit účet.|
 |-2016315109|0x87D1791B|21003:Žádný název hostitele|
 |-2016315110|0x87D1791A|21002:Nejde dodržet zásadu šifrování ze serveru.|
@@ -372,6 +372,6 @@ Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podpor
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Sep16_HO4-->
 
 
