@@ -69,7 +69,7 @@ ms.openlocfilehash: 573108e176dbac7b9bbaa0f601f6fff6e73563fb
 |Lichtenštejnsko|24×7|Pondělí–pátek<br /><br />09:00–17:00 CET (UTC +1)|Francouzština&#42;, němčina&#42;, italština&#42;, angličtina|0800000300|0227614114|
 |Litva|24×7|Pondělí–pátek<br /><br />09:00–17:00 EET (UTC +2)|Litevština&#42;, angličtina|880030960||
 |Lucembursko|24×7|Pondělí–pátek<br /><br />09:00–17:00 CET (UTC +1)|Francouzština&#42;, němčina&#42;, angličtina|80021094|24871510|
-|Makedonie|24×7|Pondělí–pátek<br /><br />09:00–17:00 CET (UTC +1)|Angličtina|0800-94288<br /><br />Krok 1: Vytočte telefonní číslo<br /><br />Krok 2: Zadejte 001<br /><br />Krok 3: Zadejte 877-663-5075||
+|Makedonie - BRJ|24×7|Pondělí–pátek<br /><br />09:00–17:00 CET (UTC +1)|Angličtina|0800-94288<br /><br />Krok 1: Vytočte telefonní číslo<br /><br />Krok 2: Zadejte 001<br /><br />Krok 3: Zadejte 877-663-5075||
 |Malajsie|24×7|Pondělí–pátek<br /><br />09:00–18:00 MYT (UTC +8)|Bahasa&#42;, malajština&#42;, angličtina|1800 220030|362074606|
 |Malta|24×7|Pondělí–pátek<br /><br />09:00–17:00 CET (UTC +1)|Angličtina|0 80062231||
 |Mexiko|24×7|Pondělí–pátek<br /><br />09:00–17:00 CST (UTC -6)|Španělština&#42;, angličtina|01-8005630605|55473856567|

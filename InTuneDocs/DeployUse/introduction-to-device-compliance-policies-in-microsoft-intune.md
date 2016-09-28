@@ -13,8 +13,8 @@ ms.assetid: 0775107a-6662-41c8-9404-be14bbb599f3
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 44443db664753b202cc3fa07f8b76894320dc55d
-ms.openlocfilehash: f3bb686dda7bdf1e9557be2b5f5e0da2fb4d27e4
+ms.sourcegitcommit: 0be23ec10b8e380d57fc8263c68f08c0287c1b93
+ms.openlocfilehash: 7a9d68de99c624ccfe4d7d741c1c8ac5c0044314
 
 
 ---
@@ -32,9 +32,9 @@ Zásady dodržování předpisů nasazujete uživatelům. Po nasazení zásady d
 
 Následující tabulka uvádí typy zařízení podporované zásadami dodržování předpisů. Kromě toho je v ní i způsob, jak se spravují nastavení, která předpisy nedodržují, pokud se zásady používají se zásadami podmíněného přístupu.
 
---------------
+-----------------------------
 
-|Nastavení zásady| Windows 8.1 a vyšší| Windows Phone 8.1 nebo novější| iOS 6.0 nebo novější|Android 4.0 nebo novější<br/>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|
+|Nastavení zásady| Windows 8.1 a vyšší| Windows Phone 8.1 nebo novější| iOS 8.0 a novější|Android 4.0 nebo novější<br/>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|
 |-----|----|----|----|----|
 |**Konfigurace kódu PIN nebo hesla** |Opravené|Opravené|Opravené|V karanténě|
 |**Šifrování zařízení**|Není k dispozici|Opravené|Opravené (nastavením PIN kódu)|V karanténě|
@@ -43,7 +43,9 @@ Následující tabulka uvádí typy zařízení podporované zásadami dodržov�
 |**Minimální verze operačního systému**|V karanténě|V karanténě|V karanténě|V karanténě|
 |**Maximální verze operačního systému**|V karanténě| V karanténě| V karanténě| V karanténě|
 |**Ověření stavu Windows**|Windows 10 a Windows 10 Mobile jsou v karanténě.<br /><br />Nastavení se nevztahuje na Windows 8.1.|Není k dispozici|Není k dispozici|Není k dispozici|
---------------
+
+------------------------------
+
 **Opravené** = Dodržování předpisů se vynucuje operačním systémem zařízení (třeba tak, že uživatel musí nastavit kód PIN).  To se nikdy nestane, pokud nastavení nedodržuje předpisy.
 
 **V karanténě** = Operační systém zařízení nevynucuje dodržování předpisů (třeba zařízení s Androidem nenutí uživatele šifrovat svoje zařízení). Pokud zařízení nesplňuje předpisy, provedou se následující akce:
@@ -62,6 +64,6 @@ Následující tabulka uvádí typy zařízení podporované zásadami dodržov�
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

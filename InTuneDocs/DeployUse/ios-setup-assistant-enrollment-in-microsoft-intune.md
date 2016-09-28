@@ -13,8 +13,8 @@ ms.assetid: 46e5b027-4280-4809-b45f-651a6ab6d0cd
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ecfeb73efed4a47256275120c52de232c556adfe
-ms.openlocfilehash: 01d87b95d2599f75161c9a95ff4cf94375eedb60
+ms.sourcegitcommit: e2daff5dae435df55c866adbf602f554500d50e0
+ms.openlocfilehash: 45aa4511945ab4763dc0dc35baefe47887e561bb
 
 
 ---
@@ -24,7 +24,7 @@ Intune podporuje registraci firemních zařízení s iOS pomocí nástroje [Appl
 
 
 ## Registrace Pomocníka s nastavením pro zařízení s iOS v Microsoft Intune
-Pomocí Apple Configuratoru můžete v zařízeních s iOS obnovit tovární nastavení a připravit je pro nového uživatele.  Tato metoda předpokládá, že používáte Apple Configurator 2.0, a vyžaduje, abyste zařízení s iOS připojili k počítači Mac pomocí USB a nastavili firemní registraci. K povolení aplikace Portál společnosti Intune většina scénářů vyžaduje, aby zásady použité na zařízení s iOS zahrnovaly *přidružení uživatele*.
+Pomocí Apple Configuratoru můžete v zařízeních s iOS obnovit tovární nastavení a připravit je pro nového uživatele.  Tato metoda předpokládá, že používáte Apple Configurator 2.0, a vyžaduje, abyste zařízení s iOS připojili k počítači Mac pomocí USB a nastavili firemní registraci. K povolení aplikace Portál společnosti služby Intune většina scénářů vyžaduje, aby zásady použité na zařízení s iOS zahrnovaly **přidružení uživatele**.
 
 **Požadavky**
 * [Registrace iOS povolená](set-up-ios-and-mac-management-with-microsoft-intune.md) nainstalováním certifikátu služby APN
@@ -143,6 +143,6 @@ Pomocí Apple Configuratoru můžete v zařízeních s iOS obnovit tovární nas
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

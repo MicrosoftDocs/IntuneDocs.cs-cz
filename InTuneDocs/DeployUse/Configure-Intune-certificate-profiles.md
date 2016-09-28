@@ -13,8 +13,8 @@ ms.assetid: 679a20a1-e66f-4b6b-bd8f-896daf1f8175
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 55d3bd060b5567e98ca9ee6f4c4a003ce40a0371
-ms.openlocfilehash: 370a21f559fd1f86f60aeef5cbddea05d6fea682
+ms.sourcegitcommit: 0ced62efd04803943cbbfd8cecef907409a03c0b
+ms.openlocfilehash: c51c5ae199ca2950dc0371b400727af534a70f09
 
 
 ---
@@ -41,7 +41,7 @@ Profil důvěryhodného certifikátu je nutné vytvořit před vytvořením prof
 1.  V [konzole pro správu Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Přidat zásadu**.
 2.  Přidejte jeden z těchto typů zásad:
     - **Android &gt; profil důvěryhodného certifikátu (Android 4 a novější)**
-    - **iOS &gt; Profil důvěryhodného certifikátu (iOS 7.1 a novější)**
+    - **iOS &gt; Profil důvěryhodného certifikátu (iOS 8.0 a novější)**
     - **Mac OS X &gt; Profil důvěryhodného certifikátu (Mac OS X 10.9 a novější)**
     - **Windows &gt; Profil důvěryhodného certifikátu (Windows 8.1 a novější)**
     - **Windows &gt; Profil důvěryhodného certifikátu (Windows Phone 8.1 a novější)**
@@ -63,7 +63,7 @@ Po vytvoření profilu certifikátu důvěryhodné certifikační autority vytvo
 1.  V [konzole pro správu Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Přidat zásadu**.
 2.  Přidejte jeden z těchto typů zásad:
     - **Android &gt; Profil certifikátu SCEP (Android 4 a novější)**
-    - **iOS &gt; Profil certifikátu SCEP (iOS 7.1 a novější)**
+    - **iOS &gt; Profil certifikátu SCEP (iOS 8.0 a novější)**
     - **Mac OS X &gt; Profil certifikátu SCEP (Mac OS X 10.9 a novější)**
     - **Windows &gt; Profil certifikátu SCEP (Windows 8.1 a novější)**
     - **Windows &gt; Profil certifikátu SCEP (Windows Phone 8.1 a novější)**
@@ -92,7 +92,7 @@ Nová zásada se zobrazí v pracovním prostoru **Zásady**. Teď ji můžete na
   - **Android &gt; Profil certifikátu .PFX (Android 4 a novější)**
   - **Windows &gt; Profil certifikátu PKCS #12 (.PFX) (Windows 10 a novější)**
   - **Windows &gt; Profil certifikátu PKCS #12 (.PFX) (Windows Phone 10 a novější)**
-  - **iOS > Profil certifikátu PKCS #12 (.PFX) (iOS 7.1 a novější)**    
+  - **iOS > Profil certifikátu PKCS #12 (.PFX) (iOS 8.0 a novější)**    
     Další informace: [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 3.  Do formuláře zásad zadejte požadované informace.
 4.  Vyberte možnost **Uložit zásadu**.
@@ -130,6 +130,6 @@ Dál zjistěte, jak pomocí certifikátů zabezpečit profily e-mailu, Wi-Fi a V
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO3-->
 
 

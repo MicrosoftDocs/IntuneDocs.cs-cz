@@ -13,8 +13,8 @@ ms.assetid: 7e3135c1-df26-48c9-aa4c-cdab6168897a
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9f1946c02c6267a22844106e8f72555ec5e9cabb
-ms.openlocfilehash: 212dcd31697180dae61569dda13b56704a079bf4
+ms.sourcegitcommit: 52b9e786fe22b04081441db88a3629062fc85668
+ms.openlocfilehash: a215d547507dcc460e83009cc6a04baf3fd8f4a4
 
 
 ---
@@ -32,15 +32,15 @@ Tyto informace slouží k pochopení toho, jak a kde koncoví uživatelé získ�
 
 **Nespravované aplikace** – Aplikace, které jde spravovat pomocí zásad a které nejsou zabalené službou Intune nebo které nejsou sestavené pomocí sady Intune MAM SDK. Na tyto aplikace nejdou aplikovat zásady použití.
 
-Apple zakazuje, aby se obchodní a spravované aplikace z App Storu zobrazovaly v aplikaci Portál společnosti. Uživatel tak k vyhledání všech svých aplikací musí použít několik zobrazení. Aplikace pro jednotlivé dlaždice zobrazené na stránce Aplikace v aplikaci Portál společnosti jsou dostupné takto:
+Omezení společnosti Apple zakazují, aby se obchodní a spravované aplikace z App Storu zobrazovaly v aplikaci Portál společnosti. Tento problém jsme vyřešili tak, že dlaždice aplikací v aplikaci Portál společnosti pro iOS odkazují uživatele u všech aplikací na různá zobrazení v jednom umístění (na webu Portál společnosti):
 
-- Dlaždice **Firemní aplikace** odkazuje na seznam všech aplikací na kartě **VŠE** na [webu Portál společnosti](http://portal.manage.microsoft.com).
+- Dlaždice **Firemní aplikace** dříve odkazovala na seznam všech aplikací na kartě VŠE na [webu Portál společnosti](http://portal.manage.microsoft.com) a bude tak fungovat i nadále. Název dlaždice byl změněn na **Všechny aplikace**.
 
-- Dlaždice **Ostatní aplikace** v současnosti odkazuje v aplikaci Portál společnosti na zobrazení, ve kterém je uvedený seznam všech aplikací, které Apple aplikaci Portál společnosti povoluje zobrazit. Tento seznam zahrnuje všechny aplikace s výjimkou obchodních aplikací a spravovaných aplikací z App Storu.
+- Dlaždice **Ostatní aplikace** dříve odkazovala v aplikaci Portál společnosti na zobrazení, ve kterém je uvedený seznam všech aplikací, které Apple aplikaci Portál společnosti povoluje zobrazit. Název dlaždice byl změněn na **Doporučené aplikace**. Po klepnutí na tuto dlaždici uživatelé přejdou na kartu DOPORUČENÉ na webu Portál společnosti.
 
-- Dlaždice **Kategorie** v současnosti odkazuje v aplikaci Portál společnosti na zobrazení, ve kterém je uvedený seznam kategorií aplikací.
+-  Dlaždice **Kategorie** dříve odkazovala v aplikaci Portál společnosti na zobrazení, ve kterém je uvedený seznam kategorií aplikací. Název této dlaždice nebyl změněn, ale nyní na webu Portál společnosti odkazuje na kartu KATEGORIE.
+Aktualizované snímky obrazovky najdete [tady](https://gallery.technet.microsoft.com/Improvements-in-how-iOS-d1104186).
 
-    ![ios-how-to-sync-device-with-intune](./media/ios-sync-comp-portal-apps.png)
 
 
 ###Související témata
@@ -49,6 +49,6 @@ Apple zakazuje, aby se obchodní a spravované aplikace z App Storu zobrazovaly 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

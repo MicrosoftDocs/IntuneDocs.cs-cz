@@ -4,7 +4,7 @@ description: "Chraňte a kontrolujte přístup k podnikovým e-mailům na Exchan
 keywords: 
 author: karthikaraman
 manager: angrobe
-ms.date: 06/16/2016
+ms.date: 09/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a1d0b330b42ea920af9512552a9f3d9c875e99da
-ms.openlocfilehash: 9e2b16a2ea16417864b82f4b025053d9c87fcb14
+ms.sourcegitcommit: 99b01f5ca5bb389fc8a9d87e956796823fee6c0d
+ms.openlocfilehash: dd5ae411cc2541566805131d0076efc15875c988
 
 
 ---
@@ -67,7 +67,7 @@ Následující diagram znázorňuje tok používaný v rámci zásad podmíněn�
 Můžete omezit přístup k e-mailům na Exchangi Online z **Outlooku** a dalších **aplikací, které využívají moderní ověřování**:-
 
 - Android 4.0 nebo novější, Samsung Knox Standard 4.0 nebo novější
-- iOS 7.1 nebo novější
+- iOS 8.0 a novější
 - Windows Phone 8.1 nebo novější
 
 **Moderní ověřování** integruje do klientů Microsoft Office přihlašování založené na knihovně ADAL (Active Directory Authentication Library).
@@ -93,7 +93,7 @@ Přístup k e-mailu na Exchangi můžete omezit z integrovaného **e-mailovéh
 
 - Android 4.0 nebo novější, Samsung Knox Standard 4.0 nebo novější
 
-- iOS 7.1 nebo novější
+- iOS 8.0 a novější
 
 - Windows Phone 8.1 nebo novější
 
@@ -262,6 +262,6 @@ Na řídicím panelu [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] zvol
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

@@ -4,7 +4,7 @@ description: "Intune integruje vícefaktorové ověřování (MFA) a pomáhá v�
 keywords: 
 author: Nbigman
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 09/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 9b4f197d-bc10-4bee-91c9-19bcc8287d36
 ms.reviewer: vinaybha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4993982adcfbc960ad71022268cc44d216d1c585
-ms.openlocfilehash: fb4ae43ffcbec24147e2e3ce3c96ec795289c925
+ms.sourcegitcommit: 0ced62efd04803943cbbfd8cecef907409a03c0b
+ms.openlocfilehash: 00d63fa55cd29c938dd082e2eff240f08319e01a
 
 
 ---
@@ -25,11 +25,15 @@ Microsoft Intune integruje vícefaktorové ověřování (MFA) a pomáhá vám z
 ## Požadavky místní infrastruktury na ADFS MFA
 Pro nastavení vícefaktorového ověřování potřebujete:
 
+-   Automatickou registraci, jak je popsáno v článku [Nastavení správy pro zařízení Windows](set-up-windows-device-management-with-microsoft-intune.md).
 -   **Doménu služby Active Directory, ke které je připojený server ADFS.**
 
 -   **Server služby Active Directory Federation Services (ADFS) nakonfigurovaný pro MFA.** Server se systémem Windows Server 2012 R2 nastavený jako server ADFS. Další informace najdete v tématu [Zabezpečení cloudových a místních prostředků pomocí Azure Multi-Factor Authentication Serveru s Windows Server 2012 R2 AD FS](https://azure.microsoft.com/en-us/documentation/articles/multi-factor-authentication-get-started-adfs-w2k12/)
 
-Všechny výše uvedené servery musí splňovat požadavky na systém, které najdete v tématu [Požadavky na systém a informace o instalaci pro Windows Server 2012 R2](http://technet.microsoft.com/library/dn303418.aspx).
+Servery musí splňovat požadavky na systém, které najdete v článku [Požadavky na systém a informace o instalaci pro Windows Server 2012 R2](http://technet.microsoft.com/library/dn303418.aspx).
+
+ 
+
 
 #### MFA s Intune
 Pokud má vaše organizace místní infrastrukturu IT, která zahrnuje doménu Active Directory se službou Active Directory Federation Services (ADFS), můžete nakonfigurovat MFA na federačním serveru a potom povolit MFA pro registraci v Intune. Konfigurací MFA v Intune umožníte uživatelům po jednom ověření během registrace přístup k prostředkům společnosti bez nutnosti vždy opakovat proces MFA.
@@ -55,6 +59,6 @@ Informace o tom, jak zapnout MFA v ADFS najdete v tématu [Přehled řízení ri
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO3-->
 
 

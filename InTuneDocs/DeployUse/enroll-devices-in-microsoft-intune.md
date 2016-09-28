@@ -4,7 +4,7 @@ description: "Správa mobilních zařízení (MDM) využívá registraci pro zaj
 keywords: 
 author: NathBarn
 manager: angrobe
-ms.date: 07/18/2016
+ms.date: 09/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,79 +13,56 @@ ms.assetid: 8fc415f7-0053-4aa5-8d2b-03202eca4b87
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a7a0f834df939432910e32e6e635a70f021b37a9
-ms.openlocfilehash: 63405b43609eda515656ad397c5c7ff4253a8167
+ms.sourcegitcommit: e6b182ebab1691c62e69cabaf4689ac7395ab31a
+ms.openlocfilehash: 0995d3ced978f5213fdb0e9905f508b64a1e5c09
 
 
 ---
 
 # Registrace zařízení pro správu v Intune
-Správa mobilních zařízení Microsoft Intune (MDM) využívá registraci pro zajištění správy zařízení a povolení přístupu k prostředkům. Způsob registrace zařízení závisí na jeho typu, vlastnictví a požadované úrovni správy. Scénáře pro zařízení vlastněná společností (COD) a Přineste si vlastní zařízení (BYOD) vyžadují proces registrace. Organizace, které využívají protokol Exchange ActiveSync, ať už místní, nebo hostovaný v cloudu, mohou povolit jednodušší správu bez požadavků na registraci. Pomocí klientského softwaru Intune je také možné spravovat počítače s Windows.
+Zařízení, včetně počítačů s Windows, můžete registrovat ke správě mobilních zařízení (MDM) pomocí služby Microsoft Intune. Toto téma popisuje různé způsoby registrace mobilních zařízení do správy Intune. Způsob registrace zařízení závisí na jeho typu, vlastnictví a požadované úrovni správy. Registrace vlastního zařízení (BYOD) umožňuje uživatelům registrovat své osobní telefony, tablety nebo počítače. Registrace zařízení vlastněného společností (COD) umožňuje scénáře správy, jako je vzdálené vymazání, sdílená zařízení nebo spřažení uživatele pro zařízení.
 
-Další informace najdete v tématu [Volba způsobu registrace mobilních zařízení](/intune/get-started/choose-how-to-enroll-devices1).
-
-###  Podporované platformy zařízení
-
-Intune může spravovat tyto platformy zařízení:
-
-[!INCLUDE[mdm-supported-devices](../includes/mdm-supported-devices.md)]
-
-## Nastavení autority pro správu mobilních zařízení
-Autorita MDM definuje službu správy s oprávněním ke správě skupiny zařízení. Příklady možných autorit MDM zahrnují Intune samostatně a Configuration Manager s Intune. Pokud nastavíte Configuration Manager jako autoritu správy, ke správě mobilních zařízení nejde použít žádnou jinou službu.
-
->[!IMPORTANT]
-> Důkladně zvažte, jestli chcete spravovat mobilní zařízení jenom pomocí Intune (online služba), nebo pomocí System Center Configuration Manageru s Intune (místní softwarové řešení ve spojení s online službou). Když nastavíte autoritu správy mobilních zařízení, už ji nemůžete změnit.
-
-1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) zvolte **Správce** &gt; **Správa mobilních zařízení**.
-
-2.  V seznamu **Úkoly** klikněte na **Nastavit autoritu pro správu mobilních zařízení**. Otevře se dialogové okno **nastavení autority pro správu mobilních zařízení** .
-
-    ![Dialogové okno nastavení autority pro správu mobilních zařízení](../media/intune-mdm-authority.png)
-
-3.  Intune požádá o potvrzení, že chcete Intune používat jako autoritu pro správu mobilních zařízení. Jestli chcete ke správě mobilních zařízení používat Microsoft Intune, zaškrtněte políčko a zvolte **Ano**.
-
-## Nakonfigurování Portálu společnosti Intune
-
-Portál společnosti v Intune je místem, kde uživatelé přistupují k podnikovým datům a kde můžou dělat běžné úkoly, jako je registrace zařízení, instalace aplikací nebo vyhledání informací pro oddělení IT v případě žádosti o podporu.
-
-> [!TIP]
-> Když si portál společnosti přizpůsobíte, bude se vaše konfigurace vztahovat na web portálu společnosti i na aplikace Portál společnosti.
-
-Přizpůsobení Portálu společnosti pomáhá poskytnout známé a užitečné prostředí pro koncové uživatele. Pro přizpůsobení se přihlaste do [konzoly správce Microsoft Intune](https://manage.microsoft.com) jako tenant nebo správce služby, zvolte **Správce** &gt; **Portál společnosti** a konfigurujte nastavení portálu společnosti.
-
-![admin-console-admin-workspace-comp-portal-settings](../media/cp_sa_cpsetup.PNG)
+Pokud používáte [Exchange ActiveSync](#mobile-device-management-with-exchange-activesync-and-intune), ať už místní nebo hostovaný v cloudu, můžete povolit jednoduchou správu Intune bez registrace. Počítače s Windows je možné spravovat taky pomocí [klientského softwaru Intune](#manage-windows-pcs-with-intune).
 
 ## Přehled metod registrace zařízení
 
-Následující tabulka popisuje metody registrace zařízení ve vlastnictví společnosti a jejich výhody.
+Následující tabulka uvádí metody registrace do služby Intune s jejich podporovanými možnostmi. Mezi tyto možnosti patří:
+- **Vymazání** – obnova výrobního nastavení zařízení, odstranění všech dat. [Vyřazení zařízení](retire-devices-from-microsoft-intune-management.md)
+- **Spřažení** – přidruží zařízení k uživatelům. Požadováno pro správu mobilních aplikací (MAM) a podmíněný přístup k datům společnosti. [Spřažení uživatele](enroll-corporate-owned-ios-devices-in-microsoft-intune.md#using-company-portal-on-dep-or-apple-configurator-enrolled-devices)
+- **Zámek** zabrání uživatelům odebrat zařízení ze správy. Zařízení s iOS vyžadují pro zámek režim dohledu. [Vzdálené uzamčení](retire-devices-from-microsoft-intune-management.md#block-access-a-device)
 
-**Metody registrace zařízení se systémem iOS**
+**Metody registrace zařízení s iOS**
 
-| **Metoda** |  **[Vymazání](#Wipe)** | **[Spřažení](#Affinity)**   |   **[Zamčené](#Lock)** |
-|:---:|:---:|:---:|:---:|
-|**[Uživatelé s vlastním zařízením](#BYOD)** | Ne|    Ano |   Ne |
-|**[DEM](#DEM)**|   Ne |Ne |Ne  |
-|**[DEP](#DEP)**|   Ano |   Volitelně |   Volitelně|
-|**[USB (SA)](#USB-SA)**| Ano |   Volitelně |   Ne|
-|**[USB (přímo)](#USB-Direct)**| Ne |    Ne  | Ne|
+| **Metoda** |  **Vymazání** |  **Spřažení**    |   **Uzamčení** | **Podrobnosti** |
+|:---:|:---:|:---:|:---:|:---:|
+|**[Uživatelé s vlastním zařízením](#byod)** | Ne|    Ano |   Ne | [další](get-ready-to-enroll-devices-in-microsoft-intune.md#set-up-device-management)|
+|**[DEM](#dem)**|   Ne |Ne |Ne  | [další](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
+|**[DEP](#dep)**|   Ano |   Volitelné |  Volitelné|[další](ios-device-enrollment-program-in-microsoft-intune.md)|
+|**[USB (SA)](#usb-sa)**| Ano |   Volitelné |  Ne| [další](ios-setup-assistant-enrollment-in-microsoft-intune.md)|
+|**[USB (přímo)](#usb-direct)**| Ne |    Ne  | Ne|[další](ios-direct-enrollment-in-microsoft-intune.md)|
 
 **Metody registrace zařízení se systémem Windows a Android**
 
-| **Metoda** |  **[Vymazání](#Wipe)** | **[Spřažení](#Affinity)**   |   **[Zamčené](#Lock)** |
-|:---:|:---:|:---:|:---:|
-|**[Uživatelé s vlastním zařízením](#BYOD)** | Ne|    Ano |   Ne |
-|**[DEM](#DEM)**|   Ne |Ne |Ne  |
+| **Metoda** |  **Vymazání** |  **Spřažení**    |   **Uzamčení** | **Podrobnosti**|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|**[Uživatelé s vlastním zařízením](#byod)** | Ne|    Ano |   Ne | [další](get-ready-to-enroll-devices-in-microsoft-intune.md#set-up-device-management)|
+|**[DEM](#dem)**|   Ne |Ne |Ne  |[další](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
 
-**Způsoby registrace zařízení**
+Sérii otázek, které vám pomohou najít tu správnou metodu pro vás, najdete v tématu [Volba způsobu registrace zařízení](/intune/get-started/choose-how-to-enroll-devices1).
 
-### Uživatelé s vlastním zařízením
-Funkce Přineste si vlastní zařízení. Uživatelé si nainstalují aplikaci Portál společnosti a zaregistrují svoje zařízení. Registrace zařízení na Portálu společnosti zajistí jeho připojení k pracovišti. Registrace zařízení s iOS pomocí Portálu společnosti vyžaduje Apple ID. Funkce Přineste si vlastní zařízení nevyžaduje další konfiguraci pro zařízení ve vlastnictví firmy. Prohlédněte si postup [nastavení správy zařízení](get-ready-to-enroll-devices-in-microsoft-intune.md#set-up-device-management). ([Zpět k tabulce](#overview-of-device-enrollment-methods))
+## Uživatelé s vlastním zařízením
+Uživatelé s vlastním zařízením si nainstalují aplikaci Portál společnosti a zaregistrují svoje zařízení. To jim umožní připojit se k podnikové síti, k doméně nebo službě Azure Active Directory. Povolení registrace vlastních zařízení (BYOD) je předpokladem pro mnoho scénářů COD pro většinu platforem. Viz [Předpoklady pro registraci zařízení](prerequisites-for-enrollment.md). ([Zpět k tabulce](#overview-of-device-enrollment-methods))
+
+## Zařízení vlastněná společností
+Zařízení vlastněná společností (COD) je možné spravovat pomocí konzoly Intune. Zařízení s iOS se mohou zaregistrovat přímo pomocí nástrojů poskytovaných společností Apple. Všechny typy zařízení může zaregistrovat správce využívající správce registrace zařízení. Zařízení s číslem IMEI se také dají identifikovat a označit jako zařízení ve vlastnictví společnosti, což umožní využít scénáře COD.
+
+[Registrace zařízení vlastněných společností](manage-corporate-owned-devices.md)
 
 ### DEM
-Správce registrace zařízení. Správce vytvoří účty DEM pro správu zařízení vlastněných společností. Správci pak mohou nainstalovat aplikaci Portál společnosti a zaregistrovat velký počet zařízení bez uživatele. Přečtěte si další informace o [DEM](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md). ([Zpět k tabulce](#overview-of-device-enrollment-methods))
+Správce registrace zařízení je speciální účet Intune, který slouží k registraci a správě více zařízení vlastněných společností. Správci pak mohou nainstalovat aplikaci Portál společnosti a zaregistrovat velký počet zařízení bez uživatele. Přečtěte si další informace o [DEM](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md). ([Zpět k tabulce](#overview-of-device-enrollment-methods))
 
 ### DEP
-Apple Device Enrollment Program. Správce vytvoří zásady a nasadí je „bezdrátově “ do zařízení s iOS zakoupených a spravovaných pomocí DEP. Zařízení se zaregistruje, když uživatel spustí Pomocníka s nastavením iOS. Tato metoda podporuje režim **iOS – Pod dohledem**, který pak povoluje následující funkce:
+Správa Programu registrace zařízení Apple (DEP) umožňuje vytvořit a bezdrátově nasadit zásady v zařízeních iOS zakoupených a spravovaných pomocí programu DEP. Zařízení je zaregistrováno, když ho uživatel poprvé zapne a spustí se Průvodce nastavením iOS. Tato metoda podporuje režim **iOS – Pod dohledem**, který pak povoluje následující funkce:
   - Registrace uzamčeného zařízení
   - Podmíněný přístup
   - Detekce jailbreaků
@@ -104,34 +81,6 @@ Přečtěte si víc o [registraci prostřednictvím Pomocníka s nastavením a A
 ### USB (přímo)
 Přímá registrace Správce vytvoří zásadu Intune a vyexportuje ji do Apple Configuratoru. Zařízení vlastněná společností, která jsou připojena přes USB, se registrují přímo a nevyžadují obnovení do výrobního nastavení. Správce musí každé zařízení zaregistrovat ručně. Zařízení se spravují jako zařízení bez uživatele. Nejsou uzamčená ani pod dohledem a nepodporují podmíněný přístup, detekci jailbreaků ani správu mobilních aplikací. Přečtěte si víc o [přímé registraci prostřednictvím Apple Configuratoru](ios-direct-enrollment-in-microsoft-intune.md). ([Zpět k tabulce](#overview-of-device-enrollment-methods))
 
-**Chování mobilních zařízení ve vlastnictví firmy**
-
-### Vymazání
-Určuje, jestli registrace zařízení vyžaduje, aby se v zařízení obnovilo tovární nastavení, odebrala se z něj všechna data a vrátilo se do původního stavu.
-[Vyřazení zařízení z provozu](retire-devices-from-microsoft-intune-management.md) ([Zpět k tabulce](#overview-of-device-enrollment-methods))
-
-### Spřažení
-Určuje, jestli metoda registrace podporuje přidružení uživatele, které propojí zařízení s konkrétním uživatelem. Zařízení označená „Volitelně“ se dají zaregistrovat s přidružením uživatele nebo bez něj. Přidružení uživatele je nezbytné pro podporu následujících funkcí:
-  - Aplikace MAM (správa mobilních aplikací)
-  - Podmíněný přístup k e-mailu a firemním datům
-  - Aplikace Portál společnosti
-
-[Přidružení uživatele](enroll-corporate-owned-ios-devices-in-microsoft-intune.md#using-company-portal-on-dep-or-apple-configurator-enrolled-devices) ([Zpět k tabulce](#overview-of-device-enrollment-methods))
-
-### Uzamčení
-Určuje, jestli jde zařízení zamknout a zabránit tak uživateli odebrání zásad Intune (to by znamenalo vyjmutí zařízení ze správy). U zařízení s iOS zamknutí vyžaduje, aby byl nastaven režim Pod dohledem.
-([Zpět k tabulce](#overview-of-device-enrollment-methods))
-
-## Povolení registrace zařízení  
- Registrace umožňuje uživatelům přistupovat k prostředkům společnosti z jejich osobních zařízení a správcům umožňuje zajistit, že tato zařízení dodržují zásady, které chrání prostředky společnosti. Toto je nejlepší způsob, jak pro Intune povolit scénáře Přineste si vlastní zařízení. Správce musí povolit registraci pomocí konzoly Intune. Může to vyžadovat vytvoření vztahu důvěryhodnosti se zařízením a přiřazení licencí uživatelům. Zařízení se pak zaregistruje, obvykle uživatelem, který zadá přihlašovací údaje svého pracovního nebo školního účtu. Potom zařízení obdrží zásady ze služby Intune a získá přístup k prostředkům.
-
-[Příprava registrace zařízení v Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
-
-## Registrace zařízení vlastněných společností
-Zařízení vlastněná společností (COD) je možné spravovat pomocí konzoly Intune. Zařízení s iOS se mohou zaregistrovat přímo pomocí nástrojů poskytovaných společností Apple. Všechny typy zařízení může zaregistrovat správce využívající správce registrace zařízení. Zařízení s číslem IMEI se také dají identifikovat a označit jako zařízení ve vlastnictví společnosti, což umožní využít scénáře COD.
-
-[Registrace zařízení vlastněných společností](manage-corporate-owned-devices.md)
-
 ## Správa mobilních zařízení pomocí protokolu Exchange ActiveSync a služby Intune
 Mobilní zařízení, která nejsou zaregistrovaná, ale připojují se k Exchange ActiveSync (EAS), je možné spravovat pomocí Intune s využitím zásad EAS MDM. Intune využívá Exchange Connector ke komunikaci s protokolem EAS, ať už místním, nebo hostovaným v cloudu.
 
@@ -139,18 +88,29 @@ Mobilní zařízení, která nejsou zaregistrovaná, ale připojují se k Exchan
 
 
 ## Správa počítačů s Windows pomocí Intune  
-Microsoft Intune můžete také využít ke správě počítačů se systémem Windows, a to pomocí klientského softwaru Intune pro počítače s Windows. Počítače spravované pomocí Intune mohou:
+Microsoft Intune můžete také využít ke správě počítačů s Windows, a to pomocí klientského softwaru Intune. Počítače spravované pomocí Intune mohou:
 
  - Vytvářet sestavy inventáře softwaru a hardwaru
  - Instalovat desktopové aplikace (například soubory .exe a .msi)
  - Nastavení brány firewall
 
-Počítače spravované pomocí klientského softwaru Intune nejde selektivně vymazat nebo vyřadit. Nemohou také využívat řadu funkcí správy Intune, jako je třeba podmíněný přístup, nastavení připojení VPN a Wi-Fi nebo nasazení certifikátů a konfigurací e-mailu.
+Počítače spravované pomocí klientského softwaru Intune nejde vymazat a nemohou také využívat řadu funkcí správy Intune, jako je třeba nastavení podmíněného přístupu, VPN a Wi-Fi nebo nasazení certifikátů a konfigurací e-mailu.
 
 [Správa počítačů s Windows pomocí Intune](manage-windows-pcs-with-microsoft-intune.md)
 
+##  Podporované platformy zařízení
+
+Intune může spravovat tyto platformy zařízení:
+
+[!INCLUDE[mdm-supported-devices](../includes/mdm-supported-devices.md)]
+
+## Další kroky
+- [Viz Předpoklady pro registraci zařízení](prerequisites-for-enrollment.md)
+- [Správa zařízení vlastněných společností](manage-corporate-owned-devices.md)
+- [Podporovaná mobilní zařízení a počítače](../get-started/supported-mobile-devices-and-computers.md)
 
 
-<!--HONumber=Aug16_HO4-->
+
+<!--HONumber=Sep16_HO3-->
 
 
