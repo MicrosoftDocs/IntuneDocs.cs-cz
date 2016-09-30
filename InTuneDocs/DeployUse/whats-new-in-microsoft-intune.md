@@ -2,9 +2,9 @@
 title: "Co je nového | Microsoft Intune"
 description: "Zjistěte, co je nového v aktualizací služby Microsoft Intune v tomto měsíci nebo dříve"
 keywords: 
-author: Lindavr
+author: barlanmsft
 manager: angrobe
-ms.date: 09/13/2016
+ms.date: 09/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: fab51ee0-638d-4dd4-8d8f-1f263bc11e5c
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 03a5dd14b854fedf7e2cb5b949580960a0eab9de
-ms.openlocfilehash: 1d09e5a0adb3ecfa8f2d64f668ea7ff16bdf31fa
+ms.sourcegitcommit: 5b3256852431efb83fb2cc9fa067dd3f4a68a050
+ms.openlocfilehash: cef0a26204a22c95d2b639500246e435fcf7f9f7
 
 
 ---
@@ -72,6 +72,11 @@ Koncoví uživatelé zařízení nesplňujících požadavky budou vyzvání k r
 Na domovskou stránku aplikace Portál společnosti pro Android byla přidaná nová ikona oznámení. Klepnutí na tuto ikonu otevře stránku Oznámení, kde se koncovým uživatelům zobrazí všechny položky, které v aplikaci Portál společnosti vyžadují pozornost (například že nějaké zařízení nedodržuje předpisy, zpráva o aktualizaci registrací nebo aktivaci registrací). Aplikace Portál společnosti pro iOS už tato oznámení má. Po zavedení stránky Oznámení se už při každém spuštění nebo obnovení aplikace Portál společnosti pro Android nezobrazí stránka Nastavení firemního přístupu, pokud je zařízení už zaregistrované. Pokud vytvoříte vlastní návod pro koncové uživatele, nezapomeňte tuto změnu do dokumentace promítnout. Aktualizované snímky obrazovky najdete [tady](https://aka.ms/androidcpupdate).  
 <!---TFS 1095560--->
 
+**Poskytování zpětné vazby v aplikaci Portál společnosti pro Android**</br>
+Do nabídky aplikace Portál společnosti pro Android byla přidána nová položka. Klepnutím na **Nápověda a vaše názory** zobrazíte tři akce:
+* Akci **Pomoc** použijte, když chcete vašemu IT oddělení nahlásit problémy s aplikací Portál společnosti. Tato akce vytvoří e-mail pomocí e-mailového klienta a připojí k němu jako přílohu protokol aplikace Portál společnosti. **Pomoc** nahrazuje funkci **Odeslat data** na stránce **Nastavení**.
+* Akci **Poskytnout zpětnou vazbu** použijte, když chcete dát zpětnou vazbu týmu služby Portál společnosti.
+* Akci **Ohodnotit tuto aplikaci** použijte, když chcete aplikaci Portál společnosti přidat hodnocení nebo recenzi na Google Play.
 
 ### iOS
 **Změny v podpoře pro aplikaci Portál společnosti pro iOS**<br/>
@@ -88,7 +93,7 @@ Aktualizované snímky obrazovky najdete [tady](https://gallery.technet.microsof
 <!---TFS 1317133--->
 
 **Výzva k instalaci aplikace Spravovaný prohlížeč pro iOS, pokud IT specialista tento požadavek pro aplikaci nastavil**<br/>
-Pokud jste nakonfigurovali webový klip tak, aby se otevíral jenom ve spravovaném prohlížeči, a spravovaný prohlížeč není v zařízení nainstalovaný, aplikace Portál společnosti vyzve uživatele, aby nejdřív nainstaloval spravovaný prohlížeč. Teprve potom bude možné nainstalovat příslušný webový klip. 
+Pokud jste nakonfigurovali webový klip tak, aby se otevíral jenom ve spravovaném prohlížeči, a spravovaný prohlížeč není v zařízení nainstalovaný, aplikace Portál společnosti vyzve uživatele, aby nejdřív nainstaloval spravovaný prohlížeč. Teprve potom bude možné nainstalovat příslušný webový klip.
 <!---TFS 1228570--->
 
 ### Windows
@@ -141,6 +146,6 @@ Informace o tom, co bylo vydáno v rámci Intune během posledních šest měsí
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 
