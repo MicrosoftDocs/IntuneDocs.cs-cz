@@ -13,8 +13,8 @@ ms.assetid: f33d1684-b1b5-44f7-9aac-c6d5186a5d7c
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: 90f50d14fac0e335f3b7c5e0825b0bb243b7a532
+ms.sourcegitcommit: a3db9269bf4f93021d16d8ea23a2a13b87b43677
+ms.openlocfilehash: d3d37b9bcf8cc5833b4e11185b49902e26a625dc
 
 
 ---
@@ -43,13 +43,15 @@ Aplikace můžou být spravované nebo nespravované, jak je popsáno dál. Proc
 
 **Nespravované aplikace** – Aplikace, které jde spravovat pomocí zásad a které nejsou zabalené službou Intune nebo které nejsou sestavené pomocí sady Intune MAM SDK. Na tyto aplikace nejdou aplikovat zásady použití.
 
-### Související témata
+### Viz taky
 [Přidávání aplikací s Microsoft Intune](/intune/deploy-use/add-apps)
-[Jak uživatelé systému iOS získají svoje aplikace](how-your-ios-users-get-their-apps.md)
+
+[Jak uživatelé systému iOS získávají svoje aplikace](how-your-ios-users-get-their-apps.md)
+
 [Jak uživatelé s Windows získávají svoje aplikace](how-your-windows-users-get-their-apps.md)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

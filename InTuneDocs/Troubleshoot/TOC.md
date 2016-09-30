@@ -1,5 +1,6 @@
 # [Porozumění a prozkoumávání](/intune/understand-explore/introduction-to-microsoft-intune)
 # [Začínáme](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
+# [Novinky](/intune/whats-new/whats-new-in-microsoft-intune)
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
 # [Nasazení a používání](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
 # [Vývoj a přizpůsobení aplikací](/intune/develop/intune-app-sdk)
@@ -17,6 +18,11 @@
 ## [Řešení potíží s podmíněným přístupem](troubleshoot-conditional-access.md)
 ## [Poradce při potížích s konektorem Exchange](troubleshoot-exchange-connector.md)
 
-<!--HONumber=Aug16_HO1-->
+## [Řešení potíží se správou mobilních aplikací](troubleshoot-mam.md)
+
+## [Řešení potíží s aplikací Lookout Integration](troubleshooting-lookout-integration.md)
+
+
+<!--HONumber=Sep16_HO5-->
 
 

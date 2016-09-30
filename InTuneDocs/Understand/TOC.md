@@ -9,19 +9,16 @@
 ### [Další možnosti a funkce](get-started-with-a-30-day-trial-of-microsoft-intune-step-6.md)
 ### [Další kroky](get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)
 ## [Typické scénáře](common-ways-to-use-intune.md)
-## [Úvodní příručky](prevent-company-data-leaks-from-Office-365-mobile-apps.md)
-### [Prevence úniků firemních dat z mobilních aplikací Office 365](prevent-company-data-leaks-from-Office-365-mobile-apps.md)
-### [Publikování mobilních aplikací pro vaše uživatele](publish-mobile-apps-to-users.md)
-### [Ochrana počítačů s Windows proti malwarovým hrozbám](protect-pcs-against-malware-threats.md)
-### [Zjednodušení e-mailové konfigurace v mobilních zařízeních](simplify-email-configuration-on-mobile-devices.md)
+## [Glosář](intune-glossary.md)
 
 # [Začínáme](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
+# [Novinky](/intune/whats-new/whats-new-in-microsoft-intune)
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
 # [Nasazení a používání](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
 # [Vývoj a přizpůsobení aplikací](/intune/develop/intune-app-sdk)
 # [Řešení problémů](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

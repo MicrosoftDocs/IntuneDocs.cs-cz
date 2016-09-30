@@ -1,5 +1,6 @@
 # [Porozumění a prozkoumávání](/intune/understand-explore/introduction-to-microsoft-intune)
 # [Začínáme](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
+# [Novinky](/intune/whats-new/whats-new-in-microsoft-intune)
 # [Nasazení a používání](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
 # [Vývoj a přizpůsobení aplikací](intune-app-sdk.md)
 ## [Přehled Microsoft Intune App SDK](intune-app-sdk.md)
@@ -9,6 +10,6 @@
 # [Řešení problémů](/intune/troubleshoot/how-to-get-support-for-microsoft-intune)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Sep16_HO5-->
 
 
