@@ -2,12 +2,13 @@
 # [Začínáme](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
 
+# [Novinky](/intune/whats-new/whats-new-in-microsoft-intune)
 # [Nasazení a používání](overview-of-device-and-app-lifecycles-in-microsoft-intune.md)
 ## [Přehled životních cyklů zařízení a aplikací](overview-of-device-and-app-lifecycles-in-microsoft-intune.md)
 ### [Životní cyklus zařízení](overview-of-device-lifecycle-in-microsoft-intune.md)
 ### [Životní cyklus aplikace](overview-of-app-lifecycle-in-microsoft-intune.md)
 ## [Registrovat zařízení](enroll-devices-in-microsoft-intune.md)
-### [Příprava registrace zařízení v Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
+### [Předpoklady pro MDM](prerequisites-for-enrollment.md)
 #### [Správa iOS a Mac](set-up-ios-and-mac-management-with-microsoft-intune.md)
 #### [Správa Androidu](set-up-android-management-with-microsoft-intune.md)
 #### [Správa zařízení s Windows ](set-up-windows-device-management-with-microsoft-intune.md)
@@ -66,8 +67,9 @@
 ## [Vyřazení zařízení](retire-devices-from-microsoft-intune-management.md)
 
 ## [Přidání aplikací](add-apps.md)
-### [Přidání aplikací pro mobilní zařízení](add-apps-for-mobile-devices-in-microsoft-intune.md)
-### [Přidání aplikací pro počítače s Windows](add-apps-for-windows-pcs-in-microsoft-intune.md)
+### [Přidání aplikací pro zaregistrovaná zařízení](add-apps-for-mobile-devices-in-microsoft-intune.md)
+### [Přidání aplikací pro klientské počítače Intune](add-apps-for-windows-pcs-in-microsoft-intune.md)
+#### [Správa licenčních smluv pro klientské počítače Intune](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)
 ## [Nasazení aplikací](deploy-apps.md)
 ### [Nasazení aplikací do zařízení a počítačů](deploy-apps-in-microsoft-intune.md)
 ### [Monitorování aplikací](monitor-apps-in-microsoft-intune.md)
@@ -101,6 +103,11 @@
 #### [Omezení přístupu k e-mailu: příklady](restrict-email-access-example-scenarios.md)
 
 ### [Omezení přístupu k sítím (Cisco ISE)](restrict-access-to-networks.md)
+### [Omezení přístupu na základě rizika zařízení, sítě a aplikace](restrict-access-based-on-device-network-app-risk.md)
+#### [Nastavení ochrany zařízení před internetovými útoky ve službě Lookout](set-up-your-subscription-with-lookout-mtp.md)
+#### [Povolení aplikace Lookout v Intune](enable-lookout-mtp-connection-in-intune.md)
+#### [Nasazení aplikací Lookout for Work](configure-and-deploy-lookout-for-work-apps.md)
+#### [Povolení zásady dodržování předpisů pro ochranu zařízení před hrozbami](enable-device-threat-protection-rule-in-compliance-policy.md)
 
 ### [Ochrana dat aplikací pomocí MAM](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Portál Azure pro zásady MAM](azure-portal-for-microsoft-intune-mam-policies.md)
@@ -128,15 +135,11 @@
 
 ## [Co říct koncovým uživatelům](what-to-tell-your-end-users-about-using-microsoft-intune.md)
 
-## [Migrace na Intune](migrate-to-intune.md)
-
-## [Co je nového](whats-new-in-microsoft-intune.md)
-
 # [Vývoj a přizpůsobení aplikací](/intune/develop/intune-app-sdk)
 
 # [Řešení problémů](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO5-->
 
 

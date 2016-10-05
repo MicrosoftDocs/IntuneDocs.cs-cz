@@ -13,8 +13,8 @@ ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e2daff5dae435df55c866adbf602f554500d50e0
-ms.openlocfilehash: e898d070eb61583ff379821c9bf24f3997ae177e
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: d06d6e7de5c2e30ae8078642184ad8cfadf15be4
 
 
 ---
@@ -101,11 +101,11 @@ Abyste mohli v programu DEP registrovat zařízení iOS vlastněná společnost�
 
 Od listopadu se správa skupin zařízení přesune do služby Azure Active Directory. Po přechodu na skupiny Azure Active Directory se už přiřazení skupin nebude zobrazovat mezi možnostmi v části **Podnikový profil zápisu**. Jelikož se tato změna bude zavádět několik měsíců, je možné, že ji nezaznamenáte okamžitě. Po přesunu do nového portálu bude možné na základě názvů podnikových profilů registrace definovat nová dynamická přiřazení do skupin zařízení. Tento proces slouží k tomu, aby se zařízení předběžně zařazená do určité skupiny zařízení automaticky zaregistrovala do této skupiny s nasazenými zásadami a aplikacemi. [Další informace o skupinách Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
 
-### Související témata
-[Příprava registrace zařízení](get-ready-to-enroll-devices-in-microsoft-intune.md)
+### Viz taky
+[Předpoklady pro registraci zařízení](prerequisites-for-enrollment.md)
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO4-->
 
 

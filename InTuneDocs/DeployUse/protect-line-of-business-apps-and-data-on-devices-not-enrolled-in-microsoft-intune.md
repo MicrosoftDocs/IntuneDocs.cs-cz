@@ -13,21 +13,27 @@ ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 45c6622624230e3486d2498b1b023f2efcdc2970
-ms.openlocfilehash: eb04f0e7b9627ad1869ef677f1b32380db868490
+ms.sourcegitcommit: ffe11b4eb4b0f4c2ffdc831cad9deb30d7180809
+ms.openlocfilehash: 94de65185af64052226985f2c65c7b8a18e2f829
 
 
 ---
 
 # Ochrana obchodních aplikací a dat na zařízeních, která nejsou zaregistrovaná v Microsoft Intune
 
-Zásady správy mobilních aplikací (MAM) pomáhají chránit vaše firemní data tím, že omezují přesun dat, jako je třeba kopírování a vkládání, nebo brání uživatelům v ukládání firemních dokumentů do osobního umístění.   Pokud chcete zásady MAM použít u obchodních aplikací pro iOS nebo Android, musíte aplikace nejdřív zabalit pomocí nástroje Microsoft Intune App Wrapping.  Zabalení je proces, při kterém se pro aplikaci nastaví vrstva správy, aniž by bylo potřeba příslušnou aplikaci změnit.  Jakmile je aplikace zabalená, můžete pro ni nastavit zásady MAM a distribuovat ji koncovým uživatelům.  
+Zásady správy mobilních aplikací (MAM) pomáhají chránit data společnosti tím, že omezují akce, které by mohly způsobit únik těchto dat, a vynucují požadavky pro přístup k datům, jako je například PIN aplikace. Pokud chcete zásady MAM použít u obchodních aplikací pro iOS nebo Android, musíte aplikace nejdřív zabalit pomocí nástroje Microsoft Intune App Wrapping.  Zabalení je proces, při kterém se pro aplikaci nastaví vrstva správy, aniž by bylo potřeba příslušnou aplikaci změnit.  Jakmile je aplikace zabalená, můžete pro ni nastavit zásady MAM a distribuovat ji koncovým uživatelům.  
 
-Toto téma vysvětluje kroky nutné k použití zásad MAM pro aplikace, které jsou přístupné na **vlastních zařízení zaměstnanců, která nejsou spravovaná**, a na zařízeních, která jsou spravovaná pomocí **řešení správy mobilních zařízení (MAM) jiného výrobce**.  Příprava obchodních aplikací, které běží na **zařízeních zaregistrovaných v Intune** je popsaná v tématu [Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md).
+Toto téma vysvětluje kroky nutné k použití zásad MAM pro aplikace, které jsou přístupné na **vlastních zařízení zaměstnanců, která nejsou spravovaná**, a na zařízeních, která jsou spravovaná pomocí **řešení správy mobilních zařízení (MAM) jiného výrobce**.  Příprava obchodních aplikací, které běží na **zařízeních zaregistrovaných v MDM Intune**, je popsaná v tématu [Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md).
+
+
 ##  Krok 1: Příprava aplikace
-Před nasazením zásad MAM musíte aplikaci nejdřív zabalit pomocí nástroje Microsoft Intune App Wrapping.  Pokyny k instalaci a použití nástroje pro zabalení aplikace jsou součástí staženého souboru.  
+Před nasazením zásad MAM musíte aplikaci nejdřív zabalit pomocí nástroje Microsoft Intune App Wrapping.  Pokyny pro stažení a používání nástroje pro balení aplikací najdete na následujících stránkách:
+
+- [Příprava aplikací pro iOS na správu mobilních aplikací pomocí nástroje Intune App Wrapping Tool](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) 
+- [Příprava aplikací pro Android na správu mobilních aplikací pomocí nástroje Intune App Wrapping Tool](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool)
+
 >[!IMPORTANT]  
->Tato verze nástroje pro balení aplikací s podporou zařízení, která nejsou zaregistrovaná v Intune, je dostupná ve veřejné verzi Preview. Pokud se chcete účastnit na zkušebním používání této veřejné verze Preview, můžete si nástroj stáhnout z [této stránky GitHub](https://github.com/msintuneappsdk/intune-app-wrapper-ios-preview) pro iOS a [této stránky GitHub](https://github.com/msintuneappsdk/intune-app-wrapper-android-preview) pro Android.
+>Tato verze nástroje pro balení aplikací s podporou zařízení, která nejsou zaregistrovaná v Intune, je podporovaná pro iOS a ve veřejné verzi Preview pro Android. Nástroj pro iOS si můžete stáhnout [z tohoto úložiště GitHub](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) a pro Android [z tohoto úložiště GitHub](https://github.com/msintuneappsdk/intune-app-wrapper-android-preview).
 
 ## Krok 2: Přidání aplikace
 
@@ -75,6 +81,6 @@ Obchodní aplikaci můžete ze seznamu aplikací odebrat.  Tato operace odebere 
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO4-->
 
 

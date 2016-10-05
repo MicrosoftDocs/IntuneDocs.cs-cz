@@ -1,5 +1,5 @@
 ---
-title: "Omezení přístupu pomocí ochrany proti mobilním hrozbám | Microsoft Intune"
+title: "Omezení přístupu pomocí ochrany zařízení před internetovými útoky | Microsoft Intune"
 description: "Omezení přístupu k prostředkům společnosti na základě rizika zařízení, sítě a aplikace."
 keywords: 
 author: karthikaraman
@@ -13,24 +13,24 @@ ms.assetid: 725d9e40-e70c-461a-9413-72ff1b89a938
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c3cf5e6b32ad24d4972fd147331dda7d2d43e8c6
-ms.openlocfilehash: d4eadb73aac14a375f41c434a4303a885bfbae64
+ms.sourcegitcommit: 550fbbf94f46eee23e77ebf7f9177148882f28e2
+ms.openlocfilehash: 758e4408fa7119ed4ebb82e98b850be5b1f318b4
 
 
 ---
 
 # Omezení přístupu k prostředkům společnosti na základě rizika zařízení, sítě a aplikace
-Přístup z mobilních zařízení k podnikovým prostředkům můžete regulovat na základě posouzení rizik, které provádí aplikace Lookout. To je řešení ochrany proti mobilním hrozbám (MTP) integrované v Microsoft Intune. Riziko se stanovuje na základě telemetrie, kterou služba Lookout MTP shromažďuje ze zařízení s cílem odhalit slabá místa zabezpečení operačního systému (OS), nainstalované škodlivé aplikace a síťové profily. Na základě posouzení rizik pak můžete v Intune nakonfigurovat zásady podmíněného přístupu a blokovat zařízení, které byla z důvodu zjištěných hrozeb určena jako nevyhovující.  Tato funkce je momentálně podporována pouze pro zařízení s **Androidem** verze **4.1 a novější**, která jsou zaregistrovaná v Microsoft Intune.  
+Přístup z mobilních zařízení k podnikovým prostředkům můžete regulovat na základě posouzení rizik, které provádí Lookout. To je řešení ochrany zařízení před internetovými útoky integrované v Microsoft Intune. Riziko se stanovuje na základě telemetrie, kterou služba Lookout shromažďuje ze zařízení s cílem odhalit slabá místa zabezpečení operačního systému (OS), nainstalované škodlivé aplikace a síťové profily. Na základě posouzení rizik pak můžete v Intune nakonfigurovat zásady podmíněného přístupu a blokovat zařízení, které byla z důvodu zjištěných hrozeb určena jako nevyhovující.  Tato funkce je momentálně podporována pouze pro zařízení s **Androidem** verze **4.1 a novější**, která jsou zaregistrovaná v Microsoft Intune.  Informace o platformách a jazycích, které aplikace Lookout podporuje, najdete v tomto [článku](https://personal.support.lookout.com/hc/en-us/articles/114094140253).
 ## Jaký problém se tím vyřeší?
 Společnosti a organizace potřebují chránit citlivá data před vznikajícími hrozbami, které zahrnují fyzické hrozby, hrozby založené na aplikacích nebo síti i slabá místa operačních systémů.
 
 V minulosti společnosti a organizace před škodlivými útoky aktivně chránily stolní počítače. Mobilní zařízení představují novou oblast, jejíž ochrana často zůstává opomíjená. Přestože mobilní platformy mají integrovanou ochranu operačního systému pomocí metod, jako je například izolace aplikací nebo obchody s aplikacemi pro prověřené spotřebitele, jsou tyto platformy nadále zranitelné vůči sofistikovaným útokům. Protože zaměstnanci stále častěji k práci používají mobilní zařízení a potřebují mít přístup k informacím, které jsou citlivé a hodnotné, je třeba tato zařízení chránit před řadou sofistikovaných útoků.
 
-Intune umožňuje řídit přístup k prostředkům a datům společnosti na základě posouzení rizik od řešení MTP, jako je například Lookout.
+Intune umožňuje řídit přístup k prostředkům a datům společnosti na základě posouzení rizik, která poskytují řešení ochrany zařízení před internetovými útoky, jako je například Lookout.
 
-## Jak může ochrana Intune a Lookout proti mobilním hrozbám pomoct chránit prostředky společnosti?
-Mobilní aplikace Lookout (Lookout for Work) funguje v mobilních zařízeních, zaznamenává systém souborů, síťové protokoly a telemetrii zařízení a aplikací (pokud je k dispozici) a odesílá tyto údaje do cloudové služby Lookout proti MTP, která vypočítá souhrnné riziko mobilních hrozeb pro zařízení. Klasifikaci úrovně rizika hrozeb může také změnit v konzole MTP tak, aby odpovídala vašim požadavkům.  
-Zásady dodržování předpisů v Intune nyní obsahují nové pravidlo pro ochranu před mobilními útoky Lookout. To je založené na posouzení rizik službou Lookout MTP. Když je toto pravidlo je aktivní, Microsoft Intune vyhodnocuje soulad zařízení se zásadami, kterou jste povolili.
+## Jak může ochrana Intune a Lookout, chránící zařízení proti hrozbám, pomoct při ochraně prostředků společnosti?
+Mobilní aplikace Lookout (Lookout for Work), která chrání zařízení proti hrozbám, funguje v mobilních zařízeních. Zaznamenává systém souborů, síťové protokoly a telemetrii zařízení a aplikací (pokud je k dispozici) a odesílá tyto údaje do cloudové služby Lookout, která vypočítá souhrnné riziko mobilních hrozeb pro zařízení. Klasifikaci úrovně rizika hrozeb můžete také změnit v konzole Lookout tak, aby odpovídala vašim požadavkům.  
+Zásady dodržování předpisů v Intune nyní obsahují nové pravidlo pro ochranu před mobilními útoky Lookout. Toto pravidlo je založené na posouzení rizik službou Lookout. Když je toto pravidlo je aktivní, Microsoft Intune vyhodnocuje soulad zařízení se zásadami, kterou jste povolili.
 
 Pokud aplikace vyhodnotí, že zařízení není v souladu se zásadami dodržování předpisů, může mu být pomocí zásad podmíněného přístupu zablokován přístup k prostředkům jako Exchange Online nebo SharePoint Online. Po zablokování přístupu je koncovým uživatelům při pokusu o přístup zobrazen návod, který jim pomůže problém vyřešit a opětovně získat přístup k prostředkům společnosti. Návod se spustí prostřednictvím aplikace Lookout for Work.
 
@@ -80,6 +80,6 @@ Tady jsou hlavní kroky, které je nutné provést při implementaci tohoto ře�
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 

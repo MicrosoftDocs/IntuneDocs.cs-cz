@@ -13,14 +13,14 @@ ms.assetid: 14f5cf53-6764-4e22-a18b-fa750b3acd41
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: de3296e81c88b3ac04e3ba3f3d3ca222a59df7bd
-ms.openlocfilehash: 96d8911dafe7897458297867ddfef97206fdfc9c
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: 9518381dfd967b8cbf8d01bf834d8148d2c2501b
 
 
 ---
 
 # Správa mobilních zařízení pomocí protokolu Exchange ActiveSync a služby Microsoft Intune
-Aby služba Microsoft Intune mohla přímo spravovat mobilní zařízení, musí být tato zařízení [v Intune zaregistrovaná](get-ready-to-enroll-devices-in-microsoft-intune.md). Jako alternativu mohou správci povolit omezenější řešení správy, které využívá správu EAS (Exchange ActiveSync) s konektorem Exchange. Zařízení se dají spravovat pomocí místních serverů Exchange a Exchange Online s využitím Office 365. Intune podporuje pro každé předplatné jenom jedno připojení konektoru Exchange libovolného typu.
+Aby služba Microsoft Intune mohla přímo spravovat mobilní zařízení, musí být tato zařízení [v Intune zaregistrovaná](prerequisites-for-enrollment.md). Jako alternativu mohou správci povolit omezenější řešení správy, které využívá správu EAS (Exchange ActiveSync) s konektorem Exchange. Zařízení se dají spravovat pomocí místních serverů Exchange a Exchange Online s využitím Office 365. Intune podporuje pro každé předplatné jenom jedno připojení konektoru Exchange libovolného typu.
 
 ## Pravidla přístupu k Exchangi pro mobilní zařízení ##
 
@@ -46,6 +46,6 @@ Nakonec, když už se nepoužívají nebo došlo ke ztrátě nebo odcizení zař
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 

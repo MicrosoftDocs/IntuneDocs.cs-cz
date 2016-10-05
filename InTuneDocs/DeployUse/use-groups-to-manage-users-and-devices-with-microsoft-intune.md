@@ -4,7 +4,7 @@ description: "Vytvářejte a spravujte skupiny pomocí pracovního prostoru Skup
 keywords: 
 author: Nbigman
 manager: angrobe
-ms.date: 09/13/2016
+ms.date: 09/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: eb9b01ce-9b9b-4c2a-bf99-3879c0bdaba5
 ms.reviewer: lpatha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8c474810f8d3c7db4784c38c45c85c83b647860b
-ms.openlocfilehash: fa0c235d3ab5f9dde04f8345e7e28fdd00603e58
+ms.sourcegitcommit: 1fbe37aa081f850224ce4ee76f66e154c6001c9c
+ms.openlocfilehash: 480a7a60b484f28b621c4c135713a65953f46f41
 
 
 ---
@@ -24,7 +24,7 @@ Toto téma popisuje, jak vytvořit skupiny v Intune. Poskytuje také informace o
 
 >[!IMPORTANT]
 >
->Pokud se vám po otevření pracovního prostoru Skupiny na portálu Intune zobrazí odkaz na portál Azure Active Directory (Azure AD), znamená to, že už používáte *nový* přístup ke správě skupin v Intune – na základě skupin zabezpečení Azure AD. Ten podrobněji popisujeme v části [Oznámení o připravovaných vylepšeních správy skupin](#notice-of-upcoming-improvements-to-the-admin-experience-for-groups). Pokud chcete vytvářet a spravovat skupiny, klikněte na odkaz na portál Azure AD. Další informace o tom, jak pracovat se skupinami zabezpečení Azure AD, najdete v článku [Správa přístupu k prostředkům pomocí skupin Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-manage-groups/).
+>Pokud se vám po otevření pracovního prostoru Skupiny na portálu Intune zobrazí odkaz na portál Azure Active Directory (Azure AD), znamená to, že už používáte *nový* přístup ke správě skupin v Intune – na základě skupin zabezpečení Azure AD. Ten podrobněji popisujeme v části [Oznámení o připravovaných vylepšeních správy skupin](#notice-of-upcoming-improvements-to-the-admin-experience-for-groups). Pokud chcete vytvářet a spravovat skupiny, klikněte na odkaz na portál Azure AD. 
 >
 >Pokud odkaz na portál Azure AD nevidíte, stále používáte *současný* přístup ke správě skupin popsaný v tomto tématu v části [Vytvoření skupin pro správu uživatelů a zařízení pomocí Microsoft Intune](#Create-groups-to-manage-users-and-devices-with-Microsoft-Intune).
 
@@ -42,7 +42,7 @@ V tuto chvíli vás tato změna neovlivní. Ale připravujeme následující:
 
 
 ### Jak a kdy bude můj účet migrován do nového prostředí skupin?
-Současné zákazníky služby Intune budeme migrovat průběžně. Plán této migrace právě dokončujeme a během několika týdnů přineseme další informace. Na zahájení migrace vás s předstihem upozorníme. Pokud máte k migraci jakékoli otázky, obraťte se na náš tým migrace na adrese <intunegrps@microsoft.com>.
+Současné zákazníky služby Intune budeme migrovat průběžně. Plán této migrace právě dokončujeme a během několika týdnů přineseme další informace. Na zahájení migrace vás s předstihem upozorníme. Pokud máte k migraci jakékoli otázky, obraťte se na náš tým migrace na adrese [intunegrps@microsoft.com](mailto:intunegrps@microsoft.com). Podrobnosti o migraci skupin najdete v článku [Migrace skupin do Azure Active Directory](migrating-groups-to-azure-active-directory.md).
 
 ### Co se stane s mými existujícími skupinami uživatelů a zařízení?
  Skupiny uživatelů a skupiny zařízení, které jste vytvořili ve službě Intune, budou migrovat na skupiny zabezpečení Azure AD. Výchozí skupiny Intune, jako například Všichni uživatelé, zahrneme do migrace pouze tehdy, pokud je vaše nasazení skutečně používá (posoudí se v okamžiku migrace). Migrace může být u některých skupin složitější. Dáme vám vědět, pokud budou k migraci u vaší organizace potřeba nějaké další kroky.
@@ -123,7 +123,7 @@ Hierarchie skupiny navíc zobrazí souhrny stavu, které vám pomůžou identifi
 
 5.  Na stránce **Souhrn** zkontrolujte své výběry a klikněte na **Dokončit**.
 
-Nově vytvořená skupina se zobrazí v seznamu **Skupiny** v pracovním prostoru **Skupiny** v rámci nadřazené skupiny. Tady taky můžete skupinu upravit nebo odstranit.
+Nově vytvořená skupina se zobrazí v seznamu **Skupiny** v pracovním prostoru **Skupiny** pod příslušnou nadřazenou skupinou. Tady taky můžete skupinu upravit nebo odstranit.
 
 ### Vytvoření skupiny uživatelů
 
@@ -202,6 +202,6 @@ U každé zásady je **Zamýšlená hodnota** a **Stav**. Zamýšlená hodnota j
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO4-->
 
 

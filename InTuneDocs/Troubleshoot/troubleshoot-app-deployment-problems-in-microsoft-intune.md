@@ -4,7 +4,7 @@ description: "Tento článek vám pomůže při řešení problémů s nasazení
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 09/06/2016
+ms.date: 09/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 28ac298e-fb73-4c1c-b3fd-8336639e05e6
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5256d4decfcd14de2d50a32a0906b6894639010
-ms.openlocfilehash: 552514971a64b16f88a7d83a0f7d66a0c00b61b0
+ms.sourcegitcommit: 30d42bc4ee38a45895320eebd665fe8f5a0cb4ee
+ms.openlocfilehash: 0db3e6a39bd0d30231c339cb4501ce25059e4657
 
 
 ---
@@ -32,11 +32,23 @@ Pokud máte potíže s nasazením a správou aplikací v Intune, začněte zde. 
 |0x80073CFB|Zadaný balíček je už nainstalovaný a přeinstalace balíčku je blokovaná.|Tato chybová zpráva se může zobrazit při instalaci balíčku, který není totožný s balíčkem, který už je nainstalovaný. Potvrďte, že součástí balíčku je i digitální podpis. Pokud se balíček znovu vytvoří nebo znovu podepíše, nebude už tento balíček při bitovém porovnání totožný s dříve nainstalovaným balíčkem. Tuto chybu můžete odstranit jedním ze dvou způsobů:<br /><br />-   Zvýšíte číslo verze aplikace a pak balíček znova sestavíte a podepíšete.<br />-   Než budete instalovat nový balíček, odeberte starý balíček pro každého uživatele v systému.|
 |0x87D1041C|Instalace aplikace úspěšně proběhla, ale není zjištěna aplikace.|– Aplikace byla úspěšně nasazena službou Intune a potom byla odinstalována (zřejmě koncovým uživatelem). Dejte uživateli pokyn, aby aplikaci znovu nainstaloval z portálu společnosti. Požadované aplikace budou automaticky znovu nainstalovány, jakmile se zařízení příště připojí.|
 
+## Řešení problémů s aplikacemi z Windows Storu
+
+Informace v tématu [Řešení problémů s vytvářením balíčků, nasazením a dotazy aplikací pro Windows Store](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) vám pomohou s řešením běžných problémů, na které můžete narazit při instalaci aplikací z Windows Storu, ať již pomocí služby Intune nebo jinak.
+
+## Řešení problémů s nasazením aplikací do počítačů spravovaných softwarovým klientem Intune
+Při řešení problémů s nasazením aplikací do počítačů spravovaných softwarovým klientem Intune vám může pomoct nahlédnout do následujících dvou souborů protokolu:
+- složka %ProgramFiles%\Microsoft\OnlineManagement\Logs
+- %ProgramFiles%\Microsoft\OnlineManagement\Updates\ReportingEvents.log
+
+Pokud budete potřebovat otevřít případ podpory pro službu Intune, velmi pomůže, když společně s popisem problému zašlete do Microsoftu i tyto protokoly.
+
+
 ### Další kroky
-Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+Pokud vám tyto informace k řešení problémů nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO4-->
 
 

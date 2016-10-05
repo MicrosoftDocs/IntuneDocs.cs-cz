@@ -13,8 +13,8 @@ ms.assetid: f1c4522b-5a34-4f5a-89d2-7809c4352af7
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 875da922b311b06fa8a1eb8ba7207108684825d5
+ms.sourcegitcommit: baf87ad746a320784252966398bd665241209935
+ms.openlocfilehash: e82452abd00cf7a06ac501ed4e16bdab423697bd
 
 
 ---
@@ -25,6 +25,8 @@ Můžete řídit přístup k Microsoft Dynamics CRM Online ze zařízení s iOS 
 * [Zásady podmíněného přístupu](restrict-access-to-email-and-o365-services-with-microsoft-intune.md), kde můžete určit podmínky, které zařízení musí splňovat, aby mělo přístup ke službě.
 
 Další informace o tom, jak podmíněný přístup funguje, najdete v článku o [omezení přístupu k e-mailu, O365 a dalším službám](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+
+[!IMPORTANT] K nasazení podmíněného přístupu potřebujete předplatné Intune a Azure Active Directory Premium.  Další informace o Azure Active Directory Premium najdete na [stránce s cenami služby Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/). **Předplatné Enterprise Mobility Suite + Security** obsahuje jak předplatné Intune, tak i předplatné Azure Active Directory Premium. Bližší informace najdete na [stránce s cenami Enterprise Mobility Suite](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing).
 
 Když se cílový uživatel na svém zařízení pokusí použít aplikaci Dynamics CRM, dojde k následujícímu vyhodnocení:
 
@@ -97,6 +99,6 @@ Vyberte libovolnou skupinu mobilních zařízení a pak na kartě **Zařízení*
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Sep16_HO5-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: 48914533-f138-4dc0-8b93-4cea3ac61f7b
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e07685a26329b7374d9fe50d64bf9e4699c03180
-ms.openlocfilehash: 51b281a6799fa89ed49082acea34024a6214e835
+ms.sourcegitcommit: a3db9269bf4f93021d16d8ea23a2a13b87b43677
+ms.openlocfilehash: 40a641d807c3ad73079a5d2e130b00c2065da6cb
 
 
 ---
@@ -23,19 +23,16 @@ ms.openlocfilehash: 51b281a6799fa89ed49082acea34024a6214e835
 
 # Co říct koncovým uživatelům o používání služby Microsoft Intune
 
-Využijte tyto odkazy a informace pro:
+Tyto odkazy a informace vám pomohou pochopit kroky, které budete vy i vaši koncoví uživatelé budete provádět v rámci různých úkolů ve službě Intune.
 
-- Pochopení kroků, podle kterých vaši uživatelé postupují při provádění různých úloh v Intune.
-- Poskytnutí vašim uživatelům, aby jim pomohly s dokončováním úloh a řešením problémů s používáním Intune.
-
-Nezapomeňte při [přizpůsobování Portálu společnosti](/Intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-7) uvést i kontaktní údaje správce IT, aby uživatelé v případě potřeby mohli získat pomoc.
+Nezapomeňte v rámci [přizpůsobení služby Portál společnosti](/Intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-7) uvést i kontaktní údaje správce IT, na kterého se uživatelé v případě potřeby mohou obrátit pro pomoc.
 
 
-## Kde můžou koncoví uživatelé najít informace o běžných úlohách
+## Kde koncoví uživatelé najdou návody a postupy k řešení problémů
 
-Když zaregistrovaní uživatelé potřebují pomoc s Intune, obvykle se jim na webu Portál společnosti nebo v aplikaci Portál společnosti zobrazuje odkaz, který je odkáže na konkrétní článek s postupem pro řešení potíží nebo dokončení úlohy. Pokud se třeba uživatelům s Androidem zobrazí zpráva, že jim chybí požadovaný certifikát, můžou klepnutím na odkaz Jak to vyřešit přejít na článek s postupem, jak tento certifikát získat. 
+Web Portál společnosti a aplikace Portál společnosti ukazují registrovaným uživatelům odkaz „Další informace“ nebo „Jak tohle vyřešit“, který odkazuje na postup, jak vyřešit problém nebo provést určitý úkol. Pokud se třeba uživatelům s Androidem v aplikaci Portál společnosti zobrazí zpráva, že jim chybí požadovaný certifikát, můžou klepnutím na odkaz přejít na článek s postupem, jak tento certifikát získat. 
 
-Odkazy níž jsou pro správce IT. Tato stránka obsahuje odkazy na všechny články, na které jsou uživatelé nasměrovaní z webu nebo aplikace Portál společnosti. Tyto odkazy se rozdělené do několika skupin: instalace aplikace Portál společnosti a registrace ve službě Intune, úlohy, které uživatelé můžou provádět na svých zařízeních, jako je třeba použití spravovaných aplikací nebo ruční synchronizace zařízení, a řešení potíží.
+Na následujících odkazech se můžete podívat na postupy, na které budou uživatelé odkázáni z aplikace nebo webu Portál společnosti. Tyto odkazy jsou rozdělené na sekce věnované instalaci aplikace Portál společnosti, registraci do Intune, obecným úlohám, které uživatelé můžou provádět na svých zařízeních, a řešení problémů.
 
 - [Použití zařízení Android s Intune](/Intune/EndUser/using-your-android-device-with-intune)
 - [Using your iOS or Mac OS X device with Intune](/Intune/EndUser/using-your-ios-or-mac-os-x-device-with-intune)
@@ -43,12 +40,11 @@ Odkazy níž jsou pro správce IT. Tato stránka obsahuje odkazy na všechny čl
 - [Použití webu Portál společnosti Intune](/Intune/EndUser/using-the-intune-company-portal-website)
 
 
-## Průvodci registrací a šablony, které můžete přizpůsobit pro svoje uživatele
+## Průvodce registrací, kterého můžete přizpůsobit pro svoje uživatele
 
-- [Přizpůsobitelná šablona registrace pro koncové uživatele v Intune pro správce IT](https://gallery.technet.microsoft.com/End-user-Intune-enrollment-55dfd64a) –Přizpůsobitelný dokument aplikace Word s podrobnými kroky a snímky obrazovky registrace zařízení s iOS, Mac OS X a Androidem pro koncového uživatele. Tento dokument můžete použít tak jak je, nebo můžete pokyny před poskytnutím koncovým uživatelům přizpůsobit.</br></br>
-- [Dvoustránkový přizpůsobitelný dokument obsahující kroky a vložená videa o registraci, zrušení registrace, získávání aplikací a další](https://gallery.technet.microsoft.com/Intune-End-User-Enrollment-3a0c9b0c#content) – Dokument, který můžete přizpůsobit a poskytnout koncovým uživatelům. Obsahuje oddíly o tom, jak registrovat zařízení s Androidem, iOS a Windows, jak získat aplikace, jak zrušit registraci, co dělat v případě ztráty zařízení a co IT specialisté uvidí a neuvidí na vašem zařízení.
+Pomocí této [přizpůsobitelné šablony k registraci koncových uživatelů do Intune pro správce IT](https://gallery.technet.microsoft.com/End-user-Intune-enrollment-55dfd64a) si můžete vytvořit vlastní pokyny k registraci pro vaše koncové uživatele. Tento wordový dokument obsahuje podrobně popsané kroky se snímky obrazovek pro registraci koncových uživatelů se zařízeními iOS, Mac OS X a Android. 
 
-##Jak koncoví uživatelé získávají svoje aplikace
+## Jak koncoví uživatelé získávají svoje aplikace
 
 Pro pochopení, jak koncoví uživatelé získávají svoje aplikace, vyberte z následujících možností platformu zařízení:
 
@@ -63,6 +59,6 @@ Pokud byste chtěli, aby tento článek obsahoval ještě další informace, uve
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Sep16_HO5-->
 
 

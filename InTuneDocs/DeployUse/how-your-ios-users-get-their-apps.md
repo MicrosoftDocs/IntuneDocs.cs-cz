@@ -13,8 +13,8 @@ ms.assetid: 7e3135c1-df26-48c9-aa4c-cdab6168897a
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 52b9e786fe22b04081441db88a3629062fc85668
-ms.openlocfilehash: a215d547507dcc460e83009cc6a04baf3fd8f4a4
+ms.sourcegitcommit: a3db9269bf4f93021d16d8ea23a2a13b87b43677
+ms.openlocfilehash: 61c4cb00fba3352f6898ec41b6d07834da4ec63d
 
 
 ---
@@ -34,21 +34,22 @@ Tyto informace slouží k pochopení toho, jak a kde koncoví uživatelé získ�
 
 Omezení společnosti Apple zakazují, aby se obchodní a spravované aplikace z App Storu zobrazovaly v aplikaci Portál společnosti. Tento problém jsme vyřešili tak, že dlaždice aplikací v aplikaci Portál společnosti pro iOS odkazují uživatele u všech aplikací na různá zobrazení v jednom umístění (na webu Portál společnosti):
 
-- Dlaždice **Firemní aplikace** dříve odkazovala na seznam všech aplikací na kartě VŠE na [webu Portál společnosti](http://portal.manage.microsoft.com) a bude tak fungovat i nadále. Název dlaždice byl změněn na **Všechny aplikace**.
+- Dlaždice **Firemní aplikace** dříve odkazovala na seznam všech aplikací na kartě VŠE na webu [Portál společnosti](http://portal.manage.microsoft.com) a bude tak fungovat i dál. Název dlaždice byl změněn na **Všechny aplikace**.
 
-- Dlaždice **Ostatní aplikace** dříve odkazovala v aplikaci Portál společnosti na zobrazení, ve kterém je uvedený seznam všech aplikací, které Apple aplikaci Portál společnosti povoluje zobrazit. Název dlaždice byl změněn na **Doporučené aplikace**. Po klepnutí na tuto dlaždici uživatelé přejdou na kartu DOPORUČENÉ na webu Portál společnosti.
+- Dlaždice **Ostatní aplikace** dříve odkazovala na zobrazení v aplikaci Portál společnosti, ve kterém je uvedený seznam všech aplikací, které Apple aplikaci Portál společnosti povoluje zobrazit. Název dlaždice byl změněn na **Doporučené aplikace**. Po klepnutí na tuto dlaždici uživatelé přejdou na kartu DOPORUČENÉ na webu Portál společnosti.
 
--  Dlaždice **Kategorie** dříve odkazovala v aplikaci Portál společnosti na zobrazení, ve kterém je uvedený seznam kategorií aplikací. Název této dlaždice nebyl změněn, ale nyní na webu Portál společnosti odkazuje na kartu KATEGORIE.
+-  Dlaždice **Kategorie** dříve odkazovala na zobrazení v aplikaci Portál společnosti, ve kterém je uvedený seznam kategorií aplikací. Název této dlaždice nebyl změněn, ale nyní odkazuje na kartu KATEGORIE na webu Portál společnosti.
 Aktualizované snímky obrazovky najdete [tady](https://gallery.technet.microsoft.com/Improvements-in-how-iOS-d1104186).
 
 
 
 ###Související témata
-[Jak uživatelé s Androidem získávají svoje aplikace](how-your-android-users-get-their-apps.md)</br>
+[Jak uživatelé s Androidem získávají svoje aplikace](how-your-android-users-get-their-apps.md)
+
 [Jak uživatelé s Windows získávají svoje aplikace](how-your-windows-users-get-their-apps.md)
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Sep16_HO5-->
 
 
