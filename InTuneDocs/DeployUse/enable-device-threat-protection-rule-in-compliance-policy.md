@@ -13,8 +13,8 @@ ms.assetid: c951692d-6538-46c0-a9f0-d607ded189ae
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fa05027e1785bb27a607aa9e31b685107a84f63f
-ms.openlocfilehash: 3de68238515a2584b6f1a5785e13688097468415
+ms.sourcegitcommit: ceaeba74f8671caf4125252fce02fd06752c3fe8
+ms.openlocfilehash: c074dd8850aef8cec79a9362222c3678d679bf4f
 
 
 ---
@@ -22,18 +22,18 @@ ms.openlocfilehash: 3de68238515a2584b6f1a5785e13688097468415
 # Povolení pravidla ochrany zařízení před internetovými útoky v zásadách dodržování předpisů
 Intune vám s ochranou Lookout proti mobilním hrozbám umožňuje v zařízení detekovat mobilní hrozby a provádět posouzení rizik. Můžete vytvořit pravidla zásad dodržování předpisů a posouzením rizik zjistit, jestli je zařízení s nimi v souladu. Pomocí zásad podmíněného přístupu pak můžete povolit nebo blokovat přístup k Exchangi, SharePointu a dalším službám podle toho, nakolik zařízení zásady splňuje nebo nesplňuje.
 
-Nastavení detekce hrozeb Lookout MTP, aby ovlivňovala zásady dodržování předpisů pro zařízení:
+Nastavení detekce hrozeb pro zařízení ve službě Lookout, aby ovlivňovala zásady dodržování předpisů pro takové zařízení:
 
 * V zásadách dodržování předpisů musí být povoleno pravidlo **Ochrana zařízení před internetovými útoky**.
 
 * Na stránce **Stav Lookoutu** v **konzole správce Intune** se musí zobrazovat stav **Aktivní**. Další podrobnosti a pokyny k tomu, jak aktivovat integraci Lookout, naleznete v tématu [Povolení připojení Lookout MTP v Intune](enable-lookout-mtp-connection-in-intune.md).
 
 
-Před vytvořením pravidla ochrany zařízení před internetovými útoky v zásadách dodržování předpisů doporučujeme [nastavit předplatné pro službu Lookout MTP](set-up-your-subscription-with-lookout-mtp.md), [povolit připojení Lookout v Intune](enable-lookout-mtp-connection-in-intune.md) a [nakonfigurovat aplikaci Lookout for Work](configure-and-deploy-lookout-for-work-apps.md). Pravidlo dodržování předpisů bude vynucováno až po dokončení nastavení.
+Před vytvořením pravidla ochrany zařízení před internetovými útoky v zásadách dodržování předpisů doporučujeme [nastavit předplatné pro ochranu zařízení před internetovými útoky ve službě Lookout](set-up-your-subscription-with-lookout-mtp.md), [povolit připojení Lookout v Intune](enable-lookout-mtp-connection-in-intune.md) a [nakonfigurovat aplikaci Lookout for Work](configure-and-deploy-lookout-for-work-apps.md). Pravidlo dodržování předpisů bude vynucováno až po dokončení nastavení.
 
 Pokud chcete aktivovat pravidlo ochrany zařízení před internetovými útoky, můžete použít stávající zásady dodržování předpisů nebo vytvořit novou zásadu.
 
-V rámci nastavení Lookout MTP v [konzole Lookout MTP](https://aad.lookout.com) jste vytvořili zásadu, která rozděluje různé hrozby na vysokou, střední a nízkou úroveň. V zásadách dodržování předpisů Intune využijete úroveň hrozby k nastavení maximální povolené úrovně hrozby.
+V rámci nastavení ochrany zařízení před internetovými útoky ve službě Lookout v [konzole Lookout](https://aad.lookout.com) jste vytvořili zásadu, která klasifikuje různé hrozby vysokou, střední nebo nízkou úrovní. V zásadách dodržování předpisů Intune využijete úroveň hrozby k nastavení maximální povolené úrovně hrozby.
 
 Na stránce **zásad dodržování předpisů** v **konzole správce Intune** přejděte do části **Stav zařízení** a přepnutím tlačítka povolte pravidlo **Ochrana zařízení před internetovými útoky**. Potom vyberte maximální povolenou úroveň hrozeb, což je jedna z následujících:
 * **Žádná (zabezpečeno)**: Toto je nejbezpečnější úroveň.  To znamená, že zařízení nesmí obsahovat žádné hrozby.  Pokud je nalezena jakákoli úroveň hrozeb, je zařízení vyhodnoceno jako nevyhovující.  
@@ -61,6 +61,6 @@ Stav dodržování předpisů zařízení naleznete na stránce**Všechna zaří
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 
