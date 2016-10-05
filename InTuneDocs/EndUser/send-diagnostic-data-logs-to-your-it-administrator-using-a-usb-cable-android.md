@@ -31,7 +31,7 @@ Pokud chcete odesílat protokoly dat správci IT, abyste získali pomoc s probl�
 
 2.  Připojte zařízení s Androidem k počítači pomocí kabelu USB.
 
-3.  V počítači vyhledejte adresář, který má název vašeho telefonu. V tomto adresáři vyhledejte složku &lt;zařízení s Androidem&gt;\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\.\.
+3.  V počítači vyhledejte adresář, který má název vašeho telefonu. V tomto adresáři vyhledejte složku &lt;zařízení s Androidem&gt;\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\.
 
 4.  Všechny soubory připojte k e-mailu a odešlete je správci IT.
 
