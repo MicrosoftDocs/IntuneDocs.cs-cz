@@ -13,8 +13,8 @@ ms.assetid: 1b2d7125-f63f-43cf-ac1e-94fbedf2a7e8
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: baf87ad746a320784252966398bd665241209935
-ms.openlocfilehash: 8b68465554946c198a8b5f0fd6cf2a8466c05e40
+ms.sourcegitcommit: db1d43dd647122e7ba8ebd4e6df48e3c970a3392
+ms.openlocfilehash: 0abe3a79135a9b6db14502f1132da0bd1537d445
 
 
 ---
@@ -32,7 +32,8 @@ Když se cílový uživatel na svém zařízení pokusí použít službu Online
 
 **Dřív** než nakonfigurujete zásady podmíněného přístupu pro Online Skype pro firmy, musíte:
 - Mít **předplatné Online Skype pro firmy ** a přiřadit licenci Online Skype pro firmy uživatelům.
-- Musíte mít **předplatné Azure AD Premium**. Další informace najdete na [stránce s cenami služby Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/). **Předplatné Enterprise Mobility Suite + Security** obsahuje jak předplatné Intune, tak i předplatné Azure Active Directory Premium. Bližší informace najdete na [stránce s cenami Enterprise Mobility Suite](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing).
+- Mít **předplatné Azure Active Directory Premium nebo Enterprise Mobility + Security** a uživatelé musí být licencovaní pro EMS nebo Azure AD. Další informace najdete na [stránce s cenami služby Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) nebo na [stránce s cenami služby Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/). 
+
 -   [Povolit moderní ověřování](https://docs.microsoft.com/en-us/intune/deploy-use/restrict-access-to-skype-for-business-online-with-microsoft-intune) pro Online Skype pro firmy.
 -  Všichni koncoví uživatelé musí používat **Online Skype pro firmy**. Pokud máte nasazení s Online Skypem pro firmy i místním Skypem pro firmy, zásady podmíněného přístupu se na koncové uživatele nepoužijí.
 
@@ -116,6 +117,6 @@ Vyberte libovolnou skupinu mobilních zařízení a pak na kartě **Zařízení*
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 

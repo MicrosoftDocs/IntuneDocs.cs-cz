@@ -1,10 +1,10 @@
 ---
-title: "Co připravujeme | Microsoft Intune"
+title: "Časná edice | Microsoft Intune"
 description: 
 keywords: 
 author: barlanmsft
 manager: angrobe
-ms.date: 08/04/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,105 +14,112 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ecf43b38e9593375981770583220d4ce2dfd709f
-ms.openlocfilehash: b5da0aca366a24f2f0ccf62a3661b0b91db9b01a
+ms.sourcegitcommit: a5c4b0f15456a9f24c95954d669a17c63f96a459
+ms.openlocfilehash: 273016d4fe114bbe60e9cebc06e89584c8f91f0b
 
 
 ---
 
-# Co v Microsoft Intune připravujeme – srpen
-Tyto informace jsou poskytovány na základě smlouvy o utajení (NDA) ve velmi omezené míře a mohou podléhat změnám. U některých funkcí, které jsou zde uvedeny, existuje riziko, že nebudou do konečného termínu dokončeny, a mohou se proto objevit až v budoucí verzi. Další funkce se testují v pilotní (testovací) verzi, aby bylo zajištěno, že je budou moci zákazníci bez problémů využívat. Pokud máte jakékoli dotazy nebo připomínky, obraťte se prosím na příslušný kontakt (Intune/PM).
+# Co se chystá v Microsoft Intune – říjen
+**Časná edice** poskytuje seznam funkcí, které se chystají v nadcházejících vydáních služby Microsoft Intune. Tyto informace jsou poskytovány na základě smlouvy o utajení (NDA) ve velmi omezené míře a mohou podléhat změnám. U některých funkcí, které jsou zde uvedeny, existuje riziko, že nebudou do konečného termínu dokončeny, a mohou se proto objevit až v budoucí verzi. Další funkce se testují v pilotní (testovací) verzi, aby bylo zajištěno, že je budou moci zákazníci bez problémů využívat. Pokud máte jakékoli dotazy nebo připomínky, obraťte se prosím na příslušný kontakt (Intune/PM).
 
 Tato stránka se pravidelně aktualizuje. Vracejte se na ni, abyste zjistili, jaké aktualizace připravujeme.
 
 Následující změny v Intune jsou ve vývoji. Všechny tyto funkce budou posléze podporované pro zákazníky využívající hybridní nasazení (Configuration Manager s Intune). Další informace o nových funkcích pro hybridní nasazení najdete na naší [stránce Co je nového pro hybridní nasazení](https://technet.microsoft.com/en-US/library/mt718155(TechNet.10).aspx).
 
+### Správa tisku z aplikací spravovaných pomocí zásad MAM
+Nově je možné zabránit tisku firemních dat z aplikací se zásadami MAM. Toto nastavení je dostupné na webu [Azure Portal](..deployuse/create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md) a podporují ho zařízení s [iOS](..deployuse/ios-mam-policy-settings) i [Androidem](..deployuse/android-mam-policy-settings).
+<!--TFS 1014328-->
 
-## Správa aplikací
-### Skryté a zobrazené aplikace pro iOS 9.3
-U zařízení se systémem iOS 9.3 nebo novějším, která jsou pod dohledem, bude možné využít seznam skrytých a zobrazených aplikací v zásadách obecné konfigurace iOS k těmto akcím:
-- Určení seznamu aplikací, které budou uživatelům skryté. Uživatelé nebudou moci tyto aplikace zobrazit ani spustit.
-- Určení seznamu aplikací, které uživatelé mohou zobrazit a spustit. Žádné jiné aplikace nebude možné zobrazit ani spustit.
+### Nový Portál společnosti Microsoft Intune pro zařízení s Windows 10
+Společnost Microsoft vydává nový Portál společnosti Microsoft Intune pro zařízení s Windows 10. Tato aplikace, která využívá nový univerzální formát Windows 10, poskytne uživatelům aktualizované prostředí, které je identické napříč všemi zařízeními s Windows 10, ať už jsou to počítače, nebo mobilní zařízení, a nabídne přitom stejné funkce, které v současnosti využívají.
 
-Mezi aplikace, které můžete zadat, patří aplikace, které jste nasadili, a integrované aplikace pro iOS, jako jsou Zprávy a Poznámky.
-<!---TFS 1279009--->
+Tato nová aplikace také uživatelům umožní využít v zařízeních s Windows 10 další funkce platformy, jako je jednotné přihlašování (SSO) a ověřování na základě certifikátů. Tato aplikace bude dostupná jako upgrade stávající aplikace Portál společnosti Windows 8.1 a Portál společnosti Windows Phone 8.1 a instaluje se z Windows Storu.
+<!--TFS 1016502-->
 
-### Zásady povolených a blokovaných aplikací pro zařízení se systémem Samsung KNOX
+### Podpora programu Android for Work
 
-Nyní můžete pro zařízení se systémem Samsung KNOX nakonfigurovat vlastní zásady, které umožňují vytvořit:
-- Seznam aplikací, u kterých je v příslušném zařízení blokované spuštění. Aplikace, které jsou definované v seznamu blokovaných aplikací, nejde na zařízení aktivovat, ani když jsou nainstalované.
-- Seznam aplikací, které si uživatelé příslušného zařízení mohou nainstalovat z obchodu Google Play. Z tohoto obchodu nejde nainstalovat žádné další aplikace.
+Intune je nyní součástí programu [Android for Work](https://enterprise.google.com/android/partners/). Podporu funkcí Android for Work začneme do Intune zavádět od tohoto měsíce.
 
-Tato nastavení mohou využívat jenom zařízení se systémem Samsung KNOX.
-<!--- For details, see [Use custom policies to allow and block apps for Samsung KNOX devices]( custom-policy-to-allow-and-block-samsung-knox-apps.md)--->
-<!---TFS 1311629 --->
+[Přečtěte si prohlášení Microsoftu o podpoře Intune pro Android for Work](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/12/microsoft-intune-support-for-android-for-work/).
 
-### Nové aplikace kompatibilní se zásadami správy mobilních aplikací (MAM)
-Aplikace Yammer pro [iOS](https://itunes.apple.com/app/yammer/id289559439?mt=8) a [Android](https://play.google.com/store/apps/details?id=com.yammer.v1) bude kompatibilní se [zásadami správy mobilních aplikací (MAM) služby Intune](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) bez ohledu na to, jestli je zařízení zaregistrované.
+<!---This month, some newly provisioned Intune tenants will start seeing the Android for Work features. We will announce later when existing tenants will begin to see this feature.--->
+<!--TFS 1043303-->
 
-Kompletní seznam aplikací kompatibilních s MAM najdete na webu [aplikací pro Microsoft Intune od partnerů](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-partners).
-<!--- TFS 1252335 & 1252336--->
+### Kompatibilita systému Android Samsung KNOX s Intune
 
-## Správa zařízení
-### Podpora pro Android 7.0
-V srpnu bude Intune poskytovat podporu „dne 0“ pro chystaný operační systém Android 7.0 pro mobilní zařízení.
-<!---TFS 1262053--->
-### Odebrání funkce pro vzdálené resetování hesla v zařízeních se systémem Android 7.0
-Google odebírá správcům IT a koncovým uživatelům možnost vzdáleně resetovat hesla na zařízeních se systémem Android 7.0. V předchozích verzích mohli správci vzdáleně resetovat heslo uživatele e koncoví uživatelé mohli k resetování svých hesel využívat web Portál společnosti.
+Některé modely telefonů Samsung Galaxy Ace nejde spravovat pomocí Intune jako zařízení se systémem Samsung KNOX. Pokud tato zařízení zaregistrujete v Intune, budou se spravovat jako standardní zařízení s Androidem.
+Jde o tyto modely:
 
-## Správa skupin
-### Přechod od skupin Intune ke skupinám Azure Active Directory od září 2016
-Intune vytváří nové prostředí pro správu skupin, které využívá skupiny zabezpečení Azure Active Directory (AAD) a skupiny uživatelů a zařízení v Intune. Tyto skupiny se budou využívat pro veškerou správu skupin a nasazování zásad a profilů, **až zavedeme nový portál pro správu Intune s využitím Azure**.
+* SM-G313HU
+* SM-G313HY
+* SM-G313M
+* SM-G313MY
+* SM-G313U
 
-Toto nové prostředí vás zbaví nutnosti mít mezi službami duplicitní skupiny, **umožní přístup k některým novým funkcím skupin Azure Active Directory Premium (AADP)** a zajistí možnosti rozšíření prostřednictvím PowerShellu a Graphu. Sjednotí se tak i prostředí správy skupin napříč správou podnikové mobility.
+Vy a vaši koncoví uživatelé nemusíte nic dělat.
+Další informace najdete na webu [Samsung KNOX](https://www.samsungknox.com).
 
-Pro zajištění přechodu ke skupinám zabezpečení dojde v **aktuální konzole pro správu** k určitým úpravám. **Tyto změny a také použití skupin zabezpečení AAD budou popsané v dokumentaci k Intune**.
+<!--TFS 1173566 iX blurb provided by Barry; requires PM signoff
 
-Zákazníci, kteří s Intune začínají, se s **některými změnami skupin zabezpečení setkají dříve než aktuální tenanti**.
+### Multi-factor authentication for Android and iOS enrollment
 
-Kromě změn ve správě skupin se také **přestanou používat následující funkce**:
-- Vyloučení členů nebo skupin při vytvoření nové skupiny
-- Skupiny **Neseskupení uživatelé** a **Neseskupená zařízení**
-- **Správa skupin** v roli Správce služby
-- Vlastní výstrahy na základě skupin pro pravidla oznámení
-- Přesun skupin v sestavách
-<!--- TFS 1295329--->
+In addition to Windows 8.1 and later, administrators can now enable multi-factor authentication for Android and iOS devices in the Microsoft Intune Enrollment application. -->    
 
-## Zastaralá služba
-### Aplikace Portál společnosti pro Windows 8 a Windows Phone 8 se od září 2016 přestávají používat
-Od října 2016 přestane Microsoft Intune poskytovat podporu aplikacím Portál společnosti pro Windows 8 a Windows Phone 8. Microsoft Intune také přestat poskytovat podporu pro platformu Windows Phone 8. V důsledku toho nebude možné registrovat ani aktualizovat žádná zařízení Windows Phone 8. Zařízení Windows Phone 8 a Windows 8, která jsou již zaregistrována, můžete nadále spravovat. Pokud budete chtít do zařízení s těmito systémy dál bez přerušení distribuovat aplikace, aktualizujte si zařízení Windows 8 a Windows Phone 8 na Windows 8.1 a Windows Phone 8.1 a začněte používat odpovídající aplikaci Portál společnosti pro Windows 8.1 a Windows Phone 8.1.
-<!---TFS 1255391--->
+### Aplikace Portál společnosti pro Windows 8 je zastaralá, podpora pro platformy Windows Phone 8 a Windows RT se přestává používat
+Od října 2016 přestane Microsoft Intune poskytovat podporu pro Portál společnosti pro Windows 8. Microsoft Intune také přestat poskytovat podporu pro platformy Windows Phone 8 a Windows RT. V důsledku toho nebude možné registrovat ani aktualizovat žádná zařízení s Windows Phone 8 nebo Windows RT.
 
-### Odebrání možnosti cílení pravidel oznámení na vlastní skupiny
-Pravidla oznámení Intune definují, komu se budou z Intune odesílat e-mailové výstrahy. V současnosti můžete nakonfigurovat pravidla oznámení pro odesílání e-mailů všem uživatelům zařízení nebo skupině zařízení služby Intune, kterou jste vytvořili. Od června 2016 se cílení na uživatelsky vytvořené skupiny už nebude podporovat.
+Zařízení s Windows Phone 8 a Windows 8, která jsou už zaregistrovaná, můžete nadále spravovat. Pokud budete chtít do zařízení s těmito systémy dál bez přerušení distribuovat aplikace, aktualizujte si zařízení Windows 8 a Windows Phone 8 na Windows 8.1 a Windows Phone 8.1 a začněte používat odpovídající aplikaci Portál společnosti pro Windows 8.1 a Windows Phone 8.1.
 
-Předběžná časová osa pro tuto změnu je následující:
-- V září 2016 se novým tenantům v Průvodci vytvořením pravidla oznámení nezobrazí krok 2. Stávající tenanty to neovlivní.
-- Zhruba v říjnu 2016 se některým tenantům v tomto průvodci nezobrazí možnost Vybrat skupiny zařízení.
-- Později očekáváme, že se možnost Vybrat skupiny zařízení v tomto průvodci nezobrazí žádným tenantům.
+Od listopadu 2016 přestaneme poskytovat podporu pro Portál společnosti pro Windows Phone 8.
+<!--TFS 1255391-->
 
-<!---   TFS 1278864--->
-### Změny v podpoře pro aplikaci Portál společnosti pro iOS
-Od září se začne vyžadovat, aby všichni uživatelé aplikace Portál společnosti Microsoft Intune pro iOS používali její nejnovější verzi. Noví uživatelé si budou moct stáhnout jenom nejnovější verzi a aktuální uživatelé si budou muset aplikaci aktualizovat. Nejnovější verze vyžaduje iOS 8.0 nebo novější, takže zařízení se starší verzí iOS nebudou moct Portál společnosti používat ani nebudou moct zařízení zaregistrovat, dokud si v něm neaktualizují operační systém na iOS 8.0 nebo novější a následně neaktualizují i aplikaci Portál společnosti na nejnovější verzi. Zaregistrovaná zařízení se systémem iOS starším 8.0 se budou spravovat i nadále a budou se zobrazovat v konzole správce Intune.
+### Podmíněný přístup pro správu mobilních aplikací
+Nově můžete vytvářet zásady podmíněného přístupu, které budou nespravovaným mobilním aplikacím blokovat přístup ke službám [Exchange Online](..deployuse/restrict-access-to-exchange-online-with-microsoft-intune.md) a [SharePoint Online](..deployuse/restrict-access-to-sharepoint-online-with-microsoft-intune.md). Pomocí Intune App SDK můžete blokovat integrované poštovní klienty a aplikace bez podpory MAM.  Pomocí webu Azure Portal vytvořte zásady podmíněného přístupu a zadejte aplikace, které mají mít přístup ke službám Exchange Online a SharePoint Online.
+<!--TFS 1317673-->
 
-<!---TFS 1283165--->
+<!--TFS 1318014; awaiting approval in notes as to whether to proceed
 
+### "Default" policy is deprecated
 
-### Aplikace Intune Viewer
-V souvislosti s vydáním nové aplikace Sdílení RMS odebíráme od srpna 2016 tyto aplikace Intune Viewer:
-- Intune AV Viewer
-- Intune PDF Viewer
-- Intune Image Viewer pro Android z Google Play
+To minimize unintentionally assigned profiles, Intune is removing support for the "default" Corporate Device Enrollment profile for Apple Device Enrollment Program (DEP) device serial numbers in the new Azure console. Serial numbers synchronized from an Apple DEP account will initially have no Corporate Device Enrollment profile assigned.  A profile must be assigned manually after synchronization. This change will apply to the new console only. Until the existing Admin console is retired, no change will take place.
+-->
 
-Místo použití aplikací Intune Viewer vám doporučujeme používat novou aplikaci Rights Management (sdílení RMS) pro Android, která pro bezpečné prohlížení firemních souborů na zařízeních s Androidem umožňuje nasadit jednu aplikaci (namísto tří samostatných aplikací). Přečtěte si víc o [aplikaci Sdílení RMS](https://docs.microsoft.com/en-us/intune/deploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune#viewing-media-files-with-the-rights-management-sharing-app).
-<!--- goes in 1608 What's New--->
+<!--TFS 1318023; awaiting approval in notes as to whether to proceed
 
+### Deprecation of row-by-row iOS Details review for iOS device CSV uploads
 
-### Viz taky
+In order to streamline uploading IMEI numbers for Corporate devices and Apple serial numbers for Configurator enrollment, Intune is removing the row by row review of hardware identifiers already found in the system. This review allows the IT Pro to accept associated Details from the CSV to overwrite the existing details for a hardware identifier already in the system. The review will be replaced by a single option to automatically overwrite Details for all hardware identifiers or ignore new details for existing identifiers. This change will apply to the new console only. Until the existing Admin console is retired, no change will take place.
+-->
+
+### Integrace služby Lookout pro ochranu zařízení s iOS
+V říjnu společnost Microsoft integruje řešení ochrany před mobilními hrozbami ve službě Lookout s cílem chránit pomocí zjišťování malwaru, riskantních aplikací a dalších problémů mobilní zařízení s iOS. Řešení Lookout vám pomůže určit úroveň ohrožení, která je konfigurovatelná. Ve službě Intune můžete vytvořit pravidlo zásad dodržování předpisů na základě vyhodnocování rizik aplikací Lookout. Pomocí zásad podmíněného přístupu můžete povolit nebo blokovat přístup k prostředkům společnosti na základě stavu dodržování předpisů pro zařízení.
+
+Koncoví uživatelé zařízení s iOS nesplňujících požadavky budou vyzvaní k registraci. Dále si budou muset před získáním přístupu k firemním datům nainstalovat na svoje zařízení aplikaci Lookout for Work, aktivovat ji a opravit hrozby nahlášené aplikací Lookout for Work.
+<!--TFS 1319493-->
+
+### Intune App SDK a nástroj App Wrapping pro Android
+Svým aplikacím můžete umožnit použití zásad správy mobilních aplikací (MAM) služby Intune buď prostřednictvím nástroje Intune App Wrapping, nebo pomocí sady Intune App SDK. Nové aktualizace nástroje App Wrapping a sady SDK budou zahrnovat:
+
+* Podporu pro Android N
+* Podporu pro zásady Intune MAM bez nutnosti registrace zařízení
+* Podporu pro aplikace pro Android využívající Xamarin
+
+MAM bez registrace zařízení a podporu Xamarinu ve veřejné verzi Preview nástroje Android App Wrapping si můžete otestovat tady: [https://github.com/msintuneappsdk/intune-app-wrapper-android-preview](https://github.com/msintuneappsdk/intune-app-wrapper-android-preview).
+<!--TFS 1319511; please create new TFS entry for WN text associated with this TFS item-->
+
+<!--TFS 1319613; no iX review on PM text blurb
+
+### Private preview customers using MAM Conditional Access will have their policies reset
+
+Due to changes in the policy structure for Conditional Access for Mobile App Management, any existing policies that were set by customers through the private preview will be removed. Customers will need to set new policies once the change is made. The timing will coincide with the October service update.
+-->
+
+### Související témata
 Podrobnosti o posledním vývoji najdete v tématu [Co je nového v Microsoft Intune](whats-new-in-microsoft-intune.md).
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: eb9b01ce-9b9b-4c2a-bf99-3879c0bdaba5
 ms.reviewer: lpatha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1fbe37aa081f850224ce4ee76f66e154c6001c9c
-ms.openlocfilehash: 480a7a60b484f28b621c4c135713a65953f46f41
+ms.sourcegitcommit: 625d0851446c9cf54e704a62c9afe79cac263665
+ms.openlocfilehash: 27ab4a2e2f3e0273f452ef9d34cf458c9f2544b6
 
 
 ---
@@ -24,7 +24,9 @@ Toto téma popisuje, jak vytvořit skupiny v Intune. Poskytuje také informace o
 
 >[!IMPORTANT]
 >
->Pokud se vám po otevření pracovního prostoru Skupiny na portálu Intune zobrazí odkaz na portál Azure Active Directory (Azure AD), znamená to, že už používáte *nový* přístup ke správě skupin v Intune – na základě skupin zabezpečení Azure AD. Ten podrobněji popisujeme v části [Oznámení o připravovaných vylepšeních správy skupin](#notice-of-upcoming-improvements-to-the-admin-experience-for-groups). Pokud chcete vytvářet a spravovat skupiny, klikněte na odkaz na portál Azure AD. 
+>Pokud se vám po otevření pracovního prostoru Skupiny na portálu Intune zobrazí odkaz na portál Azure Active Directory (Azure AD), znamená to, že už používáte *nový* přístup ke správě skupin v Intune – na základě skupin zabezpečení Azure AD. Ten podrobněji popisujeme v části [Oznámení o připravovaných vylepšeních správy skupin](#notice-of-upcoming-improvements-to-the-admin-experience-for-groups). Pokud chcete vytvářet a spravovat skupiny, klikněte na odkaz na portál Azure AD.
+>
+>![Snímek obrazovky s odkazem na správu skupin Azure](../media/groups-link-azure.png) 
 >
 >Pokud odkaz na portál Azure AD nevidíte, stále používáte *současný* přístup ke správě skupin popsaný v tomto tématu v části [Vytvoření skupin pro správu uživatelů a zařízení pomocí Microsoft Intune](#Create-groups-to-manage-users-and-devices-with-Microsoft-Intune).
 
@@ -202,6 +204,6 @@ U každé zásady je **Zamýšlená hodnota** a **Stav**. Zamýšlená hodnota j
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

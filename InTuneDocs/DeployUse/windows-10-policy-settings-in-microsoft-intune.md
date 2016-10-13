@@ -4,7 +4,7 @@ description: "Nastavení zásad, která jsou uvedena v tomto tématu, vám pomoh
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/31/2016
+ms.date: 10/03/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4ce69e8a22f1b25dac7060ff575bbd97934eff91
-ms.openlocfilehash: 712883874f022ceb3f38473839fe0d6e4c373164
+ms.sourcegitcommit: b8522406a3c73746b09616c3ec917464cf751312
+ms.openlocfilehash: 6e482beb5e2edce648ecb6f1821baa6214fa0f2f
 
 
 ---
@@ -53,7 +53,7 @@ Ke každému nastavení OMA-URI, které chcete přidat, zadejte následující i
 - **Hodnota** – Zadejte hodnotu, která má být k uvedenému OMA-URI přidružena.
 
 ### Příklad
-Na snímku obrazovky níže je povoleno nastavení **Conectivity/AllowVPNOverCellular**. To umožňuje zařízení s Windows 10 spustit připojení VPN přes mobilní síť.
+Na snímku obrazovky níže je nastavení **Connectivity/AllowVPNOverCellular** povolené. To umožňuje zařízení s Windows 10 spustit připojení VPN přes mobilní síť.
 
 > ![Příklad vlastní zásady s nastavením VPN](./media/custom-policy-example.png)
 
@@ -326,6 +326,6 @@ Všechna nastavení jsou jenom pro Windows 10 Desktop.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 
