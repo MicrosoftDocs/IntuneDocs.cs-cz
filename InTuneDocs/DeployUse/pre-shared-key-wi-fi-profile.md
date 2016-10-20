@@ -13,8 +13,8 @@ ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0ced62efd04803943cbbfd8cecef907409a03c0b
-ms.openlocfilehash: daecea644300ee1e47db9b028b72d71b3211f46d
+ms.sourcegitcommit: b7f11f752f6c38736a2dfa5875050f50bd86bae4
+ms.openlocfilehash: 14e43dadc0d7bc20238ec87447f311fdc864d891
 
 
 
@@ -64,9 +64,10 @@ Zde je příklad kódu XML pro profil Wi-Fi pro Android nebo Windows:
 
 > [!IMPORTANT]
 > 
-> `<protected>false</protected>`: Nastavte na **nepravda**, protože hodnota **pravda** by mohla způsobit, že zařízení by očekávalo šifrované heslo, následně by se ho pokoušelo dešifrovat a to by vedlo k selhání připojení.
+> `<protected>false</protected>`musí být nastaveno na **nepravda**, protože hodnota **pravda** by mohla způsobit, že zařízení by očekávalo šifrované heslo, následně by se ho pokoušelo dešifrovat a to by vedlo k selhání připojení.
 > 
 >  `<hex>53534944</hex>` má být nastaveno na šestnáctkovou hodnotu `<name><SSID of wifi profile></name>`.
+>  Zařízení s Windows 10 můžou vrátit falešnou chybu *0x87D1FDE8 Náprava se nezdařila*, nicméně ve skutečnosti budou v tomto profilu úspěšně zřízena.
 
     <!--
     <Name of wifi profile> = Name of profile

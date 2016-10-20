@@ -14,12 +14,12 @@
 ## [Help secure access from hotel kiosks](help-secure-access-from-hotel-kiosks.md)
 ## [Best practices for using Microsoft Intune](best-practices-for-using-intune.md)--->
 <!--- ## [What to tell your end users](what-to-tell-your-end-users-about-using-microsoft-intune.md)--->
-
+# [Novinky](/intune/whats-new/whats-new-in-microsoft-intune)
 # [Nasazení a používání](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
 # [Vývoj a přizpůsobení aplikací](/intune/develop/intune-app-sdk)
 # [Řešení problémů](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Sep16_HO5-->
 
 
