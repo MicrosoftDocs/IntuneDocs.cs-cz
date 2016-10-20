@@ -13,8 +13,8 @@ ms.assetid: 2b770f4f-6d36-41e4-b535-514b46e29aaa
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 727d28cff074124b5401f6c2931f87df3a9d2d23
-ms.openlocfilehash: 93c05ecd0154bb637f421dcc5d7ee56ff8d3ab2d
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: c4b1e5d3bb8b949096f7d15ddbbf0d1540485d0d
 
 
 ---
@@ -46,7 +46,7 @@ Aplikace založené na externích odkazech nejsou uložené v cloudovém úloži
 Spravované aplikace pro iOS můžete použít ke správě a nasazení bezplatných aplikací pro systém iOS z App Storu. Spravované aplikace pro iOS můžete použít taky k přidružení [zásad správy mobilních aplikací](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) k [aplikacím, které splňují předpisy](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx), a zkontrolovat jejich stav v konzole pro správu.<br /><br />Spravované aplikace pro iOS nejsou uložené v cloudovém úložišti Intune.
 
 > [!TIP]
-> Možnosti pro mobilní zařízení nejsou dostupné, dokud [nenastavíte autoritu pro MDM](get-ready-to-enroll-devices-in-microsoft-intune.md) na Intune.
+> Možnosti pro mobilní zařízení nejsou dostupné, dokud [nenastavíte autoritu pro MDM](prerequisites-for-enrollment.md) na Intune.
 
 ## Vydavatel softwaru Intune
 Když přidáváte nebo odebíráte aplikace pomocí konzoly pro správu Intune, spouští se Vydavatel softwaru Microsoft Intune. Od vydavatele vyberte a nakonfigurujte typ instalačního programu softwaru, který bude provádět jednu z následujících akcí:
@@ -82,6 +82,6 @@ Před nasazením aplikací je musíte přidat do konzoly Intune. Můžete přid�
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 
