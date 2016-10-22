@@ -4,7 +4,7 @@ description: "Intune můžete použít ke konfiguraci široké škály nastaven�
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/12/2016
+ms.date: 10/11/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: e5ab3b76-08af-4893-b294-fb6627fdc4c6
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 388426657c5fa96289f5e14a85e8c299e4b50037
-ms.openlocfilehash: ac19128499f078b4fe7d16713f18c78b248d38db
+ms.sourcegitcommit: e95db6d0ccbe350984f11ce08749b700c2f5ad01
+ms.openlocfilehash: 279b2fbcbdc7bace99d99eca5bc766972dcea3b8
 
 
 
@@ -40,6 +40,7 @@ Zásady zabezpečení mobilních zařízení můžete vytvořit a nasadit u nás
 
 > [!NOTE]
 > Některá nastavení se u některých zařízení nedají použít. Úplný seznam nastavení, která můžete nakonfigurovat, najdete v následujících tabulkách.
+> Od října 2016 přestane Microsoft Intune podporovat aplikace Portál společnosti pro Windows 8. Microsoft Intune také přestane podporovat platformy Windows Phone 8 a WinRT. V důsledku toho nebude možné registrovat ani aktualizovat žádná zařízení s Windows Phone 8 nebo WinRT. Zařízení s Windows Phone 8, WinRT a Windows 8, která jsou už zaregistrovaná, můžete nadále spravovat. Pokud budete chtít do zařízení s těmito systémy dál bez přerušení distribuovat aplikace, aktualizujte si zařízení Windows 8 a Windows Phone 8 na Windows 8.1 a Windows Phone 8.1 a začněte používat odpovídající aplikaci Portál společnosti pro Windows 8.1 a Windows Phone 8.1.
 
 ## Nastavení zabezpečení
 
@@ -212,6 +213,6 @@ Když nasadíte zásadu délky hesel na zařízení se systémem Windows RT, bud
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

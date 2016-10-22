@@ -14,8 +14,8 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 0460982186386378d5461861d9098ac3269e6fd0
+ms.sourcegitcommit: 7eefcefa5e1cd0f789c77bf020c256e449099273
+ms.openlocfilehash: 4a682db8e949fa087fdffe945a758554c1bfb164
 
 
 ---
@@ -23,7 +23,7 @@ ms.openlocfilehash: 0460982186386378d5461861d9098ac3269e6fd0
 
 # Registrace zařízení se systémem Mac OS X v Intune
 
-Po registraci zařízení s Mac OS X v Intune budete moct získat přístup k podnikové síti, pracovním e-mailům a souborům a také instalovat podnikové aplikace. Další informace o tom, co se stane, když zaregistrujete své zařízení, najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení do služby Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
+Když zařízení s Mac OS X zaregistrujete do Intune, budete mít přístup k firemní síti, pracovním e-mailům a pracovním souborům. Můžete také získat firemní aplikace. Další informace o tom, co se stane, když zaregistrujete své zařízení, najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení do služby Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 
 Pokud se snažíte zaregistrovat zařízení s iOS, přečtěte si téma [Registrace zařízení s iOS v Intune](enroll-your-device-in-intune-ios.md).
 
@@ -36,15 +36,15 @@ Postup registrace zařízení se systémem Mac OS X:
 
     ![device-not-enrolled](./media/1-macosx-enroll-tap-enroll.png)
 
-3.  Klepnutím na **Instalovat** zahajte registraci svého zařízení.
+3.  Klepnutím na **Nainstalovat** zahajte registraci zařízení.
 
     ![tap-install-to-enroll](./media/2-macosx-enroll--install-button.png)
 
-4.  V dialogovém okně **Instalovat profil správy** klepněte na **Instalovat**. Pokud se zobrazí dialogové okno s výzvou k zadání přihlašovacích údajů, zadejte svoje uživatelské jméno a heslo a potom klepněte na **Pokračovat** &gt; **Instalovat**.
+4.  V dialogovém okně **Nainstalovat profil správy** klepněte na **Nainstalovat**. Pokud vás dialogové okno požádá o zadání přihlašovacích údajů, zadejte svoje uživatelské jméno a heslo a pak klepněte na **Pokračovat** &gt; **Nainstalovat**.
 
     ![install-management-profile](./media/3-macosx-enroll-tap-install.png)
 
-    Po dokončení registrace se zobrazí stránka profilu správy s informací, že proběhlo ověření vašeho profilu.
+    Po dokončení registrace se na stránce **Profil správy** zobrazí, že váš profil byl ověřen.
 
     ![management-profile-verified](./media/4-macosx-enroll-done.png)
 
@@ -52,7 +52,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní 
 
 
 
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

@@ -14,22 +14,20 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: a497a3e9372a89326f31d6eb869e38200ebe6802
+ms.sourcegitcommit: 703878a70227716213f5a25b1b5dfa99fce42ee5
+ms.openlocfilehash: 43688a00d61785ddabdfef3c45bd30a533a85fe7
 
 
 ---
 
 
 # Chyba při vyhodnocování zařízení
-Vaše zařízení bylo shledané nekompatibilním s jednou nebo více zásad společnosti a při vyhodnocování zařízení pro tuto podmínku došlo k chybě.
+Bylo zjištěno, že vaše zařízení nevyhovuje některým firemním zásadám, ale tuto chybu momentálně nemůžeme zobrazit, protože systém měl problém s vyhodnocením vašeho zařízení.  
 
-Jestli chcete tento problém vyřešit, počkejte několik minut a potom klepněte na **Kontrola dodržování předpisů**.
-
-Pokud problém přetrvá, kontaktujte správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Jestli chcete tento problém vyřešit, počkejte několik minut a potom klepněte na **Kontrola dodržování předpisů**. Pokud problém přetrvá, kontaktujte správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

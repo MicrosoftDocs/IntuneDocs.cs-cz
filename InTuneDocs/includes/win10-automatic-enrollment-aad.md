@@ -21,7 +21,7 @@ Automatický zápis umožňuje registraci i uživatelům počítačů se systém
 
 5. Zadejte adresy URL pro Intune:
 
-  - **Adresa URL pro registraci MDM** – Použijte `https://enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc` pro adresu URL registrace MDM.
+  - **Adresa URL registrace do MDM** – Použijte výchozí hodnotu.
   - **Adresa URL pro podmínky použití MDM** – Použijte výchozí hodnotu. Tato adresa URL zobrazí podmínky použití pro uživatele při registraci zařízení.
   - **Adresa URL pro stav souladu s MDM** – Použijte výchozí hodnotu. Pokud zařízení nesplňuje požadavky, zobrazí se u dané adresy URL zpráva **Přístup byl odepřen**. Adresa URL odkazuje na stránku, která uživatelům vysvětlí, proč jejich zařízení není kompatibilní se zásadami a jak této kompatibility znovu dosáhnout.
 
@@ -34,6 +34,6 @@ Automatický zápis umožňuje registraci i uživatelům počítačů se systém
 7. Vyberte **Uložit**.
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

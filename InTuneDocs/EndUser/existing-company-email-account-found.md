@@ -14,14 +14,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: ce231116ad405d274546cee81dbdd0b0909b2d01
+ms.sourcegitcommit: 8eb98946c39b98d3c338b32a7d955818020ef478
+ms.openlocfilehash: f33287c51fb769505cd1fb4fcfe2bbc1e4da0ea2
 
 
 ---
 
 # Našel se existující e-mailový účet společnosti
-Už máte e-mailový účet společnosti. Pokud se chcete dále připojovat k e-mailu společnosti, musíte provést následující kroky, aby správce IT mohl příslušně nastavit a spravovat váš účet:
+Už máte e-mailový účet společnosti. Pokud chcete pokračovat v připojování k e-mailu společnosti, následujícím postupem umožněte správci IT správně nastavit a spravovat váš účet:
 
 1.  V nabídce **Nastavení** na vašem zařízení odeberte připojení, které jste dříve nastavili pro e-mail společnosti.
 
@@ -35,6 +35,6 @@ Pokud se po chvíli nezobrazí nové nastavení e-mailu, kontaktujte správce IT
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

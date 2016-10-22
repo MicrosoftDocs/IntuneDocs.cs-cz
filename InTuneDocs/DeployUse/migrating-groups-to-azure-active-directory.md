@@ -4,15 +4,15 @@ description: "Jak budou vaše skupiny migrovány z Intune do Azure AD"
 keywords: 
 author: nbigman
 manager: angerobe
-ms.date: 09/27/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 03b69afa-3548-4033-9039-191528f3fd99
 translationtype: Human Translation
-ms.sourcegitcommit: d7a1da3b9e1e6ce3e2034cc5e8e1926a671276b8
-ms.openlocfilehash: f7aa05f4a569392be60522437508fdb78f56c55c
+ms.sourcegitcommit: d92c9ffe42b36770a32c28941de3c402aec9dd68
+ms.openlocfilehash: 08bcc258f64e6385ae6fa648ddb8f2b5fe68942e
 
 
 ---
@@ -21,10 +21,8 @@ ms.openlocfilehash: f7aa05f4a569392be60522437508fdb78f56c55c
     
 Na základě vašich žádostí o jednotnou správu skupin a cílení v oblastech Enterprise Mobility a Security převádíme skupiny Intune na skupiny zabezpečení založené na Azure Active Directory. Tím se sjednotí správa skupin v rámci Intune a Azure Active Directory (Azure AD). Toto nové prostředí vás zbaví nutnosti mít v jednotlivých službách duplicitní skupiny a zajistí možnosti rozšíření prostřednictvím PowerShellu a Graphu. 
 
-V listopadu začnou být stávající zákazníci Intune migrováni na novou správu skupin založenou na Azure AD. Skupiny uživatelů a zařízení v Intune budou migrovány na skupiny zabezpečení služby Azure AD. S migrací nezačneme, dokud si nebudeme jistí, že dopad na každodenní provoz bude minimální a že změnu nepocítí koncoví uživatelé. Před zahájením migrace vašeho účtu vás upozorníme.
-
 ### Jak a kdy bude můj účet migrován do nového prostředí skupin?
-Aktuální zákazníci budou migrovány postupně v určitém časovém intervalu. Plán této migrace právě dokončujeme a během několika týdnů přineseme další informace. Na zahájení migrace budete s předstihem upozorněni. Pokud máte k migraci jakékoli otázky, obraťte se na náš tým migrace na adrese [intunegrps@microsoft.com](mailto:intunegrps@microsoft.com).
+Současní zákazníci budou nejdříve od prosince 2016 postupně migrováni. Před migrací vašich skupin dostanete upozornění. Pokud máte k migraci jakékoli otázky, obraťte se na náš tým migrace na adrese [intunegrps@microsoft.com](mailto:intunegrps@microsoft.com).
 
 ### Jaké nové funkce mi změna přinese?
 Tady je přehled nových funkcí: 
@@ -116,6 +114,6 @@ Až budou veškeré funkce Intune migrovány na portál správy služby Azure (z
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

@@ -1,6 +1,6 @@
 ---
-title: "Nastavení zásad dodržování předpisů pro zařízení s Androidem | Microsoft Intune"
-description: "Toto téma popisuje nastavení zásad dodržování předpisů pro zařízení s Androidem."
+title: "Nastavení zásad dodržování předpisů pro zařízení s Androidem for Work | Microsoft Intune"
+description: "Toto téma popisuje nastavení zásad dodržování předpisů pro zařízení s Androidem, která jsou kompatibilní s Androidem for Work."
 keywords: 
 author: karthikaraman
 manager: angrobe
@@ -10,22 +10,23 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: e721c5c7-9678-4f3b-81d4-564da5efd337
-ms.reviewer: chrisgre
+ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: af4c84d0e317f5903d22cdfead9ce0ab4fbddc8f
-ms.openlocfilehash: ed8f280de4582863f77e5b0e9cb5dfb2f20159c4
+ms.sourcegitcommit: 609d3ab2c96d9a3dff7a6bb6aa085f9cda83ba38
+ms.openlocfilehash: 845604fb97927abcc267884dbea6096a82eb170c
 
 
 ---
 
 
-# Nastavení zásad dodržování předpisů pro zařízení s Androidem v Microsoft Intune
+# Nastavení zásad dodržování předpisů pro zařízení s Androidem for Work v Microsoft Intune
 
-Nastavení zásad popsané v tomto tématu se týká zařízení se systémem Android 4.0 a novějším nebo Samsung KNOX 4.0 a novějším.
+Nastavení zásad popsaná v tomto tématu platí pro zařízení s Androidem for Work.
 
 Pokud hledáte informace o jiných platformách, vyberte jednu z těchto možností:
 > [!div class="op_single_selector"]
+- [Nastavení zásad dodržování předpisů pro Android](android-compliance-policy-settings-in-microsoft-intune.md)
 - [Nastavení zásad dodržování předpisů pro zařízení s iOS](ios-compliance-policy-settings-in-microsoft-intune.md)
 - [Nastavení zásad dodržování předpisů pro zařízení s Windows](windows-compliance-policy-settings-in-microsoft-intune.md)
 
@@ -53,19 +54,17 @@ Pokud hledáte informace o jiných platformách, vyberte jednu z těchto možnos
 
 - **Po návratu zařízení ze stavu nečinnosti vyžadovat heslo:** Toto nastavení by se mělo použít v kombinaci s nastavením **Počet minut nečinnosti před vyžádáním hesla**. Pro přístup k zařízení, které bylo nečinné po dobu uvedenou v nastavení **Počet minut nečinnosti před vyžádáním hesla**, se koncovým uživatelům zobrazí výzva k zadání hesla.
 
-### Šifrování
-- **Vyžadovat šifrování u mobilního zařízení:** Nastavte možnost **Ano**, pokud chcete, aby musela být zařízení vyžadující přístup k prostředkům šifrovaná. Zařízení se šifrují, pokud nakonfigurujete nastavení **Vyžadovat heslo k odemknutí mobilních zařízení**.
+### Encryption
+- **Vyžadovat šifrování u mobilního zařízení:** Toto nastavení nemusíte konfigurovat, protože u zařízení s Androidem for Work je šifrování vynucené.
 
 ## Stav zařízení a nastavení zabezpečení
 
 - **Zařízení nesmí mít jailbreak ani root:** Pokud povolíte toto nastavení, budou se zařízení s jailbreakem považovat za nevyhovující předpisům.
-- **Požadovat, aby zařízení bránila instalaci aplikací z neznámých zdrojů (Android 4.0 nebo novější):** Pokud chcete blokovat zařízení, která mají povolenou možnost **Zabezpečení > Neznámé zdroje**, toto nastavení povolte a nastavte ho na **Ano**.  
->[!IMPORTANT]
->Zkušební načtení aplikací vyžaduje, aby bylo nastavení **Neznámé zdroje** povolené.  Tuto zásadu dodržování předpisů byste měl vynucovat, jenom když na zařízeních neprovádíte zkušební načtení aplikací pro Android.
+- **Požadovat, aby zařízení bránila instalaci aplikací z neznámých zdrojů:** Toto nastavení nemusíte konfigurovat, protože v zařízeních s Androidem for Work je instalace z neznámých zdrojů trvale zakázaná. .  
 
-- **Požadovat, aby ladění USB bylo zakázané (Android 4.2 nebo novější):** Toto nastavení určuje, jestli se má zjišťovat, zda je na zařízení povolená možnost ladění USB.
-- **Požadovat, aby zařízení měla povolené nastavení Vyhledat v zařízení bezpečnostní hrozby (Android 4.2-4.4):** Toto nastavení určuje, že je v zařízení povolená funkce **Ověřovat aplikace**.
-- **Minimální úroveň oprav zabezpečení Androidu (Android 6.0 nebo novější):** Toto nastavení použijte k určení minimální úrovně oprav Androidu.  Zařízení, která nejsou alespoň na této úrovni oprav, budou kompatibilní. Datum musí být zadáno ve formátu RRRR-MM-DD.
+- **Požadovat, aby ladění USB bylo zakázané:** Toto nastavení nemusíte konfigurovat, protože ladění USB je na zařízeních s Androidem for Work už zakázané.
+
+- **Minimální úroveň oprav zabezpečení Androidu:** Toto nastavení použijte k určení minimální úrovně oprav Androidu.  Zařízení, která nejsou alespoň na této úrovni oprav, budou kompatibilní. Datum musí být zadáno ve formátu RRRR-MM-DD.
 - **Vyžadovat, aby byla povolena Ochrana zařízení před internetovými útoky**: Toto nastavení použijte, pokud chcete jako podmínku dodržování předpisů použít vyhodnocování rizika z řešení Lookout MTP. Vyberte jednu z následujících úrovní hrozeb jako maximální povolenou:
 
   - **Žádná (zabezpečeno):** Toto je nejbezpečnější úroveň. Znamená, že zařízení nesmí obsahovat žádné hrozby. Pokud se v zařízení zjistí libovolná úroveň hrozeb, bude vyhodnoceno jako nedodržující předpisy.

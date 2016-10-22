@@ -4,7 +4,7 @@ description: "Profily sítě Wi-Fi uživatelům usnadní připojení k vašim s�
 keywords: 
 author: Nbigman
 manager: angrobe
-ms.date: 09/01/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 0b1b86ed-2e80-474d-8437-17dd4bc07b55
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 310a1160d105a80623742ce4e2dc046c670bc167
-ms.openlocfilehash: d597cd13bd2254a9303769e2f5d5519c739f0aaf
+ms.sourcegitcommit: 27ba29f57bba1f3807c4b593ecac8c0af0851962
+ms.openlocfilehash: 7b49b7d9b6054f7d153359c1ee1b6cf5875fba32
 
 
 ---
@@ -29,7 +29,7 @@ Nainstalujete třeba novou síť Wi-Fi s názvem **Contoso Wi-Fi** a chcete nast
 
 1.   Vytvoříte profil Wi-Fi obsahující nastavení požadovaná pro připojení k bezdrátové síti **Contoso Wi-Fi**.
 
-2. Nasadíte profil do skupiny uživatelů se zařízeními iOS.
+2.   Nasadíte profil do skupiny uživatelů se zařízeními iOS.
 
 3.   Uživatelé najdou novou síť **Contoso Wi-Fi** v seznamu bezdrátových sítí a můžou se k ní snadno připojit.
 
@@ -40,7 +40,9 @@ Profily Wi-Fi můžete nasadit na následujících platformách:
 
 -   Android 4.0 nebo novější
 
--   iOS 7.1 nebo novější
+-   Android for Work   
+
+-   iOS 8.0 a novější
 
 -   Mac OS X 10.9 a novější
 
@@ -52,10 +54,13 @@ U zařízení, na kterých běží Windows 8.1. nebo Windows 10 Desktop či Mobi
 
     -   Profil Wi-Fi (Android 4 a novější)
 
-    -   Profil Wi-Fi (iOS 7.1 a novější)
+    -   Profil Wi-Fi (Android for Work)
+
+    -   Profil Wi-Fi (iOS 8.0 a novější)
 
     -   Profil Wi-Fi (Mac OS X 10.9 a novější)
-
+    
+    
     Pro tento typ zásad nejsou žádná doporučená nastavení. Je potřeba vytvořit vlastní zásadu.
 
 3.  Zadejte název a popis profilu.
@@ -173,6 +178,6 @@ Postup vytvoření profilu Wi-Fi s předsdíleným klíčem najdete v tématu v�
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Oct16_HO2-->
 
 

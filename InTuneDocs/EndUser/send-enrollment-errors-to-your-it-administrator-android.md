@@ -1,6 +1,6 @@
 ---
-title: "Odeslání chyb registrace správci IT | Microsoft Intune"
-description: 
+title: "Odeslání chyb při registraci správci IT | Microsoft Intune"
+description: "Odeslání chyb při registraci správci"
 keywords: 
 author: staciebarker
 manager: angrobe
@@ -14,27 +14,26 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7549b5af84e5a1712c2e1649b1afe03718d53dcc
-ms.openlocfilehash: 081764e59649cbc486ad3a757ad4bf9c65c91112
+ms.sourcegitcommit: c10f9548c00972a018e742601586f6e03e1a05cc
+ms.openlocfilehash: 93f4d2c93f17146a704031dae0d35cfde077b384
 
 
 ---
 
 
-# Odeslání chyb registrace zařízení správci IT
+# Odeslání chyb při registraci správci IT
 
-Pokud při pokusu o registraci zařízení s Androidem do služby Intune dojde k chybě, můžete to zkusit znovu klepnutím na **Opakovat** nebo poslat informace o chybě e-mailem správci IT klepnutím na **Odeslat informace**.
+Pokud se při registraci zařízení s Androidem do Intune zobrazí chyba, můžete registraci zkusit znovu klepnutím na **Opakovat**. Klepnutím na **Odeslat informace** můžete informace o této chybě také odeslat správci IT.
 
-Automaticky se vytvoří e-mail adresovaný vašemu správci IT a obsahující protokoly, které správce IT potřebuje k tomu, aby vám mohl pomoct řešit problémy s vaším zařízením.
+Při klepnutí na **Odeslat informace** se automaticky vytvoří e-mail adresovaný správci IT a obsahující protokoly, které správce IT potřebuje k vyřešení problémů s vaším zařízením.
 
-Existují různé způsoby odeslání datových protokolů zařízení správci IT za účelem vyřešení chyb:
+Datové protokoly zařízení můžete správci IT odeslat kvůli vyřešení problémů několika způsoby:
 
 - [Použití kabelu USB k odeslání protokolů](send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android.md)
 - [Použití e-mailu k odeslání protokolů](send-diagnostic-data-logs-to-your-it-administrator-using-email-android.md)
 
 
 
-
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO2-->
 
 

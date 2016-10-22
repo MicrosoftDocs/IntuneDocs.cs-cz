@@ -4,7 +4,7 @@ description: "Vytvářejte a spravujte skupiny pomocí pracovního prostoru Skup
 keywords: 
 author: Nbigman
 manager: angrobe
-ms.date: 09/27/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: eb9b01ce-9b9b-4c2a-bf99-3879c0bdaba5
 ms.reviewer: lpatha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 625d0851446c9cf54e704a62c9afe79cac263665
-ms.openlocfilehash: 27ab4a2e2f3e0273f452ef9d34cf458c9f2544b6
+ms.sourcegitcommit: d92c9ffe42b36770a32c28941de3c402aec9dd68
+ms.openlocfilehash: 896e8cf77c0898fca7838b24386db745b01f4022
 
 
 ---
@@ -36,11 +36,11 @@ Toto téma popisuje, jak vytvořit skupiny v Intune. Poskytuje také informace o
 Sdělili jste nám, že chcete jednotnou správu skupin a cílení pro Enterprise Mobility a Security. Vyslyšeli jsme vás. Na základě vaší zpětné vazby začneme brzy převádět skupiny Intune na skupiny zabezpečení založené na Azure Active Directory. Tato změna sjednotí správu skupin v rámci Intune a Azure Active Directory (Azure AD). S novým prostředím už nebudete muset pro jednotlivé služby vytvářet duplicitní skupiny. A možnost použít Windows PowerShell a Microsoft Graph navíc zvýší rozšiřitelnost.
 
 ### Co to pro mne teď znamená?
-V tuto chvíli vás tato změna neovlivní. Ale připravujeme následující:
+Pokud už jste zákazníkem Intune, tato změna vás teď nijak neovlivní. Ale připravujeme následující:
 
--   V září 2016 budou nové účty, zřízené po vydání měsíční aktualizace služby, používat skupiny zabezpečení služby Azure AD místo skupin uživatelů Intune.   
--   V říjnu 2016 budou nové účty, zřízené po vydání měsíční aktualizace služby, spravovat jak skupiny uživatelů, tak i skupiny zařízení, na portálu Azure AD. Na stávající zákazníky to zatím nebude mít žádný dopad.
--   V listopadu 2016 začne produktový tým Intune s migrací stávajících zákazníků na novou správu skupin na základě skupin Azure AD. Všechny současné skupiny uživatelů a zařízení, které v Intune jsou, budou migrovány na skupiny zabezpečení Azure AD. Migraci budeme provádět v dávkách, začneme s tím v listopadu 2016. Migraci zahájíme až ve chvíli, kdy co nejvíce minimalizujeme veškerý dopad, který by mohla mít na vaši každodenní práci. Očekáváme, že na vaše uživatele nebude mít dopad žádný. Před zahájením migrace vašeho účtu vám navíc pošleme upozornění.
+-   Nové účty budou místo skupin *uživatelů* Intune používat skupiny zabezpečení Azure AD.   
+-   V listopadu 2016 budou nové účty, zřízené po vydání měsíční aktualizace služby, spravovat na portálu Azure AD jak skupiny založené na uživatelích, tak skupiny založené na zařízeních. Na stávající zákazníky to zatím nebude mít žádný dopad.
+-   V prosinci 2016 začne produktový tým Intune s migrací stávajících zákazníků na novou správu na základě skupin Azure AD. Všechny současné skupiny uživatelů a zařízení, které v Intune jsou, budou migrovány na skupiny zabezpečení Azure AD. Migraci zahájíme až ve chvíli, kdy co nejvíce minimalizujeme veškerý dopad, který by mohla mít na vaši každodenní práci. Očekáváme, že na vaše uživatele nebude mít dopad žádný. Před zahájením migrace vašeho účtu vám navíc pošleme upozornění.
 
 
 ### Jak a kdy bude můj účet migrován do nového prostředí skupin?
@@ -204,6 +204,6 @@ U každé zásady je **Zamýšlená hodnota** a **Stav**. Zamýšlená hodnota j
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO2-->
 
 

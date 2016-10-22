@@ -4,7 +4,7 @@ description: "K nasazení nastavení VPN pro uživatele a zařízení ve vaší 
 keywords: 
 author: Nbigman
 manager: angrobe
-ms.date: 09/06/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,20 +13,22 @@ ms.assetid: abc57093-7351-408f-9f41-a30877f96f73
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 957edcf6910dd15f15ab5020773233c6a6ba0ea7
-ms.openlocfilehash: fb5fbbe50295d3fc26f3cd4def4f40898bb6ffd2
+ms.sourcegitcommit: 27ba29f57bba1f3807c4b593ecac8c0af0851962
+ms.openlocfilehash: 026e7c918f8b2457dd1afb9a5134ad3bd6f65cd5
 
 
 ---
 
 # Připojení VPN v Microsoft Intune
- Virtuální privátní sítě (VPN) umožňují, abyste uživatelům poskytli zabezpečený vzdálený přístup k podnikové síti. Vzdálení uživatelé můžou pracovat, jako kdyby jejich zařízení byla fyzicky připojená k síti. Zařízení používají profil připojení VPN k navázání připojení se serverem VPN. K nasazení nastavení VPN pro uživatele a zařízení v organizaci použijte *profily VPN* v Microsoft Intune. Nasazením těchto nastavení zjednodušíte koncovým uživatelům připojování k prostředkům v síti společnosti.
+
+Virtuální privátní sítě (VPN) umožňují uživatelům zabezpečený vzdálený přístup k firemní síti. K navázání připojení se serverem VPN používají zařízení *profil připojení VPN*. Pomocí *profilů VPN* v Microsoft Intune můžete uživatelům a zařízením v organizaci nasadit nastavení VPN, aby se mohli snadno a bezpečně připojit k síti. 
 
 Chcete třeba zřizovat všechna zařízení s iOS s nastavením požadovaným pro připojení sdílené položky souboru v podnikové síti. Vytvoříte profil VPN s nastavením nezbytným pro připojování k podnikové síti, a potom tento profil nasadíte u všech uživatelů se zařízeními iOS. Uživatelé uvidí připojení VPN v seznamu dostupných sítí a můžou se připojit s minimálním úsilím.
 
 Pomocí profilů VPN můžete konfigurovat následující typy zařízení:
 
 * Zařízení se systémem Android 4 nebo novější verzí
+* Zařízení se systémem Android for Work
 * Zařízení se systémem iOS 8.0 nebo novější verzí
 * Zařízení se systémem Mac OS X 10.9 nebo novější verzí
 * Zaregistrovaná zařízení se systémem Windows 8.1 a novějším
@@ -70,9 +72,7 @@ Profily VPN můžou používat spoustu různých typů připojení a protokoly o
 
 ### Certifikáty
 
-Když vytváříte profil VPN, vybíráte profil certifikátu SCEP nebo PFX, který jste předtím vytvořili v Intune.
-
-Označuje se jako certifikát identity. Slouží k ověřování na základě důvěryhodného profilu certifikátu (neboli kořenového certifikátu), který jste vytvořili pro zajištění, že má zařízení uživatele dovoleno připojovat se. Důvěryhodný certifikát je nasazený na počítači, který ověřuje připojení VPN, většinou na serveru VPN.
+Když vytváříte profil VPN, vybíráte profil certifikátu SCEP nebo PFX, který jste předtím vytvořili v Intune. Označuje se jako certifikát identity. Slouží k ověřování vůči profilu důvěryhodného certifikátu (neboli *kořenového certifikátu*), jehož vytvořením jste potvrdili, že se zařízení uživatele může připojit. Důvěryhodný certifikát je nasazený na počítači, který ověřuje připojení VPN, většinou na serveru VPN.
 
 Další informace o vytváření a používání profilů certifikátů v Intune najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů](secure-resource-access-with-certificate-profiles.md).
 
@@ -85,6 +85,7 @@ Uživatel se ověřuje na serveru sítě VPN zadáním uživatelského jména a 
 1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Zásady** > **Přidat zásadu**.
 2. Vyberte šablonu pro nové zásady rozšířením příslušného typu zařízení a potom vyberte profil sítě VPN pro toto zařízení:
     * **Profil VPN (Android 4 a novější)**
+    * **Profil VPN (Android for Work)**
     * **Profil VPN (iOS 8.0 a novější)**
     * **Profil sítě VPN (Mac OS X 10.9 a novější)**
     * **Profil VPN (Windows Phone 8.1 a novější)**
@@ -92,6 +93,9 @@ Uživatel se ověřuje na serveru sítě VPN zadáním uživatelského jména a 
     * **Profil VPN (Windows 10 Desktop a Mobile a novější)**
 
  Můžete vytvořit a nasadit jenom vlastní zásadu profilu VPN. Doporučená nastavení nejsou dostupná.
+
+> [!Note]
+> Profil VPN pro zařízení s Androidem for Work umožní připojení VPN jenom aplikacím, které jsou nainstalované v pracovním profilu zařízení.
 
 3. S konfigurací nastavení profilu VPN vám pomůže následující tabulka:
 
@@ -192,6 +196,6 @@ Shrnutí stavu a výstrahy na stránce **Přehled** v pracovním prostoru **Zás
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Oct16_HO2-->
 
 

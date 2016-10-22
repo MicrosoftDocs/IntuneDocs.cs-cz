@@ -3,7 +3,7 @@ title: "Nasazení aplikace Lookout for Work | Microsoft Intune"
 description: "Konfigurace a nasazení aplikace Lookout for Work pro Android."
 author: karthikaraman
 manager: angrobe
-ms.date: 09/13/2016
+ms.date: 10/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: 
@@ -12,39 +12,71 @@ ms.assetid: 524c4209-ad57-4d35-955e-a00d796bf858
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ceaeba74f8671caf4125252fce02fd06752c3fe8
-ms.openlocfilehash: 46a6b836e344c9cf876d633f868753a49c0cd440
+ms.sourcegitcommit: 99005e15268a60cd801ef1c717088dff2f82927b
+ms.openlocfilehash: 8dce0689d5c4a0672b227eedf3ae738217eb17cf
 
 
 ---
 
 # Konfigurace a nasazení aplikací Lookout for Work
-V tomto článku se dozvíte, jak nakonfigurovat a nasadit aplikaci Lookout for Work do registrovaných zařízení se systémem Android 4.1 nebo novějším.
+Tento článek vysvětluje, jak nakonfigurovat a nasadit aplikaci Lookout for Work u zařízení s Androidem a iOS.
 
-* **Krok 1:** V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) přejděte do části **Aplikace** a vyberte možnost **Přidat aplikace**.   
-* **Krok 2:** U vydavatele na stránce **Instalace softwaru** zvolte **Externí odkaz** a zadejte následující adresu URL: https://play.google.com/store/apps/details?id=com.lookout.enterprise
+## Android (aplikace v obchodě Google Play)
+
+* **Krok 1:** Nahrajte aplikaci Lookout for Work pro Android do [konzoly pro správce Microsoft Intune](https://manage.microsoft.com) podle popisu v tématu [Přidání aplikací pro mobilní zařízení v Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune).
 >[!NOTE]
->Nezaškrtávejte políčko, aby byl požadován spravovaný prohlížeč.
+> Nezaškrtávejte políčko, aby byl požadován spravovaný prohlížeč.
 
-* **Krok 3:** Na stránce **Popis softwaru** zadejte následující informace:
-  * **Vydavatel:** Lookout Mobile Security
-  * **Název:** Lookout for Work
-  * **Popis:** Aplikace Lookout nabízí nejlepší ochranu před mobilními hrozbami a udržuje vaše zařízení v bezpečí. Aplikace Lookout po instalaci chrání zařízení před hrozbami a v případě, že nějaké nalezne, upozorní na to vás i správce společnosti.
-  * **Kategorie:** Správa počítačů
-* **Krok 4:** Po úspěšném dokončení se zobrazí zpráva **Nahrávání dat do Microsoft Intune bylo úspěšně dokončeno**.
+![Snímek obrazovky se stránkou aplikací v konzole pro správce Intune zobrazující v seznamu aplikaci Lookout for Work](../media/mtp/lookout-app-listed-intune-console.png)
 
-Když v konzole správce Intune kliknete na položku **Aplikace**, v seznamu uvidíte aplikaci Lookout for Work ![snímek stránky aplikací v konzole správce Intune zobrazující aplikace Lookout for Work v seznamu](../media/mtp/lookout-app-listed-intune-console.png)
+* **Krok 2:** Nasaďte aplikaci uživatelům. Vyberte aplikaci Lookout for Work na obrazovce výše a pak vyberte **Spravovat nasazení**.
 
-**Pokud chcete aplikaci nasadit uživatelům**, vyberete aplikaci Lookout for Work na obrazovce výše a potom zvolte **Spravovat nasazení**.
-
-Musíte vybrat stejné uživatele, které jste přidali v konzole Lookout v možnosti Správa registrací.  Další informace o přidávání skupin uživatelů do konzole Lookout MTP najdete v kroku 3 části [Konfigurace předplatného pro ochranu zařízení před internetovými útoky ve službě Lookout](set-up-your-subscription-with-lookout-mtp#configure-your-subscription-with-lookout-mtp).
+  Musíte vybrat stejné uživatele, které jste přidali v konzole Lookout v možnosti Správa registrací.  Další informace o přidávání skupin uživatelů do konzole Lookout MTP najdete v kroku 3 části [Konfigurace předplatného pro ochranu zařízení před internetovými útoky ve službě Lookout](set-up-your-subscription-with-lookout-mtp#configure-your-subscription-with-lookout-mtp).
 >[!IMPORTANT]
 > Průvodce nasazením aplikací služby Intune nezná skupiny uživatelů Azure AD a používá místo toho skupiny uživatelů Intune. Proto je nutné vytvořit novou skupinu uživatelů Intune, která bude založená na skupině uživatelů Azure AD registrované v konzole Lookout, jak je popsáno v [tomto tématu](plan-your-user-and-device-groups.md).
 
 Zvolte možnost **Požadovaná instalace**, aby byla instalace aplikace Lookout v zařízení uživatele povinná.
 
 
-Když je pro vaše nasazení zvolena možnost **Požadovaná instalace**, Intune odešle aplikaci Lookout for Work do zařízení.   
+## iOS (verze aplikace Lookout podepsaná podnikem)
+
+* **Krok 1:** Ověřte, že je na vašem zařízení povolená **Správa iOS**. Pokyny, jak na zařízení povolit správu iOS, najdete v článku [Nastavení správy zařízení s iOS a Mac](Set up iOS and Mac device management.md).
+
+* **Krok 2:** **Znovu podepište** aplikaci Lookout for Work pro iOS. Lookout distribuuje svou aplikaci Lookout for Work pro iOS mimo obchod App Store. **Před distribucí této aplikace** ji musíte znovu podepsat pomocí certifikátu podnikového vývojáře pro iOS. Podrobné pokyny k opětovnému podepsání aplikace Lookout for Work pro iOS najdete v článku [Lookout for Work iOS app re-signing process](https://personal.support.lookout.com/hc/en-us/articles/114094038714) (Postup opětovného podepsání aplikace Lookout for Work pro iOS) na webu Lookout.
+
+
+* **Krok 3:** Následujícím postupem povolte ověřování uživatelů iOS službou Azure Active Directory:
+  1.  Přihlaste se na [portál pro správu služby Azure Active Directory](https://manage.windowsazure.com) a přejděte na stránku s aplikacemi.
+  2.  Přidejte **aplikaci Lookout for Work pro iOS** jako **nativní klientskou aplikaci**.
+  ![Snímek obrazovky s dialogem pro přidání aplikace zobrazující možnost nativní klientské aplikace](../media/mtp/aad-add-app.png)
+  
+  3. Text **com.lookout.enterprise.názevfirmy** nahraďte identifikátorem zákaznického balíčku, který jste vybrali při podepisování IPA.
+  4.  Přidejte další identifikátor URI pro přesměrování: **&lt;companyportal://code/>** následovaný původním identifikátorem URI pro přesměrování ve verzi URLencoded.
+  5.  Přidejte k aplikaci **Delegovaná oprávnění**.
+
+  Další podrobnosti najdete v článku [Konfigurace nativní klientské aplikace](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application).
+
+
+* **Krok 4:** Nahrajte opětovně podepsaný soubor .ipa podle popisu v tématu [Přidání aplikace pro mobilní zařízení v Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune). Jako minimální verzi operačního systému nastavte iOS 8.0 nebo novější.
+
+  ![Snímek obrazovky stránky s aplikacemi v konzole pro správce Intune s aplikací Lookout for Work zobrazenou v seznamu aplikací](../media/mtp/ios-app-uploaded-intune.png)
+
+* **Krok 5:** Vytvořte zásady konfigurace spravovaných aplikací podle popisu v tématu [Konfigurace aplikací pro iOS pomocí zásad konfigurace mobilních aplikací v Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune).
+
+  ![Snímek obrazovky s průvodcem vytvořením nové zásady a zvýrazněnou zásadou konfigurace aplikace pro iOS 8.0 nebo novější](../media/mtp/ios-app-config.png)
+
+* **Krok 6:** **Aplikaci nasadíte uživatelům** tak, že vyberete aplikaci Lookout for Work a zvolíte **Spravovat nasazení**.
+
+  Musíte vybrat stejné uživatele, které jste přidali v konzole Lookout v možnosti Správa registrací.  Další informace o přidávání skupin uživatelů do konzole Lookout MTP najdete v kroku 3 části [Konfigurace předplatného pro ochranu zařízení před internetovými útoky ve službě Lookout](set-up-your-subscription-with-lookout-mtp#configure-your-subscription-with-lookout-mtp).
+>[!IMPORTANT]
+> Průvodce nasazením aplikací služby Intune nezná skupiny uživatelů Azure AD a používá místo toho skupiny uživatelů Intune. Proto je nutné vytvořit novou skupinu uživatelů Intune, která bude založená na skupině uživatelů Azure AD registrované v konzole Lookout, jak je popsáno v [tomto tématu](plan-your-user-and-device-groups.md).
+
+Zvolte možnost **Požadovaná instalace**, aby byla instalace aplikace Lookout v zařízení uživatele povinná.
+
+## Co se stane, když se nasazená aplikace otevře v zařízení
+
+
+
 
 Když uživatel v zařízení otevře aplikaci Lookout for Work, bude vyzván, aby aplikaci aktivoval a zvolil možnost Přihlásit pomocí Azure Active Directory. Podrobný návod s postupem pro koncového uživatele najdete v následujících tématech:
 
@@ -57,6 +89,6 @@ Když uživatel v zařízení otevře aplikaci Lookout for Work, bude vyzván, a
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

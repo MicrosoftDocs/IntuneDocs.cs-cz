@@ -4,7 +4,7 @@ description: "Toto téma popisuje nastavení zásad správy mobilních aplikací
 keywords: 
 author: karthikaraman
 manager: angrobe
-ms.date: 07/13/2016
+ms.date: 09/30/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 673ff872-943c-4076-931c-0be90363aea9
 ms.reviewer: andcerat
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: ba258bfb3140ffc79aa38ef2f46497346cdc6bfa
+ms.sourcegitcommit: 3f6e500ef942e0f0e89ffd9ddb4889384f296e16
+ms.openlocfilehash: 36d21aee42c8a4812b1ed9623be2da3e65442bff
 
 
 ---
@@ -84,6 +84,11 @@ Výrazem **aplikace spravované podle zásad** se označují aplikace, které ma
   Když k odebrání firemních dat použijete selektivní vymazání, dojde k odebrání kontaktů přímo synchronizovaných z aplikace do nativního adresáře. Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. To se v současné době týká jenom aplikace **Microsoft Outlook**.
 
   **Výchozí hodnota = Ano**
+  
+- **Zakázat tisk:** Zvolením možnosti **Ano** zakážete tisk firemních dat z aplikací, které jsou přidružené k zásadám MAM.
+
+    **Výchozí hodnota = Ano**
+
 ##  Nastavení zásad přístupu pro iOS
 Výrazem **aplikace spravované podle zásad** se označují aplikace, které mají nakonfigurované zásady MAM.
 - **Vyžadovat pro přístup kód PIN**: Pokud chcete k použití aplikací spravovaných podle zásad vyžadovat kód PIN, vyberte **Ano**. Uživatel se vyzve k jeho nastavení při prvním spuštění aplikace v pracovním kontextu.
@@ -114,6 +119,6 @@ V zařízeních s iOS můžete uživatelům povolit, aby se místo číselného 
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

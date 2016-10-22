@@ -13,8 +13,8 @@ ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 381216889519b45f989db90ac5e12b8e3adcadf1
-ms.openlocfilehash: 378a6b290ccb83de28e73b17d8f02f77504dafd5
+ms.sourcegitcommit: 77c8df8f1886786a2e772429d93b034798b22a66
+ms.openlocfilehash: 8c500a5bfd59f801d1177a681fa9d55d1aa1ee0e
 
 
 ---
@@ -29,6 +29,10 @@ Pokud chcete zaměstnancům povolit registraci mobilních zařízení s Intune, 
 |**Krok 3:** [Nakonfigurování Portálu společnosti Intune](#step-3-configure-the-intune-company-portal)|Nakonfigurování uživatelského nastavení pro aplikaci Portál společnosti|  
 |**Krok 4:** [Přiřazení uživatelských licencí pro Intune](#step-4-assign-intune-user-licenses)|Přiřazení licencí Intune uživatelům, aby mohli zaregistrovat zařízení|
 |**Krok 5:** [Nastavení správy zařízení](#step-5-set-up-device-management)|Povolte nastavení správy systému iOS a Windows, specifické pro platformu. U zařízení Android není žádná další konfigurace zapotřebí.|
+
+Hledáte Intune s Configuration Managerem?
+> [!div class="button"]
+[Zobrazit dokumentaci SCCM >](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm)
 
 ## Krok 1: Závislosti registrace zařízení
 
@@ -130,6 +134,6 @@ Rovněž můžete:
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

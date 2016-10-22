@@ -13,8 +13,8 @@ ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: db1d43dd647122e7ba8ebd4e6df48e3c970a3392
-ms.openlocfilehash: e840783f3c50155a6f4f8801047ed474074218f6
+ms.sourcegitcommit: af4c84d0e317f5903d22cdfead9ce0ab4fbddc8f
+ms.openlocfilehash: 602be42b75c091cb43359f30256d51eabe597008
 
 
 ---
@@ -64,7 +64,7 @@ Následující diagram znázorňuje tok používaný v rámci zásad podmíněn�
 ## Podpora mobilních zařízení
 Můžete omezit přístup k e-mailům na Exchangi Online z **Outlooku** a dalších **aplikací, které využívají moderní ověřování**:-
 
-- Android 4.0 nebo novější, Samsung Knox Standard 4.0 nebo novější
+- Android 4.0 a novější, Samsung Knox Standard 4.0 a novější a Android for Work
 - iOS 8.0 a novější
 - Windows Phone 8.1 nebo novější
 
@@ -225,6 +225,9 @@ Vyhodnocují se jenom skupiny, které jsou cílem zásad podmíněného přístu
 
 5.  V části **Aplikace Exchange ActiveSync** se můžete rozhodnout blokovat zařízením, která nesplňují zásady dodržování předpisů, přístup na Exchange Online. Můžete také zvolit, jestli chcete povolit nebo blokovat přístup k e-mailu, pokud zařízení neběží na podporované platformě. Podporovány jsou mimo jiné následující platformy: Android, iOS, Windows a Windows Phone.
 
+ Zařízení s **Androidem for Work** s aplikacemi Exchange Active Sync:
+ -  Na zařízeních s Androidem for Work se v **pracovním profilu** podporují jenom aplikace **Gmail** a **Nine Work**. Aby na zařízeních s Androidem for Work fungoval podmíněný přístup, musíte nasadit e-mailový profil pro aplikaci Gmail nebo Nine Work a zároveň ji nasadit jako **požadovanou** instalaci. 
+
 6.  V části **Cílové skupiny**vyberte skupiny zabezpečení Active Directory uživatelů, na které se zásady vztahují. Můžete cílit na všechny uživatele nebo vybraný seznam skupin uživatelů.
 ![Snímek obrazovky stránky zásad podmíněného přístupu Exchange Online zobrazující možnosti pro cílové a vyloučené skupiny](../media/IntuneSA5eTargetedExemptedGroups.PNG)
     > [!NOTE]
@@ -263,6 +266,6 @@ Na řídicím panelu [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] zvol
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 

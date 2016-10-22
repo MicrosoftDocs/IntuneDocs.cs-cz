@@ -14,22 +14,20 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 63c14e31f9a97d263c59aa6e08883e7f1f205444
+ms.sourcegitcommit: 1e00d2d1e8e46b512eb70c2c594712b9505541ec
+ms.openlocfilehash: 01fce3200a5aa481dde6cd560cbad426592ef381
 
 
 ---
 
 
 # Vypnutí shromažďování dat Microsoftu o využití
-Microsoft automaticky shromažďuje anonymní informace o spolehlivosti, výkonu a použití aplikace Portál společnosti za účelem zlepšení svých produktů a služeb. Shromažďování těchto dat na zařízení s Androidem můžete vypnout pomocí nastavení **Údaje o používání** v aplikaci Portál společnosti. Správci IT nemají nad shromažďováním údajů žádnou kontrolu a nemůžou u tohoto nastavení změnit vaši volbu.
+Microsoft automaticky shromažďuje anonymní data o spolehlivosti, výkonu a způsobu použití aplikace Portál společnosti za účelem vylepšení svých produktů a služeb. Shromažďování těchto dat na zařízení s Androidem můžete vypnout pomocí nastavení **Údaje o používání** v aplikaci Portál společnosti. Správci IT nemají nad shromažďováním údajů žádnou kontrolu a nemůžou u tohoto nastavení změnit vaši volbu.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

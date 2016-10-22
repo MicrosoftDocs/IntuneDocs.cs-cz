@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 57e3175af6364e7dacbf8941f10292fc9dc58b15
+ms.sourcegitcommit: 08f31db90f324ef5f93076c4e13bfa5328a15adc
+ms.openlocfilehash: 381364e42430842032ced3b5c8c9cc8de19e8186
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: 57e3175af6364e7dacbf8941f10292fc9dc58b15
 Pokud ztratíte kód PIN nebo heslo zařízení, které jste zaregistrovali v Intune, můžete použít [web Portál společnosti](http://portal.manage.microsoft.com) k jeho resetování. Web Portál společnosti je webová stránka, kterou můžete použít ke správě počítačů a zařízení, které jste registrovali v Intune, a k provádění většiny úloh, které můžete provádět pomocí aplikace Portál společnosti.
 
 > [!NOTE]
-> V závislosti na tom, jak váš správce nakonfiguroval Intune, se na webu Portál společnosti nemusí tlačítko Resetovat heslo zobrazit. Restování hesla není podporované u zařízení s Windows 8.1 a Windows RT.
+> V závislosti na tom, jak váš správce nakonfiguroval Intune, se na webu Portál společnosti nemusí tlačítko Resetovat heslo zobrazit. Resetování hesla není podporované na zařízeních s Windows 8.1.
 
 Resetování hesla:
 
@@ -64,6 +64,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní 
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

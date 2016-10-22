@@ -13,8 +13,8 @@ ms.assetid: 8477a2f1-2e1d-4d42-8bcb-e1181cc900bb
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7c334b96134040fd124c348c6f2a4b2e5c85886a
-ms.openlocfilehash: d56d9b62a7df3a17b38b7ac01881245c079dc6d4
+ms.sourcegitcommit: de65f43ac83b25fa2dd1dacd2a7807668c2b6e9a
+ms.openlocfilehash: fa3230e1faf24bdbbd7e84a211ca95c1fd0fadfd
 
 
 ---
@@ -63,7 +63,7 @@ Další kroky popisují úkoly, které musíte udělat, abyste dokončili nastav
 
 ### Krok 2: Konfigurace konektoru Intune
 
-1.  Přejděte v konzole Lookout do modulu **Systém**, vyberte kartu **Konektory** a možnost **Intune**.
+1.  V konzole Lookout zvolte v modulu **Systém** kartu **Konektory** a vyberte **Intune**.
 
   ![snímek obrazovky zobrazující konzolu Lookout s otevřenou kartou konektorů a zvýrazněnou možností Intune](../media/mtp/lookout_mtp_setup-intune-connector.png)
 
@@ -77,6 +77,7 @@ V nastavení **Správa registrace** definujte skupinu uživatelů, jejichž zař
 Se skupinami pro registraci začněte tak, že nejdříve provedete definici skupiny zabezpečení Azure AD, která bude obsahovat první skupinu uživatelů vhodnou k registraci do ochrany zařízení před internetovými útoky ve službě Lookout. Po vytvoření skupiny v Azure AD přejděte v konzole Lookout do možnosti **Správa registrace** a přidejte **Zobrazované názvy** skupiny zabezpečení Azure AD pro registraci.
 
 Když je uživatel ve skupině pro registraci, všechna jeho identifikovaná a podporovaná zařízení v Azure AD se zaregistrují a bude u nich možné aktivovat ochranu zařízení před internetovými útoky ve službě Lookout.  Podporované zařízení se aktivuje ve chvíli, kdy na něm poprvé spustíte aplikaci Lookout for Work.
+
 ![snímek obrazovky zobrazující stránku registrace konektoru Intune](../media/mtp/lookout-mtp-enrollment.png)
 
 Osvědčeným postupem je ponechat výchozí nastavení (5 minut) intervalu vyhledávání nových zařízení.
@@ -97,11 +98,16 @@ V nastavení **Správa chyb** zadejte e-mailovou adresu příjemce, který má d
 
 ![snímek obrazovky zobrazující stránku správy chyb konektoru Intune](../media/mtp/lookout-mtp-connector-error-notifications.png)
 
-### Krok 6: Konfigurace e-mailových oznámení
-Pokud chcete dostávat e-mailová upozornění na hrozby, přihlaste se ke [konzole Lookout](https://aad.lookout.com) pomocí uživatelského účtu, na kterém chcete oznámení přijímat. Přejděte na kartu **Předvolby** v modulu **Systém**, vyberte požadovaná oznámení a nastavte u nich hodnotu **Zapnuto**. Uložte provedené změny.
+### Krok 6: Konfigurace nastavení registrace
+V modulu **Systém** zadejte na stránce **Konektory** počet dnů, po jejichž uplynutí se zařízení bude považovat za odpojené.  Odpojená zařízení se považují za nevyhovující a bude jim zablokován přístup k firemním aplikacím na základě zásad podmíněného přístupu Intune. Můžete zadat hodnotu mezi 1 a 90 dny.
+
+![](../media/mtp/lookout-console-enrollment-settings.png)
+
+### Krok 7: Konfigurace e-mailových oznámení
+Pokud chcete e-mailem dostávat upozornění na hrozby, přihlaste se ke [konzole Lookout](https://aad.lookout.com) pomocí uživatelského účtu, na kterém chcete oznámení přijímat. Přejděte na kartu **Předvolby** v modulu **Systém**, vyberte požadovaná oznámení a nastavte u nich hodnotu **Zapnuto**. Uložte provedené změny.
 
 ![snímek obrazovky zobrazující stránku předvoleb se zobrazeným uživatelským účtem](../media/mtp/lookout-mtp-email-notifications.png) Pokud už nechcete dostávat některá e-mailová oznámení, nastavte u nich hodnotu **Vypnuto** a provedené změny uložte.
-### Krok 7: Konfigurace klasifikace hrozeb
+### Krok 8: Konfigurace klasifikace hrozeb
 Ochrana zařízení před internetovými útoky ve službě Lookout klasifikuje mobilní hrozby podle různých typů. [Klasifikace hrozeb ve službě Lookout](http://personal.support.lookout.com/hc/en-us/articles/114094130693) k nim má přiřazené výchozí úrovně rizika. Ty lze kdykoli změnit tak, aby odpovídaly požadavkům vaší společnosti.
 
 ![snímek obrazovky zobrazující stránku zásad s hrozbami a klasifikací](../media/mtp/lookout-mtp-threat-classification.png)
@@ -116,6 +122,6 @@ Po dokončení nastavení začne ochrana zařízení před internetovými útoky
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

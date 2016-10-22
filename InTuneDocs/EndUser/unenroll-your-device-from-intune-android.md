@@ -13,8 +13,8 @@ ms.assetid: f40aab26-7613-48cc-a74e-de83df9465a4
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 8ae9b8b128408d6afe56f99886a70155e858c9e8
+ms.sourcegitcommit: 891cf629725392beae1a6b8fbbb39f2bead8eb90
+ms.openlocfilehash: 17f7841daa79473b3c92cf50962b60b67224e4ee
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: 8ae9b8b128408d6afe56f99886a70155e858c9e8
 
 # Zrušení registrace zařízení s Androidem v Intune
 
-Když zrušíte registraci zařízení s Androidem v Intune, zařízení už nebude mít přístup k prostředkům společnosti.  Další informace o tom, co se stane, když zrušíte registraci, najdete v tématu [Co se stane, když zrušíte registraci zařízení v Intune](what-happens-if-you-unenroll-your-device-from-intune-android.md).
+Když v Intune zrušíte registraci zařízení s Androidem, nebude mít už toto zařízení přístup k firemním prostředkům.  Další informace o tom, co se stane, když zrušíte registraci, najdete v tématu [Co se stane, když zrušíte registraci zařízení v Intune](what-happens-if-you-unenroll-your-device-from-intune-android.md).
 
 Pokud chcete zrušit registraci zařízení v Intune a odinstalovat aplikaci Portál společnosti, postupujte podle následujícího návodu nebo si pusťte toto video:
 
@@ -32,22 +32,20 @@ Pokud chcete zrušit registraci zařízení v Intune a odinstalovat aplikaci Por
 
 2.  Klepněte na **MOJE ZAŘÍZENÍ** a vyberte zařízení, jehož registraci chcete zrušit.
 
-    ![android-company-portal-unenroll-choose-device](./media/andr-1-my-devices-choose.png)
+    ![Zvolte zařízení, jehož registraci chcete zrušit.](./media/andr-1-my-devices-choose.png)
 
 3.  Klepněte na ikonu koše.
 
-    ![android-company-portal-unenroll-tap-trash](./media/andr-2-tap-trashcan.png)
+    ![Klepněte na ikonu koše.](./media/andr-2-tap-trashcan.png)
 
     Na stránce s upozorněním klepněte na **OK**. Tím zrušíte registraci svého zařízení.
 
-    ![android-company-portal-unenroll-warning](./media/andr-3-warning-about-remove.png)
+    ![Odeberte zařízení.](./media/andr-3-warning-about-remove.png)
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT (vyhledejte kontaktní informace na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište týmu Microsoft Android na adresu wintunedroidfbk@microsoft.com.
-
-
+Potřebujete ještě další pomoc? Obraťte se na správce IT (kontaktní informace najdete na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište týmu Microsoft Android na adresu wintunedroidfbk@microsoft.com.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

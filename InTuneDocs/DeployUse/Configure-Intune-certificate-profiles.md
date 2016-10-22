@@ -4,7 +4,7 @@ description: "Přečtěte si, jak vytvořit profil certifikátu Intune."
 keywords: 
 author: nbigman
 manager: angrobe
-ms.date: 09/08/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 679a20a1-e66f-4b6b-bd8f-896daf1f8175
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0ced62efd04803943cbbfd8cecef907409a03c0b
-ms.openlocfilehash: c51c5ae199ca2950dc0371b400727af534a70f09
+ms.sourcegitcommit: 27ba29f57bba1f3807c4b593ecac8c0af0851962
+ms.openlocfilehash: 3f657e6a49fb83faddf9c139985369f27656b4bd
 
 
 ---
@@ -38,13 +38,22 @@ Profil důvěryhodného certifikátu je nutné vytvořit před vytvořením prof
 
 ### Vytvoření profilu důvěryhodného certifikátu
 
-1.  V [konzole pro správu Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Přidat zásadu**.
-2.  Přidejte jeden z těchto typů zásad:
-    - **Android &gt; profil důvěryhodného certifikátu (Android 4 a novější)**
-    - **iOS &gt; Profil důvěryhodného certifikátu (iOS 8.0 a novější)**
-    - **Mac OS X &gt; Profil důvěryhodného certifikátu (Mac OS X 10.9 a novější)**
-    - **Windows &gt; Profil důvěryhodného certifikátu (Windows 8.1 a novější)**
-    - **Windows &gt; Profil důvěryhodného certifikátu (Windows Phone 8.1 a novější)**
+1.  V [konzole pro správu Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Přidat zásadu** a zvolte platformu zařízení. Pro tato zařízení můžete vytvořit profil důvěryhodného zařízení:
+
+-  Android 4 nebo novější
+
+-  Android for Work
+
+-  iOS 7.1 nebo novější
+
+-  Mac OS X 10.9 a novější
+
+-  Windows 8.1 a vyšší
+
+-  Windows Phone 8.1 nebo novější
+
+
+2.  Přidejte zásadu **Profil důvěryhodného certifikátu**.
 
     Další informace: [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
@@ -60,14 +69,22 @@ Po vytvoření profilu certifikátu důvěryhodné certifikační autority vytvo
 
 ### Vytvoření profilu certifikátu SCEP
 
-1.  V [konzole pro správu Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Přidat zásadu**.
-2.  Přidejte jeden z těchto typů zásad:
-    - **Android &gt; Profil certifikátu SCEP (Android 4 a novější)**
-    - **iOS &gt; Profil certifikátu SCEP (iOS 8.0 a novější)**
-    - **Mac OS X &gt; Profil certifikátu SCEP (Mac OS X 10.9 a novější)**
-    - **Windows &gt; Profil certifikátu SCEP (Windows 8.1 a novější)**
-    - **Windows &gt; Profil certifikátu SCEP (Windows Phone 8.1 a novější)**
+1.  V [konzole pro správu Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Přidat zásadu** a zvolte platformu zařízení.  Pro tato zařízení můžete vytvořit profil certifikátu SCEP:
 
+-  Android 4 nebo novější
+
+-  Android for Work
+
+-  iOS 7.1 nebo novější
+
+-  Mac OS X 10.9 a novější
+
+-  Windows 8.1 a vyšší
+
+-  Windows Phone 8.1 nebo novější
+
+2.  Přidejte zásadu **Profil certifikátu SCEP**.
+    
     Další informace: [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
 3.  Pokud chcete konfigurovat nastavení profilu certifikátu SCEP, postupujte podle pokynů na stránce konfigurace profilu.
@@ -87,13 +104,16 @@ Nová zásada se zobrazí v pracovním prostoru **Zásady**. Teď ji můžete na
 
 ### Vytvoření profilu certifikátu .PFX
 
-1.  V [konzole pro správu Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Přidat zásadu**.
-2.  Přidejte jeden z těchto typů zásad:
-  - **Android &gt; Profil certifikátu .PFX (Android 4 a novější)**
-  - **Windows &gt; Profil certifikátu PKCS #12 (.PFX) (Windows 10 a novější)**
-  - **Windows &gt; Profil certifikátu PKCS #12 (.PFX) (Windows Phone 10 a novější)**
-  - **iOS > Profil certifikátu PKCS #12 (.PFX) (iOS 8.0 a novější)**    
-    Další informace: [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
+1.  V [konzole pro správu Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Přidat zásadu** a zvolte platformu zařízení. Certifikáty .PFX jsou podporované pro:
+  - Android 4 nebo novější
+  - Android for Work
+  - Windows 10 a novější
+  - Windows Phone 10 a novější
+  - iOS 8.0 a novější    
+
+    
+2.  Přidejte zásadu **Profil certifikátu PFX**. 
+      Další informace: [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 3.  Do formuláře zásad zadejte požadované informace.
 4.  Vyberte možnost **Uložit zásadu**.
 
@@ -130,6 +150,6 @@ Dál zjistěte, jak pomocí certifikátů zabezpečit profily e-mailu, Wi-Fi a V
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

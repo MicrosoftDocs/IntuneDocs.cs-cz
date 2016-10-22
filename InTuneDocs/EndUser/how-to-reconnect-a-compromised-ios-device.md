@@ -14,17 +14,19 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: c47a7097d86ded8e6f38f0270352a7c432110464
+ms.sourcegitcommit: 8eb98946c39b98d3c338b32a7d955818020ef478
+ms.openlocfilehash: 166c0708645d191abaaa73aa3143ca558d64ffd0
 
 
 ---
 
 # Opakované připojení k ohroženému zařízení se systémem iOS
-Váš správce IT zjistil, že používáte zařízení s jailbreakem. To, že má zařízení s iOS „jailbreak“, znamená, že má odebraná softwarová omezení, což může ohrozit zabezpečení a znamenat hrozbu pro vaše podnikové prostředky. Pokud k tomu dojde, nebude už vaše zařízení mít přístup k prostředkům společnosti a musíte požádat o pomoc správce IT. Kontaktní údaje správce IT najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Váš správce IT zjistil, že používáte zařízení s jailbreakem. Jailbreak znamená, že omezení softwaru, která vynucuje systém iOS, byla odebrána. Odebrání těchto omezení může ohrozit zabezpečení a může představovat hrozbu pro prostředky společnosti. 
+
+Pokud k tomu dojde, nebude už vaše zařízení mít přístup k prostředkům společnosti a musíte požádat o pomoc správce IT. Kontaktní údaje správce IT najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: 4a120c3d-d520-4d48-ae4c-3338ca4e7bde
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: d1c65c826a978fc5d263cfc0ed4eeee0854d0c3b
+ms.sourcegitcommit: 7eefcefa5e1cd0f789c77bf020c256e449099273
+ms.openlocfilehash: 843011aca535d8416b931f43bb622bc5c01ed546
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: d1c65c826a978fc5d263cfc0ed4eeee0854d0c3b
 
 # Registrace zařízení s Windows Phone 8.1 v Intune
 
-Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svá zařízení zaregistrovat, a získat tak přístup k e-mailům, souborům a dalším prostředkům společnosti. Registrace zařízení umožňuje vaší organizaci zabezpečit podniková data. Další informace o registraci najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) a v tématu [Co má a nemá správce IT oprávnění vidět na vašem zařízení](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
+Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svá zařízení zaregistrovat, a získat tak přístup k e-mailům, souborům a dalším prostředkům společnosti. Když svoje zařízení zaregistrujete, dokáže vaše organizace uchovat firemní data v bezpečí. Další informace o registraci najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) a v tématu [Co má a nemá správce IT oprávnění vidět na vašem zařízení](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
 
 Pokud chcete své zařízení s Phone 8.1 zaregistrovat v Intune, postupujte podle pokynů, které se vztahují na vaši společnost nebo školu:
@@ -66,7 +66,7 @@ Zaregistrujte své zařízení:
 
     ![Obrazovka nastavení pracoviště](./media/WP81-enroll-3-workplace-add-acct.png)
 
-7.  Zadejte další požadované informace a pak klepnutím na **Přihlásit se** dokončete registraci. Teď byste měli vidět účet pracoviště na stránce **Nastavení** &gt; **Pracoviště**.
+7.  Podle potřeby zadejte další informace a klepnutím na **Přihlásit se** dokončete registraci. Teď byste měli vidět účet pracoviště na stránce **Nastavení** &gt; **Pracoviště**.
 
     ![Obrazovka přidání účtu](./media/WP81-enroll-4-account-added.png)
 
@@ -76,17 +76,16 @@ Zaregistrujte své zařízení:
 
 2.  Klikněte na **Přidat účet** a potom se přihlaste pomocí svého pracovního účtu.
 
-3.  Zadejte další požadované informace a potom klepnutím na **Přihlásit se** dokončete registraci.
+3.  Podle potřeby zadejte další informace a klepnutím na **Přihlásit se** dokončete registraci.
 
-4.  Pokud se zobrazí výzva k instalaci aplikace společnosti nebo centra, zaškrtněte odpovídající políčko a potom klepněte na **Hotovo**.
+4.  Pokud se zobrazí výzva k instalaci firemní aplikace nebo firemního centra, zaškrtněte odpovídající políčko a potom klepněte na **Hotovo**.
 
-Pokud váš správce IT nakonfiguroval aplikaci Portál společnosti tak, aby se nainstalovala při registraci, zobrazí se vám aplikace Portál společnosti v seznamu aplikací.
+Pokud váš správce IT nastavil aplikaci Portál společnosti tak, aby se nainstalovala při registraci, uvidíte aplikaci Portál společnosti v seznamu aplikací.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 
