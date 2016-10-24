@@ -4,7 +4,7 @@ description: "Obsahuje seznam odkazů na úlohy, které můžete dělat v mobiln
 keywords: 
 author: staciebarker
 manager: angrobe
-ms.date: 07/26/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 63f86f135d369d8c96903c0add1e194fd9d5ded2
-ms.openlocfilehash: e98aa19d38af47ba2d19a2a67b7a836796aded2a
+ms.sourcegitcommit: 2a3ad9562d271ee67b49db28b0fc62caec9f3050
+ms.openlocfilehash: 21517d4aa198771ce26dedbfc8f00f54d21c7f2a
 
 
 ---
@@ -33,6 +33,7 @@ Tento článek obsahuje odkazy na všechny úlohy, které můžou provést konco
 Informace v této části vám pomůžou s instalací Portálu společnosti Intune a registrací zařízení pro zařízení Android.
 
 - [Registrace zařízení v Intune](enroll-your-device-in-Intune-android.md)
+- [Vytvoření pracovního profilu a registrace zařízení v Intune](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
 - [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
 
 ## Kroky, které můžete provést po registraci zařízení do služby Intune
@@ -68,9 +69,11 @@ Informace v této části vám pomůžou s opravit problémy, se kterými se mů
 - [Jste vyzváni k vypnutí ladění USB](you-are-asked-to-turn-off-usb-debugging-android.md)
 - [Jste vyzváni k zapnutí nastavení Vyhledat v zařízení bezpečnostní hrozby](you-are-asked-to-turn-on-scan-device-for-security-threats-android.md)
 - [Vaše zařízení nesplňuje požadavek na minimální úroveň opravy zabezpečení](your-device-does-not-meet-the-minimum-security-patch-android.md)
+- [Zobrazí se výzva k instalaci aplikace Lookout for Work na zařízení s Androidem](you-are-prompted-to-install-lookout-for-work-android.md)
+- [Je třeba vyřešit hrozbu, kterou aplikace Lookout for Work objevila na vašem zařízení s Androidem](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 
