@@ -3,6 +3,7 @@ title: "Nastavení zásad pro Windows Phone 8.1 | Microsoft Intune"
 description: "Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete konfigurovat v zařízeních s Windows Phone 8.1. Navíc můžete určit hodnoty OMA-URI k vytvoření vlastních nastavení, která nejsou k dispozici prostřednictvím Intune."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article

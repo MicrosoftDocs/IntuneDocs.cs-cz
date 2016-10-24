@@ -3,6 +3,7 @@ title: "Materiály o prostředí Microsoft Intune pro koncové uživatele | Micr
 description: "Odkazy na informace, které můžete sdílet se svými koncovými uživateli"
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: get-started-article

@@ -3,6 +3,7 @@ title: "Správa aplikací Windows Store pro firmy | Microsoft Intune"
 description: "Pokud chcete spravovat a nasazovat hromadně zakoupené aplikace z konzoly Intune, připojte Microsoft Intune k Windows Storu pro firmy."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 07/13/2016
 ms.topic: article

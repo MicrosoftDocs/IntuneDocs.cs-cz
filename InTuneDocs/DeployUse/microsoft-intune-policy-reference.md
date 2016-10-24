@@ -3,6 +3,7 @@ title: "Referenční informace o zásadách konfigurace | Microsoft Intune"
 description: "Informace v tomto tématu vám pomohou rozhodnout, jaké zásady Microsoft Intune byste měli používat ke správě svých zařízení."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article

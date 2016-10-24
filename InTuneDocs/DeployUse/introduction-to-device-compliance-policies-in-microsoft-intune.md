@@ -3,6 +3,7 @@ title: "Zásady dodržování předpisů pro zařízení | Microsoft Intune"
 description: "Toto téma vysvětluje koncepty, které vám pomohou pochopit, co jsou zásady dodržování předpisů zařízení a jak pracují."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/18/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Omezení přístupu ke službě Online Skype pro firmy | Microsoft Intun
 description: "Chraňte a kontrolujte přístup ke službě Online Skype pro firmy pomocí podmíněného přístupu."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/18/2016
 ms.topic: article

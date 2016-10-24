@@ -3,6 +3,7 @@ title: "Zrušení registrace zařízení s Androidem v Intune | Microsoft Intune
 description: "Popisuje zrušení registrace zařízení s Androidem v Intune."
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article

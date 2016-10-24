@@ -3,6 +3,7 @@ title: "Zabalení aplikací pro iOS pomocí nástroje App Wrapping Tool | Micros
 description: "Informace v tomto tématu popisují, jak zabalit aplikace pro iOS beze změny vlastního kódu aplikace. Připravte aplikace, abyste mohli použít zásady správy mobilních aplikací."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

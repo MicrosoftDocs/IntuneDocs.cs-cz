@@ -3,6 +3,7 @@ title: "Odeslání protokolů s diagnostickými daty e-mailem vašemu správci I
 description: "Odeslání datových protokolů zařízení s Androidem pomocí e-mailu"
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/21/2016
 ms.topic: article

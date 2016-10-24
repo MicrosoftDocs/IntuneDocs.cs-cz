@@ -3,6 +3,7 @@ title: "Vícefaktorové ověřování pomocí Azure AD | Microsoft Intune"
 description: "Jak vyžadovat vícefaktorové ověřování ve službě Azure AD pro registraci zařízení"
 keywords: 
 author: nbigman
+ms.author: nbigman
 manager: angerobe
 ms.date: 09/22/2016
 ms.topic: article

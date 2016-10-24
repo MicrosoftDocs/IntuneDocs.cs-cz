@@ -3,6 +3,7 @@ title: "Omezení přístupu k e-mailu na Dynamics CRM Online | Microsoft Intune"
 description: "Chraňte a kontrolujte přístup k Dynamics CRM Online pomocí podmíněného přístupu."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/22/2016
 ms.topic: article

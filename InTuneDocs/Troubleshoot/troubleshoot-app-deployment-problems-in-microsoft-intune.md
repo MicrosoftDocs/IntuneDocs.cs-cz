@@ -3,6 +3,7 @@ title: "Řešení problémů s nasazením aplikací | Microsoft Intune"
 description: "Tento článek vám pomůže při řešení problémů s nasazením aplikací pomocí Microsoft Intune."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/27/2016
 ms.topic: article

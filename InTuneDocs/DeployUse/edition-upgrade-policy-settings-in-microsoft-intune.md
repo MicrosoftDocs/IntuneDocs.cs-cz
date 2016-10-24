@@ -3,6 +3,7 @@ title: "Nastavení zásad upgradu edice Windows | Microsoft Intune"
 description: "Přečtěte si, jak lze automaticky upgradovat zařízení s Windows 10 na nejnovější verzi pomocí Intune."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/30/2016
 ms.topic: article

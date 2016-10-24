@@ -3,6 +3,7 @@ title: "Registrace zařízení se systémem iOS do Intune | Microsoft Intune"
 description: "Popisuje registraci zařízení s iOS v Intune."
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article

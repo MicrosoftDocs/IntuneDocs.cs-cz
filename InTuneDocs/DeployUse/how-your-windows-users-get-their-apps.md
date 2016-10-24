@@ -3,6 +3,7 @@ title: "Jak uživatelé s Windows získávají svoje aplikace | Microsoft Intune
 description: "Metody zpřístupnění aplikací pro Windows uživatelům"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/24/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Nastavení zásad zabezpečení mobilního zařízení | Microsoft Intun
 description: "Intune můžete použít ke konfiguraci široké škály nastavení, která se dají nasadit na spravovaných zařízeních v organizaci."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Instalace softwarového klienta na počítači | Microsoft Intune"
 description: "Tento průvodce vám pomůže se správou počítače s Windows klientským softwarem Microsoft Intune."
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: arob98
 ms.date: 07/19/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Povolení přístupu k prostředkům společnosti | Microsoft Intune"
 description: "Profily Wi-Fi, VPN a e-mailu společně pomáhají zajistit uživatelům přístup k potřebným souborům a prostředkům."
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
 ms.date: 10/14/2016
 ms.topic: article

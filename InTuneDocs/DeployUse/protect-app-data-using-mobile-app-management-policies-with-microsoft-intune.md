@@ -3,6 +3,7 @@ title: "Ochrana aplikačních dat pomocí zásad MAM | Microsoft Intune"
 description: "Toto téma vysvětluje, jak zásady správy mobilních aplikací můžou pomoct chránit firemní data, bránit ztrátě dat a oddělovat osobní a pracovní informace."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/18/2016
 ms.topic: article

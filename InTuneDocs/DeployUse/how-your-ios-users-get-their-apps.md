@@ -3,6 +3,7 @@ title: "Jak uživatelé systému iOS získávají svoje apikace| Microsoft Intun
 description: "Metody zpřístupnění aplikací pro iOS koncovým uživatelům"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/24/2016
 ms.topic: article

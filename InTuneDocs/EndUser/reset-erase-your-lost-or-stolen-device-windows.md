@@ -3,6 +3,7 @@ title: "Obnovení (vymazání) ztraceného nebo odcizeného zařízení s Window
 description: "Obnovení ztraceného nebo odcizeného zařízení s Windows do továrního nastavení"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

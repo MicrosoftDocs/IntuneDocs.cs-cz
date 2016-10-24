@@ -3,6 +3,7 @@ title: Migrace na skupiny Azure Active Directory| Microsoft Intune
 description: "Jak budou vaše skupiny migrovány z Intune do Azure AD"
 keywords: 
 author: nbigman
+ms.author: nbigman
 manager: angerobe
 ms.date: 10/10/2016
 ms.topic: article

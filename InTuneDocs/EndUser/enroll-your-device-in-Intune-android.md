@@ -3,6 +3,7 @@ title: "Registrace zařízení s Androidem v Intune | Microsoft Intune"
 description: "Popisuje registraci zařízení s Androidem v Intune."
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/09/2016
 ms.topic: article

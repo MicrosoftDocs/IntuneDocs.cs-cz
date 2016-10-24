@@ -3,6 +3,7 @@ title: "Řešení problémů s přístupem k prostředkům společnosti | Micros
 description: "Kódy stavů a chyb z tohoto tématu použijte k vyřešení problémů s přístupem k prostředkům."
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
 ms.date: 10/06/2016
 ms.topic: article

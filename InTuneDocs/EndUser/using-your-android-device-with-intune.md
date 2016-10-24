@@ -3,6 +3,7 @@ title: "Použití zařízení s Androidem v Intune | Microsoft Intune"
 description: "Obsahuje seznam odkazů na úlohy, které můžete dělat v mobilních zařízení s Androidem, když je zařízení registrované v Intune."
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

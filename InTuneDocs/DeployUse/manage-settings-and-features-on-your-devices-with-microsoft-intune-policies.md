@@ -3,6 +3,7 @@ title: "Správa nastavení zařízení v Microsoft Intune pomocí zásad | Micro
 description: "Pomocí Intune můžete vytvořit a nasadit zásady, které řídí nastavení a funkce na zaregistrovaných zařízeních, která spravujete."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article

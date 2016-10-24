@@ -3,6 +3,7 @@ title: "Konfigurace přístupu aplikace pro Exchange Online | Microsoft Intune"
 description: "Toto téma popisuje, jak nakonfigurujete zásadu podmíněného přístupu pro aplikace MAM."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 10/15/2016
 ms.topic: article

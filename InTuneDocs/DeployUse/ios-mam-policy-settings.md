@@ -3,6 +3,7 @@ title: "Nastavení zásad MAM pro iOS | Microsoft Intune"
 description: "Toto téma popisuje nastavení zásad správy mobilních aplikací pro zařízení s iOS."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/30/2016
 ms.topic: article

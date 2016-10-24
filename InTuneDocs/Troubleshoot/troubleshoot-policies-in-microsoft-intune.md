@@ -3,6 +3,7 @@ title: "Řešení potíží se zásadami | Microsoft Intune"
 description: "Řešení potíží s konfigurací zásad"
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/06/2016
 ms.topic: article

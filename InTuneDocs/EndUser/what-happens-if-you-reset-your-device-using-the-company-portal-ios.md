@@ -3,6 +3,7 @@ title: "Co se stane, když resetujete zařízení s iOS pomocí Portálu společ
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Exchange Connector pro místní EAS | Microsoft Intune"
 description: "Použijte nástroj Connector k umožnění komunikace mezi konzolou správce Intune a místním Exchange Serverem pro Exchange ActiveSync MDM."
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 07/29/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Jak uživatelé s Androidem získávají svoje apikace| Microsoft Intune
 description: "Metody zpřístupnění aplikací pro Android koncovým uživatelům"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 7/7/2016
 ms.topic: article

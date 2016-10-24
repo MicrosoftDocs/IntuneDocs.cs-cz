@@ -3,6 +3,7 @@ title: "Nastavení zásad pro iOS | Microsoft Intune"
 description: "Vytvořte zásady, které řídí nastavení a funkce na zařízeních s iOS, která spravujete pomocí Intune."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/06/2016
 ms.topic: article

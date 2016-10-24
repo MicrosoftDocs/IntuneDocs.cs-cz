@@ -3,6 +3,7 @@ title: "Odeslání chyb správci IT | Microsoft Intune"
 description: "Odeslání chyb správci"
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

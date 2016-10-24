@@ -3,6 +3,7 @@ title: "Instalace a přihlášení do aplikace Portál společnosti Intune | Mic
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

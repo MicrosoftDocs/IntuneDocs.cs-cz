@@ -3,6 +3,7 @@ title: "Připojení Wi-Fi | Microsoft Intune"
 description: "Profily sítě Wi-Fi uživatelům usnadní připojení k vašim sítím Wi-Fi."
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
 ms.date: 10/10/2016
 ms.topic: article

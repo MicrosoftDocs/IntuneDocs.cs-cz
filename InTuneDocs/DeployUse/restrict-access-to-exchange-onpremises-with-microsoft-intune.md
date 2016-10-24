@@ -3,6 +3,7 @@ title: "Omezení přístupu k e-mailu v místním systému Exchange | Microsoft 
 description: "Chraňte a kontrolujte přístup k podnikovým e-mailům v místním systému Exchange pomocí podmíněného přístupu."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article

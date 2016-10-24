@@ -3,6 +3,7 @@ title: "Pomoc správci IT s řešením problémů zařízení pomocí podrobnéh
 description: "Pomozte svému správci IT s řešením problémů zařízení pomocí podrobného protokolování."
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article

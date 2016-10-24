@@ -3,6 +3,7 @@ title: "Omezení přístupu k e-mailu na Exchange Online | Microsoft Intune"
 description: "Chraňte a kontrolujte přístup k podnikovým e-mailům na Exchange Online pomocí podmíněného přístupu."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article

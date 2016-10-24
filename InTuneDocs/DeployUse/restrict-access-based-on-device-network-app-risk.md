@@ -3,6 +3,7 @@ title: "Omezení přístupu pomocí ochrany zařízení před internetovými út
 description: "Omezení přístupu k prostředkům společnosti na základě rizika zařízení, sítě a aplikace."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article

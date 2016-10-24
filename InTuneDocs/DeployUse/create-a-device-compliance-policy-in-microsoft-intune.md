@@ -3,6 +3,7 @@ title: "Vytvoření zásady dodržování předpisů pro zařízení | Microsoft
 description: "Vytvořte zásadu dodržování předpisů, která pomáhá zabezpečit mobilní zařízení a počítače používané pro přístup k firemním datům."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article

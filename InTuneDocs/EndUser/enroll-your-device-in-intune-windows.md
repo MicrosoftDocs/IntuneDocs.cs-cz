@@ -3,6 +3,7 @@ title: "Registrace zařízení s Windows v Intune | Microsoft Intune"
 description: "Popisuje registraci zařízení s Windows v Intune."
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article

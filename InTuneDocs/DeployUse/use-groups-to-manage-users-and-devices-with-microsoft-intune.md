@@ -3,6 +3,7 @@ title: "Použití skupin pro správu uživatelů a zařízení | Microsoft Intun
 description: "Vytvářejte a spravujte skupiny pomocí pracovního prostoru Skupiny."
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
 ms.date: 10/10/2016
 ms.topic: article

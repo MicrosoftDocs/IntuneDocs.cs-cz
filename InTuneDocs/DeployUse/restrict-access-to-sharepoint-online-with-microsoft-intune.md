@@ -3,6 +3,7 @@ title: "Omezení přístupu ke službě SharePoint Online | Microsoft Intune"
 description: "Chraňte a kontrolujte přístup k podnikovým datům na SharePoint Online pomocí podmíněného přístupu."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/13/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Ochrana obchodních aplikací na nezaregistrovaných zařízeních | Mic
 description: "Toto téma popisuje, jak můžete připravit své vlastní obchodní aplikace, abyste na ně mohli použít zásady správy mobilních aplikací, které můžou pomoct zabránit ztrátě dat."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/18/2016
 ms.topic: article

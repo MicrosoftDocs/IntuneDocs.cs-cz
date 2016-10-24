@@ -3,6 +3,7 @@ title: "Zjednodušení e-mailové konfigurace v mobilních zařízeních | Micro
 description: 
 keywords: 
 author: jeffgilb
+ms.author: jeffgilb
 manager: angrobe
 ms.date: 10/14/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Podmíněný přístup k 0365 na základě aplikací | Microsoft Intune"
 description: "Udělejte si představu o tom, jak vám podmíněný přístup MAM pomůže určit, které aplikace mají přístup ke službám O365."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 10/15/2016
 ms.topic: article

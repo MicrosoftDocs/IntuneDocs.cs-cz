@@ -3,6 +3,7 @@ title: "Glosář Intune | Microsoft Intune"
 description: "Přečtěte si něco o terminologii používané v Microsoft Intune"
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/23/2016
 ms.topic: article

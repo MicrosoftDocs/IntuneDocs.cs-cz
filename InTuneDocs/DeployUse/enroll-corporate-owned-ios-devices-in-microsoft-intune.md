@@ -3,6 +3,7 @@ title: "Registrace zařízení iOS vlastněných společností | Microsoft Intun
 description: "Registrace zařízení s iOS vlastněných společností pomocí Programu registrace zařízení Apple (DEP) nebo nástroje Apple Configurator"
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 09/07/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Zařízení s iOS nevyhovuje maximální verzi operačního systému | M
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/08/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Nasazení aplikací na zařízení s Androidem for Work | Microsoft Intu
 description: "Pomocí tohoto tématu můžete synchronizovat a pak nasadit aplikaci do zařízení s Androidem for Work z obchodu Google Play for Work."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article

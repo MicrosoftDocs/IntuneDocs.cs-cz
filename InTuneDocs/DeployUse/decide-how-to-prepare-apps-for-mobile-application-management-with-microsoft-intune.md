@@ -3,6 +3,7 @@ title: "Příprava aplikací pro správu mobilních aplikací | Microsoft Intune
 description: "Informace v tomto tématu vám pomohou rozhodnout, kdy byste měli použít nástroj App Wrapping a sadu App SDK, aby vaše vlastní obchodní aplikace mohly používat zásady správy mobilních aplikací."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article

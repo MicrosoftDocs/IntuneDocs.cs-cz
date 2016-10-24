@@ -3,6 +3,7 @@ title: "Povolení ochrany Lookout MTP v Intune | Microsoft Intune"
 description: "Povolení ochrany proti mobilním hrozbám Lookout v konzole pro správu Intune."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article

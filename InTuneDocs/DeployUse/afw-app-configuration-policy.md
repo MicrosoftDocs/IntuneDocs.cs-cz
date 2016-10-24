@@ -3,6 +3,7 @@ title: "Použití zásad konfigurace mobilních aplikací pro Android for Work |
 description: "Zásady konfigurace mobilních aplikací v Intune umožňují dodat nastavení, která se můžou vyžadovat, když uživatelé spustí aplikaci pro Android for Work."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article

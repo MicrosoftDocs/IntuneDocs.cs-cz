@@ -3,6 +3,7 @@ title: "Odeslání chyb při registraci správci IT | Microsoft Intune"
 description: "Odeslání chyb při registraci správci"
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/08/2016
 ms.topic: article

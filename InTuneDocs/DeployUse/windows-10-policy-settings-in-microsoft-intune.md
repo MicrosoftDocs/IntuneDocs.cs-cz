@@ -3,6 +3,7 @@ title: "Nastavení zásad pro Windows 10 | Microsoft Intune"
 description: "Nastavení zásad, která jsou uvedena v tomto tématu, vám pomohou nakonfigurovat předdefinovaná a vlastní nastavení pro zaregistrované počítače s Windows 10 a zařízení Windows 10 Mobile."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/03/2016
 ms.topic: article

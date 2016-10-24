@@ -3,6 +3,7 @@ title: "Řešení potíží s aplikací Lookout Integration | Microsoft Intune"
 description: "Toto téma popisuje řešení nejčastějších potíží s aplikací Lookout Integration"
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article

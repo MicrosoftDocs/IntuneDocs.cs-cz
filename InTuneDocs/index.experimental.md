@@ -6,6 +6,7 @@ title: "Dokumentace k Intune – dokumentace k MDM | Microsoft Docs"
 description: "Technická dokumentace k Microsoft Intune – Správa mobilních zařízení a aplikací"
 keywords: "dokumentace k intune, dokumentace k MDM, dokumentace k Mobile Device Management, dokumentace ke správě mobilních zařízení a aplikací"
 author: jeffgilb
+ms.author: jeffgilb
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: hubpage

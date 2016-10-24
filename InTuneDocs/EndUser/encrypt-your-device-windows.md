@@ -3,6 +3,7 @@ title: "Šifrování zařízení s Windows | Microsoft Intune"
 description: "Popisuje šifrování zařízení s Windows."
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article

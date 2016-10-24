@@ -3,6 +3,7 @@ title: "Příručka pro testování Intune | Microsoft Intune"
 description: "Úvod a požadavky pro nastavení bezplatného 30denního testování Intune"
 keywords: 
 author: lindavr
+ms.author: lindavr
 manager: angrobe
 ms.date: 08/09/2016
 ms.topic: get-started-article

@@ -3,6 +3,7 @@ title: "Registrace mobilních zařízení a instalace aplikace | Microsoft Intun
 description: "Vysvětluje, jak registrovat mobilní zařízení a instalovat aplikaci na zařízení zaregistrované v Intune."
 keywords: 
 author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: get-started-article

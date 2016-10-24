@@ -3,6 +3,7 @@ title: "Omezení přístupu k e-mailu a službám O365 | Microsoft Intune"
 description: "Toto téma popisuje, jak lze pomocí podmíněného přístupu povolit přístup k firemnímu e-mailu a firemním datům v SharePoint Online a dalších službách jenom kompatibilním zařízením."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/29/2016
 ms.topic: article

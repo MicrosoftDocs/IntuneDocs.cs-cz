@@ -3,6 +3,7 @@ title: "Registrace mobilních zařízení testování | Microsoft Intune"
 description: "Registrace mobilních zařízení a instalace aplikace při registraci bezplatné 30denní zkušební verze Intune"
 keywords: 
 author: lindavr
+ms.author: lindavr
 manager: angrobe
 ms.date: 08/09/2016
 ms.topic: get-started-article

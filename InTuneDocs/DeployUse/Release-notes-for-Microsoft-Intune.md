@@ -3,6 +3,7 @@ title: "Poznámky k verzi Microsoft Intune | Microsoft Intune"
 description: "Poznámky k verzi Intune"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/08/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Odebrání zařízení z Portálu společnosti | Microsoft Intune"
 description: "Odebrání zařízení z portálu společnosti"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

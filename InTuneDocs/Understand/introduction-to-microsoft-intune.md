@@ -5,6 +5,7 @@ title: "Úvod do Microsoft Intune | Microsoft Intune"
 description: "Přečtěte si o tom, jak je Intune komponentou správy mobilních zařízení v řešení Enterprise Mobility + Security."
 keywords: 
 author: Lindavr
+ms.author: lindavr
 manager: angrobe
 ms.date: 08/10/2016
 ms.topic: article

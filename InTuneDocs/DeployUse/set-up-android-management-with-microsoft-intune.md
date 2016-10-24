@@ -3,6 +3,7 @@ title: "Nastavení správy systému Android | Microsoft Intune"
 description: "Povolte správu mobilních zařízení (MDM) pro zařízení s Androidem a KNOXem pomocí služby Microsoft Intune."
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 07/25/2016
 ms.topic: article

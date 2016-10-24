@@ -7,6 +7,7 @@ title: Dokumentace k Intune | Dokumenty Microsoft
 description: "Technická dokumentace k Microsoft Intune – Správa mobilních zařízení a aplikací"
 keywords: "dokumentace k Intune, správa aplikací, správa zařízení, dokumentace k MDM, dokumentace k MAM"
 author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 10/07/2016
 ms.topic: hubpage

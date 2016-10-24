@@ -3,6 +3,7 @@ title: "Nastavení zásad pro Windows | Microsoft Intune"
 description: "Ke konfiguraci nastavení pro registrovaná zařízení s Windows 8.1 a Windows 8 použijte obecné zásady konfigurace Windows (Windows 8.1 a novější) Intune."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article

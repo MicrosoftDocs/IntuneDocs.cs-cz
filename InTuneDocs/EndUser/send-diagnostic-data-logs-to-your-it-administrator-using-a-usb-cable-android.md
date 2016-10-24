@@ -3,6 +3,7 @@ title: "Odeslání protokolů s diagnostickými daty správci IT pomocí kabelu 
 description: "Odeslání datových protokolů pomocí kabelu USB"
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

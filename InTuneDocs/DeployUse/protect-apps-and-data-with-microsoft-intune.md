@@ -3,6 +3,7 @@ title: "Ochrana dat a aplikací | Microsoft Intune"
 description: "Toto téma popisuje různé funkce a možnosti Intune, které jsou k dispozici, aby pomáhaly chránit vaše firemní aplikace a data."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/18/2016
 ms.topic: article
