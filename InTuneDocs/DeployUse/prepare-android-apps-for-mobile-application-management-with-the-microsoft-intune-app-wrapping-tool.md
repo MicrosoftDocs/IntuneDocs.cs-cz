@@ -3,6 +3,7 @@ title: "Zabalení aplikací pro Android pomocí nástroje App Wrapping Tool | Mi
 description: "Informace v tomto tématu popisují, jak zabalit aplikace pro Android beze změny vlastního kódu aplikace. Připravte aplikace, abyste mohli použít zásady správy mobilních aplikací."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article
@@ -13,24 +14,20 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: oldang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 69d8ff8eecd238cfbbf0b01671b80e6ee77ae357
-ms.openlocfilehash: c041fbbbec9e1812427d9810489d35480ae8c09b
+ms.sourcegitcommit: fe3a9f2fd9ce9a3c3f776dcfd9ad3347a63d0fc1
+ms.openlocfilehash: e623755cf926020bcb66d8a6d40e5cce9b46b0ae
 
 
 ---
 
 # Příprava aplikací pro Android na správu mobilních aplikací pomocí nástroje Intune App Wrapping Tool
-Díky nástroji **Microsoft Intune App Wrapping Tool pro Android** můžete omezit funkce interních aplikací pro Android a tím změnit jejich chování, aniž byste měnili kód samotných aplikací.
+Díky nástroji **Microsoft Intune App Wrapping Tool for Android** můžete omezit funkce interních aplikací pro Android a tím změnit jejich chování, aniž byste měnili kód samotných aplikací.
 
-Jde o nástroj příkazového řádku Windows, který běží v PowerShellu a vytvoří okolo vaší aplikace pro Android tzv. „obálku“. Po zpracování aplikace můžete změnit její funkce pomocí [zásad správy mobilní aplikace](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md), které nakonfigurujete.
+Jde o nástroj příkazového řádku Windows, který běží v PowerShellu a vytvoří okolo vaší aplikace pro Android tzv. „obálku“. Po zabalení aplikace můžete změnit její funkce nakonfigurováním [zásad správy mobilní aplikace](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) v Intune.
 
 
-Před spuštěním nástroje zkontrolujte [Důležité informace o zabezpečení při spuštění nástroje pro zabalení aplikace](#security-considerations-for-running-the-app-wrapping-tool). Nástroj si můžete stáhnout na stránce [Microsoft Intune App Wrapping pro Android](https://www.microsoft.com/download/details.aspx?id=47267).
+Před spuštěním nástroje zkontrolujte [Důležité informace o zabezpečení při spuštění nástroje pro zabalení aplikace](#security-considerations-for-running-the-app-wrapping-tool). Nástroj si můžete stáhnout ze stránky [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) na GitHubu.
 
->[!IMPORTANT]
->Verze nástroje App Wrapping Tool pro Android s podporou zařízení, která nejsou zaregistrovaná ve správě mobilních zařízení Intune, je dostupná jako veřejná Preview verze. Jestli si chcete tuto veřejnou Preview verzi vyzkoušet, můžete si nástroj stáhnout z [tohoto úložiště GitHubu](https://github.com/msintuneappsdk/intune-app-wrapper-android-preview).
-
->Scénář je popsaný v tématu [Ochrana obchodních aplikací na zařízeních nezaregistrovaných v Intune](protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune.md).
 
 
 ## Krok 1: Splnění požadavků na používání nástroje App Wrapping
@@ -64,7 +61,7 @@ Před spuštěním nástroje zkontrolujte [Důležité informace o zabezpečení
 
 ## Krok 2: Instalace nástroje App Wrapping
 
-1.  Stáhněte si instalační soubor nástroje pro zabalení aplikace ze služby Stažení softwaru a nainstalujte ho do počítače s Windows.
+1.  Z [úložiště GitHubu](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) si do počítače s Windows stáhněte instalační soubor **InstallAWT.exe** nástroje Intune App Wrapping Tool for Android a otevřete ho.
 
 2.  Přijměte licenční smlouvu a dokončete instalaci.
 
@@ -145,6 +142,6 @@ Pro zabránění potenciálnímu falšování identity, zpřístupnění informa
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 
