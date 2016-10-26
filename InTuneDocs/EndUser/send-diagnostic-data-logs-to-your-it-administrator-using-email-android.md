@@ -2,8 +2,8 @@
 title: "Odeslání protokolů s diagnostickými daty e-mailem vašemu správci IT | Microsoft Intune"
 description: "Odeslání datových protokolů zařízení s Androidem pomocí e-mailu"
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlan
+ms.author: barlan
 manager: angrobe
 ms.date: 09/21/2016
 ms.topic: article

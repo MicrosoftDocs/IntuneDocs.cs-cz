@@ -2,8 +2,8 @@
 title: "Odeslání protokolů s diagnostickými daty správci IT pomocí kabelu USB | Microsoft Intune"
 description: "Odeslání datových protokolů pomocí kabelu USB"
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlan
+ms.author: barlan
 manager: angrobe
 ms.date: 10/24/2016
 ms.topic: article
