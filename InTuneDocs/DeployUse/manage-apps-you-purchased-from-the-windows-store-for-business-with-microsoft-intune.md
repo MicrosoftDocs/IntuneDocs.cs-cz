@@ -3,6 +3,7 @@ title: "Správa aplikací Windows Store pro firmy | Microsoft Intune"
 description: "Pokud chcete spravovat a nasazovat hromadně zakoupené aplikace z konzoly Intune, připojte Microsoft Intune k Windows Storu pro firmy."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 07/13/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 8e38d47d-0c5e-40ce-b379-29d3657f5c28
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d40ec3b5b7c5c4ee2cfd48a95ada0dadcaa80be4
-ms.openlocfilehash: 077029a962797a18fab27c3f1f5340eae6edfe04
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: 8eee27e0c24e353143ce2014b65dc91af2c04843
 
 
 ---
@@ -28,7 +29,7 @@ ms.openlocfilehash: 077029a962797a18fab27c3f1f5340eae6edfe04
 
 ## Než začnete
 Než začnete synchronizovat a nasazovat aplikace z Windows Storu pro firmy, přečtěte si následující informace:
-* Musíte nakonfigurovat Intune jako autoritu správy mobilních zařízení pro svoji organizaci. Další informace najdete v tématu [Příprava registrace zařízení v Microsoft Intune](get-ready-to-enroll-devices-in-microsoft-intune.md).
+* Musíte nakonfigurovat Intune jako autoritu správy mobilních zařízení pro svoji organizaci. Další informace viz článek [Předpoklady pro registraci zařízení do Microsoft Intune](prerequisites-for-enrollment.md).
 * Musíte mít zaregistrovaný účet ve Windows Storu pro firmy.
 * Až přidružíte účet ve Windows Storu pro firmy k Intune, už nebude možné tento účet změnit.
 * Aplikace zakoupené ze Storu se nedají do služby Intune přidat ručně ani z ní ručně odebrat. Dají se jenom synchronizovat s Windows Storem pro firmy.
@@ -77,6 +78,6 @@ Když nasadíte aplikaci z Windows Storu pro firmy, každý uživatel, který si
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Sep16_HO4-->
 
 

@@ -3,6 +3,7 @@ title: "Použití zásad konfigurace mobilních aplikací pro iOS | Microsoft In
 description: "Zásady konfigurace mobilních aplikací v Intune slouží k poskytování nastavení, která se můžou požadovat, když uživatelé spustí aplikaci pro iOS."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

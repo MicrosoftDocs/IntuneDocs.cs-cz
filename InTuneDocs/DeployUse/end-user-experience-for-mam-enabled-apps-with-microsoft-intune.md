@@ -13,8 +13,8 @@ ms.assetid: b57e6525-b57c-4cb4-a84c-9f70ba1e8e19
 ms.reviewer: andcerat
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a1a8d80ad2b0ee66101ad9e67532e806ebc4b690
-ms.openlocfilehash: 3361c9069a3258621b9349a0cf332a38c206d041
+ms.sourcegitcommit: 26c62a000470030ef0109b397261b3049d3984ed
+ms.openlocfilehash: 710e5b2a59121d6ace53bd23f125dbe398c9ddae
 
 
 ---
@@ -140,30 +140,24 @@ Pokud používáte zařízení se systémem Android, může se zobrazit zpráva 
 
 ![Snímek obrazovky s chybovou zprávou a pokyny k odebrání účtu](../media/AppManagement/Android_SwitchUser.png)
 
-##  Zobrazení mediálních souborů pomocí aplikace pro sdílení obsahu Rights Management
-Pokud chcete na zařízení se systémem Android zobrazit podnikové audiovizuální a obrázkové soubory nebo soubory PDF, použijte [aplikaci pro sdílení obsahu Microsoft Rights Management (RMS)](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer)
+##  Zobrazení souborů médií pomocí aplikace Azure Information Protection (dříve označované jako aplikaci pro sdílení obsahu Rights Management)
+Pokud chcete na zařízení se systémem Android zobrazit podnikové audiovizuální a obrázkové soubory nebo soubory PDF, použijte [aplikaci Azure Information Protection](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer).
 
-Tuto aplikaci si můžete stáhnout z obchodu Google Play.  Jakmile se aplikace nainstaluje do zařízení, spusťte ji a proveďte ověření pomocí svých podnikových přihlašovacích údajů. Teď byste měli být schopní zobrazit nechráněné i chráněné soubory z jiných aplikací spravovaných zásadami.
+Tuto aplikaci si můžete stáhnout z obchodu Google Play.  
 
 Podporovány jsou následující typy souborů:
 
 * **Zvuk:** AAC LC, HE-AACv1 (AAC+), HE-AACv2 (rozšířené AAC+), AAC ELD (rozšířené AAC s malým zpožděním), AMR-NB, AMR-WB, FLAC, MP3, MIDI, Vorbis, PCM/WAVE.
 * **Video:** H.263, H.264 AVC, MPEG-4 SP, VP8.
 * **Obrázky:** jpg, pjpg, png, ppng, bmp, pbmp, gif, pgif, jpeg, pjpeg.
-* PDF, PPDF
+* **PDF, PPDF**
 
 ------------
 |**pfile**|**text**|
 |----|----|
-|Pfile je obecný „obálkový“ formát pro chráněné soubory, který zapouzdřuje šifrovaný obsah a licence služby RMS a lze jej použít pro ochranu libovolného typu souboru.|Textové soubory včetně souborů XML, CSV atd. lze otevřít pro zobrazení v aplikaci, i když jsou chráněny. Typy souborů: txt, ptxt, csv, pcsv, log, plog, xml, pxml.|
+|Pfile je obecný „obálkový“ formát pro chráněné soubory, který zapouzdřuje šifrovaný obsah a licence služby Azure Information Protection. Lze jej použít pro ochranu libovolného typu souboru.|Textové soubory včetně souborů XML, CSV atd. lze otevřít pro zobrazení v aplikaci, i když jsou chráněny. Typy souborů: txt, ptxt, csv, pcsv, log, plog, xml, pxml.|
 ---------------
-**Zařízení se systémem Android, která nejsou zaregistrovaná v Intune**
 
-Než budete moct využít aplikaci Sdílení RMS k zobrazení souborů z jiných aplikací spravovaných pomocí Intune, spusťte aplikaci RMS proveďte ověření pomocí svého pracovního účtu.  Když se přihlásíte, následující zpráva se zobrazí, **jenom pokud nemáte licenci RMS**:
-
-**Ověření bylo úspěšné. Teď můžete zobrazit firemní soubory, ale nastavení vaší organizace vám neumožňuje chránit soubory. Se žádostí o další informace se obraťte na správce IT.**
-
-To vám nebrání využívat aplikaci Sdílení RMS k zobrazení firemních souborů. Firemní soubory můžete i nadále otvírat a zobrazovat z jiných aplikací spravovaných pomocí Intune a zásady MAM se uplatňují.  Tato zpráva vlastně říká, že nebudete moct přidat další možnosti ochrany, které poskytuje aplikace Sdílení RMS.  Pokud chcete svoje soubory chránit, musíte mít licenci RMS. Další informace o možnostech ochrany souborů RMS najdete v tématech [Ochrana souboru na zařízení](https://docs.microsoft.com/en-us/rights-management/rms-client/sharing-app-protect-in-place) a [Ochrana souboru sdíleného e-mailem](https://docs.microsoft.com/en-us/rights-management/rms-client/sharing-app-protect-by-email).
 
 
 ### Související témata
@@ -171,6 +165,6 @@ To vám nebrání využívat aplikaci Sdílení RMS k zobrazení firemních soub
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

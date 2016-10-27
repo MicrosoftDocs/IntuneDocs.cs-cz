@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: cb7510d92019f27e15ecc7d8666df3f4e09c8707
+ms.sourcegitcommit: 08f31db90f324ef5f93076c4e13bfa5328a15adc
+ms.openlocfilehash: ebd1300c490f3d69110a5f1920fd25d1dc5cb850
 
 
 ---
@@ -23,11 +23,7 @@ ms.openlocfilehash: cb7510d92019f27e15ecc7d8666df3f4e09c8707
 
 # Co se stane, když zrušíte registraci zařízení s Windows v Intune?
 
-Další informace najdete pomocí odkazu v části V tomto článku, který odpovídá použitému zařízení.
-
-- [Windows 10 Mobile, 8.1, Windows 8, Windows 7, Vista](#windows-10-mobile--8-1,-windows-8,-windows-7,-vista)
-- [Windows 10, Windows 8.1 nebo Windows Phone 8](#windows-10--windows-8-1-or-windows-phone-8)
-- [Windows RT se systémem Windows 8.1 nebo Windows RT](#windows-rt-running-windows-8-1-or-windows-rt)
+Pomocí odkazů na pravé straně této stránky v části „V tomto článku“ najdete informace o typu zařízení, které používáte.
 
 
 ## Windows 10, Windows 8.1, Windows 8, Windows 7, Vista
@@ -55,7 +51,7 @@ Kromě toho pro Windows 8.1 platí:
 
 -   Je možné, že již v zařízení nebudete mít přístup k některým prostředkům společnosti, jako jsou sdílené složky nebo interní weby.
 
-## Windows 10 Mobile, Windows Phone 8.1 nebo Windows Phone 8
+## Windows 10 Mobile a Windows Phone 8.1
 
 -   Ze zařízení se odinstaluje aplikace Portál společnosti. To znamená, že už se vaše zařízení nebude zobrazovat na Portálu společnosti a nebudete moct instalovat aplikace z aplikace nebo webu Portál společnosti.
 
@@ -66,7 +62,7 @@ Kromě toho pro Windows 8.1 platí:
     > [!IMPORTANT]
     > Jedinou výjimkou jsou zde zásady šifrování, které budou platit stále. Pokud zásady vaší společnosti vyžadovaly, aby byl váš Windows Phone zašifrovaný, jde v telefonu šifrování zrušit jedině obnovením telefonu do výchozího továrního nastavení pomocí nabídky **Nastavení** ve Windows Phonu.
 
-## Windows RT se systémem Windows 8.1 nebo Windows RT
+## Windows RT s Windows 8.1
 
 -   Ze zařízení se odinstaluje aplikace Portál společnosti. To znamená, že už se vaše zařízení nebude zobrazovat na Portálu společnosti a nebudete z něj moct instalovat aplikace.
 
@@ -93,6 +89,6 @@ Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na spr�
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

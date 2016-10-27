@@ -2,7 +2,7 @@
 title: "Předchozí verze | Microsoft Intune"
 description: 
 keywords: 
-author: Lindavr
+author: barlanmsft
 manager: angrobe
 ms.date: 07/18/2016
 ms.topic: article
@@ -13,8 +13,8 @@ ms.assetid: 45dad14a-d412-488d-bb1e-ad990ea503df
 ROBOTS: noindex,nofollow
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3206634884807743576f2d9dc1ca17b6bbbc9cc6
-ms.openlocfilehash: 996198a2525dc830d229e7143afda3c71f4276b8
+ms.sourcegitcommit: ffbb26f30c7801789a47d57ffed00696f5e6d81a
+ms.openlocfilehash: 11e90ce994d17d9dcc62edba775dd0ab8110414e
 
 
 ---
@@ -30,7 +30,7 @@ U dozorovaných zařízení se systémem iOS 9.3 nebo novějším můžete využ
 - Určení seznamu aplikací, které budou uživatelům skryté. Uživatelé nebudou moci tyto aplikace zobrazit ani spustit.
 - Určení seznamu aplikací, které uživatelé mohou zobrazit a spustit. Žádné jiné aplikace nebude možné zobrazit ani spustit.
 
-Mezi aplikace, které můžete zadat, patří aplikace, které jste nasadili, a integrované aplikace pro iOS, jako jsou Zprávy a Poznámky. Podrobnosti najdete v tématu [Nastavení zásad pro iOS v Microsoft Intune]( https://docs.microsoft.com/intune/deploy-use/ios-policy-settings-in-microsoft-intune).
+Mezi aplikace, které můžete zadat, patří aplikace, které jste nasadili, a integrované aplikace pro iOS, jako jsou Zprávy a Poznámky. Podrobnosti najdete v tématu [Nastavení zásad pro iOS v Microsoft Intune]( /intune/deploy-use/ios-policy-settings-in-microsoft-intune).
 <!---TFS 1279009 checked--->
 ### Zásady povolených a blokovaných aplikací pro zařízení se systémem Samsung KNOX
 Nyní můžete pro zařízení se systémem Samsung KNOX nakonfigurovat vlastní zásady, které umožňují vytvořit:
@@ -38,7 +38,7 @@ Nyní můžete pro zařízení se systémem Samsung KNOX nakonfigurovat vlastní
 - Seznam aplikací, které si uživatelé příslušného zařízení mohou nainstalovat z obchodu Google Play. Z tohoto obchodu nejde nainstalovat žádné další aplikace.
 
 Tato nastavení mohou využívat jenom zařízení se systémem Samsung KNOX.
-Podrobnosti viz [Použití vlastních zásad povolených a blokovaných aplikací pro zařízení se systémem Samsung KNOX]( custom-policy-to-allow-and-block-samsung-knox-apps.md).
+Podrobnosti viz [Použití vlastních zásad povolených a blokovaných aplikací pro zařízení se systémem Samsung KNOX](/intune/deploy-use/custom-policy-to-allow-and-block-samsung-knox-apps).
 <!---TFS 1311629 checked --->
 ### Nové aplikace kompatibilní se zásadami správy mobilních aplikací (MAM)
 Aplikace Yammer pro [iOS](https://itunes.apple.com/app/yammer/id289559439?mt=8) a [Android](https://play.google.com/store/apps/details?id=com.yammer.v1) je teď kompatibilní se [zásadami správy mobilních aplikací (MAM) služby Intune](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) bez ohledu na to, jestli je zařízení zaregistrované.
@@ -55,7 +55,7 @@ V souvislosti s vydáním nové aplikace pro sdílení RMS odebíráme od srpna 
 - Intune PDF Viewer
 - Intune Image Viewer pro Android z Google Play
 
-Místo použití aplikací Intune Viewer vám doporučujeme používat novou aplikaci [Rights Management (sdílení RMS) pro Android](https://docs.microsoft.com/en-us/intune/deploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune#viewing-media-files-with-the-rights-management-sharing-app), která pro bezpečné prohlížení firemních souborů na zařízeních s Androidem umožňuje nasadit jednu aplikaci (namísto tří samostatných aplikací). Až se aplikace Intune Viewer už nebude podporovat, bude odebrána z Google Storu a nebude už dostupná pro budoucí použití.
+Místo použití aplikací Intune Viewer vám doporučujeme používat novou aplikaci [Rights Management (sdílení RMS) pro Android](/intune/deploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune#viewing-media-files-with-the-rights-management-sharing-app), která pro bezpečné prohlížení firemních souborů na zařízeních s Androidem umožňuje nasadit jednu aplikaci (namísto tří samostatných aplikací). Až se aplikace Intune Viewer už nebude podporovat, bude odebrána z Google Storu a nebude už dostupná pro budoucí použití.
 
 ## Správa zařízení
 ### Podpora pro Android 7.0
@@ -159,7 +159,7 @@ Služba Intune zvýšila maximální limit pro registraci zařízení z 5 na 15 
 <!---TFS 1289896 --->
 
 #### Integrace TeamVieweru pro počítače s Windows a klientským softwarem Intune
-Integrace [TeamVieweru](https://www.teamviewer.com) pro počítače s Windows a klientským softwarem Intune vám umožní navázání relací vzdálené pomoci s počítači s Windows v rámci podpory, kterou oddělení helpdesku poskytují koncovým uživatelů. To zahrnuje systém Windows 7, 8, 8.1 a Windows 10. Podrobnosti najdete v tématu [Běžné úlohy správy počítačů s Windows pomocí počítačového klienta Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
+Integrace [TeamVieweru](https://www.teamviewer.com) pro počítače s Windows a klientským softwarem Intune vám umožní navázání relací vzdálené pomoci s počítači s Windows v rámci podpory, kterou oddělení helpdesku poskytují koncovým uživatelů. To zahrnuje systém Windows 7, 8, 8.1 a Windows 10. Podrobnosti najdete v tématu [Běžné úlohy správy počítačů s Windows pomocí počítačového klienta Microsoft Intune](/intune/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client).
 <!---TFS 1284856--->
 
 ### Aktualizace Portálu společnosti
@@ -185,7 +185,7 @@ Uživatel Správce registrace zařízení může na místním zařízení prová
 <!---TFS 1233681--->
 
 ### Změna názvů pro funkce Windows
-- [Microsoft Passport pro Windows](control-microsoft-passport-settings-on-devices-with-microsoft-intune.md) se nyní označuje jako **Windows Hello pro firmy**.
+- [Microsoft Passport pro Windows](/intune/deploy-use/control-microsoft-passport-settings-on-devices-with-microsoft-intune) se nyní označuje jako **Windows Hello pro firmy**.
 - [Ochrana podnikových dat](https://technet.microsoft.com/itpro/windows/keep-secure/create-edp-policy-using-intune) se nyní označuje jako **Windows Information Protection**.
 
 ## Červen 2016
@@ -209,10 +209,10 @@ Informace o stavu služby pro Intune se přesouvají do centrálního umístěn�
     * Musí splňovat veškeré nasazené zásady dodržování předpisů Intune.
 
  Koncovým uživatelům nevyhovujících zařízení se zobrazí výzva k registraci. Pokud chtějí získat přístup, musí všechny problémy s dodržováním předpisů vyřešit.
-- **Podmíněný přístup pro prohlížeč.** Můžete nastavit zásady podmíněného přístupu pro [Exchange Online](restrict-access-to-exchange-online-with-microsoft-intune.md) a [SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md), na základě kterých k nim bude možné získat přístup pouze z podporovaných webových prohlížečů ve spravovaných a vyhovujících zařízeních. Koncoví uživatelé, kteří se pokusí přihlásit k aplikaci Outlook Web Access (OWA) a webům služby SharePoint pomocí zařízení s iOS a Androidem, budou vyzváni, aby před přihlášením svoje zařízení zaregistrovali v Intune a opravili všechny problémy, kvůli kterým zařízení nesplňuje pravidla zásad dodržování předpisů.
+- **Podmíněný přístup pro prohlížeč.** Můžete nastavit zásady podmíněného přístupu pro [Exchange Online](/intune/deploy-use/restrict-access-to-exchange-online-with-microsoft-intune) a [SharePoint Online](/intune/deploy-use/restrict-access-to-sharepoint-online-with-microsoft-intune), na základě kterých k nim bude možné získat přístup pouze z podporovaných webových prohlížečů ve spravovaných a vyhovujících zařízeních. Koncoví uživatelé, kteří se pokusí přihlásit k aplikaci Outlook Web Access (OWA) a webům služby SharePoint pomocí zařízení s iOS a Androidem, budou vyzváni, aby před přihlášením svoje zařízení zaregistrovali v Intune a opravili všechny problémy, kvůli kterým zařízení nesplňuje pravidla zásad dodržování předpisů.
 <!---TFS 1175844--->
 
-- **Dynamics CRM Online podporuje podmíněný přístup.** Můžete pro [Dynamics CRM Online](restrict-access-to-dynamics-crm-online-with-microsoft-intune.md) nastavit zásady podmíněného přístupu, aby k němu měla přístup pouze spravovaná a vyhovující zařízení s iOS a s Androidem. Koncovým uživatelům, kteří se pokusí přihlásit k mobilní aplikaci Dynamics CRM na iOS a Androidu, se zobrazí výzva, aby si před přihlášením zařízení zaregistrovali v Intune a aby vyřešili všechny problémy, kvůli kterým zařízení není v souladu s pravidly zásad dodržování předpisů v organizaci.
+- **Dynamics CRM Online podporuje podmíněný přístup.** Můžete pro [Dynamics CRM Online](/intune/deploy-use/restrict-access-to-dynamics-crm-online-with-microsoft-intune) nastavit zásady podmíněného přístupu, aby k němu měla přístup pouze spravovaná a vyhovující zařízení s iOS a s Androidem. Koncovým uživatelům, kteří se pokusí přihlásit k mobilní aplikaci Dynamics CRM na iOS a Androidu, se zobrazí výzva, aby si před přihlášením zařízení zaregistrovali v Intune a aby vyřešili všechny problémy, kvůli kterým zařízení není v souladu s pravidly zásad dodržování předpisů v organizaci.
 <!---TFS1295358--->
 
 ##Aktualizace Portálu společnosti
@@ -249,9 +249,9 @@ Další informace najdete v [tomto příspěvku blogu](https://blogs.technet.mic
 
 
 ### Správa aplikací
-- **MAM SDK: Podpora konfigurace délky PIN kódu.** Bude možné zadat délku PIN kódu pro aplikace MAM podobně, jako je tomu u PIN kódu zařízení. Bude tak nutné, aby koncoví uživatelé dodrželi nová omezení, která nastavíte. Zobrazí se jim mírně upravená obrazovka pro zadání PIN kódu, ve které je teď delší pole pro jeho zadání. Podrobnosti najdete v tématu [Nastavení zásad MAM pro Android](android-mam-policy-settings.md) a [Nastavení zásad MAM pro iOS](ios-mam-policy-settings.md).
+- **MAM SDK: Podpora konfigurace délky PIN kódu.** Bude možné zadat délku PIN kódu pro aplikace MAM podobně, jako je tomu u PIN kódu zařízení. Bude tak nutné, aby koncoví uživatelé dodrželi nová omezení, která nastavíte. Zobrazí se jim mírně upravená obrazovka pro zadání PIN kódu, ve které je teď delší pole pro jeho zadání. Podrobnosti najdete v tématu [Nastavení zásad MAM pro Android](/intune/deploy-use/android-mam-policy-settings) a [Nastavení zásad MAM pro iOS](/intune/deploy-use/ios-mam-policy-settings).
 
-- **Skype pro firmy pro iOS a Android.** Nyní můžete cílit na Skype pro firmy se [správou mobilních aplikací (MAM) bez zásad registrace](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md). Jakmile se uživatelé přihlásí, aplikují se zásady MAM.
+- **Skype pro firmy pro iOS a Android.** Nyní můžete cílit na Skype pro firmy se [správou mobilních aplikací (MAM) bez zásad registrace](/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune). Jakmile se uživatelé přihlásí, aplikují se zásady MAM.
 
 - **Pro správu pomocí zásad MAM jsou teď dostupné nové aplikace.** Na zařízeních, která nejsou zaregistrovaná v Intune, je teď možné přidružit k zásadám MAM aplikace Microsoft Word, Excel a PowerPoint pro Android. Úplný seznam podporovaných aplikací najdete v galerii mobilních aplikací Microsoft Intune na stránce [aplikací pro Microsoft Intune od partnerů](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx).
 
@@ -305,7 +305,7 @@ Pravidla oznámení Intune definují, komu se budou z Intune odesílat e-mailov�
 Všechny tyto funkce jsou také podporovány pro zákazníky, kteří v současné době využívají hybridní řešení (nástroj Configuration Manager integrovaný s Intune).
 ### Správa aplikací
 - **MAM – dodržování předpisů uživateli.**
-Nyní můžete zobrazit [stav](monitor-mobile-app-management-policies-with-Microsoft-Intune.md) zásad správy aplikací pro všechny uživatele ve vašem tenantovi Azure Active Directory (AAD). Patří mezi ně:
+Nyní můžete zobrazit [stav](/intune/deploy-use/monitor-mobile-app-management-policies-with-Microsoft-Intune) zásad správy aplikací pro všechny uživatele ve vašem tenantovi Azure Active Directory (AAD). Patří mezi ně:
    - Zařízení
    - Aplikace na zařízení
 
@@ -317,7 +317,7 @@ Nyní můžete zobrazit [stav](monitor-mobile-app-management-policies-with-Micro
 
 
 - **Kontrolní mechanismy správy mobilních aplikací (MAM) pro zabránění synchronizace kontaktů Outlooku (Android).**
-Je k dispozici nové nastavení pro [správu mobilních aplikací](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md) bez registrace zařízení. Toto nastavení vám umožňuje zabránit aplikaci v synchronizaci kontaktů s nativním adresářem na zařízeních s Androidem. Pokud je toto nastavení povoleno, cílové aplikace již nebudou nadále moci ukládat kontakty do nativního adresáře. Pokud je toto nastavení zakázáno, cílové aplikace nebudou moci ukládat kontakty do nativního adresáře. Když se rozhodnete [vymazat zařízení nebo aplikaci](wipe-managed-company-app-data-with-Microsoft-Intune.md), budou odebrány všechny kontakty, které byly uloženy do nativního adresáře. Toto nové nastavení je ve výchozím nastavení podporováno v aplikaci Outlook na zařízeních s Androidem.
+Je k dispozici nové nastavení pro [správu mobilních aplikací](/intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune) bez registrace zařízení. Toto nastavení vám umožňuje zabránit aplikaci v synchronizaci kontaktů s nativním adresářem na zařízeních s Androidem. Pokud je toto nastavení povoleno, cílové aplikace již nebudou nadále moci ukládat kontakty do nativního adresáře. Pokud je toto nastavení zakázáno, cílové aplikace nebudou moci ukládat kontakty do nativního adresáře. Když se rozhodnete [vymazat zařízení nebo aplikaci](/intune/deploy-use/wipe-managed-company-app-data-with-Microsoft-Intune), budou odebrány všechny kontakty, které byly uloženy do nativního adresáře. Toto nové nastavení je ve výchozím nastavení podporováno v aplikaci Outlook na zařízeních s Androidem.
 
 ### Správa zařízení
 - **Identifikace telefonního čísla pro zařízení vlastněná společností.** Telefony, které jsou klasifikovány jako Podnikové, jsou nyní označeny úplným telefonním číslem, když například spustíte sestavu inventáře mobilních zařízení. Telefonní čísla osobních zařízení zaměstnanců (BYOD) jsou nadále maskována hvězdičkami (****). Zobrazují se pouze poslední 4 číslice.
@@ -377,7 +377,7 @@ S výjimkou aktualizace obecných zásad konfigurace Windows 10 jsou všechny fu
 
 ### Správa aplikací
 
-- **Využívání výhod správy „Open In“ systému iOS pro zařízení zaregistrovaná v řešení MDM třetí strany** Prostřednictvím dodavatele správy mobilních zařízení (MDM) třetí strany management (MDM) můžete využívat výhody správy „Open In“ v systému iOS. V rámci nastavení konfiguračního profilu můžete nastavit omezení a implementovat aplikaci podle tématu [Správa přenosu dat mezi aplikacemi pro iOS](manage-data-transfer-between-ios-apps-with-microsoft-intune.md).
+- **Využívání výhod správy „Open In“ systému iOS pro zařízení zaregistrovaná v řešení MDM třetí strany** Prostřednictvím dodavatele správy mobilních zařízení (MDM) třetí strany management (MDM) můžete využívat výhody správy „Open In“ v systému iOS. V rámci nastavení konfiguračního profilu můžete nastavit omezení a implementovat aplikaci podle tématu [Správa přenosu dat mezi aplikacemi pro iOS](/intune/deploy-use/manage-data-transfer-between-ios-apps-with-microsoft-intune).
 
      Tento přístup má dvě hlavní výhody:
 
@@ -388,22 +388,22 @@ S výjimkou aktualizace obecných zásad konfigurace Windows 10 jsou všechny fu
 - **Správa aplikace Microsoft Outlook se zásadami MAM pro zařízení, která nejsou zaregistrovaná v Intune** Teď můžete spravovat aplikaci Microsoft Outlook na zařízeních, která nejsou zaregistrovaná v Intune, pomocí zásad správy mobilních aplikací Intune. Aktualizovaná aplikace Microsoft Outlook s podporou funkcí MAM je dostupná pro zařízení se systémem [iOS](https://itunes.apple.com/us/app/microsoft-outlook-email-calendar/id951937596?mt=8) i [Android](https://play.google.com/store/apps/details?id=com.microsoft.office.outlook). Zásadu MAM můžete vytvořit podle pokynů v tématu [Vytvoření a nasazení zásad správy mobilních aplikací](https://technet.microsoft.com/library/mt627829.aspx).  
 
 
-- **Zásady konfigurace mobilní aplikace poskytují větší flexibilitu, chcete-li zadat podrobnosti uživatele pro aplikace v iOS** Můžete zadat uživatelská nastavení, která může při spuštění vyžadovat aplikace v iOS. Můžete třeba zadat síťový port nebo uživatelské jméno. Podrobnosti najdete v tématu [Konfigurace aplikací pro iOS pomocí zásad konfigurace mobilních aplikací v Microsoft Intune](configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune.md).
+- **Zásady konfigurace mobilní aplikace poskytují větší flexibilitu, chcete-li zadat podrobnosti uživatele pro aplikace v iOS** Můžete zadat uživatelská nastavení, která může při spuštění vyžadovat aplikace v iOS. Můžete třeba zadat síťový port nebo uživatelské jméno. Podrobnosti najdete v tématu [Konfigurace aplikací pro iOS pomocí zásad konfigurace mobilních aplikací v Microsoft Intune](/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune).
 
 
 - **Nasazení aplikace Adobe Reader pro Microsoft Intune na zařízení s iOS spravovaná pomocí Intune ve vašem podniku** Teď můžete spravovat aplikaci Adobe Reader pro iOS na registrovaných zařízeních pomocí zásad správy mobilních aplikací Intune.
 
-- **Zajištění otevírání nasazených webových klipů ve spravovaném prohlížeči** Můžete nasazovat cílové webové klipy, které se dají na zařízeních s iOS nebo Androidem otevřít jenom pomocí spravovaného prohlížeče. Můžete třeba nasadit odkazy na podnikové prostředky prostřednictvím Portálu společnosti, a když na ně uživatelé přejdou, příslušné stránky se otevřou přímo ve spravovaném prohlížeči, kde je chrání zásady MAM. Podrobnosti najdete v tématu [Nasazení aplikací](deploy-apps.md).
+- **Zajištění otevírání nasazených webových klipů ve spravovaném prohlížeči** Můžete nasazovat cílové webové klipy, které se dají na zařízeních s iOS nebo Androidem otevřít jenom pomocí spravovaného prohlížeče. Můžete třeba nasadit odkazy na podnikové prostředky prostřednictvím Portálu společnosti, a když na ně uživatelé přejdou, příslušné stránky se otevřou přímo ve spravovaném prohlížeči, kde je chrání zásady MAM. Podrobnosti najdete v tématu [Nasazení aplikací](/intune/deploy-use/deploy-apps).
 
 
-- **Hledání, správa a distribuce aplikací Windows Store pro firmy zařízení s Windows 10 z konzoly správce Intune** Intune nabízí podporu služby Windows Store pro firmy, která umožňuje hledat, spravovat a distribuovat aplikace pro spravovaná zařízení s Windows 10. Windows Store pro firmy umožňuje spravovat proces nasazení a monitorování těchto aplikací z konzoly pro správu služby Intune, kterou používáte i ke správě jiných aplikací. Windows Store pro firmy konkrétně spravuje obsah a licence „online licencovaných aplikací“. Podrobnosti najdete v tématu [Správa aplikací zakoupených ve Windows Store pro firmy](manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune.md).
+- **Hledání, správa a distribuce aplikací Windows Store pro firmy zařízení s Windows 10 z konzoly správce Intune** Intune nabízí podporu služby Windows Store pro firmy, která umožňuje hledat, spravovat a distribuovat aplikace pro spravovaná zařízení s Windows 10. Windows Store pro firmy umožňuje spravovat proces nasazení a monitorování těchto aplikací z konzoly pro správu služby Intune, kterou používáte i ke správě jiných aplikací. Windows Store pro firmy konkrétně spravuje obsah a licence „online licencovaných aplikací“. Podrobnosti najdete v tématu [Správa aplikací zakoupených ve Windows Store pro firmy](/intune/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune).
 
 
 ### Správa zařízení
-- **Distribuce certifikátů PFX pro zařízení s iOS** Správci Intune můžou vytvářet a nasazovat certifikáty PFX systému iOS pro ověřování Wi-Fi, e-mailu a VPN na zařízeních s iOS. Tato funkce je už dostupná pro zařízení se systémy Android a Windows 10. Podrobnosti najdete v tématu [Povolení přístupu k firemním prostředkům pomocí profilů certifikátů](secure-resource-access-with-certificate-profiles.md).
+- **Distribuce certifikátů PFX pro zařízení s iOS** Správci Intune můžou vytvářet a nasazovat certifikáty PFX systému iOS pro ověřování Wi-Fi, e-mailu a VPN na zařízeních s iOS. Tato funkce je už dostupná pro zařízení se systémy Android a Windows 10. Podrobnosti najdete v tématu [Povolení přístupu k firemním prostředkům pomocí profilů certifikátů](/intune/deploy-use/secure-resource-access-with-certificate-profiles).
 
 
-- **Použití aplikací a zásad v různých skupinách zařízení na základě výběru kategorie uživatelem** Správci Intune teď můžou určit vlastní kategorie zařízení, ze kterých si budou uživatelé vybírat při registraci. Správci třeba můžou chtít, aby jejich uživatelé zadali, jestli registrují zařízení typu „Pokladna“, „Nákladní vůz“ nebo „Sklad inventáře“. Na základě vybrané kategorie se zařízení stane členem skupiny zařízení služby Intune, pomocí které se dají na zaregistrované zařízení nasazovat různé aplikace a zásady. Podrobnosti najdete v tématu [Kategorizace zařízení pomocí mapování skupin zařízení](categorize-devices-with-device-group-mapping-in-microsoft-intune.md).
+- **Použití aplikací a zásad v různých skupinách zařízení na základě výběru kategorie uživatelem** Správci Intune teď můžou určit vlastní kategorie zařízení, ze kterých si budou uživatelé vybírat při registraci. Správci třeba můžou chtít, aby jejich uživatelé zadali, jestli registrují zařízení typu „Pokladna“, „Nákladní vůz“ nebo „Sklad inventáře“. Na základě vybrané kategorie se zařízení stane členem skupiny zařízení služby Intune, pomocí které se dají na zaregistrované zařízení nasazovat různé aplikace a zásady. Podrobnosti najdete v tématu [Kategorizace zařízení pomocí mapování skupin zařízení](/intune/deploy-use/categorize-devices-with-device-group-mapping-in-microsoft-intune).
 
 ### Změny a aktualizace Portálu společnosti Microsoft
 V této verzi došlo k následujícím změnám Portálu společnosti.
@@ -447,9 +447,9 @@ V této verzi došlo k následujícím změnám Portálu společnosti.
     * Zabezpečené spouštění
     * Integrita kódu
 
-    Další podrobnosti o nastavení ověření stavu zařízení, shromážděných datových bodech a sestavě ověření stavu najdete v tématu [Úvod do zásad dodržování předpisů zařízeními pro Microsoft Intune](introduction-to-device-compliance-policies-in-microsoft-intune.md). Článek [Podrobnosti o službě HAS](https://msdn.microsoft.com/en-us/library/dn934876.aspx) obsahuje podrobné vysvětlení této služby.
+    Další podrobnosti o nastavení ověření stavu zařízení, shromážděných datových bodech a sestavě ověření stavu najdete v tématu [Úvod do zásad dodržování předpisů zařízeními pro Microsoft Intune](/intune/deploy-use/introduction-to-device-compliance-policies-in-microsoft-intune). Článek [Podrobnosti o službě HAS](https://msdn.microsoft.com/en-us/library/dn934876.aspx) obsahuje podrobné vysvětlení této služby.
 
-* **Windows 10 Passport for Work – správa zásad a certifikátů** Služba Intune umožňuje [integraci se službou Microsoft Passport for Work](control-microsoft-passport-settings-on-devices-with-microsoft-intune.md). Je to alternativní metoda pro přihlašování do Windows 10 pomocí účtu služby Active Directory nebo Azure Active Directory, která může nahradit hesla, čipové karty a virtuální čipové karty. Služba Passport umožňuje používat k přihlášení gesto uživatele místo hesla. Gesto uživatele může být jednoduchý PIN kód, biometrické ověřování jako třeba Windows Hello nebo externí zařízení, jako je třeba čtečka otisků prstů.
+* **Windows 10 Passport for Work – správa zásad a certifikátů** Služba Intune umožňuje [integraci se službou Microsoft Passport for Work](/intune/deploy-use/control-microsoft-passport-settings-on-devices-with-microsoft-intune). Je to alternativní metoda pro přihlašování do Windows 10 pomocí účtu služby Active Directory nebo Azure Active Directory, která může nahradit hesla, čipové karty a virtuální čipové karty. Služba Passport umožňuje používat k přihlášení gesto uživatele místo hesla. Gesto uživatele může být jednoduchý PIN kód, biometrické ověřování jako třeba Windows Hello nebo externí zařízení, jako je třeba čtečka otisků prstů.
 
 * **Síť VPN pro konkrétní aplikace** Můžete vybrat aplikace, které se můžou automaticky připojit k podnikové síti prostřednictvím sítě VPN. Seznam aplikací vytvoříte při nastavování profilu sítě VPN, jak popisuje téma Pomoc uživatelům s připojením k práci pomocí profilů sítě VPN v Microsoft Intune.
 
@@ -457,10 +457,10 @@ V této verzi došlo k následujícím změnám Portálu společnosti.
 
 
 ### Aktualizace programu Apple VPP (Volume Purchase Program)
-Intune vám teď může pomoct se [správou aplikací zakoupených prostřednictvím programu Apple VPP (Volume Purchase Program) pro firmy](manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune.md). Tato pomoc zahrnuje synchronizaci licenčních informací mezi společností Apple a službou Intune a sledování počtu nasazených kopií jednotlivých aplikací.
+Intune vám teď může pomoct se [správou aplikací zakoupených prostřednictvím programu Apple VPP (Volume Purchase Program) pro firmy](/intune/deploy-use/manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune). Tato pomoc zahrnuje synchronizaci licenčních informací mezi společností Apple a službou Intune a sledování počtu nasazených kopií jednotlivých aplikací.
 
 ### Identifikace zařízení patřících společnosti pomocí kódů IMEI
-Teď můžete [importovat identifikační kódy IMEI (International Mobile Equipment Identity)](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md) pro platformy mobilních zařízení vybavených kódy IMEI. Ty vám pomůžou identifikovat mobilní zařízení patřící společnosti. Po registraci do Intune jsou zařízení s importovanými kódy IMEI označená jako firemní. Tato informace se dá využít k uplatnění zásad, které se liší od zásad používaných na soukromých zařízeních.
+Teď můžete [importovat identifikační kódy IMEI (International Mobile Equipment Identity)](/intune/deploy-use/specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers) pro platformy mobilních zařízení vybavených kódy IMEI. Ty vám pomůžou identifikovat mobilní zařízení patřící společnosti. Po registraci do Intune jsou zařízení s importovanými kódy IMEI označená jako firemní. Tato informace se dá využít k uplatnění zásad, které se liší od zásad používaných na soukromých zařízeních.
 
 ### Se zásadami MAM služby Intune je teď kompatibilní větší množství aplikací
 Se zásadami správy mobilních aplikací (MAM) ve službě Intune jsou teď kompatibilní další aplikace od partnerů Microsoftu (pro zařízení spravovaná pomocí Intune):
@@ -479,6 +479,6 @@ Od února 2016 už Internet Explorer 9 nebude podporovaný jako oficiální proh
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO1-->
 
 

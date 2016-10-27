@@ -1,5 +1,5 @@
 ---
-title: "Jste vyzváni k instalaci aplikace Lookout for Work | Microsoft Intune"
+title: "Zobrazí se výzva k instalaci aplikace Lookout for Work na zařízení s Androidem | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
@@ -12,19 +12,18 @@ ms.technology:
 ms.assetid: 0d357dc0-3e14-43d0-9874-6886ebc847fc
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: e1f0ee69c16c48932c7ea1fefff03f6f35416865
-ms.openlocfilehash: 82f99577b674050d20362204b1032ad3992c7d9a
+ms.sourcegitcommit: dd08b2e454b14c82e1dd9704617b32ac86ff7790
+ms.openlocfilehash: 53a239f574c327be461663872545bda63ac4b7a5
 
 
 ---
 
 # Jste vyzváni k instalaci aplikace Lookout for Work
 
-Pokud se zobrazí zpráva „Není nainstalovaná a aktivovaná aplikace Lookout for Work.“, znamená to, že správce IT požaduje instalaci této aplikace, aby chránila vaše zařízení preventivním vyhledáváním možných bezpečnostních hrozeb.
+Než budete moci začít pracovat, správce IT potřebuje, abyste nainstalovali aplikaci Lookout for Work. Ta pomáhá chránit vaše zařízení hledáním potenciálních bezpečnostních hrozeb.
 
-![musíte vyřešit problém s dodržením předpisů](./media/lookout-resolve-compliance-issues_expanded-android.png)
 
-**Postup řešení tohoto problému:**
+**Co je potřeba udělat:**
 
 1.  Tažením shora obrazovky otevřete panel oznámení a potom klepněte na **Požadovaná aplikace – nainstalujte Lookout for Work z obchodu Play**.
 
@@ -32,7 +31,7 @@ Pokud se zobrazí zpráva „Není nainstalovaná a aktivovaná aplikace Lookout
 
     Potom se přesunete na instalační stránku aplikace Lookout for Work v obchodě Play.
 
-2.  Nainstalujte Lookout for Work a klepněte na **PŘIJMOUT**, aby aplikace získala přístup k vašemu zařízení.
+2.  Nainstalujte Lookout for Work a klepněte na **PŘIJMOUT**, aby aplikace Lookout for Work získala přístup k vašemu zařízení.
 
     ![klepnutím na přijmout umožněte aplikaci Lookout for Work přístup k vašemu zařízení](./media/lookout-accept-store-permissions-android.png)
 
@@ -40,9 +39,9 @@ Pokud se zobrazí zpráva „Není nainstalovaná a aktivovaná aplikace Lookout
 
     ![otevřete Lookout for Work a klepněte na Aktivovat](./media/lookout-activate-button-android.png)
 
-4. Klepněte na **Přihlásit se pomocí pracovního účtu** a zadejte účet, který používáte pro přístup k pracovním nebo školním e-mailům, souborům a ostatním datům.
+4. Klepněte na **Přihlásit se pomocí Azure Active Directory** a zadejte účet, který používáte pro přístup k pracovním nebo školním e-mailům a souborům.
 
-    ![přihlaste se pomocí svého pracovního nebo školního účtu](./media/lookout-sign-in-android.png)
+    ![přihlaste se pomocí svého pracovního nebo školního účtu](./media/lookout-sign-in-azure-android.png)
 
 5. Vyberte účet, který používáte pro přístup k pracovním nebo školním e-mailům a souborům, a potom klepněte na **PŘIDAT ÚČET**.
 
@@ -79,6 +78,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní 
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO4-->
 
 

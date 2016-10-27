@@ -3,6 +3,7 @@ title: "Ochrana aplikačních dat pomocí zásad MAM | Microsoft Intune"
 description: "Toto téma vysvětluje, jak zásady správy mobilních aplikací můžou pomoct chránit firemní data, bránit ztrátě dat a oddělovat osobní a pracovní informace."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/18/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 6163f2b2a1c562e5315785b8b4c486fe2347f89d
+ms.sourcegitcommit: 389daf0ed39fa2cd4b2e5d6e52cbd6809a568c9e
+ms.openlocfilehash: e751619f6d65e10099d1f8ff5a2342185181af69
 
 
 ---
@@ -122,8 +123,6 @@ Aplikace, které podporují víc identit, umožňují pro přístup používat r
 
 Pokud třeba koncový uživatel spustí aplikaci OneDrive pomocí svého pracovního účtu, nemůže přesunout soubory do svého osobního úložiště. Pokud ale koncový uživatel použije OneDrive se svým osobním účtem, může kopírovat a přesouvat data ze svého osobního OneDrivu bez omezení.  
 
-Podrobné vysvětlení postupu při použití aplikací, které jsou přidružené k zásadám MAM, a to, jakým způsobem aplikace s podporou víc identit umožňují uplatnění zásad MAM jenom v pracovním kontextu, najdete v tématu věnovaném [použití aplikací s podporou víc identit](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md#using-apps-with-multi-identity-support).
-
 Všechny mobilní aplikace Office podporují více identit.
 
 ##  Další kroky
@@ -133,6 +132,6 @@ Všechny mobilní aplikace Office podporují více identit.
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

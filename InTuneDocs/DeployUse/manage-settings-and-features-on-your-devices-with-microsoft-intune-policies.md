@@ -3,8 +3,9 @@ title: "Správa nastavení zařízení v Microsoft Intune pomocí zásad | Micro
 description: "Pomocí Intune můžete vytvořit a nasadit zásady, které řídí nastavení a funkce na zaregistrovaných zařízeních, která spravujete."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 08/24/2016
+ms.date: 10/11/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: 09bae0b9-4f79-4658-8ca1-a71ab992c1b2
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fa665c758460b8bbd95b237da6a22eda741b8b95
-ms.openlocfilehash: 0dc10ea029d078840a584424f7900f340189b960
+ms.sourcegitcommit: e95db6d0ccbe350984f11ce08749b700c2f5ad01
+ms.openlocfilehash: 058843a1cdd0ca4c32c7cc4d7a901e7547da633e
 
 
 ---
@@ -61,6 +62,7 @@ Podrobnosti najdete v tématu [Povolení přístupu k prostředkům společnosti
 
     - [Nastavení pro zařízení se systémem iOS](ios-policy-settings-in-microsoft-intune.md)
     - [Nastavení pro zařízení se systémem Android](android-policy-settings-in-microsoft-intune.md)
+    - [Nastavení pro zařízení s Androidem for Work](android-for-work-policy-settings-in-microsoft-intune.md)
     - [Nastavení pro zařízení s Windows 8 a Windows 8.1](windows-configuration-policy-settings-in-microsoft-intune.md)
     - [Nastavení pro zařízení Windows Phone 8.1](windows-phone-8-1-policy-settings-in-microsoft-intune.md)
     - [Nastavení pro stolní počítače a mobilní zařízení s Windows 10](windows-10-policy-settings-in-microsoft-intune.md)
@@ -115,7 +117,6 @@ Pokud se zařízení neohlásí po odeslání prvního oznámení, Intune proved
 - iOS a Mac OS X: Každých 6 hodin.
 - Android: Každých 8 hodin.
 - Windows Phone: Každých 8 hodin.
-- Zaregistrovaná zařízení s Windows RT: Každých 24 hodin.
 - Počítače s Windows 8.1 a Windows 10 zaregistrované jako zařízení: Každých 8 hodin.
 
 Pokud se zařízení právě zaregistrovalo, četnost ohlašování bude vyšší:
@@ -212,6 +213,6 @@ Projděte si téma [Řešení potíží se zásadami v Microsoft Intune](/intune
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

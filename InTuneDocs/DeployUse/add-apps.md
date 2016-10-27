@@ -3,6 +3,7 @@ title: "Přidávání aplikací | Microsoft Intune"
 description: "Před zahájením nasazování aplikací s Intune se seznamte s koncepty představenými v tomto tématu."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article

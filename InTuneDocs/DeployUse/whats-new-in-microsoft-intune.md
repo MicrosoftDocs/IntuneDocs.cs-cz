@@ -4,7 +4,7 @@ description: "Zjistěte, co je nového v aktualizací služby Microsoft Intune v
 keywords: 
 author: barlanmsft
 manager: angrobe
-ms.date: 09/22/2016
+ms.date: 09/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,12 +13,11 @@ ms.assetid: fab51ee0-638d-4dd4-8d8f-1f263bc11e5c
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5b3256852431efb83fb2cc9fa067dd3f4a68a050
-ms.openlocfilehash: cef0a26204a22c95d2b639500246e435fcf7f9f7
+ms.sourcegitcommit: ecf43b38e9593375981770583220d4ce2dfd709f
+ms.openlocfilehash: 32610d4138fba82e034cc7dadccc09e0a6d31cd3
 
 
 ---
-
 # Co je nového v Microsoft Intune – září
 Zjistěte, co je nového v této verzi Microsoft Intune. Můžete také získat informace o nadcházejících změnách, se kterými byste měli počítat, a o minulých verzích.
 
@@ -28,6 +27,19 @@ Všechny tyto funkce budou posléze podporované pro zákazníky využívající
 >[!IMPORTANT]
 >Příspěvek blogu – aktualizace mobilních zařízení pomocí Microsoft Intune<br>
 >S ohledem na nedávné útoky malwaru Trident na zařízení s iOS jsme zveřejnili nový příspěvek blogu věnovaný [zajištění aktuálnosti mobilních zařízení pomocí Microsoft Intune](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/26/ensuring-mobile-devices-are-up-to-date-using-microsoft-intune/). Pomůže vám seznámit se s různými způsoby, kterými Intune může zajistit zabezpečení a aktuálnost vašich zařízení.
+
+## Nové funkce, oznámení a informace
+* [Podmíněný přístup pro Windows](#windows-conditional-access)
+* [Podpora pro iOS 10](#ios-10-support)
+* [Nástroj App Wrapping podporuje MAM bez registrace zařízení pro Android a iOS](#app-wrapping-tool-supports-mam-without-device-enrollment-for-android-and-ios)
+* [Přechod od skupin Intune ke skupinám Azure Active Directory od září](#intune-groups-begin-transitioning-to-azure-active-directory-in-september)
+* [Integrace aplikace Lookout pro ochranu zařízení s Androidem](#lookout-integration-to-protect-android-devices)
+* [Aktualizace aplikace Portál společnosti pro Android, iOS a Windows](#company-portal-updates)
+* [Glosář služby Intune](#intune-glossary)
+* [Co připravujeme](#whats-coming)
+
+## Podmíněný přístup pro Windows
+Nově můžete přes konzolu správce Intune vytvářet zásady podmíněného přístupu, které budou počítačům s Windows blokovat přístup ke službám Exchange Online a SharePoint Online. Taky můžete vytvářet zásady podmíněného přístupu, které budou blokovat přístup k desktopovým a univerzálním aplikacím Office. 
 
 ## Podpora pro iOS 10
 Stávající scénáře Intune MDM a MAM jsou kompatibilní se systémem iOS 10. Tipy naleznete na [blogu týmu podpory služby Intune](https://blogs.technet.microsoft.com/intunesupport/2016/09/13/support-tip-intune-support-for-ios-10/).
@@ -101,6 +113,10 @@ Pokud jste nakonfigurovali webový klip tak, aby se otevíral jenom ve spravovan
 Portál společnosti pro Windows Phone 8.1 koncovým uživatelům umožňuje odeslat zpětnou vazbu o aplikaci. Slouží k tomu tlačítko „Odeslat názor“. Tlačítko najdete tak, že klepnete na třítečkovou nabídku v dolní pravé části obrazovky aplikace Portál společnosti a potom na **Odeslat názor**. Shromážděná anonymizovaná zpětná vazba pomůže Microsoftu zlepšit prostředí aplikace Portál společnosti.
 <!---TFS 1317806--->
 
+## Glosář služby Intune</br>
+Do knihovny jsme přidali nové téma [Glosář](https://docs.microsoft.com/intune/understand-explore/intune-glossary), abychom vám pomohli správně chápat některé termíny používané ve službě Intune.
+
+----------
 
 ## Co připravujeme
 
@@ -125,27 +141,18 @@ Kromě změn ve správě skupin se také **přestanou používat následující 
 Budete moci omezit přístup ke službám Exchange Online a SharePoint Online tak, aby k nim bylo možné přistupovat jenom z mobilních aplikací Office, jako jsou Outlook, Word, Excel a OneDrive. Tato nová funkce vhodně doplňuje zásady správy mobilních aplikací (MAM) Intune, protože vám umožní blokovat přístup do integrovaných klientů elektronické pošty nebo dalších aplikací, které nebyly nakonfigurovány na vynucování zásad Intune MAM. Tím zajistíte, že uživatelé mají přístup k datům vaší organizace prostřednictvím aplikací, které mohou být chráněny pomocí služby Intune MAM. Se správou mobilních aplikací Intune můžete začít prostřednictvím webu Azure Portal. V okně Nastavení hledejte novou sekci Podmíněný přístup.
 
 
-
 ### Zastaralá služba
 
 - **Aplikace Portál společnosti pro Windows 8 a Windows Phone 8 se přestanou používat** <br/>
 Od října 2016 přestane Microsoft Intune poskytovat podporu aplikacím Portál společnosti pro Windows 8 a Windows Phone 8. Microsoft Intune také přestat poskytovat podporu pro platformu Windows Phone 8. V důsledku toho nebude možné registrovat ani aktualizovat žádná zařízení Windows Phone 8. Zařízení Windows Phone 8 a Windows 8, která jsou již zaregistrována, můžete nadále spravovat. Pokud budete chtít do zařízení s těmito systémy dál bez přerušení distribuovat aplikace, aktualizujte si zařízení Windows 8 a Windows Phone 8 na Windows 8.1 a Windows Phone 8.1 a začněte používat odpovídající aplikaci Portál společnosti pro Windows 8.1 a Windows Phone 8.1.
 
-
-
-### Průvodce cloudem
-Udržujte si přehled o budoucích novinkách pro Intune díky [průvodci cloudovou platformou](http://www.microsoft.com/en-us/server-cloud/roadmap/Indevelopment.aspx?TabIndex=0&dropValue=Intune).
-
-
-## Předchozí verze Intune
-Informace o tom, co bylo vydáno v rámci Intune během posledních šest měsíců, najdete v článku [Předchozí verze Intune](previous-intune-releases.md).
-
-### Související témata
+### Viz taky
 * [Blog Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
 * [Plán cloudové platformy](http://www.microsoft.com/en-us/server-cloud/roadmap/Indevelopment.aspx?TabIndex=0&dropValue=Intune)
+* [Předchozí verze Intune](previous-intune-releases.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: dc451224-1372-4b84-b641-cfa67cb3849b
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 06d6c8ce97ba6a259055e94f0eba87f7c5a96531
-ms.openlocfilehash: e61e764f4761ab83500ff6f0febe253d427729d9
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: 263fb9add8d30c0f98af46e46b566f15513db109
 
 
 ---
@@ -22,10 +22,10 @@ ms.openlocfilehash: e61e764f4761ab83500ff6f0febe253d427729d9
 # Nastavení správy zařízení s iOS a Mac
 Pokud chcete nastavit zařízení s iOS nebo Mac, najdete pomoc [tady](../enduser/using-your-ios-or-mac-os-x-device-with-intune.md).
 
-Intune poskytuje správu mobilních zařízení pro zařízení iPad a iPhone a zařízení s Mac OS X a přístup k firemním e-mailům a aplikacím. Intune potřebuje pro správu zařízení s iOS a Mac certifikát APNs (Apple Push Notification service) od společnosti Apple. Jakmile se certifikát do služby Intune přidá, uživatelé mohou nainstalovat aplikaci Portál společnosti a registrovat svá zařízení, nebo správce může nastavit [správu zařízení s iOS vlastněných společností](enroll-corporate-owned-ios-devices-in-microsoft-intune.md).
+Intune umožňuje správu mobilních zařízení pro iPady, iPhony a zařízení s Mac OS X a poskytuje uživatelům přístup k firemním e-mailům a aplikacím. Intune potřebuje pro správu zařízení s iOS a Mac certifikát APNs (Apple Push Notification service) od společnosti Apple. Jakmile se certifikát do služby Intune přidá, uživatelé mohou nainstalovat aplikaci Portál společnosti a registrovat svá zařízení, nebo správce může nastavit [správu zařízení s iOS vlastněných společností](enroll-corporate-owned-ios-devices-in-microsoft-intune.md).
 
 1.  **Nastavení Intune**<br>
-    Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení [nastavením autority pro správu mobilních zařízení](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority) na **Microsoft Intune** a nastavením správy MDM.
+    Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení [nastavením autority pro správu mobilních zařízení](prerequisites-for-enrollment.md#set-mobile-device-management-authority) na **Microsoft Intune** a nastavením správy MDM.
 
 2.  **Získání žádosti o podepsání certifikátu**<br>
     Jako uživatel s oprávněním správce otevřete [konzolu pro správu Microsoft Intune](http://manage.microsoft.com), přejděte na **Správa** &gt; **Správa mobilních zařízení** &gt; **iOS a Mac OS X** &gt; **Nahrát na server certifikát služby APN** a klikněte na **Stáhnout žádost certifikátu služby APN**. Uložte soubor žádosti o podepsání certifikátu (.csr) místně. Soubor .csr slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple Push Certificates Portal.
@@ -48,10 +48,10 @@ Intune poskytuje správu mobilních zařízení pro zařízení iPad a iPhone a 
 Pokud vaše společnost nebo organizace zakoupí pro uživatele zařízení s iOS, mohou být zaregistrovaná ke správě jako [zařízení s iOS vlastněná společností](enroll-corporate-owned-ios-devices-in-microsoft-intune.md).
 
 ### Viz také
-[Příprava registrace zařízení v Microsoft Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
+[Předpoklady pro registraci do Microsoft Intune](prerequisites-for-enrollment.md)
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Sep16_HO4-->
 
 

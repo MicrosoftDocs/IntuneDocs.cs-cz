@@ -4,6 +4,7 @@ title:
 description: "V tématu popisujeme, jak otestovat a ověřit, jestli jste správně nastavili zásady MAM a ty fungují podle očekávání."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angerobe
 ms.date: 08/16/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.technology:
 ms.assetid: 41d82597-e13e-4c3e-9151-e71392236ca0
 ms.reviewer: joglocke
 translationtype: Human Translation
-ms.sourcegitcommit: 52d9301f6297065f752cea1dd19024efb11f0730
-ms.openlocfilehash: a92334871301523c33f7453038df3ae0fc1fd1a4
+ms.sourcegitcommit: 0736b5f24065f55d8fbd312395e4bb7226ebf619
+ms.openlocfilehash: 5b6253d3d4c969b6947d83b5c8695a484f8c1d27
 
 
 ---
@@ -24,10 +25,10 @@ ms.openlocfilehash: a92334871301523c33f7453038df3ae0fc1fd1a4
 Toto téma obsahuje informace o tom, jak zkontrolovat, jestli vám správa mobilních aplikací (MAM) funguje bez problémů. Návod se vztahuje k zásadám MAM na webu Azure Portal.
 
 ### Zjišťování příznaků
-Není pravděpodobné, že by problém nahlásili uživatelé, protože MAM je nástroj na ochranu dat. Pokud je s konfigurací MAM nějaký problém, uživatelé budou mít stejně neomezený přístup jako bez MAM a potíží si nevšimnou. Proto doporučujeme, abyste konfiguraci MAM prověřili s malou skupinou uživatelů, kteří mohou omezení MAM cíleně vyzkoušet. 
+Není pravděpodobné, že by problém nahlásili uživatelé, protože MAM je nástroj na ochranu dat. Pokud je s konfigurací MAM nějaký problém, uživatelé budou mít stejně neomezený přístup jako bez MAM a potíží si nevšimnou. Proto doporučujeme, abyste konfiguraci MAM prověřili s malou skupinou uživatelů, kteří mohou omezení MAM cíleně vyzkoušet.
 
 
-### Co zkontrolovat 
+### Co zkontrolovat
 
 Pokud testování odhalí, že zásady MAM nepřináší očekávané výsledky, doporučujeme zkontrolovat následující:
 
@@ -40,7 +41,7 @@ Pokud testování odhalí, že zásady MAM nepřináší očekávané výsledky,
 
 2. Vyberte uživatele ze seznamu nebo ho vyhledejte, pak vyberte a klikněte na **Vybrat uživatele**. V horní části sloupce **Sestavy aplikace** uvidíte, jestli má uživatel licenci k MAM. Níže se zobrazí, jestli má licenci k O365 a jaký je stav aplikace na všech jeho zařízeních.
 
-![Stav aplikace v rámci MAM](..\media\ts-mam-use-apps.png) 
+![Stav aplikace v rámci MAM](..\media\ts-mam-user-apps.png) 
 
 ### Co dělat
 Postupujte podle stavu uživatele:
@@ -57,6 +58,6 @@ Postupujte podle stavu uživatele:
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 

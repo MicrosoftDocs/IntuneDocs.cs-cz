@@ -3,19 +3,20 @@ experimental: true
 experiment_id: lindavr-hubpage-20160925
 asset_id: 3414479e-e548-4753-bcf7-6322b43221fd
 layout: HubPage
-title: "Dokumentace k Intune – dokumentace k MDM | Microsoft Docs"
+title: Dokumentace k Intune | Dokumenty Microsoft
 description: "Technická dokumentace k Microsoft Intune – Správa mobilních zařízení a aplikací"
-keywords: "dokumentace k intune, dokumentace k MDM, dokumentace k Mobile Device Management, dokumentace ke správě mobilních zařízení a aplikací"
-author: jeffgilb
-manager: jeffgilb
-ms.date: 04/28/2016
+keywords: "dokumentace k Intune, správa aplikací, správa zařízení, dokumentace k MDM, dokumentace k MAM"
+author: arob98
+ms.author: angrobe
+manager: angrobe
+ms.date: 10/07/2016
 ms.topic: hubpage
 ms.service: microsoft-intune
 ms.suite: ems
 ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
 translationtype: Human Translation
-ms.sourcegitcommit: bbab228b86bbec49bf68c7d91a05c4d0e7f37209
-ms.openlocfilehash: a478d1dce92e9bf9de2b485e613c607ebc2de88c
+ms.sourcegitcommit: 63317c16082b1fb2764bd698c97fa1d435f58dfe
+ms.openlocfilehash: 1108adb5622c3cdb7720e07a53a35957ce80cca6
 
 
 ---
@@ -24,20 +25,20 @@ ms.openlocfilehash: a478d1dce92e9bf9de2b485e613c607ebc2de88c
     <section id="hero-content">
       <h1>Dokumentace k Intune</h1>
       <h2>Postup nasazení a správy Microsoft Intune, služby pro správu mobilních zařízení a aplikací.</h2>
-      <h3>Chcete spravovat Intune s Configuration Managerem? <a href="http://go.microsoft.com/fwlink/?LinkId=816854" target="_blank">Zobrazit dokumentaci ke Configuration Manageru &rarr;</a></h3>
+      <h3>Chcete spravovat Intune pomocí Configuration Manageru? <a href="https://docs.microsoft.com/en-us/sccm/mdm/understand/hybrid-mobile-device-management" target="_blank">Přečtěte si o hybridní správě mobilních zařízení. &rarr;</a></h3>
     </section>
     <section id="featured" class="container">
       <h2 class="section-heading"><span class="icon icon-warning"></span> Vybraný obsah</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="/intune/understand-explore/introduction-to-microsoft-intune">Úvod do Microsoft Intune</a></li>
-          <li><a href="/intune/understand-explore/common-ways-to-use-intune">Typické scénáře využívající Intune</a></li>
-          <li><a href="/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune">Úvodní příručka služby Intune</a></li>
+          <li><a href="/intune/whats-new/whats-new-in-microsoft-intune">Co je nového</a></li>
+          <li><a href="/intune/understand-explore/common-ways-to-use-intune">Běžné způsoby použití Intune</a></li>
+          <li><a href="/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune">Ochrana dat aplikací</a></li>
         </ul>
         <ul class="column column-half">
-          <li><a href="/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune">Přehled životních cyklů zařízení a aplikací</a></li>
-          <li><a href="/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune">Ochrana dat aplikací</a></li>
-          <li><a href="/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune">Co říct koncovým uživatelům o Intune</a></li>
+          <li><a href="/intune/deploy-use/restrict-access-based-on-device-network-app-risk">Ochrana přístupu k firemním prostředkům</a></li>
+          <li><a href="/intune/develop/intune-app-sdk-ios">Microsoft Intune App SDK pro iOS – Příručka pro vývojáře</a></li>
+          <li><a href="/intune/develop/intune-app-sdk-android">Microsoft Intune App SDK pro Android – Příručka pro vývojáře</a></li>
         </ul>
       </div>
     </section>
@@ -284,6 +285,6 @@ ms.openlocfilehash: a478d1dce92e9bf9de2b485e613c607ebc2de88c
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

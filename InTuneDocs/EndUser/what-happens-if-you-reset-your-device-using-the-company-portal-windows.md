@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 6942bd5653bcb0aa11cdab18055bda7b86d0eae2
+ms.sourcegitcommit: 08f31db90f324ef5f93076c4e13bfa5328a15adc
+ms.openlocfilehash: b597e3557ec2c5661490b417e1d0459eb4e8b477
 
 
 ---
@@ -27,8 +27,8 @@ Když k resetování zařízení se systémem Windows použijete aplikaci Portá
 
 |Správa a konfigurace zařízení|Typ zařízení|
 |---------------------------------------|---------------|
-|Mobilní zařízení spravuje správce IT|**Windows 10, Windows Phone 8.1 a Windows Phone 8**</br>Zařízení se už nebude zobrazovat na Portálu společnosti a Portál společnosti se pokusí obnovit výchozí tovární nastavení zařízení. Budou odebrány vaše aplikace, osobní údaje a nastavení. <br /><br />**Windows 10 Mobile**: Jediným způsobem, jak zrušit registraci zařízení, je resetovat ho.<br /><br />**Windows RT**<br />Zařízení se systémem Windows RT lze obnovit do továrního nastavení jedině v případě, že se používá pouze pro e-maily.|
-|Zařízení má přístup jen k e-mailu společnosti |**Windows Phone 8.1 a Windows Phone 8**<br />Zařízení se už nebude zobrazovat na portálu společnosti a odstraní se váš firemní e-mailový účet a všechny neuložené e-maily.<br /><br />**Windows RT**<br />Zařízení se už nebude zobrazovat na portálu společnosti a odstraní se váš firemní e-mailový účet a všechny neuložené e-maily.<br /><br />**Počítače s Windows Vista nebo Windows 7**<br />Tovární nastavení nelze obnovit v počítači se systémem Windows 7 nebo dřívější verzí, který se používá pouze pro e-mail.<br /><br />**Počítače s Windows 8.1 a Windows 8**<br />Zařízení se už nebude zobrazovat na portálu společnosti a odstraní se váš firemní e-mailový účet a všechny neuložené e-maily.|
+|Mobilní zařízení spravuje správce IT|**Windows 10 a Windows Phone 8.1**</br>Zařízení se už nebude zobrazovat na Portálu společnosti a Portál společnosti se pokusí obnovit výchozí tovární nastavení zařízení. Budou odebrány vaše aplikace, osobní údaje a nastavení. <br /><br />**Windows 10 Mobile**: Jediným způsobem, jak zrušit registraci zařízení, je resetovat ho.|
+|Zařízení má přístup jen k e-mailu společnosti |**Windows Phone 8.1**<br />Zařízení se už nebude zobrazovat na portálu společnosti a odstraní se váš firemní e-mailový účet a všechny neuložené e-maily.<br /><br />**Počítače s Windows Vista nebo Windows 7**<br />Tovární nastavení nelze obnovit v počítači se systémem Windows 7 nebo dřívější verzí, který se používá pouze pro e-mail.<br /><br />**Počítače s Windows 8.1 a Windows 8**<br />Zařízení se už nebude zobrazovat na portálu společnosti a odstraní se váš firemní e-mailový účet a všechny neuložené e-maily.|
 |Stolní a přenosné počítače|**Počítače s Windows 8.1 a Windows 8**<br />Tovární nastavení lze obnovit v počítači se systémem Windows 8 nebo Windows 8.1 jedině v případě, že se používá pouze pro e-maily.<br /><br />**Počítače s Windows Vista nebo Windows 7**<br />Tovární nastavení nelze obnovit v počítači se systémem Windows 7 nebo dřívější verzí.|
 
 Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
@@ -37,6 +37,6 @@ Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na spr�
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

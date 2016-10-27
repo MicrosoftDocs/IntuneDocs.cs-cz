@@ -13,8 +13,8 @@ ms.assetid: 8fc415f7-0053-4aa5-8d2b-03202eca4b87
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e6b182ebab1691c62e69cabaf4689ac7395ab31a
-ms.openlocfilehash: 0995d3ced978f5213fdb0e9905f508b64a1e5c09
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: 145d373edd65d7ba01c696c3b851692a13831dad
 
 
 ---
@@ -35,17 +35,24 @@ Následující tabulka uvádí metody registrace do služby Intune s jejich podp
 
 | **Metoda** |  **Vymazání** |  **Spřažení**    |   **Uzamčení** | **Podrobnosti** |
 |:---:|:---:|:---:|:---:|:---:|
-|**[Uživatelé s vlastním zařízením](#byod)** | Ne|    Ano |   Ne | [další](get-ready-to-enroll-devices-in-microsoft-intune.md#set-up-device-management)|
+|**[Uživatelé s vlastním zařízením](#byod)** | Ne|    Ano |   Ne | [další](prerequisites-for-enrollment.md#set-up-device-management)|
 |**[DEM](#dem)**|   Ne |Ne |Ne  | [další](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
 |**[DEP](#dep)**|   Ano |   Volitelné |  Volitelné|[další](ios-device-enrollment-program-in-microsoft-intune.md)|
 |**[USB (SA)](#usb-sa)**| Ano |   Volitelné |  Ne| [další](ios-setup-assistant-enrollment-in-microsoft-intune.md)|
 |**[USB (přímo)](#usb-direct)**| Ne |    Ne  | Ne|[další](ios-direct-enrollment-in-microsoft-intune.md)|
 
-**Metody registrace zařízení se systémem Windows a Android**
+**Metody registrace zařízení s Windows**
 
 | **Metoda** |  **Vymazání** |  **Spřažení**    |   **Uzamčení** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[Uživatelé s vlastním zařízením](#byod)** | Ne|    Ano |   Ne | [další](get-ready-to-enroll-devices-in-microsoft-intune.md#set-up-device-management)|
+|**[Uživatelé s vlastním zařízením](#byod)** | Ano|   Ano |   Ne | [další](prerequisites-for-enrollment.md#set-up-device-management)|
+|**[DEM](#dem)**|   Ne |Ne |Ne  |[další](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
+
+**Metody registrace zařízení s Androidem**
+
+| **Metoda** |  **Vymazání** |  **Spřažení**    |   **Uzamčení** | **Podrobnosti**|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|**[Uživatelé s vlastním zařízením](#byod)** | Ne|    Ano |   Ne | [další](prerequisites-for-enrollment.md#set-up-device-management)|
 |**[DEM](#dem)**|   Ne |Ne |Ne  |[další](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
 
 Sérii otázek, které vám pomohou najít tu správnou metodu pro vás, najdete v tématu [Volba způsobu registrace zařízení](/intune/get-started/choose-how-to-enroll-devices1).
@@ -111,6 +118,6 @@ Intune může spravovat tyto platformy zařízení:
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 

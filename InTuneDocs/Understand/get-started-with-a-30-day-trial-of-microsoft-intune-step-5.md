@@ -3,6 +3,7 @@ title: "Registrace mobilních zařízení testování | Microsoft Intune"
 description: "Registrace mobilních zařízení a instalace aplikace při registraci bezplatné 30denní zkušební verze Intune"
 keywords: 
 author: lindavr
+ms.author: lindavr
 manager: angrobe
 ms.date: 08/09/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: 47806f69-303d-41d9-9b0e-9b9445ea24ac
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 51fba2b01d8978bc062c50c4388714609be0fdf0
-ms.openlocfilehash: 66dc46eb9dc1010b8c176ccfdea68b9a6e4b0618
+ms.sourcegitcommit: 581e880fa4308ec627f5b2c1242fb5b30b713743
+ms.openlocfilehash: 7bd5f5d8f4931133a8ef1e697b2fec4cccd07b83
 
 
 ---
@@ -49,16 +50,10 @@ Nainstalujte si aplikaci **Portál společnosti Intune** od Microsoft Corporatio
 ### Windows Phone 8.1
 Uživatelé si instalují aplikaci **Portál společnosti** od Microsoft Corporation dostupnou na Windows Phone Storu a přihlašují se pomocí uživatelských přihlašovacích údajů Intune přidaných nahoře.  Abyste přidali svoje zařízení, zobrazte **Registrovaná zařízení** .
 
- ### Windows Phone 8.0
- Uživatelé kliknou na **Nastavení systému** &gt; **Firemní aplikace** a přihlásí se pomocí uživatelských přihlašovacích údajů Intune přidaných výše. Aplikace Portál společnosti se nasadí na váš telefon.
-
-Pokud se vám zobrazí výzva, abyste zadali **adresu serveru**, zadejte manage.microsoft.com.
-
-
 ## Instalace dříve nasazené aplikace
 Na mobilním zařízení otevřete portál společnosti, zvolte **Aplikace** a pak nainstalujte **Microsoft Skype**.
 
-Další informace o správě mobilních zařízení pomocí Intune najdete v tématu [Příprava registrace zařízení v Microsoft Intune](/Intune/deploy-use/get-ready-to-enroll-devices-in-microsoft-intune).
+Další informace o správě mobilních zařízení pomocí Intune najdete v tématu [Příprava registrace zařízení v Microsoft Intune](/Intune/deploy-use/prerequisites-for-enrollment).
 
 ### Další kroky
 Gratulujeme! Právě jste dokončili krok 5 příručky pro *testování Microsoft Intune*.
@@ -69,6 +64,6 @@ Gratulujeme! Právě jste dokončili krok 5 příručky pro *testování Microso
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Oct16_HO2-->
 
 

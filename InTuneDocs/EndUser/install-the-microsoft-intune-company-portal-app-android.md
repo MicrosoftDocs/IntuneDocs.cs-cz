@@ -3,6 +3,7 @@ title: "Instalace aplikace Portál společnosti služby Microsoft Intune | Micro
 description: 
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

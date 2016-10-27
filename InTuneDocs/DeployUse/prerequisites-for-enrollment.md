@@ -13,16 +13,34 @@ ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 91385bdbe4aa4252311db106c04de7d04df5109c
-ms.openlocfilehash: 5e94e4efa5a3ecb055ce416c3ee8dd21e56bad65
+ms.sourcegitcommit: 77c8df8f1886786a2e772429d93b034798b22a66
+ms.openlocfilehash: 8c500a5bfd59f801d1177a681fa9d55d1aa1ee0e
 
 
 ---
 
 # Požadavky na správu mobilních zařízení v Intune
-Pokud chcete zaměstnancům umožnit registraci mobilních zařízení (včetně zařízení s [Androidem](set-up-android-management-with-microsoft-intune.md), [zařízení s iOS a počítačů Mac](set-up-ios-and-mac-management-with-microsoft-intune.md) a [Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md) a [počítačů s Windows](set-up-windows-device-management-with-microsoft-intune.md)) pomocí Intune nebo spravovat zařízení vlastněná společností, musíte povolit registraci zařízení. Pokud chcete povolit registraci, musíte nastavit autoritu správy mobilních zařízení, nakonfigurovat Portál společnosti Intune, přiřadit licence a povolit registraci pro platformu zařízení.
+Pokud chcete zaměstnancům povolit registraci mobilních zařízení s Intune, proveďte následující kroky. Stejné kroky je třeba podniknout i v případě správy zařízení ve vlastnictví společnosti.
 
-## Nastavení autority pro správu mobilních zařízení
+|Kroky|Podrobnosti|  
+|-----------|-------------|  
+|**Krok 1:** [Závislosti registrace zařízení](#step-1-device-enrollment-dependencies)|Zkontrolujte, zda máte nakonfigurovaný název domény a zda je připravena síťová komunikace|  
+|**Krok 2:** [Nastavení autority pro správu zařízení](#step-2-set-mobile-device-management-authority)|Autorita pro správu mobilních zařízení definuje služby přiřazené k vašim zařízením|
+|**Krok 3:** [Nakonfigurování Portálu společnosti Intune](#step-3-configure-the-intune-company-portal)|Nakonfigurování uživatelského nastavení pro aplikaci Portál společnosti|  
+|**Krok 4:** [Přiřazení uživatelských licencí pro Intune](#step-4-assign-intune-user-licenses)|Přiřazení licencí Intune uživatelům, aby mohli zaregistrovat zařízení|
+|**Krok 5:** [Nastavení správy zařízení](#step-5-set-up-device-management)|Povolte nastavení správy systému iOS a Windows, specifické pro platformu. U zařízení Android není žádná další konfigurace zapotřebí.|
+
+Hledáte Intune s Configuration Managerem?
+> [!div class="button"]
+[Zobrazit dokumentaci SCCM >](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm)
+
+## Krok 1: Závislosti registrace zařízení
+
+Ještě než povolíte registraci mobilních zařízení, zkontrolujte, zda jste provedli následující:
+- [Zkontrolujte požadované síťové porty a adresy URL](../get-started/network-infrastructure-requirements-for-microsoft-intune)
+- [Přidejte a ověřte název vaší domény](../get-started/domain-names-for-microsoft-intune)
+
+## Krok 2: Nastavení autority správy mobilních zařízení
 Autorita MDM definuje službu správy s oprávněním ke správě skupiny zařízení. Příklady možných autorit MDM zahrnují Intune samostatně a Configuration Manager s Intune. Pokud nastavíte Configuration Manager jako autoritu správy, ke správě mobilních zařízení nejde použít žádnou jinou službu.
 
 >[!IMPORTANT]
@@ -38,7 +56,7 @@ Autorita MDM definuje službu správy s oprávněním ke správě skupiny zaří
 
 3.  Intune požádá o potvrzení, že chcete Intune používat jako autoritu pro správu mobilních zařízení. Jestli chcete ke správě mobilních zařízení používat Microsoft Intune, zaškrtněte políčko a zvolte **Ano**.
 
-## Nakonfigurování Portálu společnosti Intune
+## Krok 3: Nakonfigurování Portálu společnosti Intune
 
 Portál společnosti v Intune je místem, kde uživatelé přistupují k podnikovým datům a kde můžou dělat běžné úkoly, jako je registrace zařízení, instalace aplikací nebo vyhledání informací pro oddělení IT v případě žádosti o podporu.
 
@@ -79,14 +97,14 @@ Portál své společnosti si můžete přizpůsobit – můžete na něj umísti
     |----------|----------------|
     |Barva motivu|Vyberte barvu motivu, kterou chcete použít pro Portál společnosti.|
     |Zahrnout logo společnosti|Povolení této možnosti vám umožní nahrát vlastní logo společnosti, které se bude zobrazovat v Portálu společnosti. Můžete nahrát dvě loga – jedno, které se zobrazí, když bude pozadí Portálu společnosti bílé, a druhé, které se zobrazí, když se bude pro pozadí Portálu společnosti používat vybraná barva motivu. Loga musí být ve formátu .png nebo .jpg o maximálním rozlišení 400 × 100 pixelů a nesmí být větší než 750 kB.|
-    |Volba pozadí pro aplikaci portálu společnosti [!INCLUDE[win8_client_2](../includes/win8_client_2_md.md)]|Toto nastavení má vliv jenom na pozadí aplikace Portál společnosti pro [!INCLUDE[win8_client_2](../includes/win8_client_2_md.md)].|
+    |Volba pozadí pro aplikaci portálu společnosti|Toto nastavení má vliv jenom na pozadí aplikace Portál společnosti.|
 
 
 Po uložení změn můžete pomocí odkazů uvedených v dolní části stránky **Portál společnosti** v konzole pro správu zobrazit web Portál společnosti. Tyto odkazy se nedají změnit. Když se uživatel přihlásí, tyto odkazy zobrazí vaše předplatná v Portálu společnosti.
 
-## Přiřazení uživatelské licence pro Intune
+## Krok 4: Přiřazení uživatelské licence pro Intune
 
-**Portál pro správu Office 365** můžete použít k ručnímu přidání cloudových uživatelů a přiřazení licencí účtům cloudových uživatelů i účtům, které se synchronizovaly z místní služby Active Directory do Azure Active Directory (Azure AD).
+**Portál pro správu Office 365** můžete použít k ručnímu přidání cloudových uživatelů a přiřazení licencí účtům cloudových uživatelů i účtům, které se synchronizovaly z místní služby Active Directory do Azure Active Directory (Azure AD). Můžete [synchronizovat místní uživatele s Azure AD](../get-started/domain-names-for-microsoft-intune#to-synchronize-on-premises-users-with-azure-ad.md).
 
 1.  Přihlaste se na [portál pro správu Office 365](https://portal.office.com/Admin/Default.aspx) pomocí svých přihlašovacích údajů správce tenanta.
 
@@ -94,7 +112,14 @@ Po uložení změn můžete pomocí odkazů uvedených v dolní části stránky
 
 3.  Uživatelský účet se teď přidá do skupiny uživatelů Microsoft Intune, která uděluje uživatelům oprávnění k používání služby a registraci zařízení do správy.
 
-## Nastavení správy zařízení
+### Synchronizace místních uživatelů s Azure AD
+
+1. [Přidejte příponu UPN](https://technet.microsoft.com/en-us/library/cc772007.aspx) pro vaši vlastní doménu v místním Active Directory.
+2. Nastavte novou příponu UPN pro místní uživatele, které chcete importovat.
+3. Spusťte [synchronizaci Azure AD Connect](https://azure.microsoft.com/en-us/documentation/articles/active-directory-aadconnect/) a proveďte integraci místních uživatelů s Azure AD.
+4. Po úspěšné synchronizaci informací o uživatelských účtech můžete prostřednictvím [portálu pro správu Office 365](https://portal.office.com/Admin/Default.aspx) přiřadit licence Microsoft Intune.
+
+## Krok 5: Nastavení správy zařízení
 Po nastavení autority správy mobilních zařízení musíte nastavit správu zařízení pro operační systémy, které vaše organizace hodlá podporovat. Kroky při nastavení správy zařízení se liší v závislosti na operačním systému. Operační systém Android například v konzole pro správu Intune nevyžaduje žádné akce. Operační systémy Windows a iOS naopak pro umožnění správy vyžadují vztah důvěryhodnosti mezi zařízením a Intune.
 
 Nastavte správu pro následující platformy:
@@ -109,6 +134,6 @@ Rovněž můžete:
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

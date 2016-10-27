@@ -2,9 +2,10 @@
 title: "Registrace zařízení s Windows 10 v Intune | Microsoft Intune"
 description: "Popisuje registraci mobilních nebo desktopových zařízení s Windows 10 v Intune."
 keywords: 
-author: Staciebarker
+author: barlan
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: 36250832-c6fd-4e8d-b681-de735023ebc3
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: fb950108f3232af8049e90af977b0f3f9f2b3576
+ms.sourcegitcommit: 9e0321b23bbbaaa16c28c23e56b5fbcaee0d3c24
+ms.openlocfilehash: 75f19a1c613b2d018e0cb89862f15aa4be2bc138
 
 
 ---
@@ -43,7 +44,7 @@ Registrace zařízení s Windows 10 Mobile nebo Windows 10 Desktop:
 
 ## Postup, pokud se zobrazí Přístup do práce nebo do školy
 
-1.  Klepněte na **Přístup do práce nebo do školy**.
+1.  Klepněte na **Přístup do práce nebo do školy**, a potom klepněte na **Připojit**.
 
     ![Klepněte na účet Přístup do práce nebo do školy](./media/w10-enroll-rs1-connect-to-work-or-school.png)
 
@@ -106,6 +107,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní 
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO1-->
 
 
