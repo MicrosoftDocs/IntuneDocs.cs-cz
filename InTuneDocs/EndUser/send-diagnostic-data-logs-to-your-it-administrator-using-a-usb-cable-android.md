@@ -1,10 +1,11 @@
 ---
-title: "Odeslání protokolů s diagnostickými daty ze zařízení správci IT pomocí kabelu USB | Microsoft Intune"
-description: 
+title: "Odeslání protokolů s diagnostickými daty správci IT pomocí kabelu USB | Microsoft Intune"
+description: "Odeslání datových protokolů pomocí kabelu USB"
 keywords: 
-author: staciebarker
+author: barlan
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,33 +15,31 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: e88afa6d8cc2720a001e7ee138e169bd3f1c67fa
+ms.sourcegitcommit: 42720b0e0613be10e83cb0e8aae7170a85f473e5
+ms.openlocfilehash: e26a97d52cc753f83eb49e3f733668eb83ef4932
 
 
 ---
 
 
-# Odeslání protokolů s diagnostickými daty ze zařízení správci IT pomocí kabelu USB
+# Odeslání protokolů s diagnostickými daty správci IT pomocí kabelu USB
 
-Pokud chcete odesílat protokoly dat správci IT, abyste získali pomoc s problémem, můžete protokoly odeslat pomocí počítače a kabelu USB, místo abyste odesílali protokoly z mobilního zařízení. Tady je postup:
+Pokud chcete správci IT odeslat datové protokoly, nemusíte je odesílat z mobilního zařízení, ale pomocí počítače a kabelu USB.
+
+ Než začnete, ověřte, že máte e-mailovou adresu správce IT, která je obvykle uvedená na [webu Portál společnosti](http://portal.manage.microsoft.com) nebo v aplikaci Portál společnosti.
 
 1.  Na chybové obrazovce klepněte na **Odeslat informace**. Když se zobrazí zpráva s dotazem, jakou metodu chcete použít k odeslání protokolů, zvolte možnost, která uloží soubory do vašeho zařízení.
 
-2.  Než začnete, ujistěte se, že máte e-mailovou adresu správce IT, která je obvykle uvedená na vašem webu [Portál společnosti](http://portal.manage.microsoft.com) nebo v aplikaci Portál společnosti.
-
 2.  Připojte zařízení s Androidem k počítači pomocí kabelu USB.
 
-3.  V počítači vyhledejte adresář, který má název vašeho telefonu. V tomto adresáři vyhledejte složku &lt;zařízení s Androidem&gt;\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\.
+3.  V počítači vyhledejte adresář, který má název vašeho zařízení. V tomto adresáři vyhledejte složku &lt;zařízení s Androidem&gt;\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\.
 
-4.  Všechny soubory připojte k e-mailu a odešlete je správci IT.
+4.  Připojte tyto soubory k e-mailu a odešlete je správci IT.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

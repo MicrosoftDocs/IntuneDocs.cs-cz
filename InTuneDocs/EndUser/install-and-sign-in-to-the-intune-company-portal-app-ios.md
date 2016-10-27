@@ -3,6 +3,7 @@ title: "Instalace a přihlášení do aplikace Portál společnosti Intune | Mic
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -14,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: b23073a0bad085c8994f5e9b7c1b46e2985cd05c
+ms.sourcegitcommit: 1d133011004fa9c684f81c7adc085dc43a4a2ee4
+ms.openlocfilehash: 29bc67a9ce4120cbb9f157c8d0eefb78dce020ca
 
 
 ---
@@ -29,9 +30,9 @@ Portál společnosti je aplikace, která po instalaci do vašeho zařízení s i
 
 2.  Stáhněte si aplikaci **Portál společnosti Microsoft Intune**.
 
-    ![download-ios-comp-portal-app](./media/ios-cpinstall-1-cpinstore.png)
+    ![Stáhnout aplikaci Portál společnosti Intune](./media/ios-cpinstall-1-cpinstore.png)
 
-3.  Otevřete aplikaci Portál společnosti, zadejte svůj pracovní nebo školní e-mail a heslo a potom klepněte na **Přihlásit**.
+3.  Otevřete aplikaci Portál společnosti, zadejte svou pracovní nebo školní e-mailovou adresu a heslo a pak klepněte na **Přihlásit se**.
 
     Když se do aplikace Portál společnosti přihlašujete poprvé a vaše společnost nebo škola používá Intune, zobrazí se výzva k registraci vašeho zařízení do služby Intune. Pokud se chcete přihlásit, postupujte podle kroků v tématu [Registrace zařízení se systémem Mac OS X v Intune](enroll-your-device-in-intune-ios.md) nebo [Registrace zařízení se systémem iOS do Intune](enroll-your-device-in-intune-mac-os-x.md).
 
@@ -39,7 +40,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní 
 
 
 
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

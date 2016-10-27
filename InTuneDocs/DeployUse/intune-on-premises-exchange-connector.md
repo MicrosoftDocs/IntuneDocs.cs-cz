@@ -3,6 +3,7 @@ title: "Exchange Connector pro místní EAS | Microsoft Intune"
 description: "Použijte nástroj Connector k umožnění komunikace mezi konzolou správce Intune a místním Exchange Serverem pro Exchange ActiveSync MDM."
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 07/29/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 41ff4212-a6f5-4374-8731-631f7560cff1
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: de3296e81c88b3ac04e3ba3f3d3ca222a59df7bd
-ms.openlocfilehash: 18614cc272323b8031c94b8e582f80aa5c06d9d3
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: 07ed8c922d53169839bba50547f56bbc979d58ac
 
 
 ---
@@ -31,7 +32,7 @@ V následující tabulce jsou uvedené požadavky na počítač, na který insta
 |---------------|--------------------|
 |operační systémy;|Intune podporuje místní Exchange Connector na počítači, na kterém běží kterákoli edice systému Windows Server 2008 SP2 (64bitová verze), Windows Server 2008 R2, Windows Server 2012 nebo Windows Server 2012 R2.<br /><br />Konektor není podporovaný v žádné instalaci jádra serveru.|
 |Verze Microsoft Exchange|On-Premises Connector vyžaduje Microsoft Exchange 2010 SP1 nebo novější, nebo starší Exchange Online Dedicated. Pokud chcete zjistit, jestli je vaše prostředí Exchange Online Dedicated v **nové** nebo **starší** konfiguraci, kontaktujte vašeho account manažera.|
-|Autorita pro správu mobilních zařízení| [Nastavte autoritu pro správu mobilních zařízení na Intune](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority).|
+|Autorita pro správu mobilních zařízení| [Nastavte autoritu pro správu mobilních zařízení na Intune](prerequisites-for-enrollment.md#set-mobile-device-management-authority).|
 |Hardware|Počítač, na který nainstaluje konektor, musí mít minimálně 1,6GHz procesor s 2 GB paměti RAM a 10 GB volného místa na disku.|
 |Synchronizace se službou Active Directory|Než použijete některý z konektorů k připojení Intune ke svému Exchange Serveru, je potřeba [nastavit synchronizaci služby Active Directory](/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3) tak, aby byli místní uživatelé a skupiny zabezpečení synchronizovaní s vaší instancí Azure Active Directory.|
 |Další software|Počítač hostující konektor musí mít úplnou instalaci rozhraní Microsoft .NET Framework 4 a musí na něm být nainstalované prostředí Windows PowerShell 2.0.|
@@ -131,6 +132,6 @@ Můžete se taky podívat na datum a čas posledního úspěšného pokusu o syn
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 

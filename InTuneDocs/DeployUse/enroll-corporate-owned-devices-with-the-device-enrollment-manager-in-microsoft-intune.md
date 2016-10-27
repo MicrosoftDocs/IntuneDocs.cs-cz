@@ -13,8 +13,8 @@ ms.assetid: a23abc61-69ed-44f1-9b71-b86aefc6ba03
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e332bbf9aa8f6543950eba7e1fd734b3fb4b1edb
-ms.openlocfilehash: ca81a72fe98d454591765296445215a2b574243b
+ms.sourcegitcommit: e2daff5dae435df55c866adbf602f554500d50e0
+ms.openlocfilehash: 4ed3222f45cb438dea807b1df268f47fff660d5f
 
 
 ---
@@ -44,7 +44,7 @@ Zařízení zaregistrovaná pomocí účtu správce registrace zařízení mají
   - Zařízení nejde resetovat ze služby Portál společnosti.
   - V aplikaci nebo na webu Portál společnosti se zobrazí jenom místní zařízení.
   - Nemůžou používat aplikace v rámci programu Apple VPP (Volume Purchase Program), protože ke správě těchto aplikací jsou vyžadovaná Apple ID jednotlivých uživatelů.
-  - Nemůžou se také zaregistrovat do nástroje Apple Configurator nebo Programu registrace zařízení Apple (iOS zařízení).
+  - (iOS) Nedají se taky zaregistrovat přes Apple Configurator ani Apple Device Enrollment Program (DEP), ale zařízení spravovaná programem DEP nebo Apple Configuratorem se dají zaregistrovat bez přidružení uživatele.
 
 > [!NOTE]
 > Pokud chcete nasadit aplikace společnosti na zařízení spravovaná správcem registrace zařízení, nasaďte aplikaci Portál společnosti jako **požadovanou instalaci** na uživatelský účet správce registrace zařízení.
@@ -95,6 +95,6 @@ Odstranění správce registrace zařízení nemá vliv na zaregistrovaná zař�
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

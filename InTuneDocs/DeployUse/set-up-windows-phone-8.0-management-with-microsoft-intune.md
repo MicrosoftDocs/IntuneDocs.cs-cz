@@ -13,8 +13,8 @@ ms.assetid: 61e9b6c3-8795-49b0-8ab2-a9a05ee3ea1f
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: 5b659bb63c34887684f90fd56ea853bade8bf791
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: 1d3823392b7060b9d04996c29c68213d421ef4bd
 
 
 ---
@@ -42,7 +42,7 @@ Windows Phone 8.0 vyžaduje k instalaci aplikace Portál společnosti Intune a k
 Nastavení požadavků pro správu mobilních zařízení Windows Phone závisí na tom, jak budete zařízení spravovat.  Nastavení dvou záznamů CNAME v registraci DNS vaší společnosti usnadňuje uživatelům registraci zařízení. Pokud vaši uživatelé budou stahovat aplikaci Portál společnosti ze Storu, pak po konfiguraci nastavení DNS bude třeba jen nastavit firemní portál a informovat uživatele o tom, jak se zaregistrovat.  U Windows Phone 8.0 nebo Windows Phone 8.1, kde nasadíte Portál společnosti, budete pro podepsání kódu aplikace potřebovat certifikát Symantec.
 
 ## Konfigurace požadavků nastavení pro povolení správy pro systém Windows Phone
-1.  **Nastavení Intune** Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení [nastavením autority pro správu mobilních zařízení](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority) na **Microsoft Intune** a nastavením MDM.
+1.  **Nastavení Intune** Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení [nastavením autority pro správu mobilních zařízení](prerequisites-for-enrollment.md#set-mobile-device-management-authority) na **Microsoft Intune** a nastavením MDM.
 
 2.  **Nastavení aliasu DNS pro adresu serveru registrace (volitelně)** (optional)
 
@@ -183,6 +183,6 @@ Aplikaci Portál společnosti můžete místo instalace z Windows Phone Store na
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

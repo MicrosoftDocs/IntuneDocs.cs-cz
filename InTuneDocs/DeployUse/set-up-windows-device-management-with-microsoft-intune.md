@@ -13,8 +13,8 @@ ms.assetid: 9a18c0fe-9f03-4e84-a4d0-b63821bf5d25
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ebb1648ab13d31a2ba1ab17615814be8dda8a08c
-ms.openlocfilehash: 9b063c1e6b1ff5dcab16fce958ede49303284b18
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: 149508942b89b15308591e17723884add3ac78ae
 
 
 ---
@@ -32,7 +32,7 @@ Jako správce služby Intune máte dvě možnosti, jak pro počítače se systé
 Uživatelům můžete umožnit registraci zařízení tak, že nainstalují aplikaci Portál společnosti služby Intune a registrují se jejím prostřednictvím. Vytvořením DNS CNAME uživatelům usnadníte připojení a registraci v Intune bez nutnosti zadávat název serveru.
 
 1. **Nastavení Intune**<br>
-Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení [nastavením autority pro správu mobilních zařízení](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority) na **Microsoft Intune** a nastavením správy MDM.
+Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení [nastavením autority pro správu mobilních zařízení](prerequisites-for-enrollment.md#set-mobile-device-management-authority) na **Microsoft Intune** a nastavením správy MDM.
 
 2. **Vytváření záznamů CNAME** (volitelné)<br>Pokud vytvoříte záznamy o prostředcích DNS **CNAME** pro doménu vaší společnosti, registrace se tím zjednoduší. Přestože vytvoření položek DNS CNAME je nepovinné, vytvořením záznamů CNAME usnadníte uživatelům registraci. Pokud nebude nalezen žádný záznam CNAME pro registraci, budou uživatelé vyzváni, aby název serveru MDM zadali ručně. `https://manage.microsoft.com`.  Záznamy o prostředcích CNAME musí obsahovat tyto informace:
 
@@ -59,11 +59,11 @@ Pokud jste to ještě neudělali, připravte se na správu mobilních zařízen�
       - [Co říct koncovým uživatelům o používání služby Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
       - [Pokyny k zařízení s Windows pro koncové uživatele](../enduser/using-your-windows-device-with-intune.md)
 
-### Související témata
-[Příprava registrace zařízení v Microsoft Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
+### Viz taky
+[Předpoklady pro registraci zařízení do Microsoft Intune](prerequisites-for-enrollment.md)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 

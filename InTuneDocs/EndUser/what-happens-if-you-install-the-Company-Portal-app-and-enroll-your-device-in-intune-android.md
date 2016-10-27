@@ -4,7 +4,7 @@ description:
 keywords: 
 author: staciebarker
 manager: angrobe
-ms.date: 05/31/2016
+ms.date: 09/16/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
-ms.openlocfilehash: df5cf2d5a78ccf58ba5920ad1856675538794874
+ms.sourcegitcommit: 4881d765a6a79d380ab6d3facdb55d9f0c81bf97
+ms.openlocfilehash: 1d810d903ecf719e40cfb31b62e5e7882f549270
 
 
 ---
@@ -37,15 +37,15 @@ Když zaregistrujete zařízení se systémem Android, udělujete správci IT op
 
 -   Obnovit v zařízení výchozí tovární nastavení. To je užitečné v případě ztráty nebo odcizení zařízení.
 
--   Odebrat veškerá firemní data. Vaše osobní údaje a nastavení se při tom neodeberou.
+-   Odebrat všechna data týkající se společnosti. Vaše osobní údaje a nastavení se při tom neodeberou.
 
--   Požadovat, abyste si v zařízení nastavili heslo nebo PIN kód, přičemž v případě příliš velkého počtu chybných pokusů o zadání hesla může dojít k zablokování zařízení nebo obnovení zařízení do výchozího továrního nastavení.
+-   Nastavit požadavky na zařízení, třeba mít heslo k zařízení nebo PIN kód k ochraně dat společnosti. Správce IT může taky omezit to, kolikrát můžete zadat špatné heslo. Když tento počet překročíte, může vám zařízení zablokovat.
 
 -   Vyžadovat, abyste přijali smluvní podmínky.
 
--   Povolit nebo zakázat používání fotoaparátu/kamery v zařízení.
+-   Zakázat používání fotoaparátu (jenom v zařízeních Samsung Knox, v zařízeních Nexus to nejde) a znemožnit vám tak pořizovat snímky důvěrných pracovních materiálů, které se nesmí sdílet.
 
--   Vynutit šifrování všech dat v zařízení, včetně firemních a osobních údajů. Tím jsou data chráněna v případě ztráty nebo odcizení zařízení.
+-   Vynutit šifrování všech dat v zařízení a tím je lépe chránit v případě ztráty nebo odcizení zařízení.
 
 -   Po přidání vašeho zařízení na portál společnosti přibližně každých 8 hodin proběhnou tyto kroky:
 
@@ -58,11 +58,8 @@ Když zaregistrujete zařízení se systémem Android, udělujete správci IT op
 Potřebujete pomoc? Obraťte se na správce IT (vyhledejte kontaktní informace na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište týmu Microsoft Android na adresu wintunedroidfbk@microsoft.com.
 
 
-### Související témata
-[Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 
 
-
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

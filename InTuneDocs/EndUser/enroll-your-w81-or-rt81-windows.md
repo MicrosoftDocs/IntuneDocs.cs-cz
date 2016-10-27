@@ -2,7 +2,8 @@
 title: "Registrace zařízení s Windows 8.1 nebo Windows RT 8.1 | Microsoft Intune"
 description: "Popisuje registraci zařízení s Windows 8.1 nebo Windows RT 8.1 v Intune."
 keywords: 
-author: Staciebarker
+author: barlan
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 28984f26-1070-4f7a-877c-669a59375c0c
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: ce39a013186942e3d5a2b355d1425edbed4fa769
+ms.sourcegitcommit: 7eefcefa5e1cd0f789c77bf020c256e449099273
+ms.openlocfilehash: 53e9313bc85c149960fa985b655a22065b55b8a0
 
 
 ---
@@ -22,7 +23,7 @@ ms.openlocfilehash: ce39a013186942e3d5a2b355d1425edbed4fa769
 
 # Registrace zařízení s Windows 8.1 nebo Windows RT 8.1 v Intune
 
-Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svá zařízení zaregistrovat, a získat tak přístup k e-mailům, souborům a dalším prostředkům společnosti. Registrace zařízení umožňuje vaší organizaci zabezpečit podniková data. Další informace o registraci najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) a v tématu [Co má a nemá správce IT oprávnění vidět na vašem zařízení](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
+Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svá zařízení zaregistrovat, a získat tak přístup k e-mailům, souborům a dalším prostředkům společnosti. Když svoje zařízení zaregistrujete, dokáže vaše organizace uchovat firemní data v bezpečí. Další informace o registraci najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) a v tématu [Co má a nemá správce IT oprávnění vidět na vašem zařízení](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
 
 Registrace zařízení s Windows 8.1 nebo Windows RT 8.1:
@@ -33,9 +34,9 @@ Registrace zařízení s Windows 8.1 nebo Windows RT 8.1:
 
 2.  Zadejte e-mailovou adresu svého pracovního nebo školního účtu pro dané ID uživatele, pokud je to potřeba, a klepněte na **Připojit se**.
 
-    Pokud není potřeba zadat ID uživatele, použije se e-mailová adresa, kterou jste zadali při přihlašování k tomuto zařízení.
+    Pokud se nevyžaduje ID uživatele, použije se e-mailová adresa, kterou jste zadali při přihlašování k tomuto zařízení.
 
-3.  Zadejte heslo pracovního nebo školního e-mailového účtu.
+3.  Zadejte heslo pracovního nebo školního e-mailu.
 
     ![type-password](./media/W81-2-workplacesettings_signin.png)
 
@@ -51,7 +52,7 @@ Registrace zařízení s Windows 8.1 nebo Windows RT 8.1:
 
     ![enrollment-complete](./media/W81-5-enrolled-done.png)
 
-Doporučujeme také nainstalovat aplikaci Portál společnosti, která vám umožní snadno identifikovat a instalovat podnikové aplikace, které jsou relevantní pro vás i vaši roli. V závislosti na tom, jak vaše společnost službu Intune nakonfigurovala, už aplikace Portál společnosti může být nainstalovaná jako součást procesu registrace. Pokud chcete zjistit, jestli aplikaci máte, hledejte v seznamu aplikací aplikaci **Portál společnosti**. Pokud aplikaci Portál společnosti v seznamu nenajdete, nainstalujte ji podle následujícího postupu.
+Doporučujeme také nainstalovat aplikaci Portál společnosti, která vám umožní snadno identifikovat a instalovat podnikové aplikace, které jsou relevantní pro vás i vaši roli. V závislosti na tom, jak vaše firma službu Intune nastavila, se aplikace Portál společnosti mohla nainstalovat jako součást procesu registrace. Pokud chcete zjistit, jestli aplikaci máte, hledejte v seznamu aplikací aplikaci **Portál společnosti**. Pokud aplikaci Portál společnosti v seznamu nenajdete, nainstalujte ji podle následujícího postupu.
 
 1.  Klepněte na **Start** &gt; **Store**.
 
@@ -59,13 +60,12 @@ Doporučujeme také nainstalovat aplikaci Portál společnosti, která vám umo�
 
 3.  V seznamu výsledků klepněte na **Portál společnosti**.
 
-4.  Klepněte buď na **Instalovat**, nebo na **Zdarma**. To, která z možností se zobrazuje, závisí na tom, jak vaše společnost aplikaci nakonfigurovala.
+4.  Klepněte buď na **Instalovat**, nebo na **Zdarma**. Zobrazená možnost závisí na tom, jak vaše firma tuto aplikaci nastavila.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

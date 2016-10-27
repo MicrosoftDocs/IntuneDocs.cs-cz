@@ -3,6 +3,7 @@ title: "Zařízení s iOS nevyhovuje maximální verzi operačního systému | M
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/08/2016
 ms.topic: article
@@ -14,21 +15,19 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7549b5af84e5a1712c2e1649b1afe03718d53dcc
-ms.openlocfilehash: e9ffe9caddf6c0f6bf93f19b49672f197dc64708
+ms.sourcegitcommit: 994fbd726b5173ce18e284c94a658189f100a9b0
+ms.openlocfilehash: 99c41c884d1e6e4e0d1ba6d2edb0d902551ea21a
 
 
 ---
 
 
-# Zařízení s iOS nevyhovuje maximální verzi operačního systému
+# Zařízení s iOS nevyhovuje nastavení poslední verze operačního systému
 
-Zařízení iOS nevyhovuje zásadám vašeho správce IT, které se týkají maximální verze operačního systému. Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-
-
+Vaše zařízení s iOS nevyhovuje zásadě správce IT, která se týká poslední verze operačního systému, kterou můžete použít. Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO2-->
 
 

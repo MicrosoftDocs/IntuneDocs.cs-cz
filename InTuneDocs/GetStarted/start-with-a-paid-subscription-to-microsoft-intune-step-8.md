@@ -3,6 +3,7 @@ title: "Registrace mobilních zařízení a instalace aplikace | Microsoft Intun
 description: "Vysvětluje, jak registrovat mobilní zařízení a instalovat aplikaci na zařízení zaregistrované v Intune."
 keywords: 
 author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: 5d3215e7-0a5c-44bd-afb0-aeafce98c43f
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
-ms.openlocfilehash: 182601f7e4a4bd38c70f7961188eb4af593f6107
+ms.sourcegitcommit: 3306d772b074ddcfd1bfcf7178b32f9b371321e7
+ms.openlocfilehash: f57728bb41b750f53b021bed532de18187e764a0
 
 
 ---
@@ -52,7 +53,7 @@ V [kroku 6](start-with-a-paid-subscription-to-microsoft-intune-step-6.md) této 
 
 Na registrovaném mobilním zařízení otevřete Portál společnosti, zvolte **Aplikace** a pak nainstalujte **Microsoft Skype**.
 
-Další informace o správě mobilních zařízení pomocí [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] najdete v tématu [Příprava registrace zařízení v Microsoft Intune](/intune/deploy-use/get-ready-to-enroll-devices-in-microsoft-intune).
+Další informace o správě mobilních zařízení pomocí [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] najdete v tématu [Předpoklady pro registraci zařízení do Microsoft Intune](/intune/deploy-use/prerequisites-for-enrollment).
 
 
 ### Další kroky
@@ -64,6 +65,6 @@ Gratulujeme! Právě jste dokončili poslední krok *úvodní příručky Intune
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

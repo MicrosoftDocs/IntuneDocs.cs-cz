@@ -14,18 +14,20 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: afe5beb508796244b914d6b0bae59eaa571e9c3a
+ms.sourcegitcommit: 8450facfe63d947df6e6a152805ad882ae220c3e
+ms.openlocfilehash: d7c2fb804e01df6689044d6ca2e72ff00ee95fbc
 
 
 ---
 
 
 # Ruční synchronizace zařízení s Windows
-Pokud instalace aplikací trvá příliš dlouho, použijte následující pokyny k ruční synchronizaci zařízení s Windows, která vám může pomoci instalaci zrychlit. Uvedené jsou pouze podporované verze. Použijte odkaz odpovídající používanému typu zařízení výše v části V tomto článku:
+Pokud instalace aplikace trvá moc dlouho, můžete zkusit zařízení s Windows synchronizovat ručně. Ruční synchronizace může instalaci urychlit.
+
+Jsou podporované jenom následující verze. Použijte pokyny odpovídající typu vašeho zařízení.
 
 * [Windows 10 Mobile](#windows-10-mobile)
-* [Windows 10 Desktop](#windows-10-desktop)
+* [Stolní počítač s Windows 10](#windows-10-desktop)
 * [Windows Phone 8.1](#windows-phone-8-1)
 
 
@@ -34,70 +36,68 @@ Chcete-li ručně synchronizovat mobilní zařízení s Windows 10 pro urychlen�
 
 1. Přejděte na **Všechny aplikace** > **Nastavení** > **Účty**.
 
-    ![win10m-sync-1-settings-accounts](./media/win10m-sync-1-settings-accounts.png)
+    ![Volba možnosti Účty na obrazovce Nastavení](./media/win10m-sync-1-settings-accounts.png)
 
-2. Klepněte na **Přístup do práce**.
+2. Zvolte **Přístup do práce**.
 
-    ![win10m-sync-2-work-access](./media/win10m-sync-2-work-access.png)
+    ![Volba účtu typu Přístup do práce](./media/win10m-sync-2-work-access.png)
 
-3. V části **Zaregistrovat ke správě zařízení**, klepněte na název společnosti, viz následující příklad.
+3. V části **Zaregistrovat se ve správě zařízení** zvolte název své firmy.
 
-    ![win10m-sync-3-tap-comp-name](./media/win10m-sync-3-tap-comp-name.png)
+    ![Volba názvu firmy pro správu zařízení](./media/win10m-sync-3-tap-comp-name.png)
 
-4. Klepněte na ikonu **Synchronizovat**.
+4. Zvolte ikonu **Synchronizovat**.
 
-    ![win10m-sync-4-tap-sync](./media/win10m-sync-4-tap-sync.png)
+    ![Volba ikony Synchronizovat](./media/win10m-sync-4-tap-sync.png)
 
-    V horní části obrazovky se zobrazí zpráva „Probíhá synchronizace účtu“. Tlačítko Synchronizovat je zobrazeno šedě, dokud neskončí synchronizace vašeho zařízení.
+    V horní části obrazovky se zobrazí zpráva, že „probíhá synchronizace účtu“. Tlačítko **Synchronizovat** je zašedlé, dokud neskončí synchronizace vašeho zařízení.
 
 ## Stolní počítač s Windows 10
 Chcete-li provést ruční synchronizaci stolního počítače s Windows 10 pro urychlení pomalé instalace aplikací:
 
-1. Vyberte tlačítko **Start**, viz následující příklad, a pak vyberte **Nastavení**.
+1. Zvolte tlačítko **Start** a pak zvolte **Nastavení**.
 
-    ![win10pc-sync-1-start-button](./media/win10pc-sync-1-start-button.png)
+    ![Tlačítko Start](./media/win10pc-sync-1-start-button.png)
 
-2. Na stránce **Nastavení** vyberte **Účty**.
+2. Na stránce **Nastavení** zvolte **Účty**.
 
-    ![win10pc-sync-2-settings-accounts](./media/win10pc-sync-2-settings-accounts.png)
+    ![Volba možnosti Účty na obrazovce Nastavení](./media/win10pc-sync-2-settings-accounts.png)
 
-3. Na stránce **Účty** vyberte **Přístup do práce**.
+3. Na stránce **Účty** zvolte **Přístup do práce**.
 
-    ![win10pc-sync-3-work-access](./media/win10pc-sync-3-work-access.png)
+    ![Volba účtu typu Přístup do práce](./media/win10pc-sync-3-work-access.png)
 
-4. V části **Zaregistrovat ke správě zařízení** klikněte na název vaší společnosti, viz modře zvýrazněný příklad níže.
+4. V části **Zaregistrovat se ve správě zařízení** zvolte název své firmy.
 
-    ![win10pc-sync-4-tap-com-name](./media/win10pc-sync-4-tap-com-name.png)
+    ![Volba názvu firmy pro správu zařízení](./media/win10pc-sync-4-tap-com-name.png)
 
-5. Vyberte tlačítko **Synchronizovat**.
+5. Zvolte tlačítko **Synchronizovat**.
 
-    ![win10pc-sync-5-tap-sync](./media/win10pc-sync-5-tap-sync.png)
+    ![Volba tlačítka Synchronizovat](./media/win10pc-sync-5-tap-sync.png)
 
-   Tlačítko se změní na šedé, dokud neskončí synchronizace.
+   Tlačítko bude zašedlé, dokud synchronizace neskončí.
 
 ## Windows Phone 8.1
 Chcete-li provést ruční synchronizaci mobilního zařízení s Windows 8.1 pro urychlení pomalé instalace aplikací:
 
 1. Přejděte na **Všechny aplikace** > **Nastavení** > **Pracoviště**.
 
-    ![wp81-1-sync-settings-workplace](./media/wp81-1-sync-settings-workplace.png)
+    ![Seznam nastavení](./media/wp81-1-sync-settings-workplace.png)
 
-2. Klepněte na název vaší společnosti, viz modře zvýrazněný příklad níže.
+2. Zvolte název své firmy.
 
-    ![wp81-2-sync-tap-compname](./media/wp81-2-sync-tap-compname.png)
+    ![Volba názvu firmy pro účet pracoviště](./media/wp81-2-sync-tap-compname.png)
 
-3. Klepněte na ikonu **Synchronizovat**.
+3. Zvolte ikonu **Synchronizovat**.
 
-    ![wp81-3-sync-tap-sync-button](./media/wp81-3-sync-tap-sync-button.png)
+    ![Volba ikony Synchronizovat](./media/wp81-3-sync-tap-sync-button.png)
 
-   V horní části obrazovky se až do skončení synchronizace zařízení zobrazí zpráva „Probíhá synchronizace účtu“.
+   V horní části obrazovky bude až do skončení synchronizace zařízení zobrazená zpráva, že „probíhá synchronizace účtu“.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

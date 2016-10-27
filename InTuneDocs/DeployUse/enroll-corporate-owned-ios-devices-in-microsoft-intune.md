@@ -3,6 +3,7 @@ title: "Registrace zařízení iOS vlastněných společností | Microsoft Intun
 description: "Registrace zařízení s iOS vlastněných společností pomocí Programu registrace zařízení Apple (DEP) nebo nástroje Apple Configurator"
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 09/07/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 2d3ca4ab-f20c-4d56-9413-f8ef19cf0722
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bee93334e7b868ef6c827fba9efc3318c8419527
-ms.openlocfilehash: b295ee11d566fbfbe84513c045f3a76dfd51cda4
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: c28b51146deb6a0a28070f72449972fd60076231
 
 
 ---
@@ -76,10 +77,10 @@ Pokud je požadováno přidružení uživatele, před registrací zařízení zk
 
 
 ### Viz taky
-[Příprava registrace zařízení v Microsoft Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
+[Předpoklady pro registraci zařízení do Microsoft Intune](gprerequisites-for-enrollment.md)
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 

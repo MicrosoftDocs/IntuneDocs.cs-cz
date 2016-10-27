@@ -3,6 +3,7 @@ title: "Povolení pravidla ochrany zařízení v zásadách dodržování předp
 description: "Povolení pravidla ochrany před mobilními hrozbami v zásadách dodržování předpisů zařízení."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article

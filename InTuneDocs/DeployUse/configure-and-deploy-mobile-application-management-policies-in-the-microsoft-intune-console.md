@@ -3,8 +3,9 @@ title: "Konfigurace zásad MAM v konzole Intune | Microsoft Intune"
 description: "Zásady správy mobilních aplikací ve službě Microsoft Intune umožňují upravovat funkce aplikací, které nasazujete, a přizpůsobit je zásadám dodržování předpisů a zabezpečení vaší společnosti."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: b4fb33a8-a2fa-4353-bd89-5bda48b68e83
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b1d92786bd9f4d4893dd19c3116dcd5a047744ea
-ms.openlocfilehash: af9d8dd7830efe28aa5c994a2b5ec2bdcd4cc3cb
+ms.sourcegitcommit: 9a442d9472159757333a9ebe081d86eac9907cdc
+ms.openlocfilehash: d7978e558c68ad3209f1503619a9113dba126028
 
 
 ---
@@ -26,7 +27,7 @@ Podpora zásad správy mobilní aplikace:
 
 -   Zařízení se systémem Android 4 nebo novější verzí
 
--   Zařízení se systémem iOS 7 nebo novější verzí
+-   Zařízení, na kterých běží iOS 8.0 a novější
 
 > [!TIP]
 > Zásady správy mobilních zařízení podporují zařízení zaregistrovaná v Intune.
@@ -37,7 +38,7 @@ Na rozdíl od jiných zásad Intune nenasazujete zásadu správy mobilních apli
 
 Pokud chcete u aplikace použít omezení, musí aplikace obsahovat sadu Microsoft Intune App SDK. Tento typ aplikace se dá získat třemi způsoby:
 
--   **Použijte aplikaci spravovanou zásadami**. Aplikace spravovaná zásadami má integrovanou sadu App SDK. Pokud chcete tento typ aplikace přidat, zadáte odkaz na aplikaci z App Storu, jako je třeba iTunes Store nebo Google Play. Tento typ aplikace nevyžaduje žádné další zpracování. Další informace najdete v [seznamu aplikací, které můžete použít se zásadami správy mobilních aplikací služby Microsoft Intune](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx).
+-   **Použijte aplikaci spravovanou zásadami**. Aplikace spravovaná zásadami má integrovanou sadu App SDK. Pokud chcete tento typ aplikace přidat, zadáte odkaz na aplikaci z App Storu, jako je třeba iTunes Store nebo Google Play. Tento typ aplikace nevyžaduje žádné další zpracování. Další informace najdete v [seznamu aplikací, které můžete použít se zásadami správy mobilních aplikací služby Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps).
 
 -   **Použijte zabalenou aplikaci**. Zabalená aplikace je aplikace, která je znovu zabalená, aby zahrnovala sadu App SDK, pomocí nástroje Microsoft Intune App Wrapping Tool. Tento nástroj se obvykle používá ke zpracování interně vytvořených podnikových aplikací. Nedá se použít ke zpracování aplikací stažených z App Storu. Další informace najdete v tématu [Příprava aplikací pro iOS na správu mobilních aplikací nástrojem Microsoft Intune App Wrapping Tool](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) a [Příprava aplikací pro Android na správu mobilních aplikací nástrojem Microsoft Intune App Wrapping Tool](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md).
 
@@ -112,7 +113,7 @@ Po ověření úspěšného nahrání aplikace pokračujte krokem 3.
 
     -   **Zásady správy mobilních aplikací (Android 4 a novější)**
 
-    -   **Zásady správy mobilních aplikací (iOS 7 a novější)**
+    -   **Zásady správy mobilních aplikací (iOS 8.0 a novější)**
 
     Můžete použít doporučená nastavení nebo nastavení upravit. Podrobnosti najdete v tématu [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
@@ -134,9 +135,9 @@ Po ověření úspěšného nahrání aplikace pokračujte krokem 3.
     |**Vyžadovat kompatibilitu zařízení dodržováním podnikových zásad pro přístup**|Toto nastavení umožňuje použití aplikace, jenom když zařízení nemá jailbreak nebo root.|
     |**Znovu zkontrolovat požadavky na přístup po (minuty)**|V poli **Časový limit** určete časové období před dalším zkontrolováním požadavků na přístup po spuštění aplikace.|
     |**Offline období odkladu**|Pokud je zařízení offline, určete časové období před opakovaným zkontrolováním požadavků na přístup k aplikaci.|
-    |**Zašifrovat data aplikací**|Toto nastavení určuje, že všechna data přidružená k této aplikaci budou zašifrovaná. To zahrnuje i data uložená externě, například na SD kartách.<br /><br />**Šifrování pro iOS**<br /><br />Pro aplikace, které jsou přidružené k zásadám správy mobilních aplikací Intune, jsou neaktivní uložená data zašifrovaná pomocí šifrování na úrovni zařízení poskytované operačním systémem. To zajišťuje zásada kódu PIN, kterou nastavuje správce IT. Když se vyžaduje kód PIN, budou data zašifrovaná podle nastavení v zásadách správy mobilních aplikací. Jak uvádí dokumentace Apple, [moduly používané v iOS 7 mají certifikaci FIPS 140-2](http://support.apple.com/en-us/HT202739).<br /><br />**Šifrování pro Android**<br /><br />Pro aplikace, které jsou přidružené k zásadám správy mobilních aplikací Intune, zajišťuje šifrování Microsoft. Data jsou mezi vstupně-výstupními operacemi souborů synchronně šifrovaná.  Obsah v úložišti zařízení bude zašifrovaný vždycky. Metoda šifrování nemá certifikaci FIPS 140-2.|
+    |**Zašifrovat data aplikací**|Toto nastavení určuje, že všechna data přidružená k této aplikaci budou zašifrovaná. To zahrnuje i data uložená externě, například na SD kartách.<br /><br />**Šifrování pro iOS**<br /><br />Pro aplikace, které jsou přidružené k zásadám správy mobilních aplikací Intune, jsou neaktivní uložená data zašifrovaná pomocí šifrování na úrovni zařízení poskytované operačním systémem. To zajišťuje zásada kódu PIN, kterou nastavuje správce IT. Když se vyžaduje kód PIN, budou data zašifrovaná podle nastavení v zásadách správy mobilních aplikací. Jak se uvádí v dokumentaci společnosti Apple, [moduly používané v iOS mají certifikaci FIPS 140-2](http://support.apple.com/en-us/HT202739).<br /><br />**Šifrování pro Android**<br /><br />Pro aplikace, které jsou přidružené k zásadám správy mobilních aplikací Intune, zajišťuje šifrování Microsoft. Data jsou mezi vstupně-výstupními operacemi souborů synchronně šifrovaná.  Obsah v úložišti zařízení bude zašifrovaný vždycky. Metoda šifrování nemá certifikaci FIPS 140-2.|
     |**Blokovat snímek obrazovky** (jenom zařízení s Androidem)|Toto nastavení určuje, že jsou při použití této aplikace zablokované možnosti snímku obrazovky zařízení.|
-    
+
 4. Po dokončení klikněte na **Uložit zásadu**.
 
 Nová zásada se zobrazí v uzlu **Zásady konfigurace** pracovního prostoru **Zásady**.
@@ -147,8 +148,6 @@ Abyste přidružili zásadu správy mobilních aplikací k aplikaci, vyberte zá
 Podrobnosti najdete v tématu [Nasazení aplikací v Microsoft Intune](deploy-apps.md).
 
 > [!IMPORTANT]
-> Pro zařízení, která používají operační systémy starší než iOS 7.1, nebudou při odinstalaci aplikace přidružené zásady odebrané.
->
 > Pokud se registrace zařízení v Intune zruší, zásady se z aplikací neodeberou. Aplikace, u kterých se použily zásady, si zachovají nastavení zásad i po jejich odinstalování a opětovném nainstalování.
 
 ### Postup v případě, že je aplikace už v zařízeních nasazená
@@ -195,6 +194,6 @@ V případech, kdy zařízení nebo uživatel obdrží dvě konfliktní zásady,
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 

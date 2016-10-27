@@ -3,6 +3,7 @@ title: "Použití zařízení s Windows v Intune | Microsoft Intune"
 description: "Obsahuje seznam odkazů na úlohy, které můžete dělat v zařízení s Windows, když je zařízení registrované v Intune."
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

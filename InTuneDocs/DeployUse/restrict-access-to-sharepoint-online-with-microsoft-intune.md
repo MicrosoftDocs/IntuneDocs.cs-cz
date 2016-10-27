@@ -3,6 +3,7 @@ title: "Omezení přístupu ke službě SharePoint Online | Microsoft Intune"
 description: "Chraňte a kontrolujte přístup k podnikovým datům na SharePoint Online pomocí podmíněného přístupu."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/13/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a1d0b330b42ea920af9512552a9f3d9c875e99da
-ms.openlocfilehash: 2d8304964908986943c82ebed1dd7fd23b2c222e
+ms.sourcegitcommit: db1d43dd647122e7ba8ebd4e6df48e3c970a3392
+ms.openlocfilehash: 76ac4c92d090ef0057bd7c9687b169cd12b901a1
 
 
 ---
@@ -32,14 +33,11 @@ Když se uživatel na svém zařízení pokusí připojit k souboru pomocí podp
 
 ![Diagram zobrazující průběh rozhodování, jestli má zařízení povolený přístup do služby SharePoint ](../media/ConditionalAccess8-6.png)
 
->[!IMPORTANT]
->Podmíněný přístup pro počítače PC a zařízení Windows 10 Mobile s aplikacemi využívajícími moderní ověřování není aktuálně dostupný pro všechny zákazníky využívající Intune. Pokud tyto funkce využíváte, nemusíte provádět žádnou akci. Můžete je dál používat.
-
->Pokud jste nevytvořili zásady podmíněného přístupu pro počítače nebo Windows 10 Mobile pro aplikace využívající moderní ověřování a teď to chcete udělat, zaregistrujte si verzi Public Preview služby Azure Active Directory, která zahrnuje podmíněný přístup pro zařízení spravovaná pomocí Intune nebo počítače s Windows připojené k doméně. Další informace najdete v [tomto příspěvku blogu](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azuread-conditional-access-policies-for-ios-android-and-windows-are-in-preview/).
 
 **Dřív** než nakonfigurujete zásady podmíněného přístupu pro SharePoint Online, musíte:
 - Mít předplatné **SharePointu Online** a uživatelé musí mít licenci SharePointu Online.
-- Mít předplatné **Enterprise Mobility Suite** nebo **Azure Active Directory Premium**.
+- Mít **předplatné Azure Active Directory Premium nebo Enterprise Mobility + Security** a uživatelé musí být licencovaní pro EMS nebo Azure AD. Další informace najdete na [stránce s cenami služby Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) nebo na [stránce s cenami služby Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
+
 
   Pro připojení k požadovaným souborům zařízení:
 -   Musí být **zaregistrované** ve službě [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] nebo se musí jednat o počítač připojený k doméně.
@@ -61,8 +59,9 @@ Pokud není podmínka splněná, zobrazí se uživateli při přihlášení jedn
 
 >[!NOTE]
 >Pokud povolíte podmíněný přístup pro SharePoint Online, doporučujeme zakázat doménu v seznamu, jak je popsáno v tématu [Remove-SPOTenantSyncClientRestriction](https://technet.microsoft.com/en-us/library/dn917451.aspx).  
+
 ## Podpora mobilních zařízení
-- iOS 7.1 nebo novější
+- iOS 8.0 a novější
 - Android 4.0 nebo novější, Samsung Knox Standard 4.0 nebo novější
 - Windows Phone 8.1 nebo novější
 
@@ -75,7 +74,9 @@ Můžete omezit přístup k SharePoint Online při přístupu z prohlížeče v 
 
 ## Podpora počítačů
 - Windows 8.1 nebo novější (při registraci v Intune)
-- Windows 7.0 nebo Windows 8.1 (při připojení k doméně)
+- Windows 7.0, Windows 8.1 nebo Windows 10 (při připojení k doméně)
+> [!NOTE]
+>Pokud chcete použít podmíněný přístup u počítačů s Windows 10, musíte je aktualizovat na verzi Windows 10 Anniversary Update.
 
   - Pro počítače připojené k doméně musíte nastavit [automatickou registraci](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/) v Azure Active Directory.
 Pro zákazníky Intune a Office 365 je služba AAD DRS aktivovaná automaticky. Zákazníci, kteří už mají nasazenou službu AD FS Device Registration Service, registrovaná zařízení ve svojí místní službě Active Directory neuvidí.
@@ -122,6 +123,10 @@ V dalším kroku nakonfigurujte zásadu, která bude vyžadovat, aby měla k Sha
 
 #### <a name="bkmk_spopolicy"></a>
 
+>[!NOTE]
+> Zásady podmíněného přístupu můžete vytvořit i v konzole pro správu Azure AD. Přes konzolu pro správu Azure AD můžete vytvářet i zásady podmíněného přístupu pro zařízení Intune (v Azure AD označované jako **zásady podmíněného přístupu založené na zařízení**), kromě jiných zásad podmíněného přístupu, jako je například vícefaktorové ověřování.  Taky můžete nastavit zásady podmíněného přístupu pro podnikové aplikace třetích stran, jako je například Salesforce nebo Box, které služba Azure AD podporuje. Další informace najdete v tématu [Jak ve službě Azure Active Directory nastavit zásady podmíněného přístupu založené na zařízení a získat tak kontrolu přístupu do aplikací napojených na službu Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
+
+
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Zásady** > **Podmíněný přístup** > **Zásady pro SharePoint Online**.
 ![Snímek stránky zásad SharePointu Online](../media/mdm-ca-spo-policy-configuration.png)
 
@@ -136,8 +141,6 @@ V dalším kroku nakonfigurujte zásadu, která bude vyžadovat, aby měla k Sha
         Výběr volby **Všechny platformy** způsobí, že Azure Active Directory uplatní tyto zásady na všechny požadavky na ověření bez ohledu na platformu, která je ohlášena klientskou aplikací.  Pro všechny platformy bude vyžadována registrace a shoda s výjimkou následujících bodů:
         *   Zařízení s Windows budou muset být zaregistrovaná a vyhovující, doména bude muset být spojena s místním Active Directory nebo obojí
         * Nepodporované platformy jako Mac.  Aplikace používající moderní ověřování pocházející z těchto platforem však budou i nadále zablokovány.
-        >[!TIP]
-        >Pokud ještě nepoužíváte podmíněný přístup pro počítače PC, nemusí se vám tato možnost zobrazit.  Místo toho použijte možnost **Specifické platformy**. Podmíněný přístup pro počítače PC není aktuálně k dispozici všem zákazníkům Intune.   Další informace o získání přístupu k této funkci najdete [v tomto příspěvku blogu](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azuread-conditional-access-policies-for-ios-android-and-windows-are-in-preview/).
 
     -   **Specifické platformy**
 
@@ -192,6 +195,6 @@ Vyberte libovolnou skupinu mobilních zařízení a pak na kartě **Zařízení*
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

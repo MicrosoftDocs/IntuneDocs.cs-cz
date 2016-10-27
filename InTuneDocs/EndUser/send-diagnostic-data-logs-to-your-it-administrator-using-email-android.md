@@ -1,8 +1,9 @@
 ---
-title: "Odeslání protokolů s diagnostickými daty ze zařízení správci IT e-mailem | Microsoft Intune"
-description: 
+title: "Odeslání protokolů s diagnostickými daty e-mailem vašemu správci IT | Microsoft Intune"
+description: "Odeslání datových protokolů zařízení s Androidem pomocí e-mailu"
 keywords: 
-author: staciebarker
+author: barlan
+ms.author: barlan
 manager: angrobe
 ms.date: 09/21/2016
 ms.topic: article
@@ -14,18 +15,18 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4881d765a6a79d380ab6d3facdb55d9f0c81bf97
-ms.openlocfilehash: 87b0e188824368116dce5ea154821084b8db16ce
+ms.sourcegitcommit: 6be7193a5f04768a59b5c73fb9c2f51241156ada
+ms.openlocfilehash: 9dd0f089d220538a5526979a84dc165151b86f4f
 
 
 ---
 
 
-# Odeslání protokolů s diagnostickými daty ze zařízení správci IT e-mailem
+# Odeslání protokolů s diagnostickými daty e-mailem vašemu správci IT
 
-Pokud při práci se školními nebo podnikovými aplikacemi nebo s aplikací Portál společnosti dojde k chybě v zařízení s Androidem, můžete odeslat protokoly s diagnostickými daty, které vašemu správci IT pomůžou chybu pochopit a vyřešit. Pokud chcete do protokolů zahrnout všechny podrobnosti, které vašemu správci IT pomůžou problém pochopit, zapněte funkci Podrobné protokolování. O [podrobném protokolování](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md) si můžete přečíst víc.
+Pokud se při práci se školními nebo firemními aplikacemi nebo s aplikací Portál společnosti na zařízení s Androidem zobrazí chyba, můžete odeslat protokoly s diagnostickými daty, které vašemu správci IT pomůžou chybu diagnostikovat a opravit. Pokud chcete do protokolů zahrnout všechny podrobnosti, které vašemu správci IT pomůžou problém pochopit, zapněte podrobné protokolování. Další informace o podrobném protokolování najdete v článku [Pomoc správci IT s řešením problémů zařízení s Androidem pomocí podrobného protokolování](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).
 
-Pokud chcete odeslat protokoly e-mailem správci IT:
+Protokoly odešlete e-mailem správci IT takto:
 
 1.  Otevřete aplikaci Portál společnosti.
 
@@ -39,6 +40,7 @@ Pokud chcete odeslat protokoly e-mailem správci IT:
 Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
-<!--HONumber=Sep16_HO4-->
+
+<!--HONumber=Oct16_HO2-->
 
 

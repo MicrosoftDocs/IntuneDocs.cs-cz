@@ -13,8 +13,8 @@ ms.assetid: e721c5c7-9678-4f3b-81d4-564da5efd337
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 777c0ac6ea309db81b127fb254e0c5f88444e475
-ms.openlocfilehash: cf1fde5b5ed55552e573c724b6165203033683da
+ms.sourcegitcommit: af4c84d0e317f5903d22cdfead9ce0ab4fbddc8f
+ms.openlocfilehash: ed8f280de4582863f77e5b0e9cb5dfb2f20159c4
 
 
 ---
@@ -35,7 +35,7 @@ Pokud hledáte informace o jiných platformách, vyberte jednu z těchto možnos
 
 -  **Minimální délka hesla:** Určuje minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
 
-- **Kvalita hesla:** Toto nastavení zapněte, pokud chcete konfigurovat požadavky na heslo pro zařízení s Androidem. Vybírejte z těchto možností:
+- **Kvalita hesla:** Toto nastavení rozpozná, jestli jsou na zařízení nakonfigurované požadavky na heslo, které jste zadali. Toto nastavení povolte, pokud uživatelé musí pro zařízení s Androidem nakonfigurovat určité požadavky na heslo. Vybírejte z těchto možností:
   -   **Biometrika s nízkým zabezpečením**
   - **Požadováno**
   -   **Aspoň číselné**
@@ -83,6 +83,6 @@ Pokud hledáte informace o jiných platformách, vyberte jednu z těchto možnos
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

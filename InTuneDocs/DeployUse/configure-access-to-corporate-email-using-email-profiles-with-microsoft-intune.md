@@ -4,7 +4,7 @@ description: "Nastavení e-mailového profilu se dá použít ke konfiguraci nas
 keywords: 
 author: Nbigman
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d8a4fd4673560d6e2ffb4264ba8d8e56b0e5cb8d
-ms.openlocfilehash: 59b8cc2ad33521fd4575e46d78129c168da757b3
+ms.sourcegitcommit: befe1b3446770509c83a360c854993d4aaada09d
+ms.openlocfilehash: 1bd5d64dfff1cf1fc42247c5f89861e216da77d5
 
 
 ---
@@ -31,15 +31,18 @@ Správci IT nebo uživatelé si také můžou nainstalovat alternativní e-mailo
 E-mailové profily můžete použít ke konfiguraci nativních e-mailových klientů na těchto typech zařízení:
 -   Windows Phone 8 a novější
 -   Windows 10 (pro počítače), Windows 10 Mobile a novější
--   iOS 7.1 nebo novější
+-   iOS 8.0 a novější
 -   Samsung KNOX Standard (4.0 a novější)
+-   Android for Work
+
+>[!NOTE]
+>Intune poskytuje dva e-mailové profily pro Android for Work – jeden pro každou z e-mailových aplikací Gmail a Nine Work. Tyto aplikace jsou dostupné v obchodě Google Play a podporují připojení k Exchangi. Pokud chcete umožnit připojení k e-mailu, nasaďte jednu z těchto e-mailových aplikací do zařízení uživatelů a pak vytvořte a nasaďte příslušný profil. 
 
 Vedle samotného nastavení e-mailového účtu v zařízení můžete určit, kolik e-mailů se má synchronizovat, a v závislosti na zařízení také jaký typ obsahu se má synchronizovat.
+
 >[!NOTE]
 >
 >Pokud uživatel nainstaloval e-mailový profil dřív, než profil nastavila služba Intune, výsledek nasazení e-mailového profilu Intune bude záviset na platformě zařízení:
-
-[comment]: <> Passive construction in next three paragraphs is necessary until the process of duplicate detection is made clear by PM.
 
 >**iOS**: Je detekován existující duplicitní profil e-mailu na základě názvu hostitele a e-mailové adresy. Duplicitní e-mailový profil vytvořený uživatelem blokuje nasazení profilu Intune vytvořeného správcem. Tento problém je běžný, protože uživatelé s iOS obvykle vytvoří e-mailový profil, a teprve potom se zaregistrují. Portál společnosti informuje uživatele o tom, že nesplňují požadavky kvůli ručně nakonfigurovanému e-mailovému profilu, a vyzve uživatele k jeho odebrání. Uživatel by měl svůj e-mailový profil odebrat, aby bylo možné nasadit profil Intune. Pokud chcete problémům zabránit, požádejte své uživatele, aby se zaregistrovali před instalací e-mailového profilu a aby Intune umožnili nastavení profilu.
 
@@ -48,6 +51,8 @@ Vedle samotného nastavení e-mailového účtu v zařízení můžete určit, k
 >**Samsung KNOX**: Je detekován duplicitní e-mailový profil na základě e-mailové adresy, který bude přepsán profilem Intune. Pokud uživatel tento účet nakonfiguruje, profil Intune ho znovu přepíše. To může způsobit jisté zmatení uživatele.
 
 >Vzhledem k tomu, že Samsung KNOX nevyužívá k identifikaci profilu název hostitele, doporučujeme nevytvářet víc e-mailových profilů pro použití se stejnou e-mailovou adresou na různých hostitelích, protože by se vzájemně přepisovaly.
+
+>**Android for Work**: Profil Intune se uplatňuje jenom na pracovní profil zařízení a nemá vliv na e-mailové profily v profilu uživatele zařízení.
 
 
 ## Zabezpečení e-mailových profilů
@@ -71,11 +76,15 @@ Heslo není součástí e-mailového profilu, uživatel ho tedy musí zadat při
 
     -   **E-mailový profil pro standard Samsung KNOX (4.0 nebo novější)**
 
-    -   **E-mailový profil (iOS 7.1 a novější)**
+    -   **E-mailový profil (iOS 8.0 a novější)**
 
     -   **E-mailový profil (Windows Phone 8 a novější)**
 
     -   **E-mailový profil (Windows 10 Desktop a Mobile a novější)**
+    
+    -   **E-mailový profil (Android for Work – Gmail)**
+
+    -   **E-mailový profil (Android for Work – Nine Work)**
 
     Můžete vytvořit a nasadit jenom vlastní zásadu e-mailového profilu. Doporučená nastavení nejsou dostupná.
 
@@ -89,14 +98,14 @@ Heslo není součástí e-mailového profilu, uživatel ho tedy musí zadat při
     |**Název účtu**|Zobrazovaný název e-mailového účtu tak, jak ho uvidí uživatelé na svých zařízeních.|
     |**Uživatelské jméno**|Způsob získání uživatelského jména pro e-mailový účet. V případě místního serveru Exchange vyberte **Uživatelské jméno** a v případě služeb Office 365 vyberte **Hlavní název uživatele**.|
     |**E-mailová adresa**|Způsob generování e-mailové adresy uživatele na každém zařízení. Pokud chcete k přihlášení do systému Exchange použít primární adresu SMTP, vyberte **Primární adresa SMTP**, nebo pokud chcete jako e-mailovou adresu používat celý hlavní název, vyberte **Hlavní název uživatele**.|
-    |**Metoda ověřování** (Samsung KNOX a iOS)|Jako metodu ověřování používanou e-mailovým profilem vyberte buď **Uživatelské jméno a heslo**, nebo **Certifikáty**.|
-    |**Vyberte klientský certifikát pro ověření klienta (certifikát identity)** (Samsung KNOX a iOS)|Vyberte certifikát klienta SCEP, který jste dříve vytvořili a který se použije k ověření připojení Exchange. Další informace o použití profilů certifikátů v Intune najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů v Microsoft Intune](secure-resource-access-with-certificate-profiles.md). Tato možnost se zobrazí jenom v případě, že je metoda ověřování **Certifikáty**.|
+    |**Metoda ověřování** (Android for Work, Samsung KNOX a iOS)|Jako metodu ověřování používanou e-mailovým profilem vyberte buď **Uživatelské jméno a heslo**, nebo **Certifikáty**.|
+    |**Vyberte klientský certifikát pro ověření klienta (certifikát identity)** (Android for Work, Samsung KNOX a iOS)|Vyberte certifikát klienta SCEP, který jste dříve vytvořili a který se použije k ověření připojení Exchange. Další informace o použití profilů certifikátů v Intune najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů v Microsoft Intune](secure-resource-access-with-certificate-profiles.md). Tato možnost se zobrazí jenom v případě, že je metoda ověřování **Certifikáty**.|
     |**Použít S/MIME** (Samsung KNOX a iOS)|Posílá odchozí poštu s šifrováním S/MIME.|
     |**Podpisový certifikát** (Samsung KNOX a iOS)|Vyberte podpisový certifikát, který se bude používat k podepsání odchozích e-mailů. Tato možnost se zobrazí jenom v případě, že jste vybrali **Použít S/MIME**.|
     |**Počet dnů, za které se mají e-maily synchronizovat**|Zadejte počet uplynulých dnů, za které se mají e-maily synchronizovat, nebo vyberte **Neomezený**, pokud chcete synchronizovat všechny dostupné e-maily.|
-    |**Plán synchronizace** (Samsung KNOX, Windows Phone 8 a novější, Windows 10)|Vyberte plán, podle kterého budou zařízení synchronizovat data ze serveru Exchange. Můžete také vybrat **Při doručování zpráv**, aby se data synchronizovala hned po doručení, nebo **Ruční**, aby musel synchronizaci zahájit uživatel zařízení.|
+    |**Plán synchronizace** (Android for Work, Samsung KNOX, Windows Phone 8 a novější, Windows 10)|Vyberte plán, podle kterého budou zařízení synchronizovat data ze serveru Exchange. Můžete také vybrat **Při doručování zpráv**, aby se data synchronizovala hned po doručení, nebo **Ruční**, aby musel synchronizaci zahájit uživatel zařízení.|
     |**Použít protokol SSL**|Při posílání a přijímání e-mailů a komunikaci se serverem Exchange se použije komunikace SSL (Secure Sockets Layer). U zařízení, na kterých běží Samsung KNOX 4.0 nebo novější, musíte exportovat certifikát SSL serveru Exchange a v Intune ho nasadit jako profil důvěryhodného certifikátu pro Android. Intune nepodporuje přístup k tomuto certifikátu, pokud je na serveru Exchange nainstalovaný jiným způsobem.|
-    |**Typ obsahu, který se má synchronizovat**|Vyberte typy obsahu, které se mají na zařízeních synchronizovat.|
+    |**Typ obsahu, který se má synchronizovat** (všechny platformy s výjimkou Gmailu pro Android for Work)|Vyberte typy obsahu, které se mají na zařízeních synchronizovat.|
     |**Povolit odesílání e-mailů z aplikací jiných výrobců** (jenom iOS)|Můžete povolit uživateli, aby tento profil vybral jako výchozí účet pro odesílání e-mailů, a povolit aplikacím třetích stran otevírání e-mailů v nativních e-mailových aplikacích, například připojování souborů k e-mailům.|
     > [!IMPORTANT]
     > If you have deployed an email profile and then wish to change the values for **host** or **Email address**, you must delete the existing email profile and create a new one with the required values.
@@ -122,6 +131,6 @@ Shrnutí stavu a výstrahy na stránce **Přehled** v pracovním prostoru **Zás
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

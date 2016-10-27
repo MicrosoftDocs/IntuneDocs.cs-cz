@@ -3,6 +3,7 @@ title: "Povolení ochrany Lookout MTP v Intune | Microsoft Intune"
 description: "Povolení ochrany proti mobilním hrozbám Lookout v konzole pro správu Intune."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article
@@ -13,14 +14,14 @@ ms.assetid: 2f835fd0-4e62-42f3-b7ca-ce8b7ddd40e4
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1334500471d2aea5e8c58a3219c755bfd9953424
-ms.openlocfilehash: 4ae7d6c571f69c0cc51dc15355e50325afb88694
+ms.sourcegitcommit: ceaeba74f8671caf4125252fce02fd06752c3fe8
+ms.openlocfilehash: 2052aca24baa752bc4fad3bd7a75f8efa109e9e9
 
 
 ---
 
 # Povolení připojení Lookout MTP v konzole pro správu Intune
-V tomto tématu se dozvíte, jak povolit připojení Lookout MTP v Intune. Než přistoupíte k tomuto kroku, měli byste už mít v konzole Lookout MTP nakonfigurovaný konektor Intune.  Pokud jste tak ještě neučinili, postupujte podle pokynů popsaných v tématu [Nastavení předplatného pro Lookout MTP](set-up-your-subscription-with-lookout-mtp.md).
+V tomto tématu se dozvíte, jak povolit připojení Lookout MTP v Intune. Než přistoupíte k tomuto kroku, měli byste už mít v konzole Lookout nakonfigurovaný konektor Intune.  Pokud jste tak ještě neučinili, postupujte podle pokynů popsaných v tématu [Nastavení předplatného pro Lookout MTP](set-up-your-subscription-with-lookout-mtp.md).
 
 Pokud chcete povolit připojení Lookout MTP v Intune, na stránce **Správa** v [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte možnost **Integrace služeb třetích stran**. Vyberte možnost **Stav Lookoutu** a pomocí přepínacího tlačítka povolte **Synchronizace s MTP**.
 
@@ -35,6 +36,6 @@ Tím dokončíte nastavení integrace služeb Lookout a Intune v konzole pro spr
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO4-->
 
 

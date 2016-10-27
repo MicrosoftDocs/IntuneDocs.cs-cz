@@ -3,6 +3,7 @@ title: "Příručka pro testování Intune | Microsoft Intune"
 description: "Úvod a požadavky pro nastavení bezplatného 30denního testování Intune"
 keywords: 
 author: lindavr
+ms.author: lindavr
 manager: angrobe
 ms.date: 08/09/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: 619a1d11-3d22-4635-8f70-770eba3e1712
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 51fba2b01d8978bc062c50c4388714609be0fdf0
-ms.openlocfilehash: cbf863619a385d596630ee4ff0b216a4cbbe6cb7
+ms.sourcegitcommit: 581e880fa4308ec627f5b2c1242fb5b30b713743
+ms.openlocfilehash: 3973ac11d4734b17f905e88259863d7ddb59c1f4
 
 
 ---
@@ -37,12 +38,12 @@ Před zahájením práce s Intune budete potřebovat:
 
 -   Pokud máte stávající účet služeb Microsoft Online Services, budete pro něj potřebovat přihlašovací údaje správce. Pokud uvedený účet nemáte nebo chcete tohoto klienta Intune použít jenom pro účely hodnocení, pak tyto přihlašovací údaje správce potřebovat nebudete.
 
--   Pokud budete spravovat zařízení s iOS nebo Windows Phone pomocí testování Intune, budete potřebovat certifikáty (nebo klíče) a účty k načtení těchto certifikátů (viz následující tabulka). Zařízení s Androidem žádné další certifikáty nepotřebují.
+-   Pokud během testování Intune budete spravovat zařízení s iOS nebo Windows Phone 8.1, budete potřebovat certifikáty (nebo klíče) a účty k načtení těchto certifikátů (viz následující tabulka). Zařízení s Androidem žádné další certifikáty nepotřebují.
 
     |Platforma|Požadavky na certifikát|Další informace|
     |------------|----------------------------|--------------------|
-    |Windows Phone 8.1 a Windows Phone 8 |Pro uživatele Windows Phone 8.1, kteří si aplikaci Portál společnosti nainstalují ze Storu, žádný certifikát potřeba není. Pro Windows Phone 8.0 nebo v případě použití Intune k nasazení aplikace Portál společnost na zařízení s Windows Phone 8.1 se vyžaduje certifikát Symantec.|Tyto pokyny předpokládají, že uživatelé aplikaci Portál společnosti získají ze Storu na zařízení s Windows Phone 8.1 nebo novějším. Informace o podpoře zařízení Windows Phone 8.0 najdete v tématu [Nastavení správy pro zařízení Windows Phone v Microsoft Intune](/Intune/Deploy-Use/set-up-windows-phone-management-with-microsoft-intune).|
-    |Zařízení s Windows 10, Windows RT 8.1, Windows RT nebo Windows 8.1|Na registraci zařízení s Windows RT a Windows nejsou žádné požadavky.|[Instalace klienta na počítači s Windows pomocí Microsoft Intune](/Intune/Deploy-Use/install-the-windows-pc-client-with-microsoft-intune).|
+    |Windows Phone 8.1 |Pro uživatele Windows Phone 8.1, kteří si aplikaci Portál společnosti nainstalují ze Storu, žádný certifikát potřeba není. |Tyto pokyny předpokládají, že uživatelé aplikaci Portál společnosti získají ze Storu na zařízení s Windows Phone 8.1 nebo novějším. |
+    |Zařízení s Windows 10, Windows RT 8.1 nebo Windows 8.1|Na registraci zařízení s Windows RT a Windows nejsou žádné požadavky.|[Instalace klienta na počítači s Windows pomocí Microsoft Intune](/Intune/Deploy-Use/install-the-windows-pc-client-with-microsoft-intune).|
     |iOS 7.1 nebo novější|Získání certifikátu služby Apple Push Notification:|Požádejte o certifikát služby Apple Push Notification od společnosti Apple, jak se popisuje v tématu [Nastavení správy pro iOS a Mac pomocí Microsoft Intune](/Intune/Deploy-Use/set-up-ios-and-mac-management-with-microsoft-intune).|
 
 ## Kroky k dokončení 30denního testování Intune
@@ -66,6 +67,6 @@ Je na čase zahájit 30denní testovací předplatné!
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Oct16_HO2-->
 
 

@@ -3,8 +3,9 @@ title: "Omezení přístupu k e-mailu v místním systému Exchange | Microsoft 
 description: "Chraňte a kontrolujte přístup k podnikovým e-mailům v místním systému Exchange pomocí podmíněného přístupu."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
-ms.date: 07/18/2016
+ms.date: 10/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: a55071f5-101e-4829-908d-07d3414011fc
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 9a6455ded35bf77fbd5da1d4f345759836f38c7f
+ms.sourcegitcommit: b6e647c66d6de7d455d290dfa3358499a3f13453
+ms.openlocfilehash: e5c9d2a19f588ddd067a1e194568186f66afb85b
 
 
 ---
@@ -64,17 +65,19 @@ Následující diagram znázorňuje postup, který zásady podmíněného přís
 -   Pokud zařízení není kompatibilní, zobrazí se zpráva, která uživatele přesměruje na web Portál společnosti služby [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] nebo na aplikaci Portál společnosti, kde může najít informace o problému a jeho řešení.
 
 ## Podpora mobilních zařízení
--   Windows Phone 8 a novější
+-   Windows Phone 8.1 nebo novější
 
 -   Nativní e-mailová aplikace v systému iOS
 
--   Nativní e-mailová aplikace v systému Android 4 nebo novějším
+-   Poštovní klienti EAS, například Gmail v Androidu 4 a novějším
+- **Zařízení s Androidem for Work** se poštovními klienty EAS: Na zařízeních s Androidem for Work jsou v **pracovním profilu** podporované jenom aplikace **Gmail** a **Nine Work**. Aby v Androidu for Work fungoval podmíněný přístup, musíte nasadit e-mailový profil pro aplikaci Gmail nebo Nine Work a zároveň tyto aplikace nasadit jako požadovanou instalaci. 
+
 > [!NOTE]
 > Aplikace Microsoft Outlook pro Android a iOS se nepodporuje.
 
 ## Podpora počítačů
 
-Aplikace **Mail** v systému Windows 8 a novějším (při registraci v [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)])
+Aplikace **Pošta** ve Windows 8.1 a novějších verzích (při registraci v [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)])
 
 ##  Konfigurace zásad podmíněného přístupu
 
@@ -123,6 +126,6 @@ Aplikace **Mail** v systému Windows 8 a novějším (při registraci v [!INCLU
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

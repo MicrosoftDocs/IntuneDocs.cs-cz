@@ -3,6 +3,7 @@ title: "Řízení nastavení Windows Hello pro firmy na zařízeních | Microsof
 description: "Přečtěte si, jak Intune umožňuje integraci se službou Windows Hello pro firmy. Je to alternativní metoda pro přihlašování pomocí účtu služby Active Directory nebo Azure Active Directory, která může nahradit hesla, čipové karty a virtuální čipové karty."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/20/2016
 ms.topic: article

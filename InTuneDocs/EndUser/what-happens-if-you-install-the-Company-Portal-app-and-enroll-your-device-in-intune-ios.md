@@ -4,7 +4,7 @@ description:
 keywords: 
 author: Staciebarker
 manager: angrobe
-ms.date: 7/7/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: b5ecb5b4c7629b04c679995b5788ee307bac79f0
+ms.sourcegitcommit: 4881d765a6a79d380ab6d3facdb55d9f0c81bf97
+ms.openlocfilehash: e6e08b1947f93fde6c9e7bff966042647386e7d0
 
 
 ---
@@ -75,7 +75,7 @@ Po registraci vašeho zařízení může správce IT provádět tyto kroky:
 
 -   Vyžadovat, abyste přijali smluvní podmínky.
 
--   Povolit nebo zakázat používání fotoaparátu/kamery v zařízení.
+-   Povolit nebo zakázat používání fotoaparátu v zařízení a tím vám znemožnit pořizovat snímky důvěrných dat společnosti.
 
 -   Povolit nebo zakázat procházení webu v zařízení.
 
@@ -91,12 +91,10 @@ Po registraci vašeho zařízení může správce IT provádět tyto kroky:
 
 -   Povolit nebo zakázat automatickou synchronizaci souborů v režimu roamingu v zařízení. Pokud je povolena automatická synchronizace souborů, mohou vám být účtovány poplatky za roaming.
 
-Kroky postupu registrace zařízení najdete v tématu [Registrace zařízení se systémem Mac OS X v Intune](enroll-your-device-in-intune-ios.md) nebo [Registrace zařízení se systémem iOS do Intune](enroll-your-device-in-intune-mac-os-x.md).
-
-Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 

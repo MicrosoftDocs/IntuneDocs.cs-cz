@@ -3,6 +3,7 @@ title: "Jak uživatelé s Androidem získávají svoje apikace| Microsoft Intune
 description: "Metody zpřístupnění aplikací pro Android koncovým uživatelům"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 7/7/2016
 ms.topic: article
@@ -13,15 +14,15 @@ ms.assetid: f33d1684-b1b5-44f7-9aac-c6d5186a5d7c
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a3db9269bf4f93021d16d8ea23a2a13b87b43677
-ms.openlocfilehash: d3d37b9bcf8cc5833b4e11185b49902e26a625dc
+ms.sourcegitcommit: 627914b2ac877c1b5ff5bc95f7f2098ab8988250
+ms.openlocfilehash: 98e712fb852c89c1d092b87482f30ada33010a33
 
 
 ---
 
 
 # Jak uživatelé s Androidem získávají svoje aplikace
-Tyto informace slouží k pochopení toho, jak a kde koncoví uživatelé Androidu získávají aplikace, které distribuujete pomocí Microsoft Intune. Informace pro nativní zařízení s Androidem se oproti zařízení Samsung Knox mohou lišit.
+Tyto informace slouží k pochopení toho, jak a kde koncoví uživatelé Androidu získávají aplikace, které distribuujete pomocí Microsoft Intune. Tyto informace se můžou lišit podle typu zařízení (nativního zařízení s Androidem nebo zařízení Samsung Knox).
 
 ## Nativní zařízení s Androidem (ne Samsung Knox)
 
@@ -39,9 +40,9 @@ Tyto informace slouží k pochopení toho, jak a kde koncoví uživatelé Androi
 
 Aplikace můžou být spravované nebo nespravované, jak je popsáno dál. Proces převedení aplikace na spravovanou je stejný pro všechny typy zařízení s Androidem.
 
-**Spravované aplikace** – Aplikace, které jde spravovat pomocí zásad a které „zabalila“ služba Intune nebo které se sestavily pomocí sady Intune Mobile Application Management (MAM) Software Development Kit (SDK). Tyto aplikace je možné spravovat pomocí služby Intune a je na ně možné aplikovat zásady použití.
+**Spravované aplikace** – aplikace, které jde spravovat prostřednictvím zásad. Jsou „zabalené“ službou Intune nebo sestavené pomocí sady Intune MAM (Mobile Application Management) SDK (Software Development Kit). Tyto aplikace je možné spravovat pomocí služby Intune a je na ně možné aplikovat zásady použití.
 
-**Nespravované aplikace** – Aplikace, které jde spravovat pomocí zásad a které nejsou zabalené službou Intune nebo které nejsou sestavené pomocí sady Intune MAM SDK. Na tyto aplikace nejdou aplikovat zásady použití.
+**Nespravované aplikace** – aplikace, které nejde spravovat prostřednictvím zásad. Nejsou zabalené službou Intune ani sestavené pomocí sady Intune MAM SDK. Na tyto aplikace nejdou aplikovat zásady použití.
 
 ### Viz taky
 [Přidávání aplikací s Microsoft Intune](/intune/deploy-use/add-apps)
@@ -52,6 +53,6 @@ Aplikace můžou být spravované nebo nespravované, jak je popsáno dál. Proc
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

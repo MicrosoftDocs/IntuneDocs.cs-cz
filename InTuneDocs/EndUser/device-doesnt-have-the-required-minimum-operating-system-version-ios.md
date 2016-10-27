@@ -3,6 +3,7 @@ title: "Zařízení s iOS nemá požadovanou minimální verzi operačního syst
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/08/2016
 ms.topic: article
@@ -14,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7549b5af84e5a1712c2e1649b1afe03718d53dcc
-ms.openlocfilehash: e79337cb47a95b2718093b871b6af7f90d2d430d
+ms.sourcegitcommit: 9a9343f7aa1ab4761bcbf36f829fe0e9be293515
+ms.openlocfilehash: da1c2da0970d38b410ba67a03f1c302c2b352f27
 
 
 ---
@@ -23,14 +24,12 @@ ms.openlocfilehash: e79337cb47a95b2718093b871b6af7f90d2d430d
 
 # Zařízení s iOS nemá požadovanou minimální verzi operačního systému
 
-Zařízení s iOS nesplňuje požadavek IT oddělení na minimální verzi operačního systému.  Před aktualizací zařízení zkontrolujte aktuální verzi operačního systému klepnutím na **Nastavení** &gt; **O zařízení**. Pokud chcete zařízení aktualizovat na nejnovější verzi, klepněte na **Nastavení** &gt; **Obecné** &gt; **Aktualizace softwaru**.
+Vaše zařízení s iOS nesplňuje minimální verzi operačního systému, kterou vyžaduje vaše IT oddělení. Před aktualizací zařízení zkontrolujte aktuální verzi operačního systému volbou **Nastavení** &gt; **Informace**. Pokud chcete zařízení aktualizovat na nejnovější verzi, zvolte **Nastavení** &gt; **Obecné** &gt; **Aktualizace softwaru**.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-
-
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO2-->
 
 

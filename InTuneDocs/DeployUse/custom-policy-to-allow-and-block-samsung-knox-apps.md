@@ -3,8 +3,9 @@ title: "Povolené a blokované aplikace pro KNOX | Microsoft Intune"
 description: "Vlastní profil pro vytvoření seznamu povolených a blokovaných aplikací pro KNOX."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 08/09/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: bbc8e0df-7bf3-494e-8bc4-dac59a98ab41
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 65d2c9c1f5d81dae33422bd4bf7c0e2e21bb96e4
-ms.openlocfilehash: 937e291f193f61329598395baa63c24d7fefa25f
+ms.sourcegitcommit: c7679d624ba22b2a062ef2534a642e38a5f57fde
+ms.openlocfilehash: 273627573f58e1bde4fd19c548ce87639f25ca4b
 
 
 
@@ -23,7 +24,7 @@ ms.openlocfilehash: 937e291f193f61329598395baa63c24d7fefa25f
 
 Postupy v tomto tématu použijte k vytvoření vlastní zásady Microsoft Intune, která obsahuje jeden z těchto seznamů:
 
-- Seznam aplikací, u kterých je v příslušném zařízení blokované spuštění. Žádné jiné aplikace nebudou mít povolené spuštění. Aplikace v tomto seznamu nebude možné spouštět ani v případě, že již byly nainstalované v okamžiku nasazení zásady.
+- Seznam aplikací, u kterých je v příslušném zařízení blokované spuštění. Aplikace v tomto seznamu nebude možné spouštět ani v případě, že již byly nainstalované v okamžiku nasazení zásady.
 - Seznam aplikací, které si uživatelé příslušného zařízení mohou nainstalovat z obchodu Google Play. Je možné instalovat jen aplikace uvedené na seznamu. Z obchodu nejde nainstalovat žádné další aplikace.
 
 Tato nastavení mohou využívat jenom zařízení se systémem Samsung KNOX.
@@ -39,7 +40,7 @@ Tato nastavení mohou využívat jenom zařízení se systémem Samsung KNOX.
     - **Popis nastavení.** Zadejte volitelný popis, např.: Seznam zakázaných aplikací.
     -   **Datový typ.** Z rozevíracího seznamu vyberte položku **String** (Řetězec).
     -   **OMA-URI.** Zadejte **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
-    -   **Hodnota.** Zadejte seznam názvů balíčků aplikací, které chcete zakázat. Jako oddělovač můžete použít **; : ,** nebo **|**. (Příklad: package1;package2;)
+    -   **Hodnota.** Zadejte seznam názvů balíčků aplikací, které chcete povolit. Jako oddělovač můžete použít **; : ,** nebo **|**. (Příklad: package1;package2;)
 
     Pro seznam aplikací, které si uživatelé můžou nainstalovat z obchodu Google Play, s vyloučením všech ostatních:
 
@@ -51,7 +52,8 @@ Tato nastavení mohou využívat jenom zařízení se systémem Samsung KNOX.
 
 4. Zvolte **OK** a potom **Uložit změny**. 
 
->[TIP] ID balíčku aplikace můžete zjistit na její stránce na webu Google Play. ID balíčku je součástí adresy URL stránky aplikace. Třeba aplikace Microsoft Word má ID balíčku **com.microsoft.office.word**.
+>[!TIP]
+> ID balíčku aplikace najdete tak, že na tuto aplikaci přejdete v obchodě Google Play. ID balíčku je součástí adresy URL stránky aplikace. Třeba aplikace Microsoft Word má ID balíčku **com.microsoft.office.word**.
 
 Nastavení aplikace se použijí, jakmile se cílené zařízení službě přihlásí.
 
@@ -70,6 +72,6 @@ Když vyberete nasazenou zásadu, zobrazí se v dolní části seznamu zásad da
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

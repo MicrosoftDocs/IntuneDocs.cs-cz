@@ -1,10 +1,11 @@
 ---
 title: "Odeslání chyb správci IT | Microsoft Intune"
-description: 
+description: "Odeslání chyb správci"
 keywords: 
-author: staciebarker
+author: barlan
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 8890929dc1338946dbaa9a3df2aec99df22c1a82
+ms.sourcegitcommit: 881a2d90a863f5c7f3809f890bb82850b6145982
+ms.openlocfilehash: c7ddd516273360d42426d05528f7846f144c6667
 
 
 ---
@@ -25,16 +26,14 @@ ms.openlocfilehash: 8890929dc1338946dbaa9a3df2aec99df22c1a82
 
 Pokud při použití aplikace Portál společnosti dojde k chybám ve vašem zřízení s iOS, můžete odeslat informace, abyste svému správci IT pomohli potíže vyřešit. Informace o chybě můžete odeslat různými způsoby:
 
--   U zpráv s chybovou výstrahou: Klepněte na **Zpráva**.
+-   U zpráv s chybovou výstrahou klepněte na **Zpráva**.
 
--   Na obrazovce **O aplikaci** aplikace Portál společnosti: klepněte na **Odeslat diagnostickou zprávu**.
+-   Na obrazovce **O produktu** aplikace Portál společnosti klepněte na **Odeslat diagnostickou zprávu**.
 
--   V aplikaci Portál společnosti: Zatřesete zařízením a po zobrazení diagnostické výstrahy klepnete na **E-mail**. Pokud zatřesete zařízením, ale žádná výstraha se nezobrazí, otevřete **Nastavení** &gt; **Portál společnosti** a zkontrolujte, jestli je zapnutá možnost **Gesto zatřesením**.
-
-
+-   V aplikaci Portál společnosti zatřeste zařízením a po zobrazení diagnostické výstrahy klepněte na **E-mail**. Pokud zatřesete zařízením, ale žádná výstraha se nezobrazí, otevřete **Nastavení** &gt; **Portál společnosti** a zkontrolujte, jestli je zapnutá možnost **Gesto zatřesením**.
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 
