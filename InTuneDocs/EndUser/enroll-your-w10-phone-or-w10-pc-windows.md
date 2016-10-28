@@ -2,8 +2,8 @@
 title: "Registrace zařízení s Windows 10 v Intune | Microsoft Intune"
 description: "Popisuje registraci mobilních nebo desktopových zařízení s Windows 10 v Intune."
 keywords: 
-author: barlan
-ms.author: barlan
+author: barlanmsft
+ms.author: barlanmsft
 manager: angrobe
 ms.date: 10/18/2016
 ms.topic: article
@@ -21,7 +21,7 @@ ms.openlocfilehash: 75f19a1c613b2d018e0cb89862f15aa4be2bc138
 ---
 
 
-# Registrace zařízení s Windows 10 Mobile nebo Windows 10 Desktop v Intune
+# <a name="enroll-your-windows-10-mobile-or-windows-10-desktop-device-in-intune"></a>Registrace zařízení s Windows 10 Mobile nebo Windows 10 Desktop v Intune
 
 Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svá zařízení zaregistrovat, a získat tak přístup k e-mailům, souborům a dalším prostředkům společnosti. Registrace zařízení umožňuje vaší organizaci zabezpečit podniková data. Další informace o registraci najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) a v tématu [Co má a nemá správce IT oprávnění vidět na vašem zařízení](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
@@ -42,7 +42,7 @@ Registrace zařízení s Windows 10 Mobile nebo Windows 10 Desktop:
 
     ![Váš účet](./media/w10-enroll-2-accounts-your-account.png)
 
-## Postup, pokud se zobrazí Přístup do práce nebo do školy
+## <a name="steps-to-follow-if-you-see-access-work-or-school"></a>Postup, pokud se zobrazí Přístup do práce nebo do školy
 
 1.  Klepněte na **Přístup do práce nebo do školy**, a potom klepněte na **Připojit**.
 
@@ -69,7 +69,7 @@ Registrace zařízení s Windows 10 Mobile nebo Windows 10 Desktop:
 Pokud jste použili výše uvedené kroky, ale pořád nemáte přístup ke svému pracovnímu e-mailovému účtu nebo souborům, použijte kroky v části [Postup řešení potíží, pokud se zobrazí Přístup do práce nebo do školy](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
 
 
-## Postup, pokud se zobrazí Váš účet
+## <a name="steps-to-follow-if-you-see-your-account"></a>Postup, pokud se zobrazí Váš účet
 
 1.  Ve Windows přejděte do **Nastavení** a klepněte na **Účty**.
 

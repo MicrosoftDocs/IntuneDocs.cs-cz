@@ -2,8 +2,8 @@
 title: "Odeslání chyb správci IT | Microsoft Intune"
 description: "Odeslání chyb správci"
 keywords: 
-author: barlan
-ms.author: barlan
+author: barlanmsft
+ms.author: barlanmsft
 manager: angrobe
 ms.date: 10/24/2016
 ms.topic: article
@@ -22,7 +22,7 @@ ms.openlocfilehash: c7ddd516273360d42426d05528f7846f144c6667
 ---
 
 
-# Odeslání chyb správci IT
+# <a name="send-errors-to-your-it-admin"></a>Odeslání chyb správci IT
 
 Pokud při použití aplikace Portál společnosti dojde k chybám ve vašem zřízení s iOS, můžete odeslat informace, abyste svému správci IT pomohli potíže vyřešit. Informace o chybě můžete odeslat různými způsoby:
 

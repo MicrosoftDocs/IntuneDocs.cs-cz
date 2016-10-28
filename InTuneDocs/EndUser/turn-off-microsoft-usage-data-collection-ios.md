@@ -2,8 +2,8 @@
 title: "Vypnutí shromažďování dat Microsoftu o využití pro iOS | Microsoft Intune"
 description: 
 keywords: 
-author: barlan
-ms.author: barlan
+author: barlanmsft
+ms.author: barlanmsft
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -22,7 +22,7 @@ ms.openlocfilehash: 1b193a401c05ae649456e27222503ee5bd9e150f
 ---
 
 
-# Vypnutí shromažďování dat Microsoftu o využití
+# <a name="turn-off-microsoft-usage-data-collection"></a>Vypnutí shromažďování dat Microsoftu o využití
 
 Microsoft automaticky shromažďuje anonymní informace o spolehlivosti, výkonu a použití aplikace Portál společnosti za účelem zlepšení svých produktů a služeb.
 

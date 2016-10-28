@@ -2,8 +2,8 @@
 title: "Registrace zařízení s Windows 8.1 nebo Windows RT 8.1 | Microsoft Intune"
 description: "Popisuje registraci zařízení s Windows 8.1 nebo Windows RT 8.1 v Intune."
 keywords: 
-author: barlan
-ms.author: barlan
+author: barlanmsft
+ms.author: barlanmsft
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -21,7 +21,7 @@ ms.openlocfilehash: 53e9313bc85c149960fa985b655a22065b55b8a0
 ---
 
 
-# Registrace zařízení s Windows 8.1 nebo Windows RT 8.1 v Intune
+# <a name="enroll-your-windows-8.1-or-windows-rt-8.1-device-in-intune"></a>Registrace zařízení s Windows 8.1 nebo Windows RT 8.1 v Intune
 
 Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svá zařízení zaregistrovat, a získat tak přístup k e-mailům, souborům a dalším prostředkům společnosti. Když svoje zařízení zaregistrujete, dokáže vaše organizace uchovat firemní data v bezpečí. Další informace o registraci najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) a v tématu [Co má a nemá správce IT oprávnění vidět na vašem zařízení](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
