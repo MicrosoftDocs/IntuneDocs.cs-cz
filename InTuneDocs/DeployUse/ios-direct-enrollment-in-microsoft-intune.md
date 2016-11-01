@@ -2,8 +2,8 @@
 title: "Přímá registrace zařízení s iOS | Microsoft Intune"
 description: "Použijte nástroj Apple Configurator k přímé registraci zařízení s iOS vlastněných společností pomocí předdefinované zásady tak, že je připojíte přes USB do počítače Mac."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: staciebarker
+ms.author: stabar
 manager: arob98
 ms.date: 07/19/2016
 ms.topic: article
@@ -20,7 +20,7 @@ ms.openlocfilehash: 9526ac2eb902198597ba811c5d957d69e1b991c6
 
 ---
 
-# Přímá registrace zařízení s iOS pomocí Apple Configuratoru
+# <a name="directly-enroll-ios-devices-by-using-apple-configurator"></a>Přímá registrace zařízení s iOS pomocí Apple Configuratoru
 Intune podporuje registraci zařízení s iOS patřících společnosti v nástroji [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) spuštěném na počítači Mac. Tento proces neprovede reset továrního nastavení zařízení a zaregistruje ho s předdefinovanými zásadami. Tento způsob registrace je určený pro zařízení **bez přidruženého uživatele** a vyžaduje, abyste zařízení s iOS připojili přes USB k počítači Mac a nastavili firemní registraci.
 
 Při přímé registraci zařízení s iOS můžete zařízení zaregistrovat i bez získání jeho sériového čísla. Můžete také zařízení pro potřeby identifikace pojmenovat před tím, než Intune zachytí název zařízení během registrace. U zařízení zaregistrovaných přímo není podporovaná aplikace Portál společnosti. Tyto pokyny předpokládají, že používáte Apple Configurator 2.0 na počítači Mac.
