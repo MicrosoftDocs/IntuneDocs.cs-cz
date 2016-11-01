@@ -3,7 +3,7 @@ title: "Vytvoření pracovního profilu a registrace zařízení v Intune | Mic
 description: "Popisuje šifrování zařízení s Androidem."
 keywords: 
 author: barlanmsft
-ms.author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article

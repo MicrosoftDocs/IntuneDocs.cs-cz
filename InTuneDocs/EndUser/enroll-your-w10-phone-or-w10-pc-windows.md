@@ -3,7 +3,7 @@ title: "Registrace zařízení s Windows 10 v Intune | Microsoft Intune"
 description: "Popisuje registraci mobilních nebo desktopových zařízení s Windows 10 v Intune."
 keywords: 
 author: barlanmsft
-ms.author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 10/18/2016
 ms.topic: article

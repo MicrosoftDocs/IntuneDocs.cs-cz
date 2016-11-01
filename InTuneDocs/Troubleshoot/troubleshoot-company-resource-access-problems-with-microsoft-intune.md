@@ -2,8 +2,8 @@
 title: "Řešení problémů s přístupem k prostředkům společnosti | Microsoft Intune"
 description: "Kódy stavů a chyb z tohoto tématu použijte k vyřešení problémů s přístupem k prostředkům."
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/22/2016
 ms.topic: article
@@ -44,7 +44,7 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 |130 (APP_CI_ENFORCEMENT_ERROR)|Instalace licence MSADP se nepodařila||
 |Bez stavu (APP_CI_ENFORCEMENT_UNKNOWN)|není k dispozici|Stav je momentálně neznámý.|
 
-## <a name="company-resource-access-(common-errors)"></a>Přístup k prostředkům společnosti (běžné chyby)
+## <a name="company-resource-access-common-errors"></a>Přístup k prostředkům společnosti (běžné chyby)
 
 |Stavový kód|Šestnáctkový kód chyby|Chybová zpráva|
 |---------------|--------------------------|-----------------|

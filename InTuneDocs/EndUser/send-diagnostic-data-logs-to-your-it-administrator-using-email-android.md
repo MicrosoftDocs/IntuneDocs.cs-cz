@@ -3,7 +3,7 @@ title: "Odeslání protokolů s diagnostickými daty e-mailem vašemu správci I
 description: "Odeslání datových protokolů zařízení s Androidem pomocí e-mailu"
 keywords: 
 author: barlanmsft
-ms.author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/21/2016
 ms.topic: article

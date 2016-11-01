@@ -3,7 +3,7 @@ title: "Je třeba vyřešit hrozbu, kterou aplikace Lookout for Work objevila na
 description: 
 keywords: 
 author: barlanmsft
-ms.author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 10/17/2016
 ms.topic: article

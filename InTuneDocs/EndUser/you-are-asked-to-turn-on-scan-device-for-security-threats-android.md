@@ -3,7 +3,7 @@ title: "Jste vyzváni k zapnutí nastavení Vyhledat v zařízení bezpečnostn�
 description: 
 keywords: 
 author: barlanmsft
-ms.author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 10/25/2016
 ms.topic: article

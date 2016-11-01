@@ -3,7 +3,7 @@ title: "Co se stane při vytvoření pracovního profilu | Microsoft Intune"
 description: "Popisuje šifrování zařízení s Androidem."
 keywords: 
 author: barlanmsft
-ms.author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article

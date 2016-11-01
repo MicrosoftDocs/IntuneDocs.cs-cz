@@ -3,7 +3,7 @@ title: "Při pokusu o registraci zařízení s iOS v Intune se zobrazí chyby | 
 description: 
 keywords: 
 author: barlanmsft
-ms.author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 08/28/2016
 ms.topic: article
