@@ -2,7 +2,8 @@
 title: "Zařízení obsahuje root a nemůže se připojit | Microsoft Intune"
 description: 
 keywords: 
-author: staciebarker
+author: barlanmsft
+ms.author: barlanmsft
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -14,18 +15,18 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 14180d4dd324134f3b4e0a8d0241ccb61c3207e0
+ms.sourcegitcommit: 016449720f6e77b8862fcaa232d252eefa8b20b3
+ms.openlocfilehash: 5b7586c57f3f2825edfa9ae45a3fdec9af0fe956
 
 
 ---
 
 
-# Zařízení obsahuje root a nemůže se připojit
+# <a name="your-android-device-is-rooted-and-you-cant-connect"></a>Zařízení obsahuje root a nemůže se připojit
 
-Když zařízení s Androidem obsahuje root, znamená to, že v něm došlo ke změnám umožňujícím některé funkce, které by mohly ohrozit prostředky a zabezpečení společnosti. Pokud se zobrazí tato zpráva, nebudete mít přístup k prostředkům společnosti, dokud se problém nevyřeší.
+Pokud byl v zařízení s Androidem proveden tzv. root, došlo v něm ke změnám umožňujícím některé funkce, které by mohly ohrozit prostředky a zabezpečení společnosti. Pokud se zobrazí tato zpráva, nebudete mít přístup k prostředkům společnosti, dokud se problém nevyřeší.
 
-Pokud se domníváte, že jste úmyslně neprovedli nic, aby zařízení mělo root, prostudujte si tyto další důvody, proč může zařízení obsahovat root:
+Pokud se domníváte, že jste úmyslně neprovedli nic, aby zařízení mělo root, prostudujte si tyto další důvody, proč může zařízení root obsahovat:
 
 - Mohli jste na zařízení instalovat aplikaci, o které software pro zjišťování rootu předpokládá, že je bezpečnostním rizikem. Pokud se tato zpráva zobrazí po instalaci aplikace, můžete zkusit aplikaci odinstalovat a zjistit, jestli to pomohlo.
 
@@ -33,8 +34,6 @@ Pokud se domníváte, že jste úmyslně neprovedli nic, aby zařízení mělo r
 
 
 
-
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

@@ -3,6 +3,7 @@ title: "Resetování hesla zařízení z webu Portál společnosti | Microsoft I
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -14,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 08f31db90f324ef5f93076c4e13bfa5328a15adc
-ms.openlocfilehash: 381364e42430842032ced3b5c8c9cc8de19e8186
+ms.sourcegitcommit: 2aea845bc00c153f070e04abb67582a5d5a726ca
+ms.openlocfilehash: 47b36616f7a8ee23d4d47b41a1db2c41c185c6f5
 
 
 ---
@@ -23,35 +24,35 @@ ms.openlocfilehash: 381364e42430842032ced3b5c8c9cc8de19e8186
 
 # Resetování hesla zařízení z webu Portál společnosti
 
-Pokud ztratíte kód PIN nebo heslo zařízení, které jste zaregistrovali v Intune, můžete použít [web Portál společnosti](http://portal.manage.microsoft.com) k jeho resetování. Web Portál společnosti je webová stránka, kterou můžete použít ke správě počítačů a zařízení, které jste registrovali v Intune, a k provádění většiny úloh, které můžete provádět pomocí aplikace Portál společnosti.
+Pokud ztratíte kód PIN nebo heslo zařízení, které jste zaregistrovali v Intune, můžete použít [web Portál společnosti](http://portal.manage.microsoft.com) k jeho resetování. Web Portál společnosti se používá ke správě počítačů a zařízení, které jste zaregistrovali v Intune, a k plnění většinou stejných úkolů jako v aplikaci Portál společnosti.
 
 > [!NOTE]
-> V závislosti na tom, jak váš správce nakonfiguroval Intune, se na webu Portál společnosti nemusí tlačítko Resetovat heslo zobrazit. Resetování hesla není podporované na zařízeních s Windows 8.1.
+> Tlačítko **Resetovat heslo** se na webu Portál společnosti nemusí zobrazit – záleží na tom, jak správce IT nakonfiguroval Intune. Resetování hesla není podporované na zařízeních s Windows 8.1.
 
 Resetování hesla:
 
-1.  Otevřete [web Portál společnosti](http://portal.manage.microsoft.com) a klepněte na zařízení, jehož heslo chcete resetovat.
+1.  Otevřete [web Portál společnosti](http://portal.manage.microsoft.com) a zvolte zařízení, jehož heslo chcete resetovat.
 
-2.  Klepněte na **Resetovat heslo**.
+2.  Zvolte **Resetovat heslo**.
 
-    ![resetp-passcode-option-on-company-portal-website](./media/iwp-screen-with-all-options.png)
+    ![Detaily zařízení s tlačítkem Resetovat heslo](./media/iwp-screen-with-all-options.png)
 
-3.  Klepněte na **Odhlásit se** a potom se znovu přihlaste s pracovními nebo školními přihlašovacími údaji. Musíte se znovu přihlásit do pěti minut.
+3.  Zvolte **Odhlásit se** a pak se znovu přihlaste. Použijte přihlašovací údaje pracovního nebo školního účtu. Musíte se znovu přihlásit do pěti minut.
 
-    ![sign-out-sign-back-in](./media/iwp-2-sign-out.png)
+    ![Zpráva o resetování s tlačítkem pro odhlášení](./media/iwp-2-sign-out.png)
 
-4.  Klepněte na **Resetovat heslo**.
+4.  Zvolte **Resetovat heslo**.
 
-    ![tap-reset-passcode](./media/iwp-3-tap-reset-passcode-after-signin.png)
+    ![Zpráva s vysvětlením, co se stane, když resetujete heslo](./media/iwp-3-tap-reset-passcode-after-signin.png)
 
-    V tabulce najdete, jak resetování hesla funguje ve vašem zařízení.
+    V tabulce najdete informace o tom, jak **resetování hesla** funguje na vašem zařízení.
 
     |Platforma|Support|
     |------------|-----------|
-    |Android|Vytvoří nové dočasné alfanumerické heslo.|
-    |iOS|Odebere heslo ze zařízení a nevytvoří nové dočasné heslo. Pokud používáte Touch ID, musíte ho v zařízení znovu nainstalovat, protože se při resetování hesla odebere.|
-    |Windows 10 (pouze mobilní zařízení)|Vytvoří nové dočasné alfanumerické heslo. Windows Hello je podporované.|
-    |Windows Phone 8.1|Vytvoří nové dočasné číselné heslo.|
+    |Android|Vytvoří dočasné alfanumerické heslo.|
+    |iOS|Odebere heslo ze zařízení, ale nevytvoří dočasné heslo. Pokud používáte Touch ID, musíte ho v zařízení znovu nainstalovat, protože se při resetování hesla odebere.|
+    |Windows 10 (pouze mobilní zařízení)|Vytvoří dočasné alfanumerické heslo. Windows Hello je podporované.|
+    |Windows Phone 8.1|Vytvoří dočasné číselné heslo.|
     Po odemčení zařízení můžete nastavit nové heslo pomocí nabídky **Nastavení** vašeho zařízení.
 
 5.  Odemkněte zařízení a nastavte nové heslo nebo změňte dočasné heslo pomocí nabídky **Nastavení** vašeho zařízení.
@@ -62,8 +63,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní 
 
 
 
-
-
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

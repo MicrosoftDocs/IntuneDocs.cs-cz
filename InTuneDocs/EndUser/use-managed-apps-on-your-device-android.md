@@ -3,6 +3,7 @@ title: "Použití spravovaných aplikací na zařízení s Androidem | Microsoft
 description: 
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/28/2016
 ms.topic: article
@@ -14,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: maxles
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 9bfa154c73252c33535b8a38a6853acaa2c2d4ed
+ms.sourcegitcommit: 0d32aa982cf9d45da36f71be5554f31375521e35
+ms.openlocfilehash: 9f98871b6054e0277cb2c041776fc05e8a6aefe3
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: 9bfa154c73252c33535b8a38a6853acaa2c2d4ed
 
 # Použití spravovaných aplikací na zařízení s Androidem
 
-Spravované aplikace jsou aplikace, které může váš správce IT nakonfigurovat tak, aby lépe chránily firemní data, ke kterým v této aplikaci získáváte přístup. Pokud získáváte přístup k datům ve spravované aplikaci v zařízení s Androidem, můžete si všimnout, že aplikace funguje trochu jinak, než čekáte. Nebudete třeba moct kopírovat a vkládat chráněná firemní data nebo tato data nebudete moct uložit do určitých umístění.
+Spravované aplikace jsou aplikace, které může váš správce IT nastavit tak, aby lépe chránily firemní data, ke kterým v dané aplikaci získáváte přístup. Pokud získáváte přístup k datům ve spravované aplikaci v zařízení s Androidem, můžete si všimnout, že aplikace funguje trochu jinak, než čekáte. Nebudete třeba moct kopírovat a vkládat chráněná firemní data nebo tato data nebudete moct uložit do určitých umístění.
 
 Několik spravovaných aplikací také může na vašem zařízení spolupracovat, abyste mohli provádět běžné úkoly při zachování ochrany firemních dat. Například pokud otevřete firemní soubor v jedné spravované aplikaci a k jeho zobrazení je potřeba jiná spravovaná aplikace, automaticky se otevře spravovaná aplikace, která umožňuje zobrazení souboru. Pokud není požadovaná aplikace dostupná, nemusíte mít přístup k určitým akcím, jako je otevření dokumentu nebo přístup k webovému odkazu ze spravovaného dokumentu.
 
@@ -36,7 +37,7 @@ Spravované aplikace můžete získat několika různými způsoby:
 
 -   Při registraci zařízení v Microsoft Intune buď nainstalujete aplikaci z aplikace Portál společnosti nebo webu Portál společnosti, nebo ji na vaše zařízení nainstaluje správce IT. Informace o registraci najdete v tématu [Registrace zařízení v Intune](enroll-your-device-in-Intune-android.md).
 
--   Nainstalujte aplikaci z obchodu Play a potom se přihlaste pomocí svého firemního uživatelského účtu spravovaného službou Intune.
+-   Nainstalujte aplikaci z Obchodu Play a potom se přihlaste pomocí svého firemního uživatelského účtu spravovaného službou Intune.
 
 ## Co může správce IT spravovat v mé aplikaci?
 Tady jsou některé příklady možností, které může správce IT spravovat v aplikaci a které můžou ovlivnit vaši interakci s firemními daty na zařízení:
@@ -69,14 +70,12 @@ Některé běžné aplikace, které může spravovat vaše oddělení IT:
 
 -   Intune AV Player
 
--   Microsoft Word, Excel, PowerPoint
+-   Microsoft Word, Excel a PowerPoint
 
 Další informace o spravovaných aplikacích na vašem zařízení vám poskytne správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

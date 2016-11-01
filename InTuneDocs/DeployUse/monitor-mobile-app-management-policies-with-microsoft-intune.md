@@ -3,6 +3,7 @@ title: "Monitorování zásad MAM s Microsoft Intune | Microsoft Intune"
 description: "Podívejte se, kolik uživatelů má zásady, a přechodem k podrobnostem zjistěte další informace."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/22/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: d3aa6c74-6b5d-4b50-aa66-a040ec44393e
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 644860abcd351d24f08d7a517a3a4b5f44824689
-ms.openlocfilehash: 1d22d26c1a1c52dda4f9b01658d22f8de8187f0f
+ms.sourcegitcommit: 389daf0ed39fa2cd4b2e5d6e52cbd6809a568c9e
+ms.openlocfilehash: bc68a13b8d5694908cd00e5e615f81f6e15cfe22
 
 
 ---
@@ -68,13 +69,14 @@ Pokud chcete zobrazit vytváření sestav pro uživatele, postupujte takto:
 ### Uživatelé označení příznakem
 V podrobném zobrazení se zobrazí chybová zpráva, aplikace, ke které se přistupovalo, když chyba nastala, platforma zařízení a časové razítko.  
 
-### Viz taky
+### Související témata
 [Správa přenosu dat mezi aplikacemi pro iOS](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 
-[Činnost koncového uživatele v aplikacích s podporou správy mobilních aplikací (MAM)](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md)
+* [Co očekávat, když ke správě své aplikace pro Android používáte zásady MAM](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
+* [Co očekávat, když ke správě své aplikace pro iOS používáte zásady MAM](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 

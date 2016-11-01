@@ -1,5 +1,6 @@
 # [Porozumění a prozkoumávání](introduction-to-microsoft-intune.md)
 ## [Úvod do služby Intune](introduction-to-microsoft-intune.md)
+## [Správa moderního systému Windows](modern-windows-management)
 ## [Příručka pro testování Intune](get-started-with-a-30-day-trial-of-microsoft-intune.md)
 ### [Registrace nebo přihlášení k 30dennímu testování](get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md)
 ### [Přidávání uživatelů](get-started-with-a-30-day-trial-of-microsoft-intune-step-2.md)
@@ -19,6 +20,6 @@
 # [Řešení problémů](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

@@ -3,6 +3,7 @@ title: "Nastavení správy pro zařízení Windows Phone 8.0 | Microsoft Intune"
 description: "Povolte správu mobilních zařízení (MDM) pro zařízení s Windows Phone 8.0 pomocí služby Microsoft Intune."
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 07/09/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 61e9b6c3-8795-49b0-8ab2-a9a05ee3ea1f
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
-ms.openlocfilehash: 1d3823392b7060b9d04996c29c68213d421ef4bd
+ms.sourcegitcommit: 067b46c4e537f6def75142411a6d6b60a63cd642
+ms.openlocfilehash: 32d1272d1e125c8a1a5b9f7c6291fb4acf14ea6e
 
 
 ---
@@ -24,7 +25,7 @@ ms.openlocfilehash: 1d3823392b7060b9d04996c29c68213d421ef4bd
 Windows Phone 8.0 vyžaduje k instalaci aplikace Portál společnosti Intune a k povolení správy zařízení certifikát Symantec. Certifikát je také nutný k podepsání obchodních aplikací. Následující téma se týká jenom systému Windows Phone 8.0. Informace o správě systému Windows Phone 8.1 nebo novějšího, včetně systému Windows 10 Mobile, najdete v tématu [Nastavení registrace Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md).
 
 > [!IMPORTANT]
-> Od září 2016 už pro systémy Windows 8.0 a Windows Phone 8.0 nebude dostupná ke stažení aplikace Portál společnosti.
+> Od září 2016 se aplikace Portál společnosti pro systémy Windows Phone 8 a Windows 8 nedá stáhnout.
 
 -   **Windows Phone 8** – Je nutný certifikát.
 -   **Windows Phone 8.1 a Windows 10 Mobile** vyžadují certifikáty pouze v následujících případech:
@@ -118,7 +119,7 @@ Nastavení požadavků pro správu mobilních zařízení Windows Phone závisí
 
         6.  Dokončete průvodce. Uživatelé, kteří si zaregistrovali zařízení Windows Phone 8.0, teď získají během registrace na svá zařízení aplikaci firemního portálu. Uživatelé Windows Phone 8.1 můžou nainstalovat aplikaci Portál společnosti z Windows Storu.  Pokud se zařízení s Windows Phone 8.1 na Windows Phone Storu blokují nebo pokud chcete nasadit aplikaci Portál společnosti přes Intune, musíte si stáhnout a podepsat aplikaci Portál společnosti Windows Phone 8.1 (SSP.appx).
 
-4.  **Sdělte uživatelům, jak získat přístup k prostředkům společnosti pomocí Portálu společnosti.** Uživatelé budou potřebovat vědět, jak mají registrovat svá zařízení a co mají očekávat po začlenění do správy. [Co říct koncovým uživatelům o používání služby Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+4.  **Sdělte uživatelům, jak získat přístup k prostředkům společnosti pomocí Portálu společnosti.** Uživatelé budou potřebovat vědět, jak mají registrovat svá zařízení a co mají očekávat po začlenění do systému správy. [Co říct koncovým uživatelům o používání služby Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
 
 ## Nasazení aplikace Portál společnosti Windows Phone 8.1.
 Aplikaci Portál společnosti můžete místo instalace z Windows Phone Store nasadit do zařízení Windows Phone 8.1 v Intune. Stále bude třeba podle postupu nahoře povolit registraci zařízení Windows Phone pomocí certifikátu společnosti Symantec. Pak je nutné stáhnout aplikaci Portál společnosti Windows Phone 8.1 a podepsat ji certifikátem společnosti Symantec.  To je nutné pouze v případě, že uživatelé nebudou používat Store společnosti a chcete nasadit firemní portál na zařízení Windows Phone 8.1.
@@ -183,6 +184,6 @@ Aplikaci Portál společnosti můžete místo instalace z Windows Phone Store na
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 

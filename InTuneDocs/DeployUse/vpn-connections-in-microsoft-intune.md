@@ -3,8 +3,9 @@ title: "Připojení VPN | Microsoft Intune"
 description: "K nasazení nastavení VPN pro uživatele a zařízení ve vaší organizaci použijte profily VPN."
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
-ms.date: 10/10/2016
+ms.date: 10/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: abc57093-7351-408f-9f41-a30877f96f73
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 27ba29f57bba1f3807c4b593ecac8c0af0851962
-ms.openlocfilehash: 026e7c918f8b2457dd1afb9a5134ad3bd6f65cd5
+ms.sourcegitcommit: 7b4acce1b1861ca2c2d1432b0258ad1e95e46d2a
+ms.openlocfilehash: 188cb3890da83332431743445959bba73e7f2484
 
 
 ---
@@ -44,20 +45,20 @@ Intune podporuje vytváření profilů VPN, které používají následující t
 
 
 
-Typ připojení |iOS a Mac OS X  |Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop a Mobile |
+Typ připojení |iOS a Mac OS X  |Android a Android for Work|Windows 8.1|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop a Mobile |
 ----------------|------------------|-------|-----------|----------|--------------|-----------------|----------------------|
-Cisco AnyConnect|Ano |Ano   |Ne    |     Ne    |Ne  |Ne    | Ano (OMA-URI, jenom Mobile)|     
-Cisco (IPsec)|Ano |Ne   |Ne  |  Ne|Ne  |Ne | Ne|
-Citrix|Ano |Ne   |Ne  |  Ne|Ne  |Ne | Ne|
-Pulse Secure|Ano  |Ano |Ano   |Ne  |Ano  |Ano| Ano|        
-F5 Edge Client|Ano |Ano |Ano |Ne  |Ano  |   Ano |  Ano|   
-Dell SonicWALL Mobile Connect|Ano |Ano |Ano |Ne  |Ano |Ano |Ano|         
-CheckPoint Mobile VPN|Ano |Ano |Ano |Ano |Ano|Ano|Ano|
-Protokol SSL společnosti Microsoft (SSTP)|Ne |Ne |Ne |Ne |Ne|Ne|VPNv1 OMA-URI*|
-Automaticky pomocí technologie Microsoft|Ne |Ne |Ne |Ne |Ne|Ano (OMA-URI)|Ano|
-IKEv2|Vlastní profil iOS|Ne |Ne |Ne |Ne|Ano (OMA-URI)|Ano|
-PPTP|Vlastní profil iOS|Ne |Ne |Ne |Ne|Ne|Ano|
-L2TP|Vlastní profil iOS|Ne |Ne |Ne |Ne|Ano (OMA-URI)|Ano|
+Cisco AnyConnect|Ano |Ano   |Ne    |Ne  |Ne    | Ano (OMA-URI, jenom Mobile)|     
+Cisco (IPsec)|Ano |Ne   |Ne  |Ne  |Ne | Ne|
+Citrix|Ano |Ne   |Ne  |Ne  |Ne | Ne|
+Pulse Secure|Ano  |Ano |Ano   |Ano  |Ano| Ano|        
+F5 Edge Client|Ano |Ano |Ano |Ano  |   Ano |  Ano|   
+Dell SonicWALL Mobile Connect|Ano |Ano |Ano |Ano |Ano |Ano|         
+CheckPoint Mobile VPN|Ano |Ano |Ano |Ano|Ano|Ano|
+Protokol SSL společnosti Microsoft (SSTP)|Ne |Ne |Ne |Ne|Ne|VPNv1 OMA-URI*|
+Automaticky pomocí technologie Microsoft|Ne |Ne |Ne |Ne|Ano (OMA-URI)|Ano|
+IKEv2|Vlastní profil iOS|Ne |Ne |Ne|Ano (OMA-URI)|Ano|
+PPTP|Vlastní profil iOS|Ne |Ne |Ne|Ne|Ano|
+L2TP|Vlastní profil iOS|Ne |Ne |Ne|Ano (OMA-URI)|Ano|
 
 \* Bez dalších nastavení, která jsou jinak k dispozici pro Windows 10
 
@@ -96,6 +97,8 @@ Uživatel se ověřuje na serveru sítě VPN zadáním uživatelského jména a 
 
 > [!Note]
 > Profil VPN pro zařízení s Androidem for Work umožní připojení VPN jenom aplikacím, které jsou nainstalované v pracovním profilu zařízení.
+>
+> Některé typy připojení VPN podporují VPN pro jednotlivé aplikace pro zařízení s Androidem for Work a povolují VPN pro jednotlivé aplikace u aplikací distribuovaných prostřednictvím služby Intune.  
 
 3. S konfigurací nastavení profilu VPN vám pomůže následující tabulka:
 
@@ -163,13 +166,13 @@ VPN na vyžádání můžete konfigurovat pro zařízení s iOS 8.0 a novější
 4. Vyberte jednu z těchto akcí:
   - **Připojit**
   - **Vyhodnotit připojení**, která má tři nastavení. a. **Akce domény** – zvolte **Připojit v případě potřeby** nebo **Nikdy nepřipojovat**.
-     b. **Čárkami oddělený seznam domén** – toto konfigurujete jenom v případě, že zvolíte **Akce domény** v možnosti **Připojit v případě potřeby**.  
-     c. **Požadovaný test řetězce adresy URL** – adresa URL protokolu HTTP nebo HTTPS (upřednostňováno), například *https://vpntestprobe.contoso.com*. Pravidlo zkontroluje, jestli z této adresy přichází odezva. Pokud ne a **Akce domény** je nastavená na **Připojit v případě potřeby**, spustí se VPN.
+     b. **Čárkami oddělený seznam domén** – Toto konfigurujete jenom v případě, že zvolíte **Akce domény** v možnosti **Připojit v případě potřeby**.  
+     c. **Požadovaný test řetězce adresy URL** – Adresa URL protokolu HTTP nebo HTTPS (upřednostňováno), například *https://vpntestprobe.contoso.com*. Pravidlo zkontroluje, jestli z této adresy přichází odezva. Pokud ne a **Akce domény** je nastavená na **Připojit v případě potřeby**, spustí se VPN.
      > [!TIP]
      >
      >Příkladem použití této akce je situace, kdy některé weby v podnikové síti vyžadují přímé připojení nebo VPN připojení k podnikové síti, ale jiné to nepožadují. Pokud v **Čárkami odděleném seznamu domén pro hledání DNS** uvedete *corp.contoso.com*, můžete zvolit **Připojit v případě potřeby** a potom uvést seznam konkrétních webů v rámci této sítě, které mohou vyžadovat VPN, například *sharepoint.corp.contoso.com*. Pravidlo potom zkontrolujte dostupnost adresy *vpntestprobe.contoso.com*. V případě nedostupnosti se aktivuje VPN pro daný web SharePoint.
-  - **Ignorovat** – způsobí ignorování jakýchkoli změn v připojení VPN. Pokud je VPN připojená, nechat ji připojenou, pokud není připojená, nepřipojovat. Můžete mít například pravidlo, které připojuje VPN pro všechny interní podnikové weby, ale chcete jeden z těchto interních webů zpřístupnit jenom v případě, kdy je zařízení skutečně připojené k podnikové síti. V takovém případě vytvoříte pravidlo ignorování pro tento jeden web.
-  - **Odpojit** – při splnění podmínek odpojí zařízení od VPN. Do pole **SSID** můžete například uvést podnikové bezdrátové sítě a vytvořit pravidlo, které zařízení odpojí od VPN, když se připojí k jedné z těchto sítí.
+  - **Ignorovat** – Způsobí ignorování jakýchkoli změn v připojení VPN. Pokud je VPN připojená, nechat ji připojenou, pokud není připojená, nepřipojovat. Můžete mít například pravidlo, které připojuje VPN pro všechny interní podnikové weby, ale chcete jeden z těchto interních webů zpřístupnit jenom v případě, kdy je zařízení skutečně připojené k podnikové síti. V takovém případě vytvoříte pravidlo ignorování pro tento jeden web.
+  - **Odpojit** – Při splnění podmínek odpojí zařízení od VPN. Do pole **SSID** můžete například uvést podnikové bezdrátové sítě a vytvořit pravidlo, které zařízení odpojí od VPN, když se připojí k jedné z těchto sítí.
 
 Pravidla pro konkrétní domény se vyhodnocují před pravidly pro všechny domény. 
 

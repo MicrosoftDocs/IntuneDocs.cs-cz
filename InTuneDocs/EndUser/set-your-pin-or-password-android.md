@@ -3,6 +3,7 @@ title: "Nastavení PIN kódu nebo hesla | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article
@@ -14,15 +15,17 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e050c7b4947f0a3aae87c545ec8cca282c22fe55
-ms.openlocfilehash: 2c9fd5714f64477e7e07d66429ae68e17e2e1bb7
+ms.sourcegitcommit: 7f08be661936b092cfa100b2454a3f2a3dd24746
+ms.openlocfilehash: c2480f168d5ee06a8419c68d1b90bac62c2879b1
 
 
 ---
 
 # Nastavení PIN kódu nebo hesla
 
-Pokud Intune používáte pro přístup k pracovním nebo školním datům, může správce IT vyžadovat, abyste na zařízení s Androidem nastavili PIN kód nebo heslo. Když se zobrazí zpráva s výzvou k nastavení PIN kódu nebo hesla, postupujte takto.
+Pokud Intune používáte pro přístup k pracovním nebo školním datům, může správce IT vyžadovat, abyste na zařízení s Androidem nastavili PIN kód nebo heslo. Mohou se také zobrazit zprávy, které vyžadují, abyste kvůli větší bezpečnosti zadali delší nebo složitější PIN nebo heslo.  
+
+K nastavení kódu PIN a hesla použijte následující postup.
 
 1.  Klepněte na **Nastavení** &gt; **Zabezpečení** &gt; **Zamykací obrazovka** &gt; **Heslo**.
 
@@ -33,6 +36,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní 
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

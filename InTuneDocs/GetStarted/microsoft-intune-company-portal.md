@@ -3,18 +3,19 @@ title: "Portál společnosti Microsoft Intune | Microsoft Intune"
 description: "nastavení Portálu společnosti Intune"
 keywords: 
 author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4dc3d084-0394-4ee7-b7fa-a72523928627
-ms.reviewer: jeffgilb
+ms.reviewer: jve
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
-ms.openlocfilehash: 7c9fceaae077907480d4c207d56f654d168248a1
+ms.sourcegitcommit: 584cfc22cd885149054c1e5e42cc539a478db637
+ms.openlocfilehash: 0a9d7bdce29532f63c724d406cd13cd619c9034e
 
 
 ---
@@ -48,11 +49,18 @@ Některé úlohy, které uživatelé mohou provést na Portálu společnosti:
 
 Než bude moct uživatel přistupovat k Portálu společnosti, musí mít jeho účet udělenou licenci k použití [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] a stav přihlášení **Povoleno**. Přečtěte si další informace o [přidávání uživatelů](start-with-a-paid-subscription-to-microsoft-intune-step-3.md) a [přiřazování licencí pro vaše předplatné](start-with-a-paid-subscription-to-microsoft-intune-step-4.md). Můžete také [přizpůsobit web Portálu společnosti ](start-with-a-paid-subscription-to-microsoft-intune-step-7.md) pomocí loga své společnosti, podmínek použití a dalších položek. Uživatelé přistupují k webu Portál společnosti pomocí přechodu na web a přihlášení pomocí pracovního nebo školního účtu.
 
+> [!NOTE]
+> V některých zemích není aplikace Portál společnosti k dispozici.
+
+> __iOS:__ Aplikace Portál společnosti pro iOS je vydaná ve [všech zemích, kde je dostupný](https://go.microsoft.com/fwlink/?linkid=831284) App Store pro zařízení Apple iOS.
+
+> __Android:__ Aplikace Portál společnosti pro Android není k dispozici v těchto zemích: Antigua a Barbuda, Aruba, Benin, Burkina Faso, Čína, Gabon, Guinea-Bissau, Haiti, Írán, Kambodža, Kuba, Laos, Mali, Mosambik, Myanmar (Barma), Niger, Nizozemské Antily, Papua – Nová Guinea, Súdán a Togo. V těchto zemích použijte alternativní řešení, tzn. [zkušebně načtěte aplikaci Portál společnosti ve verzi pro Android před prodejem](https://www.microsoft.com/en-us/download/details.aspx?id=49140).  
+
 ### Související témata
 [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

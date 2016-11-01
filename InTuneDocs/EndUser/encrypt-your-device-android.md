@@ -2,9 +2,10 @@
 title: "Šifrování zařízení | Microsoft Intune"
 description: "Popisuje šifrování zařízení s Androidem."
 keywords: 
-author: staciebarker
+author: barlan
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 690c94c970a97057a65f3f3d5aafa86c235c6df0
-ms.openlocfilehash: 57ede1360c2f85df24dc0245a715d420165b348a
+ms.sourcegitcommit: ff5e76e5d768b9feccb42c91c72aa71b3f724002
+ms.openlocfilehash: 4d12314ffc6126cd740012c301c39b7fb72a5bb4
 
 
 ---
@@ -22,14 +23,14 @@ ms.openlocfilehash: 57ede1360c2f85df24dc0245a715d420165b348a
 
 # Zašifrování zařízení
 
-Pokud vás firma nebo organizace požádá, abyste si před přístupem k firemním souborům, e-mailu nebo datům zašifrovali zařízení s Androidem, postupujte podle níže uvedeného postupu. Před šifrováním můžete být požádáni o nastavení PIN kódu nebo hesla, pokud ho správce IT vyžaduje.
+Pokud vás firma nebo organizace požádá, abyste si před přístupem k firemním souborům, e-mailu nebo datům zašifrovali zařízení s Androidem, postupujte podle níže uvedeného postupu. Můžete být také vyzváni, abyste si před šifrováním nastavili kód PIN nebo heslo, pokud to váš správce IT vyžaduje.
 
-Pokud byste pak někdy v budoucnosti chtěli registraci telefonu zrušit, zůstane zašifrovaný.
+Pokud byste zrušili registraci telefonu, zůstane zašifrovaný.
 
 1.  Zkontrolujte, že je pro vaše zařízení nastavený kód PIN nebo heslo zamykací obrazovky.
 
-2.  V **Nastavení** klikněte na **Zabezpečení** &gt; **Šifrovat telefon**.
-    (Na některých telefonech budete muset najít možnost Šifrovat tak, že kliknete na **Úložiště** &gt; **Šifrování úložiště** nebo **Úložiště** &gt; **Zamykací obrazovka a zabezpečení** &gt; **Další nastavení zabezpečení**).
+2.  V **Nastavení** zvolte **Zabezpečení** &gt; **Šifrovat telefon**
+    (na některých telefonech budete muset najít možnost šifrování tak, že zvolíte **Úložiště** &gt; **Šifrování úložiště** nebo **Úložiště** &gt; **Zamykací obrazovka a zabezpečení** &gt; **Další nastavení zabezpečení**).
 
 3.  Postupujte podle pokynů na obrazovce. Během šifrování se zařízení může několikrát restartovat.
 
@@ -40,30 +41,26 @@ Pokud byste pak někdy v budoucnosti chtěli registraci telefonu zrušit, zůsta
 - Zobrazí se zpráva s informacemi o tom, že je stále nutné nastavit šifrování.
 - Bude docházet k chybám při pokusu o použití aplikace Portál společnosti.
 
-**Možná řešení**: 
+**Možná řešení**
 
-1. Ujistěte se, že je zařízení nabité a připojené k nabíječce.
+- Ujistěte se, že je zařízení nabité a připojené k nabíječce.
+- Zkontrolujte, že jste na zařízení nastavili PIN kód nebo heslo.
+- Pokud jste na zařízení nastavili PIN nebo heslo, vyzkoušejte následující postup, který může správce IT vyžadovat kvůli většímu zabezpečení zařízení. Zobrazované názvy nabídek se mohou mírně lišit od názvů nabídek uvedených v postupech podle toho, jaký máte typ zařízení s Androidem.
 
-2. Zkontrolujte, že jste na zařízení nastavili PIN kód nebo heslo.
+    1. Přejděte k položce **Nastavení** > **Zabezpečení** > **Zamykací obrazovka**. Potvrďte aktuální PIN kód nebo heslo.
 
-3. Pokud jste už na zařízení nastavili kód PIN nebo heslo, zkuste následující kroky, pokud váš správce IT může vyžadovat kvůli lepšímu zabezpečení zařízení. Názvy nabídek, které vidíte, se můžou mírně lišit od těch v postupu, v závislosti na typu zařízení se systémem Android, které máte.
+    2. Na obrazovce **Vyberte zámek obrazovky** vyberte typ zámku obrazovky, který chcete použít.
 
-    a. Přejděte k položce **Nastavení** > **Zabezpečení** > **Zamykací obrazovka**. Potvrďte aktuální PIN kód nebo heslo.
+    3. Na obrazovce **Bezpečné spuštění** klepněte na **Při spuštění zařízení požadovat kód PIN** a pak na **Pokračovat**.
 
-    b. Na obrazovce **Vyberte zámek obrazovky** vyberte typ zámku obrazovky, který chcete použít.
+    4. Zvolte kód PIN (můžete zadat stejný jako ten, který jste zadali dříve) a klepněte na **Potvrďte kód PIN**.
 
-    c. Na obrazovce **Bezpečné spuštění** klepněte na **Při spuštění zařízení požadovat kód PIN** a pak na **Pokračovat**.
+    5. Otevřete Portál společnosti, vyberte své zařízení a klepněte na možnost **Kontrola dodržování předpisů**.
 
-    d. Zvolte kód PIN (můžete zadat stejný jako ten, který jste zadali dříve) a klepněte na **Potvrďte kód PIN**.
-
-    e. Otevřete Portál společnosti, vyberte své zařízení a klepněte na možnost **Kontrola dodržování předpisů**.
-
-Potřebujete ještě další pomoc? Obraťte se na správce IT (vyhledejte kontaktní informace na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište týmu Microsoft Android na adresu wintunedroidfbk@microsoft.com.
+Potřebujete ještě další pomoc? Obraťte se na správce IT (kontaktní informace najdete na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište týmu Microsoft Android na adresu wintunedroidfbk@microsoft.com.
 
 
 
-
-
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

@@ -1,8 +1,9 @@
 ---
 title: "Zadání kódů IMEI | Microsoft Intune"
-description: "Microsoft Intune umožňuje správcům importovat kódy IMEI pro platformy mobilních zařízení, které usnadňují identifikaci mobilních zařízení ve firemním vlastnictví."
+description: "Microsoft Intune umožňuje správcům importovat kódy IMEI pro platformy mobilních zařízení, aby dokázali identifikovat mobilní zařízení patřící společnosti."
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 07/25/2016
 ms.topic: article
@@ -13,18 +14,18 @@ ms.assetid: 1712bd39-562b-4409-9cec-155d5f4d8a39
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: 4e2092182dbda4523c19afeabc34aa0166962c40
+ms.sourcegitcommit: c6b01a5efc0f60622b95623fd91f192c267ff766
+ms.openlocfilehash: 9bd2b4bb676e23712c0a668161b81c4e352bce87
 
 
 ---
 
 # Určení podnikem vlastněných zařízení podle kódů IMEI (International Mobile Equipment Identity)
-Microsoft Intune umožňuje správcům importovat identifikační kódy IMEI (International Mobile Equipment Identity) pro platformy mobilních zařízení vybavených kódy IMEI. Ty jim pomůžou identifikovat mobilní zařízení patřící společnosti. Po registraci v Intune je možné zařízení s importovanými čísly IMEI zobrazit v části **Skupiny** > **Přehled** > **Všechna zařízení**. **Skupiny zařízení** uvádějí zobrazovací zařízení s naimportovanými kódy IMEI jako **Firemní** ve sloupci **Vlastnictví**.
+Microsoft Intune umožňuje správcům importovat kódy IMEI (International Mobile Equipment Identity) pro platformy mobilních zařízení, aby pomocí těchto kódů mohli identifikovat mobilní zařízení patřící společnosti. Po registraci zařízení v Intune se můžete na zařízení s importovanými kódy IMEI podívat v části **Skupiny** > **Přehled** > **Všechna zařízení**. Zařízení s importovanými kódy IMEI mají v seznamu **Skupina zařízení** ve sloupci **Vlastnictví** údaj **Firemní**.
 
 1. V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) zvolte **Skupiny** &gt; **Všechna zařízení** &gt; **Firemní předregistrovaná zařízení ** &gt; **Podle IMEI (všechny platformy)** a pak zvolte **Přidat zařízení**. Zařízení můžete přidat dvěma způsoby:
 
-    -   **Odesláním souboru CSV se sériovými čísly** – Vytvořte seznam oddělený čárkami (.csv), který bude mít dva sloupce a bude bez záhlaví. Soubor může obsahovat maximálně 5000 zařízení a nesmí být větší než 5 MB.
+    -   **Nahráním souboru .csv se sériovými čísly** – Vytvořte seznam oddělený čárkami (.csv), který bude mít dva sloupce, a nebude mít záhlaví. Soubor .csv může obsahovat maximálně 5000 zařízení, ale jeho velikost nesmí překročit 5 MB.
 
         |||
         |-|-|
@@ -37,18 +38,18 @@ Microsoft Intune umožňuje správcům importovat identifikační kódy IMEI (In
         AABBBBBBCCCCCCE,PO 1234
         ```
 
-    -   **Ručním přidáním podrobností o zařízeních** – Zadejte kód IMEI a podrobnosti až o pěti zařízeních.
+    -   **Přidáním podrobností o zařízení ručně** – Zadejte kód IMEI a podrobnosti až o pěti zařízeních.
 
-   *Podrobnosti * jsou určené pro administrativní použití, aby bylo možné určit, který kód IMEI je přiřazený k zařízení. Tyto informace se neodesílají do zařízení, ale zobrazí se v konzole Intune.
+   *Podrobnosti * jsou pro účely správy, abyste mohli zjistit, jaký kód IMEI je zařízení přiřazený. Tyto informace se neodesílají do zařízení, ale zobrazí se v konzole Intune.
 
 2.   Vyberte **Další**.
-3.  V podokně **Zkontrolovat zařízení** můžete potvrdit, které kódy IMEI zařízení se importují. Můžete také rozhodnout, zda mají být při opětovném importu kódů IMEI přepsané **Podrobnosti**. Pokud chcete zachovat aktuální podrobnosti, můžete zrušit zaškrtnutí pole **Přepsat**. Zvolením **Dokončit ** naimportujete čísla IMEI.
-4.  Přidané kódy IMEI a popisy se přidají do seznamu **Podle IMEI (všechny platformy)**.
+3.  V podokně **Zkontrolovat zařízení** můžete potvrdit kódy IMEI importovaných zařízení. Můžete také rozhodnout, zda mají být při opětovném importu kódů IMEI přepsané **Podrobnosti**. Pokud chcete zachovat aktuální podrobnosti, zrušte zaškrtnutí pole **Přepsat**. Zvolením **Dokončit ** naimportujete čísla IMEI.
+4.  Importované kódy IMEI a popisy se přidají do seznamu **Podle IMEI (všechny platformy)**.
 
-Při registraci zařízení s tímto kódem IMEI, nejčastěji při instalaci aplikace portálu společnosti a dokončení procesu registrace, se zařízení označí jako vlastněné firmou a zobrazí se jako registrované ve skupině **Zařízení IMEI**.
+Když se zařízení s kódem IMEI zaregistruje v Intune, většinou když uživatel instaluje aplikaci Portál společnosti a dokončuje registraci, bude zařízení označeno jako majetek společnosti a zobrazí se jako zaregistrované ve skupině **Zařízení IMEI**.
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 

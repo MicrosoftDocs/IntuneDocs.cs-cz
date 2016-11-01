@@ -3,8 +3,9 @@ title: "Konfigurace profilů certifikátů | Microsoft Intune"
 description: "Přečtěte si, jak vytvořit profil certifikátu Intune."
 keywords: 
 author: nbigman
+ms.author: nbigman
 manager: angrobe
-ms.date: 10/10/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: 679a20a1-e66f-4b6b-bd8f-896daf1f8175
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 27ba29f57bba1f3807c4b593ecac8c0af0851962
-ms.openlocfilehash: 3f657e6a49fb83faddf9c139985369f27656b4bd
+ms.sourcegitcommit: 7b4acce1b1861ca2c2d1432b0258ad1e95e46d2a
+ms.openlocfilehash: d4fd80ad7819911b6bf47ccd51e62bebdec24f04
 
 
 ---
@@ -63,6 +64,11 @@ Profil důvěryhodného certifikátu je nutné vytvořit před vytvořením prof
 4.  Vyberte možnost **Uložit zásadu**.
 
 Nová zásada se zobrazí v pracovním prostoru **Zásady**. Teď ji můžete nasadit.
+
+> [!NOTE]
+>
+> Na zařízeních se systémem Android a Android for Work se zobrazí oznámení o tom, že třetí strana nainstalovala důvěryhodný certifikát.
+    
 
 ## **Úloha 3**: Vytvoření profilů certifikátů SCEP nebo .PFX
 Po vytvoření profilu certifikátu důvěryhodné certifikační autority vytvořte profily certifikátů SCEP nebo .PFX pro každou platformu, kterou chcete použít. Při vytváření profilu certifikátu SCEP musíte zadat profil důvěryhodného certifikátu pro stejnou platformu. Tím se oba profily certifikátů propojí, ale přesto musíte každý profil nasadit samostatně.

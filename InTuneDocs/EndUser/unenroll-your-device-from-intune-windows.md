@@ -3,6 +3,7 @@ title: "Zrušení registrace zařízení s Windows v Intune | Microsoft Intune"
 description: "Popisuje zrušení registrace zařízení s Windows v Intune."
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 018bda65-7238-41f5-b92a-e5f67b7fe085
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 93374a2098447a11b164ae3fb5d7b1b3d4824806
+ms.sourcegitcommit: 0d32aa982cf9d45da36f71be5554f31375521e35
+ms.openlocfilehash: b3dda0cda3600721db5f2ea73166652abff7a44d
 
 
 ---
@@ -44,11 +45,11 @@ Informace o tom, jak zrušit registraci zařízení, získáte prostřednictvím
 
 1.  Přejděte na **Nastavení počítače** &gt; **Síť** &gt; **Pracoviště**.
 
-2.  V části **Připojení pracovního místa** klepněte na **Ponechat**.
+2.  V části **Připojení pracovního místa** vyberte **Odejít**.
 
-3.  V části **Zapnout správu zařízení** klepněte na **Vypnout**.
+3.  V části **Zapnout správu zařízení** vyberte **Vypnout**.
 
-4.  V automaticky otevíraném okně, které se otevře, klepněte na **Vypnout**.
+4.  V automaticky otevíraném okně, které se otevře, vyberte **Vypnout**.
 
 ## Zrušení registrace zařízení Windows Phone 8.1
 
@@ -64,7 +65,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní 
 
 
 
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

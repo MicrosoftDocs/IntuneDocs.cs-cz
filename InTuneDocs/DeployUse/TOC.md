@@ -15,7 +15,7 @@
 #### [Správa zařízení s Windows ](set-up-windows-device-management-with-microsoft-intune.md)
 #### [Windows 10 Mobile a Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md)
 ### [Správa zařízení vlastněných společností](manage-corporate-owned-devices.md)
-#### [Registrace zařízení iOS vlastněných společností](enroll-corporate-owned-ios-devices-in-microsoft-intune.md)
+#### [Registrace zařízení s iOS vlastněných společností](enroll-corporate-owned-ios-devices-in-microsoft-intune.md)
 ##### [Registrace průvodce nastavením iOS](ios-setup-assistant-enrollment-in-microsoft-intune.md)
 ##### [Přímá registrace pro iOS](ios-direct-enrollment-in-microsoft-intune.md)
 ##### [Registrace DEP pro iOS](ios-device-enrollment-program-in-microsoft-intune.md)
@@ -125,7 +125,7 @@
 #### [Ověření zásad MAM](validate-mobile-application-management.md)
 #### [Sledování dodržování zásad](monitor-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Správa přenosu dat mezi aplikacemi pro iOS](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
-#### [Činnost koncového uživatele](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md)
+
 #### [Konzola pro správu Intune pro zásady MAM](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md)
 
 ### [Příprava obchodních aplikací pro MAM](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md)
@@ -141,12 +141,15 @@
 ### [Vymazání data spravovaných aplikací společnosti](Wipe-managed-company-app-data-with-microsoft-intune.md)
 
 ## [Materiály o prostředí pro koncové uživatele](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+### [Obnovení spravovaných zařízení s iOS](restore-managed-ios-devices-from-backup.md)
+### [Aplikace pro Android se zásadami MAM](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
+### [Aplikace pro iOS se zásadami MAM](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
 
 # [Vývoj a přizpůsobení aplikací](/intune/develop/intune-app-sdk)
 
 # [Řešení problémů](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

@@ -3,6 +3,7 @@ title: "Software ke stažení | Microsoft Intune"
 description: "Projděte si software, který by mohl být k dispozici ke stažení v rámci vašeho předplatného služby Intune nebo EMS."
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 07/25/2016
 ms.topic: article
@@ -12,15 +13,15 @@ ms.technology:
 ms.assetid: 9d031fa7-9c07-48c5-b915-6525aea54870
 ms.reviewer: amyro
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: eb85109bdb406dc452936b8b9c366615672fe8b4
+ms.sourcegitcommit: d9e32bc2a76eb7914f8cc646c5d8521e7d44fda1
+ms.openlocfilehash: 2754b4a03a43cd452b77dce6349ebdce78f5afff
 
 
 ---
 
 # Placené předplatné Microsoft Intune nebo Enterprise Mobility může zahrnovat licenci na použití určitého softwaru ke stažení
 
-Placené předplatné služeb Microsoft Online Services může zahrnovat následující software.  To, na který software máte licenci, si můžete ověřit v podmínkách smlouvy.
+Placené předplatné služeb Microsoft Online Services může zahrnovat následující software. Podívejte se do podmínek smlouvy, kde najdete licencovaný software.
 
 | **Služba Microsoftu**    | **Místní software**           |
 | ------------- |-------------|
@@ -29,18 +30,18 @@ Placené předplatné služeb Microsoft Online Services může zahrnovat násled
 |Microsoft Intune | System Center Configuration Manager |
 |Azure Active Directory Premium |   Microsoft Identity Manager |
 
-Umístění pro stažení výše uvedeného softwaru bude záviset na tom, jakou metodou jste online službu Microsoftu zakoupili.
+Místo, odkud si můžete stáhnout software, se liší podle způsobu, jakým jste online službu Microsoftu koupili.
 
-Pokud jste ji zakoupili prostřednictvím smlouvy k účtu nebo si ji předplatili prostřednictvím partnera Microsoft Certified Partner, měl vám po aktivaci produktu přijít e-mail s odkazem na [portál pro stažení multilicence](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
+Pokud jste si ho koupili v rámci smlouvy k účtu nebo jste si ho předplatili prostřednictvím certifikovaného partnera společnosti Microsoft, měl vám po aktivaci produktu přijít e-mail s odkazem na [portál pro stažení multilicence](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
 
-Pokud jste službu zakoupili přímo platební kartou nebo prostřednictvím poskytovatele cloudových řešení, stáhnete si software [online služby Stažení softwaru Microsoftu](https://www.microsoft.com/online/downloads/HomeRealmDiscovery.aspx).
+Pokud jste zaplatili přímo platební kartou nebo jste software koupili prostřednictvím poskytovatele cloudových řešení, můžete si software stáhnout z [Centra stažení softwaru služeb Microsoft Online Services](https://www.microsoft.com/online/downloads/HomeRealmDiscovery.aspx).
 
-Pokud si nejste jistí, na který software máte nárok, obraťte se na svého zákaznického zástupce nebo partnera nebo se obraťte na [podporu služeb Microsoft Online Services](https://technet.microsoft.com/en-us/dn932057.aspx).
+Pokud si nejste jistí, k jakému softwaru máte licence, obraťte se na manažera svého účtu nebo na partnera, případně na [podporu služeb Microsoft Online Services](https://technet.microsoft.com/en-us/dn932057.aspx).
 
-Pokud jste si místo toho zaregistrovali zkušební verzi, můžete získat zkušební verze těchto softwarů v [centru hodnocení na webu TechNet](https://www.microsoft.com/evalcenter/try).
+Pokud jste si zaregistrovali zkušební verzi, získáte ji na webu [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/try).
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 

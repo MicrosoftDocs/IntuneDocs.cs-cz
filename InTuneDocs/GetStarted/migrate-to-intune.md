@@ -3,6 +3,7 @@ title: Migrace na Intune | Microsoft Intune
 description: 
 keywords: 
 author: jeffgilb
+ms.author: jeffgilb
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 88936b8a-7453-4410-b6db-29f636ba3e72
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 317b8cc277eb8dffc1cb29739f3f78cfa3241602
-ms.openlocfilehash: c6bd34c910f56e7dfad142034ef6fd7a027cd2c4
+ms.sourcegitcommit: 59041e1c35d2f4b5c4d9b663494f3f02504c12f6
+ms.openlocfilehash: b115912357e298016dee4e0fa87f2ed87f5f2f60
 
 
 ---
@@ -44,7 +45,7 @@ Než se zařízení zaregistrují v Intune, je potřeba zrušit jejich registrac
 
 ## Registrace zařízení v Intune
 
-Uživatelé, u kterých je naplánovaná migrace, by se měli okamžitě zaregistrovat v Intune, aby znovu získali přístup k podnikovým prostředkům, e-mailu a aplikacím, případně aby o něj nepřišli. Pokud nakonfigurujete podmíněný přístup a uživatelé se pokusí připojit k e-mailu dřív, než se zaregistrují v Intune, jejich přístup se zablokuje a dostanou e-mail s informacemi o registraci. Tento e-mail je provede registrací jejich zařízení v Intune.  Uživatelé se také můžou do Intune zaregistrovat prostřednictvím aplikace Portál společnosti Intune nebo nativně prostřednictvím operačního systému ve Windows 8.1 a Windows 10 Mobile. Další informace o krocích registrace podle jednotlivých platforem najdete v tématu [Co říct koncovým uživatelům o používání služby Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md).
+Uživatelé, u kterých je naplánovaná migrace, by se měli okamžitě zaregistrovat v Intune, aby znovu získali přístup k podnikovým prostředkům, e-mailu a aplikacím, případně aby o něj nepřišli. Pokud nakonfigurujete podmíněný přístup a uživatelé se pokusí připojit k e-mailu dřív, než se zaregistrují v Intune, jejich přístup se zablokuje a dostanou e-mail s informacemi o registraci. Tento e-mail je provede registrací jejich zařízení v Intune.  Uživatelé se také můžou do Intune zaregistrovat prostřednictvím aplikace Portál společnosti Intune nebo nativně prostřednictvím operačního systému ve Windows 8.1 a Windows 10 Mobile. Další pokyny týkající se registračních kroků pro konkrétní platformu najdete v tématu [Co říct koncovým uživatelům o používání služby Microsoft Intune](/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune).
 
 ## Konfigurace podmíněného přístupu v Intune (volitelné)
 
@@ -73,6 +74,6 @@ Verzi celého průvodce ke stažení najdete v [Galerii TechNetu](https://galler
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 

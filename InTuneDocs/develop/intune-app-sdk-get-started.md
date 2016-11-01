@@ -13,8 +13,8 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ba9ba203c9ec173dafd1d6f9e4828d4a8a51e1ef
-ms.openlocfilehash: 136dd127c5e0f1784746b973ebc5594573f07925
+ms.sourcegitcommit: ed1008c786285821c608a8404805c6615c60507f
+ms.openlocfilehash: c80868fdee79df62aae0aa64e378be5dcc9664ae
 
 
 ---
@@ -31,44 +31,60 @@ Tento průvodce vás provede důležitými kroky potřebnými k povolení správ
 
 **Pokud je vaše aplikace interní a nebude dostupná pro veřejné obchody s aplikacemi**:
 
-Aplikaci **nemusíte** registrovat. V případě interních obchodních aplikací správce IT takové aplikace nasadí interně pomocí Microsoft Intune. Intune rozpozná, že aplikace je vytvořená pomocí sady SDK, a umožní správci IT, aby na aplikaci použil nastavení zásad MAM. Můžete přeskočit k části [Povolení mobilní aplikace pro iOS nebo Android pro MAM s SDK](#enable-your-ios-or-android-mobile-app-for-mam-with-the-sdk).
+Aplikaci **nemusíte** registrovat. Interní obchodní aplikace nasazuje správce IT interně. Intune rozpozná, že aplikace byla vytvořena pomocí SDK, a umožní správci IT, aby u ní použil nastavení zásad MAM. Můžete přeskočit k části [Povolení mobilní aplikace pro iOS nebo Android pro MAM s SDK](#enable-your-ios-or-android-mobile-app-for-mam-with-the-sdk).
 
 **Pokud vaše aplikace bude vydána do veřejného obchodu s aplikacemi, například Apple App Storu nebo Google Play**: 
 
-**Musíte** aplikaci nejdřív zaregistrovat ve službě Microsoft Intune a odsouhlasit podmínky registrace. Po registraci můžou správci IT na podporované aplikace použít nastavení zásad MAM v Intune, což bude potom uvedeno jako partner aplikace Intune. Do té doby, než bude registrace dokončena a potvrzena týmem Microsoft Intune, nebudou mít správci Intune možnost použít zásady MAM na přímý odkaz na vaši aplikaci. Microsoft aplikaci přidá také na [stránku partnerů Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-partners), kde se zobrazí ikona aplikace, která znázorňuje podporu zásad MAM pro Microsoft Intune.
+**Musíte** aplikaci nejdřív zaregistrovat ve službě Microsoft Intune a odsouhlasit podmínky registrace. Po registraci můžou správci IT na podporované aplikace použít nastavení zásad MAM v Intune, což bude potom uvedeno jako partner aplikace Intune. Do té doby, než bude registrace dokončena a potvrzena týmem Microsoft Intune, nebudou mít správci Intune možnost použít zásady MAM na přímý odkaz na vaši aplikaci. Microsoft aplikaci přidá také na [stránku partnerů Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps), kde se zobrazí ikona aplikace, která znázorňuje podporu zásad MAM pro Microsoft Intune.
 
-Pokud chcete zahájit proces registrace, **přečtěte si a podepište**[smlouvu pro partnery Microsoft Intune](https://connect.microsoft.com/ConfigurationManagervnext/Survey/Survey.aspx?SurveyID=17806). Tato smlouva popisuje podmínky, které vaše společnost musí splnit, než se stane partnerem pro aplikace Microsoft Intune. Před zobrazením tohoto dokumentu se musíte přihlásit. Smlouvu najdete na webu Microsoft Connect sady Intune App SDK na kartě Průzkumy nebo tady. Také vás požádáme o poskytnutí názvu aplikace, názvu vaší společnosti a přímý odkaz na aplikaci ve storu Google nebo iTunes.
+Pokud chcete zahájit registraci, vyplňte **[dotazník pro partnery s aplikací pro Microsoft Intune](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR6oOVGFZ3pxJmwSN1N_eXwJUQUc5Mkw2UVU0VzI5WkhQOEYyMENWNDBWRS4u)**. 
 
-![Microsoft Connect](../media/microsoft-connect.png)
+Microsoft použije e-mailové adresy, které uvedete ve svých odpovědích v dotazníku, a obrátí se na vás, aby pokračoval v registraci. Navíc použijeme e-mailovou adresu použitou při registraci, abychom vás v případě nejasností kontaktovali.
 
-K potvrzení a dokončení procesu registrace použijeme e-mailovou adresu použitou při registraci. Navíc použijeme e-mailovou adresu použitou při registraci, abychom vás v případě nejasností kontaktovali.
+> [!NOTE]
+> Se všemi informacemi shromážděnými prostřednictvím dotazníku a e-mailové korespondence s týmem Microsoft Intune se nakládá v souladu s [Prohlášením o zásadách ochrany osobních údajů společnosti Microsoft](https://www.microsoft.com/en-us/privacystatement/default.aspx).
 
 **V procesu registrace se setkáte s následujícími akcemi**: 
 
-Po odeslání formuláře budete kontaktováni Microsoftem prostřednictvím e-mailové adresy použité při registraci, abyste potvrdili příjem, nebo abychom si vyžádali dodatečné informace k dokončení registrace. Budete také kontaktováni, když bude aplikace úspěšně registrovaná s Microsoft Intune a když bude uvedena na partnerském webu Microsoft Intune. Po potvrzení přijetí informací se přímý odkaz na vaši aplikaci zahrne do aktualizace služby Intune pro příští měsíc. Pokud se například proces registrace dokončí v červenci, přímý odkaz na aplikaci bude podporovaný v polovině srpna. Pokud se v budoucnu přímý odkaz na vaši aplikaci ve Storu změní, budete aplikaci muset znovu zaregistrovat. Také nás informujte v případě, že aktualizujete aplikaci s novou verzí sady Intune App SDK.
+1. Po odeslání dotazníku vás bude Microsoft kontaktovat na e-mailovou adresu použitou k registraci, aby buď potvrdil úspěšný příjem, nebo požádal o další informace potřebné k dokončení registrace. 
+2. Jakmile od vás získáme všechny potřebné informace, pošleme vám k podpisu smlouvu pro partnery s aplikací pro Microsoft Intune. Tato smlouva popisuje podmínky, které vaše společnost musí splnit, než se stane partnerem pro aplikace Microsoft Intune. 
+3. Jakmile bude aplikace úspěšně zaregistrovaná ve službě Microsoft Intune a uvedená na webu pro [partnery služby Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps), dostanete o tom zprávu. 
+4. Nakonec bude do další měsíční aktualizace služby Intune přidán přímý odkaz na vaši aplikaci. Pokud se například proces registrace dokončí v červenci, přímý odkaz na aplikaci bude podporovaný v polovině srpna. 
 
-**Poznámka**: Se všemi informacemi shromážděnými prostřednictvím výše uvedeného formuláře a prostřednictvím e-mailové korespondence s týmem Intune se nakládá v souladu s [Prohlášením o zásadách ochrany osobních údajů společnosti Microsoft](https://www.microsoft.com/en-us/privacystatement/default.aspx).
+Pokud se v budoucnosti přímý odkaz na aplikaci ve Storu změní, budete ji muset znovu zaregistrovat. Také nás prosím informujte, pokud k aktualizaci aplikace použijete novou verzi sady Intune App SDK.
+
+
 
 ## Stažení souborů sady SDK
 
-Sady Intune App SDK pro iOS a Android jsou hostované na účtu GitHub Microsoftu. Níže uvedená veřejná úložiště obsahují soubory sady SDK pro iOS a Android:
+Sady Intune App SDK pro nativní systémy iOS a Android jsou hostované v účtu služby Microsoft GitHub. Níže uvedená veřejná úložiště obsahují soubory sady SDK pro iOS a Android:
 
 * [Intune App SDK pro iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios)
 * [Intune App SDK pro Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android)
 
+**Pokud je vaše aplikace vytvořená v Xamarinu nebo Cordově, použijte prosím následující vývojářské nástroje:**
+
+* [Komponenta Xamarin sady Intune App SDK](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
+* [Plugin Cordova sady Intune App SDK](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam)
+
 Doporučujeme, abyste si zaregistrovali účet na GitHubu, který můžete použít k rozvětvení a přebírání z našich úložišť. GitHub vývojářům umožňuje komunikovat s naším produktovým týmem, hlásit problémy a dostávat rychlé odpovědi, zobrazit poznámky k verzi a zasílat připomínky do Microsoftu. V případě dotazů k účtu a úložištím na GitHubu se obraťte na adresu msintuneappsdk@microsoft.com.
+
+
+
+
 
 ## Povolení mobilní aplikace systému iOS nebo Android pro MAM s SDK
 
-K integraci sady Intune App SDK do aplikace pro iOS budete potřebovat následující: 
+K integraci sady Intune App SDK do nativní aplikace pro iOS budete potřebovat následující příručku: 
 
 * **[Příručka pro vývojáře sady Intune App SDK pro iOS](intune-app-sdk-ios.md)**: Tento dokument vás detailně provede procesem povolování mobilních aplikací s iOS pomocí sady Intune App SDK. 
 
 
-K integraci sady Intune App SDK do aplikace pro Android budete potřebovat následující:
+K integraci sady Intune App SDK do nativní aplikace pro Android budete potřebovat následující příručku:
 
 * **[Příručka pro vývojáře sady Intune App SDK pro Android](intune-app-sdk-android.md)**: Tento dokument vás detailně provede procesem povolování mobilních aplikací s Androidem pomocí sady Intune App SDK. 
 
+Dokumentaci ke komponentě Xamarin sady Intune App SDK a k pluginu Cordova sady Intune App SDK najdete v příslušných úložištích GitHubu. 
 
 
 ## Konfigurace telemetrie pro aplikaci
@@ -96,6 +112,6 @@ Po dokončení nezbytných kroků k integraci vaší aplikace pro iOS nebo Andro
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 

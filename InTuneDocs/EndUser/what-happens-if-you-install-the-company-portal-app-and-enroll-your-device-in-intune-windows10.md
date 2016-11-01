@@ -3,8 +3,9 @@ title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistr
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
-ms.date: 06/01/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
-ms.openlocfilehash: c25598de9fb97df287f372484fe052fd36dadf88
+ms.sourcegitcommit: fd54ec104a26ebae845dfe3942dac2e8d9dae4a9
+ms.openlocfilehash: 0462635a4c995866f8ad504ea724e795424b4405
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: c25598de9fb97df287f372484fe052fd36dadf88
 
 # Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Windows 10 v Intune?
 
-Když nainstalujete aplikaci Portál společnosti a potom v ní zaregistrujete své zařízení se systémem Windows 10 Enterprise nebo Professional do služby Intune, můžete v aplikaci Portál společnosti provádět tyto kroky:
+Když nainstalujete aplikaci Portál společnosti a potom v ní zaregistrujete svoje zařízení s Windows 10 Enterprise nebo Professional do služby Intune, můžete pomocí aplikace Portál společnosti provádět tyto akce:
 
--   Přístup k podnikové síti, e-mailu a dalším pracovním souborům
+-   Přístup k podnikové síti, e-mailu a pracovním souborům
 
 -   Získání aplikací společnosti z Portálu společnosti
 
--   Automatická konfigurace e-mailového účtu vaší společnosti
+-   Automatické nastavení e-mailového účtu vaší společnosti
 
 -   Obnovení továrního nastavení telefonu v případě ztráty nebo odcizení
 
@@ -37,27 +38,24 @@ Kroky registrace najdete v tématu [Registrace zařízení s Windows 10 Mobile n
 
 Když přidáte počítač:
 
--   Budete mít v počítači nainstalovaný software, prostřednictvím kterého bude moci správce IT počítač spravovat a díky kterému budete mít přístup k prostředkům společnosti, jako jsou aplikace a informace o podpoře. Správce IT může tento software automaticky aktualizovat.
+-   Do vašeho počítače se nainstaluje software, který správci IT umožní spravovat daný počítač a vám umožní přístup k prostředkům společnosti, jako jsou aplikace a informace o podpoře. Správce IT může tento software automaticky aktualizovat.
 
--   V počítači může být nainstalovaná taky služba Intune Endpoint Protection. Tento software v počítači zjišťuje přítomnost virů a malwaru.
+-   Do vašeho počítače se může nainstalovat služba Intune Endpoint Protection. Tento software vyhledává viry a malware.
 
--   Správce IT může inventarizovat veškerý software nainstalovaný v počítači, včetně softwaru, který jste doinstalovali vy.
+-   Správce IT může inventarizovat veškerý software nainstalovaný v počítači, a to i software, který jste si nainstalovali sami.
 
 -   Může se vyžadovat, abyste přijali smluvní podmínky.
 
--   Správce IT může shromažďovat nebo odstraňovat data z pevného disku vašeho počítače. Může dokonce odstranit celý obsah vašeho pevného disku.
+-   Správce IT může shromažďovat nebo odstraňovat data z pevného disku vašeho počítače. Může také odstranit celý obsah vašeho pevného disku.
 
--   Může do vašeho počítače instalovat aplikace a aktualizace.
+-   Správce IT může do vašeho počítače instalovat aplikace a aktualizace.
 
--   Může ve vašem počítači vynutit dodržování určitých zásad. Například může vyžadovat, abyste si v počítači nastavili heslo nebo PIN kód, přičemž v případě příliš velkého počtu chybných pokusů o zadání hesla může dojít k zablokování počítače nebo odstranění všech dat z pevného disku počítače.
+-   Může ve vašem počítači vynutit dodržování určitých zásad. Například může vyžadovat, abyste v počítači nastavili heslo nebo kód PIN. Správce IT může také omezit počet možných zadání nesprávného hesla. Když se tento počet překročí, může se počítač zablokovat nebo se můžou odstranit všechna data z pevného disku počítače.
 
 Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
-### Související témata
-[Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
 
-
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

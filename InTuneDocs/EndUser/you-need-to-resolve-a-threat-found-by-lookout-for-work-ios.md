@@ -1,5 +1,5 @@
 ---
-title: "Je třeba vyřešit hrozbu, kterou aplikace Lookout for Work objevila na vašem zařízení s Androidem | Microsoft Intune"
+title: "Je třeba vyřešit hrozbu, kterou aplikace Lookout for Work objevila na vašem zařízení s iOS | Microsoft Intune"
 description: 
 keywords: 
 author: barlanmsft
@@ -10,20 +10,20 @@ ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 5656b3e6-e812-4264-a170-b17c9c03e4d4
+ms.assetid: dd6aec3a-4063-4054-8d0f-d2f2034f0d3d
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
 ms.sourcegitcommit: c5b1be5043b5e0ad2774d9214a3e09ccd8d9d991
-ms.openlocfilehash: aae9d4666ab356bb6d3c5e929d311c53ea065485
+ms.openlocfilehash: 88b6a7107efb04accac4e7028e04a5505d8c865b
 
 
 ---
 
 # <a name="you-need-to-resolve-a-threat-found-by-lookout-for-work"></a>Je třeba vyřešit hrozbu, kterou objevila aplikace Lookout for Work
 
-Aplikace Lookout for Work našla na zařízení potenciální hrozbu a tento problém je potřeba vyřešit, než budete moct znovu přistupovat ke svým firemním nebo školním e-mailům, aplikacím a souborům. Zpráva, kterou uvidíte, může vypadat takto:
+Aplikace Lookout for Work našla na zařízení potenciální hrozbu a tento problém je potřeba vyřešit, než budete moct znovu přistupovat ke svým firemním nebo školním e-mailům, aplikacím a souborům. Zpráva, kterou uvidíte, může vypadat takto: 
 
-![Lookout for Work našla v zařízení hrozbu](./media/lookout-threat-found-android.png)
+![Zprávu o problému z aplikace Lookout for Work](./media/ios-lfw-noncompliant-in-ssp.png)
 
 Pokud chcete problém vyřešit, spusťte aplikaci Lookout for Work a postupujte podle pokynů zobrazených v aplikaci.
 
@@ -39,9 +39,11 @@ Klepněte na odkaz na **portál pro správu zařízení** a přejděte na [web P
 
 Pokud jste nainstalovali aplikaci, kterou Lookout for Work považuje za hrozbu, uvidíte podobnou obrazovku:
 
-![příklad zprávy s výstrahou aplikace Lookout for Work upozorňující na virus](./media/lookout-virus-alert-android.png)
+![příklad zprávy s výstrahou aplikace Lookout for Work upozorňující na virus](./media/ios-lfw-threat-example.png)
 
-Po odinstalaci aplikace ihned znovu získáte přístup k firemnímu e-mailu a datům. Pokud budete požadavek na odinstalaci aplikace ignorovat, ztratíte přístup k e-mailu a datům až do odinstalace aplikace.
+Pokud se něco takového zobrazí, klepněte na název aplikace v horní části obrazovky a podle pokynů hrozbu odstraňte.
+
+Po odinstalaci aplikace ihned znovu získáte přístup k e-mailu a dalším datům společnosti nebo školy. Pokud budete požadavek na odinstalaci aplikace ignorovat, ztratíte přístup k firemnímu e-mailu a datům, dokud aplikaci neodinstalujete.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 

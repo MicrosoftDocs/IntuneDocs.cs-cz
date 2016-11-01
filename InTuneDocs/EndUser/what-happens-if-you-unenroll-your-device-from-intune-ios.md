@@ -3,6 +3,7 @@ title: "Co se stane, když zrušíte registraci zařízení s iOS v Intune? | Mi
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -14,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 05c94004bf8a4c26ad8063f3e5dc0ba581022e0a
+ms.sourcegitcommit: 2bc39ae41779e02882a5edf3698cb0e6976caec2
+ms.openlocfilehash: a47d3fc5c3a2063e49e9f250e15eb8d6126bb903
 
 
 ---
@@ -25,17 +26,17 @@ ms.openlocfilehash: 05c94004bf8a4c26ad8063f3e5dc0ba581022e0a
 
 Po zrušení registrace zařízení s iOS v Intune:
 
--   Vaše zařízení se už nebude zobrazovat na portálu společnosti.
+-   Vaše zařízení se už nebude zobrazovat na Portálu společnosti.
 
 -   Z portálu společnosti už nebudete moct instalovat aplikace.
 
--   Nastavení, která se v zařízení změnila od jeho přidání, například zakázání fotoaparátu/kamery nebo vyžadování určité délky hesla, přestanou platit.
+-   Už nebudou platit nastavení, která se v zařízení změnila od jeho přidání (třeba zakázání fotoaparátu/kamery nebo vyžadování určité délky hesla).
 
--   Je možné, že již v zařízení nebudete mít přístup k některým prostředkům společnosti, jako jsou sdílené složky nebo interní weby.
+-   Je možné, že už v zařízení nebudete mít přístup k některým prostředkům společnosti, jako jsou sdílené složky nebo interní weby.
 
 -   Nebudete již moci v zařízení používat aplikace a data společnosti.
 
--   Je možné, že se už nebudete moct připojovat k podnikové síti pomocí Wi-Fi nebo virtuální privátní sítě (VPN).
+-   Je možné, že se už nebudete moct připojit k podnikové síti pomocí Wi-Fi nebo virtuální privátní sítě (VPN).
 
 -   E-mailové profily společnosti jsou ze zařízení odebrané.
 
@@ -45,8 +46,6 @@ Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na spr�
 
 
 
-
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO3-->
 
 
