@@ -2,8 +2,8 @@
 title: "Vícefaktorové ověřování pomocí Azure AD | Microsoft Intune"
 description: "Jak vyžadovat vícefaktorové ověřování ve službě Azure AD pro registraci zařízení"
 keywords: 
-author: nbigman
-ms.author: nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angerobe
 ms.date: 09/22/2016
 ms.topic: article
@@ -19,7 +19,7 @@ ms.openlocfilehash: ccd55cc8637ebccfdbddd05c4f6b182c7923a2ab
 
 ---
 
-# Vícefaktorové ověřování pro Microsoft Intune
+# <a name="multifactor-authentication-for-microsoft-intune"></a>Vícefaktorové ověřování pro Microsoft Intune
 
 Intune integruje vícefaktorové ověřování (MFA) služby Azure AD pro registraci zařízení a pomáhá zabezpečit prostředky společnosti. MFA vyžaduje kromě uživatelských jmen a hesel také faktory ověřování, jako je ověřování textu. Podporuje se pro zařízení se systémem iOS, Android, Windows 8.1 nebo novějším a Windows Phone 8.1 nebo novějším.
 
@@ -27,7 +27,7 @@ Intune integruje vícefaktorové ověřování (MFA) služby Azure AD pro regist
 >
 > Ve starších verzích Configuration Manageru (do verze 1610) se nastavení MFA stále zobrazuje v konzole správce Configuration Manageru. Nepokoušejte se ale konfigurovat MFA v konzole správce Configuration Manager, protože nebude fungovat. MFA nakonfigurujte podle pokynů v tomto tématu.
 
-### Konfigurace služby Intune tak, aby při registraci zařízení vyžadovala vícefaktorové ověřování
+### <a name="configuring-intune-to-require-multifactor-authentication-at-device-enrollment"></a>Konfigurace služby Intune tak, aby při registraci zařízení vyžadovala vícefaktorové ověřování
 Pokud chcete při registraci zařízení vyžadovat MFA, postupujte takto:
 
 1. Přihlaste se pomocí svých přihlašovacích údajů správce na web [Microsoft Azure Portal](https://manage.windowsazure.com).
