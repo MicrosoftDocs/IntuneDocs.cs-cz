@@ -14,13 +14,13 @@ ms.assetid: 619a1d11-3d22-4635-8f70-770eba3e1712
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 581e880fa4308ec627f5b2c1242fb5b30b713743
-ms.openlocfilehash: 3973ac11d4734b17f905e88259863d7ddb59c1f4
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: 559917b5b3c12534a5aa5d5eb5247d36e4ac1728
 
 
 ---
 
-# Příručka pro testování Intune
+# <a name="intune-evaluation-guide"></a>Příručka pro testování Intune
 Nastavení bezplatného 30denního testování Intune pro správu mobilních zařízení a počítačů je rychlé a snadné. Pomocí několika jednoduchých kroků můžete do testování přidat až 100 uživatelů a zařízení, nastavit skupiny, nakonfigurovat zásady dodržování předpisů a registrovat a spravovat mobilní zařízení a počítače.
 
 V tomto tématu se dozvíte základní informace o zprovoznění testování Intune a získáte o službě Intune přehled, abyste mohli vyhodnotit její funkce a možnosti.
@@ -29,7 +29,7 @@ Podívejte se na následující pětiminutovou videoukázku, ve které se dozví
 
 <iframe width="675" height="480" src="https://www.youtube.com/embed/ltcZvm4VOFU" frameborder="0" allowfullscreen></iframe>
 
-## Před zahájením
+## <a name="before-you-begin"></a>Před zahájením
 Před zahájením práce s Intune budete potřebovat:
 
 -   Zařízení s webovým prohlížečem, který podporuje technologii Silverlight a který můžete použít pro přístup k webům, kde vytvoříte uživatelské účty Intune (**Centrum pro správu Office 365**) a kde budete spravovat zařízení, skupiny a zásady (**konzola pro správu Intune**).
@@ -46,7 +46,7 @@ Před zahájením práce s Intune budete potřebovat:
     |Zařízení s Windows 10, Windows RT 8.1 nebo Windows 8.1|Na registraci zařízení s Windows RT a Windows nejsou žádné požadavky.|[Instalace klienta na počítači s Windows pomocí Microsoft Intune](/Intune/Deploy-Use/install-the-windows-pc-client-with-microsoft-intune).|
     |iOS 7.1 nebo novější|Získání certifikátu služby Apple Push Notification:|Požádejte o certifikát služby Apple Push Notification od společnosti Apple, jak se popisuje v tématu [Nastavení správy pro iOS a Mac pomocí Microsoft Intune](/Intune/Deploy-Use/set-up-ios-and-mac-management-with-microsoft-intune).|
 
-## Kroky k dokončení 30denního testování Intune
+## <a name="steps-to-complete-a-30day-evaluation-of-intune"></a>Kroky k dokončení 30denního testování Intune
 - [Krok 1: Registrace nebo přihlášení k 30dennímu testování](get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md). Před registrací nebo přihlášením k Intune byste měli zvážit, jestli se chcete přihlásit pomocí existujícího účtu nebo si vytvořit dočasný účet pouze pro účely 30denního testování Microsoft Intune.
 - [Krok 2: Přidání uživatelů](get-started-with-a-30-day-trial-of-microsoft-intune-step-2.md). Po nastavení účtu můžete buď přidávat jednotlivé uživatelské účty do Intune, nebo přidávat uživatele hromadně (viz pokyny v této části). Než s tím začnete, je důležité, abyste rozuměli tomu, jak Intune zachází s účty správců.
 - [Krok 3: Vytvoření skupiny pro uspořádání uživatelů a zařízení](get-started-with-a-30-day-trial-of-microsoft-intune-step-3.md). Skupiny v Intune poskytují flexibilitu pro správu zařízení a uživatelů. Můžete nastavit skupiny podle potřeb vaší organizace (třeba podle zeměpisné polohy, oddělení nebo vlastností hardwaru) a použít je k provádění řady úloh správy se škálováním od nastavení zásad pro sadu uživatelů po nasazení aplikací na sadu zařízení.
@@ -56,17 +56,17 @@ Před zahájením práce s Intune budete potřebovat:
 - [Krok 7: Další kroky](get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md). Připravte se na přechod na placené předplatné Intune a využijte výhod Centra FastTrack pro Intune.
 
 
-### Další kroky
+### <a name="next-steps"></a>Další kroky
 Je na čase zahájit 30denní testovací předplatné!
 
 >[!div class="step-by-step"]
 [**Registrace k Intune** &rarr;](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md)
 
-### Viz taky
+### <a name="see-also"></a>Viz taky
 [Úvodní příručka služby Intune](/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune)
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

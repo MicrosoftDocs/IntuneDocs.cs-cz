@@ -2,9 +2,10 @@
 title: "Správa výstrah | Microsoft Intune"
 description: "Používejte v Intune pracovní prostor Výstrahy k posouzení celkového stavu zařízení ve vaší organizaci."
 keywords: 
-author: Nbigman
+author: karthikaraman
+ms.author: karaman
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,20 +15,20 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: pbala
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed8b7e42bd7c6f3839cc93cc3efcdd3241e88e2a
-ms.openlocfilehash: f254c1a486305e54305392b9688c563b8be93237
+ms.sourcegitcommit: ab9ad1fb42176f2fc2babaa6fa3c91cea40b4ca5
+ms.openlocfilehash: 3bbeafbe78148d038b7673ee8c1abfd5bc6c5f87
 
 
 ---
 
-# Správa výstrah v Microsoft Intune
+# <a name="manage-alerts-in-microsoft-intune"></a>Správa výstrah v Microsoft Intune
 K posouzení celkového stavu zařízení ve vaší organizaci a identifikaci problémů použijte pracovní prostor **Výstrahy** v konzole správy Intune.
 
-## Zobrazení aktivních výstrah
+## <a name="view-active-alerts"></a>Zobrazení aktivních výstrah
 
 Podívejte se na obecné informace a souhrnná data o aktivních výstrahách.
 
-#### Zobrazení aktivních výstrah
+#### <a name="to-view-active-alerts"></a>Zobrazení aktivních výstrah
 
 V konzole správce Intune proveďte jeden z těchto postupů:
 
@@ -55,10 +56,10 @@ V konzole správce Intune proveďte jeden z těchto postupů:
 
     -   **Závažnost**. Označuje závažnost výstrahy.
 
-## Zobrazení výstrah na vývěsce
+## <a name="view-notice-board-alerts"></a>Zobrazení výstrah na vývěsce
 Výstrahy na vývěsce poskytují důležitá oznámení o službách. Mohou informovat například o nadcházejícím upgradu služby, údržbě nebo stavu řešení výpadku.
 
-#### Zobrazení a správa výstrah na vývěsce
+#### <a name="to-view-and-manage-notice-board-alerts"></a>Zobrazení a správa výstrah na vývěsce
 
 1.  V konzole správce Intune vyberte **Přehled systému**.
 
@@ -66,10 +67,10 @@ Výstrahy na vývěsce poskytují důležitá oznámení o službách. Mohou inf
 
 3.  Pokud chcete výstrahu na vývěsce exportovat do souboru s hodnotami oddělenými čárkou (CSV) nebo souboru HTML, v konzole správy Intune zvolte **Výstrahy** > **Všechny výstrahy** >    **Sdělení**. Vyberte oznámení, zvolte ikonu **Export seznamu** a pak postupujte podle zobrazených pokynů.
 
-## Kontrola stavu systému Intune
+## <a name="review-intune-system-status"></a>Kontrola stavu systému Intune
 V pracovním prostoru **Přehled systému** si můžete zobrazit souhrny **Stavu systému** pro kategorie Endpoint Protection, aktualizace, stav agenta, zásady a software, abyste mohli identifikovat a upřednostnit problémy, které vyžadují okamžitou pozornost. Chybové zprávy, které jsou generovány při přerušení funkce systému, odkazují na souhrn **Stav služby**. Souhrn **Stav služby** zobrazuje podrobnosti o problému v každém umístění a čas poslední aktualizace souhrnu.
 
-#### Zobrazení stavu předplatného
+#### <a name="to-view-the-status-of-your-subscription"></a>Zobrazení stavu předplatného
 
 1.  V konzole správce Intune vyberte **Přehled systému**.
 
@@ -77,7 +78,7 @@ V pracovním prostoru **Přehled systému** si můžete zobrazit souhrny **Stavu
 
   Mnohé položky jsou propojené, abyste mohli zobrazit další informace. Když například v oblasti **Endpoint Protection** vyberete počet instancí, uvidíte pracovní prostor **Endpoint Protection** se seznamem detekovaného malwaru. Výběrem počtu zařízení zobrazíte pracovní prostor **Skupiny** se seznamem zařízení, na kterých byl zjištěn malware.
 
-## Zavření a opětovná aktivace výstrah
+## <a name="close-and-reactivate-alerts"></a>Zavření a opětovná aktivace výstrah
 Výstrahy Intune zůstávají aktivní, dokud nenastane některá z těchto událostí:
 
 -   Vyřeší se problém, který způsobil vygenerování výstrahy.
@@ -88,7 +89,7 @@ Výstrahy Intune zůstávají aktivní, dokud nenastane některá z těchto udá
 
 Výstrahy, které jsou označené jako zavřené, se po 90 dnech trvale odstraní.
 
-#### Ruční zavření výstrahy
+#### <a name="to-manually-close-an-alert"></a>Ruční zavření výstrahy
 
 V konzole správce Intune proveďte jeden z těchto postupů:
 
@@ -98,7 +99,7 @@ V konzole správce Intune proveďte jeden z těchto postupů:
 
 - **Zavření výstrahy na vývěsce** – zvolte **Přehled systému**. Použijte ikonu **X** vedle výstrahy na vývěsce.
 
-#### Zobrazení a opětovná aktivace zavřené výstrahy
+#### <a name="to-view-and-reactivate-closed-alerts"></a>Zobrazení a opětovná aktivace zavřené výstrahy
 
 1.  V konzole správce Intune zvolte **Výstrahy** > **Všechny výstrahy**.
 
@@ -108,11 +109,11 @@ V konzole správce Intune proveďte jeden z těchto postupů:
 
 3.  Pokud chcete vybranou výstrahu znovu aktivovat, zvolte **Znovu aktivovat výstrahu**.
 
-### Viz taky
+### <a name="see-also"></a>Viz taky
 [Upozorňování pomocí výstrah služby Microsoft Intune](../deploy-use/get-notified-by-alerts.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

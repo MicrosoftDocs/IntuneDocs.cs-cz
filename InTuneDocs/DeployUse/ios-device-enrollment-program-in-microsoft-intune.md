@@ -2,8 +2,8 @@
 title: "Správa Apple DEP pro zařízení s iOS | Microsoft Intune"
 description: "Nasaďte registrační profil, který umožňuje bezdrátovou registraci zařízení s iOS koupených prostřednictvím programu DEP (Device Enrollment Program) pro zařízení s iOS, aby bylo možné je spravovat."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: staciebarker
+ms.author: stabar
 manager: arob98
 ms.date: 07/19/2016
 ms.topic: article
@@ -14,16 +14,16 @@ ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 021c02c9a148746a76309efc819b9e28a2748c4f
-ms.openlocfilehash: b608d6353db2f37eed03d34c9216726fa7cd1cb2
+ms.sourcegitcommit: 289e6019aa1a17deb91b38ed32f0432af0902a9d
+ms.openlocfilehash: 1bc39e7e91b1511ffb99e92e569df0a7153cc06f
 
 
 ---
 
-# Registrace zařízení s iOS vlastněných společností do programu DEP (Device Enrollment Program)
+# <a name="enroll-corporateowned-device-enrollment-program-ios-devices"></a>Registrace zařízení s iOS vlastněných společností do programu DEP (Device Enrollment Program)
 Microsoft Intune umožňuje nasadit registrační profil, který bezdrátově zaregistruje zařízení s iOS zakoupená prostřednictvím programu DEP (Device Enrollment Program). Registrační balíček může zahrnovat možnosti Pomocníka s nastavením pro zařízení. U zařízení zaregistrovaných prostřednictvím Programu registrace zařízení nemůžou uživatelé registraci zrušit.
 
-## Správa Apple DEP pro zařízení s iOS pomocí Microsoft Intune
+## <a name="apple-dep-management-for-ios-devices-with-microsoft-intune"></a>Správa Apple DEP pro zařízení s iOS pomocí Microsoft Intune
 Pokud chce organizace ke správě zařízení s iOS, která jsou v jejím vlastnictví, používat program DEP (Device Enrollment Program) společnosti Apple, musí se do tohoto programu zaregistrovat a získat zařízení jeho prostřednictvím. Podrobnosti o tomto procesu najdete na  [https://deploy.apple.com](https://deploy.apple.com). Výhodou tohoto programu je bezobslužné nastavení zařízení bez připojení každého zařízení k počítači kabelem USB.
 
 Abyste mohli v programu DEP registrovat zařízení s iOS vlastněná společností, potřebujete od společnosti Apple token DEP. Token umožňuje Intune synchronizovat informace o zařízeních vlastněných společností, která se účastní programu DEP. Token taky umožňuje Intune odesílat společnosti Apple registrační profil a přiřazovat k těmto profilům zařízení.
@@ -36,7 +36,7 @@ Abyste mohli v programu DEP registrovat zařízení s iOS vlastněná společnos
 
       ![Aktualizace tokenu DEP (Device Enrollment Program)](../media/dev-sa-ios-dep.png)
 
-3.  **Získání tokenu DEP (Device Enrollment Program)**</br>
+3.  **Získejte token DEP (Device Enrollment Program).**</br>
     Přejděte na [portál programu Device Enrollment Program](https://deploy.apple.com) (https://deploy.apple.com) a přihlaste se pod firemním Apple ID. Toto Apple ID budete muset později použít k obnovení tokenu DEP.
 
     1.  Na [portálu programu DEP (Device Enrollment Program)](https://deploy.apple.com) přejděte na **Program DEP (Device Enrollment Program)** &gt; **Spravovat servery** a pak zvolte **Přidat server MDM**.
@@ -49,7 +49,7 @@ Abyste mohli v programu DEP registrovat zařízení s iOS vlastněná společnos
 
     Soubor certifikátu (.p7m) se používá k navázání vztahu důvěryhodnosti mezi serverem Intune a serverem programu DEP (Device Enrollment Program) společnosti Apple.
 
-4.  **Přidání tokenu DEP do Intune**</br>
+4.  **Přidejte token DEP do Intune.**</br>
     V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) přejděte na **Správa** &gt; **Správa mobilních zařízení** &gt; **iOS** &gt; **Program DEP (Device Enrollment Program)** a zvolte **Nahrát token DEP**. **Vyhledejte** soubor certifikátu (.p7m), zadejte své **Apple ID** a zvolte **Nahrát**.
 
 5.  **Přidání zásad registrace podnikových zařízení**</br>
@@ -107,15 +107,15 @@ Abyste mohli v programu DEP registrovat zařízení s iOS vlastněná společnos
 
 8.  **Distribuování zařízení uživatelům** Zařízení vlastněná vaší společností se teď dají distribuovat uživatelům. Pokud je zařízení s iOS zapnuté, zaregistruje se jeho správa službou Intune.
 
-## Změny v přiřazení skupiny pro Intune
+## <a name="changes-to-intune-group-assignments"></a>Změny v přiřazení skupiny pro Intune
 
 Od listopadu se správa skupin zařízení přesune do služby Azure Active Directory. Po přechodu na skupiny Azure Active Directory se už přiřazení skupin nebude zobrazovat mezi možnostmi v části **Podnikový profil zápisu**. Jelikož se tato změna bude zavádět několik měsíců, je možné, že ji nezaznamenáte okamžitě. Po přesunu do nového portálu bude možné na základě názvů podnikových profilů registrace definovat nová dynamická přiřazení do skupin zařízení. Uvedený postup zajistí, aby zařízení, která jsou zařazená do některé skupiny, byla do této skupiny zařízení zaregistrována automaticky i s nasazenými zásadami a aplikacemi. [Další informace o skupinách Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
 
-### Viz taky
+### <a name="see-also"></a>Viz taky
 [Předpoklady pro registraci zařízení](prerequisites-for-enrollment.md)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 
