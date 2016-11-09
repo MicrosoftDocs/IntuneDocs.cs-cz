@@ -2,8 +2,8 @@
 title: "Omezení přístup k sítím s Cisco ISE | Microsoft Intune"
 description: "Použijte Cisco ISE s Intune, aby zařízení byla zaregistrovaná v Intune a vyhovovala zásadám, než se pokusí o přístup k sítím Wi-Fi a VPN řízeným pomocí Cisco ISE."
 keywords: 
-author: nbigman
-ms.author: nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/05/2016
 ms.topic: article
@@ -14,23 +14,23 @@ ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 625d0851446c9cf54e704a62c9afe79cac263665
-ms.openlocfilehash: 44dc8ce90537580ef30ba4b8c9f3ee2dd5e20c24
+ms.sourcegitcommit: 17b957cc2baedddfc53bfdf7b875e4ecb28b8517
+ms.openlocfilehash: a29473cb0931c01143614116ce0e99a579f35923
 
 
 ---
 
-# Použití Cisco ISE s Microsoft Intune
+# <a name="using-cisco-ise-with-microsoft-intune"></a>Použití Cisco ISE s Microsoft Intune
 Integrace Intune s Cisco ISE (Identity Services Engine) umožňuje vytvářet zásady sítě v prostředí ISE na základě stavu registrace zařízení v Intune a jejich stavu dodržování předpisů. Prostřednictvím těchto zásad můžete zajistit, aby byl přístup k síti vaší společnosti omezen na zařízení, která jsou spravována pomocí Intune a vyhovují zásadám Intune.
 
-## Kroky konfigurace
+## <a name="configuration-steps"></a>Kroky konfigurace
 
 Chcete-li tuto integraci povolit, nemusíte v tenantovi Intune provádět žádné nastavení. Bude třeba poskytnout serveru Cisco ISE oprávnění pro přístup k tenantovi Intune. Zbývající část nastavení se potom provede na serveru Cisco ISE. Tento článek obsahuje pokyny pro poskytnutí oprávnění pro přístup k vašemu tenantovi Intune pro váš server ISE.
 
-### Krok 1: Správa certifikátů
+### <a name="step-1-manage-the-certificates"></a>Krok 1: Správa certifikátů
 Exportujte certifikát z konzoly Azure Active Directory (Azure AD) a importujte jej do úložiště důvěryhodných certifikátů konzoly ISE:
 
-#### Internet Explorer 11
+#### <a name="internet-explorer-11"></a>Internet Explorer 11
 
 
    a. Spusťte Internet Explorer jako správce a přihlaste se ke konzole Azure AD.
@@ -47,7 +47,7 @@ Exportujte certifikát z konzoly Azure Active Directory (Azure AD) a importujte 
 
    g. Z konzoly ISE importujte certifikát Intune (soubor, který jste exportovali) do úložiště **Důvěryhodné certifikáty**.
 
-#### Safari
+#### <a name="safari"></a>Safari
 
  a. Přihlaste se ke konzole Azure AD.
 
@@ -64,7 +64,7 @@ b. Zvolte ikonu zámku &gt; **Další informace**.
 > Zkontrolujte datum vypršení platnosti certifikátu, protože po vypršení platnosti tohoto certifikátu bude třeba exportovat a importovat nový certifikát.
 
 
-### Získání certifikátu podepsaného svým držitelem ze systému ISE 
+### <a name="obtain-a-selfsigned-cert-from-ise"></a>Získání certifikátu podepsaného svým držitelem ze systému ISE 
 
 1.  V konzole ISE přejděte do části **Správa** > **Certifikáty** > **Systémové certifikáty** > **Generovat certifikát podepsaný jeho držitelem**.  
 2.       Exportujte certifikát podepsaný svým držitelem.
@@ -75,7 +75,7 @@ b. Zvolte ikonu zámku &gt; **Další informace**.
 Ověřte, že veškerý text leží na jednom řádku.
 
 
-### Krok 2: Vytvoření aplikace pro ISE ve vašem tenantovi Azure AD
+### <a name="step-2-create-an-app-for-ise-in-your-azure-ad-tenant"></a>Krok 2: Vytvoření aplikace pro ISE ve vašem tenantovi Azure AD
 1. V konzole Azure AD zvolte **Aplikace** > **Přidat aplikaci** > **Přidat aplikaci, kterou vyvíjí moje organizace**.
 2. Zadejte název a adresu URL pro aplikaci. Adresou URL může být web vaší společnosti.
 3. Stáhněte manifest aplikace (soubor JSON).
@@ -99,7 +99,7 @@ Ověřte, že veškerý text leží na jednom řádku.
 |Koncový bod tokenu OAuth 2.0|Adresa URL pro vydávání tokenů|
 |Aktualizace kódu s použitím ID klienta|ID klienta|
 
-### Krok 4: Nahrání certifikátu podepsaného svým držitelem z ISE do aplikace ISE, kterou jste vytvořili ve službě Azure AD
+### <a name="step-4-upload-the-selfsigned-certificate-from-ise-into-the-ise-app-you-created-in-azure-ad"></a>Krok 4: Nahrání certifikátu podepsaného svým držitelem z ISE do aplikace ISE, kterou jste vytvořili ve službě Azure AD
 1.     Získejte hodnotu zakódovaného certifikátu base64 a kryptografický otisk ze souboru certifikátu .cer X509. V tomto příkladu je používáno prostředí PowerShell:
    
       
@@ -136,7 +136,7 @@ Například:
 > KeyCredentials je kolekce, což znamená, že můžete nahrát více certifikátů X.509 pro scénáře změny klíčů nebo odstranit certifikáty ve scénářích ohrožení.
 
 
-### Krok 4: Konfigurace nastavení ISE
+### <a name="step-4-configure-ise-settings"></a>Krok 4: Konfigurace nastavení ISE
 V konzole správce ISE zadejte tyto hodnoty nastavení:
   - **Typ serveru**: Správce mobilních zařízení
   - **Typ ověřování**: OAuth – pověření klienta
@@ -147,7 +147,7 @@ V konzole správce ISE zadejte tyto hodnoty nastavení:
 
 
 
-## Informace sdílené mezi vaším tenantem Intune a vaším serverem Cisco ISE
+## <a name="information-shared-between-your-intune-tenant-and-your-cisco-ise-server"></a>Informace sdílené mezi vaším tenantem Intune a vaším serverem Cisco ISE
 Tato tabulka uvádí informace sdílené mezi vaším tenantem Intune a vaším serverem Cisco ISE pro zařízení, která jsou spravovaná pomocí Intune.
 
 |Vlastnost|  Popis|
@@ -166,7 +166,7 @@ Tato tabulka uvádí informace sdílené mezi vaším tenantem Intune a vaším 
 |lastContactTimeUtc|Datum a čas, kdy zařízení naposled navázalo kontakt se službou správy Intune.
 
 
-## Činnost koncového uživatele
+## <a name="user-experience"></a>Činnost koncového uživatele
 
 Když se uživatel pokusí o přístup k prostředkům z nezaregistrovaného zařízení, zobrazí se výzva k registraci, jako je například tato:
 
@@ -174,20 +174,20 @@ Když se uživatel pokusí o přístup k prostředkům z nezaregistrovaného za�
 
 Když uživatel zvolí registraci, bude přesměrován na proces registrace v Intune. Aspekty registrace uživatele pro Intune jsou popsány v těchto tématech:
 
-- [Registrace zařízení se systémem Android do Intune](/intune/enduser/enroll-your-device-in-Intune-android)</br>
-- [Registrace zařízení se systémem iOS do Intune](/intune/enduser/enroll-your-device-in-intune-ios)</br>
-- [Registrace zařízení se systémem Mac OS X v Intune](/intune/enduser/enroll-your-device-in-intune-mac-os-x)</br>
-- [Registrace zařízení se systémem Windows do Intune](/intune/enduser/enroll-your-device-in-intune-windows)</br>
+- [Registrace zařízení s Androidem v Intune](/intune/enduser/enroll-your-device-in-Intune-android)</br>
+- [Registrace zařízení s iOSem v Intune](/intune/enduser/enroll-your-device-in-intune-ios)</br>
+- [Registrace zařízení s Mac OS X v Intune](/intune/enduser/enroll-your-device-in-intune-mac-os-x)</br>
+- [Registrace zařízení s Windows v Intune](/intune/enduser/enroll-your-device-in-intune-windows)</br>
 
 K dispozici je také [sada pokynů pro registraci ke stažení](https://gallery.technet.microsoft.com/End-user-Intune-enrollment-55dfd64a), kterou můžete použít k vytvoření vlastních pokynů pro činnost uživatele.
 
 
-### Viz taky
+### <a name="see-also"></a>Viz taky
 
 [Příručka pro správce Cisco Identity Services Engine, vydání 2.1](http://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html#task_820C9C2A1A6647E995CA5AAB01E1CDEF)
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

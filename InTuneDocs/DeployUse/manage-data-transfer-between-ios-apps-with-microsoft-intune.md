@@ -3,6 +3,7 @@ title: "Správa přenosu dat mezi aplikacemi pro iOS | Microsoft Intune"
 description: "Toto téma použijte k pochopení, jak můžete použít funkci systému iOS Otevřít v a zásady správy mobilních aplikací ke správě přenosů dat mezi aplikacemi."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/18/2016
 ms.topic: article
@@ -13,14 +14,14 @@ ms.assetid: 3a4515c1-b325-4ac1-9f0a-45ac27e00681
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 488ecb801eac2b591db87683bbe9f371879483c4
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: 080d861e8fd2d0140ffe5d9987032213ae0e4d4c
 
 
 ---
 
-# Správa přenosu dat mezi aplikacemi pro iOS
-## Správa aplikací pro iOS
+# <a name="manage-data-transfer-between-ios-apps-with-microsoft-intune"></a>Správa přenosu dat mezi aplikacemi pro iOS
+## <a name="manage-ios-apps"></a>Správa aplikací pro iOS
 V rámci ochrany vašich firemních dat je potřeba zajistit, aby přenosy souborů mohly probíhat jenom v aplikacích, které spravujete.  Aplikace pro iOS můžete spravovat těmito způsoby:
 
 -   Data společnosti můžete chránit před ztrátou tím, že pro aplikace nakonfigurujete zásady správy mobilních aplikací. Takovým aplikacím říkáme aplikace **spravované zásadami**.
@@ -28,7 +29,7 @@ V rámci ochrany vašich firemních dat je potřeba zajistit, aby přenosy soubo
 -   Aplikace také můžete nasazovat a spravovat prostřednictvím **kanálu správy mobilních zařízení (MDM)**.  K tomu je potřeba, aby byla zařízení zaregistrovaná v nějakém řešení správy mobilních zařízení. Může se jednat o aplikace **spravované zásadami** nebo jiné spravované aplikace.
 
 Funkce **Správa pro Open In** pro zařízení s iOS může omezit přenosy souborů tak, aby probíhaly jenom mezi aplikacemi, které jsou nasazená prostřednictvím **kanálu MDM**. Omezení správy Open In se nastavují v nastavení konfigurace a nasazují pomocí řešení MDM.  Když uživatel nainstaluje nasazenou aplikaci, použijí se nastavená omezení.
-##  Použití správy mobilních aplikací u aplikací pro iOS
+##  <a name="using-mam-with-ios-apps"></a>Použití správy mobilních aplikací u aplikací pro iOS
 Zásady správy mobilních aplikací (MAM) se dají použít společně s funkcí **Správa Open In** k ochraně firemních dat:
 
 -   **Uživatelská zařízení nespravovaná řešením MDM:** Můžete nastavit nastavení zásad MAM na hodnotu **Povolit aplikaci přenos dat jenom do spravovaných aplikací**. Když koncový uživatel otevře chráněný soubor v aplikaci, která není spravovaná zásadami, soubor nejde přečíst.
@@ -41,7 +42,7 @@ Pokud chcete zajistit, aby aplikace nasazené pomocí řešení MDM jiného výr
 > [!IMPORTANT]
 > Nastavení hlavního názvu uživatele (UPN) se vyžaduje jenom pro aplikace nasazené na zařízení spravovaná řešením MDM jiného výrobce.  U zařízení spravovaných pomocí Intune se toto nastavení nevyžaduje.
 
-## Konfigurace nastavení hlavního názvu uživatele (UPN)
+## <a name="configure-user-upn-setting"></a>Konfigurace nastavení hlavního názvu uživatele (UPN)
 Tato konfigurace je nutná pro zařízení spravovaná pomocí řešení MDM jiného výrobce. Níže popsaný postup představuje obecné kroky pro implementaci nastavení hlavního názvu uživatele (UPN) a výsledného prostředí koncového uživatele:
 
 
@@ -49,11 +50,11 @@ Tato konfigurace je nutná pro zařízení spravovaná pomocí řešení MDM jin
 
 2.  K nasazení aplikací a e-mailového profilu, který chcete spravovat **prostřednictvím řešení MDM jiného výrobce**, použijte nastavení popsané v kroku 3 a 4.
 
-3.  Nasaďte tyto aplikace s následujícím nastavením konfigurace aplikací: key=IntuneMAMUPN, Value=<uživatelské_jméno@společnost.com> [příklad: ‘IntuneMAMUPN’, ‘jondoe@microsoft.com’]
+3.  Nasaďte tyto aplikace s následujícím nastavením konfigurace aplikací: key=IntuneMAMUPN, Value=<username@company.com> [příklad: ‘IntuneMAMUPN’, ‘jondoe@microsoft.com’]
 
 4.  Nasaďte zásadu správy Open In na zaregistrovaná zařízení.
 
-### Ukázkové prostředí koncových uživatelů
+### <a name="example-end-user-experience"></a>Ukázkové prostředí koncových uživatelů
 
 1.  Koncový uživatel nainstaluje na zařízení aplikaci Microsoft Word.
 
@@ -70,11 +71,11 @@ Tato konfigurace je nutná pro zařízení spravovaná pomocí řešení MDM jin
 
 6.  Přenos dat bude tentokrát úspěšný a dokument se v aplikaci označí firemní identitou. Kromě toho se data zpracovávají v pracovním kontextu a nastavení zásad jsou použitá odpovídajícím způsobem.
 
-### Související témata
+### <a name="see-also"></a>Související témata
 [Ochrana aplikačních dat pomocí zásad správy mobilních aplikací v Microsoft Intune](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 
