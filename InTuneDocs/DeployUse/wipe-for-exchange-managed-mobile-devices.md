@@ -2,8 +2,8 @@
 title: "Vymazání mobilních zařízení spravovaných Exchangem | Microsoft Intune"
 description: "Microsoft Intune vám umožňuje vymazat nebo resetovat mobilní zařízení, která jsou spravovaná pomocí protokolu Exchange ActiveSync (EAS) s Intune Exchange Connectorem."
 keywords: 
-author: nathbarn
-ms.author: nathbarn
+author: staciebarker
+ms.author: staciebarker
 manager: angrobe
 ms.date: 07/25/2016
 ms.topic: article
@@ -21,7 +21,7 @@ ms.openlocfilehash: 94d304a872f5890f2cf83a06aa222353cd7f61f6
 ---
 
 
-# Wipe for Exchange-managed mobile devices
+# <a name="wipe-for-exchangemanaged-mobile-devices"></a>Wipe for Exchange-managed mobile devices
 Microsoft Intune vám umožňuje vymazat nebo resetovat mobilní zařízení, která se spravují pomocí protokolu Exchange ActiveSync (EAS) s Intune Exchange Connectorem. Dostupné možnosti vymazání prostřednictvím protokolu Exchange ActiveSync popisuje následující tabulka:
 
 |Typ vymazání|Windows 8.1 a Windows RT 8.1|Windows RT|Windows Phone 8|iOS|Android|
