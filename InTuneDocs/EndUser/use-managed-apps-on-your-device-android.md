@@ -76,6 +76,6 @@ Další informace o spravovaných aplikacích na vašem zařízení vám poskytn
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

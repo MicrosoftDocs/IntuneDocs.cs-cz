@@ -194,6 +194,6 @@ V případech, kdy zařízení nebo uživatel obdrží dvě konfliktní zásady,
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

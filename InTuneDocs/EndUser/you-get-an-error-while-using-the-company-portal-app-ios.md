@@ -36,6 +36,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaj
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

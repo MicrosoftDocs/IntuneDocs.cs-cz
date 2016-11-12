@@ -116,6 +116,6 @@ Od listopadu se správa skupin zařízení přesune do služby Azure Active Dire
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

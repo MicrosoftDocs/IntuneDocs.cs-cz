@@ -54,6 +54,6 @@ Když dojde ke ztrátě nebo odcizení zařízení nebo když uživatel přestan
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

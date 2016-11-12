@@ -74,6 +74,6 @@ Verzi celého průvodce ke stažení najdete v [Galerii TechNetu](https://galler
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 
