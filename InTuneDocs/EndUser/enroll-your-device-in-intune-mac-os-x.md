@@ -2,8 +2,8 @@
 title: "Registrace zařízení Mac OS X v Intune | Microsoft Intune"
 description: "Popisuje způsob registrace zařízení s Mac OS X v Intune."
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article
@@ -15,14 +15,14 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7eefcefa5e1cd0f789c77bf020c256e449099273
-ms.openlocfilehash: 4a682db8e949fa087fdffe945a758554c1bfb164
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: ab8292843c540842a93e97377db21109a7e9fa33
 
 
 ---
 
 
-# Registrace zařízení se systémem Mac OS X v Intune
+# <a name="enroll-your-mac-os-x-device-in-intune"></a>Registrace zařízení se systémem Mac OS X v Intune
 
 Když zařízení s Mac OS X zaregistrujete do Intune, budete mít přístup k firemní síti, pracovním e-mailům a pracovním souborům. Můžete také získat firemní aplikace. Další informace o tom, co se stane, když zaregistrujete své zařízení, najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení do služby Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 
@@ -49,10 +49,10 @@ Postup registrace zařízení se systémem Mac OS X:
 
     ![management-profile-verified](./media/4-macosx-enroll-done.png)
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

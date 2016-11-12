@@ -2,9 +2,10 @@
 title: "Zařízení nemá povolený nástroj BitLocker | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/08/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,21 +15,21 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7549b5af84e5a1712c2e1649b1afe03718d53dcc
-ms.openlocfilehash: 198547ba527e72535cb3f0ce00e542ec922a27f1
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: d245aafb39bcf16030441a316279faeee5247dd3
 
 
 ---
 
 
-# Zařízení nemá povolený nástroj BitLocker
+# <a name="device-doesnt-have-bitlocker-enabled"></a>Zařízení nemá povolený nástroj BitLocker
 
-Vaše organizace vyžaduje povolení nástroje BitLocker, což je software, který šifruje jednotky a pomáhá chránit vaše data. Pokyny k povolení nástroje BitLocker na zařízeních s Windows 10 najdete v tématu [Zapnutí nástroje BitLocker na zařízeních s Windows 10](https://gallery.technet.microsoft.com/How-to-turn-on-BitLocker-34294d3d). Informace pro ostatní zařízení vám poskytne váš správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-
-
+Vaše organizace vyžaduje povolení nástroje BitLocker, což je software, který šifruje jednotky a pomáhá chránit vaše data. Pokyny k povolení nástroje BitLocker na zařízeních s Windows 10 najdete v tématu [Zapnutí nástroje BitLocker na zařízeních s Windows 10](https://gallery.technet.microsoft.com/How-to-turn-on-BitLocker-34294d3d). Informace pro ostatní zařízení vám poskytne váš správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Sep16_HO2-->
+
+
+<!--HONumber=Nov16_HO1-->
 
 

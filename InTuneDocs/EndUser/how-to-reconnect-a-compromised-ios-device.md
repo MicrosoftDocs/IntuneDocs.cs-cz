@@ -2,10 +2,10 @@
 title: "Opakované připojení k ohroženému zařízení se systémem iOS | Microsoft Intune"
 description: 
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,19 +15,19 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8eb98946c39b98d3c338b32a7d955818020ef478
-ms.openlocfilehash: 166c0708645d191abaaa73aa3143ca558d64ffd0
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: ad00b12024ea2e923f64924d784d1e388b474404
 
 
 ---
 
-# Opakované připojení k ohroženému zařízení se systémem iOS
+# <a name="how-to-reconnect-a-compromised-ios-device"></a>Opakované připojení k ohroženému zařízení se systémem iOS
 Váš správce IT zjistil, že používáte zařízení s jailbreakem. Jailbreak znamená, že omezení softwaru, která vynucuje systém iOS, byla odebrána. Odebrání těchto omezení může ohrozit zabezpečení a může představovat hrozbu pro prostředky společnosti. 
 
-Pokud k tomu dojde, nebude už vaše zařízení mít přístup k prostředkům společnosti a musíte požádat o pomoc správce IT. Kontaktní údaje správce IT najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud k tomu dojde, nebude už vaše zařízení mít přístup k prostředkům společnosti a musíte požádat o pomoc správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

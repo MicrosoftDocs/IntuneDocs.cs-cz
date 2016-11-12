@@ -2,10 +2,10 @@
 title: "Zrušení registrace zařízení s iOS v Intune | Microsoft Intune"
 description: "Popisuje zrušení registrace zařízení s iOS v Intune."
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0d32aa982cf9d45da36f71be5554f31375521e35
-ms.openlocfilehash: acd83d6cac946c7cc3c08bc179bf88dcc7475a69
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 5db58b87e5c48c40794315e7781d32b02a653b2b
 
 
 ---
 
 
-# Zrušení registrace zařízení s iOS v Intune
+# <a name="unenroll-your-ios-device-from-intune"></a>Zrušení registrace zařízení s iOS v Intune
 
 Když zrušíte registraci zařízení s iOS v Intune, nebude mít už dále přístup k prostředkům společnosti a nebude ho už dále spravovat Intune.
 
@@ -53,10 +53,10 @@ Jakmile zrušíte registraci zařízení v Intune, stane se toto:
 
 -   V aplikaci Portál společnosti a na webu se už nebudou zobrazovat zařízení, která jsou nakonfigurovaná jenom pro použití e-mailu.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

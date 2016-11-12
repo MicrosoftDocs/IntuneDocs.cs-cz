@@ -2,8 +2,8 @@
 title: "Při použití aplikace Portál společnosti se zobrazí chyba | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 016449720f6e77b8862fcaa232d252eefa8b20b3
-ms.openlocfilehash: d1bcda779c051e4455def755a92f47b5ec7475ea
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: fde8d231c9638f5923826942cadf1f9bad731f55
 
 
 ---
 
 
-# Při použití aplikace Portál společnosti se zobrazí chyba
+# <a name="you-get-an-error-while-using-the-company-portal-app"></a>Při použití aplikace Portál společnosti se zobrazí chyba
 
 Pokud při použití aplikace Portál společnosti v zařízení s iOS dojde k chybě, můžete odeslat informace o této chybě, abyste svému správci IT pomohli potíže vyřešit. Informace o chybě můžete odeslat různými způsoby:
 
@@ -32,8 +32,10 @@ Pokud při použití aplikace Portál společnosti v zařízení s iOS dojde k c
 
 -   Když jste v aplikaci Portál společnosti, zatřeste zařízením a po zobrazení diagnostické výstrahy klepněte na **E-mail**. Pokud zatřesete zařízením, ale žádná výstraha se nezobrazí, otevřete **Nastavení** &gt; **Portál společnosti** a zkontrolujte, jestli je zapnutá možnost **Gesto zatřesením**.
 
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
-<!--HONumber=Oct16_HO2-->
+
+<!--HONumber=Nov16_HO1-->
 
 

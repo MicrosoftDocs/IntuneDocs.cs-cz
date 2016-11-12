@@ -2,10 +2,10 @@
 title: "Použití spravovaných aplikací na zařízení s Androidem | Microsoft Intune"
 description: 
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/28/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: maxles
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0d32aa982cf9d45da36f71be5554f31375521e35
-ms.openlocfilehash: 9f98871b6054e0277cb2c041776fc05e8a6aefe3
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: b9764ec0b728ebce48c14fed9e3bb052a43b85fb
 
 
 ---
 
 
-# Použití spravovaných aplikací na zařízení s Androidem
+# <a name="use-managed-apps-on-your-android-device"></a>Použití spravovaných aplikací na zařízení s Androidem
 
 Spravované aplikace jsou aplikace, které může váš správce IT nastavit tak, aby lépe chránily firemní data, ke kterým v dané aplikaci získáváte přístup. Pokud získáváte přístup k datům ve spravované aplikaci v zařízení s Androidem, můžete si všimnout, že aplikace funguje trochu jinak, než čekáte. Nebudete třeba moct kopírovat a vkládat chráněná firemní data nebo tato data nebudete moct uložit do určitých umístění.
 
@@ -32,14 +32,14 @@ Při přístupu k firemním datům ve spravované aplikaci se zobrazí zpráva p
 
 ![open-managed-apps-message](./media/managed-apps-message.png)
 
-## Jak získám spravované aplikace?
+## <a name="how-do-i-get-managed-apps"></a>Jak získám spravované aplikace?
 Spravované aplikace můžete získat několika různými způsoby:
 
 -   Při registraci zařízení v Microsoft Intune buď nainstalujete aplikaci z aplikace Portál společnosti nebo webu Portál společnosti, nebo ji na vaše zařízení nainstaluje správce IT. Informace o registraci najdete v tématu [Registrace zařízení v Intune](enroll-your-device-in-Intune-android.md).
 
 -   Nainstalujte aplikaci z Obchodu Play a potom se přihlaste pomocí svého firemního uživatelského účtu spravovaného službou Intune.
 
-## Co může správce IT spravovat v mé aplikaci?
+## <a name="what-can-my-it-admin-manage-in-an-app"></a>Co může správce IT spravovat v mé aplikaci?
 Tady jsou některé příklady možností, které může správce IT spravovat v aplikaci a které můžou ovlivnit vaši interakci s firemními daty na zařízení:
 
 -   Přístup k určitým webům
@@ -72,10 +72,10 @@ Některé běžné aplikace, které může spravovat vaše oddělení IT:
 
 -   Microsoft Word, Excel a PowerPoint
 
-Další informace o spravovaných aplikacích na vašem zařízení vám poskytne správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Další informace o spravovaných aplikacích na vašem zařízení vám poskytne správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

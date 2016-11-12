@@ -2,10 +2,10 @@
 title: "Co se stane, když zrušíte registraci zařízení s Windows v Intune? | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,19 +15,19 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8975e57c604565c57c86472564ab660aed560a7b
-ms.openlocfilehash: 22179d5d80d2b24e61778249367bec6845290206
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 5cf2e7e821f962d2f12813062cc30b724e2fc45a
 
 
 ---
 
 
-# Co se stane, když zrušíte registraci zařízení s Windows v Intune?
+# <a name="what-happens-if-you-unenroll-your-windows-device-from-intune"></a>Co se stane, když zrušíte registraci zařízení s Windows v Intune?
 
 Pomocí odkazů na pravé straně této stránky v části **V tomto článku** najdete informace o typu zařízení, které používáte.
 
 
-## Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista
+## <a name="windows-10-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista
 
 -   Vaše zařízení se už nebude zobrazovat na Portálu společnosti a z tohoto portálu už nebudete moct instalovat aplikace.
 
@@ -52,7 +52,7 @@ Kromě toho pro Windows 8.1 platí:
 
 -   Je možné, že už v zařízení nebudete mít přístup k některým prostředkům společnosti, jako jsou sdílené složky nebo interní weby.
 
-## Windows 10 Mobile a Windows Phone 8.1
+## <a name="windows-10-mobile-and-windows-phone-81"></a>Windows 10 Mobile a Windows Phone 8.1
 
 -   Aplikace Portál společnosti se z vašeho zařízení odinstaluje. To znamená, že vaše zařízení se už nebude zobrazovat na Portálu společnosti a z aplikace nebo webu Portál společnost už nebudete moct instalovat aplikace.
 
@@ -63,7 +63,7 @@ Kromě toho pro Windows 8.1 platí:
     > [!IMPORTANT]
     > Jedinou výjimkou jsou zásady šifrování, které budou platit dále. Pokud zásady vaší společnosti vyžadovaly, abyste svůj Windows Phone zašifrovali, je jediným způsobem, jak šifrování zrušit, obnovení výchozího továrního nastavení telefonu pomocí nabídky **Nastavení**.
 
-## Windows RT s Windows 8.1
+## <a name="windows-rt-running-windows-81"></a>Windows RT s Windows 8.1
 
 -   Aplikace Portál společnosti se z vašeho zařízení odinstaluje. To znamená, že vaše zařízení se už nebude zobrazovat na Portálu společnosti a z aplikace nebo webu Portál společnost nebudete moct instalovat aplikace.
 
@@ -85,10 +85,10 @@ Při odebrání zařízení se systémem Windows RT dojde k následujícímu:
 
 -   Už nebudou platit nastavení, která se v zařízení změnila od jeho přidání (třeba zakázání fotoaparátu/kamery nebo vyžadování určité délky hesla).
 
-Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

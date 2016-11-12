@@ -3,6 +3,7 @@ title: "Přizpůsobení zobrazení konzoly pro role | Microsoft Intune"
 description: "Toto téma vám může pomoct filtrovat zobrazení konzoly správce Intune a povolit správcům zobrazení pouze těch položek, které potřebují kvůli své roli."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: e0783eaa-67dc-410e-9e80-4d3aa72f36d8
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 727d28cff074124b5401f6c2931f87df3a9d2d23
-ms.openlocfilehash: a17f207db4cf8fe0fd53348be464a367d9a8b0a4
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: 02448f2f960d98b28780798b469aea23cdab0e2d
 
 
 ---
@@ -68,6 +69,6 @@ Když nakonfigurovaný správce později otevře konzolu pro správu Intune, bud
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 

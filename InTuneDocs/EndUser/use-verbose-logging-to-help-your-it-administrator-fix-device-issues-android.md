@@ -2,10 +2,10 @@
 title: "Pomoc správci IT s řešením problémů zařízení pomocí podrobného protokolování | Microsoft Intune"
 description: "Pomozte svému správci IT s řešením problémů zařízení pomocí podrobného protokolování."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,23 +15,23 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 828e3d65659e3a75a3a798e614504cba5d3a28cc
-ms.openlocfilehash: 203c1170f8072d64447125b3e6cf5c3b238bccee
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 1771b5a67f0f8580068c750a818d6b7a45c23796
 
 
 ---
 
 
-# Pomoc správci IT s řešením problémů zařízení pomocí podrobného protokolování
+# <a name="use-verbose-logging-to-help-your-it-admin-fix-device-issues"></a>Pomoc správci IT s řešením problémů zařízení pomocí podrobného protokolování
 
 Pokud je vaše zařízení s Androidem zaregistrované v Intune, můžete pomocí *podrobného protokolování* zajistit, aby aplikace Portál společnosti a aplikace spravované přes Intune zaznamenávaly podrobné protokoly aktivit ve vašem zařízení. Tyto protokoly pomůžou vašemu správci IT opravit případné problémy, na které při použití aplikace Portál společnosti nebo aplikace spravované službou Intune narazíte. Podrobné protokolování je v zařízení ve výchozím nastavení povolené a protokoly odesílané vašemu správci IT obsahují vaši e-mailovou adresu.
 
 Pokud chcete podrobné protokolování zapnout nebo vypnout, přihlaste se k aplikaci Portál společnosti pomocí svých pracovních nebo školních přihlašovacích údajů, klepněte na **Nastavení** a pak klepněte na tlačítko pro zapnutí/vypnutí vedle položky **Podrobné protokolování**.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

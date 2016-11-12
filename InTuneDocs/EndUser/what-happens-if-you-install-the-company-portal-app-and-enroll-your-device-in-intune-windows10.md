@@ -2,10 +2,10 @@
 title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Windows 10 v Intune? | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fd54ec104a26ebae845dfe3942dac2e8d9dae4a9
-ms.openlocfilehash: 0462635a4c995866f8ad504ea724e795424b4405
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 94868431ce100a252ddfc7df5f9c2e287f0eedaf
 
 
 ---
 
 
-# Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Windows 10 v Intune?
+# <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-10-device-in-intune"></a>Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Windows 10 v Intune?
 
 Když nainstalujete aplikaci Portál společnosti a potom v ní zaregistrujete svoje zařízení s Windows 10 Enterprise nebo Professional do služby Intune, můžete pomocí aplikace Portál společnosti provádět tyto akce:
 
@@ -52,10 +52,10 @@ Když přidáte počítač:
 
 -   Může ve vašem počítači vynutit dodržování určitých zásad. Například může vyžadovat, abyste v počítači nastavili heslo nebo kód PIN. Správce IT může také omezit počet možných zadání nesprávného hesla. Když se tento počet překročí, může se počítač zablokovat nebo se můžou odstranit všechna data z pevného disku počítače.
 
-Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

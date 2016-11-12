@@ -2,10 +2,10 @@
 title: "Aplikace Portál společnosti není podporovaná | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,20 +15,20 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: a6b551ce5c0810ec98ed2303733f0efa43b8ffdb
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: a1811f14b4ee6d9fbc58d9998eba78c974235cb2
 
 
 ---
 
-# Aplikace Portál společnosti není podporovaná
+# <a name="company-portal-app-not-supported"></a>Aplikace Portál společnosti není podporovaná
 Tato verze Portálu společnosti se už nedá používat. Jestli chcete pokračovat, nainstalujte si nejnovější verzi aplikace **Portál společnosti** z Windows Storu.
 
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

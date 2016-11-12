@@ -2,10 +2,10 @@
 title: "Jak nastavit dobu, než se zařízení s Androidem uzamkne | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,16 +15,16 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 6fd49127321b665c4c23eafc0dabab6787307881
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 7407be9c7ae96652270692eeb70e35743dff2602
 
 
 ---
 
-# Jak nastavit dobu, než se zařízení s Androidem uzamkne
+# <a name="how-to-set-the-period-before-your-android-device-is-locked"></a>Jak nastavit dobu, než se zařízení s Androidem uzamkne
 Abyste se mohli znovu připojit ke své práci, budete muset na svém zařízení nastavit časový limit hesla podle pokynů pro typ vašeho zařízení.
 
-## Nativní zařízení (ne Samsung KNOX)
+## <a name="native-nonsamsung-knox-device"></a>Nativní zařízení (ne Samsung KNOX)
 
 1.  V **Nastavení** zařízení klepněte na **Zabezpečení** &gt; **Automatické uzamčení** (na některých zařízeních se zobrazuje jako **Uzamknout telefon po**).
 
@@ -32,7 +32,7 @@ Abyste se mohli znovu připojit ke své práci, budete muset na svém zařízen�
 
 2.  Vyberte hodnotu časového limitu hesla.
 
-## Zařízení Samsung KNOX
+## <a name="samsung-knox-device"></a>Zařízení Samsung KNOX
 
 1.  V **Nastavení** vašeho zařízení klepněte na **Zamykací obrazovka a zabezpečení** &gt; **Uzamknout automaticky**.
 
@@ -40,10 +40,10 @@ Abyste se mohli znovu připojit ke své práci, budete muset na svém zařízen�
 
 2.  Vyberte hodnotu časového limitu hesla.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -2,8 +2,8 @@
 title: "Resetování hesla zařízení z webu Portál společnosti | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2aea845bc00c153f070e04abb67582a5d5a726ca
-ms.openlocfilehash: 47b36616f7a8ee23d4d47b41a1db2c41c185c6f5
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: b3a3b7c2a983776f79ffa8562e130bb11e714e29
 
 
 ---
 
 
-# Resetování hesla zařízení z webu Portál společnosti
+# <a name="reset-your-device-passcode-from-the-company-portal-website"></a>Resetování hesla zařízení z webu Portál společnosti
 
 Pokud ztratíte kód PIN nebo heslo zařízení, které jste zaregistrovali v Intune, můžete použít [web Portál společnosti](http://portal.manage.microsoft.com) k jeho resetování. Web Portál společnosti se používá ke správě počítačů a zařízení, které jste zaregistrovali v Intune, a k plnění většinou stejných úkolů jako v aplikaci Portál společnosti.
 
@@ -59,10 +59,10 @@ Resetování hesla:
 
     Pokud chcete zobrazit potvrzení, že bylo heslo úspěšně resetované, klikněte na příznak oznámení v pravé horní části webu Portál společnosti.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

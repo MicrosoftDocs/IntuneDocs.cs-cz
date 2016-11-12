@@ -2,9 +2,10 @@
 title: "Řešení potíží při registraci zařízení s Windows 10 | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 8/18/2016
+ms.date: 10/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +15,13 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
-ms.openlocfilehash: ff70fb247133234f1a90113326c5641b4f73b9df
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: ecd84b62d34e22a72da87995ff0d62dad5e5a9ed
 
 
 ---
 
-# Řešení potíží při registraci zařízení s Windows 10
+# <a name="troubleshoot-your-windows-10-device-enrollment"></a>Řešení potíží při registraci zařízení s Windows 10
 Pokud jste použili postup v části [Registrace zařízení s Windows 10 Mobile nebo Windows 10 Desktop v Intune](enroll-your-w10-phone-or-w10-pc-windows.md), ale stále nemáte přístup ke svému školnímu nebo pracovnímu e-mailu a souborům, zkuste tyto kroky pro řešení potíží.
 
 1.  Podívejte se na další dvě obrazovky a najděte tu, která vypadá stejně jako to, co vidíte ve svém zařízení. Použijte postup odpovídající této obrazovce.
@@ -33,7 +34,7 @@ Pokud jste použili postup v části [Registrace zařízení s Windows 10 Mobile
 
     ![settings-accounts-your-account](./media/W10-enroll-2-accounts-your-account.png)
 
-## Postup řešení potíží, pokud se zobrazí Přístup do práce nebo do školy
+## <a name="troubleshooting-steps-to-follow-if-you-see-access-work-or-school"></a>Postup řešení potíží, pokud se zobrazí Přístup do práce nebo do školy
 
 1.  Pokud jste použili tento postup, ale pořád nemáte přístup k pracovnímu nebo školnímu e-mailu a souborům, vraťte se k položce **Přístup do práce nebo do školy**.
 
@@ -45,7 +46,7 @@ Pokud jste použili postup v části [Registrace zařízení s Windows 10 Mobile
 
     - Pokud se informace o připojení nezobrazují nebo pokud je vidíte, ale nezobrazují se všechny možnosti, klepněte na **Připojit** a přihlaste se pomocí pracovních nebo školních přihlašovacích údajů. Teď byste měli být připojení.
 
-## Postup řešení potíží, pokud se zobrazí Váš účet
+## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>Postup řešení potíží, pokud se zobrazí Váš účet
 
 Pokud jste použili tento postup, ale pořád nemáte přístup k pracovnímu nebo školnímu e-mailu, souborům a dalším datům, vraťte se k položce **Účty** a klepněte na **Přístup do práce**.
 
@@ -53,10 +54,10 @@ Pokud jste použili tento postup, ale pořád nemáte přístup k pracovnímu ne
 
 - Pokud svůj pracovní nebo školní účet nevidíte, klepněte na **Připojit** a přihlaste se pomocí přihlašovacích údajů svého pracovního nebo školního účtu.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

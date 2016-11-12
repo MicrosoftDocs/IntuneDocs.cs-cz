@@ -14,8 +14,8 @@ ms.assetid: 098b652c-01e0-45d1-a731-620b0d3dc7c1
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f78ece8bbaf813c0082e6b764d174cf25bcb618
-ms.openlocfilehash: 89f0bc5dd10c173718f9698e6e0342b5eb8c56e8
+ms.sourcegitcommit: 5083cb49e7a98f19ff21c1972149b00aee4ec93e
+ms.openlocfilehash: 8c2718da6f90f18ffbaa6a977dfca7fbc9a1bb09
 
 
 ---
@@ -27,11 +27,16 @@ Pokud chcete přístup k těmto aplikacím zablokovat, doporučujeme následují
 
 * Instalační ADFS nastavuje pravidla pro blokování jiných než moderních ověřovacích protokolů. Podrobné pokyny jsou uvedené ve scénáři 3 – [Blokování veškerého přístupu k O365 kromě aplikací využívajících prohlížeč](https://technet.microsoft.com/library/dn592182.aspx).
 
-### Viz taky
+>[!IMPORTANT]
+>Podmíněný přístup MAM se nesmí používat s ověřováním na základě certifikátů Azure Active Directory (Azure AD). Současně můžete mít nakonfigurovanou jen jednu z těchto metod.
+
+
+
+### Související témata
 [Povolení přístupu ke službám O365 jenom aplikacím, které podporuje Intune](allow-policy-managed-apps-access-to-o365.md)
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO4-->
 
 

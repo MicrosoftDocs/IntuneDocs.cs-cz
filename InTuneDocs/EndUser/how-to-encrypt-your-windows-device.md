@@ -2,9 +2,10 @@
 title: "Postup zašifrování zařízení s Windows | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +15,13 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 3b775464b494f5d28c870df4b2c58bb59f58eb78
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 66edf19ad9cea6f49504b70946b4e0c02dcfc99f
 
 
 ---
 
-# Postup zašifrování zařízení s Windows
+# <a name="how-to-encrypt-your-windows-device"></a>Postup zašifrování zařízení s Windows
 
 K zabezpečení dat vaší společnosti nebo školy může správce IT vyžadovat šifrování zařízení s Windows. Pokud máte Windows Phone a zaregistrovali jste si ho, zařízení se vám automaticky zašifruje, pokud se vyžaduje šifrování.
 
@@ -30,10 +31,10 @@ Pokud máte desktopové zařízení, zašifrujte ho podle pokynů níže.
 
 2.  Klikněte na **Zapnout nástroj BitLocker** a pak podle zobrazených pokynů zašifrujte jednotlivé jednotky.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 
