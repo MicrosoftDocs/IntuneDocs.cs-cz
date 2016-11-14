@@ -5,7 +5,7 @@ keywords:
 author: karthikaraman
 ms.author: karaman
 manager: angrobe
-ms.date: 07/18/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -20,10 +20,10 @@ ms.openlocfilehash: 6c1a1c90b442eac039f93103264059ea415b43ff
 
 ---
 
-# Omezení přístupu k e-mailu a pomocí Microsoft Intune: Ukázkové scénáře
+# <a name="restrict-access-to-email-with-microsoft-intune-example-scenarios"></a>Omezení přístupu k e-mailu a pomocí Microsoft Intune: Ukázkové scénáře
 
-## Blokování používání nekompatibilních zařízení pro přístup k Exchangi Online uživateli
-### Požadavky na scénář
+## <a name="block-users-from-using-noncompliant-devices-to-access-exchange-online"></a>Blokování používání nekompatibilních zařízení pro přístup k Exchangi Online uživateli
+### <a name="scenario-requirements"></a>Požadavky na scénář
 - Je třeba blokovat přístup k Exchangi Online pro všechny uživatele ve skupině zabezpečení Active Directory **Účetní oddělení**, pokud jejich zařízení nedodržují předpisy v nasazených zásadách dodržování předpisů.
 - Pokud je v této skupině uživatel se zařízením, které [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] nepodporuje, musí se mu na tomto zařízení zablokovat přístup k Exchangi Online.
 - Je třeba vyloučit ze zásad všechny uživatele ve skupině zabezpečení Active Directory **Finanční oddělení**, i když jsou i ve skupině zabezpečení **Účetní oddělení** .
@@ -43,8 +43,8 @@ Následující postup se používá k určení zařízení, která můžou k E
 
 ![Tok přístupu k zařízení](./media/ConditionalAccess8-5.png)
 
-## Veškerá zařízení s iOS, která přistupují k místnímu Exchangi, musí spravovat Intune
-### Požadavky na scénář
+## <a name="all-ios-devices-that-access-exchange-onpremises-must-be-managed-by-intune"></a>Veškerá zařízení s iOS, která přistupují k místnímu Exchangi, musí spravovat Intune
+### <a name="scenario-requirements"></a>Požadavky na scénář
 - Přístup k místnímu Exchangi by měla mít pouze zařízení se systémem iOS.
 - Před použitím pro přístup k Exchangi musí být zařízení také registrovaná v Intune a splňovat pravidla zásad dodržování předpisů.
 
@@ -62,8 +62,8 @@ Následující postup se používá k určení zařízení, která můžou k s
 
 ![Tok přístupu k zařízení](./media/ConditionalAccess8-3.png)
 
-## Žádná zařízení s Androidem nemůžou přistupovat k místnímu Exchangi
-### Požadavky na scénář
+## <a name="no-android-devices-can-access-exchange-onpremises"></a>Žádná zařízení s Androidem nemůžou přistupovat k místnímu Exchangi
+### <a name="scenario-requirements"></a>Požadavky na scénář
 - Všechna zařízení s Androidem by měla mít blokovaný přístup k Exchangi.
 - Všechna ostatní podporovaná zařízení mohou přistupovat k Exchangi, pokud jsou spravovaná službou [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 

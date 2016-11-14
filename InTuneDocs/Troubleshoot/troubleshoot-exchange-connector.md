@@ -2,8 +2,8 @@
 title: "Poradce při potížích s Exchange Connectorem | Microsoft Intune"
 description: "Zde najdete informace k řešení potíží s Intune Exchange Connectorem."
 keywords: 
-author: nathbarn
-ms.author: nathbarn
+author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 07/26/2016
 ms.topic: article
@@ -20,10 +20,10 @@ ms.openlocfilehash: f6b673d05e385ddfe6ef3d3e63cf857439b164de
 
 ---
 
-# Poradce při potížích s Exchange Connectorem
+# <a name="troubleshoot-the-exchange-connector"></a>Poradce při potížích s Exchange Connectorem
 Toto téma popisuje, jak řešit problémy, které můžou souviset s Intune Exchange Connectorem.
 
-## Postup kontroly konfigurace konektoru 
+## <a name="steps-for-checking-the-connector-configuration"></a>Postup kontroly konfigurace konektoru 
 
 Zkontrolujte konfiguraci Exchange Connectoru a pak ověřte, jestli je problém už vyřešený.
 
@@ -32,7 +32,7 @@ Zkontrolujte konfiguraci Exchange Connectoru a pak ověřte, jestli je problém 
 - Při konfiguraci Exchange Connectoru zadejte server pro klientský přístup (CAS), který je co nejblíže k hostitelskému serveru Exchange Connectoru. Latence při komunikaci mezi serverem pro klientský přístup a Exchange Connectorem by mohla způsobovat zpoždění při zjišťování zařízení, zejména při použití O365 Dedicated.
 - Mějte na paměti, že mezi synchronizacemi Exchange Connectoru se serverem pro klientský přístup Exchange je časová prodleva. Úplná synchronizace se provádí jednou denně a rozdílová (rychlá) synchronizace delta probíhá každé dvě hodiny. Je pravděpodobné, že u uživatele s nově zaregistrovaným zařízením dojde při získávání přístupu ke zpoždění.
 - 
-## Server Exchange nezjistil zařízení s Exchange ActiveSync
+## <a name="exchange-activesync-device-not-discovered-from-exchange"></a>Server Exchange nezjistil zařízení s Exchange ActiveSync
 Zkontrolujte, jestli se Exchange Connector synchronizuje se serverem Exchange. Uděláte to tak, že vyhledáte protokoly pro úplnou nebo rozdílovou synchronizaci. Nahlédněte do protokolů Exchange Connectoru. Pokud od připojení zařízení úspěšně proběhla úplná nebo rozdílová synchronizace, pak můžete toto nastavení vyloučit jako zdroj problému. Pokud žádná synchronizace neproběhla, shromážděte synchronizační protokoly a připojte je k žádosti o podporu.
 
 - Pokud uživatel nemá licenci pro Intune, Exchange Connector nezjistí jeho zařízení.
@@ -41,12 +41,12 @@ Zkontrolujte, jestli se Exchange Connector synchronizuje se serverem Exchange. U
 - V prostředích Exchange Dedicated (O365 Dedicated) je třeba při počátečním nastavení nasměrovat Exchange Connector na server pro klientský přístup (CAS) pro Exchange 2013 (ne 2010) ve vyhrazeném prostředí, protože při provádění rutin PowerShellu bude komunikovat jenom s tímto serverem CAS.
 
 
-## Získání dalších dat k Exchange Connectoru pomocí PowerShellu
+## <a name="using-powershell-to-get-more-data-on-exchange-connector-issues"></a>Získání dalších dat k Exchange Connectoru pomocí PowerShellu
 - Pokud chcete získat seznam všech mobilních zařízení pro poštovní schránku, použijte Get-ActiveSyncDeviceStatistics -mailbox mbx.
 - Pokud chcete získat seznam adres SMTP pro poštovní schránku, použijte Get-Mailbox -Identity user | select emailaddresses | fl.
 - Pokud chcete získat podrobné informace o stavu přístupu k zařízení, použijte Get-CASMailbox <upn> | fl.
 
-### Další kroky
+### <a name="next-steps"></a>Další kroky
 Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
