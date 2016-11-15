@@ -19,15 +19,15 @@ ms.openlocfilehash: c80868fdee79df62aae0aa64e378be5dcc9664ae
 
 ---
 
-# Začínáme s Microsoft Intune App SDK
+# <a name="getting-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
 
 Tato úvodní příručka vám pomůže rychle povolit mobilní aplikace pro správu mobilních aplikací pomocí Microsoft Intune. Možná bude vhodné, když nejdřív pochopíte výhody sady Intune App SDK, které jsou uvedené v [Přehledu sady Intune App SDK](intune-app-sdk.md).
 
 Tento průvodce vás provede důležitými kroky potřebnými k povolení správy mobilních aplikací ve vaší aplikaci pomocí Microsoft Intune. Sada Intune App SDK podporuje podobné scénáře napříč platformami a je určená k vytvoření konzistentního prostředí pro správce IT napříč platformami. Vzhledem k omezením platforem ale existují v podpoře některých funkcí malé rozdíly.
 
-# Getting Started (Začínáme)
+# <a name="getting-started"></a>Getting Started (Začínáme)
 
-## Registrace aplikace ze Storu s Microsoftem
+## <a name="register-your-store-app-with-microsoft"></a>Registrace aplikace ze Storu s Microsoftem
 
 **Pokud je vaše aplikace interní a nebude dostupná pro veřejné obchody s aplikacemi**:
 
@@ -55,7 +55,7 @@ Pokud se v budoucnosti přímý odkaz na aplikaci ve Storu změní, budete ji mu
 
 
 
-## Stažení souborů sady SDK
+## <a name="download-the-sdk-files"></a>Stažení souborů sady SDK
 
 Sady Intune App SDK pro nativní systémy iOS a Android jsou hostované v účtu služby Microsoft GitHub. Níže uvedená veřejná úložiště obsahují soubory sady SDK pro iOS a Android:
 
@@ -65,7 +65,7 @@ Sady Intune App SDK pro nativní systémy iOS a Android jsou hostované v účtu
 **Pokud je vaše aplikace vytvořená v Xamarinu nebo Cordově, použijte prosím následující vývojářské nástroje:**
 
 * [Komponenta Xamarin sady Intune App SDK](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
-* [Plugin Cordova sady Intune App SDK](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam)
+* [Modul plug-in Cordova sady Intune App SDK](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam)
 
 Doporučujeme, abyste si zaregistrovali účet na GitHubu, který můžete použít k rozvětvení a přebírání z našich úložišť. GitHub vývojářům umožňuje komunikovat s naším produktovým týmem, hlásit problémy a dostávat rychlé odpovědi, zobrazit poznámky k verzi a zasílat připomínky do Microsoftu. V případě dotazů k účtu a úložištím na GitHubu se obraťte na adresu msintuneappsdk@microsoft.com.
 
@@ -73,7 +73,7 @@ Doporučujeme, abyste si zaregistrovali účet na GitHubu, který můžete použ
 
 
 
-## Povolení mobilní aplikace systému iOS nebo Android pro MAM s SDK
+## <a name="enable-your-ios-or-android-mobile-app-for-mam-with-the-sdk"></a>Povolení mobilní aplikace systému iOS nebo Android pro MAM s SDK
 
 K integraci sady Intune App SDK do nativní aplikace pro iOS budete potřebovat následující příručku: 
 
@@ -87,7 +87,7 @@ K integraci sady Intune App SDK do nativní aplikace pro Android budete potřebo
 Dokumentaci ke komponentě Xamarin sady Intune App SDK a k pluginu Cordova sady Intune App SDK najdete v příslušných úložištích GitHubu. 
 
 
-## Konfigurace telemetrie pro aplikaci
+## <a name="configuring-telemetry-for-your-app"></a>Konfigurace telemetrie pro aplikaci
 
 Microsoft Intune shromažďuje data statistik využití vaši aplikace.
 
@@ -97,7 +97,7 @@ Microsoft Intune shromažďuje data statistik využití vaši aplikace.
 
 * **Intune App SDK pro Android**: Telemetrické údaje se neprotokolují pomocí sady SDK.
 
-## Testování aplikace s povoleným MAM s Microsoft Intune
+## <a name="test-your-mam-enabled-app-with-microsoft-intune"></a>Testování aplikace s povoleným MAM s Microsoft Intune
 
 Po dokončení nezbytných kroků k integraci vaší aplikace pro iOS nebo Android se sadou Intune App SDK se musíte ujistit, že všechny zásady správy aplikací jsou pro koncové uživatele a správce IT povolené a funkční. K testování integrované aplikace budete potřebovat následující:
 
