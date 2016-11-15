@@ -14,8 +14,8 @@ ms.assetid: 8fc415f7-0053-4aa5-8d2b-03202eca4b87
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 289e6019aa1a17deb91b38ed32f0432af0902a9d
-ms.openlocfilehash: 3422d47a5759e22a512cf6de8578d774ad3bb8cd
+ms.sourcegitcommit: d51f34dea3463bec83ea39cdfb79c7bedf9e3926
+ms.openlocfilehash: 0b60e7a7a921762e682185af273bb94f24441a0c
 
 
 ---
@@ -100,7 +100,7 @@ Microsoft Intune také můžete použít ke správě počítačů s Windows a kl
 
  - Vytvářet sestavy inventáře softwaru a hardwaru
  - Instalovat desktopové aplikace (například soubory .exe a .msi)
- - Nastavení brány firewall
+ - Spravovat nastavení brány firewall
 
 Počítače spravované pomocí klientského softwaru Intune nejdou vymazat úplně, ale umožňují selektivní vymazání. Počítače spravované pomocí klientského softwaru Intune nemohou využívat některé funkce správy ve službě Intune, jako je podmíněný přístup, nastavení sítí VPN a Wi-Fi nebo nasazení certifikátů a konfigurací e-mailu.
 
@@ -119,6 +119,6 @@ Intune může spravovat tyto platformy zařízení:
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 
