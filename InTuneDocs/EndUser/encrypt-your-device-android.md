@@ -2,10 +2,10 @@
 title: "Šifrování zařízení | Microsoft Intune"
 description: "Popisuje šifrování zařízení s Androidem."
 keywords: 
-author: barlan
+author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 11/7/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,14 @@ ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ff5e76e5d768b9feccb42c91c72aa71b3f724002
-ms.openlocfilehash: 4d12314ffc6126cd740012c301c39b7fb72a5bb4
+ms.sourcegitcommit: 81c0c29e1b874a7f5c7faa1c1216dbaa99ec4543
+ms.openlocfilehash: b8214506ae4609cb5316c66b854fbd572fbac94f
 
 
 ---
 
 
-# Zašifrování zařízení
+# <a name="encrypt-your-device"></a>Zašifrování zařízení
 
 Pokud vás firma nebo organizace požádá, abyste si před přístupem k firemním souborům, e-mailu nebo datům zašifrovali zařízení s Androidem, postupujte podle níže uvedeného postupu. Můžete být také vyzváni, abyste si před šifrováním nastavili kód PIN nebo heslo, pokud to váš správce IT vyžaduje.
 
@@ -34,7 +34,7 @@ Pokud byste zrušili registraci telefonu, zůstane zašifrovaný.
 
 3.  Postupujte podle pokynů na obrazovce. Během šifrování se zařízení může několikrát restartovat.
 
-### Co dělat v případě problémů
+### <a name="what-to-do-if-you-have-issues"></a>Co dělat v případě problémů
 **Problém:** Zařízení jste už zašifrovali a dojde k jedné z těchto situací:
 
 - Tlačítko pro šifrování je zakázané.
@@ -57,10 +57,10 @@ Pokud byste zrušili registraci telefonu, zůstane zašifrovaný.
 
     5. Otevřete Portál společnosti, vyberte své zařízení a klepněte na možnost **Kontrola dodržování předpisů**.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT (kontaktní informace najdete na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište týmu Microsoft Android na adresu wintunedroidfbk@microsoft.com.
+Potřebujete ještě další pomoc? Obraťte se na správce IT (kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište [týmu Microsoft Android](mailto:wintunedroidfbk@microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
