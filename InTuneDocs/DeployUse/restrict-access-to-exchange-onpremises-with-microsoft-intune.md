@@ -14,13 +14,13 @@ ms.assetid: a55071f5-101e-4829-908d-07d3414011fc
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6e647c66d6de7d455d290dfa3358499a3f13453
-ms.openlocfilehash: e5c9d2a19f588ddd067a1e194568186f66afb85b
+ms.sourcegitcommit: 56988f0a69e6ff281439e6e77d1814ec130c8b49
+ms.openlocfilehash: 4e8bf567601ad181238b74644b4c282e8f5bbf36
 
 
 ---
 
-# Omezení přístupu k e-mailu v místním systému Exchange a starším vyhrazeném prostředí Exchange Online v Microsoft Intune
+# <a name="restrict-email-access-to-exchange-onpremises-and-legacy-exchange-online-dedicated-with-intune"></a>Omezení přístupu k e-mailu v místním systému Exchange a starším vyhrazeném prostředí Exchange Online v Microsoft Intune
 
 
 Pokud máte vyhrazené prostředí Exchange Online a potřebujete zjistit, jestli má novou, nebo starší verzi konfigurace, obraťte se na správce svého účtu.
@@ -58,13 +58,13 @@ Pokud jsou pro určitého uživatele nakonfigurované zásady podmíněného př
 
 Následující diagram znázorňuje postup, který zásady podmíněného přístupu pro prostředí místního Exchange používají k vyhodnocení toho, jestli se mají zařízení povolit, nebo blokovat.
 
-![Diagram, který znázorňuje rozhodovací body určující, jestli se zařízení povolí, nebo zablokuje přístup k místnímu Exchangi](../media/ConditionalAccess8-2.png) Pokud se nevyhoví některé zásadě podmíněného přístupu, zobrazí se uživateli při přihlášení jedna z následujících zpráv:
+![Diagram rozhodovacích bodů, které určují, jestli bude zařízení povolen nebo zablokován přístup k místnímu Exchangi](../media/ConditionalAccess8-2.png) Pokud není splněná některá ze zásad, které jsou podmínkou přístupu, zobrazí se uživateli při přihlášení jedna z následujících zpráv:
 
 - Pokud není zařízení zaregistrované v [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] nebo v Azure Active Directory, zobrazí se zpráva s pokyny k instalaci aplikace Portál společnosti, registraci zařízení a aktivaci e-mailu. Tento proces také přidruží ID protokolu Exchange ActiveSync zařízení k záznamu zařízení v Azure Active Directory.
 
 -   Pokud zařízení není kompatibilní, zobrazí se zpráva, která uživatele přesměruje na web Portál společnosti služby [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] nebo na aplikaci Portál společnosti, kde může najít informace o problému a jeho řešení.
 
-## Podpora mobilních zařízení
+## <a name="support-for-mobile-devices"></a>Podpora mobilních zařízení
 -   Windows Phone 8.1 nebo novější
 
 -   Nativní e-mailová aplikace v systému iOS
@@ -72,19 +72,21 @@ Následující diagram znázorňuje postup, který zásady podmíněného přís
 -   Poštovní klienti EAS, například Gmail v Androidu 4 a novějším
 - **Zařízení s Androidem for Work** se poštovními klienty EAS: Na zařízeních s Androidem for Work jsou v **pracovním profilu** podporované jenom aplikace **Gmail** a **Nine Work**. Aby v Androidu for Work fungoval podmíněný přístup, musíte nasadit e-mailový profil pro aplikaci Gmail nebo Nine Work a zároveň tyto aplikace nasadit jako požadovanou instalaci. 
 
+[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
+
 > [!NOTE]
 > Aplikace Microsoft Outlook pro Android a iOS se nepodporuje.
 
-## Podpora počítačů
+## <a name="support-for-pcs"></a>Podpora počítačů
 
 Aplikace **Pošta** ve Windows 8.1 a novějších verzích (při registraci v [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)])
 
-##  Konfigurace zásad podmíněného přístupu
+##  <a name="configure-a-conditional-access-policy"></a>Konfigurace zásad podmíněného přístupu
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte **Zásady** > **Podmíněný přístup** > **Zásady pro místní Exchange**.
 ![IntuneSA5aSelectExchOnPremPolicy](../media/IntuneSA5aSelectExchOnPremPolicy.png)
 
-2.  Nakonfigurujte pro zásadu požadované nastavení: ![Snímek stránky zásad pro místní Exchange](../media/IntuneSA5bExchangeOnPremPolicy.png)
+2.  Nakonfigurujte zásady pomocí vámi požadovaných nastavení: ![Snímek obrazovky se stránkou zásad místního systému Exchange](../media/IntuneSA5bExchangeOnPremPolicy.png)
 
   - **Blokovat e-mailovým aplikacím přístup k místnímu systému Exchange, pokud zařízení není kompatibilní nebo není zaregistrované v Microsoft Intune:** Pokud vyberete tuto možnost, zařízení, která nespravuje [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] nebo která nejsou kompatibilní se zásadou dodržování předpisů, budou mít zablokovaný přístup ke službám Exchange.
 
@@ -117,15 +119,15 @@ Aplikace **Pošta** ve Windows 8.1 a novějších verzích (při registraci v [!
 
 -   Pokud uživatel zruší registraci ve službě [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], může trvat 1 až 3 hodiny, než se zařízení zablokuje.
 
-**Pokud chcete zobrazit ukázkové scénáře konfigurace zásad podmíněného přístupu, které umožňují omezit přístup k zařízením, projděte si článek s [ukázkovými scénáři omezení přístupu k e-mailům](restrict-email-access-example-scenarios.md).**
+**Pokud se chcete podívat na ukázkové scénáře konfigurace zásad podmíněného přístupu, kterými můžete omezit přístup zařízení, prohlédněte si [ukázkové scénáře omezení přístupu k e-mailům](restrict-email-access-example-scenarios.md).**
 
-## Další kroky
-[Omezení přístupu ke službě SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
+## <a name="next-steps"></a>Další kroky
+[Omezení přístupu k SharePointu Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 
-[Omezení přístupu ke službě Online Skype pro firmy](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
+[Omezení přístupu k Online Skypu pro firmy](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

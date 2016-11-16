@@ -2,7 +2,8 @@
 title: "Požadavky na síťovou infrastrukturu | Microsoft Intune"
 description: "Požadavky na bránu firewall, porty, doménu a proxy server služby Intune"
 keywords: 
-author: barlanmsft
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: 074de65b-84a5-4a01-a824-18ffd838eab0
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 073e3df63a5de9cf92c739c1ced858e21a9ac351
-ms.openlocfilehash: aa4d2219a5962d83b80630ed3a09660a76469764
+ms.sourcegitcommit: 0d422b421c3716ad576c4fc565b181dec28c947e
+ms.openlocfilehash: 178d9fc474588c088ed510098dc71bc763695b3c
 
 
 ---
@@ -29,7 +30,7 @@ Nepožaduje se žádná místní infrastruktura (třeba server, kde je potřeba 
 Abyste mohli spravovat počítače, které jsou za bránami firewall nebo proxy servery, je potřeba nastavit brány firewall a proxy servery a povolit komunikaci pro Intune.
 
 ## Požadavky na brány firewall, porty a domény
-Spravovaná zařízení musí být nakonfigurovaná tak, aby měli **Všichni uživatelé** přístup k různým službám přes brány firewall.
+Spravovaná zařízení musí být nakonfigurovaná tak, aby **všichni uživatelé** měli přístup ke službám přes brány firewall.
 
 Následující tabulka obsahuje seznam portů a služeb, ke kterým přistupuje klient Intune.
 
@@ -170,6 +171,6 @@ Můžete použít i proxy server, který ukládá obsah do mezipaměti, a tím [
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO4-->
 
 

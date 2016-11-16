@@ -2,9 +2,10 @@
 title: "Vlastní konfigurace pro profily VPN | Microsoft Intune"
 description: "Vlastní konfigurace slouží k vytvoření profilů VPN v Intune."
 keywords: 
-author: Nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,18 +14,18 @@ ms.assetid: 4c0bd439-3b58-420b-9a9a-282886986786
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 374a56612b5c2a4dfd65d920307d5a4deb709b9b
-ms.openlocfilehash: e96daf7f10db82adf0f4f92412128fabbe652d51
+ms.sourcegitcommit: 1035a8ca4f63ad973e83ec24a7d700fac1d256cc
+ms.openlocfilehash: ee36cd5f3c64fc5dbeeb7265116c14be33b50067
 
 
 ---
 
-# Vlastní konfigurace pro profily VPN
+# <a name="custom-configurations-for-vpn-profiles"></a>Vlastní konfigurace pro profily VPN
 
-## Vytvoření vlastní konfigurace
+## <a name="create-a-custom-configuration"></a>Vytvoření vlastní konfigurace
 Vlastní konfigurace můžete použít k vytvoření profilů VPN v Intune. Vytvoření vlastní konfigurace:
 
-   1. V konzole správce Intune vyberte **Zásady** > **Přidat zásadu** > *<Expand platform>* > **Vlastní konfigurace** > **Vytvořit zásadu**.
+   1. V konzole správce Intune vyberte **Zásady** > **Přidat zásadu** > *Rozbalit platformu* > **Vlastní konfigurace** > **Vytvořit zásadu**.
    2. Zadejte název pro tuto zásadu.
    3. U každého nastavení identifikátoru URI zvolte **Přidat** a zadejte požadované informace. Tady je příklad:
 
@@ -32,7 +33,7 @@ Vlastní konfigurace můžete použít k vytvoření profilů VPN v Intune. Vytv
 
    4.  Po zadání všech nastavení identifikátorů URI zvolte **Uložit zásadu** a potom zásadu nasaďte.
 
-## Nasazení zásady konfigurace
+## <a name="deploy-a-configuration-policy"></a>Nasazení zásady konfigurace
 
 1.  V pracovním prostoru **Zásady** vyberte zásadu, kterou chcete nasadit, a potom zvolte **Spravovat nasazení**.
 
@@ -44,7 +45,7 @@ Vlastní konfigurace můžete použít k vytvoření profilů VPN v Intune. Vytv
 
 Když vyberete nasazenou zásadu, zobrazí se v dolní části seznamu zásad další informace o tomto nasazení.
 
-##Příklad nastavení identifikátoru URI pro vlastní konfiguraci profilu VPN
+##<a name="example-of-uri-settings-for-a-custom-vpn-profile-configuration"></a>Příklad nastavení identifikátoru URI pro vlastní konfiguraci profilu VPN
 Tady jsou příklady položek hodnot identifikátoru URI pro vytvoření vlastní konfigurace pro VPN ve fiktivní společnosti s názvem Contoso. Další informace, jako je datový typ jednotlivých položek, najdete v tématu [VPNv2 CSP](https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776.aspx).
 
 Nativní VPN Contoso (IKEv2): ./Vendor/MSFT/VPNv2/ContosoVPN/NativeProfile/Servers
@@ -85,10 +86,10 @@ Eap ./Vendor/MSFT/VPNv2/ContosoVPN/NativeProfile/Authentication/Eap/Configuratio
 
 Další informace týkající se používání těchto nastavení a další podrobnosti o tom, co dělají, můžou zákazníci najít v dokumentaci poskytovatele konfigurační služby CSP: https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776(v=vs.85).aspx.
 
-## Nastavení identifikátorů URI pro VPN pro aplikace pro Android na PulseSecure
-### VLASTNÍ IDENTIFIKÁTORY URI PRO SEZNAM BALÍKŮ
+## <a name="uri-settings-for-android-perapp-vpn-on-pulsesecure"></a>Nastavení identifikátorů URI pro VPN pro aplikace pro Android na PulseSecure
+### <a name="custom-uri-for-package-list"></a>VLASTNÍ IDENTIFIKÁTORY URI PRO SEZNAM BALÍKŮ
 -  Datový typ = Řetězec
--  OMA-URI = ./Vendor/MSFT/VPN/Profile/<Name>/PackageList
+-  OMA-URI = ./Vendor/MSFT/VPN/Profile/Name/PackageList
 -  Hodnota = Seznam balíčků oddělený oddělovači.
    - Oddělovače: středník (;), dvojtečka (:), čárka (,), svislá čára (|)
 
@@ -96,7 +97,7 @@ Příklady:
 - com.android.chrome
 - com.android.chrome;com.android.browser
 
-### VLASTNÍ IDENTIFIKÁTOR URI PRO REŽIM (VOLITELNÉ)
+### <a name="custom-uri-for-mode-optional"></a>VLASTNÍ IDENTIFIKÁTOR URI PRO REŽIM (VOLITELNÉ)
 - Datový typ = Řetězec
 - OMA-URI = ./Vendor/MSFT/VPN/Profile/NAME/Mode
 
@@ -107,11 +108,11 @@ Příklady:
 > - Pokud je poskytnutá hodnota PackageList, výchozí hodnota je *WHITELIST*.
 
 
-### Viz taky
+### <a name="see-also"></a>Viz taky
 (Připojení VPN v Microsoft Intune)[vpn-connections-in-microsoft-intune.md]
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

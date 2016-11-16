@@ -12,13 +12,13 @@
 #### [Správa iOS a Mac](set-up-ios-and-mac-management-with-microsoft-intune.md)
 #### [Správa Androidu](set-up-android-management-with-microsoft-intune.md)
 #### [Správa Androidu for Work](set-up-android-for-work.md)
-#### [Správa zařízení s Windows ](set-up-windows-device-management-with-microsoft-intune.md)
+#### [Správa zařízení s Windows](set-up-windows-device-management-with-microsoft-intune.md)
 #### [Windows 10 Mobile a Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md)
 ### [Správa zařízení vlastněných společností](manage-corporate-owned-devices.md)
-#### [Registrace zařízení s iOS vlastněných společností](enroll-corporate-owned-ios-devices-in-microsoft-intune.md)
-##### [Registrace průvodce nastavením iOS](ios-setup-assistant-enrollment-in-microsoft-intune.md)
-##### [Přímá registrace pro iOS](ios-direct-enrollment-in-microsoft-intune.md)
-##### [Registrace DEP pro iOS](ios-device-enrollment-program-in-microsoft-intune.md)
+#### [Registrace zařízení s iOSem vlastněných společností](enroll-corporate-owned-ios-devices-in-microsoft-intune.md)
+##### [Registrace průvodce nastavením](ios-setup-assistant-enrollment-in-microsoft-intune.md)
+##### [Přímá registrace](ios-direct-enrollment-in-microsoft-intune.md)
+##### [Registrace DEP](ios-device-enrollment-program-in-microsoft-intune.md)
 #### [Registrace pomocí správce registrace zařízení](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)
 #### [Označení zařízení pomocí kódů IMEI](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md)
 ### [MDM s Exchange ActiveSync](mobile-device-management-with-exchange-activesync-and-microsoft-intune.md)
@@ -33,8 +33,11 @@
 ## [Konfigurace zařízení](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
 
 ### [Správa nastavení a funkcí v zařízeních pomocí zásad](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-#### [Nastavení iOS](ios-policy-settings-in-microsoft-intune.md)
+#### [Nastavení iOSu](ios-policy-settings-in-microsoft-intune.md)
 #### [Nastavení Androidu a Samsung KNOX](android-policy-settings-in-microsoft-intune.md)
+##### [Použití vlastních zásad pro vytvoření profilu sítě Wi-Fi s předsdíleným klíčem](pre-shared-key-wi-fi-profile.md)
+##### [Použití vlastních zásad pro vytvoření profilu sítě VPN pro jednotlivé aplikace pro zařízení se systémem Android](per-app-vpn-for-android-pulse-secure.md)
+##### [Použití vlastních zásad povolených a blokovaných aplikací pro zařízení se systémem Samsung KNOX](custom-policy-to-allow-and-block-samsung-knox-apps.md)
 #### [Nastavení Androidu for Work](android-for-work-policy-settings-in-microsoft-intune.md)
 #### [Nastavení Windows 8 a Windows 8.1](windows-configuration-policy-settings-in-microsoft-intune.md)
 #### [Nastavení Windows Phone 8.1](windows-phone-8-1-policy-settings-in-microsoft-intune.md)
@@ -61,7 +64,7 @@
 ### [Ochrana zařízení s Windows pomocí MFA](protect-windows-devices-with-multi-factor-authentication.md)
 ### [Nastavení Windows Hello pro firmy](control-microsoft-passport-settings-on-devices-with-microsoft-intune.md)
 ### [Vynechání zámku aktivace v iOS](help-protect-ios-devices-with-activation-lock-bypass-for-microsoft-intune.md)
-### [Zásady ochrany počítačů s Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)
+### [Zásady ochrany počítačů se systémem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)
 #### [Aktualizace softwaru](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)
 #### [Brána Windows Firewall](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md)
 #### [Endpoint Protection](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)
@@ -73,15 +76,15 @@
 ### [Přidání aplikací pro klientské počítače Intune](add-apps-for-windows-pcs-in-microsoft-intune.md)
 #### [Správa licenčních smluv pro klientské počítače Intune](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)
 ## [Nasazení aplikací](deploy-apps.md)
-### [Nasazení aplikací do zařízení a počítačů](deploy-apps-in-microsoft-intune.md)
-### [Nasazení aplikací do zařízení s Androidem for Work](android-for-work-apps.md)
+### [Nasazení aplikací na zařízení a počítače](deploy-apps-in-microsoft-intune.md)
+### [Nasazení aplikací na zařízení s Androidem for Work](android-for-work-apps.md)
 ### [Monitorování aplikací](monitor-apps-in-microsoft-intune.md)
 ### [Správa hromadně zakoupených aplikací](manage-volume-purchased-apps-in-microsoft-intune.md)
 #### [Správa hromadně zakoupených aplikací pro iOS](manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune.md)
 #### [Správa hromadně zakoupených aplikací pro Windows](manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune.md)
 
 ## [Konfigurace aplikací](update-apps-using-microsoft-intune.md)
-### [Aktualizace aplikací ](update-apps-using-microsoft-intune.md)
+### [Aktualizace aplikací](update-apps-using-microsoft-intune.md)
 ### [Zásady konfigurace aplikací pro iOS](configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune.md)
 ### [Zásady konfigurace aplikací pro Android for Work](afw-app-configuration-policy.md)
 ### [Profily zřizování mobilních aplikací pro iOS](ios-mobile-app-provisioning-profiles.md)
@@ -90,7 +93,7 @@
 
 ## [Ochrana aplikací a dat](protect-apps-and-data-with-microsoft-intune.md)
 ### [Zásady dodržování předpisů pro zařízení](introduction-to-device-compliance-policies-in-microsoft-intune.md)
-#### [Vytváření zásad dodržování předpisů pro zařízení](create-a-device-compliance-policy-in-microsoft-intune.md)
+#### [Vytvoření zásad dodržování předpisů pro zařízení](create-a-device-compliance-policy-in-microsoft-intune.md)
 #### [ Android](android-compliance-policy-settings-in-microsoft-intune.md)
 #### [Android for Work](afw-compliance-policy-settings-in-microsoft-intune.md)
 #### [iOS](ios-compliance-policy-settings-in-microsoft-intune.md)
@@ -107,6 +110,7 @@
 #### [Dynamics CRM Online](restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
 #### [Omezení přístupu k e-mailu: příklady](restrict-email-access-example-scenarios.md)
 ### [Povolení přístupu ke službám O365 jen aplikacím spravovaným zásadami](allow-policy-managed-apps-access-to-o365.md)
+#### [Aplikace s podmíněným přístupem MAM](use-apps-with-mam-ca.md)
 #### [Exchange Online](mam-ca-for-exchange-online.md)
 #### [Blokování aplikací bez ověřování ADAL](block-apps-with-no-modern-authentication.md)
 ### [Omezení přístupu k sítím (Cisco ISE)](restrict-access-to-networks.md)
@@ -117,7 +121,7 @@
 #### [Povolení zásady dodržování předpisů pro ochranu zařízení před hrozbami](enable-device-threat-protection-rule-in-compliance-policy.md)
 
 ### [Ochrana dat aplikací pomocí MAM](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
-#### [Portál Azure pro zásady MAM](azure-portal-for-microsoft-intune-mam-policies.md)
+#### [Portál Azure Portal pro zásady MAM](azure-portal-for-microsoft-intune-mam-policies.md)
 #### [Příprava ke konfiguraci zásad MAM](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Vytvoření a nasazení zásad MAM](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Zásady MAM pro Android](android-mam-policy-settings.md)
@@ -135,13 +139,13 @@
 #### [Použití sady SDK při psaní aplikace](use-the-sdk-to-enable-apps-for-mobile-application-management.md)
 
 
-## [Vyřazení aplikací a data z provozu](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md)
+## [Vyřazení aplikací a dat z provozu](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md)
 ### [Použití úplného nebo selektivního vymazání](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md)
-### [Vyřazení aplikací ](retire-apps-using-microsoft-intune.md)
-### [Vymazání data spravovaných aplikací společnosti](Wipe-managed-company-app-data-with-microsoft-intune.md)
+### [Vyřazení aplikací](retire-apps-using-microsoft-intune.md)
+### [Vymazání spravovaných dat aplikací společnosti](Wipe-managed-company-app-data-with-microsoft-intune.md)
 
 ## [Materiály o prostředí pro koncové uživatele](what-to-tell-your-end-users-about-using-microsoft-intune.md)
-### [Obnovení spravovaných zařízení s iOS](restore-managed-ios-devices-from-backup.md)
+### [Obnovení spravovaných zařízení s iOSem](restore-managed-ios-devices-from-backup.md)
 ### [Aplikace pro Android se zásadami MAM](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
 ### [Aplikace pro iOS se zásadami MAM](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
 
@@ -150,6 +154,6 @@
 # [Řešení problémů](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

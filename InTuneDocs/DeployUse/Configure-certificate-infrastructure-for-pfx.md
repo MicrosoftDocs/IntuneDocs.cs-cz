@@ -2,9 +2,10 @@
 title: "Konfigurace infrastruktury certifikátů pro PFX | Microsoft Intune"
 description: "Vytvoření a nasazení profilů certifikátů .PFX"
 keywords: 
-author: nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 08/24/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +14,13 @@ ms.assetid: 2c543a02-44a5-4964-8000-a45e3bf2cc69
 ms.reviewer: vinaybha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c4ce620e073608f6bcbfc9d698255dd75deae4be
-ms.openlocfilehash: 3d50aa40b6c3e8aa34c5699a0c53befce9549055
+ms.sourcegitcommit: 17b957cc2baedddfc53bfdf7b875e4ecb28b8517
+ms.openlocfilehash: f903a62e7fb28e71e773a27db341c846e1f76b63
 
 
 
 ---
-# Konfigurace infrastruktury certifikátu
+# <a name="configure-certificate-infrastructure"></a>Konfigurace infrastruktury certifikátu
 Toto téma popisuje, co potřebujete k vytvoření a nasazení profilů certifikátů .PFX.
 
 Pokud chcete v rámci své organizace používat ověření na základě certifikátů, potřebujete certifikační autoritu organizace.
@@ -30,7 +31,7 @@ Pokud chcete používat profily certifikátů .PFX, kromě certifikační autori
 
 -  Intune Certificate Connector běžící na počítači, který může komunikovat se službou certifikační autority
 
-## Popis místní infrastruktury
+## <a name="onpremises-infrastructure-description"></a>Popis místní infrastruktury
 
 
 -    **Doména služby Active Directory**: Všechny servery uvedené v této části (s výjimkou proxy serveru webové aplikace) musí být připojené k vaší doméně služby Active Directory.
@@ -50,7 +51,7 @@ Pokud chcete používat profily certifikátů .PFX, kromě certifikační autori
     Informace o certifikátech pro službu WAP najdete v části **Plánování certifikátů** tématu [Plánování publikování aplikací pomocí serveru proxy webových aplikací](https://technet.microsoft.com/library/dn383650.aspx). Obecné informace o serverech WAP najdete v tématu [Práce se serverem proxy webových aplikací](http://technet.microsoft.com/library/dn584113.aspx).|
 
 
-### Certifikáty a šablony
+### <a name="certificates-and-templates"></a>Certifikáty a šablony
 
 |Objekt|Podrobnosti|
 |----------|-----------|
@@ -58,16 +59,16 @@ Pokud chcete používat profily certifikátů .PFX, kromě certifikační autori
 |**Certifikát důvěryhodné kořenové certifikační autority**|Ten exportujete jako soubor **.cer** z vydávající certifikační autority nebo jakéhokoli zařízení, které důvěřuje vydávající certifikační autoritě, a nasadíte ho do zařízení pomocí profilu certifikátu důvěryhodné certifikační autority.<br /><br />Použijete jeden certifikát důvěryhodné kořenové certifikační autority na každou platformu operačního systému a přidružíte ho ke každému profilu důvěryhodného kořenového certifikátu, který vytvoříte.<br /><br />Pokud potřebujete, můžete vytvořit další certifikáty důvěryhodné kořenové certifikační autority. Můžete to třeba udělat, abyste vytvořili vztah důvěryhodnosti k certifikační autoritě, která podepisuje ověřovací certifikáty serverů pro vaše přístupové body Wi-Fi.|
 
 
-## Konfigurace infrastruktury
+## <a name="configure-your-infrastructure"></a>Konfigurace infrastruktury
 Než budete moci konfigurovat profily certifikátů, je třeba provést následující úlohy. Tyto úlohy vyžadují znalost systému Windows Server 2012 R2 a ADCS (Active Directory Certificate Services):
 
 - **Úloha 1**: Konfigurace šablon certifikátů v certifikační autoritě.
 - **Úloha 2**ovolení, instalace a konfigurace Certificate Connectoru Intune.
 
-### Úloha 1 – konfigurace šablon certifikátů v certifikační autoritě
+### <a name="task-1-configure-certificate-templates-on-the-certification-authority"></a>Úloha 1 – konfigurace šablon certifikátů v certifikační autoritě
 V této úloze budete publikovat šablonu certifikátu.
 
-##### Konfigurace certifikační autority
+##### <a name="to-configure-the-certification-authority"></a>Konfigurace certifikační autority
 
 1.  Ve vydávající certifikační autoritě vytvořte novou vlastní šablonu pomocí modulu snap-in Šablony certifikátů, nebo zkopírujte a upravte některou z existujících šablon (například šablona Uživatel) pro použití s .PFX.
 
@@ -89,7 +90,7 @@ V této úloze budete publikovat šablonu certifikátu.
 
     Pokud chcete certifikační autoritu konfigurovat, aby žadateli umožňovala určit dobu platnosti, spusťte v certifikační autoritě následující příkazy:
 
-    a.  **certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**
+    a.  **certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**
 
     b.  **net stop certsvc**
 
@@ -97,18 +98,18 @@ V této úloze budete publikovat šablonu certifikátu.
 
 3.  Ve vydávající certifikační autoritě použijte modul snap-in Certifikační autorita k publikování šablony certifikátu.
 
-    a.  Vyberte uzel **Šablony certifikátů**, klikněte na **Akce**-&gt;**Nové**&gt;**Vystavovaná šablona certifikátu** a potom vyberte šablonu, kterou jste vytvořili v kroku 2.
+    a.  Vyberte uzel **Šablony certifikátů**, klikněte na **Akce**-&gt; **Nové** &gt; **Vystavovaná šablona certifikátu** a potom vyberte šablonu, kterou jste vytvořili v kroku 2.
 
     b.  Ověřte, že je šablona publikovaná, jejím zobrazením ve složce **Šablony certifikátů** .
 
 4.  Na počítači certifikační autority (CA) zkontrolujte, zda počítač, který je hostitelem Certificate Connectoru Intune, má oprávnění k registraci. Tím bude mít přístup k šabloně použité při vytváření profilu .PFX. Nastavte tato oprávnění na kartě **Zabezpečení** vlastností počítače certifikační autority.
 
-### Úloha 2 – Povolení, instalace a konfigurace Intune Certificate Connectoru
+### <a name="task-2-enable-install-and-configure-the-intune-certificate-connector"></a>Úloha 2 – Povolení, instalace a konfigurace Intune Certificate Connectoru
 V této úloze:
 
 Stažení, instalace a konfigurace Certificate Connectoru.
 
-##### Povolení podpory pro Certificate Connector
+##### <a name="to-enable-support-for-the-certificate-connector"></a>Povolení podpory pro Certificate Connector
 
 1.  Otevřete [konzolu správce Intune](https://manage.microsoft.com) a zvolte **Správce** &gt; **Certificate Connector**.
 
@@ -116,7 +117,7 @@ Stažení, instalace a konfigurace Certificate Connectoru.
 
 3.  Vyberte **Zapnout Certificate Connector**a potom zvolte **OK**.
 
-##### Stažení, instalace a konfigurace Certificate Connectoru
+##### <a name="to-download-install-and-configure-the-certificate-connector"></a>Stažení, instalace a konfigurace Certificate Connectoru
 
 1.  Otevřete [konzolu správce Intune](https://manage.microsoft.com) a zvolte **Správce** &gt; **Správa mobilních zařízení** &gt; **Certificate Connector** &gt; **Stáhnout Certificate Connector**.
 
@@ -155,11 +156,11 @@ Pokud chcete ověřit, jestli je služba spuštěná, spusťte prohlížeč a za
 
 **http:// &lt;Název_FQDN_serveru_NDES&gt;/certsrv/mscep/mscep.dll**
 
-### Další kroky
+### <a name="next-steps"></a>Další kroky
 Teď jste připravení nastavit profily certifikátů podle návodu v tématu [Konfigurace profilů certifikátu](Configure-Intune-certificate-profiles.md).
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

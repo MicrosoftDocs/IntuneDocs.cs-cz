@@ -2,8 +2,8 @@
 title: "Jak uživatelé s Androidem získávají svoje apikace| Microsoft Intune"
 description: "Metody zpřístupnění aplikací pro Android koncovým uživatelům"
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 7/7/2016
 ms.topic: article
@@ -14,24 +14,24 @@ ms.assetid: f33d1684-b1b5-44f7-9aac-c6d5186a5d7c
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 627914b2ac877c1b5ff5bc95f7f2098ab8988250
-ms.openlocfilehash: 98e712fb852c89c1d092b87482f30ada33010a33
+ms.sourcegitcommit: 738b6bedcefbfd8bf0fa7bde5b86c79293af527e
+ms.openlocfilehash: 64b42d25815946122d0be0d031ab7cc4b3ac6a8a
 
 
 ---
 
 
-# Jak uživatelé s Androidem získávají svoje aplikace
-Tyto informace slouží k pochopení toho, jak a kde koncoví uživatelé Androidu získávají aplikace, které distribuujete pomocí Microsoft Intune. Tyto informace se můžou lišit podle typu zařízení (nativního zařízení s Androidem nebo zařízení Samsung Knox).
+# <a name="how-your-android-users-get-their-apps"></a>Jak uživatelé s Androidem získávají svoje aplikace
+Tyto informace slouží k pochopení toho, jak a kde koncoví uživatelé Androidu získávají aplikace, které distribuujete pomocí Microsoft Intune. Tyto informace se můžou lišit podle typu zařízení (nativního zařízení s Androidem nebo zařízení se Samsung Knox Standardem).
 
-## Nativní zařízení s Androidem (ne Samsung Knox)
+## <a name="native-nonsamsung-knox-android-devices"></a>Nativní zařízení s Androidem (ne Samsung Knox)
 
 | Typ aplikace | Obchodní aplikace (LOB) | Aplikace obchodu Play  |
 | ------------- |-------------| -----|
 | Dostupné aplikace      | Uživatelé klepnou na **nainstalovat** na Portálu společnosti. Zobrazí se upozornění, na které pak uživatelé klepnou, aby spustili instalaci. Po úspěšné instalaci oznámení zmizí. | Uživatelé klepnou na aplikaci na Portálu společnosti a jsou přesměrováni na stránku aplikace v obchodě Play, kde můžou instalaci spustit.|
 | Required apps      | Uživatelům se zobrazí oznámení, které nejde zrušit a které říká, že potřebují nainstalovat aplikaci. Uživatelé klepnou na oznámení, aby spustili instalaci. Po úspěšné instalaci oznámení zmizí.    | Uživatelům se zobrazí oznámení, které nejde zrušit a které říká, že potřebují nainstalovat aplikaci. Uživatelé klepnou na oznámení a jsou přesměrováni na stránku aplikace v obchodě Play, kde můžou instalaci spustit. Po úspěšné instalaci oznámení zmizí. |
 
-## Zařízení s Androidem Samsung Knox
+## <a name="samsung-knox-standard-android-devices"></a>Zařízení Samsung Knox Standard s Androidem
 
 | Typ aplikace | Obchodní aplikace (LOB) | Aplikace obchodu Play  |
 | ------------- |-------------| -----|
@@ -44,7 +44,7 @@ Aplikace můžou být spravované nebo nespravované, jak je popsáno dál. Proc
 
 **Nespravované aplikace** – aplikace, které nejde spravovat prostřednictvím zásad. Nejsou zabalené službou Intune ani sestavené pomocí sady Intune MAM SDK. Na tyto aplikace nejdou aplikovat zásady použití.
 
-### Viz taky
+### <a name="see-also"></a>Související témata
 [Přidávání aplikací s Microsoft Intune](/intune/deploy-use/add-apps)
 
 [Jak uživatelé systému iOS získávají svoje aplikace](how-your-ios-users-get-their-apps.md)
@@ -53,6 +53,6 @@ Aplikace můžou být spravované nebo nespravované, jak je popsáno dál. Proc
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

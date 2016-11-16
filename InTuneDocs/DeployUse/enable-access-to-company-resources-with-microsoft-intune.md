@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 10/14/2016
+ms.date: 11/02/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 3dd8dd4e-e165-4d0c-97b7-b3e86ebab909
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7b4acce1b1861ca2c2d1432b0258ad1e95e46d2a
-ms.openlocfilehash: 2959ad5f09be686e4dae9b751e8ede5e6b60bd89
+ms.sourcegitcommit: 24411fdefa3f1e4e89c66d23448360934a5de7c7
+ms.openlocfilehash: f91c3530599b75093f536fd85eaf21d0b4e86e50
 
 
 ---
@@ -28,21 +28,21 @@ Profily Wi-Fi, VPN a e-mailu Microsoft Intune společně pomáhají zajistit už
 Nasaďte uživatelům nastavení bezdrátové sítě. Tato nastavení usnadňují uživatelům připojení k firemní síti.
 #### <a name="supported-platforms"></a>Podporované platformy
 
-|Windows 8.1 a vyšší|Windows Phone 8.1 nebo novější|iOS|Android|Samsung KNOX|
+|Windows 8.1 a vyšší|Windows Phone 8.1 nebo novější|iOS|Android|Samsung KNOX Standard|
 |---------------------|---------------------------|---|-------|------------|
 |Ano (Můžete naimportovat profil sítě Wi-Fi systému Windows.)|Ano (Můžete nakonfigurovat OMA URI.) |Ano|Ano|Ano|
 
 ## <a name="vpn-profilesvpnconnectionsinmicrosoftintunemd-and-supported-platforms"></a>[Profily VPN](vpn-connections-in-microsoft-intune.md) a podporované platformy
 Nasaďte uživatelům nastavení virtuální privátní sítě (VPN). Tato nastavení usnadňují uživatelům připojení k prostředkům v podnikové síti.
 
-|Windows 8.1 a vyšší|Windows Phone 8.1 nebo novější|iOS|Android|Samsung KNOX|
+|Windows 8.1 a vyšší|Windows Phone 8.1 nebo novější|iOS|Android|Samsung KNOX Standard|
 |---------------------|---------------------------|---|-------|------------|
 |Ano|Ano|Ano|Ano|Ano|
 
 ## <a name="email-profilesconfigureaccesstocorporateemailusingemailprofileswithmicrosoftintunemd-and-supported-platforms"></a>[Profily e-mailu](configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune.md) a podporované platformy
 Vytváření, nasazování a sledování nastavení nativních e-mailových klientů na zařízeních ve vaší organizaci.
 
-|Windows 8.1 a vyšší|Windows Phone 8.1 nebo novější|iOS|Android|Samsung KNOX|
+|Windows 8.1 a vyšší|Windows Phone 8.1 nebo novější|iOS|Android|Samsung KNOX Standard|
 |---------------------|---------------------------|---|-------|------------|
 |Ne|Ano|Ano|Ne|Ano|
 > [!NOTE]
@@ -51,12 +51,12 @@ Vytváření, nasazování a sledování nastavení nativních e-mailových klie
 ## <a name="certificate-profilessecureresourceaccesswithcertificateprofilesmd-and-supported-platforms"></a>[Profily certifikátů](secure-resource-access-with-certificate-profiles.md) a podporované platformy
 Pomozte zabezpečit přístup k prostředkům společnosti, včetně bezdrátových sítí a připojení VPN.
 
-|Windows 8.1 a vyšší|Windows Phone 8.1 nebo novější|iOS|Android|Samsung KNOX|
+|Windows 8.1 a vyšší|Windows Phone 8.1 nebo novější|iOS|Android|Samsung KNOX Standard|
 |---------------------|---------------------------|---|-------|------------|
 |Ano|Ano|Ano|Ano|Ano|
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

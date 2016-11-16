@@ -14,13 +14,13 @@ ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: af4c84d0e317f5903d22cdfead9ce0ab4fbddc8f
-ms.openlocfilehash: 602be42b75c091cb43359f30256d51eabe597008
+ms.sourcegitcommit: 56988f0a69e6ff281439e6e77d1814ec130c8b49
+ms.openlocfilehash: 916a4d90b5aa64cad429ccd6559ad8d388ba301e
 
 
 ---
 
-# Omezení přístupu k Exchangi Online a novému vyhrazeném prostředí Exchange Online s Intune
+# <a name="restrict-email-access-to-exchange-online-and-new-exchange-online-dedicated-with-intune"></a>Omezení přístupu k Exchangi Online a novému vyhrazeném prostředí Exchange Online s Intune
 
 Pokud máte vyhrazené prostředí Exchange Online a potřebujete zjistit, jestli má novou, nebo starší verzi konfigurace, obraťte se prosím na správce svého účtu.
 
@@ -62,12 +62,14 @@ Následující diagram znázorňuje tok používaný v rámci zásad podmíněn�
 
 ![Diagram, který znázorňuje body rozhodnutí, na kterých je určeno, zda bude zařízení přístup povolen nebo blokován](../media/ConditionalAccess8-1.png)
 
-## Podpora mobilních zařízení
+## <a name="support-for-mobile-devices"></a>Podpora mobilních zařízení
 Můžete omezit přístup k e-mailům na Exchangi Online z **Outlooku** a dalších **aplikací, které využívají moderní ověřování**:-
 
 - Android 4.0 a novější, Samsung Knox Standard 4.0 a novější a Android for Work
 - iOS 8.0 a novější
 - Windows Phone 8.1 nebo novější
+
+[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
 **Moderní ověřování** integruje do klientů Microsoft Office přihlašování založené na knihovně ADAL (Active Directory Authentication Library).
 
@@ -79,11 +81,11 @@ Můžete omezit přístup k aplikaci **Outlook Web Access (OWA)** v Exchange Onl
 
 * Safari (iOS)
 * Chrome (Android)
-* Spravovaný prohlížeč (iOS a Android)
+* Managed Browser (iOS a Android 5.0 nebo novější)
 
 **Nepodporované prohlížeče budou zablokovány**.
 
-**Aplikaci OWA pro iOS a Android je možné upravit tak, aby nepoužívala moderní ověřování, a není proto podporována.  Přístup z aplikace OWA musí být zablokován přes pravidla deklarace identity ADFS.**
+**Aplikaci OWA pro iOS a Android je možné upravit tak, aby nepoužívala moderní ověřování, a proto není podporovaná.  Přístup z aplikace OWA je potřeba zablokovat pravidly deklarace identity ADFS.**
 
 
 Přístup k e-mailu na Exchangi můžete omezit z integrovaného **e-mailového klienta Exchange ActiveSync** na následujících platformách:
@@ -94,7 +96,7 @@ Přístup k e-mailu na Exchangi můžete omezit z integrovaného **e-mailovéh
 
 - Windows Phone 8.1 nebo novější
 
-## Podpora počítačů
+## <a name="support-for-pcs"></a>Podpora počítačů
 
 Podmíněný přístup se dá nastavit pro počítače, které používají desktopové aplikace Office pro přístup k **Exchangi Online** a **SharePointu Online** a splňují následující požadavky:
 
@@ -118,25 +120,25 @@ Podmíněný přístup se dá nastavit pro počítače, které používají desk
 
 -   Nastavte pravidla deklarací služby AD FS pro blokování jiných než moderních ověřovacích protokolů. Podrobné pokyny jsou uvedené ve scénáři 3 – [Blokování veškerého přístupu k O365 kromě aplikací využívajících prohlížeč](https://technet.microsoft.com/library/dn592182.aspx).
 
-## Konfigurace podmíněného přístupu
-### Krok 1: Konfigurace a nasazení zásad dodržování předpisů
+## <a name="configure-conditional-access"></a>Konfigurace podmíněného přístupu
+### <a name="step-1-configure-and-deploy-a-compliance-policy"></a>Krok 1: Konfigurace a nasazení zásad dodržování předpisů
 Zajistěte, aby byly pro skupiny uživatelů, které získají zásady podmíněného přístupu, [vytvořeny](create-a-device-compliance-policy-in-microsoft-intune.md) a [nasazeny](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md) zásady dodržování předpisů.
 
 
 > [!IMPORTANT]
 > Pokud jste zásady dodržování předpisů nenasadili, budou se zařízení považovat za zařízení v souladu s předpisy a bude jim povolen přístup k Exchangi.
 
-### Krok 2: Vyhodnoťte efekt zásad podmíněného přístupu.
+### <a name="step-2-evaluate-the-effect-of-the-conditional-access-policy"></a>Krok 2: Vyhodnoťte efekt zásad podmíněného přístupu.
 Pomocí **Sestav inventáře mobilních zařízení** můžete identifikovat zařízení, která mohou mít po nakonfigurování zásad podmíněného přístupu blokovaný přístup k Exchangi.
 
 Pokud to budete chtít provést, nakonfigurujte připojení mezi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] a Exchangem pomocí [konektoru Service to Service služby Microsoft Intune](intune-service-to-service-exchange-connector.md).
 1.  Přejděte na **Sestavy -> Sestavy inventáře mobilních zařízení**.
-![Snímek obrazovky stránky Sestavy inventáře mobilních zařízení](../media/IntuneSA2bMobileDeviceInventoryReport.png)
+![Snímek obrazovky se stránkou sestavy inventáře mobilních zařízení](../media/IntuneSA2bMobileDeviceInventoryReport.png)
 
 2.  V parametrech sestavy vyberte skupinu [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], kterou chcete vyhodnotit, a v případě potřeby platformy zařízení, na které se zásady budou vztahovat.
 3.  Po dokončení výběru kritérií vyhovujících potřebám vaší organizace vyberte **Zobrazit sestavu**.
 Prohlížeč sestav se otevře v novém okně.
-![Snímek obrazovky ukázkové sestavy inventáře mobilních zařízení](../media/IntuneSA2cViewReport.PNG)
+![Snímek obrazovky s ukázkovou sestavou inventáře mobilních zařízení](../media/IntuneSA2cViewReport.PNG)
 
 Po spuštění sestavy zkontrolujte tyto čtyři sloupce, abyste zjistili, jestli bude uživatel blokovaný:
 
@@ -156,12 +158,12 @@ Zařízením, která jsou součástí cílové skupiny, se bude blokovat příst
 --------------------------
 |Kanál pro správu|Zaregistrováno v AAD|Vyhovuje|ID protokolu Exchange ActiveSync|Výsledná akce|
 |----------------------|------------------|-------------|--------------------------|--------------------|
-|**Spravuje se v Microsoft Intune a Exchange ActiveSync**|Ano|Ano|Je zobrazená hodnota|Přístup k e-mailu je povolený|
+|**Spravuje se v Microsoft Intune a Exchange ActiveSync**|Ano|Ano|Je zobrazená hodnota|Přístup k e-mailu je povolený|
 |Jakákoli jiná hodnota|Ne|Ne|Není zobrazená žádná hodnota|Přístup k e-mailu je blokovaný|
 ----------------------
 Obsah sestavy můžete vyexportovat a použít sloupec **E-mailová adresa** k informování uživatelů o tom, že budou blokovaní.
 
-### Krok 3: Nakonfigurujte skupiny uživatelů pro zásady podmíněného přístupu.
+### <a name="step-3-configure-user-groups-for-the-conditional-access-policy"></a>Krok 3: Nakonfigurujte skupiny uživatelů pro zásady podmíněného přístupu.
 Zásady podmíněného přístupu jsou cíleny na různé skupiny uživatelů, které jsou skupinami zabezpečení Azure Active Directory. Z této zásady také můžete určité skupiny uživatelů vyloučit.  Pokud je uživatel cílem zásady, musí každé jím používané zařízení splňovat zásady, aby měl přístup k e-mailu.
 
 Tyto skupiny můžete nakonfigurovat v **Centru pro správu Office 365**nebo na **Portálu účtů Intune**.
@@ -176,14 +178,14 @@ Pokud je uživatel v obou skupinách, bude ze zásad vyloučený.
 
 Vyhodnocují se jenom skupiny, které jsou cílem zásad podmíněného přístupu.
 
-### Krok 4: Konfigurace zásad podmíněného přístupu
+### <a name="step-4-configure-the-conditional-access-policy"></a>Krok 4: Konfigurace zásad podmíněného přístupu
 
 >[!NOTE]
 > Zásady podmíněného přístupu můžete vytvořit i v konzole pro správu Azure AD. Přes konzolu pro správu Azure AD můžete vytvářet i zásady podmíněného přístupu pro zařízení Intune (v Azure AD označované jako **zásady podmíněného přístupu založené na zařízení**), kromě jiných zásad podmíněného přístupu, jako je například vícefaktorové ověřování.  Taky můžete nastavit zásady podmíněného přístupu pro podnikové aplikace třetích stran, jako je například Salesforce nebo Box, které služba Azure AD podporuje. Další informace najdete v tématu [Jak ve službě Azure Active Directory nastavit zásady podmíněného přístupu založené na zařízení a získat tak kontrolu přístupu do aplikací napojených na službu Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
 
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte **Zásady** > **Podmíněný přístup** > **Zásady pro Exchange Online**.
-![Snímek obrazovky stránky zásad podmíněného přístupu Exchange Online](../media/mdm-ca-exo-policy-configuration.png)
+![Snímek obrazovky se stránkou zásad podmíněného přístupu k Exchangi Online](../media/mdm-ca-exo-policy-configuration.png)
 
 2.  Na stránce **Zásady Exchange Online** vyberte možnost **Zapnout zásady podmíněného přístupu pro Exchange Online**.
 
@@ -214,23 +216,23 @@ Vyhodnocují se jenom skupiny, které jsou cílem zásad podmíněného přístu
   3.    Stiskněte tlačítko **Povolit přístup z prohlížeče**.
   4.    V prohlížeči Chrome se odhlaste z Office 365 a znovu spusťte Chrome.
 
-  Na platformách **iOS a Android**: Kvůli identifikaci zařízení použitého pro přístup ke službě vydá Azure Active Directory pro příslušné zařízení certifikát TLS (Transport Layer Security).  Zařízení zobrazí certifikát s výzvou pro koncového uživatele k výběru certifikát, jak je vidět na následujících snímcích obrazovky. Koncový uživatele musí tento certifikát vybrat, než bude moci pokračovat v používání prohlížeče.
+  Na platformách **iOS a Android**: Kvůli identifikaci zařízení použitého pro přístup ke službě vydá Azure Active Directory pro příslušné zařízení certifikát TLS (Transport Layer Security).  Zařízení zobrazí certifikát s výzvou pro koncového uživatele k výběru certifikát, jak je vidět na následujících snímcích obrazovky. Předtím, než bude moci pokračovat v používání prohlížeče, musí koncový uživatel vybrat certifikát.
 
   **iOS**
 
-  ![snímek obrazovky s výzvou ohledně certifikátu řádku v zařízení iPad](../media/mdm-browser-ca-ios-cert-prompt.png)
+  ![snímek obrazovky s výzvou k výběru certifikátu na iPadu](../media/mdm-browser-ca-ios-cert-prompt.png)
 
-  **Android**
+  **Androidemem**
 
   ![snímek obrazovky s výzvou ohledně certifikátu řádku v zařízení s Androidem](../media/mdm-browser-ca-android-cert-prompt.png)
 
 5.  V části **Aplikace Exchange ActiveSync** se můžete rozhodnout blokovat zařízením, která nesplňují zásady dodržování předpisů, přístup na Exchange Online. Můžete také zvolit, jestli chcete povolit nebo blokovat přístup k e-mailu, pokud zařízení neběží na podporované platformě. Podporovány jsou mimo jiné následující platformy: Android, iOS, Windows a Windows Phone.
 
  Zařízení s **Androidem for Work** s aplikacemi Exchange Active Sync:
- -  Na zařízeních s Androidem for Work se v **pracovním profilu** podporují jenom aplikace **Gmail** a **Nine Work**. Aby na zařízeních s Androidem for Work fungoval podmíněný přístup, musíte nasadit e-mailový profil pro aplikaci Gmail nebo Nine Work a zároveň ji nasadit jako **požadovanou** instalaci. 
+ -  Na zařízeních s Androidem for Work se v **pracovním profilu** podporují jenom aplikace **Gmail** a **Nine Work**. Aby na zařízeních s Androidem for Work fungoval podmíněný přístup, musíte nasadit e-mailový profil pro aplikaci Gmail nebo Nine Work a zároveň ji nasadit jako **požadovanou** instalaci.
 
 6.  V části **Cílové skupiny**vyberte skupiny zabezpečení Active Directory uživatelů, na které se zásady vztahují. Můžete cílit na všechny uživatele nebo vybraný seznam skupin uživatelů.
-![Snímek obrazovky stránky zásad podmíněného přístupu Exchange Online zobrazující možnosti pro cílové a vyloučené skupiny](../media/IntuneSA5eTargetedExemptedGroups.PNG)
+![Snímek obrazovky stránky zásad podmíněného přístupu Exchange Online s možnostmi Cílové skupiny a Vyloučené skupiny](../media/IntuneSA5eTargetedExemptedGroups.PNG)
     > [!NOTE]
     > Pro uživatele, kteří jsou v **cílových skupinách**, nahradí zásady Intune pravidla a zásady Exchange.
     >
@@ -251,22 +253,22 @@ Vyhodnocují se jenom skupiny, které jsou cílem zásad podmíněného přístu
 
 -   Pokud uživatel zruší registraci svého zařízení, e-mail se zablokuje zhruba po 6 hodinách.
 
-**Pokud chcete zobrazit ukázkové scénáře konfigurace zásad podmíněného přístupu, které umožňují omezit přístup k zařízením, projděte si článek s [ukázkovými scénáři omezení přístupu k e-mailům](restrict-email-access-example-scenarios.md).**
+**Pokud se chcete podívat na ukázkové scénáře konfigurace zásad podmíněného přístupu, kterými můžete omezit přístup zařízení, prohlédněte si [ukázkové scénáře omezení přístupu k e-mailům](restrict-email-access-example-scenarios.md).**
 
-## Sledování dodržování předpisů a zásad podmíněného přístupu
+## <a name="monitor-the-compliance-and-conditional-access-policies"></a>Sledování dodržování předpisů a zásad podmíněného přístupu
 
-#### Zobrazení zařízení, která jsou blokovaná systémem Exchange
+#### <a name="to-view-devices-that-are-blocked-from-exchange"></a>Zobrazení zařízení, která jsou blokovaná systémem Exchange
 
 Na řídicím panelu [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] zvolte dlaždici **Zařízení blokovaná systémem Exchange** a zobrazte počet blokovaných zařízení a odkazy na další informace.
-![Snímek obrazovky řídicího panelu Intune zobrazující počet zařízení, která mají blokovaný přístup k Exchangi](../media/IntuneSA6BlockedDevices.PNG)
+![Snímek obrazovky řídicího panelu Intune znázorňující počet zařízení se zablokovaným přístupem k Exchangi](../media/IntuneSA6BlockedDevices.PNG)
 
-## Další kroky
-[Omezení přístupu ke službě SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
+## <a name="next-steps"></a>Další kroky
+[Omezení přístupu k SharePointu Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 
-[Omezení přístupu ke službě Online Skype pro firmy](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
+[Omezení přístupu k Online Skypu pro firmy](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -14,23 +14,23 @@ ms.assetid: c3a17884-442a-44f5-bc81-4589e823f65e
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 581e880fa4308ec627f5b2c1242fb5b30b713743
-ms.openlocfilehash: 0fbc8fc23ce65987e4694bce0748362d8ce10153
+ms.sourcegitcommit: ec004a75ed45d27934cc908674a709cf5c024c8e
+ms.openlocfilehash: 9cae8dbf9d5b9cd993bd29e4eabb8bc04663bc25
 
 
 ---
 
 
-# Vytvoření zásad a publikování aplikace pro testovací uživatele
+# <a name="create-policies-and-publish-an-app-to-evaluation-users"></a>Vytvoření zásad a publikování aplikace pro testovací uživatele
 Intune nabízí nastavení, které pomáhá řídit nastavení zabezpečení na mobilních zařízeních, spravovat nastavení brány Windows Firewall a Endpoint Protection pro počítače a nasazovat aplikace. Pokud chcete Intune používat pro zařízení, která nakonfigurujete pro použití v produkčním prostředí po skončení testování, je bezpodmínečně nutné postupovat podle pokynů v tématech [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) a [Pomoc se zabezpečením počítačů s Windows pomocí služby Endpoint Protection pro Microsoft Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune).
 
-Pomocí Intune můžete provádět dva typy instalace aplikací. První je **požadovaná instalace**, která aplikaci automaticky nasadí do spravovaných počítačů. Druhá je **dostupná instalace**, která nasadí aplikaci nebo odkaz na aplikaci na portálu společnosti Intune, aby si mohli uživatelé vybrat, jestli ji chtějí mít nainstalovanou na počítači nebo na mobilním zařízení.
+Pomocí Intune můžete provádět dva typy instalace aplikací. První je **požadovaná instalace**, která aplikaci automaticky nasadí do spravovaných zařízení. Druhá je **dostupná instalace**, která nasadí aplikaci nebo odkaz na aplikaci na portálu společnosti Intune, aby si mohli uživatelé vybrat, jestli ji chtějí mít nainstalovanou na počítači nebo na mobilním zařízení.
 
 Než použijete Intune k nasazení aplikací, zkontrolujte, že máte příslušné licence k publikování, distribuci a použití aplikace. Pracovní prostor **Licence** umožňuje přidávat a spravovat informace o licenční smlouvě pro aplikace nebo software zakoupené prostřednictvím multilicenční smlouvy s Microsoftem a pro aplikace nebo software Microsoftu nebo jiného subjektu než Microsoftu zakoupené jiným způsobem. Potom můžete vytvořit sestavy licencí, které budou zobrazovat informace o využití spravovaných licencí ve vaší společnosti, abyste měli pořád přehled, nebo informace o aktivitě využití licencí.
 
 V následujícím postupu nastavíte zásady konfigurace mobilního zařízení a zásady brány firewall počítače s Windows a nakonfigurujete Skype jako instalaci dostupnou pro mobilní zařízení po jejich registraci. Po přidání a nasazení nových zásad zdědí všichni uživatelé nebo zařízení ve skupině, do které jste zásadu nasadili, tato nastavení jako svoje základní zásady. Podrobnosti těchto zásad můžete později kdykoli zkontrolovat nebo upravit v pracovním prostoru **Zásady** v konzole pro správu.
 
-## Vytvoření a nasazení zásady konfigurace mobilních zařízení
+## <a name="create-and-deploy-a-mobile-device-configuration-policy"></a>Vytvoření a nasazení zásady konfigurace mobilních zařízení
 
 1.  Otevřete [konzolu pro správu Intune](https://manage.microsoft.com/).
 
@@ -38,13 +38,13 @@ V následujícím postupu nastavíte zásady konfigurace mobilního zařízení 
 
 3.  V seznamu **Úlohy** na stránce **Přehled zásad** vyberte **Přidat zásadu**.
 
-4.  V seznamu zásad rozbalte platformu, pro kterou chcete vytvořit zásadu, vyberte **Všeobecná konfigurace**, zvolte **Vytvoření a nasazení zásad s doporučeným nastavením** a potom zvolte **Vytvořit zásadu**.
+4.  V seznamu zásad rozbalte platformu, pro kterou chcete vytvořit zásadu, vyberte **Všeobecná konfigurace**, zvolte **Vytvoření a nasazení vlastních zásad** a potom zvolte **Vytvořit zásadu**.
 
 5.  Po zobrazení výzvy **Vyberte skupiny, do kterých chcete nasadit tuto zásadu** vyberte ze seznamu položku **Moji uživatelé zkušební verze** a zvolte **Přidat** &gt; **OK**.
 
 Vaše zásada se zobrazí v seznamu zásad konfigurace a byla nasazena do skupiny **Moji uživatelé zkušební verze** . Nastavení zásady zobrazíte tak, že na zásadu dvakrát kliknete.
 
-## Publikování aplikace Skype pro mobilní zařízení
+## <a name="publish-the-skype-app-for-mobile-devices"></a>Publikování aplikace Skype pro mobilní zařízení
 
 1.  V [konzole pro správu Intune](https://manage.microsoft.com/) zvolte ikonu **Aplikace** a pak zvolte **Aplikace** &gt; **Přidat aplikaci**. Po zobrazení výzvy zadejte své přihlašovací údaje Intune.
 
@@ -91,7 +91,7 @@ Vaše zásada se zobrazí v seznamu zásad konfigurace a byla nasazena do skupin
 
 Aplikace Skype je teď dostupná k instalaci na mobilních zařízeních z portálu společnosti, ale nejdřív je potřeba nainstalovat na počítačích a mobilních zařízeních software Intune.
 
-### Další kroky
+### <a name="next-steps"></a>Další kroky
 Gratulujeme! Právě jste dokončili krok 4 příručky pro *testování Microsoft Intune*.
 
 >[!div class="step-by-step"]
@@ -100,6 +100,6 @@ Gratulujeme! Právě jste dokončili krok 4 příručky pro *testování Microso
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

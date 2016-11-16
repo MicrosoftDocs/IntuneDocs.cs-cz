@@ -2,8 +2,8 @@
 title: "Připojení VPN | Microsoft Intune"
 description: "K nasazení nastavení VPN pro uživatele a zařízení ve vaší organizaci použijte profily VPN."
 keywords: 
-author: Nbigman
-ms.author: nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/14/2016
 ms.topic: article
@@ -14,15 +14,15 @@ ms.assetid: abc57093-7351-408f-9f41-a30877f96f73
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7b4acce1b1861ca2c2d1432b0258ad1e95e46d2a
-ms.openlocfilehash: 188cb3890da83332431743445959bba73e7f2484
+ms.sourcegitcommit: 56988f0a69e6ff281439e6e77d1814ec130c8b49
+ms.openlocfilehash: 00845ca053f443691a103c3d775906877eb59c9c
 
 
 ---
 
-# Připojení VPN v Microsoft Intune
+# <a name="vpn-connections-in-microsoft-intune"></a>Připojení VPN v Microsoft Intune
 
-Virtuální privátní sítě (VPN) umožňují uživatelům zabezpečený vzdálený přístup k firemní síti. K navázání připojení se serverem VPN používají zařízení *profil připojení VPN*. Pomocí *profilů VPN* v Microsoft Intune můžete uživatelům a zařízením v organizaci nasadit nastavení VPN, aby se mohli snadno a bezpečně připojit k síti. 
+Virtuální privátní sítě (VPN) umožňují uživatelům zabezpečený vzdálený přístup k firemní síti. K navázání připojení se serverem VPN používají zařízení *profil připojení VPN*. Pomocí *profilů VPN* v Microsoft Intune můžete uživatelům a zařízením v organizaci nasadit nastavení VPN, aby se mohli snadno a bezpečně připojit k síti.
 
 Chcete třeba zřizovat všechna zařízení s iOS s nastavením požadovaným pro připojení sdílené položky souboru v podnikové síti. Vytvoříte profil VPN s nastavením nezbytným pro připojování k podnikové síti, a potom tento profil nasadíte u všech uživatelů se zařízeními iOS. Uživatelé uvidí připojení VPN v seznamu dostupných sítí a můžou se připojit s minimálním úsilím.
 
@@ -38,7 +38,9 @@ Pomocí profilů VPN můžete konfigurovat následující typy zařízení:
 
 Možnosti konfigurace profilu VPN se liší podle vybraného typu zařízení.
 
-## Typy připojení VPN
+[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
+
+## <a name="vpn-connection-types"></a>Typy připojení VPN
 
 Intune podporuje vytváření profilů VPN, které používají následující typy připojení:
 
@@ -60,35 +62,35 @@ IKEv2|Vlastní profil iOS|Ne |Ne |Ne|Ano (OMA-URI)|Ano|
 PPTP|Vlastní profil iOS|Ne |Ne |Ne|Ne|Ano|
 L2TP|Vlastní profil iOS|Ne |Ne |Ne|Ano (OMA-URI)|Ano|
 
-\* Bez dalších nastavení, která jsou jinak k dispozici pro Windows 10
+\* Bez dalšího nastavení, které je jinak dostupné pro Windows 10.
 
 > [!IMPORTANT]
 > Před použitím profilů VPN nasazených do zařízení je nutné nainstalovat příslušnou aplikaci VPN pro profil. Informace z tématu [Nasazení aplikací v Microsoft Intune](deploy-apps-in-microsoft-intune.md) vám můžou pomoct s nasazením správné aplikace pomocí Intune.  
 
  Postup vytváření vlastních profilů VPN pomocí nastavení URI najdete v tématu [Vlastní konfigurace pro profily VPN](custom-configurations-for-vpn-profiles.md).     
 
-## Metody zabezpečení profilů VPN
+## <a name="methods-of-securing-vpn-profiles"></a>Metody zabezpečení profilů VPN
 
 Profily VPN můžou používat spoustu různých typů připojení a protokoly od různých výrobců. Tato připojení jsou obvykle zabezpečená jedním ze dvou způsobů.
 
-### Certifikáty
+### <a name="certificates"></a>Certifikáty
 
 Když vytváříte profil VPN, vybíráte profil certifikátu SCEP nebo PFX, který jste předtím vytvořili v Intune. Označuje se jako certifikát identity. Slouží k ověřování vůči profilu důvěryhodného certifikátu (neboli *kořenového certifikátu*), jehož vytvořením jste potvrdili, že se zařízení uživatele může připojit. Důvěryhodný certifikát je nasazený na počítači, který ověřuje připojení VPN, většinou na serveru VPN.
 
 Další informace o vytváření a používání profilů certifikátů v Intune najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů](secure-resource-access-with-certificate-profiles.md).
 
-### Uživatelské jméno a heslo
+### <a name="user-name-and-password"></a>Uživatelské jméno a heslo
 
 Uživatel se ověřuje na serveru sítě VPN zadáním uživatelského jména a hesla.
 
-## Vytvoření profilu sítě VPN
+## <a name="create-a-vpn-profile"></a>Vytvoření profilu sítě VPN
 
 1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Zásady** > **Přidat zásadu**.
 2. Vyberte šablonu pro nové zásady rozšířením příslušného typu zařízení a potom vyberte profil sítě VPN pro toto zařízení:
     * **Profil VPN (Android 4 a novější)**
     * **Profil VPN (Android for Work)**
     * **Profil VPN (iOS 8.0 a novější)**
-    * **Profil sítě VPN (Mac OS X 10.9 a novější)**
+    * **Profil VPN (Mac OS X 10.9 a novější)**
     * **Profil VPN (Windows Phone 8.1 a novější)**
     * **Profil VPN (Windows Phone 8.1 a novější)**
     * **Profil VPN (Windows 10 Desktop a Mobile a novější)**
@@ -112,9 +114,9 @@ Název nastavení  |Další informace
 **IP adresa nebo plně kvalifikovaný název domény (FQDN) serveru**    |Zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se bude zařízení připojovat. Příklady: **192.168.1.1**, **vpn.contoso.com**.  Pokud je typ připojení **F5 Edge Client**, použijte pro zadání seznamu popisů a IP adres serveru pole **Seznam serverů**.         |         
 **Seznam serverů**     |Zvolením možnosti **Přidat** přidejte nový server sítě VPN určený pro připojení k síti VPN. Můžete taky určit, který server bude pro připojení výchozí. Tato možnost se zobrazí, jenom když je typ připojení **F5 Edge Client**.         
 **Odesílat veškerý přenos v síti prostřednictvím připojení VPN**     |Pokud vyberete tuto možnost, všechny síťové přenosy se budou odesílat prostřednictvím připojení VPN. Pokud tuto možnost nevyberete, klient bude dynamicky vyjednávat trasy pro dělené tunelové propojení při připojování k serveru sítě VPN jiného výrobce. Prostřednictvím tunelu VPN se odesílají pouze připojení k firemní síti. Tunelové propojení VPN se nepoužívá při připojení k prostředkům na Internetu.
-**Metoda ověření**| Vyberte metodu ověřování používanou pro připojení VPN: **Certifikáty** nebo **Uživatelské jméno a heslo**. (Nastavení **Uživatelské jméno a heslo** není dostupné, pokud je typ připojení Cisco AnyConnect.) Možnost **Metoda ověřování** není dostupná pro Windows 8.1.
-**Pamatovat přihlašovací údaje uživatele při každém přihlašování**|Výběrem této možnosti zajistíte, že se přihlašovací údaje uživatele uloží, takže je uživatel nebude muset zadávat při každém navázání připojení.
-**Vybrat klientský certifikát pro ověřování klientů (certifikát identity)**|Vyberte certifikát klienta SCEP, který jste dříve vytvořili a který se použije k ověření připojení VPN. Další informace o použití profilů certifikátů v Intune najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů v Microsoft Intune](secure-resource-access-with-certificate-profiles.md). Tato možnost se zobrazí jenom v případě, že je metoda ověřování **Certifikáty**.
+**Metoda ověřování**| Vyberte metodu ověřování používanou pro připojení VPN: **Certifikáty** nebo **Uživatelské jméno a heslo**. (Nastavení **Uživatelské jméno a heslo** není dostupné, pokud je typ připojení Cisco AnyConnect.) Možnost **Metoda ověřování** není dostupná pro Windows 8.1.
+**Zapamatovat si přihlašovací údaje při každém přihlášení**|Výběrem této možnosti zajistíte, že se přihlašovací údaje uživatele uloží, takže je uživatel nebude muset zadávat při každém navázání připojení.
+**Vyberte klientský certifikát pro ověření klienta (certifikát identity)**|Vyberte certifikát klienta SCEP, který jste dříve vytvořili a který se použije k ověření připojení VPN. Další informace o použití profilů certifikátů v Intune najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů v Microsoft Intune](secure-resource-access-with-certificate-profiles.md). Tato možnost se zobrazí jenom v případě, že je metoda ověřování **Certifikáty**.
 **Role**| Zadejte název role uživatele, který má přístup k tomuto připojení. Role uživatele definuje osobní nastavení a možnosti a povolí nebo zakáže určité funkce přístupu. Tato možnost se zobrazí jenom v případě, že typ připojení je **Pulse Secure**.
 **Sféra**|Zadejte název sféry ověření, kterou chcete použít. Sféra ověření je seskupení prostředků ověření používaných typem připojení Pulse Secure. Tato možnost se zobrazí jenom v případě, že typ připojení je **Pulse Secure**.
 **Doména nebo skupina přihlášení**|Zadejte název domény nebo skupiny přihlášení, k níž se chcete připojit. Tato možnost se zobrazí jenom v případě, že se je typ připojení **Dell SonicWALL Mobile Connect**.
@@ -151,22 +153,22 @@ Vytvořením vlastního nastavení OMA-URI můžete omezit využití sítě VPN 
 
 Nová zásada se zobrazí v uzlu **Zásady konfigurace** pracovního prostoru **Zásady**.
 
-### VPN na vyžádání pro zařízení s iOS
+### <a name="ondemand-vpn-for-ios-devices"></a>VPN na vyžádání pro zařízení s iOS
 VPN na vyžádání můžete konfigurovat pro zařízení s iOS 8.0 a novější verzí.
 
 > [!NOTE]
 >  
 > VPN pro aplikaci a VPN na vyžádání nemůžete použít ve stejných zásadách.
- 
-1. Na stránce konfigurace zásad najděte **Pravidla pro připojení na vyžádání pro toto připojení VPN**. Sloupce jsou označeny **Shoda** – podmínka, kterou pravidla kontrolují, a **Akce** – akce, kterou zásady spustí při splnění podmínky. 
+
+1. Na stránce konfigurace zásad najděte **Pravidla pro připojení na vyžádání pro toto připojení VPN**. Sloupce jsou označeny **Shoda** – podmínka, kterou pravidla kontrolují, a **Akce** – akce, kterou zásady spustí při splnění podmínky.
 2. Zvolte **Přidat** a vytvořte pravidlo. Existují dva typy shod, které v pravidle můžete nastavit. V jednotlivém pravidle můžete konfigurovat pouze jeden z těchto typů.
-  - **SSID**, který odkazuje na bezdrátové sítě. 
+  - **SSID**, který odkazuje na bezdrátové sítě.
   - **Domény pro hledání DNS**, které jsou...  Můžete použít plně kvalifikované názvy domény, například *team. corp.contoso.com*, nebo můžete použít domény, například *contoso.com*, které jsou obdobou použití * *.contoso.com*.
 3. Volitelné: Zadejte test řetězce adresy URL, což je adresa URL, kterou pravidlo používá jako test. Pokud zařízení, na kterém je tento profil nainstalovaný, má k této adrese URL přístup bez přesměrování, naváže se připojení VPN a zařízení se připojí k cílové adrese URL. Uživatel neuvidí web testu řetězce adresy URL. Příkladem testu řetězce adresy URL je adresa auditujícího webového serveru, který zkontroluje splnění bezpečnostních předpisů zařízením předtím, než ho připojí k VPN. Další možností je, že adresa URL otestuje schopnost VPN připojit se k webu předtím, než se zařízení připojí k cílové adrese URL skrze VPN.
 4. Vyberte jednu z těchto akcí:
   - **Připojit**
   - **Vyhodnotit připojení**, která má tři nastavení. a. **Akce domény** – zvolte **Připojit v případě potřeby** nebo **Nikdy nepřipojovat**.
-     b. **Čárkami oddělený seznam domén** – Toto konfigurujete jenom v případě, že zvolíte **Akce domény** v možnosti **Připojit v případě potřeby**.  
+     b. **Čárkami oddělený seznam domén** – Toto konfigurujete jenom v případě, že zvolíte **Akce domény** v možnosti **Připojit v případě potřeby**. 
      c. **Požadovaný test řetězce adresy URL** – Adresa URL protokolu HTTP nebo HTTPS (upřednostňováno), například *https://vpntestprobe.contoso.com*. Pravidlo zkontroluje, jestli z této adresy přichází odezva. Pokud ne a **Akce domény** je nastavená na **Připojit v případě potřeby**, spustí se VPN.
      > [!TIP]
      >
@@ -174,10 +176,10 @@ VPN na vyžádání můžete konfigurovat pro zařízení s iOS 8.0 a novější
   - **Ignorovat** – Způsobí ignorování jakýchkoli změn v připojení VPN. Pokud je VPN připojená, nechat ji připojenou, pokud není připojená, nepřipojovat. Můžete mít například pravidlo, které připojuje VPN pro všechny interní podnikové weby, ale chcete jeden z těchto interních webů zpřístupnit jenom v případě, kdy je zařízení skutečně připojené k podnikové síti. V takovém případě vytvoříte pravidlo ignorování pro tento jeden web.
   - **Odpojit** – Při splnění podmínek odpojí zařízení od VPN. Do pole **SSID** můžete například uvést podnikové bezdrátové sítě a vytvořit pravidlo, které zařízení odpojí od VPN, když se připojí k jedné z těchto sítí.
 
-Pravidla pro konkrétní domény se vyhodnocují před pravidly pro všechny domény. 
+Pravidla pro konkrétní domény se vyhodnocují před pravidly pro všechny domény.
 
 
-## Nasazení zásady
+## <a name="deploy-the-policy"></a>Nasazení zásady
 
 1.  V pracovním prostoru **Zásady** vyberte zásadu, kterou chcete nasadit, a potom vyberte **Spravovat nasazení**.
 
@@ -192,13 +194,13 @@ Po úspěšné nasazení se uživatelům zobrazí název připojení VPN, který
 
 Shrnutí stavu a výstrahy na stránce **Přehled** v pracovním prostoru **Zásady** identifikují problémy se zásadami, které vyžadují vaši pozornost. Kromě toho se v pracovním prostoru Řídicí panel zobrazí shrnutí stavu.
 
-### Související témata
+### <a name="see-also"></a>Související témata
 [Vlastní konfigurace pro profily VPN](Custom-configurations-for-VPN-profiles.md)
 
 [VPN pro aplikaci pro Android Pulse Secure](per-app-vpn-for-android-pulse-secure.md)
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

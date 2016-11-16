@@ -2,29 +2,29 @@
 title: "Portál společnosti Microsoft Intune | Microsoft Intune"
 description: "nastavení Portálu společnosti Intune"
 keywords: 
-author: barlanmsft
-ms.author: barlan
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 10/14/2016
+ms.date: 11/3/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4dc3d084-0394-4ee7-b7fa-a72523928627
-ms.reviewer: jve
+ms.reviewer: jve, arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 584cfc22cd885149054c1e5e42cc539a478db637
-ms.openlocfilehash: 0a9d7bdce29532f63c724d406cd13cd619c9034e
+ms.sourcegitcommit: 4ae0bd214dbae7e459f52b79e388aab23b5d6e8e
+ms.openlocfilehash: bea321c455a13a11766f19de42df193cefecf05f
 
 
 ---
 
-# Firemní portál Microsoft Intune
+# <a name="microsoft-intune-company-portal"></a>Firemní portál Microsoft Intune
 
 Před nastavením Intune si přečtěte toto téma a další požadavky uvedené v tématu [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md).
 
-Portál společnosti Intune je nástroj, který poskytuje uživatelům přístup k firemním datům a aplikacím. Portál společnosti je dostupný ve dvou formách:
+Portál společnosti Intune nabízí uživatelům přístup k firemním datům a aplikacím. Portál společnosti je dostupný ve dvou formách:
 
 -   **Aplikace Portál společnosti**: Aplikace, která je dostupná na zařízeních spravovaných službou [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Další informace o aplikacích Portál společnosti pro [Android](/Intune/EndUser/using-your-android-device-with-intune), [iOS](/Intune/EndUser/using-your-ios-or-mac-os-x-device-with-intune) a [Windows](/Intune/EndUser/using-your-windows-device-with-intune).
 
@@ -54,13 +54,13 @@ Než bude moct uživatel přistupovat k Portálu společnosti, musí mít jeho �
 
 > __iOS:__ Aplikace Portál společnosti pro iOS je vydaná ve [všech zemích, kde je dostupný](https://go.microsoft.com/fwlink/?linkid=831284) App Store pro zařízení Apple iOS.
 
-> __Android:__ Aplikace Portál společnosti pro Android není k dispozici v těchto zemích: Antigua a Barbuda, Aruba, Benin, Burkina Faso, Čína, Gabon, Guinea-Bissau, Haiti, Írán, Kambodža, Kuba, Laos, Mali, Mosambik, Myanmar (Barma), Niger, Nizozemské Antily, Papua – Nová Guinea, Súdán a Togo. V těchto zemích použijte alternativní řešení, tzn. [zkušebně načtěte aplikaci Portál společnosti ve verzi pro Android před prodejem](https://www.microsoft.com/en-us/download/details.aspx?id=49140).  
+> __Android__: Aplikace Portál společnosti pro Android v současnosti není dostupná v Číně. V těchto zemích použijte alternativní řešení, tzn. [zkušebně načtěte aplikaci Portál společnosti ve verzi pro Android před prodejem](https://www.microsoft.com/en-us/download/details.aspx?id=49140).  
 
-### Související témata
-[Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
+### <a name="see-also"></a>Související témata
+[Co potřebujete vědět, než začnete používat Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

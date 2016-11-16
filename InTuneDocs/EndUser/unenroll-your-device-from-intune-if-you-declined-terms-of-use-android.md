@@ -2,10 +2,10 @@
 title: Unenroll your device from Intune if you declined "Terms of Use" | Microsoft Intune
 description: "Popisuje, jak zrušit registraci zařízení s Androidem v Intune, pokud jste odmítli podmínky použití a nemůžete se přihlásit k aplikaci Portál společnosti."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,16 +14,16 @@ ms.assetid: 4278f000-0258-4de5-93a1-195b48e5061e
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0d32aa982cf9d45da36f71be5554f31375521e35
-ms.openlocfilehash: 4f5088bc645fed0451885078f5ab0dcd04a33d81
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 6303400645bf26ede733413fe2dabdb360e3bafb
 
 
 ---
 
 
-# Zrušení registrace zařízení v Intune, pokud odmítnete podmínky použití
+# <a name="unenroll-your-device-from-intune-if-you-declined-terms-of-use"></a>Zrušení registrace zařízení v Intune, pokud odmítnete podmínky použití
 
-Nejlepší způsob, jak zrušit registraci zařízení s Androidem, je přijmout podmínky použití, přihlásit se do aplikace Portál společnosti a potom zrušit registraci zařízení pomocí [těchto pokynů](unenroll-your-device-from-intune-android.md). Pokud ale při pokusu o přihlášení k aplikaci Portál společnosti odmítnete podmínky použití, bude vám při budoucích pokusech zabráněno v přihlášení k aplikaci Portál společnosti. V tom případě použijte ke zrušení registrace zařízení tyto pokyny s „alternativním postupem“.
+Nejlepší způsob, jak zrušit registraci zařízení s Androidem, je přijmout podmínky použití, přihlásit se do aplikace Portál společnosti a potom zrušit registraci zařízení pomocí [těchto pokynů](unenroll-your-device-from-intune-android.md). Pokud při pokusu o přihlášení do aplikace Portál společnosti odmítnete přijmout podmínky použití, nebudou další pokusy o přihlášení k této aplikaci v budoucnosti možné. Proto musíte ke zrušení registrace zařízení použít alternativní postup.
 
 Když odinstalujete aplikaci Portál společnosti, zruší se také registrace vašeho zařízení v Intune. Vaše zařízení už nebude mít přístup k prostředkům společnosti. Další informace o tom, co se stane, když zrušíte registraci, najdete v tématu [Co se stane, když zrušíte registraci zařízení v Intune](what-happens-if-you-unenroll-your-device-from-intune-android.md).
 
@@ -39,10 +39,10 @@ Postup zrušení registrace zařízení v Intune pomocí aplikace Portál spole
 
     Teď můžete aplikaci Portál společnosti odinstalovat.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT (kontaktní informace najdete na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište týmu Microsoft Android na adresu wintunedroidfbk@microsoft.com.
+Potřebujete ještě další pomoc? Obraťte se na správce IT (kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište [týmu Microsoft Android](mailto:wintunedroidfbk@microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

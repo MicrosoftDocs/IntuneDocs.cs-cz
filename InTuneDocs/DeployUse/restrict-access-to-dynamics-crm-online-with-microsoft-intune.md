@@ -1,5 +1,5 @@
 ---
-title: "Omezení přístupu k e-mailu na Dynamics CRM Online | Microsoft Intune"
+title: "Omezení přístupu k aplikaci Dynamics CRM Online | Microsoft Intune"
 description: "Chraňte a kontrolujte přístup k Dynamics CRM Online pomocí podmíněného přístupu."
 keywords: 
 author: karthikaraman
@@ -14,13 +14,13 @@ ms.assetid: f1c4522b-5a34-4f5a-89d2-7809c4352af7
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: db1d43dd647122e7ba8ebd4e6df48e3c970a3392
-ms.openlocfilehash: 233b7cad41fbd35e0fef615737fc41f8a49db35e
+ms.sourcegitcommit: b1c6bb31d9ed2d52f309e04ba9de6f24f3939923
+ms.openlocfilehash: 437c683ed81d78173ef262d3747095214593645c
 
 
 ---
 
-# Omezení přístupu k e-mailu na Dynamics CRM Online s Intune
+# <a name="restrict-access-to-dynamics-crm-online-with-intune"></a>Omezení přístupu k aplikaci Dynamics CRM Online v Intune
 Můžete řídit přístup k Microsoft Dynamics CRM Online ze zařízení s iOS a Androidem s podmíněným přístupem Microsoft Intune.  Podmíněný přístup Intune má dvě součásti:
 * [Zásady dodržování předpisů zařízení](introduction-to-device-compliance-policies-in-microsoft-intune.md), které zařízení musí dodržovat, aby mohlo být považované za vyhovující.
 * [Zásady podmíněného přístupu](restrict-access-to-email-and-o365-services-with-microsoft-intune.md), kde můžete určit podmínky, které zařízení musí splňovat, aby mělo přístup ke službě.
@@ -44,8 +44,8 @@ Pokud není podmínka splněná, zobrazí se uživateli při přihlášení jedn
 * Pokud není zařízení zaregistrované v Microsoft Intune nebo v Azure Active Directory, zobrazí se zpráva s pokyny pro instalaci aplikace portálu společnosti a registraci.
 * Pokud zařízení není vyhovující, zobrazí se zpráva, která uživatele přesměruje na web portálu společnosti Microsoft Intune nebo na aplikaci Portál společnosti, kde může najít informace o problému a postupu při jeho řešení.
 
-## Konfigurace podmíněného přístupu pro Dynamics CRM Online  
-### Krok 1: Konfigurace skupin zabezpečení služby Active Directory
+## <a name="configure-conditional-access-for-dynamics-crm-online"></a>Konfigurace podmíněného přístupu pro Dynamics CRM Online  
+### <a name="step-1-configure-active-directory-security-groups"></a>Krok 1: Konfigurace skupin zabezpečení služby Active Directory
 
 Než začnete, nakonfigurujte pro skupiny zabezpečení služby Azure Active Directory zásadu podmíněného přístupu. Tyto skupiny můžete nakonfigurovat v **Centru pro správu Office 365**. Tyto skupiny se použijí k cílení nebo vyloučení uživatelů ze zásady. Pokud je uživatel cílem zásady, musí každé jím používané zařízení splňovat zásady, aby měl přístup k prostředkům.
 
@@ -55,7 +55,7 @@ Můžete určit dva typy skupin, které se použijí pro zásady Dynamics CRM:
 
 Pokud je uživatel v obou skupinách, bude ze zásad vyloučený.
 
-### Krok 2: Konfigurace a nasazení zásad dodržování předpisů
+### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>Krok 2: Konfigurace a nasazení zásad dodržování předpisů
 [Vytvořte](create-a-device-compliance-policy-in-microsoft-intune.md) a [nasaďte](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md) zásady dodržování přepisů na všechna zařízení, která budou zásadami ovlivněná. Toto jsou všechna zařízení, která uživatelé používají v cílových skupinách.
 
 > [!NOTE]
@@ -65,7 +65,7 @@ Pokud je uživatel v obou skupinách, bude ze zásad vyloučený.
 > Pokud jste zásady dodržování předpisů nenasadili, budou se zařízení považovat za vyhovující.
 
 Až budete připravení, pokračujte Krokem 3.
-### Krok 3: Konfigurace zásad Dynamics CRM
+### <a name="step-3-configure-the-dynamics-crm-policy"></a>Krok 3: Konfigurace zásad Dynamics CRM
 V dalším kroku nakonfigurujte zásadu, která bude vyžadovat, aby k Dynamics CRM měla přístup jenom spravovaná a vyhovující zařízení. Tato zásada bude uložená v Azure Active Directory.
 
 1.  V konzole pro správu Microsoft Intune zvolte **Zásady > Podmíněný přístup > Zásady pro Dynamics CRM Online**.
@@ -81,7 +81,7 @@ V dalším kroku nakonfigurujte zásadu, která bude vyžadovat, aby k Dynamics 
 6.  Po dokončení vyberte **Uložit**.
 
 Nyní máte nakonfigurovaný podmíněný přístup pro Dynamics CRM. Zásady podmíněného přístupu není potřeba nasazovat, projeví se okamžitě.
-##  Sledování dodržování předpisů a zásad podmíněného přístupu
+##  <a name="monitor-the-compliance-and-conditional-access-policies"></a>Sledování dodržování předpisů a zásad podmíněného přístupu
 
 V pracovním prostoru **Skupiny** se můžete podívat na stav podmíněného přístupu svých zařízení.
 
@@ -90,16 +90,16 @@ Vyberte libovolnou skupinu mobilních zařízení a pak na kartě **Zařízení*
 * **Zařízení nevyhovující předpisům** – Tato zařízení jsou pro Dynamics CRM blokovaná.
 * **Zařízení zaregistrovaná v AAD a vyhovující předpisům** – Tato zařízení mají přístup k Dynamics CRM.
 
-##  Další kroky
-[Podmíněný přístup k Exchangi Online](restrict-access-to-exchange-online-with-microsoft-intune.md)
+##  <a name="next-steps"></a>Další kroky
+[Omezení přístupu k Exchangi Online](restrict-access-to-exchange-online-with-microsoft-intune.md)
 
 [Omezení přístupu k místnímu Exchangi](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
 [Omezení přístupu k SharePointu Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 
-[Omezení přístupu ke službě Online Skype pro firmy](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
+[Omezení přístupu k Online Skypu pro firmy](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO5-->
 
 

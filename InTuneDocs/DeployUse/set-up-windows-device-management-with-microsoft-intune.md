@@ -2,9 +2,8 @@
 title: "Nastavení správy pro zařízení s Windows v Microsoft Intune | Microsoft Intune"
 description: "Povolte správu mobilních zařízení (MDM) pro počítače s Windows včetně zařízení s Windows 10 pomocí služby Microsoft Intune."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
+author: staciebarker
+manager: stabar
 ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
@@ -14,13 +13,13 @@ ms.assetid: 9a18c0fe-9f03-4e84-a4d0-b63821bf5d25
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: dfc5241376033471a232b059ac07fa4488f05514
-ms.openlocfilehash: c405408bd6a1e2b0743566e413436aefbaa7018b
+ms.sourcegitcommit: 289e6019aa1a17deb91b38ed32f0432af0902a9d
+ms.openlocfilehash: 2d8f0694281249a30f55579b4cce2ade21fb14d7
 
 
 ---
 
-# Nastavení správy pro zařízení Windows
+# <a name="set-up-windows-device-management"></a>Nastavení správy pro zařízení Windows
 
 Správce služby Intune má dvě možnosti, jak povolit registraci a správu počítačů s Windows:
 
@@ -29,7 +28,7 @@ Správce služby Intune má dvě možnosti, jak povolit registraci a správu po�
 
 [!INCLUDE[AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
 
-## Nastavení registrace v aplikaci Portál společnosti
+## <a name="set-up-company-portal-app-enrollment"></a>Nastavení registrace v aplikaci Portál společnosti
 Nechte uživatele, ať si nainstalují aplikaci Portál společnosti služby Intune a použijí ji k registraci svých zařízení. Pokud vytvoříte záznamy prostředků DNS CNAME, uživatelé se mohou připojovat k Intune a registrovat se bez zadávání názvu serveru.
 
 1. **Nastavení Intune**<br>
@@ -42,7 +41,7 @@ Pokud jste to ještě neudělali, připravte se na správu mobilních zařízen�
   |CNAME|EnterpriseEnrollment.doména_společnosti.com|EnterpriseEnrollment-s.manage.microsoft.com |1 hodina|
   |CNAME|EnterpriseRegistration.doména_společnosti.com|EnterpriseRegistration.windows.net|1 hodina|
 
-  `EnterpriseEnrollment-s.manage.microsoft.com` – podporuje přesměrování na služby Intune s rozpoznáním domény z doménového názvu e-mailu.
+  `EnterpriseEnrollment-s.manage.microsoft.com` – podporuje přesměrování do služby Intune s rozpoznáním domény z názvu domény v e-mailu.
 
   `EnterpriseRegistration.windows.net` – podporuje zařízení s Windows 8.1 a Windows 10 Mobile, která k registraci do Azure Active Directory použijí pracovní nebo školní účet.
 
@@ -54,17 +53,17 @@ Pokud jste to ještě neudělali, připravte se na správu mobilních zařízen�
 
   ![Dialogové okno správy zařízení s Windows](../media/enroll-intune-winenr.png)
 
-4.  **Volitelné kroky**<br>U Windows 10 není třeba provádět krok **Přidat klíče pro zkušební načtení**. Krok **Nahrát na server certifikát pro podpis kódu** je potřeba jen tehdy, když budete distribuovat obchodní aplikace (LOB), které zařízení nemohou získat z Windows Storu. [Přečtěte si další informace](set-up-windows-phone-8.0-management-with-microsoft-intune.md).
+4.  **Volitelné kroky**<br>U Windows 10 není třeba provádět krok **Přidat klíče pro zkušební načtení**. Krok **Nahrát na server certifikát pro podpis kódu** je potřeba jen tehdy, když budete distribuovat obchodní aplikace (LOB), které zařízení nemohou získat z Windows Storu.
 
 6.  **Informování uživatelů**<br>Budete muset informovat uživatele, jak si mají svá zařízení zaregistrovat a co mohou očekávat od zařazení do systému správy:
       - [Co říct koncovým uživatelům o používání služby Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
-      - [Pokyny k zařízení s Windows pro koncové uživatele](../enduser/using-your-windows-device-with-intune.md)
+      - [Pokyny pro koncové uživatele zařízení s Windows](../enduser/using-your-windows-device-with-intune.md)
 
-### Viz taky
-[Předpoklady pro registraci zařízení do Microsoft Intune](prerequisites-for-enrollment.md)
+### <a name="see-also"></a>Viz taky
+[Předpoklady registrace zařízení v Microsoft Intune](prerequisites-for-enrollment.md)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

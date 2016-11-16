@@ -2,7 +2,7 @@
 title: "Vaše zařízení nesplňuje požadavek na minimální úroveň opravy zabezpečení | Microsoft Intune"
 description: 
 keywords: 
-author: barlan
+author: barlanmsft
 ms.author: barlan
 manager: angrobe
 ms.date: 09/25/2016
@@ -13,25 +13,25 @@ ms.technology:
 ms.assetid: b3e5994c-d215-4c72-8915-349bd0b2504d
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: 016449720f6e77b8862fcaa232d252eefa8b20b3
-ms.openlocfilehash: 8569d99d7f79b0a27f31aec33f364d30499c6520
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 257eff56731f991b80443d996485286c1ce63b3b
 
 
 ---
 
-# Vaše zařízení nesplňuje požadavek na minimální úroveň opravy zabezpečení
+# <a name="your-device-does-not-meet-the-minimum-security-patch"></a>Vaše zařízení nesplňuje požadavek na minimální úroveň opravy zabezpečení
 
 Pokud se zobrazí zpráva „Není nakonfigurována minimální úroveň opravy zabezpečení Androidu“, musíte nainstalovat alespoň minimální úroveň opravy zabezpečení nebo novější verzi. Váš správce IT vyžaduje, aby tato instalace chránila podniková data ve vašem zařízení s Androidem.
 
 Umístění aktuální úrovně opravy zabezpečení se liší v závislosti na typu zařízení s Androidem, které máte. Budete potřebovat zjistit, jestli máte zařízení Samsung Knox nebo jiný typ zařízení s Androidem. Pokud chcete zjistit, jestli máte zařízení Samsung Knox, přejděte do části **Nastavení** > **O telefonu**. Pokud se tu nezobrazí slovo „Knox“, nemáte zařízení s Samsung Knox.
 
-**Nejnovější verzi softwaru ve vašem zařízení zjistíte takto:**
+**Zjištění nejnovější verze softwaru v zařízení:**
 
 - Jiná zařízení než Samsung Knox: Zkuste přejít do části **Nastavení** > **O zařízení** > **informace o softwaru** > **Další** a pak hledejte v části **Úroveň oprav zabezpečení Androidu**. Názvy a umístění nabídek se v různých zařízeních s Androidem můžou trochu lišit.
 
 - Zařízení Samsung Knox: Přejděte do části **Nastavení** > **O telefonu** > **Verze softwaru zabezpečení**.
 
-**Při instalaci požadované opravy zabezpečení postupujte takto:**
+**Instalace požadované opravy zabezpečení:**
 
 - Jiná zařízení než Samsung Knox: Přejděte do části **Nastavení** > **O telefonu** > **Aktualizace softwaru**.
 
@@ -41,6 +41,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaj
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -2,8 +2,8 @@
 title: "Úlohy po konfiguraci | Microsoft Intune"
 description: "Dokončete volitelné konfigurační úlohy, abyste vylepšili fungování správy mobilních zařízení."
 keywords: 
-author: barlanmsft
-ms.author: barlan
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: get-started-article
@@ -14,8 +14,8 @@ ms.assetid: 34a412cd-8240-4e06-a60e-df270a711e7b
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0e125a283a017685c2442c34194da29466c8e67a
-ms.openlocfilehash: 81dfaeb25de75f178d8993b47aadb5d4880970c7
+ms.sourcegitcommit: 0d422b421c3716ad576c4fc565b181dec28c947e
+ms.openlocfilehash: 391279e37007ead39be3506c04b382a8296329b5
 
 
 ---
@@ -23,7 +23,7 @@ ms.openlocfilehash: 81dfaeb25de75f178d8993b47aadb5d4880970c7
 # Úlohy po konfiguraci
 Po dokončení kroků počáteční konfigurace pro placené předplatné Intune byste měli zvážit povolení funkce správy dalšího mobilního zařízení.
 
--   **Připojení Exchange k Intune:** Uživatelům s mobilními zařízeními, kteří se nezaregistrovali v Intune, můžete povolit správu přes protokol Exchange ActiveSync s využitím konektoru pro místní Exchange a pro Exchange Online v sadě Microsoft Office 365. Konektor Exchange slouží jako propojení s nasazením Exchange a umožňuje vám spravovat mobilní zařízení prostřednictvím konzoly pro správu Intune. Další informace o připojení Exchange Connector najdete v tématu [Správa mobilních zařízení pomocí protokolu Exchange ActiveSync a služby Microsoft Intune](/intune/deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune).
+-   **Připojení Exchange k Intune:** Uživatelům s mobilními zařízeními, kteří se nezaregistrovali v Intune, můžete povolit správu přes protokol Exchange ActiveSync s využitím konektoru pro místní Exchange a pro Exchange Online v sadě Microsoft Office 365. Exchange Connector vás připojí k nasazenému Exchangi a umožní vám spravovat mobilní zařízení prostřednictvím konzoly pro správu Intune. Další informace o připojení Exchange Connector najdete v tématu [Správa mobilních zařízení pomocí protokolu Exchange ActiveSync a služby Microsoft Intune](/intune/deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune).
 
 -   **Sestavy Intune:** Microsoft Intune nabízí výstrahy a sestavy, které můžete použít k monitorování zařízení, stavu licencí softwaru a akcí, které ovlivňují zařízení (třeba vymazání zařízení).  Další informace o vytváření sestav najdete v tématu [Monitorování a sestavy v Microsoft Intune](/intune/deploy-use/monitoring-and-reports-with-microsoft-intune).
 
@@ -31,6 +31,6 @@ Po dokončení kroků počáteční konfigurace pro placené předplatné Intune
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Oct16_HO4-->
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Správa zařízení ve vlastnictví firmy | Microsoft Intune"
-description: "Zařízení vlastněná společností (COD) mohou být spravovaná několika různými způsoby v závislosti na zařízení, způsobu jeho koupě a potřebách organizace."
+description: "Registrace zařízení patřících společnosti může probíhat různě. Záleží vždy na typu zařízení, způsobu nákupu a potřebách organizace."
 keywords: 
 author: NathBarn
 manager: angrobe
@@ -13,46 +13,53 @@ ms.assetid: 2b60bbff-25e6-489b-9621-c71b4275fa06
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ecfeb73efed4a47256275120c52de232c556adfe
-ms.openlocfilehash: 58efadf2f9fc34a31070aff93e86083583630caa
+ms.sourcegitcommit: 88409332d203dc4ee82fdf98f89a94e5a89a7eed
+ms.openlocfilehash: c29cd2c0c4c5671a84f7c0b0ba473e6fb32604d9
 
 
 ---
 
-# Registrace zařízení vlastněných společností pomocí Microsoft Intune
-Zařízení vlastněná společností nebo organizací (COD) se mohou do Intune zaregistrovat několika různými způsoby v závislosti na zařízení, způsobu jeho koupě a potřebách organizace. Zařízení vlastněná společností jde také registrovat a spravovat nainstalováním aplikace Portál společnosti jako ve scénářích BYOD (Přineste si vlastní zařízení).
+# <a name="enroll-corporateowned-devices-by-using-intune"></a>Registrace zařízení vlastněných společností pomocí Intune
 
-## Zařízení s iOS ve vlastnictví firmy
-Tato metoda registrace je vhodná pro scénáře Vyberte si vlastní zařízení (CYOD), ve kterých organizace koupí zařízení pro uživatele, ale chce si zachovat jejich správu. Pokud organizace koupila zařízení s iOS, můžete předkonfigurovat registraci, aby bylo zařízení spravované od prvního zapnutí uživatelem. Intune podporuje registraci prostřednictvím [programu Apple Device Enrollment Program (DEP)](ios-device-enrollment-program-in-microsoft-intune.md) nebo s použitím nástroje Apple Configurator spuštěného na počítači Mac pro [přímou](ios-direct-enrollment-in-microsoft-intune.md) registraci nebo registraci pomocí [průvodce nastavením](ios-setup-assistant-enrollment-in-microsoft-intune.md).
+Zařízení vlastněná organizací nebo společností můžete do Intune zaregistrovat kvůli správě různým způsobem. Záleží na typu zařízení, způsobu jeho nákupu a potřebách organizace. Můžete také nainstalovat aplikaci Portál společnosti a používat ji k registraci a správě zařízení patřících společnosti, například ve scénářích BYOD (Přineste si vlastní zařízení).
 
-[Registrace zařízení iOS vlastněných společností](enroll-corporate-owned-ios-devices-in-microsoft-intune.md)
+## <a name="enroll-corporateowned-ios-devices"></a>Registrace zařízení s iOS vlastněných společností
 
-## Správce registrace zařízení
-Organizace mohou pomocí Intune spravovat velké počty mobilních zařízení s jediným uživatelským účtem nazývaným účet správce registrace. Po vytvoření účtu správce registrace zařízení může být tento účet použitý manažerem k registraci více než standardních pěti zařízení povolených ve výchozím nastavení běžným uživatelům. Registrace zařízení pomocí správce registrace zařízení funguje pouze u zařízení, která nepoužívá konkrétní uživatel. Tato zařízení jsou vhodná například pro aplikace POS nebo aplikace nástrojů, ale nejsou vhodná pro uživatele, kteří potřebují přístup k e-mailu nebo firemním prostředkům.
+Pro scénáře CYOD (Vyberte si vlastní zařízení) jsou vhodné způsoby registrace zařízení vlastněných společností. V prostředí CYOD organizace zaplatí zařízení, které si uživatel vybere, a organizace ho spravuje.
 
-[Registrace firemních zařízení pomocí správce registrace zařízení](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)
+Pokud uživatelům nabídnete zařízení s iOSem, ze kterých si mohou vybrat, můžete předem nakonfigurovat jejich registraci, aby bylo zařízení spravované v Intune od okamžiku, kdy ho uživatel zapne. Intune podporuje registraci prostřednictvím [programu Apple Device Enrollment Program (DEP)](ios-device-enrollment-program-in-microsoft-intune.md) nebo s použitím nástroje Apple Configurator spuštěného na počítači Mac pro [přímou](ios-direct-enrollment-in-microsoft-intune.md) registraci nebo registraci pomocí [průvodce nastavením](ios-setup-assistant-enrollment-in-microsoft-intune.md).
 
-## Registrace firemních stolních počítačů s Windows 10
+Přečtěte si, jak [zaregistrovat zařízení s iOSem patřící společnosti](enroll-corporate-owned-ios-devices-in-microsoft-intune.md).
 
-Pokud má vaše organizace Azure Active Directory Premium (AADP) nebo Enterprise Management Suite (EMS), můžete [zaregistrovat Windows 10 pro podniky](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview), takže budou automaticky označené jako „vlastněné společností“, když uživatelé přidají svůj pracovní nebo školní účet.
+## <a name="create-a-device-enrollment-manager-account"></a>Vytvoření účtu správce registrace zařízení
 
-## Identifikace zařízení jako vlastněných společností
+V Intune stačí vytvořit jeden účet správce registrace zařízení (DEM), který můžete použít ke správě velkého počtu mobilních zařízení v organizaci. Po vytvoření účtu DEM může jeho pověřený správce registrovat více než pět zařízení, což je povolený počet u standardního uživatele.
 
-Zařízení vlastněná společností jsou v seznamech zařízení uvedená v oddílu **Vlastnictví** jako **Firemní**. Zařízení je možné identifikovat jako vlastněná společností následujícími způsoby:
+Účet DEM můžete použít ke správě jenom těch zařízení, která nepoužívá jeden konkrétní uživatel. Tyto typy zařízení se hodí například pro aplikace POS a jednoúčelové aplikace, ale nehodí se pro uživatele, kteří potřebují přístup k e-mailu nebo k prostředkům společnosti.
 
- - [Registrovaná pomocí správce registrace zařízení (DEM)](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)
- - Registrovaná pomocí [programu DEP](ios-device-enrollment-program-in-microsoft-intune.md) společnosti Apple nebo nástroje [Apple Configurator](ios-setup-assistant-enrollment-in-microsoft-intune.md)
- - [Předem deklarovaná zařízení pomocí kódů IMEI](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md)
- - [Registrace Azure Active Directory/Enterprise Management Suite zařízení s Windows 10](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview)
+Přečtěte si, jak [použít účet DEM k registraci zařízení patřících společnosti](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md).
 
-### Číslo IMEI (International Mobile Equipment Identity)
+## <a name="enroll-corporateowned-windows-10-enterprise-devices"></a>Registrace zařízení s Windows 10 Enterprise patřících společnosti
 
-Čísla IMEI jsou běžnou vlastností zařízení u celé řady výrobců mobilních zařízení. Správci Intune mohou importovat čísla IMEI pro zařízení, která společnost vlastní. Když se stane zařízení spravovaným v Intune, je označené jako zařízení vlastněné společností.
+Pokud ve společnosti používáte Azure Active Directory Premium nebo Microsoft Enterprise Mobility Suite, můžete [registrovat zařízení s Windows 10 Enterprise](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview). Když uživatel přidá do zařízení pracovní nebo školní účet, bude zařízení automaticky označené jako „vlastněné společností“.
 
-[Určení podnikem vlastněných zařízení podle kódů IMEI (International Mobile Equipment Identity)](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md)
+## <a name="import-imei-numbers"></a>Import čísel IMEI
+
+Řada výrobců mobilních zařízení uvádí na svých výrobcích jedinečné číslo, které se nazývá IMEI (International Mobile Equipment Identity). U zařízení, která organizace vlastní, můžete čísla IMEI importovat. Zařízení, které spravujete v Intune, bude označené jako zařízení patřící společnosti.
+
+Přečtěte si, jak [používat čísla IMEI k označení zařízení vlastněných společností](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md).
+
+## <a name="identify-a-device-as-corporateowned"></a>Identifikace zařízení vlastněných společností
+
+V seznamu zařízení má **Vlastnictví** hodnotu **Firemní**. Zařízení vlastněné společností má jednu z těchto vlastností:
+
+ - K registraci zařízení byl [použit účet DEM](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md).
+ - K registraci zařízení byl [použit program Apple DEP](ios-device-enrollment-program-in-microsoft-intune.md) nebo [Apple Configurator](ios-setup-assistant-enrollment-in-microsoft-intune.md).
+ - Výrobce zařízení používá k [označení čísla IMEI](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md).
+ - Zařízení je zaregistrované v [Azure Active Directory nebo v Enterprise Mobility Suite jako zařízení s Windows 10 Enterprise](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview).
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

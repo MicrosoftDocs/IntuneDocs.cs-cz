@@ -2,7 +2,8 @@
 title: "Požadavky na registraci mobilních zařízení | Microsoft Intune"
 description: "Nastavte požadavky správy mobilních zařízení a připravte registraci různých operačních systémů."
 keywords: 
-author: NathBarn
+author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 07/25/2016
 ms.topic: article
@@ -13,34 +14,36 @@ ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 92e40930c0ccbeb3d98bef43b115fd92f24beaef
-ms.openlocfilehash: 93a29266ad9d18f444f0cc0c5aadf9b414eedfa2
+ms.sourcegitcommit: 289e6019aa1a17deb91b38ed32f0432af0902a9d
+ms.openlocfilehash: 391612c35a7665073ca8a5c629169e5be967ab59
 
 
 ---
 
-# Požadavky na správu mobilních zařízení v Intune
+# <a name="prerequisites-for-mobile-device-management-in-intune"></a>Požadavky na správu mobilních zařízení v Intune
 Pokud chcete zaměstnancům povolit registraci mobilních zařízení s Intune, proveďte následující kroky. Stejné kroky je třeba podniknout i v případě správy zařízení ve vlastnictví společnosti.
 
 |Kroky|Podrobnosti|  
 |-----------|-------------|  
 |**Krok 1:** [Povolení připojení](#step-1-enable-connections)|Zkontrolujte, zda máte nakonfigurovaný název domény a zda je připravena síťová komunikace|  
 |**Krok 2:** [Nastavení autority pro správu mobilních zařízení (MDM)](#step-2-set-mdm-authority)|Autorita pro správu mobilních zařízení definuje služby přiřazené k vašim zařízením|
-|**Krok 3:** [Konfigurace Portálu společnosti](#step-3-configure-company-portal)|Nakonfigurování uživatelského nastavení pro aplikaci Portál společnosti|  
-|**Krok 4:** [Přiřazení licencí uživatelům](#step-4-assign-user-licenses)|Přiřazení licencí Intune uživatelům, aby mohli zaregistrovat zařízení|
-|**Krok 5:** [Povolení registrace](#step-5-enable-enrollment)|Povolte nastavení správy systému iOS a Windows, specifické pro platformu. U zařízení Android není žádná další konfigurace zapotřebí.|
+|**Krok 3:** [Vytvoření skupin](#step-3-create-groups)|Nakonfigurování uživatelského nastavení pro aplikaci Portál společnosti|  
+|**Krok 4:** [Konfigurace Portálu společnosti](#step-4-configure-company-portal)|Nakonfigurování uživatelského nastavení pro aplikaci Portál společnosti|  
+|**Krok 5:** [Přiřazení licencí uživatelům](#step-5-assign-user-licenses)|Přiřazení licencí Intune uživatelům, aby mohli zaregistrovat zařízení|
+|**Krok 6:** [Povolení registrace](#step-6-enable-enrollment)|Povolte nastavení správy systému iOS a Windows, specifické pro platformu. U zařízení Android není žádná další konfigurace zapotřebí.|
+|**Krok 7:** [Další kroky](#step-7-next-steps)|Povolte nastavení správy systému iOS a Windows, specifické pro platformu. U zařízení Android není žádná další konfigurace zapotřebí.|
 
 Hledáte Intune s Configuration Managerem?
 > [!div class="button"]
-[Zobrazit dokumentaci SCCM >](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm)
+[Zobrazit dokumentaci k SCCM >](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm)
 
-## Krok 1: Povolení připojení
+## <a name="step-1-enable-connections"></a>Krok 1: Povolení připojení
 
 Ještě než povolíte registraci mobilních zařízení, zkontrolujte, zda jste provedli následující:
-- [Zkontrolujte požadované síťové porty a adresy URL](../get-started/network-infrastructure-requirements-for-microsoft-intune)
-- [Přidejte a ověřte název vaší domény](../get-started/domain-names-for-microsoft-intune)
+- [Kontrola požadovaných síťových adres URL a portů](../get-started/network-infrastructure-requirements-for-microsoft-intune)
+- [Přidání a ověření názvu domény](../get-started/domain-names-for-microsoft-intune)
 
-## Krok 2: Nastavení autority pro správu mobilních zařízení (MDM)
+## <a name="step-2-set-mdm-authority"></a>Krok 2: Nastavení autority pro správu mobilních zařízení (MDM)
 Autorita MDM definuje službu správy s oprávněním ke správě skupiny zařízení. Příklady možných autorit MDM zahrnují Intune samostatně a Configuration Manager s Intune. Pokud nastavíte Configuration Manager jako autoritu správy, ke správě mobilních zařízení nejde použít žádnou jinou službu.
 
 >[!IMPORTANT]
@@ -56,7 +59,11 @@ Autorita MDM definuje službu správy s oprávněním ke správě skupiny zaří
 
 3.  Intune požádá o potvrzení, že chcete Intune používat jako autoritu pro správu mobilních zařízení. Jestli chcete ke správě mobilních zařízení používat Microsoft Intune, zaškrtněte políčko a zvolte **Ano**.
 
-## Krok 3: Konfigurace Portálu společnosti
+## <a name="step-3-create-groups"></a>Krok 3: Vytvoření skupin
+
+Když vytvoříte skupiny uživatelů a zařízení, zjednodušíte tím správu a zlepšíte cílení nasazených aplikací, zásad a prostředků společnosti. [Přečtěte si, jak vytvářet skupiny.](use-groups-to-manage-users-and-devices-with-microsoft-intune.md#create-groups)
+
+## <a name="step-4-configure-company-portal"></a>Krok 4: Konfigurace Portálu společnosti
 
 Portál společnosti v Intune je místem, kde uživatelé přistupují k podnikovým datům a kde můžou dělat běžné úkoly, jako je registrace zařízení, instalace aplikací nebo vyhledání informací pro oddělení IT v případě žádosti o podporu.
 
@@ -67,7 +74,7 @@ Přizpůsobení Portálu společnosti pomáhá poskytnout známé a užitečné 
 
 ![admin-console-admin-workspace-comp-portal-settings](../media/cp_sa_cpsetup.PNG)
 
-### Kontaktní informace společnosti a prohlášení o zásadách ochrany osobních údajů
+### <a name="company-contact-information-and-privacy-statement"></a>Kontaktní informace společnosti a prohlášení o zásadách ochrany osobních údajů
 
 Název společnosti je zobrazen v záhlaví okna Portálu společnosti. Kontaktní informace a podrobnosti se uživatelům zobrazí na obrazovce Kontakt na IT v Portálu společnosti. Prohlášení o ochraně osobních údajů se zobrazí po kliknutí na odkaz na zásady ochrany osobních údajů.
 
@@ -76,11 +83,11 @@ Název společnosti je zobrazen v záhlaví okna Portálu společnosti. Kontaktn
     |Název společnosti|40|Tento název se zobrazí v záhlaví okna Portálu společnosti. **Poznámka:**: povolené jsou jen alfanumerické znaky. Toto pole nepodporuje speciální znaky.|
     |Jméno kontaktní osoby oddělení IT|40|Tento název se zobrazí na stránce **Kontakt na IT**.|
     |Telefonní číslo oddělení IT|20|Toto kontaktní číslo se zobrazí na stránce **Kontakt na IT**.|
-    |E-mailová adresa oddělení IT|40|Tato kontaktní adresa se zobrazí na stránce **Kontakt na IT**. Je potřeba zadat platnou e-mailovou adresu ve formátu **alias@nazevdomeny.com**.|
+    |E-mailová adresa oddělení IT|40|Tato kontaktní adresa se zobrazí na stránce **Kontakt na IT**. Je potřeba zadat platnou e-mailovou adresu ve formátu **alias@domainname.com**.|
     |Další informace|120|Tyto informace se zobrazí na stránce **Kontakt na IT**.|
     |Adresa URL prohlášení o zásadách ochrany osobních údajů společnosti|79|Můžete přidat vlastní prohlášení o zásadách ochrany osobních údajů společnosti, které se uživatelům zobrazí po kliknutí na příslušné odkazy v Portálu společnosti. Pole musí obsahovat platnou adresu URL ve formátu https://www.contoso.com.|
 
-### Kontaktní údaje podpory
+### <a name="support-contacts"></a>Kontaktní údaje podpory
 Web podpory je zobrazen uživatelům v Portálu společnosti, aby jim umožnil přístup k online podpoře.
 
 |Název pole|Maximální délka|Další informace|
@@ -89,7 +96,7 @@ Web podpory je zobrazen uživatelům v Portálu společnosti, aby jim umožnil p
     |Název webu|40|Toto je popisný název, který se zobrazí pro adresu URL webu podpory. Pokud zadáte adresu URL webu podpory bez popisného názvu, zobrazí se na stránce **Kontakt na IT** v Portálu společnosti text **Přejít na web IT**.|
 
 
-### Přizpůsobení obchodní značky
+### <a name="company-branding-customization"></a>Přizpůsobení obchodní značky
 
 Portál své společnosti si můžete přizpůsobit – můžete na něj umístit logo své společnosti, uvést na něm název své společnosti a použít na něm barevný motiv a pozadí podle svých představ.
 
@@ -102,7 +109,7 @@ Portál své společnosti si můžete přizpůsobit – můžete na něj umísti
 
 Po uložení změn můžete pomocí odkazů uvedených v dolní části stránky **Portál společnosti** v konzole pro správu zobrazit web Portál společnosti. Tyto odkazy se nedají změnit. Když se uživatel přihlásí, tyto odkazy zobrazí vaše předplatná v Portálu společnosti.
 
-## Krok 4: Přiřazení licencí uživatelům
+## <a name="step-5-assign-user-licenses"></a>Krok 5: Přiřazení licencí uživatelům
 
 **Portál pro správu Office 365** můžete použít k ručnímu přidání cloudových uživatelů a přiřazení licencí účtům cloudových uživatelů i účtům, které se synchronizovaly z místní služby Active Directory do Azure Active Directory (Azure AD). Můžete [synchronizovat místní uživatele s Azure AD](../get-started/domain-names-for-microsoft-intune#to-synchronize-on-premises-users-with-azure-ad.md).
 
@@ -112,28 +119,36 @@ Po uložení změn můžete pomocí odkazů uvedených v dolní části stránky
 
 3.  Uživatelský účet se teď přidá do skupiny uživatelů Microsoft Intune, která uděluje uživatelům oprávnění k používání služby a registraci zařízení do systému správy.
 
-### Synchronizace místních uživatelů s Azure AD
+### <a name="to-synchronize-onpremises-users-with-azure-ad"></a>Synchronizace místních uživatelů s Azure AD
 
 1. [Přidejte příponu UPN](https://technet.microsoft.com/en-us/library/cc772007.aspx) pro vaši vlastní doménu v místním Active Directory.
 2. Nastavte novou příponu UPN pro místní uživatele, které chcete importovat.
 3. Spusťte [synchronizaci Azure AD Connect](https://azure.microsoft.com/en-us/documentation/articles/active-directory-aadconnect/) a proveďte integraci místních uživatelů s Azure AD.
 4. Po úspěšné synchronizaci informací o uživatelských účtech můžete prostřednictvím [portálu pro správu Office 365](https://portal.office.com/Admin/Default.aspx) přiřadit licence Microsoft Intune.
 
-## Krok 5: Povolení registrace
+## <a name="step-6-enable-enrollment"></a>Krok 6: Povolení registrace
 Po nastavení autority správy mobilních zařízení musíte nastavit správu zařízení pro operační systémy, které vaše organizace hodlá podporovat. Kroky při nastavení správy zařízení se liší v závislosti na operačním systému. Operační systém Android například v konzole pro správu Intune nevyžaduje žádné akce. Operační systémy Windows a iOS naopak pro umožnění správy vyžadují vztah důvěryhodnosti mezi zařízením a Intune.
 
 Nastavte správu pro následující platformy:
-- [Android](set-up-android-management-with-microsoft-intune.md)
 - [iOS a Mac](set-up-ios-and-mac-management-with-microsoft-intune.md)
-- [Počítače a notebooky s Windows](set-up-windows-device-management-with-microsoft-intune.md)
+- [Android](set-up-android-management-with-microsoft-intune.md)
+- [Android for Work](set-up-android-for-work.md)
+- [Stolní a přenosné počítače s Windows](set-up-windows-device-management-with-microsoft-intune.md)
 - [Windows 10 Mobile a Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md)
 
-Rovněž můžete:
- - Použít [účet správce registrace zařízení](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md) k registraci více zařízení.
- - [Určit zařízení ve vlastnictví společnosti pomocí kódů IMEI](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md) k usnadnění registrace zařízení a cílových zásad.
+Můžete také povolit [registraci zařízení vlastněných společností](manage-corporate-owned-devices).
+
+## <a name="step-7-next-steps"></a>Krok 7: Další kroky
+
+Po povolení registrace doporučujeme nastavit správu, aby vyhovovala potřebám vašeho podniku. Příklady možností správy:
+
+- [Nasazení zásad, které spravují nastavení a funkce zařízení](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
+- [Povolení přístupu k prostředkům společnosti, jako je e-mail, Wi-Fi a VPN](enable-access-to-company-resources-with-microsoft-intune.md)
+- [Přidání aplikací](add-apps.md) a [nasazení aplikací](deploy-apps.md) do spravovaných zařízení
+- [Vytvoření zásad dodržování předpisů pro zařízení](introduction-to-device-compliance-policies-in-microsoft-intune.md) a [omezení přístupu podle dodržování předpisů](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

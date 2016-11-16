@@ -2,7 +2,7 @@
 title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s iOS nebo Mac OS X v Intune? | Microsoft Intune"
 description: 
 keywords: 
-author: barlan
+author: barlanmsft
 ms.author: barlan
 manager: angrobe
 ms.date: 10/25/2016
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fd54ec104a26ebae845dfe3942dac2e8d9dae4a9
-ms.openlocfilehash: fd5ad37706bc4d7f780c5059bda5305335b4ff68
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 737effbcd9d7e70186d874c3aefd8afaab05fca8
 
 
 ---
 
 
-# Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s iOS nebo Mac OS X v Intune?
+# <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-ios-or-mac-os-x-device-in-intune"></a>Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s iOS nebo Mac OS X v Intune?
 
 Když nainstalujete aplikaci Portál společnosti a potom v ní zaregistrujete své zařízení s iOS nebo Mac OS X v Intune, můžete v aplikaci Portál společnosti provádět tyto kroky:
 
@@ -36,7 +36,7 @@ Když nainstalujete aplikaci Portál společnosti a potom v ní zaregistrujete s
 
 Když svoje zařízení zaregistrujete do služby Intune, udělíte tím správci IT oprávnění ke správě vašeho zařízení, aby bylo možné lépe chránit informace společnosti na daném zařízení.
 
-**Co správci IT neuvidí**
+**Co správce IT nevidí**
 
 -   Webová historie a historie volání
 
@@ -52,7 +52,7 @@ Když svoje zařízení zaregistrujete do služby Intune, udělíte tím správc
 
 -   Z fotoaparátu
 
-**Co správci IT uvidí**
+**Co správce IT vidí**
 
 -   Model
 
@@ -96,6 +96,6 @@ Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na spr�
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

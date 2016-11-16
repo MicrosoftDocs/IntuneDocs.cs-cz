@@ -1,9 +1,9 @@
 ---
 title: "Správa licencí Intune | Microsoft Intune"
-description: "Vysvětluje způsob přiřazení licencí uživatelům pro vaše předplatné Intune."
+description: "Přiřaďte uživatelům licence k předplatnému Intune."
 keywords: 
-author: barlanmsft
-ms.author: barlan
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: get-started-article
@@ -14,8 +14,8 @@ ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f86fe2710318209a2a4373beea1590c5343cbf4c
-ms.openlocfilehash: 08e112bfae9a3655f428d53f68922fd3ff4713b4
+ms.sourcegitcommit: 0d422b421c3716ad576c4fc565b181dec28c947e
+ms.openlocfilehash: df2a8c526f3c569a491d999ee4c80a36a30b77e3
 
 
 ---
@@ -43,7 +43,7 @@ Pokud vaše předplatné sdílí Azure AD s jinými cloudovými službami přid
 
 3.  Uživatelský účet má teď potřebná oprávnění k používání služby a registraci zařízení pro správu.
 
-> [!NOTE] Jakmile uživatelé zaregistrují zařízení, zobrazí se v konzole. 
+> [!NOTE] Jakmile uživatelé zaregistrují zařízení, zobrazí se v konzole.
 
 ### Použití PowerShellu k selektivní správě uživatelských licencí pro EMS
 Organizace, které používají Microsoft Enterprise Mobility + Security (dříve Enterprise Mobility Suite), můžou mít uživatele, kteří v balíčku EMS vyžadují jenom služby Azure Active Directory Premium nebo Intune. Pomocí [rutin PowerShellu pro Azure Active Directory](https://msdn.microsoft.com/library/jj151815.aspx) můžete přiřadit jednu službu nebo podmnožinu služeb.
@@ -93,6 +93,6 @@ Gratulujeme! Právě jste dokončili krok 4 *úvodní příručky Intune*.
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO4-->
 
 

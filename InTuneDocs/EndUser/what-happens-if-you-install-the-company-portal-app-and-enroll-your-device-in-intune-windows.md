@@ -2,10 +2,10 @@
 title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Windows v Intune? | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,18 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fd54ec104a26ebae845dfe3942dac2e8d9dae4a9
-ms.openlocfilehash: 678ef01b215442e3d767a38388a579c6ee329975
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 2d56c2f23fd70ab0ca593d1ad5d60889e5855a7a
 
 
 ---
 
 
-# Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Windows v Intune?
+# <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-device-in-intune"></a>Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Windows v Intune?
 
 Když nainstalujete aplikaci Portál společnosti a pak přes ni zaregistrujete zařízení s Windows nebo Windows Phone, umožníte tím správci IT spravovat vaše zařízení a zajistit tak vyšší zabezpečení dat společnosti. Toto téma popisuje, co se stane u zařízení se systémem starším než Windows 10. Informace pro zařízení s Windows 10 najdete v [souvisejícím tématu](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md).
 
-## Co se stane všem zařízením s Windows po registraci
+## <a name="what-happens-to-all-windows-devices-after-enrollment"></a>Co se stane všem zařízením s Windows po registraci
 Registrace zařízení s Windows nebo Windows Phone v Intune nabízí tyto možnosti:
 
 -   Přístup k podnikové síti, e-mailu a pracovním souborům
@@ -41,7 +41,7 @@ Když zaregistrujete zařízení, udělujete správci IT oprávnění provést n
 
 -   Obnovit v zařízení výchozí tovární nastavení. To je užitečné v případě ztráty nebo odcizení zařízení.
 
--   Odebrat obchodní aplikace a soubory, ale jenom takové, které jsou spojené se společností. *Vaše osobní údaje a nastavení se při tom neodeberou.*
+-   Odebrat obchodní aplikace a soubory, ale jenom takové, které jsou spojené se společností. *Vaše osobní data a nastavení odebrána nebudou.*
 
 -   Správce IT může vidět software nainstalovaný v zařízení, a to i software, který jste si nainstalovali sami.
 
@@ -53,7 +53,7 @@ Když zaregistrujete zařízení, udělujete správci IT oprávnění provést n
 
 -   Zabránit pořizování snímků dat souvisejících se společností.
 
-## Co se stane všem počítačům s Windows po registraci
+## <a name="what-happens-to-all-windows-pcs-after-enrollment"></a>Co se stane všem počítačům s Windows po registraci
 
 -  Do vašeho počítače se nainstaluje software, který správci IT umožní spravovat daný počítač a vám umožní přístup k prostředkům společnosti, jako jsou aplikace a informace o podpoře. Správce IT může tento software automaticky aktualizovat.
 
@@ -63,7 +63,7 @@ Když zaregistrujete zařízení, udělujete správci IT oprávnění provést n
 
 -  Správce IT může do vašeho počítače instalovat aplikace a aktualizace.
 
-## Co se stane každých 8 hodin po registraci zařízení
+## <a name="what-happens-every-eight-hours-after-device-enrollment"></a>Co se stane každých 8 hodin po registraci zařízení
 Přibližně každých osm hodin proběhne na zaregistrovaných zařízeních toto:
 
 -   Stažení všech zásad nebo aktualizací aplikací, které vám správce IT zpřístupnil
@@ -72,10 +72,10 @@ Přibližně každých osm hodin proběhne na zaregistrovaných zařízeních to
 
 -   Odeslání všech aktualizací inventáře aplikací společnosti.
 
-Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

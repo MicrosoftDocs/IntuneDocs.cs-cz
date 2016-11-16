@@ -2,8 +2,7 @@
 title: "Nastavení správy pro Windows Phone a Windows 10 Mobile | Microsoft Intune"
 description: "Povolte správu mobilních zařízení (MDM) pro zařízení s Windows 10 Mobile nebo Windows Phone pomocí služby Microsoft Intune."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: staciebarker
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article
@@ -14,14 +13,14 @@ ms.assetid: f5615051-2dd1-453b-9872-d3fdcefb2cb8
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0b4bf6aa6fa9d693c0458562e7fcb71fc8000bb4
-ms.openlocfilehash: 46bd457af51d3fac513cfc36af1766e1e37222cd
+ms.sourcegitcommit: 289e6019aa1a17deb91b38ed32f0432af0902a9d
+ms.openlocfilehash: a077d5a6cd111d84cb98bfcb5e05cab0c0c4d49c
 
 
 ---
 
 
-# Nastavení správy pro Windows Phone a Windows 10 Mobile v Microsoft Intune
+# <a name="set-up-windows-phone-and-windows-10-mobile-management-with-microsoft-intune"></a>Nastavení správy pro Windows Phone a Windows 10 Mobile v Microsoft Intune
 
 Správce služby Intune má dvě možnosti, jak povolit registraci a správu zařízení se systémem Windows 10 Mobile a Windows Phone:
 
@@ -31,8 +30,8 @@ Správce služby Intune má dvě možnosti, jak povolit registraci a správu za�
 
 [!INCLUDE[AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
 
-## Registrace aplikace Portál společnosti
-Nechte uživatele, ať si nainstalují aplikaci Portál společnosti služby Intune a použijí ji k registraci svých zařízení. Pokud vytvoříte záznamy prostředků DNS CNAME, uživatelé se mohou připojovat k Intune a registrovat se bez zadávání názvu serveru. Pokud spravujete zařízení s Windows Phone 8.0 nebo potřebujete nasadit portál společnosti na zařízení s Windows Phone, musíte si také stáhnout aplikaci Portál společnosti a podepsat ji. Viz [Nastavení správy pro zařízení Windows Phone 8.0](set-up-windows-phone-8.0-management-with-microsoft-intune.md).
+## <a name="company-portal-app-enrollment"></a>Registrace aplikace Portál společnosti
+Nechte uživatele, ať si nainstalují aplikaci Portál společnosti služby Intune a použijí ji k registraci svých zařízení. Pokud vytvoříte záznamy prostředků DNS CNAME, uživatelé se mohou připojovat k Intune a registrovat se bez zadávání názvu serveru.
 
 1.  **Nastavení Intune**<br>Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení tím, že [nastavíte autoritu pro správu mobilních zařízení (MDM)](prerequisites-for-enrollment.md#set-mobile-device-management-authority) na **Microsoft Intune** a pak nastavte MDM.
 
@@ -43,7 +42,7 @@ Nechte uživatele, ať si nainstalují aplikaci Portál společnosti služby Int
   |CNAME|EnterpriseEnrollment.doména_společnosti.com|EnterpriseEnrollment-s.manage.microsoft.com |1 hodina|
   |CNAME|EnterpriseRegistration.doména_společnosti.com|EnterpriseRegistration.windows.net|1 hodina|
 
-  `EnterpriseEnrollment-s.manage.microsoft.com` – podporuje přesměrování na služby Intune s rozpoznáním domény z doménového názvu e-mailu.
+  `EnterpriseEnrollment-s.manage.microsoft.com` – podporuje přesměrování do služby Intune s rozpoznáním domény z názvu domény v e-mailu.
 
   `EnterpriseRegistration.windows.net` – podporuje zařízení s Windows 8.1 a Windows 10 Mobile, která k registraci do Azure Active Directory použijí pracovní nebo školní účet.
 
@@ -55,16 +54,16 @@ Nechte uživatele, ať si nainstalují aplikaci Portál společnosti služby Int
 
     ![Dialogové okno Instalace správy mobilního zařízení pro systém Windows](../media/windows-phone-enrollment.png)
 
-4.  **Volitelné kroky**<br>U Windows 10 není třeba provádět krok **Přidat klíče pro zkušební načtení**. Krok **Nahrát na server certifikát pro podpis kódu** je potřeba jen tehdy, když budete distribuovat obchodní aplikace (LOB), které zařízení nemohou získat z Windows Storu. [Přečtěte si další informace](set-up-windows-phone-8.0-management-with-microsoft-intune.md).
+4.  **Volitelné kroky**<br>U Windows 10 není třeba provádět krok **Přidat klíče pro zkušební načtení**. Krok **Nahrát na server certifikát pro podpis kódu** je potřeba jen tehdy, když budete distribuovat obchodní aplikace (LOB), které zařízení nemohou získat z Windows Storu.
 
 5.  **Informování uživatelů**<br>Uživatelé budou potřebovat vědět, jak si mají svá zařízení zaregistrovat a co mohou očekávat od zařazení do systému správy.
     - [Co říct koncovým uživatelům o používání služby Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
-    - [Pokyny k zařízení s Windows pro koncové uživatele](../enduser/using-your-windows-device-with-intune.md)
+    - [Pokyny pro koncové uživatele zařízení s Windows](../enduser/using-your-windows-device-with-intune.md)
 
 Pokud jste nenasadili portál společnosti na zařízení, nejsou vyžadované žádné další kroky.  Kroky 2 a 3 v konzole správce můžete ignorovat.
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

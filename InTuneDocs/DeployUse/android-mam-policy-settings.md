@@ -14,17 +14,17 @@ ms.assetid: 5dbb702a-1df5-4637-95c9-77a5f0b1a0e3
 ms.reviewer: andcerat
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e5e41cbbf3bac3ed78ee3a6929e364f829fa1d4b
-ms.openlocfilehash: f8a25815662333fd48d7ea9df24f5f228cee8217
+ms.sourcegitcommit: 552473cb704ead5f7cc30a2311e2f722265bfcea
+ms.openlocfilehash: c7ecf73c28a8332bd3fe1465a2f64f7f09a7a690
 
 
 ---
 
-# Nastavení zásad správy mobilních aplikací pro Android v Microsoft Intune
+# <a name="android-mobile-app-management-policy-settings-in-microsoft-intune"></a>Nastavení zásad správy mobilních aplikací pro Android v Microsoft Intune
 Nastavení zásad popsané v tomto tématu se dá [nakonfigurovat](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md) pro zásady správy mobilních aplikací (MAM) v okně **Nastavení** na portálu Azure Portal.
 Existují dvě kategorie nastavení zásad:nastavení přemístění dat a nastavení přístupu. Výrazem *aplikace spravované podle zásad* se v tomto tématu označují aplikace, které mají nakonfigurované zásady MAM.
 
-##  Nastavení přemístění dat
+##  <a name="data-relocation-settings"></a>Nastavení přemístění dat
 
 - **Zabránit zálohování dat v zařízeních s Androidem**: Pokud chcete zakázat zálohování firemních dat z aplikací spravovaných podle zásad, vyberte **Ano**, a pokud je chcete povolit, vyberte **Ne**.
 
@@ -74,7 +74,7 @@ Existují dvě kategorie nastavení zásad:nastavení přemístění dat a nasta
 
   Výchozí hodnota = **Ano**
 
-##  Nastavení přístupu
+##  <a name="access-settings"></a>Nastavení přístupu
 
 - **Vyžadovat pro přístup kód PIN**: Pokud chcete k použití aplikací spravovaných podle zásad vyžadovat kód PIN, vyberte **Ano**. Uživatel se vyzve k jeho nastavení při prvním spuštění aplikace v pracovním kontextu.
 
@@ -83,7 +83,9 @@ Existují dvě kategorie nastavení zásad:nastavení přemístění dat a nasta
  -  **Povolit jednoduchý kód PIN:** Určete, jestli můžou uživatelé používat jednoduchý kód PIN, jako je 1234 nebo 1111. Výchozí hodnota = **Ano**
  - **Délka kódu PIN**: Zadejte minimální počet číslic v kódu PIN. Výchozí hodnota = **4**
  - **Počet pokusů, než se musí PIN kód resetovat**: Zadejte počet možných pokusů o zadání kódu PIN, než uživatel musí PIN resetovat. Pro toto nastavení neexistuje výchozí hodnota.
-- **Vyžadovat pro přístup podnikové přihlašovací údaje**: Pokud pro přístup k aplikaci místo číselného kódu PIN požadujete podnikové přihlašovací údaje, vyberte **Ano**. Pokud nastavíte **Ano**, přepíše se tím požadavek na PIN nebo Touch ID. Uživatel se vyzve k zadání podnikových přihlašovacích údajů.
+ - **Vyžadovat otisk prstu místo kódu PIN (Android 6.0+)**: Pokud pro přístup k aplikaci místo číselného kódu PIN požadujete otisk prstu, vyberte **Ano**.
+ Na zařízeních s Androidem můžete uživatelům povolit, aby se místo číselného kódu PIN identifikovali pomocí otisku prstu. Když se koncový uživatel pokusí o přístup k této aplikaci pomocí svého pracovního účtu, vyzve se k zadání otisku prstu a nemusí zadávat číselný PIN.
+ - **Vyžadovat pro přístup podnikové přihlašovací údaje**: Pokud pro přístup k aplikaci místo číselného kódu PIN požadujete podnikové přihlašovací údaje nebo otisk prstu, zvolte **Ano**. Pokud nastavíte **Ano**, přepíše se tím požadavek na PIN nebo Touch ID. Uživatel se vyzve k zadání podnikových přihlašovacích údajů.
 
   Výchozí hodnota = **Ne**
 - **Blokovat spouštění spravovaných aplikací na zařízeních s jailbreakem nebo rootem**: Pokud chcete blokovat spouštění aplikací na zařízeních s jailbreakem nebo rootem, vyberte **Ano**. Uživatel bude moct i dál používat zařízení pro své osobní účely, ale při práci bude muset používat jiné zařízení.
@@ -105,6 +107,6 @@ Existují dvě kategorie nastavení zásad:nastavení přemístění dat a nasta
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Oct16_HO4-->
 
 
