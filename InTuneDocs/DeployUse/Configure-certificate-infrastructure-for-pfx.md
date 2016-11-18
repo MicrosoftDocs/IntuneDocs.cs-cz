@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 10/25/2016
+ms.date: 11/17/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 2c543a02-44a5-4964-8000-a45e3bf2cc69
 ms.reviewer: vinaybha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 17b957cc2baedddfc53bfdf7b875e4ecb28b8517
-ms.openlocfilehash: f903a62e7fb28e71e773a27db341c846e1f76b63
+ms.sourcegitcommit: 7d1f37a2ba2e634fb75058d33eaaccf3aa5845b0
+ms.openlocfilehash: 8fc1cc718fd0edae8b8ec4a0a8dc25487eafda2b
 
 
 
@@ -76,7 +76,7 @@ V této úloze budete publikovat šablonu certifikátu.
 
     -   Zadejte popisný **zobrazovaný název šablony** .
 
-    -   Na kartě **Název subjektu** vyberte možnost **Dodán v žádosti**. (Zabezpečení je vynucené modulem zásad Intune pro NDES).
+    -   Na kartě **Název subjektu** vyberte možnost **Dodán v žádosti**. 
 
     -   Na kartě **Rozšíření** zkontrolujte, jestli **Popis zásad použití** obsahuje **Ověření klienta**.
 
@@ -142,8 +142,6 @@ Stažení, instalace a konfigurace Certificate Connectoru.
 
     a. Vyberte možnost **Přihlásit** a zadejte své přihlašovací údaje správce služby Intune nebo přihlašovací údaje správce klienta s oprávněním pro globální správu.
 
-  <!--  If your organization uses a proxy server and the proxy is needed for the NDES server to access the Internet, click **Use proxy server** and then provide the proxy server name, port, and account credentials to connect.-->
-
     b. Vyberte kartu **Upřesnit** a pak zadejte přihlašovací údaje pro účet, který má oprávnění **vydávat a spravovat certifikáty** ve vaší vydávající certifikační autoritě.
 
     c. Zvolte **Použít**.
@@ -152,15 +150,12 @@ Stažení, instalace a konfigurace Certificate Connectoru.
 
 6.  Otevřete příkazový řádek a zadejte **services.msc**. Stiskněte klávesu **Enter**, klikněte pravým tlačítkem myši na **službu konektoru Intune** a zvolte **Restartovat**.
 
-Pokud chcete ověřit, jestli je služba spuštěná, spusťte prohlížeč a zadejte následující adresu URL, která by měla vrátit chybu **403** :
-
-**http:// &lt;Název_FQDN_serveru_NDES&gt;/certsrv/mscep/mscep.dll**
 
 ### <a name="next-steps"></a>Další kroky
 Teď jste připravení nastavit profily certifikátů podle návodu v tématu [Konfigurace profilů certifikátu](Configure-Intune-certificate-profiles.md).
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

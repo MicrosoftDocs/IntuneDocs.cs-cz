@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 10/31/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 4682b6b6-c9ef-483e-a6de-b8830cb98b63
 ms.reviewer: cacamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d332e46b27bea274a38355dfb01806160b1041ee
-ms.openlocfilehash: 44069a34c1c9c2fb05f2b250188fe45a7d419911
+ms.sourcegitcommit: 2c50c38843521dfc2c9df48305e619803f32b1e9
+ms.openlocfilehash: 8b0591195b58f5fa331d213cfe03a38aa5ffafdd
 
 
 ---
@@ -36,11 +36,12 @@ Podpora pro Intune a pro Intune při použití s nástrojem Configuration Manage
 2.  Zvolte dlaždici Správce.
 3.  Pokud chcete otevřít lístek, zvolte na levé straně pod částí **Podpora** možnost **Podpora**. Pravděpodobně uvidíte:
 
-    ![Otevření nového lístku podpory služby Intune](../media/suport-open-ticket.png)
+    ![Otevření nového lístku podpory služby Intune](../media/support-open-ticket.png)
 
     >[!NOTE]
     >
     >  Zákazníci, kteří mají nebo měli účet O365 s maximálně 100 licencemi, uvidí následující informace a měli by použít [jinou metodu otevření lístku podpory](#alternate-method-to-open-a-support-ticket).
+    >  
     > ![Jiné možnosti podpory pro službu Intune](../media/alternate-support-ui.png)
 
     -   V případě problémů s fakturací, licencemi nebo účtem vyberte položku **Informace o fakturaci a produktech**.
@@ -114,6 +115,6 @@ Pokud jste už zakoupili licence od Microsoftu v rámci multilicenčního progra
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
