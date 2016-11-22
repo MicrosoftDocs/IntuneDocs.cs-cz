@@ -147,6 +147,6 @@
 # [Řešení problémů](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO2--> 
 
 
