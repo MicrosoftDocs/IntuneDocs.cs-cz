@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 09/14/2016
+ms.date: 11/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: 77fa5c66-a87c-47df-964c-800eea509b33
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: e786cd33b5c963fa373d281e93721d0dd0f5456c
+ms.sourcegitcommit: 29b6e5a3d319c741482fcc2b600842e2e42b96e2
+ms.openlocfilehash: 1bc5370574c038d0fe34746aa89067d06cc80c31
 
 
 ---
 
-# Možnosti správy počítačů s Windows při použití softwarového klienta Intune
+# <a name="windows-pc-management-capabilities-when-you-use-the-intune-software-client"></a>Možnosti správy počítačů s Windows při použití softwarového klienta Intune
 Ve většině scénářů si svoje zařízení zaregistrujete v Microsoft Intune. Tato služba poskytuje větší sadu funkcí. Ke správě počítačů můžete ale také použít softwarového klienta Intune, který poskytuje následující funkce:
 
 -   **[Správa aktualizací softwaru](/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune)** – Počítače můžete udržovat stále aktuální a můžete rozhodnout, kdy se mají aktualizace instalovat.
@@ -37,7 +37,7 @@ Ve většině scénářů si svoje zařízení zaregistrujete v Microsoft Intune
 
 Intune podporuje instalaci softwarového klienta až v 7000 zařízení se systémem Windows.
 
-## Požadavky na operační systém
+## <a name="operating-system-requirements"></a>Požadavky na operační systém
 Intune může spravovat počítače s následujícími verzemi Windows (32bitové i 64bitové):
 
 
@@ -52,7 +52,7 @@ Intune může spravovat počítače s následujícími verzemi Windows (32bitov�
 - **Windows 10** – verze Pro, Education a Enterprise
 
 
-## Minimální požadavky na hardware
+## <a name="minimum-hardware-requirements"></a>Minimální požadavky na hardware
 Toto jsou minimální požadavky na hardware pro instalaci softwarového klienta Intune:
 
 |Požadavek|Podrobnosti|
@@ -61,7 +61,7 @@ Toto jsou minimální požadavky na hardware pro instalaci softwarového klienta
 |Procesor a paměť|Viz požadavky na procesor a paměť RAM pro operační systém počítače.|
 |Místo na disku|200 MB volného místa na disku před instalací klientského softwaru.|
 
-## Další požadavky
+## <a name="further-requirements"></a>Další požadavky
 Toto jsou požadavky na software pro instalaci softwarového klienta Intune:
 
 |Požadavek|Podrobnosti|
@@ -70,11 +70,11 @@ Toto jsou požadavky na software pro instalaci softwarového klienta Intune:
 |Instalační služba systému Windows verze 3.1|Na počítači musí být Instalační služba systému Windows minimálně verze 3.1.|
 |Odebrání nekompatibilního klientského softwaru|Před instalací klientského počítačového softwaru Intune je potřeba odinstalovat z příslušného počítače tento klientský software:<br /><br />– Všechny verze Configuration Manageru<br />– Všechny verze Microsoft Systems Management Serveru (SMS)|
 
-### Související témata
+### <a name="see-also"></a>Související témata
 [Možnosti správy zaregistrovaných zařízení v Microsoft Intune](./mobile-device-management-capabilities-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO4-->
 
 

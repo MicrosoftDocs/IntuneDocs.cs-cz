@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 10/19/2016
+ms.date: 11/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: 6f4ff11d-dc81-481a-bcd9-d8cdab32f876
 ms.reviewer: camoya
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0d422b421c3716ad576c4fc565b181dec28c947e
-ms.openlocfilehash: efb8dd90eab9bbcc77135ef2ff3e0ffd37d128bf
+ms.sourcegitcommit: 4ee5f39ac31c2a35770b88c937f138f9c0b525b6
+ms.openlocfilehash: 80681cf6c1b76b70b1da00b4a1f1b56a3436014a
 
 
 ---
 
-# Webové prohlížeče podporované Microsoft Intune
+# <a name="microsoft-intune-supported-web-browsers"></a>Webové prohlížeče podporované Microsoft Intune
 
 Před nastavením Intune si přečtěte toto téma a další požadavky uvedené v tématu [Co potřebujete vědět, než začnete](what-to-know-before-you-start-microsoft-intune.md).
 
@@ -33,11 +33,11 @@ Před nastavením Intune si přečtěte toto téma a další požadavky uvedené
 > [!Note]
 > Pro konzolu správce se nepodporuje Microsoft Edge ani mobilní prohlížeče, protože nepodporují [Microsoft Silverlight](https://msdn.microsoft.com/en-us/library/cc838158(v=vs.95).aspx). Konzola Intune se z prostředí Silverlight průběžně přesouvá. Všechny funkce správy mobilních zařízení a aplikací služby Intune budou nakonec [dostupné na novém portálu Microsoft Azure Portal](https://blogs.technet.microsoft.com/enterprisemobility/2015/11/17/enhancing-managed-mobile-productivity/).
 
-### Viz taky
-[Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
+### <a name="see-also"></a>Související témata
+[Co potřebujete vědět, než začnete používat Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO4-->
 
 

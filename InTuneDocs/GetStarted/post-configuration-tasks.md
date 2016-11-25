@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 1/22/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: 34a412cd-8240-4e06-a60e-df270a711e7b
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0d422b421c3716ad576c4fc565b181dec28c947e
-ms.openlocfilehash: 391279e37007ead39be3506c04b382a8296329b5
+ms.sourcegitcommit: 29b6e5a3d319c741482fcc2b600842e2e42b96e2
+ms.openlocfilehash: 7a4f1af9843cba6fa7b7325d0a678dd445cc1000
 
 
 ---
 
-# Úlohy po konfiguraci
+# <a name="post-configuration-tasks"></a>Úlohy po konfiguraci
 Po dokončení kroků počáteční konfigurace pro placené předplatné Intune byste měli zvážit povolení funkce správy dalšího mobilního zařízení.
 
 -   **Připojení Exchange k Intune:** Uživatelům s mobilními zařízeními, kteří se nezaregistrovali v Intune, můžete povolit správu přes protokol Exchange ActiveSync s využitím konektoru pro místní Exchange a pro Exchange Online v sadě Microsoft Office 365. Exchange Connector vás připojí k nasazenému Exchangi a umožní vám spravovat mobilní zařízení prostřednictvím konzoly pro správu Intune. Další informace o připojení Exchange Connector najdete v tématu [Správa mobilních zařízení pomocí protokolu Exchange ActiveSync a služby Microsoft Intune](/intune/deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune).
@@ -31,6 +31,6 @@ Po dokončení kroků počáteční konfigurace pro placené předplatné Intune
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO4-->
 
 

@@ -14,13 +14,13 @@ ms.assetid: 2d3ca4ab-f20c-4d56-9413-f8ef19cf0722
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 289e6019aa1a17deb91b38ed32f0432af0902a9d
-ms.openlocfilehash: 81eb6df96f4c34e8524bb8f3faef964179c91dfc
+ms.sourcegitcommit: 00ca6ea06aa63646d6ede6337f8e70d1ab956c5f
+ms.openlocfilehash: cfc97f4ed931a5c7dc5b38eafd0a2d081bc30975
 
 
 ---
 
-# <a name="enroll-corporateowned-ios-devices-in-microsoft-intune"></a>Registrace zařízení iOS vlastněných společností v Microsoft Intune
+# <a name="enroll-corporate-owned-ios-devices-in-microsoft-intune"></a>Registrace zařízení iOS vlastněných společností v Microsoft Intune
 Microsoft Intune podporuje registraci firemních zařízení s iOS prostřednictvím Programu registrace zařízení Apple nebo pomocí nástroje [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) na počítači Mac.
 
 **Předpoklad:** Je vyžadován [certifikát služby Apple Push Notification](set-up-ios-and-mac-management-with-microsoft-intune.md).
@@ -38,7 +38,7 @@ Zařízení s iOS můžete registrovat exportováním podnikového registrační
 ## <a name="use-the-device-enrollment-program-dep"></a>Použití Programu registrace zařízení (DEP)
 DEP nasazuje registrační profil bezdrátově do zařízení, která jste prostřednictvím tohoto programu nakoupili. Když uživatel na zařízení spustí Pomocníka s nastavením, zařízení se zaregistruje do Intune.  U zařízení zaregistrovaných prostřednictvím Programu registrace zařízení nemůžou uživatelé registraci zrušit. Další informace najdete v článku [Registrace zařízení s iOS pomocí Programu registrace zařízení](ios-device-enrollment-program-in-microsoft-intune.md).
 
-## <a name="use-the-company-portal-on-depenrolled-or-apple-configuratorenrolled-devices"></a>Použití služby Portálu společnosti v zařízeních zaregistrovaných pomocí Programu registrace zařízení nebo nástroje Apple Configurator
+## <a name="use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices"></a>Použití služby Portálu společnosti v zařízeních zaregistrovaných pomocí Programu registrace zařízení nebo nástroje Apple Configurator
 
 Zařízení nakonfigurovaná s přidružením uživatele umožňují instalaci a spuštění aplikace Portál společnosti, která slouží ke stahování aplikací a správě zařízení. Když uživatelé obdrží zařízení, musí provést určitý počet dodatečných kroků, aby dokončili postup Pomocníka s nastavením a nainstalovali aplikaci Portál společnosti.
 
@@ -68,7 +68,7 @@ Přidružení uživatele je nezbytné pro podporu následujících funkcí:
 
 8. Registrace je u konce. Uživatel teď může zařízení používat s úplnou sadou funkcí.
 
-### <a name="about-corporateowned-managed-devices-with-no-user-affinity"></a>O firemních spravovaných zařízeních bez přidružení uživatele
+### <a name="about-corporate-owned-managed-devices-with-no-user-affinity"></a>O firemních spravovaných zařízeních bez přidružení uživatele
 
 Zařízení nakonfigurovaná bez přidružení uživatele nepodporují aplikaci Portál společnosti a ta by se na ně neměla instalovat. Portál společnosti je určený pro uživatele, kteří mají firemní přihlašovací údaje a potřebují přístup k podnikovým prostředkům podle svých potřeb (třeba k e-mailu). Zařízení zaregistrovaná bez přidružení uživatele nejsou určená k tomu, aby se k nim přihlašoval jeden vyhrazený uživatel. Typickými případy použití zařízení zaregistrovaných bez přidružení uživatele jsou zařízení veřejných terminálů, pokladny nebo sdílená zařízení.
 
@@ -77,10 +77,10 @@ Pokud je požadováno přidružení uživatele, před registrací zařízení zk
 
 
 ### <a name="see-also"></a>Viz taky
-[Předpoklady pro registraci zařízení do Microsoft Intune](gprerequisites-for-enrollment.md)
+[Předpoklady registrace zařízení v Microsoft Intune](prerequisites-for-enrollment.md)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
