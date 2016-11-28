@@ -110,7 +110,7 @@ Pokud se při registraci zařízení do služby Intune zobrazí chybová zpráva
 
 Než začnete instalovat firemní aplikace, přejděte na **Nastavení** &gt; **Zabezpečení** a zapněte **Neznámé zdroje**. Pokud před instalací firemních aplikací tuto možnost nezapnete, zobrazí se tato zpráva: „Instalace blokována. Z důvodů zabezpečení je v zařízení nastavené blokování instalací pro aplikace získané z neznámého zdroje.“ Klepnutím na **Nastavení** v dialogovém okně s chybou můžete přejít na možnost **Neznámé zdroje**.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT (kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište týmu Microsoft Android na adrese wintunedroidfbk@microsoft.com..
+Potřebujete ještě další pomoc? Obraťte se na správce IT (kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište týmu Microsoft Android na adrese wintunedroidfbk@microsoft.com.
 
 
 
