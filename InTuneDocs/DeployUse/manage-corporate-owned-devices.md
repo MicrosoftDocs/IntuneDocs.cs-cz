@@ -2,7 +2,8 @@
 title: "Správa zařízení ve vlastnictví firmy | Microsoft Intune"
 description: "Registrace zařízení patřících společnosti může probíhat různě. Záleží vždy na typu zařízení, způsobu nákupu a potřebách organizace."
 keywords: 
-author: NathBarn
+author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 07/20/2016
 ms.topic: article
@@ -13,17 +14,17 @@ ms.assetid: 2b60bbff-25e6-489b-9621-c71b4275fa06
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 88409332d203dc4ee82fdf98f89a94e5a89a7eed
-ms.openlocfilehash: c29cd2c0c4c5671a84f7c0b0ba473e6fb32604d9
+ms.sourcegitcommit: 9d44a6494bed0758b9768045bd204ea0eb481636
+ms.openlocfilehash: 7577cbab528d88635e8551bf8de1ffd49becaa84
 
 
 ---
 
-# <a name="enroll-corporateowned-devices-by-using-intune"></a>Registrace zařízení vlastněných společností pomocí Intune
+# <a name="enroll-corporate-owned-devices-by-using-intune"></a>Registrace zařízení vlastněných společností pomocí Intune
 
 Zařízení vlastněná organizací nebo společností můžete do Intune zaregistrovat kvůli správě různým způsobem. Záleží na typu zařízení, způsobu jeho nákupu a potřebách organizace. Můžete také nainstalovat aplikaci Portál společnosti a používat ji k registraci a správě zařízení patřících společnosti, například ve scénářích BYOD (Přineste si vlastní zařízení).
 
-## <a name="enroll-corporateowned-ios-devices"></a>Registrace zařízení s iOS vlastněných společností
+## <a name="enroll-corporate-owned-ios-devices"></a>Registrace zařízení s iOS vlastněných společností
 
 Pro scénáře CYOD (Vyberte si vlastní zařízení) jsou vhodné způsoby registrace zařízení vlastněných společností. V prostředí CYOD organizace zaplatí zařízení, které si uživatel vybere, a organizace ho spravuje.
 
@@ -33,13 +34,13 @@ Přečtěte si, jak [zaregistrovat zařízení s iOSem patřící společnosti](
 
 ## <a name="create-a-device-enrollment-manager-account"></a>Vytvoření účtu správce registrace zařízení
 
-V Intune stačí vytvořit jeden účet správce registrace zařízení (DEM), který můžete použít ke správě velkého počtu mobilních zařízení v organizaci. Po vytvoření účtu DEM může jeho pověřený správce registrovat více než pět zařízení, což je povolený počet u standardního uživatele.
+V Intune stačí vytvořit jeden účet správce registrace zařízení (DEM), který můžete použít ke správě velkého počtu mobilních zařízení v organizaci. Po vytvoření účtu DEM může jeho pověřený správce registrovat více než 15 zařízení, což je povolený počet u standardního uživatele.
 
 Účet DEM můžete použít ke správě jenom těch zařízení, která nepoužívá jeden konkrétní uživatel. Tyto typy zařízení se hodí například pro aplikace POS a jednoúčelové aplikace, ale nehodí se pro uživatele, kteří potřebují přístup k e-mailu nebo k prostředkům společnosti.
 
 Přečtěte si, jak [použít účet DEM k registraci zařízení patřících společnosti](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md).
 
-## <a name="enroll-corporateowned-windows-10-enterprise-devices"></a>Registrace zařízení s Windows 10 Enterprise patřících společnosti
+## <a name="enroll-corporate-owned-windows-10-enterprise-devices"></a>Registrace zařízení s Windows 10 Enterprise patřících společnosti
 
 Pokud ve společnosti používáte Azure Active Directory Premium nebo Microsoft Enterprise Mobility Suite, můžete [registrovat zařízení s Windows 10 Enterprise](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview). Když uživatel přidá do zařízení pracovní nebo školní účet, bude zařízení automaticky označené jako „vlastněné společností“.
 
@@ -49,7 +50,7 @@ Pokud ve společnosti používáte Azure Active Directory Premium nebo Microsoft
 
 Přečtěte si, jak [používat čísla IMEI k označení zařízení vlastněných společností](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md).
 
-## <a name="identify-a-device-as-corporateowned"></a>Identifikace zařízení vlastněných společností
+## <a name="identify-a-device-as-corporate-owned"></a>Identifikace zařízení vlastněných společností
 
 V seznamu zařízení má **Vlastnictví** hodnotu **Firemní**. Zařízení vlastněné společností má jednu z těchto vlastností:
 
@@ -60,6 +61,6 @@ V seznamu zařízení má **Vlastnictví** hodnotu **Firemní**. Zařízení vla
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -8,22 +8,22 @@ manager: angrobe
 ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: 
+ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: cac62b64-3f8b-47ae-aa66-970c7ba15466
 ms.reviewer: dagerrit
 translationtype: Human Translation
-ms.sourcegitcommit: 2c14071f5fb1a3604b897d6b2f81797d40bedc6d
-ms.openlocfilehash: 1fd8495811e2cbcf4761707f2d1b705e49a240c6
+ms.sourcegitcommit: 3a00f9cdfb137306a28b33f9d1acdb6bc108670f
+ms.openlocfilehash: f15c9748b1c55ec46ddd0056445bf434fa323c59
 
 
 ---
 
-# Volba způsobu registrace mobilních zařízení
+# <a name="choose-how-to-enroll-mobile-devices"></a>Volba způsobu registrace mobilních zařízení
 
 Odpovězte na následující otázky, abyste zjistili nejvhodnější způsob registrace spravovaných zařízení.
 
-## **Přinášejí si zaměstnanci vlastní zařízení nebo jim zařízení poskytuje organizace?**
+## <a name="do-employees-bring-their-own-devices-or-are-devices-provided-by-your-organization"></a>**Přinášejí si zaměstnanci vlastní zařízení, nebo se používají zařízení poskytnutá vaší organizací?**
 
   - **Zařízení vlastněná uživateli** – Registrace BYOD (Přineste si vlastní zařízení)
   - **Zařízení vlastněná společností** – Registrace COD
@@ -33,23 +33,23 @@ Odpovězte na následující otázky, abyste zjistili nejvhodnější způsob re
 > [!div class="button"]
 [Registrace COD >](#are-your-company-owned-devices-shared-or-do-they-have-dedicated-users)
 
-## **Která zařízení BYOD můžou vaši uživatelé zaregistrovat?**
+## <a name="what-byod-devices-can-your-users-enroll"></a>**Která zařízení BYOD můžou vaši uživatelé zaregistrovat?**
 
 > [!div class="button"]
 [Android](/intune/deploy-use/set-up-android-management-with-microsoft-intune) [iOS a Mac](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune) [Windows 10 Mobile a Windows Phone](/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune) [Počítače s Windows](/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
 
-## **Zařízení, která patří společnosti, jsou sdílená nebo mají vyhrazené uživatele?**
+## <a name="are-your-company-owned-devices-shared-or-do-they-have-dedicated-users"></a>**Jak se zařízení ve vlastnictví společnosti využívají? Jsou sdílená, nebo je využívá vždycky jenom jeden konkrétní uživatel?**
 
 > [!div class="button"]
 [Sdílené >](#what-operating-system-are-your-shared-devices-running)   [Vyhrazené >](#how-will-you-manage-dedicated-ios-devices)
 
 
-## **Který operační systém běží na sdílených zařízeních?**
+## <a name="what-operating-system-are-your-shared-devices-running"></a>**Který operační systém běží na sdílených zařízeních?**
 
   > [!div class="button"]
   [Windows >](/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune) [Android >](/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune) [iOS >](#how-will-you-manage-shared-ios-devices)
 
-## **Jak budete spravovat sdílená zařízení s iOS?**
+## <a name="how-will-you-manage-shared-ios-devices"></a>**Jak budete spravovat sdílená zařízení s iOS?**
 
   > [!div class="button"]
   [Registrace DEP pro iOS >](/intune/deploy-use/ios-device-enrollment-program-in-microsoft-intune) [Přímá registrace pro iOS >](/intune/deploy-use/ios-direct-enrollment-in-microsoft-intune) [Registrace DEM >](/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune)
@@ -60,7 +60,7 @@ Odpovězte na následující otázky, abyste zjistili nejvhodnější způsob re
 
   - **Správce registrace zařízení (Intune)** – Správce registrace zařízení (DEM) služby Intune umožňuje manažerovi nebo správci, aby pod jedním uživatelským účtem zaregistroval více mobilních zařízení. Tato zařízení nemohou mít vyhrazené uživatele (přidružení uživatelů). Musí se zaregistrovat tak, že si nainstalují aplikaci Portál společnosti a přihlásí se do ní.
 
-## **Jak budete spravovat vyhrazená zařízení s iOS?**
+## <a name="how-will-you-manage-dedicated-ios-devices"></a>**Jak budete spravovat vyhrazená zařízení s iOS?**
 
   > [!div class="button"]
    [Program DEP pro iOS](/intune/deploy-use/ios-device-enrollment-program-in-microsoft-intune) [Průvodce nastavením iOS](/intune/deploy-use/ios-setup-assistant-enrollment-in-microsoft-intune) [Označení kódem IMEI](/intune/deploy-use/specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers)
@@ -75,6 +75,6 @@ Odpovězte na následující otázky, abyste zjistili nejvhodnější způsob re
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO3-->
 
 

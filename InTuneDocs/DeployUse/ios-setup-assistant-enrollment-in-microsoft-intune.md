@@ -14,8 +14,8 @@ ms.assetid: 46e5b027-4280-4809-b45f-651a6ab6d0cd
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 289e6019aa1a17deb91b38ed32f0432af0902a9d
-ms.openlocfilehash: bb94cb21bce5fb25c821b6a01d952ccba2f94834
+ms.sourcegitcommit: 9d44a6494bed0758b9768045bd204ea0eb481636
+ms.openlocfilehash: ea6a4732e747dccf9c42732c06bd1b8cdf20e91f
 
 
 ---
@@ -81,7 +81,7 @@ Apple Configurator umožňuje obnovit na zařízení s iOSem tovární nastaven�
         111111111,PO 1234
         ```
 
-    -   **Ručním přidáním podrobností o zařízeních** – zadejte sériové číslo a podrobnosti až o pěti zařízeních.
+    -   **Ručním přidáním podrobností o zařízeních**&mdash; – zadejte sériové číslo a podrobnosti až o 15 zařízeních.
 
     > [!NOTE]
     > Pokud později musíte zařízení vlastněná firmou ze správy pomocí služby Intune odebrat, může být potřeba odebrat sériové číslo zařízení z Intune ve skupině zařízení **Podle sériového čísla iOS** v části **Firemní předregistrovaná zařízení** a deaktivovat tak registraci zařízení. Pokud Intune provádí postup zotavení po havárii přibližně v době odebrání sériových čísel, bude potřeba ověřit, že jsou ve skupině jenom sériová čísla aktivních zařízení.
@@ -151,6 +151,6 @@ Apple Configurator umožňuje obnovit na zařízení s iOSem tovární nastaven�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -14,8 +14,8 @@ ms.assetid: 5dbb702a-1df5-4637-95c9-77a5f0b1a0e3
 ms.reviewer: andcerat
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 552473cb704ead5f7cc30a2311e2f722265bfcea
-ms.openlocfilehash: c7ecf73c28a8332bd3fe1465a2f64f7f09a7a690
+ms.sourcegitcommit: 13477a66ca8e89345334476445aae037ea8d9702
+ms.openlocfilehash: 55bf3ebde7d1185aebdb874c46aae72d8e179d85
 
 
 ---
@@ -29,13 +29,13 @@ Existují dvě kategorie nastavení zásad:nastavení přemístění dat a nasta
 - **Zabránit zálohování dat v zařízeních s Androidem**: Pokud chcete zakázat zálohování firemních dat z aplikací spravovaných podle zásad, vyberte **Ano**, a pokud je chcete povolit, vyberte **Ne**.
 
   Výchozí hodnota = **Ano**
-- **Povolit aplikaci posílat data do jiných aplikací**: Výběrem jedné z možností určete aplikace, které můžou přijímat firemní data z aplikací spravovaných podle zásad:
+- **Povolit aplikaci posílat data do jiných aplikací**: Zvolením jedné z možností určete typ aplikací, které můžou přijímat firemní data z aplikací spravovaných podle zásad:
   -   **Aplikace spravované podle zásad**: Povoluje přenos jenom do aplikací se zásadami MAM.
   -   **Všechny aplikace**: Povoluje přenos do všech aplikací.
   -   **Žádné**: Nepovoluje přenos dat do žádné aplikace.
 
-  Výchozí hodnota = **Aplikace spravované podle zásad**
-- **Povolit aplikaci přijímat data z jiných aplikací**: Zadejte aplikace, které můžou přenášet data do aplikací spravovaných podle zásad:
+ Výchozí hodnota = **Aplikace spravované podle zásad**
+- **Povolit aplikaci přijímat data z jiných aplikací**: Zadejte, které aplikace můžou přenášet data do aplikací spravovaných podle zásad:
   -   **Aplikace spravované podle zásad**: Povoluje přenos dat jenom z ostatních aplikací spravovaných podle zásad.
   -   **Všechny aplikace**: Povoluje přenos dat ze všech aplikací.
   -   **Žádné**: Nepovoluje přenos dat ze žádné aplikace.
@@ -52,22 +52,22 @@ Existují dvě kategorie nastavení zásad:nastavení přemístění dat a nasta
   -   **Libovolná aplikace**: Akce vyjmutí, kopírování a vložení mezi aplikacemi nejsou nijak omezené.
 
   Výchozí hodnota = **Aplikace s vložením spravované podle zásad**
--   **Omezit webový obsah tak, aby se spouštěl v Managed Browseru**: Když je toto nastavení povolené, jakékoli odkazy v aplikaci se otevřou v Managed Browseru.
+-   **Omezit webový obsah tak, aby se spouštěl v Managed Browseru**: Když vyberete **ano**, všechny odkazy v aplikaci se otevřou v Managed Browseru.
 
-  Pro zařízení, která nejsou zaregistrovaná v Intune, se webové odkazy v aplikacích spravovaných podle zásad otevřou jenom v aplikaci Managed Browser s využitím zásad MAM.
+  Na zařízeních, která nejsou zaregistrovaná v Intune, se odkazy v aplikacích spravovaných podle zásad můžou otevřít v Managed Browseru, jenom když použijete zásady MAM.
 
   Pokud ke správě zařízení používáte Intune, přečtěte si téma [Správa přístupu k internetu pomocí zásad spravovaného prohlížeče v Microsoft Intune](manage-internet-access-using-managed-browser-policies.md).
 
   Výchozí hodnota = **Ano**
-- **Šifrovat data aplikace**: Pokud chcete povolit šifrování, vyberte **Ano**. Když je toto nastavení povolené, pak pro aplikace, které jsou přidružené k zásadám MAM, zajišťuje šifrování Microsoft. Data jsou mezi vstupně-výstupními úlohami souborů synchronně šifrovaná. Obsah v úložišti zařízení je zašifrovaný vždycky.
+- **Šifrovat data aplikace**: Pokud chcete povolit šifrování, vyberte **Ano**. Když je toto nastavení povolené, pak Microsoft zajišťuje šifrování pro aplikace, které jsou přidružené k zásadám MAM. Data jsou mezi vstupně-výstupními úlohami souborů synchronně šifrovaná. Obsah v úložišti zařízení je zašifrovaný vždycky.
   >[!NOTE]
   >Metoda šifrování nemá certifikaci FIPS 140-2.
 
   Výchozí hodnota = **Ano**
 
-- **Zakázat synchronizaci kontaktů:** Pokud chcete zabránit synchronizaci kontaktních informací do nativní aplikace adresáře na zařízení, zvolte **Ano**. Pokud vyberete **Ne**, aplikace uloží kontaktní informace do nativní aplikace adresáře na zařízení.
+- **Zakázat synchronizaci kontaktů:** Pokud chcete zabránit synchronizaci kontaktních informací s nativní aplikací adresáře na zařízení, zvolte **Ano**. Pokud vyberete **Ne**, aplikace uloží kontaktní informace do nativní aplikace adresáře na zařízení.
 
-  Když k odebrání firemních dat použijete selektivní vymazání, dojde k odebrání kontaktů přímo synchronizovaných z aplikace do nativního adresáře. Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. To se v současné době týká jenom aplikace Microsoft Outlook.
+  Když k odebrání firemních dat použijete selektivní vymazání, dojde k odebrání kontaktů přímo synchronizovaných mezi aplikací a nativním adresářem. Kontakty synchronizované mezi nativním adresářem a dalším externím zdrojem není možné vymazat. To se v současné době týká jenom aplikace Microsoft Outlook.
 
   Výchozí hodnota = **Ano**
 - **Zakázat tisk:** Zvolením možnosti **Ano** zakážete tisk firemních dat z aplikací, které jsou přidružené k zásadám MAM.
@@ -84,11 +84,11 @@ Existují dvě kategorie nastavení zásad:nastavení přemístění dat a nasta
  - **Délka kódu PIN**: Zadejte minimální počet číslic v kódu PIN. Výchozí hodnota = **4**
  - **Počet pokusů, než se musí PIN kód resetovat**: Zadejte počet možných pokusů o zadání kódu PIN, než uživatel musí PIN resetovat. Pro toto nastavení neexistuje výchozí hodnota.
  - **Vyžadovat otisk prstu místo kódu PIN (Android 6.0+)**: Pokud pro přístup k aplikaci místo číselného kódu PIN požadujete otisk prstu, vyberte **Ano**.
- Na zařízeních s Androidem můžete uživatelům povolit, aby se místo číselného kódu PIN identifikovali pomocí otisku prstu. Když se koncový uživatel pokusí o přístup k této aplikaci pomocí svého pracovního účtu, vyzve se k zadání otisku prstu a nemusí zadávat číselný PIN.
- - **Vyžadovat pro přístup podnikové přihlašovací údaje**: Pokud pro přístup k aplikaci místo číselného kódu PIN požadujete podnikové přihlašovací údaje nebo otisk prstu, zvolte **Ano**. Pokud nastavíte **Ano**, přepíše se tím požadavek na PIN nebo Touch ID. Uživatel se vyzve k zadání podnikových přihlašovacích údajů.
+ Na zařízeních s Androidem můžete uživatelům povolit, aby se místo číselného kódu PIN identifikovali pomocí otisku prstu. Když se uživatel pokusí otevřít tuto aplikaci ze svého pracovního účtu, zobrazí se výzva k zadání otisku prstu a uživatel nemusí zadávat kód PIN.
+ - **Vyžadovat pro přístup podnikové přihlašovací údaje**: Pokud pro přístup k aplikaci místo číselného kódu PIN požadujete podnikové přihlašovací údaje nebo otisk prstu, zvolte **Ano**. Pokud nastavíte **Ano**, toto nastavení přepíše požadavek na PIN nebo Touch ID. Uživatel se vyzve k zadání podnikových přihlašovacích údajů. Výchozí hodnota = **Ne**
 
-  Výchozí hodnota = **Ne**
-- **Blokovat spouštění spravovaných aplikací na zařízeních s jailbreakem nebo rootem**: Pokud chcete blokovat spouštění aplikací na zařízeních s jailbreakem nebo rootem, vyberte **Ano**. Uživatel bude moct i dál používat zařízení pro své osobní účely, ale při práci bude muset používat jiné zařízení.
+
+- **Blokovat spouštění spravovaných aplikací na zařízeních s jailbreakem nebo rootem**: Pokud chcete blokovat spouštění aplikací na zařízeních s jailbreakem nebo rootem, vyberte **Ano**. Uživatel může dál používat aplikace pro osobní účely, ale k práci musí používat jiné zařízení.
 
   Výchozí hodnota = **Ano**
 - **Znovu zkontrolovat požadavky na přístup po (minuty)**
@@ -107,6 +107,6 @@ Existují dvě kategorie nastavení zásad:nastavení přemístění dat a nasta
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

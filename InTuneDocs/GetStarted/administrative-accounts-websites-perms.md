@@ -14,13 +14,13 @@ ms.assetid: db3075e7-38fd-4dfe-b266-26aed10ac8ea
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0d422b421c3716ad576c4fc565b181dec28c947e
-ms.openlocfilehash: 69b19cec363c769209dab02a941f286057e9dc3e
+ms.sourcegitcommit: 9d44a6494bed0758b9768045bd204ea0eb481636
+ms.openlocfilehash: e5282defb4560fee028e16d6526037c848678d1a
 
 
 ---
 
-# Účty pro správu, weby a oprávnění v Microsoft Intune
+# <a name="administrative-accounts-websites-and-permissions-in-microsoft-intune"></a>Účty pro správu, weby a oprávnění v Microsoft Intune
 
 Před nastavením Microsoft Intune si přečtěte toto téma a další požadavky uvedené v tématu [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md).
 
@@ -31,36 +31,36 @@ Chcete-li spravovat Intune, budete používat:
 
 V dalších částech najdete popis těchto účtů a portálů.
 
-## Účty správce a uživatelské účty se zvláštními oprávněními
+## <a name="administrator-accounts-and-user-accounts-with-special-permissions"></a>Účty správce a uživatelské účty se zvláštními oprávněními
 
 Níže jsou uvedené účty a oprávnění, které budete používat pro Intune.
 
-### Správce klienta
+### <a name="tenant-administrator"></a>Správce klienta
 |Úrovně oprávnění|Další informace|
 |--------------------------|-------------------------|
 |Správcům klientů se přiřazuje jedna role správce, která definuje obor správy pro daného uživatele a úlohy, které můžou spravovat.<br /><br />Role správců jsou obvyklé v rámci různých cloudových služeb Microsoftu, i když některé služby nemusí podporovat některé role.<br /><br /> Microsoft Intune používá následující role:<br /><br />– Globální správce<br />– Správce fakturace<br />– Správce hesel<br />– Správce podpory služeb<br />– Správce správy uživatelů|Ve výchozím nastavení je účet, který umožňuje vytvořit vaše předplatné Microsoft Intune, účtem správce tenanta s rolí globálního správce.<br /></br>  Jako správce tenanta můžete použít [!INCLUDE[wit_icp_1](../includes/wit_icp_1_md.md)] ke správě předplatného pro [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] a přiřazení správců tenantů z [!INCLUDE[wit_icp_2](../includes/wit_icp_2_md.md)].<br /><br />Abyste mohli přiřadit svého prvního správce služby, použijte správce klienta s rolí globální správy pro přístup k [!INCLUDE[wit_adminconsole](../includes/wit_adminconsole_md.md)]. Pro každodenní úlohy se nedoporučuje používat správce klienta. Správce klienta nevyžaduje licenci pro [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], abyste měli přístup k [!INCLUDE[wit_icp_2](../includes/wit_icp_2_md.md)].<br /><br />Správce klienta je běžným pojmem mezi cloudovými službami Microsoftu. Když se přihlásíte k odběru [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], bude vaše služba tenantem Microsoft Azure AD. Přečtěte si část týkající se tenanta Azure AD v tématu [Co je adresář Azure AD](http://technet.microsoft.com/library/jj573650.aspx).|
 
 
-### Správce služeb
+### <a name="service-administrator"></a>Správce služeb
 |Úrovně oprávnění|Další informace|
 |--------------------------|-------------------------|
 |Správcům služeb se přiřazuje jedno z těchto oprávnění:<br /><br />**Úplný přístup:** Uděluje přístup do všech oblastí [!INCLUDE[wit_adminconsole](../includes/wit_adminconsole_md.md)] bez omezení. Můžete taky přidat a spravovat další správce služeb.<br /><br />**Přístup jen pro čtení:** Uděluje oprávnění ke čtení pro všechny oblasti [!INCLUDE[wit_adminconsole](../includes/wit_adminconsole_md.md)]. Správce služby jen pro čtení nemůže měnit data, ale může spouštět sestavy.<br /><br />**Helpdesk – uzel Skupiny:** Udělí oprávnění, která správci služby umožní provádět jenom sadu úloh běžně spojovaných se scénáři technické podpory. Informace o této sadě oprávnění najdete v tématu [Přizpůsobení zobrazení konzoly Intune podle rolí administrátora](/intune/deploy-use/control-what-admins-can-see-in-the-microsoft-intune-admin-console).|Ve výchozím nastavení [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] nepřiřazuje správce služeb. Místo toho musíte k přiřazení prvního správce služeb pro vaše předplatné použít správce klienta s rolí globálního správce. </br></br> Jako správce služeb můžete použít [!INCLUDE[wit_adminconsole](../includes/wit_adminconsole_md.md)] ke správě každodenních úloh pro [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].<br /><br />Správce služeb přiřazujete z konzoly správce. Dřív, než bude možné z účtu získat přístup ke konzole pro správu, musí mít správce služeb licenci pro [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].|
 
 
 
-### Správci registrace zařízení
+### <a name="device-enrollment-managers"></a>Správci registrace zařízení
 |Úrovně oprávnění|Další informace|
 |--------------------------|-------------------------|
-|Správci registrace zařízení jsou standardní uživatelské účty, které mají další oprávnění registrovat víc než pět zařízení.|Ve výchozím nastavení může každý uživatel [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)] zaregistrovat až pět zařízení. Uživatelskému účtu ale můžete udělit oprávnění správce registrace zařízení a pak z tohoto účtu zaregistrovat velké skupiny zařízení vlastněných společností. To se hodí, když je možné zařízení dočasně přiřadit uživatelům nebo používat v celoobrazovkovém režimu, který nevyžaduje přiřazení uživatele k zařízení.|
+|Správci registrace zařízení jsou standardní uživatelské účty, které mají další oprávnění registrovat více než 15 zařízení.|Ve výchozím nastavení může každý uživatel [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)] zaregistrovat až 15 zařízení. Uživatelskému účtu ale můžete udělit oprávnění správce registrace zařízení a pak z tohoto účtu zaregistrovat velké skupiny zařízení vlastněných společností. To se hodí, když je možné zařízení dočasně přiřadit uživatelům nebo používat v celoobrazovkovém režimu, který nevyžaduje přiřazení uživatele k zařízení.|
 
 
-## Weby pro správu pro Intune
+## <a name="administrative-websites-for-intune"></a>Weby pro správu pro Intune
  Různé úlohy správy vyžadují, abyste použili jeden z následujících webů pro správu, ke kterým můžete přistupovat pomocí [podporovaného webového prohlížeče](supported-web-browsers.md).
 
 - [Portál Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Konzola pro správu Microsoft Intune](https://admin.manage.microsoft.com/)
 
-### [Portál Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
+### <a name="office-365-portalhttpgomicrosoftcomfwlinkplinkid698854"></a>[Portál Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
 
 **Jako správce tenanta můžete používat tento portál ke správě svého předplatného**, včetně těchto úloh (pokud je umožňuje vaše role správce):
 
@@ -75,7 +75,7 @@ Níže jsou uvedené účty a oprávnění, které budete používat pro Intune.
 - Abyste měli přístup k portálu Office 365, musí mít váš účet stav přihlášení **Povoleno**. Tento stav je něco jiného než vlastnictví licence k předplatnému. Ve výchozím nastavení jsou všechny uživatelské účty nastavené na **Povoleno**.
 
 
-### [Konzola pro správu Microsoft Intune](https://admin.manage.microsoft.com/)
+### <a name="microsoft-intune-administrator-consolehttpsadminmanagemicrosoftcom"></a>[Konzola pro správu Microsoft Intune](https://admin.manage.microsoft.com/)
 
 **Jako správce služby můžete tento portál využívat ke správě každodenních operací** včetně:
 
@@ -90,11 +90,11 @@ K tomuto portálu se můžou přihlásit jen uživatelé, kteří mají oprávn�
 
 Přečtěte si další informace o [přidávání uživatelů k vašemu předplatnému](start-with-a-paid-subscription-to-microsoft-intune-step-3.md) a [přiřazování licencí pro vaše předplatné](start-with-a-paid-subscription-to-microsoft-intune-step-4.md).
 
- ### Související témata
- [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
+ ### <a name="see-also"></a>Související témata
+ [Co potřebujete vědět, než začnete používat Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

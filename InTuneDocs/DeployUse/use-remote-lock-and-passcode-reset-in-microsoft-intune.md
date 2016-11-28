@@ -2,10 +2,10 @@
 title: "Resetování vzdáleného uzamčení a hesla | Microsoft Intune"
 description: "Intune poskytuje možnosti pro vzdálený zámek i resetování hesla."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: staciebarker
+ms.author: staciebarker
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 11/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,14 @@ ms.technology:
 ms.assetid: 970f8c81-7c7f-4789-9ed4-2133d50b9db6
 ms.reviewer: chrisgre
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: b32ef59aa33205e5687d951d50dfd605a6b071f2
+ms.sourcegitcommit: b76e9e16ef1fa6870783326630ae74d07ae59cbb
+ms.openlocfilehash: f69855f27ddc8ab6903c317383ef715f98590caf
 
 ---
-# Chraňte svá zařízení pomocí vzdáleného zámku a resetování hesla
+# <a name="help-protect-your-devices-with-remote-lock-and-passcode-reset"></a>Chraňte svá zařízení pomocí vzdáleného zámku a resetování hesla
 Microsoft Intune poskytuje možnosti pro vzdálený zámek i resetování hesla.
 
-## Vzdálené zamknutí zařízení
+## <a name="lock-a-device-remotely"></a>Vzdálené zamknutí zařízení
 Pokud uživatel ztratí zařízení, můžete ho vzdáleně zamknout. Následující tabulka uvádí, jak vzdálené uzamčení funguje na různých mobilních platformách.
 
 |Platforma|Vzdálené uzamčení|
@@ -34,7 +34,7 @@ Pokud uživatel ztratí zařízení, můžete ho vzdáleně zamknout. Následuj�
 
 Vzdálené uzamčení není podporované u počítačů s Windows, které jsou registrované pomocí klientského softwaru Intune.
 
-### Vzdálené uzamčení mobilního zařízení prostřednictvím konzoly Intune
+### <a name="lock-a-mobile-device-remotely-through-the-intune-console"></a>Vzdálené uzamčení mobilního zařízení prostřednictvím konzoly Intune
 
 1.  V [konzole správce Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všechna zařízení** &gt; **Všechna mobilní zařízení**.
 
@@ -45,13 +45,13 @@ Vzdálené uzamčení není podporované u počítačů s Windows, které jsou r
 
 3.  V tomto seznamu vyberte zařízení, která chcete zamknout. Na hlavním panelu zvolte **Vzdálené úlohy** a vyberte **Vzdálené uzamčení**.
 
-## Resetování hesla na zařízení
+## <a name="reset-the-passcode-on-a-device"></a>Resetování hesla na zařízení
 Pokud uživatel zapomene heslo, můžete mu pomoct tím, že heslo ze zařízení odeberete nebo na zařízení vynutíte nové dočasné heslo. Následující tabulka uvádí, jak resetování hesla funguje na různých mobilních platformách.
 
 |Platforma|Resetování hesla|
 |------------|------------------|
 |iOS|Je podporované vymazání hesla ze zařízení. Nevytvoří nové dočasné heslo.|
-|Android|Podporováno. Vytvoří dočasné heslo.|
+|Android|Podporováno ve verzích starších než Android 7.0. Vytvoří dočasné heslo.|
 |Windows 10 Mobile|Podporováno|
 |Windows Phone 8 a Windows Phone 8.1|Podporováno|
 |Windows RT 8.1 a Windows RT|Není podporované|
@@ -59,7 +59,7 @@ Pokud uživatel zapomene heslo, můžete mu pomoct tím, že heslo ze zařízen�
 
 Resetování hesla není podporované u počítačů s Windows, které jsou registrované pomocí klientského softwaru Intune.
 
-### Resetování hesla
+### <a name="reset-a-passcode"></a>Resetování hesla
 
 1.  V [konzole správce Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všechna zařízení** &gt; **Všechna mobilní zařízení**.
 
@@ -71,11 +71,11 @@ Resetování hesla není podporované u počítačů s Windows, které jsou regi
 3.  V tomto seznamu vyberte zařízení, která chcete zamknout. Na hlavním panelu zvolte **Vzdálené úlohy** a vyberte **Resetování hesla**.
 
 
-### Související témata
+### <a name="see-also"></a>Související témata
 [Vyřazení zařízení](retire-devices-from-microsoft-intune-management.md) a [Selektivní vymazání ve Windows pro správu dat na zařízeních](http://technet.microsoft.com/library/dn486874.aspx)
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

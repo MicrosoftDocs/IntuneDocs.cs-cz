@@ -14,14 +14,14 @@ ms.assetid: 8519e411-3d48-44eb-9b41-3e4fd6a93112
 ms.reviewer: lancecra
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 24411fdefa3f1e4e89c66d23448360934a5de7c7
-ms.openlocfilehash: 2aa17e2dbee8d89cfcc942a63cb5005090cd7bbb
+ms.sourcegitcommit: 9d44a6494bed0758b9768045bd204ea0eb481636
+ms.openlocfilehash: 5900894ded0518f731ac76c3eac0332e5a3f6c4b
 
 
 ---
 
 # <a name="help-protect-your-data-with-full-or-selective-wipe-using-microsoft-intune"></a>Lepší ochrana dat s využitím plného nebo selektivního vymazání pomocí Microsoft Intune
-Ať už zařízení není nadále potřebné, bude předáno někomu jinému nebo se ztratilo, můžete z něj (pokud je spravováno v Intune) vzdáleně vymazat aplikace a data. K tomuto účelu Intune poskytuje možnosti selektivního a úplného vymazání. Uživatelé také mohou odeslat příkaz ke vzdálenému vymazání zařízení z aplikace Portál společnosti Intune nainstalované na soukromých zařízeních zaregistrovaných v Intune.
+Ze zařízení spravovaných pomocí Intune, která už nejsou potřeba, mají se začít používat pro jiné účely nebo se ztratila, můžete vymazat aplikace a data. K tomuto účelu Intune poskytuje možnosti selektivního a úplného vymazání. Uživatelé také mohou odeslat příkaz ke vzdálenému vymazání zařízení z aplikace Portál společnosti Intune nainstalované na soukromých zařízeních zaregistrovaných v Intune.
 
   > [!NOTE]
   > Toto téma se věnuje jenom vymazání zařízení registrovaných ve správě mobilních zařízení Intune. K [vymazání firemních dat z aplikací](https://portal.azure.com) můžete také použít [portál Azure Portal](wipe-managed-company-app-data-with-microsoft-intune.md). Je rovněž možné [vyřadit počítače spravované klientským softwarem Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client#retire-a-computer.md).
@@ -77,7 +77,8 @@ Pokud je zařízení zapnuté a připojené, trvá vymazání všech typů zař�
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty jsou odebrané a odvolané.|
 |Agent pro správu|Profil pro správu se odebere.|
-|E-mailu|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune, a odstraní se e-maily uložené v mezipaměti zařízení.|
+|E-mailu|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune, a odstraní se e-maily uložené v mezipaměti zařízení. Pokud je Microsoft Exchange hostovaný na místním serveru, e-mailové profily a e-maily uložené v mezipaměti se neodeberou.|
+|Outlook|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro iOS.</br>Výjimka: Pokud je Exchange hostovaný na místním serveru, e-maily se neodeberou.|
 |Zrušení služby Azure Active Directory (AAD)|Odebere se záznam AAD.|
 |Kontakty | Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou.  Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. <br /> <br />V současné době se podporuje jen aplikace Outlook.
 
@@ -94,7 +95,8 @@ Pokud je zařízení zapnuté a připojené, trvá vymazání všech typů zař�
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty se zruší, ale neodeberou.|Certifikáty se odeberou a zruší.|
 |Agent pro správu|Zruší se oprávnění správce zařízení.|Zruší se oprávnění správce zařízení.|
-|E-mailu|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro Android.|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune, a odstraní se e-maily uložené v mezipaměti zařízení.|
+|E-mailu|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro Android.|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune, a odstraní se e-maily uložené v mezipaměti zařízení. Pokud je Microsoft Exchange hostovaný na místním serveru, e-mailové profily a e-maily uložené v mezipaměti se neodeberou.|
+|Outlook|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro iOS.</br>Výjimka: Pokud je Exchange hostovaný na místním serveru, e-maily se neodeberou.|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro iOS.</br>Výjimka: Pokud je Exchange hostovaný na místním serveru, e-maily se neodeberou.|
 |Zrušení služby Azure Active Directory (AAD)|Odebere se záznam AAD.|Odebere se záznam AAD.|
 |Kontakty | Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou.  Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. <br /> <br />V současné době se podporuje jen aplikace Outlook.|Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou.  Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. <br /> <br />V současné době se podporuje jen aplikace Outlook.
 
@@ -106,10 +108,10 @@ Pokud je zařízení zapnuté a připojené, trvá vymazání všech typů zař�
 |Nastavení|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|Odebrány.|Není podporováno.|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty se odeberou a zruší.|Certifikáty se odeberou a zruší.|Není podporováno.|Certifikáty se odeberou a zruší.|
-|E-mailu|Odebere se e-mail se zapnutým systémem souborů EFS, včetně e-mailů a příloh aplikace Pošta pro Windows.|Není podporováno.|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune, a odstraní se e-maily uložené v mezipaměti zařízení.|Odebere se e-mail se zapnutým systémem souborů EFS, včetně e-mailů a příloh aplikace Pošta pro Windows. Odebere e-mailové účty, které byly zřízené Intune.|
+|E-mailu|Odebere se e-mail se zapnutým systémem souborů EFS, včetně e-mailů a příloh aplikace Pošta pro Windows.|Není podporováno.|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune, a odstraní se e-maily uložené v mezipaměti zařízení.|Odebere se e-mail se zapnutým systémem souborů EFS, včetně e-mailů a příloh aplikace Pošta pro Windows. Odebere e-mailové účty, které byly zřízené Intune.</br>**Výjimka**: Pokud je Microsoft Exchange hostovaný na místním serveru, e-mailové účty se neodeberou.|
 |Zrušení služby Azure Active Directory (AAD)|Ne.|Ne.|Odebere se záznam AAD.|Nelze použít. Systém Windows 10 nepodporuje selektivní vymazání zařízení připojených k Azure Active Directory.|
 
-## <a name="wipe-encryption-file-system-efsenabled-content"></a>Vymazání obsahu s povoleným šifrováním systému souborů EFS (Encryption File System)
+## <a name="wipe-encryption-file-system-efs-enabled-content"></a>Vymazání obsahu s povoleným šifrováním systému souborů EFS (Encryption File System)
 Selektivní vymazání obsahu zašifrovaného systémem souborů EFS podporuje Windows 8.1 a Windows RT 8.1. Při selektivním vymazání obsahu s povoleným systémem souborů EFS platí následující body:
 
 -   Selektivně se vymažou jenom aplikace a data, která jsou chráněná systémem souborů EFS ve stejné internetové doméně jako účet Intune. Další informace najdete v tématu [Selektivní vymazání ve Windows pro správu dat na zařízeních](http://technet.microsoft.com/library/dn486874.aspx)
@@ -144,6 +146,6 @@ Sestava také zobrazuje, kdo akci provedl.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

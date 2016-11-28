@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 10/25/2016
+ms.date: 11/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 4c0bd439-3b58-420b-9a9a-282886986786
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1035a8ca4f63ad973e83ec24a7d700fac1d256cc
-ms.openlocfilehash: ee36cd5f3c64fc5dbeeb7265116c14be33b50067
+ms.sourcegitcommit: fb3b6cccaa3e62be3a7271ae6a67e76f8cf8d858
+ms.openlocfilehash: a1c7648a4ee4ab91e00f5305a8124a07570824fc
 
 
 ---
@@ -23,7 +23,15 @@ ms.openlocfilehash: ee36cd5f3c64fc5dbeeb7265116c14be33b50067
 # <a name="custom-configurations-for-vpn-profiles"></a>Vlastní konfigurace pro profily VPN
 
 ## <a name="create-a-custom-configuration"></a>Vytvoření vlastní konfigurace
-Vlastní konfigurace můžete použít k vytvoření profilů VPN v Intune. Vytvoření vlastní konfigurace:
+Vlastní konfigurace můžete použít k vytvoření profilů VPN v Intune pro:
+
+* Zařízení se systémem Android 4 nebo novější verzí
+* Zařízení se systémem Android for Work
+* Zaregistrovaná zařízení se systémem Windows 8.1 a novějším
+* Zařízení s Windows Phone 8.1 a novějším
+* Zařízení s Windows 10 Desktop a Mobile
+
+Vytvoření vlastní konfigurace:
 
    1. V konzole správce Intune vyberte **Zásady** > **Přidat zásadu** > *Rozbalit platformu* > **Vlastní konfigurace** > **Vytvořit zásadu**.
    2. Zadejte název pro tuto zásadu.
@@ -86,7 +94,7 @@ Eap ./Vendor/MSFT/VPNv2/ContosoVPN/NativeProfile/Authentication/Eap/Configuratio
 
 Další informace týkající se používání těchto nastavení a další podrobnosti o tom, co dělají, můžou zákazníci najít v dokumentaci poskytovatele konfigurační služby CSP: https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776(v=vs.85).aspx.
 
-## <a name="uri-settings-for-android-perapp-vpn-on-pulsesecure"></a>Nastavení identifikátorů URI pro VPN pro aplikace pro Android na PulseSecure
+## <a name="uri-settings-for-android-per-app-vpn-on-pulsesecure"></a>Nastavení identifikátorů URI pro VPN pro aplikace pro Android na PulseSecure
 ### <a name="custom-uri-for-package-list"></a>VLASTNÍ IDENTIFIKÁTORY URI PRO SEZNAM BALÍKŮ
 -  Datový typ = Řetězec
 -  OMA-URI = ./Vendor/MSFT/VPN/Profile/Name/PackageList

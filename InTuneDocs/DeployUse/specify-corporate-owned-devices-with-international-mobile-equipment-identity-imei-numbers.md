@@ -14,13 +14,13 @@ ms.assetid: 1712bd39-562b-4409-9cec-155d5f4d8a39
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 289e6019aa1a17deb91b38ed32f0432af0902a9d
-ms.openlocfilehash: 14ba34d46df4b4ff9de4427800b146e383f8a3d2
+ms.sourcegitcommit: 9d44a6494bed0758b9768045bd204ea0eb481636
+ms.openlocfilehash: 040413b59c81c20cf579660a83acebc494c0a1b9
 
 
 ---
 
-# <a name="specify-corporateowned-devices-with-international-mobile-equipment-identity-imei-numbers"></a>Určení podnikem vlastněných zařízení podle kódů IMEI (International Mobile Equipment Identity)
+# <a name="specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers"></a>Určení podnikem vlastněných zařízení podle kódů IMEI (International Mobile Equipment Identity)
 Microsoft Intune umožňuje správcům importovat kódy IMEI (International Mobile Equipment Identity) pro platformy mobilních zařízení, aby pomocí těchto kódů mohli identifikovat mobilní zařízení patřící společnosti. Po registraci zařízení v Intune se můžete na zařízení s importovanými kódy IMEI podívat v části **Skupiny** > **Přehled** > **Všechna zařízení**. Zařízení s importovanými kódy IMEI mají v seznamu **Skupina zařízení** ve sloupci **Vlastnictví** údaj **Firemní**.
 
 1. V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) zvolte **Skupiny** &gt; **Všechna zařízení** &gt; **Firemní předregistrovaná zařízení ** &gt; **Podle IMEI (všechny platformy)** a pak zvolte **Přidat zařízení**. Zařízení můžete přidat dvěma způsoby:
@@ -38,7 +38,7 @@ Microsoft Intune umožňuje správcům importovat kódy IMEI (International Mobi
         AABBBBBBCCCCCCE,PO 1234
         ```
 
-    -   **Přidáním podrobností o zařízení ručně** – Zadejte kód IMEI a podrobnosti až o pěti zařízeních.
+    -   **Přidáním podrobností o zařízení ručně** – Zadejte kód IMEI a podrobnosti až o 15 zařízeních.
 
    *Podrobnosti * jsou pro účely správy, abyste mohli zjistit, jaký kód IMEI je zařízení přiřazený. Tyto informace se neodesílají do zařízení, ale zobrazí se v konzole Intune.
 
@@ -50,6 +50,6 @@ Když se zařízení s kódem IMEI zaregistruje v Intune, většinou když uživ
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

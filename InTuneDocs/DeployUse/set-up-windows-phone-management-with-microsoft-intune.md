@@ -4,7 +4,7 @@ description: "Povolte správu mobilních zařízení (MDM) pro zařízení s Win
 keywords: 
 author: staciebarker
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 11/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: f5615051-2dd1-453b-9872-d3fdcefb2cb8
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 289e6019aa1a17deb91b38ed32f0432af0902a9d
-ms.openlocfilehash: a077d5a6cd111d84cb98bfcb5e05cab0c0c4d49c
+ms.sourcegitcommit: 9d44a6494bed0758b9768045bd204ea0eb481636
+ms.openlocfilehash: 66d533d094a12239ca4ed1a30f9ce3a06e5cece1
 
 
 ---
@@ -35,7 +35,11 @@ Nechte uživatele, ať si nainstalují aplikaci Portál společnosti služby Int
 
 1.  **Nastavení Intune**<br>Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení tím, že [nastavíte autoritu pro správu mobilních zařízení (MDM)](prerequisites-for-enrollment.md#set-mobile-device-management-authority) na **Microsoft Intune** a pak nastavte MDM.
 
-2.  **Vytváření záznamů CNAME** (volitelné)<br>Vytvořte záznamy o prostředcích DNS **CNAME** pro doménu vaší společnosti. Pokud je třeba web vaší společnosti contoso.com, vytvořili byste záznam CNAME ve službě DNS, který přesměruje adresu EnterpriseEnrollment.contoso.com na manage.microsoft.com. Pokud existuje víc než jedna ověřená doména, vytvořte záznam CNAME pro každou doménu. Záznamy o prostředcích CNAME musí obsahovat tyto informace:
+2.  **Vytváření záznamů CNAME** (volitelné)<br>Vytvořte záznamy o prostředcích DNS **CNAME** pro doménu vaší společnosti. Pokud má třeba vaše společnost web contoso.com, vytvořili byste ve službě DNS záznam CNAME, který přesměruje adresu EnterpriseEnrollment.contoso.com na EnterpriseEnrollment-s.manage.microsoft.com. 
+
+    Pokud máte v současnosti ve službě DNS záznam CNAME, který přesměrovává adresu EnterpriseEnrollment.contoso.com na adresu manage.microsoft.com, doporučujeme nahradit ho záznamem CNAME ve službě DNS, který přesměruje adresu EnterpriseEnrollment.contoso.com na adresu enterpriseenrollment-s.manage.microsoft.com. Tuto změnu doporučujeme, protože koncový bod manage.microsoft.com už bude v budoucí verzi pro registrace zastaralý.
+
+    Pokud existuje víc než jedna ověřená doména, vytvořte záznam CNAME pro každou doménu. Záznamy o prostředcích CNAME musí obsahovat tyto informace:
 
   |TYP|Název hostitele|Odkazuje na|Hodnota TTL|
   |--------|-------------|-------------|-------|
@@ -54,16 +58,20 @@ Nechte uživatele, ať si nainstalují aplikaci Portál společnosti služby Int
 
     ![Dialogové okno Instalace správy mobilního zařízení pro systém Windows](../media/windows-phone-enrollment.png)
 
-4.  **Volitelné kroky**<br>U Windows 10 není třeba provádět krok **Přidat klíče pro zkušební načtení**. Krok **Nahrát na server certifikát pro podpis kódu** je potřeba jen tehdy, když budete distribuovat obchodní aplikace (LOB), které zařízení nemohou získat z Windows Storu.
+4.  **Volitelné kroky**<br>U Windows 10 není třeba provádět krok **Přidat klíče pro zkušební načtení**. Krok **Nahrát na server certifikát pro podpis kódu** je potřeba jenom tehdy, když distribuujete obchodní aplikace (LOB), které zařízení nemůžou získat z Windows Storu.
 
-5.  **Informování uživatelů**<br>Uživatelé budou potřebovat vědět, jak si mají svá zařízení zaregistrovat a co mohou očekávat od zařazení do systému správy.
+5.  **Informujte uživatele, jak můžou svá zařízení zaregistrovat, aby získali přístup k firemním prostředkům.**
+
+    Postup registrace koncových uživatelů najdete v tématu [Registrace zařízení s Windows v Intune](../enduser/enroll-your-device-in-intune-windows.md). Můžete také uživatele odkázat na téma [Co správce IT uvidí při registraci zařízení v Intune](../enduser/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows).
+
+    Informace o dalších úlohách koncových uživatelů najdete v článcích:
     - [Co říct koncovým uživatelům o používání služby Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
     - [Pokyny pro koncové uživatele zařízení s Windows](../enduser/using-your-windows-device-with-intune.md)
 
-Pokud jste nenasadili portál společnosti na zařízení, nejsou vyžadované žádné další kroky.  Kroky 2 a 3 v konzole správce můžete ignorovat.
+Pokud jste nenasadili Portál společnosti na zařízení, nejsou vyžadované žádné další kroky.  Kroky 2 a 3 v konzole správce můžete ignorovat.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

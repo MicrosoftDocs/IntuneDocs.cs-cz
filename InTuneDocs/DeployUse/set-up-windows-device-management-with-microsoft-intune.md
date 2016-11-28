@@ -13,8 +13,8 @@ ms.assetid: 9a18c0fe-9f03-4e84-a4d0-b63821bf5d25
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 289e6019aa1a17deb91b38ed32f0432af0902a9d
-ms.openlocfilehash: 2d8f0694281249a30f55579b4cce2ade21fb14d7
+ms.sourcegitcommit: d51f34dea3463bec83ea39cdfb79c7bedf9e3926
+ms.openlocfilehash: 78137299b1c4e18fe68e1f9720a2111d1794e177
 
 
 ---
@@ -55,8 +55,12 @@ Pokud jste to ještě neudělali, připravte se na správu mobilních zařízen�
 
 4.  **Volitelné kroky**<br>U Windows 10 není třeba provádět krok **Přidat klíče pro zkušební načtení**. Krok **Nahrát na server certifikát pro podpis kódu** je potřeba jen tehdy, když budete distribuovat obchodní aplikace (LOB), které zařízení nemohou získat z Windows Storu.
 
-6.  **Informování uživatelů**<br>Budete muset informovat uživatele, jak si mají svá zařízení zaregistrovat a co mohou očekávat od zařazení do systému správy:
-      - [Co říct koncovým uživatelům o používání služby Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+6.  **Informujte uživatele, jak si mají svá zařízení zaregistrovat a co mohou očekávat od zařazení do systému správy.**
+
+    Postup registrace koncových uživatelů najdete v tématu [Registrace zařízení s Windows v Intune](../enduser/enroll-your-device-in-intune-windows.md).
+
+    Další informace o úlohách koncových uživatelů najdete v článcích:
+      - [Materiály o prostředí Microsoft Intune pro koncové uživatele](what-to-tell-your-end-users-about-using-microsoft-intune.md)
       - [Pokyny pro koncové uživatele zařízení s Windows](../enduser/using-your-windows-device-with-intune.md)
 
 ### <a name="see-also"></a>Viz taky
@@ -64,6 +68,6 @@ Pokud jste to ještě neudělali, připravte se na správu mobilních zařízen�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 
