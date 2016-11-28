@@ -1,5 +1,5 @@
-# [Porozumění a prozkoumávání](introduction-to-microsoft-intune.md)
-## [Úvod do služby Intune](introduction-to-microsoft-intune.md)
+# Porozumění a prozkoumávání
+## [Úvod do Intune](introduction-to-microsoft-intune.md)
 ## [Příručka pro testování Intune](get-started-with-a-30-day-trial-of-microsoft-intune.md)
 ### [Registrace nebo přihlášení k 30dennímu testování](get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md)
 ### [Přidávání uživatelů](get-started-with-a-30-day-trial-of-microsoft-intune-step-2.md)
@@ -11,7 +11,7 @@
 ## [Typické scénáře](common-ways-to-use-intune.md)
 ## [Glosář](intune-glossary.md)
 
-# [Začínáme](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
+# [Začínáme](/intune/get-started/get-started)
 # [Novinky](/intune/whats-new/whats-new-in-microsoft-intune)
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
 # [Nasazení a používání](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
@@ -19,6 +19,6 @@
 # [Řešení problémů](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO4-->
 
 
