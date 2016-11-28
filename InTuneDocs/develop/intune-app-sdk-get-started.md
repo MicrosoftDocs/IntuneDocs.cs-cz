@@ -4,6 +4,7 @@ description:
 keywords: 
 author: Msmbaldwin
 manager: jeffgilb
+ms.author: oydang
 ms.date: 09/08/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +14,8 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8bc2f6e8dcf9d0ac3e7fccec792c86ff1fd4131c
-ms.openlocfilehash: 15be877edbdeb827a4318af226ea8cde8c8e46f4
+ms.sourcegitcommit: ca4623db80d711f3543b6d688fb1bb1ef228c62c
+ms.openlocfilehash: 2a65ae79a0bba21d555dbed9f1bc40e01452f08c
 
 
 ---
@@ -82,10 +83,18 @@ K integraci sady Intune App SDK do nativní aplikace pro Android budete potřebo
 
 * **[Příručka pro vývojáře sady Intune App SDK pro Android](intune-app-sdk-android.md)**: Tento dokument vás detailně provede procesem povolování mobilních aplikací s Androidem pomocí sady Intune App SDK.
 
-Dokumentaci ke komponentě Xamarin sady Intune App SDK a k pluginu Cordova sady Intune App SDK najdete v příslušných úložištích GitHubu.
+K vytváření aplikací Cordova pomocí modulu plug-in Cordova sady Intune App SDK budete potřebovat následující příručku:
+
+* **[Příručka k modulu plug-in Cordova sady Intune App SDK](intune-app-sdk-cordova)**: Tento dokument vám pomůže vytvářet aplikace pro iOS a Android pomocí systému správy mobilních aplikací Cordova for Intune.
+
+K vytváření aplikací Xamarin pomocí komponenty Xamarin sady Intune App SDK budete potřebovat následující příručku:
+
+* **[Příručka ke komponentě Xamarin sady Intune App SDK](intune-app-sdk-xamarin)**: Tento dokument vám pomůže vytvářet aplikace pro iOS a Android pomocí systému správy mobilních aplikací Cordova for Intune.
 
 
-## <a name="set-up-telemetry-for-your-app"></a>Nastavení telemetrie pro aplikaci
+
+
+## <a name="configure-telemetry-for-your-app"></a>Konfigurace telemetrie pro vaši aplikaci
 
 Microsoft Intune shromažďuje data statistik využití vaši aplikace.
 
@@ -95,7 +104,7 @@ Microsoft Intune shromažďuje data statistik využití vaši aplikace.
 
 * **Intune App SDK pro Android**: Telemetrické údaje se neprotokolují pomocí sady SDK.
 
-## <a name="test-your-mamenabled-app-with-microsoft-intune"></a>Testování aplikace s povolenou správou mobilních aplikací s Microsoft Intune
+## <a name="test-your-mam-enabled-app-with-microsoft-intune"></a>Testování aplikace s povolenou správou mobilních aplikací s Microsoft Intune
 
 Po dokončení nezbytných kroků k integraci vaší aplikace pro iOS nebo Android se sadou Intune App SDK se musíte ujistit, že mají uživatelé a správci IT povolené a funkční všechny zásady správy aplikací. K testování integrované aplikace budete potřebovat následující:
 
