@@ -2,9 +2,10 @@
 title: "Použití vzdáleného vymazání pro lepší ochranu dat | Microsoft Intune"
 description: "Intune poskytuje možnosti selektivního a úplného vymazání, aby bylo možné odebrat citlivá firemní data a odebrat přístup k mnoha firemním prostředkům."
 keywords: 
-author: NathBarn
+author: staciebarker
+ms.author: staciebarker
 manager: angrobe
-ms.date: 07/25/2016
+ms.date: 11/02/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,27 +14,27 @@ ms.assetid: 8519e411-3d48-44eb-9b41-3e4fd6a93112
 ms.reviewer: lancecra
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: dcfa3af374a7e64e931508e1a8022bf8a50c71a7
-ms.openlocfilehash: a09c9b55d7906ab792bda90b172a36b3656ed6dd
+ms.sourcegitcommit: e33dcb095b1a405b3c8d99ba774aee1832273eaf
+ms.openlocfilehash: df7f2683d8ae8860b7eaa0d1c37c7443830291a0
 
 
 ---
 
-# Lepší ochrana dat s využitím plného nebo selektivního vymazání pomocí Microsoft Intune
-Ať už zařízení není nadále potřebné, bude předáno někomu jinému nebo se ztratilo, můžete z něj (pokud je spravováno v Intune) vzdáleně vymazat aplikace a data. K tomuto účelu Intune poskytuje možnosti selektivního a úplného vymazání. Příkaz pro vzdálené vymazání zařízení můžou taky zadat uživatelé z portálu společnosti Intune pro soukromá zařízení, která jsou v Intune zaregistrovaná.
+# <a name="help-protect-your-data-with-full-or-selective-wipe-using-microsoft-intune"></a>Lepší ochrana dat s využitím plného nebo selektivního vymazání pomocí Microsoft Intune
+Ze zařízení spravovaných pomocí Intune, která už nejsou potřeba, mají se začít používat pro jiné účely nebo se ztratila, můžete vymazat aplikace a data. K tomuto účelu Intune poskytuje možnosti selektivního a úplného vymazání. Uživatelé také mohou odeslat příkaz ke vzdálenému vymazání zařízení z aplikace Portál společnosti Intune nainstalované na soukromých zařízeních zaregistrovaných v Intune.
 
   > [!NOTE]
-  > Toto téma se věnuje jenom vymazání zařízení registrovaných ve správě mobilních zařízení Intune. K [vymazání firemních dat z aplikace](wipe-managed-company-app-data-with-microsoft-intune.md) můžete taky použít [portál Azure Preview](https://portal.azure.com). Je rovněž možné [vyřadit počítače spravované klientským softwarem Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client#retire-a-computer.md).
+  > Toto téma se věnuje jenom vymazání zařízení registrovaných ve správě mobilních zařízení Intune. K [vymazání firemních dat z aplikací](https://portal.azure.com) můžete také použít [portál Azure Portal](wipe-managed-company-app-data-with-microsoft-intune.md). Je rovněž možné [vyřadit počítače spravované klientským softwarem Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client#retire-a-computer.md).
 
-## Úplné vymazání
+## <a name="full-wipe"></a>Úplné vymazání
 
-**Úplné vymazání** na zařízení obnoví výchozí nastavení od výrobce a odebere všechna firemní a uživatelská data a nastavení. Zařízení se odebere ze služby Intune. Plné vymazání je užitečné k tomu, aby se zařízení resetovalo, než se předá novému uživateli, a v případech, kdy došlo ke ztrátě nebo odcizení zařízení.  **Volbu úplného vymazání používejte velmi opatrně. Data v zařízení nejde obnovit.**
+**Úplné vymazání** na zařízení obnoví výchozí nastavení od výrobce a odebere všechna firemní a uživatelská data a nastavení. Zařízení se odebere ze služby Intune. Úplné vymazání je vhodné, když chcete zařízení resetovat, abyste ho mohli dát novému uživateli, nebo když došlo k jeho ztrátě nebo odcizení.  **Volbu úplného vymazání používejte velmi opatrně. Data v zařízení nejde obnovit.**
 
 
 > [!Warning]
-> Zařízení s Windows 10 RTM (tj. starší než Windows 10 verze 1511) s méně než 4 GB paměti RAM se mohou stát po vymazání nedostupná. Když chcete přistupovat k zařízením s Windows 10, která přestala reagovat, můžete zařízení spustit z jednotky USB nebo použít podobné náhradní řešení.
+> Zařízení s Windows 10 RTM (zařízení se starším systémem než Windows 10 verze 1511) s méně než 4 GB paměti RAM mohou být po vymazání nedostupná. Pokud chcete získat přístup k zařízení s Windows 10, které nereaguje, použijte k jeho spuštění USB flash disk.
 
-### Vzdálené vymazání zařízení z konzoly správce Intune
+### <a name="remotely-wipe-a-device-from-the-intune-administrator-console"></a>Vzdálené vymazání zařízení z konzoly správce Intune
 
 1.  Vyberte zařízení, která se mají vymazat. Můžete je vyhledat podle uživatele nebo podle zařízení.
 
@@ -43,73 +44,94 @@ Ať už zařízení není nadále potřebné, bude předáno někomu jinému neb
 
         2.  Zvolte jméno uživatele, pro kterého chcete vymazat mobilní zařízení. Vyberte **Zobrazit vlastnosti**.
 
-        3.  Na stránce **Vlastnosti** tohoto uživatele zvolte **Zařízení** a pak klikněte na název mobilního zařízení, které chcete vymazat. Když chcete vybrat víc zařízení, klikejte na ně se stisknutou klávesou Ctrl.
+        3.  Na stránce **Vlastnosti** tohoto uživatele zvolte **Zařízení** a pak klikněte na název mobilního zařízení, které chcete vymazat. Pokud chcete vybrat více zařízení, použijte Ctrl + kliknutí.
 
     -   **Podle zařízení:**
 
         1.  V [konzole správce Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všechna mobilní zařízení**.
 
-      ![Zahájení operace vymazání nebo vyřazení](../media/dev-sa-wipe.png)
+         ![Zahájení operace vymazání nebo vyřazení](../media/dev-sa-wipe.png)
 
-        2.  Zvolte **Zařízení** a pak vyberte název mobilního zařízení, které chcete vymazat. Když chcete vybrat víc zařízení, klikejte na ně se stisknutou klávesou Ctrl.
+        2.  Zvolte **Zařízení** a pak vyberte název mobilního zařízení, které chcete vymazat. Pokud chcete vybrat více zařízení, použijte Ctrl + kliknutí.
 
 2.  Zvolte **Vyřadit z provozu či vymazat**.
 
-3.  Zobrazí se zpráva s požadavkem, abyste potvrdili, jestli chcete zařízení vyřadit z provozu.
+3.  Zobrazí se zpráva, která žádá o potvrzení, že chcete zařízení vyřadit.
 
-    -   Pokud chcete provést **Selektivní vymazání**, které odebere jenom firemní aplikace a data, zvolte **Ano**.
+    -   Pokud chcete provést **selektivní vymazání**, které odebere jenom aplikace a data společnosti, zvolte **Ano**.
 
-    -   Pokud chcete provést **Úplné vymazání**, který vymaže všechny aplikace a data a vrátí zařízení do výchozího nastavení z výroby, vyberte **Před vyřazením z provozu zařízení vymazat**. Tato akce se vztahuje na všechny platformy kromě Windows 8.1. **Data odebraná pomocí úplného vymazání nejde obnovit**.
+    -   Pokud chcete provést **úplné vymazání**, který vymaže všechny aplikace a data a vrátí zařízení do výchozího nastavení z výroby, zvolte **Před vyřazením z provozu zařízení vymazat**. Tato akce se vztahuje na všechny platformy kromě Windows 8.1. **Data odebraná pomocí úplného vymazání nejde obnovit**.
 
-Za předpokladu, že je zařízení zapnuté a připojené k internetu, trvá vymazání všech typů zařízení méně než 15 minut.
+Pokud je zařízení zapnuté a připojené, trvá vymazání všech typů zařízení méně než 15 minut.
 
-## Selektivní vymazání
+#### <a name="to-delete-devices-in-the-azure-active-directory-portal"></a>Odstranění zařízení na portálu služby Azure Active Directory
 
-**Selektivní vymazání** odebere ze zařízení firemní data, včetně případných dat správy mobilních aplikací (MAM), nastavení a e-mailových profilů. Při selektivním vymazání se osobní údaje uživatele na zařízení ponechají. Zařízení se odebere ze služby Intune. Následující tabulka pro jednotlivé platformy popisuje, jaká data se odeberou, a vliv na data, která v zařízení po selektivním vymazání zůstanou.
+1.  Přejděte na adresu [http://aka.ms/accessaad](http://aka.ms/accessaad) nebo zvolte **Správce** &gt; **Azure AD** na webu [https://portal.office.com](https://portal.office.com).
+
+2.  Použijte odkaz v levé části stránky a přihlaste se pod svým ID organizace.
+
+3.  Pokud nemáte předplatné Azure, vytvořte ho. Pokud máte placený účet, neměli byste potřebovat platební kartu ani zadání platby (zvolte odkaz pro předplatné **Zdarma zaregistrovat službu Azure Active Directory**).
+
+4.  Vyberte možnost **Active Directory** a potom vyberte svoji organizaci.
+
+5.  Vyberte kartu **Uživatelé** .
+
+6.  Vyberte uživatele, jehož zařízení chcete odstranit.
+
+7.  Zvolte **Zařízení**.
+
+8.  Odeberte zařízení podle potřeby, třeba zařízení, která už se nepoužívají, nebo zařízení s nesprávnými definicemi.
+
+
+## <a name="selective-wipe"></a>selektivní vymazání
+
+**Selektivní vymazání** odebere ze zařízení firemní data, včetně případných dat správy mobilních aplikací (MAM), nastavení a e-mailových profilů. Při selektivním vymazání se osobní údaje uživatele na zařízení ponechají. Zařízení se odebere ze služby Intune. Následující tabulky popisují, jaká data se odeberou a jaký vliv má selektivní vymazání na zbývající data v zařízení (tabulky jsou uspořádané podle platformy).
 
 **iOS**
 
 |Datový typ|iOS|
 |-------------|-------|
-|Firemní aplikace a související data nainstalovaná službou Intune|Odinstalují se aplikace. Odeberou se data firemních aplikací.<br /><br />Odeberou se data aplikací z aplikací Microsoftu, které používají správu mobilních aplikací. Aplikace se neodebere.|
-|Nastavení|Konfigurace, které byly nastavené zásadami Intune, už nebudou vynucené a uživatelé můžou nastavení změnit.|
-|Nastavení profilu sítě Wi-Fi a VPN|Odebrané|
-|Nastavení profilu certifikátu|Certifikáty se odeberou a zruší.|
+|Firemní aplikace a související data instalovaná službou Intune|Odinstalují se aplikace. Odeberou se data firemních aplikací.<br /><br />Odeberou se data aplikací z aplikací Microsoftu, které používají správu mobilních aplikací. Aplikace se neodebere.|
+|Nastavení|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|
+|Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|
+|Nastavení profilu certifikátu|Certifikáty jsou odebrané a odvolané.|
 |Agent pro správu|Profil pro správu se odebere.|
-|E-mailu|E-mailové profily, které jsou zřízené prostřednictvím Intune, se odeberou a e-maily v mezipaměti zařízení se odstraní.|
-|Zrušení služby Azure Active Directory (AAD)|Záznam AAD se odebere|
+|E-mailu|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune, a odstraní se e-maily uložené v mezipaměti zařízení. Pokud je Microsoft Exchange hostovaný na místním serveru, e-mailové profily a e-maily uložené v mezipaměti se neodeberou.|
+|Outlook|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro iOS.</br>Výjimka: Pokud je Exchange hostovaný na místním serveru, e-maily se neodeberou.|
+|Zrušení služby Azure Active Directory (AAD)|Odebere se záznam AAD.|
 |Kontakty | Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou.  Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. <br /> <br />V současné době se podporuje jen aplikace Outlook.
 
 **Android**
 
-|Datový typ|Android|Android Samsung KNOX|
+|Datový typ|Android|Android Samsung KNOX Standard|
 |-------------|-----------|------------------------|
-|Webové odkazy|Odebrány.|Odebrané|
-|Nespravované aplikace Google Play|Aplikace a data zůstanou nainstalované.|Aplikace a data zůstanou nainstalované.|
-|Nespravované obchodní aplikace|Aplikace a data zůstanou nainstalované.|Aplikace se odinstalují a následkem toho se odeberou data, která jsou pro tuto aplikaci místní. Neodeberou se žádná data mimo aplikaci (karta SD atd.).|
-|Spravované aplikace Google Play|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (karta SD atd.) zůstávají šifrovaná a nepoužitelná, ale neodeberou se.|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (karta SD atd.) zůstávají šifrovaná, ale neodeberou se.|
-|Spravované obchodní aplikace|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (karta SD atd.) zůstávají šifrovaná a nepoužitelná, ale neodeberou se.|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (karta SD atd.) zůstávají šifrovaná a nepoužitelná, ale neodeberou se.|
-|Nastavení|Konfigurace, které byly nastavené zásadami Intune, už nebudou vynucené a uživatelé můžou nastavení změnit.|Konfigurace, které byly nastavené zásadami Intune, už nebudou vynucené a uživatelé můžou nastavení změnit.|
-|Nastavení profilu sítě Wi-Fi a VPN|Odebrané|Odebrané|
+|Webové odkazy|Odebrány.|Odebrány.|
+|Nespravované aplikace Google Play|Aplikace a data zůstanou nainstalována.|Aplikace a data zůstanou nainstalována.|
+|Nespravované obchodní aplikace|Aplikace a data zůstanou nainstalována.|Odinstalují se aplikace a následkem toho se odeberou i jejich místní data. Data mimo aplikaci (například na kartě SD) odebrána nebudou.|
+|Spravované aplikace Google Play|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (například na kartě SD) zůstanou zašifrována, takže nepůjdou použít, ale odebrána nebudou.|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (například na kartě SD) zůstanou zašifrována, ale odebrána nebudou.|
+|Spravované obchodní aplikace|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (například na kartě SD) zůstanou zašifrována, takže nepůjdou použít, ale odebrána nebudou.|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (například na kartě SD) zůstanou zašifrována, takže nepůjdou použít, ale odebrána nebudou.|
+|Nastavení|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|
+|Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty se zruší, ale neodeberou.|Certifikáty se odeberou a zruší.|
 |Agent pro správu|Zruší se oprávnění správce zařízení.|Zruší se oprávnění správce zařízení.|
-|E-mailu|E-maily přijaté aplikací Microsoft Outlook pro Android se odeberou.|E-mailové profily, které jsou zřízené prostřednictvím Intune, se odeberou a e-maily v mezipaměti zařízení se odstraní.|
-|Zrušení služby Azure Active Directory (AAD)|Záznam AAD se odebere|Záznam AAD se odebere|
+|E-mailu|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro Android.|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune, a odstraní se e-maily uložené v mezipaměti zařízení.|
+|Outlook|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro iOS.</br>Výjimka: Pokud je Exchange hostovaný na místním serveru, e-maily se neodeberou.|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro iOS.</br>Výjimka: Pokud je Exchange hostovaný na místním serveru, e-maily se neodeberou.|
+|Zrušení služby Azure Active Directory (AAD)|Odebere se záznam AAD.|Odebere se záznam AAD.|
 |Kontakty | Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou.  Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. <br /> <br />V současné době se podporuje jen aplikace Outlook.|Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou.  Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. <br /> <br />V současné době se podporuje jen aplikace Outlook.
 
 **Windows**
 
 |Datový typ|Windows 8.1 (MDM) a Windows RT 8.1|Windows RT|Windows Phone 8 a Windows Phone 8.1|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Firemní aplikace a související data nainstalovaná službou Intune|U souborů chráněných systémem souborů EFS dojde ke zrušení klíče a uživatel nebude moct soubory otevírat.|Neodebere firemní aplikace.|Odinstalují se aplikace původně nainstalované prostřednictvím firemního portálu. Odeberou se data firemních aplikací.|Aplikace jsou odinstalovány a jsou odebrány klíče zkušebního načtení.|
-|Nastavení|Konfigurace, které byly nastavené zásadami Intune, už nebudou vynucené a uživatelé můžou nastavení změnit.|Konfigurace, které byly nastavené zásadami Intune, už nebudou vynucené a uživatelé můžou nastavení změnit.|Konfigurace, které byly nastavené zásadami Intune, už nebudou vynucené a uživatelé můžou nastavení změnit.|Konfigurace, které byly nastavené zásadami Intune, už nebudou vynucené a uživatelé můžou nastavení změnit.|
-|Nastavení profilu sítě Wi-Fi a VPN|Odebrané|Odebrané|Není podporované|Odebrané|
-|Nastavení profilu certifikátu|Certifikáty se odeberou a zruší.|Certifikáty se odeberou a zruší.|Není podporované|Certifikáty se odeberou a zruší.|
-|E-mailu|Odebere e-mail s povoleným systémem souborů EFS, což zahrnuje e-maily a přílohy aplikace Pošta pro Windows.|Není podporované|E-mailové profily, které jsou zřízené prostřednictvím Intune, se odeberou a e-maily v mezipaměti zařízení se odstraní.|Odebere e-mail s povoleným systémem souborů EFS, což zahrnuje e-maily a přílohy aplikace Pošta pro Windows. Odebere e-mailové účty, které byly zřízené Intune.|
-|Zrušení služby Azure Active Directory (AAD)|Ne|Ne|Záznam AAD se odebere|Nelze použít. Windows 10 nepodporuje selektivní vymazání pro zařízení připojená k Azure Active Directory.|
+|Firemní aplikace a související data instalovaná službou Intune|U souborů chráněných systémem souborů EFS dojde ke zrušení klíče a uživatel nebude moct soubory otevírat.|Neodebere firemní aplikace.|Odinstalují se aplikace původně nainstalované prostřednictvím firemního portálu. Odeberou se data firemních aplikací.|Aplikace jsou odinstalovány a jsou odebrány klíče zkušebního načtení.|
+|Nastavení|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|
+|Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|Odebrány.|Není podporováno.|Odebrány.|
+|Nastavení profilu certifikátu|Certifikáty se odeberou a zruší.|Certifikáty se odeberou a zruší.|Není podporováno.|Certifikáty se odeberou a zruší.|
+|E-mailu|Odebere se e-mail se zapnutým systémem souborů EFS, včetně e-mailů a příloh aplikace Pošta pro Windows.|Není podporováno.|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune, a odstraní se e-maily uložené v mezipaměti zařízení.|Odebere se e-mail se zapnutým systémem souborů EFS, včetně e-mailů a příloh aplikace Pošta pro Windows. Odebere e-mailové účty, které byly zřízené Intune.</br>**Výjimka**: Pokud je Microsoft Exchange hostovaný na místním serveru, e-mailové účty se neodeberou.|
+|Zrušení služby Azure Active Directory (AAD)|Ne.|Ne.|Odebere se záznam AAD.|Nelze použít. Systém Windows 10 nepodporuje selektivní vymazání zařízení připojených k Azure Active Directory.|
 
-## Vymazání obsahu s povoleným šifrováním systému souborů EFS (Encryption File System)
-Selektivní vymazání obsahu zašifrovaného systémem souborů EFS podporuje Windows 8.1 a Windows RT 8.1. Pro selektivní vymazání obsahu s povoleným systémem souborů EFS platí následující:
+## <a name="wipe-encryption-file-system-efs-enabled-content"></a>Vymazání obsahu s povoleným šifrováním systému souborů EFS (Encryption File System)
+Selektivní vymazání obsahu zašifrovaného systémem souborů EFS podporuje Windows 8.1 a Windows RT 8.1. Při selektivním vymazání obsahu s povoleným systémem souborů EFS platí následující body:
 
 -   Selektivně se vymažou jenom aplikace a data, která jsou chráněná systémem souborů EFS ve stejné internetové doméně jako účet Intune. Další informace najdete v tématu [Selektivní vymazání ve Windows pro správu dat na zařízeních](http://technet.microsoft.com/library/dn486874.aspx)
 
@@ -127,21 +149,22 @@ Mezi data a aplikace, u kterých se aktuálně podporuje selektivní vymazání 
 
 -   Pokud vaše organizace udržuje svou identitu ve službě Active Directory, musí používat nástroj synchronizace adresářů (DirSync) k synchronizaci informací do AAD, aby selektivní vymazání pro systém souborů EFS fungovalo správně.  Další informace o nástroji DirSync najdete v tématu [Scénář synchronizace adresářů](http://technet.microsoft.com/library/dn441212.aspx) v dokumentaci služby Azure Active Directory.
 
-## Sledování akcí vyřazení z provozu, vymazání a odstranění
-Pokud chcete získat sestavu zařízení, která se vyřadila z provozu, vymazala nebo odstranila a taky to, kdo tuto operaci provedl:
+## <a name="monitor-retire-wipe-and-delete-actions"></a>Sledování akcí vyřazení z provozu, vymazání a odstranění
+Získání sestavy s vyřazenými, vymazanými nebo odstraněnými zařízeními:
 
 1.  V [konzole správce Intune](https://manage.microsoft.com/) zvolte **Sestavy** &gt; **Sestavy historie zařízení**.
 
-2.  Zadejte počáteční a koncové datum pro sestavu a pak zvolte **Zobrazit sestavu**.
+2.  Zadejte počáteční a koncové datum sestavy a zvolte **Zobrazit sestavu**.
 
+Sestava také zobrazuje, kdo akci provedl.
 
-### Související témata
+### <a name="see-also"></a>Viz taky
 [Vyřazení zařízení](retire-devices-from-microsoft-intune-management.md)
 
 [Selektivní vymazání ve Windows pro správu dat na zařízeních](http://technet.microsoft.com/library/dn486874.aspx)
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Nov16_HO4-->
 
 

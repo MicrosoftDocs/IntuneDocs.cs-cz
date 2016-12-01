@@ -2,10 +2,10 @@
 title: "Odeslání chyb při registraci správci IT | Microsoft Intune"
 description: "Odeslání chyb při registraci správci"
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/08/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,18 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c10f9548c00972a018e742601586f6e03e1a05cc
-ms.openlocfilehash: 93f4d2c93f17146a704031dae0d35cfde077b384
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 57e5707ab651dd18f1d83730b03ae0267de25e34
 
 
 ---
 
 
-# Odeslání chyb při registraci správci IT
+# <a name="send-enrollment-errors-to-your-it-admin"></a>Odeslání chyb při registraci správci IT
 
-Pokud se při registraci zařízení s Androidem do Intune zobrazí chyba, můžete registraci zkusit znovu klepnutím na **Opakovat**. Klepnutím na **Odeslat informace** můžete informace o této chybě také odeslat správci IT.
+Pokud se při registraci zařízení s Androidem do Intune zobrazí chybová zpráva, můžete registraci zkusit znovu klepnutím na **Opakovat**. Klepnutím na **Odeslat informace** můžete informace o této chybě také odeslat správci IT.
 
-Při klepnutí na **Odeslat informace** se automaticky vytvoří e-mail adresovaný správci IT a obsahující protokoly, které správce IT potřebuje k vyřešení problémů s vaším zařízením.
+Když klepnete na **Poslat informace**, vytvoří se automaticky e-mail. Jeho příjemcem je správce IT. E-mail obsahuje protokoly, které správce IT potřebuje k řešení potíží se zařízením.
 
 Datové protokoly zařízení můžete správci IT odeslat kvůli vyřešení problémů několika způsoby:
 
@@ -35,6 +35,6 @@ Datové protokoly zařízení můžete správci IT odeslat kvůli vyřešení pr
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

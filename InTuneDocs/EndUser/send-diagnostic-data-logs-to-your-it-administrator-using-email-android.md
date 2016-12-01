@@ -2,7 +2,7 @@
 title: "Odeslání protokolů s diagnostickými daty e-mailem vašemu správci IT | Microsoft Intune"
 description: "Odeslání datových protokolů zařízení s Androidem pomocí e-mailu"
 keywords: 
-author: barlan
+author: barlanmsft
 ms.author: barlan
 manager: angrobe
 ms.date: 09/21/2016
@@ -22,7 +22,7 @@ ms.openlocfilehash: 9dd0f089d220538a5526979a84dc165151b86f4f
 ---
 
 
-# Odeslání protokolů s diagnostickými daty e-mailem vašemu správci IT
+# <a name="send-diagnostic-data-logs-to-your-it-admin-using-email"></a>Odeslání protokolů s diagnostickými daty e-mailem vašemu správci IT
 
 Pokud se při práci se školními nebo firemními aplikacemi nebo s aplikací Portál společnosti na zařízení s Androidem zobrazí chyba, můžete odeslat protokoly s diagnostickými daty, které vašemu správci IT pomůžou chybu diagnostikovat a opravit. Pokud chcete do protokolů zahrnout všechny podrobnosti, které vašemu správci IT pomůžou problém pochopit, zapněte podrobné protokolování. Další informace o podrobném protokolování najdete v článku [Pomoc správci IT s řešením problémů zařízení s Androidem pomocí podrobného protokolování](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).
 

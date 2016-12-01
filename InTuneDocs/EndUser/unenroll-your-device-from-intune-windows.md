@@ -2,9 +2,10 @@
 title: "Zrušení registrace zařízení s Windows v Intune | Microsoft Intune"
 description: "Popisuje zrušení registrace zařízení s Windows v Intune."
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +14,14 @@ ms.assetid: 018bda65-7238-41f5-b92a-e5f67b7fe085
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 93374a2098447a11b164ae3fb5d7b1b3d4824806
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: e71dece9a286ecb086197959739b0f4cb66c856d
 
 
 ---
 
 
-# Zrušení registrace zařízení s Windows v Intune
+# <a name="unenroll-your-windows-device-from-intune"></a>Zrušení registrace zařízení s Windows v Intune
 
 Jestli jste se zaregistrovali v Intune, ale zařízení s Windows už nechcete v práci nebo ve škole využívat a nepotřebujete přístup k pracovním nebo školním e-mailům, aplikacím nebo jiným prostředkům, musíte zrušit registraci zařízení. Jakmile zrušíte registraci zařízení v Intune, tyto prostředky už pro vás nebudou přístupné. Další informace o tom, co se stane, pokud zrušíte registraci svého zařízení, najdete v tématu [Co se stane, když zrušíte registraci zařízení v Intune](what-happens-if-you-unenroll-your-device-from-intune-windows.md).
 
@@ -30,7 +31,7 @@ Informace o tom, jak zrušit registraci zařízení, získáte prostřednictvím
 -   [Zrušení registrace počítače s Windows 8.1](#unenroll-your-windows-8-1-computer)
 -   [Zrušení registrace zařízení Windows Phone 8.1](#unenroll-your-windows-phone-8-1-device)
 
-## Zrušení registrace zařízení s Windows 10
+## <a name="unenroll-your-windows-10-device"></a>Zrušení registrace zařízení s Windows 10
 
 1.  V seznamu aplikací klepněte na aplikaci **Company Portal** .
 
@@ -40,17 +41,17 @@ Informace o tom, jak zrušit registraci zařízení, získáte prostřednictvím
 
 4.  Klepněte na **Odebrat** &gt; **Odebrat**.
 
-## Zrušení registrace počítače s Windows 8.1
+## <a name="unenroll-your-windows-81-computer"></a>Zrušení registrace počítače s Windows 8.1
 
 1.  Přejděte na **Nastavení počítače** &gt; **Síť** &gt; **Pracoviště**.
 
-2.  V části **Připojení pracovního místa** klepněte na **Ponechat**.
+2.  V části **Připojení pracovního místa** vyberte **Odejít**.
 
-3.  V části **Zapnout správu zařízení** klepněte na **Vypnout**.
+3.  V části **Zapnout správu zařízení** vyberte **Vypnout**.
 
-4.  V automaticky otevíraném okně, které se otevře, klepněte na **Vypnout**.
+4.  V automaticky otevíraném okně, které se otevře, vyberte **Vypnout**.
 
-## Zrušení registrace zařízení Windows Phone 8.1
+## <a name="unenroll-your-windows-phone-81-device"></a>Zrušení registrace zařízení Windows Phone 8.1
 
 1.  Klepněte na **Nastavení** &gt; **Pracoviště**.
 
@@ -60,11 +61,10 @@ Informace o tom, jak zrušit registraci zařízení, získáte prostřednictvím
 
 4.  V dialogovém okně **Odstranit účet** klepněte na **Odstranit**.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

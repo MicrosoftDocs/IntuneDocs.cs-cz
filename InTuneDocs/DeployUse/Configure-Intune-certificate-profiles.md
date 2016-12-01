@@ -2,9 +2,10 @@
 title: "Konfigurace profilů certifikátů | Microsoft Intune"
 description: "Přečtěte si, jak vytvořit profil certifikátu Intune."
 keywords: 
-author: nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 10/10/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +14,13 @@ ms.assetid: 679a20a1-e66f-4b6b-bd8f-896daf1f8175
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 27ba29f57bba1f3807c4b593ecac8c0af0851962
-ms.openlocfilehash: 3f657e6a49fb83faddf9c139985369f27656b4bd
+ms.sourcegitcommit: 56988f0a69e6ff281439e6e77d1814ec130c8b49
+ms.openlocfilehash: bafb86b1e388163c07110559e2a51bbe0dadc5ed
 
 
 ---
 
-# Konfigurace profilů certifikátů Intune
+# <a name="configure-intune-certificate-profiles"></a>Konfigurace profilů certifikátů Intune
 Po konfiguraci infrastruktury a certifikátů, jak je popsáno v tématu [Konfigurace infrastruktury certifikátů pro SCEP](configure-certificate-infrastructure-for-scep.md) nebo [Konfigurace infrastruktury certifikátů pro PFX](configure-certificate-infrastructure-for-pfx.md), můžete vytvořit profily certifikátů. Postup je následující:
 
 - **Úloha 1**: Export certifikátu důvěryhodné kořenové certifikační autority
@@ -28,15 +29,15 @@ Po konfiguraci infrastruktury a certifikátů, jak je popsáno v tématu [Konfig
   - Profily certifikátů SCEP
   - Profily certifikátů .PFX
 
-## **Úloha 1**: Export certifikátu důvěryhodné kořenové certifikační autority
+## <a name="task-1-export-the-trusted-root-ca-certificate"></a>**Úloha 1**: Export certifikátu důvěryhodné kořenové certifikační autority
 Exportujte certifikát důvěryhodné kořenové certifikační autority jako soubor **.cer** z vydávající certifikační autority nebo z jakéhokoli zařízení, které vaší vydávající certifikační agentuře důvěřuje. Privátní klíč neexportujte.
 
 Tento certifikát budete importovat při nastavování profilu důvěryhodného certifikátu.
 
-## **Úloha 2**: Vytvoření profilů důvěryhodných certifikátů
+## <a name="task-2-create-trusted-certificate-profiles"></a>**Úloha 2**: Vytvoření profilů důvěryhodných certifikátů
 Profil důvěryhodného certifikátu je nutné vytvořit před vytvořením profilu certifikátu protokolu SCEP (Simple Certificate Enrollment Protocol) či standardu PKCS #12 (.PFX). Potřebujete profil důvěryhodného certifikátu a profil SCEP nebo .PFX pro každou platformu mobilních zařízení.
 
-### Vytvoření profilu důvěryhodného certifikátu
+### <a name="to-create-a-trusted-certificate-profile"></a>Vytvoření profilu důvěryhodného certifikátu
 
 1.  V [konzole pro správu Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Přidat zásadu** a zvolte platformu zařízení. Pro tato zařízení můžete vytvořit profil důvěryhodného zařízení:
 
@@ -52,22 +53,28 @@ Profil důvěryhodného certifikátu je nutné vytvořit před vytvořením prof
 
 -  Windows Phone 8.1 nebo novější
 
+[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
 2.  Přidejte zásadu **Profil důvěryhodného certifikátu**.
 
     Další informace: [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
-3.  Zadejte informace požadované pro konfiguraci nastavení profilu důvěryhodného certifikátu pro Android, iOS, Mac OS X, Windows 8.1 nebo Windows Phone 8.1. 
+3.  Zadejte informace požadované pro konfiguraci nastavení profilu důvěryhodného certifikátu pro Android, iOS, Mac OS X, Windows 8.1 nebo Windows Phone 8.1.
 4.  V nastavení **Soubor certifikátu** importujte certifikát důvěryhodné kořenové certifikační autority (soubor .cer), který jste exportovali z vydávající certifikační autority. Nastavení **Cílové úložiště** se použije jen na zařízení se systémem Windows 8.1 a novějším a jen v případě, že má zařízení víc než jedno úložiště certifikátů.
-    
+
 4.  Vyberte možnost **Uložit zásadu**.
 
 Nová zásada se zobrazí v pracovním prostoru **Zásady**. Teď ji můžete nasadit.
 
-## **Úloha 3**: Vytvoření profilů certifikátů SCEP nebo .PFX
+> [!NOTE]
+>
+> Na zařízeních se systémem Android a Android for Work se zobrazí oznámení o tom, že třetí strana nainstalovala důvěryhodný certifikát.
+
+
+## <a name="task-3-create-scep-or-pfx-certificate-profiles"></a>**Úloha 3**: Vytvoření profilů certifikátů SCEP nebo .PFX
 Po vytvoření profilu certifikátu důvěryhodné certifikační autority vytvořte profily certifikátů SCEP nebo .PFX pro každou platformu, kterou chcete použít. Při vytváření profilu certifikátu SCEP musíte zadat profil důvěryhodného certifikátu pro stejnou platformu. Tím se oba profily certifikátů propojí, ale přesto musíte každý profil nasadit samostatně.
 
-### Vytvoření profilu certifikátu SCEP
+### <a name="to-create-an-scep-certificate-profile"></a>Vytvoření profilu certifikátu SCEP
 
 1.  V [konzole pro správu Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Přidat zásadu** a zvolte platformu zařízení.  Pro tato zařízení můžete vytvořit profil certifikátu SCEP:
 
@@ -84,7 +91,7 @@ Po vytvoření profilu certifikátu důvěryhodné certifikační autority vytvo
 -  Windows Phone 8.1 nebo novější
 
 2.  Přidejte zásadu **Profil certifikátu SCEP**.
-    
+
     Další informace: [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
 3.  Pokud chcete konfigurovat nastavení profilu certifikátu SCEP, postupujte podle pokynů na stránce konfigurace profilu.
@@ -102,7 +109,7 @@ Po vytvoření profilu certifikátu důvěryhodné certifikační autority vytvo
 
 Nová zásada se zobrazí v pracovním prostoru **Zásady**. Teď ji můžete nasadit.
 
-### Vytvoření profilu certifikátu .PFX
+### <a name="to-create-a-pfx-certificate-profile"></a>Vytvoření profilu certifikátu .PFX
 
 1.  V [konzole pro správu Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Přidat zásadu** a zvolte platformu zařízení. Certifikáty .PFX jsou podporované pro:
   - Android 4 nebo novější
@@ -111,15 +118,15 @@ Nová zásada se zobrazí v pracovním prostoru **Zásady**. Teď ji můžete na
   - Windows Phone 10 a novější
   - iOS 8.0 a novější    
 
-    
-2.  Přidejte zásadu **Profil certifikátu PFX**. 
+
+2.  Přidejte zásadu **Profil certifikátu PFX**.
       Další informace: [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 3.  Do formuláře zásad zadejte požadované informace.
 4.  Vyberte možnost **Uložit zásadu**.
 
 Nová zásada se zobrazí v pracovním prostoru **Zásady**. Teď ji můžete nasadit.
 
-## Nasazení profilů certifikátů
+## <a name="deploy-certificate-profiles"></a>Nasazení profilů certifikátů
 Při nasazení profilu certifikátu se soubor certifikátu z profilu důvěryhodné certifikační autority nainstaluje na zařízení. Zařízení profil certifikátu SCEP nebo .PFX použije k vytvoření vlastní žádosti o certifikát.
 
 Profily certifikátů se nainstalují jenom na zařízení té platformy, kterou použijete při vytváření profilu.
@@ -140,7 +147,7 @@ Profily certifikátů nasaďte stejným způsobem jako jiné zásady pro Intune:
 
 Když vyberete nasazenou zásadu, v dolní části seznamu zásad se zobrazí další informace o nasazení.
 
-### Další kroky
+### <a name="next-steps"></a>Další kroky
 
 Dál zjistěte, jak pomocí certifikátů zabezpečit profily e-mailu, Wi-Fi a VPN.
 
@@ -150,6 +157,6 @@ Dál zjistěte, jak pomocí certifikátů zabezpečit profily e-mailu, Wi-Fi a V
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

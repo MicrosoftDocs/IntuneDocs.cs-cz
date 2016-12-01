@@ -1,8 +1,9 @@
 ---
 title: "Použití sady SDK k povolení MAM pro aplikace | Microsoft Intune"
-description: 
+description: "Toto téma nabízí stručný přehled o tom, proč byste měli sadu Intune SDK používat."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 08/24/2016
 ms.topic: article
@@ -13,14 +14,14 @@ ms.assetid: 26b00081-7c05-4969-ace1-0585e44d5cd2
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eec08a92ff38f55ca04e9c1822c041e8bd0273fd
-ms.openlocfilehash: 5c7f25b31288a112fbfb1744c061c4cc2eb73e49
+ms.sourcegitcommit: 37e12d1d78f40acb616ad5762eeb5f034ecc0081
+ms.openlocfilehash: 57b7cefce3715568b77a8c16a857a16434d72821
 
 
 ---
 
 # Použití sady SDK k povolení správy mobilních aplikací pro aplikace
-Použití sady Microsoft Intune App SDK k povolení správy určitých funkcí mobilních aplikací iOS a Android pomocí Intune Po povolení aplikace můžete do aplikace nasadit zásady. Tyto zásady používají tyto funkce k ochraně vašich podnikových dat. Příklady typů ochrany, které můžete implementovat se sadou SDK:
+Použijte sadu Microsoft Intune App SDK k povolení správy určitých funkcí aplikací pro iOS a Android pomocí Intune. Po povolení aplikace můžete do aplikace nasadit zásady. Tyto zásady používají tyto funkce k ochraně vašich podnikových dat. Příklady typů ochrany, které můžete implementovat se sadou SDK:
 
 -   Zabránění kopírování podnikových dokumentů do cloudu uživateli
 
@@ -39,6 +40,6 @@ Přehled sady SDK najdete na stránce [Přehled](/intune/develop/intune-app-sdk)
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 

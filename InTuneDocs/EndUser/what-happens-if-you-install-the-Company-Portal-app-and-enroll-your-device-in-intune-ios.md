@@ -2,9 +2,10 @@
 title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s iOS nebo Mac OS X v Intune? | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,28 +15,28 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4881d765a6a79d380ab6d3facdb55d9f0c81bf97
-ms.openlocfilehash: e6e08b1947f93fde6c9e7bff966042647386e7d0
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 737effbcd9d7e70186d874c3aefd8afaab05fca8
 
 
 ---
 
 
-# Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s iOS nebo Mac OS X v Intune?
+# <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-ios-or-mac-os-x-device-in-intune"></a>Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s iOS nebo Mac OS X v Intune?
 
 Když nainstalujete aplikaci Portál společnosti a potom v ní zaregistrujete své zařízení s iOS nebo Mac OS X v Intune, můžete v aplikaci Portál společnosti provádět tyto kroky:
 
--   Přístup k podnikové síti, e-mailu a dalším pracovním souborům
+-   Přístup k podnikové síti, e-mailu a pracovním souborům
 
 -   Získání aplikací společnosti z Portálu společnosti
 
 -   Vzdálené obnovení továrního nastavení telefonu v případě ztráty nebo odcizení
 
--   Automatická konfigurace e-mailového účtu vaší společnosti
+-   Automatické nastavení e-mailového účtu vaší společnosti
 
-Když své zařízení zaregistrujete do služby Intune, správci IT tím udělíte oprávnění ke správě vašich zařízení, aby bylo možné lépe chránit informace společnosti na daném zařízení.
+Když svoje zařízení zaregistrujete do služby Intune, udělíte tím správci IT oprávnění ke správě vašeho zařízení, aby bylo možné lépe chránit informace společnosti na daném zařízení.
 
-**Co správci IT neuvidí**
+**Co správce IT nevidí**
 
 -   Webová historie a historie volání
 
@@ -51,7 +52,7 @@ Když své zařízení zaregistrujete do služby Intune, správci IT tím uděl�
 
 -   Z fotoaparátu
 
-**Co správci IT uvidí**
+**Co správce IT vidí**
 
 -   Model
 
@@ -65,7 +66,7 @@ Když své zařízení zaregistrujete do služby Intune, správci IT tím uděl�
 
 -   Název zařízení
 
-Po registraci vašeho zařízení může správce IT provádět tyto kroky:
+Po registraci vašeho zařízení může správce IT provádět tyto akce:
 
 -   Obnovit výchozí tovární nastavení v případě ztráty nebo odcizení zařízení.
 
@@ -85,16 +86,16 @@ Po registraci vašeho zařízení může správce IT provádět tyto kroky:
 
 -   Povolit nebo zakázat datový proud fotografií na serveru služby iCloud.
 
--   Povolit nebo zakázat datový roaming v zařízení. Pokud je povolen datový roaming, mohou vám za něj být účtovány poplatky.
+-   Povolit nebo zakázat datový roaming v zařízení. Pokud je datový roaming povolený, můžou se vám za něj účtovat poplatky.
 
--   Povolit nebo zakázat hlasový roaming v zařízení. Pokud je povolen hlasový roaming, mohou vám za něj být účtovány poplatky.
+-   Povolit nebo zakázat hlasový roaming v zařízení. Pokud je hlasový roaming povolený, můžou se vám za něj účtovat poplatky.
 
--   Povolit nebo zakázat automatickou synchronizaci souborů v režimu roamingu v zařízení. Pokud je povolena automatická synchronizace souborů, mohou vám být účtovány poplatky za roaming.
+-   Povolit nebo zakázat automatickou synchronizaci souborů v režimu roamingu v zařízení. Pokud je automatická synchronizace souborů povolená, můžou se vám účtovat poplatky za roaming.
 
 Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

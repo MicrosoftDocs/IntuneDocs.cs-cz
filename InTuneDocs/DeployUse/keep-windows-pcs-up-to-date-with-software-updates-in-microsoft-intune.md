@@ -3,6 +3,7 @@ title: "Aktualizace softwaru pro počítače s Windows | Microsoft Intune"
 description: "Intune pomáhá udržovat spravované počítače aktuální díky zajištění rychlé instalace nejnovějších oprav a aktualizací softwaru."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 07/19/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 48e9c41a-d2de-424e-9610-cfd1ad514210
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: 5112dca8c30a872b26c73a948a8f14ac63957567
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: 6878d8a4e95280cfd8a919efa4c2f1651ca14024
 
 
 ---
@@ -254,6 +255,6 @@ Po výběru aktualizace ze seznamu budete moct použít další příkazy, kter�
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO4-->
 
 

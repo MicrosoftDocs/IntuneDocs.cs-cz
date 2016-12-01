@@ -2,10 +2,10 @@
 title: "Co se stane, když resetujete zařízení s iOS pomocí Portálu společnosti? | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 71e1e0b31f917d62f4591501709261d87fcd9f30
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 1ec1c17d7ae18c227427fdd708b9fe76a0f552be
 
 
 ---
 
 
-# Co se stane, když resetujete zařízení s iOS pomocí Portálu společnosti?
+# <a name="what-happens-if-you-reset-your-ios-device-using-the-company-portal"></a>Co se stane, když resetujete zařízení s iOS pomocí Portálu společnosti?
 
 Pokud ve svém zařízení iPhone nebo iPad obnovíte výchozí tovární nastavení pomocí portálu společnosti, můžou se odstranit některé aplikace a nastavení v zařízení, včetně některých vašich osobních údajů. Co se u jednotlivých zařízení stane, závisí na způsobu jeho použití, jak je vidět z následujících seznamů.
 
@@ -32,18 +32,18 @@ Pokud ve svém zařízení iPhone nebo iPad obnovíte výchozí tovární nastav
 
 -   Zařízení se nastaví zpátky na výchozí tovární nastavení a odeberou se všechna vaše osobní data, aplikace a nastavení.
 
-**Zařízení má přístup jen k e-mailu společnosti **
+**Zařízení má přístup jen k e-mailu společnosti**
 
 -   Vaše zařízení se už nebude zobrazovat na portálu společnosti.
 
 -   Bude odstraněn e-mailový účet společnosti včetně všech neuložených e-mailů.
 
-Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

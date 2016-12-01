@@ -2,9 +2,10 @@
 title: "Přístup k podnikovému e-mailu pomocí e-mailových profilů | Microsoft Intune"
 description: "Nastavení e-mailového profilu se dá použít ke konfiguraci nastavení přístupu k e-mailům pro určité e-mailové klienty na mobilních zařízeních."
 keywords: 
-author: Nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 10/10/2016
+ms.date: 10/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +14,16 @@ ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: befe1b3446770509c83a360c854993d4aaada09d
-ms.openlocfilehash: 1bd5d64dfff1cf1fc42247c5f89861e216da77d5
+ms.sourcegitcommit: 56988f0a69e6ff281439e6e77d1814ec130c8b49
+ms.openlocfilehash: dcd8f956d1706f4bdcb2dca79e9f1ff5d5bb57b0
 
 
 ---
 
-# Konfigurace přístupu k podnikovému e-mailu pomocí e-mailových profilů v Microsoft Intune
+# <a name="configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune"></a>Konfigurace přístupu k podnikovému e-mailu pomocí e-mailových profilů v Microsoft Intune
+
+[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
+
 Řada mobilních platforem zahrnuje nativního e-mailového klienta, který se dodává v rámci operačního systému. Někteří z těchto klientů se dají nastavit pomocí e-mailových profilů, jak popisuje toto téma.
 
 Nastavení e-mailového profilu se dá použít k nastavení přístupu k e-mailům pro určité e-mailové klienty na mobilních zařízeních. Na podporovaných platformách se dají nativní e-mailoví klienti pomocí Microsoft Intune nastavit tak, aby uživatelům umožňovali přístup k firemnímu e-mailu z osobních zařízení bez jakékoli další konfigurace.
@@ -29,14 +33,14 @@ Pokud potřebujete další opatření před únikem informací, vyberte [Podmín
 Správci IT nebo uživatelé si také můžou nainstalovat alternativní e-mailové klienty (třeba Microsoft Outlook pro Android nebo iOS). Tito e-mailoví klienti nemusí e-mailové profily podporovat a nejde je nastavit pomocí e-mailových profilů Microsoft Intune.  
 
 E-mailové profily můžete použít ke konfiguraci nativních e-mailových klientů na těchto typech zařízení:
--   Windows Phone 8 a novější
+-   Windows Phone 8.1 nebo novější
 -   Windows 10 (pro počítače), Windows 10 Mobile a novější
 -   iOS 8.0 a novější
 -   Samsung KNOX Standard (4.0 a novější)
 -   Android for Work
 
 >[!NOTE]
->Intune poskytuje dva e-mailové profily pro Android for Work – jeden pro každou z e-mailových aplikací Gmail a Nine Work. Tyto aplikace jsou dostupné v obchodě Google Play a podporují připojení k Exchangi. Pokud chcete umožnit připojení k e-mailu, nasaďte jednu z těchto e-mailových aplikací do zařízení uživatelů a pak vytvořte a nasaďte příslušný profil. 
+>Intune poskytuje dva e-mailové profily pro Android for Work – jeden pro každou z e-mailových aplikací Gmail a Nine Work. Tyto aplikace jsou dostupné v obchodě Google Play a podporují připojení k Exchangi. Pokud chcete umožnit připojení k e-mailu, nasaďte jednu z těchto e-mailových aplikací do zařízení uživatelů a pak vytvořte a nasaďte příslušný profil.
 
 Vedle samotného nastavení e-mailového účtu v zařízení můžete určit, kolik e-mailů se má synchronizovat, a v závislosti na zařízení také jaký typ obsahu se má synchronizovat.
 
@@ -52,36 +56,36 @@ Vedle samotného nastavení e-mailového účtu v zařízení můžete určit, k
 
 >Vzhledem k tomu, že Samsung KNOX nevyužívá k identifikaci profilu název hostitele, doporučujeme nevytvářet víc e-mailových profilů pro použití se stejnou e-mailovou adresou na různých hostitelích, protože by se vzájemně přepisovaly.
 
->**Android for Work**: Profil Intune se uplatňuje jenom na pracovní profil zařízení a nemá vliv na e-mailové profily v profilu uživatele zařízení.
+>**Android for Work**: Profil Intune se uplatňuje jenom na konkrétní e-mailové aplikace v pracovním profilu zařízení a nemá vliv na konfiguraci e-mailu v profilu uživatele zařízení.
 
 
-## Zabezpečení e-mailových profilů
-E-mailové profily se dají zabezpečit jedním ze dvou způsobů: certifikátem nebo heslem.
+## <a name="secure-email-profiles"></a>Zabezpečení e-mailových profilů
+E-mailové profily se dají zabezpečit certifikátem nebo heslem.
 
-### Certifikáty
+### <a name="certificates"></a>Certifikáty
 Když vytváříte e-mailový profil, vyberete profil certifikátu, který jste předtím vytvořili v Intune. Ten se označuje jako certifikát identity a slouží k ověřování na základě důvěryhodného profilu certifikátu (neboli kořenového certifikátu), který potvrzuje, že má zařízení uživatele dovoleno připojovat se. Důvěryhodný certifikát se nasadí do počítače, který ověří e-mailové připojení. Většinou se jedná o nativní poštovní server.
 
 Další informace o vytváření a používání profilů certifikátů v Intune najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů](secure-resource-access-with-certificate-profiles.md).
 
-### Uživatelské jméno a heslo
+### <a name="user-name-and-password"></a>Uživatelské jméno a heslo
 Uživatel se ověřuje na nativním poštovním serveru zadáním uživatelského jména a hesla.
 
 Heslo není součástí e-mailového profilu, uživatel ho tedy musí zadat při připojování k e-mailu.
 
-### Vytvoření e-mailového profilu
+### <a name="create-an-email-profile"></a>Vytvoření e-mailového profilu
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Přidat zásadu**.
 
 2.  Nastavte jeden z následujících typů zásad:
 
-    -   **E-mailový profil pro standard Samsung KNOX (4.0 nebo novější)**
+    -   **E-mailový profil pro Samsung Knox Standard (4.0 nebo novější)**
 
     -   **E-mailový profil (iOS 8.0 a novější)**
 
-    -   **E-mailový profil (Windows Phone 8 a novější)**
+    -   **E-mailový profil (Windows Phone 8.1 a novější)**
 
     -   **E-mailový profil (Windows 10 Desktop a Mobile a novější)**
-    
+
     -   **E-mailový profil (Android for Work – Gmail)**
 
     -   **E-mailový profil (Android for Work – Nine Work)**
@@ -107,14 +111,16 @@ Heslo není součástí e-mailového profilu, uživatel ho tedy musí zadat při
     |**Použít protokol SSL**|Při posílání a přijímání e-mailů a komunikaci se serverem Exchange se použije komunikace SSL (Secure Sockets Layer). U zařízení, na kterých běží Samsung KNOX 4.0 nebo novější, musíte exportovat certifikát SSL serveru Exchange a v Intune ho nasadit jako profil důvěryhodného certifikátu pro Android. Intune nepodporuje přístup k tomuto certifikátu, pokud je na serveru Exchange nainstalovaný jiným způsobem.|
     |**Typ obsahu, který se má synchronizovat** (všechny platformy s výjimkou Gmailu pro Android for Work)|Vyberte typy obsahu, které se mají na zařízeních synchronizovat.|
     |**Povolit odesílání e-mailů z aplikací jiných výrobců** (jenom iOS)|Můžete povolit uživateli, aby tento profil vybral jako výchozí účet pro odesílání e-mailů, a povolit aplikacím třetích stran otevírání e-mailů v nativních e-mailových aplikacích, například připojování souborů k e-mailům.|
-    > [!IMPORTANT]
-    > If you have deployed an email profile and then wish to change the values for **host** or **Email address**, you must delete the existing email profile and create a new one with the required values.
+
+> [!IMPORTANT]
+>
+> Pokud jste nasadili e-mailový profil a potom chcete změnit hodnoty nastavení **Hostitel** nebo **E-mailová adresa**, je potřeba odstranit stávající e-mailový profil a vytvořit nový s požadovanými hodnotami.
 
 4.  Po dokončení klikněte na **Uložit zásadu**.
 
 Nová zásada se zobrazí v uzlu **Zásady konfigurace** pracovního prostoru **Zásady** .
 
-## Nasazení zásady
+## <a name="deploy-the-policy"></a>Nasazení zásady
 
 1.  V pracovním prostoru **Zásady** vyberte zásadu, kterou chcete nasadit, a potom vyberte **Spravovat nasazení**.
 
@@ -127,10 +133,11 @@ Nová zásada se zobrazí v uzlu **Zásady konfigurace** pracovního prostoru **
 Shrnutí stavu a výstrahy na stránce **Přehled** v pracovním prostoru **Zásady** identifikují problémy se zásadami, které vyžadují vaši pozornost. Kromě toho se v pracovním prostoru Řídicí panel zobrazí shrnutí stavu.
 
 > [!NOTE]
-> Pokud byste chtěli e-mailový profil ze zařízení odebrat, upravte nasazení a odeberte všechny skupiny, ve kterých je zařízení členem.
+> - V případě Androidu for Work nezapomeňte kromě příslušného e-mailového profilu nasadit také aplikace Gmail nebo Nine Work.
+> - Pokud byste chtěli e-mailový profil ze zařízení odebrat, upravte nasazení a odeberte všechny skupiny, ve kterých je zařízení členem.
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

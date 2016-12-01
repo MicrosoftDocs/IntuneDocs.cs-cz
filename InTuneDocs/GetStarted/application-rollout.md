@@ -3,8 +3,9 @@ title: "Zavedení aplikace | Microsoft Intune"
 description: "Doporučení pro postupné zavádění aplikací v Microsoft Intune"
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 10/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: 0fc32ed3-bcf4-472a-80e7-eb20986f78fa
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2a192c71b1b82f59b34ea614d09d895174f8112b
-ms.openlocfilehash: 83306c0847eaf98d499e649308669a33306aa97e
+ms.sourcegitcommit: 8921043334630bbd2955c0423ca9cd1b76c27758
+ms.openlocfilehash: aea7c235ad643a2a03ac7b3ea68c6b8c717bcd48
 
 
 ---
@@ -88,13 +89,13 @@ V průběhu pilotní fáze nasadíte aplikaci pro malou skupinu testovacích už
 
 **Helpdesk:** Zajistěte, aby pracovníci helpdesku věděli o všech změnách dostupnosti aplikace, které by mohly způsobit vznik požadavků na podporu.
 
-### Související témata
+### Viz taky
 [Nasazení aplikací](/intune/deploy-use/deploy-apps)
 
 [Řešení problémů s nasazením aplikací v Microsoft Intune](/intune/troubleshoot/troubleshoot-app-deployment-problems-in-microsoft-intune)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO4-->
 
 

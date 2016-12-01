@@ -2,7 +2,8 @@
 title: "Registrace pomocí správce registrace zařízení | Microsoft Intune"
 description: "Účet správce registrace zařízení (DEM) umožňuje spravovat velké počty sdílených mobilních zařízení vlastněných společností z jediného uživatelského účtu."
 keywords: 
-author: NathBarn
+author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 07/12/2016
 ms.topic: article
@@ -13,14 +14,14 @@ ms.assetid: a23abc61-69ed-44f1-9b71-b86aefc6ba03
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e2daff5dae435df55c866adbf602f554500d50e0
-ms.openlocfilehash: 4ed3222f45cb438dea807b1df268f47fff660d5f
+ms.sourcegitcommit: 289e6019aa1a17deb91b38ed32f0432af0902a9d
+ms.openlocfilehash: 51e5f248c5e8759d5992918a99e1f114e2614142
 
 
 ---
 
 
-# Registrace firemních zařízení pomocí správce registrace zařízení v Microsoft Intune
+# <a name="enroll-corporateowned-devices-with-the-device-enrollment-manager-in-microsoft-intune"></a>Registrace firemních zařízení pomocí správce registrace zařízení v Microsoft Intune
 Organizace můžou pomocí Intune spravovat velké počty mobilních zařízení s jediným uživatelským účtem. Účet *správce registrace zařízení* je speciální účet Intune, který může registrovat až 1000 zařízení. Zařízení zaregistrovaná pomocí účtu správce registrace zařízení doporučujeme používat jako sdílená zařízení, nikoli jako osobní zařízení („BYOD“). Uživatelé například nebudou moci používat „nativní“ e-mailové aplikace.
 
 Uživatelský účet správce registrace zařízení můžete například přiřadit manažerovi nebo vedoucímu obchodu, aby mohli provádět následující:
@@ -50,10 +51,10 @@ Zařízení zaregistrovaná pomocí účtu správce registrace zařízení mají
 > Pokud chcete nasadit aplikace společnosti na zařízení spravovaná správcem registrace zařízení, nasaďte aplikaci Portál společnosti jako **požadovanou instalaci** na uživatelský účet správce registrace zařízení.
 > Kvůli zvýšení výkonu se při zobrazení aplikace Portál společnosti v zařízení správce registrace zařízení zobrazuje pouze místní zařízení. Vzdálenou správu jiných zařízení správce registrace zařízení lze provádět jenom v konzole správce Intune.
 
-## Vytvoření účtů správce registrace zařízení
+## <a name="create-device-enrollment-manager-accounts"></a>Vytvoření účtů správce registrace zařízení
 Účty správce registrace zařízení jsou uživatelské účty s oprávněním registrovat velká množství zařízení vlastněných společností. Správci registrace zařízení můžou být jenom uživatelé v konzole Intune.
 
-#### Přidání správce registrace zařízení do služby Intune
+#### <a name="add-a-device-enrollment-manager-to-intune"></a>Přidání správce registrace zařízení do služby Intune
 
 1.  Přejděte na [portál účtů Microsoft Intune](http://go.microsoft.com/fwlink/?LinkId=698854) a přihlaste se k účtu správce.
 
@@ -71,7 +72,7 @@ Zařízení zaregistrovaná pomocí účtu správce registrace zařízení mají
 
 8.  Správce registrace zařízení teď může registrovat mobilní zařízení stejným postupem, jaký používá koncový uživatel ve scénáři BYOD na webu Portál společnosti.
 
-## Odstranění správce registrace zařízení ze služby Intune
+## <a name="delete-a-device-enrollment-manager-from-intune"></a>Odstranění správce registrace zařízení ze služby Intune
 
 1.  Přihlaste se na [portál pro správu Microsoft Intune](http://manage.microsoft.com) pomocí přihlašovacích údajů správce.
 
@@ -95,6 +96,6 @@ Odstranění správce registrace zařízení nemá vliv na zaregistrovaná zař�
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

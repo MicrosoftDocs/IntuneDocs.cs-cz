@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 10/12/2016
+ms.date: 11/3/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -20,7 +20,10 @@ ms.openlocfilehash: a986e859e38e0936f53c57a75872dc86de3ee181
 
 ---
 
-# Konfigurace aplikací pro Android for Work pomocí zásad konfigurace mobilních aplikací v Microsoft Intune
+# <a name="configure-android-for-work-apps-with-mobile-app-configuration-policies-in-microsoft-intune"></a>Konfigurace aplikací pro Android for Work pomocí zásad konfigurace mobilních aplikací v Microsoft Intune
+
+[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
+
 Zásady konfigurace mobilních aplikací v Microsoft Intune slouží k poskytování nastavení, která se můžou požadovat, když uživatelé spustí aplikaci. Aplikace může například vyžadovat, aby uživatelé zadali:
 
 -   Vlastní číslo portu
@@ -37,7 +40,7 @@ Aby se zásady konfigurace aplikací daly využít, musí vývojář aplikace zp
 
 Zásadu konfigurace aplikace nasadíte stejným uživatelům, jakým jste nasadili aplikaci, kterou chcete konfigurovat. Nastavení zásady se použijí při každém spuštění aplikace.
 
-## Konfigurace zásady konfigurace mobilních aplikací
+## <a name="configure-a-mobile-app-configuration-policy"></a>Konfigurace zásady konfigurace mobilních aplikací
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte **Zásady** &gt; **Přehled** &gt; **Přidat zásadu**.
 
@@ -61,7 +64,7 @@ Zásadu konfigurace aplikace nasadíte stejným uživatelům, jakým jste nasadi
 Nová zásada se zobrazí v uzlu **Zásady konfigurace** .
 
 
-## Nasazení zásady konfigurace aplikace
+## <a name="deploy-the-app-configuration-policy"></a>Nasazení zásady konfigurace aplikace
 Po vytvoření musíte zásadu konfigurace aplikace nasadit stejným uživatelům, jakým jste nasadili aplikaci, pro kterou budou tato nastavení platit.
 
 Informace o nasazení zásad najdete v tématu [Nasazení zásady konfigurace](/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies#deploy-a-configuration-policy).
@@ -72,10 +75,6 @@ Při spuštění aplikace nasazené do zařízení se aplikace spustí s nastave
 
 > [!TIP]
 > Pro každou aplikaci nasaďte uživateli jen jednu zásadu konfigurace aplikace.
-
-
-
-
 
 
 

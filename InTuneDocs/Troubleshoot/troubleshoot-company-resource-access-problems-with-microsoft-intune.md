@@ -2,8 +2,8 @@
 title: "Řešení problémů s přístupem k prostředkům společnosti | Microsoft Intune"
 description: "Kódy stavů a chyb z tohoto tématu použijte k vyřešení problémů s přístupem k prostředkům."
 keywords: 
-author: Nbigman
-ms.author: nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/22/2016
 ms.topic: article
@@ -20,12 +20,12 @@ ms.openlocfilehash: 114d4107dc73b3ad905de3fe02ffb81fa2e0e954
 
 ---
 
-# Řešení problémů s přístupem k prostředkům společnosti ve službě Microsoft Intune
+# <a name="troubleshoot-company-resource-access-problems-with-microsoft-intune"></a>Řešení problémů s přístupem k prostředkům společnosti ve službě Microsoft Intune
 Kódy stavů a chyb z tohoto tématu použijte k vyřešení problémů, když akce Microsoft Intune vrátí kód chyby.
 
 Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md), ve kterém najdete další způsoby, jak získat nápovědu.
 
-## Stavové kódy pro zařízení s Windows spravovaná systémem MDM
+## <a name="status-codes-for-mdm-managed-windows-devices"></a>Stavové kódy pro zařízení s Windows spravovaná systémem MDM
 
 |Stavový kód|Chybová zpráva|Co dělat|
 |---------------|-----------------|--------------|
@@ -44,7 +44,7 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 |130 (APP_CI_ENFORCEMENT_ERROR)|Instalace licence MSADP se nepodařila||
 |Bez stavu (APP_CI_ENFORCEMENT_UNKNOWN)|není k dispozici|Stav je momentálně neznámý.|
 
-## Přístup k prostředkům společnosti (běžné chyby)
+## <a name="company-resource-access-common-errors"></a>Přístup k prostředkům společnosti (běžné chyby)
 
 |Stavový kód|Šestnáctkový kód chyby|Chybová zpráva|
 |---------------|--------------------------|-----------------|
@@ -73,7 +73,7 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 |-2016341111|0x87D11389|Zařízení s platformou iOS vrátilo neočekávaný stav nečinnosti.|
 |-2016341112|0x87D11388|Zařízení s platformou iOS je momentálně zaneprázdněné.|
 
-## Chyby vrácené v zařízeních s iOS
+## <a name="errors-returned-by-ios-devices"></a>Chyby vrácené v zařízeních s iOS
 
 |Stavový kód|Šestnáctkový kód chyby|Chybová zpráva|
 |---------------|--------------------------|-----------------|
@@ -283,7 +283,7 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 |-2016335111|0x87D12AF9|1001:Nepodporovaná verze profilu|
 |-2016335112|0x87D12AF8|1000:Chybně vytvořený profil|
 
-## Kódy odpovědí OMA
+## <a name="oma-response-codes"></a>Kódy odpovědí OMA
 
 |Stavový kód|Šestnáctkový kód chyby|Chybová zpráva|
 |---------------|--------------------------|-----------------|
@@ -368,7 +368,7 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 |-2016345912|0x87D100C8|Příkaz SyncML se úspěšně dokončil.|
 |-2016346011|0x87D10065|Zadaný příkaz SyncML se provádí, ale zatím není dokončený.|
 
-### Další kroky
+### <a name="next-steps"></a>Další kroky
 Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 

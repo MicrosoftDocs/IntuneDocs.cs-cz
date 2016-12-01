@@ -1,10 +1,11 @@
 ---
-title: "Použití zařízení iOS nebo Mac OS X s Intune | Microsoft Intune"
+title: "Použití zařízení s iOS nebo Mac OS X s Intune | Microsoft Intune"
 description: "Obsahuje seznam odkazů na úlohy, které můžete dělat v mobilních zařízení s iOS nebo Mac OS X, když je zařízení registrované v Intune."
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,56 +15,58 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 6e84676a8ea1e149f73871ef1468c2da80fa221c
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: bc031fe080cd17b3436388f59ecc83df53a16a32
 
 
 ---
 
-# Using your iOS or Mac OS X device with Intune
+# <a name="using-your-ios-or-mac-os-x-device-with-intune"></a>Using your iOS or Mac OS X device with Intune
 
 Tento článek obsahuje odkazy na všechny úlohy, které můžou provést koncoví uživatelé na svých zařízeních spravovaných Intune. Správci IT můžou z těchto informací zjistit kroky, podle kterých uživatelé musí postupovat při provádění různých úloh seskupených do následujících kategorií:
 - Instalace aplikace Portál společnosti a registrace ve službě Intune
 - Úlohy správy po registraci
 - Problémy se shodou
 
-## Instalace aplikace Portál společnosti a registrace ve službě Intune
+## <a name="company-portal-app-installation-and-intune-enrollment"></a>Instalace aplikace Portál společnosti a registrace ve službě Intune
 
-Informace v této části vám pomůžou s instalací Portálu společnosti Intune a registrací zařízení pro zařízení s iOS.
+Informace v této části pomohou uživatelům s instalací Portálu společnosti a registrací zařízení s iOSem.
 
 - [Instalace a přihlášení do aplikace Portál společnosti Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
-- [Registrace zařízení se systémem iOS do Intune](enroll-your-device-in-intune-ios.md)
-- [Registrace zařízení se systémem Mac OS X v Intune](enroll-your-device-in-intune-mac-os-x.md)
+- [Registrace zařízení s iOSem v Intune](enroll-your-device-in-intune-ios.md)
+- [Registrace zařízení s Mac OS X v Intune](enroll-your-device-in-intune-mac-os-x.md)
 - [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md)
 
-## Kroky, které můžete provést po registraci zařízení do služby Intune
+## <a name="things-users-can-do-when-their-device-is-enrolled-in-intune"></a>Možnosti uživatelů po zaregistrování zařízení do Intune
 
-Informace v této části vám pomůžou s akcemi, které můžete provést po registraci zařízení s iOS v Intune.
+Informace v této části pomohou uživatelům provádět akce po zaregistrování zařízení s iOSem do Intune.
 
 - [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-ios.md)
-- [Nastavení nebo změna vašeho přístupového kódu](set-or-change-your-passcode-ios.md)
-- [Resetování (vymazání) ztraceného nebo odcizeného zařízení](reset-erase-your-lost-or-stolen-device-ios.md)
+- [Nastavení nebo změna hesla](set-or-change-your-passcode-ios.md)
+- [Obnovení (vymazání) ztraceného nebo odcizeného zařízení](reset-erase-your-lost-or-stolen-device-ios.md)
 - [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-ios.md)
 - [Zrušení registrace zařízení v Intune](unenroll-your-device-from-intune-ios.md)
 - [Co se stane, když zrušíte registraci zařízení v Intune?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
 - [Co se stane, když resetujete zařízení pomocí Portálu společnosti?](what-happens-if-you-reset-your-device-using-the-company-portal-ios.md)
 - [Ruční synchronizace zařízení](sync-your-device-manually-ios.md)
 
-## Oprava problémů se zařízením
+## <a name="steps-to-fix-device-and-compliance-issues"></a>Postup při opravě problémů se zařízením a dodržováním předpisů
 
-Informace v této části vám pomůžou s opravit problémy, se kterými se můžete setkat, když je zařízení s iOS registrované v Intune.
+Informace v této části pomohou uživatelům opravit problémy, se kterými se mohou setkat, když si zařízení s iOSem zaregistrují v Intune.
 
 - [Opakované připojení k ohroženému zařízení se systémem iOS](how-to-reconnect-a-compromised-ios-device.md)
 - [Odeslání chyb správci IT](send-errors-to-your-it-admin-ios.md)
-- [Při použití aplikace Portál společnosti se zobrazí chyba](you-get-an-error-while-using-the-company-portal-app-ios.md)
+- [Při použití aplikace Portál společnosti se zobrazí chybová zpráva](you-get-an-error-while-using-the-company-portal-app-ios.md)
 - [Při pokusu o registraci zařízení v Intune se zobrazí chyby](you-see-errors-while-trying-to-enroll-your-device-in-intune-ios.md)
 - [Při pokusu o registraci se zobrazí výzva k identifikaci vašeho zařízení](you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md)
 - [Jak na zařízení najdu sériové číslo?](how-do-i-find-the-serial-number-on-my-device-ios.md)
 - [Zařízení nemá požadovanou minimální verzi operačního systému](device-doesnt-have-the-required-minimum-operating-system-version-ios.md)
 - [Zařízení nevyhovuje maximální verzi operačního systému](device-doesnt-comply-with-the-maximum-operating-system-version-ios.md)
+- [Jste vyzváni k instalaci aplikace Lookout for Work na zařízení s iOSem](you-are-prompted-to-install-lookout-for-work-ios.md)
+- [Je třeba vyřešit hrozbu, kterou aplikace Lookout for Work objevila na vašem zařízení s iOSem](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

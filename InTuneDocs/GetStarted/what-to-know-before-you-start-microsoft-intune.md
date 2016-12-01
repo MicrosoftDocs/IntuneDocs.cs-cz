@@ -1,10 +1,11 @@
 ---
 title: "Co potřebujete vědět, než začnete s Microsoft Intune | Microsoft Intune"
-description: "Stránka s odkazy na požadavky a předpoklady Intune"
+description: "Odkazy na předpoklady a požadavky Intune"
 keywords: 
-author: barlanmsft
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 11/10/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,21 +14,21 @@ ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
-ms.openlocfilehash: d236a084caa3f82cb22d1f47583f1a0417e86d81
+ms.sourcegitcommit: 1ed86339103f165092776ec94b50c5a02d054236
+ms.openlocfilehash: 7a5ff0f021b487f4586ca3199c6db2cb0ada3930
 
 
 ---
 
-# Co potřebujete vědět, než začnete s Microsoft Intune
+# <a name="what-to-know-before-you-start-microsoft-intune"></a>Co potřebujete vědět, než začnete s Microsoft Intune
 
-Než začnete s nastavováním Microsoft Intune, projděte si všechny následující požadavky:
+Než začnete s nastavováním Microsoft Intune, projděte si následující požadavky:
 
 - [Podporovaná mobilní zařízení a počítače](supported-mobile-devices-and-computers.md)
-- [Podporované webové prohlížeče Intune](supported-web-browsers.md)
+- [Podporované webové prohlížeče pro Intune](supported-web-browsers.md)
 - [Požadavky na síťovou infrastrukturu pro Microsoft Intune](network-infrastructure-requirements-for-microsoft-intune.md)
 - [Účty pro správu, weby a oprávnění v Microsoft Intune](administrative-accounts-websites-perms.md)
-- [Firemní portál Microsoft Intune](microsoft-intune-company-portal.md)
+- [Portál společnosti Microsoft Intune](microsoft-intune-company-portal.md)
 - [Integrace Intune s cloudovými službami a produkty Microsoftu](integration-with-cloud-services.md)
 - [Využití šířky pásma Intune](network-bandwidth-use.md)
 - [Názvy vlastních domén s Microsoft Intune](domain-names-for-microsoft-intune.md)
@@ -37,6 +38,6 @@ Než začnete používat Intune, můžete si také projít [možnosti správy mo
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

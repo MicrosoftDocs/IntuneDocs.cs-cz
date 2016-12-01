@@ -2,10 +2,10 @@
 title: "Jak uživatelé systému iOS získávají svoje apikace| Microsoft Intune"
 description: "Metody zpřístupnění aplikací pro iOS koncovým uživatelům"
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/24/2016
+ms.date: 10/28/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,14 @@ ms.assetid: 7e3135c1-df26-48c9-aa4c-cdab6168897a
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 37841027c7ae040163440a19f9e163fb4eb87233
-ms.openlocfilehash: ad780fb3403f6caaee1218d785a5cad326c18df5
+ms.sourcegitcommit: 738b6bedcefbfd8bf0fa7bde5b86c79293af527e
+ms.openlocfilehash: 3ba0a5cda91164761c4576df935c54390bc78f8c
 
 
 ---
 
 
-# Jak uživatelé systému iOS získávají svoje aplikace
+# <a name="how-your-ios-users-get-their-apps"></a>Jak uživatelé systému iOS získávají svoje aplikace
 
 Tyto informace slouží k pochopení toho, jak a kde koncoví uživatelé získávají aplikace, které distribuujete pomocí Microsoft Intune.
 
@@ -35,22 +35,26 @@ Tyto informace slouží k pochopení toho, jak a kde koncoví uživatelé získ�
 
 Omezení společnosti Apple zakazují, aby se firemní a spravované aplikace z App Storu zobrazovaly v aplikaci Portál společnosti. Tento problém jsme obešli tak, že dlaždice v aplikaci Portál společnosti pro iOS odkazují uživatele u všech aplikací na různá zobrazení v jednom umístění (na webu Portál společnosti).
 
-- **Firemní aplikace** dříve odkazovaly na seznam všech aplikací na kartě VŠE na [webu Portál společnosti](http://portal.manage.microsoft.com) a budou tak fungovat i dál. Název dlaždice byl změněn na **Všechny aplikace**.
+Zaregistrovaní uživatelé můžou používat aplikace po klepnutí na následující dlaždice na obrazovce Aplikace v aplikaci Portál společnosti:
 
-- **Další aplikace** dříve odkazovaly na zobrazení v aplikaci Portál společnosti, ve kterém byl uvedený seznam všech aplikací, které Apple aplikaci Portál společnosti dovoluje zobrazit. Název dlaždice byl změněn na **Doporučené aplikace**. Po klepnutí na tuto dlaždici uživatelé přejdou na kartu DOPORUČENÉ na webu Portál společnosti.
+- **Všechny aplikace** zobrazí seznam všech aplikací na kartě VŠE na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
--  **Kategorie** dříve odkazovaly na zobrazení v aplikaci Portál společnosti, ve kterém byl uvedený seznam kategorií aplikací. Název této dlaždice nebyl změněn, ale nyní odkazuje na kartu KATEGORIE na webu Portál společnosti.
-Aktualizované snímky obrazovky najdete v článku [Vylepšení toho, jak koncoví uživatelé iOS získají svoje aplikace](https://gallery.technet.microsoft.com/Improvements-in-how-iOS-d1104186).
+- Po klepnutí na **Vybrané aplikace** se uživatelům zobrazí na webu Portál společnosti karta VYBRANÉ.
 
+- **Kategorie** odkazují na webu Portál společnosti na kartu KATEGORIE.
 
+ 
+![Obrazovka aplikací na Portálu společnosti pro iOS](./media/ios-cp-app-main-apps-screen.png)
 
-### Související témata
+Informace o tom, jak přidat aplikace a umístit je do těchto dlaždic, najdete v tématu [Přidávání aplikací pro zaregistrovaná zařízení do Intune](https://docs.microsoft.com/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune.md).
+
+### <a name="see-also"></a>Související témata
 [Jak uživatelé s Androidem získávají svoje aplikace](how-your-android-users-get-their-apps.md)
 
 [Jak uživatelé s Windows získávají svoje aplikace](how-your-windows-users-get-their-apps.md)
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -2,9 +2,10 @@
 title: "Zobrazí se výzva k instalaci aplikace Lookout for Work na zařízení s Androidem | Microsoft Intune"
 description: 
 keywords: 
-author: staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/08/2016
+ms.date: 10/17/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,15 +13,17 @@ ms.technology:
 ms.assetid: 0d357dc0-3e14-43d0-9874-6886ebc847fc
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: dd08b2e454b14c82e1dd9704617b32ac86ff7790
-ms.openlocfilehash: 53a239f574c327be461663872545bda63ac4b7a5
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: d55c7d4a7c77472453e6d317a22c4ad6209255a5
 
 
 ---
 
-# Jste vyzváni k instalaci aplikace Lookout for Work
+# <a name="you-are-prompted-to-install-lookout-for-work"></a>Jste vyzváni k instalaci aplikace Lookout for Work
 
-Než budete moci začít pracovat, správce IT potřebuje, abyste nainstalovali aplikaci Lookout for Work. Ta pomáhá chránit vaše zařízení hledáním potenciálních bezpečnostních hrozeb.
+Než budete moct začít pracovat, správce IT potřebuje, abyste nainstalovali aplikaci Lookout for Work. Ta pomáhá chránit vaše zařízení hledáním potenciálních bezpečnostních hrozeb.
+
+Pokud máte s instalací potíže, zkuste kroky k odstranění potíží, které najdete na konci tohoto tématu.
 
 
 **Co je potřeba udělat:**
@@ -35,11 +38,11 @@ Než budete moci začít pracovat, správce IT potřebuje, abyste nainstalovali 
 
     ![klepnutím na přijmout umožněte aplikaci Lookout for Work přístup k vašemu zařízení](./media/lookout-accept-store-permissions-android.png)
 
-3. Otevřete Lookout for Work a klepněte na **Aktivovat**.
+3. Spusťte aplikaci Lookout for Work a klepněte na **AKTIVOVAT**.
 
     ![otevřete Lookout for Work a klepněte na Aktivovat](./media/lookout-activate-button-android.png)
 
-4. Klepněte na **Přihlásit se pomocí Azure Active Directory** a zadejte účet, který používáte pro přístup k pracovním nebo školním e-mailům a souborům.
+4. Klepněte na **Přihlásit se pomocí Azure Active Directory** a pak zadejte účet, který používáte pro přístup k pracovním nebo školním e-mailům a souborům.
 
     ![přihlaste se pomocí svého pracovního nebo školního účtu](./media/lookout-sign-in-azure-android.png)
 
@@ -57,7 +60,7 @@ Než budete moci začít pracovat, správce IT potřebuje, abyste nainstalovali 
 
     ![seznamte se s informacemi o možnostech ochrany vašeho zařízení pomocí aplikace Lookout for Work](./media/lookout-how-it-protects-your-device-android.png)
 
-    Když se zobrazí následující obrazovka, znamená to, že aplikace Lookout je nastavená a připojená.
+    Když se zobrazí následující obrazovka, aplikace Lookout je nastavená a připojená.
 
     ![jste připojeni k aplikaci Lookout for Work](./media/lookout-you-are-now-connected-android.png)
 
@@ -69,15 +72,16 @@ Než budete moci začít pracovat, správce IT potřebuje, abyste nainstalovali 
 
     ![vaše zařízení splňuje podmínky zásad](./media/lookout-device-now-compliant-android.png)
 
-    Pokud aplikace Lookout for Work najde ve vašem zařízení bezpečnostní hrozbu, nabídne vám pokyny k vyřešení vašeho problému.
+    Pokud aplikace Lookout for Work ve vašem zařízení najde bezpečnostní hrozbu, nabídne vám pokyny k vyřešení vašeho problému.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+**Pokud instalace nefunguje**
+
+V některých případech může instalace selhat kvůli technickým problémům mimo vaši kontrolu. V takovém případě zkuste aplikaci Lookout for Work nainstalovat ručně z obchodu Play: [https://play.google.com/store/apps/details?id=com.lookout.enterprise](https://play.google.com/store/apps/details?id=com.lookout.enterprise) 
+
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-
-
-
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

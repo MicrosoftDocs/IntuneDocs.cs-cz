@@ -2,7 +2,8 @@
 title: "Úvodní příručka služby Intune | Microsoft Intune"
 description: "Požadavky a předpoklady k tomu, abyste se vaše předplatné Intune dalo začít používat"
 keywords: 
-author: barlanmsft
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: get-started-article
@@ -13,15 +14,15 @@ ms.assetid: d158503c-1276-422b-ab81-5f66c1cd7e7a
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
-ms.openlocfilehash: aecd5f76e234835c38bf47d8de7e13034d683998
+ms.sourcegitcommit: 0d422b421c3716ad576c4fc565b181dec28c947e
+ms.openlocfilehash: 2e385a6f1721c7b8acbc1e280b8d8c3277fa00f8
 
 
 ---
 
 
 # Úvodní příručka služby Intune
-Tato úvodní příručka vás provede postupem vytvoření placeného předplatného služby Microsoft Intune, abyste mohli rychle a snadno spravovat mobilní zařízení a počítače s Windows, které používá vaše organizace. Jednotlivé kroky můžete provádět v uvedeném pořadí, případně můžete některé z nich přeskočit, pokud nevyhovují vašemu prostředí nebo obchodním potřebám.
+Tato úvodní příručka vás povede jednotlivými kroky nastavení placeného předplatného Microsoft Intune, abyste mohli snadno a rychle spravovat mobilní zařízení a počítače s Windows, které organizace používá. Jednotlivé kroky můžete provádět v uvedeném pořadí, případně můžete některé z nich přeskočit, pokud nevyhovují vašemu prostředí nebo obchodním potřebám.
 
 >[!NOTE]
 >Tento článek se týká nastavení Intune jako samostatné služby. Pokud ke správě počítačů a serverů aktuálně používáte Microsoft System Center Configuration Manager, můžete [Configuration Manager rozšířit pro správu mobilních zařízení](https://technet.microsoft.com/library/jj884158.aspx). Můžete k tomu využít propojení Intune s Configuration Managerem v nasazení hybridní správy mobilních zařízení (MDM).
@@ -75,6 +76,6 @@ Je čas seznámit se s úvodní příručkou služby Intune!
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 

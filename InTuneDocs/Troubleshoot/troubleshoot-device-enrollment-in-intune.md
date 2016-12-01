@@ -2,8 +2,8 @@
 title: "Řešení potíží s registrací | Microsoft Intune"
 description: "Doporučení pro řešení potíží s registrací zařízení"
 keywords: 
-author: nathbarn
-ms.author: nathbarn
+author: staciebarker
+ms.author: staciebarker
 manager: angrobe
 ms.date: 08/02/2016
 ms.topic: article
@@ -14,25 +14,25 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
-ms.openlocfilehash: d8d64fcdd783401fd41415702d5ff4ae18215cca
+ms.sourcegitcommit: d51f34dea3463bec83ea39cdfb79c7bedf9e3926
+ms.openlocfilehash: bdc462023f36d60c19dea9d67c7fb4be6d2a3043
 
 
 ---
 
-# Řešení potíží s registrací do služby Intune
+# <a name="troubleshoot-device-enrollment-in-intune"></a>Řešení potíží s registrací do služby Intune
 
 Toto téma obsahuje doporučení pro řešení potíží s registrací zařízení. Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md), ve kterém najdete další způsoby, jak získat nápovědu.
 
 
-## První kroky při řešení potíží
+## <a name="initial-troubleshooting-steps"></a>První kroky při řešení potíží
 
 Než začnete řešit potíže, ujistěte se, že jste správně nakonfigurovali Intune pro povolení registrace. Můžete si prostudovat informace o těchto požadavcích na konfiguraci:
 
 -   [Příprava registrace zařízení v Microsoft Intune](/intune/deploy-use/gprerequisites-for-enrollment.md)
--   [Nastavení správy zařízení s iOS a Mac](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
+-   [Nastavení správy zařízení s iOSem a Mac OS](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
 -   [Nastavení správy pro Windows Phone a Windows 10 Mobile v Microsoft Intune](/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
--   [Nastavení správy pro zařízení Windows](/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
+-   [Nastavení správy pro zařízení s Windows](/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
 
 
 Uživatelé spravovaných zařízení můžou pro vaši potřebu shromažďovat protokoly registrace a diagnostiky. Pokyny pro uživatele ke shromažďování protokolů najdete tady:
@@ -44,15 +44,15 @@ Uživatelé spravovaných zařízení můžou pro vaši potřebu shromažďovat 
 
 
 
-## Obecné problémy s registrací
+## <a name="general-enrollment-issues"></a>Obecné problémy s registrací
 K těmto problémům může docházet na všech platformách zařízení.
 
-### Dosažení limitu zařízení
+### <a name="device-cap-reached"></a>Dosažení limitu zařízení
 **Problém:** Při registraci se uživateli na zařízení zobrazí chyba, na zařízení se systémem iOS třeba chyba **Portál společnosti není dočasně k dispozici**, a protokol DMPdownloader.log v Configuration Manageru obsahuje chybu **DeviceCapReached**.
 
 **Řešení:** Návrh řešení neumožňuje uživatelům registrovat víc než 5 zařízení.
 
-#### Kontrola počtu zaregistrovaných a povolených zařízení
+#### <a name="check-number-of-devices-enrolled-and-allowed"></a>Kontrola počtu zaregistrovaných a povolených zařízení
 
 1.  Na portálu správy služby Intune zkontrolujte, jestli nemá uživatel víc než 5 přiřazených zařízení.
 
@@ -62,7 +62,7 @@ Uživatelé mobilních zařízení můžou zařízení odstraňovat na této adr
 
 Správci můžou zařízení odstraňovat na portálu služby Azure Active Directory.
 
-#### Odstranění zařízení na portálu služby Azure Active Directory
+#### <a name="to-delete-devices-in-the-azure-active-directory-portal"></a>Odstranění zařízení na portálu služby Azure Active Directory
 
 1.  Přejděte na adresu [http://aka.ms/accessaad](http://aka.ms/accessaad) nebo zvolte **Správce** &gt; **Azure AD** na webu [https://portal.office.com](https://portal.office.com).
 
@@ -86,10 +86,10 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 >
 > Pokud se pro přihlašovací jméno uživatele, jehož účet přidáte do skupiny správců registrace zařízení, vynucuje zásada podmíněného přístupu, nebude možné dokončit registraci.
 
-### Portál společnosti není dočasně k dispozici
+### <a name="company-portal-temporarily-unavailable"></a>Portál společnosti není dočasně k dispozici
 **Problém:** Uživateli se na zařízení se zobrazí chyba **Portál společnosti není dočasně k dispozici**.
 
-#### Řešení potíží s chybou Portál společnosti není dočasně k dispozici
+#### <a name="troubleshooting-company-portal-temporarily-unavailable-error"></a>Řešení potíží s chybou Portál společnosti není dočasně k dispozici
 
 1.  Odeberte ze zařízení aplikaci Portál společnosti Intune.
 
@@ -101,10 +101,10 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 
 5.  Pokud se uživatel úspěšně přihlásí, zařízení se systémem iOS zobrazí výzvu k instalaci aplikace Portál společnosti Intune a k registraci. V zařízení se systémem Android budete muset aplikaci Portál společnosti Intune nainstalovat ručně. Potom se můžete znovu zkusit přihlásit.
 
-### Není definována autorita MDM
+### <a name="mdm-authority-not-defined"></a>Není definována autorita MDM
 **Problém:** Zobrazí se chyba **Není definována autorita MDM**.
 
-#### Řešení potíží s chybou Není definována autorita MDM
+#### <a name="troubleshooting-mdm-authority-not-defined-error"></a>Řešení potíží s chybou Není definována autorita MDM
 
 1.  Zkontrolujte, jestli je nastavená správná autorita pro správu mobilních zařízení (MDM) pro verzi služby Intune, kterou používáte, tedy pro Intune, O365 MDM, nebo System Center Configuration Manager se službou Intune. V případě služby Intune se autorita MDM nastavuje v části **Správce** &gt; **Správa mobilních zařízení**. V případě využívání nástroje Configuration Manager s Intune se nastavuje při konfiguraci konektoru Intune a v O365 jde o nastavení **Mobilní zařízení**.
 
@@ -134,28 +134,28 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 
         -   Zobrazení všech uživatelů: `select * from [CM_ DBName].[dbo].[User_DISC]`
 
-        -   Pokud chcete zobrazit konkrétní uživatele, použijte tento dotaz, kde %testuser1% představuje adresu jmeno_uzivatele@domena.com pro uživatele, kterého chcete vyhledat: `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
+        -   Pokud chcete zobrazit konkrétní uživatele, použijte tento dotaz, kde %testuser1% představuje adresu username@domain.com pro uživatele, kterého chcete vyhledat: `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
 
         Po napsání dotazu zvolte **!Execute**.
         Když se vrátí výsledky, vyhledejte ID uživatele cloudu.  Pokud se žádné ID nenajde, nemá daný uživatel licenci pro používání služby Intune.
 
-### Pokud název společnosti obsahuje speciální znaky, není možné vytvořit zásadu ani registrovat zařízení
+### <a name="unable-to-create-policy-or-enroll-devices-if-the-company-name-contains-special-characters"></a>Pokud název společnosti obsahuje speciální znaky, není možné vytvořit zásadu ani registrovat zařízení
 **Problém:** Nemůžete vytvořit zásadu nebo zaregistrovat zařízení.
 
 **Řešení:** V [Centru pro správu Office 365](https://portal.office.com/) odeberte zvláštní znaky z názvu společnosti a uložte informace o společnosti.
 
-### Pokud máte více ověřených domén, není možné se přihlásit nebo zaregistrovat zařízení
+### <a name="unable-to-log-in-or-enroll-devices-when-you-have-multiple-verified-domains"></a>Pokud máte více ověřených domén, není možné se přihlásit nebo zaregistrovat zařízení
 **Problém:** Pokud do AD FS přidáte druhou ověřenou doménu, nemusí být uživatelé s příponou hlavního názvu uživatele (UPN) druhé domény schopni se přihlásit na portály nebo zaregistrovat zařízení.
 
 
-**Řešení:** Zákazníci, kteří mají předplatné Microsoft Office 365, využívají jednotné přihlašování (SSO) prostřednictvím služby AD FS 2.0 a mají pro přípony UPN uživatelů v rámci organizace více domén nejvyšší úrovně (například @contoso.com nebo @fabrikam.com), musí pro každou příponu nasadit samostatnou instanci federační služby AD FS 2.0.  K dispozici je nyní [kumulativní aktualizace pro službu AD FS 2.0](http://support.microsoft.com/kb/2607496), která ve spojení s přepínačem **SupportMultipleDomain** umožňuje zajistit, aby AD FS server tento scénář podporoval bez vyžadování dalších serverů služby AD FS 2.0. Další informace najdete na [tomto blogu](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+**Řešení:** Zákazníci, kteří mají předplatné Microsoft Office 365, využívají jednotné přihlašování (SSO) prostřednictvím služby AD FS 2.0 a mají pro přípony UPN uživatelů v rámci organizace více domén nejvyšší úrovně (třeba @contoso.com nebo @fabrikam.com)), musí pro každou příponu nasadit samostatnou instanci federační služby AD FS 2.0.  K dispozici je nyní [kumulativní aktualizace pro službu AD FS 2.0](http://support.microsoft.com/kb/2607496), která ve spojení s přepínačem **SupportMultipleDomain** umožňuje zajistit, aby AD FS server tento scénář podporoval bez vyžadování dalších serverů služby AD FS 2.0. Další informace najdete na [tomto blogu](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
 
 
-## Problémy na zařízeních s Androidem
-### Neúspěch instalace profilu
+## <a name="android-issues"></a>Problémy na zařízeních s Androidem
+### <a name="profile-installation-failed"></a>Neúspěch instalace profilu
 **Problém:** Na zařízení s Androidem se zobrazí chybová zpráva **Instalace profilu se nezdařila**.
 
-### Postup řešení potíží při neúspěšné instalaci profilu
+### <a name="troubleshooting-steps-for-failed-profile-installation"></a>Postup řešení potíží při neúspěšné instalaci profilu
 
 1.  Zkontrolujte, jestli má uživatel přiřazenou příslušnou licenci pro verzi služby Intune, kterou používáte.
 
@@ -163,7 +163,7 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 
 4.  Potvrďte, že Chrome pro Android je výchozím prohlížečem a že jsou povolené soubory cookie.
 
-### Problémy s certifikáty Androidu
+### <a name="android-certificate-issues"></a>Problémy s certifikáty Androidu
 
 **Problém:** Uživatel obdrží na zařízení následující zprávu: *Nemůžete se přihlásit, protože vašemu zařízení chybí požadovaný certifikát.*
 
@@ -184,11 +184,11 @@ Teď už by měl uživatel být schopný se ze zařízení s Androidem k aplikac
 
 
 
-## Problémy na zařízeních s iOS
-### Neúspěch instalace profilu
+## <a name="ios-issues"></a>Problémy na zařízeních s iOS
+### <a name="profile-installation-failed"></a>Neúspěch instalace profilu
 **Problém:** V zařízení s iOS se zobrazí chyba **Instalace profilu se nezdařila**.
 
-### Postup řešení potíží při neúspěšné instalaci profilu
+### <a name="troubleshooting-steps-for-failed-profile-installation"></a>Postup řešení potíží při neúspěšné instalaci profilu
 
 1.  Zkontrolujte, jestli má uživatel přiřazenou příslušnou licenci pro verzi služby Intune, kterou používáte.
 
@@ -198,7 +198,7 @@ Teď už by měl uživatel být schopný se ze zařízení s Androidem k aplikac
 
 4.  Potvrďte nastavení výchozích prohlížečů Safari (pro iOS) a povolení souborů cookie.
 
-### Zaregistrovaná zařízení s iOS se při používání nástroje System Center Configuration Manager se službou Intune nezobrazí v konzole
+### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-system-center-configuration-manager-with-intune"></a>Zaregistrovaná zařízení s iOS se při používání nástroje System Center Configuration Manager se službou Intune nezobrazí v konzole
 **Problém:** Uživatel registruje zařízení s iOS, to se ale nezobrazí v konzole pro správu nástroje Configuration Manager. Zařízení neindikuje, že je zaregistrované. Možné příčiny:
 
 - Je možné, že jste konektor služby Intune zaregistrovali na jednom účtu a potom jste ho zaregistrovali na jiném účtu.
@@ -227,13 +227,13 @@ Teď už by měl uživatel být schopný se ze zařízení s Androidem k aplikac
 
 
 1. Získejte nový certifikát APN a nahrajte ho: klikněte pravým tlačítkem na předplatné služby Intune v levém podokně nástroje Configuration Manager. Vyberte **Vytvořit žádost o certifikát APNs** a postupujte podle pokynů.
-## Problémy při použití nástroje System Center Configuration Manager se službou Intune
-### Mobilní zařízení zmizí
+## <a name="issues-when-using-system-center-configuration-manager-with-intune"></a>Problémy při použití nástroje System Center Configuration Manager se službou Intune
+### <a name="mobile-devices-disappear"></a>Mobilní zařízení zmizí
 **Problém:** Po úspěšné registraci mobilního zařízení do Configuration Manageru dané zařízení zmizí z kolekce mobilních zařízení, ale pořád má profil pro správu a je uvedené v bráně CSS.
 
 **Řešení:** K této situaci může dojít, protože máte vlastní proces, který odebírá zařízení nepřipojená k doméně, nebo protože uživatel vyřadil zařízení z předplatného. Pokud chcete ověřit a zkontrolovat, který proces nebo uživatelský účet odebral zařízení z konzoly nástroje Configuration Manager, postupujte podle následujících kroků.
 
-#### Zjištění způsobu odebrání zařízení
+#### <a name="check-how-device-was-removed"></a>Zjištění způsobu odebrání zařízení
 
 1.  V konzole pro správu nástroje Configuration Manager vyberte **Monitorování** &gt; ** Stav systému** &gt; **Dotazy stavových zpráv**.
 
@@ -250,12 +250,12 @@ Teď už by měl uživatel být schopný se ze zařízení s Androidem k aplikac
 
 
 
-### Další chyby registrace zařízení s iOS
+### <a name="other-ios-enrollment-errors"></a>Další chyby registrace zařízení s iOS
 Seznam chyb registrace iOS je uvedený v dokumentaci pro uživatele zařízení v části [Při pokusu o registraci zařízení v Intune se zobrazí chyby](/intune/enduser/using-your-ios-or-mac-os-x-device-with-intune).
 
-## Potíže s počítačem
+## <a name="pc-issues"></a>Potíže s počítačem
 
-### Počítač už je zaregistrovaný – chyba hr 0x8007064c
+### <a name="the-machine-is-already-enrolled-error-hr-0x8007064c"></a>Počítač už je zaregistrovaný – chyba hr 0x8007064c
 **Problém:** Registrace selže s chybou **Počítač už je zaregistrovaný**. V protokolu registrace se zobrazuje chyba **hr 0x8007064c**.
 
 Důvodem může být to, že již byl počítač zaregistrován dříve nebo je na něm klonovaná image počítače, který už je zaregistrovaný. Na počítači se stále nachází certifikát předchozího účtu.
@@ -278,7 +278,7 @@ Důvodem může být to, že již byl počítač zaregistrován dříve nebo je 
     > Tato část, metoda nebo úloha obsahují kroky, které vám pomohou s úpravou registru. Pokud ale budete měnit registr a uděláte tam něco špatně, můžete mít velké problémy s počítačem. Proto je důležité, abyste pečlivě postupovali podle těchto kroků. Než začnete registr měnit, pro jistotu si ho zazálohujte. Pak budete moct v případě problémů registr obnovit.
     > Další informace o tom, jak zálohovat a obnovovat registr, najdete v tématu [Postup zálohování a obnovení registru v systému Windows](https://support.microsoft.com/en-us/kb/322756).
 
-## Obecné kódy chyb registrace
+## <a name="general-enrollment-error-codes"></a>Obecné kódy chyb registrace
 
 |Kód chyby|Možný problém|Navržené řešení|
 |--------------|--------------------|----------------------------------------|
@@ -302,11 +302,11 @@ Důvodem může být to, že již byl počítač zaregistrován dříve nebo je 
 
 
 
-### Další kroky
+### <a name="next-steps"></a>Další kroky
 Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

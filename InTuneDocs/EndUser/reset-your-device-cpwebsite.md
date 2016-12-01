@@ -2,8 +2,8 @@
 title: "Resetování zařízení z webu Portál společnosti | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -15,16 +15,16 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 05f54088f3b18d90368e1b408b7012d28021abfc
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: c5791e70c35446fb11971321b6b7a4178ebdfdb5
 
 
 ---
 
 
-# Resetování zařízení z webu Portál společnosti
+# <a name="reset-your-device-from-the-company-portal-website"></a>Resetování zařízení z webu Portál společnosti
 
-V případě ztráty nebo odcizení zařízení může být vhodné restovat jeho tovární nastavení za účelem zabránění neoprávněného přístupu k vašim údajům. Můžete taky vzdáleně resetovat zařízení pomocí [webu Portál společnosti](http://portal.manage.microsoft.com). Web Portál společnosti je webová stránka, kterou můžete použít ke správě počítačů a zařízení, které jste registrovali v Intune, a k provádění většiny úloh, které můžete provádět pomocí aplikace Portál společnosti.
+V případě ztráty nebo odcizení zařízení může být vhodné restovat jeho tovární nastavení za účelem zabránění neoprávněného přístupu k vašim údajům. Můžete taky vzdáleně resetovat zařízení pomocí [webu Portál společnosti](http://portal.manage.microsoft.com). Web Portál společnosti je webová stránka sloužící ke správě počítačů a zařízení zaregistrovaných v Intune. Na tomto webu můžete plnit většinou stejné úkoly, jako když používáte aplikaci Portál společnosti.
 
 Pokud zařízení resetujete, nebude již uvedené na Portálu společnosti a bude restované do výchozího továrního nastavení.
 
@@ -40,12 +40,12 @@ Resetování zařízení:
 
 Zařízení se resetovalo.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

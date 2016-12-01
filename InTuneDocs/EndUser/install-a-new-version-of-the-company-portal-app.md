@@ -2,32 +2,32 @@
 title: "Instalace nové verze aplikace Portál společnosti | Microsoft Intune"
 description: 
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
-ms.service: 
+ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: c002bcb2-ae37-478d-acf3-2bf51faae490
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: 849632d4b07b2e4417fd955d945fed21461edc6a
-ms.openlocfilehash: e3ccc0fda42c00ced108401c31df4106fe4049a3
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: e831586172ef700b869a392d9938821b004f1e04
 
 
 ---
 
-# Instalace nové verze aplikace Portál společnosti
+# <a name="install-a-new-version-of-the-company-portal-app"></a>Instalace nové verze aplikace Portál společnosti
 
 Pokud už vaše verze aplikace Portál společnosti není podporovaná nebo je dispozici její novější verze, musíte ji aktualizovat na novější verzi. Použijte postup odpovídající typu zařízení, které máte.
 
-## Aktualizace aplikace Portál společnosti Intune na zařízení s Androidem
+## <a name="update-the-intune-company-portal-app-on-your-android-device"></a>Aktualizace aplikace Portál společnosti Intune na zařízení s Androidem
 
 Obchod Play vás upozorní, jakmile bude k dispozici nová verze aplikace Portál společnosti. V samotné aplikaci Portál společnosti výzvu neuvidíte. Aktualizujte zařízení podle pokynů v upozornění.
 
-## Aktualizace aplikace Portál společnosti Intune na zařízení s iOS
+## <a name="update-the-intune-company-portal-app-on-your-ios-device"></a>Aktualizace aplikace Portál společnosti Intune na zařízení s iOS
 
 Pokud je k dispozici nová verze, zobrazí se možnost aktualizace, když se na tuto aplikaci díváte v seznamu nainstalovaných aplikací.  
 
@@ -37,7 +37,7 @@ Aktualizace aplikace Portál společnosti:
 
 2. Až aplikaci najdete, klepněte na tlačítko **Aktualizovat** vpravo od názvu aplikace.
 
-## Aktualizace aplikace Portál společnosti Intune na zařízení s Windows
+## <a name="update-the-intune-company-portal-app-on-your-windows-device"></a>Aktualizace aplikace Portál společnosti Intune na zařízení s Windows
 
 1.  Přejděte do Windows Storu a vyhledejte **Portál společnosti**.
 
@@ -47,10 +47,10 @@ Aktualizace aplikace Portál společnosti:
     > Pokud se nemůžete do Windows Storu dostat, obraťte se na správce IT.
 
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

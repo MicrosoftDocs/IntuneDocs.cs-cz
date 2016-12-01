@@ -2,7 +2,8 @@
 title: "Běžné úlohy správy počítačů s Windows | Microsoft Intune"
 description: "Když si přečtete informace uvedené v tomto tématu, dozvíte se, jak spravovat počítače se systémem Windows, na kterých běží klientský software Intune."
 keywords: 
-author: NathBarn
+author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/04/2016
 ms.topic: article
@@ -13,23 +14,23 @@ ms.assetid: eb912c73-54d2-4d78-ac34-3cbe825804c7
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 16be49504b24269f9463905ab5767acbda136a0a
-ms.openlocfilehash: 9ef18ee054928fcfb12a36fe8ac3ad3c2909f6c1
+ms.sourcegitcommit: 289e6019aa1a17deb91b38ed32f0432af0902a9d
+ms.openlocfilehash: 325ff48e00dcc73e1bfdfcb3f98a44c2a24d1dc5
 
 
 ---
 
-# Běžné úlohy správy počítačů s Windows pomocí klientského softwaru Intune
+# <a name="common-windows-pc-management-tasks-with-the-intune-software-client"></a>Běžné úlohy správy počítačů s Windows pomocí klientského softwaru Intune
 Když si přečtete informace uvedené v tomto tématu, dozvíte se, jak spravovat počítače, na kterých běží klientský software Intune. Pokud jste ještě na svých počítačích tohoto klienta nenainstalovali, přečtěte si téma [Instalace klientského softwaru Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
 
-## Použití zásad ke zjednodušení správy počítačů
+## <a name="use-policies-to-simplify-pc-management"></a>Použití zásad ke zjednodušení správy počítačů
 
 Na počítačích s Windows se dá klientský software Intune spravovat přes zásady **Správa počítače**.
 
 ![Šablony zásad pro počítače s Windows](../media/pc_policy_template.png)
 
-### Správa centra Microsoft Intune Center
+### <a name="manage-the-microsoft-intune-center"></a>Správa centra Microsoft Intune Center
 Klientský software Intune se uživatelům zobrazí jako **Microsoft Intune Center**. Microsoft Intune Center uživatelům umožňuje:
 
 -   Získávat aplikace z portálu společnosti
@@ -51,16 +52,16 @@ Microsoft Intune Center se nainstaluje na všech spravovaných počítačích. V
 |**Adresa URL webu**|Adresa URL vašeho webu podpory<br /><br />Maximální délka: 150 znaků|
 |**Poznámky**|Poznámka, která se zobrazuje uživatelům<br /><br />Maximální délka: 120 znaků|
 
-## Nastavení aktualizací softwaru
+## <a name="software-updates-settings"></a>Nastavení aktualizací softwaru
 Pomocí zásad můžete nakonfigurovat nastavení, která budou spravované počítače používat k hledání a stahování aktualizací softwaru od Microsoftu i jiných výrobců. Tyto aktualizace nezahrnují upgrade operačního systému, tj. upgrade z Windows 7 na Windows 10 nebo upgrade starší verze Windows 10 na verzi novější. Další informace najdete v tématu [Udržování počítačů s Windows v aktuálním stavu díky softwarovým aktualizacím v Microsoft Intune](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md).
 
-### Nastavení služby Endpoint Protection
+### <a name="endpoint-protection-settings"></a>Nastavení služby Endpoint Protection
 Pomocí zásad můžete nakonfigurovat nastavení pro službu Endpoint Protection a potom je můžete nasadit na spravované počítače. Můžou to být třeba plány kontrol, akce, které se mají udělat v případě detekce malwaru, a další věci. Další informace najdete v tématu [Pomoc se zabezpečením počítačů s Windows pomocí služby Endpoint Protection pro Microsoft Intune](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md).
 
-## Nastavení brány Windows Firewall
+## <a name="windows-firewall-settings"></a>Nastavení brány Windows Firewall
 Zásady zjednodušují správu nastavení brány Windows Firewall na spravovaných počítačích. Podrobné informace najdete v tématu [Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall v Microsoft Intune](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md).
 
-## Zobrazení inventáře hardwaru a softwaru
+## <a name="view-hardware-and-software-inventory"></a>Zobrazení inventáře hardwaru a softwaru
 Intune shromažďuje podrobné informace o hardwaru a softwaru spravovaných počítačů. V následujících postupech se dozvíte toto:
 
 -   Jak vytvořit sestavu s informacemi o hardwarových možnostech vašich počítačů
@@ -69,7 +70,7 @@ Intune shromažďuje podrobné informace o hardwaru a softwaru spravovaných po�
 
 -   Jak aktualizovat inventář počítačů, abyste měli jistotu, že jsou data v sestavě aktuální
 
-### Zobrazení informací o počítačích
+### <a name="to-display-information-about-your-computers"></a>Zobrazení informací o počítačích
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) klikněte na **Sestavy** &gt; **Sestavy inventáře počítače**.
 
@@ -79,7 +80,7 @@ Intune shromažďuje podrobné informace o hardwaru a softwaru spravovaných po�
 
     Když vyberete záhlaví příslušných sloupců, jako je třeba **Název**, **Typ skříně** nebo **Výrobce**, můžete sestavu podle těchto sloupců seřadit.
 
-### Zobrazení softwaru nainstalovaného na počítačích
+### <a name="to-display-software-installed-on-your-computers"></a>Zobrazení softwaru nainstalovaného na počítačích
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Sestavy** &gt; **Zjištěné zprávy o softwaru**.
 
@@ -89,7 +90,7 @@ Intune shromažďuje podrobné informace o hardwaru a softwaru spravovaných po�
 
     Když vyberete záhlaví příslušných sloupců, jako je třeba **Název**, **Vydavatel** nebo **Kategorie** , můžete sestavu podle těchto sloupců seřadit. Zvolením směrové šipky vedle položky seznamu můžete aktualizace v seznamu rozbalit a zobrazit tak další podrobnosti (třeba počítače, na kterých jsou nainstalované).
 
-### Aktualizace inventáře počítače, abyste měli jistotu, že je aktuální
+### <a name="to-refresh-computer-inventory-to-ensure-it-is-current"></a>Aktualizace inventáře počítače, abyste měli jistotu, že je aktuální
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všechna zařízení** (nebo na jinou skupinu obsahující počítač, pro který chcete inventář aktualizovat).
 
@@ -102,7 +103,7 @@ Intune shromažďuje podrobné informace o hardwaru a softwaru spravovaných po�
     V dialogovém okně **Stav úlohy** se zobrazí aktuální vzdálené úlohy, stav úloh, název zařízení, všechny hlášené chyby a odkaz na informace o odstraňování problémů.
 
 
-## Vzdálené restartování počítače s Windows
+## <a name="remotely-restart-a-windows-pc"></a>Vzdálené restartování počítače s Windows
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všechna zařízení** (nebo na jinou skupinu obsahující počítač, který chcete restartovat).
 
@@ -112,7 +113,7 @@ Intune shromažďuje podrobné informace o hardwaru a softwaru spravovaných po�
 
 4.  V dialogovém okně **Stav úlohy** se můžete podívat na aktuální vzdálené úlohy, stav úloh, název zařízení a všechny hlášené chyby.
 
-## Vyřazení počítače
+## <a name="retire-a-computer"></a>Vyřazení počítače
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všechna zařízení** (nebo na jinou skupinu obsahující počítač, který chcete vyřadit).
 
@@ -143,10 +144,10 @@ Při vyřazení počítače s stane toto:
 
     Pokud se odinstalace klienta nepovede, najdete další pomoc v tématu [Řešení potíží se službou Endpoint Protection](/intune/troubleshoot/troubleshoot-endpoint-protection-in-microsoft-intune).
 
-## Správa propojení zařízení s uživatelem
+## <a name="manage-userdevice-linking"></a>Správa propojení zařízení s uživatelem
 Abyste mohli nasadit software pro uživatele, musíte uživatele propojit s počítačem. Uživatele můžete propojit s několika počítači, ale každý počítač může být propojený jenom s jedním uživatelem. Uživatelé jsou automaticky propojení se všemi počítači, které si přes portál společnosti zaregistrovali v Intune.
 
-### Propojení uživatele s počítačem
+### <a name="to-link-a-user-to-a-computer"></a>Propojení uživatele s počítačem
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všechna zařízení** (nebo na jinou skupinu obsahující počítač, který chcete propojit s uživatelem).
 
@@ -165,13 +166,13 @@ Abyste mohli nasadit software pro uživatele, musíte uživatele propojit s poč
 > [!TIP]
 > Když chcete koncovým uživatelům omezit schopnosti propojení vlastních účtů s počítači, povolte možnost **Omezit schopnosti uživatelů propojit s počítači vlastní účet** v zásadách **Nastavení agenta Microsoft Intune**.
 
-## Žádost a poskytnutí vzdálené pomoci na počítačích s Windows
+## <a name="request-and-provide-remote-assistance-for-windows-pcs"></a>Žádost a poskytnutí vzdálené pomoci na počítačích s Windows
 
 Microsoft Intune může využívat software [TeamViewer](https://www.teamviewer.com), který je třeba zakoupit zvlášť. Ten umožňuje uživatelům počítačů s klientským softwarem Intune, aby od vás získali vzdálenou pomoc. Když si uživatel vyžádá pomoc od centra Microsoft Intune Center, budete o tom informováni prostřednictvím výstrahy. Můžete tuto žádost přijmout a potom poskytnout pomoc.
 Tato funkce nahrazuje stávající funkci Vzdálená pomoc pro Windows v Intune.
 
 
-### Než začnete
+### <a name="before-you-start"></a>Než začnete
 
 Než začnete reagovat na požadavky na vzdálenou pomoc, je nutné zajistit splnění těchto požadavků:
 
@@ -179,7 +180,7 @@ Než začnete reagovat na požadavky na vzdálenou pomoc, je nutné zajistit spl
 - Počítač s Windows, které chcete spravovat, musí být [spravovaný prostřednictvím klienta na počítači s Windows](manage-windows-pcs-with-microsoft-intune.md).
 - Spravovat je možné všechny operační systémy Windows pro počítače, které Intune podporuje.
 
-### Konfigurace Konektoru pro TeamViewer
+### <a name="configure-the-teamviewer-connector"></a>Konfigurace Konektoru pro TeamViewer
 
 1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Správce**.
 2. V pracovním prostoru **Správa** zvolte **TeamViewer**.
@@ -190,7 +191,7 @@ Než začnete reagovat na požadavky na vzdálenou pomoc, je nutné zajistit spl
 7. V konzole Intune ověřte, že se položka **Konektor pro TeamViewer** zobrazuje jako **povolená**.
 
 
-### Otevření žádosti o vzdálenou pomoc (koncový uživatel)
+### <a name="open-a-remote-assistance-request-end-user"></a>Otevření žádosti o vzdálenou pomoc (koncový uživatel)
 
 1. Na klientském počítači s Windows otevřete **Microsoft Intune Center**.
 2. V části **Vzdálená pomoc** zvolte **Požádat o vzdálenou pomoc**.
@@ -198,7 +199,7 @@ Než začnete reagovat na požadavky na vzdálenou pomoc, je nutné zajistit spl
 4. Uživateli se zobrazí zpráva s dotazem, jestli můžete převzít kontrolu nad jeho počítačem. Tuto zprávu musí přijmout, aby bylo možné pokračovat.
 5. Během relace vzdálené pomoci se uživateli zobrazí okno, které ukazuje, že jste připojeni. Pokud toto okno zavře, vzdálená relace se ukončí.
 
-### Odpověď na žádost o vzdálenou pomoc
+### <a name="respond-to-a-remote-assistance-request"></a>Odpověď na žádost o vzdálenou pomoc
 
 1. Když uživatel odešle žádost o vzdálenou pomoc, můžete ji zobrazit v pracovním prostoru **Výstrahy** v části **Monitorování** > **Vzdálená pomoc**. Například:
 > ![Snímek obrazovky žádosti o vzdálenou pomoc](./media/team-viewer.png)
@@ -210,12 +211,12 @@ Než začnete reagovat na požadavky na vzdálenou pomoc, je nutné zajistit spl
 
 Během relace vzdálené pomoci můžete k řízení vzdáleného počítače využívat všechny dostupné příkazy TeamVieweru. Pokud s těmito příkazy potřebujete pomoci, stáhněte si [příručku pro vzdálené řízení](http://www.teamviewer.com/en/support/documents/) z webu TeamVieweru.
 
-### Zavření relace vzdálené pomoci
+### <a name="close-the-remote-assistance-session"></a>Zavření relace vzdálené pomoci
 
 V nabídce **Akce** v okně **TeamViewer** zvolte **Ukončit relaci**.
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

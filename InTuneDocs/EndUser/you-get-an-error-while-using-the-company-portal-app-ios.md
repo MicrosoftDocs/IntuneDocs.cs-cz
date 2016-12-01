@@ -2,7 +2,8 @@
 title: "Při použití aplikace Portál společnosti se zobrazí chyba | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -14,28 +15,27 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 6d8b46a20e415f03d23b58b22ecf77fe887d344c
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: fde8d231c9638f5923826942cadf1f9bad731f55
 
 
 ---
 
 
-# Při použití aplikace Portál společnosti se zobrazí chyba
+# <a name="you-get-an-error-while-using-the-company-portal-app"></a>Při použití aplikace Portál společnosti se zobrazí chyba
 
 Pokud při použití aplikace Portál společnosti v zařízení s iOS dojde k chybě, můžete odeslat informace o této chybě, abyste svému správci IT pomohli potíže vyřešit. Informace o chybě můžete odeslat různými způsoby:
 
--   Klepnutím na **Zpráva** v chybové zprávě
+-   Ve zprávě s výstrahou chyby klepněte na **Zpráva**.
 
--   Klepnutím na **Odeslat diagnostickou zprávu** na obrazovce **O aplikaci** v aplikaci Portál společnosti
+-   Na obrazovce **O produktu** aplikace Portál společnosti klepněte na **Odeslat diagnostickou zprávu**.
 
--   Tím, že zatřesete zařízením se spuštěnou aplikací Portál společnosti a po zobrazení diagnostické výstrahy klepnete na **E-mail**. Pokud zatřesete zařízením, ale žádná výstraha se nezobrazí, otevřete **Nastavení** &gt; **Portál společnosti** a zkontrolujte, jestli je zapnutá možnost **Gesto zatřesením**.
+-   Když jste v aplikaci Portál společnosti, zatřeste zařízením a po zobrazení diagnostické výstrahy klepněte na **E-mail**. Pokud zatřesete zařízením, ale žádná výstraha se nezobrazí, otevřete **Nastavení** &gt; **Portál společnosti** a zkontrolujte, jestli je zapnutá možnost **Gesto zatřesením**.
 
-
-
-
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
-<!--HONumber=Sep16_HO3-->
+
+<!--HONumber=Nov16_HO2-->
 
 

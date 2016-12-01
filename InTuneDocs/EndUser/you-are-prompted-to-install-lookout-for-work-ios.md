@@ -2,9 +2,10 @@
 title: "Jste vyzváni k instalaci aplikace Lookout for Work na zařízení s iOS | Microsoft Intune"
 description: 
 keywords: 
-author: staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/08/2016
+ms.date: 10/17/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,66 +13,48 @@ ms.technology:
 ms.assetid: 7adab655-8317-4512-ba7d-beeaa25bbf6c
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: 29eb7c7fb17eb640eefb0cb4a58834d5e3d77591
-ms.openlocfilehash: a8f198633bcaf460f2a94257a052284003230d58
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 0c1fd681cd2ef9001083df16d4fb7506c47f9572
 
 
 ---
 
-# Jste vyzváni k instalaci aplikace Lookout for Work na zařízení s iOS
+# <a name="you-are-prompted-to-install-lookout-for-work-on-your-ios-device"></a>Jste vyzváni k instalaci aplikace Lookout for Work na zařízení s iOS
 
-Než budete moci začít pracovat, správce IT potřebuje, abyste nainstalovali aplikaci Lookout for Work. Ta pomáhá chránit vaše zařízení hledáním potenciálních bezpečnostních hrozeb.
-
+Než budete moci začít pracovat, správce IT potřebuje, abyste nainstalovali aplikaci Lookout for Work. Ta pomáhá chránit vaše zařízení hledáním potenciálních bezpečnostních hrozeb. V závislosti na tom, jak váš správce IT aplikaci Lookout for Work nastavil, se vám v zařízení můžou zobrazit různé výzvy.
 
 **Co je potřeba udělat:**
 
-1.  Když se zobrazí oznámení **Požadovaná aplikace – nainstalujte aplikaci Lookout for Work z App Storu**, klepněte na ně. Přejdete na instalační stránku aplikace Lookout for Work v App Storu.
+1.  Pokud se zobrazí následující výzva, klepnutím na **Nainstalovat** umožněte nainstalování aplikace Lookout for Work do zařízení.
 
-2.  Nainstalujte Lookout for Work a klepněte na **PŘIJMOUT**, aby aplikace Lookout for Work získala přístup k vašemu zařízení.
+    ![Klepnutím na Nainstalovat nainstalujte aplikaci Lookout for Work](./media/ios-lfw-install-app-request.png)
 
-    ![klepnutím na přijmout umožněte aplikaci Lookout for Work přístup k vašemu zařízení](./media/lookout-accept-store-permissions-android.png)
+2. Když se zobrazí následující zpráva, klepněte na **Nastavení**, zapněte **Polohové služby** a pak klepněte na **Pokračovat**.
 
-3. Otevřete Lookout for Work a klepněte na **Aktivovat**.
+    ![Klepněte na Nastavení a pak na Polohové služby](./media/ios-lfw-allow-location-services.png)
 
-    ![otevřete Lookout for Work a klepněte na Aktivovat](./media/lookout-activate-button-android.png)
+3. Zkontrolujte oprávnění, která aplikace Lookout for Work potřebuje, a klepněte na **Pokračovat**.
 
-4. Klepněte na **Přihlásit se pomocí Azure Active Directory** a zadejte účet, který používáte pro přístup k pracovním nebo školním e-mailům a souborům.
+    ![jste připojeni k aplikaci Lookout for Work](./media/ios-lfw-permissions-lookout-needs.png)
 
-    ![přihlaste se pomocí svého pracovního nebo školního účtu](./media/lookout-sign-in-azure-android.png)
+4. Při zobrazení výzvy, která žádá o povolení zasílat oznámení z aplikace Lookout for Work, klepněte na **Povolit**.
 
-5. Vyberte účet, který používáte pro přístup k pracovním nebo školním e-mailům a souborům, a potom klepněte na **PŘIDAT ÚČET**. Uvidíte obrazovku, která vypadá podobně jako následující.
+    ![Klepněte na Nastavení a pak na Polohové služby](./media/ios-lfw-allow-notifications.png)
 
-    ![zadejte svůj pracovní nebo školní účet a klepněte na Přidat účet](./media/lookout-pick-account-android.png)
+    
+Aplikace Lookout for Work dokončí instalaci, a pokud se v zařízení nenajdou žádná ohrožení zabezpečení, zobrazí se následující obrazovka.
 
-6. Klepnutím na **Přijmout** dáte aplikaci Lookout for Work oprávnění k přihlášení a čtení vašeho profilu.
+![Aplikace Lookout for Work nenašla žádné bezpečnostní hrozby.](./media/ios-lfw-no-threats-found.png)
 
-    ![klepnutím na Přijmout dáte aplikaci Lookout for Work oprávnění k přihlášení a čtení vašeho profilu](./media/lookout-needs-permission-to-view-profile-android.png)
+Pokud aplikace Lookout for Work najde ve vašem zařízení bezpečnostní hrozbu, nabídne vám pokyny k vyřešení vašeho problému.
 
-    Na obrazovce se zobrazí informace o připojování aplikace Lookout for Work ke cloudu Lookout Security Cloud.
+**Pokud instalace nefunguje**
 
-7. Seznamte se s informacemi o možnostech ochrany vašeho zařízení pomocí aplikace Lookout a potom klepněte na tlačítko **OK**.
-
-    ![seznamte se s informacemi o možnostech ochrany vašeho zařízení pomocí aplikace Lookout for Work](./media/lookout-how-it-protects-your-device-android.png)
-
-    Když se zobrazí následující obrazovka, znamená to, že aplikace Lookout je nastavená a připojená.
-
-    ![jste připojeni k aplikaci Lookout for Work](./media/lookout-you-are-now-connected-android.png)
-
-    Lookout for Work začne okamžitě vyhledávat bezpečnostní hrozby ve vašem zařízení. Pokud žádné hrozby nenajde, zobrazí se následující obrazovka.
-
-    ![Aplikace Lookout for Work nenašla žádné bezpečnostní hrozby.](./media/lookout-scan-no-threats-found-android.png)
-
-    Obrazovka s podrobnostmi o zařízení v aplikaci Portál společnosti ukazuje, že teď už splňujete firemní požadavky na zabezpečení.
-
-    Pokud aplikace Lookout for Work najde ve vašem zařízení bezpečnostní hrozbu, nabídne vám pokyny k vyřešení vašeho problému.
-
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+V některých případech může instalace selhat kvůli technickým problémům mimo vaši kontrolu. V takovém případě se obraťte na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
 
-
-
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

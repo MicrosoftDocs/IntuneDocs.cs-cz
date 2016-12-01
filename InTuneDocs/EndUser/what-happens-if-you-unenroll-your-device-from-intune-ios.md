@@ -2,9 +2,10 @@
 title: "Co se stane, když zrušíte registraci zařízení s iOS v Intune? | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,39 +15,37 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 05c94004bf8a4c26ad8063f3e5dc0ba581022e0a
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 7c01f0f2dee8fb15f766264489d39df76932e97e
 
 
 ---
 
 
-# Co se stane, když zrušíte registraci zařízení s iOS v Intune?
+# <a name="what-happens-if-you-unenroll-your-ios-device-from-intune"></a>Co se stane, když zrušíte registraci zařízení s iOS v Intune?
 
 Po zrušení registrace zařízení s iOS v Intune:
 
--   Vaše zařízení se už nebude zobrazovat na portálu společnosti.
+-   Vaše zařízení se už nebude zobrazovat na Portálu společnosti.
 
 -   Z portálu společnosti už nebudete moct instalovat aplikace.
 
--   Nastavení, která se v zařízení změnila od jeho přidání, například zakázání fotoaparátu/kamery nebo vyžadování určité délky hesla, přestanou platit.
+-   Už nebudou platit nastavení, která se v zařízení změnila od jeho přidání (třeba zakázání fotoaparátu/kamery nebo vyžadování určité délky hesla).
 
--   Je možné, že již v zařízení nebudete mít přístup k některým prostředkům společnosti, jako jsou sdílené složky nebo interní weby.
+-   Je možné, že už v zařízení nebudete mít přístup k některým prostředkům společnosti, jako jsou sdílené složky nebo interní weby.
 
 -   Nebudete již moci v zařízení používat aplikace a data společnosti.
 
--   Je možné, že se už nebudete moct připojovat k podnikové síti pomocí Wi-Fi nebo virtuální privátní sítě (VPN).
+-   Je možné, že se už nebudete moct připojit k podnikové síti pomocí Wi-Fi nebo virtuální privátní sítě (VPN).
 
 -   E-mailové profily společnosti jsou ze zařízení odebrané.
 
 Návod ke zrušení registrace najdete v tématu [Zrušení registrace zařízení v Intune](unenroll-your-device-from-intune-ios.md).
 
-Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

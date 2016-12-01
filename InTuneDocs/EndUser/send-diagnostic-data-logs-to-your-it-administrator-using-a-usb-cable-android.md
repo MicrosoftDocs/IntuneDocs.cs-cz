@@ -2,7 +2,7 @@
 title: "Odeslání protokolů s diagnostickými daty správci IT pomocí kabelu USB | Microsoft Intune"
 description: "Odeslání datových protokolů pomocí kabelu USB"
 keywords: 
-author: barlan
+author: barlanmsft
 ms.author: barlan
 manager: angrobe
 ms.date: 10/24/2016
@@ -22,7 +22,7 @@ ms.openlocfilehash: e26a97d52cc753f83eb49e3f733668eb83ef4932
 ---
 
 
-# Odeslání protokolů s diagnostickými daty správci IT pomocí kabelu USB
+# <a name="send-diagnostic-data-logs-to-your-it-admin-using-a-usb-cable"></a>Odeslání protokolů s diagnostickými daty správci IT pomocí kabelu USB
 
 Pokud chcete správci IT odeslat datové protokoly, nemusíte je odesílat z mobilního zařízení, ale pomocí počítače a kabelu USB.
 
