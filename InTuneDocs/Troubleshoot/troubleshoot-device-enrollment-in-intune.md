@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 08/02/2016
+ms.date: 11/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d51f34dea3463bec83ea39cdfb79c7bedf9e3926
-ms.openlocfilehash: bdc462023f36d60c19dea9d67c7fb4be6d2a3043
+ms.sourcegitcommit: e33dcb095b1a405b3c8d99ba774aee1832273eaf
+ms.openlocfilehash: f279e79432f70214245854db42641535eaf65824
 
 
 ---
@@ -29,7 +29,7 @@ Toto téma obsahuje doporučení pro řešení potíží s registrací zařízen
 
 Než začnete řešit potíže, ujistěte se, že jste správně nakonfigurovali Intune pro povolení registrace. Můžete si prostudovat informace o těchto požadavcích na konfiguraci:
 
--   [Příprava registrace zařízení v Microsoft Intune](/intune/deploy-use/gprerequisites-for-enrollment.md)
+-   [Příprava registrace zařízení v Microsoft Intune](/intune/deploy-use/prerequisites-for-enrollment.md)
 -   [Nastavení správy zařízení s iOSem a Mac OS](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
 -   [Nastavení správy pro Windows Phone a Windows 10 Mobile v Microsoft Intune](/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
 -   [Nastavení správy pro zařízení s Windows](/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
@@ -50,13 +50,13 @@ K těmto problémům může docházet na všech platformách zařízení.
 ### <a name="device-cap-reached"></a>Dosažení limitu zařízení
 **Problém:** Při registraci se uživateli na zařízení zobrazí chyba, na zařízení se systémem iOS třeba chyba **Portál společnosti není dočasně k dispozici**, a protokol DMPdownloader.log v Configuration Manageru obsahuje chybu **DeviceCapReached**.
 
-**Řešení:** Návrh řešení neumožňuje uživatelům registrovat víc než 5 zařízení.
+**Řešení:**
 
 #### <a name="check-number-of-devices-enrolled-and-allowed"></a>Kontrola počtu zaregistrovaných a povolených zařízení
 
-1.  Na portálu správy služby Intune zkontrolujte, jestli nemá uživatel víc než 5 přiřazených zařízení.
+1.  Na portálu správy služby Intune zkontrolujte, jestli nemá uživatel přiřazených více zařízení, než je povolené maximum (15).
 
-2.  Na portálu správy služby Intune v části Správce\Správa mobilních zařízení\Pravidla registrace zkontrolujte, jestli je u položky Limit pro registraci zařízení nastavená hodnota 5.
+2.  V konzole pro správu Intune v části Správce\Správa mobilních zařízení\Pravidla registrace zkontrolujte, jestli je u položky Limit pro registraci zařízení nastavená hodnota 15.
 
 Uživatelé mobilních zařízení můžou zařízení odstraňovat na této adrese URL: [https://byodtestservice.azurewebsites.net/](https://byodtestservice.azurewebsites.net/).
 
@@ -89,7 +89,7 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 ### <a name="company-portal-temporarily-unavailable"></a>Portál společnosti není dočasně k dispozici
 **Problém:** Uživateli se na zařízení se zobrazí chyba **Portál společnosti není dočasně k dispozici**.
 
-#### <a name="troubleshooting-company-portal-temporarily-unavailable-error"></a>Řešení potíží s chybou Portál společnosti není dočasně k dispozici
+**Řešení:**
 
 1.  Odeberte ze zařízení aplikaci Portál společnosti Intune.
 
@@ -104,7 +104,7 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 ### <a name="mdm-authority-not-defined"></a>Není definována autorita MDM
 **Problém:** Zobrazí se chyba **Není definována autorita MDM**.
 
-#### <a name="troubleshooting-mdm-authority-not-defined-error"></a>Řešení potíží s chybou Není definována autorita MDM
+**Řešení:**
 
 1.  Zkontrolujte, jestli je nastavená správná autorita pro správu mobilních zařízení (MDM) pro verzi služby Intune, kterou používáte, tedy pro Intune, O365 MDM, nebo System Center Configuration Manager se službou Intune. V případě služby Intune se autorita MDM nastavuje v části **Správce** &gt; **Správa mobilních zařízení**. V případě využívání nástroje Configuration Manager s Intune se nastavuje při konfiguraci konektoru Intune a v O365 jde o nastavení **Mobilní zařízení**.
 
@@ -152,18 +152,67 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 
 
 ## <a name="android-issues"></a>Problémy na zařízeních s Androidem
+### <a name="devices-fail-to-check-in-with-the-intune-service-and-display-as-unhealthy-in-the-intune-admin-console"></a>Zařízení se nepodařilo registrovat ve službě Intune a jeho stav v konzole pro správu se zobrazuje jako Není v pořádku
+**Problém:** Některá zařízení Samsung s Androidem verze 4.4.x a 5.x můžou ukončit registraci ve službě Intune. Pokud se zařízení nezaregistrují, platí pro ně tyto podmínky:
+
+- Nemůžou přijímat zásady, aplikace a vzdálené příkazy ze služby Intune.
+- V konzole pro správu se jako stav správy zobrazuje **Není v pořádku**.
+- Uživatelé chránění zásadami podmíněného přístupu můžou ztratit přístup k podnikovým prostředkům.
+
+Společnost Samsung potvrdila, že software Samsung Smart Manager dodávaný s některými zařízeními Samsung může deaktivovat Portál společnosti Intune a jeho součásti. Když je Portál společnosti v neaktivním stavu, nemůže běžet na pozadí a v důsledku toho ani kontaktovat službu Intune.
+
+**Řešení 1:**
+
+Řekněte uživatelům, aby aplikaci Portál společnosti spouštěli ručně. Po restartování aplikace se zařízení zaregistruje pomocí služby Intune.
+
+> [!IMPORTANT]
+> Ruční spuštění aplikace Portál společnosti je dočasné řešení, protože Samsung Smart Manager může aplikaci Portál společnosti znovu deaktivovat.
+
+**Řešení 2:**
+
+Řekněte uživatelům, aby se pokusili upgradovat na Android 6.0. Problém s deaktivací neplatí pro zařízení s Androidem 6.0. Pokud chcete zkontrolovat, jestli je k dispozici aktualizace, můžete přejít na **Settings (Nastavení)** > **About device (O zařízení)** > **Download updates manually (Stáhnout aktualizace ručně)** a dále postupovat podle výzev zařízení.
+
+**Řešení 3:**
+
+Pokud řešení 2 nefunguje, nechte uživatele provést následující postup, aby Smart Manager vyloučil aplikaci Portál společnosti:
+
+1. Na zařízení spusťte aplikaci Smart Manager.
+
+  ![Výběr ikony Smart Manager na zařízení](./media/smart-manager-app-icon.png)
+
+2. Zvolte dlaždici **Battery** (Baterie).
+
+  ![Výběr dlaždice Battery](./media/smart-manager-battery-tile.png)
+
+3. V části **App power saving** (Úspora energie aplikace) nebo **App optimization** (Optimalizace aplikace) vyberte **Detail** (Podrobnosti).
+
+  ![Výběr možnosti Detail (Podrobnosti) v části App power saving (Úspora energie aplikace) nebo App optimization (Optimalizace aplikace)](./media/smart-manager-app-power-saving-detail.png)
+
+4. V seznamu aplikací vyberte **Portál společnosti**.
+
+  ![Výběr aplikace Portál společnosti ze seznamu aplikací](./media/smart-manager-company-portal.png)
+
+5. Zvolte **Turned off** (Vypnuto).
+
+  ![Výběr možnosti Turned off (Vypnuto) v dialogovém okně App optimization (Optimalizace aplikace)](./media/smart-manager-app-optimization-turned-off.png)
+
+6. V části **App power saving** (Snížení spotřeby aplikace) nebo **App optimization** (Optimalizace aplikace) ověřte, že je Portál společnosti vypnutý.
+
+  ![Ověření, že je Portál společnosti vypnutý](./media/smart-manager-verify-comp-portal-turned-off.png)
+
+
 ### <a name="profile-installation-failed"></a>Neúspěch instalace profilu
 **Problém:** Na zařízení s Androidem se zobrazí chybová zpráva **Instalace profilu se nezdařila**.
 
-### <a name="troubleshooting-steps-for-failed-profile-installation"></a>Postup řešení potíží při neúspěšné instalaci profilu
+**Řešení:**
 
 1.  Zkontrolujte, jestli má uživatel přiřazenou příslušnou licenci pro verzi služby Intune, kterou používáte.
 
 2.  Zkontrolujte, jestli už není zařízení zaregistrované pomocí jiného poskytovatele správy mobilních zařízení (MDM) a jestli už v něm není nainstalovaný profil správy.
 
-4.  Potvrďte, že Chrome pro Android je výchozím prohlížečem a že jsou povolené soubory cookie.
+3.  Potvrďte, že Chrome pro Android je výchozím prohlížečem a že jsou povolené soubory cookie.
 
-### <a name="android-certificate-issues"></a>Problémy s certifikáty Androidu
+### <a name="android-certificate-issues"></a>Problémy s certifikáty Androidu
 
 **Problém:** Uživatel obdrží na zařízení následující zprávu: *Nemůžete se přihlásit, protože vašemu zařízení chybí požadovaný certifikát.*
 
@@ -255,7 +304,7 @@ Seznam chyb registrace iOS je uvedený v dokumentaci pro uživatele zařízení 
 
 ## <a name="pc-issues"></a>Potíže s počítačem
 
-### <a name="the-machine-is-already-enrolled-error-hr-0x8007064c"></a>Počítač už je zaregistrovaný – chyba hr 0x8007064c
+### <a name="the-machine-is-already-enrolled---error-hr-0x8007064c"></a>Počítač už je zaregistrovaný – chyba hr 0x8007064c
 **Problém:** Registrace selže s chybou **Počítač už je zaregistrovaný**. V protokolu registrace se zobrazuje chyba **hr 0x8007064c**.
 
 Důvodem může být to, že již byl počítač zaregistrován dříve nebo je na něm klonovaná image počítače, který už je zaregistrovaný. Na počítači se stále nachází certifikát předchozího účtu.
@@ -307,6 +356,6 @@ Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podpor
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 

@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 11/22/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,25 +14,58 @@ ms.assetid: 2382f36f-13d8-4a32-81ad-6cfa604889c3
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0d422b421c3716ad576c4fc565b181dec28c947e
-ms.openlocfilehash: 0251e339ddc227735bc09efb31e8440543e6033f
+ms.sourcegitcommit: 29b6e5a3d319c741482fcc2b600842e2e42b96e2
+ms.openlocfilehash: 9fe78bca15ffee1e5e0e7e3758ff70b6bc92b619
 
 
 ---
 
 
-# Konfigurace vlastního názvu domény
+# <a name="configure-a-custom-domain-name"></a>Konfigurace vlastního názvu domény
 
-Standardně Intune používá název domény **<domain>.onmicrosoft.com**, který byl vytvořený při prvním přihlášení k službě. Pokud má vaše organizace vlastní doménu, můžete instanci Intune nakonfigurovat tak, aby místo názvu domény poskytnutého s vaším předplatným používala tuto doménu.
+Pokud si vaše organizace zaregistruje cloudovou službu Microsoftu, třeba Intune, získáte počáteční název domény, jejímž hostitelem je Azure Active Directory (AD). Název může vypadat takto: **vaše_doména.onmicrosoft.com**. V tomhle příkladu je **vaše_doména** název domény, který jste si zvolili při registraci, a **onmicrosoft.com** je přípona přiřazená účtům přidaným do vašeho předplatného. Pokud má vaše organizace vlastní doménu, můžete instanci Intune nakonfigurovat tak, aby místo názvu domény poskytnutého s vaším předplatným používala tuto doménu.
 
-Než vytvoříte nové uživatelské účty nebo synchronizujete účty z místní služby Active Directory, důrazně doporučujeme, abyste se rozhodli, jestli chcete používat jenom doménu .onmicrosoft.com, nebo jestli chcete přidat jeden nebo víc názvů vlastních domén. Konfigurace vlastní domény před přidáním uživatelů může zjednodušit správu identit uživatelů ve vašem předplatném, protože se uživatelé budou moct přihlašovat pomocí přihlašovacích údajů, které používají pro přístup k jiným prostředkům domény.
+Než vytvoříte uživatelské účty nebo synchronizujete místní službu Active Directory, důrazně doporučujeme, abyste se rozhodli, jestli chcete používat jenom doménu .onmicrosoft.com, nebo jestli chcete přidat jeden nebo více názvů vlastních domén. Konfigurace vlastní domény před přidáním uživatelů může zjednodušit správu identit uživatelů ve vašem předplatném, protože se uživatelé budou moct přihlašovat pomocí přihlašovacích údajů, které používají pro přístup k jiným prostředkům domény.
 
-Když se přihlásíte k odběru cloudové služby od Microsoftu, stane se instance této služby [tenantem služby Microsoft Azure AD](http://technet.microsoft.com/library/jj573650.aspx#BKMK_WhatIsAnAzureADTenant), která bude vašim cloudovým službám poskytovat identitu a adresářové služby. Vzhledem k tomu, že postup konfigurace Intune pro používání vlastního názvu domény vaší organizace je stejný jako u jiných tenantů Azure AD, můžete použít informace a postupy uvedené v tématu [Přidání domény](https://azure.microsoft.com/documentation/articles/active-directory-add-domain/).
+Když se přihlásíte k odběru cloudové služby od Microsoftu, stane se instance této služby [tenantem služby Microsoft Azure AD](http://technet.microsoft.com/library/jj573650.aspx#BKMK_WhatIsAnAzureADTenant), která bude vašim cloudovým službám poskytovat identitu a adresářové služby. Vzhledem k tomu, že postup konfigurace Intune pro používání vlastního názvu domény vaší organizace je stejný jako u jiných tenantů Azure AD, můžete použít informace a postupy uvedené v tématu [Přidání domény](https://azure.microsoft.com/documentation/articles/active-directory-add-domain/).
 
 > [!TIP]
 > Další informace o používání vlastní domény s cloudovou službou od Microsoftu najdete v tématu věnovaném [koncepčnímu přehled vlastních názvů domén v Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-add-domain-concepts/).
 
-### Další kroky
+Tento počáteční název domény nelze přejmenovat ani odebrat. Můžete však přidat, ověřit nebo odebrat své vlastní názvy domén, které chcete používat s Intune, což je užitečné, pokud chcete zachovat svou obchodní identitu.
+
+## <a name="to-add-and-verify-your-custom-domain"></a>Přidání a ověření vlastní domény
+
+1. Přejděte na [portál pro správu Office 365](https://portal.office.com/Admin/Default.aspx) a přihlaste se k účtu správce.
+
+2. V navigačním podokně zvolte **Nastavení** &gt; **Domény**.
+
+3. Zvolte **Přidat doménu** a zadejte vlastní název domény.
+
+4. Otevře se dialogové okno **Ověřit doménu** s hodnotami pro vytvoření záznamu TXT u poskytovatele hostingu DNS.
+    - **Uživatelé GoDaddy:** Portál pro správu Office 365 vás přesměruje na přihlašovací stránku služby GoDaddy. Po zadání přihlašovacích údajů a přijetí smlouvy o oprávnění ke změně domény se záznam TXT vytvoří automaticky. Případně můžete [záznam TXT vytvořit](https://support.office.com/en-us/article/Create-DNS-records-at-GoDaddy-for-Office-365-f40a9185-b6d5-4a80-bb31-aa3bb0cab48a?ui=en-US&rs=en-US&ad=US).
+    - **Uživatelé Register.com:** Postupujte podle [podrobných pokynů](https://support.office.com/en-us/article/Create-DNS-records-at-Register-com-for-Office-365-55bd8c38-3316-48ae-a368-4959b2c1684e?ui=en-US&rs=en-US&ad=US#BKMK_verify) k vytvoření záznamu TXT.
+
+    > [!TIP]
+    > Při provádění změn v rámci poskytovatele hostingu DNS ověřte, že jste vytvořili alias DNS (CNAME) pro [registraci zařízení s Windows](/Intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune).
+
+Postup pro přidání a ověření vlastní domény může být případně [proveden v Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-add-domain/).
+
+V případě hybridního cloudu můžete po přidání vlastního názvu domény a ověření, že vaše organizace je jeho vlastníkem, pokračovat ve správě uživatelských účtů v místním Active Directory a pak je synchronizovat s Azure AD.
+
+## <a name="to-synchronize-on-premises-users-with-azure-ad"></a>Synchronizace místních uživatelů s Azure AD##
+
+1. [Přidejte příponu UPN](https://technet.microsoft.com/en-us/library/cc772007.aspx) pro vaši vlastní doménu v místním Active Directory.
+2. Nastavte novou příponu UPN pro místní uživatele, které chcete importovat.
+3. Spusťte [synchronizaci Azure AD Connect](https://azure.microsoft.com/en-us/documentation/articles/active-directory-aadconnect/) a proveďte integraci místních uživatelů s Azure AD.
+4. Po úspěšné synchronizaci informací o uživatelských účtech můžete prostřednictvím [portálu pro správu Office 365](https://portal.office.com/Admin/Default.aspx) přiřadit licence Microsoft Intune.
+
+### <a name="see-also"></a>Související témata
+
+[Informace o vaší počáteční doméně onmicrosoft.com v Office 365](https://support.office.com/en-us/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A?ui=en-US&rs=en-US&ad=US)
+
+[Co potřebujete vědět, než začnete používat Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
+### <a name="next-steps"></a>Další kroky
 Gratulujeme! Právě jste dokončili krok 2 *úvodní příručky Intune*.
 
 >[!div class="step-by-step"]
@@ -41,6 +74,6 @@ Gratulujeme! Právě jste dokončili krok 2 *úvodní příručky Intune*.
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO4-->
 
 

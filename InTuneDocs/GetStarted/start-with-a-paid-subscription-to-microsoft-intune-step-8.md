@@ -1,11 +1,11 @@
 ---
-title: "Registrace mobilních zařízení a instalace aplikace | Microsoft Intune"
-description: "Registrace mobilních zařízení a instalace aplikace do zařízení zaregistrovaného v Intune"
+title: "Nastavení registrace zařízení | Microsoft Intune"
+description: "Nastavte autoritu MDM a povolte registraci pro zařízení s iOS, Windows, Androidem a MacOS."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 11/22/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,49 +14,50 @@ ms.assetid: 5d3215e7-0a5c-44bd-afb0-aeafce98c43f
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0d422b421c3716ad576c4fc565b181dec28c947e
-ms.openlocfilehash: ec478ad05b72a358dbce4f08a6b1a1f106a28303
+ms.sourcegitcommit: 149f3a3310907d131affeaad4bd372aa60be9206
+ms.openlocfilehash: ca6e016927da1de6604b0c6a2924702ec90c9fab
 
 
 ---
 
-# Registrace mobilních zařízení a instalace aplikace
-Abyste v Intune nastavili správu mobilních zařízení, musíte nejdřív nastavit autoritu pro správu mobilního zařízení, povolit správu pro platformu zařízení a zaregistrovat svoje zařízení v aplikaci Portál společnosti. Pak můžete nasadit aplikaci Microsoft Skype, kterou jste publikovali v kroku 6.
+# <a name="enroll-mobile-devices-and-install-an-app"></a>Registrace mobilních zařízení a instalace aplikace
+Pokud chcete nastavit správu mobilních zařízení v Intune, je potřeba nejdříve nastavit *autoritu správy mobilních zařízení*, která identifikuje službu schopnou správy zařízení spojených s vaším účtem. V těchto pokynech se předpokládá, že budete místo System Center Configuration Manageru používat službu Intune. Po nastavení autority MDM můžete povolit správu platforem zařízení a zaregistrovat svá zařízení v aplikaci Portál společnosti.
 
-## Povolení správy zařízení a jejich registrace
+## <a name="enable-device-enrollment"></a>Povolení registrace zařízení
 
-1.  **Nastavení Intune jako autority pro správu mobilního zařízení** V [konzole pro správu Intune](https://manage.microsoft.com/) zvolte **Správa** > **Správa mobilních zařízení** a pod **Úkoly** zvolte **Nastavit autoritu MDM**.  V dialogovém okně Autorita MDM vyberte **Ano**.
+1. **Nastavení Intune jako autority pro správu mobilního zařízení**
+    V [konzole pro správu Intune](https://manage.microsoft.com/) zvolte **Správa** > **Správa mobilních zařízení** a v části **Úkoly** zvolte **Nastavit autoritu MDM**.  
+
+2. V dialogovém okně Autorita MDM vyberte **Ano**.
+
     ![Konzola správce Nastavení MDM na Intune](./media/mdmAuthority.png)
 
-2.  **Povolení MDM pro platformu zařízení** Povolte správu mobilních zařízení pro platformu zařízení, kterou chcete spravovat. V závislosti na platformě je potřeba splnit různé požadavky:
+## <a name="choose-how-to-enroll-devices"></a>Výběr způsobu registrace zařízení
 
-    -   **iOS a Mac OS X:** Další informace najdete v tématu [Nastavení správy pro iOS a Mac pomocí Microsoft Intune](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune).
+Intune může spravovat zařízení různými způsoby podle požadavků vaší společnosti. Mezi pár dostupných příkladů registrace patří princip Uživatelé s vlastním zařízením (BYOD), zařízení vlastněná společností, dále princip Zvolte si své zařízení (CYOD) a zařízení s beznabídkovým režimem.
 
-    -   **Windows Phone:** Další informace najdete v tématu [Nastavení správy pro zařízení Windows Phone v Microsoft Intune](/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune).
+Podle následujícího postupu [si zvolte způsob registrace zařízení](choose-how-to-enroll-devices1.md).
 
-    -   **Android:** Mobilní zařízení s Androidem umožňují uživatelům registraci pomocí aplikace Portál společnosti dostupné na webu [Google Play](https://play.google.com/store/apps/details?id=com.skype.raider). Žádná další konfigurace v Intune se nevyžaduje.
+## <a name="enable-mdm-for-your-device-platform"></a>Povolení MDM pro platformu zařízení
+Pro zařízení s iOS, MacOS a Androidem for Work musí být povolena registrace k vytvoření vztahu mezi poskytovatelem platformy a tenantem Intune. Zařízení s Windows a Androidem nevyžadují žádné další kroky, ale pro zařízení s Windows můžete uživatelům zjednodušit registraci tak, že vytvoříte speciální položku registru DNS.
 
-3.  **Registrovat zařízení**:
+Povolte registraci zařízení pro platformu zařízení, kterou chcete spravovat. V závislosti na platformě je potřeba splnit různé požadavky:
 
-    -   **Android** – Nainstalujte si aplikaci **Portál společnosti Intune** od Microsoft Corporation dostupnou na [Google Play](http://go.microsoft.com/fwlink/p/?LinkId=386612) a přihlaste se pomocí uživatelských přihlašovacích údajů Intune přidaných nahoře.
+-  [iOS a macOS](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune.md)
+-  [Počítač s Windows](https://docs.microsoft.com/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
+-  [Windows 10 Mobile a Windows Phone](https://docs.microsoft.com/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
+- [Android for Work](https://docs.microsoft.com/intune/deploy-use/set-up-android-for-work)
 
-    -   **iOS a Mac OS X** – Nainstalujte si aplikaci **Portál společnosti Microsoft Intune** od společnosti Microsoft Corporation, která je dostupná v App Storu, a pak použijte přihlašovací údaje uživatele Intune přidané v předchozím kroku. Abyste přidali svoje zařízení, zobrazte **Registrovaná zařízení** .
+Po povolení registrace si uživatelé můžou stáhnout aplikaci Portál společnosti do svého zařízení a dokončit proces registrace zařízení.
 
-    -   **Windows Phone 8.1** – Uživatelé si instalují aplikaci **Portál společnosti** od Microsoft Corporation dostupnou na Windows Phone Storu a přihlašují se pomocí uživatelských přihlašovacích údajů Intune přidaných nahoře.  Abyste přidali svoje zařízení, zobrazte **Registrovaná zařízení** .
+### <a name="enable-company-owned-device-enrollment"></a>Povolení registrace zařízení vlastněných společností
+Můžete také povolit řadu scénářů [registrace zařízení vlastněných společností](https://docs.microsoft.com/intune/deploy-use/manage-corporate-owned-devices) včetně následujících:
+- [Apple Device Enrollment Program](https://docs.microsoft.com/intune/deploy-use/ios-device-enrollment-program-in-microsoft-intune)
+- [Registrace Průvodce nastavení s Apple Configuratorem](https://docs.microsoft.com/intune/deploy-use/ios-setup-assistant-enrollment-in-microsoft-intune)
+- [Registrace Průvodce nastavení s Apple Configuratorem](https://docs.microsoft.com/intune/deploy-use/ios-direct-enrollment-in-microsoft-intune)
+- [Správce registrace zařízení](https://docs.microsoft.com/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune)
 
-    -   **Windows Phone 8.0 ** – Uživatelé vyberou **Nastavení systému** &gt; **Firemní aplikace** a přihlásí se pomocí uživatelských přihlašovacích údajů Intune přidaných výše. Aplikace Portál společnosti se nasadí na váš telefon.
-
-    Pokud se vám zobrazí výzva, abyste zadali **adresu serveru**, zadejte manage.microsoft.com.
-
-## Instalace aplikace na registrované zařízení
-V [kroku 6](start-with-a-paid-subscription-to-microsoft-intune-step-6.md) této úvodní příručky jste publikovali aplikaci Skype do vlastní uživatelské skupiny Intune. Teď nainstalujete aplikaci na nově registrovaná zařízení.
-
-Na registrovaném mobilním zařízení otevřete Portál společnosti, zvolte **Aplikace** a pak nainstalujte **Microsoft Skype**.
-
-Další informace o správě mobilních zařízení pomocí [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] najdete v tématu [Předpoklady pro registraci zařízení do Microsoft Intune](/intune/deploy-use/prerequisites-for-enrollment).
-
-
-### Další kroky
+### <a name="next-steps"></a>Další kroky
 Gratulujeme! Právě jste dokončili poslední krok *úvodní příručky Intune* Teď, když je počáteční konfigurace dokončená, můžete zvážit povolení dalších funkcí MDM.
 
 >[!div class="step-by-step"]
@@ -65,6 +66,6 @@ Gratulujeme! Právě jste dokončili poslední krok *úvodní příručky Intune
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO4-->
 
 
