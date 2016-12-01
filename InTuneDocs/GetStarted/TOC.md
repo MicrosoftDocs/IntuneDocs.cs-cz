@@ -17,7 +17,7 @@
 
 ## [Migrace na Intune](migrate-to-intune.md)
 
-## [Úvodní příručka služby Intune](start-with-a-paid-subscription-to-microsoft-intune.md)
+## [Úvodní příručka](start-with-a-paid-subscription-to-microsoft-intune.md)
 ### [Přihlášení k Intune](start-with-a-paid-subscription-to-microsoft-intune-step-1.md)
 ### [Konfigurace vlastního názvu domény](start-with-a-paid-subscription-to-microsoft-intune-step-2.md)
 ### [Synchronizace AD a přidávání uživatelů](start-with-a-paid-subscription-to-microsoft-intune-step-3.md)
@@ -27,6 +27,13 @@
 ### [Přizpůsobení portálu společnosti](start-with-a-paid-subscription-to-microsoft-intune-step-7.md)
 ### [Registrace mobilních zařízení a instalace aplikace](start-with-a-paid-subscription-to-microsoft-intune-step-8.md)
 ### [Úlohy po konfiguraci](post-configuration-tasks.md)
+
+## [Úvodní příručky](prevent-company-data-leaks-from-Office-365-mobile-apps.md)
+### [Úvodní příručka: Prevence úniků firemních dat z mobilních aplikací Office 365](prevent-company-data-leaks-from-Office-365-mobile-apps.md)
+### [Úvodní příručka: Šifrování jako ochrana firemních dat](protect-data-encryption.md)
+### [Úvodní příručka: Publikování mobilních aplikací pro vaše uživatele](publish-mobile-apps-to-users.md)
+### [Úvodní příručka: Zjednodušení e-mailové konfigurace v mobilních zařízeních](simplify-email-configuration-on-mobile-devices.md)
+### [Úvodní příručka: Ochrana počítačů s Windows proti malwarovým hrozbám](protect-pcs-against-malware-threats.md)
 
 ## [Fáze uvedení pro nasazení Intune](rollout-phases-for-microsoft-intune-deployment.md)
 ### [Stanovení rozsahu projektu](project-scope.md)
@@ -42,6 +49,6 @@
 # [Řešení problémů](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

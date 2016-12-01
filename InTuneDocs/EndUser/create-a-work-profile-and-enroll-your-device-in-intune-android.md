@@ -2,7 +2,8 @@
 title: "Vytvoření pracovního profilu a registrace zařízení v Intune | Microsoft Intune"
 description: "Popisuje šifrování zařízení s Androidem."
 keywords: 
-author: staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article
@@ -13,16 +14,16 @@ ms.assetid: 33ffff16-0280-43bf-87b3-74ddf4439bfa
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 29eb7c7fb17eb640eefb0cb4a58834d5e3d77591
-ms.openlocfilehash: 528f2e3c2e4acbc45132d12e127dc9b7a4e3f49b
+ms.sourcegitcommit: 2a3ad9562d271ee67b49db28b0fc62caec9f3050
+ms.openlocfilehash: f3aa8f3169eebb19301d4bdc5624817f54a29aa0
 
 
 ---
 
 
-# Vytvoření pracovního profilu a registrace zařízení v Intune
+# <a name="create-a-work-profile-and-enroll-your-device-in-intune"></a>Vytvoření pracovního profilu a registrace zařízení v Intune
 
-Pracovní profil je prvek, jehož nastavením ve svém zařízení umožníte přístup k pracovním nebo školním e-mailům, aplikacím a souborům. Přečtěte si další informace o tom, [co se stane při vytvoření pracovního profilu](what-happens-when-you-create-a-work-profile-android.md).
+Registrací zařízení s Androidem získáte přístup k e-mailu, aplikacím a jiným pracovním datům společnosti. Součástí registrace je nastavení pracovního profilu, který v zařízení oddělí osobní a pracovní data. Správce IT může spravovat jen pracovní profil, který obsahuje vaše pracovní data. Správce IT nemůže v zařízení spravovat vaše osobní data. Přečtěte si o tom, [co se stane, když si vytvoříte pracovní profil](what-happens-when-you-create-a-work-profile-android.md).
 
 Pracovní profil vytvoříte takto:
 
@@ -56,11 +57,11 @@ Pracovní profil vytvoříte takto:
 
     Uvidíte několik zpráv s oznámením o „nastavování pracovního profilu“ a „registraci vašeho zařízení“.
 
-8. Na obrazovce **Už jste urazili polovinu cesty** klepněte na ikonu aplikace Portál společnosti, na které je odznáček.
+8. Na obrazovce **Už jste urazili polovinu cesty** počkejte pár vteřin, až se otevře aplikace Portál společnosti.
 
     ![Klepnutí na aplikaci Portál společnosti s odznáčkem](./media/andr-afw-tap-work-badged-company-portal-icon2.png)
 
-9. Na **úvodní** obrazovce aplikace Portál společnosti pro Android klepněte na **Přihlásit se** a pak se přihlaste pomocí svého pracovního nebo školního účtu.
+9. Na **úvodní** obrazovce aplikace Portál společnosti pro Android klepněte na **Přihlásit se** a přihlaste se pod stejným pracovním nebo školním účtem, jaký jste použili v předchozí části tohoto postupu.
 
 10. Na obrazovce **Nastavení firemního přístupu** si můžete všimnout, že nastavení pracovního profiluje je hotové. Klepněte na **POKRAČOVAT**.
 
@@ -72,11 +73,11 @@ Pracovní profil vytvoříte takto:
 
     ![Obrazovka Nastavení firemního přístupu znázorňující, že pracovní profil a registrace jsou hotové](./media/andr-afw-company-access-setup-green-checks.png)
 
-12. Na obrazovce **Nastavení firemního přístupu je hotové** klepněte na **HOTOVO**.
+12. Na obrazovce **Nastavení firemního přístupu je hotové** klepněte na **HOTOVO**. Pokud správce IT přidal další požadavky, bude potřeba dokončit další kroky.
 
     ![Nastavení firemního přístupu je hotové](./media/andr-afw-company-access-setup-complete.png)
 
-    Následně přejdete do obchodu Google Play for Work, kde si teď můžete opatřit firemní aplikace.
+    Teď můžete získávat firemní aplikace z obchodu Play for Work.
 
     ![Stránka obchodu Google Play for Work s aplikacemi](./media/andr-afw-tap-work-play-store-icon.png)
 

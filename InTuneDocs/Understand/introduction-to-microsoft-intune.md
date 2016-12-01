@@ -16,13 +16,13 @@ ms.assetid: 3b4e778d-ac13-4c23-974f-5122f74626bc
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3318201cd77ec16f72e65275eda0e65c0dd9e05c
-ms.openlocfilehash: 256a1e7873a6603226843d2936e44c09424b8050
+ms.sourcegitcommit: b3b46c1025ad0792ed4623656c878c53bd69d6cb
+ms.openlocfilehash: f2f5d901ae3b6ffb298b56eef4ae593842b80cfb
 
 
 ---
 
-# Úvod do služby Intune
+# <a name="introduction-to-intune"></a>Úvod do služby Intune
 Microsoft Intune má v sadě Microsoft Enterprise Mobility + Security (EMS, dříve Enterprise Mobility Suite) na starosti správu. Podniková mobilita se točí kolem toho, jak zaměstnancům zajistit produktivitu na všech zařízeních a zajistit přitom ochranu firemních informací.  
 
 EMS je kompletní integrovaná sada nástrojů pro podnikovou mobilitu, která se zaměřuje na produktivitu, identity, řízení přístupu, správu a ochranu dat. Nabízí efektivní způsob, jak nasadit a provozovat řešení mobility ve vaší organizaci.  
@@ -49,13 +49,13 @@ Tyto nástroje se používají v různých kombinacích, které umožňují vý�
 
 V této dokumentaci vám objasníme, jak používat nástroje, které Intune poskytuje pro podporu obchodních scénářů.  Dále vysvětlíme, jak tyto nástroje používat s Office 365, Azure AD, Azure RMS a dalšími částmi sady Microsoft Mobility Suite. Získáte tak komplexní přehled o způsobech, kterými se tato technologie běžně používá, a o tom, jak mohou být pro vaše prostředí užitečné. Seznámíte se také s postupy pro jejich implementaci. Tato technologie je sama o sobě flexibilní a dokáže se přizpůsobit nejrůznějším scénářům (i nad rámec těch, kterou jsou zde popsané).
 
-### Další kroky
+### <a name="next-steps"></a>Další kroky
 * Přečtěte si o některých [běžných způsobech použití Intune](common-ways-to-use-intune.md).
 * Seznamte se s tímto produktem [prostřednictvím 30denní zkušební verze Intune](get-started-with-a-30-day-trial-of-microsoft-intune.md).
 * Podrobně se seznamte s [technickými požadavky a možnostmi](/intune/get-started/what-to-know-before-you-start-microsoft-intune) služby Intune.
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

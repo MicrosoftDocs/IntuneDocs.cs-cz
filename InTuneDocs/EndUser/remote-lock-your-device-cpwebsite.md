@@ -2,8 +2,8 @@
 title: "Vzdálené uzamčení zařízení z webu Portál společnosti | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 08f31db90f324ef5f93076c4e13bfa5328a15adc
-ms.openlocfilehash: b53e57b28cbf2de2e7820ffd38fc94ef05b994b6
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 31b3f4c556c27de7a1793bfe84a1d3eb12302424
 
 
 ---
 
 
-# Vzdálené uzamčení zařízení z webu Portál společnosti
+# <a name="remotely-lock-a-device-from-the-company-portal-website"></a>Vzdálené uzamčení zařízení z webu Portál společnosti
 
 Pokud došlo ke ztrátě nebo odcizení vašeho zařízení, můžete zařízení uzamknout s použitím možnosti Vzdálené uzamčení na [webu Portál společnosti](http://portal.manage.microsoft.com). Vzdálené uzamčení funguje u následujících typů zařízení:
 
@@ -59,11 +59,11 @@ Postup použití vzdáleného uzamčení k uzamčení zařízení:
 
     Pokud další pokus nefunguje, kontaktujte správce IT. Pokud najdete své zařízení a chcete ho odemknout po použití vzdáleného uzamčení, stačí zadat heslo.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

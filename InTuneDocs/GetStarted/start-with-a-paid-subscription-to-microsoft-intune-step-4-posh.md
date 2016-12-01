@@ -1,11 +1,11 @@
 ---
 title: "Správa licencí Intune pomocí PowerShellu | Microsoft Intune"
-description: "Správa licencí Intune pomocí PowerShellu"
+description: "Ke správě licencí Intune můžete použít PowerShell."
 keywords: 
-author: barlanmsft
-ms.author: barlan
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 11/22/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: d2d31c80-c32c-4315-8271-1b0cf9a1f78a
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8f99159079002b9e44dd1ba328b0f2fc079770d8
-ms.openlocfilehash: 9a3e28cad00f99035b18182a33c24bcb714cca19
+ms.sourcegitcommit: 29b6e5a3d319c741482fcc2b600842e2e42b96e2
+ms.openlocfilehash: 8f0786bc821c4a93e5f1ff4bf3d693dd6d59ca8e
 
 
 ---
 
-# Správa licencí Intune pomocí PowerShellu
+# <a name="manage-intune-licenses-using-powershell"></a>Správa licencí Intune pomocí PowerShellu
 Než se bude moct uživatel přihlásit ke službě Intune a používat ji nebo registrovat své zařízení ke správě, musíte mu nejdřív přiřadit licenci k vašemu předplatnému této služby, jak je popsáno v části [Správa licencí Intune](start-with-a-paid-subscription-to-microsoft-intune-step-4.md). Organizace, které používají Microsoft Enterprise Mobility + Security, však můžou mít uživatele, kteří v balíčku EMS vyžadují jenom služby Azure Active Directory Premium nebo Intune. Pomocí [rutin PowerShellu pro Azure Active Directory](https://msdn.microsoft.com/library/jj151815.aspx) můžete přiřadit jednu službu nebo podmnožinu služeb.
 
 Pokud chcete selektivně přiřadit uživatelské licence pro služby EMS, otevřete PowerShell jako správce v počítači, kde je instalovaný [modul Azure Active Directory pro Windows PowerShell](https://msdn.microsoft.com/library/jj151815.aspx#bkmk_installmodule). PowerShell můžete nainstalovat na místní počítač nebo na server služby AD FS.
@@ -60,7 +60,7 @@ Ověřte pomocí:
 
 ![PoSH-AddLic-Verify](./media/posh-addlic-verify.png)
 
-### Další kroky
+### <a name="next-steps"></a>Další kroky
 Gratulujeme! Právě jste dokončili krok 4 *úvodní příručky Intune*.
 >[!div class="step-by-step"]
 
@@ -68,6 +68,6 @@ Gratulujeme! Právě jste dokončili krok 4 *úvodní příručky Intune*.
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

@@ -3,8 +3,9 @@ title: "Zavedení zásad | Microsoft Intune"
 description: "Doporučení pro postupné zavádění zásad v Microsoft Intune"
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: 390d5adf-86d2-4e23-ba93-1e61e6b1028b
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2a192c71b1b82f59b34ea614d09d895174f8112b
-ms.openlocfilehash: 0c23fdd5f5e6bc1b50dda56fe2135e8cc24b5e26
+ms.sourcegitcommit: 8921043334630bbd2955c0423ca9cd1b76c27758
+ms.openlocfilehash: 0a363ed242f5968f3fb84b558cfa134e243a22ff
 
 
 ---
@@ -27,7 +28,7 @@ Obecné informace o fázích zavedení najdete v tématu [Fáze zavedení pro na
 ### Fáze zavedení zásad
 Fáze zavedení zásad jsou tyto:
 
--   Stanovení oboru projektu
+-   Stanovení rozsahu projektu
 
 -   Ověření konceptu
 
@@ -37,7 +38,7 @@ Fáze zavedení zásad jsou tyto:
 
 -   Provoz a údržba
 
-## Stanovení oboru projektu
+## Stanovení rozsahu projektu
 Definujte rozsah nasazení zásad Intune:
 
 -   U nové implementace bude nutné definovat všechny požadované způsoby chování jednotlivých zařízení a požadavky na zabezpečení, které chcete pomocí sady zásad vytvořit.
@@ -90,13 +91,13 @@ V průběhu pilotní fáze nasadíte zásady pro malou skupinu testovacích uži
 **Helpdesk:** Zajistěte, aby pracovníci helpdesku věděli o všech změnách zásad, které ovlivní uživatelské prostředí, protože by mohly způsobit vznik požadavků na podporu.
 
 
-### Související témata
+### Viz taky
 [Příprava před konfigurací zásad správy mobilních aplikací pomocí Microsoft Intune](/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune)
 
 [Řešení potíží se zásadami v Microsoft Intune](/intune/troubleshoot/troubleshoot-policies-in-microsoft-intune)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO4-->
 
 

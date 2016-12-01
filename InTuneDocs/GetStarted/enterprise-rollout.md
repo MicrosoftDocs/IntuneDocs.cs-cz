@@ -3,8 +3,9 @@ title: "Podnikové zavedení | Microsoft Intune"
 description: "Doporučení pro fázi zavedení nasazení Intune"
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 10/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: d894708e-7071-44f5-aa3b-af5aef02fb98
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0fff944e180bda99d70caafebe4ae69b6bd05b1b
-ms.openlocfilehash: aae62850d35aab6908cae2841988822911989a40
+ms.sourcegitcommit: 8921043334630bbd2955c0423ca9cd1b76c27758
+ms.openlocfilehash: c7594bbb7edb236193618bea027ac426e5b9169d
 
 
 ---
@@ -61,7 +62,7 @@ Informujte, zapojte a inspirujte svoje uživatele. Určitě se vám to vyplatí 
 ### Školení
 Dosažení sebejistoty uživatelů je jednou z klíčových věcí z hlediska dlouhodobého využívání a míry přijetí ze strany uživatelů. Školení uživatelů může mít celou řadu forem, od kurzů vedených lektorem až po samoobslužné zdroje informací. Při vytváření studijních materiálů pro uživatele nezapomeňte zužitkovat zpětnou vazbu od účastníků pilotního nasazení. Školení uživatelů zkracuje dobu nutnou k dosažení požadované úrovně znalostí uživatelů a minimalizuje počet volání helpdesku. Důležitou součástí vašeho školicího programu je pomoct uživatelům vytvořit si místo starých návyků návyky nové. Nezapomeňte si školení přizpůsobit rolím a úlohám, které máte nasazené.
 
-### Provoz
+### Operace
 Nezapomeňte klíčové lekce zdokumentovat, včetně toho, co šlo během fáze podnikového zavedení dobře a kde byl naopak prostor pro zlepšení. Tyto údaje využijte k naplánování dlouhodobě úspěšného provozu.
 
 ## Kontrolní seznam pro začátek
@@ -110,6 +111,6 @@ Tady jsou některé běžné problémy, na které můžete ve fázi **podnikové
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO4-->
 
 

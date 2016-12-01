@@ -2,7 +2,8 @@
 title: "Správa počítačů s klientským softwarem | Microsoft Intune"
 description: "Spravujte počítače s Windows pomocí instalace klientského softwaru Intune."
 keywords: 
-author: nathbarn
+author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/30/2016
 ms.topic: article
@@ -13,13 +14,13 @@ ms.assetid: 3b8d22fe-c318-4796-b760-44f1ccf34312
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4cc8b7e34e8809eebd7fdec8ffac0599c96d309
-ms.openlocfilehash: ce27fc737fdf47903d7554eb15f24f07b3524406
+ms.sourcegitcommit: f4e9f558b6a55834328c97701fe425a15c807cb1
+ms.openlocfilehash: fb862178e0791936243ebb21c6b70ea808d07d16
 
 
 ---
 
-# Správa počítačů s Windows pomocí klientského počítačového softwaru Intune
+# <a name="manage-windows-pcs-with-intune-pc-client-software"></a>Správa počítačů s Windows pomocí klientského počítačového softwaru Intune
 Namísto [registrace počítačů s Windows jako mobilních zařízení](set-up-windows-device-management-with-microsoft-intune.md) můžete počítače s Windows registrovat a spravovat pomocí instalace klientského softwaru Intune.
 
 Intune spravuje počítače s Windows pomocí zásad podobně jako objekty zásad skupiny (GPO) služby AD DS (Active Directory Domain Services) Windows Serveru. Pokud budete počítače připojené k doméně Active Directory spravovat pomocí Intune, měli byste [ověřit, že zásady Intune nejsou v konfliktu se žádnými objekty zásad skupiny](resolve-gpo-and-microsoft-intune-policy-conflicts.md), které jsou nastavené pro vaši organizaci.
@@ -29,7 +30,7 @@ I když softwarový klient Intune podporuje [zásady, které pomáhají chránit
 > [!NOTE]
 > Zařízení se systémem Windows 8.1 nebo novějším lze spravovat buď pomocí klienta Intune, nebo jako mobilní zařízení. Toto téma se vztahuje na počítače se softwarovým klientem Intune. Instalace klienta Intune současně s registrací ke správě mobilních zařízení není podporována.
 
-## Požadavky na správu počítačového klienta Intune
+## <a name="requirements-for-intune-pc-client-management"></a>Požadavky na správu počítačového klienta Intune
 
 **Hardware**: Toto jsou minimální požadavky na hardware pro instalaci klienta Intune:
 
@@ -46,9 +47,9 @@ I když softwarový klient Intune podporuje [zásady, které pomáhají chránit
 |Operační systém | Zařízení s Windows se systémem Windows Vista nebo novějším. Verze Home Edition nejsou podporovány.|
 |Oprávnění správce|Účet, který instaluje klientský software, musí mít oprávnění místního správce pro toto zařízení.|
 |Instalační služba systému Windows verze 3.1|Na počítači musí být Instalační služba systému Windows minimálně verze 3.1.<br /><br />Pokud chcete zobrazit verzi Instalační služby systému Windows na počítači:<br /><br />-   Na počítači klikněte pravým tlačítkem na **%windir%\System32\msiexec.exe** a potom klikněte na **Vlastnosti**.<br /><br />Nejnovější verzi Instalační služby systému Windows můžete stáhnout ze stránky [Windows Installer Redistributables](http://go.microsoft.com/fwlink/?LinkID=234258) na webu Microsoft Developer Network.|
-|Odebrání nekompatibilního klientského softwaru|Před instalací klientského softwaru Intune musíte z daného počítače odinstalovat veškerý klientský software Configuration Manageru a System Management Serveru.|
+|Odebrání nekompatibilního klientského softwaru|Před instalací klientského softwaru Intune odinstalujte z počítače tento klientský software: Configuration Manager, Operations Manager, Operations Management Suite a Service Manager.|
 
-## Správa počítačů pomocí počítačového klienta Intune
+## <a name="computer-management-with-the-intune-computer-client"></a>Správa počítačů pomocí počítačového klienta Intune
 Po dokončení instalace klientského softwaru Intune budou funkce správy zahrnovat [správu aplikací](deploy-apps-in-microsoft-intune.md), [monitorování v reálném čase a Endpoint Protection](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md), [správu nastavení brány Windows Firewall](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md), inventář softwaru a hardwaru, vzdálené řízení (prostřednictvím žádostí o vzdálenou pomoc), [nastavení aktualizací softwaru](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md) a vytváření sestav nastavení dodržování předpisů.
 
 Některé možnosti správy dostupné pro počítače spravované jako mobilní zařízení nejsou k dispozici pro počítače spravované softwarovým klientem, například:
@@ -75,6 +76,6 @@ Klientský agent Intune obvykle běží tiše na pozadí a nevyžaduje skoro ž�
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

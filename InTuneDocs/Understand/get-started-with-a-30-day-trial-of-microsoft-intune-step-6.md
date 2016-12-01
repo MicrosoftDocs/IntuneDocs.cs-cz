@@ -3,6 +3,7 @@ title: "Další možnosti a funkce pro zkušební verze Intune | Microsoft Intun
 description: "Popisuje výstrahy, oznámení a sestavy, a také obecné možnosti Intune, o kterých potřebujete vědět při registraci bezplatné 30denní zkušební verze Intune."
 keywords: 
 author: lindavr
+ms.author: lindavr
 manager: angrobe
 ms.date: 08/09/2016
 ms.topic: get-started-article
@@ -13,15 +14,15 @@ ms.assetid: 170cd959-d35b-4129-ae60-117d7e881bc9
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 51fba2b01d8978bc062c50c4388714609be0fdf0
-ms.openlocfilehash: ae624aed9ea09467c212e0bf16fef72bfef1956d
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: ede6429d334608a326c6c2eed311df37ab9e344b
 
 
 ---
 
-# Další možnosti a funkce pro zkušební předplatná Intune
+# <a name="other-options-and-extras-for-intune-evaluation-subscriptions"></a>Další možnosti a funkce pro zkušební předplatná Intune
 
-## Výstrahy, oznámení a sestavy
+## <a name="alerts-notifications-and-reports"></a>Výstrahy, oznámení a sestavy
 V konzole pro správu Intune se **výstrahy** používají k rychlému posouzení celkového stavu spravovaných zařízení ve vaší organizaci. Výstrahy můžete nakonfigurovat a přizpůsobit tak, aby oznamovaly a zobrazovaly jen informace, které potřebujete pro svoji organizaci. Můžete nastavit, jestli chcete výstrahu povolit nebo zakázat, nakonfigurovat závažnost, určit podle prahové hodnoty zobrazení, jak často se musí událost výstrahy aktivovat před zobrazením výstrahy, a taky nakonfigurovat nastavení, která jsou specifická pro určité typy výstrah.
 
 **Oznámení** jsou e-maily sloužící k informování správců (a ostatních uživatelů) při aktivaci určitých typů výstrahy.
@@ -30,7 +31,7 @@ V konzole pro správu Intune se **výstrahy** používají k rychlému posouzen�
 
 Další informace o výstrahách, oznámeních a sestavách najdete v tématu [Monitorování a sestavy v Microsoft Intune](/Intune/Deploy-Use/monitoring-and-reports-with-microsoft-intune).
 
-## Možnosti Intune
+## <a name="intune-capabilities"></a>Možnosti Intune
 Kromě možností uvedených v tomto krátkém průvodci nastavením má Intune ještě celou řadu různých funkcí. Mezi ně třeba patří:
 
 -   **Řízení přístupu ke službě Exchange a Office 365.** Podrobnosti najdete v tématu [Správa přístupu aplikací k Exchangi Online](https://technet.microsoft.com/library/dn705841.aspx) a [Správa přístupu aplikací ke službám Office 365](https://technet.microsoft.com/library/dn818907.aspx).
@@ -49,7 +50,7 @@ Další informace o možnostech nedávno zavedených pro Intune najdete v témat
 
 Možnosti podpory jsou popsané v části [Jak získat podporu pro Microsoft Intune](/Intune/Troubleshoot/how-to-get-support-for-microsoft-intune) a kromě toho se můžete zapojit do diskusí o Intune na [fórech Microsoft Intune](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).
 
-### Další kroky
+### <a name="next-steps"></a>Další kroky
 Gratulujeme! Právě jste dokončili postup pro *testování Microsoft Intune*.
 
 >[!div class="step-by-step"]
@@ -58,6 +59,6 @@ Gratulujeme! Právě jste dokončili postup pro *testování Microsoft Intune*.
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

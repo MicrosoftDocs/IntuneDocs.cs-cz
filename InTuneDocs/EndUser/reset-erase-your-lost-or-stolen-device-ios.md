@@ -2,10 +2,10 @@
 title: "Resetování (vymazání) ztraceného nebo odcizeného zařízení s iOS | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,21 +15,21 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 705c70b034378113a29003891f465a0e88186c69
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 586eb09811bf52cecf93dd51d1de76b2287b80ea
 
 
 ---
 
 
-# Resetování (vymazání) ztraceného nebo odcizeného zařízení s iOS
+# <a name="reset-erase-your-lost-or-stolen-ios-device"></a>Resetování (vymazání) ztraceného nebo odcizeného zařízení s iOS
 
 Pokud se telefon zaregistrovaný v Intune ztratí nebo vám ho někdo ukradne, můžete v něm obnovit výchozí tovární nastavení pomocí aplikace Portál společnosti z jiného zařízení nebo na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 > [!WARNING]
 > Když v zařízení obnovíte výchozí tovární nastavení, odeberete z něho jak svoje osobní, tak i pracovní informace. Další informace o tom, co se stane, když zařízení resetujete, najdete v tématu [Co se stane, když resetuji svoje zařízení pomocí Portálu společnosti](what-happens-if-you-reset-your-device-using-the-company-portal-ios.md).
 
-## Postup resetování zařízení pomocí aplikace Portál společnosti
+## <a name="to-reset-your-device-using-the-company-portal-app"></a>Postup resetování zařízení pomocí aplikace Portál společnosti
 
 1.  Z jiného registrovaného zařízení otevřete aplikaci Portál společnosti a přihlaste se pomocí svého pracovního nebo školního účtu.
 
@@ -37,7 +37,7 @@ Pokud se telefon zaregistrovaný v Intune ztratí nebo vám ho někdo ukradne, m
 
 3.  Klepněte na **Resetovat** &gt; **Resetovat**.
 
-## Postup resetování zařízení pomocí webu Portál společnosti
+## <a name="to-reset-your-device-using-the-company-portal-website"></a>Postup resetování zařízení pomocí webu Portál společnosti
 
 Můžete použít následující kroky nebo přehrát toto video:
 
@@ -47,12 +47,10 @@ Můžete použít následující kroky nebo přehrát toto video:
 
 2.  Klepněte na **Resetovat** &gt; **Resetovat**.
 
-Pokud se vám ztracené nebo ukradené zařízení nedaří resetovat, požádejte IT správce, aby to udělal za vás. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud se vám ztracené nebo ukradené zařízení nedaří resetovat, požádejte IT správce, aby to udělal za vás. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

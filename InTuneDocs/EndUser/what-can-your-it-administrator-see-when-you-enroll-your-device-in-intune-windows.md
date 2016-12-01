@@ -2,7 +2,7 @@
 title: "Co správce IT uvidí při registraci zařízení v Intune? | Microsoft Intune"
 description: 
 keywords: 
-author: barlan
+author: barlanmsft
 ms.author: barlan
 manager: angrobe
 ms.date: 10/25/2016
@@ -15,18 +15,18 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f69d2b222e9409a79dae07fd77f29c46876f11cb
-ms.openlocfilehash: 38a8a92581a990c321c6c57bfaa5a506733eb1b4
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 4563673f1c38cbe29e7cf27e94e8b32411c6c089
 
 
 ---
 
 
-# Co správce IT uvidí při registraci zařízení v Intune?
+# <a name="what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune"></a>Co správce IT uvidí při registraci zařízení v Intune?
 
 Když svoje zařízení s Windows zaregistrujete do služby Intune, udělíte tím správci IT oprávnění ke správě vašeho zařízení za účelem ochrany firemních informací na tomto zařízení.
 
-**Co správci IT neuvidí**
+**Co správce IT nevidí**
 
 -   Webová historie a historie volání
 
@@ -42,7 +42,7 @@ Když svoje zařízení s Windows zaregistrujete do služby Intune, udělíte t�
 
 -   Z fotoaparátu
 
-**Co správci IT uvidí**
+**Co správce IT vidí**
 
 -   Model
 
@@ -62,6 +62,6 @@ Další informace najdete v tématu [Co se stane, když nainstaluji aplikaci Por
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

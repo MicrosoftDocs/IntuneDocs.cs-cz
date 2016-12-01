@@ -2,8 +2,8 @@
 title: Migrace na skupiny Azure Active Directory| Microsoft Intune
 description: "Jak budou vaše skupiny migrovány z Intune do Azure AD"
 keywords: 
-author: nbigman
-ms.author: nbigman
+author: Mtillman
+ms.author: mtillman
 manager: angerobe
 ms.date: 10/10/2016
 ms.topic: article
@@ -12,20 +12,20 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 03b69afa-3548-4033-9039-191528f3fd99
 translationtype: Human Translation
-ms.sourcegitcommit: d92c9ffe42b36770a32c28941de3c402aec9dd68
-ms.openlocfilehash: 08bcc258f64e6385ae6fa648ddb8f2b5fe68942e
+ms.sourcegitcommit: 17b957cc2baedddfc53bfdf7b875e4ecb28b8517
+ms.openlocfilehash: e14bbadc4293b7b963197b35704a7170e4fc29e8
 
 
 ---
 
-## Nový způsob správy skupin
+## <a name="the-new-admin-experience-for-groups"></a>Nový způsob správy skupin
     
 Na základě vašich žádostí o jednotnou správu skupin a cílení v oblastech Enterprise Mobility a Security převádíme skupiny Intune na skupiny zabezpečení založené na Azure Active Directory. Tím se sjednotí správa skupin v rámci Intune a Azure Active Directory (Azure AD). Toto nové prostředí vás zbaví nutnosti mít v jednotlivých službách duplicitní skupiny a zajistí možnosti rozšíření prostřednictvím PowerShellu a Graphu. 
 
-### Jak a kdy bude můj účet migrován do nového prostředí skupin?
-Současní zákazníci budou nejdříve od prosince 2016 postupně migrováni. Před migrací vašich skupin dostanete upozornění. Pokud máte k migraci jakékoli otázky, obraťte se na náš tým migrace na adrese [intunegrps@microsoft.com](mailto:intunegrps@microsoft.com).
+### <a name="how-and-when-will-i-migrate-to-the-new-groups-experience"></a>Jak a kdy bude můj účet migrován do nového prostředí skupin?
+Současní zákazníci budou nejdříve od prosince 2016 postupně migrováni. Před migrací vašich skupin dostanete upozornění. Pokud se chcete k migracím na něco zeptat, obraťte se na migrační tým na adrese [intunegrps@microsoft.com](mailto:intunegrps@microsoft.com).
 
-### Jaké nové funkce mi změna přinese?
+### <a name="what-new-features-will-be-available-to-me"></a>Jaké nové funkce mi změna přinese?
 Tady je přehled nových funkcí: 
  
 -    Skupiny zabezpečení služby Azure AD budou v Intune podporované pro všechny typy nasazení. 
@@ -35,22 +35,22 @@ Tady je přehled nových funkcí:
 - Do Azure AD bude přidána *role Správce služby Intune*, aby správci služby Intune mohli provádět úlohy správy skupin v Azure AD.
 
  
-### Které funkce Intune přestanou být dostupné?
+### <a name="what-intune-functionality-wont-be-available"></a>Které funkce Intune přestanou být dostupné?
 Ačkoli se prostředí správy skupin zlepší, po migraci přestanou být dostupné některé současné funkce Intune.
 
-#### Funkce správy skupin
+#### <a name="group-management-functionality"></a>Funkce správy skupin
 
 -   Při vytváření nové skupiny nebude možné vyloučit členy nebo skupiny. Funkce dynamických skupin Azure AD vám ale umožní použít atributy k vytvoření rozšířených pravidel vylučujících členy na základě kritérií. Můžete například vytvořit rozšířené pravidlo, které do jedné skupiny zahrne všechny členy vašeho prodejního oddělení, kromě těch, kteří mají v pracovním titulu slovo „Assistant“. Toto pravidlo by vypadalo takto: `(user.department -eq "Sales") -and -not (user.jobTitle -contains "Assistant")`. Další informace najdete v článku [Vytváření rozšířených pravidel pomocí atributů](https://azure.microsoft.com/en-us/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/).
 -   Nebudou podporované skupiny **Neseskupení uživatelé** a **Neseskupená zařízení**. Tyto skupiny nebudou migrovány.
 
-#### Funkce závislé na konkrétních skupinách
+#### <a name="group-dependent-functionality"></a>Funkce závislé na konkrétních skupinách
 
 -   Role Správce služby nebude mít oprávnění **Správa skupin**.
 -   Nebude možné vytvořit skupinu zařízení Exchange ActiveSync.  Vaše skupina **všech zařízení spravovaných pomocí EAS** bude ze skupiny převedena na zobrazení sestavy.
 -  Přesun skupin v sestavách nebude dostupný.
 -  Vlastní pravidla cílení oznámení na skupiny nebudou dostupná.
 
-### Jak se mám na tyto změny připravit?
+### <a name="what-should-i-do-to-prepare-for-this-change"></a>Jak se mám na tyto změny připravit?
  Máme několik doporučení, která vám tento přechod usnadní:
  
 - Před migrací odstraňte všechny nežádoucí nebo nepotřebné skupiny Intune.
@@ -65,10 +65,10 @@ Také můžete zjistit bližší informace o skupinách zabezpečení služby Az
 > [!NOTE]
 Můžete si všimnout, že dokumentace skupiny zabezpečení služby Azure AD se nezabývá vytvářením skupin pro zařízení. Tato funkce bude ve službě Azure AD aktivována ještě předtím, než začne migrace skupin Intune.
 
-## Informace o migraci
+## <a name="migration-details"></a>Informace o migraci
 Zde uvádíme podrobnější informace, jak budou skupiny Intune migrovány na skupiny zabezpečení služby Azure AD.
 
-### Migrace existujících skupin
+### <a name="migration-of-existing-groups"></a>Migrace existujících skupin
 
 | Skupina Intune se stává...|...skupinou zabezpečení služby Azure AD|
 |-----------------------------------------------------------------------|-------------------------------------------------------------|
@@ -80,10 +80,10 @@ Zde uvádíme podrobnější informace, jak budou skupiny Intune migrovány na s
 |Skupina s podmínkou vyloučení|...nebude migrována. Při vytváření statických skupin ve službě Azure AD nejsou podmínky vyloučení podporovány. Podmínku vyloučení je možné použít při vytváření dynamické skupiny ve službě Azure AD.|
 |Výchozí skupiny **Všichni uživatelé**, **Neseskupení uživatelé**, **Všechna zařízení**, **Neseskupená zařízení**, **Všechny počítače**, **Všechna mobilní zařízení**, **Všechna zařízení s MDM** a **Všechna zařízení s EAS**, které používáte v rámci zásad Intune  |Skupiny zabezpečení služby Azure AD. Výchozí skupiny, které nejsou používány, by měl zákazník vytvořit, pokud potřebuje používat dynamické skupiny.|
 
-### Změny v hierarchických zobrazeních
+### <a name="changes-in-hierarchical-views"></a>Změny v hierarchických zobrazeních
 Hierarchické zobrazení skupin v Intune, kde se nadřazené a podřízené skupiny řídily vztahem nadmnožina–podmnožina, se ve službě Azure AD nepoužívá. V podřízené skupině můžou být objekty, které se v nadřazené skupině nenacházejí. Skupiny ve službě Azure AD také mohou být cyklické povahy – nadřazená skupina může být podřízená své podřízené skupině.
 
-### Konverze atributů během migrace
+### <a name="attribute-conversion-during-migration"></a>Konverze atributů během migrace
 Atributy jsou vlastnosti zařízení, které se dají použít při definování skupin. Tato tabulka popisuje, jak budou tato kritéria migrována na skupiny zabezpečení služby Azure AD.
 
 | Atribut Intune|Atribut Azure AD|
@@ -100,14 +100,14 @@ Atributy jsou vlastnosti zařízení, které se dají použít při definování
 |Vnořené skupiny v rámci dynamických skupin|Dynamická skupina s jednou úrovní vnoření|
 
 
-## Migrace zásad
+## <a name="migration-of-policies"></a>Migrace zásad
 Zatímco bude probíhat migrace skupin, v konzole Intune budete moci i nadále spravovat své zásady. Konzola Intune bude obsahovat odkaz na konzolu správy služby Azure, kde budete moci spravovat své skupiny. Vaše zásady budou i nadále nasazovány do migrovaných skupin zabezpečení služby Azure AD, které budou fungovat stejně jako vaše staré skupiny Intune.
 
 Až budou veškeré funkce Intune migrovány na portál správy služby Azure (zhruba v prvním čtvrtletí 2017), budete moci své zásady a skupiny spravovat zde.
 
      
-### Viz taky
-[Správa přístupu k prostředkům pomocí skupin Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-manage-groups/)
+### <a name="see-also"></a>Viz taky
+[Správa přístupu k prostředkům prostřednictvím skupin Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-manage-groups/)
 
 [Správa skupin v Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-accessmanagement-manage-groups/)
 
@@ -115,6 +115,6 @@ Až budou veškeré funkce Intune migrovány na portál správy služby Azure (z
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

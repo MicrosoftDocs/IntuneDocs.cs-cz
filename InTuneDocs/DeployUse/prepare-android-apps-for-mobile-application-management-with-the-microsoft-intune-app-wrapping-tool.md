@@ -1,6 +1,6 @@
 ---
-title: "Zabalení aplikací pro Android pomocí nástroje App Wrapping Tool | Microsoft Intune"
-description: "Informace v tomto tématu popisují, jak zabalit aplikace pro Android beze změny vlastního kódu aplikace. Připravte aplikace, abyste mohli použít zásady správy mobilních aplikací."
+title: "Zabalení aplikací pro Android pomocí nástroje App WrappingTool | Microsoft Intune"
+description: "V tomto článku se naučíte balit aplikace pro Android beze změny samotného kódu aplikace. Připravte aplikace, abyste mohli použít zásady správy mobilních aplikací."
 keywords: 
 author: karthikaraman
 ms.author: karaman
@@ -14,70 +14,70 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: oldang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fe3a9f2fd9ce9a3c3f776dcfd9ad3347a63d0fc1
-ms.openlocfilehash: e623755cf926020bcb66d8a6d40e5cce9b46b0ae
+ms.sourcegitcommit: b25c7d7063ce586bb1cd960534f3e2ed57f6aec4
+ms.openlocfilehash: 7c61ad6a3122793ddd66547b7040f978705b540c
 
 
 ---
 
-# Příprava aplikací pro Android na správu mobilních aplikací pomocí nástroje Intune App Wrapping Tool
-Díky nástroji **Microsoft Intune App Wrapping Tool for Android** můžete omezit funkce interních aplikací pro Android a tím změnit jejich chování, aniž byste měnili kód samotných aplikací.
+# <a name="prepare-android-apps-for-mobile-application-management-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro Android na správu mobilních aplikací pomocí nástroje Intune App Wrapping Tool
 
-Jde o nástroj příkazového řádku Windows, který běží v PowerShellu a vytvoří okolo vaší aplikace pro Android tzv. „obálku“. Po zabalení aplikace můžete změnit její funkce nakonfigurováním [zásad správy mobilní aplikace](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) v Intune.
+Pokud chcete změnit chování interních aplikací pro Android tím, že omezíte jejich funkce – beze změny samotného kódu aplikace – použijte nástroj Microsoft Intune App Wrapping Tool for Android.
 
-
-Před spuštěním nástroje zkontrolujte [Důležité informace o zabezpečení při spuštění nástroje pro zabalení aplikace](#security-considerations-for-running-the-app-wrapping-tool). Nástroj si můžete stáhnout ze stránky [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) na GitHubu.
+Jde o nástroj příkazového řádku Windows, který běží v PowerShellu a který vytvoří okolo vaší aplikace pro Android obálku. Po zabalení aplikace můžete změnit její funkce nakonfigurováním [zásad správy mobilní aplikace](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) v Intune.
 
 
+Před spuštěním nástroje si přečtěte část [Důležité informace o zabezpečení při spuštění nástroje App Wrapping Tool](#security-considerations-for-running-the-app-wrapping-tool). Nástroj si můžete stáhnout ze stránky [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) na GitHubu.
 
-## Krok 1: Splnění požadavků na používání nástroje App Wrapping
 
--   Nástroj pro zabalení aplikace se musí spustit v počítači s Windows 7 nebo novějším systémem.
 
--   Vstupní aplikace musí mít podobu platného balíčku aplikace pro Android s příponou **.apk**, pro který platí toto:
+## <a name="fulfill-the-prerequisites-for-using-the-app-wrapping-tool"></a>Splnění požadavků na používání nástroje App Wrapping Tool
 
-    -   Nedá se zašifrovat.
+-   Nástroj App Wrapping Tool je možné spustit na počítači se systémem Windows 7 nebo novějším.
 
-    -   Nesmí už být zabalený nástrojem Intune App Wrapping Tool.
-    -   Musí být napsaný pro Android 4.0 nebo vyšší.
+-   Vstupní aplikace musí být platný balíček aplikace pro Android, který má příponu souboru .apk a splňuje následující požadavky:
 
--   Aplikace musí být vyvinutá vaší společností nebo pro ni. Tento nástroj se nedá používat u aplikací stažených z obchodu Google Play.
+    -   Nesmí být zašifrovaný.
+    -   Nesmí být už jednou zabalený nástrojem Intune App Wrapping Tool.
+    -   Musí být napsaný pro systém Android 4.0 nebo novější.
 
--   Pokud chcete spustit nástroj pro zabalení aplikace, nainstalujte nejnovější verzi [prostředí Java Runtime](http://java.com/download/) a ověřte, jestli je proměnná cesty Java v proměnných prostředí Windows nastavená na **C:\ProgramData\Oracle\Java\javapath**. Další nápovědu najdete v [dokumentaci k Javě](http://java.com/download/help/).
+-   Aplikaci musí vyvinout vaše společnost nebo je tato aplikace vyvinuta pro ni. Tento nástroj se nedá používat u aplikací stažených z obchodu Google Play.
+
+-   Pokud chcete nástroj App Wrapping Tool spustit, musíte mít nainstalovanou nejnovější verzi [prostředí Java Runtime](http://java.com/download/). Potom zkontrolujte, jestli je proměnná cesty Java v proměnných prostředí Windows nastavená na C:\ProgramData\Oracle\Java\javapath. Další nápovědu najdete v [dokumentaci k Javě](http://java.com/download/help/).
 
     > [!NOTE]
-    > V některých případech může 32bitová verze Javy způsobit potíže s pamětí. Doporučujeme nainstalovat místo toho 64bitovou verzi.
+    > V některých případech může 32bitová verze Javy způsobit potíže s pamětí. Proto je vhodné nainstalovat 64bitovou verzi.
 
-- Android vyžaduje, aby byly všechny balíčky aplikací (.apks) podepsané. Ke generování uživatelského jména a hesla potřebného k podepsání zabalené výstupní aplikace použijte nástroj Java Key Tool. Klíče, které může nástroj pro zabalení aplikace použít k podepsání zabalené výstupní aplikace, se dají generovat třeba pomocí následujícího příkazu, kde se využívá spustitelný Java soubor **keytool.exe**.
+- Android vyžaduje, aby byly všechny balíčky aplikací (.apk) podepsané. Ke generování přihlašovacích údajů potřebných k podpisu zabalené výstupní aplikace použijte Java keytool. Klíče pro nástroj App Wrapping Tool použité k podpisu zabalené výstupní aplikace můžete vygenerovat například následujícím příkazem, který ke generování klíčů používá spustitelný Java soubor keytool.exe.
 
     ```
     keytool.exe -genkeypair -v -keystore mykeystorefile -alias mykeyalias -keyalg RSA -keysize 2048 -validity 50000
     ```
-    Tímto příkazem se pomocí algoritmu RSA generuje pár klíčů (veřejný klíč a přidružený privátní klíč o velikosti 2 048 bitů) a veřejný klíč se pak zabalí do certifikátu X.509 v3 podepsaného jeho držitelem, který je uložený jako řetěz certifikátů s jedním prvkem. Tento řetěz certifikátů a privátní klíč jsou uložené v nové položce úložiště klíčů s názvem „mykeystorefile“ a označené aliasem „mykeyalias“. Položka úložiště klíčů je platná po dobu 50 000 dní.
+    V tomto příkladu se ke generování dvojice klíčů (veřejný klíč a spojený privátní klíč o velikosti 2048 bitů) použije šifrovací algoritmus RSA. Tento algoritmus pak zabalí veřejný klíč do certifikátu X.509 v3 podepsaného svým držitelem, který se uloží jako řetěz certifikátu s jedním prvkem. Tento řetěz certifikátů a privátní klíč jsou uložené v nové položce úložiště klíčů s názvem „mykeystorefile“ a označené aliasem „mykeyalias“. Položka úložiště klíčů je platná po dobu 50 000 dní.
 
-    Příkaz vás vyzve k zadání hesel k úložišti klíčů a ke klíči. Používejte zabezpečená a těžko odhadnutelná hesla, ale dejte pozor, abyste je nezapomněli, protože je později budete potřebovat ke spuštění nástroje pro zabalení aplikace.
+    Příkaz vás vyzve k zadání hesel k úložišti klíčů a ke klíči. Používejte hesla, která jsou bezpečná, ale nezapomeňte si je poznamenat, protože je budete potřebovat ke spuštění nástroje App Wrapping Tool.
 
     Jestli se chcete o nástroji Java [keytool](http://docs.oracle.com/javase/6/docs/technotes/tools/windows/keytool.html) a [úložišti klíčů](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html) v Javě dozvědět něco víc, projděte si podrobnou dokumentaci na webu společnosti Oracle.
 
-## Krok 2: Instalace nástroje App Wrapping
+## <a name="install-the-app-wrapping-tool"></a>Instalace nástroje App Wrapping Tool
 
-1.  Z [úložiště GitHubu](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) si do počítače s Windows stáhněte instalační soubor **InstallAWT.exe** nástroje Intune App Wrapping Tool for Android a otevřete ho.
+1.  Z [úložiště GitHubu](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) si do počítače s Windows stáhněte instalační soubor InstallAWT.exe nástroje Intune App Wrapping Tool for Android. Otevřete instalační soubor.
 
 2.  Přijměte licenční smlouvu a dokončete instalaci.
 
-Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umístění: **C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool**.
+Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umístění je: C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool.
 
-## Krok 3: Spuštění nástroje App Wrapping
+## <a name="run-the-app-wrapping-tool"></a>Spuštění nástroje App Wrapping Tool
 
-1.  Na počítači s Windows, na který jste nainstalovali nástroj pro zabalení aplikace, otevřete v režimu správce okno PowerShell.
+1.  Na počítači s Windows, na který jste nainstalovali nástroj App Wrapping Tool, otevřete v režimu správce okno PowerShellu.
 
-2.  Ze složky, do které jste nástroj nainstalovali, importujte modul PowerShell nástroje pro zabalení aplikace:
+2.  Ze složky, do které jste nástroj nainstalovali, naimportujte modul PowerShell nástroje App Wrapping Tool:
 
     ```
     Import-Module .\IntuneAppWrappingTool.psm1
     ```
 
-3.  Spusťte nástroj pomocí příkazu **invoke-AppWrappingTool**, který má tuto syntaxi:
+3.  Spusťte nástroj příkazem **invoke-AppWrappingTool**, který má následující syntaxi použití:
     ```
     Invoke-AppWrappingTool [-InputPath] <String> [-OutputPath] <String> -KeyStorePath <String> -KeyStorePassword <SecureString>
     -KeyAlias <String> -KeyPassword <SecureString> [-SigAlg <String>] [<CommonParameters>]
@@ -87,14 +87,14 @@ Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umíst
 
 |Vlastnost|Informace|Příklad|
 |-------------|--------------------|---------|
-|**-InputPath**&lt;řetězec&gt;|Cesta ke zdrojové aplikaci pro Android (.apk).| |
-|**-OutputPath**&lt;řetězec&gt;|Cesta k „výstupní“ aplikaci pro Android. Když je to cesta ke stejnému adresáři jako InputPath, vytváření balíčků selže.| |
-|**-KeyStorePath**&lt;řetězec&gt;|Cesta k souboru úložiště klíčů, který obsahuje pár veřejného a privátního klíče pro podepisování.|Soubory úložiště klíčů jsou ve výchozím nastavení uložené ve složce C:\Program Files (x86)\Java\jreX.X.X_XX\bin. |
-|**-KeyStorePassword**&lt;řetězec zabezpečení&gt;|Heslo použité k dešifrování úložiště klíčů. Android vyžaduje, aby všechny balíčky aplikace (.apk) byly podepsané. Ke generování hesla k úložišti klíčů (parametr KeyStorePassword) použijte nástroj Java Key Tool. Tady se o [úložišti klíčů](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html) dozvíte něco víc.| |
-|**-KeyAlias**&lt;řetězec&gt;|Název klíče, který se má použít pro podepisování.| |
-|**-KeyPassword**&lt;řetězec zabezpečení&gt;|Heslo použité k dešifrování privátního klíče, který se použije pro podepisování.| |
-|**-SigAlg**&lt;řetězec zabezpečení&gt;| (Volitelně) Název podpisového algoritmu, který se má použít k podepsání. Algoritmus musí být kompatibilní s privátním klíčem.|Příklady: SHA256withRSA, SHA1withRSA, MD5withRSA|
-| **&lt;CommonParameters&gt;** | (Volitelně) Příkaz podporuje běžné parametry PowerShellu, třeba verbose, debug atd. |
+|**-InputPath**&lt;String&gt;|Cesta ke zdrojové aplikaci pro Android (.apk).| |
+|**-OutputPath**&lt;String&gt;|Cesta k výstupní aplikaci pro Android. Když je to cesta ke stejnému adresáři jako InputPath, vytváření balíčků selže.| |
+|**-KeyStorePath**&lt;String&gt;|Cesta k souboru v úložišti klíčů s dvojicí veřejného a privátního klíče, které se používají k podpisu.|Ve výchozím nastavení jsou soubory v úložišti klíčů uložené ve složce „C:\Program Files (x86)\Java\jreX.X.X_XX\bin“. |
+|**-KeyStorePassword**&lt;SecureString&gt;|Heslo použité k dešifrování úložiště klíčů. Android vyžaduje, aby všechny balíčky aplikace (.apk) byly podepsané. Ke generování hesla k úložišti klíčů (parametr KeyStorePassword) použijte nástroj Java keytool. Další informace o úložišti klíčů Java si můžete přečíst [tady](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html).| |
+|**-KeyAlias**&lt;String&gt;|Název klíče, který se má použít pro podepisování.| |
+|**-KeyPassword**&lt;SecureString&gt;|Heslo použité k dešifrování privátního klíče, který se použije pro podepisování.| |
+|**-SigAlg**&lt;SecureString&gt;| (Volitelně) Název podpisového algoritmu, který se má použít k podepsání. Algoritmus musí být kompatibilní s privátním klíčem.|Příklady: SHA256withRSA, SHA1withRSA, MD5withRSA|
+| **&lt;CommonParameters&gt;** | (Volitelně) Příkaz podporuje běžné parametry PowerShellu, jako je verbose a debug. |
 
 
 - Seznam společných parametrů najdete v [Centru skriptů Microsoftu](https://technet.microsoft.com/library/hh847884.aspx).
@@ -109,39 +109,37 @@ Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umíst
 
 Naimportujte modul PowerShellu.
 ```
-Import-Module "C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool\IntuneAppWrappingTool.psm1" 
+Import-Module "C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool\IntuneAppWrappingTool.psm1"
 ```
-Spusťte nástroj pro zabalení aplikace u nativní aplikace **HelloWorld.apk**. 
+Spusťte nástroj App Wrapping Tool na nativní aplikaci HelloWorld.apk.
 ```
 invoke-AppWrappingTool -InputPath .\app\HelloWorld.apk -OutputPath .\app_wrapped\HelloWorld_wrapped.apk -KeyStorePath "C:\Program Files (x86)\Java\jre1.8.0_91\bin\mykeystorefile" -keyAlias mykeyalias -SigAlg SHA1withRSA -Verbose
 ```
 
-Pak se zobrazí výzva k zadání parametrů **KeyStorePassword** a **KeyPassword**. Zadejte uživatelské jméno a heslo, které jste použili k vytvoření souboru úložiště klíčů.
+Zobrazí se výzva k zadání parametrů **KeyStorePassword** a **KeyPassword**. Zadejte uživatelské jméno a heslo, které jste použili k vytvoření souboru úložiště klíčů.
 
-Zabalená aplikace se generuje a uloží se souborem protokolu do zadané výstupní cesty.
+Zabalená aplikace a soubor protokolu se vygenerují a uloží do zadané výstupní cesty.
 
-## Důležité informace o zabezpečení při spuštění nástroje pro zabalení aplikace
+## <a name="security-considerations-for-running-the-app-wrapping-tool"></a>Důležité informace o zabezpečení při spuštění nástroje App Wrapping Tool
 Pro zabránění potenciálnímu falšování identity, zpřístupnění informací a zvýšení oprávnění pro útoky zajistěte toto:
 
--   Vstupní obchodní aplikace, výstupní aplikace a úložiště klíčů v Javě musí být na stejném počítači s Windows, na kterém běží nástroj pro zabalení aplikace.
+-   Vstupní obchodní aplikace (LOB), výstupní aplikace a úložiště klíčů Java KeyStore musí být na stejném počítači s Windows, na kterém běží nástroj App Wrapping Tool.
 
--   Výstupní aplikaci naimportujte do konzoly Intune na stejném počítači, na kterém je spuštěný i nástroj. Další informace o příkazu keytool Javy najdete v tématu [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html).
+-   Výstupní aplikaci naimportujte do konzoly Intune na stejném počítači, na kterém je spuštěný i nástroj. Další informace o nástroji Java keytool viz [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html).
 
--   Pokud jsou výstupní aplikace a nástroj v cestě Universal Naming Convention (UNC) a nespustíte nástroj a vstupní soubory na stejném počítači, nakonfigurujte prostředí tak, aby bylo zabezpečené, pomocí protokolů [Internet Protocol Security (IPsec)](http://en.wikipedia.org/wiki/IPsec) nebo [podepsání protokolu Server Message Block (SMB)](https://support.microsoft.com/en-us/kb/887429).
+-   Pokud se výstupní aplikace a nástroj sice nacházejí v cestě UNC (Universal Naming Convention), ale vy nespouštíte nástroj a vstupní soubory na stejném počítači, použijte k nastavení zabezpečení prostředí podpis [protokolu IPsec (Internet Protocol Security)](http://en.wikipedia.org/wiki/IPsec) nebo [protokolu SMB (Server Message Block)](https://support.microsoft.com/en-us/kb/887429).
 
 -   Aplikace musí pocházet z důvěryhodného zdroje.
 
--   Zabezpečte výstupní adresář, který obsahuje zabalenou aplikaci. Zvažte použití adresáře na úrovni uživatele pro výstup.
+-   Zabezpečte výstupní adresář se zabalenou aplikací. Zvažte použití adresáře na úrovni uživatele pro výstup.
 
-
-
-### Související témata
+### <a name="see-also"></a>Související témata
 - [Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md)
 
 - [Použití sady SDK k povolení správy mobilních aplikací pro aplikace](use-the-sdk-to-enable-apps-for-mobile-application-management.md)
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

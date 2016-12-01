@@ -2,10 +2,10 @@
 title: "Registrace zařízení se systémem iOS do Intune | Microsoft Intune"
 description: "Popisuje registraci zařízení s iOS v Intune."
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7eefcefa5e1cd0f789c77bf020c256e449099273
-ms.openlocfilehash: 577d14f29880d16046bbb703773d6362c2458c1b
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 7d11e716750c4920234de5419e262d6c2c6e2d44
 
 
 ---
 
 
-# Registrace zařízení se systémem iOS do Intune
+# <a name="enroll-your-ios-device-in-intune"></a>Registrace zařízení se systémem iOS do Intune
 
 Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svoje zařízení s iOS zaregistrovat a získat tak přístup k e-mailům, souborům a dalším prostředkům společnosti. Když si svoje zařízení zaregistrujete, může vaše IT oddělení tyto pracovní nebo školní prostředky spravovat, udržovat je v bezpečí a zároveň vám umožnit, abyste k plnění úkolů používali zařízení, které preferujete. Další informace o registraci najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 
@@ -35,7 +35,7 @@ Pokud se snažíte zaregistrovat zařízení s Mac OS X, přečtěte si téma [R
 - Pokud jste v zařízení zablokovali Safari, odblokujte ho. K registraci musíte použít Safari.
 
 
-**Pro registraci zařízení s iOS:**
+**Registrace zařízení s iOSem**
 
 1.  Postupujte podle návodu v tématu [Instalace a přihlášení do aplikace Portál společnosti Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md).
 
@@ -92,10 +92,10 @@ Pokud se snažíte zaregistrovat zařízení s Mac OS X, přečtěte si téma [R
 Zařízení je nyní zaregistrováno v Intune a budete přesměrováni zpět do aplikace Portál společnosti.
 
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

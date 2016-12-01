@@ -2,9 +2,10 @@
 title: "Wi-Fi pomocí PSK | Microsoft Intune"
 description: "Použijte vlastní konfiguraci k vytvoření profilu sítě Wi-Fi s předsdíleným klíčem."
 keywords: 
-author: nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +14,13 @@ ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b7f11f752f6c38736a2dfa5875050f50bd86bae4
-ms.openlocfilehash: 14e43dadc0d7bc20238ec87447f311fdc864d891
+ms.sourcegitcommit: 71237aabac763e33d7973d0d169291bd7fa1df32
+ms.openlocfilehash: ad5bb09eb18463f541ca0cbb60ff1f27bdc3251e
 
 
 
 ---
-# Vytvoření profilu Wi-Fi s předsdíleným klíčem
+# <a name="use-a-custom-policy-to-create-a-wifi-profile-with-a-preshared-key"></a>Použití vlastní zásady k vytvoření profilu sítě Wi-Fi s předsdíleným klíčem
 Zde je postup používání **Vlastní konfigurace** služby Intune k vytvoření profilu sítě Wi-Fi s předsdíleným klíčem. Toto téma obsahuje také příklad vytvoření profilu Wi-Fi založeného na protokolu EAP.
 
 > [!NOTE]
@@ -48,8 +49,7 @@ Zde je postup používání **Vlastní konfigurace** služby Intune k vytvořen�
     > [!NOTE]
 Nezapomeňte použít tečku na začátku.
 
-    SSID je identifikátor SSID, pro který vytváříte zásadu. Příklad:
-    `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`
+    SSID je identifikátor SSID, pro který vytváříte zásadu. Například `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
 
   e. **Hodnota pole**: Sem vkládáte svůj kód XML. Tady je příklad. Každá hodnota by měla být přizpůsobena nastavení sítě. Nějaké pokyny najdete v sekci komentáře ke kódu.
 4. Zvolte **OK** a uložení. Poté zásadu nasaďte.
@@ -58,15 +58,15 @@ Nezapomeňte použít tečku na začátku.
     > Tuto zásadu lze nasadit pouze do skupin uživatelů.
 
 Pro každé zařízení, které se příště vrátí se změnami, se použijí zásady a vytvoří se pro ně profil Wi-Fi. Zařízení se bude moct připojit k síti automaticky.
-## Profil Wi-Fi pro Android nebo Windows
+## <a name="android-or-windows-wifi-profile"></a>Profil Wi-Fi pro Android nebo Windows
 
 Zde je příklad kódu XML pro profil Wi-Fi pro Android nebo Windows:
 
 > [!IMPORTANT]
 > 
-> `<protected>false</protected>`musí být nastaveno na **nepravda**, protože hodnota **pravda** by mohla způsobit, že zařízení by očekávalo šifrované heslo, následně by se ho pokoušelo dešifrovat a to by vedlo k selhání připojení.
+> `<protected>false</protected>`musí být nastaveno na **false**, protože hodnota **true** může způsobit, že zařízení očekává šifrované heslo, které se následně pokusí dešifrovat, což povede k chybě připojení.
 > 
->  `<hex>53534944</hex>` má být nastaveno na šestnáctkovou hodnotu `<name><SSID of wifi profile></name>`.
+>  `<hex>53534944</hex>`má být nastaveno na šestnáctkovou hodnotu `<name><SSID of wifi profile></name>`.
 >  Zařízení s Windows 10 můžou vrátit falešnou chybu *0x87D1FDE8 Náprava se nezdařila*, nicméně ve skutečnosti budou v tomto profilu úspěšně zřízena.
 
     <!--
@@ -109,7 +109,7 @@ Zde je příklad kódu XML pro profil Wi-Fi pro Android nebo Windows:
       </MSM>
     </WLANProfile>
 
-## Profil Wi-Fi založený na protokolu EAP
+## <a name="eapbased-wifi-profile"></a>Profil Wi-Fi založený na protokolu EAP
 Zde je příklad kódu XML pro profil Wi-Fi založený na protokolu EAP:
 
     <WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
@@ -190,7 +190,7 @@ Zde je příklad kódu XML pro profil Wi-Fi založený na protokolu EAP:
       </MSM>
     </WLANProfile>
 
-## Vytvoření souboru XML z existujícího připojení Wi-Fi
+## <a name="create-the-xml-file-from-an-existing-wifi-connection"></a>Vytvoření souboru XML z existujícího připojení Wi-Fi
 Můžete také vytvořit soubor XML z existujícího připojení Wi-Fi:
 1. Na počítači, který je připojený k bezdrátové síti nebo se k ní nedávno připojil, otevřete následující složku: C:\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}.
 
@@ -198,7 +198,7 @@ Můžete také vytvořit soubor XML z existujícího připojení Wi-Fi:
 3.     Prohledejte soubory XML a najděte ten se správným názvem.
 4.     Po vyhledání správného souboru XML zkopírujte kód XML a vložte ho do pole Data na stránce nastavení OMA-URI.
 
-## Nasazení zásady
+## <a name="deploy-the-policy"></a>Nasazení zásady
 
 1.  V pracovním prostoru **Zásady** vyberte zásadu, kterou chcete nasadit, a potom vyberte **Spravovat nasazení**.
 
@@ -210,11 +210,11 @@ Můžete také vytvořit soubor XML z existujícího připojení Wi-Fi:
 
 Když vyberete nasazenou zásadu, zobrazí se v dolní části seznamu zásad další informace o tomto nasazení.
 
-### Viz taky
+### <a name="see-also"></a>Související témata
 [Připojení Wi-Fi v Microsoft Intune](wi-fi-connections-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

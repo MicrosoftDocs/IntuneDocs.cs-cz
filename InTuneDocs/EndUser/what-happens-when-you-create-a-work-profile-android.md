@@ -2,7 +2,8 @@
 title: "Co se stane při vytvoření pracovního profilu | Microsoft Intune"
 description: "Popisuje šifrování zařízení s Androidem."
 keywords: 
-author: staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article
@@ -13,20 +14,20 @@ ms.assetid: b217da11-2cd7-49ab-a91f-2f6d7784c6b6
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 08f31db90f324ef5f93076c4e13bfa5328a15adc
-ms.openlocfilehash: ad24422cd2708eb4fa59bb96d9f39b7a6444219b
+ms.sourcegitcommit: 2a3ad9562d271ee67b49db28b0fc62caec9f3050
+ms.openlocfilehash: 77d420bd1a635f8cd64b32c584c2be62f52f1706
 
 
 ---
 
 
-# Co se stane při vytvoření pracovního profilu
+# <a name="what-happens-when-you-create-a-work-profile"></a>Co se stane při vytvoření pracovního profilu
 
-Pracovní profil je prvek, jehož nastavením ve svém zařízení umožníte přístup k pracovním nebo školním e-mailům, aplikacím a souborům.
+Pracovní profil je prvek, jehož nastavením ve svém zařízení umožníte uchovávat svoje pracovní nebo školní e-maily, aplikace a data odděleně od svých osobních dat.
 
 Když vytvoříte pracovní profil:
 
-- Správce IT může na vašem zařízení spravovat jenom aplikace, nastavení a konfigurace související s prací, ale ne vaše osobní aplikace nebo data.
+- Správce IT může na vašem zařízení spravovat jenom e-maily, aplikace, nastavení a data související s prací, ale ne vaše osobní aplikace nebo data.
 
 - Pracovní aplikace si opatříte z obchodu Google Play for Work. Osobní aplikace si můžete dál pořizovat z obchodu Google Play, jak jste zvyklí. Správce IT nemůže zobrazit ani spravovat vaše osobní aplikace.
 

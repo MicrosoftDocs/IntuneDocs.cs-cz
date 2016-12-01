@@ -2,9 +2,10 @@
 title: "Co se stane, když si resetujete zařízení | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/20/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,16 +15,16 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 967ef85a356cdbc81c80f55eff758cd1a25b8af7
-ms.openlocfilehash: c99b95a4127573dbe397b891daa881f6be015a8a
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: d068790b167aff2bd70bf633994fac0ce1938fac
 
 
 ---
 
 
-# Co se stane, když si resetujete zařízení
+# <a name="what-happens-if-you-reset-your-device"></a>Co se stane, když si resetujete zařízení
 
-Informace o tom, co se stane, když si resetujete zařízení, najdete pomocí odkazu odpovídajícímu používanému zařízení.
+Informace o tom, co se stane, když si resetujete zařízení, získáte výběrem odkazu, který odpovídá typu používaného zařízení:
 
 - [Android](what-happens-if-you-reset-your-device-using-the-company-portal-android.md)
 - [iOS](what-happens-if-you-reset-your-device-using-the-company-portal-ios.md)
@@ -31,6 +32,6 @@ Informace o tom, co se stane, když si resetujete zařízení, najdete pomocí o
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

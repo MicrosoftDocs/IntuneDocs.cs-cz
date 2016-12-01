@@ -2,8 +2,8 @@
 title: "Obnovení (vymazání) ztraceného nebo odcizeného zařízení s Windows | Microsoft Intune"
 description: "Obnovení ztraceného nebo odcizeného zařízení s Windows do továrního nastavení"
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f2283b5896541e58d7ae515cab9d4faa1e9df735
-ms.openlocfilehash: 4a206e30c1334681f82b8077da6191ef3e28e4b1
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 2af464dd1eb4fa97c6500131f51d48b6636b0cf2
 
 
 ---
 
 
-# Obnovení (vymazání) ztraceného nebo odcizeného zařízení
+# <a name="reset-erase-your-lost-or-stolen-device"></a>Obnovení (vymazání) ztraceného nebo odcizeného zařízení
 
 Pokud je zařízení zaregistrované v Intune ztracené nebo odcizené, můžete ho pomocí [webu Portál společnosti](http://portal.manage.microsoft.com) obnovit do továrního nastavení.
 
@@ -37,10 +37,10 @@ Pokud je zařízení zaregistrované v Intune ztracené nebo odcizené, můžete
 
 3.  Klepněte na ikonu **Obnovit** a potom klepněte na **Obnovit**.
 
-Pokud se vám ztracené nebo ukradené zařízení nedaří obnovit do továrního nastavení, požádejte správce IT, aby to udělal za vás. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud se vám ztracené nebo ukradené zařízení nedaří obnovit do továrního nastavení, požádejte správce IT, aby to udělal za vás. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

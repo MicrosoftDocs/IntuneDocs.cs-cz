@@ -8,19 +8,19 @@ manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article
 ms.prod: 
-ms.service: 
+ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: c951692d-6538-46c0-a9f0-d607ded189ae
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ceaeba74f8671caf4125252fce02fd06752c3fe8
-ms.openlocfilehash: c074dd8850aef8cec79a9362222c3678d679bf4f
+ms.sourcegitcommit: 9bf5764d1e1bd73fd62e5033b2309fc8d5a912e4
+ms.openlocfilehash: ec287d49910a72c22122f45a01850bcbd3a7d203
 
 
 ---
 
-# Povolení pravidla ochrany zařízení před internetovými útoky v zásadách dodržování předpisů
+# <a name="enable-device-threat-protection-rule-in-the-compliance-policy"></a>Povolení pravidla ochrany zařízení před internetovými útoky v zásadách dodržování předpisů
 Intune vám s ochranou Lookout proti mobilním hrozbám umožňuje v zařízení detekovat mobilní hrozby a provádět posouzení rizik. Můžete vytvořit pravidla zásad dodržování předpisů a posouzením rizik zjistit, jestli je zařízení s nimi v souladu. Pomocí zásad podmíněného přístupu pak můžete povolit nebo blokovat přístup k Exchangi, SharePointu a dalším službám podle toho, nakolik zařízení zásady splňuje nebo nesplňuje.
 
 Nastavení detekce hrozeb pro zařízení ve službě Lookout, aby ovlivňovala zásady dodržování předpisů pro takové zařízení:
@@ -52,16 +52,16 @@ Stav dodržování předpisů zařízení naleznete na stránce**Všechna zaří
 
 ![snímek stránky zařízení v konzole pro správu Intune zobrazující stav dodržování předpisů zařízení](../media/mtp/mtp-device-status-intune-console.png)
 
-## Další kroky
+## <a name="next-steps"></a>Další kroky
 * Vytvoření zásad podmíněného přístupu
   * [Exchange Online](restrict-access-to-exchange-online-with-microsoft-intune.md)
-  * [místnímu systému Microsoft Exchange](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
+  * [Místní Exchange](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
   * [SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
   * [Online Skype pro firmy](restrict-access-to-skype-for-business-online-with-microsoft-intune,md)
   * [Dynamics CRM](restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

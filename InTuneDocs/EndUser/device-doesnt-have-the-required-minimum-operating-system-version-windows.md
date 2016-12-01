@@ -2,10 +2,10 @@
 title: "Zařízení nemá požadovanou minimální verzi operačního systému | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/08/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9a9343f7aa1ab4761bcbf36f829fe0e9be293515
-ms.openlocfilehash: a14f347ae65118852ba914085548cd17c8ec31aa
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 376866a4d2a96594413d8edd92f2a20cc37339cb
 
 
 ---
 
 
-# Zařízení nemá požadovanou minimální verzi operačního systému
+# <a name="device-doesnt-have-the-required-minimum-operating-system-version"></a>Zařízení nemá požadovanou minimální verzi operačního systému
 
 Vaše zařízení s Windows nesplňuje minimální verzi operačního systému, kterou vyžaduje vaše IT oddělení. Před aktualizací zařízení zkontrolujte aktuální verzi operačního systému volbou **Nastavení** &gt; **O systému**. Pokud chcete zařízení aktualizovat, zvolte **Nastavení** &gt; **Aktualizace telefonu** &gt; **Zkontrolovat aktualizace**.
 
@@ -33,10 +33,10 @@ Pokud chcete zjistit verzi Windows 10 a Windows 8.1, stiskněte klávesu s logem
 - Ve Windows 10 ignorujte číslo verze a vyhledejte číslo sestavení operačního systému (třeba číslo sestavení operačního systému 10586.29). Číslo „10“ v označení 10586.29 znamená Windows 10.
 - Ve Windows 8.1 se podívejte na číslo verze. Místo 8.1 se zobrazí 6.3.*xxxx*.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

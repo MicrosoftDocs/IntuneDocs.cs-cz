@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 10/10/2016
+ms.date: 11/02/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,22 +14,22 @@ ms.assetid: bbc8e0df-7bf3-494e-8bc4-dac59a98ab41
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c7679d624ba22b2a062ef2534a642e38a5f57fde
-ms.openlocfilehash: 273627573f58e1bde4fd19c548ce87639f25ca4b
+ms.sourcegitcommit: 24411fdefa3f1e4e89c66d23448360934a5de7c7
+ms.openlocfilehash: 9fa2de1d7e36f53415e28a7c963232eecb9bc5ca
 
 
 
 ---
-# Použití vlastních zásad povolených a blokovaných aplikací pro zařízení se systémem Samsung KNOX
+# <a name="use-custom-policies-to-allow-and-block-apps-for-samsung-knox-standard-devices"></a>Použití vlastních zásad povolených a blokovaných aplikací pro zařízení se Samsung Knox Standardem
 
 Postupy v tomto tématu použijte k vytvoření vlastní zásady Microsoft Intune, která obsahuje jeden z těchto seznamů:
 
 - Seznam aplikací, u kterých je v příslušném zařízení blokované spuštění. Aplikace v tomto seznamu nebude možné spouštět ani v případě, že již byly nainstalované v okamžiku nasazení zásady.
-- Seznam aplikací, které si uživatelé příslušného zařízení mohou nainstalovat z obchodu Google Play. Je možné instalovat jen aplikace uvedené na seznamu. Z obchodu nejde nainstalovat žádné další aplikace.
+- Seznam aplikací, které si uživatelé příslušného zařízení mohou nainstalovat z obchodu Google Play. Je možné instalovat jen aplikace uvedené na seznamu. Z tohoto obchodu nejde nainstalovat žádné další aplikace.
 
-Tato nastavení mohou využívat jenom zařízení se systémem Samsung KNOX.
+Tato nastavení můžou využívat jenom zařízení se Samsung Knox Standardem.
 
-## Vytvoření seznamu povolených nebo blokovaných aplikací
+## <a name="to-create-an-allowed-or-blocked-app-list"></a>Vytvoření seznamu povolených nebo blokovaných aplikací
 
 1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) vyberte **Zásady** &gt; **Zásady konfigurace** &gt; **Přidat**.
 2. V dialogovém okně **Vytvořit novou zásadu** rozbalte **Android**, zvolte **Vlastní konfigurace** a potom **Vytvořit zásadu**.
@@ -58,7 +58,7 @@ Tato nastavení mohou využívat jenom zařízení se systémem Samsung KNOX.
 Nastavení aplikace se použijí, jakmile se cílené zařízení službě přihlásí.
 
 
-## Nasazení zásady
+## <a name="deploy-the-policy"></a>Nasazení zásady
 
 1.  V pracovním prostoru **Zásady** vyberte zásadu, kterou chcete nasadit, a pak klikněte na **Spravovat nasazení**.
 
@@ -67,11 +67,11 @@ Nastavení aplikace se použijí, jakmile se cílené zařízení službě přih
  
 Když vyberete nasazenou zásadu, zobrazí se v dolní části seznamu zásad další informace o tomto nasazení.
 
-### Související témata
+### <a name="see-also"></a>Viz taky
 [Nastavení zásad konfigurace pro Android a Samsung KNOX v Microsoft Intune](android-policy-settings-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

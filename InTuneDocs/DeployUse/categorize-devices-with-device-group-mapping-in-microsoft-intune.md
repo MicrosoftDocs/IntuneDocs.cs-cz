@@ -5,18 +5,17 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 10/12/2016
+ms.date: 10/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 8b8c06a3-6b6c-4cf1-8646-b24fa9b1a39e
-ms.reviewer: sumitp
+ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 32bded5047b1a08738418e3e36382eeae1a5f3b4
-ms.openlocfilehash: 84850f4e9136e6304e51991d6ab0a0ae2a37e7a7
-
+ms.sourcegitcommit: 07389265e2a88d45e18735bf55fbcde5260ebc54
+ms.openlocfilehash: bdfa96a4268733bf6fa3a7999d85a881a7c4e513
 
 ---
 
@@ -45,8 +44,8 @@ Na základě vaší zpětné vazby momentálně sjednocujeme prostředí pro vyv
 
 Vzhledem k postupné implementaci skupin zabezpečení Azure Active Directory musíte otevřít pracovní prostor **Skupiny** v [konzole pro správu Intune](https://manage.microsoft.com) a zjistit, který postup máte použít:
 
--  Pokud uvidíte odkaz na Azure Portal, skupiny Intune už nepoužíváte. Použijte níže uvedený postup [Jak nakonfigurovat mapování skupin zařízení (u skupin Azure Active Directory)](##How-to-configure-device-group-mapping-(for-Azure-Active-Directory-groups).
--  Pokud odkaz na Azure Portal nevidíte, pořád používáte skupiny Intune. Použijte níže uvedený postup [Jak nakonfigurovat mapování skupin zařízení (u skupin Intune)](##How-to-configure-device-group-mapping-(for-Intune-groups).
+-  Pokud uvidíte odkaz na Azure Portal, skupiny Intune už nepoužíváte. Postupujte podle pokynů [Jak nakonfigurovat mapování skupin zařízení u skupin Azure Active Directory](/intune/deploy-use/categorize-devices-with-device-group-mapping-in-microsoft-intune#how-to-configure-device-group-mapping-for-azure-active-directory-groups) níže.
+-  Pokud odkaz na Azure Portal nevidíte, pořád používáte skupiny Intune. Postupujte podle pokynů [Jak nakonfigurovat mapování skupin zařízení u skupin Intune](/intune/deploy-use/categorize-devices-with-device-group-mapping-in-microsoft-intune#how-to-configure-device-group-mapping-for-intune-groups) níže.
 
 ## Jak nakonfigurovat mapování skupin zařízení u skupin Intune
 1. Pro každou kategorii zařízení, kterou chcete použít, vytvořte skupinu zařízení Intune, nebo vyberte existující skupinu. Informace o postupu při vytváření skupin najdete v tématu [Použití skupin pro správu uživatelů a zařízení s Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md).
@@ -87,6 +86,7 @@ Když uživatelé registrují svoje zařízení, zobrazí se jim seznam nakonfig
 [Použití skupin pro správu uživatelů a zařízení s Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
 
 
-<!--HONumber=Oct16_HO2-->
+
+<!--HONumber=Oct16_HO4-->
 
 

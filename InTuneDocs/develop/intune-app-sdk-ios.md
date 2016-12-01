@@ -13,8 +13,8 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 975708b5204ab83108a9174083bb87dfeb04a063
-ms.openlocfilehash: 52ad28686fa279a7ec251d073283c3554d1c81fc
+ms.sourcegitcommit: 6b998728b3db60d10cadbcd34b5412fa76cb586f
+ms.openlocfilehash: ddc47ef5846bf448cf0de1e57b527e8ec4c562cc
 
 
 ---
@@ -415,6 +415,32 @@ Z hodnoty, kterou metoda vrátí, SDK pozná, jestli aplikace požadované resta
  - Pokud se vrátí hodnota true, aplikace si bude za restartování zodpovídat sama.   
  - Pokud se vrátí hodnota false, aplikaci následně restartuje SDK.  SDK okamžitě zobrazí dialogové okno, které uživateli oznámí, že aplikaci je potřeba restartovat. 
 
+#Implementace ovládacích prvků Uložit jako
+
+Intune umožňuje správcům IT vybrat, do kterých spravovaných umístění úložiště může aplikace ukládat data. Aplikace se můžou sady Intune App SDK na povolená umístění úložiště dotazovat pomocí rozhraní API **isSaveToAllowedForLocation**.
+
+Před uložením spravovaných dat do cloudového úložiště nebo místního umístění musí aplikace v rozhraní API **isSaveToAllowedForLocation** zjistit, jestli do nich správce IT povolil data ukládat.
+
+Při použití rozhraní API **isSaveToAllowedForLocation** musí aplikace předat hlavní název uživatele (UPN) používaný pro umístění úložiště, pokud je k dispozici.
+
+##Podporovaná umístění
+
+Rozhraní API **IsSaveToAllowedForLocation** poskytuje konstanty ke kontrole následujících umístění:
+
+* IntuneMAMSaveLocationOther 
+* IntuneMAMSaveLocationOneDriveForBusiness 
+* IntuneMAMSaveLocationSharePoint 
+* IntuneMAMSaveLocationBox 
+* IntuneMAMSaveLocationDropbox 
+* IntuneMAMSaveLocationGoogleDrive 
+* IntuneMAMSaveLocationLocalDrive 
+
+Aplikace by měly konstanty v rozhraní API **isSaveToAllowedForLocation** používat ke zjištění, jestli je možné data ukládat do umístění považovaných za „spravovaná“, jako je OneDrive pro firmy, nebo „osobní“. Kromě toho by se mělo rozhraní API použít, když aplikace není schopná zjistit, jestli je umístění „spravované“, nebo „osobní“. 
+
+Když se ví, že je umístění „osobní“, měly by aplikace použít hodnotu **IntuneMAMSaveLocationOther**. 
+
+Konstanta **IntuneMAMSaveLocationLocalDrive** by se měla použít, když aplikace ukládá data do jakéhokoli umístění na místním zařízení.
+
 
 
 # Konfigurace nastavení Intune App SDK
@@ -497,7 +523,7 @@ Pamatujte si, že identita je definována jednoduše jako řetězec. Identity ro
 Identita je jednoduše uživatelské jméno účtu (například uzivatel@contoso.com). Vývojáři můžou identitu aplikace nastavit na následujících odlišných úrovních: 
 
 * **Identita procesu**: stanoví identitu v rámci procesu a používá se hlavně pro aplikace s jedinou identitou. Tato identita ovlivňuje všechny operace, soubory a uživatelské rozhraní.
-* **Identita uživatelského rozhraní**: určuje, jaké zásady se uplatní v případě operací uživatelského rozhraní v hlavním vlákně, jako je vyjmutí, kopírování, vložení, PIN, ověřování, sdílení dat atd. Identita uživatelského rozhraní nemá vliv na operace se soubory (šifrování, zálohování atd.). 
+* **Identita uživatelského rozhraní**: určuje, jaké zásady se uplatní v případě operací uživatelského rozhraní v hlavním vlákně, jako je vyjmutí, kopírování, vložení, PIN, ověřování, sdílení dat atd. Identita uživatelského rozhraní nemá vliv na operace se soubory (šifrování, zálohování atd.).
 * **Identita vlákna**: má vliv na to, jaké zásady se použijí pro aktuální vlákno. To ovlivňuje všechny operace, soubory a uživatelské rozhraní.
 
 Bez ohledu na to, jestli je uživatel spravován, je vhodné nastavení identit zodpovědností aplikace.
@@ -523,9 +549,12 @@ Pokud aplikace vytvoří soubory obsahující data od spravovaných i nespravova
  
 Pokud aplikace obsahuje rozšíření pro sdílení, vlastníka sdílené položky je možné načíst pomocí metody `protectionInfoForItemProvider` v `IntuneMAMDataProtectionManager`. Pokud je sdílenou položkou soubor, postará se o nastavení vlastníka souboru sada SDK. Pokud jsou sdílenou položkou data trvale připojená k souboru, zodpovídá za nastavení vlastníka souboru aplikace, a než data zobrazí v uživatelském rozhraní, zavolá rozhraní API `setUIPolicyIdentity` (popsáno níže).
  
-#Povolení více identit
+##Zapnutí více identit
  
-Aplikace mají ve výchozím nastavení jedinou identitu a SDK nastaví identitu procesu na registrovaného uživatele. Pokud chcete povolit podporu více identit, přidejte do slovníku IntuneMAMSettings v souboru Info.plist aplikace logické nastavení s názvem MultiIdentity a hodnotou ANO. Po povolení více identit se identita procesu, uživatelského rozhraní a vlákna nastaví na nulovou hodnotu. Za jejich patřičné nastavení zodpovídá aplikace.
+Aplikace mají ve výchozím nastavení jedinou identitu a SDK nastaví identitu procesu na registrovaného uživatele. Pokud chcete povolit podporu více identit, přidejte do slovníku **IntuneMAMSettings** v souboru Info.plist aplikace logické nastavení s názvem `MultiIdentity` a hodnotou ANO. 
+
+> [!NOTE]
+> Po povolení více identit se identita procesu, uživatelského rozhraní a vlákna nastaví na nulovou hodnotu. Za jejich patřičné nastavení zodpovídá aplikace.
 
  
 ##Přepínání identit
@@ -628,6 +657,6 @@ Pokud vaše aplikace používá **modelový build** Intune App SDK, je potřeba,
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 

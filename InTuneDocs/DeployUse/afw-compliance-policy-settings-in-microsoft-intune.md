@@ -5,7 +5,7 @@ keywords:
 author: karthikaraman
 ms.author: karaman
 manager: angrobe
-ms.date: 07/13/2016
+ms.date: 11/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,25 +14,27 @@ ms.assetid: e721c5c7-9678-4f3b-81d4-564da5efd337
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 609d3ab2c96d9a3dff7a6bb6aa085f9cda83ba38
-ms.openlocfilehash: 845604fb97927abcc267884dbea6096a82eb170c
+ms.sourcegitcommit: 56988f0a69e6ff281439e6e77d1814ec130c8b49
+ms.openlocfilehash: f1176c923e059ad085855423e95522d2e4fec76e
 
 
 ---
 
 
-# Nastavení zásad dodržování předpisů pro zařízení s Androidem for Work v Microsoft Intune
+# <a name="compliance-policy-settings-for-android-for-work-devices-in-microsoft-intune"></a>Nastavení zásad dodržování předpisů pro zařízení s Androidem for Work v Microsoft Intune
+
+[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
 Nastavení zásad popsaná v tomto tématu platí pro zařízení s Androidem for Work.
 
 Pokud hledáte informace o jiných platformách, vyberte jednu z těchto možností:
 > [!div class="op_single_selector"]
 - [Nastavení zásad dodržování předpisů pro Android](android-compliance-policy-settings-in-microsoft-intune.md)
-- [Nastavení zásad dodržování předpisů pro zařízení s iOS](ios-compliance-policy-settings-in-microsoft-intune.md)
+- [Nastavení zásad dodržování předpisů pro zařízení s iOSem](ios-compliance-policy-settings-in-microsoft-intune.md)
 - [Nastavení zásad dodržování předpisů pro zařízení s Windows](windows-compliance-policy-settings-in-microsoft-intune.md)
 
-## Systémové nastavení zabezpečení
-### Heslo
+## <a name="system-security-settings"></a>Systémové nastavení zabezpečení
+### <a name="password"></a>Heslo
 - **Vyžadovat heslo k odemknutí mobilních zařízení:** Pokud tuto možnost nastavíte na **Ano**, budou muset uživatelé zadat heslo, aby mohli získat přístup ke svému zařízení.
 
 -  **Minimální délka hesla:** Určuje minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
@@ -40,10 +42,10 @@ Pokud hledáte informace o jiných platformách, vyberte jednu z těchto možnos
 - **Kvalita hesla:** Toto nastavení rozpozná, jestli jsou na zařízení nakonfigurované požadavky na heslo, které jste zadali. Toto nastavení povolte, pokud uživatelé musí pro zařízení s Androidem nakonfigurovat určité požadavky na heslo. Vybírejte z těchto možností:
   -   **Biometrika s nízkým zabezpečením**
   - **Požadováno**
-  -   **Aspoň číselné**
-  -   **Aspoň abecední**
-  -   **Aspoň alfanumerické**
-  -   **Alfanumerické se symboly**
+  -   **Aspoň číslice**
+  -   **Aspoň abecední znaky**
+  -   **Aspoň alfanumerické znaky**
+  -   **Alfanumerické znaky se symboly**
 
 - **Počet minut nečinnosti, než se požaduje heslo:** Určuje dobu nečinnosti, než uživatel musí znovu zadat heslo.
 
@@ -55,10 +57,10 @@ Pokud hledáte informace o jiných platformách, vyberte jednu z těchto možnos
 
 - **Po návratu zařízení ze stavu nečinnosti vyžadovat heslo:** Toto nastavení by se mělo použít v kombinaci s nastavením **Počet minut nečinnosti před vyžádáním hesla**. Pro přístup k zařízení, které bylo nečinné po dobu uvedenou v nastavení **Počet minut nečinnosti před vyžádáním hesla**, se koncovým uživatelům zobrazí výzva k zadání hesla.
 
-### Encryption
+### <a name="encryption"></a>Encryption
 - **Vyžadovat šifrování u mobilního zařízení:** Toto nastavení nemusíte konfigurovat, protože u zařízení s Androidem for Work je šifrování vynucené.
 
-## Stav zařízení a nastavení zabezpečení
+## <a name="device-health-and-security-settings"></a>Stav zařízení a nastavení zabezpečení
 
 - **Zařízení nesmí mít jailbreak ani root:** Pokud povolíte toto nastavení, budou se zařízení s jailbreakem považovat za nevyhovující předpisům.
 - **Požadovat, aby zařízení bránila instalaci aplikací z neznámých zdrojů:** Toto nastavení nemusíte konfigurovat, protože v zařízeních s Androidem for Work je instalace z neznámých zdrojů trvale zakázaná. .  
@@ -75,7 +77,7 @@ Pokud hledáte informace o jiných platformách, vyberte jednu z těchto možnos
 
   Další podrobnosti najdete v tématu [Povolení pravidla ochrany zařízení před hrozbami v zásadách dodržování předpisů](enable-device-threat-protection-rule-in-compliance-policy.md).
 
-## Nastavení vlastností zařízení
+## <a name="device-property-settings"></a>Nastavení vlastností zařízení
 - **Minimální požadovaný operační systém:** Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, uvede se jako nekompatibilní.
   Zobrazí se odkaz s informacemi o postupu upgradu. Koncový uživatel si může zařízení upgradovat. Potom bude mít přístup k prostředkům společnosti.
 
@@ -83,6 +85,6 @@ Pokud hledáte informace o jiných platformách, vyberte jednu z těchto možnos
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -1,10 +1,11 @@
 ---
 title: "Použití webu Portál společnosti Intune | Microsoft Intune"
-description: "Popisuje web Portál společnosti a poskytuje odkazy na kroky pro úlohy, které můžete na webu provést."
+description: "Článek popisuje web Portál společnosti a obsahuje odkazy na postupy úloh, které mohou koncoví uživatelé provádět na webu."
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,43 +14,43 @@ ms.assetid: a26d9e3c-8f58-4494-9571-fc88ba91852e
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: f44f4785f768e6fea8532199b28d3621248e2dd4
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: aaecaf82bc4635beefa84fed5702476c9e66a90e
 
 
 ---
 
-# Použití webu Portál společnosti Intune
-[Web Portál společnosti](http://portal.manage.microsoft.com) je webová stránka, pomocí které můžete spravovat počítače a zařízení zaregistrovaná v Intune.
+# <a name="using-the-intune-company-portal-website"></a>Použití webu Portál společnosti Intune
+Na [webu Portál společnosti](http://portal.manage.microsoft.com) mohou koncoví uživatelé spravovat počítače a zařízení, která si zaregistrovali v Intune.
 
-Na webu Portál společnosti můžete provádět tyto kroky:
+Na webu Portál společnosti mohou uživatelé provádět následující úlohy:
 
--   [Přejmenovat zařízení](rename-your-device-cpwebsite.md)
+-   [Přejmenování zařízení](rename-your-device-cpwebsite.md)
 
--   [Přejmenování zařízení](remove-your-device-cpwebsite.md)
+-   [Odebrání zařízení](remove-your-device-cpwebsite.md)
 
 -   [Resetování zařízení](reset-your-device-cpwebsite.md)
 
 -   [Resetování hesla zařízení](reset-your-passcode-cpwebsite.md)
 
--   [Vzdálené zamknutí zařízení](remote-lock-your-device-cpwebsite.md)
+-   [Vzdálené uzamčení zařízení](remote-lock-your-device-cpwebsite.md)
 
--   [Ruční synchronizace zařízení ke zrychlení pomalé instalace aplikací](sync-your-device-manually-cpwebsite.md)
+-   [Ruční synchronizace zařízení kvůli zrychlení pomalé instalace aplikací](sync-your-device-manually-cpwebsite.md)
 
--   Najděte kontaktní informace na správce IT, pokud je váš správce IT nakonfiguroval.
+-   Vyhledání kontaktních údajů na správce IT, pokud jste je nakonfigurovali
 
--   Zobrazit podrobnosti o zařízení, včetně toho, jestli zařízení dodržuje zásady společnosti nebo školy
+-   Zobrazení podrobností o zařízení, včetně toho, jestli vyhovuje zásadám společnosti nebo školy
 
--   Vzdáleně spravovat počítač (platí jenom pro počítače)
+-   Vzdálená správa počítače (platí jenom pro PC)
 
-Většinu úloh můžete provést jak na **webu Portál společnosti** , tak v **aplikaci Portál společnosti** , kterou si nainstalujete do svého zařízení. Další informace o aplikaci Portál společnosti a registraci zařízení v Intune získáte klepnutím na odkaz určený pro váš typ zařízení:
+Většinu úloh, které koncoví uživatelé provádějí na **webu Portál společnosti**, mohou provádět i v **aplikaci Portál společnosti**, kterou si nainstalují do zařízení. Následující stránky obsahují odkazy na všechny úlohy, které mohou uživatelé provádět na svém zařízení:
 
 - [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
-- [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
+- [Použití zařízení iOS nebo Mac OS X s Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 - [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

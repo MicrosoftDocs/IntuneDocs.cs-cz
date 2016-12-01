@@ -2,9 +2,10 @@
 title: "Použití spravovaných aplikací na zařízení s iOS | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,16 +15,16 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: maxles
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 178d46860774d2595f06316f84fd1940c12c025f
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: c051fe1128f2156943eac7eb4d4fa5983ed90771
 
 
 ---
 
 
-# Použití spravovaných aplikací na zařízení s iOS
+# <a name="use-managed-apps-on-your-ios-device"></a>Použití spravovaných aplikací na zařízení s iOS
 
-Spravované aplikace jsou aplikace, které může váš správce IT nakonfigurovat tak, aby lépe chránily firemní data, ke kterým v této aplikaci získáváte přístup. Pokud získáváte přístup k datům ve spravované aplikaci v zařízení s iOS, můžete si všimnout, že aplikace funguje trochu jinak, než čekáte. Nebudete třeba moct kopírovat a vkládat chráněná firemní data nebo tato data nebudete moct uložit do určitých umístění.
+Spravované aplikace jsou aplikace, které může váš správce IT nastavit tak, aby lépe chránily firemní data, ke kterým v dané aplikaci získáváte přístup. Pokud získáváte přístup k datům ve spravované aplikaci v zařízení s iOS, můžete si všimnout, že aplikace funguje trochu jinak, než čekáte. Nebudete třeba moct kopírovat a vkládat chráněná firemní data nebo tato data nebudete moct uložit do určitých umístění.
 
 Několik spravovaných aplikací také může na vašem zařízení spolupracovat, abyste mohli provádět běžné úkoly při zachování ochrany firemních dat. Například pokud otevřete firemní soubor v jedné spravované aplikaci a k jeho zobrazení je potřeba jiná spravovaná aplikace, automaticky se otevře spravovaná aplikace, která umožňuje zobrazení souboru. Pokud není požadovaná aplikace dostupná, nemusíte mít přístup k určitým akcím, jako je otevření dokumentu nebo přístup k webovému odkazu ze spravovaného dokumentu.
 
@@ -31,14 +32,14 @@ Při přístupu k firemním datům ve spravované aplikaci se zobrazí zpráva p
 
 ![managed-apps-message-ios](./media/managed-apps-message.png)
 
-### Jak získám spravované aplikace?
+### <a name="how-do-i-get-managed-apps"></a>Jak získám spravované aplikace?
 Spravované aplikace můžete získat několika různými způsoby:
 
 -   Při registraci zařízení v Microsoft Intune buď nainstalujete aplikaci z aplikace Portál společnosti nebo webu Portál společnosti, nebo ji na vaše zařízení nainstaluje správce IT. Další informace o registraci najdete v tématu [Registrace zařízení se systémem Mac OS X v Intune](enroll-your-device-in-intune-ios.md) nebo [Registrace zařízení se systémem iOS do Intune](enroll-your-device-in-intune-mac-os-x.md).
 
 -   Nainstalujte aplikaci z App Storu a potom se přihlaste pomocí svého firemního uživatelského účtu spravovaného službou Intune.
 
-### Co může správce IT spravovat v mé aplikaci?
+### <a name="what-can-my-it-admin-manage-in-an-app"></a>Co může správce IT spravovat v mé aplikaci?
 Tady jsou některé příklady možností, které může správce IT spravovat v aplikaci a které můžou ovlivnit vaši interakci s firemními daty na zařízení:
 
 -   Přístup k určitým webům
@@ -60,12 +61,10 @@ Tady jsou některé příklady možností, které může správce IT spravovat v
 -   Požadavky na šifrování dat
 
 
-Další informace o spravovaných aplikacích na vašem zařízení vám poskytne správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Další informace o spravovaných aplikacích na vašem zařízení vám poskytne správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,9 +2,10 @@
 title: "Zařízení s Androidem nevyhovuje maximální verzi operačního systému | Microsoft Intune"
 description: 
 keywords: 
-author: staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/08/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,20 +15,20 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7549b5af84e5a1712c2e1649b1afe03718d53dcc
-ms.openlocfilehash: 934fba06d386a2b3128b9ea4e991b2d48820ffca
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 355d457bb8447f124dafb09db1324d0533e0403f
 
 
 ---
 
-# Zařízení s Androidem nevyhovuje maximální verzi operačního systému.
+# <a name="android-device-doesnt-comply-with-the-maximum-operating-system-version"></a>Zařízení s Androidem nevyhovuje maximální verzi operačního systému.
 
-Zařízení Android nevyhovuje zásadám vašeho správce IT, které se týkají maximální verze operačního systému. Požádejte o pomoc správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-
-
+Zařízení Android nevyhovuje zásadám vašeho správce IT, které se týkají maximální verze operačního systému. Požádejte o pomoc správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Sep16_HO2-->
+
+
+<!--HONumber=Nov16_HO1-->
 
 

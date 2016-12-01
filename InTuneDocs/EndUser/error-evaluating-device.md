@@ -2,7 +2,7 @@
 title: "Chyba při vyhodnocování zařízení | Microsoft Intune"
 description: 
 keywords: 
-author: barlan
+author: barlanmsft
 ms.author: barlan
 manager: angrobe
 ms.date: 10/24/2016
@@ -22,7 +22,7 @@ ms.openlocfilehash: 43688a00d61785ddabdfef3c45bd30a533a85fe7
 ---
 
 
-# Chyba při vyhodnocování zařízení
+# <a name="error-evaluating-device"></a>Chyba při vyhodnocování zařízení
 Bylo zjištěno, že vaše zařízení nevyhovuje některým firemním zásadám, ale tuto chybu momentálně nemůžeme zobrazit, protože systém měl problém s vyhodnocením vašeho zařízení.  
 
 Jestli chcete tento problém vyřešit, počkejte několik minut a potom klepněte na **Kontrola dodržování předpisů**. Pokud problém přetrvá, kontaktujte správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).

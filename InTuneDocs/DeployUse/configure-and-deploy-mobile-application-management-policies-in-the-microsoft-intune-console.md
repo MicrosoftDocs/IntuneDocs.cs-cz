@@ -14,13 +14,13 @@ ms.assetid: b4fb33a8-a2fa-4353-bd89-5bda48b68e83
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9a442d9472159757333a9ebe081d86eac9907cdc
-ms.openlocfilehash: d7978e558c68ad3209f1503619a9113dba126028
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: 90b5a9f78a93cde7466937d0ce9dac3d83f3ff64
 
 
 ---
 
-# Configure and deploy mobile application management policies in the Microsoft Intune console
+# <a name="configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console"></a>Configure and deploy mobile application management policies in the Microsoft Intune console
 Zásady správy mobilních aplikací (MAM) ve službě Microsoft Intune umožňují upravovat funkce aplikací, které nasazujete, a přizpůsobit je zásadám dodržování předpisů a zabezpečení vaší společnosti. Můžete třeba omezit operace vyjmutí, kopírování a vložení v rámci spravované aplikace nebo aplikaci nakonfigurovat tak, aby všechny webové odkazy otevírala ve spravovaném prohlížeči.
 
 Podpora zásad správy mobilní aplikace:
@@ -59,7 +59,7 @@ Například v případě aplikace Outlook:
 > [!TIP]
 > Pokud službu Intune používáte s nástrojem Configuration Manager, projděte si téma [Jak ovládat aplikace pomocí zásad správy mobilních aplikací v Configuration Manageru](https://technet.microsoft.com/library/mt131414.aspx).
 
-## Vytvoření a nasazení aplikace pomocí zásady správy mobilní aplikace
+## <a name="create-and-deploy-an-app-with-a-mobile-application-management-policy"></a>Vytvoření a nasazení aplikace pomocí zásady správy mobilní aplikace
 
 -   **Krok 1:** Získejte odkaz na aplikaci spravovanou pomocí zásad, vytvořte zabalenou aplikaci nebo s využitím sady Intune App SDK napište aplikaci s podporou MAM.
 
@@ -71,15 +71,15 @@ Například v případě aplikace Outlook:
 
 -   **Krok 5:** Monitorujte nasazení aplikace.
 
-## Krok 1: Získání odkazu na aplikaci spravovanou pomocí zásad, vytvoření zabalené aplikace nebo napsání aplikace s podporou MAM s využitím sady Intune App SDK
+## <a name="step-1-get-the-link-to-a-policy-managed-app-create-a-wrapped-app-or-use-the-intune-app-sdk-to-write-a-mamenabled-app"></a>Krok 1: Získání odkazu na aplikaci spravovanou pomocí zásad, vytvoření zabalené aplikace nebo napsání aplikace s podporou MAM s využitím sady Intune App SDK
 
 V App Storu vyhledejte a poznamenejte si adresu URL aplikace spravované zásadami, kterou chcete nasadit. Adresa URL aplikace Microsoft Word pro iPad je třeba **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
 
 
-## Krok 2: Publikování aplikace do cloudového úložiště
+## <a name="step-2-publish-the-app-to-your-cloud-storage-space"></a>Krok 2: Publikování aplikace do cloudového úložiště
 Když publikujete spravovanou aplikaci, postupy se liší v závislosti na tom, jestli publikujete aplikaci spravovanou zásadou nebo aplikaci zpracovanou pomocí nástroje Microsoft Intune App Wrapping Tool for iOS.
 
-#### Publikování aplikace spravované zásadami
+#### <a name="to-publish-a-policy-managed-app"></a>Publikování aplikace spravované zásadami
 
 1.  Až budete připravení nahrát aplikaci do cloudového úložiště, postupujte podle pokynů v tématu [Přidání aplikací pro mobilní zařízení v Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md).
 
@@ -93,7 +93,7 @@ Po dokončení nahrávání se zobrazí **Ano** u **Zásad správy aplikace** na
 
 Po ověření úspěšného nahrání aplikace pokračujte krokem 3.
 
-#### Publikování aplikace zpracované pomocí nástroje Microsoft Intune App Wrapping Tool
+#### <a name="to-publish-an-app-that-was-processed-through-the-microsoft-intune-app-wrapping-tool"></a>Publikování aplikace zpracované pomocí nástroje Microsoft Intune App Wrapping Tool
 
 1.  Až budete připravení nahrát aplikaci do cloudového úložiště, postupujte podle pokynů v tématu [Přidání aplikací pro mobilní zařízení v Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md).
 
@@ -105,7 +105,7 @@ Po dokončení nahrávání se zobrazí **Ano** u **Zásad správy aplikace** na
 
 Po ověření úspěšného nahrání aplikace pokračujte krokem 3.
 
-## Krok 3: Vytvoření zásady správy mobilních aplikací
+## <a name="step-3-create-a-mobile-application-management-policy"></a>Krok 3: Vytvoření zásady správy mobilních aplikací
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte **Zásady** &gt; **Přehled** &gt; **Přidat zásadu**.
 
@@ -134,7 +134,7 @@ Po ověření úspěšného nahrání aplikace pokračujte krokem 3.
     |**Vyžadovat podnikové přihlašovací údaje pro přístup**|Toto nastavení vyžaduje, aby uživatel zadal své podnikové přihlašovací informace před tím, než může aplikaci používat.|
     |**Vyžadovat kompatibilitu zařízení dodržováním podnikových zásad pro přístup**|Toto nastavení umožňuje použití aplikace, jenom když zařízení nemá jailbreak nebo root.|
     |**Znovu zkontrolovat požadavky na přístup po (minuty)**|V poli **Časový limit** určete časové období před dalším zkontrolováním požadavků na přístup po spuštění aplikace.|
-    |**Offline období odkladu**|Pokud je zařízení offline, určete časové období před opakovaným zkontrolováním požadavků na přístup k aplikaci.|
+    |**Období odkladu pro offline režim**|Pokud je zařízení offline, určete časové období před opakovaným zkontrolováním požadavků na přístup k aplikaci.|
     |**Zašifrovat data aplikací**|Toto nastavení určuje, že všechna data přidružená k této aplikaci budou zašifrovaná. To zahrnuje i data uložená externě, například na SD kartách.<br /><br />**Šifrování pro iOS**<br /><br />Pro aplikace, které jsou přidružené k zásadám správy mobilních aplikací Intune, jsou neaktivní uložená data zašifrovaná pomocí šifrování na úrovni zařízení poskytované operačním systémem. To zajišťuje zásada kódu PIN, kterou nastavuje správce IT. Když se vyžaduje kód PIN, budou data zašifrovaná podle nastavení v zásadách správy mobilních aplikací. Jak se uvádí v dokumentaci společnosti Apple, [moduly používané v iOS mají certifikaci FIPS 140-2](http://support.apple.com/en-us/HT202739).<br /><br />**Šifrování pro Android**<br /><br />Pro aplikace, které jsou přidružené k zásadám správy mobilních aplikací Intune, zajišťuje šifrování Microsoft. Data jsou mezi vstupně-výstupními operacemi souborů synchronně šifrovaná.  Obsah v úložišti zařízení bude zašifrovaný vždycky. Metoda šifrování nemá certifikaci FIPS 140-2.|
     |**Blokovat snímek obrazovky** (jenom zařízení s Androidem)|Toto nastavení určuje, že jsou při použití této aplikace zablokované možnosti snímku obrazovky zařízení.|
 
@@ -142,7 +142,7 @@ Po ověření úspěšného nahrání aplikace pokračujte krokem 3.
 
 Nová zásada se zobrazí v uzlu **Zásady konfigurace** pracovního prostoru **Zásady**.
 
-## Krok 4: Přidružení aplikace k zásadě správy mobilní aplikace a nasazení aplikace
+## <a name="step-4-associate-the-app-with-a-mobile-application-management-policy-and-then-deploy-the-app"></a>Krok 4: Přidružení aplikace k zásadě správy mobilní aplikace a nasazení aplikace
 Abyste přidružili zásadu správy mobilních aplikací k aplikaci, vyberte zásadu na stránce **Správa mobilních aplikací** dialogového okna **Spravovat nasazení**.
 
 Podrobnosti najdete v tématu [Nasazení aplikací v Microsoft Intune](deploy-apps.md).
@@ -150,7 +150,7 @@ Podrobnosti najdete v tématu [Nasazení aplikací v Microsoft Intune](deploy-ap
 > [!IMPORTANT]
 > Pokud se registrace zařízení v Intune zruší, zásady se z aplikací neodeberou. Aplikace, u kterých se použily zásady, si zachovají nastavení zásad i po jejich odinstalování a opětovném nainstalování.
 
-### Postup v případě, že je aplikace už v zařízeních nasazená
+### <a name="what-to-do-when-an-app-is-already-deployed-on-devices"></a>Postup v případě, že je aplikace už v zařízeních nasazená
 Můžou nastat situace, kdy nasazujete aplikaci a jeden z cílových uživatelů nebo zařízení už má nainstalovanou nespravovanou verzi aplikace. Například si uživatel mohl nainstalovat Microsoft Word z obchodu s aplikacemi.
 
 V takovém případě musíte požádat uživatele o ruční odinstalaci nespravované verze, aby se mohla nainstalovat spravovaná verze, kterou konfigurujete.
@@ -160,10 +160,10 @@ Pro zařízení se systémem iOS 9 a novějším ale Intune automaticky požád�
 > [!TIP]
 > Když je zařízení v dohledovém režimu, Intune převezme správu stávající aplikace bez předchozího souhlasu uživatele.
 
-## Krok 5: Sledování nasazení aplikace
+## <a name="step-5-monitor-the-app-deployment"></a>Krok 5: Sledování nasazení aplikace
 Po vytvoření a nasazení aplikace přidružené k zásadě správy mobilních aplikací použijte následující postupy ke sledování aplikace a vyřešení případných konfliktů zásad.
 
-#### Zobrazení stavu nasazení
+#### <a name="to-view-the-status-of-the-deployment"></a>Zobrazení stavu nasazení
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte **Skupiny** &gt; **Přehled**.
 
@@ -181,7 +181,7 @@ Po vytvoření a nasazení aplikace přidružené k zásadě správy mobilních 
 
 6.  Po zjištění konfliktu můžete nastavení konfliktní zásady zkontrolovat, jestli používá stejné nastavení, nebo můžete nasadit jednu zásadu pro aplikaci a uživatele.
 
-### Způsob řešení konfliktů zásad
+### <a name="how-policy-conflicts-are-resolved"></a>Způsob řešení konfliktů zásad
 Pokud nastal konflikt zásad správy mobilních aplikací při prvním nasazení u uživatele nebo zařízení, konkrétní konfliktní hodnota nastavení se odebere ze zásady nasazené v aplikaci. Aplikace bude používat integrovanou konfliktní hodnotu.
 
 Pokud nastal konflikt zásady správy mobilních aplikací při pozdějších nasazeních aplikace nebo uživatele, konkrétní hodnota konfliktního nastavení se nebude aktualizovat na zásady správy mobilních aplikací nasazené do aplikace. Aplikace bude používat stávající hodnotu tohoto nastavení.
@@ -194,6 +194,6 @@ V případech, kdy zařízení nebo uživatel obdrží dvě konfliktní zásady,
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

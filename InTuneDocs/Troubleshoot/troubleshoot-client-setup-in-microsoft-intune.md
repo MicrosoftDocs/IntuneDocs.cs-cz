@@ -2,7 +2,8 @@
 title: "Řešení potíží s instalací klientů | Microsoft Intune"
 description: "Řešení obecných potíží s instalací klientů"
 keywords: 
-author: Nbigman
+author: staciebarker
+ms.author: staciebarker
 manager: angrobe
 ms.date: 08/02/2016
 ms.topic: article
@@ -13,16 +14,16 @@ ms.assetid: e46d292b-1d16-46db-a87f-d53eefa4d22a
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb0aeac2f94dfde50d9398b09c6b21c7ae40624
-ms.openlocfilehash: 3f7e5752780d7159ce3081ec7a194f4e81e4cd16
+ms.sourcegitcommit: 889a13bd50943b9cdf0f40d50b6f8ce263dde56d
+ms.openlocfilehash: e37b5da81150f89fce1ee3d57bd84de0ff7fb76f
 
 
 ---
 
-# Řešení potíží s instalací klientů v Microsoft Intune
+# <a name="troubleshoot-client-setup-in-microsoft-intune"></a>Řešení potíží s instalací klientů v Microsoft Intune
 Při odstraňování běžných problémů s instalací klientů vám můžou pomoct následující informace. Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md), ve kterém najdete další způsoby, jak získat nápovědu.
 
-## Instalace klienta selhala
+## <a name="client-installation-fails"></a>Instalace klienta selhala
 
 -   Pokud [konzola pro správu Microsoft Intune](https://manage.microsoft.com/) nezobrazuje pro příslušný počítač žádné výstrahy týkající se nasazení klientského softwaru, zkontrolujte připojení počítače k internetu a konfiguraci proxy serveru a ujistěte se, že počítač může se službou komunikovat na adrese URL [https://manage.microsoft.com](https://manage.microsoft.com/). Pak zkuste klientský software nainstalovat znova.
 
@@ -48,14 +49,14 @@ Při odstraňování běžných problémů s instalací klientů vám můžou po
 
     -   **Závažnost** – označuje závažnost výstrahy.
 
-## Registrační balíček počítače se nestahuje
+## <a name="computer-enrollment-package-doesnt-download"></a>Registrační balíček počítače se nestahuje
 **Problém:** Při pokusu o registraci počítače došlo k následujícímu:
 -  Registrační balíček se nestahuje.
 -  Dialogové okno stažení se zobrazí, ale vyprší jeho platnost.
 
 **Řešení:** V prohlížeči, který používáte ke stažení, v době, kdy stahování probíhá, zajistěte, že jsou povolena stahování a že šifrované soubory lze uložit na místní disk.
 
-## Instalace klienta přestane reagovat s kódem chyby 0x80040154
+## <a name="client-installation-hangs-with-error-code-0x80040154"></a>Instalace klienta přestane reagovat s kódem chyby 0x80040154
 **Problém:**
 
 -  Instalace klienta během registrace přestane reagovat
@@ -69,10 +70,10 @@ Může to být způsobeno absencí důležitých aktualizací softwaru v počít
 **Řešení:** Ujistěte se, že vaše zásady aktualizace softwaru umožňují instalaci kritických aktualizací, jak je popsáno v tématu [Udržování počítačů s Windows v aktuálním stavu díky softwarovým aktualizacím v Microsoft Intune](/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune).
 
 
-## Chyby související se zásadami Microsoft Intune v souboru policyplatform.log
+## <a name="microsoft-intune-policyrelated-errors-in-policyplatformlog"></a>Chyby související se zásadami Microsoft Intune v souboru policyplatform.log
 U zařízení s Windows nespravovaných pomocí MDM můžou být chyby zásad v souboru policyplatform.log výsledkem jiného než výchozího nastavení nástroje Řízení uživatelských účtů v systému Windows (UAC) v zařízení. Některá nevýchozí nastavení UAC můžou ovlivnit zpracování zásad a instalace klientů Microsoft Intune.
 
-### Řešení potíží s UAC
+### <a name="to-resolve-uac-issues"></a>Řešení potíží s UAC
 
 1.  Vyřaďte počítač, jak je popsáno v tématu [Vyřazení dat a zařízení ze správy službou Microsoft Intune](/intune/deploy-use/retire-devices-from-microsoft-intune-management).
 
@@ -85,9 +86,9 @@ U zařízení s Windows nespravovaných pomocí MDM můžou být chyby zásad v 
 
 4.  Nastavte posuvník oznámení na výchozí nastavení.
 
-## Co dělat, když se klient z konzoly pro správu Microsoft Intune neodinstaluje
+## <a name="what-to-do-if-the-client-will-not-uninstall-from-the-microsoft-intune-administrator-console"></a>Co dělat, když se klient z konzoly pro správu Microsoft Intune neodinstaluje
 
-### Odebrání klientského softwaru pomocí nástroje příkazového řádku Microsoft Intune
+### <a name="to-remove-the-client-software-by-using-the-microsoft-intune-command-line-tool"></a>Odebrání klientského softwaru pomocí nástroje příkazového řádku Microsoft Intune
 
 1.  Otevřete příkazový řádek v režimu správce.
 
@@ -95,7 +96,7 @@ U zařízení s Windows nespravovaných pomocí MDM můžou být chyby zásad v 
 
 3.  Spusťte následující příkaz ``ProvisioningUtil.exe /UninstallAgents /MicrosoftIntune``
 
-## Kódy chyb instalace klientů
+## <a name="client-installation-error-codes"></a>Kódy chyb instalace klientů
 Kódy chyb, které se zobrazují na stránce **Výstrahy** , když se instalace klientského softwaru nepovede, popisuje následující tabulka. Obsahuje taky návrhy, jak příslušný problém vyřešit.
 
 |Kód chyby|Možný problém|Navržené řešení|
@@ -121,11 +122,11 @@ Kódy chyb, které se zobrazují na stránce **Výstrahy** , když se instalace 
 |**0x80043010**|Software se nedá nainstalovat, protože už je nainstalovaný klient OMADM (Open Mobile Alliance Device Management).|Zrušte registraci klienta OMADM a pak zkuste nainstalovat klientský software znova.|
 Pokud problémy instalace potrvají, kontaktujte podporu podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md). Je potřeba mít připravený protokol o registraci klientského počítače (najdete ho tady: %*programfiles*%\Microsoft\OnlineManagement\Logs\Enrollment.log a %*userprofile*%\AppData\Local\Microsoft\OnlineManagement\Logs\Enrollement.log) a protokol služby Windows Update (%*windir*%\windowsupdate.log), abyste ho mohli ukázat technikům podpory.
 
-### Další kroky
+### <a name="next-steps"></a>Další kroky
 Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

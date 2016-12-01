@@ -14,13 +14,13 @@ ms.assetid: 5c46e188-87eb-4ce2-b184-24809e8bf783
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: dd7a51b5ba176c8c7b593d2d7a3e5cfabd72a1e6
-ms.openlocfilehash: 77ce4cca5f85f1847e599a6151411bfc12afbc8b
+ms.sourcegitcommit: 30fae0cc2e9b3b08f9195c2622b0daec639e0d62
+ms.openlocfilehash: 3b8a263a45690c9bb213128b592e1ef9788cacd8
 
 
 ---
 
-# Ochrana dat a aplikací pomocí Microsoft Intune
+# <a name="protect-apps-and-data-with-microsoft-intune"></a>Ochrana dat a aplikací pomocí Microsoft Intune
 
 
 Intune chrání firemní data prostřednictvím několika technologických vrstev.  Ve vrstvě identity podmíněný přístup chrání služby tím, že umožňuje přístup jenom ze spravovaných a kompatibilních zařízení.  V klientské aplikační vrstvě správa mobilních aplikací (MAM) chrání před ztrátou dat. Zabraňuje v přesunu dat do nechráněných aplikací nebo úložišť a v případě ztráty nebo odcizení zařízení vymaže data.  Tyto dvě vrstvy ochrany by se měly používat společně. Zabezpečí se tak data a zajistí produktivita mobilních pracovních sil.
@@ -46,7 +46,7 @@ Firemní data můžete chránit pomocí zásad MAM pro zařízení, která jsou 
 
 Aby bylo možné aplikaci přidružit k zásadě MAM, musí mít začleněnou sadu Microsoft Intune App Software Development Kit (SDK) nebo používat nástroj App Wrapping.
 
-Aplikace Microsoft Office mají sadu App SDK integrovanou. Úplný seznam podporovaných aplikací najdete v [galerii mobilních aplikací Microsoft Intune](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx) na stránce partnerů pro aplikace Microsoft Intune. Pokud zvolíte aplikaci, můžete zjistit podporované scénáře, platformy a to, jestli aplikace podporuje víc identit.
+Aplikace Microsoft Office mají sadu App SDK integrovanou. Úplný seznam podporovaných aplikací najdete v [galerii mobilních aplikací Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps) na stránce partnerů pro aplikace Microsoft Intune. Pokud zvolíte aplikaci, můžete zjistit podporované scénáře, platformy a to, jestli aplikace podporuje víc identit.
 
 Můžete taky [povolit vlastním obchodním aplikacím](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md) použití se zásadami MAM.
 
@@ -54,6 +54,6 @@ Když dojde ke ztrátě nebo odcizení zařízení nebo když uživatel přestan
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

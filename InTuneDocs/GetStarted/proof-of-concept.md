@@ -3,8 +3,9 @@ title: "Testování konceptu | Microsoft Intune"
 description: "Doporučení pro fázi ověření konceptu nasazení Intune"
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: f3c97380-23ca-40da-acbc-78108507cad7
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2a192c71b1b82f59b34ea614d09d895174f8112b
-ms.openlocfilehash: bffd46199873f01e2c03fe8b30cdfb3c425a07ee
+ms.sourcegitcommit: 8921043334630bbd2955c0423ca9cd1b76c27758
+ms.openlocfilehash: 5b19835e7f726e23d402bbab408796cad9028bd0
 
 
 ---
@@ -78,6 +79,6 @@ Tady jsou některé běžné problémy, na které můžete ve fázi **testován�
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO4-->
 
 

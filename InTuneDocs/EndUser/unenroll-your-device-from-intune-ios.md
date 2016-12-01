@@ -2,9 +2,10 @@
 title: "Zrušení registrace zařízení s iOS v Intune | Microsoft Intune"
 description: "Popisuje zrušení registrace zařízení s iOS v Intune."
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,16 +15,16 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: af520ef10b50631bafdfdf4d240a8e2541f5c3d6
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 5db58b87e5c48c40794315e7781d32b02a653b2b
 
 
 ---
 
 
-# Zrušení registrace zařízení s iOS v Intune
+# <a name="unenroll-your-ios-device-from-intune"></a>Zrušení registrace zařízení s iOS v Intune
 
-Když zrušíte registraci zařízení s iOS v Intune, už nebude mít přístup k prostředkům společnosti a nebude ho spravovat Intune.
+Když zrušíte registraci zařízení s iOS v Intune, nebude mít už dále přístup k prostředkům společnosti a nebude ho už dále spravovat Intune.
 
 Pokud chcete zrušit registraci zařízení ve službě Intune, postupujte podle tohoto návodu nebo si pusťte toto video:
 
@@ -36,9 +37,9 @@ Pokud chcete zrušit registraci zařízení ve službě Intune, postupujte podle
 
 Jakmile zrušíte registraci zařízení v Intune, stane se toto:
 
--   Vaše zařízení se už nebude zobrazovat v aplikaci Portál společnosti.
+-   Vaše zařízení se už nebude zobrazovat na portálu společnosti.
 
--   Už nebudete moct instalovat aplikace z portálu společnosti.
+-   Z portálu společnosti už nebudete moct instalovat aplikace.
 
 -   Nastavení, která se v zařízení změnila od jeho přidání, například zakázání fotoaparátu/kamery nebo vyžadování určité délky hesla, přestanou platit.
 
@@ -52,11 +53,10 @@ Jakmile zrušíte registraci zařízení v Intune, stane se toto:
 
 -   V aplikaci Portál společnosti a na webu se už nebudou zobrazovat zařízení, která jsou nakonfigurovaná jenom pro použití e-mailu.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

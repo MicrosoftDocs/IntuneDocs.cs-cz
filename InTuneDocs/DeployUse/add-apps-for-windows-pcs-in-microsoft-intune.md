@@ -1,8 +1,9 @@
 ---
-title: "Přidání aplikací do počítačů s Windows | Microsoft Intune"
+title: "Přidání aplikací pro počítače s Windows, na kterých běží softwarový klient Intune | Microsoft Intune"
 description: "V tomto tématu se dozvíte, jak přidat do Intune aplikace pro počítače s Windows před tím, než je nasadíte."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article
@@ -13,18 +14,18 @@ ms.assetid: bc8c8be9-7f4f-4891-9224-55fc40703f0b
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 727d28cff074124b5401f6c2931f87df3a9d2d23
-ms.openlocfilehash: 24767de9ad5a1f0ebe6f713018098a5dd692466e
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: e6537b7b0a42c76ec99d51a6a09fe1f6ab4400a1
 
 
 ---
 
-# Přidání aplikací do počítačů s Windows v Microsoft Intune
+# Přidání aplikací pro počítače s Windows, na kterých běží softwarový klient Intune
 
 V tomto tématu se dozvíte, jak přidat do Intune aplikace před tím, než je nasadíte.
 
 > [!IMPORTANT]
-> Informace v tomto tématu vám pomůžou přidat aplikace do počítačů s Windows, které spravujete pomocí klientského počítačového softwaru Intune. Pokud chcete aplikace přidávat do zaregistrovaných počítačů s Windows nebo do jiných mobilních zařízení, přečtěte si téma [Přidání aplikací pro mobilní zařízení v Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md).
+> Informace v tomto tématu vám pomůžou přidat aplikace pro počítače s Windows, které spravujete pomocí softwarového klienta Intune. Pokud chcete aplikace přidávat do zaregistrovaných počítačů s Windows nebo do jiných mobilních zařízení, přečtěte si téma [Přidání aplikací pro mobilní zařízení v Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md).
 
 
 ## Přidání aplikace
@@ -90,6 +91,6 @@ Dalším krokem po vytvoření aplikace je její nasazení. Další informace na
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 
