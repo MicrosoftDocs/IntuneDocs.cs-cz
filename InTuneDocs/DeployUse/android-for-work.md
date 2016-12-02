@@ -4,15 +4,15 @@ description: "Intune spravuje Android for Work. K dispozici jsou tak další mo�
 keywords: 
 author: nathbarn
 manager: angrobe
-ms.date: 10/26/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: aa0002d9-f5a0-466e-98ac-3970cb77e3a2
 translationtype: Human Translation
-ms.sourcegitcommit: 0238350139837a06a48d0bff7c53e4c39e07168c
-ms.openlocfilehash: aafeb58e28144740540a765ac04de68b41ae5ce5
+ms.sourcegitcommit: 83914246bde673b188ca3f7d9cf50b4d0de2edd4
+ms.openlocfilehash: 127db326fc96625c719b8136964bae014a904b3d
 
 
 ---
@@ -43,7 +43,7 @@ Aplikace se instalují bez interakce uživatelů, kteří ani nemusí povolit **
 
 ## <a name="app-configuration"></a>Konfigurace aplikací
 
-Android for Work poskytuje infrastrukturu pro nasazení konfiguračních hodnot aplikací do aplikací, které je podporují. Když zadáte konfigurační hodnoty pro pracovní aplikace, zajistíte tak při prvním spuštění aplikace uživatelem jejich správné nastavení. Podpora konfigurace aplikace vyžaduje, aby vývojáři aplikací vytvářeli svoje aplikace výslovně tak, aby podporovaly hodnoty spravované konfigurace. V takovém případě pak můžou použít Intune k zadání a použití tohoto nastavení konfigurace. Přečtěte si další informace o [nastavení konfigurace aplikace pro Android for Work](deploy-use/afw-app-configuration-policy.md).
+Android for Work poskytuje infrastrukturu pro nasazení konfiguračních hodnot aplikací do aplikací, které je podporují. Když zadáte konfigurační hodnoty pro pracovní aplikace, zajistíte tak při prvním spuštění aplikace uživatelem jejich správné nastavení. Podpora konfigurace aplikace vyžaduje, aby vývojáři aplikací vytvářeli svoje aplikace výslovně tak, aby podporovaly hodnoty spravované konfigurace. V takovém případě pak můžou použít Intune k zadání a použití tohoto nastavení konfigurace. Přečtěte si další informace o [nastavení konfigurace aplikace pro Android for Work](afw-app-configuration-policy.md).
 
 ## <a name="email-configuration"></a>Konfigurace e-mailu
 
@@ -77,7 +77,7 @@ Na zařízeních s Androidem for Work jsou k dispozici stejné možnosti konfigu
 
 Přečtěte si další informace [o profilech certifikátů](secure-resource-access-with-certificate-profiles.md).
 
-## <a name="wifi-profiles"></a>Profily sítě Wi-Fi
+## <a name="wi-fi-profiles"></a>Profily sítě Wi-Fi
 
 U profilů Wi-Fi spravovaných Androidem for Work je zaručené, že se po vyřazení zařízení z Intune a odstranění pracovního profilu odeberou. Přečtěte si další informace o [profilech Wi-Fi](wi-fi-connections-in-microsoft-intune.md).
 
@@ -87,6 +87,6 @@ U profilů Wi-Fi spravovaných Androidem for Work je zaručené, že se po vyřa
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO5-->
 
 

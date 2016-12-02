@@ -3,8 +3,7 @@
 title: "Instalace softwarového klienta na počítači | Microsoft Intune"
 description: "Tento průvodce vám pomůže se správou počítače s Windows klientským softwarem Microsoft Intune."
 keywords: 
-author: NathBarn
-manager: arob98
+author: staciebarker
 ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
@@ -14,8 +13,8 @@ ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 738b6bedcefbfd8bf0fa7bde5b86c79293af527e
-ms.openlocfilehash: 7d239a80ed68d39b2a7179a45178ba6ae11c5423
+ms.sourcegitcommit: 103e7065d1e2c3281f8f04808ee2546d3c7e2b53
+ms.openlocfilehash: 32af8a615453b8c72e704f40dcdf0de6fbf10907
 
 
 ---
@@ -104,7 +103,7 @@ Když je úloha automatické registrace spuštěná v příští naplánovanou d
 
 Úloha automatické registrace Intune, hodnota registru **WindowsIntuneEnrollPending** a certifikát účtu se po úspěšné registraci nebo po jednom měsíci vymažou z cílového počítače (podle toho, která z těchto situací nastane první).
 
-## <a name="instruct-users-to-selfenroll"></a>Pokyny pro uživatele, jak se zaregistrovat sami
+## <a name="instruct-users-to-self-enroll"></a>Pokyny pro uživatele, jak se zaregistrovat sami
 
 Uživatelé můžou nainstalovat klientský software Intune tak, že přejdou na [web Portál společnosti](http://portal.manage.microsoft.com). Pokud webový portál dokáže zařízení identifikovat jako počítač se systémem Windows, zobrazí uživatelům výzvu, aby počítač zaregistrovali pomocí staženého klientského softwaru Intune. Po stažení můžou uživatelé software nainstalovat a zahrnout tak svoje počítače do správy.
 
@@ -139,6 +138,6 @@ Pomocí některého z následujících postupů můžete sledovat a ověřit ús
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO5-->
 
 
