@@ -14,8 +14,8 @@ ms.assetid: 2b60bbff-25e6-489b-9621-c71b4275fa06
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d44a6494bed0758b9768045bd204ea0eb481636
-ms.openlocfilehash: 7577cbab528d88635e8551bf8de1ffd49becaa84
+ms.sourcegitcommit: cfbf04627892dd700d2e31fabe8bca357f692d51
+ms.openlocfilehash: 2c8dc4917c3ef85955f017c4619c0d7496d03dbf
 
 
 ---
@@ -52,15 +52,17 @@ Přečtěte si, jak [používat čísla IMEI k označení zařízení vlastněn�
 
 ## <a name="identify-a-device-as-corporate-owned"></a>Identifikace zařízení vlastněných společností
 
-V seznamu zařízení má **Vlastnictví** hodnotu **Firemní**. Zařízení vlastněné společností má jednu z těchto vlastností:
+Intune rozpozná zařízení jako „firemní“, když platí některá z těchto podmínek:
 
- - K registraci zařízení byl [použit účet DEM](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md).
- - K registraci zařízení byl [použit program Apple DEP](ios-device-enrollment-program-in-microsoft-intune.md) nebo [Apple Configurator](ios-setup-assistant-enrollment-in-microsoft-intune.md).
- - Výrobce zařízení používá k [označení čísla IMEI](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md).
- - Zařízení je zaregistrované v [Azure Active Directory nebo v Enterprise Mobility Suite jako zařízení s Windows 10 Enterprise](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview).
+ - K registraci zařízení byl [použit účet DEM](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md) (všechny platformy).
+ - K registraci zařízení byl [použit program Apple DEP](ios-device-enrollment-program-in-microsoft-intune.md) nebo [Apple Configurator](ios-setup-assistant-enrollment-in-microsoft-intune.md) (jenom iOS).
+ - Výrobce zařízení používá k [označení čísla IMEI](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md) (všechny platformy s čísly IMEI).
+ - Zařízení je zaregistrované v [Azure Active Directory nebo v Enterprise Mobility Suite jako zařízení s Windows 10 Enterprise](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview) (jenom Windows 10).
+
+Když je zařízení označené jako firemní, zobrazuje se u záznamu daného zařízení v konzole pro správu ve sloupci **Vlastnictví** položka **Firemní**. 
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 

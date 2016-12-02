@@ -14,15 +14,15 @@ ms.assetid: a23abc61-69ed-44f1-9b71-b86aefc6ba03
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 289e6019aa1a17deb91b38ed32f0432af0902a9d
-ms.openlocfilehash: 51e5f248c5e8759d5992918a99e1f114e2614142
+ms.sourcegitcommit: 656c93771776fd317f2b8d91bc59125fba1eb0b9
+ms.openlocfilehash: 83b89d06793f6f3934537408fb600b3b89afd35b
 
 
 ---
 
 
-# <a name="enroll-corporateowned-devices-with-the-device-enrollment-manager-in-microsoft-intune"></a>Registrace firemních zařízení pomocí správce registrace zařízení v Microsoft Intune
-Organizace můžou pomocí Intune spravovat velké počty mobilních zařízení s jediným uživatelským účtem. Účet *správce registrace zařízení* je speciální účet Intune, který může registrovat až 1000 zařízení. Zařízení zaregistrovaná pomocí účtu správce registrace zařízení doporučujeme používat jako sdílená zařízení, nikoli jako osobní zařízení („BYOD“). Uživatelé například nebudou moci používat „nativní“ e-mailové aplikace.
+# <a name="enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune"></a>Registrace firemních zařízení pomocí správce registrace zařízení v Microsoft Intune
+Organizace můžou pomocí Intune spravovat velké počty mobilních zařízení s jediným uživatelským účtem. Účet *správce registrace zařízení* je speciální účet Intune, který může registrovat až 1000 zařízení. Každé zaregistrované zařízení používá jednu licenci. Zařízení zaregistrovaná pomocí účtu správce registrace zařízení doporučujeme používat jako sdílená zařízení, nikoli jako osobní zařízení („BYOD“). Uživatelé například nebudou moci používat „nativní“ e-mailové aplikace. Licencování pro DEM je vázané na zařízení, ne na uživatele.
 
 Uživatelský účet správce registrace zařízení můžete například přiřadit manažerovi nebo vedoucímu obchodu, aby mohli provádět následující:
 
@@ -70,7 +70,7 @@ Zařízení zaregistrovaná pomocí účtu správce registrace zařízení mají
 
 7.  Zadejte **ID uživatele** účtu Intune a zvolte **OK**. Správce registrace zařízení nemůže být správcem služby Intune.
 
-8.  Správce registrace zařízení teď může registrovat mobilní zařízení stejným postupem, jaký používá koncový uživatel ve scénáři BYOD na webu Portál společnosti.
+8.  Správce registrace zařízení teď může registrovat mobilní zařízení stejným postupem, jaký používá koncový uživatel ve scénáři BYOD na webu Portál společnosti. Koncový uživatel, který je správcem, může nainstalovat aplikaci Portál společnosti a zaregistrovat zařízení pomocí svých přihlašovacích údajů DEM až na 1000 zařízení.
 
 ## <a name="delete-a-device-enrollment-manager-from-intune"></a>Odstranění správce registrace zařízení ze služby Intune
 
@@ -96,6 +96,6 @@ Odstranění správce registrace zařízení nemá vliv na zaregistrovaná zař�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

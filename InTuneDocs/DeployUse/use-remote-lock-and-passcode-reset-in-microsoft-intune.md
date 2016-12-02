@@ -13,8 +13,8 @@ ms.technology:
 ms.assetid: 970f8c81-7c7f-4789-9ed4-2133d50b9db6
 ms.reviewer: chrisgre
 translationtype: Human Translation
-ms.sourcegitcommit: b76e9e16ef1fa6870783326630ae74d07ae59cbb
-ms.openlocfilehash: f69855f27ddc8ab6903c317383ef715f98590caf
+ms.sourcegitcommit: aae739b5ea8640449f180535a6d8f1550c7ae228
+ms.openlocfilehash: 8dc7f1c7eb32828854b4e2309c915f4fd0cba9a2
 
 ---
 # <a name="help-protect-your-devices-with-remote-lock-and-passcode-reset"></a>Chraňte svá zařízení pomocí vzdáleného zámku a resetování hesla
@@ -25,12 +25,13 @@ Pokud uživatel ztratí zařízení, můžete ho vzdáleně zamknout. Následuj�
 
 |Platforma|Vzdálené uzamčení|
 |------------|---------------|
+|macOS|Není podporované|
 |iOS|Podporováno|
 |Android|Podporováno|
 |Windows 10 a Windows 10 Mobile|Podporováno|
 |Windows Phone 8 a Windows Phone 8.1|Podporováno|
 |Windows RT 8.1 a Windows RT|Podporované, pokud je aktuální uživatel zařízení stejný jako uživatel, který ho zaregistroval.|
-|Windows 8.1|Podporované, pokud je aktuální uživatel zařízení stejný jako uživatel, který ho zaregistroval.|
+|Windows 8.1|Podporované, pokud je aktuální uživatel zařízení stejný jako uživatel, který ho zaregistroval.|
 
 Vzdálené uzamčení není podporované u počítačů s Windows, které jsou registrované pomocí klientského softwaru Intune.
 
@@ -50,12 +51,14 @@ Pokud uživatel zapomene heslo, můžete mu pomoct tím, že heslo ze zařízen�
 
 |Platforma|Resetování hesla|
 |------------|------------------|
+|macOS|Není podporované|
 |iOS|Je podporované vymazání hesla ze zařízení. Nevytvoří nové dočasné heslo.|
 |Android|Podporováno ve verzích starších než Android 7.0. Vytvoří dočasné heslo.|
 |Windows 10 Mobile|Podporováno|
 |Windows Phone 8 a Windows Phone 8.1|Podporováno|
-|Windows RT 8.1 a Windows RT|Není podporované|
-|Windows 8.1|Není podporované|
+|Windows RT 8.1|Není podporované|
+|Windows 8.1|Není podporované|
+|Stolní počítač s Windows 10|Není podporované|
 
 Resetování hesla není podporované u počítačů s Windows, které jsou registrované pomocí klientského softwaru Intune.
 
@@ -76,6 +79,6 @@ Resetování hesla není podporované u počítačů s Windows, které jsou regi
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 

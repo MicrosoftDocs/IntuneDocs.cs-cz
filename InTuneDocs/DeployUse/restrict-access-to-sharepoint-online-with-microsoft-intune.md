@@ -5,7 +5,7 @@ keywords:
 author: karthikaraman
 ms.author: karaman
 manager: angrobe
-ms.date: 07/13/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ab341e0b80f1b8a19c434a2fd4f0c78acab77fe4
-ms.openlocfilehash: f0bbc66b87a555e3607effa820fc3b5534923729
+ms.sourcegitcommit: 4f6e7525ae2a125851ad402644d5fbc8767c77dc
+ms.openlocfilehash: 9bfc8886b464452f8fe35d4b740607ef3bc07a71
 
 
 ---
 
-# Omezení přístupu ke službě SharePoint Online pomocí Microsoft Intune
+# <a name="restrict-access-to-sharepoint-online-with-microsoft-intune"></a>Omezení přístupu ke službě SharePoint Online pomocí Microsoft Intune
 Pro řízení přístupu k souborům umístěným ve službě SharePoint online použijte podmíněný přístup [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)].
 Podmíněný přístup má dvě součásti:
 - Zásady dodržování předpisů zařízení, které zařízení musí dodržovat, aby mohlo být považované za vyhovující.
@@ -51,16 +51,16 @@ Stav zařízení je uložený ve službě Azure Active Directory, která uděluj
 
 Pokud není podmínka splněná, zobrazí se uživateli při přihlášení jedna z následujících zpráv:
 
--   Pokud zařízení není zaregistrované v [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] nebo v Azure Active Directory, zobrazí se zpráva s pokyny pro instalaci aplikace portálu společnosti a registraci.
+-   Pokud zařízení není zaregistrované v [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] nebo v Azure Active Directory, zobrazí se zpráva s pokyny pro instalaci aplikace Portál společnosti a registraci.
 
--   Pokud zařízení není kompatibilní, zobrazí se zpráva, která uživatele přesměruje na web portálu společnosti [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] , kde najde informace o problému a jeho řešení.
+-   Pokud zařízení není kompatibilní, zobrazí se zpráva, která uživatele přesměruje na web Portál společnosti [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] , kde najde informace o problému a jeho řešení.
 
-**Podmíněný přístup se vynucuje pro všechny weby SharePointu a externí sdílení je blokované.**
+**Podmíněný přístup se nevztahuje na externí sdílení**. Informace o tom, jak zabránit externímu sdílení ve vašem tenantovi nebo kolekci webů, najdete v tématu [Správa externích sdílení pro prostředí SharePointu Online](https://support.office.com/en-us/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85?ui=en-US&rs=en-US&ad=US).
 
 >[!NOTE]
 >Pokud povolíte podmíněný přístup pro SharePoint Online, doporučujeme zakázat doménu v seznamu, jak je popsáno v tématu [Remove-SPOTenantSyncClientRestriction](https://technet.microsoft.com/en-us/library/dn917451.aspx).  
 
-## Podpora mobilních zařízení
+## <a name="support-for-mobile-devices"></a>Podpora mobilních zařízení
 - iOS 8.0 a novější
 - Android 4.0 nebo novější, Samsung Knox Standard 4.0 nebo novější
 - Windows Phone 8.1 nebo novější
@@ -72,7 +72,7 @@ Můžete omezit přístup k SharePoint Online při přístupu z prohlížeče v 
 
 **Nepodporované prohlížeče budou zablokovány**.
 
-## Podpora počítačů
+## <a name="support-for-pcs"></a>Podpora počítačů
 - Windows 8.1 nebo novější (při registraci v Intune)
 - Windows 7.0, Windows 8.1 nebo Windows 10 (při připojení k doméně)
 > [!NOTE]
@@ -92,9 +92,9 @@ Pro zákazníky Intune a Office 365 je služba AAD DRS aktivovaná automaticky. 
     Moderní ověřování poskytuje klientům Office 2013 Windows přihlašování založené na ADAL (Active Directory Authentication Library) a umožňuje lepší zabezpečení, jako je **vícefaktorové ověřování** a **ověřování prostřednictvím certifikátu**.
 
 
-## Konfigurace podmíněného přístupu pro SharePoint Online
+## <a name="configure-conditional-access-for-sharepoint-online"></a>Konfigurace podmíněného přístupu pro SharePoint Online
 
-### Krok 1: Konfigurace skupin zabezpečení služby Active Directory
+### <a name="step-1-configure-active-directory-security-groups"></a>Krok 1: Konfigurace skupin zabezpečení služby Active Directory
 Než začnete, nakonfigurujte pro skupiny zabezpečení služby Azure Active Directory zásadu podmíněného přístupu. Tyto skupiny můžete nakonfigurovat v **Centru pro správu Office 365**nebo na **Portálu účtů Intune**. Tyto skupiny se použijí k cílení nebo vyloučení uživatelů ze zásady. Pokud je uživatel cílem zásady, musí každé jím používané zařízení splňovat zásady, aby měl přístup k prostředkům.
 
 V rámci zásad SharePointu Online můžete zadat dva typy skupin:
@@ -105,7 +105,7 @@ V rámci zásad SharePointu Online můžete zadat dva typy skupin:
 
 Pokud je uživatel v obou skupinách, bude ze zásad vyloučený.
 
-### Krok 2: Konfigurace a nasazení zásad dodržování předpisů
+### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>Krok 2: Konfigurace a nasazení zásad dodržování předpisů
 Pokud jste to ještě neudělali, vytvořte a nasaďte zásady dodržování předpisů pro uživatele, na které bude zásada SharePointu Online cílit.
 
 > [!NOTE]
@@ -118,7 +118,7 @@ Podrobnosti o konfiguraci zásad dodržování předpisů najdete v tématu věn
 
 Až budete připravení, pokračujte **Krokem 3**.
 
-### Krok 3: Konfigurace zásad SharePointu Online
+### <a name="step-3-configure-the-sharepoint-online-policy"></a>Krok 3: Konfigurace zásad SharePointu Online
 V dalším kroku nakonfigurujte zásadu, která bude vyžadovat, aby měla k SharePointu Online přístup jenom spravovaná zařízení, která jsou v souladu s předpisy. Tato zásada bude uložená v Azure Active Directory.
 
 #### <a name="bkmk_spopolicy"></a>
@@ -148,9 +148,9 @@ V dalším kroku nakonfigurujte zásadu, která bude vyžadovat, aby měla k Sha
 
      Počítače s Windows musí buď připojené k doméně, nebo zaregistrované v [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] a v souladu s předpisy. Můžete nastavit následující požadavky:
 
-     -   **Zařízení musí být připojené k doméně nebo splňovat předpisy.** Tuto možnost vyberte, pokud chcete, aby počítače byly buď připojené k doméně, nebo splňovaly zásady nastavené v [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Pokud počítač některý z těchto požadavků nesplňuje, zobrazí se uživateli výzva k registraci zařízení ve službě [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+     -   **Zařízení musí být přidané do domény nebo vyhovovat předpisům.** Tuto možnost vyberte, pokud chcete, aby počítače byly buď připojené k doméně, nebo splňovaly zásady nastavené v [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Pokud počítač některý z těchto požadavků nesplňuje, zobrazí se uživateli výzva k registraci zařízení ve službě [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
-     -   **Zařízení musí být připojené k doméně.** Tuto možnost vyberte, pokud chcete, aby počítače musely být pro přístup k Exchangi Online připojené k doméně. Pokud počítač není připojený k doméně, je přístup k e-mailu blokovaný a uživatel je vyzván, aby se obrátil na správce IT.
+     -   **Zařízení musí být přidané do domény.** Tuto možnost vyberte, pokud chcete, aby počítače musely být pro přístup k Exchangi Online připojené k doméně. Pokud počítač není připojený k doméně, je přístup k e-mailu blokovaný a uživatel je vyzván, aby se obrátil na správce IT.
 
      -   **Zařízení musí splňovat předpisy.** Tuto možnost vyberte, pokud chcete, aby počítače musely být zaregistrované v [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] a splňovat předpisy. Pokud počítač není zaregistrovaný, zobrazí se zpráva s pokyny, jak registraci provést.
 
@@ -162,13 +162,13 @@ V dalším kroku nakonfigurujte zásadu, která bude vyžadovat, aby měla k Sha
   3.    Stiskněte tlačítko **Povolit přístup z prohlížeče**.
   4.  V prohlížeči Chrome se odhlaste z Office 365 a znovu spusťte Chrome.
 
-  Na platformách **iOS a Android**: Kvůli identifikaci zařízení použitého pro přístup ke službě vydá Azure Active Directory pro příslušné zařízení certifikát TLS (Transport Layer Security).  Zařízení zobrazí certifikát s výzvou pro koncového uživatele k výběru certifikát, jak je vidět na následujících snímcích obrazovky. Koncový uživatele musí tento certifikát vybrat, než bude moci pokračovat v používání prohlížeče.
+  Na platformách **iOS a Android**: Kvůli identifikaci zařízení použitého pro přístup ke službě vydá Azure Active Directory pro příslušné zařízení certifikát TLS (Transport Layer Security).  Zařízení zobrazí certifikát s výzvou pro koncového uživatele k výběru certifikát, jak je vidět na následujících snímcích obrazovky. Předtím, než bude moci pokračovat v používání prohlížeče, musí koncový uživatel vybrat certifikát.
 
   **iOS**
 
-  ![snímek obrazovky s výzvou ohledně certifikátu řádku v zařízení iPad](../media/mdm-browser-ca-ios-cert-prompt.png)
+  ![snímek obrazovky s výzvou k výběru certifikátu na iPadu](../media/mdm-browser-ca-ios-cert-prompt.png)
 
-  **Android**
+  **Androidemem**
 
   ![snímek obrazovky s výzvou ohledně certifikátu řádku v zařízení s Androidem](../media/mdm-browser-ca-android-cert-prompt.png)
 5.  V části **Cílové skupiny** zvolte **Upravit** a vyberte skupiny zabezpečení Azure Active Directory, na které se zásady vztahují. Můžete cílit na všechny uživatele nebo vybrané skupiny uživatelů.
@@ -179,7 +179,7 @@ V dalším kroku nakonfigurujte zásadu, která bude vyžadovat, aby měla k Sha
 
 Zásady podmíněného přístupu není potřeba nasazovat, projeví se okamžitě.
 
-### Krok 4: Sledování dodržování předpisů a zásad podmíněného přístupu
+### <a name="step-4-monitor-the-compliance-and-conditional-access-policies"></a>Krok 4: Sledování dodržování předpisů a zásad podmíněného přístupu
 V pracovním prostoru **Skupiny** se můžete podívat na stav svých zařízení.
 
 Vyberte libovolnou skupinu mobilních zařízení a pak na kartě **Zařízení** vyberte jeden z následujících **filtrů**:
@@ -190,11 +190,11 @@ Vyberte libovolnou skupinu mobilních zařízení a pak na kartě **Zařízení*
 
 -   **Zařízení zaregistrovaná v AAD a vyhovující předpisům:** Tato zařízení mají přístup k SharePointu Online.
 
-### Související témata
+### <a name="see-also"></a>Viz taky
 [Omezení přístupu k e-mailu a službám O365 pomocí Microsoft Intune](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO4-->
 
 
