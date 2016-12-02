@@ -1,9 +1,9 @@
 # [Porozumění a prozkoumávání](/intune/understand-explore/introduction-to-microsoft-intune)
-# [Začínáme](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
+# [Začínáme](/intune/get-started/get-started)
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
 
 # [Novinky](/intune/whats-new/whats-new-in-microsoft-intune)
-# [Nasazení a používání](overview-of-device-and-app-lifecycles-in-microsoft-intune.md)
+# Nasazení a používání
 ## [Přehled životních cyklů zařízení a aplikací](overview-of-device-and-app-lifecycles-in-microsoft-intune.md)
 ### [Životní cyklus zařízení](overview-of-device-lifecycle-in-microsoft-intune.md)
 ### [Životní cyklus aplikace](overview-of-app-lifecycle-in-microsoft-intune.md)
@@ -89,7 +89,7 @@
 ### [Zásady konfigurace aplikací pro Android for Work](afw-app-configuration-policy.md)
 ### [Profily zřizování mobilních aplikací pro iOS](ios-mobile-app-provisioning-profiles.md)
 ### [Správa přístupu k internetu](manage-internet-access-using-managed-browser-policies.md)
-
+### [Instalace obchodních aplikací bokem (mimo Store)](sideload-apps-for-windows.md)
 
 ## [Ochrana aplikací a dat](protect-apps-and-data-with-microsoft-intune.md)
 ### [Zásady dodržování předpisů pro zařízení](introduction-to-device-compliance-policies-in-microsoft-intune.md)
@@ -154,6 +154,6 @@
 # [Řešení problémů](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO4-->
 
 

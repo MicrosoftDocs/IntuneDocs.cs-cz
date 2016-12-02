@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 11/22/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,28 @@ ms.assetid: 5fdf98c8-fe67-4d7a-9837-ed1234348014
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0d422b421c3716ad576c4fc565b181dec28c947e
-ms.openlocfilehash: 5972910bf64274685298877da9bf4a0a6c5fd626
+ms.sourcegitcommit: 4f8db75ed17e70dae5d3507b6af33a835c1658e9
+ms.openlocfilehash: 5195de40f35085c45ae63957da1a9058ed7d6493
 
 
 ---
 
 
-# Vytvoření skupiny pro uspořádání uživatelů a zařízení
+# <a name="create-groups-to-organize-users-and-devices"></a>Vytvoření skupiny pro uspořádání uživatelů a zařízení
 Skupiny v Intune poskytují flexibilitu pro správu zařízení a uživatelů. Můžete nastavit skupiny podle potřeb vaší organizace (třeba podle zeměpisné polohy, oddělení nebo vlastností hardwaru) a použít je k provádění široké škály úloh správy od nasazení zásad pro víc uživatelů až po nasazení aplikací na skupinu zařízení.
+
+## <a name="group-management-moving-to-azure-ad"></a>Přesunutí správy služeb do Azure AD
+
+**Od listopadu 2016** budou nové účty spravovat skupiny uživatelů a zařízení na portálu Azure Active Directory (AD). V prosinci 2016 začne produktový tým Intune s migrací stávajících zákazníků na novou správu na základě skupin Azure AD. Všechny skupiny uživatelů a zařízení budou migrovány na skupiny zabezpečení služby Azure AD. Migraci zahájíme až ve chvíli, kdy co nejvíce minimalizujeme veškerý dopad, který by mohla mít na vaši každodenní práci. Očekáváme, že na vaše uživatele nebude mít dopad žádný. Před zahájením migrace vašeho účtu vám navíc pošleme upozornění.
+
+
+>[!IMPORTANT]
+>
+>Pokud na portálu Intune otevřete pracovní prostor Skupiny a uvidíte zprávu **Uživatelské skupiny Intune se teď spravují jako skupiny v Azure Active Directory** s odkazem na portál Azure Active Directory, znamená to, že už používáte *nový* přístup ke správě skupin v Intune – na základě skupin zabezpečení Azure AD. Informace o tom, jak vytvářet skupiny, najdete v části [Správa skupin v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-accessmanagement-manage-groups).
+>
+>Pokud se vám odkaz na portál Azure AD nezobrazí, znamená to, že ke správě skupin pořád používáte portál Intune.
+
+## <a name="group-management-in-the-intune-portal"></a>Správa skupin na portálu Intune
 
 Skupiny zařízení i uživatelů se vytvářejí v pracovním prostoru SKUPINY konzoly pro správu Intune.
 
@@ -33,7 +46,7 @@ Skupiny zařízení i uživatelů se vytvářejí v pracovním prostoru SKUPINY 
 > Další informace o používání skupin najdete v tématu [Použití skupin pro správu uživatelů a zařízení s Microsoft Intune](/intune/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
 
 
-## Vytvoření skupiny zařízení
+## <a name="create-a-device-group"></a>Vytvoření skupiny zařízení
 Skupiny zařízení použijte k nasazení aplikací a aktualizací a konfiguraci dalších funkcí. Můžete třeba nastavit skupinu Moje zařízení podle těchto kroků:
 
 1.  V [konzole pro správu Intune](https://manage.microsoft.com/) zvolte **Skupiny** > **Přehled** > **Vytvořit skupinu**.
@@ -48,7 +61,7 @@ Skupiny zařízení použijte k nasazení aplikací a aktualizací a konfiguraci
 
 Nově vytvořenou skupinu najdete v seznamu **Skupiny** v pracovním prostoru **Skupiny** v části **Všechna zařízení**. Tady můžete skupinu i upravit nebo odstranit.
 
-## Vytvoření skupiny uživatelů
+## <a name="create-a-user-group"></a>Vytvoření skupiny uživatelů
 Skupiny uživatelů můžete použít k nasazení softwaru a zásad zařízení. Můžete třeba nastavit skupinu Uživatelé Intune podle těchto kroků:
 
 1.  V [konzole pro správu Intune](https://manage.microsoft.com/) zvolte **Skupiny** > **Přehled** > **Vytvořit skupinu**.
@@ -67,7 +80,7 @@ Nově vytvořenou skupinu najdete v seznamu **Skupiny** v pracovním prostoru **
 
 
 
-### Další kroky
+### <a name="next-steps"></a>Další kroky
 Gratulujeme! Právě jste dokončili krok 5 *úvodní příručky Intune*.
 
 >[!div class="step-by-step"]
@@ -76,6 +89,6 @@ Gratulujeme! Právě jste dokončili krok 5 *úvodní příručky Intune*.
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO4-->
 
 
