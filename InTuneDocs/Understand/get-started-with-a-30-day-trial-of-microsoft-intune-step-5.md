@@ -1,69 +1,13 @@
 ---
-title: "Registrace mobilních zařízení testování | Microsoft Intune"
-description: "Registrace mobilních zařízení a instalace aplikace při registraci bezplatné 30denní zkušební verze Intune"
-keywords: 
-author: lindavr
-ms.author: lindavr
-manager: angrobe
-ms.date: 08/09/2016
-ms.topic: get-started-article
-ms.prod: 
-ms.service: microsoft-intune
-ms.technology: 
-ms.assetid: 47806f69-303d-41d9-9b0e-9b9445ea24ac
-ms.reviewer: jeffgilb
-ms.suite: ems
+redirect_url: https://docs.microsoft.com/intune/understand-explore/mobile-device-management-trial-guide-microsoft-intune
 translationtype: Human Translation
-ms.sourcegitcommit: 581e880fa4308ec627f5b2c1242fb5b30b713743
-ms.openlocfilehash: 7bd5f5d8f4931133a8ef1e697b2fec4cccd07b83
-
+ms.sourcegitcommit: b2e666c0a448d2b851f44ffa896db193248bb056
+ms.openlocfilehash: 45a97d0fcaf095be171bb43751abbf0f351fadf3
 
 ---
 
-# Registrace mobilních zařízení testování a instalace aplikace
-Abyste v Intune nastavili správu mobilních zařízení, musíte nejdřív nastavit autoritu pro správu mobilního zařízení, povolit správu pro platformu zařízení a zaregistrovat svoje zařízení v aplikaci Portál společnosti. Pak můžete nasadit aplikaci Microsoft Skype, kterou jste publikovali.
-
-## Připravte službu na správu zařízení
-
-1.  **Nastavení Intune jako autority pro správu mobilního zařízení**
-
-    V [konzole pro správu Intune](https://manage.microsoft.com/) zvolte **Správce** &gt; **Správa mobilních zařízení**. Vyberte **Úlohy** > **Nastavit autoritu MDM** a potom vyberte **Ano** v dialogovém okně **Autorita MDM**.
-
-2.  **Povolení MDM pro platformu zařízení**
-
-    Povolte správu mobilních zařízení pro platformu zařízení, kterou chcete spravovat. V závislosti na platformě je potřeba splnit různé požadavky:
-
-    -   **iOS a Mac OS X**: Další informace najdete v tématu [Nastavení správy pro iOS a Mac pomocí Microsoft Intune](/Intune/Deploy-Use/set-up-ios-and-mac-management-with-microsoft-intune).
-
-    -   **Android**: Mobilní zařízení s Androidem umožňují uživatelům registraci pomocí aplikace Portál společnosti dostupné na webu Google Play. Žádná další konfigurace v Intune se nevyžaduje.
-
-    -   **Windows Phone**: Další informace najdete v tématu [Nastavení správy pro zařízení Windows Phone v Microsoft Intune](/Intune/Deploy-Use/set-up-windows-phone-management-with-microsoft-intune).
-
-## Registrace testovacích zařízení
-
-### iOS a Mac OS X
-Nainstalujte si aplikaci **Portál společnosti služby Microsoft Intune** od Microsoft Corporation dostupnou na App Storu a přihlaste se pomocí uživatelských přihlašovacích údajů Intune přidaných nahoře. Abyste přidali svoje zařízení, zobrazte **Registrovaná zařízení** .
-
-### Android
-Nainstalujte si aplikaci **Portál společnosti Intune** od Microsoft Corporation dostupnou na [Google Play](http://go.microsoft.com/fwlink/p/?LinkId=386612) a přihlaste se pomocí uživatelských přihlašovacích údajů Intune přidaných nahoře.
-
-### Windows Phone 8.1
-Uživatelé si instalují aplikaci **Portál společnosti** od Microsoft Corporation dostupnou na Windows Phone Storu a přihlašují se pomocí uživatelských přihlašovacích údajů Intune přidaných nahoře.  Abyste přidali svoje zařízení, zobrazte **Registrovaná zařízení** .
-
-## Instalace dříve nasazené aplikace
-Na mobilním zařízení otevřete portál společnosti, zvolte **Aplikace** a pak nainstalujte **Microsoft Skype**.
-
-Další informace o správě mobilních zařízení pomocí Intune najdete v tématu [Příprava registrace zařízení v Microsoft Intune](/Intune/deploy-use/prerequisites-for-enrollment).
-
-### Další kroky
-Gratulujeme! Právě jste dokončili krok 5 příručky pro *testování Microsoft Intune*.
-
->[!div class="step-by-step"]
-
->[&larr;**Vytváření zásad**](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-4.md)     [**Možnosti a funkce** &rarr;](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-6.md)  
 
 
-
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO5-->
 
 
