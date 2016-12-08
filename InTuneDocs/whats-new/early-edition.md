@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/22/2016
+ms.date: 11/30/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f287a0ad082fa20a2e84abbf8f5585117aae6f57
-ms.openlocfilehash: e604b8809bd444d9069d449a6c691a8444296623
+ms.sourcegitcommit: 6dd584397451d38be86fa0780efff435ffb9b2af
+ms.openlocfilehash: d70ebf87bc930f853741ddc0d572d2174c636dac
 
 
 ---
@@ -51,6 +51,13 @@ Teď můžete vynutit vícefaktorové ověřování (MFA) u vybrané skupiny už
 ### <a name="conditional-access-for-mam-with-sharepoint-online---vso-679339--"></a>Podmíněný přístup k SharePointu Online pro MAM <!--VSO 679339-->
 Aplikacím, které nejsou podporované v zásadách správy mobilních aplikací (MAM) Intune, můžete přístup k SharePointu Online zablokovat.  Na webu Azure Portal můžete začít používat správu mobilních aplikací Intune. Vyhledejte v okně __Nastavení__ část __Podmíněný přístup__, ve které bude možnost pro SharePoint Online. Tato funkce se bude dodávat odděleně od zbývajících součástí vydání služby.
 
+### <a name="ability-to-restrict-intune-mobile-device-enrollment"></a>Možnost omezení registrace mobilního zařízení do Intune
+Intune přidává nová omezení registrace řídící to, které platformy mobilních zařízení se mohou zaregistrovat. Intune odděluje platformy mobilních zařízení, jako je iOS, macOS, Android, Windows a Windows Mobile. 
+* Platformám macOS a Windows 8.1 nebo vyšší verzi je možné registraci ve formě platformy mobilního zařízení zakázat. 
+* Zákaz registrace mobilních zařízení neomezuje registraci agenta počítače. 
+* Pouze pro iOS existuje další možnost blokování registrace osobně vlastněných zařízení. Pokud správce IT neoznačí nová zařízení jako vlastněná podnikem, Intune všechna nová zařízení označí jako osobní. Podrobnosti najdete v [tomto článku](https://docs.microsoft.com/en-us/intune/deploy-use/manage-corporate-owned-devices).
+
+
 ## <a name="notices"></a>Sdělení
 
 ### <a name="multi-factor-authentication-on-enrollment-moving-to-the-azure-portal---vso-750545--"></a>Vícefaktorové ověřování při registraci se přesouvá na Azure Portal <!--VSO 750545-->
@@ -82,6 +89,6 @@ Podrobnosti o posledním vývoji najdete v tématu [Co je nového v Microsoft In
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Nov16_HO5-->
 
 
