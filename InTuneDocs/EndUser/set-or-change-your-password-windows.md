@@ -1,11 +1,11 @@
 ---
-title: "Nastavení nebo změna vašeho přístupového kódu | Microsoft Intune"
+title: "Nastavení nebo změna hesla | Microsoft Intune"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,19 +13,20 @@ ms.technology:
 ms.assetid: c4801a78-580e-4e3d-beca-0b09b9b2437c
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 56f2cd4b92a383bc801cfb02ffde3d092f059d44
+ms.sourcegitcommit: 6a5bf59f3ef25df590625033fca4c114c3ace62f
+ms.openlocfilehash: 9a2f435220b9b2d4304f78e30cf152a4bb2af0c6
 
 
 ---
 
-# <a name="set-or-change-your-passcode"></a>Nastavení nebo změna vašeho přístupového kódu
+# <a name="make-your-device-safer-with-the-right-password"></a>Zlepšení zabezpečení zařízení pomocí správného hesla
+
+Uživatelé potřebují každý den přistupovat ze svých zařízení se systémem Windows k podnikovým prostředkům, například k e-mailům a dokumentům. Organizace chtějí zajistit, aby byl přístup z těchto zařízení bezpečný. Jedním ze způsobů, jak zajistit bezpečný přístup zařízení k těmto prostředkům, je vyžadování použití hesla.
 
 Pokud zařízení s Windows nevyhovuje zásadám definovaným správcem IT, zobrazí se zpráva, která stručně popisuje problém a vysvětluje, co potřebujete udělat, aby heslo splňovalo požadavky.
 
-Správce IT může pro heslo nastavit více požadavků. Může například požadovat, aby heslo mělo určitý počet znaků, které představují kombinaci číslic a písmen. Vzhledem k tomu, že může být nastaveno více požadavků, vysvětlují tyto pokyny jenom to, jak heslo nastavit nebo změnit. Nevysvětlují všechny možné kombinace požadavků.
-
-Pokud máte potíže s nastavením vhodného hesla, které splňuje všechny požadavky, obraťte se na správce IT a požádejte ho o pomoc.
+> [!Note]
+> Správce IT může pro heslo nastavit více požadavků. Může například požadovat, aby heslo mělo určitý počet znaků, které představují kombinaci číslic a písmen. Vzhledem k tomu, že může být nastaveno více požadavků, vysvětlují tyto pokyny jenom to, jak heslo nastavit nebo změnit. Nevysvětlují všechny možné kombinace požadavků.
 
 ## <a name="to-change-your-password-on-windows-phone-81"></a>Změna hesla ve Windows Phone 8.1
 
@@ -46,6 +47,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaj
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO5-->
 
 
