@@ -14,13 +14,13 @@ ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 71237aabac763e33d7973d0d169291bd7fa1df32
+ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
 ms.openlocfilehash: ad5bb09eb18463f541ca0cbb60ff1f27bdc3251e
 
 
 
 ---
-# <a name="use-a-custom-policy-to-create-a-wifi-profile-with-a-preshared-key"></a>Použití vlastní zásady k vytvoření profilu sítě Wi-Fi s předsdíleným klíčem
+# <a name="use-a-custom-policy-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Použití vlastní zásady k vytvoření profilu sítě Wi-Fi s předsdíleným klíčem
 Zde je postup používání **Vlastní konfigurace** služby Intune k vytvoření profilu sítě Wi-Fi s předsdíleným klíčem. Toto téma obsahuje také příklad vytvoření profilu Wi-Fi založeného na protokolu EAP.
 
 > [!NOTE]
@@ -58,7 +58,7 @@ Nezapomeňte použít tečku na začátku.
     > Tuto zásadu lze nasadit pouze do skupin uživatelů.
 
 Pro každé zařízení, které se příště vrátí se změnami, se použijí zásady a vytvoří se pro ně profil Wi-Fi. Zařízení se bude moct připojit k síti automaticky.
-## <a name="android-or-windows-wifi-profile"></a>Profil Wi-Fi pro Android nebo Windows
+## <a name="android-or-windows-wi-fi-profile"></a>Profil Wi-Fi pro Android nebo Windows
 
 Zde je příklad kódu XML pro profil Wi-Fi pro Android nebo Windows:
 
@@ -109,7 +109,7 @@ Zde je příklad kódu XML pro profil Wi-Fi pro Android nebo Windows:
       </MSM>
     </WLANProfile>
 
-## <a name="eapbased-wifi-profile"></a>Profil Wi-Fi založený na protokolu EAP
+## <a name="eap-based-wi-fi-profile"></a>Profil Wi-Fi založený na protokolu EAP
 Zde je příklad kódu XML pro profil Wi-Fi založený na protokolu EAP:
 
     <WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
@@ -190,7 +190,7 @@ Zde je příklad kódu XML pro profil Wi-Fi založený na protokolu EAP:
       </MSM>
     </WLANProfile>
 
-## <a name="create-the-xml-file-from-an-existing-wifi-connection"></a>Vytvoření souboru XML z existujícího připojení Wi-Fi
+## <a name="create-the-xml-file-from-an-existing-wi-fi-connection"></a>Vytvoření souboru XML z existujícího připojení Wi-Fi
 Můžete také vytvořit soubor XML z existujícího připojení Wi-Fi:
 1. Na počítači, který je připojený k bezdrátové síti nebo se k ní nedávno připojil, otevřete následující složku: C:\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}.
 

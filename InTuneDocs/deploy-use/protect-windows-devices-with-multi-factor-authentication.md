@@ -14,16 +14,16 @@ ms.assetid: 9b4f197d-bc10-4bee-91c9-19bcc8287d36
 ms.reviewer: vinaybha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ab9ad1fb42176f2fc2babaa6fa3c91cea40b4ca5
+ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
 ms.openlocfilehash: 1bfd17f9fcc73049254bc77351eae48da874fb4c
 
 
 ---
 
-# <a name="protect-windows-devices-with-multifactor-authentication"></a>Protect Windows devices with multi-factor authentication
+# <a name="protect-windows-devices-with-multi-factor-authentication"></a>Protect Windows devices with multi-factor authentication
 Microsoft Intune integruje vícefaktorové ověřování (MFA) a pomáhá vám zabezpečit prostředky společnosti. MFA vyžaduje kromě uživatelských jmen a hesel také faktory ověřování, jako je ověřování textu. Intune podporuje použití MFA během registrace zařízení s Windows 8.1 nebo novějším, Windows Phone 8.1 nebo Windows 10 Desktop a Mobile.
 
-## <a name="onpremises-infrastructure-requirements-for-adfs-mfa"></a>Požadavky místní infrastruktury na ADFS MFA
+## <a name="on-premises-infrastructure-requirements-for-adfs-mfa"></a>Požadavky místní infrastruktury na ADFS MFA
 Pro nastavení vícefaktorového ověřování potřebujete:
 
 -   Automatickou registraci, jak je popsáno v článku [Nastavení správy pro zařízení Windows](set-up-windows-device-management-with-microsoft-intune.md).
