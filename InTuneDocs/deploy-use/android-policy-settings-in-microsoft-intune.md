@@ -15,7 +15,7 @@ ms.assetid: 71cc39cf-e726-40fd-8d08-78776e099a4b
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 24411fdefa3f1e4e89c66d23448360934a5de7c7
+ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
 ms.openlocfilehash: 08ec9963bf00d81f080c0cf4f26e23a3104763ea
 
 
@@ -70,19 +70,19 @@ Pokud se v tomto tématu nezobrazí nastavení, které hledáte, je možné, že
 |**Povolit odeslání diagnostických dat**|Umožňuje zařízení odesílat diagnostické informace Googlu.|Ne|Ano|
 |**Povolit obnovení do výrobního nastavení**|Umožňuje uživateli obnovit v zařízení výrobní nastavení.|Ne|Ano|
 
-### <a name="cloud-settings-documents-and-data"></a>Nastavení cloudu – dokumenty a data
+### <a name="cloud-settings---documents-and-data"></a>Nastavení cloudu – dokumenty a data
 
 |Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX Standard|
 |----------------|----|------------------------|----------------|
 |**Povolit zálohy na Googlu**|Povoluje použití zálohování Google.|Ne|Ano|
 
-### <a name="cloud-settings-accounts-and-synchronization"></a>Nastavení cloudu – účty a synchronizace
+### <a name="cloud-settings---accounts-and-synchronization"></a>Nastavení cloudu – účty a synchronizace
 
 |Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX Standard|
 |----------------|-----|-----------|----------------|
 |**Povolit automatickou synchronizaci účtu Google**|Povoluje automatickou synchronizaci nastavení účtu Google.|Ne|Ano|
 
-### <a name="application-settings-browser"></a>Nastavení aplikace – prohlížeč
+### <a name="application-settings---browser"></a>Nastavení aplikace – prohlížeč
 
 |Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX Standard|
 |----------------|-----|-----------|----------------|
@@ -92,13 +92,13 @@ Pokud se v tomto tématu nezobrazí nastavení, které hledáte, je možné, že
 |**Povolit soubory cookie**|Povolí webovému prohlížeči v zařízení používat soubory cookie.|Ne|Ano|
 |**Povolit aktivní skriptování**|Povolí webovému prohlížeči v zařízení aktivní skriptování.|Ne|Ano|
 
-### <a name="application-settings-apps"></a>Nastavení aplikace – aplikace
+### <a name="application-settings---apps"></a>Nastavení aplikace – aplikace
 
 |Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX Standard|
 |----------------|----|------------|----------------|
 |**Povolit obchod Google Play**|Povolí uživatelům na zařízení přístup do obchodu Google Play.|Ne|Ano|
 
-### <a name="device-capabilities-settings-hardware"></a>Nastavení možností zařízení – hardware
+### <a name="device-capabilities-settings---hardware"></a>Nastavení možností zařízení – hardware
 
 |Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX Standard|
 |----------------|-----|-----------|----------------|
@@ -111,7 +111,7 @@ Pokud se v tomto tématu nezobrazí nastavení, které hledáte, je možné, že
 |**Povolit Bluetooth**|Povolí používání připojení Bluetooth na zařízení.|Ne|Ano|
 |**Povolit vypnutí**|Povolí uživateli vypnout zařízení.<br /><br />Pokud je toto nastavení zakázané, není nastavení **Počet povolených opakovaných neúspěšných přihlášení, než se zařízení vymaže** pro zařízení Samsung KNOX Standard funkční.|Ne|Ano|
 
-### <a name="device-capabilities-settings-cellular"></a>Nastavení možností zařízení – mobilní
+### <a name="device-capabilities-settings---cellular"></a>Nastavení možností zařízení – mobilní
 
 |Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX Standard|
 |----------------|---|-------------|----------------|
@@ -119,7 +119,7 @@ Pokud se v tomto tématu nezobrazí nastavení, které hledáte, je možné, že
 |**Povolit datový roaming**|Povolí datový roaming, když je zařízení v mobilní síti.|Ne|Ano|
 |**Povolit SMS a MMS zprávy**|Povolí zařízení použití SMS a MMS zpráv.|Ne|Ano|
 
-### <a name="device-capabilities-settings-features"></a>Nastavení možností zařízení – funkce
+### <a name="device-capabilities-settings---features"></a>Nastavení možností zařízení – funkce
 
 |Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX Standard|
 |----------------|----|------------|----------------|
@@ -188,7 +188,7 @@ Díky této vlastnosti můžete nasadit nastavení Androidu, která nejde konfig
     |**Název**|Zadejte jedinečný název vlastní zásady pro Android, abyste ji mohli v konzole Intune snadno identifikovat.|
     |**Popis**|Zadejte popis, který bude shrnovat účel vlastní zásady pro Android, a uveďte jakékoli další důležité informace, které vám pomůžou zásadu najít.|
 
-### <a name="omauri-settings"></a>Nastavení OMA-URI
+### <a name="oma-uri-settings"></a>Nastavení OMA-URI
 
    |Název nastavení|Podrobnosti|
     |--------|--------------------|
