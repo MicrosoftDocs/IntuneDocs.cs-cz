@@ -14,7 +14,7 @@ ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 289e6019aa1a17deb91b38ed32f0432af0902a9d
+ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
 ms.openlocfilehash: 391612c35a7665073ca8a5c629169e5be967ab59
 
 
@@ -119,7 +119,7 @@ Po uložení změn můžete pomocí odkazů uvedených v dolní části stránky
 
 3.  Uživatelský účet se teď přidá do skupiny uživatelů Microsoft Intune, která uděluje uživatelům oprávnění k používání služby a registraci zařízení do systému správy.
 
-### <a name="to-synchronize-onpremises-users-with-azure-ad"></a>Synchronizace místních uživatelů s Azure AD
+### <a name="to-synchronize-on-premises-users-with-azure-ad"></a>Synchronizace místních uživatelů s Azure AD
 
 1. [Přidejte příponu UPN](https://technet.microsoft.com/en-us/library/cc772007.aspx) pro vaši vlastní doménu v místním Active Directory.
 2. Nastavte novou příponu UPN pro místní uživatele, které chcete importovat.

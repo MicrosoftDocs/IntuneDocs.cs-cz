@@ -14,18 +14,18 @@ ms.assetid: 41ff4212-a6f5-4374-8731-631f7560cff1
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c84b1e95b32ec878fffa001d0234940ebfb35576
+ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
 ms.openlocfilehash: 16f8520e6f302c1896039aa5a11b0002e87959c9
 
 
 ---
 
-# <a name="install-the-intune-onpremises-exchange-connector"></a>Instalace místního Intune Exchange Connectoru
+# <a name="install-the-intune-on-premises-exchange-connector"></a>Instalace místního Intune Exchange Connectoru
 
 
 Pokud chcete nastavit připojení umožňující komunikaci Microsoft Intune s Exchange Serverem, který je hostitelem poštovních schránek mobilních zařízení, musíte si z konzoly pro správu Intune stáhnout místní Exchange Connector a nakonfigurovat ho. Intune podporuje pro každé předplatné jenom jedno připojení Exchange Connectoru libovolného typu.
 
-## <a name="onpremises-exchange-connector-requirements"></a>Požadavky na místní Exchange Connector
+## <a name="on-premises-exchange-connector-requirements"></a>Požadavky na místní Exchange Connector
 V následující tabulce jsou uvedené požadavky na počítač, na který instalujete místní Exchange Connector.
 
 |Požadavek|Další informace|
@@ -57,7 +57,7 @@ Musíte vytvořit uživatelský účet služby Active Directory, který bude kon
  -   Set-ADServerSettings
  -   Get-Command
 
-## <a name="download-the-onpremises-exchange-connector-software-installation-package"></a>Stažení instalačního balíčku místního Exchange Connectoru
+## <a name="download-the-on-premises-exchange-connector-software-installation-package"></a>Stažení instalačního balíčku místního Exchange Connectoru
 
 1. V podporovaném operačním systému Windows Server pro místní Exchange Connector otevřete [konzolu pro správu Microsoft Intune](http://manage.microsoft.com) (http://manage.microsoft.com) z uživatelského účtu, který je správcem klienta Exchange a který má licenci k používání Exchange Serveru.
 ![Otevření nastaveného připojení k serveru Exchange](../media/ExchangeConnector.gif)
@@ -71,7 +71,7 @@ Musíte vytvořit uživatelský účet služby Active Directory, který bude kon
 > [!IMPORTANT]
 > Soubory ve složce místního Exchange Connectoru nepřejmenovávejte ani nepřesouvejte. Přesunutí nebo přejmenování obsahu složky způsobí selhání instalace.
 
-## <a name="install-and-configure-the-intune-onpremises-exchange-connector"></a>Instalace a konfigurace místního Intune Exchange Connectoru
+## <a name="install-and-configure-the-intune-on-premises-exchange-connector"></a>Instalace a konfigurace místního Intune Exchange Connectoru
 Při instalaci místního Intune Exchange Connectoru použijte tento postup. Místní Exchange Connector se dá nainstalovat jenom jednou pro každé předplatné Intune a jenom na jeden počítač. Když zkusíte nakonfigurovat další místní Exchange Connector, nahradí se původní připojení tímto novým připojením.
 
 1.  V podporovaném operačním systému pro místní Exchange Connector extrahujte soubory v balíčku **Exchange_Connector_Setup.zip** do zabezpečeného umístění.

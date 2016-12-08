@@ -14,7 +14,7 @@ ms.assetid: e5ab3b76-08af-4893-b294-fb6627fdc4c6
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 24411fdefa3f1e4e89c66d23448360934a5de7c7
+ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
 ms.openlocfilehash: a64336ad959daad9685bdfbef3c284a14e708894
 
 
@@ -133,7 +133,7 @@ Když nasadíte zásadu délky hesel na zařízení se systémem Windows RT, bud
 |**Nastavit účet Microsoft v aplikaci Windows Mail jako volitelný**|Ano|Ne|Ne|Ne|Ne|
 |**Povolit vlastní e-mailové účty**|Ne|Ne|Jenom Windows Phone 8.1|Ne|Ne|
 
-## <a name="application-settings-browser"></a>Nastavení aplikace – prohlížeč
+## <a name="application-settings---browser"></a>Nastavení aplikace – prohlížeč
 
 |Název nastavení|Windows 8.1 a Windows RT 8.1|Windows RT|Windows Phone 8 a Windows Phone 8.1|iOS|Android a Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
@@ -154,7 +154,7 @@ Když nasadíte zásadu délky hesel na zařízení se systémem Windows RT, bud
 |**Povolit přístup do nabídky Režim rozlehlé sítě**|Ano|Ne|Ne|Ne|Ne|
 |**Umístění webů podnikového režimu**|Ano|Ne|Ne|Ne|Ne|
 
-## <a name="application-settings-apps"></a>Nastavení aplikace – aplikace
+## <a name="application-settings---apps"></a>Nastavení aplikace – aplikace
 
 |Název nastavení|Windows 8.1 a Windows RT 8.1|Windows RT|Windows Phone 8 a Windows Phone 8.1|iOS|Android a Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
@@ -167,14 +167,14 @@ Když nasadíte zásadu délky hesel na zařízení se systémem Windows RT, bud
 |**Povolit obsah pro dospělé v obchodě s multimediálním obsahem**|Ne|Ne|Ne|Ano|Ne|
 |**Povolit instalaci aplikací**|Ne|Ne|Ne|iOS 6 nebo novější|Ne|
 
-## <a name="application-settings-gaming"></a>Nastavení aplikace – hry
+## <a name="application-settings---gaming"></a>Nastavení aplikace – hry
 
 |Název nastavení|Windows 8.1 a Windows RT 8.1|Windows RT|Windows Phone 8 a Windows Phone 8.1|iOS|Android a Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
 |**Povolit přátele v herním centru**|Ne|Ne|Ne|Ano|Ne|
 |**Povolit hru s více hráči**|Ne|Ne|Ne|Ano|Ne|
 
-## <a name="device-capabilities-settings-hardware"></a>Nastavení možností zařízení – hardware
+## <a name="device-capabilities-settings---hardware"></a>Nastavení možností zařízení – hardware
 
 |Název nastavení|Windows 8.1 a Windows RT 8.1|Windows RT|Windows Phone 8 a Windows Phone 8.1|iOS|Android a Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
@@ -189,7 +189,7 @@ Když nasadíte zásadu délky hesel na zařízení se systémem Windows RT, bud
 |**Povolit Bluetooth**|Ne|Ne|Jenom Windows Phone 8.1|Ne|Ano (pouze Samsung KNOX Standard)|
 |**Povolit vypnutí**<br>Pokud je toto nastavení zakázané, není nastavení **Počet povolených opakovaných neúspěšných přihlášení, než se zařízení vymaže** pro zařízení Samsung KNOX Standard funkční.|Ne|Ne|Ne|Ne|Ano (pouze Samsung KNOX Standard)|
 
-## <a name="device-capabilities-settings-cellular"></a>Nastavení možností zařízení – mobilní
+## <a name="device-capabilities-settings---cellular"></a>Nastavení možností zařízení – mobilní
 
 |Název nastavení|Windows 8.1 a Windows RT 8.1|Windows RT|Windows Phone 8 a Windows Phone 8.1|iOS|Android a Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
@@ -198,7 +198,7 @@ Když nasadíte zásadu délky hesel na zařízení se systémem Windows RT, bud
 |**Povolit automatickou synchronizaci při roamingu**|Ne|Ne|Ne|Ano|Ne|
 |**Povolit SMS a MMS zprávy**|Ne|Ne|Ne|Ne|Ano (pouze Samsung KNOX Standard)|
 
-## <a name="device-capabilities-settings-features"></a>Nastavení možností zařízení – funkce
+## <a name="device-capabilities-settings---features"></a>Nastavení možností zařízení – funkce
 
 |Název nastavení|Windows 8.1 a Windows RT 8.1|Windows RT|Windows Phone 8 a Windows Phone 8.1|iOS|Android a Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
