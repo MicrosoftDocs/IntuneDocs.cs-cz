@@ -13,8 +13,8 @@ ms.assetid: f5615051-2dd1-453b-9872-d3fdcefb2cb8
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3f28cce75626df1115283dc98547adcb97ee1cb4
-ms.openlocfilehash: ce460c1b87b4759dcdeed061c2342b68dd491820
+ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
+ms.openlocfilehash: 3141d4b2ad1a21e2ac5ba7b6cafb74f567d07f7a
 
 
 ---
@@ -33,11 +33,11 @@ Správce služby Intune má dvě možnosti, jak povolit registraci a správu za�
 ## <a name="company-portal-app-enrollment"></a>Registrace aplikace Portál společnosti
 Nechte uživatele, ať si nainstalují aplikaci Portál společnosti služby Intune a použijí ji k registraci svých zařízení. Pokud vytvoříte záznamy prostředků DNS CNAME, uživatelé se mohou připojovat k Intune a registrovat se bez zadávání názvu serveru.
 
-1.  **Nastavení Intune**<br>Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení tím, že [nastavíte autoritu pro správu mobilních zařízení (MDM)](prerequisites-for-enrollment.md#set-mobile-device-management-authority) na **Microsoft Intune** a pak nastavte MDM.
+1.  **Nastavení Intune**<br>Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení tím, že [nastavíte autoritu pro správu mobilních zařízení (MDM)](prerequisites-for-enrollment.md#step-2-set-mdm-authority) na **Microsoft Intune** a pak nastavte MDM.
 
 2.  **Vytváření záznamů CNAME** (volitelné)<br>Vytvořte záznamy o prostředcích DNS **CNAME** pro doménu vaší společnosti. Pokud má třeba vaše společnost web contoso.com, vytvořili byste ve službě DNS záznam CNAME, který přesměruje adresu EnterpriseEnrollment.contoso.com na EnterpriseEnrollment-s.manage.microsoft.com.
 
-    Vytváření položek CNAME DNS není povinné, ale záznamy CNAME usnadňují uživatelům registraci. Pokud nebude nalezen žádný záznam CNAME pro registraci, budou uživatelé vyzváni, aby zadali ručně název serveru MDM, https://manage.microsoft.com. 
+    Vytváření položek CNAME DNS není povinné, ale záznamy CNAME usnadňují uživatelům registraci. Pokud nebude nalezen žádný záznam CNAME pro registraci, budou uživatelé vyzváni, aby zadali ručně název serveru MDM, https://manage.microsoft.com.
 
     Pokud máte v současnosti ve službě DNS záznam CNAME, který přesměrovává adresu EnterpriseEnrollment.contoso.com na adresu manage.microsoft.com, doporučujeme nahradit ho záznamem CNAME ve službě DNS, který přesměruje adresu EnterpriseEnrollment.contoso.com na adresu enterpriseenrollment-s.manage.microsoft.com. Tuto změnu doporučujeme, protože koncový bod manage.microsoft.com už bude v budoucí verzi pro registrace zastaralý.
 
@@ -64,7 +64,7 @@ Nechte uživatele, ať si nainstalují aplikaci Portál společnosti služby Int
 
 5.  **Informujte uživatele, jak můžou svá zařízení zaregistrovat, aby získali přístup k firemním prostředkům.**
 
-    Postup registrace koncových uživatelů najdete v tématu [Registrace zařízení s Windows v Intune](../enduser/enroll-your-device-in-intune-windows.md). Můžete také uživatele odkázat na téma [Co správce IT uvidí při registraci zařízení v Intune](../enduser/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows).
+    Postup registrace koncových uživatelů najdete v tématu [Registrace zařízení s Windows v Intune](../enduser/enroll-your-device-in-intune-windows.md). Můžete také uživatele odkázat na téma [Co správce IT uvidí při registraci zařízení v Intune](../enduser/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
     Informace o dalších úlohách koncových uživatelů najdete v článcích:
     - [Co říct koncovým uživatelům o používání služby Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
@@ -74,6 +74,6 @@ Pokud jste nenasadili Portál společnosti na zařízení, nejsou vyžadované �
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

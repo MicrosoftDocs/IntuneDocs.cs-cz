@@ -2,8 +2,8 @@
 title: "Nastavení zásad dodržování předpisů pro zařízení s Androidem | Microsoft Intune"
 description: "Toto téma popisuje nastavení zásad dodržování předpisů pro zařízení s Androidem."
 keywords: 
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 11/08/2016
 ms.topic: article
@@ -14,8 +14,8 @@ ms.assetid: e721c5c7-9678-4f3b-81d4-564da5efd337
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b7d81d6e02602559c417a9f2a0cac51de8ab472e
-ms.openlocfilehash: aacdf9967cee3544d0b647fa2bff6240211df920
+ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
+ms.openlocfilehash: 398f0c8bc789d9106a296e50f0e0cdc27d5920a7
 
 
 ---
@@ -74,7 +74,7 @@ Pokud hledáte informace o jiných platformách, vyberte jednu z těchto možnos
   - **Žádná (zabezpečeno):** Toto je nejbezpečnější úroveň. Znamená, že zařízení nesmí obsahovat žádné hrozby. Pokud se v zařízení zjistí nějaké hrozby, vyhodnotí se jako nevyhovující.
   - **Nízká:** Zařízení se vyhodnotí jako vyhovující, pokud se v něm nachází jen hrozby nízké úrovně. Jakákoliv vyšší úroveň zařadí zařízení do nevyhovujícího stavu.
   - **Střední:** Zařízení se vyhodnotí jako vyhovující, pokud se v něm nachází hrozby střední nebo nízké úrovně. Pokud se v zařízení zjistí hrozby vysoké úrovně, vyhodnotí se jako nevyhovující.
-  - **Vysoká:** Jedná se o nejméně bezpečnou možnost. V podstatě povoluje všechny úrovně hrozeb. Toto řešení může být užitečné prakticky jen pro účely nahlašování.
+  - **Vysoká:** Jedná se o nejméně bezpečnou možnost. V podstatě povoluje všechny úrovně hrozeb. Toto řešení může být užitečné prakticky jen pro účely nahlašování.
 
   Další podrobnosti najdete v tématu [Povolení pravidla ochrany zařízení před hrozbami v zásadách dodržování předpisů](enable-device-threat-protection-rule-in-compliance-policy.md).
 
@@ -87,6 +87,6 @@ Pokud hledáte informace o jiných platformách, vyberte jednu z těchto možnos
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

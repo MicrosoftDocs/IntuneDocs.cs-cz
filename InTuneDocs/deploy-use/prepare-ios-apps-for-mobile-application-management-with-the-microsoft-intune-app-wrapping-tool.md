@@ -2,8 +2,8 @@
 title: "Zabalení aplikací pro iOS nástrojem Intune App Wrapping | Microsoft Intune"
 description: "V tomto tématu se naučíte balit aplikace pro iOS bez změny samotného kódu aplikace. Připravte aplikace, abyste mohli použít zásady správy mobilních aplikací."
 keywords: 
-author: karthikaraman
-ms.author: karaman
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -14,8 +14,8 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: oldang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ba4ace8106e83f3579cbaf98dcea8ef240a202a9
-ms.openlocfilehash: d150c97197e11d4a81727dca5ddd8eb1310aa193
+ms.sourcegitcommit: ee7e0491c0635c45cbc0377a5de01d5eba851132
+ms.openlocfilehash: 0eee40c3c3c6bdfc3da2e715ef7b46e8408ba319
 
 
 ---
@@ -37,7 +37,7 @@ Další informace o tom, jak splnit požadavky pro tento nástroj, najdete v blo
 |---------------|--------------------------------|
 |Podporované operační systémy a sady nástrojů | Nástroj App Wrapping musíte spustit na počítači s Mac OS, na kterém běží OS X 10.8.5 nebo novější a je na něm nainstalovaná sada nástrojů XCode verze 5 nebo novější.|
 |Podpisový certifikát a profil pro zřizování | Musíte mít podpisový certifikát Apple a profil pro zřizování. Informace najdete v [dokumentaci pro vývojáře Apple](https://developer.apple.com/).|
-|Zpracování aplikace pomocí nástroje App Wrapping  |Aplikaci musí vyvinout a podepsat vaše společnost nebo nezávislý výrobce softwaru (ISV). Tento nástroj se nedá používat ke zpracování aplikací z Apple Storu. Aplikace musí být napsané pro iOS 8.0 nebo novější. Aplikace také musí být ve formátu Position Independent Executable (PIE). Další informace o formátu PIE najdete v dokumentaci pro vývojáře Apple. Aplikace musí mít příponu **.app** nebo **.ipa**.|
+|Zpracování aplikace pomocí nástroje App Wrapping  |Aplikaci musí vyvinout a podepsat vaše společnost nebo nezávislý výrobce softwaru (ISV). Tento nástroj se nedá používat ke zpracování aplikací z Apple Storu. Aplikace musí být napsané pro iOS 8.0 nebo novější. Aplikace také musí být ve formátu Position Independent Executable (PIE). Další informace o formátu PIE najdete v dokumentaci pro vývojáře Apple. Aplikace musí mít příponu **.app** nebo **.ipa**.|
 |Aplikace, které nástroj nedokáže zpracovat | Zašifrované aplikace, nepodepsané aplikace a aplikace s rozšířenými atributy souborů.|
 |Nastavení nároků pro vaši aplikaci|Než aplikaci zabalíte, musíte nastavit oprávnění, se kterými získá další oprávnění a možnosti přesahující běžný rámec. Pokyny najdete v části [Nastavení nároků aplikace](#setting-app-entitlements).|
 
@@ -45,9 +45,9 @@ Další informace o tom, jak splnit požadavky pro tento nástroj, najdete v blo
 
 1.  Stáhněte si soubory pro nástroj App Wrapping Tool z [GitHubu](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) do počítače s macOS.
 
-2.  Poklikejte na soubor **Microsoft Intune App Wrapping Tool for iOS.dmg**. Zobrazí se okno s licenční smlouvou s koncovým uživatelem (EULA). Dokument si pozorně přečtěte.
+2.  Poklikejte na soubor **Microsoft Intune App Wrapping Tool for iOS.dmg**. Zobrazí se okno s licenční smlouvou s koncovým uživatelem (EULA). Dokument si pozorně přečtěte.
 
-3. Výběrem možnosti **Souhlasím** přijměte podmínky smlouvy EULA. Tím připojíte balíček k počítači.
+3. Výběrem možnosti **Souhlasím** přijměte podmínky smlouvy EULA. Tím připojíte balíček k počítači.
 
 4.  Otevřete složku **IntuneMAMPackager** a uložte její obsah do počítače s macOS. Teď můžete nástroj App Wrapping spustit.
 
@@ -55,7 +55,7 @@ Další informace o tom, jak splnit požadavky pro tento nástroj, najdete v blo
 
 ### <a name="use-terminal"></a>Použití terminálu
 
-Otevřete okno Terminálu na počítači s macOS a přejděte do složky, do které jste uložili soubory nástroje pro zabalení aplikace. Spustitelný soubor má název IntuneMAMPackager a nachází se ve složce IntuneMAMPackager/Contents/MacOS. Spusťte následující příkaz:
+Otevřete okno Terminálu na počítači s macOS a přejděte do složky, do které jste uložili soubory nástroje pro zabalení aplikace. Spustitelný soubor má název IntuneMAMPackager a nachází se ve složce IntuneMAMPackager/Contents/MacOS. Spusťte následující příkaz:
 
 ```
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioning profile paths>]
@@ -82,8 +82,8 @@ V nástroji App Wrapping Tool můžete používat následující parametry pří
 |**-h**|Zobrazí podrobné informace o použití dostupných vlastností příkazového řádku nástroje App Wrapping.|
 |**-v**|(Nepovinná) Zobrazí v konzole podrobné zprávy.|
 |**-e**| (Nepovinná) Tímto příznakem zajistíte, že nástroj App Wrapping při zpracování aplikace odebere chybějící oprávnění. Další informace najdete v části Nastavení oprávnění aplikace.|
-|**-xe**| (Nepovinná) Zobrazí informace o rozšířeních iOS v aplikaci a o oprávněních, která potřebujete k jejich používání. Další informace najdete v části Nastavení oprávnění aplikace. |
-|**-x**| (Nepovinná) `<An array of paths to extension provisioning profiles>` Tuto vlastnost použijte v případě, že vaše aplikace potřebuje zřizovací profily rozšíření.|
+|**-xe**| (Nepovinná) Zobrazí informace o rozšířeních iOS v aplikaci a o oprávněních, která potřebujete k jejich používání. Další informace najdete v části Nastavení oprávnění aplikace. |
+|**-x**| (Nepovinná) `<An array of paths to extension provisioning profiles>` Tuto vlastnost použijte v případě, že vaše aplikace potřebuje zřizovací profily rozšíření.|
 |**-f**|(Nepovinná) `<Path to a plist file specifying arguments.>` Pokud se rozhodnete zadat zbývající vlastnosti nástroje IntuneMAMPackager, jako je -i, -o a -p, šablonou plist, použijte tento příznak před souborem [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html). Další informace najdete v části, která vysvětluje použití souboru plist k zadání argumentů. |
 |**-b**|(Nepovinná) Pokud chcete, aby měla zabalená výstupní aplikace stejnou verzi balíčku jako vstupní aplikace, použijte vlastnost -b bez argumentu (nedoporučuje se to). <br/><br/> Když chcete, aby měla zabalená aplikace vlastní verzi balíčku (CFBundleVersion), použijte vlastnost `-b <custom bundle version>`. Pokud se rozhodnete zadat vlastní verzi balíčku CFBundleVersion, doporučujeme zvýšit nejméně důležitou část hodnoty CFBundleVersion nativní aplikace, třeba z 1.0.0 na 1.0.1. |
 
@@ -118,7 +118,7 @@ Po dokončení procesu zabalení se zobrazí zpráva The application was success
 Zabalená aplikace se uloží do výstupní složky, kterou jste určili předtím. Aplikaci můžete nahrát do konzoly pro správu Intune a přidružit ji k zásadě správy mobilní aplikace.
 
 > [!IMPORTANT]
-> Pokud je už v Intune nasazená starší (zabalená nebo nativní) verze aplikace, můžete tuto starší verzi zkusit při nahrávání zabalené aplikace aktualizovat. Když se to nepovede, nahrajte aplikaci jako novou a starší verzi odstraňte.
+> Pokud je už v Intune nasazená starší (zabalená nebo nativní) verze aplikace, můžete tuto starší verzi zkusit při nahrávání zabalené aplikace aktualizovat. Když se to nepovede, nahrajte aplikaci jako novou a starší verzi odstraňte.
 
 Teď můžete aplikaci nasadit do skupin uživatelů a zásad ochrany cílové aplikace. Aplikace se bude spouštět na zařízení pomocí zásad ochrany aplikace, které jste určili.
 
@@ -165,7 +165,7 @@ Aplikace zabalené nástrojem App Wrapping generují protokoly, které jsou zaps
     > [!NOTE]
     > Položka verze buildu v souboru protokolu označuje verzi buildu pro Xcode.
 
-    Zabalené aplikace taky uživatelům nabídnou možnost odeslat protokoly přímo ze zařízení prostřednictvím e-mailu v případě chyby aplikace. Protokoly můžou uživatelé poslat ke kontrole vám a vy je případně můžete přeposlat Microsoftu.
+    Zabalené aplikace taky uživatelům nabídnou možnost odeslat protokoly přímo ze zařízení prostřednictvím e-mailu v případě chyby aplikace. Protokoly můžou uživatelé poslat ke kontrole vám a vy je případně můžete přeposlat Microsoftu.
 
 
 ### <a name="certificate-provisioning-profile-and-authentication-requirements"></a>Požadavky na certifikát, profil pro zřizování a ověřování
@@ -175,7 +175,7 @@ Aby bylo možné zaručit plnou funkčnost nástroje App Wrapping Tool pro iOS, 
 |Požadavek|Podrobnosti|
 |---------------|-----------|
 |Profil pro zřizování iOS|Zkontrolujte platnost zřizovacího profilu, než ho zahrnete. Při zpracování aplikace pro iOS nástroj App Wrapping nekontroluje, jestli vypršela platnost zřizovacího profilu. Když je zadaný profil zřizování s ukončenou platností, bude nástroj pro zabalení aplikace zahrnovat tento profil a vy nepoznáte, jestli existuje problém, dokud neselže instalace aplikace na zařízení s iOS.|
-|Podpisový certifikát iOS|Před zadáním podpisového certifikátu zkontrolujte jeho platnost. Nástroj při zpracování aplikací pro iOS nekontroluje, jestli nevypršela platnost certifikátu. Pokud je zadaný hash pro prošlý certifikát, nástroj zpracuje a podepíše aplikaci, ale nenainstaluje ji na zařízení.<br /><br />Zkontrolujte, jestli se certifikát dodaný k podpisu zabalené aplikace shoduje se zřizovacím profilem. Nástroj neověřuje, jestli pro certifikát poskytnutý k podepsání zabalené aplikace existuje shoda ve zřizovacím profilu.|
+|Podpisový certifikát iOS|Před zadáním podpisového certifikátu zkontrolujte jeho platnost. Nástroj při zpracování aplikací pro iOS nekontroluje, jestli nevypršela platnost certifikátu. Pokud je zadaný hash pro prošlý certifikát, nástroj zpracuje a podepíše aplikaci, ale nenainstaluje ji na zařízení.<br /><br />Zkontrolujte, jestli se certifikát dodaný k podpisu zabalené aplikace shoduje se zřizovacím profilem. Nástroj neověřuje, jestli pro certifikát poskytnutý k podepsání zabalené aplikace existuje shoda ve zřizovacím profilu.|
 |Ověřování|Aby šifrování fungovalo, musí mít zařízení PIN. Když se uživatel zařízení, do kterého jste nasadili zabalenou aplikaci, dotkne stavového řádku, musí se znovu přihlásit přes svůj pracovní nebo školní účet. Podle výchozí zásady zabalené aplikace probíhá *ověřování při opakovaném spuštění*. V iOS se každé externí oznámení (třeba při telefonním hovoru) zpracuje tak, že se aplikace ukončí a potom znovu spustí.
 
 
@@ -256,17 +256,17 @@ Tento příkaz odebere z aplikace všechny povolené schopnosti, které nejsou v
 ## <a name="security-and-privacy-for-the-app-wrapping-tool"></a>Zabezpečení a ochrana osobních údajů nástrojem App Wrapping
 Při používání nástroje App Wrapping použijte následující doporučené postupy pro zabezpečení a ochranu osobních údajů.
 
--   Podpisový certifikát, zřizovací profil a obchodní aplikace, které zadáte, musí být na stejném počítači s Mac OS, na jakém spouštíte nástroj App Wrapping. Pokud soubory leží na cestě UNC, ověřte, že jsou pro počítač s Mac OS přístupné. Cesta musí být zabezpečená pomocí protokolu IPsec nebo podepsání SMB.
+-   Podpisový certifikát, zřizovací profil a obchodní aplikace, které zadáte, musí být na stejném počítači s Mac OS, na jakém spouštíte nástroj App Wrapping. Pokud soubory leží na cestě UNC, ověřte, že jsou pro počítač s Mac OS přístupné. Cesta musí být zabezpečená pomocí protokolu IPsec nebo podepsání SMB.
 
     Zabalená aplikace naimportovaná do konzoly pro správu by měla být na počítači, na kterém jste nástroj spustili. Pokud je soubor v cestě UNC, zajistěte, aby byl přístupný na počítači se spuštěnou konzolou pro správu. Cesta musí být zabezpečená pomocí protokolu IPsec nebo podepsání SMB.
 
 -   Prostředí, do kterého nástroj App Wrapping stahujete z úložiště GitHubu, musí být zabezpečené protokolem IPsec nebo SMB.
 
--   Zpracovávaná aplikace musí kvůli zajištění ochrany před útoky pocházet z důvěryhodného zdroje.
+-   Zpracovávaná aplikace musí kvůli zajištění ochrany před útoky pocházet z důvěryhodného zdroje.
 
 -   Zkontrolujte, že výstupní složka zadaná v nástroji App Wrapping je zabezpečená. To platí zejména v případě, že jde o vzdálenou složku.
 
--   V aplikacích pro iOS s dialogovým oknem pro nahrávání souborů mohou uživatelé obejít omezení aplikace, která se vztahují na vyjmutí, kopírování a vložení. Uživatel může například pomocí dialogového okna pro nahrání souboru nahrát snímek obrazovky dat aplikace.
+-   V aplikacích pro iOS s dialogovým oknem pro nahrávání souborů mohou uživatelé obejít omezení aplikace, která se vztahují na vyjmutí, kopírování a vložení. Uživatel může například pomocí dialogového okna pro nahrání souboru nahrát snímek obrazovky dat aplikace.
 
 -   Když ze zabalené aplikace monitorujete složku dokumentů v zařízení, může se zobrazit složka s názvem .msftintuneapplauncher. Pokud tuto složku změníte nebo odstraníte, může to mít vliv na správné fungování omezených aplikací.
 
@@ -277,6 +277,6 @@ Při používání nástroje App Wrapping použijte následující doporučené 
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 

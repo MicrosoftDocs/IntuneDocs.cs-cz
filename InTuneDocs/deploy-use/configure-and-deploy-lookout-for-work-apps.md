@@ -1,8 +1,8 @@
 ---
 title: "Nasazení aplikace Lookout for Work | Microsoft Intune"
 description: "Konfigurace a nasazení aplikace Lookout for Work pro Android."
-author: karthikaraman
-ms.author: karaman
+author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article
@@ -13,8 +13,8 @@ ms.assetid: 524c4209-ad57-4d35-955e-a00d796bf858
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9bf5764d1e1bd73fd62e5033b2309fc8d5a912e4
-ms.openlocfilehash: 646bd62dcf95b37ce9154e4852612b17ab71f954
+ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
+ms.openlocfilehash: 720fe241e7f1205dbad4b64af5cf7f16a80db23e
 
 
 ---
@@ -40,7 +40,8 @@ V konzole Intune se po kliknutí na **Aplikace** v seznamu zobrazí aplikace Loo
 
 * **Krok 5**: Aplikaci nasadíte uživatelům tak, že vyberete aplikaci Lookout for Work a zvolíte **Spravovat nasazení**.
 
-  Je nutné vybrat stejné uživatele, jako jste přidali v možnosti Správa registrací v konzole Lookout MTP.  Další informace o přidávání skupin uživatelů do konzole Lookout MTP naleznete v kroku 3 části [Konfigurace předplatného pro Lookout MTP](set-up-your-subscription-with-lookout-mtp#configure-your-subscription-with-lookout-mtp).
+  Je nutné vybrat stejné uživatele, jako jste přidali v možnosti Správa registrací v konzole Lookout MTP.  Další informace o přidávání skupin uživatelů do konzole Lookout MTP naleznete v kroku 3 části [Konfigurace předplatného pro Lookout MTP](set-up-your-subscription-with-lookout-mtp.md#configure-your-subscription-with-lookout-device-threat-protection).
+
   >[!IMPORTANT]
   > Průvodce nasazením aplikací služby Intune nezná skupiny uživatelů Azure AD a používá místo toho skupiny uživatelů Intune. Proto je nutné vytvořit novou skupinu uživatelů Intune, které bude založená na skupině uživatelů Azure AD registrované v konzole Lookout MTP, jak je popsáno v [tomto](plan-your-user-and-device-groups.md) tématu.
 
@@ -76,7 +77,8 @@ V konzole Intune se po kliknutí na **Aplikace** v seznamu zobrazí aplikace Loo
 
 * **Krok 6:** **Aplikaci nasadíte uživatelům** tak, že vyberete aplikaci Lookout for Work a zvolíte **Spravovat nasazení**.
 
-  Musíte vybrat stejné uživatele, které jste přidali v konzole Lookout v možnosti Správa registrací.  Další informace o přidávání skupin uživatelů do konzole Lookout MTP najdete v kroku 3 části [Konfigurace předplatného pro ochranu zařízení před internetovými útoky ve službě Lookout](set-up-your-subscription-with-lookout-mtp#configure-your-subscription-with-lookout-mtp).
+  Musíte vybrat stejné uživatele, které jste přidali v konzole Lookout v možnosti Správa registrací.  Další informace o přidávání skupin uživatelů do konzole Lookout MTP najdete v kroku 3 části [Konfigurace předplatného pro ochranu zařízení před internetovými útoky ve službě Lookout](set-up-your-subscription-with-lookout-mtp.md#configure-your-subscription-with-lookout-device-threat-protection).
+
 >[!IMPORTANT]
 > Průvodce nasazením aplikací služby Intune nezná skupiny uživatelů Azure AD a používá místo toho skupiny uživatelů Intune. Proto je nutné vytvořit novou skupinu uživatelů Intune, která bude založená na skupině uživatelů Azure AD registrované v konzole Lookout, jak je popsáno v [tomto tématu](plan-your-user-and-device-groups.md).
 
@@ -98,6 +100,6 @@ Když uživatel v zařízení otevře aplikaci Lookout for Work, bude vyzván, a
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

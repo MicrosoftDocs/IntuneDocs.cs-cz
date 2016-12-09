@@ -14,8 +14,8 @@ ms.assetid: dbe5cad1-3e0d-41a9-966b-738156089700
 ms.reviewer: lacranda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d51f34dea3463bec83ea39cdfb79c7bedf9e3926
-ms.openlocfilehash: 504b8334485217ab00d42080e1fab8728e7b62c4
+ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
+ms.openlocfilehash: f1e019d66858357987ee34e8a5144fb6a3511400
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: 504b8334485217ab00d42080e1fab8728e7b62c4
 Správce Intune může na Portálu společnosti povolit správu zařízení s Androidem, včetně zařízení se sadou Samsung Knox Standard. Uživatelé pak mohou k registraci svých zařízení použít aplikaci Portál společnosti, která je k dispozici v obchodě Google Play.
 
 1.  **Nastavení Intune**<br>
-    Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení [nastavením autority pro správu mobilních zařízení](prerequisites-for-enrollment.md#set-mobile-device-management-authority) na **Microsoft Intune** a nastavením správy MDM.
+    Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení [nastavením autority pro správu mobilních zařízení](prerequisites-for-enrollment.md#step-2-set-mdm-authority) na **Microsoft Intune** a nastavením správy MDM.
 
 2.  **Povolení registrace zařízení s Androidem**<br>
     K povolení registrace mobilních zařízení s Androidem nejsou potřeba žádné další konfigurace v konzole Intune.
@@ -42,6 +42,6 @@ Správce Intune může na Portálu společnosti povolit správu zařízení s An
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

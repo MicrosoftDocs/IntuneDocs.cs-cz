@@ -2,7 +2,8 @@
 title: "Povolení pravidla ochrany zařízení v zásadách dodržování předpisů | Microsoft Intune"
 description: "Povolení pravidla ochrany před mobilními hrozbami v zásadách dodržování předpisů zařízení."
 keywords: 
-author: karthikaraman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: c951692d-6538-46c0-a9f0-d607ded189ae
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 686321a1c19acb9a3a7e262822b11304d07adb40
-ms.openlocfilehash: 3e6aef013ae8764d9b031e880c333e184191feb4
+ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
+ms.openlocfilehash: efddf7645d0548c842ae8aa3b1ca5222023913b5
 
 
 ---
@@ -39,7 +40,7 @@ Na stránce **zásad dodržování předpisů** v **konzole správce Intune** p�
 * **Žádná (zabezpečeno)**: Toto je nejbezpečnější úroveň.  To znamená, že zařízení nesmí obsahovat žádné hrozby.  Pokud je nalezena jakákoli úroveň hrozeb, je zařízení vyhodnoceno jako nevyhovující.  
 * **Nízká:** Zařízení je vyhodnoceno jako vyhovující, pokud se v něm nachází i jen nízká úroveň hrozeb. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
 * **Střední:** Zařízení je vyhodnoceno jako vyhovující, pokud se v něm přítomné hrozby pohybují na střední nebo nízké úrovni. Pokud budou v zařízení zjištěny hrozby vysoké úrovně, bude vyhodnoceno jako nevyhovující.
-* **Vysoká**: Jedná se o nejméně bezpečnou možnost. V podstatě povoluje všechny úrovně hrozeb. Toto řešení může být užitečné prakticky jen pro účely nahlašování.
+* **Vysoká**: Jedná se o nejméně bezpečnou možnost. V podstatě povoluje všechny úrovně hrozeb. Toto řešení může být užitečné prakticky jen pro účely nahlašování.
 
 ![snímek obrazovky zobrazující nastavení pravidla ochrany zařízení před hrozbami ](../media/mtp/mtp-compliance-policy-rule.png)
 
@@ -61,6 +62,6 @@ Stav dodržování předpisů zařízení naleznete na stránce**Všechna zaří
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

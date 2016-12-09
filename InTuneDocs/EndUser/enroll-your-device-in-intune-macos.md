@@ -15,8 +15,8 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 162d176c5f272f5f19ba18cdd07fe815ac1bcce7
-ms.openlocfilehash: fc0efceb8a0c3e1323f7d94625bc5f618d35bfd6
+ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
+ms.openlocfilehash: 650e9b0700971e626e4062c312111ef60e74badc
 
 
 ---
@@ -46,7 +46,7 @@ Přístup k aplikacím, datům a prostředkům vaší organizace vám umožňuje
  ![Registrace tohoto zařízení s macOS](./media/macOS_enroll_003_enroll_popup.png)
 
   > [!NOTE]
-  > Intune potřebuje přístup k počítači pro ověření, že je vaše zařízení natolik bezpečné, že může mít přístup k prostředkům ve vaší organizaci. Zjistěte, [co se stane, když své zařízení zaregistrujete v Intune](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios).
+  > Intune potřebuje přístup k počítači pro ověření, že je vaše zařízení natolik bezpečné, že může mít přístup k prostředkům ve vaší organizaci. Zjistěte, [co se stane, když své zařízení zaregistrujete v Intune](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md).
 
 6. Otevře se okno __Předvolby systému__ s dotazem, jestli chcete __nainstalovat profil pro správu__. Pokračujte kliknutím na __Nainstalovat__. Pokud chcete získat více podrobností, klikněte na __Zobrazit profil__.
 
@@ -64,6 +64,6 @@ Potřebujete ještě další pomoc? Poraďte se se správcem IT. Kontaktní info
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 

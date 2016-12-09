@@ -14,8 +14,8 @@ ms.assetid: 3dbec400-5d8a-47be-b892-7745811d9de2
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b76e9e16ef1fa6870783326630ae74d07ae59cbb
-ms.openlocfilehash: be3a30535fc9cebad5d4a167b75c484ddafd7f85
+ms.sourcegitcommit: 8f3a8e42688bf830e3050cf387ccb15a1af811fa
+ms.openlocfilehash: e7f861adc757b4037c5d0ef97c361a57948386bf
 
 
 ---
@@ -55,7 +55,7 @@ Pro zařízení, která je třeba přiřadit někomu jinému, můžete také pou
 8.  Vyberte příslušná zařízení a zvolte **Odstranit zařízení**. Zařízení se vymaže při příští synchronizaci se službou Active Directory. To obvykle proběhne do čtyř hodin. Po synchronizaci se zařízení vyřadí ze správy. Tím se také odebere jedno zařízení z limitu počtu zařízení pro daného uživatele.
 
 ## <a name="retire-managed-computers"></a>Vyřazení spravovaných počítačů
-Počítače spravované v klientském softwaru Intune je možné odebrat ze správy v konzole pro správu Intune. Tím se také z počítače odinstaluje klientský software a odstraní se z něj zásady Intune. Viz informace o [vyřazení počítačů spravovaných pomocí klientského softwaru Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client#retire-a-computer.md).
+Počítače spravované v klientském softwaru Intune je možné odebrat ze správy v konzole pro správu Intune. Tím se také z počítače odinstaluje klientský software a odstraní se z něj zásady Intune. Viz informace o [vyřazení počítačů spravovaných pomocí klientského softwaru Intune](retire-a-windows-pc-with-microsoft-intune.md).
 
 ## <a name="block-access-a-device"></a>Zablokování přístupu k zařízení
 Při ztrátě zařízení nebo když ho musíte vyřadit, protože zaměstnanec opustil společnost, ale hardware vlastněný společností nevrátil zpět, také můžete [resetovat heslo a zařízení vzdáleně zamknout](use-remote-lock-and-passcode-reset-in-microsoft-intune.md). Tím se zajistí ochrana informací společnosti před zneužitím, i když může být nutné zařízení odepsat jako ztrátu.
@@ -70,6 +70,6 @@ V některých případech zařízení samotné dosáhne konce své životnosti. 
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

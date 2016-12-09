@@ -15,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 2fad0ea18485290a513d175fecf0a4947786e5eb
+ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
+ms.openlocfilehash: 9561cf77e1569a6ab0da5d9b8e90e03ce5c9e998
 
 
 ---
@@ -29,7 +29,7 @@ Jsou podporované jenom následující verze. Pokud není zařízení uvedené, 
 
 * [Windows 10 Mobile](#windows-10-mobile)
 * [Windows 10 desktop](#windows-10-desktop)
-* [Windows Phone 8.1](#windows-phone-8-1)
+* [Windows Phone 8.1](#windows-phone-81)
 
 
 ## <a name="windows-10-mobile"></a>Windows 10 Mobile
@@ -54,7 +54,7 @@ Chcete-li ručně synchronizovat mobilní zařízení s Windows 10 pro urychlen�
     V horní části obrazovky se zobrazí zpráva, že „probíhá synchronizace účtu“. Tlačítko **Synchronizovat** je zašedlé, dokud neskončí synchronizace vašeho zařízení.
 
 ## <a name="windows-10-desktop"></a>Stolní počítač s Windows 10
-Je více verzí Windows 10, a proto existují dvě sady postupů. Pokud chcete zjistit, jaké kroky použít, podívejte se na snímky obrazovky a postupujte podle pokynů, které odpovídají tomu, co vidíte na svém zařízení. 
+Je více verzí Windows 10, a proto existují dvě sady postupů. Pokud chcete zjistit, jaké kroky použít, podívejte se na snímky obrazovky a postupujte podle pokynů, které odpovídají tomu, co vidíte na svém zařízení.
 
 1. Zvolte tlačítko **Start** a pak zvolte **Nastavení**.
 
@@ -72,7 +72,7 @@ Je více verzí Windows 10, a proto existují dvě sady postupů. Pokud chcete z
 
     Pokud se zobrazí tato obrazovka s informací „Přístup do práce“, postupujte podle pokynů v části [Postup, pokud se zobrazí Přístup do práce](#steps-to-follow-if-you-see-your-account).
 
-    ![Volba účtu typu Přístup do práce](./media/win10pc-sync-3-work-access.png) 
+    ![Volba účtu typu Přístup do práce](./media/win10pc-sync-3-work-access.png)
 
 ### <a name="steps-to-follow-if-you-see-access-work-or-school"></a>Postup, pokud se zobrazí Přístup do práce nebo do školy
 
@@ -80,9 +80,9 @@ Je více verzí Windows 10, a proto existují dvě sady postupů. Pokud chcete z
 
     ![Volba Přístup do práce nebo do školy](./media/w10-enroll-rs1-connect-to-work-or-school.png)
 
-2. Zvolte svůj pracovní nebo školní účet. V závislosti na nastavení provedeném správcem IT se mohou zobrazit dva účty, které se podobají účtům v následujícím příkladu. Jeden účet má u sebe aktovku a druhý logo Microsoftu. 
+2. Zvolte svůj pracovní nebo školní účet. V závislosti na nastavení provedeném správcem IT se mohou zobrazit dva účty, které se podobají účtům v následujícím příkladu. Jeden účet má u sebe aktovku a druhý logo Microsoftu.
 
-    - Pokud vidíte účet s aktovkou, vyberte ho a podívejte se, že je pod ním tlačítko **Informace**. 
+    - Pokud vidíte účet s aktovkou, vyberte ho a podívejte se, že je pod ním tlačítko **Informace**.
     - Pokud vidíte jen účet s logem Microsoftu, vyberte ho a podívejte se, že je pod ním tlačítko **Informace**.
 
     ![Volba názvu účtu vedle aktovky nebo loga Microsoftu](./media/win10pc-rs1-sync-info-button.png)
@@ -94,7 +94,7 @@ Je více verzí Windows 10, a proto existují dvě sady postupů. Pokud chcete z
 4. Zvolte tlačítko **Synchronizovat**. Zařízení se bude synchronizovat s Intune.
 
 ### <a name="steps-to-follow-if-you-see-work-access"></a>Postup, pokud se zobrazí Přístup do práce
-    
+
 1. Na stránce **Účty** zvolte **Přístup do práce**.
 
     ![Volba účtu typu Přístup do práce](./media/win10pc-sync-3-work-access.png)
@@ -130,6 +130,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaj
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -14,8 +14,8 @@ ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 391612c35a7665073ca8a5c629169e5be967ab59
+ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
+ms.openlocfilehash: 270e6015e629c048b01b218793640888706d118e
 
 
 ---
@@ -40,8 +40,8 @@ Hledáte Intune s Configuration Managerem?
 ## <a name="step-1-enable-connections"></a>Krok 1: Povolení připojení
 
 Ještě než povolíte registraci mobilních zařízení, zkontrolujte, zda jste provedli následující:
-- [Kontrola požadovaných síťových adres URL a portů](../get-started/network-infrastructure-requirements-for-microsoft-intune)
-- [Přidání a ověření názvu domény](../get-started/domain-names-for-microsoft-intune)
+- [Kontrola požadovaných síťových adres URL a portů](../get-started/network-infrastructure-requirements-for-microsoft-intune.md)
+- [Přidání a ověření názvu domény](../get-started/domain-names-for-microsoft-intune.md)
 
 ## <a name="step-2-set-mdm-authority"></a>Krok 2: Nastavení autority pro správu mobilních zařízení (MDM)
 Autorita MDM definuje službu správy s oprávněním ke správě skupiny zařízení. Příklady možných autorit MDM zahrnují Intune samostatně a Configuration Manager s Intune. Pokud nastavíte Configuration Manager jako autoritu správy, ke správě mobilních zařízení nejde použít žádnou jinou službu.
@@ -111,7 +111,7 @@ Po uložení změn můžete pomocí odkazů uvedených v dolní části stránky
 
 ## <a name="step-5-assign-user-licenses"></a>Krok 5: Přiřazení licencí uživatelům
 
-**Portál pro správu Office 365** můžete použít k ručnímu přidání cloudových uživatelů a přiřazení licencí účtům cloudových uživatelů i účtům, které se synchronizovaly z místní služby Active Directory do Azure Active Directory (Azure AD). Můžete [synchronizovat místní uživatele s Azure AD](../get-started/domain-names-for-microsoft-intune#to-synchronize-on-premises-users-with-azure-ad.md).
+**Portál pro správu Office 365** můžete použít k ručnímu přidání cloudových uživatelů a přiřazení licencí účtům cloudových uživatelů i účtům, které se synchronizovaly z místní služby Active Directory do Azure Active Directory (Azure AD). Můžete [synchronizovat místní uživatele s Azure AD](../get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3.md#how-to-sync-on-premises-users-with-azure-ad).
 
 1.  Přihlaste se na [portál pro správu Office 365](https://portal.office.com/Admin/Default.aspx) pomocí svých přihlašovacích údajů správce tenanta.
 
@@ -136,7 +136,7 @@ Nastavte správu pro následující platformy:
 - [Stolní a přenosné počítače s Windows](set-up-windows-device-management-with-microsoft-intune.md)
 - [Windows 10 Mobile a Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md)
 
-Můžete také povolit [registraci zařízení vlastněných společností](manage-corporate-owned-devices).
+Můžete také povolit [registraci zařízení vlastněných společností](manage-corporate-owned-devices.md).
 
 ## <a name="step-7-next-steps"></a>Krok 7: Další kroky
 
@@ -149,6 +149,6 @@ Po povolení registrace doporučujeme nastavit správu, aby vyhovovala potřebá
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

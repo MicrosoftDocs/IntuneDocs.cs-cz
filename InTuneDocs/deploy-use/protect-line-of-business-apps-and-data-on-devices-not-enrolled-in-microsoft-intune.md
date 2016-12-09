@@ -2,8 +2,8 @@
 title: "Ochrana obchodních aplikací na nezaregistrovaných zařízeních | Microsoft Intune"
 description: "Toto téma popisuje, jak můžete připravit své vlastní obchodní aplikace, abyste u nich mohli použít zásady správy mobilních aplikací, které můžou pomoci zabránit úniku informací."
 keywords: 
-author: karthikaraman
-ms.author: karaman
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 ms.date: 11/14/2016
 ms.topic: article
@@ -14,8 +14,8 @@ ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 3bce8989944985c36a3d233fbb05d2f3f135b7e7
+ms.sourcegitcommit: d6ff74f0b46baf384dbdedf13ad75538dd33a089
+ms.openlocfilehash: bc1efb1e0c62e6bd52658690db95901c70403d4d
 
 
 ---
@@ -29,9 +29,9 @@ Toto téma vysvětluje kroky nutné k použití zásad MAM u aplikací, ke kter�
 
 ##  <a name="step-1-prepare-the-app"></a>Krok 1: Příprava aplikace
 
-Před použitím zásad MAM u aplikace musíte aplikaci nejdřív zabalit pomocí nástroje Microsoft Intune App Wrapping pro [iOS](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool) nebo [Android](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool) nebo ručně integrovat funkce Intune pro ochranu aplikací pomocí [sady Intune App SDK](/../develop/intune-app-sdk).
+Před použitím zásad MAM u aplikace musíte aplikaci nejdřív zabalit pomocí nástroje Microsoft Intune App Wrapping pro [iOS](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) nebo [Android](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) nebo ručně integrovat funkce Intune pro ochranu aplikací pomocí [sady Intune App SDK](../develop/intune-app-sdk.md).
 
-Další informace o použití nástroje App Wrapping nebo sady Intune App SDK najdete v tématu [Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune).
+Další informace o použití nástroje App Wrapping nebo sady Intune App SDK najdete v tématu [Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md).
 
 ## <a name="step-2-add-the-app"></a>Krok 2: Přidání aplikace
 
@@ -81,6 +81,6 @@ Obchodní aplikaci můžete ze seznamu aplikací odebrat. Tato akce odebere apli
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 
