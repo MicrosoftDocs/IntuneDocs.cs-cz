@@ -1,11 +1,11 @@
 ---
-title: "Zařízení s iOS nevyhovuje maximální verzi operačního systému | Microsoft Intune"
+title: "Vaše zařízení nevyhovuje maximální verzi operačního systému | Microsoft Intune"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 12/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,19 +15,21 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 2292c3c22671e5e4ea593a1f379ea5ffd4d67d14
+ms.sourcegitcommit: 308706452538ea6d87546d72ca4478b227ced0d6
+ms.openlocfilehash: 928845c6e0bc21ae678fd6ba31c3bd0bbde5d338
 
 
 ---
 
 
-# <a name="ios-device-doesnt-comply-with-the-setting-for-the-latest-operating-system-version"></a>Zařízení s iOS nevyhovuje nastavení poslední verze operačního systému
+# <a name="your-devices-operating-system-version-isnt-yet-supported"></a>Verze operačního systému vašeho zařízení zatím není podporovaná
 
-Vaše zařízení s iOS nevyhovuje zásadě správce IT, která se týká poslední verze operačního systému, kterou můžete použít. Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Při rychlém tempu vývoje pro mobilní technologie někdy vaše zařízení může předbíhat to, co měl váš správce IT příležitost otestovat. Je možné, že nejnovější verze iOS nemusí fungovat s některými ostatními nástroji vaší společnosti.
+
+Kvůli vyřešení tohoto problému se budete muset obrátit na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

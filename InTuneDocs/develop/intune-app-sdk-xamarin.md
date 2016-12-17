@@ -1,21 +1,21 @@
 ---
-title: Komponenta Xamarin sady Microsoft Intune App SDK | Microsoft Intune
+title: Komponenta Xamarin sady Microsoft Intune App SDK | Dokumentace Microsoftu
 description: 
 keywords: SDK, Xamarin, Intune
-author: oydang
-manager: karthikaraman
-ms.author: oydang
+author: mtillman
+manager: angrobe
+ms.author: mtillman
 ms.date: 11/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
-ms.reviewer: karthikaraman
+ms.reviewer: oydang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: af7df3fcf50c3508d495522341bb287c638f40a3
-ms.openlocfilehash: 2ea1763881a7d10ae8bc21c98754d2767b2fc954
+ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
+ms.openlocfilehash: 74607fc704234e6ac85eae3bf55c186000c6e68a
 
 
 ---
@@ -83,7 +83,7 @@ Aplikace Xamarin vytvořené pomocí komponenty Xamarin sady Intune App SDK teď
 
       ```
 
-2.  Když je teď komponenta přidaná a inicializovaná, můžete postupovat podle obecných kroků potřebných k začlenění App SDK do mobilní aplikace pro iOS. Kompletní dokumentaci k povolení nativních aplikací iOS najdete v tématu [Intune APP SDK pro iOS – Příručka vývojáře](intune-app-sdk-ios).
+2.  Když je teď komponenta přidaná a inicializovaná, můžete postupovat podle obecných kroků potřebných k začlenění App SDK do mobilní aplikace pro iOS. Kompletní dokumentaci k povolení nativních aplikací iOS najdete v tématu [Intune APP SDK pro iOS – Příručka vývojáře](intune-app-sdk-ios.md).
 3. **Důležité**: Existuje několik modifikací, které jsou specifické pro aplikace iOS založené na Xamarinu. Například při povolování skupin řetězců klíčů budete muset přidat následující, abyste zahrnuli ukázkovou aplikaci Xamarin, kterou jsme zahrnuli do komponenty. Tady je příklad skupin, které byste potřebovali mít ve skupinách přístupu řetězce klíčů:
 
       ```xml
@@ -102,10 +102,10 @@ Aplikace Xamarin vytvořené pomocí komponenty Xamarin sady Intune App SDK teď
       </plist>
       ```
 
-Dokončili jste kroky potřebné k začlenění komponenty do aplikace iOS založené na Xamarinu. Pokud k vytvoření projektu využíváte Xcode, můžete použít `Intune App SDK Settings.bundle`. To vám umožní při tvorbě projektu nastavení zásad Intune zapínat a vypínat kvůli testování a ladění. Pokud chcete využít výhod této sady, postupujte podle kroků v tématu [Intune App SDK pro iOS – Příručka vývojáře](intune-app-sdk-ios) a přečtěte si část o [ladění v Xcodu](intune-app-sdk-ios#debug-information).
+Dokončili jste kroky potřebné k začlenění komponenty do aplikace iOS založené na Xamarinu. Pokud k vytvoření projektu využíváte Xcode, můžete použít `Intune App SDK Settings.bundle`. To vám umožní při tvorbě projektu nastavení zásad Intune zapínat a vypínat kvůli testování a ladění. Pokud chcete využít výhod této sady, postupujte podle kroků v tématu [Intune App SDK pro iOS – Příručka vývojáře](intune-app-sdk-ios.md) a přečtěte si část o [ladění v Xcodu](intune-app-sdk-ios.md#status-result-and-debug-notifications).
 
 ## <a name="enabling-mam-in-your-android-mobile-app"></a>Povolení MAM v mobilní aplikaci pro Android
-Pro aplikace Androidu založené na Xamarinu, které nepoužívají architekturu uživatelského rozhraní, si budete muset přečíst téma [Intune APP SDK pro Android – Příručka vývojáře] a postupovat podle něho. Pro aplikaci Androidu založenou na Xamarinu budete muset nahradit třídy, metody a aktivity jejich ekvivalentem MAM podle [tabulky](intune-app-sdk-android#replace-classes-methods-and-activities-with-their-mam-equivalent-required), kterou v průvodci najdete. Pokud vaše aplikace nedefinuje třídu `android.app.Application`, budete ji muset vytvořit a zajistit, abyste dědili z `MAMApplication`.
+Pro aplikace Androidu založené na Xamarinu, které nepoužívají architekturu uživatelského rozhraní, si budete muset přečíst téma [Intune APP SDK pro Android – Příručka vývojáře] a postupovat podle něho. Pro aplikaci Androidu založenou na Xamarinu budete muset nahradit třídy, metody a aktivity jejich ekvivalentem MAM podle [tabulky](intune-app-sdk-android.md#replace-classes-methods-and-activities-with-their-mam-equivalent-required), kterou v průvodci najdete. Pokud vaše aplikace nedefinuje třídu `android.app.Application`, budete ji muset vytvořit a zajistit, abyste dědili z `MAMApplication`.
 
 Pro Xamarin Forms a další architektury uživatelského rozhraní nabízíme nástroj, který se jmenuje `MAM.Remapper`. Nástroj provede nahrazení třídy za vás. Budete ale muset provést tyto kroky:
 
@@ -125,6 +125,6 @@ Dokončili jste základní kroky pro začlenění komponenty do aplikace. Teď m
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 

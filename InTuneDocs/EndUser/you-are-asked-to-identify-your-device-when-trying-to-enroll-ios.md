@@ -15,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 106a39e4c51831a01a88db39270cda07421d2c9a
+ms.sourcegitcommit: e007f666d2c179dd1dc4bcdd1265cecf8b9e5358
+ms.openlocfilehash: 52633b881b0fb4c22848e8e408de7cd183db12df
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: 106a39e4c51831a01a88db39270cda07421d2c9a
 
 # <a name="you-are-asked-to-identify-your-device-when-youre-trying-to-enroll"></a>Při pokusu o registraci se zobrazí výzva k identifikaci vašeho zařízení
 
-Pokud se pokoušíte zaregistrovat zařízení s iOS nebo Mac OS X v Intune a objeví se obrazovka s žádostí o identifikaci vašeho zařízení, aspoň jedno z vašich zařízení je už zaregistrované a přiřazené k vašemu účtu pomocí jiné metody než pomocí aplikace Portál společnosti. Aby aplikace Portál společnosti fungovala správně, musíte určit, jestli už je zařízení, které používáte, zaregistrované v Intune.
+Pokud se pokoušíte zaregistrovat zařízení s iOSem nebo macOS do Intune a objeví se obrazovka s žádostí o identifikaci vašeho zařízení, aspoň jedno z vašich zařízení je už zaregistrované a přiřazené k vašemu účtu pomocí jiné metody než pomocí aplikace Portál společnosti. Aby aplikace Portál společnosti fungovala správně, musíte určit, jestli už je zařízení, které používáte, zaregistrované v Intune.
 
 1. Pokud se zařízení zobrazí v seznamu, klepněte na ně. Pokud se nezobrazuje, klepněte na **Nové zařízení**.
 2. Klepněte na **Pokračovat**.
@@ -34,6 +34,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaj
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO1-->
 
 

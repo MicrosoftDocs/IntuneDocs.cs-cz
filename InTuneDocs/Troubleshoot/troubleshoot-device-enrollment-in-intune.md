@@ -14,8 +14,8 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e33dcb095b1a405b3c8d99ba774aee1832273eaf
-ms.openlocfilehash: f279e79432f70214245854db42641535eaf65824
+ms.sourcegitcommit: 998c24744776e0b04c9201ab44dfcdf66537d523
+ms.openlocfilehash: 9c5963f1413e1cd9f119186f47f46c7f7f16720d
 
 
 ---
@@ -40,7 +40,7 @@ Uživatelé spravovaných zařízení můžou pro vaši potřebu shromažďovat 
 - [Odeslání protokolů s diagnostickými daty ze zařízení s Androidem správci IT pomocí kabelu USB](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
 - [Odeslání protokolů s diagnostickými daty ze zařízení s Androidem správci IT e-mailem](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-email-android)
 - [Odeslání chyb registrace zařízení s Androidem správci IT](/intune/enduser/send-enrollment-errors-to-your-it-administrator-android)
-- [Odeslání chyb registrace zařízení s iOS správci IT](/intune/enduser/send-errors-to-your-it-admin-ios)
+- [Odeslání chyb registrace zařízení s iOSem správci IT](/intune/enduser/send-errors-to-your-it-admin-ios)
 
 
 
@@ -86,7 +86,7 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 >
 > Pokud se pro přihlašovací jméno uživatele, jehož účet přidáte do skupiny správců registrace zařízení, vynucuje zásada podmíněného přístupu, nebude možné dokončit registraci.
 
-### <a name="company-portal-temporarily-unavailable"></a>Portál společnosti není dočasně k dispozici
+### <a name="company-portal-emporarily-unavailable"></a>Portál společnosti není dočasně k dispozici
 **Problém:** Uživateli se na zařízení se zobrazí chyba **Portál společnosti není dočasně k dispozici**.
 
 **Řešení:**
@@ -212,30 +212,47 @@ Pokud řešení 2 nefunguje, nechte uživatele provést následující postup, a
 
 3.  Potvrďte, že Chrome pro Android je výchozím prohlížečem a že jsou povolené soubory cookie.
 
-### <a name="android-certificate-issues"></a>Problémy s certifikáty Androidu
+### <a name="android-certificate-issues"></a>Problémy s certifikáty Androidu
 
-**Problém:** Uživatel obdrží na zařízení následující zprávu: *Nemůžete se přihlásit, protože vašemu zařízení chybí požadovaný certifikát.*
+**Problém:** Uživatelům se na zařízení zobrazí následující zpráva: *Nemůžete se přihlásit, protože vašemu zařízení chybí požadovaný certifikát.*
 
-**Řešení:**
+**Řešení 1**:
 
-- Uživatel by mohl být schopný načíst chybějící certifikát pomocí [těchto pokynů](/intune/enduser/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator).
-- Pokud uživatel nemůže načíst certifikát, pravděpodobně na serveru AD FS chybí zprostředkující certifikáty. Zprostředkující certifikáty jsou nutné pro Android, aby důvěřoval serveru.
+Požádejte uživatele, aby postupovali podle pokynů v článku [Zařízení nemá požadovaný certifikát](/intune/enduser/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator). Pokud se chyba i potom stále zobrazuje, zkuste Řešení 2.
 
-Certifikáty do úložiště zprostředkujících certifikátů na serveru AD FS nebo proxy serverech můžete importovat následujícím způsobem:
+**Řešení 2**:
 
-1.  Na serveru AD FS spusťte **konzolu Microsoft Management Console** a přidejte modul snap-in Certifikáty pro **Účet počítače**.
-5.  Najděte certifikát, který používá vaše služba AD FS, a zobrazte jeho nadřazený certifikát.
-6.  Zkopírujte nadřazený certifikát a vložte ho do větve **Computer\Intermediate Certification Authorities\Certificates**.
-7.  Zkopírujte certifikát služby AD FS, dešifrovací certifikát AD FS a certifikát podpisu ADFS a vložte je do osobního úložiště pro službu AD FS.
-8.  Restartujte servery AD FS.
+Pokud se uživatelům stále zobrazuje chyba chybějícího certifikátu po tom, co zadali své podnikové přihlašovací údaje a byli přesměrováni na federované přihlašování, možná na vašem serveru Active Directory Federation Services (AD FS) chybí zprostředkující certifikát.
 
+K chybě certifikátu dochází proto, že zařízení s Androidem vyžadují, aby [zpráva Hello serveru SSL](https://technet.microsoft.com/library/cc783349.aspx) obsahovala zprostředkující certifikáty, ale výchozí instalace serveru AD FS nebo serveru proxy AD FS v současnosti odesílá ve zprávě Hello serveru SSL na zprávu Hello klienta SSL jenom certifikát SSL služby AD FS.
+
+Pokud chcete problém vyřešit, naimportujte certifikáty do osobních certifikátů počítačů na serveru nebo proxy serverech AD FS následujícím způsobem:
+
+1.  Na servery a proxy serverech AD FS spusťte konzolu Správa certifikátů pro místní počítač tak, že kliknete pravým tlačítkem na **Start**, vyberete **Spustit** a zadáte příkaz **certlm.msc**.
+2.  Rozbalte **Osobní** a vyberte **Certifikáty**.
+3.  Najděte certifikát pro vaši komunikaci služby AD FS (veřejně podepsaný certifikát) a poklikáním zobrazte jeho vlastnosti.
+4.  Vyberte kartu **Cesta k certifikátu**, kde uvidíte nadřazené certifikáty certifikátu.
+5.  U každého nadřazeného certifikátu vyberte **Zobrazit certifikát**.
+6.  Vyberte kartu **Podrobnosti** a vyberte **Kopírovat do souboru**.
+7.  Postupujte podle pokynů průvodce a vyexportujte nebo uložte veřejný klíč certifikátu do požadovaného umístění souborů.
+8.  Naimportujte nadřazené certifikáty, které jste ve 3. kroku vyexportovali, do složky Místní počítač\Osobní\Certifikáty, a to tak, že pravým tlačítkem kliknete na **Certifikáty**, vyberete **Všechny úkoly** > **Importovat** a pak podle výzev průvodce certifikáty naimportujete.
+9.  Restartujte servery AD FS.
+10. Výše uvedené kroky zopakujte na všech serverech a proxy serverech AD FS.
 Teď už by měl uživatel být schopný se ze zařízení s Androidem k aplikaci Portál společnosti přihlásit.
 
+**Pokud chcete ověřit, jestli se certifikát správně nainstaloval**:
+
+Následující kroky popisují jednom jeden z mnoha způsobů a nástrojů, pomocí kterých můžete ověřit, jestli se certifikát správně nainstaloval.
+
+1. Přejděte na [bezplatný nástroj Digicert](ttps://www.digicert.com/help/).
+2. Zadejte plně kvalifikovaný název domény serveru AD FS (například sts.contoso.com) a vyberte **CHECK SERVER** (Zkontrolovat server).
+
+Pokud je certifikát serveru správně nainstalovaný, uvidíte ve výsledcích všechny značky zaškrtnutí. Pokud výše popsaný problém přetrvává, zobrazí se v sekcích výsledné sestavy „Certificate name matches“ (Název certifikátu odpovídá) a „SSL Certificate is correctly Installed“ (Certifikát SSL je správně nainstalovaný) červený symbol X.
 
 
-## <a name="ios-issues"></a>Problémy na zařízeních s iOS
+## <a name="ios-issues"></a>Problémy na zařízeních s iOSem
 ### <a name="profile-installation-failed"></a>Neúspěch instalace profilu
-**Problém:** V zařízení s iOS se zobrazí chyba **Instalace profilu se nezdařila**.
+**Problém:** V zařízení s iOSem se zobrazí chyba **Instalace profilu se nezdařila**.
 
 ### <a name="troubleshooting-steps-for-failed-profile-installation"></a>Postup řešení potíží při neúspěšné instalaci profilu
 
@@ -247,8 +264,8 @@ Teď už by měl uživatel být schopný se ze zařízení s Androidem k aplikac
 
 4.  Potvrďte nastavení výchozích prohlížečů Safari (pro iOS) a povolení souborů cookie.
 
-### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-system-center-configuration-manager-with-intune"></a>Zaregistrovaná zařízení s iOS se při používání nástroje System Center Configuration Manager se službou Intune nezobrazí v konzole
-**Problém:** Uživatel registruje zařízení s iOS, to se ale nezobrazí v konzole pro správu nástroje Configuration Manager. Zařízení neindikuje, že je zaregistrované. Možné příčiny:
+### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-system-center-configuration-manager-with-intune"></a>Zaregistrovaná zařízení s iOSem se při používání nástroje System Center Configuration Manager se službou Intune nezobrazí v konzole
+**Problém:** Uživatel registruje zařízení s iOSem, to se ale nezobrazí v konzole pro správu nástroje Configuration Manager. Zařízení neindikuje, že je zaregistrované. Možné příčiny:
 
 - Je možné, že jste konektor služby Intune zaregistrovali na jednom účtu a potom jste ho zaregistrovali na jiném účtu.
 - Mohli jste si stáhnout certifikát MDM z jednoho účtu a použít ho na jiný účet.
@@ -299,7 +316,7 @@ Teď už by měl uživatel být schopný se ze zařízení s Androidem k aplikac
 
 
 
-### <a name="other-ios-enrollment-errors"></a>Další chyby registrace zařízení s iOS
+### <a name="other-ios-enrollment-errors"></a>Další chyby registrace zařízení s iOSem
 Seznam chyb registrace iOS je uvedený v dokumentaci pro uživatele zařízení v části [Při pokusu o registraci zařízení v Intune se zobrazí chyby](/intune/enduser/using-your-ios-or-mac-os-x-device-with-intune).
 
 ## <a name="pc-issues"></a>Potíže s počítačem
@@ -356,6 +373,6 @@ Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podpor
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 

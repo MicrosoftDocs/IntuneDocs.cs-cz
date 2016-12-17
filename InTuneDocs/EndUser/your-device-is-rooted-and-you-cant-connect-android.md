@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 12/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,25 +15,28 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 016449720f6e77b8862fcaa232d252eefa8b20b3
-ms.openlocfilehash: 5b7586c57f3f2825edfa9ae45a3fdec9af0fe956
+ms.sourcegitcommit: 06da6823465521b5784188123aab3544fef9fc2e
+ms.openlocfilehash: 4c58060bad8b269394e577df5bb3ccd50b8fa97b
 
 
 ---
 
+# <a name="your-android-device-is-rooted-so-you-cant-connect"></a>Byl proveden root zařízení s Androidem a zařízení nemůže se připojit
 
-# <a name="your-android-device-is-rooted-and-you-cant-connect"></a>Zařízení obsahuje root a nemůže se připojit
+Na tuto stránku jste se dostali, protože se vám zobrazila zpráva, že byl na vašem zařízení proveden _root_.
 
-Pokud byl v zařízení s Androidem proveden tzv. root, došlo v něm ke změnám umožňujícím některé funkce, které by mohly ohrozit prostředky a zabezpečení společnosti. Pokud se zobrazí tato zpráva, nebudete mít přístup k prostředkům společnosti, dokud se problém nevyřeší.
+Pokud byl na zařízení s Androidem proveden tzv. „root“, znamená to, že některá část softwaru zařízení byla změněna, aby se povolily možnosti, které jinak nejsou k dispozici. Tyto úpravy můžou často ohrozit zabezpečený přístup k prostředkům organizace, jako jsou e-maily a dokumenty. Zařízením s rootem se proto zabraňuje v přístupu k těmto prostředkům, dokud se problém nevyřeší.  
 
-Pokud se domníváte, že jste úmyslně neprovedli nic, aby zařízení mělo root, prostudujte si tyto další důvody, proč může zařízení root obsahovat:
+Zařízení může být rootované několika způsoby:
 
-- Mohli jste na zařízení instalovat aplikaci, o které software pro zjišťování rootu předpokládá, že je bezpečnostním rizikem. Pokud se tato zpráva zobrazí po instalaci aplikace, můžete zkusit aplikaci odinstalovat a zjistit, jestli to pomohlo.
+- Mohli jste na zařízení instalovat aplikaci, o které software pro zjišťování rootu předpokládá, že je bezpečnostním rizikem. Pokud se tato zpráva zobrazí okamžitě po instalaci nějaké aplikace, zkuste aplikaci odinstalovat.
 
-- Výrobce zařízení instaloval na zařízení software, o které software pro zjišťování rootu předpokládá, že je bezpečnostním rizikem. Je potřeba požádat o pomoc správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+- Výrobce zařízení instaloval na zařízení software, o které software pro zjišťování rootu předpokládá, že je bezpečnostním rizikem. V takovém případě musíte požádat o pomoc správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+
+Pokud jste zařízení rootovali sami, budete muset provést opačný proces a obnovit zařízení do nerootovaného stavu.
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

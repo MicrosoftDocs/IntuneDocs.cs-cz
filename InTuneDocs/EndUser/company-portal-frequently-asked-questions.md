@@ -1,11 +1,11 @@
 ---
-title: "Informace o Portálu společnosti | Microsoft Intune"
+title: "Co je to portál společnosti? | Microsoft Intune"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 12/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: adf7fc0b7ddeb7fa8361d37efd0fdd5c714a72e4
+ms.sourcegitcommit: 3891d0389df3526ea328fc2952e3d181b1e766c0
+ms.openlocfilehash: a0424ada754a210fb34acd49cf47d1c457ed86af
 
 
 ---
@@ -42,7 +42,7 @@ Pokud chcete zjistit, co můžete dělat pomocí webu Portál společnosti v por
 
 > [!div class="op_single_selector"]
 - [Android](using-your-android-device-with-intune.md)
-- [iOS a Mac OS X](using-your-ios-or-mac-os-x-device-with-intune.md)
+- [iOS a macOS](using-your-ios-or-mac-os-x-device-with-intune.md)
 - [Windows](using-your-windows-device-with-intune.md)
 - [Web Portál společnosti](using-the-intune-company-portal-website.md)
 
@@ -53,12 +53,12 @@ Pokud vás zajímá, co váš správce IT uvidí nebo naopak neuvidí na vašem 
 
 > [!div class="op_single_selector"]
 - [Android](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
-- [iOS a Mac OS X](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
+- [iOS a macOS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
 - [Windows](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md)
 
 ## <a name="what-kind-of-computers-or-devices-can-you-add-to-the-company-portal"></a>Jaký typ počítačů nebo zařízení můžete přidávat na Portál společnosti?
 
--   iPhony, iPady a zařízení s Mac OS X
+-   iPhony, iPady a zařízení s macOS
 
 -   Mobilní zařízení s Androidem
 
@@ -75,7 +75,7 @@ Když počítač nebo zařízení *odeberete*, zrušíte tím registraci zaříz
 
 > [!div class="op_single_selector"]
 - [Android](unenroll-your-device-from-intune-android.md)
-- [iOS a Mac OS X](unenroll-your-device-from-intune-ios.md)
+- [iOS a macOS](unenroll-your-device-from-intune-ios.md)
 - [Windows](unenroll-your-device-from-intune-windows.md)
 
 Když počítač nebo zařízení *obnovíte*, Portál společnosti se pokusí počítač nebo zařízení obnovit do výchozího továrního nastavení. Při obnovení se ze zařízení odeberou všechna firemní i osobní data. Pokud jste zařízení ztratili, můžete ho také z webu Portál společnosti obnovit vzdáleně.
@@ -84,7 +84,7 @@ Pokud chcete zjistit, jak zařízení obnovit, zvolte jeden z následujících o
 
 > [!div class="op_single_selector"]
 - [Android](reset-erase-your-lost-or-stolen-device-android.md)
-- [iOS a Mac OS X](reset-erase-your-lost-or-stolen-device-ios.md)
+- [iOS a macOS](reset-erase-your-lost-or-stolen-device-ios.md)
 - [Windows](reset-erase-your-lost-or-stolen-device-windows.md)
 - [Obnovení zařízení z webu Portál společnosti](reset-your-device-cpwebsite.md)
 
@@ -96,6 +96,6 @@ Pokud potřebujete pomoc, obraťte se na správce IT. Kontaktní údaje najdete 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

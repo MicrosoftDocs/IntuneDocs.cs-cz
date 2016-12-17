@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 12/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,27 +15,27 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 62b9808c234b31f08467a971d8e4d4cb600e563b
+ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
+ms.openlocfilehash: 68e4df02fa298af68f6c01a4dbb658cca5bb231b
 
 
 ---
 
 
-# <a name="sync-your-device-manually-by-using-the-company-portal-website"></a>Ruční synchronizace zařízení pomocí webu Portál společnosti
+# <a name="use-the-company-portal-website-to-sync-your-device"></a>Synchronizace zařízení pomocí Portálu společnosti
 
-Pokud instalace aplikace nebo nějaká jiná úloha trvá moc dlouho, můžete zařízení synchronizovat ručně. Ruční synchronizace může instalaci nebo úlohu urychlit.
+Někdy může instalace aplikace nebo provádění jiné úlohy může trvat déle než obvykle. Pokud to trvá příliš dlouho, můžete zařízení zkusit synchronizovat ručně, abyste vše urychlili.
 
-Funkce synchronizace funguje jenom na následujících zařízeních. Pokud není zařízení uvedené, synchronizace se nepodporuje. Použijte odkaz, který odpovídá používanému zařízení. 
+> [!Note]
+> Funkce synchronizace není aktuálně k dispozici pro všechna zařízení. Pokud není zařízení uvedené, zkuste ho resetovat vypnutím Wi-Fi na přibližně 30 sekund a pak znovu připojit k síti.
 
 * [iOS](sync-your-device-manually-ios.md)
 * [Windows 10 Mobile](sync-your-device-manually-windows.md#windows-10-mobile)
 * [Windows 10 desktop](sync-your-device-manually-windows.md#windows-10-desktop)
-* [Windows Phone 8.1](sync-your-device-manually-windows.md#windows-phone-8-1)
+* [Windows Phone 8.1](sync-your-device-manually-windows.md#windows-phone-81)
 
 
 
-
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -1,21 +1,21 @@
 ---
-title: "Začínáme s Microsoft Intune App SDK | Microsoft Intune"
+title: "Začínáme s Microsoft Intune App SDK | Dokumentace Microsoftu"
 description: 
 keywords: 
-author: Msmbaldwin
-manager: jeffgilb
+author: mtillman
+manager: angrobe
 ms.author: oydang
-ms.date: 09/08/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
-ms.reviewer: jeffgilb
+ms.reviewer: oydang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ca4623db80d711f3543b6d688fb1bb1ef228c62c
-ms.openlocfilehash: 2a65ae79a0bba21d555dbed9f1bc40e01452f08c
+ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
+ms.openlocfilehash: 7372cdd1c1001d621ba8374284e814951f55ef93
 
 
 ---
@@ -85,11 +85,11 @@ K integraci sady Intune App SDK do nativní aplikace pro Android budete potřebo
 
 K vytváření aplikací Cordova pomocí modulu plug-in Cordova sady Intune App SDK budete potřebovat následující příručku:
 
-* **[Příručka k modulu plug-in Cordova sady Intune App SDK](intune-app-sdk-cordova)**: Tento dokument vám pomůže vytvářet aplikace pro iOS a Android pomocí systému správy mobilních aplikací Cordova for Intune.
+* **[Příručka k modulu plug-in Cordova sady Intune App SDK](intune-app-sdk-cordova.md)**: Tento dokument vám pomůže vytvářet aplikace pro iOS a Android pomocí systému správy mobilních aplikací Cordova for Intune.
 
 K vytváření aplikací Xamarin pomocí komponenty Xamarin sady Intune App SDK budete potřebovat následující příručku:
 
-* **[Příručka ke komponentě Xamarin sady Intune App SDK](intune-app-sdk-xamarin)**: Tento dokument vám pomůže vytvářet aplikace pro iOS a Android pomocí systému správy mobilních aplikací Cordova for Intune.
+* **[Příručka ke komponentě Xamarin sady Intune App SDK](intune-app-sdk-xamarin.md)**: Tento dokument vám pomůže vytvářet aplikace pro iOS a Android pomocí systému správy mobilních aplikací Cordova for Intune.
 
 
 
@@ -118,6 +118,6 @@ Po dokončení nezbytných kroků k integraci vaší aplikace pro iOS nebo Andro
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

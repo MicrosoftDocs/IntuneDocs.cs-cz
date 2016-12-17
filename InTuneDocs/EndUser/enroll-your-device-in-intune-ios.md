@@ -1,6 +1,6 @@
 ---
 title: "Registrace zařízení se systémem iOS do Intune | Microsoft Intune"
-description: "Popisuje registraci zařízení s iOS v Intune."
+description: "Popisuje registraci zařízení s iOSem v Intune."
 keywords: 
 author: barlanmsft
 ms.author: barlan
@@ -15,8 +15,8 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 7d11e716750c4920234de5419e262d6c2c6e2d44
+ms.sourcegitcommit: 2f92ce22c9e6a87bccc7ab17144d0d52ff6cfc7b
+ms.openlocfilehash: 4daf13d683ada52b098ef24363d2d409dc501c06
 
 
 ---
@@ -24,9 +24,9 @@ ms.openlocfilehash: 7d11e716750c4920234de5419e262d6c2c6e2d44
 
 # <a name="enroll-your-ios-device-in-intune"></a>Registrace zařízení se systémem iOS do Intune
 
-Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svoje zařízení s iOS zaregistrovat a získat tak přístup k e-mailům, souborům a dalším prostředkům společnosti. Když si svoje zařízení zaregistrujete, může vaše IT oddělení tyto pracovní nebo školní prostředky spravovat, udržovat je v bezpečí a zároveň vám umožnit, abyste k plnění úkolů používali zařízení, které preferujete. Další informace o registraci najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
+Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svoje zařízení s iOSem zaregistrovat a získat tak přístup k e-mailům, souborům a dalším prostředkům společnosti. Když si svoje zařízení zaregistrujete, může vaše IT oddělení tyto pracovní nebo školní prostředky spravovat, udržovat je v bezpečí a zároveň vám umožnit, abyste k plnění úkolů používali zařízení, které preferujete. Další informace o registraci najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 
-Pokud se snažíte zaregistrovat zařízení s Mac OS X, přečtěte si téma [Registrace zařízení s Mac OS X v Intune](enroll-your-device-in-intune-mac-os-x.md).
+Pokud se snažíte zaregistrovat zařízení s macOS, přečtěte si téma [Registrace zařízení s macOS do Intune](enroll-your-device-in-intune-macos.md).
 
 **Než začnete:**
 
@@ -96,6 +96,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaj
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

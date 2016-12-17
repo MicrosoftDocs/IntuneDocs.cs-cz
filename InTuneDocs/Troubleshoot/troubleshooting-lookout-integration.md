@@ -1,9 +1,9 @@
 ---
-title: "Řešení potíží s aplikací Lookout Integration | Microsoft Intune"
+title: "Řešení potíží s aplikací Lookout Integration | Dokumentace Microsoftu"
 description: "Toto téma popisuje řešení nejčastějších potíží s aplikací Lookout Integration"
 keywords: 
-author: karthikaraman
-ms.author: karaman
+author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article
@@ -14,8 +14,8 @@ ms.assetid: bbe0b5f4-b8bc-49f3-85a9-51fb2f226fca
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9bf5764d1e1bd73fd62e5033b2309fc8d5a912e4
-ms.openlocfilehash: aa29f702803d657f783ff0dfc6ea66981484c569
+ms.sourcegitcommit: d6ff74f0b46baf384dbdedf13ad75538dd33a089
+ms.openlocfilehash: 416f200bdb72bae98897cb8d279dbdb767757da9
 
 
 ---
@@ -39,7 +39,7 @@ Pokud globální správce Azure AD nepřijal úvodní nastavení služby Lookout
 
 ![snímek přihlašovací obrazovky služby Lookout zobrazující chybu přihlášení](../media/mtp/lookout-mtp-consent-not-accepted-error.png)
 
-Pokud chcete tento problém vyřešit, musí se globální správce přihlásit na adrese https://aad.lookout.com/les?action=consent a přijmout výzvu k zahájení nastavení. Podrobnější informace najdete v tématu [Nastavení předplatného pro Lookout MTP](set-up-your-subscription-with-lookout-mtp.md)
+Pokud chcete tento problém vyřešit, musí se globální správce přihlásit na adrese https://aad.lookout.com/les?action=consent a přijmout výzvu k zahájení nastavení. Podrobnější informace najdete v tématu [Nastavení předplatného pro Lookout MTP](../deploy-use/set-up-your-subscription-with-lookout-mtp.md)
 
 ## <a name="troubleshoot-device-status-issues"></a>Řešení potíží se stavem zařízení
 
@@ -90,6 +90,6 @@ Pokud je nový uživatel členem skupiny pro registraci zadané v konzole Lookou
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

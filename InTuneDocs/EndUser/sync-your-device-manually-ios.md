@@ -1,5 +1,5 @@
 ---
-title: "Ruční synchronizace zařízení s iOS | Microsoft Intune"
+title: "Ruční synchronizace zařízení s iOSem | Microsoft Intune"
 description: 
 keywords: 
 author: barlanmsft
@@ -15,16 +15,16 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: a08a9865463edcea2308df33fb40635d9466091f
+ms.sourcegitcommit: e007f666d2c179dd1dc4bcdd1265cecf8b9e5358
+ms.openlocfilehash: 8a8f3416f22cb5ce11fe0951f126d8ce36a248bd
 
 
 ---
 
 
-# <a name="sync-your-ios-device-manually"></a>Ruční synchronizace zařízení s iOS
+# <a name="sync-your-ios-device-manually"></a>Ruční synchronizace zařízení s iOSem
 
-Pokud instalace aplikace trvá moc dlouho, můžete zkusit zařízení synchronizovat ručně. Ruční synchronizace může instalaci urychlit. Funkce synchronizace se vztahuje jenom na systém iOS, ne na Mac OS X.
+Pokud instalace aplikace trvá moc dlouho, můžete zkusit zařízení synchronizovat ručně. Ruční synchronizace může instalaci urychlit. Funkce synchronizace se vztahuje jenom na iOS, ne na macOS.
 
 1. Otevřete aplikaci Portál společnosti pro iOS.
 
@@ -42,6 +42,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaj
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

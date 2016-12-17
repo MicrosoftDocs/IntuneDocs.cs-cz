@@ -9,14 +9,14 @@ keywords: "dokumentace k Intune, správa aplikací, správa zařízení, dokumen
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 10/07/2016
+ms.date: 12/7/2016
 ms.topic: hubpage
 ms.service: microsoft-intune
 ms.suite: ems
 ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
 translationtype: Human Translation
-ms.sourcegitcommit: 315c159869303fd6a26caa35160d5ba3c7ccdc1f
-ms.openlocfilehash: db637ebb1165466493b633012ab170059678996c
+ms.sourcegitcommit: b921a15ca5fd24d9ddbf54789c42a0740b72d7f6
+ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
 
 
 ---
@@ -24,16 +24,16 @@ ms.openlocfilehash: db637ebb1165466493b633012ab170059678996c
 <article id="main">
     <section id="hero-content">
       <h1>Dokumentace k Intune</h1>
-      <h2>Postup nasazení a správy Microsoft Intune, služby pro správu mobilních zařízení a aplikací.</h2>
-      <h3>Chcete spravovat Intune pomocí Configuration Manageru? <a href="https://docs.microsoft.com/en-us/sccm/mdm/understand/hybrid-mobile-device-management" target="_blank">Přečtěte si o hybridní správě mobilních zařízení&rarr;.</a></h3>
+      <h2>Správa mobilních zařízení a aplikací a správa počítačů z cloudu </h2>
+      <h3>Chcete spravovat Intune pomocí Configuration Manageru? <a href="https://docs.microsoft.com/en-us/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management" target="_blank">Přečtěte si o hybridní správě mobilních zařízení&rarr;.</a></h3>
     </section>
     <section id="featured" class="container">
       <h2 class="section-heading"><span class="icon icon-warning"></span> Vybraný obsah</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="/intune/whats-new/whats-new-in-microsoft-intune">Co je nového</a></li>
+          <li><a href="http://fasttrack.microsoft.com/ems">150 a více licencí? Využijte výhod FastTracku</a></li>
           <li><a href="/intune/understand-explore/common-ways-to-use-intune">Běžné způsoby použití Intune</a></li>
-          <li><a href="/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune">Ochrana dat aplikací</a></li>
+          <li><a href="/intune-azure/introduction/what-is-microsoft-intune">Intune v Azure Portal Preview</a></li>
         </ul>
         <ul class="column column-half">
           <li><a href="/intune/deploy-use/restrict-access-based-on-device-network-app-risk">Ochrana přístupu k firemním prostředkům</a></li>
@@ -62,7 +62,7 @@ ms.openlocfilehash: db637ebb1165466493b633012ab170059678996c
                 <li class="column-third">
                   <a href="/intune/understand-explore/introduction-to-microsoft-intune">
                     <h3>Úvod do služby Intune</h3>
-                    <p>Získejte informace o tom, jak Intune poskytuje možnosti správy zařízení a aplikací a dat pro správu mobilních zařízení (zařízení s iOS, zařízení s Androidem, telefony s Windows) a počítačů s Windows.</p>
+                    <p>Získejte informace o tom, jak Intune poskytuje možnosti správy zařízení a aplikací a dat pro správu mobilních zařízení (zařízení s iOSem, zařízení s Androidem, telefony s Windows) a počítačů s Windows.</p>
                   </a>
                 </li>
                 <li class="column-third">
@@ -285,6 +285,6 @@ ms.openlocfilehash: db637ebb1165466493b633012ab170059678996c
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO1-->
 
 

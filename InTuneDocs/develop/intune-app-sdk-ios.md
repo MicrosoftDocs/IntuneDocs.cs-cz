@@ -1,21 +1,21 @@
 ---
-title: "Microsoft Intune App SDK pro iOS – Příručka pro vývojáře | Microsoft Intune"
+title: "Microsoft Intune App SDK pro iOS – Příručka pro vývojáře | Dokumentace Microsoftu"
 description: 
 keywords: 
-author: Msmbaldwin
+author: mtillman
 manager: angrobe
-ms.author: oydang
-ms.date: 09/08/2016
+ms.author: mtillman
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
-ms.reviewer: jeffgilb
+ms.reviewer: oydang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 01b927178ad5fb1019781863e243133861887148
-ms.openlocfilehash: eb14be40a94513a21dbd24a62e42afb7a3e57381
+ms.sourcegitcommit: b55147e2be338bd46661695134fd0f0de105bb72
+ms.openlocfilehash: b8a723fce088c1d61bddb5f2479da59a4b5c3771
 
 
 ---
@@ -32,6 +32,8 @@ Microsoft Intune App SDK pro iOS umožňuje začlenit do vaší aplikace pro iOS
 * Potřebujete počítač s Mac OS, na kterém běží OS X 10.8.5 nebo novější a je na něm nainstalovaná sada nástrojů XCode verze 5 nebo novější.
 
 * Přečtěte si [licenční podmínky Intune App SDK pro iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS%20.pdf). Vytisknout a uchovat pro své záznamy kopii licenčních podmínek. Stažením a použitím Intune App SDK pro iOS s licenčními podmínkami souhlasíte.  Pokud je nepřijímáte, software nepoužívejte.
+
+* Stáhněte soubory pro sadu Intune App SDK pro iOS z [GitHubu](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios).
 
 ## <a name="whats-in-the-sdk"></a>Co je v sadě SDK
 
@@ -322,9 +324,9 @@ Pokud se registrace nepovede, aplikace by na základě podrobností selhání m�
 
 Po zavolání tohoto rozhraní API může aplikace dál normálně fungovat. Pokud se registrace podaří, SDK uživateli oznámí, že se vyžaduje restartování aplikace.
 
-## <a name="debug-information"></a>Informace o ladění
+## <a name="status-result-and-debug-notifications"></a>Oznámení o stavu, výsledku a ladění
 
-Aplikace může přijmout oznámení o ladění v souvislosti s následujícími požadavky na službu Intune MAM:
+Aplikace může přijmout oznámení o stavu, výsledku a ladění v souvislosti s následujícími požadavky na službu Intune MAM:
 
  - Žádosti o registraci
  - Žádosti o aktualizaci zásad
@@ -365,7 +367,7 @@ Tyto metody delegáta vracejí objekt `IntuneMAMEnrollmentStatus`, který obsahu
 
 Tento objekt je definovaný v umístění Headers/IntuneMAMEnrollmentStatus.h, kde jsou popsány také konkrétní stavové kódy, které se můžou vrátit.
 
-Je důležité si uvědomit, že žádná obchodní logika aplikace by neměla být založena na těchto oznámeních. Cílem je, aby aplikace mohla tyhle informace odesílat telemetrické službě kvůli ladění a monitorování.
+
 
 
 ## <a name="sample-code"></a>Příklad kódu
@@ -637,7 +639,7 @@ Ano, správce IT může do aplikace poslat příkaz k selektivnímu vymazání. 
 
 ## <a name="submit-your-app-to-the-app-store"></a>Odeslání aplikace do App Storu
 
-Buildy statické knihovny i modelu pro Intune App SDK jsou univerzální binární soubory. To znamená, že mají kód pro všechny architektury zařízení a simulátoru. Když mají aplikace poslané do App Storu kód simulátoru, Apple je odmítne. Když kompilujete buildy jen pro zařízení pomocí statické knihovny, linker kód simulátoru automaticky odstraní.
+Buildy statické knihovny i modelu pro Intune App SDK jsou univerzální binární soubory. To znamená, že mají kód pro všechny architektury zařízení a simulátoru. Když mají aplikace poslané do App Storu kód simulátoru, Apple je odmítne. Když kompilujete buildy jen pro zařízení pomocí statické knihovny, linker kód simulátoru automaticky odstraní. Postupujte podle následujících kroků a před nahráním aplikace do App Storu zkontrolujte, jestli je odebraný celý kód simulátoru.
 
 1. Ujistěte se, že na ploše máte `IntuneMAM.framework`.
 
@@ -654,6 +656,6 @@ Buildy statické knihovny i modelu pro Intune App SDK jsou univerzální binárn
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 

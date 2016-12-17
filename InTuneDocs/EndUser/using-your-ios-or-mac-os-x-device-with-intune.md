@@ -1,6 +1,6 @@
 ---
-title: "Použití zařízení s iOS nebo Mac OS X s Intune | Microsoft Intune"
-description: "Obsahuje seznam odkazů na úlohy, které můžete dělat v mobilních zařízení s iOS nebo Mac OS X, když je zařízení registrované v Intune."
+title: "Použití zařízení s iOSem nebo macOS s Intune | Microsoft Intune"
+description: "Obsahuje seznam odkazů na úlohy, které můžete dělat v mobilních zařízení s iOSem nebo macOS, když je zařízení registrované v Intune."
 keywords: 
 author: barlanmsft
 ms.author: barlan
@@ -15,13 +15,13 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: bc031fe080cd17b3436388f59ecc83df53a16a32
+ms.sourcegitcommit: 2f92ce22c9e6a87bccc7ab17144d0d52ff6cfc7b
+ms.openlocfilehash: e10c0eb3000bcf3a98a0cab891c40d32fe06d335
 
 
 ---
 
-# <a name="using-your-ios-or-mac-os-x-device-with-intune"></a>Using your iOS or Mac OS X device with Intune
+# <a name="using-your-ios-or-macos-device-with-intune"></a>Použití zařízení s iOSem nebo macOS s Intune
 
 Tento článek obsahuje odkazy na všechny úlohy, které můžou provést koncoví uživatelé na svých zařízeních spravovaných Intune. Správci IT můžou z těchto informací zjistit kroky, podle kterých uživatelé musí postupovat při provádění různých úloh seskupených do následujících kategorií:
 - Instalace aplikace Portál společnosti a registrace ve službě Intune
@@ -34,8 +34,8 @@ Informace v této části pomohou uživatelům s instalací Portálu společnost
 
 - [Instalace a přihlášení do aplikace Portál společnosti Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 - [Registrace zařízení s iOSem v Intune](enroll-your-device-in-intune-ios.md)
-- [Registrace zařízení s Mac OS X v Intune](enroll-your-device-in-intune-mac-os-x.md)
-- [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md)
+- [Registrace zařízení s macOS do Intune](enroll-your-device-in-intune-macos.md)
+- [Co se stane, když nainstalujete aplikaci Portál společnosti a zaregistrujete zařízení v Intune?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md)
 
 ## <a name="things-users-can-do-when-their-device-is-enrolled-in-intune"></a>Možnosti uživatelů po zaregistrování zařízení do Intune
 
@@ -44,7 +44,7 @@ Informace v této části pomohou uživatelům provádět akce po zaregistrován
 - [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-ios.md)
 - [Nastavení nebo změna hesla](set-or-change-your-passcode-ios.md)
 - [Obnovení (vymazání) ztraceného nebo odcizeného zařízení](reset-erase-your-lost-or-stolen-device-ios.md)
-- [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-ios.md)
+- [Vypnutí shromažďování dat o využití Microsoftem](turn-off-microsoft-usage-data-collection-ios.md)
 - [Zrušení registrace zařízení v Intune](unenroll-your-device-from-intune-ios.md)
 - [Co se stane, když zrušíte registraci zařízení v Intune?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
 - [Co se stane, když resetujete zařízení pomocí Portálu společnosti?](what-happens-if-you-reset-your-device-using-the-company-portal-ios.md)
@@ -67,6 +67,6 @@ Informace v této části pomohou uživatelům opravit problémy, se kterými se
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

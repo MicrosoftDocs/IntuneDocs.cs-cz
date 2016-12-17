@@ -1,5 +1,5 @@
 ---
-title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s iOS nebo Mac OS X v Intune? | Microsoft Intune"
+title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s iOSem nebo macOS v Intune? | Microsoft Intune"
 description: 
 keywords: 
 author: barlanmsft
@@ -15,16 +15,16 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 737effbcd9d7e70186d874c3aefd8afaab05fca8
+ms.sourcegitcommit: e007f666d2c179dd1dc4bcdd1265cecf8b9e5358
+ms.openlocfilehash: 4d169a5d9f27037378df6f2e3b1997ebbc9e8ab7
 
 
 ---
 
 
-# <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-ios-or-mac-os-x-device-in-intune"></a>Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s iOS nebo Mac OS X v Intune?
+# <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-ios-or-macos-device-in-intune"></a>Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s iOSem nebo macOS v Intune?
 
-Když nainstalujete aplikaci Portál společnosti a potom v ní zaregistrujete své zařízení s iOS nebo Mac OS X v Intune, můžete v aplikaci Portál společnosti provádět tyto kroky:
+Když nainstalujete aplikaci Portál společnosti a pak v ní zaregistrujete své zařízení s iOSem nebo macOS v Intune, můžete v aplikaci Portál společnosti provádět tyto kroky:
 
 -   Přístup k podnikové síti, e-mailu a pracovním souborům
 
@@ -96,6 +96,6 @@ Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na spr�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 
