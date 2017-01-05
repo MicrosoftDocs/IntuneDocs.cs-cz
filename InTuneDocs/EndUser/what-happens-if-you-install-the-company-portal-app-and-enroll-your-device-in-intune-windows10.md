@@ -1,5 +1,5 @@
 ---
-title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Windows 10 v Intune? | Microsoft Intune"
+title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Windows 10 v Intune? | Dokumentace Microsoftu"
 description: 
 keywords: 
 author: barlanmsft
@@ -15,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 94868431ce100a252ddfc7df5f9c2e287f0eedaf
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 1f872d245144727406d926b0c9401827939470f1
 
 
 ---
@@ -56,6 +56,6 @@ Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na spr�
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 
