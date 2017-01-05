@@ -5,33 +5,33 @@ layout: HubPage
 title: "Dokumentace k Intune – dokumentace k MDM | Microsoft Docs"
 description: "Technická dokumentace k Microsoft Intune – Správa mobilních zařízení a aplikací"
 keywords: "dokumentace k intune, dokumentace k MDM, dokumentace k Mobile Device Management, dokumentace ke správě mobilních zařízení a aplikací"
-author: jeffgilb
-ms.author: jeffgilb
-manager: jeffgilb
-ms.date: 04/28/2016
+author: arob98
+ms.author: angrobe
+manager: angrobe
+ms.date: 11/15/2016
 ms.topic: hubpage
 ms.service: microsoft-intune
 ms.suite: ems
 ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: bbab228b86bbec49bf68c7d91a05c4d0e7f37209
-ms.openlocfilehash: 1dd09018114ba68deae1adbde8e2c8167017bef7
+ms.sourcegitcommit: f9ab2200b1d357d6a805e3e5cd37f3c4391e3571
+ms.openlocfilehash: 89789e5b5f7b5030f8ec1bd0c62e8e410b9ed8be
 
 
 ---
-# Dokumentace k Intune
+# <a name="intune-documentation"></a>Dokumentace k Intune
 <article id="main">
     <section id="hero-content">
       <h1>Dokumentace k Intune</h1>
       <h2>Postup nasazení a správy Microsoft Intune, služby pro správu mobilních zařízení a aplikací.</h2>
-      <h3>Chcete spravovat Intune s Configuration Managerem? <a href="http://go.microsoft.com/fwlink/?LinkId=816854" target="_blank">Zobrazit dokumentaci ke Configuration Manageru &rarr;</a></h3>
+      <h3>Chcete spravovat Intune s Configuration Managerem? <a href="http://go.microsoft.com/fwlink/?LinkId=816854" target="_blank">Zobrazit dokumentaci ke Configuration Manageru&rarr;</a></h3>
     </section>
     <section id="featured" class="container">
       <h2 class="section-heading"><span class="icon icon-warning"></span> Vybraný obsah</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="/intune/understand-explore/introduction-to-microsoft-intune">Úvod do Microsoft Intune</a></li>
+          <li><a href="http://fasttrack.microsoft.com/ems">150 a více licencí? Využijte výhod FastTracku</a></li>
           <li><a href="/intune/understand-explore/common-ways-to-use-intune">Typické scénáře využívající Intune</a></li>
           <li><a href="/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune">Úvodní příručka služby Intune</a></li>
         </ul>
@@ -62,7 +62,7 @@ ms.openlocfilehash: 1dd09018114ba68deae1adbde8e2c8167017bef7
                 <li class="column-third">
                   <a href="/intune/understand-explore/introduction-to-microsoft-intune">
                     <h3>Úvod do služby Intune</h3>
-                    <p>Získejte informace o tom, jak Intune poskytuje možnosti správy zařízení a aplikací a dat pro správu mobilních zařízení (zařízení s iOS, zařízení s Androidem, telefony s Windows) a počítačů s Windows.</p>
+                    <p>Získejte informace o tom, jak Intune poskytuje možnosti správy zařízení a aplikací a dat pro správu mobilních zařízení (zařízení s iOSem, zařízení s Androidem, telefony s Windows) a počítačů s Windows.</p>
                   </a>
                 </li>
                 <li class="column-third">
@@ -285,6 +285,6 @@ ms.openlocfilehash: 1dd09018114ba68deae1adbde8e2c8167017bef7
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

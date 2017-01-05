@@ -16,6 +16,6 @@ Zobrazí se [podrobnosti o podmínkách a ujednáních](https://technet.microsof
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 
