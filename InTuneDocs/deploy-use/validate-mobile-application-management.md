@@ -21,6 +21,8 @@ ms.openlocfilehash: 080d8f4fd4b6e1b53df860f4319b1c199d504c06
 
 # <a name="validating-your-mobile-application-management-setup"></a>Jak ověřit nastavení správy mobilních aplikací
 
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Toto téma obsahuje informace o tom, jak zkontrolovat, jestli vám správa mobilních aplikací (MAM) funguje bez problémů. Návod se vztahuje k zásadám MAM na webu Azure Portal.
 
 ### <a name="checking-for-symptoms"></a>Zjišťování příznaků

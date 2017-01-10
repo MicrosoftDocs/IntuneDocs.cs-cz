@@ -20,6 +20,9 @@ ms.openlocfilehash: 4133c64d283682f0be37cd6ac69164ef872a5026
 ---
 
 # <a name="evaluate-mobile-device-management-in-microsoft-intune"></a>Hodnocení správy mobilních zařízení v Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Tato příručka pro testování popisuje, jak funguje správa mobilních zařízení v Intune. Vyzkoušíte si následující:
 - Registraci zařízení ke správě pomocí Intune
 - Vytvoření skupin pro uspořádání uživatelů a zařízení

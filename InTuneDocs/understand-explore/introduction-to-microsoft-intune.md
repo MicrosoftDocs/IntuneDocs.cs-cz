@@ -21,6 +21,9 @@ ms.openlocfilehash: e373fe71f54472bca538ba4a14beff39d090e23d
 ---
 
 # <a name="what-is-intune"></a>Co je Intune?
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Intune je cloudová služba pro správu mobility velkých organizací (EMM), která pomáhá tomu, aby vaši pracovníci byli produktivní, a současně chrání vaše firemní data. Intune vám umožňuje:
 * Spravovat mobilní zařízení, která vaši pracovníci používají pro přístup k datům společnosti
 * Spravovat mobilní aplikace, které vaši pracovníci používají
