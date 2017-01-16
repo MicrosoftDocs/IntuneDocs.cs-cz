@@ -1,5 +1,5 @@
 ---
-title: "Řešení potíží s podmíněným přístupem | Microsoft Intune"
+title: "Řešení potíží s podmíněným přístupem | Dokumentace Microsoftu"
 description: "Popisuje, co dělat, pokud se vašim uživatelům nedaří získat přístup k prostředkům prostřednictvím podmíněného přístupu Intune."
 keywords: 
 author: andredm7
@@ -14,13 +14,15 @@ ms.assetid: 433fc32c-ca9c-4bad-9616-852c72faf996
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 001bacbfc6a61a1c6b8f75c8e7ca55e311a1fa71
-ms.openlocfilehash: 7d52b3bb05a00b0da5e0845380f8431044b1c121
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: d4b935ba28edc1b41afb46b0aa7d0ee586de2a1c
 
 
 ---
 
 # <a name="troubleshoot-conditional-access"></a>Řešení potíží s podmíněným přístupem
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Obvykle se uživatel pokusí o přístup k e-mailu nebo ke službě SharePoint a obdrží výzvu k registraci. Prostřednictvím této výzvy přejde uživatele na portál společnosti.
 
@@ -49,8 +51,8 @@ Tyto podmínky lze zobrazit pro každé zařízení v portálu pro správu Azure
  -  Zařízení nevyhovuje zásadám Intune. K běžným problémům patří požadavky na šifrování a heslo. Uživatel bude přesměrován na portál společnosti, kde může nakonfigurovat zařízení tak, aby vyhovovalo požadavkům.
  -  Registrace informací o shodě pro zařízení může trvat nějakou dobu. Počkejte několik minut a zkuste akci zopakovat.
  -  Pro zařízení s iOS:
-     -   Existující e-mailový profil vytvořený uživatelem bude blokovat nasazení profilu Intune vytvořeného správcem. Tento problém je běžný, protože uživatelé s iOS obvykle vytvoří e-mailový profil a potom se zaregistrují. Portál společnosti bude uživatele informovat o tom, že požadavky nejsou splněny kvůli ručně nakonfigurovanému e-mailovému profilu a vyzve uživatele k odebrání příslušného profilu. Uživatel by měl svůj e-mailový profil odebrat, aby bylo možné nasadit profil Intune. Chcete-li problémům zabránit, požádejte své uživatele, aby se zaregistrovali bez instalace e-mailového profilu a aby Intune povolili nasazení profilu.
-     -   Zařízení s iOS můžou uváznout ve stavu kontroly dodržování předpisů bránit uživateli v inicializaci jiné kontroly. Restartování Portálu společnosti může problém vyřešit a stav dodržování předpisů bude odrážet stav zařízení v Intune. Po shromáždění všech dat ze synchronizace zařízení je kontrola dodržování předpisů rychlá a trvá v průměru méně než půl sekundy.
+     -   Existující e-mailový profil vytvořený uživatelem bude blokovat nasazení profilu Intune vytvořeného správcem. Tento problém je běžný, protože uživatelé s iOSem obvykle vytvoří e-mailový profil a potom se zaregistrují. Portál společnosti bude uživatele informovat o tom, že požadavky nejsou splněny kvůli ručně nakonfigurovanému e-mailovému profilu a vyzve uživatele k odebrání příslušného profilu. Uživatel by měl svůj e-mailový profil odebrat, aby bylo možné nasadit profil Intune. Chcete-li problémům zabránit, požádejte své uživatele, aby se zaregistrovali bez instalace e-mailového profilu a aby Intune povolili nasazení profilu.
+     -   Zařízení s iOSem můžou uváznout ve stavu kontroly dodržování předpisů bránit uživateli v inicializaci jiné kontroly. Restartování Portálu společnosti může problém vyřešit a stav dodržování předpisů bude odrážet stav zařízení v Intune. Po shromáždění všech dat ze synchronizace zařízení je kontrola dodržování předpisů rychlá a trvá v průměru méně než půl sekundy.
 
         Obvyklým důvodem toho, že zařízení zůstanou v tomto stavu, jsou potíže s připojením ke službě nebo dlouhotrvající synchronizace.  Pokud potíže přetrvávají v různých síťových konfigurací (mobilní, Wi-Fi, VPN) i po restartech zařízení a po ověření, že zprostředkovatel SSP je v zařízení aktuální, obraťte se na podporu Microsoftu podle popisu v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 

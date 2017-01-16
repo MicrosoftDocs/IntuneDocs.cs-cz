@@ -1,5 +1,5 @@
 ---
-title: "Nastavení zásad zabezpečení mobilního zařízení | Microsoft Intune"
+title: "Nastavení zásad zabezpečení mobilního zařízení | Dokumentace Microsoftu"
 description: "Intune můžete použít ke konfiguraci široké škály nastavení, která se dají nasadit na spravovaných zařízeních v organizaci."
 keywords: 
 author: robstackmsft
@@ -14,14 +14,17 @@ ms.assetid: e5ab3b76-08af-4893-b294-fb6627fdc4c6
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: a64336ad959daad9685bdfbef3c284a14e708894
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 755cf7d87d7145c55eb5fe583748bd98d34e8fb1
 
 
 
 ---
 
 # <a name="mobile-device-security-policy-settings-in-microsoft-intune"></a>Nastavení zásad zabezpečení mobilního zařízení v Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 > [!IMPORTANT]
 > Microsoft Intune teď nabízí oddělené zásady konfigurace pro každou platformu zařízení. Tyto zásady obsahují nejaktuálnější nastavení, která můžete použít. Můžete dál používat zásady zabezpečení mobilních zařízení a všechna existující nasazení budou i nadále fungovat. Měli byste si ale v nejbližší době naplánovat migraci na nové zásady konfigurace, protože zásady zabezpečení mobilních zařízení budou v budoucnu odebrány.
 
@@ -49,7 +52,7 @@ Zásady zabezpečení mobilních zařízení můžete vytvořit a nasadit u nás
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
 |**Vyžadovat heslo k odemknutí mobilních zařízení**|Ne|Ne|Ano|Ano|Ano|
 |**Vyžadovaný typ hesla**<br /><br />Určuje typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.|Ano|Ano|Ano|Ano|Ne|
-|**Vyžadovaný typ hesla – Minimální počet znakových sad**<br /><br />Používají se čtyři znakové sady: malá písmena, velká písmena, číslice a symboly. Toto nastavení určuje, kolik různých znakových sad musí být v hesle zahrnutých. Pro zařízení s iOS ale určuje počet symbolových znaků, které musí heslo obsahovat.|Ano|Ano|Ano|Ano|Ne|
+|**Vyžadovaný typ hesla – Minimální počet znakových sad**<br /><br />Používají se čtyři znakové sady: malá písmena, velká písmena, číslice a symboly. Toto nastavení určuje, kolik různých znakových sad musí být v hesle zahrnutých. Pro zařízení s iOSem ale určuje počet symbolových znaků, které musí heslo obsahovat.|Ano|Ano|Ano|Ano|Ne|
 |**Minimální délka hesla**|Ano|Ano|Ano|Ano|Ano|
 |**Povolit jednoduchá hesla**<br /><br />Příklady jednoduchých hesel: 0000 a 1234.|Ne|Ne|Ano|Ano|Ne|
 |**Počet povolených opakovaných neúspěšných přihlášení, než se zařízení vymaže**|Ano|Ano|Ano|Ano|Ano|
@@ -105,7 +108,7 @@ Když nasadíte zásadu délky hesel na zařízení se systémem Windows RT, bud
 |**Povolit obnovení do výrobního nastavení**|Ne|Ne|Ne|Ne|Ano (pouze Samsung KNOX Standard)|
 
 
-## <a name="cloud-settings-documents-and-data"></a>Nastavení cloudu – dokumenty a data
+## <a name="cloud-settings--documents-and-data"></a>Nastavení cloudu – dokumenty a data
 
 |Název nastavení|Windows 8.1 a Windows RT 8.1|Windows RT|Windows Phone 8 a Windows Phone 8.1|iOS|Android a Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
@@ -116,7 +119,7 @@ Když nasadíte zásadu délky hesel na zařízení se systémem Windows RT, bud
 |**Adresa URL pracovních složek**<br /><br />Nastaví adresu URL pracovní složky, aby bylo možné synchronizovat dokumenty na všech zařízeních.|Ano|Ne|Ne|Ne|Ne|
 |**Povolit zálohy na Googlu**|Ne|Ne|Ne|Ne|Ano (pouze Samsung KNOX Standard)|
 
-## <a name="cloud-settings-accounts-and-synchronization"></a>Nastavení cloudu – účty a synchronizace
+## <a name="cloud-settings--accounts-and-synchronization"></a>Nastavení cloudu – účty a synchronizace
 
 |Název nastavení|Windows 8.1 a Windows RT 8.1|Windows RT|Windows Phone 8 a Windows Phone 8.1|iOS|Android a Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
@@ -214,6 +217,6 @@ Když nasadíte zásadu délky hesel na zařízení se systémem Windows RT, bud
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

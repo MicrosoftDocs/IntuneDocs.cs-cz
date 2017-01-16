@@ -1,5 +1,5 @@
 ---
-title: "Nasazení zásad a aplikací | Microsoft Intune"
+title: "Nasazení zásad a aplikací | Dokumentace Microsoftu"
 description: "Můžete povolit nastavení zásad a nasadit aplikace, které se použijí hned po registraci zařízení pro správu."
 keywords: 
 author: nathbarn
@@ -14,13 +14,16 @@ ms.assetid: e0d8e98f-7dd8-4cbf-887c-a9af63ffe970
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 56f7d1578ba6b193c6547686675e0fd4fde5f378
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 9f75020a6d8a3e2aeb278fb99f54516253abf3dd
 
 
 ---
 
 # <a name="create-policies-and-publish-apps"></a>Vytvoření zásad a publikování aplikací
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Než začnete s registrací aplikací na Intune, můžete povolit nastavení zásad a aplikace, které se nasadí ihned, jak začne správa těchto zařízení. Intune nabízí nastavení, které pomáhá řídit nastavení zabezpečení na mobilních zařízeních, spravovat nastavení brány Windows Firewall a Endpoint Protection pro počítače a nasazovat aplikace. Můžete nakonfigurovat zásady, přidat aplikace a nasadit tyto aplikace tak, aby zařízení přijímala nastavení a aplikace ihned po registraci v Intune.
 
 Zásady a aplikace jsou specifické pro platformu.

@@ -1,11 +1,11 @@
 ---
-title: "Řešení problémů s přístupem k prostředkům společnosti | Microsoft Intune"
+title: "Řešení problémů s přístupem k prostředkům společnosti | Dokumentace Microsoftu"
 description: "Kódy stavů a chyb z tohoto tématu použijte k vyřešení problémů s přístupem k prostředkům."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 09/22/2016
+ms.date: 09/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,16 @@ ms.assetid: 40622ced-6029-4abf-873e-b51d2b51934c
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 03f7433bc46d6a24498104bed7e5f1f366aca890
-ms.openlocfilehash: 114d4107dc73b3ad905de3fe02ffb81fa2e0e954
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: 2640df8eb3f8505320f965ee1f6edbf5d4f8cfe7
 
 
 ---
 
 # <a name="troubleshoot-company-resource-access-problems-with-microsoft-intune"></a>Řešení problémů s přístupem k prostředkům společnosti ve službě Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Kódy stavů a chyb z tohoto tématu použijte k vyřešení problémů, když akce Microsoft Intune vrátí kód chyby.
 
 Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md), ve kterém najdete další způsoby, jak získat nápovědu.
@@ -160,7 +163,7 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 |-2016323108|0x87D159DC|13004:Nejde nastavit protokol EAP.|
 |-2016323109|0x87D159DB|13003:Nejde vytvořit konfiguraci připojení WiFi.|
 |-2016323110|0x87D159DA|13002:Heslo je povinné.|
-|-2016323111|0x87D159D9| 13001:Uživatelské jméno je povinné.|
+|-2016323111|0x87D159D9|13001:Uživatelské jméno je povinné.|
 |-2016323112|0x87D159D8|13000:Nejde nainstalovat.|
 |-2016324070|0x87D1561A|12042:Neznámý kód národního prostředí|
 |-2016324071|0x87D15619|12041:Neznámý kód jazyka|
@@ -373,6 +376,6 @@ Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podpor
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Dec16_HO5-->
 
 

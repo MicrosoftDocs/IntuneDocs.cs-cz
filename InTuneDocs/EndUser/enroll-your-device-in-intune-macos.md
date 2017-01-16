@@ -1,5 +1,5 @@
 ---
-title: "Registrace zařízení s macOS do Intune | Microsoft Intune"
+title: "Registrace zařízení s macOS v Intune | Dokumentace Microsoftu"
 description: "Popisuje postup registrace zařízení s macOS do Intune."
 keywords: Mac OS X, macOS, OS X
 author: barlanmsft
@@ -11,12 +11,14 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 58eb0e7a-1321-4c66-a281-88fb01e72c1c
+searchScope:
+- Company Portal
 ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
-ms.openlocfilehash: 650e9b0700971e626e4062c312111ef60e74badc
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 70b11804b6b96e76b43cc450ac4c433fb31be6f8
 
 
 ---
@@ -26,7 +28,7 @@ ms.openlocfilehash: 650e9b0700971e626e4062c312111ef60e74badc
 Přístup k aplikacím, datům a prostředkům vaší organizace vám umožňuje dělat vaši práci. Pokud pro práci používáte zařízení s macOS, znamená to instalaci __profilu správy__. To je soubor, který nastavuje správce IT a který načítá informace o nastavení a přístupu do vašeho Macu. Chcete se dozvědět více? Zjistěte, [co se stane, když nainstalujete aplikaci Portál společnosti a zaregistrujete své zařízení do Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 
   > [!NOTE]
-  > Pokud se snažíte zařízení s iOS (jako iPhone nebo iPad) skutečně zaregistrovat, [vyzkoušejte místo toho tyto pokyny](enroll-your-device-in-intune-ios.md).
+  > Pokud se snažíte zařízení s iOSem (jako iPhone nebo iPad) skutečně zaregistrovat, [vyzkoušejte místo toho tyto pokyny](enroll-your-device-in-intune-ios.md).
 
 1. V __Docku__ vyhledejte __Safari__ a otevřete nové okno. Potom otevřete [web Portál společnosti](http://portal.manage.microsoft.com).
 2. Přihlaste se na web Portál společnosti přes svůj pracovní nebo školní účet.

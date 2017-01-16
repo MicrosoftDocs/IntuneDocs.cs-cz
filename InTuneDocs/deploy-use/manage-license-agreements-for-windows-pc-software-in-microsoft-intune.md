@@ -1,11 +1,11 @@
 ---
-title: "Správa licenčních smluv k softwaru pro počítače se softwarovým klientem Intune | Microsoft Intune"
+title: "Správa licenčních smluv k softwaru pro počítače se softwarovým klientem Intune | Dokumentace Microsoftu"
 description: "Intune umožňuje spravovat licenční smlouvy pro software zakoupený prostřednictvím multilicenční smlouvy s Microsoftem i pro jinak zakoupený software."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 09/14/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: c59d8635-3f66-40f5-824a-a71c738e0341
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: 6eead7cd7f04641687b334c8f0c09a3af1f9b4ba
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: 47c923cf145a7783a1bc2222442831fcbc0f6a47
 
 
 ---
 
-# Správa licenčních smluv pro software počítačů s Windows v Microsoft Intune
+# <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Správa licenčních smluv pro software počítačů s Windows v Microsoft Intune
 Microsoft Intune umožňuje přidávat a spravovat informace o licenční smlouvě pro software zakoupený prostřednictvím multilicenční smlouvy s Microsoftem. To můžete provést i pro software Microsoftu nebo třetího výrobce, zakoupený jiným způsobem. Tyto informace můžete uspořádat do logických skupin.
 
 > [!IMPORTANT]
@@ -43,7 +43,7 @@ Můžete taky generovat sestavy, které u softwarových titulů zobrazují počt
 > [!TIP]
 > Pracovní prostor **Licence** se v konzole správce nezobrazí, pokud nespravujete aspoň jeden počítač s Windows a klientem Intune pro počítače s Windows.
 
-## Přidání multilicenčních smluv uzavřených s Microsoftem
+## <a name="add-microsoft-volume-licensing-agreements"></a>Přidání multilicenčních smluv uzavřených s Microsoftem
 Multilicenční smlouvy Intune poskytují informace o licenci pro software, který je zakoupený prostřednictvím multilicenčních smluv s Microsoftem. Multilicenční smlouvy s Microsoftem můžete přidat do Intune tak, že zadáte odpovídající páry čísel smluv. Čísla smluv nebo autorizační čísla musí odpovídat správným číslům licencí nebo registrací. Páry čísel smluv získáte při nákupu vašich licenčních smluv na webu [Volume Licensing Service Center (VLSC)](http://go.microsoft.com/fwlink/?LinkID=223842).
 
 1.  V [konzole pro správu Microsoft Intune](https://account.manage.microsoft.com/admin/default.aspx) vyberte **Licence**.
@@ -123,19 +123,19 @@ Jakmile informace o multilicencích aktualizujete, můžete je v pracovním pros
 > [!NOTE]
 > **Název produktu** zobrazený pro všechny multilicenční smlouvy s Microsoftem je **Není k dispozici**.
 
-## Přidávání a úprava licenčních smluv k jinému softwaru
+## <a name="add-and-edit-other-software-licensing-agreements"></a>Přidávání a úprava licenčních smluv k jinému softwaru
 Kromě multilicenčních smluv uzavřených s Microsoftem můžete do Intune přidávat i jiné typy licenčních smluv. Tyto smlouvy můžou zahrnovat software jiného výrobce nebo software Microsoftu zakoupený prostřednictvím prodejce.
 
 > [!IMPORTANT]
 > Než přidáte smlouvu, musíte mít v Intune zaregistrovaný aspoň jeden počítač s Windows.  Navíc musí aspoň jeden zaregistrovaný počítač odeslat softwarový balíček, který je provozovatelný v licenci a který použijete k přidání licenční smlouvy.
 
-### Přidání jiných smluv na software
+### <a name="to-add-other-software-agreements"></a>Přidání jiných smluv na software
 
 1.  V [konzole pro správu Microsoft Intune](https://account.manage.microsoft.com/admin/default.aspx) vyberte **Licence**.
 
 2.  Vyberte **Přidat smlouvy** v části **Licenční smlouvy na ostatní software**.
 
-3.  Na stránce **Přidat smlouvy** v části **Zvolit typ smlouvy** vyberte **Licenční smlouva na ostatní software** .
+3.  Na stránce **Přidat smlouvy** v části **Zvolit typ smlouvy** vyberte **Licenční smlouva na ostatní software**.
 
 4.  V části **Přidat podrobnosti smlouvy** zadejte toto:
 
@@ -158,17 +158,17 @@ Kromě multilicenčních smluv uzavřených s Microsoftem můžete do Intune př
 
 5.  V oblasti **Vybrat skupinu licencí** proveďte některou z těchto akcí:
 
-    -   Pokud nechcete přidávat nové smlouvy do nové nebo existující skupiny licencí, vyberte **Přidat smlouvy do skupiny Nepřiřazené smlouvy** . Smlouvy můžete kdykoli přidat do uživatelem definovaných skupin licencí.
+    -   Pokud nechcete přidávat nové smlouvy do nové nebo existující skupiny licencí, vyberte **Přidat smlouvy do skupiny Nepřiřazené smlouvy**. Smlouvy můžete kdykoli přidat do uživatelem definovaných skupin licencí.
 
-    -   Pokud chcete nové smlouvy přidávat do nové skupiny licencí, vyberte **Přidat smlouvy do nové skupiny licencí** . Zobrazí se výzva k zadání názvu nové skupiny licencí.
+    -   Pokud chcete nové smlouvy přidávat do nové skupiny licencí, vyberte **Přidat smlouvy do nové skupiny licencí**. Zobrazí se výzva k zadání názvu nové skupiny licencí.
 
-    -   Pokud chcete nové smlouvy přidávat do existující skupiny licencí, vyberte **Přidat smlouvy do existující skupiny licencí** . V seznamu **Název skupiny** vyberte skupinu licencí, do které chcete smlouvy přidat.
+    -   Pokud chcete nové smlouvy přidávat do existující skupiny licencí, vyberte **Přidat smlouvy do existující skupiny licencí**. V seznamu **Název skupiny** vyberte skupinu licencí, do které chcete smlouvy přidat.
 
 6.  Vyberte **OK**.
 
-Zobrazí se zobrazení seznamu **Všechny smlouvy** .
+Zobrazí se zobrazení seznamu **Všechny smlouvy**.
 
-## Správa licenčních smluv
+## <a name="manage-license-agreements"></a>Správa licenčních smluv
 Licenční smlouvy na software se dají přidat do skupin licencí. Skupiny licencí můžete použít k uspořádání licenčních smluv v jednotkách vhodných pro vaši organizaci. Můžete taky odstranit licenční smlouvy, které jste vytvořili v minulosti.
 
 |||
@@ -181,6 +181,6 @@ Licenční smlouvy na software se dají přidat do skupin licencí. Skupiny lice
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Dec16_HO5-->
 
 

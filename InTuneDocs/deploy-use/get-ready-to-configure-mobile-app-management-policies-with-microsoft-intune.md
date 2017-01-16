@@ -1,9 +1,9 @@
 ---
-title: "Předpoklady zásad MAM | Microsoft Intune"
+title: "Předpoklady zásad MAM | Dokumentace Microsoftu"
 description: "Toto téma popisuje předpoklady pro nastavení uživatelů před vytvořením zásad správy mobilních aplikací."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 11/29/2016
 ms.topic: article
@@ -14,13 +14,16 @@ ms.assetid: 7e6a85e7-e007-41b6-9034-64d77f547b87
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: ac820146d81fb121a60f7029f6a52a0056d6ab0a
+ms.sourcegitcommit: 9e208608d50c9b5f7fe66743de0d3c7e741dbfbd
+ms.openlocfilehash: cb525deb240668c0f0f14b19f39eb1226e338629
 
 
 ---
 
 # <a name="get-ready-to-configure-mobile-app-management-policies-on-the-azure-portal"></a>Příprava na konfiguraci zásad správy mobilních aplikací na portálu Azure Portal
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 V tomto tématu jsou popsané předpoklady a kroky, které je potřeba udělat **předtím**, než na portálu Azure Portal budete moct vytvářet zásady správy mobilních aplikací (MAM).
 
 Pokud chcete zjistit, jak zásady MAM služby Intune chrání data společnosti, přečtěte si téma [Ochrana aplikačních dat pomocí zásad správy mobilních aplikací](protect-apps-and-data-with-microsoft-intune.md).
@@ -39,7 +42,7 @@ V současnosti můžete konfigurovat zásady MAM jak v **konzole pro správu Int
 * V konzole pro správu Intune se nemusí zobrazovat všechna nastavení zásad MAM, protože **nová nastavení** se můžou přidat jen na **portál Azure Portal**.
 
 * Pokud vytvoříte zásady MAM na **obou** místech, tzn. jak v konzole pro správu Intune, tak na portálu Azure Portal, **použijí se pro aplikace zásady na portálu Azure Portal, které také budou nasazeny u uživatelů**.
-    * Zásady MAM vytvořené v konzole pro správu Intune se nedají importovat do portálu Azure.  Zásady MAM je potřeba znovu vytvořit na portálu Azure.
+    * Zásady MAM vytvořené v konzole pro správu Intune se nedají importovat do portálu Azure Portal.  Zásady MAM je potřeba znovu vytvořit na portálu Azure Portal.
 
 
 * Ostatní **funkce pro správu aplikací**, jako je nasazení aplikací a zásady konfigurace aplikací, jsou v současnosti k dispozici jen v **konzole pro správu Intune**.
@@ -98,7 +101,7 @@ Pokud ke správě svých zařízení používáte [!INCLUDE[wit_nextref](../incl
 
 ### <a name="assign-roles-to-non-global-admin-users"></a>Přiřazení rolí uživatelům, kteří nejsou globálními správci
 
-Globální správci mají přístup k [portálu Azure](https://portal.azure.com).  Pokud chcete, aby uživatelé, kteří nejsou globálními správci, mohli konfigurovat zásady a plnit další úkoly při správě mobilních aplikací, můžete jim přiřadit roli přispěvatele. Podrobné pokyny najdete v tématu [Použití přiřazení rolí ke správě přístupu k prostředkům předplatného Azure](https://azure.microsoft.com/en-us/documentation/articles/role-based-access-control-configure/).
+Globální správci mají přístup k [portálu Azure Portal](https://portal.azure.com).  Pokud chcete, aby uživatelé, kteří nejsou globálními správci, mohli konfigurovat zásady a plnit další úkoly při správě mobilních aplikací, můžete jim přiřadit roli přispěvatele. Podrobné pokyny najdete v tématu [Použití přiřazení rolí ke správě přístupu k prostředkům předplatného Azure](https://azure.microsoft.com/en-us/documentation/articles/role-based-access-control-configure/).
 
 
 
@@ -121,6 +124,6 @@ V následující tabulce najdete přehled rolí a oprávnění, které můžete 
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

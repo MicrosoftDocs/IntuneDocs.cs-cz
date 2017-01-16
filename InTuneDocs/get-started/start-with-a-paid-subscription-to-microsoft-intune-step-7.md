@@ -1,11 +1,11 @@
 ---
-title: "Přizpůsobení portálu společnosti | Microsoft Intune"
+title: "Přizpůsobení Portálu společnosti | Dokumentace Microsoftu"
 description: "Portál společnosti Intune uživatelům umožňuje provádění běžných úkolů, jako je registrace zařízení, instalace aplikací a vyhledávání informací o oddělení IT."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 11/22/2016
+ms.date: 12/13/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: eb4a9f01-f857-4563-ab6f-5d0d7dfa659d
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 04cccd410417dca4477c0d6cd61b0940dda8c389
+ms.sourcegitcommit: 063b073d85dac9fce7d1cbab80ea320c5d237961
+ms.openlocfilehash: 0d8a86b55904198612e0d53fbc387d850d88a449
 
 
 ---
@@ -42,11 +42,6 @@ Některé úlohy, které uživatelé mohou provést na Portálu společnosti:
 -   Vzdáleně uzamknout svoje zařízení
 -   Stahovat software nasazený vaší organizací
 -   Kontaktovat oddělení IT se žádostí o podporu
-
-> [!NOTE]
-> V některých zemích není aplikace Portál společnosti k dispozici.
-> __iOS:__ Aplikace Portál společnosti pro iOS je vydaná ve [všech zemích, kde je dostupný](https://go.microsoft.com/fwlink/?linkid=831284) App Store pro zařízení Apple iOS.
-> __Android__: Aplikace Portál společnosti pro Android v současnosti není dostupná v Číně. V těchto zemích použijte alternativní řešení, tzn. [nainstalujte aplikaci Portál společnosti ve verzi pro Android bokem](https://www.microsoft.com/en-us/download/details.aspx?id=49140).  
 
 ## <a name="customize-company-portal-settings"></a>Přizpůsobení nastavení Portálu společnosti
 Přizpůsobení Portálu společnosti pomáhá poskytnout známé a užitečné prostředí pro koncové uživatele. Přihlaste se do [konzoly správce Microsoft Intune](https://manage.microsoft.com) jako tenant nebo správce služby, zvolte **Správce** &gt; **Portál společnosti** a nakonfigurujte nastavení portálu společnosti.

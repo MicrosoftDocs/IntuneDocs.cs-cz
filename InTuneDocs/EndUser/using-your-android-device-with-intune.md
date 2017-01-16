@@ -1,5 +1,5 @@
 ---
-title: "Použití zařízení s Androidem v Intune | Microsoft Intune"
+title: "Použití zařízení s Androidem v Intune | Dokumentace Microsoftu"
 description: "Seznam odkazů na úlohy, které mohou koncoví uživatelé dělat na svém mobilním zařízení s Androidem, pokud je zaregistrované v Intune"
 keywords: 
 author: barlanmsft
@@ -14,8 +14,8 @@ ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 7751d5661f3fb9235820c716fdbded3dab385ec4
+ms.sourcegitcommit: 8611566f5f5d33b7f0937fabd15892353953df77
+ms.openlocfilehash: 1c4e77d3089df2ff184a414ba668b01b2d040854
 
 
 ---
@@ -62,8 +62,8 @@ Uživatelé mohou informace v této části použít k opravě problémů, se kt
 - [Odeslání protokolů s diagnostickými daty e-mailem vašemu správci IT](send-diagnostic-data-logs-to-your-it-administrator-using-email-android.md)
 - [Odeslání protokolů s diagnostickými daty vašemu správci IT pomocí kabelu USB](send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android.md)
 - [Odeslání chyb při registraci vašemu správci IT](send-enrollment-errors-to-your-it-administrator-android.md)
-- [Zařízení nemá požadovanou minimální verzi operačního systému](device-doesnt-have-the-required-minimum-operating-system-version-android.md)
-- [Zařízení nevyhovuje maximální verzi operačního systému](device-doesnt-comply-with-maximum-operating-system-version-android.md)
+- [Zařízení nemá požadovanou minimální verzi operačního systému](you-need-to-update-your-android-device.md)
+- [Zařízení nevyhovuje maximální verzi operačního systému](your-android-version-isnt-yet-supported.md)
 - [Zařízení obsahuje root a nemůže se připojit](your-device-is-rooted-and-you-cant-connect-android.md)
 - [Zařízení chybí požadovaný certifikát](your-device-is-missing-a-required-certificate-android.md)
 - [Jste vyzváni k vypnutí možnosti Neznámé zdroje](you-are-asked-to-turn-off-unknown-sources-android.md)
@@ -75,6 +75,6 @@ Uživatelé mohou informace v této části použít k opravě problémů, se kt
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

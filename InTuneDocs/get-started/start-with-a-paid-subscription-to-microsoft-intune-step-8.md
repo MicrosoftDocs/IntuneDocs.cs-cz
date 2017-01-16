@@ -1,5 +1,5 @@
 ---
-title: "Nastavení registrace zařízení | Microsoft Intune"
+title: "Nastavení registrace zařízení | Dokumentace Microsoftu"
 description: "Nastavte autoritu MDM a povolte registraci pro zařízení s iOS, Windows, Androidem a MacOS."
 keywords: 
 author: nathbarn
@@ -14,13 +14,16 @@ ms.assetid: 5d3215e7-0a5c-44bd-afb0-aeafce98c43f
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 031cf995da4fa46b244b65a6b1c51b6a1aa00d9f
-ms.openlocfilehash: 8c3076b26844669f9927478b5847f88f2265c6c9
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 654c5b65a9fde6742f3682b1fd5ba6c056d0d45b
 
 
 ---
 
 # <a name="enroll-mobile-devices-and-install-an-app"></a>Registrace mobilních zařízení a instalace aplikace
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Pokud chcete nastavit správu mobilních zařízení v Intune, je potřeba nejdříve nastavit *autoritu správy mobilních zařízení*, která identifikuje službu schopnou správy zařízení spojených s vaším účtem. V těchto pokynech se předpokládá, že budete místo System Center Configuration Manageru používat službu Intune. Po nastavení autority MDM můžete povolit správu platforem zařízení a zaregistrovat svá zařízení v aplikaci Portál společnosti.
 
 ## <a name="enable-device-enrollment"></a>Povolení registrace zařízení
@@ -66,6 +69,6 @@ Gratulujeme! Právě jste dokončili poslední krok *úvodní příručky Intune
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

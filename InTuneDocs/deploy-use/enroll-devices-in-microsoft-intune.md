@@ -1,5 +1,5 @@
 ---
-title: "Registrace zařízení | Microsoft Intune"
+title: "Registrace zařízení | Dokumentace Microsoftu"
 description: "Správa mobilních zařízení (MDM) využívá registraci pro zajištění správy zařízení a povolení přístupu k prostředkům."
 keywords: 
 author: staciebarker
@@ -14,13 +14,16 @@ ms.assetid: 8fc415f7-0053-4aa5-8d2b-03202eca4b87
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
-ms.openlocfilehash: a6e5148996b1010f0248f5b122246e38c3aa0464
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: bfb1cee100b9c7bfcdc862489254e6ccefe9ecf0
 
 
 ---
 
 # <a name="enroll-devices-for-management-in-intune"></a>Registrace zařízení pro správu v Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Zařízení, včetně počítačů s Windows, můžete registrovat ke správě mobilních zařízení (MDM) pomocí služby Microsoft Intune. Toto téma popisuje různé způsoby registrace mobilních zařízení do systému správy Intune. Způsob registrace zařízení závisí na jeho typu, vlastnictví a požadované úrovni správy. Registrace vlastního zařízení (BYOD) umožňuje uživatelům registrovat své osobní telefony, tablety nebo počítače. Registrace zařízení vlastněného společností (COD) umožňuje scénáře správy, jako je vzdálené vymazání, sdílená zařízení nebo spřažení uživatele pro zařízení.
 
 Pokud používáte [Exchange ActiveSync](#mobile-device-management-with-exchange-activesync-and-intune), ať už místní nebo hostovaný v cloudu, můžete povolit jednoduchou správu Intune bez registrace. Počítače s Windows je možné spravovat taky pomocí [klientského softwaru Intune](#manage-windows-pcs-with-intune).
@@ -31,7 +34,7 @@ Následující tabulka uvádí metody registrace v Intune a podporované možnos
 
 - **Vymazání** – Udává, jestli musí být zařízení vymazáno, aby ho uživatelé mohli zaregistrovat. Pojmem „vymazání“ se rozumí obnovení továrních nastavení zařízení, které odstraní všechna data. Další informace najdete v tématu [Vyřazení zařízení](retire-devices-from-microsoft-intune-management.md).
 - **Spřažení** – Přidruží zařízení k uživatelům. Požadováno pro správu mobilních aplikací (MAM) a podmíněný přístup k datům společnosti. Další informace najdete v tématu [Přidružení uživatele](enroll-corporate-owned-ios-devices-in-microsoft-intune.md#use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices).
-- **Zámek** – Brání uživatelům odebrat zařízení ze správy. Zařízení s iOS vyžadují pro zámek režim dohledu. Další informace najdete v tématu [Vzdálené uzamčení](retire-devices-from-microsoft-intune-management.md#block-access-a-device).
+- **Zámek** – Brání uživatelům odebrat zařízení ze správy. Zařízení s iOSem vyžadují pro zámek režim dohledu. Další informace najdete v tématu [Vzdálené uzamčení](retire-devices-from-microsoft-intune-management.md#block-access-a-device).
 
 **Metody registrace zařízení s iOS**
 
@@ -63,7 +66,7 @@ Sadu otázek, které vám pomohou najít správnou metodu, najdete v tématu [Vo
 Uživatelé s vlastním zařízením si nainstalují aplikaci Portál společnosti a zaregistrují svoje zařízení. To jim umožní připojit se k podnikové síti a doméně nebo ke službě Azure Active Directory. V mnoha scénářích COD (zařízení ve vlastnictví společnosti), musíte pro většinu platforem povolit registraci vlastních zařízení (BYOD). Další informace najdete v tématu [Požadavky na správu mobilních zařízení](prerequisites-for-enrollment.md). ([Zpět k tabulce](#overview-of-device-enrollment-methods))
 
 ## <a name="corporate-owned-devices"></a>Zařízení vlastněná společností
-Ke správě zařízení vlastněných společností (COD) můžete použít konzolu Intune. Zařízení s iOS můžete zaregistrovat přímo nástroji poskytovanými společností Apple. Všechny typy zařízení může zaregistrovat správce využívající správce registrace zařízení. Zařízení s číslem IMEI se také dají identifikovat a označit jako zařízení ve vlastnictví společnosti, což umožní využít scénáře COD.
+Ke správě zařízení vlastněných společností (COD) můžete použít konzolu Intune. Zařízení s iOSem můžete zaregistrovat přímo nástroji poskytovanými společností Apple. Všechny typy zařízení může zaregistrovat správce využívající správce registrace zařízení. Zařízení s číslem IMEI se také dají identifikovat a označit jako zařízení ve vlastnictví společnosti, což umožní využít scénáře COD.
 
 Další informace najdete v tématu [Registrace zařízení vlastněných společností](manage-corporate-owned-devices.md).
 
@@ -71,7 +74,7 @@ Další informace najdete v tématu [Registrace zařízení vlastněných spole�
 Správce registrace zařízení je zvláštní účet Intune, který se používá k registraci a správě více zařízení vlastněných společností. Správci pak mohou nainstalovat aplikaci Portál společnosti a zaregistrovat velký počet zařízení bez uživatele. Přečtěte si další informace o [DEM](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md). ([Zpět k tabulce](#overview-of-device-enrollment-methods))
 
 ### <a name="dep"></a>DEP
-Správa programu DEP společnosti Apple umožňuje vytvářet a bezdrátově nasazovat zásady v zařízeních s iOS zakoupených a spravovaných prostřednictvím programu DEP. Zařízení se zaregistruje, když ho uživatel poprvé zapne a spustí průvodce nastavením iOS. Tento způsob podporuje režim **dozoru nad iOS**, který zase umožňuje následující funkce:
+Správa programu DEP společnosti Apple umožňuje vytvářet a bezdrátově nasazovat zásady v zařízeních s iOSem zakoupených a spravovaných prostřednictvím programu DEP. Zařízení se zaregistruje, když ho uživatel poprvé zapne a spustí průvodce nastavením iOS. Tento způsob podporuje režim **dozoru nad iOS**, který zase umožňuje následující funkce:
   - Registrace uzamčeného zařízení
   - Podmíněný přístup
   - Detekce jailbreaků

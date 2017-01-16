@@ -1,10 +1,10 @@
 ---
 title: "Výhody sady Intune App SDK | Dokumentace Microsoftu"
-description: 
+description: "Sada Intune App SDK je dostupná pro platformy iOS i Android a umožňuje funkce správy mobilních aplikací s Microsoft Intune."
 keywords: 
 author: mtillman
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,24 +13,26 @@ ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 613e293d9bd853d6de7cdc0d753cc8473afc180b
-ms.openlocfilehash: e8f96499f006af590b6e7da295503696110dad4e
+ms.sourcegitcommit: a2e43444bff3b189c1516c6ca7131771035313ea
+ms.openlocfilehash: a967758387e9904eb9ce794b3783e777322c83a7
 
 
 ---
 
 # <a name="intune-app-sdk-overview"></a>Přehled sady Intune App SDK
-Sada Intune App SDK je dostupná pro platformy iOS i Android a umožňuje funkce správy mobilních aplikací s Microsoft Intune. Usiluje o minimalizaci nutných změn kódu, které musí vývojáře aplikace provádět. Zjistíte, že většinu funkcí sady SDK můžete povolit bez změny chování vaší aplikace. Za účelem zlepšení činnosti koncových uživatelů a správců IT můžete využít rozhraní API k přizpůsobení chování vaší aplikace pro funkce, které vyžadují zapojení vaší aplikace. 
+Intune App SDK, dostupná pro iOS i Android, povoluje ve vaší aplikaci zásady ochrany aplikací Intune. Usiluje o minimalizaci nutných změn kódu, které musí vývojáře aplikace provádět. Zjistíte, že většinu funkcí sady SDK můžete povolit bez změny chování vaší aplikace. Za účelem zlepšení činnosti koncových uživatelů a správců IT můžete využít rozhraní API k přizpůsobení chování vaší aplikace pro funkce, které vyžadují zapojení vaší aplikace.
 
-Po povolení aplikace můžou správci IT nasadit zásady pro aplikace spravované v Intune a využít těchto funkcí k ochraně podnikových dat.
+Jakmile v aplikaci povolíte zásady ochrany aplikací, můžou správci IT tyto zásady nasazovat, aby chránili firemní data v rámci dané aplikace.
 
-## <a name="regular-features"></a>Běžné funkce
+## <a name="app-protection-features"></a>Funkce ochrany aplikací
 
-### <a name="control-users-ability-to-move-corporate-documents"></a>Ovládání možnosti uživatele přesouvat podnikové dokumenty
-Správci IT můžou řídit relokaci souborů podnikových dokumentů v aplikacích spravovaných v Intune. Můžou třeba nasadit zásadu, která zakazuje aplikacím pro zálohování souborů zálohovat podniková data do cloudu.
+Níže najdete příklady funkcí ochrany aplikací Intune, které se dají aktivovat pomocí sady SDK.
+
+### <a name="control-users-ability-to-move-corporate-files"></a>Ovládání možnosti uživatelů přesouvat podnikové soubory
+Správci IT můžou řídit, kam se dají přesouvat pracovní nebo školní data v aplikaci. Můžou třeba nasadit zásadu, která zakazuje aplikacím zálohovat podniková data do cloudu.
 
 ### <a name="configure-clipboard-restrictions"></a>Konfigurace omezení schránky
-Správci IT můžou konfigurovat chování schránky v aplikacích spravovaných v Intune. Můžou třeba nasadit zásadu, která koncovým uživatelům znemožní používat schránku k vyjmutí/kopírování z aplikace spravované v Intune a vložení obsahu do nespravované, osobní aplikace.
+Správci IT můžou konfigurovat chování schránky v aplikacích spravovaných v Intune. Můžou například nasadit zásadu, která zabrání koncovým uživatelům vyjmout nebo zkopírovat data z aplikace a vložit je do nespravované osobní aplikace.
 
 ### <a name="enforce-encryption-on-saved-data"></a>Vynucení šifrování uložených dat
 Správci IT můžou vynutit zásadu, která zajišťuje, aby data ukládaná aplikací do zařízení šifrovala.
@@ -39,36 +41,37 @@ Správci IT můžou vynutit zásadu, která zajišťuje, aby data ukládaná apl
 Správci IT můžou vzdáleně vymazat podniková data z aplikací spravovaných v Intune. Tato funkce je založená na identitě a odstraní jenom soubory přidružené k podnikové identitě koncového uživatele. Kvůli tomu funkce vyžaduje zapojení aplikace. Aplikace může určit identitu, u které má dojít k vymazání, na základě uživatelského nastavení. Když uvedená uživatelská nastavení v aplikaci chybí, výchozím chováním bude vymazání adresáře aplikace a upozornění koncového uživatele, že došlo k odebrání přístupu.
 
 ### <a name="enforce-the-use-of-a-managed-browser"></a>Vynucení používání spravovaného prohlížeče
-Správci IT můžou při otevírání odkazů z aplikací spravovaných v Intune vynutit používání spravovaného prohlížeče. Tím se zajistí, aby odkazy zobrazované v podnikovém prostředí zůstaly uchované v rámci aplikací spravovaných v Intune.
+Správce IT může vynutit, aby se webové odkazy v aplikaci otevíraly pomocí [aplikace Intune Managed Browser](../deploy-use/manage-internet-access-using-managed-browser-policies.md). Tím se zajistí, aby odkazy zobrazované v podnikovém prostředí zůstaly uchované v rámci aplikací spravovaných v Intune.
 
 ### <a name="enforce-a-pin-policy"></a>Vynucení zásady kódu PIN
-Správci IT můžou vynutit zásady kódu PIN při spuštění aplikace spravované v Intune. Tím se zajistí, že uživatel, který aplikaci spouští, je tím samým uživatelem, který se původně přihlásil pomocí zaregistrovaného pracovního nebo školního účtu. Když koncoví uživatelé nakonfigurují kód PIN, sada Intune App SDK použije Azure Active Directory k ověření přihlašovacích údajů koncového uživatele podle registrovaného účtu Intune.
+Správce IT může po koncovém uživateli vyžadovat, aby před přístupem k podnikovým datům v aplikaci zadal PIN. Tím se zajistí, že uživatel, který aplikaci používá, je tím samým uživatelem, který se původně přihlásil pomocí pracovního nebo školního účtu. Když si koncoví uživatelé nakonfigurují PIN, sada Intune App SDK použije Azure Active Directory k ověření přihlašovacích údajů koncových uživatelů podle registrovaného účtu Intune.
 
-### <a name="require-users-to-enter-credentials-before-they-can-start-apps"></a>Vyžádání přihlašovacích údajů před spuštěním aplikací
-Správci IT můžou vyžadovat, aby uživatelé před spuštěním aplikací spravovaných v Intune zadali přihlašovací údaje. Sada Intune App SDK použije Azure Active Directory k jednotnému přihlášení, při kterém se jednou zadané přihlašovací údaje znovu použijí pro další přihlášení. Také podporujeme ověřování řešení správy identity [sdružených se službou Azure Active Directory](https://msdn.microsoft.com/library/azure/jj679342.aspx).
+### <a name="require-users-to-sign-in-with-work-or-school-account-for-app-access"></a>Vyžadování, aby se uživatelé před přístupem k aplikaci přihlásili pomocí pracovního nebo školního účtu
+Správci IT můžou vyžadovat, aby se uživatelé před přístupem k aplikaci přihlásili pomocí pracovního nebo školního účtu. Sada Intune App SDK použije Azure Active Directory k poskytnutí jednotného přihlašování, při kterém se jednou zadané přihlašovací údaje znovu použijí pro následující přihlášení. Také podporujeme ověřování řešení správy identity sdružených se službou Azure Active Directory.
 
 ### <a name="check-device-health-and-compliance"></a>Kontrola stavu zařízení a dodržování předpisů
-Správci IT můžou před přístupem koncových uživatelů k aplikacím spravovaným v Intune kontrolovat stav zařízení a dodržování podnikových zásad. Na platformě iOS tato zásada kontroluje, jestli zařízení nemá jailbreak. Na platformě Android tato zásada kontroluje, jestli zařízení nemá root.
+Správci IT můžou před přístupem koncových uživatelů k aplikacím kontrolovat stav zařízení a dodržování zásad Intune. Na iOSu tato zásada kontroluje, jestli zařízení nemá jailbreak. Na Androidu tato zásada kontroluje, jestli zařízení nemá root.
 
-### <a name="sdk-multi-identity-support"></a>Podpora více identit v sadě SDK
-Podpora více identit je funkce umožňující koexistenci účtů spravovaných zásadou (podnikových) a nespravovaných (osobních) v jediné aplikaci.
+### <a name="multi-identity-support"></a>Podpora více identit
+Podpora více identit je funkce sady SDK umožňující koexistenci účtů spravovaných zásadou (podnikových) a nespravovaných (osobních) v jediné aplikaci.
 
-Mnoho uživatelů si například v aplikaci Outlook pro iOS a Android konfiguruje podnikové i osobní e-mailové účty. Když uživatel přistupuje k datům v podnikovém účtu, správce IT si musí být jistý, že se použije správa zásad MAM. Když ale uživatel přistupuje k osobnímu e-mailovému účtu, tato data by měla být mimo dosah správce IT. Microsoft Intune toho dosahuje pomocí cílení zásad správy v aplikaci jenom na podnikový účet. Tato funkce více identit vám pomůže vyřešit problém s ochranou dat, se kterým se setkávají organizace se zařízeními a aplikacemi, které podporují osobní i pracovní účty.
+Mnoho uživatelů si například v mobilních aplikacích Office pro iOS a Android konfiguruje podnikové i osobní e-mailové účty. Když uživatel pracuje s daty s podnikovým účtem, správce IT musí mít jistotu, že se použije zásada ochrany aplikací. Když ale uživatel přistupuje k osobnímu e-mailovému účtu, tato data by měla být mimo dosah správce IT. Sada Intune App SDK toho dosahuje tím, že v aplikaci cílí zásady ochrany aplikace **jenom** na podnikovou identitu.
 
-* **Způsob podpory více identit**: Rozhraní API sady Microsoft Intune App SDK vám umožňují určit Hlavní název uživatele (UPN) se specifickými datovými operacemi, jako jsou operace se schránkou a operace se soubory. Sada SDK používá název UPN k přiřazení volání k názvu UPN, který byl použit k registraci zařízení ve službě Microsoft Intune. Když se názvy UPN shodují, se volání považuje za volání podnikových dat a data jsou chráněna. Když se názvy UPN neshodují, volání se považuje za volání osobních dat a data nejsou chráněna.
+Tato funkce více identit vám pomůže vyřešit problém s ochranou dat, se kterým se setkávají organizace s aplikacemi ze Storu, které podporují osobní i pracovní účty.
 
-### <a name="app-management-without-device-enrollment"></a>Správa aplikací bez registrace zařízení
+
+### <a name="app-protection-without-device-enrollment"></a>Ochrana aplikací bez registrace zařízení
 
 >[!IMPORTANT]
->Správa mobilních aplikací Intune bez registrace zařízení je aktuálně dostupná jenom v sadě Intune App SDK pro iOS. 
+>Ochrana aplikací Intune bez registrace zařízení ještě není v Intune App SDK pro Android dostupná. Je dostupná v Intune App Wrapping Tools, SDK pro iOS, komponentě SDK Xamarin a modulu plug-in SDK Cordova.
 
 
-Mnoho uživatelů chce zobrazovat a používat podniková data bez registrace svého osobního zařízení v produktu správy mobilních zařízení (MDM). Registrace MDM vyžaduje globální kontrolu zařízení, proto uživatelé váhají předat tuto globální kontrolu vlastního osobního zařízení společnosti.
+Mnoho uživatelů s osobními zařízeními chce pracovat s podnikovými daty bez registrace svého osobního zařízení u poskytovatele správy mobilních zařízení (MDM). Registrace MDM vyžaduje globální kontrolu nad zařízením, proto uživatelé často váhají předat tuto kontrolu nad vlastním osobním zařízením podniku.
 
-Správa aplikací bez registrace zařízení umožňuje službě Microsoft Intune nasadit zásady MAM přímo na aplikaci bez spoléhání na nasazení zásad prostřednictvím kanálu MDM. Protože není potřeba žádný kanál MDM, není potřeba ani registrace MDM.
+Ochrana aplikací bez registrace zařízení umožňuje službě Microsoft Intune nasadit zásady ochrany aplikací přímo na aplikaci, aby se nemusela spoléhat na nasazení zásad prostřednictvím kanálu pro správu zařízení.
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO5-->
 
 

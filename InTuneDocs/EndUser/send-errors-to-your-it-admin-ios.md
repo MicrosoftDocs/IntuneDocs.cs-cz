@@ -1,26 +1,27 @@
 ---
-title: "Odeslání chyb správci IT | Microsoft Intune"
+title: "Odeslání chyb správci IT | Dokumentace Microsoftu"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 12/06/2016
+ms.date: 12/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: fbc9c2b9-b454-4b33-86cc-650742bbf1e1
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2f92ce22c9e6a87bccc7ab17144d0d52ff6cfc7b
-ms.openlocfilehash: 577e26066095b42542cfcd7b917877ddb0a88c55
+ms.sourcegitcommit: 4e1b2094a89940355e02c062614620a4abf70e53
+ms.openlocfilehash: 5de975c1c4b06d1cce0dcdb2564826d09a53260e
 
 
 ---
-
 
 # <a name="send-errors-to-your-it-admin"></a>Odeslání chyb správci IT
 
@@ -30,10 +31,12 @@ Pokud při použití aplikace Portál společnosti dojde k chybám ve vašem zř
 
 -   Na obrazovce **O produktu** aplikace Portál společnosti klepněte na **Odeslat diagnostickou zprávu**.
 
--   V aplikaci Portál společnosti zatřeste zařízením a po zobrazení diagnostické výstrahy klepněte na **E-mail**. Pokud zatřesete zařízením, ale žádná výstraha se nezobrazí, otevřete **Nastavení** &gt; **Portál společnosti** a zkontrolujte, jestli je zapnutá možnost **Gesto zatřesením**.
+-   V aplikaci Portál společnosti zatřeste zařízením a po zobrazení diagnostické výstrahy klepněte na **E-mail**. Pokud zatřesete zařízením, ale žádná výstraha se nezobrazí, otevřete **Nastavení** > **Portál společnosti** a zkontrolujte, jestli je zapnutá možnost **Gesto zatřesením**.
+
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

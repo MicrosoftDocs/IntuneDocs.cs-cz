@@ -1,11 +1,11 @@
 ---
-title: "Aktualizace aplikací | Microsoft Intune"
+title: "Aktualizace aplikací | Dokumentace Microsoftu"
 description: "Informace v tomto tématu vám můžou pomoct pochopit, jak můžete aktualizovat aplikace, pokud je vyžadována novější verze."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/12/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,19 +14,22 @@ ms.assetid: beee6933-876a-4be0-b395-4c24cfbd519b
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: e78642494356038d4dff259ca54030122fd90819
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: 824605544487c987c8726e0efe91d06a597fadb2
 
 
 ---
 
-# Aktualizace aplikací pomocí služby Microsoft Intune
+# <a name="update-apps-using-microsoft-intune"></a>Aktualizace aplikací pomocí služby Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Microsoft Intune může pomoci při správě aktualizací aplikací. Informace v tomto tématu vám můžou pomoct pochopit, jak můžete aktualizovat aplikace, pokud je vyžadována novější verze.
 
-## Jak aplikace aktualizovat
+## <a name="how-to-update-apps"></a>Jak aplikace aktualizovat
 Po vydání nové verze aplikace, kterou máte nasazenou, vám Intune umožní aktualizovat a nasadit novější verze aplikace. Nasazení můžete nahradit jedině novější verzi stejné aplikace (která má stejný identifikátor). Aktualizace aplikací nejde použít k aktualizaci nasazení s jiným balíčkem aplikace.
 
-### Identifikátory aplikací
+### <a name="app-identifiers"></a>Identifikátory aplikací
 Identifikátor aplikace je vlastnost, která jednoznačně identifikuje aplikaci. Nejde nainstalovat víc kopií aplikace se stejným identifikátorem. Toto jsou některé z příkladů identifikátorů aplikací:
 
 - **iOS** – ID sady (například: com.microsoft.excel)
@@ -42,7 +45,7 @@ Identifikátor aplikace je vlastnost, která jednoznačně identifikuje aplikaci
 > -   Dejte uživateli zařízení pokyn, aby přešel na portál společnosti, vybral nainstalovanou aplikaci a pak zvolil **Nainstalovat**.
 > -   Změňte akci nasazení na **Odinstalace**a po odinstalaci aplikace aplikaci znovu nasaďte pomocí akce nasazení **Dostupná instalace**.
 
-### Aktualizace aplikace
+### <a name="to-update-an-app"></a>Aktualizace aplikace
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Aplikace**&gt;**Aplikace**.
 
@@ -59,6 +62,6 @@ V případě aplikací nasazených jako odkaz na obchod je aktualizace spravová
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Dec16_HO5-->
 
 

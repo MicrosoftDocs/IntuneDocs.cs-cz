@@ -1,11 +1,11 @@
 ---
-title: "Použití skupin pro správu uživatelů a zařízení | Microsoft Intune"
+title: "Použití skupin pro správu uživatelů a zařízení | Dokumentace Microsoftu"
 description: "Vytvářejte a spravujte skupiny pomocí pracovního prostoru Skupiny."
 keywords: 
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-ms.date: 10/10/2016
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,78 +14,26 @@ ms.assetid: eb9b01ce-9b9b-4c2a-bf99-3879c0bdaba5
 ms.reviewer: lpatha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 46fd83ac8048a313b0fe4f15e01563698bf7995c
+ms.sourcegitcommit: d87cbc82b55c4c7615decf8d37d59e2194de9922
+ms.openlocfilehash: 59e376202ee268a9b99c017f813a7ef870e79548
 
 
 ---
 # <a name="use-groups-to-manage-users-and-devices-in-microsoft-intune"></a>Použití skupin pro správu uživatelů a zařízení v Microsoft Intune
 
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Toto téma popisuje, jak vytvořit skupiny v Intune. Poskytuje také informace o změně správy skupin, která se chystá v nadcházejících měsících. 
 
 >[!IMPORTANT]
 >
->Pokud se vám po otevření pracovního prostoru Skupiny na portálu Intune zobrazí odkaz na portál Azure Active Directory (Azure AD), znamená to, že už používáte *nový* přístup ke správě skupin v Intune – na základě skupin zabezpečení Azure AD. Ten podrobněji popisujeme v části [Oznámení o připravovaných vylepšeních správy skupin](#notice-of-upcoming-improvements-to-the-admin-experience-for-groups). Pokud chcete vytvářet a spravovat skupiny, klikněte na odkaz na portál Azure AD.
+>Pokud se vám na portálu Intune po otevření pracovního prostoru Skupiny zobrazí odkaz na portál Azure Active Directory (Azure AD), znamená to, že používáte *nový* přístup ke správě skupin v Intune – na základě skupin zabezpečení Azure AD. Jeho popis najdete v tématu [Migrace skupin Azure Active Directory](migrating-groups-to-azure-active-directory.md). Pokud chcete vytvářet a spravovat skupiny, klikněte na odkaz na portál Azure AD.
 >
 >![Snímek obrazovky s odkazem na správu skupin Azure](../media/groups-link-azure.png) 
 >
 >Pokud odkaz na portál Azure AD nevidíte, stále používáte *současný* přístup ke správě skupin popsaný v tomto tématu v části [Vytvoření skupin pro správu uživatelů a zařízení pomocí Microsoft Intune](#Create-groups-to-manage-users-and-devices-with-Microsoft-Intune).
 
-
-## <a name="notice-of-upcoming-improvements-to-the-admin-experience-for-groups"></a>Oznámení o připravovaných vylepšeních správy skupin
-
-Sdělili jste nám, že chcete jednotnou správu skupin a cílení pro Enterprise Mobility a Security. Vyslyšeli jsme vás. Na základě vaší zpětné vazby začneme brzy převádět skupiny Intune na skupiny zabezpečení založené na Azure Active Directory. Tato změna sjednotí správu skupin v rámci Intune a Azure Active Directory (Azure AD). S novým prostředím už nebudete muset pro jednotlivé služby vytvářet duplicitní skupiny. A možnost použít Windows PowerShell a Microsoft Graph navíc zvýší rozšiřitelnost.
-
-### <a name="how-does-this-affect-me-right-now"></a>Co to pro mne teď znamená?
-Pokud už jste zákazníkem Intune, tato změna vás teď nijak neovlivní. Ale připravujeme následující:
-
--   Nové účty budou místo skupin *uživatelů* Intune používat skupiny zabezpečení Azure AD.   
--   V listopadu 2016 budou nové účty, zřízené po vydání měsíční aktualizace služby, spravovat na portálu Azure AD jak skupiny založené na uživatelích, tak skupiny založené na zařízeních. Na stávající zákazníky to zatím nebude mít žádný dopad.
--   V prosinci 2016 začne produktový tým Intune s migrací stávajících zákazníků na novou správu na základě skupin Azure AD. Všechny současné skupiny uživatelů a zařízení, které v Intune jsou, budou migrovány na skupiny zabezpečení Azure AD. Migraci zahájíme až ve chvíli, kdy co nejvíce minimalizujeme veškerý dopad, který by mohla mít na vaši každodenní práci. Očekáváme, že na vaše uživatele nebude mít dopad žádný. Před zahájením migrace vašeho účtu vám navíc pošleme upozornění.
-
-
-### <a name="how-and-when-will-i-migrate-to-the-new-groups-experience"></a>Jak a kdy bude můj účet migrován do nového prostředí skupin?
-Současné zákazníky služby Intune budeme migrovat průběžně. Plán této migrace právě dokončujeme a během několika týdnů přineseme další informace. Na zahájení migrace vás s předstihem upozorníme. Pokud se chcete k migracím na něco zeptat, obraťte se na migrační tým na adrese [intunegrps@microsoft.com](mailto:intunegrps@microsoft.com). Podrobnosti o migraci skupin najdete v článku [Migrace skupin do Azure Active Directory](migrating-groups-to-azure-active-directory.md).
-
-### <a name="what-happens-to-my-existing-user-and-device-groups"></a>Co se stane s mými existujícími skupinami uživatelů a zařízení?
- Skupiny uživatelů a skupiny zařízení, které jste vytvořili ve službě Intune, budou migrovat na skupiny zabezpečení Azure AD. Výchozí skupiny Intune, jako například Všichni uživatelé, zahrneme do migrace pouze tehdy, pokud je vaše nasazení skutečně používá (posoudí se v okamžiku migrace). Migrace může být u některých skupin složitější. Dáme vám vědět, pokud budou k migraci u vaší organizace potřeba nějaké další kroky.
-
-### <a name="what-new-features-will-be-available-to-me"></a>Jaké nové funkce mi změna přinese?
-V rámci migrace z Intune do Azure Active Directory zavedeme novou funkci:
-
--    Skupiny zabezpečení Azure AD budou v Intune podporované pro všechny typy nasazení.
--    Skupiny zabezpečení Azure AD budou podporovat seskupování zařízení i uživatelů.
--    Skupiny zabezpečení Azure AD budou podporovat dynamické skupiny, které mají atributy zařízení z Intune. Budete moct například dynamicky seskupit zařízení podle platformy (jako iOS). Při registraci nového zařízení iOS ve vaší organizaci bude zařízení automaticky přidáno do dynamické skupiny zařízení s iOS.
--    Budete mít sjednocené prostředí správy skupin v Azure AD a Intune.
-- Do Azure AD bude přidána role Správce služby Intune, aby správci služby Intune mohli provádět úkoly správy skupin v Azure AD.
-
-### <a name="what-intune-functionality-wont-be-available"></a>Které funkce Intune přestanou být dostupné?
-Správa skupin se celkově zlepší, ale některé funkce Intune přestanou být po migraci vaší organizace ze skupin Intune na skupiny zabezpečení Azure AD dostupné.
-
-#### <a name="group-management-functionality"></a>Funkce správy skupin
-
--   Po migraci už při vytváření nové skupiny nebude možné vyloučit členy nebo skupiny. S dynamickými skupinami Azure AD ale budete moct pomocí atributů vytvořit rozšířená pravidla, která lze použít k vyloučení uživatelů ze skupiny na základě nastavených kritérií.
--   Skupiny Neseskupení uživatelé a Neseskupená zařízení nebudou podporovány. Tyto skupiny nebudou součástí migrace z Intune do Azure AD.
-
-
-#### <a name="group-dependent-functionality"></a>Funkce závislé na konkrétních skupinách
-
--   Role Správce služby nebude mít oprávnění **Správa skupin**.
--   Nebude možné vytvořit skupinu zařízení Exchange ActiveSync. Vaše skupina všech zařízení spravovaných pomocí EAS bude ze skupiny převedena na zobrazení sestavy.
--  Přesun skupin v sestavách nebude dostupný.
--  Vlastní pravidla cílení oznámení na skupiny nebudou dostupná.
-
-### <a name="what-should-i-do-to-prepare-for-this-change"></a>Jak se mám na tyto změny připravit?
- Máme několik doporučení, která vám tento přechod usnadní:
-
-- Před migrací odstraňte všechny nežádoucí nebo nepotřebné skupiny Intune.
-- Vyhodnoťte využívání funkce vyloučení ve skupinách a zvažte změnu návrhu skupin, abyste se bez této funkce obešli.
--  Pokud máte nějaké správce, kteří nemají oprávnění k vytváření skupin ve službě Azure AD, požádejte správce Azure AD, aby je přidal do role Správce služby Intune v Azure AD.
-
-
-## <a name="create-groups-to-manage-users-and-devices-with-microsoft-intune"></a>Vytvoření skupin pro správu uživatelů a zařízení s Microsoft Intune
-
-Tato část popisuje, jak vytvořit skupiny Intune v konzole pro správu Intune.
+Toto téma popisuje, jak vytvořit skupiny Intune v konzole pro správu Intune.
 
 Skupiny můžete vytvářet a spravovat v pracovním prostoru **Skupiny** v konzole pro správu Microsoft Intune. Stránka **Přehled skupin** zobrazuje souhrny stavů, které vám pomůžou identifikovat problémy vyžadující vaši pozornost a určit jejich prioritu. Souhrny stavů pokrývají tyto oblasti:
 
@@ -108,7 +56,7 @@ Hierarchie skupiny navíc zobrazí souhrny stavu, které vám pomůžou identifi
 >
 > Pokaždé, když vytvoříte omezující zásadu, budete o tom chtít informovat uživatele. Po vytvoření obecnějších skupin a zásad věnujte pozornost tomu, jak vytváříte menší skupiny, aby se redukovala zbytečná komunikace.
 
-### <a name="to-create-a-device-group"></a>Vytvoření skupiny zařízení
+## <a name="to-create-a-device-group"></a>Vytvoření skupiny zařízení
 
 1.  V konzole pro správu Intune zvolte **Skupiny** &gt; **Přehled** &gt; **Vytvořit skupinu**.
 
@@ -128,7 +76,7 @@ Hierarchie skupiny navíc zobrazí souhrny stavu, které vám pomůžou identifi
 
 Nově vytvořená skupina se zobrazí v seznamu **Skupiny** v pracovním prostoru **Skupiny** pod příslušnou nadřazenou skupinou. Tady taky můžete skupinu upravit nebo odstranit.
 
-### <a name="to-create-a-user-group"></a>Vytvoření skupiny uživatelů
+## <a name="to-create-a-user-group"></a>Vytvoření skupiny uživatelů
 
 1.  V konzole pro správu Intune zvolte **Skupiny** &gt; **Přehled** &gt; **Vytvořit skupinu**.
 
@@ -205,6 +153,6 @@ U každé zásady je **Zamýšlená hodnota** a **Stav**. Zamýšlená hodnota j
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

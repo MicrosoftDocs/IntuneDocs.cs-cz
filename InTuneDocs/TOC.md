@@ -10,18 +10,17 @@
 ## [Glosář](understand-explore/intune-glossary.md)
 
 # [Začínáme](get-started/get-started.md)
-## [Úvodní příručka](get-started/start-with-a-paid-subscription-to-microsoft-intune.md)
+## [Nastavení Intune](get-started/start-with-a-paid-subscription-to-microsoft-intune.md)
 ### [Požadavky](get-started/what-to-know-before-you-start-microsoft-intune.md)
-#### [Podporovaná zařízení a prohlížeče](get-started/supported-mobile-devices-and-computers.md)
-#### [Využití šířky pásma sítě](get-started/network-bandwidth-use.md)
+#### [Využití sítě](get-started/network-bandwidth-use.md)
 ### [Přihlášení k Intune](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-1.md)
-### [Konfigurace názvu domény](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2.md)
+### [Konfigurace domén](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2.md)
 ### [Přidávání uživatelů](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3.md)
-### [Správa licencí Intune](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4.md)
+### [Správa licencí](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4.md)
 ### [Organizace uživatelů a zařízení](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-5.md)
 ### [Nasazení zásad a aplikací](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-6.md)
 ### [Přizpůsobení Portálu společnosti](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-7.md)
-### [Registrace mobilních zařízení](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-8.md)
+### [Registrovat zařízení](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-8.md)
 ### [Úlohy po konfiguraci](get-started/post-configuration-tasks.md)
 ## [Migrace na Intune](get-started/migrate-to-intune.md)
 ## Další kroky
@@ -30,14 +29,22 @@
 ### [Publikování mobilních aplikací pro vaše uživatele](get-started/publish-mobile-apps-to-users.md)
 ### [Zjednodušení e-mailové konfigurace v mobilních zařízeních](get-started/simplify-email-configuration-on-mobile-devices.md)
 ### [Ochrana počítačů s Windows proti malwarovým hrozbám](get-started/protect-pcs-against-malware-threats.md)
-## [Fáze nasazení Intune](get-started/rollout-phases-for-microsoft-intune-deployment.md)
-### [Stanovení rozsahu projektu](get-started/project-scope.md)
-### [Ověření konceptu](get-started/proof-of-concept.md)
-### [Pilotní nasazení](get-started/pilot.md)
-### [Podnikové zavedení](get-started/enterprise-rollout.md)
-### [Provoz a údržba](get-started/operations-and-maintenance.md)
 
-# [Novinky](whats-new/whats-new-in-microsoft-intune.md)
+# [Plánování a navrhování](plan-design/introduction.md)
+## [Oddíl 1: Určení cílů, účelu a obtíží nasazení](plan-design/section-1-determine-deployment-goals-objectives-challenges.md)
+## [Oddíl 2: Identifikace scénářů pro případy použití](plan-design/section-2-identify-use-case-scenarios.md)
+## [Oddíl 3: Určení požadavků scénářů pro případy použití](plan-design/section-3-determine-use-case-requirements.md)
+## [Oddíl 4: Vývoj plánu zavedení](plan-design/section-4-develop-a-rollout-plan.md)
+## [Oddíl 5: Vývoj plánu komunikace](plan-design/section-5-develop-a-rollout-communication-plan.md)
+## [Oddíl 6: Vývoj plánu podpory](plan-design/section-6-develop-a-support-plan.md)
+## [Oddíl 7: Vytvoření návrhu Intune](plan-design/section-7-create-an-intune-design.md)
+## [Oddíl 8: Implementace Intune](plan-design/section-8-onboarding-process.md)
+## [Oddíl 9: Testování a ověření](plan-design/section-9-test-and-validation.md)
+## [Další zdroje informací](plan-design/additional-resources.md)
+
+# Novinky
+## [Novinky](whats-new/whats-new-in-microsoft-intune.md)
+## [Co je nového – archiv](whats-new/whats-new-archive.md)
 
 # Nasazení a používání
 ## [Přehled životních cyklů zařízení a aplikací](deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune.md)
@@ -209,6 +216,6 @@
 ## [Řešení problémů s Lookout Integration](troubleshoot/troubleshooting-lookout-integration.md)
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO5-->
 
 

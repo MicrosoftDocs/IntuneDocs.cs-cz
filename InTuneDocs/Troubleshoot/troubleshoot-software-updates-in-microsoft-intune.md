@@ -1,11 +1,11 @@
 ---
-title: "Řešení potíží s aktualizacemi softwaru | Microsoft Intune"
+title: "Řešení potíží s aktualizacemi softwaru | Dokumentace Microsoftu"
 description: "Řešte problémy s aktualizacemi softwaru ve službě Microsoft Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 08/02/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,21 @@ ms.assetid: d17b70f4-17b4-4d89-88fd-70fa4f34fbea
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: 9c08ebe1a4cf1a7768b5dbecf7ffccdd7c8d8006
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: 66ec65e856c0ab70264b797bb3ef7fe4f5673b54
 
 
 ---
 
-# Řešení potíží s aktualizacemi softwaru ve službě Microsoft Intune
+# <a name="troubleshoot-software-updates-in-microsoft-intune"></a>Řešení potíží s aktualizacemi softwaru ve službě Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Informace uvedené v této části vám můžou pomoct při řešení potíží s aktualizacemi softwaru ve službě Microsoft Intune.
 
 Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md), ve kterém najdete další způsoby, jak získat nápovědu.
 
-## Aktualizace kódů chyb agenta
+## <a name="update-agent-error-codes"></a>Aktualizace kódů chyb agenta
 
 Kódy chyb agenta Intune **Update Agent** jsou uvedené v následující tabulce. Pokud určitý kód chyby v této tabulce nenajdete, podívejte se na téma [Kódy výsledků agenta služby Windows Update](http://go.microsoft.com/fwlink/?LinkID=221542).
 
@@ -241,7 +244,7 @@ Kódy chyb agenta Intune **Update Agent** jsou uvedené v následující tabulce
 |**0x80af0005**|OMC_E_INSTALL_NOT_ALLOWED_REBOOT_REQUIRED|Instalace se nepovedla, protože se čeká na povinné restartování.|
 |**0x80af0006**|OMC_E_DOWNLOAD_CANCELLED|Stahování bylo zrušeno.|
 
-## Počítače s Windows 7 s mnoha nahrazenými aktualizacemi přestanou předávat hlášení konzole Microsoft Intune.
+## <a name="windows-7-based-computers-with-lots-of-superseded-updates-stop-reporting-to-the-microsoft-intune-console"></a>Počítače s Windows 7 s mnoha nahrazenými aktualizacemi přestanou předávat hlášení konzole Microsoft Intune.
 **Problém:** Mohou nastat situace, kdy klienti Microsoft Intune zaznamenají jeden nebo více z následujících příznaků:
 - Náhle přestanou předávat hlášení konzole správce Microsoft.  
 - Dojde k vysoké využití procesoru.
@@ -260,11 +263,11 @@ K tomuto problému může dojít, pokud nahrazené aktualizace (aktualizace, kte
 
 Pokud používáte systém Windows 7, ujistěte se ještě, že je nainstalována následující aktualizace: [3050265 Windows Update Client pro Windows 7: červen 2015](https://support.microsoft.com/kb/3050265).
 
-### Další kroky
+### <a name="next-steps"></a>Další kroky
 Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Dec16_HO5-->
 
 

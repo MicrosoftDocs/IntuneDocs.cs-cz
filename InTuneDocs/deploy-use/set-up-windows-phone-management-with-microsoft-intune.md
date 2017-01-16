@@ -1,5 +1,5 @@
 ---
-title: "Nastavení správy pro Windows Phone a Windows 10 Mobile | Microsoft Intune"
+title: "Nastavení správy pro Windows Phone a Windows 10 Mobile | Dokumentace Microsoftu"
 description: "Povolte správu mobilních zařízení (MDM) pro zařízení s Windows 10 Mobile nebo Windows Phone pomocí služby Microsoft Intune."
 keywords: 
 author: staciebarker
@@ -13,14 +13,16 @@ ms.assetid: f5615051-2dd1-453b-9872-d3fdcefb2cb8
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
-ms.openlocfilehash: 3141d4b2ad1a21e2ac5ba7b6cafb74f567d07f7a
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: d58b2d57ec99add7bbc372584f0ecc430830530a
 
 
 ---
 
 
 # <a name="set-up-windows-phone-and-windows-10-mobile-management-with-microsoft-intune"></a>Nastavení správy pro Windows Phone a Windows 10 Mobile v Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Správce služby Intune má dvě možnosti, jak povolit registraci a správu zařízení se systémem Windows 10 Mobile a Windows Phone:
 

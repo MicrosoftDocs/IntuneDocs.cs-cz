@@ -1,11 +1,11 @@
 ---
-title: "Vyřazení zařízení | Microsoft Intune"
+title: "Vyřazení zařízení | Dokumentace Microsoftu"
 description: "Při odebírání zařízení ze správy Intune podporuje tato služba selektivní i úplné vymazání, přičemž se odeberou příslušné zásady a portál společnosti."
 keywords: 
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 07/25/2016
+ms.date: 12/30/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,21 @@ ms.assetid: 3dbec400-5d8a-47be-b892-7745811d9de2
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8f3a8e42688bf830e3050cf387ccb15a1af811fa
-ms.openlocfilehash: e7f861adc757b4037c5d0ef97c361a57948386bf
+ms.sourcegitcommit: 464e6d73765a75aaefb3eca95281bf54b4cc7a2d
+ms.openlocfilehash: 2bb4eb56bea4f640fa304c03b0f86b78625fe6a7
 
 
 ---
 
 # <a name="retire-devices-from-intune-management"></a>Vyřazení zařízení ze správy Intune
 
-Nezáleží na tom, jestli zařízení patří společnosti nebo jednotlivci, nakonec ho bude potřeba odebrat ze správy v Intune. Vyřazení zařízení může mít různé důvody:
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
+Nezáleží na tom, jestli zařízení patří společnosti nebo jednotlivci, nakonec ho bude potřeba odebrat ze správy v Intune. 
+
+Zařízení se z Intune nikdy neodeberou bez vašeho zásahu, a to ani v případě, že se daná zařízení po nějakou dobu ke službě Intune nepřipojila. 
+
+Vyřazení zařízení může mít různé důvody:
 
 -   Uživatel opustí společnost plánovaným způsobem („spravovaný“ odchod).
 -   Uživatel opustí společnost náhle (dostane výpověď, skončí atd.).
@@ -70,6 +76,6 @@ V některých případech zařízení samotné dosáhne konce své životnosti. 
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO5-->
 
 

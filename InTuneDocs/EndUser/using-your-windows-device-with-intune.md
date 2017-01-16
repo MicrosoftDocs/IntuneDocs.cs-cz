@@ -1,5 +1,5 @@
 ---
-title: "Použití zařízení s Windows v Intune | Microsoft Intune"
+title: "Použití zařízení s Windows v Intune | Dokumentace Microsoftu"
 description: "Seznam odkazů na úlohy, které mohou uživatelé provádět na svém zařízení s Windows, když je zaregistrované v Intune"
 keywords: 
 author: barlanmsft
@@ -11,11 +11,13 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 0de5f03a-c288-423b-b9ea-493a39eb715a
+searchScope:
+- Company Portal
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 05eb711e65e6db13e480a966849e7f39d3ec8c71
+ms.sourcegitcommit: 8611566f5f5d33b7f0937fabd15892353953df77
+ms.openlocfilehash: a3433e1976063513ee836189738ff02d85d40044
 
 
 ---
@@ -52,15 +54,15 @@ Informace v této části pomohou uživatelům provádět akce po zaregistrován
 
 Informace v této části pomohou uživatelům opravit problémy, se kterými se mohou setkat, když si zařízení s Windows zaregistrují v Intune.
 
-- [Zařízení nemá požadovanou minimální verzi operačního systému](device-doesnt-have-the-required-minimum-operating-system-version-windows.md)
-- [Zařízení nevyhovuje maximální verzi operačního systému](device-doesnt-comply-with-maximum-operating-system-version-windows.md)
-- [Zařízení nemá povolený nástroj BitLocker](device-doesnt-have-bitlocker-enabled-windows.md)
-- [Zařízení nemá povolený antimalwarový software](device-doesnt-have-antimalware-software-enabled-windows.md)
-- [Zařízení nemá povolené zabezpečené spouštění](device-doesnt-have-secure-boot-enabled-windows.md)
-- [Zařízení nemá povolenou integritu kódu](device-doesnt-have-code-integrity-enabled-windows.md)
+- [Zařízení nemá požadovanou minimální verzi operačního systému](you-need-to-update-your-windows-device.md)
+- [Zařízení nevyhovuje maximální verzi operačního systému](your-windows-version-isnt-yet-supported.md)
+- [Zařízení nemá povolený nástroj BitLocker](you-need-to-enable-windows-encryption.md)
+- [Zařízení nemá povolený antimalwarový software](your-device-needs-antimalware-software.md)
+- [Zařízení nemá povolené zabezpečené spouštění](you-need-to-enable-secure-boot-windows.md)
+- [Zařízení nemá povolenou integritu kódu](you-need-to-enable-code-integrity.md)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Přidávání aplikací pro zaregistrovaná zařízení | Microsoft Intune"
+title: "Přidávání aplikací pro zaregistrovaná zařízení | Dokumentace Microsoftu"
 description: "Před nasazením aplikace je třeba přidat ji do Intune. Pak je k dispozici v konzole Intune, kde ji můžete nasadit a spravovat."
 keywords: 
 author: robstackmsft
@@ -14,13 +14,15 @@ ms.assetid: f5b1f1ae-f177-450a-9af9-936a02d052e3
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 00facaf07d8cb5ad7f1827eee9b0efb3547cec95
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: ccd9dacdb2c59febdd741b1a95617cadc1347639
 
 
 ---
 
 # <a name="add-apps-for-enrolled-devices-to-intune"></a>Přidávání aplikací pro zaregistrovaná zařízení do Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Než budete moci aplikaci nasadit nebo spravovat, je třeba přidat ji do Microsoft Intune. V tomto tématu je uveden postup při přidávání aplikací pro zaregistrovaná zařízení.
 
@@ -100,6 +102,6 @@ Dalším krokem po vytvoření aplikace je její nasazení. Další informace na
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Aplikace pro Android se zásadami MAM | Microsoft Intune"
+title: "Aplikace pro Android se zásadami MAM | Dokumentace Microsoftu"
 description: "Toto téma popisuje, co máte očekávat, když je vaše aplikace spravovaná pomocí zásad správy mobilních aplikací."
 keywords: 
 author: NathBarn
@@ -14,13 +14,16 @@ ms.assetid: 53c8e2ad-f627-425b-9adc-39ca69dbb460
 ms.reviewer: andcerat
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: 945c9f48846fc37358c44b83990feed1f3694966
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: aeacfddb3ed42938dd9443e2734222c977436430
 
 
 ---
 
 # <a name="what-to-expect-when-your-android-app-is-managed-by-mam-policies"></a>Co očekávat, když ke správě své aplikace pro Android používáte zásady MAM
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Toto téma popisuje činnost uživatele aplikací se zásadami správy mobilních aplikací (MAM). Zásady MAM se použijí jenom v případě, že se aplikace používají k práci: třeba když uživatel k aplikacím přistupuje pomocí pracovního účtu nebo přistupuje k souborům, které jsou uložené ve firemním umístění OneDrive.
 ##  <a name="access-apps"></a>Přístup k aplikacím
 

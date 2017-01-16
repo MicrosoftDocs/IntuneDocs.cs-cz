@@ -1,11 +1,11 @@
 ---
-title: "Řešení potíží s registrací | Microsoft Intune"
+title: "Řešení potíží s registrací zařízení | Dokumentace Microsoftu"
 description: "Doporučení pro řešení potíží s registrací zařízení"
 keywords: 
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 11/20/2016
+ms.date: 12/30/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 998c24744776e0b04c9201ab44dfcdf66537d523
-ms.openlocfilehash: 9c5963f1413e1cd9f119186f47f46c7f7f16720d
+ms.sourcegitcommit: d12e2c0a38e406aa8b96cc03e97d327126503531
+ms.openlocfilehash: 5afc7a3bc91dae95581f42979cbe7d8d6d57ba8d
 
 
 ---
@@ -29,7 +29,7 @@ Toto téma obsahuje doporučení pro řešení potíží s registrací zařízen
 
 Než začnete řešit potíže, ujistěte se, že jste správně nakonfigurovali Intune pro povolení registrace. Můžete si prostudovat informace o těchto požadavcích na konfiguraci:
 
--   [Příprava registrace zařízení v Microsoft Intune](/intune/deploy-use/prerequisites-for-enrollment.md)
+-   [Příprava registrace zařízení v Microsoft Intune](/intune/deploy-use/prerequisites-for-enrollment)
 -   [Nastavení správy zařízení s iOSem a Mac OS](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
 -   [Nastavení správy pro Windows Phone a Windows 10 Mobile v Microsoft Intune](/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
 -   [Nastavení správy pro zařízení s Windows](/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
@@ -58,7 +58,7 @@ K těmto problémům může docházet na všech platformách zařízení.
 
 2.  V konzole pro správu Intune v části Správce\Správa mobilních zařízení\Pravidla registrace zkontrolujte, jestli je u položky Limit pro registraci zařízení nastavená hodnota 15.
 
-Uživatelé mobilních zařízení můžou zařízení odstraňovat na této adrese URL: [https://byodtestservice.azurewebsites.net/](https://byodtestservice.azurewebsites.net/).
+<!--- Mobile device users can delete devices at the following URL: [https://byodtestservice.azurewebsites.net/](https://byodtestservice.azurewebsites.net/). --->
 
 Správci můžou zařízení odstraňovat na portálu služby Azure Active Directory.
 
@@ -86,7 +86,7 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 >
 > Pokud se pro přihlašovací jméno uživatele, jehož účet přidáte do skupiny správců registrace zařízení, vynucuje zásada podmíněného přístupu, nebude možné dokončit registraci.
 
-### <a name="company-portal-emporarily-unavailable"></a>Portál společnosti není dočasně k dispozici
+### <a name="company-portal-temporarily-unavailable"></a>Portál společnosti není dočasně k dispozici
 **Problém:** Uživateli se na zařízení se zobrazí chyba **Portál společnosti není dočasně k dispozici**.
 
 **Řešení:**
@@ -319,7 +319,7 @@ Pokud je certifikát serveru správně nainstalovaný, uvidíte ve výsledcích 
 ### <a name="other-ios-enrollment-errors"></a>Další chyby registrace zařízení s iOSem
 Seznam chyb registrace iOS je uvedený v dokumentaci pro uživatele zařízení v části [Při pokusu o registraci zařízení v Intune se zobrazí chyby](/intune/enduser/using-your-ios-or-mac-os-x-device-with-intune).
 
-## <a name="pc-issues"></a>Potíže s počítačem
+## <a name="pc--issues"></a>Potíže s počítačem
 
 ### <a name="the-machine-is-already-enrolled---error-hr-0x8007064c"></a>Počítač už je zaregistrovaný – chyba hr 0x8007064c
 **Problém:** Registrace selže s chybou **Počítač už je zaregistrovaný**. V protokolu registrace se zobrazuje chyba **hr 0x8007064c**.
@@ -373,6 +373,6 @@ Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podpor
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO5-->
 
 

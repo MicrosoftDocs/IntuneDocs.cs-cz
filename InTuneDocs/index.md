@@ -9,14 +9,14 @@ keywords: "dokumentace k Intune, správa aplikací, správa zařízení, dokumen
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 12/7/2016
+ms.date: 12/20/2016
 ms.topic: hubpage
 ms.service: microsoft-intune
 ms.suite: ems
 ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
 translationtype: Human Translation
-ms.sourcegitcommit: b921a15ca5fd24d9ddbf54789c42a0740b72d7f6
-ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
+ms.sourcegitcommit: d63d670f12f27511671b9015ad53a93f1a784c40
+ms.openlocfilehash: eda6352368a3593d56ce8879501e2ebf4fda41f9
 
 
 ---
@@ -37,8 +37,8 @@ ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
         </ul>
         <ul class="column column-half">
           <li><a href="/intune/deploy-use/restrict-access-based-on-device-network-app-risk">Ochrana přístupu k firemním prostředkům</a></li>
-          <li><a href="/intune/develop/intune-app-sdk-ios">Microsoft Intune App SDK pro iOS – Příručka pro vývojáře</a></li>
-          <li><a href="/intune/develop/intune-app-sdk-android">Microsoft Intune App SDK pro Android – Příručka pro vývojáře</a></li>
+          <li><a href="https://graph.microsoft.io/en-us/docs/api-reference/beta/intune_graph_overview">Práce s Intune v Microsoft Graphu</a></li>
+          <li><a href="/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune">Materiály o prostředí Microsoft Intune pro koncové uživatele</a></li>
         </ul>
       </div>
     </section>
@@ -61,13 +61,13 @@ ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
               <ul class="row">
                 <li class="column-third">
                   <a href="/intune/understand-explore/introduction-to-microsoft-intune">
-                    <h3>Úvod do služby Intune</h3>
+                    <h3>Co je Intune?</h3>
                     <p>Získejte informace o tom, jak Intune poskytuje možnosti správy zařízení a aplikací a dat pro správu mobilních zařízení (zařízení s iOSem, zařízení s Androidem, telefony s Windows) a počítačů s Windows.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune">
-                    <h3>Příručka pro testování Intune</h3>
+                    <h3>Je pro vás služba Intune vhodná?</h3>
                     <p>Příručka pro zkušební verzi vás provede nastavením zkušební verze pro až 100 uživatelů a zařízení.</p>
                   </a>
                 </li>
@@ -94,21 +94,21 @@ ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
-                  <a href="/intune/get-started/what-to-know-before-you-start-microsoft-intune">
-                    <h3>Co potřebujete vědět, než začnete</h3>
-                    <p>Rychle se seznamte se základními požadavky pro jednotlivá nasazení Intune.</p>
-                  </a>
-                </li>
-                <li class="column-third">
                   <a href="/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune">
-                    <h3>Úvodní příručka služby Intune</h3>
-                    <p>Toto téma, které navazuje na příručku pro 30denní zkušební verzi, vás provede synchronizací služby Azure Active Directory, aspekty týkajícími se domény a DNS a dalšími přizpůsobeními Intune.</p>
+                    <h3>Úvodní pokyny</h3>
+            <p>Toto téma, které navazuje na příručku pro 30denní zkušební verzi, vás provede synchronizací služby Azure Active Directory, aspekty týkajícími se domény a DNS a dalšími přizpůsobeními Intune.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/intune/get-started/rollout-phases-for-microsoft-intune-deployment">
-                    <h3>Fáze uvedení</h3>
-                    <p>Definice cílů, architektury, pilotního nasazení a produkčních plánů uvedení Intune</p>
+                  <a href="/intune/get-started/prevent-company-data-leaks-from-office-365-mobile-apps">
+                    <h3>Prevence úniků firemních dat z mobilních aplikací Office 365</h3>
+                    <p>Zabezpečte data organizace pomocí zásad ochrany aplikací, které vám pomůžou zabránit únikům firemních dat.</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="/intune/get-started/simplify-email-configuration-on-mobile-devices">
+                    <h3>Zjednodušení e-mailové konfigurace v mobilních zařízeních</h3>
+                    <p>Šetřete firemní čas a prostředky tím, že nasadíte e-mailové profily (i profily pro VPN a Wi-Fi) do mobilních zařízení s Windows, iOS a Androidem spravovaných přes službu Intune.</p>
                   </a>
                 </li>
               </ul>
@@ -155,8 +155,8 @@ ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
                 </li>
                 <li class="column-third">
                   <a href="/intune/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune">
-                    <h3>Omezení přístupu k e-mailu a službám O365</h3>
-                    <p>Pomocí možnosti podmíněného přístupu Intune můžete omezit přístup k e-mailu společnosti a službám Office 365.</p>
+                    <h3>Ochrana přístupu k e-mailu a službám O365</h3>
+                    <p>Pomocí funkce podmíněného přístupu Intune můžete chránit přístup k e-mailu společnosti a službám Office 365.</p>
                   </a>
                 </li>
                 <li class="column-third">
@@ -285,6 +285,6 @@ ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

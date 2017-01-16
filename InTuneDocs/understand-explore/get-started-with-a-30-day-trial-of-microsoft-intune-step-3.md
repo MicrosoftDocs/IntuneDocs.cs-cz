@@ -1,5 +1,5 @@
 ---
-title: "Vytvoření skupiny pro uspořádání uživatelů a zařízení | Microsoft Intune"
+title: "Vytvoření skupin pro uspořádání uživatelů a zařízení | Dokumentace Microsoftu"
 description: "Vytvoření skupin zařízení a skupin uživatelů při registraci bezplatné 30denní zkušební verze Microsoft Intune"
 keywords: 
 author: lindavr
@@ -13,8 +13,8 @@ ms.technology:
 ms.assetid: 7162cad3-5c14-43f3-a760-833ffd7786b1
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: ab451a1213923ecd27dfc0b8ca353041e70435ed
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: e4072108d5d06857acb10f243df68ef2c33066a2
 
 
 ---
@@ -61,6 +61,6 @@ Další informace o používání skupin najdete v tématu [Použití skupin pro
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

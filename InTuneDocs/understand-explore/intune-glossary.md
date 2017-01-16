@@ -1,24 +1,26 @@
 ---
-title: "Glosář Intune | Microsoft Intune"
+title: "Glosář Intune | Dokumentace Microsoftu"
 description: "Přečtěte si něco o terminologii používané v Microsoft Intune"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.date: 11/17/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 86d00901-fac7-4471-aac2-f1d13a4879b6
 translationtype: Human Translation
-ms.sourcegitcommit: 0c6c9d44e6a328b4bfb3827f54ac35b83e3c7aac
-ms.openlocfilehash: e3aec8468dab4796cdc9b4afd783219f8aeef00b
+ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
+ms.openlocfilehash: b9a51cb2123bc9b6e73c0bf72ef5393252e8d37d
 
 
 ---
 
 # <a name="microsoft-intune-glossary"></a>Glosář Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 ## <a name="a"></a>A
 
@@ -32,7 +34,7 @@ ms.openlocfilehash: e3aec8468dab4796cdc9b4afd783219f8aeef00b
 ## <a name="b"></a>B
 |||
 |-|-|
-|uživatelé s vlastním zařízením (BYOD)|Anglický akronym je z [Bring Your Own Device](/intune/get-started/choose-how-to-enroll-devices1). Uživatelé si mohou nainstalovat aplikaci Portál společnosti služby Intune na své vlastní zařízení a potom své zařízení zaregistrovat. Tím získají přístup k prostředkům společnosti, jako jsou e-mail, firemní aplikace, firemní data a podpora.| 
+|uživatelé s vlastním zařízením (BYOD)|Anglický akronym je z [Bring Your Own Device](/intune/get-started/choose-how-to-enroll-devices1). Uživatelé si mohou nainstalovat aplikaci Portál společnosti služby Intune na své vlastní zařízení a potom své zařízení zaregistrovat. Tím získají přístup k prostředkům společnosti, jako jsou e-mail, firemní aplikace, firemní data a podpora.|
 
 ## <a name="c"></a>C
 |||
@@ -95,7 +97,7 @@ ms.openlocfilehash: e3aec8468dab4796cdc9b4afd783219f8aeef00b
 |-|-|
 |spravovaný prohlížeč|[Aplikace na procházení webu](/intune/deploy-use/manage-internet-access-using-managed-browser-policies), kterou můžete nasadit v organizaci pomocí Microsoft Intune. Zásady spravovaného prohlížeče konfigurují seznam povolených nebo blokovaných webů. Tyto seznamy omezují weby, které můžou uživatelé spravovaného prohlížeče navštívit.|
 |správa mobilních aplikací|[Správa mobilních aplikací (MAM)](/intune/deploy-use/overview-of-app-lifecycle-in-microsoft-intune) umožňuje publikovat, doručovat, konfigurovat, zabezpečovat, monitorovat a aktualizovat mobilní aplikace pro uživatele.
-|správa mobilních zařízení|[Správa mobilních zařízení (MDM)](/intune/deploy-use/overview-of-device-lifecycle-in-microsoft-intune) umožňuje registrovat zařízení do Intune, takže můžete tato zařízení zřizovat, konfigurovat a monitorovat a provádět s nimi akce. 
+|správa mobilních zařízení|[Správa mobilních zařízení (MDM)](/intune/deploy-use/overview-of-device-lifecycle-in-microsoft-intune) umožňuje registrovat zařízení do Intune, takže můžete tato zařízení zřizovat, konfigurovat a monitorovat a provádět s nimi akce.
 |autorita pro správu mobilních zařízení (MDM)|[Autorita MDM](/intune/deploy-use/get-ready-to-enroll-devices-in-microsoft-intune) definuje službu správy s oprávněním ke správě určité sady zařízení. Příklady možných autorit MDM zahrnují Intune samostatně a Configuration Manager s Intune.|
 |Zásady zřizování mobilních aplikací|Zásady pro iOS, které pomáhají zajistit, že [zřizovacím profilům](/intune/deploy-use/ios-mobile-app-provisioning-profiles) aplikací pro iOS, které nasadíte, nevyprší platnost.|
 |zásady konfigurace mobilních aplikací|Zásady pro iOS, které slouží k [předávání nastavení do kompatibilních aplikací pro iOS](/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune) při jejich spuštění – například mohou dodávat název společnosti nebo serverovou adresu.|
@@ -146,9 +148,6 @@ ms.openlocfilehash: e3aec8468dab4796cdc9b4afd783219f8aeef00b
 
 
 
-
-
-
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

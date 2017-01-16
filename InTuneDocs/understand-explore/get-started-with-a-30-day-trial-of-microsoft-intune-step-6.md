@@ -1,5 +1,5 @@
 ---
-title: "Další možnosti a funkce pro zkušební verze Intune | Microsoft Intune"
+title: "Další možnosti a funkce pro zkušební verze Intune | Dokumentace Microsoftu"
 description: "Popisuje výstrahy, oznámení a sestavy, a také obecné možnosti Intune, o kterých potřebujete vědět při registraci bezplatné 30denní zkušební verze Intune."
 keywords: 
 author: lindavr
@@ -13,13 +13,15 @@ ms.technology:
 ms.assetid: 170cd959-d35b-4129-ae60-117d7e881bc9
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 21b0cba6cf1d0cd7048cd0abee3a21dd9d74eadd
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 361348939341b580a9abc576938522d166125183
 
 
 ---
 
 # <a name="other-options-and-extras-for-intune-evaluation-subscriptions"></a>Další možnosti a funkce pro zkušební předplatná Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 ## <a name="alerts-notifications-and-reports"></a>Výstrahy, oznámení a sestavy
 V konzole pro správu Intune se **výstrahy** používají k rychlému posouzení celkového stavu spravovaných zařízení ve vaší organizaci. Výstrahy můžete nakonfigurovat a přizpůsobit tak, aby oznamovaly a zobrazovaly jen informace, které potřebujete pro svoji organizaci. Můžete nastavit, jestli chcete výstrahu povolit nebo zakázat, nakonfigurovat závažnost, určit podle prahové hodnoty zobrazení, jak často se musí událost výstrahy aktivovat před zobrazením výstrahy, a taky nakonfigurovat nastavení, která jsou specifická pro určité typy výstrah.
@@ -56,6 +58,6 @@ Přejděte na [placené předplatné](get-started-with-a-30-day-trial-of-microso
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

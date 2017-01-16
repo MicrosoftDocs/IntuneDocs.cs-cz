@@ -1,9 +1,9 @@
 ---
-title: "Poradce při potížích s Exchange Connectorem | Microsoft Intune"
+title: "Poradce při potížích s Exchange Connectorem | Dokumentace Microsoftu"
 description: "Zde najdete informace k řešení potíží s Intune Exchange Connectorem."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 07/26/2016
 ms.topic: article
@@ -14,13 +14,16 @@ ms.assetid: c5cb5465-fd8e-4524-83b9-ccdf3393b6dc
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: f6b673d05e385ddfe6ef3d3e63cf857439b164de
+ms.sourcegitcommit: 04c89b6dba34be4e3c49bfc907abe7a6240f3d51
+ms.openlocfilehash: 4ada25264aee779f5b31708fdec4f44d19b2e7f7
 
 
 ---
 
 # <a name="troubleshoot-the-exchange-connector"></a>Poradce při potížích s Exchange Connectorem
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Toto téma popisuje, jak řešit problémy, které můžou souviset s Intune Exchange Connectorem.
 
 ## <a name="steps-for-checking-the-connector-configuration"></a>Postup kontroly konfigurace konektoru 
@@ -51,6 +54,6 @@ Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podpor
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Dec16_HO5-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Zabalení aplikací pro iOS nástrojem Intune App Wrapping | Microsoft Intune"
+title: "Zabalení aplikací pro iOS nástrojem Intune App Wrapping | Dokumentace Microsoftu"
 description: "V tomto tématu se naučíte balit aplikace pro iOS bez změny samotného kódu aplikace. Připravte aplikace, abyste mohli použít zásady správy mobilních aplikací."
 keywords: 
 author: mtillman
@@ -14,34 +14,154 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: oldang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ee7e0491c0635c45cbc0377a5de01d5eba851132
-ms.openlocfilehash: 0eee40c3c3c6bdfc3da2e715ef7b46e8408ba319
+ms.sourcegitcommit: b0abdd44716f8fe0ff8298fa8f6b9f4197964cb9
+ms.openlocfilehash: 06f0f7c436eef63a63182196d4d124b2d928a083
 
 
 ---
 
 # <a name="prepare-ios-apps-for-mobile-application-management-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro iOS na správu mobilních aplikací pomocí nástroje Intune App Wrapping Tool
 
-Pokud chcete změnit chování interních aplikací pro iOS beze změny samotného kódu těchto aplikací, použijte nástroj Microsoft Intune App Wrapping Tool pro iOS.
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Tento nástroj je vlastně aplikace příkazového řádku systému Mac OS, která vytvoří obálku aplikace. Po zpracování aplikace můžete v Intune změnit její funkce pomocí [zásad správy mobilních aplikací](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md), které nasadil správce IT.
+Pomocí nástroje Microsoft Intune App Wrapping Tool pro iOS můžete zapnout zásady ochrany aplikací Intune pro interní aplikace pro iOS, aniž byste museli měnit kód samotné aplikace.
+
+Tento nástroj je vlastně aplikace příkazového řádku systému Mac OS, která vytvoří obálku aplikace. Až se aplikace zpracuje, můžete její funkce změnit tak, že do ní nasadíte [zásady ochrany aplikací](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
 
 Nástroj si můžete stáhnout na stránce [Microsoft Intune App Wrapping Tool pro iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) v GitHubu.
 
 
 
-## <a name="fulfill-the-prerequisites-for-the-app-wrapping-tool"></a>Splnění požadavků pro nástroj App Wrapping Tool
-Další informace o tom, jak splnit požadavky pro tento nástroj, najdete v blogovém příspěvku [How to obtain prerequisites for the Intune App Wrapping Tool for iOS](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/) (Jak splnit požadavky pro nástroj Intune App Wrapping Tool pro iOS).
+## <a name="general-prerequisites-for-the-app-wrapping-tool"></a>Obecné požadavky pro nástroj App Wrapping Tool
 
-|Požadavek|Další informace|
-|---------------|--------------------------------|
-|Podporované operační systémy a sady nástrojů | Nástroj App Wrapping musíte spustit na počítači s Mac OS, na kterém běží OS X 10.8.5 nebo novější a je na něm nainstalovaná sada nástrojů XCode verze 5 nebo novější.|
-|Podpisový certifikát a profil pro zřizování | Musíte mít podpisový certifikát Apple a profil pro zřizování. Informace najdete v [dokumentaci pro vývojáře Apple](https://developer.apple.com/).|
-|Zpracování aplikace pomocí nástroje App Wrapping  |Aplikaci musí vyvinout a podepsat vaše společnost nebo nezávislý výrobce softwaru (ISV). Tento nástroj se nedá používat ke zpracování aplikací z Apple Storu. Aplikace musí být napsané pro iOS 8.0 nebo novější. Aplikace také musí být ve formátu Position Independent Executable (PIE). Další informace o formátu PIE najdete v dokumentaci pro vývojáře Apple. Aplikace musí mít příponu **.app** nebo **.ipa**.|
-|Aplikace, které nástroj nedokáže zpracovat | Zašifrované aplikace, nepodepsané aplikace a aplikace s rozšířenými atributy souborů.|
-|Nastavení nároků pro vaši aplikaci|Než aplikaci zabalíte, musíte nastavit oprávnění, se kterými získá další oprávnění a možnosti přesahující běžný rámec. Pokyny najdete v části [Nastavení nároků aplikace](#setting-app-entitlements).|
+Než nástroj App Wrapping Tool spustíte, musíte splnit některé obecné požadavky:
 
-## <a name="install-the-app-wrapping-tool"></a>Instalace nástroje App Wrapping Tool
+* Stáhněte si nástroj [Microsoft Intune App Wrapping Tool pro iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) z GitHubu.
+
+* Potřebujete počítač s macOS, na kterém běží OS X 10.8.5 nebo novější a je na něm nainstalovaná sada nástrojů XCode verze 5 nebo novější.
+
+* Vstupní aplikaci pro iOS musí vyvinout a podepsat vaše společnost nebo nezávislý výrobce softwaru (ISV).
+
+  * Soubor vstupní aplikace musí mít příponu **.ipa** nebo **.app**.
+
+  * Vstupní aplikace musí být zkompilovaná pro iOS 8.0. nebo novější.
+
+  * Vstupní aplikace nemůže být zašifrovaná.
+
+  * Vstupní aplikace nemůže mít rozšířené atributy souborů.
+
+  * Před zpracováním v nástroji Intune App Wrapping Tool musí mít aplikace nastavené nároky. [Nároky](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html) aplikaci poskytují další oprávnění a možnosti nad rámec těch, které se udělují obvykle. Pokyny najdete v části [Nastavení nároků aplikace](#setting-app-entitlements).
+
+## <a name="apple-developer-prerequisites-for-the-app-wrapping-tool"></a>Požadavky na Apple Developer pro nástroj App Wrapping Tool
+
+
+Abyste zabalené aplikace mohli distribuovat výhradně uživatelům vaší organizace, potřebujete účet v programu [Apple Developer Enterprise Program](https://developer.apple.com/programs/enterprise/) a několik entit pro podepisování aplikací propojených s vaším účtem Apple Developer.
+
+Další informace o interní distribuci aplikací pro iOS uživatelům organizace najdete v oficiální příručce [Distributing Apple Developer Enterprise Program Apps](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/DistributingEnterpriseProgramApps/DistributingEnterpriseProgramApps.html#//apple_ref/doc/uid/TP40012582-CH33-SW1) (v angličtině).
+
+K distribuci aplikací zabalených pomocí Intune budete potřebovat toto:
+
+* Vývojářský účet v programu Apple Developer Enterprise Program
+
+* Podpisový certifikát pro interní a ad hoc distribuci s platným identifikátorem týmu
+
+  * Hodnotu hash SHA1 podpisového certifikátu budete potřebovat jako parametr do nástroje Intune App Wrapping Tool.
+
+
+* Zřizovací profil pro interní distribuci
+
+### <a name="steps-to-create-an-apple-developer-enterprise-account"></a>Postup při vytvoření účtu Apple Developer Enterprise
+1. Přejděte na [web Apple Developer Enterprise Program](https://developer.apple.com/programs/enterprise/).
+
+2. Vpravo nahoře na stránce klikněte na **Enroll** (Zaregistrovat).
+
+3. Přečtěte si kontrolní seznam věcí, které k registraci potřebujete. Klikněte na **Start Your Enrollment** (Začít s registrací) v dolní části stránky.
+
+4. **Přihlaste se** (Sign in) s Apple ID vaší organizace. Pokud žádné nemáte, klikněte na **Create Apple ID** (Vytvořit Apple ID).
+
+5. Vyberte svůj **typ entity** (Entity Type) a klikněte na **Continue** (Pokračovat).
+
+6. Vyplňte formulář údaji o vaší organizaci. Klikněte na **Pokračovat**. V tuto chvíli vás Apple kontaktuje, aby ověřil, že máte autorizaci registrovat svoji organizaci.
+
+8. Po ověření klikněte na **Agree to License** (Souhlasím s licencí).
+
+9. Po vyjádření souhlasu s licencí proces dokončete tak, že **program zakoupíte a aktivujete**.
+
+10. Pokud jste agentem týmu (osoba, která se k programu Apple Developer Enterprise Program připojuje jménem vaší organizace), nejdříve svůj tým sestavte tak, že pozvete členy týmu a přiřadíte jim role. Informace o tom, jak se tým spravuje, najdete v dokumentaci Applu na stránce [Managing Your Developer Account Team](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ManagingYourTeam/ManagingYourTeam.html#//apple_ref/doc/uid/TP40012582-CH16-SW1) (v angličtině).
+
+### <a name="steps-to-create-an-apple-signing-certificate"></a>Postup vytvoření podpisového certifikátu Apple
+
+1. Přejděte na [portál Apple Developer](https://developer.apple.com/).
+
+2. Vpravo nahoře na stránce klikněte na **Account** (Účet).
+
+3. **Přihlaste se** (Sign in) pomocí Apple ID organizace.
+
+4. Klikněte na **Certificates, IDs & Profiles** (Certifikáty, ID a profily).
+
+  ![Portál Apple Developer](../media/app-wrapper/iOS-signing-cert-1.png)
+
+5. Klikněte na ![znaménko plus portálu Apple Developer](../media/app-wrapper/iOS-signing-cert-2.png) v pravém horním rohu, abyste mohli přidat certifikát iOS.
+
+6. V části **Production** (Výroba) zvolte možnost vytvořit **In-House and Ad Hoc** (Interní a ad hoc) certifikát.
+
+  ![Výběr vnitřního a ad hoc certifikátu](../media/app-wrapper/iOS-signing-cert-3.png)
+
+7. V dolní části stránky klikněte na **Next** (Další).
+
+8. Přečtěte si pokyny k vytváření **žádosti o podepsání certifikátu (CSR)** pomocí aplikace Klíčenka na počítači s macOS.
+
+  ![Přečtěte si pokyny, jak vytvořit CSR](../media/app-wrapper/iOS-signing-cert-4.png)
+
+9. Pomocí pokynů výše vytvořte žádost o podepsání certifikátu. Na počítači s macOS spusťte aplikaci **Klíčenka**.
+
+10. V nabídce macOS v horní části obrazovky přejděte na **Klíčenka > Průvodce certifikací > Vyžádat si certifikát od certifikační autority**.  
+
+  ![Žádost o certifikát od certifikační autority v Klíčence](../media/app-wrapper/iOS-signing-cert-5.png)
+
+11. Pomocí pokynů na webu Apple Developer výše vytvořte soubor CSR. Uložte soubor CSR na svůj počítač s macOS.
+
+  ![Žádost o certifikát od certifikační autority v Klíčence](../media/app-wrapper/iOS-signing-cert-6.png)
+
+12. Vraťte se na web Apple Developer. Klikněte na **Continue** (Pokračovat). Pak nahrajte soubor CSR.
+
+13. Apple vygeneruje váš podpisový certifikát. Stáhněte a uložte si ho do počítače s macOS na nějaké snadno zapamatovatelné místo.
+
+  ![Stažení podpisového certifikátu](../media/app-wrapper/iOS-signing-cert-7.png)
+
+14. Na certifikát, který jste si právě stáhli, poklikejte, aby se uložil do svazku klíčů.
+
+15. Znovu otevřete **Klíčenku**. Do pravého horního panelu hledání v okně Klíčenky zadejte **iPhone**, aby se našel váš certifikát. Klikněte pravým tlačítkem na danou položku, aby se zobrazila nabídka, a pak klikněte na **Get Info** (Získat informace).
+
+  ![Přidání certifikátu do svazku klíčů](../media/app-wrapper/iOS-signing-cert-8.png)
+
+16. Zobrazí se informační okno. Posuňte se až dolů a podívejte se pod popisek **Fingerprints** (Otisky). Zkopírujte řetězec **SHA1**, který se použije jako parametr -c pro nástroj App Wrapping Tool.
+
+  ![Přidání certifikátu do svazku klíčů](../media/app-wrapper/iOS-signing-cert-9.png)
+
+
+
+### <a name="steps-to-create-an-in-house-distribution-provisioning-profile"></a>Postup vytvoření zřizovacího profilu pro interní distribuci
+
+1. Přejděte zpátky na [portál účtu Apple Developer](https://developer.apple.com/account/) a **přihlaste** se pomocí Apple ID organizace.
+
+2. Klikněte na **Certificates, IDs & Profiles** (Certifikáty, ID a profily).
+
+3. Klikněte na ![znaménko plus portálu Apple Developer](../media/app-wrapper/iOS-signing-cert-2.png) v pravém horním rohu, abyste mohli přidat zřizovací profil iOS.
+
+4. V části **Distribution** (Distribuce) zvolte možnost vytvořit **In House** (Interní) zřizovací profil.
+
+  ![Výběr interního zřizovacího profilu](../media/app-wrapper/iOS-provisioning-profile-1.png)
+
+5. Klikněte na **Continue** (Pokračovat). Nezapomeňte propojit předtím vygenerovaný podpisový certifikát se zřizovacím profilem.
+
+6. Podle pokynů si stáhněte svůj profil (s příponou .mobileprovision) na svůj počítač s macOS.
+
+7. Uložte si soubor na snadno zapamatovatelné místo. Tento soubor se využije při používání nástroje App Wrapping Tool jako parametr -p.
+
+
+
+## <a name="download-the-app-wrapping-tool"></a>Stažení nástroje App Wrapping Tool
 
 1.  Stáhněte si soubory pro nástroj App Wrapping Tool z [GitHubu](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) do počítače s macOS.
 
@@ -176,7 +296,7 @@ Aby bylo možné zaručit plnou funkčnost nástroje App Wrapping Tool pro iOS, 
 |---------------|-----------|
 |Profil pro zřizování iOS|Zkontrolujte platnost zřizovacího profilu, než ho zahrnete. Při zpracování aplikace pro iOS nástroj App Wrapping nekontroluje, jestli vypršela platnost zřizovacího profilu. Když je zadaný profil zřizování s ukončenou platností, bude nástroj pro zabalení aplikace zahrnovat tento profil a vy nepoznáte, jestli existuje problém, dokud neselže instalace aplikace na zařízení s iOS.|
 |Podpisový certifikát iOS|Před zadáním podpisového certifikátu zkontrolujte jeho platnost. Nástroj při zpracování aplikací pro iOS nekontroluje, jestli nevypršela platnost certifikátu. Pokud je zadaný hash pro prošlý certifikát, nástroj zpracuje a podepíše aplikaci, ale nenainstaluje ji na zařízení.<br /><br />Zkontrolujte, jestli se certifikát dodaný k podpisu zabalené aplikace shoduje se zřizovacím profilem. Nástroj neověřuje, jestli pro certifikát poskytnutý k podepsání zabalené aplikace existuje shoda ve zřizovacím profilu.|
-|Ověřování|Aby šifrování fungovalo, musí mít zařízení PIN. Když se uživatel zařízení, do kterého jste nasadili zabalenou aplikaci, dotkne stavového řádku, musí se znovu přihlásit přes svůj pracovní nebo školní účet. Podle výchozí zásady zabalené aplikace probíhá *ověřování při opakovaném spuštění*. V iOS se každé externí oznámení (třeba při telefonním hovoru) zpracuje tak, že se aplikace ukončí a potom znovu spustí.
+|Ověřování|Aby šifrování fungovalo, musí mít zařízení PIN. Když se uživatel zařízení, do kterého jste nasadili zabalenou aplikaci, dotkne stavového řádku, musí se znovu přihlásit přes svůj pracovní nebo školní účet. Podle výchozí zásady zabalené aplikace probíhá *ověřování při opakovaném spuštění*. V iOSu se každé externí oznámení (třeba při telefonním hovoru) zpracuje tak, že se aplikace ukončí a potom znovu spustí.
 
 
 ## <a name="setting-app-entitlements"></a>Nastavení nároků aplikace

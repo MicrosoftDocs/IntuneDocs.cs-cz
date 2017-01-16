@@ -1,12 +1,12 @@
 ---
 
-title: "Nastavení zásad konfigurace pro Android a Samsung KNOX Standard | Microsoft Intune"
+title: "Nastavení zásad konfigurace pro Android a Samsung KNOX Standard | Dokumentace Microsoftu"
 description: "Vytvořte zásady, které řídí nastavení a funkce na zařízeních s Androidem, která spravujete pomocí Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 11/02/2016
+ms.date: 12/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,15 @@ ms.assetid: 71cc39cf-e726-40fd-8d08-78776e099a4b
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 08ec9963bf00d81f080c0cf4f26e23a3104763ea
+ms.sourcegitcommit: a90e5bc6ed9c4c7447f6ed673f9b75db99257c04
+ms.openlocfilehash: 3f7236989ec2d444601aba4a594175a289e2fc77
 
 
 ---
 
 # <a name="android-and-samsung-knox-standard-policy-settings-in-microsoft-intune"></a>Nastavení zásad konfigurace pro Android a Samsung KNOX Standard v Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete konfigurovat v zařízeních s Androidem. Navíc můžete určit hodnoty OMA-URI (Open Mobile Alliance Uniform Resource Identifier) k vytvoření vlastních nastavení, která nejsou k dispozici prostřednictvím Intune.
 
@@ -144,6 +146,8 @@ V seznamu **Kompatibilní a nekompatibilní aplikace** zadejte seznam kompatibil
 |**Upravit**|Tady můžete upravit název, vydavatele a adresu URL vybrané aplikace.|
 |**Odstranit**|Odstraní vybranou aplikaci ze seznamu.|
 
+Zásady, které obsahují kompatibilní a nekompatibilní nastavení aplikace, se musí nasadit do skupin uživatelů.
+
 ### <a name="kiosk-mode-settings"></a>Nastavení celoobrazovkovém režimu
 Zadejte pro **zařízení Samsung KNOX Standard** následující nastavení:
 
@@ -177,9 +181,7 @@ Příklad: Na webu Google Play vyhledejte systém Microsoft Office Mobile. Použ
 Pomocí možnosti Microsoft Intune **Zásady vlastní konfigurace pro Android** nasaďte nastavení OMA-URI, které se dá používat k ovládání funkcí na zařízeních s Androidem. Jsou to standardní nastavení, která k ovládání funkcí zařízení používá spousta výrobců mobilních zařízení.
 
 Díky této vlastnosti můžete nasadit nastavení Androidu, která nejde konfigurovat se zásadami Intune.
-
-> [!NOTE]
-> Vlastní zásady Androidu v současné době podporují konfiguraci nastavení Wi-Fi jenom pro taková zařízení s Androidem, která obsahují předsdílený klíč.
+Intune v současnosti podporuje omezený počet vlastních zásad Androidu. Pokud chcete zjistit, které zásady můžete nakonfigurovat, podívejte se na ukázky v tomto tématu.
 
 ### <a name="general-settings"></a>Obecná nastavení
 
@@ -209,6 +211,6 @@ Díky této vlastnosti můžete nasadit nastavení Androidu, která nejde konfig
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

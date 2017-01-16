@@ -1,5 +1,5 @@
 ---
-title: "Použití vzdáleného vymazání pro lepší ochranu dat | Microsoft Intune"
+title: "Použití vzdáleného vymazání pro lepší ochranu dat | Dokumentace Microsoftu"
 description: "Intune poskytuje možnosti selektivního a úplného vymazání, aby bylo možné odebrat citlivá firemní data a odebrat přístup k mnoha firemním prostředkům."
 keywords: 
 author: staciebarker
@@ -14,13 +14,16 @@ ms.assetid: 8519e411-3d48-44eb-9b41-3e4fd6a93112
 ms.reviewer: lancecra
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
-ms.openlocfilehash: cbfdb0e5db6862fcf046f42b85b8c9aabbba8721
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 8131d130e843db37e99b05ab17cd1b8ba23c7c57
 
 
 ---
 
 # <a name="help-protect-your-data-with-full-or-selective-wipe-using-microsoft-intune"></a>Lepší ochrana dat s využitím plného nebo selektivního vymazání pomocí Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Ze zařízení spravovaných pomocí Intune, která už nejsou potřeba, mají se začít používat pro jiné účely nebo se ztratila, můžete vymazat aplikace a data. K tomuto účelu Intune poskytuje možnosti selektivního a úplného vymazání. Uživatelé také mohou odeslat příkaz ke vzdálenému vymazání zařízení z aplikace Portál společnosti Intune nainstalované na soukromých zařízeních zaregistrovaných v Intune.
 
   > [!NOTE]

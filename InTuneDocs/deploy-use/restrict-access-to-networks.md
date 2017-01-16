@@ -1,5 +1,5 @@
 ---
-title: "Omezení přístup k sítím s Cisco ISE | Microsoft Intune"
+title: "Omezení přístup k sítím s Cisco ISE | Dokumentace Microsoftu"
 description: "Použijte Cisco ISE s Intune, aby zařízení byla zaregistrovaná v Intune a vyhovovala zásadám, než se pokusí o přístup k sítím Wi-Fi a VPN řízeným pomocí Cisco ISE."
 keywords: 
 author: robstackmsft
@@ -14,8 +14,8 @@ ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1dd3fde8119b54f574265c2ca9cf62cee9e77b01
-ms.openlocfilehash: bd6307cd8ff465bbce3de124ffdb444333d12efe
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 9eb0ea307702f3ae07db4d5c5a82d03f13b727fb
 
 
 ---
@@ -64,7 +64,7 @@ b. Zvolte ikonu zámku &gt; **Další informace**.
 > Zkontrolujte datum vypršení platnosti certifikátu, protože po vypršení platnosti tohoto certifikátu bude třeba exportovat a importovat nový certifikát.
 
 
-### <a name="obtain-a-selfsigned-cert-from-ise"></a>Získání certifikátu podepsaného svým držitelem ze systému ISE 
+### <a name="obtain-a-self-signed-cert-from-ise"></a>Získání certifikátu podepsaného svým držitelem ze systému ISE 
 
 1.  V konzole ISE přejděte do části **Správa** > **Certifikáty** > **Systémové certifikáty** > **Generovat certifikát podepsaný jeho držitelem**.  
 2.       Exportujte certifikát podepsaný svým držitelem.
@@ -100,7 +100,7 @@ Ověřte, že veškerý text leží na jednom řádku.
 |Koncový bod tokenu OAuth 2.0|Adresa URL pro vydávání tokenů|
 |Aktualizace kódu s použitím ID klienta|ID klienta|
 
-### <a name="step-4-upload-the-selfsigned-certificate-from-ise-into-the-ise-app-you-created-in-azure-ad"></a>Krok 4: Nahrání certifikátu podepsaného svým držitelem z ISE do aplikace ISE, kterou jste vytvořili ve službě Azure AD
+### <a name="step-4-upload-the-self-signed-certificate-from-ise-into-the-ise-app-you-created-in-azure-ad"></a>Krok 4: Nahrání certifikátu podepsaného svým držitelem z ISE do aplikace ISE, kterou jste vytvořili ve službě Azure AD
 1.     Získejte hodnotu zakódovaného certifikátu base64 a kryptografický otisk ze souboru certifikátu .cer X509. V tomto příkladu je používáno prostředí PowerShell:
    
       
@@ -189,6 +189,6 @@ K dispozici je také [sada pokynů pro registraci ke stažení](https://gallery.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -1,57 +1,40 @@
 ---
-title: "Ruční synchronizace zařízení s Windows | Microsoft Intune"
+title: "Ruční synchronizace zařízení s Windows | Dokumentace Microsoftu"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/19/2016
+ms.date: 12/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 443c6de7-5187-4dc4-b844-6085a0c659bd
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
-ms.openlocfilehash: 9561cf77e1569a6ab0da5d9b8e90e03ce5c9e998
+ms.sourcegitcommit: 9dd9a601f2e13a16157a43c28e77db6a6efd1619
+ms.openlocfilehash: 5584ec2d387830dcdcf6b06631996a0bade76014
 
 
 ---
 
-
 # <a name="sync-your-windows-device-manually"></a>Ruční synchronizace zařízení s Windows
-Pokud instalace aplikace trvá moc dlouho, můžete zkusit zařízení s Windows synchronizovat ručně. Ruční synchronizace může instalaci urychlit.
 
-Jsou podporované jenom následující verze. Pokud není zařízení uvedené, synchronizace se nepodporuje. Použijte pokyny odpovídající typu vašeho zařízení.
+Někdy může instalace aplikace na zařízení s Windows trvat déle, než byste předpokládali. V takovém případě můžete zkusit provést ruční synchronizaci zařízení s Windows. Synchronizace může instalaci urychlit.
 
-* [Windows 10 Mobile](#windows-10-mobile)
-* [Windows 10 desktop](#windows-10-desktop)
-* [Windows Phone 8.1](#windows-phone-81)
+> [!Note] 
+> Pokud jste v síti s nižší rychlostí nebo s vyšším počtem zařízení, která stahují obsah ve stejnou dobu, může instalace aplikací chvíli trvat.
 
+Synchronizovat ručně se dají verze Windows uvedené dále. Pokud vaše zařízení používá jinou verzi Windows, nebude bohužel možné ruční synchronizaci spustit.
 
-## <a name="windows-10-mobile"></a>Windows 10 Mobile
-Chcete-li ručně synchronizovat mobilní zařízení s Windows 10 pro urychlení pomalé instalace aplikací:
-
-1. Přejděte na **Všechny aplikace** > **Nastavení** > **Účty**.
-
-    ![Volba možnosti Účty na obrazovce Nastavení](./media/win10m-sync-1-settings-accounts.png)
-
-2. Zvolte **Přístup do práce**.
-
-    ![Volba účtu typu Přístup do práce](./media/win10m-sync-2-work-access.png)
-
-3. V části **Zaregistrovat se ve správě zařízení** zvolte název své firmy.
-
-    ![Volba názvu firmy pro správu zařízení](./media/win10m-sync-3-tap-comp-name.png)
-
-4. Zvolte ikonu **Synchronizovat**.
-
-    ![Volba ikony Synchronizovat](./media/win10m-sync-4-tap-sync.png)
-
-    V horní části obrazovky se zobrazí zpráva, že „probíhá synchronizace účtu“. Tlačítko **Synchronizovat** je zašedlé, dokud neskončí synchronizace vašeho zařízení.
+* [Synchronizace stolního počítače s Windows 10](#windows-10-desktop)
+* [Synchronizace Windows 10 Mobile](#windows-10-mobile)
+* [Synchronizace Windows Phone 8.1](#windows-phone-81)
 
 ## <a name="windows-10-desktop"></a>Stolní počítač s Windows 10
 Je více verzí Windows 10, a proto existují dvě sady postupů. Pokud chcete zjistit, jaké kroky použít, podívejte se na snímky obrazovky a postupujte podle pokynů, které odpovídají tomu, co vidíte na svém zařízení.
@@ -109,6 +92,27 @@ Je více verzí Windows 10, a proto existují dvě sady postupů. Pokud chcete z
 
    Tlačítko bude zašedlé, dokud synchronizace neskončí.
 
+   ## <a name="windows-10-mobile"></a>Windows 10 Mobile
+   Chcete-li ručně synchronizovat mobilní zařízení s Windows 10 pro urychlení pomalé instalace aplikací:
+
+   1. Přejděte na **Všechny aplikace** > **Nastavení** > **Účty**.
+
+       ![Volba možnosti Účty na obrazovce Nastavení](./media/win10m-sync-1-settings-accounts.png)
+
+   2. Zvolte **Přístup do práce**.
+
+       ![Volba účtu typu Přístup do práce](./media/win10m-sync-2-work-access.png)
+
+   3. V části **Zaregistrovat se ve správě zařízení** zvolte název své firmy.
+
+       ![Volba názvu firmy pro správu zařízení](./media/win10m-sync-3-tap-comp-name.png)
+
+   4. Zvolte ikonu **Synchronizovat**.
+
+       ![Volba ikony Synchronizovat](./media/win10m-sync-4-tap-sync.png)
+
+       V horní části obrazovky se zobrazí zpráva, že „probíhá synchronizace účtu“. Tlačítko **Synchronizovat** je zašedlé, dokud neskončí synchronizace vašeho zařízení.
+
 ## <a name="windows-phone-81"></a>Windows Phone 8.1
 Chcete-li provést ruční synchronizaci mobilního zařízení s Windows 8.1 pro urychlení pomalé instalace aplikací:
 
@@ -130,6 +134,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaj
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

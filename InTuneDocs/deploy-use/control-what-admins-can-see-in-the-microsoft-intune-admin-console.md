@@ -1,11 +1,11 @@
 ---
-title: "Přizpůsobení zobrazení konzoly pro role | Microsoft Intune"
+title: "Přizpůsobení zobrazení konzoly pro role | Dokumentace Microsoftu"
 description: "Toto téma vám může pomoct filtrovat zobrazení konzoly správce Intune a povolit správcům zobrazení pouze těch položek, které potřebují kvůli své roli."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,16 +14,19 @@ ms.assetid: e0783eaa-67dc-410e-9e80-4d3aa72f36d8
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: 02448f2f960d98b28780798b469aea23cdab0e2d
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: ee35fb2c8e39af099fb061211ea1fdf767230217
 
 
 ---
 
-# Přizpůsobení zobrazení konzoly Intune podle rolí administrátora
+# <a name="customize-intune-console-views-according-to-admin-roles"></a>Přizpůsobení zobrazení konzoly Intune podle rolí administrátora
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Můžete filtrovat zobrazení konzoly pro správu Microsoft Intune a povolit správcům zobrazení pouze těch položek, které potřebují kvůli své roli. Můžete třeba povolit aktualizace definic malwaru nebo obnovování hesel pro zařízení jenom operátorům konzoly pro správu. To provedete pomocí přednastavených **označení**, která přiřadíte konkrétním uživatelům. Když pak tito uživatelé přejdou do konzoly pro správu, uvidí jenom položky specifické pro své označení.
 
-## Vytvoření vlastního zobrazení
+## <a name="to-create-a-custom-view"></a>Vytvoření vlastního zobrazení
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Správce**&gt;**Správci služeb**.
 
@@ -32,7 +35,7 @@ Můžete filtrovat zobrazení konzoly pro správu Microsoft Intune a povolit spr
 3.  V dialogu **Spravovat přístup** vyberte úroveň přístupu, kterou chcete vybranému uživateli přidělit. Na výběr máte tyto:
 
     -   **Úplný přístup**
-    -   **Oprávnění k přístupu jen pro čtení**
+    -   **Přístup jen pro čtení**
     -   **Helpdesk – uzel Skupiny**
 
     Plný přístup a přístup jen pro čtení není potřeba vysvětlovat. <!--- **Helpdesk - Groups Node** allows users to choose from one of the following designations that provide custom levels of access to the [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] admin console:--->
@@ -69,6 +72,6 @@ Když nakonfigurovaný správce později otevře konzolu pro správu Intune, bud
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Dec16_HO5-->
 
 

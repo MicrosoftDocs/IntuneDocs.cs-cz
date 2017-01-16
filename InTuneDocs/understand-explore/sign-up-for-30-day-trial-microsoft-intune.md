@@ -1,5 +1,5 @@
 ---
-title: "Registrace 30denní bezplatné zkušební verze Microsoft Intune | Microsoft Docs"
+title: "Registrace 30denní bezplatné zkušební verze Microsoft Intune | Dokumentace Microsoftu"
 description: "Registrace a nastavení 30denního bezplatného testování Microsoft Intune"
 keywords: 
 author: lindavr
@@ -13,14 +13,20 @@ ms.technology:
 ms.assetid: 619a1d11-3d22-4635-8f70-770eba3e1712
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: a65ead23e62870647245120d1663706fc46810ac
+ms.sourcegitcommit: ca4af205f8f391089e86e0ee7787e32813d54cca
+ms.openlocfilehash: 6bd6cc3470c93f96e7c71b5d1efe6d9ffc045a7e
 
 
 ---
 
 # <a name="sign-up-for-a-microsoft-intune-free-trial"></a>Registrace bezplatné zkušební verze Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Tento článek vás provede procesem registrace zkušební verze Intune a pomůže vám ve zkušební verzi nastavit uživatele, abyste mohli postupovat podle příručky pro testování a vyzkoušet si, jak se v Intune spravují mobilní zařízení. <!---or app data when devices are not enrolled in Intune.--->
+
+>[!Note]
+> Od prosince 2016 se Microsoft Intune přesouvá na portál Azure Portal. Některé registrace bezplatných zkušebních verzí se budou provádět v Intune na portálu Azure Portal, zatímco jiné se budou provádět na portálu Classic služby Intune. Pokud se vaše zkušební verze nachází na portálu Azure Portal, po dokončení postupu uvedeného v tomto článku pro vás bude [obsah Intune Azure Preview](https://docs.microsoft.com/en-us/intune-azure/introduction/what-is-microsoft-intune) užitečnější.
 
 ## <a name="assumptions"></a>Předpoklady
 Tento článek o registraci a příručka pro testování předpokládají, že zkušební verzi používáte jenom pro účely vyhodnocení a poté, co se přihlásíte k odběru, plánujete použít čisté prostředí.
@@ -40,26 +46,9 @@ Pokud máte pracovní nebo školní účet a chcete ho použít pro zkušební v
 ### <a name="post-sign-up-considerations"></a>Aspekty ke zvážení po registraci
 Když se zaregistrujete ke zkušební verzi, přijde vám na e-mailovou adresu, kterou jste zadali při registraci, e-mailová zpráva s informacemi o vašem účtu. Ta potvrzuje, že je vaše zkušební verze aktivní.
 
-Po dokončení procesu registrace budete přesměrováni na stránku, na které můžete přidat uživatele a přiřadit jim licence pomocí Centra pro správu Office 365. Při příštím přihlášení do Intune budete automaticky přesměrováni do konzoly pro správu Intune.
+Po dokončení procesu registrace budete přesměrováni na stránku, na které můžete přidat uživatele a přiřadit jim licence pomocí Centra pro správu Office 365. Při příštím přihlášení na **portál Classic služby Intune** (https://manage.microsoft.com) budete automaticky přesměrováni do konzoly pro správu Intune.
 
-## <a name="keeping-the-admin-center-and-the-intune-administration-console-straight"></a>Přehled používání Centra pro správu a konzoly pro správu Intune
-Existují dva portály, které budete používat pro Intune: Centrum pro správu Office 365 ([portal.office.com](https://portal.office.com)) a konzola pro správu Intune ([manage.microsoft.com](https://manage.microsoft.com)).
-
-Obvykle budete používat konzolu pro správu Intune, kterou vidíte dole. To je web, na kterém se nastavují a spravují skupiny, zásady, zařízení a aplikace.
-
-![Obrázek konzoly pro správu Intune](./media/sign-up/intune-admin-console.png)
-
-Přidávat a spravovat uživatele a pracovat s dalšími aspekty vašeho účtu včetně fakturace a podpory ale budete pomocí Centra pro správu Office 365, které vidíte dole.
-
-![Obrázek Centra pro správu Office 365](./media/sign-up/office-admin-center.png)
-
-Z Centra pro správu Office 365 můžete přejít do Konzoly správce Intune. Odkazy na centra pro správu se nachází pod poslední položkou v levém navigačním podokně. Pokud zvolíte **Intune**, otevře se v nové záložce Konzola správce Intune.
-
-![Obrázek odkazu na konzolu pro správu Intune](./media/sign-up/link-to-intune.png)
-
-Pokud chcete z Intune přejít zpátky do Centra pro správu Office 365, zvolte **Přidat uživatele** na stránce Přehled skupin.
-
-![Obrázek odkazu zpět na Centrum pro správu Office 365](./media/sign-up/task-add-users.png)
+Pokud se vaše zkušební verze nachází na **portálu Azure Portal**, přejděte na https://portal.azure.com a přihlaste se pomocí přihlašovacích údajů pro zkušební verzi Intune.
 
 ## <a name="add-users"></a>Přidávání uživatelů
 Než přejdete z Centra pro správu Office 365 do Intune, je třeba přidat uživatele ke zkušebnímu účtu.
@@ -91,14 +80,65 @@ V Centru pro správu Office 365 můžete přidávat uživatele jednotlivě nebo 
 
 3. Jakmile vytvoříte a uložíte svůj soubor .csv, zvolte **Procházet** a tento soubor vyberte. Ověřte výběr a zvolte **Další**. Uživatelé se načtou a přidají do vašeho seznamu aktivních uživatelů.
 
-Nyní přejděte do Konzoly správce Intune, kde můžete začít spravovat své uživatele a jejich zařízení a aplikace.
-
 > [!NOTE]
 > Uživatelé se v Intune nezobrazí, dokud si nezaregistrují zařízení, které má být spravováno.
 
+Teď už přejděte do Intune, kde můžete začít spravovat svoje uživatele a jejich zařízení a aplikace.
+
+## <a name="keeping-the-admin-experiences-straight"></a>Přehled prostředí pro správu
+### <a name="classic-intune"></a>Klasická služba Intune
+Pro klasickou službu Intune budete používat dva portály:
+- Centrum pro správu Office 365 ([portal.office.com](https://portal.office.com))
+- Konzola pro správu Intune ([manage.microsoft.com](https://manage.microsoft.com))
+
+Obvykle budete používat konzolu pro správu Intune, kterou vidíte dole. To je web, na kterém se nastavují a spravují skupiny, zásady, zařízení a aplikace.
+
+![Obrázek konzoly pro správu Intune](./media/sign-up/intune-admin-console.png)
+
+Přidávat a spravovat uživatele a pracovat s dalšími aspekty vašeho účtu včetně fakturace a podpory ale budete pomocí Centra pro správu Office 365, které vidíte dole.
+
+![Obrázek Centra pro správu Office 365](./media/sign-up/office-admin-center.png)
+
+Z Centra pro správu Office 365 můžete přejít do Konzoly správce Intune. Odkazy na centra pro správu se nachází pod poslední položkou v levém navigačním podokně. Pokud zvolíte **Intune**, otevře se v nové záložce Konzola správce Intune.
+
+![Obrázek odkazu na konzolu pro správu Intune](./media/sign-up/link-to-intune.png)
+
+Pokud chcete z Intune přejít zpátky do Centra pro správu Office 365, zvolte **Přidat uživatele** na stránce Přehled skupin.
+
+![Obrázek odkazu zpět na Centrum pro správu Office 365](./media/sign-up/task-add-users.png)
+
+### <a name="intune-azure-preview"></a>Intune Azure preview
+Pro Intune Azure Preview budete používat tři portály:
+- Centrum pro správu Office 365 ([portal.office.com](https://portal.office.com))
+- Řídicí panel Intune v Azure ([portal.azure.com](https://portal.azure.com))
+- Klasická konzola pro správu Intune ([manage.microsoft.com](https://manage.microsoft.com))
+
+Při prvním přihlášení k Intune v Azure je možné, že se tato služba na řídicím panelu Azure nezobrazí. Přidání služby Intune na řídicí panel Azure:
+1. V seznamu služeb Azure nalevo od řídicího panelu zvolte **Další služby >** a do vyhledávacího pole zadejte Intune.
+2. V seznamu zvolte **Intune** a vyberte hvězdičku, aby se tato služba přidala do seznamu služeb.<br/> ![Obrázek s výběrem Intune v seznamu služeb](./media/sign-up/azure-add-intune1.png)
+3. Výběrem **Intune** v seznamu služeb otevřete řídicí panel Intune.
+
+Obvykle budete používat řídicí panel Intune, který je na obrázku níže. To je web, na kterém se nastavují a spravují skupiny, zásady, zařízení a aplikace. Z řídicího panelu můžete přejít do klasické konzoly pro správu Intune výběrem dlaždice **Otevřít portál Classic služby Intune**. Pokud se chcete vrátit k Intune Azure Preview, zadejte na adresní řádek v prohlížeči https://portal.azure.com a pak v seznamu služeb znovu zvolte **Intune**.
+
+ ![Obrázek řídicího panelu Intune](./media/sign-up/intune-azure-dashboard.png)
+
+
+Přidávat a spravovat uživatele a pracovat s dalšími aspekty vašeho účtu včetně fakturace a podpory ale budete pomocí Centra pro správu Office 365, které vidíte dole.
+
+![Obrázek Centra pro správu Office 365](./media/sign-up/office-admin-center.png)
+
+K přechodu z Centra pro správu Office 365 na řídicí panel Intune zadejte na adresní řádek v prohlížeči https://portal.azure.com. V seznamu služeb zvolte **Intune**.
+
+K návratu z Intune zpět do Centra pro správu Office 365 zadejte na adresní řádek v prohlížeči https://portal.office.com. Pokud jste už přihlášení do Intune, přejdete přímo do Centra pro správu Office 365.
+
 ## <a name="next-steps"></a>Další kroky
+### <a name="classic-intune"></a>Klasická služba Intune
 Scénář hodnocení: [Hodnocení správy mobilních zařízení v Microsoft Intune](mobile-device-management-trial-guide-microsoft-intune.md)
 
+### <a name="intune-azure-preview"></a>Intune Azure preview
+Přečtěte si další informace o [Intune v Azure Portal Preview](https://docs.microsoft.com/en-us/intune-azure/introduction/what-is-microsoft-intune).
+
+### <a name="integration-with-other-products"></a>Integrace s dalšími produkty
 Přečtěte si další informace o používání uživatelských účtů služby Azure Active Directory v Intune:
 - [Požadavky na identity](https://docs.microsoft.com/en-us/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
 - [Požadavky na synchronizaci adresáře](https://docs.microsoft.com/en-us/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
@@ -108,6 +148,6 @@ Přečtěte si další informace o používání [Intune s nástrojem System Cen
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

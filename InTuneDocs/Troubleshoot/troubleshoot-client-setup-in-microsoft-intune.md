@@ -1,5 +1,5 @@
 ---
-title: "Řešení potíží s instalací klientů | Microsoft Intune"
+title: "Řešení potíží s instalací klientů | Dokumentace Microsoftu"
 description: "Řešení obecných potíží s instalací klientů"
 keywords: 
 author: staciebarker
@@ -14,13 +14,16 @@ ms.assetid: e46d292b-1d16-46db-a87f-d53eefa4d22a
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 889a13bd50943b9cdf0f40d50b6f8ce263dde56d
-ms.openlocfilehash: e37b5da81150f89fce1ee3d57bd84de0ff7fb76f
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 2d5c7d4800e1140efb502c47151ea8cc87548acd
 
 
 ---
 
 # <a name="troubleshoot-client-setup-in-microsoft-intune"></a>Řešení potíží s instalací klientů v Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Při odstraňování běžných problémů s instalací klientů vám můžou pomoct následující informace. Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md), ve kterém najdete další způsoby, jak získat nápovědu.
 
 ## <a name="client-installation-fails"></a>Instalace klienta selhala
@@ -70,7 +73,7 @@ Může to být způsobeno absencí důležitých aktualizací softwaru v počít
 **Řešení:** Ujistěte se, že vaše zásady aktualizace softwaru umožňují instalaci kritických aktualizací, jak je popsáno v tématu [Udržování počítačů s Windows v aktuálním stavu díky softwarovým aktualizacím v Microsoft Intune](/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune).
 
 
-## <a name="microsoft-intune-policyrelated-errors-in-policyplatformlog"></a>Chyby související se zásadami Microsoft Intune v souboru policyplatform.log
+## <a name="microsoft-intune-policy-related-errors-in-policyplatformlog"></a>Chyby související se zásadami Microsoft Intune v souboru policyplatform.log
 U zařízení s Windows nespravovaných pomocí MDM můžou být chyby zásad v souboru policyplatform.log výsledkem jiného než výchozího nastavení nástroje Řízení uživatelských účtů v systému Windows (UAC) v zařízení. Některá nevýchozí nastavení UAC můžou ovlivnit zpracování zásad a instalace klientů Microsoft Intune.
 
 ### <a name="to-resolve-uac-issues"></a>Řešení potíží s UAC
@@ -127,6 +130,6 @@ Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podpor
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

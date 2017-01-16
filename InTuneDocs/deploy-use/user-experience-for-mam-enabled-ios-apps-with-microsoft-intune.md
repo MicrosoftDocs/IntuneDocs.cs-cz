@@ -1,11 +1,11 @@
 ---
-title: "Aplikace pro iOS se zásadami MAM | Microsoft Intune"
+title: "Aplikace pro iOS se zásadami MAM | Dokumentace Microsoftu"
 description: "Toto téma popisuje, co máte očekávat, když je vaše aplikace pro iOS spravovaná pomocí zásad správy mobilních aplikací."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 10/18/2016
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,21 +14,26 @@ ms.assetid: b57e6525-b57c-4cb4-a84c-9f70ba1e8e19
 ms.reviewer: andcerat
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: 3aa6728036ff66ea489176063af2d136bef4c7cc
+ms.sourcegitcommit: b068da7685792757825a4bc0d555e28ee0168cb1
+ms.openlocfilehash: f5a26d3d5ed060571892d91637dc12cae08f1a69
 
 
 ---
 
 # <a name="what-to-expect-when-your-ios-app-is-managed-by-mam-policies"></a>Co očekávat, když ke správě své aplikace pro iOS používáte zásady MAM
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
  Toto téma popisuje činnost uživatele aplikací se zásadami správy mobilního přístupu (MAM). Zásady MAM se použijí jenom v případě, že se aplikace používají k práci: třeba když uživatel k aplikacím přistupuje pomocí pracovního účtu nebo přistupuje k souborům, které jsou uložené ve firemním umístění OneDrive.
 
 ##  <a name="access-apps"></a>Přístup k aplikacím
 
-Pokud zařízení **není zaregistrované v Intune**, zobrazí se uživateli při prvním použití aplikace výzva k jejímu restartování.  Restartování se vyžaduje, aby se pro aplikaci mohly použít zásady MAM. Tento požadavek na restartování je vidět na snímku obrazovky z aplikace Skype:
+Pokud zařízení **není zaregistrované v Intune**, zobrazí se uživateli při prvním použití aplikace výzva k jejímu restartování.  Restartování se vyžaduje, aby se pro aplikaci mohly použít zásady MAM. 
+
+<!--- The following screenshot from the Skype app illustrates this restart request: --->
 
 
-![Snímek obrazovky zařízení s iOSem, na kterém je výzva k zadání kódu PIN](../media/appmanagement/iOS_AppPINPrompt.png)
+<!---  ![Screenshot of the iOS device showing PIN prompt](../media/appmanagement/iOS_AppPINPrompt.png) --->
 
 U zařízení, která jsou **zaregistrovaná pro správu v Intune**, se uživateli zobrazí zpráva, že jeho aplikace je teď spravovaná:
 
@@ -68,6 +73,6 @@ Pokud používáte zařízení s iOSem, může se při pokusu o přidání druh�
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

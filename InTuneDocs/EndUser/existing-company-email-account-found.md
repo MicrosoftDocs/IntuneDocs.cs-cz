@@ -1,5 +1,5 @@
 ---
-title: "Našel se existující e-mailový účet společnosti | Microsoft Intune"
+title: "Našel se existující e-mailový účet společnosti | Dokumentace Microsoftu"
 description: 
 keywords: 
 author: barlanmsft
@@ -15,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eebc35277aedabb2575b753afbaf9ea05b1555e8
-ms.openlocfilehash: 6b7123dc4ec0b7a73e6e3151ca9c66a65354f9de
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: df92e0945c0ed9387eda14c145b28c604453cb86
 
 
 ---
@@ -27,7 +27,7 @@ Už máte e-mailový účet společnosti. Pokud se k němu chcete dál připojov
 
 1.  V nabídce **Nastavení** na vašem zařízení odeberte připojení, které jste dříve nastavili pro e-mail společnosti.
 
-    Na zařízení s iOS například klepněte na **Nastavení** &gt; **Pošta, kontakty, kalendář**. Vyberte pracovní e-mailový účet a klikněte na **Odstranit**.
+    Na zařízení s iOSem například klepněte na **Nastavení** &gt; **Pošta, kontakty, kalendář**. Vyberte pracovní e-mailový účet a klikněte na **Odstranit**.
 
 2.  Otevřete na svém zařízení aplikaci Portál společnosti a klepněte na **Zkontrolovat dodržování předpisů**.
 
@@ -37,6 +37,6 @@ Pokud se po chvíli nezobrazí nové nastavení e-mailu, kontaktujte správce IT
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

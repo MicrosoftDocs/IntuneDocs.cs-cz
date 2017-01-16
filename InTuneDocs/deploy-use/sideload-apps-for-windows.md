@@ -1,5 +1,5 @@
 ---
-title: "Instalace aplikací pro Windows a Windows Phone bokem | Microsoft Intune"
+title: "Instalace aplikací pro Windows a Windows Phone bokem | Dokumentace Microsoftu"
 description: "Tady je postup, jak zaregistrovat obchodní aplikace, aby je bylo možné nasadit pomocí Intune."
 keywords: 
 author: robstackmsft
@@ -11,12 +11,14 @@ ms.service:
 ms.technology: 
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 938e3a1914f379d115bf24ebd7d990f6e1d319a9
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 2e8220f850e3b38a24aa4c48bcc3a59088251c24
 
 
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Registrace obchodních aplikací, aby je bylo možné nasadit na zařízení s Windows pomocí Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Jako správce Intune můžete nasazovat obchodní aplikace (včetně aplikace Portál společnosti) na mobilní zařízení s Windows a Windows 10. Pokud chcete nasadit aplikace .appx nebo .xap do Windows 10 a na mobilní zařízení s Windows 10 nebo nasadit obchodní aplikaci do Windows 8.1 nebo na zařízení s Windows Phone 8.1, budete potřebovat **Certifikát podepisování mobilního kódu Symantec Enterprise**. Pro tyto aplikace v příslušných zařízeních s Windows je důvěryhodný jenom certifikát Symantec. Pro aplikace pro Windows 10 a tzv. univerzální aplikace můžete používat svou vlastní certifikační autoritu. Tento certifikát se vyžaduje, aby se dalo:
 

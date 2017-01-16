@@ -1,5 +1,5 @@
 ---
-title: "Ochrana obchodních aplikací na nezaregistrovaných zařízeních | Microsoft Intune"
+title: "Ochrana obchodních aplikací na nezaregistrovaných zařízeních | Dokumentace Microsoftu"
 description: "Toto téma popisuje, jak můžete připravit své vlastní obchodní aplikace, abyste u nich mohli použít zásady správy mobilních aplikací, které můžou pomoci zabránit úniku informací."
 keywords: 
 author: mtillman
@@ -14,13 +14,15 @@ ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d6ff74f0b46baf384dbdedf13ad75538dd33a089
-ms.openlocfilehash: bc1efb1e0c62e6bd52658690db95901c70403d4d
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 1d3efa5d35e346ea668c71ba8b46ba21b11c39e7
 
 
 ---
 
 # <a name="protect-line-of-business-apps-and-data-on-devices-that-are-not-enrolled-in-microsoft-intune"></a>Ochrana obchodních aplikací a dat na zařízeních, která nejsou zaregistrovaná v Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Zásady správy mobilních aplikací (MAM) pomáhají chránit data společnosti tím, že omezují akce, které by mohly způsobit únik těchto dat, a vynucují požadavky pro přístup k datům, jako je například PIN aplikace. Pokud chcete zásady MAM použít u obchodních aplikací pro iOS nebo Android, musíte aplikace nejdřív zabalit pomocí nástroje Microsoft Intune App Wrapping. Zabalení je proces, při kterém se pro aplikaci nastaví vrstva správy, aniž by bylo potřeba příslušnou aplikaci změnit. Jakmile je aplikace zabalená, můžete pro ni nastavit zásady MAM a distribuovat ji uživatelům.  
 
@@ -37,7 +39,7 @@ Další informace o použití nástroje App Wrapping nebo sady Intune App SDK na
 
 Pokud chcete ke svým obchodním aplikacím přidružit zásady MAM, musíte do předplatného nebo tenanta Intune přidat informace o aplikaci pomocí následujících kroků:
 
-1. Na [portálu Azure](https://portal.azure.com/) přejděte na **Správa mobilních aplikací Intune** > **Nastavení** a zvolte **Obchodní aplikace**.
+1. Na [portálu Azure Portal](https://portal.azure.com/) přejděte na **Správa mobilních aplikací Intune** > **Nastavení** a zvolte **Obchodní aplikace**.
 
   ![Snímek obrazovky s oknem Nastavení a možností Obchodní aplikace](../media/mam-azure-portal-lob-on-settings.png)
 
@@ -69,7 +71,7 @@ Pokud potřebujete změnit podrobnosti o aplikaci, jako je třeba název aplikac
 ##  <a name="remove-apps"></a>Odebrání aplikací
 Obchodní aplikaci můžete ze seznamu aplikací odebrat. Tato akce odebere aplikaci ze seznamu a odebere přidružení se zásadami MAM, ale nezpůsobí odebrání nebo odinstalaci aplikace ze zařízení uživatele.  
 
-1.  Na [portálu Azure](https://portal.azure.com/) přejděte na **Správa mobilních aplikací Intune** > **Nastavení**. V okně **Nastavení** zvolte **Obchodní**. Otevře se seznam stávajících aplikací.  
+1.  Na [portálu Azure Portal](https://portal.azure.com/) přejděte na **Správa mobilních aplikací Intune** > **Nastavení**. V okně **Nastavení** zvolte **Obchodní**. Otevře se seznam stávajících aplikací.  
 2.  Zvolte aplikaci, kterou chcete odebrat, a zvolte **kontextovou nabídku (…)**.
 
   ![Snímek obrazovky s oknem obchodních aplikací se třemi tečkami](../media/mam-azure-portal-lob-context-menu.png)

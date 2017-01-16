@@ -1,5 +1,5 @@
 ---
-title: "Zásady dodržování předpisů pro zařízení | Microsoft Intune"
+title: "Zásady dodržování předpisů pro zařízení | Dokumentace Microsoftu"
 description: "Toto téma vysvětluje, jaké jsou zásady dodržování předpisů zařízení a jak pracují."
 keywords: 
 author: andredm7
@@ -14,13 +14,16 @@ ms.assetid: 0775107a-6662-41c8-9404-be14bbb599f3
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: b41307f620284315e4c71b0d0292b229753876ad
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 7b91e52d72704b6beb79a1b35bb1a24ebb340a4b
 
 
 ---
 
 # <a name="device-compliance-policies-in-microsoft-intune"></a>Zásady dodržování předpisů pro zařízení v Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 ## <a name="what-is-a-compliance-policy"></a>Co je zásada dodržování předpisů?
 Pokud chcete chránit firemní data, budete muset zkontrolovat, jestli jsou zařízení určená pro přístup k podnikovým aplikacím a datům v souladu s určitými pravidly. Mezi tyto pravidla může patřit používání kódu PIN pro přístup k zařízením a šifrování dat uložených na zařízeních. Sada těchto pravidel se označuje jako zásady dodržování předpisů.
 

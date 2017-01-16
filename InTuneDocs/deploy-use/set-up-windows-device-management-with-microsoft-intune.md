@@ -1,5 +1,5 @@
 ---
-title: "Nastavení správy pro zařízení s Windows v Microsoft Intune | Microsoft Intune"
+title: "Nastavení správy pro zařízení s Windows v Microsoft Intune | Dokumentace Microsoftu"
 description: "Povolte správu mobilních zařízení (MDM) pro počítače s Windows včetně zařízení s Windows 10 pomocí služby Microsoft Intune."
 keywords: 
 author: staciebarker
@@ -13,18 +13,21 @@ ms.assetid: 9a18c0fe-9f03-4e84-a4d0-b63821bf5d25
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
-ms.openlocfilehash: 7c518c176e315cbf005b2fceb8d74de09bdcfa98
+ms.sourcegitcommit: 31d58d9973cca4023186731a5411c9c9e830e32a
+ms.openlocfilehash: e24251a066349e23beb94b75a66c5710ba7e41f1
 
 
 ---
 
 # <a name="set-up-windows-device-management"></a>Nastavení správy pro zařízení Windows
 
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Správce služby Intune má dvě možnosti, jak povolit registraci a správu počítačů s Windows:
 
-- **[Automatická registrace do Azure Active Directory](#azure-active-directory-enrollment)** – Uživatelé Windows 10 a Windows 10 Mobile si zaregistrují svá zařízení tak, že do nich přidají pracovní nebo školní účet.
-- **[Registrace pomocí Portálu společnosti](#company-portal-app-enrollment)** – Uživatelé zařízení s Windows Phone 8.1 a novějším si zaregistrují svá zařízení tak, že si stáhnou a nainstalují aplikaci Portál společnosti a potom v ní zadají přihlašovací údaje ke svému pracovnímu nebo školnímu účtu.
+- **[Automatická registrace do Azure Active Directory](#azure-active-directory-enrollment)** – Uživatelé Windows 10 a Windows 10 Mobile si zaregistrují svoje zařízení tak, že do nich přidají pracovní nebo školní účet.
+
+- **[Registrace pomocí Portálu společnosti](#set-up-company-portal-app-enrollment)** – Uživatelé zařízení s Windows Phone 8.1 a novějším si zaregistrují svá zařízení tak, že si stáhnou a nainstalují aplikaci Portál společnosti a potom v ní zadají přihlašovací údaje ke svému pracovnímu nebo školnímu účtu.
 
 [!INCLUDE[AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
 
@@ -55,23 +58,20 @@ Pokud jste to ještě neudělali, připravte se na správu mobilních zařízen�
 
 3.  **Ověření CNAME**<br>V [konzole pro správu Intune](http://manage.microsoft.com) zvolte **Správa** &gt; **Správa mobilních zařízení** &gt; **Windows**. Do pole **Zadejte název ověřené domény** zadejte adresu URL ověřené domény webu společnosti a zvolte **Test automatického zjištění**.
 
-  ![Dialogové okno správy zařízení s Windows](../media/enroll-intune-winenr.png)
-
 4.  **Volitelné kroky**<br>U Windows 10 není třeba provádět krok **Přidat klíče pro zkušební načtení**. Krok **Nahrát na server certifikát pro podpis kódu** je potřeba jen tehdy, když budete distribuovat obchodní aplikace (LOB), které zařízení nemohou získat z Windows Storu.
 
 6.  **Informujte uživatele, jak si mají svá zařízení zaregistrovat a co mohou očekávat od zařazení do systému správy.**
 
-    Postup registrace koncových uživatelů najdete v tématu [Registrace zařízení s Windows v Intune](../enduser/enroll-your-device-in-intune-windows.md).
+    Postup registrace koncových uživatelů najdete v tématu [Registrace zařízení s Windows v Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-windows).
 
-    Další informace o úlohách koncových uživatelů najdete v článcích:
-      - [Materiály o prostředí Microsoft Intune pro koncové uživatele](what-to-tell-your-end-users-about-using-microsoft-intune.md)
-      - [Pokyny pro koncové uživatele zařízení s Windows](../enduser/using-your-windows-device-with-intune.md)
+    Další informace o úlohách pro koncové uživatele najdete v tématu [Materiály o prostředí Microsoft Intune pro koncové uživatele](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune).
 
-### <a name="see-also"></a>Viz taky
+
+### <a name="see-also"></a>Související témata
 [Předpoklady registrace zařízení v Microsoft Intune](prerequisites-for-enrollment.md)
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

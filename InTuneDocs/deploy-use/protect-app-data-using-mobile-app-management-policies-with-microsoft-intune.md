@@ -1,9 +1,9 @@
 ---
-title: "Ochrana aplikačních dat pomocí zásad MAM | Microsoft Intune"
+title: "Ochrana aplikačních dat pomocí zásad MAM | Dokumentace Microsoftu"
 description: "Toto téma vysvětluje, jak zásady správy mobilních aplikací můžou pomoct chránit podniková data, bránit úniku informací a oddělovat osobní a pracovní informace."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 11/14/2016
 ms.topic: article
@@ -14,13 +14,15 @@ ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: 66a5814ba34f9fd15460512b0a6d40566ec33401
+ms.sourcegitcommit: 9e208608d50c9b5f7fe66743de0d3c7e741dbfbd
+ms.openlocfilehash: c2293306e847148ff7413be3e9eeafb8349e33fe
 
 
 ---
 
 # <a name="protect-app-data-using-mobile-application-management-policies-with-microsoft-intune"></a>Ochrana dat aplikací pomocí zásad správy mobilních aplikací v Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 ## <a name="how-you-can-protect-app-data"></a>Způsob ochrany dat aplikací
 Vaši zaměstnanci používají mobilní zařízení pro osobní a pracovní úkoly. Chcete, aby vaši zaměstnanci byli produktivní, ale také chcete zabránit případným záměrným či neúmyslným únikům informací.  Kromě toho chcete mít možnost chránit podniková data, ke kterým zaměstnanci přistupují ze zařízení, která nespravujete.
@@ -130,6 +132,6 @@ Všechny mobilní aplikace Office podporují přístup pomocí více identit.
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

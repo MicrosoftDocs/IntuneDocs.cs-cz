@@ -1,5 +1,5 @@
 ---
-title: "Přechod na placené předplatné | Microsoft Intune"
+title: "Přechod na placené předplatné | Dokumentace Microsoftu"
 description: "Co potřebujete vědět o předplatných a licencování po nastavení bezplatné 30denní zkušební verze Intune."
 keywords: 
 author: lindavr
@@ -13,13 +13,16 @@ ms.technology:
 ms.assetid: cad9ae15-26e5-418d-8ce5-c2dafc2071f0
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: a2b037e0c066422d53d71ffd401deb3e48a2ba7f
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: f121ff01a3eee20473637626128239c4d883e826
 
 
 ---
 
 # <a name="ways-to-subscribe-to-microsoft-intune"></a>Možnosti přihlášení k odběru Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Pokud si koupíte nejméně 150 licencí na Microsoft Intune v rámci opravňujícího plánu, můžete využít benefit Centra FastTrack. Jde o službu, kdy vám specialista Microsoftu pomůže připravit vaše prostředí na Intune. Přečtěte si téma [Zvýhodnění centra FastTrack pro Enterprise Mobility + Security (EMS)](https://docs.microsoft.com/enterprise-mobility/Solutions/fasttrack-center-benefit-for-enterprise-mobility-suite-ems).
 
 Bezplatnou testovací verzi Intune můžete převést na placené předplatné následujícími způsoby:
@@ -34,6 +37,6 @@ Bezplatnou testovací verzi Intune můžete převést na placené předplatné n
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

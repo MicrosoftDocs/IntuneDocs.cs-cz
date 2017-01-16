@@ -1,5 +1,5 @@
 ---
-title: "Nastavení zásad dodržování předpisů pro zařízení s Androidem for Work | Microsoft Intune"
+title: "Nastavení zásad dodržování předpisů pro zařízení s Androidem for Work | Dokumentace Microsoftu"
 description: "Toto téma popisuje nastavení zásad dodržování předpisů pro zařízení s Androidem, která jsou kompatibilní s Androidem for Work."
 keywords: 
 author: andredm7
@@ -14,14 +14,16 @@ ms.assetid: e721c5c7-9678-4f3b-81d4-564da5efd337
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: 050da562fb03bbc32c4a7c293b6faad4f87ab78e
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 2b53e7a410d0ce268ce395c08161095af42857b7
 
 
 ---
 
 
 # <a name="compliance-policy-settings-for-android-for-work-devices-in-microsoft-intune"></a>Nastavení zásad dodržování předpisů pro zařízení s Androidem for Work v Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 [!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 

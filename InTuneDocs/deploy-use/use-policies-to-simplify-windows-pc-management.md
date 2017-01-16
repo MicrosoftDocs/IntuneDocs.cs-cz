@@ -1,11 +1,11 @@
 ---
-title: "Zjednodušení správy počítačů s Windows pomocí zásad | Microsoft Intune"
+title: "Zjednodušení správy počítačů s Windows pomocí zásad | Dokumentace Microsoftu"
 description: "Popisuje zásady správy počítačů s Windows a nastavení pro Microsoft Intune Center."
 keywords: 
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 10/04/2016
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,15 @@ ms.assetid: f0afda7e-f4c3-4bcd-b4bf-4304103cf73e
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 1c6800ea3fde39603478437de6da7200ecae5afb
+ms.sourcegitcommit: 10dd2caa9ce1b96424f55e373e904a778390eb15
+ms.openlocfilehash: da0dad4cd40a21aec9485f46ff918a48611b869d
 
 
 ---
 
 # <a name="use-policies-to-simplify-windows-pc-management"></a>Zjednodušení správy počítačů s Windows pomocí zásad
 
-Na počítačích s Windows se dá klientský software Intune spravovat přes zásady **Správa počítače**. Pomocí zásad **Správa počítače** v Intune můžete konfigurovat nastavení centra Microsoft Intune Center, řídit aktualizace počítačů a konfigurovat na počítačích bránu Windows Firewall.
+Při správě počítačů s Windows pomocí klienta softwaru Intune můžete použít jenom ty zásady, které jsou v konzole správce Intune uvedené v zásadách **Správa počítače**. Všechny ostatní zásady uvedené v konzole správce jsou určené jenom pro mobilní zařízení. Pomocí zásad **Správa počítače** můžete konfigurovat nastavení centra Microsoft Intune Center, řídit aktualizace počítačů a konfigurovat na počítačích bránu Windows Firewall.
 
 ![Šablony zásad pro počítače s Windows](../media/pc_policy_template.png)
 
@@ -63,6 +63,6 @@ Informace o zásadách a nastaveních, které můžete konfigurovat pro počíta
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO3-->
 
 

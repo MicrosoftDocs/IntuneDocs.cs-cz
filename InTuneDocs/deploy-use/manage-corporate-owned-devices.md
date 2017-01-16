@@ -1,5 +1,5 @@
 ---
-title: "Správa zařízení ve vlastnictví firmy | Microsoft Intune"
+title: "Správa zařízení ve vlastnictví firmy | Dokumentace Microsoftu"
 description: "Registrace zařízení patřících společnosti může probíhat různě. Záleží vždy na typu zařízení, způsobu nákupu a potřebách organizace."
 keywords: 
 author: staciebarker
@@ -14,17 +14,19 @@ ms.assetid: 2b60bbff-25e6-489b-9621-c71b4275fa06
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: cfbf04627892dd700d2e31fabe8bca357f692d51
-ms.openlocfilehash: 2c8dc4917c3ef85955f017c4619c0d7496d03dbf
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 58270feb34185441406abc15e1f889c2924722e8
 
 
 ---
 
 # <a name="enroll-corporate-owned-devices-by-using-intune"></a>Registrace zařízení vlastněných společností pomocí Intune
 
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Zařízení vlastněná organizací nebo společností můžete do Intune zaregistrovat kvůli správě různým způsobem. Záleží na typu zařízení, způsobu jeho nákupu a potřebách organizace. Můžete také nainstalovat aplikaci Portál společnosti a používat ji k registraci a správě zařízení patřících společnosti, například ve scénářích BYOD (Přineste si vlastní zařízení).
 
-## <a name="enroll-corporate-owned-ios-devices"></a>Registrace zařízení s iOS vlastněných společností
+## <a name="enroll-corporate-owned-ios-devices"></a>Registrace zařízení s iOSem vlastněných společností
 
 Pro scénáře CYOD (Vyberte si vlastní zařízení) jsou vhodné způsoby registrace zařízení vlastněných společností. V prostředí CYOD organizace zaplatí zařízení, které si uživatel vybere, a organizace ho spravuje.
 
@@ -63,6 +65,6 @@ Když je zařízení označené jako firemní, zobrazuje se u záznamu daného z
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

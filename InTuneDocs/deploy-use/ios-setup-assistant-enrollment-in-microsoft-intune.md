@@ -1,5 +1,5 @@
 ---
-title: "Registrace zařízení s iOS pomocí Pomocníka s nastavením | Microsoft Intune"
+title: "Registrace zařízení s iOSem pomocí Pomocníka s nastavením | Dokumentace Microsoftu"
 description: "Použití nástroje Apple Configurator k registraci zařízení s iOSem patřících společnosti, aby bylo možné obnovit jejich tovární nastavení a připravit je ke spuštění průvodce nastavením."
 keywords: 
 author: staciebarker
@@ -14,17 +14,20 @@ ms.assetid: 46e5b027-4280-4809-b45f-651a6ab6d0cd
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d44a6494bed0758b9768045bd204ea0eb481636
-ms.openlocfilehash: ea6a4732e747dccf9c42732c06bd1b8cdf20e91f
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 01de894167a65f6b3a46808610232feb8dd7e536
 
 
 ---
 
-# <a name="enroll-ios-devices-with-apple-configurator-by-using-setup-assistant"></a>Použití průvodce nastavením k registraci zařízení s iOSem v Apple Configuratoru
+# <a name="enroll-ios-devices-with-apple-configurator-by-using-setup-assistant"></a>Použití Pomocníka s nastavením k registraci zařízení s iOSem v Apple Configuratoru
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Intune podporuje registraci zařízení s iOSem patřících společnosti pomocí [Apple Configuratoru](http://go.microsoft.com/fwlink/?LinkId=518017) spuštěného na počítači Mac. Tento postup obnoví tovární nastavení zařízení a připraví ho ke spuštění průvodce nastavením a k instalaci zásad společnosti pro nového uživatele.
 
-## <a name="setup-assistant-enrollment-for-ios-devices-with-microsoft-intune"></a>Registrace Pomocníka s nastavením pro zařízení s iOS v Microsoft Intune
-Apple Configurator umožňuje obnovit na zařízení s iOSem tovární nastavení a připravit ho k nastavení pro nového uživatele. U tohoto způsobu je potřeba zařízení s iOSem připojit k počítači Mac přes USB, aby bylo možné nastavit firemní registraci. Předpokládá se použití Apple Configuratoru 2.0. K povolení aplikace Portál společnosti služby Intune většina scénářů vyžaduje, aby zásady použité na zařízení s iOS zahrnovaly **přidružení uživatele**.
+## <a name="setup-assistant-enrollment-for-ios-devices-with-microsoft-intune"></a>Registrace Pomocníka s nastavením pro zařízení s iOSem v Microsoft Intune
+Apple Configurator umožňuje obnovit na zařízení s iOSem tovární nastavení a připravit ho k nastavení pro nového uživatele. U tohoto způsobu je potřeba zařízení s iOSem připojit k počítači Mac přes USB, aby bylo možné nastavit firemní registraci. Předpokládá se použití Apple Configuratoru 2.0. K povolení aplikace Portál společnosti služby Intune většina scénářů vyžaduje, aby zásady použité na zařízení s iOSem zahrnovaly **přidružení uživatele**.
 
 **Požadavky**
 * [Registrace iOS povolená](set-up-ios-and-mac-management-with-microsoft-intune.md) nainstalováním certifikátu služby APN
@@ -151,6 +154,6 @@ Apple Configurator umožňuje obnovit na zařízení s iOSem tovární nastaven�
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -1,11 +1,11 @@
 ---
-title: "Řešení konfliktů GPO a zásad Intune | Microsoft Intune"
+title: "Řešení konfliktů GPO a zásad Intune | Dokumentace Microsoftu"
 description: "Přečtěte si o řešení konfliktů mezi zásadami skupiny a zásadami konfigurace Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,18 @@ ms.assetid: e76af5b7-e933-442c-a9d3-3b42c5f5868b
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: 3d883851ae9fecd8a5c3baa0aff8312552915ba4
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: 439607bf79424ab32118948f112e3814577969e5
 
 
 ---
 
-# Řešení konfliktů objektů zásad skupiny (GPO) a zásad Microsoft Intune
+# <a name="resolve-group-policy-objects-gpo-and-microsoft-intune-policy-conflicts"></a>Řešení konfliktů objektů zásad skupiny (GPO) a zásad Microsoft Intune
 Intune používá zásady, které vám pomůžou spravovat nastavení na počítačích s Windows. Pomocí zásad můžete třeba na počítačích řídit nastavení brány Windows Firewall. Mnohá nastavení služby Intune se podobají nastavením, která nejspíš konfigurujete pomocí zásad skupiny Windows. Někdy se ale může stát, že se tyto dvě metody dostanou vzájemně do konfliktu.
 
 V případě konfliktu mají před zásadami Intune přednost zásady skupiny na úrovni domény mimo případů, kdy se počítač nemůže přihlásit do domény. V takovém případě se na klientském počítači použijí zásady Intune.
 
-## Co je potřeba udělat, když používáte zásady skupiny
+## <a name="what-to-do-if-you-are-using-group-policy"></a>Co je potřeba udělat, když používáte zásady skupiny
 Zkontrolujte, že žádné zásady, které používáte, nejsou spravované zásadami skupiny. Abyste lépe zabránili konfliktům, můžete využít některé z těchto metod:
 
 -   Před instalací klienta Intune přesuňte počítače do organizační jednotky služby Active Directory, u které se nepoužívá nastavení zásad skupiny. V organizačních jednotkách obsahujících počítače zaregistrované v Intune, u kterých nechcete používat nastavení zásad skupiny, můžete taky zablokovat dědičnost zásad skupiny.
@@ -36,7 +36,7 @@ Zkontrolujte, že žádné zásady, které používáte, nejsou spravované zás
 
 Další informace o službě Active Directory a zásadách skupiny Windows najdete v dokumentaci k Windows Serveru.
 
-## Jak filtrovat stávající objekty GPO, aby nedocházelo ke konfliktům se zásadami Intune
+## <a name="how-to-filter-existing-gpos-to-avoid-conflicts-with-intune-policy"></a>Jak filtrovat stávající objekty GPO, aby nedocházelo ke konfliktům se zásadami Intune
 Pokud jste našli objekty GPO s nastavením, které je v konfliktu se zásadami Intune, můžete pomocí filtrů skupiny zabezpečení omezit tyto objekty zásad skupiny jenom na počítače, které nespravuje Intune.
 
 <!--- ### Use WMI filters
@@ -113,11 +113,11 @@ Můžete použít objekty zásad skupiny jenom na skupiny zabezpečení, které 
 
 S novou skupinou zabezpečení se musí ve změnách služby Intune nakládat jako s registrací.
 
-### Viz taky
+### <a name="see-also"></a>Související témata
 [Správa počítačů s Windows pomocí Intune](manage-windows-pcs-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Dec16_HO5-->
 
 
