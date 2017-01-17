@@ -14,15 +14,15 @@ ms.assetid: b9428769-4333-4778-b677-f23dea1f74da
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 53bb650bbb20d5efae0ba53f0c0bc257a19cbaae
-ms.openlocfilehash: 96f6ca25229244a9cde24609e0c4c37412a3eb01
+ms.sourcegitcommit: 874146573898e8a28de83ed599dbd4829ea8f335
+ms.openlocfilehash: fb72b74d922cef8659c34ef9d3d36e14b1a22ac1
 
 
 ---
 
 # <a name="develop-an-intune-support-plan"></a>Příprava plánu podpory pro Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE[note for both-portals](../includes/note-for-both-portals.md)]
 
 Když budete mít plán podpory pro Intune, můžete efektivněji rozpoznat a řešit problémy spojené s Intune a tím zlepšit celkové prostředí služby Intune pro koncové uživatele. Tady jsou některé otázky, které byste měli vzít v úvahu při přípravě plánu podpory Intune:
 
@@ -38,7 +38,7 @@ Když budete mít plán podpory pro Intune, můžete efektivněji rozpoznat a ř
 
 Pojďme se podívat na každou oblast podrobněji.
 
-## <a name="which-teams-are-responsible-for-providing-support"></a>Jaké týmy odpovídají za poskytování podpory? 
+## <a name="which-teams-are-responsible-for-providing-support"></a>Jaké týmy odpovídají za poskytování podpory?
 
 Organizace mohou mít různé vrstvy nebo úrovně podpory (1–3). Například první a druhá vrstva může být složená z členů týmu podpory a do třetí vrstvy mohou patřit členové týmu správy mobilních zařízení (MDM), který zodpovídá za nasazení Intune.
 
@@ -46,7 +46,7 @@ Organizace mohou mít různé vrstvy nebo úrovně podpory (1–3). Například 
 
 První vrstva normálně odpovídá prvnímu stupni podpory. Tuto vrstvu obvykle kontaktují uživatelé se svými požadavky na podporu. Pokud první vrstva nedokáže problém koncového uživatele vyřešit, postoupí ho druhé vrstvě a ta ho případně postoupí třetí vrstvě. Za čtvrtou vrstvu je možné považovat podporu Microsoftu.
 
--   Další informace o [podpoře Intune](/intune/troubleshoot/how-to-get-support-for-microsoft-intune.md).
+-   Další informace o [podpoře Intune](https://docs.microsoft.com/intune/troubleshoot/how-to-get-support-for-microsoft-intune).
 
 V úvodních fázích zahájení ostrého provozu mohou být v organizaci zapojeny do přechodu nebo do skypových hovorů všechny tři vrstvy. Tady je jeden příklad implementace pracovních toků podpory/helpdesku IT v organizaci:
 
@@ -84,10 +84,10 @@ V následujícím příkladu je program školení pracovníků podpory pro Intun
 
 -   Otázky a odpovědi
 
->[!TIP] 
+>[!TIP]
 > [Další materiály a zdroje informací](additional-resources.md) obsahují technické prostředky pro tým podpory, které mohou být cenné při seznamování se zaváděnou službou Microsoft Intune a při jejím využití.
 
-## <a name="what-opportunities-are-there-to-involve-the-support-team-earlier"></a>Jaké existují příležitosti k dřívějšímu zapojení týmu podpory? 
+## <a name="what-opportunities-are-there-to-involve-the-support-team-earlier"></a>Jaké existují příležitosti k dřívějšímu zapojení týmu podpory?
 
 Včasné zapojení pracovníků podpory/helpdesku IT při nasazování Intune, a to už ve fázi plánování a pilotního projektu, může být pro organizace velice užitečné. Pracovníkům podpory nabízí příležitosti, aby se seznámili s řešením a získali cenné zkušenosti. Pomáhá také připravit pracovníky podpory/helpdesku IT na podporu plného provozu řešení v organizaci.
 
@@ -97,6 +97,6 @@ Další část obsahuje pokyny pro [návrh Intune](section-7-create-an-intune-de
 
 
 
-<!--HONumber=Dec16_HO5-->
+<!--HONumber=Jan17_HO2-->
 
 
