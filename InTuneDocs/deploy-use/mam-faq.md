@@ -86,15 +86,17 @@ Tento článek poskytuje odpovědi na některé časté otázky ke správě mobi
 
   2. **Co se šifruje?** Šifrují se jenom data označená jako podniková, a to podle zásady ochrany aplikace správce IT. Data se považují za podniková, když pocházejí z firemního umístění. U aplikací Office považuje Intune za firemní následující umístění: e-mail (Exchange) nebo cloudové úložiště (aplikace OneDrive s účtem OneDrive pro firmy). U obchodních aplikací kompatibilních s nástrojem Intune App Wrapping se za podniková považují všechna data aplikace.
 
-**Jak může Intune vzdáleně smazat data?** Intune může data aplikace smazat dvěma způsoby: úplně a selektivně. Další informace o vzdáleném vymazání najdete v článku [Lepší ochrana dat s využitím plného nebo selektivního vymazání pomocí Microsoft Intune](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md).
+**Jak může Intune vzdáleně smazat data?** Intune může data aplikace smazat třemi způsoby: úplným vymazáním zařízení, selektivním vymazáním pro MDM nebo selektivním vymazáním pro MAM. Další informace o vzdáleném vymazání pro MDM najdete v článku [Lepší ochrana dat s využitím plného nebo selektivního vymazání pomocí Microsoft Intune](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md). Další informace o selektivním vymazání pro MAM najdete v článku [Vymazání dat spravovaných aplikací společnosti s Microsoft Intune](wipe-managed-company-app-data-with-microsoft-intune.md)
 
   1. **Co je úplné vymazání?** [Úplné vymazání](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#full-wipe) odebere veškerá uživatelská data a nastavení ze **zařízení** pomocí obnovení výchozího továrního nastavení v zařízení. Zařízení se odebere ze služby Intune.
   >[!NOTE]
   > Úplného vymazání jde dosáhnout jenom na zařízeních zaregistrovaných ve správě mobilních zařízení (MDM) Intune.
 
-  2. **Co je selektivní vymazání?** O selektivním vymazání si můžete přečíst v článku [Lepší ochrana dat s využitím plného nebo selektivního vymazání pomocí Microsoft Intune](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#selective-wipe).
+  2. **Co je selektivní vymazání pro MDM?** O selektivním vymazání si můžete přečíst v článku [Lepší ochrana dat s využitím plného nebo selektivního vymazání pomocí Microsoft Intune](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#selective-wipe).
 
-  3. **Jak rychle selektivní vymazání proběhne?** Pokud uživatel používá aplikaci, když je zahájeno selektivní vymazání, sada Intune App SDK kontroluje každých 30 minut žádost o selektivní vymazání ze služby Intune MAM. Selektivní vymazání také kontroluje tehdy, když uživatel spustí aplikaci poprvé a přihlásí se pomocí pracovního nebo školního účtu.
+  3. **Co je selektivní vymazání pro MAM?** Selektivní vymazání pro MAM jednoduše odebere data aplikace společnosti z aplikace. Žádost se inicializuje pomocí portálu Intune Azure Portal. Informace o tom, jak inicializovat žádost o vymazání, najdete v článku [Vymazání dat spravovaných aplikací společnosti s Microsoft Intune](wipe-managed-company-app-data-with-microsoft-intune.md).
+
+  4. **Jak rychle selektivní vymazání pro MAM proběhne?** Pokud uživatel používá aplikaci, když je zahájeno selektivní vymazání, sada Intune App SDK kontroluje každých 30 minut žádost o selektivní vymazání ze služby Intune MAM. Selektivní vymazání také kontroluje tehdy, když uživatel spustí aplikaci poprvé a přihlásí se pomocí pracovního nebo školního účtu.
 
 **Proč místní služby nepracují s aplikacemi chráněnými službou Intune?** Ochrana aplikací Intune závisí na identitě uživatele, aby byla konzistentní mezi aplikací a sadou Intune App SDK. Jediná cesta, která to může zaručit, je moderní ověřování. Jsou situace, kdy aplikace můžou fungovat s místní konfigurací, ale nejsou konzistentní ani nic nezaručují.
 
@@ -110,6 +112,6 @@ Tento článek poskytuje odpovědi na některé časté otázky ke správě mobi
 **Můžu pomocí rozšíření pro sdílení v iOS otevírat pracovní nebo školní data v nespravovaných aplikacích, i když je zásada přenosu dat nastavená na „jenom spravované aplikace“ nebo „žádné aplikace“. Nemůže při tom dojít k úniku dat?** Zásady ochrany aplikací pro Intune nemůžou ovládat rozšíření pro sdílení v iOS, když dané zařízení nespravují. Proto Intune _**podniková data před jejich sdílením mimo příslušnou aplikaci zašifruje**_. Můžete si to ověřit tak, že si zkusíte otevřít podnikový soubor mimo spravovanou aplikaci. Měl by být zašifrovaný a mimo spravovanou aplikaci by ho nemělo být možné otevřít.
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO2-->
 
 

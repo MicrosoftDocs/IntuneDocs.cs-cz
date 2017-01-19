@@ -5,7 +5,7 @@
   - Mac OS X 10.9 a novější
 
 ### <a name="windows"></a>Windows
-  - Počítače se systémem Windows 10 (verze Home, Pro, Education a Enterprise)
+  - Počítače se systémem Windows 10 (verze Pro, Education a Enterprise)
   - Windows Phone 8.1 nebo novější
   - Windows 8.1 RT
   - Počítače se systémem Windows 8.1
@@ -23,6 +23,6 @@ Zákazníci se službou Enterprise Management + Security (EMS) mohou také [pou�
  
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO2-->
 
 

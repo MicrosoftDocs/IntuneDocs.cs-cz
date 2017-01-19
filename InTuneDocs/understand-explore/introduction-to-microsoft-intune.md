@@ -14,8 +14,8 @@ ms.assetid: 3b4e778d-ac13-4c23-974f-5122f74626bc
 ms.reviewer: pmay
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: e373fe71f54472bca538ba4a14beff39d090e23d
+ms.sourcegitcommit: d0057f1e3d2ead729c2143587571fa4b16a3dd2f
+ms.openlocfilehash: 9b4eed086853c0feeb8266a8087a275f2b70e40f
 
 
 ---
@@ -95,7 +95,7 @@ Většina řešení správy mobility velkých organizací podporuje základní t
 
 Organizace se liší v rozsahu, v jakém přijímají scénáře „bez registrace“. Některé organizace to používají jako standard. Některé to povolují u doplňkových zařízení, jako jsou osobní tablety. Jiné to nepodporují vůbec. I v tomto posledním případě, kdy organizace vyžaduje, aby všechna zařízení zaměstnanců byla zaregistrovaná v MDM, tyto organizace obvykle scénáře „bez registrace“ podporují pro dodavatele a pro další zařízení, která mají zvláštní výjimku.
 
-Můžete dokonce technologii Intune „bez registrace“ používat i na registrovaných zařízeních. Zařízení zaregistrované v MDM může mít třeba ochranu funkce „Otevřít v aplikaci“ poskytované mobilním operačním systémem. Kromě toho může IT oddělení použít zásady ochrany aplikací na mobilní aplikace spravované pomocí EMS proto, aby řídilo možnost „uložit jako“ nebo zajistilo vícefaktorové ověřování.
+Můžete dokonce technologii Intune „bez registrace“ používat i na registrovaných zařízeních. Zařízení zaregistrované v MDM může mít třeba ochranu funkce „Otevřít v aplikaci“ poskytované mobilním operačním systémem. (Ochrana funkce „Otevřít v aplikaci“ je funkce iOS, která zabrání otevřít dokument z jedné aplikace (například z Outlook) do jiné aplikace (například do Wordu), pokud obě aplikace nejsou spravované poskytovatelem řešení MDM.) Kromě toho může IT oddělení použít zásady ochrany aplikací na mobilní aplikace spravované pomocí EMS proto, aby řídilo možnost „uložit jako“ nebo zajistilo vícefaktorové ověřování.
 
 Bez ohledu na postoj vaší organizace k zaregistrovaným a nezaregistrovaným mobilním zařízením a aplikacím obsahuje Intune jako součást EMS nástroje, které vám pomůžou zvýšit produktivitu zaměstnanců a současně ochránit firemní data.
 
@@ -116,6 +116,6 @@ Následující seznam obchodních problémů odkazuje na podrobnější informac
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 
