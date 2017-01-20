@@ -14,18 +14,21 @@ ms.assetid: eb4a9f01-f857-4563-ab6f-5d0d7dfa659d
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 063b073d85dac9fce7d1cbab80ea320c5d237961
-ms.openlocfilehash: 0d8a86b55904198612e0d53fbc387d850d88a449
+ms.sourcegitcommit: 77f1af3a07e5a5758227c81010ce853906803b08
+ms.openlocfilehash: f103a919d0708c2925cb6af4cf7231ed05029e46
 
 
 ---
 
 # <a name="customize-the-company-portal"></a>Přizpůsobení portálu společnosti
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Portál společnosti v Intune je místem, kde uživatelé přistupují k podnikovým datům a kde můžou dělat běžné úkoly, jako je registrace zařízení, instalace aplikací nebo vyhledání informací pro oddělení IT v případě žádosti o podporu.
 
 Portál společnosti Intune nabízí uživatelům přístup k firemním datům a aplikacím. Portál společnosti je dostupný ve dvou formách:
 
--   **Aplikace Portál společnosti**: Aplikace, která je dostupná na zařízeních spravovaných službou Intune. Další informace o aplikacích Portál společnosti pro [Android](/Intune/EndUser/using-your-android-device-with-intune), [iOS](/Intune/EndUser/using-your-ios-or-mac-os-x-device-with-intune) a [Windows](/Intune/EndUser/using-your-windows-device-with-intune).
+-   **Aplikace Portál společnosti**: Aplikace, která je dostupná na zařízeních spravovaných službou Intune. Další informace o aplikacích Portál společnosti pro [Android](/Intune/EndUser/using-your-android-device-with-intune), [iOS](/Intune/EndUser/using-your-iOS-or-macOS-device-with-intune) a [Windows](/Intune/EndUser/using-your-windows-device-with-intune).
 
 
 - **Web Portál společnosti**: Web, který koncovým uživatelům umožňuje provádět většinu úkolů, jaké můžou provádět z aplikace Portál společnosti. Adresa URL Portálu společnosti Intune je [http://portal.manage.microsoft.com](http://portal.manage.microsoft.com). Další informace o tomto webu najdete v tématu [Použití webu Portál společnosti Intune](/Intune/EndUser/using-the-intune-company-portal-website).
@@ -86,6 +89,6 @@ Po uložení změn můžete pomocí odkazů uvedených v dolní části stránky
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 
