@@ -11,11 +11,13 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
+searchScope:
+- Company Portal
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8611566f5f5d33b7f0937fabd15892353953df77
-ms.openlocfilehash: 1c4e77d3089df2ff184a414ba668b01b2d040854
+ms.sourcegitcommit: bb949c9a83fdde630dd2023765d32e98c43a1c20
+ms.openlocfilehash: 22a5cab46a6ca8cf2d350ba9844328a3dea13766
 
 
 ---
@@ -59,22 +61,22 @@ Informace v této části pomohou uživatelům provádět akce po zaregistrován
 Uživatelé mohou informace v této části použít k opravě problémů, se kterými se mohou setkat, když svoje zařízení s Androidem zaregistrují v Intune.
 
 - [Použití podrobného protokolování správcem IT k opravě problémů se zařízením](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-- [Odeslání protokolů s diagnostickými daty e-mailem vašemu správci IT](send-diagnostic-data-logs-to-your-it-administrator-using-email-android.md)
-- [Odeslání protokolů s diagnostickými daty vašemu správci IT pomocí kabelu USB](send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android.md)
-- [Odeslání chyb při registraci vašemu správci IT](send-enrollment-errors-to-your-it-administrator-android.md)
+- [Odeslání protokolů správci IT pomocí e-mailu](send-logs-to-your-it-admin-by-email-android.md)
+- [Odeslání protokolů správci IT pomocí kabelu USB](send-logs-to-your-it-admin-using-cable-android.md)
+- [Odeslání chyb při registraci vašemu správci IT](send-enrollment-errors-to-your-it-admin-android.md)
 - [Zařízení nemá požadovanou minimální verzi operačního systému](you-need-to-update-your-android-device.md)
 - [Zařízení nevyhovuje maximální verzi operačního systému](your-android-version-isnt-yet-supported.md)
 - [Zařízení obsahuje root a nemůže se připojit](your-device-is-rooted-and-you-cant-connect-android.md)
-- [Zařízení chybí požadovaný certifikát](your-device-is-missing-a-required-certificate-android.md)
-- [Jste vyzváni k vypnutí možnosti Neznámé zdroje](you-are-asked-to-turn-off-unknown-sources-android.md)
-- [Jste vyzváni k vypnutí ladění USB](you-are-asked-to-turn-off-usb-debugging-android.md)
-- [Jste vyzváni k zapnutí nastavení Vyhledat v zařízení bezpečnostní hrozby](you-are-asked-to-turn-on-scan-device-for-security-threats-android.md)
+- [Zařízení chybí požadovaný certifikát](your-device-is-missing-a-required-certificate-landing-android.md)
+- [Musíte vypnout používání neznámých zdrojů](you-need-to-turn-off-unknown-sources-android.md)
+- [Musíte vypnout ladění USB](you-need-to-turn-off-usb-debugging-android.md)
+- [Musíte zapnout vyhledávání bezpečnostních hrozeb](you-need-to-turn-on-scanning-for-security-threats-android.md)
 - [Zařízení nesplňuje požadavek na minimální úroveň opravy zabezpečení](your-device-does-not-meet-the-minimum-security-patch-android.md)
 - [Jste vyzváni k instalaci aplikace Lookout for Work na zařízení s Androidem](you-are-prompted-to-install-lookout-for-work-android.md)
 - [Je třeba vyřešit hrozbu, kterou objevila aplikace Lookout for Work na zařízení s Androidem](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

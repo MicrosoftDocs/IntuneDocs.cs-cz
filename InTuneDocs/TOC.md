@@ -7,7 +7,7 @@
 ### [Další možnosti a funkce](understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-6.md)
 ### [Přechod na placené předplatné](understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)
 ## [Typické scénáře](understand-explore/common-ways-to-use-intune.md)
-## [Glosář](understand-explore/intune-glossary.md)
+
 
 # [Začínáme](get-started/get-started.md)
 ## [Nastavení Intune](get-started/start-with-a-paid-subscription-to-microsoft-intune.md)
@@ -44,6 +44,7 @@
 
 # Novinky
 ## [Novinky](whats-new/whats-new-in-microsoft-intune.md)
+## [Co je nového v Azure Preview](/intune-azure/introduction/whats-new?toc=%2fintune%2ftoc.json)
 ## [Co je nového – archiv](whats-new/whats-new-archive.md)
 
 # Nasazení a používání
@@ -72,6 +73,7 @@
 #### [Instalace klientského počítače](deploy-use/install-the-windows-pc-client-with-microsoft-intune.md)
 #### [Běžné úlohy správy počítačů](deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
 #### [Řešení konfliktů zásad počítačů](deploy-use/resolve-gpo-and-microsoft-intune-policy-conflicts.md)
+### [Správa Androidu for Work](deploy-use/android-for-work.md)
 
 ## Konfigurace zařízení
 ### [Správa nastavení a funkcí v zařízeních pomocí zásad](deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
@@ -97,6 +99,7 @@
 #### [Připojení VPN v Intune](deploy-use/vpn-connections-in-microsoft-intune.md)
 #### [E-mailové profily v Intune](deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune.md)
 ### [Použití skupin pro správu uživatelů a zařízení](deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
+#### [Migrace skupin do Azure](deploy-use/migrating-groups-to-azure-active-directory.md)
 ### [Mapování zařízení na skupiny](deploy-use/categorize-devices-with-device-group-mapping-in-microsoft-intune.md)
 ### [Seznámení se zařízeními s inventářem](deploy-use/understand-your-devices-with-inventory-in-microsoft-intune.md)
 
@@ -142,24 +145,24 @@
 #### [Windows a Windows Phone](deploy-use/windows-compliance-policy-settings-in-microsoft-intune.md)
 #### [Nasazení zásad dodržování předpisů pro zařízení](deploy-use/deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md)
 
-### [Omezení přístupu na základě dodržování předpisů pro zařízení](deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
+### [Ochrana přístupu na základě dodržování předpisů pro zařízení](deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
 
 #### [Exchange Online a nová verze Exchange Online Dedicated](deploy-use/restrict-access-to-exchange-online-with-microsoft-intune.md)
 #### [Místní Exchange a starší verze Exchange Online Dedicated](deploy-use/restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
 #### [SharePoint Online](deploy-use/restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 #### [Online Skype pro firmy](deploy-use/restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
 #### [Dynamics CRM Online](deploy-use/restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
-#### [Omezení přístupu k e-mailu: příklady](deploy-use/restrict-email-access-example-scenarios.md)
+#### [Ochrana přístupu k e-mailu: příklady](deploy-use/restrict-email-access-example-scenarios.md)
 ### [Povolení přístupu ke službám O365 jen aplikacím spravovaným zásadami](deploy-use/allow-policy-managed-apps-access-to-o365.md)
 #### [Aplikace s podmíněným přístupem MAM](deploy-use/use-apps-with-mam-ca.md)
 #### [Exchange Online](deploy-use/mam-ca-for-exchange-online.md)
 #### [Blokování aplikací bez ověřování ADAL](deploy-use/block-apps-with-no-modern-authentication.md)
-### [Omezení přístupu k sítím (Cisco ISE)](deploy-use/restrict-access-to-networks.md)
-### [Omezení přístupu na základě rizika zařízení, sítě a aplikace](deploy-use/restrict-access-based-on-device-network-app-risk.md)
-#### [Nastavení ochrany zařízení před internetovými útoky ve službě Lookout](deploy-use/set-up-your-subscription-with-lookout-mtp.md)
-#### [Povolení aplikace Lookout v Intune](deploy-use/enable-lookout-mtp-connection-in-intune.md)
-#### [Nasazení aplikací Lookout for Work](deploy-use/configure-and-deploy-lookout-for-work-apps.md)
-#### [Povolení zásady dodržování předpisů pro ochranu zařízení před hrozbami](deploy-use/enable-device-threat-protection-rule-in-compliance-policy.md)
+### [Ochrana přístupu k sítím (Cisco ISE)](deploy-use/restrict-access-to-networks.md)
+### [Ochrana přístupu na základě rizika zařízení, sítě a aplikace](deploy-use/device-threat-protection.md)
+#### [Nastavení ochrany zařízení před internetovými útoky ve službě Lookout](deploy-use/device-threat-protection-subscription-setup.md)
+#### [Povolení aplikace Lookout v Intune](deploy-use/device-threat-protection-enable.md)
+#### [Nasazení aplikací Lookout for Work](deploy-use/device-threat-protection-apps.md)
+#### [Povolení zásady dodržování předpisů pro ochranu zařízení před hrozbami](deploy-use/device-threat-protection-policy.md)
 
 ### [Ochrana dat aplikací pomocí MAM](deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Portál Azure Portal pro zásady MAM](deploy-use/azure-portal-for-microsoft-intune-mam-policies.md)
@@ -179,6 +182,7 @@
 #### [Obchodní aplikace na zařízeních nespravovaných pomocí Intune](deploy-use/protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune.md)
 #### [Použití sady SDK při psaní aplikace](deploy-use/use-the-sdk-to-enable-apps-for-mobile-application-management.md)
 
+### [Nejčastější dotazy k MAM a ochraně aplikací](deploy-use/mam-faq.md)
 
 ## Vyřazení aplikací a data z provozu
 ### [Použití úplného nebo selektivního vymazání](deploy-use/use-remote-wipe-to-help-protect-data-using-microsoft-intune.md)
@@ -215,7 +219,9 @@
 
 ## [Řešení problémů s Lookout Integration](troubleshoot/troubleshooting-lookout-integration.md)
 
+# [Glosář](understand-explore/intune-glossary.md)
 
-<!--HONumber=Dec16_HO5-->
+
+<!--HONumber=Jan17_HO3-->
 
 
