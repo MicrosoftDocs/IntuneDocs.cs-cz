@@ -14,8 +14,8 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: oydang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b068da7685792757825a4bc0d555e28ee0168cb1
-ms.openlocfilehash: cb80d531a28eaccbd26bc53df3e13ad233522dcf
+ms.sourcegitcommit: 3fdbf7f561f526b68972c6f66d1b72b56f7fa8ad
+ms.openlocfilehash: 5aa384197036adf0c373a08c3750f453812c9fba
 
 
 ---
@@ -119,7 +119,8 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 6. Povolte sdílení řetězce klíčů (pokud ještě není povolené) tak, že v každém cíli projektu kliknete na **Možnosti** a zapnete přepínač **Sdílení řetězce klíčů**. Sdílení řetězce klíčů se vyžaduje pro přechod k dalšímu kroku.
 
     > [!NOTE]
-    > Profil zřizování musí podporovat nové hodnoty sdílení řetězce klíčů. Přístupové skupiny pro řetězce klíčů by měly podporovat zástupné znaky. Můžete to ověřit tak, že soubor .mobileprovision otevřete v textovém editoru, najdete **keychain-access-groups** a ověříte, že obsahuje zástupný znak. Příklad:     ```xml
+    > Profil zřizování musí podporovat nové hodnoty sdílení řetězce klíčů. Přístupové skupiny pro řetězce klíčů by měly podporovat zástupné znaky. Můžete to ověřit tak, že soubor .mobileprovision otevřete v textovém editoru, najdete **keychain-access-groups** a ověříte, že obsahuje zástupný znak. Například:
+    ```xml
     <key>keychain-access-groups</key>
     <array>
     <string>YOURBUNDLESEEDID.*</string>
@@ -150,7 +151,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 
 9. U mobilních aplikací vyvíjených pro iOS 9 a vyšší zahrňte všechny protokoly, které aplikace předává do `UIApplication canOpenURL`, do pole `LSApplicationQueriesSchemes` v souboru Info.plist této aplikace. Pro každý protokol uvedený v seznamu přidejte nový protokol s příponou `-intunemam`. Do pole musíte taky zahrnout `http-intunemam`, `https-intunemam`a `ms-outlook-intunemam` .
 
-10. Pokud má aplikace ve svých nárocích definované skupiny aplikací, přidejte tyto skupiny jako pole řetězců do slovníku IntuneMAMSettings pod klíč `AppGroupIdentitifiers`.
+10. Pokud má aplikace ve svých nárocích definované skupiny aplikací, přidejte tyto skupiny jako pole řetězců do slovníku IntuneMAMSettings pod klíč `AppGroupIdentifiers`.
 
 11. Připojte mobilní aplikaci ke knihovně Azure Directory Authentication Library (ADAL). Knihovna ADAL pro Objective C je [dostupná na GitHubu](https://github.com/AzureAD/azure-activedirectory-library-for-objc).
 
@@ -208,7 +209,7 @@ Testovat v rámci PPE můžete pomocí přepínače za kompilace nebo za běhu.
 
 Pokud chcete adresy URL a Azure AD služby MAM přepnout na prostředí využívané při kompilaci, nastavte parametr logické hodnoty `UsePPE` v souboru MAMEnvironment.plist na true. (Poznámka: To se nedá provést v Info.plist.)
 
-Na prostředí za běhu PPE přepnete nastavením parametru `com.microsoft.intune.mam.useppe` ve výchozím nastavení standardního uživatele na 1. To nahradí stávající nastavení `com.microsoft.intune.mam.AADAuthorityEnvironment`.
+Na prostředí za běhu PPE přepnete nastavením parametru `com.microsoft.intune.mam.useppe` ve výchozím nastavení standardního uživatele na&1;. To nahradí stávající nastavení `com.microsoft.intune.mam.AADAuthorityEnvironment`.
 
 **Jak přepíšu adresu URL autority Azure AD specifickou adresou URL tenanta zadanou za běhu?**
 
@@ -244,7 +245,7 @@ Intune App SDK teď aplikacím pro iOS umožňuje přijímat z Intune zásady MA
 
     Pokud chcete adresy URL a Azure AD služby MAM přepnout na prostředí využívané při kompilaci, nastavte parametr logické hodnoty `UsePPE` v souboru MAMEnvironment.plist na true. (Poznámka: To se nedá provést v Info.plist.)
 
-    Na prostředí za běhu PPE přepnete nastavením parametru `com.microsoft.intune.mam.useppe` ve výchozím nastavení standardního uživatele na 1. To nahradí stávající nastavení `com.microsoft.intune.mam.AADAuthorityEnvironment`.
+    Na prostředí za běhu PPE přepnete nastavením parametru `com.microsoft.intune.mam.useppe` ve výchozím nastavení standardního uživatele na&1;. To nahradí stávající nastavení `com.microsoft.intune.mam.AADAuthorityEnvironment`.
 
 
 ### <a name="register-accounts"></a>Registrace účtů
@@ -509,7 +510,7 @@ Pamatujte si, že identita je definována jednoduše jako řetězec. V identitá
 
 ### <a name="identity-overview"></a>Přehled identity
 
-Identita je prostě (například) uživatelské jméno účtu. Vývojáři user@contoso.com). můžou nastavit identitu aplikace na následujících úrovních:
+Identita je jednoduše uživatelské jméno účtu (například user@contoso.com). Vývojáři můžou identitu aplikace nastavit na těchto úrovních:
 
 * **Identita procesu**: Stanoví identitu v rámci procesu a používá se hlavně pro aplikace s jedinou identitou. Tato identita ovlivňuje všechny úlohy a soubory a také uživatelské rozhraní.
 * **Identita uživatelského rozhraní**: Určuje, jaké zásady se uplatní u úloh uživatelského rozhraní v hlavním vlákně, jako je vyjmutí, kopírování, vložení, PIN, ověřování, sdílení dat atd. Identita uživatelského rozhraní nemá vliv na úlohy se soubory jako šifrování, zálohování atd.
@@ -604,6 +605,12 @@ Tady jsou uvedeny některé doporučené osvědčené postupy při vývoji pro i
 
 ## <a name="faq"></a>Nejčastější dotazy
 
+
+**Jsou všechna rozhraní API řešená nativním jazykem Swift nebo spoluprací jazyků Objective-C a Swift?**
+
+Rozhraní API sady Intune App SDK jsou pouze v objective-C a nepodporují nativní Swift.  
+
+
 **Musí být všichni uživatelé mojí aplikace zaregistrovaní ve službě MAM?**
 
 Ne. V Intune App SDK by se měly registrovat jen pracovní a školní účty. Za zjištění, jestli je účet používán jako pracovní nebo školní, zodpovídají aplikace.   
@@ -637,6 +644,8 @@ Tato metoda by se měla zavolat, než se uživatel z aplikace odhlásí.  Pokud 
 
 Ano, správce IT může do aplikace poslat příkaz k selektivnímu vymazání. Tím se zruší registrace uživatele a vymažou jeho data. SDK tento scénář provede automaticky a prostřednictvím metody delegáta potom odešle oznámení.
 
+
+
 ## <a name="submit-your-app-to-the-app-store"></a>Odeslání aplikace do App Storu
 
 Buildy statické knihovny i modelu pro Intune App SDK jsou univerzální binární soubory. To znamená, že mají kód pro všechny architektury zařízení a simulátoru. Když mají aplikace poslané do App Storu kód simulátoru, Apple je odmítne. Když kompilujete buildy jen pro zařízení pomocí statické knihovny, linker kód simulátoru automaticky odstraní. Postupujte podle následujících kroků a před nahráním aplikace do App Storu zkontrolujte, jestli je odebraný celý kód simulátoru.
@@ -656,6 +665,6 @@ Buildy statické knihovny i modelu pro Intune App SDK jsou univerzální binárn
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 
