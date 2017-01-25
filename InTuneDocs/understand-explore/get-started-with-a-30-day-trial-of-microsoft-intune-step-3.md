@@ -1,5 +1,5 @@
 ---
-title: "Vytvoření skupin pro uspořádání uživatelů a zařízení | Dokumentace Microsoftu"
+title: "Vytvoření skupin pro uspořádání uživatelů a zařízení v bezplatné zkušební verzi| Dokumentace Microsoftu"
 description: "Vytvoření skupin zařízení a skupin uživatelů při registraci bezplatné 30denní zkušební verze Microsoft Intune"
 keywords: 
 author: lindavr
@@ -13,13 +13,16 @@ ms.technology:
 ms.assetid: 7162cad3-5c14-43f3-a760-833ffd7786b1
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: e4072108d5d06857acb10f243df68ef2c33066a2
+ms.sourcegitcommit: 89e190e6a3e514c0f38b33409cde2abea0776885
+ms.openlocfilehash: 0cdf5bf8f9fad1f44dbb0ef11de71aea55949d89
 
 
 ---
 
 # <a name="create-groups-to-organize-evaluation-subscription-users-and-devices"></a>Vytvoření skupiny pro uspořádání uživatelů a zařízení pro testovací předplatné
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Skupiny v Intune poskytují flexibilitu pro správu zařízení a uživatelů. Můžete nastavit skupiny podle potřeb vaší organizace (třeba podle zeměpisné polohy, oddělení nebo vlastností hardwaru) a použít je k provádění řady úloh správy se škálováním od nastavení zásad pro sadu uživatelů po nasazení aplikací na sadu zařízení.
 
 ## <a name="create-a-device-group"></a>Vytvoření skupiny zařízení
@@ -61,6 +64,6 @@ Další informace o používání skupin najdete v tématu [Použití skupin pro
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

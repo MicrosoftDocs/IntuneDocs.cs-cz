@@ -1,43 +1,43 @@
 ---
-title: "Vzdálené uzamčení zařízení z webu Portál společnosti | Microsoft Intune"
+title: "Vzdálené uzamčení zařízení z webu Portál společnosti | Dokumentace Microsoftu"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: adc6af23-b22f-42e5-955a-4dffbdb8b42b
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 31b3f4c556c27de7a1793bfe84a1d3eb12302424
+ms.sourcegitcommit: a1e346047fb029689c0c9c68073b89b9bac20530
+ms.openlocfilehash: fad219ca06ceb62e8bad0b3dbd30b330d90ac977
 
 
 ---
 
+# <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Vzdálené uzamčení zařízení z webu Portál společnosti
 
-# <a name="remotely-lock-a-device-from-the-company-portal-website"></a>Vzdálené uzamčení zařízení z webu Portál společnosti
+Nehody se stávají a někdy se ztrácejí i zařízení. Pokud jste zařízení ztratili nebo vám ho někdo odcizil, bude asi vaší první starostí to, že ať už je zařízení kdekoli, může se k vašim informacím dostat nepovolaná osoba.
 
-Pokud došlo ke ztrátě nebo odcizení vašeho zařízení, můžete zařízení uzamknout s použitím možnosti Vzdálené uzamčení na [webu Portál společnosti](http://portal.manage.microsoft.com). Vzdálené uzamčení funguje u následujících typů zařízení:
+[!INCLUDE[wit_nextref](../includes/end-user-password-guidance.md)]
 
-Platforma  |Podrobnosti o podpoře  
----------|---------
-Android | Podporováno       
-iOS | Podporováno
-Windows 10 Mobile | Podporováno pouze v případě, že je pro telefon nastaven přístupový kód     
-Windows 10 Desktop | Není podporované  
-Windows Phone 8.1 | Podporováno pouze v případě, že je pro telefon nastaven přístupový kód
-PC (Windows 8.0 a starší) | Není podporované       
-PC (Windows 8.1) | Není podporované
+Abyste byli v bezpečí, můžete zařízení uzamknout pomocí možnosti Vzdálené uzamčení na [webu Portál společnosti](http://portal.manage.microsoft.com). Vzdálené uzamčení funguje na těchto platformách:
 
-</br>
-Postup použití vzdáleného uzamčení k uzamčení zařízení:
+* Android
+* iOS
+* macOS
+* Windows 10 Mobile (pokud už je pro zařízení nastaveno heslo)
+* Windows Phone 8.1 (pokud už je pro zařízení nastaveno heslo)
+
+## <a name="to-use-remote-lock-to-lock-your-device"></a>Použití vzdáleného uzamčení k uzamčení zařízení
 
 1.  Na [webu Portál společnosti](http://portal.manage.microsoft.com) klepněte na zařízení, které chcete uzamknout.
 
@@ -45,25 +45,25 @@ Postup použití vzdáleného uzamčení k uzamčení zařízení:
 
     ![remote-lock-option-on-company-portal-website](./media/iwp-screen-with-all-options.png)
 
-3.  Přečtěte si upozornění, které vás varuje, že se chystáte zařízení uzamknout, a potom klepnutím na **Vzdálené uzamčení** dejte webu Portál společnosti pokyn, aby se pokusil o uzamčení zařízení.
+3.  Zobrazí se oznámení, že se chystáte uzamknout zařízení. Klepněte na **Vzdálené uzamčení** a web Portál společnosti se pokusí vaše zařízení uzamknout.
 
-    Po klepnutí na **Vzdálené uzamčení** se zobrazí stav Vzdálené uzamčení čeká na vyřízení.  Pokud je vzdálené uzamčení úspěšné, stav se změní na Vzdálené uzamčení bylo úspěšné.
+    Po klepnutí na **Vzdálené uzamčení** se zobrazí zpráva, že vzdálené uzamčení čeká na vyřízení.  Pokud je vzdálené uzamčení úspěšné, stav se změní na Vzdálené uzamčení bylo úspěšné.
 
     Stav vzdáleného uzamčení se zobrazuje na třech místech:
 
     * Oblast oznámení na webu.
-    * Stránka Podrobnosti zařízení.
-    * Dlaždice zobrazující název zařízení v části stránky Moje zařízení.
+    * Stránka **Podrobnosti** zařízení.
+    * Dlaždice zobrazující název zařízení v části stránky **Moje zařízení**.
 
-    Pokud se zobrazí oznámení Vzdálené uzamčení se nezdařilo, počkejte několik minut a zkuste zařízení znovu zamknout. Po klepnutí na volbu pro další pokus se stav změní zpět na Vzdálené uzamčení čeká na vyřízení.
+> [!Note]
+> Pokud se zobrazí oznámení, že se vzdálené uzamčení nezdařilo, počkejte několik minut a zkuste zařízení znovu zamknout. Po zahájení nového pokusu se stav změní zpět na Vzdálené uzamčení čeká na vyřízení. Pokud se nový pokus nezdaří, budete se muset obrátit na správce IT, aby vám pomohl.
 
-    Pokud další pokus nefunguje, kontaktujte správce IT. Pokud najdete své zařízení a chcete ho odemknout po použití vzdáleného uzamčení, stačí zadat heslo.
+Pokud najdete své zařízení a chcete ho odemknout po použití vzdáleného uzamčení, stačí zadat heslo.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO1-->
 
 

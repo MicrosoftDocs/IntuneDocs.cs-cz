@@ -1,11 +1,11 @@
 ---
-title: "Registrace pomocí správce registrace zařízení | Microsoft Intune"
+title: "Registrace pomocí správce registrace zařízení | Dokumentace Microsoftu"
 description: "Účet správce registrace zařízení (DEM) umožňuje spravovat velké počty sdílených mobilních zařízení vlastněných společností z jediného uživatelského účtu."
 keywords: 
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 07/12/2016
+ms.date: 01/04/17
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,63 +14,72 @@ ms.assetid: a23abc61-69ed-44f1-9b71-b86aefc6ba03
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 83b89d06793f6f3934537408fb600b3b89afd35b
+ms.sourcegitcommit: b06bb501e71bae5225d451d9ee460213eee183de
+ms.openlocfilehash: 058212ff935f085d569b37298f146623d217ddbe
 
 
 ---
 
 
 # <a name="enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune"></a>Registrace firemních zařízení pomocí správce registrace zařízení v Microsoft Intune
-Organizace můžou pomocí Intune spravovat velké počty mobilních zařízení s jediným uživatelským účtem. Účet *správce registrace zařízení* je speciální účet Intune, který může registrovat až 1000 zařízení. Každé zaregistrované zařízení používá jednu licenci. Zařízení zaregistrovaná pomocí účtu správce registrace zařízení doporučujeme používat jako sdílená zařízení, nikoli jako osobní zařízení („BYOD“). Uživatelé například nebudou moci používat „nativní“ e-mailové aplikace. Licencování pro DEM je vázané na zařízení, ne na uživatele.
 
-Uživatelský účet správce registrace zařízení můžete například přiřadit manažerovi nebo vedoucímu obchodu, aby mohli provádět následující:
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
--   Zaregistrovat zařízení v Intune.
+Organizace můžou pomocí Intune spravovat velké počty mobilních zařízení s jediným uživatelským účtem. Účet *správce registrace zařízení* (DEM – Device Enrollment Manager) je speciální uživatelský účet, který může zaregistrovat až 1 000 zařízení. Do účtu DEM můžete přidat existující uživatele a udělit jim tak speciální možnosti DEM. Každé zaregistrované zařízení používá jednu licenci. Zařízení zaregistrovaná pomocí účtu správce registrace zařízení doporučujeme používat jako sdílená zařízení, nikoli jako osobní zařízení („BYOD“).  
 
+Abyste mohli uživatele přidat jako správce registrace zařízení, musí tito uživatelé existovat na portálu Azure Portal. Z důvodu optimálního zabezpečení by uživatel DEM neměl být současně i správcem Intune.
+
+## <a name="example-of-a-device-enrollment-manager-scenario"></a>Příklad scénáře využití správce registrace zařízení
+
+Restaurace chce pro své číšníky pořídit padesát tabletů POS a monitory na objednávky pro pracovníky kuchyně. Zaměstnanci nikdy nepotřebují přístup k datům společnosti a nepotřebují se přihlašovat jako uživatelé. Správce Intune vytvoří účet správce registrace zařízení a přidá vedoucího restaurace k účtu DEM, čímž mu v podstatě dá nadřízené možnosti DEM. Nadřízený nyní může zaregistrovat padesát zařízení pomocí přihlašovacích údajů DEM.
+
+Správci registrace zařízení můžou být jenom uživatelé v konzole Intune. Správce registrace zařízení nemůže být správcem služby Intune.
+
+Uživatel DEM může:
+
+-   Zaregistrovat v Intune až 1 000 zařízení.
 -   Přihlásit se k webu Portál společnosti a získat firemní aplikace.
+-   Konfigurovat přístup k datům společnosti tak, že na tablety nasadí aplikace specifické pro jednotlivé role.
 
--   Instalovat a odinstalovat software.
-
--   Konfigurovat přístup k datům společnosti.
-
-
-**Scénáře situací se správcem registrace zařízení:** Restaurace chce pro své číšníky pořídit tablety pro zadávání objednávek u stolů a pro pracovníky kuchyně monitory pro zobrazení objednávek. Zaměstnanci nikdy nepotřebují přístup k datům společnosti a nepotřebují se přihlašovat jako uživatelé. Správce Intune vytvoří účet správce registrace zařízení a pomocí tohoto účtu zaregistruje zařízení vlastněná společností. Správce taky může přihlašovací údaje správce registrace zařízení dát manažerovi restaurace, což mu umožní registrovat a spravovat zařízení.
-
-Správce nebo manažer může do zařízení restaurace nasadit aplikace pro konkrétní role. Správce taky může vybrat určité zařízení v konzole služby Intune a vyřadit ho ze správy mobilních zařízení pomocí konzoly pro správu.
+## <a name="limitations-of-devices-that-are-enrolled-with-a-dem-account"></a>Omezení zařízení zaregistrovaných pomocí účtu DEM
 
 Zařízení zaregistrovaná pomocí účtu správce registrace zařízení mají následující omezení:
-  - Neexistuje žádný konkrétní uživatel zařízení – proto neexistuje ani žádný přístup k e-mailům nebo datům společnosti. Sítě VPN však mohou aplikacím zařízení stále poskytovat přístup k datům.
+
+  - Neexistuje žádný konkrétní uživatel zařízení. Z tohoto důvodu neexistuje ani žádný přístup k e-mailům nebo datům společnosti. Sítě VPN však mohou aplikacím zařízení stále poskytovat přístup k datům.
+
   - Není možný podmíněný přístup, protože u podmíněného přístupu se jedná o scénáře pro konkrétní uživatele.
-  - Zařízení nejde resetovat ze služby Portál společnosti.
+
+  - Uživatel DEM nemůže přes Portál společnosti zrušit registraci zařízení zaregistrovaného pomocí účtu DEM. Tuto možnost má správce Intune, ale uživatel DEM nikoli.
+
   - V aplikaci nebo na webu Portál společnosti se zobrazí jenom místní zařízení.
-  - Nemůžou používat aplikace v rámci programu Apple VPP (Volume Purchase Program), protože ke správě těchto aplikací jsou vyžadovaná Apple ID jednotlivých uživatelů.
-  - (iOS) Nedají se taky zaregistrovat přes Apple Configurator ani Apple Device Enrollment Program (DEP), ale zařízení spravovaná programem DEP nebo Apple Configuratorem se dají zaregistrovat bez přidružení uživatele.
+ 
+  - Uživatelé nemůžou používat aplikace v rámci programu Apple VPP (Volume Purchase Program), protože ke správě těchto aplikací jsou vyžadovaná Apple ID jednotlivých uživatelů.
+ 
+  - (Pouze iOS) Pokud pomocí DEM zaregistrujete zařízení s iOSem, nemůžete k registraci zařízení využít Apple Configurator ani Program registrace zařízení Apple (DEP).
 
 > [!NOTE]
 > Pokud chcete nasadit aplikace společnosti na zařízení spravovaná správcem registrace zařízení, nasaďte aplikaci Portál společnosti jako **požadovanou instalaci** na uživatelský účet správce registrace zařízení.
 > Kvůli zvýšení výkonu se při zobrazení aplikace Portál společnosti v zařízení správce registrace zařízení zobrazuje pouze místní zařízení. Vzdálenou správu jiných zařízení správce registrace zařízení lze provádět jenom v konzole správce Intune.
 
-## <a name="create-device-enrollment-manager-accounts"></a>Vytvoření účtů správce registrace zařízení
-Účty správce registrace zařízení jsou uživatelské účty s oprávněním registrovat velká množství zařízení vlastněných společností. Správci registrace zařízení můžou být jenom uživatelé v konzole Intune.
 
-#### <a name="add-a-device-enrollment-manager-to-intune"></a>Přidání správce registrace zařízení do služby Intune
+## <a name="add-a-device-enrollment-manager"></a>Přidání správce registrace zařízení
 
-1.  Přejděte na [portál účtů Microsoft Intune](http://go.microsoft.com/fwlink/?LinkId=698854) a přihlaste se k účtu správce.
+1.  Zkontrolujte, že uživatel, kterého chcete přidat do účtu DEM, už existuje. Pokud potřebujete přidat uživatele, přihlaste se k [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) a postupujte podle pokynů uvedených v tématu [Přidání uživatelů na portál Office 365 jednotlivě nebo hromadně](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
 
-2.  Zvolte **Přidat uživatele**.
+2.  Přihlaste se ke [konzole pro správu Microsoft Intune](http://manage.microsoft.com) pomocí přihlašovacích údajů správce.
 
-3.  Ověřte, že je uvedený uživatelský účet, který bude správcem registrace zařízení. Pokud není, přidejte uživatele zvolením možnosti **Nový** a potom dokončením procesu **Přidat uživatele**. Každý uživatel, který přistupuje k službě, musí mít předplacenou licenci. Správce registrace zařízení nemůže být správcem služby Intune. Před použitím této funkce zkontrolujte, jestli nepotřebujete přidat další licence.
+3.  V navigačním podokně zvolte **Správce**, přejděte do části **Správa správců** a vyberte **Správce registrace zařízení**. Otevře se stránka **Správci registrace zařízení**.
 
-4.  Přihlaste se ke [konzole pro správu Microsoft Intune](http://manage.microsoft.com) pomocí přihlašovacích údajů správce.
+4.  Zvolte **Přidat**. Otevře se dialog **Přidat správce registrace zařízení** .
 
-5.  V navigačním podokně zvolte **Správce**, přejděte do části **Správa správců** a vyberte **Správce registrace zařízení**. Otevře se stránka **Správci registrace zařízení**.
+5.  Zadejte **ID uživatele** účtu Intune a zvolte **OK**. 
 
-6.  Zvolte **Přidat**. Otevře se dialog **Přidat správce registrace zařízení** .
+    Uživatel DEM teď může registrovat mobilní zařízení stejným postupem, jaký používá koncový uživatel ve scénáři BYOD na webu Portál společnosti. Koncový uživatel, který je správcem, může nainstalovat aplikaci Portál společnosti a zaregistrovat zařízení pomocí svých přihlašovacích údajů DEM až na 1000 zařízení. Postup registrace koncovým uživatelem pro jednotlivé platformy najdete v následujících tématech:
 
-7.  Zadejte **ID uživatele** účtu Intune a zvolte **OK**. Správce registrace zařízení nemůže být správcem služby Intune.
-
-8.  Správce registrace zařízení teď může registrovat mobilní zařízení stejným postupem, jaký používá koncový uživatel ve scénáři BYOD na webu Portál společnosti. Koncový uživatel, který je správcem, může nainstalovat aplikaci Portál společnosti a zaregistrovat zařízení pomocí svých přihlašovacích údajů DEM až na 1000 zařízení.
+  - [Registrace zařízení s iOSem v Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-ios)
+  - [Registrace zařízení s macOS do Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-macos)
+  - [Registrace zařízení s Androidem v Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-android)
+  - [Registrace zařízení s Windows v Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-windows)
 
 ## <a name="delete-a-device-enrollment-manager-from-intune"></a>Odstranění správce registrace zařízení ze služby Intune
 
@@ -96,6 +105,6 @@ Odstranění správce registrace zařízení nemá vliv na zaregistrovaná zař�
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

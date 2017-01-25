@@ -1,11 +1,11 @@
 ---
-title: "Omezení přístupu k Online Skypu pro firmy | Dokumentace Microsoftu"
+title: "Ochrana přístupu k Online Skypu pro firmy | Dokumentace Microsoftu"
 description: "Chraňte a řiďte přístup k Online Skypu pro firmy pomocí podmíněného přístupu."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 10/25/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,21 @@ ms.assetid: 1b2d7125-f63f-43cf-ac1e-94fbedf2a7e8
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 23199b84ca1acf202442e096c637f0dbad53f3e0
+ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
+ms.openlocfilehash: 37915fcfc0f10e65aa65d400422d72adc63513fa
 
 
 ---
 
-# <a name="restrict-access-to-skype-for-business-online-with-microsoft-intune"></a>Omezení přístupu ke službě Online Skype pro firmy pomocí Microsoft Intune
+# <a name="protect-access-to-skype-for-business-online-with-microsoft-intune"></a>Ochrana přístupu k Online Skypu pro firmy pomocí Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 K řízení přístupu k Online Skypu pro firmy můžete použít zásady podmíněného přístupu k **Online Skypu pro firmy**.
 Podmíněný přístup má dvě součásti:
 - Zásady dodržování předpisů zařízení, které zařízení musí dodržovat, aby mohlo být považované za vyhovující
 - Zásady podmíněného přístupu, kde můžete určit podmínky, které zařízení musí splňovat, abyste měli přístup ke službě.
-Další informace o tom, jak podmíněný přístup funguje, najdete v článku [Omezení přístupu k e-mailu a službám O365](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+Další informace o tom, jak podmíněný přístup funguje, najdete v článku [Ochrana přístupu k e-mailu a službám O365](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
 Když se cílový uživatel na svém zařízení pokusí použít službu Online Skype pro firmy Skype for Business Online, dojde k následujícímu vyhodnocení:
 
@@ -117,6 +120,6 @@ Vyberte libovolnou skupinu mobilních zařízení. Pak na kartě **Zařízení**
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

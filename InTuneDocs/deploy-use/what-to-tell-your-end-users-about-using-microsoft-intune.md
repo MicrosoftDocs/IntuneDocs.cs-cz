@@ -1,5 +1,5 @@
 ---
-title: "Materiály o prostředí Microsoft Intune pro koncové uživatele | Microsoft Intune"
+title: "Materiály o prostředí Microsoft Intune pro koncové uživatele | Dokumentace Microsoftu"
 description: "Podělte se o informace s koncovými uživateli, aby bylo nasazení Intune úspěšné."
 keywords: "koncoví uživatelé, uživatelé, komunikace"
 author: barlanmsft
@@ -14,13 +14,15 @@ ms.assetid: 48914533-f138-4dc0-8b93-4cea3ac61f7b
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 83436b7d8e554eef0cf48d0f07999f06bf811bbc
+ms.sourcegitcommit: 77f1af3a07e5a5758227c81010ce853906803b08
+ms.openlocfilehash: a822559a55ee495065eca7eef5ec645cf4522e4b
 
 
 ---
 
 # <a name="resources-about-the-end-user-experience-with-microsoft-intune"></a>Materiály o prostředí Microsoft Intune pro koncové uživatele
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Následující odkazy a informace vám pomůžou porozumět postupům, s jejichž pomocí budou koncoví uživatelé provádět různé úlohy v Intune.
 
@@ -35,7 +37,7 @@ Pomocí této [přizpůsobitelné šablony pro registraci koncových uživatelů
 Na následujících odkazech se můžete podívat na postupy, na které budou uživatelé odkázáni z aplikace nebo webu Portál společnosti. Tyto odkazy jsou rozdělené do sekcí věnovaných instalaci aplikace Portál společnosti a registraci do Intune, obecným úlohám, které uživatelé můžou provádět na svých zařízeních, a řešení problémů.
 
 - [Použití zařízení Android s Intune](/Intune/EndUser/using-your-android-device-with-intune)
-- [Použití zařízení s iOSem nebo macOS s Intune](/Intune/EndUser/using-your-ios-or-mac-os-x-device-with-intune)
+- [Použití zařízení s iOSem nebo macOS s Intune](/Intune/EndUser/using-your-iOS-or-macOS-device-with-intune)
 - [Použití zařízení Windows s Intune](/Intune/EndUser/using-your-windows-device-with-intune)
 - [Použití webu Portál společnosti Intune](/Intune/EndUser/using-the-intune-company-portal-website)
 
@@ -50,6 +52,6 @@ Pro pochopení, jak koncoví uživatelé získávají svoje aplikace, vyberte z 
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO1-->
 
 

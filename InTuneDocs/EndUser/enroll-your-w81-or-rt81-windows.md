@@ -1,25 +1,26 @@
 ---
-title: "Registrace zařízení s Windows 8.1 nebo Windows RT 8.1 | Microsoft Intune"
-description: "Popisuje registraci zařízení s Windows 8.1 nebo Windows RT 8.1 v Intune."
+title: "Registrace zařízení s Windows 8.1 nebo Windows RT 8.1 | Dokumentace Microsoftu"
+description: "Přečtěte si, jak si v Intune můžete zaregistrovat zařízení s Windows 8.1 nebo Windows RT 8.1."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 28984f26-1070-4f7a-877c-669a59375c0c
+searchScope:
+- Company Portal
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7eefcefa5e1cd0f789c77bf020c256e449099273
-ms.openlocfilehash: 53e9313bc85c149960fa985b655a22065b55b8a0
+ms.sourcegitcommit: a1e346047fb029689c0c9c68073b89b9bac20530
+ms.openlocfilehash: 70a7f590ba19cc672086671edfdaa5faf5f3e568
 
 
 ---
-
 
 # <a name="enroll-your-windows-81-or-windows-rt-81-device-in-intune"></a>Registrace zařízení s Windows 8.1 nebo Windows RT 8.1 v Intune
 
@@ -66,6 +67,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní 
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

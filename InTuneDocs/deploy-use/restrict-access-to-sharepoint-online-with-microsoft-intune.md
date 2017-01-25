@@ -1,11 +1,11 @@
 ---
-title: "Omezení přístupu k SharePointu Online | Dokumentace Microsoftu"
+title: "Ochrana přístupu k SharePointu Online | Dokumentace Microsoftu"
 description: "Chraňte a řiďte přístup k podnikovým datům na SharePointu Online pomocí podmíněného přístupu."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 11/14/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,21 @@ ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 6b900f2bf41ea84088f8453f59b71136e013a884
+ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
+ms.openlocfilehash: 2efac12d3564932ebcb3cbe4165fbc7ad4595172
 
 
 ---
 
-# <a name="restrict-access-to-sharepoint-online-with-microsoft-intune"></a>Omezení přístupu ke službě SharePoint Online pomocí Microsoft Intune
+# <a name="protect-access-to-sharepoint-online-with-microsoft-intune"></a>Ochrana přístupu k SharePointu Online pomocí Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Pro řízení přístupu k souborům umístěným v SharePointu Online použijte podmíněný přístup [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)].
 Podmíněný přístup má dvě součásti:
 - Zásady dodržování předpisů zařízení, které zařízení musí dodržovat, aby mohlo být považované za vyhovující
 - Zásady podmíněného přístupu, kde můžete určit podmínky, které zařízení musí splňovat pro přístup ke službě
-Další informace o tom, jak podmíněný přístup funguje, najdete v tématu o [omezení přístupu k e-mailu, O365 a dalším službám](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+Další informace o tom, jak podmíněný přístup funguje, najdete v tématu [Ochrana přístupu k e-mailu, O365 a dalším službám](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
 Nasadíte zásady dodržování předpisů a podmíněného přístupu pro uživatele. Dodržování zásad se kontroluje u každého zařízení, které uživatel používá pro přístup ke službám.
 
@@ -66,7 +69,7 @@ Podporované systémy:
 - Android 4.0 nebo novější, Samsung Knox Standard 4.0 nebo novější
 - Windows Phone 8.1 nebo novější
 
-Můžete omezit přístup k SharePointu Online, když k němu zařízení s **iOSem** a **Androidem** přistupují z prohlížeče. Přístup je povolený jenom z podporovaných prohlížečů na vyhovujících zařízeních:
+Můžete chránit přístup k SharePointu Online, když k němu zařízení s **iOSem** a **Androidem** přistupují z prohlížeče. Přístup je povolený jenom z podporovaných prohlížečů na vyhovujících zařízeních:
 * Safari (iOS)
 * Chrome (Android)
 * Intune Managed Browser (iOS a Android 5.0 nebo novější)
@@ -191,11 +194,11 @@ Vyberte libovolnou skupinu mobilních zařízení. Pak na kartě **Zařízení**
 
 -   **Zařízení zaregistrovaná v AAD a vyhovující předpisům**: Tato zařízení mají k SharePointu Online přístup.
 
-### <a name="see-also"></a>Související témata
-[Omezení přístupu k e-mailu a službám O365 pomocí Microsoft Intune](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
+### <a name="see-also"></a>Viz taky
+[Ochrana přístupu k e-mailu a službám O365 pomocí Microsoft Intune](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

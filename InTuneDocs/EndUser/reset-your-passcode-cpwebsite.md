@@ -1,33 +1,34 @@
 ---
-title: "Resetování hesla zařízení z webu Portál společnosti | Microsoft Intune"
+title: "Resetování hesla zařízení z webu Portál společnosti | Dokumentace Microsoftu"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4fa3255b-9d1e-42d5-bd8b-70963dcf2d86
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: b3a3b7c2a983776f79ffa8562e130bb11e714e29
+ms.sourcegitcommit: beba9603ffb43d025132d2d86f0996ff505a9019
+ms.openlocfilehash: f9d66fe07173245ff831f204dd120598ad7564db
 
 
 ---
 
-
-# <a name="reset-your-device-passcode-from-the-company-portal-website"></a>Resetování hesla zařízení z webu Portál společnosti
+# <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Resetování hesla zařízení z webu Portál společnosti
 
 Pokud ztratíte kód PIN nebo heslo zařízení, které jste zaregistrovali v Intune, můžete použít [web Portál společnosti](http://portal.manage.microsoft.com) k jeho resetování. Web Portál společnosti se používá ke správě počítačů a zařízení, které jste zaregistrovali v Intune, a k plnění většinou stejných úkolů jako v aplikaci Portál společnosti.
 
 > [!NOTE]
-> Tlačítko **Resetovat heslo** se na webu Portál společnosti nemusí zobrazit – záleží na tom, jak správce IT nakonfiguroval Intune. Resetování hesla není podporované na zařízeních s Windows 8.1.
+> Je možné, že na webu Portál společnosti neuvidíte tlačítko **Resetovat heslo**. V takovém případě se budete muset obrátit na správce IT, který vám poskytne podporu prostřednictvím webu Portál společnosti.
 
 Resetování hesla:
 
@@ -47,15 +48,14 @@ Resetování hesla:
 
     V tabulce najdete informace o tom, jak **resetování hesla** funguje na vašem zařízení.
 
-    |Platforma|Support|
+    |Typ zařízení|Co se stane při resetování|
     |------------|-----------|
-    |Android|Vytvoří dočasné alfanumerické heslo.|
-    |iOS|Odebere heslo ze zařízení, ale nevytvoří dočasné heslo. Pokud používáte Touch ID, musíte ho v zařízení znovu nainstalovat, protože se při resetování hesla odebere.|
-    |Windows 10 (pouze mobilní zařízení)|Vytvoří dočasné alfanumerické heslo. Windows Hello je podporované.|
-    |Windows Phone 8.1|Vytvoří dočasné číselné heslo.|
-    Po odemčení zařízení můžete nastavit nové heslo pomocí nabídky **Nastavení** vašeho zařízení.
+    |Android|Odebere existující heslo a vytvoří dočasné heslo obsahující písmena i číslice.|
+    |iOS|Odebere existující heslo a nevytvoří dočasné heslo. Pokud pro otevírání zařízení nebo nákupy používáte snímač otisku prstu Touch ID, budete si ho muset nastavit znovu.|
+    |Windows 10 Mobile|Odebere existující heslo a vytvoří dočasné heslo obsahující písmena i číslice. Pokud se přihlašujete pomocí rozpoznávání obličeje Windows Hello, bude se tato technologie i nadále podporovat.|
+    |Windows Phone 8.1|Odebere existující heslo a vytvoří dočasné heslo obsahující číslice.|
 
-5.  Odemkněte zařízení a nastavte nové heslo nebo změňte dočasné heslo pomocí nabídky **Nastavení** vašeho zařízení.
+    5.  Odemkněte zařízení a nastavte nové heslo, nebo změňte dočasné heslo pomocí nabídky **Nastavení** v zařízení.
 
     Pokud chcete zobrazit potvrzení, že bylo heslo úspěšně resetované, klikněte na příznak oznámení v pravé horní části webu Portál společnosti.
 
@@ -63,6 +63,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaj
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

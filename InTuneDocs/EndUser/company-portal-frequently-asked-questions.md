@@ -1,22 +1,24 @@
 ---
-title: "Co je to portál společnosti? | Microsoft Intune"
+title: "Co je to portál společnosti? | Dokumentace Microsoftu"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 12/06/2016
+ms.date: 01/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 523caa6b-d792-4bb6-bddb-24b2479932d8
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3891d0389df3526ea328fc2952e3d181b1e766c0
-ms.openlocfilehash: a0424ada754a210fb34acd49cf47d1c457ed86af
+ms.sourcegitcommit: d2ed7b2e713f5efd4161eb8015ab43c8f97a017b
+ms.openlocfilehash: fa9c3fd2c995615e9aa9a16f3bd834b0c145b6d0
 
 
 ---
@@ -24,7 +26,7 @@ ms.openlocfilehash: a0424ada754a210fb34acd49cf47d1c457ed86af
 # <a name="about-the-company-portal"></a>Informace o Portálu společnosti
 
 ## <a name="what-is-the-company-portal-and-what-can-you-do-with-it"></a>Co je Portál společnosti a k čemu slouží?
-Portál společnosti Microsoft Intune vám zajišťuje přístup k datům a aplikacím vaší firmy nebo školy. Můžete ho získat jedním ze dvou způsobů:
+Portál společnosti vám zajišťuje přístup k datům a aplikacím vaší firmy nebo školy. Můžete ho získat jedním ze dvou způsobů:
 
 - Nainstalováním aplikace Portál společnosti do zařízení. Aplikaci Portál společnosti získáte zpravidla v obchodě s aplikacemi pro vaše zařízení, může vám ji ale také nainstalovat správce IT.
 - Zobrazením [webu Portál společnosti](http://portal.manage.microsoft.com), který pro vás správce IT nastavil.
@@ -41,10 +43,10 @@ Mezi aplikací Portál společnosti a webem Portál společnosti jsou drobné ro
 Pokud chcete zjistit, co můžete dělat pomocí webu Portál společnosti v porovnání s aplikací Portál společnosti na vašem konkrétním zařízení, zvolte jeden z následujících odkazů:
 
 > [!div class="op_single_selector"]
-- [Android](using-your-android-device-with-intune.md)
-- [iOS a macOS](using-your-ios-or-mac-os-x-device-with-intune.md)
-- [Windows](using-your-windows-device-with-intune.md)
-- [Web Portál společnosti](using-the-intune-company-portal-website.md)
+- [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
+- [Použití zařízení s iOSem a macOS s Intune](using-your-ios-or-macOS-device-with-intune.md)
+- [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
+- [Použití webu Portál společnosti](using-the-intune-company-portal-website.md)
 
 ## <a name="what-happens-when-you-add-a-computer-or-device-to-the-company-portal"></a>Co se stane, když přidáte počítač nebo zařízení na Portál společnosti?
 Když na Portál společnosti přidáte počítač nebo zařízení, může se nainstalovat určitý software nebo stáhnout aplikace (podle zařízení).  Udělujete tím také správci IT oprávnění ke správě vašich zařízení, aby bylo možné lépe chránit informace společnosti na daném zařízení.
@@ -58,9 +60,9 @@ Pokud vás zajímá, co váš správce IT uvidí nebo naopak neuvidí na vašem 
 
 ## <a name="what-kind-of-computers-or-devices-can-you-add-to-the-company-portal"></a>Jaký typ počítačů nebo zařízení můžete přidávat na Portál společnosti?
 
--   iPhony, iPady a zařízení s macOS
+-   Zařízení Apple, které používají iOS (iPhone, iPad) a macOS (iMac MacBook)
 
--   Mobilní zařízení s Androidem
+-   Zařízení se systémem Android
 
 -   Zařízení s Windows
     -   Windows 10 Mobile
@@ -96,6 +98,6 @@ Pokud potřebujete pomoc, obraťte se na správce IT. Kontaktní údaje najdete 
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO1-->
 
 

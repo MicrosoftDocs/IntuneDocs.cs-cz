@@ -5,38 +5,40 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 74c51f7b-7bd8-45cf-99bd-02d1972267cb
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: df92e0945c0ed9387eda14c145b28c604453cb86
+ms.sourcegitcommit: a1e346047fb029689c0c9c68073b89b9bac20530
+ms.openlocfilehash: 27bb2c0834d07225756ea9133e557a930290dcf5
 
 
 ---
 
-# <a name="existing-company-email-account-found"></a>Našel se existující e-mailový účet společnosti
+# <a name="an-existing-company-email-account-was-found"></a>Našel se existující e-mailový účet společnosti
 
-Už máte e-mailový účet společnosti. Pokud se k němu chcete dál připojovat, použijte následující postup, aby ho mohl správce IT správně nastavit a spravovat:
+U své organizace nebo společnosti už máte zřízený e-mailový účet a teď chcete mít k tomuto účtu přístup i na svém mobilním zařízení. Správce IT potřebuje vaši pomoc, aby mohl zabezpečit přístup k e-mailu po celou cestu od odesílatele až na vaše zařízení. Váš současný e-mail možná funguje, ale následující postup vám pomůže zabezpečit informace ještě lépe.
 
-1.  V nabídce **Nastavení** na vašem zařízení odeberte připojení, které jste dříve nastavili pro e-mail společnosti.
+1.  Přejděte do **Nastavení** zařízení a odeberte připojení, které jste si dříve nastavili u firemního e-mailu.
 
-    Na zařízení s iOSem například klepněte na **Nastavení** &gt; **Pošta, kontakty, kalendář**. Vyberte pracovní e-mailový účet a klikněte na **Odstranit**.
+    Na zařízení s iOSem například klepněte na **Nastavení** > **Pošta** > **Účty**. Vyberte pracovní e-mailový účet a potom klepněte na **Odstranit**.
 
-2.  Otevřete na svém zařízení aplikaci Portál společnosti a klepněte na **Zkontrolovat dodržování předpisů**.
+2.  Ukončete **Nastavení** a na zařízení otevřete aplikaci Portál společnosti. Potom klepněte na **Zkontrolovat dodržování zásad**.
 
 3.  Po chvilce se pro vaše zařízení automaticky použije nové nastavení e-mailu.
 
-Pokud se po chvíli nezobrazí nové nastavení e-mailu, kontaktujte správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 
