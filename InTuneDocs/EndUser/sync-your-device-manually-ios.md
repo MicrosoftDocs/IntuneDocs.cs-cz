@@ -5,18 +5,20 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 01/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 2780101b-f703-4b78-9d33-f68490b9382d
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1df8924bd7f94040db28f0c26f0aa29bb7620a0a
-ms.openlocfilehash: 6d57eae82b84b4cd64e0f22829d02fc02bbd9663
+ms.sourcegitcommit: 30695011befb8c590bbd90656843e38638759443
+ms.openlocfilehash: 148660008fbe0eeea3ee9f7d9490443f60abbf0c
 
 
 ---
@@ -24,24 +26,24 @@ ms.openlocfilehash: 6d57eae82b84b4cd64e0f22829d02fc02bbd9663
 
 # <a name="sync-your-ios-device-manually"></a>Ruční synchronizace zařízení s iOSem
 
-Pokud instalace aplikace trvá moc dlouho, můžete zkusit zařízení synchronizovat ručně. Ruční synchronizace může instalaci urychlit. Funkce synchronizace se vztahuje jenom na iOS.
+Někdy může stažení aplikace z Portálu společnosti trvat příliš dlouho. V takovém případě můžete zkusit zařízení synchronizovat ručně. To znamená, že zařízení dáte pokyn, aby se pokusilo znovu získat informace, s jejichž stažením má problém.
 
-1. Otevřete aplikaci Portál společnosti pro iOS.
+1. Otevřete aplikaci Portál společnosti.
 
-2. V sekci **Moje zařízení** zvolte zařízení, které právě používáte. Jedná se o dlaždici zařízení nejvíc vlevo, která je zaškrtnutá.
+2. V sekci **Moje zařízení** zvolte zařízení, které právě používáte. Jedná se o dlaždici zařízení úplně vlevo – je na ní také uvedena značka zaškrtnutí.
 
     ![Obrazovka zařízení se sekcí Moje zařízení](./media/ios-sync-1-comp-portal-apps.png)
 
-3.  Zvolte tlačítko **Synchronizovat** v pravém dolním rohu obrazovky.
+3. V pravém dolním rohu obrazovky klepněte na tlačítko **Synchronizovat**.
 
     ![Podrobnosti zařízení s tlačítkem Synchronizovat](./media/ios-sync-2-sync-button.png)
 
-Do dokončení synchronizace se na obrazovce zobrazí točící se kruh.
+Na obrazovce se objeví pruh, který se bude postupně načítat, dokud se synchronizace nedokončí.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

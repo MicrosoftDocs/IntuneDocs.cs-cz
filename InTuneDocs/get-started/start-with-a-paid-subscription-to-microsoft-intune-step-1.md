@@ -14,14 +14,17 @@ ms.assetid: 0f3ce07a-b718-42a9-bace-f99a8b8abd94
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 047a2fb0ad286ece183116a70466fc259b9a0dea
+ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
+ms.openlocfilehash: 029ef5aedc8177c13fa1ac89cb00b961a04e88d5
 
 
 ---
 
 
 # <a name="sign-up-or-sign-in-to-intune"></a>Registrace nebo přihlášení k Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Než se budete moci zaregistrovat nebo přihlásit do Intune, je třeba zjistit, jestli vaše organizace již nemá pracovní nebo školní účet Microsoft Online Services nebo jestli neuzavřela s Microsoftem smlouvu Enterprise nebo podobnou multilicenční smlouvu. Pracovní nebo školní účet získáte při podpisu multilicenční smlouvy s Microsoftem nebo při registraci k jiným cloudovým službám Microsoftu, jako je například Office 365.
 
 Pokud už máte pracovní nebo školní účet, stačí se pouze s použitím tohoto účtu **přihlásit** a přidat Intune do vašeho existujícího předplatného. Jinak se budete muset **zaregistrovat** a vytvořit nový účet, který budete používat pro správu Intune ve vaší organizaci.
@@ -50,6 +53,6 @@ Po dokončení procesu registrace budete přesměrováni na stránku, na které 
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 

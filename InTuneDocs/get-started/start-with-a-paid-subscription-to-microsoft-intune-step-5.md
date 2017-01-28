@@ -1,6 +1,6 @@
 ---
 title: "Vytvoření skupin pro uspořádání uživatelů a zařízení | Dokumentace Microsoftu"
-description: "Vytvořte uživatele a skupiny pro předplatné Intune."
+description: "Vytvoření uživatelů a skupin pro předplatné Intune"
 keywords: 
 author: nathbarn
 ms.author: nathbarn
@@ -14,14 +14,17 @@ ms.assetid: 5fdf98c8-fe67-4d7a-9837-ed1234348014
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 1587ffbc85470624e53983278b7a6d00b6dc8a51
+ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
+ms.openlocfilehash: 446156265047994f0a15890d7699991d032c0bd5
 
 
 ---
 
 
 # <a name="create-groups-to-organize-users-and-devices"></a>Vytvoření skupiny pro uspořádání uživatelů a zařízení
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Skupiny v Intune poskytují flexibilitu pro správu zařízení a uživatelů. Můžete nastavit skupiny podle potřeb vaší organizace (třeba podle zeměpisné polohy, oddělení nebo vlastností hardwaru) a použít je k provádění široké škály úloh správy od nasazení zásad pro víc uživatelů až po nasazení aplikací na skupinu zařízení.
 
 ## <a name="group-management-moving-to-azure-ad"></a>Přesunutí správy služeb do Azure AD
@@ -84,6 +87,6 @@ Nově vytvořenou skupinu najdete v seznamu **Skupiny** v pracovním prostoru **
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 

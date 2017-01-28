@@ -1,6 +1,6 @@
 ---
 title: "Řešení potíží s aplikací Lookout Integration | Dokumentace Microsoftu"
-description: "Toto téma popisuje řešení nejčastějších potíží s aplikací Lookout Integration"
+description: "Toto téma popisuje řešení nejčastějších potíží s aplikací Lookout Integration."
 keywords: 
 author: NathBarn
 ms.author: nathbarn
@@ -14,13 +14,16 @@ ms.assetid: bbe0b5f4-b8bc-49f3-85a9-51fb2f226fca
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 80e96003c584c67cb6b0289a7e2ed1ff3a833c2c
-ms.openlocfilehash: 076fbc5e2c73a7c6d5a17130f477a840c3c4ed19
+ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
+ms.openlocfilehash: ed4d828b19620f421461228e04bda7b7be799444
 
 
 ---
 
 # <a name="troubleshoot-lookout-integration-with-intune"></a>Řešení potíží s aplikací Lookout Integration pomocí služby Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Toto téma popisuje některé z nejčastějších problémů, na které můžete narazit při nastavení ochrany před mobilními útoky (MTP) Lookout.
 
 **Chyby při přihlášení**
@@ -87,6 +90,6 @@ Pokud je nový uživatel v Lookout MTP členem skupiny pro registraci, zobrazí 
 
 
 
-<!--HONumber=Dec16_HO4-->
+<!--HONumber=Jan17_HO2-->
 
 

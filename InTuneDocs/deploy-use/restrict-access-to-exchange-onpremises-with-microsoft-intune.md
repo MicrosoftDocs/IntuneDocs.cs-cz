@@ -1,11 +1,11 @@
 ---
-title: "Omezení přístupu k e-mailu v místním systému Exchange | Dokumentace Microsoftu"
+title: "Ochrana přístupu k e-mailu na místním Exchangi | Dokumentace Microsoftu"
 description: "Chraňte a kontrolujte přístup k podnikovým e-mailům v místním systému Exchange pomocí podmíněného přístupu."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 10/12/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,20 +14,22 @@ ms.assetid: a55071f5-101e-4829-908d-07d3414011fc
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 51e06bafef761eaf06d35343b459262524ad9168
-ms.openlocfilehash: c090d4bbc539d4174deee139e51242bae94feeb3
+ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
+ms.openlocfilehash: 24d000f650cafffc0c998ef80ba52bd06b56afe2
 
 
 ---
 
-# <a name="restrict-email-access-to-exchange-on-premises-and-legacy-exchange-online-dedicated-with-intune"></a>Omezení přístupu k e-mailu v místním systému Exchange a starším vyhrazeném prostředí Exchange Online v Microsoft Intune
+# <a name="protect-email-access-to-exchange-on-premises-and-legacy-exchange-online-dedicated-with-intune"></a>Ochrana přístupu k e-mailu na místním Exchangi a starším Exchangi Online Dedicated v Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 > [!NOTE]
-> Pokud máte prostředí Exchange Online Dedicated a potřebujete zjistit, jestli má novou, nebo starší verzi konfigurace, obraťte se na správce svého účtu.
+> Pokud máte vyhrazené prostředí Exchange Online a potřebujete zjistit, jestli má novou, nebo starší verzi konfigurace, obraťte se na správce svého účtu.
 
 
 Pokud chcete řídit přístup k e-mailům v místním systému Exchange nebo ve starším prostředí Exchange Online Dedicated, můžete nakonfigurovat podmíněný přístup k místnímu systému Exchange pomocí Microsoft Intune.
-Další informace o tom, jak podmíněný přístup funguje, najdete v článku [Omezení přístupu k e-mailu a službám O365]( restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+Další informace o tom, jak podmíněný přístup funguje, najdete v článku [Ochrana přístupu k e-mailu a službám O365](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
 **Před tím**, než nakonfigurujete podmíněný přístup, ověřte, jestli jsou splněné tyto podmínky:
 
@@ -125,15 +127,15 @@ Podporovaná možnost:
 
 -   Pokud uživatel zruší registraci ve službě [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], může trvat jednu až tři hodiny, než se zařízení zablokuje.
 
-**Pokud se chcete podívat na nějaké ukázkové scénáře konfigurace zásad podmíněného přístupu, kterými se dá přístup pro zařízení omezit, prohlédněte si [Ukázkové scénáře omezení přístupu k e-mailu](restrict-email-access-example-scenarios.md).**
+**Pokud se chcete podívat na nějaké ukázkové scénáře konfigurace zásad podmíněného přístupu, kterými se dá přístup pro zařízení chránit, prohlédněte si [Ukázkové scénáře ochrany přístupu k e-mailu](restrict-email-access-example-scenarios.md).**
 
 ## <a name="next-steps"></a>Další kroky
--   [Omezení přístupu k SharePointu Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
+-   [Ochrana přístupu k SharePointu Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 
--   [Omezení přístupu k Online Skypu pro firmy](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
+-   [Ochrana přístupu k Online Skypu pro firmy](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 

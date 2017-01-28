@@ -14,13 +14,15 @@ ms.assetid: 8477a2f1-2e1d-4d42-8bcb-e1181cc900bb
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6b83d06ecbe6e202bf022444c288e0866b3507c6
-ms.openlocfilehash: fc6a729ecd51adba2581c5b2ca4b3665970d4563
+ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
+ms.openlocfilehash: 517d2b4675f2e0fbaf84f22f828a35bac2ae8497
 
 
 ---
 
 # <a name="set-up-your-subscription-for-lookout-device-threat-protection"></a>Nastavení předplatného služby Lookout pro ochranu zařízení před hrozbami
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Při nastavení služby Lookout pro ochranu zařízení před hrozbami je potřeba provést tyto kroky:
 
@@ -62,7 +64,7 @@ V následujícím postupu se dozvíte, jak získat informace, které je třeba s
 
   ![snímek obrazovky zobrazující stránku vlastností se zvýrazněným polem s ID skupiny](../media/mtp/aad_group_object_id.png)
 
-4. Poté, co tyto informace shromáždíte, kontaktujte podporu služby Lookout (e-mail: enterprisesupport@lookout.com). Podpora služby Lookout bude při zprovoznění vašeho předplatného a vytvoření účtu Lookout Enterprise používat váš primární kontakt (pro veškerou potřebnou komunikaci) na základě poskytnutých informací.
+4. Jakmile tyto informace získáte, obraťte se na podporu Lookout (e-mail: enterprisesupport@lookout.com). Podpora Lookout bude při zprovoznění vašeho předplatného a vytvoření účtu Lookout Enterprise používat váš primární kontakt (pro veškerou potřebnou komunikaci) na základě poskytnutých informací.
 
 ## <a name="configure-your-subscription"></a>Konfigurace předplatného
 1. Poté, co podpora služby Lookout vytvoří váš účet Lookout Enterprise, se na adresu primárního kontaktu vaší firmy odešle e-mail s odkazem na přihlašovací stránku: https://aad.lookout.com/les?action=consent.
@@ -137,6 +139,6 @@ Po dokončení nastavení začne ochrana zařízení před internetovými útoky
 
 
 
-<!--HONumber=Dec16_HO4-->
+<!--HONumber=Jan17_HO2-->
 
 

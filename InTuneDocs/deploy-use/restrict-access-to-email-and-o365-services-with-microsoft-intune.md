@@ -1,11 +1,11 @@
 ---
-title: "Omezení přístupu k e-mailu a službám Office 365 | Microsoft Intune"
+title: "Ochrana přístupu k e-mailu a službám Office 365 | Dokumentace Microsoftu"
 description: "Toto téma popisuje, jak můžete pomocí podmíněného přístupu povolit přístup k podnikovému e-mailu, podnikovým datům na SharePointu Online a k dalším službám jenom kompatibilním zařízením."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 11/14/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,16 +14,19 @@ ms.assetid: c564d292-b83b-440d-bf08-3f5b299b7a5e
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: 5665ca431eb186d4378953b7047228e07ae9dc60
+ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
+ms.openlocfilehash: 911c97a724c28b97bb2bc6e236532e4e0d89c7b1
 
 
 ---
 
-# <a name="restrict-access-to-email-office-365-and-other-services-with-microsoft-intune"></a>Omezení přístupu k e-mailu, Office 365 a dalším službám pomocí Microsoft Intune
-Pomocí podmíněného přístupu v Intune můžete omezit přístup k podnikovému e-mailu, k Office 365 a k dalším službám. Funkce podmíněného přístupu v Intune umožňuje zajistit, aby byl přístup k podnikovému e-mailu a službám Office 365 omezen na zařízení, která vyhovují nastaveným pravidlům.
+# <a name="protect-access-to-email-office-365-and-other-services-with-microsoft-intune"></a>Ochrana přístupu k e-mailu, Office 365 a dalším službám pomocí Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
+Pomocí řešení pro podmíněný přístup Enterprise Mobility + Security (EMS) můžete chránit přístup k podnikovému e-mailu, službám Office 365, jako jsou **místní Exchange**, **Exchange Online**, **Exchange Online Dedicated**, **SharePoint Online** nebo **Online Skype pro firmy**, a k dalším službám. Tato funkce umožňuje zajistit, aby se přístup k podnikovému e-mailu a službám Office 365 omezil na zařízení vyhovující pravidlům podmíněného přístupu, která jste nastavili v konzole správce služby Intune nebo na portálu Azure Classic.
 ## <a name="how-does-conditional-access-work"></a>Jak podmíněný přístup funguje?
-K vyhodnocení, jestli zařízení vyhovuje, můžete použít nastavení zásady dodržování předpisů. Zásada podmíněného přístupu používá vyhodnocení k omezení nebo povolení přístupu ke konkrétní službě. Pokud zásadu podmíněného přístupu použijete v kombinaci se zásadou dodržování předpisů, budou mít přístup ke službě povolen jenom ta zařízení, která vyhovují. Zásada dodržování předpisů a zásada podmíněného přístupu se nasadí pro uživatele. Jakékoli zařízení, které uživatel používá pro přístup ke službám, se kontroluje na dodržování předpisů se zásadami.
+K vyhodnocení, jestli zařízení vyhovuje, můžete použít nastavení zásady dodržování předpisů. Zásada podmíněného přístupu používá vyhodnocení k omezení nebo povolení přístupu ke konkrétní službě. Když zásady podmíněného přístupu použijete v kombinaci se zásadami dodržování předpisů pro zařízení, povolí se přístup ke službě jenom vyhovujícím zařízením. Zásada dodržování předpisů a zásada podmíněného přístupu se nasadí pro uživatele. Jakékoli zařízení, které uživatel používá pro přístup ke službám, se kontroluje na dodržování předpisů se zásadami.
 
 Nezapomeňte, že uživatel, který zařízení používá, musí mít nasazenou zásadu dodržování předpisů, aby se vyhodnocovalo, jestli zařízení vyhovuje.
 Pokud nejsou pro uživatele nasazené žádné zásady dodržování předpisů, pak se zařízení považuje za vyhovující a žádná omezení přístupu se neuplatní.
@@ -34,14 +37,27 @@ Obvyklý průběh podmíněného přístupu:
 
 ![Diagram znázorňující rozhodovací body, které určují, jestli má mít zařízení přístup ke službě povolený, nebo blokovaný](../media/ConditionalAccess4.png)
 
-## <a name="how-to-configure-conditional-access"></a>Postup konfigurace podmíněného přístupu
-Pro správu přístupu k **místnímu systému Microsoft Exchange**, **Exchange Online**, **Exchange Online Dedicated**, **SharePointu Online** a **Online Skypu pro firmy** použijte podmíněný přístup.
+## <a name="setup-considerations"></a>Co je třeba zvážit při nastavení
 
-Pokud chcete nastavit podmíněný přístup, nakonfigurujte pro zařízení zásadu dodržování předpisů a zásadu podmíněného přístupu.
+### <a name="licensing"></a>Správa licencí
 
-Zásada dodržování předpisů zahrnuje nastavení, jako je heslo, šifrování a to, jestli má zařízení jailbreak. Zařízení musí tyto pravidla splňovat, aby mohlo být považované za vyhovující.
+Microsoft Intune a Azure Active Directory (Azure AD) Premium hladce spolupracují a poskytují několik úrovní kontroly prostřednictvím podmíněného přístupu EMS. Pokud chcete nasadit zásady podmíněného přístupu v Intune, je nutné mít licenci pro oba produkty.
 
-Můžete nastavit zásadu podmíněného přístupu, abyste omezili přístup, na základě těchto položek:
+**Licence Azure AD Premium** lze zakoupit jako samostatnou službu nebo (společně s Intune) v rámci smlouvy na řešení Enterprise. Pokud jste nasadili zásady podmíněného přístupu v Intune, ujistěte se, jestli máte správné **licence pro EMS** nebo Azure AD Premium.
+
+- Další informace najdete na [stránce s cenami služby Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) nebo na [stránce s cenami služby Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
+
+Dále ověřte, jestli uživatelé, kteří mají zásady podmíněného přístupu používat, mají [přiřazené licence Azure AD Premium nebo EMS](/Intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4.md).
+
+### <a name="device-compliance-settings"></a>Nastavení dodržování předpisů pro zařízení
+
+Pokud chcete nastavit podmíněný přístup, nakonfigurujte pro zařízení zásadu dodržování předpisů a zásadu podmíněného přístupu. Zásada dodržování předpisů zahrnuje nastavení, jako je heslo, šifrování a to, jestli má zařízení jailbreak. Zařízení musí tyto pravidla splňovat, aby mohlo být považované za vyhovující.
+
+- Přečtěte si další informace o [zásadách dodržování předpisů pro zařízení a jejich funkci](introduction-to-device-compliance-policies-in-microsoft-intune.md).
+
+### <a name="conditional-access-policy"></a>Zásady podmíněného přístupu
+
+Můžete nastavit zásadu podmíněného přístupu, abyste chránili přístup, na základě těchto položek:
 - Stav dodržování předpisů pro zařízení
 - Platforma spuštěná v zařízení
 - Typ aplikací, které přistupují ke službám
@@ -50,11 +66,11 @@ Na rozdíl od jiných zásad služby Intune se zásady podmíněného přístupu
 
 
 ## <a name="next-steps"></a>Další kroky
-1. [Přečtěte si další informace o zásadě dodržování předpisů pro zařízení a její funkci](introduction-to-device-compliance-policies-in-microsoft-intune.md).
 
-2. [Vytvořte zásadu dodržování předpisů](create-a-device-compliance-policy-in-microsoft-intune.md).
 
-2.  Vytvořte zásadu podmíněného přístupu pro jednu z následujících možností:
+2. [Vytvořte zásady dodržování předpisů pro zařízení](create-a-device-compliance-policy-in-microsoft-intune.md).
+
+2.  Vytvořte zásady podmíněného přístupu pro jednu z následujících cloudových služeb nebo produktů Microsoftu:
 > [!div class="op_single_selector"]
   - [Vytvoření zásady podmíněného přístupu pro Exchange Online](restrict-access-to-exchange-online-with-microsoft-intune.md)
   - [Vytvoření zásady podmíněného přístupu pro místní Exchange](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
@@ -66,6 +82,6 @@ Na rozdíl od jiných zásad služby Intune se zásady podmíněného přístupu
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 

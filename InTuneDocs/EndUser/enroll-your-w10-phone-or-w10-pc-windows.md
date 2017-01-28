@@ -5,17 +5,19 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/14/2016
+ms.date: 01/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 36250832-c6fd-4e8d-b681-de735023ebc3
-ms.reviewer: priyar
+searchScope:
+- Company Portal
+ms.reviewer: jieyan
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
-ms.openlocfilehash: 8d1644c5a52d728aecd095979fec130cfa8a86f2
+ms.sourcegitcommit: 81ee6143d53ca08f03dfd3555b118f77319ccf2d
+ms.openlocfilehash: e72a61b2250c2d048392e025655b81dbc8297176
 
 
 ---
@@ -40,19 +42,19 @@ Chcete se dozvědět více? Zjistěte, co se stane, když [zařízení zaregistr
 
  ![Windows 10 Desktop – Informace o počítači](../media/settings_about_pc.png)
 
-3.  Pokud máte verzi __1607__, pokračujte [těmito kroky](enroll-your-w10-device-access-work-or-school.md). Pokud máte verzi __1511__, pokračujte [těmito kroky](enroll-your-w10-device-your-account.md).
+3.  Pokud máte verzi __1607__, pokračujte [těmito kroky](enroll-your-w10-device-access-work-or-school.md). Pokud máte verzi __1511 nebo nižší__, pokračujte [těmito kroky](enroll-your-w10-device-your-account.md).
 
 ## <a name="windows-10-mobile-devices"></a>Zařízení s Windows 10 Mobile
 
 1.  Ve __Startu__ přejeďte prstem na seznam __Všechny aplikace__ a pak vyberte aplikaci __Nastavení__.
 2.  Klepněte na __Systém__ a pak na __Informace__.
 3.  V __Informacích o zařízení__ klepněte na __Další informace__. Zobrazí se seznam informací o zařízení. V tomto seznamu najděte __verzi__.
-4.  Pokud máte verzi __1607__, pokračujte [těmito kroky](enroll-your-w10-device-access-work-or-school.md). Pokud máte verzi __1511__, pokračujte [těmito kroky](enroll-your-w10-device-your-account.md).
+4.  Pokud máte verzi __1607__, pokračujte [těmito kroky](enroll-your-w10-device-access-work-or-school.md). Pokud máte verzi __1511 nebo nižší__, pokračujte [těmito kroky](enroll-your-w10-device-your-account.md).
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

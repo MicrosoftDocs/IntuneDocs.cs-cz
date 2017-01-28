@@ -1,9 +1,9 @@
 ---
-title: "Monitorování zásad MAM s Microsoft Intune | Microsoft Intune"
+title: "Monitorování zásad MAM s Microsoft Intune | Dokumentace Microsoftu"
 description: "Podívejte se, kolik uživatelů má přiřazené zásady. Přechodem k podrobnostem zjistíte další informace."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 11/14/2016
 ms.topic: article
@@ -14,17 +14,32 @@ ms.assetid: d3aa6c74-6b5d-4b50-aa66-a040ec44393e
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: 487fe778bae73c2ac5564f90c21328932060f576
+ms.sourcegitcommit: fe44466fbcef67d02b16d3d2d335f657251451d3
+ms.openlocfilehash: e60d707833ee276971000411e50564f39b41b207
 
 
 ---
 
 # <a name="monitor-mobile-app-management-policies-with-microsoft-intune"></a>Monitorování zásad správy mobilních aplikací s Microsoft Intune
-Po nastavení zásad správy mobilních aplikací (MAM) a jejich použití u uživatelů můžete na [portálu Azure Portal](https://portal.azure.com) monitorovat stav dodržování předpisů. Portál Azure Portal obsahuje informace o uživatelích dotčených zásadou, dále o stavu dodržování předpisů a všech problémech, se kterými se uživatelé mohou setkat.
-## <a name="summary-view"></a>Souhrnné zobrazení
-V okně **Správa mobilních aplikací Intune** si můžete prohlédnout souhrnné informace o stavu dodržování předpisů:
+Můžete monitorovat stav dodržování zásad správy mobilních aplikací (MAM), které jste použili u uživatelů v okně ochrany aplikace Intune na portálu [Azure Portal](https://portal.azure.com). Budete moct vyhledat informace o uživatelích dotčených zásadami MAM, stavu dodržování zásad a všech problémech, se kterými se uživatelé mohou setkat.
 
+Stav dodržování zásad můžete monitorovat na třech místech:
+
+-   Souhrnné zobrazení
+
+-   Podrobné zobrazení
+
+-   Zobrazení vytváření sestav
+
+## <a name="summary-view"></a>Souhrnné zobrazení
+
+Souhrnné zobrazení otevřete následujícím postupem:
+
+1. Přejděte na portál [Azure Portal](https://portal.azure.com) a zadejte přihlašovací údaje.
+2. Zvolte **Další služby** a zadejte „Intune“.
+3. Zvolte **Ochrana aplikací Intune**.
+
+V okně **Správa mobilních aplikací Intune** si můžete prohlédnout souhrnné informace o stavu dodržování zásad:
 
 ![Dlaždice souhrnu okna Správa mobilních aplikací Intune](../media/mam-azure-portal-user-status-summary.png)
 
@@ -38,7 +53,7 @@ V okně **Správa mobilních aplikací Intune** si můžete prohlédnout souhrnn
 
 
 ## <a name="detailed-view"></a>Podrobné zobrazení
-Pokud se chcete podívat na podrobnosti přehledu, zvolte dlaždici **Stav uživatele** a pak dlaždici **Uživatelé označení příznakem**.
+Pokud se chcete podívat na podrobnosti přehledu, zvolte dlaždici **Stav uživatele** (podle platformy operačního systému) a pak dlaždici **Uživatelé označení příznakem**.
 
 ### <a name="user-status"></a>Stav uživatele
 Můžete vyhledat konkrétního uživatele a zkontrolovat u něj stav dodržování předpisů. V okně **Vytváření sestav aplikace** se zobrazují následující informace o vybraném uživateli:
@@ -53,26 +68,48 @@ Můžete vyhledat konkrétního uživatele a zkontrolovat u něj stav dodržová
   - **Není zaregistrováno:** Zásada byla u uživatele nasazena, ale aplikace od té doby nebyla použita v pracovním kontextu.
 
 >[!NOTE]
-> Pokud uživatel, kterého jste hledali, nemá nasazené zásady MAM, zobrazí se zpráva oznamující, že uživatel není cílem žádné zásady pro aplikace.
+> Pokud uživatel, kterého jste hledali, nemá nasazené zásady MAM, zobrazí se zpráva, že uživatel není cílem žádné zásady MAM.
 
 Pokud chcete zobrazit vytváření sestav pro uživatele, postupujte takto:
 
-1.  Pokud chcete vybrat uživatele, zvolte dlaždici **Souhrn** nebo v okně **Nastavení** zvolte **VYTVÁŘENÍ SESTAV APLIKACE UŽIVATELEM**:
+1.  Uživatele vyberte tak, že zvolíte dlaždici **Souhrn**.
 
-    ![Možnost vytváření sestav v okně Nastavení](../media/mam-azure-portal-app-reporting-by-user-settings-blade.png)
+    ![Snímek obrazovky 3](../media/MAM-reporting-6.png)
 
 2. Otevře se okno **Vytváření sestav aplikace**. Zvolte **Vybrat uživatele** a najděte uživatele služby Azure Active Directory.
 
-    ![Možnost výběru uživatele v okně Vytváření sestav aplikace](../media/mam-azure-portal-app-reporting-select-user.png)
+    ![Možnost výběru uživatele v okně Vytváření sestav aplikace](../media/MAM-reporting-2.png)
 
 3. Vyberte uživatele ze seznamu. Zobrazí se podrobné informace o konkrétním uživateli a stavu dodržování předpisů.
 
-    ![Podrobnosti vytváření sestav aplikace](../media/mam-azure-portal-app-reporting-by-user.png)
-
 ### <a name="flagged-users"></a>Uživatelé označení příznakem
-V podrobném přehledu se zobrazí chybová zpráva, otevíraná aplikace v okamžiku chyby, platforma zařízení a časové razítko.  
+V podrobném přehledu se zobrazí chybová zpráva, otevíraná aplikace v okamžiku chyby, dotčená platforma operačního systému zařízení a časové razítko.
 
-### <a name="see-also"></a>Související témata
+## <a name="reporting-view"></a>Zobrazení vytváření sestav
+
+Najdete tady stejné sestavy jako v Podrobném zobrazení, ale i další sestavy, které vám pomůžou se stavem dodržování zásad MAM:
+
+![Snímek obrazovky 4](../media/MAM-reporting-7.png)
+
+-   **Sestava uživatele ochrany aplikací:** Obsahuje stejné informace, které najdete v sestavě **Stav uživatele** v části Podrobné zobrazení výše.
+
+-   **Sestava aplikace ochrany aplikací:** Poskytuje dva různé stavy ochrany aplikací, které správce může před generováním sestavy vybrat. Může vybrat chráněný nebo nechráněný stav.
+
+    ![Snímek obrazovky 1](../media/MAM-reporting-1.png)
+
+    -   Stav uživatele pro spravovanou aktivitu MAM (chráněný): Tato sestava obsahuje aktivitu jednotlivých aplikací spravovaných prostřednictvím MAM podle jednotlivých uživatelů.
+
+        -   Zobrazuje všechny aplikace, které jsou cílem zásad MAM, pro jednotlivé uživatele. Zobrazuje také rozdělení stavu jednotlivých aplikací podle toho, jak jsou zaregistrované v zásadách MAM, nebo aplikací, které jsou cílem zásad MAM, ale nebyly nikdy zaregistrované.
+<br></br>
+    -   Stav uživatele pro nespravovanou aktivitu MAM (nechráněný): Tato sestava obsahuje aktivitu jednotlivých aplikací povolených v MAM, které momentálně nejsou spravované, podle jednotlivých uživatelů. K tomu může dojít z následujících důvodů:
+
+        -   Tyto aplikace používá uživatel nebo aplikace, která momentálně není cílem žádné zásady MAM.
+
+        -   Všechny aplikace jsou zaregistrované, ale nejsou u nich použité žádné zásady MAM.
+
+![Snímek obrazovky 2](../media/MAM-reporting-4.png)
+
+## <a name="see-also"></a>Související témata
 [Správa přenosu dat mezi aplikacemi pro iOS](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 
 * [Co očekávat, když ke správě své aplikace pro Android používáte zásady MAM](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
@@ -80,6 +117,6 @@ V podrobném přehledu se zobrazí chybová zpráva, otevíraná aplikace v okam
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 

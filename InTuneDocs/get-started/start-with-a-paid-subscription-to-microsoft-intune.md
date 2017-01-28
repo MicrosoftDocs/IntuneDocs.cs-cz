@@ -1,6 +1,6 @@
 ---
 title: "Začínáme | Dokumentace Microsoftu"
-description: "Požadavky a předpoklady k tomu, abyste se vaše předplatné Intune dalo začít používat"
+description: "Požadavky a předpoklady k tomu, abyste mohli své předplatné Intune začít využívat"
 keywords: 
 author: nathbarn
 ms.author: nathbarn
@@ -14,14 +14,17 @@ ms.assetid: d158503c-1276-422b-ab81-5f66c1cd7e7a
 ms.reviewer: angrobe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 7777b7fb4a0977ed663a3ef01547f22e9e61bb8a
+ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
+ms.openlocfilehash: 804c62c3ee840a01ee7b3f7d96bf984bc9501ea0
 
 
 ---
 
 
 # <a name="intune-quick-start-guide"></a>Úvodní příručka služby Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Tato příručka vám pomůže začít s placeným předplatným Microsoft Intune. Podle těchto postupů můžete ve vaší organizaci spravovat mobilní zařízení, počítače s Windows i aplikace. Jednotlivé kroky můžete provádět v uvedeném pořadí, případně můžete některé z nich přeskočit, pokud nevyhovují vašemu prostředí nebo obchodním potřebám. Pokud chcete vyzkoušet Intune, najdete informace v [Příručce pro testování Intune](/intune/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune).  
 
 Pokud ke správě počítačů a serverů aktuálně používáte Microsoft System Center Configuration Manager, můžete [Configuration Manager rozšířit pro správu mobilních zařízení](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
@@ -50,6 +53,6 @@ Pokud ke správě počítačů a serverů aktuálně používáte Microsoft Syst
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 
