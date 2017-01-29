@@ -14,8 +14,8 @@ ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e208608d50c9b5f7fe66743de0d3c7e741dbfbd
-ms.openlocfilehash: c2293306e847148ff7413be3e9eeafb8349e33fe
+ms.sourcegitcommit: af067236e27a65c52c78107fefdb956ad0fd5aa5
+ms.openlocfilehash: b4672b19517f1871a276000c6e8f5d01c0280e35
 
 
 ---
@@ -60,7 +60,10 @@ Zásady MAM se aktuálně podporují v těchto systémech:
 -   iOS 8.1 nebo novější
 -   Android 4 nebo novější
 
-V současné době není dostupná podpora zařízení s Windows.
+>[!NOTE]
+>Zařízení s Windows nejsou ve scénáři MAM bez registrace podporované. Pokud zařízení s Windows 10 zaregistrujete do Intune, můžete použít sadu Windows Information Protection, která nabízí podobné funkce. Podrobnosti najdete v tématu věnovanému [ochraně podnikových dat pomocí sady Windows Information Protection](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
+
+
 ##  <a name="how-mam-policies-protect-app-data"></a>Jak zásady MAM chrání data aplikací
 
 ###  <a name="apps-without-mam-policies"></a>Aplikace bez zásad MAM
@@ -132,6 +135,6 @@ Všechny mobilní aplikace Office podporují přístup pomocí více identit.
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 
