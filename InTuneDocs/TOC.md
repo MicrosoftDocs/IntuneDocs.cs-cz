@@ -42,8 +42,8 @@
 ## [Oddíl 9: Testování a ověření](plan-design/section-9-test-and-validation.md)
 ## [Další zdroje informací](plan-design/additional-resources.md)
 
-# Novinky
-## [Novinky](whats-new/whats-new-in-microsoft-intune.md)
+# [Novinky](whats-new/whats-new-in-microsoft-intune.md)
+## [Co je nového v uživatelském rozhraní aplikací](whats-new/whats-new-in-intune-app-ui.md)
 ## [Co je nového v Azure Preview](/intune-azure/introduction/whats-new?toc=%2fintune%2ftoc.json)
 ## [Co je nového – archiv](whats-new/whats-new-archive.md)
 
@@ -106,7 +106,7 @@
 
 ## [Ochrana zařízení](deploy-use/protect-your-devices-with-microsoft-intune.md)
 ### [Vzdálené uzamčení a resetování hesla](deploy-use/use-remote-lock-and-passcode-reset-in-microsoft-intune.md)
-### [Ochrana zařízení s Windows pomocí MFA](deploy-use/protect-windows-devices-with-multi-factor-authentication.md)
+### [Ochrana zařízení s Windows pomocí MFA](deploy-use/multi-factor-authentication-azure-active-directory.md)
 ### [Nastavení Windows Hello pro firmy](deploy-use/control-microsoft-passport-settings-on-devices-with-microsoft-intune.md)
 ### [Vynechání zámku aktivace v iOS](deploy-use/help-protect-ios-devices-with-activation-lock-bypass-for-microsoft-intune.md)
 ### [Zásady ochrany počítačů se systémem Windows](deploy-use/policies-to-protect-windows-pcs-in-microsoft-intune.md)
@@ -159,9 +159,9 @@
 #### [Blokování aplikací bez ověřování ADAL](deploy-use/block-apps-with-no-modern-authentication.md)
 ### [Ochrana přístupu k sítím (Cisco ISE)](deploy-use/restrict-access-to-networks.md)
 ### [Ochrana přístupu na základě rizika zařízení, sítě a aplikace](deploy-use/device-threat-protection.md)
-#### [Nastavení ochrany zařízení před internetovými útoky ve službě Lookout](deploy-use/device-threat-protection-subscription-setup.md)
-#### [Povolení aplikace Lookout v Intune](deploy-use/device-threat-protection-enable.md)
-#### [Nasazení aplikací Lookout for Work](deploy-use/device-threat-protection-apps.md)
+#### [Nastavení ochrany zařízení před internetovými útoky](deploy-use/device-threat-protection-subscription-setup.md)
+#### [Povolení ochrany zařízení před internetovými útoky](deploy-use/device-threat-protection-enable.md)
+#### [Nasazení aplikací pro ochranu zařízení před internetovými útoky](deploy-use/device-threat-protection-apps.md)
 #### [Povolení zásady dodržování předpisů pro ochranu zařízení před hrozbami](deploy-use/device-threat-protection-policy.md)
 
 ### [Ochrana dat aplikací pomocí MAM](deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
@@ -217,11 +217,11 @@
 
 ## [Řešení problémů se správou mobilních aplikací](troubleshoot/troubleshoot-mam.md)
 
-## [Řešení problémů s Lookout Integration](troubleshoot/troubleshooting-lookout-integration.md)
+## [Řešení problémů s ochranou zařízení před internetovými útoky](troubleshoot/device-threat-protection-troubleshooting.md)
 
 # [Glosář](understand-explore/intune-glossary.md)
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Jan17_HO5-->
 
 
