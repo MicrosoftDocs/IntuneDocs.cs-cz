@@ -14,19 +14,35 @@ ms.assetid: 4682b6b6-c9ef-483e-a6de-b8830cb98b63
 ms.reviewer: cacamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 1a83bd41e4dc3aaa2e98b78b918b0cfe4c74dfe3
+ms.sourcegitcommit: 9d891933178d4bdf1079287efc151fe8859c7e83
+ms.openlocfilehash: e91c9da9614791e128a64add822d7f101818b9c0
 
 
 ---
 
-# <a name="how-to-get-admin-support-for-microsoft-intune"></a>Jak získat podporu správce pro Microsoft Intune
+# <a name="how-admins-get-support-for-microsoft-intune"></a>Jak správci získají podporu pro Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Microsoft poskytuje pro Microsoft Intune globální technickou a předprodejní podporu a podporu k fakturaci a správě předplatného. Podpora je k dispozici online i po telefonu pro placené i zkušební předplatné. Online technická podpora je k dispozici v angličtině a japonštině. V dalších jazycích je k dispozici podpora po telefonu a online podpora k fakturaci.
 
 Podpora pro Intune a pro Intune při použití s nástrojem Configuration Manager je bezplatná. Zákazníkům se smlouvou Premier Support účtujeme poplatky za dotazy k postupům (například jak nakonfigurovat funkci Intune).
+
+## <a name="find-help-without-opening-a-support-ticket"></a>Získání pomoci bez otevření lístku podpory
+
+Než budete vytvářet lístek podpory, zkuste najít odpovědi v následujících zdrojích informací.
+
+### <a name="microsoft-intune-technet-forums"></a>Fóra Microsoft TechNet o Intune
+
+Zeptejte se technických odborníků Microsoftu nebo s nimi zahajte diskusi. Odpovědi a vysvětlení nabízíme na [fóru Microsoft TechNet o Intune](https://social.technet.microsoft.com/Forums/home), které umožňuje i vyhledávání.
+
+    ![Microsoft Intune TechNet Forum](../media/technet-forum-for-support.png)
+
+### <a name="microsoft-intune-uservoice-product-feedback-site"></a>Web pro zasílání názorů na produkt Microsoft Intune UserVoice
+
+Máte nápad, jak by Microsoft mohl Intune ještě více vylepšit? Svoje nápady můžete přidávat na webu pro zasílání názorů na Microsoft Intune [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas). Také můžete hlasovat o nápadech, které k produktu UserVoice přidali ostatní. 
+
+    ![Microsoft Intune UserVoice feedback page](../media/intune-uservoice-feedback-page.png)
 
 ## <a name="create-an-online-service-ticket"></a>Vytvoření lístku služby online
 
@@ -116,6 +132,6 @@ Pokud jste už zakoupili licence od Microsoftu v rámci multilicenčního progra
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
