@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: 018bda65-7238-41f5-b92a-e5f67b7fe085
 searchScope:
 - Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
@@ -29,9 +30,9 @@ Jestli jste se zaregistrovali v Intune, ale zařízení s Windows už nechcete v
 
 Informace o tom, jak zrušit registraci zařízení, získáte prostřednictvím odkazu, který je zobrazen výše v části V tomto článku a který odpovídá používanému zařízení:
 
--   [Zrušení registrace zařízení s Windows 10](#unenroll-your-windows-10-device)
--   [Zrušení registrace počítače s Windows 8.1](#unenroll-your-windows-8-1-computer)
--   [Zrušení registrace zařízení Windows Phone 8.1](#unenroll-your-windows-phone-8-1-device)
+-    [Zrušení registrace zařízení s Windows 10](#unenroll-your-windows-10-device)
+-    [Zrušení registrace počítače s Windows 8.1](#unenroll-your-windows-8-1-computer)
+-    [Zrušení registrace zařízení Windows Phone 8.1](#unenroll-your-windows-phone-8-1-device)
 
 ## <a name="unenroll-your-windows-10-device"></a>Zrušení registrace zařízení s Windows 10
 
