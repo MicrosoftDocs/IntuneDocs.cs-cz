@@ -11,7 +11,8 @@
 
 # [Začínáme](get-started/get-started.md)
 ## [Nastavení Intune](get-started/start-with-a-paid-subscription-to-microsoft-intune.md)
-### [Požadavky](get-started/what-to-know-before-you-start-microsoft-intune.md)
+### [Požadavky]
+#### [Podporovaná zařízení](get-started/what-to-know-before-you-start-microsoft-intune.md)
 #### [Využití sítě](get-started/network-bandwidth-use.md)
 ### [Přihlášení k Intune](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-1.md)
 ### [Konfigurace domén](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2.md)
@@ -57,7 +58,6 @@
 #### [Správa Androidu](deploy-use/set-up-android-management-with-microsoft-intune.md)
 #### [Správa Androidu for Work](deploy-use/set-up-android-for-work.md)
 #### [Správa zařízení s Windows](deploy-use/set-up-windows-device-management-with-microsoft-intune.md)
-#### [Windows 10 Mobile a Windows Phone](deploy-use/set-up-windows-phone-management-with-microsoft-intune.md)
 ### [Správa zařízení vlastněných společností](deploy-use/manage-corporate-owned-devices.md)
 #### [Registrace zařízení s iOSem vlastněných společností](deploy-use/enroll-corporate-owned-ios-devices-in-microsoft-intune.md)
 ##### [Registrace průvodce nastavením](deploy-use/ios-setup-assistant-enrollment-in-microsoft-intune.md)
@@ -165,13 +165,13 @@
 #### [Povolení zásady dodržování předpisů pro ochranu zařízení před hrozbami](deploy-use/device-threat-protection-policy.md)
 
 ### [Ochrana dat aplikací pomocí MAM](deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
-#### [Portál Azure Portal pro zásady MAM](deploy-use/azure-portal-for-microsoft-intune-mam-policies.md)
-#### [Příprava ke konfiguraci zásad MAM](deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
-#### [Vytvoření a nasazení zásad MAM](deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
-#### [Zásady MAM pro Android](deploy-use/android-mam-policy-settings.md)
-#### [Zásady MAM pro iOS](deploy-use/ios-mam-policy-settings.md)
-#### [Ověření zásad MAM](deploy-use/validate-mobile-application-management.md)
-#### [Sledování dodržování zásad](deploy-use/monitor-mobile-app-management-policies-with-microsoft-intune.md)
+#### [Portál Azure Portal pro zásady ochrany aplikací](deploy-use/azure-portal-for-microsoft-intune-mam-policies.md)
+#### [Příprava ke konfiguraci zásad ochrany aplikací](deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
+#### [Vytvoření a nasazení zásad ochrany aplikací](deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
+#### [Zásady ochrany aplikací pro Android](deploy-use/android-mam-policy-settings.md)
+#### [Zásady ochrany aplikací pro iOS](deploy-use/ios-mam-policy-settings.md)
+#### [Ověření zásad ochrany aplikací](deploy-use/validate-mobile-application-management.md)
+#### [Sledování dodržování zásad ochrany aplikací](deploy-use/monitor-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Správa přenosu dat mezi aplikacemi pro iOS](deploy-use/manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 
 #### [Konzola pro správu Intune pro zásady MAM](deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md)
@@ -222,6 +222,6 @@
 # [Glosář](understand-explore/intune-glossary.md)
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 
