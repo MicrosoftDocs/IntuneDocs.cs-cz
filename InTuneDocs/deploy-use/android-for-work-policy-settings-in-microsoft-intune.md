@@ -1,12 +1,12 @@
 ---
 
-title: "Nastavení zásad pro Android for Work | Microsoft Intune"
+title: "Nastavení zásad pro Android for Work | Dokumentace Microsoftu"
 description: "Vytvořte zásady, které řídí nastavení a funkce na zařízeních s Androidem for Work, která spravujete pomocí Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 10/12/2016
+ms.date: 02/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,19 @@ ms.technology:
 ms.assetid: 35a53076-74d6-486d-b201-e0da2e170008
 ms.reviewer: chrisbal
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 748b9b74b65e8d17bb3956d0ce1859c160d8c10a
+ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
+ms.openlocfilehash: b95f7dbf37a159a62894ae27d1fdb731ede5570c
 
 
 ---
 
 # <a name="android-for-work-policy-settings-in-microsoft-intune"></a>Nastavení zásad pro Android for Work v Microsoft Intune
 
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete konfigurovat na zařízeních s Androidem for Work.
+Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete konfigurovat na [zařízeních s Androidem for Work](android-for-work.md).
 
 ## <a name="general-configuration-policy"></a>Zásady obecné konfigurace
 
@@ -60,15 +61,11 @@ Pokud se v tomto tématu nezobrazí nastavení, které hledáte, je možné, že
 |**Nastavit zásady pro výchozí oprávnění aplikací**<br>(Android 6 a novější)|Umožňuje nastavit zásady výchozích oprávnění pro všechny aplikace v pracovním profilu.|
 
 
-
-
 ## <a name="custom-policy-settings"></a>Nastavení vlastních zásad
 Pomocí **zásad vlastní konfigurace pro Android for Work** v Microsoft Intune nasaďte nastavení OMA-URI, která se dají používat k ovládání funkcí na zařízeních s Androidem for Work. Jsou to standardní nastavení, která k ovládání funkcí zařízení používá spousta výrobců mobilních zařízení.
 
 Díky této vlastnosti můžete nasadit nastavení Androidu, která nejde konfigurovat se zásadami Intune.
-
-> [!NOTE]
-> Vlastní zásady Androidu v současné době podporují konfiguraci nastavení Wi-Fi jenom pro taková zařízení s Androidem, která obsahují předsdílený klíč.
+Intune v současnosti podporuje omezený počet vlastních zásad Androidu. Pokud chcete zjistit, které zásady můžete nakonfigurovat, podívejte se na ukázky v tomto tématu.
 
 ### <a name="general-settings"></a>Obecná nastavení
 
@@ -97,6 +94,6 @@ Díky této vlastnosti můžete nasadit nastavení Androidu, která nejde konfig
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

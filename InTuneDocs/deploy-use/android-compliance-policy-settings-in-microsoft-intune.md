@@ -1,11 +1,11 @@
 ---
-title: "Nastavení zásad dodržování předpisů pro zařízení s Androidem | Microsoft Intune"
+title: "Nastavení zásad dodržování předpisů pro Android | Dokumentace Microsoftu"
 description: "Toto téma popisuje nastavení zásad dodržování předpisů pro zařízení s Androidem."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 11/08/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: e721c5c7-9678-4f3b-81d4-564da5efd337
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: 398f0c8bc789d9106a296e50f0e0cdc27d5920a7
+ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
+ms.openlocfilehash: 4ddc0839f05b2dd7cb1faf0a3e0901df67010f71
 
 
 ---
@@ -23,12 +24,15 @@ ms.openlocfilehash: 398f0c8bc789d9106a296e50f0e0cdc27d5920a7
 
 # <a name="compliance-policy-settings-for-android-devices-in-microsoft-intune"></a>Nastavení zásad dodržování předpisů pro zařízení s Androidem v Microsoft Intune
 
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Nastavení zásad popsané v tomto tématu se týká zařízení se systémem Android 4.0 a novějším nebo Samsung KNOX 4.0 a novějším.
 
 Pokud hledáte informace o jiných platformách, vyberte jednu z těchto možností:
 > [!div class="op_single_selector"]
 - [Nastavení zásad dodržování předpisů pro zařízení s iOSem](ios-compliance-policy-settings-in-microsoft-intune.md)
 - [Nastavení zásad dodržování předpisů pro zařízení s Windows](windows-compliance-policy-settings-in-microsoft-intune.md)
+- [Nastavení zásad dodržování předpisů pro Android for Work](afw-compliance-policy-settings-in-microsoft-intune.md)
 
 ## <a name="system-security-settings"></a>Systémové nastavení zabezpečení
 ### <a name="password"></a>Heslo
@@ -87,6 +91,6 @@ Pokud hledáte informace o jiných platformách, vyberte jednu z těchto možnos
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 

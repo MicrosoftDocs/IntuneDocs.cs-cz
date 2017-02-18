@@ -1,11 +1,11 @@
 ---
-title: "Nastavení zásad dodržování předpisů pro zařízení s Androidem for Work | Dokumentace Microsoftu"
+title: "Nastavení zásad dodržování předpisů u Androidu for Work | Dokumentace Microsoftu"
 description: "Toto téma popisuje nastavení zásad dodržování předpisů pro zařízení s Androidem, která jsou kompatibilní s Androidem for Work."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 11/13/2016
+ms.date: 02/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: e721c5c7-9678-4f3b-81d4-564da5efd337
 ms.reviewer: chrisbal
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 2b53e7a410d0ce268ce395c08161095af42857b7
+ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
+ms.openlocfilehash: 1b84b7137bd01b695d20bea67d77c694f2533b4e
 
 
 ---
@@ -24,8 +25,6 @@ ms.openlocfilehash: 2b53e7a410d0ce268ce395c08161095af42857b7
 # <a name="compliance-policy-settings-for-android-for-work-devices-in-microsoft-intune"></a>Nastavení zásad dodržování předpisů pro zařízení s Androidem for Work v Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
-
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
 Nastavení zásad popsaná v tomto tématu platí pro zařízení s Androidem for Work.
 
@@ -70,7 +69,7 @@ Pokud hledáte informace o jiných platformách, vyberte jednu z těchto možnos
 - **Požadovat, aby ladění USB bylo zakázané:** Toto nastavení nemusíte konfigurovat, protože ladění USB je na zařízeních s Androidem for Work už zakázané.
 
 - **Minimální úroveň oprav zabezpečení Androidu:** Toto nastavení použijte k určení minimální úrovně oprav Androidu.  Zařízení, která nejsou alespoň na této úrovni oprav, budou kompatibilní. Datum musí být zadáno ve formátu RRRR-MM-DD.
-- **Vyžadovat, aby byla povolena Ochrana zařízení před internetovými útoky**: Toto nastavení použijte, pokud chcete jako podmínku dodržování předpisů použít vyhodnocování rizika z řešení Lookout MTP. Vyberte jednu z následujících úrovní hrozeb jako maximální povolenou:
+- **Vyžadovat, aby byla povolena Ochrana zařízení před internetovými útoky**: Toto nastavení použijte, pokud chcete jako podmínku dodržování předpisů použít vyhodnocování rizika z řešení ochrany zařízení před internetovými útoky. Vyberte jednu z následujících úrovní hrozeb jako maximální povolenou:
 
   - **Žádná (zabezpečeno):** Toto je nejbezpečnější úroveň. Znamená, že zařízení nesmí obsahovat žádné hrozby. Pokud se v zařízení zjistí libovolná úroveň hrozeb, bude vyhodnoceno jako nedodržující předpisy.
   - **Nízká:** Zařízení je vyhodnoceno jako vyhovující, pokud se v něm nachází jen nízká úroveň hrozeb. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
@@ -80,13 +79,13 @@ Pokud hledáte informace o jiných platformách, vyberte jednu z těchto možnos
   Další podrobnosti najdete v tématu [Povolení pravidla ochrany zařízení před hrozbami v zásadách dodržování předpisů](enable-device-threat-protection-rule-in-compliance-policy.md).
 
 ## <a name="device-property-settings"></a>Nastavení vlastností zařízení
-- **Minimální požadovaný operační systém:** Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, uvede se jako nekompatibilní.
+- **Minimální verze OS**: Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, bude uvedeno jako nekompatibilní.
   Zobrazí se odkaz s informacemi o postupu upgradu. Koncový uživatel si může zařízení upgradovat. Potom bude mít přístup k prostředkům společnosti.
 
-- **Maximální povolená verze operačního systému:** Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný a uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nepůjde přes toto zařízení přistupovat k prostředkům společnosti.
+- **Maximální verze OS:** Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný a uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nebude možné získat přes toto zařízení přístup k prostředkům společnosti.
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 

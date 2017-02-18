@@ -1,11 +1,11 @@
 ---
-title: "Nasazení aplikací na zařízení s Androidem for Work | Microsoft Intune"
+title: "Nasazení aplikací na zařízení s Androidem for Work | Dokumentace Microsoftu"
 description: "Pomocí tohoto tématu můžete synchronizovat a pak nasadit aplikaci do zařízení s Androidem for Work z obchodu Google Play for Work."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/6/2016
+ms.date: 02/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,19 +13,21 @@ ms.technology:
 ms.assetid: cd0bbd90-d3fe-4efc-83fd-d1f3f86800d4
 ms.reviewer: chrisbal
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 35ee89248e42c67f48d4607f5d415896e35b90e9
+ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
+ms.openlocfilehash: e67ec317b22e18d0be8bca449b9382f74935d6e8
 
 
 ---
 
 # <a name="how-to-deploy-apps-to-android-for-work-devices-with-intune"></a>Jak nasadit aplikace do zařízení s Androidem for Work pomocí Intune
 
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Na zařízení s Androidem for Work se aplikace nasazují jiným způsobem než na zařízení se standardním Androidem. Všechny aplikace, které instalujete pro Android for Work, pocházejí z obchodu Google Play for Work. Do tohoto obchodu se přihlásíte, prohlédnete si požadované aplikace, a schválíte je.
 Aplikace se pak objeví v uzlu **Multilicenční aplikace** konzoly Intune. Odsud můžete nasazení aplikace spravovat stejným způsobem, jakým byste nasadili jakoukoli jinou aplikaci.
+
 Pokud jste vytvořili své vlastní firemní aplikace, můžete je také nasadit. K tomu si potřebujete zaregistrovat vývojářský účet Google, který umožňuje publikování aplikací do privátní oblasti obchodu Google Play a jejich synchronizaci s Intune.
 
 ## <a name="before-you-start"></a>Než začnete
@@ -38,9 +40,9 @@ Pokud jste vytvořili své vlastní firemní aplikace, můžete je také nasadit
 1. Přejděte do [obchodu Google Play for Work](https://play.google.com/work). Přihlaste se pomocí stejného účtu, který jste použili ke konfiguraci propojení mezi Intune a Androidem for Work.
 2. Vyhledejte v obchodě aplikaci, kterou chcete nasadit pomocí Intune.
 3. Na stránce se zvolenou aplikací vyberte **Schválit**. V tomto příkladu je zvolená aplikace Microsoft Excel.<br>
-  ![Příklad schválení aplikace](/intune/deploy-use/media/approve.png)
+  ![Příklad schválení aplikace](media/approve.png)
 4. Otevře se okno s žádostí, abyste této aplikaci udělili oprávnění k provádění různých operací. Před pokračováním musíte zvolit možnost **Schválit**.<br>
-  ![Příklad schválení oprávnění aplikace](/intune/deploy-use/media/approve-app-permissions.png)
+  ![Příklad schválení oprávnění aplikace](media/approve-app-permissions.png)
 5. Za okamžik se zobrazí zpráva s potvrzením, že aplikace je schválená a dostupná v konzole pro správu.
 
 ## <a name="publish-then-synchronize-a-line-of-business-app-from-the-google-play-for-work-store"></a>Publikování a synchronizace firemní aplikace z obchodu Google Play for Work
@@ -49,7 +51,7 @@ Pokud jste vytvořili své vlastní firemní aplikace, můžete je také nasadit
 2. Přihlaste se pomocí stejného účtu, který jste použili ke konfiguraci propojení mezi Intune a Androidem for Work. Pokud se přihlašujete poprvé, musíte se zaregistrovat a zaplatit poplatek, abyste se stali členy programu pro vývojáře Google.
 3. V této konzole zvolte **Přidat novou aplikaci**.
 4. Informace o vaší aplikaci nahrajete a zadáte stejným způsobem jako při publikování jakékoli jiné aplikace v obchodě Google Play. Musíte ale vybrat nastavení **Zpřístupnit tuto aplikaci pouze pro moji organizaci (<*název organizace*>)**, jak je znázorněno níže.<br>
-  ![Možnost zpřístupnění aplikace jen pro organizaci](/intune/deploy-use/media/restrict.png)<br>
+  ![Možnost zpřístupnění aplikace jen pro organizaci](media/restrict.png)<br>
 Tím zajistíte, aby tato aplikace byla dostupná jenom vaší organizaci a nebyla dostupná ve veřejném obchodě Google Play.
 Další informace o nahrávání a publikování aplikací pro Android najdete v [nápovědě ke konzole pro vývojáře Google](https://support.google.com/googleplay/android-developer/answer/113469).
 5. Po publikování aplikace přejděte do [obchodu Google Play for Work](https://play.google.com/work). Přihlaste se pomocí stejného účtu, který jste použili ke konfiguraci propojení mezi Intune a Androidem for Work.
@@ -69,6 +71,6 @@ Po nasazení se aplikace nainstaluje na zařízení, která jste určili. Uživa
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 

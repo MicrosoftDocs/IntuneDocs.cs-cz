@@ -1,19 +1,20 @@
 ---
-title: "Nastavení správy pro Android for Work | Dokumentace Microsoftu"
+title: "Nastavení Androidu for Work | Dokumentace Microsoftu"
 description: "Pomocí Microsoft Intune můžete u zařízení s Androidem for Work povolit správu mobilních zařízení (MDM)."
 keywords: 
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 10/12/2016
+ms.date: 02/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: b2fdcea9-9ad7-4d73-88e2-854b7a774bb2
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: e0116fb151cd8d05d2d854f0102894a9d72b818e
+ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
+ms.openlocfilehash: 24ab39a92d69e92e1c202005fcd783018c4d4621
 
 
 ---
@@ -21,8 +22,6 @@ ms.openlocfilehash: e0116fb151cd8d05d2d854f0102894a9d72b818e
 # <a name="enable-enrollment-of-android-for-work-devices"></a>Povolení registrace zařízení s Androidem for Work
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
-
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
 Pokud chcete umožnit správu zařízení s Androidem for Work, musíte do Intune přidat vazbu na Android for Work. Abyste mohli registrovat zařízení, která podporují Android for Work, ale byla předtím zaregistrovaná jako zařízení s běžným Androidem, musíte zrušit registraci těchto zařízení a pak je znovu zaregistrovat.
 
@@ -54,7 +53,7 @@ Po konfiguraci vazby na Android for Work a nastavení následně můžete:
 
 ## <a name="unbinding-your-android-for-work-administrative-account"></a>Zrušení vazby na účet pro správu Androidu for Work
 
-Registraci a správu Androidu for Work můžete vypnout. Při kliknutí na **Zrušit vazbu** se zruší registrace všech zaregistrovaných zařízení s Androidem for Work a odebere se vztah mezi účtem Android for Work a službou Intune.
+Registraci a správu Androidu for Work můžete vypnout. Při kliknutí na možnost pro **zrušení vazby** v konzole pro správu Intune se zruší registrace všech zaregistrovaných zařízení s Androidem for Work a odebere se vztah mezi účtem Android for Work a službou Intune.
 
 ### <a name="how-to-unbind-an-android-for-work-account"></a>Jak zrušit vazbu na účet Android for Work
 
@@ -66,6 +65,6 @@ Registraci a správu Androidu for Work můžete vypnout. Při kliknutí na **Zru
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 

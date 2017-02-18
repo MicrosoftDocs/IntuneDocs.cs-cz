@@ -1,45 +1,48 @@
 ---
-title: O aplikaci Android for Work | Microsoft Intune
+title: O aplikaci Android for Work | Dokumentace Microsoftu
 description: "Intune spravuje Android for Work. K dispozici jsou tak další možnosti správy a ochrany osobních údajů, když uživatelé používají při práci svoje zařízení s Androidem."
 keywords: 
 author: nathbarn
 manager: angrobe
-ms.date: 11/29/2016
+ms.date: 02/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: aa0002d9-f5a0-466e-98ac-3970cb77e3a2
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 83914246bde673b188ca3f7d9cf50b4d0de2edd4
-ms.openlocfilehash: 127db326fc96625c719b8136964bae014a904b3d
+ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
+ms.openlocfilehash: 1c7c0967cfd29f68e8d6d0428f1f8407e2cbd9cb
 
 
 ---
 
 # <a name="manage-android-for-work-devices-with-intune"></a>Správa zařízení s Androidem for Work pomocí Intune
 
-Android for Work je sada funkcí a služeb pro zařízení s Androidem. Tyto funkce a služby přidávají další možnosti správy a ochrany osobních údajů, když uživatelé používají při práci svoje zařízení s Androidem. Intune vám může pomoct s nasazením aplikací a podnikových prostředků do zařízení s Androidem for Work a zajistit tak oddělení pracovních a osobních informací. Po úspěšném nasazení zůstanou aplikace a data, ke kterým budou získávat přístup, výhradně v prostředí Android for Work daného zařízení.
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
+Android for Work je sada funkcí a služeb pro zařízení s Androidem, které oddělují osobní aplikace a data od pracovního profilu obsahujícího pracovní aplikace a data. Android for Work poskytuje další možnosti správy a ochrany osobních údajů, když uživatelé používají při práci svoje zařízení s Androidem. Intune vám pomůže nasadit aplikace a podnikové prostředky do zařízení s Androidem for Work a zajistí oddělení pracovních a osobních informací. Po úspěšném nasazení zůstanou aplikace a data, ke kterým budou získávat přístup, výhradně v prostředí Android for Work daného zařízení.
 
 ## <a name="supported-devices"></a>Podporovaná zařízení
 
-Android for Work vyžaduje novější hardware Android, protože mnoho možností správy používá funkce, které jsou součástí novějšího operačního systému Android. Android for Work se momentálně podporuje na zařízeních se systémem Android 5.0 Lollipop a novějšími systémy a na zařízeních, která podporují pracovní profil. Zařízení, která nemají nativní podporu pro Android for Work, mají dál k dispozici konvenční možnosti správy Androidu. Další informace najdete v tématu [Požadavky pro Android for Work](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
+Možnosti správy v Androidu for Work využívají funkce, které jsou součástí novějšího operačního systému Android. Android for Work je momentálně podporovaný na zařízeních se systémem Android 5.0 Lollipop a novějšími systémy, které podporují pracovní profil. U zařízení, která Android for Work nepodporují, je dál k dispozici konvenční správa Androidu. Další informace najdete v tématu [Požadavky pro Android for Work](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
 ## <a name="onboarding"></a>Připojení
 
-Před registrací Androidu for Work je potřeba provést několik kroků pro připojení. Pomocí tohoto postupu připojíte svého tenanta Intune ke Google Play pro službu Work, která je nedílnou součástí distribuce a procesu správy aplikací pro Android for Work. Přečtěte si další informace týkající se [povolení registrace Androidu for Work](https://docs.microsoft.com/en-us/intune/deploy-use/set-up-android-for-work).
+Před registrací Androidu for Work je potřeba provést několik kroků pro připojení. Pomocí tohoto postupu připojíte svého tenanta Intune ke Google Play pro službu Work, která je nedílnou součástí distribuce a procesu správy aplikací pro Android for Work. Přečtěte si další informace týkající se [povolení registrace Androidu for Work](https://docs.microsoft.com/intune/deploy-use/set-up-android-for-work).
 
 ## <a name="work-profile-management"></a>Správa pracovních profilů
 
-Při správě zařízení s Androidem for Work pomocí Intune nespravujete celé zařízení. Možnosti správy mají vliv jenom na pracovní profil, který se vytvoří během registrace. Všechny aplikace, které jsou nasazené na zařízení pomocí Intune, jsou součástí tohoto pracovního profilu. U ikon pro aplikace v pracovním profilu se zobrazuje oranžová aktovka. Toto označení odlišuje na zařízení firemní aplikace od osobních. Všechny aplikace pro Android a data mimo oblast Androidu for Work na zařízení budou osobní a pod kontrolou koncového uživatele. Uživatelé můžou do osobní části zařízení nainstalovat libovolnou aplikaci, kterou si vyberou. Správci můžou spravovat a sledovat akce zahrnuté do pracovního profilu.
+Při správě zařízení s Androidem for Work pomocí Intune nespravujete celé zařízení. Možnosti správy mají vliv jenom na pracovní profil, který se vytvoří v zařízení během registrace. Všechny aplikace, které se nasadí na zařízení pomocí Intune, se nainstalují do pracovního profilu. Kvůli odlišení pracovních aplikací od osobních aplikací v zařízení se u aplikací v pracovním profilu zobrazuje ikona oranžové aktovky. Všechny aplikace pro Android a data mimo oblast Androidu for Work na zařízení budou osobní a pod kontrolou koncového uživatele. Uživatelé můžou do osobní části zařízení nainstalovat libovolnou aplikaci, kterou si vyberou. Správci můžou spravovat a sledovat aplikace a akce zahrnuté do pracovního profilu.
+
+Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete konfigurovat na zařízeních s Androidem for Work. Přečtěte si další informace o [nastavení zásad pro Android for Work](android-for-work-policy-settings-in-microsoft-intune.md).
 
 ## <a name="app-publishing-and-distribution"></a>Publikování a distribuce aplikací
 
-Služba Google Play je nedílnou součástí distribuce a správy aplikací. Všechny aplikace nasazené na zařízení s Androidem for Work v pracovním profilu pocházejí ze služby Play for Work. Pokud budete chtít spravovat a nasazovat aplikace ve službě Play Store, přihlásíte se jako správce Intune k webu Play for Work a schválíte aplikace pro tenanta Intune. Tyto aplikace se budou synchronizovat na konzolu Intune, kde je pak možné je pomocí Intune nasadit a spravovat. Obchodní aplikace vyvinuté ve vaší organizaci je potřeba publikovat ve službě Play for Work za použití konzoly pro publikování aplikací pro Android na Googlu. Obchodní aplikace se musí nakonfigurovat na konzole pro publikování aplikací pro Android. Omezí se tak přístup do vaší organizace.
+Služba Google Play for Work je nedílnou součástí distribuce a správy aplikací na zařízeních s Androidem for Work. Všechny aplikace nasazené na zařízení s Androidem for Work v pracovním profilu pocházejí ze služby Play for Work. Pokud budete chtít spravovat a nasazovat aplikace ve službě Play Store, přihlásíte se jako správce Intune k webu Play for Work a schválíte aplikace pro tenanta Intune. Tyto aplikace se budou synchronizovat na konzolu Intune, kde je pak možné je pomocí Intune nasadit a spravovat. Obchodní aplikace vyvinuté ve vaší organizaci je potřeba publikovat ve službě Play for Work za použití konzoly pro publikování aplikací pro Android na Googlu. Obchodní aplikace se musí nakonfigurovat na konzole pro publikování aplikací pro Android. Omezí se tak přístup do vaší organizace.
 
-Aplikace se instalují bez interakce uživatelů, kteří ani nemusí povolit **instalaci z neznámých zdrojů**. Uživatelé můžou procházet a na svoje zařízení instalovat volitelné nebo dostupné aplikace z Play Store označené jako pracovní. Přečtěte si další informace o [nasazení aplikací pro Android for Work](https://docs.microsoft.com/en-us/intune/deploy-use/android-for-work-apps).
+Aplikace se můžou instalovat bez interakce uživatelů, kteří ani nemusí povolit **instalaci z neznámých zdrojů**. Uživatelé můžou procházet Play Store a na svoje zařízení z něj instalovat volitelné nebo dostupné aplikace. Přečtěte si další informace o [nasazení aplikací pro Android for Work](https://docs.microsoft.com/intune/deploy-use/android-for-work-apps).
 
 ## <a name="app-configuration"></a>Konfigurace aplikací
 
@@ -51,35 +54,33 @@ Android for Work neposkytuje výchozí e-mailovou aplikaci ani nativní objekt e
 
 Intune poskytuje pro aplikace Gmail a Nine Work šablony konfigurace. Ostatní e-mailové aplikace, které podporují konfigurační profily aplikací, je možné nakonfigurovat pomocí zásad konfigurace mobilních aplikací.
 
-Pokud pro zařízení s Androidem for Work používáte podmíněný přístup EAS, je nutné použít e-mailovou aplikaci Gmail nebo Nine Work. Podporuje se také aplikace Microsoft Outlook pro Android nebo kterákoliv jiná e-mailová aplikace, která používá moderní ověřování prostřednictvím ADAL. Přečtěte si další informace o [e-mailových profilech pro firemní e-mail](configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune.md).
+Pokud pro zařízení s Androidem for Work používáte podmíněný přístup Exchange ActiveSync, je nutné použít e-mailovou aplikaci Gmail nebo Nine Work. Podporuje se také aplikace Microsoft Outlook pro Android nebo kterákoliv jiná e-mailová aplikace, která používá moderní ověřování prostřednictvím ADAL. Přečtěte si další informace o [e-mailových profilech pro firemní e-mail](configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune.md).
 
 ## <a name="mobile-app-management-policies"></a>Zásady správy mobilních aplikací
 
-V pracovním i osobním profilu se plně podporují zásady omezení použité u aplikací, které jsou povolené pro správu mobilních aplikací (MAM). Obchodní aplikace je možné publikovat na konzole pro publikování aplikací pro Android na adrese https://play.google.com/apps/publish. Tato konzola zahrnuje možnost nastavit pro vaši organizaci aplikace jako soukromé. Přečtěte si další informace o [nastavení zásad dodržování předpisů](afw-compliance-policy-settings-in-microsoft-intune.md). Další informace najdete v tématu o [zásadách správy mobilních aplikací](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
+V pracovním i osobním profilu se plně podporují zásady omezení použité u aplikací, které jsou povolené pro správu mobilních aplikací (MAM). Obchodní aplikace je možné publikovat na konzole pro publikování aplikací pro Android na adrese https://play.google.com/apps/publish. Tato konzola zahrnuje možnost nastavit pro vaši organizaci aplikace jako soukromé. Přečtěte si další informace o [nastavení zásad dodržování předpisů pro zařízení s Androidem for Work](afw-compliance-policy-settings-in-microsoft-intune.md). Obecné informace o zásadách MAM najdete v článku o [zásadách správy mobilních aplikací](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
 
 ## <a name="vpn-profiles"></a>Profily sítě VPN
 
-Podpora sítě VPN je podobná profilům Android VPN. K dispozici jsou stejní poskytovatelé VPN a základní možnosti konfigurace. Existují dva základní rozdíly:
+Podpora sítě VPN je podobná profilům Android VPN. U správy s Androidem for Work jsou k dispozici stejní poskytovatelé VPN i základní možnosti konfigurace, až na dva rozdíly:
 
-1.  **Síť VPN určená pro pracovní profil** – připojení VPN jsou určená jenom pro aplikace nasazené do pracovního profilu. Připojení VPN můžou použít jenom aplikace spravované v rámci Androidu for Work. Osobní aplikace na zařízení spravované připojení VPN použít nemůžou.
+-  **Síť VPN vymezená pro pracovní profil** – připojení VPN jsou omezená jenom na aplikace nasazené do pracovního profilu. Připojení VPN můžou použít jenom aplikace spravované v rámci Androidu for Work. Osobní aplikace na zařízení spravované připojení VPN použít nemůžou.
 
-2.  **Síť VPN pro určité aplikace** – pokud poskytovatel připojení VPN podporuje konfiguraci pro síť VPN pro určitou aplikaci a poskytuje možnost konfigurovat síť VPN pro určitou aplikaci přes konfigurační profil aplikací pro Android for Work, potom je možné v Intune konfigurovat síť VPN pro určité aplikace. Požádejte poskytovatele sítě VPN o informace, jestli podporuje tuto možnost. Přečtěte si další informace o [profilech připojení VPN](vpn-connections-in-microsoft-intune.md).
+-  **Síť VPN pro určité aplikace** – pokud poskytovatel připojení VPN podporuje konfiguraci pro síť VPN pro určitou aplikaci a poskytuje možnost konfigurovat síť VPN pro určitou aplikaci přes konfigurační profil aplikací pro Android for Work, potom je možné v Intune konfigurovat síť VPN pro určité aplikace. Požádejte poskytovatele sítě VPN o informace, jestli podporuje tuto možnost. Přečtěte si další informace o [profilech připojení VPN](vpn-connections-in-microsoft-intune.md).
 
 ## <a name="certificate-profiles"></a>Profily certifikátů
 
-Na zařízeních s Androidem for Work jsou k dispozici stejné možnosti konfigurace profilu certifikátu, jako jsou k dispozici u tradiční správy Androidu. Android for Work poskytuje vylepšené rozhraní API pro správu certifikátů. Vylepšená správa certifikátů poskytuje následující funkce:
+Na zařízeních s Androidem for Work jsou k dispozici stejné možnosti konfigurace profilů certifikátů, jaké jsou dostupné u správy Androidu. Android for Work poskytuje vylepšené rozhraní API pro správu certifikátů. Vylepšená správa certifikátů poskytuje následující funkce:
 
-1.  Zajišťuje uživatelům tiché a bezproblémové nasazení.
-
-2.  Zajišťuje úplné odebrání nasazených certifikátů po vyřazení zařízení z Intune a odebrání pracovního profilu.
-
-3.  Poskytuje vylepšené zasílání zpráv uživatelům s informacemi o tom, že IT oddělení nasadilo a nakonfigurovalo prostřednictvím svojí služby správy certifikát.
+- Zajišťuje uživatelům tiché a bezproblémové nasazení.
+-  Zajišťuje úplné odebrání nasazených certifikátů po vyřazení zařízení z Intune a odebrání pracovního profilu.
+-  Poskytuje vylepšené zasílání zpráv uživatelům s informacemi o tom, že IT oddělení nasadilo a nakonfigurovalo prostřednictvím svojí služby správy certifikát.
 
 Přečtěte si další informace [o profilech certifikátů](secure-resource-access-with-certificate-profiles.md).
 
 ## <a name="wi-fi-profiles"></a>Profily sítě Wi-Fi
 
-U profilů Wi-Fi spravovaných Androidem for Work je zaručené, že se po vyřazení zařízení z Intune a odstranění pracovního profilu odeberou. Přečtěte si další informace o [profilech Wi-Fi](wi-fi-connections-in-microsoft-intune.md).
+Profily Wi-Fi spravované Androidem for Work se po vyřazení zařízení z Intune a odstranění pracovního profilu odeberou. Přečtěte si další informace o [profilech Wi-Fi](wi-fi-connections-in-microsoft-intune.md).
 
 ## <a name="next-steps"></a>Další kroky
 [Povolení registrace Androidu for Work](https://docs.microsoft.com/en-us/intune/deploy-use/set-up-android-for-work)
@@ -87,6 +88,6 @@ U profilů Wi-Fi spravovaných Androidem for Work je zaručené, že se po vyřa
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 
