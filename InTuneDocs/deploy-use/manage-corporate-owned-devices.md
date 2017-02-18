@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 07/20/2016
+ms.date: 01/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 2b60bbff-25e6-489b-9621-c71b4275fa06
 ms.reviewer: dagerrit
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 58270feb34185441406abc15e1f889c2924722e8
+ms.sourcegitcommit: 521a37044d6721fe905db7740329688ba2c24b35
+ms.openlocfilehash: ae077d80e05b33d625285d796917f4f6c153ca3f
 
 
 ---
@@ -25,6 +26,8 @@ ms.openlocfilehash: 58270feb34185441406abc15e1f889c2924722e8
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Zařízení vlastněná organizací nebo společností můžete do Intune zaregistrovat kvůli správě různým způsobem. Záleží na typu zařízení, způsobu jeho nákupu a potřebách organizace. Můžete také nainstalovat aplikaci Portál společnosti a používat ji k registraci a správě zařízení patřících společnosti, například ve scénářích BYOD (Přineste si vlastní zařízení).
+
+Standardně se do Intune můžou registrovat zařízení pro všechny platformy. Pokud chcete u zařízení zablokovat možnost registrace, přihlaste se pomocí přihlašovacích údajů správce na [portál pro správu Microsoft Intune](http://manage.microsoft.com). Zvolte možnost **Správce** > **Správa mobilního zařízení** > **Pravidla registrace** a potom zrušte zaškrtnutí políček pro platformy, které chcete blokovat.
 
 ## <a name="enroll-corporate-owned-ios-devices"></a>Registrace zařízení s iOSem vlastněných společností
 
@@ -65,6 +68,6 @@ Když je zařízení označené jako firemní, zobrazuje se u záznamu daného z
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO5-->
 
 

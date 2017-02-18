@@ -1,11 +1,11 @@
 ---
-title: "Šifrování zařízení s Windows | Dokumentace Microsoftu"
+title: "Jak chránit zařízení s Windows pomocí šifrování | Dokumentace Microsoftu"
 description: "Popisuje šifrování zařízení s Windows."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 12/20/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,19 +13,24 @@ ms.technology:
 ms.assetid: 8d022ea7-d9b6-43c4-adcd-4f6421606a7f
 searchScope:
 - Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 01d2fcd0202f1ef347693c973edb82acfae6c818
-ms.openlocfilehash: ce4e912259321d72e6bb4278e5b3e8da5cf39332
+ms.sourcegitcommit: 5ca9814992edd0a18d48145243a4be524dbb4f23
+ms.openlocfilehash: c6414623087ed1a61ca26ca83d6ddccb2b1c1f70
 
 
 ---
 
 
-# <a name="encrypt-your-windows-device"></a>Šifrování zařízení s Windows
+# <a name="how-to-protect-your-windows-device-using-encryption"></a>Jak chránit zařízení s Windows pomocí šifrování
 
-Váš správce IT může vyžadovat, abyste svoje zařízení s Windows zašifrovali a chránili tak firemní nebo školní data. Pokud máte telefon s Windows a zaregistrovali jste si ho, zařízení se zašifruje automaticky, pokud se vyžaduje šifrování.
+Při šifrování zařízení balíte informace v zařízení do vrstvy ochranného kódu, který brání neoprávněným osobám v přístupu k nim. Jako další krok k zabezpečení vašich informací vyžaduje vaše organizace, abyste si pro účely ochrany firemních nebo školních dat zašifrovali zařízení s Windows.
+
+> [!Note]
+> Pokud máte telefon s Windows a zaregistrovali jste si ho, zařízení se zašifruje automaticky, pokud se vyžaduje šifrování.
 
 Pokud máte stolní zařízení, je jeho zašifrování popsané v následujících pokynech.
 
@@ -37,6 +42,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaj
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO5-->
 
 

@@ -1,29 +1,36 @@
 ---
-title: "Šifrování zařízení | Microsoft Intune"
-description: "Popisuje šifrování zařízení s Androidem."
+title: "Jak chránit zařízení s Androidem pomocí šifrování | Dokumentace Microsoftu"
+description: "Postup při registraci zařízení s Androidem"
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/7/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
+searchScope:
+- Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 81c0c29e1b874a7f5c7faa1c1216dbaa99ec4543
-ms.openlocfilehash: b8214506ae4609cb5316c66b854fbd572fbac94f
+ms.sourcegitcommit: 5ca9814992edd0a18d48145243a4be524dbb4f23
+ms.openlocfilehash: 727b99f9ca2f0322eb1fee5fec29cd71dc901e01
 
 
 ---
 
 
-# <a name="encrypt-your-device"></a>Zašifrování zařízení
+# <a name="how-to-protect-your-android-device-using-encryption"></a>Jak chránit zařízení s Androidem pomocí šifrování
 
-Pokud vás firma nebo organizace požádá, abyste si před přístupem k firemním souborům, e-mailu nebo datům zašifrovali zařízení s Androidem, postupujte podle níže uvedeného postupu. Můžete být také vyzváni, abyste si před šifrováním nastavili kód PIN nebo heslo, pokud to váš správce IT vyžaduje.
+Při šifrování zařízení balíte informace v zařízení do vrstvy ochranného kódu, který brání neoprávněným osobám v přístupu k nim. Jako další krok k zabezpečení vašich informací vyžaduje vaše organizace, abyste si zašifrovali zařízení s Androidem. Teprve pak budete mít přístup k firemním souborům, e-mailu nebo datům.
+
+> [!Note]
+> Můžete být také vyzváni, abyste si před šifrováním nastavili kód PIN nebo heslo, pokud to váš správce IT vyžaduje.
 
 Pokud byste zrušili registraci telefonu, zůstane zašifrovaný.
 
@@ -61,6 +68,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT (kontaktní údaj
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO5-->
 
 

@@ -1,26 +1,30 @@
 ---
-title: "Správa aplikací Windows Store pro firmy | Microsoft Intune"
+title: "Správa aplikací z Windows Storu pro firmy | Dokumentace Microsoftu"
 description: "Pokud chcete spravovat a nasazovat hromadně zakoupené aplikace z konzoly Intune, připojte Microsoft Intune k Windows Storu pro firmy."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 11/28/2016
+ms.date: 02/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 8e38d47d-0c5e-40ce-b379-29d3657f5c28
-ms.reviewer: jeffgilb
+ms.reviewer: coryfe
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 37044da4c7a58749c7b3423b1872b07d1673603d
+ms.sourcegitcommit: a57ac0e6cb29dbfc87bb09c04bb372228a1d72be
+ms.openlocfilehash: 34e9ce6a5c0b7cb912a54644e6323574c2e041a7
 
 
 ---
 
 # <a name="manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune"></a>Správa aplikací koupených ve Windows Storu pro firmy v Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 [Windows Store pro firmy](https://www.microsoft.com/business-store) je místo, kde můžete najít a zakoupit aplikace pro svoji organizaci, a to jednotlivě i hromadně. Pokud Store propojíte s Microsoft Intune, můžete spravovat hromadně zakoupené aplikace pomocí konzoly Intune. Například:
 * Můžete synchronizovat seznam aplikací, které jste zakoupili ve Storu, s Intune.
 * Aplikace, které jsou synchronizované, se zobrazí v konzole pro správu Intune a můžete je nasadit stejně jako všechny ostatní aplikace.
@@ -42,6 +46,9 @@ Než povolíte synchronizaci v konzole služby Intune, musíte svůj účet ve S
 1. Ujistěte se, že se do Storu pro firmy přihlašujete pomocí stejného účtu tenanta, který používáte k přihlášení do Intune.
 2. Ve Storu pro firmy vyberte **Nastavení** > **Nástroje pro správu**.
 3. Na stránce Nástroje pro správu vyberte **Přidat nástroj pro správu** a zvolte **Microsoft Intune**.
+
+> [!NOTE]
+> Pokud k nasazování aplikací pro Windows Store pro firmy používáte více než jeden nástroj pro správu, mohli jste k Windows Storu pro firmy dříve přidružit jenom jeden z nich. Teď už můžete ke Storu přidružit více nástrojů pro správu, například Intune a Configuration Manager.
 
 Teď můžete pokračovat a nastavit synchronizaci v konzole Intune.
 
@@ -80,6 +87,6 @@ Když nasadíte aplikaci z Windows Storu pro firmy, každý uživatel, který si
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 
