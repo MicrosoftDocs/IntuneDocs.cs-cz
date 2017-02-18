@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: b1e84ef8-a260-4e3d-aaf1-8b3facfecafa
 ms.reviewer: pchacon
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
 ms.openlocfilehash: 11ed6b14bc940940e6fa22f6760420e690ac364f
@@ -42,9 +43,9 @@ Informace v této příručce jsou pro vás vhodné, pokud splňujete následuj�
 Tento průvodce pomůže vaší společnosti, aby se chránila před ztrátou svých dat tím, že v mobilních aplikacích použije zásadu, která vynutí hesla a šifrování dat. Týká se to mobilních aplikací, které zaměstnanci používají pro přístup k citlivým datům a které nejsou plně zaregistrované v řešení pro správu zařízení. Microsoft Intune umožňuje nastavit zásady správy mobilních aplikací (MAM) u mobilních aplikací Office pro [iOS](https://products.office.com/en-us/mobile/office-mobile-apps-for-ios) a [Android](https://products.office.com/en-us/mobile/office-mobile-apps-for-android). Tento přístup chrání data O365, aniž by uživatelé museli zaregistrovat svá zařízení do řešení pro správu mobilních zařízení, a současně zachovává skvělé prostřední pro koncové uživatele mobilních aplikací Office.
 
 ## <a name="how-do-i-do-it"></a>Jak to udělám?
-1.  [Kontrola ochrany dat aplikací](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
-2.  [Příprava před konfigurací zásad správy mobilních aplikací](/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune)
-3.  [Vytvoření a nasazení zásad správy mobilních aplikací](/intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune)
+1.    [Kontrola ochrany dat aplikací](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
+2.    [Příprava před konfigurací zásad správy mobilních aplikací](/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune)
+3.    [Vytvoření a nasazení zásad správy mobilních aplikací](/intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune)
 
 ## <a name="additional-information"></a>Další informace:
 - [Další informace o činnosti koncového uživatele v aplikacích s podporou správy mobilních aplikací (MAM)](/intune/deploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune)

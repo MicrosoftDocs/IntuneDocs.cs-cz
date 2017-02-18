@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
 ms.reviewer: muhosabe
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
 ms.openlocfilehash: 8ef24e4d413662012f091c1be318d1d274e16439
@@ -154,7 +155,7 @@ V konzole správce ISE zadejte tyto hodnoty nastavení:
 ## <a name="information-shared-between-your-intune-tenant-and-your-cisco-ise-server"></a>Informace sdílené mezi vaším tenantem Intune a vaším serverem Cisco ISE
 Tato tabulka uvádí informace sdílené mezi vaším tenantem Intune a vaším serverem Cisco ISE pro zařízení, která jsou spravovaná pomocí Intune.
 
-|Vlastnost|  Popis|
+|Vlastnost|    Popis|
 |---------------|------------------------------------------------------------|
 |complianceState|Řetězec true nebo false určující, jestli zařízení je nebo není vyhovující.|
 |isManaged|Řetězec true nebo false určující, jestli klient je nebo není spravovaný pomocí Intune.|

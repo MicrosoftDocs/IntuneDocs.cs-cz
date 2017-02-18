@@ -12,6 +12,7 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 47806f69-303d-41d9-9b0e-9b9445ea24ac
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
 ms.openlocfilehash: 4133c64d283682f0be37cd6ac69164ef872a5026
@@ -78,13 +79,13 @@ Aby mohli uživatelé zaregistrovat svá zařízení s iOSem, musíte nastavit I
 
 1. **Získání žádosti o podepsání certifikátu**<br/>
 Přihlaste se do Intune se svým účtem správce a přejděte na **Správa** > **Správa mobilních zařízení** > **iOS a Mac OS X** > **Nahrát na server certifikát služby APN** a pak zvolte **Stáhnout žádost o certifikát služby APN**. Uložte soubor žádosti o podepsání certifikátu (.csr) místně. Soubor .csr slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple Push Certificates Portal. <!--- screen shot--->
-2.  **Získání certifikátu APNs (Apple Push Notification Service)**<BR/>
+2.    **Získání certifikátu APNs (Apple Push Notification Service)**<BR/>
 Přejděte na portál [Apple Push Certificates Portal](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=3fbfc9ad8dfedeb78be1d37f6458e72adc3160d1ad5b323a9e5c5eb2f8e7e3e2&rv=2) a přihlaste se pod Apple ID vaší společnosti, abyste mohli vytvořit certifikát APN pomocí souboru .csr. Když zvolíte **Nahrát na portálu Apple Push Certificate Portal**, získáte soubor .json, který se nedá použít pro služby APN. Dokončete stahování a vraťte se na portál Apple Push Certificates Portal do nabídky certifikátů pro servery třetích stran a zvolte **Stáhnout**.
 
  Stáhněte si certifikát služby APN ( soubor .pem) a uložte ho místně. Toto Apple ID musíte později použít k obnovení certifikátu služby APN.
-3.  **Přidání certifikátu APNs do služby Intune**<BR/>
+3.    **Přidání certifikátu APNs do služby Intune**<BR/>
 V konzole pro správu Microsoft Intune přejděte na **Správa** > **Správa mobilních zařízení** > **iOS a Mac OS X** > **Nahrát na server certifikát služby APN** a pak zvolte **Nahrát na server certifikát služby APN**. Přejděte k souboru certifikátu (.pem), zvolte **Otevřít** a zadejte své Apple ID. S certifikátem služby APN může Intune registrovat a spravovat zařízení se systémem iOS vynucením zásad u registrovaných mobilních zařízení.
-4.  **Informujte uživatele, jak můžou svá zařízení zaregistrovat, aby získali přístup k firemním prostředkům.**<br/>
+4.    **Informujte uživatele, jak můžou svá zařízení zaregistrovat, aby získali přístup k firemním prostředkům.**<br/>
 Postup registrace koncových uživatelů najdete v tématech [Registrace zařízení se systémem iOS do Intune](https://docs.microsoft.com/en-us/Intune/enduser/enroll-your-device-in-intune-ios) a [Registrace zařízení s Mac OS X v Intune](https://docs.microsoft.com/en-us/Intune/enduser/enroll-your-device-in-intune-mac-os-x). Proces registrace uživatele informuje, co můžou očekávat a co správci IT na jejich zařízeních uvidí a neuvidí.
 
 

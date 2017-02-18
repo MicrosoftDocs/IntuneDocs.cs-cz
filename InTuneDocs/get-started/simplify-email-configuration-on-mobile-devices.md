@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: 1696c715-1e9a-401e-a530-77904fd189ad
 ms.reviewer: pchacon
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
 ms.openlocfilehash: bf25dd15aa9074692017d94bb94285b4c8e77ca8
@@ -34,8 +35,8 @@ Pokud ano, pak Microsoft Intune dokáže automaticky nakonfigurovat e-mail pro z
 Po konfiguraci e-mailového profilu můžete snadno omezit přístup k firemnímu e-mailu a službám Office 365 pomocí zásad podmíněného přístupu v Intune. Tyto zásady umožňují zajistit, aby byl přístup k firemnímu e-mailu a službám Office 365 omezený na zařízení, která vyhovují vámi nastaveným pravidlům v Intune.
 
 ## <a name="how-do-i-do-it"></a>Jak to udělám?
-1.  Automaticky [nakonfigurujte e-mailové profily koncových uživatelů](/intune/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) na zařízeních s Windows, iOS a Androidem.
-2.  [Přístup k firemnímu e-mailu můžete řídit](/intune/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune) pomocí zásad podmíněného přístupu.
+1.    Automaticky [nakonfigurujte e-mailové profily koncových uživatelů](/intune/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) na zařízeních s Windows, iOS a Androidem.
+2.    [Přístup k firemnímu e-mailu můžete řídit](/intune/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune) pomocí zásad podmíněného přístupu.
 
 
 ### <a name="additional-information"></a>Další informace:

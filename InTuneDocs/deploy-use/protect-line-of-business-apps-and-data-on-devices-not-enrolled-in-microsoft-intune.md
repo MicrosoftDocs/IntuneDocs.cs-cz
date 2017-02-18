@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 ms.reviewer: joglocke
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
 ms.openlocfilehash: 1d3efa5d35e346ea668c71ba8b46ba21b11c39e7
@@ -46,7 +47,7 @@ Pokud chcete ke svým obchodním aplikacím přidružit zásady MAM, musíte do 
 2. V okně **Obchodní aplikace** zvolte **Přidat vlastní aplikaci**.
 
   ![Snímek obrazovky s oknem obchodních aplikací, které v horní části obsahuje tlačítko Přidat vlastní aplikaci](../media/mam-azure-portal-add-lob-app-action.png)
-3.  Zadejte název aplikace, identifikátor sady (do pole Identifikátor aplikace) a platformu (iOS nebo Android).
+3.    Zadejte název aplikace, identifikátor sady (do pole Identifikátor aplikace) a platformu (iOS nebo Android).
 
   ![Snímek obrazovky s oknem Přidat vlastní aplikaci](../media/mam-azure-portal-add-app-details.png)
 
@@ -71,11 +72,11 @@ Pokud potřebujete změnit podrobnosti o aplikaci, jako je třeba název aplikac
 ##  <a name="remove-apps"></a>Odebrání aplikací
 Obchodní aplikaci můžete ze seznamu aplikací odebrat. Tato akce odebere aplikaci ze seznamu a odebere přidružení se zásadami MAM, ale nezpůsobí odebrání nebo odinstalaci aplikace ze zařízení uživatele.  
 
-1.  Na [portálu Azure Portal](https://portal.azure.com/) přejděte na **Správa mobilních aplikací Intune** > **Nastavení**. V okně **Nastavení** zvolte **Obchodní**. Otevře se seznam stávajících aplikací.  
-2.  Zvolte aplikaci, kterou chcete odebrat, a zvolte **kontextovou nabídku (…)**.
+1.    Na [portálu Azure Portal](https://portal.azure.com/) přejděte na **Správa mobilních aplikací Intune** > **Nastavení**. V okně **Nastavení** zvolte **Obchodní**. Otevře se seznam stávajících aplikací.  
+2.    Zvolte aplikaci, kterou chcete odebrat, a zvolte **kontextovou nabídku (…)**.
 
   ![Snímek obrazovky s oknem obchodních aplikací se třemi tečkami](../media/mam-azure-portal-lob-context-menu.png)
-3.  Pokud chcete aplikaci odstranit, zvolte **Odstranit aplikaci**.
+3.    Pokud chcete aplikaci odstranit, zvolte **Odstranit aplikaci**.
 
   ![Snímek obrazovky s oknem obchodních aplikací s možností pro odstranění aplikace](../media/mam-azure-portal-delete-app.png)
 

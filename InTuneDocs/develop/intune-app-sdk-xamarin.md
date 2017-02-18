@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
 ms.reviewer: oydang
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
 ms.openlocfilehash: 74607fc704234e6ac85eae3bf55c186000c6e68a
@@ -57,22 +58,22 @@ Aplikace Xamarin vytvořené pomocí komponenty Xamarin sady Intune App SDK teď
 
 ## <a name="get-started"></a>Začínáme
 
-1.  [Zde](https://components.xamarin.com/submit/xpkg) stáhněte soubor **Xamarin component.exe** a extrahujte ho.
+1.    [Zde](https://components.xamarin.com/submit/xpkg) stáhněte soubor **Xamarin component.exe** a extrahujte ho.
 
 2. Přečtěte si [licenční podmínky](https://components.xamarin.com/license/microsoft.intune.mam) pro komponentu Microsoft Intune MAM Xamarin.
 
-3.  Stáhněte složku komponenty Xamarin sady Intune App SDK z [GitHubu](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) nebo [Xamarinu](https://components.xamarin.com/license/microsoft.intune.mam) a extrahujte ji. Oba soubory stažené v kroku 1 a 2 musí být na úrovni stejného adresáře.
+3.    Stáhněte složku komponenty Xamarin sady Intune App SDK z [GitHubu](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) nebo [Xamarinu](https://components.xamarin.com/license/microsoft.intune.mam) a extrahujte ji. Oba soubory stažené v kroku 1 a 2 musí být na úrovni stejného adresáře.
 
-4.  Na příkazovém řádku jako správce spusťte `Xamain.Component.exe install <.xam> file`.
+4.    Na příkazovém řádku jako správce spusťte `Xamain.Component.exe install <.xam> file`.
 
-5.  Ve Visual Studiu klikněte pravým tlačítkem na **komponenty** ve dříve vytvořeném projektu Xamarin.
+5.    Ve Visual Studiu klikněte pravým tlačítkem na **komponenty** ve dříve vytvořeném projektu Xamarin.
 
-6.  Vyberte **Upravit komponenty** a přidejte komponentu Intune App SDK, kterou jste stáhli do počítače.
+6.    Vyberte **Upravit komponenty** a přidejte komponentu Intune App SDK, kterou jste stáhli do počítače.
 
 
 
 ## <a name="enabling-intune-mam-in-your-ios-mobile-app"></a>Povolení Intune MAM v mobilní aplikaci pro iOS
-1.  Abyste inicializovali Intune App SDK, budete muset provést volání libovolného API ve třídě `AppDelegate.cs`. Například:
+1.    Abyste inicializovali Intune App SDK, budete muset provést volání libovolného API ve třídě `AppDelegate.cs`. Například:
 
       ```csharp
       public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
@@ -83,7 +84,7 @@ Aplikace Xamarin vytvořené pomocí komponenty Xamarin sady Intune App SDK teď
 
       ```
 
-2.  Když je teď komponenta přidaná a inicializovaná, můžete postupovat podle obecných kroků potřebných k začlenění App SDK do mobilní aplikace pro iOS. Kompletní dokumentaci k povolení nativních aplikací iOS najdete v tématu [Intune APP SDK pro iOS – Příručka vývojáře](intune-app-sdk-ios.md).
+2.    Když je teď komponenta přidaná a inicializovaná, můžete postupovat podle obecných kroků potřebných k začlenění App SDK do mobilní aplikace pro iOS. Kompletní dokumentaci k povolení nativních aplikací iOS najdete v tématu [Intune APP SDK pro iOS – Příručka vývojáře](intune-app-sdk-ios.md).
 3. **Důležité**: Existuje několik modifikací, které jsou specifické pro aplikace iOS založené na Xamarinu. Například při povolování skupin řetězců klíčů budete muset přidat následující, abyste zahrnuli ukázkovou aplikaci Xamarin, kterou jsme zahrnuli do komponenty. Tady je příklad skupin, které byste potřebovali mít ve skupinách přístupu řetězce klíčů:
 
       ```xml
@@ -109,15 +110,15 @@ Pro aplikace Androidu založené na Xamarinu, které nepoužívají architekturu
 
 Pro Xamarin Forms a další architektury uživatelského rozhraní nabízíme nástroj, který se jmenuje `MAM.Remapper`. Nástroj provede nahrazení třídy za vás. Budete ale muset provést tyto kroky:
 
-1.  Přidejte odkaz na balíček nuget ` Microsoft.Intune.MAM.Remapper.Tasks` verze 0.1.0.0 nebo vyšší.
+1.    Přidejte odkaz na balíček nuget ` Microsoft.Intune.MAM.Remapper.Tasks` verze 0.1.0.0 nebo vyšší.
 
-2.  Přidejte následující řádek do souboru csproj Androidu:
+2.    Přidejte následující řádek do souboru csproj Androidu:
   ```xml
   <Import
   Project="$(NugetPack)\\Microsoft.Intune.MAM.Remapper.Tasks.0.1.X.X\\build\\MonoAndroid10\\Microsoft.Intune.MAM.Remapper.targets" />
   ```
 
-3.  Nastavte akci tvoření přidaného souboru `remapping-config.json` na **RemappingConfigFile**. Obsažený soubor `remapping-config.json` funguje jenom s Xamarin.Forms. Pro jiné architektury uživatelského rozhraní si přečtěte soubor Readme, který je součástí balíčku nuget Remapper.
+3.    Nastavte akci tvoření přidaného souboru `remapping-config.json` na **RemappingConfigFile**. Obsažený soubor `remapping-config.json` funguje jenom s Xamarin.Forms. Pro jiné architektury uživatelského rozhraní si přečtěte soubor Readme, který je součástí balíčku nuget Remapper.
 
 ## <a name="test-your-app"></a>Otestování aplikace
 
