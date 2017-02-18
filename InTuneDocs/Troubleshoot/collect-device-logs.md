@@ -1,11 +1,11 @@
 ---
-title: "Shromažďování protokolů zařízení | Microsoft Intune"
+title: "Shromažďování protokolů zařízení | Dokumentace Microsoftu"
 description: "Přečtěte si, jak shromažďovat protokoly ze spravovaných zařízení."
 keywords: 
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 11/07/2016
+ms.date: 02/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,17 @@ ms.technology:
 ms.assetid: d97fb610-9d88-40e5-bb06-447eec533630
 ms.reviewer: esmich
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 0c05b4e16f7b0a87215a0cd20f7d559cd8497296
-ms.openlocfilehash: 0f175b1eb2d80a68c8b7864d21f5a9e585de458b
+ms.sourcegitcommit: 211b996263aae7a42f8370eb343c7e759ef87790
+ms.openlocfilehash: 5aae8edd2b851eb94156e82bc9b6e604644cb900
 
 
 ---
 
 # <a name="device-logs"></a>Protokoly zařízení
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Jako součást řešení potíží můžete chtít shromažďovat protokoly ze zařízení uživatelů. Pokyny pro shromažďování těchto protokolů najdete tady. Obvykle potřebujete přístup k zařízení, abyste protokoly získali, nebo požádáte uživatele, aby protokoly shromáždili a poslali vám je.
 
@@ -33,7 +36,7 @@ Další informace o tom, jak vám uživatelé můžou posílat svoje protokoly d
 
 - [Pomoc správci IT s řešením problémů zařízení pomocí podrobného protokolování](/intune/enduser/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android): Popisuje, jak uživatelé můžou zapnout podrobné protokolování, které vám bude automaticky posílat všechny jejich protokoly dat. Ve výchozím nastavení je podrobné protokolování zapnuté.
 
-- [Odeslání protokolů s diagnostickými daty Androidu e-mailem vašemu správci IT](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-email-android)
+- [Odeslání protokolů s diagnostickými daty Androidu e-mailem vašemu správci IT](/intune/enduser/send-logs-to-your-it-admin-by-email-android)
 
 - [Odeslání protokolů s diagnostickými daty správci IT pomocí kabelu USB](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
 
@@ -57,6 +60,6 @@ V případě aplikace Portál společnosti pro Windows se protokoly nacházejí 
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Feb17_HO2-->
 
 

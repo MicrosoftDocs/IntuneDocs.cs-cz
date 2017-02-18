@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: a8e38e29-f5e3-4a71-a170-d3b1a06e37c6
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: fa33bd3833f7f7198eed3f4f486c27bae3ba47d7
-ms.openlocfilehash: 5f05aa4a27be14a05663aa9de82af63291699403
+ms.sourcegitcommit: 70be873367edccdefd724b6aa6959eb67b377bdd
+ms.openlocfilehash: 92dedcd165ffec47f6c5b818533fce08ed04b1a0
 
 
 ---
@@ -95,7 +96,7 @@ Při popisu současného prostředí MDM nezapomeňte poznamenat probíhající 
 | **Oblast řešení** | **Současné prostředí** | **Komentář** |
 |:---:|:---:|:---:|
 | **Identita** | Azure AD, Azure AD Connect, nefederované, bez MFA | Probíhá projekt, který umožní koncem roku začít používat MFA. |                 
-| **Prostředí e-mailu** | Místní Exchange, Exchange Online | V současnosti se místní Exchange migruje na Exchange Online. Už je migrovaných 75 % poštovních schránek. Zbývajících 25 % bude migrováno do začátku pilotního nasazení Intune. |                
+| **Prostředí e-mailu** | Místní Exchange, Exchange Online | V současnosti se místní Exchange migruje na Exchange Online. Už je migrovaných&75; % poštovních schránek. Zbývajících 25 % bude migrováno do začátku pilotního nasazení Intune. |                
 | **SharePoint** | Místní SharePoint | Plány přechodu na SharePoint Online neexistují. |  
 | **Současné řešení MDM** | Exchange ActiveSync |  |
 | **Řešení pro certifikáty** | Microsoft Server 2012 R2, AD Certificate Services | Infrastruktura veřejných klíčů se používá jen pro webové servery. |
@@ -147,7 +148,7 @@ Tady jsou další informace o požadavcích na identitu v Intune:
 
 ### <a name="user-and-device-groups"></a>Skupiny uživatelů a zařízení
 
-Skupiny uživatelů a zařízení určují, kdo bude cílovým příjemcem nasazeného řešení. Nasazení může být zaměřené na zásady, aplikace a profily. Cloudová služba Intune podporuje jenom skupiny uživatelů a zařízení. Potřebujete tedy zjistit požadované skupiny uživatelů a zařízení. Doporučujeme všechny skupiny vytvořit v místním systému Active Directory a potom je synchronizovat s Azure Active Directory. Tady jsou další informace o plánování a vytváření skupin uživatelů a zařízení:
+Skupiny uživatelů a zařízení určují, kdo bude cílovým příjemcem nasazeného řešení. Nasazení může být zaměřené na zásady, aplikace a profily. Čistě cloudová služba Intune podporuje skupiny uživatelů a zařízení. Potřebujete tedy zjistit požadované skupiny uživatelů a zařízení. Doporučujeme všechny skupiny vytvořit v místním systému Active Directory a potom je synchronizovat s Azure Active Directory. Tady jsou další informace o plánování a vytváření skupin uživatelů a zařízení:
 
 -   Další informace o [plánování skupin uživatelů a zařízení](https://docs.microsoft.com/intune/deploy-use/plan-your-user-and-device-groups).
 
@@ -411,6 +412,6 @@ Další část obsahuje pokyny k [procesu implementace Intune](section-8-onboard
 
 
 
-<!--HONumber=Dec16_HO5-->
+<!--HONumber=Jan17_HO3-->
 
 

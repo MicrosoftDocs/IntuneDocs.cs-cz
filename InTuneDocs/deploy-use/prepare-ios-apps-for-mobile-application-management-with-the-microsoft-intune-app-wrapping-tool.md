@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: oldang
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b0abdd44716f8fe0ff8298fa8f6b9f4197964cb9
-ms.openlocfilehash: 06f0f7c436eef63a63182196d4d124b2d928a083
+ms.sourcegitcommit: ee3a0b80f7e534262fbcc8d897e069cff1e35727
+ms.openlocfilehash: a68ffc7be5bcaf55a789ab96035a3f23be0b8b3a
 
 
 ---
@@ -107,6 +108,9 @@ K distribuci aplikací zabalených pomocí Intune budete potřebovat toto:
 
   ![Výběr vnitřního a ad hoc certifikátu](../media/app-wrapper/iOS-signing-cert-3.png)
 
+>[!NOTE]
+>Pokud nechcete aplikaci distribuovat, ale jenom ji interně testovat, můžete místo certifikátu pro výrobu použít certifikát pro vývoj aplikací pro iOS. Když použijete certifikát pro vývoj, zajistěte, aby mobilní zřizovací profil odkazoval na zařízení, na která se bude aplikace instalovat.
+
 7. V dolní části stránky klikněte na **Next** (Další).
 
 8. Přečtěte si pokyny k vytváření **žádosti o podepsání certifikátu (CSR)** pomocí aplikace Klíčenka na počítači s macOS.
@@ -131,11 +135,12 @@ K distribuci aplikací zabalených pomocí Intune budete potřebovat toto:
 
 14. Na certifikát, který jste si právě stáhli, poklikejte, aby se uložil do svazku klíčů.
 
-15. Znovu otevřete **Klíčenku**. Do pravého horního panelu hledání v okně Klíčenky zadejte **iPhone**, aby se našel váš certifikát. Klikněte pravým tlačítkem na danou položku, aby se zobrazila nabídka, a pak klikněte na **Get Info** (Získat informace).
+15. Znovu otevřete **Klíčenku**. Vyhledejte certifikát zadáním jeho názvu do panelu hledání v pravém horním rohu. Klikněte pravým tlačítkem na danou položku, aby se zobrazila nabídka, a pak klikněte na **Get Info** (Získat informace). V ukázkových obrazovkách používáme místo certifikátu pro výrobu certifikát pro vývoj.
+
 
   ![Přidání certifikátu do svazku klíčů](../media/app-wrapper/iOS-signing-cert-8.png)
 
-16. Zobrazí se informační okno. Posuňte se až dolů a podívejte se pod popisek **Fingerprints** (Otisky). Zkopírujte řetězec **SHA1**, který se použije jako parametr -c pro nástroj App Wrapping Tool.
+16. Zobrazí se informační okno. Posuňte se až dolů a podívejte se pod popisek **Fingerprints** (Otisky). Zkopírujte řetězec **SHA1** (rozostřený), který se použije jako argument pro parametr „-c“ nástroje App Wrapping Tool.
 
   ![Přidání certifikátu do svazku klíčů](../media/app-wrapper/iOS-signing-cert-9.png)
 
@@ -269,7 +274,7 @@ Pokud se nástroji App Wrapping nepodaří aplikaci zabalit, zobrazí konzola n�
 |UPOZORNĚNÍ: Nezadali jste hash SHA1 certifikátu. Ujistěte se, že zabalená aplikace je před nasazením podepsaná.|Ověřte, že jste za příznakem příkazového řádku –c zadali platný hash SHA1. |
 
 ### <a name="log-files-for-the-app-wrapping-tool"></a>Soubory protokolu pro nástroj App Wrapping
-Aplikace zabalené nástrojem App Wrapping generují protokoly, které jsou zapsané do konzoly klientského zařízení s iOS. Tyto informace jsou užitečné, pokud máte s aplikací potíže a potřebujete zjistit, jestli nesouvisí s nástrojem App Wrapping. Pro načtení těchto informací použijte následující kroky:
+Aplikace zabalené nástrojem App Wrapping generují protokoly, které jsou zapsané do konzoly klientského zařízení s iOSem. Tyto informace jsou užitečné, pokud máte s aplikací potíže a potřebujete zjistit, jestli nesouvisí s nástrojem App Wrapping. Pro načtení těchto informací použijte následující kroky:
 
 1.  Reprodukujte problém spuštěním aplikace.
 
@@ -294,7 +299,7 @@ Aby bylo možné zaručit plnou funkčnost nástroje App Wrapping Tool pro iOS, 
 
 |Požadavek|Podrobnosti|
 |---------------|-----------|
-|Profil pro zřizování iOS|Zkontrolujte platnost zřizovacího profilu, než ho zahrnete. Při zpracování aplikace pro iOS nástroj App Wrapping nekontroluje, jestli vypršela platnost zřizovacího profilu. Když je zadaný profil zřizování s ukončenou platností, bude nástroj pro zabalení aplikace zahrnovat tento profil a vy nepoznáte, jestli existuje problém, dokud neselže instalace aplikace na zařízení s iOS.|
+|Profil pro zřizování iOS|Zkontrolujte platnost zřizovacího profilu, než ho zahrnete. Při zpracování aplikace pro iOS nástroj App Wrapping nekontroluje, jestli vypršela platnost zřizovacího profilu. Když je zadaný profil zřizování s ukončenou platností, bude nástroj pro zabalení aplikace zahrnovat tento profil a vy nepoznáte, jestli existuje problém, dokud neselže instalace aplikace na zařízení s iOSem.|
 |Podpisový certifikát iOS|Před zadáním podpisového certifikátu zkontrolujte jeho platnost. Nástroj při zpracování aplikací pro iOS nekontroluje, jestli nevypršela platnost certifikátu. Pokud je zadaný hash pro prošlý certifikát, nástroj zpracuje a podepíše aplikaci, ale nenainstaluje ji na zařízení.<br /><br />Zkontrolujte, jestli se certifikát dodaný k podpisu zabalené aplikace shoduje se zřizovacím profilem. Nástroj neověřuje, jestli pro certifikát poskytnutý k podepsání zabalené aplikace existuje shoda ve zřizovacím profilu.|
 |Ověřování|Aby šifrování fungovalo, musí mít zařízení PIN. Když se uživatel zařízení, do kterého jste nasadili zabalenou aplikaci, dotkne stavového řádku, musí se znovu přihlásit přes svůj pracovní nebo školní účet. Podle výchozí zásady zabalené aplikace probíhá *ověřování při opakovaném spuštění*. V iOSu se každé externí oznámení (třeba při telefonním hovoru) zpracuje tak, že se aplikace ukončí a potom znovu spustí.
 
@@ -397,6 +402,6 @@ Při používání nástroje App Wrapping použijte následující doporučené 
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 
