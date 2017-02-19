@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 11/16/2016
+ms.date: 01/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 4682b6b6-c9ef-483e-a6de-b8830cb98b63
 ms.reviewer: cacamp
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 9d891933178d4bdf1079287efc151fe8859c7e83
-ms.openlocfilehash: e91c9da9614791e128a64add822d7f101818b9c0
+ms.sourcegitcommit: 526830839aa801a7ac78aeb4baaa790d6bb5da5c
+ms.openlocfilehash: 8f43dc529b2da2c97500c03056ba7908bb8ab0fa
 
 
 ---
@@ -30,21 +31,33 @@ Podpora pro Intune a pro Intune při použití s nástrojem Configuration Manage
 
 ## <a name="find-help-without-opening-a-support-ticket"></a>Získání pomoci bez otevření lístku podpory
 
-Než budete vytvářet lístek podpory, zkuste najít odpovědi v následujících zdrojích informací.
+Než budete vytvářet lístek podpory, zkuste najít odpovědi a informace v následujících zdrojích informací. Můžeme také doporučit [obecné tipy pro odstraňování potíží v Microsoft Intune](https://docs.microsoft.com/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune).
 
 ### <a name="microsoft-intune-technet-forums"></a>Fóra Microsoft TechNet o Intune
 
 Zeptejte se technických odborníků Microsoftu nebo s nimi zahajte diskusi. Odpovědi a vysvětlení nabízíme na [fóru Microsoft TechNet o Intune](https://social.technet.microsoft.com/Forums/home), které umožňuje i vyhledávání.
 
-    ![Microsoft Intune TechNet Forum](../media/technet-forum-for-support.png)
+![Fórum Microsoft TechNet o Intune](./media/technet-forum-for-support.png)
 
 ### <a name="microsoft-intune-uservoice-product-feedback-site"></a>Web pro zasílání názorů na produkt Microsoft Intune UserVoice
 
 Máte nápad, jak by Microsoft mohl Intune ještě více vylepšit? Svoje nápady můžete přidávat na webu pro zasílání názorů na Microsoft Intune [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas). Také můžete hlasovat o nápadech, které k produktu UserVoice přidali ostatní. 
 
-    ![Microsoft Intune UserVoice feedback page](../media/intune-uservoice-feedback-page.png)
+![Stránka Microsoft Intune UserVoice pro zasílání názorů](./media/intune-uservoice-feedback-page.png)
 
-## <a name="create-an-online-service-ticket"></a>Vytvoření lístku služby online
+## <a name="create-an-online-support-ticket"></a>Vytvoření lístku online podpory
+
+Pokud nemůžete najít odpovědi sami, můžete vytvořit lístek online podpory.
+
+**V každém lístku podpory prosím zadávejte jen jeden problém**, abychom vám mohli lépe pomoci. Důvody jsou následující:
+
+- Inženýři podpory, kteří poskytují pomoc při řešení problémů, se specializují na určité oblasti a je pak jednodušší určit ty správné odborníky na danou problematiku, kteří vám pomohou.
+- Vývojové týmy můžou upřednostnit práci v těch oblastech produktu, kde se generuje nejvíce incidentů.
+- Je snazší předat dál náročné problémy správnému zdroji.
+
+Než vytvoříte lístek podpory, seznamte se prosím s [definicí incidentu podpory](#definition-of-a-support-incident).
+
+**Vytvoření lístku online podpory:**
 
 1.  Přihlaste se k [Centru pro správu Office 365](https://portal.office.com) pomocí svých přihlašovacích údajů Intune.
     >[!NOTE]
@@ -87,12 +100,12 @@ Pokud vaše stránka podpory vypadá takto, postupujte podle následujících po
 ## <a name="get-phone-support"></a>Získání telefonické podpory
 V tématu [Kontaktujte odbornou telefonickou pomoc pro Microsoft Intune](contact-assisted-phone-support-for-microsoft-intune.md) najdete seznam telefonních čísel podpory podle zemí a oblastí, pracovní dobu podpory a podporované jazyky pro každou oblast.
 
-## <a name="track-your-service-requests"></a>Sledování žádostí o služby
+## <a name="track-your-support-requests"></a>Sledování žádostí o podporu
 1.  Přihlaste se k [Centru pro správu Office 365](https://portal.office.com) pomocí svých přihlašovacích údajů Intune.
 2.  Zvolte dlaždici **Správce**.
-3.  Na levé straně v části **Podpora** zvolte možnost **Žádosti o služby**. Potom můžete zkontrolovat své požadavky.
+3.  Na levé straně v části **Podpora** zvolte možnost **Žádosti o služby**. Potom můžete zkontrolovat své žádosti.
 
-Naše prvotní reakce na žádosti o služby závisí na závažnosti problému. U nejzávažnějších problémů je naše první reakce pro zákazníky se smlouvou Professional do dvou hodin. Pro zákazníky se smlouvou Premier Support se reakce liší podle smlouvy o podpoře. Jedná se o tyto případy:
+Naše prvotní reakce na žádosti o podporu závisí na závažnosti problému. U nejzávažnějších problémů je naše první reakce pro zákazníky se smlouvou Professional do dvou hodin. Pro zákazníky se smlouvou Premier Support se reakce liší podle smlouvy o podpoře. Jedná se o tyto případy:
 
 - Jedna nebo více služeb jsou nedostupné nebo nepoužitelné.
 - Produkce, provoz nebo termíny nasazení jsou vážně ohrožené, případně hrozí vážný dopad na produkci nebo ziskovost.
@@ -115,12 +128,6 @@ U ostatních typů problémů je naše první reakce pro zákazníky se smlouvou
 >
 > Technická podpora pro System Center Configuration Manager nebo System Center Endpoint Protection vyžaduje buď platbu nebo se odečte od stávajících licenčních smluv nebo smluv Premier Support.
 
-## <a name="resolve-issues-without-opening-a-support-ticket"></a>Vyřešení problémů bez otevření lístku podpory
-
-Je možné, že budete problém schopni vyřešit, aniž by bylo potřeba otevírat lístek podpory.
-
-Informace o samoobslužné pomoci v Intune najdete v tématu [Obecné tipy pro odstraňování potíží v Microsoft Intune](general-troubleshooting-tips-for-microsoft-intune.md) nebo v některém z témat o odstraňování potíží pro specifické problémy. Řešení také můžete zkusit najít ve [fóru služby Intune](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod), případně tam můžete zadat svůj dotaz.
-
 ## <a name="find-support-for-volume-licensing"></a>Získání podpory pro zákazníky s multilicencemi
 Pokud jste už zakoupili licence od Microsoftu v rámci multilicenčního programu, využijte následující možnosti podpory:
 
@@ -129,6 +136,16 @@ Pokud jste už zakoupili licence od Microsoftu v rámci multilicenčního progra
 -   Pokud máte dotazy k fakturaci, využijte [podporu pro fakturaci a správu předplatného](http://support.microsoft.com/oas/default.aspx?prid=15371).
 
 -   Obecné informace o multilicenčních programech najdete na webu [Licencování](http://go.microsoft.com/fwlink/p/?LinkID=282015).
+
+## <a name="definition-of-a-support-incident"></a>Definice incidentu podpory
+
+Incident podpory znamená jeden problém, který bude řešit oddělení podpory, a úsilí nutné k jeho vyřešení. Jeden problém řešený oddělením podpory nejde rozdělit na dílčí problémy. Pokud můžete identifikovat dílčí problémy, je každý takový problém považován za samostatný incident. K vyřešení daného problému může být potřeba více kontaktů a offline zjišťování informací. Čas strávený na poskytnutí těchto řešení je nezávislý na částce, která se vám bude účtovat.
+
+Podpora „Break-fix“ je součástí předplatných Microsoft Intune a Správy mobilních zařízení pro Office 365, takže otevření dalších incidentů podpory nikdy neznamená další poplatky.
+
+Pokud vás pracovník podpory požádá, abyste otevřeli další incidenty podpory pro další problémy, pochopte prosím, že je to v nejlepším zájmu všech uživatelů. Děkujeme vám, že jste s tím srozuměni a jste našimi partnery. My pak díky tomu můžeme poskytovat prvotřídní možnosti podpory.
+
+Ceny za jednotlivé incidenty a úrovně závažnosti najdete v [možnostech podpory Professional Support](https://support.microsoft.com/gp/offerprophone).
 
 
 
