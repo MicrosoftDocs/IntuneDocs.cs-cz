@@ -1,5 +1,5 @@
 ---
-title: "Ochrana přístupu k SharePointu Online | Dokumentace Microsoftu"
+title: Ochrana SharePointu Online | Dokumentace Microsoftu
 description: "Chraňte a řiďte přístup k podnikovým datům na SharePointu Online pomocí podmíněného přístupu."
 keywords: 
 author: andredm7
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
-ms.openlocfilehash: 2efac12d3564932ebcb3cbe4165fbc7ad4595172
+ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
+ms.openlocfilehash: fad731fe01ba4782b64e8a5af97bd536ae9478d3
 
 
 ---
@@ -143,7 +144,7 @@ V dalším kroku nakonfigurujte zásadu, která bude vyžadovat, aby měla k Sha
         To vyžaduje, aby každé zařízení používané pro přístup k **SharePointu Online** bylo registrované v Intune a dodržovalo tyto zásady. Všechny klientské aplikace používající **moderní ověřování** podléhají zásadám podmíněného přístupu. Pokud Intune příslušnou platformu aktuálně nepodporuje, přístup k **SharePointu Online** je zablokovaný.
 
         Výběr volby **Všechny platformy** způsobí, že Azure Active Directory tyto zásady uplatní na všechny požadavky na ověření bez ohledu na platformu, která je ohlášena klientskou aplikací. Všechny platformy musí být zaregistrované a vyhovující s těmito výjimkami:
-        *   Zařízení s Windows, která musejí být zaregistrovaná a vyhovující, připojená k doméně s místním Active Directory nebo obojí
+        *    Zařízení s Windows, která musejí být zaregistrovaná a vyhovující, připojená k doméně s místním Active Directory nebo obojí
         * Nepodporované platformy jako Mac. Aplikace používající moderní ověřování pocházející z těchto platforem jsou ale i nadále zablokované.
 
     -   **Specifické platformy**
@@ -199,6 +200,6 @@ Vyberte libovolnou skupinu mobilních zařízení. Pak na kartě **Zařízení**
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

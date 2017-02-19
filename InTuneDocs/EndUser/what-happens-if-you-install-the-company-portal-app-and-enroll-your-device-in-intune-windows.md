@@ -1,11 +1,11 @@
 ---
-title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Windows v Intune? | Dokumentace Microsoftu"
+title: "Instalace aplikace Portál společnosti pro Windows | Dokumentace Microsoftu"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,10 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: ae372c141ffd98d280715c454057284c4bd3d6e9
+ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
+ms.openlocfilehash: 7a4b5acea4a4bdce32c42ca33f81778965ee1abb
 
 
 ---
@@ -65,7 +66,7 @@ Když zaregistrujete zařízení, udělujete správci IT oprávnění provést n
 
 -  Správce IT může do vašeho počítače instalovat aplikace a aktualizace.
 
-## <a name="what-happens-every-eight-hours-after-device-enrollment"></a>Co se stane každých 8 hodin po registraci zařízení
+## <a name="what-happens-every-eight-hours-after-device-enrollment"></a>Co se stane každých&8; hodin po registraci zařízení
 Přibližně každých osm hodin proběhne na zaregistrovaných zařízeních toto:
 
 -   Stažení všech zásad nebo aktualizací aplikací, které vám správce IT zpřístupnil
@@ -78,6 +79,6 @@ Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na spr�
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

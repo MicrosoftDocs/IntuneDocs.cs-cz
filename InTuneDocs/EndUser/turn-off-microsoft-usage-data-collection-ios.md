@@ -1,11 +1,11 @@
 ---
-title: "Vypnutí shromažďování dat Microsoftu | Dokumentace Microsoftu"
+title: "Vypnutí shromažďování dat pro iOS Microsoftem | Dokumentace Microsoftu"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 12/20/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,14 +16,15 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
-ms.openlocfilehash: 29fb52fd86aa84a2c5bab6be14d71d198d6b8deb
+ms.sourcegitcommit: 3bda44c401ae7cf5dd796486d2d1a6332828bed1
+ms.openlocfilehash: cea226a32c5c2c6d49f1444e55a986d0c68d5448
 
 
 ---
 
-# <a name="turn-off-microsoft-usage-data-collection"></a>Vypnutí shromažďování dat Microsoftu o využití
+# <a name="how-to-turn-off-microsoft-data-collection"></a>Vypnutí shromažďování dat Microsoftem
 
 Microsoft automaticky shromažďuje určitá data o našich produktech a službách. Děláme to za účelem zvýšení spolehlivosti a výkonu našich produktů, mezi které patří i aplikace Portál společnosti. I když se tato data upravují tak, aby byla anonymní, nemusí být toto shromažďování dat některým uživatelům příjemné. Vaši správci IT nemají nad shromažďováním těchto dat kontrolu a nemůžou u tohoto nastavení změnit vaši volbu.
 
@@ -33,6 +34,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaj
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -1,11 +1,11 @@
 ---
-title: "Ruční synchronizace zařízení pomocí webu Portál společnosti | Dokumentace Microsoftu"
+title: "Synchronizace zařízení s webem Portál společnosti | Dokumentace Microsoftu"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 12/05/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,15 +16,16 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: fbbe9233ae2e07209356a0cec14d085f742e6436
+ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
+ms.openlocfilehash: 1dded693cb60bacb9c0a445bb26c818dde778a7a
 
 
 ---
 
 
-# <a name="use-the-company-portal-website-to-sync-your-device"></a>Synchronizace zařízení pomocí Portálu společnosti
+# <a name="sync-your-device-with-the-company-portal-website"></a>Synchronizace zařízení s webem Portál společnosti
 
 Někdy může instalace aplikace nebo provádění jiné úlohy může trvat déle než obvykle. Pokud to trvá příliš dlouho, můžete zařízení zkusit synchronizovat ručně, abyste vše urychlili.
 
@@ -38,6 +39,6 @@ Někdy může instalace aplikace nebo provádění jiné úlohy může trvat dé
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

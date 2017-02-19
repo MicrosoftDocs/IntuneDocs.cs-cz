@@ -1,11 +1,11 @@
 ---
-title: "Pomoc správci IT s řešením problémů zařízení pomocí podrobného protokolování | Dokumentace Microsoftu"
+title: "Pomozte správci IT s řešením problémů se zařízením pomocí podrobného protokolování | Dokumentace Microsoftu"
 description: "Pomozte svému správci IT s řešením problémů zařízení pomocí podrobného protokolování."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,15 +16,16 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 501b2c5990acce9bc2f8c5efd1efc07fbee1606f
+ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
+ms.openlocfilehash: 352e76d4a2e1d0c9f92fce196d6e699b3cf6e333
 
 
 ---
 
 
-# <a name="use-verbose-logging-to-help-your-it-admin-fix-device-issues"></a>Pomoc správci IT s řešením problémů zařízení pomocí podrobného protokolování
+# <a name="help-your-it-admin-fix-device-issues-with-verbose-logging"></a>Pomozte svému správci IT s řešením problémů se zařízením pomocí podrobného protokolování.
 
 Pokud je vaše zařízení s Androidem zaregistrované v Intune, můžete pomocí *podrobného protokolování* zajistit, aby aplikace Portál společnosti a aplikace spravované přes Intune zaznamenávaly podrobné protokoly aktivit ve vašem zařízení. Tyto protokoly pomůžou vašemu správci IT opravit případné problémy, na které při použití aplikace Portál společnosti nebo aplikace spravované službou Intune narazíte. Podrobné protokolování je v zařízení ve výchozím nastavení povolené a protokoly odesílané vašemu správci IT obsahují vaši e-mailovou adresu.
 
@@ -34,6 +35,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaj
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

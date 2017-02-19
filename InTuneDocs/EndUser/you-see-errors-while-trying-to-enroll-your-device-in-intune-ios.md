@@ -1,22 +1,25 @@
 ---
-title: "Při pokusu o registraci zařízení s iOSem v Intune se zobrazí chyby | Microsoft Intune"
+title: "Při pokusu o registraci zařízení s iOSem v Intune se zobrazí chybové zprávy | Dokumentace Microsoftu"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 12/02/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 92a8d06d-0ecb-4912-898b-993e8eaf4e58
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 57b6bb6076b24299fb54626aa55850bf8c0c2428
-ms.openlocfilehash: df491807386c80dce0f45822fbc64acefda59eb3
+ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
+ms.openlocfilehash: 06866b9db458851dbb23d5ccf741cad3e1d4c5d0
 
 
 ---
@@ -28,7 +31,7 @@ Následující tabulka obsahuje chyby, které se můžou objevit při registraci
 |Chybová zpráva|Problém|Co říct správci IT|
 |-----------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |NoEnrollmentPolicy|Žádné zásady registrace|Zkontrolujte, že jsou nastavené všechny požadavky registrace, například certifikát služby APNs (Apple Push Notification Service), a že je povolené nastavení „iOS jako platforma“. Pokyny najdete v tématu [Nastavení správy zařízení s iOSem a MacOS](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune).|
-|DeviceCapReached|Možná už máte příliš mnoho registrovaných mobilních zařízení.|Než bude moct uživatel zaregistrovat další mobilní zařízení, musí odebrat jedno ze svých aktuálně zaregistrovaných mobilní zařízení z portálu společnosti. Přečtěte si pokyny pro typ zařízení, který používáte: [Android](unenroll-your-device-from-intune-android.md), [iOS](unenroll-your-device-from-intune-ios.md) nebo [Windows](unenroll-your-device-from-intune-windows.md).|
+|DeviceCapReached|Možná už máte příliš mnoho registrovaných mobilních zařízení.|Než bude moct uživatel zaregistrovat další mobilní zařízení, musí odebrat jedno ze svých aktuálně zaregistrovaných mobilní zařízení z Portálu společnosti. Přečtěte si pokyny pro typ zařízení, který používáte: [Android](unenroll-your-device-from-intune-android.md), [iOS](unenroll-your-device-from-intune-ios.md) nebo [Windows](unenroll-your-device-from-intune-windows.md).|
 |APNSCertificateNotValid|Došlo k potížím s certifikátem, který umožňuje komunikaci vašeho mobilního zařízení s podnikovou sítí.<br /><br />Obraťte se na správce IT a sdělte mu, že se vám při pokusu o registraci mobilního zařízení zobrazila zpráva **APNSCertificateNotValid** a že se má podívat na řešení v této tabulce.|Služba APNs (Apple Push Notification Service) poskytuje kanál umožňující registraci zařízení s iOSem. Pokud jste neprovedli kroky k získání certifikátu APNs nebo vypršela jeho platnost, pak budou pokusy o registraci neúspěšné a zobrazí se tato zpráva.<br /><br />Přečtěte si informace o nastavení uživatelů v tématu [Synchronizace služby Active Directory a přidání uživatelů do Intune](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-3) a článku o [uspořádání uživatelů a zařízení](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-5).|
 |AccountNotOnboarded|Došlo k potížím s certifikátem, který umožňuje komunikaci vašeho mobilního zařízení s podnikovou sítí.<br /><br />Obraťte se na správce IT a sdělte mu, že se vám při pokusu o registraci mobilního zařízení zobrazila zpráva **APNSNotOnboarded** a že se má podívat na řešení v této tabulce.|Služba APNs (Apple Push Notification Service) poskytuje kanál umožňující registraci zařízení s iOSem. Pokud jste neprovedli kroky k získání certifikátu APNs nebo vypršela jeho platnost, pak budou pokusy o registraci neúspěšné a zobrazí se tato zpráva.<br /><br />Další informace najdete v tématu [Nastavení správy iOS a Mac s Microsoft Intune](/Intune/Deploy-use/set-up-ios-and-mac-management-with-microsoft-intune).|
 |DeviceTypeNotSupported|Možná jste se pokusili o registraci zařízení s jiným systémem než iOS. Typ mobilního zařízení, které se pokoušíte registrovat, není podporovaný.<br /><br />Zkontrolujte, jestli na zařízení běží systém iOS verze 8.0 nebo novější.<br /><br />Obraťte se na správce IT a sdělte mu, že se vám při pokusu o registraci mobilního zařízení zobrazila zpráva **DeviceTypeNotSupported** a že se má podívat na řešení v této tabulce.|Zkontrolujte, jestli na zařízení uživatele běží systém iOS verze 8.0 nebo novější.|
@@ -37,6 +40,6 @@ Následující tabulka obsahuje chyby, které se můžou objevit při registraci
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

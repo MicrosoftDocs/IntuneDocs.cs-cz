@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,17 +16,18 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
-ms.openlocfilehash: 336a71888b729869be5fc325bd82d841f59428de
+ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
+ms.openlocfilehash: eab9321df021972c91af66ca8b4dc69c8cc8795b
 
 
 ---
 
 
-# <a name="set-the-amount-of-time-before-your-device-is-locked"></a>Nastavení časového intervalu před zablokováním zařízení
+# <a name="how-to-set-the-amount-of-time-before-your-device-is-locked"></a>Nastavení časového intervalu před zablokováním zařízení
 
-Aby vaše data na zařízení s Androidem byla ve větším bezpečí, správce IT může nastavit zásady, které vyžadují nastavení doby, po kterou může být zařízení neaktivní před automatickým zamčením. Pomocí těchto kroků můžete nastavte dobu, než se zařízení zamkne.
+Aby vaše data na zařízení s Androidem byla ve větším bezpečí, může správce IT nastavit zásady, které vyžadují nastavení doby, po kterou může být zařízení neaktivní před automatickým zamčením. Pomocí těchto kroků můžete nastavte dobu, než se zařízení zamkne.
 
 1.  V **Nastavení** zařízení klikněte na **Zabezpečení** &gt; **Automatické uzamčení** (na některých zařízeních se zobrazuje jako **Uzamknout telefon po**).
 
@@ -36,8 +37,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaj
 
 
 
-
-
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

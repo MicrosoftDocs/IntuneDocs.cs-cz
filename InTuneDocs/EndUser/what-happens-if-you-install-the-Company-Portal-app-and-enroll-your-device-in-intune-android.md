@@ -1,11 +1,11 @@
 ---
-title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Androidem v Intune? | Dokumentace Microsoftu"
+title: "Instalace aplikace Portál společnosti pro Android | Dokumentace Microsoftu"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,10 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: d0e244659f8a78504ffa2a0b8a6579c829e3642b
+ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
+ms.openlocfilehash: f80c6e7089519860e822f974753ac9dc0356e055
 
 
 ---
@@ -50,7 +51,7 @@ Když zaregistrujete zařízení se systémem Android, udělujete správci IT op
 
 -   Vynutit šifrování všech dat v zařízení a tím je lépe chránit v případě ztráty nebo odcizení zařízení.
 
-Po přidání zařízení do aplikace Portál společnosti se přibližně každých 8 hodin provedou tyto akce:
+Po přidání zařízení do aplikace Portál společnosti se přibližně každých&8; hodin provedou tyto akce:
 
 -   Stažení všech zásad nebo aktualizací aplikací, které vám správce IT zpřístupnil
 
@@ -62,6 +63,6 @@ Potřebujete pomoc? Obraťte se na správce IT (kontaktní údaje najdete na [we
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

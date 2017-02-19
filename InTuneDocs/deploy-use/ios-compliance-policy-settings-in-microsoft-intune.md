@@ -1,11 +1,11 @@
 ---
-title: "Nastavení zásad dodržování předpisů pro zařízení s iOS | Microsoft Intune"
+title: "Nastavení zásad dodržování předpisů pro zařízení s iOSem | Dokumentace Microsoftu"
 description: "Toto téma popisuje pravidla a nastavení, která můžete použít v zásadách dodržování předpisů pro zařízení s iOS."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 11/14/2016
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,15 +13,18 @@ ms.technology:
 ms.assetid: 4a59d24f-ed58-49b1-b874-b2d4aea3ec76
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d6ff74f0b46baf384dbdedf13ad75538dd33a089
-ms.openlocfilehash: 0ee697472a7cb553d78aef9977381197149c3177
+ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
+ms.openlocfilehash: f4867d18634add8cb6ffc61a4413618b1bea5a4b
 
 
 ---
 
 
-# <a name="compliance-policy-settings-for-ios-devices-in-microsoft-intune"></a>Nastavení zásad dodržování předpisů pro zařízení s iOS v Microsoft Intune
+# <a name="compliance-policy-settings-for-ios-devices-in-microsoft-intune"></a>Nastavení zásad dodržování předpisů pro zařízení s iOSem v Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Nastavení zásad popsané v tomto tématu se týká zařízení s iOSem 8.0 nebo novějším.
 
@@ -49,7 +52,7 @@ Pokud hledáte informace o jiných platformách, vyberte jednu z těchto možnos
 
   Po nastavení vyššího čísla bude uživatel muset vytvořit složitější heslo.
 
-  Pro zařízení s iOS toto nastavení znamená počet speciálních znaků (třeba **!**, **#**, **&amp;**), které musí heslo obsahovat.
+  Pro zařízení s iOSem toto nastavení znamená počet speciálních znaků (třeba **!**, **#**, **&amp;**), které musí heslo obsahovat.
 
 - **Počet minut nečinnosti před vyžádáním hesla**: Určete dobu nečinnosti, než uživatel musí znovu zadat heslo.
 
@@ -82,6 +85,6 @@ Zobrazí se odkaz s informacemi, jak upgradovat. Uživatel může zvolit upgrade
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

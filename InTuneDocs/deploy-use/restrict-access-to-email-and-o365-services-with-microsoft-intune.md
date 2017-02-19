@@ -1,5 +1,5 @@
 ---
-title: "Ochrana přístupu k e-mailu a službám Office 365 | Dokumentace Microsoftu"
+title: Ochrana e-mailu a Office 365 | Dokumentace Microsoftu
 description: "Toto téma popisuje, jak můžete pomocí podmíněného přístupu povolit přístup k podnikovému e-mailu, podnikovým datům na SharePointu Online a k dalším službám jenom kompatibilním zařízením."
 keywords: 
 author: andredm7
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: c564d292-b83b-440d-bf08-3f5b299b7a5e
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
-ms.openlocfilehash: 911c97a724c28b97bb2bc6e236532e4e0d89c7b1
+ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
+ms.openlocfilehash: 399c6260a98d51417a067d001c0fd42c926c1513
 
 
 ---
@@ -82,6 +83,6 @@ Na rozdíl od jiných zásad služby Intune se zásady podmíněného přístupu
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
