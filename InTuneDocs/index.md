@@ -15,8 +15,8 @@ ms.service: microsoft-intune
 ms.suite: ems
 ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
 translationtype: Human Translation
-ms.sourcegitcommit: d63d670f12f27511671b9015ad53a93f1a784c40
-ms.openlocfilehash: eda6352368a3593d56ce8879501e2ebf4fda41f9
+ms.sourcegitcommit: 8c4351761b1e4047a0e997cdfabe3deb35b31e54
+ms.openlocfilehash: 9d35de896e21abd8b7e0026e915745aa6dbcb80f
 
 
 ---
@@ -25,15 +25,15 @@ ms.openlocfilehash: eda6352368a3593d56ce8879501e2ebf4fda41f9
     <section id="hero-content">
       <h1>Dokumentace k Intune</h1>
       <h2>Správa mobilních zařízení a aplikací a správa počítačů z cloudu </h2>
-      <h3>Chcete spravovat Intune pomocí Configuration Manageru? <a href="https://docs.microsoft.com/en-us/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management" target="_blank">Přečtěte si o hybridní správě mobilních zařízení&rarr;.</a></h3>
+      <h3>Chcete spravovat Intune pomocí Configuration Manageru? <a href="https://docs.microsoft.com/en-us/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management" target="_blank">Přečtěte si o hybridní správě mobilních zařízení&rarr;</a>.</h3>
     </section>
     <section id="featured" class="container">
       <h2 class="section-heading"><span class="icon icon-warning"></span> Vybraný obsah</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="http://fasttrack.microsoft.com/ems">150 a více licencí? Využijte výhod FastTracku</a></li>
+          <li><a href="http://fasttrack.microsoft.com/ems">Máte&150; a více licencí? Využijte výhod FastTracku</a></li>
           <li><a href="/intune/understand-explore/common-ways-to-use-intune">Běžné způsoby použití Intune</a></li>
-          <li><a href="/intune-azure/introduction/what-is-microsoft-intune">Intune v Azure Portal Preview</a></li>
+          <li><a href="/intune-azure/introduction/what-is-microsoft-intune">Intune na portálu Azure Portal Preview</a></li>
         </ul>
         <ul class="column column-half">
           <li><a href="/intune/deploy-use/restrict-access-based-on-device-network-app-risk">Ochrana přístupu k firemním prostředkům</a></li>
@@ -140,7 +140,7 @@ ms.openlocfilehash: eda6352368a3593d56ce8879501e2ebf4fda41f9
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune">
+                  <a href="/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune">
                     <h3>Co říct koncovým uživatelům</h3>
                     <p>Pochopte kroky, které koncoví uživatelé musí provést, pokud chtějí používat svá zařízení s Intune, a sdílejte tyto informace s koncovými uživateli, abyste jim usnadnili provádění úloh samostatně.</p>
                   </a>
@@ -285,6 +285,6 @@ ms.openlocfilehash: eda6352368a3593d56ce8879501e2ebf4fda41f9
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 
