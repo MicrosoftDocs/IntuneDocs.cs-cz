@@ -1,5 +1,5 @@
 ---
-title: "Ochrana přístupu k e-mailu na místním Exchangi | Dokumentace Microsoftu"
+title: "Ochrana e-mailu na místním Exchangi | Dokumentace Microsoftu"
 description: "Chraňte a kontrolujte přístup k podnikovým e-mailům v místním systému Exchange pomocí podmíněného přístupu."
 keywords: 
 author: andredm7
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: a55071f5-101e-4829-908d-07d3414011fc
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
-ms.openlocfilehash: 24d000f650cafffc0c998ef80ba52bd06b56afe2
+ms.sourcegitcommit: 53d2c0d5b2157869804837ae2fa08b1cce429982
+ms.openlocfilehash: e3b404526d8e662fd8ae285c144b1d6f5cf22bf3
 
 
 ---
@@ -24,18 +25,19 @@ ms.openlocfilehash: 24d000f650cafffc0c998ef80ba52bd06b56afe2
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
+Pokud chcete řídit přístup k e-mailům v místním systému Exchange nebo ve starším prostředí Exchange Online Dedicated, můžete pomocí Microsoft Intune nakonfigurovat podmíněný přístup.
+Další informace o tom, jak podmíněný přístup funguje, najdete v článku [Ochrana přístupu k e-mailu a službám O365](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+
 > [!NOTE]
 > Pokud máte vyhrazené prostředí Exchange Online a potřebujete zjistit, jestli má novou, nebo starší verzi konfigurace, obraťte se na správce svého účtu.
 
+## <a name="before-you-begin"></a>Před zahájením
 
-Pokud chcete řídit přístup k e-mailům v místním systému Exchange nebo ve starším prostředí Exchange Online Dedicated, můžete nakonfigurovat podmíněný přístup k místnímu systému Exchange pomocí Microsoft Intune.
-Další informace o tom, jak podmíněný přístup funguje, najdete v článku [Ochrana přístupu k e-mailu a službám O365](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
-
-**Před tím**, než nakonfigurujete podmíněný přístup, ověřte, jestli jsou splněné tyto podmínky:
+Nezapomeňte ověřit následující nastavení:
 
 -   Musíte mít **Exchange 2010 nebo novější**. Podporují se pole serveru pro klientský přístup (CAS) Exchange Serveru.
 
--   Musíte použít **místní konektor Exchange**, který připojí [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] k místnímu systému Exchange. To vám umožní spravovat zařízení přes konzolu [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Podrobnosti o konektoru najdete v článku o [místním konektoru Exchange služby Intune](intune-on-premises-exchange-connector.md).
+-   Musíte použít [místní konektor Exchange pro Intune](intune-on-premises-exchange-connector.md), který připojí [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] k místnímu systému Exchange. To vám umožní spravovat zařízení přes konzolu [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
     -   Místní konektor Exchange, který je dostupný v konzole Intune, je určený výhradně pro vašeho tenanta Intune a nedá se použít s žádným jiným tenantem. Doporučujeme, abyste se také ujistili, že je konektor Exchange pro vašeho tenanta nainstalovaný jenom **na jednom počítači**.
 
@@ -47,6 +49,8 @@ Další informace o tom, jak podmíněný přístup funguje, najdete v článku 
 
 -   **Exchange ActiveSync** je potřeba nakonfigurovat s ověřováním na základě certifikátů nebo se zadáváním přihlašovacích údajů uživateli.
 
+### <a name="device-compliance-requirements"></a>Požadavky na dodržování předpisů zařízení
+
 Když nakonfigurujete zásady podmíněného přístupu a jejich cílem je určitý uživatel, může se tento uživatel připojit k e-mailu teprve tehdy, když jeho **zařízení** splňuje tyto požadavky:
 
 -  Musí se jednat o počítač připojený k doméně nebo o zařízení **zaregistrované** ve službě [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
@@ -57,11 +61,13 @@ Když nakonfigurujete zásady podmíněného přístupu a jejich cílem je urči
 
 -   **Musí splňovat** veškeré zásady dodržování předpisů [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], které jsou nasazené na toto zařízení.
 
+### <a name="how-conditional-access-works-with-exchange-on-premises"></a>Jak podmíněný přístup funguje s místním systémem Exchange
+
 Následující diagram znázorňuje postup, který zásady podmíněného přístupu pro místní systém Exchange používají k vyhodnocení toho, jestli se mají zařízení povolit nebo blokovat.
 
 ![Diagram zobrazující průběh rozhodování, jestli má zařízení povolený přístup k místnímu Exchangi, nebo je zablokované](../media/ConditionalAccess8-2.png)
 
-Při nedodržení zásad podmíněného přístupu se uživateli při přihlášení zobrazí jedna z následujících zpráv:
+Pokud se nedodrží zásady podmíněného přístupu, mezi zablokováním zařízení a přijetím jedné z následujících zpráv o karanténě uživatelem při přihlášení je 10minutová prodleva:
 
 - Pokud není zařízení zaregistrované v [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] nebo v Azure Active Directory, zobrazí se zpráva s pokyny k instalaci aplikace Portál společnosti, registraci zařízení a aktivaci e-mailu. Tento proces také přidruží ID protokolu Exchange ActiveSync zařízení k záznamu zařízení v Azure Active Directory.
 
@@ -136,6 +142,6 @@ Podporovaná možnost:
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 

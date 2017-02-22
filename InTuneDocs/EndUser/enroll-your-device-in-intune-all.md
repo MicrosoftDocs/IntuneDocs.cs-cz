@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,16 +13,18 @@ ms.technology:
 ms.assetid: b51dbdd6-aaa3-48dd-a47f-9d01a4ca37f6
 searchScope:
 - Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 50ec5fa3b7286d2da53af849bfaa4bcb27e388a5
+ms.sourcegitcommit: 9530eb45bf027c66c4a36e4cea1ec05c5f15a6e5
+ms.openlocfilehash: d51bef2220ebf199df6f54e307e2f021faa83d33
 
 
 ---
 
 # <a name="enroll-your-device-in-intune"></a>Registrace zařízení v Intune
 
-Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svoje zařízení s Windows zaregistrovat a získat tak přístup k e-mailům, souborům a dalším prostředkům společnosti. Registrace zařízení umožňuje vaší organizaci zabezpečit podniková data. Další informace o registraci a o tom, co správce IT v zařízení uvidí a neuvidí, najdete v odkazech na konci tohoto tématu.
+Pokud vaše společnost nebo škola používá Microsoft Intune, můžete si zaregistrovat svoje zařízení, abyste získali přístup k firemním e-mailům, souborům a dalším prostředkům. Registrace zařízení umožňuje vaší organizaci zabezpečit podniková data. Další informace o registraci a o tom, co správce IT v zařízení uvidí a neuvidí, najdete v odkazech na konci tohoto tématu.
 
 Chcete-li zobrazit pokyny k registraci, použijte odkaz, který odpovídá typu používaného zařízení:
 
@@ -33,6 +35,6 @@ Chcete-li zobrazit pokyny k registraci, použijte odkaz, který odpovídá typu 
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 

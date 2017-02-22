@@ -1,11 +1,11 @@
 ---
-title: "Ochrana přístupu k e-mailu na Exchangi Online | Dokumentace Microsoftu"
+title: Ochrana e-mailu na Exchangi Online | Dokumentace Microsoftu
 description: "Chraňte a kontrolujte přístup k podnikovým e-mailům na Exchange Online pomocí podmíněného přístupu."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 01/03/2017
+ms.date: 01/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
-ms.openlocfilehash: 6078684e3f8e5821f057b890eac5caf388206a82
+ms.sourcegitcommit: 53d2c0d5b2157869804837ae2fa08b1cce429982
+ms.openlocfilehash: ab4b244e733f973581216f3358fce0653609aaaa
 
 
 ---
@@ -25,24 +26,26 @@ ms.openlocfilehash: 6078684e3f8e5821f057b890eac5caf388206a82
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
+Pomocí Microsoft Intune můžete nakonfigurovat podmíněný přístup pro Exchange Online nebo Exchange Online Dedicated. Další informace o tom, jak podmíněný přístup funguje, najdete v článku [Ochrana přístupu k e-mailu, O365 a dalším službám](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+
 > [!NOTE]
 >Pokud máte vyhrazené prostředí Exchange Online a potřebujete zjistit, jestli má novou, nebo starší verzi konfigurace, obraťte se na správce svého účtu.
 
-Pokud chcete řídit přístup k e-mailům na Exchangi Online nebo v novém vyhrazeném prostředí Exchange Online, můžete pomocí Microsoft Intune nakonfigurovat podmíněný přístup k Exchangi Online. Další informace o tom, jak podmíněný přístup funguje, najdete v článku [Ochrana přístupu k e-mailu, O365 a dalším službám](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+## <a name="before-you-begin"></a>Před zahájením
 
+Pokud chcete nakonfigurovat podmíněný přístup, musíte:
 
-**Než** nakonfigurujete podmíněný přístup:
-
--   Musíte mít **předplatné Office 365, které zahrnuje Exchange Online (třeba E3)**, a uživatelé musí mít licenci Exchange Online.
+-   Mít **předplatné Office 365, které zahrnuje Exchange Online (třeba E3)**, a uživatelé musí mít licenci Exchange Online.
 
 - Mít **předplatné Enterprise Mobility + Security (EMS)** nebo **předplatné Azure Active Directory (Azure AD) Premium** a uživatelé musí mít licenci pro EMS nebo Azure AD. Další informace najdete na [stránce s cenami služby Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) nebo na [stránce s cenami služby Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
 
--  Zvažte nakonfigurování nepovinného **konektoru Intune Service to Service Connector**, který bude zajišťovat připojení [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] k Exchangi Online a prostřednictvím konzoly [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] vám pomůže se správou informací o zařízení. K používání zásad dodržování předpisů nebo zásad podmíněného přístupu tento konektor potřeba není, vyžaduje se ale ke spouštění sestav, které pomáhají hodnotit dopad podmíněného přístupu.
+-  Zvážit nakonfigurování nepovinného **konektoru Intune Service to Service Connector**, který bude zajišťovat připojení [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] k Exchangi Online a prostřednictvím konzoly [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] vám pomůže se správou informací o zařízení. K používání zásad dodržování předpisů nebo zásad podmíněného přístupu tento konektor potřeba není, vyžaduje se ale ke spouštění sestav, které pomáhají hodnotit dopad podmíněného přístupu.
+    -  Další informace o [konektoru Intune Service to Service Connector](intune-service-to-service-exchange-connector.md).
 
    > [!NOTE]
-   > Pokud chcete používat podmíněný přístup pro Exchange Online i místní Exchange, konektor Service to Service Connector nekonfigurujte.
+   > Pokud chcete používat podmíněný přístup pro Exchange Online i místní Exchange, konektor Intune Service to Service Connector nekonfigurujte.
 
-   Pokyny ke konfiguraci konektoru najdete v tématu věnovaném [konektoru Intune Service to Service Connector](intune-service-to-service-exchange-connector.md).
+### <a name="device-compliance-requirements"></a>Požadavky na dodržování předpisů zařízení
 
 Když nakonfigurujete zásady podmíněného přístupu a jejich cílem je určitý uživatel, může se tento uživatel připojit k e-mailu teprve tehdy, když jeho **zařízení** splňuje tyto požadavky:
 
@@ -54,12 +57,15 @@ Když nakonfigurujete zásady podmíněného přístupu a jejich cílem je urči
 
 -   Musí být **v souladu** se všemi zásadami dodržování předpisů [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], které jsou nasazené na toto zařízení nebo připojené k místní doméně.
 
-Při nedodržení zásad podmíněného přístupu se uživateli při přihlášení zobrazí jedna z následujících zpráv:
+### <a name="when-the-device-is-not-compliant"></a>Když zařízení nedodržuje předpisy
+
+Pokud se nedodrží zásady podmíněného přístupu, zařízení se okamžitě umístí do karantény, uživatel dostane e-mail a při přihlášení se mu zobrazí následující oznámení o karanténě:
 
 - Pokud není zařízení zaregistrované v [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] nebo v Azure Active Directory, zobrazí se zpráva s pokyny k instalaci aplikace Portál společnosti, registraci zařízení a aktivaci e-mailu. Tento proces také přidruží ID protokolu Exchange ActiveSync zařízení k záznamu v Azure Active Directory.
 
 -   Pokud není zařízení vyhodnoceno jako zařízení vyhovující pravidlům zásad dodržování předpisů, přesměruje se daný uživatel na web Portál společnosti služby [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] nebo na aplikaci Portál společnosti, kde může najít informace o problému a jeho řešení.
 
+### <a name="how-conditional-access-works-with-exchange-online"></a>Jak podmíněný přístup funguje s Exchangem Online
 
 Následující diagram znázorňuje postup, který zásady podmíněného přístupu používají pro Exchange Online.
 
@@ -70,7 +76,6 @@ Můžete chránit přístup k e-mailu na Exchangi Online z **Outlooku** a dalš�
 
 - Android 4.0 a novější, Samsung Knox Standard 4.0 a novější a Android for Work
 - iOS 8.0 a novější
-- Windows Phone 8.1 nebo novější
 
 [!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
@@ -85,7 +90,8 @@ Můžete chránit přístup k aplikaci **Outlook Web Access (OWA)** na Exchangi 
 * Chrome (Android)
 * Intune Managed Browser (iOS, Android 5.0 a novější)
 
-**Nepodporované prohlížeče jsou zablokované**.
+   > [!IMPORTANT]
+   > **Nepodporované prohlížeče jsou zablokované**.
 
 **Aplikaci OWA pro iOS a Android je možné upravit tak, aby nepoužívala moderní ověřování, a proto není podporovaná. Přístup z aplikace OWA je potřeba zablokovat pravidly deklarací identity ADFS.**
 
@@ -204,7 +210,7 @@ Vyhodnocují se jenom skupiny, které jsou cílem zásad podmíněného přístu
         Tato volba vyžaduje, aby každé zařízení používané k přístupu k **Exchangi Online** bylo zaregistrované v Intune a dodržovalo tyto zásady. Všechny klientské aplikace používající **moderní ověřování** podléhají zásadám podmíněného přístupu. Pokud Intune příslušnou platformu aktuálně nepodporuje, je přístup k **Exchangi Online** zablokovaný.
 
         Výběr volby **Všechny platformy** způsobí, že Azure Active Directory tyto zásady uplatní na všechny požadavky na ověření bez ohledu na platformu, která je ohlášena klientskou aplikací. Všechny platformy musí být zaregistrované a vyhovující, s těmito výjimkami:
-        *   Zařízení s Windows, která musejí být zaregistrovaná a vyhovující, připojená k doméně s místním Active Directory nebo obojí
+        *    Zařízení s Windows, která musejí být zaregistrovaná a vyhovující, připojená k doméně s místním Active Directory nebo obojí
         * Nepodporované platformy jako Mac OS. Aplikace, které používají moderní ověřování a pocházejí z těchto platforem, však budou i nadále zablokované.
 
     -   **Specifické platformy**
@@ -272,6 +278,6 @@ Na řídicím panelu [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] zvol
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -2,10 +2,10 @@
 title: "Řešení potíží se službou Endpoint Protection | Dokumentace Microsoftu"
 description: "Řešení problémů během používání služby Microsoft Intune Endpoint Protection."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 08/02/2016
+ms.date: 01/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: e31df2d2-bb1b-491b-9a71-04e0b18829c1
 ms.reviewer: tscott
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: c0942dc6911a67dc7c3fa0c19e5a38ac60ec18b8
+ms.sourcegitcommit: a43fc6fcd33f65725d325060a513d5380baae10f
+ms.openlocfilehash: b47469c8c5d35098e2e932e5ae9c9de4f5cdafb8
 
 
 ---
@@ -24,10 +25,9 @@ ms.openlocfilehash: c0942dc6911a67dc7c3fa0c19e5a38ac60ec18b8
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Informace uvedené v této části vám můžou pomoct při řešení potíží, ke kterým dochází při používání služby Endpoint Protection v Microsoft Intune.
+Informace uvedené v této části vám můžou pomoct při řešení potíží, ke kterým dochází při používání služby Endpoint Protection v Microsoft Intune. Můžete se také podívat na informace týkající se [řešení potíží s programem Windows Defender](https://technet.microsoft.com/itpro/windows/keep-secure/troubleshoot-windows-defender-in-windows-10).
 
 Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md), ve kterém najdete další způsoby, jak získat nápovědu.
-
 
 ### <a name="endpoint-protection-error-messages"></a>Chybové zprávy služby Endpoint Protection
 V této části se popisují možné příčiny následujících chyb a varování zobrazovaných v podokně **Stav produktu Endpoint Protection** v [konzole správce Intune](https://manage.microsoft.com) a jejich řešení.
@@ -52,6 +52,6 @@ Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podpor
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 

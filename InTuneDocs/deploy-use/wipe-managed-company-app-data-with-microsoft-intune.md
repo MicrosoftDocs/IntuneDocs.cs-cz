@@ -2,10 +2,10 @@
 title: "Vymazání spravovaných firemních dat aplikací | Dokumentace Microsoftu"
 description: "Přečtěte si, jak můžete selektivně odebrat firemní data ze zařízení vzdáleně."
 keywords: 
-author: stabar
-ms.author: staciebarker
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.date: 01/11/2017
+ms.date: 01/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,56 +13,81 @@ ms.technology:
 ms.assetid: 2742e1d5-d2d5-42cd-b719-665dd6e0a0e9
 ms.reviewer: joglocke
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 89f5dc1581571cfcb6e03b5dce740bc7f8a8a9ce
-ms.openlocfilehash: a02a015ce1208ee5fa081e60ce0b88c69d4efa50
+ms.sourcegitcommit: 8a3e8634769b05e6639f7efb6394b7333d998f06
+ms.openlocfilehash: 5d5cde748aa8fa464526d0dc2b2ef9ee460fff9d
 
 
 ---
 
-# <a name="wipe-managed-company-app-data-with-microsoft-intune"></a>Vymazání spravovaných firemních dat aplikací s Microsoft Intune
+# <a name="wipe-company-app-data-with-intune-mam"></a>Vymazání dat firemních aplikací pomocí správy mobilních aplikací Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 V případě ztráty nebo odcizení zařízení nebo když zaměstnanec opouští společnost, je vhodné se ujistit, že byla ze zařízení odebraná firemní data. Nemusí ale být vhodné odebrat ze zařízení osobní data, zvlášť jestli je to zařízení, které vlastní zaměstnanec.
 
 Pokud chcete selektivně odebrat data firemních aplikací, vytvořte žádost o vymazání pomocí kroků v tomto tématu. Po dokončení žádosti se při příštím spuštění aplikace na zařízení z aplikace odeberou firemní data.
->[!NOTE]
-> Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou. Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. To se v současné době týká jenom aplikace Microsoft Outlook.
 
-
+>[!IMPORTANT]
+> Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou. Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. V současnosti to platí jen pro aplikaci Microsoft Outlook.
 
 ## <a name="create-a-wipe-request"></a>Vytvoření žádosti o vymazání
 
-1.  Přihlaste se k portálu Azure a zvolte **Další služby** > **Jiné** > **Intune**.
+1.  Přihlaste se k [portálu Azure](https://portal.azure.com).
 
-2.  V okně Intune zvolte **Spravovat aplikace**.
+2.  Zvolte **Další služby**, do textového pole filtru zadejte **Intune** a vyberte **Intune App Protection**. Otevře se okno Správa mobilních aplikací Intune.
 
-3.  Vyberte **Nová žádost o vymazání**. Otevře se snímek obrazovky okna **Nová žádost o vymazání**.
+    ![Snímek obrazovky okna Nová žádost o vymazání](../media/AppManagement/wipe-request-mam-main-blade.png)
+
+2.  V okně **Nastavení** zvolte **Žádosti o vymazání**.
+
+3.  Zvolte **Nová žádost o vymazání**. Otevře se okno **Nová žádost o vymazání**.
 
     ![Snímek obrazovky okna Nová žádost o vymazání](../media/AppManagement/AzurePortal_MAM_NewWipeRequest.png)
 
 4.  Vyberte **Uživatel** k otevření okna **Uživatel** a vyberte uživatele, jehož data aplikací chcete vymazat.
 
-5.  Vyberte **Zařízení**.  Otevře se okno **Zařízení** , ve kterém jsou uvedena všechny zařízení přidružená k vybranému uživateli.  Vyberte zařízení, které chcete vymazat.
+5.  Vyberte **Zařízení**. Otevře se okno **Zařízení** se seznamem všech zařízení přidružených k vybranému uživateli. Jeho součástí jsou dva sloupce s názvem zařízení, což je popisný název definovaný uživatelem, a s typem zařízení, který označuje jeho platformu. Vyberte zařízení, které chcete vymazat.
 
-6.  Teď jste zpátky v okně **Nová žádost o vymazání**. Pokud chcete vytvořit žádost o vymazání, vyberte **OK**. Služba vytvoří a sleduje samostatnou žádost o vymazání pro každou chráněnou aplikaci na zařízení.
+6.  Teď jste zpátky v okně **Nová žádost o vymazání**. Pokud chcete vytvořit žádost o vymazání, vyberte **OK**. 
 
-![Snímek obrazovky dlaždice Žádosti o vymazání ](../media/AppManagement/AzurePortal_MAM_WipeRequestsSummary.png)
+Služba vytvoří a sleduje samostatnou žádost o vymazání pro každou chráněnou aplikaci na zařízení a uživatele přidruženého k této žádosti o vymazání.
+
+>[!NOTE]
+> **Žádosti o vymazání** můžete vytvořit také kliknutím na **dlaždici Žádost o vymazání** v okně Správa mobilních aplikací Intune.
 
 ## <a name="monitor-your-wipe-requests"></a>Monitorování žádostí o vymazání
 
-Na dlaždici **Žádost o vymazání** se nachází souhrnná sestava, která zobrazuje celkový stav žádosti o vymazání a také počet nevyřízených a neúspěšných žádostí. Další podrobnosti získáte tímto postupem:
+Můžete získat souhrnnou sestavu, která zobrazuje celkový stav žádostí o vymazání a také počet nevyřízených a neúspěšných žádostí. Další podrobnosti získáte tímto postupem:
 
-1.  V okně Intune zvolte **Spravovat aplikace**.
+1.  V okně Správa mobilních aplikací Intune klikněte na dlaždici **Žádosti o vymazání**.
 
 2.  V okně **Žádost o vymazání** zvolte dlaždici **Žádost o vymazání** a otevřete okno **Žádost o vymazání**.
 
 3.  V okně **Žádost o vymazání** můžete zobrazit seznam žádostí seskupených podle uživatele. Protože systém vytvoří žádost o vymazání pro každou chráněnou aplikaci spuštěnou na zařízení, může být u uživatele více žádostí. Stav označuje, jestli je žádost o vymazání **nevyřízená**, **selhala** nebo byla **úspěšná**.
 
-Aby k vymazání došlo, musí uživatel otevřít aplikaci. Po zadání požadavku může vymazání samotné trvat až 30 minut.
+    ![Snímek obrazovky okna Nová žádost o vymazání](../media/AppManagement/wipe-request-status-1.png)
 
-Vymazání v čekajícím stavu se zobrazují, dokud je ručně neodstraníte.  Pokud chcete požadavek na vymazání odstranit ručně, klikněte na něj pravým tlačítkem a zvolte odstranit.
+Uvidíte také název zařízení a jeho typ, což vám pomůže při orientaci v těchto sestavách.
+
+>[!IMPORTANT]
+> Aby k vymazání došlo, musí uživatel otevřít aplikaci. Po zadání požadavku může vymazání samotné trvat až 30 minut.
+
+## <a name="delete-a-wipe-request"></a>Odstranění žádosti o vymazání
+
+Vymazání v čekajícím stavu se zobrazují, dokud je ručně neodstraníte.  Ruční odstranění žádosti o vymazání
+
+1.  V okně Správa mobilních aplikací Intune klikněte na dlaždici **Žádosti o vymazání**.
+
+2.  V okně **Žádost o vymazání** zvolte dlaždici **Žádost o vymazání** a otevřete okno **Žádost o vymazání**.
+
+3.  Klikněte pravým tlačítkem na žádost o vymazání, kterou chcete odstranit, a zvolte **Odstranit žádost o vymazání**.
+
+    ![Snímek obrazovky okna Nová žádost o vymazání](../media/AppManagement/delete-wipe-request.png)
+
+4.  Zobrazí se výzva k potvrzení odstranění. Zvolte **Ano** nebo **Ne** a klikněte na **OK**.
+
 
 ### <a name="see-also"></a>Související témata
 [Ochrana dat aplikací pomocí zásad správy mobilních aplikací](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
@@ -71,6 +96,6 @@ Vymazání v čekajícím stavu se zobrazují, dokud je ručně neodstraníte.  
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 

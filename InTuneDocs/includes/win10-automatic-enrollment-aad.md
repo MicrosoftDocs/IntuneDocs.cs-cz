@@ -1,4 +1,4 @@
-## <a name="azure-active-directory-enrollment"></a>Registrace Azure Active Directory
+## <a name="set-up-windows-10-and-windows-10-mobile-automatic-enrollment-with-azure-active-directory-premium"></a>Nastavení automatické registrace Windows 10 a Windows 10 Mobile ve službě Azure Active Directory Premium
 
 Automatický zápis umožňuje registraci i uživatelům počítačů se systémem Windows 10 nebo zařízení Windows 10 Mobile, které patří jiným společnostem nebo soukromníkům. Stačí v Intune zadat pracovní nebo školní účet a souhlasit se správou. Opravdu je to takhle jednoduché. Na pozadí se uživatelovo zařízení zaregistruje a připojí ke službě Azure Active Directory. Po registraci je zařízení spravováno přes Intune.
 
@@ -11,13 +11,13 @@ Automatický zápis umožňuje registraci i uživatelům počítačů se systém
 
 1. Na [portálu pro správu Azure](https://manage.windowsazure.com) (https://manage.windowsazure.com) přejděte na uzel **Služby Active Directory** a vyberte svůj adresář.
 
-2. Klikněte na kartu **Aplikace**. V seznamu aplikací by se měla zobrazit položka **Microsoft Intune**.
+2. Vyberte kartu **Aplikace**. V seznamu aplikací se objeví **Microsoft Intune**.
 
     ![Aplikace Azure AD s Microsoft Intune](../media/aad-intune-app.png)
 
-3. Kliknutím na šipku u **Microsoft Intune** byste měli vyvolat stránku, která vám umožní nakonfigurovat službu Microsoft Intune.
+3. Vyberte šipku pro **Microsoft Intune**. Uvidíte stránku, na které můžete nakonfigurovat Microsoft Intune.
 
-4. Kliknutím na tlačítko **Konfigurovat** spusťte konfiguraci automatického zápisu MDM s Microsoft Intune.
+4. Výběrem možnosti **Konfigurovat** spusťte konfiguraci automatické registrace MDM v Microsoft Intune.
 
 5. Zadejte adresy URL pro Intune:
 
@@ -34,6 +34,6 @@ Automatický zápis umožňuje registraci i uživatelům počítačů se systém
 7. Vyberte **Uložit**.
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Registrace zařízení s Windows v Intune | Microsoft Intune"
+title: "Registrace zařízení s Windows v Intune | Dokumentace Microsoftu"
 description: "Popisuje registraci zařízení s Windows v Intune."
 keywords: 
 author: barlanmsft
@@ -11,11 +11,14 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: d217ddcf-4908-4047-97a1-716bd433a13c
+searchScope:
+- Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 1515eef929d08f8639921313d1cfcb0ea6964fa9
+ms.sourcegitcommit: 9530eb45bf027c66c4a36e4cea1ec05c5f15a6e5
+ms.openlocfilehash: 7696deb59bae37bb424ae3e659a67f3d3f91ace7
 
 
 ---
@@ -23,7 +26,7 @@ ms.openlocfilehash: 1515eef929d08f8639921313d1cfcb0ea6964fa9
 
 # <a name="enroll-your-windows-device-in-intune"></a>Registrace zařízení se systémem Windows do Intune
 
-Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svoje zařízení s Windows zaregistrovat a získat tak přístup k e-mailům, souborům a dalším prostředkům společnosti. Když svoje zařízení zaregistrujete, dokáže vaše organizace uchovat firemní data v bezpečí. Další informace o registraci najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) a v tématu [Co má a nemá správce IT oprávnění vidět na vašem zařízení](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
+Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svoje zařízení s Windows zaregistrovat a získat tak přístup k e-mailům, souborům a dalším prostředkům společnosti. Když svoje zařízení zaregistrujete, dokáže vaše organizace uchovat firemní data v bezpečí. Další informace o registraci najdete v článcích [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) a [Co správce IT uvidí při registraci zařízení v Intune](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
 K registraci použijte odkaz odpovídající zařízení, které používáte:
 
@@ -33,6 +36,6 @@ K registraci použijte odkaz odpovídající zařízení, které používáte:
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 
