@@ -4,7 +4,7 @@ description: "Povolte správu mobilních zařízení (MDM) pro zařízení s Win
 keywords: 
 author: staciebarker
 manager: stabar
-ms.date: 02/09/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 9a18c0fe-9f03-4e84-a4d0-b63821bf5d25
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 45c32cf08e4d6fd570af287ed64411edc9d9b394
-ms.openlocfilehash: e020ac2a4f600a94e7409e04c4c48f0c405c56cf
+ms.sourcegitcommit: 115eae8e2d733397eb4b0f025789ca7d0522a845
+ms.openlocfilehash: 5dc90c1e1ddba91fe8bbb4530eb09bca0c9e3ac9
 
 
 ---
@@ -25,13 +25,13 @@ ms.openlocfilehash: e020ac2a4f600a94e7409e04c4c48f0c405c56cf
 
 K nastavení registrace zařízení s Windows použijte jednu z následujících metod:
 
-- **[Automatická registrace Windows 10 a Windows 10 Mobile ve službě Azure Active Directory Premium](#set-up-windows-10-and-windows-10-mobile-automatic-enrollment-with-azure-active-directory-premium)** 
+- [**Automatická registrace Windows 10 a Windows 10 Mobile ve službě Azure Active Directory Premium**](#set-up-windows-10-and-windows-10-mobile-automatic-enrollment-with-azure-active-directory-premium) 
  -  Tuto metodu je možné použít jenom pro zařízení s Windows 10 a Windows 10 Mobile.
  -  Abyste mohli tuto metodu použít, musíte mít službu Azure Active Directory Premium. Pokud ji nemáte, použijte metodu registrace určenou pro Windows 8.1 a Windows Phone 8.1.
  -  Pokud se rozhodnete, že nepovolíte automatickou registraci, použijte metodu registrace určenou pro Windows 8.1 a Windows Phone 8.1.
 
 
-- **[Registrace Windows 8.1 a Windows Phone 8.1 pomocí konfigurace CNAME](#set-up-windows-8--1-and-windows-phone-8--1-enrollment-by-configuring-cname)** 
+- [**Registrace Windows 8.1 a Windows Phone 8.1 pomocí konfigurace záznamu CNAME**](#set-up-windows-81-and-windows-phone-81-enrollment-by-configuring-cname) 
  - K registraci zařízení s Windows 8.1 a Windows Phone 8.1 musíte použít tuto metodu.
 
 [!INCLUDE[AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
@@ -46,8 +46,6 @@ Pokud jste to ještě neudělali, připravte se na správu mobilních zařízen�
 Vytvořte záznamy o prostředcích DNS **CNAME** pro doménu vaší společnosti. Pokud má třeba vaše společnost web contoso.com, vytvořili byste ve službě DNS záznam CNAME, který přesměruje adresu EnterpriseEnrollment.contoso.com na EnterpriseEnrollment-s.manage.microsoft.com.
 
     Vytváření položek CNAME DNS není povinné, ale záznamy CNAME usnadňují uživatelům registraci. Pokud se nenajde žádný záznam CNAME pro registraci, zobrazí se uživatelům výzva, aby ručně zadali název serveru MDM: enrollment.manage.microsoft.com.    
-
-    Pokud máte v současnosti ve službě DNS záznam CNAME, který přesměrovává adresu EnterpriseEnrollment.contoso.com na adresu manage.microsoft.com, doporučujeme nahradit ho záznamem CNAME ve službě DNS, který přesměruje adresu EnterpriseEnrollment.contoso.com na adresu enterpriseenrollment-s.manage.microsoft.com. Tuto změnu doporučujeme, protože koncový bod manage.microsoft.com už bude v budoucí verzi pro registrace zastaralý.
 
     Záznamy o prostředcích CNAME musí obsahovat následující informace:
 
@@ -78,6 +76,6 @@ Vytvořte záznamy o prostředcích DNS **CNAME** pro doménu vaší společnost
 
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

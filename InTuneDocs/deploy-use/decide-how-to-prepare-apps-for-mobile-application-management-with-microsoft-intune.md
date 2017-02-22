@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: oldang
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b15f56f6e771faeb924668aa68140ab89a174b8d
-ms.openlocfilehash: c9bba34d2252e6b9dff295724f9c935c558aa179
+ms.sourcegitcommit: 06e0a74dd2c0b861497062f2d659c5eb08126fca
+ms.openlocfilehash: 6ec9f6136cf23b9015da125817bfeb86ecfbfca6
 
 
 ---
@@ -55,7 +56,7 @@ Další informace o nástroji App Wrapping pro MAM na zařízeních, která nejs
 ## <a name="intune-app-sdk"></a>Sada Intune App SDK
 Sada App SDK je určená hlavně zákazníkům, kteří mají aplikace v App Storu nebo obchodu Google Play a chtějí mít možnost spravovat je pomocí Intune. Nicméně využít integraci sady SDK může jakákoli aplikace, i obchodní aplikace.
 
-Další informace o sadě SDK najdete v tématu [Přehled](/intune/develop/intune-app-sdk). Pokud chcete začít používat sadu SDK, přečtěte si téma [Začínáme s Microsoft Intune App SDK](/intune/develop/intune-app-sdk-get-started).
+Další informace o sadě SDK najdete v tématu [Přehled](../develop/intune-app-sdk.md). Pokud chcete začít používat sadu SDK, přečtěte si téma [Začínáme s Microsoft Intune App SDK](../develop/intune-app-sdk-get-started.md).
 
 ### <a name="reasons-to-use-the-sdk"></a>Důvody pro použití sady SDK
 * Aplikace nemá předdefinované funkce ochrany dat.
@@ -69,8 +70,8 @@ Další informace o sadě SDK najdete v tématu [Přehled](/intune/develop/intun
 
 |**Intune App SDK** |**Xamarin** |**Cordova**
 |------|----|----|
-|**iOS**|Ano – Použijte [komponentu Xamarin sady Intune App SDK](/../develop/intune-app-sdk-xamarin).|Ano – Použijte [modul plug-in Cordova sady Intune App SDK](/../develop/intune-app-sdk-cordova).|
-|**Android**| Ano – Použijte [komponentu Xamarin sady Intune App SDK](/../develop/intune-app-sdk-xamarin).|Ano – Použijte [modul plug-in Cordova sady Intune App SDK](/../develop/intune-app-sdk-cordova).|
+|**iOS**|Ano – Použijte [komponentu Xamarin sady Intune App SDK](../develop/intune-app-sdk-xamarin.md).|Ano – Použijte [modul plug-in Cordova sady Intune App SDK](../develop/intune-app-sdk-cordova.md).|
+|**Android**| Ano – Použijte [komponentu Xamarin sady Intune App SDK](../develop/intune-app-sdk-xamarin.md).|Ano – Použijte [modul plug-in Cordova sady Intune App SDK](../develop/intune-app-sdk-cordova.md).|
 
 ## <a name="feature-comparison"></a>Porovnání funkcí
 Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a nástroji App Wrapping.
