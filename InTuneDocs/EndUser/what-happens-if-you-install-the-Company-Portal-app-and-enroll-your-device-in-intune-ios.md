@@ -18,8 +18,8 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
-ms.openlocfilehash: 8e10aa7c1db7490a462032e1bf86c7509b7b0e18
+ms.sourcegitcommit: 0e6b7ae1794ff0857dfb203eb3c67d7ba494bd8e
+ms.openlocfilehash: d593b00ee3fd30adec6c36c3939c895647e8dada
 
 
 ---
@@ -38,36 +38,6 @@ Když nainstalujete aplikaci Portál společnosti a pak v ní zaregistrujete sv�
 -   Automatické nastavení e-mailového účtu vaší společnosti
 
 Když svoje zařízení zaregistrujete do služby Intune, udělíte tím správci IT oprávnění ke správě vašeho zařízení, aby bylo možné lépe chránit informace společnosti na daném zařízení.
-
-**Co správce IT nevidí**
-
--   Webová historie a historie volání
-
--    Umístění
-
--   Textové a e-mailové zprávy
-
--   Kontakty
-
--    Hesla
-
--   Kalendář
-
--   Z fotoaparátu
-
-**Co správce IT vidí**
-
--   Model
-
--   Sériové číslo
-
--   Operační systém
-
--   Názvy aplikací
-
--   Vlastník
-
--   Název zařízení
 
 Po registraci vašeho zařízení může správce IT provádět tyto akce:
 
@@ -99,6 +69,6 @@ Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na spr�
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO3-->
 
 

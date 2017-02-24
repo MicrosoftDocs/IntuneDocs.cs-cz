@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 01/04/2017
+ms.date: 01/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: dbe5cad1-3e0d-41a9-966b-738156089700
 ms.reviewer: lacranda
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 26ddc03985ab8a4959a1d2c9a47e77f042ab9310
-ms.openlocfilehash: 6b74c09c37970429d3eaa571db655854d592a2fe
+ms.sourcegitcommit: 6b99854e17e00a0dd0f91fa82fd1b79d1dfe5663
+ms.openlocfilehash: 8e2588e2bb0537877f0164bc996fa973f25ea4dd
 
 
 ---
@@ -25,6 +26,8 @@ ms.openlocfilehash: 6b74c09c37970429d3eaa571db655854d592a2fe
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Správce Intune může na Portálu společnosti povolit správu zařízení s Androidem, včetně zařízení se sadou Samsung Knox Standard. Uživatelé pak mohou k registraci svých zařízení použít aplikaci Portál společnosti, která je k dispozici v obchodě Google Play.
+
+Zařízení s Androidem se standardně můžou registrovat do Intune. Pokud chcete u zařízení s Androidem zablokovat možnost registrace, přihlaste se pomocí přihlašovacích údajů správce na [portál pro správu Microsoft Intune](http://manage.microsoft.com). Zvolte **Správce** > **Správa mobilního zařízení** > **Pravidla registrace** a potom zrušte zaškrtnutí políčka **Povolit zařízení s Androidem**.
 
 1.  **Nastavení Intune**<br>
     Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení [nastavením autority pro správu mobilních zařízení](prerequisites-for-enrollment.md#step-2-set-mdm-authority) na **Microsoft Intune** a nastavením správy MDM.
@@ -37,7 +40,7 @@ Správce Intune může na Portálu společnosti povolit správu zařízení s An
     Postup registrace koncových uživatelů najdete v tématu [Registrace zařízení s Androidem v Intune](../enduser/enroll-your-device-in-intune-android.md). Proces registrace uživatele informuje, co můžou očekávat a co správci IT na jejich zařízeních uvidí a neuvidí.
 
     Informace o dalších úlohách koncových uživatelů najdete v článcích:
-  - [Materiály o prostředí Microsoft Intune pro koncové uživatele](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+  - [Materiály o prostředí Microsoft Intune pro koncové uživatele](how-to-educate-your-end-users-about-microsoft-intune.md)
   - [Pokyny pro koncové uživatele zařízení s Androidem](../enduser/using-your-android-device-with-intune.md)
 
 Vzhledem k absenci obchodu Google Play v Číně musí zařízení s Androidem získávat Portál společnosti z čínských marketplace aplikací. Aplikace Portál společnosti pro Android bude dostupná ke stažení v těchto obchodech:
@@ -62,6 +65,6 @@ Ke komunikaci se službou Microsoft Intune používá aplikace Portál společno
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 

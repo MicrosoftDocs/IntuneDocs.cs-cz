@@ -1,11 +1,11 @@
 ---
-title: "Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Windows 10 v Intune? | Dokumentace Microsoftu"
+title: "Instalace aplikace Portál společnosti pro Windows 10 | Dokumentace Microsoftu"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,13 +16,13 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 1f872d245144727406d926b0c9401827939470f1
+ms.sourcegitcommit: 0e6b7ae1794ff0857dfb203eb3c67d7ba494bd8e
+ms.openlocfilehash: 329d34e7a6ad83512e98dce85e1effe9c54a1bce
 
 
 ---
-
 
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-10-device-in-intune"></a>Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Windows 10 v Intune?
 
@@ -36,7 +36,7 @@ Když nainstalujete aplikaci Portál společnosti a potom v ní zaregistrujete s
 
 -   Obnovení továrního nastavení telefonu v případě ztráty nebo odcizení
 
-Kroky registrace najdete v tématu [Registrace zařízení s Windows 10 Mobile nebo Windows 10 Desktop v Intune](enroll-your-w10-phone-or-w10-pc-windows.md). Informace o tom, co váš správce IT uvidí a neuvidí na vašem zařízení, najdete v části [Co všechno uvidí správce IT, když zaregistruji své zařízení do služby Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
+Kroky registrace najdete v tématu [Registrace zařízení s Windows 10 Mobile nebo Windows 10 Desktop v Intune](enroll-your-w10-phone-or-w10-pc-windows.md). Informace o tom, co váš správce IT uvidí a neuvidí na vašem zařízení, najdete v části [Co všechno uvidí správce IT, když zaregistruji své zařízení do služby Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
 Když přidáte počítač:
 
@@ -58,6 +58,6 @@ Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na spr�
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

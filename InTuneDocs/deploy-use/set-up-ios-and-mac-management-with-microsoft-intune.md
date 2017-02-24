@@ -13,15 +13,19 @@ ms.technology:
 ms.assetid: dc451224-1372-4b84-b641-cfa67cb3849b
 ms.reviewer: dagerrit
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: d4dffccca11582b11196c6441ba8828ceeb4ebb8
+ms.sourcegitcommit: afca2af0b07b939adc66c8804f04a1125e12001b
+ms.openlocfilehash: 9c71a83f9514187753360fa9c2085584d1b76711
 
 
 ---
 
 # <a name="set-up-ios-and-mac-device-management"></a>Nastavení správy zařízení s iOSem a MacOS
-V Intune můžete spravovat tato mobilní zařízení: iPady, iPhony a zařízení s Mac OS X. Intune uživatelům nabízí přístup k firemnímu e-mailu a aplikacím. Intune potřebuje pro správu zařízení s iOSem a MacOS certifikát APNs (Apple Push Notification service) od společnosti Apple. Po přidání certifikátu do Intune si uživatelé mohou nainstalovat aplikaci Portál společnosti, aby mohli zaregistrovat svá zařízení. Správce také může nastavit [správu zařízení s iOSem patřících společnosti](enroll-corporate-owned-ios-devices-in-microsoft-intune.md).
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
+V Intune můžete spravovat tato mobilní zařízení: iPady, iPhony a zařízení se systémem macOS. Intune uživatelům nabízí přístup k firemnímu e-mailu a aplikacím. Intune potřebuje pro správu zařízení s iOSem a MacOS certifikát APNs (Apple Push Notification service) od společnosti Apple. Po přidání certifikátu do Intune si uživatelé mohou nainstalovat aplikaci Portál společnosti, aby mohli zaregistrovat svá zařízení. Správce také může nastavit [správu zařízení s iOSem patřících společnosti](enroll-corporate-owned-ios-devices-in-microsoft-intune.md).
 
 1.  **Nastavení Intune**<br>
     Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení [nastavením autority pro správu mobilních zařízení](prerequisites-for-enrollment.md#step-2-set-mdm-authority) na **Microsoft Intune** a nastavením správy MDM.
@@ -44,11 +48,11 @@ V Intune můžete spravovat tato mobilní zařízení: iPady, iPhony a zařízen
 
 5.  **Informujte uživatele, jak můžou svá zařízení zaregistrovat, aby získali přístup k firemním prostředkům.**
 
-    Postup registrace koncových uživatelů najdete v tématech [Registrace zařízení se systémem iOS do Intune](../enduser/enroll-your-device-in-intune-ios.md) a [Registrace zařízení s Mac OS X v Intune](../enduser/enroll-your-device-in-intune-macos.md). Proces registrace uživatele informuje, co můžou očekávat a co správci IT na jejich zařízeních uvidí a neuvidí.
+    Pokyny k registraci koncových uživatelů najdete v tématech [Registrace zařízení se systémem iOS v Intune](../enduser/enroll-your-device-in-intune-ios.md) a [Registrace zařízení se systémem macOS v Intune](../enduser/enroll-your-device-in-intune-macos.md). Proces registrace uživatele informuje, co můžou očekávat a co správci IT na jejich zařízeních uvidí a neuvidí.
 
     Informace o dalších úlohách koncových uživatelů najdete v článcích:
-    - [Materiály o prostředí Microsoft Intune pro koncové uživatele](what-to-tell-your-end-users-about-using-microsoft-intune.md)
-    - [Pokyny pro koncové uživatele zařízení s iOSem a Mac OS](../enduser/using-your-ios-or-mac-os-x-device-with-intune.md)
+    - [Materiály o prostředí Microsoft Intune pro koncové uživatele](how-to-educate-your-end-users-about-microsoft-intune.md)
+    - [Pokyny pro koncové uživatele zařízení s iOSem a Mac OS](../enduser/using-your-ios-or-macOS-device-with-intune.md)
 
 Pokud společnost nebo organizace koupí uživatelům zařízení s iOS, může je také zaregistrovat pro správu jako [zařízení s iOSem patřící společnosti](enroll-corporate-owned-ios-devices-in-microsoft-intune.md).
 
@@ -57,6 +61,6 @@ Pokud společnost nebo organizace koupí uživatelům zařízení s iOS, může 
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

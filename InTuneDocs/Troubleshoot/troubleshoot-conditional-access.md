@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 433fc32c-ca9c-4bad-9616-852c72faf996
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: d4b935ba28edc1b41afb46b0aa7d0ee586de2a1c
+ms.sourcegitcommit: 905be6a926dc5bab8e9b1016ba82751ee47313e5
+ms.openlocfilehash: 66a8f72e2560352c2e4f422b41c7e54b4ae124e6
 
 
 ---
@@ -33,11 +34,11 @@ Toto téma popisuje, co dělat, pokud se vašim uživatelům nedaří získat p�
 
 Aby bylo možné využívat podmíněný přístup, je třeba splnit následující podmínky:
 
--   Zařízení musí být spravované pomocí Intune.
--   Zařízení musí být zaregistrované v Azure Active Directory (AAD). Za normálních okolností se tato registrace provede automaticky během registrace v Intune.
--   Zařízení musí vyhovovat zásadám dodržování předpisů Intune, a to pro zařízení i pro uživatele tohoto zařízení.  Pokud neexistují žádné zásady dodržování předpisů, je registrace v Intune dostatečná.
--   V zařízení musí být aktivovaný protokol Exchange ActiveSync, pokud uživatel načítá e-mail prostřednictvím nativního poštovního klienta, a nikoli prostřednictvím aplikace Outlook.     K tomu dojde automaticky pro zařízení se systémy iOS, Windows Phone a Android nebo KNOX Standard.
--   Intune Exchange Connector by měl být správně nakonfigurovaný. Další informace najdete v tématu [Odstraňování potíží Exchange Connectoru v Microsoft Intune](troubleshoot-exchange-connector.md).
+-    Zařízení musí být spravované pomocí Intune.
+-    Zařízení musí být zaregistrované v Azure Active Directory (AAD). Za normálních okolností se tato registrace provede automaticky během registrace v Intune.
+-    Zařízení musí vyhovovat zásadám dodržování předpisů Intune, a to pro zařízení i pro uživatele tohoto zařízení.  Pokud neexistují žádné zásady dodržování předpisů, je registrace v Intune dostatečná.
+-    V zařízení musí být aktivovaný protokol Exchange ActiveSync, pokud uživatel načítá e-mail prostřednictvím nativního poštovního klienta, a nikoli prostřednictvím aplikace Outlook.     K tomu dojde automaticky pro zařízení se systémy iOS, Windows Phone a Android nebo KNOX Standard.
+-    Intune Exchange Connector by měl být správně nakonfigurovaný. Další informace najdete v tématu [Odstraňování potíží Exchange Connectoru v Microsoft Intune](troubleshoot-exchange-connector.md).
 
 Tyto podmínky lze zobrazit pro každé zařízení v portálu pro správu Azure a v sestavě inventáře zařízení.
 
@@ -52,7 +53,7 @@ Tyto podmínky lze zobrazit pro každé zařízení v portálu pro správu Azure
  -  Registrace informací o shodě pro zařízení může trvat nějakou dobu. Počkejte několik minut a zkuste akci zopakovat.
  -  Pro zařízení s iOS:
      -   Existující e-mailový profil vytvořený uživatelem bude blokovat nasazení profilu Intune vytvořeného správcem. Tento problém je běžný, protože uživatelé s iOSem obvykle vytvoří e-mailový profil a potom se zaregistrují. Portál společnosti bude uživatele informovat o tom, že požadavky nejsou splněny kvůli ručně nakonfigurovanému e-mailovému profilu a vyzve uživatele k odebrání příslušného profilu. Uživatel by měl svůj e-mailový profil odebrat, aby bylo možné nasadit profil Intune. Chcete-li problémům zabránit, požádejte své uživatele, aby se zaregistrovali bez instalace e-mailového profilu a aby Intune povolili nasazení profilu.
-     -   Zařízení s iOSem můžou uváznout ve stavu kontroly dodržování předpisů bránit uživateli v inicializaci jiné kontroly. Restartování Portálu společnosti může problém vyřešit a stav dodržování předpisů bude odrážet stav zařízení v Intune. Po shromáždění všech dat ze synchronizace zařízení je kontrola dodržování předpisů rychlá a trvá v průměru méně než půl sekundy.
+     -     Zařízení s iOSem můžou uváznout ve stavu kontroly dodržování předpisů bránit uživateli v inicializaci jiné kontroly. Restartování Portálu společnosti může problém vyřešit a stav dodržování předpisů bude odrážet stav zařízení v Intune. Po shromáždění všech dat ze synchronizace zařízení je kontrola dodržování předpisů rychlá a trvá v průměru méně než půl sekundy.
 
         Obvyklým důvodem toho, že zařízení zůstanou v tomto stavu, jsou potíže s připojením ke službě nebo dlouhotrvající synchronizace.  Pokud potíže přetrvávají v různých síťových konfigurací (mobilní, Wi-Fi, VPN) i po restartech zařízení a po ověření, že zprostředkovatel SSP je v zařízení aktuální, obraťte se na podporu Microsoftu podle popisu v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
@@ -125,7 +126,7 @@ Pokud chcete zobrazit protokoly Exchange Connectoru, použijte nástroj Server T
 
     „Getting the mobile device list without a time filter (full sync) for 4 users completed successfully.“ Details: Inventory command result - Devices synced: 0 Commmand ID: commandIDGUID' Exchange health: 'Server health 'Name: 'PowerShellExchangeServer: <Name=název_poštovního_serveru>' Status: Connected','
 
--   Vyhledejte v protokolech rychlou (rozdílovou) synchronizaci vyhledáním textu **quick sync**.
+-    Vyhledejte v protokolech rychlou (rozdílovou) synchronizaci vyhledáním textu **quick sync**.
 
 ##### <a name="exceptions-in-get-next-command"></a>Výjimky v příkazu Get next
 Vyhledejte v protokolech Exchange Connectoru výjimky v **příkazu Get next** a poskytněte je podpoře Microsoftu.
@@ -134,9 +135,9 @@ Vyhledejte v protokolech Exchange Connectoru výjimky v **příkazu Get next** a
 
 Zapnutí podrobného protokolování:
 
-1.  Otevřete konfigurační soubor trasování Exchange Connectoru. Soubor je v následujícím umístění: %ProgramData%\Microsoft\Windows Intune Exchange Connector\TracingConfiguration.xml.
-2.  Vyhledejte TraceSourceLine s následujícím klíčem: OnPremisesExchangeConnectorService
-3.  Změňte hodnotu uzlu **SourceLevel** z **Warning ActivityTracing** (výchozí) na **Verbose ActivityTracing**, jak je uvedeno dál.
+1.    Otevřete konfigurační soubor trasování Exchange Connectoru. Soubor je v následujícím umístění: %ProgramData%\Microsoft\Windows Intune Exchange Connector\TracingConfiguration.xml.
+2.    Vyhledejte TraceSourceLine s následujícím klíčem: OnPremisesExchangeConnectorService
+3.    Změňte hodnotu uzlu **SourceLevel** z **Warning ActivityTracing** (výchozí) na **Verbose ActivityTracing**, jak je uvedeno dál.
 
     <TraceSourceLine>
           <Key xsi:type="xsd:string">OnPremisesExchangeConnectorService</Key>
@@ -161,6 +162,6 @@ Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podpor
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

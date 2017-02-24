@@ -1,5 +1,6 @@
 ---
-title: "Řešení potíží s profily zařízení v Microsoft Intune | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Řešení potíží s profily zařízení v Microsoft Intune"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Pokud nevíte, jak dál, přečtěte si toto téma, které vám pomůže vyřešit problémy s profily zařízení v Intune."
 keywords: 
 author: robstackmsft
@@ -13,9 +14,10 @@ ms.technology:
 ms.assetid: 
 ms.reviewer: heenamac
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 132c0b308031a57277c20cedd5b4ad37bfdf92e6
-ms.openlocfilehash: fe2a694d7b6135b4e8f7aaf1c863bc1685e93ea6
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 962eb30ada84355c1aceacbf8f487b0f5b3cf1f2
 
 
 ---
@@ -499,6 +501,6 @@ Jiná zařízení MDM, třeba zařízení se systémy Android, Windows Phone 8.1
 Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](/intune/troubleshoot/how-to-get-support-for-microsoft-intune).
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 

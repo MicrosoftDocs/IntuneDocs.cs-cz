@@ -16,9 +16,10 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jieyan
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 81ee6143d53ca08f03dfd3555b118f77319ccf2d
-ms.openlocfilehash: e72a61b2250c2d048392e025655b81dbc8297176
+ms.sourcegitcommit: aca401cab49230d2bcb9171cf532b52ce5219798
+ms.openlocfilehash: b6e9a357b79b0069e5fadf5aa280dae5b4787212
 
 
 ---
@@ -28,7 +29,7 @@ ms.openlocfilehash: e72a61b2250c2d048392e025655b81dbc8297176
 
 Registrace zařízení v Microsoft Intune umožňuje zařízením s Windows 10 získat přístup k zabezpečeným datům vaší organizace, včetně e-mailů, souborů a dalších prostředků. Platí to pro zařízení s desktopovou verzí Windows 10 i zařízení s Windows 10 Mobile. Registrace zařízení pomáhá zabezpečit přístup pro vás i vaši organizaci a udržovat pracovní data odděleně od osobních dat.
 
-Chcete se dozvědět více? Zjistěte, co se stane, když [zařízení zaregistrujete v Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md), a co to znamená pro [informace v zařízení](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
+Chcete se dozvědět více? Zjistěte, co se stane, když [zařízení zaregistrujete v Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md), a co to znamená pro [informace v zařízení](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
 ## <a name="windows-10-desktop-devices"></a>Zařízení s desktopovou verzí Windows 10
 1.    Přejděte na __Start__.
@@ -56,6 +57,6 @@ Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní 
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 
