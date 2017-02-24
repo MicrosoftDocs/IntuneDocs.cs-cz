@@ -1,11 +1,11 @@
 ---
 title: "Vytvoření skupin pro uspořádání uživatelů a zařízení | Dokumentace Microsoftu"
-description: "Vytvoření uživatelů a skupin pro předplatné Intune"
+description: "Vytvořte uživatele a skupiny pro předplatné Intune."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 11/22/2016
+ms.date: 02/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 5fdf98c8-fe67-4d7a-9837-ed1234348014
 ms.reviewer: jeffgilb
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
-ms.openlocfilehash: 446156265047994f0a15890d7699991d032c0bd5
+ms.sourcegitcommit: ad13897fe7bbe4fe13167bb4ce7f558b436a7a90
+ms.openlocfilehash: 1b14ec6330c512981025a2910dbd222fa4d7cf7f
 
 
 ---
@@ -24,6 +25,8 @@ ms.openlocfilehash: 446156265047994f0a15890d7699991d032c0bd5
 # <a name="create-groups-to-organize-users-and-devices"></a>Vytvoření skupiny pro uspořádání uživatelů a zařízení
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
+V tomto tématu najdou správci informace o tom, jak můžou v Intune vytvořit skupiny uživatelů.
 
 Skupiny v Intune poskytují flexibilitu pro správu zařízení a uživatelů. Můžete nastavit skupiny podle potřeb vaší organizace (třeba podle zeměpisné polohy, oddělení nebo vlastností hardwaru) a použít je k provádění široké škály úloh správy od nasazení zásad pro víc uživatelů až po nasazení aplikací na skupinu zařízení.
 
@@ -87,6 +90,6 @@ Nově vytvořenou skupinu najdete v seznamu **Skupiny** v pracovním prostoru **
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

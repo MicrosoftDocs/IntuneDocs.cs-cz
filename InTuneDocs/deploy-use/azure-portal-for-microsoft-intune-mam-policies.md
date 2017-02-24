@@ -13,18 +13,19 @@ ms.technology:
 ms.assetid: 7d6dae94-a833-40b7-9016-14ea234bb33c
 ms.reviewer: joglocke
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: fe44466fbcef67d02b16d3d2d335f657251451d3
-ms.openlocfilehash: fa8d839da1cf0b2d207edc0b28de8a714ba0df02
+ms.sourcegitcommit: e2503c44f434e67f45064f28d1e921eb5accb0b6
+ms.openlocfilehash: 2707e3fae32e73aa17696886f493932e903ffc10
 
 
 ---
 
-# <a name="azure-portal-for-microsoft-intune-mam-policies"></a>Portál Azure Portal pro zásady MAM v Microsoft Intune
+# <a name="azure-portal-for-intune-app-protection-policies"></a>Azure Portal pro zásady ochrany aplikací Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Azure Portal slouží k vytváření a správě zásad správy mobilních aplikací (MAM) pro tyto aplikace:
+Azure Portal slouží k vytváření a správě zásad ochrany aplikací pro:
 
 - Aplikace spuštěné v zařízeních, která **jsou zaregistrovaná a spravovaná v Intune**
 
@@ -32,9 +33,9 @@ Azure Portal slouží k vytváření a správě zásad správy mobilních aplika
 - Aplikace spuštěné v zařízeních, která **jsou zaregistrovaná v řešení MDM třetí strany**.
 
 >[!IMPORTANT]
-> Azure Portal je nová konzola pro správu pro vytváření zásad MAM, ale umožňuje také vytvářet zásady MAM, které podporují aplikace pro zařízení zaregistrované v Intune pomocí [konzoly pro správu Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) pro scénáře MDM.
+> Azure Portal je nová konzola pro správu, která slouží k vytváření zásad ochrany aplikací, ale umožňuje také vytvářet zásady ochrany aplikací, které podporují aplikace pro zařízení zaregistrované v Intune pomocí [konzoly pro správu Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) pro scénáře MDM.
 
-> V konzole pro správu Intune se nemusí zobrazovat všechna dostupná nastavení zásad MAM. Kromě toho pokud vytvoříte zásady MAM jak v konzole pro správu Intune, tak i na portálu Azure Portal, přepíšou zásady vytvořené na portálu Azure Portal zásady vytvořené v konzole pro správu Intune. V tomto scénáři se zásady MAM vytvořené na portálu Azure Portal použijí u aplikací a nasadí u uživatelů.
+> V konzole pro správu Intune se nemusí zobrazovat všechna dostupná nastavení zásad ochrany aplikací. Kromě toho platí, že pokud vytvoříte zásady ochrany aplikací v konzole pro správu Intune i na portálu Azure Portal, přepíšou zásady vytvořené na portálu Azure Portal zásady vytvořené v konzole pro správu Intune. V tomto scénáři se zásady ochrany aplikací vytvořené na portálu Azure Portal použijí u aplikací a nasadí u uživatelů.
 
 
 ## <a name="sign-in-to-the-azure-portal-and-customize-your-start-page"></a>Přihlášení na portál Azure Portal a přizpůsobení úvodní stránky
@@ -47,11 +48,11 @@ Azure Portal slouží k vytváření a správě zásad správy mobilních aplika
 
     ![Snímek obrazovky Řídicí panel portálu Azure Portal](../media/AppManagement/AzurePortal_MAMStartboard_NoMAM.png)
 
-3.  V nabídce **Procházet** vyberte **Intune**.
+3.  V nabídce vlevo zvolte **Další služby** a potom do filtru textového pole zadejte **Intune**.
 
     ![Snímek obrazovky nabídky Procházet se zvýrazněnou možností Intune](../media/AppManagement/MAM-Azure-Portal-1.png)
 
-4.  Zvolte **Intune** > **Správa mobilních aplikací Intune** > **Nastavení**.
+4.  Zvolte **Intune App Protection** > **Správa mobilních aplikací Intune** > **Veškerá nastavení**.
 
     ![Snímek obrazovky okna Správa mobilních aplikací Intune](../media/AppManagement/MAM-Azure-Portal-2.png)
 
@@ -62,10 +63,10 @@ Azure Portal slouží k vytváření a správě zásad správy mobilních aplika
     ![Snímek obrazovky Řídicí panel s připnutou dlaždicí Intune](../media/AppManagement/AzurePortal_MAM_Startboard_withMAM.png)
 
 ## <a name="next-steps"></a>Další kroky
-[Příprava před konfigurací zásad správy mobilních aplikací](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
+[Příprava ke konfiguraci zásad ochrany aplikací](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

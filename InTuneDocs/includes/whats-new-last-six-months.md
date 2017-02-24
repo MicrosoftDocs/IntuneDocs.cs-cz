@@ -1,6 +1,59 @@
+## <a name="january-2017"></a>Leden 2017
+
+### <a name="new-capabilities"></a>Nové funkce
+
+<!--### Actions for non-compliance <!--730266
+_Actions for non-compliance_ is a new feature of compliance policies that lets you take action on devices that are out of compliance. You can specify single or multiple actions and specify the time period at which those actions must occur. For example, you can notify users of non-compliant devices immediately after the devices become non-compliant through email, or you can block non-compliant devices from accessing corporate resources after a 3-day grace period via Conditional Access.-->
+
+#### <a name="in-console-reports-for-mam-without-enrollment---677961--"></a>Sestavy v konzole pro MAM bez registrace <!--677961-->
+Pro registrovaná i nezaregistrovaná zařízení se přidaly nové sestavy pro ochranu aplikací. Další informace o tom, jak [monitorovat zásady správy mobilních aplikací pomocí Intune, najdete tady](https://docs.microsoft.com/intune/deploy-use/monitor-mobile-app-management-policies-with-microsoft-intune).
+
+<!--### Conditional access for MAM with SharePoint Online <!--679339
+You can block apps that are not supported by Intune mobile app management (MAM) policies from accessing SharePoint Online.  You can get started using Intune mobile app management in the Azure portal. Look for the __Conditional Access__ section in the __Settings__ blade which will include the option for SharePoint Online. This feature will ship separately from the rest of the service release. <!--Find out more about this new feature [here](https://docs.microsoft.com/intune/deploy-use/mam-ca-for-sharepoint-online).-->
+
+#### <a name="android-711-support---694397--"></a>Podpora pro Android 7.1.1 <!--694397-->
+Intune teď plně podporuje a spravuje Android 7.1.1.
+
+#### <a name="resolve-issue-where-ios-devices-are-inactive-or-the-admin-console-cannot-communicate-with-them---unknown--"></a>Řešení problému, kdy zařízení s iOSem nejsou aktivní nebo s nimi nemůže konzola správce komunikovat <!--unknown-->
+Když zařízení uživatele ztratí kontakt s Intune, můžete uživateli poskytnout nový postup řešení potíží a pomoct mu tak znovu získat přístup k prostředkům společnosti. Viz [Zařízení nejsou aktivní nebo s nimi nemůže konzola správce komunikovat](/intune/troubleshoot/troubleshoot-device-enrollment-in-intune#devices-are-inactive-or-the-admin-console-cannot-communicate-with-them).
+
+### <a name="notices"></a>Sdělení
+
+#### <a name="defaulting-to-managing-windows-desktop-devices-through-windows-settings---663050--"></a>Změna výchozího nastavení: Správa desktopových zařízení s Windows přes nastavení Windows <!--663050-->
+Výchozí chování registrace stolních počítačů s Windows 10 se mění. Nové registrace se budou provádět obvyklým tokem registrace agenta MDM, nikoli přes agenta pro počítače.
+
+Web Portál společnosti bude uživatelům stolních počítačů s Windows 10 poskytovat pokyny k registraci, které je provedou procesem přidání stolních počítačů s Windows 10 jako mobilní zařízení. Tato změna nebude mít vliv na už zaregistrované počítače, a [pokud chcete](https://docs.microsoft.com/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune), může stolní počítače s Windows 10 vaše organizace pořád spravovat přes agenta pro počítače.
+
+#### <a name="improving-mobile-app-management-support-for-selective-wipe---581242--"></a>Vylepšení podpory správy mobilních aplikací pro selektivní vymazávání <!--581242-->
+Koncoví uživatelé získají podrobnější pokyny o tom, jak získat zpět přístup k pracovním nebo školním datům v případě, že se data automaticky odebrala kvůli zásadám Doba v offline režimu před vymazáním dat.<!--, or the removal of the Intune Company Portal on Android.-->
+
+#### <a name="company-portal-for-ios-links-open-inside-the-app---665954--"></a>Otevírání odkazů Portálu společnosti pro iOS v aplikaci <!--665954-->
+Odkazy v aplikaci Portálu společnosti pro iOS, včetně těch, které vedou na dokumentaci a aplikace, se budou otevírat přímo v aplikaci Portál společnosti pomocí integrovaného zobrazení Safari. Tato aktualizace se bude dodávat odděleně od aktualizace služby v lednu.
+
+#### <a name="modernizing-the-company-portal-website---753980--"></a>Modernizace webu Portál společnosti <!--753980-->
+Od února bude web Portál společnosti podporovat aplikace zaměřené na uživatele, kteří nemají spravovaná zařízení. Tento web bude podobně jako ostatní produkty a služby Microsoftu používat nové kontrastní barevné schéma a „hamburgerovou“ nabídku ![Hamburgerová nabídka webu Portál společnosti](/Intune/whats-new/media/CP_hamburger_menu.png), která bude obsahovat kontaktní údaje helpdesku a informace o existujících spravovaných zařízeních. Cílová stránka bude mít nové uspořádání, které zdůrazní aplikace dostupné uživatelům – s karusely pro Vybrané a Nedávno aktualizované aplikace. Obrázky staré a nové verze najdete na stránce [Co je nového v uživatelském rozhraní aplikací Intune](https://docs.microsoft.com/intune/whats-new/whats-new-in-intune-app-ui).
+
+#### <a name="new-documentation-for-app-protection-policies---583398--"></a>Nová dokumentace zásad ochrany aplikací <!--583398-->
+Aktualizovali jsme naši dokumentaci pro správce a vývojáře aplikací, kteří chtějí ve svých aplikacích pro iOS a Android zapnout zásady ochrany aplikací (známé jako zásady MAM) pomocí nástroje Intune App Wrapping Tool nebo sady Intune App SDK.
+
+Aktualizovaly se tyto články:
+
+* [Rozhodování o způsobu přípravy aplikací na jejich správu v Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune)
+* [Příprava aplikací pro iOS na správu mobilních aplikací přes nástroj Intune App Wrapping](https://docs.microsoft.com/intune/deploy-use/prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool)
+* [Začínáme s Microsoft Intune App SDK](https://docs.microsoft.com/intune/develop/intune-app-sdk-get-started)
+* [Intune App SDK pro iOS – Příručka pro vývojáře](https://docs.microsoft.com/intune/develop/intune-app-sdk-ios)
+
+Následující články jsou v knihovně dokumentů nové:
+
+* [Modul plug-in Cordova sady Intune App SDK](https://docs.microsoft.com/intune/develop/intune-app-sdk-cordova)
+* [Komponenta Xamarin sady Intune App SDK](https://docs.microsoft.com/intune/develop/intune-app-sdk-xamarin)
+
+#### <a name="progress-bar-when-launching-the-company-portal-on-ios---665978--"></a>Indikátor průběhu při spuštění Portálu společnosti v iOSu <!--665978-->
+Portál společnosti pro iOS zavádí na obrazovce spuštění indikátor průběhu, který uživateli poskytuje informace o probíhajících procesech načítání. Indikátor průběhu bude postupně nahrazovat ikonu zaneprázdnění. To znamená, že někteří uživatelé uvidí nový indikátor průběhu, zatímco jiným se bude dále zobrazovat ikona zaneprázdnění.
+
 ## <a name="december-2016"></a>Prosinec 2016
 
-### <a name="public-preview-of-the-new-intune-admin-experience-on-azure--736542--"></a>Veřejná verze Preview nového prostředí pro správu Intune v Azure<!--736542-->
+### <a name="public-preview-of-the-new-intune-admin-experience-on-azure---736542--"></a>Veřejná verze Preview nového prostředí pro správu Intune v Azure <!--736542-->
 Na začátku kalendářního roku 2017 provedeme migraci celého našeho prostředí pro správu do Azure, což umožní výkonnou a integrovanou správu základních pracovních postupů EMS na moderní platformě pro služby, která je rozšiřitelná pomocí rozhraní Graph API. Před všeobecnou dostupností tohoto portálu pro všechny tenanty Intune s radostí oznamujeme, že později tento měsíc začneme vybraným tenantům zavádět verzi Preview tohoto nového prostředí pro správce.
 
 Prostředí pro správu na webu Azure Portal bude využívat nové funkce seskupování a cílení, které už byly oznámeny. Při migraci vašeho stávajícího tenanta do nového prostředí seskupování se provede také vaše migrace do verze Preview nového prostředí pro správu vašeho tenanta. Zatím můžete zjistit další informace o tom, co pro Microsoft Intune na portálu Azure Portal chystáme, v naší [nové dokumentaci](https://docs.microsoft.com/intune-azure/introduction/what-is-microsoft-intune).
@@ -224,7 +277,7 @@ Některé nové účty Intune budou namísto skupin uživatelů Intune používa
 ### <a name="lookout-integration-to-protect-android-devices"></a>Integrace aplikace Lookout pro ochranu zařízení s Androidem
 Společnost Microsoft integruje řešení ochrany před mobilními hrozbami v aplikaci Lookout za účelem ochrany mobilních zařízení s Androidem pomocí zjišťování malwaru, riskantních aplikací a dalších problémů na zařízení. Řešení Lookout vám pomůže určit úroveň ohrožení, která je konfigurovatelná. Ve službě Intune můžete vytvořit pravidlo zásad dodržování předpisů na základě vyhodnocování rizik aplikací Lookout. Pomocí zásad podmíněného přístupu můžete povolit nebo blokovat přístup k prostředkům společnosti na základě stavu dodržování předpisů pro zařízení.
 
-Koncoví uživatelé zařízení nesplňujících požadavky budou vyzvání k registraci. Dále si budou muset před získáním přístupu nainstalovat na zařízení s Androidem aplikaci Lookout for Work, aktivovat ji a opravit hrozby nahlášené aplikací Lookout for Work. Další informace najdete v článku [Omezení přístupu na základě rizika zařízení, sítě a aplikace](https://docs.microsoft.com/en-us/intune/deploy-use/restrict-access-based-on-device-network-app-risk).
+Koncoví uživatelé zařízení nesplňujících požadavky budou vyzvání k registraci. Dále si budou muset před získáním přístupu nainstalovat na zařízení s Androidem aplikaci Lookout for Work, aktivovat ji a opravit hrozby nahlášené aplikací Lookout for Work. Další informace najdete v článku [Omezení přístupu na základě rizika zařízení, sítě a aplikace](https://docs.microsoft.com/en-us/intune/deploy-use/device-threat-protection).
 
 
 ### <a name="company-portal-updates"></a>Aktualizace Portálu společnosti
@@ -360,53 +413,8 @@ Intune notification rules define who an email alert will be sent to from Intune.
     - Around November, 2016, we expect that all tenants will not see the “select device groups” in the wizard.
 
 --->
-## <a name="july-2016"></a>Červenec 2016
-### <a name="app-management"></a>Správa aplikací
-
-__Vylepšení prostředí aktualizace zřizovacího profilu aplikace__ – Mobilní obchodní aplikace pro Apple iOS jsou vytvořeny tak, že obsahují zřizovací profil a kód podepsaný certifikátem. Když se taková aplikace spustí na zařízení s iOSem, iOS potvrdí její integritu a vynutí zásady jejím definované zřizovacím profilem.
-
-Podpisový certifikát společnosti, který se používá k podepisování aplikací, má obvykle platnost 3 roky. Platnost zřizovacího profilu ale vyprší už po jednom roce. Prostřednictvím této aktualizace Intune poskytuje nástroje pro proaktivní nasazení nových zásad zřizovacích profilů do zařízení, ve kterých se aplikace blíží vypršení data platnosti, ale certifikát je stále platný. Další informace najdete v tématu věnovaném [použití mobilních zásad zřizovacích profilů pro iOS k zajištění aktuálnosti obchodních aplikací](/intune/deploy-use/ios-mobile-app-provisioning-profiles).
-<!--- TFS 1280247--->
-
-__Je dostupná sada Xamarin SDK pro aplikace Intune__ – Komponenta Intune App SDK Xamarin umožňuje v mobilních aplikacích pro iOS a Android vytvořených pomocí Xamarinu povolit funkce správy mobilních aplikací Intune. Tuto komponentu najdete v [Xamarin Storu](https://components.xamarin.com/view/Microsoft.Intune.MAM) nebo na [stránce Microsoft Intune Githubu](https://github.com/msintuneappsdk).
-<!--- TFS 1061478 --->
-
-### <a name="device-management"></a>Správa zařízení
-__Zvýšené limity pro registraci zařízení__ – Služba Intune zvýšila maximální limit pro registraci zařízení z 5 na 15 zařízení na každého uživatele.
-<!---TFS 1289896 --->
-
-__Integrace TeamVieweru pro počítače s Windows a klientským softwarem Intune__
- – Integrovaný [TeamViewer](https://www.teamviewer.com) v počítačích s Windows a klientským softwarem Intune umožňuje v rámci podpory navazovat relace vzdálené pomoci s počítači se systémem Windows. Tuto podporu poskytují oddělení helpdesku koncovým uživatelům. To zahrnuje systém Windows 7, 8, 8.1 a Windows 10. Podrobnosti najdete v tématu [Běžné úlohy správy počítačů s Windows pomocí počítačového klienta Microsoft Intune](/intune/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client).
-<!---TFS 1284856--->
-
-### <a name="company-portal-updates"></a>Aktualizace Portálu společnosti
-
-__Web Portál společnosti__
-- **Vylepšené prostředí při registraci zařízení s Windows**<br/>
-Na webu Portál společnosti byly upřesněny kroky registrace pro Windows 8.1, Windows 10 Desktop a Windows 10 Mobile při použití podmíněného přístupu. Uživatelům se nyní zobrazí samostatné kroky Registrace zařízení a Workplace Join. Snáz tak zjistí stav svého zařízení a dokončí celý proces v případě, že dojde k chybě Workplace Join (WPJ). Očekává se, že tyto samostatné kroky také zjednoduší proces řešení potíží pro správce IT. Když se dříve uživatelé pokusili zaregistrovat a všechny kroky registrace se provedly úspěšně s výjimkou WPJ, zaregistrované zařízení se nezobrazilo v seznamu zařízení a uživatele to mátlo.
-
-__Androidemem__
-- **Aplikace Portál společnosti pro Android**<br/>
-Když se koncovému uživateli Androidu zobrazí zpráva, která uvádí, že v zařízení chybí certifikát, může kliknutím na tlačítko Jak to vyřešit zobrazit [kroky](/intune/enduser/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator) pro instalaci chybějícího certifikátu. Pokud uživatel dokončí tyto kroky, ale zobrazí se mu další chybová zpráva typu chybějící certifikát, měl by kontaktovat správce IT a poskytnout mu tento [odkaz](/intune/troubleshoot/troubleshoot-device-enrollment-in-intune#android-certificate-issues), který obsahuje kroky, jejichž prostřednictvím správce může potíže s certifikátem vyřešit.
-
-- **Omezení instalací aplikací pro instalaci bokem (mimo Store) jenom na registrovaná zařízení**<br/>
-Zařízení s Androidem už nemohou instalovat aplikace prostřednictvím webu Portál společnosti, pokud nejsou v Intune zaregistrovaná pomocí aplikace Portál společnosti Intune pro Android.
-<!---TFS 1299082--->
-
-__iOS__
-- **Změny účtů Správců registrace zařízení v aplikaci Portál společnosti pro iOS**<br/>
-Za účelem zvýšení výkonu a možností škálování už Intune v aplikaci Portál společnosti pro iOS v podokně **Moje zařízení** nezobrazuje všechna zařízení Správce registrace zařízení. Zobrazí se pouze místní zařízení, na kterém aplikace běží, a to pouze v případě, že je zaregistrováno prostřednictvím aplikace Portál společnosti.
-
-Uživatel Správce registrace zařízení může na místním zařízení provádět různé akce, ale vzdálenou správu jiných zaregistrovaných zařízení je možné provádět pouze z konzoly správce Intune. Kromě toho se v Intune místo účtů DEM začne používat buď program Apple DEP (Device Enrollment Program), nebo nástroj Apple Configurator. Obě tyto metody registrace již podporují registrace bez zásahu uživatele pro sdílená zařízení s iOSem.
-
-Účty Správce registrace zařízení používejte pouze v případě, že registrace sdílených zařízení bez zásahu uživatele není dostupná. Další informace najdete v části [Registrace firemních zařízení pomocí správce registrace zařízení v Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune).
-<!---TFS 1233681--->
-
-### <a name="change-of-names-for-windows-features"></a>Změna názvů pro funkce Windows
-- [Microsoft Passport pro Windows](/intune/deploy-use/control-microsoft-passport-settings-on-devices-with-microsoft-intune) se nyní označuje jako **Windows Hello pro firmy**.
-- [Ochrana podnikových dat](https://technet.microsoft.com/itpro/windows/keep-secure/create-edp-policy-using-intune) se nyní označuje jako **Windows Information Protection**.
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

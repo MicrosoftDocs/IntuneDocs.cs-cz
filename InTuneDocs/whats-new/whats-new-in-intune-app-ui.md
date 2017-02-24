@@ -1,11 +1,11 @@
 ---
-title: "Co je nového v uživatelském rozhraní aplikací Intune | Dokumentace Microsoftu"
+title: "Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele | Dokumentace Microsoftu"
 description: "Zjistěte, co se změnilo v uživatelském rozhraní aplikací, které fungují s Intune na zařízeních pro koncové uživatele."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 01/26/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,49 +13,54 @@ ms.technology:
 ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 3ab53e40f4b7ea67733127f445005ecb77a404f7
-ms.openlocfilehash: 630053679b8ca1e0b26108e366986862e10d4f29
+ms.sourcegitcommit: bac9e6784ed6814d27bec9ad07b507facc9e8fc2
+ms.openlocfilehash: 48fe5f0a124a6608434f87905c24cda822fe63b7
 
 
 ---
-# <a name="whats-new-in-the-intune-app-ui"></a>Co je nového v uživatelském rozhraní aplikací Intune
-Zjistěte, co jsme aktualizovali v uživatelském rozhraní aplikací, se kterými budou koncoví uživatelé pracovat v této verzi Microsoft Intune. Pomůže vám to při komunikaci s uživateli a aktualizaci vlastní dokumentace, kterou jste vytvořili za účelem podpory vašeho nasazení.
+# <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
+Zjistěte, jaké jsme v uživatelském rozhraní aplikací udělali změny, které koncoví uživatelé uvidí v této verzi Microsoft Intune. Pomůže vám to při komunikaci s uživateli a aktualizaci vlastní dokumentace, kterou jste vytvořili za účelem podpory vašeho nasazení. Můžete také zjistit, jak lépe řešit problémy uživatelů, když požádají helpdesk o podporu pomocí Portálu společnosti.
 
-## <a name="january-2017"></a>Leden 2017
+> [!Note]
+> Upozorňujeme, že následující obrázky jsou náhledy a oznámený produkt se od prezentovaných verzí může lišit.
 
-### <a name="modernizing-the-company-portal-website---753980--"></a>Modernizace webu Portál společnosti <!--753980-->
-Od února bude web Portál společnosti podporovat aplikace zaměřené na uživatele, kteří nemají spravovaná zařízení. Tento web bude podobně jako ostatní produkty a služby Microsoftu používat nové kontrastní barevné schéma a „hamburgerovou“ nabídku ![Hamburgerová nabídka webu Portál společnosti](../media/CP_hamburger_menu.png), která bude obsahovat kontaktní údaje helpdesku a informace o existujících spravovaných zařízeních. Cílová stránka bude mít nové uspořádání, které zdůrazní aplikace dostupné uživatelům – s karusely pro Vybrané a Nedávno aktualizované aplikace. Obrázky staré a nové verze uživatelského rozhraní najdete na stránce [Co je nového v uživatelském rozhraní Portálu společnosti](https://docs.microsoft.com/intune/whats-new/whats-new-in-intune-app-ui).
+## <a name="whats-coming"></a>Co připravujeme
+
+### <a name="february-2017"></a>Únor 2017
+
+#### <a name="new-user-experience-for-the-company-portal-app-for-android---621622-announced-1702--"></a>Nové uživatelské prostředí aplikace Portál společnosti pro Android <!--621622, announced 1702-->
+Od března bude aplikace Portál společnosti pro Android odpovídat [specifikacím Material Design](https://material.io/guidelines/material-design/introduction.html) a získá tak modernější vzhled a chování. Toto vylepšené uživatelské prostředí zahrnuje:
+
+* __Barvy__: Záhlaví karet můžou mít barvy podle vaší vlastní palety barev.
+
+![Nalevo je obrázek aplikace Portál společnosti pro Android před aktualizací. Napravo je obrázek aplikace Portál společnosti pro Android po aktualizaci. Na obou obrázcích je karta Zařízení jako vybraná karta ze tří dostupných karet Aplikace, Zařízení a Kontaktovat oddělení IT.](./media/CP_Android_DevicesTab_BeforeAfter.png)
+
+* __Rozhraní__: Jsou aktualizovaná tlačítka __Vybrané aplikace__ a __Všechny aplikace__ na kartě __Aplikace__. Tlačítko __Hledat__ je teď plovoucí tlačítko akce.
+
+![Nalevo je obrázek aplikace Portál společnosti pro Android před aktualizací. Napravo je obrázek aplikace Portál společnosti pro Android po aktualizaci. Na obou obrázcích je karta Aplikace jako vybraná karta ze tří dostupných karet Aplikace, Zařízení a Kontaktovat oddělení IT.](./media/CP_Android_AppsTab_BeforeAfter.png)
+
+* __Navigace__: V části Všechny aplikace se teď zobrazují karty __Doporučené__, __Vše__ a __Kategorie__, které zjednodušují navigaci. __Kontaktovat oddělení IT__ je teď jednodušší a s vylepšenou čitelností.
 
 <html>
-
 <body>
-
-<table>
-
-<tr>
-
-<td>
-
-<img src="https://docs.microsoft.com/InTune/media/CP_website_before_Feb_2017.png" style="float: left; margin-right: 5px; margin-bottom: 10px;">
-
-</td>
-
-<!-- Column two -->
-
-<td>
-
-<img src="https://docs.microsoft.com/InTune/media/CP_website_after_Feb_2017.png" style="float: right; margin-left: 5px; margin-bottom: 10px;">
-
-</td>
-
-</tr>
-
-</table>
-
+   <table id="wrapper">
+      <tr>
+         <td>
+            <img src="https://docs.microsoft.com/en-us/InTune/whats-new/media/cp_android_contactit_after.png" alt="The Company Portal app for Android displaying an updated version of the Contact IT tab. The tab shows available contact information for IT, including phone number, email address, IT website, and IT contact information." width=200 height=366 align=center>
+          </td>
+      </tr>
+   </table>
 </body>
-
 </html>
+
+### <a name="january-2017"></a>Leden 2017
+
+#### <a name="modernizing-the-company-portal-website---753980-announced-1701--"></a>Modernizace webu Portál společnosti <!--753980, announced 1701-->
+Od února bude web Portál společnosti podporovat aplikace zaměřené na uživatele, kteří nemají spravovaná zařízení. Tento web bude podobně jako ostatní produkty a služby Microsoftu používat nové kontrastní barevné schéma, dynamické ilustrace a „hamburgerovou“ nabídku ![Obrázek hamburgerové nabídky, která je teď přidaná v levém horním rohu webu Portál společnosti](./media/CP_hamburger_menu.png) , která bude obsahovat kontaktní údaje helpdesku a informace o existujících spravovaných zařízeních. Cílová stránka bude mít nové uspořádání, které zdůrazní aplikace dostupné uživatelům – s karusely pro Vybrané a Nedávno aktualizované aplikace.
+
+![Vlevo je obrázek současné verze webu Portál společnosti s předchozí verzí zobrazení Aplikace, Moje zařízení, Doporučené a Kategorie. Vpravo je obrázek aktualizované verze webu Portál společnosti s novým karuselem aplikací, seznamem Nedávno publikované aplikace a aktualizovaným zobrazením Kategorie.](./media/CP_Website_BeforeAfter_Feb2016.png)
 
 
 ### <a name="see-also"></a>Související témata
@@ -66,6 +71,6 @@ Od února bude web Portál společnosti podporovat aplikace zaměřené na uživ
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO3-->
 
 

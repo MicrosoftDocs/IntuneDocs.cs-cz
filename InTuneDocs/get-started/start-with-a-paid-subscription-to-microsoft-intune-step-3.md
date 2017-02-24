@@ -1,11 +1,11 @@
 ---
 title: "Přidání uživatelů a udělení oprávnění | Dokumentace Microsoftu"
-description: "Synchronizace místních uživatelů s Azure AD a udělení správci oprávnění ke správě předplatného Intune"
+description: "Synchronizujte místní uživatele s Azure AD a udělte správci oprávnění ke správě předplatného Intune."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 11/22/2016
+ms.date: 02/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 6e9ec662-465b-4ed4-94c1-cff0fe18f126
 ms.reviewer: angrobe
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
-ms.openlocfilehash: 02b6dd389c94d2b31bd96b2095ae48b685084370
+ms.sourcegitcommit: ad13897fe7bbe4fe13167bb4ce7f558b436a7a90
+ms.openlocfilehash: b1f16df329c01aeb45885f3981e2d9d7ef854e8b
 
 
 ---
@@ -23,6 +24,8 @@ ms.openlocfilehash: 02b6dd389c94d2b31bd96b2095ae48b685084370
 # <a name="add-users-and-give-administrative-permission-to-intune"></a>Přidání uživatelů a udělení oprávnění pro správu v Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
+V tomto tématu najdou správci informace o tom, jak můžou do Intune přidat uživatele a jaká oprávnění pro správu jsou ve službě Intune k dispozici.
 
 Jako správce můžete uživatele přidat přímo nebo je synchronizovat z místní služby Active Directory. Po přidání můžou uživatelé zaregistrovat zařízení a přistupovat k prostředkům společnosti. Můžete také uživatelům udělit další oprávnění včetně oprávnění *správce tenanta*, *správce služeb* a *správce registrace zařízení*.
 
@@ -35,7 +38,7 @@ Toto téma vám pomůže s těmito aktivitami:
   - [Správci registrace zařízení](#device-enrollment-managers)
 
 ## <a name="add-users-to-intune"></a>Přidání uživatelů do Intune
-Můžete ručně přidat uživatele k předplatnému Intune prostřednictvím [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854). Těm se automaticky nepřidělí licence k Intune. Místo toho musí správce klienta Intune později uživatelský účet upravit a licenci uživateli přiřadit ručně z portálu Office služeb 365. Pokyny najdete v článku o [Individuální nebo hromadné přidávání uživatelů do Office 365](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
+Můžete ručně přidat uživatele k předplatnému Intune prostřednictvím [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854). Těm se ale automaticky nepřiřadí licence k Intune. Místo toho musí správce klienta Intune později uživatelský účet upravit a licenci uživateli přiřadit ručně z portálu Office služeb 365. Pokyny najdete v článku o [Individuální nebo hromadné přidávání uživatelů do Office 365](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
 
 ### <a name="sync-active-directory-and-add-users-to-intune"></a>Synchronizace služby Active Directory a přidání uživatelů do Intune
 Můžete nakonfigurovat synchronizaci adresářů, aby se importovaly uživatelské účty z vaší místní služby Active Directory do Microsoft Azure Active Directory (Azure AD), což zahrnuje uživatele Intune. Když máte místní službu Active Directory připojenou ke všem vašim službám založeným na Azure Active Directory, správa identity uživatele se tím zjednodušuje. Můžete taky nakonfigurovat funkce jednotného přihlašování, aby se prostředí ověřování pro vaše uživatele zjednodušilo a zpřehlednilo. Propojením stejného [tenanta Azure AD](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect/) s více službami se uživatelské účty, které jste předtím synchronizovali, stanou dostupnými pro všechny cloudové služby.
@@ -103,6 +106,6 @@ Správci registrace zařízení jsou standardní uživatelské účty, které ma
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

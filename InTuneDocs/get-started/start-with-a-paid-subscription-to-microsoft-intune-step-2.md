@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 11/22/2016
+ms.date: 02/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 2382f36f-13d8-4a32-81ad-6cfa604889c3
 ms.reviewer: jeffgilb
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
-ms.openlocfilehash: e51746bbd114476e394c44f813fb8cb329879172
+ms.sourcegitcommit: ad13897fe7bbe4fe13167bb4ce7f558b436a7a90
+ms.openlocfilehash: 7e921e3f92b0c9b94e4fdc387513ab5c1627817a
 
 
 ---
@@ -25,6 +26,7 @@ ms.openlocfilehash: e51746bbd114476e394c44f813fb8cb329879172
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
+V tomto tématu najdou správci informace o tom, jak vytvořit záznam DNS CNAME pro zjednodušení a přizpůsobení možností přihlašování.
 
 Pokud si vaše organizace zaregistruje cloudovou službu Microsoftu, třeba Intune, získáte počáteční název domény, jejímž hostitelem je Azure Active Directory (AD). Název může vypadat takto: **vaše_doména.onmicrosoft.com**. V tomhle příkladu je **vaše_doména** název domény, který jste si zvolili při registraci, a **onmicrosoft.com** je přípona přiřazená účtům přidaným do vašeho předplatného. Pokud má vaše organizace vlastní doménu, můžete instanci Intune nakonfigurovat tak, aby místo názvu domény poskytnutého s vaším předplatným používala tuto doménu.
 
@@ -62,6 +64,6 @@ Další informace najdete v článku [Informace o vaší počáteční doméně 
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

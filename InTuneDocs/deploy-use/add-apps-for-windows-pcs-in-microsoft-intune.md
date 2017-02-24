@@ -1,11 +1,11 @@
 ---
-title: "Přidání aplikací pro počítače s Windows, na kterých běží softwarový klient Intune | Microsoft Intune"
+title: "Přidání aplikací pro počítače s Windows, na kterých běží softwarový klient Intune | Dokumentace Microsoftu"
 description: "V tomto tématu se dozvíte, jak přidat do Intune aplikace pro počítače s Windows před tím, než je nasadíte."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 02/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,22 +13,25 @@ ms.technology:
 ms.assetid: bc8c8be9-7f4f-4891-9224-55fc40703f0b
 ms.reviewer: owenyen
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: e6537b7b0a42c76ec99d51a6a09fe1f6ab4400a1
+ms.sourcegitcommit: 547330c05b7fbdd2981e49320c913d8109563384
+ms.openlocfilehash: f8f1359ff08b67261b23a694a4f6bbbeca24fa2a
 
 
 ---
 
-# Přidání aplikací pro počítače s Windows, na kterých běží softwarový klient Intune
+# <a name="add-apps-for-windows-pcs-that-run-the-intune-software-client"></a>Přidání aplikací pro počítače s Windows, na kterých běží softwarový klient Intune
 
 V tomto tématu se dozvíte, jak přidat do Intune aplikace před tím, než je nasadíte.
 
 > [!IMPORTANT]
 > Informace v tomto tématu vám pomůžou přidat aplikace pro počítače s Windows, které spravujete pomocí softwarového klienta Intune. Pokud chcete aplikace přidávat do zaregistrovaných počítačů s Windows nebo do jiných mobilních zařízení, přečtěte si téma [Přidání aplikací pro mobilní zařízení v Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md).
 
+Abyste mohli aplikace do počítačů instalovat, musí podporovat bezobslužnou instalaci – bez zásahu uživatele. Pokud tomu tak není, instalace se nezdaří.
 
-## Přidání aplikace
+
+## <a name="add-the-app"></a>Přidání aplikace
 Pomocí Vydavatele softwaru Microsoft Intune nakonfigurujete vlastnosti aplikace a odešlete ji do svého cloudového úložiště. K tomu slouží tento postup:
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte **Aplikace** &gt; **Přidat aplikace**. Spustí se Vydavatel softwaru Intune.
@@ -40,7 +43,7 @@ Pomocí Vydavatele softwaru Microsoft Intune nakonfigurujete vlastnosti aplikace
 
     - **Vyberte typ souboru instalačního programu softwaru**. Označuje typ softwaru, který chcete nasadit. U počítačů s Windows zvolte **Instalační služba systému Windows**.
     - **Zadejte umístění instalačních souborů softwaru**. Zadejte umístění instalačních souborů, nebo zvolte **Procházet** a vyberte umístění ze seznamu.
-    - **Zahrnout další soubory a podsložky ze stejné složky**. Software, který používá Instalační službu systému Windows, někdy potřebuje podpůrné soubory. Ty se většinou nacházejí ve stejné složce jako instalační soubory. Tuto možnost vyberte, když chcete nasadit i podpůrné soubory.
+    - **Zahrnout další soubory a podsložky ze stejné složky**. Software, který používá Instalační službu systému Windows, někdy potřebuje podpůrné soubory. Ty musí být umístěné ve stejné složce jako instalační soubor. Tuto možnost vyberte, když chcete nasadit i podpůrné soubory.
 
     Pokud třeba chcete publikovat aplikaci s názvem Application.msi do Intune, stránka bude vypadat takto: ![Stránka instalace softwaru vydavatele](./media/publisher-for-pc.png)
 
@@ -73,7 +76,11 @@ Pomocí Vydavatele softwaru Microsoft Intune nakonfigurujete vlastnosti aplikace
 
     Pokud aplikace odpovídá některému z nakonfigurovaných pravidel, nebude se instalovat.
 
-6.  Platí jen pro typ souboru **Instalační služba systému Windows** (.msi a .exe): Na stránce **Argumenty příkazového řádku** můžete vybrat, jestli chcete instalačnímu programu poskytnout volitelné argumenty příkazového řádku. Některé instalační programy můžou například podporovat argument **/q** pro tichou instalaci bez zásahu uživatele.
+6.  Platí jen pro typ souboru **Instalační služba systému Windows** (.msi a .exe): Na stránce **Argumenty příkazového řádku** můžete vybrat, jestli chcete instalačnímu programu poskytnout volitelné argumenty příkazového řádku.
+    Intune automaticky přidá tyto parametry:
+    - Pro soubory .exe se přidá parametr **/install**.
+    - Pro soubory .msi se přidá parametr **/quiet**.
+    Pamatujte na to, že tyto možnosti budou fungovat jenom v případě, že to povolil tvůrce balíčku aplikace.
 
 7.  Platí jen pro typ souboru **Instalační služba systému Windows** (jenom .exe): Na stránce **Návratové kódy** můžete přidat nové chybové kódy, které Intune dokáže interpretovat při instalaci aplikace na spravovaný počítač s Windows.
 
@@ -85,12 +92,14 @@ Pomocí Vydavatele softwaru Microsoft Intune nakonfigurujete vlastnosti aplikace
 
 Aplikace se zobrazí v uzlu **Aplikace** v pracovním prostoru **Aplikace**.
 
-## Další kroky
+## <a name="next-steps"></a>Další kroky
 
 Dalším krokem po vytvoření aplikace je její nasazení. Další informace najdete v tématu [Nasazení aplikací v Microsoft Intune](deploy-apps.md).
 
+Různé tipy a triky pro nasazení softwaru na počítače s Windows najdete v blogovém příspěvku [Support Tip: Best Practices for Intune Software Distribution to PC’s](https://blogs.technet.microsoft.com/intunesupport/2016/06/13/support-tip-best-practices-for-intune-software-distribution-to-pcs/) (Tip pro podporu: Osvědčené postupy distribuce softwaru na počítače pomocí Intune).
 
 
-<!--HONumber=Oct16_HO4-->
+
+<!--HONumber=Feb17_HO3-->
 
 

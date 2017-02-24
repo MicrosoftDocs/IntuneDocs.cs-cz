@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 11/22/2016
+ms.date: 02/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,16 +13,19 @@ ms.technology:
 ms.assetid: 5d3215e7-0a5c-44bd-afb0-aeafce98c43f
 ms.reviewer: jeffgilb
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 654c5b65a9fde6742f3682b1fd5ba6c056d0d45b
+ms.sourcegitcommit: ad13897fe7bbe4fe13167bb4ce7f558b436a7a90
+ms.openlocfilehash: c4ef429722f5e33092473641839b59de3bee1c1c
 
 
 ---
 
-# <a name="enroll-mobile-devices-and-install-an-app"></a>Registrace mobilních zařízení a instalace aplikace
+# <a name="enable-enrollment-for-mobile-devices"></a>Povolení registrace mobilních zařízení
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
+Toto téma popisuje, jak může správce Intune povolit registraci mobilních zařízení. Nápovědu k používání Intune na telefonu najdete v článku [Práce pomocí spravovaných zařízení](https://docs.microsoft.com/intune/enduser/company-portal-frequently-asked-questions). 
 
 Pokud chcete nastavit správu mobilních zařízení v Intune, je potřeba nejdříve nastavit *autoritu správy mobilních zařízení*, která identifikuje službu schopnou správy zařízení spojených s vaším účtem. V těchto pokynech se předpokládá, že budete místo System Center Configuration Manageru používat službu Intune. Po nastavení autority MDM můžete povolit správu platforem zařízení a zaregistrovat svá zařízení v aplikaci Portál společnosti.
 
@@ -46,7 +49,7 @@ Pro zařízení s iOS, MacOS a Androidem for Work musí být povolena registrace
 
 Povolte registraci zařízení pro platformu zařízení, kterou chcete spravovat. V závislosti na platformě je potřeba splnit různé požadavky:
 
--  [iOS a macOS](https://docs.microsoft.com/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune.md)
+-  [iOS a macOS](https://docs.microsoft.com/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
 -  [Počítač s Windows](https://docs.microsoft.com/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
 -  [Windows 10 Mobile a Windows Phone](https://docs.microsoft.com/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
 - [Android for Work](https://docs.microsoft.com/intune/deploy-use/set-up-android-for-work)
@@ -69,6 +72,6 @@ Gratulujeme! Právě jste dokončili poslední krok *úvodní příručky Intune
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

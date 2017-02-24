@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 11/22/2016
+ms.date: 02/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: e0d8e98f-7dd8-4cbf-887c-a9af63ffe970
 ms.reviewer: jeffgilb
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 9f75020a6d8a3e2aeb278fb99f54516253abf3dd
+ms.sourcegitcommit: ad13897fe7bbe4fe13167bb4ce7f558b436a7a90
+ms.openlocfilehash: 4093497553ccb7cc5f5c949f2ff0004697beb42a
 
 
 ---
@@ -24,13 +25,15 @@ ms.openlocfilehash: 9f75020a6d8a3e2aeb278fb99f54516253abf3dd
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
+V tomto tématu najdou správci Intune informace o tom, jak vytvořit zásady a publikovat aplikace, které pak můžou nasadit do spravovaných zařízení.
+
 Než začnete s registrací aplikací na Intune, můžete povolit nastavení zásad a aplikace, které se nasadí ihned, jak začne správa těchto zařízení. Intune nabízí nastavení, které pomáhá řídit nastavení zabezpečení na mobilních zařízeních, spravovat nastavení brány Windows Firewall a Endpoint Protection pro počítače a nasazovat aplikace. Můžete nakonfigurovat zásady, přidat aplikace a nasadit tyto aplikace tak, aby zařízení přijímala nastavení a aplikace ihned po registraci v Intune.
 
 Zásady a aplikace jsou specifické pro platformu.
 
 ## <a name="manage-device-settings"></a>Správa nastavení zařízení
 
- Nastavení zásad zařízení se konfiguruje a spravuje podle platformy. Můžete nakonfigurovat zásady pro tyto platformy:
+ Nastavení zásad zařízení se konfiguruje a spravuje podle platformy. Pod následujícími odkazy najdete seznamy dostupných nastavení pro příslušné platformy:
 
 - [iOS](https://docs.microsoft.com/intune/deploy-use/ios-policy-settings-in-microsoft-intune)
 - [Android a Samsung KNOX Standard](https://docs.microsoft.com/intune/deploy-use/android-policy-settings-in-microsoft-intune)
@@ -72,6 +75,6 @@ Teď je aplikace dostupná v Intune a vy ji můžete nasadit na spravovaná zař
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

@@ -1,25 +1,28 @@
 ---
-title: "Heslo nesplňuje požadavky správce IT | Microsoft Intune"
+title: "Heslo nesplňuje požadavky správce IT | Dokumentace Microsoftu"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/20/2016
+ms.date: 02/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: efb3c261-1f6c-4d39-bfa4-18661f8c59c7
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 60659d60e3fcf2146b444a3334192c8b1181f735
+ms.sourcegitcommit: c5c857b46c13aee790ab5f780a59d9cd51029cd2
+ms.openlocfilehash: a2af33a5b274b01f6651c76bd0b0038dc74b785f
 
 
 ---
 
-# <a name="password-does-not-meet-it-administrator-requirements"></a>Heslo nesplňuje požadavky správce IT
+# <a name="your-password-does-not-meet-your-it-admins-requirements"></a>Heslo nesplňuje požadavky správce IT
 
 Heslo, které používáte pro přístup k prostředkům společnosti nebo školy, nesplňuje některé požadavky nastavené správcem IT. Pokud chcete problém vyřešit, postupujte podle pokynů, které se zobrazí na vašem zařízení. Následující výčet obsahuje popis problémů.
 
@@ -43,12 +46,12 @@ Popis problémů s kódem PIN nebo heslem:
 
 - **Heslo bylo použito v nedávné době.** Správce IT vám zakázal používat předchozí hesla, která jste použili v minulosti. Zvolte si heslo, které jste ještě nikdy nepoužili.
 
-- **Heslo není dostatečně složité a nesplňuje požadavky.** Správce požaduje, abyste v hesle použili i složitější znaky. Zkuste použít třeba číslice, velká písmena a symboly jako $, % a #.
+- **Heslo není dostatečně složité a nesplňuje požadavky.** Správce požaduje, abyste v hesle použili i složitější znaky. Zkuste použít třeba číslice, velká písmena a symboly jako $, % a #. Tento problém může vzniknout i u dalších účtů na vašem zařízení. Zkontrolujte proto všechny případné další pracovní účty a zajistěte, aby vaše heslo splňovalo požadavky nastavené správcem IT pro vaše zařízení.
 
 Pokud máte potíže s tím, jak vytvořit heslo v souladu s požadavky, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

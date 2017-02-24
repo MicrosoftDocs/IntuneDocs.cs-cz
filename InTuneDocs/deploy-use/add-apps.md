@@ -1,11 +1,11 @@
 ---
-title: "Přidávání aplikací | Microsoft Intune"
+title: "Přidávání aplikací | Dokumentace Microsoftu"
 description: "Před zahájením nasazování aplikací s Intune se seznamte s koncepty představenými v tomto tématu."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 02/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,18 @@ ms.technology:
 ms.assetid: 2b770f4f-6d36-41e4-b535-514b46e29aaa
 ms.reviewer: mghadial
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: f896f51c21beaf7561168f3f622cfc7b0d0c8068
+ms.sourcegitcommit: f7998da5566f9b963807b613a47d35b629620f96
+ms.openlocfilehash: 9e8b9e1c935dd771c3e37bea5a552fba2374bf68
 
 
 ---
 
 # <a name="add-apps-with-microsoft-intune"></a>Přidávání aplikací s Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Před zahájením nasazování aplikací s Microsoft Intune se seznamte s koncepty představenými v tomto tématu. Tyto koncepty vám pomůžou porozumět tomu, které aplikace můžete nasadit na kterou platformu. Taky vám pomůžou pochopit požadavky, které musí být před nasazením aplikací splněné.
 
 ## <a name="app-types-that-you-can-deploy"></a>Typy aplikací, které můžete nasadit
@@ -60,7 +64,7 @@ Než začnete používat vydavatele softwaru, musíte nainstalovat plnou verzi r
 ## <a name="cloud-storage-space"></a>Prostor v cloudovém úložišti
 Všechny aplikace, které vytváříte pomocí instalace typu Instalační program softwaru (například obchodní aplikace), se zabalí a nahrají do cloudového úložiště Microsoft Intune. Zkušební předplatné Intune zahrnuje 2 gigabajty (GB) cloudového úložiště, které se používá k ukládání spravovaných aplikací a aktualizací. Úplné předplatné zahrnuje 20 GB úložného prostoru.
 
-Objem využitého úložiště je dostupný v uzlu **Využití úložiště** pracovního prostoru **Správce**.
+Objem využitého úložiště je dostupný v uzlu **Využití úložiště** pracovního prostoru **Správce**. Další úložiště pro Intune můžete zakoupit stejným způsobem jako u původního nákupu.  Pokud jste platili fakturou nebo platební kartou, navštivte [portál pro správu předplatných](https://portal.office.com/adminportal/home?switchtomodern=true#/subscriptions).  Jinak kontaktujte svého partnera nebo prodejního zástupce.
 
 Požadavky na cloudové úložiště jsou následující:
 
@@ -93,6 +97,6 @@ Před nasazením aplikací je musíte přidat do konzoly Intune. Můžete přid�
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 12/30/2016
+ms.date: 02/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 3dbec400-5d8a-47be-b892-7745811d9de2
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 464e6d73765a75aaefb3eca95281bf54b4cc7a2d
-ms.openlocfilehash: 2bb4eb56bea4f640fa304c03b0f86b78625fe6a7
+ms.sourcegitcommit: 00e9dfd165a449182c5b937372db7085c981c68f
+ms.openlocfilehash: cca12024ba12cff5cdb8c515f7719a7592ba97ea
 
 
 ---
@@ -24,16 +25,16 @@ ms.openlocfilehash: 2bb4eb56bea4f640fa304c03b0f86b78625fe6a7
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Nezáleží na tom, jestli zařízení patří společnosti nebo jednotlivci, nakonec ho bude potřeba odebrat ze správy v Intune. 
+Nezáleží na tom, jestli zařízení patří společnosti nebo jednotlivci, nakonec ho bude potřeba odebrat ze správy v Intune.
 
-Zařízení se z Intune nikdy neodeberou bez vašeho zásahu, a to ani v případě, že se daná zařízení po nějakou dobu ke službě Intune nepřipojila. 
+Zařízení se z Intune nikdy neodeberou bez vašeho zásahu, a to ani v případě, že se daná zařízení po nějakou dobu ke službě Intune nepřipojila.
 
 Vyřazení zařízení může mít různé důvody:
 
--   Uživatel opustí společnost plánovaným způsobem („spravovaný“ odchod).
--   Uživatel opustí společnost náhle (dostane výpověď, skončí atd.).
--   Dojde ke ztrátě zařízení.
--   Zařízení se začne používat jinak (přesune se k jinému uživateli, začne se používat jiným způsobem atd.).
+-    Uživatel opustí společnost plánovaným způsobem („spravovaný“ odchod).
+-    Uživatel opustí společnost náhle (dostane výpověď, skončí atd.).
+-    Dojde ke ztrátě zařízení.
+-    Zařízení se začne používat jinak (přesune se k jinému uživateli, začne se používat jiným způsobem atd.).
 
 Spravované mobilní zařízení můžete vymazat buď selektivně, nebo úplně. Můžete ho také zamknout a resetovat jeho heslo. Pokud zařízení vymažete, uvolníte předplatné uživatele, které můžete přidat jinému zařízení. Vyřadit můžete také počítače, které jsou spravované klientským softwarem Intune.
 
@@ -43,6 +44,9 @@ Při selektivním i úplném vymazání se zařízení odebere ze správy v Intu
 [Selektivní vymazání](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#selective-wipe) by se mělo upřednostňovat u zaměstnanců, kteří mají v Intune zaregistrované své vlastní zařízení, protože vymazání dat se v tomto případě nedotkne osobních údajů uložených na zařízení. Odeberou se jenom firemní data.
 
 Pro zařízení, která je třeba přiřadit někomu jinému, můžete také použít [úplné vymazání](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#full-wipe), které resetuje zařízení do továrního nastavení.
+
+### <a name="removing-user-licenses-and-managed-devices"></a>Odebrání uživatelských licencí a spravovaných zařízení
+Když odeberete uživatelskou licenci, zařízení zaregistrovaná tímto uživatelem přestanou být registrovaná. Doporučujeme, abyste před odebráním licence Intune uživateli nejdříve odebrali podniková data ze spravovaných zařízení. Jakmile uživatelskou licenci odeberete, nemůže být zařízení cílem vzdálených akcí.
 
 ## <a name="to-delete-devices-in-the-azure-active-directory-portal"></a>Odstranění zařízení na portálu služby Azure Active Directory
 
@@ -76,6 +80,6 @@ V některých případech zařízení samotné dosáhne konce své životnosti. 
 
 
 
-<!--HONumber=Dec16_HO5-->
+<!--HONumber=Feb17_HO2-->
 
 
