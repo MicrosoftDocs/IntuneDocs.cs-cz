@@ -156,7 +156,7 @@
 #### [Dynamics CRM Online](deploy-use/restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
 #### [Ochrana přístupu k e-mailu: příklady](deploy-use/restrict-email-access-example-scenarios.md)
 ### [Povolení přístupu ke službám O365 jen aplikacím spravovaným zásadami](deploy-use/allow-policy-managed-apps-access-to-o365.md)
-#### [Aplikace s podmíněným přístupem MAM](deploy-use/use-apps-with-mam-ca.md)
+#### [Používání aplikací s podmíněným přístupem na bázi aplikací](deploy-use/use-apps-with-mam-ca.md)
 #### [Exchange Online](deploy-use/mam-ca-for-exchange-online.md)
 #### [Blokování aplikací bez ověřování ADAL](deploy-use/block-apps-with-no-modern-authentication.md)
 ### [Ochrana přístupu k sítím (Cisco ISE)](deploy-use/restrict-access-to-networks.md)
@@ -222,8 +222,3 @@
 ## [Řešení problémů s ochranou zařízení před internetovými útoky](troubleshoot/device-threat-protection-troubleshooting.md)
 
 # [Glosář](understand-explore/intune-glossary.md)
-
-
-<!--HONumber=Feb17_HO3-->
-
-
