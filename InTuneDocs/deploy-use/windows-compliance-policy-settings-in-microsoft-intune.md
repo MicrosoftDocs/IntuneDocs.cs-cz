@@ -1,11 +1,11 @@
 ---
-title: "Nastavení zásad dodržování předpisů pro zařízení s Windows | Microsoft Intune"
+title: "Nastavení zásad dodržování předpisů pro zařízení s Windows | Dokumentace Microsoftu"
 description: "Toto téma popisuje pravidla a nastavení, které je možné nakonfigurovat pro zásady dodržování předpisů pro zařízení s Windows."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 10/25/2016
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,18 @@ ms.technology:
 ms.assetid: f996842c-e9a4-4819-acb4-ee66e8fb35b8
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d6ff74f0b46baf384dbdedf13ad75538dd33a089
-ms.openlocfilehash: e079fea47a10296067fe82fc05d82f0a863ae7bd
+ms.sourcegitcommit: 1fa570c3bca5d24ad234e8437a8553bf358520b8
+ms.openlocfilehash: c0baa59aacc6475544d70d2ead5f6fbf45429dfd
+ms.lasthandoff: 02/22/2017
 
 
 ---
 
 # <a name="compliance-policy-settings-for-windows-devices-in-microsoft-intune"></a>Nastavení zásad dodržování předpisů pro zařízení s Windows v Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Nastavení zásad popsané v tomto tématu se týká zařízení s operačním systémem Windows. Následující části popisují podporované verze Windows.
 
@@ -72,6 +76,9 @@ Nastavení uvedené v této části je podporované v systémech Windows Phone 8
   -  **Povolený nástroj BitLocker:** Když je nástroj BitLocker zapnutý, při vypnutém systému nebo v režimu hibernace může zařízení pomáhat chránit data uložená na disku před neoprávněným přístupem. Nástroj Windows BitLocker Drive Encryption zašifruje všechna data uložená na svazku operačního systému Windows. BitLocker používá k ochraně operačního systému Windows a uživatelských dat čip TPM. BitLocker také pomáhá zajistit, aby se s počítačem nemanipulovalo ani v případě, že je ponechaný bez dozoru nebo je ztracený/odcizený. Pokud je počítač vybavený kompatibilním čipem TPM, nástroj BitLocker pomocí čipu TPM uzamkne šifrovací klíče, které pomáhají chránit data. V důsledku toho se ke klíčům nedá získat přístup, dokud čip TPM neověří stav počítače.
   -  **Povolená integrita kódu:** Integrita kódu je funkce, která ověřuje integritu ovladače nebo systému souboru při každém načtení do paměti. Integrita kódu zjistí, jestli se do jádra načítá nepodepsaný ovladač nebo systémový soubor. Zjistí také, jestli systémový soubor nebyl změněn škodlivým softwarem, který je spuštěný pomocí uživatelského účtu s oprávněními správce.
   - **Povolené zabezpečené spouštění:** Pokud je povolené zabezpečené spouštění, musí se systém spouštět do důvěryhodného stavu z výroby. Kromě toho platí, že při povoleném zabezpečeném spouštění musí mít komponenty jádra sloužící ke spuštění počítače správné kryptografické podpisy, které jsou podle výrobce zařízení důvěryhodné. Firmware UEFI to nejdřív ověří a až potom povolí spuštění počítače. Pokud u některých souborů došlo k manipulaci, při které se porušil podpis, systém se nespustí.
+
+  > [!IMPORTANT]
+  > Zařízení s Windows nepodporují software **ELAM (Early Launch Anti Malware)** třetích stran nainstalovaný jako součást Ověření stavu zařízení.
 
   Informace o způsobu fungování služby ověření stavu najdete v tématu [Poskytovatel CSP služby Health Attestation](https://msdn.microsoft.com/library/dn934876.aspx).
 ###  <a name="device-property-settings"></a>Nastavení vlastností zařízení
@@ -148,9 +155,4 @@ K vyhledání verze operačního systému, kterou máte použít v nastaveních 
 
 - U počítačů s Windows 10 musí být verze nastavená jako **10.0** plus číslo sestavení operačního systému vrácené příkazem **winver**. Může to být třeba 10.0.10586.
 > ![Verze sestavení operačního systému zvýrazněná v dialogovém okně „O produktu Windows“](./media/ca_win10-os-version.png)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

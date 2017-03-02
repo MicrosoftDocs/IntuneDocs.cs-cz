@@ -1,5 +1,6 @@
 ---
-title: "Úplně nebo selektivní vymazání v zařízení používajících službu Intune | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Úplné nebo selektivní vymazání zařízení pomocí Intune"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Přečtěte si, jak provést selektivní vymazání firemních dat v zařízení nebo úplné vymazání, které obnoví zařízení do továrního nastavení."
 keywords: 
 author: staciebarker
@@ -12,9 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 990062ecf03a117dad74eb71e3f40abb79f22be6
-ms.openlocfilehash: 9188f4bb4ea526227ccd9f2029fc9b44cbd4a334
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 22e188e81f2bc278045bb0988642b1b68372d6af
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -122,9 +125,4 @@ Pokud je zařízení zapnuté a připojené, trvá vymazání všech typů zař�
 3.  V okně s názvem zařízení zvolte **Odebrat firemní data** a potom zvolte **Ano**, abyste vymazání potvrdili.
 
 Pokud je zařízení zapnuté a připojené, trvá vymazání všech typů zařízení méně než 15 minut.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

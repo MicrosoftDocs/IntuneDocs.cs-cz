@@ -18,8 +18,9 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
-ms.openlocfilehash: 7a4b5acea4a4bdce32c42ca33f81778965ee1abb
+ms.sourcegitcommit: 0e6b7ae1794ff0857dfb203eb3c67d7ba494bd8e
+ms.openlocfilehash: bde2ccc0c170a85e926357d54fcf4ffe6ee50fd9
+ms.lasthandoff: 02/21/2017
 
 
 ---
@@ -34,7 +35,7 @@ Registrace zařízení s Windows nebo Windows Phone v Intune nabízí tyto mo�
 
 -   Přístup k podnikové síti, e-mailu a pracovním souborům
 
--   Získání aplikací společnosti z webu Portál společnosti (Aplikace společnosti pro systém Windows 7 a Windows Vista je možné získat jenom z webu Portál společnosti.)
+-   Získání aplikací společnosti z webu Portál společnosti (__Poznámka__: Pro Windows 7 a Windows Vista je možné získat aplikace společnosti jenom z webu Portál společnosti.)
 
 -   Automatické nastavení e-mailového účtu vaší společnosti nebo školy
 
@@ -67,6 +68,7 @@ Když zaregistrujete zařízení, udělujete správci IT oprávnění provést n
 -  Správce IT může do vašeho počítače instalovat aplikace a aktualizace.
 
 ## <a name="what-happens-every-eight-hours-after-device-enrollment"></a>Co se stane každých&8; hodin po registraci zařízení
+
 Přibližně každých osm hodin proběhne na zaregistrovaných zařízeních toto:
 
 -   Stažení všech zásad nebo aktualizací aplikací, které vám správce IT zpřístupnil
@@ -76,9 +78,4 @@ Přibližně každých osm hodin proběhne na zaregistrovaných zařízeních to
 -   Odeslání všech aktualizací inventáře aplikací společnosti.
 
 Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 02/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,11 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: bb949c9a83fdde630dd2023765d32e98c43a1c20
-ms.openlocfilehash: 22a5cab46a6ca8cf2d350ba9844328a3dea13766
+ms.sourcegitcommit: 76001bd12e5f665eb1a5a0f0fe5442f0a6fedb8c
+ms.openlocfilehash: d653d3eb1d71d30e2bf1104b1d55bfbcf2725c13
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -26,23 +28,15 @@ ms.openlocfilehash: 22a5cab46a6ca8cf2d350ba9844328a3dea13766
 
 # <a name="using-your-android-device-with-intune"></a>Použití zařízení Android s Intune
 
-Tento článek obsahuje odkazy na všechny úlohy, které můžou provést koncoví uživatelé na svých zařízeních spravovaných Intune. Správci IT zde najdou informace o krocích uživatelů při provádění různých úloh. Úlohy jsou seskupené do následujících kategorií:
+Intune vám může v mnoha směrech usnadnit práci. Tady je seznam obvyklých postupů, jejichž provedení může vaše společnost vyžadovat.
 
-- Instalace aplikace Portál společnosti a registrace ve službě Intune
-- Úlohy správy po registraci
-- Problémy se shodou
-
-## <a name="company-portal-app-installation-and-intune-enrollment"></a>Instalace aplikace Portál společnosti a registrace ve službě Intune
-
-Informace v této části pomohou uživatelům nainstalovat Portál společnosti Intune a zaregistrovat zařízení s Androidem.
+## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Registrace do Intune a instalace Portálu společnosti
 
 - [Registrace zařízení v Intune](enroll-your-device-in-Intune-android.md)
 - [Vytvoření pracovního profilu a registrace zařízení v Intune](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
 - [Co se stane, když nainstalujete aplikaci Portál společnosti a zaregistrujete zařízení v Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
 
-## <a name="things-users-can-do-when-their-device-is-enrolled-in-intune"></a>Možnosti uživatelů po zaregistrování zařízení do Intune
-
-Informace v této části pomohou uživatelům provádět akce po zaregistrování zařízení s Androidem do Intune.
+## <a name="things-you-can-do-when-your-device-is-enrolled-in-intune"></a>Kroky, které můžete provést po registraci zařízení do služby Intune
 
 - [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-android.md)
 - [Zašifrování zařízení](encrypt-your-device-android.md)
@@ -56,28 +50,4 @@ Informace v této části pomohou uživatelům provádět akce po zaregistrován
 - [Co se stane, když zrušíte registraci zařízení v Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
 - [Co se stane, když resetujete zařízení s Androidem pomocí aplikace Portál společnosti?](what-happens-if-you-reset-your-device-using-the-company-portal-android.md)
 <!--- - [What is the Rights Management sharing app?](what-is-the-rms-sharing-app-android.md) --->
-
-## <a name="steps-to-fix-device-and-compliance-issues"></a>Postup při opravě problémů se zařízením a dodržováním předpisů
-
-Uživatelé mohou informace v této části použít k opravě problémů, se kterými se mohou setkat, když svoje zařízení s Androidem zaregistrují v Intune.
-
-- [Použití podrobného protokolování správcem IT k opravě problémů se zařízením](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-- [Odeslání protokolů správci IT pomocí e-mailu](send-logs-to-your-it-admin-by-email-android.md)
-- [Odeslání protokolů správci IT pomocí kabelu USB](send-logs-to-your-it-admin-using-cable-android.md)
-- [Odeslání chyb při registraci vašemu správci IT](send-enrollment-errors-to-your-it-admin-android.md)
-- [Zařízení nemá požadovanou minimální verzi operačního systému](you-need-to-update-your-android-device.md)
-- [Zařízení nevyhovuje maximální verzi operačního systému](your-android-version-isnt-yet-supported.md)
-- [Zařízení obsahuje root a nemůže se připojit](your-device-is-rooted-and-you-cant-connect-android.md)
-- [Zařízení chybí požadovaný certifikát](your-device-is-missing-a-required-certificate-landing-android.md)
-- [Musíte vypnout používání neznámých zdrojů](you-need-to-turn-off-unknown-sources-android.md)
-- [Musíte vypnout ladění USB](you-need-to-turn-off-usb-debugging-android.md)
-- [Musíte zapnout vyhledávání bezpečnostních hrozeb](you-need-to-turn-on-scanning-for-security-threats-android.md)
-- [Zařízení nesplňuje požadavek na minimální úroveň opravy zabezpečení](your-device-does-not-meet-the-minimum-security-patch-android.md)
-- [Jste vyzváni k instalaci aplikace Lookout for Work na zařízení s Androidem](you-are-prompted-to-install-lookout-for-work-android.md)
-- [Je třeba vyřešit hrozbu, kterou objevila aplikace Lookout for Work na zařízení s Androidem](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
-
-
-
-<!--HONumber=Jan17_HO5-->
-
 

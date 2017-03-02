@@ -1,6 +1,6 @@
 ---
 title: "Správa Apple DEP pro zařízení s iOSem | Dokumentace Microsoftu"
-description: "Nasaďte registrační profil, který umožňuje bezdrátovou registraci zařízení s iOSem koupených prostřednictvím programu DEP (Device Enrollment Program) pro zařízení s iOS, aby bylo možné je spravovat."
+description: "Nasaďte registrační profil, který umožňuje bezdrátovou registraci zařízení s iOSem koupených prostřednictvím programu DEP (Device Enrollment Program) pro zařízení s iOSem, aby bylo možné je spravovat."
 keywords: 
 author: staciebarker
 ms.author: stabar
@@ -15,8 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
-ms.openlocfilehash: ab035d069fa1dbf5f5f38a959dc2f896a0109b6f
+ms.sourcegitcommit: 185b7dd1e486155f90956ea1f6f83246636d421c
+ms.openlocfilehash: bcbf2c877aae34baa42e7a51e347489ec8669a34
+ms.lasthandoff: 02/22/2017
 
 
 ---
@@ -76,7 +77,7 @@ Následující postup vysvětluje, jak zaregistrovat zařízení s iOSem hned od
 
 2. Zadejte **obecné** podrobnosti, jako je **Název** a **Popis**, a určete, jestli zařízení přiřazená k profilu mají přidruženého uživatele nebo patří skupině:
 
-   - **Vyzvat k přidružení uživatele**: Při počátečním nastavení je možné zařízení spojit s uživatelem a potom mu umožnit přístup k firemním datům a e-mailu. U zařízení spravovaných v programu DEP, která patří uživatelům a potřebují používat portál společnosti (tzn. instalovat aplikace), je potřeba nastavit **přidružení uživatele**. Při registraci na zařízeních v programu DEP s přidružením uživatelů nefunguje vícefaktorové ověřování (MFA). Po registraci vícefaktorové ověřování na těchto zařízeních funguje podle očekávání.
+   - **Vyzvat k přidružení uživatele**: Při počátečním nastavení je možné zařízení spojit s uživatelem a potom mu umožnit přístup k firemním datům a e-mailu. U zařízení spravovaných v programu DEP, která patří uživatelům a potřebují používat portál společnosti (tzn. instalovat aplikace), je potřeba nastavit **přidružení uživatele**. Při registraci na zařízeních v programu DEP s přidružením uživatelů nefunguje vícefaktorové ověřování (MFA). Po registraci vícefaktorové ověřování na těchto zařízeních funguje podle očekávání. Novým uživatelům, kteří si musejí změnit heslo, když se poprvé přihlásí, se během registrace na zařízení DEP nezobrazí výzva. Také uživatelům, u jejichž hesel vypršela platnost, se během registrace DEP nezobrazí výzva k resetování hesla a budou muset heslo resetovat z jiného zařízení. 
 
    > [!NOTE]
    > Program DEP s přidružením uživatele vyžaduje aktivaci uživatelského jména / smíšeného koncového bodu WS-Trust 1.3, aby mohl požádat o token uživatele.
@@ -161,9 +162,4 @@ Od prosince 2016 se správa skupin zařízení přesunuje do služby Azure Activ
 
 ### <a name="see-also"></a>Viz taky
 [Předpoklady registrace zařízení](prerequisites-for-enrollment.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

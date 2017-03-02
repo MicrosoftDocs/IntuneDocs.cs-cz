@@ -1,5 +1,6 @@
 ---
-title: "Nastavení autority pro správu mobilních zařízení | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Nastavení autority pro správu mobilních zařízení"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Postup nastavení autority pro správu mobilních zařízení v Intune "
 keywords: 
 author: staciebarker
@@ -13,9 +14,11 @@ ms.technology:
 ms.assetid: 8deff871-5dff-4767-9484-647428998d82
 ms.reviewer: dagerrit
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 990062ecf03a117dad74eb71e3f40abb79f22be6
-ms.openlocfilehash: 3c0de501c172484f036aa2d812f0c40fcfa1d93f
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 9d7a1a934188f0a40553d3c6b8b567ba8f6af034
+ms.lasthandoff: 02/18/2017
 
 ---
 
@@ -36,14 +39,9 @@ Nastavení autority pro správu mobilních zařízení určuje způsob správy z
 
 **Nastavení autority pro správu mobilních zařízení:**
 
-1. Na portálu Azure Portal zvolte **Další služby**, do textového pole zadejte **Intune** a pak zvolte **Jiné** > **Intune**.
+1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování a správa** > **Intune**.
 
 2. V okně Intune zvolte **Registrovat zařízení** a pak zvolte **Přehled**.
 
 3. V okně **Začátek správy zařízení** zvolte **Nastavit autoritu MDM na Intune**. Zobrazí se zpráva, že jste úspěšně nastavili autoritu MDM na Intune.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

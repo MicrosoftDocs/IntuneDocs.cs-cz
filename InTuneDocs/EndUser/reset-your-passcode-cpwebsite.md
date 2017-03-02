@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 01/23/2017
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -18,8 +18,9 @@ ms.reviewer: mamoriss
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
-ms.openlocfilehash: a8ce59755a74199eda6865feda68c0613d10c2a7
+ms.sourcegitcommit: f293901d3865f0b10ed876e83b151cf59a046cba
+ms.openlocfilehash: 68725bb63ae2750e89a03c16027f8b4fd9111255
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -33,21 +34,26 @@ Pokud ztratíte kód PIN nebo heslo zařízení, které jste zaregistrovali v In
 
 Resetování hesla:
 
-1.  Otevřete [web Portál společnosti](http://portal.manage.microsoft.com) a zvolte zařízení, jehož heslo chcete resetovat.
+1.    Na [webu Portál společnosti](http://portal.manage.microsoft.com) klepněte na tlačítko __nabídky__ ![Malý obrázek tlačítka nabídky, tři vodorovné pruhy nad sebou](/Intune/whats-new/media/CP_hamburger_menu.png) a potom vyberte __Moje zařízení__.
 
-2.  Zvolte **Resetovat heslo**.
+2. Na stránce __Moje zařízení__ vyberte název zařízení, jehož heslo chcete resetovat.
 
-    ![Detaily zařízení s tlačítkem Resetovat heslo](./media/iwp-screen-with-all-options.png)
+  ![Snímek obrazovky se stránkou Moje zařízení s několika neidentifikovanými zařízeními zobrazenými nad výzvou k registraci zařízení, která nejsou v seznamu, nebo k identifikaci neidentifikovaných zařízení](./media/macOS_enroll_002_tap_here_banner.png)
 
-3.  Zvolte **Odhlásit se** a pak se znovu přihlaste. Použijte přihlašovací údaje pracovního nebo školního účtu. Musíte se znovu přihlásit do pěti minut.
+3.    Zařízení se otevře v místním okně. Vyberte tlačítko **Resetovat heslo**.
 
-    ![Zpráva o resetování s tlačítkem pro odhlášení](./media/iwp-2-sign-out.png)
+    ![Všechny možnosti pro vybrané zařízení na webu Portál společnosti, včetně možnosti Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení ](./media/iwp-screen-with-all-options.png)
 
-4.  Zvolte **Resetovat heslo**.
+4.  Zobrazí se informační zpráva s výzvou, abyste potvrdili, že chcete resetovat heslo, a s informacemi o tom, že po resetování hesla budete ze svého zařízení odhlášeni. Potom budete muset 5 minut počkat, než se budete moct znovu přihlásit.
 
-    ![Zpráva s vysvětlením, co se stane, když resetujete heslo](./media/iwp-3-tap-reset-passcode-after-signin.png)
+  ![Informační zpráva s upozorněním týkajícím se resetování hesla zařízení a odhlášení uživatele Tlačítka pro vstup uživatele jsou Odhlásit se a Zrušit.](./media/iwp-reset-passcode-popup.png)
 
-    V tabulce najdete informace o tom, jak **resetování hesla** funguje na vašem zařízení.
+4.  Vyberte možnost **Odhlásit se** a zobrazí se závěrečná zpráva s informacemi o odebrání hesla ze zařízení. Pokud zařízení nemáte s sebou, neodebírejte heslo, protože by se mohlo stát, že kdokoli by měl k zařízení fyzický přístup, měl by přístup k většině osobních i firemních informací, které jsou v něm uložené.
+
+  ![Druhá informační zpráva s upozorněním týkajícím se resetování hesla zařízení a odebrání hesla ze zařízení. Obsahuje také informace o tom, jak nastavit nové heslo prostřednictvím nastavení zařízení.](./media/iwp-reset-passcode-2nd-popup.png)
+
+
+Různá zařízení mají různé typy hesel. V následující tabulce si můžete přečíst, jaký vliv bude resetování hesla mít na vaše konkrétní zařízení. 
 
     |Typ zařízení|Co se stane při resetování|
     |------------|-----------|
@@ -61,9 +67,4 @@ Resetování hesla:
     Pokud chcete zobrazit potvrzení, že bylo heslo úspěšně resetované, klikněte na příznak oznámení v pravé horní části webu Portál společnosti.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

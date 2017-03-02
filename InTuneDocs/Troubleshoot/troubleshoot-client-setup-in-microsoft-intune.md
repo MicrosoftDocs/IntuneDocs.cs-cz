@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 08/02/2016
+ms.date: 02/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: tscott
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 2d5c7d4800e1140efb502c47151ea8cc87548acd
+ms.sourcegitcommit: e7beff3bf4579d9fb79f0c3f2fb8fbf9bb1ea160
+ms.openlocfilehash: 9de1c3f8c3dbb7a5e00c5384cc7321aedfa5b9b5
+ms.lasthandoff: 02/22/2017
 
 
 ---
@@ -120,17 +121,22 @@ Kódy chyb, které se zobrazují na stránce **Výstrahy** , když se instalace 
 |**0x80070032**|Na klientském počítači se nenašel nejmíň jeden softwarový produkt, který je podmínkou pro instalaci klientského softwaru.|Ujistěte se, že jsou na klientském počítači nainstalované všechny požadované aktualizace, a pak zkuste nainstalovat klientský software znova. Další informace o požadavcích pro instalaci klientského softwaru najdete v tématu [Požadavky na síťovou infrastrukturu pro Microsoft Intune](/intune/get-started/network-infrastructure-requirements-for-microsoft-intune).|
 |**0x80043008**|Nešlo spustit službu Microsoft Online Management Updates.|Kontaktujte podporu podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).|
 |**0x80043009**|Klientský počítač je ve službě už zaregistrovaný.|Abyste mohli klientský počítač ve službě zaregistrovat znovu, musíte ho nejdřív vyřadit. Pokyny najdete v tématu [Vyřazení dat a zařízení ze správy službou Microsoft Intune](/intune/deploy-use/retire-devices-from-microsoft-intune-management).|
+|**0x8004300A**|(Fáze 21) Dojde k chybě při nasazení registračního balíčku na objekt zásad skupiny za účelem instalace v oboru uživatele, nikoli v oboru počítače. |Zkontrolujte, jestli je objekt zásad skupiny prostřednictvím GPSI správně zaměřený na obor počítače. Příspěvky na toto téma najdete na tomto [fóru TechNet](https://social.technet.microsoft.com/Forums/en-US/bb9fa71c-c132-4954-abb0-70be8acbd925/failed-to-install-windows-intune?forum=microsoftintuneprod).|
 |**0x8004300B**|Instalační balíček klientského softwaru nejde spustit, protože verze Windows, která běží na klientovi, není podporovaná.|Intune nepodporuje verzi Windows, která běží na klientském počítači. Seznam podporovaných operačních systémů najdete v tématu [Požadavky na síťovou infrastrukturu pro Microsoft Intune](/intune/get-started/network-infrastructure-requirements-for-microsoft-intune).|
-|**0xAB2**|Instalační služba systému Windows nemohla získat přístup k modulu VBScript runtime pro vlastní akci.|Tato chyba je způsobená nějakou vlastní akcí založenou na dynamických knihovnách DLL (Dynamic-Link Library). Při odstraňování problémů s knihovnou DLL budete nejspíš muset použít nástroje popsané v [článku 198038 znalostní báze podpory Microsoftu: Užitečné nástroje při problémech s balíčky a nasazením](http://go.microsoft.com/fwlink/?LinkID=234255).|
+|**0xAB2**|Instalační služba systému Windows nemohla získat přístup k modulu VBScript runtime pro vlastní akci.|Tato chyba je způsobená nějakou vlastní akcí založenou na dynamických knihovnách DLL (Dynamic-Link Library). Při odstraňování problémů s knihovnou DLL budete nejspíš muset použít nástroje popsané v [článku&19803;8 znalostní báze podpory Microsoftu: Užitečné nástroje při problémech s balíčky a nasazením](http://go.microsoft.com/fwlink/?LinkID=234255).|
 |**0x8004300f**|Software se nedá nainstalovat, protože už je nainstalovaný klient nástroje System Center Configuration Manager.|Odeberte klienta nástroje Configuration Manager a pak zkuste nainstalovat klientský software znova.|
 |**0x80043010**|Software se nedá nainstalovat, protože už je nainstalovaný klient OMADM (Open Mobile Alliance Device Management).|Zrušte registraci klienta OMADM a pak zkuste nainstalovat klientský software znova.|
 Pokud problémy instalace potrvají, kontaktujte podporu podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md). Je potřeba mít připravený protokol o registraci klientského počítače (najdete ho tady: %*programfiles*%\Microsoft\OnlineManagement\Logs\Enrollment.log a %*userprofile*%\AppData\Local\Microsoft\OnlineManagement\Logs\Enrollement.log) a protokol služby Windows Update (%*windir*%\windowsupdate.log), abyste ho mohli ukázat technikům podpory.
 
+## <a name="what-to-do-if-endpoint-protection-is-not-uninstalled-when-you-uninstall-the-client"></a>Co dělat, když se při odinstalaci klienta neodinstaluje funkce Endpoint Protection
+
+Může se stát, že po spuštění výše uvedených příkazů zůstane agent Host Protection (Endpoint Protection) nainstalovaný. Pokud k tomu dojde, spusťte tento příkaz z příkazového řádku se zvýšenými oprávněními:
+
+    ```
+    "C:\Program Files\Managed Defender\Setup.exe" /x /q /s
+    ```
+
+
 ### <a name="next-steps"></a>Další kroky
 Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

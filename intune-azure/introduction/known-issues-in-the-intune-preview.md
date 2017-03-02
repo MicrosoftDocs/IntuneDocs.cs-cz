@@ -1,5 +1,6 @@
 ---
-title: "Známé problémy v Microsoft Intune Preview | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Známé problémy v Microsoft Intune Preview"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Přečtěte si informace o známých problémech ve verzi Preview."
 keywords: 
 author: robstackmsft
@@ -13,9 +14,11 @@ ms.technology:
 ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: f479b4236243fd05630229520633a09c451e6e1e
-ms.openlocfilehash: c1f79db598651b6a8a1c2a34627a901eff6a0beb
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: ee4422f462270b6466f11721aa7dc8cb2d432f7d
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -35,9 +38,4 @@ Pokud chcete zažádat o přidání nové funkce do Intune, zvažte vyplnění z
 ## <a name="administration-and-accounts"></a>Správa a účty
 
 - Globální správci (také označovaní jako správci tenanta) mohou dál vykonávat běžné úkony správy bez samostatné licence služby Intune nebo sady EMS (Enterprise Mobility Suite). Pokud ale chtějí globální správci službu používat, například zaregistrovat si svoje vlastní nebo firemní zařízení nebo používat portál společnosti Intune, budou potřebovat licenci služby Intune nebo sady EMS jako ostatní uživatelé.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

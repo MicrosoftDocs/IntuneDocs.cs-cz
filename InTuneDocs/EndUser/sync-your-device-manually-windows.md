@@ -16,9 +16,11 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 9dd9a601f2e13a16157a43c28e77db6a6efd1619
-ms.openlocfilehash: 5584ec2d387830dcdcf6b06631996a0bade76014
+ms.sourcegitcommit: 4b5f0129d6824a51c36662a1cc7ef4e8a2de9e20
+ms.openlocfilehash: ff5a4313337c89da00cb87e0f4dd6c8dcc233361
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -27,7 +29,7 @@ ms.openlocfilehash: 5584ec2d387830dcdcf6b06631996a0bade76014
 
 Někdy může instalace aplikace na zařízení s Windows trvat déle, než byste předpokládali. V takovém případě můžete zkusit provést ruční synchronizaci zařízení s Windows. Synchronizace může instalaci urychlit.
 
-> [!Note] 
+> [!Note]
 > Pokud jste v síti s nižší rychlostí nebo s vyšším počtem zařízení, která stahují obsah ve stejnou dobu, může instalace aplikací chvíli trvat.
 
 Synchronizovat ručně se dají verze Windows uvedené dále. Pokud vaše zařízení používá jinou verzi Windows, nebude bohužel možné ruční synchronizaci spustit.
@@ -131,9 +133,4 @@ Chcete-li provést ruční synchronizaci mobilního zařízení s Windows 8.1 pr
    V horní části obrazovky bude až do skončení synchronizace zařízení zobrazená zpráva, že „probíhá synchronizace účtu“.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

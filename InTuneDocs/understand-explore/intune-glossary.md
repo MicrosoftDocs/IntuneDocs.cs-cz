@@ -11,9 +11,11 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 86d00901-fac7-4471-aac2-f1d13a4879b6
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
-ms.openlocfilehash: b9a51cb2123bc9b6e73c0bf72ef5393252e8d37d
+ms.sourcegitcommit: 6b99854e17e00a0dd0f91fa82fd1b79d1dfe5663
+ms.openlocfilehash: ea5407c284f5408774ee5934ad6151bccfd7e6d1
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -61,7 +63,7 @@ ms.openlocfilehash: b9a51cb2123bc9b6e73c0bf72ef5393252e8d37d
 |-|-|
 |e-mailový profil|Tyto zásady lze použít ke konfiguraci [nastavení přístupu k e-mailu](/intune/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) pro konkrétní e-mailové klienty na mobilních zařízeních. Minimalizují se tak nároky na nastavení, která musí provést koncový uživatel.|
 |EMS|Microsoft Enterprise Mobility + Security (dříve Enterprise Mobility Suite) chrání vaše podniková data, a přitom vašim uživatelům umožňuje [přístup k aplikacím a obsahu, který potřebují](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility).|
-|koncový uživatel|[Uživatelé zařízení (jako jsou telefony nebo počítače)](/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune), která spravujete pomocí Intune.|
+|koncový uživatel|[Uživatelé zařízení (jako jsou telefony nebo počítače)](/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune) spravovaných pomocí Intune|
 |registrace|Microsoft Intune využívá [registraci](/intune/deploy-use/enroll-devices-in-microsoft-intune) k začlenění zařízení do správy a povolení přístupu k prostředkům.|
 
 ## <a name="f"></a>F
@@ -145,9 +147,4 @@ ms.openlocfilehash: b9a51cb2123bc9b6e73c0bf72ef5393252e8d37d
 |||
 |-|-|
 |profil Wi-Fi|Zásady, které nasazují [nastavení bezdrátové sítě](/intune/deploy-use/wi-fi-connections-in-microsoft-intune) do zařízení. Uživatelé se tak budou moci připojit k vaší podnikové síti, aniž by museli znát a konfigurovat nastavení sítě.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

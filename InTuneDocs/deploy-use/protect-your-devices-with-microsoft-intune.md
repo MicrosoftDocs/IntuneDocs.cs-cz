@@ -1,11 +1,11 @@
 ---
-title: "Ochrana zařízení | Dokumentace Microsoftu"
+title: "Ochrana zařízení pomocí Microsoft Intune | Dokumentace Microsoftu"
 description: "Přečtěte si o některých způsobech, kterými vám Intune může pomoct chránit vaše zařízení před neoprávněným přístupem a dalšími hrozbami."
 keywords: 
 author: Robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/27/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,11 @@ ms.technology:
 ms.assetid: 71e0cbf3-2bfb-412e-8a12-8503df08b4cf
 ms.reviewer: mghadial
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
-ms.openlocfilehash: 47263a7b0e4255cfa3fe830c969ce6116447ae9f
+ms.sourcegitcommit: 10191f27ae7efd097ea6e74b557776f8be8fe6e6
+ms.openlocfilehash: 042c5673c48bb19aacd624028260267670f9846e
+ms.lasthandoff: 02/21/2017
 
 
 ---
@@ -45,26 +47,21 @@ Intune obsahuje [zásady dodržování předpisů](introduction-to-device-compli
 ### <a name="protect-apps-and-the-data-they-use"></a>Ochrana aplikací a jimi využívaných dat
 Intune poskytuje celou řadu funkcí, které usnadňují ochranu aplikací a jejich dat. Pomocí zásad správy mobilních aplikací (MAM) se například dá zabránit zálohování dat chráněné aplikace, omezit kopírování a vkládání do jiných aplikací nebo požadovat při přístupu k aplikaci kód PIN. Další podrobnosti o ochraně aplikací najdete v tématu [Ochrana dat a aplikací pomocí Microsoft Intune](protect-apps-and-data-with-microsoft-intune.md).
 
-## <a name="further-capabilities-for-windows-devices"></a>Další možnosti pro zařízení s Windows
+### <a name="add-an-additional-layer-of-protection-to-devices"></a>Přidání další vrstvy ochrany do zařízení
+[Multi-Factor Authentication (MFA)](multi-factor-authentication-azure-active-directory.md) představuje bezpečnější způsob ověřování uživatelů zařízení v síti.  Pokud se používá služba MFA, uživatelé musí potvrdit svou identitu i jinak než jen pomocí svého uživatelského jména a hesla – prostřednictvím telefonního hovoru nebo SMS zprávy.
 
-### <a name="add-an-additional-layer-of-protection-to-windows-devices"></a>Přidání další vrstvy ochrany do zařízení s Windows
-[Multi-Factor Authentication (MFA)](protect-windows-devices-with-multi-factor-authentication.md) představuje bezpečnější způsob ověřování uživatelů zařízení s Windows a Windows Phone v síti.  Pokud se používá služba MFA, uživatelé musí potvrdit svou identitu i jinak než jen pomocí svého uživatelského jména a hesla – prostřednictvím telefonního hovoru nebo SMS zprávy.
+## <a name="further-capabilities-for-windows-devices"></a>Další možnosti pro zařízení s Windows
 
 ### <a name="control-windows-hello-for-business-settings-on-windows-devices"></a>Nastavení Windows Hello pro firmy na zařízeních s Windows
 Intune umožňuje integraci se službou [Windows Hello pro firmy](control-microsoft-passport-settings-on-devices-with-microsoft-intune.md) (dříve Microsoft Passport). Tato alternativní metoda pro přihlašování do systému Windows 10 a novějších pomocí účtu služby Active Directory nebo Azure Active Directory nahrazuje heslo, čipovou kartu nebo virtuální čipovou kartu.
 
-## <a name="further-capabilities-for-ios-devices"></a>Další možnosti pro zařízení s iOS
+## <a name="further-capabilities-for-ios-devices"></a>Další možnosti pro zařízení s iOSem
 
-### <a name="bypass-activation-lock-on-ios-devices"></a>Obejití zámku aktivace na zařízeních s iOS
-Zámek aktivace je funkce, která pomáhá chránit zařízení uživatelů tím, že před vymazáním nebo opětovnou aktivací zařízení od uživatele požaduje zadání Apple ID a hesla. To však může vést k problémům (například pokud uživatel odejde ze společnosti, aniž by ze zařízení zámek odebral). Možnost [obejít zámek aktivace na zařízeních s iOS](help-protect-ios-devices-with-activation-lock-bypass-for-microsoft-intune.md) může pomoct odebrat zámek ze zařízení s iOS, která jsou pod dohledem, abyste je mohli přidělit jinému uživateli nebo z nich vymazat obsah.
+### <a name="bypass-activation-lock-on-ios-devices"></a>Obejití zámku aktivace na zařízeních s iOSem
+Zámek aktivace je funkce, která pomáhá chránit zařízení uživatelů tím, že před vymazáním nebo opětovnou aktivací zařízení od uživatele požaduje zadání Apple ID a hesla. To však může vést k problémům (například pokud uživatel odejde ze společnosti, aniž by ze zařízení zámek odebral). Možnost [obejít zámek aktivace na zařízeních s iOSem](help-protect-ios-devices-with-activation-lock-bypass-for-microsoft-intune.md) může pomoct odebrat zámek ze zařízení s iOSem, která jsou pod dohledem, abyste je mohli přidělit jinému uživateli nebo z nich vymazat obsah.
 
 
 
 ## <a name="protect-windows-pcs-managed-with-the-intune-client"></a>Ochrana osobních počítačů s Windows pomocí klienta Intune
 Intune i nadále podporuje zásady zabezpečení pro osobní počítače s Windows, které nejsou registrované, ale spravované pomocí počítačového klientského softwaru Intune. Chcete-li zjistit, jak vám tyto zásady mohou pomoci se zabezpečením osobních počítačů s Windows, přečtěte si téma [Použití zásad k ochraně osobních počítačů s Windows, na nichž běží klientský software Intune](policies-to-protect-windows-pcs-in-microsoft-intune.md).
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

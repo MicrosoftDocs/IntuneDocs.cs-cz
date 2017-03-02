@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/27/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,11 @@ ms.technology:
 ms.assetid: f6051fa7-133f-4712-86a5-e5f5bc5ab3c7
 ms.reviewer: jeffgilb
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
-ms.openlocfilehash: 106b24e73a21d7cd8608c44c4dd7ded4c0eebe4f
+ms.sourcegitcommit: b7a066c1387a97d6100be0e6ab22d78222bf2a30
+ms.openlocfilehash: 3311ba5081c4b04d72fdeb1f9a558ffc2e1b02fc
+ms.lasthandoff: 02/21/2017
 
 
 ---
@@ -40,15 +42,10 @@ Registrace zařízení je jenom první krok. Pokud chcete využívat všechno, c
 
 ## <a name="protect"></a>Ochrana
 V moderním světě informačních technologií představuje ochrana zařízení proti neoprávněnému přístupu jeden z vašich nejdůležitějších úkolů. Kromě položek v kroku **Konfigurace** životního cyklu zařízení Intune poskytuje tyto možnosti, které pomáhají chránit spravovaná zařízení proti neoprávněnému přístupu nebo nebezpečným útokům:
-- [**Víceúrovňové ověřování**](protect-windows-devices-with-multi-factor-authentication.md). Přidáním další úrovně ověřování k přihlašování uživatelů můžete přispět k ještě lepšímu zabezpečení zařízení. Zařízení se systémy Windows, Windows Phone a Windows Mobile nabízí víceúrovňové ověřování, které před povolením přístupu uživatelů vyžaduje druhou úroveň ověření, třeba prostřednictvím telefonátu nebo textové zprávy.
+- [**Víceúrovňové ověřování**](protect-your-devices-with-microsoft-intune.md). Přidáním další úrovně ověřování k přihlašování uživatelů můžete přispět k ještě lepšímu zabezpečení zařízení. Mnoho zařízení podporuje vícefaktorové ověřování, které před povolením přístupu uživatelů vyžaduje druhou úroveň ověření, například prostřednictvím telefonního hovoru nebo textové zprávy.
 - [**Nastavení služby Microsoft Passport**](control-microsoft-passport-settings-on-devices-with-microsoft-intune.md). Microsoft Passport je alternativní metoda přihlašování, která umožňuje uživatelům používat k přihlášení *gesto*, třeba otisk prstu nebo Windows Hello, takže nemusí zadávat heslo.
 - [**Zásady ochrany počítačů se systémem Windows (s klientským softwarem Intune)**](policies-to-protect-windows-pcs-in-microsoft-intune.md). Pokud spravujete počítače s Windows pomocí klientského softwaru Intune, jsou dostupné zásady, které vám umožňují řídit na spravovaných počítačích s Windows nastavení služby Endpoint Protection, aktualizací softwaru a brány Windows Firewall.
 
 ## <a name="retire"></a>Vyřazení
 Když dojde ke ztrátě nebo odcizení zařízení, když je potřeba zařízení vyměnit nebo když se uživatelé přesunou na jinou pracovní pozici, je většinou vhodné zařízení [vyřadit nebo vymazat](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md). To můžete udělat několika způsoby, třeba zařízení resetovat, odebrat ho ze zprávy nebo z něj vymazat firemní data.
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

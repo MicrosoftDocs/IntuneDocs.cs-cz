@@ -1,5 +1,6 @@
 ---
-title: "Zásady podmíněného přístupu pro místní Exchange | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Zásady podmíněného přístupu pro místní Exchange"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Jak nakonfigurovat podmíněný přístup pro místní Exchange v Intune a starší verze Exchange Online Dedicated v Intune"
 keywords: 
 author: andredm7
@@ -12,9 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 581f9be824ea883fd0208abc3b2ecc09174cb911
-ms.openlocfilehash: a80d6a19948291cc80e42ad5a9a2f016effb2f37
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: a9edd882e2cf0fb7abf50002e9f1e8dfd5634fe1
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -96,9 +99,4 @@ Aplikace **Pošta** ve Windows 8.1 a novějších verzích (při registraci v In
   - Při nastavení blokování přístupu se bude hned na začátku blokovat přístup na Exchange u všech zařízení.  Zařízení, která patří uživatelům v **zahrnutých skupinách**, budou mít přístup po registraci v Intune a jejich stav se vyhodnotí jako vyhovující zásadám. Zařízení s Androidem, která nepoužívají standard Samsung KNOX, se budou vždycky blokovat, protože nepodporují toto nastavení.
 10. V části **Výjimky platformy zařízení** zvolte **Přidat** a určete platformy. Pokud je u nastavení **Nespravovaný přístup zařízení** nastavená možnost **Blokováno**, budou zařízení, která jsou zaregistrovaná a vyhovují podmínkám zásad, povolená i tehdy, když bude existovat výjimka pro blokování platformy. Kliknutím na **OK** uložte nastavení.
 11. V okně **Místní** uložte kliknutím na tlačítko **Uložit** zásady podmíněného přístupu.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

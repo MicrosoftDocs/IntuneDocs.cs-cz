@@ -1,5 +1,6 @@
 ---
-title: "Aplikace pro iOS se zásadami ochrany aplikací | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Aplikace pro iOS se zásadami ochrany aplikací | Intune Azure Preview"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Toto téma popisuje, co očekávat, když aplikaci pro iOS spravují zásady ochrany aplikací."
 keywords: 
 author: NathBarn
@@ -13,9 +14,11 @@ ms.technology:
 ms.assetid: 586d9440-3813-4dec-b865-8bd319befde0
 ms.reviewer: andcerat
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 89afae81076d563f4ebba289f8fa82eaea6ab234
-ms.openlocfilehash: ae646cf3dd1b1469b9f87ac66ad7171d77ef6518
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 5a4ce6d6248378ba48cddeaefb941c139dd990f6
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -27,11 +30,11 @@ ms.openlocfilehash: ae646cf3dd1b1469b9f87ac66ad7171d77ef6518
 Pokud zařízení **není zaregistrované v Intune**, zobrazí se koncovému uživateli při prvním použití aplikace výzva k restartování aplikace.  Aby se pro aplikaci mohly použít zásady ochrany aplikací, je nutné restartování. Následující snímek obrazovky ukazuje toto chování při použití aplikace Skype:
 
 
-![Snímek obrazovky zařízení s iOS, na kterém je výzva k zadání kódu PIN](../media/ios-pin-prompt.png)
+![Snímek obrazovky zařízení s iOSem, na kterém je výzva k zadání kódu PIN](../media/ios-pin-prompt.png)
 
 U zařízení, která jsou **zaregistrovaná pro správu v Intune**, se koncovému uživateli zobrazí zpráva, že jeho aplikace je teď spravovaná:
 
-![Snímek obrazovky zařízení s iOS, na kterém je zpráva „Spravované vaší společností“ a výzva k zadání kódu PIN](../media/ios-managed-devices-pin-prompt.png)
+![Snímek obrazovky zařízení s iOSem, na kterém je zpráva „Spravované vaší společností“ a výzva k zadání kódu PIN](../media/ios-managed-devices-pin-prompt.png)
 
 ##  <a name="using-apps-with-multi-identity-support"></a>Použití aplikací s podporou víc identit
 
@@ -55,7 +58,7 @@ Přečtěte si níže uvedený ukázkový scénář, abyste lépe pochopili, jak
 Uživatel A pracuje ve dvou společnostech, **společnosti X** a **společnosti Y**. Uživatel A má pro každou společnost pracovní účet a obě společnosti používají Intune k nasazení zásad ochrany aplikací. **Společnost X** nasadí zásady ochrany aplikací **dřív než** **společnost Y**. Účet přidružený ke **společnosti X** získá zásady ochrany aplikací, ale účet přidružený ke společnosti Y ne. Pokud chcete, aby účet přidružený ke společnosti Y spravovaly zásady ochrany aplikací, musíte uživatelský účet přidružený ke společnosti X odebrat.
 ### <a name="adding-a-second-account"></a>Přidání druhého účtu
 
-Pokud používáte zařízení s iOS, může se při pokusu o přidání druhého pracovního účtu na stejném zařízení zobrazit zpráva o blokování.  Účty se zobrazí a můžete zvolit účet, který chcete odebrat.
+Pokud používáte zařízení s iOSem, může se při pokusu o přidání druhého pracovního účtu na stejném zařízení zobrazit zpráva o blokování.  Účty se zobrazí a můžete zvolit účet, který chcete odebrat.
 
 ![Snímek obrazovky s dialogem obsahujícím zprávu o blokování a možnosti Ano a Ne](../media/ios-switch-user.PNG)
 
@@ -63,9 +66,4 @@ Pokud používáte zařízení s iOS, může se při pokusu o přidání druhéh
 [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](app-protection-enabled-android-apps.md)
 ### <a name="see-also"></a>Související témata
 [Vytvoření a nasazení zásad ochrany aplikací pomocí Microsoft Intune](app-protection-policies.md)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

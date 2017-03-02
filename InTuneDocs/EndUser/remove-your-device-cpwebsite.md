@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 01/03/2017
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -18,8 +18,9 @@ ms.reviewer: mamoriss
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: a1e346047fb029689c0c9c68073b89b9bac20530
-ms.openlocfilehash: f557aab61a61bde8937d72c99ccf652787170002
+ms.sourcegitcommit: b47b5159a5de5180859a9d3d9edc500b0853448c
+ms.openlocfilehash: dfcc383f88d82ff1a12d917905ca25740f2e9ac0
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -30,18 +31,19 @@ Pokud už nechcete, aby vaše zařízení spravovala vaše společnost nebo orga
 
 Odebrání zařízení:
 
-1.  Otevřete [web Portál společnosti](http://portal.manage.microsoft.com) a klepněte na zařízení, které chcete odebrat.
+1.    Na [webu Portál společnosti](http://portal.manage.microsoft.com) klepněte na tlačítko __nabídky__ ![Malý obrázek tlačítka nabídky, tři vodorovné pruhy nad sebou](/Intune/whats-new/media/CP_hamburger_menu.png) a potom vyberte __Moje zařízení__.
 
-2.  Klepněte na **Odebrat**.
+  ![Obrázek webu Portál společnosti s rozbalenou boční nabídkou na levé straně obrazovky, s tlačítky Domů, Všechny aplikace, Moje zařízení, Helpdesk a Odhlásit se](/media/iwp-expanded-sidebar.png)
 
-    ![Možnost odebrání zařízení na webu Portál společnosti](./media/iwp-screen-with-all-options.png)
+2. Na stránce __Moje zařízení__ vyberte název zařízení, které chcete odebrat.
 
-3. Přečtěte si zprávu s upozorněním a klepnutím na **Odebrat** zařízení odeberte z portálu společnosti.
+    ![Snímek obrazovky se stránkou Moje zařízení s několika neidentifikovanými zařízeními zobrazenými nad výzvou k registraci zařízení, která nejsou v seznamu, nebo k identifikaci neidentifikovaných zařízení](./media/macOS_enroll_002_tap_here_banner.png)
+
+3.    Zařízení se otevře v místním okně. Klepněte na tlačítko **Odebrat**.
+
+      ![Všechny možnosti pro vybrané zařízení na webu Portál společnosti, včetně možnosti Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení ](./media/iwp-screen-with-all-options.png)
+
+4. Přečtěte si zprávu s upozorněním a klepnutím na **Odebrat** zařízení odeberte z portálu společnosti.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

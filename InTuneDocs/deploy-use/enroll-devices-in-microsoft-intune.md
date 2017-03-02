@@ -2,10 +2,10 @@
 title: "Registrace zařízení | Dokumentace Microsoftu"
 description: "Správa mobilních zařízení (MDM) využívá registraci pro zajištění správy zařízení a povolení přístupu k prostředkům."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 01/26/2017
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 39f7de3a94b813cbd7b353cd319ecc54fcbf8694
-ms.openlocfilehash: 483fd327be25a1cb08e5295d72a27987ab018062
+ms.sourcegitcommit: 2ed76d2905042f299022f1625ce7215c6834ad3f
+ms.openlocfilehash: d1b24b745fe1e860e42fa23647976aadea1953cd
+ms.lasthandoff: 02/21/2017
 
 
 ---
@@ -37,9 +38,9 @@ Následující tabulka uvádí metody registrace v Intune a podporované možnos
 
 - **Vymazání** – Udává, jestli musí být zařízení vymazáno, aby ho uživatelé mohli zaregistrovat. Pojmem „vymazání“ se rozumí obnovení továrních nastavení zařízení, které odstraní všechna data. Další informace najdete v tématu [Vyřazení zařízení](retire-devices-from-microsoft-intune-management.md).
 - **Spřažení** – Přidruží zařízení k uživatelům. Požadováno pro správu mobilních aplikací (MAM) a podmíněný přístup k datům společnosti. Další informace najdete v tématu [Přidružení uživatele](enroll-corporate-owned-ios-devices-in-microsoft-intune.md#use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices).
-- **Uzamčení** – Udává, jestli se má uživatelům bránit v rušení registrace jejich zařízení ve správě. Uživatelé můžou rušit registraci svých zařízení na všech platformách pomocí aplikace Portál společnosti. Registraci nemůžou rušit pomocí nativních nabídek operačního systému. 
+- **Uzamčení** – určuje, jestli se má uživatelům bránit v rušení registrace jejich zařízení pomocí nativních nabídek operačního systému. Uživatelé můžou rušit registraci svých zařízení na všech platformách pomocí aplikace Portál společnosti. 
 
-**Metody registrace zařízení s iOS**
+**Metody registrace zařízení s iOSem**
 
 | **Metoda** |    **Vyžadováno vymazání?** |    **Spřažení**    |    **Uzamčení** | **Podrobnosti** |
 |:---:|:---:|:---:|:---:|:---:|
@@ -91,14 +92,14 @@ Další informace najdete v tématu [Registrace zařízení vlastněných spole�
 Správce registrace zařízení je zvláštní účet Intune, který se používá k registraci a správě více zařízení vlastněných společností. Správci pak mohou nainstalovat aplikaci Portál společnosti a zaregistrovat velký počet zařízení bez uživatele. Přečtěte si další informace o [DEM](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md). ([Zpět k tabulce](#overview-of-device-enrollment-methods))
 
 ### <a name="dep"></a>DEP
-Správa programu DEP společnosti Apple umožňuje vytvářet a bezdrátově nasazovat zásady v zařízeních s iOSem zakoupených a spravovaných prostřednictvím programu DEP. Zařízení se zaregistruje, když ho uživatel poprvé zapne a spustí pomocníka pro nastavení iOS (Setup Assistant). Tento způsob podporuje režim **dozoru nad iOS**, který zase umožňuje následující funkce:
+Správa programu DEP společnosti Apple umožňuje vytvářet a bezdrátově nasazovat zásady v zařízeních s iOSem zakoupených a spravovaných prostřednictvím programu DEP. Zařízení se zaregistruje, když ho uživatel poprvé zapne a spustí pomocníka pro nastavení v iOSu (Setup Assistant). Tento způsob podporuje režim **dozoru nad iOSem**, který zase umožňuje následující funkce:
   -    Registrace uzamčeného zařízení
   -    Beznabídkový režim a další pokročilé konfigurace a omezení
 
 Přečtěte si další informace o [DEP](ios-device-enrollment-program-in-microsoft-intune.md). ([Zpět k tabulce](#overview-of-device-enrollment-methods))
 
 ### <a name="usb-sa"></a>USB (pomocník pro instalaci)
-Správci IT používají k ruční přípravě každého zařízení vlastněného společností pro registraci Apple Configurator (přes USB) pomocí pomocníka pro nastavení (Setup Assistant). Správce IT vytvoří registrační profil a vyexportuje ho do Apple Configuratoru. Když uživatelé obdrží svá zařízení, budou vyzváni ke spuštění pomocníka pro nastavení a k registraci zařízení. Tento způsob podporuje režim **dozoru nad iOS**, který zase umožňuje následující funkce:
+Správci IT používají k ruční přípravě každého zařízení vlastněného společností pro registraci Apple Configurator (přes USB) pomocí pomocníka pro nastavení (Setup Assistant). Správce IT vytvoří registrační profil a vyexportuje ho do Apple Configuratoru. Když uživatelé obdrží svá zařízení, budou vyzváni ke spuštění pomocníka pro nastavení a k registraci zařízení. Tento způsob podporuje režim **dozoru nad iOSem**, který zase umožňuje následující funkce:
   -    Registrace uzamčeného zařízení
   -    Beznabídkový režim a další pokročilé konfigurace a omezení
 
@@ -130,9 +131,4 @@ Intune může spravovat tyto platformy zařízení:
 - [Předpoklady pro registraci zařízení](prerequisites-for-enrollment.md)
 - [Správa zařízení vlastněných společností](manage-corporate-owned-devices.md)
 - [Podporovaná mobilní zařízení a počítače](../get-started/supported-mobile-devices-and-computers.md)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

@@ -1,5 +1,5 @@
 ---
-title: "Konfigurace profilů certifikátů | Microsoft Intune"
+title: "Konfigurace profilů certifikátů | Dokumentace Microsoftu"
 description: "Přečtěte si, jak vytvořit profil certifikátu Intune."
 keywords: 
 author: robstackmsft
@@ -13,14 +13,19 @@ ms.technology:
 ms.assetid: 679a20a1-e66f-4b6b-bd8f-896daf1f8175
 ms.reviewer: kmyrup
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: bafb86b1e388163c07110559e2a51bbe0dadc5ed
+ms.sourcegitcommit: 905be6a926dc5bab8e9b1016ba82751ee47313e5
+ms.openlocfilehash: 70fba8f983efb245afc3fb19fa38287d1a84b1f4
+ms.lasthandoff: 02/18/2017
 
 
 ---
 
 # <a name="configure-intune-certificate-profiles"></a>Konfigurace profilů certifikátů Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Po konfiguraci infrastruktury a certifikátů, jak je popsáno v tématu [Konfigurace infrastruktury certifikátů pro SCEP](configure-certificate-infrastructure-for-scep.md) nebo [Konfigurace infrastruktury certifikátů pro PFX](configure-certificate-infrastructure-for-pfx.md), můžete vytvořit profily certifikátů. Postup je následující:
 
 - **Úloha 1**: Export certifikátu důvěryhodné kořenové certifikační autority
@@ -154,9 +159,4 @@ Dál zjistěte, jak pomocí certifikátů zabezpečit profily e-mailu, Wi-Fi a V
 -  [Konfigurace přístupu k podnikovému e-mailu pomocí e-mailových profilů](configure-access-to-corporate-email-using-email-profiles-with-Microsoft-Intune.md)
 -  [Připojení Wi-Fi v Microsoft Intune](wi-fi-connections-in-microsoft-intune.md)
 -  [Připojení VPN v Microsoft Intune](vpn-connections-in-microsoft-intune.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 
