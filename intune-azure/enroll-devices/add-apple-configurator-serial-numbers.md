@@ -1,11 +1,12 @@
 ---
-title: "Přidání sériových čísel Apple Configuratoru | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Přidání sériových čísel Apple Configuratoru"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Přečtěte si, jak pomocí Apple Configuratoru přidat sériová čísla k zařízením se systémem iOS, která vlastní firma."
 keywords: 
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 02/03/17
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,18 +14,20 @@ ms.technology:
 ms.assetid: d408aa38-7d1e-40df-9067-246e53f6e26f
 ms.reviewer: dagerrit
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 65a6b2e22359bdcb9b0c15a84c6b3586dafe4d6c
-ms.openlocfilehash: 71d29a245f8f900a7427528167bae0b52565d42b
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 26d253f013195cc18f9a97b8259c603d707d22bf
+ms.lasthandoff: 02/18/2017
 
 
 ---
 
-# <a name="add-apple-configurator-serial-numbers"></a>Přidání sériových čísel Apple Configuratoru 
+# <a name="add-apple-configurator-serial-numbers"></a>Přidání sériových čísel Apple Configuratoru
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Tento postup použijte, pokud chcete přidat sériová čísla k Intune, když chcete [zaregistrovat zařízení se systémem iOS vlastněná firmou pomocí Apple Configuratoru s Průvodcem nastavením](enroll-ios-devices-with-apple-configurator-and-setup-assistant.md). Sériová čísla můžete přidávat postupně nebo můžete nahrát soubor se sériovými čísly ve formátu CSV. K přidaným číslům můžete přiřadit profil. Profil obsahuje specifická nastavení správy, která chcete použít u zařízení. 
+Tento postup použijte, pokud chcete přidat sériová čísla k Intune, když chcete [zaregistrovat zařízení se systémem iOS vlastněná firmou pomocí Apple Configuratoru s Průvodcem nastavením](enroll-ios-devices-with-apple-configurator-and-setup-assistant.md). Sériová čísla můžete přidávat postupně nebo můžete nahrát soubor se sériovými čísly ve formátu CSV. K přidaným číslům můžete přiřadit profil. Profil obsahuje specifická nastavení správy, která chcete použít u zařízení.
 
 Další metody registrace zařízení s iOSem jsou popsané v článku [Volba způsobu registrace zařízení s iOSem v Intune](choose-ios-enrollment-method.md).
 
@@ -35,7 +38,7 @@ Další metody registrace zařízení s iOSem jsou popsané v článku [Volba zp
     F7TLWCLBX196,podrobnosti o zařízení</br>
     DLXQPCWVGHMJ,podrobnosti o zařízení
 
-2. Na portálu Azure Portal zvolte **Další služby**, do textového pole zadejte **Intune** a pak zvolte **Jiné** > **Intune**.
+2. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 
 3.  V okně Intune zvolte **Registrovat zařízení** a pak zvolte **Registrace Apple**.
 
@@ -51,11 +54,13 @@ Další metody registrace zařízení s iOSem jsou popsané v článku [Volba zp
 
 Intune umožňuje přiřadit profily ze dvou různých míst na portálu Azure Portal. Můžete použít následující postup nebo můžete přiřadit profily z okna Registrační profily Apple Configuratoru, což je místo, kde vytvoříte profil (viz téma [Registrace zařízení se systémem iOS pomocí Apple Configuratoru s Průvodcem nastavením](enroll-ios-devices-with-apple-configurator-and-setup-assistant.md). Pomocí následujícího postupu můžete profil přiřadit, jenom pokud jste ho už vytvořili.
 
-1. V okně Intune zvolte **Registrovat zařízení** a pak zvolte **Registrace Apple**.
+1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 
-2. V okně **Sériová čísla Apple Configuratoru** vyberte sériová čísla, ke kterým chcete přiřadit profil, a potom vyberte **Přiřadit profil**.
+2. V okně Intune zvolte **Registrovat zařízení** a pak zvolte **Registrace Apple**.
 
-3. V okně **Přiřadit profil** vyberte profil, který chcete přiřadit, a potom klepněte na **Přiřadit**.
+3. V okně **Sériová čísla Apple Configuratoru** vyberte sériová čísla, ke kterým chcete přiřadit profil, a potom vyberte **Přiřadit profil**.
+
+4. V okně **Přiřadit profil** vyberte profil, který chcete přiřadit, a potom klepněte na **Přiřadit**.
 
 ## <a name="delete-serial-numbers"></a>Odstranění sériových čísel
 Dříve naimportovaná sériová čísla můžete odstranit. Sériová čísla můžete odstranit jenom v případě, že zařízení nejdřív odregistrujete. Po odebrání sériového čísla není možné používat Apple Configurator prostřednictvím Průvodce nastavením, pokud toto číslo znovu nepřidáte.
@@ -70,9 +75,4 @@ Sériová čísla zařízení můžou mít jeden ze dvou stavů:
 **Zobrazení stavu sériového čísla**
 
 V okně **Sériová čísla Apple Configuratoru** vyberte sériové číslo, jehož stav chcete zobrazit, a podívejte se na informace u položky **Stav**.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

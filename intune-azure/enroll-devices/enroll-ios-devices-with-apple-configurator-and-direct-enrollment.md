@@ -1,11 +1,12 @@
 ---
-title: "Registrace zařízení s iOSem pomocí Apple Configuratoru a přímé registrace | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Registrace zařízení s iOSem pomocí Apple Configuratoru a přímé registrace"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Přečtěte si, jak jde pomocí Apple Configuratoru registrovat zařízení s iOSem vlastněná společností s využitím přímé registrace."
 keywords: 
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 01/29/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +14,11 @@ ms.technology:
 ms.assetid: e6c0a430-1851-4108-812a-87e0fc2623b5
 ms.reviewer: dagerrit
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 521a37044d6721fe905db7740329688ba2c24b35
-ms.openlocfilehash: f6770556e6ee4e6a6fa1173c8c65c7e54d159016
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: d335572ae2bc5ce74532de281658d06903f995ee
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -53,7 +56,7 @@ Před nastavením registrace zařízení s iOSem zajistěte splnění následuj�
 
 Profil registrace zařízení definuje nastavení, která se použijí pro skupinu zařízení. Následující postup ukazuje, jak vytvořit profil registrace zařízení s iOSem zaregistrovaného v Apple Configuratoru.
 
-1. Na portálu Azure Portal zvolte **Další služby**, do textového pole zadejte **Intune** a pak zvolte **Jiné** > **Intune**.
+1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 
 2. V okně Intune zvolte **Registrovat zařízení** a pak zvolte **Registrace Apple**.
 
@@ -98,9 +101,4 @@ Profil registrace zařízení definuje nastavení, která se použijí pro skupi
 4. Na zařízení s iOSem otevřete **Nastavení** a přejděte na **Obecné** > **Správa zařízení** > **Profil pro správu**. Potvrďte, že je zde instalace profilu uvedená, a zkontrolujte omezení zásad iOS a nainstalované aplikace. Zobrazení omezení vyplývajících ze zásad a aplikací na zařízení může trvat až 10 minut.
 
 5. Distribuujte zařízení. Zařízení s iOSem je teď zaregistrované v Intune a spravované.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

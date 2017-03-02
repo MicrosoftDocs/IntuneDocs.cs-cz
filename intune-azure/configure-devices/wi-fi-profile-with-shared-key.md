@@ -1,11 +1,12 @@
 ---
-title: "Vytvoření profilu Wi-Fi s předsdíleným klíčem | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Vytvoření profilu Wi-Fi s předsdíleným klíčem"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Použijte vlastní profil Intune k vytvoření profilu Wi-Fi s předsdíleným klíčem."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,37 +14,39 @@ ms.technology:
 ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 ms.reviewer: karanda
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: d87cbc82b55c4c7615decf8d37d59e2194de9922
-ms.openlocfilehash: b46d445ce1da103308559939a5bfd8e5e38d46d3
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 174e919a2980ca2cf0e97cc41f5b048183a9d4a7
+ms.lasthandoff: 02/18/2017
 
 
 
 ---
-# <a name="use-an-intune-custom-device-profile-to-create-a-wi-fi-profile-with-a-pre-shared-key-in-intune-azure-preview"></a>Vytvoření profilu Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení v Intune Azure Preview
+# <a name="use-a-microsoft-intune-custom-device-profile-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Vytvoření profilu sítě Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení v Microsoft Intune
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
 Zde najdete postup, jak pomocí **vlastních profilů zařízení** služby Intune vytvoříte profil Wi-Fi s předsdíleným klíčem. Toto téma obsahuje také příklad vytvoření profilu Wi-Fi založeného na protokolu EAP.
 
 > [!NOTE]
--   Pokud je to pro vás snadnější, můžete zkopírovat kód z počítače připojeného k této síti, jak je popsáno níže.
+-    Pokud je to pro vás snadnější, můžete zkopírovat kód z počítače připojeného k této síti, jak je popsáno níže.
 - Pro Android máte také možnost použít nástroj [Android PSK Generator](http://johnathonb.com/2015/05/intune-android-pre-shared-key-generator/), který poskytuje Johnathon Biersack.
--   Přidáním dalších nastavení OMA-URI můžete přidat více sítí a klíčů.
+-    Přidáním dalších nastavení OMA-URI můžete přidat více sítí a klíčů.
 -  Pro iOS nastavte profil nástrojem Apple Configurator na stanici Mac. Alternativně můžete použít nástroj [iOS PSK Mobile Config Generator](http://johnathonb.com/2015/05/intune-ios-psk-mobile-config-generator/), který poskytuje Johnathon Biersack.
 
 
-1.  Pokud chcete vytvořit profil Wi-Fi s předsdíleným klíčem pro Android nebo Windows, případně profil Wi-Fi založený na protokolu EAP, při vytváření profilu zařízení zvolte místo profilu Wi-Fi možnost **Vlastní** pro platformu daného zařízení.
+1.    Pokud chcete vytvořit profil Wi-Fi s předsdíleným klíčem pro Android nebo Windows, případně profil Wi-Fi založený na protokolu EAP, při vytváření profilu zařízení zvolte místo profilu Wi-Fi možnost **Vlastní** pro platformu daného zařízení.
 
-2.  Zadejte název a popis.
-3.  Přidejte nové nastavení OMA-URI:
+2.    Zadejte název a popis.
+3.    Přidejte nové nastavení OMA-URI:
 
-   a.   Zadejte název pro toto nastavení sítě Wi-Fi.
+   a.    Zadejte název pro toto nastavení sítě Wi-Fi.
 
-   b.   Zadejte popis nastavení OMA-URI nebo pole ponechte prázdné.
+   b.    Zadejte popis nastavení OMA-URI nebo pole ponechte prázdné.
 
-   c.   **Datový typ**: Nastavte na **Řetězec**.
+   c.    **Datový typ**: Nastavte na **Řetězec**.
 
-   d.   **OMA-URI:**
+   d.    **OMA-URI:**
 
     - **Pro Android:** ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
     - **Pro Windows:** ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
@@ -204,9 +207,4 @@ Můžete také vytvořit soubor XML z existujícího připojení Wi-Fi:
     Nejvhodnější je použít počítač, který je připojený k co nejmenšímu počtu bezdrátových sítí, protože budete muset prohledávat každý profil, abyste našli ten správný.
 3.     Prohledejte soubory XML a najděte ten se správným názvem.
 4.     Po vyhledání správného souboru XML zkopírujte kód XML a vložte ho do pole Data na stránce nastavení OMA-URI.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

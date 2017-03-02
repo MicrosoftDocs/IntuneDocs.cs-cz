@@ -1,11 +1,12 @@
 ---
-title: "Jak do Intune přidat aplikace pro Android Store | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Jak do Intune přidat aplikace pro Android Store"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Přečtěte si informace o přidání aplikací pro Android Store do Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 01/11/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +14,15 @@ ms.technology:
 ms.assetid: 4433000a-23e9-4cad-a818-48c28eedc1f5
 ms.reviewer: mghadial
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 01e5bfeb98aee9314fa04679cc27c8aba0e18fb0
-ms.openlocfilehash: ac3a901c4ecb900cb728c8dda04943071669f063
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: e885b0be6d8782f6dd20f395a7792839f20e1adc
+ms.lasthandoff: 02/18/2017
 
 ---
 
-# <a name="how-to-add-android-store-apps-to-intune"></a>Jak do Intune přidat aplikace pro Android Store
+# <a name="how-to-add-android-store-apps-to-microsoft-intune"></a>Přidání aplikací pro Android Store do Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -47,8 +50,3 @@ ms.openlocfilehash: ac3a901c4ecb900cb728c8dda04943071669f063
 8. Až skončíte, zvolte v okně **Přidat aplikaci** možnost **Uložit**.
 
 Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřadit ke zvoleným skupinám. Nápovědu najdete v článku [Přiřazení aplikací do skupin](/intune-azure/manage-apps/deploy-apps).
-
-
-<!--HONumber=Feb17_HO1-->
-
-

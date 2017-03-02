@@ -1,11 +1,12 @@
 ---
-title: "Konfigurace infrastruktury certifikátů pro SCEP | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Konfigurace infrastruktury certifikátů pro SCEP"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Přečtěte si, jak nakonfigurovat infrastrukturu předtím, než vytvoříte a nasadíte profily certifikátů Intune SCEP."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/19/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,12 +14,14 @@ ms.technology:
 ms.assetid: d567d85f-e4ee-458e-bef7-6e275467efce
 ms.reviewer: kmyrup
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 4a02b320498b3094db1e07ed3d1dab82e4d9effa
-ms.openlocfilehash: e3df68aee2a1584063f77429c828b0fd31103920
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 8f713769e0b8a13e91e6d9991e4e7415e1da22a2
+ms.lasthandoff: 02/18/2017
 
 ---
-# <a name="configure-certificate-infrastructure-for-scep-in-intune-azure-preview"></a>Konfigurace infrastruktury certifikátů pro SCEP v Intune Azure Preview
+# <a name="configure-certificate-infrastructure-for-scep-in-microsoft-intune"></a>Konfigurace infrastruktury certifikátů pro SCEP v Microsoft Intune
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
 Toto téma popisuje, jakou infrastrukturu potřebujete k vytvoření a nasazení profilů certifikátů SCEP.
@@ -348,9 +351,4 @@ Pokud chcete ověřit, jestli je služba spuštěná, spusťte prohlížeč a za
 
 ## <a name="next-steps"></a>Další kroky
 Teď jste připravení konfigurovat profily certifikátů podle návodu v tématu [Konfigurace profilů certifikátů](how-to-configure-certificates.md).
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

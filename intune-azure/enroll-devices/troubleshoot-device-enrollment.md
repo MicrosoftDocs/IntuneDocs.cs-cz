@@ -1,11 +1,12 @@
 ---
-title: "Řešení potíží s registrací zařízení | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Řešení potíží při registraci zařízení"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Přečtěte si, jak můžete řešit potíže s registrací zařízení."
 keywords: 
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 01/010/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +14,11 @@ ms.technology:
 ms.assetid: c324c74e-e225-40ad-88b7-72a6d9ea09b5
 ms.reviewer: damionw
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 151e71f719b459a4f2c9612035201908d2610980
-ms.openlocfilehash: 78f0ff9a1b7bdaf30721d8702c36ff0e613b109e
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 9fff350240e4313994056bc5aebf82e204ab3c62
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -46,7 +49,7 @@ K těmto problémům může docházet na všech platformách zařízení.
 
 #### <a name="check-number-of-devices-enrolled-and-allowed"></a>Kontrola počtu zaregistrovaných a povolených zařízení
 
-V okně Intune na portálu Azure Portal přejděte na **Registrovat zařízení** > **Omezení registrace** a zkontrolujte, že uživatel nemá přidružených více zařízení, než je povolený maximální počet 15 zařízení.
+Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**. V okně Intune na portálu Azure Portal přejděte na **Registrovat zařízení** > **Omezení registrace** a zkontrolujte, že uživatel nemá přidružených více zařízení, než je povolený maximální počet 15 zařízení.
 
 <!--- Mobile device users can delete devices at the following URL: [https://byodtestservice.azurewebsites.net/](https://byodtestservice.azurewebsites.net/). --->
 
@@ -218,16 +221,16 @@ K chybě certifikátu dochází proto, že zařízení s Androidem vyžadují, a
 
 Pokud chcete problém vyřešit, naimportujte certifikáty do osobních certifikátů počítačů na serveru nebo proxy serverech AD FS následujícím způsobem:
 
-1.  Na servery a proxy serverech AD FS spusťte konzolu Správa certifikátů pro místní počítač tak, že kliknete pravým tlačítkem na **Start**, vyberete **Spustit** a zadáte příkaz **certlm.msc**.
-2.  Rozbalte **Osobní** a vyberte **Certifikáty**.
-3.  Najděte certifikát pro vaši komunikaci služby AD FS (veřejně podepsaný certifikát) a poklikáním zobrazte jeho vlastnosti.
-4.  Vyberte kartu **Cesta k certifikátu**, kde uvidíte nadřazené certifikáty certifikátu.
-5.  U každého nadřazeného certifikátu vyberte **Zobrazit certifikát**.
-6.  Vyberte kartu **Podrobnosti** a vyberte **Kopírovat do souboru**.
-7.  Postupujte podle pokynů průvodce a vyexportujte nebo uložte veřejný klíč certifikátu do požadovaného umístění souborů.
-8.  Naimportujte nadřazené certifikáty, které jste ve 3. kroku vyexportovali, do složky Místní počítač\Osobní\Certifikáty, a to tak, že pravým tlačítkem kliknete na **Certifikáty**, vyberete **Všechny úkoly** > **Importovat** a pak podle výzev průvodce certifikáty naimportujete.
-9.  Restartujte servery AD FS.
-10. Výše uvedené kroky zopakujte na všech serverech a proxy serverech AD FS.
+1.    Na servery a proxy serverech AD FS spusťte konzolu Správa certifikátů pro místní počítač tak, že kliknete pravým tlačítkem na **Start**, vyberete **Spustit** a zadáte příkaz **certlm.msc**.
+2.    Rozbalte **Osobní** a vyberte **Certifikáty**.
+3.    Najděte certifikát pro vaši komunikaci služby AD FS (veřejně podepsaný certifikát) a poklikáním zobrazte jeho vlastnosti.
+4.    Vyberte kartu **Cesta k certifikátu**, kde uvidíte nadřazené certifikáty certifikátu.
+5.    U každého nadřazeného certifikátu vyberte **Zobrazit certifikát**.
+6.    Vyberte kartu **Podrobnosti** a vyberte **Kopírovat do souboru**.
+7.    Postupujte podle pokynů průvodce a vyexportujte nebo uložte veřejný klíč certifikátu do požadovaného umístění souborů.
+8.    Naimportujte nadřazené certifikáty, které jste ve 3. kroku vyexportovali, do složky Místní počítač\Osobní\Certifikáty, a to tak, že pravým tlačítkem kliknete na **Certifikáty**, vyberete **Všechny úkoly** > **Importovat** a pak podle výzev průvodce certifikáty naimportujete.
+9.    Restartujte servery AD FS.
+10.    Výše uvedené kroky zopakujte na všech serverech a proxy serverech AD FS.
 Teď už by měl uživatel být schopný se ze zařízení s Androidem k aplikaci Portál společnosti přihlásit.
 
 **Pokud chcete ověřit, jestli se certifikát správně nainstaloval**:
@@ -386,9 +389,4 @@ K této chybě může dojít v případě, že byl počítač zaregistrován ji�
 
 ### <a name="next-steps"></a>Další kroky
 Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](https://docs.microsoft.com/intune/troubleshoot/how-to-get-support-for-microsoft-intune).
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

@@ -1,11 +1,12 @@
 ---
-title: "Co jsou profily zařízení v Microsoft Intune? | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Co jsou profily zařízení v Microsoft Intune?"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Poznejte profily zařízení Intune a zjistěte, jak vám pomůžou se správou a ochranou zařízení ve firmě."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 01/03/2017
+ms.date: 02/15/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,19 +14,20 @@ ms.technology:
 ms.assetid: 
 ms.reviewer: 
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 89afae81076d563f4ebba289f8fa82eaea6ab234
-ms.openlocfilehash: 0e126c067b5c212ae5bfe1cf69e01128a00b1c8e
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: eb48265e4655117976c9847b1f5bee712f0c2e3c
+ms.lasthandoff: 02/18/2017
 
 
 ---
 
-# <a name="what-are-device-profiles"></a>Co jsou profily zařízení?
-<!--- This topic doesn't really answer the topic title: What are device profiles?" It needs to answer that question, then it can go on to discuss what profiles are in Intune and how to use them. Linda--->
+# <a name="what-are-microsoft-intune-device-profiles"></a>Co jsou profily zařízení v Microsoft Intune?
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Úloha **Konfigurovat zařízení** v Microsoft Intune slouží ke správě nastavení a funkcí na všech zařízeních, která spravujete.
+Úloha **Konfigurovat zařízení** v Microsoft Intune slouží ke správě nastavení a funkcí na všech zařízeních, která spravujete. Tuto úlohu použijete nejčastěji k vytvoření profilů zařízení, které umožňují spravovat a řídit celou řadu různých funkcí na zařízeních, která spravujete.
 
 Když tuto úlohu otevřete, uvidíte následující možnosti:
 
@@ -60,10 +62,6 @@ Podporované platformy: Android, iOS, macOS, Windows Phone 8.1, Windows 8.1 a Wi
 Tento typ profilu umožňuje nakonfigurovat důvěryhodné certifikáty a certifikáty SCEP a PKCS, které lze přiřadit k zařízením a použít k ověření profilů Wi-Fi, sítě VPN a e-mailu.
 Další informace najdete v článku [Jak nakonfigurovat certifikáty](how-to-configure-certificates.md). Podporované platformy: Android, iOS, Windows Phone 8.1, Windows 8.1 a Windows 10.
 
-## <a name="education"></a>Vzdělávání
-Umožňuje určit správné certifikáty pro používání zařízení s iOSem ve školství.
-Další informace najdete v článku [Jak v Intune nakonfigurovat nastavení vzdělávání pro zařízení s iOS](education-settings-for-ios.md). Podporované platformy: jen iOS.
-
 ## <a name="edition-upgrade"></a>Upgrade edice
 Tento typ profilu umožňuje automaticky upgradovat zařízení s určitými verzemi Windows 10 na novější edici. Další informace najdete v článku [Jak nakonfigurovat upgrady edic Windows 10](how-to-configure-windows-10-edition-upgrade.md). Podporované platformy: jen Windows 10.
 
@@ -74,9 +72,4 @@ Další informace najdete v článku [Jak nakonfigurovat službu Windows Informa
 ## <a name="custom"></a>Vlastní
 Pomocí vlastních nastavení můžete k zařízení přiřadit nastavení, která nejsou předdefinovaná v Intune. Například u zařízení s Androidem můžete určit hodnoty OMA-URI, které slouží ke konfiguraci zařízení. U zařízení s iOSem můžete naimportovat konfigurační soubor, který jste vytvořili v nástroji Apple Configurator.
 Další informace najdete v článku [Jak nakonfigurovat vlastní nastavení](how-to-configure-custom-settings.md). Podporované platformy: Android, iOS, macOS a Windows Phone 8.1.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

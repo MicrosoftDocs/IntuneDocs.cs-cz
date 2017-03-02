@@ -1,11 +1,12 @@
 ---
-title: "Jak používat zásady konfigurace aplikace Intune | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Použití zásad konfigurace aplikací v Intune"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Přečtěte si, jak používat zásady konfigurace aplikace pro účely předání konfiguračních dat do aplikace pro iOS, když se spustí."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 01/23/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +14,15 @@ ms.technology:
 ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 424fae862592c1ab5b4221fb5ad40a52c39f6760
-ms.openlocfilehash: 75e3f3f62dd392cda1530321b12cd27e9ee8847f
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 73360154765d53fe1f42e4e97699ad9385bfda6f
+ms.lasthandoff: 02/18/2017
 
 ---
 
-# <a name="how-to-use-intune-app-configuration-policies"></a>Použití zásad konfigurace aplikací v Intune
+# <a name="how-to-use-microsoft-intune-app-configuration-policies"></a>Použití zásad konfigurace aplikací v Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -133,9 +136,4 @@ Když vytvoříte soubor konfigurace aplikací, můžete pomocí tohoto formátu
 </dict>
 
 ```
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

@@ -1,11 +1,12 @@
 ---
-title: "Jak do Intune přidat aplikace pro App Store (iOS) | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Jak do Intune přidat aplikace pro App Store (iOS)"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Přečtěte si informace o přidávání aplikací pro App Store (iOS) do Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 01/11/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +14,15 @@ ms.technology:
 ms.assetid: c59514d7-1256-4576-9380-e7a0b85a0378
 ms.reviewer: mghadial
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 01e5bfeb98aee9314fa04679cc27c8aba0e18fb0
-ms.openlocfilehash: b29374c3abcca90de6cba7ed83866c04350f69c5
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 21e6089bf8a88f107518c7bccfa7bf79b3021a23
+ms.lasthandoff: 02/18/2017
 
 ---
 
-# <a name="how-to-add-ios-store-apps-to-intune"></a>Jak do Intune přidat aplikace pro App Store (iOS)
+# <a name="how-to-add-ios-store-apps-to-microsoft-intune"></a>Přidání aplikací pro App Store (iOS) do Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -55,8 +58,3 @@ ms.openlocfilehash: b29374c3abcca90de6cba7ed83866c04350f69c5
 3. Až skončíte, zvolte v okně **Přidat aplikaci** možnost **Uložit**.
 
 Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřadit ke zvoleným skupinám. Nápovědu najdete v článku [Přiřazení aplikací do skupin](/intune-azure/manage-apps/deploy-apps).
-
-
-<!--HONumber=Feb17_HO1-->
-
-

@@ -1,11 +1,12 @@
 ---
-title: "Jak do Intune přidat aplikace pro Windows Store | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Jak do Intune přidat aplikace pro Windows Store"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Přečtěte si informace o přidání aplikací pro Windows Store do Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 01/11/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +14,15 @@ ms.technology:
 ms.assetid: 07241b6d-86d8-4abb-83a2-3fc5feae5788
 ms.reviewer: mghadial
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 01e5bfeb98aee9314fa04679cc27c8aba0e18fb0
-ms.openlocfilehash: ee0079d7b1098c2c9a2a679c46336e2fb8e09585
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: e6e6ba0aae5da25b3f8b07326a2e323c75268ff5
+ms.lasthandoff: 02/18/2017
 
 ---
 
-# <a name="how-to-add-windows-store-apps-to-intune"></a>Jak do Intune přidat aplikace pro Windows Store
+# <a name="how-to-add-windows-store-apps-to-microsoft-intune"></a>Přidání aplikací pro Windows ze Storu do Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -47,8 +50,3 @@ ms.openlocfilehash: ee0079d7b1098c2c9a2a679c46336e2fb8e09585
 8. Až skončíte, zvolte v okně **Přidat aplikaci** možnost **Uložit**.
 
 Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřadit ke zvoleným skupinám. Nápovědu najdete v článku [Přiřazení aplikací do skupin](/intune-azure/manage-apps/deploy-apps).
-
-
-<!--HONumber=Feb17_HO1-->
-
-

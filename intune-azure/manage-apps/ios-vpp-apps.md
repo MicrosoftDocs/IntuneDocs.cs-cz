@@ -1,11 +1,12 @@
 ---
-title: "Správa multilicenčních aplikací pro iOS | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Správa hromadně zakoupených aplikací iOS"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Zjistěte, jak aplikace zakoupené v rámci multilicenčního programu z App Storu pro iOS zařízení synchronizovat s Intune a jak následně spravovat a sledovat jejich používání."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/08/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +14,15 @@ ms.technology:
 ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 87250baede6c86e7ac5c402e79026908e712f48c
-ms.openlocfilehash: 809fe8d8eea7e472d80f6ee22e26c1f376e870eb
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: e75ab41176f2aa1feac98fcf067349b132d4d61b
+ms.lasthandoff: 02/18/2017
 
 ---
 
-# <a name="how-to-manage-ios-apps-you-purchased-through-a-volume-purchase-program"></a>Jak spravovat aplikace pro iOS zakoupené prostřednictvím multilicenčního programu
+# <a name="how-to-manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Správa aplikací pro iOS nakoupených prostřednictvím programu hromadného nákupu pomocí Microsoft Intune
 
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
@@ -81,9 +84,4 @@ Když přiřazujete aplikaci s typem instalace **Požadovaná**, každý uživat
 Když chcete licenci získat zpět, musíte nastavit akci přiřazení na **Odinstalovat**. Až se aplikace odinstaluje, licence se uvolní.
 
 Když se uživatel s oprávněným zařízením poprvé pokusí o instalaci aplikace VPP, požádá se o připojení k programu Apple Volume Purchase. To je třeba provést před instalací aplikace.
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

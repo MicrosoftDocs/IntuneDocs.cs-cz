@@ -1,11 +1,12 @@
 ---
-title: "Jak nakonfigurovat aplikaci Portál společnosti | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Konfigurace aplikace Portál společnosti"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Přečtěte si, jak je možné použít značku společnosti u aplikace Portál společnosti v Intune. "
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +14,15 @@ ms.technology:
 ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 990062ecf03a117dad74eb71e3f40abb79f22be6
-ms.openlocfilehash: f27eacc8a8282c9216f8983db32dc5e4e8bc7006
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 9ebfadd945916b6be8225b9e07d67100e3f91222
+ms.lasthandoff: 02/18/2017
 
 ---
 
-# <a name="how-to-configure-the-company-portal-app"></a>Konfigurace aplikace Portál společnosti
+# <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Konfigurace aplikace Portál společnosti služby Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -64,9 +67,4 @@ Portál své společnosti si můžete přizpůsobit – můžete na něj umísti
 |**Zobrazit logo společnosti**|Povolení této možnosti vám umožní nahrát vlastní logo společnosti, které se bude zobrazovat v Portálu společnosti. Můžete nahrát dvě loga – jedno, které se zobrazí, když bude pozadí Portálu společnosti bílé, a druhé, které se zobrazí, když se bude pro pozadí Portálu společnosti používat vybraná barva motivu. Obě loga musí být ve formátu .png nebo .jpg o maximálním rozlišení 400 × 100 pixelů a nesmí být větší než 750 kB.<br>Vedle nahraného loga můžete zobrazit také název společnosti, který jste zadali.|
 
 Po uložení změn můžete zvolit možnost **Podívejte se na náhled nastavení na webovém portálu Intune**, abyste viděli, jak konfigurace vypadá.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

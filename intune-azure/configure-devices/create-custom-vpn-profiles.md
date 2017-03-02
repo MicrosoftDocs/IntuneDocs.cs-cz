@@ -1,11 +1,12 @@
 ---
-title: "Vytvoření vlastních profilů VPN s Microsoft Intune | Dokumentace Microsoftu"
+title: "Vytvoření vlastních profilů VPN s Microsoft Intune"
+titleSuffix: Intune Azure preview
 description: "Vlastní konfigurace slouží k vytvoření profilů VPN v Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/20/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +14,16 @@ ms.technology:
 ms.assetid: 4c0bd439-3b58-420b-9a9a-282886986786
 ms.reviewer: karanda
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: f2b364b2c57adab33df2a8e6b34c1f30c02988d3
-ms.openlocfilehash: e92593062ad2ed7a4098922715106f47f4e78d4f
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 132844bb1d1119390b7f55cca58cecbd5b8ee90a
+ms.lasthandoff: 02/18/2017
 
 
 ---
 
-# <a name="how-to-create-custom-vpn-profiles-with-microsoft-intune"></a>Vytvoření vlastních profilů VPN s Microsoft Intune
+# <a name="how-to-create-custom-vpn-profiles-in-microsoft-intune"></a>Vytvoření vlastních profilů VPN v Microsoft Intune
 
 ## <a name="create-a-custom-configuration"></a>Vytvoření vlastní konfigurace
 Vlastní konfigurace Intune můžete použít k vytvoření profilů VPN pro:
@@ -122,10 +125,5 @@ Příklady:
 > - Pokud je poskytnutá hodnota PackageList, výchozí hodnota je *WHITELIST*.
 
 
-
-
-
-
-<!--HONumber=Feb17_HO1-->
 
 
