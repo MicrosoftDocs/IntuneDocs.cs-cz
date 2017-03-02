@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 12/13/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,9 @@ ms.assetid: e6c0a430-1851-4108-812a-87e0fc2623b5
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 990062ecf03a117dad74eb71e3f40abb79f22be6
-ms.openlocfilehash: c228601451b33238d0f6929987dcdec3a5e56e8d
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: a08274fd4b2d3105b28f46a6d35257b3664f7510
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -32,7 +33,7 @@ S použitím následujících informací rozhodněte, která metoda se má použ
 
 ## <a name="user-owned-ios-devices-byod"></a>Zařízení se systémem iOS vlastněné uživatelem (BYOD)
 
-Pokud si chtějí uživatelé zaregistrovat svoje vlastní zařízení (BYOD), je jediná možnost, jak si svoje zařízení můžou zaregistrovat, stažení aplikace Portál společnosti pro iOS z obchodu s aplikacemi. Dále je potřeba postupovat podle pokynů v aplikaci. Po registraci se uživatelé můžou připojit k síti společnosti, k doméně nebo Azure Active Directory a získat přístup k podnikovým prostředkům.
+Pokud si chtějí uživatelé zaregistrovat svoje vlastní zařízení (BYOD), je jediná možnost, jak si svoje zařízení můžou zaregistrovat, stažení aplikace Portál společnosti pro iOS z obchodu s aplikacemi. Dále je potřeba postupovat podle pokynů v aplikaci. Po registraci se uživatelé můžou připojit k síti společnosti, k doméně nebo Azure Active Directory a získat přístup k podnikovým prostředkům. Registraci osobně vlastněných zařízení s iOSem je možné blokovat. Pokyny najdete v tématu [Nastavení omezení typu zařízení](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-type-restrictions).
 
 ## <a name="apple-configurator"></a>Apple Configurator
 
@@ -48,9 +49,4 @@ DEP nasazuje registrační profil bezdrátově do zařízení, která jste prost
 
 ## <a name="use-the-device-enrollment-manager-dem"></a>Použití správce registrace zařízení (DEM)
 Správce registrace zařízení je typ uživatelského účtu, který může zaregistrovat a spravovat až 1000 zařízení. Do účtu DEM přidáte existující uživatele a přidělíte jim tak příslušné možnosti. Každé zařízení, které uživatel DEM zaregistruje, používá jednu licenci Intune. Další informace najdete v tématu [Registrace zařízení pomocí správce registrace zařízení](enroll-devices-using-device-enrollment-manager.md).
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

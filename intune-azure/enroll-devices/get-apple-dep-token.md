@@ -14,8 +14,9 @@ ms.assetid: 7e5c79c5-2883-4841-9be6-74cba16ee447
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 65a6b2e22359bdcb9b0c15a84c6b3586dafe4d6c
-ms.openlocfilehash: c740dedebdc4afd909a8c38447f698c2724de5a1
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: b2c79e92f6378825bdaac03d2d9be699bdaca95b
+ms.lasthandoff: 02/15/2017
 
 ---
 
@@ -31,7 +32,7 @@ Pokud chce organizace ke správě zařízení s iOS, která jsou v jejím vlastn
 > Tuto poznámku si přečtěte jenom v případě, že jste zákazník, který migroval z konzoly pro správu Intune na portál Azure Portal. Pokud jste během migrace odstranili token Apple DEP z konzoly pro správu Intune, můžete zjistit, že se token DEP ve vašem účtu Intune obnovil. Pokud se to stane, můžete token DEP jednoduše odstranit z portálu Azure Portal. 
 
 **Získání certifikátu Apple DEP**</br>
-Na portálu Azure Portal zvolte **Další služby**, do textového pole zadejte **Intune** a pak zvolte **Jiné** > **Intune**. V okně Intune zvolte možnost **Registrovat zařízení** > **Token DEP Apple** a pak na portálu Azure Portal postupujte podle níže uvedených očíslovaných kroků.
+Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**. V okně Intune zvolte možnost **Registrovat zařízení** > **Token DEP Apple** a pak na portálu Azure Portal postupujte podle níže uvedených očíslovaných kroků.
 
 **Krok 1: Stáhněte si certifikát veřejného klíče služby Intune, který je potřebný pro vytvoření tokenu DEP Apple.**<br>
 Vyberte **Stáhnout certifikát veřejného klíče** a stáhněte si a místně uložte soubor šifrovacího klíče (.pem). Soubor .pem slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple Device Enrollment Program.
@@ -53,9 +54,4 @@ Vyberte [Vytvořit token DEP prostřednictvím Apple Deployment Programs](https:
 
 **Krok 4: Procházením vyhledejte token Apple DEP, který chcete nahrát. Služba Intune se bude automaticky synchronizovat s vaším účtem DEP.**<br>
 Přejděte k souboru certifikátu (.pem), zvolte **Otevřít** a pak zvolte **Nahrát**. S certifikátem Push Certificate může Intune registrovat a spravovat zařízení s iOSem a vynucovat zásady na zaregistrovaných mobilních zařízeních.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

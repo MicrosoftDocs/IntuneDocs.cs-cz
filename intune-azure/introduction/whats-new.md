@@ -1,11 +1,11 @@
 ---
 title: "Co je nového v Microsoft Intune Preview | Intune Azure Preview | Dokumentace Microsoftu"
-description: "Intune Azure Preview: Zjistěte, jaké novinky přináší Intune Azure Preview."
+description: "Zjistěte, jaké novinky přináší Intune Azure Preview."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/02/2017
+ms.date: 02/15/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,28 +14,40 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e405363f9d0a89b1589b01d18ee8d2861b07ec60
-ms.openlocfilehash: 70007f5501fba37964a0a54807c0e0f565510a74
-
+ms.sourcegitcommit: 9852fdb9d1bfeede4931f0ead2fa0898dfcacb0b
+ms.openlocfilehash: a05c7464b3f2fbca467d44218904671529320dda
+ms.lasthandoff: 02/15/2017
 
 ---
 
 # <a name="whats-new-in-the-microsoft-intune-preview"></a>Co je nového v Microsoft Intune Preview
 
-
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
-
 
 Zde vás budeme informovat o přidávání nových funkcí do veřejné verze Preview.
 
-<!--## February 2017-->
+## <a name="february-2017"></a>Únor 2017
 
-<!--### Custom app categories <!--748805
-You can now create, edit, and assign categories for apps you add to Intune. Currently, categories can only be specified in English.
-See [How to add an app to Intune](/intune-azure/manage-apps/add-apps).-->
+### <a name="ability-to-restrict-mobile-device-enrollment---747600-795782--"></a>Možnost omezení registrace mobilních zařízení <!--747600, 795782-->
+Intune přidává nová omezení registrace řídící to, které platformy mobilních zařízení se mohou zaregistrovat. Intune odděluje platformy mobilních zařízení, jako je iOS, macOS, Android, Windows a Windows Mobile.
 
-<!--### Display device categories <!--814654
-You can now view the device category as a column in the device list. You can also edit the category from the properties section of the device properties blade.-->
+* Omezení registrace mobilních zařízení neomezuje registraci klienta pro počítače.  
+* Pouze pro iOS a Android existuje další možnost blokování registrace osobních zařízení.
+
+Pokud správce IT neoznačí nová zařízení jako vlastněná podnikem, Intune všechna nová zařízení označí jako osobní. Podrobnosti najdete v [tomto článku](https://docs.microsoft.com/en-us/intune/deploy-use/manage-corporate-owned-devices).
+
+### <a name="view-all-actions-on-managed-devices---677150--"></a>Zobrazení všech akcí na spravovaných zařízeních <!--677150-->
+V nové sestavě __Akce zařízení__ se zobrazí, kdo provedl vzdálené akce, jako je obnovení továrního nastavení zařízení, a dále stav dané akce. Viz [Co je správa zařízení?](https://docs.microsoft.com/intune-azure/manage-devices/what-is)
+
+### <a name="non-managed-devices-can-access-assigned-apps---664691--"></a>Nespravovaná zařízení mají přístup k přiřazeným aplikacím <!--664691-->
+Jako součást změn v návrhu na webu Portál společnosti budou moci uživatelé iOSu a Androidu na svoje nespravovaná zařízení instalovat aplikace, které mají přiřazené jako dostupné bez registrace. S použitím přihlašovacích údajů pro Intune se budou moct uživatelé přihlásit na web Portál společnosti a zobrazit seznam aplikací, které mají přiřazené. Balíčky aplikací, které jsou dostupné bez registrace, jsou k dispozici ke stažení prostřednictvím webu Portál společnosti. Aplikace, které vyžadují registraci, aby je bylo možné nainstalovat, nejsou touto změnou ovlivněny, protože když budou chtít tyto aplikace uživatelé nainstalovat, zobrazí se jim výzva k registraci.
+
+### <a name="custom-app-categories---748805--"></a>Vlastní kategorie aplikací <!--748805-->
+Teď můžete vytvářet, upravovat a přiřazovat kategorie pro aplikace, které přidáte do Intune. V současné době se kategorie dají zadávat jenom v angličtině.
+Přečtěte si téma [Jak přidat aplikaci do Intune](/intune-azure/manage-apps/add-apps).
+
+### <a name="display-device-categories---814654--"></a>Zobrazení kategorií zařízení <!--814654-->
+Kategorie zařízení teď můžete zobrazit jako sloupec v seznamu zařízení. Kategorii můžete upravit také v části vlastností v okně vlastností zařízení. Přečtěte si téma [Jak přidat aplikaci do Intune](/intune-azure/manage-apps/add-apps). 
 
 ## <a name="january-2017"></a>Leden 2017
 
@@ -83,9 +95,4 @@ Na portálu Azure Portal nebudete moci nastavit zásadu výchozího profilu pro 
 
 #### <a name="how-to-get-ready-for-this-change"></a>Jak se na tuto změnu připravit
 Tuto informaci vám oznamujeme dopředu, abyste na tuto změnu mohli správce podpory upozornit, pokud se vás týká. Tato změna se bude krýt s přechodem na portál Azure Portal, který se očekává v první polovině roku 2017.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

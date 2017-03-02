@@ -19,11 +19,11 @@ Automatický zápis umožňuje registraci i uživatelům počítačů se systém
 
 4. Výběrem možnosti **Konfigurovat** spusťte konfiguraci automatické registrace MDM v Microsoft Intune.
 
-5. Zadejte adresy URL pro Intune:
+5. Použijte výchozí hodnoty pro následující adresy URL:
 
-  - **Adresa URL registrace do MDM** – Použijte výchozí hodnotu.
-  - **Adresa URL pro podmínky použití MDM** – Použijte výchozí hodnotu. Tato adresa URL zobrazí podmínky použití pro uživatele při registraci zařízení.
-  - **Adresa URL pro stav souladu s MDM** – Použijte výchozí hodnotu. Pokud zařízení nesplňuje požadavky, zobrazí se u dané adresy URL zpráva **Přístup byl odepřen**. Adresa URL odkazuje na stránku, která uživatelům vysvětlí, proč jejich zařízení není kompatibilní se zásadami a jak této kompatibility znovu dosáhnout.
+  - **Registrace MDM**
+  - **Podmínky použití MDM** 
+  - **Dodržování předpisů MDM**
 
 6.  Zadejte, která uživatelská zařízení by měla být spravována přes službu Microsoft Intune. Tato uživatelská zařízení se systémem Windows 10 budou automaticky zaregistrována pro správu přes službu Microsoft Intune.
 
@@ -32,8 +32,3 @@ Automatický zápis umožňuje registraci i uživatelům počítačů se systém
   - **Žádné**
 
 7. Vyberte **Uložit**.
-
-
-<!--HONumber=Feb17_HO2-->
-
-

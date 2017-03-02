@@ -13,15 +13,17 @@ ms.technology:
 ms.assetid: d3aa6c74-6b5d-4b50-aa66-a040ec44393e
 ms.reviewer: joglocke
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 22c30f51bf83219053f97310ed1830ad9e01acd8
-ms.openlocfilehash: bd270cd4b04894d4824487d36ea4f0c1929dd568
+ms.sourcegitcommit: fbb41a8cf6fada76b72213b8cb04fdc0428515e9
+ms.openlocfilehash: 96c25307c4060a8872ba4f6de47992c4d9f9dd85
+ms.lasthandoff: 02/14/2017
 
 
 ---
 
-# <a name="monitor-mobile-app-management-policies-with-microsoft-intune"></a>Monitorování zásad správy mobilních aplikací s Microsoft Intune
-Můžete monitorovat stav dodržování zásad správy mobilních aplikací (MAM), které jste použili u uživatelů. Budete moct vyhledat informace o uživatelích dotčených zásadami MAM, stavu dodržování zásad a všech problémech, se kterými se uživatelé mohou setkat.
+# <a name="monitor-app-protection-policies-with-microsoft-intune"></a>Sledování zásad ochrany aplikací pomocí Microsoft Intune
+Stav dodržování zásad ochrany aplikací, které jste použili u uživatelů, můžete monitorovat. Budete moct vyhledat informace o uživatelích, na které se vztahují zásady ochrany aplikací, stavu dodržování zásad a všech problémech, se kterými se uživatelé můžou setkat.
 
 Stav dodržování zásad můžete monitorovat na třech místech:
 
@@ -59,7 +61,7 @@ Pokud se chcete podívat na podrobnosti přehledu, zvolte dlaždici **Stav uživ
 Můžete vyhledat konkrétního uživatele a zkontrolovat u něj stav dodržování předpisů. V okně **Vytváření sestav aplikace** se zobrazují následující informace o vybraném uživateli:
 - Zařízení přidružená k účtu uživatele
 
-- Aplikace se zásadou MAM u zařízení
+- Aplikace se zásadami ochrany aplikací na zařízení
 
 - Stav:
 
@@ -68,7 +70,7 @@ Můžete vyhledat konkrétního uživatele a zkontrolovat u něj stav dodržová
   - **Není zaregistrováno:** Zásada byla u uživatele nasazena, ale aplikace od té doby nebyla použita v pracovním kontextu.
 
 >[!NOTE]
-> Pokud uživatel, kterého jste hledali, nemá nasazené zásady MAM, zobrazí se zpráva, že uživatel není cílem žádné zásady MAM.
+> Pokud uživatel, kterého jste hledali, nemá nasazené zásady ochrany aplikací, zobrazí se zpráva, že uživatel není cílem pro žádné zásady ochrany aplikací.
 
 Pokud chcete zobrazit vytváření sestav pro uživatele, postupujte takto:
 
@@ -87,7 +89,7 @@ V podrobném přehledu se zobrazí chybová zpráva, otevíraná aplikace v okam
 
 ## <a name="reporting-view"></a>Zobrazení vytváření sestav
 
-Najdete tady stejné sestavy jako v Podrobném zobrazení, ale i další sestavy, které vám pomůžou se stavem dodržování zásad MAM:
+Najdete tady stejné sestavy jako v Podrobném zobrazení, ale i další sestavy, které vám pomůžou se stavem dodržování zásad ochrany aplikací:
 
 ![Snímek obrazovky&4;](../media/MAM-reporting-7.png)
 
@@ -97,13 +99,13 @@ Najdete tady stejné sestavy jako v Podrobném zobrazení, ale i další sestavy
 
     -   Stav uživatele pro spravovanou aktivitu MAM (chráněný): Tato sestava obsahuje aktivitu jednotlivých aplikací spravovaných prostřednictvím MAM podle jednotlivých uživatelů.
 
-        -   Zobrazuje všechny aplikace, které jsou cílem zásad MAM, pro jednotlivé uživatele. Zobrazuje také rozdělení stavu jednotlivých aplikací podle toho, jak jsou zaregistrované v zásadách MAM, nebo aplikací, které jsou cílem zásad MAM, ale nebyly nikdy zaregistrované.
+        -   Pro jednotlivé uživatele se zobrazí všechny aplikace, na které jsou zacílené zásady ochrany aplikací. Zobrazí se také rozdělení stavu jednotlivých aplikací podle toho, jak jsou zaregistrované v zásadách ochrany aplikací, nebo aplikací, na které jsou zacílené zásady ochrany aplikací, ale nebyly nikdy zaregistrované.
 <br></br>
     -   Stav uživatele pro nespravovanou aktivitu MAM (nechráněný): Tato sestava obsahuje aktivitu jednotlivých aplikací povolených v MAM, které momentálně nejsou spravované, podle jednotlivých uživatelů. K tomu může dojít z následujících důvodů:
 
-        -   Tyto aplikace používá uživatel nebo aplikace, která momentálně není cílem žádné zásady MAM.
+        -   Tyto aplikace používají uživatel nebo aplikace, na které momentálně nejsou zacílené žádné zásady ochrany aplikací.
 
-        -   Všechny aplikace jsou zaregistrované, ale nejsou u nich použité žádné zásady MAM.
+        -   Všechny aplikace jsou zaregistrované, ale nejsou u nich použité žádné zásady ochrany aplikací.
 
 ![Snímek obrazovky&2;](../media/MAM-reporting-4.png)
 
@@ -128,14 +130,9 @@ Pokud chcete vygenerovat sestavu ochrany aplikací, postupujte takto:
 
     ![Snímek obrazovky&7;](../media/app-protection-report-csv-1.png)
 
-## <a name="see-also"></a>Viz taky
+## <a name="see-also"></a>Související témata
 [Správa přenosu dat mezi aplikacemi pro iOS](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 
-* [Co očekávat, když ke správě své aplikace pro Android používáte zásady MAM](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
-* [Co očekávat, když ke správě své aplikace pro iOS používáte zásady MAM](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
+* [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
+* [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
 

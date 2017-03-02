@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/18/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,14 @@ ms.assetid: d035ebf5-85f4-4001-a249-75d24325061a
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c2b49fb985290b2806e172543f95db21727c113e
-ms.openlocfilehash: 581283b1918efb941409c7f58d99682fa2894ce5
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: f5267d2e06f1cd7ec471fd1782bfd965843d1c7e
+ms.lasthandoff: 02/16/2017
 
 
 
 ---
-# <a name="use-custom-policies-to-allow-and-block-apps-for-samsung-knox-standard-devices-in-intune-azure-preview"></a>Použití vlastních zásad pro povolení a blokování aplikací pro zařízení se Samsung Knox Standardem v Intune Azure Preview
+# <a name="use-custom-policies-to-allow-and-block-apps-for-samsung-knox-standard-devices-in-microsoft-intune"></a>Použití vlastních zásad pro povolení a blokování aplikací pro zařízení se Samsung KNOX Standardem v Microsoft Intune
 [!INCLUDE[azure_preview](../includes/azure_preview.md)] Postupy v tomto tématu použijte k vytvoření vlastních zásad Microsoft Intune. Vznikne jeden z těchto seznamů:
 
 - Seznam aplikací, u kterých je v příslušném zařízení blokované spuštění. Aplikace v tomto seznamu nebude možné spouštět ani v případě, že již byly nainstalované v okamžiku nasazení zásady.
@@ -45,9 +46,9 @@ Tato nastavení můžou využívat jenom zařízení se Samsung Knox Standardem.
 
 - **Název** – zadejte **PreventStartPackages**.
 - **Popis** – zadejte volitelný popis, např.: Seznam zakázaných aplikací.
--   **Datový typ** – z rozevíracího seznamu zvolte **Řetězec**.
--   **OMA-URI** – zadejte **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**.
--   **Hodnota** – zadejte seznam názvů balíčků aplikací, které chcete povolit. Jako oddělovač můžete použít **; : ,** nebo **|**. (Příklad: package1;package2;)
+-     **Datový typ** – z rozevíracího seznamu zvolte **Řetězec**.
+-     **OMA-URI** – zadejte **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**.
+-     **Hodnota** – zadejte seznam názvů balíčků aplikací, které chcete povolit. Jako oddělovač můžete použít **; : ,** nebo **|**. (Příklad: package1;package2;)
 
 ### <a name="for-a-list-of-apps-that-users-are-allowed-to-install-from-the-google-play-store-while-excluding-all-other-apps"></a>Pro seznam aplikací, které si uživatelé můžou nainstalovat z obchodu Google Play, s vyloučením všech ostatních:
 - **Název** – zadejte **AllowInstallPackages**.
@@ -65,9 +66,4 @@ Nastavení aplikace se použijí, jakmile se cílené zařízení službě přih
 
 
 <!---## Assign the custom profile--->
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

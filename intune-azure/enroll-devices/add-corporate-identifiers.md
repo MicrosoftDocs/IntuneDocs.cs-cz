@@ -3,9 +3,9 @@ title: "Jak přidat do Intune identifikátory IMEI | Intune Azure Preview | Doku
 description: "Intune Azure Preview: Přečtěte si, jak přidat podnikové identifikátory (kódy IMEI) do Microsoft Intune. "
 keywords: 
 author: staciebarker
-ms.author: stabark
+ms.author: stabar
 manager: angrobe
-ms.date: 11/30/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,9 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 990062ecf03a117dad74eb71e3f40abb79f22be6
-ms.openlocfilehash: e134a6e3ff143dacce1d70ef0ab44ade0722ed57
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: 8667f063de65fd5fa86149ac124b236a432eecef
+ms.lasthandoff: 02/15/2017
 
 ---
 
@@ -34,7 +35,7 @@ V textovém editoru vypadá seznam CSV přibližně takto:
 
 **Předání seznamu firemních zařízení ve formátu .csv**
 
-1. Na portálu Azure Portal zvolte **Další služby**, do textového pole zadejte **Intune** a pak zvolte **Jiné** > **Intune**.
+1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 
 2. V okně Intune zvolte **Registrovat zařízení** a pak zvolte **Identifikátory podnikových zařízení**.
 
@@ -44,12 +45,9 @@ V textovém editoru vypadá seznam CSV přibližně takto:
 
 **Odstranění seznamu firemních zařízení ve formátu .csv**
 
-1. V okně Intune zvolte **Registrovat zařízení** a pak zvolte **Identifikátory podnikových zařízení**.
+1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 
-2. Zvolte **Odstranit**.
+2. V okně Intune zvolte **Registrovat zařízení** a pak zvolte **Identifikátory podnikových zařízení**.
 
-
-
-<!--HONumber=Feb17_HO1-->
-
+3. Zvolte **Odstranit**.
 

@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 02/03/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,9 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: adb2fd27d7f2b3f0ef4dce6b26fcb20d74b69a00
-ms.openlocfilehash: 2986e659d384eaa67b64af1ce3ae48a1ac81a600
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: da6d377c94ce5db7bbfa1cb3fc165581d649a1fb
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -50,7 +51,7 @@ Před nastavením registrace zařízení s iOSem zajistěte splnění následuj�
 
 Profil registrace zařízení definuje nastavení, která se použijí pro skupinu zařízení. Následující postup ukazuje, jak vytvořit profil registrace zařízení pro zařízení s iOSem registrovaná pomocí programu DEP.
 
-1. Na portálu Azure Portal zvolte **Další služby**, do textového pole zadejte **Intune** a pak zvolte **Jiné** > **Intune**.
+1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 
 2. V okně Intune zvolte **Registrovat zařízení** a pak zvolte **Registrace Apple**.
 
@@ -110,17 +111,19 @@ Profil registrace zařízení definuje nastavení, která se použijí pro skupi
 
 ## <a name="synchronize-dep-managed-devices"></a>Synchronizace zařízení spravovaných v rámci programu DEP
 
-1. V okně Intune na portálu Azure Portal zvolte **Registrovat zařízení** a pak zvolte **Registrace Apple**.
+1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 
-2. V části **Spravovat nastavení Programu registrace zařízení (DEP) Apple** vyberte **Sériová čísla DEP**.
+2. V okně Intune na portálu Azure Portal zvolte **Registrovat zařízení** a pak zvolte **Registrace Apple**.
+
+3. V části **Spravovat nastavení Programu registrace zařízení (DEP) Apple** vyberte **Sériová čísla DEP**.
 
 4. V okně **Sériová čísla Apple DEP** vyberte **Synchronizovat**.
 
 5. V okně **Synchronizovat** vyberte **Požadovat synchronizaci**. Indikátor průběhu vám ukáže dobu, jakou budete muset počkat před dalším vyžádáním synchronizace.
 
     Pro dosažení souladu s podmínkami společnosti Apple pro přijatelné přenosy v rámci DEP platí v Intune následující omezení:
-     -  Úplná synchronizace programu DEP se nesmí spouštět častěji než jednou za sedm dní. Během úplné synchronizace Intune aktualizuje všechna sériová čísla, která společnost Apple přiřadila Intune, bez ohledu na jejich dřívější synchronizaci. Pokud se o úplnou synchronizaci pokusíte do sedmi dnů od předchozí úplné synchronizace, aktualizuje Intune jenom sériová čísla, která ještě nejsou v Intune.
-     -  Každá žádost o synchronizaci má 10 minut na dokončení. Po tuto dobu nebo do úspěšného vykonání požadavku je tlačítko **Synchronizovat** neaktivní.
+     -    Úplná synchronizace programu DEP se nesmí spouštět častěji než jednou za sedm dní. Během úplné synchronizace Intune aktualizuje všechna sériová čísla, která společnost Apple přiřadila Intune, bez ohledu na jejich dřívější synchronizaci. Pokud se o úplnou synchronizaci pokusíte do sedmi dnů od předchozí úplné synchronizace, aktualizuje Intune jenom sériová čísla, která ještě nejsou v Intune.
+     -    Každá žádost o synchronizaci má 10 minut na dokončení. Po tuto dobu nebo do úspěšného vykonání požadavku je tlačítko **Synchronizovat** neaktivní.
 
 >[!NOTE]
 >Z okna **Sériová čísla Apple DEP** můžete také sériová čísla DEP přiřadit k profilům.
@@ -153,9 +156,4 @@ Zařízení nakonfigurovaná s přidružením uživatele umožňují instalaci a
 7. Po ověření sériového čísla aplikace Portál společnosti přesměruje uživatele na web Portál společnosti, kde registraci dokončí. Potom web uživatele vyzve, aby se vrátil do aplikace.
 
 Registrace je tím dokončená a uživatel může zařízení používat s úplnou sadou funkcí.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

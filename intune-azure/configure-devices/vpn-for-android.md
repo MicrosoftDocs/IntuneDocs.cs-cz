@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/08/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,14 @@ ms.assetid: 16c056ca-320e-4107-ad03-a0cf96c28885
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6cd3069a63bd657d1c9f5e33b96db39a3b3f98d2
-ms.openlocfilehash: f93ab44889837fe8acc5dd5287b63f3b30678159
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: edf359b326626155a2e6acd01f72321c4cd0fe9c
+ms.lasthandoff: 02/16/2017
 
 
 ---
 
-# <a name="vpn-settings-for-android-devices-in-intune-azure-preview"></a>Nastavení sítě VPN pro zařízení s Androidem v Intune Azure Preview
+# <a name="vpn-settings-for-android-devices-in-microsoft-intune"></a>Nastavení sítě VPN pro zařízení s Androidem v Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -41,9 +42,4 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v níže uvedeném sezn
 
 - **Otisk prstu** (pouze Check Point Capsule VPN) – zadejte řetězec, například „Kód otisku prstu Contoso“, který se použije k ověření, že je možné VPN serveru důvěřovat. Otisk prstu se může odeslat klientovi, aby věděl, že může důvěřovat jakémukoli serveru, který při připojování nabízí ten samý otisk. Pokud zařízení ještě otisk prstu nemá, vyzve uživatele, aby důvěřoval VPN serveru, ke kterému se připojuje. Současně přitom zobrazuje otisk prstu (uživatel ho ručně ověří a rozhodne se důvěřovat připojení).
 - **Zadejte páry klíč-hodnota pro atributy Citrix VPN** (pouze Citrix) – zadejte páry klíče a hodnoty, které poskytl Citrix, a nakonfigurujte vlastnosti připojení VPN.
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

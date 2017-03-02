@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 01/19/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,12 +14,13 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 969ce8deae9142944f3481172277dc252baa5779
-ms.openlocfilehash: a7838f57b2eb8bd36a875f7b5b001b12eafcbf8d
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: 472e65be196d1090e89b46271bb97a82b6fb1a9c
+ms.lasthandoff: 02/16/2017
 
 ---
 
-# <a name="how-to-add-an-app"></a>Přidání aplikace 
+# <a name="how-to-add-an-app-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -42,6 +43,16 @@ Podporují se následující platformy. Pokud chcete získat další informace, 
 > [!NOTE]
 > Pokud chcete přidat a nasadit aplikaci z obchodu, musí mít koncoví uživatelé u tohoto obchodu zřízený účet, aby si aplikaci mohli nainstalovat.
 
+## <a name="cloud-storage-space"></a>prostor v cloudovém úložišti
+Všechny aplikace, které vytváříte pomocí instalace typu Instalační program softwaru (například obchodní aplikace), se zabalí a nahrají do cloudového úložiště Microsoft Intune. Zkušební předplatné Intune zahrnuje 2 gigabajty (GB) cloudového úložiště, které se používá k ukládání spravovaných aplikací a aktualizací. Úplné předplatné zahrnuje 20 GB úložného prostoru.
+
+Další úložiště pro Intune můžete zakoupit stejným způsobem jako u původního nákupu.  Pokud jste platili fakturou nebo platební kartou, navštivte [portál pro správu předplatných](https://portal.office.com/adminportal/home?switchtomodern=true#/subscriptions).  Jinak kontaktujte svého partnera nebo prodejního zástupce.
+
+Požadavky na cloudové úložiště jsou následující:
+
+-   Všechny instalační soubory musí být umístěné stejné složce.
+-   Maximální velikost kteréhokoli nahraného souboru je 2 GB.
+
 ## <a name="how-to-create-and-edit-categories-for-apps"></a>Jak vytvořit a upravit kategorie pro aplikace 
 
 Když aplikace seřadíte do kategorií, koncoví uživatelé je jednodušeji najdou na portálu společnosti. K aplikaci můžete přiřadit jednu kategorii i více, například **Aplikace pro vývojáře** nebo **Aplikace pro komunikaci**. Když přidáte aplikaci do Intune, budete mít možnost vybrat požadovanou kategorii. Informace k přidání aplikací a přiřazení kategorií získáte v tématech pro jednotlivé platformy. Pokud chcete vytvořit a upravit vlastní kategorie, postupujte podle následujících pokynů: 
@@ -52,13 +63,8 @@ Když aplikace seřadíte do kategorií, koncoví uživatelé je jednodušeji na
 4. V úloze **Mobilní aplikace** zvolte **Spravovat** > **Kategorie aplikací**. 
 5. V okně **Kategorie aplikací** se zobrazí seznam aktuálních kategorií. Vyberte jednu z následujících akcí: 
     - **Vytvořit kategorii**: V okně **Vytvořit kategorii** zadejte název nové kategorie. Názvy je možné zadat jenom v jednom jazyce a služba Intune je nepřekládá. Až skončíte, klikněte na **Vytvořit**.
-    - **Upravit kategorii**: Pro jakoukoliv kategorii v seznamu, zvolte tlačítko se třemi tečkami (**...**). V okně **Vlastnosti** můžete zadat nový název pro kategorii nebo tady můžete kategorii odstranit. --->
+    - **Upravit kategorii**: Pro jakoukoliv kategorii v seznamu, zvolte tlačítko se třemi tečkami (**...**). V okně **Vlastnosti** můžete zadat nový název pro kategorii nebo tady můžete kategorii odstranit.
 
 
-
-
-
-
-<!--HONumber=Feb17_HO1-->
 
 

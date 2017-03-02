@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 01/29/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,9 @@ ms.assetid: 6d384cd0-b662-41e7-94f5-0c96790ab20a
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: adb2fd27d7f2b3f0ef4dce6b26fcb20d74b69a00
-ms.openlocfilehash: 8c6c92e6e7bd375063f2f19308fe19f6e44962ac
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: 888e7b7af7dcca4154f67a1de781eb7908d9a187
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -54,7 +55,7 @@ Před nastavením registrace zařízení s iOSem zajistěte splnění následuj�
 
 Profil registrace zařízení definuje nastavení, která se použijí pro skupinu zařízení. Následující postup ukazuje, jak vytvořit profil registrace zařízení s iOSem zaregistrovaného v Apple Configuratoru.
 
-1. Na portálu Azure Portal zvolte **Další služby**, do textového pole zadejte **Intune** a pak zvolte **Jiné** > **Intune**.
+1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 
 2. V okně Intune zvolte **Registrovat zařízení** a pak zvolte **Registrace Apple**.
 
@@ -78,11 +79,13 @@ Po vytvoření profilů Apple Configuratoru k nim můžete přiřadit sériová 
 
 ### <a name="assign-serial-numbers-to-apple-configurator-profiles"></a>Přiřazení sériových čísel k profilům Apple Configuratoru
 
-1. V okně **Registrační profily Apple Configuratoru** vyberte profil, ke kterému chcete přiřadit sériová čísla.
+1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 
-2. V okně profilu vyberte **Sériová čísla** > **Přiřadit**.
+2. V okně **Registrační profily Apple Configuratoru** vyberte profil, ke kterému chcete přiřadit sériová čísla.
 
-3. Vyberte sériová čísla, která chcete přiřadit k profilu, a pak zvolte tlačítko **Přiřadit**.
+3. V okně profilu vyberte **Sériová čísla** > **Přiřadit**.
+
+4. Vyberte sériová čísla, která chcete přiřadit k profilu, a pak zvolte tlačítko **Přiřadit**.
 
 ## <a name="export-the-profile-to-ios-devices"></a>Export profilu do zařízení s iOSem
 
@@ -90,11 +93,13 @@ Po vytvoření profilu a přiřazení sériových čísel musíte exportovat pro
 
 ### <a name="export-a-profile-using-setup-assistant-enrollment"></a>Export profilu pomocí registrace Pomocníka s nastavením
 
-1. V okně **Registrační profily Apple Configuratoru** zvolte profil, který chcete exportovat.
+1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 
-2. V okně profilu vyberte **Exportovat profil**.
+2. V okně **Registrační profily Apple Configuratoru** zvolte profil, který chcete exportovat.
 
-3. Zkopírujete adresu URL profilu do [Apple Configuratoru](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) s připojeným zařízením s iOSem. Později URL odešlete do Apple Configuratoru, abyste definovali profil Intune používaný zařízeními iOS.
+3. V okně profilu vyberte **Exportovat profil**.
+
+4. Zkopírujete adresu URL profilu do [Apple Configuratoru](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) s připojeným zařízením s iOSem. Později URL odešlete do Apple Configuratoru, abyste definovali profil Intune používaný zařízeními iOS.
 
   Podpora Apple Configuratoru 2 vyžaduje úpravu adresy URL profilu 2.0. Uděláte to tak, že tento kód:
     ```
@@ -108,7 +113,7 @@ Po vytvoření profilu a přiřazení sériových čísel musíte exportovat pro
 
    V následujícím postupu odešlete tuto adresu URL profilu do služby Apple DEP pomocí Apple Configuratoru, abyste definovali profil Intune používaný zařízeními s iOS.
 
-4. Nahrajte tuto adresu URL profilu do služby Apple DEP pomocí Apple Configuratoru, abyste definovali profil Intune používaný zařízeními s iOSem.
+5. Nahrajte tuto adresu URL profilu do služby Apple DEP pomocí Apple Configuratoru, abyste definovali profil Intune používaný zařízeními s iOSem.
 
 
     1.  Na počítači Mac otevřete **Apple Configurator 2**. V panelu nabídek vyberte **Apple Configurator 2** a potom **Předvolby**.
@@ -139,7 +144,7 @@ Po vytvoření profilu a přiřazení sériových čísel musíte exportovat pro
 
     10. Až se dokončí příprava zařízení s iOSem, můžete odpojit kabel USB.  
 
-8.  **Distribuujte zařízení.**
+6.  **Distribuujte zařízení.**
     Zařízení jsou připravená na registraci ve společnosti. Vypněte zařízení a rozdejte je uživatelům. Když uživatelé zařízení zapnou, spustí se pomocník s nastavením.
 
 ## <a name="how-users-install-and-use-the-company-portal-on-their-devices"></a>Jak uživatelé instalují a používají aplikaci Portál společnosti na svých zařízeních
@@ -165,9 +170,4 @@ Zařízení nakonfigurovaná s přidružením uživatele umožňují instalaci a
 7. Po ověření sériového čísla aplikace Portál společnosti přesměruje uživatele na web Portál společnosti, kde registraci dokončí. Potom web uživatele vyzve, aby se vrátil do aplikace.
 
 Registrace je tím dokončená a uživatel může zařízení používat s úplnou sadou funkcí.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 10/19/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,14 @@ ms.assetid: 9f0fa6af-3669-439a-bd0d-75d8b1a0b135
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f16c9dfb41cb2cfe07ce473a131dac767dee9c74
-ms.openlocfilehash: 255a5e8c8b430e15aba989e1ce805f7d627f0e0c
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: 186630903a606842406ff1d76115c1fa7d1c962e
+ms.lasthandoff: 02/16/2017
 
 
 ---
 
-# <a name="email-profile-settings-for-ios-devices-in-intune-azure-preview"></a>Nastavení e-mailového profilu pro zařízení s iOSem v Intune Azure Preview
+# <a name="email-profile-settings-for-ios-devices-in-microsoft-intune"></a>Nastavení e-mailového profilu pro zařízení s iOSem v Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -39,9 +40,4 @@ ms.openlocfilehash: 255a5e8c8b430e15aba989e1ce805f7d627f0e0c
 - **Povolit přesunování zpráv na jiné e-mailové účty** – Tato možnost povolí uživatelům přesunovat e-mailové zprávy mezi různými účty, které si na svých zařízeních nakonfigurovali.
 - **Umožnit posílání e-mailů z aplikací třetích stran** – Můžete povolit uživateli, aby tento profil vybral jako výchozí účet pro posílání e-mailů, a povolit aplikacím třetích stran otevírání e-mailů v nativních e-mailových aplikacích, například k připojování souborů k e-mailům.
 - **Synchronizovat naposledy použité e-mailové adresy** – Tato funkce povolí uživatelům synchronizovat se serverem seznam e-mailových adres, které se na zařízení naposledy používaly.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

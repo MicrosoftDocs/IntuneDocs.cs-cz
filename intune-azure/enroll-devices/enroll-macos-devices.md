@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 1/3/2016
+ms.date: 02/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,9 @@ ms.assetid: 46429114-2e26-4ba7-aa21-b2b1a5643e01
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ba2affcdbcdfcd690d671c7b20f9d1e14a74f764
-ms.openlocfilehash: 171175689adca027181f3da4d05222117de97e13
+ms.sourcegitcommit: a2e840797c06322b9efc59438e0675e57b7cdb24
+ms.openlocfilehash: f217988313debd33bcba3f8168aa03b6dbf8586e
+ms.lasthandoff: 02/14/2017
 
 
 ---
@@ -24,7 +25,7 @@ ms.openlocfilehash: 171175689adca027181f3da4d05222117de97e13
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Jako správce Intune můžete spravovat zařízení s macOS. Ve výchozím nastavení portál Azure Portal umožňuje uživatelům registrovat jejich zařízení s macOS. Stačí jenom, abyste uživatelům dali pokyn, aby přešli na [web Portál společnosti](http://portal.manage.microsoft.com) a zaregistrovali svá zařízení s macOS. 
+Intune umožňuje spravovat zařízení se systémem macOS. Aby bylo možné povolit správu zařízení, musí uživatelé zaregistrovat svá zařízení tak, že přejdou na [web Portál společnosti](http://portal.manage.microsoft.com) a budou postupovat podle pokynů. Až budou zařízení se systémem macOS pod správou, můžete [pro zařízení se systémem macOS vytvořit vlastní nastavení](https://docs.microsoft.com/intune-azure/configure-devices/custom-for-macos). Další možnosti budou brzy k dispozici.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -39,20 +40,17 @@ Před nastavením registrace zařízení s macOS zajistěte splnění následuj�
 
 ## <a name="set-up-macos-enrollment"></a>Nastavení registrace zařízení s macOS
 
-Ve výchozím nastavení je služba Intune už nastavená tak, aby umožňovala registraci zařízení s macOS. 
+Intune již standardně umožňuje registraci zařízení se systémem macOS. 
 
-Pokud chcete zobrazit nastavení pro povolení nebo blokování registrace zařízení s macOS, přejděte na portálu Azure Portal do okna Intune a zvolte **Registrace** > **Omezení registrace**. 
+Pokud chcete u zařízení se systémem macOS registraci blokovat, přečtěte si téma [Nastavení omezení typu zařízení](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-type-restrictions). 
+
+Jestliže chcete nastavit maximální počet zařízení, která může uživatel zaregistrovat, přečtěte si téma [Nastavení omezení limitu počtu zařízení](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-limit-restrictions).
 
 ## <a name="tell-your-users-how-to-enroll-their-devices-to-access-company-resources"></a>Informujte uživatele, jak můžou svá zařízení zaregistrovat, aby získali přístup k firemním prostředkům
 
-Pokyny k registraci pro koncové uživatele najdete v článku [Registrace zařízení s macOS do Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-macos). Proces registrace uživatele informuje, co můžou očekávat a co správci IT na jejich zařízeních uvidí a neuvidí.
+Je potřeba koncovým uživatelům sdělit, že mají přejít na [web Portál společnosti](http://portal.manage.microsoft.com) a podle pokynů zaregistrovat svá zařízení. Můžete jim také poslat odkaz na postup online registrace: [Zaregistrujte svoje zařízení se systémem macOS v Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-macos). 
 
 Informace o dalších úlohách koncových uživatelů najdete v článcích:
 
 - [Materiály o prostředí Microsoft Intune pro koncové uživatele](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)
 - [Použití zařízení s iOSem nebo macOS s Intune](https://docs.microsoft.com/intune/enduser/using-your-ios-or-mac-os-x-device-with-intune)
-
-
-<!--HONumber=Feb17_HO1-->
-
-

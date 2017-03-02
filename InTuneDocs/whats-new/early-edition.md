@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/07/2017
+ms.date: 02/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,9 +14,11 @@ ms.assetid: f49650f4-31fa-406c-a4da-d8c9a4a8384d
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 68c7a23dc8769330c14f74e6aebb07eeb188a991
-ms.openlocfilehash: 4bc9a2799bcce035c6847b7b2884ee24160426da
+ms.sourcegitcommit: d0b3a883bb307fb06cb8d16500798086f328314a
+ms.openlocfilehash: eeebf8b6b3bc5c7c35386eb20c96097af1f6769c
+ms.lasthandoff: 02/14/2017
 
 
 ---
@@ -34,7 +36,7 @@ Tato stránka se pravidelně aktualizuje. Přijďte se tedy znovu podívat, jest
 ## <a name="new-capabilities"></a>Nové funkce
 
 ### <a name="modernizing-the-company-portal-website---753980--"></a>Modernizace webu Portál společnosti <!--753980-->
-Web Portál společnosti bude podporovat aplikace zaměřené na uživatele, kteří nemají spravovaná zařízení. Tento web bude podobně jako ostatní produkty a služby Microsoftu používat nové kontrastní barevné schéma, dynamické ilustrace a „hamburgerovou“ nabídku ![Obrázek hamburgerové nabídky webu Portál společnosti, která je teď přidaná v levém horním rohu webu Portál společnosti](./media/CP_hamburger_menu.png), která bude obsahovat kontaktní údaje helpdesku a informace o existujících spravovaných zařízeních. Cílová stránka bude mít nové uspořádání, které zdůrazní aplikace dostupné uživatelům – s karusely pro Vybrané a Nedávno aktualizované aplikace. Obrázky před a po najdete na [stránce s aktualizacemi uživatelského rozhraní](https://docs.microsoft.com/intune/whats-new/whats-new-in-intune-app-ui).
+Od února bude tento web Portál společnosti podobně jako ostatní produkty a služby Microsoftu používat nové kontrastní barevné schéma, dynamické ilustrace a „hamburgerovou“ nabídku ![Obrázek hamburgerové nabídky webu Portál společnosti, která je teď přidaná v levém horním rohu webu Portál společnosti](./media/CP_hamburger_menu.png), která bude obsahovat kontaktní údaje helpdesku a informace o existujících spravovaných zařízeních. Cílová stránka bude mít nové uspořádání, které zdůrazní aplikace dostupné uživatelům – s karusely pro Vybrané a Nedávno aktualizované aplikace. Obrázky před a po najdete na [stránce s aktualizacemi uživatelského rozhraní](https://docs.microsoft.com/intune/whats-new/whats-new-in-intune-app-ui).
 
 ### <a name="new-guided-experience-for-windows-10-company-portal---713927--"></a>Nové prostředí s asistencí pro portál společnosti s Windows 10 <!--713927-->
 Od března bude portál společnosti pro Windows 10 obsahovat návod s pokyny Intune pro zařízení, která nejsou identifikovaná nebo zaregistrovaná. Nové prostředí obsahuje podrobné pokyny přizpůsobené buildu uživatele Windows 10, které provedou uživatele registrací AAD (která je nutná k identifikaci pro funkce podmíněného přístupu) a registraci MDM (která je nutná pro funkce správy zařízení). Prostředí s asistencí bude přístupné z domovské stránky portálu společnosti a je volitelné. Uživatelé budou moct nadále aplikaci používat, pokud se nezaregistrují, ale některé funkce můžou být omezené.
@@ -114,9 +116,4 @@ Ve verzi Preview teď začínáme na webu Azure Portal zavádět integraci se sl
 
 ### <a name="see-also"></a>Související témata
 Podrobnosti o posledním vývoji najdete v tématu [Co je nového v Microsoft Intune](whats-new-in-microsoft-intune.md).
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

@@ -14,8 +14,9 @@ ms.assetid: 541be8b8-8668-41be-afce-3f3e08c12191
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 990062ecf03a117dad74eb71e3f40abb79f22be6
-ms.openlocfilehash: a7249e96e737cc844e742a78d8a34899a428f52b
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: 56e78f2c80c860c4cdf1c79bf94d7575d5cd9674
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -49,7 +50,7 @@ Abyste předešli konfliktům mezi zásadami a zajistili, že zásady kódu PIN 
 
 ## <a name="create-a-windows-hello-for-business-policy"></a>Vytvoření zásad pro službu Windows Hello pro firmy
 
-1.  Na portálu Azure Portal zvolte **Další služby**, do textového pole zadejte **Intune** a pak zvolte **Jiné** > **Intune**.
+1.  Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 
 2.  V okně Intune zvolte **Registrovat zařízení** a pak zvolte **Spravovat** > **Windows Hello pro firmy**.
 
@@ -96,9 +97,4 @@ Abyste předešli konfliktům mezi zásadami a zajistili, že zásady kódu PIN 
 
 ## <a name="further-information"></a>Další informace
 Další informace o službě Microsoft Passport najdete v [příručce](https://technet.microsoft.com/library/mt589441.aspx) v dokumentaci k Windows 10.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

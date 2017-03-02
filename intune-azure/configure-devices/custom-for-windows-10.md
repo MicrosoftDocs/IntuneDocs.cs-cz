@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,14 @@ ms.assetid: 7bcea136-7260-4042-b21b-c7dab86b380d
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0da8c0fe399f76f43439cc66eaecd12bb454f9a6
-ms.openlocfilehash: 05856480f8bb76e561f2b459d4ab800f9909a40a
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: bc740d9e43e2937757075bf84735fe611433f6f0
+ms.lasthandoff: 02/16/2017
 
 
 ---
 
-# <a name="custom-device-settings-for-windows-10-devices-in-intune-azure-preview"></a>Vlastní nastavení zařízení s Windows 10 v Intune Azure Preview
+# <a name="custom-device-settings-for-windows-10-devices-in-microsoft-intune"></a>Vlastní nastavení zařízení s Windows 10 v Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -167,9 +168,4 @@ Na snímku obrazovky níže je nastavení **Connectivity/AllowVPNOverCellular** 
 |**Povolit uložení hesla**<br>./Vendor/MSFT/Policy/Config/Browser/AllowPasswordManager|Pro počítače i mobilní zařízení<br />**Datový typ:** Celé číslo<br />**Hodnoty:**<br>**0** – Správce hesel je zakázaný. <br>**1** – Správce hesel je povolený (výchozí).|
 |**Povolit automatické vyplňování**<br>./Vendor/MSFT/Policy/Config/Browser/AllowAutofill|Jen pro počítače<br />**Datový typ:** Celé číslo<br />**Hodnoty:** **0** – Zakázáno (výchozí), **1** – Povoleno|
 |**Konfigurovat seznam webů podnikového režimu**<br>./Vendor/MSFT/Policy/Config/Browser/EnterpriseModeSiteList|Jen pro počítače<br />**Datový typ:** Řetězec<br />**Hodnoty:<br>**0** – Nekonfigurováno<br>**1** – Použít seznam webů režimu podnikové sítě, pokud je nakonfigurován (výchozí)<br>**2** – Zadat umístění seznamu webů podnikového režimu|
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

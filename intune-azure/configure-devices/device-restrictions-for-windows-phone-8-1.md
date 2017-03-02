@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/23/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,46 +14,47 @@ ms.assetid: c2d42714-49ca-43b3-b080-2e67a4268198
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8640f60ddafd41826edaf781fbdb1fa76fe5c7e6
-ms.openlocfilehash: a24e4a58d0938778efc89fa473864100e698bea8
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: 32bc9adb88803385c26894e8a70513a4adc55b27
+ms.lasthandoff: 02/16/2017
 
 
 ---
 
-# <a name="windows-phone-81-device-restriction-settings-in-intune-azure-preview"></a>Nastavení omezení pro zařízení Windows Phone 8.1 v Intune Azure Preview
+# <a name="windows-phone-81-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení Windows Phone 8.1 v Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
 ## <a name="general"></a>Obecné
--   **Použít všechna nastavení jenom na Windows Phone 8.1** – toto je nastavení, které můžete nakonfigurovat na portálu Classic služby Intune. Na portálu Azure Portal toto nastavení nejde změnit. Pokud je nastavené na **Nakonfigurováno**, použijí se všechna nastavení jenom na zařízení s Windows Phone 8.1. Pokud je nastavené na **Nenakonfigurováno**, použijí se tato nastavení také na zařízení s Windows 10 Mobile.
--   **Kamera** – Povolí nebo zablokuje fotoaparát zařízení.
--   **Kopírování a vložení** – Povolí nebo zablokuje funkci kopírování a vkládání na zařízeních.
--   **Vyměnitelné úložiště** – Povolí použití vyměnitelného úložiště v zařízení, třeba SD karty.
--   **Zeměpisná poloha** – Umožní zařízení využívat informace o poloze.
--   **Účet Microsoft** – Povolí nebo zablokuje možnost, aby uživatel propojil účet Microsoft se zařízením.
--   **Snímek obrazovky** – Povolí uživateli zachytit obsah obrazovky jako obrázek.
--   **Odeslání diagnostických dat** – Povolí zařízení odesílat diagnostické informace Microsoftu.
--   **Synchronizace vlastních e-mailových účtů** – Povolí zařízení připojit se k e-mailovým účtům jiným než Microsoftu.
+-     **Použít všechna nastavení jenom na Windows Phone 8.1** – toto je nastavení, které můžete nakonfigurovat na portálu Classic služby Intune. Na portálu Azure Portal toto nastavení nejde změnit. Pokud je nastavené na **Nakonfigurováno**, použijí se všechna nastavení jenom na zařízení s Windows Phone 8.1. Pokud je nastavené na **Nenakonfigurováno**, použijí se tato nastavení také na zařízení s Windows 10 Mobile.
+-     **Kamera** – Povolí nebo zablokuje fotoaparát zařízení.
+-     **Kopírování a vložení** – Povolí nebo zablokuje funkci kopírování a vkládání na zařízeních.
+-     **Vyměnitelné úložiště** – Povolí použití vyměnitelného úložiště v zařízení, třeba SD karty.
+-     **Zeměpisná poloha** – Umožní zařízení využívat informace o poloze.
+-     **Účet Microsoft** – Povolí nebo zablokuje možnost, aby uživatel propojil účet Microsoft se zařízením.
+-     **Snímek obrazovky** – Povolí uživateli zachytit obsah obrazovky jako obrázek.
+-     **Odeslání diagnostických dat** – Povolí zařízení odesílat diagnostické informace Microsoftu.
+-     **Synchronizace vlastních e-mailových účtů** – Povolí zařízení připojit se k e-mailovým účtům jiným než Microsoftu.
 
 ## <a name="password"></a>Heslo
--   **Použít všechna nastavení jenom na Windows Phone 8.1** – toto je nastavení, které můžete nakonfigurovat na portálu Classic služby Intune. Na portálu Azure Portal toto nastavení nejde změnit. Pokud je nastavené na **Nakonfigurováno**, použijí se všechna nastavení jenom na zařízení s Windows Phone 8.1. Pokud je nastavené na **Nenakonfigurováno**, použijí se tato nastavení také na zařízení s Windows 10 Mobile.
--   **Zadání hesla nutné** – Vyžaduje, aby koncový uživatel zadal heslo k přístupu k zařízení.
-    -   **Požadovaný typ hesla** – Určuje typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.
-    -   **Minimální délka hesla** – Určuje minimální počet znaků, které heslo musí obsahovat.
-    -   **Jednoduchá hesla** – Umožňuje použití jednoduchých hesel, jako je&0000; nebo&1234;.
-    -   **Počet neúspěšných přihlášení před vymazáním obsahu zařízení** – Určuje, kolikrát může uživatel zadat nesprávné heslo, než se zařízení vymaže.
-    -   **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka** – Určuje dobu, po kterou musí zařízení zůstat v nečinnosti, než se automaticky zamkne jeho obrazovka.
-    -   **Konec platnosti hesla (dny)** – Určuje počet dní, než bude nutné změnit heslo zařízení.
-    -   **Znemožnit opakované použití předchozích hesel** – Určuje, kolik dříve použitých hesel se pamatuje.
--   **Šifrování** – Vyžaduje, aby data na podporovaných mobilních zařízeních byla šifrovaná.
+-     **Použít všechna nastavení jenom na Windows Phone 8.1** – toto je nastavení, které můžete nakonfigurovat na portálu Classic služby Intune. Na portálu Azure Portal toto nastavení nejde změnit. Pokud je nastavené na **Nakonfigurováno**, použijí se všechna nastavení jenom na zařízení s Windows Phone 8.1. Pokud je nastavené na **Nenakonfigurováno**, použijí se tato nastavení také na zařízení s Windows 10 Mobile.
+-     **Zadání hesla nutné** – Vyžaduje, aby koncový uživatel zadal heslo k přístupu k zařízení.
+    -     **Požadovaný typ hesla** – Určuje typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.
+    -     **Minimální délka hesla** – Určuje minimální počet znaků, které heslo musí obsahovat.
+    -     **Jednoduchá hesla** – Umožňuje použití jednoduchých hesel, jako je&0000; nebo&1234;.
+    -     **Počet neúspěšných přihlášení před vymazáním obsahu zařízení** – Určuje, kolikrát může uživatel zadat nesprávné heslo, než se zařízení vymaže.
+    -     **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka** – Určuje dobu, po kterou musí zařízení zůstat v nečinnosti, než se automaticky zamkne jeho obrazovka.
+    -     **Konec platnosti hesla (dny)** – Určuje počet dní, než bude nutné změnit heslo zařízení.
+    -     **Znemožnit opakované použití předchozích hesel** – Určuje, kolik dříve použitých hesel se pamatuje.
+-     **Šifrování** – Vyžaduje, aby data na podporovaných mobilních zařízeních byla šifrovaná.
 
 ## <a name="app-store"></a>App Store
--   **Použít všechna nastavení jenom na Windows Phone 8.1** – toto je nastavení, které můžete nakonfigurovat na portálu Classic služby Intune. Na portálu Azure Portal toto nastavení nejde změnit. Pokud je nastavené na **Nakonfigurováno**, použijí se všechna nastavení jenom na zařízení s Windows Phone 8.1. Pokud je nastavené na **Nenakonfigurováno**, použijí se tato nastavení také na zařízení s Windows 10 Mobile.
--   **App Store** – Umožňuje uživatelům připojit se ze zařízení k obchodu s aplikacemi App Store.
+-     **Použít všechna nastavení jenom na Windows Phone 8.1** – toto je nastavení, které můžete nakonfigurovat na portálu Classic služby Intune. Na portálu Azure Portal toto nastavení nejde změnit. Pokud je nastavené na **Nakonfigurováno**, použijí se všechna nastavení jenom na zařízení s Windows Phone 8.1. Pokud je nastavené na **Nenakonfigurováno**, použijí se tato nastavení také na zařízení s Windows 10 Mobile.
+-     **App Store** – Umožňuje uživatelům připojit se ze zařízení k obchodu s aplikacemi App Store.
 
 ## <a name="restricted-apps"></a>Omezené aplikace
 
--   **Použít všechna nastavení jenom na Windows Phone 8.1** – toto je nastavení, které můžete nakonfigurovat na portálu Classic služby Intune. Na portálu Azure Portal toto nastavení nejde změnit. Pokud je nastavené na **Nakonfigurováno**, použijí se všechna nastavení jenom na zařízení s Windows Phone 8.1. Pokud je nastavené na **Nenakonfigurováno**, použijí se tato nastavení také na zařízení s Windows 10 Mobile.
+-     **Použít všechna nastavení jenom na Windows Phone 8.1** – toto je nastavení, které můžete nakonfigurovat na portálu Classic služby Intune. Na portálu Azure Portal toto nastavení nejde změnit. Pokud je nastavené na **Nakonfigurováno**, použijí se všechna nastavení jenom na zařízení s Windows Phone 8.1. Pokud je nastavené na **Nenakonfigurováno**, použijí se tato nastavení také na zařízení s Windows 10 Mobile.
 
 V seznamu omezených aplikací můžete nakonfigurovat jeden z následujících seznamů:
 
@@ -80,20 +81,15 @@ Můžete také kliknout na **Import** a naplnit seznam ze souboru csv ve formát
 
 
 ## <a name="browser"></a>Prohlížeč
--   **Použít všechna nastavení jenom na Windows Phone 8.1** – toto je nastavení, které můžete nakonfigurovat na portálu Classic služby Intune. Na portálu Azure Portal toto nastavení nejde změnit. Pokud je nastavené na **Nakonfigurováno**, použijí se všechna nastavení jenom na zařízení s Windows Phone 8.1. Pokud je nastavené na **Nenakonfigurováno**, použijí se tato nastavení také na zařízení s Windows 10 Mobile.
--   **Webový prohlížeč** – Povolí nebo zablokuje integrovaný webový prohlížeč v zařízeních.
+-     **Použít všechna nastavení jenom na Windows Phone 8.1** – toto je nastavení, které můžete nakonfigurovat na portálu Classic služby Intune. Na portálu Azure Portal toto nastavení nejde změnit. Pokud je nastavené na **Nakonfigurováno**, použijí se všechna nastavení jenom na zařízení s Windows Phone 8.1. Pokud je nastavené na **Nenakonfigurováno**, použijí se tato nastavení také na zařízení s Windows 10 Mobile.
+-     **Webový prohlížeč** – Povolí nebo zablokuje integrovaný webový prohlížeč v zařízeních.
 
 ## <a name="cellular-and-connectivity"></a>Mobilní síť a připojení
--   **Použít všechna nastavení jenom na Windows Phone 8.1** – toto je nastavení, které můžete nakonfigurovat na portálu Classic služby Intune. Na portálu Azure Portal toto nastavení nejde změnit. Pokud je nastavené na **Nakonfigurováno**, použijí se všechna nastavení jenom na zařízení s Windows Phone 8.1. Pokud je nastavené na **Nenakonfigurováno**, použijí se tato nastavení také na zařízení s Windows 10 Mobile.
--   **Wi-Fi** – Povolí nebo zakáže funkce Wi-Fi v zařízení.
--   **Wi-Fi tethering** – Povolí sdílení mobilního internetového připojení (tethering) přes Wi-Fi na zařízení.
--   **Automaticky se připojovat k Wi-Fi hotspotům** – Povolí zařízení automaticky se připojovat k bezplatným Wi-Fi hotspotům a automaticky přijímat jakékoli podmínky použití.
--   **Hlášení Wi-Fi hotspotů** – Umožní posílání informací o připojeních Wi-Fi, aby uživatel mohl nacházet možnosti připojení v okolí.
--   **Bezkontaktní komunikace (NFC)** – Povolí nebo zakáže operace, které používají bezkontaktní komunikaci, na zařízeních, která ji podporují.
--   **Bluetooth** – Povolí nebo zakáže funkce Bluetooth v zařízení.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
+-     **Použít všechna nastavení jenom na Windows Phone 8.1** – toto je nastavení, které můžete nakonfigurovat na portálu Classic služby Intune. Na portálu Azure Portal toto nastavení nejde změnit. Pokud je nastavené na **Nakonfigurováno**, použijí se všechna nastavení jenom na zařízení s Windows Phone 8.1. Pokud je nastavené na **Nenakonfigurováno**, použijí se tato nastavení také na zařízení s Windows 10 Mobile.
+-     **Wi-Fi** – Povolí nebo zakáže funkce Wi-Fi v zařízení.
+-     **Wi-Fi tethering** – Povolí sdílení mobilního internetového připojení (tethering) přes Wi-Fi na zařízení.
+-     **Automaticky se připojovat k Wi-Fi hotspotům** – Povolí zařízení automaticky se připojovat k bezplatným Wi-Fi hotspotům a automaticky přijímat jakékoli podmínky použití.
+-     **Hlášení Wi-Fi hotspotů** – Umožní posílání informací o připojeních Wi-Fi, aby uživatel mohl nacházet možnosti připojení v okolí.
+-     **Bezkontaktní komunikace (NFC)** – Povolí nebo zakáže operace, které používají bezkontaktní komunikaci, na zařízeních, která ji podporují.
+-     **Bluetooth** – Povolí nebo zakáže funkce Bluetooth v zařízení.
 
