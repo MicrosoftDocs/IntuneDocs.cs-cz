@@ -5,7 +5,7 @@ description: "Tento průvodce vám pomůže se správou počítače s Windows kl
 keywords: 
 author: staciebarker
 ms.author: stabar
-ms.date: 01/24/2016
+ms.date: 02/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,11 @@ ms.technology:
 ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
 ms.reviewer: owenyen
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 39f7de3a94b813cbd7b353cd319ecc54fcbf8694
-ms.openlocfilehash: 4b1b466c62ac1c8e03bc6cebd5e214649160185f
+ms.sourcegitcommit: 2e7062169ceb855f03a13d1afb4b4de41af593ac
+ms.openlocfilehash: 9606d8f79166e6b38f02aefd4afc52f2a47c1362
+ms.lasthandoff: 02/16/2017
 
 
 ---
@@ -23,14 +25,11 @@ ms.openlocfilehash: 4b1b466c62ac1c8e03bc6cebd5e214649160185f
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalace klientského softwaru Intune na počítače se systémem Windows
 Počítače se systémem Windows se dají zaregistrovat přes klientský software Intune. Klientský software Intune je možné nainstalovat následujícími způsoby:
 
-- Správcem IT:
-  - Ruční instalace
-  - Instalace pomocí zásad skupiny
-  - Instalace, která je součástí image disku
+- Může ho nainstalovat správce IT pomocí jednoho z následujících způsobů: ruční instalace, zásady skupiny nebo instalace zahrnutá v bitové kopii disku.
 
-- Koncovými uživateli, kteří ručně nainstalují softwarového klienta
+- Můžou ho nainstalovat koncoví uživatelé, kteří ručně nainstalují klientský software.
 
-Softwarový klient Intune, kterého správce IT nasadí uživateli nebo kterého si koncový uživatel stáhne, obsahuje minimální software nezbytný k registraci počítače do správy Intune. Po registraci počítače softwarový klient Intune následně stáhne kompletní klientský software potřebný ke správě počítače.
+Klientský software Intune obsahuje minimální software nutný k registraci počítače v systému správy Intune. Po registraci počítače klientský software Intune stáhne kompletní klientský software potřebný ke správě počítače.
 
 Toto postupné stahování snižuje vliv na šířku pásma sítě a zkracuje čas potřebný k počáteční registraci počítače v Intune na minimum. Zajistí také to, že po dokončení druhého stahování bude mít klient k dispozici nejnovější dostupný software.
 
@@ -44,20 +43,19 @@ Všechny způsoby (s výjimkou toho, kdy si uživatelé instalují klientský so
 
 2.  Na stránce **Stažení klientského softwaru** klikněte na **Stáhnout klientský software**. Uložte balíček **Microsoft_Intune_Setup.zip**, který obsahuje software, do zabezpečeného umístění v síti.
 
-    > [!NOTE]
-    > Instalační balíček klientského softwaru Intune obsahuje jedinečné a specifické informace o vašem účtu, které jsou dostupné prostřednictvím vloženého certifikátu. Pokud k instalačnímu balíčku získají přístup neoprávnění uživatelé, můžou zaregistrovat počítače k účtu, který reprezentuje vložený certifikát, a můžou tak získat přístup k podnikovým prostředkům.
+Instalační balíček klientského softwaru Intune obsahuje jedinečné a specifické informace o vašem účtu, které jsou dostupné prostřednictvím vloženého certifikátu. Pokud k instalačnímu balíčku získají přístup neoprávnění uživatelé, můžou zaregistrovat počítače k účtu, který je reprezentovaný vloženým certifikátem, a můžou tak získat přístup k podnikovým prostředkům.
 
 3.  Extrahujte obsah instalačního balíčku do zabezpečeného umístění v síti.
 
     > [!IMPORTANT]
-    > Soubor **ACCOUNTCERT**, který se extrahuje, nepřejmenovávejte ani neodebírejte, jinak se instalace klientského softwaru nezdaří.
+    > Extrahovaný soubor **ACCOUNTCERT** nepřejmenovávejte ani neodebírejte, jinak se instalace klientského softwaru nezdaří.
 
 ## <a name="deploy-the-client-software-manually"></a>Ruční nasazení klientského softwaru
 
-Na počítačích, kam se bude softwarový klient instalovat, přejděte do složky, kde jsou uložené instalační soubory klientského softwaru. Spusťte **Microsoft_Intune_Setup.exe** a klientský software tak nainstalujte.
+Na počítačích, kam se bude klientský software instalovat, přejděte do složky, kde jsou uložené instalační soubory klientského softwaru. Spusťte **Microsoft_Intune_Setup.exe** a klientský software tak nainstalujte.
 
 > [!NOTE]
-> Stav instalace se zobrazí, když ukazatel myši přesunete na ikonu v oznamovací oblasti v klientském počítači.
+> Když přesunete ukazatel myši na ikonu v oznamovací oblasti v klientském počítači, zobrazí se stav instalace.
 
 ## <a name="deploy-the-client-software-by-using-group-policy"></a>Nasazení klientského softwaru pomocí zásad skupiny
 
@@ -108,11 +106,56 @@ Klientský software Intune můžete do počítače nasadit jako součást image 
 
 ## <a name="instruct-users-to-self-enroll"></a>Pokyny pro uživatele, jak se zaregistrovat sami
 
-Uživatelé můžou nainstalovat klientský software Intune tak, že přejdou na [web Portál společnosti](http://portal.manage.microsoft.com). Pokud webový portál dokáže zařízení identifikovat jako počítač se systémem Windows, zobrazí uživatelům výzvu, aby počítač zaregistrovali pomocí staženého klientského softwaru Intune. Po stažení můžou uživatelé software nainstalovat a zahrnout tak svoje počítače do správy.
+Uživatelé nainstalují klientský software Intune tak, že přejdou na [web Portál společnosti](http://portal.manage.microsoft.com). Přesné informace, které uživatelé vidí na webovém portálu, se liší podle autority MDM vašeho účtu a platformy nebo verze operačního systému uživatelských počítačů. 
 
-Přesné informace, které uživatelé vidí na webovém portálu, se můžou lišit podle autority MDM vašeho účtu a platformy a verze uživatelských počítačů.
+Pokud nemají uživatelé přiřazenou licenci k Intune nebo nebyla na Intune nastavena autorita MDM, nezobrazí se uživatelům žádné možnosti registrace.
 
-![Zobrazení výzvy ke stažení klientského softwaru Intune na portálu služby Intune](../media/software-client-download.png)
+Pokud byla uživatelům přiřazena licence k Intune a na Intune byla nastavena autorita MDM organizace:
+
+- Uživatelům počítačů s Windows 7 nebo Windows 8 se zobrazí JENOM možnost registrace do Intune na základě stažení a instalace klientského softwaru pro PC, který je pro svou organizaci jedinečný.
+
+- Uživatelé počítačů s Windows 8.1 a Windows 10 mají dvě možnosti registrace:
+
+  -  **Zaregistrovat počítač jako mobilní zařízení**: Poté, co uživatelé zvolí tlačítko **Zjistěte, jak můžete zaregistrovat svoje zařízení s Windows**, přejdou na pokyny týkající se způsobu registrace počítače jako mobilního zařízení. Toto tlačítko se zobrazí v dobře viditelném umístění, protože registrace MDM se považuje za výchozí a preferovanou možnost registrace. Možnost MDM ale neplatí pro toto téma, protože to se týká jenom instalace klientského softwaru.
+  - **Zaregistrovat počítač pomocí klientského softwaru Intune**: Bude potřeba říct uživatelům, že mají vybrat odkaz **Kliknutím sem ho můžete stáhnout** a přejít tak k pokynům pro instalaci klientského softwaru.
+
+V následující tabulce najdete souhrnný přehled možností.
+
+  ![Výchozí možnosti registrace pro jednotlivé platformy](../media/default-enrollment-options-table.png)
+
+Na následujících snímcích obrazovek vidíte, co se zobrazuje uživatelům, kteří registrují svoje zařízení používající klientský software.
+
+Uživatelům se nejdřív zobrazí výzva k identifikaci nebo registraci zařízení.
+
+  ![identifikace nebo registrace zařízení](../media/identify-device-or-enroll.png)
+
+Pokud chcete, aby si vaši uživatelé nainstalovali na počítač klientský software, je potřeba jim říct, aby použili odkaz **Kliknutím sem ho můžete stáhnout**, který umožňuje uživatelům stáhnout klientský software pro počítač a provede je procesem instalace. Po zvolení tlačítka **Zjistěte, jak můžete zaregistrovat svoje zařízení s Windows** přejdou uživatelé k dokumentaci s informacemi, jak zaregistrovat zařízení pomocí registrace MDM, což se ale netýká těchto pokynů pro klientský software.
+
+  ![klikněte na odkaz Kliknutím sem ho můžete stáhnout](../media/enroll-your-windows-device.png)
+
+Když uživatelé kliknou na odkaz, zobrazí se tlačítko **Stáhnout software**, po jehož výběru se spustí instalace klientského softwaru pro počítač.
+
+  ![zvolte tlačítko Stáhnout software](../media/download-pc-client-software.png)
+
+Uživatelé jsou pak požádáni, aby se přihlásili s použitím firemních přihlašovacích údajů.
+
+  ![Přihlaste se pomocí svých přihlašovacích údajů.](../media/sign-in-to-intune.png)
+
+Uživatelé přejdou na úvodní stránku instalace.
+
+  ![Úvodní stránka instalace klienta na počítač](../media/welcome-to-pc-agent-install-wizard.png)
+
+Uživatelé zvolí možnost **Další** a spustí se instalace.
+
+  ![Úvodní stránka instalace klienta na počítač](../media/welcome-to-pc-agent-install-wizard.png)
+
+Po dokončení instalace, zvolí uživatelé možnost **Dokončit**.
+
+  ![Dokončení instalace klienta na počítač](../media/completed-the-setup-wizard.png)
+
+Pokud se uživatelé po registraci za použití klientského softwaru Intune pro počítač pokusí svůj počítač zaregistrovat jako mobilní zařízení, zobrazí se jim následující chybová obrazovka.
+
+  ![Obrazovka, která se zobrazí, když už je počítač zaregistrovaný](../media/page-shown-if-pc-already-enrolled.png)
 
 ## <a name="monitor-and-validate-successful-client-deployment"></a>Sledování a ověření úspěšného nasazení klienta
 Pomocí některého z následujících postupů můžete sledovat a ověřit úspěšné nasazení klienta.
@@ -140,9 +183,4 @@ Pomocí některého z následujících postupů můžete sledovat a ověřit ús
 ### <a name="see-also"></a>Viz taky
 [Správa počítačů s Windows pomocí Intune](manage-windows-pcs-with-microsoft-intune.md)
 [Řešení potíží s instalací klientů](../troubleshoot/troubleshoot-client-setup-in-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
