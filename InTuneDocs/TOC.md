@@ -206,6 +206,7 @@
 
 # [Řešení problémů](troubleshoot/general-troubleshooting-tips-for-microsoft-intune.md)
 ## [Jak získat podporu](troubleshoot/how-to-get-support-for-microsoft-intune.md)
+## [Monitorování Intune pomocí sestav](deploy-use/understand-microsoft-intune-operations-by-using-reports.md)
 ## [Řešení problémů se službou Endpoint Protection](troubleshoot/troubleshoot-endpoint-protection-in-microsoft-intune.md)
 ## [Řešení problémů s přístupem k prostředkům společnosti](troubleshoot/troubleshoot-company-resource-access-problems-with-microsoft-intune.md)
 ## [Řešení problémů s nasazením aplikací](troubleshoot/troubleshoot-app-deployment-problems-in-microsoft-intune.md)
