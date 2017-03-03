@@ -1,11 +1,11 @@
 ---
-title: "Ochrana dat a aplikací | Microsoft Intune"
+title: "Ochrana dat a aplikací | Dokumentace Microsoftu"
 description: "Toto téma popisuje různé funkce a možnosti Intune, které jsou k dispozici, aby pomáhaly chránit vaše firemní aplikace a data."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 07/18/2016
+ms.date: 12/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,15 +13,18 @@ ms.technology:
 ms.assetid: 5c46e188-87eb-4ce2-b184-24809e8bf783
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ee7e0491c0635c45cbc0377a5de01d5eba851132
-ms.openlocfilehash: 4f8cb86126a982b21ad3288108295d1784f08df3
+ms.sourcegitcommit: f46f13e9dbf03fa2b3e2ec7339cad927ea0b38e0
+ms.openlocfilehash: 16e4b6ddd1df9c56e36318dfd3050d1a1f627adc
+ms.lasthandoff: 12/20/2016
 
 
 ---
 
 # <a name="protect-apps-and-data-with-microsoft-intune"></a>Ochrana dat a aplikací pomocí Microsoft Intune
 
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Intune chrání firemní data prostřednictvím několika technologických vrstev. Ve vrstvě identity podmíněný přístup chrání služby tím, že umožňuje přístup jenom ze spravovaných a kompatibilních zařízení. V klientské aplikační vrstvě chrání správa mobilních aplikací (MAM) před únikem informací. Zabraňuje přesunu dat do nechráněných aplikací nebo úložišť a v případě ztráty nebo odcizení zařízení vymaže data. Doporučujeme používat tyto dvě vrstvy ochrany společně. Zabezpečíte tak data a zajistíte produktivitu mobilních pracovních sil.
 
@@ -51,9 +54,4 @@ Například aplikace Microsoft Office mají sadu Intune App SDK integrovanou. Ú
 Můžete taky [povolit vlastním obchodním aplikacím](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md) použití se zásadami MAM.
 
 Když dojde ke ztrátě nebo odcizení zařízení nebo když uživatel přestane pracovat ve vaší společnosti, můžete kromě omezení přesunu dat taky [selektivně vymazat firemní data](wipe-managed-company-app-data-with-microsoft-intune.md) a ponechat tak v zařízení jenom osobní data.
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

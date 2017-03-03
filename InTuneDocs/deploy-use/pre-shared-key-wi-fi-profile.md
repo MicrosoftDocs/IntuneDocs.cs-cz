@@ -1,5 +1,5 @@
 ---
-title: "Wi-Fi pomocí PSK | Microsoft Intune"
+title: "Wi-Fi s využitím PSK | Dokumentace Microsoftu"
 description: "Použijte vlastní konfiguraci k vytvoření profilu sítě Wi-Fi s předsdíleným klíčem."
 keywords: 
 author: robstackmsft
@@ -13,35 +13,40 @@ ms.technology:
 ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
 ms.reviewer: karanda
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: ad5bb09eb18463f541ca0cbb60ff1f27bdc3251e
+ms.sourcegitcommit: bb706f122753219d8034bcd25fbe2e25b7142b30
+ms.openlocfilehash: 7fce50c88419a920aa7c4814517523e7a4ced919
+ms.lasthandoff: 12/15/2016
 
 
 
 ---
 # <a name="use-a-custom-policy-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Použití vlastní zásady k vytvoření profilu sítě Wi-Fi s předsdíleným klíčem
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Zde je postup používání **Vlastní konfigurace** služby Intune k vytvoření profilu sítě Wi-Fi s předsdíleným klíčem. Toto téma obsahuje také příklad vytvoření profilu Wi-Fi založeného na protokolu EAP.
 
 > [!NOTE]
--   Pokud je to pro vás snadnější, můžete zkopírovat kód z počítače připojeného k této síti, jak je popsáno níže.
+-    Pokud je to pro vás snadnější, můžete zkopírovat kód z počítače připojeného k této síti, jak je popsáno níže.
 - Pro Android máte také možnost použít nástroj [Android PSK Generator](http://johnathonb.com/2015/05/intune-android-pre-shared-key-generator/), který poskytuje Johnathon Biersack.
--   Přidáním dalších nastavení OMA-URI můžete přidat více sítí a klíčů.
+-    Přidáním dalších nastavení OMA-URI můžete přidat více sítí a klíčů.
 -  Pro iOS nastavte profil nástrojem Apple Configurator na stanici Mac. Alternativně můžete použít nástroj [iOS PSK Mobile Config Generator](http://johnathonb.com/2015/05/intune-ios-psk-mobile-config-generator/), který poskytuje Johnathon Biersack.
 
 
-1.  Pokud chcete vytvořit profil sítě Wi-Fi s předsdíleným klíčem pro Android nebo Windows, případně profil Wi-Fi založený na protokolu EAP, zvolte při vytváření zásady možnost **Vlastní konfigurace** pro platformu zařízení, namísto profilu Wi-Fi.
+1.    Pokud chcete vytvořit profil sítě Wi-Fi s předsdíleným klíčem pro Android nebo Windows, případně profil Wi-Fi založený na protokolu EAP, zvolte při vytváření zásady možnost **Vlastní konfigurace** pro platformu zařízení, namísto profilu Wi-Fi.
 
-2.  Zadejte název a popis.
-3.  Přidejte nové nastavení OMA-URI:
+2.    Zadejte název a popis.
+3.    Přidejte nové nastavení OMA-URI:
 
-   a.   Zadejte název pro toto nastavení sítě Wi-Fi.
+   a.    Zadejte název pro toto nastavení sítě Wi-Fi.
 
-   b.   Zadejte popis nastavení OMA-URI nebo pole ponechte prázdné.
+   b.    Zadejte popis nastavení OMA-URI nebo pole ponechte prázdné.
 
-   c.   **Datový typ:** Nastavte na Řetězec (XML).
+   c.    **Datový typ:** Nastavte na Řetězec (XML).
 
-   d.   **OMA-URI:**
+   d.    **OMA-URI:**
 
     - **Pro Android:** ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
     - **Pro Windows:** ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
@@ -69,24 +74,24 @@ Zde je příklad kódu XML pro profil Wi-Fi pro Android nebo Windows:
 >  `<hex>53534944</hex>`má být nastaveno na šestnáctkovou hodnotu `<name><SSID of wifi profile></name>`.
 >  Zařízení s Windows 10 můžou vrátit falešnou chybu *0x87D1FDE8 Náprava se nezdařila*, nicméně ve skutečnosti budou v tomto profilu úspěšně zřízena.
 
-    <!--
-    <Name of wifi profile> = Name of profile
-    <SSID of wifi profile> = Plain text of SSID. Does not need to be escaped, could be <name>Your Company's Network</name>
-    <nonBroadcast><true/false></nonBroadcast>
-    <Type of authentication> = Type of authentication used by the network, such as WPA2PSK.
-    <Type of encryption> = Type of encryption used by the network
-    <protected>false</protected> do not change this value, as true could cause device to expect an encrypted password and then try to decrypt it, which may result in a failed connection.
-    <password> = Password to connect to the network
-    <hex>53534944</hex> should be set to the hexadecimal value of <name><SSID of wifi profile></name>
-    -->
-    <WLANProfile
-    xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
-      <name><Name of wifi profile></name>
-      <SSIDConfig>
-        <SSID>
-          <hex>53534944</hex>
-        <name><SSID of wifi profile></name>
-        </SSID>
+```
+<!--
+<Name of wifi profile> = Name of profile
+<SSID of wifi profile> = Plain text of SSID. Does not need to be escaped, could be <name>Your Company's Network</name>
+<nonBroadcast><true/false></nonBroadcast>
+<Type of authentication> = Type of authentication used by the network, such as WPA2PSK.
+<Type of encryption> = Type of encryption used by the network
+<protected>false</protected> do not change this value, as true could cause device to expect an encrypted password and then try to decrypt it, which may result in a failed connection.
+<password> = Password to connect to the network
+<hex>53534944</hex> should be set to the hexadecimal value of <name><SSID of wifi profile></name>
+-->
+<WLANProfile
+xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
+  <name><Name of wifi profile></name>
+  <SSIDConfig>
+    <SSID>
+      <hex>53534944</hex>
+ <name><SSID of wifi profile></name>        </SSID>
         <nonBroadcast>false</nonBroadcast>
       </SSIDConfig>
       <connectionType>ESS</connectionType>
@@ -108,10 +113,12 @@ Zde je příklad kódu XML pro profil Wi-Fi pro Android nebo Windows:
         </security>
       </MSM>
     </WLANProfile>
+```
 
 ## <a name="eap-based-wi-fi-profile"></a>Profil Wi-Fi založený na protokolu EAP
 Zde je příklad kódu XML pro profil Wi-Fi založený na protokolu EAP:
 
+```
     <WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
       <name>testcert</name>
       <SSIDConfig>
@@ -189,6 +196,7 @@ Zde je příklad kódu XML pro profil Wi-Fi založený na protokolu EAP:
         </security>
       </MSM>
     </WLANProfile>
+```
 
 ## <a name="create-the-xml-file-from-an-existing-wi-fi-connection"></a>Vytvoření souboru XML z existujícího připojení Wi-Fi
 Můžete také vytvořit soubor XML z existujícího připojení Wi-Fi:
@@ -212,9 +220,4 @@ Když vyberete nasazenou zásadu, zobrazí se v dolní části seznamu zásad da
 
 ### <a name="see-also"></a>Související témata
 [Připojení Wi-Fi v Microsoft Intune](wi-fi-connections-in-microsoft-intune.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

@@ -1,21 +1,23 @@
 ---
-title: "Funkce usnadnění | Microsoft Intune"
+title: "Funkce usnadnění | Dokumentace Microsoftu"
 description: "Přečtěte si informace o funkcích Intune, které usnadňují používání osobám s postižením."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/05/2016
-ms.topic: article
+ms.date: 12/30/2016
+ms.topic: reference
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 6d7ed613-be97-4973-9532-8cb5bd434a1b
 ms.reviewer: jeffgilb
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b99c90bfafd65e87e258e1e0ac01691e83581659
-ms.openlocfilehash: 9915f85e6bc2dc20b061618fc8ccc6da8f3cec36
+ms.sourcegitcommit: 9e3d509cf404c89b27f92ad54c900e927ce3878b
+ms.openlocfilehash: c1b585da0b2875f393a0cbe929f11d3a04875905
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -45,9 +47,4 @@ Kromě funkcí a nástrojů pro zajištění přístupnosti v Microsoft Windows 
 |Zobrazení akcí pro vybrané zařízení|Šipka doprava|
 > [!NOTE]
 > Na portálech [!INCLUDE[wit_firstref](./includes/wit_firstref_md.md)] se naviguje pomocí standardních klávesových zkratek Internet Exploreru.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

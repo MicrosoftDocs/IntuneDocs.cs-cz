@@ -1,9 +1,9 @@
 ---
-title: "Pravidla přístupu k Exchangi pro mobilní zařízení | Microsoft Intune"
+title: "Pravidla přístupu k Exchangi pro mobilní zařízení | Dokumentace Microsoftu"
 description: "Pravidla přístupu k protokolu Exchange ActiveSync pro povolení nebo blokování připojení zařízení s EAS"
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 07/19/2016
 ms.topic: article
@@ -13,14 +13,19 @@ ms.technology:
 ms.assetid: 208b9f45-02d9-413a-b86a-8bad9b5008fa
 ms.reviewer: muhosabe
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: e11263115088005123562b2afae1804528d0d5d5
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: fa8f4b1df83e37ab20d5b4a045ba535758368835
+ms.lasthandoff: 12/10/2016
 
 
 ---
 
 # <a name="exchange-access-rules-for-mobile-devices"></a>Pravidla přístupu k Exchangi pro mobilní zařízení
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Pravidla přístupu k Exchangi pro mobilní zařízení určují úroveň přístupu k Exchange ActiveSync, kterou tato zařízení mají. Tato nastavení ovlivňují všechna mobilní zařízení včetně zařízení, která nejsou registrovaná v Microsoft Intune. Můžete začít tak, že definujete **Výchozí pravidlo**, které bude platit pro všechna mobilní zařízení, u kterých se nepoužívá vlastní pravidlo.
 
 Úrovně přístupu spravované protokolem Exchange ActiveSync jsou uvedené v následující tabulce:
@@ -53,9 +58,4 @@ Následující postup popisuje vytvoření vlastního pravidla:
 1. V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) zvolte ** **Zásady&gt; ** Exchange ActiveSync**.
 
 2.  V seznamu **Výjimky platforem** vyberte **Přidat pravidlo** a potom vytvořte vlastní pravidlo. Vyberte **Uložit**.
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

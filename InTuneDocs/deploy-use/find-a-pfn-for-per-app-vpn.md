@@ -1,5 +1,5 @@
 ---
-title: "Hledání identity aplikace (PFN) pro síť VPN pro aplikaci | Microsoft Intune"
+title: "Hledání identity aplikace (PFN) pro síť VPN pro aplikaci | Dokumentace Microsoftu"
 description: "Najděte PFN, abyste mohli konfigurovat síť VPN pro aplikaci."
 keywords: 
 author: robstackmsft
@@ -13,14 +13,18 @@ ms.technology:
 ms.assetid: 74643d1d-4fd9-4cff-ac79-1a42281d2f76
 ms.reviewer: tycast
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 17b957cc2baedddfc53bfdf7b875e4ecb28b8517
-ms.openlocfilehash: 6d3e43c1380114634c44bd364076df404bce95e3
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: b0006416f2b078c8c0cf5eb14ccea4749604e1dc
+ms.lasthandoff: 12/10/2016
 
 
 ---
 
-# <a name="find-a-package-family-name-pfn-for-perapp-vpn-configuration"></a>Hledání identity aplikace (PFN) pro konfiguraci sítě VPN pro aplikaci
+# <a name="find-a-package-family-name-pfn-for-per-app-vpn-configuration"></a>Hledání identity aplikace (PFN) pro konfiguraci sítě VPN pro aplikaci
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Existují dva způsoby jak zjistit PFN, abyste mohli konfigurovat síť VPN pro aplikaci.
 
@@ -69,10 +73,10 @@ Zde jsou informace načtené pro OneNote:
 
 ## <a name="find-a-pfn-if-the-app-is-not-installed-on-a-computer"></a>Hledání PFN, pokud aplikace není nainstalovaná na počítači
 
-1.  Přejděte na adresu https://www.microsoft.com/en-us/store/apps.
-2.  Zadejte název aplikace v panelu vyhledávání. V našem příkladu hledejte OneNote.
-3.  Vyberte odkaz na aplikaci. Všimněte si, že adresa URL má na konci řadu písmen. V našem příkladu vypadá adresa URL takto: `https://www.microsoft.com/en-us/store/apps/onenote/9wzdncrfhvjl`.
-4.  Na nové kartě vložte následující adresu URL: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`. Místo `<app id>` zadejte ID aplikace, které jste získali z adresy https://www.microsoft.com/en-us/store/apps – onu posloupnost písmen na konci adresy URL v kroku 3. V našem příkladu pro OneNote byste vložili adresu `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
+1.    Přejděte na adresu https://www.microsoft.com/en-us/store/apps.
+2.    Zadejte název aplikace v panelu vyhledávání. V našem příkladu hledejte OneNote.
+3.    Vyberte odkaz na aplikaci. Všimněte si, že adresa URL má na konci řadu písmen. V našem příkladu vypadá adresa URL takto: `https://www.microsoft.com/en-us/store/apps/onenote/9wzdncrfhvjl`.
+4.    Na nové kartě vložte následující adresu URL: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`. Místo `<app id>` zadejte ID aplikace, které jste získali z adresy https://www.microsoft.com/en-us/store/apps – onu posloupnost písmen na konci adresy URL v kroku 3. V našem příkladu pro OneNote byste vložili adresu `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
 
 Microsoft Edge zobrazí požadované informace přímo, v Internet Exploreru je zobrazíte výběrem **Otevřít**. Hodnota PFN je uvedena na prvním řádku. Tady jsou výsledky pro náš příklad:
 
@@ -83,9 +87,4 @@ Microsoft Edge zobrazí požadované informace přímo, v Internet Exploreru je 
 `  "windowsPhoneLegacyId": "ca05b3ab-f157-450c-8c49-a1f127f5e71d",`
 `  "publisherCertificateName": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"`
 `}`
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

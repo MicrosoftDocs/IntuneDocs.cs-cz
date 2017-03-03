@@ -1,11 +1,11 @@
 ---
-title: "Připojení Wi-Fi | Microsoft Intune"
+title: "Připojení Wi-Fi | Dokumentace Microsoftu"
 description: "Profily sítě Wi-Fi uživatelům usnadní připojení k vašim sítím Wi-Fi."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 10/10/2016
+ms.date: 02/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,18 @@ ms.technology:
 ms.assetid: 0b1b86ed-2e80-474d-8437-17dd4bc07b55
 ms.reviewer: karanda
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: df3f5bd6f44b9de8c4f24a82c7f4e000f08aac5a
-ms.openlocfilehash: c90ede1f10ca8f01e01cf2ac4aed7afb8641f02f
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 985b3d14091f1adff15ae08dd95800640363d2f2
+ms.lasthandoff: 12/10/2016
 
 
 ---
 
 # <a name="configure-devices-to-connect-to-your-corporate-wi-fi-networks"></a>Konfigurace zařízení pro připojení k podnikovým sítím Wi-Fi
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Pomocí profilů Wi-Fi služby Intune můžete nasadit nastavení bezdrátové sítě pro uživatele a zařízení ve vaší organizaci. Při nasazování profilu Wi-Fi budou mít uživatelé přístup k vaší podnikové síti, aniž by ji museli konfigurovat sami.
 
@@ -41,15 +45,13 @@ Profily Wi-Fi můžete nasadit na následujících platformách:
 
 -   Android 4.0 nebo novější
 
--   Android for Work   
+-    Android for Work   
 
 -   iOS 8.0 a novější
 
 -   Mac OS X 10.9 a novější
 
 U zařízení, na kterých běží desktopové nebo mobilní operační systémy Windows 8.1 nebo Windows 10, můžete importovat konfigurační profil Wi-Fi, který jste si předtím vyexportovali do souboru. Podrobnosti najdete v tématu [Export nebo import konfiguračního profilu Wi-Fi pro zařízení se systémem Windows](#export-or-import-a-wi-fi-configuration-profile-for-windows-devices).
-
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Přidat zásadu**.
 
@@ -84,7 +86,7 @@ Pro tento typ zásad nejsou žádná doporučená nastavení. Je potřeba vytvo�
 
 7.  Uložení profilu Wi-Fi
 
-Nová zásada se zobrazí v uzlu **Zásady konfigurace** pracovního prostoru **Zásady**. Další informace o nasazení služby najdete v části **Další kroky**.
+Nová zásada se zobrazí v uzlu **Zásady konfigurace** pracovního prostoru **Zásady**. Další informace o nasazení služby najdete v části **Další kroky**.
 
 ## <a name="export-or-import-a-wi-fi-configuration-profile-for-windows-devices"></a>Export nebo import konfiguračního profilu Wi-Fi pro zařízení se systémem Windows
 
@@ -130,7 +132,7 @@ Pomocí **Zásady importu Wi-Fi pro Windows** importujte sadu nastavení Wi-Fi, 
 
 5.  Po dokončení klikněte na **Uložit zásadu**.
 
-6.  Nová zásada se zobrazí v uzlu **Zásady konfigurace** pracovního prostoru **Zásady** .
+6.  Nová zásada se zobrazí v uzlu **Zásady konfigurace** pracovního prostoru **Zásady**.
 
 ## <a name="deploy-the-profile"></a>Nasaďte profil
 
@@ -158,7 +160,7 @@ Tyto tabulky obsahují podrobné informace o nastavení zabezpečení, které je
 |**Typ protokolu EAP**|Zvolte typ protokolu EAP pro ověřování zabezpečených bezdrátových připojení:<br /><br />-   **EAP-TLS**<br />-   **PEAP**<br />-   **EAP-TTLS**|Pokud jste vybrali typ zabezpečení **WPA-Enterprise/WPA2-Enterprise**.|
 |**Vyberte kořenové certifikáty pro ověření serveru**|Klikněte na **Vybrat** a pak zvolte profil důvěryhodných kořenových certifikátů pro ověření připojení. Další informace o vytvoření profilu důvěryhodných kořenových certifikátů najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů](secure-resource-access-with-certificate-profiles.md).|Pokud jste vybrali jakýkoli **typ protokolu EAP**.|
 |**Metoda ověřování**|Vyberte metodu ověřování používanou u připojení:<br /><br />-   **Certifikáty** – pokud chcete zadat klientský certifikát.<br />-   **Uživatelské jméno a heslo** – pokud chcete zadat jinou metodu ověřování.|**Typ protokolu EAP** je **PEAP** nebo **EAP-TTLS**.|
-|**Vyberte jinou metodu ověření než EAP (vnitřní identita)**|Vyberte metodu ověřování připojení:<br /><br />-   **Žádné**<br />-   **Nezašifrované heslo (PAP)**<br />-   **Protokol CHAP (Challenge Handshake Authentication Protocol)**<br />-   **Protokol Microsoft CHAP (MS-CHAP)**<br />-   **Protokol Microsoft CHAP verze 2 (MS-CHAP v2)**<br /><br />Dostupné možnosti závisí na typu EAP, který jste vybrali.| **Metoda ověřování** je **Uživatelské jméno a heslo**.|
+|**Vyberte jinou metodu ověření než EAP (vnitřní identita)**|Vyberte metodu ověřování připojení:<br /><br />-   **Žádné**<br />-   **Nezašifrované heslo (PAP)**<br />-   **Protokol CHAP (Challenge Handshake Authentication Protocol)**<br />-   **Protokol Microsoft CHAP (MS-CHAP)**<br />-   **Protokol Microsoft CHAP verze 2 (MS-CHAP v2)**<br /><br />Dostupné možnosti závisí na typu EAP, který jste vybrali.|**Metoda ověřování** je **Uživatelské jméno a heslo**.|
 |**Povolit ochranu osobních údajů v rámci identity (vnější identita)**|Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota. Během ověřování se nejdříve odešle tato anonymní identita. Skutečná identifikace se pak odešle přes zabezpečené tunelové propojení.|Typ protokolu **EAP** je **PEAP** nebo **EAP-TTLS**.|
 |**Vyberte klientský certifikát pro ověření klienta (certifikát identity)**|Klikněte na **Vybrat** a pak zvolte profil certifikátu SCEP pro ověření připojení. Další informace o vytvoření profilu certifikátu SCEP najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů](secure-resource-access-with-certificate-profiles.md).|Typ zabezpečení je **WPA-Enterprise/WPA2-Enterprise** a je vybraný jakýkoliv **typ protokolu EAP**.|
 
@@ -178,9 +180,4 @@ Tyto tabulky obsahují podrobné informace o nastavení zabezpečení, které je
 
 ### <a name="see-also"></a>Související témata
 Postup vytvoření profilu Wi-Fi s předsdíleným klíčem najdete v tématu věnovaném [vytvoření profilu Wi-Fi s předsdíleným klíčem](pre-shared-key-wi-fi-profile.md).
-
-
-
-<!--HONumber=Nov16_HO4-->
-
 

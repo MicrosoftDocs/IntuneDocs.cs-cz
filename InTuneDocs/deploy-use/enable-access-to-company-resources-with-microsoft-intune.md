@@ -1,5 +1,5 @@
 ---
-title: "Povolení přístupu k prostředkům společnosti | Microsoft Intune"
+title: "Povolení přístupu k prostředkům společnosti | Dokumentace Microsoftu"
 description: "Profily Wi-Fi, VPN a e-mailu společně pomáhají zajistit uživatelům přístup k potřebným souborům a prostředkům."
 keywords: 
 author: robstackmsft
@@ -13,14 +13,19 @@ ms.technology:
 ms.assetid: 3dd8dd4e-e165-4d0c-97b7-b3e86ebab909
 ms.reviewer: jeffgilb
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: f91c3530599b75093f536fd85eaf21d0b4e86e50
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: bda32f27216c7b65bd02334bae2882e840e7a99d
+ms.lasthandoff: 12/10/2016
 
 
 ---
 
 # <a name="enable-access-to-company-resources-with-microsoft-intune"></a>Povolení přístupu k prostředkům společnosti se službou Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Profily Wi-Fi, VPN a e-mailu Microsoft Intune společně pomáhají zajistit uživatelům přístup odkudkoli k souborům a prostředkům, které potřebují ke své práci. Profily certifikátů pomáhají tento přístup zabezpečit.
 
 ## <a name="wi-fi-profileswi-fi-connections-in-microsoft-intunemd-and-supported-platforms"></a>[Profily Wi-Fi ](wi-fi-connections-in-microsoft-intune.md) a podporované platformy
@@ -54,9 +59,4 @@ Pomozte zabezpečit přístup k prostředkům společnosti, včetně bezdrátov�
 |Windows 8.1 a vyšší|Windows Phone 8.1 nebo novější|iOS|Android|Samsung KNOX Standard|
 |---------------------|---------------------------|---|-------|------------|
 |Ano|Ano|Ano|Ano|Ano|
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

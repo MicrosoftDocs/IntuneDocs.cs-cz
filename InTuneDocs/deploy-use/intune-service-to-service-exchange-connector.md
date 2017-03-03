@@ -1,9 +1,9 @@
 ---
-title: Konektor Exchange pro Exchange Online | Microsoft Intune
+title: Konektor Exchange pro Exchange Online | Dokumentace Microsoftu
 description: "Připojte Intune ke službě Office 365 Exchange, abyste podporovali správu mobilních zařízení Exchange ActiveSync (MDM)."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 07/29/2016
 ms.topic: article
@@ -13,14 +13,18 @@ ms.technology:
 ms.assetid: 05fa5dc9-9bad-4557-987a-9b8ce4edebb0
 ms.reviewer: muhosabe
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
-ms.openlocfilehash: b6d67391b50954e591817610164d8fe80fda8fd5
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: b322f368637e39da1ab10b41dd724859fb49e1f2
+ms.lasthandoff: 12/10/2016
 
 
 ---
 
 # <a name="configure-the-intune-service-to-service-connector-for-exchange-online"></a>Konfigurace konektoru Intune Service to Service Connector pro Exchange Online
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Tyto informace vám pomůžou při propojení služeb Microsoft Intune a Exchange Online nebo nové služby Exchange Online Dedicated. Pokud chcete zjistit, jestli máte prostředí Exchange Online Dedicated v **nové** nebo **starší** verzi, kontaktujte svého account manažera. Intune podporuje pro každé předplatné jenom jedno připojení konektoru Exchange libovolného typu.
 
@@ -62,9 +66,4 @@ Konektor Service to Service Connector se automaticky nakonfiguruje a synchronizu
 Po úspěšném nakonfigurování Exchange Connectoru přejděte do [konzoly pro správu Microsoft Intune](http://manage.microsoft.com). Zvolte **Správce**> **Správa mobilního zařízení** > **Microsoft Exchange**. Potom ověřte, že se vámi zadané podrobnosti zobrazí v části **Informace o připojení systému Exchange**.
 
 Můžete se taky podívat na datum a čas posledního úspěšného pokusu o synchronizaci.
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -1,11 +1,11 @@
 ---
-title: "Nasazení aplikací | Microsoft Intune"
+title: "Nasazení aplikací | Dokumentace Microsoftu"
 description: "Toto téma vysvětluje koncepty, kterým je třeba porozumět před zahájením nasazování aplikací s Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,19 +13,23 @@ ms.technology:
 ms.assetid: ad5ea85c-aa2e-4110-a184-172cd0b8f270
 ms.reviewer: mghadial
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: eedf7db0a974f9a0aa0a21b27b64ed8b4a91b378
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: efa8245020b961797405a6f8b90df7e7b172b4c3
+ms.lasthandoff: 12/30/2016
 
 
 ---
 
-# Nasazení aplikací s Microsoft Intune
+# <a name="deploy-apps-with-microsoft-intune"></a>Nasazení aplikací s Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Toto téma vysvětluje některé koncepty, kterým je třeba porozumět před zahájením nasazování aplikací s Microsoft Intune.
 
 
-## Akce nasazení aplikace
+## <a name="app-deployment-actions"></a>Akce nasazení aplikace
 Při nasazování aplikací můžete zvolit jednu z následujících akcí nasazení:
 
 -   **Požadovaná instalace** – Aplikace se nainstaluje do zařízení bez nutnosti zásahu uživatele.
@@ -41,7 +45,7 @@ Při nasazování aplikací můžete zvolit jednu z následujících akcí nasaz
 
 -   **Není k dispozici** – Aplikace se nezobrazuje na podnikovém portálu a není nainstalovaná na žádném zařízení.
 
-#### Zjistěte, které akce nasazení jsou dostupné pro jednotlivé typy instalačních programů:
+#### <a name="understand-which-deployment-actions-are-available-for-each-installer-type"></a>Zjistěte, které akce nasazení jsou dostupné pro jednotlivé typy instalačních programů:
 
 |Typ instalačního programu|Požadovaná instalace|Dostupná instalace|Odinstalovat|Není k dispozici|
 |------------------|--------------------|---------------------|-------------|------------------|
@@ -58,7 +62,7 @@ Při nasazování aplikací můžete zvolit jednu z následujících akcí nasaz
 > [!TIP]
 > Když nasazujete aplikace a vyberete jak skupiny uživatelů, tak zařízení, můžete aplikaci nasadit jenom s možností **Dostupná instalace**.
 
-## Konflikty nasazení
+## <a name="deployment-conflicts"></a>Konflikty nasazení
 Při dvou nasazeních platí při přijetí stejné akce nasazení na zařízení následující pravidla:
 
 -   Nasazení pro skupinu zařízení má přednost před nasazením pro skupinu uživatelů. Pokud je ale aplikace nasazená pro skupinu uživatelů pomocí akce nasazení **Dostupné** a v případě, že je stejná aplikace nasazená taky pro skupinu zařízení pomocí akce nasazení **Není k dispozici**, aplikace bude dostupná na podnikovém portálu a uživatelé si ji můžou nainstalovat.
@@ -68,12 +72,7 @@ Při dvou nasazeních platí při přijetí stejné akce nasazení na zařízen�
 -   Pokud zařízení přijme požadovanou i dostupnou instalaci, akce se zkombinují. Jinými slovy uživatel může nainstalovat dostupnou aplikaci z Portálu společnosti před zahájením požadované instalace.
 
 
-## Další kroky
+## <a name="next-steps"></a>Další kroky
 
 Přečtěte si, jak [nasazovat aplikace v Microsoft Intune](deploy-apps-in-microsoft-intune.md).
-
-
-
-<!--HONumber=Oct16_HO4-->
-
 

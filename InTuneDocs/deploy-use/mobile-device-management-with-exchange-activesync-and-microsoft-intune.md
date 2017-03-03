@@ -1,9 +1,9 @@
 ---
-title: "Správa zařízení pomocí protokolu Exchange ActiveSync | Microsoft Intune"
+title: "Správa zařízení pomocí protokolu Exchange ActiveSync | Dokumentace Microsoftu"
 description: "Správa mobilních zařízení pomocí správy protokolu Exchange ActiveSync (EAS) pomocí konektoru Exchange"
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 07/29/2016
 ms.topic: article
@@ -13,14 +13,19 @@ ms.technology:
 ms.assetid: 14f5cf53-6764-4e22-a18b-fa750b3acd41
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 1b26e1298cf0b65f99219338b7ba59987e70c3ab
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 4d1fc1af29dbd42c639afe079020d35a92360eb3
+ms.lasthandoff: 12/10/2016
 
 
 ---
 
 # <a name="exchange-activesync-mobile-device-management-with-microsoft-intune"></a>Správa mobilních zařízení pomocí protokolu Exchange ActiveSync a služby Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Aby služba Microsoft Intune mohla přímo spravovat mobilní zařízení, musí být tato zařízení [v Intune zaregistrovaná](prerequisites-for-enrollment.md). Další možností je, že správci povolí omezenější řešení pro správu, které používá správu EAS (Exchange ActiveSync) s konektorem Exchange. Ke správě zařízení je možné použít buď místní servery Exchange, nebo Exchange Online s využitím Office 365. Intune podporuje pro každé předplatné jen jedno připojení konektoru Exchange libovolného typu.
 
 ## <a name="exchange-access-rules-for-mobile-devices"></a>Pravidla přístupu k Exchangi pro mobilní zařízení ##
@@ -44,9 +49,4 @@ Konzolu Intune je možné použít pro správu [nastavení zásad EAS](exchange-
 
 ## <a name="wipe-company-data-from-mobile-devices"></a>Vymazání podnikových dat z mobilních zařízení
 Nakonec, když už se nepoužívají nebo došlo ke ztrátě nebo odcizení zařízení, můžete [vymazat podniková data z mobilních zařízení spravovaných protokolem EAS](wipe-for-exchange-managed-mobile-devices.md).
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

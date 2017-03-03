@@ -1,11 +1,11 @@
 ---
-title: "Zřizovací profily pro aplikace | Microsoft Intune"
+title: "Zřizovací profily pro aplikace | Dokumentace Microsoftu"
 description: "Intune poskytuje nástroje pro proaktivní nasazení nových zásad zřizovacích profilů do zařízení, ve kterých se aplikace blíží vypršení data platnosti."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,15 +13,18 @@ ms.technology:
 ms.assetid: 86fbe736-7bdb-4f5e-ae21-13c91eb2462c
 ms.reviewer: mghadial
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 409433dbe5ca777b33b21a2655e15cde8003b4a2
-ms.openlocfilehash: d67b26b23e65d4a144c1efda1494de1df94cc33c
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: db76786da0428b0e064f2091089653244d90ee2a
+ms.lasthandoff: 12/30/2016
 
 
 ---
 
 # <a name="use-ios-mobile-provisioning-profile-policies-to-prevent-your-apps-from-expiring"></a>Pomocí mobilních zásad zřizovacích profilů pro iOS zabráníte vypršení platnosti aplikací.
 
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Mobilní obchodní aplikace pro Apple iOS nasazené do iPhonů a iPadů obsahují zřizovací profil a kód podepsaný certifikátem. Když se taková aplikace spustí, iOS potvrdí její integritu a vynutí zásady definované zřizovacím profilem. Provedou se k následující ověření:
 
@@ -50,9 +53,4 @@ Po vypršení platnosti certifikátu musíte aplikaci znovu podepsat pomocí nov
     - **Soubor konfiguračního profilu** – Klikněte na **Import** a potom zvolte soubor mobilního konfiguračního profilu Apple (s příponou **.mobileprovision**), který jste stáhli z webu pro vývojáře Apple.
 4. Po dokončení vyberte **Uložit zásadu**.
 5. Potom nasaďte zásadu na požadovaná zařízení s iOSem. Další informace najdete v tématu [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -1,5 +1,5 @@
 ---
-title: "Povolené a blokované aplikace pro KNOX | Microsoft Intune"
+title: "Povolené a blokované aplikace pro KNOX | Dokumentace Microsoftu"
 description: "Vlastní profil pro vytvoření seznamu povolených a blokovaných aplikací pro KNOX."
 keywords: 
 author: robstackmsft
@@ -13,14 +13,18 @@ ms.technology:
 ms.assetid: bbc8e0df-7bf3-494e-8bc4-dac59a98ab41
 ms.reviewer: chrisbal
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 9fa2de1d7e36f53415e28a7c963232eecb9bc5ca
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: be3cfc0120caf6e702139b829fc6ee1fa9bf9a1e
+ms.lasthandoff: 12/10/2016
 
 
 
 ---
 # <a name="use-custom-policies-to-allow-and-block-apps-for-samsung-knox-standard-devices"></a>Použití vlastních zásad povolených a blokovaných aplikací pro zařízení se Samsung Knox Standardem
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Postupy v tomto tématu použijte k vytvoření vlastní zásady Microsoft Intune, která obsahuje jeden z těchto seznamů:
 
@@ -38,9 +42,9 @@ Tato nastavení můžou využívat jenom zařízení se Samsung Knox Standardem.
     
     - **Název nastavení.** Zadejte **PreventStartPackages**.
     - **Popis nastavení.** Zadejte volitelný popis, např.: Seznam zakázaných aplikací.
-    -   **Datový typ.** Z rozevíracího seznamu vyberte položku **String** (Řetězec).
-    -   **OMA-URI.** Zadejte **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
-    -   **Hodnota.** Zadejte seznam názvů balíčků aplikací, které chcete povolit. Jako oddělovač můžete použít **; : ,** nebo **|**. (Příklad: package1;package2;)
+    -     **Datový typ.** Z rozevíracího seznamu vyberte položku **String** (Řetězec).
+    -     **OMA-URI.** Zadejte **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
+    -     **Hodnota.** Zadejte seznam názvů balíčků aplikací, které chcete povolit. Jako oddělovač můžete použít **; : ,** nebo **|**. (Příklad: package1;package2;)
 
     Pro seznam aplikací, které si uživatelé můžou nainstalovat z obchodu Google Play, s vyloučením všech ostatních:
 
@@ -69,9 +73,4 @@ Když vyberete nasazenou zásadu, zobrazí se v dolní části seznamu zásad da
 
 ### <a name="see-also"></a>Viz taky
 [Nastavení zásad konfigurace pro Android a Samsung KNOX v Microsoft Intune](android-policy-settings-in-microsoft-intune.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

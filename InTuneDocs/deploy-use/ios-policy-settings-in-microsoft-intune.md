@@ -1,11 +1,11 @@
 ---
-title: "Nastavení zásad pro iOS | Microsoft Intune"
+title: "Nastavení zásad pro iOS | Dokumentace Microsoftu"
 description: "Vytvořte zásady, které řídí nastavení a funkce na zařízeních s iOSem, která spravujete pomocí Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/06/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,18 @@ ms.technology:
 ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ms.reviewer: heenamac
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: dfde68e4ef889ba881ff2fa93b226f879d01cbc8
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: 05d47e6cf5c7b380ac981d06a3938f38b27a430b
+ms.lasthandoff: 12/30/2016
 
 
 ---
 
 # <a name="ios-policy-settings-in-microsoft-intune"></a>Nastavení zásad pro iOS v Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete konfigurovat v zařízeních s iOSem. Navíc můžete použít nástroj Apple Configurator k vytvoření vlastních nastavení, která nejsou k dispozici prostřednictvím Intune.
 
@@ -78,12 +82,12 @@ Všechna nastavení platí pro iOS 8.0 a novější.
 |----------------|-------|
 |**Povolit zálohování na iCloud**|Povolí uživateli zálohovat zařízení do iCloudu.|
 |**Povolit synchronizaci dokumentů s iCloudem**|Povolí synchronizaci dokumentu a párů klíč-hodnota s úložným prostorem iCloudu.|
-|**Povolit synchronizaci streamu fotek s iCloudem**|Povolí synchronizaci fotografií na zařízení s iCloudem.|
+|**Povolit synchronizaci datového proudu fotografií s iCloudem**|Umožňuje uživatelům povolit na jejich zařízeních **Můj fotostream**, který umožňuje synchronizovat fotky na iCloud, aby byly k dispozici na všech zařízeních uživatelů.|
 |**Vyžadovat šifrované zálohování**|Vyžaduje, aby všechny zálohy zařízení byly šifrované.|
 |**Povolit spravovaným aplikacím synchronizaci dat s iCloudem**|Povolí aplikacím, které spravujete přes Intune, synchronizaci dat s uživatelským účtem iCloudu.|
 |**Povolit, aby Handoff pokračoval v činnosti na jiném zařízení**|Umožní uživateli, aby v práci, kterou zahájil na zařízení s iOSem, pokračoval na jiném zařízení s iOSem nebo Mac OS X.|
-|**Povolit sdílení fotek na iCloudu**|Povolí používání sdíleného streamu fotografií iOS.|
-|**Povolit Knihovnu fotografií na iCloudu**|Umožní uživateli ukládat fotky na iCloud. Pokud se zakáže, všechny dříve uložené fotky na iCloudu budou odebrány.|
+|**Povolit sdílení fotek na iCloudu**|Pokud chcete na zařízení zakázat **Sdílení fotek na iCloudu**, nastavte možnost na **Ne**.|
+|**Povolit Knihovnu fotografií na iCloudu**|Pokud je možnost nastavená na **Ne**, zakáže použití knihovny fotografií iCloudu, přes kterou můžou uživatelé ukládat fotografie a videa v cloudu.    Všechny fotky, které nejsou kompletně stažené z Knihovny fotografií na iCloudu do zařízení, se ze zařízení odeberou, pokud je tato možnost nastavená na **Ne**.|
 
 ### <a name="application-settings-for-the-browser"></a>Nastavení aplikace pro prohlížeč
 Všechna nastavení platí pro iOS 8.0 a novější.
@@ -172,6 +176,8 @@ V seznamu **Kompatibilní a nekompatibilní aplikace** zadejte seznam kompatibil
 |**Importovat aplikace**|Importuje seznam aplikací, které jste zadali v souboru hodnot oddělených čárkami. V souboru použijte tento formát: název aplikace, vydavatel, adresa URL aplikace.|
 |**Upravit**|Upraví název, vydavatele a adresu URL vybrané aplikace.|
 |**Odstranit**|Odstraňte vybranou aplikaci ze seznamu.|
+
+Zásady obsahující kompatibilní a nekompatibilní nastavení aplikace musí být nasazeny na skupiny uživatelů.
 
 ### <a name="kiosk-mode-settings"></a>Nastavení celoobrazovkovém režimu
 
@@ -295,7 +301,7 @@ Určete následující nastavení:
 |-|-|
 |**Seznam skrytých a zobrazených aplikací**|Povolte toto nastavení, jestli chcete vytvořit seznamy skrytých nebo zobrazených aplikací.|
 |**Skrýt aplikace uvedené v seznamu pro uživatele**|Vyberte tuto možnost, pokud chcete vytvořit seznam aplikací, které budou před uživateli skryté.<br>Když vytvoříte tento seznam, můžou být všechny aplikace kromě **Nastavení** a **Telefon** (pro iPhony) skryté.|
-|**Zobrazit uživatelům jenom aplikace uvedené v seznamu**|Vyberte tuto možnost, pokud chcete vytvořit seznam aplikací, které budou pro uživatele viditelné.<br>Když vytvoříte tento seznam, budou všechny v něm neuvedené aplikace kromě **Nastavení** a **Telefon** (pro iPhony) skryté.<br>Kromě toho je do seznamu nutné přidat aplikaci portálu společnosti a všechny nasazené aplikace, spravované v Intune.|
+|**Zobrazit uživatelům jenom aplikace uvedené v seznamu**|Vyberte tuto možnost, pokud chcete vytvořit seznam aplikací, které budou pro uživatele viditelné.<br>Když vytvoříte tento seznam, budou všechny v něm neuvedené aplikace kromě **Nastavení** a **Telefon** (pro iPhony) skryté.<br>Kromě toho je do seznamu nutné přidat aplikaci Portál společnosti a všechny nasazené aplikace, spravované v Intune.|
 |**Přidat**|Přidá aplikaci do vybraného seznamu.<br>Pro seznam skrytých aplikací je třeba uvést **Název**, **Vydavatele** a **Adresu URL nebo ID sady aplikace** každé aplikace, kterou chcete skrýt.<br>Pro seznam zobrazených aplikací můžete buď **Vybrat spravovanou aplikaci** ze seznamu aplikací, které spravujete v Intune, nebo vybrat aplikaci ze Storu, pro kterou je pak nutné zadat **Název**, **Vydavatele** a **Adresu URL nebo ID sady aplikace**.|
 |**Importovat aplikace**|Importuje seznam aplikací, které jste zadali v souboru hodnot oddělených čárkami. V souboru použijte formát, název aplikace, vydavatele, adresu URL aplikace.|
 |**Upravit**|Tady můžete upravit název, vydavatele a adresu URL vybrané aplikace.|
@@ -380,9 +386,4 @@ Než začnete, je potřeba nainstalovat Apple Configurator a vytvořit konfigura
 
 ### <a name="see-also"></a>Související témata
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

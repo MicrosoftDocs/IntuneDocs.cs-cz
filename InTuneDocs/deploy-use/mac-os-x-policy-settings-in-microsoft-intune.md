@@ -1,11 +1,11 @@
 ---
-title: "Nastavení zásad pro Mac OS X | Microsoft Intune"
+title: "Nastavení zásad pro Mac OS X | Dokumentace Microsoftu"
 description: "Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete konfigurovat v zařízeních s Mac OS X. Navíc můžete použít nástroj Apple Configurator k vytvoření vlastních nastavení, která nejsou k dispozici prostřednictvím Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,18 +13,22 @@ ms.technology:
 ms.assetid: 98b2f19b-bee8-42d7-a215-a716d56a25a3
 ms.reviewer: heenamac
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: ce30ab0e5a4ce709aafa5892789590b42b484db4
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: 58dc1d872e7e12978652542d80061dd7ed86aeb2
+ms.lasthandoff: 12/30/2016
 
 
 ---
 
-# Nastavení zásad konfigurace pro Mac OS X v Microsoft Intune
+# <a name="mac-os-x-configuration-policy-settings-in-microsoft-intune"></a>Nastavení zásad konfigurace pro Mac OS X v Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete konfigurovat v zařízeních s Mac OS X. Navíc můžete použít nástroj Apple Configurator k vytvoření vlastních nastavení, která nejsou k dispozici prostřednictvím Intune.
 
-## Obecná nastavení zásad konfigurace
+## <a name="general-configuration-policy-settings"></a>Obecná nastavení zásad konfigurace
 
 Pomocí **obecných zásad konfigurace pro Mac OS X** v Microsoft Intune můžete nakonfigurovat nastavení pro:
 
@@ -34,21 +38,21 @@ Pomocí **obecných zásad konfigurace pro Mac OS X** v Microsoft Intune můžet
 
 Pokud se hledané nastavení v seznamu nezobrazí, můžete k jeho vytvoření použít vlastní zásady systému Mac OS X, které umožňují importovat nastavení vytvořená v nástroji Apple Configurator. Další informace najdete v části Nastavení vlastních zásad dál v tomto tématu.
 
-### Nastavení hesla
+### <a name="password-settings"></a>Nastavení hesla
 
 |Název nastavení|Podrobnosti|
 |----------------|---------------|
 |**Vyžadovat heslo k odemknutí zařízení**|Určete, jestli uživatel musí pro přístup k počítači Mac použít heslo. **Důležité:** Na rozdíl od zařízení iOS se na zařízení Mac OS X uživateli hned nezobrazí upozornění, že si má aktualizovat heslo, aby byla tato zásada dodržená.|
 |**Vyžadovaný typ hesla**|Určete, jestli je možné použít jenom **číselné** heslo nebo jestli je potřeba použít **alfanumerické** heslo (obsahuje písmena i číslice). **Důležité:** Toto nastavení je podporované jenom v systému Mac OS X 10.10.3 a v novějších verzích.|
-|**Počet složitých znaků požadovaných v hesle**|Určete požadovaný počet složitých znaků v hesle (**0** až **4**).<br /><br />Složitý znak je symbol, jako třeba **?**.|
+|**Požadovaný počet složitých znaků v hesle**|Určete požadovaný počet složitých znaků v hesle (**0** až **4**).<br /><br />Složitý znak je symbol, jako třeba **?**.|
 |**Minimální délka hesla**|Zadejte minimální délku hesla (**4** až **14** znaků).|
 |**Povolit jednoduchá hesla**|Umožněte použít jednoduchá hesla, jako je **0000** nebo **1234**.|
-|**Počet minut nečinnosti před vyžadováním hesla**|Určete, jak dlouho musí být počítač neaktivní, aby k jeho odemčení bylo potřeba heslo.|
-|**Omezená platnost hesla (ve dnech)**|Určete, jak dlouho si může uživatel nechat stejné heslo, než ho bude muset změnit (**1** až **255** dnů).|
+|**Počet minut nečinnosti před vyžádáním hesla**|Určete, jak dlouho musí být počítač neaktivní, aby k jeho odemčení bylo potřeba heslo.|
+|**Vypršení platnosti hesla (dny)**|Určete, jak dlouho si může uživatel nechat stejné heslo, než ho bude muset změnit (**1** až **255** dnů).|
 |**Pamatovat si historii hesel**|Zabraňte uživateli, aby opakovaně použil už jednou použité heslo. Pokud nastavení použijete, můžete taky nastavit **Zakázat opakované použití předchozích hesel** a zadat počet použitých hesel, která se nesmí znova použít (**1** až **24**).|
 |**Počet minut nečinnosti před aktivací šetřiče obrazovky**|Určete, jak dlouho musí být počítač nečinný, než se aktivuje šetřič obrazovky.|
 
-### Nastavení pro aplikace dodržující a nedodržující předpisy
+### <a name="settings-for-compliant-and-noncompliant-apps"></a>Nastavení pro aplikace dodržující a nedodržující předpisy
 V seznamu **kompatibilních a nekompatibilních aplikací pro Mac OS X** aktivujte **Spravované nastavení pro zařízení** a pak zadejte seznam kompatibilních a nekompatibilních aplikací. Můžete použít následující informace.
 
 > [!NOTE]
@@ -70,27 +74,27 @@ V seznamu **kompatibilních a nekompatibilních aplikací pro Mac OS X** aktivuj
 > [!IMPORTANT]
 > Když je zařízení Mac OS X v režimu spánku, zásady a profily nejdou doručovat ani inventarizovat. Konzola Intune tak může dočasně zobrazovat stav **Nastavení zásad obsahující chybu**, dokud se zařízení nevzbudí z režimu spánku.
 
-### Monitorování aplikací, které splňují a nesplňují předpisy
+### <a name="monitor-compliant-and-noncompliant-apps"></a>Monitorování aplikací, které splňují a nesplňují předpisy
 Pokud chcete u zadaných aplikací zkontrolovat dodržování předpisů, použijte **sestavy aplikací nesplňujících požadavky**.
 
-#### Spuštění sestavy
+#### <a name="to-run-a-report"></a>Spuštění sestavy
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte **Sestavy** &gt; **Sestava aplikací nesplňujících požadavky**.
 
 2.  Vyberte skupiny zařízení, které chcete zkontrolovat, určete, jestli se mají kontrolovat aplikace dodržující předpisy, aplikace nedodržující předpisy nebo obojí, a potom vyberte **Zobrazit sestavu**.
 
-## Nastavení vlastních zásad pro Mac OS X v Microsoft Intune
+## <a name="mac-os-x-custom-policy-settings-in-microsoft-intune"></a>Nastavení vlastních zásad pro Mac OS X v Microsoft Intune
 Pomocí **vlastní zásady konfigurace Mac OS X** služby Microsoft Intune nasaďte nastavení, které jste vytvořili pomocí [nástroje Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12), do zařízení s Mac OS X. Pomocí tohoto nástroje se dá vytvořit spousta nastavení, která řídí provoz těchto zařízení, a exportovat je do konfiguračního profilu. Potom tento konfigurační profil můžete importovat do vlastní zásady Mac OS X Intune na zařízení a nasadit nastavení pro uživatele a zařízení ve svojí organizaci.
 
 Díky této funkci můžete nasadit nastavení Mac OS X, která nejdou konfigurovat obecnými zásadami konfigurace Mac OS X služby Intune.
 
-### Požadavky
+### <a name="prerequisites"></a>Požadavky
 Než začnete, je potřeba nainstalovat Apple Configurator a vytvořit konfigurační soubor s nastaveními, která chcete nasadit pro uživatele nebo zařízení. Apple Configurator si můžete stáhnout z [Mac App Storu](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12), kde o něm také najdete další informace.
 
 > [!NOTE]
 > Intune nevytváří sestavu dodržování předpisů individuálních nastavení ve vlastních zásadách pro Mac OS X. Vytvoří se ale sestava celkového dodržování zásad.
 
-### Obecná nastavení
+### <a name="general-settings"></a>Obecná nastavení
 
 |Název nastavení|Podrobnosti|
     |----------------|--------------------|
@@ -98,17 +102,17 @@ Než začnete, je potřeba nainstalovat Apple Configurator a vytvořit konfigura
     |**Popis**|Zadejte popis, který bude shrnovat účel vlastní zásady pro Mac OS X, a uveďte jakékoli další důležité informace, které vám pomůžou zásadu najít.|
 
 
-### Vlastní nastavení
+### <a name="custom-settings"></a>Vlastní nastavení
 
 |Název nastavení|Podrobnosti|
     |----------------|--------------------|
-    |**Vlastní název konfiguračního profilu (zobrazený uživatelům)**|Zadejte název zásady tak, jak se bude zobrazovat na zařízení a v sestavách zásad Intune.|
+    |**Název vlastního konfiguračního profilu (zobrazí se uživatelům)**|Zadejte název zásady tak, jak se bude zobrazovat na zařízení a v sestavách zásad Intune.|
     |**Soubor konfiguračního profilu**|Vyberte **Importovat** a potom vyhledejte konfigurační profil, který jste vytvořili pomocí nástroje Apple Configurator. **Tip:** Nápovědu pro vytváření konfiguračního profilu najdete v části Vytvoření souboru konfiguračního profilu v tomto tématu.|
     |**Podrobnosti konfiguračního profilu**|Zobrazí kód XML pro konfigurační profil, který jste importovali.|
 
 
 
-### Vytvoření souboru konfiguračního profilu
+### <a name="how-to-create-a-configuration-profile-file"></a>Vytvoření souboru konfiguračního profilu
 Soubor konfiguračního profilu používaný vlastními zásadami můžete vytvořit dvěma způsoby:
 
 -   Exportujte soubor (s příponou **.mobileconfig**) z nástroje Apple Configurator.
@@ -116,11 +120,6 @@ Soubor konfiguračního profilu používaný vlastními zásadami můžete vytvo
 -   Vytvořte soubor sami pomocí příslušného schématu z dokumentu [Apple Configuration Profile Key Reference](https://developer.apple.com/library/ios/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html).
 
 
-### Související témata
+### <a name="see-also"></a>Související témata
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-
-
-
-<!--HONumber=Oct16_HO4-->
-
 

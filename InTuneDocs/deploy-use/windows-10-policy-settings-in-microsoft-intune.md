@@ -1,5 +1,5 @@
 ---
-title: "Nastavení zásad pro Windows 10 | Microsoft Intune"
+title: "Nastavení zásad pro Windows 10 | Dokumentace Microsoftu"
 description: "Nastavení zásad, která jsou uvedena v tomto tématu, vám pomůžou nakonfigurovat předdefinovaná a vlastní nastavení pro zaregistrované počítače s Windows 10 a zařízení Windows 10 Mobile."
 keywords: 
 author: robstackmsft
@@ -13,14 +13,18 @@ ms.technology:
 ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ms.reviewer: heenamac
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 8c970a4d1362def67e17da656b5e12e5bab2667b
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 5a1a861096bdfae461b6ad05e424f770796279a2
+ms.lasthandoff: 12/10/2016
 
 
 ---
 
 # <a name="intune-policy-settings-for-windows-10-devices-in-microsoft-intune"></a>Nastavení zásad Intune pro zařízení s Windows 10 v Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Informace v tomto tématu vám pomůžou pochopit nastavení zásad Intune, které lze použít ke správě zařízení s Windows 10. Po přečtení tématu a postupů na stránce [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md) budete umět konfigurovat předdefinované a vlastní nastavení na zaregistrovaných počítačích s Windows 10 a zařízeních s Windows 10 Mobile. Zásady nejde použít pro počítače [s klientským softwarem Intune pro počítače](/intune/get-started/windows-pc-management-capabilities-in-microsoft-intune).
 
@@ -322,9 +326,4 @@ Všechna nastavení jsou jenom pro Windows 10 Desktop.
 
 ### <a name="see-also"></a>Související témata
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

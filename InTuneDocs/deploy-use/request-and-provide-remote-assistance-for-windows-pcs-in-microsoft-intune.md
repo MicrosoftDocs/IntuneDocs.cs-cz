@@ -1,11 +1,11 @@
 ---
-title: "Vyžádání a poskytnutí vzdálené pomoci na počítačích s Windows| Microsoft Intune"
-description: "Popisuje kroky koncových uživatelů a správců IT pro poskytování vzdálené pomoci na počítačích s Windows a pro vzdálené spuštění počítače."
+title: "Vyžádání a poskytnutí vzdálené pomoci na počítačích s Windows| Dokumentace Microsoftu"
+description: "Popisuje kroky koncových uživatelů a správců IT pro poskytování vzdálené pomoci na počítačích s Windows, které se spravují jako počítače, a pro vzdálené spuštění počítače."
 keywords: 
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 08/04/2016
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,16 +13,20 @@ ms.technology:
 ms.assetid: c2654491-5144-408a-a45a-644eb91ac1bb
 ms.reviewer: owenyen
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: ab954204fffa6ad67a4a0d0f5e2e521c795eae31
+ms.sourcegitcommit: 10dd2caa9ce1b96424f55e373e904a778390eb15
+ms.openlocfilehash: 628875c2f874c824761befd9886d7f7987c045df
+ms.lasthandoff: 12/16/2016
 
 
 ---
 
 # <a name="request-and-provide-remote-assistance-for-windows-pcs"></a>Žádost a poskytnutí vzdálené pomoci na počítačích s Windows
 
-Microsoft Intune může využívat software [TeamViewer](https://www.teamviewer.com), který je třeba zakoupit zvlášť a který vám umožní poskytovat vzdálenou pomoc uživatelům, kteří používají klienta Intune. Když si uživatel vyžádá pomoc od centra Microsoft Intune Center, budete o tom informováni prostřednictvím výstrahy. Můžete tuto žádost přijmout a potom poskytnout pomoc. Tato funkce nahrazuje stávající funkci Vzdálená pomoc pro Windows v Intune.
+Informace v tomto tématu se vztahují jenom na desktopové systémy Windows, které spravujete jako počítače pomocí softwarového klienta Intune.
+
+Microsoft Intune může využívat software [TeamViewer](https://www.teamviewer.com), který se kupuje zvlášť. Díky tomu vám umožní poskytovat vzdálenou pomoc uživatelům, kteří používají softwarového klienta Intune. Když si uživatel vyžádá pomoc od centra Microsoft Intune Center, budete o tom informováni prostřednictvím výstrahy. Můžete tuto žádost přijmout a potom poskytnout pomoc. Tato funkce nahrazuje stávající funkci Vzdálená pomoc pro Windows v Intune.
 
 
 ## <a name="before-you-start"></a>Než začnete
@@ -30,7 +34,7 @@ Microsoft Intune může využívat software [TeamViewer](https://www.teamviewer.
 Než začnete reagovat na požadavky na vzdálenou pomoc, zajistěte splnění těchto požadavků:
 
 - Musíte mít [zaregistrovaný účet TeamViewer](https://login.teamviewer.com/LogOn#register) pro přihlášení k webu TeamViewer.
-- Počítač s Windows, které chcete spravovat, musí být [spravovaný prostřednictvím klienta na počítači s Windows](manage-windows-pcs-with-microsoft-intune.md).
+- Počítače s Windows, které chcete spravovat, se musí [spravovat přes softwarového klienta Windows](manage-windows-pcs-with-microsoft-intune.md).
 - Spravovat je možné všechny operační systémy Windows pro počítače, které Intune podporuje.
 
 ## <a name="configure-the-teamviewer-connector"></a>Konfigurace Konektoru pro TeamViewer
@@ -59,7 +63,7 @@ Než začnete reagovat na požadavky na vzdálenou pomoc, zajistěte splnění t
 
 <br>Pokud žádost zůstane nezodpovězená víc než 4 hodiny, odebere se.
 2. Pokud chcete žádost přijmout, zvolte **Schválit požadavek a spustit vzdálenou pomoc**.
-3. V dialogovém okně **Nová žádost o vzdálenou pomoc čeká na vyřízení** zvolte **Žádost o vzdálenou pomoc přijměte**. TeamViewer nainstaluje na váš počítač všechny nezbytné aplikace, pokud ještě nejsou nainstalované.
+3. V dialogovém okně **Nová žádost o vzdálenou pomoc čeká na vyřízení** zvolte **Žádost o vzdálenou pomoc přijměte**. Pokud ještě na počítači nemáte nainstalované všechny potřebné aplikace, TeamViewer je nainstaluje.
 4. TeamViewer potom upozorní koncového uživatele, že chcete převzít kontrolu nad jeho počítačem. Když uživatel tuto žádost přijme, otevře se okno TeamViewer a máte kontrolu nad jeho počítačem.
 
 Během relace vzdálené pomoci můžete k řízení vzdáleného počítače využívat všechny dostupné příkazy TeamVieweru. Pokud s těmito příkazy potřebujete pomoci, stáhněte si [příručku pro vzdálené řízení](http://www.teamviewer.com/en/support/documents/) z webu TeamVieweru.
@@ -71,9 +75,9 @@ V nabídce **Akce** v okně **TeamViewer** zvolte **Ukončit relaci**.
 ## <a name="remotely-restart-a-windows-pc"></a>Vzdálené restartování počítače s Windows
 Při pomáhání uživatelům s problémy můžete občas potřebovat vzdáleně restartovat jejich počítač. Počítač s Windows můžete vzdáleně restartovat pomocí následujícího postupu.
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všechna zařízení** (nebo na jinou skupinu obsahující počítač, který chcete restartovat).
+1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všechna zařízení** (nebo jinou skupinu obsahující počítač, který chcete restartovat).
 
-2.  Vyberte jeden nebo víc počítačů a potom zvolte **Vzdálené úlohy** &gt; **Restartovat počítač**.
+2.  Vyberte jeden nebo více počítačů a zvolte **Vzdálené úlohy** &gt; **Restartovat počítač**.
 
 3.  Pokud chcete zobrazit stav úlohy, v pravém dolním rohu stránky zvolte **Vzdálené úlohy**.
 
@@ -82,8 +86,3 @@ Při pomáhání uživatelům s problémy můžete občas potřebovat vzdáleně
 ### <a name="see-also"></a>Viz taky
 
 [Běžné úlohy správy počítačů s Windows pomocí klientského softwaru Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
-
-
-<!--HONumber=Nov16_HO4-->
-
-

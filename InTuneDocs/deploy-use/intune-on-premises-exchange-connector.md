@@ -1,5 +1,5 @@
 ---
-title: "Exchange Connector pro místní EAS | Microsoft Intune"
+title: "Exchange Connector pro místní EAS | Dokumentace Microsoftu"
 description: "Použijte nástroj Connector k umožnění komunikace mezi konzolou správce Intune a místním Exchange Serverem pro Exchange ActiveSync MDM."
 keywords: 
 author: andredm7
@@ -13,14 +13,18 @@ ms.technology:
 ms.assetid: 41ff4212-a6f5-4374-8731-631f7560cff1
 ms.reviewer: muhosabe
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d50a5751a5afd987196336e9443dc5a429a283fd
-ms.openlocfilehash: 58c5ab6b506695fb5b0f7556dc1deac39580f59b
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 1b74d19762a81313325eac27cab50a144a569620
+ms.lasthandoff: 12/10/2016
 
 
 ---
 
 # <a name="install-the-intune-on-premises-exchange-connector"></a>Instalace místního Intune Exchange Connectoru
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 
 Pokud chcete nastavit připojení umožňující komunikaci Microsoft Intune s Exchange Serverem, který je hostitelem poštovních schránek mobilních zařízení, musíte si z konzoly pro správu Intune stáhnout místní Exchange Connector a nakonfigurovat ho. Intune podporuje pro každé předplatné jenom jedno připojení Exchange Connectoru libovolného typu.
@@ -93,7 +97,7 @@ Při instalaci místního Intune Exchange Connectoru použijte tento postup. Mí
 
     2. Zvolte ikonu **?** vlevo nahoře a pak vyberte **O aplikaci**.
 
-    3. Najděte hodnotu **Externí nastavení POP** .
+    3. Najděte hodnotu **Externí nastavení POP**.
 
     4. Vyberte **Proxy server** a zadejte nastavení proxy serveru pro svůj hostovaný server Exchange.
         1. Vyberte **Používat proxy server při synchronizaci informací mobilních zařízení**.
@@ -129,9 +133,4 @@ Po úspěšné konfiguraci softwaru Exchange Connector můžete zobrazit stav p�
 
 
 Můžete se taky podívat na datum a čas posledního úspěšného pokusu o synchronizaci.
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

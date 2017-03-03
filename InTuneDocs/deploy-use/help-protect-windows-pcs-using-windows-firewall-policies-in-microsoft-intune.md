@@ -1,11 +1,11 @@
 ---
-title: "Zásady brány firewall pro počítače s Windows | Microsoft Intune"
+title: "Zásady brány firewall pro počítače s Windows | Dokumentace Microsoftu"
 description: "Intune vám pomůže zabezpečit počítače, které spravujete, mnoha různými způsoby, včetně pomoci při konfiguraci nastavení brány Windows Firewall."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,21 +13,23 @@ ms.technology:
 ms.assetid: 9549c072-ac3d-4d14-a931-a2eda8846217
 ms.reviewer: owenyen
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: 3faede4b60ac989e688b87ddb8112aebcf4c56ef
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: bad0d8867602baf69dc398cc06b91ca30b24c487
+ms.lasthandoff: 12/30/2016
 
 
 ---
 
-# Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall v Microsoft Intune
+# <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall v Microsoft Intune
 Microsoft Intune vám pomůže mnoha různými způsoby zabezpečit počítače s Windows, které spravujete. Jedním z těchto způsobů je poskytnutí zásad, které vám umožní nakonfigurovat nastavení brány Windows Firewall na počítačích.
 
 Pokud jste si ještě do počítačů nenainstalovali klienta Intune pro počítače s Windows, přečtěte si téma [Instalace klienta na počítači s Windows pomocí Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
 Informace v následujících částech vám pomohou s konfigurací, nasazováním a monitorováním zásad brány Windows Firewall na počítačích s Windows.
 
-## Použití zásad Intune ke správě brány Windows Firewall
+## <a name="use-intune-policies-to-manage-windows-firewall"></a>Použití zásad Intune ke správě brány Windows Firewall
 Zásady brány Windows Firewall umožňují vytvářet a nasazovat nastavení, která řídí bránu Windows Firewall na spravovaných počítačích. Není možné spravovat vlastní výjimky pro bránu Windows Firewall a tato nastavení neovlivní brány firewall třetích stran.
 
 > [!NOTE]
@@ -41,19 +43,19 @@ Zásady brány Windows Firewall umožňují vytvářet a nasazovat nastavení, k
 > -   Brána Windows Firewall
 > -   Agent zásad protokolu IPsec
 
-## Konfigurace zásad brány Windows Firewall
+## <a name="configure-a-windows-firewall-policy"></a>Konfigurace zásad brány Windows Firewall
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Zásady** &gt; **Přidat zásadu**.
 
-2.  Konfigurujte a nasaďte zásady **nastavení brány Windows Firewall** . Můžete použít doporučená nastavení, nebo nastavení upravit. Pokud potřebujete více informací o postupu při vytváření a nasazování zásad, projděte si článek [Běžné úlohy správy počítačů s Windows pomocí počítačového klienta Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
+2.  Konfigurujte a nasaďte zásady **nastavení brány Windows Firewall**. Můžete použít doporučená nastavení, nebo nastavení upravit. Pokud potřebujete více informací o postupu při vytváření a nasazování zásad, projděte si článek [Běžné úlohy správy počítačů s Windows pomocí počítačového klienta Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 
     V následující části jsou uvedené hodnoty, které můžete v zásadách konfigurovat, a také výchozí hodnoty, které se použijí, pokud zásady neupravíte.
 
 Po nasazení zásad brány Windows Firewall můžete zobrazit stav těchto zásad na stránce **Všechny zásady** pracovního prostoru **Zásady**.
 
-## Zadání nastavení zásad brány Windows Firewall
+## <a name="specify-policy-settings-for-windows-firewall"></a>Zadání nastavení zásad brány Windows Firewall
 
-### Zapnout bránu Windows Firewall
+### <a name="turn-on-windows-firewall"></a>Zapnout bránu Windows Firewall
 
 Toto nastavení zásad povoluje bránu Windows Firewall na spravovaných počítačích, které jsou:
 - Připojené k doméně (například na pracovišti)
@@ -64,7 +66,7 @@ Výchozí hodnota pro každé z těchto nastavení je **Ano**, což je nejbezpe�
 
 
 
-### Blokování všech příchozích připojení, včetně připojení uvedených na seznamu povolených programů
+### <a name="block-all-incoming-connections-including-those-in-the-list-of-allowed-programs"></a>Blokování všech příchozích připojení, včetně připojení uvedených na seznamu povolených programů
 
 Tato nastavení zásad konfigurují bránu Windows Firewall, aby blokovala příchozí síťový provoz na počítačích, které jsou:
 - Připojené k doméně (například na pracovišti)
@@ -76,7 +78,7 @@ Výchozí hodnota pro každé z těchto nastavení je **Ano**, což je nejbezpe�
 > [!IMPORTANT]
 > Pokud prostředí obsahuje spravované počítače, ve kterých je spuštěný systém Windows Vista bez nainstalovaných aktualizací Service Pack, musíte nainstalovat aktualizaci uvedenou ve znalostní bázi Microsoft Knowledge Base v [článku 971800](http://go.microsoft.com/fwlink/?LinkId=188405) nebo v zásadách nasazených v těchto počítačích vypnout nastavení zásady **Blokovat všechna příchozí připojení**.
 
-### Oznámit uživatelům blokování nového programu bránou Windows Firewall
+### <a name="notify-the-user-when-windows-firewall-blocks-a-new-program"></a>Oznámit uživatelům blokování nového programu bránou Windows Firewall
 
 Tato nastavení zásad určují, jestli brána Windows Firewall upozorní uživatele počítačů, když blokuje příchozí síťový provoz na počítačích, které jsou:
 - Připojené k doméně (například na pracovišti)
@@ -86,7 +88,7 @@ Tato nastavení zásad určují, jestli brána Windows Firewall upozorní uživa
 Výchozí hodnota pro každé z těchto nastavení je **Ano**.
 
 
-### Konfigurace předdefinovaných výjimek
+### <a name="configure-predefined-exceptions"></a>Konfigurace předdefinovaných výjimek
 
 Můžete nakonfigurovat výjimky, které povolují konkrétní typy síťového přenosu přes bránu firewall bez ohledu na hodnoty, které jste nakonfigurovali dřív. Ve výchozím nastavení nejsou nakonfigurovaná žádná z těchto nastavení.
 
@@ -106,12 +108,12 @@ Můžete nakonfigurovat výjimky, které povolují konkrétní typy síťového 
 |**Služba správy klíčů**|Umožňuje spočítání počítačů kvůli shodě s licencí v podnikovém prostředí.|
 |**Zařízení Media Center Extender**|Umožňuje zařízením Media Center Extender komunikovat s počítači se systémem Windows Media Center. Toto nastavení využívá protokol SSDP (Simple Service Discovery Protocol) a qWave.|
 |**Služba Netlogon**|Konfiguruje zabezpečený kanál mezi klienty v doméně a řadičem domény za účelem ověřování totožnosti uživatelů a služeb. Toto nastavení využívá protokol RPC.|
-|**Zjišťování sítě**|Umožňuje počítačům zjišťovat jiná zařízení a být zjištěny jinými zařízeními v síti. Toto nastavení používá službu publikování a hostitele rozpoznávání funkcí a taky síťové protokoly SSDP, NetBIOS, LLMNR a UPnP.|
+|**Zjišťování v síti**|Umožňuje počítačům zjišťovat jiná zařízení a být zjištěny jinými zařízeními v síti. Toto nastavení používá službu publikování a hostitele rozpoznávání funkcí a taky síťové protokoly SSDP, NetBIOS, LLMNR a UPnP.|
 |**Výstrahy a protokolování výkonu**|Umožňuje vzdálenou správu služby Výstrahy a protokolování výkonu. Toto nastavení využívá protokol RPC.|
 |**Vzdálená správa**|Umožňuje vzdálenou správu počítače.|
 |**Vzdálená pomoc**|Umožňuje uživatelům spravovaných počítačů žádat o vzdálenou pomoc od jiných uživatelů v síti. Toto nastavení používá síťové protokoly SSDP, PNRP (Peer Name Resolution Protocol), Teredo a UPnP.|
 |**Vzdálená plocha**|Umožňuje počítači přistupovat k jiným počítačům pomocí vzdálené plochy.|
-|**Vzdálená správa protokolu událostí**|Umožňuje vzdálené zobrazení a správu protokolů událostí klienta. Toto nastavení využívá pojmenované kanály a rozhraní RPC.|
+|**Vzdálená správa protokolů událostí**|Umožňuje vzdálené zobrazení a správu protokolů událostí klienta. Toto nastavení využívá pojmenované kanály a rozhraní RPC.|
 |**Vzdálená správa naplánovaných úloh**|Umožňuje vzdálenou správu služby plánování úloh. Toto nastavení využívá protokol RPC.|
 |**Vzdálená správa služeb**|Umožňuje vzdálenou správu místních služeb na klientech. Toto nastavení využívá pojmenované kanály a rozhraní RPC.|
 |**Vzdálená správa svazků**|Umožňuje vzdálenou softwarovou a hardwarovou správu svazku disku. Toto nastavení využívá protokol RPC.|
@@ -124,17 +126,12 @@ Můžete nakonfigurovat výjimky, které povolují konkrétní typy síťového 
 |**Služba Windows Media Player Network Sharing**|Umožňuje uživatelům sdílet multimédia přes síť. Toto nastavení používá síťové protokoly SSDP, qWave a UPnP.|
 |**Služba Windows Media Player Network Sharing (Internet)**<br>(Windows 7 nebo novější)|Umožňuje uživatelům sdílet domácí multimédia prostřednictvím internetu.|
 |**Centrum spolupráce**|Umožňuje uživatelům spolupracovat přes síť a sdílet tak dokumenty, programy nebo plochy. Toto nastavení využívá službu Replikace distribuovaného systému souborů (DFSR) a P2P.|
-|**Základ spolupráce rovnocenných počítačů**|Konfiguruje různé programy a technologie typu peer-to-peer, aby se mohly připojit. Toto nastavení využívá protokol SSDP a PNRP.|
-|**Vzdálená správa systému Windows (režim kompatibility)**|Umožňuje vzdálenou správu spravovaných počítačů pomocí služby vzdálené správy systému Windows (WS-Management), což je protokol založený na webových službách pro vzdálenou správu operačních systémů a zařízení.|
-|**Vzdálená správa systému Windows**<br>(Windows 8 nebo novější)|Umožňuje vzdálenou správu spravovaných počítačů pomocí služby vzdálené správy systému Windows (WS-Management), což je protokol založený na webových službách pro vzdálenou správu operačních systémů a zařízení.|
+|**Základ spolupráce rovnocenných počítačů ve Windows**|Konfiguruje různé programy a technologie typu peer-to-peer, aby se mohly připojit. Toto nastavení využívá protokol SSDP a PNRP.|
+|**Vzdálená správa Windows (režim kompatibility)**|Umožňuje vzdálenou správu spravovaných počítačů pomocí služby vzdálené správy systému Windows (WS-Management), což je protokol založený na webových službách pro vzdálenou správu operačních systémů a zařízení.|
+|**Vzdálená správa Windows**<br>(Windows 8 nebo novější)|Umožňuje vzdálenou správu spravovaných počítačů pomocí služby vzdálené správy systému Windows (WS-Management), což je protokol založený na webových službách pro vzdálenou správu operačních systémů a zařízení.|
 |**Windows Virtual PC**<br>(Windows 7 nebo novější)|Umožňuje virtuálním počítačům komunikovat s dalšími počítači.|
 |**Bezdrátová přenosná zařízení**|Umožňuje přenos multimediálních souborů z fotoaparátu nebo multimediálního zařízení připojeného k síti do spravovaných počítačů pomocí protokolu MTP (Media Transfer Protocol). Toto nastavení používá síťové protokoly SSDP a UPnP.|
 
-### Související témata
+### <a name="see-also"></a>Související témata
 [Zásady ochrany počítačů se systémem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)
-
-
-
-<!--HONumber=Oct16_HO4-->
-
 
