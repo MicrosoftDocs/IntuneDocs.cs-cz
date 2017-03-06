@@ -4,7 +4,7 @@ description: "Použijte nástroj Apple Configurator k přímé registraci zaří
 keywords: 
 author: staciebarker
 ms.author: stabar
-manager: arob98
+manager: angrobe
 ms.date: 01/29/2017
 ms.topic: article
 ms.prod: 
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 521a37044d6721fe905db7740329688ba2c24b35
 ms.openlocfilehash: f75c4a6412d34923ec45524d765d3eb270f15e13
+ms.lasthandoff: 01/31/2017
 
 
 ---
@@ -91,9 +92,4 @@ Při přímé registraci zařízení s iOSem můžete zařízení zaregistrovat 
 9.  Na zařízení s iOSem otevřete **Nastavení** a přejděte na **Obecné** &gt; **Správa zařízení** &gt; **Profil pro správu**. Potvrďte, že je zde instalace profilu uvedená, a zkontrolujte omezení zásad iOS a nainstalované aplikace. Zobrazení omezení vyplývajících ze zásad a aplikací na zařízení může trvat až 10 minut.
 
 10.  Distribuujte zařízení. Zařízení s iOSem je teď zaregistrované v Intune a spravované.
-
-
-
-<!--HONumber=Jan17_HO5-->
-
 

@@ -4,7 +4,7 @@ description: "Nasaďte registrační profil, který umožňuje bezdrátovou regi
 keywords: 
 author: staciebarker
 ms.author: stabar
-manager: arob98
+manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 

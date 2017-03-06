@@ -4,7 +4,7 @@ description: "Chraňte své spravované počítače pomocí služby Endpoint Pro
 keywords: 
 author: nathbarn
 ms.author: nathbarn
-manager: arob98
+manager: angrobe
 ms.date: 01/31/2017
 ms.topic: article
 ms.prod: 
