@@ -12,14 +12,15 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 9786b71a-d2ff-4d95-a2d9-47ece0aec8ca
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: 3bebc6cb1d44e99f8337a057eadfae676904ea3d
 ms.openlocfilehash: 27b57f7f8723a1271442b4ed18e219660959b0a8
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -37,9 +38,4 @@ Zařízení může být rootované několika způsoby:
 - Výrobce zařízení instaloval na zařízení software, o které software pro zjišťování rootu předpokládá, že je bezpečnostním rizikem. V takovém případě musíte požádat o pomoc správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 Pokud jste zařízení rootovali sami, budete muset provést opačný proces a obnovit zařízení do nerootovaného stavu.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

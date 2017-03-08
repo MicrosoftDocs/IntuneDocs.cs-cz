@@ -12,12 +12,13 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: c7a10998-9aa6-4bc0-8405-27a30c61bca7
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: 16589a70cabe4971e89f2fe7983d2d79def2caca
 ms.openlocfilehash: 25d954040f7b94089e8b931a39257c05663002e0
+ms.lasthandoff: 01/12/2017
 
 
 ---
@@ -31,9 +32,4 @@ Pokud se zobrazí zpráva „Musí se zakázat instalace z neznámých zdrojů�
 Když nastavení **Neznámé zdroje** vypnete, může trvat několik minut, než budete zařízení s Androidem moct znovu používat pro přístup k datům společnosti nebo školy.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

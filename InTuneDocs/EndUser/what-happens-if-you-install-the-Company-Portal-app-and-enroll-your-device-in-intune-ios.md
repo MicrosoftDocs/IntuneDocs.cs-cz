@@ -12,14 +12,15 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: a2467c02-aac5-41c8-b788-cbda830941ef
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: 0e6b7ae1794ff0857dfb203eb3c67d7ba494bd8e
 ms.openlocfilehash: d593b00ee3fd30adec6c36c3939c895647e8dada
+ms.lasthandoff: 02/21/2017
 
 
 ---
@@ -66,9 +67,4 @@ Po registraci vašeho zařízení může správce IT provádět tyto akce:
 -   Povolit nebo zakázat automatickou synchronizaci souborů v režimu roamingu v zařízení. Pokud je automatická synchronizace souborů povolená, můžou se vám účtovat poplatky za roaming.
 
 Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

@@ -12,14 +12,15 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 1ee6e275-d1ec-4da3-bbef-d5da2c61a02a
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: 42e6b4d44dffa457f009e8402d5c429aa55932d6
 ms.openlocfilehash: 74983ab11e1c1763bd5394af483b93b74b715f89
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -36,9 +37,4 @@ Když k resetování zařízení se systémem Windows použijete aplikaci Portá
 |Stolní a přenosné počítače|**Windows 8.1 a Windows 8**<br />Tovární nastavení lze obnovit v počítači s Windows 8 nebo Windows 8.1 jedině v případě, že se používá pouze pro e-mail.<br /><br />**Windows 7 nebo Windows Vista**<br />Tovární nastavení nelze obnovit v počítači s Windows 7 nebo s dřívější verzí systému.|
 
 Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
