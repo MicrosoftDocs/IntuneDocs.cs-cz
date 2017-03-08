@@ -11,11 +11,16 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: a26d9e3c-8f58-4494-9571-fc88ba91852e
+searchScope:
+- Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 1314fad0c387224302a4c2b67c913f9d2ec6c5d4
+ms.sourcegitcommit: d2ed7b2e713f5efd4161eb8015ab43c8f97a017b
+ms.openlocfilehash: d10cc421dc6fe422b7a2c26b4902997c8c6b2e61
+ms.lasthandoff: 01/05/2017
 
 
 ---
@@ -35,7 +40,7 @@ Na webu Portál společnosti mohou uživatelé provádět následující úlohy:
 
 -   [Vzdálené uzamčení zařízení](remote-lock-your-device-cpwebsite.md)
 
--   [Ruční synchronizace zařízení kvůli zrychlení pomalé instalace aplikací](sync-your-device-manually-cpwebsite.md)
+-    [Ruční synchronizace zařízení kvůli zrychlení pomalé instalace aplikací](sync-your-device-manually-cpwebsite.md)
 
 -   Vyhledání kontaktních údajů na správce IT, pokud jste je nakonfigurovali
 
@@ -46,11 +51,6 @@ Na webu Portál společnosti mohou uživatelé provádět následující úlohy:
 Většinu úloh, které koncoví uživatelé provádějí na **webu Portál společnosti**, mohou provádět i v **aplikaci Portál společnosti**, kterou si nainstalují do zařízení. Následující stránky obsahují odkazy na všechny úlohy, které mohou uživatelé provádět na svém zařízení:
 
 - [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
-- [Použití zařízení s iOSem nebo macOS s Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
+- [Použití zařízení s iOSem nebo macOS s Intune](using-your-ios-or-macOS-device-with-intune.md)
 - [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 
