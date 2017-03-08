@@ -2,8 +2,8 @@
 title: "Řešení potíží s registrací zařízení | Dokumentace Microsoftu"
 description: "Doporučení pro řešení potíží s registrací zařízení"
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 03/01/2017
 ms.topic: article

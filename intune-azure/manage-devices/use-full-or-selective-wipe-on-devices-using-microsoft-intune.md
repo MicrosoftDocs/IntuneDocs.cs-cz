@@ -3,8 +3,8 @@ title: "Úplné nebo selektivní vymazání zařízení pomocí Intune"
 titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Přečtěte si, jak provést selektivní vymazání firemních dat v zařízení nebo úplné vymazání, které obnoví zařízení do továrního nastavení."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 12/07/2016
 ms.topic: article

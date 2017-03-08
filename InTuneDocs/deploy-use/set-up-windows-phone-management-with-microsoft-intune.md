@@ -2,7 +2,8 @@
 title: "Nastavení správy pro Windows Phone a Windows 10 Mobile | Dokumentace Microsoftu"
 description: "Povolte správu mobilních zařízení (MDM) pro zařízení s Windows 10 Mobile nebo Windows Phone pomocí služby Microsoft Intune."
 keywords: 
-author: staciebarker
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/08/2017
 ms.topic: article

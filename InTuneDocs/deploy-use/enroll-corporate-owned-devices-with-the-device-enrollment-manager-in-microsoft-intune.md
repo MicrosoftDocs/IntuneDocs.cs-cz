@@ -2,8 +2,8 @@
 title: "Registrace pomocí správce registrace zařízení | Dokumentace Microsoftu"
 description: "Účet správce registrace zařízení (DEM) umožňuje spravovat velké počty sdílených mobilních zařízení vlastněných společností z jediného uživatelského účtu."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 01/29/17
 ms.topic: article
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: adb2fd27d7f2b3f0ef4dce6b26fcb20d74b69a00
 ms.openlocfilehash: f099fdf942795b128fe46f9bd1d82432d89f6f75
+ms.lasthandoff: 02/04/2017
 
 
 ---
@@ -106,9 +107,4 @@ Odstranění správce registrace zařízení nemá vliv na zaregistrovaná zař�
 -   Přihlašovací údaje účtu správce registrace zařízení dál nejde používat k mazání nebo vyřazování zařízení.
 
 -   Vztah odstraněného účtu správce registrace zařízení k zaregistrovaným zařízením trvá, ale nejde registrovat žádná další zařízení.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

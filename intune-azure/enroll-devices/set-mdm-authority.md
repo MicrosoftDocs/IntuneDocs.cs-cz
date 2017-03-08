@@ -3,8 +3,8 @@ title: "Nastavení autority pro správu mobilních zařízení"
 titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Postup nastavení autority pro správu mobilních zařízení v Intune "
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 01/06/2016
 ms.topic: article

@@ -2,8 +2,8 @@
 title: "Řešení potíží s instalací klientů | Dokumentace Microsoftu"
 description: "Řešení obecných potíží s instalací klientů"
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/22/2017
 ms.topic: article

@@ -2,8 +2,8 @@
 title: "Správa zařízení ve vlastnictví firmy | Dokumentace Microsoftu"
 description: "Registrace zařízení patřících společnosti může probíhat různě. Záleží vždy na typu zařízení, způsobu nákupu a potřebách organizace."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 01/29/2017
 ms.topic: article
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 521a37044d6721fe905db7740329688ba2c24b35
 ms.openlocfilehash: ae077d80e05b33d625285d796917f4f6c153ca3f
+ms.lasthandoff: 01/31/2017
 
 
 ---
@@ -65,9 +66,4 @@ Intune rozpozná zařízení jako „firemní“, když platí některá z těch
  - Zařízení je zaregistrované v [Azure Active Directory nebo v Enterprise Mobility Suite jako zařízení s Windows 10 Enterprise](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview) (jenom Windows 10).
 
 Když je zařízení označené jako firemní, zobrazuje se u záznamu daného zařízení v konzole pro správu ve sloupci **Vlastnictví** položka **Firemní**. 
-
-
-
-<!--HONumber=Jan17_HO5-->
-
 

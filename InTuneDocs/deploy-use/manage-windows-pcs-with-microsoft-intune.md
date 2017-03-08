@@ -2,8 +2,8 @@
 title: "Správa počítačů s klientským softwarem | Dokumentace Microsoftu"
 description: "Spravujte počítače s Windows pomocí instalace klientského softwaru Intune."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/09/2017
 ms.topic: article

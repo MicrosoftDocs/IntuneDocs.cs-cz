@@ -2,8 +2,8 @@
 title: "Vyžádání a poskytnutí vzdálené pomoci na počítačích s Windows| Dokumentace Microsoftu"
 description: "Popisuje kroky koncových uživatelů a správců IT pro poskytování vzdálené pomoci na počítačích s Windows, které se spravují jako počítače, a pro vzdálené spuštění počítače."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 12/15/2016
 ms.topic: article

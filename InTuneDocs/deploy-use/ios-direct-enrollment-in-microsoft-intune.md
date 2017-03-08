@@ -2,8 +2,8 @@
 title: "Přímá registrace zařízení s iOSem | Dokumentace Microsoftu"
 description: "Použijte nástroj Apple Configurator k přímé registraci zařízení s iOSem vlastněných společností pomocí předdefinované zásady tak, že je připojíte přes USB do počítače Mac."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 01/29/2017
 ms.topic: article

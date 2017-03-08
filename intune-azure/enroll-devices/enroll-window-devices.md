@@ -3,8 +3,8 @@ title: "Registrace zařízení s Windows"
 titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Naučte se povolit správu mobilních zařízení (MDM) v Intune pro zařízení s Windows."
 keywords: 
-author: staciebarker
-manager: stabar
+author: nathbarn
+manager: nathbarn
 ms.date: 02/15/17
 ms.topic: article
 ms.prod: 
@@ -17,6 +17,7 @@ ms.custom: intune-azure
 translationtype: Human Translation
 ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
 ms.openlocfilehash: 7262093700dab3a7befd5b82ac9f8ee3dde22dcf
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -84,9 +85,4 @@ Nechte uživatele, ať si nainstalují aplikaci Portál společnosti služby Int
     Další informace o úlohách pro koncové uživatele najdete v tématu [Materiály o prostředí Microsoft Intune pro koncové uživatele](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune).
 
 Pokud jste nenasadili Portál společnosti na zařízení, nejsou vyžadované žádné další kroky.  Kroky 2 a 3 v konzole správce můžete ignorovat.
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

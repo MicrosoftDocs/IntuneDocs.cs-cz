@@ -2,8 +2,8 @@
 title: "Běžné úlohy správy počítačů s Windows | Dokumentace Microsoftu"
 description: "Informace o způsobech správy počítačů s Windows, na kterých běží klientský software Intune"
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 12/15/2016
 ms.topic: article

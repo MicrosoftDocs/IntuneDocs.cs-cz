@@ -2,8 +2,8 @@
 title: "Správa Apple DEP pro zařízení s iOSem | Dokumentace Microsoftu"
 description: "Nasaďte registrační profil, který umožňuje bezdrátovou registraci zařízení s iOSem koupených prostřednictvím programu DEP (Device Enrollment Program) pro zařízení s iOSem, aby bylo možné je spravovat."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article

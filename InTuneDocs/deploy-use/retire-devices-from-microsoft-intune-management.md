@@ -2,8 +2,8 @@
 title: "Vyřazení zařízení | Dokumentace Microsoftu"
 description: "Při odebírání zařízení ze správy Intune podporuje tato služba selektivní i úplné vymazání, přičemž se odeberou příslušné zásady a portál společnosti."
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/13/2017
 ms.topic: article
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 00e9dfd165a449182c5b937372db7085c981c68f
 ms.openlocfilehash: cca12024ba12cff5cdb8c515f7719a7592ba97ea
+ms.lasthandoff: 02/14/2017
 
 
 ---
@@ -77,9 +78,4 @@ V některých případech zařízení samotné dosáhne konce své životnosti. 
 
 ### <a name="see-also"></a>Viz taky
 [Lepší ochrana dat s využitím úplného nebo selektivního vymazání](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

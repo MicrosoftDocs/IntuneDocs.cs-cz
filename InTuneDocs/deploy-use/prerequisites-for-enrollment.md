@@ -2,8 +2,8 @@
 title: "Požadavky na registraci mobilních zařízení | Dokumentace Microsoftu"
 description: "Nastavte požadavky správy mobilních zařízení a připravte registraci různých operačních systémů."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/21/2017
 ms.topic: article

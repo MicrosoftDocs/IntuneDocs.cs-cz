@@ -3,8 +3,8 @@ title: "Registrace zařízení s iOSem pomocí Apple Configuratoru a přímé re
 titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Přečtěte si, jak jde pomocí Apple Configuratoru registrovat zařízení s iOSem vlastněná společností s využitím přímé registrace."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article

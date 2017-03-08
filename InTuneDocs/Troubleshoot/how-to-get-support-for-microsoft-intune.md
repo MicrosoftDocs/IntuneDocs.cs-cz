@@ -2,8 +2,8 @@
 title: "Jak získat podporu | Dokumentace Microsoftu"
 description: "Podpora je k dispozici online a po telefonu pro placené i zkušební předplatné."
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 01/27/2016
 ms.topic: article
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 526830839aa801a7ac78aeb4baaa790d6bb5da5c
 ms.openlocfilehash: 8f43dc529b2da2c97500c03056ba7908bb8ab0fa
+ms.lasthandoff: 01/28/2017
 
 
 ---
@@ -146,9 +147,4 @@ Podpora „Break-fix“ je součástí předplatných Microsoft Intune a Správy
 Pokud vás pracovník podpory požádá, abyste otevřeli další incidenty podpory pro další problémy, pochopte prosím, že je to v nejlepším zájmu všech uživatelů. Děkujeme vám, že jste s tím srozuměni a jste našimi partnery. My pak díky tomu můžeme poskytovat prvotřídní možnosti podpory.
 
 Ceny za jednotlivé incidenty a úrovně závažnosti najdete v [možnostech podpory Professional Support](https://support.microsoft.com/gp/offerprophone).
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

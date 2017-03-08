@@ -2,8 +2,8 @@
 title: "Zobrazení inventáře hardwaru a softwaru u počítačů s Windows | Dokumentace Microsoftu"
 description: "Jak zobrazit informace o hardwaru a softwaru počítačů s Windows, které spravujete pomocí klienta softwaru Intune"
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 12/15/2016
 ms.topic: article
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 10dd2caa9ce1b96424f55e373e904a778390eb15
 ms.openlocfilehash: 8425cee511cdd54e051a93a10a941142c33df893
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -66,8 +67,3 @@ Intune shromažďuje podrobné informace o hardwaru a softwaru počítačů, kte
 ### <a name="see-also"></a>Související témata
 
 [Běžné úlohy správy počítačů s Windows pomocí klientského softwaru Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -3,8 +3,8 @@ title: "Řešení potíží při registraci zařízení"
 titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Přečtěte si, jak můžete řešit potíže s registrací zařízení."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article

@@ -3,8 +3,8 @@ title: "Nastavení omezení registrace v Intune"
 titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Omezení registrace podle platformy a nastavení limitu počtu zařízení pro registraci zařízení v Intune "
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article

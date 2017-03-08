@@ -3,8 +3,8 @@ title: "Přidání sériových čísel Apple Configuratoru"
 titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Přečtěte si, jak pomocí Apple Configuratoru přidat sériová čísla k zařízením se systémem iOS, která vlastní firma."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article
