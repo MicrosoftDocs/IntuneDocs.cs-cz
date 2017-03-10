@@ -2,10 +2,10 @@
 title: "Poznámky k verzi Microsoft Intune | Dokumentace Microsoftu"
 description: "Poznámky k verzi Intune"
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.date: 09/08/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: fd300a5dfe6d6976491988453ec69e99668889fb
+ms.sourcegitcommit: f0e027d1c63435084c434c591fed7bb71b5c07f2
+ms.openlocfilehash: 8369cc039ac1c4c24b29927a96360cd872f8e9bc
+ms.lasthandoff: 03/08/2017
 
 
 ---
@@ -27,21 +28,21 @@ ms.openlocfilehash: fd300a5dfe6d6976491988453ec69e99668889fb
 
 Microsoft Intune je integrované cloudové řešení pro správu klientů, které poskytuje nástroje, sestavy a licence k upgradu na nejnovější verzi Windows. Pomáhá také udržovat vaše počítače v aktualizovaném a zabezpečeném stavu. Kromě toho Intune umožňuje spravovat mobilní zařízení v síti, a to buď prostřednictvím protokolu Exchange ActiveSync, nebo přímo přes Intune. Následující poznámky k verzi popisují důležité informace a známé problémy v Microsoft Intune.
 
+<!-- 3-6-17: customer asked if this is still current; Stacie asked Chris Baldwin about it. Chris said it's a Samsung issue, but that he hasn't heard any reports about it for months, so he suggested that I share that with the customer and remove this item from the release notes. I'm only going to comment it out in case it resurfaces.
+## Android users can’t send email when conditional access for Exchange Online is implemented
 
-## <a name="android-users-cant-send-email-when-conditional-access-for-exchange-online-is-implemented"></a>Po implementaci podmíněného přístupu pro Exchange Online nemůžou uživatelé systému Android odesílat e-maily
+**Issue:** Users running Samsung Android 5.1.1 and later on their devices can't send email when conditional access for Exchange Online has been set up. Samsung acknowledges that the issue is in its built-in email client in Android 5.1.1 and later, and is investigating a fix.
 
-**Problém:** Uživatelé, kteří na svých zařízeních používají Samsung Android 5.1.1 a novější, nemůžou odesílat e-maily, pokud je nastavený podmíněný přístup pro Exchange Online. Samsung potvrzuje, že tento problém je v integrovaném e-mailovém klientovi v Androidu 5.1.1 a novějším, a pracuje na opravě.
+**Workaround 1:** Advise users to use the Outlook app for Android.
 
-**Alternativní řešení 1:** Poraďte uživatelům, aby používali aplikaci Outlook pro Android.
+**Workaround 2:** To let affected users send email, you can follow these steps:
 
-**Alternativní řešení 2:** Následujícím postupem umožněte dotčeným uživatelům odesílat e-maily:
+1. Put each affected user in a security group in the “exempted groups” section of the conditional access policy for Exchange Online.
+2. Let the user temporarily sync email on the built-in email client.
+3. Remove the affected user from the exempted group, and confirm that the user can now send email.
 
-1. Dejte každého dotčeného uživatele do skupiny zabezpečení v sekci „Vyloučené skupiny“ v zásadě podmíněného přístupu pro Exchange Online.
-2. Umožněte uživateli dočasnou synchronizaci e-mailu v integrovaném e-mailovém klientovi.
-3. Odeberte dotčeného uživatele z vyloučené skupiny a ověřte si, že teď může odesílat e-maily.
-
-Microsoft bude se společností Samsung dál úzce spolupracovat na opravě nebo dalších alternativních řešeních.
-
+Microsoft will continue to work closely with Samsung on a fix or additional workarounds.
+-->
 
 
 ## <a name="changing-resource-access-profiles-between-groups-for-ios-and-android-might-fail"></a>Změna profilů přístupu k prostředkům mezi skupinami pro iOS a Android může selhat
@@ -92,9 +93,4 @@ V obou případech nebyl ze zařízení odebrán profil přístupu k prostředk�
 Azure Portal podporuje tyto jazyky: čínština (zjednodušená), čínština (tradiční), čeština, holandština, angličtina, němčina, maďarština, italština, japonština, portugalština (Brazílie), portugalština (Portugalsko), ruština, španělština, angličtina, francouzština, korejština, polština, švédština, turečtina.
 
 Konzola pro správu Intune a mobilní prostředí pro uživatele podporují kromě všech jazyků podporovaných webem Azure Portal také dánštinu, řečtinu, finštinu, norštinu a rumunštinu.
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

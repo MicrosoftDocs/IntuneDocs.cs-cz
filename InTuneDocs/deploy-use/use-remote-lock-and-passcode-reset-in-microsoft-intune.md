@@ -5,7 +5,7 @@ keywords:
 author: NathBarn
 ms.author: NathBarn
 manager: angrobe
-ms.date: 02/16/17
+ms.date: 03/06/17
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,9 @@ ms.assetid: 970f8c81-7c7f-4789-9ed4-2133d50b9db6
 ms.reviewer: chrisgre
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 87589903acd3c2e7c45d62c619571a1273e7fb76
-ms.openlocfilehash: 8de91a0e0640b9c0fb281686d4ecd4983134d4af
+ms.sourcegitcommit: 665d3347636d5ec0c698ffb93b768028c9d59ce3
+ms.openlocfilehash: b918c9843bdc6cfbbfd9c2da9d698b255487152c
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="help-protect-your-devices-with-remote-lock-and-passcode-reset"></a>Chraňte svá zařízení pomocí vzdáleného zámku a resetování hesla
@@ -34,6 +35,7 @@ Následující tabulka uvádí, jak vzdálené uzamčení funguje na různých m
 |macOS|Není podporované|
 |iOS|Podporováno|
 |Android|Podporováno|
+|Android for Work|Podporováno|
 |Windows 10 (Mobile)|Podporováno|
 |Windows 10 (Desktop)|Není podporované|
 |Windows Phone 8 a Windows Phone 8.1|Podporováno|
@@ -61,6 +63,7 @@ Pokud uživatel zapomene heslo, můžete mu pomoct tím, že heslo ze zařízen�
 |macOS|Není podporované|
 |iOS|Je podporované vymazání hesla ze zařízení. Nevytvoří nové dočasné heslo.|
 |Android|Podporováno ve verzích starších než Android 7.0. Vytvoří dočasné heslo.|
+|Android for Work|Není podporované|
 |Windows 10 Mobile|Podporováno|
 |Windows Phone 8 a Windows Phone 8.1|Podporováno|
 |Windows RT 8.1|Není podporované|
@@ -83,9 +86,4 @@ Resetování hesla není podporované u počítačů s Windows, které jsou regi
 
 ### <a name="see-also"></a>Související témata
 [Vyřazení zařízení](retire-devices-from-microsoft-intune-management.md) a [Selektivní vymazání ve Windows pro správu dat na zařízeních](http://technet.microsoft.com/library/dn486874.aspx)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
