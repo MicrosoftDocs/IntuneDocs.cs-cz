@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/14/2017
+ms.date: 03/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -40,7 +40,6 @@ Intune vám může v mnoha směrech usnadnit práci. Tady je seznam obvyklých p
 
 - [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-ios.md)
 - [Nastavení nebo změna hesla](set-or-change-your-passcode-ios.md)
-<!--- [Reset (erase) your lost or stolen device](reset-erase-your-lost-or-stolen-device-ios.md) -->
 - [Obnovení (vymazání) ztraceného nebo odcizeného zařízení](reset-erase-your-device-cpwebsite.md)
 - [Vypnutí shromažďování dat o využití Microsoftem](turn-off-microsoft-usage-data-collection-ios.md)
 - [Zrušení registrace zařízení v Intune](unenroll-your-device-from-intune-ios.md)

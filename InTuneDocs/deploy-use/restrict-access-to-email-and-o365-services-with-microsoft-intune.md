@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
 ms.openlocfilehash: 399c6260a98d51417a067d001c0fd42c926c1513
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -29,8 +30,9 @@ Pomocí řešení pro podmíněný přístup Enterprise Mobility + Security (EMS
 ## <a name="how-does-conditional-access-work"></a>Jak podmíněný přístup funguje?
 K vyhodnocení, jestli zařízení vyhovuje, můžete použít nastavení zásady dodržování předpisů. Zásada podmíněného přístupu používá vyhodnocení k omezení nebo povolení přístupu ke konkrétní službě. Když zásady podmíněného přístupu použijete v kombinaci se zásadami dodržování předpisů pro zařízení, povolí se přístup ke službě jenom vyhovujícím zařízením. Zásada dodržování předpisů a zásada podmíněného přístupu se nasadí pro uživatele. Jakékoli zařízení, které uživatel používá pro přístup ke službám, se kontroluje na dodržování předpisů se zásadami.
 
-Nezapomeňte, že uživatel, který zařízení používá, musí mít nasazenou zásadu dodržování předpisů, aby se vyhodnocovalo, jestli zařízení vyhovuje.
-Pokud nejsou pro uživatele nasazené žádné zásady dodržování předpisů, pak se zařízení považuje za vyhovující a žádná omezení přístupu se neuplatní.
+> [!IMPORTANT] 
+> Nezapomeňte, že uživatel, který zařízení používá, musí mít nasazenou zásadu dodržování předpisů, aby se vyhodnocovalo, jestli zařízení vyhovuje.
+> Pokud nejsou pro uživatele nasazené žádné zásady dodržování předpisů, pak se zařízení považuje za vyhovující a žádná omezení přístupu se neuplatní.
 
 Pokud zařízení nesplňuje podmínky nastavené v zásadách, je koncový uživatel proveden procesem registrace zařízení a opravy problému, který tomuto zařízení brání v dodržení předpisů.
 
@@ -80,9 +82,4 @@ Na rozdíl od jiných zásad služby Intune se zásady podmíněného přístupu
   - [Vytvoření zásady podmíněného přístupu pro SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
   - [Vytvoření zásady podmíněného přístupu pro Online Skype pro firmy](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
   - [Vytvoření zásady podmíněného přístupu pro Dynamic CRM Online](restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

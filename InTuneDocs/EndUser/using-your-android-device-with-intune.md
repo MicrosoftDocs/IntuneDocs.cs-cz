@@ -43,7 +43,6 @@ Intune vám může v mnoha směrech usnadnit práci. Tady je seznam obvyklých p
 - [Nastavení PIN kódu nebo hesla](set-your-pin-or-password-android.md)
 - [Instalace firemní virtuální privátní sítě (VPN)](install-your-companys-virtual-private-network-VPN-android.md)
 - [Nastavení časového intervalu před zablokováním zařízení](set-the-amount-of-time-before-your-device-is-locked-android.md)
-<!--- [Reset (erase) your lost or stolen device](reset-erase-your-lost-or-stolen-device-android.md)-->
 - [Obnovení (vymazání) ztraceného nebo odcizeného zařízení](reset-erase-your-device-cpwebsite.md)
 - [Vypnutí shromažďování dat o využití Microsoftem](turn-off-microsoft-usage-data-collection-android.md)
 - [Zrušení registrace zařízení v Intune](unenroll-your-device-from-intune-android.md)
