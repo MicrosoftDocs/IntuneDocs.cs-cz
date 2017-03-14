@@ -1,9 +1,10 @@
 ---
-title: "Co je registrace zařízení do Microsoft Intune | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Co je registrace zařízení v Microsoft Intune?"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Přečtěte si o registraci zařízení s iOS, Androidem a Windows."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: get-started-article
@@ -11,12 +12,12 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
-ms.reviewer: 
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
-ms.openlocfilehash: a92daf02c6fb2405c1255ff4ff8988f669dd76ce
-ms.lasthandoff: 02/15/2017
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 900883ea9e38342cced195f97693447fafd0e73f
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -26,7 +27,7 @@ ms.lasthandoff: 02/15/2017
 
 Toto téma popisuje registraci a různé způsoby registrace mobilních zařízení do systému správy Intune.
 
-Zařízení (včetně počítačů s Windows) se do Intune registrují proto, abyste je mohli spravovat. V dokumentaci k Intune se tato funkce označuje jako správa mobilních zařízení (MDM). Když se zařízení zaregistrují jako mobilní zařízení (ne jako počítače), vystaví se jim certifikát MDM, který pak tato zařízení používají ke komunikaci se službou Intune. 
+Zařízení (včetně počítačů s Windows) se do Intune registrují proto, abyste je mohli spravovat. V dokumentaci k Intune se tato funkce označuje jako správa mobilních zařízení (MDM). Když se zařízení zaregistrují jako mobilní zařízení (ne jako počítače), vystaví se jim certifikát MDM, který pak tato zařízení používají ke komunikaci se službou Intune.
 
 Způsob, jakým se zařízení registrují, závisí na typu zařízení, vlastnictví a požadované úrovni správy. Registrace vlastního zařízení (BYOD) umožňuje uživatelům registrovat své osobní telefony, tablety nebo počítače. Registrace firemního zařízení (zařízení vlastněné společností, COD) umožňuje různé způsoby správy, například v podobě automatické registrace, sdílených zařízení nebo předem autorizovaných požadavků na registraci.
 
@@ -76,7 +77,7 @@ Uživatelé s vlastním zařízením si nainstalují aplikaci Portál společnos
 Ke správě zařízení vlastněných společností (COD) můžete použít portál Azure Portal. Zařízení s iOSem můžete zaregistrovat přímo nástroji poskytovanými společností Apple. Všechny typy zařízení může zaregistrovat správce využívající správce registrace zařízení. Zařízení s číslem IMEI se také dají identifikovat a označit jako zařízení ve vlastnictví společnosti, což umožní využít scénáře COD.
 
 ### <a name="dem"></a>DEM
-Správce registrace zařízení je zvláštní uživatelský účet, který se používá k registraci a správě více zařízení vlastněných společností. Správci pak mohou nainstalovat aplikaci Portál společnosti a zaregistrovat velký počet zařízení bez uživatele. Přečtěte si další informace o [DEM](enroll-devices-using-device-enrollment-manager.md). ([Zpět k tabulce](#overview-of-device-enrollment-methods))
+Správce registrace zařízení (DEM) je zvláštní uživatelský účet, který se používá k registraci a správě více zařízení vlastněných společností. Správci pak mohou nainstalovat aplikaci Portál společnosti a zaregistrovat velký počet zařízení bez uživatele. Přečtěte si další informace o [DEM](enroll-devices-using-device-enrollment-manager.md). ([Zpět k tabulce](#overview-of-device-enrollment-methods))
 
 ### <a name="dep"></a>DEP
 Správa programu DEP společnosti Apple umožňuje vytvářet a bezdrátově nasazovat zásady v zařízeních s iOSem zakoupených a spravovaných prostřednictvím programu DEP. Zařízení se zaregistruje, když ho uživatel poprvé zapne a spustí pomocníka pro nastavení iOS (Setup Assistant). Tento způsob podporuje režim **dozoru nad iOS**, který zase umožňuje následující funkce:
@@ -87,7 +88,7 @@ Správa programu DEP společnosti Apple umožňuje vytvářet a bezdrátově nas
 Registrace iOS je podrobněji popsaná zde:
 
 - [Volba způsobu registrace zařízení s iOSem](choose-ios-enrollment-method.md)
-- [Registrace zařízení s iOSem pomocí Programu registrace zařízení](enroll-ios-devices-using-device-enrollment-program.md) 
+- [Registrace zařízení s iOSem pomocí Programu registrace zařízení (DEP)](enroll-ios-devices-using-device-enrollment-program.md)
 - [Zpět k předchozí tabulce](#overview-of-device-enrollment-methods)
 
 ### <a name="usb-sa"></a>USB (pomocník pro instalaci)
@@ -98,10 +99,10 @@ Správci IT používají k ruční přípravě každého zařízení vlastněné
 Registrace iOS je podrobněji popsaná zde:
 
 - [Rozhodnutí o způsobu registrace zařízení s iOSem](choose-ios-enrollment-method.md)
-- [Registrace zařízení s iOSem pomocí nástroje Configurator a Průvodce nastavením](enroll-ios-devices-with-apple-configurator-and-setup-assistant.md) 
+- [Registrace zařízení s iOSem pomocí nástroje Configurator a Průvodce nastavením](enroll-ios-devices-with-apple-configurator-and-setup-assistant.md)
 
 ### <a name="usb-direct"></a>USB (přímo)
-U přímé registrace musí správce každé zařízení zaregistrovat ručně vytvořením zásady registrace, kterou vyexportuje do Apple Configuratoru. Zařízení vlastněná společností, která jsou připojena přes USB, se zaregistrují přímo, a nevyžadují obnovení továrního nastavení. Zařízení se spravují jako zařízení bez uživatele. Nejsou uzamčená ani pod dohledem a nepodporují podmíněný přístup, detekci jailbreaků ani správu mobilních aplikací. 
+U přímé registrace musí správce každé zařízení zaregistrovat ručně vytvořením zásady registrace, kterou vyexportuje do Apple Configuratoru. Zařízení vlastněná společností, která jsou připojena přes USB, se zaregistrují přímo, a nevyžadují obnovení továrního nastavení. Zařízení se spravují jako zařízení bez uživatele. Nejsou uzamčená ani pod dohledem a nepodporují podmíněný přístup, detekci jailbreaků ani správu mobilních aplikací.
 
 Registrace iOS je podrobněji popsaná zde:
 

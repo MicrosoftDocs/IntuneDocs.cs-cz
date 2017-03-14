@@ -1,5 +1,6 @@
 ---
-title: "Co je nového v Microsoft Intune Preview | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Co je nového v Microsoft Intune Preview"
+titleSuffix: Intune Azure preview
 description: "Zjistěte, jaké novinky přináší Intune Azure Preview."
 keywords: 
 author: barlanmsft
@@ -13,10 +14,11 @@ ms.technology:
 ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: 
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 9852fdb9d1bfeede4931f0ead2fa0898dfcacb0b
-ms.openlocfilehash: a05c7464b3f2fbca467d44218904671529320dda
-ms.lasthandoff: 02/15/2017
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: ffbc91edbdec4abbb5c3c9e28c3b44df03117492
+ms.lasthandoff: 02/18/2017
 
 ---
 
@@ -54,8 +56,8 @@ Kategorie zařízení teď můžete zobrazit jako sloupec v seznamu zařízení.
 ### <a name="assign-line-of-business-apps-whether-or-not-devices-are-enrolled---748823--"></a>Přiřazení obchodních aplikací bez ohledu na to, jestli jsou zařízení zaregistrovaná <!--748823-->
 Teď můžete přiřazovat obchodní aplikace a aplikace ze Storu bez ohledu na to, jestli jsou zařízení zaregistrovaná do Intune, nebo ne. Pokud zařízení uživatele není v Intune zaregistrované, musí pro jeho instalaci přejít na web Portál společnosti, ne do aplikace Portál společnosti. Viz [Co je správa aplikací](/intune-azure/manage-apps/what-is-app-management).
 
-### <a name="resolve-issue-where-ios-devices-are-inactive-or-the-admin-console-cannot-communicate-with-them"></a>Řešení problému, kdy zařízení s iOSem nejsou aktivní nebo s nimi nemůže konzola správce komunikovat
-Když zařízení uživatele ztratí kontakt s Intune, můžete uživateli poskytnout nový postup řešení potíží a pomoct mu tak znovu získat přístup k prostředkům společnosti. Viz [Zařízení nejsou aktivní nebo s nimi nemůže konzola správce komunikovat](/intune-azure/enroll-devices/troubleshoot-device-enrollment#devices-are-inactive-or-the-admin-console-cannot-communicate-with-them).
+### <a name="resolve-issue-where-ios-devices-are-inactive-or-the-admin-console-cannot-communicate-with-them"></a>Řešení problému, kdy zařízení s iOSem nejsou aktivní nebo s nimi nemůže konzola pro správu komunikovat
+Když zařízení uživatele ztratí kontakt s Intune, můžete uživateli poskytnout nový postup řešení potíží a pomoct mu tak znovu získat přístup k prostředkům společnosti. Viz [Zařízení nejsou aktivní nebo s nimi nemůže konzola pro správu komunikovat](/intune-azure/enroll-devices/troubleshoot-device-enrollment#devices-are-inactive-or-the-admin-console-cannot-communicate-with-them).
 
 ## <a name="december-2016-initial-release"></a>Prosinec 2016 (počáteční verze)
 

@@ -1,9 +1,10 @@
 ---
-title: "Získání certifikátu Apple MDM Push Certificate | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Získání certifikátu Apple MDM Push Certificate"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Přečtěte si postup, jak získat certifikát Apple MDM Push Certificate pro správu zařízení s iOSem v Intune."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article
@@ -13,10 +14,11 @@ ms.technology:
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.reviewer: dagerrit
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
-ms.openlocfilehash: a6ac1074055892f5ec42fb4057e47e9349fb5a33
-ms.lasthandoff: 02/15/2017
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 26991bd0c7632d04b75ecbec023d96c1045f337a
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -27,8 +29,8 @@ ms.lasthandoff: 02/15/2017
 
 V Intune můžete spravovat tato mobilní zařízení: iPady, iPhony a zařízení s Mac OS X. Intune uživatelům nabízí přístup k firemnímu e-mailu a aplikacím. Intune potřebuje pro správu zařízení s iOSem a MacOS certifikát APNs (Apple Push Notification service) od společnosti Apple. Po přidání certifikátu do Intune si uživatelé můžou nainstalovat aplikaci Portál společnosti, aby mohli zaregistrovat svá zařízení. Můžete také nastavit správu zařízení s iOSem patřících společnosti.
 
-**Získání certifikátu Apple MDM Push Certificate:**<br>
-Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**. V okně Intune zvolte možnost **Registrovat zařízení** > **Apple MDM Push Certificate** a pak na portálu Azure Portal postupujte podle níže uvedených očíslovaných kroků.
+## <a name="steps-to-get-your-certificate"></a>Kroky k získání certifikátu
+Na portálu Azure Portal zvolte **Další služby** > **Monitorování a správa** > **Intune**. V okně Intune zvolte možnost **Registrovat zařízení** > **Apple MDM Push Certificate** a pak na portálu Azure Portal postupujte podle níže uvedených očíslovaných kroků.
 
 **Krok 1: Stáhněte si žádost o podepsání certifikátu (CSR) pro Intune, která je potřebná k vytvoření certifikátu Apple MDM Push Certificate.**<br>
 Vyberte **Stáhnout CSR** a uložte si soubor .csr místně. Soubor .csr slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple Push Certificates Portal.

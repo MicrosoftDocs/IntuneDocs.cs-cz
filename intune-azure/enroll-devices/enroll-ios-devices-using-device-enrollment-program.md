@@ -1,9 +1,10 @@
 ---
-title: "Registrace zařízení s iOSem – Program registrace zařízení (DEP) | Intune Azure Preview | Dokumentace Microsoftu"
+title: "Registrace zařízení s iOSem – Program registrace zařízení"
+titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Naučte se registrovat zařízení s iOSem ve vlastnictví firmy pomocí Programu registrace zařízení (DEP)."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article
@@ -13,10 +14,11 @@ ms.technology:
 ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
-ms.openlocfilehash: da6d377c94ce5db7bbfa1cb3fc165581d649a1fb
-ms.lasthandoff: 02/15/2017
+ms.sourcegitcommit: 3e1898441b7576c07793e8b70f3c3f09f1cac534
+ms.openlocfilehash: ddeaeb2d532635802c615d09b4625dee0a824919
+ms.lasthandoff: 02/23/2017
 
 
 ---
@@ -63,7 +65,7 @@ Profil registrace zařízení definuje nastavení, která se použijí pro skupi
 
 6. V části **Přidružení uživatele** zvolte, jestli se zařízení s tímto profilem budou registrovat s přidružením uživatele nebo bez.
 
- - **Zaregistrovat s přidružením uživatele** – Při počátečním nastavení musí mít zařízení přidruženého uživatele, aby mohlo dostat přístup k firemním datům a e-mailu. Přidružení uživatele zvolte pro zařízení spravovaná v programu DEP, která patří konkrétním uživatelům a potřebují používat portál společnosti kvůli službám, jako je instalace aplikací. Při registraci na zařízeních v programu DEP s přidružením uživatelů nefunguje vícefaktorové ověřování (MFA). Po registraci vícefaktorové ověřování na těchto zařízeních funguje podle očekávání.
+ - **Zaregistrovat s přidružením uživatele** – Při počátečním nastavení musí mít zařízení přidruženého uživatele, aby mohlo dostat přístup k firemním datům a e-mailu. Přidružení uživatele zvolte pro zařízení spravovaná v programu DEP, která patří konkrétním uživatelům a potřebují používat portál společnosti kvůli službám, jako je instalace aplikací. Při registraci na zařízeních v programu DEP s přidružením uživatelů nefunguje vícefaktorové ověřování (MFA). Po registraci vícefaktorové ověřování na těchto zařízeních funguje podle očekávání. Novým uživatelům, kteří si musejí změnit heslo, když se poprvé přihlásí, se během registrace na zařízení DEP nezobrazí výzva. Také uživatelům, u jejichž hesel vypršela platnost, se během registrace DEP nezobrazí výzva k resetování hesla a budou muset heslo resetovat z jiného zařízení.
 
     >[!NOTE]
     >Program DEP s přidružením uživatele vyžaduje aktivaci uživatelského jména / smíšeného koncového bodu WS-Trust 1.3, aby mohl požádat o token uživatele.
@@ -101,11 +103,11 @@ Profil registrace zařízení definuje nastavení, která se použijí pro skupi
 
 ## <a name="assign-apple-dep-serial-numbers-to-your-mdm-server"></a>Přiřazení sériových čísel Apple DEP k vašemu serveru MDM
 
-1. Přejděte na [portál programu Device Enrollment Program](https://deploy.apple.com) (https://deploy.apple.com) a přihlaste se pomocí firemního Apple ID. 
+1. Přejděte na [portál programu Device Enrollment Program](https://deploy.apple.com) (https://deploy.apple.com) a přihlaste se pomocí firemního Apple ID.
 
-2. Přejděte na **Deployment Program** (Program nasazení) &gt; **Device Enrollment Program** (Program registrace zařízení) &gt; **Manage Devices** (Spravovat zařízení). 
+2. Přejděte na **Deployment Program** (Program nasazení) &gt; **Device Enrollment Program** (Program registrace zařízení) &gt; **Manage Devices** (Spravovat zařízení).
 
-3. Určete, jak budete volit zařízení (**Choose Devices**), a zadejte podrobné informace o zařízení pomocí možností **Serial Number** (Sériové číslo), **Order Number** (Číslo objednávky) nebo **Upload CSV File** (Nahrát soubor CSV). 
+3. Určete, jak budete volit zařízení (**Choose Devices**), a zadejte podrobné informace o zařízení pomocí možností **Serial Number** (Sériové číslo), **Order Number** (Číslo objednávky) nebo **Upload CSV File** (Nahrát soubor CSV).
 
 4. Zvolte **Assign to Server** (Přiřadit k serveru), zvolte &lt;název serveru&gt; zadaný pro Microsoft Intune a potom zvolte **OK**.
 
@@ -137,7 +139,7 @@ Zařízení patřící společnosti teď můžete distribuovat uživatelům. Pok
 
 Zařízení nakonfigurovaná s přidružením uživatele umožňují instalaci a spuštění aplikace Portál společnosti, která slouží ke stahování aplikací a správě zařízení. Když uživatelé dostanou zařízení, musí provést další kroky popsané níže, aby dokončili postup Pomocníka s nastavením a nainstalovali aplikaci Portál společnosti.
 
-### <a name="how-users-enroll-corporate-owned-ios-devices-with-user-affinity"></a>Postup registrace zařízení s iOSem vlastněných společností s přidružením uživatele 
+### <a name="how-users-enroll-corporate-owned-ios-devices-with-user-affinity"></a>Postup registrace zařízení s iOSem vlastněných společností s přidružením uživatele
 
 1. Když uživatel zapne své zařízení, zobrazí se výzva k dokončení postupu Pomocníka s nastavením. Během nastavování se uživateli zobrazí výzva k zadání přihlašovacích údajů. Uživatel musí použít přihlašovací údaje (tj. jedinečné osobní jméno nebo hlavní název uživatele) přidružené k jeho předplatnému Intune.
 
