@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/08/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 3ee87c8f6104b06c8a9492566ff160540624f17e
-ms.openlocfilehash: 8f35cf70d0c97afc88eba38b1eaff5e2e38425d0
+ms.sourcegitcommit: 51f9d7bad6a1411ff68fa94c62421e2c0a43ab5a
+ms.openlocfilehash: d60b9afdf7fe9f78dd5cc4693259b8667fb17299
+ms.lasthandoff: 02/25/2017
 
 
 ---
@@ -41,7 +42,7 @@ E-mailové profily můžete použít ke konfiguraci nativních e-mailových klie
 -    Android for Work
 
 >[!NOTE]
->Intune poskytuje dva e-mailové profily pro Android for Work – jeden pro každou z e-mailových aplikací Gmail a Nine Work. Tyto aplikace jsou dostupné v obchodě Google Play a podporují připojení k Exchangi. Pokud chcete umožnit připojení k e-mailu, nasaďte jednu z těchto e-mailových aplikací do zařízení uživatelů a pak vytvořte a nasaďte příslušný profil.
+>Intune poskytuje dva e-mailové profily pro Android for Work – jeden pro každou z e-mailových aplikací Gmail a Nine Work. Tyto aplikace jsou dostupné v obchodě Google Play a podporují připojení k Exchangi. Pokud chcete umožnit připojení k e-mailu, nasaďte jednu z těchto e-mailových aplikací do zařízení uživatelů a pak vytvořte a nasaďte příslušný profil. E-mailové aplikace, jako je Nine Work, nemusí být bezplatné. Přečtěte si podrobné informace o licencování aplikace nebo se v případě dotazů obraťte na společnost, která aplikaci vytvořila.
 
 Vedle samotného nastavení e-mailového účtu v zařízení můžete určit, kolik e-mailů se má synchronizovat, a v závislosti na zařízení také jaký typ obsahu se má synchronizovat.
 
@@ -105,7 +106,7 @@ Heslo není součástí e-mailového profilu, uživatel ho tedy musí zadat při
     |**E-mailová adresa**|Způsob generování e-mailové adresy uživatele na každém zařízení. Pokud chcete k přihlášení do systému Exchange použít primární adresu SMTP, vyberte **Primární adresa SMTP**, nebo pokud chcete jako e-mailovou adresu používat celý hlavní název, vyberte **Hlavní název uživatele**.|
     |**Metoda ověřování** (Android for Work, Samsung KNOX a iOS)|Jako metodu ověřování používanou e-mailovým profilem vyberte buď **Uživatelské jméno a heslo**, nebo **Certifikáty**.|
     |**Vyberte klientský certifikát pro ověření klienta (certifikát identity)** (Android for Work, Samsung KNOX a iOS)|Vyberte certifikát klienta SCEP, který jste dříve vytvořili a který se použije k ověření připojení Exchange. Další informace o použití profilů certifikátů v Intune najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů v Microsoft Intune](secure-resource-access-with-certificate-profiles.md). Tato možnost se zobrazí jenom v případě, že je metoda ověřování **Certifikáty**.|
-    |**Použít S/MIME** (Samsung KNOX a iOS)|Posílá odchozí poštu s šifrováním S/MIME.|
+    |**Použít S/MIME** (Samsung KNOX a iOS)|Posílá odchozí poštu s podpisovým certifikátem S/MIME.|
     |**Podpisový certifikát** (Samsung KNOX a iOS)|Vyberte podpisový certifikát, který se bude používat k podepsání odchozích e-mailů. Tato možnost se zobrazí jenom v případě, že jste vybrali **Použít S/MIME**.|
     |**Počet dnů, za které se mají e-maily synchronizovat**|Zadejte počet uplynulých dnů, za které se mají e-maily synchronizovat, nebo vyberte **Neomezený**, pokud chcete synchronizovat všechny dostupné e-maily.|
     |**Plán synchronizace** (Android for Work, Samsung KNOX, Windows Phone 8 a novější, Windows 10)|Vyberte plán, podle kterého budou zařízení synchronizovat data ze serveru Exchange. Můžete také vybrat **Při doručování zpráv**, aby se data synchronizovala hned po doručení, nebo **Ruční**, aby musel synchronizaci zahájit uživatel zařízení.|
@@ -136,9 +137,4 @@ Shrnutí stavu a výstrahy na stránce **Přehled** v pracovním prostoru **Zás
 > [!NOTE]
 > - V případě Androidu for Work nezapomeňte kromě příslušného e-mailového profilu nasadit také aplikace Gmail nebo Nine Work.
 > - Pokud byste chtěli e-mailový profil ze zařízení odebrat, upravte nasazení a odeberte všechny skupiny, ve kterých je zařízení členem. Nezapomeňte, že pokud se jedná o jediný e-mailový profil na zařízení, nemůžete tento profil takto odebrat.
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

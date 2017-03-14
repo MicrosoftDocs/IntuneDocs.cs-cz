@@ -2,10 +2,10 @@
 title: "Zadání kódů IMEI | Dokumentace Microsoftu"
 description: "Microsoft Intune umožňuje správcům importovat kódy IMEI pro platformy mobilních zařízení, aby dokázali identifikovat mobilní zařízení patřící společnosti."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: NathBarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 07/25/2016
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: fbc9e94d3fc5dc7e69f5d59ca1d52493b2beefc3
-ms.openlocfilehash: 5fa3c62553403dfafd182a691f611ba12a2d729c
+ms.sourcegitcommit: 51f9d7bad6a1411ff68fa94c62421e2c0a43ab5a
+ms.openlocfilehash: 97bedfdd2d756ae79350496f54076c16ada64def
+ms.lasthandoff: 02/25/2017
 
 
 ---
@@ -50,13 +51,11 @@ Microsoft Intune umožňuje správcům importovat kódy IMEI (International Mobi
 3.  V podokně **Zkontrolovat zařízení** můžete potvrdit kódy IMEI importovaných zařízení. Můžete také rozhodnout, zda mají být při opětovném importu kódů IMEI přepsané **Podrobnosti**. Pokud chcete zachovat aktuální podrobnosti, zrušte zaškrtnutí pole **Přepsat**. Zvolením **Dokončit ** naimportujete čísla IMEI.
 4.  Importované kódy IMEI a popisy se přidají do seznamu **Podle IMEI (všechny platformy)**.
 
+> [!IMPORTANT]
+> Když importujete kód IMEI zařízení s Androidem, uvědomte si, že některá zařízení s Androidem můžou mít více kódů IMEI. Pokud importujete kód IMEI, který ale není kódem IMEI, který zařízení oznámilo službě Intune, bude zařízení označené jako osobní, a ne jako firemní.
+
 Když se zařízení s kódem IMEI zaregistruje v Intune, většinou když uživatel instaluje aplikaci Portál společnosti a dokončuje registraci, bude zařízení označeno jako majetek společnosti a zobrazí se jako zaregistrované ve skupině **Zařízení IMEI**.
 
->[!NOTE] 
+>[!NOTE]
 > Když organizaci v blízké budoucnosti migrujete na nový portál Azure Portal, uvidíte v této funkci změnu. V existující konzole správce Intune můžou správci přijímat přidružené podrobnosti z nahraného CSV a přepsat existující podrobnosti pro jednotlivé identifikátory hardwaru. V novém portálu Azure Portal bude možné automaticky přepsat podrobnosti pro všechny identifikátory hardwaru nebo ignorovat všechny nové podrobnosti pro existující identifikátory.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

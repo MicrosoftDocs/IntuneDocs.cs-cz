@@ -15,21 +15,22 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 2babdeaaf10e9a58716d299cbde0babe45967fb1
+ms.sourcegitcommit: e55cf608c2e5157feeb40ba20d3988b5b35064db
+ms.openlocfilehash: d53cded6670069f10bf645d23ff9a9102bd97539
+ms.lasthandoff: 02/25/2017
 
 
 ---
 
-# <a name="allow-only-mobile-apps-that-support-intune-mam-policies-to-access-office-365-services"></a>Povolení přístupu ke službám Office 365 jenom mobilním aplikacím, které podporují zásady Intune MAM
+# <a name="allow-only-mobile-apps-that-support-intune-app-protection-policies-to-access-office-365-services"></a>Povolení jenom mobilních aplikací, které podporují zásady ochrany aplikací Intune pro přístup ke službám Office 365
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-[Zásady správy mobilních aplikací (MAM) Intune](protect-apps-and-data-with-microsoft-intune.md) pomáhají chránit vaše firemní data na zařízeních, která jsou zaregistrovaná ke správě v Intune. Zásady MAM můžete použít také u **zařízení vlastněných zaměstnanci, která nejsou zaregistrovaná ke správě v Intune**.  V takovém případě potřebujete mít pořád jistotu, že jsou vaše firemní data a prostředky chráněné, i když tato zařízení nespravujete. Pomocí podmíněného přístupu MAM můžete vytvořit zásadu, která umožňuje přístup ke službám O365 (jako je Exchange Online) jenom mobilním aplikacím, které podporují zásady Intune MAM.
+[Zásady ochrany aplikací Intune](protect-apps-and-data-with-microsoft-intune.md) pomáhají chránit vaše firemní data na zařízeních, která jsou zaregistrovaná ke správě v Intune. Zásady ochrany aplikací můžete použít také u **zařízení vlastněných zaměstnanci, která nejsou zaregistrovaná ke správě v Intune**.  V takovém případě potřebujete mít pořád jistotu, že jsou vaše firemní data a prostředky chráněné, i když tato zařízení nespravujete. Pomocí podmíněného přístupu s MAM na základě aplikace můžete vytvořit zásadu, která umožňuje přístup ke službám O365 (jako je Exchange Online) jenom mobilním aplikacím, které podporují zásady ochrany aplikací.
 
 Když například povolíte přístup k Exchangi Online jenom **aplikaci Microsoft Outlook**, můžete **integrovaným poštovním aplikacím v iOSu a Androidu**, jejichž data nejsou chráněná zásadami Intune MAM, zablokovat příjem e-mailů z **Exchange Online**.
 
-Následující diagram znázorňuje tok používaný v rámci zásad podmíněného přístupu MAM k určení toho, kdy povolit nebo blokovat přístup: ![Diagram, který zobrazuje různá kritéria k určení, jestli se má povolit nebo blokovat přístup ](../media/mam-ca-decision-flow_simple.png).
+Následující diagram znázorňuje tok používaný zásadami podmíněného přístupu na základě aplikace k určení toho, kdy povolit nebo blokovat přístup: ![Diagram, který zobrazuje různá kritéria k určení, jestli se má povolit nebo blokovat přístup ](../media/mam-ca-decision-flow_simple.png).
 
 Popis zkratek použitých v diagramech:
 * **CP**: Aplikace Portál společnosti
@@ -38,13 +39,13 @@ Popis zkratek použitých v diagramech:
 * **EAS**: Exchange Active Sync
 
 ## <a name="prerequisites"></a>Požadavky
-**Předtím**, než můžete zásadu podmíněného přístupu MAM nakonfigurovat, musíte mít **Enterprise Mobility + Security nebo předplatné Azure Active Directory Premium**, přičemž uživatelé musí mít licence na EMS nebo Azure AD. Další informace najdete na [stránce s cenami služby Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) nebo na [stránce s cenami služby Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
+**Předtím**, než budete moct vytvořit zásadu podmíněného přístupu založenou na aplikaci, musíte mít **Enterprise Mobility + Security nebo předplatné Azure Active Directory Premium**, přičemž uživatelé musí mít licence na EMS nebo Azure AD. Další informace najdete na [stránce s cenami služby Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) nebo na [stránce s cenami služby Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
 
 
 ## <a name="supported-apps"></a>Podporované aplikace
 **Exchange Online**: **Microsoft Outlook** pro Android a iOS
 
-Další informace týkající se uživatelského prostředí aplikace, která používá zásady podmíněného přístupu MAM, najdete v části [Co očekávat při používání aplikace s podmíněným přístupem MAM](use-apps-with-mam-ca.md).
+Další informace týkající se uživatelského prostředí aplikace, která používá zásady podmíněného přístupu založené na aplikaci, najdete v tématu [Co očekávat při používání aplikace s podmíněným přístupem MAM](use-apps-with-mam-ca.md).
 
 
 ## <a name="next-steps"></a>Další kroky
@@ -54,10 +55,5 @@ Další informace týkající se uživatelského prostředí aplikace, která po
 
 ### <a name="see-also"></a>Související témata
 
-[Ochrana dat aplikací pomocí zásad MAM](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
+[Ochrana dat aplikací pomocí zásad ochrany aplikací](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 
