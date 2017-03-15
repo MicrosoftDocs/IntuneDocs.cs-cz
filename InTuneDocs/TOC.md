@@ -193,12 +193,10 @@
 ### [Vymazání spravovaných dat aplikací společnosti](deploy-use/Wipe-managed-company-app-data-with-microsoft-intune.md)
 
 ## [Co říct koncovým uživatelům o Intune](deploy-use/how-to-educate-your-end-users-about-microsoft-intune.md)
-### [Používání zařízení s Androidem s Intune](EndUser/using-your-android-device-with-intune.md)
-#### [Jak uživatelé s Androidem získávají svoje aplikace](deploy-use/how-your-android-users-get-their-apps.md)
-### [Používání zařízení s iOSem s Intune](EndUser/using-your-iOS-or-macos-device-with-intune.md)
-#### [Jak uživatelé systému iOS získávají svoje aplikace](deploy-use/how-your-ios-users-get-their-apps.md)
-### [Používání zařízení s Windows s Intune](EndUser/using-your-windows-device-with-intune.md)
-#### [Jak uživatelé s Windows získávají svoje aplikace](deploy-use/how-your-windows-users-get-their-apps.md)
+### [Zprávy Portálu společnosti zobrazované koncovým uživatelům](deploy-use/help-end-users-understand-company-portal-app-messages.md)
+### [Jak uživatelé s Androidem získávají svoje aplikace](deploy-use/how-your-android-users-get-their-apps.md)
+### [Jak uživatelé systému iOS získávají svoje aplikace](deploy-use/how-your-ios-users-get-their-apps.md)
+### [Jak uživatelé s Windows získávají svoje aplikace](deploy-use/how-your-windows-users-get-their-apps.md)
 
 # Vývoj a přizpůsobení aplikací
 ## [Přehled Microsoft Intune App SDK](develop/intune-app-sdk.md)

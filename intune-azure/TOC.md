@@ -6,7 +6,7 @@
 ## [Novinky](introduction/whats-new.md)
 ## [Známé problémy](introduction/known-issues-in-the-intune-preview.md)
 ## [Získání podpory](introduction/how-to-get-support-for-microsoft-intune.md)
-<!--- 
+<!---
 
 ## [Related resources](introduction/related-resources.md)
 
@@ -138,6 +138,7 @@
 #### [Windows 8.1 a Windows 10](configure-devices/wi-fi-import-for-windows-8-1.md)
 
 ### [Konfigurace nastavení upgradu edice Windows 10](configure-devices/how-to-configure-windows-10-edition-upgrade.md)
+### [Konfigurace nastavení služby Windows Update pro firmy](configure-devices/how-to-configure-windows-update-for-business.md)
 ### [Konfigurace certifikátů](configure-devices/how-to-configure-certificates.md)
 #### [SCEP](configure-devices/configure-certificate-infrastructure-for-scep.md)
 #### [PKCS](configure-devices/configure-certificate-infrastructure-for-pfx.md)
