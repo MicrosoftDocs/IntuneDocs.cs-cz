@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 0154e3bfeac0457de57257045e3e7ce833325bce
 ms.openlocfilehash: a462bcfa107bf1a37ea4e84bc3d88d0dd81f9fc8
+ms.lasthandoff: 02/03/2017
 
 
 ---
@@ -169,6 +170,7 @@ VPN na vyžádání můžete konfigurovat pro zařízení s iOSem 8.0 a novějš
   - **Vyhodnotit připojení**, která má tři nastavení. a. **Akce domény** – zvolte **Připojit v případě potřeby** nebo **Nikdy nepřipojovat**.
      b. **Čárkami oddělený seznam domén** – Toto konfigurujete jenom v případě, že zvolíte **Akce domény** v možnosti **Připojit v případě potřeby**. 
      c. **Požadovaný test řetězce adresy URL** – Adresa URL protokolu HTTP nebo HTTPS (upřednostňováno), například *https://vpntestprobe.contoso.com*. Pravidlo zkontroluje, jestli z této adresy přichází odezva. Pokud ne a **Akce domény** je nastavená na **Připojit v případě potřeby**, spustí se VPN.
+      
      > [!TIP]
      >
      >Příkladem použití této akce je situace, kdy některé weby v podnikové síti vyžadují přímé připojení nebo VPN připojení k podnikové síti, ale jiné to nepožadují. Pokud v **Čárkami odděleném seznamu domén pro hledání DNS** uvedete *corp.contoso.com*, můžete zvolit **Připojit v případě potřeby** a potom uvést seznam konkrétních webů v rámci této sítě, které mohou vyžadovat VPN, například *sharepoint.corp.contoso.com*. Pravidlo potom zkontrolujte dostupnost adresy *vpntestprobe.contoso.com*. V případě nedostupnosti se aktivuje VPN pro daný web SharePoint.
@@ -192,9 +194,4 @@ Pravidla pro konkrétní domény se vyhodnocují před pravidly pro všechny dom
 Po úspěšné nasazení se uživatelům zobrazí název připojení VPN, který jste zadali v seznamu připojení VPN na jejich zařízeních.
 
 Shrnutí stavu a výstrahy na stránce **Přehled** v pracovním prostoru **Zásady** identifikují problémy se zásadami, které vyžadují vaši pozornost. Kromě toho se v pracovním prostoru Řídicí panel zobrazí shrnutí stavu.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
