@@ -5,7 +5,7 @@ keywords: co je Intune
 author: Lindavr
 ms.author: lindavr
 manager: angrobe
-ms.date: 11/15/2016
+ms.date: 03/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: pmay
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d0057f1e3d2ead729c2143587571fa4b16a3dd2f
-ms.openlocfilehash: 9b4eed086853c0feeb8266a8087a275f2b70e40f
+ms.sourcegitcommit: 6673c8de8d5deb74005b40a58274efcb10783fcc
+ms.openlocfilehash: ee1f41384df083d6479804ba05c0252d9ba12e1b
+ms.lasthandoff: 03/08/2017
 
 
 ---
@@ -31,7 +32,7 @@ Intune je cloudová služba pro správu mobility velkých organizací (EMM), kte
 * Chránit informace vaší společnosti díky řízení způsobu, jak k nim vaši pracovníci přistupují a jak je sdílejí
 * Zajistit, aby zařízení a aplikace splňovaly požadavky společnosti na zabezpečení
 
-Intune se úzce integruje se službou Azure Active Directory (Azure AD) pro řízení přístupu a identit a se službou Azure Rights Management (Azure RMS) pro ochranu dat. Je *prostředkem pro správu* v rámci řešení Microsoft Enterprise Mobility + Security (EMS), zatímco Office 365 je *prostředkem pro produktivitu* v rámci řešení mobility od Microsoftu.  
+Intune se úzce integruje se službou Azure Active Directory (Azure AD) kvůli řízení přístupu a identit a se službou Azure Information Protection kvůli ochraně dat. Je *prostředkem pro správu* v rámci řešení Microsoft Enterprise Mobility + Security (EMS), zatímco Office 365 je *prostředkem pro produktivitu* v rámci řešení mobility od Microsoftu.  
 
 Dohromady pak Office 365 a EMS vašim pracovníkům umožňují, aby byli produktivní na všech zařízeních, a současně chrání informace vaší organizace. Office 365 s EMS je kompletní integrovaná sada nástrojů pro podnikovou mobilitu, která se zaměřuje na produktivitu, identitu, řízení přístupu, správu a ochranu dat. Nabízí efektivní způsob, jak nasadit a provozovat řešení mobility ve vaší organizaci.
 
@@ -114,9 +115,4 @@ Následující seznam obchodních problémů odkazuje na podrobnější informac
 * Přečtěte si o některých [běžných způsobech použití Intune](common-ways-to-use-intune.md).
 * Seznamte se s tímto produktem [prostřednictvím 30denní zkušební verze Intune](get-started-with-a-30-day-trial-of-microsoft-intune.md).
 * Podrobně se seznamte s [technickými požadavky a možnostmi](/intune/get-started/what-to-know-before-you-start-microsoft-intune) služby Intune.
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

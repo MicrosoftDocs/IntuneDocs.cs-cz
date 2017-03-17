@@ -12,15 +12,15 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: d22f5aea-7be4-419b-b51b-a522ca037b69
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
-ms.openlocfilehash: f80c6e7089519860e822f974753ac9dc0356e055
-ms.lasthandoff: 01/24/2017
+ms.sourcegitcommit: 6673c8de8d5deb74005b40a58274efcb10783fcc
+ms.openlocfilehash: af410079cf7d2ab61eb2a0285e1c410fee4e4463
+ms.lasthandoff: 03/08/2017
 
 
 ---
@@ -47,7 +47,7 @@ Když zaregistrujete zařízení se systémem Android, udělujete správci IT op
 
 -   Vyžadovat, abyste přijali smluvní podmínky.
 
--   Zakázat používání fotoaparátu (jenom v zařízeních Samsung Knox, v zařízeních Nexus to nejde) a znemožnit vám tak pořizovat snímky důvěrných pracovních materiálů, které se nesmí sdílet.
+-   Zakázat fotoaparát (jenom na zařízeních Samsung KNOX, ne na zařízeních Nexus) a znemožnit vám tak pořizovat snímky důvěrných pracovních materiálů, které se nesmí sdílet.
 
 -   Vynutit šifrování všech dat v zařízení a tím je lépe chránit v případě ztráty nebo odcizení zařízení.
 

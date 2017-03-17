@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/03/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
-ms.openlocfilehash: e67ec317b22e18d0be8bca449b9382f74935d6e8
+ms.sourcegitcommit: 0936051b5c33a2e98f275ef7a3a32be2e8f5a8b0
+ms.openlocfilehash: 3b608d42f04b9fce457b6b61587d05ab5d59bb0a
+ms.lasthandoff: 03/10/2017
 
 
 ---
@@ -59,18 +60,28 @@ Další informace o nahrávání a publikování aplikací pro Android najdete v
 
 ## <a name="deploy-an-android-for-work-app"></a>Nasazení aplikace pro Android for Work
 
-Intune se s obchodem Google Play for Work synchronizuje zpravidla dvakrát denně. Pokud jste aplikaci v tomto obchodě schválili, ale ještě ji nevidíte v uzlu **Multilicenční aplikace** pracovního prostoru **Aplikace**, můžete tímto způsobem vynutit okamžitou synchronizaci:
+Pokud jste aplikaci v tomto obchodě schválili, ale ještě ji nevidíte v uzlu **Multilicenční aplikace** pracovního prostoru **Aplikace**, můžete tímto způsobem vynutit okamžitou synchronizaci:
 
 1. V [konzole pro správce Intune](https://manage.microsoft.com) zvolte **Správce** > **Správa mobilních zařízení** > **Android for Work**.
 2. Na stránce **Nastavení správy mobilních zařízení Android for Work** zvolte **Synchronizovat**.
 3. Na této stránce se zobrazuje také čas a stav poslední synchronizace.
 
-Když se aplikace objeví v uzlu **Multilicenční aplikace** pracovního prostoru **Aplikace**, můžete ji [nasadit stejně jako jakoukoli jinou aplikaci](deploy-apps-in-microsoft-intune.md). Tuto aplikaci můžete nasadit jenom skupinám uživatelů. V současnosti můžete vybrat jenom akce **Požadováno** a **Odinstalovat**. Od října 2016 začneme do nových tenantů přidávat akci nasazení **K dispozici**.
+Když se aplikace objeví v uzlu **Multilicenční aplikace** pracovního prostoru **Aplikace**, můžete ji [nasadit stejně jako jakoukoli jinou aplikaci](deploy-apps-in-microsoft-intune.md). Tuto aplikaci můžete nasadit jenom skupinám uživatelů. V současnosti můžete vybrat jenom akce **Požadováno** a **Odinstalovat**.
+
+Možnost nasadit nějakou aplikaci jako **dostupnou** využívá nové prostředí pro vytváření skupin a cílení. Nově zřízené účty Intune budou tuto funkci moci využívat hned po vydání. Stávající zákazníci Intune mohou tuto funkci používat, jakmile bude jejich tenant migrován na Intune Azure Portal. Stávající zákazníci si mohou vytvořit zkušební účet Intune, aby před migrací tenanta mohli tuto funkci naplánovat a otestovat.
 
 Po nasazení se aplikace nainstaluje na zařízení, která jste určili. Uživatel zařízení nebude požádán o schválení.
 
+## <a name="manage-app-permissions"></a>Správa oprávnění aplikací
+Android for Work vyžaduje, abyste aplikace ve webové konzole Play spravované Googlem schválili, než je synchronizujete s Intune a nasadíte koncovým uživatelům.  Protože přes Android for Work můžete nepozorovaně a automaticky nainstalovat tyto aplikace do zařízení uživatelů, musíte oprávnění aplikací schválit za všechny svoje uživatele.  Koncoví uživatelé neuvidí při instalaci žádná oprávnění aplikací, je proto důležité, abyste si tato oprávnění prostudovali a porozuměli jim.
 
+Když vývojář aplikace publikuje novou verzi aplikace s aktualizovanými oprávněními, nejsou tato oprávnění přijata automaticky, i když jste dřívější oprávnění schválili. Zařízení, na kterých je starší verze této aplikace, ji mohou pořád používat, ale tato aplikace se neupgraduje, dokud se nová oprávnění neschválí. Do zařízení, ve kterých tato aplikace není nainstalovaná, nejde aplikace nainstalovat, dokud neschválíte její nová oprávnění.
 
-<!--HONumber=Feb17_HO1-->
+### <a name="how-to-update-app-permissions"></a>Jak aktualizovat oprávnění aplikace
 
+Měli byste pravidelně navštěvovat spravovanou konzolu Google Play a zjišťovat nová oprávnění. Pokud nasadíte nějakou aplikaci a zjistíte, že není nainstalovaná na všech zařízeních, zkontrolujte následujícím postupem nová oprávnění:
+
+1. Navštivte stránku http://play.google.com/work.
+2. Přihlaste se pod účtem Google, který jste použili k publikování a schválení aplikací.
+3. Přejděte na kartu **Aktualizace** a zjistěte, jestli některé aplikace vyžadují aktualizaci.  Všechny zde uvedené aplikace vyžadují nová oprávnění a nenasadí se, dokud je neschválíte.  
 

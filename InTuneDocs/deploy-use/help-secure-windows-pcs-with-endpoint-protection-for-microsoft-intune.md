@@ -4,8 +4,8 @@ description: "Chraňte své spravované počítače pomocí služby Endpoint Pro
 keywords: 
 author: nathbarn
 ms.author: nathbarn
-manager: angrobe
-ms.date: 01/31/2017
+manager: arob98
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 6e2658cdfcd0b78a254c375fe39b67f7ef9afad6
-ms.lasthandoff: 12/10/2016
+ms.sourcegitcommit: 6673c8de8d5deb74005b40a58274efcb10783fcc
+ms.openlocfilehash: 7f94d420529ff365504b2bb053d034cf36d30953
+ms.lasthandoff: 03/08/2017
 
 
 ---
@@ -172,11 +172,12 @@ Stav malwaru na počítačích se sleduje pomocí pracovního prostoru **Ochrana
 ### <a name="how-to-view-recent-detection-paths-for-malware-on-computers"></a>Jak zobrazit nedávné cesty zjišťování malwaru na počítačích
 Intune může v zařízení zobrazit cesty až 10 naposledy zjištěných instancí malwaru. Možnost **Nedávno kontrolované cesty** je ve výchozím nastavení vypnutá. Postup pro zapnutí tohoto zobrazení:
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) vyberte **Skupiny** > **Všechna zařízení** > **Malware**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Skupiny** > **Všechna zařízení** > **Všechny počítače**.
+2. Klikněte pravým tlačítkem na počítač, jehož nedávno kontrolované cesty chcete zobrazit, a vyberte **Vlastnosti**.
+3. Na kartách podél horního okraje zvolte **Malware**.
 
-2.  Klikněte pravým tlačítkem myši na záhlaví sloupce. Zobrazí se seznam dostupných sloupců.
-
-3.  V seznamu zaškrtněte políčko **Nedávno kontrolované cesty**. Zobrazí se sloupec **Nedávno kontrolované cesty** , ve kterém bude uvedeno až 10 posledních instancí malwaru zjištěných na zařízení.
+   ![Vyberte kartu Malware a zaškrtněte políčko Nedávno kontrolované cesty.](../media/malware-path-column.png)
+4. Klikněte pravým tlačítkem na záhlaví sloupce. Zobrazí se seznam dostupných sloupců. V seznamu zaškrtněte políčko **Nedávno kontrolované cesty**. Zobrazí se sloupec **Nedávno kontrolované cesty** , ve kterém bude uvedeno až 10 posledních instancí malwaru zjištěných na zařízení.
 
 ## <a name="run-a-malware-scan-or-update-malware-definitions-on-a-computer"></a>Spuštění kontroly malwaru nebo aktualizace definic malwaru na počítači
 Intune může na vzdáleném spravovaném počítači, na kterém je nainstalovaný klient Intune, spustit úplnou nebo rychlou kontrolu malwaru pomocí služby Endpoint Protection nebo programu Windows Defender.
@@ -184,9 +185,6 @@ Intune může na vzdáleném spravovaném počítači, na kterém je nainstalova
 1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) přejděte na **Skupiny** > **Přehled** > **Všechna zařízení** > **Všechny počítače** a vyberte počítač, na který chcete cílit.
 
 2. Klikněte na rozevírací seznam **Vzdálené úlohy** a vyberte úlohu, která se má spustit ve vzdáleném počítači.
-
-
-
 
 ## <a name="need-more-help"></a>Potřebujete další pomoc?
 Další pomoc a podporu najdete v tématu [Řešení potíží se službou Endpoint Protection v Microsoft Intune](/intune/troubleshoot/troubleshoot-endpoint-protection-in-microsoft-intune).

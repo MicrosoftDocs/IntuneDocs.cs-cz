@@ -15,8 +15,9 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ad13897fe7bbe4fe13167bb4ce7f558b436a7a90
-ms.openlocfilehash: 1b14ec6330c512981025a2910dbd222fa4d7cf7f
+ms.sourcegitcommit: d8cb15d1b8c1c100f15084e43d2c3c4633fd64b5
+ms.openlocfilehash: 434eea4244931f0708eb05cfc39d0c97b4936830
+ms.lasthandoff: 03/09/2017
 
 
 ---
@@ -30,7 +31,7 @@ V tomto tématu najdou správci informace o tom, jak můžou v Intune vytvořit 
 
 Skupiny v Intune poskytují flexibilitu pro správu zařízení a uživatelů. Můžete nastavit skupiny podle potřeb vaší organizace (třeba podle zeměpisné polohy, oddělení nebo vlastností hardwaru) a použít je k provádění široké škály úloh správy od nasazení zásad pro víc uživatelů až po nasazení aplikací na skupinu zařízení.
 
-## <a name="group-management-moving-to-azure-ad"></a>Přesunutí správy služeb do Azure AD
+## <a name="group-management-moving-to-azure-ad"></a>Přesunutí správy skupin do Azure AD
 
 **Od listopadu 2016** budou nové účty spravovat skupiny uživatelů a zařízení na portálu Azure Active Directory (AD). V prosinci 2016 začne produktový tým Intune s migrací stávajících zákazníků na novou správu na základě skupin Azure AD. Všechny skupiny uživatelů a zařízení budou migrovány na skupiny zabezpečení služby Azure AD. Migraci zahájíme až ve chvíli, kdy co nejvíce minimalizujeme veškerý dopad, který by mohla mít na vaši každodenní práci. Očekáváme, že na vaše uživatele nebude mít dopad žádný. Před zahájením migrace vašeho účtu vám navíc pošleme upozornění.
 
@@ -87,9 +88,4 @@ Nově vytvořenou skupinu najdete v seznamu **Skupiny** v pracovním prostoru **
 >[!div class="step-by-step"]
 
 >[&larr; **Správa licencí Intune**](.\start-with-a-paid-subscription-to-microsoft-intune-step-4.md)       [**Vytváření zásad a aplikací** &rarr;](.\start-with-a-paid-subscription-to-microsoft-intune-step-6.md)  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

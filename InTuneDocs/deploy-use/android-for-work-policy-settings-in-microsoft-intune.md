@@ -16,8 +16,9 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
-ms.openlocfilehash: b95f7dbf37a159a62894ae27d1fdb731ede5570c
+ms.sourcegitcommit: 02c844a5b38023a6dfc6c4ef1de81e1416601fba
+ms.openlocfilehash: b0c3520c7c1fd29a631587fe1a69d4c411099cb4
+ms.lasthandoff: 03/07/2017
 
 
 ---
@@ -58,7 +59,7 @@ Pokud se v tomto tématu nezobrazí nastavení, které hledáte, je možné, že
 |----------------|-|
 |**Povolit sdílení dat mezi pracovními a osobními profily**|Umožňuje aplikacím v pracovním profilu sdílet data s aplikacemi v osobním profilu uživatele. Vybírejte z těchto možností:<br><br>- **Zakázat sdílení přes hranice**<br>- **Aplikace v pracovním profilu můžou zpracovat žádost o sdílení z osobního profilu**<br>- **Žádná omezení sdílení**|
 |**Skrýt oznámení z pracovního profilu, když je zařízení zamčené**<br>(Android 6 a novější)|Určuje, jestli se mají zobrazit oznámení z pracovního profilu, když je zařízení zamčené.|
-|**Nastavit zásady pro výchozí oprávnění aplikací**<br>(Android 6 a novější)|Umožňuje nastavit zásady výchozích oprávnění pro všechny aplikace v pracovním profilu.|
+|**Nastavit zásady pro výchozí oprávnění aplikací**<br>(Android 6 a novější)|Umožňuje nastavit zásady výchozích oprávnění pro všechny aplikace v pracovním profilu. Od verze Android 6 se výzvy k povolení některých oprávnění vyžadovaných aplikacemi zobrazují koncovému uživateli při jejich používání.  Nastavení této zásady umožňuje IT oddělení určit, jak nebo jestli se uživatelům zobrazí výzvy k udělení oprávnění aplikacím v pracovním profilu. <br/><br/>IT oddělení může například nainstalovat do pracovního profilu aplikaci, která vyžaduje přístup k poloze.  Normálně by tato aplikace zobrazila uživateli dialog s otázkou, jestli chce této aplikaci udělit přístup k poloze, a uživatel by ji schválil nebo zamítl.  Pomocí této zásady může IT oddělení určit, jestli se všechna oprávnění mají automaticky udělit bez výzvy, automaticky odepřít bez výzvy, nebo jestli to má rozhodnout uživatel.|
 
 
 ## <a name="custom-policy-settings"></a>Nastavení vlastních zásad
@@ -91,9 +92,4 @@ Intune v současnosti podporuje omezený počet vlastních zásad Androidu. Poku
 
 ### <a name="see-also"></a>Viz taky
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

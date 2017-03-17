@@ -15,9 +15,9 @@ ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 526830839aa801a7ac78aeb4baaa790d6bb5da5c
-ms.openlocfilehash: 8f43dc529b2da2c97500c03056ba7908bb8ab0fa
-ms.lasthandoff: 01/28/2017
+ms.sourcegitcommit: 5726934501b3d6b243de94951cf0c57cbd79a811
+ms.openlocfilehash: ccc0502c81cb16d2ca13e5d6a702c0ff863b83e4
+ms.lasthandoff: 03/09/2017
 
 
 ---
@@ -42,15 +42,13 @@ Zeptejte se technických odborníků Microsoftu nebo s nimi zahajte diskusi. Odp
 
 ### <a name="microsoft-intune-uservoice-product-feedback-site"></a>Web pro zasílání názorů na produkt Microsoft Intune UserVoice
 
-Máte nápad, jak by Microsoft mohl Intune ještě více vylepšit? Svoje nápady můžete přidávat na webu pro zasílání názorů na Microsoft Intune [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas). Také můžete hlasovat o nápadech, které k produktu UserVoice přidali ostatní. 
+Máte nápad, jak by Microsoft mohl Intune ještě více vylepšit? Svoje nápady můžete přidávat na webu pro zasílání názorů na Microsoft Intune [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas). Také můžete hlasovat o nápadech, které k produktu UserVoice přidali ostatní.
 
 ![Stránka Microsoft Intune UserVoice pro zasílání názorů](./media/intune-uservoice-feedback-page.png)
 
-## <a name="create-an-online-support-ticket"></a>Vytvoření lístku online podpory
+## <a name="create-a-support-ticket"></a>Vytvoření lístku podpory
 
-Pokud nemůžete najít odpovědi sami, můžete vytvořit lístek online podpory.
-
-**V každém lístku podpory prosím zadávejte jen jeden problém**, abychom vám mohli lépe pomoci. Důvody jsou následující:
+Pokud nemůžete najít odpovědi sami, můžete vytvořit lístek online podpory. **V každém lístku podpory prosím zadávejte jen jeden problém**, abychom vám mohli lépe pomoci. Důvody jsou následující:
 
 - Inženýři podpory, kteří poskytují pomoc při řešení problémů, se specializují na určité oblasti a je pak jednodušší určit ty správné odborníky na danou problematiku, kteří vám pomohou.
 - Vývojové týmy můžou upřednostnit práci v těch oblastech produktu, kde se generuje nejvíce incidentů.
@@ -58,12 +56,15 @@ Pokud nemůžete najít odpovědi sami, můžete vytvořit lístek online podpor
 
 Než vytvoříte lístek podpory, seznamte se prosím s [definicí incidentu podpory](#definition-of-a-support-incident).
 
-**Vytvoření lístku online podpory:**
+### <a name="steps-to-create-an-online-support-ticket"></a>Postup vytvoření lístku online podpory
 
 1.  Přihlaste se k [Centru pro správu Office 365](https://portal.office.com) pomocí svých přihlašovacích údajů Intune.
+
+    Pokud patříte mezi zákazníky se smlouvou Premier Support, měli byste lístek podpory služby Intune otevřít na [stránce podpory Premier](https://support.microsoft.com/en-us/premier/contacts).
+
     >[!NOTE]
     >
-    >Zákazníci se smlouvou Premier Support můžou otevřít lístek podpory služby Intune na [stránce podpory Premier](https://support.microsoft.com/en-us/premier/contacts).
+    >Zákazníci se smlouvou Premier Support by měli lístek podpory služby Intune otevřít na [stránce podpory Premier](https://support.microsoft.com/en-us/premier/contacts).
 
 2.  Zvolte dlaždici **Správce**.
 3.  Pokud chcete otevřít lístek, zvolte na levé straně v části **Podpora** možnost **Podpora**.
@@ -84,9 +85,9 @@ Než vytvoříte lístek podpory, seznamte se prosím s [definicí incidentu pod
 
 3.  Podle pokynů otevřete požadavek.
 
-### <a name="create-a-support-ticket-with-alternate-methods"></a>Jiné metody vytvoření lístku podpory
+### <a name="steps-to-create-a-support-ticket-with-alternate-methods"></a>Postup vytvoření lístku podpory jinými metodami
 
-Pokud vaše stránka podpory vypadá takto, postupujte podle následujících pokynů:
+Pokud vaše stránka podpory v Centru pro správu Office 365 vypadá takto, použijte tento postup:
 
 ![Jiné možnosti podpory pro službu Intune](../media/alternate-support-ui.png)
 
@@ -102,30 +103,30 @@ Pokud vaše stránka podpory vypadá takto, postupujte podle následujících po
 V tématu [Kontaktujte odbornou telefonickou pomoc pro Microsoft Intune](contact-assisted-phone-support-for-microsoft-intune.md) najdete seznam telefonních čísel podpory podle zemí a oblastí, pracovní dobu podpory a podporované jazyky pro každou oblast.
 
 ## <a name="track-your-support-requests"></a>Sledování žádostí o podporu
-1.  Přihlaste se k [Centru pro správu Office 365](https://portal.office.com) pomocí svých přihlašovacích údajů Intune.
+1.  Přihlaste se k [Centru pro správu Office 365](https://portal.office.com) pomocí přihlašovacích údajů správce Intune.
 2.  Zvolte dlaždici **Správce**.
 3.  Na levé straně v části **Podpora** zvolte možnost **Žádosti o služby**. Potom můžete zkontrolovat své žádosti.
 
-Naše prvotní reakce na žádosti o podporu závisí na závažnosti problému. U nejzávažnějších problémů je naše první reakce pro zákazníky se smlouvou Professional do dvou hodin. Pro zákazníky se smlouvou Premier Support se reakce liší podle smlouvy o podpoře. Jedná se o tyto případy:
+Naše prvotní reakce na žádosti o podporu závisí na závažnosti problému. U nejzávažnějších problémů je naše první reakce pro zákazníky se smlouvou Professional do dvou hodin. Pro zákazníky se smlouvou Premier Support se reakce liší podle smlouvy o podpoře. Případ má **nejvyšší závažnost**, pokud:
 
 - Jedna nebo více služeb jsou nedostupné nebo nepoužitelné.
 - Produkce, provoz nebo termíny nasazení jsou vážně ohrožené, případně hrozí vážný dopad na produkci nebo ziskovost.
 - Je zasaženo víc uživatelů nebo služeb.
 
-U středně závažných problémů je naše první reakce pro zákazníky se smlouvou Professional do čtyř hodin. Pro zákazníky se smlouvou Premier Support se reakce liší podle smlouvy o podpoře.  Jedná se o tyto případy:
+U středně závažných problémů je naše první reakce pro zákazníky se smlouvou Professional do čtyř hodin. Pro zákazníky se smlouvou Premier Support se reakce liší podle smlouvy o podpoře. Případ má **střední závažnost**, pokud:
 
 - Služba je použitelná, ale nepracuje tak dobře, jak je obvyklé.
 - Situace má střední dopad na chod firmy a jde ji vyřešit během provozní doby.
 - Je částečně zasažený jeden uživatel, zákazník nebo služba.
 
-U ostatních typů problémů je naše první reakce pro zákazníky se smlouvou Professional do osmi hodin. Pro zákazníky se smlouvou Premier Support se reakce liší podle smlouvy o podpoře.  Jedná se o tyto případy:
+U jiných problémů dojde k první reakci se zákazníky se smlouvou Professional do osmi hodin. Pro zákazníky se smlouvou Premier Support se reakce liší podle smlouvy o podpoře. Případ má nejnižší závažnost, pokud:
 
 - Situace má minimální dopad na chod firmy.
 - Problém je důležitý, ale pro zákazníka nemá okamžitý významný dopad na služby nebo produktivitu.
 - U jednoho uživatele dochází k částečnému narušení služby, ale existuje přijatelné alternativní řešení.
 
 > [!NOTE]
-> **Pokud používáte Microsoft System Center Configuration Manager** nebo **Microsoft System Center Endpoint Protection:** Technickou podporu pro Configuration Manager nebo Endpoint Protection získáte od svého partnera, případně přejděte do [Centra řešení Microsoft System Center Configuration Manager a System Center Endpoint Protection](http://www.microsoft.com/en-us/server-cloud/products/system-center-2012-r2/resources.aspx), kde najdete řadu materiálů pro svépomocné řešení. Nabízí také možnost otevření žádosti o podporu online nebo po telefonu.
+> **Pokud používáte Microsoft System Center Configuration Manager** nebo **Microsoft System Center Endpoint Protection:** Technickou podporu pro Configuration Manager nebo Endpoint Protection získáte od svého partnera, případně přejděte k dokumentaci pro [Microsoft System Center Configuration Manager](https://docs.microsoft.com/sccm/) a [Endpoint Protection](https://technet.microsoft.com/en-us/library/hh508836.aspx), kde najdete řadu materiálů pro svépomoc. Nabízí také možnost otevření žádosti o podporu online nebo po telefonu.
 >
 > Technická podpora pro System Center Configuration Manager nebo System Center Endpoint Protection vyžaduje buď platbu nebo se odečte od stávajících licenčních smluv nebo smluv Premier Support.
 
