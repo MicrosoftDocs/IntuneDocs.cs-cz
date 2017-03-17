@@ -13,8 +13,9 @@ ms.technology:
 ms.assetid: 03b69afa-3548-4033-9039-191528f3fd99
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: dd4c8f1d810338912b4926be8419ccf9a52ae722
-ms.openlocfilehash: 8d3900da91c89700b97d8774f893d82d3a74ea83
+ms.sourcegitcommit: 911d2887791cf16d4290c3ac5189aa44086f4603
+ms.openlocfilehash: d3b4b823683196148d4fb8aa296b59c9c712e99f
+ms.lasthandoff: 03/11/2017
 
 
 ---
@@ -88,17 +89,6 @@ Atributy jsou vlastnosti zařízení, které se dají použít při definování
 
 ## <a name="what-happens-to-policies-and-apps-youve-already-deployed"></a>Co se stane se zásadami a aplikacemi, které jste už nasadili?
 
-Zásady a aplikace jsou i nadále nasazené do skupin, stejně jako dříve. Tyto skupiny teď ovšem budete spravovat z portálu Azure Portal namísto z klasické konzoly Intune.
-
-
-## <a name="how-to-get-more-information"></a>Jak získat více informací
-
-Kontaktujte náš tým migrace na [intunegrps@microsoft.com](mailto:intunegrps@microsoft.com).    
-     
-
-
-
-
-<!--HONumber=Dec16_HO4-->
-
+Zásady a aplikace jsou i nadále nasazené do skupin, stejně jako dříve. Tyto skupiny teď ovšem budete spravovat z portálu Azure Portal místo z konzoly Intune Classic.
+ 
 

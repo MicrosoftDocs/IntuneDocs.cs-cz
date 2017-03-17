@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 01/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -18,9 +18,9 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
-ms.openlocfilehash: 16d970e13bfac29460bab885188f45df1202a4d9
-ms.lasthandoff: 01/24/2017
+ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
+ms.openlocfilehash: 075435a190fba28d548b1fa54ba7bafeec3ba217
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -44,5 +44,5 @@ Pokud je vaše zařízení nastavené jenom tak, aby mohlo přijímat firemní e
 
 Návod ke zrušení registrace najdete v tématu [Zrušení registrace zařízení v Intune pomocí aplikace Portál společnosti](unenroll-your-device-from-intune-android.md).
 
-Potřebujete pomoc? Obraťte se na správce IT (kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište [týmu Microsoft Android](mailto:wintunedroidfbk@microsoft.com).
+Potřebujete pomoc? Obraťte se na správce IT (kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I have questions about unenrolling my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.
 

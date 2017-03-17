@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 03/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -18,13 +18,12 @@ ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 6da5f6a3b017a93446011f8d59e73a4ea7730196
-ms.lasthandoff: 12/10/2016
+ms.sourcegitcommit: 499ec16ffa04ec6c5d1fff829729fddc3f74a02b
+ms.openlocfilehash: ee43647190da705581eaa5a266db3712391e06f2
+ms.lasthandoff: 03/16/2017
 
 
 ---
-
 
 # <a name="use-managed-apps-on-your-ios-device"></a>Použití spravovaných aplikací na zařízení s iOSem
 
@@ -63,7 +62,6 @@ Tady jsou některé příklady možností, které může správce IT spravovat v
 -   Schopnost pořizovat snímky obrazovky
 
 -   Požadavky na šifrování dat
-
 
 Další informace o spravovaných aplikacích na vašem zařízení vám poskytne správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 

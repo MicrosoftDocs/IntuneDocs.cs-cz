@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/14/2017
+ms.date: 03/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -18,9 +18,9 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: cd5d97ec4524477fe6ac08a863eaf5cc03913e50
-ms.openlocfilehash: 53062067c250434b65911c47b8c2eda052a353c3
-ms.lasthandoff: 02/21/2017
+ms.sourcegitcommit: cddeb6bf854b9ffbbc1744d5d164c8ceea34ff49
+ms.openlocfilehash: 54bb8e68ac4435d2ae687f27317445cd18c7a5db
+ms.lasthandoff: 03/10/2017
 
 
 ---
@@ -37,6 +37,7 @@ Některé problémy se zařízením s iOSem, které se vám může podařit vyř
 - [Jak na zařízení najdu sériové číslo?](how-do-i-find-the-serial-number-on-my-device-ios.md)
 - [Potřebuji aktualizovat zařízení s iOSem](you-need-to-update-your-ios-device.md)
 - [Moje verze iOSu ještě není podporovaná](your-ios-version-isnt-yet-supported.md)
+- [Odeslání protokolů správci IT pomocí e-mailu](send-logs-to-your-it-admin-by-email-iOS.md)
 - [Potřebuji si na zařízení s iOSem nainstalovat aplikaci Lookout for Work](you-are-prompted-to-install-lookout-for-work-ios.md)
 - [Potřebuji vyřešit hrozbu, kterou aplikace Lookout for Work objevila na mém zařízení s iOSem](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
 
