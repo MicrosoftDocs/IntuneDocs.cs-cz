@@ -120,6 +120,7 @@
 
 ## [Přidání aplikací](deploy-use/add-apps.md)
 ### [Přidání aplikací pro zaregistrovaná zařízení](deploy-use/add-apps-for-mobile-devices-in-microsoft-intune.md)
+### [Instalace aplikací pro Windows bokem](deploy-use/sideload-apps-for-windows.md)
 ### [Přidání aplikací pro klientské počítače Intune](deploy-use/add-apps-for-windows-pcs-in-microsoft-intune.md)
 #### [Správa licenčních smluv pro klientské počítače Intune](deploy-use/manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)
 ## [Nasazení aplikací](deploy-use/deploy-apps.md)
@@ -136,7 +137,6 @@
 ### [Zásady konfigurace aplikací pro Android for Work](deploy-use/afw-app-configuration-policy.md)
 ### [Profily zřizování mobilních aplikací pro iOS](deploy-use/ios-mobile-app-provisioning-profiles.md)
 ### [Správa přístupu k internetu](deploy-use/manage-internet-access-using-managed-browser-policies.md)
-### [Instalace obchodních aplikací bokem (mimo Store)](deploy-use/sideload-apps-for-windows.md)
 
 ## [Ochrana aplikací a dat](deploy-use/protect-apps-and-data-with-microsoft-intune.md)
 ### [Zásady dodržování předpisů pro zařízení](deploy-use/introduction-to-device-compliance-policies-in-microsoft-intune.md)

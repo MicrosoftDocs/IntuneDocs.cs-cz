@@ -169,6 +169,8 @@
 ### [Vytvoření zásad dodržování předpisů pro Android for Work](set-device-compliance/create-a-compliance-policy-for-android-for-work.md)
 ### [Vytvoření zásad dodržování předpisů pro iOS](set-device-compliance/create-a-compliance-policy-for-ios.md)
 ### [Vytvoření zásad dodržování předpisů pro Windows](set-device-compliance/create-a-compliance-policy-for-windows.md)
+### [Vytvoření akcí při nedodržení předpisů](set-device-compliance/actions-for-noncompliance.md)
+### [Monitorování dodržování zásad v zařízeních](set-device-compliance/monitor-intune-device-compliance-policies.md)
 <!--- ### [Monitor device compliance](set-device-compliance/monitor-device-compliance.md)--->
 
 
