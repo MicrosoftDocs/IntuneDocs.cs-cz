@@ -15,9 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 7ac6041fb33f95e5b0c53b81c2af9aef42767a38
-ms.openlocfilehash: 115a27512930fa995a2781afc8a94c1d7f97958e
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 9894fdb696f4e010e176efc47068827bddaf7d4e
+ms.openlocfilehash: 8c84703828db3c5da2aa88fa3dc16329f3a4a1e1
+ms.lasthandoff: 03/04/2017
 
 
 ---
@@ -57,6 +57,13 @@ Tyto podmínky lze zobrazit pro každé zařízení v portálu pro správu Azure
      -     Zařízení s iOSem můžou uváznout ve stavu kontroly dodržování předpisů bránit uživateli v inicializaci jiné kontroly. Restartování Portálu společnosti může problém vyřešit a stav dodržování předpisů bude odrážet stav zařízení v Intune. Po shromáždění všech dat ze synchronizace zařízení je kontrola dodržování předpisů rychlá a trvá v průměru méně než půl sekundy.
 
         Obvyklým důvodem toho, že zařízení zůstanou v tomto stavu, jsou potíže s připojením ke službě nebo dlouhotrvající synchronizace.  Pokud potíže přetrvávají v různých síťových konfigurací (mobilní, Wi-Fi, VPN) i po restartech zařízení a po ověření, že zprostředkovatel SSP je v zařízení aktuální, obraťte se na podporu Microsoftu podle popisu v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+
+ - Zařízení s Androidem:
+     - Některá zařízení s Androidem můžou působit jako zašifrovaná, ale aplikace Portál společnosti tato zařízení rozpozná jako nezašifrovaná. 
+    
+        -    Zařízení, která jsou v tomto stavu, vyžadují, aby uživatel nastavil bezpečné heslo pro spuštění. Uživateli se zobrazí oznámení aplikace Portál společnosti s výzvou k nastavení hesla pro spuštění zařízení. Po klepnutí na oznámení a potvrzení stávajícího PIN kódu nebo hesla zvolte na obrazovce **Zabezpečené spouštění** možnost **Požadovat PIN pro spuštění zařízení**. Pak v aplikaci Portál společnosti klepněte na tlačítko **Zkontrolovat dodržování předpisů** pro dané zařízení. Zařízení by se teď mělo rozpoznat jako zašifrované.
+    
+        -     Někteří výrobci zařízení používají k zašifrování svých zařízení místo tajného PIN kódu nastaveného uživatelem výchozí PIN. Intune považuje šifrování pomocí výchozího PIN kódu jako nezabezpečené, protože tato metoda šifrování dat na zařízení představuje riziko, pokud uživatelé se zlými úmysly mají fyzický přístup k danému zařízení. V případě tohoto problému zvažte použití [zásad ochrany aplikací](https://docs.microsoft.com/en-us/intune/deploy-use/azure-portal-for-microsoft-intune-mam-policies).
 
 ## <a name="policy-issues"></a>problémy se zásadami;
 
