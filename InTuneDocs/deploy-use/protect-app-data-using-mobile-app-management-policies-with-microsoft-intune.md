@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: fbb41a8cf6fada76b72213b8cb04fdc0428515e9
 ms.openlocfilehash: 651899219458f799e26ed7957ccef97d7ae2af09
+ms.lasthandoff: 02/14/2017
 
 
 ---
@@ -36,8 +37,8 @@ Zásady ochrany aplikací můžete konfigurovat pro aplikace běžící na zař�
 
 -   **Zaregistrovaná v řešení MDM třetí strany:** Do této kategorie obvykle spadají zařízení vlastněná společností.
 
-  > [!NOTE]
-  > Zásady ochrany aplikací nedoporučujeme používat s řešeními pro správu mobilních aplikací třetích stran nebo s řešeními zabezpečeného kontejneru.
+      > [!NOTE]
+      > Zásady ochrany aplikací nedoporučujeme používat s řešeními pro správu mobilních aplikací třetích stran nebo s řešeními zabezpečeného kontejneru.
 
 -   **Nezaregistrovaná v žádném řešení MDM:** Do této kategorie obvykle spadají zařízení vlastněná zaměstnanci, která nejsou spravovaná ani zaregistrovaná v Intune nebo jiných řešeních MDM.
 
@@ -133,9 +134,4 @@ Všechny mobilní aplikace Office podporují přístup pomocí více identit.
 - [Příprava ke konfiguraci zásad ochrany aplikací](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 
 - [Vytvoření a nasazení zásad ochrany aplikací pomocí Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
