@@ -74,7 +74,7 @@ Na rozdíl od jiných zásad služby Intune se zásady podmíněného přístupu
 2. [Vytvořte zásady dodržování předpisů pro zařízení](create-a-device-compliance-policy-in-microsoft-intune.md).
 
 2.  Vytvořte zásady podmíněného přístupu pro jednu z následujících cloudových služeb nebo produktů Microsoftu:
-> [!div class="op_single_selector"]
+
   - [Vytvoření zásady podmíněného přístupu pro Exchange Online](restrict-access-to-exchange-online-with-microsoft-intune.md)
   - [Vytvoření zásady podmíněného přístupu pro místní Exchange](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
   - [Vytvoření zásady podmíněného přístupu pro novou verzi Exchange Online Dedicated](restrict-access-to-exchange-online-with-microsoft-intune.md)
