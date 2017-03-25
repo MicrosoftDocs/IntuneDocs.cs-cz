@@ -16,9 +16,9 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: b7188dd8163334429396e7b7c8687810a6e63bb2
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
+ms.openlocfilehash: b664620f424f9ef612d17beb810564dbdd68ff79
+ms.lasthandoff: 03/22/2017
 
 
 ---
@@ -31,13 +31,13 @@ Intune umožňuje spravovat zařízení s Androidem včetně zařízení použí
 
 ## <a name="prerequisite"></a>Předpoklad
 
-Při přípravě na správu mobilních zařízení musíte nastavit autoritu MDM na **Microsoft Intune**. Pokyny k tomu najdete v článku [Nastavení autority MDM](set-mdm-authority.md). Tato možnost se nastavuje jenom jednou při prvním nastavování Intune pro správu mobilních zařízení, takže je možné, že ji už máte nastavenou. 
+Při přípravě na správu mobilních zařízení musíte nastavit autoritu MDM na **Microsoft Intune**. Pokyny k tomu najdete v článku [Nastavení autority MDM](set-mdm-authority.md). Tato možnost se nastavuje jenom jednou při prvním nastavování Intune pro správu mobilních zařízení, takže je možné, že ji už máte nastavenou.
 
 ## <a name="set-up-android-enrollment"></a>Nastavení registrace zařízení s Androidem
 
-Standardně už je služba Intune nastavená tak, aby umožňovala registraci zařízení používajících Android a Samsung Knox Standard. 
+Standardně už je služba Intune nastavená tak, aby umožňovala registraci zařízení používajících Android a Samsung Knox Standard.
 
-Pokud chcete blokovat registraci zařízení s Androidem nebo blokovat jenom zařízení s Androidem v osobním vlastnictví, přečtěte si téma [Nastavení omezení typu zařízení](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-type-restrictions). 
+Pokud chcete blokovat registraci zařízení s Androidem nebo blokovat jenom zařízení s Androidem v osobním vlastnictví, přečtěte si téma [Nastavení omezení typu zařízení](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-type-restrictions).
 
 Jestliže chcete nastavit maximální počet zařízení, která může uživatel zaregistrovat, přečtěte si téma [Nastavení omezení limitu počtu zařízení](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-limit-restrictions).
 
@@ -45,9 +45,10 @@ Jestliže chcete nastavit maximální počet zařízení, která může uživate
 
 Budete muset říct koncovým uživatelům, že mají přejít na web Google Play a stáhnout si aplikaci Portál společnosti služby Intune a pak aplikaci otevřít a zaregistrovat svá zařízení podle pokynů. Aplikace provede uživatele procesem registrace a zobrazí informace o tom, co můžou očekávat a co uvidí nebo neuvidí správci IT na svých zařízeních.
 
-Uživatelům také můžete poslat odkaz na postup online registrace: [Zaregistrujte svoje zařízení se systémem Android v Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-android). 
+Uživatelům také můžete poslat odkaz na postup online registrace: [Zaregistrujte svoje zařízení se systémem Android v Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-android).
 
 Informace o dalších úlohách koncových uživatelů najdete v článcích:
 
-- [Materiály o prostředí Microsoft Intune pro koncové uživatele](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)
+- [Materiály o prostředí Microsoft Intune pro koncové uživatele](https://docs.microsoft.com/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune)
 - [Použití zařízení Android s Intune](https://docs.microsoft.com/intune/enduser/using-your-android-device-with-intune)
+

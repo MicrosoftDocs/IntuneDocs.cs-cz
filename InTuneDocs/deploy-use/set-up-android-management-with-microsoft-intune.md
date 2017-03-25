@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 01/29/2017
+ms.date: 03/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: lacranda
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 6b99854e17e00a0dd0f91fa82fd1b79d1dfe5663
-ms.openlocfilehash: 8e2588e2bb0537877f0164bc996fa973f25ea4dd
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 86fd9d7212277f9524eb4d7f225df2c7beda1313
+ms.openlocfilehash: a5a4f11ae341480b2e674ca55a514b62831bdd60
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -38,11 +38,11 @@ Zařízení s Androidem se standardně můžou registrovat do Intune. Pokud chce
 
 3.  **Informujte uživatele, jak můžou svá zařízení zaregistrovat, aby získali přístup k firemním prostředkům.**
 
-    Postup registrace koncových uživatelů najdete v tématu [Registrace zařízení s Androidem v Intune](../enduser/enroll-your-device-in-intune-android.md). Proces registrace uživatele informuje, co můžou očekávat a co správci IT na jejich zařízeních uvidí a neuvidí.
+    Postup registrace koncových uživatelů najdete v tématu [Registrace zařízení s Androidem v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-android). Proces registrace uživatele informuje, co můžou očekávat a co správci IT na jejich zařízeních uvidí a neuvidí.
 
     Informace o dalších úlohách koncových uživatelů najdete v článcích:
   - [Materiály o prostředí Microsoft Intune pro koncové uživatele](how-to-educate-your-end-users-about-microsoft-intune.md)
-  - [Pokyny pro koncové uživatele zařízení s Androidem](../enduser/using-your-android-device-with-intune.md)
+  - [Pokyny pro koncové uživatele zařízení s Androidem](https://docs.microsoft.com/intune-user-help/using-your-android-device-with-intune)
 
 Vzhledem k absenci obchodu Google Play v Číně musí zařízení s Androidem získávat Portál společnosti z čínských marketplace aplikací. Aplikace Portál společnosti pro Android bude dostupná ke stažení v těchto obchodech:
 * [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
