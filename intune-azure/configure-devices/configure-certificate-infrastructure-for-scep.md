@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 8f713769e0b8a13e91e6d9991e4e7415e1da22a2
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
+ms.openlocfilehash: ea910594195313978d6defae529a526bc0310022
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="configure-certificate-infrastructure-for-scep-in-microsoft-intune"></a>Konfigurace infrastruktury certifikátů pro SCEP v Microsoft Intune
@@ -54,7 +54,7 @@ Z hraniční sítě do důvěryhodné sítě povolte všechny porty a protokoly 
 Doporučujeme publikování serveru NDES prostřednictvím proxy serveru, jako je například [Azure AD Application Proxy](https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-publish/), [Web Access Proxy](https://technet.microsoft.com/en-us/library/dn584107.aspx) nebo proxy server jiného výrobce.
 
 
-### <a name="a-namebkmkcertsandtemplatesacertificates-and-templates"></a><a name="BKMK_CertsAndTemplates"></a>Certifikáty a šablony
+### <a name="BKMK_CertsAndTemplates"></a>Certifikáty a šablony
 
 |Objekt|Podrobnosti|
 |----------|-----------|
@@ -63,13 +63,13 @@ Doporučujeme publikování serveru NDES prostřednictvím proxy serveru, jako j
 |**Ověřovací certifikát serverů**|Tento certifikát SSL vyžádaný z vaší vydávající certifikační autority nebo veřejné certifikační autority nainstalujte a připojte ve službě IIS na serveru NDES.|
 |**Certifikát důvěryhodné kořenové certifikační autority**|Ten exportujete jako soubor **.cer** z kořenové certifikační autority nebo jakéhokoli zařízení, které důvěřuje kořenové certifikační autoritě, a nasadíte ho do zařízení pomocí profilu certifikátu důvěryhodné certifikační autority.<br /><br />Použijete jeden certifikát důvěryhodné kořenové certifikační autority na každou platformu operačního systému a přidružíte ho ke každému profilu důvěryhodného kořenového certifikátu, který vytvoříte.<br /><br />Pokud potřebujete, můžete vytvořit další certifikáty důvěryhodné kořenové certifikační autority. Můžete to třeba udělat, abyste vytvořili vztah důvěryhodnosti k certifikační autoritě, která podepisuje ověřovací certifikáty serverů pro vaše přístupové body Wi-Fi.|
 
-### <a name="a-namebkmkaccountsaaccounts"></a><a name="BKMK_Accounts"></a>Účty
+### <a name="BKMK_Accounts"></a>Účty
 
 |Název|Podrobnosti|
 |--------|-----------|
 |**Účet služby NDES**|Zadáte účet uživatele domény, který chcete použít jako účet služby NDES.|
 
-## <a name="a-namebkmkconfigureinfrastructureaconfigure-your-infrastructure"></a><a name="BKMK_ConfigureInfrastructure"></a>Konfigurace infrastruktury
+## <a name="BKMK_ConfigureInfrastructure"></a>Konfigurace infrastruktury
 Před konfigurací profilů certifikátů musíte provést následující úlohy, které vyžadují znalosti systému Windows Server 2012 R2 a služby AD CD (Active Directory Certificate Services):
 
 **Úloha 1**: Vytvoření účtu služby NDES
@@ -108,7 +108,7 @@ V této úloze:
     -   Na kartě **Rozšíření** zkontrolujte, jestli **Popis zásad použití** obsahuje **Ověření klienta**.
 
         > [!IMPORTANT]
-        > V případě šablon certifikátů pro iOS a Mac OS X na kartě **Rozšíření** upravte **Použití klíče** a ujistěte se, že není vybraná možnost **Podpis je důkazem původu** .
+        > V případě šablon certifikátů pro iOS a macOS na kartě **Rozšíření** upravte **použití klíče** a ujistěte se, že není vybraná možnost **Podpis je důkazem původu**.
 
     -   Na kartě **Zabezpečení** přidejte účet služby NDES a poskytněte šabloně oprávnění k **zápisu**. Správci služby Intune, kteří vytvoří profily SCEP, vyžaduje práva pro **čtení**, aby při vytváření profilů SCEP mohli procházet šablony.
 
@@ -118,7 +118,7 @@ V této úloze:
 3.  Zkontrolujte **Období platnosti** na kartě **Obecné** šablony. Ve výchozím nastavení Intune používá hodnotu nakonfigurovanou v šabloně. Máte ale možnost konfigurovat, aby certifikační autorita žadateli umožňovala určit jinou hodnotu, kterou pak můžete nastavit v konzole pro správu Intune. Pokud chcete vždy používat hodnotu v šabloně, zbývající část tohoto kroku přeskočte.
 
     > [!IMPORTANT]
-    > Platformy iOS a Mac OS X vždycky používají hodnotu nastavenou v šabloně bez ohledu na ostatní konfigurace, které provedete.
+    > iOS a macOS vždy používá hodnotu nastavenou v šabloně bez ohledu na ostatní konfigurace, které provedete.
 
 Tady jsou snímky obrazovky ukázkové konfigurace šablony.
 

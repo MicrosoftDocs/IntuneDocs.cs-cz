@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/17/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -17,9 +17,9 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: cd5d97ec4524477fe6ac08a863eaf5cc03913e50
-ms.openlocfilehash: 9862ef9fd1d4827ae99480cd2cf2eac8dfca54d8
-ms.lasthandoff: 02/21/2017
+ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
+ms.openlocfilehash: b80ced5cbaee26dfe8cb4b2f5e46d93af9733788
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -28,6 +28,7 @@ ms.lasthandoff: 02/21/2017
 
 Některé problémy se zařízením s Androidem se vám může podařit vyřešit pomocí postupu pro řešení potíží. Některé běžné problémy, na které jsme narazili a které se můžete pokusit nejprve odstranit sami, jsou uvedené níže. U složitějších problémů doporučujeme, abyste se obrátili na IT správce. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
+- [Kontrola dodržování předpisů na zařízení s Androidem](check-compliance-on-your-device-android.md)
 - [Použití podrobného protokolování správcem IT k opravě problémů se zařízením](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
 - [Odeslání protokolů správci IT pomocí e-mailu](send-logs-to-your-it-admin-by-email-android.md)
 - [Odeslání protokolů správci IT pomocí kabelu USB](send-logs-to-your-it-admin-using-cable-android.md)

@@ -16,9 +16,9 @@ ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: a3e3d4968623f29e320f1fcca8243c861c7caab4
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: cddeb6bf854b9ffbbc1744d5d164c8ceea34ff49
+ms.openlocfilehash: 0c0d2f73e48864caabdec6e83c2fdf58db5a0630
+ms.lasthandoff: 03/10/2017
 
 
 ---
@@ -28,19 +28,20 @@ ms.lasthandoff: 02/18/2017
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-V tomto tématu se dozvíte, co potřebujte k tomu, abyste mohli začít vytvářet zásady dodržování předpisů zařízeními. Najdete tu také rychlý přehled toho, co můžete zobrazit a udělat na portálu Azure Portal. Pokud je pro vás dodržování předpisů zařízeními novou problematikou, můžete se tu dozvědět, co dodržování předpisů zařízeními vlastně je a jak ho můžete používat ve vaší společnosti.
+V tomto tématu se dozvíte toto: 
+
+- Co potřebujete, abyste mohli začít s vytvářením zásad dodržování předpisů zařízeními.
+- Rychlý přehled toho, co můžete vidět a dělat na portálu Intune Azure Preview. 
+
+Pokud o dodržování předpisů zařízeními moc nevíte, můžete se v [tomto tématu](https://docs.microsoft.com/intune-azure/set-device-compliance/what-is-device-compliance) dozvědět, co dodržování předpisů zařízeními vlastně je a jak se dá používat ve vaší organizaci.
 
 ##  <a name="pre-requisites"></a>Požadavky
-
 
 -   Předplatné Intune
 
 -   Předplatné Azure Active Directory
 
-
-
 ##  <a name="supported-platforms"></a>Podporované platformy:
-
 
 -   Android
 
@@ -54,8 +55,7 @@ V tomto tématu se dozvíte, co potřebujte k tomu, abyste mohli začít vytvá�
 
 ##  <a name="azure-portal-workflow"></a>Pracovní postup na portálu Azure Portal
 
-
-Tady je přehled toho, jak můžete vytvořit zásady a spravovat dodržování předpisů zařízeními na portálu Azure Portal.
+Tady je přehled toho, jak můžete vytvořit a spravovat zásady dodržování předpisů zařízeními na portálu Intune Azure Preview.
 
 <!---### Overview
 

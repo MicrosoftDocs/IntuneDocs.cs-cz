@@ -16,9 +16,9 @@ ms.reviewer:
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: ee4422f462270b6466f11721aa7dc8cb2d432f7d
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: b6c245d60c661c04b4c4d29c9bdcdd752254d978
+ms.openlocfilehash: ec3f87994b19591bda4ec201eac3c839798d634c
+ms.lasthandoff: 03/15/2017
 
 
 ---
@@ -38,4 +38,7 @@ Pokud chcete zažádat o přidání nové funkce do Intune, zvažte vyplnění z
 ## <a name="administration-and-accounts"></a>Správa a účty
 
 - Globální správci (také označovaní jako správci tenanta) mohou dál vykonávat běžné úkony správy bez samostatné licence služby Intune nebo sady EMS (Enterprise Mobility Suite). Pokud ale chtějí globální správci službu používat, například zaregistrovat si svoje vlastní nebo firemní zařízení nebo používat portál společnosti Intune, budou potřebovat licenci služby Intune nebo sady EMS jako ostatní uživatelé.
+
+## <a name="apple-enrollment-profile-migration"></a>Migrace profilu registrace Apple
+- Během pár následujících měsíců vám Intune umožní spravovat vaše registrace v Apple Device Enrollment Programu a Apple Configuratoru prostřednictvím nového portálu Azure Portal. Pokud odstraníte token Apple Device Enrollment Programu a neodešlete aktualizovaný token, původní token se v rámci migrace vašeho účtu Intune na novém portálu Azure Portal obnoví. Pokud chcete tento token odebrat a zabránit registraci v programu DEP, stačí token odstranit z portálu Azure Portal. 
 

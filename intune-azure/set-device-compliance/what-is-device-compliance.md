@@ -16,34 +16,35 @@ ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: b245dac28f88e7eab70dfa9d759b15e155f8a7df
+ms.sourcegitcommit: cddeb6bf854b9ffbbc1744d5d164c8ceea34ff49
+ms.openlocfilehash: 7d5a1859ef1a373ce424dd4f351fc137c6052fb7
+ms.lasthandoff: 03/10/2017
 
 
 ---
 
 # <a name="what-is-device-compliance-in-intune-azure-preview"></a>Co je dodržování předpisů zařízením v Intune Azure Preview?
 
-
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Pokud chcete chránit firemní data, budete muset zkontrolovat, jestli jsou zařízení určená pro přístup k podnikovým aplikacím a datům v souladu s určitými pravidly. Mezi tyto pravidla může patřit používání kódu PIN pro přístup k zařízením a šifrování dat uložených na zařízeních. Sada těchto pravidel se označuje jako **zásady dodržování předpisů**.
+Zásady dodržování předpisů pro zařízení v Intune určují nastavení a pravidla, která musí zařízení dodržovat, aby se dalo považovat za zařízení, které dodržuje zásady podmíněného přístupu Intune a EMS. Zásady dodržování předpisů pro zařízení můžete používat i k monitorování a řešení problémů s dodržováním předpisů u zařízení. 
 
-##  <a name="how-should-i-use-a-device-compliance-policy"></a>Jak mám použít zásady dodržování předpisů zařízením?
-Zásady dodržování předpisů spolu s podmíněným přístupem umožňují povolit přístup k e-mailu a dalším službám jenom zařízením, která jsou v souladu s pravidly zásad dodržování předpisů.
+Mezi tyto pravidla patří:
 
-Zásady dodržování předpisů se můžou používat také nezávisle na podmíněném přístupu.
-Při nezávislém použití zásad dodržování předpisů se cílová zařízení vyhodnotí a nahlásí se jejich stav dodržování předpisů. Můžete si například nechat nahlásit, kolik zařízení není šifrovaných nebo která zařízení mají jailbreak nebo root. Pokud ale tyto zásady použijete nezávisle, nefunguje žádné omezení přístupu k prostředkům společnosti.
+- Používání hesla pro přístup k zařízení
+- Šifrování
+- Jestli je zařízení s jailbreakem nebo rootem
+- Požadavek na minimální verzi operačního systému
+- Maximální povolená verze operačního systému
+- Požadavek, aby zařízení bylo na určité úrovni Mobile Threat Defense nebo pod ní
 
-Zásady dodržování předpisů se nasazují uživatelům. Po nasazení zásady dodržování předpisů uživateli se u jeho zařízení kontroluje dodržování předpisů. Další informace o tom, jak dlouho trvá, než mobilní zařízení načte zásady po jejich nasazení, najdete v článku Správa nastavení a funkcí na vašich zařízeních.
+<!---##  Concepts
+Following are some terms and concepts that are useful to understanding how to use compliance policies.
 
-##  <a name="concepts"></a>Koncepty
-V další části jsou některé pojmy a koncepty, které vám pomůžou pochopit, jak se zásady dodržování předpisů používají.
+### Device compliance requirements
+Compliance requirements are essentially rules like requiring a device PIN or encryption that you can specify as required or not required for a compliance policy.
 
-### <a name="compliance-requirements"></a>Požadavky na dodržování předpisů
-Požadavky na dodržování předpisů jsou v podstatě pravidla, například vyžadování PIN kódu zařízení nebo šifrování, která můžete v zásadách dodržování předpisů určit jako povinná nebo nepovinná.
-
-<!---### Actions for noncompliance
+### Actions for noncompliance
 
 You can specify what needs to happen when a device is determined as noncompliant. This can be a sequence of actions during a specific time.
 When you specify these actions, Intune will automatically initiate them in the sequence you specify. See the following example of a sequence of
@@ -66,14 +67,22 @@ compliance issues on the device. You can also use this time to create your actio
 
 Remember that you need to implement conditional access policies in addition to compliance policies in order for access to company resources to be blocked.--->
 
-##  <a name="differences-between-the-classic-intune-admin-console-and-intune-in-the-azure-portal"></a>Rozdíly mezi konzolou pro správu Intune Classic a službou Intune na portálu Azure Portal
+##  <a name="how-should-i-use-a-device-compliance-policy"></a>Jak mám použít zásady dodržování předpisů zařízením?
 
+### <a name="using-ems-conditional-access"></a>Použití podmíněného přístupu EMS
+Zásady dodržování předpisů spolu s podmíněným přístupem EMS umožňují povolit přístup k e-mailu a dalším firemním prostředkům jenom zařízením, která jsou v souladu s jedním nebo více pravidly zásad dodržování předpisů.
 
-Pokud jste dříve používali konzolu pro správu Intune Classic, je dobré vědět o následujících rozdílech. Pomůže vám to při přechodu na nový pracovní postup dodržování předpisů zařízením na portálu Azure Portal:
+### <a name="not-using-ems-conditional-access"></a>Bez použití podmíněného přístupu EMS
+Zásady dodržování předpisů pro zařízení se dají používat nezávisle na podmíněném přístupu EMS.
+Při nezávislém použití zásad dodržování předpisů se cílová zařízení vyhodnotí a nahlásí se jejich stav dodržování předpisů. Můžete si například nechat nahlásit, kolik zařízení není šifrovaných nebo která zařízení mají jailbreak nebo root. Pokud ale tyto zásady použijete nezávisle, nefunguje žádné omezení přístupu k prostředkům společnosti.
 
+Zásady dodržování předpisů se nasazují uživatelům. Po nasazení zásady dodržování předpisů uživateli se u jeho zařízení kontroluje dodržování předpisů. Další informace o tom, jak dlouho trvá, než mobilní zařízení načte zásady po jejich nasazení, najdete v článku Správa nastavení a funkcí na vašich zařízeních.
+
+##  <a name="intune-classic-admin-console-vs-intune-azure-preview-portal"></a>Klasická konzola pro správu Intune a portál Intune Azure Preview – rozdíly
+
+Pokud používáte klasickou konzolu pro správu Intune, je dobré vědět o následujících rozdílech. Pomůže vám to při přechodu na nový pracovní postup zásad dodržování předpisů pro zařízení na portálu Azure Portal:
 
 -   Zásady dodržování předpisů se na portálu Azure Portal vytvářejí zvlášť pro každou podporovanou platformu. V konzole pro správu služby Intune byla jedna zásada dodržování předpisů společná všem podporovaným platformám.
-
 
 <!--- -   In the Azure portal, you have the ability to specify actions and notifications that are intiated when a device is determined to be noncompliant. This ability does not exist in the Intune admin console.
 
@@ -81,15 +90,10 @@ Pokud jste dříve používali konzolu pro správu Intune Classic, je dobré vě
 
 ##  <a name="next-steps"></a>Další kroky
 
-[Začínáme se zásadami dodržování předpisů](get-started-with-device-compliance.md)
+[Začínáme se zásadami dodržování předpisů pro zařízení](get-started-with-device-compliance.md)
 
 
 <!---### See also
 
 Conditional access--->
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

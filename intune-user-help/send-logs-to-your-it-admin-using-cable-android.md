@@ -18,9 +18,9 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 2b60f327c2e48c3c933a6cff0a68df138df4dd3d
-ms.openlocfilehash: ffc912af791c4b243877f026a554cc14b614ffa0
-ms.lasthandoff: 01/05/2017
+ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
+ms.openlocfilehash: 3e91ccb2aae973892044f19d0d26c7f57bd5d786
+ms.lasthandoff: 03/13/2017
 
 
 ---

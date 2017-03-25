@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,8 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 962eb30ada84355c1aceacbf8f487b0f5b3cf1f2
+ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
+ms.openlocfilehash: 9bc5b328fc204a12cf7aa992f62ac00b9ddfd45d
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -34,14 +35,14 @@ Po nasazení zásady nebo aplikace se Intune hned začne pokoušet upozornit za�
 
 Pokud se zařízení neohlásí po odeslání prvního oznámení, Intune provede tři další pokusy.  Když je zařízení offline (je třeba vypnuté nebo není připojené k síti), nemusí oznámení vůbec dostat. V takovém případě zařízení získá zásadu při dalším plánovaném ohlášení své přítomnosti ve službě Intune:
 
-- iOS a Mac OS X: Každých 6 hodin.
+- iOS a macOS: Každých 6 hodin
 - Android: Každých 8 hodin.
 - Windows Phone: Každých 8 hodin.
 - Počítače s Windows 8.1 a Windows 10 zaregistrované jako zařízení: Každých 8 hodin.
 
 Pokud se zařízení právě zaregistrovalo, četnost ohlašování bude vyšší:
 
-- iOS a Mac OS X: Prvních 6 hodin každých 15 minut a potom každých 6 hodin.
+- iOS a macOS: Prvních 6 hodin každých 15 minut a potom každých 6 hodin
 - Android: Prvních 15 minut každé 3 minuty, další 2 hodiny každých 15 minut a potom každých 8 hodin.
 - Windows Phone: Prvních 15 minut každých 5 minut, další 2 hodiny každých 15 minut a potom každých 8 hodin.
 - Počítače s Windows zaregistrované jako zařízení: Prvních 30 minut každé 3 minuty a potom každých 8 hodin.
@@ -499,8 +500,3 @@ Jiná zařízení MDM, třeba zařízení se systémy Android, Windows Phone 8.1
 
 ### <a name="next-steps"></a>Další kroky
 Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](/intune/troubleshoot/how-to-get-support-for-microsoft-intune).
-
-
-<!--HONumber=Feb17_HO3-->
-
-

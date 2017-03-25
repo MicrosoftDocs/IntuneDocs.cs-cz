@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ searchScope:
 ROBOTS: 
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: fc22acb9f0c08491852592f41dc60bef0fcf0928
-ms.openlocfilehash: 9e616d6368a40e3ae06303cf3556b5e0760fb477
-ms.lasthandoff: 12/21/2016
+ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
+ms.openlocfilehash: fbb3143baa0063343d639d2df6101ebaec98ee65
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -27,7 +27,7 @@ ms.lasthandoff: 12/21/2016
 
 Pokud zařízení s iOSem není v souladu se zásadami správce IT pro přístupový kód, zobrazí se zpráva, která stručně popisuje problém a vysvětluje, co musíte udělat, aby přístupový kód splňoval požadavky.
 
-Správce IT může nastavit více než jeden požadavek na přístupový kód. Přístupový kód například musí obsahovat určitý počet znaků a navíc obsahovat kombinaci číslic, písmen a znaků. Protože může být nastavených několik požadavků, vysvětlují tyto pokyny jenom to, jak jde přístupový kód nastavit nebo změnit. Nevysvětlují všechny možné kombinace požadavků.
+Správce IT může nastavit více než jeden požadavek na přístupový kód. Přístupový kód například musí obsahovat určitý počet znaků a navíc obsahovat kombinaci číslic, písmen a znaků. Protože může být nastavených několik požadavků, vysvětlují tyto pokyny jenom to, jak jde přístupový kód nastavit nebo změnit. Nevysvětlují všechny možné kombinace požadavků. Tato hesla slouží například k přístupu k zařízení ze zamykací obrazovky.
 
 Pokud se vám přístupový kód, který splňuje požadavky na přístupový kód, nedaří nastavit, požádejte o pomoc správce IT.
 

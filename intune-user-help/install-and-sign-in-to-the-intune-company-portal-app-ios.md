@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 01/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -18,9 +18,9 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
-ms.openlocfilehash: cf110d8758e8ab589acbceabb5df733b29068b0f
-ms.lasthandoff: 01/24/2017
+ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
+ms.openlocfilehash: d4491a6068ebde632b8af0dfa6bee500def8e4b2
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -30,7 +30,7 @@ ms.lasthandoff: 01/24/2017
 
 Portál společnosti je aplikace, která po instalaci do vašeho zařízení s iOSem umožňuje přístup k podnikovým nebo školním aplikacím, e-mailům a síti.  Než získáte přístup, musíte aplikaci Portál společnosti nainstalovat a pak v ní zaregistrovat své zařízení do služby Microsoft Intune. Další informace najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení do služby Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 
-1.  Otevřete **App Store** a vyhledejte řetězec **intune**.
+1.  Otevřete **App Store** a vyhledejte **portál společnosti intune**.
 
 2.  Stáhněte si aplikaci **Portál společnosti Microsoft Intune**.
 

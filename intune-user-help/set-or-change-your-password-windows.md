@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/29/2016
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,16 +16,16 @@ searchScope:
 ROBOTS: 
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 635cd7c9cd6edec82fec76400b410cabce2d8c4c
-ms.lasthandoff: 12/10/2016
+ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
+ms.openlocfilehash: d7d9ce0e1dc17dfafe78757a4bd8e48f9f67132d
+ms.lasthandoff: 03/13/2017
 
 
 ---
 
 # <a name="make-your-device-safer-with-the-right-password"></a>Zlepšení zabezpečení zařízení pomocí správného hesla
 
-Uživatelé potřebují každý den přistupovat ze svých zařízení se systémem Windows k podnikovým prostředkům, například k e-mailům a dokumentům. Organizace chtějí zajistit, aby byl přístup z těchto zařízení bezpečný. Jedním ze způsobů, jak zajistit bezpečný přístup zařízení k těmto prostředkům, je vyžadování použití hesla.
+Uživatelé potřebují každý den přistupovat ze svých zařízení se systémem Windows k podnikovým prostředkům, například k e-mailům a dokumentům. Organizace chtějí zajistit, aby byl přístup z těchto zařízení bezpečný. Jedním ze způsobů, jak zajistit bezpečný přístup zařízení k těmto prostředkům, je vyžadování použití hesla. Tato hesla slouží například k přístupu k zařízení ze zamykací obrazovky.
 
 Pokud zařízení s Windows nevyhovuje zásadám definovaným správcem IT, zobrazí se zpráva, která stručně popisuje problém a vysvětluje, co potřebujete udělat, aby heslo splňovalo požadavky.
 
