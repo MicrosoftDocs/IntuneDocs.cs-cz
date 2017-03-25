@@ -41,7 +41,7 @@
 #### [Registrace zařízení s iOSem pomocí programu registrace zařízení DEP](enroll-devices/enroll-ios-devices-using-device-enrollment-program.md)
 ### [Registrace zařízení pomocí manažera registrace zařízení](enroll-devices/enroll-devices-using-device-enrollment-manager.md)
 ### [Registrace zařízení s macOS](enroll-devices/enroll-macos-devices.md)
-### [Registrace zařízení s Windows](enroll-devices/enroll-window-devices.md)
+### [Registrace zařízení s Windows](enroll-devices/enroll-windows-devices.md)
 ### Správa registrace zařízení
 #### [Vytvoření podmínek a ujednání](enroll-devices/create-terms-and-conditions.md)
 #### [Nastavení omezení pro registraci](enroll-devices/set-enrollment-restrictions.md)
