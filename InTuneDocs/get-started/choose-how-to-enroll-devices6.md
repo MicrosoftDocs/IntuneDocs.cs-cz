@@ -5,7 +5,7 @@ keywords:
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/14/2017
+ms.date: 03/27/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -17,6 +17,7 @@ ms.custom: intune-classic EXPIERIMENT
 translationtype: Human Translation
 ms.sourcegitcommit: b4295fbc9df88fa537f18b1280dfcc32702ccc51
 ms.openlocfilehash: 173e95ac2d0039accb3465386bf67fb3dee90723
+ms.lasthandoff: 02/17/2017
 
 
 ---
@@ -43,11 +44,6 @@ Vaše odpovědi na tuto řadu otázek vám pomohou určit nejlepší metody regi
 
   - **Značka s číslem IMEI:** Naimportováním čísel IMEI (International Mobile Equipment Identity) zařízení vlastněných společností můžete v Intune tato zařízení označit jako zařízení ve vlastnictví společnosti. Toto je jediný způsob, jak identifikovat vyhrazená („jednouživatelská“) zařízení se systémem Windows a Android jako zařízení ve vlastnictví společnosti. Zařízení s iOS, která nebudou zaregistrovaná pomocí programu registrace zařízení Apple nebo nástroje Apple Configurator, je také možné označit pomocí čísla IMEI. Poté, co zařízení předběžně deklarujete, aby byla označená jako firemní, je můžete distribuovat uživatelům. Uživatelé si pak můžou zaregistrovat svá zařízení jako vyhrazená nainstalováním Portálu společnosti pro přístup k podnikovým prostředkům, například k e-mailu, aplikacím a datům.
 
-  > [!div class="button"]
-  [< Zpět](choose-how-to-enroll-devices3.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
+> [!div class="button"]
+[< Zpět](choose-how-to-enroll-devices3.md)
 
