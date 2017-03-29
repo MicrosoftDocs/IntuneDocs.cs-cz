@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/16/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer:
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: eb48265e4655117976c9847b1f5bee712f0c2e3c
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
+ms.openlocfilehash: 5383e20081285131f91418b47162e0cd5ba92c90
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/18/2017
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Úloha **Konfigurovat zařízení** v Microsoft Intune slouží ke správě nastavení a funkcí na všech zařízeních, která spravujete. Tuto úlohu použijete nejčastěji k vytvoření profilů zařízení, které umožňují spravovat a řídit celou řadu různých funkcí na zařízeních, která spravujete.
+Úloha **Konfigurace zařízení** ve službě Microsoft Intune slouží ke správě nastavení a funkcí na všech zařízeních, která spravujete. Tuto úlohu použijete nejčastěji k vytvoření profilů zařízení, které umožňují spravovat a řídit celou řadu různých funkcí na zařízeních, která spravujete.
 
 Když tuto úlohu otevřete, uvidíte následující možnosti:
 
@@ -41,8 +41,13 @@ Pracovní postup při vytváření profilů zařízení je pro všechny profily 
 
 U zařízení můžete spravovat následující funkce:
 
+## <a name="device-features"></a>Funkce zařízení
+
+Funkcemi zařízení můžete ovládat funkce na zařízeních s iOSem a macOS, jako jsou AirPrint, oznámení a konfigurace sdílených zařízení.
+Další informace najdete v tématu [Postup konfigurace nastavení funkce zařízení](how-to-configure-device-features.md). Podporované platformy: iOS a macOS.
+
 ## <a name="device-restrictions"></a>Omezení zařízení
-Pomocí omezení zařízení můžete ovládat širokou škálu nastavení a funkcí v různých kategoriích včetně nastavení zabezpečení, prohlížeče, hardwaru a sdílení dat. Můžete například vytvořit profil omezení zařízení, který uživatelům zařízení s iOSem zabraňuje v přístupu k fotoaparátu.
+Pomocí omezení zařízení můžete regulovat širokou škálu nastavení na vámi spravovaných zařízeních v různých kategoriích včetně nastavení zabezpečení, prohlížeče, hardwaru a sdílení dat. Můžete například vytvořit profil omezení zařízení, který uživatelům zařízení s iOSem zabraňuje v přístupu k fotoaparátu.
 Další informace najdete v článku [Jak u zařízení nakonfigurovat nastavení omezení](how-to-configure-device-restrictions.md). Podporované platformy: Android, iOS, macOS, Windows 10 a Windows 10 Team.
 
 ## <a name="email"></a>E-mail
@@ -57,6 +62,10 @@ Další informace najdete v článku [Jak nakonfigurovat nastavení Wi-Fi](how-t
 Virtuální privátní sítě (VPN) umožňují uživatelům zabezpečený vzdálený přístup k firemní síti. Zařízení používají profil připojení VPN k navázání připojení se serverem VPN. Pomocí profilů sítě VPN můžete uživatelům a zařízením v organizaci nasadit nastavení sítě VPN, aby se mohli snadno a bezpečně připojit k síti.
 Další informace najdete v článku [Jak nakonfigurovat nastavení sítě VPN](how-to-configure-vpn-settings.md).
 Podporované platformy: Android, iOS, macOS, Windows Phone 8.1, Windows 8.1 a Windows 10.
+
+## <a name="education"></a>Vzdělávání
+Umožňuje vám nakonfigurovat možnosti pro aplikaci Windows Zkuste si test. Když tyto možnosti nakonfigurujete, žádnou jinou aplikaci nepůjde na zařízení spustit, dokud nebude test dokončen.
+Další informace najdete v článku [Konfigurace nastavení vzdělávání](how-to-configure-education-settings.md).
 
 ## <a name="certificates"></a>Certifikáty
 Tento typ profilu umožňuje nakonfigurovat důvěryhodné certifikáty a certifikáty SCEP a PKCS, které lze přiřadit k zařízením a použít k ověření profilů Wi-Fi, sítě VPN a e-mailu.

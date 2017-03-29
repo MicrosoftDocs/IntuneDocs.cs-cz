@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/14/2017
+ms.date: 03/17/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.assetid:
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: b6c245d60c661c04b4c4d29c9bdcdd752254d978
-ms.openlocfilehash: 957192c744bf05cd835dfae60b6bb521b8f8b26b
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: 671d862c8d9a98e02f33d96cf6ceba712e740dec
+ms.openlocfilehash: 8a43e1646476696b978a7f8a3e92f920606a698b
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -73,9 +73,10 @@ Režim ztráty můžete zapnout při ztrátě nebo odcizení zařízení s iOSem
 2.    V okně **Režim ztráty** zapněte režim ztráty, zadejte zprávu, která se má zobrazit, a volitelně také kontaktní telefonní číslo.
 3.    Klikněte na **OK**.
 Když zapnete režim ztráty, zablokujete veškeré možnosti použití zařízení. Koncový uživatel nebude mít k zařízení přístup, dokud režim ztráty nevypnete. Když je režim ztráty zapnutý, můžete pomocí akce **Najít zařízení** zjistit, kde se zařízení nachází.
+Pokud chcete použít režim ztráty, musí se jednat o zařízení s iOSem ve vlastnictví firmy, které je zaregistrované prostřednictvím programu DEP a je v režimu dohledu.
 
 ### <a name="locate-device"></a>**Najít zařízení**
-Pomocí této vzdálené akce můžete zobrazit polohu ztraceného nebo odcizeného zařízení s iOSem na mapě. Musí se jednat o zařízení s iOSem ve vlastnictví firmy, které je v režimu dohledu. Než tuto akci použijete, musíte pro zařízení zapnout režim ztráty.
+Pomocí této vzdálené akce můžete zobrazit polohu ztraceného nebo odcizeného zařízení s iOSem na mapě. Musí se jednat o zařízení s iOSem ve vlastnictví firmy, které je zaregistrované prostřednictvím programu DEP a je v režimu dohledu. Než tuto akci použijete, musíte pro zařízení zapnout režim ztráty.
 1.    V okně vlastností pro zařízení s iOSem zvolte **Více** > **Najít zařízení**.
 2.    Poloha nalezeného zařízení se zobrazí v okně **Najít zařízení**. 
     ![Okno Najít zařízení](./media/locate-device.png)

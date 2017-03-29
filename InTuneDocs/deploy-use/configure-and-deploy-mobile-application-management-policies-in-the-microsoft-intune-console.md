@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/27/2016
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
-ms.openlocfilehash: f7504657f5fb2d73242f25f2f059c8c4e7ab1547
-ms.lasthandoff: 12/30/2016
+ms.sourcegitcommit: 671d862c8d9a98e02f33d96cf6ceba712e740dec
+ms.openlocfilehash: 4a921334b0cd402dba91eab665ff1a23290c82eb
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -140,7 +140,7 @@ Po ověření úspěšného nahrání aplikace pokračujte krokem 3.
     |**Vyžadovat kompatibilitu zařízení dodržováním podnikových zásad pro přístup**|Toto nastavení umožňuje použití aplikace, jenom když zařízení nemá jailbreak nebo root.|
     |**Znovu zkontrolovat požadavky na přístup po (minuty)**|V poli **Časový limit** určete časové období před dalším zkontrolováním požadavků na přístup po spuštění aplikace.|
     |**Období odkladu pro offline režim**|Pokud je zařízení offline, určete časové období před opakovaným zkontrolováním požadavků na přístup k aplikaci.|
-    |**Zašifrovat data aplikací**|Toto nastavení určuje, že všechna data přidružená k této aplikaci budou zašifrovaná. To zahrnuje i data uložená externě, například na SD kartách.<br /><br />**Šifrování pro iOS**<br /><br />Pro aplikace, které jsou přidružené k zásadám správy mobilních aplikací Intune, jsou neaktivní uložená data zašifrovaná pomocí šifrování na úrovni zařízení poskytované operačním systémem. To zajišťuje zásada kódu PIN, kterou nastavuje správce IT. Když se vyžaduje kód PIN, budou data zašifrovaná podle nastavení v zásadách správy mobilních aplikací. Jak se uvádí v dokumentaci společnosti Apple, [moduly používané v iOSu mají certifikaci FIPS 140-2](http://support.apple.com/en-us/HT202739).<br /><br />**Šifrování pro Android**<br /><br />Pro aplikace, které jsou přidružené k zásadám správy mobilních aplikací Intune, zajišťuje šifrování Microsoft. Data jsou mezi vstupně-výstupními operacemi souborů synchronně šifrovaná.  Obsah v úložišti zařízení bude zašifrovaný vždycky. Metoda šifrování nemá certifikaci FIPS 140-2.|
+    |**Zašifrovat data aplikací**|Toto nastavení určuje, že všechna data přidružená k této aplikaci budou zašifrovaná. To zahrnuje i data uložená externě, například na SD kartách.<br /><br />**Šifrování pro iOS**<br /><br />Pro aplikace, které jsou přidružené k zásadám správy mobilních aplikací Intune, jsou neaktivní uložená data zašifrovaná pomocí šifrování na úrovni zařízení poskytované operačním systémem. To zajišťuje zásada kódu PIN, kterou nastavuje správce IT. Když se vyžaduje kód PIN, budou data zašifrovaná podle nastavení v zásadách správy mobilních aplikací. Jak se uvádí v dokumentaci společnosti Apple, [moduly používané v iOSu mají certifikaci FIPS 140-2](http://support.apple.com/en-us/HT202739).<br /><br />**Šifrování pro Android**<br /><br />Pro aplikace, které jsou přidružené k zásadám správy mobilních aplikací Intune, zajišťuje šifrování Microsoft. Data jsou mezi vstupně-výstupními operacemi souborů synchronně šifrovaná.  Obsah v úložišti zařízení bude zašifrovaný vždycky. Metodou šifrování je FIPS 140-2, která je kompatibilní pouze se zařízeními Samsung KNOX.|
     |**Blokovat snímek obrazovky** (jenom zařízení s Androidem)|Toto nastavení určuje, že jsou při použití této aplikace zablokované možnosti snímku obrazovky zařízení.|
 
 4. Po dokončení klikněte na **Uložit zásadu**.

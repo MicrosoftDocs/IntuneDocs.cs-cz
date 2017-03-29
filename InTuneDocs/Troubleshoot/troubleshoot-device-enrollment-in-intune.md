@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 03/01/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 785e7514c6c6109cfec61a47ae2fc7183c7c2330
-ms.openlocfilehash: 91c6a040f8fd3990c8d48087ac7397db8360f666
-ms.lasthandoff: 01/25/2017
+ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
+ms.openlocfilehash: 3d4a89cd8e6e57f5a1e268dcda98cfb3c68c5587
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -35,9 +35,9 @@ Než začnete řešit potíže, ujistěte se, že jste správně nakonfigurovali
 
 -    [Příprava registrace zařízení v Microsoft Intune](/intune/deploy-use/prerequisites-for-enrollment)
 -    [Nastavení správy zařízení s iOSem a Mac OS](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
--    [Nastavení správy pro Windows Phone a Windows 10 Mobile v Microsoft Intune](/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
 -    [Nastavení správy pro zařízení s Windows](/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
-
+-    [Nastavení správy zařízení s Androidem](/intune/deploy-use/set-up-android-management-with-microsoft-intune) – nejsou třeba žádné další kroky
+-    [Nastavení správy zařízení s Androidem for Work](/intune/deploy-use/set-up-android-for-work)
 
 Uživatelé spravovaných zařízení můžou pro vaši potřebu shromažďovat protokoly registrace a diagnostiky. Pokyny pro uživatele ke shromažďování protokolů najdete tady:
 
@@ -149,7 +149,7 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 **Problém:** Pokud do AD FS přidáte druhou ověřenou doménu, nemusí být uživatelé s příponou hlavního názvu uživatele (UPN) druhé domény schopni se přihlásit na portály nebo zaregistrovat zařízení.
 
 
-**Řešení:** Zákazníci, kteří mají předplatné Microsoft Office 365, používají jednotné přihlašování (SSO) prostřednictvím služby AD FS 2.0 a mají pro přípony UPN uživatelů v rámci organizace více domén nejvyšší úrovně (například @contoso.com nebo @fabrikam.com)), musí pro každou příponu nasadit samostatnou instanci federační služby AD FS 2.0. K dispozici je nyní [kumulativní aktualizace pro službu AD FS 2.0](http://support.microsoft.com/kb/2607496), která ve spojení s přepínačem **SupportMultipleDomain** umožňuje zajistit, aby AD FS server tento scénář podporoval bez vyžadování dalších serverů služby AD FS 2.0. Další informace najdete na [tomto blogu](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+**Řešení:** Zákazníci s předplatným Microsoft Office 365, kteří používají jednotné přihlašování (SSO) prostřednictvím služby AD FS 2.0 a mají pro přípony UPN uživatelů v rámci své organizace více domén nejvyšší úrovně (například @contoso.com nebo @fabrikam.com), musí pro každou příponu nasadit samostatnou instanci federační služby AD FS 2.0. K dispozici je nyní [kumulativní aktualizace pro službu AD FS 2.0](http://support.microsoft.com/kb/2607496), která ve spojení s přepínačem **SupportMultipleDomain** umožňuje zajistit, aby AD FS server tento scénář podporoval bez vyžadování dalších serverů služby AD FS 2.0. Další informace najdete na [tomto blogu](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
 
 
 ## <a name="android-issues"></a>Problémy na zařízeních s Androidem
@@ -280,6 +280,18 @@ Pokud chcete problém opravit, musíte vybrat tlačítko **Nastavit**, které se
 
 Po registraci se zařízení vrátí do stavu správné funkce a znovu získá přístup k podnikovým prostředkům.
 
+### <a name="verify-ws-trust-13-is-enabled"></a>Ověření, že koncový bod WS-Trust 1.3 je povolený
+**Problém:** Zařízení s iOSem a programem registrace zařízení (DEP) není možné přihlásit.
+
+Přihlášení zařízení s programem registrace zařízení s přidružením uživatele vyžaduje aktivaci uživatelského jména / smíšeného koncového bodu WS-Trust 1.3, aby bylo možné požádat o tokeny uživatele. Active Directory má tento koncový bod ve výchozím nastavení povolený. Seznam povolených koncových bodů získáte použitím rutiny prostředí PowerShell Get-AdfsEndpoint a vyhledáním koncového bodu trust/13/UsernameMixed. Například:
+
+      Get-AdfsEndpoint -AddressPath “/adfs/services/trust/13/UsernameMixed”
+
+Další informace najdete v [dokumentaci k rutině Get-AdfsEndpoint](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+
+Další informace najdete v tématu [Doporučené postupy zabezpečení služby AD FS](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/best-practices-securing-ad-fs). Pokud potřebujete další pomoc při určování, zda máte koncový bod WS-Trust 1.3 Username/Mixed ve svém poskytovateli identity federace povolený a používáte službu ADFS nebo vlastního poskytovatele identity třetí strany, obraťte se prosím na podporu Microsoftu.
+
+
 ### <a name="profile-installation-failed"></a>Neúspěch instalace profilu
 **Problém:** V zařízení s iOSem se zobrazí chyba **Instalace profilu se nezdařila**.
 
@@ -318,7 +330,7 @@ Příklady toho, co máte v těchto souborech protokolu hledat, budou brzy přid
 
 #### <a name="check-how-device-was-removed"></a>Zjištění způsobu odebrání zařízení
 
-1.  V konzole pro správu nástroje Configuration Manager vyberte **Monitorování** &gt; ** Stav systému** &gt; **Dotazy stavových zpráv**.
+1.  V konzole pro správu nástroje Configuration Manager vyberte **Monitorování** &gt; **Stav systému** &gt; **Dotazy stavových zpráv**.
 
 2.  Klikněte pravým tlačítkem na **Manuálně odstraněné prostředky členů kolekce** a vyberte **Zobrazit zprávy**.
 
@@ -379,7 +391,7 @@ Důvodem může být to, že již byl počítač zaregistrován dříve nebo je 
 |0x80043008, 0x80CF3008|Nepodařilo se spustit službu Microsoft Online Management Updates.|Kontaktujte podporu podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).|
 |0x80043009, 0x80CF3009|Klientský počítač je ve službě už zaregistrovaný.|Abyste mohli klientský počítač ve službě zaregistrovat znovu, musíte ho nejdřív vyřadit.|
 |0x8004300B, 0x80CF300B|Instalační balíček klientského softwaru nejde spustit, protože verze Windows, která běží na klientovi, není podporovaná.|Intune nepodporuje verzi Windows, která běží na klientském počítači.|
-|0xAB2|Instalační služba systému Windows nemohla získat přístup k modulu VBScript runtime pro vlastní akci.|Tato chyba je způsobená nějakou vlastní akcí založenou na dynamických knihovnách DLL (Dynamic-Link Library). Při odstraňování problémů s knihovnou DLL budete nejspíš muset použít nástroje popsané v [článku&19803;8 znalostní báze podpory Microsoftu: Užitečné nástroje při problémech s balíčky a nasazením](https://support.microsoft.com/en-us/kb/198038).|
+|0xAB2|Instalační služba systému Windows nemohla získat přístup k modulu VBScript runtime pro vlastní akci.|Tato chyba je způsobená nějakou vlastní akcí založenou na dynamických knihovnách DLL (Dynamic-Link Library). Při odstraňování problémů s knihovnou DLL budete nejspíš muset použít nástroje popsané v [článku 198038 znalostní báze podpory Microsoftu: Užitečné nástroje při problémech s balíčky a nasazením](https://support.microsoft.com/en-us/kb/198038).|
 |0x80cf0440|Připojení ke koncovému bodu služby bylo ukončeno.|Zkušební nebo placený účet je pozastaven. Vytvořte nový zkušební nebo placený účet a pak opakujte pokus o registraci.|
 
 

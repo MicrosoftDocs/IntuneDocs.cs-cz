@@ -6,7 +6,7 @@ keywords:
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 03/08/2017
+ms.date: 03/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: d8cb15d1b8c1c100f15084e43d2c3c4633fd64b5
-ms.openlocfilehash: f12d538b1f4cd327b893d234f2b558185cdd9d85
-ms.lasthandoff: 03/09/2017
+ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
+ms.openlocfilehash: e0a853c34c6d38e8fae6f4712ba6c2b767e5d0ba
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -26,14 +26,24 @@ ms.lasthandoff: 03/09/2017
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Pro účely identifikace zařízení vaší firmy můžete vytvořit seznam čísel IMEI (International Mobile Equipment Identity). Tato zařízení můžou nebo nemusí být zaregistrovaná a mají stav Zaregistrované nebo Nekontaktované. Nekontaktované znamená, že se zařízení nikdy neregistruje ve službě Intune.
+Jako správce IT můžete vytvořit a importovat textový soubor s oddělovači (CSV) se seznamem čísel IMEI (International Mobile Equipment Identity), který vám umožní identifikovat zařízení ve vlastnictví firmy. Každé číslo IMEI může mít v tomto seznamu uvedené podrobnosti pro účely správy.
 
-Pokud chcete vytvořit seznam, vytvořte seznam hodnot oddělených čárkami se dvěma sloupci (.csv) bez záhlaví. Do levého sloupce přidejte identifikátor IMEI a v pravém sloupci uveďte podrobnosti. Aktuálně je maximální počet řádků v seznamu 500.
+## <a name="create-a-csv-file"></a>Vytvoření souboru CSV
+Pokud chcete vytvořit seznam, vytvořte seznam hodnot oddělených čárkami se dvěma sloupci (.csv) bez záhlaví. Do levého sloupce přidejte identifikátor IMEI a v pravém sloupci uveďte podrobnosti. Podrobnosti jsou omezené na 128 znaků. Současný limit jednoho souboru CSV je 500 řádků.
 
-V textovém editoru vypadá seznam CSV přibližně takto:
+**Nahráním souboru .csv se sériovými čísly** – Vytvořte seznam oddělený čárkami (.csv), který bude mít dva sloupce, a nebude mít záhlaví. Soubor .csv může obsahovat maximálně 5000 zařízení, ale jeho velikost nesmí překročit 5 MB.
 
-01 234567 890123,podrobnosti o zařízení</br>
-02 234567 890123,podrobnosti o zařízení
+|||
+|-|-|
+|&lt;IMEI č. 1&gt;|&lt;Podrobnosti o zařízení č. 1&gt;|
+|&lt;IMEI č. 2&gt;|&lt;Podrobnosti o zařízení č. 2&gt;|
+
+    This .csv file when viewed in a text editor appears as:
+
+    ```
+    01 234567 890123,device details
+    02 234567 890123,device details
+    ```
 
 **Předání seznamu firemních zařízení ve formátu .csv**
 
@@ -48,11 +58,15 @@ V textovém editoru vypadá seznam CSV přibližně takto:
 > [!IMPORTANT]
 > Některá zařízení s Androidem mají více kódů IMEI. Intune má v inventáři jeden kód IMEI pro každé zařízení. Pokud importujete kód IMEI, který ale není kódem IMEI, který má v inventáři služba Intune, bude zařízení označené jako osobní, a ne jako firemní. Pokud importujete více kódů IMEI pro jedno zařízení, zobrazí se u kódů, které nejsou v inventáři, stav registrace **Neznámý**.
 
-**Odstranění seznamu firemních zařízení ve formátu .csv**
+Jakmile bude import hotový, tato zařízení mohou nebo nemusí být zaregistrována a mohou získat stav buď **Zaregistrované**, nebo **Nekontaktované**. **Nekontaktované** znamená, že toto zařízení nikdy se službou Intune nekomunikovalo.
+
+## <a name="delete-a-csv-list"></a>Odstranění seznamu CSV
 
 1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 
 2. V okně Intune zvolte **Registrovat zařízení** a pak zvolte **Identifikátory podnikových zařízení**.
 
 3. Zvolte **Odstranit**.
+
+Podrobné specifikace o číslech IMEI najdete na stránce [3GGPP TS 23.003](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=729).
 

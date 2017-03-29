@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
-ms.openlocfilehash: 364534ad788466f8b268b4091decee5326b94163
-ms.lasthandoff: 02/16/2017
+ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
+ms.openlocfilehash: d1c1833ea7fe9e794a70b2b2536f44801b68fa7e
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -79,18 +79,18 @@ Před vytvořením profilu certifikátu SCEP nebo PKCS musíte vytvořit profil 
 
 1. Přihlaste se k portálu Azure Portal.
 2. Zvolte **Další služby** > **Jiné** > **Intune**.
-3. V okně **Intune** zvolte **Konfigurovat zařízení**.
+3. V okně **Intune** zvolte **Konfigurace zařízení**.
 2. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
 3. V okně profilů zvolte **Vytvořit profil**.
 4. V okně **Vytvořit profil** zadejte **název** a **popis** profilu důvěryhodného certifikátu.
-5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení pro tento důvěryhodný certifikát. V současné době můžete pro nastavení omezení zařízení zvolit jednu z těchto platforem:
+5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení pro tento důvěryhodný certifikát. V současné době můžete pro nastavení certifikátů zvolit jednu z následujících platforem:
     - **Android**
     - **iOS**
     - **macOS**
     - **Windows Phone 8.1**
     - **Windows 8.1 a novější**
     - **Windows 10 a novější**
-6. V rozevíracím seznamu **Typ profilu** zvolte **Důvěryhodný certifikát**.
+6. V rozevíracím seznamu **Typ profilu** zvolte **Důvěryhodný certifikát**.
 7. Procházením vyhledejte certifikát, který jste si uložili v rámci úlohy 1, a pak klikněte na **OK**.
 8. Jenom pro zařízení s Windows 8.1 a Windows 10 vyberte **cílové úložiště** pro důvěryhodný certifikát z těchto možností:
     - **Úložiště počítačových certifikátů – kořenové**

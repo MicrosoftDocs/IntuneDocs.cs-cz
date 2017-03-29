@@ -15,9 +15,9 @@ ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 51f9d7bad6a1411ff68fa94c62421e2c0a43ab5a
-ms.openlocfilehash: d60b9afdf7fe9f78dd5cc4693259b8667fb17299
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 832c7dd8016bb30a24cc1748f84e5692130cb658
+ms.openlocfilehash: a37f217d3ce3c87b9aa673a8a7fc93ad390c6a68
+ms.lasthandoff: 03/23/2017
 
 
 ---
@@ -39,27 +39,21 @@ E-mailové profily můžete použít ke konfiguraci nativních e-mailových klie
 -    Windows 10 (pro počítače), Windows 10 Mobile a novější
 -    iOS 8.0 a novější
 -    Samsung KNOX Standard (4.0 a novější)
--    Android for Work
-
->[!NOTE]
->Intune poskytuje dva e-mailové profily pro Android for Work – jeden pro každou z e-mailových aplikací Gmail a Nine Work. Tyto aplikace jsou dostupné v obchodě Google Play a podporují připojení k Exchangi. Pokud chcete umožnit připojení k e-mailu, nasaďte jednu z těchto e-mailových aplikací do zařízení uživatelů a pak vytvořte a nasaďte příslušný profil. E-mailové aplikace, jako je Nine Work, nemusí být bezplatné. Přečtěte si podrobné informace o licencování aplikace nebo se v případě dotazů obraťte na společnost, která aplikaci vytvořila.
+-    Android for Work (e-mailové aplikace třetích stran, nativní e-mailová aplikace je pouze pro osobní profil)
 
 Vedle samotného nastavení e-mailového účtu v zařízení můžete určit, kolik e-mailů se má synchronizovat, a v závislosti na zařízení také jaký typ obsahu se má synchronizovat.
 
->[!NOTE]
->
->Pokud uživatel nainstaloval e-mailový profil dřív, než profil nastavila služba Intune, výsledek nasazení e-mailového profilu Intune bude záviset na platformě zařízení:
+Pokud uživatel nainstaloval e-mailový profil dřív, než profil nastavila služba Intune, výsledek nasazení e-mailového profilu Intune bude záviset na platformě zařízení:
 
->**iOS**: Je detekován existující duplicitní profil e-mailu na základě názvu hostitele a e-mailové adresy. Duplicitní e-mailový profil vytvořený uživatelem blokuje nasazení profilu Intune vytvořeného správcem. Tento problém je běžný, protože uživatelé s iOSem obvykle vytvoří e-mailový profil, a teprve potom se zaregistrují. Portál společnosti informuje uživatele o tom, že nesplňují požadavky kvůli ručně nakonfigurovanému e-mailovému profilu, a vyzve uživatele k jeho odebrání. Uživatel by měl svůj e-mailový profil odebrat, aby bylo možné nasadit profil Intune. Pokud chcete problémům zabránit, požádejte své uživatele, aby se zaregistrovali před instalací e-mailového profilu a aby Intune umožnili nastavení profilu.
+**iOS**<br>Na základě názvu hostitele a e-mailové adresy se detekuje existující duplicitní e-mailový profil. Duplicitní e-mailový profil vytvořený uživatelem blokuje nasazení profilu Intune vytvořeného správcem. Tento problém je běžný, protože uživatelé s iOSem obvykle vytvoří e-mailový profil, a teprve potom se zaregistrují. Portál společnosti informuje uživatele o tom, že nesplňují požadavky kvůli ručně nakonfigurovanému e-mailovému profilu, a vyzve uživatele k jeho odebrání. Uživatel by měl svůj e-mailový profil odebrat, aby bylo možné nasadit profil Intune. Pokud chcete problémům zabránit, požádejte své uživatele, aby se zaregistrovali před instalací e-mailového profilu a aby Intune umožnili nastavení profilu.
 
->**Windows**: Je detekován existující duplicitní profil e-mailu na základě názvu hostitele a e-mailové adresy. Intune přepíše existující e-mailový profil vytvořený uživatelem.
+**Windows**<br>Na základě názvu hostitele a e-mailové adresy se detekuje existující duplicitní e-mailový profil. Intune přepíše existující e-mailový profil vytvořený uživatelem.
 
->**Samsung KNOX**: Je detekován duplicitní e-mailový profil na základě e-mailové adresy, který bude přepsán profilem Intune. Pokud uživatel tento účet nakonfiguruje, profil Intune ho znovu přepíše. To může způsobit jisté zmatení uživatele.
+**Samsung KNOX**<br>Na základě e-mailové adresy se detekuje existující duplicitní e-mailový profil a přepíše se profilem Intune. Pokud uživatel tento účet nakonfiguruje, profil Intune ho znovu přepíše. To může způsobit jisté zmatení uživatele.
 
->Vzhledem k tomu, že Samsung KNOX nevyužívá k identifikaci profilu název hostitele, doporučujeme nevytvářet víc e-mailových profilů pro použití se stejnou e-mailovou adresou na různých hostitelích, protože by se vzájemně přepisovaly.
+Vzhledem k tomu, že Samsung KNOX nevyužívá k identifikaci profilu název hostitele, doporučujeme nevytvářet víc e-mailových profilů pro použití se stejnou e-mailovou adresou na různých hostitelích, protože by se vzájemně přepisovaly.
 
->**Android for Work**: Profil Intune se uplatňuje jenom na konkrétní e-mailové aplikace v pracovním profilu zařízení a nemá vliv na konfiguraci e-mailu v profilu uživatele zařízení.
-
+**Android for Work**<br>Intune poskytuje dva e-mailové profily pro Android for Work – jeden pro každou z e-mailových aplikací Gmail a Nine Work. Tyto aplikace jsou dostupné v obchodě Google Play, můžete je nainstalovat do pracovního profilu zařízení a podporují připojení k Exchangi. Pokud chcete umožnit připojení k e-mailu, nasaďte jednu z těchto e-mailových aplikací do zařízení uživatelů a pak vytvořte a nasaďte příslušný profil. E-mailové aplikace, jako je Nine Work, nemusí být bezplatné. Přečtěte si podrobné informace o licencování aplikace nebo se v případě dotazů obraťte na společnost, která aplikaci vytvořila.
 
 ## <a name="secure-email-profiles"></a>Zabezpečení e-mailových profilů
 E-mailové profily se dají zabezpečit certifikátem nebo heslem.

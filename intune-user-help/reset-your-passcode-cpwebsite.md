@@ -1,11 +1,11 @@
 ---
-title: "Resetování hesla z webu Portál společnosti | Dokumentace Microsoftu"
+title: "Postup resetování hesla z webu Portál společnosti | Dokumentace Microsoftu"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/23/2017
+ms.date: 03/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: 4fa3255b-9d1e-42d5-bd8b-70963dcf2d86
 searchScope:
 - User help
 ROBOTS: 
-ms.reviewer: mamoriss
+ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: f293901d3865f0b10ed876e83b151cf59a046cba
-ms.openlocfilehash: 68725bb63ae2750e89a03c16027f8b4fd9111255
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
+ms.openlocfilehash: 1c3b986df3e0d8a5ee54da0a91f37b445b4dd9f7
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -48,23 +48,23 @@ Resetování hesla:
 
   ![Informační zpráva s upozorněním týkajícím se resetování hesla zařízení a odhlášení uživatele Tlačítka pro vstup uživatele jsou Odhlásit se a Zrušit.](./media/iwp-reset-passcode-popup.png)
 
-4.  Vyberte možnost **Odhlásit se** a zobrazí se závěrečná zpráva s informacemi o odebrání hesla ze zařízení. Pokud zařízení nemáte s sebou, neodebírejte heslo, protože by se mohlo stát, že kdokoli by měl k zařízení fyzický přístup, měl by přístup k většině osobních i firemních informací, které jsou v něm uložené.
+5.  Vyberte možnost **Odhlásit se** a zobrazí se závěrečná zpráva s informacemi o odebrání hesla ze zařízení. Pokud zařízení nemáte s sebou, neodebírejte heslo, protože by se mohlo stát, že kdokoli by měl k zařízení fyzický přístup, měl by přístup k většině osobních i firemních informací, které jsou v něm uložené.
 
   ![Druhá informační zpráva s upozorněním týkajícím se resetování hesla zařízení a odebrání hesla ze zařízení. Obsahuje také informace o tom, jak nastavit nové heslo prostřednictvím nastavení zařízení.](./media/iwp-reset-passcode-2nd-popup.png)
 
+  Různá zařízení mají různé typy hesel.
 
-Různá zařízení mají různé typy hesel. V následující tabulce si můžete přečíst, jaký vliv bude resetování hesla mít na vaše konkrétní zařízení. 
+  **Android**: Odebere existující heslo a vytvoří dočasné heslo obsahující písmena i číslice.
 
-    |Typ zařízení|Co se stane při resetování|
-    |------------|-----------|
-    |Android|Odebere existující heslo a vytvoří dočasné heslo obsahující písmena i číslice.|
-    |iOS|Odebere existující heslo a nevytvoří dočasné heslo. Pokud pro otevírání zařízení nebo nákupy používáte snímač otisku prstu Touch ID, budete si ho muset nastavit znovu.|
-    |Windows 10 Mobile|Odebere existující heslo a vytvoří dočasné heslo obsahující písmena i číslice. Pokud se přihlašujete pomocí rozpoznávání obličeje Windows Hello, bude se tato technologie i nadále podporovat.|
-    |Windows Phone 8.1|Odebere existující heslo a vytvoří dočasné heslo obsahující číslice.|
+  **iOS**: Odebere existující heslo a nevytvoří dočasné heslo. Pokud pro otevírání zařízení nebo nákupy používáte snímač otisku prstu Touch ID, budete si ho muset nastavit znovu.
 
-    5.  Odemkněte zařízení a nastavte nové heslo, nebo změňte dočasné heslo pomocí nabídky **Nastavení** v zařízení.
+  **Windows 10 Mobile**: Odebere existující heslo a vytvoří dočasné heslo obsahující písmena i číslice. Pokud se přihlašujete pomocí rozpoznávání obličeje Windows Hello, bude tato technologie i nadále podporovaná.
+    
+  **Windows Phone 8.1**: Odebere existující heslo a vytvoří dočasné heslo obsahující číslice.
 
-    Pokud chcete zobrazit potvrzení, že bylo heslo úspěšně resetované, klikněte na příznak oznámení v pravé horní části webu Portál společnosti.
+6.  Odemkněte zařízení a nastavte nové heslo, nebo změňte dočasné heslo pomocí nabídky **Nastavení** v zařízení.
+
+Pokud chcete zobrazit potvrzení, že bylo heslo úspěšně resetované, klikněte na příznak oznámení v pravé horní části webu Portál společnosti.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 

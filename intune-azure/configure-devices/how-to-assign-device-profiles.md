@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 861e14227b847422d584d69364315a2418a986de
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
+ms.openlocfilehash: 238c67c3edb843ef62deccb42cfa2879232e1434
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -30,8 +30,8 @@ ms.lasthandoff: 02/18/2017
 
 1. Přihlaste se k portálu Azure Portal.
 2. Zvolte **Další služby** > **Jiné** > **Intune**.
-3. V okně **Intune** zvolte **Konfigurovat zařízení**.
-1. V okně **Konfigurovat zařízení** zvolte **Spravovat** > **Profily**.
+3. V okně **Intune** zvolte **Konfigurace zařízení**.
+1. V okně **Konfigurace zařízení** vyberte **Spravovat** > **Profily**.
 2. V okně se seznamem profilů zvolte profil, který chcete spravovat, a pak v okně *název profilu*> **Sestavy** zvolte **Spravovat** > **Přiřazení**.
 3. V dalším okně klikněte na **Vybrat skupiny** a potom v okně **Vybrat skupiny** zvolte skupiny Azure AD, kterým chcete profil přiřadit. Pokud chcete vybrat více skupin, stiskněte a podržte klávesu **CTRL**.
 4. Až budete mít v okně **Vybrat skupiny** vybrané všechny potřebné skupiny, zvolte **Vybrat**.

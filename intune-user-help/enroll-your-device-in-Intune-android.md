@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/16/2017
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -18,9 +18,9 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 499ec16ffa04ec6c5d1fff829729fddc3f74a02b
-ms.openlocfilehash: 464b9b60e9e8a5cb3e195bbec88d496eb4dc9ecf
-ms.lasthandoff: 03/16/2017
+ms.sourcegitcommit: 07a1f63d02e2517e4ab64305304127a40922263c
+ms.openlocfilehash: a4886c9fb780f2748aa767e426f404e03671f42e
+ms.lasthandoff: 03/20/2017
 
 
 ---
@@ -60,10 +60,10 @@ Pokud se při registraci zařízení do služby Intune zobrazí chybová zpráva
 
     ![Obrazovka nastavení přístupu společnosti](./media/and-enroll-4a-comp-access-setup.png)
 
-> [!NOTE]
-> Žluté trojúhelníky neznamenají, že už došlo k chybě. Tyto ikony označují, že ještě existují kroky, které se musí v procesu registrace dokončit.
+    > [!NOTE]
+    > Žluté trojúhelníky neznamenají, že už došlo k chybě. Tyto ikony označují, že ještě existují kroky, které se musí v procesu registrace dokončit.
 
-7.  Na obrazovce **Proč zařízení registrovat?** si přečtěte informace o tom, co vám registrace zařízení umožní, a potom klepněte na **POKRAČOVAT**.
+7. Na obrazovce **Proč zařízení registrovat?** si přečtěte informace o tom, co vám registrace zařízení umožní, a potom klepněte na **POKRAČOVAT**.
 
     ![Obrazovka Proč zařízení registrovat](./media/and-enroll-4b-why-enroll.png)
 
@@ -90,13 +90,19 @@ Pokud se při registraci zařízení do služby Intune zobrazí chybová zpráva
 
         ![android-company-portal-sign-in](./media/and-enroll-3b-allow-contacts-access.png)
 
-    Pokud se zobrazí tato zpráva, klepněte na **POVOLIT**. Na POVOLIT můžete bezpečně klepnout, protože **Microsoft nikdy nevyužívá přístup k vašim kontaktům**. Text zprávy určuje společnost Google a Microsoft ho nemůže změnit. Pokud přístup povolíte, umožníte aplikaci Portál společnosti jenom vytvářet, používat a spravovat váš pracovní účet.
+        Pokud se zobrazí tato zpráva, klepněte na **POVOLIT**. Na POVOLIT můžete bezpečně klepnout, protože **Microsoft nikdy nevyužívá přístup k vašim kontaktům**. Text zprávy určuje společnost Google a Microsoft ho nemůže změnit. Pokud přístup povolíte, umožníte aplikaci Portál společnosti jenom vytvářet, používat a spravovat váš pracovní účet.
 
-    Pokud přístup odmítnete, zobrazí se tato zpráva znovu při příštím přihlášení k portálu společnosti, ale další zprávy můžete vypnout zaškrtnutím políčka **Příště se už neptat**. Pokud se později rozhodnete povolit přístup, použijte možnost **Nastavení** &gt; **Aplikace** &gt; **Portál společnosti** &gt; **Oprávnění** &gt; **Telefon** a tato oprávnění aktivujte.
+        Pokud přístup odmítnete, zobrazí se tato zpráva znovu při příštím přihlášení k portálu společnosti, ale další zprávy můžete vypnout zaškrtnutím políčka **Příště se už neptat**. Pokud se později rozhodnete povolit přístup, použijte možnost **Nastavení** &gt; **Aplikace** &gt; **Portál společnosti** &gt; **Oprávnění** &gt; **Telefon** a tato oprávnění aktivujte.
 
 11.  Na obrazovce **Aktivovat správce zařízení** klepněte na **Aktivovat**.
 
     ![Obrazovka Aktivovat správce zařízení](./media/and-enroll-5-activate.png)
+
+    Portál společnosti potřebuje ke správě vašeho zařízení roli správce zařízení. Ta umožňuje vašemu správci například zobrazit si, kolikrát jste se pokusili odemknout obrazovku a provést nějaké akce.
+
+    Je důležité si zapamatovat, že tyto akce se provádí ve jménu bezpečnosti. Váš správce IT se nesnaží vám bezdůvodně narušit soukromí nebo vymazat informace, ale chce se ujistit, že jsou firemní data v bezpečí.
+
+    Microsoft tuto zprávu nemůže nijak ovlivnit a rozumíme, že její formulace se může zdát poněkud radikální. Neexistuje žádný způsob, kterým by Portál společnosti mohl zobrazovat omezení a přístup, které jsou relevantní pouze pro vaši organizaci. Na této obrazovce je udělujete všechny najednou. Pokud máte otázky týkající se použití konkrétně ve své organizaci, požádejte o další informace správce IT (pomocí kontaktních informací na [webu Portál společnosti](http://portal.manage.microsoft.com)).
 
 12.  Podle pokynů zadejte kód PIN nebo heslo. Pokud jste už kód PIN nebo heslo v daném zařízení nastavili, tato obrazovka se buď neobjeví, nebo budete muset zadat nový kód PIN a heslo.
 
@@ -108,21 +114,21 @@ Pokud se při registraci zařízení do služby Intune zobrazí chybová zpráva
 
     Tato obrazovka informuje o registraci zařízení.
 
-      ![Obrazovka registrace zařízení](./media/and-enroll-8-device-enrolling.png)
+    ![Obrazovka registrace zařízení](./media/and-enroll-8-device-enrolling.png)
 
 14. Když se zobrazí stránka **Nastavení firemního přístupu**, klepněte na **POKRAČOVAT**. Pokud se zobrazí zpráva, že vaše zařízení nedodržuje předpisy, podle pokynů tento problém vyřešte a pak klepněte na **POKRAČOVAT**.
 
-  ![Zařízení nedodržuje předpisy, ale je zaregistrované.](./media/and-enroll-9a-noncompliant-enrolled-device.png)
+    ![Zařízení nedodržuje předpisy, ale je zaregistrované.](./media/and-enroll-9a-noncompliant-enrolled-device.png)
 
-  ![Zobrazí se problémy zařízení s dodržením předpisů, které je potřeba vyřešit.](./media/and-enroll-9b-resolve-compliance-issues.png)
+    ![Zobrazí se problémy zařízení s dodržením předpisů, které je potřeba vyřešit.](./media/and-enroll-9b-resolve-compliance-issues.png)
 
-Další informace o problémech zjistíte, když na ně klepnete. 
+    Další informace o problémech zjistíte, když na ně klepnete.
 
-  ![Rozbalené problémy zařízení s dodržením předpisů](./media/and-enroll-9c-resolve-compliance-issues-expanded.png)
+    ![Rozbalené problémy zařízení s dodržením předpisů](./media/and-enroll-9c-resolve-compliance-issues-expanded.png)
 
-    ![Company access setup screen](./media/and-enroll-9d-comp-access-setup.png)  
+    ![Obrazovka nastavení přístupu společnosti](./media/and-enroll-9d-comp-access-setup.png)  
 
-11. Na obrazovce **Nastavení firemního přístupu je hotové** klepněte na **HOTOVO**. Právě jste svoje zařízení zaregistrovali.
+15. Na obrazovce **Nastavení firemního přístupu je hotové** klepněte na **HOTOVO**. Právě jste svoje zařízení zaregistrovali.
 
     ![Obrazovka Nastavení firemního přístupu je hotové](./media/and-enroll-10-comp-access-setup-complete.png)
 

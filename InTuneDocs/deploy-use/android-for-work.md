@@ -4,7 +4,7 @@ description: "Intune spravuje Android for Work. K dispozici jsou tak další mo�
 keywords: 
 author: nathbarn
 manager: angrobe
-ms.date: 02/03/2017
+ms.date: 03/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,9 +12,9 @@ ms.technology:
 ms.assetid: aa0002d9-f5a0-466e-98ac-3970cb77e3a2
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a5c024c2139536f004799b18a0f6d1d1eb4875b2
-ms.openlocfilehash: bdacb61d1713bf24b2f33f144afa0db356e10ee0
-ms.lasthandoff: 02/23/2017
+ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
+ms.openlocfilehash: e04ab9c14ea6e7cc38430ec6a4d478a65e23ba96
+ms.lasthandoff: 03/22/2017
 
 
 ---
@@ -41,9 +41,9 @@ Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete 
 
 ## <a name="app-publishing-and-distribution"></a>Publikování a distribuce aplikací
 
-Služba Google Play for Work je nedílnou součástí distribuce a správy aplikací na zařízeních s Androidem for Work. Všechny aplikace nasazené na zařízení s Androidem for Work v pracovním profilu pocházejí ze služby Play for Work. Pokud budete chtít spravovat a nasazovat aplikace ve službě Play Store, přihlásíte se jako správce Intune k webu Play for Work a schválíte aplikace pro tenanta Intune. Tyto aplikace se budou synchronizovat na konzolu Intune, kde je pak možné je pomocí Intune nasadit a spravovat. Obchodní aplikace vyvinuté ve vaší organizaci je potřeba publikovat ve službě Play for Work za použití konzoly pro publikování aplikací pro Android na Googlu. Obchodní aplikace se musí nakonfigurovat na konzole pro publikování aplikací pro Android. Omezí se tak přístup do vaší organizace.
+Služba Google Play for Work je nedílnou součástí distribuce a správy aplikací na zařízeních s Androidem for Work. Všechny aplikace nasazené na zařízení s Androidem for Work v pracovním profilu pocházejí ze služby Play for Work. Pokud chcete v obchodu Google Play spravovat a nasazovat aplikace, přihlaste se na web Google Play pomocí přihlašovacích údajů správce vaší společnosti pro správu účtu Google. Můžete schvalovat nasazení aplikací Androidu for Work, aby se objevily v pracovních profilech zařízení. Tyto aplikace se potom budou synchronizovat s konzolou Intune, kde je pak možné je pomocí služby Intune nasadit a spravovat. Obchodní aplikace vyvinuté ve vaší organizaci je potřeba publikovat ve službě Play for Work za použití konzoly pro publikování aplikací pro Android na Googlu. Obchodní aplikace se musí nakonfigurovat na konzole pro publikování aplikací pro Android. Omezí se tak přístup do vaší organizace.
 
-Aplikace se můžou instalovat bez interakce uživatelů, kteří ani nemusí povolit **instalaci z neznámých zdrojů**. Uživatelé můžou procházet Play Store a na svoje zařízení z něj instalovat volitelné nebo dostupné aplikace. Přečtěte si další informace o [nasazení aplikací pro Android for Work](https://docs.microsoft.com/intune/deploy-use/android-for-work-apps).
+Aplikace se můžou instalovat bez interakce uživatelů, kteří ani nemusí povolit **instalaci z neznámých zdrojů**. Uživatelé můžou procházet obchod Play for Work a na svoje zařízení z něj instalovat volitelné nebo dostupné aplikace. Přečtěte si další informace o [nasazení aplikací pro Android for Work](https://docs.microsoft.com/intune/deploy-use/android-for-work-apps).
 
 ## <a name="app-configuration"></a>Konfigurace aplikací
 
@@ -51,15 +51,15 @@ Android for Work poskytuje infrastrukturu pro nasazení konfiguračních hodnot 
 
 ## <a name="email-configuration"></a>Konfigurace e-mailu
 
-Android for Work neposkytuje výchozí e-mailovou aplikaci ani nativní objekt e-mailového profilu, jako poskytuje iOS. Místo toho je možné nastavit konfigurace e-mailu s použitím nastavení konfigurací aplikací u e-mailových aplikací, které je podporují. Konfiguraci pomocí konfigurace aplikace pro Android for Work podporují dvě klientské aplikace EAS (Exchange ActiveSync) na webu Play Store – Gmail a Nine Work.
+Android for Work neposkytuje výchozí e-mailovou aplikaci ani nativní objekt e-mailového profilu, který iOS poskytuje. Místo toho je možné nastavit konfigurace e-mailu s použitím nastavení konfigurací aplikací u e-mailových aplikací, které je podporují. Konfiguraci pomocí konfigurace aplikace pro Android for Work podporují dvě klientské aplikace EAS (Exchange ActiveSync) na webu Play Store – Gmail a Nine Work.
 
-Intune poskytuje pro aplikace Gmail a Nine Work šablony konfigurace. Ostatní e-mailové aplikace, které podporují konfigurační profily aplikací, je možné nakonfigurovat pomocí zásad konfigurace mobilních aplikací.
+Když jsou aplikace Gmail a Nine Work spravované jako pracovní aplikace, služba Intune pro ně poskytuje šablony konfigurace. Ostatní e-mailové aplikace, které podporují konfigurační profily aplikací, je možné nakonfigurovat pomocí zásad konfigurace mobilních aplikací.
 
 Pokud pro zařízení s Androidem for Work používáte podmíněný přístup Exchange ActiveSync, je nutné použít e-mailovou aplikaci Gmail nebo Nine Work. Podporuje se také aplikace Microsoft Outlook pro Android nebo kterákoliv jiná e-mailová aplikace, která používá moderní ověřování prostřednictvím ADAL. Přečtěte si další informace o [e-mailových profilech pro firemní e-mail](configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune.md).
 
-## <a name="mobile-app-management-policies"></a>Zásady správy mobilních aplikací
+## <a name="app-protection-policies"></a>Zásady ochrany aplikace
 
-V pracovním i osobním profilu se plně podporují zásady omezení použité u aplikací, které jsou povolené pro správu mobilních aplikací (MAM). Obchodní aplikace je možné publikovat na konzole pro publikování aplikací pro Android na adrese https://play.google.com/apps/publish. Tato konzola zahrnuje možnost nastavit pro vaši organizaci aplikace jako soukromé. Přečtěte si další informace o [nastavení zásad dodržování předpisů pro zařízení s Androidem for Work](afw-compliance-policy-settings-in-microsoft-intune.md). Obecné informace o zásadách MAM najdete v článku o [zásadách správy mobilních aplikací](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
+Používané zásady ochrany aplikace jsou plně podporované v pracovním i osobním profilu. Obchodní aplikace je možné publikovat na konzole pro publikování aplikací pro Android na adrese https://play.google.com/apps/publish. Tato konzola zahrnuje možnost nastavit pro vaši organizaci aplikace jako soukromé. Přečtěte si další informace o [nastavení zásad dodržování předpisů pro zařízení s Androidem for Work](afw-compliance-policy-settings-in-microsoft-intune.md). Obecné informace o zásadách ochrany aplikace najdete v článku o [zásadách aplikací](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
 
 ## <a name="vpn-profiles"></a>Profily sítě VPN
 

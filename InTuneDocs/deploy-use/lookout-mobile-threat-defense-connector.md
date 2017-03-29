@@ -15,9 +15,9 @@ ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 6f78150b6c3821f6e9822ccfa905ac367bd359ad
-ms.openlocfilehash: 9e00e60472c8ba9f10a6071c42a53f58dcc00a08
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
+ms.openlocfilehash: dfed1ece238210e8b98934d8add7dbb9b0f1c1fb
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -26,19 +26,19 @@ ms.lasthandoff: 03/02/2017
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Přístup mobilních zařízení k podnikovým prostředkům můžete regulovat na základě posouzení rizik, které provádí Lookout. To je řešení ochrany zařízení před internetovými útoky integrované v Microsoft Intune. Riziko se posuzuje na základě telemetrie, kterou ze zařízení shromažďuje služba Lookout. K ní patří:
+Přístup mobilních zařízení k firemním prostředkům můžete regulovat na základě posouzení rizik, které provádí ochrana před mobilními hrozbami Lookout integrovaná ve službě Microsoft Intune. Riziko se posuzuje na základě telemetrie, kterou ze zařízení shromažďuje služba Lookout. K ní patří:
 - Ohrožení zabezpečení operačního systému
 - Nainstalované škodlivé aplikace
 - Škodlivé profily sítě
 
 Na základě posouzení rizik Lookoutu, které se povoluje přes zásady dodržování předpisů v Intune, můžete nakonfigurovat zásady podmíněného přístupu. V nastaveních můžete povolit nebo blokovat zařízení, která nedodržují předpisy, podle zjištěných hrozeb.
 
-## <a name="how-do-intune-and-lookout-device-threat-protection-help-protect-company-resources"></a>Jak může ochrana Intune a Lookout, chránící zařízení proti hrozbám, pomoct při ochraně prostředků společnosti?
+## <a name="how-do-intune-and-lookout-mobile-threat-defense-help-protect-company-resources"></a>Jak může služba Intune a ochrana před mobilními hrozbami Lookout pomoct chránit prostředky společnosti?
 Na mobilní zařízení se nainstaluje a spustí mobilní aplikace Lookoutu **Lookout for Work**. Tato aplikace zaznamenává telemetrii systému souborů, zásobníku sítě, zařízení a aplikací tam, kde je k dispozici, a posílá ji do cloudové služby Lookout, kde se posoudí ohrožení zařízení mobilními hrozbami. Klasifikace úrovní rizik pro hrozby můžete změnit v konzole Lookoutu tak, aby odpovídaly vašim požadavkům.  
 
-Zásady dodržování předpisů v Intune obsahují pravidlo pro Lookout Mobile Threat Protection založené na posouzení rizik Lookoutu. Když je toto pravidlo aktivní, Intune vyhodnocuje soulad zařízení se zásadami, které jste povolili.
+Zásady dodržování předpisů ve službě Intune obsahují pravidlo pro ochranu před mobilními hrozbami Lookout založené na posouzení rizik služby Lookout. Když je toto pravidlo aktivní, Intune vyhodnocuje soulad zařízení se zásadami, které jste povolili.
 
-Pokud se zjistí, že zařízení dané předpisy nedodržuje, dá se zablokovat přístup k prostředkům, jako jsou Exchange Online a SharePoint Online. Uživatelé dostanou na blokovaná zařízení informace o tom, jak problém vyřešit a jak znovu získat přístup. Pokyny se spouští z aplikace Lookout for Work.
+Pokud se zjistí, že zařízení dané předpisy nedodržuje, dá se zablokovat přístup k prostředkům, jako jsou Exchange Online a SharePoint Online. Uživatelé dostanou na blokovaná zařízení informace o tom, jak problém vyřešit a jak znovu získat přístup. Pokyny se spouští z aplikace Lookout for Work.
 
 ## <a name="supported-platforms"></a>Podporované platformy:
 Pro Lookout se podporují tyto platformy, pokud jsou zaregistrované v Intune:
@@ -92,9 +92,9 @@ Zjišťuje ohrožení vaší sítě, například útoky prostředníkem, a zabra
 
 ## <a name="next-steps"></a>Další kroky
 Tady jsou hlavní kroky, které je nutné provést při implementaci tohoto řešení:
-1.    [Nastavení předplatného s ochranou zařízení před internetovými útoky](device-threat-protection-subscription-setup.md)
-2.    [Povolení připojení s ochranou zařízení před internetovými útoky v Intune](device-threat-protection-enable.md)
-3.  [Konfigurace a nasazení aplikace ochrany zařízení před internetovými útoky](device-threat-protection-apps.md)
-4.    [Konfigurace zásad dodržování předpisů pro ochranu zařízení před internetovými útoky](device-threat-protection-policy.md)
-5.    [Řešení problémů s integrací ochrany zařízení před internetovými útoky](http://docs.microsoft.com/intune/troubleshoot/device-threat-protection-troubleshooting)
+1.    [Nastavení předplatného služby Lookout](device-threat-protection-subscription-setup.md)
+2.    [Povolení ochrany před mobilními hrozbami Lookout ve službě Intune](device-threat-protection-enable.md)
+3.  [Konfigurace a nasazení ochrany před mobilními hrozbami Lookout](device-threat-protection-apps.md)
+4.    [Konfigurace zásad dodržování předpisů zařízení služby Lookout](device-threat-protection-policy.md)
+5.    [Řešení potíží s integrací ochrany před mobilními hrozbami Lookout](http://docs.microsoft.com/intune/troubleshoot/device-threat-protection-troubleshooting)
 

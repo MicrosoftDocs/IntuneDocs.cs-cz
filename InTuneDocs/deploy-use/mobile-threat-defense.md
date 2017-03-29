@@ -15,9 +15,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b7ab3041a38bd394195a67690d245d1ad9fd0566
-ms.openlocfilehash: fd54a1c94c9a4a279710d6be9f7cfe3b48468cb7
-ms.lasthandoff: 03/03/2017
+ms.sourcegitcommit: c3c5126b1c9437c2689b162c28e1a60e5dc4b108
+ms.openlocfilehash: ad39f4b2cc4a51346fcf226dc07208af336d3581
+ms.lasthandoff: 03/22/2017
 
 
 ---
@@ -41,14 +41,15 @@ Konektor chrání firemní prostředky tím, že mezi Intune a vaším dodavatel
 
 Pokud řešení Mobile Threat Defense považuje zařízení za nakažené:
 
-![](http://i.imgur.com/kF8tI42.png)
+![Nakažené zařízení s ochranou službou Mobile Threat Defense](../media/mtp/MTD-image-1.png)
 
 Přístup se udělí, když je zařízení opravené:
 
-![](http://i.imgur.com/zG4ZrzX.png)
+![Udělení přístupu službou Mobile Threat Defense](../media/mtp/MTD-image-2.png)
 
 ## <a name="mobile-threat-defense-partners"></a>Partneři Mobile Threat Defense
 
 Zjistěte, jak zabezpečit přístup k prostředkům společnosti na základě rizika zařízení, sítě a aplikace s:
 
 - [Lookoutem](https://docs.microsoft.com/intune/deploy-use/lookout-mobile-threat-defense-connector)
+- [Skycure](https://docs.microsoft.com/intune/deploy-use/skycure-mobile-threat-defense-connector)

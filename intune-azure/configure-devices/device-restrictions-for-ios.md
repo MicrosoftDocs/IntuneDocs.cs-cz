@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/15/2017
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: deea78dcea9ade031441bf12b388a862235a8e9c
-ms.openlocfilehash: 01e8a6968797bc2b2b0f3bb5710ee396d9094584
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
+ms.openlocfilehash: 881ce40cb093b1817c9c4b84c9f8ca78b19de727
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -51,7 +51,8 @@ ms.lasthandoff: 03/15/2017
 -     **Klávesové zkratky (jenom pod dohledem)** – Umožní používání klávesových zkratek.
 -     **Detekce zápěstí pro spárované hodinky Apple Watch** – Když se povolí, Apple Watch nebudou zobrazovat oznámení, dokud si je uživatel nenasadí.
 - **Vyžadovat párovací heslo pro odchozí požadavky AirPlay** – Vyžaduje párovací heslo, pokud uživatel použije AirPlay ke streamování obsahu do jiných zařízení Apple.
-- **Úpravy účtu (jenom pod dohledem)** – Povolí uživateli změnu nastavení účtu, jako je například konfigurace e-mailu.
+- **Úpravy účtu (jenom pod dohledem)** – Když jsou zablokované, brání to uživateli upravovat nastavení spojená s konkrétním zařízením z aplikace pro nastavení iOSu, například vytváření nových účtů zařízení a změny uživatelského jména nebo hesla.
+To platí také pro nastavení dostupná z aplikace pro nastavení iOSu, například Pošta, Kontakty, Kalendáře, Facebook a Twitter. Neplatí to pro aplikace s nastavením účtu, které není konfigurovatelné z aplikace pro nastavení iOSu, jako je například aplikace Microsoft Outlook.
 - **Párování s Apple Watch (jenom pod dohledem)** – Povolí zařízení spárovat se s Apple Watch.
 - **Úpravy Bluetooth (jenom pod dohledem)** – Zablokuje koncovému uživateli možnost měnit nastavení Bluetooth na zařízení.
 - **Sledování vzdálených obrazovek v aplikaci Classroom (jenom pod dohledem)** – Povolí nebo zablokuje aplikaci Classroom pozorovat obrazovku na vzdálených zařízeních.

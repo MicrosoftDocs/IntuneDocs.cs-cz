@@ -5,7 +5,7 @@ description: "Intune Azure Preview: Naučte se povolit správu mobilních zaří
 keywords: 
 author: nathbarn
 manager: nathbarn
-ms.date: 03/15/17
+ms.date: 03/21/17
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: a95aca706a4996d40e268a80c7c334ebb9854df5
-ms.openlocfilehash: 6cbaf8414452f11f0aa97616bbed2cf164b49ac0
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
+ms.openlocfilehash: 609656c2831c09c67e911c8150d31f38faad020b
+ms.lasthandoff: 03/22/2017
 
 
 ---
@@ -33,23 +33,13 @@ K nastavení registrace zařízení s Windows použijte jednu z následujících
  -  Abyste mohli tuto metodu použít, musíte mít službu Azure Active Directory Premium. Pokud ji nemáte, použijte metodu registrace určenou pro Windows 8.1 a Windows Phone 8.1.
  -  Pokud se rozhodnete, že nepovolíte automatickou registraci, použijte metodu registrace určenou pro Windows 8.1 a Windows Phone 8.1.
 
-- [**Registrace Windows 8.1 a Windows Phone 8.1 pomocí konfigurace záznamu CNAME**](#simplify-enrollment-by-configuring-cname)
+- [**Registrace bez automatické registrace v adresáři služby Azure AD Premium**](#enable-windows-enrollment-without-azure-ad-premium)
  - K registraci zařízení s Windows 8.1 a Windows Phone 8.1 musíte použít tuto metodu.
- - Tuto metodu můžete také použít, pokud nemáte Azure Active Directory (AD) Premium.
-
-
-## <a name="prerequisites"></a>Požadavky
-
-Pokud některé z následující požadavků ještě nejde zajistit v Intune Azure Preview, budete je muset zajistit z konzoly pro správu Intune Classic.
-
-- [Konfigurace vlastního názvu domény](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2)
-- [Nastavení autority správy mobilních zařízení (MDM)](set-mdm-authority.md) na **Microsoft Intune**
-- [Konfigurace aplikace Portál společnosti](/intune-azure/manage-apps/company-portal-app.md)
-- Přiřazení licencí uživatelům
+ - Tuto metodu můžete použít pro zařízení s Windows 8.1 a novější, pokud nechcete použít službu Azure Active Directory (AD) Premium.
 
 [!INCLUDE[AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
 
-## <a name="enable-windows-workplace-enrollment"></a>Povolení registrace pracoviště Windows
+## <a name="enable-windows-enrollment-without-azure-ad-premium"></a>Povolení registrace zařízení se systémem Windows bez Azure AD Premium
 
 Můžete umožnit, aby si uživatelé svá zařízení instalovali a zaregistrovali bez automatické registrace Azure AD Premium. Pokud vytvoříte záznamy prostředků DNS CNAME, uživatelé se mohou připojovat k Intune a registrovat se bez zadávání názvu serveru.
 
@@ -79,7 +69,7 @@ Můžete umožnit, aby si uživatelé svá zařízení instalovali a zaregistrov
 
     Postup registrace koncových uživatelů najdete v tématu [Registrace zařízení s Windows v Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-windows). Uživatele můžete také nasměrovat na stránku [Co správce IT uvidí při registraci zařízení v Intune](https://docs.microsoft.com/intune/enduser/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows).
 
-    Další informace o úlohách pro koncové uživatele najdete v tématu [Materiály o prostředí Microsoft Intune pro koncové uživatele](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune).
+    Další informace o úlohách pro koncové uživatele najdete v tématu [Materiály o prostředí Microsoft Intune pro koncové uživatele](https://docs.microsoft.com/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune).
 
 Pokud jste nenasadili Portál společnosti na zařízení, nejsou vyžadované žádné další kroky.  Kroky 2 a 3 v konzole správce můžete ignorovat.
 
