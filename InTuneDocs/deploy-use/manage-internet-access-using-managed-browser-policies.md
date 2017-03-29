@@ -110,7 +110,7 @@ V následující části najdete informace o povolených formátech a zástupný
 
     -   Port 443 pro protokol HTTPS
 
-    Použití zástupných znaků pro číslo portu se nepodporuje. Příklad: **http&colon;//www&period;contoso&period;com:*;** a **http&colon;//www&period;contoso&period;com: /*;** se nepodporují.
+    Použití zástupných znaků pro číslo portu se nepodporuje. Příklad: **http&colon;//www&period;contoso&period;com:*;**a**http&colon;//www&period;contoso&period;com: /*;** se nepodporují.
 
 -   Informace o povolených vzorech, které můžete použít při zadávání adres URL, najdete v následující tabulce:
 
