@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
 ms.openlocfilehash: 182ca17c53b672d70ff1b30a63c0662050db95c3
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -36,7 +37,7 @@ Když se cílový uživatel na svém zařízení pokusí použít službu Online
 ![Diagram znázorňující rozhodovací body, které určují, jestli má mít zařízení povolený nebo blokovaný přístup k Online Skypu pro firmy](../media/ConditionalAccess_SkypeforBusiness.png)
 
 **Dřív** než nakonfigurujete zásady podmíněného přístupu pro Online Skype pro firmy, musíte:
-- Mít **předplatné Online Skypu pro firmy ** a přiřadit uživatelům příslušnou licenci
+- Mít **předplatné Online Skypu pro firmy** a přiřadit uživatelům příslušnou licenci
 - Mít **předplatné Enterprise Mobility + Security (EMS)** nebo **předplatné Azure Active Directory (Azure AD) Premium** a uživatelé musí mít licenci pro EMS nebo Azure AD. Další informace najdete na stránce s [cenami Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) nebo [cenami Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
 
 -   [Povolit moderní ověřování](https://docs.microsoft.com/en-us/intune/deploy-use/restrict-access-to-skype-for-business-online-with-microsoft-intune) pro Online Skype pro firmy.
@@ -118,9 +119,4 @@ Vyberte libovolnou skupinu mobilních zařízení. Pak na kartě **Zařízení**
 * **Zařízení nevyhovující předpisům:** Tato zařízení jsou z Online Skypu pro firmy blokovaná.
 
 * **Zařízení zaregistrovaná v AAD a vyhovující předpisům:** Tato zařízení mají k Online Skypu pro firmy přístup.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
