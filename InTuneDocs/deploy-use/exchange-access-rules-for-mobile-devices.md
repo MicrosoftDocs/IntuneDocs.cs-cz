@@ -47,7 +47,7 @@ Postup vytvoření vlastního pravidla je popsaný v následující části.
 
 ## <a name="create-a-default-access-rule"></a>Vytvoření výchozího pravidla přístupu
 
-1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) zvolte ****Zásady&gt; **Exchange ActiveSync**.
+1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) zvolte **Zásady** &gt; **Exchange ActiveSync**.
 
 2.  V seznamu **Výchozí pravidlo** vyberte pravidlo přístupu, které chcete použít u všech mobilních zařízení, pro která neplatí pravidlo nebo osobní výjimka. Vyberte **Uložit**.
 
@@ -55,7 +55,7 @@ Následující postup popisuje vytvoření vlastního pravidla:
 
 ## <a name="create-a-custom-access-rule"></a>Vytvoření vlastního pravidla přístupu
 
-1. V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) zvolte ****Zásady&gt; **Exchange ActiveSync**.
+1. V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) zvolte **Zásady** &gt; **Exchange ActiveSync**.
 
 2.  V seznamu **Výjimky platforem** vyberte **Přidat pravidlo** a potom vytvořte vlastní pravidlo. Vyberte **Uložit**.
 
