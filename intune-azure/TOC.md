@@ -33,6 +33,7 @@
 ### [Získání tokenu Apple DEP](enroll-devices/get-apple-dep-token.md)
 ### [Volba způsobu registrace zařízení s iOSem](enroll-devices/choose-ios-enrollment-method.md)
 ## Postupy
+### [Přiřazení licencí uživatelům](/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4?toc=%2fintune-azure%2ftoc.json)
 ### [Registrace zařízení s Androidem](enroll-devices/enroll-android-and-knox-standard-devices.md)
 ### Registrace zařízení s iOSem
 #### [Registrace zařízení s iOSem pomocí Pomocníka s nastavením](enroll-devices/enroll-ios-devices-with-apple-configurator-and-setup-assistant.md)

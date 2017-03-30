@@ -136,7 +136,7 @@ Certifikát Symantecu, který se používá k nasazení mobilních aplikací pro
 
 1.  Zaregistrujte nejnovější verzi své obchodní aplikace.
 
-2.  Otevřete konzolu pro správu Intune ([https://admin.manage.microsoft.com](https://admin.manage.microsoft.com)), přejděte na **Správce**, &gt;Správa mobilních zařízení**** &gt; **Windows Phone** a klikněte na **Nahrát podepsanou aplikaci**.
+2.  Otevřete konzolu pro správu Intune ([https://admin.manage.microsoft.com](https://admin.manage.microsoft.com)), přejděte na **Správce**, &gt; **Správa mobilních zařízení** &gt; **Windows Phone** a klikněte na **Nahrát podepsanou aplikaci**.
 
 3.  Nahrajte nově podepsaný firemní portál. Budete potřebovat nově podepsaný soubor SSP.xap a nový soubor .PFX, který jste dostali od Symantecu, nebo token pro zápis aplikace vytvořený pomocí tohoto nového souboru .PFX.
 
