@@ -163,7 +163,7 @@ VPN na vyžádání můžete konfigurovat pro zařízení s iOSem 8.0 a novějš
 1. Na stránce konfigurace zásad najděte **Pravidla pro připojení na vyžádání pro toto připojení VPN**. Sloupce jsou označeny **Shoda** – podmínka, kterou pravidla kontrolují, a **Akce** – akce, kterou zásady spustí při splnění podmínky.
 2. Zvolte **Přidat** a vytvořte pravidlo. Existují dva typy shod, které v pravidle můžete nastavit. V jednotlivém pravidle můžete konfigurovat pouze jeden z těchto typů.
   - **SSID**, který odkazuje na bezdrátové sítě.
-  - **Domény pro hledání DNS**, které jsou...  Můžete použít plně kvalifikované názvy domény, například *team. corp.contoso.com*, nebo můžete použít domény, například *contoso.com*, které jsou obdobou použití * *.contoso.com*.
+  - **Domény pro hledání DNS**, které jsou...  Můžete použít plně kvalifikované názvy domény, například *team. corp.contoso.com*, nebo můžete použít domény, například *contoso.com*, které jsou obdobou použití **.contoso.com*.
 3. Volitelné: Zadejte test řetězce adresy URL, což je adresa URL, kterou pravidlo používá jako test. Pokud zařízení, na kterém je tento profil nainstalovaný, má k této adrese URL přístup bez přesměrování, naváže se připojení VPN a zařízení se připojí k cílové adrese URL. Uživatel neuvidí web testu řetězce adresy URL. Příkladem testu řetězce adresy URL je adresa auditujícího webového serveru, který zkontroluje splnění bezpečnostních předpisů zařízením předtím, než ho připojí k VPN. Další možností je, že adresa URL otestuje schopnost VPN připojit se k webu předtím, než se zařízení připojí k cílové adrese URL skrze VPN.
 4. Vyberte jednu z těchto akcí:
   - **Připojit**
