@@ -1,4 +1,8 @@
-# Docs.microsoft.com Github repository
+## <a name="microsoft-open-source-code-of-conduct"></a>Pravidla chování v oblasti Open Source u Microsoftu
 
-You've found one of the GitHub repositories that houses the source for content published to [https://docs.microsoft.com](https://docs.microsoft.com/.), home of all technical content for Microsoft's Cloud and Enterprise Division.
+Na tomto projektu platí [Pravidla chování v oblasti Open Source u Microsoftu](https://opensource.microsoft.com/codeofconduct/).
+Další informace vyhledejte v [častých otázkách k Pravidlům chování](https://opensource.microsoft.com/codeofconduct/faq/). Případné další dotazy nebo připomínky pošlete na [opencode@microsoft.com](mailto:opencode@microsoft.com).
 
+# <a name="docsmicrosoftcom-github-repository"></a>Úložiště GitHub pro web docs.microsoft.com
+
+Našli jste jedno z úložišť GitHub, které je zdrojem obsahu publikovaného na webu [https://docs.microsoft.com](https://docs.microsoft.com/.). Na tomto webu je veškerý technický obsah divize Microsoftu specializované na cloudová a podniková řešení.

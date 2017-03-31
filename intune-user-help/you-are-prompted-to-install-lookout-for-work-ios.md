@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 01/23/2017
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ searchScope:
 ROBOTS: 
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 6673c8de8d5deb74005b40a58274efcb10783fcc
-ms.openlocfilehash: 6157cef87c5cdad6d0e293946321fa8bdf18e61a
-ms.lasthandoff: 03/08/2017
+ms.sourcegitcommit: c66226b7fc31f91669c4f4f0693ccbd7c679189f
+ms.openlocfilehash: 62e37d42aef9a828551db1fbbcf5e3cb1b3eeec9
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -31,24 +31,23 @@ Než budete moci začít pracovat, správce IT potřebuje, abyste nainstalovali 
 
 1.    Pokud se zobrazí následující výzva, klepnutím na **Nainstalovat** umožněte nainstalování aplikace Lookout for Work do zařízení.
 
-    ![Klepnutím na Nainstalovat nainstalujte aplikaci Lookout for Work](./media/ios-lfw-install-app-request.png)
+  ![Klepnutím na Nainstalovat nainstalujte aplikaci Lookout for Work](./media/ios-mtd-install-app-request.png)
 
 2. Když se zobrazí následující zpráva, klepněte na **Nastavení**, zapněte **Polohové služby** a pak klepněte na **Pokračovat**.
 
-    ![Klepněte na Nastavení a pak na Polohové služby](./media/ios-lfw-allow-location-services.png)
+  ![Klepněte na Nastavení a pak na Polohové služby](./media/ios-lfw-allow-location-services.png)
 
 3. Zkontrolujte oprávnění, která aplikace Lookout for Work potřebuje, a klepněte na **Pokračovat**.
 
-    ![jste připojeni k aplikaci Lookout for Work](./media/ios-lfw-permissions-lookout-needs.png)
+  ![jste připojeni k aplikaci Lookout for Work](./media/ios-lfw-permissions-lookout-needs.png)
 
 4. Při zobrazení výzvy, která žádá o povolení zasílat oznámení z aplikace Lookout for Work, klepněte na **Povolit**.
 
-    ![Klepněte na Nastavení a pak na Polohové služby](./media/ios-lfw-allow-notifications.png)
-
+  ![Klepněte na Nastavení a pak na Polohové služby](./media/ios-lfw-allow-notifications.png)
 
 Aplikace Lookout for Work dokončí instalaci, a pokud se v zařízení nenajdou žádná ohrožení zabezpečení, zobrazí se následující obrazovka.
 
-![Aplikace Lookout for Work nenašla žádné bezpečnostní hrozby.](./media/ios-lfw-no-threats-found.png)
+  ![Aplikace Lookout for Work nenašla žádné bezpečnostní hrozby.](./media/ios-lfw-no-threats-found.png)
 
 Pokud aplikace Lookout for Work najde ve vašem zařízení bezpečnostní hrozbu, nabídne vám pokyny k vyřešení vašeho problému.
 
