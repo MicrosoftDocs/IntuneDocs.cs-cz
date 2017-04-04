@@ -1,5 +1,6 @@
 # Úvod
 ## [Co je Azure Portal preview?](introduction/what-is-microsoft-intune.md)
+## [Funkce Intune v Azure](introduction/ui-changes-in-microsoft-intune.md)
 ## Začínáme
 <!---(introduction/get-started.md) --->
 ### [Registrace bezplatné zkušební verze](introduction/sign-up-free-trial-microsoft-intune.md)
