@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/09/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,21 +15,21 @@ ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 2e7062169ceb855f03a13d1afb4b4de41af593ac
-ms.openlocfilehash: 10ba007095182c9cb07710656ba5f275e254d92e
-ms.lasthandoff: 02/15/2017
+ms.sourcegitcommit: c66226b7fc31f91669c4f4f0693ccbd7c679189f
+ms.openlocfilehash: 74f2848dcd2863022dac44cf302b330a99cf1a55
+ms.lasthandoff: 03/29/2017
 
 
 ---
 
 # <a name="manage-windows-pcs-with-intune-pc-client-software"></a>Správa počítačů s Windows pomocí klientského počítačového softwaru Intune
-Preferovaný způsob registrace počítačů s Windows do Intune je [registrace počítačů s Windows jako mobilních zařízení](set-up-windows-device-management-with-microsoft-intune.md). Existuje ale také další možnost – registrace a správa počítačů s Windows na základě instalace klientského softwaru Intune, jak je popsáno v tomto tématu.
+Preferovaným způsobem registrace počítačů s Windows do Intune je [registrace počítačů s Windows jako mobilních zařízení](set-up-windows-device-management-with-microsoft-intune.md). Pro správce IT ale existuje také další možnost – registrace a správa počítačů s Windows na základě instalace klientského softwaru Intune, jak je popsáno v tomto tématu. Pro klientský software Intune se nepodporuje registrace jako mobilního zařízení.
 
 Intune spravuje počítače s Windows pomocí zásad podobně jako objekty zásad skupiny (GPO) služby AD DS (Active Directory Domain Services) Windows Serveru. Pokud budete počítače připojené k doméně Active Directory spravovat pomocí Intune, [je nutné, aby zásady Intune nekolidovaly se žádnými objekty zásad skupiny](resolve-gpo-and-microsoft-intune-policy-conflicts.md), které jsou nastavené pro vaši organizaci. Další informace najdete v článku [Objekty zásad skupiny](https://technet.microsoft.com/library/hh147307.aspx).
 
 ## <a name="policies-and-app-deployments-for-the-intune-software-client"></a>Zásady a nasazení aplikace pro klientský software Intune
 
-I když klientský software Intune podporuje [možnosti správy, které pomáhají chránit počítače](policies-to-protect-windows-pcs-in-microsoft-intune.md) pomocí správy aktualizací softwaru, brány Windows Firewall a služby Endpoint Protection, nemůžou být na počítače spravované pomocí klientského softwaru Intune zacílené jiné zásady Intune, včetně nastavení zásad **Windows**, která jsou specifická pro správu mobilních zařízení. 
+I když klientský software Intune podporuje [možnosti správy, které pomáhají chránit počítače](policies-to-protect-windows-pcs-in-microsoft-intune.md) pomocí správy aktualizací softwaru, brány Windows Firewall a služby Endpoint Protection, nemůžou být na počítače spravované pomocí klientského softwaru Intune zacílené jiné zásady Intune, včetně nastavení zásad **Windows**, která jsou specifická pro správu mobilních zařízení.
 
 Pokud ke správě počítačů s Windows používáte klientský software Intune, můžete používat jenom zásady, které jsou uvedené v části **Správa počítače**.
 
@@ -70,7 +70,7 @@ K nasazování aplikací můžete navíc použít pouze Instalační službu sys
 
 ## <a name="computer-management-capabilities-with-the-intune-client-software"></a>Možnosti správy počítačů pomocí klientského softwaru Intune
 
-Po instalaci klientského softwaru Intune patří mezi možnosti správy tyto funkce: 
+Po instalaci klientského softwaru Intune patří mezi možnosti správy tyto funkce:
 
 - [Správa aplikací](deploy-apps-in-microsoft-intune.md)
 

@@ -16,9 +16,9 @@ ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: cddeb6bf854b9ffbbc1744d5d164c8ceea34ff49
-ms.openlocfilehash: 7d5a1859ef1a373ce424dd4f351fc137c6052fb7
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: f316b332c3f1b80b9d6af488943298fcfea13741
+ms.openlocfilehash: 8cc5e12308871a3b023bed49e9647b888971f849
+ms.lasthandoff: 03/30/2017
 
 
 ---
@@ -87,6 +87,12 @@ Pokud používáte klasickou konzolu pro správu Intune, je dobré vědět o ná
 <!--- -   In the Azure portal, you have the ability to specify actions and notifications that are intiated when a device is determined to be noncompliant. This ability does not exist in the Intune admin console.
 
 -   In the Azure portal, you can set a grace period to allow time for the end-user to get their device back to compliance status before they completely lose the ability to get company data on their device. This is not available in the Intune admin console.--->
+
+##  <a name="migration-from-intune-classic-console-to-intune-azure-preview-portal"></a>Migrace z klasické konzoly Intune na portál Intune Azure Preview
+
+Zásady dodržování předpisů pro zařízení vytvořené v [klasické konzole Intune](https://manage.microsoft.com) se nezobrazí na novém [portálu Azure Portal pro Intune](https://portal.azure.com). Budou ale nadále účinné pro uživatele a bude je možné spravovat prostřednictvím klasické konzoly Intune.
+
+Pokud chcete využívat nové funkce související s dodržováním předpisů pro zařízení na portálu Azure Portal pro Intune, musíte vytvořit nové zásady dodržování předpisů pro zařízení přímo na portálu Azure Portal pro Intune. Pokud přiřadíte nové zásady dodržování předpisů pro zařízení na portálu Azure Portal pro Intune uživateli, kterému byly přiřazeny zásady dodržování předpisů pro zařízení také na klasickém portálu Intune, pak budou mít zásady na portálu Azure Portal pro Intune přednost před těmi, které byly vytvořeny v klasické konzole Intune.
 
 ##  <a name="next-steps"></a>Další kroky
 

@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/13/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a2e840797c06322b9efc59438e0675e57b7cdb24
-ms.openlocfilehash: facae5f49b52760dcea0653bd261e16e13e11bbf
-ms.lasthandoff: 02/14/2017
+ms.sourcegitcommit: c66226b7fc31f91669c4f4f0693ccbd7c679189f
+ms.openlocfilehash: 5bb9c68db8edb68531fc40bc93c28881a95b6940
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -83,9 +83,9 @@ Profil registrace zařízení definuje nastavení, která se použijí pro skupi
 
 3.  Profil přidáte kliknutím na **Uložit profil**.
 
-### <a name="add-ios-devices-to-enroll-with-setup-assistant"></a>Přidejte zařízení s iOS, která chcete zaregistrovat prostřednictvím pomocníka s nastavením.
+### <a name="add-ios-devices-to-enroll-with-setup-assistant"></a>Přidejte zařízení s iOSem, která chcete zaregistrovat prostřednictvím pomocníka s nastavením.
 
-1. V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) přejděte na **Skupiny** &gt; **Všechna zařízení** &gt; **Všechna zařízení ve vlastnictví firmy** &gt; **Všechna zařízení** a zvolte **Přidat zařízení**. 
+1. V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) přejděte na **Skupiny** &gt; **Všechna zařízení** &gt; **Všechna zařízení ve vlastnictví firmy** &gt; **Všechna zařízení** a zvolte **Přidat zařízení**.
 
    Zařízení můžete přidat dvěma způsoby:
 
@@ -96,7 +96,7 @@ Profil registrace zařízení definuje nastavení, která se použijí pro skupi
     |||
     |-|-|
     |&lt;Sériové č. 1&gt;|&lt;Podrobnosti o zařízení č. 1&gt;|
-    |&lt;Sériové č.&2;&gt;|&lt;Podrobnosti o zařízení č. 2&gt;|
+    |&lt;Sériové č. 2&gt;|&lt;Podrobnosti o zařízení č. 2&gt;|
 
   Soubor .csv v textovém editoru:
 
@@ -107,13 +107,13 @@ Profil registrace zařízení definuje nastavení, která se použijí pro skupi
 
   -  **Ručním přidáním podrobností o zařízeních**&mdash; – zadejte sériové číslo a případné poznámky nebo detaily pro až 15 zařízení.
 
-  V podokně **Zkontrolovat zařízení** můžete sériová čísla potvrdit. Můžete se také rozhodnout, jestli chcete přepsat **Podrobnosti** pro sériová čísla, která se importují znovu, nebo můžete zrušit zaškrtnutí políčka **Přepsat** a zachovat aktuální podrobnosti. 
+  V podokně **Zkontrolovat zařízení** můžete sériová čísla potvrdit. Můžete se také rozhodnout, jestli chcete přepsat **Podrobnosti** pro sériová čísla, která se importují znovu, nebo můžete zrušit zaškrtnutí políčka **Přepsat** a zachovat aktuální podrobnosti.
 
-> [!NOTE] 
+> [!NOTE]
 > V existující konzole správce Intune můžou správci přijímat přidružené podrobnosti z nahraného CSV a přepsat existující podrobnosti pro jednotlivá sériová čísla. V novém portálu Azure Portal budete moct jenom přepsat podrobnosti pro všechna sériová čísla nebo ignorovat nové podrobnosti pro všechna sériová čísla.
 
-  > [!NOTE]
-  > Pokud později budete chtít zařízení vlastněná firmou ze správy pomocí služby Intune odebrat, budete asi muset přejít do skupiny zařízení **Podle sériového čísla iOSu** v části **Firemní předregistrovaná zařízení** a odebrat sériové číslo zařízení z Intune, aby se registrace zařízení deaktivovala. Pokud Intune provádí postup zotavení po havárii přibližně v době odebrání sériových čísel, bude potřeba ověřit, že jsou ve skupině jenom sériová čísla aktivních zařízení.
+> [!NOTE]
+> Pokud později budete chtít zařízení vlastněná firmou ze správy pomocí služby Intune odebrat, budete asi muset přejít do skupiny zařízení **Podle sériového čísla iOSu** v části **Firemní předregistrovaná zařízení** a odebrat sériové číslo zařízení z Intune, aby se registrace zařízení deaktivovala. Pokud Intune provádí postup zotavení po havárii přibližně v době odebrání sériových čísel, bude potřeba ověřit, že jsou ve skupině jenom sériová čísla aktivních zařízení.
 
 2. Vyberte **Další**.
 
@@ -128,27 +128,26 @@ V seznamu dostupných profilů vyberte profil, který se přiřadí přidaným z
 
 ### <a name="export-a-profile-to-deploy-to-ios-devices"></a>Exportujte profil, který se má nasadit na zařízení se systémem iOS.
 
-1. V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) přejděte na **Zásady** &gt; **Registrace podnikového zařízení** a vyberte profil zařízení nasazovaný u mobilních zařízení. 
+1. V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) přejděte na **Zásady** &gt; **Registrace podnikového zařízení** a vyberte profil zařízení nasazovaný u mobilních zařízení.
 
 2. Na hlavním panelu zvolte **Exportovat**. Zkopírujte a uložte **URL profilu**. Později URL odešlete do Apple Configuratoru, abyste definovali profil Intune používaný zařízeními iOS.
 
   Podpora Apple Configuratoru 2 vyžaduje úpravu adresy URL profilu 2.0. Uděláte to tak, že tento kód:
-    ```
-    https://manage.microsoft.com/EnrollmentServer/Discovery.svc/iOS/ESProxy?id=
-    ```
-    Nahradíte tímto kódem:
 
-    ```
-    https://appleconfigurator2.manage.microsoft.com/MDMServiceConfig?id=
-    ```
+  ```
+  https://manage.microsoft.com/EnrollmentServer/Discovery.svc/iOS/ESProxy?id=
+  ```
+  Nahradíte tímto kódem:
 
-   V následujícím postupu odešlete tuto adresu URL profilu do služby Apple DEP pomocí Apple Configuratoru, abyste definovali profil Intune používaný zařízeními s iOS.
+  ```
+  https://appleconfigurator2.manage.microsoft.com/MDMServiceConfig?id=
+  ```
 
-
+   V následujícím postupu odešlete tuto adresu URL profilu do služby Apple DEP pomocí Apple Configuratoru, abyste definovali profil Intune používaný zařízeními s iOSem.
 
 ### <a name="prepare-the-device-with-apple-configurator"></a>Připravte zařízení pomocí nástroje Apple Configurator.
 
-Zařízení iOS jsou připojená k počítači Mac a zaregistrovaná do systému správy mobilních zařízení.
+Zařízení s iOSem jsou připojená k počítači Mac a zaregistrovaná do systému správy mobilních zařízení.
 
 1.  Na počítači Mac otevřete **Apple Configurator 2**. V panelu nabídek vyberte **Apple Configurator 2** a potom **Předvolby**.
 
@@ -174,15 +173,16 @@ Zařízení iOS jsou připojená k počítači Mac a zaregistrovaná do systému
 
 8. V podokně vytvoření organizace zvolte **Organizace** nebo vytvořte novou organizaci a zvolte **Další**.
 
-9. V podokně konfigurace pomocníka s nastavením iOS vyberte kroky, které se budou zobrazovat uživateli, a zvolte **Připravit**. Pokud se zobrazí výzva, proveďte ověření, aby se aktualizovalo nastavení důvěry.  
+9. V podokně konfigurace pomocníka s nastavením iOSu vyberte kroky, které se budou zobrazovat uživateli, a zvolte **Připravit**. Pokud se zobrazí výzva, proveďte ověření, aby se aktualizovalo nastavení důvěry.  
 
 10. Až se dokončí příprava zařízení s iOSem, můžete odpojit kabel USB.  
 
 ### <a name="distribute-devices"></a>Distribuujte zařízení.
 
-Zařízení jsou připravená na registraci ve společnosti. 
+Zařízení jsou připravená na registraci ve společnosti. Vypněte zařízení a rozdejte je uživatelům. Když uživatelé zařízení zapnou, spustí se pomocník s nastavením.
 
-Vypněte zařízení a rozdejte je uživatelům. Když uživatelé zařízení zapnou, spustí se pomocník s nastavením.
+>[!NOTE]
+>Když se uživatel pokusí zaregistrovat zařízení DEP v době, kdy je limit zařízení překročen, registrace selže, aniž by se zobrazilo upozornění.
 
 
 ### <a name="see-also"></a>Související témata

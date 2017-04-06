@@ -18,9 +18,9 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: cd5d97ec4524477fe6ac08a863eaf5cc03913e50
-ms.openlocfilehash: 53062067c250434b65911c47b8c2eda052a353c3
-ms.lasthandoff: 02/21/2017
+ms.sourcegitcommit: 1d0284ca2b5fd935a8657e3dd73d23d45071fd50
+ms.openlocfilehash: 200c992caa36ca74bf3e4ad82a21099a4b7ada4c
+ms.lasthandoff: 03/25/2017
 
 
 ---
@@ -37,6 +37,6 @@ Některé problémy se zařízením s iOSem, které se vám může podařit vyř
 - [Jak na zařízení najdu sériové číslo?](how-do-i-find-the-serial-number-on-my-device-ios.md)
 - [Potřebuji aktualizovat zařízení s iOSem](you-need-to-update-your-ios-device.md)
 - [Moje verze iOSu ještě není podporovaná](your-ios-version-isnt-yet-supported.md)
-- [Potřebuji si na zařízení s iOSem nainstalovat aplikaci Lookout for Work](you-are-prompted-to-install-lookout-for-work-ios.md)
-- [Potřebuji vyřešit hrozbu, kterou aplikace Lookout for Work objevila na mém zařízení s iOSem](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
+- [Potřebuji na svém zařízení s iOSem nainstalovat aplikaci Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md)
+- [Potřebuji na svém zařízení s iOSem vyřešit hrozbu, kterou aplikace Mobile Threat Defense objevila](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
 

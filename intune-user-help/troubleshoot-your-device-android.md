@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/13/2017
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -17,9 +17,9 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
-ms.openlocfilehash: b80ced5cbaee26dfe8cb4b2f5e46d93af9733788
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 1d0284ca2b5fd935a8657e3dd73d23d45071fd50
+ms.openlocfilehash: 126fce43ea91d5ec9e447d731e4e9ab5663df956
+ms.lasthandoff: 03/25/2017
 
 
 ---
@@ -29,7 +29,7 @@ ms.lasthandoff: 03/13/2017
 Některé problémy se zařízením s Androidem se vám může podařit vyřešit pomocí postupu pro řešení potíží. Některé běžné problémy, na které jsme narazili a které se můžete pokusit nejprve odstranit sami, jsou uvedené níže. U složitějších problémů doporučujeme, abyste se obrátili na IT správce. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 
 - [Kontrola dodržování předpisů na zařízení s Androidem](check-compliance-on-your-device-android.md)
-- [Použití podrobného protokolování správcem IT k opravě problémů se zařízením](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
+- [Pomoc správci IT s řešením problémů zařízení pomocí podrobného protokolování](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
 - [Odeslání protokolů správci IT pomocí e-mailu](send-logs-to-your-it-admin-by-email-android.md)
 - [Odeslání protokolů správci IT pomocí kabelu USB](send-logs-to-your-it-admin-using-cable-android.md)
 - [Odeslání chyb při registraci vašemu správci IT](send-enrollment-errors-to-your-it-admin-android.md)
@@ -41,6 +41,6 @@ Některé problémy se zařízením s Androidem se vám může podařit vyřeši
 - [Musíte vypnout ladění USB](you-need-to-turn-off-usb-debugging-android.md)
 - [Musíte zapnout vyhledávání bezpečnostních hrozeb](you-need-to-turn-on-scanning-for-security-threats-android.md)
 - [Zařízení nesplňuje požadavek na minimální úroveň opravy zabezpečení](you-need-to-update-your-device-OS-security-patch-android.md)
-- [Jste vyzváni k instalaci aplikace Lookout for Work na zařízení s Androidem](you-are-prompted-to-install-lookout-for-work-android.md)
-- [Je třeba vyřešit hrozbu, kterou objevila aplikace Lookout for Work na zařízení s Androidem](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
+- [Zobrazí se výzva k instalaci aplikace Ochrana zařízení před internetovými útoky na zařízení s Androidem](you-are-prompted-to-install-mtd-android.md)
+- [Je potřeba vyřešit hrozbu, kterou aplikace Ochrana zařízení před internetovými útoky objevila na vašem zařízení s Androidem](you-need-to-resolve-a-threat-found-by-mtd-android.md)
 

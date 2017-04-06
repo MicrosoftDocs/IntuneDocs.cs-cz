@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 01/23/2017
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ searchScope:
 ROBOTS: 
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 6673c8de8d5deb74005b40a58274efcb10783fcc
-ms.openlocfilehash: bea23fe261cdcb09c7f6699e3a2ee3fcb8f32aba
-ms.lasthandoff: 03/08/2017
+ms.sourcegitcommit: c473a1f05b0a7b0ce5205598b2b9a9b86bfe6c1d
+ms.openlocfilehash: 957a0f5104030043e8049bf65ba30e4579a0acb0
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -29,58 +29,53 @@ Než budete moct začít pracovat, správce IT potřebuje, abyste nainstalovali 
 
 Pokud máte s instalací potíže, zkuste kroky k odstranění potíží, které najdete na konci tohoto tématu.
 
-
 **Co je potřeba udělat:**
 
 1.    Tažením shora obrazovky otevřete panel oznámení a potom klepněte na **Požadovaná aplikace – nainstalujte Lookout for Work z obchodu Play**.
 
-    ![musíte nainstalovat aplikaci Lookout for Work](./media/lookout-required-app-install-android.png)
+  ![musíte nainstalovat aplikaci Lookout for Work](./media/lookout-required-app-install-android.png)
 
-    Potom se přesunete na instalační stránku aplikace Lookout for Work v obchodě Play.
+2.    Potom se přesunete na instalační stránku aplikace Lookout for Work v obchodě Play. Nainstalujte Lookout for Work a klepněte na **PŘIJMOUT**, aby aplikace Lookout for Work získala přístup k vašemu zařízení.
 
-2.    Nainstalujte Lookout for Work a klepněte na **PŘIJMOUT**, aby aplikace Lookout for Work získala přístup k vašemu zařízení.
-
-    ![klepnutím na přijmout umožněte aplikaci Lookout for Work přístup k vašemu zařízení](./media/lookout-accept-store-permissions-android.png)
+  ![klepnutím na přijmout umožněte aplikaci Lookout for Work přístup k vašemu zařízení](./media/lookout-accept-store-permissions-android.png)
 
 3. Spusťte aplikaci Lookout for Work a klepněte na **AKTIVOVAT**.
 
-    ![otevřete Lookout for Work a klepněte na Aktivovat](./media/lookout-activate-button-android.png)
+  ![otevřete Lookout for Work a klepněte na Aktivovat](./media/lookout-activate-button-android.png)
 
 4. Klepněte na **Přihlásit se pomocí Azure Active Directory** a pak zadejte účet, který používáte pro přístup k pracovním nebo školním e-mailům a souborům.
 
-    ![přihlaste se pomocí svého pracovního nebo školního účtu](./media/lookout-sign-in-azure-android.png)
+  ![přihlaste se pomocí svého pracovního nebo školního účtu](./media/lookout-sign-in-azure-android.png)
 
 5. Vyberte účet, který používáte pro přístup k pracovním nebo školním e-mailům a souborům, a potom klepněte na **PŘIDAT ÚČET**.
 
-    ![zadejte svůj pracovní nebo školní účet a klepněte na Přidat účet](./media/lookout-pick-account-android.png)
+  ![zadejte svůj pracovní nebo školní účet a klepněte na Přidat účet](./media/lookout-pick-account-android.png)
 
-6. Klepnutím na **Přijmout** dáte aplikaci Lookout for Work oprávnění k přihlášení a čtení vašeho profilu.
+6. Klepnutím na **Přijmout** dáte aplikaci Lookout for Work oprávnění k přihlášení a čtení vašeho profilu. Na obrazovce se zobrazí informace o připojování aplikace Lookout for Work ke cloudu Lookout Security Cloud.
 
-    ![klepnutím na Přijmout dáte aplikaci Lookout for Work oprávnění k přihlášení a čtení vašeho profilu](./media/lookout-needs-permission-to-view-profile-android.png)
-
-    Na obrazovce se zobrazí informace o připojování aplikace Lookout for Work ke cloudu Lookout Security Cloud.
+  ![klepnutím na Přijmout dáte aplikaci Lookout for Work oprávnění k přihlášení a čtení vašeho profilu](./media/lookout-needs-permission-to-view-profile-android.png)
 
 7. Seznamte se s informacemi o možnostech ochrany vašeho zařízení pomocí aplikace Lookout a potom klepněte na tlačítko **OK**.
 
-    ![seznamte se s informacemi o možnostech ochrany vašeho zařízení pomocí aplikace Lookout for Work](./media/lookout-how-it-protects-your-device-android.png)
+  ![seznamte se s informacemi o možnostech ochrany vašeho zařízení pomocí aplikace Lookout for Work](./media/lookout-how-it-protects-your-device-android.png)
 
-    Když se zobrazí následující obrazovka, aplikace Lookout je nastavená a připojená.
+  Když se zobrazí následující obrazovka, aplikace Lookout je nastavená a připojená.
 
-    ![jste připojeni k aplikaci Lookout for Work](./media/lookout-you-are-now-connected-android.png)
+  ![jste připojeni k aplikaci Lookout for Work](./media/lookout-you-are-now-connected-android.png)
 
-    Lookout for Work začne okamžitě vyhledávat bezpečnostní hrozby ve vašem zařízení. Pokud žádné hrozby nenajde, zobrazí se následující obrazovka.
+  Lookout for Work začne okamžitě vyhledávat bezpečnostní hrozby ve vašem zařízení. Pokud žádné hrozby nenajde, zobrazí se následující obrazovka.
 
-    ![Aplikace Lookout for Work nenašla žádné bezpečnostní hrozby.](./media/lookout-scan-no-threats-found-android.png)
+  ![Aplikace Lookout for Work nenašla žádné bezpečnostní hrozby.](./media/lookout-scan-no-threats-found-android.png)
 
-    Obrazovka s podrobnostmi o zařízení v aplikaci Portál společnosti ukazuje, že teď už splňujete firemní požadavky na zabezpečení.
+  Obrazovka s podrobnostmi o zařízení v aplikaci Portál společnosti ukazuje, že teď už splňujete firemní požadavky na zabezpečení.
 
-    ![vaše zařízení splňuje podmínky zásad](./media/lookout-device-now-compliant-android.png)
+    ![vaše zařízení splňuje podmínky zásad](./media/mtd-device-now-compliant-android.png)
 
-    Pokud aplikace Lookout for Work ve vašem zařízení najde bezpečnostní hrozbu, nabídne vám pokyny k vyřešení vašeho problému.
+  Pokud aplikace Lookout for Work ve vašem zařízení najde bezpečnostní hrozbu, nabídne vám pokyny k vyřešení vašeho problému.
 
 **Pokud instalace nefunguje**
 
-V některých případech může instalace selhat kvůli technickým problémům mimo vaši kontrolu. V takovém případě zkuste aplikaci Lookout for Work nainstalovat ručně z obchodu Play: [https://play.google.com/store/apps/details?id=com.lookout.enterprise](https://play.google.com/store/apps/details?id=com.lookout.enterprise)
+V některých případech může instalace selhat kvůli technickým problémům mimo vaši kontrolu. V takovém případě zkuste Lookout for Work nainstalovat [ručně z obchodu Play](https://play.google.com/store/apps/details?id=com.lookout.enterprise).
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
 

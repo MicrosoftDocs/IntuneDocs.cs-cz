@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: fafc2b14d3060f79b92bb9d18aabda6b08737881
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: f316b332c3f1b80b9d6af488943298fcfea13741
+ms.openlocfilehash: 009c6491b8ce457a371f5db31de3f122fa41fb95
+ms.lasthandoff: 03/30/2017
 
 
 ---
@@ -28,32 +28,43 @@ ms.lasthandoff: 02/18/2017
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
 ## <a name="general"></a>Obecné
--     **Kamera** – Povolí použití fotoaparátu v zařízení.
--     **Kopírování a vložení** – Povolí v zařízení funkce kopírování a vkládání.
--     **Sdílení přes schránku mezi aplikacemi** –Povolí používání schránky ke kopírování a vkládání mezi aplikacemi (jenom Samsung KNOX Standard).
--     **Odeslání diagnostických dat** – Zabrání uživateli v odesílání diagnostických dat ze zařízení.    
--     **Obnovení továrního nastavení** – Povolí uživateli obnovit v zařízení tovární nastavení.
--     **Zeměpisná poloha** – Povolí zařízení využívat informace o poloze (jenom Samsung KNOX Standard).
--     **Vypnutí** – Povolí uživateli vypnout zařízení.<br>Pokud je toto nastavení zakázané, není nastavení **Počet neúspěšných přihlášení před vymazáním obsahu zařízení** pro zařízení Samsung KNOX Standard funkční.
--     **Snímek obrazovky** – Umožňuje uživateli zachytit obsah obrazovky v podobě obrázku.
--     **Hlasový asistent** – Povolí používání softwaru hlasového pomocníka na zařízení (jenom Samsung KNOX Standard).
--     **YouTube** – Povolí používání aplikace YouTube na zařízení (jenom Samsung KNOX Standard).
+
+|||||
+|-|-|-|-|
+|Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX Standard|
+|**Fotoaparát**|Umožňuje použití fotoaparátu v zařízení.|Ano|Ano|
+|**Kopírování a vložení**|Povolí v zařízení funkce kopírování a vkládání.|Ne|Ano|
+|**Sdílení přes schránku mezi aplikacemi**|Povolí používání schránky pro kopírování a vkládání mezi jednotlivými aplikacemi.|Ne|Ano|
+|**Odeslání diagnostických dat**|Zabrání uživateli v odesílání diagnostických dat ze zařízení.|Ne|Ano|
+|**Obnovení továrního nastavení**|Umožňuje uživateli obnovit v zařízení výrobní nastavení.|Ne|Ano|
+|**Zeměpisná poloha**|Povolí zařízení využívat informace o poloze (jenom Samsung KNOX Standard).|Ne|Ano|
+|**Vypnutí**|Povolí uživateli vypnout zařízení.<br>Pokud je toto nastavení zakázané, není nastavení **Počet neúspěšných přihlášení před vymazáním obsahu zařízení** pro zařízení Samsung KNOX Standard funkční.|Ne|Ano|
+|**Snímek obrazovky**|Umožňuje uživateli zachytit obsah obrazovky v podobě obrázku.|Ne|Ano|
+|**Hlasový asistent**|Povolí použití softwaru hlasového asistenta v zařízení.|Ne|Ano|
+|**YouTube**|Povoluje v zařízení použití aplikace YouTube.|Ne|Ano|
 
 ## <a name="password"></a>Heslo
--     **Zadání hesla nutné** – Vyžaduje, aby koncový uživatel zadal heslo k přístupu k zařízení.
--     **Minimální délka hesla** – Zadejte minimální délku hesla, které uživatel musí nakonfigurovat (mezi 4 a 16 znaky).
--     **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka** – Určuje počet minut nečinnosti, než se zařízení automaticky zamkne.
--     **Počet neúspěšných přihlášení před vymazáním obsahu zařízení** – Určuje počet povolených neúspěšných přihlášení, než se zařízení vymaže.
--     **Konec platnosti hesla (dny)** – Určuje počet dní, než bude nutné změnit heslo zařízení.
--     **Požadovaný typ hesla** – Určuje požadovanou úroveň složitosti hesla a to, jestli se můžou používat biometrická zařízení.
--     **Znemožnit opakované použití předchozích hesel** – Zabrání koncovému uživateli vytvořit dříve používané heslo.
--     **Odemknutí pomocí otisků prstů** – Povolí na zařízeních, která to podporují, odemknutí pomocí otisku prstu.
--     **Smart Lock a jiní agenti pro určování důvěryhodnosti** – Umožňuje řídit funkci Smart Lock na kompatibilních zařízeních s Androidem (Samsung KNOX Standard 5.0 a novější). Tato funkce telefonů, které se někdy říká agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo uzamčené obrazovky zařízení, pokud se zařízení nachází v důvěryhodném umístění (například pokud je připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC). Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
--     **Šifrování** – Vyžaduje, aby soubory v zařízení byly šifrované.
+
+|||||
+|-|-|-|-|
+|Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX Standard|
+|**Heslo**|Vyžaduje, aby koncový uživatel zadal heslo pro přístup k zařízení.|Ano|Ano|
+|**Minimální délka hesla**|Zadejte minimální délku hesla, které uživatel musí nakonfigurovat (mezi 4 a 16 znaky).|Ano|Ano|
+|**Maximální počet minut nečinnosti, po které se zamkne obrazovka**|Určuje počet minut nečinnosti, než se zařízení automaticky zamkne.|Ano|Ano|
+|**Počet neúspěšných přihlášení před vymazáním obsahu zařízení**|Určuje počet povolených neúspěšných přihlášení, než bude zařízení vymazáno.|Ano|Ano|
+|**Konec platnosti hesla (dny)**|Určuje počet dní, než bude nutné změnit heslo zařízení.|Ano|Ano|
+|**Požadovaný typ hesla**|Určuje požadovanou úroveň složitosti hesla a to, jestli se můžou používat biometrická zařízení.|Ano|Ano|
+|**Znemožnit opakované použití předchozích hesel**|Zakáže koncovému uživateli nastavit dříve používané heslo.|Ano|Ano|
+|**Odemknutí pomocí otisků prstů**|Povolí na zařízeních, která to podporují, odemknutí pomocí otisku prstu.|Ne|Ano|
+|**Smart Lock a jiní agenti pro určování důvěryhodnosti**|Umožňuje řídit funkci Smart Lock na kompatibilních zařízeních s Androidem (Samsung KNOX Standard 5.0 a novějším). Tato funkce telefonů, které se někdy říká agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo uzamčené obrazovky zařízení, pokud se zařízení nachází v důvěryhodném umístění (například pokud je připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC). Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.|Ano (5.0 nebo novější)|Ne|
+|**Šifrování**|Vyžaduje, aby soubory v zařízení byly šifrované.|Ano|Ano|
 
 ## <a name="google-play-store"></a>Obchod Google Play
 
--     **Obchod Google Play** – Povolí uživateli přístup k obchodu Google Play na zařízení (jenom Samsung KNOX Standard).
+|||||
+|-|-|-|-|
+|Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX Standard|
+|**Obchod Google Play**|Povolí uživatelům na zařízení přístup do obchodu Google Play.|Ne|Ano|
 
 ## <a name="restricted-apps"></a>Omezené aplikace
 
@@ -80,30 +91,42 @@ Příklad: Na webu Google Play vyhledejte systém Microsoft Office Mobile. Použ
 Můžete také kliknout na **Import** a naplnit seznam ze souboru csv ve formátu <*adresa url aplikace*>, <*název aplikace*>, <*vydavatel aplikace*> nebo kliknout na **Export** a vytvořit si soubor csv obsahující seznam aplikací s omezeným přístupem ve stejném formátu.        
 
 ## <a name="browser"></a>Prohlížeč
--     **Webový prohlížeč** – Určuje, jestli je možné používat výchozí webový prohlížeč zařízení.
--     **Automatické vyplňování** – Povolí používání funkce automatického vyplňování webového prohlížeče.
--     **Soubory cookie** – Povolí webovému prohlížeči v zařízení používat soubory cookie.
--     **JavaScript** – Povolí webovému prohlížeči v zařízení spouštět skripty Java.
--     **Automaticky otevíraná okna** – Povolí používání blokování automaticky otevíraných oken ve webovém prohlížeči.
+|||||
+|-|-|-|-|
+|Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX Standard|
+|**Webový prohlížeč**|Určuje, jestli je možné použít výchozí webový prohlížeč zařízení.|Ne|Ano|
+|**Automatické vyplňování**|Umožňuje používání funkce automatického vyplňování webového prohlížeče.|Ne|Ano|
+|**Soubory cookie**|Povolí webovému prohlížeči v zařízení používat soubory cookie.|Ne|Ano|
+|**JavaScript**|Povolí webovému prohlížeči v zařízení spouštět skripty Java.|Ne|Ano|
+|**Automaticky otevíraná okna**|Povolí používání blokování automaticky otevíraných oken ve webovém prohlížeči.|Ne|Ano|
 
 ## <a name="cloud-and-storage"></a>Cloud a úložiště
--     **Zálohovací služba Google** – Povolí použití zálohování Google.
--     **Automatická synchronizace účtu Google** – Povolí automatickou synchronizaci nastavení účtu Google.
--     **Vyměnitelné úložiště** – Povolí zařízení používat vyměnitelné úložiště, třeba SD kartu (jenom Samsung KNOX Standard).
--     **Šifrování na paměťových kartách** – Určuje, jestli musí být paměťová karta zařízení šifrovaná.
+|||||
+|-|-|-|-|
+|Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX Standard|
+|**Zálohovací služba Google**|Povoluje použití zálohování Google.|Ne|Ano|
+|**Automatická synchronizace účtu Google**|Povoluje automatickou synchronizaci nastavení účtu Google.|Ne|Ano|
+|**Vyměnitelné úložiště**|Povolí použití vyjímatelného úložiště v zařízení, třeba SD karty.|Ne|Ano|
+|**Šifrování na paměťových kartách**|Určuje, jestli musí být paměťová karta zařízení šifrovaná.|Ne|Ano|
 
 ## <a name="cellular-and-connectivity"></a>Mobilní síť a připojení
--     **Datový roaming** – Povolí datový roaming, když je zařízení v mobilní síti (jenom Samsung KNOX Standard).
--     **Zprávy SMS a MMS** – Povolí na zařízení používat zprávy SMS a MMS (jenom Samsung KNOX Standard).
--     **Hlasové vytáčení** – Povolí nebo zakáže funkci hlasového vytáčení na zařízení (jenom Samsung KNOX Standard).
--     **Hlasový roaming** – Povolí hlasový roaming, když je zařízení v mobilní síti (jenom Samsung KNOX Standard).
--     **Bluetooth** – Povolí používání Bluetooth na zařízení (jenom Samsung KNOX Standard).
--     **Bezkontaktní komunikace (NFC)** – Povolí operace, které používají bezkontaktní komunikaci, pokud je zařízení podporuje (jenom Samsung KNOX Standard).
--     **Wi-Fi** – Povolí použití možností Wi-Fi zařízení (jenom Samsung KNOX Standard).
--     **Wi-Fi tethering** – Povolí sdílení mobilního internetového připojení (tethering) přes Wi-Fi na zařízení (jenom Samsung KNOX Standard).
+|||||
+|-|-|-|-|
+|Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX Standard|
+|**Datový roaming**|Povolí datový roaming, když je zařízení v mobilní síti.|Ne|Ano|
+|**Zprávy SMS a MMS**|Povolí zařízení použití SMS a MMS zpráv.|Ne|Ano|
+|**Hlasové vytáčení**|Povolí nebo zakáže použití funkce hlasového vytáčení v zařízení.|Ne|Ano|
+|**Hlasový roaming**|Povolí hlasový roaming, když je zařízení v mobilní síti.|Ne|Ano|
+|**Bluetooth**|Povolí používání připojení Bluetooth na zařízení.|Ne|Ano|
+|**NFC**|Umožňuje operace, které používají bezkontaktní komunikaci, pokud je zařízení podporuje.|Ne|Ano|
+|**Wi-Fi**|Povolí použití možností Wi-Fi zařízení.|Ne|Ano|
+|**Wi-Fi tethering**|Povolí použití sdíleného internetového připojení přes Wi-Fi na zařízení.|Ne|Ano|
 
 ## <a name="kiosk"></a>Kiosk
--     **Vyberte spravovanou aplikaci** – Vyhledejte a vyberte spravovanou aplikaci, která se může spustit, když je zařízení v celoobrazovkovém režimu (v současné době se nepodporují aplikace v podobě odkazu na obchod). Žádné jiné aplikace nebudou mít dovoleno se na zařízení spouštět.
--     **Tlačítko pro režim spánku obrazovky** – Povolí nebo zakáže na zařízení tlačítko probuzení z režimu spánku obrazovky.
--     **Tlačítka hlasitosti** – Povolí nebo zakáže použití tlačítek hlasitosti na zařízení.
+|||||
+|-|-|-|-|
+|Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX Standard|
+|**Vyberte spravovanou aplikaci**|Vyhledejte a vyberte spravovanou aplikaci, která se může spustit, když je zařízení v celoobrazovkovém režimu (v současné době se nepodporují aplikace v podobě odkazu na obchod). Žádné jiné aplikace nebudou mít dovoleno se na zařízení spouštět.|Ne|Ano|
+|**Tlačítko pro režim spánku obrazovky**|Povolí nebo zakáže na zařízení tlačítko probuzení z režimu spánku obrazovky.|Ne|Ano|
+|**Tlačítka pro hlasitost**|Povolí nebo zakáže použití tlačítek hlasitosti na zařízení.|Ne|Ano|
 

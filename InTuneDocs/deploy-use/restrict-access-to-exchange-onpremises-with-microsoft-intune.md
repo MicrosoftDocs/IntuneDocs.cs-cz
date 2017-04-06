@@ -5,7 +5,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 01/03/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 53d2c0d5b2157869804837ae2fa08b1cce429982
-ms.openlocfilehash: e3b404526d8e662fd8ae285c144b1d6f5cf22bf3
+ms.sourcegitcommit: f316b332c3f1b80b9d6af488943298fcfea13741
+ms.openlocfilehash: f1d8ecdf64b680940e46afc90dec79d237d80030
+ms.lasthandoff: 03/30/2017
 
 
 ---
@@ -77,15 +78,16 @@ Pokud se nedodrží zásady podmíněného přístupu, mezi zablokováním zař�
 Podporované systémy:
 -   Windows Phone 8.1 a novější
 
--   Nativní e-mailová aplikace v iOS
+-   Nativní e-mailová aplikace v iOSu
 
 -   Poštovní klienti Exchange ActiveSync, například Gmail v Androidu 4 nebo novějším
-- Poštovní klienti Exchange ActiveSync na **zařízeních s Androidem for Work**: Na zařízeních s Androidem for Work se v **pracovním profilu** podporují jenom aplikace **Gmail** a **Nine Work**. Aby v Androidu for Work fungoval podmíněný přístup, je nutné nasadit e-mailový profil pro aplikaci Gmail nebo Nine Work a zároveň tyto aplikace nasadit jako požadovanou instalaci. 
+-   Poštovní klienti Exchange ActiveSync na **zařízeních s Androidem for Work**: Na zařízeních s Androidem for Work se v **pracovním profilu** podporují jenom aplikace **Gmail** a **Nine Work**. Aby v Androidu for Work fungoval podmíněný přístup, je nutné nasadit e-mailový profil pro aplikaci Gmail nebo Nine Work a zároveň tyto aplikace nasadit jako požadovanou instalaci. 
 
+<!---
 [!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
-
-> [!NOTE]
-> Aplikace Microsoft Outlook pro Android a iOS se nepodporuje.
+--->
+> [!NOTE] 
+> Aplikace Microsoft Outlook pro Android a iOSem se nepodporuje.
 
 ## <a name="support-for-pcs"></a>Podpora počítačů
 Podporovaná možnost:
@@ -110,14 +112,12 @@ Podporovaná možnost:
   - **Výjimky platforem:** Vyberte **Přidat pravidlo** a nakonfigurujte pravidlo, které bude definovat úrovně přístupu pro zadané řady a modely mobilních zařízení. Vzhledem k tomu, že tato zařízení můžou být jakéhokoli typu, můžete nakonfigurovat také typy zařízení, které [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] nepodporuje.
 
   - **Výchozí pravidlo:** U zařízení, pro které neplatí žádné z ostatních pravidel, můžete zvolit, aby mělo přístup k Exchangi, můžete ho blokovat nebo umístit do karantény. Pokud nastavíte pravidlo, kterým povolíte přístup pro zaregistrovaná zařízení splňující předpisy, automaticky se udělí přístup k e-mailům pro zařízení se systémy iOS, Windows a řešením Samsung KNOX. Uživatel získá přístup k e-mailům a nemusí kvůli tomu provádět žádné kroky.
-
-        U zařízení s Androidem, která nepoužívají řešení Samsung KNOX, dostanou uživatelé e-mail s informací o karanténě, který bude obsahovat návod k ověření registrace a dodržování předpisů. K e-mailům získají přístup až po tomto ověření. Pokud nastavíte pravidlo na blokování přístupu nebo umístění zařízení do karantény, budou mít všechna zařízení zablokovaný přístup k Exchangi bez ohledu na to, jestli jsou už zaregistrovaná v Intune. Pokud nechcete, aby toto pravidlo platilo pro zaregistrovaná zařízení splňující předpisy, zaškrtněte políčko **Přepis výchozího pravidla**.
+      - U zařízení s Androidem, která nepoužívají řešení Samsung KNOX, dostanou uživatelé e-mail s informací o karanténě, který bude obsahovat návod k ověření registrace a dodržování předpisů. K e-mailům získají přístup až po tomto ověření. Pokud nastavíte pravidlo na blokování přístupu nebo umístění zařízení do karantény, budou mít všechna zařízení zablokovaný přístup k Exchangi bez ohledu na to, jestli jsou už zaregistrovaná v Intune. Pokud nechcete, aby toto pravidlo platilo pro zaregistrovaná zařízení splňující předpisy, zaškrtněte políčko **Přepis výchozího pravidla**.
 >[!TIP]
 >Pokud chcete před udělením přístupu k e-mailům nejdřív zablokovat všechna zařízení, vyberte pravidlo Blokovat přístup nebo pravidlo Umístit do karantény. Výchozí pravidlo se použije pro všechny typy zařízení – to znamená, že se použije i pro typy zařízení nakonfigurované jako výjimky platforem, které [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] nepodporuje.
 
   - **Oznámení uživateli:** Kromě e-mailu s oznámením odeslaného z Exchange odešle Intune e-mail, který obsahuje postup pro odblokování zařízení. Výchozí zprávu můžete upravit a přizpůsobit svým potřebám. Pokud se zařízení uživatele před obdržením e-mailu s oznámením Intune obsahujícím pokyny k nápravě zablokuje (tento e-mail se doručuje do poštovní schránky Exchange uživatele), může uživatel použít pro přístup k Exchangi a zobrazení zprávy odblokované zařízení nebo jinou metodu.
-
-        This is especially true when the **Default Rule** is set to block or quarantine. In this case, the user has to go to their app store, download the Microsoft Company Portal app, and enroll their device. This is applicable to iOS, Windows, and Samsung KNOX devices. For devices that don't run Samsung KNOX, you need to send the quarantine email to an alternate email account. The user has to copy the email to their blocked device to complete the enrollment and compliance process.
+      - To platí hlavně v případě, že je **Výchozí pravidlo** nastavené na blokování nebo umístění do karantény. V takovém případě musí uživatel přejít na web App Store, stáhnout aplikaci Portál společnosti od Microsoftu a zaregistrovat si zařízení. To se vztahuje na zařízení se systémy iOS, Windows a řešením Samsung KNOX. U zařízení nepoužívajících standard Samsung KNOX musíte odeslat e-mail z karantény na alternativní e-mailový účet. Uživatel ho musí zkopírovat na své blokované zařízení a dokončit tak proces registrace a dodržování předpisů.
   > [!NOTE]
   > Aby systém Exchange mohl e-mail s oznámením odeslat, musíte určit účet, který se má k odeslání e-mailu s oznámením použít.
   >
@@ -139,9 +139,4 @@ Podporovaná možnost:
 -   [Ochrana přístupu k SharePointu Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 
 -   [Ochrana přístupu k Online Skypu pro firmy](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: adb2fd27d7f2b3f0ef4dce6b26fcb20d74b69a00
-ms.openlocfilehash: f099fdf942795b128fe46f9bd1d82432d89f6f75
-ms.lasthandoff: 02/04/2017
+ms.sourcegitcommit: a4b6d8b0a63d707631e3f0e231b2e9b40f2609cf
+ms.openlocfilehash: 1d8109fca8170ad127f6377918d7c0313ba26d78
+ms.lasthandoff: 03/24/2017
 
 
 ---
@@ -32,7 +32,7 @@ Organizace můžou pomocí Intune spravovat velké počty mobilních zařízení
 Abyste mohli uživatele přidat jako správce registrace zařízení, musí tito uživatelé existovat na portálu Azure Portal. Z důvodu optimálního zabezpečení by uživatel DEM neměl být současně i správcem Intune.
 
 >[!NOTE]
->Metodu registrace DEM není možné použít s [Pomocníkem s nastavením v Apple Configuratoru](ios-setup-assistant-enrollment-in-microsoft-intune.md), u [přímé registrace](ios-direct-enrollment-in-microsoft-intune.md) nebo u [metody registrace DEP](ios-device-enrollment-program-in-microsoft-intune.md). 
+>Metodu registrace DEM není možné použít s [Pomocníkem s nastavením v Apple Configuratoru](ios-setup-assistant-enrollment-in-microsoft-intune.md), u [přímé registrace](ios-direct-enrollment-in-microsoft-intune.md) nebo u [metody registrace DEP](ios-device-enrollment-program-in-microsoft-intune.md).
 
 ## <a name="example-of-a-device-enrollment-manager-scenario"></a>Příklad scénáře využití správce registrace zařízení
 
@@ -42,9 +42,9 @@ Správci registrace zařízení můžou být jenom uživatelé v konzole Intune.
 
 Uživatel DEM může:
 
--   Zaregistrovat v Intune až 1 000 zařízení.
--   Přihlásit se k webu Portál společnosti a získat firemní aplikace.
--   Konfigurovat přístup k datům společnosti tak, že na tablety nasadí aplikace specifické pro jednotlivé role.
+-   Zaregistrovat v Intune až 1 000 zařízení
+-   Použít aplikaci Portál společnosti k získání firemních aplikací
+-   Konfigurovat přístup k datům společnosti tak, že na tablety nasadí aplikace specifické pro jednotlivé role
 
 ## <a name="limitations-of-devices-that-are-enrolled-with-a-dem-account"></a>Omezení zařízení zaregistrovaných pomocí účtu DEM
 
@@ -57,19 +57,19 @@ Zařízení zaregistrovaná pomocí účtu správce registrace zařízení mají
   - Uživatel DEM nemůže přes Portál společnosti zrušit registraci zařízení zaregistrovaného pomocí účtu DEM. Tuto možnost má správce Intune, ale uživatel DEM nikoli.
 
   - V aplikaci nebo na webu Portál společnosti se zobrazí jenom místní zařízení.
- 
+
   - Uživatelé nemůžou používat aplikace v rámci programu Apple VPP (Volume Purchase Program), protože ke správě těchto aplikací jsou vyžadovaná Apple ID jednotlivých uživatelů.
- 
+
   - (Pouze iOS) Pokud pomocí DEM zaregistrujete zařízení s iOSem, nemůžete k registraci zařízení využít Apple Configurator ani Program registrace zařízení Apple (DEP).
 
 > [!NOTE]
 > Pokud chcete nasadit aplikace společnosti na zařízení spravovaná správcem registrace zařízení, nasaďte aplikaci Portál společnosti jako **požadovanou instalaci** na uživatelský účet správce registrace zařízení.
-> Kvůli zvýšení výkonu se při zobrazení aplikace Portál společnosti v zařízení správce registrace zařízení zobrazuje pouze místní zařízení. Vzdálenou správu jiných zařízení správce registrace zařízení lze provádět jenom v konzole správce Intune.
+> Kvůli zvýšení výkonu se při zobrazení aplikace Portál společnosti v zařízení správce registrace zařízení zobrazuje pouze místní zařízení. Vzdálenou správu jiných zařízení správce registrace zařízení lze provádět jenom v konzole pro správu Intune.
 
 
 ## <a name="add-a-device-enrollment-manager"></a>Přidání správce registrace zařízení
 
-1.  Zkontrolujte, že uživatel, kterého chcete přidat do účtu DEM, už existuje. Pokud potřebujete přidat uživatele, přihlaste se k [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) a postupujte podle pokynů uvedených v tématu [Přidání uživatelů na portál Office 365 jednotlivě nebo hromadně](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
+1.  Zkontrolujte, že uživatel, kterého chcete přidat do účtu DEM, už existuje. Pokud potřebujete přidat uživatele, přihlaste se k [portálu služeb Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) a postupujte podle pokynů uvedených v tématu [Přidání uživatelů na portál služeb Office 365 jednotlivě nebo hromadně](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
 
 2.  Přihlaste se ke [konzole pro správu Microsoft Intune](http://manage.microsoft.com) pomocí přihlašovacích údajů správce.
 
@@ -77,7 +77,7 @@ Zařízení zaregistrovaná pomocí účtu správce registrace zařízení mají
 
 4.  Zvolte **Přidat**. Otevře se dialog **Přidat správce registrace zařízení** .
 
-5.  Zadejte **ID uživatele** účtu Intune a zvolte **OK**. 
+5.  Zadejte **ID uživatele** účtu Intune a zvolte **OK**.
 
     Uživatel DEM teď může registrovat mobilní zařízení stejným postupem, jaký používá koncový uživatel ve scénáři BYOD na webu Portál společnosti. Koncový uživatel, který je správcem, může nainstalovat aplikaci Portál společnosti a zaregistrovat zařízení pomocí svých přihlašovacích údajů DEM až na 1000 zařízení. Postup registrace koncovým uživatelem pro jednotlivé platformy najdete v následujících tématech:
 
