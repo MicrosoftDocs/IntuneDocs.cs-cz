@@ -15,9 +15,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 0945fb2f67c6cc49ca8d10bb5c24f3c4a5f9b2c5
-ms.openlocfilehash: c65dc8ec22f717c5dcce51bb3c45d65bad8d8bde
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
+ms.openlocfilehash: c294a0abaf69017b6c098a95870fc035f28d0787
+ms.lasthandoff: 04/01/2017
 
 
 ---
@@ -37,7 +37,7 @@ Před zahájením nasazování aplikací s Microsoft Intune se seznamte s koncep
 |**Instalační služba systému Windows (&#42;.exe, &#42;.msi)**|Tento typ aplikace musí podporovat tichou instalaci bez vstupu uživatele. Dokumentace k aplikaci by měla zahrnovat příslušné možnosti příkazového řádku k tiché instalaci aplikace (například **/q**). Seznam běžných možností příkazového řádku můžete najít v tématu [Command-Line Switches for the Microsoft Windows Installer Tool](https://support.microsoft.com/en-us/kb/227091) (Přepínače příkazového řádku pro nástroj Instalační služba systému Microsoft Windows).<br><br>Jakékoli další soubory a složky, které vyžaduje instalační program aplikace, musí být dostupné z umístění, které určíte pro instalační soubory aplikace.<br><br>Instalační služba systému Windows (.msi) a oprava instalační služby systému Windows (.msp) nevyžadují ve většině případů pro Intune instalaci žádných argumentů příkazového řádku. Podívejte se do dokumentace aplikace.<br><br>Pokud se vyžadují argumenty příkazového řádku, musí být zadané jako název=dvojice hodnot (například TRANSFORMS=custom_transform.mst).<br><br>Tento typ aplikace se vztahuje jenom na počítače s klientským softwarem Intune.|
 |**Balíček aplikace pro Android (&#42;.apk)**|Pokud chcete nasadit aplikace pro Android, budete potřebovat platný balíček .apk.|
 |**Balíček aplikace pro iOS (&#42;.ipa)**|Pokud chcete nasadit aplikace systému iOS, budete potřebovat platný balíček .ipa.<br><br>Balíček .ipa musí být podepsaný společností Apple a datum vypršení platnosti v profilu zřizování musí být platné. Intune může distribuovat aplikace iOS s podnikovým certifikátem.<br><br>Nejsou podporované všechny aplikace certifikátu vývojáře Apple.<br><br>Vaše společnost musí mít zaregistrovaný iOS Developer Enterprise Program.<br><br>Ujistěte se, že brána firewall vaší organizace umožňuje přístup na weby zřizování a certifikace pro iOS.<br><br>S aplikací není nutné nasazovat soubor manifestu (.plist).|
-|**Balíček aplikace pro Windows Phone (&#42;.xap, .appx, .appxbundle)**|Pokud chcete nasazovat aplikace, musíte mít podnikový certifikát podepisování mobilního kódu. Další informace najdete v tématu [Nastavení správy pro zařízení Windows Phone v Microsoft Intune](set-up-windows-phone-management-with-microsoft-intune.md).|
+|**Balíček aplikace pro Windows Phone (&#42;.xap, .appx, .appxbundle)**|Pokud chcete nasazovat aplikace, musíte mít podnikový certifikát podepisování mobilního kódu. Další informace najdete v tématu [Nastavení správy pro zařízení Windows Phone v Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md).|
 |**Balíček aplikace pro Windows (.appx, .appxbundle)**|Pokud chcete nasazovat aplikace, musíte mít podnikový certifikát podepisování mobilního kódu. Podrobnosti najdete v tématu [Nastavení správy pro zařízení Windows v Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md).|
 |**Instalační služba systému Windows pomocí MDM (&#42;.msi)**|Tuto aplikaci můžete použít k vytvoření a nasazení aplikací založených na instalační službě systému Windows na zaregistrované počítače s Windows 10. Tyto počítače jsou spravované pomocí správy mobilních zařízení (MDM).<br /><br />Můžete nahrát jenom jeden soubor s příponou .msi.<br><br>Kód produktu a verze produktu v souboru se používají ke zjišťování aplikací.<br><br>Použije se výchozí chování aplikace při restartování. Intune ho neřídí.<br><br>Balíčky MSI na uživatele se nainstalují pro jednoho uživatele.<br><br>Balíčky MSI na zařízení se nainstalují pro všechny uživatele v zařízení.<br><br>Balíčky MSI v duálním režimu se momentálně nainstalují jenom pro všechny uživatele v zařízení.<br><br>Aktualizace aplikací jsou podporované, když kód produktu MSI jednotlivých verzí je stejný.<br>
 Všechny typy aplikací instalačního programu softwaru se odešlou do úložiště v cloudu.

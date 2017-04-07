@@ -15,9 +15,9 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: be3cfc0120caf6e702139b829fc6ee1fa9bf9a1e
-ms.lasthandoff: 12/10/2016
+ms.sourcegitcommit: adf7e2d0f76e63f67b7cf3d26d26df0da0e50bd0
+ms.openlocfilehash: 933a47163ccc66a1bab636982ca422c4a704656d
+ms.lasthandoff: 03/31/2017
 
 
 
@@ -44,7 +44,7 @@ Tato nastavení můžou využívat jenom zařízení se Samsung Knox Standardem.
     - **Popis nastavení.** Zadejte volitelný popis, např.: Seznam zakázaných aplikací.
     -     **Datový typ.** Z rozevíracího seznamu vyberte položku **String** (Řetězec).
     -     **OMA-URI.** Zadejte **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
-    -     **Hodnota.** Zadejte seznam názvů balíčků aplikací, které chcete povolit. Jako oddělovač můžete použít **; : ,** nebo **|**. (Příklad: package1;package2;)
+    -     **Hodnota.** Zadejte seznam názvů balíčků aplikací, které chcete zakázat. Jako oddělovač můžete použít **; : ,** nebo **|**. (Příklad: package1;package2;)
 
     Pro seznam aplikací, které si uživatelé můžou nainstalovat z obchodu Google Play, s vyloučením všech ostatních:
 
