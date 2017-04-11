@@ -1,11 +1,11 @@
 ---
-title: "Co je nového | Microsoft Intune"
-description: "Zjistěte, co je nového v aktualizací služby Microsoft Intune v tomto měsíci nebo dříve"
+title: "Co je nového | Dokumentace Microsoftu"
+description: "Zjistěte, co je nového ve verzi Microsoft Intune z tohoto měsíce a v minulých verzích."
 keywords: 
-author: barlanmsft
-ms.author: barlan
+author: mtillman
+ms.author: mtillman
 manager: angrobe
-ms.date: 11/2/2016
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,108 +13,112 @@ ms.technology:
 ms.assetid: fab51ee0-638d-4dd4-8d8f-1f263bc11e5c
 ms.reviewer: priyar
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b5035c4560fa298af83fe0d016cd83b85959b450
-ms.openlocfilehash: 12c066ed165509cc9182a3735d516fa2dd3e6a90
+ms.sourcegitcommit: c473a1f05b0a7b0ce5205598b2b9a9b86bfe6c1d
+ms.openlocfilehash: bddd8c0dc74835f74a71af1d900d43d84aab894c
+ms.lasthandoff: 03/29/2017
 
 
 ---
-# <a name="whats-new-in-microsoft-intune-october-2016"></a>Co je nového v Microsoft Intune – říjen 2016
+# <a name="whats-new-in-microsoft-intune---march-2017"></a>Co je nového v Microsoft Intune – březen 2017
 Zjistěte, co je nového v této verzi Microsoft Intune. Můžete také získat informace o nadcházejících změnách, se kterými byste měli počítat, a o minulých verzích.
 
-Všechny tyto funkce budou posléze podporované pro zákazníky využívající hybridní nasazení (Configuration Manager s Intune). Další informace o nových funkcích pro hybridní nasazení najdete na naší [stránce Co je nového pro hybridní nasazení](https://technet.microsoft.com/library/mt718155.aspx).
-<!---@Barry, the above blurb stays in each version, but make sure Tyler signs off each time. Also, remember to set the ms.date in the metadata to the sprint release. --->
+> [!Note]
+> Všechny tyto funkce budou posléze podporované pro zákazníky využívající hybridní nasazení (Configuration Manager s Intune). Další informace o nových funkcích pro hybridní nasazení najdete na naší [stránce Co je nového pro hybridní nasazení](https://docs.microsoft.com/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management).
 
-## <a name="whats-new"></a>Co je nového
+## <a name="new-capabilities"></a>Nové funkce
 
-### <a name="conditional-access-for-mobile-application-management"></a>Podmíněný přístup pro správu mobilních aplikací
-Budete moct omezit přístup k Exchangi Online, takže přístup bude možný jenom z aplikací, které podporují zásady správy mobilních aplikací Intune, jako je Outlook. [Tato nová funkce](/intune/deploy-use/allow-policy-managed-apps-access-to-o365) vhodně doplňuje zásady správy mobilních aplikací (MAM) Intune, protože vám umožní blokovat přístup k integrovaným poštovním klientům nebo jiným aplikacím, u kterých nebyly nakonfigurovány zásady Intune MAM. Tím zajistíte, že uživatelé mají přístup k datům vaší organizace prostřednictvím aplikací, které mohou být chráněny pomocí služby Intune MAM. Se správou mobilních aplikací Intune můžete začít prostřednictvím webu Azure Portal. V okně Nastavení hledejte novou sekci Podmíněný přístup.
+### <a name="support-for-skycure"></a>Podpora aplikace Skycure
 
-### <a name="conditional-access-for-windows-pcs"></a>Podmíněný přístup pro počítače s Windows
-Nově můžete přes konzolu správce Intune vytvářet zásady podmíněného přístupu, které budou počítačům s Windows blokovat přístup k [Exchangi Online](/intune/deploy-use/restrict-access-to-exchange-online-with-microsoft-intune) a [SharePointu Online](/intune/deploy-use/restrict-access-to-sharepoint-online-with-microsoft-intune). Taky můžete vytvářet zásady podmíněného přístupu, které budou blokovat přístup k desktopovým a univerzálním aplikacím Office.
+Přístup mobilních zařízení k podnikovým prostředkům teď můžete řídit pomocí podmíněného přístupu na základě posouzení rizik, které provádí služba Skycure. Je to řešení ochrany před mobilními hrozbami integrované v Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých běží služba Skycure. Patří do ní:
 
-### <a name="android-for-work-support"></a>Podpora programu Android for Work
-Intune je teď součástí programu Android for Work (AfW). Od tohoto měsíce začneme poskytovat podporu funkcí AfW, která bude pokračovat i v následujících měsících. Všimněte si, že dostupné nasazení aplikace AfW využívá nové prostředí pro seskupení a zacílení. Nově zřízené účty služby Intune mohou tuto funkci využívat, jakmile budou mít k dispozici AfW.
+- Fyzická ochrana
+- Síťová ochrana
+- Ochrana aplikací
+- Ochrana chyb zabezpečení
 
-Stávající zákazníci s Intune mohou tuto funkci používat v ostrém provozu, jakmile dokončí migraci tenanta. Stávající zákazníci si mohou vytvořit zkušební účet Intune, aby před migrací tenanta mohli tuto funkci naplánovat a otestovat. Pokud máte nějaké otázky k časovému horizontu seskupení a zacílení, obraťte se na náš [migrační tým](mailto:intunegrps@microsoft.com).
+Na základě posouzení rizik aplikací Skycure, které se povoluje přes zásady dodržování předpisů v Intune, můžete nakonfigurovat zásady podmíněného přístupu EMS. Tyto zásady můžete použít k povolení nebo blokování přístupu zařízení nesplňujících požadavky k podnikovým prostředkům na základě zjištěných hrozeb. Další informace najdete v článku [Konektor Skycure Mobile Threat Defense](/intune/deploy-use/skycure-mobile-threat-defense-connector).
 
-[Přečtěte si prohlášení Microsoftu o podpoře Intune pro Android for Work](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/12/microsoft-intune-support-for-android-for-work/).
+### <a name="new-user-experience-for-the-company-portal-app-for-android---621622--"></a>Nové uživatelské prostředí aplikace Portál společnosti pro Android <!--621622-->
 
-Následující témata pro Intune jsou nová nebo aktualizovaná o informace týkající se Androidu for Work:
+Kvůli modernějšímu vzhledu a chování a lepšímu uživatelskému prostředí bude aktualizováno uživatelské rozhraní aplikace Portál společnosti pro Android. K významným aktualizacím patří:
 
-Pro IT specialisty:
-- [Nastavení Androidu for Work](/intune/deploy-use/set-up-android-for-work)
-<!--- [Nathan Bigman's resource access topics]()-->
-- [Omezení přístupu k e-mailu v Exchangi Online a novému vyhrazeném prostředí Exchange Online s Intune](/intune/deploy-use/restrict-access-to-exchange-online-with-microsoft-intune)
-- [Omezení přístupu k e-mailu v místním systému Exchange a starším vyhrazeném prostředí Exchange Online v Microsoft Intune](/intune/deploy-use/restrict-access-to-exchange-onpremises-with-microsoft-intune)
-- [Nastavení zásad dodržování předpisů pro Android for Work](/intune/deploy-use/afw-compliance-policy-settings-in-microsoft-intune)
-- [Jak nasadit aplikace do zařízení s Androidem for Work pomocí Intune](/intune/deploy-use/android-for-work-apps)
-- [Konfigurace aplikací pro Android for Work pomocí zásad konfigurace mobilních aplikací](/intune/deploy-use/afw-app-configuration-policy)
-- [Nastavení zásad pro Android for Work](/intune/deploy-use/android-for-work-policy-settings-in-microsoft-intune)
+- Barvy: IT oddělení může v záhlaví karet aplikace Portál společnosti definovat firemní barvy.
+- Aplikace: Na kartě **Aplikace** jsou aktualizovaná tlačítka **Vybrané aplikace** a **Všechny aplikace**.
+- Hledání: Na kartě **Aplikace** má tlačítko **Hledat** podobu plovoucího tlačítka akce.
+- Navigace mezi aplikacemi: Zobrazení **Všechny aplikace** obsahuje karty **Doporučené**, **Vše** a **Kategorie**, které zjednodušují navigaci.
+- Podpora: Karty **Moje zařízení** a **Kontaktovat IT** jsou aktualizované tak, aby byly zřetelnější.
 
-Pro koncové uživatele:
-- [Co se stane při vytvoření pracovního profilu](/intune/enduser/what-happens-when-you-create-a-work-profile-android)
-- [Vytvoření pracovního profilu a registrace zařízení v Intune](/intune/enduser/create-a-work-profile-and-enroll-your-device-in-intune-android)
+Další podrobnosti o těchto změnách najdete v článku [Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele](whats-new-in-intune-app-ui.md).
 
-### <a name="lookout-integration-to-protect-ios-devices"></a>Integrace služby Lookout pro ochranu zařízení s iOS
-V říjnu společnost Microsoft integruje řešení ochrany před mobilními hrozbami ve službě Lookout s cílem chránit pomocí zjišťování malwaru, riskantních aplikací a dalších problémů mobilní zařízení s iOS. Řešení Lookout vám pomůže určit úroveň ohrožení, která je konfigurovatelná. Ve službě Intune můžete vytvořit pravidlo zásad dodržování předpisů na základě vyhodnocování rizik aplikací Lookout. Pomocí zásad podmíněného přístupu můžete povolit nebo blokovat přístup k prostředkům společnosti na základě stavu dodržování předpisů pro zařízení.
+### <a name="non-managed-devices-can-access-assigned-apps---664691--"></a>Nespravovaná zařízení mají přístup k přiřazeným aplikacím <!--664691-->
 
-Koncoví uživatelé zařízení s iOS nesplňujících požadavky budou vyzvaní k registraci. Dále si budou muset před získáním přístupu k firemním datům nainstalovat na svoje zařízení aplikaci Lookout for Work, aktivovat ji a opravit hrozby nahlášené aplikací Lookout for Work. Přečtěte si téma [Konfigurace a nasazení aplikací Lookout for Work](/intune/deploy-use/configure-and-deploy-lookout-for-work-apps).
-<!--TFS 1319493-->
+Jako součást změn v návrhu na webu Portál společnosti budou moci uživatelé iOSu a Androidu na svoje nespravovaná zařízení instalovat aplikace, které mají přiřazené jako dostupné bez registrace. S použitím přihlašovacích údajů pro Intune se budou moct uživatelé přihlásit na web Portál společnosti a zobrazit seznam aplikací, které mají přiřazené. Balíčky aplikací, které jsou dostupné bez registrace, jsou k dispozici ke stažení prostřednictvím webu Portál společnosti. Aplikace, které vyžadují registraci, aby je bylo možné nainstalovat, nejsou touto změnou ovlivněny, protože když budou chtít tyto aplikace uživatelé nainstalovat, zobrazí se jim výzva k registraci.
 
-<!--### New Microsoft Intune Company Portal available for Windows 10 devices
-Microsoft is releasing a new [Microsoft Intune Company Portal for Windows 10 devices](https://go.microsoft.com/fwlink/?linkid=830663). This app, which leverages the new Windows 10 Universal format, will provide the user with an updated user experience within the app and identical experiences across all Windows 10 devices, PC and Mobile alike, while still enabling all the same functionality that they are using today.
+### <a name="signing-script-for-windows-10-company-portal---941642--"></a>Podepisovací skript pro Portál společnosti pro Windows 10 <!--941642-->
 
-The new app will also allow users to leverage additional platform features like single sign-on (SSO) and certificate-based authentication on Windows 10 devices. The app will be made available as an upgrade to the existing Windows 8.1 Company Portal and Windows Phone 8.1 Company Portal installs from the Windows Store.-->
+Pokud potřebujete stáhnout aplikaci Portál společnosti pro Windows 10 a nainstalovat ji bokem, můžete použít skript, který zjednoduší a zefektivní proces podepisování aplikací ve vaší organizaci.   Informace o tom, jak tento skript stáhnout, a pokyny k jeho použití najdete v článku [Microsoft Intune Signing Script for Windows 10 Company Portal](https://aka.ms/win10cpscript) (Podepisovací skript Microsoft Intune pro Portál společnosti pro Windows 10) na webu TechNet. Další podrobnosti o tomto oznámení najdete v článku [Updating your Windows 10 Company Portal app](https://blogs.technet.microsoft.com/intunesupport/2017/03/13/updating-your-windows-10-company-portal-app/) (Aktualizace aplikace Portál společnosti pro Windows 10) na blogu týmu podpory Intune.
 
-### <a name="intune-app-wrapping-tool-for-android"></a>Nástroj Intune App Wrapping Tool for Android
-Pomocí nástroje Intune App Wrapping Tool svým aplikacím umožníte používat zásady správy mobilních aplikací (MAM) služby Intune. Podpora zásad Intune MAM je nyní dostupná bez nutnosti registrace zařízení.
-
-### <a name="manage-printing-from-apps-managed-using-mam-policies"></a>Správa tisku z aplikací spravovaných pomocí zásad MAM
-Nově je možné zabránit tisku firemních dat z aplikací se zásadami MAM. Toto nastavení je dostupné na webu [Azure Portal](/Intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune) a podporují ho zařízení s [iOS](/Intune/deploy-use/ios-mam-policy-settings) i [Androidem](/Intune/deploy-use/android-mam-policy-settings).
-<!--TFS 1014328-->
-
-### <a name="support-for-fingerprints-on-android-devices"></a>Podpora otisků prstů na zařízení s Androidem
-Zásady správy mobilních aplikací (MAM) pro Android umožňují uživatelům přihlašovat se do aplikace otiskem prstu místo zadáním kódu PIN. Přečtěte si [další informace o nastavení zásad správy mobilních aplikací pro Android](/Intune/deploy-use/android-mam-policy-settings).
 
 ## <a name="notices"></a>Sdělení
 
-### <a name="android-samsung-knox-compatibility-with-intune"></a>Kompatibilita systému Android Samsung KNOX s Intune
-Některé modely telefonů Samsung Galaxy Ace nejde spravovat pomocí Intune jako zařízení se systémem Samsung KNOX. Pokud tato zařízení zaregistrujete v Intune, budou se spravovat jako standardní zařízení s Androidem.
+### <a name="support-for-ios-103"></a>Podpora pro iOS 10.3
 
-Jde o tyto modely:
+Uživatelé iOSu mají k dispozici verzi iOS 10.3 od 27. března 2017. Všechny stávající scénáře Intune MDM a MAM jsou kompatibilní s nejnovější verzí OS od společnosti Apple. Předpokládáme, že všechny existující funkce Intune aktuálně dostupné pro správu zařízení s iOSem budou v zařízeních a aplikacích uživatelů nadále fungovat, i když si iOS upgradují na iOS 10.3.
 
-* SM-G313HU
-* SM-G313HY
-* SM-G313M
-* SM-G313MY
-* SM-G313U
+V současnosti nejsou známy žádné problémy. Pokud se vyskytne problém s iOSem 10.3, kontaktujte prosím [tým podpory Intune](/intune/troubleshoot/contact-assisted-phone-support-for-microsoft-intune).
 
-Vy a vaši koncoví uživatelé nemusíte nic dělat. Další informace najdete na webu [Samsung KNOX](https://www.samsungknox.com).
+### <a name="improved-support-for-android-users-based-in-china---720444--"></a>Vylepšená podpora pro uživatele Androidu v Číně <!--720444-->
 
-### <a name="company-portal-app-for-windows-8-is-deprecated-support-for-windows-phone-8-and-windows-rt-platforms-are-being-deprecated"></a>Aplikace Portál společnosti pro Windows 8 je zastaralá, podpora pro platformy Windows Phone 8 a Windows RT se přestává používat
-Od října 2016 přestane Microsoft Intune poskytovat podporu pro Portál společnosti pro Windows 8. Microsoft Intune také přestat poskytovat podporu pro platformy Windows Phone 8 a Windows RT. V důsledku toho nebude možné registrovat ani aktualizovat žádná zařízení s Windows Phone 8 nebo Windows RT.
+Vzhledem k absenci obchodu Google Play v Číně musí zařízení s Androidem získávat aplikace z čínských obchodů. Portál společnosti bude tuto situaci podporovat tím, že uživatele Androidu v Číně přesměruje na stažení aplikací Portál společnosti a Outlook z místních obchodů s aplikacemi. Tato změna vylepší uživatelské prostředí při povolených zásadách podmíněného přístupu, a to jak při správě mobilních zařízení, tak při správě mobilních aplikací. Aplikace Portál společnosti a Outlook pro Android jsou dostupné v následujících čínských obchodech s aplikacemi:
 
-Zařízení s Windows Phone 8 a Windows 8, která jsou už zaregistrovaná, můžete nadále spravovat. Pokud budete chtít do zařízení s těmito systémy dál bez přerušení distribuovat aplikace, aktualizujte si zařízení Windows 8 a Windows Phone 8 na Windows 8.1 a Windows Phone 8.1 a začněte používat odpovídající aplikaci Portál společnosti pro Windows 8.1 a Windows Phone 8.1.
+- [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
+- [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
+- [Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
+- [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
+- [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
 
-Od listopadu 2016 přestaneme poskytovat podporu pro Portál společnosti pro Windows Phone 8.
-<!--TFS 1255391-->
+### <a name="best-practice-make-sure-your-company-portal-apps-are-up-to-date---879465--"></a>Osvědčený postup: Ujistěte se, že aplikace Portál společnosti jsou aktuální. <!--879465-->
+
+V prosinci 2016 jsme vydali aktualizaci umožňující vynucení pro vícefaktorové ověřování (MFA) u skupiny uživatelů, když zaregistrují zařízení s iOSem, Androidem, Windows 8.1+ nebo Windows Phone 8.1+. Tato funkce nefunguje bez některých základních verzí aplikace Portál společnosti pro Android (v5.0.3419.0+) a iOS (v2.1.17+).
+
+Microsoft průběžně zdokonaluje Intune přidáváním nových funkcí do konzoly i do aplikací Portál společnosti na všech podporovaných platformách. Microsoft proto vydává opravy jenom pro problémy, které se vyskytly v aktuální verzi aplikace Portál společnosti. Aby se vám tedy s aplikacemi pracovalo co nejlépe, doporučujeme používat nejnovější verze aplikací Portál společnosti.
+
+>[!Tip]
+> Požádejte uživatele, aby si na svých zařízeních nastavili automatické aktualizace aplikací z příslušného obchodu s aplikacemi. Pokud jste ve sdílené síťové složce zpřístupnili aplikaci Portál společnosti pro Android, můžete její nejnovější verzi stáhnout z webu [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=49140).
+
+### <a name="microsoft-teams-is-now-enabled-for-mam-on-ios-and-android"></a>Aplikace Microsoft Teams jsou teď povolené pro správu mobilních aplikací (MAM) v iOSu a Androidu
+
+Společnost Microsoft oznámila obecnou dostupnost aplikací Microsoft Teams. Aktualizované aplikace Microsoft Teams pro iOS a Android teď můžou využívat možnosti správy mobilních aplikací (MAM) v Intune. Vaše týmy tedy můžou spolupracovat na různých zařízeních a zároveň je zajištěná ochrana konverzací a firemních dat. Další podrobnosti najdete v [oznámení o Microsoft Teams](https://blogs.technet.microsoft.com/enterprisemobility/2017/03/14/microsoft-teams-is-now-generally-available-and-mam-enabled-on-ios-and-android/) na blogu Enterprise Mobility and Security.
+
+
+## <a name="whats-new-in-the-public-preview-of-the-intune-admin-experience-on-azure---736542--"></a>Co je nového ve veřejné verzi Preview prostředí pro správu Intune v Azure<!--736542-->
+
+Na začátku kalendářního roku 2017 provedeme migraci celého našeho prostředí pro správu do Azure, což umožní výkonnou a integrovanou správu základních pracovních postupů EMS na moderní platformě pro služby, která je rozšiřitelná pomocí rozhraní Graph API.
+
+Noví zkušební tenanti se začnou objevovat ve veřejné verzi Preview nového prostředí pro správu na webu Azure Portal tento měsíc. Funkce a parita se stávající konzolou Intune se ve verzi Preview budou zavádět postupně.
+
+Prostředí pro správu na webu Azure Portal bude využívat nové funkce seskupování a cílení, které už byly oznámeny. Při migraci vašeho stávajícího tenanta do nového prostředí seskupování se provede také vaše migrace do verze Preview nového prostředí pro správu vašeho tenanta. Pokud si chcete otestovat nebo prohlédnout některé nové funkce ještě před migrací vašeho tenanta, zaregistrujte si nový zkušební účet Intune nebo se podívejte na [novou dokumentaci](/intune-azure/introduction/whats-new).
+
+> [!Note]
+> Pro Azure Portal Preview zavádíme aktualizace pro tento měsíc. Změny ale nemusí být hned dostupné. Důvodem je způsob, jakým se služba Intune aktualizuje.  Několik součástí služby se musí aktualizovat postupně, než budou nové funkce portálu k dispozici. Vyhledejte změny na portálu Azure Portal Preview, až je v průběhu tohoto měsíce zavedeme. Úplný seznam změn najdete v článku [Co je nového v Microsoft Intune Preview](/intune-azure/introduction/whats-new).
+
+### <a name="administration-roles-being-replaced-in-azure-portal"></a>Nahrazení rolí správy na portálu Azure Portal
+
+Existující role pro správu mobilních aplikací (MAM) (Přispěvatel, Vlastník a Jen pro čtení) používané v klasickém portálu Intune (Silverlight) byly na portálu Azure Portal pro Intune nahrazeny celou řadou nových možností řízení přístupu na základě role (RBAC). Jakmile migrujete na portál Azure Portal, bude potřeba, abyste svým správcům přiřadili tyto nové role správy. Další informace o RBAC a nových rolích najdete v článku [Řízení přístupu na základě role pro Microsoft Intune](/intune-azure/access-control/role-based-access-control).
+
 
 ## <a name="whats-coming"></a>Co připravujeme
 
-### <a name="new-microsoft-intune-company-portal-available-for-windows-10-devices"></a>Nový Portál společnosti Microsoft Intune pro zařízení s Windows 10
-Společnost Microsoft vydává nový Portál společnosti Microsoft Intune pro zařízení s Windows 10. Tato aplikace, která využívá nový univerzální formát Windows 10, poskytne uživatelům aktualizované prostředí, které je identické napříč všemi zařízeními s Windows 10, ať už jsou to počítače, nebo mobilní zařízení, a nabídne přitom stejné funkce, které v současnosti využívají.
+### <a name="apple-to-require-updates-for-application-transport-security---748318--"></a>Apple bude vyžadovat aktualizace ATS (Application Transport Security) <!--748318-->
 
-Tato nová aplikace také uživatelům umožní využít v zařízeních s Windows 10 další funkce platformy, jako je jednotné přihlašování (SSO) a ověřování na základě certifikátů. Tato aplikace bude dostupná jako upgrade stávající aplikace Portál společnosti Windows 8.1 a Portál společnosti Windows Phone 8.1 a instaluje se z Windows Storu. Další podrobnosti najdete na adrese [aka.ms/intunecp_universalapp](http://aka.ms/intunecp_universalapp).
-<!--TFS 1016502-->
+Apple oznámil, že od jara 2017 začne vynucovat specifické požadavky na ATS (Application Transport Security). ATS se používá k vynucení vyššího zabezpečení veškeré komunikace aplikací přes protokol HTTPS. Tato změna ovlivní zákazníky Intune, kteří používají aplikace Portál společnosti pro iOS. Další podrobnosti najdete v [blogu podpory služby Intune](https://aka.ms/compportalats).
 
 ### <a name="see-also"></a>Viz taky
 * [Blog Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
 * [Plán cloudové platformy](http://www.microsoft.com/en-us/server-cloud/roadmap/Indevelopment.aspx?TabIndex=0&dropValue=Intune)
-* [Předchozí verze Intune](previous-intune-releases.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
+* [Co je nového v Azure Preview](https://docs.microsoft.com/intune-azure/introduction/whats-new)
+* [Co je nového v uživatelském rozhraní Portálu společnosti](https://docs.microsoft.com/intune/whats-new/whats-new-in-company-portal-ui)
+* [Co je nového – archiv](whats-new-archive.md)
 
