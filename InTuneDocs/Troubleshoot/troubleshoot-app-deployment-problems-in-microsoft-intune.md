@@ -1,5 +1,5 @@
 ---
-title: "Řešení problémů s nasazením aplikací | Microsoft Intune"
+title: "Řešení problémů s nasazením aplikací | Dokumentace Microsoftu"
 description: "Tento článek vám pomůže při řešení problémů s nasazením aplikací pomocí Microsoft Intune."
 keywords: 
 author: robstackmsft
@@ -13,17 +13,21 @@ ms.technology:
 ms.assetid: 28ac298e-fb73-4c1c-b3fd-8336639e05e6
 ms.reviewer: mghadial
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e95db6d0ccbe350984f11ce08749b700c2f5ad01
-ms.openlocfilehash: efc280f0a1143cacc252ee9fc9344064aa211cb2
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 239371198cbbc01b1345c72b3f887055acd44462
 
 
 ---
 
-# Řešení problémů s nasazením aplikací v Microsoft Intune
+# <a name="troubleshoot-app-deployment-problems-in-microsoft-intune"></a>Řešení problémů s nasazením aplikací v Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Pokud máte potíže s nasazením a správou aplikací v Intune, začněte zde. Toto téma popisuje některé běžné problémy, na které můžete narazit, a jejich řešení.
 
-## Běžné chybové kódy při nasazování aplikací
+## <a name="common-app-deployment-error-codes"></a>Běžné chybové kódy při nasazování aplikací
 
 |Kód chyby|Možný problém|Navržené řešení|
 |--------------|--------------------|------------------------|
@@ -33,11 +37,11 @@ Pokud máte potíže s nasazením a správou aplikací v Intune, začněte zde. 
 |0x80073CFB|Zadaný balíček je už nainstalovaný a přeinstalace balíčku je blokovaná.|Tato chybová zpráva se může zobrazit při instalaci balíčku, který není totožný s balíčkem, který už je nainstalovaný. Potvrďte, že součástí balíčku je i digitální podpis. Pokud se balíček znovu vytvoří nebo znovu podepíše, nebude už tento balíček při bitovém porovnání totožný s dříve nainstalovaným balíčkem. Tuto chybu můžete odstranit jedním ze dvou způsobů:<br /><br />-   Zvýšíte číslo verze aplikace a pak balíček znova sestavíte a podepíšete.<br />-   Než budete instalovat nový balíček, odeberte starý balíček pro každého uživatele v systému.|
 |0x87D1041C|Instalace aplikace úspěšně proběhla, ale není zjištěna aplikace.|– Aplikace byla úspěšně nasazena službou Intune a potom byla odinstalována (zřejmě koncovým uživatelem). Dejte uživateli pokyn, aby aplikaci znovu nainstaloval z portálu společnosti. Požadované aplikace budou automaticky znovu nainstalovány, jakmile se zařízení příště připojí.|
 
-## Řešení problémů s aplikacemi z Windows Storu
+## <a name="troubleshooting-apps-from-the-windows-store"></a>Řešení problémů s aplikacemi z Windows Storu
 
 Informace v tématu [Řešení problémů s vytvářením balíčků, nasazením a dotazy aplikací pro Windows Store](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) vám pomohou s řešením běžných problémů, na které můžete narazit při instalaci aplikací z Windows Storu, ať již pomocí služby Intune nebo jinak.
 
-## Řešení problémů s nasazením aplikací do počítačů spravovaných softwarovým klientem Intune
+## <a name="troubleshooting-app-deployment-to-pcs-managed-by-the-intune-software-client"></a>Řešení problémů s nasazením aplikací do počítačů spravovaných softwarovým klientem Intune
 Při řešení problémů s nasazením aplikací do počítačů spravovaných softwarovým klientem Intune vám může pomoct nahlédnout do následujících dvou souborů protokolu:
 - složka %ProgramFiles%\Microsoft\OnlineManagement\Logs
 - %ProgramFiles%\Microsoft\OnlineManagement\Updates\ReportingEvents.log
@@ -45,11 +49,11 @@ Při řešení problémů s nasazením aplikací do počítačů spravovaných s
 Pokud budete potřebovat otevřít případ podpory pro službu Intune, velmi pomůže, když společně s popisem problému zašlete do Microsoftu i tyto protokoly.
 
 
-### Další kroky
+### <a name="next-steps"></a>Další kroky
 Pokud vám tyto informace k řešení problémů nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

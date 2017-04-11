@@ -1,11 +1,11 @@
 ---
-title: "Řešení potíží se zásadami | Microsoft Intune"
+title: "Řešení potíží se zásadami | Dokumentace Microsoftu"
 description: "Řešení potíží s konfigurací zásad"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 09/06/2016
+ms.date: 01/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,20 +13,23 @@ ms.technology:
 ms.assetid: 99fb6db6-21c5-46cd-980d-50f063ab8ab8
 ms.reviewer: tscott
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e95db6d0ccbe350984f11ce08749b700c2f5ad01
-ms.openlocfilehash: fbc18b12c00a4b61f7419731c6b4306b583638cc
+ms.sourcegitcommit: b28590bdb5a9387331354c8e5766975e3188bb91
+ms.openlocfilehash: e314d247c964b98c4159ca05cd746862d1b0db2e
 
 
 ---
 
-# Řešení potíží se zásadami v Microsoft Intune
+# <a name="troubleshoot-policies-in-microsoft-intune"></a>Řešení potíží se zásadami v Microsoft Intune
 
-Pokud máte potíže s nasazením a správou zásad v Intune, začněte zde. Toto téma popisuje některé běžné problémy, na které můžete narazit, a jejich řešení.
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-## Běžné problémy
+Pokud máte potíže s nasazením a správou zásad v Intune, začněte tady. Toto téma popisuje některé běžné problémy, na které můžete narazit, a jejich řešení.
 
-### Použili jste na zařízení nasazené zásady?
+## <a name="general-issues"></a>Běžné problémy
+
+### <a name="was-a-deployed-policy-applied-to-the-device"></a>Použili jste na zařízení nasazené zásady?
 **Problém:** Nejste si jisti, jestli jste správně použili zásady.
 
 V konzole pro správu služby Intune má každé zařízení v části **Vlastnosti zařízení**vlastní kartu zásad. Každá zásada má **určenou hodnotu** a **Stav**. Určená hodnota označuje to, čeho chcete dosáhnout při přiřazování zásady. Stav označuje to, co se skutečně použije, když jsou společně zpracovány všechny zásady platné pro zařízení a všechna omezení a požadavky na hardware a operační systém. Možné stavy:
@@ -49,14 +52,14 @@ Na tomto snímku obrazovky vidíte dva jasné příklady:
 > Mějte na paměti, že když použijete dvě zásady s různými úrovněmi omezení na stejné zařízení nebo uživatele, v praxi se uplatní víc omezující zásada.
 
 
-## Problémy s registrovanými zařízení
+## <a name="issues-with-enrolled-devices"></a>Problémy s registrovanými zařízení
 
-### Výstraha: Uložení pravidel přístupu do systému Exchange se nezdařilo
+### <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Výstraha: Uložení pravidel přístupu do systému Exchange se nezdařilo
 **Problém**: V konzole pro správu se objeví výstraha **Uložení pravidel přístupu do systému Exchange se nezdařilo**  .
 
 Pokud jste vytvořili zásady v pracovním prostoru Zásady pro místní Exchange v konzole pro správu, ale používáte služby O365, služba Intune nebude nakonfigurované nastavení zásad vynucovat. Poznamenejte si zdroj zásad uvedený ve výstraze.  V pracovním prostoru Zásady pro místní Exchange odstraňte zastaralá pravidla, protože se jedná o globální pravidla Exchange v rámci Intune pro místní Exchange a nevztahují se na služby O365. Pak vytvořte nové zásady pro služby O365.
 
-### Nejde změnit zásady zabezpečení pro různá zaregistrovaná zařízení
+### <a name="cannot-change-security-policy-for-various-enrolled-devices"></a>Nejde změnit zásady zabezpečení pro různá zaregistrovaná zařízení
 Zařízení s Windows Phone neumožňují zmírnění zásad zabezpečení nastavených přes MDM nebo EAS potom, co je nastavíte. Nastavíte třeba **Minimální počet znaků hesla** na hodnotu 8 a tu se pak pokusíte snížit na 4. V zařízení se už ale používá více omezující zásada.
 
 Pokud chcete zásadu změnit na méně zabezpečenou hodnotu, v závislosti na platformě zařízení může být potřeba resetovat zásady zabezpečení.
@@ -64,12 +67,12 @@ Například ve Windows otevřete potáhnutím prstu z pravého okraje plochy pan
 V navigační nabídce vlevo najdete dole odkaz **Resetovat zásady zabezpečení** . Zvolte jej a potom zvolte tlačítko **Resetovat zásady** .
 Jiná zařízení MDM, třeba zařízení se systémy Android, Windows Phone 8.1 (a novějšími) a iOS, může být potřeba vyřadit a znovu zaregistrovat do služby, abyste mohli aplikovat méně omezující zásadu.
 
-## Problémy s počítači, které používají klientský software Intune
+## <a name="issues-with-pcs-that-run-the-intune-software-client"></a>Problémy s počítači, které používají klientský software Intune
 
-### Chyby související se zásadami Microsoft Intune v souboru policyplatform.log
+### <a name="microsoft-intune-policy-related-errors-in-policyplatformlog"></a>Chyby související se zásadami Microsoft Intune v souboru policyplatform.log
 U počítačů s Windows spravovaných pomocí klientského softwaru Intune můžou být chyby zásad v souboru policyplatform.log výsledkem jiného než výchozího nastavení nástroje Řízení uživatelských účtů v systému Windows (UAC) v zařízení. Některá nevýchozí nastavení UAC můžou ovlivnit zpracování zásad a instalace klientů Microsoft Intune.
 
-#### Řešení potíží s UAC
+#### <a name="to-resolve-uac-issues"></a>Řešení potíží s UAC
 
 1.  Vyřaďte počítač, jak je popsané v tématu [Vyřazení zařízení ze správy službou Microsoft Intune](/intune/deploy-use/retire-devices-from-microsoft-intune-management).
 
@@ -82,7 +85,7 @@ U počítačů s Windows spravovaných pomocí klientského softwaru Intune mů�
 
 4.  Nastavte posuvník oznámení na výchozí nastavení.
 
-### CHYBA: Nelze získat hodnotu z počítače, 0x80041013
+### <a name="error-cannot-obtain-the-value-from-the-computer-0x80041013"></a>CHYBA: Nelze získat hodnotu z počítače, 0x80041013
 K této chybě může dojít, pokud se místní systém nesynchronizuje delší dobu než pět minut. Pokud není čas v místním počítači synchronizovaný, zabezpečené transakce se nepodaří, protože budou mít neplatná časová razítka.
 
 Pokud chcete tento problém vyřešit, nastavte místní čas počítače co nejblíž internetovému času nebo času nastavenému na řadičích domény v síti.
@@ -94,11 +97,11 @@ Pokud chcete tento problém vyřešit, nastavte místní čas počítače co nej
 
 
 
-### Další kroky
+### <a name="next-steps"></a>Další kroky
 Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 
