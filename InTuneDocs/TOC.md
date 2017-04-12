@@ -24,7 +24,6 @@
 ### [Přizpůsobení Portálu společnosti](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-7.md)
 ### [Registrovat zařízení](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-8.md)
 ### [Úlohy po konfiguraci](get-started/post-configuration-tasks.md)
-## [Migrace na Intune](get-started/migrate-to-intune.md)
 ## Další kroky
 ### [Prevence úniků firemních dat z mobilních aplikací Office 365](get-started/prevent-company-data-leaks-from-Office-365-mobile-apps.md)
 ### [Šifrování jako ochrana firemních dat](get-started/protect-data-encryption.md)
