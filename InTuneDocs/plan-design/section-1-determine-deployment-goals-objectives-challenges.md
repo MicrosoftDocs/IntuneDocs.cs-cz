@@ -15,8 +15,9 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f807d6e4b20b98ecf622d1ebdd9db33b132a2e6a
-ms.openlocfilehash: 2e46c5612c120a24d3f8fe32decd3eb7a0d4e709
+ms.sourcegitcommit: d10906ee3fb69458738b31bb1d4252d632a9a0cf
+ms.openlocfilehash: 6014527422ea3dae4d1333965ccd9e48e8216afb
+ms.lasthandoff: 04/08/2017
 
 
 ---
@@ -75,7 +76,7 @@ Cíle nasazení jsou dlouhodobé výsledky dosažené implementací Microsoft In
 <br>
     -   **Provedení:** Registrace a správa zařízení v Microsoft Intune, možnost v případě potřeby vzdáleně vymazat firemní data a prostředky.
 
-## <a name="deployment-challenges"></a>Problémy při nasazení
+## <a name="deployment-challenges"></a>Aspekty nasazení
 
 Problémy při nasazení mají pro organizaci nejvyšší prioritu, protože mohou negativně ovlivnit nasazení. Někdy mohou souviset s předchozími problémy, se kterými se organizace potýkala při minulých projektech a teď se jim chce vyhnout. Nebo může jít o nové problémy spojené s aktuálním úsilím o nasazení řešení. Tady je několik příkladů problémů, se kterými se může organizace setkat při nasazování Microsoft Intune, spolu s jejich možným řešením.
 
@@ -91,12 +92,7 @@ Problémy při nasazení mají pro organizaci nejvyšší prioritu, protože moh
 <br>
     -   **Zmírnění dopadů:** Pravděpodobně se už nemůžete dočkat, až projekt zahájíte. Předtím se ale ujistěte, že máte jasně definované cíle a úkoly. Ty pak uvádějte na všech propagačních akcích a školeních, abyste pomohli uživatelům pochopit, proč organizace vybrala Intune.
 
-## <a name="next-section"></a>Další část
+## <a name="next-steps"></a>Další kroky
 
 Po identifikaci cílů, úkolů a možných problémů při nasazení můžete přejít k další části, kterou je [identifikace scénářů použití](section-2-identify-use-case-scenarios.md).
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

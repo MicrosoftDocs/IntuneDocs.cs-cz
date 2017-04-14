@@ -12,9 +12,9 @@ ms.technology:
 ms.assetid: 5b56f8b4-269b-4e7f-b7e9-b0401bdd42f4
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
-ms.openlocfilehash: 9dc65b442a165609963cb5625009a723cbcb55dd
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: e4a6aaa1a8e23dc2c58345f73ff8db86018843e1
+ms.openlocfilehash: 1c36ab91a3657cccc51d7db58068a02c73c48cb8
+ms.lasthandoff: 04/11/2017
 
 
 ---
@@ -27,6 +27,6 @@ Toto téma pomáhá správcům, kteří jsou připravení začít používat Mic
 
 Tato příručka sestává z následujících částí:
 - [Úvodní příručka služby Intune](start-with-a-paid-subscription-to-microsoft-intune.md) – Podrobné pokyny pro přenesení vaší zkušební verze předplatného z testování do správy organizace nebo pro nastavení nového předplatného pro vaši organizaci
-- [Migrace na Intune](migrate-to-intune.md) – Pokyny k migraci ze stávajícího řešení správy podnikové mobility na Intune
+- [Migrace na Intune](https://docs.microsoft.com/intune/plan-design/intune-mdm-migration-guide) – Pokyny k migraci ze stávajícího řešení správy podnikové mobility na Intune
 - [Další kroky v Intune](prevent-company-data-leaks-from-Office-365-mobile-apps.md) – Přehled a další kroky pro běžné úlohy v Intune
 
