@@ -62,7 +62,7 @@ ms.lasthandoff: 02/28/2017
 |Maďarsko|24×7|Pondělí–pátek<br /><br />09:00–17:00 CET (UTC +1)|Maďarština&#42;, angličtina|36 80 983 899|36 1 778 9292|
 |Island|24×7|Pondělí–pátek<br /><br />09:00–17:00 GMT (UTC)|Angličtina|8009609||
 |Indie|24×7|Pondělí–pátek<br /><br />09:00–17:00 IST (UTC +5:30)|Angličtina|000800 4402038|18002002052|
-|Indonésie|24×7|Pondělí–pátek<br /><br />08:00–17:00 WIB (UTC +7)|Bahasa&#42;, angličtina|001&803;-442-304 (Indosat)<br /><br />007-803-011-0882 (Telkom)||
+|Indonésie|24×7|Pondělí–pátek<br /><br />08:00–17:00 WIB (UTC +7)|Bahasa&#42;, angličtina|001 803-442-304 (Indosat)<br /><br />007-803-011-0882 (Telkom)||
 |Irsko|24×7|Pondělí–pátek<br /><br />09:00–17:00 GMT (UTC)|Angličtina|1800995309|016569837|
 |Izrael|24×7|Pondělí–pátek<br /><br />09:00–17:00 IST (UTC +2)|Angličtina|1809344179||
 |Itálie|24×7|Pondělí–pátek<br /><br />09:00–17:00 CET (UTC +1)|Italština&#42;, angličtina|800917919|0269430746|
