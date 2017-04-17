@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 6bc3afe58d5e0f1f12c8b6c6fc62e37d01cd5132
 ms.openlocfilehash: cab9833a1e1b92c156a2eb77411436289c70ad71
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -165,7 +166,7 @@ Pravidla oznámení Intune definují, komu se budou z Intune odesílat e-mailov�
 
     V pracovním prostoru **Správa** klikněte na **Pravidla oznámení** > **Vytvořit nové pravidlo**.
 
-    V kroku&2; Průvodce vytvořením pravidla oznámení vyberte skupiny zařízení, na které bude pravidlo cílit. Tento krok (Vybrat skupiny zařízení) z konzoly Intune odebíráme.
+    V kroku 2 Průvodce vytvořením pravidla oznámení vyberte skupiny zařízení, na které bude pravidlo cílit. Tento krok (Vybrat skupiny zařízení) z konzoly Intune odebíráme.
 
     Předběžná časová osa pro tuto změnu je následující:
     - V červnu 2016 se novým tenantům v Průvodci vytvořením pravidla oznámení nezobrazí krok 2. Stávající tenanty to neovlivní.
@@ -216,9 +217,4 @@ Než byly přidány tyto stavy, uživatelé ztráceli přehled o tom, co se děj
 >[!div class="step-by-step"]
 
 >[&larr; **Co je nového v Intune**](whats-new-in-microsoft-intune.md)    
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
