@@ -31,17 +31,16 @@
 ### [Nastavení autority pro správu mobilních zařízení (MDM)](enroll-devices/set-mdm-authority.md)
 ## Plánování a navrhování
 ### [Získání certifikátu Apple MDM push certificate](enroll-devices/get-an-apple-mdm-push-certificate.md)
-### [Získání tokenu Apple DEP](enroll-devices/get-apple-dep-token.md)
 ### [Volba způsobu registrace zařízení s iOSem](enroll-devices/choose-ios-enrollment-method.md)
 ## Postupy
 ### [Přiřazení licencí uživatelům](/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4?toc=%2fintune-azure%2ftoc.json)
 ### [Registrace zařízení s Androidem](enroll-devices/enroll-android-and-knox-standard-devices.md)
 ### Registrace zařízení s iOSem
-#### [Registrace zařízení s iOSem pomocí Pomocníka s nastavením](enroll-devices/enroll-ios-devices-with-apple-configurator-and-setup-assistant.md)
-#### [Registrace zařízení s iOSem pomocí přímé registrace](enroll-devices/enroll-ios-devices-with-apple-configurator-and-direct-enrollment.md)
+#### [Apple Configurator – Pomocník pro instalaci](enroll-devices/enroll-ios-devices-with-apple-configurator-and-setup-assistant.md)
+#### [Apple Configurator – přímá registrace](enroll-devices/enroll-ios-devices-with-apple-configurator-and-direct-enrollment.md)
 #### [Přidání sériových čísel Apple Configuratoru](enroll-devices/add-apple-configurator-serial-numbers.md)
-#### [Registrace zařízení s iOSem pomocí programu registrace zařízení DEP](enroll-devices/enroll-ios-devices-using-device-enrollment-program.md)
-### [Registrace zařízení pomocí manažera registrace zařízení](enroll-devices/enroll-devices-using-device-enrollment-manager.md)
+#### [Program registrace zařízení (DEP)](enroll-devices/enroll-ios-devices-using-device-enrollment-program.md)
+### [Správce registrace zařízení](enroll-devices/enroll-devices-using-device-enrollment-manager.md)
 ### [Registrace zařízení s macOS](enroll-devices/enroll-macos-devices.md)
 ### [Registrace zařízení s Windows](enroll-devices/enroll-windows-devices.md)
 ### Správa registrace zařízení
@@ -75,9 +74,7 @@
 ## [Plan and design](manage-apps/plan-and-design.md) --->
 ## Správa aplikací
 ### [Přidání aplikací](manage-apps/add-apps.md)
-#### [Android – obchodní aplikace](manage-apps/android-lob-app.md)
 #### [Aplikace pro Android Store](manage-apps/android-store-app.md)
-#### [iOS – obchodní aplikace](manage-apps/ios-lob-app.md)
 #### [Aplikace pro iOS Store](manage-apps/ios-store-app.md)
 #### [Webové aplikace](manage-apps/web-app.md)
 #### [Aplikace pro Windows Phone 8.1 Store](manage-apps/windows-phone-8-1-store-app.md)
