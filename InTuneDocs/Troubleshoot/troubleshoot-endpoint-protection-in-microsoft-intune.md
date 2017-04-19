@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: a43fc6fcd33f65725d325060a513d5380baae10f
 ms.openlocfilehash: b47469c8c5d35098e2e932e5ae9c9de4f5cdafb8
+ms.lasthandoff: 02/09/2017
 
 
 ---
@@ -49,9 +50,4 @@ V této části se popisují možné příčiny následujících chyb a varován
 
 ### <a name="next-steps"></a>Další kroky
 Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
