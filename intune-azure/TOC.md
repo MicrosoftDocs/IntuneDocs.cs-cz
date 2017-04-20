@@ -43,6 +43,7 @@
 ### [Správce registrace zařízení](enroll-devices/enroll-devices-using-device-enrollment-manager.md)
 ### [Registrace zařízení s macOS](enroll-devices/enroll-macos-devices.md)
 ### [Registrace zařízení s Windows](enroll-devices/enroll-windows-devices.md)
+### [Hromadná registrace zařízení s Windows](enroll-devices/bulk-enroll-windows.md)
 ### Správa registrace zařízení
 #### [Vytvoření podmínek a ujednání](enroll-devices/create-terms-and-conditions.md)
 #### [Nastavení omezení pro registraci](enroll-devices/set-enrollment-restrictions.md)
@@ -57,6 +58,7 @@
 <!--- ## [Plan and design](manage-devices/plan-and-design.md) --->
 ## Postupy
 ### [Použití úplného nebo selektivního vymazání](manage-devices/use-full-or-selective-wipe-on-devices-using-microsoft-intune.md)
+### [Vzdálené ovládání zařízení s Androidem](manage-devices/control-android-devices-with-teamviewer.md)
 <!--- ## [Troubleshoot](manage-devices/troubleshooting.md) --->
 
 # Správa uživatelů
@@ -75,7 +77,9 @@
 ## Správa aplikací
 ### [Přidání aplikací](manage-apps/add-apps.md)
 #### [Aplikace pro Android Store](manage-apps/android-store-app.md)
+#### [Obchodní aplikace pro Android](manage-apps/android-lob-app.md)
 #### [Aplikace pro iOS Store](manage-apps/ios-store-app.md)
+#### [Obchodní aplikace pro iOS](manage-apps/ios-lob-app.md)
 #### [Webové aplikace](manage-apps/web-app.md)
 #### [Aplikace pro Windows Phone 8.1 Store](manage-apps/windows-phone-8-1-store-app.md)
 #### [Aplikace pro Windows Store](manage-apps/windows-store-app.md)
@@ -109,8 +113,12 @@
 ### [Konfigurace profilů zařízení](configure-devices/how-to-create-device-profiles.md)
 
 ### [Konfigurace funkcí zařízení](configure-devices/how-to-configure-device-features.md)
-#### [iOS](configure-devices/device-features-for-ios.md)
-#### [macOS](configure-devices/device-features-for-macos.md)
+#### [AirPrint pro iOS a MacOS](configure-devices/air-print-settings-for-ios-and-macos.md)
+#### [AirPlay pro iOS](configure-devices/airplay-settings-for-ios-devices.md)
+#### [Rozložení domovské obrazovky pro iOS](configure-devices/home-screen-settings-for-ios.md)
+#### [Oznámení aplikace pro iOS](configure-devices/app-notification-settings-for-ios.md)
+#### [Sdílená zařízení pro iOS](configure-devices/shared-device-settings-for-ios.md)
+#### [Filtr webového obsahu pro iOS](configure-devices/web-content-filter-settings-for-ios.md)
 
 ### [Konfigurace omezení zařízení](configure-devices/how-to-configure-device-restrictions.md)
 #### [Android](configure-devices/device-restrictions-for-android.md)
@@ -120,6 +128,7 @@
 #### [Windows Phone 8.1](configure-devices/device-restrictions-for-windows-phone-8-1.md)
 #### [Windows 10](configure-devices/device-restrictions-for-windows-10.md)
 #### [Windows 10 Team](configure-devices/device-restrictions-for-windows-10-team.md)
+#### [Android for Work](configure-devices/device-restrictions-for-afw.md)
 
 ### [Konfigurace nastavení e-mailů](configure-devices/how-to-configure-email-settings.md)
 #### [Android](configure-devices/email-profile-settings-for-android.md)
@@ -142,6 +151,7 @@
 #### [Windows 8.1 a Windows 10](configure-devices/wi-fi-import-for-windows-8-1.md)
 
 ### [Konfigurace nastavení upgradu edice Windows 10](configure-devices/how-to-configure-windows-10-edition-upgrade.md)
+### [Konfigurace nastavení Windows 10 Education](configure-devices/how-to-configure-education-settings.md)
 ### [Konfigurace nastavení služby Windows Update pro firmy](configure-devices/how-to-configure-windows-update-for-business.md)
 ### [Konfigurace certifikátů](configure-devices/how-to-configure-certificates.md)
 #### [SCEP](configure-devices/configure-certificate-infrastructure-for-scep.md)
@@ -159,6 +169,7 @@
 #### [macOS](configure-devices/custom-for-macos.md)
 #### [Windows Phone 8.1](configure-devices/custom-for-windows-phone-8-1.md)
 #### [Windows 10](configure-devices/custom-for-windows-10.md)
+#### [Android for Work](configure-devices/custom-android-for-work.md)
 
 ### [Přiřazení profilů zařízení](configure-devices/how-to-assign-device-profiles.md)
 ### [Sledování profilů zařízení](configure-devices/how-to-monitor-device-profiles.md)
