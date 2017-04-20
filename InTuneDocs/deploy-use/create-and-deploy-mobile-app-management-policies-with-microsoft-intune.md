@@ -15,8 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: fbb41a8cf6fada76b72213b8cb04fdc0428515e9
-ms.openlocfilehash: f4bc5a2092585c91e224c390eaae717985055b10
+ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
+ms.openlocfilehash: 34d4dc309044336eb3e625a1ecdc50abb48d6fa3
+ms.lasthandoff: 04/01/2017
 
 
 ---
@@ -93,8 +94,6 @@ Při vytváření zásad ochrany aplikací postupujte takto:
 
     ![Snímek obrazovky okna Přidat zásadu znázorňující, že byly nakonfigurovány aplikace a nastavení](../media/AppManagement/AzurePortal_MAM_CreatePolicy.png)
 
-
-
 Zásada není po vytvoření pomocí výš uvedeného postupu nasazená pro žádného uživatele. Pokud chcete nasadit zásadu, přečtěte si následující část „Nasazení zásady pro uživatele“.
 
 > [!IMPORTANT]
@@ -105,6 +104,46 @@ Zásada není po vytvoření pomocí výš uvedeného postupu nasazená pro žá
 > -   Obě tyto zásady jste přidružili ke stejné aplikaci.
 > -   Zásada vytvořená pomocí v konzole Azure bude mít přednost a kopírování bude povolené.
 > -   Stav a sestavy v konzole Intune budou ale nesprávně indikovat, že kopírování je blokované.
+
+## <a name="line-of-business-lob-apps-optional"></a>Obchodní aplikace (volitelné)
+
+Počínaje verzí Intune 1703 máte možnost při vytváření nových zásad ochrany aplikací do Intune obecně přidávat obchodní aplikace. Můžete tak definovat zásady ochrany aplikací pro obchodní aplikace pomocí sady MAM SDK, aniž byste potřebovali úplná oprávnění k nasazení aplikací.
+
+> [!TIP] 
+> Obchodní aplikace můžete do Intune přidávat také v průběhu pracovního postupu sady [Intune App SDK](https://docs.microsoft.com/intune/develop/intune-app-sdk-get-started).
+
+> [!IMPORTANT]
+> Pokud mají uživatelé k nasazování aplikací MAM jenom specifická oprávnění, ale ne úplná oprávnění, která by jim umožňovala nasadit v Intune libovolné aplikace, nebudou moct projít pracovním postupem sady Intune SDK, ale pořád své obchodní aplikace můžou přidávat prostřednictvím pracovního postupu pro vytváření zásad ochrany aplikací MAM.
+
+### <a name="to-add-lob-apps-ios-and-android"></a>Přidání obchodních aplikací (iOS a Android)
+
+1.  V okně Přidat zásadu zvolením možnosti Konfigurovat **aplikace** otevřete okno Aplikace.
+
+    ![Okno MAM Přidat zásadu](../media/AppManagement/mam-lob-apps-1.png)
+
+2.  Klikněte na **Další aplikace**, zadejte **ID sady prostředků** (pro iOS) nebo **ID balíčku** (pro Android) a pak klikněte na Vybrat a přidejte své obchodní aplikace.
+
+    ![Okno MAM Další aplikace](../media/AppManagement/mam-lob-apps-2.png)
+
+### <a name="to-add-lob-apps-windows"></a>Přidání obchodních aplikací (Windows)
+
+> [!IMPORTANT] 
+> Při vytváření nových zásad ochrany aplikací musíte z rozevíracího seznamu platformy zvolit Windows 10.
+
+1.  V okně Přidat zásadu zvolte **Povolené aplikace** nebo **Aplikace s výjimkou**. Tím otevřete příslušné okno.
+
+    > [!NOTE]
+    > 
+    - **Povolené aplikace**: Tyto aplikace musejí tyto zásady dodržovat.
+    - **Aplikace s výjimkou**: Tyto aplikace mají z těchto zásad výjimku a můžou k podnikovým datům přistupovat bez omezení.
+<br></br>
+2. V okně povolených aplikací nebo aplikací s výjimkou klikněte na **Přidat aplikace**. Můžete přidat doporučené aplikace Microsoft, aplikace pro Store nebo desktopové aplikace.
+
+    a.  **Doporučené aplikace:** Předem vyplněný seznam aplikací (většinou pro Office), které správcům umožňujeme snadno do zásad importovat.
+
+    b.  **Aplikace pro Store:** Správce může do zásad přidat libovolnou aplikaci z Windows Storu.
+
+    c.  **Desktopové aplikace Windows:** Správce může do zásad přidat libovolné tradiční desktopové aplikace Windows (např. soubory typu exe, dll atd.)
 
 ## <a name="deploy-a-policy-to-users"></a>Nasazení zásady pro uživatele
 
@@ -124,8 +163,8 @@ Tyto zásady ovlivní jenom uživatele, kteří mají přiřazené licence [!INC
 > Pokud ke správě zařízení s iOSem a Androidem používáte Intune s Configuration Managerem, zásady se použijí jenom pro uživatele přímo ve skupinách, které jste vybrali. Členy podřízených skupin vnořených ve skupině, kterou jste vybrali, tyto zásady neovlivní.
 
 Koncoví uživatelé můžou stahovat aplikace z App Storu nebo Google Play. Více informací najdete v následujících tématech:
-* [Co očekávat, když ke správě své aplikace pro Android používáte zásady ochrany aplikací](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
-* [Co očekávat, když ke správě své aplikace pro iOS používáte zásady ochrany aplikací](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
+* [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
+* [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
 
 ##  <a name="change-existing-policies"></a>Změna existujících zásad
 Podle potřeby můžete upravit existující zásady a použít je pro cílové uživatele. Když ale změníte existující zásady, změny se uživatelům, kteří se už přihlásili k aplikacím, po dobu 8 hodin nezobrazí.
@@ -179,11 +218,6 @@ Pokud chcete zobrazit úplný seznam nastavení zásad pro iOS a Android, vybert
 [Monitorování stavu dodržování předpisů a uživatele](monitor-mobile-app-management-policies-with-microsoft-intune.md)
 
 ### <a name="see-also"></a>Související témata
-* [Co očekávat, když ke správě své aplikace pro Android používáte zásady ochrany aplikací](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
-* [Co očekávat, když ke správě své aplikace pro iOS používáte zásady ochrany aplikací](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
+* [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
+* [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
 
