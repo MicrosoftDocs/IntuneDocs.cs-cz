@@ -15,8 +15,9 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ad13897fe7bbe4fe13167bb4ce7f558b436a7a90
-ms.openlocfilehash: c4ef429722f5e33092473641839b59de3bee1c1c
+ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
+ms.openlocfilehash: a2f8067bc169147a60db582d796631bea1ea5a8d
+ms.lasthandoff: 04/01/2017
 
 
 ---
@@ -25,7 +26,7 @@ ms.openlocfilehash: c4ef429722f5e33092473641839b59de3bee1c1c
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Toto téma popisuje, jak může správce Intune povolit registraci mobilních zařízení. Nápovědu k používání Intune na telefonu najdete v článku [Práce pomocí spravovaných zařízení](https://docs.microsoft.com/intune/enduser/company-portal-frequently-asked-questions). 
+Toto téma popisuje, jak může správce Intune povolit registraci mobilních zařízení. Nápovědu k používání Intune na telefonu najdete v článku [Práce pomocí spravovaných zařízení](https://docs.microsoft.com/intune/enduser/company-portal-frequently-asked-questions).
 
 Pokud chcete nastavit správu mobilních zařízení v Intune, je potřeba nejdříve nastavit *autoritu správy mobilních zařízení*, která identifikuje službu schopnou správy zařízení spojených s vaším účtem. V těchto pokynech se předpokládá, že budete místo System Center Configuration Manageru používat službu Intune. Po nastavení autority MDM můžete povolit správu platforem zařízení a zaregistrovat svá zařízení v aplikaci Portál společnosti.
 
@@ -49,9 +50,9 @@ Pro zařízení s iOS, MacOS a Androidem for Work musí být povolena registrace
 
 Povolte registraci zařízení pro platformu zařízení, kterou chcete spravovat. V závislosti na platformě je potřeba splnit různé požadavky:
 
--  [iOS a macOS](https://docs.microsoft.com/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
--  [Počítač s Windows](https://docs.microsoft.com/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
--  [Windows 10 Mobile a Windows Phone](https://docs.microsoft.com/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
+- [iOS a macOS](https://docs.microsoft.com/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
+- [Window 10 a Windows Phone](https://docs.microsoft.com/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
+- [Počítač s Windows](https://docs.microsoft.com/intune/deploy-use/manage-windows-pcs-with-microsoft-intune) (klientský software Intune)
 - [Android for Work](https://docs.microsoft.com/intune/deploy-use/set-up-android-for-work)
 
 Po povolení registrace si uživatelé můžou stáhnout aplikaci Portál společnosti do svého zařízení a dokončit proces registrace zařízení.
@@ -60,18 +61,12 @@ Po povolení registrace si uživatelé můžou stáhnout aplikaci Portál spole�
 Můžete také povolit řadu scénářů [registrace zařízení vlastněných společností](https://docs.microsoft.com/intune/deploy-use/manage-corporate-owned-devices) včetně následujících:
 - [Apple Device Enrollment Program](https://docs.microsoft.com/intune/deploy-use/ios-device-enrollment-program-in-microsoft-intune)
 - [Registrace Průvodce nastavení s Apple Configuratorem](https://docs.microsoft.com/intune/deploy-use/ios-setup-assistant-enrollment-in-microsoft-intune)
-- [Registrace Průvodce nastavení s Apple Configuratorem](https://docs.microsoft.com/intune/deploy-use/ios-direct-enrollment-in-microsoft-intune)
+- [Přímá registrace pomocí Apple Configuratoru](https://docs.microsoft.com/intune/deploy-use/ios-direct-enrollment-in-microsoft-intune)
 - [Správce registrace zařízení](https://docs.microsoft.com/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune)
 
 ### <a name="next-steps"></a>Další kroky
 Gratulujeme! Právě jste dokončili poslední krok *úvodní příručky Intune* Teď, když je počáteční konfigurace dokončená, můžete zvážit povolení dalších funkcí MDM.
 
 >[!div class="step-by-step"]
-
 >[&larr; **Registrace zařízení**](.\start-with-a-paid-subscription-to-microsoft-intune-step-8.md)     [**Úlohy po konfiguraci** &rarr;](.\post-configuration-tasks.md)  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

@@ -15,8 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 64b59ccb29e05af0472d463f426a06509d242034
-ms.openlocfilehash: 7a13afcbfd6b37a209c2cb879a47370f9a00b937
+ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
+ms.openlocfilehash: 9759c1331a3fb5308e1dbc53564059618a8ef45c
+ms.lasthandoff: 04/01/2017
 
 
 ---
@@ -57,9 +58,10 @@ Pokyny k vytvoření zásad ochrany aplikací v konzole pro správu Intune najde
 ##  <a name="supported-platforms"></a>Podporované platformy
 - iOS 8.1 nebo novější
 - Android 4 nebo novější
+- Windows 10
 
 >[!NOTE]
->Zařízení s Windows tyto zásady ochrany aplikací nepodporují. Pokud zařízení s Windows 10 zaregistrujete do Intune, můžete použít sadu Windows Information Protection, která nabízí podobné funkce. Podrobnosti najdete v tématu věnovanému [ochraně podnikových dat pomocí sady Windows Information Protection](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
+>Počínaje verzí 1703 se můžou zásady ochrany aplikací pro zařízení s Windows 10 definovat v MAM bez registračního scénáře. Podrobnosti najdete v tématu věnovanému [ochraně podnikových dat pomocí sady Windows Information Protection](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
 
 ##  <a name="supported-apps"></a>Podporované aplikace
 * **Aplikace Microsoftu:** Tyto aplikace mají integrovanou sadu Intune App SDK a před použitím zásad ochrany aplikací nevyžadují žádné další zpracování.
@@ -106,9 +108,4 @@ Globální správci mají přístup k [portálu Azure Portal](https://portal.azu
 
 ## <a name="next-steps"></a>Další kroky
 [Vytvoření a nasazení zásad ochrany aplikací pomocí Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

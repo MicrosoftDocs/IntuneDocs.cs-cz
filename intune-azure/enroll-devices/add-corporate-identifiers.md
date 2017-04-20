@@ -16,9 +16,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
-ms.openlocfilehash: e0a853c34c6d38e8fae6f4712ba6c2b767e5d0ba
-ms.lasthandoff: 03/22/2017
+ms.sourcegitcommit: 4ebd74c77145464574a1fed878ec4dbc2eb3c271
+ms.openlocfilehash: 7bb8168c442a3340e8c185f1908acd9be15cab05
+ms.lasthandoff: 04/05/2017
 
 ---
 
@@ -27,6 +27,8 @@ ms.lasthandoff: 03/22/2017
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
 Jako správce IT můžete vytvořit a importovat textový soubor s oddělovači (CSV) se seznamem čísel IMEI (International Mobile Equipment Identity), který vám umožní identifikovat zařízení ve vlastnictví firmy. Každé číslo IMEI může mít v tomto seznamu uvedené podrobnosti pro účely správy.
+
+Sériová čísla pro zařízení s iOSem ve vlastnictví firmy se při nahrávání musí spárovat s firemním registračním profilem. Zařízení se pak musí zaregistrovat pomocí programu registrace zařízení (DEP) společnosti Apple nebo Apple Configuratoru, aby se zobrazovala jako zařízení ve vlastnictví firmy. 
 
 ## <a name="create-a-csv-file"></a>Vytvoření souboru CSV
 Pokud chcete vytvořit seznam, vytvořte seznam hodnot oddělených čárkami se dvěma sloupci (.csv) bez záhlaví. Do levého sloupce přidejte identifikátor IMEI a v pravém sloupci uveďte podrobnosti. Podrobnosti jsou omezené na 128 znaků. Současný limit jednoho souboru CSV je 500 řádků.

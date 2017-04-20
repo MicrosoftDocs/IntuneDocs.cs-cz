@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e7beff3bf4579d9fb79f0c3f2fb8fbf9bb1ea160
-ms.openlocfilehash: fc97e1266c2e859104b21f3bf4ff24f33123f66a
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
+ms.openlocfilehash: e3c3f834a80eaf5e8b992ba41b19a1d53b89fdc3
+ms.lasthandoff: 04/01/2017
 
 
 ---
@@ -137,8 +137,8 @@ Nastavte správu pro následující platformy:
 - [iOS a Mac](set-up-ios-and-mac-management-with-microsoft-intune.md)
 - [Android](set-up-android-management-with-microsoft-intune.md)
 - [Android for Work](set-up-android-for-work.md)
-- [Stolní a přenosné počítače s Windows](set-up-windows-device-management-with-microsoft-intune.md)
-- [Windows 10 Mobile a Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md)
+- [Windows 10 Mobile a Windows Phone](set-up-windows-device-management-with-microsoft-intune.md)
+- [Stolní počítače a notebooky s Windows](manage-windows-pcs-with-microsoft-intune.md) (klientský software Intune)
 
 Můžete také povolit [registraci zařízení vlastněných společností](manage-corporate-owned-devices.md).
 
@@ -170,7 +170,7 @@ Pokud používáte koexistenci, je třeba ověřit kontrolní seznamy pro Intune
 Pokud chcete resetovat autoritu MDM, proveďte tyto kroky, než se obrátíte na podporu Microsoftu.
 
 - Vyřaďte všechna zařízení z konzoly správce Intune. Nepokoušejte se vyřadit zařízení ze samotného zařízení. 
-- Odstraňte konektor Service To Service Connector (v části **Správa** > **Správa mobilního zařízení** > **Microsoft Exchange**). Pokud jste nastavili Exchange Connector, vypněte ho. 
+- Odstraňte konektor Service To Service Connector (v části **Správa** > **Správa mobilního zařízení** > **Microsoft Exchange**). Pokud jste nastavili Exchange Connector, vypněte ho.
 - Odeberte roli správce registrace zařízení v části **Správce** > **Správce registrace zařízení**.
 - Vypněte mapování skupin zařízení v části **Správce** > **Správa mobilního zařízení** > **Mapování skupin zařízení**.
 - Odstraňte kódy pro zkušební načtení před prodejem v části **Správce** > **Správa mobilního zařízení** > **Windows** > **Kódy pro zkušební načtení před prodejem**.
@@ -187,7 +187,7 @@ Pokud chcete resetovat autoritu MDM, proveďte tyto kroky, než se obrátíte na
 - Odeberte všechny uživatele ze skupiny uživatelů Intune. Nasměrujte předplatné Intune na prázdnou kolekci uživatelů nebo odeberte všechny uživatele z cílové kolekce.  V souboru CloudUserSync.log potvrďte, že uživatelé jsou odebraní. 
 - Zrušte zaškrtnutí u platformy iOS, aby došlo k vyprázdnění certifikátu služby APN.
 - Odstraňte všechny publikované aplikace určené pro zařízení MDM.
-- Odstraňte všechny zásady určené pro zařízení MDM. 
+- Odstraňte všechny zásady určené pro zařízení MDM.
 - Odeberte konektor Windows Intune z konzoly Configuration Manageru (platí jenom pro R2 SP1 nebo nižší).
 Odeberte předplatné Intune tak, že kliknete pravým tlačítkem na předplatné a vyberete **Odstranit**.
 - Restartujte službu SMS Executive.
@@ -196,18 +196,18 @@ Odeberte předplatné Intune tak, že kliknete pravým tlačítkem na předplatn
 ### <a name="reset-mdm-authority-from-office-365-to-configuration-manager"></a>Resetování autority MDM z Office 365 na Configuration Manager
 
 1. Přejděte na web [https://protection.office.com](https://protection.office.com).
-2. Vyberte kartu **Zásady zabezpečení** a pak vyberte **Správa zařízení**. 
+2. Vyberte kartu **Zásady zabezpečení** a pak vyberte **Správa zařízení**.
 3. Vyřaďte všechna zařízení výběrem možnosti **Vymazat selektivně**. Nepokoušejte se vyřadit zařízení ze samotného zařízení. Pokud je selektivní vymazání zakázáno, není už potřeba žádná další akce.
-4. Vyberte kartu **Zásady zabezpečení** a pak vyberte **Zásady zabezpečení zařízení**. 
+4. Vyberte kartu **Zásady zabezpečení** a pak vyberte **Zásady zabezpečení zařízení**.
 5. Pro všechny existující zásady vyberte možnost **Odstranit**. Pokud jsou zásady ve stavu čekání, není už potřeba žádná další akce.
 
 >[!NOTE]
->Certifikát služby APN pro iOS se nedá odstranit a zůstane připojený k účtu. 
+>Certifikát služby APN pro iOS se nedá odstranit a zůstane připojený k účtu.
 
 ### <a name="next-steps-for-mdm-authority-resets"></a>Další kroky pro resetování autority MDM
 
-Jakmile podpora Microsoftu ověří položky z příslušného kontrolního seznamu, resetování autority MDM může trvat až tři pracovní dny. Obvykle to ale trvá jeden den. 
+Jakmile podpora Microsoftu ověří položky z příslušného kontrolního seznamu, resetování autority MDM může trvat až tři pracovní dny. Obvykle to ale trvá jeden den.
 
 >[!IMPORTANT]
->Nepokoušejte se konfigurovat předplatné, dokud podpora Microsoftu nepotvrdí, že je resetování úspěšně dokončené. Předčasná konfigurace může způsobit poškození nebo může mít vliv na možnost používání služby Intune. 
+>Nepokoušejte se konfigurovat předplatné, dokud podpora Microsoftu nepotvrdí, že je resetování úspěšně dokončené. Předčasná konfigurace může způsobit poškození nebo může mít vliv na možnost používání služby Intune.
 

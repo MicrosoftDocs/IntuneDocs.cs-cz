@@ -16,9 +16,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 3e1898441b7576c07793e8b70f3c3f09f1cac534
-ms.openlocfilehash: ddeaeb2d532635802c615d09b4625dee0a824919
-ms.lasthandoff: 02/23/2017
+ms.sourcegitcommit: 61fbc2af9a7c43d01c20f86ff26012f63ee0a3c2
+ms.openlocfilehash: c56bea46c8b505e0d357cfe90678ab149559b896
+ms.lasthandoff: 04/07/2017
 
 
 ---
@@ -27,48 +27,64 @@ ms.lasthandoff: 02/23/2017
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Microsoft Intune umožňuje nasadit registrační profil, který bezdrátově zaregistruje zařízení s iOSem zakoupená prostřednictvím programu DEP (Device Enrollment Program). Profil obsahuje nastavení správy, která chcete použít u zařízení. Registrační balíček může zahrnovat možnosti Pomocníka s nastavením pro zařízení. U zařízení zaregistrovaných prostřednictvím Programu registrace zařízení nemůžou uživatelé registraci zrušit.
+Toto téma pomáhá správcům IT registrovat zařízení s iOSem ve vlastnictví firmy zakoupená prostřednictvím [Programu registrace zařízení (DEP) společnosti Apple](https://deploy.apple.com). Microsoft Intune může nasadit registrační profil, který DEP registruje bezdrátově, takže správce žádné spravované zařízení nemusí mít fyzicky k dispozici. Profil DEP obsahuje nastavení správy, která chcete použít u zařízení během registrace. Registrační balíček může zahrnovat možnosti Pomocníka s nastavením pro zařízení.
 
 >[!NOTE]
->Tato metoda registrace se nedá použít s metodou [správce registrace zařízení](enroll-devices-using-device-enrollment-manager.md).
+>Registrace DEP se nedá použít se [správcem registrace zařízení](enroll-devices-using-device-enrollment-manager.md).
+>Navíc platí, že pokud uživatelé svá zařízení s iOSem zaregistrují pomocí aplikace Portál společnosti a sériová čísla těchto zařízení se pak naimportují a přiřadí k profilu DEP, zruší se tím registrace zařízení v Intune.
 
-Pokud chce organizace ke správě zařízení s iOS, která jsou v jejím vlastnictví, používat program DEP (Device Enrollment Program) společnosti Apple, musí se do tohoto programu zaregistrovat a získat zařízení jeho prostřednictvím. Podrobnosti o tomto procesu najdete na [https://deploy.apple.com](https://deploy.apple.com). Výhodou tohoto programu je bezobslužné nastavení zařízení bez připojení každého zařízení k počítači kabelem USB.
+**Kroky registrace DEP**
+1. [Získání tokenu Apple DEP](#get-the-apple-dep-certificate)
+2. [Vytvoření profilu DEP](#create-anapple-dep-profile)
+3. [Přiřazení sériových čísel Apple DEP k vašemu serveru Intune](#assign-apple-dep-serial-numbers-to-your-mdm-server)
+4. [Synchronizace zařízení spravovaných v rámci programu DEP](#synchronize-dep-managed-devices)
+5. Distribuce zařízení uživatelům
 
-Abyste mohli pomocí programu DEP registrovat zařízení s iOSem ve vlastnictví firmy, musíte [získat token DEP](get-apple-dep-token.md) od společnosti Apple. Token umožňuje Intune synchronizovat informace o zařízeních vlastněných společností, která se účastní programu DEP. Token taky umožňuje Intune odesílat společnosti Apple registrační profil a přiřazovat k těmto profilům zařízení.
 
-Další metody registrace zařízení s iOSem jsou popsané v článku [Volba způsobu registrace zařízení s iOSem v Intune](choose-ios-enrollment-method.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="get-the-apple-dep-certificate"></a>Získání certifikátu Apple DEP
+Abyste mohli v Programu registrace zařízení (DEP) registrovat zařízení s iOSem vlastněná společností, potřebujete od společnosti Apple certifikát DEP (.p7m). Token umožňuje Intune synchronizovat informace o zařízeních vlastněných společností, která se účastní programu DEP. Token také umožňuje Intune odesílat společnosti Apple registrační profily a přiřazovat k těmto profilům zařízení.
 
-Před nastavením registrace zařízení s iOSem zajistěte splnění následujících požadavků:
+Pokud chcete zařízení s iOSem vlastněná společností spravovat pomocí Programu registrace zařízení (DEP) společnosti Apple, musí se vaše společnost do tohoto programu zaregistrovat a získat zařízení jeho prostřednictvím. Podrobnosti o tomto procesu najdete na https://deploy.apple.com. Výhodou tohoto programu je bezobslužné nastavení zařízení bez připojení každého zařízení k počítači kabelem USB.
 
-- [Konfigurace domén](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2)
-- [Nastavení autority MDM](set-mdm-authority.md)
-- [Vytvoření skupin](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-5)
-- Přiřazení uživatelských licencí na [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
-- [Získání certifikátu Apple MDM push certificate](get-an-apple-mdm-push-certificate.md)
-- [Získání tokenu Apple DEP](get-apple-dep-token.md)
+> [!NOTE]
+> Pokud byl váš tenant Intune migrován z klasické konzoly Intune do portálu Azure Portal a během doby migrace jste z konzoly pro správu Intune token Apple DEP odstranili, mohl být token DEP obnoven do vašeho účtu Intune. Token DEP můžete z portálu Azure Portal znovu odstranit.
 
-## <a name="create-an-apple-dep-profile-for-devices"></a>Vytvoření profilu Apple DEP pro zařízení
+
+
+
+**Krok 1: Stáhněte si certifikát veřejného klíče služby Intune, který je potřebný pro vytvoření tokenu DEP Apple.**<br>
+1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**. V okně Intune zvolte **Registrace zařízení** > **Token DEP Apple**.
+2. Vyberte **Stáhnout certifikát veřejného klíče** a stáhněte si a místně uložte soubor šifrovacího klíče (.pem). Soubor .pem slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple Device Enrollment Program.
+
+**Krok 2: Stáhněte si token DEP Apple z příslušného webu Apple.**<br>
+Vyberte [Vytvořit token DEP prostřednictvím Apple Deployment Programs](https://deploy.apple.com). Dostanete se na https://deploy.apple.com, kde se přihlaste svým firemním Apple ID. Toto Apple ID můžete použít k obnovení tokenu DEP.
+
+   1.  Na [portálu programu DEP (Device Enrollment Program)](https://deploy.apple.com) společnosti Apple přejděte na **Program DEP (Device Enrollment Program)** &gt; **Spravovat servery** a pak zvolte **Přidat server MDM**.
+   2.  Zadejte **název serveru MDM** a zvolte **Další**. Název serveru slouží pro vaši informaci, abyste mohli identifikovat server pro správu mobilních zařízení (MDM). Není to název serveru Microsoft Intune ani jeho URL.
+   3.  Otevře se dialog **Přidat server &lt;název_serveru&gt;**. Vyberte **Zvolit soubor**, abyste mohli nahrát soubor .pem, a pak zvolte **Další**.
+   4.  V dialogovém okně **Přidat server &lt;název_serveru&gt;** se zobrazí odkaz s **tokenem vašeho serveru**. Stáhněte si soubor tokenu serveru (.p7m) do svého počítače a potom zvolte **Hotovo**.
+
+**Krok 3: Zadejte Apple ID, které jste použili k vytvoření tokenu Apple DEP. Toto ID můžete použít také k obnovení tokenu Apple DEP.**
+
+**Krok 4: Procházením vyhledejte token Apple DEP, který chcete nahrát. Služba Intune se bude automaticky synchronizovat s vaším účtem DEP.**<br>
+Přejděte k souboru certifikátu (.pem), zvolte **Otevřít** a pak zvolte **Nahrát**. S certifikátem Push Certificate může Intune registrovat a spravovat zařízení s iOSem a vynucovat zásady na zaregistrovaných mobilních zařízeních.
+
+## <a name="create-an-apple-dep-profile"></a>Vytvoření profilu Apple DEP
 
 Profil registrace zařízení definuje nastavení, která se použijí pro skupinu zařízení. Následující postup ukazuje, jak vytvořit profil registrace zařízení pro zařízení s iOSem registrovaná pomocí programu DEP.
 
 1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-
 2. V okně Intune zvolte **Registrovat zařízení** a pak zvolte **Registrace Apple**.
-
 3. V části **Spravovat nastavení Programu registrace zařízení (DEP) Apple** vyberte **Profily DEP**.
-
 4. V okně **Profily DEP** vyberte **Vytvořit**.
-
 5. V okně **Vytvořit registrační profil** zadejte název a popis profilu.
-
 6. V části **Přidružení uživatele** zvolte, jestli se zařízení s tímto profilem budou registrovat s přidružením uživatele nebo bez.
 
  - **Zaregistrovat s přidružením uživatele** – Při počátečním nastavení musí mít zařízení přidruženého uživatele, aby mohlo dostat přístup k firemním datům a e-mailu. Přidružení uživatele zvolte pro zařízení spravovaná v programu DEP, která patří konkrétním uživatelům a potřebují používat portál společnosti kvůli službám, jako je instalace aplikací. Při registraci na zařízeních v programu DEP s přidružením uživatelů nefunguje vícefaktorové ověřování (MFA). Po registraci vícefaktorové ověřování na těchto zařízeních funguje podle očekávání. Novým uživatelům, kteří si musejí změnit heslo, když se poprvé přihlásí, se během registrace na zařízení DEP nezobrazí výzva. Také uživatelům, u jejichž hesel vypršela platnost, se během registrace DEP nezobrazí výzva k resetování hesla a budou muset heslo resetovat z jiného zařízení.
 
     >[!NOTE]
-    >Program DEP s přidružením uživatele vyžaduje aktivaci uživatelského jména / smíšeného koncového bodu WS-Trust 1.3, aby mohl požádat o token uživatele.
+    >Program DEP s přidružením uživatele vyžaduje aktivaci [uživatelského jména / smíšeného koncového bodu WS-Trust 1.3](https://technet.microsoft.com/en-us/library/adfs2-help-endpoints), aby mohl požádat o token uživatele. [Přečtěte si další informace o WS-Trust 1.3](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
  - **Zaregistrovat bez přidružení uživatele** – K zařízení není přidružený žádný uživatel. Toto spřažení použijte u zařízení určených k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, které vyžadují přidruženého uživatele (včetně aplikace Portál společnosti používané k instalaci obchodních aplikací), nebudou fungovat.
 
@@ -109,7 +125,7 @@ Profil registrace zařízení definuje nastavení, která se použijí pro skupi
 
 3. Určete, jak budete volit zařízení (**Choose Devices**), a zadejte podrobné informace o zařízení pomocí možností **Serial Number** (Sériové číslo), **Order Number** (Číslo objednávky) nebo **Upload CSV File** (Nahrát soubor CSV).
 
-4. Zvolte **Assign to Server** (Přiřadit k serveru), zvolte &lt;název serveru&gt; zadaný pro Microsoft Intune a potom zvolte **OK**.
+4. Zvolte **Přiřadit k serveru**, zvolte &lt;název_serveru&gt; zadaný pro Microsoft Intune a potom zvolte **OK**.
 
 ## <a name="synchronize-dep-managed-devices"></a>Synchronizace zařízení spravovaných v rámci programu DEP
 

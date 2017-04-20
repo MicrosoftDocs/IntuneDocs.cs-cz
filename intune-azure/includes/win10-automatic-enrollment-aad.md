@@ -1,4 +1,4 @@
-## <a name="set-up-windows-10-and-windows-10-mobile-automatic-enrollment-with-azure-active-directory-premium"></a>Nastavení automatické registrace Windows 10 a Windows 10 Mobile ve službě Azure Active Directory Premium
+## <a name="enable-windows-10-automatic-enrollment"></a>Povolení automatické registrace pro Windows 10
 
 Automatický zápis umožňuje registraci i uživatelům počítačů se systémem Windows 10 nebo zařízení Windows 10 Mobile, které patří jiným společnostem nebo soukromníkům. Stačí v Intune zadat pracovní nebo školní účet a souhlasit se správou. Opravdu je to takhle jednoduché. Na pozadí se uživatelovo zařízení zaregistruje a připojí ke službě Azure Active Directory. Po registraci je zařízení spravováno přes Intune.
 
@@ -9,26 +9,31 @@ Automatický zápis umožňuje registraci i uživatelům počítačů se systém
 
 ### <a name="configure-automatic-mdm-enrollment"></a>Konfigurace automatického zápisu MDM
 
-1. Na [portálu pro správu Azure](https://portal.azure.com) (https://manage.windowsazure.com) přejděte na uzel **Služby Active Directory** a vyberte svůj adresář.
+1. Přihlaste se k [portálu pro správu Azure](https://portal.azure.com) (https://manage.windowsazure.com) a vyberte **Azure Active Directory**.
 
-2. Vyberte kartu **Aplikace**. V seznamu aplikací se objeví **Microsoft Intune**.
+  ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-azure-main.png)
 
-    ![Aplikace Azure AD s Microsoft Intune](../media/aad-intune-app.png)
+2. Vyberte **Mobilita (MDM a MAM)**.
 
-3. Vyberte šipku pro **Microsoft Intune**. Otevře se stránka, na které můžete nakonfigurovat Microsoft Intune.
+  ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-mdm.png)
 
-4. Výběrem možnosti **Konfigurovat** spusťte konfiguraci automatické registrace MDM v Microsoft Intune.
+3. Vyberte **Microsoft Intune**.
 
-5. Použijte výchozí hodnoty pro následující adresy URL:
+  ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-intune.png)
 
+4. Nakonfigurujte, kteří uživatelé se automaticky zaregistrují.
+
+  ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-scope.png)
+
+  Použijte výchozí hodnoty pro následující adresy URL:
   - **Registrace MDM**
-  - **Podmínky použití MDM** 
+  - **Podmínky použití MDM**
   - **Dodržování předpisů MDM**
 
-6.  Zadejte, která uživatelská zařízení by měla být spravována přes službu Microsoft Intune. Tato uživatelská zařízení se systémem Windows 10 budou automaticky zaregistrována pro správu přes službu Microsoft Intune.
+5. Zadejte, která uživatelská zařízení by měla být spravována přes službu Microsoft Intune. Tato uživatelská zařízení se systémem Windows 10 budou automaticky zaregistrována pro správu přes službu Microsoft Intune.
 
   - **Vše**
   - **SKUPINY**
   - **Žádné**
 
-7. Vyberte **Uložit**.
+6. Vyberte **Uložit**.
