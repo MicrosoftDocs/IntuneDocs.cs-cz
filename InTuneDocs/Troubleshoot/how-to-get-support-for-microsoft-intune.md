@@ -5,7 +5,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 01/27/2016
+ms.date: 04/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,20 +15,23 @@ ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 5726934501b3d6b243de94951cf0c57cbd79a811
-ms.openlocfilehash: ccc0502c81cb16d2ca13e5d6a702c0ff863b83e4
-ms.lasthandoff: 03/09/2017
+ms.sourcegitcommit: df54ac3a62b5ef21e8a32f3a282dd5299974a1b0
+ms.openlocfilehash: ae9af31263de8b0b95f98e423f8a9a59c0c66c4c
+ms.lasthandoff: 04/12/2017
 
 
 ---
 
-# <a name="how-admins-get-support-for-microsoft-intune"></a>Jak správci získají podporu pro Microsoft Intune
+# <a name="how-to-get-support-for-microsoft-intune"></a>Jak získat podporu pro Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Microsoft poskytuje pro Microsoft Intune globální technickou a předprodejní podporu a podporu k fakturaci a správě předplatného. Podpora je k dispozici online i po telefonu pro placené i zkušební předplatné. Online technická podpora je k dispozici v angličtině a japonštině. V dalších jazycích je k dispozici podpora po telefonu a online podpora k fakturaci.
 
 Podpora pro Intune a pro Intune při použití s nástrojem Configuration Manager je bezplatná. Zákazníkům se smlouvou Premier Support účtujeme poplatky za dotazy k postupům (například jak nakonfigurovat funkci Intune).
+
+>[!IMPORTANT]
+> Technickou podporu produktů, které pracují s Intune a nejsou vyrobené Microsoftem, například SaaSwedo, Cisco nebo Lookout, vám poskytne dodavatel daného produktu. Na toho se obraťte nejdříve, abyste ho měli správně nakonfigurované, než otevřete případ s podporou služby Intune.
 
 ## <a name="find-help-without-opening-a-support-ticket"></a>Získání pomoci bez otevření lístku podpory
 
@@ -39,6 +42,13 @@ Než budete vytvářet lístek podpory, zkuste najít odpovědi a informace v n�
 Zeptejte se technických odborníků Microsoftu nebo s nimi zahajte diskusi. Odpovědi a vysvětlení nabízíme na [fóru Microsoft TechNet o Intune](https://social.technet.microsoft.com/Forums/home), které umožňuje i vyhledávání.
 
 ![Fórum Microsoft TechNet o Intune](./media/technet-forum-for-support.png)
+
+### <a name="get-started-with-the-forum"></a>Začínáme s fórem
+
+1. Na stránce fór zadejte do pole Fóra text Microsoft Intune a potom ho vyberte ze seznamu.<br>
+![Ovládací prvek fóra Intune](./media/forum-select-intune.png)
+2. Microsoft Intune se zobrazí v seznamu vybraných fór.<br>
+![Intune vybraný v ovládacím prvku fór](./media/forum-selected-intune.png)
 
 ### <a name="microsoft-intune-uservoice-product-feedback-site"></a>Web pro zasílání názorů na produkt Microsoft Intune UserVoice
 

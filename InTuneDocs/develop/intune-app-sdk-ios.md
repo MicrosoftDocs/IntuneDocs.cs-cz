@@ -15,9 +15,9 @@ ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 0936051b5c33a2e98f275ef7a3a32be2e8f5a8b0
-ms.openlocfilehash: 8c67fc70b5b1678df29605fe3ba4dae907bc7bd1
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: df54ac3a62b5ef21e8a32f3a282dd5299974a1b0
+ms.openlocfilehash: 1d2cb0d4b9442262c562e559a675f5a4a28ee572
+ms.lasthandoff: 04/12/2017
 
 
 ---
@@ -71,7 +71,12 @@ Cílem sady Intune App SDK pro iOS je doplnit do aplikací pro iOS možnosti spr
 
 Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 
-1. **Možnost 1**: Vytvořte propojení s knihovnou `libIntuneMAM.a`. Přetáhněte knihovnu `libIntuneMAM.a` do **seznamu propojených modelů a knihoven** cíle projektu.
+1. **Možnost 1 (doporučeno)**: Propojit `IntuneMAM.framework` s projektem. Přetáhněte `IntuneMAM.framework` do **seznamu propojených modelů a knihoven** cíle projektu.
+
+    > [!NOTE]
+    > Pokud tento model použijete, nezapomeňte z univerzálního modelu před odesláním aplikace do App Storu odstranit architektury simulátoru. Viz část [Odeslání aplikace do App Storu](#Submit-your-app-to-the-App-Store), kde najdete další podrobnosti.
+
+2. **Možnost 2**: Vytvořte propojení s knihovnou `libIntuneMAM.a`. Přetáhněte knihovnu `libIntuneMAM.a` do **seznamu propojených modelů a knihoven** cíle projektu.
 
     ![Intune App SDK iOS: propojené architektury a knihovny](../media/intune-app-sdk-ios-linked-frameworks-and-libraries.png)
 
@@ -84,11 +89,6 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 
         > [!NOTE]
         > Pokud chcete zjistit cestu `PATH_TO_LIB`, vyberte soubor `libIntuneMAM.a` a v nabídce **Soubor** klikněte na **Získat informace**. Cestu (údaj **Kde**) zkopírujte z části **Obecné** v okně **Informace**.
-
-2. **Možnost 2**: K projektu připojte `IntuneMAM.framework`. Přetáhněte `IntuneMAM.framework` do **seznamu propojených modelů a knihoven** cíle projektu.
-
-    > [!NOTE]
-    > Pokud tento model použijete, nezapomeňte z univerzálního modelu před odesláním aplikace do App Storu odstranit architektury simulátoru. Viz část [Odeslání aplikace do App Storu](#Submit-your-app-to-the-App-Store).
 
 3. Do projektu přidejte tyto modely iOS:
     * MessageUI.framework
@@ -127,22 +127,21 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
     </array>
     ```
 
-7. Po povolení sdílení řetězce klíčů vytvořte následujícím postupem samostatnou přístupovou skupinu, do které sada Intune App SDK uloží svoje data. Přístupovou skupinu pro řetězce klíčů můžete vytvořit pomocí uživatelského rozhraní nebo pomocí souboru nároků.
-
-    Pokud k vytvoření přístupové skupiny pro řetězce klíčů použijete uživatelské rozhraní:
+7. Po povolení sdílení řetězce klíčů vytvořte následujícím postupem samostatnou přístupovou skupinu, do které sada Intune App SDK uloží svoje data. Přístupovou skupinu pro řetězce klíčů můžete vytvořit pomocí uživatelského rozhraní nebo pomocí souboru nároků. Pokud k vytvoření přístupové skupiny pro řetězce klíčů používáte uživatelské rozhraní, je třeba dodržovat následující postup:
 
     1. Pokud mobilní aplikace nemá definované žádné přístupové skupiny pro řetězce klíčů, přidejte jako první skupinu ID sady prostředků aplikace.
 
-    2. Přidejte skupinu sdíleného řetězce klíčů `com.microsoft.intune.mam`. Tuto přístupovou skupinu používá Intune App SDK k ukládání dat.
+    2. Přidejte sdílenou skupinu pro řetězce klíčů `com.microsoft.intune.mam` do existujících přístupových skupin. Tuto přístupovou skupinu používá Intune App SDK k ukládání dat.
 
     3. Do existujících přístupových skupin přidejte `com.microsoft.adalcache`.
 
-    ![Intune App SDK iOS: sdílení řetězců klíčů](../media/intune-app-sdk-ios-keychain-sharing.png)
+        4. Do existujících přístupových skupin přidejte `com.microsoft.workplacejoin`.
+            ![Intune App SDK iOS: sdílení řetězců klíčů](../media/intune-app-sdk-ios-keychain-sharing.png)
 
-    Pokud k vytvoření přístupové skupiny pro řetězce klíčů používáte soubor nároků, předřaďte v tomto souboru tuto přístupovou skupinu pro řetězce klíčů s `$(AppIdentifierPrefix)`. Například:
+      5. Pokud k vytvoření přístupové skupiny pro řetězce klíčů používáte soubor nároků, předřaďte v tomto souboru před tuto přístupovou skupinu pro řetězce klíčů kód `$(AppIdentifierPrefix)`. Příklad:
 
-          * `$(AppIdentifierPrefix)com.microsoft.intune.mam`
-        * `$(AppIdentifierPrefix)com.microsoft.adalcache`
+            * `$(AppIdentifierPrefix)com.microsoft.intune.mam`
+            * `$(AppIdentifierPrefix)com.microsoft.adalcache`
 
     > [!NOTE]
     > Soubor nároků je soubor XML, který je pro vaši mobilní aplikaci jedinečný. Slouží k určení speciálních oprávnění a schopností ve vaší aplikaci pro iOS.
@@ -151,42 +150,37 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 
 8. U mobilních aplikací vyvíjených pro iOS 9+ zahrňte všechny protokoly, které aplikace předává do `UIApplication canOpenURL`, do pole `LSApplicationQueriesSchemes` v souboru Info.plist této aplikace. Pro každý protokol uvedený v seznamu přidejte nový protokol s příponou `-intunemam`. Do pole musíte taky zahrnout `http-intunemam`, `https-intunemam`a `ms-outlook-intunemam` .
 
-9. Pokud má aplikace ve svých nárocích definované skupiny aplikací, přidejte tyto skupiny jako pole řetězců do slovníku IntuneMAMSettings pod klíč `AppGroupIdentifiers`.
-
-10. Připojte svou mobilní aplikaci ke knihovně ADAL (Azure Directory Authentication Library) pro iOS. Knihovna ADAL pro Objective-C je dostupná na [GitHubu](https://github.com/AzureAD/azure-activedirectory-library-for-objc).
-
-    > [!NOTE]
-    > Je doporučeno, aby aplikace byla připojena k nejnovější/funkční verzi knihovny ADAL.
-
-11. Přidejte do projektu sadu prostředků `ADALiOSBundle.bundle`. Přetáhněte ji do části **Kopírovat prostředky balíčku** v rámci položky **Fáze buildu**.
-
-12. Při připojování ke knihovně použijte parametr linkeru `-force_load PATH_TO_ADAL_LIBRARY`.
-
-    Přidejte `-force_load {PATH_TO_LIB}/libADALiOS.a` do nastavení konfigurace buildu `OTHER_LDFLAGS` v projektu nebo do nastavení **Další příznaky linkeru** v uživatelském rozhraní. Hodnotu `PATH_TO_LIB` byste měli nahradit umístěním binárních souborů ADAL.
+9. Pokud má aplikace ve svých nárocích definované skupiny aplikací, přidejte tyto skupiny jako pole řetězců do slovníku **IntuneMAMSettings** pod klíč `AppGroupIdentifiers`.
 
 
 
-## <a name="configure-azure-directory-authentication-library-adal"></a>Konfigurace knihovny ADAL (Azure Directory Authentication Library)
+## <a name="configure-azure-active-directory-authentication-library-adal"></a>Konfigurace knihovny ADAL (Azure Active Directory Authentication Library)
 
-Intune App SDK využívá ADAL ke svému ověřování a k podmíněnému spuštění. Knihovnu ADAL potřebuje taky kvůli registraci identity uživatele ve službě MAM, která slouží ke správě ve scénářích bez registrace zařízení.
+Intune App SDK využívá [Azure Active Directory Authentication Library](https://github.com/AzureAD/azure-activedirectory-library-for-objc) ke svému ověřování a podmíněnému spouštění. Knihovnu ADAL potřebuje taky kvůli registraci identity uživatele ve službě MAM, která slouží ke správě ve scénářích bez registrace zařízení.
 
-Knihovna ADAL zpravidla vyžaduje, aby se aplikace registrovaly u služby Azure Active Directory (AAD) a získaly jedinečné ID (ID klienta) a další identifikátory. Zaručí se tak zabezpečení tokenů udělených aplikaci. Intune App SDK využívá při kontaktování Azure AD výchozí registrační hodnoty.  
+Knihovna ADAL zpravidla vyžaduje, aby se aplikace registrovaly u služby Azure Active Directory (AAD) a získaly jedinečné ID (ID klienta) a další identifikátory. Zaručí se tak zabezpečení tokenů udělených aplikaci. Pokud není určeno jinak, Intune App SDK využívá při kontaktování Azure AD výchozí registrační hodnoty.  
 
-Pokud aplikace pro scénář ověřování používá ADAL, musí používat stávající hodnoty registrace a přepsat výchozí hodnoty Intune App SDK. Tím se zajistí, že se uživatelům nebude výzva k ověřování zobrazovat dvakrát (jednou ze sady Intune App SDK a jednou z aplikace).
+Pokud už aplikace k ověřování uživatelů používá ADAL, musí používat svoje stávající registrační hodnoty a přepsat výchozí hodnoty Intune App SDK. Tím se zajistí, že se uživatelům nebude výzva k ověřování zobrazovat dvakrát (jednou ze sady Intune App SDK a jednou z aplikace).
 
-### <a name="adal-faqs"></a>Nejčastější dotazy k ADAL
+### <a name="recommendations"></a>Doporučení
 
-**Jaké binární soubory ADAL mám používat?**
+Je doporučeno, aby se vaše aplikace propojovala na [nejnovější verzi ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-objc/releases) na své hlavní větvi. Intune App SDK v současnosti využívá zprostředkovatelskou větev ADAL, aby podporovala aplikace, které vyžadují podmíněný přístup. (Tyto aplikace proto závisí na aplikaci Microsoft Authenticator.) Sada SDK je ale stále kompatibilní s hlavní větví ADAL. Používejte větev, která je vhodná pro vaši aplikaci.
 
-Intune App SDK v současnosti využívá zprostředkovatelskou větev [ADAL na GitHubu](https://github.com/AzureAD/azure-activedirectory-library-for-objc), aby podporovala aplikace, které vyžadují podmíněný přístup. (Tyto aplikace proto závisí na aplikaci Microsoft Authenticator.) Sada SDK je ale stále kompatibilní s hlavní větví ADAL. Používejte větev, která je vhodná pro vaši aplikaci.
+### <a name="link-to-adal-binaries"></a>Propojení na binární soubory ADAL
 
-**Jak připojím binární soubory ADAL?**
+Propojte aplikaci s binárními soubory ADAL podle následujících pokynů:
 
-Přidejte `-force_load {PATH_TO_LIB}/libADALiOS.a` do nastavení konfigurace buildu `OTHER_LDFLAGS` v projektu nebo do nastavení **Další příznaky linkeru** v uživatelském rozhraní. Hodnotu `PATH_TO_LIB` byste měli nahradit umístěním binárních souborů ADAL. Kromě toho taky zkopírujte sadu ADAL do aplikace.  
+1. Stáhněte si [Azure Active Directory ověřování Library (ADAL) pro Objective-C](https://github.com/AzureAD/azure-activedirectory-library-for-objc) z Githubu a postupujte podle [pokynů](https://github.com/AzureAD/azure-activedirectory-library-for-objc/blob/master/README.md) ke stažení ADALu pomocí dílčích modulů Git nebo CocoaPods.
 
-Další podrobnosti najdete v pokynech [ADAL na GitHubu](https://github.com/AzureAD/azure-activedirectory-library-for-objc).
+2. Přidejte do projektu sadu prostředků `ADALiOSBundle.bundle`. Přetáhněte ji do části **Kopírovat prostředky balíčku** v rámci položky **Fáze buildu**.
 
-**Jak nasdílím mezipaměť tokenů knihovny ADAL s jinými aplikacemi podepsanými pomocí stejného zřizovacího profilu?**
+3. Přidejte `-force_load {PATH_TO_LIB}/libADALiOS.a` do nastavení konfigurace buildu `OTHER_LDFLAGS` v projektu nebo do nastavení **Další příznaky linkeru** v uživatelském rozhraní. Hodnotu `PATH_TO_LIB` byste měli nahradit umístěním binárních souborů ADAL.
+
+
+
+### <a name="share-the-adal-token-cache-with-other-apps-signed-with-the-same-provisioning-profile"></a>Sdílet mezipaměť tokenů ADAL s jinými aplikacemi podepsanými pomocí stejného zřizovacího profilu?**
+
+Pokud chcete sdílet tokeny ADAL mezi aplikacemi, které jsou podepsané pomocí stejného zřizovacího profilu, postupujte následovně:
 
 1. Pokud aplikace nemá definované žádné přístupové skupiny pro řetězce klíčů, přidejte jako první skupinu ID sady prostředků aplikace.
 
@@ -194,9 +188,9 @@ Další podrobnosti najdete v pokynech [ADAL na GitHubu](https://github.com/Azur
 
 3. V případě, že explicitně nastavujete skupinu pro sdílený řetězec klíčů mezipaměti, ujistěte se, že je nastavena na `<app_id_prefix>.com.microsoft.adalcache`. Pokud ho nepřepíšete, knihovna ADAL tohle nastavení provede za vás. Pokud chcete `com.microsoft.adalcache` nahradit vlastní skupinou řetězce klíčů, uveďte ji pomocí klíče `ADALCacheKeychainGroupOverride` v souboru Info.plist pod IntuneMAMSettings.
 
-**Jak u sady Intune App SDK vynutit, aby používala nastavení ADAL, které už používá moje aplikace?**
+### <a name="configure-adal-settings-for-the-intune-app-sdk"></a>Konfigurace nastavení ADALu pro Intune App SDK
 
-Pokud už aplikace používá ADAL, přečtěte si část [Konfigurace nastavení pro sadu Intune App SDK](#configure-settings-for-the-intune-app-sdk), kde najdete informace o naplnění těchto nastavení:  
+Pokud už vaše aplikace používá ADAL k ověřování a má své vlastní nastavení ADALu, můžete přinutit sadu App SDK Intune, aby používala stejné nastavení během ověřování vůči Azure Active Directory. To zajistí, že aplikace nebude uživatele žádat o ověření dvakrát. Přečtěte si část [Konfigurace nastavení pro sadu Intune App SDK](#configure-settings-for-the-intune-app-sdk), kde najdete informace o naplnění těchto nastavení:  
 
 * ADALClientId
 * ADALAuthority
@@ -204,29 +198,25 @@ Pokud už aplikace používá ADAL, přečtěte si část [Konfigurace nastaven�
 * ADALRedirectScheme
 * ADALCacheKeychainGroupOverride
 
+Pokud už vaše aplikace používá ADAL, vyžadují se následující konfigurace:
 
-**Jak přepíšu adresu URL autority Azure AD specifickou adresou URL tenanta zadanou za běhu?**
+1. V souboru Info.plist projektu zadejte ve slovníku **IntuneMAMSettings** s názvem klíče `ADALClientId` ID klienta, které se má použít pro volání ADALu.
 
-Nastavte vlastnost `aadAuthorityUriOverride` na instanci IntuneMAMPolicyManager.
+2. Ve slovníku **IntuneMAMSettings** s názvem klíče `ADALAuthority` zadejte autoritu Azure AD.
+
+3. Ve slovníku **IntuneMAMSettings** s názvem klíče `ADALRedirectUri` také zadejte identifikátor URI pro přesměrování, který se má použít pro volání ADALu. Budete možná muset zadat také `ADALRedirectScheme`. To záleží na formátu identifikátoru URI přesměrování vaší aplikace.
+
+
+Kromě toho můžete za běhu přepsat adresu URL autority Azure AD specifickou adresou URL tenanta. K tomu stačí nastavit vlastnost `aadAuthorityUriOverride` na instanci `IntuneMAMPolicyManager`.
 
 > [!NOTE]
-> Jedná se o požadovanou aplikaci bez registrace zařízení, která umožňuje, aby sada SDK znovu použila obnovovací token knihovny ADAL načtený aplikací.
+> Nastavení adresy URL autority AAD je nutné pro [aplikaci bez registrace zařízení](#App-protection-policy-without-device-enrollment), aby umožnila sadě SDK znovu použít obnovovací token ADAL načtený touto aplikací.
 
-SDK bude tuto adresu URL autority dále používat k obnovení zásad a veškerým následným žádostem o registraci, pokud hodnotu nesmažete nebo nezměníte.  Proto je důležité hodnotu smazat, když se uživatel organizace z aplikace odhlásí, a obnovit ji, když se přihlásí nový uživatel organizace.
+SDK bude tuto adresu URL autority dále používat k obnovení zásad a veškerým následným žádostem o registraci, pokud hodnotu nesmažete nebo nezměníte.  Proto je důležité hodnotu smazat, když se spravovaný uživatel z aplikace odhlásí, a obnovit ji, když se přihlásí nový spravovaný uživatel.
 
-**Co dělat, když ADAL pro ověřování používá sama aplikace?**
+### <a name="if-your-app-does-not-use-adal"></a>Pokud vaše aplikace nepoužívá ADAL
 
-Pokud už aplikace využívá ADAL pro ověřování, vyžadují se následující akce:
-
-1. Ve slovníku IntuneMAMSettings v souboru Info.plist projektu ke klíči s názvem `ADALClientId` zadejte ID klienta, které se má použít pro volání ADAL.
-
-2. Ve slovníku IntuneMAMSettings s názvem klíče `ADALAuthority` zadejte autoritu Azure AD.
-
-3. Ve slovníku IntuneMAMSettings s názvem klíče `ADALRedirectUri` zadejte identifikátor URI pro přesměrování, který se má použít pro volání ADAL. Budete možná muset zadat také `ADALRedirectScheme`. To záleží na formátu identifikátoru URI přesměrování vaší aplikace.
-
-**Co když už moje aplikace k ověřování nepoužívá ADAL?**
-
-Pokud vaše aplikace nepoužívá ADAL, bude sada Intune App SDK poskytovat výchozí hodnoty pro parametry ADAL a zpracovávat ověřování proti Azure AD.
+Pokud vaše aplikace nepoužívá ADAL, bude sada Intune App SDK poskytovat výchozí hodnoty pro parametry ADAL a zpracovávat ověřování proti Azure AD. Pro výše uvedená nastavení ADALu nemusíte zadávat žádné hodnoty.
 
 ## <a name="app-protection-policy-without-device-enrollment"></a>Zásady ochrany aplikací bez registrace zařízení
 
@@ -426,9 +416,6 @@ Rozhraní API **IsSaveToAllowedForLocation** poskytuje konstanty ke kontrole, je
 * IntuneMAMSaveLocationOther
 * IntuneMAMSaveLocationOneDriveForBusiness
 * IntuneMAMSaveLocationSharePoint
-* IntuneMAMSaveLocationBox
-* IntuneMAMSaveLocationDropbox
-* IntuneMAMSaveLocationGoogleDrive
 * IntuneMAMSaveLocationLocalDrive
 
 Aplikace by měly konstanty v rozhraní API **isSaveToAllowedForLocation** používat k zjištění, jestli je možné data ukládat do umístění považovaných za „spravovaná“, jako je OneDrive pro firmy, nebo za „osobní“. Kromě toho by se mělo rozhraní API použít, když aplikace není schopná zjistit, jestli je umístění „spravované“, nebo „osobní“.
@@ -560,27 +547,46 @@ Ve výchozím nastavení se všechny aplikace považují za aplikace s jedinou i
 
     Tato metoda se volá z vlákna na pozadí. Aplikace by neměly vracet hodnotu, dokud se neodeberou všechna data uživatele (s výjimkou souborů, u kterých aplikace vrací hodnotu FALSE).
 
-## <a name="debug-the-intune-app-sdk-in-xcode"></a>Ladění Intune App SDK v Xcode
+## <a name="test-app-protection-policy-settings-in-xcode"></a>Testování nastavení zásad ochrany aplikací v Xcode
 
-Před ručním testováním aplikace s podporou MAM pomocí Microsoft Intune můžete v Xcode použít soubor Settings.bundle. Můžete tak nastavit zásady testování a není potřeba připojení k Intune. Postup při povolení:
+Před ručním testováním aplikace s podporou Intune ve výrobě můžete použít soubor Settings.bundle v Xcode. Můžete tak nastavit zásady ochrany aplikací pro testování a není potřeba připojení k Intune.
 
-1. Soubor Settings.bundle přidejte kliknutím pravým tlačítkem na složku nejvyšší úrovně ve svém projektu. V nabídce vyberte **Přidat** > **Nový soubor**. V části **Prostředky** vyberte šablonu **Settings Bundle**.
+### <a name="enable-policy-testing"></a>Povolení testování zásad
 
-2. Jenom u sestavení pro ladění zkopírujte MAMDebugSettings.plist do Settings.bundle.
+Jestliže chcete povolit testování zásad v Xcode, postupujte podle následujících kroků:
 
-3. V části Root.plist (které je v Settings.bundle) přidejte předvolbu s `Type` = `Child Pane` a `FileName` = `MAMDebugSettings`.
+1. Ujistěte se, že jste v sestavení pro ladění. Soubor Settings.bundle přidejte kliknutím pravým tlačítkem na složku nejvyšší úrovně ve svém projektu. V nabídce vyberte **Přidat** > **Nový soubor**. V části **Prostředky** vyberte šablonu **Sada prostředků nastavení**.
 
-4. V **Nastavení** > **Název_aplikace** přepněte **Povolit zásady testování**.
+2.  Zkopírujte následující blok do souboru Settings.bundle/**Root.plist** pro sestavení pro ladění:
+    ```xml
+    <key>PreferenceSpecifiers</key>
+    <array>
+        <dict>
+            <key>Type</key>
+            <string>PSChildPaneSpecifier</string>
+            <key>Title</key>
+            <string>MDM Debug Settings</string>
+            <key>Key</key>
+            <string>MAMDebugSettings</string>
+            <key>File</key>
+            <string>MAMDebugSettings</string>
+        </dict>
+    </array>
+    ```
 
-5. Spusťte aplikaci (v prostředí Xcode nebo mimo ně).
+3. Ve slovníku **IntuneMAMSettings** v souboru Info.plist aplikace přidejte logickou hodnotu DebugSettingsEnabled. Nastavte hodnotu DebugSettingsEnabled na ANO.
 
-6. V **Nastavení** > **Název_aplikace** > **Povolit zásady testování** zapněte zásadu, třeba **PIN**.
 
-7. Spusťte aplikaci (v prostředí Xcode nebo mimo ně). Ověřte, že PIN funguje podle očekávání.
 
-> [!NOTE]
-> Teď můžete prostřednictvím možností **Nastavení** > **Název_aplikace** > **Povolit zásady testování** povolit a přepínat nastavení.
+### <a name="app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací
 
+Následující tabulka popisuje nastavení zásad ochrany aplikací, které můžete otestovat pomocí souboru MAMDebugSettings.plist. Pokud chcete zapnout nastavení, přidejte ho do souboru MAMDebugSettings.plist.
+
+| Název nastavení zásad | Popis | Možné hodnoty |
+| -- | -- | -- |
+| AccessRecheckOfflineTimeout | Doba v minutách, po kterou může být aplikace offline, než Intune zablokuje spuštění nebo obnovení činnosti aplikace, pokud je povolené ověřování. | Libovolné celé číslo větší než 0 |
+|    AccessRecheckOnlineTimeout | Doba v minutách, po kterou může aplikace běžet, než se uživateli zobrazí výzva k zadání PINu nebo ověření při spuštění nebo obnovení činnosti (pokud je k udělení přístupu povolené ověřování nebo PIN). | Libovolné celé číslo větší než 0 |
+| AppSharingFromLevel | Určuje aplikace, z kterých může tato aplikace přijímat data. | 0 = |
 ## <a name="ios-best-practices"></a>Doporučené postupy pro iOS
 
 Tady jsou uvedeny některé doporučené osvědčené postupy při vývoji pro iOS:
