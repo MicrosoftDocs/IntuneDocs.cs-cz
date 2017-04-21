@@ -15,8 +15,9 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f807d6e4b20b98ecf622d1ebdd9db33b132a2e6a
-ms.openlocfilehash: c834b0282b8f9b47566ab1da2125d993ba8febdf
+ms.sourcegitcommit: 3c5744e7c1290bf9016bc03dcb2db9a1bd9f43dd
+ms.openlocfilehash: 031820d505e0e9cb007e47a5397934d0e505aed4
+ms.lasthandoff: 04/10/2017
 
 
 ---
@@ -25,7 +26,7 @@ ms.openlocfilehash: c834b0282b8f9b47566ab1da2125d993ba8febdf
 
 [!INCLUDE[note for both-portals](../includes/note-for-both-portals.md)]
 
-Scénáře použití správy mobilních zařízení popisují typy uživatelů nebo rolí a vlastnictví zařízení (např. firemní nebo soukromé). Scénáře použití zařízení umožňují rozdělit uživatele do skupin, které je možné spravovat. Identifikace scénářů použití je důležitou součástí plánování úspěšného nasazení Intune.
+Scénáře použití správy mobilních zařízení popisují typy uživatelů nebo rolí a vlastnictví zařízení (např. firemní nebo soukromé). Scénáře použití zařízení jsou užitečné, protože umožňují rozdělit uživatele do skupin, které je možné spravovat. Identifikace scénářů použití je důležitou součástí plánování úspěšného nasazení Intune.
 
 Pojďme se podívat na několik příkladů, které organizaci pomohou identifikovat nejen scénáře použití Intune, ale i organizační skupiny a platformy mobilních zařízení přidružené ke každému případu použití.
 
@@ -81,12 +82,7 @@ Teď budete identifikovat platformy mobilních zařízení přidružené ke kaž
 | Uživatelé s vlastním zařízením | Informatik | Marketing, prodej | iOS |                                                           
 | Uživatelé s vlastním zařízením | Vedení | Marketing, prodej | iOS |
 
-## <a name="next-section"></a>Další část
+## <a name="next-steps"></a>Další kroky
 
 V další části najdete pokyny, [jak identifikovat požadavky na Intune pro jednotlivé scénáře použití](section-3-determine-use-case-requirements.md).
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 
