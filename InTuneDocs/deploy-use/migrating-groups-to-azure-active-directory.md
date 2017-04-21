@@ -13,9 +13,9 @@ ms.technology:
 ms.assetid: 03b69afa-3548-4033-9039-191528f3fd99
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 911d2887791cf16d4290c3ac5189aa44086f4603
-ms.openlocfilehash: d3b4b823683196148d4fb8aa296b59c9c712e99f
-ms.lasthandoff: 03/11/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 2296490a8c3984e79eeeb553d90591048ed46711
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -51,9 +51,9 @@ Některé stávající schopnosti skupin Intune nejsou v Azure AD k dispozici:
 ## <a name="how-to-get-ready"></a>Jak se připravit
 
 - Přečtěte si následující témata k Azure AD, kde najdete další informace o skupinách zabezpečení služby Azure AD a jak fungují:
-    -  [Správa přístupu k prostředkům prostřednictvím skupin Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-manage-groups/)
-    -  [Správa skupin ve službě Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-accessmanagement-manage-groups/)
-    -  [Vytváření pokročilých pravidel pomocí atributů](https://azure.microsoft.com/en-us/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/)
+    -  [Správa přístupu k prostředkům prostřednictvím skupin Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-manage-groups/)
+    -  [Správa skupin ve službě Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
+    -  [Vytváření pokročilých pravidel pomocí atributů](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/)
 - Před migrací zvažte odebrání všech skupin Intune, které už nepoužíváte.
 -  Zajistěte, aby byli do role Azure AD **Správce služby Intune** přidaní všichni správci, kteří potřebují vytvářet skupiny. Nezapomeňte, že role správce služby Azure AD nemá oprávnění **Spravovat skupinu**.
 -  Pokud používáte skupiny s možností **Vyloučit konkrétní členy**, zvažte, jestli by nešlo tyto skupiny upravit, aby vyloučení nebyla potřebná, nebo jestli můžete použít pokročilá pravidla v dotazu do Azure AD, abyste dosáhli stejného výsledku.

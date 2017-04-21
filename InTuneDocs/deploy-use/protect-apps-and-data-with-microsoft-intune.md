@@ -15,9 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f46f13e9dbf03fa2b3e2ec7339cad927ea0b38e0
-ms.openlocfilehash: 16e4b6ddd1df9c56e36318dfd3050d1a1f627adc
-ms.lasthandoff: 12/20/2016
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: fdd85177f21a430eb940d1f88b3bb016c56cee55
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -49,7 +49,7 @@ Data společnosti můžete chránit použitím zásad MAM pro zařízení, kter�
 
 Aby bylo možné aplikaci přidružit k zásadě MAM, musí mít začleněnou sadu Microsoft Intune App Software Development Kit (SDK) nebo můžete použít nástroj App Wrapping.
 
-Například aplikace Microsoft Office mají sadu Intune App SDK integrovanou. Úplný seznam podporovaných aplikací najdete v [galerii mobilních aplikací Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps) na stránce aplikací pro Microsoft Intune od partnerů. Pokud zvolíte aplikaci, můžete zjistit podporované scénáře, platformy a to, jestli aplikace podporuje víc identit.
+Například aplikace Microsoft Office mají sadu Intune App SDK integrovanou. Úplný seznam podporovaných aplikací najdete v [galerii mobilních aplikací Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) na stránce aplikací pro Microsoft Intune od partnerů. Pokud zvolíte aplikaci, můžete zjistit podporované scénáře, platformy a to, jestli aplikace podporuje víc identit.
 
 Můžete taky [povolit vlastním obchodním aplikacím](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md) použití se zásadami MAM.
 

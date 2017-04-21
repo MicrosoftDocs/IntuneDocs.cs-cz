@@ -15,8 +15,9 @@ ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 7447a85e03e38aa0f536ce008bae9f3c82528cec
-ms.openlocfilehash: 1ab1645a8c25bf51fc42788364e498d18c2f15d9
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: aea41c86e1fe784d6234f4ff90e299632b2a6d5f
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -32,7 +33,7 @@ Tento článek poskytuje odpovědi na některé časté otázky ke správě mobi
 
 **Co je MAM?** [Správa mobilních aplikací (MAM) Intune](../deploy-use/overview-of-app-lifecycle-in-microsoft-intune.md) představuje sadu funkcí Intune pro správu, s kterými můžete publikovat, doručovat, konfigurovat, zabezpečovat, monitorovat a aktualizovat mobilní aplikace pro uživatele.
 
-**Jaké jsou výhody ochrany aplikací pomocí MAM?** MAM chrání data organizace v rámci aplikace. Díky funkci MAM bez registrace zařízení (MAM-WE) jde pracovní nebo školní aplikaci, která obsahuje citlivá data, spravovat prakticky na jakémkoliv zařízení, včetně osobních zařízení, která uživatelé používají pracovně (BYOD, bring-your-own-device). Mnoho kancelářských aplikací, jako jsou například aplikace Microsoft Office, jde spravovat přes Intune MAM. Podívejte se do oficiálního seznamu [aplikací podporujících Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps), který je veřejně přístupný.
+**Jaké jsou výhody ochrany aplikací pomocí MAM?** MAM chrání data organizace v rámci aplikace. Díky funkci MAM bez registrace zařízení (MAM-WE) jde pracovní nebo školní aplikaci, která obsahuje citlivá data, spravovat prakticky na jakémkoliv zařízení, včetně osobních zařízení, která uživatelé používají pracovně (BYOD, bring-your-own-device). Mnoho kancelářských aplikací, jako jsou například aplikace Microsoft Office, jde spravovat přes Intune MAM. Podívejte se do oficiálního seznamu [aplikací podporujících Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps), který je veřejně přístupný.
 
 **Jaké konfigurace zařízení MAM podporuje?** Intune MAM podporuje dvě konfigurace:
   1. **Intune MDM + MAM:** Toto je první konfigurace podporovaná správou MAM při prvním spuštění. Správci IT můžou spravovat aplikace pomocí MAM a zásad ochrany aplikací jenom na zařízeních, která jsou zaregistrovaná ve správě mobilních zařízení Intune (MDM). Pokud zákazníci chtějí spravovat aplikace pomocí MDM + MAM, měli by používat samostatnou konzolu Intune na http://manage.microsoft.com.
@@ -48,7 +49,7 @@ Tento článek poskytuje odpovědi na některé časté otázky ke správě mobi
 
 ## <a name="apps-you-can-manage-with-app-protection-policies"></a>Aplikace, které se dají spravovat pomocí zásad ochrany aplikací
 
-**Které aplikace se dají spravovat pomocí zásad ochrany aplikací?** Zásadami ochrany aplikací Intune se dá spravovat každá aplikace, u které byla tato podpora povolena sadou [Intune App SDK](../develop/intune-app-sdk.md) nebo která byla zabalena nástrojem [Intune App Wrapping](../deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md). Podívejte se do oficiálního seznamu [aplikací podporujících Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps), který je veřejně přístupný.
+**Které aplikace se dají spravovat pomocí zásad ochrany aplikací?** Zásadami ochrany aplikací Intune se dá spravovat každá aplikace, u které byla tato podpora povolena sadou [Intune App SDK](../develop/intune-app-sdk.md) nebo která byla zabalena nástrojem [Intune App Wrapping](../deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md). Podívejte se do oficiálního seznamu [aplikací podporujících Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps), který je veřejně přístupný.
 
 **Jaké jsou základní požadavky na používání zásad ochrany aplikací v aplikaci s podporou Intune?**
   1. Koncový uživatel musí mít účet Azure Active Directory (AAD). Pokud se chcete dozvědět, jak se vytvářejí uživatelé Intune v Azure Active Directory, přečtěte si [Přidání uživatelů a udělení oprávnění pro správu v Intune](../get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3.md).
@@ -59,18 +60,18 @@ Tento článek poskytuje odpovědi na některé časté otázky ke správě mobi
 
   4. Koncový uživatel se musí do aplikace přihlásit pomocí svého účtu AAD.
 
-**Jaké jsou další požadavky na používání [mobilní aplikace Outlook](https://www.microsoft.com/en-us/outlook-com/mobile/)?**
+**Jaké jsou další požadavky na používání [mobilní aplikace Outlook](https://www.microsoft.com/outlook-com/mobile/)?**
 
   1. Koncový uživatel musí mít v zařízení nainstalovanou mobilní aplikaci Outlook.
 
-  2. Koncový uživatel musí mít poštovní schránku [Office 365 Exchange Online](https://products.office.com/en-us/exchange/exchange-online) a licenci propojenou se svým účtem Azure Active Directory.
+  2. Koncový uživatel musí mít poštovní schránku [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online) a licenci propojenou se svým účtem Azure Active Directory.
 
   >[!NOTE]
   > Mobilní aplikace Outlook aktuálně podporuje jenom Microsoft Exchange Online a nepodporuje místní Exchange nebo Exchange v Office 365 Dedicated.
 
 **Jaké jsou další požadavky na používání aplikací [Word, Excel a PowerPoint](https://products.office.com/business/office)?**
 
-  1. Koncový uživatel musí mít licenci pro [Office 365 Business nebo Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) propojenou se svým účtem Azure Active Directory. Předplatné musí obsahovat aplikace Office na mobilních zařízeních a účet pro ukládání na cloud se službou [OneDrive pro firmy](https://onedrive.live.com/about/business/). Licence na Office 365 se dají přiřadit na [portálu Office](http://portal.office.com) podle těchto [pokynů](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc?ui=en-US&rs=en-US&ad=US).
+  1. Koncový uživatel musí mít licenci pro [Office 365 Business nebo Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) propojenou se svým účtem Azure Active Directory. Předplatné musí obsahovat aplikace Office na mobilních zařízeních a účet pro ukládání na cloud se službou [OneDrive pro firmy](https://onedrive.live.com/about/business/). Licence na Office 365 se dají přiřadit na [portálu Office](http://portal.office.com) podle těchto [pokynů](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
   2. Koncový uživatel musí mít v zařízení nainstalovanou aplikaci [OneDrive](https://onedrive.live.com/about/) a přihlásit se se svým účtem AAD.
 
@@ -140,9 +141,4 @@ Tento článek poskytuje odpovědi na některé časté otázky ke správě mobi
 - [Jak ověřit nastavení správy mobilních aplikací](../deploy-use/validate-mobile-application-management.md)
 - [Příprava před konfigurací zásad správy mobilních aplikací pomocí Microsoft Intune](../deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 - [Jak získat podporu pro Microsoft Intune](../troubleshoot/how-to-get-support-for-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

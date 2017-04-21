@@ -15,9 +15,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
-ms.openlocfilehash: c294a0abaf69017b6c098a95870fc035f28d0787
-ms.lasthandoff: 04/01/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 23037cdb5a474b2c62c231ac1966989902a983e1
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -34,7 +34,7 @@ Před zahájením nasazování aplikací s Microsoft Intune se seznamte s koncep
 
 |Typ aplikace|Podrobnosti|
 |----------------|-------|
-|**Instalační služba systému Windows (&#42;.exe, &#42;.msi)**|Tento typ aplikace musí podporovat tichou instalaci bez vstupu uživatele. Dokumentace k aplikaci by měla zahrnovat příslušné možnosti příkazového řádku k tiché instalaci aplikace (například **/q**). Seznam běžných možností příkazového řádku můžete najít v tématu [Command-Line Switches for the Microsoft Windows Installer Tool](https://support.microsoft.com/en-us/kb/227091) (Přepínače příkazového řádku pro nástroj Instalační služba systému Microsoft Windows).<br><br>Jakékoli další soubory a složky, které vyžaduje instalační program aplikace, musí být dostupné z umístění, které určíte pro instalační soubory aplikace.<br><br>Instalační služba systému Windows (.msi) a oprava instalační služby systému Windows (.msp) nevyžadují ve většině případů pro Intune instalaci žádných argumentů příkazového řádku. Podívejte se do dokumentace aplikace.<br><br>Pokud se vyžadují argumenty příkazového řádku, musí být zadané jako název=dvojice hodnot (například TRANSFORMS=custom_transform.mst).<br><br>Tento typ aplikace se vztahuje jenom na počítače s klientským softwarem Intune.|
+|**Instalační služba systému Windows (&#42;.exe, &#42;.msi)**|Tento typ aplikace musí podporovat tichou instalaci bez vstupu uživatele. Dokumentace k aplikaci by měla zahrnovat příslušné možnosti příkazového řádku k tiché instalaci aplikace (například **/q**). Seznam běžných možností příkazového řádku můžete najít v tématu [Command-Line Switches for the Microsoft Windows Installer Tool](https://support.microsoft.com/kb/227091) (Přepínače příkazového řádku pro nástroj Instalační služba systému Microsoft Windows).<br><br>Jakékoli další soubory a složky, které vyžaduje instalační program aplikace, musí být dostupné z umístění, které určíte pro instalační soubory aplikace.<br><br>Instalační služba systému Windows (.msi) a oprava instalační služby systému Windows (.msp) nevyžadují ve většině případů pro Intune instalaci žádných argumentů příkazového řádku. Podívejte se do dokumentace aplikace.<br><br>Pokud se vyžadují argumenty příkazového řádku, musí být zadané jako název=dvojice hodnot (například TRANSFORMS=custom_transform.mst).<br><br>Tento typ aplikace se vztahuje jenom na počítače s klientským softwarem Intune.|
 |**Balíček aplikace pro Android (&#42;.apk)**|Pokud chcete nasadit aplikace pro Android, budete potřebovat platný balíček .apk.|
 |**Balíček aplikace pro iOS (&#42;.ipa)**|Pokud chcete nasadit aplikace systému iOS, budete potřebovat platný balíček .ipa.<br><br>Balíček .ipa musí být podepsaný společností Apple a datum vypršení platnosti v profilu zřizování musí být platné. Intune může distribuovat aplikace iOS s podnikovým certifikátem.<br><br>Nejsou podporované všechny aplikace certifikátu vývojáře Apple.<br><br>Vaše společnost musí mít zaregistrovaný iOS Developer Enterprise Program.<br><br>Ujistěte se, že brána firewall vaší organizace umožňuje přístup na weby zřizování a certifikace pro iOS.<br><br>S aplikací není nutné nasazovat soubor manifestu (.plist).|
 |**Balíček aplikace pro Windows Phone (&#42;.xap, .appx, .appxbundle)**|Pokud chcete nasazovat aplikace, musíte mít podnikový certifikát podepisování mobilního kódu. Další informace najdete v tématu [Nastavení správy pro zařízení Windows Phone v Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md).|
@@ -49,7 +49,7 @@ Externí odkaz použijte, když máte následující položky:
 
 Aplikace založené na externích odkazech nejsou uložené v cloudovém úložišti Intune.
 ### <a name="managed-ios-app-from-the-app-store"></a>**Spravované aplikace pro iOS z obchodu s aplikacemi**
-Spravované aplikace pro iOS můžete použít ke správě a nasazení bezplatných aplikací pro systém iOS z App Storu. Spravované aplikace pro iOS můžete použít taky k přidružení [zásad správy mobilních aplikací](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) k [aplikacím, které splňují předpisy](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx), a zkontrolovat jejich stav v konzole pro správu.<br /><br />Spravované aplikace pro iOS nejsou uložené v cloudovém úložišti Intune.
+Spravované aplikace pro iOS můžete použít ke správě a nasazení bezplatných aplikací pro systém iOS z App Storu. Spravované aplikace pro iOS můžete použít taky k přidružení [zásad správy mobilních aplikací](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) k [aplikacím, které splňují předpisy](https://www.microsoft.com/server-cloud/products/microsoft-intune/partners.aspx), a zkontrolovat jejich stav v konzole pro správu.<br /><br />Spravované aplikace pro iOS nejsou uložené v cloudovém úložišti Intune.
 
 > [!TIP]
 > Možnosti pro mobilní zařízení nejsou dostupné, dokud [nenastavíte autoritu pro MDM](prerequisites-for-enrollment.md) na Intune.

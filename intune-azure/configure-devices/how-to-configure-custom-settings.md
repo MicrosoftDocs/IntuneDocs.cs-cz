@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/16/2017
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
-ms.openlocfilehash: 029b5c4c011ddf3ff7dbb06c55b48ef0c18c725e
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
+ms.openlocfilehash: dcd876e31d3b5c65d27f317aab1582da1a883646
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -55,9 +55,9 @@ Informace v tomto tématu vás seznámí se základy konfigurace profilů s vlas
     - [Nastavení macOS](custom-for-macos.md)
     - [Nastavení Windows Phone 8.1](custom-for-windows-phone-8-1.md)
     - [Nastavení Windows 10](custom-for-windows-10.md)
+    - [Nastavení Androidu for Work](custom-android-for-work.md)
 8. Až to budete mít, vraťte se do okna **Vytvořit profil** a klikněte na **Vytvořit**.
 
 Profil se vytvoří a zobrazí se v okně se seznamem profilů.
 Pokud chcete pokračovat a přiřadit tento profil ke skupinám, podívejte se na téma [Jak přiřadit profily zařízení](how-to-assign-device-profiles.md).
-
 

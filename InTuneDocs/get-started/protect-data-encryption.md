@@ -15,8 +15,9 @@ ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
-ms.openlocfilehash: 11ed6b14bc940940e6fa22f6760420e690ac364f
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: c47106ddfebcd1df8c1bc5090bf3f047015b6c45
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -40,7 +41,7 @@ Informace v této příručce jsou pro vás vhodné, pokud splňujete následuj�
 > [!NOTE]
 > Mobilní aplikace Office zatím nepodporují platformu Windows. Správa mobilních aplikací, které nejsou zaregistrované, zatím není kompatibilní s místními systémy Exchange a SharePoint. Můžete chránit jen data hostovaná v online verzích.
 
-Tento průvodce pomůže vaší společnosti, aby se chránila před ztrátou svých dat tím, že v mobilních aplikacích použije zásadu, která vynutí hesla a šifrování dat. Týká se to mobilních aplikací, které zaměstnanci používají pro přístup k citlivým datům a které nejsou plně zaregistrované v řešení pro správu zařízení. Microsoft Intune umožňuje nastavit zásady správy mobilních aplikací (MAM) u mobilních aplikací Office pro [iOS](https://products.office.com/en-us/mobile/office-mobile-apps-for-ios) a [Android](https://products.office.com/en-us/mobile/office-mobile-apps-for-android). Tento přístup chrání data O365, aniž by uživatelé museli zaregistrovat svá zařízení do řešení pro správu mobilních zařízení, a současně zachovává skvělé prostřední pro koncové uživatele mobilních aplikací Office.
+Tento průvodce pomůže vaší společnosti, aby se chránila před ztrátou svých dat tím, že v mobilních aplikacích použije zásadu, která vynutí hesla a šifrování dat. Týká se to mobilních aplikací, které zaměstnanci používají pro přístup k citlivým datům a které nejsou plně zaregistrované v řešení pro správu zařízení. Microsoft Intune umožňuje nastavit zásady správy mobilních aplikací (MAM) u mobilních aplikací Office pro [iOS](https://products.office.com/mobile/office-mobile-apps-for-ios) a [Android](https://products.office.com/mobile/office-mobile-apps-for-android). Tento přístup chrání data O365, aniž by uživatelé museli zaregistrovat svá zařízení do řešení pro správu mobilních zařízení, a současně zachovává skvělé prostřední pro koncové uživatele mobilních aplikací Office.
 
 ## <a name="how-do-i-do-it"></a>Jak to udělám?
 1.    [Kontrola ochrany dat aplikací](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
@@ -50,10 +51,5 @@ Tento průvodce pomůže vaší společnosti, aby se chránila před ztrátou sv
 ## <a name="additional-information"></a>Další informace:
 - [Další informace o činnosti koncového uživatele v aplikacích s podporou správy mobilních aplikací (MAM)](/intune/deploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune)
 - [Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune](/intune/deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune)
-- [Seznam partnerů nabízejících aplikace pro Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-partners)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
+- [Seznam partnerů nabízejících aplikace pro Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-partners)
 

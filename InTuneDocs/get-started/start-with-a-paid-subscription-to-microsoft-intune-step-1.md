@@ -15,8 +15,9 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ad13897fe7bbe4fe13167bb4ce7f558b436a7a90
-ms.openlocfilehash: af147a50f533e4be948261898b60c4d522a9e4eb
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: abeef923eb5c964ef1e306bbb2c25d0570959674
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -44,7 +45,7 @@ Pokud už máte pracovní nebo školní účet, stačí se pouze s použitím to
 ## <a name="post-sign-up-considerations"></a>Aspekty ke zvážení po registraci
 Pokud se zaregistrujete k novému předplatnému, na e-mailovou adresu, kterou jste zadali během procesu registrace, vám přijde e-mailová zpráva s informacemi o účtu. Ta potvrzuje, že je vaše předplatné aktivní.
 
-Po dokončení procesu registrace budete přesměrováni na stránku, na které můžete přidat uživatele a přiřadit jim licence pomocí Centra pro správu Office 365. Pokud budete používat jen cloudové účty ve výchozí doméně onmicrosoft.com, můžete ihned začít přidávat uživatele a přidělovat jim licence. Pokud ale budete chtít používat vlastní doménu organizace nebo synchronizovat informace o uživatelských účtech s místní službou Active Directory, můžete zavřít okno prohlížeče a přejít na krok 2 této stručné příručky. Další informace najdete také v článku [Informace o vaší počáteční doméně onmicrosoft.com v Office 365](https://support.office.com/en-us/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A?ui=en-US&rs=en-US&ad=US).
+Po dokončení procesu registrace budete přesměrováni na stránku, na které můžete přidat uživatele a přiřadit jim licence pomocí Centra pro správu Office 365. Pokud budete používat jen cloudové účty ve výchozí doméně onmicrosoft.com, můžete ihned začít přidávat uživatele a přidělovat jim licence. Pokud ale budete chtít používat vlastní doménu organizace nebo synchronizovat informace o uživatelských účtech s místní službou Active Directory, můžete zavřít okno prohlížeče a přejít na krok 2 této stručné příručky. Další informace najdete také v článku [Informace o vaší počáteční doméně onmicrosoft.com v Office 365](https://support.office.com/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A).
 
 >[!TIP]
 > Při příštím přihlášení do iTune budete automaticky přesměrováni na konzolu pro správu Intune.
@@ -53,9 +54,4 @@ Po dokončení procesu registrace budete přesměrováni na stránku, na které 
 >[!div class="step-by-step"]
 
 >[&larr; **Předpoklady**](.\what-to-know-before-you-start-microsoft-intune.md)     [**Nastavení domény** &rarr;](.\start-with-a-paid-subscription-to-microsoft-intune-step-2.md)  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

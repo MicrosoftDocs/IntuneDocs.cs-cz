@@ -15,9 +15,9 @@ ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
-ms.openlocfilehash: 074af85385a843bd5fac9747abf0209a3ba92b9c
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: 66be6716df38d868e8247131b49ffb50fc48e60b
+ms.openlocfilehash: 60dbfa644a53fec3823e1182f5dec7eb97d8b5df
+ms.lasthandoff: 04/15/2017
 
 
 ---
@@ -55,12 +55,12 @@ V následujícím postupu se dozvíte, jak získat informace, které je třeba s
 
 1. Přihlaste se k [portálu pro správu Azure AD](https://manage.windowsazure.com) a vyberte své předplatné. 
   ![Snímek obrazovky se stránkou Azure AD zobrazující název tenanta](../media/mtp/aad_tenant_name.png)
-2. Když vyberete název vašeho předplatného, výsledná adresa URL obsahuje ID předplatného.  Pokud máte problémy s nalezením ID vašeho předplatného, přečtěte si [článek podpory společnosti Microsoft](https://support.office.com/en-us/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b?ui=en-US&rs=en-US&ad=US), který obsahuje tipy, jak toto ID najít. 
+2. Když vyberete název vašeho předplatného, výsledná adresa URL obsahuje ID předplatného.  Pokud máte problémy s nalezením ID vašeho předplatného, přečtěte si [článek podpory společnosti Microsoft](https://support.office.com/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b), který obsahuje tipy, jak toto ID najít. 
 3. Najděte ID skupiny Azure AD. Konzola Lookout podporuje dvě úrovně přístupu:  
   * **Úplný přístup:** Správce Azure AD může vytvořit skupinu pro uživatele, kteří budou mít úplný přístup, a volitelně může také vytvořit skupinu pro uživatele, kteří budou mít omezený přístup.  Ke **konzole Lookout** se budou moct přihlásit jenom uživatelé z těchto skupin.
   * **Omezený přístup:** Uživatelé z této skupiny nemají přístup k některým modulům konzoly Lookout týkajícím se konfigurace a registrace a mají přístup jenom pro čtení k modulu **Zásady zabezpečení**.  
 
-  Další podrobnosti o oprávněních najdete v [tomto článku](https://personal.support.lookout.com/hc/en-us/articles/114094105653) na webu Lookout.
+  Další podrobnosti o oprávněních najdete v [tomto článku](https://personal.support.lookout.com/hc/articles/114094105653) na webu Lookout.
 
   **ID objektu skupiny** najdete na stránce **Vlastnosti** dané skupiny v **konzole pro správu Azure AD**.
 
@@ -127,7 +127,7 @@ Pokud chcete e-mailem dostávat upozornění na hrozby, přihlaste se ke [konzol
 ![snímek obrazovky zobrazující stránku předvoleb se zobrazeným uživatelským účtem](../media/mtp/lookout-mtp-email-notifications.png) Pokud už nechcete dostávat některá e-mailová oznámení, nastavte příslušná oznámení na **Vypnuto** a provedené změny uložte.
 
 ### <a name="configure-threat-classification"></a>Konfigurace klasifikace hrozeb
-Ochrana před mobilními hrozbami Lookout klasifikuje mobilní hrozby podle různých typů. [Klasifikace hrozeb ve službě Lookout](http://personal.support.lookout.com/hc/en-us/articles/114094130693) k nim má přiřazené výchozí úrovně rizika. Ty lze kdykoli změnit tak, aby odpovídaly požadavkům vaší společnosti.
+Ochrana před mobilními hrozbami Lookout klasifikuje mobilní hrozby podle různých typů. [Klasifikace hrozeb ve službě Lookout](http://personal.support.lookout.com/hc/articles/114094130693) k nim má přiřazené výchozí úrovně rizika. Ty lze kdykoli změnit tak, aby odpovídaly požadavkům vaší společnosti.
 
 ![snímek obrazovky zobrazující stránku zásad s hrozbami a klasifikací](../media/mtp/lookout-mtp-threat-classification.png)
 
@@ -137,5 +137,5 @@ Ochrana před mobilními hrozbami Lookout klasifikuje mobilní hrozby podle růz
 ## <a name="watching-enrollment"></a>Sledování registrací
 Po dokončení nastavení začne ochrana před mobilními hrozbami Lookout posílat do služby Azure AD dotazy na zařízení, která odpovídají určeným skupinám pro registraci.  Informace o registrovaných zařízeních najdete v modulu Zařízení.  Počáteční stav u zařízení je čekající na vyřízení.  Stav zařízení se změní, jakmile se na zařízení nainstaluje, otevře a aktivuje aplikace Lookout for Work.  Podrobnosti o tom, jak aplikaci Lookout for Work přidat do zařízení, najdete v tématu [Konfigurace a nasazení aplikace Lookout for Work](configure-and-deploy-lookout-for-work-apps.md).
 ## <a name="next-steps"></a>Další kroky
-[Povolení připojení Lookout MTP k Intune](enable-lookout-mtp-connection-in-intune.md)
+[Povolení připojení Lookout MTP k Intune](https://docs.microsoft.com/intune/deploy-use/enable-lookout-mtd-connection)
 

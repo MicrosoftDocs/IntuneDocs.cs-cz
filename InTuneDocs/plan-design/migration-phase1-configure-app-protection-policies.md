@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab5aa4e12d951d818c5afb4e1ac5e866b05733fb
-ms.openlocfilehash: 35543604ed68393e859517e32f5186247be001df
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: f30ab8799b2e049372139c7f9ee7213547736bb0
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -32,7 +32,7 @@ Zásady ochrany aplikací používají zabezpečení na úrovni aplikace, takže
 
 ## <a name="app-protection-policies-with-lob-apps"></a>Zásady ochrany obchodních aplikací
 
-Zásady ochrany mobilních aplikací můžete rozšířit také na vaše obchodní aplikace (LOB), když využijete [Microsoft Intune App SDK](https://docs.microsoft.com/intune/deploy-use/use-the-sdk-to-enable-apps-for-mobile-application-management) nebo nástroj Microsoft Intune App Wrapping pro platformy [iOS](https://www.microsoft.com/en-us/download/details.aspx?id=45218&751be11f-ede8-5a0c-058c-2ee190a24fa6=True) a [Android](https://www.microsoft.com/en-us/download/details.aspx?id=47267).
+Zásady ochrany mobilních aplikací můžete rozšířit také na vaše obchodní aplikace (LOB), když využijete [Microsoft Intune App SDK](https://docs.microsoft.com/intune/deploy-use/use-the-sdk-to-enable-apps-for-mobile-application-management) nebo nástroj Microsoft Intune App Wrapping pro platformy [iOS](https://www.microsoft.com/download/details.aspx?id=45218&751be11f-ede8-5a0c-058c-2ee190a24fa6=True) a [Android](https://www.microsoft.com/download/details.aspx?id=47267).
 
 ## <a name="how-do-app-protection-policies-help-during-migration"></a>Jak zásady ochrany aplikací pomáhají při migraci?
 
@@ -46,9 +46,9 @@ Když zakážete podmíněný přístup u předchozího poskytovatele MDM, uživ
 
 ## <a name="task-list-for-app-protection-policies"></a>Seznam kroků pro zásady ochrany aplikací
 
--   Krok 1: Podívejte se, [jak se připravit na konfiguraci zásad ochrany mobilních aplikací](https://docs.microsoft.com/en-us/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune).
+-   Krok 1: Podívejte se, [jak se připravit na konfiguraci zásad ochrany mobilních aplikací](https://docs.microsoft.com/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune).
 
--   Krok 2: Podívejte se, [jak vytvořit a nasadit zásady ochrany mobilních aplikací](https://docs.microsoft.com/en-us/intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune).
+-   Krok 2: Podívejte se, [jak vytvořit a nasadit zásady ochrany mobilních aplikací](https://docs.microsoft.com/intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune).
 
 ## <a name="next-steps"></a>Další kroky 
 

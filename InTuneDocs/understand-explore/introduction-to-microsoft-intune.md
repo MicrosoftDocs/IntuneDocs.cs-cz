@@ -15,9 +15,9 @@ ms.reviewer: pmay
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 6673c8de8d5deb74005b40a58274efcb10783fcc
-ms.openlocfilehash: ee1f41384df083d6479804ba05c0252d9ba12e1b
-ms.lasthandoff: 03/08/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 3b1c61bc78db2c674bf108ed6110c3826cff150e
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -72,13 +72,13 @@ To pak v kombinaci s funkcemi operačního systému pro ochranu dat (například
 
 Když Intune použijete s dalšími službami v EMS, můžete organizaci poskytnout zabezpečení mobilních aplikací daleko nad rámec toho, co poskytují mobilní operační systém a samotné mobilní aplikace prostřednictvím konfigurace aplikací. Aplikace, která je spravovaná pomocí EMS, má přístup k širší sadě ochran mobilních aplikací a dat, která zahrnuje:
 
-* [Jednotné přihlašování](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-appssoaccess-whatis)  
-*    [Vícefaktorové ověřování](https://docs.microsoft.com/en-us/multi-factor-authentication/multi-factor-authentication)
-* [Podmíněný přístup aplikací (povolení přístupu, pokud mobilní aplikace obsahuje firemní data)](https://docs.microsoft.com/en-us/intune/deploy-use/allow-policy-managed-apps-access-to-o365)
-* [Izolování firemních dat od osobních dat uvnitř stejné aplikace](https://docs.microsoft.com/en-us/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
-* [Zásady ochrany aplikací (PIN, šifrování, uložit jako, schránka atd.)](https://docs.microsoft.com/en-us/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
-* [Vymazání firemních dat z mobilní aplikace](https://docs.microsoft.com/en-us/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
-* [Podpora správy přístupových práv](https://docs.microsoft.com/en-us/information-protection/understand-explore/what-is-azure-rms)
+* [Jednotné přihlašování](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis)  
+*    [Vícefaktorové ověřování](https://docs.microsoft.com/multi-factor-authentication/multi-factor-authentication)
+* [Podmíněný přístup aplikací (povolení přístupu, pokud mobilní aplikace obsahuje firemní data)](https://docs.microsoft.com/intune/deploy-use/allow-policy-managed-apps-access-to-o365)
+* [Izolování firemních dat od osobních dat uvnitř stejné aplikace](https://docs.microsoft.com/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
+* [Zásady ochrany aplikací (PIN, šifrování, uložit jako, schránka atd.)](https://docs.microsoft.com/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
+* [Vymazání firemních dat z mobilní aplikace](https://docs.microsoft.com/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
+* [Podpora správy přístupových práv](https://docs.microsoft.com/information-protection/understand-explore/what-is-azure-rms)
 
 ![Obrázek ukazující úrovně zabezpečení dat správy aplikací](./media/managing-mobile-apps.png)
 

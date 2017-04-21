@@ -15,9 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
-ms.openlocfilehash: 399c6260a98d51417a067d001c0fd42c926c1513
-ms.lasthandoff: 01/24/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: f66772dd318e97b9fef124776e80d9d9a4c7de7f
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -30,7 +30,7 @@ Pomocí řešení pro podmíněný přístup Enterprise Mobility + Security (EMS
 ## <a name="how-does-conditional-access-work"></a>Jak podmíněný přístup funguje?
 K vyhodnocení, jestli zařízení vyhovuje, můžete použít nastavení zásady dodržování předpisů. Zásada podmíněného přístupu používá vyhodnocení k omezení nebo povolení přístupu ke konkrétní službě. Když zásady podmíněného přístupu použijete v kombinaci se zásadami dodržování předpisů pro zařízení, povolí se přístup ke službě jenom vyhovujícím zařízením. Zásada dodržování předpisů a zásada podmíněného přístupu se nasadí pro uživatele. Jakékoli zařízení, které uživatel používá pro přístup ke službám, se kontroluje na dodržování předpisů se zásadami.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Nezapomeňte, že uživatel, který zařízení používá, musí mít nasazenou zásadu dodržování předpisů, aby se vyhodnocovalo, jestli zařízení vyhovuje.
 > Pokud nejsou pro uživatele nasazené žádné zásady dodržování předpisů, pak se zařízení považuje za vyhovující a žádná omezení přístupu se neuplatní.
 
@@ -48,7 +48,7 @@ Microsoft Intune a Azure Active Directory (Azure AD) Premium hladce spolupracuj�
 
 **Licence Azure AD Premium** lze zakoupit jako samostatnou službu nebo (společně s Intune) v rámci smlouvy na řešení Enterprise. Pokud jste nasadili zásady podmíněného přístupu v Intune, ujistěte se, jestli máte správné **licence pro EMS** nebo Azure AD Premium.
 
-- Další informace najdete na [stránce s cenami služby Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) nebo na [stránce s cenami služby Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
+- Další informace najdete na [stránce s cenami služby Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) nebo na [stránce s cenami služby Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
 Dále ověřte, jestli uživatelé, kteří mají zásady podmíněného přístupu používat, mají [přiřazené licence Azure AD Premium nebo EMS](/Intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4.md).
 

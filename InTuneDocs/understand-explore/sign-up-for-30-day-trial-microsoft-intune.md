@@ -14,8 +14,9 @@ ms.assetid: 619a1d11-3d22-4635-8f70-770eba3e1712
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ca4af205f8f391089e86e0ee7787e32813d54cca
-ms.openlocfilehash: 6bd6cc3470c93f96e7c71b5d1efe6d9ffc045a7e
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 55556d781149b97af3556f3a6774b4bc5b3b76ac
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.openlocfilehash: 6bd6cc3470c93f96e7c71b5d1efe6d9ffc045a7e
 Tento článek vás provede procesem registrace zkušební verze Intune a pomůže vám ve zkušební verzi nastavit uživatele, abyste mohli postupovat podle příručky pro testování a vyzkoušet si, jak se v Intune spravují mobilní zařízení. <!---or app data when devices are not enrolled in Intune.--->
 
 >[!Note]
-> Od prosince 2016 se Microsoft Intune přesouvá na portál Azure Portal. Některé registrace bezplatných zkušebních verzí se budou provádět v Intune na portálu Azure Portal, zatímco jiné se budou provádět na portálu Classic služby Intune. Pokud se vaše zkušební verze nachází na portálu Azure Portal, po dokončení postupu uvedeného v tomto článku pro vás bude [obsah Intune Azure Preview](https://docs.microsoft.com/en-us/intune-azure/introduction/what-is-microsoft-intune) užitečnější.
+> Od prosince 2016 se Microsoft Intune přesouvá na portál Azure Portal. Některé registrace bezplatných zkušebních verzí se budou provádět v Intune na portálu Azure Portal, zatímco jiné se budou provádět na portálu Classic služby Intune. Pokud se vaše zkušební verze nachází na portálu Azure Portal, po dokončení postupu uvedeného v tomto článku pro vás bude [obsah Intune Azure Preview](https://docs.microsoft.com/intune-azure/introduction/what-is-microsoft-intune) užitečnější.
 
 ## <a name="assumptions"></a>Předpoklady
 Tento článek o registraci a příručka pro testování předpokládají, že zkušební verzi používáte jenom pro účely vyhodnocení a poté, co se přihlásíte k odběru, plánujete použít čisté prostředí.
@@ -39,7 +40,7 @@ Ve zkušební verzi můžete provádět vše, co je možné i v placené verzi. 
 ## <a name="sign-up-for-your-trial"></a>Zaregistrování zkušební verze
 Přejděte na stránku [registrace Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20) a vyplňte formulář pro registraci zkušebního předplatného.
 
-Pokud máte pracovní nebo školní účet a chcete ho použít pro zkušební verzi Intune, postupujte místo toho podle [těchto pokynů pro přihlášení](https://docs.microsoft.com/en-us/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-1). V tomto článku a příručce pro testování se však předpokládá, že takový účet nepoužíváte.
+Pokud máte pracovní nebo školní účet a chcete ho použít pro zkušební verzi Intune, postupujte místo toho podle [těchto pokynů pro přihlášení](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-1). V tomto článku a příručce pro testování se však předpokládá, že takový účet nepoužíváte.
 
 > [!TIP]
 > Pokud se většina pracovníků IT oddělení a uživatelů nachází v jiném národním prostředí než vy, můžete u vaší zkušební verze nastavit toto národní prostředí za účelem testování výkonu.
@@ -54,7 +55,7 @@ Pokud se vaše zkušební verze nachází na **portálu Azure Portal**, přejdě
 ## <a name="add-users"></a>Přidávání uživatelů
 Než přejdete z Centra pro správu Office 365 do Intune, je třeba přidat uživatele ke zkušebnímu účtu.
 
-V Centru pro správu Office 365 můžete přidávat uživatele jednotlivě nebo hromadně načtením souboru .csv. Při nastavení vaší zkušební verze použijeme obě možnosti. V produkčním prostředí budete však pravděpodobně chtít využít uživatelské účty služby Azure Active Directory. O této možnosti se můžete dozvědět více v [Příručce Začínáme](https://docs.microsoft.com/en-us/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3) a v části [Další kroky](#Next-steps) v tomto článku.
+V Centru pro správu Office 365 můžete přidávat uživatele jednotlivě nebo hromadně načtením souboru .csv. Při nastavení vaší zkušební verze použijeme obě možnosti. V produkčním prostředí budete však pravděpodobně chtít využít uživatelské účty služby Azure Active Directory. O této možnosti se můžete dozvědět více v [Příručce Začínáme](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3) a v části [Další kroky](#Next-steps) v tomto článku.
 
 ### <a name="add-an-individual-user"></a>Přidání jednotlivého uživatele
 1. Zvolte některou z možností přidání uživatele a otevřete formulář, který umožňuje vytvořit uživatele. Požadované jsou jenom položky s hvězdičkou (\*).
@@ -119,7 +120,7 @@ Při prvním přihlášení k Intune v Azure je možné, že se tato služba na 
 2. V seznamu zvolte **Intune** a vyberte hvězdičku, aby se tato služba přidala do seznamu služeb.<br/> ![Obrázek s výběrem Intune v seznamu služeb](./media/sign-up/azure-add-intune1.png)
 3. Výběrem **Intune** v seznamu služeb otevřete řídicí panel Intune.
 
-Obvykle budete používat řídicí panel Intune, který je na obrázku níže. To je web, na kterém se nastavují a spravují skupiny, zásady, zařízení a aplikace. Z řídicího panelu můžete přejít do klasické konzoly pro správu Intune výběrem dlaždice **Otevřít portál Classic služby Intune**. Pokud se chcete vrátit k Intune Azure Preview, zadejte na adresní řádek v prohlížeči https://portal.azure.com a pak v seznamu služeb znovu zvolte **Intune**.
+Obvykle budete používat řídicí panel Intune, který je na obrázku níže. To je web, na kterém se nastavují a spravují skupiny, zásady, zařízení a aplikace. Z řídicího panelu můžete přejít do konzoly pro správu Intune Classic výběrem dlaždice **Otevřít portál Classic služby Intune**. Pokud se chcete vrátit k Intune Azure Preview, zadejte na adresní řádek v prohlížeči https://portal.azure.com a pak v seznamu služeb znovu zvolte **Intune**.
 
  ![Obrázek řídicího panelu Intune](./media/sign-up/intune-azure-dashboard.png)
 
@@ -137,18 +138,13 @@ K návratu z Intune zpět do Centra pro správu Office 365 zadejte na adresní �
 Scénář hodnocení: [Hodnocení správy mobilních zařízení v Microsoft Intune](mobile-device-management-trial-guide-microsoft-intune.md)
 
 ### <a name="intune-azure-preview"></a>Intune Azure preview
-Přečtěte si další informace o [Intune v Azure Portal Preview](https://docs.microsoft.com/en-us/intune-azure/introduction/what-is-microsoft-intune).
+Přečtěte si další informace o [Intune v Azure Portal Preview](https://docs.microsoft.com/intune-azure/introduction/what-is-microsoft-intune).
 
 ### <a name="integration-with-other-products"></a>Integrace s dalšími produkty
 Přečtěte si další informace o používání uživatelských účtů služby Azure Active Directory v Intune:
-- [Požadavky na identity](https://docs.microsoft.com/en-us/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
-- [Požadavky na synchronizaci adresáře](https://docs.microsoft.com/en-us/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
-- [Požadavky na vícefaktorové ověřování](https://docs.microsoft.com/en-us/active-directory/active-directory-hybrid-identity-design-considerations-multifactor-auth-requirements)
+- [Požadavky na identity](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
+- [Požadavky na synchronizaci adresáře](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
+- [Požadavky na vícefaktorové ověřování](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-multifactor-auth-requirements)
 
-Přečtěte si další informace o používání [Intune s nástrojem System Center Configuration Manager.](https://docs.microsoft.com/en-us/sccm/mdm/understand/hybrid-mobile-device-management)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
+Přečtěte si další informace o používání [Intune s nástrojem System Center Configuration Manager.](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management)
 

@@ -15,8 +15,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 2fd7ebc53c3b033982297dbce4a091cd9336fbb1
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 65d3b454531084008bdbb01dd17f5ce34ef5890f
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -136,7 +137,7 @@ V seznamu **Povolené a blokované aplikace** zadejte seznam aplikací, které c
 #### <a name="how-to-specify-urls-to-app-stores"></a>Určení adres URL na obchody s aplikacemi
 Pokud chcete zadat adresu URL aplikace do seznamu povolených a blokovaných aplikací, použijte následující formát:
 
-Na stránce [Aplikace a hry pro Windows Phone](http://www.windowsphone.com/en-us/store/overview) najděte aplikaci, kterou chcete použít.
+Na stránce [Aplikace a hry pro Windows Phone](http://www.windowsphone.com/store/overview) najděte aplikaci, kterou chcete použít.
 
 Otevřete stránku aplikace a zkopírujte adresu URL do schránky. Tu teď můžete použít jako adresu URL v seznamu povolených nebo blokovaných aplikací.
 
@@ -172,9 +173,4 @@ V dialogovém okně **Přidat nebo upravit nastavení OMA-URI** zadejte následu
 
 ### <a name="see-also"></a>Související témata
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

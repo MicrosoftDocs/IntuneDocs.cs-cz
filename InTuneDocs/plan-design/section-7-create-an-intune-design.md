@@ -15,9 +15,9 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 6df87e20011f20b99b91d88e669c67bb97ad2277
-ms.openlocfilehash: 1768b98cdcb18b5489d9a30b8c1f455f5de58418
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: ce51e92f9643ddc77e84e6b4c65825d397a37ddc
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -97,7 +97,7 @@ Při popisu současného prostředí MDM nezapomeňte poznamenat probíhající 
 | **Oblast řešení** | **Současné prostředí** | **Komentář** |
 |:---:|:---:|:---:|
 | **Identita** | Azure AD, Azure AD Connect, nefederované, bez MFA | Probíhá projekt, který umožní koncem roku začít používat MFA. |                 
-| **Prostředí e-mailu** | Místní Exchange, Exchange Online | V současnosti se místní Exchange migruje na Exchange Online. Už je migrovaných&75; % poštovních schránek. Zbývajících 25 % bude migrováno do začátku pilotního nasazení Intune. |                
+| **Prostředí e-mailu** | Místní Exchange, Exchange Online | V současnosti se místní Exchange migruje na Exchange Online. Už je migrovaných 75 % poštovních schránek. Zbývajících 25 % bude migrováno do začátku pilotního nasazení Intune. |                
 | **SharePoint** | Místní SharePoint | Plány přechodu na SharePoint Online neexistují. |  
 | **Současné řešení MDM** | Exchange ActiveSync |  |
 | **Řešení pro certifikáty** | Microsoft Server 2012 R2, AD Certificate Services | Infrastruktura veřejných klíčů se používá jen pro webové servery. |
@@ -153,7 +153,7 @@ Skupiny uživatelů a zařízení určují, kdo bude cílovým příjemcem nasaz
 
 -   Další informace o [plánování skupin uživatelů a zařízení](https://docs.microsoft.com/intune/deploy-use/plan-your-user-and-device-groups).
 
--   Další informace o [vytváření skupin uživatelů a zařízení](https://docs.microsoft.com/en-us/intune/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
+-   Další informace o [vytváření skupin uživatelů a zařízení](https://docs.microsoft.com/intune/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
 
 ### <a name="public-key-infrastructure-pki"></a>Infrastruktura veřejných klíčů (PKI)
 
@@ -326,7 +326,7 @@ Tady je příklad, jak dokumentovat návrh profilu VPN.
 
 E-mailové profily umožňují e-mailovému klientovi automatické nastavení informací o připojení a nastavení e-mailové konfigurace. Intune podporuje e-mailové profily jen na některých zařízeních.
 
--   Další informace o [e-mailových profilech](https://docs.microsoft.com/en-us/intune/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) a podporovaných platformách.
+-   Další informace o [e-mailových profilech](https://docs.microsoft.com/intune/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) a podporovaných platformách.
 
 Tady je příklad, jak dokumentovat návrh e-mailových profilů:
 

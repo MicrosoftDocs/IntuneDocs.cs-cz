@@ -15,9 +15,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
-ms.openlocfilehash: 32653a46d8758eac5b884f4f6f7a2e07447c1e36
-ms.lasthandoff: 12/30/2016
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 7451b1872a848ac322db4ec485564f2ebf983f0d
+ms.lasthandoff: 04/14/2017
 
 ---
 # <a name="deploy-apps-in-microsoft-intune"></a>Nasazení aplikací v Microsoft Intune
@@ -49,7 +49,7 @@ V tomto postupu nasadíte aplikaci pro vybrané skupiny zařízení nebo uživat
 
 5. Pokud nasazujete aplikaci, která se dá nakonfigurovat pomocí zásad správy mobilní aplikace, zobrazí se stránka **Správa mobilních aplikací**. Na této stránce zvolte zásady správy mobilních aplikací, které chcete přidružit k této aplikaci.
 
-    [Podívejte se, které aplikace Microsoftu jsou kompatibilní se zásadami správy mobilních aplikací.](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx)
+    [Podívejte se, které aplikace Microsoftu jsou kompatibilní se zásadami správy mobilních aplikací.](https://www.microsoft.com/server-cloud/products/microsoft-intune/partners.aspx)
 
 6. Pokud je aplikace, kterou nasazujete, kompatibilní s profily sítě VPN služby Intune, zobrazí se stránka **Profil VPN**. Na této stránce můžete nastavit přidružení aplikací pro iOS k profilu VPN, který jste nasadili. Připojení VPN se automaticky otevře při spuštění aplikace. Pokud chcete zpřístupnit profil VPN, musí mít povolené nastavení profilu **VPN pro aplikaci**.
  Informace o postupu při konfiguraci profilů VPN, včetně informací o přidružení profilů k aplikacím, najdete v tématu [Připojení VPN v Microsoft Intune](vpn-connections-in-microsoft-intune.md).
