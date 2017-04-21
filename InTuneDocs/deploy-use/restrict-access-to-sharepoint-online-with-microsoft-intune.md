@@ -15,8 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: c4077c41da897e570e5d29702ba0e776c7deee6b
-ms.openlocfilehash: c72d4525a41e7b1498232526c6e05cc4b7bef978
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 9e4fca9e29c8f0c2ec3ef088c3f91ad15ac11804
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -40,7 +41,7 @@ Když se uživatel na svém zařízení pokusí připojit k souboru pomocí podp
 
 **Dřív** než nakonfigurujete zásady podmíněného přístupu pro SharePoint Online, musíte:
 - Mít předplatné **SharePointu Online** a uživatelé musí mít licenci pro SharePoint Online.
-- Mít **předplatné Enterprise Mobility + Security (EMS)** nebo **předplatné Azure Active Directory (Azure AD) Premium** a uživatelé musí mít licenci pro EMS nebo Azure AD. Další informace najdete na [stránce s cenami služby Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) nebo na [stránce s cenami služby Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
+- Mít **předplatné Enterprise Mobility + Security (EMS)** nebo **předplatné Azure Active Directory (Azure AD) Premium** a uživatelé musí mít licenci pro EMS nebo Azure AD. Další informace najdete na [stránce s cenami služby Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) nebo na [stránce s cenami služby Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
 
   Pro připojení k požadovaným souborům zařízení musí být:
@@ -59,10 +60,10 @@ Pokud není některá podmínka splněná, zobrazí se uživateli při přihlá�
 
 -   Pokud zařízení není kompatibilní, zobrazí se zpráva, která uživatele přesměruje na web Portál společnosti [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] , kde najde informace o problému a jeho řešení.
 
-**Podmíněný přístup se nevztahuje na externí sdílení**. Informace o tom, jak zabránit externímu sdílení ve vašem tenantovi nebo kolekci webů, najdete v tématu [Správa externích sdílení pro prostředí SharePointu Online](https://support.office.com/en-us/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85?ui=en-US&rs=en-US&ad=US).
+**Podmíněný přístup se nevztahuje na externí sdílení**. Informace o tom, jak zabránit externímu sdílení ve vašem tenantovi nebo kolekci webů, najdete v tématu [Správa externích sdílení pro prostředí SharePointu Online](https://support.office.com/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85).
 
 >[!NOTE]
->Pokud povolíte podmíněný přístup pro SharePoint Online, doporučujeme zakázat doménu v seznamu, jak je popsané v tématu [Remove-SPOTenantSyncClientRestriction](https://technet.microsoft.com/en-us/library/dn917451.aspx).  
+>Pokud povolíte podmíněný přístup pro SharePoint Online, doporučujeme zakázat doménu v seznamu, jak je popsané v tématu [Remove-SPOTenantSyncClientRestriction](https://technet.microsoft.com/library/dn917451.aspx).  
 
 ## <a name="support-for-mobile-devices"></a>Podpora mobilních zařízení
 Podporované systémy:
@@ -84,7 +85,7 @@ Podporované systémy:
 > [!NOTE]
 >Pokud chcete použít podmíněný přístup u počítačů s Windows 10, musíte je aktualizovat na verzi Windows 10 Anniversary Update.
 
-  - U počítačů připojených k doméně musíte nastavit [automatickou registraci](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/) v Azure Active Directory. Pro zákazníky Intune a Office 365 je služba Azure AD Device Registration Service aktivovaná automaticky. Zákazníci, kteří už mají nasazenou službu ADFS Device Registration Service, registrovaná zařízení ve svojí místní službě Active Directory neuvidí.
+  - U počítačů připojených k doméně musíte nastavit [automatickou registraci](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) v Azure Active Directory. Pro zákazníky Intune a Office 365 je služba Azure AD Device Registration Service aktivovaná automaticky. Zákazníci, kteří už mají nasazenou službu ADFS Device Registration Service, registrovaná zařízení ve svojí místní službě Active Directory neuvidí.
 
   - Pokud je zásada nastavená tak, aby vyžadovala připojení k doméně, a počítač k doméně připojený není, zobrazí se zpráva, aby uživatel kontaktoval správce IT.
 
@@ -92,7 +93,7 @@ Podporované systémy:
   >[!NOTE]
   >Podmíněný přístup není podporovaný na počítačích, ve kterých běží klient Intune pro počítače.
 
-[Musí být povolené moderní ověřování Office 365](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) a musí být nainstalované všechny nejnovější aktualizace Office.
+[Musí být povolené moderní ověřování Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) a musí být nainstalované všechny nejnovější aktualizace Office.
 
 Moderní ověřování poskytuje klientům Office 2013 Windows přihlašování založené na ADAL (Active Directory Authentication Library) a umožňuje lepší zabezpečení, jako je **vícefaktorové ověřování** a **ověřování prostřednictvím certifikátu**.
 
@@ -129,7 +130,7 @@ V dalším kroku nakonfigurujte zásadu, která bude vyžadovat, aby měla k Sha
 #### <a name="bkmk_spopolicy"></a>
 
 >[!NOTE]
-> Můžete také vytvořit zásady podmíněného přístupu pro zařízení s Intune v konzole pro správu Azure AD (zásady se v Azure AD označují jako **zásady podmíněného přístupu na základě zařízení**). Kromě toho můžete vytvořit další zásady podmíněného přístupu, třeba vícefaktorové ověřování. Také můžete nastavit zásady podmíněného přístupu pro podnikové aplikace třetích stran, které Azure AD podporuje, například Salesforce nebo Box. Další informace najdete v tématu [Jak ve službě Azure Active Directory nastavit zásady podmíněného přístupu založené na zařízení a získat tak kontrolu přístupu do aplikací napojených na službu Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
+> Můžete také vytvořit zásady podmíněného přístupu pro zařízení s Intune v konzole pro správu Azure AD (zásady se v Azure AD označují jako **zásady podmíněného přístupu na základě zařízení**). Kromě toho můžete vytvořit další zásady podmíněného přístupu, třeba vícefaktorové ověřování. Také můžete nastavit zásady podmíněného přístupu pro podnikové aplikace třetích stran, které Azure AD podporuje, například Salesforce nebo Box. Další informace najdete v tématu [Jak ve službě Azure Active Directory nastavit zásady podmíněného přístupu založené na zařízení a získat tak kontrolu přístupu do aplikací napojených na službu Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
 
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Zásady** > **Podmíněný přístup** > **Zásady pro SharePoint Online**.
@@ -195,9 +196,4 @@ Vyberte libovolnou skupinu mobilních zařízení. Pak na kartě **Zařízení**
 
 ### <a name="see-also"></a>Viz taky
 [Ochrana přístupu k e-mailu a službám O365 pomocí Microsoft Intune](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

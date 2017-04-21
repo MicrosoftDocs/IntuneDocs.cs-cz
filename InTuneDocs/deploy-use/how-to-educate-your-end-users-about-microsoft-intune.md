@@ -14,18 +14,18 @@ ms.assetid: 48914533-f138-4dc0-8b93-4cea3ac61f7b
 ms.reviewer: robstack
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bed28fc91271c12377f45662aa00fc9616d16fe8
-ms.openlocfilehash: 3d3f35f38a4d6f09f8fdc3e1bbc1c6ca5af6bbe7
-ms.lasthandoff: 04/11/2017
+ms.sourcegitcommit: e0ecc775f70703574c4e1adf0f0aa204f2745b72
+ms.openlocfilehash: a0ae4d74ad99adcfab596eb0c441c845fbca3a9e
+ms.lasthandoff: 04/20/2017
 
 
 ---
 
 # <a name="how-to-educate-your-end-users-about-microsoft-intune"></a>Co říct koncovým uživatelům o Microsoft Intune
 
-Microsoft Intune umožňuje vybavit vaše pracovníky mobilními zařízeními a zároveň mít chráněná firemní data. Úspěšné nasazení se skládá z mnoha kroků, včetně hodnocení Intune prostřednictvím [bezplatné zkušební verze](/Intune/Understand/mobile-device-management-trial-guide-microsoft-intune.md), [ochrany e-mailu](https://docs.microsoft.com/intune/understand-explore/common-ways-to-use-intune#protecting-your-on-premises-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices) a [integrace aplikací se sadou Intune SDK](/intune/develop/intune-app-sdk.md).
+Microsoft Intune umožňuje vybavit vaše pracovníky mobilními zařízeními a zároveň mít chráněná firemní data. Úspěšné nasazení se skládá z mnoha kroků, včetně hodnocení Intune prostřednictvím [bezplatné zkušební verze](/Intune/Understand/mobile-device-management-trial-guide-microsoft-intune), [ochrany e-mailu](https://docs.microsoft.com/intune/understand-explore/common-ways-to-use-intune#protecting-your-on-premises-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices) a [integrace aplikací se sadou Intune SDK](/intune/develop/intune-app-sdk).
 
-Žádná z těchto technologií ale nezajistí, aby uživatelé pochopili, proč je důležité, abyste jejich zařízení spravovali. Mnoho koncových uživatelů se může domnívat, že chcete narušovat jejich soukromí – zejména pokud Intune nasazujete jako [řešení Přineste si vlastní zařízení (BYOD)](/enterprise-mobility-security/solutions/byod-design-considerations-guide.md).
+Žádná z těchto technologií ale nezajistí, aby uživatelé pochopili, proč je důležité, abyste jejich zařízení spravovali. Mnoho koncových uživatelů se může domnívat, že chcete narušovat jejich soukromí – zejména pokud Intune nasazujete jako [řešení Přineste si vlastní zařízení (BYOD)](/enterprise-mobility-security/solutions/byod-design-considerations-guide).
 
 > [!Important]
 > Úspěšné zavedení tedy do značné míry závisí na tom, jestli dokážete relevantně odpovědět na otázky koncových uživatelů ohledně důvodů, proč vaše společnost potřebuje jejich zařízení spravovat.
@@ -59,7 +59,7 @@ Pokud tyto obavy uživatelů dokážete rozptýlit, nasazení bude hladší. Má
   * [Jak uživatelé s Androidem získávají svoje aplikace](how-your-android-users-get-their-apps.md)
 
 * **iOS**
-  * [Používání zařízení s iOSem s Intune](https://docs.microsoft.com/Intune/EndUser/using-your-ios-device-with-intune)
+  * [Používání zařízení s iOSem s Intune](https://docs.microsoft.com/intune-user-help/using-your-ios-or-macos-device-with-intune)
   * [Jak uživatelé systému iOS získávají svoje aplikace](how-your-ios-users-get-their-apps.md)
 
 * **Windows**

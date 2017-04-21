@@ -15,9 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
-ms.openlocfilehash: 9a814f6df407802b8e48626ed0e3f828c52c661b
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: cfb3a7cc4e70a062bc511cd4fe80a50b6262864f
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -38,7 +38,7 @@ Pokud chcete nakonfigurovat podmíněný přístup, musíte:
 
 -   Mít **předplatné Office 365, které zahrnuje Exchange Online (třeba E3)**, a uživatelé musí mít licenci Exchange Online.
 
-- Mít **předplatné Enterprise Mobility + Security (EMS)** nebo **předplatné Azure Active Directory (Azure AD) Premium** a uživatelé musí mít licenci pro EMS nebo Azure AD. Další informace najdete na [stránce s cenami služby Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) nebo na [stránce s cenami služby Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
+- Mít **předplatné Enterprise Mobility + Security (EMS)** nebo **předplatné Azure Active Directory (Azure AD) Premium** a uživatelé musí mít licenci pro EMS nebo Azure AD. Další informace najdete na [stránce s cenami služby Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) nebo na [stránce s cenami služby Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
 -  Zvážit nakonfigurování nepovinného **konektoru Intune Service to Service Connector**, který bude zajišťovat připojení [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] k Exchangi Online a prostřednictvím konzoly [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] vám pomůže se správou informací o zařízení. K používání zásad dodržování předpisů nebo zásad podmíněného přístupu tento konektor potřeba není, vyžaduje se ale ke spouštění sestav, které pomáhají hodnotit dopad podmíněného přístupu.
     -  Další informace o [konektoru Intune Service to Service Connector](intune-service-to-service-exchange-connector.md).
@@ -83,7 +83,7 @@ Můžete chránit přístup k e-mailu na Exchangi Online z **Outlooku** a dalš�
 **Moderní ověřování** integruje do klientů Microsoft Office přihlašování založené na knihovně ADAL (Active Directory Authentication Library).
 
 -   Ověřování ADAL umožňuje klientům Office používat ověřování založené na prohlížeči (označuje se také jako pasivní ověřování). Aby bylo možné uživatele ověřit, uživatel se přesměruje na přihlašovací webovou stránku.
--   Tato nová metoda přihlašování umožňuje využívat lepší způsoby zabezpečení, jako jsou **vícefaktorové ověřování** a **ověřování na základě certifikátu**. Podrobnější informace najdete v článku [Jak funguje moderní ověřování](https://support.office.com/en-US/article/How-modern-authentication-works-for-Office-2013-and-Office-2016-client-apps-e4c45989-4b1a-462e-a81b-2a13191cf517). Můžete nastavit pravidla deklarací služby AD FS pro blokování jiných než moderních ověřovacích protokolů. Podrobné pokyny obsahuje [Scénář 3: Blokování veškerého přístupu k O365 kromě aplikací využívajících prohlížeč](https://technet.microsoft.com/library/dn592182.aspx).
+-   Tato nová metoda přihlašování umožňuje využívat lepší způsoby zabezpečení, jako jsou **vícefaktorové ověřování** a **ověřování na základě certifikátu**. Podrobnější informace najdete v článku [Jak funguje moderní ověřování](https://support.office.com/article/How-modern-authentication-works-for-Office-2013-and-Office-2016-client-apps-e4c45989-4b1a-462e-a81b-2a13191cf517). Můžete nastavit pravidla deklarací služby AD FS pro blokování jiných než moderních ověřovacích protokolů. Podrobné pokyny obsahuje [Scénář 3: Blokování veškerého přístupu k O365 kromě aplikací využívajících prohlížeč](https://technet.microsoft.com/library/dn592182.aspx).
 
 Můžete chránit přístup k aplikaci **Outlook Web Access (OWA)** na Exchangi Online, když k ní uživatel přistupuje z prohlížeče na zařízeních s **iOSem** a **Androidem**. Přístup je povolený jenom z podporovaných prohlížečů na vyhovujících zařízeních:
 
@@ -123,7 +123,7 @@ Podmíněný přístup se dá nastavit pro počítače, které používají desk
   >[!NOTE]
     >Podmíněný přístup není podporovaný na počítačích, ve kterých běží klient Intune pro počítače.
 
--   [Musí být povolené moderní ověřování Office 365](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) a musí být nainstalované všechny nejnovější aktualizace Office.
+-   [Musí být povolené moderní ověřování Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) a musí být nainstalované všechny nejnovější aktualizace Office.
 
     Moderní ověřování integruje do klientů Office 2013/Windows přihlašování založené na knihovně ADAL (Active Directory Authentication Library). Umožňuje využívat lepší způsoby zabezpečení, jako jsou **vícefaktorové ověřování** a **ověřování na základě certifikátu**.
 
@@ -192,7 +192,7 @@ Vyhodnocují se jenom skupiny, které jsou cílem zásad podmíněného přístu
 >[!NOTE]
 > Zásady podmíněného přístupu můžete vytvořit i v konzole pro správu Azure AD. Přes konzolu pro správu Azure AD můžete vytvářet i zásady podmíněného přístupu pro zařízení Intune (v Azure AD označované jako **zásady podmíněného přístupu založené na zařízení**), kromě jiných zásad podmíněného přístupu, jako je například vícefaktorové ověřování.
 
->Také můžete nastavit zásady podmíněného přístupu pro podnikové aplikace třetích stran, které Azure AD podporuje, například Salesforce nebo Box. Další informace najdete v tématu [Jak v Azure Active Directory nastavit zásady podmíněného přístupu založené na zařízení a získat tak kontrolu přístupu k aplikacím připojeným k Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
+>Také můžete nastavit zásady podmíněného přístupu pro podnikové aplikace třetích stran, které Azure AD podporuje, například Salesforce nebo Box. Další informace najdete v tématu [Jak v Azure Active Directory nastavit zásady podmíněného přístupu založené na zařízení a získat tak kontrolu přístupu k aplikacím připojeným k Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
 
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte **Zásady** > **Podmíněný přístup** > **Zásady pro Exchange Online**.

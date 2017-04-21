@@ -15,8 +15,9 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: fa33bd3833f7f7198eed3f4f486c27bae3ba47d7
-ms.openlocfilehash: 87832ec7f295c08678052d19164af9a8db051f9f
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 23d40a31c43a061e0f3b1fbb05827697ca7380ac
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -61,7 +62,7 @@ Tady je přehled všech úkolů při implementaci Intune.
 
 V předchozí části věnované požadavkům jsme uvedli, že je potřeba předplatné EMS nebo Intune. Pokud organizace nemá předplatné EMS nebo Intune, obraťte se na Microsoft nebo na tým, které se stará o účty Microsoft, a informujte je, že se zajímáte o nákup řešení Enterprise Mobility + Security (EMS) nebo Intune.
 
--   Další informace o [nákupu Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-pricing).
+-   Další informace o [nákupu Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-pricing).
 
 #### <a name="task-2-add-office-365-subscription"></a>2. úkol: Přidání předplatného Office 365
 
@@ -115,7 +116,7 @@ Microsoft Intune podporuje profily e-mailu, Wi-Fi a VPN. Přidání a nasazení 
 
 Microsoft Intune podporuje nasazení webových aplikací, obchodních aplikací a aplikací z veřejného Storu. Služba také podporuje správu aplikací integrovaných do sady Intune SDK jejich přidružením k zásadám MAM. Aplikace můžete přidat a nasadit na portálu pro správu Intune v pracovním prostoru Aplikace. Zásady MAM můžete přidat na portálu pro správu Intune v pracovním prostoru Zásady. Podle potřeby přidejte aplikace a nasaďte je u cílových skupin na základě způsobu použití nasazené služby Intune a požadavků.
 
--   Další informace o [přidání a nasazení aplikací](https://docs.microsoft.com/en-us/intune/deploy-use/deploy-apps).
+-   Další informace o [přidání a nasazení aplikací](https://docs.microsoft.com/intune/deploy-use/deploy-apps).
 
 #### <a name="task-11-add-and-deploy-compliance-policies"></a>11. úkol: Přidání a nasazení zásad dodržování předpisů
 
@@ -141,9 +142,4 @@ Intune podporuje tyto platformy zařízení: iOS, Mac OS, Android, Windows pro s
 ## <a name="next-section"></a>Další část
 
 Další část obsahuje pokyny k [testování a ověřování nasazeného řešení Intune](section-9-test-and-validation.md).
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

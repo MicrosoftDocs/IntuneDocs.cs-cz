@@ -15,9 +15,9 @@ ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 905be6a926dc5bab8e9b1016ba82751ee47313e5
-ms.openlocfilehash: 61851f7669e9a5c3a192b2eda344fcde9c4fa3e6
-ms.lasthandoff: 03/20/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 0fa045d31125ba0d67f19bb46aa2728ae9bbcc93
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -67,7 +67,7 @@ Různé úlohy správy vyžadují, abyste použili některý z následujících 
 |**Web Portál společnosti**     |**Na mobilních zařízeních:** používejte výchozí webový prohlížeč pro příslušnou podporovanou platformu.   <br /><br />**Na počítačích s Windows:** Internet Explorer 10 nebo novější nebo Microsoft Edge<br /><br />**Pro Mac OS X 10.9 nebo novější:** Apple Safari    |
 
 > [!Note]
-> Pro konzolu správce se nepodporuje Microsoft Edge ani mobilní prohlížeče, protože nepodporují [Microsoft Silverlight](https://msdn.microsoft.com/en-us/library/cc838158(v=vs.95).aspx). Konzola Intune se z prostředí Silverlight průběžně přesouvá. Všechny funkce správy mobilních zařízení a aplikací služby Intune budou nakonec [dostupné na novém portálu Microsoft Azure Portal](https://blogs.technet.microsoft.com/enterprisemobility/2015/11/17/enhancing-managed-mobile-productivity/).
+> Pro konzolu správce se nepodporuje Microsoft Edge ani mobilní prohlížeče, protože nepodporují [Microsoft Silverlight](https://msdn.microsoft.com/library/cc838158(v=vs.95).aspx). Konzola Intune se z prostředí Silverlight průběžně přesouvá. Všechny funkce správy mobilních zařízení a aplikací služby Intune budou nakonec [dostupné na novém portálu Microsoft Azure Portal](https://blogs.technet.microsoft.com/enterprisemobility/2015/11/17/enhancing-managed-mobile-productivity/).
 
 
 K tomuto portálu se můžou přihlásit jen uživatelé, kteří mají oprávnění správce služeb nebo jsou správcem tenanta s rolí globálního správce. Abyste získali přístup ke konzole pro správu, musí mít váš účet licenci k používání Intune a stav registrace **Povoleno**.

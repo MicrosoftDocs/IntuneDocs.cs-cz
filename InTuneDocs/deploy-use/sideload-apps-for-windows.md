@@ -12,9 +12,9 @@ ms.technology:
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: deea78dcea9ade031441bf12b388a862235a8e9c
-ms.openlocfilehash: 1781600f82b37ba76fe072d3a0e6557504de3b46
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: bb0fe422999246fd40dae16299cf3154b7d7f97b
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -35,7 +35,7 @@ Následující postup vám pomůže získat požadovaný certifikát a podepsat 
    Až se budete přihlašovat k zakoupení firemního účtu, připojte se k [Centru vývojářů pro Windows Phone](http://go.microsoft.com/fwlink/?LinkId=268442) pomocí informací o firemním účtu. Certifikát pro podepisování kódu obdržíte až po schválení žádosti vedoucím pracovníkem společnosti.
 
 2. **Získejte pro společnost certifikát Symantec**<br>
-  Pomocí ID společnosti Symantec zakupte certifikát z [webu společnosti Symantec](http://go.microsoft.com/fwlink/?LinkId=268441) . Po zakoupení certifikátu obdrží schvalovatel, kterého jste uvedli v účtu Windows Phone Dev Center, e-mail požadující schválení žádosti o certifikát. Další informace o požadavku na certifikát Symantec najdete v tématu [Proč Windows Phone vyžaduje certifikát Symantec?](https://technet.microsoft.com/en-us/library/dn764959.aspx#BKMK_Symantec) Nejčastější dotazy k registraci zařízení Windows
+  Pomocí ID společnosti Symantec zakupte certifikát z [webu společnosti Symantec](http://go.microsoft.com/fwlink/?LinkId=268441) . Po zakoupení certifikátu obdrží schvalovatel, kterého jste uvedli v účtu Windows Phone Dev Center, e-mail požadující schválení žádosti o certifikát. Další informace o požadavku na certifikát Symantec najdete v tématu [Proč Windows Phone vyžaduje certifikát Symantec?](https://technet.microsoft.com/library/dn764959.aspx#BKMK_Symantec) Nejčastější dotazy k registraci zařízení Windows
 
 3.  **Import certifikátů**<br>
     Jakmile se žádost schválí, obdržíte e-mail s pokyny k importování certifikátů. Postupujte podle pokynů v e-mailu pro import certifikátů.

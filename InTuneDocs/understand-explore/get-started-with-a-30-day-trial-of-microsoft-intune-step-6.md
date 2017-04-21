@@ -14,8 +14,9 @@ ms.assetid: 170cd959-d35b-4129-ae60-117d7e881bc9
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 361348939341b580a9abc576938522d166125183
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 31788f18d983ab6b0fc57a93566bd43e6606f10f
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -36,7 +37,7 @@ Další informace o výstrahách, oznámeních a sestavách najdete v tématu [M
 ## <a name="intune-capabilities"></a>Možnosti Intune
 Kromě možností uvedených v tomto krátkém průvodci nastavením má Intune ještě celou řadu různých funkcí. Mezi ně třeba patří:
 
--   **Řízení přístupu ke službě Exchange a Office 365.** Podrobnosti najdete v tématu [Správa přístupu aplikací k Exchangi Online](https://docs.microsoft.com/en-us/intune/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune) a [Správa přístupu aplikací ke službám Office 365](https://docs.microsoft.com/en-us/intune/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune).
+-   **Řízení přístupu ke službě Exchange a Office 365.** Podrobnosti najdete v tématu [Správa přístupu aplikací k Exchangi Online](https://docs.microsoft.com/intune/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune) a [Správa přístupu aplikací ke službám Office 365](https://docs.microsoft.com/intune/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune).
 
 -   **Správa zařízení s iOSem vlastněných společností.** Podrobnosti najdete v tématu [Registrace zařízení iOS vlastněných společností v Microsoft Intune](/Intune/Deploy-Use/enroll-corporate-owned-ios-devices-in-microsoft-intune).
 
@@ -56,9 +57,4 @@ Možnosti podpory jsou popsané v části [Jak získat podporu pro Microsoft Int
 Přečtěte si o [běžných způsobech použití Intune](common-ways-to-use-intune.md).
 
 Přejděte na [placené předplatné](get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md).
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

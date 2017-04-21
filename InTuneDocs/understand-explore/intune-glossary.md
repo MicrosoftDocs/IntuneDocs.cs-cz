@@ -13,9 +13,9 @@ ms.technology:
 ms.assetid: 86d00901-fac7-4471-aac2-f1d13a4879b6
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 6b99854e17e00a0dd0f91fa82fd1b79d1dfe5663
-ms.openlocfilehash: ea5407c284f5408774ee5934ad6151bccfd7e6d1
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 9e084cce8e34b0de2dce7c6b8503d5b5089c930e
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/18/2017
 |||
 |-|-|
 |e-mailový profil|Tyto zásady lze použít ke konfiguraci [nastavení přístupu k e-mailu](/intune/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) pro konkrétní e-mailové klienty na mobilních zařízeních. Minimalizují se tak nároky na nastavení, která musí provést koncový uživatel.|
-|EMS|Microsoft Enterprise Mobility + Security (dříve Enterprise Mobility Suite) chrání vaše podniková data, a přitom vašim uživatelům umožňuje [přístup k aplikacím a obsahu, který potřebují](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility).|
+|EMS|Microsoft Enterprise Mobility + Security (dříve Enterprise Mobility Suite) chrání vaše podniková data, a přitom vašim uživatelům umožňuje [přístup k aplikacím a obsahu, který potřebují](https://www.microsoft.com/cloud-platform/enterprise-mobility).|
 |koncový uživatel|[Uživatelé zařízení (jako jsou telefony nebo počítače)](/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune) spravovaných pomocí Intune|
 |registrace|Microsoft Intune využívá [registraci](/intune/deploy-use/enroll-devices-in-microsoft-intune) k začlenění zařízení do správy a povolení přístupu k prostředkům.|
 
@@ -122,7 +122,7 @@ ms.lasthandoff: 02/18/2017
 |vzdálené uzamčení|Funkce služby Intune, která vám umožňuje [uzamknout podporovaná zařízení](/intune/deploy-use/use-remote-lock-and-passcode-reset-in-microsoft-intune), i když dané zařízení právě nemáte k dispozici.|
 |sestavy|Intune poskytuje řadu [vestavěných sestav](/intune/deploy-use/understand-microsoft-intune-operations-by-using-reports), které vás informují o spravovaných zařízeních.|
 |povinná instalace|Když aplikaci nasadíte s touto akcí, nainstaluje se na zařízení [bez zásahu uživatele](/intune/deploy-use/deploy-apps) (ačkoli na některých platformách koncový uživatel musí instalaci odsouhlasit).|
-|požadavky|[Operace nasazení aplikace](/en-us/intune/deploy-use/add-apps), která vám umožní vybrat požadavky, které musí zařízení splnit, než na něj bude aplikace nainstalována. Můžete například zadat verzi iOS, která musí být nainstalovaná, aby se mohla aplikace nainstalovat.|
+|požadavky|[Operace nasazení aplikace](/intune/deploy-use/add-apps), která vám umožní vybrat požadavky, které musí zařízení splnit, než na něj bude aplikace nainstalována. Můžete například zadat verzi iOS, která musí být nainstalovaná, aby se mohla aplikace nainstalovat.|
 
 ## <a name="s"></a>S
 |||

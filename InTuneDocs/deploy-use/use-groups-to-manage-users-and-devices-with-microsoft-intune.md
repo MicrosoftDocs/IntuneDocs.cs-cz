@@ -15,8 +15,9 @@ ms.reviewer: lpatha
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d87cbc82b55c4c7615decf8d37d59e2194de9922
-ms.openlocfilehash: 59e376202ee268a9b99c017f813a7ef870e79548
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 0325f60e83b6e339c96b38b36465f53d6ee5421b
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -89,7 +90,7 @@ Nově vytvořená skupina se zobrazí v seznamu **Skupiny** v pracovním prostor
     > Pokud nyní skupina obsahuje členy z konkrétních skupin zabezpečení nebo skupin manažerů a vy z nějakých skupin členy vyloučíte, dojde k odebrání členů, které jste původně zahrnuli. Pokud chcete vytvořit skupinu, která obsahuje zahrnuté i vyloučené členy, doporučujeme, abyste nejdříve vytvořili nadřazenou skupinu se zahrnutými členy. Pak vytvořte podřízenou skupinu této nadřazené skupiny. Do nové podřízené skupiny přidejte vyloučené členy. Podřízenou skupinu pak používejte ke správě zásad Intune, profilů a distribuce aplikací.
 
     > [!NOTE]
-    > Na webu Azure Portal můžete vytvořit skupiny založené na tom, pod jakého manažera uživatelé spadají. Tento typ skupiny je dynamický a bude se měnit v závislosti na tom, jak se do týmu daného manažera ve službě Azure Active Directory přidávají zaměstnanci nebo se z něj naopak odebírají. Návod, jak vytvořit skupinu Azure na základě jména manažera, najdete v článku [Vytváření rozšířených pravidel pomocí atributů](https://azure.microsoft.com/en-us/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/) v části **Konfigurace skupiny manažera**.
+    > Na webu Azure Portal můžete vytvořit skupiny založené na tom, pod jakého manažera uživatelé spadají. Tento typ skupiny je dynamický a bude se měnit v závislosti na tom, jak se do týmu daného manažera ve službě Azure Active Directory přidávají zaměstnanci nebo se z něj naopak odebírají. Návod, jak vytvořit skupinu Azure na základě jména manažera, najdete v článku [Vytváření rozšířených pravidel pomocí atributů](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/) v části **Konfigurace skupiny manažera**.
 
 4.  Na stránce **Definovat přímé členství** klikněte na **Procházet** a vyberte, které uživatele chcete zahrnout a které vyloučit. Pokud vyberete uživatele, kteří nejsou ve vámi určené nadřazené skupině, přidají se tito uživatelé do nadřazené skupiny automaticky. Možnost ručně přidat uživatele najdete v dolní části dialogu **Vybrat členy**. To je užitečné, pokud chcete přidat uživatele, který dosud nemá zaregistrované zařízení.
 
@@ -151,9 +152,4 @@ U každé zásady je **Zamýšlená hodnota** a **Stav**. Zamýšlená hodnota j
 
 > [!NOTE]
 > Mějte na paměti, že když použijete na stejné zařízení nebo uživatele dvě zásady s různými úrovněmi omezení, v praxi se uplatní víc omezující zásada.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -15,8 +15,9 @@ ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
-ms.openlocfilehash: 8e8257a426bd6b9a99e21e928b08c84f162d5da3
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 5975ba0219f464c8f5aa1735657ff3d1c186b991
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -29,7 +30,7 @@ Microsoft Intune je cloudová služba, která pomáhá spravovat zařízení s W
 
 Microsoft nabízí pro Intune adaptační benefity pro příslušné služby v rámci příslušných plánů. Adaptační benefity vám umožní vzdáleně pracovat s odborníky Microsoftu na přípravě vašeho prostředí Intune k použití. Další informace o adaptačních benefitech najdete v tématu [Popis adaptačních benefitů pro Microsoft Intune](http://go.microsoft.com/fwlink/?LinkId=619281).
 
-Můžete začít používat 30denní bezplatnou zkušební verzi Intune, která zahrnuje 100 uživatelských licencí. Jestli chcete začít používat bezplatnou zkušební verzi, [přejděte na registrační stránku Intune](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/). Jestli má organizace uzavřenou smlouvu Enterprise nebo jinou rovnocennou multilicenční smlouvu, požádejte o nastavení bezplatné zkušební verze zástupce Microsoftu.
+Můžete začít používat 30denní bezplatnou zkušební verzi Intune, která zahrnuje 100 uživatelských licencí. Jestli chcete začít používat bezplatnou zkušební verzi, [přejděte na registrační stránku Intune](https://www.microsoft.com/server-cloud/products/microsoft-intune/). Jestli má organizace uzavřenou smlouvu Enterprise nebo jinou rovnocennou multilicenční smlouvu, požádejte o nastavení bezplatné zkušební verze zástupce Microsoftu.
 
 > [!NOTE]
 > Pokud má vaše organizace pracovní nebo školní účet služeb Microsoft Online Services a po skončení zkušební doby budete chtít toto předplatné Intune používat v produkčním prostředí, vyberte na této stránce možnost **Přihlásit se** a přihlaste se pod účtem globálního správce organizace. Tím zajistíte, že se zkušební verze Intune propojí s vaším stávajícím pracovním nebo školním účtem.
@@ -69,13 +70,13 @@ Intune můžete pro účely správy a ochrany firemních mobilních zařízení 
 
 -**Samostatná konfigurace Intune.** Ke správě zařízení organizace v Intune se používá webová konzola pro správu. Intune můžete používat i bez místní infrastruktury IT. Když Intune používáte se službou Active Directory Domain Services, můžete v Intune použít doménové uživatelské účty spravované ve službě Domain Services.
 
--**Intune se System Center Configuration Managerem.** Ke správě počítačů a mobilních zařízení organizace se používá konzola pro správu Configuration Manageru. Při této konfiguraci můžete ke správě všech zařízení organizace používat jedinou konzolu správce Configuration Manageru. Configuration Manager podporuje velké počty mobilních zařízení, serverů a počítačů. Další informace o Configuration Manageru najdete v tématu [Hybridní správa mobilních zařízení (MDM) s nástrojem System Center Configuration Manager a Microsoft Intune](https://technet.microsoft.com/library/mt627883.aspx). Další pomoc při rozhodování o tom, jaký přístup je pro vás správný, najdete v tématu [Volba mezi samostatnou a hybridní správou mobilních zařízení v Microsoft Intune s nástrojem Configuration Manager](https://technet.microsoft.com/en-us/library/mt706478.aspx).
+-**Intune se System Center Configuration Managerem.** Ke správě počítačů a mobilních zařízení organizace se používá konzola pro správu Configuration Manageru. Při této konfiguraci můžete ke správě všech zařízení organizace používat jedinou konzolu správce Configuration Manageru. Configuration Manager podporuje velké počty mobilních zařízení, serverů a počítačů. Další informace o Configuration Manageru najdete v tématu [Hybridní správa mobilních zařízení (MDM) s nástrojem System Center Configuration Manager a Microsoft Intune](https://technet.microsoft.com/library/mt627883.aspx). Další pomoc při rozhodování o tom, jaký přístup je pro vás správný, najdete v tématu [Volba mezi samostatnou a hybridní správou mobilních zařízení v Microsoft Intune s nástrojem Configuration Manager](https://technet.microsoft.com/library/mt706478.aspx).
 
 
 ## <a name="learn-more-about-intune"></a>Další informace o Intune
 Další informace o službě Intune můžete získat z těchto zdrojů:
 
-- [Centrum zabezpečení pro Microsoft Intune](http://www.microsoft.com/en-us/server-cloud/products/intune-trust-center/) poskytuje informace o zabezpečení, ochraně osobních údajů a dodržování předpisů v Intune a obsahuje také popis některých certifikátů Intune.
+- [Centrum zabezpečení pro Microsoft Intune](https://www.microsoft.com/server-cloud/products/intune-trust-center/) poskytuje informace o zabezpečení, ochraně osobních údajů a dodržování předpisů v Intune a obsahuje také popis některých certifikátů Intune.
 
 - [Možnosti správy zaregistrovaných zařízení v Microsoft Intune](/intune/get-started/mobile-device-management-capabilities-in-microsoft-intune)
 
@@ -84,9 +85,4 @@ Další informace o službě Intune můžete získat z těchto zdrojů:
 [Knihovna dokumentace k System Center 2012 Configuration Manageru](https://technet.microsoft.com/library/gg682041.aspx)
 
 [Co je nového v Microsoft Intune](/intune/deploy-use/whats-new-in-microsoft-intune)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

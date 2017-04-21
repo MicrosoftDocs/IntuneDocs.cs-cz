@@ -14,9 +14,9 @@ ms.assetid: 47806f69-303d-41d9-9b0e-9b9445ea24ac
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 4133c64d283682f0be37cd6ac69164ef872a5026
-ms.lasthandoff: 01/05/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 9a988945c499c3145208b86d6832d02c28136ece
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -43,8 +43,8 @@ Ve zkušební verzi můžete provádět vše, co je možné i v placené verzi. 
 ## <a name="whats-not-covered"></a>Co tento článek nepopisuje
 |Pokud vás zajímá: |Přečtěte si: |
 |------------------------|----------|
-|MDM v jiném než testovacím prostředí | [Začínáme](https://docs.microsoft.com/en-us/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune) |
-|MDM s Intune a nástrojem System Center Configuration Manager | [Hybridní správa mobilních zařízení](https://docs.microsoft.com/en-us/sccm/mdm/understand/hybrid-mobile-device-management) |
+|MDM v jiném než testovacím prostředí | [Začínáme](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune) |
+|MDM s Intune a nástrojem System Center Configuration Manager | [Hybridní správa mobilních zařízení](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management) |
 
 Vzhledem k tomu, že výše uvedené příručky pomáhají nastavit Intune v produkčních prostředích, jsou delší a ve srovnání s příručkou pro testování obsahují mnohem více bodů rozhodování, které potřebujete projít.
 
@@ -61,7 +61,7 @@ Prvním krokem správy mobilních zařízení v Intune je nastavení **autority 
 
 Pokud používáte Intune samostatně, jak toto testování předpokládá, nebo pokud používáte Intune jako součást předplatného Enterprise Mobility + Security (EMS), je nutné nastavit Intune jako autoritu pro správu mobilních zařízení. To znamená, že Intune určíte jako službu, ve které budete spravovat mobilní zařízení ve vaší organizaci.
 
-Zákazníci, kteří chtějí ke správě mobilních zařízení používat Intune s nástrojem System Center Configuration Manager, se musí rozhodnout, jestli chtějí jako autoritu pro správu mobilních zařízení používat Intune nebo Configuration Manager. To je důležité rozhodnutí v případě produkčního prostředí, protože momentálně je velmi obtížné toto nastavení změnit poté, co ho určíte. To je ale nad rámec této příručky. Další informace o důsledcích nastavení Intune nebo nástroje Configuration Manager jako autority MDM najdete v tématu [Volba mezi samostatnou službou Intune a hybridní správou mobilních zařízení](https://docs.microsoft.com/en-us/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
+Zákazníci, kteří chtějí ke správě mobilních zařízení používat Intune s nástrojem System Center Configuration Manager, se musí rozhodnout, jestli chtějí jako autoritu pro správu mobilních zařízení používat Intune nebo Configuration Manager. To je důležité rozhodnutí v případě produkčního prostředí, protože momentálně je velmi obtížné toto nastavení změnit poté, co ho určíte. To je ale nad rámec této příručky. Další informace o důsledcích nastavení Intune nebo nástroje Configuration Manager jako autority MDM najdete v tématu [Volba mezi samostatnou službou Intune a hybridní správou mobilních zařízení](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
 
 Pro účely tohoto testování nastavíme jako autoritu MDM službu Intune. Vaše produkční prostředí to neovlivní, pokud se nerozhodnete použít zkušební verzi v produkčním prostředí.
 
@@ -86,7 +86,7 @@ Stáhněte si certifikát služby APN ( soubor .pem) a uložte ho místně. Toto
 3.    **Přidání certifikátu APNs do služby Intune**<BR/>
 V konzole pro správu Microsoft Intune přejděte na **Správa** > **Správa mobilních zařízení** > **iOS a Mac OS X** > **Nahrát na server certifikát služby APN** a pak zvolte **Nahrát na server certifikát služby APN**. Přejděte k souboru certifikátu (.pem), zvolte **Otevřít** a zadejte své Apple ID. S certifikátem služby APN může Intune registrovat a spravovat zařízení se systémem iOS vynucením zásad u registrovaných mobilních zařízení.
 4.    **Informujte uživatele, jak můžou svá zařízení zaregistrovat, aby získali přístup k firemním prostředkům.**<br/>
-Postup registrace koncových uživatelů najdete v tématech [Registrace zařízení se systémem iOS do Intune](https://docs.microsoft.com/en-us/Intune/enduser/enroll-your-device-in-intune-ios) a [Registrace zařízení s Mac OS X v Intune](https://docs.microsoft.com/en-us/Intune/enduser/enroll-your-device-in-intune-mac-os-x). Proces registrace uživatele informuje, co můžou očekávat a co správci IT na jejich zařízeních uvidí a neuvidí.
+Postup registrace koncových uživatelů najdete v tématech [Registrace zařízení se systémem iOS do Intune](https://docs.microsoft.com/Intune/enduser/enroll-your-device-in-intune-ios) a [Registrace zařízení s Mac OS X v Intune](https://docs.microsoft.com/Intune/enduser/enroll-your-device-in-intune-mac-os-x). Proces registrace uživatele informuje, co můžou očekávat a co správci IT na jejich zařízeních uvidí a neuvidí.
 
 
 ### <a name="learn-more-about-device-enrollment"></a>Další informace o registraci zařízení

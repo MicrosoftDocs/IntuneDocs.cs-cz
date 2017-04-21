@@ -15,9 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
-ms.openlocfilehash: 9759c1331a3fb5308e1dbc53564059618a8ef45c
-ms.lasthandoff: 04/01/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 53b86bf579af6af29fd36ce58f9cdf1e92b98abc
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -61,11 +61,11 @@ Pokyny k vytvoření zásad ochrany aplikací v konzole pro správu Intune najde
 - Windows 10
 
 >[!NOTE]
->Počínaje verzí 1703 se můžou zásady ochrany aplikací pro zařízení s Windows 10 definovat v MAM bez registračního scénáře. Podrobnosti najdete v tématu věnovanému [ochraně podnikových dat pomocí sady Windows Information Protection](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
+>Počínaje verzí 1703 se můžou zásady ochrany aplikací pro zařízení s Windows 10 definovat v MAM bez registračního scénáře. Podrobnosti najdete v tématu věnovanému [ochraně podnikových dat pomocí sady Windows Information Protection](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
 
 ##  <a name="supported-apps"></a>Podporované aplikace
 * **Aplikace Microsoftu:** Tyto aplikace mají integrovanou sadu Intune App SDK a před použitím zásad ochrany aplikací nevyžadují žádné další zpracování.
-Úplný seznam podporovaných aplikací Microsoftu najdete v [galerii mobilních aplikací Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps) na stránce aplikací pro Microsoft Intune od partnerů. Pokud na aplikaci kliknete, můžete zjistit podporované scénáře, platformy a to, jestli aplikace podporuje víc identit.
+Úplný seznam podporovaných aplikací Microsoftu najdete v [galerii mobilních aplikací Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) na stránce aplikací pro Microsoft Intune od partnerů. Pokud na aplikaci kliknete, můžete zjistit podporované scénáře, platformy a to, jestli aplikace podporuje víc identit.
 
 * **Obchodní aplikace vaší organizace:** Před použitím zásad ochrany aplikací musíte tyto aplikace připravit tak, aby obsahovaly sadu Intune App SDK.
 
@@ -76,7 +76,7 @@ Pokyny k vytvoření zásad ochrany aplikací v konzole pro správu Intune najde
 ## <a name="prerequisites"></a>Požadavky
 
 -   **Předplatné služby Microsoft Intune**. K získání aplikací se zásadami ochrany aplikací uživatelé potřebují licence [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
-Pokud ke správě svých zařízení používáte [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], již předplatné [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] máte. Pokud jste si zakoupili licenci Enterprise Mobility Suite (EMS), předplatné [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] už také máte. Pokud službu [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] teprve zkoušíte, abyste se seznámili s funkcemi MAM, můžete na [webové stránce Microsoft Intune](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/) získat zkušební účet.
+Pokud ke správě svých zařízení používáte [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], již předplatné [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] máte. Pokud jste si zakoupili licenci Enterprise Mobility Suite (EMS), předplatné [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] už také máte. Pokud službu [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] teprve zkoušíte, abyste se seznámili s funkcemi MAM, můžete na [webové stránce Microsoft Intune](https://www.microsoft.com/server-cloud/products/microsoft-intune/) získat zkušební účet.
 
     Pokud chcete ověřit, jestli máte předplatné [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], přejděte na portálu Office na stránku **Fakturace**.  Pokud předplatné máte, měla by být služba [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] označená jako **Aktivní**.
 
@@ -98,13 +98,13 @@ Pokud ke správě svých zařízení používáte [!INCLUDE[wit_nextref](../incl
 
 1.  Přihlaste se na [portál Office](http://portal.office.com) pomocí svých přihlašovacích údajů správce.
 
-2.  Přidejte uživatele podle popisu **kroků k dokončení 30denní zkušební verze Intune** v [Příručce pro testování Intune](https://docs.microsoft.com/en-us/intune/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune) a pak přiřaďte licence Intune. Pokud chcete, aby uživatel měl přístup na portály Office, Azure AD a Azure, přiřaďte mu roli **Globální správce**.
+2.  Přidejte uživatele podle popisu **kroků k dokončení 30denní zkušební verze Intune** v [Příručce pro testování Intune](https://docs.microsoft.com/intune/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune) a pak přiřaďte licence Intune. Pokud chcete, aby uživatel měl přístup na portály Office, Azure AD a Azure, přiřaďte mu roli **Globální správce**.
 
-5.  Zásady ochrany aplikací se nasazují pro skupiny uživatelů ve službě Azure Active Directory. Pokud chcete vytvářet skupiny uživatelů pro zásady ochrany aplikací, vytvořte skupinu uživatelů podle popisu v části **Vytvoření skupiny uživatelů** v článku [Vytvoření skupiny pro uspořádání uživatelů a zařízení pro testovací předplatné](https://docs.microsoft.com/en-us/intune/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-3).
+5.  Zásady ochrany aplikací se nasazují pro skupiny uživatelů ve službě Azure Active Directory. Pokud chcete vytvářet skupiny uživatelů pro zásady ochrany aplikací, vytvořte skupinu uživatelů podle popisu v části **Vytvoření skupiny uživatelů** v článku [Vytvoření skupiny pro uspořádání uživatelů a zařízení pro testovací předplatné](https://docs.microsoft.com/intune/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-3).
 
 ### <a name="assign-roles-to-non-global-admin-users"></a>Přiřazení rolí uživatelům, kteří nejsou globálními správci
 
-Globální správci mají přístup k [portálu Azure Portal](https://portal.azure.com).  Pokud chcete, aby uživatelé, kteří nejsou globálními správci, mohli konfigurovat zásady a plnit další úkoly při správě mobilních aplikací, podívejte se na článek [Použití přiřazení rolí ke správě přístupu k prostředkům předplatného Azure](https://azure.microsoft.com/en-us/documentation/articles/role-based-access-control-configure/).
+Globální správci mají přístup k [portálu Azure Portal](https://portal.azure.com).  Pokud chcete, aby uživatelé, kteří nejsou globálními správci, mohli konfigurovat zásady a plnit další úkoly při správě mobilních aplikací, podívejte se na článek [Použití přiřazení rolí ke správě přístupu k prostředkům předplatného Azure](https://azure.microsoft.com/documentation/articles/role-based-access-control-configure/).
 
 ## <a name="next-steps"></a>Další kroky
 [Vytvoření a nasazení zásad ochrany aplikací pomocí Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)

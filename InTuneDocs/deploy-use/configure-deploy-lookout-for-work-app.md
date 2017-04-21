@@ -14,9 +14,9 @@ ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
-ms.openlocfilehash: ad1133d17f8d64c79c08437b914ae28e00cae638
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: eaf30c8a59013af6359743227edc8aa6709577c5
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -57,7 +57,7 @@ Tento článek vysvětluje, jak nakonfigurovat a nasadit aplikaci Lookout for Wo
 
 1. Ověřte, že je na vašem zařízení povolená **Správa iOS**. Pokyny, jak na zařízení povolit správu iOS, najdete v článku [Nastavení správy zařízení s iOSem a MacOS](set-up-ios-and-mac-management-with-microsoft-intune.md).
 
-2. **Znovu podepište** aplikaci Lookout for Work pro iOS. Lookout distribuuje svou aplikaci Lookout for Work pro iOS mimo obchod App Store. **Před distribucí této aplikace** ji musíte znovu podepsat pomocí certifikátu podnikového vývojáře pro iOS. Podrobné pokyny k opětovnému podepsání aplikace Lookout for Work pro iOS najdete v článku [Lookout for Work iOS app re-signing process](https://personal.support.lookout.com/hc/en-us/articles/114094038714) (Postup opětovného podepsání aplikace Lookout for Work pro iOS) na webu Lookout.
+2. **Znovu podepište** aplikaci Lookout for Work pro iOS. Lookout distribuuje svou aplikaci Lookout for Work pro iOS mimo obchod App Store. **Před distribucí této aplikace** ji musíte znovu podepsat pomocí certifikátu podnikového vývojáře pro iOS. Podrobné pokyny k opětovnému podepsání aplikace Lookout for Work pro iOS najdete v článku [Lookout for Work iOS app re-signing process](https://personal.support.lookout.com/hc/articles/114094038714) (Postup opětovného podepsání aplikace Lookout for Work pro iOS) na webu Lookout.
 
 3. Následujícím postupem povolte ověřování uživatelů iOS službou Azure Active Directory:
   1.  Přihlaste se na [portál pro správu služby Azure Active Directory](https://manage.windowsazure.com) a přejděte na stránku s aplikacemi.
@@ -67,13 +67,13 @@ Tento článek vysvětluje, jak nakonfigurovat a nasadit aplikaci Lookout for Wo
   4.  Přidejte další identifikátor URI pro přesměrování: **&lt;companyportal://code/>** následovaný původním identifikátorem URI pro přesměrování ve verzi URLencoded.
   5.  Přidejte k aplikaci **Delegovaná oprávnění**.
 
-  Další podrobnosti najdete v článku [Konfigurace nativní klientské aplikace](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application).
+  Další podrobnosti najdete v článku [Konfigurace nativní klientské aplikace](https://azure.microsoft.com/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application).
 
-4. Podle popisu v tématu [Přidání aplikace pro mobilní zařízení v Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune) nahrajte opětovně podepsaný soubor .ipa. Jako minimální verzi operačního systému nastavte iOS 8.0 nebo novější.
+4. Podle popisu v tématu [Přidání aplikace pro mobilní zařízení v Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune) nahrajte opětovně podepsaný soubor .ipa. Jako minimální verzi operačního systému nastavte iOS 8.0 nebo novější.
 
   ![Snímek obrazovky stránky s aplikacemi v konzole pro správce Intune s aplikací Lookout for Work zobrazenou v seznamu aplikací](../media/mtp/ios-app-uploaded-intune.png)
 
-5. Vytvořte zásady konfigurace spravovaných aplikací podle popisu v tématu [Konfigurace aplikací pro iOS pomocí zásad konfigurace mobilních aplikací v Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune).
+5. Vytvořte zásady konfigurace spravovaných aplikací podle popisu v tématu [Konfigurace aplikací pro iOS pomocí zásad konfigurace mobilních aplikací v Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune).
 
   ![Snímek obrazovky s průvodcem vytvořením nové zásady a zvýrazněnou zásadou konfigurace aplikace pro iOS 8.0 nebo novější](../media/mtp/ios-app-config.png)
 
