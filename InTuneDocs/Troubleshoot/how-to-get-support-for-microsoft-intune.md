@@ -15,9 +15,9 @@ ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: df54ac3a62b5ef21e8a32f3a282dd5299974a1b0
-ms.openlocfilehash: ae9af31263de8b0b95f98e423f8a9a59c0c66c4c
-ms.lasthandoff: 04/12/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 15229d2dff3b5e9a13bf1f9321ba09df81717052
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -70,11 +70,11 @@ Než vytvoříte lístek podpory, seznamte se prosím s [definicí incidentu pod
 
 1.  Přihlaste se k [Centru pro správu Office 365](https://portal.office.com) pomocí svých přihlašovacích údajů Intune.
 
-    Pokud patříte mezi zákazníky se smlouvou Premier Support, měli byste lístek podpory služby Intune otevřít na [stránce podpory Premier](https://support.microsoft.com/en-us/premier/contacts).
+    Pokud patříte mezi zákazníky se smlouvou Premier Support, měli byste lístek podpory služby Intune otevřít na [stránce podpory Premier](https://support.microsoft.com/premier/contacts).
 
     >[!NOTE]
     >
-    >Zákazníci se smlouvou Premier Support by měli lístek podpory služby Intune otevřít na [stránce podpory Premier](https://support.microsoft.com/en-us/premier/contacts).
+    >Zákazníci se smlouvou Premier Support by měli lístek podpory služby Intune otevřít na [stránce podpory Premier](https://support.microsoft.com/premier/contacts).
 
 2.  Zvolte dlaždici **Správce**.
 3.  Pokud chcete otevřít lístek, zvolte na levé straně v části **Podpora** možnost **Podpora**.
@@ -136,7 +136,7 @@ U jiných problémů dojde k první reakci se zákazníky se smlouvou Profession
 - U jednoho uživatele dochází k částečnému narušení služby, ale existuje přijatelné alternativní řešení.
 
 > [!NOTE]
-> **Pokud používáte Microsoft System Center Configuration Manager** nebo **Microsoft System Center Endpoint Protection:** Technickou podporu pro Configuration Manager nebo Endpoint Protection získáte od svého partnera, případně přejděte k dokumentaci pro [Microsoft System Center Configuration Manager](https://docs.microsoft.com/sccm/) a [Endpoint Protection](https://technet.microsoft.com/en-us/library/hh508836.aspx), kde najdete řadu materiálů pro svépomoc. Nabízí také možnost otevření žádosti o podporu online nebo po telefonu.
+> **Pokud používáte Microsoft System Center Configuration Manager** nebo **Microsoft System Center Endpoint Protection:** Technickou podporu pro Configuration Manager nebo Endpoint Protection získáte od svého partnera, případně přejděte k dokumentaci pro [Microsoft System Center Configuration Manager](https://docs.microsoft.com/sccm/) a [Endpoint Protection](https://technet.microsoft.com/library/hh508836.aspx), kde najdete řadu materiálů pro svépomoc. Nabízí také možnost otevření žádosti o podporu online nebo po telefonu.
 >
 > Technická podpora pro System Center Configuration Manager nebo System Center Endpoint Protection vyžaduje buď platbu nebo se odečte od stávajících licenčních smluv nebo smluv Premier Support.
 
