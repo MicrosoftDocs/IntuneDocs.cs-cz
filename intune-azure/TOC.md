@@ -58,13 +58,13 @@
 <!--- ## [Plan and design](manage-devices/plan-and-design.md) --->
 ## Postupy
 ### [Použití úplného nebo selektivního vymazání](manage-devices/use-full-or-selective-wipe-on-devices-using-microsoft-intune.md)
-### [Vzdálené ovládání zařízení s Androidem](manage-devices/control-android-devices-with-teamviewer.md)
 <!--- ## [Troubleshoot](manage-devices/troubleshooting.md) --->
 
 # Správa uživatelů
 ## [Co je správa uživatelů?](manage-users/what-is.md)
 <!--- Was What is users & group management--->
 ## [Začínáme](manage-users/get-started-with-groups.md)
+## [Pomoc uživatelům](manage-users/help-desk.md)
 <!--- ## [Plan and design](manage-users/plan-and-design.md) --->
 
 <!--- ## [Troubleshoot](manage-users/troubleshooting.md) --->
