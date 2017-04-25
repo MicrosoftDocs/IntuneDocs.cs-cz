@@ -5,7 +5,7 @@ keywords:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.date: 04/05/2017
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f051d8366ba9c6ca2183b5661c64087eb4cce9f0
-ms.openlocfilehash: 682545af10a7dc1f66158f95f871b889e9f85c4a
-ms.lasthandoff: 04/06/2017
+ms.sourcegitcommit: 0a39abc7f19f4c2c8074de66a9cd5df9cef78ed5
+ms.openlocfilehash: 2b6e29e7323d42b1ce3d75a46648203a7a43165c
+ms.lasthandoff: 04/13/2017
 
 
 ---
@@ -49,7 +49,7 @@ Microsoft MyApps teď mají lepší podporu v Managed Browseru. Uživatelé Mana
 
 ### <a name="new-icons-for-the-managed-browser-and-the-company-portal---918433-918431--"></a>Nové ikony pro Managed Browser a Portál společnosti<!--918433, 918431-->
 
-Managed Browser dostal aktualizované ikony pro verze aplikace pro Android i iOS. Nová ikona bude obsahovat aktualizovaný odznak Intune, aby byla konzistentnější s ostatními aplikacemi v Enterprise Mobility + Security (EM+S).
+Managed Browser dostal aktualizované ikony pro verze aplikace pro Android i iOS. Nová ikona bude obsahovat aktualizovaný odznak Intune, aby byla konzistentnější s ostatními aplikacemi v Enterprise Mobility + Security (EM+S). Novou ikonu pro Managed Browser uvidíte na [stránce s novinkami v uživatelském rozhraní aplikace Intune](whats-new-in-intune-app-ui.md).
 
 Portál společnosti také dostal aktualizované ikony pro verze aplikace pro Android, iOS i Windows, aby byly konzistentnější s ostatními aplikacemi v EM+S. Tyto ikony se budou postupně vydávat pro všechny platformy od dubna do konce května.
 
@@ -59,7 +59,7 @@ Uživatelé už se nemusí přihlašovat k aplikaci Outlook, pokud jsou na stejn
 
 ### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Ukazatel průběhu přihlášení v Portálu společnosti pro Android <!--953374-->
 
-Aktualizace aplikace Portál společnosti pro Android zobrazuje indikátor průběhu přihlášení, když uživatel aplikaci spustí nebo pokračuje v jejím používání. Než uživatel získá přístup k aplikaci, indikátor postupně zobrazuje nové stavy od „Připojování...“ přes „Přihlašování...“ po „Kontrolují se požadavky na zabezpečení...“.
+Aktualizace aplikace Portál společnosti pro Android zobrazuje indikátor průběhu přihlášení, když uživatel aplikaci spustí nebo pokračuje v jejím používání. Než uživatel získá přístup k aplikaci, indikátor postupně zobrazuje nové stavy od „Připojování...“ přes „Přihlašování...“ po „Kontrolují se požadavky na zabezpečení...“. Nové obrazovky pro aplikaci Portál společnosti pro Android uvidíte na [stránce s novinkami v uživatelském rozhraní aplikace Intune](whats-new-in-intune-app-ui.md). 
 
 
 ## <a name="notices"></a>Sdělení
@@ -175,11 +175,6 @@ Multilicenční aplikace (VPP) pro iOS můžete koncovým uživatelům přiřadi
 ### <a name="synchronize-ebooks-from-apple-vpp-store----800878---"></a>Synchronizace elektronických knih z Apple VPP Storu <!-- 800878 -->
 
 Pomocí Intune můžete synchronizovat knihy, které jste zakoupili z Apple Storu v rámci multilicenčního programu, a přiřadit je uživatelům.
-
-### <a name="shared-shift-worker-devices-for-samsung-knox-standard-devices----773753---"></a>Zařízení se Samsung KNOX Standardem jako sdílená zařízení pracovníků pracujících ve směnách <!-- 773753 -->
-
-Na portálu Intune můžete zařízení se Samsung KNOX Standardem nakonfigurovat jako sdílené zařízení pracovníků pracujících ve směnách. Když je zařízení v režimu sdílení, jsou aplikace, zásady a e-mail na zařízení svázané s identitou uživatele, který je přihlášený k Portálu společnosti.
-Uživatelé se můžou do aplikace Portál společnosti přihlásit pomocí přihlašovacích údajů Azure Active Directory a na zařízení se pak automaticky aplikují jejich nastavení aplikací, zásad a e-mailu.
 
 ### <a name="multi-user-management-for-samsung-knox-standard-devices----971988---"></a>Správa více uživatelů pro zařízení se Samsung KNOX Standardem <!-- 971988 -->
 
