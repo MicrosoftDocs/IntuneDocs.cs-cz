@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
 ms.openlocfilehash: 58671d037c7f62e5fdaa56657737a4470c90bdb7
+ms.lasthandoff: 02/04/2017
 
 
 ---
@@ -24,8 +25,6 @@ ms.openlocfilehash: 58671d037c7f62e5fdaa56657737a4470c90bdb7
 # <a name="configure-android-for-work-apps-with-mobile-app-configuration-policies-in-microsoft-intune"></a>Konfigurace aplikací pro Android for Work pomocí zásad konfigurace mobilních aplikací v Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
-
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
 Zásady konfigurace mobilních aplikací v Microsoft Intune slouží k poskytování nastavení, která se můžou požadovat, když uživatelé spustí aplikaci. Aplikace může například vyžadovat, aby uživatelé zadali:
 
@@ -76,9 +75,4 @@ Při spuštění aplikace nasazené do zařízení se aplikace spustí s nastave
 
 > [!TIP]
 > Pro každou aplikaci nasaďte uživateli jen jednu zásadu konfigurace aplikace.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

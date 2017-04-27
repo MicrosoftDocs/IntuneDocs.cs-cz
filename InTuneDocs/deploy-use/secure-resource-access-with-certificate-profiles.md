@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
 ms.openlocfilehash: 9cf53cb240ba14317fbb680ad4f4c40c8320506d
+ms.lasthandoff: 12/10/2016
 
 
 ---
@@ -36,8 +37,6 @@ Když uživatelům poskytnete přístup k podnikovým prostředkům prostřednic
  -  Android for Work
  -  Windows 8.1 a vyšší
  -  Windows Phone 8.1 nebo novější
-
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
 3. Vytvořte profily certifikátů. Zařízení si vyžádají certifikát, který se má používat k ověření přístupu k VPN, Wi-Fi a e-mailu, jak je popsáno v tématu [Konfigurace profilů certifikátů Intune](configure-intune-certificate-profiles.md). Můžete vytvořit a nasadit **Profil certifikátu PKCS #12 (.PFX)***nebo* **Profil certifikátu SCEP** pro zařízení s těmito platformami:
 
@@ -62,9 +61,4 @@ Pro každou platformu musíte vytvořit samostatný profil. Při vytváření pr
 - [Konfigurace infrastruktury certifikátů pro SCEP](configure-certificate-infrastructure-for-scep.md)
 - [Konfigurace infrastruktury certifikátů pro PFX](configure-certificate-infrastructure-for-pfx.md)
 - [Konfigurace profilů certifikátů Intune](configure-intune-certificate-profiles.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

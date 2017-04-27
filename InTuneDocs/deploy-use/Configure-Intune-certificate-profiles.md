@@ -58,8 +58,6 @@ Profil důvěryhodného certifikátu je nutné vytvořit před vytvořením prof
 
 -  Windows Phone 8.1 nebo novější
 
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
-
 2.  Přidejte zásadu **Profil důvěryhodného certifikátu**.
 
     Další informace: [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
