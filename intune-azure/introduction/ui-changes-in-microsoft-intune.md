@@ -16,9 +16,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 6a6b64465c95a3edd6fc2e2d4ae3da80ba3367ee
-ms.openlocfilehash: 92bd41aa4acc02e67e983c68f818bd656b0b9608
-ms.lasthandoff: 04/12/2017
+ms.sourcegitcommit: 6a1dbb2c9d3810f19536fc709719767de923b519
+ms.openlocfilehash: e5067631fc17fa375a3b263f9910936300e6f8e9
+ms.lasthandoff: 04/18/2017
 
 
 ---
@@ -34,6 +34,7 @@ Při přesunu Intune do portálu Azure Portal jsme využili příležitost uspo�
 |Skupiny podle IMEI (všechny platformy)| Skupiny >Všechna zařízení > Firemní předregistrovaná zařízení > Podle IMEI (všechny platformy) | [Registrace zařízení > Identifikátory podnikových zařízení](#by-imei-all-platforms)|
 | Profil Registrace podnikového zařízení | Zásady > Registrace podnikového zařízení | [Registrace zařízení > Registrace Apple > Profily programu registrace](#where-did-corporate-pre-enrolled-devices-go) |
 | Profil Registrace podnikového zařízení | Zásady > Registrace podnikového zařízení | [Registrace zařízení > Registrace Apple > Profily AC](#where-did-corporate-pre-enrolled-devices-go) |
+| Android for Work | Správce > Správa mobilních zařízení > Android for Work | Registrace zařízení > Registrace Androidu for Work | | Podmínky | Zásady > Podmínky | Registrace zařízení > Podmínky |
 
 
 ## <a name="where-do-i-manage-groups"></a>Kde můžu spravovat skupiny?

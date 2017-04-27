@@ -12,7 +12,7 @@
 
 # [Začínáme](get-started/get-started.md)
 ## [Nastavení Intune](get-started/start-with-a-paid-subscription-to-microsoft-intune.md)
-### [Požadavky]
+### Předpoklady
 #### [Podporovaná zařízení](get-started/what-to-know-before-you-start-microsoft-intune.md)
 #### [Využití sítě](get-started/network-bandwidth-use.md)
 ### [Přihlášení k Intune](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-1.md)
@@ -189,10 +189,13 @@
 
 ### [Ochrana dat aplikací pomocí MAM](deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Portál Azure Portal pro zásady ochrany aplikací](deploy-use/azure-portal-for-microsoft-intune-mam-policies.md)
-#### [Příprava ke konfiguraci zásad ochrany aplikací](deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
-#### [Vytvoření a nasazení zásad ochrany aplikací](deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
+#### [Příprava na konfiguraci zásad ochrany aplikací pro iOS a Android](deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
+#### [Příprava na konfiguraci zásad ochrany aplikací pro Windows 10](deploy-use/get-ready-to-configure-app-protection-policies-for-windows-10.md)
 #### [Zásady ochrany aplikací pro Android](deploy-use/android-mam-policy-settings.md)
 #### [Zásady ochrany aplikací pro iOS](deploy-use/ios-mam-policy-settings.md)
+#### [Zásady ochrany aplikací pro Windows](deploy-use/create-windows-information-protection-policy-with-intune.md)
+#### [Vytvoření a nasazení zásad ochrany aplikací pro iOS a Android](deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
+#### [Vytvoření a nasazení zásad ochrany aplikací WIP pro Windows 10](deploy-use/create-windows-information-protection-policy-with-intune.md)
 #### [Ověření zásad ochrany aplikací](deploy-use/validate-mobile-application-management.md)
 #### [Sledování dodržování zásad ochrany aplikací](deploy-use/monitor-mobile-app-management-policies-with-microsoft-intune.md)
 

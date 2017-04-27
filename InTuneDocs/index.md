@@ -9,9 +9,9 @@ ms.topic: hub-page
 title: Dokumentace k Microsoft Intune | Dokumentace Microsoftu
 description: "Jak používat Microsoft Intune"
 translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: 1f8b03315c6026a60ef25b1ee6946d4186c82b08
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: e96413a9f1398e7f025bbc2fbd66153c1c54c504
+ms.openlocfilehash: af6af39a041582bd93bac6aad551881be4cf0291
+ms.lasthandoff: 04/24/2017
 
 ---
 <div id="main" class="v2">
@@ -451,7 +451,7 @@ ms.lasthandoff: 04/14/2017
                     <a href="#manage-plan">Plán nasazení</a>
                     <ul id="manage-plan" class="cardsC">
                         <li>
-                            <a href="/intune/plan-design/section-1-determine-deployment-goals-objectives-challenges">
+                            <a href="/intune/get-started/what-to-know-before-you-start-microsoft-intune">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -461,8 +461,8 @@ ms.lasthandoff: 04/14/2017
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Vymezení cílů, úkolů a možných problémů</h3>
-                                            <p>Stanovte si cíle a úkoly a nastiňte možné problémy, které bude při nasazování potřeba řešit.</p>
+                                            <h3>Podporovaná zařízení a prohlížeče</h3>
+                                            <p>Přečtěte si podrobnosti o zařízeních a prohlížečích podporovaných službou.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -476,12 +476,12 @@ ms.lasthandoff: 04/14/2017
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage bgdAccent1">
-                                                <img src="/media/hubs/intune/intune-deployments-identify.svg" alt="" />
+                                                <img src="/media/hubs/intune/intune-deployments-plan.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Identifikace scénářů pro případy použití</h3>
-                                            <p>Projděte si modelové případy použití a identifikujte scénáře nasazení. </p>
+                                            <h3>Průvodce plánováním, návrhem a implementací nasazení</h3>
+                                            <p>Připravte plán nasazení, vytvořte návrh, implementujte Intune a proveďte nasazení v ostrém provozu.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -489,18 +489,18 @@ ms.lasthandoff: 04/14/2017
                             </a>
                         </li>
                         <li>
-                            <a href="/intune/plan-design/section-4-develop-a-rollout-plan">
+                            <a href="/intune/plan-design/intune-mdm-migration-guide">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage bgdAccent1">
-                                                <img src="/media/hubs/intune/intune-deployments-plan.svg" alt="" />
+                                                <img src="/media/hubs/intune/intune-deployments-identify.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Vývoj plánu nasazení</h3>
-                                            <p>Určete skupiny, které budou ve vaší organizaci cílem spuštění Intune, a stanovte si časový rámec jednotlivých spuštění.</p>
+                                            <h3>Průvodce migrací</h3>
+                                            <p>Seznamte se s různými detaily migrace od jiného poskytovatele MDM do Intune.</p>
                                         </div>
                                     </div>
                                 </div>
