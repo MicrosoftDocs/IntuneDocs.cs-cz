@@ -6,7 +6,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 03/15/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -81,9 +81,7 @@ Nová role se zobrazí v seznamu v okně **Role**.
 ## <a name="how-to-assign-a-role"></a>Jak přiřadit roli
 
 1. V okně **Role** úlohy **Řízení přístupu** zvolte předdefinovanou nebo vlastní roli, kterou chcete přiřadit.
-2. V okně <*název role*> – **Vlastnosti** zvolte **Spravovat** > **Přiřazení**.
-    >[!TIP]
-    >V tomto okně můžete navíc upravovat nebo odstraňovat existující role.
+2. V okně <*název role*> – **Vlastnosti** zvolte **Spravovat** > **Přiřazení**. V tomto okně můžete navíc upravovat nebo odstraňovat existující role.
 3. V dalším okně zvolte **Přiřadit**.
 4. V okně **Přiřazení rolí** zadejte **Název** a volitelný **Popis** přiřazení a zvolte následující:
     - **Členové** – Vyberte skupinu, která obsahuje uživatele, kterému chcete udělit oprávnění.
