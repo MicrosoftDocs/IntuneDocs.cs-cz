@@ -42,7 +42,6 @@ Podrobnosti najdete v tématu [Omezení přístupu k e-mailu a službám O365 po
 - **Zásady přístupu k prostředkům:** Tyto zásady společně pomáhají uživatelům zajistit odkudkoli přístup k souborům a prostředkům, které potřebují ke své práci.
 Podrobnosti najdete v tématu [Povolení přístupu k prostředkům společnosti pomocí Microsoft Intune](enable-access-to-company-resources-with-microsoft-intune.md).
 
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
 Úplný seznam zásad služby Intune najdete v tématu [Odkazy na zásady služby Microsoft Intune](microsoft-intune-policy-reference.md).
 

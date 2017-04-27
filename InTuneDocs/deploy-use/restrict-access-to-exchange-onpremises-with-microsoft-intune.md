@@ -83,10 +83,7 @@ Podporované systémy:
 -   Poštovní klienti Exchange ActiveSync, například Gmail v Androidu 4 nebo novějším
 -   Poštovní klienti Exchange ActiveSync na **zařízeních s Androidem for Work**: Na zařízeních s Androidem for Work se v **pracovním profilu** podporují jenom aplikace **Gmail** a **Nine Work**. Aby v Androidu for Work fungoval podmíněný přístup, je nutné nasadit e-mailový profil pro aplikaci Gmail nebo Nine Work a zároveň tyto aplikace nasadit jako požadovanou instalaci. 
 
-<!---
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
---->
-> [!NOTE] 
+> [!NOTE]
 > Aplikace Microsoft Outlook pro Android a iOSem se nepodporuje.
 
 ## <a name="support-for-pcs"></a>Podpora počítačů

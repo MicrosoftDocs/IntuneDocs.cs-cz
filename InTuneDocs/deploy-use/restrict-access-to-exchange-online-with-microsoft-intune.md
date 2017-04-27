@@ -78,8 +78,6 @@ Můžete chránit přístup k e-mailu na Exchangi Online z **Outlooku** a dalš�
 - Android 4.0 a novější, Samsung Knox Standard 4.0 a novější a Android for Work
 - iOS 8.0 a novější
 
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
-
 **Moderní ověřování** integruje do klientů Microsoft Office přihlašování založené na knihovně ADAL (Active Directory Authentication Library).
 
 -   Ověřování ADAL umožňuje klientům Office používat ověřování založené na prohlížeči (označuje se také jako pasivní ověřování). Aby bylo možné uživatele ověřit, uživatel se přesměruje na přihlašovací webovou stránku.
