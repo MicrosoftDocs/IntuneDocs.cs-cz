@@ -118,7 +118,6 @@
 #### [Rozložení domovské obrazovky pro iOS](configure-devices/home-screen-settings-for-ios.md)
 #### [Oznámení aplikace pro iOS](configure-devices/app-notification-settings-for-ios.md)
 #### [Sdílená zařízení pro iOS](configure-devices/shared-device-settings-for-ios.md)
-#### [Filtr webového obsahu pro iOS](configure-devices/web-content-filter-settings-for-ios.md)
 
 ### [Konfigurace omezení zařízení](configure-devices/how-to-configure-device-restrictions.md)
 #### [Android](configure-devices/device-restrictions-for-android.md)
@@ -194,7 +193,8 @@
 ## [Co je podmíněný přístup?](conditional-access/what-is-conditional-access.md)
 ## Postupy
 ### [Instalace konektoru On-Premises Connector](conditional-access/install-intune-on-premises-exchange-connector.md)
-### [Vytvoření zásad podmíněného přístupu](conditional-access/create-conditional-access-policy-for-exchange-on-premises.md)
+### [Vytvoření a přiřazení zásad podmíněného přístupu](conditional-access/create-conditional-access-policy-for-exchange-on-premises.md)
+### [Monitorování dodržování předpisů podmíněného přístupu](conditional-access/monitor-conditional-access-compliance-for-on-premises-exchange-and-exchange-online.md)
 
 # Řízení přístupu
 ## [Co je řízení přístupu na základě rolí?](access-control/role-based-access-control.md)
