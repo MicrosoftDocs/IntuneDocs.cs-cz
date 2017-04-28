@@ -13,9 +13,9 @@ ms.technology:
 ms.assetid: b2fdcea9-9ad7-4d73-88e2-854b7a774bb2
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
-ms.openlocfilehash: df1a9b21cd7114c2eebfeb114edf161c4a0e9ef3
-ms.lasthandoff: 04/01/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 660d0c69fc09c6ec8b82185b3808269ef4bb6852
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -32,7 +32,7 @@ Pokud chcete umožnit správu zařízení s Androidem for Work, musíte do Intun
 Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení [nastavením autority pro správu mobilních zařízení](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-8#enable-device-enrollment) na **Microsoft Intune** a nastavením správy MDM.
 
 2. **Konfigurace vazby na Android for Work**<br>
-    Přihlaste se jako správce Intune a otevřete [konzolu pro správu Microsoft Intune](http://manage.microsoft.com), přejděte na **Správa** &gt; **Správa mobilních zařízení** &gt; **Android for Work** a klikněte na **Konfigurovat**. Otevře se web Android for Work v obchodě Google Play. Tento web se otevře v nové záložce prohlížeče.
+    Přihlaste se jako správce Intune a otevřete [konzolu pro správu Microsoft Intune](https://manage.microsoft.com), přejděte na **Správa** &gt; **Správa mobilních zařízení** &gt; **Android for Work** a klikněte na **Konfigurovat**. Otevře se web Android for Work v obchodě Google Play. Tento web se otevře v nové záložce prohlížeče.
 
 3. **Přihlášení ke Googlu**<br>
    Na přihlašovací stránce Googlu zadejte účet Google, který bude přidružený ke všem úlohám správy Androidu for Work v tomto tenantovi. Jedná se o účet Google sdílený správci IT ve vaší organizaci, kteří spravovali a publikovali aplikace v konzole Play for Work.
@@ -59,7 +59,7 @@ Registraci a správu Androidu for Work můžete vypnout. Při kliknutí na možn
 ### <a name="how-to-unbind-an-android-for-work-account"></a>Jak zrušit vazbu na účet Android for Work
 
 1. **Zrušení vazby na Android for Work**<br>
-    Přihlaste se jako správce a otevřete [konzolu pro správu Microsoft Intune](http://manage.microsoft.com), přejděte na **Správa** &gt; **Správa mobilních zařízení** &gt; **Android for Work** a klikněte na **Zrušit vazbu**.
+    Přihlaste se jako správce a otevřete [konzolu pro správu Microsoft Intune](https://manage.microsoft.com), přejděte na **Správa** &gt; **Správa mobilních zařízení** &gt; **Android for Work** a klikněte na **Zrušit vazbu**.
 
 2. **Souhlas s odstraněním vazby na Android for Work**<br>
   Kliknutím na **Ano** odstraníte vazbu a zrušíte v Intune registraci všech zařízení s Androidem for Work.

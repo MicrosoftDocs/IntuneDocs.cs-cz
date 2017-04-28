@@ -15,9 +15,9 @@ ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: fa8f4b1df83e37ab20d5b4a045ba535758368835
-ms.lasthandoff: 12/10/2016
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 47d1437159da85b958e6e6fa91fa743d7746c5ce
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -47,7 +47,7 @@ Postup vytvoření vlastního pravidla je popsaný v následující části.
 
 ## <a name="create-a-default-access-rule"></a>Vytvoření výchozího pravidla přístupu
 
-1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) zvolte **Zásady** &gt; **Exchange ActiveSync**.
+1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Exchange ActiveSync**.
 
 2.  V seznamu **Výchozí pravidlo** vyberte pravidlo přístupu, které chcete použít u všech mobilních zařízení, pro která neplatí pravidlo nebo osobní výjimka. Vyberte **Uložit**.
 
@@ -55,7 +55,7 @@ Následující postup popisuje vytvoření vlastního pravidla:
 
 ## <a name="create-a-custom-access-rule"></a>Vytvoření vlastního pravidla přístupu
 
-1. V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) zvolte **Zásady** &gt; **Exchange ActiveSync**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Exchange ActiveSync**.
 
 2.  V seznamu **Výjimky platforem** vyberte **Přidat pravidlo** a potom vytvořte vlastní pravidlo. Vyberte **Uložit**.
 

@@ -15,9 +15,9 @@ ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: b322f368637e39da1ab10b41dd724859fb49e1f2
-ms.lasthandoff: 12/10/2016
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: dce7050a7439a7e24e34be3c79473d6ec3159c83
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -51,7 +51,7 @@ Musíte taky vytvořit uživatelský účet Exchange Online, který bude konekto
 
 ## <a name="set-up-the-service-to-service-connector"></a>Nastavení konektoru Service to Service Connector
 
-1. Otevřete [konzolu pro správu Microsoft Intune](http://manage.microsoft.com) s uživatelským účtem s právy a oprávněními správce Exchange pro [nahoře popsané](#exchange-cmdlet-requirements) rutiny. Microsoft Intune používá e-mailovou adresu aktuálně přihlášeného uživatele k nastavení připojení.
+1. Otevřete [konzolu pro správu Microsoft Intune](https://manage.microsoft.com) s uživatelským účtem s právy a oprávněními správce Exchange pro [nahoře popsané](#exchange-cmdlet-requirements) rutiny. Microsoft Intune používá e-mailovou adresu aktuálně přihlášeného uživatele k nastavení připojení.
 
 2.  V podokně zástupců pracovních prostorů zvolte **SPRÁVCE**>**Správa mobilního zařízení** > **Microsoft Exchange** > **Nastavit připojení k systému Exchange**.
 ![Stránka nastavení konektoru Service to Service Connector](../media/intunesa5cservicetoserviceconnector.png)
@@ -63,7 +63,7 @@ Konektor Service to Service Connector se automaticky nakonfiguruje a synchronizu
 
 ## <a name="validate-your-exchange-connection"></a>Ověření připojení k Exchangi
 
-Po úspěšném nakonfigurování Exchange Connectoru přejděte do [konzoly pro správu Microsoft Intune](http://manage.microsoft.com). Zvolte **Správce**> **Správa mobilního zařízení** > **Microsoft Exchange**. Potom ověřte, že se vámi zadané podrobnosti zobrazí v části **Informace o připojení systému Exchange**.
+Po úspěšném nakonfigurování Exchange Connectoru přejděte do [konzoly pro správu Microsoft Intune](https://manage.microsoft.com). Zvolte **Správce**> **Správa mobilního zařízení** > **Microsoft Exchange**. Potom ověřte, že se vámi zadané podrobnosti zobrazí v části **Informace o připojení systému Exchange**.
 
 Můžete se taky podívat na datum a čas posledního úspěšného pokusu o synchronizaci.
 

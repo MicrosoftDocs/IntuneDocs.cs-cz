@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: 2a1a9bb4e49e997a6f152cadcf0c7a75b553cb42
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 5c57a069fc9d2ca561954f50cbefa21b13a563d1
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -58,7 +58,7 @@ Jestli podnik potřebuje ke správě zařízení skupiny mobilních zařízení,
 
 Profil registrace zařízení definuje nastavení, která se použijí pro skupinu zařízení.
 
-1. V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) přejděte na **Zásady** &gt; **Registrace podnikového zařízení** a zvolte **Přidat**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) přejděte na **Zásady** &gt; **Registrace podnikového zařízení** a zvolte **Přidat**.
 
   ![Vytvoření profilu registrace zařízení](../media/pol-sa-corp-enroll.png)
 
@@ -85,7 +85,7 @@ Profil registrace zařízení definuje nastavení, která se použijí pro skupi
 
 ### <a name="add-ios-devices-to-enroll-with-setup-assistant"></a>Přidejte zařízení s iOSem, která chcete zaregistrovat prostřednictvím pomocníka s nastavením.
 
-1. V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) přejděte na **Skupiny** &gt; **Všechna zařízení** &gt; **Všechna zařízení ve vlastnictví firmy** &gt; **Všechna zařízení** a zvolte **Přidat zařízení**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) přejděte na **Skupiny** &gt; **Všechna zařízení** &gt; **Všechna zařízení ve vlastnictví firmy** &gt; **Všechna zařízení** a zvolte **Přidat zařízení**.
 
    Zařízení můžete přidat dvěma způsoby:
 
@@ -128,7 +128,7 @@ V seznamu dostupných profilů vyberte profil, který se přiřadí přidaným z
 
 ### <a name="export-a-profile-to-deploy-to-ios-devices"></a>Exportujte profil, který se má nasadit na zařízení se systémem iOS.
 
-1. V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) přejděte na **Zásady** &gt; **Registrace podnikového zařízení** a vyberte profil zařízení nasazovaný u mobilních zařízení.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) přejděte na **Zásady** &gt; **Registrace podnikového zařízení** a vyberte profil zařízení nasazovaný u mobilních zařízení.
 
 2. Na hlavním panelu zvolte **Exportovat**. Zkopírujte a uložte **URL profilu**. Později URL odešlete do Apple Configuratoru, abyste definovali profil Intune používaný zařízeními iOS.
 

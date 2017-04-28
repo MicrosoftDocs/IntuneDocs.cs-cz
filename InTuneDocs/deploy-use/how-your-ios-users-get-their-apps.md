@@ -15,8 +15,9 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: dbc5f1b106df17aa8875997330dbfbb04a81f82f
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 02e54d4ae2ffa860fb95725c74fdff913e88365b
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -40,13 +41,13 @@ Omezení společnosti Apple zakazují, aby se firemní a spravované aplikace z 
 
 Zaregistrovaní uživatelé můžou používat aplikace po klepnutí na následující dlaždice na obrazovce Aplikace v aplikaci Portál společnosti:
 
-- **Všechny aplikace** zobrazí seznam všech aplikací na kartě VŠE na [webu Portál společnosti](http://portal.manage.microsoft.com).
+- **Všechny aplikace** zobrazí seznam všech aplikací na kartě VŠE na [webu Portál společnosti](https://portal.manage.microsoft.com).
 
 - Po klepnutí na **Vybrané aplikace** se uživatelům zobrazí na webu Portál společnosti karta VYBRANÉ.
 
 - **Kategorie** odkazují na webu Portál společnosti na kartu KATEGORIE.
 
- 
+
 ![Obrazovka aplikací na Portálu společnosti pro iOS](./media/ios-cp-app-main-apps-screen.png)
 
 Informace o tom, jak přidat aplikace a umístit je do těchto dlaždic, najdete v tématu [Přidávání aplikací pro zaregistrovaná zařízení do Intune](https://docs.microsoft.com/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune.md).
@@ -55,9 +56,4 @@ Informace o tom, jak přidat aplikace a umístit je do těchto dlaždic, najdete
 [Jak uživatelé s Androidem získávají svoje aplikace](how-your-android-users-get-their-apps.md)
 
 [Jak uživatelé s Windows získávají svoje aplikace](how-your-windows-users-get-their-apps.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

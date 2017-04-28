@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 521a37044d6721fe905db7740329688ba2c24b35
-ms.openlocfilehash: ae077d80e05b33d625285d796917f4f6c153ca3f
-ms.lasthandoff: 01/31/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 8ef5f26eced99dac547be727fc96e41c11d3a0e7
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -28,7 +28,7 @@ ms.lasthandoff: 01/31/2017
 
 Zařízení vlastněná organizací nebo společností můžete do Intune zaregistrovat kvůli správě různým způsobem. Záleží na typu zařízení, způsobu jeho nákupu a potřebách organizace. Můžete také nainstalovat aplikaci Portál společnosti a používat ji k registraci a správě zařízení patřících společnosti, například ve scénářích BYOD (Přineste si vlastní zařízení).
 
-Standardně se do Intune můžou registrovat zařízení pro všechny platformy. Pokud chcete u zařízení zablokovat možnost registrace, přihlaste se pomocí přihlašovacích údajů správce na [portál pro správu Microsoft Intune](http://manage.microsoft.com). Zvolte možnost **Správce** > **Správa mobilního zařízení** > **Pravidla registrace** a potom zrušte zaškrtnutí políček pro platformy, které chcete blokovat.
+Standardně se do Intune můžou registrovat zařízení pro všechny platformy. Pokud chcete u zařízení zablokovat možnost registrace, přihlaste se na [portál pro správu Microsoft Intune](https://manage.microsoft.com) pomocí přihlašovacích údajů správce. Zvolte možnost **Správce** > **Správa mobilního zařízení** > **Pravidla registrace** a potom zrušte zaškrtnutí políček pro platformy, které chcete blokovat.
 
 ## <a name="enroll-corporate-owned-ios-devices"></a>Registrace zařízení s iOSem vlastněných společností
 

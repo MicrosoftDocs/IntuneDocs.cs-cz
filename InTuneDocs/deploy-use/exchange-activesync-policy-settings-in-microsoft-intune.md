@@ -15,8 +15,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
-ms.openlocfilehash: f35a6da93e48141489b89e62b37b473d885479cf
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: c4023007f993436e0d7628cce52f78a1127c88f8
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -50,7 +51,7 @@ Pomocí zásady pro Microsoft Intune **Exchange ActiveSync** můžete nakonfigur
 |**Vyžadovat šifrování u paměťových karet**|Vyžaduje šifrování dat uložených v externích úložištích, jako je karta SD (u podporovaných zařízení).
 <sup>1</sup> Další informace pro zařízení s Windows 8.1
 
--   Pokud chcete vynutit šifrování na zařízeních s Windows 8.1, musíte na každé zařízení nainstalovat [aktualizaci MDM klienta pro Windows z prosince 2014](http://support.microsoft.com/kb/3013816).
+-   Pokud chcete vynutit šifrování na zařízeních s Windows 8.1, musíte na každé zařízení nainstalovat [aktualizaci MDM klienta pro Windows z prosince 2014](https://support.microsoft.com/kb/3013816).
 
 -   Pokud toto nastavení povolíte pro zařízení s Windows 8.1, všichni uživatelé zařízení musí mít účet Microsoft.
 
@@ -82,9 +83,4 @@ Pomocí zásady pro Microsoft Intune **Exchange ActiveSync** můžete nakonfigur
 
 ### <a name="see-also"></a>Související témata
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

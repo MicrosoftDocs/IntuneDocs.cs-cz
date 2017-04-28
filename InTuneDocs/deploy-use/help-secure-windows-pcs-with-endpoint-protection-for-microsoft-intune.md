@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 6673c8de8d5deb74005b40a58274efcb10783fcc
-ms.openlocfilehash: 7f94d420529ff365504b2bb053d034cf36d30953
-ms.lasthandoff: 03/08/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 39dab717810aa5f900cbb4f4371491b05de1ecd1
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -89,7 +89,7 @@ Pokud jste nastavili hodnoty zásad **Nainstalovat službu Endpoint Protection**
 |**Sledovat činnost souborů a programů v počítačích**|Umožňuje sledování příchozích a odchozích souborů a aktivitu programů na počítačích. S tímto nastavením může Endpoint Protection sledovat, když se soubory a programy spouštějí, a upozornit vás na všechny akce, které samy provádějí, nebo akce, které se s nimi provádějí.<br /><br />Doporučená hodnota: **Ano**|
 |**Sledované soubory**|Umožňuje zvolit, jestli se budou sledovat jenom příchozí, odchozí nebo všechny soubory.<br /><br />Doporučená hodnota: **Monitorovat všechny soubory**|
 |**Povolit monitorování chování**|Umožňuje, aby služba Microsoft Intune Endpoint Protection kontrolovala určité vzorce podezřelých aktivit na klientských počítačích.<br /><br />Doporučená hodnota: **Ano**|
-|**Povolit systém kontroly sítě**|Povolí systém kontroly sítě (NIS) na klientských počítačích. Systém NIS používá signatury známých slabých míst z [Centra společnosti Microsoft pro ochranu před škodlivým softwarem](http://go.microsoft.com/fwlink/?LinkId=234249) ke zjištění a blokování škodlivého síťového provozu.<br /><br />Doporučená hodnota: **Ano**|
+|**Povolit systém kontroly sítě**|Povolí systém kontroly sítě (NIS) na klientských počítačích. Systém NIS používá signatury známých slabých míst z [Centra společnosti Microsoft pro ochranu před škodlivým softwarem](https://go.microsoft.com/fwlink/?LinkId=234249) ke zjištění a blokování škodlivého síťového provozu.<br /><br />Doporučená hodnota: **Ano**|
 
   ![Nastavení ochrany v reálném čase pro Endpoint Protection](./media/pol-sa-pc-policy-realtime.png)
 

@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: f57323fe0b093f2478d71d3f01b9c0e5ee2727eb
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 160b8a7fe883b8af61831b30b711ad0243a3ec08
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -55,7 +55,7 @@ Autorita MDM definuje službu správy s oprávněním ke správě skupiny zaří
 > Důkladně zvažte, jestli chcete spravovat mobilní zařízení jenom pomocí Intune (online služba), nebo pomocí System Center Configuration Manageru s Intune (místní softwarové řešení ve spojení s online službou). Jakmile nastavíte autoritu pro správu mobilních zařízení, nebude možné ji bez asistence podpory Microsoftu změnit. Pokyny najdete v části [Co dělat, když zvolíte nesprávné nastavení autority pro správu mobilních zařízení (MDM)](#what-to-do-if-you-choose-the-wrong-mdm-authority-setting).
 
 
-1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) zvolte **Správce** &gt; **Správa mobilních zařízení**.
+1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Správce** &gt; **Správa mobilních zařízení**.
 
 2.  V seznamu **Úkoly** klikněte na **Nastavit autoritu pro správu mobilních zařízení**. Otevře se dialogové okno **nastavení autority pro správu mobilních zařízení** .
 

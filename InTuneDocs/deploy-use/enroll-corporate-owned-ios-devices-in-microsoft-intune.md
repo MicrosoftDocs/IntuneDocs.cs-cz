@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 2ed76d2905042f299022f1625ce7215c6834ad3f
-ms.openlocfilehash: 7fcb910dfc566cdf7112a48558cda375ea1c39a8
-ms.lasthandoff: 02/21/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 44b4fbad45decde806fb5be41ea12f0d8bcf9c95
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -26,7 +26,7 @@ ms.lasthandoff: 02/21/2017
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Microsoft Intune podporuje registraci firemních zařízení s iOSem prostřednictvím Programu registrace zařízení Apple nebo pomocí nástroje [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) na počítači Mac.
+Microsoft Intune podporuje registraci firemních zařízení s iOSem prostřednictvím Programu registrace zařízení Apple nebo pomocí nástroje [Apple Configurator](https://go.microsoft.com/fwlink/?LinkId=518017) na počítači Mac.
 
 **Předpoklad:** [Certifikát Apple Push Notification Service](set-up-ios-and-mac-management-with-microsoft-intune.md)
 
@@ -39,15 +39,15 @@ Při registraci zařízení s iOSem registrovaných podnikem můžete použít j
 >[!NOTE]
 >Způsoby registrace Apple Configurator a Program registrace zařízení nejdou použít u metody [registrace zařízení pomocí správce registrace](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md).
 
-Ve výchozím nastavení se můžou zaregistrovat v Intune všechna zařízení s iOSem. Pokud chcete zablokovat možnost registrace u osobních zařízení nebo zařízení vlastněných podnikem, přihlaste se pomocí přihlašovacích údajů správce na [portál pro správu Microsoft Intune](http://manage.microsoft.com). Zvolte možnost **správy** > **Správa mobilního zařízení** > **Pravidla registrace** a zrušte zaškrtnutí příslušných políček.
+Ve výchozím nastavení se můžou zaregistrovat v Intune všechna zařízení s iOSem. Pokud chcete zablokovat možnost registrace u osobních zařízení nebo zařízení vlastněných podnikem, přihlaste se pomocí přihlašovacích údajů správce na [portál pro správu Microsoft Intune](https://manage.microsoft.com). Zvolte možnost **správy** > **Správa mobilního zařízení** > **Pravidla registrace** a zrušte zaškrtnutí příslušných políček.
 
 ## <a name="use-apple-configurator"></a>Použití nástroje Apple Configurator
 
 Zařízení s iOSem můžete registrovat exportováním podnikového registračního profilu a následným připojením těchto mobilních zařízení k počítači Mac, na které běží nástroj Apple Configurator. Apple Configurator podporuje dva způsoby registrace:
 
-- **Registrace pomocí Pomocníka s nastavením:** Obnoví tovární nastavení a připraví zařízení k nastavení jeho novým uživatelem. Tato metoda vyžaduje, aby správce pomocí USB připojil zařízení s iOSem k počítači Mac, na kterém je spuštěný nástroj [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017), a předkonfiguroval registraci. Zařízení se pak doručí jejich uživatelům, kteří spustí proces Pomocníka s nastavením. Tento proces v zařízení nakonfiguruje pracovní nebo školní přihlašovací údaje a dokončí proces registrace. Další informace najdete v článku [Registrace zařízení s iOSem pomocí nástroje Apple Configurator a Pomocníka s nastavením](ios-setup-assistant-enrollment-in-microsoft-intune.md).
+- **Registrace pomocí Pomocníka s nastavením:** Obnoví tovární nastavení a připraví zařízení k nastavení jeho novým uživatelem. Tato metoda vyžaduje, aby správce pomocí USB připojil zařízení s iOSem k počítači Mac, na kterém je spuštěný nástroj [Apple Configurator](https://go.microsoft.com/fwlink/?LinkId=518017), a předkonfiguroval registraci. Zařízení se pak doručí jejich uživatelům, kteří spustí proces Pomocníka s nastavením. Tento proces v zařízení nakonfiguruje pracovní nebo školní přihlašovací údaje a dokončí proces registrace. Další informace najdete v článku [Registrace zařízení s iOSem pomocí nástroje Apple Configurator a Pomocníka s nastavením](ios-setup-assistant-enrollment-in-microsoft-intune.md).
 
-- **Přímá registrace**: Vytvoří soubor kompatibilní s nástrojem Apple Configurator, který můžete použít při přípravě zařízení. Zaregistrovanému zařízení není obnoveno tovární nastavení, nemá ale žádného přiřazeného uživatele. Tato metoda vyžaduje, aby správce pomocí USB připojil zařízení s iOSem k počítači Mac, na kterém je spuštěný nástroj [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017), a zaregistroval zařízení. Další informace najdete v článku [Registrace zařízení s iOSem pomocí přímé registrace nástroje Apple Configurator](ios-direct-enrollment-in-microsoft-intune.md).
+- **Přímá registrace**: Vytvoří soubor kompatibilní s nástrojem Apple Configurator, který můžete použít při přípravě zařízení. Zaregistrovanému zařízení není obnoveno tovární nastavení, nemá ale žádného přiřazeného uživatele. Tato metoda vyžaduje, aby správce pomocí USB připojil zařízení s iOSem k počítači Mac, na kterém je spuštěný nástroj [Apple Configurator](https://go.microsoft.com/fwlink/?LinkId=518017), a zaregistroval zařízení. Další informace najdete v článku [Registrace zařízení s iOSem pomocí přímé registrace nástroje Apple Configurator](ios-direct-enrollment-in-microsoft-intune.md).
 
 ## <a name="use-the-device-enrollment-program-dep"></a>Použití Programu registrace zařízení (DEP)
 DEP nasazuje registrační profil bezdrátově do zařízení, která jste prostřednictvím tohoto programu nakoupili. Když uživatel na zařízení spustí Pomocníka s nastavením, zařízení se zaregistruje do Intune. Další informace najdete v článku [Registrace zařízení s iOSem pomocí Programu registrace zařízení](ios-device-enrollment-program-in-microsoft-intune.md).
@@ -64,13 +64,13 @@ Přidružení uživatele je nezbytné pro podporu následujících funkcí:
 **Postup registrace zařízení s iOSem vlastněných společností s přidružením uživatele**
 1. Když uživatel zapne své zařízení, zobrazí se výzva k dokončení postupu Pomocníka s nastavením. Během nastavování se uživateli zobrazí výzva k zadání přihlašovacích údajů. Uživatel musí použít přihlašovací údaje (tj. jedinečné osobní jméno nebo hlavní název uživatele) přidružené k jeho předplatnému Intune.
 
-2. Během nastavování se uživateli zobrazí výzva k zadání Apple ID. Aby mohlo zařízení nainstalovat aplikaci Portál společnosti, musí uživatel zadat Apple ID. Po dokončení nastavení můžou ID zadat i z nabídky nastavení iOSu.
+2. Během nastavování se uživateli zobrazí výzva k zadání Apple ID. Aby mohlo zařízení nainstalovat aplikaci Portál společnosti, musí uživatel zadat Apple ID. Po dokončení nastavení můžou ID zadat i z nabídky nastavení iOS.
 
 3. Po dokončení nastavení musí zařízení s iOSem nainstalovat aplikaci Portál společnosti z App Storu.
 
 4. Uživatel se teď může přihlásit ke službě Portál společnosti pomocí hlavního názvu uživatele, který použil při nastavování zařízení.
 
-5. Po přihlášení se uživateli zobrazí výzva k registraci zařízení. Prvním krokem je identifikace zařízení. Aplikace zobrazí seznam zařízení s iOSem, která jsou už ve společnosti registrovaná a mají přiřazený účet Intune uživatele. Uživatel by měl vybrat odpovídající zařízení.
+5. Po přihlášení se uživateli zobrazí výzva k registraci zařízení. Prvním krokem je identifikace zařízení. Aplikace zobrazí seznam zařízení s iOS, která jsou už ve společnosti registrovaná a mají přiřazený účet Intune uživatele. Uživatel by měl vybrat odpovídající zařízení.
 
   Pokud zařízení ještě není ve společnosti zaregistrované, uživatel by měl vybrat **Nové zařízení** a pokračovat standardním postupem registrace.
 

@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 911d2887791cf16d4290c3ac5189aa44086f4603
-ms.openlocfilehash: 8f18f9ff2c32bb24b68fa987a8aad990b911a549
-ms.lasthandoff: 03/11/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 2a35387cdc2ebeb3c83fa043a8b2c6583fccdbc9
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -30,7 +30,7 @@ Zařízení, včetně počítačů s Windows, můžete registrovat ke správě m
 
 Pokud používáte [Exchange ActiveSync](#mobile-device-management-with-exchange-activesync-and-intune), ať už místní nebo hostovaný v cloudu, můžete povolit jednoduchou správu Intune bez registrace. Počítače s Windows je možné spravovat taky pomocí [klientského softwaru Intune](#manage-windows-pcs-with-intune).
 
-Standardně se do Intune můžou registrovat zařízení pro všechny platformy. Pokud chcete u zařízení zablokovat možnost registrace, přihlaste se na [portál pro správu Microsoft Intune](http://manage.microsoft.com) pomocí přihlašovacích údajů správce. Zvolte možnost **správy** > **Správa mobilních zařízení** > **Pravidla registrace** a zrušte zaškrtnutí políček pro platformy, které chcete blokovat.
+Standardně se do Intune můžou registrovat zařízení pro všechny platformy. Pokud chcete u zařízení zablokovat možnost registrace, přihlaste se na [portál pro správu Microsoft Intune](https://manage.microsoft.com) pomocí přihlašovacích údajů správce. Zvolte možnost **správy** > **Správa mobilních zařízení** > **Pravidla registrace** a zrušte zaškrtnutí políček pro platformy, které chcete blokovat.
 
 ## <a name="overview-of-device-enrollment-methods"></a>Přehled metod registrace zařízení
 

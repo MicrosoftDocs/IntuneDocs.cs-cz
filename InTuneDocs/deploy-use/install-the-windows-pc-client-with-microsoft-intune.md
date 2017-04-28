@@ -15,9 +15,9 @@ ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 2b3041019a7fe5a1ed7421401b36a72321af6cea
-ms.openlocfilehash: 0498aebe8e06314cb6f63f3f4def7011a3badf64
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 19cfb242fbd1be613b38c8aa06c12b741bc6cd74
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -106,7 +106,7 @@ Klientský software Intune můžete do počítače nasadit jako součást image 
 
 ## <a name="instruct-users-to-self-enroll"></a>Pokyny pro uživatele, jak se zaregistrovat sami
 
-Uživatelé nainstalují klientský software Intune tak, že přejdou na [web Portál společnosti](http://portal.manage.microsoft.com). Přesné informace, které uživatelé vidí na webovém portálu, se liší podle autority MDM vašeho účtu a platformy nebo verze operačního systému uživatelských počítačů.
+Uživatelé nainstalují klientský software Intune tak, že přejdou na [web Portál společnosti](https://portal.manage.microsoft.com). Přesné informace, které uživatelé vidí na webovém portálu, se liší podle autority MDM vašeho účtu a platformy nebo verze operačního systému uživatelských počítačů.
 
 Pokud nemají uživatelé přiřazenou licenci k Intune nebo nebyla na Intune nastavena autorita MDM, nezobrazí se uživatelům žádné možnosti registrace.
 

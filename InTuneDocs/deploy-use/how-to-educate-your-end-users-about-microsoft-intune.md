@@ -14,9 +14,9 @@ ms.assetid: 48914533-f138-4dc0-8b93-4cea3ac61f7b
 ms.reviewer: robstack
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e0ecc775f70703574c4e1adf0f0aa204f2745b72
-ms.openlocfilehash: a0ae4d74ad99adcfab596eb0c441c845fbca3a9e
-ms.lasthandoff: 04/20/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: abba595672fa88efc022128ec8751cb27d14b089
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -50,7 +50,7 @@ Pokud tyto obavy uživatelů dokážete rozptýlit, nasazení bude hladší. Má
 
 * __Buďte osobní.__ Pokud uživatelé dostanou jenom obecné pokyny, které nejsou specifické pro vaše nasazení, můžou mít pocit, že nevěnujete dostatek pozornosti jejich zkušenostem. Pomocí této [přizpůsobitelné šablony pro registraci koncových uživatelů do Intune pro správce IT](https://gallery.technet.microsoft.com/office/Intune-End-User-Enrollment-3a0c9b0c) můžete pro koncové uživatele vytvořit vlastní pokyny k registraci.
 
-* __Komunikujte různými způsoby.__ Existují [různé způsoby učení](http://www.umassd.edu/dss/resources/facultystaff/howtoteachandaccommodate/howtoaccommodatedifferentlearningstyles/) a uživatelé proto můžou preferovat různé způsoby získávání informací. Pro uživatele, kteří dávají přednost videu před dokumentací, nabízíme na webu Channel9 [videa věnovaná registraci na různých typech zařízení](https://channel9.msdn.com/Series/IntuneEnrollment) a další materiály. Tato videa můžete vložit přímo na váš [sharepointový web](https://support.office.com/article/Embed-a-video-from-Office-365-Video-59e19984-c34e-4be8-889b-f6fa93910581) nebo si můžete stáhnout jejich místní kopie (buď kopie videí, nebo jenom jejich zvukové stopy).
+* __Komunikujte různými způsoby.__ Existují [různé způsoby učení](https://www.umassd.edu/dss/resources/facultystaff/howtoteachandaccommodate/howtoaccommodatedifferentlearningstyles/) a uživatelé proto můžou preferovat různé způsoby získávání informací. Pro uživatele, kteří dávají přednost videu před dokumentací, nabízíme na webu Channel9 [videa věnovaná registraci na různých typech zařízení](https://channel9.msdn.com/Series/IntuneEnrollment) a další materiály. Tato videa můžete vložit přímo na váš [sharepointový web](https://support.office.com/article/Embed-a-video-from-Office-365-Video-59e19984-c34e-4be8-889b-f6fa93910581) nebo si můžete stáhnout jejich místní kopie (buď kopie videí, nebo jenom jejich zvukové stopy).
 
 * __Buďte vnímaví.__ Zkušenosti koncových uživatelů budou mít vliv na produktivitu práce ve vaší firmě. Pokud tedy jejich zkušenostem porozumíte, budete moct snadněji řešit problémy, se kterými se na vás budou obracet. Pokud pochopíte, jak uživatelé jednotlivé aplikace vnímají, můžete snadněji diagnostikovat, s jakými potížemi se potýkají, a můžete jim pomoct jejich problémy rychleji řešit.
 
