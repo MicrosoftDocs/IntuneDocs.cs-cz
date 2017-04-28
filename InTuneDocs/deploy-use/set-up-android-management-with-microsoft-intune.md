@@ -15,9 +15,9 @@ ms.reviewer: lacranda
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 86fd9d7212277f9524eb4d7f225df2c7beda1313
-ms.openlocfilehash: a5a4f11ae341480b2e674ca55a514b62831bdd60
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 4042a22ecfbab7970ea4b3dab8ee6a82b0da5f78
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/21/2017
 
 Správce Intune může na Portálu společnosti povolit správu zařízení s Androidem, včetně zařízení se sadou Samsung Knox Standard. Uživatelé pak mohou k registraci svých zařízení použít aplikaci Portál společnosti, která je k dispozici v obchodě Google Play.
 
-Zařízení s Androidem se standardně můžou registrovat do Intune. Pokud chcete u zařízení s Androidem zablokovat možnost registrace, přihlaste se pomocí přihlašovacích údajů správce na [portál pro správu Microsoft Intune](http://manage.microsoft.com). Zvolte **Správce** > **Správa mobilního zařízení** > **Pravidla registrace** a potom zrušte zaškrtnutí políčka **Povolit zařízení s Androidem**.
+Zařízení s Androidem se standardně můžou registrovat do Intune. Pokud chcete u zařízení s Androidem zablokovat možnost registrace, přihlaste se pomocí přihlašovacích údajů správce na [portál pro správu Microsoft Intune](https://manage.microsoft.com). Zvolte **Správce** > **Správa mobilního zařízení** > **Pravidla registrace** a potom zrušte zaškrtnutí políčka **Povolit zařízení s Androidem**.
 
 1.  **Nastavení Intune**<br>
     Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení [nastavením autority pro správu mobilních zařízení](prerequisites-for-enrollment.md#step-2-set-mdm-authority) na **Microsoft Intune** a nastavením správy MDM.

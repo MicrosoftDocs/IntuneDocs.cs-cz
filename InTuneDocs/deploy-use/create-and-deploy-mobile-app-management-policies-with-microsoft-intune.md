@@ -15,9 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
-ms.openlocfilehash: 34d4dc309044336eb3e625a1ecdc50abb48d6fa3
-ms.lasthandoff: 04/01/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 31b7ff2b9644f47107199f0f1d237847169c3143
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -57,7 +57,7 @@ Zásady ochrany aplikací se vytvářejí na portálu Azure Portal. Pokud portá
 
 Při vytváření zásad ochrany aplikací postupujte takto:
 
-1. Přejděte na portál [Azure Portal](http://portal.azure.com) a zadejte přihlašovací údaje.
+1. Přejděte na portál [Azure Portal](https://portal.azure.com) a zadejte přihlašovací údaje.
 
 2. Zvolte **Další služby** a zadejte „Intune“.
 
@@ -109,7 +109,7 @@ Zásada není po vytvoření pomocí výš uvedeného postupu nasazená pro žá
 
 Počínaje verzí Intune 1703 máte možnost při vytváření nových zásad ochrany aplikací do Intune obecně přidávat obchodní aplikace. Můžete tak definovat zásady ochrany aplikací pro obchodní aplikace pomocí sady MAM SDK, aniž byste potřebovali úplná oprávnění k nasazení aplikací.
 
-> [!TIP] 
+> [!TIP]
 > Obchodní aplikace můžete do Intune přidávat také v průběhu pracovního postupu sady [Intune App SDK](https://docs.microsoft.com/intune/develop/intune-app-sdk-get-started).
 
 > [!IMPORTANT]
@@ -127,13 +127,13 @@ Počínaje verzí Intune 1703 máte možnost při vytváření nových zásad oc
 
 ### <a name="to-add-lob-apps-windows"></a>Přidání obchodních aplikací (Windows)
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Při vytváření nových zásad ochrany aplikací musíte z rozevíracího seznamu platformy zvolit Windows 10.
 
 1.  V okně Přidat zásadu zvolte **Povolené aplikace** nebo **Aplikace s výjimkou**. Tím otevřete příslušné okno.
 
     > [!NOTE]
-    > 
+    >
     - **Povolené aplikace**: Tyto aplikace musejí tyto zásady dodržovat.
     - **Aplikace s výjimkou**: Tyto aplikace mají z těchto zásad výjimku a můžou k podnikovým datům přistupovat bez omezení.
 <br></br>

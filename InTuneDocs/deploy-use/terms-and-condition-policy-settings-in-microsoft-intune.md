@@ -15,9 +15,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: a6d5f19b1d5f5bac3cd5e6d8bc445d765d703de0
-ms.lasthandoff: 12/10/2016
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 177485a0b09a2b0213a293914799a34a3bfa1136
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -32,7 +32,7 @@ Můžete vytvořit a nasadit různé zásady obsahující různé podmínky a uj
 
 ## <a name="create-a-terms-and-conditions-policy"></a>Vytvoření zásad podmínek a ujednání
 
-1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) klikněte na **Zásady** &gt; **Podmínky a ujednání**.
+1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) klikněte na **Zásady** &gt; **Podmínky a ujednání**.
 
     ![Snímky obrazovky podmínek a ujednání](./media/pol-sa-terms-conditions.png)
 
@@ -54,7 +54,7 @@ Můžete vytvořit a nasadit různé zásady obsahující různé podmínky a uj
 
 ## <a name="deploy-a-terms-and-conditions-policy"></a>Nasazení zásady podmínek a ujednání
 
-1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) klikněte na **Zásady** &gt; **Podmínky a ujednání**.
+1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) klikněte na **Zásady** &gt; **Podmínky a ujednání**.
 
 2.  V seznamu **Zásady podmínek a ujednání** vyberte zásadu, kterou chcete nasadit, a klikněte na **Spravovat nasazení**.
 
@@ -64,7 +64,7 @@ Můžete vytvořit a nasadit různé zásady obsahující různé podmínky a uj
 
 ## <a name="monitor-a-terms-and-conditions-policy"></a>Monitorování zásad podmínek a ujednání
 
-1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) klikněte na **Zásady** &gt; **Podmínky a ujednání**.
+1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) klikněte na **Zásady** &gt; **Podmínky a ujednání**.
 
 2.  V okně **Vytvořit novou sestavu** klikněte na **Zobrazit sestavu**. Sestava se otevře s podrobnostmi o tom, kteří uživatelé přijali podmínky a ujednání, které jste nasadili.
 
@@ -73,7 +73,7 @@ Při úpravách existujících zásad podmínek a ujednání můžete zvolit cho
 
 ## <a name="work-with-multiple-versions-of-terms-and-conditions"></a>Práce s více verzemi podmínek a ujednání
 
-1.  V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) klikněte na **Zásady** &gt; **Podmínky a ujednání**.
+1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) klikněte na **Zásady** &gt; **Podmínky a ujednání**.
 
 2.  Vyberte zásadu podmínek a ujednání, kterou chcete upravit, a potom klikněte na **Upravit**.
 
