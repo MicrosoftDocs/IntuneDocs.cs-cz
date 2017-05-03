@@ -5,7 +5,7 @@ description: "Intune Azure Preview: Naučte se povolit správu mobilních zaří
 keywords: 
 author: nathbarn
 manager: nathbarn
-ms.date: 03/21/17
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 771aed4e1c57171183b9a9ea7d9e0f702dc1859c
-ms.openlocfilehash: b62a5704605f5cf89efb4052180f09f88eb788e1
-ms.lasthandoff: 04/06/2017
+ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
+ms.openlocfilehash: 3c764b269916ae1a9b076617842eb26d7fd13bab
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -28,7 +28,10 @@ ms.lasthandoff: 04/06/2017
 
 Toto téma pomáhá správcům IT zjednodušit svým uživatelům registraci zařízení s Windows.  Zařízení s Windows se dají zaregistrovat bez dodatečných kroků, ale registraci můžete uživatelům usnadnit.
 
-O způsobu registrace zařízení s Windows rozhodují dva faktory:
+Zařízení se systémem Windows 10 Creators Update připojená k doméně Azure Active Directory mají teď podporu správy více uživatelů pomocí Intune. To znamená, že když se k zařízení přihlásí různí standardní uživatelé pomocí svých přihlašovacích údajů Azure AD, dostanou všechny aplikace a zásady přiřazené jejich uživatelskému jménu. Uživatelé v současnosti nemůžou používat Portál společnosti pro samoobslužné scénáře, například instalování aplikací.
+
+Způsob zjednodušení registrace zařízení s Windows určují dva faktory:
+
 - **Používáte Azure Active Directory Premium?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) je součástí Enterprise Mobility + Security a dalších plánů licencování.
 - **Jaké verze klientů Windows se budou registrovat?** <br>Zařízení s Windows 10 se můžou zaregistrovat automaticky přidáním pracovního nebo školního účtu. Starší verze se musí zaregistrovat pomocí aplikace Portál společnosti.
 
@@ -40,7 +43,7 @@ O způsobu registrace zařízení s Windows rozhodují dva faktory:
 [!INCLUDE[AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
 
 ## <a name="enable-windows-enrollment-without-azure-ad-premium"></a>Povolení registrace zařízení se systémem Windows bez Azure AD Premium
-Můžete umožnit, aby si uživatelé svá zařízení zaregistrovali bez automatické registrace Azure AD Premium. Po přiřazení licence k účtu uživatele může uživatel tento účet přidat do zařízení s Windows a souhlasit s registrací zařízení v systému správy. Vytvoření aliasu DNS (typ záznamu CNAME) zjednodušuje uživatelům registraci zařízení. Pokud vytvoříte záznamy prostředků DNS CNAME, uživatelé se můžou připojit k Intune a zaregistrovat se, aniž by museli zadávat název serveru Intune.
+Můžete umožnit, aby si uživatelé svá zařízení zaregistrovali bez automatické registrace Azure AD Premium. Jakmile přiřadíte licence, mohou se uživatelé zaregistrovat poté, co přidají svoje pracovní účty na svoje vlastní zařízení nebo připojí svoje firemní zařízení k Azure AD. Vytvoření aliasu DNS (typ záznamu CNAME) zjednodušuje uživatelům registraci zařízení. Pokud vytvoříte záznamy prostředků DNS CNAME, uživatelé se můžou připojit k Intune a zaregistrovat se, aniž by museli zadávat název serveru Intune.
 
 **Krok 1: Vytvořte záznamy CNAME** (volitelné)<br>
 Vytvořte záznamy o prostředcích DNS CNAME pro doménu vaší společnosti. Pokud má třeba vaše společnost web contoso.com, vytvořili byste ve službě DNS záznam CNAME, který přesměruje adresu EnterpriseEnrollment.contoso.com na EnterpriseEnrollment-s.manage.microsoft.com.

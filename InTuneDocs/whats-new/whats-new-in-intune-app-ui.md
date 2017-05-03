@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 04/12/2017
+ms.date: 04/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 0a39abc7f19f4c2c8074de66a9cd5df9cef78ed5
-ms.openlocfilehash: 81761af5ab5aebe6abb44ff43a7df5a337d38fc7
-ms.lasthandoff: 04/13/2017
+ms.sourcegitcommit: 62dcb40ad5a7921c514a9d41da14b991e39f3bcd
+ms.openlocfilehash: f4a48b889702147abe20fd513fdb0f774020a54a
+ms.lasthandoff: 04/20/2017
 
 
 ---
@@ -27,13 +27,57 @@ Zjistěte, jaké jsme v uživatelském rozhraní aplikací udělali změny, kter
 > [!Note]
 > Upozorňujeme, že následující obrázky jsou náhledy a oznámený produkt se od prezentovaných verzí může lišit.
 
-## <a name="whats-coming-in-intune-app-ui"></a>Co připravujeme v uživatelském rozhraní aplikace Intune
+## <a name="april-2017"></a>Duben 2017
 
-### <a name="april-2017"></a>Duben 2017
+### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Vylepšené přihlašování k aplikacím Portál společnosti na všech platformách <!--User Story 1132123-->
 
-#### <a name="new-icons-for-the-managed-browser-and-the-company-portal---918433-918431--"></a>Nové ikony pro Managed Browser a Portál společnosti <!--918433, 918431-->
+Vylepšujeme přihlašování k aplikacím Portál společnosti Intune pro Android, iOS a Windows.  Nové uživatelské prostředí se automaticky zobrazí na všech platformách pro aplikaci Portál společnosti, až Azure AD tuto změnu provede. Kromě toho se teď uživatelé můžou k Portálu společnosti přihlašovat z jiného zařízení pomocí vygenerovaného kódu na jedno použití. To se hodí hlavně v případech, kdy se uživatelé potřebují přihlásit bez přihlašovacích údajů.  
 
-Managed Browser dostal aktualizované ikony pro verze aplikace pro Android i iOS. Nová ikona bude obsahovat aktualizovaný odznáček Intune, aby byla konzistentnější s ostatními aplikacemi v Enterprise Mobility + Security (EM+S).
+Níže můžete vidět předchozí způsob přihlašování, nový způsob přihlašování pomocí přihlašovacích údajů a nový způsobu přihlašování z jiného zařízení.
+
+__Předchozí způsob přihlašování__
+
+![Přihlašovací stránka Portálu společnosti s ikonou osoby před grafickým znázorněním webu. Pod tím je tlačítko „Přihlásit se“. Odkaz dole vede na informace Microsoftu o ochraně osobních údajů a souborech cookie.](./media/cp_ios_aad_signin_before_1704_001.png)
+
+![Po klepnutí na Přihlásit se uživatel zadá své přihlašovací údaje na této stránce, která požádá o uživatelův e-mail a heslo a současně nabídne způsoby, jak vyřešit problémy s heslem.](./media/cp_ios_aad_signin_before_1704_002.png)
+
+![Po zadání hesla aplikace Portál společnosti zobrazí pruh načítání a přihlásí se.](./media/cp_ios_aad_signin_before_1704_003.png)
+
+__Nový způsob přihlašování__
+
+![Přihlašovací stránka Portálu společnosti s ikonou osoby před grafickým znázorněním webu. Pod tím je tlačítko „Přihlásit se“. Odkaz dole vede na informace Microsoftu o ochraně osobních údajů a souborech cookie.](./media/cp_ios_aad_signin_after_1704_001.png)
+
+![Uživatel je vyzván, aby zadal jenom e-mailovou adresu místo zadání e-mailu a hesla na stejné obrazovce.](./media/cp_ios_aad_signin_after_1704_002.png)
+
+![Po přijetí e-mailové adresy je uživatel vyzván k zadání hesla.](./media/cp_ios_aad_signin_after_1704_003.png)
+
+__Nový způsob přihlášení při přihlašování z jiného zařízení__
+
+![Přihlašovací stránka Portálu společnosti s ikonou osoby před grafickým znázorněním webu. Pod tím je tlačítko „Přihlásit se“. Odkaz dole vede na informace Microsoftu o ochraně osobních údajů a souborech cookie.](./media/cp_ios_aad_signin_from_another_device_after_1704_001.png)
+
+Klepněte na odkaz __Přihlásit z jiného zařízení__.
+
+![Uživatel je vyzván, aby zadal jenom e-mailovou adresu místo zadání e-mailu a hesla na stejné obrazovce. Pod polem e-mailu je odkaz „Přihlásit z jiného zařízení“.](./media/cp_ios_aad_signin_from_another_device_after_1704_002.png)
+
+![Zobrazí se pokyny, abyste ze svého pracovního počítače přešli na stránku aka.ms/devicelogin s jedinečným přístupovým kódem a pak kód použili k přihlášení.](./media/cp_ios_aad_signin_from_another_device_after_1704_003.png)
+
+Spusťte prohlížeč a přejděte na [http://aka.ms/devicelogin](https://aka.ms/devicelogin).
+
+![Obrázek uživatelova prohlížeče na pracovním počítači místo aplikace Portál společnosti. Zobrazená stránka „Přihlášení na zařízení“ uživatele vyzve k zadání kódu, který dostal v aplikaci Portál společnosti.](./media/cp_ios_aad_signin_from_another_device_after_1704_004.png)
+
+Zadejte kód, který se vám zobrazil v aplikaci Portál společnosti. Když vyberete __Pokračovat__, budete moct provést ověření pomocí libovolné metody, kterou vaše společnost podporuje, například pomocí čipové karty.
+
+![Uživatel zadal svůj jedinečný kód do pole a web „Přihlášení na zařízení“ požádal o potvrzení, že je Portál společnosti Intune správnou aplikací, která má získat ověření pro přihlášení.](./media/cp_ios_aad_signin_from_another_device_after_1704_005.png)
+
+![Potvrzovací stránka, která uvádí, že se uživatel na svém zařízení přihlásil k aplikaci Portál společnosti a že tuto stránku může zavřít.](./media/cp_ios_aad_signin_from_another_device_after_1704_006.png)
+
+Aplikace Portál společnosti se začne přihlašovat.
+
+![Po absolvování procesu ověřování aplikace Portál společnosti zobrazí pruh načítání a přihlásí se.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
+
+### <a name="new-icons-for-the-managed-browser-and-the-company-portal---918433-918431--"></a>Nové ikony pro Managed Browser a Portál společnosti<!--918433, 918431-->
+
+Managed Browser dostal aktualizované ikony pro verze aplikace pro Android i iOS. Nová ikona bude obsahovat aktualizovaný odznak Intune, aby byla konzistentnější s ostatními aplikacemi v Enterprise Mobility + Security (EM+S).
 
 <html>
 <body>
@@ -52,7 +96,7 @@ Managed Browser dostal aktualizované ikony pro verze aplikace pro Android i iOS
 
 Portál společnosti také dostal aktualizované ikony pro verze aplikace pro Android, iOS i Windows, aby byly konzistentnější s ostatními aplikacemi v EM+S. Tyto ikony se budou postupně vydávat pro všechny platformy od dubna do konce května.
 
-#### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Ukazatel průběhu přihlášení v Portálu společnosti pro Android <!--953374-->
+### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Ukazatel průběhu přihlášení v Portálu společnosti pro Android <!--953374-->
 
 Aktualizace aplikace Portál společnosti pro Android zobrazuje indikátor průběhu přihlášení, když uživatel aplikaci spustí nebo pokračuje v jejím používání. Než uživatel získá přístup k aplikaci, indikátor postupně zobrazuje nové stavy od „Připojování...“ přes „Přihlašování...“ po „Kontrolují se požadavky na zabezpečení...“.
 
@@ -74,9 +118,7 @@ Aktualizace aplikace Portál společnosti pro Android zobrazuje indikátor průb
 </body>
 </html>
 
-## <a name="whats-been-announced-for-ui-updates-for-end-user-apps"></a>Co je ohlášené ohledně aktualizací uživatelského rozhraní pro aplikace pro koncové uživatele
-
-### <a name="february-2017"></a>Únor 2017
+## <a name="february-2017"></a>Únor 2017
 
 ### <a name="new-user-experience-for-the-company-portal-app-for-android---621622-announced-1702--"></a>Nové uživatelské prostředí aplikace Portál společnosti pro Android <!--621622, announced 1702-->
 Od března bude aplikace Portál společnosti pro Android odpovídat [specifikacím Material Design](https://material.io/guidelines/material-design/introduction.html) a získá tak modernější vzhled a chování. Toto vylepšené uživatelské prostředí zahrnuje:
@@ -113,7 +155,7 @@ Od února bude web Portál společnosti podporovat aplikace zaměřené na uživ
 
 ### <a name="see-also"></a>Související témata
 * [Blog Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
-* [Plán cloudové platformy](http://www.microsoft.com/en-us/server-cloud/roadmap/Indevelopment.aspx?TabIndex=0&dropValue=Intune)
+* [Plán cloudové platformy](https://www.microsoft.com/server-cloud/roadmap/Indevelopment.aspx?TabIndex=0&dropValue=Intune)
 * [Co je nového v Azure Preview](https://docs.microsoft.com/intune-azure/introduction/whats-new)
 * [Co je nového – archiv](whats-new-archive.md)
 

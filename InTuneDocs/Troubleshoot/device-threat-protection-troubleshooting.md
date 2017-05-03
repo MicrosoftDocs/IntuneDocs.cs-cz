@@ -15,8 +15,9 @@ ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 905be6a926dc5bab8e9b1016ba82751ee47313e5
-ms.openlocfilehash: b02a5247cec36b45679a76bf3d637cf8b5c031f4
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: de2f224f203257fe539196557180f0b5da5d8373
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -29,14 +30,14 @@ Toto téma popisuje některé z nejčastějších problémů, na které můžete
 
 **Chyby při přihlášení**
 
-## <a name="403-errors"></a>Chyby&403;
+## <a name="403-errors"></a>Chyby 403
 Když se přihlásíte ke [konzole Lookout MTP](https://aad.lookout.com), zobrazí se chyba 403: **Nemáte oprávnění pro přístup ke službě.** K této situaci může dojít, pokud zadané uživatelské jméno není členem skupiny Azure Active Directory (AD), která je nakonfigurovaná pro přístup k Lookout MTP.
 
 Přístup k Lookout MTP mají jenom uživatelé z nakonfigurované skupiny Azure AD. Pokud chcete zjistit, která skupina je nakonfigurovaná tak, aby měla přístup k Lookout MTP, obraťte se na tým podpory Lookoutu:
 
 * E-mail: enterprisesupport@lookout.com
 * Přihlaste se ke [konzole MTP](http://aad.lookout.com) a přejděte do modulu **Podpora**.
-* Přejděte na adresu: https://enterprise.support.lookout.com/hc/en-us/requests a vytvořte žádost o podporu.
+* Přejděte na adresu https://enterprise.support.lookout.com/hc/requests a vytvořte žádost o podporu.
 
 ## <a name="unable-to-sign-in"></a>Nelze se přihlásit
 Pokud globální správce Azure AD nepřijal úvodní nastavení Lookoutu, zobrazí se následující chyba.
@@ -55,7 +56,7 @@ Tato situace může nastat při jednom z následujících scénářů:
 
 ### <a name="device-reported-as-pending"></a>Zařízení se zobrazuje jako **čekající**
 
-Zařízení zobrazuje stav **Čekající**, pokud koncový uživatel dosud neotevřel aplikaci Lookout for Work a neklepl na tlačítko **Aktivovat**. Další podrobnosti o aktivaci zařízení s aplikací Lookout for Work najdete v tématu [Jste vyzváni k instalaci aplikace Lookout for Work na zařízení s Androidem](http://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android) nebo [Jste vyzváni k instalaci aplikace Lookout for Work na zařízení s iOSem](https://docs.microsoft.com/en-us/intune/enduser/you-are-prompted-to-install-lookout-for-work-ios).
+Zařízení zobrazuje stav **Čekající**, pokud koncový uživatel dosud neotevřel aplikaci Lookout for Work a neklepl na tlačítko **Aktivovat**. Další podrobnosti o aktivaci zařízení s aplikací Lookout for Work najdete v tématu [Jste vyzváni k instalaci aplikace Lookout for Work na zařízení s Androidem](http://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android) nebo [Jste vyzváni k instalaci aplikace Lookout for Work na zařízení s iOSem](https://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-ios).
 
 ## <a name="device-whos-active-but-has-no-device-id"></a>Zařízení je aktivní, ale nemá ID zařízení
 Pokud aktivní zařízení v konzole Lookout MTP nemá ID zařízení, není uživatel daného zařízení ve skupině pro registraci. Tento stav může nastat, pokud byl uživatel daného zařízení odebrán ze skupiny pro registraci nebo pokud byla skupina pro registraci odebrána.
@@ -83,14 +84,9 @@ Pokud je nový uživatel v Lookout MTP členem skupiny pro registraci, zobrazí 
 ## <a name="compliance-remediation-workflows"></a>Pracovní postupy nápravy dodržování předpisů
 - [Zobrazuje se výzva k instalaci aplikace Lookout for Work na zařízení s Androidem]( http://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android)
 - [Je třeba vyřešit hrozbu, kterou objevila aplikace Lookout for Work na zařízení s Androidem](http://docs.microsoft.com/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-android)
-- [Je třeba vyřešit hrozbu, kterou aplikace Lookout for Work objevila na vašem zařízení s iOSem](https://docs.microsoft.com/en-us/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-ios)
+- [Je třeba vyřešit hrozbu, kterou aplikace Lookout for Work objevila na vašem zařízení s iOSem](https://docs.microsoft.com/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-ios)
 
 
 ### <a name="see-also"></a>Související témata
-[Nastavení předplatného pro Lookout MTP](https://docs.microsoft.com/en-us/intune/deploy-use/set-up-your-subscription-with-lookout-mtp)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
+[Nastavení předplatného pro Lookout MTP](https://docs.microsoft.com/intune/deploy-use/set-up-your-subscription-with-lookout-mtp)
 

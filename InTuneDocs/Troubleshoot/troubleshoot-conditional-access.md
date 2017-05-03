@@ -15,9 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 9894fdb696f4e010e176efc47068827bddaf7d4e
-ms.openlocfilehash: 8c84703828db3c5da2aa88fa3dc16329f3a4a1e1
-ms.lasthandoff: 03/04/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: cc14d6a44b3dcb6234cc77cb463098a9d2f4c5b8
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -63,7 +63,7 @@ Tyto podmínky lze zobrazit pro každé zařízení v portálu pro správu Azure
     
         -    Zařízení, která jsou v tomto stavu, vyžadují, aby uživatel nastavil bezpečné heslo pro spuštění. Uživateli se zobrazí oznámení aplikace Portál společnosti s výzvou k nastavení hesla pro spuštění zařízení. Po klepnutí na oznámení a potvrzení stávajícího PIN kódu nebo hesla zvolte na obrazovce **Zabezpečené spouštění** možnost **Požadovat PIN pro spuštění zařízení**. Pak v aplikaci Portál společnosti klepněte na tlačítko **Zkontrolovat dodržování předpisů** pro dané zařízení. Zařízení by se teď mělo rozpoznat jako zašifrované.
     
-        -     Někteří výrobci zařízení používají k zašifrování svých zařízení místo tajného PIN kódu nastaveného uživatelem výchozí PIN. Intune považuje šifrování pomocí výchozího PIN kódu jako nezabezpečené, protože tato metoda šifrování dat na zařízení představuje riziko, pokud uživatelé se zlými úmysly mají fyzický přístup k danému zařízení. V případě tohoto problému zvažte použití [zásad ochrany aplikací](https://docs.microsoft.com/en-us/intune/deploy-use/azure-portal-for-microsoft-intune-mam-policies).
+        -     Někteří výrobci zařízení používají k zašifrování svých zařízení místo tajného PIN kódu nastaveného uživatelem výchozí PIN. Intune považuje šifrování pomocí výchozího PIN kódu jako nezabezpečené, protože tato metoda šifrování dat na zařízení představuje riziko, pokud uživatelé se zlými úmysly mají fyzický přístup k danému zařízení. V případě tohoto problému zvažte použití [zásad ochrany aplikací](https://docs.microsoft.com/intune/deploy-use/azure-portal-for-microsoft-intune-mam-policies).
 
 ## <a name="policy-issues"></a>problémy se zásadami;
 
@@ -119,7 +119,7 @@ Pokud tyto postupy pro řešení potíží problém nevyřeší, může vás pod
 ### <a name="exchange-connector-logs"></a>Protokoly Exchange Connectoru
 
 #### <a name="general-log-information"></a>Obecné informace o protokolech
-Pokud chcete zobrazit protokoly Exchange Connectoru, použijte nástroj Server Trace Viewer Tool (https://msdn.microsoft.com/en-us/library/ms732023(v=vs.110).aspx). Tento nástroj vyžaduje, abyste si stáhli sadu Windows Server SDK.
+Pokud chcete zobrazit protokoly Exchange Connectoru, použijte nástroj Server Trace Viewer Tool (https://msdn.microsoft.com/library/ms732023(v=vs.110).aspx'). Tento nástroj vyžaduje, abyste si stáhli sadu Windows Server SDK.
 
 >[!NOTE]
 >Protokoly jsou umístěné v adresáři C:\ProgramData\Microsoft\Windows Intune Exchange Connector\Logs. Protokoly jsou obsažené v posloupnosti 30 souborů, začínající souborem *Connector0.log* a končící souborem *Connector29.log*. Protokoly přecházejí na další po nahromadění 10 MB dat v protokolu. Jakmile se protokoly dostanou k souboru Connector29, začnou zase od Connector0 a budou přepisovat předchozí soubory protokolu.

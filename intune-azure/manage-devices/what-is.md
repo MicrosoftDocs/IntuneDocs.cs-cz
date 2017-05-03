@@ -15,14 +15,14 @@ ms.assetid:
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 24498abc504f05bd22dc7309bc22948292f9b1e6
-ms.openlocfilehash: 731d57859474276b51c0cb0b17a3354eaec17348
-ms.lasthandoff: 04/13/2017
+ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
+ms.openlocfilehash: 25a46754f6c7e44b3f4fef7e8eef015cf559e31f
+ms.lasthandoff: 04/19/2017
 
 
 ---
 
-# <a name="what-is-microsoft-intune-device-management"></a>Co je správa zařízení v Microsoft Intune? 
+# <a name="what-is-microsoft-intune-device-management"></a>Co je správa zařízení v Microsoft Intune?
 
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
@@ -38,8 +38,8 @@ Pak vyberte jednu z těchto možností:
 - **Přehled** – získáte informace o zaregistrovaných zařízeních a operačních systémech na jednotlivých zařízeních.
 - **Spravovat** – volbou možnosti **Všechna zařízení** zobrazíte seznam všech spravovaných zařízení.
     Když vyberete některé zařízení v tomto seznamu, otevře se okno <*název zařízení*> **Přehled**, kde můžete vybrat jednu z těchto možností:
-    - **Přehled** – zobrazí se obecné informace o tomto zařízení, například název, vlastník, jestli se jedná o vlastní zařízení uživatele, kdy se naposledy přihlásilo a další. 
-                
+    - **Přehled** – zobrazí se obecné informace o tomto zařízení, například název, vlastník, jestli se jedná o vlastní zařízení uživatele, kdy se naposledy přihlásilo a další.
+
     - **Hardware** – zobrazí podrobnější informace o zařízení, například volný úložný prostor, model a výrobce.
     ![Inventář hardwaru spravovaných zařízení](./media/hardware-inventory.png)
     - **Zjištěné aplikace** – zobrazí seznam všech nainstalovaných aplikací, které služba Intune našla na zařízení.
@@ -67,6 +67,12 @@ Vygeneruje pro zařízení nového heslo, které se zobrazí v okně <*název za
 ### <a name="bypass-activation-lock"></a>**Vynechat zámek aktivace**
 Odebere zámek aktivace ze zařízení s iOSem bez Apple ID a hesla uživatele. Když zámek aktivace vynecháte, zařízení ho znovu zapne při spuštění aplikace Najít iPhone. Zámek aktivace vynechejte jenom v případě, že máte k zařízení fyzický přístup.
 
+### <a name="fresh-start"></a>**Začít znovu**
+
+Odebere všechny aplikace, které byly nainstalované v počítači s Windows 10 Creators Update, a pak počítač automaticky aktualizuje na nejnovější verzi Windows.
+To se dá využít k odebrání aplikací předem nainstalovaných výrobcem (OEM), které se často dodávají s novým počítačem. Můžete nakonfigurovat, jestli se při provedení této akce mají zachovat uživatelská data. V takovém případě se odeberou aplikace a nastavení, ale obsah domovské složky uživatele se zachová.
+
+
 ### <a name="lost-mode"></a>**Režim ztráty**
 Režim ztráty můžete zapnout při ztrátě nebo odcizení zařízení s iOSem. To vám umožní zadat zprávu a telefonní číslo, které se zobrazí na uzamčené obrazovce zařízení. Provedete to následujícím způsobem:
 1.    V okně vlastností pro zařízení s iOSem zvolte **Více** > **Režim ztráty**.
@@ -78,7 +84,7 @@ Pokud chcete použít režim ztráty, musí se jednat o zařízení s iOSem ve
 ### <a name="locate-device"></a>**Najít zařízení**
 Pomocí této vzdálené akce můžete zobrazit polohu ztraceného nebo odcizeného zařízení s iOSem na mapě. Musí se jednat o zařízení s iOSem ve vlastnictví firmy, které je zaregistrované prostřednictvím programu DEP a je v režimu dohledu. Než tuto akci použijete, musíte pro zařízení zapnout režim ztráty.
 1.    V okně vlastností pro zařízení s iOSem zvolte **Více** > **Najít zařízení**.
-2.    Poloha nalezeného zařízení se zobrazí v okně **Najít zařízení**. 
+2.    Poloha nalezeného zařízení se zobrazí v okně **Najít zařízení**.
     ![Okno Najít zařízení](./media/locate-device.png)
 
 >[!NOTE]

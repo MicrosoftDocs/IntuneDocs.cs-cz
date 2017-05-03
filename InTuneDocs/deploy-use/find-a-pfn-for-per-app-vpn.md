@@ -15,9 +15,9 @@ ms.reviewer: tycast
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: b0006416f2b078c8c0cf5eb14ccea4749604e1dc
-ms.lasthandoff: 12/10/2016
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 0fd7d7e1e09f193479c6ad221c8ace7470942c5a
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -73,10 +73,10 @@ Zde jsou informace načtené pro OneNote:
 
 ## <a name="find-a-pfn-if-the-app-is-not-installed-on-a-computer"></a>Hledání PFN, pokud aplikace není nainstalovaná na počítači
 
-1.    Přejděte na adresu https://www.microsoft.com/en-us/store/apps.
+1.    Přejděte na adresu https://www.microsoft.com/store/apps.
 2.    Zadejte název aplikace v panelu vyhledávání. V našem příkladu hledejte OneNote.
-3.    Vyberte odkaz na aplikaci. Všimněte si, že adresa URL má na konci řadu písmen. V našem příkladu vypadá adresa URL takto: `https://www.microsoft.com/en-us/store/apps/onenote/9wzdncrfhvjl`.
-4.    Na nové kartě vložte následující adresu URL: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`. Místo `<app id>` zadejte ID aplikace, které jste získali z adresy https://www.microsoft.com/en-us/store/apps – onu posloupnost písmen na konci adresy URL v kroku 3. V našem příkladu pro OneNote byste vložili adresu `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
+3.    Vyberte odkaz na aplikaci. Všimněte si, že adresa URL má na konci řadu písmen. V našem příkladu vypadá adresa URL takto: `https://www.microsoft.com/store/apps/onenote/9wzdncrfhvjl`.
+4.    Na nové kartě vložte následující adresu URL: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`. Místo `<app id>` zadejte ID aplikace, které jste získali z adresy https://www.microsoft.com/store/apps – onu posloupnost písmen na konci adresy URL v kroku 3. V našem příkladu pro OneNote byste vložili adresu `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
 
 Microsoft Edge zobrazí požadované informace přímo, v Internet Exploreru je zobrazíte výběrem **Otevřít**. Hodnota PFN je uvedena na prvním řádku. Tady jsou výsledky pro náš příklad:
 

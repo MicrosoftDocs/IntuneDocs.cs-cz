@@ -15,8 +15,9 @@ ms.reviewer: oldang
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ee3a0b80f7e534262fbcc8d897e069cff1e35727
-ms.openlocfilehash: a68ffc7be5bcaf55a789ab96035a3f23be0b8b3a
+ms.sourcegitcommit: 62dcb40ad5a7921c514a9d41da14b991e39f3bcd
+ms.openlocfilehash: 991393e0caf64c44cc10c7775fba45083212659e
+ms.lasthandoff: 04/20/2017
 
 
 ---
@@ -108,8 +109,8 @@ K distribuci aplikací zabalených pomocí Intune budete potřebovat toto:
 
   ![Výběr vnitřního a ad hoc certifikátu](../media/app-wrapper/iOS-signing-cert-3.png)
 
->[!NOTE]
->Pokud nechcete aplikaci distribuovat, ale jenom ji interně testovat, můžete místo certifikátu pro výrobu použít certifikát pro vývoj aplikací pro iOS. Když použijete certifikát pro vývoj, zajistěte, aby mobilní zřizovací profil odkazoval na zařízení, na která se bude aplikace instalovat.
+  >[!NOTE]
+  >Pokud nechcete aplikaci distribuovat, ale jenom ji interně testovat, můžete místo certifikátu pro výrobu použít certifikát pro vývoj aplikací pro iOS. Když použijete certifikát pro vývoj, zajistěte, aby mobilní zřizovací profil odkazoval na zařízení, na která se bude aplikace instalovat.
 
 7. V dolní části stránky klikněte na **Next** (Další).
 
@@ -136,7 +137,6 @@ K distribuci aplikací zabalených pomocí Intune budete potřebovat toto:
 14. Na certifikát, který jste si právě stáhli, poklikejte, aby se uložil do svazku klíčů.
 
 15. Znovu otevřete **Klíčenku**. Vyhledejte certifikát zadáním jeho názvu do panelu hledání v pravém horním rohu. Klikněte pravým tlačítkem na danou položku, aby se zobrazila nabídka, a pak klikněte na **Get Info** (Získat informace). V ukázkových obrazovkách používáme místo certifikátu pro výrobu certifikát pro vývoj.
-
 
   ![Přidání certifikátu do svazku klíčů](../media/app-wrapper/iOS-signing-cert-8.png)
 
@@ -205,7 +205,7 @@ V nástroji App Wrapping Tool můžete používat následující parametry pří
 |**-p**|`<Path of your provisioning profile for iOS apps>`|
 |**-c**|`<SHA1 hash of the signing certificate>`|
 |**-h**|Zobrazí podrobné informace o použití dostupných vlastností příkazového řádku nástroje App Wrapping.|
-|**-v**|(Nepovinná) Zobrazí v konzole podrobné zprávy.|
+|**-v**|(Nepovinná) Zobrazí v konzole podrobné zprávy. Tento příznak doporučujeme používat k ladění všech chyb.|
 |**-e**| (Nepovinná) Tímto příznakem zajistíte, že nástroj App Wrapping při zpracování aplikace odebere chybějící oprávnění. Další informace najdete v části Nastavení oprávnění aplikace.|
 |**-xe**| (Nepovinná) Zobrazí informace o rozšířeních iOS v aplikaci a o oprávněních, která potřebujete k jejich používání. Další informace najdete v části Nastavení oprávnění aplikace. |
 |**-x**| (Nepovinná) `<An array of paths to extension provisioning profiles>` Tuto vlastnost použijte v případě, že vaše aplikace potřebuje zřizovací profily rozšíření.|
@@ -399,9 +399,4 @@ Při používání nástroje App Wrapping použijte následující doporučené 
 - [Rozhodování o způsobu přípravy aplikací na jejich správu v Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md)</br>
 - [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)</br>
 - [Použití sady SDK k povolení správy mobilních aplikací pro aplikace](use-the-sdk-to-enable-apps-for-mobile-application-management.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

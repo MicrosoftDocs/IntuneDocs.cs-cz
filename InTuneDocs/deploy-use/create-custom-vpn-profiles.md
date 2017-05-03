@@ -15,9 +15,9 @@ ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f2b364b2c57adab33df2a8e6b34c1f30c02988d3
-ms.openlocfilehash: 9dbb44981c1525e6137dd8a469b1582731ee9719
-ms.lasthandoff: 12/20/2016
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 260c328d37174c94bde37162ec011aded26a9f72
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -33,7 +33,7 @@ Vlastní konfigurace Intune můžete použít k vytvoření profilů VPN pro:
 * Zařízení se systémem Android for Work
 * Zaregistrovaná zařízení se systémem Windows 8.1 a novějším
 * Zařízení s Windows Phone 8.1 a novějším
-* Zaregistrovaná zařízení s desktopovým systémem Windows 10 
+* Zaregistrovaná zařízení s desktopovým systémem Windows 10
 * Zařízení s Windows 10 Mobile
 
 Tento typ zásad může být užitečný v případě, že standardní zásady Intune VPN neobsahují nastavení, které chcete použít.
@@ -53,7 +53,7 @@ Pak [zásadu nasaďte](/intune/deploy-use/manage-settings-and-features-on-your-d
 ## <a name="example-uri-settings"></a>Ukázková nastavení identifikátoru URI
 
 Tato nastavení se dají použít k vytvoření vlastní konfigurace pro VPN ve fiktivní společnosti s názvem Contoso.
-Všechny podrobnosti o všech dostupných nastaveních najdete v tématu [VPNv2 CSP](https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776.aspx).
+Všechny podrobnosti o všech dostupných nastaveních najdete v tématu [VPNv2 CSP](https://msdn.microsoft.com/library/windows/hardware/dn914776.aspx).
 
 Nativní VPN Contoso (IKEv2): ./Vendor/MSFT/VPNv2/ContosoVPN/NativeProfile/Servers
 
@@ -91,7 +91,7 @@ Eap ./Vendor/MSFT/VPNv2/ContosoVPN/NativeProfile/Authentication/Eap/Configuratio
 
 **./Vendor/MSFT/VPNv2/ContosoVPN/TrafficFilterList/1/App/Id** Microsoft.MicrosoftEdge_8wekyb3d8bbwe
 
-Další informace týkající se používání těchto nastavení a další podrobnosti o tom, co dělají, můžou zákazníci najít v dokumentaci poskytovatele konfigurační služby CSP: https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776(v=vs.85).aspx.
+Další informace týkající se používání těchto nastavení a další podrobnosti o tom, co dělají, můžou zákazníci najít v dokumentaci poskytovatele konfigurační služby CSP: https://msdn.microsoft.com/library/windows/hardware/dn914776(v=vs.85).aspx.
 
 ## <a name="uri-settings-for-android-per-app-vpn-on-pulsesecure"></a>Nastavení identifikátorů URI pro VPN pro aplikace pro Android na PulseSecure
 ### <a name="custom-uri-for-package-list"></a>VLASTNÍ IDENTIFIKÁTORY URI PRO SEZNAM BALÍKŮ
