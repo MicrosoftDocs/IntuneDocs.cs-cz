@@ -1,11 +1,11 @@
 ---
 title: "Registrace zařízení s Androidem ve službě TEM (Telecom Expense Management) pomocí Intune"
-description: 
+description: "Přečtěte si, jak můžete zaregistrovat zařízení s Androidem ve službě TEM (Telecom Expense Management)."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/03/2017
+ms.date: 04/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,14 @@ ms.technology:
 ms.assetid: 26aa3698-7e4d-453a-8852-ab75e72b6485
 searchScope:
 - User help
-ROBOTS: NOINDEX,NOFOLLOW
+ROBOTS: 
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 8da2695c4c6dc8b45559323b83a4bb77167303b7
-ms.openlocfilehash: f2f93bccd17d16f258e90268f0ddef3e3cb7a598
-ms.lasthandoff: 03/28/2017
+ms.sourcegitcommit: e0ecc775f70703574c4e1adf0f0aa204f2745b72
+ms.openlocfilehash: fa36b1449cb1ce5d9e0d3b1ca2f3e0db78729f1d
+ms.lasthandoff: 04/20/2017
 
 
 ---
@@ -31,19 +31,35 @@ Vaše organizace může používat software pro správu telekomunikačních výd
 
 ![Snímek obrazovky s výběrem nejvhodnější kategorie pro zařízení s iOS. Zobrazuje výběr firemní nebo osobní registrace.](./media/and-enroll-11-tem-select-best-category.png)
 
-1. Po výběru příslušné možnosti dostanete oznámení s pokynem k instalaci aplikace [__Datalert__](https://play.google.com/store/apps/details?id=fr.memobox.databox) z obchodu Google Play. Aplikace Datalert umožňuje vaší organizaci měřit využití dat. Pokračujte klepnutím na šipku __Další__ v pravém horním rohu obrazovky.
+Po výběru příslušné možnosti dostanete oznámení s pokynem k instalaci aplikace [__Datalert__](https://play.google.com/store/apps/details?id=fr.memobox.databox) z obchodu Google Play. Aplikace Datalert umožňuje vaší organizaci měřit využití dat. Pokud má vaše organizace nakonfigurovanou možnost pracovní nebo školní registrace, budete se muset přihlásit pomocí pracovního nebo školního účtu. Pokud taková možnost není povolena, budete muset zadat údaje, jako je vaše telefonní číslo, a ověřit zařízení pomocí kódu, abyste se mohli z aplikace zaregistrovat ve službě Datalert.
+
+Pokračujte klepnutím na šipku __Další__ v pravém horním rohu obrazovky. Váš správce IT by vám měl říct, jestli se budete přihlašovat svým __pracovním nebo školním účtem Microsoft__ nebo jestli budete používat svoje __telefonní číslo__.
 
   ![Snímek úvodní obrazovky aplikace Datalert se stručným vysvětlením toho, jak vám tato aplikace pomůže využít datový tarif na maximum, a výzvou k přechodu na další obrazovku](./media/and-enroll-12-tem-datalert-setup.png)
 
-2. Zadejte telefonní číslo zařízení.
+## <a name="enroll-into-datalert-using-your-microsoft-work-or-school-account"></a>Registrace v Datalertu pomocí pracovního nebo školního účtu Microsoft
+
+1. Vyberte __Zaregistrovat se pomocí účtu Microsoft__.
+
+  ![Snímek obrazovky Nastavení v aplikaci Datalert, na které je v horní části zobrazeno pole pro registraci zařízení a v dolní části možnost registrace pomocí účtu Microsoft, pokud máte účet Microsoft Office 365 a předplatné Intune](./media/and-enroll-12a-tem-datalert-enroll-msft-account.png)
+
+2. Z dostupných účtů zvolte pracovní nebo školní účet. Pokud váš účet není uveden, můžete se přihlásit pomocí tlačítka **Přidat účet**.
+
+  ![Snímek obrazovky Vybrat účet s ukázkovým účtem a tlačítkem Přidat účet](./media/and-enroll-12b-tem-datalert-enroll-select-msft-account.png)
+
+3. Datalert se bude instalovat a po chvíli by se měla instalace dokončit. Po dokončení klepněte na __Dokončit__.
+
+## <a name="enroll-into-datalert-using-your-phone-number"></a>Registrace v Datalertu pomocí telefonního čísla
+
+1. Zadejte telefonní číslo zařízení.
 
   ![Snímek obrazovky aplikace Datalert s žádostí o telefonní číslo](./media/and-enroll-13-tem-datalert-phone-number.png)
 
-3. Prostřednictvím SMS zprávy pak dostanete ověřovací kód. Zadejte tento kód a klepněte na __OK__.
+2. Prostřednictvím SMS zprávy pak dostanete ověřovací kód. Zadejte tento kód a klepněte na __OK__.
 
   ![Snímek obrazovky aplikace Datalert s žádostí o ověřovací kód v SMS zprávě](./media/and-enroll-14-tem-datalert-sms.png)
 
-4. Jakmile tento ověřovací kód zadáte, instalace aplikace Datalert se dokončí. Po klepnutí na __Dokončit__ budete moci v aplikaci Datalert monitorovat využití dat.
+3. Jakmile tento ověřovací kód zadáte, instalace aplikace Datalert se dokončí. Po klepnutí na __Dokončit__ budete moci v aplikaci Datalert monitorovat využití dat.
 
   ![Snímek obrazovky aplikace Datalert s monitorováním dnešního využití dat](./media/and-enroll-15-tem-datalert-monitoring-active.png)
 

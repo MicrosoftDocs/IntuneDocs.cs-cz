@@ -16,16 +16,16 @@ ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
-ms.openlocfilehash: 7edbba3a86213db71e41bd0d0de6c5d285025b8b
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
+ms.openlocfilehash: b0d0ad102942c65ac3988ea4659b34b397289126
+ms.lasthandoff: 04/19/2017
 
 ---
 
 # <a name="set-up-a-telecom-expense-management-service-in-intune-azure-preview"></a>Nastavení služby TEM (Telecom Expense Management) v Intune Azure Preview
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Intune umožňuje spravovat výdaje za telekomunikační služby vzniklé v závislosti na používání dat na mobilních zařízeních vlastněných firmou. Pokud chcete aktivovat tuto funkci, obsahuje Intune integrované řešení pro správu výdajů na telekomunikaci Datalert od externího vývojáře softwaru Saaswedo. Datalert je software pro správu výdajů na telekomunikaci v reálném čase, který umožňuje spravovat využití telekomunikačních dat a předejít tak finančně nákladnému a neočekávanému nadlimitnímu využití dat a roamingu u zařízení spravovaných pomocí Intune. 
+Intune umožňuje spravovat výdaje za telekomunikační služby vzniklé v závislosti na používání dat na mobilních zařízeních vlastněných firmou. Pokud chcete aktivovat tuto funkci, obsahuje Intune integrované řešení pro správu výdajů na telekomunikaci Datalert od externího vývojáře softwaru Saaswedo. Datalert je software pro správu výdajů na telekomunikaci v reálném čase, který umožňuje spravovat využití telekomunikačních dat a předejít tak finančně nákladnému a neočekávanému nadlimitnímu využití dat a roamingu u zařízení spravovaných pomocí Intune.
 
 Integrace Intune s Datalertem umožňuje centrálně nastavit, monitorovat a vynutit limity využití roamingu a domácích dat pomocí automatických výstrah, které se zobrazí, když limity překročí definované prahové hodnoty. Službu můžete nakonfigurovat tak, aby se použily různé akce u jednotlivců nebo skupin koncových uživatelů, včetně zákazu roamingu v případě, že uživatelé překročí stanovenou prahovou hodnotu. Sestavy využití a monitorování dat jsou dostupné v konzole pro správu Datalertu.
 
@@ -85,7 +85,7 @@ Po dokončení kroku 1 výše by se mělo automaticky povolit připojení a na p
 
 3. V okně **Intune** zvolte **Konfigurace zařízení**.
 
-4. V okně **Konfigurace zařízení** zvolte **Nastavení** > **Služba TEM (Telecom Expense Management)**. 
+4. V okně **Konfigurace zařízení** zvolte **Nastavení** > **Služba TEM (Telecom Expense Management)**.
 
    V horní části stránky se podívejte, jestli je stav připojení **Aktivní**.
 
@@ -97,7 +97,7 @@ Aby se shromažďovaly informace jenom o použití dat na linkách vlastněných
 
 #### <a name="define-device-categories-and-device-groups-mapped-to-the-categories"></a>Definování kategorií zařízení a skupin zařízení namapovaných do kategorií
 
-V závislosti na potřebách organizace budete muset vytvořit alespoň dvě kategorie zařízení (například podniková a osobní) a pro každou kategorii vytvořit dynamické skupiny zařízení. Podle potřeby pro svoji organizaci můžete vytvořit více kategorií. 
+V závislosti na potřebách organizace budete muset vytvořit alespoň dvě kategorie zařízení (například podniková a osobní) a pro každou kategorii vytvořit dynamické skupiny zařízení. Podle potřeby pro svoji organizaci můžete vytvořit více kategorií.
 
 Tyto kategorie se budou zobrazovat uživatelům při registraci. Podle toho, kterou kategorii uživatelé zvolí, se registrované zařízení přesune do příslušné skupiny zařízení. Postup vytvoření kategorií zařízení najdete v tématu [Mapování zařízení na skupiny](https://docs.microsoft.com/intune-azure/enroll-devices/how-to-use-device-group-mapping).
 
@@ -109,7 +109,7 @@ Podle následujících pokynů vytvořte v Intune aplikaci Datalert pro jednotli
 
 1. V okně **Intune** na portálu Azure Portal zvolte **Spravovat aplikace**.
 
-2. V okně **Spravovat aplikace** zvolte **Spravovat** > **aplikace**. 
+2. V okně **Spravovat aplikace** zvolte **Spravovat** > **aplikace**.
 
 3. Vyberte **Přidat**, abyste mohli přidat aplikaci.
 
@@ -129,7 +129,7 @@ Podle následujících pokynů vytvořte v Intune aplikaci Datalert pro jednotli
 
 1. Vyberte aplikaci Datalert pro iOS, kterou jste vytvořili v předchozím kroku.
 
-2. V okně **Aplikace** přejděte na **Správa** > **Přiřazení**. 
+2. V okně **Aplikace** přejděte na **Správa** > **Přiřazení**.
 
 3. Zvolte **Vybrat skupiny** a postupujte podle pokynů pro výběr skupiny firemních zařízení.
 
@@ -137,9 +137,9 @@ Podle následujících pokynů vytvořte v Intune aplikaci Datalert pro jednotli
 
   ![Snímek obrazovky okna Přidat zásadu](../media/tem-assign-datalert-app-to-device-group.png)
 
-### <a name="step-4-add-corporate-paid-phone-lines-to-the-datalert-console"></a>Krok 4: Přidejte do konzoly Datalert placené firemní telefonní linky 
+### <a name="step-4-add-corporate-paid-phone-lines-to-the-datalert-console"></a>Krok 4: Přidejte do konzoly Datalert placené firemní telefonní linky
 
-Teď máte služby Intune a Datalert nakonfigurované tak, aby spolu komunikovaly. Teď musíte přidat placené firemní telefonní linky ke konzole Datalert a definovat prahové hodnoty a akce pro veškerá porušení použití mobilních nebo roamingových služeb. 
+Teď máte služby Intune a Datalert nakonfigurované tak, aby spolu komunikovaly. Teď musíte přidat placené firemní telefonní linky ke konzole Datalert a definovat prahové hodnoty a akce pro veškerá porušení použití mobilních nebo roamingových služeb. Placené firemní telefonní linky můžete ke konzole Datalert přidat buď ručně, nebo je nechat přidat automaticky po registraci zařízení v Intune.
 
 Pokud chcete nastavit tyto položky, přejděte na [stránku nastavení služby Datalert pro Microsoft Intune](http://www.datalert.fr/microsoft-intune/intune-setup) (http://www.datalert.fr/microsoft-intune/intune-setup) a postupujte podle pokynů v průvodci instalací na kartě **Nastavení**.
 
@@ -147,6 +147,11 @@ Pokud chcete nastavit tyto položky, přejděte na [stránku nastavení služby 
 
 
 Služba Datalert je nyní aktivní. Spustí monitorování využití dat a zakáže mobilní a roamingová data u zařízení, která překročí nakonfigurované limity využití.
+
+## <a name="client-enrollment-experience"></a>Možnosti registrace klienta
+Při registraci klienta se zobrazí tyto možnosti:
+-    [Registrace zařízení s iOSem ve službě TEM (Telecom Expense Management)](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-ios)
+-    [Registrace zařízení s Androidem ve službě TEM (Telecom Expense Management)](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-android)
 
 ## <a name="turning-off-the-datalert-service"></a>Vypnutí služby Datalert
 

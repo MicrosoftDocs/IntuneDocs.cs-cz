@@ -1,11 +1,11 @@
 ---
-title: "Registrace zařízení s iOS ve službě TEM (Telecom Expense Management) pomocí Intune"
-description: 
+title: "Registrace zařízení s iOSem ve službě TEM (Telecom Expense Management) pomocí Intune"
+description: "Přečtěte si, jak zaregistrovat zařízení s iOSem ve službě TEM (Telecom Expense Management)."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/03/2017
+ms.date: 04/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,37 +13,54 @@ ms.technology:
 ms.assetid: 6d8c6372-f2ce-4558-8886-1d7c1966699c
 searchScope:
 - User help
-ROBOTS: NOINDEX,NOFOLLOW
+ROBOTS: 
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 6673c8de8d5deb74005b40a58274efcb10783fcc
-ms.openlocfilehash: 439adf2481eef00f22f809724c121dd58b5788d7
-ms.lasthandoff: 03/08/2017
+ms.sourcegitcommit: e0ecc775f70703574c4e1adf0f0aa204f2745b72
+ms.openlocfilehash: a71b8d1a100100e204eb7e90ba0ab00573ffc5c6
+ms.lasthandoff: 04/20/2017
 
 
 ---
 
-# <a name="enroll-your-ios-device-in-telecom-expense-management"></a>Registrace zařízení s iOS ve službě TEM (Telecom Expense Management)
+# <a name="enroll-your-ios-device-in-telecom-expense-management"></a>Registrace zařízení s iOSem ve službě TEM (Telecom Expense Management)
 
 Vaše organizace může používat software pro správu telekomunikačních výdajů (TEM – Telecom Expense Management), aby zajistila využívání datových a hlasových tarifů v rámci přijatelných limitů. Po dokončení registrace zařízení budete vyzváni k výběru nejvhodnější kategorie tohoto zařízení.
 
-  ![Snímek obrazovky s výběrem nejvhodnější kategorie pro zařízení s iOS. Zobrazuje výběr firemní nebo osobní registrace.](./media/ios-enroll-10-tem-select-best-category.png)
+  ![Snímek obrazovky s výběrem nejvhodnější kategorie pro zařízení s iOSem. Zobrazuje výběr firemní nebo osobní registrace.](./media/ios-enroll-10-tem-select-best-category.png)
 
-1. Po výběru příslušné možnosti dostanete oznámení s pokynem k instalaci aplikace [__Datalert__](https://itunes.apple.com/us/app/datalert/id771029268?mt=8) z App Storu. Aplikace Datalert umožňuje vaší organizaci měřit využití dat. Budete muset zadat telefonní číslo a provést ověření pomocí kódu. .
+Po výběru příslušné možnosti dostanete oznámení s pokynem k instalaci aplikace [__Datalert__](https://itunes.apple.com/app/datalert/id771029268?mt=8) z App Storu. Aplikace Datalert umožňuje vaší organizaci měřit využití dat. Pokud má vaše organizace nakonfigurovanou možnost pracovní nebo školní registrace, budete se muset přihlásit pomocí pracovního nebo školního účtu. Pokud taková možnost není povolena, budete muset zadat údaje, jako je vaše telefonní číslo, a ověřit zařízení pomocí kódu, abyste se mohli z aplikace zaregistrovat ve službě Datalert.
 
   ![Snímek úvodní obrazovky aplikace Datalert se stručným vysvětlením toho, jak vám tato aplikace pomůže využít datový tarif na maximum, a výzvou k přechodu na další obrazovku](./media/ios-enroll-11-tem-datalert-setup.png)
 
-2. Zadejte telefonní číslo zařízení.
+## <a name="enroll-into-datalert-using-your-microsoft-work-or-school-account"></a>Registrace v Datalertu pomocí pracovního nebo školního účtu Microsoft
+
+> [!NOTE]
+> Abyste se mohli zaregistrovat tímto způsobem, musíte mít v telefonu nainstalovanou a aktivovanou aplikaci [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to).
+
+1. Vyberte __Zaregistrovat se pomocí účtu Microsoft__.
+
+  ![Snímek obrazovky Nastavení v aplikaci Datalert, na které je v horní části zobrazeno pole pro registraci zařízení a v dolní části možnost registrace pomocí účtu Microsoft, pokud máte účet Microsoft Office 365 a předplatné Intune](./media/ios-enroll-11a-tem-datalert-enroll-msft-account.png)
+
+2. Zobrazí se oznámení __Datalert chce otevřít Authenticator__. Vyberte __Otevřít__.
+
+  ![Snímek automaticky otevíraného okna s výzvou, aby uživatel otevřel aplikaci Authenticator na žádost aplikace Datalert](./media/ios-enroll-11b-tem-datalert-open-authenticator.png)
+
+3. Přihlaste se __školním nebo pracovním účtem Microsoft__. Datalert se bude instalovat a po chvíli by se měla instalace dokončit. Po dokončení klepněte na __Dokončit__.
+
+## <a name="enroll-into-datalert-using-your-phone-number"></a>Registrace v Datalertu pomocí telefonního čísla
+
+1. Zadejte telefonní číslo zařízení.
 
   ![Snímek obrazovky aplikace Datalert s žádostí o telefonní číslo](./media/ios-enroll-12-tem-datalert-phone-number.png)
 
-3. Prostřednictvím SMS zprávy pak dostanete ověřovací kód. Zadejte tento kód a klepněte na __OK__.
+2. Prostřednictvím SMS zprávy pak dostanete ověřovací kód. Zadejte tento kód a klepněte na __OK__.
 
   ![Snímek obrazovky aplikace Datalert s žádostí o ověřovací kód v SMS zprávě](./media/ios-enroll-13-tem-datalert-sms.png)
 
-4. Jakmile tento ověřovací kód zadáte, instalace aplikace Datalert se dokončí. Po klepnutí na __Dokončit__ budete moci v aplikaci Datalert monitorovat využití dat.
+3. Jakmile tento ověřovací kód zadáte, instalace aplikace Datalert se dokončí. Po klepnutí na __Dokončit__ budete moci v aplikaci Datalert monitorovat využití dat.
 
   ![Snímek obrazovky aplikace Datalert s monitorováním dnešního využití dat](./media/ios-enroll-14-tem-datalert-monitoring-active.png)
 

@@ -1,6 +1,6 @@
 ## <a name="enable-windows-10-automatic-enrollment"></a>Povolení automatické registrace pro Windows 10
 
-Automatický zápis umožňuje registraci i uživatelům počítačů se systémem Windows 10 nebo zařízení Windows 10 Mobile, které patří jiným společnostem nebo soukromníkům. Stačí v Intune zadat pracovní nebo školní účet a souhlasit se správou. Opravdu je to takhle jednoduché. Na pozadí se uživatelovo zařízení zaregistruje a připojí ke službě Azure Active Directory. Po registraci je zařízení spravováno přes Intune.
+Automatická registrace umožňuje uživatelům zaregistrovat zařízení s Windows 10 do Intune, když přidávají pracovní účet do svého osobního zařízení nebo připojují zařízení vlastněná společností k Azure Active Directory. Na pozadí se uživatelovo zařízení zaregistruje a připojí ke službě Azure Active Directory. Po registraci je zařízení spravováno přes Intune.
 
 **Požadavky**
 - Předplatné Azure Active Directory Premium ([zkušební předplatné](http://go.microsoft.com/fwlink/?LinkID=816845))
@@ -21,19 +21,19 @@ Automatický zápis umožňuje registraci i uživatelům počítačů se systém
 
   ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-intune.png)
 
-4. Nakonfigurujte, kteří uživatelé se automaticky zaregistrují.
+4. Konfigurujte **Obor uživatele MDM**. Zadejte, která uživatelská zařízení by měla být spravována přes službu Microsoft Intune. Tato uživatelská zařízení se systémem Windows 10 budou automaticky zaregistrována pro správu přes službu Microsoft Intune.
 
-  ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-scope.png)
-
-  Použijte výchozí hodnoty pro následující adresy URL:
-  - **Registrace MDM**
-  - **Podmínky použití MDM**
-  - **Dodržování předpisů MDM**
-
-5. Zadejte, která uživatelská zařízení by měla být spravována přes službu Microsoft Intune. Tato uživatelská zařízení se systémem Windows 10 budou automaticky zaregistrována pro správu přes službu Microsoft Intune.
-
-  - **Vše**
-  - **SKUPINY**
   - **Žádné**
+  - **Některé**
+  - **Vše**
+
+   ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-scope.png)
+
+5. Použijte výchozí hodnoty pro následující adresy URL:
+    - **Adresa URL podmínek použití MDM**
+    - **Adresa URL zjišťování MDM**
+    - **Adresa URL s předpisy služby MDM**
 
 6. Vyberte **Uložit**.
+
+Ve výchozím nastavení není pro službu povolené dvojúrovňové ověřování. Při registraci zařízení ale dvoufaktorové ověřování doporučujeme. Před vyžádáním dvoufaktorového ověřování pro tuto službu musíte v Azure Active Directory nakonfigurovat zprostředkovatele dvoufaktorového ověřování a u uživatelských účtů nakonfigurovat vícefaktorové ověřování. Informace najdete v článku [Začínáme s Azure Multi-Factor Authentication Serverem](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).

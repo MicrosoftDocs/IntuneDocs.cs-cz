@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/29/2017
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: f316b332c3f1b80b9d6af488943298fcfea13741
-ms.openlocfilehash: 009c6491b8ce457a371f5db31de3f122fa41fb95
-ms.lasthandoff: 03/30/2017
+ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
+ms.openlocfilehash: 3ba986b624e602f05eb6ab25ec30e9d58173dbd8
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -42,6 +42,7 @@ ms.lasthandoff: 03/30/2017
 |**Snímek obrazovky**|Umožňuje uživateli zachytit obsah obrazovky v podobě obrázku.|Ne|Ano|
 |**Hlasový asistent**|Povolí použití softwaru hlasového asistenta v zařízení.|Ne|Ano|
 |**YouTube**|Povoluje v zařízení použití aplikace YouTube.|Ne|Ano|
+|**Sdílená zařízení**|Nakonfigurujte spravované zařízení Samsung KNOX Standard jako sdílené. V tomto režimu se koncoví uživatelé můžou k zařízení přihlašovat a ze zařízení odhlašovat pomocí svých přihlašovacích údajů Azure AD. Zařízení je centrálně spravované bez ohledu na to, jestli se zrovna používá.<br>Když se koncoví uživatelé přihlásí, mají přístup k aplikacím a také se na ně aplikují všechny zásady. Po odhlášení uživatelů se všechna data aplikací vymažou.|Ne|Ano|
 
 ## <a name="password"></a>Heslo
 
@@ -53,11 +54,18 @@ ms.lasthandoff: 03/30/2017
 |**Maximální počet minut nečinnosti, po které se zamkne obrazovka**|Určuje počet minut nečinnosti, než se zařízení automaticky zamkne.|Ano|Ano|
 |**Počet neúspěšných přihlášení před vymazáním obsahu zařízení**|Určuje počet povolených neúspěšných přihlášení, než bude zařízení vymazáno.|Ano|Ano|
 |**Konec platnosti hesla (dny)**|Určuje počet dní, než bude nutné změnit heslo zařízení.|Ano|Ano|
-|**Požadovaný typ hesla**|Určuje požadovanou úroveň složitosti hesla a to, jestli se můžou používat biometrická zařízení.|Ano|Ano|
+|**Požadovaný typ hesla**|Určuje požadovanou úroveň složitosti hesla a to, jestli se můžou používat biometrická zařízení. Vybírejte z těchto možností:<br><br>    -     **Výchozí ze zařízení**<br>-     **Biometrika s nízkým zabezpečením**<br>    -     **Aspoň číselné**<br>    -     **Číselné komplexní** (opakující se nebo po sobě jdoucí čísla, jako jsou 1111 nebo 1234, nejsou povolena)<sup>1</sup><br>    -     **Aspoň abecední**<br>    -     **Aspoň alfanumerické**<br>    -     **Aspoň alfanumerické se symboly**|Ano|Ano|
 |**Znemožnit opakované použití předchozích hesel**|Zakáže koncovému uživateli nastavit dříve používané heslo.|Ano|Ano|
 |**Odemknutí pomocí otisků prstů**|Povolí na zařízeních, která to podporují, odemknutí pomocí otisku prstu.|Ne|Ano|
 |**Smart Lock a jiní agenti pro určování důvěryhodnosti**|Umožňuje řídit funkci Smart Lock na kompatibilních zařízeních s Androidem (Samsung KNOX Standard 5.0 a novějším). Tato funkce telefonů, které se někdy říká agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo uzamčené obrazovky zařízení, pokud se zařízení nachází v důvěryhodném umístění (například pokud je připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC). Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.|Ano (5.0 nebo novější)|Ne|
 |**Šifrování**|Vyžaduje, aby soubory v zařízení byly šifrované.|Ano|Ano|
+
+<sup>1</sup>Před přiřazením tohoto nastavení k zařízení zkontrolujte, že je v cílových zařízeních aplikace Portál společnosti aktualizovaná na nejnovější verzi.
+
+Pokud nakonfigurujete nastavení **Číselné komplexní** a potom ho přiřadíte k zařízení, které používá verzi Androidu starší než 5.0, bude platit následující chování.
+- Pokud aplikace Portál společnosti používá verzi starší než 1704, nepoužijí se u zařízení žádné zásady PIN kódu a na portálu Intune se zobrazí chyba.
+- Pokud byla aplikace Portál společnosti aktualizovaná na verzi 1704, použije se jenom jednoduchý PIN kód. Verze Androidu starší než 5.0 toto nastavení nepodporují. Na portálu Intune se nezobrazí žádná chyba.
+
 
 ## <a name="google-play-store"></a>Obchod Google Play
 

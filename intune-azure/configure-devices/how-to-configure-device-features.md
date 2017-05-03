@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/16/2017
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
-ms.openlocfilehash: dd53e547a8f834eff528e79cf2506be1e6c2dc2a
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
+ms.openlocfilehash: e1bc6388ec1927693bac676a20a18935cdbf894e
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -44,8 +44,12 @@ Informace v tomto tématu vás seznámí se základy konfigurace profilů funkc
     - **macOS**
 6. V rozevíracím seznamu **Typ profilu** zvolte **Funkce zařízení**. 
 7. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Podrobnosti o nastaveních na jednotlivých platformách najdete v následujících tématech:
-    - [Nastavení iOSu](device-features-for-ios.md)
-    - [Nastavení macOS](device-features-for-macos.md)
+    - [Nastavení AirPrintu pro iOS a MacOS](air-print-settings-for-ios-and-macos.md)
+     - [Nastavení AirPlay pro iOS](airplay-settings-for-ios-devices.md)
+    - [Nastavení rozložení domovské obrazovky pro iOS](home-screen-settings-for-ios.md)
+    - [Nastavení oznámení aplikace pro iOS](app-notification-settings-for-ios.md)
+    - [Nastavení konfigurace sdíleného zařízení pro iOS](shared-device-settings-for-ios.md)
+    - [Nastavení filtru webového obsahu pro iOS](web-content-filter-settings-for-ios.md)
 
 8. Až to budete mít, vraťte se do okna **Vytvořit profil** a klikněte na **Vytvořit**.
 

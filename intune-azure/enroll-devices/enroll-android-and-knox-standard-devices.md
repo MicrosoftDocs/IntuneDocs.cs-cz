@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
-ms.openlocfilehash: b664620f424f9ef612d17beb810564dbdd68ff79
-ms.lasthandoff: 03/22/2017
+ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
+ms.openlocfilehash: b2cbabea781840df0a2a283f803dc76520590aba
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -28,6 +28,8 @@ ms.lasthandoff: 03/22/2017
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
 Intune umožňuje spravovat zařízení s Androidem včetně zařízení používajících Samsung Knox Standard. Aby bylo možné povolit správu zařízení, musí uživatelé zaregistrovat svoje zařízení tak, že si stáhnou aplikaci Intune Company Portal, která je dostupná na Google Play, a pak otevřou tuto aplikaci a zaregistrují se podle pokynů. Když jsou zařízení s Androidem pod správou, můžete [vytvořit zásady dodržování předpisů](https://docs.microsoft.com/intune-azure/set-device-compliance/create-a-compliance-policy-for-android), [spravovat aplikace](https://docs.microsoft.com/intune-azure/manage-apps/what-is-app-management) a další.
+
+U zařízení, která používají Samsung KNOX Standard, je teď podporována správa více uživatelů pomocí Intune. To znamená, že koncoví uživatelé se můžou k zařízení přihlašovat a ze zařízení odhlašovat pomocí svých přihlašovacích údajů Azure AD. Zařízení je centrálně spravované bez ohledu na to, jestli se zrovna používá. Když se koncoví uživatelé přihlásí, mají přístup k aplikacím a také se na ně aplikují všechny zásady. Po odhlášení uživatelů se všechna data aplikací vymažou.
 
 ## <a name="prerequisite"></a>Předpoklad
 

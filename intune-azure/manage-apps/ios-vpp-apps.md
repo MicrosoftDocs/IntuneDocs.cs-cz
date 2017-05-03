@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/05/2017
+ms.date: 04/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 771aed4e1c57171183b9a9ea7d9e0f702dc1859c
-ms.openlocfilehash: 3b0a674fadf30c660ff3e8e8db172a590f07c8be
-ms.lasthandoff: 04/06/2017
+ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
+ms.openlocfilehash: 1c13d39b8b193c56439602a6e9d9a34e547aef81
+ms.lasthandoff: 04/19/2017
 
 ---
 
@@ -31,7 +31,12 @@ App Store pro iOS umožňuje pro aplikace, které chcete spouštět ve vaší sp
 
 Microsoft Intune vám pomůže spravovat aplikace, které jste koupili prostřednictvím tohoto programu, importováním licenčních informací z App Storu, sledováním, kolik licencí jste už použili, a zabráněním instalace více aplikací, než na kolik máte licence.
 
-## <a name="manage-volume-purchased-apps-for-ios-devices"></a>Správa hromadně koupených aplikací pro zařízení s iOS
+Pomocí Intune můžete také synchronizovat, spravovat a přiřazovat knihy, které jste zakoupili z Apple Storu v rámci multilicenčního programu, a přiřadit je uživatelům. Knihy můžete spravovat pomocí úlohy **Knihy** na portálu Intune. Postupy správy knih jsou stejné jako při správě aplikací.
+Abyste mohli knihy spravovat, musíte nahrát token pro Apple Volume Purchase Program. V současné době můžete knihy přiřadit jenom v rámci **povinné** instalace.
+Když přiřadíte knihu k zařízení, musí být v daném zařízení nainstalovaná integrovaná aplikace iBooks. Pokud není, musí koncový uživatel aplikaci přeinstalovat, aby si knihu mohl přečíst. V současné době není možné prostřednictvím Intune obnovit odebrané integrované aplikace.
+
+
+## <a name="manage-volume-purchased-apps-for-ios-devices"></a>Správa hromadně koupených aplikací pro zařízení s iOSem
 Více licencí k aplikacím pro iOS můžete zakoupit prostřednictvím programu [Apple Volume Purchase Program for Business](http://www.apple.com/business/vpp/) nebo [Apple Volume Purchase Program for Education](http://volume.itunes.apple.com/us/store). Součástí této operace je vytvoření účtu Apple VPP na webu Apple a odeslání tokenu Apple VPP do Intune.  Potom je možné synchronizovat informace o hromadném nákupu s Intune a sledovat využití aplikací, které jste tímto způsobem koupili.
 
 ## <a name="before-you-start"></a>Než začnete
@@ -43,7 +48,6 @@ Než začnete, musíte od společnosti Apple získat token VPP a odeslat ho do s
 * Ve výchozím nastavení se Intune synchronizuje se službou Apple VPP dvakrát denně. Ruční synchronizaci můžete spustit kdykoli.
 * Po naimportování tokenu VPP do Intune neimportujte stejný token do žádného jiného řešení správy zařízení. Pokud byste to udělali, mohli byste ztratit přiřazení licence a uživatelských záznamů.
 * Než začnete používat iOS VPP s Intune, odeberte všechny existující uživatelské účty VPP vytvořené pomocí jiných řešení správy zařízení (MDM). V rámci bezpečnostních opatření nebude Intune synchronizovat tyto uživatelské účty do Intune. Intune bude synchronizovat jen ta data ze služby Apple VPP, která byla vytvořená pomocí Intune.
-* Aplikace iOS VPP se nedají přiřadit k zařízením zaregistrovaným pomocí programu DEP (Device Enrollment Protocol).
 
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Získání a odeslání tokenu Apple VPP
 
@@ -69,7 +73,7 @@ Data ukládaná společností Apple můžete kdykoli synchronizovat s Intune vý
 2. V okně se seznamem aplikací zvolte aplikaci, kterou chcete přiřadit, a pak zvolte tlačítko se třemi tečkami (**...**). > **Přiřadit skupiny**.
 3. V okně <*název aplikace*> – **Přiřazené skupiny** zvolte **Spravovat** > **Přiřazené skupiny**.
 4. Zvolte **Přiřadit skupiny** a pak v okně **Vybrat skupiny** zvolte skupiny uživatelů nebo zařízení Azure AD, ke kterým chcete aplikaci přiřadit.
-Musíte zvolit akci přiřazení **Povinné**. Instalace typu Dostupná se v současnosti nepodporují. Kromě toho jsou přiřazení ke skupinám zařízení dostupná pro nové tenanty vytvořené po lednu 2017. Pokud váš tenant vznikl dříve a nemáte možnost přiřadit aplikace VPP ke skupinám zařízení, obraťte se na podporu Intune.
+Musíte zvolit akci přiřazení **Povinné**. Kromě toho jsou přiřazení ke skupinám zařízení dostupná pro nové tenanty vytvořené po lednu 2017. Pokud váš tenant vznikl dříve a nemáte možnost přiřadit aplikace VPP ke skupinám zařízení, obraťte se na podporu Intune.
 5. Až to budete mít, zvolte **Uložit**.
 
 Informace, s kterými budete moct lépe sledovat přiřazování aplikací, najdete v článku [Jak sledovat přiřazení aplikací](monitor-apps.md).
@@ -81,4 +85,6 @@ Když přiřazujete aplikaci s typem instalace **Požadovaná**, každý uživat
 Když chcete licenci získat zpět, musíte nastavit akci přiřazení na **Odinstalovat**. Až se aplikace odinstaluje, licence se uvolní.
 
 Když se uživatel s oprávněným zařízením poprvé pokusí o instalaci aplikace VPP, požádá se o připojení k programu Apple Volume Purchase. To je třeba provést před instalací aplikace.
+
+Když nasadíte aplikaci VPP jako dostupnou, obsah aplikace a licence se nasadí přímo z App Storu.
 

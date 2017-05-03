@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/17/2017
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
-ms.openlocfilehash: 881ce40cb093b1817c9c4b84c9f8ca78b19de727
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
+ms.openlocfilehash: 9e348278f62b2b9ba10f0f77c9fda214b43812a7
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -225,6 +225,67 @@ Informace z tohoto seznamu můžete použít k identifikaci názvu, vydavatele a
 -     **Sdílený stream fotek** – Pokud chcete na zařízení zakázat **Sdílení fotek na iCloudu**, nastavte možnost na **Ne**.
 -     **Pokračování aktivity** – Umožní uživateli, aby v práci, kterou zahájil na zařízení s iOSem, pokračoval na jiném zařízení s iOSem nebo macOS (Handoff).
 
+## <a name="autonomous-single-app-mode-supervised-only"></a>Autonomní režim jedné aplikace (jenom pod dohledem)
+
+Tato nastavení použijte ke konfiguraci, aby zařízení s iOSem spouštěla zadané aplikace v autonomním režimu jedné aplikace. Pokud je tento režim nakonfigurovaný a uživatel spustí aplikaci, v zařízení se zablokuje spuštění jakékoli další aplikace. Příkladem je nakonfigurování aplikace, která uživatelům umožňuje absolvovat na zařízení test. Když se akce aplikace dokončí nebo tuto zásadu odeberete, zařízení se vrátí do normálního stavu.
+
+### <a name="settings"></a>Nastavení
+
+- **Název aplikace** – zadejte název aplikace, jak se bude zobrazovat v seznamu aplikací v tomto okně.
+- **ID sady prostředků aplikace** – zadejte ID sady prostředků aplikace. Pomůžou vám **Referenční informace o ID sady prostředků pro integrované aplikace pro iOS** v tomto tématu.
+
+Po zadání názvů jednotlivých aplikací a ID prostředků aplikace zvolte **Přidat** a přidejte je do seznamu.
+
+- **Importovat** – slouží k importu textového souboru s oddělovači (.csv), který obsahuje seznam názvů aplikací a k nim přidružených ID prostředků aplikace.
+- **Exportovat** – slouží k exportu názvů aplikací a k nim přidružených ID prostředků aplikace, které jste nakonfigurovali, do textového souboru s oddělovači (.csv).
+
+### <a name="bundle-id-reference-for-built-in-ios-apps"></a>Referenční informace o ID sady prostředků pro integrované aplikace pro iOS
+
+Tento seznam zobrazuje ID sady prostředků některých běžných integrovaných aplikací pro iOS. Pokud chcete najít ID sady prostředků jiných aplikací, obraťte se na dodavatele softwaru.
+
+|||
+|-|-|
+|Název aplikace|ID sady prostředků|
+|App Store|com.apple.AppStore|
+|Kalkulačka|com.apple.calculator|
+|Kalendář|com.apple.mobilecal|
+|Fotoaparát|com.apple.camera|
+|Hodiny|com.apple.mobiletimer|
+|Kompas|com.apple.compass|
+|Kontakty|com.apple.MobileAddressBook|
+|FaceTime|com.apple.facetime|
+|Najít přátele|com.apple.mobileme.fmf1|
+|Najít iPhone|com.apple.mobileme.fmip1|
+|Herní centrum|com.apple.gamecenter|
+|GarageBand|com.apple.mobilegarageband|
+|Stav|com.apple.Health|
+|iBooks|com.apple.iBooks|
+|iTunes Store|com.apple.MobileStore|
+|iTunes U|com.apple.itunesu|
+|Keynote|com.apple.Keynote|
+|Mail|com.apple.mobilemail|
+|Mapy|com.apple.Maps|
+|Zprávy|com.apple.MobileSMS|
+|Hudba|com.apple.Music|
+|News|com.apple.news|
+|Poznámky|com.apple.mobilenotes|
+|Numbers|com.apple.Numbers|
+|Pages|com.apple.Pages|
+|Photo Booth|com.apple.Photo-Booth|
+|Fotky|com.apple.mobileslideshow|
+|Podcasty|com.apple.podcasts|
+|Připomínky|com.apple.reminders|
+|Safari|com.apple.mobilesafari|
+|Nastavení|com.apple.Preferences|
+|Stocks|com.apple.stocks|
+|Tipy|com.apple.tips|
+|Videa|com.apple.videos|
+|Diktafon|com.apple.VoiceMemos|
+|Wallet|com.apple.Passbook|
+|Watch|com.apple.Bridge|
+|Počasí|com.apple.weather|
+
+
 ## <a name="kiosk"></a>Kiosk
 -     **Zámek aktivace** – Povolí zámek aktivace na zařízeních s iOSem, které jsou pod dohledem.
 -     **Aplikace, která běží v beznabídkovém režimu** – Zvolte **Spravovaná aplikace** a vyberte aplikaci, kterou jste přidali do Intune, nebo zvolte **Aplikace pro Store** a zadejte adresu URL k aplikaci v úložišti. Žádné jiné aplikace nebudou mít dovoleno se na zařízení spouštět. Další nápovědu najdete v části Určení adres URL na obchody s aplikacemi dál v tomto tématu.
@@ -256,4 +317,21 @@ Informace z tohoto seznamu můžete použít k identifikaci názvu, vydavatele a
 -     **JavaScript** – Povolí v prohlížeči spouštění skriptů Java.
 -     **Upozornění na podvody** – Povolí v prohlížeči upozornění na podvody.
 -     **Automaticky otevíraná okna** – Povolí nebo zakáže blokování automaticky otevíraných oken v prohlížeči.
+
+
+## <a name="domains"></a>Domains
+
+### <a name="unmarked-email-domains"></a>Zrušení označení e-mailových domén
+
+V poli **Adresa URL e-mailové domény** přidejte do seznamu minimálně jednu adresu URL. Když koncoví uživatelé dostanou e-mail z jiné domény, než z té, kterou jste nakonfigurovali, označí se v aplikaci iOS Mail daný e-mail jako nedůvěryhodný.
+
+
+### <a name="managed-web-domains"></a>Spravované webové domény
+
+V poli **Adresa URL webové domény** přidejte do seznamu minimálně jednu adresu URL. Když pak z těchto zadaných domén stáhnete dokumenty, budou se považovat za spravované. Toto nastavení platí jenom pro dokumenty stažené prostřednictvím prohlížeče Safari.
+
+
+### <a name="safari-password-auto-fill-domains"></a>Domény pro automatické vyplňování hesel v Safari
+
+V poli **Adresa URL domény** přidejte do seznamu minimálně jednu adresu URL. Uživatelé si mohou uložit jenom webová hesla z adres URL uvedených v tomto seznamu. Toto nastavení platí jenom pro prohlížeč Safari a pro zařízení s iOSem 9.3 a novějším v režimu pod dohledem. Pokud nezadáte žádné adresy URL, můžete si uložit hesla ze všech webů.
 

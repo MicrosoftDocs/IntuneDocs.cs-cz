@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: c66226b7fc31f91669c4f4f0693ccbd7c679189f
-ms.openlocfilehash: 89a573abb8853ffdab713ce838de323abac03c37
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
+ms.openlocfilehash: ab91737586103ecc6f279daf6a55eb8988ad991a
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -162,8 +162,10 @@ Zařízení vlastněná vaší společností se teď dají distribuovat uživate
 
 ## <a name="changes-to-intune-group-assignments"></a>Změny v přiřazení skupiny pro Intune
 
-Od dubna 2017 se správa skupin zařízení přesouvá do služby Azure Active Directory. Po přechodu na skupiny Azure Active Directory se už přiřazení skupin nebude zobrazovat mezi možnostmi podnikových profilů zápisu. Jelikož se tato změna bude zavádět několik měsíců, je možné, že ji nezaznamenáte okamžitě. Po přesunu do nového portálu bude možné na základě názvů podnikových profilů registrace definovat nová dynamická přiřazení do skupin zařízení. Pro každou skupinu zařízení s Intune předem přiřazenou profilem registrace podnikového zařízení se během migrace do skupin zařízení Azure Active Directory vytvoří odpovídající dynamická skupina zařízení v adresáři AAD založená na názvu profilu registrace podnikového zařízení. Uvedený postup zajistí, aby zařízení, která jsou zařazená do některé skupiny, byla do této skupiny zařízení zaregistrována automaticky i s nasazenými zásadami a aplikacemi. [Další informace o skupinách Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
+Od dubna 2017 se správa skupin zařízení přesouvá do služby Azure Active Directory. Po přechodu na skupiny Azure Active Directory se už přiřazení skupin nebude zobrazovat mezi možnostmi podnikových profilů zápisu. Jelikož se tato změna bude zavádět několik měsíců, je možné, že ji nezaznamenáte okamžitě. Po přesunu do nového portálu bude možné na základě názvů podnikových profilů registrace definovat nová dynamická přiřazení do skupin zařízení. Pro každou skupinu zařízení s Intune předem přiřazenou profilem registrace podnikového zařízení se během migrace do skupin zařízení Azure Active Directory vytvoří odpovídající dynamická skupina zařízení v adresáři AAD založená na názvu profilu registrace podnikového zařízení. Uvedený postup zajistí, aby zařízení, která jsou zařazená do některé skupiny, byla do této skupiny zařízení zaregistrována automaticky i s nasazenými zásadami a aplikacemi. Podrobnosti o tom, jaký to má vliv na registraci firemních zařízení s iOSem, najdete v tématu [Changes to Automatic Grouping for Corporate Pre-enrolled iOS Devices](https://blogs.technet.microsoft.com/intunesupport/2017/04/19/changes-to-automatic-grouping-for-corporate-pre-enrolled-ios-devices/) (Změny automatického seskupování pro firemní předregistrovaná zařízení s iOSem).
 
-### <a name="see-also"></a>Viz taky
+Můžete si také přečíst [článek o skupinách ve službě Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/), kde získáte další informace.
+
+### <a name="see-also"></a>Související témata
 [Předpoklady registrace zařízení](prerequisites-for-enrollment.md)
 
