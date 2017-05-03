@@ -94,6 +94,8 @@
 ### [Konfigurace aplikace Portál společnosti](manage-apps/company-portal-app.md)
 ## Použití zásad ochrany aplikací
 ### [Vytvoření a přiřazení zásad ochrany aplikací](manage-apps/app-protection-policies.md)
+### [Příprava na zásady ochrany aplikací WIP](manage-apps/get-ready-to-configure-app-protection-policies-for-windows-10.md)
+### [Vytvoření a přiřazení zásad ochrany aplikací WIP](manage-apps/create-windows-information-protection-policy-with-intune.md)
 #### [Nastavení Androidu](manage-apps/android-app-protection-policy-settings.md)
 #### [Nastavení iOSu](manage-apps/ios-app-protection-policy-settings.md)
 ### [Ověření zásad ochrany aplikací](manage-apps/validate-app-protection-policies.md)
@@ -151,6 +153,7 @@
 
 ### [Konfigurace nastavení upgradu edice Windows 10](configure-devices/how-to-configure-windows-10-edition-upgrade.md)
 ### [Konfigurace nastavení Windows 10 Education](configure-devices/how-to-configure-education-settings.md)
+### [Konfigurace nastavení iOS Education](configure-devices/how-to-configure-ios-edu-settings.md)
 ### [Konfigurace nastavení služby Windows Update pro firmy](configure-devices/how-to-configure-windows-update-for-business.md)
 ### [Konfigurace certifikátů](configure-devices/how-to-configure-certificates.md)
 #### [SCEP](configure-devices/configure-certificate-infrastructure-for-scep.md)
