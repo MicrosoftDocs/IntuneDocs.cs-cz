@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 nmanager: angrobe
-ms.date: 03/15/2017
+ms.date: 04/24/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.assetid: 4a085264-232a-4af0-97f1-747496c44517
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: deea78dcea9ade031441bf12b388a862235a8e9c
-ms.openlocfilehash: 13d20cd985dbc22cd6d833fa333f31be809ffae5
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 92e07a49205ffaf287fc3aa2da6a6376b75fda4f
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -80,20 +80,26 @@ Tato část obsahuje informace o [novinkách](/intune-azure/introduction/whats-n
 Informace, které vám usnadní [plánování a navrhování](/intune-azure/plan-and-design/get-started) prostředí Intune
 ### <a name="device-enrollment"></a>Registrace zařízení
 [Zjistěte, jak zajistíte správu zařízení přes Intune](/intune-azure/enroll-devices/what-is).
-### <a name="devices"></a>Zařízení
-[Inventář a sestavy vám poskytnou přehled o spravovaných zařízeních](/intune-azure/manage-devices/what-is).
-### <a name="manage-users-and-groups"></a>Správa uživatelů a skupin
-[Další informace o uživatelích zařízení, která spravujete, a řazení prostředků do skupin](/intune-azure/manage-users/what-is)
-### <a name="manage-apps"></a>Správa aplikací
-[Informace o publikování, správě, konfiguraci a ochraně aplikací](/intune-azure/manage-apps/what-is-app-management)
-### <a name="device-configuration"></a>Konfigurace zařízení
-[Informace o profilech, s jejichž pomocí můžete na spravovaných zařízeních nakonfigurovat nastavení a funkce](/intune-azure/configure-devices/what-are-device-profiles)
 ### <a name="device-compliance"></a>Dodržování předpisů zařízení
 [Definujte úroveň dodržování předpisů pro svá zařízení a dostávejte zprávy o všech zařízeních, která je nedodržují](/intune-azure/set-device-compliance/what-is-device-compliance).
-### <a name="conditional-access"></a>podmíněný přístup
+### <a name="device-configuration"></a>Konfigurace zařízení
+[Informace o profilech, s jejichž pomocí můžete na spravovaných zařízeních nakonfigurovat nastavení a funkce](/intune-azure/configure-devices/what-are-device-profiles)
+### <a name="devices"></a>Zařízení
+[Inventář a sestavy vám poskytnou přehled o spravovaných zařízeních](/intune-azure/manage-devices/what-is).
+### <a name="mobile-apps"></a>Mobilní aplikace
+[Informace o publikování, správě, konfiguraci a ochraně aplikací](/intune-azure/manage-apps/what-is-app-management)
+### <a name="conditional-access"></a>Podmíněný přístup
 [Omezte přístup ke službám Exchange na základě určených podmínek](/intune-azure/conditional-access/what-is-conditional-access).
+### <a name="on-premises-access"></a>Místní přístup
+[Konfigurace přístupu k Exchangi ActiveSync a místnímu Exchangi](/intune/deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune)
+### <a name="users"></a>Uživatelé
+[Další informace o uživatelích zařízení, která spravujete, a řazení prostředků do skupin](/intune-azure/manage-users/what-is)
+### <a name="groups"></a>Skupiny
+[Informace o tom, jak můžete používat skupiny Azure Active Directory s Intune](/intune-azure/manage-users/get-started-with-groups)
 ### <a name="intune-roles"></a>Role Intune
 [Určete, kdo může v Intune provádět různé akce a na koho se tyto akce vztahují](/intune-azure/access-control/role-based-access-control). Můžete buď použít předdefinované role, které vyhovují běžným situacím v Intune, nebo si vytvořit své vlastní role.
+### <a name="software-updates"></a>Aktualizace softwaru
+[Informace o tom, jak nakonfigurovat aktualizace softwaru pro zařízení s Windows 10](/intune-azure/configure-devices/how-to-configure-windows-update-for-business)
 
 
 

@@ -14,9 +14,9 @@ ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: eaf30c8a59013af6359743227edc8aa6709577c5
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: e10453155343bb7fd91a4fd3874d393ef78d0b1a
+ms.openlocfilehash: 44429b8694d15006f77a9eb5206293a6bcc8090b
+ms.lasthandoff: 04/25/2017
 
 
 ---
@@ -55,7 +55,7 @@ Tento článek vysvětluje, jak nakonfigurovat a nasadit aplikaci Lookout for Wo
 
 ## <a name="ios-enterprise-signed-version-of-lookout-app"></a>iOS (verze aplikace Lookout podepsaná podnikem)
 
-1. Ověřte, že je na vašem zařízení povolená **Správa iOS**. Pokyny, jak na zařízení povolit správu iOS, najdete v článku [Nastavení správy zařízení s iOSem a MacOS](set-up-ios-and-mac-management-with-microsoft-intune.md).
+1. Ověřte, že je na vašem zařízení povolená **Správa iOS**. Pokyny, jak na zařízení povolit správu iOSu, najdete v článku [Nastavení správy zařízení s iOSem a MacOS](set-up-ios-and-mac-management-with-microsoft-intune.md).
 
 2. **Znovu podepište** aplikaci Lookout for Work pro iOS. Lookout distribuuje svou aplikaci Lookout for Work pro iOS mimo obchod App Store. **Před distribucí této aplikace** ji musíte znovu podepsat pomocí certifikátu podnikového vývojáře pro iOS. Podrobné pokyny k opětovnému podepsání aplikace Lookout for Work pro iOS najdete v článku [Lookout for Work iOS app re-signing process](https://personal.support.lookout.com/hc/articles/114094038714) (Postup opětovného podepsání aplikace Lookout for Work pro iOS) na webu Lookout.
 
@@ -87,12 +87,11 @@ Tento článek vysvětluje, jak nakonfigurovat a nasadit aplikaci Lookout for Wo
   Zvolte možnost **Požadovaná instalace**, aby byla instalace aplikace Lookout v zařízení uživatele povinná.
 
 ## <a name="what-happens-when-the-deployed-app-is-opened-on-the-device"></a>Co se stane, když se nasazená aplikace otevře v zařízení
+https://github.com/Microsoft/Docs/blob/master/ContributorGuide/index.md Když uživatel v zařízení otevře aplikaci Lookout for Work, bude vyzván, aby aplikaci aktivoval a zvolil možnost Přihlásit pomocí Azure Active Directory. Podrobný návod s postupem pro koncového uživatele najdete v následujících tématech:
 
-Když uživatel v zařízení otevře aplikaci Lookout for Work, bude vyzván, aby aplikaci aktivoval a zvolil možnost Přihlásit pomocí Azure Active Directory. Podrobný návod s postupem pro koncového uživatele najdete v následujících tématech:
+* [Jste vyzváni k instalaci aplikace Lookout for Work na zařízení s Androidem](https://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android)
 
-* [Jste vyzváni k instalaci aplikace Lookout for Work na zařízení s Androidem](http://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android)
-
-* [Je třeba vyřešit hrozbu, kterou objevila aplikace Lookout for Work na zařízení s Androidem](http://docs.microsoft.com/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-android)
+* [Je třeba vyřešit hrozbu, kterou objevila aplikace Lookout for Work na zařízení s Androidem](https://docs.microsoft.com/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-android)
 
 ## <a name="next-steps"></a>Další kroky
 * [Vytváření zásad dodržování předpisů zařízením pro službu Lookout ve službě Intune](https://docs.microsoft.com/sccm/protect/deploy-use/enable-device-threat-protection-rule-compliance-policy)

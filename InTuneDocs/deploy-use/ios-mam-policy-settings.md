@@ -5,7 +5,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 01/19/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: 03f53e6ec9f934eb40415434a60213bc839f6afe
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: e96413a9f1398e7f025bbc2fbd66153c1c54c504
+ms.openlocfilehash: 29fe0acf6c3724455d56b4657c79bc93fb258441
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -43,7 +43,7 @@ Existují dvě kategorie nastavení zásad:nastavení přemístění dat a nasta
 | **Šifrovat data aplikace** | U aplikací spravovaných podle zásad se data šifrují v klidu pomocí schématu šifrování na úrovni zařízení poskytovaného iOSem. Když se vyžaduje PIN, data se zašifrují podle nastavení v zásadách ochrany aplikací. <br><br> Přejděte na oficiální dokumentaci společnosti Apple [tady](https://support.apple.com/HT202739) a podívejte se, které šifrovací moduly iOS jsou certifikované jako FIPS 140-2 nebo které na tuto certifikaci čekají. <br><br> Určete, kdy se budou šifrovat pracovní nebo školní data v této aplikaci. Vybírejte z těchto možností: <ul><li>**Když je zařízení blokované:** Všechna data aplikace přidružená k této zásadě jsou při uzamčení zařízení zašifrovaná.</li><li>**Když je zařízení uzamčené a existují otevřené soubory:** Všechna data aplikace přidružená k této zásadě jsou při uzamčení zařízení zašifrovaná, kromě dat v souborech, které jsou v aplikaci aktuálně otevřené.</li><li>**Po restartování zařízení:** Všechna data aplikace přidružená k této zásadě jsou při restartování zařízení zašifrovaná až do doby, než se zařízení poprvé odemkne.</li><li>**Použít nastavení zařízení:** Data aplikace se zašifrují podle výchozího nastavení v zařízení. Pokud povolíte toto nastavení, musí si uživatel nastavit kód PIN a používat ho pro přístup k zařízení.  Pokud není PIN nastavený, aplikace se neotevře a uživateli se místo toho zobrazí zpráva s informacemi o tom, že jeho organizace vyžaduje, aby pro přístup k této aplikaci nejdřív povolil PIN zařízení. </li></ul> | Když je zařízení blokované |
 | **Zakázat synchronizaci kontaktů** | Pokud nechcete, aby aplikace ukládala data do nativní aplikace Kontakty na zařízení, zvolte **Ano**. Když zvolíte **Ne**, může aplikace ukládat data do nativní aplikace Kontakty na zařízení. <br><br>Když budete z aplikace selektivně mazat pracovní nebo školní data, odeberou se kontakty synchronizované přímo z aplikace do nativní aplikace Kontakty. Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. To se v současné době týká jenom aplikace Microsoft Outlook. | Ne |
 | **Zakázat tisk** | Pokud chcete v aplikaci zakázat tisk pracovních nebo školních dat, zvolte **Ano**. | Ne |
-
+| **Vyberte, do kterých služeb úložiště se můžou ukládat firemní data** | Uživatelé můžou ukládat data do vybraných služeb (OneDrive pro firmy, SharePoint a Místní úložiště). Všechny ostatní služby budou blokované. | OneDrive pro firmy a SharePoint |
 
 > [!NOTE]
 > Žádné z nastavení přemístění dat na zařízeních s iOSem neřídí funkci otevírání v aplikaci spravované Applem. Pokud chcete spravovat funkci Otevřít v od Applu, přečtěte si [Správa přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune](manage-data-transfer-between-ios-apps-with-microsoft-intune.md).
@@ -72,6 +72,7 @@ U některých aplikací a služeb platformy, které mají výjimku, můžou zás
 | **Blokovat spuštění spravovaných aplikací na zařízeních s jailbreakem nebo rootem** |  Pokud chcete zabránit spuštění této aplikace v zařízeních s jailbreakem nebo rootem, zvolte **Ano**. Uživatel bude moct dál používat tuto aplikaci pro své osobní účely, ale k práci s pracovními nebo školními daty v této aplikaci bude muset používat jiné zařízení. | Ano |
 | **Znovu zkontrolovat požadavky na přístup po (minuty)** | Proveďte konfiguraci následujících nastavení: <ul><li>**Časový limit:** Toto je počet minut před opakovaným zkontrolováním požadavků na přístup k aplikaci (definovaným dříve v zásadách). Správce například v zásadách zapne kód PIN, uživatel otevře aplikaci MAM a musí zadat PIN. Při použití tohoto nastavení nemusí uživatel u žádné aplikace MAM zadávat PIN dalších **30 minut** (výchozí hodnota).</li><li>**Období odkladu pro offline režim:** Toto je počet minut, po které může aplikace MAM běžet offline. Zadejte dobu (v minutách) před opakovaným zkontrolováním požadavků na přístup k aplikaci. Výchozí hodnota = **720** minut (12 hodin) Aby mohla aplikace po uplynutí této doby dál běžet, bude vyžadovat ověření uživatele ve službě AAD.</li></ul>| Časový limit: 30 <br><br> Offline: 720 |
 | **Doba v offline režimu (ve dnech) před vymazáním dat** | Po tomto počtu dnů (definovaném správcem) běhu v offline režimu provede aplikace sama selektivní vymazání. Je to stejné selektivní vymazání, jaké může vyvolat správce v pracovním postupu vymazání MAM. <br><br> | 90 dnů |
+| **Zakázat PIN kód aplikace, když je PIN kód zařízení spravovaný** | Pokud chcete zakázat PIN kód aplikace, když bude na zaregistrovaném zařízení zjištěn zámek zařízení, zvolte **Ano**. | Ne |
 
 ##  <a name="add-ins-for-outlook-app"></a>Doplňky pro aplikaci Outlook
 

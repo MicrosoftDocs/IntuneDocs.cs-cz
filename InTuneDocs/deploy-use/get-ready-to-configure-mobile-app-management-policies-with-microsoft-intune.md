@@ -15,9 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: 53b86bf579af6af29fd36ce58f9cdf1e92b98abc
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 71ebb310699cf80310b33be1b665a968ac102bde
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -86,7 +86,7 @@ Pokud ke správě svých zařízení používáte [!INCLUDE[wit_nextref](../incl
 
   - Chcete vytvořit pracovní účty SharePoint Online a Exchange Online. Místní Exchange a místní SharePoint se nepodporují.
 
--   **Nastavení Online Skypu pro firmy pro moderní ověřování**. Další informace najdete v tématu [Povolení moderního ověřování](http://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx).
+-   **Nastavení Online Skypu pro firmy pro moderní ověřování**. Další informace najdete v tématu [Povolení moderního ověřování](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx).
 
 
 - Azure Active Directory (Azure AD) pro vytváření uživatelů. Azure AD ověří uživatele, když otevřou aplikaci a zadají svoje pracovní přihlašovací údaje.
@@ -96,7 +96,7 @@ Pokud ke správě svých zařízení používáte [!INCLUDE[wit_nextref](../incl
 
 ### <a name="create-users-and-assign-microsoft-intune-licenses"></a>Vytvoření uživatelů a přiřazení licencí Microsoft Intune
 
-1.  Přihlaste se na [portál Office](http://portal.office.com) pomocí svých přihlašovacích údajů správce.
+1.  Přihlaste se na [portál Office](https://portal.office.com) pomocí svých přihlašovacích údajů správce.
 
 2.  Přidejte uživatele podle popisu **kroků k dokončení 30denní zkušební verze Intune** v [Příručce pro testování Intune](https://docs.microsoft.com/intune/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune) a pak přiřaďte licence Intune. Pokud chcete, aby uživatel měl přístup na portály Office, Azure AD a Azure, přiřaďte mu roli **Globální správce**.
 

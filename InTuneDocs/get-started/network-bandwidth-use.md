@@ -15,9 +15,9 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 0f5972171349325eeb750e552481cbcf903fdf95
-ms.openlocfilehash: 9f1cd7ea3e92ac2e3a1b828e8185961060a7c619
-ms.lasthandoff: 02/10/2017
+ms.sourcegitcommit: c8715f96f532ee6bacda231e1147d03226ecbb48
+ms.openlocfilehash: 5211d2222e5e8ef9328f60ed13f0146925194c5f
+ms.lasthandoff: 04/26/2017
 
 
 ---
@@ -26,11 +26,7 @@ ms.lasthandoff: 02/10/2017
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Tyto doprovodné materiály jsou určené správcům systému, kteří v podniku zajišťují správu zařízení. Další informace o používání Intune na mobilním zařízení najdete v [nejčastějších dotazech o Portálu společnosti Intune](https://docs.microsoft.com/intune/enduser/company-portal-frequently-asked-questions).
-
-Před nastavením Microsoft Intune si přečtěte toto téma a další požadavky uvedené v tématu [Co potřebujete vědět, než začnete s Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md).
-
-Informace v dalších částech slouží k plánování síťových přenosů pro klienty Microsoft Intune.
+Tyto pokyny pomůžou správcům Intune porozumět požadavkům služby Intune na síť. Tyto informace můžete použít k pochopení požadavků na šířku pásma a nastavení IP adres a portů potřebných k nastavení proxy serverů.
 
 ## <a name="average-network-traffic"></a>Průměrné zatížení sítě
 Tabulka uvádí přibližnou velikost a četnost u nejčastějšího obsahu přenášeného po síti u každého klienta.

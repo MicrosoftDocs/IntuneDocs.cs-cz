@@ -1,6 +1,6 @@
 ---
 title: "Nastavení integrace služby Skycure se službou Intune | Dokumentace Microsoftu"
-description: "Nastavení integrace služby Skycure se službou Intune."
+description: "Nastavení integrace služby Skycure se službou Microsoft Intune."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,14 +15,14 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
-ms.openlocfilehash: 6ff56f736c289dbc9a8340ad76e044363acbfea5
-ms.lasthandoff: 03/22/2017
+ms.sourcegitcommit: e10453155343bb7fd91a4fd3874d393ef78d0b1a
+ms.openlocfilehash: 18afa2b84c90e77280daf7ed9b1b8357365f7380
+ms.lasthandoff: 04/25/2017
 
 
 ---
 
-# <a name="setup-the-skycure-integration-with-intune"></a>Nastavení integrace služby Skycure se službou Intune
+# <a name="set-up-the-skycure-integration-with-intune"></a>Nastavení integrace služby Skycure se službou Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
@@ -54,7 +54,7 @@ Služba Skycure podporuje dva způsoby integrace se službou Intune:
 
 ## <a name="to-set-up-the-read-only-integration-between-intune-and-skycure"></a>Postup nastavení integrace jen pro čtení mezi službami Intune a Skycure
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Přihlašovacími údaji správce služby Skycure je e-mail, který musí patřit platnému uživateli služby Azure Active Directory, jinak se přihlášení nezdaří. Služba Skycure k ověření správce používá jednotné přihlašování (SSO) služby Azure Active Directory.
 
 1.  Přejděte do [konzoly pro správu Skycure](https://aad.skycure.com).
@@ -75,7 +75,7 @@ Služba Skycure podporuje dva způsoby integrace se službou Intune:
 
     ![Dokončení přidání aplikace pro iOS](../media/mtp/skycure-setup-3.png)
 
-> [!NOTE] 
+> [!NOTE]
 > Stejný postup zopakujte pro aplikaci **Skycure pro Android** a **aplikaci pro správu**.
 
 ### <a name="add-an-azure-ad-security-group-into-skycure"></a>Přidání skupiny zabezpečení služby Azure AD do služby Skycure

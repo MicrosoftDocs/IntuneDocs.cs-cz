@@ -5,7 +5,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 09/30/2016
+ms.date: 04/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: fbb41a8cf6fada76b72213b8cb04fdc0428515e9
-ms.openlocfilehash: 9f1d00d5773aa604ec039d6f64bb901a795468ba
+ms.sourcegitcommit: c8715f96f532ee6bacda231e1147d03226ecbb48
+ms.openlocfilehash: f6e3783e2d30d26424f3876d8bd22e3d2c8ef630
+ms.lasthandoff: 04/26/2017
 
 
 ---
@@ -35,13 +36,12 @@ Existují dvě kategorie nastavení zásad: nastavení přemístění dat a nast
 | **Zakázat zálohování dat v zařízeních s Androidem** | Pokud chcete zabránit této aplikaci v zálohování pracovních nebo školních dat do služby **Android Backup Service**, zvolte [Ano](https://developer.android.com/google/backup/index.html). Pokud jí chcete zálohování pracovních nebo školních dat povolit, zvolte **Ne**.| Ano |
 | **Povolit aplikaci přenos dat do ostatních aplikací** | Určete, jaké aplikace můžou přijímat data z této aplikace: <ul><li> **Aplikace spravované podle zásad:** Povoluje přenos jenom do jiných aplikací spravovaných podle zásad.</li> <li>**Všechny aplikace**: Povoluje přenos do všech aplikací. </li> <li>**Žádné:** Nepovoluje přenos dat do žádné aplikace, včetně ostatních aplikací spravovaných podle zásad.</li></ul> <p>Do některých aplikací a služeb, které mají výjimku, může Intune povolit přenos dat. Úplný seznam takových aplikací a služeb najdete v části [Výjimky přenosu dat](#Data-transfer-exemptions).| Všechny aplikace |
 | **Povolit aplikaci, aby přijímala data z jiných aplikací** | Určete, jaké aplikace můžou převádět data do této aplikace: <ul><li>**Aplikace spravované podle zásad:** Povoluje přenos jenom z jiných aplikací spravovaných podle zásad.</li><li>**Všechny aplikace**: Povoluje přenos dat ze všech aplikací.</li><li>**Žádné:** Nepovoluje přenos dat z žádné aplikace, včetně ostatních aplikací spravovaných podle zásad. </li></ul> <p>Z některých aplikací a služeb, které mají výjimku, může Intune povolit přenos dat. Úplný seznam takových aplikací a služeb najdete v části [Výjimky přenosu dat](#Data-transfer-exemptions). | Všechny aplikace |
-| **Zakázat možnost Uložit jako** | Pokud chcete v této aplikaci zakázat možnost Uložit jako, zvolte **Ano**. Pokud chcete povolit použití možnosti Uložit jako, vyberte **Ne**. | Ne |
+| **Zakázat možnost Uložit jako** | Pokud chcete v této aplikaci zakázat možnost Uložit jako, zvolte **Ano**. Pokud chcete povolit použití možnosti Uložit jako, vyberte **Ne**. <p>**Vyberte, do kterých služeb úložiště se můžou ukládat firemní data** <br>Uživatelé můžou ukládat data do vybraných služeb (OneDrive pro firmy, SharePoint a Místní úložiště). Všechny ostatní služby budou blokované.</p> | Ne |
 | **Omezit vyjmutí, kopírování a vkládání v ostatních aplikacích** | Určete, kdy se můžou v této aplikaci použít akce vyjmutí, kopírování a vložení. Vybírejte z těchto možností: <ul><li>**Blokováno:** Nepovoluje akce vyjmutí, kopírování a vložení mezi touto a jakoukoliv jinou aplikací.</li><li>**Aplikace spravované podle zásad:** Povoluje operace vyjmutí, kopírování a vložení mezi touto aplikací a jinými aplikacemi spravovanými podle zásad.</li><li>**Aplikace s vložením spravované podle zásad:** Povoluje vyjmutí a kopírování mezi touto aplikací a jinými aplikacemi spravovanými podle zásad. Povoluje vložení dat z jakékoliv aplikace do této aplikace.</li><li>**Libovolná aplikace:** Operace vyjmutí, kopírování a vložení do a z této aplikace nejsou nijak omezené. | Libovolná aplikace |
 |**Omezit webový obsah tak, aby se spouštěl v Managed Browseru** | Pokud chcete vynutit, aby se webové odkazy v aplikaci otevíraly v aplikaci Managed Browser, zvolte **Ano**. <br><br> U zařízení, která nejsou zaregistrovaná v Intune, se webové odkazy v aplikacích spravovaných podle zásad můžou otevírat jenom v aplikaci Managed Browser. <br><br> Pokud ke správě zařízení používáte Intune, přečtěte si téma [Správa přístupu k internetu pomocí zásad spravovaného prohlížeče v Microsoft Intune](manage-internet-access-using-managed-browser-policies.md). | Ne |
 | **Zašifrovat data aplikací** | Pokud chcete v této aplikaci povolit pro pracovní nebo školní data šifrování, zvolte **Ano**. Intune používá k zabezpečenému šifrování dat aplikace 128bitové schéma šifrování AES OpenSSL a systém Android Keystore. Data jsou mezi vstupně-výstupními úlohami souborů synchronně šifrovaná. Obsah v úložišti zařízení je zašifrovaný vždycky. <br><br> Metoda šifrování **nemá** certifikaci FIPS 140-2.  | Ano |
 | **Zakázat synchronizaci kontaktů** | Pokud nechcete, aby aplikace ukládala data do nativní aplikace Kontakty na zařízení, zvolte **Ano**. Když zvolíte **Ne**, může aplikace ukládat data do nativní aplikace Kontakty na zařízení. <br><br>Když budete z aplikace selektivně mazat pracovní nebo školní data, odeberou se kontakty synchronizované přímo z aplikace do nativní aplikace Kontakty. Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. To se v současné době týká jenom aplikace Microsoft Outlook. | Ne |
 | **Zakázat tisk** | Pokud chcete v aplikaci zakázat tisk pracovních nebo školních dat, zvolte **Ano**. | Ne |
-
 
   >[!NOTE]
   >Metoda šifrování pro nastavení **Zašifrovat data aplikací** **nemá** certifikaci FIPS 140-2.
@@ -89,9 +89,5 @@ Existují dvě kategorie nastavení zásad: nastavení přemístění dat a nast
 | **Znovu zkontrolovat požadavky na přístup po (minuty)** | Proveďte konfiguraci následujících nastavení: <ul><li>**Časový limit:** Toto je počet minut před opakovaným zkontrolováním požadavků na přístup k aplikaci (definovaným dříve v zásadách). Správce například v zásadách zapne kód PIN, uživatel otevře aplikaci MAM a musí zadat PIN. Při použití tohoto nastavení nemusí uživatel u žádné aplikace MAM zadávat PIN dalších **30 minut** (výchozí hodnota).</li><li>**Období odkladu pro offline režim:** Toto je počet minut, po které může aplikace MAM běžet offline. Zadejte dobu (v minutách) před opakovaným zkontrolováním požadavků na přístup k aplikaci. Výchozí hodnota = **720** minut (12 hodin) Aby mohla aplikace po uplynutí této doby dál běžet, bude vyžadovat ověření uživatele ve službě AAD.</li></ul>| Časový limit: 30 <br><br> Offline: 720 |
 | **Doba v offline režimu (ve dnech) před vymazáním dat** | Po tomto počtu dnů (definovaném správcem) běhu v offline režimu provede aplikace sama selektivní vymazání. Je to stejné selektivní vymazání, jaké může vyvolat správce v pracovním postupu vymazání MAM. <br><br> | 90 dnů |
 | **Blokovat snímek obrazovky a Android Assistant (Android 6.0+)** | Pokud chcete blokovat funkce zachytávání snímků obrazovky a **Android Assistant**, když zařízení používá tuto aplikaci, zvolte **Ano**. Možnost **Ano** navíc při používání této aplikace s pracovním nebo školním účtem rozmaže obrázek náhledu v přepínači aplikací. | Ne |
-
-
-
-<!--HONumber=Feb17_HO2-->
-
+| **Zakázat PIN kód aplikace, když je PIN kód zařízení spravovaný** | Pokud chcete zakázat PIN kód aplikace, když bude na zaregistrovaném zařízení zjištěn zámek zařízení, zvolte **Ano**. | Ne |
 

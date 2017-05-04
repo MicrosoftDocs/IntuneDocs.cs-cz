@@ -15,8 +15,9 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ad13897fe7bbe4fe13167bb4ce7f558b436a7a90
-ms.openlocfilehash: 2191295407e0c1bb2c3861b8a8d168dd3697da45
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 3794981387e73176152c212854a97b4333023f5d
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -34,7 +35,7 @@ Portál společnosti Intune nabízí uživatelům přístup k firemním datům a
 -   **Aplikace Portál společnosti**: Aplikace, která je dostupná na zařízeních spravovaných službou Intune. Další informace o aplikacích Portál společnosti pro [Android](/Intune/EndUser/using-your-android-device-with-intune), [iOS](/Intune/EndUser/using-your-iOS-or-macOS-device-with-intune) a [Windows](/Intune/EndUser/using-your-windows-device-with-intune).
 
 
-- **Web Portál společnosti**: Web, který koncovým uživatelům umožňuje provádět většinu úkolů, jaké můžou provádět z aplikace Portál společnosti. Adresa URL Portálu společnosti Intune je [http://portal.manage.microsoft.com](http://portal.manage.microsoft.com). Další informace o tomto webu najdete v tématu [Použití webu Portál společnosti Intune](/Intune/EndUser/using-the-intune-company-portal-website).
+- **Web Portál společnosti**: Web, který koncovým uživatelům umožňuje provádět většinu úkolů, jaké můžou provádět z aplikace Portál společnosti. Adresa URL Portálu společnosti Intune je [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com). Další informace o tomto webu najdete v tématu [Použití webu Portál společnosti Intune](/Intune/EndUser/using-the-intune-company-portal-website).
 
 > [!TIP]
 > Když si portál společnosti přizpůsobíte, bude se vaše konfigurace vztahovat na web portálu společnosti i na aplikace Portál společnosti.
@@ -89,9 +90,4 @@ Po uložení změn můžete pomocí odkazů uvedených v dolní části stránky
 >[!div class="step-by-step"]
 
 >[&larr; **Vytváření zásad a aplikací**](.\start-with-a-paid-subscription-to-microsoft-intune-step-6.md)       [**Registrace zařízení** &rarr;](.\start-with-a-paid-subscription-to-microsoft-intune-step-8.md)  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

@@ -6,7 +6,7 @@ keywords:
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 04/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 607598812a414843f1f33a00670a6a85b6687878
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 0aabb7af82bc7c9ed55eca91e615bace5e299d11
+ms.lasthandoff: 04/24/2017
 
 ---
 
@@ -30,8 +30,8 @@ ms.lasthandoff: 02/18/2017
 
 Zásady ochrany aplikací je možné použít pro aplikace běžící na zařízeních, která může nebo nemusí spravovat Intune. Podrobnější popis, jak fungují zásady ochrany aplikací, a scénáře podporované zásadami ochrany aplikací Intune najdete v tématu [Co jsou zásady ochrany aplikací Microsoft Intune](what-is-app-protection-policy.md).
 
-##  <a name="create-an-app-protection-policy"></a>Vytvoření zásad ochrany aplikací
-1.  V úloze **Spravovat aplikace** zvolte **Spravovat** > **Zásady ochrany aplikací**.
+##  <a name="create-an-app-protection-policy"></a>Vytvoření zásady ochrany aplikací
+1.  V úloze **Mobilní aplikace** zvolte **Spravovat** > **Zásady ochrany aplikací**.
 
 2.  Otevře se okno **Zásady ochrany aplikací**, kde můžete vytvářet nové zásady a upravovat zásady, které už existují. Zvolte **Přidat zásadu**.
 

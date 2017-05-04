@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: b372d4ee505ca39a4739069e5798918ecde134ea
-ms.openlocfilehash: abf45b835d13ef5fe4acb769194542611448504e
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: a6a6992ab450a5601468c5d5e3eff112fc7ea222
+ms.lasthandoff: 04/24/2017
 
 ---
 
@@ -76,8 +76,8 @@ Pro skupiny uživatelů a zařízení musíte veškeré změny provést na port�
 
 1. Přihlaste se k portálu Azure Portal.
 2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Spravovat aplikace**.
-1. V úloze **Spravovat aplikace** zvolte **Spravovat** > **Aplikace**.
+3. V okně **Intune** zvolte **Mobilní aplikace**.
+1. V úloze **Mobilní aplikace** zvolte **Spravovat** > **Aplikace**.
 2. V okně se seznamem aplikací klikněte na aplikaci, kterou chcete přiřadit.
 3. V okně <*název aplikace*> – **přehled** zvolte **Spravovat** > **Přiřazení**.
 4. Zvolte **Vybrat skupiny** a potom v okně **Vybrat skupiny** zvolte skupiny Azure AD, do kterých chcete přiřadit aplikaci.

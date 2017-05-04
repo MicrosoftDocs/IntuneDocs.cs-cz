@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/20/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -18,9 +18,9 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
-ms.openlocfilehash: 1c3b986df3e0d8a5ee54da0a91f37b445b4dd9f7
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: 53f1c688aad2f810d8a887435dd8d122d4f471ae
+ms.openlocfilehash: 9220eecc32ee27725454a48484608af5f4ea0e83
+ms.lasthandoff: 04/27/2017
 
 
 ---
@@ -48,7 +48,7 @@ Resetování hesla:
 
   ![Informační zpráva s upozorněním týkajícím se resetování hesla zařízení a odhlášení uživatele Tlačítka pro vstup uživatele jsou Odhlásit se a Zrušit.](./media/iwp-reset-passcode-popup.png)
 
-5.  Vyberte možnost **Odhlásit se** a zobrazí se závěrečná zpráva s informacemi o odebrání hesla ze zařízení. Pokud zařízení nemáte s sebou, neodebírejte heslo, protože by se mohlo stát, že kdokoli by měl k zařízení fyzický přístup, měl by přístup k většině osobních i firemních informací, které jsou v něm uložené.
+5.  Vyberte možnost **Odhlásit se** a zobrazí se závěrečná zpráva s informacemi o odebrání hesla ze zařízení. Pokud zařízení nemáte s sebou, neodebírejte heslo, protože by se mohlo stát, že kdokoli by měl k zařízení fyzický přístup, měl by přístup k většině osobních i firemních informací, které jsou v něm uložené. 
 
   ![Druhá informační zpráva s upozorněním týkajícím se resetování hesla zařízení a odebrání hesla ze zařízení. Obsahuje také informace o tom, jak nastavit nové heslo prostřednictvím nastavení zařízení.](./media/iwp-reset-passcode-2nd-popup.png)
 
@@ -61,6 +61,8 @@ Resetování hesla:
   **Windows 10 Mobile**: Odebere existující heslo a vytvoří dočasné heslo obsahující písmena i číslice. Pokud se přihlašujete pomocí rozpoznávání obličeje Windows Hello, bude tato technologie i nadále podporovaná.
     
   **Windows Phone 8.1**: Odebere existující heslo a vytvoří dočasné heslo obsahující číslice.
+
+  U zařízení s Androidem nebo s Windows se v části **Detaily o zařízení** zobrazí dočasné heslo. 
 
 6.  Odemkněte zařízení a nastavte nové heslo, nebo změňte dočasné heslo pomocí nabídky **Nastavení** v zařízení.
 
