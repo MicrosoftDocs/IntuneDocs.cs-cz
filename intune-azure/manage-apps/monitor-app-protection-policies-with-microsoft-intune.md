@@ -16,8 +16,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 1809422e7f5a3d5aa5e2ef32e1aa7cadf00ecabb
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 330dba6b9402ef354d0925da27ee1b37ef50db00
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -42,8 +43,8 @@ Stav dodržování zásad můžete monitorovat na třech místech:
 
 1. Přihlaste se k portálu Azure Portal.
 2. Zvolte **Další služby** > **Jiné** > **Intune**.
-3. V okně **Intune** zvolte **Spravovat aplikace**.
-4. V úloze **Spravovat aplikace** zvolte **Monitorovat** > **Stav uživatele ochrany aplikací**, abyste si zobrazili souhrnné zobrazení:
+3. V okně **Intune** zvolte **Mobilní aplikace**.
+4. V úloze **Mobilní aplikace** zvolte **Monitorovat** > **Stav uživatele ochrany aplikací**, abyste si zobrazili souhrnné zobrazení:
 
 ![Dlaždice souhrnu okna Správa mobilních aplikací Intune](../media/app-protection-user-status-summary.png)
 
@@ -93,7 +94,7 @@ V podrobném přehledu se zobrazí chybová zpráva, otevíraná aplikace v okam
 
 Najdete tady stejné sestavy jako v Podrobném zobrazení, ale i další sestavy, které vám pomůžou se stavem dodržování zásad MAM:
 
-![Snímek obrazovky&4;](../media/MAM-reporting-7.png)
+![Snímek obrazovky 4](../media/MAM-reporting-7.png)
 
 -   **Sestava uživatele ochrany aplikací:** Obsahuje stejné informace, které najdete v sestavě **Stav uživatele** v části Podrobné zobrazení výše.
 
@@ -109,7 +110,7 @@ Najdete tady stejné sestavy jako v Podrobném zobrazení, ale i další sestavy
 
         -   Všechny aplikace jsou zaregistrované, ale nejsou u nich použité žádné zásady MAM.
 
-![Snímek obrazovky&2;](../media/MAM-reporting-4.png)
+![Snímek obrazovky 2](../media/MAM-reporting-4.png)
 
 ## <a name="table-grouping"></a>Seskupování tabulek
 
@@ -126,20 +127,15 @@ Pokud chcete vygenerovat sestavu ochrany aplikací, postupujte takto:
 
 1. V okně správy mobilních aplikací Intune zvolte Sestava ochrany aplikací.
 
-    ![Snímek obrazovky&6;](../media/app-protection-report-csv-2.png)
+    ![Snímek obrazovky 6](../media/app-protection-report-csv-2.png)
 
 2. Zvolte Ano, aby se vaše sestava uložila, a pak zvolte Uložit jako a vyberte složku, do které chcete sestavu uložit.
 
-    ![Snímek obrazovky&7;](../media/app-protection-report-csv-1.png)
+    ![Snímek obrazovky 7](../media/app-protection-report-csv-1.png)
 
 ## <a name="see-also"></a>Související témata
 [Správa přenosu dat mezi aplikacemi pro iOS](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 
 * [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](app-protection-enabled-android-apps.md)
 * [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](app-protection-enabled-ios-apps.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

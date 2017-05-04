@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/27/2016
+ms.date: 04/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
-ms.openlocfilehash: a6fa910c0a8ec1a9542e03a276dbb8d0757d75b4
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 742fac9c401c24bfc0f2500a238c41fa00c47fd3
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -47,6 +48,8 @@ Aby bylo možné tyto problémy vyřešit, společnost Apple vydala v iOSu 7.1 f
 > [!TIP]
 > Režim Pod dohledem pro zařízení s iOSem vám umožňuje pomocí Apple Configuratoru zařízení zamknout a omezit tak jeho funkčnost jenom na konkrétní firemní účely. Dozorový režim je obecně určený výhradně pro zařízení v majetku podniků.
 
+Další informace o zámku aktivace najdete [zde](https://support.apple.com/en-us/HT201365).
+
 ## <a name="how-intune-helps-you-manage-activation-lock"></a>Jak Intune pomáhá se správou zámku aktivace
 Intune může požádat o stav zámku aktivace u dozorovaných zařízení, na kterých běží iOS 8.0 a novější. Pouze pro dozorovaná zařízení může služba Intune získat kód pro vyřazení zámku aktivace a přímo ho předat zařízení. Pokud bylo zařízení vymazáno, můžete k němu získat přístup přímo tak, že uživatelské jméno necháte prázdné a jako heslo zadáte tento kód.
 
@@ -55,6 +58,14 @@ Intune může požádat o stav zámku aktivace u dozorovaných zařízení, na k
 -   Uživatel získá výhody zabezpečení aplikace Najít iPhone.
 
 -   Dokážete zajistit, aby uživatel mohl zařízení používat ke své práci, a zároveň budete vědět, že když bude nutné zařízení použít k jinému účelu, budete ho moct vyřadit nebo odemknout.
+
+## <a name="before-you-start"></a>Než začnete
+
+Než budete moct zámek aktivace na zařízeních vyřadit, musíte ho nejdřív povolit. Provedete to následujícím způsobem:
+
+1. Podle pokynů v tématu [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) vytvořte [zásady konfigurace zařízení](/intune/deploy-use/ios-policy-settings-in-microsoft-intune) pro iOS.
+2. Na stránce nastavení v části **Registrace** nakonfigurujte nastavení **Povolit zámek aktivace, když je zařízení v režimu pod dohledem** na **Ano**.
+3. Zásady uložte a nasaďte je na zařízení, na kterých chcete spravovat vyřazení zámku aktivace.
 
 ## <a name="how-to-use-activation-lock-bypass-from-the-intune-admin-console"></a>Jak používat vyřazení zámku aktivace z konzoly pro správu služby Intune
 > [!IMPORTANT]
@@ -94,9 +105,4 @@ To, která zařízení zámek aktivace používají, můžete zjistit dvěma zp�
 ### <a name="see-also"></a>Související témata
 [Vyřazení zařízení](retire-devices-from-microsoft-intune-management.md)
 [Chraňte svá zařízení pomocí vzdáleného zámku a resetování hesla](use-remote-lock-and-passcode-reset-in-microsoft-intune.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

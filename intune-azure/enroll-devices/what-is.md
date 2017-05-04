@@ -15,9 +15,9 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 671d862c8d9a98e02f33d96cf6ceba712e740dec
-ms.openlocfilehash: 6127604afb01a9482eadc3d03b566304e2acdd21
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: e10453155343bb7fd91a4fd3874d393ef78d0b1a
+ms.openlocfilehash: a816ee8fd2738cf244fd46a91af46d2b137a5dfb
+ms.lasthandoff: 04/25/2017
 
 
 ---
@@ -27,11 +27,11 @@ ms.lasthandoff: 03/17/2017
 
 Toto téma popisuje registraci a různé způsoby registrace mobilních zařízení do systému správy Intune.
 
-Zařízení (včetně počítačů s Windows) se do Intune registrují proto, abyste je mohli spravovat. V dokumentaci k Intune se tato funkce označuje jako správa mobilních zařízení (MDM). Když se zařízení zaregistrují jako mobilní zařízení (ne jako počítače), vystaví se jim certifikát MDM, který pak tato zařízení používají ke komunikaci se službou Intune.
+Zařízení se do Intune registrují proto, abyste je mohli spravovat. V dokumentaci k Intune se tato funkce označuje jako správa mobilních zařízení (MDM). Když se zařízení do Intune zaregistrují, vystaví se jim certifikát MDM, který pak tato zařízení používají ke komunikaci se službou Intune.
 
 Způsob, jakým se zařízení registrují, závisí na typu zařízení, vlastnictví a požadované úrovni správy. Registrace vlastního zařízení (BYOD) umožňuje uživatelům registrovat své osobní telefony, tablety nebo počítače. Registrace firemního zařízení (zařízení vlastněné společností, COD) umožňuje různé způsoby správy, například v podobě automatické registrace, sdílených zařízení nebo předem autorizovaných požadavků na registraci.
 
-Pokud používáte Exchange ActiveSync, ať už místní nebo hostovaný v cloudu, můžete povolit jednoduchou správu Intune bez registrace (brzy budou k dispozici další informace). Počítače s Windows můžete spravovat jako mobilní zařízení, což je doporučený způsob popsaný níže. S využitím [klientského softwaru Intune](https://docs.microsoft.com/intune/deploy-use/manage-windows-pcs-with-microsoft-intune) je můžete spravovat také jako počítače.
+Pokud používáte Exchange ActiveSync, ať už místní nebo hostovaný v cloudu, můžete povolit jednoduchou správu Intune bez registrace (brzy budou k dispozici další informace). Počítače s Windows můžete spravovat jako mobilní zařízení, což je doporučený způsob popsaný níže.
 
 
 ## <a name="overview-of-device-enrollment-methods"></a>Přehled metod registrace zařízení
@@ -53,21 +53,20 @@ Následující tabulka uvádí metody registrace v Intune a podporované možnos
 |**[USB-SA](#usb-sa)**|    Ano |    Volitelné |    Ne| [Další informace](enroll-ios-devices-with-apple-configurator-and-setup-assistant.md)|
 |**[USB (přímo)](#usb-direct)**|    Ne |    Ne    | Ne|[Další informace](enroll-ios-devices-with-apple-configurator-and-direct-enrollment.md)|
 
-
-
 **Metody registrace zařízení s Windows**
 
 | **Metoda** |    **Vyžadováno vymazání?** |    **Spřažení**    |    **Uzamčení** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[Uživatelé s vlastním zařízením (BYOD)](#byod)** | Ne |    Ano |    Ne | Brzy budou k dispozici další informace.|
+|**[Uživatelé s vlastním zařízením (BYOD)](#byod)** | Ne |    Ano |    Ne | [Další informace](#enroll-windows-devices.md)|
 |**[DEM](#dem)**|    Ne |Ne |Ne    |[Další informace](enroll-devices-using-device-enrollment-manager.md)|
 
 **Metody registrace zařízení s Androidem**
 
 | **Metoda** |    **Vyžadováno vymazání?** |    **Spřažení**    |    **Uzamčení** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[Uživatelé s vlastním zařízením (BYOD)](#byod)** | Ne|    Ano |    Ne | Brzy budou k dispozici další informace.|
+|**[Uživatelé s vlastním zařízením (BYOD)](#byod)** | Ne|    Ano |    Ne | [Další informace](#enroll-android-and-knox-standard-devices.md)|
 |**[DEM](#dem)**|    Ne |Ne |Ne    |[Další informace](enroll-ios-devices-using-device-enrollment-program.md)|
+|[**Android for Work**](#android-for-work)| Ne | Ano | Ne| [Další informace](#enroll-android-and-knox-standard-devices.md) |
 
 
 ## <a name="byod"></a>Uživatelé s vlastním zařízením
@@ -112,21 +111,11 @@ Registrace iOS je podrobněji popsaná zde:
 ## <a name="mobile-device-management-with-exchange-activesync-and-intune"></a>Správa mobilních zařízení pomocí protokolu Exchange ActiveSync a služby Intune
 Mobilní zařízení, která nejsou zaregistrovaná, ale připojují se k Exchange ActiveSync (EAS), je možné spravovat pomocí Intune s využitím zásad EAS MDM. Intune používá ke komunikaci s EAS softwarovou funkci Exchange Connector, která může být místní nebo hostovaná v cloudu. Brzy budou k dispozici další informace.
 
-
-## <a name="windows-pc-management-with-intune"></a>Správa počítačů s Windows pomocí Intune  
-Microsoft Intune také můžete použít ke správě počítačů s Windows a klientským softwarem Intune. Počítače spravované pomocí Intune mohou:
-
- - Vytvářet sestavy inventáře softwaru a hardwaru
- - Instalovat desktopové aplikace (například soubory .exe a .msi)
- - Spravovat nastavení brány firewall
-
-Počítače spravované pomocí klientského softwaru Intune nejdou vymazat úplně, ale umožňují selektivní vymazání. Počítače spravované pomocí klientského softwaru Intune nemohou využívat některé funkce správy ve službě Intune, jako je podmíněný přístup, nastavení sítí VPN a Wi-Fi nebo nasazení certifikátů a konfigurací e-mailu. Brzy budou k dispozici další informace.
-
 ## <a name="supported-device-platforms-and-browsers"></a>Podporované platformy zařízení a prohlížeče
 
 Viz [Podporovaná zařízení a prohlížeče pro Intune](https://docs.microsoft.com/intune/get-started/supported-mobile-devices-and-computers).
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Vyčištění mobilních zařízení po vypršení platnosti certifikátu MDM
 
-Certifikát MDM se obnovuje automaticky, když mobilní zařízení komunikují se službou Intune. Když se mobilní zařízení (nikoli počítače) vymažou nebo se jim po určitou dobu nedaří komunikovat se službou Intune, certifikát MDM se neobnoví. Zařízení se z portálu Azure Portal odebere po uplynutí 180 dnů od vypršení platnosti certifikátu MDM.
+Certifikát MDM se obnovuje automaticky, když mobilní zařízení komunikují se službou Intune. Když se mobilní zařízení vymažou nebo se jim po určitou dobu nedaří komunikovat se službou Intune, certifikát MDM se neobnoví. Zařízení se z portálu Azure Portal odebere po uplynutí 180 dnů od vypršení platnosti certifikátu MDM.
 

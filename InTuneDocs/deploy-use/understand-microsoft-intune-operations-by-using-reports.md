@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/27/2017
+ms.date: 04/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: pbala
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: cc1a3c8c3e2f25ee154db964de2601510e32f1ea
-ms.openlocfilehash: 41354f0eee051bd9c691a27830264f6c95502fa5
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: d16374606d60f3b09dc24b3c4ef4f196a739b32e
+ms.lasthandoff: 04/24/2017
 
 
 
@@ -32,7 +32,7 @@ Informace v tomto tématu vám pomůžou vytvářet a spravovat sestavy Microsof
 ## <a name="using-reports"></a>Použití sestav
 Sestavy Intune obsahují informace o softwaru, hardwaru a licencích k softwaru ve vaší organizaci. Sestavy vám můžou pomoct potvrdit aktuální potřeby a předpovídat budoucí výdaje. Pracovní prostor **Sestavy** poskytuje nástroje k vytváření a správě sestav. 
 
-### <a name="report-types"></a>Typy sestav
+## <a name="report-types"></a>Typy sestav
 
 |Typ sestavy|Popis|
 |---------------|---------------|
@@ -49,8 +49,10 @@ Sestavy Intune obsahují informace o softwaru, hardwaru a licencích k softwaru 
 |**Sestavy ověření stavu**|Zobrazují stav mobilních zařízení.|
 |**Mac OS X – sestava hardwaru**|Zobrazuje podrobnosti o hardwaru všech registrovaných zařízení se systémem Mac OS X ve vybraných skupinách. Informace o inventáři hardwaru shromážděné z těchto zařízení najdete v tématu [Seznámení se zařízeními s inventářem v Microsoft Intune](understand-your-devices-with-inventory-in-microsoft-intune.md).|
 |**Mac OS X – sestava softwaru**|Zobrazuje software nainstalovaný na všech zařízeních se systémem Mac OS X ve vybraných skupinách. V sestavě se uvádí název softwaru (jako ID sady), zkrácený (nebo uživatelsky přívětivý) název, verze a počet zařízení s nainstalovaným softwarem.|
+|**Sestavy Windows Information Protection**|Zobrazují informace o operacích WIP (Windows Information Protection) na zařízeních, která spravujete.|
+|**Sestavy ověření stavu**|Zobrazují informace hlášené službou Windows Health Attestation o zařízeních, která spravujete.|
 
-#### <a name="to-create-a-report"></a>Vytvoření sestavy
+## <a name="to-create-a-report"></a>Vytvoření sestavy
 
 1.  V konzole správce Intune vyberte **Sestavy**. Zvolte typ sestavy, kterou chcete vygenerovat, jak je popsáno v předchozí tabulce.
 

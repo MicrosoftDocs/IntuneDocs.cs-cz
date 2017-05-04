@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 01/20/2017
+ms.date: 04/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 56ef80138d0790933ae216bb02101c3f408311c7
-ms.openlocfilehash: 5bea5a9f1a69193543fa3c5e8997a6527721d3ef
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: b81228ccd1c515bfd82486475996eecf20655993
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -66,7 +67,7 @@ Data ukládaná společností Apple můžete kdykoli synchronizovat s Intune vý
 
 ## <a name="to-deploy-a-volume-purchased-app"></a>Nasazení hromadně koupené aplikace
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) klikněte na **Aplikace** &gt; **Spravovaný software** &gt; **Multilicenční aplikace**. Tento seznam obsahuje všechny aplikace, které byly synchronizovány ze služby Apple VPP.
+1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Aplikace** &gt; **Aplikace** &gt; **Multilicenční aplikace**. Tento seznam obsahuje všechny aplikace, které byly synchronizovány ze služby Apple VPP.
 
 2.  Vyberte aplikaci, kterou chcete nasadit, klikněte na **Spravovat nasazení** a potom postupujte podle pokynů v tématu [Nasazení aplikací v Microsoft Intune](deploy-apps-in-microsoft-intune.md) a dokončete odeslání, vytvoření a nasazení aplikace.
 
@@ -79,22 +80,14 @@ Když chcete licenci získat zpět, je třeba nastavit typ instalace na **Odinst
 
 Když se uživatel s oprávněným zařízením poprvé pokusí o instalaci aplikace VPP, požádá se o připojení k programu Apple Volume Purchase. To je třeba provést před instalací aplikace.
 
-> [!TIP]
-> Podívejte se na sloupec **Stav podmínek VPP**, který obsahuje stav přijetí pro každého uživatele, pro kterého byla aplikace nasazená.
-
 Pokud jsou k dispozici žádné další licence, nasazení selže.
 
 ## <a name="to-monitor-apple-vpp-apps"></a>Monitorování aplikací Apple VPP
-Které aplikace VPP jsou nasazené a kolik licencí je už využito, můžete sledovat v pracovním prostoru **Aplikace** v uzlu **Spravovaný software** &gt; **Hromadně zakoupené aplikace**.
+Které aplikace VPP jsou nasazené a kolik licencí je už využito, můžete sledovat v pracovním prostoru **Aplikace** v uzlu **Multilicenční aplikace**.
 
 > [!TIP]
 > Můžete také použít **filtry** aplikací pro zjištění stavu instalace konkrétních aplikací.
 
 ### <a name="see-also"></a>Viz taky
 [Nasazení aplikací v Microsoft Intune](deploy-apps-in-microsoft-intune.md)
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 

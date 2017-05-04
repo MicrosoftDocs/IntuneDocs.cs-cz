@@ -16,9 +16,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 61fbc2af9a7c43d01c20f86ff26012f63ee0a3c2
-ms.openlocfilehash: c56bea46c8b505e0d357cfe90678ab149559b896
-ms.lasthandoff: 04/07/2017
+ms.sourcegitcommit: 53f1c688aad2f810d8a887435dd8d122d4f471ae
+ms.openlocfilehash: d8fa3a19915076f1a603449dd426172fbc5a613a
+ms.lasthandoff: 04/27/2017
 
 
 ---
@@ -38,9 +38,8 @@ Toto téma pomáhá správcům IT registrovat zařízení s iOSem ve vlastnictv�
 2. [Vytvoření profilu DEP](#create-anapple-dep-profile)
 3. [Přiřazení sériových čísel Apple DEP k vašemu serveru Intune](#assign-apple-dep-serial-numbers-to-your-mdm-server)
 4. [Synchronizace zařízení spravovaných v rámci programu DEP](#synchronize-dep-managed-devices)
-5. Distribuce zařízení uživatelům
-
-
+5. [Přiřazení profilu DEP k zařízením](#assign-a-dep-profile-to-devices)
+6. [Distribuce zařízení uživatelům](#distribute-devices-to-users)
 
 ## <a name="get-the-apple-dep-certificate"></a>Získání certifikátu Apple DEP
 Abyste mohli v Programu registrace zařízení (DEP) registrovat zařízení s iOSem vlastněná společností, potřebujete od společnosti Apple certifikát DEP (.p7m). Token umožňuje Intune synchronizovat informace o zařízeních vlastněných společností, která se účastní programu DEP. Token také umožňuje Intune odesílat společnosti Apple registrační profily a přiřazovat k těmto profilům zařízení.
@@ -49,9 +48,6 @@ Pokud chcete zařízení s iOSem vlastněná společností spravovat pomocí Pro
 
 > [!NOTE]
 > Pokud byl váš tenant Intune migrován z klasické konzoly Intune do portálu Azure Portal a během doby migrace jste z konzoly pro správu Intune token Apple DEP odstranili, mohl být token DEP obnoven do vašeho účtu Intune. Token DEP můžete z portálu Azure Portal znovu odstranit.
-
-
-
 
 **Krok 1: Stáhněte si certifikát veřejného klíče služby Intune, který je potřebný pro vytvoření tokenu DEP Apple.**<br>
 1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**. V okně Intune zvolte **Registrace zařízení** > **Token DEP Apple**.
@@ -75,7 +71,7 @@ Přejděte k souboru certifikátu (.pem), zvolte **Otevřít** a pak zvolte **Na
 Profil registrace zařízení definuje nastavení, která se použijí pro skupinu zařízení. Následující postup ukazuje, jak vytvořit profil registrace zařízení pro zařízení s iOSem registrovaná pomocí programu DEP.
 
 1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-2. V okně Intune zvolte **Registrovat zařízení** a pak zvolte **Registrace Apple**.
+2. V okně Intune zvolte **Registrace zařízení** a pak zvolte **Registrace Apple**.
 3. V části **Spravovat nastavení Programu registrace zařízení (DEP) Apple** vyberte **Profily DEP**.
 4. V okně **Profily DEP** vyberte **Vytvořit**.
 5. V okně **Vytvořit registrační profil** zadejte název a popis profilu.
@@ -118,6 +114,7 @@ Profil registrace zařízení definuje nastavení, která se použijí pro skupi
 9. Uložte nastavení profilu tak, že v okně **Vytvořit registrační profil** zvolíte **Vytvořit**.
 
 ## <a name="assign-apple-dep-serial-numbers-to-your-mdm-server"></a>Přiřazení sériových čísel Apple DEP k vašemu serveru MDM
+Na webovém portálu Apple DEP musíte k serveru MDM služby Intune přiřadit sériová čísla zařízení, aby služba Intune mohla tato zařízení spravovat.
 
 1. Přejděte na [portál programu Device Enrollment Program](https://deploy.apple.com) (https://deploy.apple.com) a přihlaste se pomocí firemního Apple ID.
 
@@ -128,10 +125,11 @@ Profil registrace zařízení definuje nastavení, která se použijí pro skupi
 4. Zvolte **Přiřadit k serveru**, zvolte &lt;název_serveru&gt; zadaný pro Microsoft Intune a potom zvolte **OK**.
 
 ## <a name="synchronize-dep-managed-devices"></a>Synchronizace zařízení spravovaných v rámci programu DEP
+Když jste službě Intune přiřadili oprávnění ke správě zařízení DEP, můžete službu Intune synchronizovat se službou DEP, aby se spravovaná zařízení zobrazila na portálu Intune.
 
 1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 
-2. V okně Intune na portálu Azure Portal zvolte **Registrovat zařízení** a pak zvolte **Registrace Apple**.
+2. V okně Intune na portálu Azure Portal zvolte **Registrace zařízení** a pak zvolte **Registrace Apple**.
 
 3. V části **Spravovat nastavení Programu registrace zařízení (DEP) Apple** vyberte **Sériová čísla DEP**.
 
@@ -146,12 +144,29 @@ Profil registrace zařízení definuje nastavení, která se použijí pro skupi
 >[!NOTE]
 >Z okna **Sériová čísla Apple DEP** můžete také sériová čísla DEP přiřadit k profilům.
 
+## <a name="assign-a-dep-profile-to-devices"></a>Přiřazení profilu DEP k zařízením
+Aby se zařízení DEP spravovaná službou Intune mohla registrovat, musíte jim přiřadit profil DEP.
+
+1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+
+2. V okně Intune na portálu Azure zvolte **Registrace zařízení** > **Registrace Apple** a potom vyberte **Profily DEP**.
+
+3. V seznamu **Registrační profily programu Apple DEP** vyberte profil, který chcete přiřadit k zařízením, a potom vyberte **Přiřazení zařízení**.
+
+4. Vyberte **Přiřadit** a pak vyberte zařízení DEP, ke kterým chcete tento profil přiřadit. Dostupná zařízení DEP můžete filtrovat:
+  - **nepřiřazené**
+  - **libovolné**
+  - **&lt;název profilu DEP&gt;**
+
+  ![Snímek obrazovky s tlačítkem Přiřadit pro přiřazení profilu DEP na portálu Intune](media/dep-profile-assignment.png)
+
+5. Vyberte zařízení, která chcete přiřadit. Zaškrtnutím políčka nad sloupcem můžete vybrat až 1 000 zobrazených zařízení a potom můžete kliknout na **Přiřadit**. Pokud chcete registrovat více než 1 000 zařízení, opakujte postup přiřazení, dokud nebudou mít všechna zařízení přiřazený profil DEP.
+
 ## <a name="distribute-devices-to-users"></a>Distribuce zařízení uživatelům
 
-Zařízení patřící společnosti teď můžete distribuovat uživatelům. Pokud je zařízení s iOSem zapnuté, zaregistruje se jeho správa službou Intune.
+Zařízení patřící společnosti teď můžete distribuovat uživatelům. Pokud je zařízení s iOSem zapnuté, zaregistruje se pro správu službou Intune. Pokud bylo zařízení aktivováno a používá se, nemůže být profil použit, dokud nebude zařízení obnoveno do továrního nastavení.
 
-
-## <a name="how-users-install-and-use-the-company-portal-on-their-devices"></a>Jak uživatelé instalují a používají aplikaci Portál společnosti na svých zařízeních
+### <a name="how-users-install-and-use-the-company-portal-on-their-devices"></a>Jak uživatelé instalují a používají aplikaci Portál společnosti na svých zařízeních
 
 Zařízení nakonfigurovaná s přidružením uživatele umožňují instalaci a spuštění aplikace Portál společnosti, která slouží ke stahování aplikací a správě zařízení. Když uživatelé dostanou zařízení, musí provést další kroky popsané níže, aby dokončili postup Pomocníka s nastavením a nainstalovali aplikaci Portál společnosti.
 
@@ -159,7 +174,7 @@ Zařízení nakonfigurovaná s přidružením uživatele umožňují instalaci a
 
 1. Když uživatel zapne své zařízení, zobrazí se výzva k dokončení postupu Pomocníka s nastavením. Během nastavování se uživateli zobrazí výzva k zadání přihlašovacích údajů. Uživatel musí použít přihlašovací údaje (tj. jedinečné osobní jméno nebo hlavní název uživatele) přidružené k jeho předplatnému Intune.
 
-2. Během nastavování se uživateli zobrazí výzva k zadání Apple ID. Aby mohlo zařízení nainstalovat aplikaci Portál společnosti, musí uživatel zadat Apple ID. Po dokončení nastavení může uživatel zadat ID i z nabídky nastavení iOS.
+2. Během nastavování se uživateli zobrazí výzva k zadání Apple ID. Aby mohlo zařízení nainstalovat aplikaci Portál společnosti, musí uživatel zadat Apple ID. Po dokončení nastavení může uživatel zadat Apple ID i z nabídky nastavení iOSu.
 
 3. Po dokončení nastavení si uživatel musí nainstalovat aplikaci Portál společnosti z App Storu.
 

@@ -15,9 +15,9 @@ ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 905be6a926dc5bab8e9b1016ba82751ee47313e5
-ms.openlocfilehash: 68dbebbd7d29514bde438b7dff3142dc45e8471d
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: f760d567ac339bbb60240ee9f8d28cb550656a59
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -63,7 +63,7 @@ Musíte vytvořit uživatelský účet služby Active Directory, který bude kon
 
 ## <a name="download-the-on-premises-exchange-connector-software-installation-package"></a>Stažení instalačního balíčku místního Exchange Connectoru
 
-1. V podporovaném operačním systému Windows Server pro místní Exchange Connector otevřete [konzolu pro správu Microsoft Intune](http://manage.microsoft.com) (http://manage.microsoft.com) z uživatelského účtu, který je správcem klienta Exchange a který má licenci k používání Exchange Serveru.
+1. V podporovaném operačním systému Windows Server pro místní Exchange Connector otevřete [konzolu pro správu Microsoft Intune](https://manage.microsoft.com) (https://manage.microsoft.com) z uživatelského účtu, který je správcem tenanta Exchange a který má licenci k používání Exchange Serveru.
 ![Otevření nastaveného připojení k serveru Exchange](../media/ExchangeConnector.gif)
 
 2.  V podokně zástupců pracovních prostorů zvolte **Správce**>**Správa mobilního zařízení** > **Microsoft Exchange**>**Nastavit připojení k systému Exchange**.
@@ -129,7 +129,7 @@ Až Exchange Connector připojení nastaví, mobilní zařízení přidružená 
 
 ## <a name="validate-the-exchange-connection"></a>Ověření připojení k systému Exchange
 
-Po úspěšné konfiguraci softwaru Exchange Connector můžete zobrazit stav připojení a poslední úspěšný pokus o synchronizaci. V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) zvolte pracovní prostor **SPRÁVCE**. V části **Správa mobilních zařízení** zvolte **Microsoft Exchange** a ověřte, že se v části **Informace o připojení systému Exchange** zobrazují podrobnosti, které jste zadali.
+Po úspěšné konfiguraci softwaru Exchange Connector můžete zobrazit stav připojení a poslední úspěšný pokus o synchronizaci. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte pracovní prostor **SPRÁVCE**. V části **Správa mobilních zařízení** zvolte **Microsoft Exchange** a ověřte, že se v části **Informace o připojení systému Exchange** zobrazují podrobnosti, které jste zadali.
 
 
 Můžete se taky podívat na datum a čas posledního úspěšného pokusu o synchronizaci.

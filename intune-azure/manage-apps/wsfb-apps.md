@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 04/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: d02d7c3367e18c96cc1d72de3a3a0ef581ef63ff
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 6e410a37f91e0828d5f6b205acb4d340dae86c6d
+ms.lasthandoff: 04/24/2017
 
 ---
 
@@ -58,7 +58,7 @@ Teď můžete pokračovat a nastavit synchronizaci v konzole Intune.
 
 1. Přihlaste se k portálu Azure Portal.
 2. Zvolte **Další služby** > **Jiné** > **Intune**.
-3. V okně **Intune** zvolte **Spravovat aplikace**.
+3. V okně **Intune** zvolte **Mobilní aplikace**.
 1. V okně **Mobilní aplikace** zvolte **Nastavení** > **Windows Store pro firmy**.
 2. Klikněte na **Povolit**.
 3. Pokud jste to ještě neudělali, klikněte na odkaz pro registraci Windows Storu pro firmy a podle předchozího postupu přidružte svůj účet.
@@ -67,7 +67,7 @@ Teď můžete pokračovat a nastavit synchronizaci v konzole Intune.
 
 ## <a name="synchronize-apps"></a>Synchronizace aplikací
 
-1. V úloze **Spravovat aplikace** zvolte **Nastavení** > **Windows Store pro firmy**.
+1. V úloze **Mobilní aplikace** zvolte **Nastavení** > **Windows Store pro firmy**.
 2. Kliknutím na **Synchronizovat** přeneste aplikace zakoupené ve Windows Storu do Intune.
 
 ## <a name="assign-apps"></a>Přiřazení aplikací
