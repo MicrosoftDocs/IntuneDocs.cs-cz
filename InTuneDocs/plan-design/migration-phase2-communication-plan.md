@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab5aa4e12d951d818c5afb4e1ac5e866b05733fb
-ms.openlocfilehash: d59ddb11ef96e90fdc47ad556c300cfa1dd53de5
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 9178404c1ed0b09ac4ae21c9c3a1b8d817241ea0
+ms.openlocfilehash: 4c5e436373303d44e01a9ee8d1474334cf8655db
+ms.lasthandoff: 04/17/2017
 
 
 ---
@@ -42,7 +42,7 @@ Tady je příklad, jak můžete o migraci informovat uživatele ve vaší organi
     -   [Stáhněte si šablonu E-mail č. 2 a použijte ji ve své organizaci](https://gallery.technet.microsoft.com/Intune-migration-guide-end-a9d25eb5)
 <br></br>
 
--   **E-mail č. 3:** Pošlete uživatelům časovou osu migrace, aby jim nevypršela platnost přístupu. Znovu jim připomeňte výhody a strategické důvody migrace. Časový plán posílání e-mailů by měl kopírovat kaskádový průběh jednotlivých fází. Například v červnu pošlete e-mail \#3 uživatelům fáze 1, e-mail \#2 uživatelům fáze 2 a e-mail \#1 uživatelům fáze 3.
+-   **E-mail č. 3:** Pošlete uživatelům časovou osu migrace, aby jim nevypršela platnost přístupu. Znovu jim připomeňte výhody a strategické důvody migrace. Časový plán posílání e-mailů by měl kopírovat kaskádový průběh jednotlivých fází. Například v červnu pošlete e-mail \#1 uživatelům fáze 1, e-mail \#2 uživatelům fáze 2 a e-mail \#1 uživatelům fáze 3.
 
     -   [Stáhněte si šablonu E-mail č. 3 a použijte ji ve své organizaci](https://gallery.technet.microsoft.com/Intune-migration-guide-end-831521b5)
 
@@ -54,7 +54,7 @@ Po určité době můžete začít vynucovat dodržování předpisů pomocí z�
 
 Intune poskytuje další šablony na podporu registrace zařízení koncovými uživateli:
 
--   Další pokyny týkající se registračních kroků pro konkrétní platformu mobilního operačního systému najdete v tématu [Co říct koncovým uživatelům o používání služby Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune).
+-   Další pokyny týkající se registračních kroků pro konkrétní platformu mobilního operačního systému najdete v tématu [Co říct koncovým uživatelům o používání služby Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune).
 
 -   Stáhněte si přizpůsobitelnou [šablonu registrace koncového uživatele do Intune pro správce IT](https://gallery.technet.microsoft.com/End-user-Intune-enrollment-55dfd64a).
 
