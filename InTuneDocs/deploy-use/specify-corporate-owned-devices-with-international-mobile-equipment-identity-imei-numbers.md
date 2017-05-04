@@ -30,7 +30,7 @@ Microsoft Intune umožňuje správcům importovat kódy IMEI (International Mobi
 
 1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Skupiny** &gt; **Všechna zařízení** &gt; **Firemní předregistrovaná zařízení**  &gt; **Podle IMEI (všechny platformy)** a pak zvolte **Přidat zařízení**. Zařízení můžete přidat dvěma způsoby:
 
-    -   **Nahráním souboru .csv se sériovými čísly** – Vytvořte seznam oddělený čárkami (.csv), který bude mít dva sloupce, a nebude mít záhlaví. Soubor .csv může obsahovat maximálně 5000 zařízení, ale jeho velikost nesmí překročit 5 MB. Pole podrobností může obsahovat nejvýše 128 znaků.
+    -   **Nahráním souboru .csv se sériovými čísly** – Vytvořte seznam oddělený čárkami (.csv), který bude mít dva sloupce, a nebude mít záhlaví. Soubor .csv může obsahovat maximálně 5000 zařízení, ale jeho velikost nesmí překročit 5 MB. Pole podrobností může obsahovat nejvýše 128 znaků. 
 
         |||
         |-|-|
@@ -39,8 +39,8 @@ Microsoft Intune umožňuje správcům importovat kódy IMEI (International Mobi
         V textovém editoru vypadá soubor .csv takhle:
 
         ```
-        01 234567 890123,device details
-        02 234567 890123,device details
+        01234567890123,device details
+        02234567890123,device details
         ```
 
     -   **Přidáním podrobností o zařízení ručně** – Zadejte kód IMEI a podrobnosti až o 15 zařízeních.
