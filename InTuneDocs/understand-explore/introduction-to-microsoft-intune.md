@@ -5,7 +5,7 @@ keywords: co je Intune
 author: Lindavr
 ms.author: lindavr
 manager: angrobe
-ms.date: 03/7/2017
+ms.date: 05/04/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: pmay
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: 3b1c61bc78db2c674bf108ed6110c3826cff150e
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: 33febef8787887401960592d95356347f6917681
+ms.openlocfilehash: 2552f84dc38c4453851167cd1570143c7a9820c2
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -32,7 +32,7 @@ Intune je cloudová služba pro správu mobility velkých organizací (EMM), kte
 * Chránit informace vaší společnosti díky řízení způsobu, jak k nim vaši pracovníci přistupují a jak je sdílejí
 * Zajistit, aby zařízení a aplikace splňovaly požadavky společnosti na zabezpečení
 
-Intune se úzce integruje se službou Azure Active Directory (Azure AD) kvůli řízení přístupu a identit a se službou Azure Information Protection kvůli ochraně dat. Je *prostředkem pro správu* v rámci řešení Microsoft Enterprise Mobility + Security (EMS), zatímco Office 365 je *prostředkem pro produktivitu* v rámci řešení mobility od Microsoftu.  
+Intune se úzce integruje se službou Azure Active Directory (Azure AD) kvůli řízení přístupu a identit a se službou Azure Information Protection kvůli ochraně dat.
 
 Dohromady pak Office 365 a EMS vašim pracovníkům umožňují, aby byli produktivní na všech zařízeních, a současně chrání informace vaší organizace. Office 365 s EMS je kompletní integrovaná sada nástrojů pro podnikovou mobilitu, která se zaměřuje na produktivitu, identitu, řízení přístupu, správu a ochranu dat. Nabízí efektivní způsob, jak nasadit a provozovat řešení mobility ve vaší organizaci.
 
