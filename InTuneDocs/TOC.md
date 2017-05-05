@@ -1,5 +1,6 @@
 # Porozumění a prozkoumávání
 ## [Úvod do Intune](understand-explore/introduction-to-microsoft-intune.md)
+## [Intune pro vzdělávání](understand-explore/introduction-to-intune-education.md)
 ## [Registrace bezplatné zkušební verze](understand-explore/sign-up-for-30-day-trial-microsoft-intune.md)
 ## [Hodnocení Intune MDM](understand-explore/mobile-device-management-trial-guide-microsoft-intune.md)
 ### [Vytvoření skupiny pro uspořádání uživatelů a zařízení](understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-3.md)
