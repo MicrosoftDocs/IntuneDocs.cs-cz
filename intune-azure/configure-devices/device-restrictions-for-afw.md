@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
-ms.openlocfilehash: b1df2e0c6b2494386193e24c2f6265db35e58dd5
-ms.lasthandoff: 04/19/2017
+ms.sourcegitcommit: 03fec9d22e705ccb27f4eb1f8f82c7ace95e841e
+ms.openlocfilehash: c5cff131e7bcedadbad42fe6ab8bf00017f933ff
+ms.lasthandoff: 04/26/2017
 
 
 ---
@@ -28,14 +28,15 @@ ms.lasthandoff: 04/19/2017
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
 ## <a name="work-profile-settings"></a>Nastavení pracovního profilu
--     **Sdílení dat mezi pracovním a osobním profilem** – toto nastavení použijte pro řízení, zda aplikace v pracovním profilu mohou sdílet data s aplikacemi v osobním profilu. Vybírejte z těchto možností: 
+-     **Sdílení dat mezi pracovním a osobním profilem** – toto nastavení použijte pro řízení, zda aplikace v pracovním profilu mohou sdílet data s aplikacemi v osobním profilu. Vybírejte z těchto možností:
     - **Výchozí omezení sdílení** – jedná se o výchozí chování zařízení při sdílení, které se liší v závislosti na verzi Androidu používané v zařízení. Ve výchozím nastavení je povoleno sdílení z osobního do pracovního profilu. Ve výchozím nastavení je také blokováno sdílení mezi pracovním a osobním profilem. To zabraňuje úniku dat z pracovního do soukromého profilu. Google neposkytuje způsob, jak blokovat data přenášená z osobního do pracovního profilu na zařízeních, která používají verze starší než 6.0.  
     - **Aplikace v pracovním profilu můžou zpracovat žádost o sdílení z osobního profilu** – tuto možnost použijte, pokud chcete povolit integrovanou funkci Androidu, která umožňuje sdílet data z osobního do pracovního profilu. Pokud je tato možnost povolena, žádost o sdílení iniciovaná aplikací v osobním profilu bude moci sdílet data s aplikacemi v pracovním profilu. Toto je výchozí chování zařízení s Androidem, které používají verze novější než 6.0.
     - **Aplikace v osobním profilu můžou zpracovat žádost o sdílení z pracovního profilu** – povolí u pracovního profilu sdílení v obou směrech. Když vyberete toto nastavení, můžou aplikace v pracovním profilu sdílet data s nespravovanými aplikacemi v osobním profilu.  Toto nastavení používejte obezřetně, protože umožňuje přenos spravovaných dat v pracovním profilu do nespravované oblasti zařízení.
 
 
 -     **Oznámení z pracovního profilu, když je zařízení zamknuté** – řídí, zda aplikace v pracovním profilu můžou zobrazovat oznámení na obrazovce, když je zařízení zamknuté.
--     **Výchozí oprávnění aplikace** – umožňuje nastavit zásady výchozích oprávnění pro všechny aplikace v pracovním profilu. Od verze Android 6 se výzvy k povolení některých oprávnění vyžadovaných aplikacemi zobrazují koncovému uživateli při jejich používání. Nastavení této zásady vám umožňuje určit, jak nebo jestli se uživatelům zobrazí výzvy k udělení oprávnění aplikacím v pracovním profilu. Můžete například nainstalovat do pracovního profilu aplikaci, která vyžaduje přístup k poloze. Normálně by tato aplikace zobrazila uživateli dialog s otázkou, jestli chce této aplikaci udělit přístup k poloze, a uživatel by ji schválil nebo zamítl. Pomocí této zásady můžete určit, jestli se všechna oprávnění mají automaticky udělit bez výzvy, automaticky odepřít bez výzvy, nebo jestli to má rozhodnout uživatel. Vybírejte z těchto možností:
+-     **Výchozí oprávnění aplikace** – umožňuje nastavit zásady výchozích oprávnění pro všechny aplikace v pracovním profilu. Od verze Android 6 se výzvy k povolení některých oprávnění vyžadovaných aplikacemi zobrazují koncovému uživateli při jejich používání. Nastavení této zásady vám umožňuje určit, jak nebo jestli se uživatelům zobrazí výzvy k udělení oprávnění aplikacím v pracovním profilu.
+Můžete například nainstalovat do pracovního profilu aplikaci, která vyžaduje přístup k poloze. Normálně by tato aplikace zobrazila uživateli dialog s otázkou, jestli chce této aplikaci udělit přístup k poloze, a uživatel by ji schválil nebo zamítl. Pomocí této zásady můžete určit, jestli se všechna oprávnění mají automaticky udělit bez výzvy, automaticky odepřít bez výzvy, nebo jestli to má rozhodnout uživatel. Vybírejte z těchto možností:
     -     **Výchozí ze zařízení**
     -     **Zeptat se**
     -     **Automaticky udělit**
@@ -60,4 +61,26 @@ ms.lasthandoff: 04/19/2017
 - **Odemknutí pomocí otisků prstů** – blokuje koncovému uživateli možnost používat skener otisků prstů zařízení k odemknutí zařízení.
 - **Smart Lock a jiní agenti pro určování důvěryhodnosti** – umožňuje řídit funkci Smart Lock na kompatibilních zařízeních. Tato funkce telefonů, které se někdy říká agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo uzamčené obrazovky zařízení, pokud se zařízení nachází v důvěryhodném umístění (například pokud je připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC). Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
 
+## <a name="custom-policy-settings"></a>Nastavení vlastních zásad
+Pomocí **zásad vlastní konfigurace pro Android for Work** v Microsoft Intune nasaďte nastavení OMA-URI, která se dají používat k ovládání funkcí na zařízeních s Androidem for Work. Jsou to standardní nastavení, která k ovládání funkcí zařízení používá spousta výrobců mobilních zařízení.
+
+Díky této vlastnosti můžete nasadit nastavení Androidu, která nejde konfigurovat se zásadami Intune.
+Intune v současnosti podporuje omezený počet vlastních zásad Androidu. Pokud chcete zjistit, které zásady můžete nakonfigurovat, podívejte se na ukázky v tomto tématu.
+
+### <a name="general-settings"></a>Obecná nastavení
+
+|Název nastavení|Podrobnosti|
+    |----------------|--------------------|
+    |**Název** |Zadejte jedinečný název vlastní zásady pro Android, abyste ji mohli v konzole Intune snadno identifikovat.|
+    |**Popis** |Zadejte popis, který bude shrnovat účel vlastní zásady pro Android, a uveďte jakékoli další důležité informace, které vám pomůžou zásadu najít.|
+
+### <a name="oma-uri-settings"></a>Nastavení OMA-URI
+
+  |Název nastavení|Podrobnosti|
+  |--------|--------------------|
+  |**Název** |Zadejte jedinečný název nastavení OMA-URI, který vám pomůže ho rozpoznat v seznamu nastavení.|
+  |**Popis** |Zadejte popis, který nastavení přehledně vystihne, a další důležité informace, které vám ho pomůžou najít.|
+    |**OMA-URI (rozlišování velkých a malých písmen)** |Zadejte OMA-URI, pro který chcete zadat nastavení.|
+  |**Datový typ** |Vyberte datový typ, ve kterém toto nastavení OMA-URI určíte. Vyberte z možností **Řetězec, Řetězec (XML), Datum a čas, Celé číslo, Číslo s plovoucí desetinnou čárkou** nebo **Logická hodnota**.|
+  |**Hodnota** |Zadejte hodnotu pro přidružení k OMA-URI, který jste zadali dřív.|
 
