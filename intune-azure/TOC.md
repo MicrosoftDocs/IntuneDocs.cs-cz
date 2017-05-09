@@ -1,5 +1,6 @@
 # Úvod
 ## [Co je Azure Portal preview?](introduction/what-is-microsoft-intune.md)
+## [Co je Intune for Education?](/intune/understand-explore/introduction-to-intune-education?toc=/intune/toc.json)
 ## [Funkce Intune v Azure](introduction/ui-changes-in-microsoft-intune.md)
 ## Začínáme
 <!---(introduction/get-started.md) --->
@@ -82,10 +83,13 @@
 #### [Obchodní aplikace pro iOS](manage-apps/ios-lob-app.md)
 #### [Webové aplikace](manage-apps/web-app.md)
 #### [Aplikace pro Windows Phone 8.1 Store](manage-apps/windows-phone-8-1-store-app.md)
+#### [Obchodní aplikace pro Windows Phone](manage-apps/windows-phone-line-of-business-app.md)
 #### [Aplikace pro Windows Store](manage-apps/windows-store-app.md)
+#### [Obchodní aplikace pro Windows](manage-apps/windows-line-of-business-app.md)
 ### [Přiřazení aplikací](manage-apps/deploy-apps.md)
 ### [Monitorování aplikací](manage-apps/monitor-apps.md)
-### [Použití zásad konfigurace aplikací](manage-apps/app-configuration-policies.md)
+### [Použití konfiguračních profilů aplikací](manage-apps/app-configuration-policies.md)
+### [Profily zřizovacích profilů aplikací pro iOS](manage-apps/ios-app-provisioning-profile.md)
 ### [Selektivní vymazání dat](manage-apps/app-selective-wipe.md)
 <!---Is this specific to app protection policy or more general app management?--->
 ### [Práce s multilicenčními aplikacemi](manage-apps/volume-purchased-apps.md)
