@@ -1,12 +1,12 @@
 ---
-title: "Přidání aplikací do Microsoft Intune"
+title: "Přidání aplikací do Microsoft Intune | Dokumentace Microsoftu"
 titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Tyto postupy vám pomůžou připravit vaše aplikace v Intune pro přiřazení uživatelům a zařízením. "
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/12/2017
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
-ms.openlocfilehash: d85544bdfaa3a369e1d2d03e5454ff7aa2d75467
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: cce2cd69808937f3e088aa04f6142611a4594895
+ms.openlocfilehash: 20af19a2051a8ebb6f1b2103d761d87fbfdf5da2
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/04/2017
 
 ---
 
@@ -32,27 +33,30 @@ Intune umožňuje přidat a přiřadit tyto typy aplikací:
 
 ![Typy aplikací podporované v Intune](./media/app-types.png)
 
-Podporují se následující platformy. Pokud chcete získat další informace, jak přidat jednotlivé typy aplikací, klikněte na jedno z témat.
+Podporují se následující platformy.
 
-- [Aplikace pro Android Store](/intune-azure/manage-apps/android-store-app)
-- [Obchodní aplikace pro Android](/intune-azure/manage-apps/android-lob-app)
-- [Aplikace pro iOS Store](/intune-azure/manage-apps/ios-store-app)
-- [Obchodní aplikace pro iOS](/intune-azure/manage-apps/ios-lob-app)
-- [Webové aplikace (pro všechny platformy)](/intune-azure/manage-apps/web-app)
-- [Aplikace pro Windows Phone 8.1 Store](/intune-azure/manage-apps/windows-phone-8-1-store-app)
-- [Aplikace pro Windows Store](/intune-azure/manage-apps/windows-store-app)
+- Aplikace pro Android Store
+- Obchodní aplikace (LOB) pro Android
+- Aplikace pro iOS Store
+- Obchodní aplikace (LOB) pro iOS
+- Webové aplikace
+- Aplikace pro Windows Phone 8.1 Store
+- Obchodní aplikace pro Windows Phone (soubory .xap)
+- Aplikace pro Windows Store
+- Obchodní aplikace pro Windows (pouze soubory .msi)
 
-Kromě toho Intune automaticky přidá některé aplikace Microsoftu, když nastavíte svého tenanta. Jejich seznam najdete dále v tomto tématu.
+>[!TIP]
+> Obchodní aplikace (neboli LOB) je taková, která se neinstaluje z obchodu s aplikacemi, ale z instalačního souboru aplikace. Pokud třeba chcete nainstalovat obchodní aplikaci pro iOS, přidejte soubor archivu aplikace (s příponou .ipa). Obvykle jde o aplikace, které jste vytvořili interně.
 
 ## <a name="before-you-start"></a>Než začnete
 
 Než začnete aplikace přidávat a přiřazovat, zvažte následující body.
 
-- Pokud chcete přidat a nasadit aplikaci z obchodu, musí mít koncoví uživatelé u tohoto obchodu zřízený účet, aby si aplikaci mohli nainstalovat.
-- Některé aplikace nebo položky, které nasadíte, můžou záviset na integrovaných aplikacích pro iOS. Pokud třeba nasadíte knihu z obchodu pro iOS, pak musí být v zařízení aplikace iBooks. Pokud jste integrovanou aplikaci iBooks odebrali, nemůžete ji pomocí Intune obnovit.
+- Pokud chcete přidat a přiřadit aplikaci z obchodu, musí mít koncoví uživatelé u tohoto obchodu zřízený účet, aby si aplikaci mohli nainstalovat.
+- Některé aplikace nebo položky, které přiřadíte, můžou záviset na integrovaných aplikacích pro iOS. Pokud třeba přiřadíte knihu z obchodu pro iOS, musí být v zařízení aplikace iBooks. Pokud jste integrovanou aplikaci iBooks odebrali, nemůžete ji pomocí Intune obnovit.
 
 ## <a name="cloud-storage-space"></a>prostor v cloudovém úložišti
-Všechny aplikace, které vytváříte pomocí instalace typu Instalační program softwaru (například obchodní aplikace), se zabalí a nahrají do cloudového úložiště Microsoft Intune. Zkušební předplatné Intune zahrnuje 2 gigabajty (GB) cloudového úložiště, které se používá k ukládání spravovaných aplikací a aktualizací. Úplné předplatné zahrnuje 20 GB úložného prostoru.
+Všechny aplikace, které vytváříte pomocí instalace typu Instalační program softwaru (například obchodní aplikace), se zabalí a nahrají do cloudového úložiště Intune. Zkušební předplatné Intune zahrnuje 2 gigabajty (GB) cloudového úložiště, které se používá k ukládání spravovaných aplikací a aktualizací. Úplné předplatné zahrnuje 20 GB úložného prostoru.
 
 Další úložiště pro Intune můžete zakoupit stejným způsobem jako u původního nákupu.  Pokud jste platili fakturou nebo platební kartou, navštivte [portál pro správu předplatných](https://portal.office.com/adminportal/home?switchtomodern=true#/subscriptions).  Jinak kontaktujte svého partnera nebo prodejního zástupce.
 
@@ -105,4 +109,18 @@ Následující aplikace, které jsou publikované Microsoftem, jsou v Intune int
 |Outlook Groups|Android|Spravovaná aplikace obchodu pro Android|
 |Outlook Groups|iOS|Spravovaná aplikace obchodu pro iOS|
 |PowerPoint|iOS|Spravovaná aplikace obchodu pro iOS|
+
+## <a name="next-steps"></a>Další kroky
+
+Informace o tom, jak do Intune přidat aplikace pro jednotlivé platformy, najdete v příslušných tématech:
+
+- [Aplikace pro Android Store](/intune-azure/manage-apps/android-store-app)
+- [Obchodní aplikace pro Android](/intune-azure/manage-apps/android-lob-app)
+- [Aplikace pro iOS Store](/intune-azure/manage-apps/ios-store-app)
+- [Obchodní aplikace pro iOS](/intune-azure/manage-apps/ios-lob-app)
+- [Webové aplikace (pro všechny platformy)](/intune-azure/manage-apps/web-app)
+- [Aplikace pro Windows Phone 8.1 Store](/intune-azure/manage-apps/windows-phone-8-1-store-app)
+- [Obchodní aplikace pro Windows Phone](/intune-azure/manage-apps/windows-phone-line-of-business-app)
+- [Aplikace pro Windows Store](/intune-azure/manage-apps/windows-store-app)
+- [Obchodní aplikace pro Windows](/intune-azure/manage-apps/windows-line-of-business-app)
 
