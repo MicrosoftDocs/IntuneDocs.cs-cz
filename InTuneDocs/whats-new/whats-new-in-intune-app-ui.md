@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 04/20/2017
+ms.date: 05/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,24 +14,26 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: 62dcb40ad5a7921c514a9d41da14b991e39f3bcd
-ms.openlocfilehash: f4a48b889702147abe20fd513fdb0f774020a54a
-ms.lasthandoff: 04/20/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a9748a0ad6b9bbe10e36ba133ba74edb6aa6e09a
+ms.openlocfilehash: 68dbaa2209ad1432279683a291734641e39ff736
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/05/2017
 
 
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 Zjistěte, jaké jsme v uživatelském rozhraní aplikací udělali změny, které koncoví uživatelé uvidí v této verzi Microsoft Intune. Pomůže vám to při komunikaci s uživateli a aktualizaci vlastní dokumentace, kterou jste vytvořili za účelem podpory vašeho nasazení. Můžete také zjistit, jak lépe řešit problémy uživatelů, když požádají helpdesk o podporu pomocí Portálu společnosti.
 
-> [!Note]
-> Upozorňujeme, že následující obrázky jsou náhledy a oznámený produkt se od prezentovaných verzí může lišit.
+## <a name="coming-soon-in-the-ui"></a>Již brzy v uživatelském rozhraní
+Zde najdete plánované aktualizace našeho uživatelského rozhraní, které vylepší uživatelské prostředí.
 
-## <a name="april-2017"></a>Duben 2017
+> [!Note]
+> Upozorňujeme, že následující obrázky mohou být náhledy a avizovaný produkt se od prezentovaných verzí může lišit.
 
 ### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Vylepšené přihlašování k aplikacím Portál společnosti na všech platformách <!--User Story 1132123-->
 
-Vylepšujeme přihlašování k aplikacím Portál společnosti Intune pro Android, iOS a Windows.  Nové uživatelské prostředí se automaticky zobrazí na všech platformách pro aplikaci Portál společnosti, až Azure AD tuto změnu provede. Kromě toho se teď uživatelé můžou k Portálu společnosti přihlašovat z jiného zařízení pomocí vygenerovaného kódu na jedno použití. To se hodí hlavně v případech, kdy se uživatelé potřebují přihlásit bez přihlašovacích údajů.  
+Avizujeme změnu, kterou uvedeme během několika nadcházejících měsíců a která vylepší přihlašování k aplikacím Portál společnosti Intune v systémech Android, iOS a Windows. Nové uživatelské prostředí se automaticky zobrazí na všech platformách pro aplikaci Portál společnosti, až Azure AD tuto změnu provede. Kromě toho se teď uživatelé můžou k Portálu společnosti přihlašovat z jiného zařízení pomocí vygenerovaného kódu na jedno použití. To se hodí hlavně v případech, kdy se uživatelé potřebují přihlásit bez přihlašovacích údajů.  
 
 Níže můžete vidět předchozí způsob přihlašování, nový způsob přihlašování pomocí přihlašovacích údajů a nový způsobu přihlašování z jiného zařízení.
 
@@ -51,17 +53,17 @@ __Nový způsob přihlašování__
 
 ![Po přijetí e-mailové adresy je uživatel vyzván k zadání hesla.](./media/cp_ios_aad_signin_after_1704_003.png)
 
+![Po absolvování procesu ověřování aplikace Portál společnosti zobrazí pruh načítání a přihlásí se.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
+
 __Nový způsob přihlášení při přihlašování z jiného zařízení__
 
 ![Přihlašovací stránka Portálu společnosti s ikonou osoby před grafickým znázorněním webu. Pod tím je tlačítko „Přihlásit se“. Odkaz dole vede na informace Microsoftu o ochraně osobních údajů a souborech cookie.](./media/cp_ios_aad_signin_from_another_device_after_1704_001.png)
 
 Klepněte na odkaz __Přihlásit z jiného zařízení__.
 
-![Uživatel je vyzván, aby zadal jenom e-mailovou adresu místo zadání e-mailu a hesla na stejné obrazovce. Pod polem e-mailu je odkaz „Přihlásit z jiného zařízení“.](./media/cp_ios_aad_signin_from_another_device_after_1704_002.png)
-
 ![Zobrazí se pokyny, abyste ze svého pracovního počítače přešli na stránku aka.ms/devicelogin s jedinečným přístupovým kódem a pak kód použili k přihlášení.](./media/cp_ios_aad_signin_from_another_device_after_1704_003.png)
 
-Spusťte prohlížeč a přejděte na [http://aka.ms/devicelogin](https://aka.ms/devicelogin).
+Spusťte prohlížeč a přejděte na [https://aka.ms/devicelogin](https://aka.ms/devicelogin).
 
 ![Obrázek uživatelova prohlížeče na pracovním počítači místo aplikace Portál společnosti. Zobrazená stránka „Přihlášení na zařízení“ uživatele vyzve k zadání kódu, který dostal v aplikaci Portál společnosti.](./media/cp_ios_aad_signin_from_another_device_after_1704_004.png)
 
@@ -75,7 +77,9 @@ Aplikace Portál společnosti se začne přihlašovat.
 
 ![Po absolvování procesu ověřování aplikace Portál společnosti zobrazí pruh načítání a přihlásí se.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
 
-### <a name="new-icons-for-the-managed-browser-and-the-company-portal---918433-918431--"></a>Nové ikony pro Managed Browser a Portál společnosti<!--918433, 918431-->
+## <a name="april-2017"></a>Duben 2017
+
+### <a name="new-icons-for-the-managed-browser-and-the-company-portal---918433-918431--"></a>Nové ikony pro Managed Browser a Portál společnosti <!--918433, 918431-->
 
 Managed Browser dostal aktualizované ikony pro verze aplikace pro Android i iOS. Nová ikona bude obsahovat aktualizovaný odznak Intune, aby byla konzistentnější s ostatními aplikacemi v Enterprise Mobility + Security (EM+S).
 
@@ -105,18 +109,27 @@ Aktualizace aplikace Portál společnosti pro Android zobrazuje indikátor průb
    <table id="wrapper">
       <tr>
          <td>
-            <img src="https://docs.microsoft.com/InTune/whats-new/media/cp_android_signing_in_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it." width=200 height=366 align=center>
+            <img src="https://docs.microsoft.com/InTune/whats-new/media/cp_android_connecting_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it." width=200 height=366 align=center>
           </td>
           <td>
-             <img src="https://docs.microsoft.com/InTune/whats-new/media/cp_android_checking_security_reqs_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Signing in' underneath it." width=200 height=366 align=center>
+             <img src="https://docs.microsoft.com/InTune/whats-new/media/cp_android_signing_in_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Signing in' underneath it." width=200 height=366 align=center>
            </td>
            <td>
-              <img src="https://docs.microsoft.com/InTune/whats-new/media/cp_android_connecting_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Checking for security requirements' underneath it." width=200 height=366 align=center>
+              <img src="https://docs.microsoft.com/InTune/whats-new/media/cp_android_checking_security_reqs_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Checking for security requirements' underneath it." width=200 height=366 align=center>
            </td>
       </tr>
    </table>
 </body>
 </html>
+
+### <a name="improved-app-install-status-for-the-windows-10-company-portal-app---676495--"></a>Vylepšený stav instalace aplikace pro aplikaci Portál společnosti ve Windows 10 <!--676495-->
+Na stránce podrobností aplikace v aplikaci Portál společnosti ve Windows 10 se teď zobrazuje indikátor průběhu instalace. To platí pro moderní aplikace na zařízeních s Windows 10 Anniversary Update a novějšími verzemi.
+
+__Před__
+  ![Obrázek předchozí verze načítací obrazovky, na které se jako stav zobrazovalo jen oznámení o tom, že probíhá instalace.](./media/cp_win10_install_status_before_1704.png)
+
+__Po__
+  ![Obrázek aktualizované verze načítací obrazovky, na které se teď zobrazuje indikátor průběhu instalace.](./media/cp_win10_install_status_after_1704.png)
 
 ## <a name="february-2017"></a>Únor 2017
 

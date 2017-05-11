@@ -1,12 +1,12 @@
 ---
-title: "Správa hromadně zakoupených aplikací iOS"
+title: "Správa hromadně zakoupených aplikací pro iOS | Dokumentace Microsoftu"
 titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Zjistěte, jak aplikace zakoupené v rámci multilicenčního programu z App Storu pro iOS zařízení synchronizovat s Intune a jak následně spravovat a sledovat jejich používání."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/19/2017
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
-ms.openlocfilehash: 1c13d39b8b193c56439602a6e9d9a34e547aef81
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f9e8a5deb17ebb77d480213567e5ccf6550e3493
+ms.openlocfilehash: 1909549b321f51069bb6ad83f2f245afbf60b7dd
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/03/2017
 
 ---
 
@@ -53,8 +54,8 @@ Než začnete, musíte od společnosti Apple získat token VPP a odeslat ho do s
 
 1. Přihlaste se k portálu Azure Portal.
 2. Zvolte **Další služby** > **Jiné** > **Intune**.
-3. V okně **Intune** zvolte **Spravovat aplikace**.
-1.  V úloze **Spravovat aplikace** zvolte **Nastavení** > **Tokeny VPP pro iOS**.
+3. V okně **Intune** zvolte **Mobilní aplikace**.
+1.  V úloze **Mobilní aplikace** zvolte **Nastavení** > **Tokeny VPP pro iOS**.
 2.  V okně se seznamem tokenů VPP klikněte na **Přidat**.
 3.  V okně Nový token VPP zadejte následující informace:
     - **Soubor tokenu VPP** – pokud jste to ještě neudělali, zaregistrujte se v rámci programu Volume Purchase Program for Business nebo Volume Purchase Program for Education. Po zaregistrování si stáhněte token Apple VPP pro svůj účet a vyberte ho tady.
@@ -69,7 +70,7 @@ Data ukládaná společností Apple můžete kdykoli synchronizovat s Intune vý
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Přiřazení aplikace zakoupené v rámci multilicenčního programu
 
-1. V úloze **Spravovat aplikace** zvolte **Spravovat** > **Licencované aplikace**.
+1. V úloze **Mobilní aplikace** zvolte **Spravovat** > **Licencované aplikace**.
 2. V okně se seznamem aplikací zvolte aplikaci, kterou chcete přiřadit, a pak zvolte tlačítko se třemi tečkami (**...**). > **Přiřadit skupiny**.
 3. V okně <*název aplikace*> – **Přiřazené skupiny** zvolte **Spravovat** > **Přiřazené skupiny**.
 4. Zvolte **Přiřadit skupiny** a pak v okně **Vybrat skupiny** zvolte skupiny uživatelů nebo zařízení Azure AD, ke kterým chcete aplikaci přiřadit.
@@ -86,5 +87,5 @@ Když chcete licenci získat zpět, musíte nastavit akci přiřazení na **Odin
 
 Když se uživatel s oprávněným zařízením poprvé pokusí o instalaci aplikace VPP, požádá se o připojení k programu Apple Volume Purchase. To je třeba provést před instalací aplikace.
 
-Když nasadíte aplikaci VPP jako dostupnou, obsah aplikace a licence se nasadí přímo z App Storu.
+Když přiřadíte aplikaci VPP jako dostupnou, obsah aplikace a licence se přiřadí přímo z App Storu.
 
