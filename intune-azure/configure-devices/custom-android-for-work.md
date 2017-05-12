@@ -15,23 +15,24 @@ ms.assetid: 4724d6e5-05e5-496c-9af3-b74f083141f8
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
-ms.openlocfilehash: ac27b1915483568b9b9857405f7acaf704fd53d9
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 05afa9140e34b372cc49ace03a3ada965b907c17
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/10/2017
 
 
 ---
 
 # <a name="create-intune-custom-profile-settings-for-android-for-work-devices"></a>Vytvoření nastavení vlastního profilu Intune pro Android for Work
 
-Pomocí zásad vlastní konfigurace pro Android for Work v Intune nasaďte nastavení OMA-URI, která se dají používat k ovládání funkcí na zařízeních s Androidem for Work. Jsou to standardní nastavení, která k ovládání funkcí zařízení používá spousta výrobců mobilních zařízení.
+Pomocí zásad vlastní konfigurace pro Android for Work v Intune přiřaďte nastavení OMA-URI, která se dají používat k ovládání funkcí na zařízeních s Androidem for Work. Jsou to standardní nastavení, která k ovládání funkcí zařízení používá spousta výrobců mobilních zařízení.
 
-Díky této vlastnosti můžete nasadit nastavení Androidu, která nejde konfigurovat se zásadami Intune. Intune v současnosti podporuje omezený počet vlastních zásad Androidu. Pokud chcete zjistit, které zásady můžete nakonfigurovat, podívejte se na ukázky v tomto tématu.
+Tato vlastnost umožňuje přiřadit nastavení Androidu, která nejdou konfigurovat pomocí zásad Intune. Intune v současnosti podporuje omezený počet vlastních zásad Androidu. Pokud chcete zjistit, které zásady můžete nakonfigurovat, podívejte se na ukázky v tomto tématu.
 
 ## <a name="create-a-custom-profile"></a>Vytvoření vlastního profilu
 
-1. Začněte podle pokynů v tématu [Konfigurace vlastního nastavení zařízení](/intune-azure/configure-devices/how-to-configure-custom-settings).
+1. Začněte podle pokynů v tématu [Konfigurace vlastního nastavení zařízení](how-to-configure-custom-settings.md).
 2. V okně **Vlastní nastavení OMA-URI** pomocí **Přidat** přidejte nové nastavení.
 3. V okně **Přidat řádek** nakonfigurujte tyto údaje:
     - **Název** – zadejte jedinečný název vlastního nastavení pro Android for Work, abyste ho mohli na portálu Intune snadno identifikovat.

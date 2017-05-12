@@ -1,12 +1,12 @@
 ---
-title: "Použití zásad konfigurace aplikací v Intune"
+title: "Použití zásad konfigurace aplikací v Intune | Dokumentace Microsoftu"
 titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Přečtěte si, jak používat zásady konfigurace aplikace pro účely předání konfiguračních dat do aplikace pro iOS, když se spustí."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/24/2017
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
-ms.openlocfilehash: 82af84bc3e31317023a2f8f7089431b1dbcaed52
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 847ddf08fdd7308475895af36f43c5391c9556fa
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/10/2017
 
 ---
 
@@ -40,7 +41,7 @@ Když tato nastavení zadají uživatelé špatně, můžete to zvýšit zatíž
 
 Zásady konfigurace aplikací pomůžou tyto problémy eliminovat tím, že vám dovolí pomocí zásad přiřadit tato nastavení uživatelům dřív, než aplikaci spustí. Nastavení jsou pak zadaná automaticky a uživatelé nemusí provádět žádnou akci.
 
-Tyto zásady nepřiřazujte přímo uživatelům a zařízením. Místo toho přidružíte zásadu k aplikaci, a pak nasadíte aplikaci. Nastavení zásad se použije vždy, když je aplikace zkontroluje (obvykle při prvním spuštění).
+Tyto zásady nepřiřazujte přímo uživatelům a zařízením. Místo toho přidružíte zásadu k aplikaci a pak přiřadíte tuto aplikaci. Nastavení zásad se použije vždy, když je aplikace zkontroluje (obvykle při prvním spuštění).
 
 > [!TIP]
 > Tento typ zásad je nyní k dispozici pouze pro zařízení se systémem iOS 8.0 a novějším. Podporuje následující typy instalací aplikací:
@@ -48,7 +49,7 @@ Tyto zásady nepřiřazujte přímo uživatelům a zařízením. Místo toho př
 > -   **Spravované aplikace pro iOS z obchodu s aplikacemi**
 > -   **Balíček aplikace pro iOS**
 >
-> Další informace o typech instalace aplikací najdete v tématu [Přidání aplikace do Microsoft Intune](/intune-azure/manage-apps/add-apps).
+> Další informace o typech instalace aplikací najdete v tématu [Přidání aplikace do Microsoft Intune](add-apps.md).
 
 ## <a name="create-an-app-configuration-policy"></a>Vytvoření zásad konfigurace aplikací
 

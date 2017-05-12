@@ -1,5 +1,5 @@
 ---
-title: "Co jsou profily zařízení v Microsoft Intune?"
+title: "Co jsou profily zařízení v Microsoft Intune? | Dokumentace Microsoftu"
 titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Poznejte profily zařízení Intune a zjistěte, jak vám pomůžou se správou a ochranou zařízení ve firmě."
 keywords: 
@@ -15,10 +15,11 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
-ms.openlocfilehash: 5383e20081285131f91418b47162e0cd5ba92c90
-ms.lasthandoff: 03/17/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: b33d8ec48c057ce1e67487d5772ca203793d8a79
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -37,7 +38,7 @@ Když tuto úlohu otevřete, uvidíte následující možnosti:
 
 ## <a name="getting-started"></a>Začínáme
 
-Pracovní postup při vytváření profilů zařízení je pro všechny profily podobný. Pokud potřebujete informace o vytváření profilů, přečtěte si článek [Jak vytvořit profily konfigurace zařízení Microsoft Intune](/intune-azure/configure-devices/how-to-create-device-profiles). Pak si přečtěte konkrétní informace o vytvoření nastavení pro jednotlivé typy profilů.
+Pracovní postup při vytváření profilů zařízení je pro všechny profily podobný. Pokud potřebujete informace o vytváření profilů, přečtěte si článek [Jak vytvořit profily konfigurace zařízení Microsoft Intune](how-to-create-device-profiles.md). Pak si přečtěte konkrétní informace o vytvoření nastavení pro jednotlivé typy profilů.
 
 U zařízení můžete spravovat následující funkce:
 
@@ -51,15 +52,15 @@ Pomocí omezení zařízení můžete regulovat širokou škálu nastavení na v
 Další informace najdete v článku [Jak u zařízení nakonfigurovat nastavení omezení](how-to-configure-device-restrictions.md). Podporované platformy: Android, iOS, macOS, Windows 10 a Windows 10 Team.
 
 ## <a name="email"></a>E-mail
-E-mailové profily vám umožní na spravovaných zařízeních vytvořit, nasadit a monitorovat nastavení e-mailů Exchange ActiveSync. Nasazením těchto nastavení zajistíte konzistenci, omezíte volání podpory a dáte uživatelům přístup k firemnímu e-mailu na jejich osobních zařízeních, aniž musí něco nastavovat.
+E-mailové profily vám umožní na spravovaných zařízeních vytvořit, přiřadit a monitorovat nastavení e-mailů Exchange ActiveSync. Přiřazením těchto nastavení zajistíte konzistenci, omezíte volání podpory a dáte uživatelům přístup k firemnímu e-mailu na jejich osobních zařízeních, aniž musí něco nastavovat.
 Další informace najdete v článku [Jak nakonfigurovat nastavení e-mailu](how-to-configure-email-settings.md). Podporované platformy: Android, iOS, Windows Phone 8.1 a Windows 10.
 
 ## <a name="wi-fi"></a>Wi-Fi
-Profily Wi-Fi vám umožní nasadit nastavení bezdrátové sítě uživatelům a zařízením ve vaší organizaci. Při nasazení profilu Wi-Fi budou mít uživatelé přístup k vaší podnikové síti, aniž by ji museli konfigurovat sami.
+Profily Wi-Fi umožňují přiřadit nastavení bezdrátové sítě uživatelům a zařízením ve vaší organizaci. Při přiřazení profilu Wi-Fi budou mít uživatelé přístup k vaší podnikové síti, aniž by ji museli konfigurovat sami.
 Další informace najdete v článku [Jak nakonfigurovat nastavení Wi-Fi](how-to-configure-wi-fi-settings.md). Podporované platformy: Android, iOS, macOS a Windows 8.1 (jen import).
 
 ## <a name="vpn"></a>Síť VPN
-Virtuální privátní sítě (VPN) umožňují uživatelům zabezpečený vzdálený přístup k firemní síti. Zařízení používají profil připojení VPN k navázání připojení se serverem VPN. Pomocí profilů sítě VPN můžete uživatelům a zařízením v organizaci nasadit nastavení sítě VPN, aby se mohli snadno a bezpečně připojit k síti.
+Virtuální privátní sítě (VPN) umožňují uživatelům zabezpečený vzdálený přístup k firemní síti. Zařízení používají profil připojení VPN k navázání připojení se serverem VPN. Pomocí profilů sítě VPN můžete uživatelům a zařízením v organizaci přiřadit nastavení sítě VPN, aby se mohli snadno a bezpečně připojit k síti.
 Další informace najdete v článku [Jak nakonfigurovat nastavení sítě VPN](how-to-configure-vpn-settings.md).
 Podporované platformy: Android, iOS, macOS, Windows Phone 8.1, Windows 8.1 a Windows 10.
 

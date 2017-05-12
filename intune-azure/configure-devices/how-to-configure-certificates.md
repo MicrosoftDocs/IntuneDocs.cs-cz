@@ -1,12 +1,12 @@
 ---
-title: "Konfigurace certifikátů pomocí Intune"
+title: "Konfigurace certifikátů pomocí Intune | Dokumentace Microsoftu"
 titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Naučte se pomocí Intune vytvářet a přiřazovat certifikáty, které vám pomůžou zabezpečit Wi-Fi, VPN a další připojení."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/18/2017
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
-ms.openlocfilehash: 7d1d3c101aaa3832e36a0b9e9369fd1eeb0a6250
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: ecb6a806e7870fd2b1986c4247607c9374431151
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -47,7 +48,7 @@ Každý z těchto typů certifikátů má vlastní požadované součásti a po�
     - Windows 8.1 a vyšší
     - Windows Phone 8.1 a novější
     - Windows 10 a novější
-3. Vytvořte profily certifikátů. Zařízení si vyžádají certifikát, který se má používat k ověření přístupu k VPN, Wi-Fi a e-mailu. Pro zařízení s následujícími platformami můžete vytvořit a nasadit profil certifikátu **PKCS** nebo **SCEP**:
+3. Vytvořte profily certifikátů. Zařízení si vyžádají certifikát, který se má používat k ověření přístupu k VPN, Wi-Fi a e-mailu. Pro zařízení s následujícími platformami můžete vytvořit a přiřadit profil certifikátu **PKCS** nebo **SCEP**:
     - iOS 8.0 a novější
     - Android 4.0 a novější
     - Android for Work
@@ -71,8 +72,8 @@ Pro každou platformu zařízení musíte vytvořit samostatný profil. Při vyt
 
 Potřebujete-li nápovědu ke konfiguraci infrastruktury jednotlivých typů profilů certifikátů, přečtěte si tato témata:
 
-- [Konfigurace a správa certifikátů SCEP pomocí Intune](/intune-azure/configure-devices/configure-certificate-infrastructure-for-scep)
-- [Konfigurace a správa certifikátů PKCS pomocí Intune](/intune-azure/configure-devices/configure-certificate-infrastructure-for-pfx)
+- [Konfigurace a správa certifikátů SCEP pomocí Intune](configure-certificate-infrastructure-for-scep.md)
+- [Konfigurace a správa certifikátů PKCS pomocí Intune](configure-certificate-infrastructure-for-pfx.md)
 
 
 ## <a name="step-2---export-your-trusted-root-ca-certificate"></a>Krok 2: Export certifikátu důvěryhodné kořenové certifikační autority
@@ -119,8 +120,8 @@ Pokud chcete pokračovat a přiřadit tento profil ke skupinám, podívejte se n
 
 Potřebujete-li nápovědu ke konfiguraci a přiřazení jednotlivých typů profilů certifikátů, přečtěte si tato témata:
 
-- [Konfigurace a správa certifikátů SCEP pomocí Intune](/intune-azure/configure-devices/configure-certificate-infrastructure-for-scep)
-- [Konfigurace a správa certifikátů PKCS pomocí Intune](/intune-azure/configure-devices/configure-certificate-infrastructure-for-pfx)
+- [Konfigurace a správa certifikátů SCEP pomocí Intune](configure-certificate-infrastructure-for-scep.md)
+- [Konfigurace a správa certifikátů PKCS pomocí Intune](configure-certificate-infrastructure-for-pfx.md)
 
 Po vytvoření profilu důvěryhodného certifikátu vytvořte profily certifikátů SCEP nebo PKCS pro každou platformu, kterou chcete použít. Při vytváření profilu certifikátu SCEP musíte zadat profil důvěryhodného certifikátu pro stejnou platformu. Tím se oba profily certifikátů propojí, ale přesto musíte každý profil přiřadit samostatně.
 

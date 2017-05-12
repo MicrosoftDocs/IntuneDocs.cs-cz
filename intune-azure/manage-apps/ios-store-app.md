@@ -1,12 +1,12 @@
 ---
-title: "Jak do Intune přidat aplikace pro App Store (iOS)"
+title: "Přidání aplikací pro App Store (iOS) do Intune | Dokumentace Microsoftu"
 titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Přečtěte si informace o přidávání aplikací pro App Store (iOS) do Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 05/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,16 +15,21 @@ ms.assetid: c59514d7-1256-4576-9380-e7a0b85a0378
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 21e6089bf8a88f107518c7bccfa7bf79b3021a23
-ms.lasthandoff: 02/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 011f33d1d8569a079f73baaca6ba2a665131691d
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/10/2017
 
 ---
 
 # <a name="how-to-add-ios-store-apps-to-microsoft-intune"></a>Přidání aplikací pro App Store (iOS) do Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
+
+## <a name="before-you-start"></a>Než začnete
+
+Pomocí této metody můžete aplikace přiřazovat jen v případě, že jsou v obchodě s aplikacemi bezplatné. Pokud chcete pomocí Intune přiřazovat placené aplikace, zvažte použití [programu hromadného nákupu iOS](ios-vpp-apps.md).
 
 
 ## <a name="step-1---search-for-the-app-in-the-store"></a>Krok 1 – vyhledání aplikace ve Storu
@@ -57,4 +62,5 @@ ms.lasthandoff: 02/18/2017
 - **Nahrát ikonu** – nahrajte ikonu, která bude spojená s aplikací. Tato ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
 3. Až skončíte, zvolte v okně **Přidat aplikaci** možnost **Uložit**.
 
-Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřadit ke zvoleným skupinám. Nápovědu najdete v článku [Přiřazení aplikací do skupin](/intune-azure/manage-apps/deploy-apps).
+Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřadit ke zvoleným skupinám. Nápovědu najdete v článku [Přiřazení aplikací do skupin](deploy-apps.md).
+
