@@ -15,10 +15,11 @@ ms.assetid: e6c0a430-1851-4108-812a-87e0fc2623b5
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 748f5b6e18b7bc6d9e9d3e6635ac2c3e7eb11a67
-ms.lasthandoff: 02/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 3015c5493e8b38b425309584430c372e6a4d90cf
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -35,7 +36,7 @@ S použitím následujících informací rozhodněte, která metoda se má použ
 
 ## <a name="user-owned-ios-devices-byod"></a>Zařízení se systémem iOS vlastněné uživatelem (BYOD)
 
-Pokud si chtějí uživatelé zaregistrovat svoje vlastní zařízení (BYOD), je jediná možnost, jak si svoje zařízení můžou zaregistrovat, stažení aplikace Portál společnosti pro iOS z obchodu s aplikacemi. Dále je potřeba postupovat podle pokynů v aplikaci. Po registraci se uživatelé můžou připojit k síti společnosti, k doméně nebo Azure Active Directory a získat přístup k podnikovým prostředkům. Registraci osobně vlastněných zařízení s iOSem je možné blokovat. Pokyny najdete v tématu [Nastavení omezení typu zařízení](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-type-restrictions).
+Pokud si chtějí uživatelé zaregistrovat svoje vlastní zařízení (BYOD), je jediná možnost, jak si svoje zařízení můžou zaregistrovat, stažení aplikace Portál společnosti pro iOS z obchodu s aplikacemi. Dále je potřeba postupovat podle pokynů v aplikaci. Po registraci se uživatelé můžou připojit k síti společnosti, k doméně nebo Azure Active Directory a získat přístup k podnikovým prostředkům. Registraci osobně vlastněných zařízení s iOSem je možné blokovat. Pokyny najdete v tématu [Nastavení omezení typu zařízení](set-enrollment-restrictions.md#set-device-type-restrictions).
 
 ## <a name="apple-configurator"></a>Apple Configurator
 

@@ -14,10 +14,11 @@ ms.technology:
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: c8715f96f532ee6bacda231e1147d03226ecbb48
-ms.openlocfilehash: 2a011bf390bb55d685f580cfc782b21ff0c2ebd5
-ms.lasthandoff: 04/26/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 289635354e7e2244857f56655de6ee227bf97ee7
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -36,7 +37,7 @@ Než nakonfigurujete podmíněný přístup, ověřte, jestli jsou splněné tyt
 
 - Musíte mít **Exchange 2010 SP1 nebo novější**. Podporuje se pole serveru pro klientský přístup (CAS) serveru Exchange.
 
-- Musíte použít [místní Exchange Connector s protokolem Exchange Active Sync](https://docs.microsoft.com/intune-azure/conditional-access/install-intune-on-premises-exchange-connector), který připojí Intune k místnímu Exchangi.
+- Musíte použít [místní Exchange Connector s protokolem Exchange Active Sync](install-intune-on-premises-exchange-connector.md), který připojí Intune k místnímu Exchangi.
 
     >[!IMPORTANT]
     >Místní konektor Exchange je určený výhradně pro vašeho tenanta Intune a nedá se použít s žádným jiným tenantem. Také se ujistěte, že je konektor Exchange pro vašeho tenanta nainstalovaný jenom **na jednom počítači**.

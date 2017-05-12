@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/02/2017
+ms.date: 05/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,10 +16,10 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
 ms.translationtype: Human Translation
-ms.sourcegitcommit: cce2cd69808937f3e088aa04f6142611a4594895
-ms.openlocfilehash: 20af19a2051a8ebb6f1b2103d761d87fbfdf5da2
+ms.sourcegitcommit: 529a3e91e1f86129de77df0529f48a42f86a6521
+ms.openlocfilehash: 69ae0926631edc00cc2dc12be559d366e1623140
 ms.contentlocale: cs-cz
-ms.lasthandoff: 05/04/2017
+ms.lasthandoff: 05/11/2017
 
 ---
 
@@ -72,7 +72,7 @@ Když přidáte aplikaci do Intune, budete mít možnost vybrat požadovanou kat
 
 1. Přihlaste se k portálu Azure Portal.
 2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Spravovat aplikace**.
+3. V okně **Intune** zvolte **Mobilní aplikace**.
 4. V úloze **Mobilní aplikace** zvolte **Spravovat** > **Kategorie aplikací**.
 5. V okně **Kategorie aplikací** se zobrazí seznam aktuálních kategorií. Vyberte jednu z následujících akcí:
     - **Vytvořit kategorii**: V okně **Vytvořit kategorii** zadejte název nové kategorie. Názvy je možné zadat jenom v jednom jazyce a služba Intune je nepřekládá. Až skončíte, klikněte na **Vytvořit**.
@@ -114,13 +114,13 @@ Následující aplikace, které jsou publikované Microsoftem, jsou v Intune int
 
 Informace o tom, jak do Intune přidat aplikace pro jednotlivé platformy, najdete v příslušných tématech:
 
-- [Aplikace pro Android Store](/intune-azure/manage-apps/android-store-app)
-- [Obchodní aplikace pro Android](/intune-azure/manage-apps/android-lob-app)
-- [Aplikace pro iOS Store](/intune-azure/manage-apps/ios-store-app)
-- [Obchodní aplikace pro iOS](/intune-azure/manage-apps/ios-lob-app)
-- [Webové aplikace (pro všechny platformy)](/intune-azure/manage-apps/web-app)
-- [Aplikace pro Windows Phone 8.1 Store](/intune-azure/manage-apps/windows-phone-8-1-store-app)
-- [Obchodní aplikace pro Windows Phone](/intune-azure/manage-apps/windows-phone-line-of-business-app)
-- [Aplikace pro Windows Store](/intune-azure/manage-apps/windows-store-app)
-- [Obchodní aplikace pro Windows](/intune-azure/manage-apps/windows-line-of-business-app)
+- [Aplikace pro Android Store](android-store-app.md)
+- [Obchodní aplikace pro Android](android-lob-app.md)
+- [Aplikace pro iOS Store](ios-store-app.md)
+- [Obchodní aplikace pro iOS](ios-lob-app.md)
+- [Webové aplikace (pro všechny platformy)](web-app.md)
+- [Aplikace pro Windows Phone 8.1 Store](windows-phone-8-1-store-app.md)
+- [Obchodní aplikace pro Windows Phone](windows-phone-line-of-business-app.md)
+- [Aplikace pro Windows Store](windows-store-app.md)
+- [Obchodní aplikace pro Windows](windows-line-of-business-app.md)
 

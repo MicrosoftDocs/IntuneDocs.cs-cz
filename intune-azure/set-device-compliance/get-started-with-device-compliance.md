@@ -15,10 +15,11 @@ ms.assetid: 8103df7f-1700-47b4-9a72-c196d2a02f22
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: cddeb6bf854b9ffbbc1744d5d164c8ceea34ff49
-ms.openlocfilehash: 0c0d2f73e48864caabdec6e83c2fdf58db5a0630
-ms.lasthandoff: 03/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: a0fa37130948126ea08e4cc0140d4c326c26782b
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -33,7 +34,7 @@ V tomto tématu se dozvíte toto:
 - Co potřebujete, abyste mohli začít s vytvářením zásad dodržování předpisů zařízeními.
 - Rychlý přehled toho, co můžete vidět a dělat na portálu Intune Azure Preview. 
 
-Pokud o dodržování předpisů zařízeními moc nevíte, můžete se v [tomto tématu](https://docs.microsoft.com/intune-azure/set-device-compliance/what-is-device-compliance) dozvědět, co dodržování předpisů zařízeními vlastně je a jak se dá používat ve vaší organizaci.
+Pokud o dodržování předpisů zařízeními moc nevíte, můžete se v [tomto tématu](what-is-device-compliance.md) dozvědět, co dodržování předpisů zařízeními vlastně je a jak se dá používat ve vaší organizaci.
 
 ##  <a name="pre-requisites"></a>Požadavky
 
