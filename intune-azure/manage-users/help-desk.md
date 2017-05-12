@@ -15,10 +15,10 @@ ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
 ms.translationtype: Human Translation
-ms.sourcegitcommit: c8715f96f532ee6bacda231e1147d03226ecbb48
-ms.openlocfilehash: 4916b66e1f2eeabb42401645dbece28dad28eb19
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 8cf12e434518c9f06c105a22f3b7aef2613fcdb0
 ms.contentlocale: cs-cz
-ms.lasthandoff: 04/26/2017
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="help-users-with-the-troubleshooting-portal-in-microsoft-intune"></a>Pomoc uživatelům prostřednictvím portálu pro řešení potíží v Microsoft Intune
@@ -36,7 +36,7 @@ Jako správce Intune můžete uživatelům přiřadit oprávnění operátora he
 4. Zadejte **Název přiřazení** (to je povinná položka), **Popis přiřazení** (tuto položku zadávat nemusíte) a potom přiřaďte **Členy (Skupiny)** a **Rozsah (Skupiny)**.
 5. Členové role Operátor helpdesku nyní mohou používat portál pro řešení potíží.
 
-Další informace o rolích Intune najdete v článku [Role Intune (RBAC)](https://docs.microsoft.com/intune-azure/access-control/role-based-access-control).
+Další informace o rolích Intune najdete v článku [Role Intune (RBAC)](../access-control/role-based-access-control.md).
 
 ## <a name="access-the-troubleshooting-portal"></a>Přístup k portálu pro řešení potíží
 

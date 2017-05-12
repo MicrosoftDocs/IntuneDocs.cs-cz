@@ -15,10 +15,11 @@ ms.assetid: e6c0a430-1851-4108-812a-87e0fc2623b5
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: b464a07e701797d39b7f9f50d1854a9a2682ac8e
-ms.openlocfilehash: 3208e964f2676ebcc1e54e29f039c4965c20238f
-ms.lasthandoff: 03/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 02675b6fe9872cb634d0515172f696cedc7e6463
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -44,7 +45,7 @@ Před nastavením registrace zařízení s iOSem zajistěte splnění následuj�
 - [Konfigurace domén](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2)
 - [Nastavení autority MDM](set-mdm-authority.md)
 - [Vytvoření skupin](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-5)
-- [Konfigurace aplikace Portál společnosti](/intune-azure/manage-apps/company-portal-app)
+- [Konfigurace aplikace Portál společnosti](../manage-apps/company-portal-app.md)
 - Přiřazení uživatelských licencí na [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Získání certifikátu Apple MDM push certificate](get-an-apple-mdm-push-certificate.md)
 - Ujistěte se, že máte k zařízením s iOSem fyzický přístup.
