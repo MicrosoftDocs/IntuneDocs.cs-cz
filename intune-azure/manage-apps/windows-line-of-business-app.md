@@ -1,29 +1,29 @@
 ---
-title: "Přidání obchodních aplikací pro iOS do Intune"
+title: "Přidání obchodních aplikací pro Windows do Intune | Dokumentace Microsoftu"
 titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Podívejte se, jak přidat do Intune obchodní aplikace pro iOS."
+description: "Intune Azure Preview: Zjistěte, jak do Intune přidat obchodní aplikace pro Windows."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/12/2017
+ms.date: 05/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
+ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
-ms.openlocfilehash: 70f0b575c92fb000f267e8b2585aff4482c5518c
+ms.openlocfilehash: deafb0a37609b957a0cd4fa0880eeb5ff40314bc
 ms.contentlocale: cs-cz
 ms.lasthandoff: 05/10/2017
 
 ---
 
-# <a name="how-to-add-ios-line-of-business-lob-apps-to-microsoft-intune"></a>Přidání obchodních aplikací pro iOS do Microsoft Intune
+# <a name="how-to-add-windows-line-of-business-lob-apps-to-microsoft-intune"></a>Přidání obchodních aplikací pro Windows do Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/10/2017
 ## <a name="step-2---configure-the-app-package-file"></a>Krok 2 – konfigurace souboru balíčku aplikace
 
 1. V okně **Přidat aplikaci** zvolte **Soubor balíčku aplikace**.
-2. V okně **Soubor balíčku aplikace** klikněte na tlačítko Procházet a vyberte instalační soubor iOS s příponou **.ipa**.
+2. V okně **Soubor balíčku aplikace** klikněte na tlačítko Procházet a vyberte instalační soubor Windows s příponou **.msi** (jiné typy instalačních souborů nejsou podporované).
 3. Po dokončení zvolte **OK**.
 
 
@@ -51,11 +51,11 @@ ms.lasthandoff: 05/10/2017
     - **Název** – zadejte název aplikace, který se zobrazí na portálu společnosti. Ověřte, že názvy všech používaných aplikací jsou jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
     - **Popis** – zadejte popis aplikace. Zobrazí se uživatelům na portálu společnosti.
     - **Vydavatel** – zadejte název vydavatele aplikace.
-    - **Minimální operační systém** – v seznamu zvolte minimální verzi operačního systému, na kterou lze aplikaci nainstalovat. Pokud aplikaci přiřadíte k zařízení se starším operačním systémem, nenainstaluje se.
     - **Kategorie** – vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste si vytvořili sami. Uživatelé ji budou moct při procházení portálu snáz najít.
     - **Zobrazit na Portálu společnosti jako vybranou aplikaci** – aplikace se zobrazí na význačném místě hlavní stránky portálu společnosti, když uživatelé vyhledávají aplikace.
     - **Adresa URL informací** – volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
     - **Adresa URL informací o ochraně osobních údajů** – volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
+    - **Argumenty příkazového řádku** – volitelně zadejte jakékoli argumenty příkazového řádku, které chcete použít ke spuštění souboru .msi (například **/q**).
     - **Vývojář** – volitelně zadejte jméno vývojáře aplikace.
     - **Vlastník** – volitelně zadejte vlastníka aplikace, například **Personální oddělení**.
     - **Poznámky** – zadejte jakékoli poznámky, které chcete k aplikaci přidružit.

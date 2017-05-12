@@ -1,12 +1,12 @@
 ---
-title: "Postup přiřazení aplikací do skupin"
+title: "Přiřazení aplikací do skupin | Dokumentace Microsoftu"
 titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Po přidání aplikace do Intune bude vhodné ji přiřadit do skupin uživatelů nebo zařízení."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/18/2017
+ms.date: 05/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
-ms.openlocfilehash: a6a6992ab450a5601468c5d5e3eff112fc7ea222
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 21ccb23023e9cb4f4b827887f8191ea73474c5de
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/10/2017
 
 ---
 
@@ -38,7 +39,7 @@ Aplikace se dají přiřadit k zařízením, ať už jsou spravované službou I
 |Přiřadit zabalené aplikace nebo aplikace obsahující sadu Intune SDK (kvůli zásadám ochrany aplikací)|Ano|Ano|
 |Přiřadit aplikace jako K dispozici|Ano|Ano|
 |Přiřadit aplikace jako Povinné|Ano|Ne|
-|Odinstalovat aplikace|Ano|Ano|
+|Odinstalovat aplikace|Ano|Ne|
 |Koncoví uživatelé instalují dostupné aplikace z aplikace Portál společnosti.|Ano|Ne|
 |Koncoví uživatelé instalují dostupné aplikace z webového Portálu společnosti.|Ano|Ano|
 
@@ -53,21 +54,21 @@ Nejdůležitější informací, které byste si měli všimnout, je to, že v Az
 ||||||
 |-|-|-|-|-|
 |**Služba Intune Classic (před migrací tenanta)**|-|**Intune Azure (po dokončení migrace tenanta)**|-|**Další informace**|
-|**Záměr nasazení nadřazené skupiny**|**Záměr nasazení podřízené skupiny**|**Výsledný záměr přiřazení pro společné členy předchozí nadřazené a podřízené skupiny**|**Akce pro výsledný záměr přiřazení pro členy nadřazené skupiny**|-|    
+|**Záměr přiřazení nadřazené skupiny**|**Záměr přiřazení podřízené skupiny**|**Výsledný záměr přiřazení pro společné členy předchozí nadřazené a podřízené skupiny**|**Akce pro výsledný záměr přiřazení pro členy nadřazené skupiny**|-|    
 |K dispozici|Povinné|Povinné a K dispozici|K dispozici|Povinné a K dispozici znamená, že aplikace přiřazené jako povinné je možné také prohlížet v aplikaci Portál společnosti.
-|Nelze použít|K dispozici|Nelze použít|Nelze použít|Alternativní řešení: Z nadřazené skupiny Intune odeberte záměr nasazení Nelze použít.
+|Nelze použít|K dispozici|Nelze použít|Nelze použít|Alternativní řešení: Z nadřazené skupiny Intune odeberte záměr přiřazení Nelze použít.
 |Povinné|K dispozici|Povinné a K dispozici|Povinné|-|
 |Povinné a K dispozici<sup>1</sup>|K dispozici|Povinné a K dispozici|Povinné a K dispozici|-|    
 |Povinné|Nelze použít|Povinné|Povinné|-|    
 |Povinné a K dispozici|Nelze použít|Povinné a K dispozici|Povinné a K dispozici|-|    
 |Povinné|Odinstalace|Povinné|Povinné|-|    
 |Povinné a K dispozici|Odinstalace|Povinné a K dispozici|Povinné a K dispozici|-|
-<sup>1</sup> Pouze pro spravované aplikace pro App Store (iOS) platí, že pokud je přidáte do Intune a nasadíte jako Povinné, vytvoří se automaticky se záměrem Povinné i K dispozici.
+<sup>1</sup> Pouze pro spravované aplikace pro App Store (iOS) platí, že pokud je přidáte do Intune a přiřadíte jako Povinné, vytvoří se automaticky se záměry Povinné i K dispozici.
 
-Můžete provést následující akce, aby nedocházelo ke konfliktům nasazení:
+Konfliktům v přiřazení můžete zabránit takto:
 
-1.    Pokud jste dříve nasadili aplikace do souvisejících nadřazených a podřízených skupin Intune, zvažte odebrání těchto nasazení před zahájením migrace tenanta.
-2.    Odeberte podřízené skupiny z nadřazených skupin a vytvořte novou skupinu obsahující členy původní podřízené skupiny. Pak můžete vytvořit nové nasazení aplikací do této skupiny.
+1.    Pokud jste dříve přiřadili aplikace do souvisejících nadřazených a podřízených skupin Intune, zvažte odebrání těchto přiřazení před zahájením migrace tenanta.
+2.    Odeberte podřízené skupiny z nadřazených skupin a vytvořte novou skupinu obsahující členy původní podřízené skupiny. Pak můžete vytvořit nové přiřazení aplikací do této skupiny.
 Poznámky: Pokud předchozí nadřazená skupina byla typu Všichni uživatelé, budete muset vytvořit novou dynamickou skupinu, která neobsahuje členy podřízené skupiny.
 Pro skupiny uživatelů a zařízení musíte veškeré změny provést na portálu [Azure Portal](https://portal.azure.com/). [Klasický portál Azure Portal](https://manage.windowsazure.com/) vám umožní provádět pouze změny skupin uživatelů.
 

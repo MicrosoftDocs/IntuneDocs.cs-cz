@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/19/2017
+ms.date: 05/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: 484bd9b0-fbf1-4f4f-940c-6b12fa07e228
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: e0ecc775f70703574c4e1adf0f0aa204f2745b72
-ms.openlocfilehash: d5c84c5d3bc700985cc14dbd7eaae5a493cca064
-ms.lasthandoff: 04/20/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 37bfb7c9c35e5da5a346c822ed9d4252b5fff0e4
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -75,8 +76,8 @@ Pokud byste chtěli e-mailový profil ze zařízení odebrat, upravte přiřazen
 
 E-mailové profily se dají zabezpečit jedním ze dvou způsobů:
 
-1. **Certifikáty** – Při vytváření e-mailového profilu zvolíte profil certifikátu, který jste předtím vytvořili v Intune. Ten se označuje jako certifikát identity a slouží k ověřování na základě důvěryhodného profilu certifikátu (neboli kořenového certifikátu), který potvrzuje, že má zařízení uživatele dovoleno připojovat se. Důvěryhodný certifikát se nasadí do počítače, který ověří e-mailové připojení. Většinou se jedná o nativní poštovní server.
-Další informace o vytváření a používání profilů certifikátů v Intune najdete v tématu [Jak konfigurovat certifikáty pomocí Intune](/intune-azure/configure-devices/how-to-configure-certificates).
+1. **Certifikáty** – Při vytváření e-mailového profilu zvolíte profil certifikátu, který jste předtím vytvořili v Intune. Ten se označuje jako certifikát identity a slouží k ověřování na základě důvěryhodného profilu certifikátu (neboli kořenového certifikátu), který potvrzuje, že má zařízení uživatele dovoleno připojovat se. Tento důvěryhodný certifikát se přiřadí počítači, který ověřuje e-mailové připojení. Zpravidla se jedná o nativní poštovní server.
+Další informace o vytváření a používání profilů certifikátů v Intune najdete v tématu [Jak konfigurovat certifikáty pomocí Intune](how-to-configure-certificates.md).
 2. **Uživatelské jméno a heslo** – Uživatel se ověřuje na nativním poštovním serveru zadáním uživatelského jména a hesla.
 Heslo není součástí e-mailového profilu, uživatel ho tedy musí zadat při připojování k e-mailu.
 

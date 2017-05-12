@@ -14,10 +14,11 @@ ms.technology:
 ms.assetid: 
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 03860275184824e72c94937ef3bb32c76cfef933
-ms.lasthandoff: 02/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 41de68c6962056164e8ac62aea657a74dd9b229e
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -29,7 +30,7 @@ ms.lasthandoff: 02/18/2017
 
 Pokud Intune na portálu Azure Portal neznáte, zapamatujte si, že se už nevytvářejí skupiny pro Intune. Intune využívá skupiny služby Azure AD stejně jako řada jiných aplikací, které používáte.
 
-Pokud chcete zjistit další informace o použití skupin ve službě Azure AD, přečtěte si článek [Správa přístupu k prostředkům pomocí skupin Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-manage-groups).
+Pokud chcete zjistit další informace o použití skupin ve službě Azure AD, přečtěte si článek [Správa přístupu k prostředkům pomocí skupin Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups).
 
 Pokud chcete spravovat skupiny na portálu [Azure Portal](https://portal.azure.com), vyhledejte **Intune**, zvolte **Spravovat uživatele** a přejděte tak na úlohu **Uživatelé a skupiny**, kde můžete provádět následující akce:
 
@@ -43,5 +44,5 @@ Pokud chcete spravovat skupiny na portálu [Azure Portal](https://portal.azure.c
 
 ## <a name="next-step"></a>Další krok
 
-[Začínáme se skupinami](/intune-azure/manage-users/get-started-with-groups)
+[Začínáme se skupinami](../manage-users/get-started-with-groups.md)
 

@@ -15,10 +15,11 @@ ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: cb3342812a8b77f0b2ee8e2cdd1532ba6dfc651b
-ms.lasthandoff: 02/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2b064d14e8a46c19c0eafc3276b470dead114438
+ms.openlocfilehash: f9b828c7546b2dafe03177c193a18203e5905e5a
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/06/2017
 
 
 ---
@@ -128,11 +129,11 @@ Je ale potřeba mít na paměti některá omezení, jako například:
 
 ## <a name="multi-identity"></a>Víc identit
 
-Aplikace, které podporují více identit, umožňují použít různé účty (pracovní a osobní) pro přístup ke stejným aplikacím, přičemž zásady ochrany aplikací se uplatní, když se aplikace používají v pracovním kontextu.
+Aplikace, které podporují více identit, umožňují pro přístup ke stejným aplikacím používat různé účty (pracovní a osobní). Zásady ochrany aplikací se použijí, jen když jsou aplikace použité v pracovním kontextu.
 
-Pokud třeba koncový uživatel spustí aplikaci OneDrive pomocí svého pracovního účtu, nemůže přesunout soubory do svého osobního úložiště. Pokud ale koncový uživatel použije OneDrive se svým osobním účtem, může kopírovat a přesouvat data ze svého osobního OneDrivu bez omezení.
+Pokud třeba uživatel spustí aplikaci OneDrive pomocí svého pracovního účtu, nemůže přesunout soubory do svého osobního úložiště. Pokud ale uživatel použije OneDrive se svým osobním účtem, může kopírovat a přesouvat data ze svého osobního OneDrivu bez omezení.
 
-Všechny mobilní aplikace Office podporují více identit.
+- Přečtěte si další informace o aplikacích, které podporují [MAM a více identit](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) s Intune.
 
 ##  <a name="next-steps"></a>Další kroky
 

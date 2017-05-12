@@ -6,7 +6,7 @@ keywords:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.date: 04/20/2017
+ms.date: 04/29/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 62dcb40ad5a7921c514a9d41da14b991e39f3bcd
-ms.openlocfilehash: 9554a431859665312daf414f2c6cdfb47baf8547
-ms.lasthandoff: 04/20/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: f209429bbafe50530e90bbaf133f780f448a8c57
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/10/2017
 
 ---
 
@@ -33,13 +34,18 @@ Zde vás budeme informovat o přidávání nových funkcí do veřejné verze Pr
 
 ## <a name="april-2017"></a>Duben 2017
 
+### <a name="support-for-managing-the-apple-classroom-app"></a>Podpora správy aplikace Apple Classroom
+
+Na iPadech teď můžete spravovat aplikaci Classroom pro iOS. Nainstalujte aplikaci Classroom na iPady učitelů se správnými údaji o předmětu a studentech, pak nakonfigurujte iPady studentů zaregistrované k předmětu, abyste je mohli pomocí této aplikace ovládat.
+Podrobnosti najdete v článku [Konfigurace nastavení iOS Education](../configure-devices/how-to-configure-ios-edu-settings.md).
+
 ### <a name="support-for-managed-configuration-options-for-android-apps----621621---"></a>Podpora možností spravované konfigurace pro aplikace Android <!-- 621621 -->
 
 Aplikace Android v obchodu Play podporující možnosti spravované konfigurace se teď dají konfigurovat pomocí Intune.  Tato funkce umožňuje IT pracovníkům zobrazit seznam hodnot konfigurace podporovaných aplikací a poskytuje prvotřídní uživatelské rozhraní s asistencí, které jim umožňuje tyto hodnoty konfigurovat.
 
 ### <a name="new-android-policy-for-complex-pins----722069---"></a>Nové zásady Androidu pro komplexní kódy PIN <!-- 722069 -->
 
-V profilu zařízení s Androidem 5.0 a vyšším teď můžete nastavit požadovaný typ [hesla](/intune-azure/configure-devices/device-restrictions-for-android#password) na Číselné komplexní.  Pomocí tohoto nastavení můžete uživatelům zařízení zabránit ve vytvoření PINu, který obsahuje opakující se nebo po sobě jdoucí čísla jako 1111 nebo 1234.
+V profilu zařízení s Androidem 5.0 a vyšším teď můžete nastavit požadovaný typ [hesla](../configure-devices/device-restrictions-for-android.md#password) na Číselné komplexní.  Pomocí tohoto nastavení můžete uživatelům zařízení zabránit ve vytvoření PINu, který obsahuje opakující se nebo po sobě jdoucí čísla jako 1111 nebo 1234.
 
 ### <a name="additional-support-for-android-for-work-devices"></a>Další podpora pro zařízení s Androidem for Work
 
@@ -55,26 +61,26 @@ Tento profil pro omezení zařízení s Androidem for Work teď obsahuje nové m
 
   Nový vlastní profil zařízení pro zařízení s Androidem for Work teď umožňuje zakázat akce Kopírovat a Vložit mezi pracovními a osobními aplikacemi.
 
-Další informace najdete v tématu o [omezeních zařízení pro Android for Work](/intune-azure/configure-devices/device-restrictions-for-afw).
+Další informace najdete v tématu o [omezeních zařízení pro Android for Work](../configure-devices/device-restrictions-for-afw.md).
 
 ### <a name="assign-lob-apps-to-ios-and-android-devices----1057568---"></a>Přiřazení obchodních aplikací zařízením s iOSem a Androidem <!-- 1057568 -->
 
-Uživatelům nebo zařízením teď můžete přiřadit obchodní aplikace pro [iOS](/intune-azure/manage-apps/ios-lob-app) (soubory .ipa) a [Android](/intune-azure/manage-apps/android-lob-app) (soubory .apk).
+Uživatelům nebo zařízením teď můžete přiřadit obchodní aplikace pro [iOS](../manage-apps/ios-lob-app.md) (soubory .ipa) a [Android](../manage-apps/android-lob-app.md) (soubory .apk).
 
 ###  <a name="new-device-policies-for-ios----723774-723815-723826-723830---"></a>Nové zásady zařízení pro iOS <!-- 723774, 723815, 723826, 723830 -->
 
-- **Aplikace na ploše** – určuje, které aplikace uživatelé uvidí na [ploše svého zařízení s iOSem](/intune-azure/configure-devices/home-screen-settings-for-ios). Tato zásada změní rozložení plochy, ale nenasadí žádné aplikace, které jste určili, pokud nejsou nainstalované.
+- **Aplikace na ploše** – určuje, které aplikace uživatelé uvidí na [ploše svého zařízení s iOSem](../configure-devices/home-screen-settings-for-ios.md). Tato zásada změní rozložení plochy, ale nenasadí žádné aplikace, které jste určili, pokud nejsou nainstalované.
 
-- **Připojení k zařízením AirPrint** – určuje, ke kterým [zařízením AirPrint](/intune-azure/configure-devices/air-print-settings-for-ios-and-macos) (síťovým tiskárnám) se můžou koncoví uživatelé zařízení s iOSem připojit.
+- **Připojení k zařízením AirPrint** – určuje, ke kterým [zařízením AirPrint](../configure-devices/air-print-settings-for-ios-and-macos.md) (síťovým tiskárnám) se můžou koncoví uživatelé zařízení s iOSem připojit.
 
-- **Připojení k zařízením AirPlay** – určuje, ke kterým [zařízením AirPlay](/intune-azure/configure-devices/airplay-settings-for-ios-devices) (jako Apple TV) se můžou koncoví uživatelé zařízení s iOSem připojit.
+- **Připojení k zařízením AirPlay** – určuje, ke kterým [zařízením AirPlay](../configure-devices/airplay-settings-for-ios-devices.md) (jako Apple TV) se můžou koncoví uživatelé zařízení s iOSem připojit.
 
-- **Vlastní zpráva na zamčené obrazovce** – nakonfigurujte vlastní zprávu, která se zobrazí uživatelům na zamčené obrazovce jejich zařízení s iOSem místo výchozí zprávy. Další informace najdete v [Dostupných akcích zařízení](/intune-azure/manage-devices/what-is#available-device-actions).
+- **Vlastní zpráva na zamčené obrazovce** – nakonfigurujte vlastní zprávu, která se zobrazí uživatelům na zamčené obrazovce jejich zařízení s iOSem místo výchozí zprávy. Další informace najdete v [Dostupných akcích zařízení](../manage-devices/what-is.md#available-device-actions).
 
 
 ### <a name="restrict-push-notifications-for-ios-apps----723767---"></a>Omezení nabízených oznámení pro aplikace pro iOS <!-- 723767 -->
 
-V profilu omezení zařízení Intune teď můžete nakonfigurovat tato [nastavení oznámení](/intune-azure/configure-devices/app-notification-settings-for-ios) pro zařízení s iOSem:
+V profilu omezení zařízení Intune teď můžete nakonfigurovat tato [nastavení oznámení](../configure-devices/app-notification-settings-for-ios.md) pro zařízení s iOSem:
 
 - Úplně zapnout nebo vypnout oznámení pro konkrétní aplikaci
 - Zapnut nebo vypnout oznámení v centru oznámení pro konkrétní aplikaci
@@ -84,11 +90,11 @@ V profilu omezení zařízení Intune teď můžete nakonfigurovat tato [nastave
 
 ### <a name="configure-ios-apps-to-run-in-single-app-mode-autonomously----737837---"></a>Konfigurace spouštění aplikací pro iOS autonomně v režimu jedné aplikace <!-- 737837 -->
 
-Pomocí profilu zařízení Intune teď můžete nakonfigurovat, aby zařízení s iOSem spouštěla zadané aplikace v [autonomním režimu jedné aplikace](/intune-azure/configure-devices/device-restrictions-for-ios#autonomous-single-app-mode-supervised-only). Pokud je tento režim nakonfigurovaný a uživatel spustí aplikaci, v zařízení se zablokuje spuštění jakékoli další aplikace. Příkladem je nakonfigurování aplikace, která uživatelům umožňuje absolvovat na zařízení test. Když se akce aplikace dokončí nebo tuto zásadu odeberete, zařízení se vrátí do normálního stavu.
+Pomocí profilu zařízení Intune teď můžete nakonfigurovat, aby zařízení s iOSem spouštěla zadané aplikace v [autonomním režimu jedné aplikace](../configure-devices/device-restrictions-for-ios.md#autonomous-single-app-mode-supervised-only). Pokud je tento režim nakonfigurovaný a uživatel spustí aplikaci, v zařízení se zablokuje spuštění jakékoli další aplikace. Příkladem je nakonfigurování aplikace, která uživatelům umožňuje absolvovat na zařízení test. Když se akce aplikace dokončí nebo tuto zásadu odeberete, zařízení se vrátí do normálního stavu.
 
 ### <a name="configure-trusted-domains-for-email-and-web-browsing-on-ios-devices----723765---"></a>Konfigurace důvěryhodných domén pro e-mail a procházení webu v zařízeních s iOSem <!-- 723765 -->
 
-V profilu omezení zařízení s iOSem teď můžete nakonfigurovat tato [nastavení domén](/intune-azure/configure-devices/device-restrictions-for-ios#domains):
+V profilu omezení zařízení s iOSem teď můžete nakonfigurovat tato [nastavení domén](../configure-devices/device-restrictions-for-ios.md#domains):
 
 - **Zrušit označení e-mailových domén** – E-maily, které uživatel posílá nebo přijímá a které neodpovídají doménám zadaným tady, se označí jako nedůvěryhodné.
 
@@ -103,27 +109,27 @@ Multilicenční aplikace (VPP) pro iOS teď můžete koncovým uživatelům při
 
 ### <a name="synchronize-ebooks-from-apple-vpp-store----800878---"></a>Synchronizace elektronických knih z Apple VPP Storu <!-- 800878 -->
 
-Pomocí Intune můžete [synchronizovat knihy](/intune-azure/manage-apps/ios-vpp-apps), které jste zakoupili z Apple Storu v rámci multilicenčního programu, a přiřadit je uživatelům.
+Pomocí Intune můžete [synchronizovat knihy](../manage-apps/ios-vpp-apps.md), které jste zakoupili z Apple Storu v rámci multilicenčního programu, a přiřadit je uživatelům.
 
 ### <a name="multi-user-management-for-samsung-knox-standard-devices----971988---"></a>Správa více uživatelů pro zařízení se Samsung KNOX Standardem <!-- 971988 -->
 
-U zařízení, která používají Samsung KNOX Standard, je teď podporována [správa více uživatelů](/intune-azure/enroll-devices/enroll-android-and-knox-standard-devices) pomocí Intune. To znamená, že koncoví uživatelé se můžou k zařízení přihlašovat a ze zařízení odhlašovat pomocí svých přihlašovacích údajů Azure Active Directory a zařízení je centrálně spravované bez ohledu na to, jestli se zrovna používá.  Když se koncoví uživatelé přihlásí, mají přístup k aplikacím a také se na ně aplikují všechny zásady. Po odhlášení uživatelů se všechna data aplikací vymažou.
+U zařízení, která používají Samsung KNOX Standard, je teď podporována [správa více uživatelů](../enroll-devices/enroll-android-and-knox-standard-devices.md) pomocí Intune. To znamená, že koncoví uživatelé se můžou k zařízení přihlašovat a ze zařízení odhlašovat pomocí svých přihlašovacích údajů Azure Active Directory a zařízení je centrálně spravované bez ohledu na to, jestli se zrovna používá.  Když se koncoví uživatelé přihlásí, mají přístup k aplikacím a také se na ně aplikují všechny zásady. Po odhlášení uživatelů se všechna data aplikací vymažou.
 
 ### <a name="additional-windows-device-restriction-settings----818566---"></a>Další nastavení omezení pro zařízení s Windows <!-- 818566 -->
 
-Přidali jsme podporu dalších [nastavení omezení pro zařízení s Windows](/intune-azure/configure-devices/device-restrictions-for-windows-10), jako je dodatečná podpora prohlížeče Edge, přizpůsobení zamykací obrazovky zařízení, přizpůsobení nabídky start, tapeta nastavená z vyhledávání ve Windows Spotlight a nastavení proxy serveru.
+Přidali jsme podporu dalších [nastavení omezení pro zařízení s Windows](../configure-devices/device-restrictions-for-windows-10.md), jako je dodatečná podpora prohlížeče Edge, přizpůsobení zamykací obrazovky zařízení, přizpůsobení nabídky start, tapeta nastavená z vyhledávání ve Windows Spotlight a nastavení proxy serveru.
 
 ### <a name="multi-user-support-for-windows-10-creators-update----822547---"></a>Podpora více uživatelů pro Windows 10 Creators Update <!-- 822547 -->
 
-Přidali jsme podporu [správy více uživatelů](/intune-azure/enroll-devices/enroll-windows-devices) pro zařízení s Windows 10 Creators Updatem připojená k doméně Azure Active Directory. To znamená, že když se k zařízení přihlásí různí standardní uživatelé pomocí svých přihlašovacích údajů Azure AD, dostanou všechny aplikace a zásady přiřazené jejich uživatelskému jménu. Uživatelé v současnosti nemůžou používat Portál společnosti pro samoobslužné scénáře, například instalování aplikací.
+Přidali jsme podporu [správy více uživatelů](../enroll-devices/enroll-windows-devices.md) pro zařízení s Windows 10 Creators Updatem připojená k doméně Azure Active Directory. To znamená, že když se k zařízení přihlásí různí standardní uživatelé pomocí svých přihlašovacích údajů Azure AD, dostanou všechny aplikace a zásady přiřazené jejich uživatelskému jménu. Uživatelé v současnosti nemůžou používat Portál společnosti pro samoobslužné scénáře, například instalování aplikací.
 
 ### <a name="fresh-start-for-windows-10-pcs---1004830---"></a>Akce Začít znovu pro počítače s Windows 10 <!-- 1004830 -->
 
-K dispozici je teď nová [akce zařízení Začít znovu](/intune-azure/manage-devices/what-is#available-device-actions) pro počítače s Windows 10.  Když tuto akci provedete, odeberou se všechny aplikace, které byly v počítači PC nainstalované, a počítač PC se automaticky aktualizuje na nejnovější verzi Windows. To se dá využít k odebrání aplikací předem nainstalovaných výrobcem, které se často dodávají s novým počítačem PC. Můžete nakonfigurovat, jestli se při provedení této akce mají zachovat uživatelská data.
+K dispozici je teď nová [akce zařízení Začít znovu](../manage-devices/what-is.md#available-device-actions) pro počítače s Windows 10.  Když tuto akci provedete, odeberou se všechny aplikace, které byly v počítači PC nainstalované, a počítač PC se automaticky aktualizuje na nejnovější verzi Windows. To se dá využít k odebrání aplikací předem nainstalovaných výrobcem, které se často dodávají s novým počítačem PC. Můžete nakonfigurovat, jestli se při provedení této akce mají zachovat uživatelská data.
 
 ### <a name="additional-windows-10-upgrade-paths----903672---"></a>Další možnosti upgradu na Windows 10 <!-- 903672 -->
 
-Vytvořením [zásad upgradu edice teď můžete zařízení upgradovat](/intune-azure/configure-devices/how-to-configure-windows-10-edition-upgrade) na následující další edice Windows 10:
+Vytvořením [zásad upgradu edice teď můžete zařízení upgradovat](../configure-devices/how-to-configure-windows-10-edition-upgrade.md) na následující další edice Windows 10:
 
 - Windows 10 Professional
 - Windows 10 Professional N
@@ -132,7 +138,7 @@ Vytvořením [zásad upgradu edice teď můžete zařízení upgradovat](/intune
 
 ### <a name="bulk-enroll-windows-10-devices----747607---"></a>Hromadná registrace zařízení s Windows 10 <!-- 747607 -->
 
-K Azure Active Directory a Intune můžete teď pomocí Windows Configuration Designeru (WCD) připojit velký počet zařízení s Windows 10 Creators Updatem. Pokud chcete pro svého tenanta Azure AD povolit [hromadnou registraci MDM](/intune-azure/enroll-devices/bulk-enroll-windows), vytvořte zřizovací balíček, který zařízení k tenantovi Azure AD připojí pomocí Windows Configuration Designeru, a použijte balíček na zařízení ve vlastnictví firmy, která chcete hromadně zaregistrovat a spravovat. Po použití balíčku se zařízení připojí k Azure AD, zaregistrují v Intune a jsou připravená na přihlašování vašich uživatelů z Azure AD.  Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a obdrží přiřazené zásady a požadované aplikace. Samoobslužné scénáře a scénáře s Portálem společnosti v současnosti nejsou podporované.
+K Azure Active Directory a Intune můžete teď pomocí Windows Configuration Designeru (WCD) připojit velký počet zařízení s Windows 10 Creators Updatem. Pokud chcete pro svého tenanta Azure AD povolit [hromadnou registraci MDM](../enroll-devices/bulk-enroll-windows.md), vytvořte zřizovací balíček, který zařízení k tenantovi Azure AD připojí pomocí Windows Configuration Designeru, a použijte balíček na zařízení ve vlastnictví firmy, která chcete hromadně zaregistrovat a spravovat. Po použití balíčku se zařízení připojí k Azure AD, zaregistrují v Intune a jsou připravená na přihlašování vašich uživatelů z Azure AD.  Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a obdrží přiřazené zásady a požadované aplikace. Samoobslužné scénáře a scénáře s Portálem společnosti v současnosti nejsou podporované.
 
 ### <a name="new-mam-settings-for-pin-and-managed-storage-locations----581122-736644---"></a>Nová nastavení MAM pro PIN a spravovaná umístění úložiště<!-- 581122, 736644 -->
 
@@ -150,7 +156,7 @@ K dispozici jsou teď dvě nová nastavení aplikací, která vám pomůžou se 
 
 ### <a name="help-desk-troubleshooting-portal----907448---"></a>Portál helpdesku pro řešení potíží <!-- 907448 -->
 
-Nový [portál pro řešení potíží](/intune-azure/manage-users/help-desk) umožňuje operátorům helpdesku a správcům Intune zobrazit uživatele a jejich zařízení a provádět úlohy k vyřešení technických problémů Intune.
+Nový [portál pro řešení potíží](../manage-users/help-desk.md) umožňuje operátorům helpdesku a správcům Intune zobrazit uživatele a jejich zařízení a provádět úlohy k vyřešení technických problémů Intune.
 
 ## <a name="march-2017"></a>Březen 2017
 
@@ -162,7 +168,7 @@ Koncový uživatel nebude moct zařízení odemknout, dokud správce režim ztr�
 
 Musí se jednat o zařízení s iOSem ve vlastnictví firmy, které je zaregistrované prostřednictvím programu DEP a je v režimu dohledu.
 
-Další informace najdete v článku [Co je správa zařízení v Microsoft Intune](/intune-azure/manage-devices/what-is).
+Další informace najdete v článku [Co je správa zařízení v Microsoft Intune](../manage-devices/what-is.md).
 
 ### <a name="improvements-to-device-actions-report---677150--"></a>Vylepšení sestavy Akce zařízení <!--677150-->
 
@@ -175,7 +181,7 @@ Sestavu Akce zařízení jsme vylepšili z hlediska výkonu. Tuto sestavu teď n
 ### <a name="custom-app-categories---748805--"></a>Vlastní kategorie aplikací <!--748805-->
 
 Teď můžete vytvářet, upravovat a přiřazovat kategorie pro aplikace, které přidáte do Intune. V současné době se kategorie dají zadávat jenom v angličtině.
-Přečtěte si téma [Jak přidat aplikaci do Intune](/intune-azure/manage-apps/add-apps).
+Přečtěte si téma [Jak přidat aplikaci do Intune](../manage-apps/add-apps.md).
 
 ### <a name="assign-lob-apps-to-users-with-unenrolled-devices---748823--"></a>Přiřazování obchodních aplikací uživatelům s neregistrovanými zařízeními <!--748823-->
 
@@ -211,34 +217,34 @@ Intune přidává nová omezení registrace řídící to, které platformy mobi
 * Omezení registrace mobilních zařízení neomezuje registraci klienta pro počítače.  
 * Pouze pro iOS a Android existuje další možnost blokování registrace osobních zařízení.
 
-Pokud správce IT neoznačí nová zařízení jako vlastněná podnikem, Intune všechna nová zařízení označí jako osobní. Podrobnosti najdete v [tomto článku](https://docs.microsoft.com/en-us/intune/deploy-use/manage-corporate-owned-devices).
+Pokud správce IT neoznačí nová zařízení jako vlastněná podnikem, Intune všechna nová zařízení označí jako osobní. Podrobnosti najdete v [tomto článku](https://docs.microsoft.com/intune/deploy-use/manage-corporate-owned-devices).
 
 ### <a name="view-all-actions-on-managed-devices---677150--"></a>Zobrazení všech akcí na spravovaných zařízeních <!--677150-->
-V nové sestavě __Akce zařízení__ se zobrazí, kdo provedl vzdálené akce, jako je obnovení továrního nastavení zařízení, a dále stav dané akce. Viz [Co je správa zařízení?](https://docs.microsoft.com/intune-azure/manage-devices/what-is)
+V nové sestavě __Akce zařízení__ se zobrazí, kdo provedl vzdálené akce, jako je obnovení továrního nastavení zařízení, a dále stav dané akce. Viz [Co je správa zařízení?](https://docs.microsoft.com../manage-devices/what-is.md)
 
 ### <a name="non-managed-devices-can-access-assigned-apps---664691--"></a>Nespravovaná zařízení mají přístup k přiřazeným aplikacím <!--664691-->
 Jako součást změn v návrhu na webu Portál společnosti budou moci uživatelé iOSu a Androidu na svoje nespravovaná zařízení instalovat aplikace, které mají přiřazené jako dostupné bez registrace. S použitím přihlašovacích údajů pro Intune se budou moct uživatelé přihlásit na web Portál společnosti a zobrazit seznam aplikací, které mají přiřazené. Balíčky aplikací, které jsou dostupné bez registrace, jsou k dispozici ke stažení prostřednictvím webu Portál společnosti. Aplikace, které vyžadují registraci, aby je bylo možné nainstalovat, nejsou touto změnou ovlivněny, protože když budou chtít tyto aplikace uživatelé nainstalovat, zobrazí se jim výzva k registraci.
 
 ### <a name="custom-app-categories---748805--"></a>Vlastní kategorie aplikací <!--748805-->
 Teď můžete vytvářet, upravovat a přiřazovat kategorie pro aplikace, které přidáte do Intune. V současné době se kategorie dají zadávat jenom v angličtině.
-Přečtěte si téma [Jak přidat aplikaci do Intune](/intune-azure/manage-apps/add-apps).
+Přečtěte si téma [Jak přidat aplikaci do Intune](../manage-apps/add-apps.md).
 
 ### <a name="display-device-categories---814654--"></a>Zobrazení kategorií zařízení <!--814654-->
-Kategorie zařízení teď můžete zobrazit jako sloupec v seznamu zařízení. Kategorii můžete upravit také v části vlastností v okně vlastností zařízení. Přečtěte si téma [Jak přidat aplikaci do Intune](/intune-azure/manage-apps/add-apps).
+Kategorie zařízení teď můžete zobrazit jako sloupec v seznamu zařízení. Kategorii můžete upravit také v části vlastností v okně vlastností zařízení. Přečtěte si téma [Jak přidat aplikaci do Intune](../manage-apps/add-apps.md).
 
 ### <a name="configure-windows-update-for-business-settings---776716--"></a>Konfigurace nastavení služby Windows Update pro firmy <!--776716-->
 
 Windows jako služba je nový způsob poskytování aktualizací pro Windows 10. Od verze Windows 10 budou všechny nové aktualizace funkcí a aktualizace pro zvýšení kvality zahrnovat obsah všech předchozích aktualizací. To znamená, že pokud si nainstalujete nejnovější aktualizaci, máte jistotu, že jsou vaše zařízení s Windows 10 zcela aktuální. Na rozdíl od předchozích verzí Windows je teď nutné nainstalovat celou aktualizaci (a ne jenom její část).
 
-Pomocí služby Windows Update pro firmy můžete zjednodušit správu aktualizací, abyste nemuseli schvalovat jednotlivé aktualizace pro skupiny zařízení. Můžete nakonfigurovat strategii zavádění aktualizací, abyste měli pod kontrolou řízení rizik ve vašem prostředí, a služba Windows Update zajistí, aby se aktualizace nainstalovaly ve správný čas. Prostřednictvím Microsoft Intune můžete na zařízeních nakonfigurovat nastavení aktualizací a pozdržet instalaci aktualizací. V Intune nejsou uložené samotné aktualizace, ale jenom přiřazení zásad aktualizací. Zařízení získávají aktualizace přímo ze služby Windows Update. Pomocí Intune můžete nakonfigurovat a spravovat **aktualizační kanály Windows 10**. Aktualizační kanál obsahuje skupinu nastavení, která konfigurují, kdy a jak se budou aktualizace Windows 10 instalovat. Podrobnosti najdete v článku [Konfigurace nastavení služby Windows Update pro firmy](/intune-azure/configure-devices/how-to-configure-windows-update-for-business).
+Pomocí služby Windows Update pro firmy můžete zjednodušit správu aktualizací, abyste nemuseli schvalovat jednotlivé aktualizace pro skupiny zařízení. Můžete nakonfigurovat strategii zavádění aktualizací, abyste měli pod kontrolou řízení rizik ve vašem prostředí, a služba Windows Update zajistí, aby se aktualizace nainstalovaly ve správný čas. Prostřednictvím Microsoft Intune můžete na zařízeních nakonfigurovat nastavení aktualizací a pozdržet instalaci aktualizací. V Intune nejsou uložené samotné aktualizace, ale jenom přiřazení zásad aktualizací. Zařízení získávají aktualizace přímo ze služby Windows Update. Pomocí Intune můžete nakonfigurovat a spravovat **aktualizační kanály Windows 10**. Aktualizační kanál obsahuje skupinu nastavení, která konfigurují, kdy a jak se budou aktualizace Windows 10 instalovat. Podrobnosti najdete v článku [Konfigurace nastavení služby Windows Update pro firmy](../configure-devices/how-to-configure-windows-update-for-business.md).
 
 ## <a name="january-2017"></a>Leden 2017
 
 ### <a name="assign-line-of-business-apps-whether-or-not-devices-are-enrolled---748823--"></a>Přiřazení obchodních aplikací bez ohledu na to, jestli jsou zařízení zaregistrovaná <!--748823-->
-Teď můžete přiřazovat obchodní aplikace a aplikace ze Storu bez ohledu na to, jestli jsou zařízení zaregistrovaná do Intune, nebo ne. Pokud zařízení uživatele není v Intune zaregistrované, musí pro jeho instalaci přejít na web Portál společnosti, ne do aplikace Portál společnosti. Viz [Co je správa aplikací](/intune-azure/manage-apps/what-is-app-management).
+Teď můžete přiřazovat obchodní aplikace a aplikace ze Storu bez ohledu na to, jestli jsou zařízení zaregistrovaná do Intune, nebo ne. Pokud zařízení uživatele není v Intune zaregistrované, musí pro jeho instalaci přejít na web Portál společnosti, ne do aplikace Portál společnosti. Viz [Co je správa aplikací](../manage-apps/what-is-app-management.md).
 
 ### <a name="resolve-issue-where-ios-devices-are-inactive-or-the-admin-console-cannot-communicate-with-them"></a>Řešení problému, kdy zařízení s iOSem nejsou aktivní nebo s nimi nemůže konzola pro správu komunikovat
-Když zařízení uživatele ztratí kontakt s Intune, můžete uživateli poskytnout nový postup řešení potíží a pomoct mu tak znovu získat přístup k prostředkům společnosti. Viz [Zařízení nejsou aktivní nebo s nimi nemůže konzola pro správu komunikovat](/intune-azure/enroll-devices/troubleshoot-device-enrollment#devices-are-inactive-or-the-admin-console-cannot-communicate-with-them).
+Když zařízení uživatele ztratí kontakt s Intune, můžete uživateli poskytnout nový postup řešení potíží a pomoct mu tak znovu získat přístup k prostředkům společnosti. Viz [Zařízení nejsou aktivní nebo s nimi nemůže konzola pro správu komunikovat](../enroll-devices/troubleshoot-device-enrollment.md#devices-are-inactive-or-the-admin-console-cannot-communicate-with-them).
 
 ## <a name="december-2016-initial-release"></a>Prosinec 2016 (počáteční verze)
 

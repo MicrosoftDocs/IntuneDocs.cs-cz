@@ -15,10 +15,11 @@ ms.assetid: d98aceff-eb35-4e3e-8e40-5f300e7335cc
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
-ms.openlocfilehash: 17c5649e7ece5becd17e8ef9a74d748b6202693f
-ms.lasthandoff: 03/17/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 74a905ed2ba9ec04ae14df96fcd3f6b6caf1241c
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -39,16 +40,16 @@ ms.lasthandoff: 03/17/2017
     - **Platforma** – Vyberte typ platformy pro profil, který chcete vytvořit.
     - **Typ profilu** – Vyberte typ profilu, který chcete vytvořit. Seznam dostupných typů se bude lišit v závislosti na zvolené platformě.
     - **Nastavení** – Informace o nastaveních pro jednotlivé typy profilů najdete v následujících tématech:
-        -  [Nastavení funkce zařízení](/intune-azure/configure-devices/how-to-configure-device-features)
-        -  [Nastavení omezení zařízení](/intune-azure/configure-devices/how-to-configure-device-restrictions)
-        -  [Nastavení e-mailu](/intune-azure/configure-devices/how-to-configure-email-settings)
-        -  [Nastavení VPN](/intune-azure/configure-devices/how-to-configure-vpn-settings)
-        -  [Nastavení Wi-Fi](/intune-azure/configure-devices/how-to-configure-wi-fi-settings)
-        -  [Nastavení upgradu edice Windows 10](/intune-azure/configure-devices/how-to-configure-windows-10-edition-upgrade)
-        -  [Nastavení certifikátu](/intune-azure/configure-devices/how-to-configure-certificates)
-        -  [Nastavení Windows Information Protection](/intune-azure/configure-devices/how-to-configure-windows-information-protection)
-        -  [Nastavení vzdělávání](/intune-azure/configure-devices/how-to-configure-education-settings)
-        -  [Vlastní nastavení](/intune-azure/configure-devices/how-to-configure-custom-settings)
+        -  [Nastavení funkce zařízení](how-to-configure-device-features.md)
+        -  [Nastavení omezení zařízení](how-to-configure-device-restrictions.md)
+        -  [Nastavení e-mailu](how-to-configure-email-settings.md)
+        -  [Nastavení VPN](how-to-configure-vpn-settings.md)
+        -  [Nastavení Wi-Fi](how-to-configure-wi-fi-settings.md)
+        -  [Nastavení upgradu edice Windows 10](how-to-configure-windows-10-edition-upgrade.md)
+        -  [Nastavení certifikátu](how-to-configure-certificates.md)
+        -  [Nastavení Windows Information Protection](how-to-configure-windows-information-protection.md)
+        -  [Nastavení vzdělávání](how-to-configure-education-settings.md)
+        -  [Vlastní nastavení](how-to-configure-custom-settings.md)
 
     ![Vytvoření profilu zařízení](./media/create-device-profile.png)
 4. Po dokončení konfigurace nastavení klikněte v okně **Vytvořit profil** na **Vytvořit**.
@@ -58,5 +59,5 @@ Pokud chcete pokračovat a přiřadit tento profil ke skupinám, podívejte se n
 
 
 ### <a name="next-steps"></a>Další kroky
-Informace o přiřazování profilů zařízení najdete v tématu [Jak přiřadit profily zařízení pomocí Microsoft Intune](/intune-azure/configure-devices/how-to-assign-device-profiles).
+Informace o přiřazování profilů zařízení najdete v tématu [Jak přiřadit profily zařízení pomocí Microsoft Intune](how-to-assign-device-profiles.md).
 

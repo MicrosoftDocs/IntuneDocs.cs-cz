@@ -14,10 +14,11 @@ ms.technology:
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: e10453155343bb7fd91a4fd3874d393ef78d0b1a
-ms.openlocfilehash: a816ee8fd2738cf244fd46a91af46d2b137a5dfb
-ms.lasthandoff: 04/25/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: adeea52461f58bd03b291c4b2cc336e9da19d429
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -38,7 +39,7 @@ Pokud používáte Exchange ActiveSync, ať už místní nebo hostovaný v cloud
 
 Následující tabulka uvádí metody registrace v Intune a podporované možnosti a požadavky každé metody. Možnosti a požadavky jsou popsané níže. V tabulce se používají následující pojmy:
 
-- **Vymazání** – Udává, jestli musí být zařízení vymazáno, aby ho uživatelé mohli zaregistrovat. Pojmem „vymazání“ se rozumí obnovení továrních nastavení zařízení, které odstraní všechna data. Další informace najdete v článku [Použití úplného nebo selektivního vymazání u zařízení](/intune-azure/manage-devices/use-full-or-selective-wipe-on-devices-using-microsoft-intune).
+- **Vymazání** – Udává, jestli musí být zařízení vymazáno, aby ho uživatelé mohli zaregistrovat. Pojmem „vymazání“ se rozumí obnovení továrních nastavení zařízení, které odstraní všechna data. Další informace najdete v článku [Použití úplného nebo selektivního vymazání u zařízení](../manage-devices/use-full-or-selective-wipe-on-devices-using-microsoft-intune.md).
 - **Spřažení** – Přidruží zařízení k uživatelům. Požadováno pro správu mobilních aplikací (MAM) a podmíněný přístup k datům společnosti. Další informace najdete v tématu [Přidružení uživatele](enroll-ios-devices-using-device-enrollment-program.md).
 - **Uzamčení** – Udává, jestli se má uživatelům bránit v rušení registrace jejich zařízení ve správě. Uživatelé můžou rušit registraci svých zařízení na všech platformách pomocí aplikace Portál společnosti. Registraci nemůžou rušit pomocí nativních nabídek operačního systému.
 
@@ -70,7 +71,7 @@ Následující tabulka uvádí metody registrace v Intune a podporované možnos
 
 
 ## <a name="byod"></a>Uživatelé s vlastním zařízením
-Uživatelé s vlastním zařízením si nainstalují aplikaci Portál společnosti a zaregistrují svoje zařízení. To jim umožní připojit se k podnikové síti a doméně nebo ke službě Azure Active Directory. V mnoha scénářích COD (zařízení ve vlastnictví společnosti), musíte pro většinu platforem povolit registraci vlastních zařízení (BYOD). Registraci osobně vlastněných zařízení s iOSem a Androidem je možné blokovat. Pokyny najdete v tématu [Nastavení omezení typu zařízení](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-type-restrictions).
+Uživatelé s vlastním zařízením si nainstalují aplikaci Portál společnosti a zaregistrují svoje zařízení. To jim umožní připojit se k podnikové síti a doméně nebo ke službě Azure Active Directory. V mnoha scénářích COD (zařízení ve vlastnictví společnosti), musíte pro většinu platforem povolit registraci vlastních zařízení (BYOD). Registraci osobně vlastněných zařízení s iOSem a Androidem je možné blokovat. Pokyny najdete v tématu [Nastavení omezení typu zařízení](set-enrollment-restrictions.md#set-device-type-restrictions).
 
 ## <a name="corporate-owned-devices"></a>Zařízení vlastněná společností
 Ke správě zařízení vlastněných společností (COD) můžete použít portál Azure Portal. Zařízení s iOSem můžete zaregistrovat přímo nástroji poskytovanými společností Apple. Všechny typy zařízení může zaregistrovat správce využívající správce registrace zařízení. Zařízení s číslem IMEI se také dají identifikovat a označit jako zařízení ve vlastnictví společnosti, což umožní využít scénáře COD.

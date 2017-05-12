@@ -15,10 +15,10 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: c8715f96f532ee6bacda231e1147d03226ecbb48
-ms.openlocfilehash: 81f5b33bc344cd6ed305d72178c7eb4cac315a13
+ms.sourcegitcommit: 90222b10832fd8251ad897348eeebed5b3d1e552
+ms.openlocfilehash: a14f308102d677015dae93eb2c1a36ca95662056
 ms.contentlocale: cs-cz
-ms.lasthandoff: 04/26/2017
+ms.lasthandoff: 05/11/2017
 
 
 ---
@@ -81,8 +81,8 @@ Následující postup vysvětluje, jak zaregistrovat zařízení s iOSem hned od
 
    - **Vyzvat k přidružení uživatele**: Při počátečním nastavení je možné zařízení spojit s uživatelem a potom mu umožnit přístup k firemním datům a e-mailu. U zařízení spravovaných v programu DEP, která patří uživatelům a potřebují používat portál společnosti (tzn. instalovat aplikace), je potřeba nastavit **přidružení uživatele**. Při registraci na zařízeních v programu DEP s přidružením uživatelů nefunguje vícefaktorové ověřování (MFA). Po registraci vícefaktorové ověřování na těchto zařízeních funguje podle očekávání. Novým uživatelům, kteří si musejí změnit heslo, když se poprvé přihlásí, se během registrace na zařízení DEP nezobrazí výzva. Také uživatelům, u jejichž hesel vypršela platnost, se během registrace DEP nezobrazí výzva k resetování hesla a budou muset heslo resetovat z jiného zařízení.
 
-   > [!NOTE]
-   > Program DEP s přidružením uživatele vyžaduje aktivaci uživatelského jména / smíšeného koncového bodu WS-Trust 1.3, aby mohl požádat o token uživatele.
+       >[!NOTE]
+       >Program DEP s přidružením uživatele vyžaduje aktivaci [uživatelského jména / smíšeného koncového bodu WS-Trust 1.3](https://technet.microsoft.com/en-us/library/adfs2-help-endpoints), aby mohl požádat o token uživatele. [Přečtěte si další informace o WS-Trust 1.3](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
    - **Bez přidružení uživatele**: K zařízení není přidružený žádný uživatel. Toto přidružení použijte u zařízení, která plní úkoly bez přístupu k místním uživatelským datům. Aplikace, které vyžadují přidružené uživatele, včetně aplikace Portál společnosti používané k instalaci obchodních aplikací, nebudou fungovat.
 

@@ -13,10 +13,11 @@ ms.technology:
 ms.assetid: 08f659cf-715e-4e10-9ab2-1bac3c6f2366
 ms.reviewer: coryfe
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 911d2887791cf16d4290c3ac5189aa44086f4603
-ms.openlocfilehash: 5e2516611b933bb9c74c2b8dc973f85e1d82237f
-ms.lasthandoff: 03/11/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: e825d47860924de1350299c8998d958ed68c0418
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -54,7 +55,7 @@ Po vytvoření aktualizačních kanálů je přiřadíte skupinám zařízení. 
 
     ![Nastavení Windows pro diagnostiku a data o používání](./media/telemetry-basic.png)
 
-    Toto nastavení můžete nakonfigurovat ručně nebo můžete použít profil omezení zařízení Intune pro Windows 10 a novější. To uděláte tak, že nastavení **Obecné** > **Odeslání diagnostických dat** nakonfigurujete aspoň na možnost **Základní**. Další informace o profilech zařízení najdete v tématu [Konfigurace nastavení omezení zařízení](/intune-azure/configure-devices/how-to-configure-device-restrictions).
+    Toto nastavení můžete nakonfigurovat ručně nebo můžete použít profil omezení zařízení Intune pro Windows 10 a novější. To uděláte tak, že nastavení **Obecné** > **Odeslání diagnostických dat** nakonfigurujete aspoň na možnost **Základní**. Další informace o profilech zařízení najdete v tématu [Konfigurace nastavení omezení zařízení](how-to-configure-device-restrictions.md).
 
 - V klasické konzole pro správu Intune jsou čtyři nastavení, která řídí chování aktualizací softwaru. Tato nastavení jsou součástí zásad obecné konfigurace pro počítače a mobilní zařízení s Windows 10:
     - **Povolit automatické aktualizace**
@@ -142,7 +143,7 @@ Je možné pozastavit příjem aktualizací funkcí nebo aktualizací kvality za
 2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 3. V okně **Intune** zvolte **Aktualizace softwaru**.
 4. V okně **Aktualizace softwaru** zvolte **Spravovat** > **Aktualizační kanály Windows 10**.
-5. V okně zobrazujícím seznam aktualizačních kanálů zvolte kanál, který chcete pozastavit, a pak zvolte **...**  >  **Pozastavit kvalitu** > nebo **Pozastavit funkci** v závislosti na typu aktualizací, které chcete pozastavit.
+5. V okně zobrazujícím seznam aktualizačních kanálů zvolte kanál, který chcete pozastavit, a pak zvolte **...**   >  **Pozastavit kvalitu** > nebo **Pozastavit funkci** v závislosti na typu aktualizací, které chcete pozastavit.
 
 > [!IMPORTANT]
 > Když vydáte příkaz k pozastavení, zařízení ho obdrží při dalším přihlášení ke službě. Je možné, že před přihlášením ke službě nainstalují plánovanou aktualizaci.

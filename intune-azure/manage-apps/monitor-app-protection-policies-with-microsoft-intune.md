@@ -15,10 +15,11 @@ ms.assetid: 9b0afb7d-cd4e-4fc6-83e2-3fc0da461d02
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
-ms.openlocfilehash: 330dba6b9402ef354d0925da27ee1b37ef50db00
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 382d549e485b8ccad27ccacf7d9359a92c75fe4e
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -26,7 +27,7 @@ ms.lasthandoff: 04/24/2017
 # <a name="how-to-monitor-app-protection-policies"></a>Jak monitorovat zásady ochrany aplikací
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-**Pokud nepoužíváte Intune Preview v Azure**, toto téma popisuje, [jak vytvořit zásady ochrany aplikací](https://docs.microsoft.com/en-us/intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune) v konzole Intune Classic.
+**Pokud nepoužíváte Intune Preview v Azure**, toto téma popisuje, [jak vytvořit zásady ochrany aplikací](https://docs.microsoft.com/intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune) v konzole Intune Classic.
 
 
 Můžete monitorovat stav dodržování zásad správy mobilních aplikací (MAM), které jste použili u uživatelů v okně ochrany aplikace Intune na portálu [Azure Portal](https://portal.azure.com). Budete moct vyhledat informace o uživatelích dotčených zásadami MAM, stavu dodržování zásad a všech problémech, se kterými se uživatelé mohou setkat.

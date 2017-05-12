@@ -1,12 +1,12 @@
 ---
-title: "Řešení potíží s profily zařízení v Microsoft Intune"
+title: "Řešení potíží s profily zařízení v Microsoft Intune | Dokumentace Microsoftu"
 titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Pokud nevíte, jak dál, přečtěte si toto téma, které vám pomůže vyřešit problémy s profily zařízení v Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/13/2017
+ms.date: 05/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid:
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
-ms.openlocfilehash: 9bc5b328fc204a12cf7aa992f62ac00b9ddfd45d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: e2d0adc25417db96a2aeb1e57c2ef444dc96ff4d
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -30,8 +31,8 @@ ms.lasthandoff: 03/13/2017
 
 Informace v tomto tématu vám mohou pomoct vyřešit běžné problémy s profily zařízení v Intune.
 
-## <a name="how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-deployed"></a>Jak dlouho trvá mobilnímu zařízení, než získá zásadu nebo aplikaci potom, co byly nasazené?
-Po nasazení zásady nebo aplikace se Intune hned začne pokoušet upozornit zařízení, že se mělo ohlásit službě Intune. To obvykle trvá méně než pět minut.
+## <a name="how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned"></a>Jak dlouho trvá mobilnímu zařízení, než získá zásady nebo aplikace potom, co byly přiřazené?
+Po přiřazení zásady nebo aplikace se Intune hned začne pokoušet upozornit zařízení, že se mělo ohlásit službě Intune. To obvykle trvá méně než pět minut.
 
 Pokud se zařízení neohlásí po odeslání prvního oznámení, Intune provede tři další pokusy.  Když je zařízení offline (je třeba vypnuté nebo není připojené k síti), nemusí oznámení vůbec dostat. V takovém případě zařízení získá zásadu při dalším plánovaném ohlášení své přítomnosti ve službě Intune:
 
@@ -50,12 +51,12 @@ Pokud se zařízení právě zaregistrovalo, četnost ohlašování bude vyšš�
 Uživatelé můžou taky otevřít aplikaci Portál společnosti a synchronizovat zařízení. Zásady se tak zkontrolují hned.
 
 ## <a name="what-actions-cause-intune-to-immediately-send-a-notification-to-a-device"></a>Které akce způsobí, že Intune hned pošle oznámení do zařízení?
-Zařízení se ohlašují službě Intune, buď když dostanou oznámení, že se mají ohlásit, nebo při pravidelném plánovaném ohlašování.  Když akce, jako je vymazání, zamknutí, resetování hesla, nasazení aplikace, nasazení profilu (WiFi, VPN, e-mail atd.) nebo nasazení zásad, cílí na konkrétního uživatele nebo zařízení, Intune se hned pokusí zařízení upozornit, že by se mělo ohlásit službě Intune a získat tyto aktualizace.
+Zařízení se ohlašují službě Intune, buď když dostanou oznámení, že se mají ohlásit, nebo při pravidelném plánovaném ohlašování.  Když akce, jako je vymazání, zamknutí, resetování hesla, přiřazení aplikace, přiřazení profilu (WiFi, VPN, e-mailu atd.), nebo přiřazení zásad cílí na konkrétního uživatele nebo zařízení, Intune se hned pokusí zařízení upozornit, že by se mělo ohlásit službě Intune a získat tyto aktualizace.
 
 Ostatní změny, jako je třeba úprava kontaktních informací na portálu společnosti, nezpůsobí okamžité odeslání oznámení.
 
-## <a name="if-multiple-policies-are-deployed-to-the-same-user-or-device-how-do-i-know-which-settings-will-get-applied"></a>Pokud se pro stejné zařízení nebo uživatele nasadí víc zásad, jak poznám, které nastavení se použije?
-Pokud se pro stejného uživatele nebo zařízení nasadí dvě nebo víc zásad, k vyhodnocení toho, které nastavení se použije, dochází na úrovni jednotlivých nastavení:
+## <a name="if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-will-get-applied"></a>Pokud se stejnému zařízení nebo uživateli přiřadí několik zásad, jak poznám, které nastavení se použije?
+Pokud se stejnému uživateli nebo zařízení přiřadí dvě nebo více zásad, dochází k vyhodnocení toho, které nastavení se použije, na úrovni jednotlivých nastavení:
 
 -   Nastavení zásad dodržování předpisů mají vždycky přednost před nastaveními zásad konfigurace.
 
@@ -63,25 +64,25 @@ Pokud se pro stejného uživatele nebo zařízení nasadí dvě nebo víc zásad
 
 -   Pokud je nastavení zásady konfigurace v konfliktu s nastavením v rámci jiné zásady konfigurace, zobrazí se tento konflikt v konzole Intune. Takové konflikty je třeba vyřešit ručně.
 
-## <a name="what-happens-when-mobile-application-management-policies-conflict-with-each-other-which-one-will-be-applied-to-the-app"></a>Co se stane, když jsou zásady správy mobilních aplikací ve vzájemném konfliktu? Která se použije pro příslušnou aplikaci?
-Nejvíc omezující nastavení v zásadách MAM jsou konfliktní hodnoty, s výjimkou polí s počtem zadání (jako jsou pokusy o zadání PINu před resetováním).  Pole s počtem zadání se nastaví na stejnou hodnotu, jako když zásadu MAM vytvoříte v konzole pomocí možnosti doporučeného nastavení.
+## <a name="what-happens-when-app-protection-policies-conflict-with-each-other-which-one-will-be-applied-to-the-app"></a>Co se stane, když zásady ochrany aplikací navzájem kolidují? Která se použije pro příslušnou aplikaci?
+Nejvíce omezující nastavení dostupná v zásadách ochrany aplikací jsou konfliktní hodnoty s výjimkou polí pro zadání čísel (jako je zadání PIN kódu před resetováním).  Pole pro zadání čísel se nastaví na stejnou hodnotu, jako kdybyste zásadu MAM vytvořili v konzole pomocí možnosti doporučeného nastavení.
 
-Konflikt nastane, když je nastavení dvou zásad stejné.  Představte si třeba, že jste nakonfigurovali dvě zásady MAM, které jsou stejné až na nastavení kopírování/vkládání.  V tomto scénáři se nastavení kopírování/vkládání nastaví na nejvíc omezující hodnotu, ale ostatní nastavení se použijí tak, jak se nakonfigurovala.
+Konflikt nastane, když je nastavení dvou profilů stejné.  Představte si třeba, že jste nakonfigurovali dvě zásady MAM, které jsou stejné až na nastavení kopírování/vkládání.  V tomto scénáři se nastavení kopírování/vkládání nastaví na nejvíc omezující hodnotu, ale ostatní nastavení se použijí tak, jak se nakonfigurovala.
 
-Pokud se jedna zásada nasadí do aplikace a uplatní se a pak se nasadí druhá zásada, bude mít první zásada přednost a zůstane nasazená, a u druhé se zobrazí konflikt. Když se obě nasadí současně, to znamená, že není žádná předchozí zásada, budou v konfliktu obě. Všechna konfliktní nastavení se nastaví na nejvíc omezující hodnoty.
+Pokud se jeden profil přiřadí aplikaci a uplatní se a pak se přiřadí druhý profil, bude mít první profil přednost a zůstane uplatněný, zatímco u druhého se zobrazí konflikt. Když se uplatní oba současně, což znamená, že neexistuje žádný předchozí profil, budou v konfliktu oba. Všechna konfliktní nastavení se nastaví na nejvíc omezující hodnoty.
 
 ## <a name="what-happens-when-ios-custom-policies-conflict"></a>Co se stane při konfliktu vlastních zásad iOS?
-Intune nevyhodnocuje datovou část konfiguračních souborů Apple nebo vlastní zásady OMA-URI (Open Mobile Alliance Uniform Resource Identifier). Slouží jenom jako mechanismus doručování.
+Intune nevyhodnocuje datovou část konfiguračních souborů Apple ani vlastní profil OMA-URI (Open Mobile Alliance Uniform Resource Identifier). Slouží jenom jako mechanismus doručování.
 
-Když nasadíte vlastní zásadu, zkontrolujte, jestli nakonfigurované nastavení není v konfliktu se zásadami dodržování předpisů, konfiguračními zásadami nebo jinými vlastními zásadami. Při konfliktu mezi nastavením a vlastní zásadou je pořadí použití nastavení náhodné.
+Při přiřazování vlastního profilu zkontrolujte, jestli nakonfigurované nastavení není v konfliktu se zásadami dodržování předpisů, konfiguračními zásadami nebo jinými vlastními zásadami. Při konfliktu mezi vlastním profilem a nastavením je pořadí, ve kterém se nastavení uplatní, náhodné.
 
-## <a name="what-happens-when-a-policy-is-deleted-or-no-longer-applicable"></a>Co se stane, když se zásada odstraní nebo už není platná?
-Pokud odstraníte zásadu nebo odeberete zařízení ze skupiny, na kterou byla zásada nasazená, zásada a nastavení se ze zařízení odeberou podle následujících seznamů.
+## <a name="what-happens-when-a-profile-is-deleted-or-no-longer-applicable"></a>Co se stane, když se profil odstraní nebo už není použitelný?
+Pokud odstraníte profil nebo odeberete zařízení ze skupiny, ke které byl profil přiřazený, profil a nastavení se ze zařízení odeberou podle následujících seznamů.
 
 ### <a name="enrolled-devices"></a>Registrovaná zařízení
 
 - Profily sítě Wi-Fi, VPN, certifikátu a e-mailu: Tyto profily se odeberou ze všech podporovaných registrovaných zařízení.
-- Všechny ostatní typy zásad:
+- Všechny ostatní typy profilů:
     - **Zařízení s Windows a Androidem**: Nastavení se ze zařízení neodeberou.
     - **Zařízení Windows Phone 8.1**: Odeberou se tato nastavení:
         - Vyžadovat heslo k odemknutí mobilních zařízení
@@ -115,44 +116,13 @@ Pokud odstraníte zásadu nebo odeberete zařízení ze skupiny, na kterou byla 
         - Povolit datový roaming
         - Povolit automatickou synchronizaci při roamingu
 
-### <a name="windows-pcs-running-the-intune-client-software"></a>Počítače s Windows s klientským softwarem Intune
+## <a name="i-changed-a-device-restriction-profile-but-the-changes-havent-taken-effect"></a>Změnil(a) jsem profil omezení zařízení, ale tyto změny se neprojevily
+Zařízení s Windows Phone neumožňují zmírnění zásad zabezpečení nastavených přes MDM nebo EAS potom, co je nastavíte. Nastavíte třeba **Minimální počet znaků hesla** na hodnotu 8 a tu se pak pokusíte snížit na 4. V zařízení se už používá více omezující profil.
 
-- **Nastavení služby Endpoint Protection**: Obnoví se doporučené hodnoty nastavení. Jedinou výjimkou je nastavení **Připojit ke službě Microsoft Active Protection Service**, pro které je výchozí hodnota **Ne**. Podrobnosti najdete v tématu [Pomoc se zabezpečením počítačů s Windows pomocí služby Endpoint Protection pro Microsoft Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune).
-- **Nastavení aktualizací softwaru**: Nastavení se obnoví do výchozího stavu pro příslušný operační systém. Podrobnosti najdete v tématu [Udržování počítačů s Windows v aktuálním stavu díky softwarovým aktualizacím v Microsoft Intune](/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune).
-- **Nastavení Microsoft Intune Center**: Z počítačů se odstraní veškeré kontaktní informace podpory, které zásady nakonfigurovaly.
-- **Nastavení brány Windows Firewall**: Nastavení se obnoví na výchozí hodnoty pro operační systém počítače. Podrobnosti najdete v tématu [Pomoc se zabezpečením počítačů s Windows pomocí služby Endpoint Protection pro Microsoft Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune).
-
-
-## <a name="how-can-i-refresh-the-policies-on-a-device-to-ensure-that-they-are-current-applies-to-windows-pcs-running-the-intune-client-software-only"></a>Jak se dají aktualizovat zásady na zařízení, aby se zajistila jejich aktuálnost (platí jenom pro počítače s Windows a klientským softwarem Intune)?
-
-1.  V kterékoli skupině zařízení vyberte zařízení, na kterých chcete zásady aktualizovat, a potom vyberte **Vzdálené úlohy** &gt; **Obnovit zásady**.
-2.  V pravém dolním rohu okna konzoly pro správu Intune vyberte **Vzdálené úlohy** a zkontrolujte stav úlohy.
-
-
-
-### <a name="how-do-i-know-that-my-profile-was-assigned-to-a-device"></a>Jak zjistím, že byl můj profil přidružený k zařízení?
-
-V konzole pro správu služby Intune má každé zařízení v části **Vlastnosti zařízení**vlastní kartu zásad. Každá zásada má **určenou hodnotu** a **Stav**. Určená hodnota označuje to, čeho chcete dosáhnout při přiřazování zásady. Stav označuje to, co se skutečně použije, když jsou společně zpracovány všechny zásady platné pro zařízení a všechna omezení a požadavky na hardware a operační systém. Možné stavy:
-
--   **Vyhovuje**: Zařízení přijalo zásady a hlásí službě, že vyhovuje danému nastavení.
-
--   **Nepoužívá se**: Nastavení zásad se nedá použít. Například nastavení e-mailu pro zařízení se systémem iOS se nedají použít pro zařízení se systémem Android.
-
--   **Čeká na vyřízení**: Došlo k odeslání zásady do zařízení a to ještě nenahlásilo službě svůj stav. Na vyřízení může čekat třeba šifrování v systému Android, které vyžaduje, aby šifrování povolil uživatel.
-
-
-> [!NOTE]
-> Mějte na paměti, že když použijete dvě zásady s různými úrovněmi omezení na stejné zařízení nebo uživatele, v praxi se uplatní víc omezující zásada.
-
-
-## <a name="i-changed-a-device-restriction-policy-but-the-changes-havent-taken-effect"></a>Po změně zásad omezení zařízení se tyto změny nepromítly.
-Zařízení s Windows Phone neumožňují zmírnění zásad zabezpečení nastavených přes MDM nebo EAS potom, co je nastavíte. Nastavíte třeba **Minimální počet znaků hesla** na hodnotu 8 a tu se pak pokusíte snížit na 4. V zařízení se už ale používá více omezující zásada.
-
-Pokud chcete zásadu změnit na méně zabezpečenou hodnotu, v závislosti na platformě zařízení může být potřeba resetovat zásady zabezpečení.
+Pokud chcete profil změnit na méně zabezpečenou hodnotu, v závislosti na platformě zařízení může být potřeba resetovat zásady zabezpečení.
 Například ve Windows otevřete potáhnutím prstu z pravého okraje plochy panel **ovládacích tlačítek** a zvolte **Nastavení** &gt; **Ovládací panely**.  Vyberte aplet **Uživatelské účty** .
 V navigační nabídce vlevo najdete dole odkaz **Resetovat zásady zabezpečení** . Zvolte jej a potom zvolte tlačítko **Resetovat zásady** .
-Jiná zařízení MDM, třeba zařízení se systémy Android, Windows Phone 8.1 (a novějšími) a iOS, může být potřeba vyřadit a znovu zaregistrovat do služby, abyste mohli aplikovat méně omezující zásadu.
-
+Jiná zařízení MDM, například zařízení se systémy Android, Windows Phone 8.1 (a novějšími) a iOS, může být potřeba vyřadit a znovu zaregistrovat do služby, abyste mohli použít méně omezující profil.
 
 <!--- ## Status codes for MDM managed Windows devices
 
@@ -499,4 +469,4 @@ Jiná zařízení MDM, třeba zařízení se systémy Android, Windows Phone 8.1
 --->
 
 ### <a name="next-steps"></a>Další kroky
-Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](/intune/troubleshoot/how-to-get-support-for-microsoft-intune).
+Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](../introduction/how-to-get-support-for-microsoft-intune.md).
