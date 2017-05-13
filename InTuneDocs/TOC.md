@@ -84,7 +84,7 @@
 #### [Pravidla přístupu pro Exchange](deploy-use/exchange-access-rules-for-mobile-devices.md)
 ### [Správa Androidu for Work](deploy-use/android-for-work.md)
 
-## [Správa počítačů pomocí softwarového agenta](deploy-use/manage-windows-pcs-with-microsoft-intune.md)
+## [Správa počítačů pomocí softwarového klienta](deploy-use/manage-windows-pcs-with-microsoft-intune.md)
 ### [Instalace klientského počítače](deploy-use/install-the-windows-pc-client-with-microsoft-intune.md)
 ### [Běžné úlohy správy počítačů](deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
 #### [Zásady pro počítače](deploy-use/use-policies-to-simplify-windows-pc-management.md)
