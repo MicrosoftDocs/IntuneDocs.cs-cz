@@ -14,9 +14,10 @@ ms.assetid: ebc7cfc8-40b9-47c2-8357-d392ebbb27c8
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: e10453155343bb7fd91a4fd3874d393ef78d0b1a
 ms.openlocfilehash: 86a59771fc57971a626f71083e81cd4b7d858cfa
+ms.contentlocale: cs-cz
 ms.lasthandoff: 04/25/2017
 
 
@@ -41,7 +42,7 @@ Než vytvoříte zásady ochrany aplikací pro Windows 10, musíte povolit sprá
 
 3.  Otevře se okno **Azure AD**. Zvolte **Mobilita (MDM a MAM)** a potom klikněte na **Microsoft Intune**.
 
-    ![Mobilita (MDM a MAM)](../media/AppManagement/mam-provider-sc-1.png)
+    ![Mobilita (MDM a MAM)](../media/AppManagement/mam-provider-sc-2.png)
 
 4.  Otevře se konfigurační okno. Zvolte **Obnovit výchozí adresy URL MAM** a potom nakonfigurujte toto:
 
