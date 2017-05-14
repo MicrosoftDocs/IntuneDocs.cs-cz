@@ -1,5 +1,5 @@
 ---
-title: "Nastavení omezení pro zařízení v Intune pro Android for Work"
+title: "Nastavení omezení pro zařízení s Androidem for Work v Intune | Dokumentace Microsoftu"
 titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s Androidem for Work."
 keywords: 
@@ -15,10 +15,11 @@ ms.assetid: 1830720b-16cb-4f2f-a71a-62967f882563
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 03fec9d22e705ccb27f4eb1f8f82c7ace95e841e
-ms.openlocfilehash: c5cff131e7bcedadbad42fe6ab8bf00017f933ff
-ms.lasthandoff: 04/26/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f9e8a5deb17ebb77d480213567e5ccf6550e3493
+ms.openlocfilehash: be6303f2db508c2aca9ba9a40fcd43278f83c045
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/03/2017
 
 
 ---
@@ -62,9 +63,9 @@ Můžete například nainstalovat do pracovního profilu aplikaci, která vyžad
 - **Smart Lock a jiní agenti pro určování důvěryhodnosti** – umožňuje řídit funkci Smart Lock na kompatibilních zařízeních. Tato funkce telefonů, které se někdy říká agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo uzamčené obrazovky zařízení, pokud se zařízení nachází v důvěryhodném umístění (například pokud je připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC). Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
 
 ## <a name="custom-policy-settings"></a>Nastavení vlastních zásad
-Pomocí **zásad vlastní konfigurace pro Android for Work** v Microsoft Intune nasaďte nastavení OMA-URI, která se dají používat k ovládání funkcí na zařízeních s Androidem for Work. Jsou to standardní nastavení, která k ovládání funkcí zařízení používá spousta výrobců mobilních zařízení.
+Pomocí **zásad vlastní konfigurace pro Android for Work** v Microsoft Intune přiřaďte nastavení OMA-URI, která se dají používat k ovládání funkcí na zařízeních s Androidem for Work. Jsou to standardní nastavení, která k ovládání funkcí zařízení používá spousta výrobců mobilních zařízení.
 
-Díky této vlastnosti můžete nasadit nastavení Androidu, která nejde konfigurovat se zásadami Intune.
+Tato vlastnost umožňuje přiřadit nastavení Androidu, která nejdou konfigurovat pomocí zásad Intune.
 Intune v současnosti podporuje omezený počet vlastních zásad Androidu. Pokud chcete zjistit, které zásady můžete nakonfigurovat, podívejte se na ukázky v tomto tématu.
 
 ### <a name="general-settings"></a>Obecná nastavení
