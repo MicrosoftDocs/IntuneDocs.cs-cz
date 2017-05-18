@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/09/2017
+ms.date: 05/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -17,10 +17,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-translationtype: Human Translation
-ms.sourcegitcommit: 57a067684ccada3df4faa15e6bf009b39caf5c94
-ms.openlocfilehash: 598ecac4aafaff5715e311dcfc058c1d2661bd3e
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: bc32b2f4b1ea26cc4487ac8576ec5fb7cd333aaa
+ms.openlocfilehash: 5de619d98ab78384e42c8a3a2264ce4deebc2602
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/09/2017
 
 
 ---
@@ -28,6 +29,10 @@ ms.lasthandoff: 03/02/2017
 # <a name="using-your-ios-or-macos-device-with-intune"></a>Použití zařízení s iOSem nebo macOS s Intune
 
 Intune vám může v mnoha směrech usnadnit práci. Tady je seznam obvyklých postupů, jejichž provedení může vaše společnost vyžadovat.
+
+## <a name="supported-versions"></a>Podporované verze
+
+Intune aktuálně podporuje iOS 8.0 a novější. Podporuje také macOS 10.9 Mavericks a novější. 
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Registrace do Intune a instalace Portálu společnosti
 
@@ -40,6 +45,7 @@ Intune vám může v mnoha směrech usnadnit práci. Tady je seznam obvyklých p
 
 - [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-ios.md)
 - [Nastavení nebo změna hesla](set-or-change-your-passcode-ios.md)
+<!--- [Reset (erase) your lost or stolen device](reset-erase-your-lost-or-stolen-device-ios.md) -->
 - [Obnovení (vymazání) ztraceného nebo odcizeného zařízení](reset-erase-your-device-cpwebsite.md)
 - [Vypnutí shromažďování dat o využití Microsoftem](turn-off-microsoft-usage-data-collection-ios.md)
 - [Zrušení registrace zařízení v Intune](unenroll-your-device-from-intune-ios.md)

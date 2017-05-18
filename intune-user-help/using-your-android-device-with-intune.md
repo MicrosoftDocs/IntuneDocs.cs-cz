@@ -1,11 +1,11 @@
 ---
 title: "Použití zařízení s Androidem v Intune | Dokumentace Microsoftu"
-description: "Seznam odkazů na úlohy, které mohou koncoví uživatelé dělat na svém mobilním zařízení s Androidem, pokud je zaregistrované v Intune"
+description: "Seznam odkazů na úlohy, které můžou koncoví uživatelé dělat na svém mobilním zařízení s Androidem, pokud je zaregistrované v Intune"
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/17/2017
+ms.date: 05/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -17,10 +17,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-translationtype: Human Translation
-ms.sourcegitcommit: 10c7bc5461c746ab50e83c2ffc590b89efe75e5f
-ms.openlocfilehash: 1702b049dd1826e93be153234d2f629f770502c5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: bc32b2f4b1ea26cc4487ac8576ec5fb7cd333aaa
+ms.openlocfilehash: c3f1d42d5998e70982bc279ef99560c486412daf
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/09/2017
 
 
 ---
@@ -29,6 +30,10 @@ ms.lasthandoff: 03/13/2017
 # <a name="using-your-android-device-with-intune"></a>Použití zařízení Android s Intune
 
 Intune vám může v mnoha směrech usnadnit práci. Tady je seznam obvyklých postupů, jejichž provedení může vaše společnost vyžadovat.
+
+## <a name="supported-versions"></a>Podporované verze
+
+Intune aktuálně podporuje Android 4.0 a novější. Patří sem zařízení se Samsung KNOX 4.0 a novější zařízení.
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Registrace do Intune a instalace Portálu společnosti
 

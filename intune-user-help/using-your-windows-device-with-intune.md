@@ -1,11 +1,11 @@
 ---
 title: "Použití zařízení s Windows v Intune | Dokumentace Microsoftu"
-description: "Seznam odkazů na úlohy, které mohou uživatelé provádět na svém zařízení s Windows, když je zaregistrované v Intune"
+description: "Seznam odkazů na úlohy, které můžou uživatelé provádět na svém zařízení s Windows, když je zaregistrované v Intune"
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/17/2017
+ms.date: 05/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -17,10 +17,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-translationtype: Human Translation
-ms.sourcegitcommit: 2cb089cc9b6e76e13b2f5da65efb3452aa5274af
-ms.openlocfilehash: e3993c97475b699da90a0634bdb3ac1ba4f5a28c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: bc32b2f4b1ea26cc4487ac8576ec5fb7cd333aaa
+ms.openlocfilehash: 64cfbf02e54244457aeaefb84e3049350764c410
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/09/2017
 
 
 ---
@@ -28,6 +29,17 @@ ms.lasthandoff: 02/24/2017
 # <a name="using-your-windows-device-with-intune"></a>Použití zařízení Windows s Intune
 
 Intune vám může v mnoha směrech usnadnit práci. Tady je seznam obvyklých postupů, jejichž provedení může vaše společnost vyžadovat.
+
+## <a name="supported-versions"></a>Podporované verze
+
+Intune aktuálně podporuje následující verze Windows.
+
+* Windows 10 (verze Home, Pro, Education a Enterprise)
+* Windows Phone 8.1 a novější
+* Windows 8.1 RT
+* Windows 8.1
+
+Intune také podporuje některé další verze Windows, jako je například [Windows 10 Holographic](https://www.microsoft.com/hololens). Tyto verze zde nejsou uvedené, protože slouží velmi specifickým účelům.
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Registrace do Intune a instalace Portálu společnosti
 
