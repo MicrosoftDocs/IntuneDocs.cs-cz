@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/17/2017
+ms.date: 05/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -17,31 +17,40 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-translationtype: Human Translation
-ms.sourcegitcommit: 10c7bc5461c746ab50e83c2ffc590b89efe75e5f
-ms.openlocfilehash: 351a0e6cf440b1506426db57ec0529496ed70231
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
+ms.openlocfilehash: 624819ddd8afabef1e3b5419706268eef6d960d0
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/23/2017
 
 
 ---
 
 # <a name="enroll-your-windows-10-device-in-intune"></a>Registrace zařízení s Windows 10 v Intune
 
-1.  Otevřete aplikaci **Nastavení** Windows – přejděte na **nabídku Start** a vyberte tlačítko **Nastavení**. Můžete také pomocí panelu hledání vyhledat „nastavení“.
+> [!NOTE]
+> Windows 10 funguje na nejrůznějších typech zařízení. Ať už používáte stolní počítač, telefon nebo tablet, postup je stejný, může se jen trochu vizuálně lišit od obrázků na této stránce.
 
-2. Vyberte **Účty**.
+1.  Přejděte na **Start**.
+
+  - Na zařízení s **Windows 10 Desktop** přejděte do **nabídky Start**.
+  - Pokud používáte zařízení s **Windows 10 Mobile**, přejděte na **úvodní obrazovku** a potažením prstem přejděte na seznam **Všechny aplikace**.
+
+2. Otevřete aplikaci **Nastavení** Windows, kterou najdete tak, že na panelu hledání zadáte řetězec „nastavení“.
+
+3. Vyberte **Účty**.
 
     ![Přejděte na Nastavení a účty](./media/W10-enroll-1-settings-accounts.png)
 
-3. Vyberte **Váš účet**.
+4. Vyberte **Váš účet**.
 
     ![Vyberte svůj účet.](./media/W10-enroll-2-accounts-your-account.png)
 
-4. Vyberte **Přidat pracovní nebo školní účet**.
+5. Vyberte **Přidat pracovní nebo školní účet**.
 
     ![Vyberte možnost přidat pracovní nebo školní účet.](./media/w10-enroll-3-add-work-school-acct.png)
 
-5. Přihlaste se pomocí přihlašovacích údajů svého pracovního nebo školního účtu.
+6. Přihlaste se pomocí přihlašovacích údajů svého pracovního nebo školního účtu.
 
     ![Když se přihlásíte](./media/W10-enroll-4-sign-in.png)
 
