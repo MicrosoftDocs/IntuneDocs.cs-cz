@@ -14,9 +14,11 @@ ms.assetid: fd8cb5f7-19f0-4d80-8825-2bafa49624af
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: f807d6e4b20b98ecf622d1ebdd9db33b132a2e6a
-ms.openlocfilehash: 91b25fe35c6a1f8a554d543ca005cc3b482f22d7
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
+ms.openlocfilehash: a56b683e57997171053f35414289d5b782c8fc2d
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/23/2017
 
 
 ---
@@ -36,7 +38,7 @@ Tady je několik příkladů požadavků na použití zařízení v organizaci. 
 | **Případy použití** | **Dílčí případy použití** | **Skupiny** | **Platformy OS zařízení** | **Requirements** |
 |:---:|:---:|:---:|:---:|:---:|
 | Firemní | Pracovní proces informací | Personální, finanční oddělení | iOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |                                                          
-| Firemní | Vedení | Personální, finanční oddělení | iOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |                                                         
+| Firemní | Vedení | Personalistika, finance | iOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |                                                         
 | Firemní | Kiosk | Maloobchod | Android | Nastavení zařízení, profily, aplikace |
 | Uživatelé s vlastním zařízením | Pracovní proces informací | Marketing, prodej | iOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |                                                         
 | Uživatelé s vlastním zařízením | Vedení | Marketing, prodej | iOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |
@@ -65,9 +67,4 @@ Tady je pár dalších příkladů, které můžete použít ve sloupci Požadav
 ## <a name="next-section"></a>Další část
 
 V další části najdete pokyny pro [přípravu plánu spuštění Intune](section-4-develop-a-rollout-plan.md).
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

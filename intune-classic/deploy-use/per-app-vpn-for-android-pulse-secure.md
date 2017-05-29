@@ -14,9 +14,11 @@ ms.assetid: ac65e906-3922-429f-8d9c-d313d3126645
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: b268bb16b7fc7e38021441bb16517e754b5e395f
-ms.openlocfilehash: 4a52d714d47a0b3af56be6eb5096fffae160e435
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
+ms.openlocfilehash: 6786ac87c34e913ba71cd203f431f746df816459
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/23/2017
 
 
 ---
@@ -63,7 +65,7 @@ Další možností je určit pomocí hodnoty **WHITELIST** aplikace, které *jed
   1.    V nastavení **OMA-URI** zvolte **Přidat**.
   2.    Zadejte název nastavení.
   3.    Jako **Datový typ** určete **String** (Řetězec).
-  4.    Pro **OMA-URI** zadejte tento řetězec: **./Vendor/MSFT/VPN/Profile/*název*/Mode**, kde *název* je název profilu VPN, který jste si poznamenali v kroku 1. V našem příkladu by se tedy použil řetězec **./Vendor/MSFT/VPN/Profile/profil_VPN_pro_moje_aplikace/Mode**.
+  4.    Pro **OMA-URI** použijte tento řetězec: **./Vendor/MSFT/VPN/Profile/*název*/Mode**, kde *název* je název profilu VPN, který jste si poznamenali v kroku 1. V našem příkladu by se tedy použil řetězec **./Vendor/MSFT/VPN/Profile/profil_VPN_pro_moje_aplikace/Mode**.
   5.    Do pole **Hodnota** zadejte **BLACKLIST** nebo **WHITELIST**.
 
 
@@ -78,9 +80,4 @@ Další možností je určit pomocí hodnoty **WHITELIST** aplikace, které *jed
     -   **Pokud chcete dialogové okno zavřít bez nasazení zásady**, zvolte **Zrušit**.
 
 Shrnutí stavu a výstrahy na stránce **Přehled** v pracovním prostoru **Zásady** identifikují problémy se zásadami, které vyžadují vaši pozornost. Kromě toho se v pracovním prostoru **Řídicí panel** zobrazí shrnutí stavu.
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

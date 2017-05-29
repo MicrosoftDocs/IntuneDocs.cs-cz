@@ -14,10 +14,11 @@ ms.assetid: cd0bbd90-d3fe-4efc-83fd-d1f3f86800d4
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: 0936051b5c33a2e98f275ef7a3a32be2e8f5a8b0
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 3b608d42f04b9fce457b6b61587d05ab5d59bb0a
-ms.lasthandoff: 03/10/2017
+ms.contentlocale: cs-cz
+ms.lasthandoff: 05/23/2017
 
 
 ---
@@ -75,7 +76,7 @@ Po nasazení se aplikace nainstaluje na zařízení, která jste určili. Uživa
 ## <a name="manage-app-permissions"></a>Správa oprávnění aplikací
 Android for Work vyžaduje, abyste aplikace ve webové konzole Play spravované Googlem schválili, než je synchronizujete s Intune a nasadíte koncovým uživatelům.  Protože přes Android for Work můžete nepozorovaně a automaticky nainstalovat tyto aplikace do zařízení uživatelů, musíte oprávnění aplikací schválit za všechny svoje uživatele.  Koncoví uživatelé neuvidí při instalaci žádná oprávnění aplikací, je proto důležité, abyste si tato oprávnění prostudovali a porozuměli jim.
 
-Když vývojář aplikace publikuje novou verzi aplikace s aktualizovanými oprávněními, nejsou tato oprávnění přijata automaticky, i když jste dřívější oprávnění schválili. Zařízení, na kterých je starší verze této aplikace, ji mohou pořád používat, ale tato aplikace se neupgraduje, dokud se nová oprávnění neschválí. Do zařízení, ve kterých tato aplikace není nainstalovaná, nejde aplikace nainstalovat, dokud neschválíte její nová oprávnění.
+Když vývojář aplikace publikuje novou verzi aplikace s aktualizovanými oprávněními, nejsou tato oprávnění přijata automaticky, i když jste dřívější oprávnění schválili. Zařízení, na kterých je starší verze této aplikace, ji můžou pořád používat, ale tato aplikace se neupgraduje, dokud se nová oprávnění neschválí. Do zařízení, ve kterých tato aplikace není nainstalovaná, nejde aplikace nainstalovat, dokud neschválíte její nová oprávnění.
 
 ### <a name="how-to-update-app-permissions"></a>Jak aktualizovat oprávnění aplikace
 
