@@ -25,7 +25,7 @@ ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="use-custom-policies-to-allow-and-block-apps-for-samsung-knox-standard-devices-in-microsoft-intune"></a>Použití vlastních zásad pro povolení a blokování aplikací pro zařízení se Samsung KNOX Standardem v Microsoft Intune
-[!INCLUDE[azure_preview](./includes/azure_preview.md)] Postupy v tomto tématu použijte k vytvoření vlastních zásad Microsoft Intune. Vznikne jeden z těchto seznamů:
+[!INCLUDE[azure_preview](./includes/azure_preview.md)]Postupy v tomto tématu použijte k vytvoření vlastních zásad Microsoft Intune. Vznikne jeden z těchto seznamů:
 
 - Seznam aplikací, u kterých je v příslušném zařízení blokované spuštění. Aplikace v tomto seznamu nebude možné spouštět ani v případě, že již byly nainstalované v okamžiku nasazení zásady.
 - Seznam aplikací, které si uživatelé příslušného zařízení mohou nainstalovat z obchodu Google Play. Je možné instalovat jen aplikace uvedené na seznamu. Z tohoto obchodu nejde nainstalovat žádné další aplikace.

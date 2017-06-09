@@ -25,7 +25,7 @@ ms.lasthandoff: 05/23/2017
 ---
 
 # <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací
-[!INCLUDE[azure_preview](./includes/azure_preview.md)] Toto téma popisuje činnosti uživatelů aplikací se zásadami ochrany aplikací. Zásady ochrany aplikací se použijí jenom v případě, že se aplikace používají v pracovním kontextu: třeba pro přístup k aplikacím pomocí pracovního účtu nebo pro přístup k souborům uloženým v umístění OneDrivu pro danou společnost.
+[!INCLUDE[azure_preview](./includes/azure_preview.md)]Toto téma popisuje činnosti uživatelů aplikací se zásadami ochrany aplikací. Zásady ochrany aplikací se použijí jenom v případě, že se aplikace používají v pracovním kontextu: třeba pro přístup k aplikacím pomocí pracovního účtu nebo pro přístup k souborům uloženým v umístění OneDrivu pro danou společnost.
 ##  <a name="accessing-apps"></a>Přístup k aplikacím
 
 Pokud zařízení **není zaregistrované v Intune**, zobrazí se koncovému uživateli při prvním použití aplikace výzva k restartování aplikace.  Aby se pro aplikaci mohly použít zásady ochrany aplikací, je nutné restartování. Následující snímek obrazovky ukazuje toto chování při použití aplikace Skype:
