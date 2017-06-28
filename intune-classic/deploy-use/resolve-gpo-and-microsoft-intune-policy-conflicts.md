@@ -1,5 +1,5 @@
 ---
-title: "Řešení konfliktů GPO a zásad Intune | Dokumentace Microsoftu"
+title: "Řešení konfliktů GPO a zásad Intune"
 description: "Přečtěte si o řešení konfliktů mezi zásadami skupiny a zásadami konfigurace Intune."
 keywords: 
 author: robstackmsft
@@ -15,15 +15,18 @@ ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 250ddb35aa33523141ae0f5af19b48b75ce0bef0
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 42debb9e26a226da6b2485a2ab1be2855d309747
 ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
 
 # <a name="resolve-group-policy-objects-gpo-and-microsoft-intune-policy-conflicts"></a>Řešení konfliktů objektů zásad skupiny (GPO) a zásad Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Intune používá zásady, které vám pomůžou spravovat nastavení na počítačích s Windows. Pomocí zásad můžete třeba na počítačích řídit nastavení brány Windows Firewall. Mnohá nastavení služby Intune se podobají nastavením, která nejspíš konfigurujete pomocí zásad skupiny Windows. Někdy se ale může stát, že se tyto dvě metody dostanou vzájemně do konfliktu.
 
 V případě konfliktu mají před zásadami Intune přednost zásady skupiny na úrovni domény mimo případů, kdy se počítač nemůže přihlásit do domény. V takovém případě se na klientském počítači použijí zásady Intune.

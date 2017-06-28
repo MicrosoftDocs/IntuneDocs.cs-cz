@@ -1,5 +1,5 @@
 ---
-title: "Konfigurace infrastruktury certifikátů pro SCEP | Dokumentace Microsoftu"
+title: "Konfigurace infrastruktury certifikátů pro SCEP"
 description: "Infrastruktura pro vytvoření a nasazení profilů certifikátů SCEP"
 keywords: 
 author: lleonard-msft
@@ -15,10 +15,10 @@ ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 88fd05cf1ccaf2c033b737ce76a3ce5d83557313
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 9b62e03d88055c19a04c3968a1f060e20ae4fc65
 ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="configure-certificate-infrastructure-for-scep"></a>Konfigurace infrastruktury certifikátů pro SCEP
@@ -48,7 +48,7 @@ I
 
 ### <a name="network-requirements"></a>Požadavky sítě
 
-Z Internetu do hraniční sítě povolte port 443 ze všech hostitelů nebo IP adres na internetu k serveru NDES.
+Z internetu do hraniční sítě povolte port 443 ze všech hostitelů nebo IP adres na internetu k serveru NDES.
 
 Z hraniční sítě do důvěryhodné sítě povolte všechny porty a protokoly nutné pro doménový přístup k serveru NDES připojenému k doméně. Server NDES potřebuje přístup k serverům certifikátů, serverům DNS, serverům nástroje Configuration Manager a řadičům domény.
 

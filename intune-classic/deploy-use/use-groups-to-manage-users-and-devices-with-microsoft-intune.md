@@ -1,5 +1,5 @@
 ---
-title: "Použití skupin pro správu uživatelů a zařízení | Dokumentace Microsoftu"
+title: "Použití skupin pro správu uživatelů a zařízení"
 description: "Vytvářejte a spravujte skupiny pomocí pracovního prostoru Skupiny."
 keywords: 
 author: Mtillman
@@ -15,10 +15,10 @@ ms.reviewer: lpatha
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 095b8db0cb5097edca98d138edccafbe8e55b9ba
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 13c8946dd75d6bdede0e2a8941030250c6b12ef6
 ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -108,7 +108,7 @@ Ve filtrovaných zobrazeních skupiny můžete určit, co správce IT uvidí, na
 -   Chcete, aby vaši správci IT měli možnost nasadit položky jenom u konkrétních uživatelů a zařízení
 -   Chcete, aby vaši správci IT viděli jenom skupiny, které jsou pro ně relevantní
 
-Filtrovaná zobrazení skupin pro jednotlivé správce služby můžete nakonfigurovat v konzole pro správu Intune. Podrobnosti najdete v tématu [Co potřebujete vědět, než začnete s Microsoft Intune](/intune-classic/get-started/what-to-know-before-you-start-microsoft-intune).
+Filtrovaná zobrazení skupin pro jednotlivé správce služby můžete nakonfigurovat v konzole pro správu Intune. Podrobnosti najdete v tématu [Co potřebujete vědět, než začnete s Microsoft Intune](/intune/supported-devices-browsers).
 
 Jakmile pro správce služby nastavíte filtrovaná zobrazení skupin, bude daný správce při nasazování softwaru či zásad nebo spouštění sestav moci zobrazit a vybrat pouze skupiny, které jste určili. Správce také neuvidí informace o stavu na následujících stránkách konzoly pro správu:
 

@@ -1,5 +1,5 @@
 ---
-title: "Běžné úlohy správy počítačů s Windows | Dokumentace Microsoftu"
+title: "Běžné úlohy správy počítačů s Windows"
 description: "Informace o způsobech správy počítačů s Windows, na kterých běží klientský software Intune"
 keywords: 
 author: nathbarn
@@ -15,15 +15,18 @@ ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 548a4b84fe662d5634e2b82363f2ab3d86e48849
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 535979b6adf25c67daaab2df924cbb0e21e15a36
 ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
 
 # <a name="common-windows-pc-management-tasks-with-the-intune-software-client"></a>Běžné úlohy správy počítačů s Windows pomocí klientského softwaru Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Toto téma obsahuje úkoly, kterými můžete spravovat stolní počítače spravované jako počítače. Použije se k tomu instalace softwarového klienta Intune. Nezabývá správou počítačů jako mobilních zařízení. Pokud jste ještě na svých počítačích tohoto klienta nenainstalovali, přečtěte si téma [Instalace softwarového klienta Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
 

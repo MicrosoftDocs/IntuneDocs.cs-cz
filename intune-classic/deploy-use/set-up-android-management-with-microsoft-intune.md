@@ -1,5 +1,5 @@
 ---
-title: "Nastavení správy systému Android | Dokumentace Microsoftu"
+title: "Nastavení správy systému Android"
 description: "Povolte správu mobilních zařízení (MDM) pro zařízení se systémy Android a KNOX Standard v Microsoft Intune."
 keywords: 
 author: nathbarn
@@ -15,10 +15,10 @@ ms.reviewer: lacranda
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 4042a22ecfbab7970ea4b3dab8ee6a82b0da5f78
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 927259d2f3b3078c9fdb0f1ba3bb22a69b555ab6
 ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -42,7 +42,7 @@ Zařízení s Androidem se standardně můžou registrovat do Intune. Pokud chce
     Postup registrace koncových uživatelů najdete v tématu [Registrace zařízení s Androidem v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-android). Proces registrace uživatele informuje, co můžou očekávat a co správci IT na jejich zařízeních uvidí a neuvidí.
 
     Informace o dalších úlohách koncových uživatelů najdete v článcích:
-  - [Materiály o prostředí Microsoft Intune pro koncové uživatele](how-to-educate-your-end-users-about-microsoft-intune.md)
+  - [Materiály o prostředí Microsoft Intune pro koncové uživatele](/intune/end-user-educate)
   - [Pokyny pro koncové uživatele zařízení s Androidem](https://docs.microsoft.com/intune-user-help/using-your-android-device-with-intune)
 
 Vzhledem k absenci obchodu Google Play v Číně musí zařízení s Androidem získávat Portál společnosti z čínských marketplace aplikací. Aplikace Portál společnosti pro Android bude dostupná ke stažení v těchto obchodech:

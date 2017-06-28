@@ -1,5 +1,5 @@
 ---
-title: "Publikování mobilních aplikací pro vaše uživatele | Dokumentace Microsoftu"
+title: "Publikování mobilních aplikací pro vaše uživatele"
 description: 
 keywords: 
 author: jeffgilb
@@ -15,10 +15,10 @@ ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: fea0f98051d1a13a2ace178fe440520f495aaa68
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 71d57965164f0822e1a6d95715c4f9c92f7bf4bd
 ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -35,9 +35,9 @@ Chcete, aby uživatelé měli rychlý přístup ke všem aplikacím, které pot�
 Pokud ano, pak Microsoft Intune umožňuje publikování aplikací (mobilních pro Office, interních obchodních nebo jiných mobilních a desktopových) na jednom společném portálu, kterým je [aplikace nebo web Portál společnosti Intune](/intune-user-help/company-portal-frequently-asked-questions).
 
 ## <a name="how-do-i-do-it"></a>Jak to udělám?
-1.    [Zaregistrujte zařízení](/intune-classic/deploy-use/enroll-devices-in-microsoft-intune) do systému správy mobilních zařízení Intune.
-2.    [Přidejte do Intune aplikace](/intune-classic/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune), které chcete nasadit na zaregistrovaná zařízení.
-3.    [Nasaďte aplikace pomocí Intune](/intune-classic/deploy-use/deploy-apps) na zaregistrovaná zařízení.
+1.  [Zaregistrujte zařízení](/intune-classic/deploy-use/enroll-devices-in-microsoft-intune) do systému správy mobilních zařízení Intune.
+2.  [Přidejte do Intune aplikace](/intune-classic/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune), které chcete nasadit na zaregistrovaná zařízení.
+3.  [Nasaďte aplikace pomocí Intune](/intune-classic/deploy-use/deploy-apps) na zaregistrovaná zařízení.
 
 ### <a name="additional-information"></a>Další informace:
 Pokud jsou mobilní aplikace pro Office publikované se záměrem, že pro ně chcete používat zásady MAM služby Intune, abyste zajistili ochranu proti ztrátě dat, bude potřeba každému koncovému uživateli s přiřazenými zásadami MAM [přiřadit licenci uživatele Office 365](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).

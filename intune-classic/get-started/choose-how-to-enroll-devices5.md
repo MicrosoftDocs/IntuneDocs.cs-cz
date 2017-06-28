@@ -1,5 +1,5 @@
 ---
-title: "Volba způsobu registrace mobilních zařízení | Dokumentace Microsoftu"
+title: "Volba způsobu registrace mobilních zařízení"
 description: "Volba způsobu registrace mobilních zařízení v Intune zodpovězením několik jednoduchých dotazů"
 keywords: 
 author: NathBarn
@@ -15,10 +15,10 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 ms.custom: intune-classic EXPIERIMENT
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 64f8a051cfa873df034e3d260862181ce637948c
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: e978a9df5d0c0e2e94f484c5e683a970f66dc945
 ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -28,12 +28,14 @@ ms.lasthandoff: 05/23/2017
 
 Vaše odpovědi na tuto řadu otázek vám pomohou určit nejlepší metody registrace zařízení, která spravujete.
 
-## <a name="how-will-you-manage-shared-ios-devices"></a>**Jak budete spravovat sdílená zařízení s iOSem?**
+## <a name="how-will-you-manage-shared-ios-devices"></a>**Jak budete spravovat sdílená zařízení s iOS?**
 
 > [!div class="button"]
-[Registrace DEP pro iOS >]/intune-classic/deploy-use/ios-device-enrollment-program-in-microsoft-intune) [!div class="button"]
-> [Přímá registrace pro iOS >]/intune-classic/deploy-use/ios-direct-enrollment-in-microsoft-intune) [!div class="button"]
-[Registrace DEM >]/intune-classic/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune)
+[Registrace DEP pro iOS >](/intune-classic/deploy-use/ios-device-enrollment-program-in-microsoft-intune)
+> [!div class="button"]
+[Přímá registrace pro iOS >](/intune-classic/deploy-use/ios-direct-enrollment-in-microsoft-intune)
+> [!div class="button"]
+[Registrace DEM >](/intune-classic/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune)
 
   - **Program DEP (Device Enrollment Program) společnosti Apple:** Na zakoupená nebo spravovaná zařízení iOS je možné cílit s profilem registrace. Když uživatelé zařízení poprvé zapnou, zařízení stáhne profil DEP a zaregistruje se s ním.
 

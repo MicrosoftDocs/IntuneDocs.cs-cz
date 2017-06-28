@@ -42,7 +42,7 @@ Přístup k aplikacím, datům a prostředkům vaší organizace vám umožňuje
 
  ![Snímek obrazovky s úvodní stránkou webového portálu se zobrazenými informacemi o tom, že se ještě nedají instalovat žádné aplikace, a s tlačítkem Moje zařízení zobrazeným níže](./media/macOS_enroll_001_landing_page.png)
 
-4. Na stránce __Moje zařízení__ se zobrazí buď seznam zaregistrovaných zařízení, nebo informační zpráva. Závisí to na tom, jestli máte nějaká zaregistrovaná zařízení, macOS, nebo nikoli. Pokud chcete zaregistrovat zařízení, které není na seznamu, vyberte informační zprávu __Pokud je vaše zařízení na seznamu, identifikujte ho tak, že klepnete sem. Pokud zařízení uvedené není, můžete ho zaregistrovat klepnutím sem.__.
+4. Na stránce __Moje zařízení__ se zobrazí buď seznam zaregistrovaných zařízení, nebo informační zpráva. Závisí to na tom, jestli máte nějaká zaregistrovaná zařízení, macOS, nebo nikoli. Pokud chcete zaregistrovat zařízení, které není na seznamu, vyberte informační zprávu __Pokud je vaše zařízení na seznamu, identifikujte ho tak, že klepnete sem. Pokud zařízení uvedené není, můžete ho zaregistrovat klepnutím sem__.
 
   ![Snímek obrazovky se stránkou Moje zařízení s několika neidentifikovanými zařízeními zobrazenými nad výzvou k registraci zařízení, která nejsou v seznamu, nebo k identifikaci neidentifikovaných zařízení](./media/macOS_enroll_002_tap_here_banner.png)
 

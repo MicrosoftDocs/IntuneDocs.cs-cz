@@ -15,10 +15,10 @@ ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 32446d9a6f9383b5449dbabf288b0eac0b483ebb
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: a39f67a532f53ef6ab2e3cc5d17b2d593a3483ae
 ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -32,7 +32,7 @@ Tento článek poskytuje odpovědi na některé časté otázky ke správě mobi
 ## <a name="mam-basics"></a>Základní informace o MAM
 
 
-**Co je MAM?** [Správa mobilních aplikací (MAM) Intune](../deploy-use/overview-of-app-lifecycle-in-microsoft-intune.md) představuje sadu funkcí Intune pro správu, s kterými můžete publikovat, doručovat, konfigurovat, zabezpečovat, monitorovat a aktualizovat mobilní aplikace pro uživatele.
+**Co je MAM?** [Správa mobilních aplikací (MAM) Intune](/intune/app-lifecycle) představuje sadu funkcí Intune pro správu, s kterými můžete publikovat, doručovat, konfigurovat, zabezpečovat, monitorovat a aktualizovat mobilní aplikace pro uživatele.
 
 **Jaké jsou výhody ochrany aplikací pomocí MAM?** MAM chrání data organizace v rámci aplikace. Díky funkci MAM bez registrace zařízení (MAM-WE) jde pracovní nebo školní aplikaci, která obsahuje citlivá data, spravovat prakticky na jakémkoliv zařízení, včetně osobních zařízení, která uživatelé používají pracovně (BYOD, bring-your-own-device). Mnoho kancelářských aplikací, jako jsou například aplikace Microsoft Office, jde spravovat přes Intune MAM. Podívejte se do oficiálního seznamu [aplikací podporujících Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps), který je veřejně přístupný.
 
@@ -50,12 +50,12 @@ Tento článek poskytuje odpovědi na některé časté otázky ke správě mobi
 
 ## <a name="apps-you-can-manage-with-app-protection-policies"></a>Aplikace, které se dají spravovat pomocí zásad ochrany aplikací
 
-**Které aplikace se dají spravovat pomocí zásad ochrany aplikací?** Zásadami ochrany aplikací Intune se dá spravovat každá aplikace, u které byla tato podpora povolena sadou [Intune App SDK](../develop/intune-app-sdk.md) nebo která byla zabalena nástrojem [Intune App Wrapping](../deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md). Podívejte se do oficiálního seznamu [aplikací podporujících Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps), který je veřejně přístupný.
+**Které aplikace se dají spravovat pomocí zásad ochrany aplikací?** Zásadami ochrany aplikací Intune se dá spravovat každá aplikace, u které byla tato podpora povolena sadou [Intune App SDK](/intune/app-sdk) nebo která byla zabalena nástrojem [Intune App Wrapping](/intune/apps-prepare-mobile-application-management). Podívejte se do oficiálního seznamu [aplikací podporujících Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps), který je veřejně přístupný.
 
 **Jaké jsou základní požadavky na používání zásad ochrany aplikací v aplikaci s podporou Intune?**
-  1. Koncový uživatel musí mít účet Azure Active Directory (AAD). Pokud se chcete dozvědět, jak se vytvářejí uživatelé Intune v Azure Active Directory, přečtěte si [Přidání uživatelů a udělení oprávnění pro správu v Intune](../get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3.md).
+  1. Koncový uživatel musí mít účet Azure Active Directory (AAD). Pokud se chcete dozvědět, jak se vytvářejí uživatelé Intune v Azure Active Directory, přečtěte si [Přidání uživatelů a udělení oprávnění pro správu v Intune](/intune/users-permissions-add).
 
-  2. Koncový uživatel musí mít ke svému účtu Azure Active Directory přiřazenou licenci pro Microsoft Intune. Informace o tom, jak se přiřazují licence Intune koncovým uživatelům, najdete v článku [Správa licencí Intune](../get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4.md).
+  2. Koncový uživatel musí mít ke svému účtu Azure Active Directory přiřazenou licenci pro Microsoft Intune. Informace o tom, jak se přiřazují licence Intune koncovým uživatelům, najdete v článku [Správa licencí Intune](/intune/licenses-assign).
 
   3. Koncový uživatel musí patřit do skupiny zabezpečení, která je cílem zásady ochrany aplikace. Stejná zásada ochrany aplikace musí mít za cíl konkrétní používanou aplikaci. Zásady ochrany aplikací se dají vytvářet a nasazovat v konzole Intune na [portálu Azure](http://portal.azure.com). Skupiny zabezpečení se aktuálně dají vytvářet na [portálu Office](http://portal.office.com).
 

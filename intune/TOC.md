@@ -1,95 +1,110 @@
-# Úvod
-## [Co je Azure Portal preview?](what-is-intune.md)
-## [Co je Intune for Education?](/intune-classic/understand-explore/introduction-to-intune-education?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
+# [Úvod](introduction-intune.md)
+## [Co je Azure Portal?](what-is-intune.md)
+## [Co je Intune for Education?](introduction-intune-education.md)
 ## [Funkce Intune v Azure](ui-changes.md)
-## Začínáme
-<!---(get-started.md) --->
-### [Registrace bezplatné zkušební verze](free-trial-sign-up.md)
+## [Registrace bezplatné zkušební verze](free-trial-sign-up.md)
 ## [Novinky](whats-new.md)
+### [Co je nového v uživatelském rozhraní aplikace](whats-new-app-ui.md)
+### [Archiv novinek (portál Azure Portal)](whats-new-archive.md)
+### [Archiv novinek (portál Classic)](whats-new-archive-classic.md)
+
+<!--## High-level architecture-->
+
+## [Životní cyklus zařízení a aplikací](introduction-device-app-lifecycles.md)
+### [Životní cyklus zařízení](device-lifecycle.md)
+### [Životní cyklus aplikace](app-lifecycle.md)
+## [Typické scénáře](common-scenarios.md)
 ## [Známé problémy](known-issues.md)
 ## [Získání podpory](get-support.md)
-<!---
+## [Popis služby Intune](microsoft-intune-service-description.md)
 
-## [Related resources](related-resources.md)
-
-## [Get started](plan-and-design/get-started.md) --->
-
-# Plánování a navrhování
-
-## [Plánování, návrh a implementace nasazení](/intune-classic/plan-design/introduction?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-### [Oddíl 1: Určení cílů, účelu a obtíží nasazení](/intune-classic/plan-design/section-1-determine-deployment-goals-objectives-challenges?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-### [Oddíl 2: Identifikace scénářů pro případy použití](/intune-classic/plan-design/section-2-identify-use-case-scenarios?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-### [Oddíl 3: Určení požadavků scénářů pro případy použití](/intune-classic/plan-design/section-3-determine-use-case-requirements?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-### [Oddíl 4: Vývoj plánu zavedení](/intune-classic/plan-design/section-4-develop-a-rollout-plan?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-### [Oddíl 5: Vývoj plánu komunikace](/intune-classic/plan-design/section-5-develop-a-rollout-communication-plan?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-### [Oddíl 6: Vývoj plánu podpory](/intune-classic/plan-design/section-6-develop-a-support-plan?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-### [Oddíl 7: Vytvoření návrhu Intune](/intune-classic/plan-design/section-7-create-an-intune-design?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-### [Oddíl 8: Implementace Intune](/intune-classic/plan-design/section-8-onboarding-process?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-### [Oddíl 9: Testování a ověření](/intune-classic/plan-design/section-9-test-and-validation?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-### [Další zdroje informací](/intune-classic/plan-design/additional-resources?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-
-## [Migrace](/intune-classic/plan-design/intune-mdm-migration-guide?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-### [Fáze 1: Příprava Intune pro MDM](/intune-classic/plan-design/migration-phase1-prepare-intune-for-mobile-device-management?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-#### [Základní nastavení](/intune-classic/plan-design/migration-phase1-basic-setup?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-#### [Konfigurace zásad pro správu zařízení a aplikací](/intune-classic/plan-design/migration-phase1-configure-device-and-app-management-policies?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-#### [Konfigurace zásad pro ochranu aplikací](/intune-classic/plan-design/migration-phase1-configure-app-protection-policies?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-#### [Speciální aspekty migrace](/intune-classic/plan-design/migration-phase1-special-migration-considerations?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-### [Fáze 2: Kampaň migrace](/intune-classic/plan-design/migration-phase2-migration-campaign?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-#### [Plán komunikace](/intune-classic/plan-design/migration-phase2-communication-plan?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-#### [Přijetí jednotky](/intune-classic/plan-design/migration-phase2-drive-end-user-adoption-with-conditional-access?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-#### [Typický cyklus migrace](/intune-classic/plan-design/migration-phase2-typical-migration-cycle?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
+<!--# Get started
+## [Manage devices](/intune-classic/understand-explore/mobile-device-management-trial-guide-microsoft-intune?toc=/intune/toc.json)
+## [Create policies](/intune-classic/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-3?toc=/intune/toc.json)
+## [Manage apps](/intune-classic/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-4?toc=/intune/toc.json) -->
 
 
-# Registrovat zařízení
-## [Co je registrace zařízení?](device-enrollment.md)
-## Začínáme
+# Nasazení plánu
+## [Průvodce plánováním](planning-guide.md)
+### [Určení cílů a záměrů](planning-guide-deployment-goals.md)
+### [Identifikace scénářů](planning-guide-scenarios.md)
+### [Určení požadavků](planning-guide-requirements.md)
+### [Vývoj plánu uvedení](planning-guide-rollout-plan.md)
+### [Vývoj plánu komunikace](planning-guide-communication-plan.md)
+### [Vývoj plánu podpory](planning-guide-support-plan.md)
+### [Návrh](planning-guide-design.md)
+### [Implementace](planning-guide-onboarding.md)
+### [Testování a ověřování](planning-guide-test-validation.md)
+### [Další zdroje informací](planning-guide-resources.md)
+<!-- ## Scenario implementation guides
+### [BYOD](/enterprise-mobility-security/solutions/enable-byod?toc=/intune/toc.json)
+### [Protect O365 data](/enterprise-mobility-security/solutions/protect-office365-data-with-intune?toc=/intune/toc.json)
+### [Protect on-premises data](/enterprise-mobility-security/solutions/protect-on-premises-data-with-intune?toc=/intune/toc.json)
+### [Protect data without enrollment](/enterprise-mobility-security/solutions/protect-company-data-without-managing-devices?toc=/intune/toc.json)
+### [Manage company-owned devices](/enterprise-mobility-security/solutions/issue-corp-devices?toc=/intune/toc.json)
+### [Manage shared devices](/enterprise-mobility-security/solutions/limited-use-shared-devices?toc=/intune/toc.json) -->
+## [Průvodce migrací](migration-guide.md)
+### [Příprava Intune](migration-guide-prepare.md)
+#### [Základní nastavení](migration-guide-setup.md)
+#### [Konfigurace zásad pro správu zařízení a aplikací](migration-guide-configure-policies.md)
+#### [Konfigurace zásad pro ochranu aplikací](migration-guide-app-protection-policies.md)
+#### [Posouzení migrace](migration-guide-considerations.md)
+### [Kampaň migrace](migration-guide-campaign.md)
+#### [Plánování komunikace](migration-guide-communication-plan.md)
+#### [Přijetí jednotky](migration-guide-drive-adoption.md)
+#### [Typický cyklus migrace](migration-guide-cycle.md)
+
+
+# Postupy
+
+## [Nastavení Intune](setup-steps.md)
+### [Požadavky](supported-devices-browsers.md)
+#### [Využití šířky pásma sítě](network-bandwidth-use.md)
+### [Přihlášení k Intune](account-sign-up.md)
+### [Konfigurace domén](custom-domain-name-configure.md)
+### [Přidávání uživatelů](users-permissions-add.md)
+### [Přiřazení licencí](licenses-assign.md)       
+### [Přizpůsobení Portálu společnosti](company-portal-customize.md)     
 ### [Nastavení autority pro správu mobilních zařízení (MDM)](mdm-authority-set.md)
-## Plánování a navrhování
-### [Získání certifikátu Apple MDM push certificate](apple-mdm-push-certificate-get.md)
-### [Volba způsobu registrace zařízení s iOSem](enrollment-method-choose-ios.md)
-## Postupy
-### [Přiřazení licencí uživatelům](/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-### [Registrace zařízení s Androidem](android-enroll.md)
-### Registrace zařízení s iOSem
-#### [Apple Configurator – Pomocník pro instalaci](apple-configurator-setup-assistant-enroll-ios.md)
-#### [Apple Configurator – přímá registrace](apple-configurator-direct-enroll-ios.md)
-#### [Přidání sériových čísel Apple Configuratoru](apple-configurator-serial-numbers-add.md)
-#### [Program registrace zařízení (DEP)](device-enrollment-program-enroll-ios.md)
-### [Správce registrace zařízení](device-enrollment-manager-enroll.md)
-### [Registrace zařízení s macOS](macos-enroll.md)
-### [Registrace zařízení s Windows](windows-enroll.md)
-### [Hromadná registrace zařízení s Windows](windows-bulk-enroll.md)
-### Správa registrace zařízení
-#### [Vytvoření podmínek a ujednání](terms-and-conditions-create.md)
-#### [Nastavení omezení pro registraci](enrollment-restrictions-set.md)
-#### [Mapování zařízení na skupiny](device-group-mapping.md)
+
+## [Registrovat zařízení](device-enrollment.md)
+### Požadavky
+#### [Nastavení podmínek a ujednání](terms-and-conditions-create.md)
+#### [Nastavení omezení](enrollment-restrictions-set.md)
+#### [Získání certifikátu Apple MDM push certificate](apple-mdm-push-certificate-get.md)
 #### [Přidání podnikových identifikátorů](corporate-identifiers-add.md)
-#### [Použití Windows Hello pro firmy](windows-hello.md)
-<!--- ## [Troubleshoot](troubleshooting.md) --->
+#### [Nastavení správce registrace zařízení](device-enrollment-manager-enroll.md)
+#### [Mapování zařízení na skupiny](device-group-mapping.md)
+### [Nastavení registrace zařízení s Windows](windows-enroll.md)
+#### [Automatická registrace](windows-enroll.md)
+#### [Hromadná registrace](windows-bulk-enroll.md)
+### [Nastavení registrace zařízení s Androidem](android-enroll.md)
+### Nastavení registrace zařízení s iOSem
+#### [Pomocí programu registrace zařízení](device-enrollment-program-enroll-ios.md)
+#### [Pomocí Apple School Manageru](apple-school-manager-set-up-ios.md)
+#### [Pomocí Apple Configuratoru](apple-configurator-setup-assistant-enroll-ios.md)
+### [Nastavení registrace macOS](macos-enroll.md)
+### [Informování uživatelů](end-user-educate.md)
 
-# Zařízení a skupiny
-## [Co je správa zařízení?](device-management.md)
-<!--- ## [Get started](get-started.md) --->
-<!--- ## [Plan and design](plan-and-design.md) --->
-## Postupy
-### [Použití úplného nebo selektivního vymazání](devices-wipe.md)
-<!--- ## [Troubleshoot](troubleshooting.md) --->
+## [Správa zařízení](device-management.md)
+### [Vymazání zařízení](devices-wipe.md)
+### [Obejití zámku aktivace](device-activation-lock-bypass.md)
+### [Obnovení továrního nastavení zařízení](device-factory-reset.md)
+### [Správa funkce Začít znovu pro Windows](device-fresh-start.md)
+### [Vyhledání ztracených zařízení s iOSem](device-locate.md)
+### [Povolení režimu ztráty zařízení s iOSem](device-lost-mode.md)
+### [Uzamčení zařízení](device-remote-lock.md)
+### [Odebrat firemní data](device-company-data-remove.md)
+### [Resetovat heslo](device-passcode-reset.md)
+### [Restartování zařízení](device-restart.md)
+### [Vzdálené řízení pro Android](device-profile-android-teamviewer.md)
+### [Prozkoumání inventáře zařízení](device-inventory.md)
 
-# Správa uživatelů
-## [Co je správa uživatelů?](user-management.md)
-<!--- Was What is users & group management--->
-## [Začínáme](groups-get-started.md)
-## [Pomoc uživatelům](help-desk-operators.md)
-<!--- ## [Plan and design](plan-and-design.md) --->
+## [Správa uživatelů](user-management.md)
+### [Začínáme se skupinami](groups-get-started.md)
+<!--### Add and delete users -->
 
-<!--- ## [Troubleshoot](troubleshooting.md) --->
-
-# Správa aplikací
-## [Co je správa aplikací?](app-management.md)
-## [Co jsou zásady ochrany aplikací?](app-protection-policy.md)
-<!--- ## [Get started](get-started.md)
-## [Plan and design](plan-and-design.md) --->
-## Správa aplikací
+## [Správa aplikací](app-management.md)
 ### [Přidání aplikací](apps-add.md)
 #### [Aplikace pro Android Store](store-apps-android.md)
 #### [Obchodní aplikace pro Android](lob-apps-android.md)
@@ -103,43 +118,36 @@
 #### [Aplikace pro Android for Work](apps-add-android-for-work.md)
 ### [Přiřazení aplikací](apps-deploy.md)
 ### [Monitorování aplikací](apps-monitor.md)
-### [Použití konfiguračních profilů aplikací](app-configuration-policies.md)
+### [Konfiguračních profily aplikací pro iOS](app-configuration-policies-use-ios.md)
+### [Konfiguračních profily aplikací pro Android](app-configuration-policies-use-android.md)
 ### [Profily zřizovacích profilů aplikací pro iOS](app-provisioning-profile-ios.md)
 ### [Selektivní vymazání dat](apps-selective-wipe.md)
-<!---Is this specific to app protection policy or more general app management?--->
-### [Práce s multilicenčními aplikacemi](vpp-apps.md)
+### [Práce s multilicenčními aplikacemi a knihami](vpp-apps.md)
 #### [Aplikace iOS VPP](vpp-apps-ios.md)
 #### [Aplikace pro Windows Store pro firmy](windows-store-for-business.md)
+#### [E-knihy pro iOS](vpp-ebooks-ios.md)
 ### [Konfigurace aplikace Portál společnosti](company-portal-app.md)
-## Použití zásad ochrany aplikací
-### [Vytvoření a přiřazení zásad ochrany aplikací](app-protection-policies.md)
+### [Konfigurace Managed Browseru](app-configuration-managed-browser.md)
+## [Použití zásad ochrany aplikací](app-protection-policies.md)
 ### [Příprava na zásady ochrany aplikací WIP](app-protection-policies-configure-windows-10.md)
 ### [Vytvoření a přiřazení zásad ochrany aplikací WIP](windows-information-protection-policy-create.md)
 ### [Nastavení Androidu](app-protection-policy-settings-android.md)
 ### [Nastavení iOSu](app-protection-policy-settings-ios.md)
 ### [Ověření zásad ochrany aplikací](app-protection-policies-validate.md)
 ### [Sledování stavu uživatele u ochrany aplikací](app-protection-policies-monitor.md)
+### [Příprava na zásady ochrany aplikací WIP](app-protection-policies-configure-windows-10.md)
+### [Vytvoření a přiřazení zásad ochrany aplikací WIP](windows-information-protection-policy-create.md)
 ### [Správa přenosu dat mezi aplikacemi pro iOS](data-transfer-between-apps-manage-ios.md)
-### [Aplikace pro Android se zásadami ochrany aplikací](app-protection-enabled-apps-android.md)
-### [Aplikace pro iOS se zásadami ochrany aplikací](app-protection-enabled-apps-ios.md)
 
-
-<!--- ##  [Troubleshoot apps](troubleshooting.md) --->
-
-# Konfigurace zařízení
-## [Co jsou profily zařízení?](device-profiles.md)
-<!---## [Get started](get-started.md)
-## [Plan and design](plan-and-design.md) --->
-## Postupy
+## [Konfigurace zařízení](device-profiles.md)
 ### [Konfigurace profilů zařízení](device-profile-create.md)
-
 ### [Konfigurace funkcí zařízení](device-features-configure.md)
 #### [AirPrint pro iOS a MacOS](air-print-settings-ios-macos.md)
 #### [AirPlay pro iOS](airplay-settings-ios.md)
 #### [Rozložení domovské obrazovky pro iOS](home-screen-settings-ios.md)
 #### [Oznámení aplikace pro iOS](app-notification-settings-ios.md)
 #### [Sdílená zařízení pro iOS](shared-device-settings-ios.md)
-
+#### [Nastavení webového filtru pro iOS](web-content-filter-settings-ios.md)
 ### [Konfigurace omezení zařízení](device-restrictions-configure.md)
 #### [Android](device-restrictions-android.md)
 #### [iOS](device-restrictions-ios.md)
@@ -149,13 +157,11 @@
 #### [Windows 10](device-restrictions-windows-10.md)
 #### [Windows 10 Team](device-restrictions-windows-10-teams.md)
 #### [Android for Work](device-restrictions-android-for-work.md)
-
 ### [Konfigurace nastavení e-mailů](email-settings-configure.md)
 #### [Android](email-settings-android.md)
 #### [iOS](email-settings-ios.md)
 #### [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
 #### [Windows 10](email-settings-windows-10.md)
-
 ### [Konfigurace nastavení sítě VPN](vpn-settings-configure.md)
 #### [Android](vpn-settings-android.md)
 #### [iOS](vpn-settings-ios.md)
@@ -163,13 +169,11 @@
 #### [Windows 8.1](vpn-settings-windows-8-1.md)
 #### [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
 #### [Windows 10](vpn-settings-windows-10.md)
-
 ### [Konfigurace nastavení sítě Wi-Fi](wi-fi-settings-configure.md)
 #### [Android](wi-fi-settings-android.md)
 #### [iOS](wi-fi-settings-ios.md)
 #### [macOS](wi-fi-settings-macos.md)
 #### [Windows 8.1 a Windows 10](wi-fi-settings-import-windows-8-1.md)
-
 ### [Konfigurace nastavení upgradu edice Windows 10](edition-upgrade-configure-windows-10.md)
 ### [Konfigurace nastavení Windows 10 Education](education-settings-configure.md)
 ### [Konfigurace nastavení iOS Education](education-settings-configure-ios.md)
@@ -177,53 +181,102 @@
 ### [Konfigurace certifikátů](certificates-configure.md)
 #### [SCEP](certificates-scep-configure.md)
 #### [PKCS](certficates-pfx-configure.md)
-
 ### [Konfigurace nastavení Windows Information Protection](windows-information-protection-configure.md)
-<!--- ### [Configure iOS education settings](education-settings-for-ios.md) --->
+### [Přiřazení profilů](device-profile-assign.md)
+### [Monitorování profilů](device-profile-monitor.md)
+### [Řešení potíží s profily](device-profile-troubleshoot.md)
 
-### [Konfigurace vlastního nastavení](custom-settings-configure.md)
-#### [Android](custom-settings-android.md)
-##### [Vytvoření profilu Wi-Fi s předsdíleným klíčem](wi-fi-profile-shared-key.md)
-##### [Profil sítě VPN pro jednotlivé aplikace](android-pulse-secure-per-app-vpn.md)
-##### [Povolení a blokování aplikací pro Samsung KNOX Standard](samsung-knox-apps-allow-block.md)
-#### [iOS](custom-settings-ios.md)
-#### [macOS](custom settings-macos.md)
-#### [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
-#### [Windows 10](custom-settings-windows-10.md)
-#### [Android for Work](custom-settings-android-for-work.md)
-
-### [Přiřazení profilů zařízení](device-profile-assign.md)
-### [Sledování profilů zařízení](device-profile-monitor.md)
-### [Nastavení služby TEM (Telecom Expense Management)](telecom-expenses-monitor.md)
-## [Řešení problémů](device-profile-troubleshoot.md)
-
-# Nastavit dodržování předpisů zařízením
-## [Co je dodržování předpisů v zařízeních?](device-compliance.md)
-## [Začínáme](device-compliance-get-started.md)
-## Postupy
-### [Vytvoření zásad dodržování předpisů pro Android](compliance-policy-create-android.md)
-### [Vytvoření zásad dodržování předpisů pro Android for Work](compliance-policy-create-android-for-work.md)
-### [Vytvoření zásad dodržování předpisů pro iOS](compliance-policy-create-ios.md)
-### [Vytvoření zásad dodržování předpisů pro Windows](compliance-policy-create-windows.md)
-<!---### [Create Actions for noncompliance](actions-for-noncompliance.md)--->
+## [Nastavení dodržování předpisů zařízením](device-compliance.md)
+### [Požadavky](device-compliance-get-started.md)
+### [Vytvoření zásad pro Android](compliance-policy-create-android.md)
+### [Vytvoření zásad pro Android for Work](compliance-policy-create-android-for-work.md)
+### [Vytvoření zásad pro iOS](compliance-policy-create-ios.md)
+### [Vytvoření zásad pro Windows](compliance-policy-create-windows.md)
+<!--### Create Actions for noncompliance-->
 ### [Monitorování dodržování zásad v zařízeních](compliance-policy-monitor.md)
-<!--- ### [Monitor device compliance](device-compliance-monitor.md)--->
 
-
-
-# podmíněný přístup
-## [Co je podmíněný přístup?](conditional-access.md)
-## Postupy
+## [Nastavení podmíněného přístupu](conditional-access.md)
+### [Běžné způsoby použití podmíněného přístupu](conditional-access-intune-common-ways-use.md)
+### [Podmíněný přístup založený na aplikacích](app-based-conditional-access-intune.md)
 ### [Instalace konektoru On-Premises Connector](exchange-connector-install.md)
 ### [Vytvoření a přiřazení zásad podmíněného přístupu](conditional-access-exchange-create.md)
+### [Nastavení podmíněného přístupu založeného na aplikacích pro Exchange Online](app-based-conditional-access-intune-exchange-online-create.md)
+### [Nastavení podmíněného přístupu založeného na aplikacích pro SharePoint Online](app-based-conditional-access-intune-sharepoint-online-create.md)
+### [ADAL a Intune](app-modern-authentication-block.md)
 ### [Monitorování dodržování předpisů podmíněného přístupu](conditional-access-exchange-monitor.md)
 
-# Řízení přístupu
-## [Co je řízení přístupu na základě rolí?](role-based-access-control.md)
+## Ochrana dat a zařízení
+
+### [Mobile Threat Defense](mobile-threat-defense.md)
+
+#### [Nastavení Lookoutu](lookout-mobile-threat-defense-connector.md)
+##### [Integrace Lookoutu a Intune](lookout-mtd-subscription-setup.md)
+##### [Povolení Lookoutu v Intune](lookout-mtd-connector-enable.md)
+##### [Nasazení aplikací k použití s Lookoutem](lookout-for-work-app-configure-deploy.md)
+##### [Zásady dodržování předpisů zařízení s Lookoutem](lookout-device-compliance-policy-create.md)
+
+#### [Nastavení služby Skycure](skycure-mobile-threat-defense-connector.md)
+##### [Konfigurace jednotného přihlašování v Azure AD](skycure-azure-sso-configure.md)
+##### [Stažení zásad pro konfiguraci aplikací pro iOS](skycure-ios-app-configuration-policy-download.md)
+##### [Přidání a konfigurace aplikací](skycure-microsoft-authenticator-app-ios-app-configuration-policy-add.md)
+##### [Nasazení aplikací k použití s aplikací Skycure](skycure-microsoft-authenticator-app-ios-app-configuration-policy-deploy.md)
+##### [Integrace služeb Skycure a Intune](skycure-mtd-connector-integration.md)
+##### [Povolení služby Skycure v Intune ](skycure-mtd-connector-enable.md)
+##### [Zásady dodržování předpisů zařízení služby Skycure](skycure-device-compliance-policy-create.md)
+
+### [Nastavení Windows Hello](windows-hello.md)        
+<!-- ### Protect devices with remote actions        -->
+
+## [Správa rolí](role-based-access-control.md)
+<!-- ### Create a custom role
+### Assign a role -->
+### [Používání role pracovníka odborné pomoci](help-desk-operators.md)
+<!-- ### Custom role settings -->
+
+## [Správa počítačů pomocí softwarového agenta](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune?toc=/intune/toc.json)
+### [Instalace klientského počítače](/intune-classic/deploy-use/install-the-windows-pc-client-with-microsoft-intune?toc=/intune/toc.json)
+### [Běžné úlohy správy počítačů](/intune-classic/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client?toc=/intune/toc.json)
+#### [Zásady pro počítače](/intune-classic/deploy-use/use-policies-to-simplify-windows-pc-management?toc=/intune/toc.json)
+#### [Zobrazení inventáře](/intune-classic/deploy-use/view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune?toc=/intune/toc.json)
+#### [Vyřazení počítačů](/intune-classic/deploy-use/retire-a-windows-pc-with-microsoft-intune?toc=/intune/toc.json)
+#### [Propojení počítačů s uživateli](/intune-classic/deploy-use/manage-user-device-linking-for-windows-pcs-with-microsoft-intune?toc=/intune/toc.json)
+#### [Vzdálená pomoc](/intune-classic/deploy-use/request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune?toc=/intune/toc.json)
+### [Zásady ochrany počítačů se systémem Windows](/intune-classic/deploy-use/policies-to-protect-windows-pcs-in-microsoft-intune?toc=/intune/toc.json)
+#### [Aktualizace softwaru](/intune-classic/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune?toc=/intune/toc.json)
+#### [Brána Windows Firewall](/intune-classic/deploy-use/help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune?toc=/intune/toc.json)
+#### [Endpoint Protection](/intune-classic/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune?toc=/intune/toc.json)
+### [Přidání aplikací pro klientské počítače Intune](/intune-classic/deploy-use/add-apps-for-windows-pcs-in-microsoft-intune?toc=/intune/toc.json)
+### [Správa licenčních smluv](/intune-classic/deploy-use/manage-license-agreements-for-windows-pc-software-in-microsoft-intune?toc=/intune/toc.json)
+### [Řešení konfliktů zásad](/intune-classic/deploy-use/resolve-gpo-and-microsoft-intune-policy-conflicts?toc=/intune/toc.json)
+
+
+# Monitorování a odstraňování potíží
+## [Monitorování výdajů na telekomunikaci](telecom-expenses-monitor.md)
+
 
 # Vývoj a přizpůsobení
-## [Nástroj Intune App Wrapping](/intune-classic/deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-### [Nástroj App Wrapping pro iOS](/intune-classic/deploy-use/prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-### [Nástroj App Wrapping pro Android](/intune-classic/deploy-use/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
-## [Intune App SDK](/intune-classic/develop/intune-app-sdk?toc=/intune/toc.json&bc=/enterprise-mobility/toc.json)
+## [Konfigurace vlastních nastavení zařízení](custom-settings-configure.md)
+### [Android](custom-settings-android.md)
+#### [Vytvoření profilu Wi-Fi s předsdíleným klíčem](wi-fi-profile-shared-key.md)
+#### [Profil sítě VPN pro jednotlivé aplikace](android-pulse-secure-per-app-vpn.md)
+#### [Povolení a blokování aplikací pro Samsung KNOX Standard](samsung-knox-apps-allow-block.md)
+### [iOS](custom-settings-ios.md)
+### [macOS](custom-settings-macos.md)
+### [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
+### [Windows 10](custom-settings-windows-10.md)
+### [Android for Work](custom-settings-android-for-work.md)
+## [Příprava obchodních aplikací pro MAM](apps-prepare-mobile-application-management.md)
+### [Nástroj App Wrapping pro iOS](app-wrapper-prepare-ios.md)
+### [Nástroj App Wrapping pro Android](app-wrapper-prepare-android.md)
+## [Instalace aplikací pro Windows bokem](app-sideload-windows.md)
+## [Intune App SDK](app-sdk.md)
+### [Začínáme s Intune App SDK](app-sdk-get-started.md)
+### [Intune App SDK pro iOS](app-sdk-ios.md)
+### [Intune App SDK pro Android](app-sdk-android.md)
+### [Plug-in Cordova sady Intune App SDK](app-sdk-cordova.md)
+### [Komponenta Xamarin sady Intune App SDK](app-sdk-xamarin.md)
+## [Jak používat rozhraní Intune Graph API](intune-graph-apis.md)
 ## [Rozhraní Intune Graph API](https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview)
+
+
+# [Glosář](intune-glossary.md)
