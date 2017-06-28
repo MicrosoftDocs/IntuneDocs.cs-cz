@@ -1,5 +1,5 @@
 ---
-title: "Registrace zařízení | Dokumentace Microsoftu"
+title: "Registrovat zařízení"
 description: "Správa mobilních zařízení (MDM) využívá registraci pro zajištění správy zařízení a povolení přístupu k prostředkům."
 keywords: 
 author: nathbarn
@@ -15,10 +15,10 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: e724e648dc8e768f11e51103a050665a60ffcb1a
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: c7c4390629178256728c55e47f06bffae043a729
 ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -43,40 +43,40 @@ Následující tabulka uvádí metody registrace v Intune a podporované možnos
 
 **Metody registrace zařízení s iOSem**
 
-| **Metoda** |    **Vyžadováno vymazání?** |    **Spřažení**    |    **Uzamčení** | **Podrobnosti** |
+| **Metoda** |  **Vyžadováno vymazání?** |    **Spřažení**    |   **Uzamčení** | **Podrobnosti** |
 |:---:|:---:|:---:|:---:|:---:|
-|**[Uživatelé s vlastním zařízením (BYOD)](#byod)** | Ne|    Ano |    Ne | [Další informace](prerequisites-for-enrollment.md)|
-|**[DEM](#dem)**|    Ne |Ne |Ne    | [Další informace](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
-|**[DEP](#dep)**|    Ano |    Volitelné |    Volitelné|[Další informace](ios-device-enrollment-program-in-microsoft-intune.md)|
-|**[USB-SA](#usb-sa)**|    Ano |    Volitelné |    Ne| [Další informace](ios-setup-assistant-enrollment-in-microsoft-intune.md)|
-|**[USB (přímo)](#usb-direct)**|    Ne |    Ne    | Ne|[Další informace](ios-direct-enrollment-in-microsoft-intune.md)|
+|**[Uživatelé s vlastním zařízením (BYOD)](#byod)** | Ne|    Ano |   Ne | [Další informace](prerequisites-for-enrollment.md)|
+|**[DEM](#dem)**|   Ne |Ne |Ne  | [Další informace](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
+|**[DEP](#dep)**|   Ano |   Volitelné |  Volitelné|[Další informace](ios-device-enrollment-program-in-microsoft-intune.md)|
+|**[USB-SA](#usb-sa)**| Ano |   Volitelné |  Ne| [Další informace](ios-setup-assistant-enrollment-in-microsoft-intune.md)|
+|**[USB (přímo)](#usb-direct)**| Ne |    Ne  | Ne|[Další informace](ios-direct-enrollment-in-microsoft-intune.md)|
 
 **Metody registrace zařízení s Windows**
 
-| **Metoda** |    **Vyžadováno vymazání?** |    **Spřažení**    |    **Uzamčení** | **Podrobnosti**|
+| **Metoda** |  **Vyžadováno vymazání?** |    **Spřažení**    |   **Uzamčení** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[Uživatelé s vlastním zařízením (BYOD)](#byod)** | Ne|    Ano |    Ne | [Další informace](prerequisites-for-enrollment.md)|
-|**[DEM](#dem)**|    Ne |Ne |Ne    |[Další informace](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
+|**[Uživatelé s vlastním zařízením (BYOD)](#byod)** | Ne|    Ano |   Ne | [Další informace](prerequisites-for-enrollment.md)|
+|**[DEM](#dem)**|   Ne |Ne |Ne  |[Další informace](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
 
 **Metody registrace zařízení s Androidem**
 
-| **Metoda** |    **Vyžadováno vymazání?** |    **Spřažení**    |    **Uzamčení** | **Podrobnosti**|
+| **Metoda** |  **Vyžadováno vymazání?** |    **Spřažení**    |   **Uzamčení** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[Uživatelé s vlastním zařízením (BYOD)](#byod)** | Ne|    Ano |    Ne | [Další informace](prerequisites-for-enrollment.md)|
-|**[DEM](#dem)**|    Ne |Ne |Ne    |[Další informace](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
+|**[Uživatelé s vlastním zařízením (BYOD)](#byod)** | Ne|    Ano |   Ne | [Další informace](prerequisites-for-enrollment.md)|
+|**[DEM](#dem)**|   Ne |Ne |Ne  |[Další informace](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
 
 **Metody registrace Androidu for Work**
 
-| **Metoda** |    **Vyžadováno vymazání?** |    **Spřažení**    |    **Uzamčení** | **Podrobnosti**|
+| **Metoda** |  **Vyžadováno vymazání?** |    **Spřažení**    |   **Uzamčení** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[Uživatelé s vlastním zařízením (BYOD)](#byod)** | Ne|    Ano |    Ne | [Další informace](prerequisites-for-enrollment.md)|
-|**[DEM](#dem)**|    Ne |Ne |Ne    |[Další informace](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
+|**[Uživatelé s vlastním zařízením (BYOD)](#byod)** | Ne|    Ano |   Ne | [Další informace](prerequisites-for-enrollment.md)|
+|**[DEM](#dem)**|   Ne |Ne |Ne  |[Další informace](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
 
 **Metody registrace zařízení s macOS**
 
-| **Metoda** |    **Vyžadováno vymazání?** |    **Spřažení**    |    **Uzamčení** | **Podrobnosti**|
+| **Metoda** |  **Vyžadováno vymazání?** |    **Spřažení**    |   **Uzamčení** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[Uživatelé s vlastním zařízením (BYOD)](#byod)** | Ne|    Ano |    Ne | [Další informace](prerequisites-for-enrollment.md)|
+|**[Uživatelé s vlastním zařízením (BYOD)](#byod)** | Ne|    Ano |   Ne | [Další informace](prerequisites-for-enrollment.md)|
 
 
 Sadu otázek, které vám pomohou najít správnou metodu, najdete v tématu [Volba způsobu registrace zařízení](/intune-classic/get-started/choose-how-to-enroll-devices1).
@@ -94,15 +94,15 @@ Správce registrace zařízení je zvláštní účet Intune, který se použív
 
 ### <a name="dep"></a>DEP
 Správa programu DEP společnosti Apple umožňuje vytvářet a bezdrátově nasazovat zásady v zařízeních s iOSem zakoupených a spravovaných prostřednictvím programu DEP. Zařízení se zaregistruje, když ho uživatel poprvé zapne a spustí pomocníka pro nastavení iOS (Setup Assistant). Tento způsob podporuje režim **dozoru nad iOS**, který zase umožňuje následující funkce:
-  -    Registrace uzamčeného zařízení
-  -    Beznabídkový režim a další pokročilé konfigurace a omezení
+  - Registrace uzamčeného zařízení
+  - Beznabídkový režim a další pokročilé konfigurace a omezení
 
 Přečtěte si další informace o [DEP](ios-device-enrollment-program-in-microsoft-intune.md). ([Zpět k tabulce](#overview-of-device-enrollment-methods))
 
 ### <a name="usb-sa"></a>USB (pomocník pro instalaci)
 Správci IT používají k ruční přípravě každého zařízení vlastněného společností pro registraci Apple Configurator (přes USB) pomocí pomocníka pro nastavení (Setup Assistant). Správce IT vytvoří registrační profil a vyexportuje ho do Apple Configuratoru. Když uživatelé obdrží svá zařízení, budou vyzváni ke spuštění pomocníka pro nastavení a k registraci zařízení. Tento způsob podporuje režim **dozoru nad iOS**, který zase umožňuje následující funkce:
-  -    Registrace uzamčeného zařízení
-  -    Beznabídkový režim a další pokročilé konfigurace a omezení
+  - Registrace uzamčeného zařízení
+  - Beznabídkový režim a další pokročilé konfigurace a omezení
 
 Přečtěte si víc o [registraci prostřednictvím pomocníka pro nastavení a Apple Configuratoru](ios-setup-assistant-enrollment-in-microsoft-intune.md). ([Zpět k tabulce](#overview-of-device-enrollment-methods))
 
@@ -131,5 +131,5 @@ Intune může spravovat tyto platformy zařízení:
 ## <a name="next-steps"></a>Další kroky
 - [Předpoklady pro registraci zařízení](prerequisites-for-enrollment.md)
 - [Správa zařízení vlastněných společností](manage-corporate-owned-devices.md)
-- [Podporovaná mobilní zařízení a počítače](../get-started/what-to-know-before-you-start-microsoft-intune.md#intune-supported-devices)
+- [Podporovaná mobilní zařízení a počítače](/intune/supported-devices-browsers#intune-supported-devices)
 

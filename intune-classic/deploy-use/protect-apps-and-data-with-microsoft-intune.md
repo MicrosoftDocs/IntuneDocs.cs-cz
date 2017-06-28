@@ -1,5 +1,5 @@
 ---
-title: "Ochrana dat a aplikací | Dokumentace Microsoftu"
+title: "Ochrana aplikací a dat"
 description: "Toto téma popisuje různé funkce a možnosti Intune, které jsou k dispozici, aby pomáhaly chránit vaše firemní aplikace a data."
 keywords: 
 author: andredm7
@@ -15,10 +15,10 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: fdd85177f21a430eb940d1f88b3bb016c56cee55
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 09b7a1d4901a52845719e8d7094f665b12b91ab4
 ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -52,7 +52,7 @@ Aby bylo možné aplikaci přidružit k zásadě MAM, musí mít začleněnou sa
 
 Například aplikace Microsoft Office mají sadu Intune App SDK integrovanou. Úplný seznam podporovaných aplikací najdete v [galerii mobilních aplikací Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) na stránce aplikací pro Microsoft Intune od partnerů. Pokud zvolíte aplikaci, můžete zjistit podporované scénáře, platformy a to, jestli aplikace podporuje víc identit.
 
-Můžete taky [povolit vlastním obchodním aplikacím](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md) použití se zásadami MAM.
+Můžete taky [povolit vlastním obchodním aplikacím](/intune/apps-prepare-mobile-application-management) použití se zásadami MAM.
 
 Když dojde ke ztrátě nebo odcizení zařízení nebo když uživatel přestane pracovat ve vaší společnosti, můžete kromě omezení přesunu dat taky [selektivně vymazat firemní data](wipe-managed-company-app-data-with-microsoft-intune.md) a ponechat tak v zařízení jenom osobní data.
 

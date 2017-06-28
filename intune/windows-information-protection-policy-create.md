@@ -1,12 +1,12 @@
 ---
-title: "Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune | Dokumentace Microsoftu"
-titleSuffix: Intune Azure preview
+title: "Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune"
+titleSuffix: Intune on Azure
 description: "Vytvoření a nasazení zásady ochrany aplikací WIP u Intune"
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 04/25/2017
+ms.date: 06/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,17 +16,17 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: ca8e309653aa43292c7bd1ae1cb72cbb282d37dc
+ms.sourcegitcommit: 6f2f0b610b900bb41a3c2bd7416b6db28434a155
+ms.openlocfilehash: 17736751a6cd1813bd03f8092739d8433eb5d9dc
 ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/13/2017
 
 
 ---
 
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Počínaje verzí Intune 1704 můžete používat zásady ochrany aplikací u Windows 10 ve správě mobilních aplikací (MAM) bez scénáře registrace.
 
@@ -52,7 +52,7 @@ Povězme si o několika konceptech při přidání zásady WIP.
 
 Abyste mohli vytvořit zásadu ochrany aplikací WIP, musíte nejdříve nakonfigurovat poskytovatele MAM.
 
--   Přečtěte si další informace o tom, [jak nakonfigurovat poskytovatele MAM u Intune](https://docs.microsoft.comapp-protection-policies-configure-windows-10.md).
+-   Přečtěte si další informace o tom, [jak nakonfigurovat poskytovatele MAM u Intune](https://docs.microsoft.com/app-protection-policies-configure-windows-10.md).
 
 Navíc musíte mít toto:
 

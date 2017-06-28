@@ -1,5 +1,5 @@
 ---
-title: "Správa zařízení ve vlastnictví firmy | Dokumentace Microsoftu"
+title: "Správa zařízení vlastněných společností"
 description: "Registrace zařízení patřících společnosti může probíhat různě. Záleží vždy na typu zařízení, způsobu nákupu a potřebách organizace."
 keywords: 
 author: nathbarn
@@ -15,10 +15,10 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 8ef5f26eced99dac547be727fc96e41c11d3a0e7
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 8dae789ad1996543ddf9b92d031ac995beff6a46
 ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---

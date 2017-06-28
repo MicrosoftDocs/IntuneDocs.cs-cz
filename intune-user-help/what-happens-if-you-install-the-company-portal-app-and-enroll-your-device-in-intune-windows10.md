@@ -18,10 +18,10 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: db7c3b4c5722bea449dc7185b179b7a85fa59018
+ms.sourcegitcommit: 5ed0e84c16ea540c08e97cb55ef8a09cbc7339f6
+ms.openlocfilehash: 0f5c1eb76f823c72904bad7543409d9efa9e93e6
 ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 05/25/2017
 
 
 ---
@@ -56,5 +56,5 @@ Když přidáte počítač:
 
 -   Může ve vašem počítači vynutit dodržování určitých zásad. Například může vyžadovat, abyste v počítači nastavili heslo nebo kód PIN. Správce IT může také omezit počet možných zadání nesprávného hesla. Když se tento počet překročí, může se počítač zablokovat nebo se můžou odstranit všechna data z pevného disku počítače.
 
-Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
 

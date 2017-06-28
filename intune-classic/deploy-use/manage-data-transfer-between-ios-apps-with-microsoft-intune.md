@@ -1,5 +1,5 @@
 ---
-title: "Správa přenosu dat mezi aplikacemi pro iOS | Dokumentace Microsoftu"
+title: "Správa přenosu dat mezi aplikacemi pro iOS"
 description: "Toto téma použijte k pochopení, jak můžete použít funkci systému iOS Otevřít v a zásady správy mobilních aplikací ke správě přenosů dat mezi aplikacemi."
 keywords: 
 author: andredm7
@@ -15,10 +15,10 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: e71ebacec9d7b890b41e7650c8c50f42952c6326
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 05975303bd45764d56f00986aea5aa30399893f9
 ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---

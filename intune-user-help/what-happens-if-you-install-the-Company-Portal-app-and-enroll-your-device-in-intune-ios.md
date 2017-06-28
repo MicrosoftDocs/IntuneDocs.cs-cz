@@ -18,10 +18,10 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 1727e8b8fcb248a66842f34e7084c5d461f3eb10
+ms.sourcegitcommit: 5ed0e84c16ea540c08e97cb55ef8a09cbc7339f6
+ms.openlocfilehash: b0205ebce012912cacc738382cadf56a355482f0
 ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 05/25/2017
 
 
 ---
@@ -67,5 +67,5 @@ Po registraci vašeho zařízení může správce IT provádět tyto akce:
 
 -   Povolit nebo zakázat automatickou synchronizaci souborů v režimu roamingu v zařízení. Pokud je automatická synchronizace souborů povolená, můžou se vám účtovat poplatky za roaming.
 
-Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
 

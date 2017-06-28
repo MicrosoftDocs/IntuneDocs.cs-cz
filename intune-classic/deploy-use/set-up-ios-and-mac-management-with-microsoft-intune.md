@@ -1,5 +1,5 @@
 ---
-title: "Nastavení správy pro iOS a Mac | Dokumentace Microsoftu"
+title: Set up iOS and Mac management
 description: "Povolte správu mobilních zařízení (MDM) pro zařízení s iOSem včetně zařízení iPad a iPhone a zařízení s Mac OS X pomocí Microsoft Intune."
 keywords: 
 author: nathbarn
@@ -15,10 +15,10 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: ef1fbee09172a89e0f83cbe905a00f3a3ef25b05
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: af300534b3868a829c0b648d4df2587886ef749b
 ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -53,7 +53,7 @@ V Intune můžete spravovat tato mobilní zařízení: iPady, iPhony a zařízen
     Pokyny k registraci koncových uživatelů najdete v tématech [Registrace zařízení se systémem iOS v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios) a [Registrace zařízení se systémem macOS v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos). Proces registrace uživatele informuje, co můžou očekávat a co správci IT na jejich zařízeních uvidí a neuvidí.
 
     Informace o dalších úlohách koncových uživatelů najdete v článcích:
-    - [Materiály o prostředí Microsoft Intune pro koncové uživatele](how-to-educate-your-end-users-about-microsoft-intune.md)
+    - [Materiály o prostředí Microsoft Intune pro koncové uživatele](/intune/end-user-educate)
     - [Pokyny pro koncové uživatele zařízení s iOSem a Mac OS](https://docs.microsoft.com/intune-user-help/using-your-ios-or-macOS-device-with-intune)
 
 Pokud společnost nebo organizace koupí uživatelům zařízení s iOS, může je také zaregistrovat pro správu jako [zařízení s iOSem patřící společnosti](enroll-corporate-owned-ios-devices-in-microsoft-intune.md).

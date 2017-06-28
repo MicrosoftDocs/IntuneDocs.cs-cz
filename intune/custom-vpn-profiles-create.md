@@ -1,12 +1,12 @@
 ---
 title: "Vytvoření vlastních profilů VPN s Microsoft Intune"
-titleSuffix: Intune Azure preview
+titleSuffix: Intune on Azure
 description: "Vlastní konfigurace slouží k vytvoření profilů VPN v Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/19/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,10 +16,10 @@ ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: b38cbfb323ad4165e6cfc3edbc3c156e4fc1d6a4
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 11da0d31a9a00364a6105006c3e75b6bb6f2cb77
 ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -40,7 +40,7 @@ Tento typ zásad může být užitečný v případě, že standardní zásady I
 ## <a name="to-create-a-custom-configuration-policy"></a>Vytvoření vlastní zásady konfigurace:
 
 1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Jiné** > **Intune**.
+2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 3. V okně **Intune** zvolte **Konfigurace zařízení**.
 4. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
 5. V okně profilů zvolte **Vytvořit profil**.

@@ -18,10 +18,10 @@ ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 748fce44b696675d4b7fe4b1d3048633fba1b490
+ms.sourcegitcommit: 5ed0e84c16ea540c08e97cb55ef8a09cbc7339f6
+ms.openlocfilehash: d57da14ad070275f7cdef639d971c176c1010634
 ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 05/25/2017
 
 
 ---
@@ -38,7 +38,7 @@ IT oddělení vaší společnosti uvidí informace související s vaší prac�
 Můžete ho získat jedním ze dvou způsobů:
 
 - Nainstalováním aplikace Portál společnosti do zařízení. Aplikaci Portál společnosti získáte zpravidla v obchodě s aplikacemi pro vaše zařízení, může vám ji ale také nainstalovat správce IT.
-- Přechodem na [web Portál společnosti](http://portal.manage.microsoft.com), který nastavil váš IT správce.
+- Přechodem na [web Portál společnosti](https://portal.manage.microsoft.com), který nastavil váš IT správce.
 
 ## <a name="whats-the-difference-between-the-app-and-the-website"></a>Jaký je rozdíl mezi aplikací a webem?
 Mezi aplikací Portál společnosti a webem Portál společnosti jsou drobné rozdíly, u obou ale můžete provádět většinu stejných úloh. Úlohy, které můžete provést:
@@ -100,5 +100,5 @@ Microsoft doporučuje, abyste se nejprve pokusili vyřešit problém sami. Nabí
 - [Řešení běžných problémů se zařízením s iOSem](troubleshoot-your-device-ios.md)
 - [Řešení běžných problémů se zařízením s Windows](troubleshoot-your-device-windows.md)
 
-Níže můžete zadat komentář, ve kterém požádáte o pomoc. Každá organizace má ovšem jiné požadavky, proto se může stát, že nebudeme moct na vaše otázky odpovědět. Obraťte se na svého správce IT, který vám může nejrychleji pomoct najít relevantní řešení. Příslušné kontaktní informace by měly být k dispozici na [webu Portálu společnosti](http://portal.manage.microsoft.com).
+Níže můžete zadat komentář, ve kterém požádáte o pomoc. Každá organizace má ovšem jiné požadavky, proto se může stát, že nebudeme moct na vaše otázky odpovědět. Obraťte se na svého správce IT, který vám může nejrychleji pomoct najít relevantní řešení. Příslušné kontaktní informace by měly být k dispozici na [webu Portálu společnosti](https://portal.manage.microsoft.com).
 

@@ -1,5 +1,5 @@
 ---
-title: "Nastavení správy pro zařízení s Windows v Microsoft Intune | Dokumentace Microsoftu"
+title: "Nastavení správy pro zařízení Windows v Microsoft Intune"
 description: "Povolte správu mobilních zařízení (MDM) pro zařízení s Windows pomocí služby Microsoft Intune."
 keywords: 
 author: NathBarn
@@ -14,10 +14,10 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: be2587f8ccb43632d861012416bbbca720698bb1
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: cf77cb313d5a36c5e7975e70d54bf044aa2d30c8
 ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -69,7 +69,7 @@ V [konzole pro správu Intune](https://manage.microsoft.com) zvolte **Správa** 
 Informujte uživatele, jak si mají svá zařízení s Windows zaregistrovat a co můžou očekávat od zařazení do systému správy.
 Postup registrace koncových uživatelů najdete v tématu [Registrace zařízení s Windows v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows). Uživatele můžete také nasměrovat na článek [Co správce IT uvidí při registraci zařízení v Intune](https://docs.microsoft.com/intune-user-help/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows).
 
-Další informace o úlohách pro koncové uživatele najdete v tématu [Materiály o prostředí Microsoft Intune pro koncové uživatele](/intune-classic/deploy-use/how-to-educate-your-end-users-about-microsoft-intune).
+Další informace o úlohách pro koncové uživatele najdete v tématu [Materiály o prostředí Microsoft Intune pro koncové uživatele](/intune/end-user-educate).
 
 ### <a name="see-also"></a>Související témata
 [Předpoklady registrace zařízení v Microsoft Intune](prerequisites-for-enrollment.md)
