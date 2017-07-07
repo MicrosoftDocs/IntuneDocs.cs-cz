@@ -1,12 +1,12 @@
 ---
 title: "Konfigurace nastavení sítě VPN v Intune"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Naučte se pomocí Intune nakonfigurovat připojení VPN pro zařízení, která spravujete."
+titleSuffix: Intune on Azure
+description: "Zjistěte, jak pomocí Intune nakonfigurovat připojení VPN pro zařízení, která spravujete."
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 05/04/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,15 @@ ms.assetid: 42f9b104-c1f6-4dfc-8aa4-1d33e1eaf61f
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 8a8742d0b579fec734dd8335e2a610d126db21fa
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: e6a59c1f5fcb94d427b6d12eef19d4d49ff930ce
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-configure-vpn-settings-in-microsoft-intune"></a>Konfigurace nastavení sítě VPN v Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Virtuální privátní sítě (VPN) umožňují uživatelům zabezpečený vzdálený přístup k firemní síti. Zařízení používají profil připojení VPN k navázání připojení se serverem VPN. Pomocí **profilů VPN** v Microsoft Intune můžete uživatelům a zařízením v organizaci přiřadit nastavení VPN, aby se mohli snadno a bezpečně připojit k síti.
 
@@ -36,12 +33,11 @@ Chcete třeba zřizovat všechna zařízení s iOSem s nastavením požadovaným
 
 Profily VPN můžete vytvářet pomocí následujících typů připojení:
 
-||||||||
+|Typ připojení|Android<br>Android for Work|iOS|macOS|Windows Phone 8.1|Windows 8.1|Windows 10|
 |-|-|-|-|-|-|-|
-|Typ připojení|Android|iOS|macOS|Windows Phone 8.1|Windows 8.1|Windows 10|
 |Pulse Secure|Ano|Ano|Ano|Ano|Ano|Ano|
 |Cisco (IPSec)|Ne|Ano|Ne|Ne|Ne|Ne|
-|Citrix|Ano|Ano|Ne|Ne|Ne|Ne|
+|Citrix|Ano (jen Android)|Ano|Ne|Ne|Ne|Ne|
 |F5 Edge Client|Ano|Ano|Ano|Ano|Ano|Ano|
 |Dell SonicWALL Mobile Connect|Ano|Ano|Ano|Ano|Ano|Ano|
 |Check Point Capsule VPN|Ano|Ano|Ano|Ano|Ano|Ano|
@@ -61,13 +57,14 @@ Postup vytváření vlastních profilů VPN pomocí nastavení URI najdete v té
 ## <a name="create-a-device-profile-containing-vpn-settings"></a>Vytvoření profilu zařízení obsahujícího nastavení VPN
 
 1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Jiné** > **Intune**.
+2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 3. V okně **Intune** zvolte **Konfigurace zařízení**.
 2. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
 3. V okně profilů zvolte **Vytvořit profil**.
 4. V okně **Vytvořit profil** zadejte **Název** a **Popis** profilu VPN.
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete použít nastavení VPN. V současné době můžete pro nastavení VPN na zařízení zvolit jednu z následujících platforem:
     - **Android**
+    - **Android for Work**
     - **iOS**
     - **macOS**
     - **Windows Phone 8.1**
@@ -75,7 +72,7 @@ Postup vytváření vlastních profilů VPN pomocí nastavení URI najdete v té
     - **Windows 10 a novější**
 6. V rozevíracím seznamu **Typ profilu** zvolte **VPN**.
 7. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Podrobnosti o nastaveních na jednotlivých platformách najdete v následujících tématech:
-    - [Nastavení Androidu](vpn-settings-android.md)
+    - [Nastavení Androidu a Androidu for Work](vpn-settings-android.md)
     - [Nastavení iOSu](vpn-settings-ios.md)
     - [Nastavení macOS](vpn-settings-macos.md)
     - [Nastavení Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
@@ -100,4 +97,3 @@ Další informace o vytváření a používání profilů certifikátů v Intune
 ### <a name="user-name-and-password"></a>Uživatelské jméno a heslo
 
 Uživatel se ověřuje na serveru sítě VPN zadáním uživatelského jména a hesla.
-

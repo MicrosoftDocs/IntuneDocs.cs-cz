@@ -1,12 +1,12 @@
 ---
 title: "Řešení potíží při registraci zařízení"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Přečtěte si, jak můžete řešit potíže s registrací zařízení."
+titleSuffix: Intune on Azure
+description: "Informace o tom, jak řešit potíže s registrací zařízení"
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,15 @@ ms.assetid: c324c74e-e225-40ad-88b7-72a6d9ea09b5
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 3084b7179a310a44c520dd42a8e194490dca90d8
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 9b7af9168164f1cccf3feae5bbdfd8014f8c7c1f
+ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/03/2017
 ---
-
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Řešení potíží s registrací do služby Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Toto téma obsahuje doporučení pro řešení potíží s registrací zařízení. Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získat podporu pro Microsoft Intune](https://docs.microsoft.com/intune-classic/troubleshoot/get-support), ve kterém najdete další způsoby, jak získat nápovědu.
 
@@ -102,8 +99,8 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 
 1.  Zkontrolujte, jestli je nastavená správná autorita pro správu mobilních zařízení (MDM) pro typ služby Intune, který používáte (tj. pro Intune, Office 365 nebo System Center Configuration Manager s Intune). Pokyny najdete v tématu [Nastavení autority pro správu mobilních zařízení](mdm-authority-set.md).
 
-    > [!NOTE]
-    > Jakmile jednou nastavíte autoritu MDM, můžete ji změnit jedině tak, že se obrátíte na podporu, jak je popsáno v tématu [Jak získat podporu pro Microsoft Intune](https://docs.microsoft.com/intune-classic/troubleshoot/get-support).
+    > [!NOTE]    
+    > V Configuration Manageru verze 1610 nebo novější a Microsoft Intune verze 1705 můžete autoritu pro správu mobilních zařízení změnit, aniž byste museli kontaktovat podporu Microsoftu a aniž byste museli zrušit registraci a provést novou registraci existujících spravovaných zařízení. Podrobnosti najdete v části [Co dělat, když zvolíte nesprávné nastavení autority pro správu mobilních zařízení (MDM)](/intune-classic/deploy-use/prerequisites-for-enrollment#what-to-do-if-you-choose-the-wrong-mdm-authority-setting).
 
 2.  Ověřte správnou synchronizaci přihlašovacích údajů uživatele se službou Azure Active Directory tím, že zkontrolujete, jestli hlavní název uživatele (UPN) odpovídá údajům služby Active Directory na portálu účtů.
     Pokud hlavní název uživatele neodpovídá údajům služby Active Directory:
@@ -222,16 +219,16 @@ K chybě certifikátu dochází proto, že zařízení s Androidem vyžadují, a
 
 Pokud chcete problém vyřešit, naimportujte certifikáty do osobních certifikátů počítačů na serveru nebo proxy serverech AD FS následujícím způsobem:
 
-1.    Na servery a proxy serverech AD FS spusťte konzolu Správa certifikátů pro místní počítač tak, že kliknete pravým tlačítkem na **Start**, vyberete **Spustit** a zadáte příkaz **certlm.msc**.
-2.    Rozbalte **Osobní** a vyberte **Certifikáty**.
-3.    Najděte certifikát pro vaši komunikaci služby AD FS (veřejně podepsaný certifikát) a poklikáním zobrazte jeho vlastnosti.
-4.    Vyberte kartu **Cesta k certifikátu**, kde uvidíte nadřazené certifikáty certifikátu.
-5.    U každého nadřazeného certifikátu vyberte **Zobrazit certifikát**.
-6.    Vyberte kartu **Podrobnosti** a vyberte **Kopírovat do souboru**.
-7.    Postupujte podle pokynů průvodce a vyexportujte nebo uložte veřejný klíč certifikátu do požadovaného umístění souborů.
-8.    Naimportujte nadřazené certifikáty, které jste ve 3. kroku vyexportovali, do složky Místní počítač\Osobní\Certifikáty, a to tak, že pravým tlačítkem kliknete na **Certifikáty**, vyberete **Všechny úkoly** > **Importovat** a pak podle výzev průvodce certifikáty naimportujete.
-9.    Restartujte servery AD FS.
-10.    Výše uvedené kroky zopakujte na všech serverech a proxy serverech AD FS.
+1.  Na servery a proxy serverech AD FS spusťte konzolu Správa certifikátů pro místní počítač tak, že kliknete pravým tlačítkem na **Start**, vyberete **Spustit** a zadáte příkaz **certlm.msc**.
+2.  Rozbalte **Osobní** a vyberte **Certifikáty**.
+3.  Najděte certifikát pro vaši komunikaci služby AD FS (veřejně podepsaný certifikát) a poklikáním zobrazte jeho vlastnosti.
+4.  Vyberte kartu **Cesta k certifikátu**, kde uvidíte nadřazené certifikáty certifikátu.
+5.  U každého nadřazeného certifikátu vyberte **Zobrazit certifikát**.
+6.  Vyberte kartu **Podrobnosti** a vyberte **Kopírovat do souboru**.
+7.  Postupujte podle pokynů průvodce a vyexportujte nebo uložte veřejný klíč certifikátu do požadovaného umístění souborů.
+8.  Naimportujte nadřazené certifikáty, které jste ve 3. kroku vyexportovali, do složky Místní počítač\Osobní\Certifikáty, a to tak, že pravým tlačítkem kliknete na **Certifikáty**, vyberete **Všechny úkoly** > **Importovat** a pak podle výzev průvodce certifikáty naimportujete.
+9.  Restartujte servery AD FS.
+10. Výše uvedené kroky zopakujte na všech serverech a proxy serverech AD FS.
 Teď už by měl uživatel být schopný se ze zařízení s Androidem k aplikaci Portál společnosti přihlásit.
 
 **Pokud chcete ověřit, jestli se certifikát správně nainstaloval**:
@@ -255,7 +252,7 @@ Pokud je certifikát serveru správně nainstalovaný, uvidíte ve výsledcích 
 
 **Řešení:** Podělte se s koncovými uživateli o následující řešení, která jim pomůžou znovu získat přístup k podnikovým prostředkům.
 
-Když uživatel spustí aplikaci Portál společnosti v iOSu, aplikace mu sdělí, jestli zařízení ztratilo kontakt s Intune. Pokud aplikace zjistí, že zařízení nemá kontakt, pokusí se automaticky synchronizovat s Intune a znovu se připojit. Uživateli se zobrazí vložené oznámení **Probíhá pokus o synchronizaci...** . 
+Když uživatel spustí aplikaci Portál společnosti v iOSu, aplikace mu sdělí, jestli zařízení ztratilo kontakt s Intune. Pokud aplikace zjistí, že zařízení nemá kontakt, pokusí se automaticky synchronizovat s Intune a znovu se připojit. Uživateli se zobrazí vložené oznámení **Probíhá pokus o synchronizaci...** .
 
   ![Oznámení Probíhá pokus o synchronizaci](./media/ios_cp_app_trying_to_sync_notification.png)
 
@@ -263,11 +260,11 @@ Pokud se synchronizace zdaří, zobrazí se v aplikaci Portál společnosti v iO
 
   ![Oznámení Úspěšná synchronizace](./media/ios_cp_app_sync_successful_notification.png)
 
-Pokud se synchronizace nezdaří, uživatelům se v aplikaci Portál společnosti v iOSu zobrazí vložené oznámení **Nelze synchronizovat**. 
+Pokud se synchronizace nezdaří, uživatelům se v aplikaci Portál společnosti v iOSu zobrazí vložené oznámení **Nelze synchronizovat**.
 
   ![Oznámení Nelze synchronizovat](./media/ios_cp_app_unable_to_sync_notification.png)
 
-Pokud chcete problém opravit, musíte vybrat tlačítko **Nastavit**, které se nachází vpravo od oznámení **Nelze synchronizovat**. Po výběru tlačítka Nastavit se zobrazí obrazovka pro nastavení firemního přístupu, kde můžete podle zobrazovaných pokynů zaregistrovat zařízení. 
+Pokud chcete problém opravit, musíte vybrat tlačítko **Nastavit**, které se nachází vpravo od oznámení **Nelze synchronizovat**. Po výběru tlačítka Nastavit se zobrazí obrazovka pro nastavení firemního přístupu, kde můžete podle zobrazovaných pokynů zaregistrovat zařízení.
 
   ![Obrazovka Nastavení firemního přístupu](./media/ios_cp_app_company_access_setup.png)
 
@@ -313,7 +310,7 @@ Po registraci se zařízení vrátí do stavu správné funkce a znovu získá p
 3. Restartujte službu SMS Executive nebo restartujte CM Server.
 
 4. Získejte nový certifikát APN a nahrajte ho. To uděláte tak, že pravým tlačítkem kliknete na předplatné služby Intune v levém podokně nástroje Configuration Manager. Vyberte **Vytvořit žádost o certifikát APNs** a postupujte podle pokynů.
-5. 
+5.
 ## <a name="issues-when-using-system-center-configuration-manager-with-intune"></a>Problémy při použití nástroje System Center Configuration Manager se službou Intune
 
 ### <a name="mobile-devices-disappear"></a>Mobilní zařízení zmizí
@@ -362,7 +359,7 @@ K této chybě může dojít v případě, že byl počítač zaregistrován ji�
 
     > [!IMPORTANT]
     > Tato část, metoda nebo úloha obsahují kroky, které vám pomohou s úpravou registru. Pokud ale budete měnit registr a uděláte tam něco špatně, můžete mít velké problémy s počítačem. Proto je důležité, abyste pečlivě postupovali podle těchto kroků. Než začnete registr měnit, pro jistotu si ho zazálohujte. Pak budete moct v případě problémů registr obnovit.
-    > Další informace o tom, jak zálohovat a obnovovat registr najdete v tématu [Postup zálohování a obnovení registru v systému Windows](https://support.microsoft.com/en-us/kb/322756).
+    > Další informace o tom, jak zálohovat a obnovovat registr najdete v tématu [Postup zálohování a obnovení registru v systému Windows](https://support.microsoft.com/kb/322756).
 
 ## <a name="general-enrollment-error-codes"></a>Obecné kódy chyb registrace
 
@@ -382,7 +379,7 @@ K této chybě může dojít v případě, že byl počítač zaregistrován ji�
 |0x80043008, 0x80CF3008|Nepodařilo se spustit službu Microsoft Online Management Updates.|Kontaktujte podporu podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](https://docs.microsoft.com/intune-classic/troubleshoot/get-support).|
 |0x80043009, 0x80CF3009|Klientský počítač je ve službě už zaregistrovaný.|Abyste mohli klientský počítač ve službě zaregistrovat znovu, musíte ho nejdřív vyřadit.|
 |0x8004300B, 0x80CF300B|Instalační balíček klientského softwaru nejde spustit, protože verze Windows, která běží na klientovi, není podporovaná.|Intune nepodporuje verzi Windows, která běží na klientském počítači.|
-|0xAB2|Instalační služba systému Windows nemohla získat přístup k modulu VBScript runtime pro vlastní akci.|Tato chyba je způsobená nějakou vlastní akcí založenou na dynamických knihovnách DLL (Dynamic-Link Library). Při odstraňování problémů s knihovnou DLL budete nejspíš muset použít nástroje popsané v [článku 198038 znalostní báze podpory Microsoftu: Užitečné nástroje při problémech s balíčky a nasazením](https://support.microsoft.com/en-us/kb/198038).|
+|0xAB2|Instalační služba systému Windows nemohla získat přístup k modulu VBScript runtime pro vlastní akci.|Tato chyba je způsobená nějakou vlastní akcí založenou na dynamických knihovnách DLL (Dynamic-Link Library). Při odstraňování problémů s knihovnou DLL budete nejspíš muset použít nástroje popsané v [článku 198038 znalostní báze podpory Microsoftu: Užitečné nástroje při problémech s balíčky a nasazením](https://support.microsoft.com/kb/198038).|
 |0x80cf0440|Připojení ke koncovému bodu služby bylo ukončeno.|Zkušební nebo placený účet je pozastaven. Vytvořte nový zkušební nebo placený účet a pak opakujte pokus o registraci.|
 
 
@@ -390,4 +387,3 @@ K této chybě může dojít v případě, že byl počítač zaregistrován ji�
 
 ### <a name="next-steps"></a>Další kroky
 Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](https://docs.microsoft.com/intune-classic/troubleshoot/get-support).
-

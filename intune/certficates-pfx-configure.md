@@ -1,12 +1,12 @@
 ---
 title: "Konfigurace a správa certifikátů PKCS pomocí Intune"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Zjistěte, jak pomocí Intune konfigurovat infrastrukturu a pak vytvořit a přiřadit certifikáty PKCS."
+titleSuffix: Intune on Azure
+description: "Zjistěte, jak pomocí Intune konfigurovat infrastrukturu a pak vytvořit a přiřadit certifikáty PKCS."
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 04/22/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,14 @@ ms.assetid: e189ebd1-6ca1-4365-9d5d-fab313b7e979
 ms.reviewer: vinaybha
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 16fa26ae8ed06c4959807b30e430fd69fc503936
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
-
+ms.openlocfilehash: 305a4d79aa81bd599369e72bc0cb307fdf452643
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="configure-and-manage-pkcs-certificates-with-intune"></a>Konfigurace a správa certifikátů PKCS pomocí Intune
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Toto téma popisuje, jak pomocí Intune konfigurovat infrastrukturu a pak vytvořit a přiřadit profily certifikátů PKCS.
 
@@ -118,7 +115,7 @@ Než budete moci konfigurovat profily certifikátů, je třeba provést následu
 ### <a name="to-enable-support-for-the-certificate-connector"></a>Povolení podpory pro Certificate Connector
 
 1.  Přihlaste se k portálu Azure Portal.
-2.  Zvolte **Další služby** > **Jiné** > **Intune**.
+2.  Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 3.  V okně **Intune** zvolte **Konfigurovat zařízení**.
 2.  V okně **Konfigurace zařízení** vyberte **Nastavení** > **Certifikační autorita**.
 2.  V části **Krok 1** zvolte **Povolit**.
@@ -190,12 +187,13 @@ Na portálu Azure Portal vyberte úlohu **Konfigurovat zařízení**.
         - **Běžný název**
         - **Běžný název včetně e-mailové adresy**
         - **Běžný název jako e-mail**
-    - **Alternativní název subjektu** – Určete způsob, jak má Intune automaticky vytvořit hodnoty pro alternativní název subjektu (SAN) v žádosti o certifikát. Pokud jste zvolili třeba uživatelský typ certifikátu, můžete do alternativního názvu subjektu zahrnout hlavní název uživatele (UPN). Pokud bude klientský certifikát sloužit k ověřování na server NPS (Network Policy Server), musíte alternativní název subjektu nastavit na UPN.
+    - **Alternativní název subjektu** – Určete způsob, jak má Intune automaticky vytvořit hodnoty pro alternativní název subjektu (SAN) v žádosti o certifikát. Pokud jste zvolili třeba uživatelský typ certifikátu, můžete do alternativního názvu subjektu zahrnout hlavní název uživatele (UPN). Pokud slouží klientský certifikát k ověřování na server NPS (Network Policy Server), nastavte pro alternativní název subjektu hodnotu UPN. 
+    Můžete také vybrat **Vlastní atribut Azure AD**. Když vyberete tuto možnost, zobrazí se další pole rozevíracího seznamu. V rozevíracím poli **Vlastní atribut Azure AD** je jedna možnost: **Oddělení**. Když vyberete tuto možnost a ve službě Azure AD není identifikované oddělení, certifikát se nevydá. Tento problém vyřešíte tak, že identifikujete oddělení a uložíte změny. Při další registraci zařízení je problém vyřešený a certifikát se vydá. Zápis použitý pro toto pole je ASN.1. 
     - **Rozšířené použití klíče** (Android) – Zvolte **Přidat** a přidejte hodnoty pro zamýšlený účel certifikátu. Ve většině případů certifikát vyžaduje **Ověření klienta** , aby se mohl uživatel nebo zařízení ověřit na serveru. Můžete ale přidat jakákoli další použití klíče podle potřeby. 
     - **Kořenový certifikát** (Android) – Zvolte profil certifikátu kořenové CA, který jste nakonfigurovali a přiřadili pro uživatele nebo zařízení. Tento certifikát certifikační autority musí být kořenovým certifikátem pro certifikační autoritu, která vydává certifikát konfigurovaný v tomto profilu. Je to profil důvěryhodného certifikátu, který jste dříve vytvořili.
 8. Až to budete mít, vraťte se do okna **Vytvořit profil** a klikněte na **Vytvořit**.
 
-Profil se vytvoří a zobrazí se v okně se seznamem profilů.
+Vytvoří se profil, který se zobrazí v okně se seznamem profilů.
 
 ## <a name="how-to-assign-the-certificate-profile"></a>Přiřazení profilu certifikátu
 
@@ -208,4 +206,3 @@ Před přiřazením profilů certifikátů ke skupinám vezměte v úvahu násle
 - I když se každý profil přiřazuje samostatně, je třeba přiřadit jak důvěryhodnou kořenovou certifikační autoritu, tak profil PKCS. Jinak zásady certifikátu PKCS nebudou fungovat.
 
 Informace o tom, jak přiřadit profily, najdete v tématu [Přiřazení profilů zařízení](device-profile-assign.md).
-

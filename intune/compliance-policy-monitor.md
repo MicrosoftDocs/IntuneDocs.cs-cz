@@ -1,7 +1,7 @@
 ---
 title: "Monitorování zásad dodržování předpisů zařízením v Intune"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Informace o tom, jak monitorovat zásady dodržování předpisů zařízením."
+titleSuffix: Intune on Azure
+description: "Zjistěte, jak monitorovat dodržování zásad v zařízeních."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,13 +15,11 @@ ms.assetid: 503d1dd2-a647-4aea-bf48-55319a3dd8a7
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 9c57a45ed93b12c3b9fd9635bfa1aec465f63bbc
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 6d0105e49bac2af0c241fe9203c411ef7f9e7d76
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorování zásad dodržování předpisů zařízením v Intune
 
@@ -123,8 +121,6 @@ Pokud kliknete na **tlačítko Filtr**, otevře se nabídka s těmito možnostmi
 
 Pokud kliknete na **tlačítko Aktualizovat**, nabídka by se měla zavřít a výsledky by se měly aktualizovat podle zvolených kritérií filtrování.
 
-![Tlačítko filtru Aktualizovat](./media/idc-5.png)
-
 ##### <a name="device-details"></a>Podrobnosti o zařízení
 
 Kliknutím na zařízení se otevře **okno zařízení** s vybraným zařízením. Nabízí další podrobnosti o nastavení zásad dodržování předpisů zařízením, které je na toto zařízení použité.
@@ -154,4 +150,3 @@ Tato sestava umožňuje zobrazit celkový počet zařízení v jednotlivých sta
 Když kliknete na dlaždici Nastavení dodržování předpisů a pak na některé z nastavení zásad dodržování předpisů zařízením, uvidíte **stav dodržování předpisů**, **e-mailový alias uživatele**, **model zařízení** a **umístění** pro každé zařízení, na které nastavení zásad dodržování předpisů zařízením cílí.
 
 ![Dlaždice Nastavení dodržování předpisů](./media/idc-11.png)
-

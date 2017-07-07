@@ -1,7 +1,7 @@
 ---
 title: "Nastavení Intune VPN pro zařízení s Windows 8.1"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Přečtěte si o nastavení Intune, pomocí kterých můžete nakonfigurovat připojení VPN na zařízeních s Windows 8.1."
+titleSuffix: Intune on Azure
+description: "Přečtěte si informace o nastaveních Intune, pomocí kterých můžete nakonfigurovat připojení VPN na zařízeních s Windows 8.1."
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
@@ -15,18 +15,15 @@ ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 71e842d24e435c25bf24e453b36449c68d281370
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: d851a8900ae1e164cb22f1878b352c3e90096f73
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="vpn-settings-for-windows-81-devices-in-microsoft-intune"></a>Nastavení sítě VPN pro zařízení s Windows 8.1 v Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 V závislosti na tom, jaká nastavení zvolíte, nebudou v níže uvedeném seznamu konfigurovatelné všechny hodnoty.
 
@@ -97,4 +94,3 @@ Další informace o tom, jak psát vlastní příkazy XML, najdete v dokumentaci
     - **Adresa** – zadejte adresu proxy serveru (jako IP adresu).
     - **Číslo portu** – zadejte číslo portu přidruženého k proxy serveru.
 - **Obejít proxy server pro místní adresy** – pokud VPN server vyžaduje pro připojení proxy server, vyberte tuto možnost, když nechcete používat proxy server pro místní adresy, které zadáte. Další informace najdete v dokumentaci k Windows Serveru.
-

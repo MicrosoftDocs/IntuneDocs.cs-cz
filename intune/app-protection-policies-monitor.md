@@ -1,7 +1,7 @@
 ---
 title: "Jak monitorovat zásady ochrany aplikací"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Můžete si zobrazit, kolik uživatelů má přiřazené zásady, a přechodem k podrobnostem zjistíte další informace."
+titleSuffix: Intune on Azure
+description: "Podívejte se, kolik uživatelů má přiřazené zásady. Přechodem k podrobnostem zjistíte další informace."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,19 +15,16 @@ ms.assetid: 9b0afb7d-cd4e-4fc6-83e2-3fc0da461d02
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 1e7294e5c7bb1136718ca6d651d9375a22796fa7
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: de40d149818b2655a8fc3b647a7e850973814165
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-monitor-app-protection-policies"></a>Jak monitorovat zásady ochrany aplikací
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-**Pokud nepoužíváte Intune Preview v Azure**, toto téma popisuje, [jak vytvořit zásady ochrany aplikací](https://docs.microsoft.com/intune-classic/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune) v konzole Intune Classic.
+Toto téma popisuje, [jak vytvořit zásady ochrany aplikací](https://docs.microsoft.com/intune-classic/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune) v klasické konzole Intune, **pokud nejste na portálu Azure Portal**.
 
 
 Můžete monitorovat stav dodržování zásad správy mobilních aplikací (MAM), které jste použili u uživatelů v okně ochrany aplikace Intune na portálu [Azure Portal](https://portal.azure.com). Budete moct vyhledat informace o uživatelích dotčených zásadami MAM, stavu dodržování zásad a všech problémech, se kterými se uživatelé mohou setkat.
@@ -43,7 +40,7 @@ Stav dodržování zásad můžete monitorovat na třech místech:
 ## <a name="summary-view"></a>Souhrnné zobrazení
 
 1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Jiné** > **Intune**.
+2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 3. V okně **Intune** zvolte **Mobilní aplikace**.
 4. V úloze **Mobilní aplikace** zvolte **Monitorovat** > **Stav uživatele ochrany aplikací**, abyste si zobrazili souhrnné zobrazení:
 
@@ -139,4 +136,3 @@ Pokud chcete vygenerovat sestavu ochrany aplikací, postupujte takto:
 
 * [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](app-protection-enabled-apps-android.md)
 * [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](app-protection-enabled-apps-ios.md)
-

@@ -1,7 +1,7 @@
 ---
 title: "Registrace zařízení s iOSem pomocí Apple Configuratoru a přímé registrace"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Přečtěte si, jak jde pomocí Apple Configuratoru registrovat zařízení s iOSem vlastněná společností s využitím přímé registrace."
+titleSuffix: Intune on Azure
+description: "Přečtěte si, jak jde pomocí Apple Configuratoru registrovat zařízení s iOSem vlastněná společností s využitím přímé registrace.\""
 keywords: 
 author: nathbarn
 ms.author: nathbarn
@@ -15,18 +15,15 @@ ms.assetid: e6c0a430-1851-4108-812a-87e0fc2623b5
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 5347e2023a9ce19f8e8ab960e2eebf8107530220
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: dd856cc3c9d11d1079c6092025200059f0ace437
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="enroll-ios-devices-with-apple-configurator-and-direct-enrollment"></a>Registrace zařízení s iOSem pomocí Apple Configuratoru a přímé registrace 
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Intune podporuje registraci zařízení s iOSem patřících společnosti pomocí [Apple Configuratoru](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) spuštěného na počítači Mac. Tento proces neprovede reset továrního nastavení zařízení a zaregistruje ho s předdefinovanými zásadami. Tento způsob registrace je určený pro zařízení **bez přidruženého uživatele** a vyžaduje, abyste zařízení s iOSem připojili přes USB k počítači Mac a nastavili firemní registraci.
 
@@ -42,7 +39,7 @@ Další metody registrace zařízení s iOSem jsou popsané v článku [Volba zp
 
 Před nastavením registrace zařízení s iOSem zajistěte splnění následujících požadavků:
 
-- [Konfigurace domén](https://docs.microsoft.com/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2)
+- [Konfigurace domén](custom-domain-name-configure.md)
 - [Nastavení autority MDM](mdm-authority-set.md)
 - [Vytvoření skupin](https://docs.microsoft.com/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-5)
 - [Konfigurace aplikace Portál společnosti](company-portal-app.md)
@@ -87,7 +84,7 @@ Profil registrace zařízení definuje nastavení, která se použijí pro skupi
 
 3. Nainstalujte profil na zařízení s iOSem podle následujících kroků. Je potřeba, aby už byl v zařízení dokončený Pomocník s nastavením a aby bylo připravené k použití. Pokud registrace zahrnuje nasazení aplikací, zařízení by mělo mít nastavené Apple ID, protože při nasazení aplikace bude potřeba přihlásit se do obchodu App Store pomocí Apple ID.
 
-   a. Odemkněte zařízení s iOS.
+   a. Odemkněte zařízení s iOSem.
 
    b. V dialogovém okně **Nainstalovat profil** pro **Profil správy** zvolte **Instalovat**.
 
@@ -102,4 +99,3 @@ Profil registrace zařízení definuje nastavení, která se použijí pro skupi
 4. Na zařízení s iOSem otevřete **Nastavení** a přejděte na **Obecné** > **Správa zařízení** > **Profil pro správu**. Potvrďte, že je zde instalace profilu uvedená, a zkontrolujte omezení zásad iOS a nainstalované aplikace. Zobrazení omezení vyplývajících ze zásad a aplikací na zařízení může trvat až 10 minut.
 
 5. Distribuujte zařízení. Zařízení s iOSem je teď zaregistrované v Intune a spravované.
-

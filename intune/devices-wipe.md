@@ -1,12 +1,12 @@
 ---
 title: "Úplné nebo selektivní vymazání zařízení pomocí Intune"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Přečtěte si, jak provést selektivní vymazání firemních dat v zařízení nebo úplné vymazání, které obnoví zařízení do továrního nastavení."
+titleSuffix: Intune on Azure
+description: "Přečtěte si, jak provést selektivní vymazání firemních dat v zařízení nebo úplné vymazání, které obnoví zařízení do továrního nastavení."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 03/13/2017
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,15 @@ ms.technology:
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: a8233ba1b5ea05a46f46219d98625e4d4bea6bb9
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 2063612ee11d2bc7915ebe4bb28c67854a2599c3
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="use-full-or-selective-wipe"></a>Použití úplného nebo selektivního vymazání
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Ze zařízení spravovaných pomocí Intune, která už nejsou potřeba, mají se začít používat pro jiné účely nebo se ztratila, můžete vymazat aplikace a data. K tomuto účelu Intune poskytuje možnosti selektivního a úplného vymazání. Uživatelé také mohou odeslat příkaz ke vzdálenému vymazání zařízení z aplikace Portál společnosti Intune nainstalované na soukromých zařízeních zaregistrovaných v Intune.
 
@@ -101,8 +98,8 @@ Pokud je zařízení zapnuté a připojené, trvá vymazání všech typů zař�
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty se zruší, ale neodeberou.|Certifikáty se odeberou a zruší.|
 |Agent pro správu|Zruší se oprávnění správce zařízení.|Zruší se oprávnění správce zařízení.|
-|E-mailu|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro Android.|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune, a odstraní se e-maily uložené v mezipaměti zařízení.|
-|Outlook|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro iOS.</br>Výjimka: Pokud je Exchange hostovaný na místním serveru, e-maily se neodeberou.|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro iOS.</br>Výjimka: Pokud je Exchange hostovaný na místním serveru, e-maily se neodeberou.|
+|E-mailu|Není k dispozici (zařízení s Androidem nepodporují e-mailové profily)|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune, a odstraní se e-maily uložené v mezipaměti zařízení.|
+|Outlook|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro Android.</br>Výjimka: Pokud je Exchange hostovaný na místním serveru, e-maily se neodeberou.|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro Android.</br>Výjimka: Pokud je Exchange hostovaný na místním serveru, e-maily se neodeberou.|
 |Zrušení služby Azure Active Directory (AAD)|Odebere se záznam AAD.|Odebere se záznam AAD.|
 |Kontakty | Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou.  Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. <br /> <br />V současné době se podporuje jen aplikace Outlook.|Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou.  Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. <br /> <br />V současné době se podporuje jen aplikace Outlook.
 
@@ -130,4 +127,3 @@ Při selektivním vymazání na zařízení Android for Work se odeberou všechn
 3.  V okně s názvem zařízení zvolte **Odebrat firemní data** a potom zvolte **Ano**, abyste vymazání potvrdili.
 
 Pokud je zařízení zapnuté a připojené, trvá vymazání všech typů zařízení méně než 15 minut.
-

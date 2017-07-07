@@ -1,7 +1,7 @@
 ---
 title: "Přidání obchodních aplikací pro Android do Intune"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Podívejte se, jak přidat do Intune obchodní aplikace pro Android."
+titleSuffix: Intune on Azure
+description: "Podívejte se, jak do Intune přidat obchodní aplikace pro Android."
 keywords: 
 author: robstackmsft
 ms.author: robstack
@@ -15,17 +15,15 @@ ms.assetid: 061d793c-c724-4cd9-9240-adb0cbda5661
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: b3725c73433a2b5628e6836114ac0023b3ef26a9
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: 52a762e0d8990ab96053f5d3a092b3731ee00ca0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-add-android-line-of-business-lob-apps-to-microsoft-intune"></a>Přidání obchodních aplikací pro Android do Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 
 ## <a name="step-1---specify-the-software-setup-file"></a>Krok 1 – určení instalačního souboru softwaru
@@ -68,4 +66,3 @@ ms.lasthandoff: 05/23/2017
 2. Zvolte **Přidat** a nahrajte aplikaci do Intune.
 
 Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřadit ke zvoleným skupinám. Nápovědu najdete v článku [Přiřazení aplikací do skupin](apps-deploy.md).
-

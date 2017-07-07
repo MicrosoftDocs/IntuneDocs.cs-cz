@@ -1,6 +1,6 @@
 ---
 title: "Monitorování dodržování předpisů podmíněného přístupu u místního Exchange a Exchange Online"
-titleSuffix: Intune Azure preview
+titleSuffix: Intune on Azure
 description: "Monitorování dodržování předpisů podmíněného přístupu u místního Exchange a Exchange Online prostřednictvím portálu Intune Azure Portal"
 keywords: 
 author: andredm7
@@ -14,16 +14,13 @@ ms.technology:
 ms.assetid: 5712682d-285b-43fd-9978-3dcfd95ec5f9
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: d170958bbdc00423081aa606c9c7f4e7a8ec4b06
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 2ec9bcc605486258203f49f9f7631bd2a04cdf22
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
-# <a name="monitor-conditional-access-compliance-for-on-premises-exchange-and-exchange-online-in-intune-azure-preview"></a>Monitorování dodržování předpisů podmíněného přístupu u místního Exchange a Exchange Online v Intune Azure Preview
+# <a name="monitor-conditional-access-compliance-for-on-premises-exchange-and-exchange-online-in-intune"></a>Monitorování dodržování předpisů podmíněného přístupu u místního Exchange a Exchange Online v Intune
 
 Počínaje verzí Intune 1704 můžou správci zobrazit sestavy s informacemi týkajícími se záznamů o zařízeních používajících protokol Exchange ActiveSync, která jsou synchronizovaná s Intune prostřednictvím místního konektoru Exchange Connector nebo konektoru Intune Service to Service Connector (konektoru Exchange Online). Sestavy dodržování předpisů místního přístupu poskytují přehled o zařízeních s různými stavy synchronizace:
 
@@ -70,4 +67,3 @@ V okně podrobností o zařízení můžete zobrazit další informace:
 -   **Konfigurace zařízení:** Tady se zobrazují všechny podrobnosti o konfiguraci zařízení.
 
 -   **Přístup k Exchangi:** Tady najdete další informace o stavu zařízení po použití zásad podmíněného přístupu.
-

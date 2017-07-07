@@ -1,12 +1,12 @@
 ---
 title: "Nastavení omezení pro zařízení s Androidem v Intune"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s Androidem."
+titleSuffix: Intune on Azure
+description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s Androidem."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/12/2017
+ms.date: 06/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,17 @@ ms.assetid: 6bdf714a-5d93-485c-8b52-513635c60cb6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 3627b28b60908c225ce1797968123ce854a70a8b
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 44d80e1c72b58eccd4e69b1d561c7d651f39b3c3
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení zařízení používajících Android a Samsung KNOX Standard v Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+Tato nastavení spolu se zásadami omezení pro zařízení s Androidem se používají ke konfiguraci zařízení v organizaci.
 
 ## <a name="general"></a>Obecné
 
@@ -39,11 +38,11 @@ ms.lasthandoff: 05/23/2017
 |**Odeslání diagnostických dat**|Zabrání uživateli v odesílání diagnostických dat ze zařízení.|Ne|Ano|
 |**Obnovení továrního nastavení**|Umožňuje uživateli obnovit v zařízení výrobní nastavení.|Ne|Ano|
 |**Zeměpisná poloha**|Povolí zařízení využívat informace o poloze (jenom Samsung KNOX Standard).|Ne|Ano|
-|**Vypnutí**|Povolí uživateli vypnout zařízení.<br>Pokud je toto nastavení zakázané, není nastavení **Počet neúspěšných přihlášení před vymazáním obsahu zařízení** pro zařízení Samsung KNOX Standard funkční.|Ne|Ano|
+|**Vypnutí**|Povolí uživateli vypnout zařízení.<br>Pokud je tato možnost zakázaná, nepůjde nastavit ani možnost **Počet neúspěšných přihlášení před vymazáním obsahu zařízení**.|Ne|Ano|
 |**Snímek obrazovky**|Umožňuje uživateli zachytit obsah obrazovky v podobě obrázku.|Ne|Ano|
 |**Hlasový asistent**|Povolí použití softwaru hlasového asistenta v zařízení.|Ne|Ano|
 |**YouTube**|Povoluje v zařízení použití aplikace YouTube.|Ne|Ano|
-|**Sdílená zařízení**|Nakonfigurujte spravované zařízení Samsung KNOX Standard jako sdílené. V tomto režimu se koncoví uživatelé můžou k zařízení přihlašovat a ze zařízení odhlašovat pomocí svých přihlašovacích údajů Azure AD. Zařízení je centrálně spravované bez ohledu na to, jestli se zrovna používá.<br>Když se koncoví uživatelé přihlásí, mají přístup k aplikacím a také se na ně aplikují všechny zásady. Po odhlášení uživatelů se všechna data aplikací vymažou.|Ne|Ano|
+|**Sdílená zařízení**|Nakonfigurujte spravované zařízení Samsung KNOX Standard jako sdílené. V tomto režimu se koncoví uživatelé můžou přihlásit k zařízení pomocí svých přihlašovacích údajů Azure AD a odhlásit se od něho. Zařízení zůstává spravované bez ohledu na to, jestli se používá.<br>Když se koncoví uživatelé přihlásí, mají přístup k aplikacím a také se na ně vztahují všechny zásady. Po odhlášení uživatelů se všechna data aplikací vymažou.|Ne|Ano|
 
 ## <a name="password"></a>Heslo
 
@@ -55,17 +54,17 @@ ms.lasthandoff: 05/23/2017
 |**Maximální počet minut nečinnosti, po které se zamkne obrazovka**|Určuje počet minut nečinnosti, než se zařízení automaticky zamkne.|Ano|Ano|
 |**Počet neúspěšných přihlášení před vymazáním obsahu zařízení**|Určuje počet povolených neúspěšných přihlášení, než bude zařízení vymazáno.|Ano|Ano|
 |**Konec platnosti hesla (dny)**|Určuje počet dní, než bude nutné změnit heslo zařízení.|Ano|Ano|
-|**Požadovaný typ hesla**|Určuje požadovanou úroveň složitosti hesla a to, jestli se můžou používat biometrická zařízení. Vybírejte z těchto možností:<br><br>    -     **Výchozí ze zařízení**<br>-     **Biometrika s nízkým zabezpečením**<br>    -     **Aspoň číselné**<br>    -     **Číselné komplexní** (opakující se nebo po sobě jdoucí čísla, jako jsou 1111 nebo 1234, nejsou povolena)<sup>1</sup><br>    -     **Aspoň abecední**<br>    -     **Aspoň alfanumerické**<br>    -     **Aspoň alfanumerické se symboly**|Ano|Ano|
+|**Vyžadovaný typ hesla**|Určuje požadovanou úroveň složitosti hesla a to, jestli se můžou používat biometrická zařízení. Vybírejte z těchto možností:<br><br>    -     **Výchozí ze zařízení**<br>-     **Biometrika s nízkým zabezpečením**<br>    -     **Aspoň číselné**<br>    -     **Číselné komplexní** (opakující se nebo po sobě jdoucí čísla, jako jsou 1111 nebo 1234, nejsou povolena)<sup>1</sup><br>    -     **Aspoň abecední**<br>    -     **Aspoň alfanumerické**<br>    -     **Aspoň alfanumerické se symboly**|Ano|Ano|
 |**Znemožnit opakované použití předchozích hesel**|Zakáže koncovému uživateli nastavit dříve používané heslo.|Ano|Ano|
 |**Odemknutí pomocí otisků prstů**|Povolí na zařízeních, která to podporují, odemknutí pomocí otisku prstu.|Ne|Ano|
-|**Smart Lock a jiní agenti pro určování důvěryhodnosti**|Umožňuje řídit funkci Smart Lock na kompatibilních zařízeních s Androidem (Samsung KNOX Standard 5.0 a novějším). Tato funkce telefonů, které se někdy říká agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo uzamčené obrazovky zařízení, pokud se zařízení nachází v důvěryhodném umístění (například pokud je připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC). Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.|Ano (5.0 nebo novější)|Ano|
+|**Smart Lock a jiní agenti pro určování důvěryhodnosti**|Umožňuje řídit funkci Smart Lock na kompatibilních zařízeních s Androidem (Samsung KNOX Standard 5.0 a novějším). Tato funkce telefonů, které se někdy říká agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo zamykací obrazovky zařízení, pokud se zařízení nachází v důvěryhodném umístění. Je možné ji například použít, když je zařízení připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC. Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.|Ano (5.0 nebo novější)|Ano|
 |**Šifrování**|Vyžaduje, aby soubory v zařízení byly šifrované.|Ano|Ano|
 
-<sup>1</sup>Před přiřazením tohoto nastavení k zařízení zkontrolujte, že je v cílových zařízeních aplikace Portál společnosti aktualizovaná na nejnovější verzi.
+<sup>1</sup> Před přiřazením tohoto nastavení k zařízením zkontrolujte, jestli je aplikace Portál společnosti v daných zařízeních aktualizovaná na nejnovější verzi.
 
 Pokud nakonfigurujete nastavení **Číselné komplexní** a potom ho přiřadíte k zařízení, které používá verzi Androidu starší než 5.0, bude platit následující chování.
 - Pokud aplikace Portál společnosti používá verzi starší než 1704, nepoužijí se u zařízení žádné zásady PIN kódu a na portálu Intune se zobrazí chyba.
-- Pokud byla aplikace Portál společnosti aktualizovaná na verzi 1704, použije se jenom jednoduchý PIN kód. Verze Androidu starší než 5.0 toto nastavení nepodporují. Na portálu Intune se nezobrazí žádná chyba.
+- Pokud aplikace Portál společnosti používá verzi 1704 nebo novější, je možné použít jenom jednoduchý PIN kód. Verze Androidu starší než 5.0 toto nastavení nepodporují. Na portálu Intune se nezobrazí žádná chyba.
 
 
 ## <a name="google-play-store"></a>Obchod Google Play
@@ -77,10 +76,10 @@ Pokud nakonfigurujete nastavení **Číselné komplexní** a potom ho přiřadí
 
 ## <a name="restricted-apps"></a>Omezené aplikace
 
-V seznamu omezených aplikací můžete nakonfigurovat jeden z následujících seznamů:
+V seznamu omezených aplikací můžete pro zařízení se systémy Android a Samsung KNOX Standard nakonfigurovat některý z následujících seznamů:
 
 **Zakázané aplikace** – Zobrazí seznam aplikací (nespravovaných pomocí Intune), které nemají uživatelé dovolené nainstalovat a spustit.
-**Schválené aplikace** – Zobrazí seznam aplikací, které mají uživatelé dovolené instalovat. Aby byla zachovaná kompatibilita, uživatelé nesmí instalovat aplikace, které nejsou v seznamu. Aplikace, které spravuje Intune, jsou povolené automaticky.
+**Schválené aplikace** – Zobrazí seznam aplikací, které mají uživatelé dovolené instalovat. Kvůli zachování kompatibility nesmí uživatelé instalovat jiné aplikace. Aplikace, které spravuje Intune, jsou povolené automaticky.
 Profily zařízení, které obsahují nastavení aplikací s omezeným přístupem, se musí přiřadit skupinám uživatelů.
 
 Pokud chcete seznam nakonfigurovat, klikněte na **Přidat**, zadejte libovolný název, volitelně vydavatele aplikace a nakonec adresu URL aplikace v App Storu.
@@ -91,13 +90,13 @@ Pokud chcete zadat adresu URL aplikace do seznamu kompatibilních a nekompatibil
 
 V [oddílu Aplikace na Google Play](https://play.google.com/store/apps) najděte aplikaci, kterou chcete použít.
 
-Otevřete instalační stránku aplikace a zkopírujte adresu URL do schránky. Tu teď můžete použít jako adresu URL v seznamu kompatibilních nebo nekompatibilních aplikací.
+Otevřete instalační stránku aplikace a zkopírujte adresu URL do schránky. Tuto adresu URL teď můžete použít v seznamu kompatibilních nebo nekompatibilních aplikací.
 
-Příklad: Na webu Google Play vyhledejte systém Microsoft Office Mobile. Použijete adresu URL **https://play.google.com/store/apps/details?id=com.microsoft.office.officehub**.
+Příklad: Na webu Google Play vyhledejte systém Microsoft Office Mobile. Použijte adresu URL: **https://play.google.com/store/apps/details?id=com.microsoft.office.officehub**.
 
 ### <a name="additional-options"></a>Další možnosti
 
-Můžete také kliknout na **Import** a naplnit seznam ze souboru csv ve formátu <*adresa url aplikace*>, <*název aplikace*>, <*vydavatel aplikace*> nebo kliknout na **Export** a vytvořit si soubor csv obsahující seznam aplikací s omezeným přístupem ve stejném formátu.        
+Můžete také kliknout na **Import** a získat seznam ze souboru csv. Použijte formát <*adresa url aplikace*>, <*název aplikace*>, <*vydavatel aplikace*> nebo klikněte na **Export** v souboru csv obsahujícím seznam omezených aplikací ve stejném formátu.      
 
 ## <a name="browser"></a>Prohlížeč
 |||||
@@ -127,7 +126,7 @@ Můžete také kliknout na **Import** a naplnit seznam ze souboru csv ve formát
 |**Hlasové vytáčení**|Povolí nebo zakáže použití funkce hlasového vytáčení v zařízení.|Ne|Ano|
 |**Hlasový roaming**|Povolí hlasový roaming, když je zařízení v mobilní síti.|Ne|Ano|
 |**Bluetooth**|Povolí používání připojení Bluetooth na zařízení.|Ne|Ano|
-|**NFC**|Umožňuje operace, které používají bezkontaktní komunikaci, pokud je zařízení podporuje.|Ne|Ano|
+|**NFC**|Umožní operace, které na podporovaných zařízeních používají bezkontaktní komunikaci.|Ne|Ano|
 |**Wi-Fi**|Povolí použití možností Wi-Fi zařízení.|Ne|Ano|
 |**Wi-Fi tethering**|Povolí použití sdíleného internetového připojení přes Wi-Fi na zařízení.|Ne|Ano|
 
@@ -135,7 +134,6 @@ Můžete také kliknout na **Import** a naplnit seznam ze souboru csv ve formát
 |||||
 |-|-|-|-|
 |Název nastavení|Podrobnosti|Android 4.0+|Samsung KNOX Standard|
-|**Vyberte spravovanou aplikaci**|Vyhledejte a vyberte spravovanou aplikaci, která se může spustit, když je zařízení v celoobrazovkovém režimu (v současné době se nepodporují aplikace v podobě odkazu na obchod). Žádné jiné aplikace nebudou mít dovoleno se na zařízení spouštět.|Ne|Ano|
+|**Vyberte spravovanou aplikaci**|Pokud chcete přidat jednu nebo více aplikací, které se budou moct spustit, když je zařízení v beznabídkovém režimu, zvolte jednu z následujících možností. Žádné jiné aplikace se na zařízení nebudou moct spustit.<br><br>- **Přidat aplikace pomocí názvu balíčku**<br>- **Přidat aplikace pomocí adresy URL**<br>- **Přidat spravované aplikace**|Ne|Ano|
 |**Tlačítko pro režim spánku obrazovky**|Povolí nebo zakáže na zařízení tlačítko probuzení z režimu spánku obrazovky.|Ne|Ano|
 |**Tlačítka pro hlasitost**|Povolí nebo zakáže použití tlačítek hlasitosti na zařízení.|Ne|Ano|
-

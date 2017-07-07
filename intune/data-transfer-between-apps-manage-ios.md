@@ -1,12 +1,12 @@
 ---
-title: "Správa přenosu dat mezi aplikacemi pro iOS | Intune Azure Preview"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Toto téma vám pomůže pochopit, jak můžete použít funkci systému iOS Otevřít v a zásady správy mobilních aplikací ke správě přenosů dat mezi aplikacemi."
+title: "Správa přenosu dat mezi aplikacemi pro iOS"
+titleSuffix: Intune on Azure
+description: "Toto téma vám vysvětlí, jak můžete použít funkci systému iOS Open-in a zásady správy mobilních aplikací ke správě přenosů dat mezi aplikacemi."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,12 @@ ms.assetid: d10b2d64-8c72-4e9b-bd06-ab9d9486ba5e
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 44747236ba1bda84ccb01f613e1702c536720a2c
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: e3c588d2237f48501d78af364760acf1ef290639
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-manage-data-transfer-between-ios-apps"></a>Správa přenosu dat mezi aplikacemi pro iOS
 ## <a name="manage-ios-apps"></a>Správa aplikací pro iOS
 V rámci ochrany vašich firemních dat je potřeba zajistit, aby přenosy souborů mohly probíhat jenom v aplikacích, které spravujete.  Aplikace pro iOS můžete spravovat těmito způsoby:
@@ -36,7 +33,7 @@ Funkce **Správa pro Open In** pro zařízení s iOSem může omezit přenosy so
 ##  <a name="using-app-protection-with-ios-apps"></a>Používání ochrany aplikací u aplikací pro iOS
 Zásady ochrany aplikací se dají používat společně s funkcí **Správa Open In** k ochraně firemních dat těmito způsoby:
 
--   **Zařízení patřící zaměstnancům, která nejsou spravovaná řešením MDM:** Zásady ochrany aplikací můžete nastavit na **Povolit aplikaci přenos dat jenom do spravovaných aplikací**. Koncový uživatel nebude moci otevřít chráněný soubor v aplikaci, která není spravována zásadami.
+-   **Zařízení patřící zaměstnancům, která nejsou spravovaná řešením MDM:** Zásady ochrany aplikací můžete nastavit na **Povolit aplikaci přenos dat jenom do aplikací spravovaných zásadami**. Chování Open in v aplikaci spravované zásadami nabídne jako možnost pro sdílení jenom další aplikace spravované zásadami. Pokud se uživatel pokusí odeslat soubor chráněný zásadami jako přílohu z OneDrivu v nativním e-mailu, bude tento soubor nečitelný.
 
 -   **Zařízení spravovaná v Intune:** Pro zařízení zaregistrovaná v Intune jsou přenosy dat mezi aplikacemi se zásadami ochrany aplikací a ostatními spravovanými aplikacemi pro iOS nasazenými prostřednictvím Intune automaticky povolené. Pokud chcete povolit přenos mezi aplikacemi se zásadami ochrany aplikací, povolte nastavení **Povolit aplikaci přenos dat jenom do spravovaných aplikací**. Pomocí funkce **Správa Open In** můžete ovládat přenosy dat mezi aplikacemi nasazenými prostřednictvím Intune.   
 
@@ -108,4 +105,3 @@ Nejdřív pro aplikaci pro iOS [vytvořte a přiřaďte zásady ochrany aplikac�
 
 ### <a name="see-also"></a>Viz taky
 [Co jsou zásady ochrany aplikací Intune](app-protection-policy.md)
-

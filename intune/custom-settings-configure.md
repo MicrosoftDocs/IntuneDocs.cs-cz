@@ -1,12 +1,12 @@
 ---
 title: "Konfigurace vlastního nastavení pro zařízení v Intune"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Naučte se pomocí Intune nakonfigurovat vlastní nastavení pro zařízení, která spravujete."
+titleSuffix: Intune on Azure
+description: "Naučte se pomocí Intune nakonfigurovat vlastní nastavení pro zařízení, která spravujete."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/12/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,15 @@ ms.assetid: 42f9b104-c1f6-4dfc-8aa4-1d33e1eaf61f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 40a37a02ac49a74e3f715b0e2191868ecf2e264b
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 769c566c7ebb91743fc0f18ebf8f3e76377ca847
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-configure-custom-device-settings-in-microsoft-intune"></a>Konfigurace vlastního nastavení v Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="when-to-use-custom-settings"></a>Kdy použít vlastní nastavení
 
@@ -38,7 +35,7 @@ Informace v tomto tématu vás seznámí se základy konfigurace profilů s vlas
 ## <a name="create-a-device-profile-containing-custom-settings"></a>Vytvoření profilu zařízení obsahujícího vlastní nastavení
 
 1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Jiné** > **Intune**.
+2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 3. V okně **Intune** zvolte **Konfigurace zařízení**.
 2. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
 3. V okně profilů zvolte **Vytvořit profil**.
@@ -53,7 +50,7 @@ Informace v tomto tématu vás seznámí se základy konfigurace profilů s vlas
 7. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Podrobnosti o nastaveních na jednotlivých platformách najdete v následujících tématech:
     - [Nastavení Androidu](custom-settings-android.md)
     - [Nastavení iOSu](custom-settings-ios.md)
-    - [Nastavení macOS](custom settings-macos.md)
+    - [Nastavení macOS](custom-settings-macos.md)
     - [Nastavení Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
     - [Nastavení Windows 10](custom-settings-windows-10.md)
     - [Nastavení Androidu for Work](custom-settings-android-for-work.md)
@@ -61,4 +58,3 @@ Informace v tomto tématu vás seznámí se základy konfigurace profilů s vlas
 
 Profil se vytvoří a zobrazí se v okně se seznamem profilů.
 Pokud chcete pokračovat a přiřadit tento profil ke skupinám, podívejte se na téma [Jak přiřadit profily zařízení](device-profile-assign.md).
-

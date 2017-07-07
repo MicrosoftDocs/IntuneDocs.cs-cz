@@ -1,7 +1,7 @@
 ---
 title: "Co jsou zásady ochrany aplikací"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: V tomto tématu se seznámíte s ochranou firemních dat pomocí zásad ochrany aplikací Microsoft Intune."
+titleSuffix: Intune on Azure
+description: "V tomto tématu se seznámíte s ochranou firemních dat pomocí zásad ochrany aplikací Microsoft Intune."
 keywords: 
 author: NathBarn
 ms.author: nathbarn
@@ -15,19 +15,16 @@ ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 01f77e3511785d2c8da2edcd92df809b3b7e73e7
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 13b3199108c34a61d117e4d89d118bdd05d7d20f
+ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/03/2017
 ---
-
 # <a name="what-are-app-protection-policies"></a>Co jsou zásady ochrany aplikací?
 
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Zásady ochrany aplikací Microsoft Intune pomáhají chránit firemní data a bránit únikům informací.
 
@@ -68,7 +65,7 @@ Použití správy mobilních zařízení se zásadami ochrany aplikací přiná�
 
 -   Android 4 nebo novější
 
-V současné době není dostupná podpora zařízení s Windows. Pokud zařízení s Windows 10 zaregistrujete do Intune, můžete použít sadu Windows Information Protection, která nabízí podobné funkce. Podrobnosti najdete v tématu věnovanému [ochraně podnikových dat pomocí sady Windows Information Protection](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
+V současné době není dostupná podpora zařízení s Windows. Pokud zařízení s Windows 10 zaregistrujete do Intune, můžete použít sadu Windows Information Protection, která nabízí podobné funkce. Podrobnosti najdete v tématu věnovanému [ochraně podnikových dat pomocí sady Windows Information Protection](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
 ##  <a name="how-app-protection-policies-protect-app-data"></a>Jak zásady ochrany aplikací chrání data aplikací
 
 ####  <a name="apps-without-app-protection-policies"></a>Aplikace bez zásad ochrany aplikací
@@ -138,4 +135,3 @@ Pokud třeba uživatel spustí aplikaci OneDrive pomocí svého pracovního úč
 ##  <a name="next-steps"></a>Další kroky
 
 [Jak vytvořit a nasadit zásady ochrany aplikací pomocí Microsoft Intune](app-protection-policies.md)
-

@@ -1,7 +1,7 @@
 ---
 title: "Nastavení služby TEM (Telecom Expense Management)"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Nakonfigurujte službu TEM Saaswedo pro integraci s Intune."
+titleSuffix: Intune on Azure
+description: "Nakonfigurujte službu správy telekomunikačních výdajů TEM společnosti Saaswedo, aby byla integrována do Intune."
 keywords: Saaswedo
 author: nathbarn
 ms.author: nathbarn
@@ -15,16 +15,14 @@ ms.assetid: b7bf5802-4b65-4aeb-ac99-8e639dd89c2a
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 41ac9ad43b6ddaa2b78d588cb01b467d37f2178a
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: fe3735afccb30da9ea863943808e7cfad667899f
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
-# <a name="set-up-a-telecom-expense-management-service-in-intune-azure-preview"></a>Nastavení služby TEM (Telecom Expense Management) v Intune Azure Preview
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+# <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Nastavení služby TEM (Telecom Expense Management) v Intune
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Intune umožňuje spravovat výdaje za telekomunikační služby vzniklé v závislosti na používání dat na mobilních zařízeních vlastněných firmou. Pokud chcete aktivovat tuto funkci, obsahuje Intune integrované řešení pro správu výdajů na telekomunikaci Datalert od externího vývojáře softwaru Saaswedo. Datalert je software pro správu výdajů na telekomunikaci v reálném čase, který umožňuje spravovat využití telekomunikačních dat a předejít tak finančně nákladnému a neočekávanému nadlimitnímu využití dat a roamingu u zařízení spravovaných pomocí Intune.
 
@@ -43,7 +41,7 @@ Než budete moct začít používat službu Datalert s Intune, musíte nakonfigu
 
 ## <a name="prerequisites"></a>Požadavky
 
-- Předplatné Microsoft Intune a přístup k portálu Azure Portal, který je aktuálně ve veřejné verzi preview.
+- Předplatné Microsoft Intune a přístup na Azure Portal
 - Předplatné služby TEM (Telecom Expense Management) Datalert
 
 ## <a name="list-of-telecom-expense-management-providers"></a>Seznam poskytovatelů služby TEM (Telecom Expense Management)
@@ -108,9 +106,9 @@ Tyto kategorie se budou zobrazovat uživatelům při registraci. Podle toho, kte
 
 Podle následujících pokynů vytvořte v Intune aplikaci Datalert pro jednotlivé platformy. Jako příklad v tomto postupu použijeme iOS.
 
-1. V okně **Intune** na portálu Azure Portal zvolte **Spravovat aplikace**.
+1. V okně **Intune** na portálu Azure Portal zvolte **Mobilní aplikace**.
 
-2. V okně **Spravovat aplikace** zvolte **Spravovat** > **aplikace**.
+2. V okně **Mobilní aplikace** zvolte **Spravovat** > **Aplikace**.
 
 3. Vyberte **Přidat**, abyste mohli přidat aplikaci.
 
@@ -151,8 +149,8 @@ Služba Datalert je nyní aktivní. Spustí monitorování využití dat a zaká
 
 ## <a name="client-enrollment-experience"></a>Možnosti registrace klienta
 Při registraci klienta se zobrazí tyto možnosti:
--    [Registrace zařízení s iOSem ve službě TEM (Telecom Expense Management)](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-ios)
--    [Registrace zařízení s Androidem ve službě TEM (Telecom Expense Management)](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-android)
+-   [Registrace zařízení s iOSem ve službě TEM (Telecom Expense Management)](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-ios)
+-   [Registrace zařízení s Androidem ve službě TEM (Telecom Expense Management)](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-android)
 
 ## <a name="turning-off-the-datalert-service"></a>Vypnutí služby Datalert
 
@@ -173,4 +171,3 @@ Zakázání služby Datalert na portálu Azure Portal bude mít za následek tot
 Vytváření seznam využití dat je momentálně dostupné jenom v konzole pro správu služby Datalert od Saaswedo.
 
 Pokyny k instalaci aplikace Datalert pro koncové uživatele přidáme zanedlouho.
-

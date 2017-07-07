@@ -11,21 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 523caa6b-d792-4bb6-bddb-24b2479932d8
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ed0e84c16ea540c08e97cb55ef8a09cbc7339f6
 ms.openlocfilehash: d57da14ad070275f7cdef639d971c176c1010634
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/25/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="use-managed-devices-to-get-work-done"></a>Práce pomocí spravovaných zařízení
 Microsoft Intune je software, který organizacím umožňuje spravovat zařízení (jako jsou smartphony, tablety nebo počítače), aplikace a další firemní prostředky (například e-mail). To zaměstnancům zajistí přístup k pracovním informacím prakticky odkudkoli z jakéhokoli zařízení a současně uchová firemní data v bezpečí.
 
@@ -101,4 +97,3 @@ Microsoft doporučuje, abyste se nejprve pokusili vyřešit problém sami. Nabí
 - [Řešení běžných problémů se zařízením s Windows](troubleshoot-your-device-windows.md)
 
 Níže můžete zadat komentář, ve kterém požádáte o pomoc. Každá organizace má ovšem jiné požadavky, proto se může stát, že nebudeme moct na vaše otázky odpovědět. Obraťte se na svého správce IT, který vám může nejrychleji pomoct najít relevantní řešení. Příslušné kontaktní informace by měly být k dispozici na [webu Portálu společnosti](https://portal.manage.microsoft.com).
-

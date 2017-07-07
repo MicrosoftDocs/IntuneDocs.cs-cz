@@ -11,20 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: df973b18-9166-417d-8aa3-49edd2bda256
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 63595e9905a220c326c315f5932379a9b743d3de
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="your-android-device-is-missing-a-certificate-that-usually-comes-installed-on-your-phone"></a>Ve vašem zařízení s Androidem chybí certifikát, který je v telefonu obvykle nainstalovaný
 
 Pokud zařízení není zaregistrované v Intune a chybí mu certifikát, který je v telefonu obvykle nainstalovaný, nebudete se k aplikaci Portál společnosti moct přihlásit. Při pokusu o přihlášení se zobrazí tato zpráva:
@@ -51,4 +48,3 @@ Tento problém můžete opravit, když si požadovaný certifikát stáhnete ze 
 > Pokud instalace tohoto certifikátu problém nevyřeší a zobrazí se vám jiná zpráva o chybějícím certifikátu, bude nutné provést další kroky k [instalaci chybějícího certifikátu](your-device-is-missing-an-IT-required-certificate-android.md).
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-
