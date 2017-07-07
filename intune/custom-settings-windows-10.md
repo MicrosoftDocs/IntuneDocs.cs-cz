@@ -1,7 +1,7 @@
 ---
 title: "Vlastní nastavení pro zařízení s Windows 10 v Intune"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Podívejte se na nastavení, která je možné použít ve vlastním profilu Windows 10."
+titleSuffix: Intune on Azure
+description: "Podívejte se na nastavení, která je možné použít ve vlastním profilu Windows 10."
 keywords: 
 author: robstackmsft
 ms.author: robstack
@@ -15,18 +15,15 @@ ms.assetid: 7bcea136-7260-4042-b21b-c7dab86b380d
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 52ad4f141c3b2b73a400c69fb9d9beb174bbac64
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: bda9e939e2d4aba4c4d005ea55ba65bec9c6e217
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="custom-device-settings-for-windows-10-devices-in-microsoft-intune"></a>Vlastní nastavení zařízení s Windows 10 v Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
  **Vlastní** profil Microsoft Intune pro Windows 10 a Windows 10 Mobile použijte, pokud chcete nasadit nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier), s jehož pomocí se dají ovládat funkce na zařízeních. Ve Windows 10 je přístupná řada nastavení CSP, například [poskytovatel konfiguračních služeb pro zásady (CSP pro zásady)](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
 Pokud hledáte konkrétní nastavení, mějte na paměti, že [profil omezení zařízení s Windows 10](device-restrictions-windows-10.md) obsahuje řadu nastavení, která jsou integrovaná do služby Intune a nevyžadují, abyste zadali vlastní hodnoty.
@@ -62,6 +59,5 @@ Na snímku obrazovky níže je nastavení **Connectivity/AllowVPNOverCellular** 
 Ne všechna nastavení jsou kompatibilní se všemi verzemi Windows 10. V tabulce v tématu Windows zjistíte, které verze se pro jednotlivé CSP podporují.
 
 Intune navíc nepodporuje všechna nastavení uvedená v tomto tématu. Pokud chcete zjistit, jestli Intune podporuje vámi požadované nastavení, otevřete si téma pro dané nastavení. Jednotlivé stránky nastavení zobrazují podporované operace. Aby dané nastavení fungovalo s Intune, musí podporovat operace **Přidat** nebo **Nahradit**.
-
 
 

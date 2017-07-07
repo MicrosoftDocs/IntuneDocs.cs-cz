@@ -1,7 +1,7 @@
 ---
 title: "Vlastní nastavení pro zařízení s Androidem v Intune"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Podívejte se na nastavení, která je možné použít ve vlastním profilu Android."
+titleSuffix: Intune on Azure
+description: "Zjistěte, jaká nastavení je možné použít ve vlastním profilu Androidu."
 keywords: 
 author: robstackmsft
 ms.author: robstack
@@ -15,18 +15,15 @@ ms.assetid: 494b3892-916e-4b40-9b67-61adec889bdf
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: ff3d3b1596f58213bed2509b1bfd5ae81c63f440
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 014e59c017eac0d54a632e545692e1a1a8053164
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="custom-settings-for-android-devices-in-microsoft-intune"></a>Vlastní nastavení pro zařízení s Androidem v Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Pomocí **vlastního** profilu Android v Microsoft Intune přiřaďte nastavení OMA-URI, která se dají používat k ovládání funkcí na zařízeních s Androidem. Jsou to standardní nastavení, která k ovládání funkcí zařízení používá spousta výrobců mobilních zařízení.
 
@@ -43,4 +40,3 @@ Tato vlastnost umožňuje přiřadit nastavení Androidu, která nejdou konfigur
     - **OMA-URI** – zadejte OMA-URI, u kterého chcete zadat nastavení.
     - **Hodnota** – zadejte hodnotu, kterou chcete přidružit k uvedenému OMA-URI.
 4. Po dokončení klikněte na **OK**. Další nastavení můžete přidávat podle potřeby.
-

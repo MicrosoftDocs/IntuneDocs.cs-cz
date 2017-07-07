@@ -1,12 +1,12 @@
 ---
 title: "Nastavení autority pro správu mobilních zařízení"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Postup nastavení autority pro správu mobilních zařízení v Intune "
+titleSuffix: Intune on Azure
+description: "Přečtěte si, jak v Intune nastavit autoritu pro správu mobilních zařízení. \""
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 04/20/2016
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,15 @@ ms.assetid: 8deff871-5dff-4767-9484-647428998d82
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: c36ddef7e53d6f4f15c82c97dc6d18863e6859f1
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: 449c45e0edcc0d0a33352ba154ad68fa6c4725c0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="set-the-mobile-device-management-authority"></a>Nastavení autority pro správu mobilních zařízení
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Nastavení autority pro správu mobilních zařízení (MDM) určuje způsob správy zařízení. Jako správce IT musíte nastavit autoritu MDM, aby uživatelé mohli registrovat zařízení pro správu.
 
@@ -37,8 +35,8 @@ Možné konfigurace:
 
 - **Správa mobilních zařízení pro Office 365** – jedná se o integraci Office 365 s cloudovým řešením Intune. Intune můžete konfigurovat z Centra pro správu Office 365. Zahrnuje dílčí sadu možností, které jsou dostupné s Intune Standalone. Nastavte autoritu MDM v Centru pro správu Office 365.
 
->[!IMPORTANT]
->Po nastavení autority pro správu mobilních zařízení budete muset kontaktovat [Podporu Microsoftu](https://docs.microsoft.com/intune-classic/troubleshoot/get-support), aby provedli změnu, takže vybírejte pečlivě.
+>[!IMPORTANT]    
+V Configuration Manageru verze 1610 a vyšší a v Microsoft Intune verze 1705 můžete změnit autoritu pro správu mobilních zařízení bez kontaktování podpory Microsoftu a bez rušení registrace a následné nové registrace stávajících spravovaných zařízení. Podrobnosti najdete v článku [Co dělat, když zvolíte nesprávné nastavení autority pro správu mobilních zařízení (MDM)](/intune-classic/deploy-use/prerequisites-for-enrollment#what-to-do-if-you-choose-the-wrong-mdm-authority-setting).
 
 ## <a name="set-mdm-authority-to-intune"></a>Nastavení autority MDM na Intune
 
@@ -48,3 +46,6 @@ Možné konfigurace:
 
 3. V okně **Začátek správy zařízení** zvolte **Nastavit autoritu MDM na Intune**. Zobrazí se zpráva, že jste úspěšně nastavili autoritu MDM na Intune.
 
+## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Vyčištění mobilních zařízení po vypršení platnosti certifikátu MDM
+
+Certifikát MDM se obnovuje automaticky, když mobilní zařízení komunikují se službou Intune. Když se mobilní zařízení vymažou nebo se jim po určitou dobu nedaří komunikovat se službou Intune, certifikát MDM se neobnoví. Zařízení se z portálu Azure Portal odebere po uplynutí 180 dnů od vypršení platnosti certifikátu MDM.

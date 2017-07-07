@@ -1,7 +1,7 @@
 ---
 title: "Monitorování dodržování zásad v zařízeních"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Informace o tom, jak monitorovat dodržování předpisů zařízeními"
+titleSuffix: Intune on Azure
+description: "Informace o tom, jak monitorovat dodržování zásad v zařízeních"
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,20 +15,18 @@ ms.assetid: 0790934b-48b9-435b-a8aa-e83ed5b73191
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: e073ca318d7db23239fc68b79718198dbee54b6e
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 8f18bfa7fb045dbad4ab785c2c8e1bc13fc439db
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-# <a name="how-to-monitor-device-compliance-in-intune-azure-preview"></a>Informace o tom, jak monitorovat dodržování předpisů zařízeními v Intune Azure Preview
+# <a name="how-to-monitor-device-compliance-in-intune"></a>Monitorování dodržování zásad v zařízeních v Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 V okně **Přehled** si můžete zobrazit souhrn stavu vašich **profilů dodržování předpisů**.
-Klikáním v grafech si můžete interaktivně zobrazit podrobnosti. Pokud máte nakonfigurovaných několik profilů dodržování předpisů, můžete si navíc zobrazit stav jednotlivých zásad. Stačí přejít na okno zásad a v části **Spravovat** zvolit **Sestavy**.  Podrobnosti sestav, které jsou k dispozici ve verzi Preview, jsou uvedeny níže.
+Klikáním v grafech si můžete interaktivně zobrazit podrobnosti. Pokud máte nakonfigurovaných několik profilů dodržování předpisů, můžete si navíc zobrazit stav jednotlivých zásad. Stačí přejít na okno zásad a v části **Spravovat** zvolit **Sestavy**.  Podrobnosti sestav, které jsou k dispozici, jsou uvedené níže.
 
 ##  <a name="device-compliance"></a>Dodržování předpisů zařízení
 
@@ -48,4 +46,3 @@ Sestava dodržování nastavení poskytuje podrobnosti pro jednotlivá nastaven�
 - Platforma, na kterou se nastavení vztahuje
 
 V každém nastavení si můžete zobrazit více informací o profilech, pro které jsou tato nastavení povolená, a hodnotu daného nastavení.
-

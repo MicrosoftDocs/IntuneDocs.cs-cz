@@ -1,7 +1,7 @@
 ---
 title: "Vytváření zásad dodržování předpisů pro Windows"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Přečtěte si, jak vytvořit zásady dodržování předpisů pro zařízení s Windows."
+titleSuffix: Intune on Azure
+description: "Naučte se vytvářet zásady dodržování předpisů pro zařízení s Windows."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,18 +15,16 @@ ms.assetid: 13fc7783-d4de-47d0-b1b8-4c8710a9e6ab
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 4de81c3dc6f1499c2364d8bf9c3b49b219248684
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 91f0a71ed7b924746425822ce10190a8ec7a7a40
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-# <a name="how-to-create-a-device-compliance-policy-for-windows-devices-in-intune-azure-preview"></a>Vytvoření zásad dodržování předpisů pro zařízení s Windows v Intune Azure Preview
+# <a name="how-to-create-a-device-compliance-policy-for-windows-devices-in-intune"></a>Vytvoření zásad dodržování předpisů pro zařízení s Windows v Intune
 
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Zásady dodržování předpisů se vytvářejí pro jednotlivé platformy.  Zásady dodržování předpisů můžete vytvořit na portálu Azure Portal. Další informace o tom, co jsou zásady dodržování předpisů, najdete v tématu [Co jsou zásady dodržování předpisů u zařízení](device-compliance.md). Další informace o požadavcích, kterým je potřeba vyhovět před vytvořením zásad dodržování předpisů, najdete v tématu [Začínáme se zásadami dodržování předpisů u zařízení](device-compliance-get-started.md).
 
@@ -195,4 +193,3 @@ K vyhledání verze operačního systému, kterou máte použít v nastaveních 
 <!--- ## Next steps
 
 [How to monitor device compliance](device-compliance-monitor.md)--->
-

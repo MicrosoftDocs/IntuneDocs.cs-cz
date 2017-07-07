@@ -1,7 +1,7 @@
 ---
 title: "Začínáme s dodržováním předpisů zařízeními"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: V tomto tématu jsou vysvětlené potřebné předpoklady k vytváření zásad dodržování předpisů v Microsoft Intune."
+titleSuffix: Intune on Azure
+description: "V tomto tématu jsou vysvětlené potřebné předpoklady k vytváření zásad dodržování předpisů v Microsoft Intune."
 keywords: 
 author: NathBarn
 ms.author: nathbarn
@@ -15,24 +15,21 @@ ms.assetid: 8103df7f-1700-47b4-9a72-c196d2a02f22
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: f59801abf29d15581fcdc577c5320942208595b1
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: aa9a5c8c44b82dcbc1ae7a4609b12e22c6599e9e
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
+# <a name="get-started-with-device-compliance-in-intune"></a>Začínáme s dodržováním předpisů zařízeními v Intune
 
-# <a name="get-started-with-device-compliance-in-intune-azure-preview"></a>Začínáme s dodržováním předpisů zařízeními v Intune Azure Preview
 
-
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 V tomto tématu se dozvíte toto: 
 
 - Co potřebujete, abyste mohli začít s vytvářením zásad dodržování předpisů zařízeními.
-- Rychlý přehled toho, co můžete vidět a dělat na portálu Intune Azure Preview. 
+- Rychlý přehled toho, co můžete vidět a dělat na portálu Intune Azure Portal. 
 
 Pokud o dodržování předpisů zařízeními moc nevíte, můžete se v [tomto tématu](device-compliance.md) dozvědět, co dodržování předpisů zařízeními vlastně je a jak se dá používat ve vaší organizaci.
 
@@ -56,7 +53,7 @@ Pokud o dodržování předpisů zařízeními moc nevíte, můžete se v [tomto
 
 ##  <a name="azure-portal-workflow"></a>Pracovní postup na portálu Azure Portal
 
-Tady je přehled toho, jak můžete vytvořit a spravovat zásady dodržování předpisů zařízeními na portálu Intune Azure Preview.
+Tady je přehled toho, jak můžete vytvořit a spravovat zásady dodržování předpisů zařízeními na portálu Azure Portal pro Intune.
 
 <!---### Overview
 
@@ -83,4 +80,3 @@ Doba platnosti stavu dodržování předpisů
 [Vytvoření zásady dodržování předpisů pro iOS](compliance-policy-create-ios.md)
 
 [Vytvoření zásady dodržování předpisů pro Windows](compliance-policy-create-windows.md)
-

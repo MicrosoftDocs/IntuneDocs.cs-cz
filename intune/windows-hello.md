@@ -1,7 +1,7 @@
 ---
 title: "Použití Windows Hello pro firmy"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Naučte se vytvářet zásady pro řízení použití Windows Hello pro firmy na spravovaných zařízeních."
+titleSuffix: Intune on Azure
+description: "Naučte se vytvářet zásady pro řízení použití Windows Hello pro firmy na spravovaných zařízeních."
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
@@ -15,19 +15,16 @@ ms.assetid: 541be8b8-8668-41be-afce-3f3e08c12191
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 4d375a40283a5f3c1e9b7302d659739d4ca3d508
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 0ef9e70dc918b485f893cf3193f7e76f6084a896
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="use-windows-hello-for-business"></a>Použití Windows Hello pro firmy
 
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Microsoft Intune umožňuje integraci se službou Windows Hello pro firmy (dříve Microsoft Passport for Work). Je to alternativní metoda pro přihlašování pomocí účtu služby Active Directory nebo Azure Active Directory, která může nahradit hesla, čipové karty a virtuální čipové karty.
 
@@ -100,4 +97,3 @@ Abyste předešli konfliktům mezi zásadami a zajistili, že zásady kódu PIN 
 
 ## <a name="further-information"></a>Další informace
 Další informace o službě Microsoft Passport najdete v [příručce](https://technet.microsoft.com/library/mt589441.aspx) v dokumentaci k Windows 10.
-

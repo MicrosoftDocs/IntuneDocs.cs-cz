@@ -1,12 +1,12 @@
 ---
 title: "Zásady pro povolení a blokování aplikací pro Samsung KNOX v Intune"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Vytvořte vlastní profil pro povolení a blokování aplikací pro zařízení se Samsung Knox Standardem."
+titleSuffix: Intune on Azure
+description: "Vytvořte vlastní profil pro povolení a blokování aplikací pro zařízení se Samsung Knox Standardem."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,14 @@ ms.assetid: d035ebf5-85f4-4001-a249-75d24325061a
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: dea090e108d5ea023dc64d8d168b25d30b688cb2
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
-
+ms.openlocfilehash: 8245bb3fa8f08e719df903a70f079f4fdf534ca5
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="use-custom-policies-to-allow-and-block-apps-for-samsung-knox-standard-devices-in-microsoft-intune"></a>Použití vlastních zásad pro povolení a blokování aplikací pro zařízení se Samsung KNOX Standardem v Microsoft Intune
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]Postupy v tomto tématu použijte k vytvoření vlastních zásad Microsoft Intune. Vznikne jeden z těchto seznamů:
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]Postupy v tomto tématu použijte k vytvoření vlastních zásad Microsoft Intune. Vznikne jeden z těchto seznamů:
 
 - Seznam aplikací, u kterých je v příslušném zařízení blokované spuštění. Aplikace v tomto seznamu nebude možné spouštět ani v případě, že již byly nainstalované v okamžiku nasazení zásady.
 - Seznam aplikací, které si uživatelé příslušného zařízení mohou nainstalovat z obchodu Google Play. Je možné instalovat jen aplikace uvedené na seznamu. Z tohoto obchodu nejde nainstalovat žádné další aplikace.
@@ -35,7 +32,7 @@ Tato nastavení můžou využívat jenom zařízení se Samsung Knox Standardem.
 ## <a name="create-an-allowed-or-blocked-app-list"></a>Vytvoření seznamu povolených nebo blokovaných aplikací
 
 1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Jiné** > **Intune**.
+2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 3. V okně **Intune** zvolte **Konfigurace zařízení**.
 2. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
 2. V okně seznamu profilů zvolte **Vytvořit profil**.
@@ -49,9 +46,9 @@ Tato nastavení můžou využívat jenom zařízení se Samsung Knox Standardem.
 
 - **Název** – zadejte **PreventStartPackages**.
 - **Popis** – zadejte volitelný popis, např.: Seznam zakázaných aplikací.
--     **Datový typ** – z rozevíracího seznamu zvolte **Řetězec**.
--     **OMA-URI** – zadejte **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**.
--     **Hodnota** – zadejte seznam názvů balíčků aplikací, které chcete povolit. Jako oddělovač můžete použít **; : ,** nebo **|**. (Příklad: package1;package2;)
+-   **Datový typ** – z rozevíracího seznamu zvolte **Řetězec**.
+-   **OMA-URI** – zadejte **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**.
+-   **Hodnota** – zadejte seznam názvů balíčků aplikací, které chcete povolit. Jako oddělovač můžete použít **; : ,** nebo **|**. (Příklad: package1;package2;)
 
 ### <a name="for-a-list-of-apps-that-users-are-allowed-to-install-from-the-google-play-store-while-excluding-all-other-apps"></a>Pro seznam aplikací, které si uživatelé můžou nainstalovat z obchodu Google Play, s vyloučením všech ostatních:
 - **Název** – zadejte **AllowInstallPackages**.
@@ -69,4 +66,3 @@ Nastavení aplikace se použijí, jakmile se cílené zařízení službě přih
 
 
 <!---## Assign the custom profile--->
-

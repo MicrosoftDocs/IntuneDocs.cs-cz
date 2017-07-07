@@ -1,12 +1,12 @@
 ---
-title: "Exchange Connector pro místní EAS"
+title: "Nastavení Exchange Connectoru pro místní EAS přes Intune"
 titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Exchange ActiveSync MDM – použijte nástroj Connector k umožnění komunikace mezi konzolou správce Intune a místním Exchange Serverem."
+description: "Intune Azure Preview: Exchange ActiveSync MDM – použijte nástroj Connector k umožnění komunikace mezi Intune a místním Exchange Serverem."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 06/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,21 +15,24 @@ ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 317b88e289fce216916dfa4ec3890ba7c9559c16
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 9f4a310078a30f7dfefe66a9aba60cc74ad4e29b
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
+# <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure-preview"></a>Nastavení místního Exchange Connectoru pro Intune v Microsoft Intune Azure Preview
 
-# <a name="install-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure-preview"></a>Instalace místního Exchange Connectoru Intune v Microsoft Intune Azure Preview
+Místní prostředí Exchange Serveru můžou pomocí místního Exchange Connectoru pro Intune spravovat přístup zařízení k místním poštovním schránkám Exchange v závislosti na tom, jestli jsou daná zařízení zaregistrovaná do Intune a jestli splňují zásady dodržování předpisů zařízení Intune. Místní Exchange Connector rovněž prostřednictvím synchronizace stávajícího záznamu EAS (Exchange Active Sync) s Intune zjišťuje mobilní zařízení, která se připojují k místním systémům Exchange Server.
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+> [!IMPORTANT]
+> Intune podporuje pro každé předplatné jenom jedno připojení místního Exchange Connectoru libovolného typu.
 
+Pokud chcete nastavit připojení, které umožňuje komunikaci Microsoft Intune s místním Exchange Serverem, postupujte takto:
 
-Pokud chcete nastavit připojení umožňující komunikaci Microsoft Intune s Exchange Serverem, který je hostitelem poštovních schránek mobilních zařízení, musíte si z konzoly pro správu Intune stáhnout místní Exchange Connector a nakonfigurovat ho. Intune podporuje pro každé předplatné jenom jedno připojení Exchange Connectoru libovolného typu.
+1.  Stáhněte si místní Exchange Connector pro Intune z portálu Intune.
+2.  Nainstalujte a nakonfigurujte místní Exchange Connector pro Intune.
+3.  Ověřte připojení k Exchangi.
 
 ## <a name="on-premises-exchange-connector-requirements"></a>Požadavky na místní Exchange Connector
 V následující tabulce jsou uvedené požadavky na počítač, na který instalujete místní Exchange Connector.
@@ -39,8 +42,8 @@ V následující tabulce jsou uvedené požadavky na počítač, na který insta
 |operační systémy;|Intune podporuje místní Exchange Connector na počítači, na kterém běží kterákoli edice Windows Serveru 2008 SP2 (64bitová verze), Windows Serveru 2008 R2, Windows Serveru 2012 nebo Windows Serveru 2012 R2.<br /><br />Connector není podporovaný v žádné instalaci jádra serveru.|
 |Microsoft Exchange|Místní Connectory vyžadují Microsoft Exchange 2010 SP1 nebo novější, nebo starší Exchange Online Dedicated. Pokud chcete zjistit, jestli je vaše prostředí Exchange Online Dedicated v **nové** nebo **starší** konfiguraci, kontaktujte svého správce účtů.|
 |Autorita pro správu mobilních zařízení| [Nastavte autoritu pro správu mobilních zařízení na Intune](https://docs.microsoft.com/intune-classic/deploy-use/prerequisites-for-enrollment#step-2-mdm-authority-set).|
-|Hardware|Počítač, na který nainstaluje konektor, musí mít minimálně 1,6GHz procesor s 2 GB paměti RAM a 10 GB volného místa na disku.|
-|Synchronizace se službou Active Directory|Než použijete Connector k připojení Intune ke svému Exchange Serveru, je potřeba [nastavit synchronizaci služby Active Directory](/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3) tak, aby byli místní uživatelé a skupiny zabezpečení synchronizovaní s vaší instancí Azure Active Directory.|
+|Hardware|Počítač, na který nainstaluje konektor, musí mít minimálně 1,6GHz procesor s 2 GB paměti RAM a 10 GB volného místa na disku.|users-permissions-add.md
+|Synchronizace se službou Active Directory|Než použijete Connector k připojení Intune ke svému Exchange Serveru, je potřeba [nastavit synchronizaci služby Active Directory](users-permissions-add.md) tak, aby byli místní uživatelé a skupiny zabezpečení synchronizovaní s vaší instancí Azure Active Directory.|
 |Další software|Počítač hostující konektor musí mít úplnou instalaci rozhraní Microsoft .NET Framework 4.5 a musí na něm být nainstalované prostředí Windows PowerShell 2.0.|
 |Síť|Počítač, na který jste nainstalovali konektor, musí být v doméně, která má vztah důvěryhodnosti k doméně hostující váš Exchange Server.<br /><br />Počítač vyžaduje konfigurace, které mu umožňují přístup ke službě Intune přes brány firewall nebo proxy servery přes porty 80 a 443. Mezi domény používané službou Intune patří tyto: manage.microsoft.com, &#42;manage.microsoft.com a &#42;.manage.microsoft.com.|
 
@@ -65,17 +68,18 @@ Musíte vytvořit uživatelský účet služby Active Directory, který bude kon
 
 ## <a name="download-the-on-premises-exchange-connector-software-installation-package"></a>Stažení instalačního balíčku místního Exchange Connectoru
 
-1. V podporovaném operačním systému Windows Server pro místní Exchange Connector otevřete [portál Azure Portal](http://portal.azure.com) z uživatelského účtu, který je správcem klienta Exchange a který má licenci k používání Exchange Serveru.
+1. V podporovaném operačním systému Windows Server pro místní Exchange Connector otevřete [portál Azure Portal](http://portal.azure.com) a přihlaste se uživatelským účtem, který je správcem místního Exchange Serveru a který má licenci k používání Exchange Serveru.
 
-2.  Zvolte úlohu **Podmíněný přístup**.
-3.  Zvolte úlohu **Podmíněný přístup** na portálu Azure Portal a otevřete tak okno **Místní**.
+2. V nabídce vlevo zvolte **Další služby** a do filtru textového pole pak zadejte **Intune**.
 
-4. V části **Nastavení** zvolte **Exchange ActiveSync On-premises Connector** a pak zvolte **Stáhnout software On-Premises Connector**.
+3. Zvolte **Intune**. Na řídicím panelu Intune, který se otevře, zvolte **Místní přístup**.
 
-4.  Místní Exchange Connector je v komprimované složce (.zip), která se dá otevřít nebo uložit. V dialogovém okně **Stažení souboru** vyberte na **Uložit** a uložte komprimovanou složku do zabezpečeného umístění.
+4. V okně **Místní přístup – Exchange ActiveSync Connector** v části **nastavení** zvolte **Stáhnout software On-Premises Connector**.
 
-> [!IMPORTANT]
-> Soubory ve složce místního Exchange Connectoru nepřejmenovávejte ani nepřesouvejte. Přesunutí nebo přejmenování obsahu složky způsobí selhání instalace.
+5.  Místní Exchange Connector je v komprimované složce (.zip), která se dá otevřít nebo uložit. V dialogovém okně **Stažení souboru** vyberte na **Uložit** a uložte komprimovanou složku do zabezpečeného umístění.
+
+    > [!IMPORTANT]
+    > Soubory ve složce místního Exchange Connectoru nepřejmenovávejte ani nepřesouvejte. Přesunutí nebo přejmenování obsahu složky způsobí selhání instalace Exchange Connectoru.
 
 ## <a name="install-and-configure-the-intune-on-premises-exchange-connector"></a>Instalace a konfigurace místního Intune Exchange Connectoru
 Při instalaci místního Intune Exchange Connectoru použijte tento postup. Místní Exchange Connector se dá nainstalovat jenom jednou pro každé předplatné Intune a jenom na jeden počítač. Když zkusíte nakonfigurovat další místní Exchange Connector, nahradí se původní připojení tímto novým připojením.
@@ -120,7 +124,8 @@ Při instalaci místního Intune Exchange Connectoru použijte tento postup. Mí
 
     8. Vyberte **Připojit**.
 
-Konfigurace připojení může zabrat několik minut.
+    > [!NOTE]
+    > Konfigurace připojení může zabrat několik minut.
 
 Software Exchange Connector během konfigurace uloží vaše nastavení proxy serveru, aby byl zajištěný přístup na internet. Pokud se vaše nastavení proxy serveru změní, budete muset Exchange Connector překonfigurovat tak, aby používal aktualizované nastavení proxy serveru.
 
@@ -131,10 +136,11 @@ Až Exchange Connector připojení nastaví, mobilní zařízení přidružená 
 
 ## <a name="validate-the-exchange-connection"></a>Ověření připojení k systému Exchange
 
-Po úspěšné konfiguraci softwaru Exchange Connector můžete zobrazit stav připojení a poslední úspěšný pokus o synchronizaci. Na [portálu Azure Portal](http://portal.azure.com) zvolte úlohu **Intune** > **Podmíněný přístup**. V části **Nastavení** vyberte možnost **Exchange On-Premises Connector** a ověřte, že se připojení zobrazí jako aktivní.
+Po úspěšné konfiguraci softwaru Exchange Connector můžete zobrazit stav připojení a poslední úspěšný pokus o synchronizaci. Ověření připojení Exchange Connectoru:
+
+- Na řídicím panelu Intune zvolte **Místní přístup**. V části **Správa** vyberte **Přístup k místnímu Exchangi** a ověřte stav připojení.
 
 Můžete se taky podívat na datum a čas posledního úspěšného pokusu o synchronizaci.
 
 ## <a name="next-steps"></a>Další kroky
 [Vytvoření zásady podmíněného přístupu pro místní Exchange](conditional-access-exchange-create.md)
-

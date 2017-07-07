@@ -1,7 +1,7 @@
 ---
 title: "Jak z aplikací vymazat jenom firemní data"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Přečtěte si, jak selektivně vymazat data z aplikací v Microsoft Intune."
+titleSuffix: Intune on Azure
+description: "Přečtěte si, jak selektivně vymazat data z aplikací v Microsoft Intune."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,17 +15,15 @@ ms.assetid: 42605e6e-5b84-44ff-b86e-346ea123b53e
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: affe7323b8572aa17122011b293cb6a3a2fd7747
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: bfebc391997ac4e63466eb3a09044318cf807dbc
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Jak z aplikací spravovaných pomocí Intune vymazat jenom firemní data
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 V případě ztráty nebo odcizení zařízení nebo když zaměstnanec opouští společnost, je vhodné se ujistit, že byla ze zařízení odebraná firemní data. Nemusí ale být vhodné odebrat ze zařízení osobní data, zvlášť jestli je to zařízení, které vlastní zaměstnanec.
 
@@ -38,7 +36,7 @@ Pokud chcete selektivně odebrat data firemních aplikací, vytvořte žádost o
 
 1.  Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 
-2.  Zvolte **Další služby**, do textového pole filtru zadejte **Intune** a vyberte **Intune**. Otevře se okno v Intune Preview. Zvolte **Spravovat aplikace**.
+2.  Zvolte **Další služby**, do textového pole filtru zadejte **Intune** a vyberte **Intune**. Otevře se okno v Intune. Zvolte **Spravovat aplikace**.
 
     ![Snímek obrazovky okna Nová žádost o vymazání](./media/intune-azure-preview-blade.png)
 

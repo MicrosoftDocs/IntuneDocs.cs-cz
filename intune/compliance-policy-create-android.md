@@ -1,7 +1,7 @@
 ---
 title: "Vytváření zásad dodržování předpisů pro Android"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Přečtěte si, jak vytvořit zásady dodržování předpisů pro zařízení s Androidem."
+titleSuffix: Intune on Azure
+description: "Naučte se vytvářet zásady dodržování předpisů pro zařízení s Androidem."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,21 +15,18 @@ ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 08d503fad2304b25e6feb7f41cf0b93546dd26fd
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: cc68bf4a52e5fcf9a8fbb3550a5bee814f4f46f0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
+# <a name="how-to-create-a-device-compliance-policy-for-android-devices-in-intune"></a>Vytvoření zásad dodržování předpisů pro zařízení s Androidem v Intune
 
-# <a name="how-to-create-a-device-compliance-policy-for-android-devices-in-intune-azure-preview-portal"></a>Vytvoření zásad dodržování předpisů pro zařízení s Androidem na portálu Intune Azure Preview
 
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
-
-Zásady dodržování předpisů zařízení se pro každou platformu vytvářejí z portálu Intune Azure Preview. 
+Zásady dodržování předpisů zařízení se pro každou platformu vytvářejí z portálu Intune Azure. 
 
 - Další informace o tom, co jsou zásady dodržování předpisů, najdete v tématu [Co jsou zásady dodržování předpisů u zařízení](device-compliance.md).
 - Další informace o požadavcích, kterým je potřeba vyhovět před vytvořením zásad dodržování předpisů, najdete v tématu [Začínáme se zásadami dodržování předpisů u zařízení](device-compliance-get-started.md).
@@ -134,4 +131,3 @@ Tabulka níže popisuje, jak se postupuje u nevyhovujícího nastavení při pou
 <!--- ## Next steps
 
 [How to monitor device compliance](device-compliance-monitor.md)--->
-

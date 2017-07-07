@@ -1,12 +1,12 @@
 ---
 title: "Co je registrace zařízení v Microsoft Intune?"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Přečtěte si o registraci zařízení s iOS, Androidem a Windows."
+titleSuffix: Intune on Azure
+description: "Přečtěte si o registraci zařízení s iOSem, Androidem a Windows."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 05/29/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +14,14 @@ ms.technology:
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 57bad4be991b61fe5212d340ab8d89cb6af3b0f7
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 927e2f21aad4ff39c9351bef68eb510e93410c37
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="what-is-device-enrollment"></a>Co je registrace zařízení?
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Toto téma popisuje registraci a různé způsoby registrace mobilních zařízení do systému správy Intune.
 
@@ -37,66 +34,67 @@ Pokud používáte Exchange ActiveSync, ať už místní nebo hostovaný v cloud
 
 ## <a name="overview-of-device-enrollment-methods"></a>Přehled metod registrace zařízení
 
-Následující tabulka uvádí metody registrace v Intune a podporované možnosti a požadavky každé metody. Možnosti a požadavky jsou popsané níže. V tabulce se používají následující pojmy:
+Následující tabulka nabízí přehled metod registrace v Intune a jejich funkce a požadavky, které jsou popsané dole.
+**Legenda**
 
-- **Vymazání** – Udává, jestli musí být zařízení vymazáno, aby ho uživatelé mohli zaregistrovat. Pojmem „vymazání“ se rozumí obnovení továrních nastavení zařízení, které odstraní všechna data. Další informace najdete v článku [Použití úplného nebo selektivního vymazání u zařízení](devices-wipe.md).
-- **Spřažení** – Přidruží zařízení k uživatelům. Požadováno pro správu mobilních aplikací (MAM) a podmíněný přístup k datům společnosti. Další informace najdete v tématu [Přidružení uživatele](device-enrollment-program-enroll-ios.md).
-- **Uzamčení** – Udává, jestli se má uživatelům bránit v rušení registrace jejich zařízení ve správě. Uživatelé můžou rušit registraci svých zařízení na všech platformách pomocí aplikace Portál společnosti. Registraci nemůžou rušit pomocí nativních nabídek operačního systému.
+- **Vyžadováno resetování** – Během registrace se obnoví tovární nastavení zařízení.
+- **Přidružení uživatele** – Přidruží zařízení k uživatelům. Další informace najdete v tématu [Přidružení uživatele](device-enrollment-program-enroll-ios.md).
+- **Uzamčeno** – Zabraňuje uživatelům zrušit registraci zařízení.
 
+**Metody registrace zařízení s iOSem**
 
-**Metody registrace zařízení s iOS**
-
-| **Metoda** |    **Vyžadováno vymazání?** |    **Spřažení**    |    **Uzamčení** | **Podrobnosti** |
+| **Metoda** |  **Vyžadováno resetování** |    **Přidružení uživatele**   |   **Uzamčeno** | **Podrobnosti** |
 |:---:|:---:|:---:|:---:|:---:|
-|**[Uživatelé s vlastním zařízením (BYOD)](#byod)** | Ne|    Ano |    Ne | Brzy budou k dispozici další informace.|
-|**[DEM](#dem)**|    Ne |Ne |Ne    | [Další informace](device-enrollment-program-enroll-ios.md)|
-|**[DEP](#dep)**|    Ano |    Volitelné |    Volitelné|[Další informace](device-enrollment-program-enroll-ios.md)|
-|**[USB-SA](#usb-sa)**|    Ano |    Volitelné |    Ne| [Další informace](apple-configurator-setup-assistant-enroll-ios.md)|
-|**[USB (přímo)](#usb-direct)**|    Ne |    Ne    | Ne|[Další informace](apple-configurator-direct-enroll-ios.md)|
+|**[Uživatelé s vlastním zařízením (BYOD)](#byod)** | Ne|    Ano |   Ne | [Další informace](./apple-mdm-push-certificate-get.md)|
+|**[DEM](#dem)**|   Ne |Ne |Ne  | [Další informace](./device-enrollment-program-enroll-ios.md)|
+|**[DEP](#dep)**|   Ano |   Volitelné |  Volitelné|[Další informace](./device-enrollment-program-enroll-ios.md)|
+|**[USB-SA](#usb-sa)**| Ano |   Volitelné |  Ne| [Další informace](./apple-configurator-setup-assistant-enroll-ios.md)|
+|**[USB (přímo)](#usb-direct)**| Ne |    Ne  | Ne|[Další informace](./apple-configurator-direct-enroll-ios.md)|
 
 **Metody registrace zařízení s Windows**
 
-| **Metoda** |    **Vyžadováno vymazání?** |    **Spřažení**    |    **Uzamčení** | **Podrobnosti**|
+| **Metoda** |  **Vyžadováno resetování** |    **Přidružení uživatele**   |   **Uzamčeno** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[Uživatelé s vlastním zařízením (BYOD)](#byod)** | Ne |    Ano |    Ne | [Další informace](windows-enroll.md)|
-|**[DEM](#dem)**|    Ne |Ne |Ne    |[Další informace](device-enrollment-manager-enroll.md)|
+|**[Uživatelé s vlastním zařízením (BYOD)](#byod)** | Ne |   Ano |   Ne | [Další informace](windows-enroll.md)|
+|**[DEM](#dem)**|   Ne |Ne |Ne  |[Další informace](device-enrollment-manager-enroll.md)|
+|**Automatická registrace** | Ne |Ano |Ne | [Další informace](./windows-enroll.md#enable-windows-10-automatic-enrollment)|
+|**Hromadná registrace** |Ne |Ne |Ne | [Další informace](./windows-bulk-enroll.md) |
 
 **Metody registrace zařízení s Androidem**
 
-| **Metoda** |    **Vyžadováno vymazání?** |    **Spřažení**    |    **Uzamčení** | **Podrobnosti**|
+| **Metoda** |  **Vyžadováno resetování** |    **Přidružení uživatele**   |   **Uzamčeno** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[Uživatelé s vlastním zařízením (BYOD)](#byod)** | Ne|    Ano |    Ne | [Další informace](android-enroll.md)|
-|**[DEM](#dem)**|    Ne |Ne |Ne    |[Další informace](device-enrollment-program-enroll-ios.md)|
-|**Android for Work**| Ne | Ano | Ne| [Další informace](android-enroll.md) |
+|**[Uživatelé s vlastním zařízením (BYOD)](#byod)** | Ne|    Ano |   Ne | [Další informace](./android-enroll.md)|
+|**[DEM](#dem)**|   Ne |Ne |Ne  |[Další informace](./device-enrollment-program-enroll-ios.md)|
+|**Android for Work**| Ne | Ano | Ne| [Další informace](./android-enroll.md#enable-enrollment-of-android-for-work-devices) |
 
 
 ## <a name="byod"></a>Uživatelé s vlastním zařízením
-Uživatelé s vlastním zařízením si nainstalují aplikaci Portál společnosti a zaregistrují svoje zařízení. To jim umožní připojit se k podnikové síti a doméně nebo ke službě Azure Active Directory. V mnoha scénářích COD (zařízení ve vlastnictví společnosti), musíte pro většinu platforem povolit registraci vlastních zařízení (BYOD). Registraci osobně vlastněných zařízení s iOSem a Androidem je možné blokovat. Pokyny najdete v tématu [Nastavení omezení typu zařízení](enrollment-restrictions-set.md#set-device-type-restrictions).
+Uživatelé s vlastním zařízením si nainstalují a spustí aplikaci Portál společnosti a zaregistrují svoje zařízení. Tento program umožňuje uživatelům přístup k firemním prostředkům, jako je třeba e-mail.
 
 ## <a name="corporate-owned-devices"></a>Zařízení vlastněná společností
-Ke správě zařízení vlastněných společností (COD) můžete použít portál Azure Portal. Zařízení s iOSem můžete zaregistrovat přímo nástroji poskytovanými společností Apple. Všechny typy zařízení může zaregistrovat správce využívající správce registrace zařízení. Zařízení s číslem IMEI se také dají identifikovat a označit jako zařízení ve vlastnictví společnosti, což umožní využít scénáře COD.
+Následují scénáře registrace zařízení vlastněných společností (COD). Zařízení s iOSem můžete zaregistrovat přímo nástroji poskytovanými společností Apple. Všechny typy zařízení může zaregistrovat správce využívající správce registrace zařízení. Zařízení s číslem IMEI se také dají identifikovat a označit jako zařízení ve vlastnictví společnosti, což umožní využít scénáře COD.
 
 ### <a name="dem"></a>DEM
-Správce registrace zařízení (DEM) je zvláštní uživatelský účet, který se používá k registraci a správě více zařízení vlastněných společností. Správci pak mohou nainstalovat aplikaci Portál společnosti a zaregistrovat velký počet zařízení bez uživatele. Přečtěte si další informace o [DEM](device-enrollment-manager-enroll.md). ([Zpět k tabulce](#overview-of-device-enrollment-methods))
+Správce registrace zařízení (DEM) je zvláštní uživatelský účet, který se používá k registraci a správě více zařízení vlastněných společností. Správci pak mohou nainstalovat aplikaci Portál společnosti a zaregistrovat velký počet zařízení bez uživatele. Přečtěte si další informace o [DEM](./device-enrollment-manager-enroll.md).
 
 ### <a name="dep"></a>DEP
-Správa programu DEP společnosti Apple umožňuje vytvářet a bezdrátově nasazovat zásady v zařízeních s iOSem zakoupených a spravovaných prostřednictvím programu DEP. Zařízení se zaregistruje, když ho uživatel poprvé zapne a spustí pomocníka pro nastavení iOS (Setup Assistant). Tento způsob podporuje režim **dozoru nad iOS**, který zase umožňuje následující funkce:
+Správa programu DEP společnosti Apple umožňuje vytvářet a bezdrátově nasazovat zásady v zařízeních s iOSem zakoupených a spravovaných prostřednictvím programu DEP. Zařízení se zaregistruje, když ho uživatel poprvé zapne a spustí pomocníka pro nastavení iOS (Setup Assistant). Tato metoda podporuje režim **iOS – Pod dohledem**, který pak povoluje následující funkce:
 
-  -    Registrace uzamčeného zařízení
-  -    Beznabídkový režim a další pokročilé konfigurace a omezení
+  - Registrace uzamčeného zařízení
+  - Beznabídkový režim a další pokročilé konfigurace a omezení
 
-Registrace iOS je podrobněji popsaná zde:
+Registrace DEP pro iOS je podrobněji popsaná zde:
 
 - [Volba způsobu registrace zařízení s iOSem](enrollment-method-choose-ios.md)
 - [Registrace zařízení s iOSem pomocí Programu registrace zařízení (DEP)](device-enrollment-program-enroll-ios.md)
-- [Zpět k předchozí tabulce](#overview-of-device-enrollment-methods)
 
 ### <a name="usb-sa"></a>USB (pomocník pro instalaci)
-Správci IT používají k ruční přípravě každého zařízení vlastněného společností pro registraci Apple Configurator (přes USB) pomocí pomocníka pro nastavení (Setup Assistant). Správce IT vytvoří registrační profil a vyexportuje ho do Apple Configuratoru. Když uživatelé obdrží svá zařízení, budou vyzváni ke spuštění pomocníka pro nastavení a k registraci zařízení. Tento způsob podporuje režim **dozoru nad iOS**, který zase umožňuje následující funkce:
-  -    Registrace uzamčeného zařízení
-  -    Beznabídkový režim a další pokročilé konfigurace a omezení
+Správci IT používají k ruční přípravě každého zařízení vlastněného společností pro registraci Apple Configurator (přes USB) a Pomocníka s nastavením. Správce IT vytvoří registrační profil a vyexportuje ho do Apple Configuratoru. Když uživatelé obdrží svá zařízení, budou vyzváni ke spuštění pomocníka pro nastavení a k registraci zařízení. Tato metoda podporuje režim **iOS – Pod dohledem**, který pak povoluje následující funkce:
+  - Registrace uzamčeného zařízení
+  - Beznabídkový režim a další pokročilé konfigurace a omezení
 
-Registrace iOS je podrobněji popsaná zde:
+Další informace o registraci pro iOS prostřednictvím Apple Configuratoru a Pomocníka s nastavením:
 
 - [Rozhodnutí o způsobu registrace zařízení s iOSem](enrollment-method-choose-ios.md)
 - [Registrace zařízení s iOSem pomocí nástroje Configurator a Průvodce nastavením](apple-configurator-setup-assistant-enroll-ios.md)
@@ -112,11 +110,6 @@ Registrace iOS je podrobněji popsaná zde:
 ## <a name="mobile-device-management-with-exchange-activesync-and-intune"></a>Správa mobilních zařízení pomocí protokolu Exchange ActiveSync a služby Intune
 Mobilní zařízení, která nejsou zaregistrovaná, ale připojují se k Exchange ActiveSync (EAS), je možné spravovat pomocí Intune s využitím zásad EAS MDM. Intune používá ke komunikaci s EAS softwarovou funkci Exchange Connector, která může být místní nebo hostovaná v cloudu. Brzy budou k dispozici další informace.
 
-## <a name="supported-device-platforms-and-browsers"></a>Podporované platformy zařízení a prohlížeče
-
-Viz [Podporovaná zařízení a prohlížeče pro Intune](https://docs.microsoft.com/intune-classic/get-started/supported-mobile-devices-and-computers).
-
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Vyčištění mobilních zařízení po vypršení platnosti certifikátu MDM
 
 Certifikát MDM se obnovuje automaticky, když mobilní zařízení komunikují se službou Intune. Když se mobilní zařízení vymažou nebo se jim po určitou dobu nedaří komunikovat se službou Intune, certifikát MDM se neobnoví. Zařízení se z portálu Azure Portal odebere po uplynutí 180 dnů od vypršení platnosti certifikátu MDM.
-

@@ -15,15 +15,12 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6f2f0b610b900bb41a3c2bd7416b6db28434a155
 ms.openlocfilehash: 17736751a6cd1813bd03f8092739d8433eb5d9dc
-ms.contentlocale: cs-cz
-ms.lasthandoff: 06/13/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -185,4 +182,3 @@ Když jste vytvořili zásadu ochrany aplikací WIP, potřebujete ji nasadit ve 
     V okně **Přidat skupinu uživatelů** se otevře seznam skupin uživatelů, který obsahuje všechny skupiny zabezpečení v Azure Active Directory.
 
 1.  Zvolte skupinu, u které chcete zásadu použít, a kliknutím na **Vybrat** zásadu nasaďte.
-

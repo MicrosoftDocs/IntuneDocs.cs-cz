@@ -14,15 +14,12 @@ ms.assetid: 38e08253-14a0-4cc4-87be-7b110c12a523
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: bc02af1e0813580ed70f181ff401d0408f6dd082
-ms.contentlocale: cs-cz
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="overview-of-device-and-app-lifecycles"></a>Přehled životních cyklů zařízení a aplikací
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
@@ -34,4 +31,3 @@ Ačkoli se potřeby jednotlivých organizací mohou lišit, existují určité s
 Pro účely správy mají všechna zařízení životní cyklus. Začne při registraci zařízení a pokračuje až do jeho vyřazení. [Životní cyklus správy zařízení](device-lifecycle.md) vás provede fázemi, jak zařízení zaregistrovat, jak ho konfigurovat a chránit a jak ho pak odebrat ze správy.
 
 Podobně mají svůj vlastní [životní cyklus i aplikace](app-lifecycle.md), se kterými pracujete. Ten obsahuje kroky od přidání aplikace do Intune až po její odebrání, když už není potřeba.
-

@@ -14,13 +14,11 @@ ms.assetid: bb940cb9-d43f-45ca-b065-ac0adc61dc6f
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: 0329720b6f02c718ef27a59e6efc5f3a76eed1c5
-ms.contentlocale: cs-cz
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="microsoft-intune-app-sdk-cordova-plugin"></a>Modul plug-in Cordova sady Intune App SDK
 
@@ -159,4 +157,3 @@ Po prvním spuštění aplikace by se mělo zobrazit dialogové okno oznamujíc�
 * Kdykoli upravíte seznam UTI pod uzlem **CFBundleDocumentTypes** souboru **Info.plist**, musíte před dalším sestavením vymazat UTI Intune v části importovaných UTI stejného souboru plist (uzel **UTImportedTypeDeclarations**). Všechny UTI Intune budou začínat předponou `com.microsoft.intune.mam`.
 
 * Pokud chcete odebrat modul plug-in Intune App ADK pro Cordovu z projektu Cordova, musíte také odebrat platformu iOS a znovu ji přidat, abyste vrátili zpět některé konfigurace Intune v souborech .xcodeproj a .plist.
-

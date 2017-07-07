@@ -1,7 +1,7 @@
 ---
 title: "Ověření zásad ochrany aplikací"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: V tématu popisujeme, jak otestovat a ověřit, zda jste správně nastavili zásady ochrany aplikací a zda fungují, jak mají."
+titleSuffix: Intune on Azure
+description: "V tomto tématu se dozvíte, jak otestovat a ověřit, zda jste správně nastavili zásady ochrany aplikací a zda fungují, jak mají."
 keywords: 
 author: NathBarn
 ms.author: nathbarn
@@ -15,21 +15,18 @@ ms.assetid: 15f8a838-0b69-412b-a42e-c6edb61f0cae
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 26e191965eff482cf97b920e028cdf60d1881d32
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ddfecbcd8709569ff177e6c7021d3e8fdab39290
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-validate-your-app-protection-policy-setup"></a>Ověření nastavení zásad ochrany aplikací
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 
-Toto téma obsahuje informace o tom, jak zkontrolovat, jestli vám zásady ochrany aplikací fungují bez problémů. Tento návod se vztahuje k zásadám ochrany aplikací na portálu Azure Portal **Preview**.
+Toto téma obsahuje informace o tom, jak zkontrolovat, jestli vám zásady ochrany aplikací fungují bez problémů. Tento návod se vztahuje k zásadám ochrany aplikací na portálu Azure Portal.
 
 ### <a name="checking-for-symptoms"></a>Zjišťování příznaků
 Není pravděpodobné, že by problém nahlásili uživatelé, protože ochrana aplikací je nástroj na ochranu dat. Pokud je s konfigurací ochrany aplikací nějaký problém, uživatelé budou mít stejně neomezený přístup jako bez ochrany aplikací a potíží si nevšimnou. Proto doporučujeme, abyste konfiguraci ochrany aplikací prověřili s malou skupinou uživatelů, kteří mohou omezení ochrany aplikací cíleně vyzkoušet.
@@ -61,4 +58,3 @@ Postupujte podle stavu uživatele:
 ### <a name="see-also"></a>Související témata
 
 [Co jsou zásady ochrany aplikací Intune?](app-protection-policies.md)
-

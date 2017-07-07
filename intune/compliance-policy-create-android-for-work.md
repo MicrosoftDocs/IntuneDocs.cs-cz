@@ -1,7 +1,7 @@
 ---
 title: "Vytváření zásad dodržování předpisů pro Android for Work"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Přečtěte si, jak vytvořit zásady dodržování předpisů pro Android for Work."
+titleSuffix: Intune on Azure
+description: "Naučte se vytvářet zásady dodržování předpisů pro zařízení s Androidem for Work."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,19 +15,16 @@ ms.assetid: 9da89713-6306-4468-b211-57cfb4b51cc6
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: af5aa4f336df0f47695484b7dce1d7df29bea03d
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 518b74703de88a1cded2ad38d33c52b54699dc44
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
+# <a name="how-to-create-a-device-compliance-policy-for-android-for-work-devices-in-intune"></a>Vytvoření zásad dodržování předpisů pro zařízení s Androidem for Work v Intune
 
-# <a name="how-to-create-a-device-compliance-policy-for-android-for-work-devices-in-intune-azure-preview"></a>Vytvoření zásad dodržování předpisů pro zařízení s Androidem for Work v Intune Azure Preview
 
-
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Zásady dodržování předpisů se vytvářejí pro jednotlivé platformy.  Zásady dodržování předpisů můžete vytvořit na portálu Azure Portal. Další informace o tom, co jsou zásady dodržování předpisů najdete v tématu [Co jsou zásady dodržování předpisů u zařízení](device-compliance.md). Další informace o požadavcích, kterým je potřeba vyhovět před vytvořením zásad dodržování předpisů, najdete v tématu [Začínáme se zásadami dodržování předpisů u zařízení](device-compliance-get-started.md).
 
@@ -123,4 +120,3 @@ Další podrobnosti najdete v tématu [Povolení pravidla ochrany zařízení p�
 <!--- ## Next steps
 
 [How to monitor device compliance](device-compliance-monitor.md)--->
-

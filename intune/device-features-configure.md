@@ -1,12 +1,12 @@
 ---
 title: "Konfigurace nastavení funkce zařízení ve službě Intune"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Naučte se pomocí služby Intune konfigurovat funkce na zařízeních, která spravujete."
+titleSuffix: Intune on Azure
+description: "Naučte se pomocí služby Intune konfigurovat funkce na zařízeních, která spravujete."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/12/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,15 @@ ms.assetid: 42f9b104-c1f6-4dfc-8aa4-1d33e1eaf61f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: f584d76a498264f8ab1cf883f5ee95d52d3446d3
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: f286119019bb26d8851c766a9d88ad818d7e600b
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-configure-device-feature-settings-in-microsoft-intune"></a>Konfigurace nastavení funkce zařízení ve službě Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Omezení zařízení vám umožní regulovat funkce na zařízeních s iOSem a macOS, jako jsou AirPrint, oznámení a konfigurace sdílených zařízení.
 
@@ -35,7 +32,7 @@ Informace v tomto tématu vás seznámí se základy konfigurace profilů funkc
 ## <a name="create-a-device-profile-containing-device-restriction-settings"></a>Vytvoření profilu zařízení obsahujícího nastavení omezení zařízení
 
 1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Jiné** > **Intune**.
+2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 3. V okně **Intune** zvolte **Konfigurace zařízení**.
 2. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
 3. V okně profilů zvolte **Vytvořit profil**.
@@ -46,16 +43,16 @@ Informace v tomto tématu vás seznámí se základy konfigurace profilů funkc
 6. V rozevíracím seznamu **Typ profilu** zvolte **Funkce zařízení**. 
 7. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Podrobnosti o nastaveních na jednotlivých platformách najdete v následujících tématech:
     - [Nastavení AirPrintu pro iOS a MacOS](air-print-settings-ios-macos.md)
-     - [Nastavení AirPlay pro iOS](airplay-settings-ios.md)
+    - [Nastavení AirPlay pro iOS](airplay-settings-ios.md)
     - [Nastavení rozložení domovské obrazovky pro iOS](home-screen-settings-ios.md)
     - [Nastavení oznámení aplikace pro iOS](app-notification-settings-ios.md)
     - [Nastavení konfigurace sdíleného zařízení pro iOS](shared-device-settings-ios.md)
+    - [Nastavení filtru webového obsahu pro iOS](web-content-filter-settings-ios.md)
 
 8. Až to budete mít, vraťte se do okna **Vytvořit profil** a klikněte na **Vytvořit**.
 
 Profil se vytvoří a zobrazí se v okně se seznamem profilů.
 Pokud chcete pokračovat a přiřadit tento profil ke skupinám, podívejte se na téma [Jak přiřadit profily zařízení](device-profile-assign.md).
-
 
 
 

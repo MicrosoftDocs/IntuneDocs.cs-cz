@@ -1,7 +1,7 @@
 ---
 title: Kde v Azure najdu svoje funkce Intune?
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Pomáhá najít funkce Intune v konzole Azure."
+titleSuffix: Intune on Azure
+description: "Tento článek vám pomůže najít funkce Intune v konzole Azure."
 keywords: 
 author: dagerrit
 ms.author: dagerrit
@@ -15,27 +15,16 @@ ms.assetid:
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 9dd6e93108ffc46e9e52b6928cf513161d29f7a4
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 1b9d1ac3930e29bc024ece7e6b9b11c91a4e14c1
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Kde v Azure najdu svoje funkce Intune?
 Při přesunu Intune do portálu Azure Portal jsme využili příležitost uspořádat některé úlohy logičtěji. Každé vylepšení ale přichází za cenu toho, že je potřeba se s novým uspořádáním seznámit. Proto jsme vytvořili tento referenční přehled pro ty z vás, kteří dobře znají Intune v klasické konzole a zajímá je, jak v Intune pracovat na platformě Azure. Pokud tento článek nepopisuje funkci, kterou hledáte, uveďte ji v poznámce na konci článku, abychom ho mohli aktualizovat.
 ## <a name="quick-reference-guide"></a>Stručný referenční přehled
-|Funkce |Cesta v klasické konzole|Cesta v Intune na Azure| |------------||---------------|---------------|
-|Program registrace zařízení (DEP) |Správce > Správa mobilních zařízení > iOS a Mac OS X > Program registrace zařízení|[Registrace zařízení > Registrace Apple > Token Programu registrace zařízení (DEP)](#where-did-apple-dep-go) |
-|Program registrace zařízení (DEP)| Správce > Správa mobilních zařízení > iOS a Mac OS X > Program registrace zařízení |[Registrace zařízení > Registrace Apple > Sériová čísla programu registrace](#where-did-apple-dep-go) |
-|Pravidla registrace |Správce > Správa mobilních zařízení > Pravidla registrace|[Registrace zařízení > Omezení registrace](#where-did-enrollment-rules-go) |
-|Skupiny podle sériového čísla iOS |Skupiny > Všechna zařízení > Firemní předregistrovaná zařízení > Podle sériového čísla iOS|[Registrace zařízení > Registrace Apple > Sériová čísla programu registrace](#where-did-corporate-pre-enrolled-devices-go) |
-|Skupiny podle sériového čísla iOS |Skupiny > Všechna zařízení > Firemní předregistrovaná zařízení > Podle sériového čísla iOS| [Registrace zařízení > Registrace Apple > Sériová čísla AC](#where-did-corporate-pre-enrolled-devices-go)|
-|Skupiny podle IMEI (všechny platformy)| Skupiny >Všechna zařízení > Firemní předregistrovaná zařízení > Podle IMEI (všechny platformy) | [Registrace zařízení > Identifikátory podnikových zařízení](#by-imei-all-platforms)|
-| Profil Registrace podnikového zařízení | Zásady > Registrace podnikového zařízení | [Registrace zařízení > Registrace Apple > Profily programu registrace](#where-did-corporate-pre-enrolled-devices-go) |
-| Profil Registrace podnikového zařízení | Zásady > Registrace podnikového zařízení | [Registrace zařízení > Registrace Apple > Profily AC](#where-did-corporate-pre-enrolled-devices-go) |
-| Android for Work | Správce > Správa mobilních zařízení > Android for Work | Registrace zařízení > Registrace Androidu for Work | | Podmínky | Zásady > Podmínky | Registrace zařízení > Podmínky |
+|Funkce |Cesta v klasické konzole|Cesta v Intune na Azure| |------------||---------------|---------------| |Program registrace zařízení (DEP) |Správce > Správa mobilních zařízení > iOS a Mac OS X > Program registrace zařízení|[Registrace zařízení > Registrace Apple > Token Programu registrace](#where-did-apple-dep-go) | |Program registrace zařízení (DEP)| Správce > Správa mobilních zařízení > iOS a Mac OS X > Program registrace zařízení |[Registrace zařízení > Registrace Apple > Sériová čísla programu registrace](#where-did-apple-dep-go) | |Pravidla registrace |Správce > Správa mobilních zařízení > Pravidla registrace|[Registrace zařízení > Omezení registrace](#where-did-enrollment-rules-go) | |Skupiny podle sériového čísla iOS |Skupiny > Všechna zařízení > Firemní předregistrovaná zařízení > Podle sériového čísla iOS|[Registrace zařízení > Registrace Apple > Sériová čísla programu registrace](#where-did-corporate-pre-enrolled-devices-go) | |Skupiny podle sériového čísla iOS |Skupiny > Všechna zařízení > Firemní předregistrovaná zařízení > Podle sériového čísla iOS| [Registrace zařízení > Registrace Apple > Sériová čísla AC](#where-did-corporate-pre-enrolled-devices-go)| |Skupiny podle IMEI (všechny platformy)| Skupiny > Všechna zařízení > Firemní předregistrovaná zařízení > Podle IMEI (všechny platformy) | [Registrace zařízení > Identifikátory podnikových zařízení](#by-imei-all-platforms)| | Profil Registrace podnikového zařízení| Policy > Corporate Device Enrollment | [Device enrollment > Apple Enrollment > Enrollment Program Profiles](#where-did-corporate-pre-enrolled-devices-go) | | Corporate Device Enrollment profile | Policy > Corporate Device Enrollment | [Device enrollment > Apple Enrollment > AC Profiles](#where-did-corporate-pre-enrolled-devices-go) | | Android for Work | Admin > Mobile Device Management > Android for Work | Device enrollment > Android for Work Enrollment | | Terms and Conditions | Policy > Terms and Conditions | Device enrollment > Terms and Conditions |
 
 
 ## <a name="where-do-i-manage-groups"></a>Kde můžu spravovat skupiny?
@@ -117,4 +106,3 @@ Abychom omezili možnost záměny obou typů profilů a potenciální nesprávn�
 
 **Profily Apple Configuratoru**
 ![Obrázek profilů Apple Configuratoru v Apple](./media/16-azure-ac-profiles.png)
-

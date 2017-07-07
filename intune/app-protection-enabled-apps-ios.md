@@ -1,7 +1,7 @@
 ---
-title: "Aplikace pro iOS se zásadami ochrany aplikací | Intune Azure Preview"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Toto téma popisuje, co očekávat, když aplikaci pro iOS spravují zásady ochrany aplikací."
+title: "Aplikace pro iOS se zásadami ochrany aplikací"
+titleSuffix: Intune on Azure
+description: "Toto téma popisuje, co můžete očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací."
 keywords: 
 author: NathBarn
 ms.author: nathbarn
@@ -15,17 +15,14 @@ ms.assetid: 586d9440-3813-4dec-b865-8bd319befde0
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 5e172b940dfae32213c870b29f05f56573192704
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 912bc5230904f5798b2e0026dcf0dd1cecdb811c
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]Toto téma popisuje činnosti uživatelů aplikací se zásadami ochrany aplikací. Zásady ochrany aplikací se použijí jenom v případě, že se aplikace používají v pracovním kontextu: třeba pro přístup k aplikacím pomocí pracovního účtu nebo pro přístup k souborům uloženým v umístění OneDrivu pro danou společnost.
+[!INCLUDE[azure_portal](./includes/azure_portal.md)] Toto téma popisuje činnosti uživatelů aplikací se zásadami ochrany aplikací. Zásady ochrany aplikací se použijí jenom v případě, že se aplikace používají v pracovním kontextu: třeba pro přístup k aplikacím pomocí pracovního účtu nebo pro přístup k souborům uloženým v umístění OneDrivu pro danou společnost.
 ##  <a name="accessing-apps"></a>Přístup k aplikacím
 
 Pokud zařízení **není zaregistrované v Intune**, zobrazí se koncovému uživateli při prvním použití aplikace výzva k restartování aplikace.  Aby se pro aplikaci mohly použít zásady ochrany aplikací, je nutné restartování. Následující snímek obrazovky ukazuje toto chování při použití aplikace Skype:
@@ -67,4 +64,3 @@ Pokud používáte zařízení s iOSem, může se při pokusu o přidání druh�
 [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](app-protection-enabled-apps-android.md)
 ### <a name="see-also"></a>Související témata
 [Vytvoření a nasazení zásad ochrany aplikací pomocí Microsoft Intune](app-protection-policies.md)
-

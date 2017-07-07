@@ -1,12 +1,12 @@
 ---
-title: "Co je správa aplikací | Dokumentace Microsoftu"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: V tomto tématu se dozvíte základy správy aplikací pomocí Microsoft Intune."
+title: "Co je správa aplikací"
+titleSuffix: Intune on Azure
+description: "V tomto tématu se dozvíte základy správy aplikací pomocí Microsoft Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/04/2017
+ms.date: 06/16/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,25 +15,22 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 56eefde5969f5426886c07bd6e9a548c8526e82e
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 515d4e2b089d077ec708fc1dea1e1747169a60ae
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 
-Jako správce IT máte pravděpodobně za úkol zajistit, aby koncoví uživatelé měli přístup k aplikacím, které potřebují ke své práci. To může být náročné z těchto důvodů:
+Jako správce IT musíte zajistit, aby koncoví uživatelé měli přístup k aplikacím, které potřebují ke své práci. To může být náročné z těchto důvodů:
 - Existuje široký sortiment platforem zařízení a typů aplikací.
 - Potřebujete spravovat aplikace na firemních zařízeních i na zařízeních vlastněných uživateli.
-- Zároveň s tím musíte zajistit, aby vaše síť a data zůstaly zabezpečené. 
+- Musíte zajistit síť a data musí zůstat zabezpečená.
 
 Navíc potřebujete přiřazovat a spravovat aplikace na zařízeních, která nejsou zaregistrovaná v Intune.
 
@@ -63,7 +60,6 @@ Intune nabízí celou řadu funkcí, které vám pomůžou zajistit, aby na pož
 
 <sup>2</sup> Platí jen pro zařízení spravovaná přes Intune.
 
-
 ## <a name="how-to-get-started"></a>Informace o tom, jak začít
 
 Většinu toho, co souvisí s aplikacemi, najdete v úloze **Mobilní aplikace**, ke které se dostanete takto:
@@ -75,12 +71,13 @@ Většinu toho, co souvisí s aplikacemi, najdete v úloze **Mobilní aplikace**
     ![Úloha Mobilní aplikace](./media/apps-workload.png)
 
 ### <a name="manage"></a>Správa
-- **Aplikace** – zde budete přidávat, přiřazovat a monitorovat většinu aplikací. 
+- **Aplikace** – v tomto uzlu budete přidávat, přiřazovat a monitorovat většinu aplikací.
     - [Přidání aplikací](apps-add.md)
     - [Přiřazení aplikací](apps-deploy.md)
     - [Monitorování aplikací](apps-monitor.md)
-- **Zásady konfigurace aplikací** – zásady konfigurace aplikací umožňují určit nastavení, která se můžou požadovat, když uživatel spustí nějakou aplikaci. Podrobnosti najdete v tématech:
-    - [Zásady konfigurace aplikací](app-configuration-policies.md)
+- **Zásady konfigurace aplikací** – zásady konfigurace aplikací umožňují určit nastavení, která se můžou požadovat, když uživatel spustí nějakou aplikaci.
+    - [Zásady konfigurace aplikací pro iOS](app-configuration-policies-use-ios.md)
+    - [Zásady konfigurace aplikací pro Android](app-configuration-policies-use-android.md)
 - **Zásady ochrany aplikací** – zde můžete k aplikaci přidružit nastavení pomáhající chránit firemní data, která tato aplikace používá. Můžete například omezit možnosti komunikace aplikace s jinými aplikacemi nebo vyžadovat, aby uživatel při přístupu k firemní aplikaci zadal PIN kód.
     - [Zásady ochrany aplikací](app-protection-policies.md)
 - **Selektivní vymazání aplikace** – umožňuje z vybraného zařízení uživatele vymazat jen firemní data.
@@ -100,8 +97,7 @@ Podrobnosti najdete v článku [Monitorování aplikací](apps-monitor.md).
 ### <a name="setup"></a>Nastavení
 <!--- **iOS VPP Tokens**
     - [iOS volume-purchased apps](vpp-apps-ios.md) --->
-- **Windows Store pro firmy** – integrace nastavení do Windows Storu pro firmy. Až to uděláte, můžete zakoupené aplikace synchronizovat s Intune, přiřazovat je a sledovat využití licencí. 
+- **Windows Store pro firmy** – integrace nastavení do Windows Storu pro firmy. Potom můžete zakoupené aplikace synchronizovat s Intune, přiřazovat je a sledovat využití licencí.
     - [Aplikace hromadně zakoupené ve Windows Storu pro firmy](windows-store-for-business.md)
-- **Značky Portálu společnosti** – Portál společnosti můžete přizpůsobit o značku své firmy. 
+- **Značky Portálu společnosti** – Portál společnosti můžete přizpůsobit o značku své firmy.
     - [Konfigurace Portálu společnosti](company-portal-app.md)
-
