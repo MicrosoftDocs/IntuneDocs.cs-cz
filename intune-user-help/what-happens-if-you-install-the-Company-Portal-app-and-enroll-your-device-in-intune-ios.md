@@ -11,22 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: a2467c02-aac5-41c8-b788-cbda830941ef
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ed0e84c16ea540c08e97cb55ef8a09cbc7339f6
 ms.openlocfilehash: b0205ebce012912cacc738382cadf56a355482f0
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/25/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-ios-or-macos-device-in-intune"></a>Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s iOSem nebo macOS v Intune?
 
 Když nainstalujete aplikaci Portál společnosti a pak v ní zaregistrujete své zařízení s iOSem nebo macOS v Intune, můžete v aplikaci Portál společnosti provádět tyto kroky:
@@ -68,4 +63,3 @@ Po registraci vašeho zařízení může správce IT provádět tyto akce:
 -   Povolit nebo zakázat automatickou synchronizaci souborů v režimu roamingu v zařízení. Pokud je automatická synchronizace souborů povolená, můžou se vám účtovat poplatky za roaming.
 
 Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
-

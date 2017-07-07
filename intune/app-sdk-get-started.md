@@ -14,15 +14,12 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: 1d61432eafef67ca997d4e03d305e1c068ac5fd6
-ms.contentlocale: cs-cz
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
 
 Tato příručka vám pomůže rychle povolit u vaší mobilní aplikace zásady ochrany aplikací pomocí Microsoft Intune. Může být vhodné se nejdříve seznámit s výhodami sady Intune App SDK, které jsou vysvětlené v [Přehledu sady Intune App SDK](app-sdk.md).
@@ -139,4 +136,3 @@ Jde o ikonu aktovky a můžete si ji prohlédnout níže:
 * Aplikaci pro zpracování obrázků, která umí přečíst soubory **.eps**, nebo aplikaci Adobe, která umí přečíst soubory **.ai**.
 
 * Na Githubu pro Microsoft Intune najdete [prostředky a pokyny pro označení aplikace pro Intune](https://github.com/msintuneappsdk/intune-app-partner-badge).
-

@@ -11,26 +11,22 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 7adab655-8317-4512-ba7d-beeaa25bbf6c
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 62e37d42aef9a828551db1fbbcf5e3cb1b3eeec9
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="you-need-to-install-lookout-for-work-on-your-ios-device"></a>Na zařízení s iOSem je potřeba si nainstalovat aplikaci Lookout for Work
 
 Než budete moci začít pracovat, správce IT potřebuje, abyste nainstalovali aplikaci Lookout for Work. Ta pomáhá chránit vaše zařízení hledáním potenciálních bezpečnostních hrozeb. V závislosti na tom, jak váš správce IT aplikaci Lookout for Work nastavil, se vám v zařízení můžou zobrazit různé výzvy.
 
 **Co je potřeba udělat:**
 
-1.    Pokud se zobrazí následující výzva, klepnutím na **Nainstalovat** umožněte nainstalování aplikace Lookout for Work do zařízení.
+1.  Pokud se zobrazí následující výzva, klepnutím na **Nainstalovat** umožněte nainstalování aplikace Lookout for Work do zařízení.
 
   ![Klepnutím na Nainstalovat nainstalujte aplikaci Lookout for Work](./media/ios-mtd-install-app-request.png)
 
@@ -55,4 +51,3 @@ Pokud aplikace Lookout for Work najde ve vašem zařízení bezpečnostní hrozb
 **Pokud instalace nefunguje**
 
 V některých případech může instalace selhat kvůli technickým problémům mimo vaši kontrolu. V takovém případě se obraťte na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-

@@ -1,7 +1,7 @@
 ---
-title: "Nastavení základní správy dat v aplikacích Office 365 – Intune Azure Preview"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Podpůrná dokumentace pro průvodce Správa aplikací Office 365"
+title: "Nastavení základní správy dat aplikací Office 365 v Intune"
+titleSuffix: Intune on Azure
+description: "Podpůrná dokumentace k průvodci správou aplikací Office 365."
 keywords: 
 author: lindavr
 ms.author: lindavr
@@ -16,16 +16,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: ayesham
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 639d045e036ecdc6ff40d6ae335d2c5109d9e420
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 302f646bfb9ff0ac024687fa0b3926d83158995c
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps"></a>Jak vaši uživatelé budou moct používat základní ochranu ve spravovaných aplikacích Office 365
 
 Průvodce **Správa aplikací Office 365** vytvoří zásady ochrany aplikací pro jednotlivé platformy zařízení.
@@ -129,9 +125,8 @@ V Androidu se data aplikací přidružených k zásadám Intune MAM šifrují sy
 Vždy můžete tato nastavení zásad upravit tak, aby odpovídala požadavkům vaší organizace.
 
 ### <a name="how-can-i-view-and-edit-the-policies-created-by-the-wizard"></a>Jak můžu zobrazit a upravit zásady, které vytvořil průvodce?
-Pokud chcete upravit tyto zásady nebo zásady vytvořené v Intune Azure Preview, zvolte na řídicím panelu **Spravovat aplikace** > **Zásady ochrany aplikací**. Vpravo se otevře seznam zásad. Zvolte zásadu, kterou si chcete zobrazit, a zobrazí se vám její nastavení, která můžete upravit. <br/>
+Pokud chcete tyto zásady, nebo jiné zásady vytvořené na portálu Azure pro Intune, zobrazit nebo aktualizovat, zvolte na řídicím panelu **Spravovat aplikace** > **Zásady ochrany aplikací**. Vpravo se otevře seznam zásad. Zvolte zásadu, kterou si chcete zobrazit, a zobrazí se vám její nastavení, která můžete upravit. <br/>
 ![Snímek cesty uživatelského rozhraní pro zobrazení zásad](./media/image-for-faq.png)
 
 ## <a name="next-steps"></a>Další kroky
 Další informace o [zásadách ochrany aplikací](https://docs.microsoft.comapp-protection-policy.md)
-

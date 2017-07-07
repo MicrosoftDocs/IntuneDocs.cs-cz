@@ -1,7 +1,7 @@
 ---
-title: "Přidání obchodních aplikací pro Windows do Intune | Dokumentace Microsoftu"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Zjistěte, jak do Intune přidat obchodní aplikace pro Windows."
+title: "Přidání obchodních aplikací pro Windows do Intune"
+titleSuffix: Intune on Azure
+description: "Podívejte se, jak do Intune přidat obchodní aplikace pro Windows."
 keywords: 
 author: robstackmsft
 ms.author: robstack
@@ -15,17 +15,15 @@ ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 696c8f8e72e21c792474f5e52fad9054b3dfade9
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: 8f8be4f6bf47ceb966e9042465dc8839d9aa9119
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-add-windows-line-of-business-lob-apps-to-microsoft-intune"></a>Přidání obchodních aplikací pro Windows do Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 
 ## <a name="step-1---specify-the-software-setup-file"></a>Krok 1 – určení instalačního souboru softwaru
@@ -68,4 +66,3 @@ ms.lasthandoff: 05/23/2017
 2. Zvolte **Přidat** a nahrajte aplikaci do Intune.
 
 Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřadit ke zvoleným skupinám. Nápovědu najdete v článku [Přiřazení aplikací do skupin](apps-deploy.md).
-

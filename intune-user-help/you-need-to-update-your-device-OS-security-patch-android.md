@@ -11,19 +11,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: b3e5994c-d215-4c72-8915-349bd0b2504d
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 6b25c4551cd66e2e58b12c90ca9055c14b4e33cd
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="you-need-to-update-your-android-devices-operating-system"></a>Potřebujete si aktualizovat operační systém zařízení s Androidem
 
 Pokud se vám zobrazila zpráva, která říká, že vaše minimální úroveň opravy zabezpečení Androidu není nakonfigurovaná, je třeba nainstalovat aktualizaci, aby zařízení zůstalo zabezpečené. _Oprava_ se vydává jako údržba softwaru, aby fungoval bez obtíží a byl aktuální. Váš správce IT po vás vyžaduje, abyste si tuto opravu nainstalovali, aby bylo zajištěno, že podniková data jsou na vašem zařízení co nejlépe chráněná. Umístění potřebné opravy zabezpečení se bude lišit v závislosti na tom, zda máte konkrétní typ zařízení Samsung.
@@ -43,4 +39,3 @@ Přejděte do části **Nastavení** > **Aktualizace systému** > **Zkontrolovat
 
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-
