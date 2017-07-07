@@ -1,5 +1,5 @@
 ---
-title: "Referenční informace o zásadách konfigurace | Dokumentace Microsoftu"
+title: "Referenční informace o zásadách konfigurace"
 description: "Informace v tomto tématu vám pomohou rozhodnout, jaké zásady Microsoft Intune byste měli používat ke správě svých zařízení."
 keywords: 
 author: robstackmsft
@@ -14,15 +14,12 @@ ms.assetid: d27f2739-9791-4aae-a9db-01a4e59ccfe5
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 986e720f2b0722dd3f16e35f54c975eac5a12153
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: af13a591bdd0e3185a92702aab093d9ae3bc6434
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="microsoft-intune-configuration-policy-reference"></a>Referenční informace o zásadách konfigurace služby Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -55,7 +52,7 @@ Informace v tomto tématu vám pomohou rozhodnout, které zásady konfigurace Mi
 |**E-mailový profil (iOS 8.0 a novější)**|Vytvořit, nasadit a monitorovat nastavení e-mailů Exchange ActiveSync na spravovaných zařízeních. Díky tomu mají uživatelé na svých osobních zařízeních přístup k podnikovému e-mailu, bez nutnosti něco nastavovat.<br /><br />Podrobnosti najdete v tématu [Konfigurace přístupu k podnikovému e-mailu pomocí e-mailových profilů v Microsoft Intune](configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune.md).|
 |**Obecná konfigurace (iOS 8.0 a novější)**|Nakonfigurovat zabezpečení mobilního zařízení a funkční nastavení<br />Zadat aplikace, které jsou (nebo nejsou) v souladu s předpisy, a zobrazit zprávu o jejich používání<br />Nakonfigurovat celoobrazovkový režim, ve kterém můžete zařízení zamknout, a povolit fungování jenom některých funkcí, třeba můžete povolit, aby na zařízení běžela jenom jedna aplikace, nebo můžete zakázat tlačítka hlasitosti.<br /><br />Podrobnosti najdete v tématu [Nastavení zásad pro iOS v Microsoft Intune](ios-policy-settings-in-microsoft-intune.md).|
 |**Zásady konfigurace mobilních aplikací (iOS 8.0 a novější)**|Použít zásady konfigurace mobilních aplikací k automatickému poskytování zásad, které se můžou požadovat, když uživatel spustí aplikaci pro iOS.<br /><br />Podrobnosti najdete v tématu [Konfigurace aplikací pro iOS pomocí zásad konfigurace mobilních aplikací v Microsoft Intune](configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune.md).|
-|**Zásady mobilních zřizovacích profilů (iOS 8.0 a novější)**|Mobilní obchodní aplikace pro Apple iOS jsou vytvořeny tak, že obsahují zřizovací profil a kód podepsaný certifikátem. Když se taková aplikace spustí na zařízení s iOS, iOS ověří její integritu a vynutí zásady definované jejím zřizovacím profilem.<br><br>Podpisový certifikát společnosti, který se používá k podepisování aplikací, má obvykle platnost tři roky. Platnost zřizovacího profilu ale vyprší po jednom roce. Pomocí těchto zásad můžete proaktivně nasadit nové zásady zřizovacích profilů do zařízení, ve kterých se aplikace blíží vypršení data platnosti, ale certifikát je stále platný.<br><br>Další podrobnosti najdete v tématu [Použití mobilních zásad zřizovacích profilů pro iOS k tomu, aby se zabránilo vypršení platnosti aplikací](ios-mobile-app-provisioning-profiles.md).|
+|**Zásady mobilních zřizovacích profilů (iOS 8.0 a novější)**|Mobilní obchodní aplikace pro Apple iOS jsou vytvořeny tak, že obsahují zřizovací profil a kód podepsaný certifikátem. Když se taková aplikace spustí na zařízení s iOSem, iOS ověří její integritu a vynutí zásady definované jejím zřizovacím profilem.<br><br>Podpisový certifikát společnosti, který se používá k podepisování aplikací, má obvykle platnost tři roky. Platnost zřizovacího profilu ale vyprší po jednom roce. Pomocí těchto zásad můžete proaktivně nasadit nové zásady zřizovacích profilů do zařízení, ve kterých se aplikace blíží vypršení data platnosti, ale certifikát je stále platný.<br><br>Další podrobnosti najdete v tématu [Použití mobilních zásad zřizovacích profilů pro iOS k tomu, aby se zabránilo vypršení platnosti aplikací](ios-mobile-app-provisioning-profiles.md).|
 |**Profil certifikátu PKCS #12 (.PFX) (iOS 8.0 a novější)**|Použít tento profil k vytvoření a nasazení nastavení .PFX pro požadavky certifikátů zařízení.<br /><br />Podrobnosti najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů v Microsoft Intune](secure-resource-access-with-certificate-profiles.md).|
 |**Profil certifikátu SCEP (iOS 8.0 a novější)**|Konfigurovat certifikát protokolu SCEP, který můžete použít společně s certifikátem důvěryhodného mobilního zařízení k ověřování mobilních zařízení a povolení jejich přístupu k síťovým prostředkům, například konfigurovaných pomocí profilů Wi-Fi a VPN.<br /><br />Podrobnosti najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů v Microsoft Intune](secure-resource-access-with-certificate-profiles.md).|
 |**Profil důvěryhodného certifikátu (iOS 8.0 a novější)**|Konfigurovat certifikát důvěryhodného mobilního zařízení, který můžete použít k ověřování mobilních zařízení a povolení jejich přístupu k síťovým prostředkům, například nakonfigurovaným pomocí profilů Wi-Fi a VPN.<br /><br />Podrobnosti najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů v Microsoft Intune](secure-resource-access-with-certificate-profiles.md).|
@@ -122,4 +119,3 @@ Microsoft Intune teď nabízí oddělené **zásady konfigurace** pro každou pl
 ### <a name="see-also"></a>Viz taky
 
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-

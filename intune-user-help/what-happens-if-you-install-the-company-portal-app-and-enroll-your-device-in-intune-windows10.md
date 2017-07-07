@@ -11,21 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 0dc35efe-4fd4-4d4a-8569-d649ea704fea
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ed0e84c16ea540c08e97cb55ef8a09cbc7339f6
 ms.openlocfilehash: 0f5c1eb76f823c72904bad7543409d9efa9e93e6
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/25/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-10-device-in-intune"></a>Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Windows 10 v Intune?
 
 Když nainstalujete aplikaci Portál společnosti a potom v ní zaregistrujete svoje zařízení s Windows 10 Enterprise nebo Professional do služby Intune, můžete pomocí aplikace Portál společnosti provádět tyto akce:
@@ -57,4 +53,3 @@ Když přidáte počítač:
 -   Může ve vašem počítači vynutit dodržování určitých zásad. Například může vyžadovat, abyste v počítači nastavili heslo nebo kód PIN. Správce IT může také omezit počet možných zadání nesprávného hesla. Když se tento počet překročí, může se počítač zablokovat nebo se můžou odstranit všechna data z pevného disku počítače.
 
 Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
-

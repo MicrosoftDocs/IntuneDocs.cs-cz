@@ -11,19 +11,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: b40595f0-a399-4aa1-aa6f-344c2a1cb883
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: c7cdb0106da1d81843f7dd07d0986d597b94a77c
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="you-need-to-resolve-a-threat-found-by-skycure"></a>Je třeba vyřešit hrozbu, kterou objevila aplikace Skycure
 
 Aplikace Skycure našla na zařízení potenciální hrozbu a tento problém je potřeba vyřešit, než budete moct znovu přistupovat ke svým firemním nebo školním e-mailům, aplikacím a souborům. Zpráva, kterou uvidíte, může vypadat takto:
@@ -49,4 +45,3 @@ Klepněte na název aplikace v horní části obrazovky a podle pokynů hrozbu o
 Po odinstalaci aplikace ihned znovu získáte přístup k e-mailu a dalším datům společnosti nebo školy. Pokud budete požadavek na odinstalaci aplikace ignorovat, ztratíte přístup k firemnímu e-mailu a datům, dokud aplikaci neodinstalujete.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-

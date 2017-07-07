@@ -1,12 +1,12 @@
 ---
-title: "Konfigurace certifikátů pomocí Intune | Dokumentace Microsoftu"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Naučte se pomocí Intune vytvářet a přiřazovat certifikáty, které vám pomůžou zabezpečit Wi-Fi, VPN a další připojení."
+title: "Konfigurace certifikátů pomocí Intune"
+titleSuffix: Intune on Azure
+description: "Získejte informace, jak pomocí Intune vytvářet a přiřazovat certifikáty, které vám pomůžou zabezpečit Wi-Fi, VPN a další připojení."
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 05/02/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,15 @@ ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 81c7e04d4b4cc7599b63917e5507775b38b65ba7
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: da23a0c79c5e0e178e52e956561e2764268d09df
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-configure-certificates-in-microsoft-intune"></a>Konfigurace certifikátů v Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Když uživatelům poskytnete přístup k podnikovým prostředkům prostřednictvím sítě VPN, Wi-Fi nebo e-mailových profilů, můžete tato připojení ověřovat pomocí certifikátů. Tím odpadne nutnost zadávat uživatelské jméno a heslo pro ověření připojení.
 
@@ -56,8 +53,8 @@ Každý z těchto typů certifikátů má vlastní požadované součásti a po�
 
     Pro zařízení s následujícími platformami můžete použít jenom profil certifikátu SCEP:
 
--     macOS 10.9 a novější
--     Windows Phone 8.1 a novější
+-   macOS 10.9 a novější
+-   Windows Phone 8.1 a novější
 
 Pro každou platformu zařízení musíte vytvořit samostatný profil. Při vytváření profil přidružíte k profilu důvěryhodného kořenového certifikátu, který jste vytvořili dříve.
 
@@ -88,7 +85,7 @@ Před vytvořením profilu certifikátu SCEP nebo PKCS musíte vytvořit profil 
 ### <a name="to-create-a-trusted-certificate-profile"></a>Vytvoření profilu důvěryhodného certifikátu
 
 1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Jiné** > **Intune**.
+2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 3. V okně **Intune** zvolte **Konfigurace zařízení**.
 2. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
 3. V okně profilů zvolte **Vytvořit profil**.
@@ -128,4 +125,3 @@ Po vytvoření profilu důvěryhodného certifikátu vytvořte profily certifik�
 
 ## <a name="next-steps"></a>Další kroky
 Obecné informace o tom, jak přiřadit profily zařízení, najdete v tématu [Jak přiřadit profily zařízení](device-profile-assign.md).
-

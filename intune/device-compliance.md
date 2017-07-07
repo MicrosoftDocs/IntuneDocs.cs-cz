@@ -1,7 +1,7 @@
 ---
 title: "Dodržování předpisů zařízení"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: V tomto tématu se dozvíte o dodržování předpisů zařízením v Microsoft Intune."
+titleSuffix: Intune on Azure
+description: "V tomto tématu se dozvíte o dodržování předpisů zařízením v Microsoft Intune."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,18 +15,15 @@ ms.assetid: a916fa0d-890d-4efb-941c-7c3c05f8fe7c
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 2aec7463b9a2b3bdaa78281fca0bbb39dcd3f884
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: a747d577a28433635883ad6c4fe4c858e75902d0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
+# <a name="what-is-device-compliance-in-intune"></a>Co je dodržování předpisů zařízením v Intune?
 
-# <a name="what-is-device-compliance-in-intune-azure-preview"></a>Co je dodržování předpisů zařízením v Intune Azure Preview?
-
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Zásady dodržování předpisů pro zařízení v Intune určují nastavení a pravidla, která musí zařízení dodržovat, aby se dalo považovat za zařízení, které dodržuje zásady podmíněného přístupu Intune a EMS. Zásady dodržování předpisů pro zařízení můžete používat i k monitorování a řešení problémů s dodržováním předpisů u zařízení. 
 
@@ -79,7 +76,7 @@ Při nezávislém použití zásad dodržování předpisů se cílová zaříze
 
 Zásady dodržování předpisů se nasazují uživatelům. Po nasazení zásady dodržování předpisů uživateli se u jeho zařízení kontroluje dodržování předpisů. Další informace o tom, jak dlouho trvá, než mobilní zařízení načte zásady po jejich nasazení, najdete v článku Správa nastavení a funkcí na vašich zařízeních.
 
-##  <a name="intune-classic-admin-console-vs-intune-azure-preview-portal"></a>Klasická konzola pro správu Intune a portál Intune Azure Preview – rozdíly
+##  <a name="intune-classic-admin-console-vs-intune-on-the-azure-portal"></a>Klasická konzola pro správu Intune a Intune na portálu Azure Portal
 
 Pokud používáte klasickou konzolu pro správu Intune, je dobré vědět o následujících rozdílech. Pomůže vám to při přechodu na nový pracovní postup zásad dodržování předpisů pro zařízení na portálu Azure Portal:
 
@@ -89,7 +86,7 @@ Pokud používáte klasickou konzolu pro správu Intune, je dobré vědět o ná
 
 -   In the Azure portal, you can set a grace period to allow time for the end-user to get their device back to compliance status before they completely lose the ability to get company data on their device. This is not available in the Intune admin console.--->
 
-##  <a name="migration-from-intune-classic-console-to-intune-azure-preview-portal"></a>Migrace z klasické konzoly Intune na portál Intune Azure Preview
+##  <a name="migration-from-intune-classic-console-to-intune-on-the-azure-portal"></a>Migrace z klasické konzoly pro správu Intune na Intune na portálu Azure Portal
 
 Zásady dodržování předpisů pro zařízení vytvořené v [klasické konzole Intune](https://manage.microsoft.com) se nezobrazí na novém [portálu Azure Portal pro Intune](https://portal.azure.com). Budou ale nadále účinné pro uživatele a bude je možné spravovat prostřednictvím klasické konzoly Intune.
 
@@ -103,4 +100,3 @@ Pokud chcete využívat nové funkce související s dodržováním předpisů p
 <!---### See also
 
 Conditional access--->
-
