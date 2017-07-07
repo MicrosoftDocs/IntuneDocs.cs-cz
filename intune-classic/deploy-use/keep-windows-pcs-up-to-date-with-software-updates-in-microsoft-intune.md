@@ -1,5 +1,5 @@
 ---
-title: "Aktualizace softwaru pro počítače s Windows | Dokumentace Microsoftu"
+title: "Aktualizace softwaru pro počítače s Windows"
 description: "Intune pomáhá udržovat spravované počítače aktuální díky zajištění rychlé instalace nejnovějších oprav a aktualizací softwaru."
 keywords: 
 author: robstackmsft
@@ -14,16 +14,16 @@ ms.assetid: 48e9c41a-d2de-424e-9610-cfd1ad514210
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 5530c1a85c53f76f94d5ebf6d356bfebd1aa2adb
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 1243d52f3d135ac02b9451022451bf9cf8c7304b
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune"></a>Udržování počítačů s Windows v aktuálním stavu díky softwarovým aktualizacím v Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Microsoft Intune vám může pomoct zabezpečit spravované počítače mnoha způsoby, včetně správy softwarových aktualizací, které udržují počítače v aktuálním stavu, protože zajišťují, že se rychle nainstalují nejnovější opravy a aktualizace.
 
 Pokud jste ještě na svých počítačích nenainstalovali klienta Intune, přečtěte si téma [Instalace klienta na počítači s Windows pomocí Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
@@ -255,4 +255,3 @@ Po výběru aktualizace ze seznamu budete moct použít další příkazy, kter�
 
 ### <a name="see-also"></a>Související témata
 [Zásady ochrany počítačů se systémem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)
-

@@ -1,5 +1,5 @@
 ---
-title: "Pochopení operací pomocí sestav | Dokumentace Microsoftu"
+title: "Použití sestav k pochopení operací"
 description: "Vytváření a správa sestavo softwaru, hardwaru a licencích k softwaru ve vaší organizaci"
 keywords: 
 author: robstackmsft
@@ -14,16 +14,12 @@ ms.assetid: 857309c2-61c9-4c22-becf-4839fedeaece
 ms.reviewer: pbala
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: d16374606d60f3b09dc24b3c4ef4f196a739b32e
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
-
+ms.openlocfilehash: c433acc553b1f89789cdb72a33e8dbbc7929bae0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="understand-microsoft-intune-operations-by-using-reports"></a>Pochopení operací Microsoft Intune pomocí sestav
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -73,6 +69,5 @@ Sestavy navíc podporují následující akce:
 |**Uložení**|Na stránce **Vytvořit novou sestavu** může každý uživatel uložit až 100 sestav. Konfigurujte parametry sestavy podle svých požadavků a pak vyberte **Uložit**nebo **Uložit jako** (pokud chcete použít jiný název).|
 |**Načtení**|Na stránce **Vytvořit novou sestavu** vyberte **Načíst**, pokud chcete načíst některou z dříve uložených sad parametrů sestavy.|
 |**Odstranit**|V pracovním prostoru **Sestavy** vyberte požadovaný typ sestavy a zvolte **Načíst**. Potom v seznamu sestav vyberte ikonu odstranění (x), která se nachází vedle sestavy.|
-
 
 

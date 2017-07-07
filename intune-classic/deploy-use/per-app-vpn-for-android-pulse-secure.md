@@ -1,11 +1,11 @@
 ---
-title: "VPN pro aplikaci pro Android pomocí Pulse Secure | Dokumentace Microsoftu"
+title: "Vytvoření profilu VPN aplikace pro Android pomocí připojení Pulse Secure"
 description: "Pro zařízení s Androidem spravovaná pomocí Intune můžete vytvořit profil VPN pro aplikaci."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 01/12/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,12 @@ ms.assetid: ac65e906-3922-429f-8d9c-d313d3126645
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 6786ac87c34e913ba71cd203f431f746df816459
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 262cc461d5c1790fdfb162d5453a9cebd48271c4
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="use-a-custom-policy-to-create-a-per-app-vpn-profile-for-android-devices"></a>Použití vlastních zásad pro vytvoření profilu sítě VPN pro aplikaci pro zařízení se systémem Android
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -45,7 +42,7 @@ Po nasazení zásad pro skupiny zařízení nebo uživatelů Android by uživate
 
 > [!NOTE]
 >
-> Poznamenejte si název profilu sítě VPN pro použití v dalším kroku. Například profil_VPN_pro_moje_aplikace.
+> Poznamenejte si **název připojení VPN (zobrazený uživatelům)**. Tuto hodnotu jste zadali při vytvoření profilu VPN. Budete ji potřebovat v dalším kroku. Příklad: **profil_VPN_pro_moje_aplikace**.
 
 ### <a name="step-2-create-a-custom-configuration-policy"></a>Krok 2: Vytvoření vlastní zásady konfigurace
 
@@ -55,7 +52,7 @@ Po nasazení zásad pro skupiny zařízení nebo uživatelů Android by uživate
    4. Zadejte název nastavení.
    5. Jako **Datový typ** určete **String** (Řetězec).
    6. Pro **OMA-URI** zadejte tento řetězec: **./Vendor/MSFT/VPN/Profile/*název*/PackageList**, kde *název* je název profilu VPN, který jste si poznamenali v kroku 1. V našem příkladu by se tedy použil řetězec **./Vendor/MSFT/VPN/Profile/profil_VPN_pro_moje_aplikace/PackageList**.
-   7.    Do pole **Hodnota** zadejte seznam balíčků (oddělených středníkem), které mají být k tomuto profilu přidružené. Pokud třeba chcete, aby připojení VPN používal Excel a prohlížeč Google Chrome, zadejte **com.microsoft.office.excel;com.android.chrome**.
+   7.   Do pole **Hodnota** zadejte seznam balíčků (oddělených středníkem), které mají být k tomuto profilu přidružené. Pokud třeba chcete, aby připojení VPN používal Excel a prohlížeč Google Chrome, zadejte **com.microsoft.office.excel;com.android.chrome**.
 
 ![Příklad vlastní zásady VPN pro aplikaci pro Android](./media/android_per_app_vpn_oma_uri.png)
 
@@ -80,4 +77,3 @@ Další možností je určit pomocí hodnoty **WHITELIST** aplikace, které *jed
     -   **Pokud chcete dialogové okno zavřít bez nasazení zásady**, zvolte **Zrušit**.
 
 Shrnutí stavu a výstrahy na stránce **Přehled** v pracovním prostoru **Zásady** identifikují problémy se zásadami, které vyžadují vaši pozornost. Kromě toho se v pracovním prostoru **Řídicí panel** zobrazí shrnutí stavu.
-

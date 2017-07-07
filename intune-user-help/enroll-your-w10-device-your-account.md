@@ -11,21 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 43b738b7-6a56-498a-a433-112da5104876
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b5ad9cc6c03712090398cacb3d4bb653deb1d2a4
 ms.openlocfilehash: 39d2dad94b949a39451dca79431be22782cddcb8
-ms.contentlocale: cs-cz
-ms.lasthandoff: 06/12/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="enroll-your-windows-10-device-in-intune"></a>Registrace zařízení s Windows 10 v Intune
 
   > [!NOTE]
@@ -67,4 +63,3 @@ Pokud aplikaci Portál společnosti v seznamu nenajdete, nainstalujte ji podle n
 3. V seznamu výsledků vyberte **Portál společnosti** > **Instalovat**.
 
 4. Vyberte buď **Instalovat**, nebo **Zdarma**. Mezi těmito dvěma možnostmi pro vás není žádný rozdíl. Co se vám zobrazí, závisí na tom, jak vaše organizace nastavila aplikaci Portál společnosti.
-

@@ -14,15 +14,12 @@ ms.assetid: 679a20a1-e66f-4b6b-bd8f-896daf1f8175
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: aaf7bf3cb05708457c57070f4a300ece987421c3
-ms.contentlocale: cs-cz
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="configure-intune-certificate-profiles"></a>Konfigurace profilů certifikátů Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -158,4 +155,3 @@ Dál zjistěte, jak pomocí certifikátů zabezpečit profily e-mailu, Wi-Fi a V
 -  [Konfigurace přístupu k podnikovému e-mailu pomocí e-mailových profilů](configure-access-to-corporate-email-using-email-profiles-with-Microsoft-Intune.md)
 -  [Připojení Wi-Fi v Microsoft Intune](wi-fi-connections-in-microsoft-intune.md)
 -  [Připojení VPN v Microsoft Intune](vpn-connections-in-microsoft-intune.md)
-

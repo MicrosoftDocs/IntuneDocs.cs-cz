@@ -1,5 +1,5 @@
 ---
-title: "Nastavení zásad pro iOS | Dokumentace Microsoftu"
+title: "Nastavení zásad pro iOS"
 description: "Vytvořte zásady, které řídí nastavení a funkce na zařízeních s iOSem, která spravujete pomocí Intune."
 keywords: 
 author: robstackmsft
@@ -14,15 +14,12 @@ ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 3a59391aaf241e52f59bb3ff5de3eae84c496c51
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ba270c2bb8780db6bc230022446f982b81f8a2ee
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="ios-policy-settings-in-microsoft-intune"></a>Nastavení zásad pro iOS v Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -88,7 +85,7 @@ Všechna nastavení platí pro iOS 8.0 a novější.
 |**Povolit spravovaným aplikacím synchronizaci dat s iCloudem**|Povolí aplikacím, které spravujete přes Intune, synchronizaci dat s uživatelským účtem iCloudu.|
 |**Povolit, aby Handoff pokračoval v činnosti na jiném zařízení**|Umožní uživateli, aby v práci, kterou zahájil na zařízení s iOSem, pokračoval na jiném zařízení s iOSem nebo Mac OS X.|
 |**Povolit sdílení fotek na iCloudu**|Pokud chcete na zařízení zakázat **Sdílení fotek na iCloudu**, nastavte možnost na **Ne**.|
-|**Povolit Knihovnu fotografií na iCloudu**|Pokud je možnost nastavená na **Ne**, zakáže použití knihovny fotografií iCloudu, přes kterou můžou uživatelé ukládat fotografie a videa v cloudu.    Všechny fotky, které nejsou kompletně stažené z Knihovny fotografií na iCloudu do zařízení, se ze zařízení odeberou, pokud je tato možnost nastavená na **Ne**.|
+|**Povolit Knihovnu fotografií na iCloudu**|Pokud je možnost nastavená na **Ne**, zakáže použití knihovny fotografií iCloudu, přes kterou můžou uživatelé ukládat fotografie a videa v cloudu.   Všechny fotky, které nejsou kompletně stažené z Knihovny fotografií na iCloudu do zařízení, se ze zařízení odeberou, pokud je tato možnost nastavená na **Ne**.|
 
 ### <a name="application-settings-for-the-browser"></a>Nastavení aplikace pro prohlížeč
 Všechna nastavení platí pro iOS 8.0 a novější.
@@ -387,4 +384,3 @@ Než začnete, je potřeba nainstalovat Apple Configurator a vytvořit konfigura
 
 ### <a name="see-also"></a>Související témata
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-

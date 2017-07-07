@@ -1,5 +1,5 @@
 ---
-title: Ochrana e-mailu a Office 365 | Dokumentace Microsoftu
+title: Ochrana e-mailu a Office 365
 description: "Toto téma popisuje, jak můžete pomocí podmíněného přístupu povolit přístup k podnikovému e-mailu, podnikovým datům na SharePointu Online a k dalším službám jenom kompatibilním zařízením."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: c564d292-b83b-440d-bf08-3f5b299b7a5e
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: fc89c1b5b502f00bab5ed02f6e7df6422241aeb1
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 3405671130a58aa944d6c689264379a254face1d
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="protect-access-to-email-office-365-and-other-services-with-microsoft-intune"></a>Ochrana přístupu k e-mailu, Office 365 a dalším službám pomocí Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -51,7 +48,7 @@ Microsoft Intune a Azure Active Directory (Azure AD) Premium hladce spolupracuj�
 
 - Další informace najdete na [stránce s cenami služby Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) nebo na [stránce s cenami služby Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
-Dále ověřte, jestli uživatelé, kteří mají zásady podmíněného přístupu používat, mají [přiřazené licence Azure AD Premium nebo EMS](/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4.md).
+Dále ověřte, jestli uživatelé, kteří mají zásady podmíněného přístupu používat, mají [přiřazené licence Azure AD Premium nebo EMS](/intune/licenses-assign).
 
 ### <a name="device-compliance-settings"></a>Nastavení dodržování předpisů pro zařízení
 
@@ -83,4 +80,3 @@ Na rozdíl od jiných zásad služby Intune se zásady podmíněného přístupu
   - [Vytvoření zásady podmíněného přístupu pro SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
   - [Vytvoření zásady podmíněného přístupu pro Online Skype pro firmy](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
   - [Vytvoření zásady podmíněného přístupu pro Dynamic CRM Online](restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
-

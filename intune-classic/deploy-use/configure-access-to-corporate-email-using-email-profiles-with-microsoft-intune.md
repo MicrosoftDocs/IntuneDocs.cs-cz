@@ -1,5 +1,5 @@
 ---
-title: "Přístup k podnikovému e-mailu pomocí e-mailových profilů | Dokumentace Microsoftu"
+title: "Přístup k podnikovému e-mailu pomocí e-mailových profilů"
 description: "Nastavení e-mailového profilu se dá použít ke konfiguraci nastavení přístupu k e-mailům pro určité e-mailové klienty na mobilních zařízeních."
 keywords: 
 author: robstackmsft
@@ -14,15 +14,12 @@ ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 21eee53a4e3674dc28b01311a61dda0d71f9f7fa
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 87bf5c96ee29f8a39b875543c4f6a3731f3e604e
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune"></a>Konfigurace přístupu k podnikovému e-mailu pomocí e-mailových profilů v Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -36,11 +33,11 @@ Pokud potřebujete další opatření před únikem informací, vyberte [Podmín
 Správci IT nebo uživatelé si také můžou nainstalovat alternativní e-mailové klienty (třeba Microsoft Outlook pro Android nebo iOS). Tito e-mailoví klienti nemusí e-mailové profily podporovat a nejde je nastavit pomocí e-mailových profilů Microsoft Intune.  
 
 E-mailové profily můžete použít ke konfiguraci nativních e-mailových klientů na těchto typech zařízení:
--    Windows Phone 8.1 nebo novější
--    Windows 10 (pro počítače), Windows 10 Mobile a novější
--    iOS 8.0 a novější
--    Samsung KNOX Standard (4.0 a novější)
--    Android for Work (e-mailové aplikace třetích stran, nativní e-mailová aplikace je pouze pro osobní profil)
+-   Windows Phone 8.1 nebo novější
+-   Windows 10 (pro počítače), Windows 10 Mobile a novější
+-   iOS 8.0 a novější
+-   Samsung KNOX Standard (4.0 a novější)
+-   Android for Work (e-mailové aplikace třetích stran, nativní e-mailová aplikace je pouze pro osobní profil)
 
 Vedle samotného nastavení e-mailového účtu v zařízení můžete určit, kolik e-mailů se má synchronizovat, a v závislosti na zařízení také jaký typ obsahu se má synchronizovat.
 
@@ -85,7 +82,7 @@ Heslo není součástí e-mailového profilu, uživatel ho tedy musí zadat při
 
     -   **E-mailový profil (Android for Work – Gmail)**
 
-    -    **E-mailový profil (Android for Work – Nine Work)**
+    -   **E-mailový profil (Android for Work – Nine Work)**
 
     Můžete vytvořit a nasadit jenom vlastní zásadu e-mailového profilu. Doporučená nastavení nejsou dostupná.
 
@@ -133,4 +130,3 @@ Shrnutí stavu a výstrahy na stránce **Přehled** v pracovním prostoru **Zás
 > - V případě Androidu for Work nezapomeňte kromě příslušného e-mailového profilu nasadit také aplikace Gmail nebo Nine Work.
 > - Pokud byste chtěli e-mailový profil ze zařízení odebrat, upravte nasazení a odeberte všechny skupiny, ve kterých je zařízení členem. Nezapomeňte, že pokud se jedná o jediný e-mailový profil na zařízení, nemůžete tento profil takto odebrat.
 > - Pokud provedete změny e-mailového profilu, který jste předtím nasadili, koncovým uživatelům se může zobrazit zpráva s požadavkem, aby schválili rekonfiguraci nastavení e-mailu.
-

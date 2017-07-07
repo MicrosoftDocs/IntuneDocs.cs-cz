@@ -14,15 +14,12 @@ ms.assetid: 34a412cd-8240-4e06-a60e-df270a711e7b
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: a3a928e1b3ed6cd0bdfdaeee1da383c8e2183885
-ms.contentlocale: cs-cz
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="post-configuration-tasks"></a>Úlohy po konfiguraci
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -34,4 +31,3 @@ Po dokončení kroků počáteční konfigurace pro placené předplatné Intune
 -   **Sestavy Intune:** Microsoft Intune nabízí výstrahy a sestavy, které můžete použít k monitorování zařízení, stavu licencí softwaru a akcí, které ovlivňují zařízení (třeba vymazání zařízení).  Další informace o vytváření sestav najdete v tématu [Pochopení operací Microsoft Intune pomocí sestav](/intune-classic/deploy-use/understand-microsoft-intune-operations-by-using-reports).
 
 -   **Ochrana prostředků společnosti:** Po nakonfigurování Intune a registraci zařízení je potřeba zajistit, aby tato zařízení byla chráněná proti ztrátě informací a jiným hrozbám. Další informace o ochraně prostředků najdete v tématu [Ochrana dat a aplikací pomocí Microsoft Intune](/intune-classic/deploy-use/protect-apps-and-data-with-microsoft-intune).
-

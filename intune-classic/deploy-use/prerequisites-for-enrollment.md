@@ -1,11 +1,11 @@
 ---
-title: "Požadavky na registraci mobilních zařízení | Dokumentace Microsoftu"
+title: "Požadavky pro registraci mobilních zařízení"
 description: "Nastavte požadavky správy mobilních zařízení a připravte registraci různých operačních systémů."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/21/2017
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,12 @@ ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 6877c5263f3c97b9cff295d62d39a365027151eb
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ea6d7b9ffe698addc7ee317517abc7c760c232c0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="prerequisites-for-mobile-device-management-in-intune"></a>Požadavky na správu mobilních zařízení v Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -46,15 +43,14 @@ Hledáte Intune s Configuration Managerem?
 ## <a name="step-1-enable-connections"></a>Krok 1: Povolení připojení
 
 Ještě než povolíte registraci mobilních zařízení, zkontrolujte, zda jste provedli následující:
-- [Kontrola požadovaných síťových adres URL a portů](../get-started/network-bandwidth-use.md)
-- [Přidání a ověření názvu domény](../get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2.md)
+- [Kontrola požadovaných síťových adres URL a portů](/intune/network-bandwidth-use)
+- [Přidání a ověření názvu domény](/intune/custom-domain-name-configure)
 
 ## <a name="step-2-set-mdm-authority"></a>Krok 2: Nastavení autority pro správu mobilních zařízení (MDM)
 Autorita MDM definuje službu správy s oprávněním ke správě skupiny zařízení. Příklady možných autorit MDM zahrnují Intune samostatně a Configuration Manager s Intune. Pokud nastavíte Configuration Manager jako autoritu správy, ke správě mobilních zařízení nejde použít žádnou jinou službu.
 
 >[!IMPORTANT]
-> Důkladně zvažte, jestli chcete spravovat mobilní zařízení jenom pomocí Intune (online služba), nebo pomocí System Center Configuration Manageru s Intune (místní softwarové řešení ve spojení s online službou). Jakmile nastavíte autoritu pro správu mobilních zařízení, nebude možné ji bez asistence podpory Microsoftu změnit. Pokyny najdete v části [Co dělat, když zvolíte nesprávné nastavení autority pro správu mobilních zařízení (MDM)](#what-to-do-if-you-choose-the-wrong-mdm-authority-setting).
-
+> Ve verzi Configuration Manageru 1610 nebo novější a ve verzi Microsoft Intune 1705 můžete změnit autoritu MDM bez nutnosti kontaktovat podporu Microsoftu a zrušit registraci a následně nově registrovat stávající spravovaná zařízení. Podrobnosti najdete v článku [Co dělat, když zvolíte nesprávné nastavení autority pro správu mobilních zařízení (MDM)](/intune-classic/deploy-use/prerequisites-for-enrollment#what-to-do-if-you-choose-the-wrong-mdm-authority-setting).
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Správce** &gt; **Správa mobilních zařízení**.
 
@@ -116,7 +112,7 @@ Po uložení změn můžete pomocí odkazů uvedených v dolní části stránky
 
 ## <a name="step-5-assign-user-licenses"></a>Krok 5: Přiřazení licencí uživatelům
 
-**Portál pro správu Office 365** můžete použít k ručnímu přidání cloudových uživatelů a přiřazení licencí účtům cloudových uživatelů i účtům, které se synchronizovaly z místní služby Active Directory do Azure Active Directory (Azure AD). Můžete [synchronizovat místní uživatele s Azure AD](../get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3.md#how-to-sync-on-premises-users-with-azure-ad).
+**Portál pro správu Office 365** můžete použít k ručnímu přidání cloudových uživatelů a přiřazení licencí účtům cloudových uživatelů i účtům, které se synchronizovaly z místní služby Active Directory do Azure Active Directory (Azure AD). Můžete [synchronizovat místní uživatele s Azure AD](/intune/users-permissions-add#how-to-sync-on-premises-users-with-azure-ad).
 
 1.  Přihlaste se na [portál pro správu Office 365](https://portal.office.com/Admin/Default.aspx) pomocí svých přihlašovacích údajů správce tenanta.
 
@@ -154,7 +150,13 @@ Po povolení registrace doporučujeme nastavit správu, aby vyhovovala potřebá
 
 ## <a name="what-to-do-if-you-choose-the-wrong-mdm-authority-setting"></a>Co dělat, když zvolíte nesprávné nastavení autority pro správu mobilních zařízení (MDM)
 
-Pokud se domníváte, že jste zvolili nesprávné nastavení autority pro správu mobilních zařízení (MDM), a potřebujte ho změnit, musíte se obrátit na podporu Microsoftu. Toto nastavení nemůžete změnit sami. Než se obrátíte na podporu Microsoftu, přečtěte si následující informace, ve kterých se dozvíte, jaké informace musíte podpoře Microsoftu poskytnout, aby bylo možné změnu provést.
+Pokud se domníváte, že jste zvolili nesprávné nastavení autority pro správu mobilních zařízení (MDM) a potřebujete ho změnit, máte tyto možnosti.
+
+### <a name="change-the-mdm-authority-yourself"></a>Změna autority MDM vlastními silami
+Od Configuration Manageru verze 1610 a Microsoft Intune verze 1705 můžete změnit autoritu MDM z Microsoft Intune na možnost Configuration Manager (hybridní) nebo naopak bez nutnosti kontaktovat podporu Microsoftu a rušit registraci a následně nově registrovat stávající spravovaná zařízení. Podrobnosti najdete v tématu [Změna autority pro správu mobilních zařízení (MDM)]( /sccm/mdm/deploy-use/change-mdm-authority).
+
+### <a name="contact-microsoft-support"></a>Kontaktování podpory Microsoftu
+Pokud máte verzi nástroje Configuration Manager starší než 1610, je nutné kontaktovat podporu Microsoftu. Toto nastavení nemůžete změnit sami. Než se obrátíte na podporu Microsoftu, přečtěte si následující informace, ve kterých se dozvíte, jaké informace musíte podpoře Microsoftu poskytnout, aby bylo možné změnu provést.
 
 Existují tři možné způsoby, jak autoritu MDM resetovat. Ve své žádosti o podporu budete muset vybrat způsob, který odpovídá vaší situaci. Pokud tady vámi požadovaný scénář není uvedený, poraďte se s podporou Microsoftu.
 
@@ -166,7 +168,7 @@ Podpora Microsoftu vás požádá, abyste potvrdili následující informace:
 
 Pokud používáte koexistenci, je třeba ověřit kontrolní seznamy pro Intune i Office 365.
 
-### <a name="reset-mdm-authority-from-intune-to-configuration-manager"></a>Resetování autority MDM z Intune na Configuration Manager
+#### <a name="reset-mdm-authority-from-intune-to-configuration-manager"></a>Resetování autority MDM z Intune na Configuration Manager
 
 Pokud chcete resetovat autoritu MDM, proveďte tyto kroky, než se obrátíte na podporu Microsoftu.
 
@@ -180,7 +182,7 @@ Pokud chcete resetovat autoritu MDM, proveďte tyto kroky, než se obrátíte na
 - Odstraňte všechny zásady pro zařízení MDM v části **Zásady** > **Zásady konfigurace**.
 - Odstraňte všechny publikované aplikace určené pro zařízení MDM v části **Aplikace** > **Spravovaný software**.
 
-### <a name="reset-mdm-authority-from-configuration-manager-to-intune"></a>Resetování autority MDM z Configuration Manageru na Intune
+#### <a name="reset-mdm-authority-from-configuration-manager-to-intune"></a>Resetování autority MDM z Configuration Manageru na Intune
 
 Pokud chcete resetovat autoritu MDM, proveďte tyto kroky, než se obrátíte na podporu Microsoftu.
 
@@ -194,7 +196,7 @@ Odeberte předplatné Intune tak, že kliknete pravým tlačítkem na předplatn
 - Restartujte službu SMS Executive.
 - Uveďte příklady uživatelů, abychom mohli po dokončení procesu ověřit, že licence Configuration Manageru jsou odebrané.
 
-### <a name="reset-mdm-authority-from-office-365-to-configuration-manager"></a>Resetování autority MDM z Office 365 na Configuration Manager
+#### <a name="reset-mdm-authority-from-office-365-to-configuration-manager"></a>Resetování autority MDM z Office 365 na Configuration Manager
 
 1. Přejděte na web [https://protection.office.com](https://protection.office.com).
 2. Vyberte kartu **Zásady zabezpečení** a pak vyberte **Správa zařízení**.
@@ -205,10 +207,9 @@ Odeberte předplatné Intune tak, že kliknete pravým tlačítkem na předplatn
 >[!NOTE]
 >Certifikát služby APN pro iOS se nedá odstranit a zůstane připojený k účtu.
 
-### <a name="next-steps-for-mdm-authority-resets"></a>Další kroky pro resetování autority MDM
+#### <a name="next-steps-for-mdm-authority-resets"></a>Další kroky pro resetování autority MDM
 
 Jakmile podpora Microsoftu ověří položky z příslušného kontrolního seznamu, resetování autority MDM může trvat až tři pracovní dny. Obvykle to ale trvá jeden den.
 
 >[!IMPORTANT]
 >Nepokoušejte se konfigurovat předplatné, dokud podpora Microsoftu nepotvrdí, že je resetování úspěšně dokončené. Předčasná konfigurace může způsobit poškození nebo může mít vliv na možnost používání služby Intune.
-

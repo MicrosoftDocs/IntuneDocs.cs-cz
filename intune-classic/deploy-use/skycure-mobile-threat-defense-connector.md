@@ -1,5 +1,5 @@
 ---
-title: "Konektor ochrany před mobilními hrozbami Skycure| Dokumentace Microsoftu"
+title: "Konektor ochrany před mobilními hrozbami Skycure"
 description: "Chraňte přístup k firemním prostředkům podle rizika zařízení, sítě a aplikace prostřednictvím konektoru ochrany před mobilními hrozbami Skycure a služby Intune."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: 7a004e6c-604a-448c-bfb8-cfda63749f5b
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 15b00957f694863bb10ee32162eb20fc39bcda88
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: d0b401babf356e44479229c3bea27c956926a6f9
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="skycure-mobile-threat-defense-connector"></a>Konektor ochrany před mobilními hrozbami Skycure
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -119,7 +116,7 @@ Více informací najde na [webu Skycure](https://www.skycure.com/skycure-microso
 
 Zde jsou uvedené další kroky, které potřebujete k integraci služby Intune se službou Skycure:
 
-1.  [Konfigurace Skycure na použití jednotného přihlašování ke službě Azure Active Directory /intune-classic/deploy-use/configure-skycure-to-use-azure-active-directory-single-sign-on)
+1.  [Konfigurace služby Skycure pro použití jednotného přihlašování (SSO) služby Azure Active Directory](/intune-classic/deploy-use/configure-skycure-to-use-azure-active-directory-single-sign-on)
 
 2.  [Stažení zásad konfigurace aplikace Skycure pro iOS](/intune-classic/deploy-use/download-skycure-ios-app-configuration-policy)
 
@@ -132,4 +129,3 @@ Zde jsou uvedené další kroky, které potřebujete k integraci služby Intune
 6.  [Povolení ochrany před mobilními hrozbami Skycure ve službě Intune](/intune-classic/deploy-use/enable-skycure-mobile-threat-defense-in-intune)
 
 7.  [Vytvoření zásad dodržování předpisů pro ochranu před mobilními hrozbami Skycure ve službě Intune](/intune-classic/deploy-use/create-skycure-mobile-threat-defense-compliance-policy)
-

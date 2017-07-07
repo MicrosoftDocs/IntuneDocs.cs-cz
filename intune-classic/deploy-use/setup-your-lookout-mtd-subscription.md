@@ -1,5 +1,5 @@
 ---
-title: "Nastavení předplatného pro službu Lookout | Dokumentace Microsoftu"
+title: "Nastavení předplatného služby Lookout"
 description: "Toto téma obsahuje podrobné informace o způsobu konfigurace ochrany zařízení před internetovými útoky ve službě Lookout."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: 8477a2f1-2e1d-4d42-8bcb-e1181cc900bb
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 3c777d8857fd177e5a27840ab8a97c8a137aa189
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 5acbf2aacc747113ff8b3889dba306e30567f24a
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="set-up-your-lookout-mobile-threat-defense-subscription"></a>Nastavení předplatného ochrany před mobilními hrozbami Lookout
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -76,7 +73,7 @@ V následujícím postupu se dozvíte, jak získat informace, které je třeba s
 
   ![snímek obrazovky zobrazující přihlašovací stránku konzoly Lookout](../media/mtp/lookout_mtp_initial_login.png) Jakmile odsouhlasíte podmínky, budete přesměrováni do konzoly Lookout.
 
-  Nápovědu k problémům při přihlášení najdete v [řešení potíží s integrací služby Lookout](/intune-classic/troubleshoot/troubleshooting-lookout-integration).
+  Nápovědu k problémům při přihlášení najdete v [řešení potíží s integrací služby Lookout](/intune-classic/Troubleshoot/device-threat-protection-troubleshooting.md).
 
 3.  V [konzole Lookout](https://aad.lookout.com) zvolte v modulu **Systém** kartu **Konektory** a vyberte **Intune**.
 
@@ -139,4 +136,3 @@ Ochrana před mobilními hrozbami Lookout klasifikuje mobilní hrozby podle růz
 Po dokončení nastavení začne ochrana před mobilními hrozbami Lookout posílat do služby Azure AD dotazy na zařízení, která odpovídají určeným skupinám pro registraci.  Informace o registrovaných zařízeních najdete v modulu Zařízení.  Počáteční stav u zařízení je čekající na vyřízení.  Stav zařízení se změní, jakmile se na zařízení nainstaluje, otevře a aktivuje aplikace Lookout for Work.  Podrobnosti o tom, jak aplikaci Lookout for Work přidat do zařízení, najdete v tématu [Konfigurace a nasazení aplikace Lookout for Work](configure-deploy-lookout-for-work-app.md).
 ## <a name="next-steps"></a>Další kroky
 [Povolení připojení Lookout MTP k Intune](/intune-classic/deploy-use/enable-lookout-mtd-connection)
-

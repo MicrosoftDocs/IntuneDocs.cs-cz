@@ -11,22 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 33ffff16-0280-43bf-87b3-74ddf4439bfa
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 734856b1598a225f6f3a2aaf640d34d393c744e7
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="create-a-work-profile-and-enroll-your-device-in-intune"></a>Vytvoření pracovního profilu a registrace zařízení v Intune
 
 Registrací zařízení s Androidem získáte přístup k e-mailu, aplikacím a jiným pracovním datům společnosti. Součástí registrace je nastavení pracovního profilu, který v zařízení oddělí osobní a pracovní data. Správce IT může spravovat jen pracovní profil, který obsahuje vaše pracovní data. Správce IT nemůže v zařízení spravovat vaše osobní data. Přečtěte si o tom, [co se stane, když si vytvoříte pracovní profil](what-happens-when-you-create-a-work-profile-android.md).
@@ -88,4 +83,3 @@ Pracovní profil vytvoříte takto:
     ![Stránka obchodu Google Play for Work s aplikacemi](./media/andr-afw-tap-work-play-store-icon.png)
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-

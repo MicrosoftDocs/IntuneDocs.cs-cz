@@ -14,15 +14,12 @@ ms.assetid: 3a503548-434c-410a-a419-7eadd7e7fb99
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: 0b101170523c02aea0e9df46e7887cf423abef7c
-ms.contentlocale: cs-cz
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="accessibility-for-people-with-disabilities"></a>Usnadnění pro postižené osoby
 Cílem společnosti Microsoft je poskytovat snadněji použitelné produkty a služby pro každodenní použití. V následujících tématech najdete informace o funkcích, produktech a službách, které usnadňují používání služby Microsoft Intune osobám s postižením.
 
@@ -30,4 +27,3 @@ Cílem společnosti Microsoft je poskytovat snadněji použitelné produkty a sl
 [Funkce usnadnění služby Microsoft Intune](accessibility-features-of-microsoft-intune.md) Popisuje funkce usnadnění služby Microsoft Intune.
 
 [Produkty a služby společnosti Microsoft pro usnadnění](accessibility-products-and-services-from-microsoft.md) Popisuje produkty a služby pro zajištění přístupnosti, které nabízí Microsoft.
-

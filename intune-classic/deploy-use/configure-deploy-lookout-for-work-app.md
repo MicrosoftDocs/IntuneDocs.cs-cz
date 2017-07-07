@@ -1,5 +1,5 @@
 ---
-title: "Nasazení aplikace Lookout for Work | Dokumentace Microsoftu"
+title: "Nasazení aplikace Lookout for Work"
 description: "Konfigurace a nasazení aplikace Lookout for Work pro Android."
 author: andredm7
 ms.author: andredm
@@ -13,15 +13,12 @@ ms.assetid: 524c4209-ad57-4d35-955e-a00d796bf858
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 95f7c782558f98d5be3a89d24b9e9721a7bd40c0
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 5d4f496709a8607b0d6d473355c96e8fc502838b
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="configure-and-deploy-lookout-for-work-app"></a>Konfigurace a nasazení aplikace Lookout for Work
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -30,12 +27,12 @@ Tento článek vysvětluje, jak nakonfigurovat a nasadit aplikaci Lookout for Wo
 
 ## <a name="android-google-play-store-app"></a>Android (aplikace v obchodě Google Play)
 
-1.    V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) přejděte na **Aplikace** a zvolte **Přidat aplikace**.
-2.    U vydavatele na stránce **Instalace softwaru** zvolte **Externí odkaz** a zadejte tuto adresu URL:  https://play.google.com/store/apps/details?id=com.lookout.enterprise
+1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) přejděte na **Aplikace** a zvolte **Přidat aplikace**.
+2.  U vydavatele na stránce **Instalace softwaru** zvolte **Externí odkaz** a zadejte tuto adresu URL:  https://play.google.com/store/apps/details?id=com.lookout.enterprise
   >[!NOTE]
   >Nezaškrtávejte políčko, aby byl požadován spravovaný prohlížeč.
 
-3.    Na stránce **Popis softwaru** zadejte následující informace:
+3.  Na stránce **Popis softwaru** zadejte následující informace:
   * **Vydavatel:** Lookout Mobile Security
   * **Název:** Lookout for Work
   * **Popis:** Aplikace Lookout nabízí nejlepší ochranu před mobilními hrozbami a udržuje vaše zařízení v bezpečí. Aplikace Lookout po instalaci zařízení chrání před hrozbami a v případě, že nějaké nalezne, upozorní na to vás i správce společnosti.
@@ -96,4 +93,3 @@ https://github.com/Microsoft/Docs/blob/master/ContributorGuide/index.md Když u�
 
 ## <a name="next-steps"></a>Další kroky
 * [Vytváření zásad dodržování předpisů zařízením pro službu Lookout ve službě Intune](https://docs.microsoft.com/sccm/protect/deploy-use/enable-device-threat-protection-rule-compliance-policy)
-

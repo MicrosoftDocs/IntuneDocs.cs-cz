@@ -1,5 +1,5 @@
 ---
-title: "Jak ověřit nastavení MAM | Dokumentace Microsoftu"
+title: "Ověření nastavení MAM"
 description: "V tématu popisujeme, jak otestovat a ověřit, jestli jste správně nastavili zásady MAM a ty fungují podle očekávání."
 keywords: 
 author: andredm7
@@ -13,15 +13,12 @@ ms.technology:
 ms.assetid: 41d82597-e13e-4c3e-9151-e71392236ca0
 ms.reviewer: joglocke
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: ab04c85d6704d7011cc5d4ea2a9f83d78b5b73e3
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 1e22be7b238cce195ee88c938b1cca009c0b21d3
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="validating-your-mobile-application-management-setup"></a>Jak ověřit nastavení správy mobilních aplikací
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -50,7 +47,7 @@ Pokud testování odhalí, že zásady MAM nepřináší očekávané výsledky,
 ### <a name="what-to-do"></a>Co dělat
 Postupujte podle stavu uživatele:
 
-- Pokud uživatel nemá licenci k MAM, přiřaďte mu licenci Intune, jak je popsáno v tématu [Správa licencí Intune](..\get-started\start-with-a-paid-subscription-to-microsoft-intune.md).
+- Pokud uživatel nemá licenci k MAM, přiřaďte mu licenci Intune, jak je popsáno v tématu [Správa licencí Intune](/intune/setup-steps).
 - Pokud uživatel nemá licenci k O365, získejte ji pro něj.
 - Pokud je uživatelova aplikace uvedena ve stavu **Není zaregistrováno**, zkontrolujte, jestli jste, co se této aplikace týče, správně nakonfigurovali zásady MAM.
 - Dejte pozor, aby se uvedené nastavení použilo pro všechny uživatele, u kterých chcete zásady MAM uplatnit.
@@ -59,4 +56,3 @@ Postupujte podle stavu uživatele:
 [Příprava před konfigurací zásad správy mobilních aplikací pomocí Microsoft Intune](..\deploy-use\get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 
 [Ochrana aplikačních dat pomocí zásad správy mobilních aplikací v Microsoft Intune](..\deploy-use\protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
-

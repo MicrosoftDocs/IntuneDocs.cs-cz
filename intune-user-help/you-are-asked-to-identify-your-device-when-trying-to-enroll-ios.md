@@ -11,22 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 8e40f228-cf04-4077-845f-300fbc3baee6
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 847b08efc2424da7ae9483db355f2804ac1e00c1
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="you-need-to-identify-your-device-when-youre-trying-to-enroll"></a>Při pokusu o registraci je potřeba identifikovat vaše zařízení
 
 Pokud se pokoušíte zaregistrovat zařízení s iOSem nebo macOS do Intune a objeví se obrazovka s žádostí o identifikaci vašeho zařízení, aspoň jedno z vašich zařízení je už zaregistrované a přiřazené k vašemu účtu pomocí jiné metody než pomocí aplikace Portál společnosti. Aby aplikace Portál společnosti fungovala správně, musíte určit, jestli už je zařízení, které používáte, zaregistrované v Intune.
@@ -36,4 +31,3 @@ Pokud se pokoušíte zaregistrovat zařízení s iOSem nebo macOS do Intune a ob
 3. Zadejte poslední čtyři znaky sériového čísla zařízení, aby mohla služba Intune ověřit, jestli už je zařízení zaregistrované. Návod k nalezení sériového čísla najdete v tématu [Jak na zařízení najdu sériové číslo?](how-do-i-find-the-serial-number-on-my-device-ios.md).
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-

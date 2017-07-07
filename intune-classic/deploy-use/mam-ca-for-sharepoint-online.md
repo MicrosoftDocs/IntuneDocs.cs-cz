@@ -13,15 +13,12 @@ ms.technology:
 ms.assetid: 531b09bb-ddfd-498f-8ee3-6675d2466208
 ms.reviewer: chrisgre
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 2d9065281436d4c44e6af7d7a4401786a2a01965
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/31/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="set-up-app-based-conditional-access-ca-policies-for-sharepoint-online"></a>Nastavení zásad podmíněného přístupu (CA) na základě aplikace pro SharePoint Online
 
 [!INCLUDE[note for both-portals](../includes/note-for-both-portals.md)]
@@ -81,4 +78,3 @@ Toto téma obsahuje pokyny pro nastavení zásad podmíněného přístupu na z�
 [Ochrana dat aplikací pomocí zásad ochrany aplikací](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 
 [Konfigurace podmíněného přístupu na základě aplikace pro Exchange Online](mam-ca-for-exchange-online.md)
-

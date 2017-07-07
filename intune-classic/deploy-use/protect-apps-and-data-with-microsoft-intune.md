@@ -14,15 +14,12 @@ ms.assetid: 5c46e188-87eb-4ce2-b184-24809e8bf783
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: 09b7a1d4901a52845719e8d7094f665b12b91ab4
-ms.contentlocale: cs-cz
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="protect-apps-and-data-with-microsoft-intune"></a>Ochrana dat a aplikací pomocí Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -55,4 +52,3 @@ Například aplikace Microsoft Office mají sadu Intune App SDK integrovanou. Ú
 Můžete taky [povolit vlastním obchodním aplikacím](/intune/apps-prepare-mobile-application-management) použití se zásadami MAM.
 
 Když dojde ke ztrátě nebo odcizení zařízení nebo když uživatel přestane pracovat ve vaší společnosti, můžete kromě omezení přesunu dat taky [selektivně vymazat firemní data](wipe-managed-company-app-data-with-microsoft-intune.md) a ponechat tak v zařízení jenom osobní data.
-

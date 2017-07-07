@@ -1,11 +1,11 @@
 ---
-title: "Kategorizace zařízení pomocí mapování skupin zařízení | Dokumentace Microsoftu"
+title: "Kategorizace zařízení pomocí mapování skupin zařízení"
 description: "Mapování skupin zařízení Microsoft Intune slouží k seskupení zařízení do kategorií, které definujete, aby bylo možné zjednodušit správu těchto zařízení."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 10/26/2016
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,12 @@ ms.assetid: 8b8c06a3-6b6c-4cf1-8646-b24fa9b1a39e
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 618827ed6baf7a9dec6aef804f19bcbca08ed39f
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: ff136d430496392b6ca8e5b944820fe9e14553d3
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="categorize-devices-with-device-group-mapping-in-microsoft-intune"></a>Kategorizace zařízení pomocí mapování skupin zařízení v Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -32,7 +30,7 @@ Mapování skupin zařízení používá následující postup:
 1. Vytvořte kategorie, ze kterých uživatelé budou volit při registraci zařízení.
 2. Vytvoříte skupiny nebo použijete existující skupiny pro každou kategorii, kterou chcete použít. Podle verze Intune, kterou používáte, to budou buď skupiny Intune, nebo skupiny zabezpečení Azure Active Directory.
 2. Nakonfigurujete pravidla, která mapují kategorii, kterou zvolíte, na skupinu zařízení, kterou jste vytvořili.
-3. Když koncoví uživatelé registrují svá zařízení, musí zvolit některou kategorii ze seznamu nakonfigurovaných kategorií. Po této volbě se jejich zařízení automaticky přidá do příslušné skupiny, kterou jste vytvořili. Pokud je zařízení už zaregistrované, bude koncový uživatel požádán o výběr kategorie při příštím přístupu k aplikaci Portál společnosti.
+3. Když koncoví uživatelé zařízení s iOSem a Androidem registrují svá zařízení, musí zvolit některou kategorii ze seznamu nakonfigurovaných kategorií. Pokud chcete přiřadit kategorii k zařízení s Windows, musí koncoví uživatelé používat web Portál společnosti (podrobnosti najdete v části **Po konfiguraci skupin zařízení** v tomto tématu).
 4. Do těchto skupin pak můžete nasadit zásady a aplikace.
 
 Můžete vytvořit libovolné kategorie zařízení, například:
@@ -86,8 +84,13 @@ Příklad: (**device.deviceCategory -eq** "<*název kategorie zařízení, kter�
 
 ## <a name="after-you-configure-device-groups"></a>Po konfiguraci skupin zařízení
 
-Když uživatelé registrují svoje zařízení, zobrazí se jim seznam nakonfigurovaných kategorií. Potom, co zvolí kategorii a dokončí registraci, se jejich zařízení přidá do skupiny zařízení Intune nebo do skupiny zabezpečení Active Directory, která odpovídá zvolené kategorii.
+Když koncoví uživatelé zařízení s iOSem a Androidem registrují svá zařízení, musí zvolit některou kategorii ze seznamu nakonfigurovaných kategorií. Potom, co zvolí kategorii a dokončí registraci, se jejich zařízení přidá do skupiny zařízení Intune nebo do skupiny zabezpečení Active Directory, která odpovídá zvolené kategorii.
 
-### <a name="see-also"></a>Související témata
+Pokud chcete přiřadit kategorii k zařízení s Windows, musí koncoví uživatelé používat po registraci zařízení web Portál společnosti (portal.manage.microsoft.com). Na zařízení s Windows přejděte na web a potom na možnost **Nabídka** > **Moje zařízení**. Vyberte zaregistrované zařízení na stránce a potom vyberte kategorii. 
+
+Když vyberete kategorii, přidá se zařízení automaticky k příslušné vámi vytvořené skupině. Pokud je už zařízení zaregistrované před tím, než nakonfigurujete kategorie, zobrazí se koncovým uživatelům na webu Portál společnosti oznámení o zařízení a žádost, aby při příštím přístupu k aplikaci Portál společnosti v iOSu nebo Androidu vybrali kategorii.
+
+
+
+### <a name="see-also"></a>Viz taky
 [Použití skupin pro správu uživatelů a zařízení s Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
-

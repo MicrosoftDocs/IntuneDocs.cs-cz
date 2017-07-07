@@ -11,19 +11,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: c4801a78-580e-4e3d-beca-0b09b9b2437c
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: d7d9ce0e1dc17dfafe78757a4bd8e48f9f67132d
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="make-your-device-safer-with-the-right-password"></a>Zlepšení zabezpečení zařízení pomocí správného hesla
 
 Uživatelé potřebují každý den přistupovat ze svých zařízení se systémem Windows k podnikovým prostředkům, například k e-mailům a dokumentům. Organizace chtějí zajistit, aby byl přístup z těchto zařízení bezpečný. Jedním ze způsobů, jak zajistit bezpečný přístup zařízení k těmto prostředkům, je vyžadování použití hesla. Tato hesla slouží například k přístupu k zařízení ze zamykací obrazovky.
@@ -49,4 +45,3 @@ Pokud zařízení s Windows nevyhovuje zásadám definovaným správcem IT, zobr
 4. Zvolte **Hotovo**.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-

@@ -1,5 +1,5 @@
 ---
-title: "Šifrování jako ochrana firemních dat | Dokumentace Microsoftu"
+title: "Šifrování jako ochrana firemních dat"
 description: "Tento průvodce pomůže vaší společnosti, aby se chránila před ztrátou svých dat tím, že v mobilních aplikacích použije zásadu, která vynutí heslo a šifrování dat."
 keywords: "šifrování, PIN, data"
 author: arob98
@@ -14,15 +14,12 @@ ms.assetid: b1e84ef8-a260-4e3d-aaf1-8b3facfecafa
 ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: d1cffa0066ffcbb9f0aadcb387cefee1ffe1f47a
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 42ae7cdedbcbd9bf6420ca9fd2cfa39a75174736
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="quick-start-guide-protect-company-data-with-data-encryption"></a>Úvodní příručka: Šifrování jako ochrana firemních dat
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -45,12 +42,11 @@ Informace v této příručce jsou pro vás vhodné, pokud splňujete následuj�
 Tento průvodce pomůže vaší společnosti, aby se chránila před ztrátou svých dat tím, že v mobilních aplikacích použije zásadu, která vynutí hesla a šifrování dat. Týká se to mobilních aplikací, které zaměstnanci používají pro přístup k citlivým datům a které nejsou plně zaregistrované v řešení pro správu zařízení. Microsoft Intune umožňuje nastavit zásady správy mobilních aplikací (MAM) u mobilních aplikací Office pro [iOS](https://products.office.com/mobile/office-mobile-apps-for-ios) a [Android](https://products.office.com/mobile/office-mobile-apps-for-android). Tento přístup chrání data O365, aniž by uživatelé museli zaregistrovat svá zařízení do řešení pro správu mobilních zařízení, a současně zachovává skvělé prostřední pro koncové uživatele mobilních aplikací Office.
 
 ## <a name="how-do-i-do-it"></a>Jak to udělám?
-1.    [Kontrola ochrany dat aplikací](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
-2.    [Příprava před konfigurací zásad správy mobilních aplikací](/intune-classic/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune)
-3.    [Vytvoření a nasazení zásad správy mobilních aplikací](/intune-classic/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune)
+1.  [Kontrola ochrany dat aplikací](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
+2.  [Příprava před konfigurací zásad správy mobilních aplikací](/intune-classic/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune)
+3.  [Vytvoření a nasazení zásad správy mobilních aplikací](/intune-classic/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune)
 
 ## <a name="additional-information"></a>Další informace:
-- [Prostudujte si informace o prostředí koncového uživatele v aplikacích, které mají v Microsoft Intune povolenou správu mobilních aplikací.]/intune-classic/deploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune)
-- [Rozhodněte se, jak chcete připravit aplikace na správu mobilních aplikací v Microsoft Intune.]/intune-classic/deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune)
+- [Další informace o činnosti koncového uživatele v aplikacích s podporou správy mobilních aplikací (MAM)](/intune-classic/eploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune)
+- [Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune](/intune/apps-prepare-mobile-application-management)
 - [Seznam partnerů nabízejících aplikace pro Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-partners)
-

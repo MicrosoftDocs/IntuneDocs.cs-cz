@@ -1,5 +1,5 @@
 ---
-title: "Nastavení zásad pro Windows | Dokumentace Microsoftu"
+title: "Nastavení zásad pro Windows"
 description: "Ke konfiguraci nastavení pro registrovaná zařízení s Windows 8.1 a Windows 8 použijte obecné zásady konfigurace Windows (Windows 8.1 a novější) Intune."
 keywords: 
 author: robstackmsft
@@ -14,15 +14,12 @@ ms.assetid: 6982a2bc-aafa-475a-9236-4840b709e5a1
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: d95852c20b98ee86552672cf03364980f06f010a
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ab39a1847dbba495b4946d12b96b6f8c724f38d8
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="windows-policy-settings-in-microsoft-intune"></a>Nastavení zásad pro Windows v Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -122,4 +119,3 @@ Ke konfiguraci následujících nastavení pro zaregistrovaná zařízení s Win
 
 ### <a name="see-also"></a>Související témata
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-

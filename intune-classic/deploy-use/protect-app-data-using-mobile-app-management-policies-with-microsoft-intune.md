@@ -1,5 +1,5 @@
 ---
-title: "Ochrana aplikačních dat pomocí zásad MAM | Dokumentace Microsoftu"
+title: "Ochrana dat aplikací pomocí zásad MAM"
 description: "Toto téma vysvětluje, jak zásady správy mobilních aplikací můžou pomoct chránit podniková data, bránit úniku informací a oddělovat osobní a pracovní informace."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 9959e9f757e83c7aa4274b7e7b9df949fff022cc
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/31/2017
-
-
+ms.openlocfilehash: 40a6badf072c254f635a2656189d626e4f13a320
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="protect-app-data-using-app-protection-policies-with-microsoft-intune"></a>Ochrana dat aplikací pomocí zásad ochrany aplikací v Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -38,8 +35,8 @@ Zásady ochrany aplikací můžete konfigurovat pro aplikace běžící na zař�
 
 -   **Zaregistrovaná v řešení MDM třetí strany:** Do této kategorie obvykle spadají zařízení vlastněná společností.
 
-      > [!NOTE]
-      > Zásady ochrany aplikací nedoporučujeme používat s řešeními pro správu mobilních aplikací třetích stran nebo s řešeními zabezpečeného kontejneru.
+    > [!NOTE]
+    > Zásady ochrany aplikací nedoporučujeme používat s řešeními pro správu mobilních aplikací třetích stran nebo s řešeními zabezpečeného kontejneru.
 
 -   **Nezaregistrovaná v žádném řešení MDM:** Do této kategorie obvykle spadají zařízení vlastněná zaměstnanci, která nejsou spravovaná ani zaregistrovaná v Intune nebo jiných řešeních MDM.
 
@@ -135,4 +132,3 @@ Pokud třeba uživatel spustí aplikaci OneDrive pomocí svého pracovního úč
 - [Příprava ke konfiguraci zásad ochrany aplikací](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 
 - [Vytvoření a nasazení zásad ochrany aplikací pomocí Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
-

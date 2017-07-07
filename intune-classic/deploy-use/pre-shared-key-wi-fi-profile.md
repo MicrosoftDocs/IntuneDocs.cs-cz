@@ -1,5 +1,5 @@
 ---
-title: "Wi-Fi s využitím PSK | Dokumentace Microsoftu"
+title: "Wi-Fi s použitím předsdíleného klíče"
 description: "Použijte vlastní konfiguraci k vytvoření profilu sítě Wi-Fi s předsdíleným klíčem."
 keywords: 
 author: robstackmsft
@@ -14,14 +14,11 @@ ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 6845097b768e67c7fbc6ff16bf41f27982c4b33e
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
-
+ms.openlocfilehash: 7f3432f914c2f4a76d7a9303924d106b270220a1
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="use-a-custom-policy-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Použití vlastní zásady k vytvoření profilu sítě Wi-Fi s předsdíleným klíčem
 
@@ -30,24 +27,24 @@ ms.lasthandoff: 05/23/2017
 Zde je postup používání **Vlastní konfigurace** služby Intune k vytvoření profilu sítě Wi-Fi s předsdíleným klíčem. Toto téma obsahuje také příklad vytvoření profilu Wi-Fi založeného na protokolu EAP.
 
 > [!NOTE]
--    Pokud je to pro vás snadnější, můžete zkopírovat kód z počítače připojeného k této síti, jak je popsáno níže.
+-   Pokud je to pro vás snadnější, můžete zkopírovat kód z počítače připojeného k této síti, jak je popsáno níže.
 - Pro Android máte také možnost použít nástroj [Android PSK Generator](http://johnathonb.com/2015/05/intune-android-pre-shared-key-generator/), který poskytuje Johnathon Biersack.
--    Přidáním dalších nastavení OMA-URI můžete přidat více sítí a klíčů.
+-   Přidáním dalších nastavení OMA-URI můžete přidat více sítí a klíčů.
 -  Pro iOS nastavte profil nástrojem Apple Configurator na stanici Mac. Alternativně můžete použít nástroj [iOS PSK Mobile Config Generator](http://johnathonb.com/2015/05/intune-ios-psk-mobile-config-generator/), který poskytuje Johnathon Biersack.
 
 
-1.    Pokud chcete vytvořit profil sítě Wi-Fi s předsdíleným klíčem pro Android nebo Windows, případně profil Wi-Fi založený na protokolu EAP, zvolte při vytváření zásady možnost **Vlastní konfigurace** pro platformu zařízení, namísto profilu Wi-Fi.
+1.  Pokud chcete vytvořit profil sítě Wi-Fi s předsdíleným klíčem pro Android nebo Windows, případně profil Wi-Fi založený na protokolu EAP, zvolte při vytváření zásady možnost **Vlastní konfigurace** pro platformu zařízení, namísto profilu Wi-Fi.
 
-2.    Zadejte název a popis.
-3.    Přidejte nové nastavení OMA-URI:
+2.  Zadejte název a popis.
+3.  Přidejte nové nastavení OMA-URI:
 
-   a.    Zadejte název pro toto nastavení sítě Wi-Fi.
+   a.   Zadejte název pro toto nastavení sítě Wi-Fi.
 
-   b.    Zadejte popis nastavení OMA-URI nebo pole ponechte prázdné.
+   b.   Zadejte popis nastavení OMA-URI nebo pole ponechte prázdné.
 
-   c.    **Datový typ:** Nastavte na Řetězec (XML).
+   c.   **Datový typ:** Nastavte na Řetězec (XML).
 
-   d.    **OMA-URI:**
+   d.   **OMA-URI:**
 
     - **Pro Android:** ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
     - **Pro Windows:** ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
@@ -221,4 +218,3 @@ Když vyberete nasazenou zásadu, zobrazí se v dolní části seznamu zásad da
 
 ### <a name="see-also"></a>Související témata
 [Připojení Wi-Fi v Microsoft Intune](wi-fi-connections-in-microsoft-intune.md)
-

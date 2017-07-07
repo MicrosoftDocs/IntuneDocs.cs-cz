@@ -1,5 +1,5 @@
 ---
-title: "Hodnocení správy mobilních zařízení v Microsoft Intune | Microsoft Docs"
+title: "Hodnocení správy mobilních zařízení v Microsoft Intune"
 description: "Hodnocení MDM v bezplatné zkušební verzi Intune"
 keywords: 
 author: lindavr
@@ -13,15 +13,12 @@ ms.technology:
 ms.assetid: 47806f69-303d-41d9-9b0e-9b9445ea24ac
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: e0eb48c5bb2e0158d7b780af1c16139f10602c4e
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: adef9335d8f199e8dec56e92eb1fda8c180ac6ce
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="evaluate-mobile-device-management-in-microsoft-intune"></a>Hodnocení správy mobilních zařízení v Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -44,7 +41,7 @@ Ve zkušební verzi můžete provádět vše, co je možné i v placené verzi. 
 ## <a name="whats-not-covered"></a>Co tento článek nepopisuje
 |Pokud vás zajímá: |Přečtěte si: |
 |------------------------|----------|
-|MDM v jiném než testovacím prostředí | [Začínáme](/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune) |
+|MDM v jiném než testovacím prostředí | [Začínáme](/intune/setup-steps) |
 |MDM s Intune a nástrojem System Center Configuration Manager | [Hybridní správa mobilních zařízení](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management) |
 
 Vzhledem k tomu, že výše uvedené příručky pomáhají nastavit Intune v produkčních prostředích, jsou delší a ve srovnání s příručkou pro testování obsahují mnohem více bodů rozhodování, které potřebujete projít.
@@ -67,7 +64,7 @@ Zákazníci, kteří chtějí ke správě mobilních zařízení používat Intu
 Pro účely tohoto testování nastavíme jako autoritu MDM službu Intune. Vaše produkční prostředí to neovlivní, pokud se nerozhodnete použít zkušební verzi v produkčním prostředí.
 
 1. V [konzole pro správu Intune](https://manage.microsoft.com/) zvolte **Správce** &gt; **Správa mobilních zařízení**.
-2. V seznamu **Úlohy** zvolte **Nastavit autoritu MDM**. Otevře se dialogové okno **nastavení autority pro správu mobilních zařízení** . <!---screen shot--->
+2. V seznamu **Úlohy** zvolte **Nastavit autoritu MDM**. Otevře se dialogové okno **nastavení autority pro správu mobilních zařízení** .
 3. Intune požádá o potvrzení, že chcete Intune používat jako autoritu pro správu mobilních zařízení. Jestli chcete ke správě mobilních zařízení používat Intune, zaškrtněte políčko a zvolte **Ano**.
 
 ## <a name="enroll-your-test-devices-into-intune"></a>Registrace testovacích zařízení v Intune
@@ -80,14 +77,14 @@ Nainstalujte si aplikaci **Portál společnosti Intune** od společnosti Microso
 Aby mohli uživatelé zaregistrovat svá zařízení s iOSem, musíte nastavit Intune pro správu těchto zařízení.
 
 1. **Získání žádosti o podepsání certifikátu**<br/>
-Přihlaste se do Intune se svým účtem správce a přejděte na **Správa** > **Správa mobilních zařízení** > **iOS a Mac OS X** > **Nahrát na server certifikát služby APN** a pak zvolte **Stáhnout žádost o certifikát služby APN**. Uložte soubor žádosti o podepsání certifikátu (.csr) místně. Soubor .csr slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple Push Certificates Portal. <!--- screen shot--->
-2.    **Získání certifikátu APNs (Apple Push Notification Service)**<BR/>
+Přihlaste se do Intune se svým účtem správce a přejděte na **Správa** > **Správa mobilních zařízení** > **iOS a Mac OS X** > **Nahrát na server certifikát služby APN** a pak zvolte **Stáhnout žádost o certifikát služby APN**. Uložte soubor žádosti o podepsání certifikátu (.csr) místně. Soubor .csr slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple Push Certificates Portal.
+2.  **Získání certifikátu APNs (Apple Push Notification Service)**<BR/>
 Přejděte na portál [Apple Push Certificates Portal](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=3fbfc9ad8dfedeb78be1d37f6458e72adc3160d1ad5b323a9e5c5eb2f8e7e3e2&rv=2) a přihlaste se pod Apple ID vaší společnosti, abyste mohli vytvořit certifikát APN pomocí souboru .csr. Když zvolíte **Nahrát na portálu Apple Push Certificate Portal**, získáte soubor .json, který se nedá použít pro služby APN. Dokončete stahování a vraťte se na portál Apple Push Certificates Portal do nabídky certifikátů pro servery třetích stran a zvolte **Stáhnout**.<br/>
 Stáhněte si certifikát služby APN ( soubor .pem) a uložte ho místně. Toto Apple ID musíte později použít k obnovení certifikátu služby APN.
-3.    **Přidání certifikátu APNs do služby Intune**<BR/>
+3.  **Přidání certifikátu APNs do služby Intune**<BR/>
 V konzole pro správu Microsoft Intune přejděte na **Správa** > **Správa mobilních zařízení** > **iOS a Mac OS X** > **Nahrát na server certifikát služby APN** a pak zvolte **Nahrát na server certifikát služby APN**. Přejděte k souboru certifikátu (.pem), zvolte **Otevřít** a zadejte své Apple ID. S certifikátem služby APN může Intune registrovat a spravovat zařízení se systémem iOS vynucením zásad u registrovaných mobilních zařízení.
-4.    **Informujte uživatele, jak můžou svá zařízení zaregistrovat, aby získali přístup k firemním prostředkům.**<br/>
-Postup registrace koncových uživatelů najdete v tématech [Registrace zařízení se systémem iOS do Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios) a [Registrace zařízení s Mac OS X v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-mac-os-x). Proces registrace uživatele informuje, co můžou očekávat a co správci IT na jejich zařízeních uvidí a neuvidí.
+4.  **Informujte uživatele, jak můžou svá zařízení zaregistrovat, aby získali přístup k firemním prostředkům.**<br/>
+Postup registrace koncových uživatelů najdete v tématech [Registrace zařízení se systémem iOS do Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios) a [Registrace zařízení s Mac OS X v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos). Proces registrace uživatele informuje, co můžou očekávat a co správci IT na jejich zařízeních uvidí a neuvidí.
 
 
 ### <a name="learn-more-about-device-enrollment"></a>Další informace o registraci zařízení
@@ -96,27 +93,16 @@ Intune podporuje zařízení s následujícími platformami:
 
 [!INCLUDE[mdm-supported-devices](../includes/mdm-supported-devices.md)]
 
-Požadavky na povolení správy zařízení závisí na platformách, které chcete spravovat.
+Požadavky na povolení správy zařízení závisejí na spravovaných platformách.
 - Mobilní zařízení s **Androidem** umožňují uživatelům [registraci pomocí aplikace Portál společnosti](/intune-classic/deploy-use/set-up-android-management-with-microsoft-intune) dostupné na webu Google Play. Žádná další konfigurace v Intune se nevyžaduje.
-- [Požadavky na nastavení pro **iOS a Mac OS X**] /intune-classic/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
-- [Požadavky na nastavení pro **Windows Phone**]/intune-classic/deploy-use/set-up-windows-phone-management-with-microsoft-intune).
+- [Požadavky na nastavení pro **iOS a Mac OS X**](/intune-classic/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
 
-<!--- ## Verify enrollment--->
-<!--- START HERE
-
-### iOS and Mac OS X
-Install the **Microsoft Intune Company Portal** app from Microsoft Corporation available in the App Store and sign in with Intune user credentials added above. View **Enrolled devices** to add your device.
+- [Požadavky na nastavení pro **Windows Phone**](/intune-classic/deploy-use/set-up-windows-phone-8.0-management-with-microsoft-intune)
 
 
 
-### Windows Phone 8.1
-Users install the **Company Portal** app from Microsoft Corporation, available in the Windows Phone store, and sign in with the Intune user credentials added above.  View **Enrolled devices** to add your device.
-
-## Install the previously deployed app
-Open the Company Portal on the mobile device, choose **Apps**, and then install **Microsoft Skype**.--->
 
 
 
 ## <a name="next-steps"></a>Další kroky
 [Vytvoření skupin pro uspořádání uživatelů a zařízení](get-started-with-a-30-day-trial-of-microsoft-intune-step-3.md)
-

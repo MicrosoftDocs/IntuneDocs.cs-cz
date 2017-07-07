@@ -5,27 +5,23 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/16/2017
+ms.date: 06/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: a26d9e3c-8f58-4494-9571-fc88ba91852e
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ed0e84c16ea540c08e97cb55ef8a09cbc7339f6
-ms.openlocfilehash: f01d8b31f493b7103fe788aa62d37f9c73981984
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/25/2017
-
-
+ms.openlocfilehash: 90168dae6b73185ae8cdf6c55093c79ab3d729c0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="using-the-intune-company-portal-website"></a>Použití webu Portál společnosti Intune
 Na [webu Portál společnosti](https://portal.manage.microsoft.com) mohou koncoví uživatelé spravovat počítače a zařízení, která si zaregistrovali v Intune.
 
@@ -41,7 +37,7 @@ Na webu Portál společnosti mohou uživatelé provádět následující úlohy:
 
 -   [Vzdálené uzamčení zařízení](remote-lock-your-device-cpwebsite.md)
 
--    [Ruční synchronizace zařízení, aby se aplikace instalovaly rychleji](sync-your-device-manually-cpwebsite.md)
+-   [Ruční synchronizace zařízení, aby se aplikace instalovaly rychleji](sync-your-device-manually-cpwebsite.md)
 
 -   Vyhledání kontaktních údajů na správce IT, pokud jste je nakonfigurovali
 
@@ -49,9 +45,4 @@ Na webu Portál společnosti mohou uživatelé provádět následující úlohy:
 
 -   Vzdálená správa počítače (platí jenom pro PC)
 
-Většinu úloh, které koncoví uživatelé provádějí na **webu Portál společnosti**, mohou provádět i v **aplikaci Portál společnosti**, kterou si nainstalují do zařízení. Následující stránky obsahují odkazy na všechny úlohy, které mohou uživatelé provádět na svém zařízení:
-
-- [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
-- [Použití zařízení s iOSem nebo macOS s Intune](using-your-ios-or-macOS-device-with-intune.md)
-- [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
-
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
