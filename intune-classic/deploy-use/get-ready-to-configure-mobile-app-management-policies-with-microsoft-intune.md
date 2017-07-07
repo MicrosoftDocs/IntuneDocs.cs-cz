@@ -1,5 +1,5 @@
 ---
-title: "Předpoklady zásad MAM | Dokumentace Microsoftu"
+title: "Předpoklady zásad MAM"
 description: "Toto téma popisuje předpoklady pro nastavení uživatelů před vytvořením zásad správy mobilních aplikací."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: 7e6a85e7-e007-41b6-9034-64d77f547b87
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 3c209a350a7de7ba7ddb71468c5cd4230dcf5423
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 67c261a3a31229f84d02d4536ab78857369391f1
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="get-ready-to-configure-app-protection-policies-in-the-azure-portal"></a>Příprava na konfiguraci zásad ochrany aplikací na portálu Azure Portal
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -70,7 +67,7 @@ Pokyny k vytvoření zásad ochrany aplikací v konzole pro správu Intune najde
 
 * **Obchodní aplikace vaší organizace:** Před použitím zásad ochrany aplikací musíte tyto aplikace připravit tak, aby obsahovaly sadu Intune App SDK.
 
-  * Pokud máte zařízení spravovaná pomocí Intune, projděte si téma [Rozhodnutí o způsobu přípravy aplikací na správu MAM](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md).
+  * Pokud máte zařízení spravovaná pomocí Intune, projděte si téma [Rozhodnutí o způsobu přípravy aplikací na správu MAM](/intune/apps-prepare-mobile-application-management).
 
   * Pokud máte zařízení, která nejsou spravovaná (třeba zařízení vlastněná zaměstnanci) nebo se k jejich správě používá jiné řešení pro správu mobilních zařízení, přečtěte si téma [Ochrana obchodních aplikací a dat na zařízeních, která nejsou zaregistrovaná v Microsoft Intune](protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune.md).
 
@@ -109,4 +106,3 @@ Globální správci mají přístup k [portálu Azure Portal](https://portal.azu
 
 ## <a name="next-steps"></a>Další kroky
 [Vytvoření a nasazení zásad ochrany aplikací pomocí Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
-

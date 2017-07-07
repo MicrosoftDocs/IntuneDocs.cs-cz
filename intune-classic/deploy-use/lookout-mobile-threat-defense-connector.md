@@ -1,5 +1,5 @@
 ---
-title: Konektor Lookout Mobile Threat Defense | Dokumentace Microsoftu
+title: Konektor Lookout Mobile Threat Defense
 description: "Chraňte přístup k firemním prostředkům na základě rizika zařízení, sítě a aplikace pomocí konektoru Lookout Mobile Threat Defense a Intune."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: 725d9e40-e70c-461a-9413-72ff1b89a938
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 67654722e5c2bcbb768cf840a3f7ff1a24f99739
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 6ed808e3dd1db1bf58d4c0caa8cddccbc49c05f7
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="lookout-mobile-threat-defense-connector-with-intune"></a>Konektor Lookout Mobile Threat Defense s Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -93,9 +90,8 @@ Zjišťuje ohrožení vaší sítě, například útoky prostředníkem, a zabra
 
 ## <a name="next-steps"></a>Další kroky
 Tady jsou hlavní kroky, které je nutné provést při implementaci tohoto řešení:
-1.    [Nastavení předplatného služby Lookout](setup-your-lookout-mtd-subscription.md)
-2.    [Povolení ochrany před mobilními hrozbami Lookout ve službě Intune](enable-lookout-mtd-connection.md)
+1.  [Nastavení předplatného služby Lookout](setup-your-lookout-mtd-subscription.md)
+2.  [Povolení ochrany před mobilními hrozbami Lookout ve službě Intune](enable-lookout-mtd-connection.md)
 3.  [Konfigurace a nasazení ochrany před mobilními hrozbami Lookout](configure-deploy-lookout-for-work-app.md)
-4.    [Konfigurace zásad dodržování předpisů zařízení služby Lookout](create-lookout-device-compliance-policy.md)
-5.    [Řešení potíží s integrací ochrany před mobilními hrozbami Lookout](/intune-classic/troubleshoot/device-threat-protection-troubleshooting)
-
+4.  [Konfigurace zásad dodržování předpisů zařízení služby Lookout](create-lookout-device-compliance-policy.md)
+5.  [Řešení potíží s integrací ochrany před mobilními hrozbami Lookout](/intune-classic/troubleshoot/device-threat-protection-troubleshooting)

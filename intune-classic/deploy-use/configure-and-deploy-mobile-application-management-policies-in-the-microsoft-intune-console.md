@@ -1,5 +1,5 @@
 ---
-title: "Konfigurace zásad MAM v konzole Intune | Dokumentace Microsoftu"
+title: "Konfigurace zásad MAM v konzole Intune"
 description: "Zásady správy mobilních aplikací ve službě Microsoft Intune umožňují upravovat funkce aplikací, které nasazujete, a přizpůsobit je zásadám dodržování předpisů a zabezpečení vaší společnosti."
 keywords: 
 author: robstackmsft
@@ -14,15 +14,12 @@ ms.assetid: b4fb33a8-a2fa-4353-bd89-5bda48b68e83
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 65b2eb20aea4bbadba9d470590b6c344ac37b9f5
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ce97f18a799725a86ef3ab7f4f7c0cc8cdf8f062
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console"></a>Configure and deploy mobile application management policies in the Microsoft Intune console
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -46,11 +43,10 @@ Pokud chcete u aplikace použít omezení, musí aplikace obsahovat sadu Microso
 
 -   **Použijte aplikaci spravovanou zásadami**. Aplikace spravovaná zásadami má integrovanou sadu App SDK. Pokud chcete tento typ aplikace přidat, zadáte odkaz na aplikaci z App Storu, jako je třeba iTunes Store nebo Google Play. Tento typ aplikace nevyžaduje žádné další zpracování. Další informace najdete v [seznamu aplikací, které můžete použít se zásadami správy mobilních aplikací služby Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
--   **Použijte zabalenou aplikaci**. Zabalená aplikace je aplikace, která je znovu zabalená, aby zahrnovala sadu App SDK, pomocí nástroje Microsoft Intune App Wrapping Tool. Tento nástroj se obvykle používá ke zpracování interně vytvořených podnikových aplikací. Nedá se použít ke zpracování aplikací stažených z App Storu. Další informace najdete v tématu [Příprava aplikací pro iOS na správu mobilních aplikací nástrojem Microsoft Intune App Wrapping Tool](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) a [Příprava aplikací pro Android na správu mobilních aplikací nástrojem Microsoft Intune App Wrapping Tool](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md).
+-   **Použijte zabalenou aplikaci**. Zabalená aplikace je aplikace, která je znovu zabalená, aby zahrnovala sadu App SDK, pomocí nástroje Microsoft Intune App Wrapping Tool. Tento nástroj se obvykle používá ke zpracování interně vytvořených podnikových aplikací. Nedá se použít ke zpracování aplikací stažených z App Storu. Další informace najdete v tématu [Příprava aplikací pro iOS na správu mobilních aplikací nástrojem Microsoft Intune App Wrapping Tool](/intune/app-wrapper-prepare-ios) a [Příprava aplikací pro Android na správu mobilních aplikací nástrojem Microsoft Intune App Wrapping Tool](/intune/app-wrapper-prepare-android).
 
-- **Napište vlastní aplikaci, která zahrnuje sadu Intune App SDK**. Sada Intune App SDK umožňuje začlenit funkce správy aplikací do aplikace, kterou píšete. Další informace najdete v tématu [Přehled sady Intune App SDK](/intune-classic/develop/intune-app-sdk).
-
-Při rozhodování mezi nástrojem App Wrapping Tool a sadou Intune App SDK vám pomůžou informace v tématu [Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md).
+- **Napište vlastní aplikaci, která zahrnuje sadu Intune App SDK**. Sada Intune App SDK umožňuje začlenit funkce správy aplikací do aplikace, kterou píšete. Další informace najdete v tématu [Přehled sady Intune App SDK](/intune/app-sdk).
+/intune/apps-prepare-mobile-application-management Při rozhodování mezi nástrojem App Wrapping Tool a sadou Intune App SDK vám pomůžou informace v tématu [Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune](/intune/apps-prepare-mobile-application-management).
 
 Některé spravované aplikace, třeba Outlook pro iOS a Android, podporují *víc identit*. To znamená, že Intune v dané aplikaci aplikuje nastavení správy jenom na podnikové účty nebo data.
 
@@ -197,4 +193,3 @@ V případech, kdy zařízení nebo uživatel obdrží dvě konfliktní zásady,
 -   Pokud už byla zásada nasazená na zařízení, stávající nastavení zásad se nepřepíšou.
 
 -   Pokud ještě na zařízení nebyla nasazená žádná zásada a nasadí se dvě konfliktní nastavení, použije se výchozí nastavení zařízení.
-

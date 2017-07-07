@@ -1,5 +1,5 @@
 ---
-title: "Přístup k aplikacím pro Exchange Online | Dokumentace Microsoftu"
+title: "Přístup aplikací pro Exchange Online"
 description: "Toto téma popisuje, jak nakonfigurujete zásadu podmíněného přístupu pro aplikace MAM."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: f2cd1a1f-fd29-4081-8dfa-c40993a107d5
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: df84bdf2358b596905299c7099ce22e128e9d17d
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 2ef4a0c0e642026d625d7139b2ea2629cdd96930
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="create-an-exchange-online-conditional-access-to-only-allow-apps-supported-by-mam"></a>Povolení přístupu jenom aplikacím s podporou MAM vytvořením podmíněného přístupu pro Exchange Online
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -64,4 +61,3 @@ Pokud chcete **odstranit skupinu uživatelů** ze seznamu **omezených skupin u�
 [Blokování aplikací, které nepoužívají moderní ověřování](block-apps-with-no-modern-authentication.md)
 ### <a name="see-also"></a>Související témata
 [Ochrana dat aplikací pomocí zásad ochrany aplikací](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
-

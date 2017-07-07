@@ -1,5 +1,5 @@
 ---
-title: "Vymazání mobilních zařízení spravovaných Exchangem | Dokumentace Microsoftu"
+title: "Vymazání mobilních zařízení spravovaných Exchangem"
 description: "Microsoft Intune vám umožňuje vymazat nebo resetovat mobilní zařízení, která jsou spravovaná pomocí protokolu Exchange ActiveSync (EAS) s Intune Exchange Connectorem."
 keywords: 
 author: andredm7
@@ -14,16 +14,12 @@ ms.assetid: e116b620-1e12-4b5c-9905-2f7acf2ae530
 ms.reviewer: lancecra
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 4b0914ab12456fd3ad5f957d68a59df9de539176
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 665f57a4cdb25c1e9f2bef7f1c25f284589df16f
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="wipe-for-exchange-managed-mobile-devices"></a>Wipe for Exchange-managed mobile devices
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -35,4 +31,3 @@ Microsoft Intune vám umožňuje vymazat nebo resetovat mobilní zařízení, kt
 |Úplné vymazání|Odebere poštovní účet a poštu v mezipaměti.|Obnoví výrobní nastavení.|Obnoví výrobní nastavení.|
 |Selektivní vymazání/e-mail|Odebere e-mailový účet.|Není podporováno.|Není podporováno.|
 |Selektivní vymazání/zásady|Odebere se vynucení zásad, ale nastavení se nezmění.|Odebere se vynucení zásad, ale nastavení se nezmění.|Odebere se vynucení zásad, ale nastavení se nezmění.|
-

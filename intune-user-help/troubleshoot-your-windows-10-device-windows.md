@@ -11,21 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4ab630b6-47ff-443b-a2a5-be23388bcea7
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 465d84490f5000b13a2c7371677cee77baadc4d2
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Řešení potíží při registraci zařízení s Windows 10
 Pokud jste použili postup v části [Registrace zařízení s Windows 10 Mobile nebo Windows 10 Desktop v Intune](enroll-your-w10-phone-or-w10-pc-windows.md), ale stále nemáte přístup ke svému školnímu nebo pracovnímu e-mailu a souborům, zkuste tyto kroky pro řešení potíží.
 
@@ -60,4 +56,3 @@ Pokud jste použili tento postup, ale pořád nemáte přístup k pracovnímu ne
 - Pokud svůj pracovní nebo školní účet nevidíte, klepněte na **Připojit** a přihlaste se pomocí přihlašovacích údajů svého pracovního nebo školního účtu.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-

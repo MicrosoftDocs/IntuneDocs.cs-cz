@@ -11,19 +11,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: c7a10998-9aa6-4bc0-8405-27a30c61bca7
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 4afd57da42d634dbead124d2f0dec4b4715c546e
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="you-need-to-turn-off-unknown-sources"></a>Musíte vypnout nastavení Neznámé zdroje
 
 Do zařízení s Androidem si můžete nainstalovat aplikace z různých umístění. Obchod Google Play nabízí spoustu aplikací pro většinu uživatelů. Některé aplikace, například aplikace vytvořené vaší společností k internímu použití, se můžou instalovat z jiných webových obchodů. Pokud byste aplikace instalovali z neověřených umístění, mohlo by to vést k problémům se zařízením a potenciálně způsobit problémy se zabezpečením. Váš správce IT kvůli zabezpečení podnikových dat rozhodl, že je nutné vypnout přístup k neznámým zdrojům.
@@ -33,4 +29,3 @@ Pokud se zobrazí zpráva „Musí se zakázat instalace z neznámých zdrojů�
 Když nastavení **Neznámé zdroje** vypnete, může trvat několik minut, než budete zařízení s Androidem moct znovu používat pro přístup k datům společnosti nebo školy.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-

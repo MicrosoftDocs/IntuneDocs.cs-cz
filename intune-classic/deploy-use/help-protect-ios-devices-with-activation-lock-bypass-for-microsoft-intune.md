@@ -1,5 +1,5 @@
 ---
-title: "Správa zámku aktivace iOS na zařízeních | Dokumentace Microsoftu"
+title: "Správa zámku aktivace v iOSu na zařízeních"
 description: "Microsoft Intune vám může pomoci spravovat zámek aktivace v iOSu – funkci aplikace Najít iPhone pro zařízení s iOSem 7.1 a novějším."
 keywords: 
 author: robstackmsft
@@ -14,15 +14,12 @@ ms.assetid: bb49e926-15c4-4f01-b6eb-cee6f7ee1984
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 22ccccefae44190ffb2d65bdf475eaef1f9b8bd2
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 3695e4c047edd9b788768db36184460f0e27d3bc
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="help-protect-ios-devices-with-activation-lock-bypass-for-microsoft-intune"></a>Pomoc při ochraně zařízení s iOSem pomocí funkce Vynechat zámek aktivace pro Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -106,4 +103,3 @@ To, která zařízení zámek aktivace používají, můžete zjistit dvěma zp�
 ### <a name="see-also"></a>Související témata
 [Vyřazení zařízení](retire-devices-from-microsoft-intune-management.md)
 [Chraňte svá zařízení pomocí vzdáleného zámku a resetování hesla](use-remote-lock-and-passcode-reset-in-microsoft-intune.md)
-

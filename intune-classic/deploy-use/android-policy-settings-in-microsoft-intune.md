@@ -1,6 +1,5 @@
 ---
-
-title: "Nastavení zásad konfigurace pro Android a Samsung KNOX | Dokumentace Microsoftu"
+title: "Nastavení zásad konfigurace pro Android a Samsung KNOX"
 description: "Vytvořte zásady, které řídí nastavení a funkce na zařízeních s Androidem, která spravujete pomocí Intune."
 keywords: 
 author: robstackmsft
@@ -15,15 +14,12 @@ ms.assetid: 71cc39cf-e726-40fd-8d08-78776e099a4b
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: c2652e405879d4506c40b500c489a5e92ad15282
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 07d49d9f9628dd296c3708a063de34d485c77acb
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="android-and-samsung-knox-standard-policy-settings-in-microsoft-intune"></a>Nastavení zásad konfigurace pro Android a Samsung KNOX Standard v Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -211,4 +207,3 @@ Intune v současnosti podporuje omezený počet vlastních zásad Androidu. Poku
 
 ### <a name="see-also"></a>Viz taky
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-

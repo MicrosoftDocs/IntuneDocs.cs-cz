@@ -14,15 +14,12 @@ ms.assetid: a19e5612-8805-4bd7-a86a-b734bde293ae
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: 7fc99a944000a8d5ecfc09ebc2e956e7c0f201c9
-ms.contentlocale: cs-cz
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="restore-intune-managed-ios-devices-from-backup"></a>Obnovení zařízení s iOSem spravovaných přes Intune ze zálohy
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -52,4 +49,3 @@ Spusťte aplikaci Portál společnosti a zrušte registraci tím, že vyberete d
 
 ### <a name="for-users-who-will-use-both-their-old-and-new-devices"></a>Uživatelé, kteří budou používat staré i nové zařízení
 Zrušte v Safari soubory cookie tím, že klepnete na __Nastavení__ > __Safari__ > __Smazat historii a data stránek__. Po vymazání odinstalujte aplikaci Portál společnosti a znovu ji nainstalujte. Pak použijte standardní postup registrace k [zaregistrování zařízení s iOSem do Intune](/intune-user-help/enroll-your-device-in-intune-ios).
-

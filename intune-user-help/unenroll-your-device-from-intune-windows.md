@@ -11,31 +11,26 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 018bda65-7238-41f5-b92a-e5f67b7fe085
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 10e6bda2001b5dfeb380e9a553aa0fe5a060746b
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="unenroll-your-windows-device-from-intune"></a>Zrušení registrace zařízení s Windows v Intune
 
 Jestli jste se zaregistrovali v Intune, ale zařízení s Windows už nechcete v práci nebo ve škole využívat a nepotřebujete přístup k pracovním nebo školním e-mailům, aplikacím nebo jiným prostředkům, musíte zrušit registraci zařízení. Jakmile zrušíte registraci zařízení v Intune, tyto prostředky už pro vás nebudou přístupné. Další informace o tom, co se stane, pokud zrušíte registraci svého zařízení, najdete v tématu [Co se stane, když zrušíte registraci zařízení v Intune](what-happens-if-you-unenroll-your-device-from-intune-windows.md).
 
 Informace o tom, jak zrušit registraci zařízení, získáte prostřednictvím odkazu, který je zobrazen výše v části V tomto článku a který odpovídá používanému zařízení:
 
--    [Zrušení registrace zařízení s Windows 10](#unenroll-your-windows-10-device)
--    [Zrušení registrace počítače s Windows 8.1](#unenroll-your-windows-81-computer)
--    [Zrušení registrace zařízení Windows Phone 8.1](#unenroll-your-windows-phone-81-device)
+-   [Zrušení registrace zařízení s Windows 10](#unenroll-your-windows-10-device)
+-   [Zrušení registrace počítače s Windows 8.1](#unenroll-your-windows-81-computer)
+-   [Zrušení registrace zařízení Windows Phone 8.1](#unenroll-your-windows-phone-81-device)
 
 ## <a name="unenroll-your-windows-10-device"></a>Zrušení registrace zařízení s Windows 10
 
@@ -68,4 +63,3 @@ Informace o tom, jak zrušit registraci zařízení, získáte prostřednictvím
 4.  V dialogovém okně **Odstranit účet** klepněte na **Odstranit**.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-

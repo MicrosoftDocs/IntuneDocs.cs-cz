@@ -1,5 +1,5 @@
 ---
-title: Konektor Exchange pro Exchange Online | Dokumentace Microsoftu
+title: Konektor Exchange pro Exchange Online
 description: "Připojte Intune ke službě Office 365 Exchange, abyste podporovali správu mobilních zařízení Exchange ActiveSync (MDM)."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: 05fa5dc9-9bad-4557-987a-9b8ce4edebb0
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 4b73767f585cfa6283c7fb0601e7061efe42c606
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: c2f30e7827db280ba49fc49b6b7a00c9a8d9eade
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="configure-the-intune-service-to-service-connector-for-exchange-online"></a>Konfigurace konektoru Intune Service to Service Connector pro Exchange Online
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -36,8 +33,8 @@ Tyto informace vám pomůžou při propojení služeb Microsoft Intune a Exchang
 |---------------|--------------------|
 |Nakonfigurovaná a spuštěná služba Exchange Online|[Exchange Online](https://technet.microsoft.com/library/jj200580.aspx) |
 |Autorita pro správu mobilních zařízení| [Nastavení autority pro správu mobilních zařízení v Microsoft Intune](prerequisites-for-enrollment.md#step-2-set-mdm-authority)|
-|Verze Microsoft Exchange|Exchange Online nebo nová služba Exchange Online Dedicated|
-|Synchronizace se službou Active Directory|Než použijete některý z konektorů Intune, je potřeba [nastavit synchronizaci služby Active Directory](/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3) tak, aby byli místní uživatelé a skupiny zabezpečení synchronizovaní s vaší instancí Azure Active Directory.|
+|Verze Microsoft Exchange|Exchange Online nebo nová služba Exchange Online Dedicated|/intune/users-permissions-add
+|Synchronizace se službou Active Directory|Než použijete některý z konektorů Intune, je potřeba [nastavit synchronizaci služby Active Directory](/intune/users-permissions-add) tak, aby byli místní uživatelé a skupiny zabezpečení synchronizovaní s vaší instancí Azure Active Directory.|
 
 ### <a name="exchange-cmdlet-requirements"></a>Požadavky rutin systému Exchange
 
@@ -67,4 +64,3 @@ Konektor Service to Service Connector se automaticky nakonfiguruje a synchronizu
 Po úspěšném nakonfigurování Exchange Connectoru přejděte do [konzoly pro správu Microsoft Intune](https://manage.microsoft.com). Zvolte **Správce**> **Správa mobilního zařízení** > **Microsoft Exchange**. Potom ověřte, že se vámi zadané podrobnosti zobrazí v části **Informace o připojení systému Exchange**.
 
 Můžete se taky podívat na datum a čas posledního úspěšného pokusu o synchronizaci.
-

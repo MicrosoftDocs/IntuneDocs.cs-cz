@@ -1,5 +1,5 @@
 ---
-title: Migrace do skupin Azure Active Directory | Dokumentace Microsoftu
+title: Migrace do skupin Azure Active Directory
 description: "Jak budou vaše skupiny migrovány z Intune do Azure AD"
 keywords: 
 author: robstackmsft
@@ -12,15 +12,12 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 03b69afa-3548-4033-9039-191528f3fd99
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 2296490a8c3984e79eeeb553d90591048ed46711
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 829057773e1ef40b179435b5b81bfcd9fc5c84f3
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="a-new-way-of-using-groups-in-intune"></a>Nový způsob používání skupin v Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -92,4 +89,3 @@ Atributy jsou vlastnosti zařízení, které se dají použít při definování
 
 Zásady a aplikace jsou i nadále nasazené do skupin, stejně jako dříve. Tyto skupiny teď ovšem budete spravovat z portálu Azure Portal místo z konzoly Intune Classic.
  
-

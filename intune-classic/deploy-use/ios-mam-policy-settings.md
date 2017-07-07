@@ -1,5 +1,5 @@
 ---
-title: "Nastavení zásad MAM pro iOS | Dokumentace Microsoftu"
+title: "Nastavení zásad MAM pro iOS"
 description: "Toto téma popisuje nastavení zásad správy mobilních aplikací pro zařízení s iOSem."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: 673ff872-943c-4076-931c-0be90363aea9
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: ca0fa4b433710eecbb28f931e9b5cbe5b230598b
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 384c3a8c930bf7ee8487726c37f1ff3652675650
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 #  <a name="ios-mobile-app-protection-policy-settings"></a>Nastavení zásad ochrany mobilních aplikací pro iOS
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -71,14 +68,14 @@ U některých aplikací a služeb platformy, které mají výjimku, můžou zás
 | **Vyžadovat pro přístup kód PIN** | Zvolte **Ano**, aby se k použití této aplikace vyžadoval kód PIN. Uživateli se zobrazí výzva k nastavení tohoto kódu PIN při prvním spuštění aplikace v pracovním nebo školním kontextu. Výchozí hodnota = **Ano**<br><br> Sílu kódu PIN nakonfigurujete pomocí následujících nastavení: <ul><li>**Počet pokusů před resetem PIN kódu:** Zadejte počet pokusů, které uživatel bude mít k úspěšnému zadání PINu, než bude nutné PIN resetovat. Výchozí hodnota = **5**</li><li> **Povolit jednoduchý kód PIN:** Pokud chcete uživatelům povolit používání jednoduchých posloupností v kódu PIN, třeba 1234 nebo 1111, zvolte **Ano**. V případě, že nechcete, aby jednoduché posloupnosti používali, zvolte **Ne**. Výchozí hodnota = **Ano** </li><li> **Délka kódu PIN:** Zadejte minimální počet číslic v PINu. Výchozí hodnota = **4** </li><li> **Povolit otisk prstu místo PIN kódu (iOS 8.0+):** Zvolte **Ano**, pokud chcete uživateli ke zpřístupnění aplikace povolit použití [Touch ID](https://support.apple.com/HT201371) místo PINu. Výchozí hodnota = **Ano**</li></ul> Na zařízeních s iOSem můžete nechat uživatele prokazovat svoji identitu pomocí [Touch ID](https://support.apple.com/HT201371) namísto PINu. Když se uživatel pokusí použít tuto aplikaci se svým pracovním nebo školním účtem, zobrazí se výzva k zadání otisku prstu a uživatel nemusí zadávat kód PIN. Když je toto nastavení povolené, bude při používání pracovního nebo školního účtu obrázek náhledu v přepínači aplikací rozostřený. </li></ul>| Požadovat kód PIN: Ano <br><br> Počet pokusů před resetováním kódu PIN: 5 <br><br> Povolit jednoduchý PIN: Ano <br><br> Délka PINu: 4 <br><br> Povolit otisk prstu: Ano |
 | **Vyžadovat podnikové přihlašovací údaje pro přístup** | Pokud chcete, aby se uživatel k získání přístupu k aplikaci přihlašoval pomocí svého pracovního nebo školního účtu namísto zadávání kódu PIN, zvolte **Ano**. Pokud nastavíte **Ano**, přepíše se tím požadavek na PIN nebo Touch ID.  | Ne |
 | **Blokovat spuštění spravovaných aplikací na zařízeních s jailbreakem nebo rootem** |  Pokud chcete zabránit spuštění této aplikace v zařízeních s jailbreakem nebo rootem, zvolte **Ano**. Uživatel bude moct dál používat tuto aplikaci pro své osobní účely, ale k práci s pracovními nebo školními daty v této aplikaci bude muset používat jiné zařízení. | Ano |
-| **Znovu zkontrolovat požadavky na přístup po (minuty)** | Proveďte konfiguraci následujících nastavení: <ul><li>**Časový limit:** Toto je počet minut před opakovaným zkontrolováním požadavků na přístup k aplikaci (definovaným dříve v zásadách). Správce například v zásadách zapne kód PIN, uživatel otevře aplikaci MAM a musí zadat PIN. Při použití tohoto nastavení nemusí uživatel u žádné aplikace MAM zadávat PIN dalších **30 minut** (výchozí hodnota).</li><li>**Období odkladu pro offline režim:** Toto je počet minut, po které může aplikace MAM běžet offline. Zadejte dobu (v minutách) před opakovaným zkontrolováním požadavků na přístup k aplikaci. Výchozí hodnota = **720** minut (12 hodin) Aby mohla aplikace po uplynutí této doby dál běžet, bude vyžadovat ověření uživatele ve službě AAD.</li></ul>| Časový limit: 30 <br><br> Offline: 720 |
+| **Znovu zkontrolovat požadavky na přístup po (minuty)** | Proveďte konfiguraci následujících nastavení: <ul><li>**Časový limit:** Toto je počet minut před opakovaným zkontrolováním požadavků na přístup k aplikaci (definovaným dříve v zásadách). Správce například v zásadách zapne kód PIN, uživatel otevře aplikaci MAM a musí zadat PIN. Při použití tohoto nastavení nemusí uživatel u žádné aplikace MAM zadávat PIN dalších **30 minut** (výchozí hodnota).<br><br>K měření časového limitu požadavků na přístup se používá doba nečinnosti všech aplikací spravovaných podle těchto zásad.<br><br></li><li>**Období odkladu pro offline režim:** Toto je počet minut, po které může aplikace MAM běžet offline. Zadejte dobu (v minutách) před opakovaným zkontrolováním požadavků na přístup k aplikaci. Výchozí hodnota = **720** minut (12 hodin) Aby mohla aplikace po uplynutí této doby dál běžet, bude vyžadovat ověření uživatele ve službě AAD.</li></ul>| Časový limit: 30 <br><br> Offline: 720 |
 | **Doba v offline režimu (ve dnech) před vymazáním dat** | Po tomto počtu dnů (definovaném správcem) běhu v offline režimu provede aplikace sama selektivní vymazání. Je to stejné selektivní vymazání, jaké může vyvolat správce v pracovním postupu vymazání MAM. <br><br> | 90 dnů |
 | **Zakázat PIN kód aplikace, když je PIN kód zařízení spravovaný** | Pokud chcete zakázat PIN kód aplikace, když bude na zaregistrovaném zařízení zjištěn zámek zařízení, zvolte **Ano**. | Ne |
 | **Vyžadovat minimální verzi operačního systému iOS** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi operačního systému iOS. Uživateli bude zablokován přístup, pokud verze iOS v zařízení nesplňuje tento požadavek. | Ne |
 | **Vyžadovat minimální verzi operačního systému iOS (jenom upozornění)** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi operačního systému iOS. Uživateli se zobrazí oznámení, pokud verze iOS v zařízení nesplňuje tento požadavek. Toto oznámení je možné zavřít. | Ne |
 | **Vyžadovat minimální verzi aplikace** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi aplikace. Uživateli bude zablokován přístup, pokud verze aplikace v zařízení nesplňuje tento požadavek.<br><br>Při výběru cílových aplikací si prosím uvědomte, že aplikace mívají často odlišná schémata verzí.<br><br> | Ne | 
 | **Vyžadovat minimální verzi aplikace (jenom upozornění)** | Zvolte **Ano**, pokud k používání této aplikace doporučujete minimální verzi aplikace. Uživateli se zobrazí oznámení, pokud verze aplikace v zařízení nesplňuje tento požadavek. Toto oznámení je možné zavřít.<br><br>Při výběru cílových aplikací si prosím uvědomte, že aplikace mívají často odlišná schémata verzí.<br><br> | Ne | 
-| **Vyžadovat minimální verzi sady SDK zásad ochrany aplikací Intune** | Zvolte **Ano**, pokud požadujete, aby tato aplikace používala minimální verzi sady SDK zásad ochrany aplikací Intune. Uživateli bude zablokován přístup, pokud verze sady SDK zásad ochrany aplikací Intune nesplňuje tento požadavek. <br> <br> Další informace o sadě SDK zásad ochrany aplikací Intune najdete v článku [Přehled sady Intune App SDK](https://docs.microsoft.com/en-us/intune/develop/intune-app-sdk). <br><br> | Ne |
+| **Vyžadovat minimální verzi sady SDK zásad ochrany aplikací Intune** | Zvolte **Ano**, pokud požadujete, aby tato aplikace používala minimální verzi sady SDK zásad ochrany aplikací Intune. Uživateli bude zablokován přístup, pokud verze sady SDK zásad ochrany aplikací Intune nesplňuje tento požadavek. <br> <br> Další informace o sadě SDK zásad ochrany aplikací Intune najdete v článku [Přehled sady Intune App SDK](/intune/app-sdk). <br><br> | Ne |
 ##  <a name="add-ins-for-outlook-app"></a>Doplňky pro aplikaci Outlook
 
 Poměrně čerstvou novinkou v Outlooku jsou doplňky pro iOS, které umožňují integrovat oblíbené aplikace s e-mailovým klientem. Doplňky pro Outlook jsou k dispozici na webu, v systému Windows, na Macu a v Outlooku pro iOS. Vzhledem k tomu, že se doplňky spravují přes Microsoft Exchange, budou uživatelé moct sdílet data a zprávy v rámci Outlooku a nespravovaných aplikací doplňků (pokud nemají doplňky vypnuté na Exchangi).
@@ -93,4 +90,3 @@ Tyto pokyny platí pro Office 365, Exchange 2016, Exchange 2013, a to jak v Outl
 
 - Další informace o [doplňcích pro Outlook](https://technet.microsoft.com/library/jj943753(v=exchg.150).aspx).
 - Přečtěte si další informace o tom [jak určit, kteří správci a uživatelé můžou instalovat a spravovat doplňky pro aplikaci Outlook](https://technet.microsoft.com/library/jj943754(v=exchg.150).aspx).
-

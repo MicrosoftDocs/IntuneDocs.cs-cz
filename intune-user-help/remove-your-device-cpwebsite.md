@@ -11,28 +11,24 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: e240419a-a836-4be3-8fd9-39a4ec890226
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 4293e05d3668c7f6d6d6b9986e006061df5afe80
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="remove-your-device-from-the-company-portal"></a>Odebrat zařízení z portálu společnosti
 
 Pokud už nechcete, aby vaše zařízení spravovala vaše společnost nebo organizace, můžete ho odebrat z odebrat z portálu společnosti pomocí [webu Portál společnosti](http://portal.manage.microsoft.com). Web Portál společnosti je webová stránka sloužící ke správě počítačů a zařízení, jejichž správu jste si zaregistrovali u svého IT oddělení. Pokud zařízení odeberete, nebude nadále uvedené na Portálu společnosti a můžete také ztratit přístup k firemním nebo školním datům, aplikacím a e-mailům.
 
 Odebrání zařízení:
 
-1.    Na [webu Portál společnosti](http://portal.manage.microsoft.com) klepněte na tlačítko __nabídky__ ![Malý obrázek tlačítka nabídky, tři vodorovné pruhy nad sebou](/Intune/whats-new/media/CP_hamburger_menu.png) a potom vyberte __Moje zařízení__.
+1.  Na [webu Portál společnosti](http://portal.manage.microsoft.com) klepněte na tlačítko __nabídky__ ![Malý obrázek tlačítka nabídky, tři vodorovné pruhy nad sebou](/Intune/whats-new/media/CP_hamburger_menu.png) a potom vyberte __Moje zařízení__.
 
   ![Obrázek webu Portál společnosti s rozbalenou boční nabídkou na levé straně obrazovky, s tlačítky Domů, Všechny aplikace, Moje zařízení, Helpdesk a Odhlásit se](/media/iwp-expanded-sidebar.png)
 
@@ -40,11 +36,10 @@ Odebrání zařízení:
 
     ![Snímek obrazovky se stránkou Moje zařízení s několika neidentifikovanými zařízeními zobrazenými nad výzvou k registraci zařízení, která nejsou v seznamu, nebo k identifikaci neidentifikovaných zařízení](./media/macOS_enroll_002_tap_here_banner.png)
 
-3.    Zařízení se otevře v místním okně. Klepněte na tlačítko **Odebrat**.
+3.  Zařízení se otevře v místním okně. Klepněte na tlačítko **Odebrat**.
 
-      ![Všechny možnosti pro vybrané zařízení na webu Portál společnosti, včetně možnosti Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení ](./media/iwp-screen-with-all-options.png)
+    ![Všechny možnosti pro vybrané zařízení na webu Portál společnosti, včetně možnosti Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení ](./media/iwp-screen-with-all-options.png)
 
 4. Přečtěte si zprávu s upozorněním a klepnutím na **Odebrat** zařízení odeberte z portálu společnosti.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-

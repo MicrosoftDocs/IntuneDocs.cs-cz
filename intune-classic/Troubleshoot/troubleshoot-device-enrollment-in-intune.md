@@ -1,11 +1,11 @@
 ---
-title: "Řešení potíží s registrací zařízení | Dokumentace Microsoftu"
+title: "Řešení potíží při registraci zařízení"
 description: "Doporučení pro řešení potíží s registrací zařízení"
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 05/10/2017
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,12 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: e72051f9318d24ed36fc39ea6645041f0a150a40
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: f0c55caa70c1a23da549f2fe8804c2ae69ef6045
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Řešení potíží s registrací do služby Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -34,11 +31,11 @@ Toto téma obsahuje doporučení pro řešení potíží s registrací zařízen
 
 Než začnete řešit potíže, ujistěte se, že jste správně nakonfigurovali Intune pro povolení registrace. Můžete si prostudovat informace o těchto požadavcích na konfiguraci:
 
--    [Příprava registrace zařízení v Microsoft Intune](/intune-classic/deploy-use/prerequisites-for-enrollment)
--    [Nastavení správy zařízení s iOSem a Mac OS](/intune-classic/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
--    [Nastavení správy pro zařízení s Windows](/intune-classic/deploy-use/set-up-windows-device-management-with-microsoft-intune)
--    [Nastavení správy zařízení s Androidem](/intune-classic/deploy-use/set-up-android-management-with-microsoft-intune) – nejsou třeba žádné další kroky
--    [Nastavení správy zařízení s Androidem for Work](/intune-classic/deploy-use/set-up-android-for-work)
+-   [Příprava registrace zařízení v Microsoft Intune](/intune-classic/deploy-use/prerequisites-for-enrollment)
+-   [Nastavení správy zařízení s iOSem a Mac OS](/intune-classic/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
+-   [Nastavení správy pro zařízení s Windows](/intune-classic/deploy-use/set-up-windows-device-management-with-microsoft-intune)
+-   [Nastavení správy zařízení s Androidem](/intune-classic/deploy-use/set-up-android-management-with-microsoft-intune) – nejsou třeba žádné další kroky
+-   [Nastavení správy zařízení s Androidem for Work](/intune-classic/deploy-use/set-up-android-for-work)
 
 Uživatelé spravovaných zařízení můžou pro vaši potřebu shromažďovat protokoly registrace a diagnostiky. Pokyny pro uživatele ke shromažďování protokolů najdete tady:
 
@@ -110,8 +107,8 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 
 1.  Zkontrolujte, jestli je nastavená správná autorita pro správu mobilních zařízení (MDM) pro typ služby Intune, který používáte (tj. pro Intune, Office 365 nebo System Center Configuration Manager s Intune). V případě Intune se autorita MDM nastavuje v části **Správce** &gt; **Správa mobilních zařízení**. V případě využívání nástroje Configuration Manager s Intune se nastavuje při konfiguraci konektoru Intune a v Office 365 jde o nastavení **Mobilní zařízení**.
 
-    > [!NOTE]
-    > Jakmile jednou nastavíte autoritu MDM, můžete ji změnit jedině tak, že se obrátíte na podporu, jak je popsáno v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+    > [!NOTE]    
+    > V Configuration Manageru verze 1610 a vyšší a v Microsoft Intune verze 1705 můžete změnit autoritu pro správu mobilních zařízení bez kontaktování podpory Microsoftu a bez rušení registrace a následné nové registrace stávajících spravovaných zařízení. Podrobnosti najdete v článku [Co dělat, když zvolíte nesprávné nastavení autority pro správu mobilních zařízení (MDM)](/intune-classic/deploy-use/prerequisites-for-enrollment#what-to-do-if-you-choose-the-wrong-mdm-authority-setting).
 
 2.  Ověřte správnou synchronizaci přihlašovacích údajů uživatele se službou Azure Active Directory tím, že zkontrolujete, jestli hlavní název uživatele (UPN) odpovídá údajům služby Active Directory na portálu Office 365.
     Pokud hlavní název uživatele neodpovídá údajům služby Active Directory:
@@ -230,16 +227,16 @@ K chybě certifikátu dochází proto, že zařízení s Androidem vyžadují, a
 
 Pokud chcete problém vyřešit, naimportujte certifikáty do osobních certifikátů počítačů na serveru nebo proxy serverech AD FS následujícím způsobem:
 
-1.    Na servery a proxy serverech AD FS spusťte konzolu Správa certifikátů pro místní počítač tak, že kliknete pravým tlačítkem na **Start**, vyberete **Spustit** a zadáte příkaz **certlm.msc**.
-2.    Rozbalte **Osobní** a vyberte **Certifikáty**.
-3.    Najděte certifikát pro vaši komunikaci služby AD FS (veřejně podepsaný certifikát) a poklikáním zobrazte jeho vlastnosti.
-4.    Vyberte kartu **Cesta k certifikátu**, kde uvidíte nadřazené certifikáty certifikátu.
-5.    U každého nadřazeného certifikátu vyberte **Zobrazit certifikát**.
-6.    Vyberte kartu **Podrobnosti** a vyberte **Kopírovat do souboru**.
-7.    Postupujte podle pokynů průvodce a vyexportujte nebo uložte veřejný klíč certifikátu do požadovaného umístění souborů.
-8.    Naimportujte nadřazené certifikáty, které jste ve 3. kroku vyexportovali, do složky Místní počítač\Osobní\Certifikáty, a to tak, že pravým tlačítkem kliknete na **Certifikáty**, vyberete **Všechny úkoly** > **Importovat** a pak podle výzev průvodce certifikáty naimportujete.
-9.    Restartujte servery AD FS.
-10.    Výše uvedené kroky zopakujte na všech serverech a proxy serverech AD FS.
+1.  Na servery a proxy serverech AD FS spusťte konzolu Správa certifikátů pro místní počítač tak, že kliknete pravým tlačítkem na **Start**, vyberete **Spustit** a zadáte příkaz **certlm.msc**.
+2.  Rozbalte **Osobní** a vyberte **Certifikáty**.
+3.  Najděte certifikát pro vaši komunikaci služby AD FS (veřejně podepsaný certifikát) a poklikáním zobrazte jeho vlastnosti.
+4.  Vyberte kartu **Cesta k certifikátu**, kde uvidíte nadřazené certifikáty certifikátu.
+5.  U každého nadřazeného certifikátu vyberte **Zobrazit certifikát**.
+6.  Vyberte kartu **Podrobnosti** a vyberte **Kopírovat do souboru**.
+7.  Postupujte podle pokynů průvodce a vyexportujte nebo uložte veřejný klíč certifikátu do požadovaného umístění souborů.
+8.  Naimportujte nadřazené certifikáty, které jste ve 3. kroku vyexportovali, do složky Místní počítač\Osobní\Certifikáty, a to tak, že pravým tlačítkem kliknete na **Certifikáty**, vyberete **Všechny úkoly** > **Importovat** a pak podle výzev průvodce certifikáty naimportujete.
+9.  Restartujte servery AD FS.
+10. Výše uvedené kroky zopakujte na všech serverech a proxy serverech AD FS.
 Teď už by měl uživatel být schopný se ze zařízení s Androidem k aplikaci Portál společnosti přihlásit.
 
 **Pokud chcete ověřit, jestli se certifikát správně nainstaloval**:
@@ -261,10 +258,10 @@ Následující tabulka obsahuje chyby, které se můžou koncovým uživatelům 
 |-----------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |NoEnrollmentPolicy|Nepovedlo se najít žádné zásady registrace|Zkontrolujte, že jsou nastavené všechny požadavky registrace, například certifikát služby APNs (Apple Push Notification Service), a že je povolené nastavení „iOS jako platforma“. Pokyny najdete v tématu [Nastavení správy zařízení s iOSem a MacOS](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune).|
 |DeviceCapReached|Už máte příliš mnoho registrovaných mobilních zařízení.|Než bude moct uživatel zaregistrovat další mobilní zařízení, musí odebrat jedno ze svých aktuálně zaregistrovaných mobilní zařízení z Portálu společnosti. Přečtěte si pokyny pro typ zařízení, který používáte: [Android](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-android), [iOS](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-ios) nebo [Windows](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-windows).|
-|APNSCertificateNotValid|Došlo k potížím s certifikátem, který umožňuje komunikaci mobilního zařízení s podnikovou sítí.<br /><br />|Služba APNs (Apple Push Notification Service) poskytuje kanál umožňující registraci zařízení s iOSem. Pokud jste neprovedli kroky k získání certifikátu APNs nebo vypršela jeho platnost, pak budou pokusy o registraci neúspěšné a zobrazí se tato zpráva.<br /><br />Přečtěte si informace o nastavení uživatelů v tématu [Synchronizace služby Active Directory a přidání uživatelů do Intune](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-3) a článku o [uspořádání uživatelů a zařízení](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-5).|
+|APNSCertificateNotValid|Došlo k potížím s certifikátem, který umožňuje komunikaci mobilního zařízení s podnikovou sítí.<br /><br />|Služba APNs (Apple Push Notification Service) poskytuje kanál umožňující registraci zařízení s iOSem. Pokud jste neprovedli kroky k získání certifikátu APNs nebo vypršela jeho platnost, pak budou pokusy o registraci neúspěšné a zobrazí se tato zpráva.<br /><br />Přečtěte si informace o nastavení uživatelů v tématu [Synchronizace služby Active Directory a přidání uživatelů do Intune](/intune/users-permissions-add) a článku o [uspořádání uživatelů a zařízení](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-5).|
 |AccountNotOnboarded|Došlo k potížím s certifikátem, který umožňuje komunikaci mobilního zařízení s podnikovou sítí.<br /><br />|Služba APNs (Apple Push Notification Service) poskytuje kanál umožňující registraci zařízení s iOSem. Pokud jste neprovedli kroky k získání certifikátu APNs nebo vypršela jeho platnost, pak budou pokusy o registraci neúspěšné a zobrazí se tato zpráva.<br /><br />Další informace najdete v tématu [Nastavení správy iOS a Mac s Microsoft Intune](/Intune/Deploy-use/set-up-ios-and-mac-management-with-microsoft-intune).|
 |DeviceTypeNotSupported|Uživatel se možná pokusil o registraci zařízení s jiným systémem než iOS. Typ mobilního zařízení, které se pokoušíte registrovat, není podporovaný.<br /><br />Potvrďte, že na zařízení běží systém iOS verze 8.0 nebo novější.<br /><br />|Zkontrolujte, jestli na zařízení uživatele běží systém iOS verze 8.0 nebo novější.|
-|UserLicenseTypeInvalid|Zařízení nemůžete zaregistrovat, protože uživatelský účet ještě není členem požadované skupiny uživatelů.<br /><br />|Uživatelé můžou svoje zařízení registrovat až potom, co se stanou členy správné skupiny uživatelů. Tato zpráva znamená, že má uživatel špatný typ licence pro určenou autoritu pro správu mobilních zařízení. Pokud je třeba určenou autoritou pro správu mobilních zařízení Intune a uživatel používá licenci nástroje System Center 2012 R2 Configuration Manager, zobrazí se tato chyba.<br /><br />Další informace najdete v těchto zdrojích:<br /><br />Přečtěte si článek [Nastavení správy iOS a Mac pomocí Microsoft Intune](/Intune/Deploy-use/set-up-ios-and-mac-management-with-microsoft-intune) a informace, jak nastavit uživatele, v článku [Synchronizace služby Active Directory a přidání uživatelů do Intune](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-3) a článku o [uspořádání uživatelů a zařízení](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-5).|
+|UserLicenseTypeInvalid|Zařízení nemůžete zaregistrovat, protože uživatelský účet ještě není členem požadované skupiny uživatelů.<br /><br />|Uživatelé můžou svoje zařízení registrovat až potom, co se stanou členy správné skupiny uživatelů. Tato zpráva znamená, že má uživatel špatný typ licence pro určenou autoritu pro správu mobilních zařízení. Pokud je třeba určenou autoritou pro správu mobilních zařízení Intune a uživatel používá licenci nástroje System Center 2012 R2 Configuration Manager, zobrazí se tato chyba.<br /><br />Další informace najdete v těchto zdrojích:<br /><br />Přečtěte si článek [Nastavení správy iOS a Mac pomocí Microsoft Intune](/Intune/Deploy-use/set-up-ios-and-mac-management-with-microsoft-intune) a informace, jak nastavit uživatele, v článku [Synchronizace služby Active Directory a přidání uživatelů do Intune](/intune/users-permissions-add) a článku o [uspořádání uživatelů a zařízení](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-5).|
 |MdmAuthorityNotDefined|Autorita pro správu mobilních zařízení není definovaná.<br /><br />|Autorita pro správu mobilních zařízení není určená v Intune.<br /><br />Projděte si položku č. 1 v části „Krok 6: Registrace mobilních zařízení a instalace aplikace“ v tématu [Začínáme s 30denní zkušební verzí Microsoft Intune](/Intune/Understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune).|
 
 ### <a name="devices-are-inactive-or-the-admin-console-cannot-communicate-with-them"></a>Zařízení nejsou aktivní nebo s nimi nemůže konzola správce komunikovat
@@ -413,4 +410,3 @@ Důvodem může být to, že již byl počítač zaregistrován dříve nebo je 
 
 ### <a name="next-steps"></a>Další kroky
 Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
-

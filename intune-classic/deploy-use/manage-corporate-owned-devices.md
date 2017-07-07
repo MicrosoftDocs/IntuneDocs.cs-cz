@@ -14,15 +14,12 @@ ms.assetid: 2b60bbff-25e6-489b-9621-c71b4275fa06
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: 8dae789ad1996543ddf9b92d031ac995beff6a46
-ms.contentlocale: cs-cz
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="enroll-corporate-owned-devices-by-using-intune"></a>Registrace zařízení vlastněných společností pomocí Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -67,4 +64,3 @@ Intune rozpozná zařízení jako „firemní“, když platí některá z těch
  - Zařízení je zaregistrované v [Azure Active Directory nebo v Enterprise Mobility Suite jako zařízení s Windows 10 Enterprise](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview) (jenom Windows 10).
 
 Když je zařízení označené jako firemní, zobrazuje se u záznamu daného zařízení v konzole pro správu ve sloupci **Vlastnictví** položka **Firemní**. 
-

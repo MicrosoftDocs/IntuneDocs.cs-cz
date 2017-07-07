@@ -11,22 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: c46775c2-9d2a-4a88-89f0-4104a462b898
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 3e91ccb2aae973892044f19d0d26c7f57bd5d786
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="send-logs-to-your-it-admin-using-a-usb-cable"></a>Odeslání protokolů správci IT pomocí kabelu USB
 
 Pokud při použití aplikace Portál společnosti v zařízení s Androidem dojde k chybě, můžete správci IT pomoct potíže vyřešit a poslat mu e-mailem informace o této chybě. Tyto informace se ukládají na zařízení ve speciálním dokumentu s názvem _diagnostický protokol_.
@@ -43,4 +38,3 @@ Pokud při použití aplikace Portál společnosti v zařízení s Androidem doj
 4.  Vyberte soubory a připojte je k e-mailu. E-mail pošlete správci IT.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-

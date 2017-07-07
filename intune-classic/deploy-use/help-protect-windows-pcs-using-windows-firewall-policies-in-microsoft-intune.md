@@ -1,5 +1,5 @@
 ---
-title: "Zásady brány firewall pro počítače s Windows | Dokumentace Microsoftu"
+title: "Zásady brány firewall pro počítače s Windows"
 description: "Intune vám pomůže zabezpečit počítače, které spravujete, mnoha různými způsoby, včetně pomoci při konfiguraci nastavení brány Windows Firewall."
 keywords: 
 author: robstackmsft
@@ -14,16 +14,16 @@ ms.assetid: 9549c072-ac3d-4d14-a931-a2eda8846217
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: d96fd3cf4d8963f1e79ef4ed27c1b826c8893b5f
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 13ec6a424c3665e48938315d4af11cc986a83339
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall v Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Microsoft Intune vám pomůže mnoha různými způsoby zabezpečit počítače s Windows, které spravujete. Jedním z těchto způsobů je poskytnutí zásad, které vám umožní nakonfigurovat nastavení brány Windows Firewall na počítačích.
 
 Pokud jste si ještě do počítačů nenainstalovali klienta Intune pro počítače s Windows, přečtěte si téma [Instalace klienta na počítači s Windows pomocí Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
@@ -135,4 +135,3 @@ Můžete nakonfigurovat výjimky, které povolují konkrétní typy síťového 
 
 ### <a name="see-also"></a>Související témata
 [Zásady ochrany počítačů se systémem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)
-

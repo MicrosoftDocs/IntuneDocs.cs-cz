@@ -1,26 +1,24 @@
 ---
-title: "Glosář Intune | Dokumentace Microsoftu"
+title: "Glosář služby Intune"
 description: "Přečtěte si něco o terminologii používané v Microsoft Intune"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 11/17/2016
+ms.date: 06/16/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 86d00901-fac7-4471-aac2-f1d13a4879b6
+ROBOTS: NOINDEX,NOFOLLOW
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 43b6dbfc004e8687eaf2a0ee185728136f457bfc
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: be3b078edc4e133fb586bb9476ba1dd770d0f389
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="microsoft-intune-glossary"></a>Glosář Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -29,10 +27,17 @@ ms.lasthandoff: 05/23/2017
 
 |||
 |-|-|
-|App SDK (sada)|Sada [Microsoft Intune App SDK](/intune-classic/develop/intune-app-sdk) vám umožní do vámi vytvářených aplikací přidat funkce, díky kterým bude tyto aplikace možné spravovat prostřednictvím zásad správy mobilních aplikací v Intune.|
-|App Wrapping Tool|[Aplikace příkazového řádku](/intune-classic/deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune), která vytvoří kolem obchodní aplikace obálku. Tato obálka potom umožní správu aplikace pomocí zásad správy mobilních aplikací v Intune.|
+|konfigurační profil aplikace|Nakonfiguruje [konkrétní nastavení](/intune-classic/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune) aplikace pro iOS před jejím spuštěním.|
+|Nasazení aplikací|Umožňuje uživatelům [vyhledat, stáhnout a nainstalovat](/intune-classic/deploy-use/deploy-apps) aplikace, které potřebují.|
+|monitorování aplikace|Umožňuje [zobrazit poslední stav a aktivitu](/intune-classic/deploy-use/monitor-apps-in-microsoft-intune) související s nasazením aplikace.|
+|úloha odebrání dat ochrany aplikace|[Odebere data aplikace](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) ze zařízení uživatele.|
+|zásady ochrany aplikací|Zajišťují, aby aplikace uživatele odpovídaly [firemním zásadám ochrany dat](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune).|
+|Vytváření sestav aplikace|Umožňuje [zobrazit historická data](/intune-classic/deploy-use/understand-microsoft-intune-operations-by-using-reports) o stavu a aktivitě nasazení aplikace.|
+|App SDK (sada)|Sada [Microsoft Intune App SDK](/intune/app-sdk) vám umožní do vámi vytvářených aplikací přidat funkce, díky kterým bude tyto aplikace možné spravovat prostřednictvím zásad správy mobilních aplikací v Intune.|
+|akce odinstalace aplikace|Umožňuje [odinstalovat aplikace](/intune-classic/deploy-use/deploy-apps) ze zařízení uživatele.|
+|App Wrapping Tool|[Aplikace příkazového řádku](/intune/apps-prepare-mobile-application-management), která vytvoří kolem obchodní aplikace obálku. Tato obálka potom umožní správu aplikace pomocí zásad správy mobilních aplikací v Intune.|
 |dostupná instalace|Když nasadíte aplikaci s touto akcí, aplikace se zobrazuje v aplikaci a na webu Portál společnosti a uživatelé ji můžou [instalovat na vyžádání](/intune-classic/deploy-use/deploy-apps).|
-|Azure Portal|Nová konzola pro Intune, která bude brzy zavedena. V tuto chvíli můžete používat web Azure Portal k vytváření [zásad správy mobilních aplikací v Intune](/intune-classic/deploy-use/azure-portal-for-microsoft-intune-mam-policies) pro zařízení.|
+|Azure Portal|Nová konzola pro Intune, která se brzy zavede. [Přečtěte si další informace o novém portálu](/intune/what-is-intune).|
 
 ## <a name="b"></a>B
 |||
@@ -56,7 +61,7 @@ ms.lasthandoff: 05/23/2017
 |-|-|
 |nasazení|Odeslání aplikace nebo zásady do zařízení nebo na uživatele, které spravujete.|
 |akce nasazení|Volba, kterou provádíte při [nasazení aplikace](/intune-classic/deploy-use/deploy-apps-in-microsoft-intune). Můžete zvolit, jestli bude instalace povinná, volitelná, nebo jestli se aplikace odinstaluje.|
-|správce registrace zařízení|Organizace můžou pomocí Intune spravovat velké počty mobilních zařízení s jediným uživatelským účtem. Účet [správce registrace zařízení /intune-classic/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune) je zvláštní účet služby Intune, který může zaregistrovat až 1 000 zařízení.|
+|správce registrace zařízení|Organizace můžou pomocí Intune spravovat velké počty mobilních zařízení s jediným uživatelským účtem. Účet [správce registrace zařízení ](/intune-classic/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune) (DEM – Device Enrollment Manager) je speciální účet Intune, který může zaregistrovat až 1 000 zařízení.|
 |mapování skupin zařízení|Pomáhá [automaticky přidávat zařízení do skupin](/intune-classic/deploy-use/categorize-devices-with-device-group-mapping-in-microsoft-intune) na základě kategorie zařízení (typu„Osobní“ nebo „Prodej“), kterou zařízení přiřadíte buď vy, nebo koncový uživatel.|
 
 ## <a name="e"></a>E
@@ -64,7 +69,7 @@ ms.lasthandoff: 05/23/2017
 |-|-|
 |e-mailový profil|Tyto zásady lze použít ke konfiguraci [nastavení přístupu k e-mailu](/intune-classic/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) pro konkrétní e-mailové klienty na mobilních zařízeních. Minimalizují se tak nároky na nastavení, která musí provést koncový uživatel.|
 |EMS|Microsoft Enterprise Mobility + Security (dříve Enterprise Mobility Suite) chrání vaše podniková data, a přitom vašim uživatelům umožňuje [přístup k aplikacím a obsahu, který potřebují](https://www.microsoft.com/cloud-platform/enterprise-mobility).|
-|koncový uživatel|[Uživatelé zařízení (jako jsou telefony nebo počítače)](/intune-classic/deploy-use/how-to-educate-your-end-users-about-microsoft-intune) spravovaných pomocí Intune|
+|koncový uživatel|[Uživatelé zařízení (jako jsou telefony nebo počítače)](/intune/end-user-educate) spravovaných pomocí Intune|
 |registrace|Microsoft Intune využívá [registraci](/intune-classic/deploy-use/enroll-devices-in-microsoft-intune) k začlenění zařízení do správy a povolení přístupu k prostředkům.|
 
 ## <a name="f"></a>F
@@ -99,8 +104,8 @@ ms.lasthandoff: 05/23/2017
 |||
 |-|-|
 |spravovaný prohlížeč|[Aplikace na procházení webu](/intune-classic/deploy-use/manage-internet-access-using-managed-browser-policies), kterou můžete nasadit v organizaci pomocí Microsoft Intune. Zásady spravovaného prohlížeče konfigurují seznam povolených nebo blokovaných webů. Tyto seznamy omezují weby, které můžou uživatelé spravovaného prohlížeče navštívit.|
-|Správa mobilních aplikací|[Správa mobilních aplikací /intune-classic/deploy-use/overview-of-app-lifecycle-in-microsoft-intune) vám umožňuje publikovat, doručovat, konfigurovat, zabezpečovat, monitorovat a aktualizovat mobilní aplikace pro uživatele.
-|Správa mobilních zařízení|[Správa mobilních zařízení /intune-classic/deploy-use/overview-of-device-lifecycle-in-microsoft-intune) vám umožňuje registrovat zařízení v Intune, takže můžete tato zařízení zřizovat, konfigurovat a monitorovat a provádět u nich další akce.
+|správa mobilních aplikací|[Správa mobilních aplikací (MAM)](/intune/app-lifecycle) umožňuje publikovat, doručovat, konfigurovat, zabezpečovat, monitorovat a aktualizovat mobilní aplikace pro uživatele.
+|správa mobilních zařízení|[Správa mobilních zařízení (MDM)](/intune/device-lifecycle) umožňuje registrovat zařízení do Intune, takže můžete tato zařízení zřizovat, konfigurovat a monitorovat a provádět s nimi akce.
 |autorita pro správu mobilních zařízení (MDM)|[Autorita MDM](/intune-classic/deploy-use/get-ready-to-enroll-devices-in-microsoft-intune) definuje službu správy s oprávněním ke správě určité sady zařízení. Příklady možných autorit MDM zahrnují Intune samostatně a Configuration Manager s Intune.|
 |Zásady zřizování mobilních aplikací|Zásady pro iOS, které pomáhají zajistit, že [zřizovacím profilům](/intune-classic/deploy-use/ios-mobile-app-provisioning-profiles) aplikací pro iOS, které nasadíte, nevyprší platnost.|
 |zásady konfigurace mobilních aplikací|Zásady pro iOS, které slouží k [předávání nastavení do kompatibilních aplikací pro iOS](/intune-classic/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune) při jejich spuštění – například mohou dodávat název společnosti nebo serverovou adresu.|
@@ -148,4 +153,3 @@ ms.lasthandoff: 05/23/2017
 |||
 |-|-|
 |profil Wi-Fi|Zásady, které nasazují [nastavení bezdrátové sítě](/intune-classic/deploy-use/wi-fi-connections-in-microsoft-intune) do zařízení. Uživatelé se tak budou moci připojit k vaší podnikové síti, aniž by museli znát a konfigurovat nastavení sítě.
-

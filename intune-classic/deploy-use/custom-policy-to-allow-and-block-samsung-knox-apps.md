@@ -1,5 +1,5 @@
 ---
-title: "Povolené a blokované aplikace pro KNOX | Dokumentace Microsoftu"
+title: "Povolené a blokované aplikace pro KNOX"
 description: "Vlastní profil pro vytvoření seznamu povolených a blokovaných aplikací pro KNOX."
 keywords: 
 author: robstackmsft
@@ -14,14 +14,11 @@ ms.assetid: bbc8e0df-7bf3-494e-8bc4-dac59a98ab41
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 933a47163ccc66a1bab636982ca422c4a704656d
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
-
+ms.openlocfilehash: b215425534e833db7e92e3f60fc507a168ef576f
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="use-custom-policies-to-allow-and-block-apps-for-samsung-knox-standard-devices"></a>Použití vlastních zásad povolených a blokovaných aplikací pro zařízení se Samsung Knox Standardem
 
@@ -43,9 +40,9 @@ Tato nastavení můžou využívat jenom zařízení se Samsung Knox Standardem.
     
     - **Název nastavení.** Zadejte **PreventStartPackages**.
     - **Popis nastavení.** Zadejte volitelný popis, např.: Seznam zakázaných aplikací.
-    -     **Datový typ.** Z rozevíracího seznamu vyberte položku **String** (Řetězec).
-    -     **OMA-URI.** Zadejte **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
-    -     **Hodnota.** Zadejte seznam názvů balíčků aplikací, které chcete zakázat. Jako oddělovač můžete použít **; : ,** nebo **|**. (Příklad: package1;package2;)
+    -   **Datový typ.** Z rozevíracího seznamu vyberte položku **String** (Řetězec).
+    -   **OMA-URI.** Zadejte **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
+    -   **Hodnota.** Zadejte seznam názvů balíčků aplikací, které chcete zakázat. Jako oddělovač můžete použít **; : ,** nebo **|**. (Příklad: package1;package2;)
 
     Pro seznam aplikací, které si uživatelé můžou nainstalovat z obchodu Google Play, s vyloučením všech ostatních:
 
@@ -74,4 +71,3 @@ Když vyberete nasazenou zásadu, zobrazí se v dolní části seznamu zásad da
 
 ### <a name="see-also"></a>Viz taky
 [Nastavení zásad konfigurace pro Android a Samsung KNOX v Microsoft Intune](android-policy-settings-in-microsoft-intune.md)
-

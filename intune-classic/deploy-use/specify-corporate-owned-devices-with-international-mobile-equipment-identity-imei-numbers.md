@@ -1,5 +1,5 @@
 ---
-title: "Zadání kódů IMEI | Dokumentace Microsoftu"
+title: "Specifikace kódů IMEI"
 description: "Microsoft Intune umožňuje správcům importovat kódy IMEI pro platformy mobilních zařízení, aby dokázali identifikovat mobilní zařízení patřící společnosti."
 keywords: 
 author: NathBarn
@@ -14,15 +14,12 @@ ms.assetid: 1712bd39-562b-4409-9cec-155d5f4d8a39
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 3388bce5bc4bb675b0342b463ed620c6023d51a2
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: d1ecc65dac893740b152aa743e6b32c5de5a3ec9
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers"></a>Určení podnikem vlastněných zařízení podle kódů IMEI (International Mobile Equipment Identity)
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -61,4 +58,3 @@ Když se zařízení s kódem IMEI zaregistruje v Intune, většinou když uživ
 > Když organizaci v blízké budoucnosti migrujete na nový portál Azure Portal, uvidíte v této funkci změnu. V existující konzole správce Intune můžou správci přijímat přidružené podrobnosti z nahraného CSV a přepsat existující podrobnosti pro jednotlivé identifikátory hardwaru. V novém portálu Azure Portal bude možné automaticky přepsat podrobnosti pro všechny identifikátory hardwaru nebo ignorovat všechny nové podrobnosti pro existující identifikátory.
 
 Podrobné specifikace o číslech IMEI najdete na stránce [3GGPP TS 23.003](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=729).
-

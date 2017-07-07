@@ -1,5 +1,5 @@
 ---
-title: "Vytvoření a nasazení zásad MAM | Dokumentace Microsoftu"
+title: "Vytvoření a nasazení zásad MAM"
 description: "Podle podrobného postupu v tomto tématu můžete vytvořit a nasadit zásady správy mobilních aplikací."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: c1b9a343-1737-4a65-a9c6-aca48acad11c
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: d91ce526650166197520d37c82084c0ff141ec80
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ebb4b03307f8af7e1390c6db994d3120942fae89
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="create-and-deploy-app-protection-policies-with-microsoft-intune"></a>Vytvoření a nasazení zásad ochrany aplikací pomocí Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -109,9 +106,9 @@ Zásada není po vytvoření pomocí výš uvedeného postupu nasazená pro žá
 ## <a name="line-of-business-lob-apps-optional"></a>Obchodní aplikace (volitelné)
 
 Počínaje verzí Intune 1703 máte možnost při vytváření nových zásad ochrany aplikací do Intune obecně přidávat obchodní aplikace. Můžete tak definovat zásady ochrany aplikací pro obchodní aplikace pomocí sady MAM SDK, aniž byste potřebovali úplná oprávnění k nasazení aplikací.
-
+/intune/app-sdk-get-started
 > [!TIP]
-> Obchodní aplikace můžete do Intune přidávat také v průběhu pracovního postupu sady [Intune App SDK](/intune-classic/develop/intune-app-sdk-get-started).
+> Obchodní aplikace můžete do Intune přidávat také v průběhu pracovního postupu sady [Intune App SDK](/intune/app-sdk-get-started).
 
 > [!IMPORTANT]
 > Pokud mají uživatelé k nasazování aplikací MAM jenom specifická oprávnění, ale ne úplná oprávnění, která by jim umožňovala nasadit v Intune libovolné aplikace, nebudou moct projít pracovním postupem sady Intune SDK, ale pořád své obchodní aplikace můžou přidávat prostřednictvím pracovního postupu pro vytváření zásad ochrany aplikací MAM.
@@ -164,8 +161,8 @@ Tyto zásady ovlivní jen uživatele, kteří mají přiřazené licence Intune.
 > Pokud ke správě zařízení s iOSem a Androidem používáte Intune s Configuration Managerem, zásady se použijí jenom pro uživatele přímo ve skupinách, které jste vybrali. Členy podřízených skupin vnořených ve skupině, kterou jste vybrali, tyto zásady neovlivní.
 
 Koncoví uživatelé můžou stahovat aplikace z App Storu nebo Google Play. Více informací najdete v následujících tématech:
-* [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
-* [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
+* [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](/intune/end-user-mam-apps-android)
+* [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](/intune/end-user-mam-apps-ios)
 
 ##  <a name="change-existing-policies"></a>Změna existujících zásad
 Podle potřeby můžete upravit existující zásady a použít je pro cílové uživatele. Když ale změníte existující zásady, změny se uživatelům, kteří se už přihlásili k aplikacím, po dobu 8 hodin nezobrazí.
@@ -219,6 +216,5 @@ Pokud chcete zobrazit úplný seznam nastavení zásad pro iOS a Android, vybert
 [Monitorování stavu dodržování předpisů a uživatele](monitor-mobile-app-management-policies-with-microsoft-intune.md)
 
 ### <a name="see-also"></a>Související témata
-* [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
-* [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
-
+* [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](/intune/end-user-mam-apps-android)
+* [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](/intune/end-user-mam-apps-ios)

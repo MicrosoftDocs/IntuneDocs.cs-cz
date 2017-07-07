@@ -1,5 +1,5 @@
 ---
-title: "Povolení ochrany Lookout MTP v Intune | Dokumentace Microsoftu"
+title: "Povolení Lookout MTP v Intune"
 description: "Povolení ochrany proti mobilním hrozbám Lookout v konzole pro správu Intune."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: 2f835fd0-4e62-42f3-b7ca-ce8b7ddd40e4
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 2a99839ece16c56c7bfaacb295796525903f9464
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: aad5b158e1217155c3e3ec671654ee6e81054675
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="enable-lookout-mtd-connection-in-the-intune-classic-console"></a>Povolení připojení ochrany před mobilními hrozbami Lookout v klasické konzole Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -41,4 +38,3 @@ Tím dokončíte nastavení integrace služeb Lookout a Intune v konzole pro spr
 
 ## <a name="next-steps"></a>Další kroky
 [Konfigurace aplikace Lookout for Work](/intune-classic/deploy-use/device-threat-protection-apps)
-

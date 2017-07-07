@@ -14,15 +14,12 @@ ms.assetid: eb912c73-54d2-4d78-ac34-3cbe825804c7
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: 535979b6adf25c67daaab2df924cbb0e21e15a36
-ms.contentlocale: cs-cz
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="common-windows-pc-management-tasks-with-the-intune-software-client"></a>Běžné úlohy správy počítačů s Windows pomocí klientského softwaru Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -39,6 +36,5 @@ Toto téma obsahuje úkoly, kterými můžete spravovat stolní počítače spra
 - [Správa propojení uživatelů se zařízeními u počítačů s Windows](manage-user-device-linking-for-windows-pcs-with-microsoft-intune.md) – Vysvětluje, kdy a jak je nutné propojit uživatele s počítačem před nasazením softwaru uživateli.
 
 - [Vyžádání a poskytnutí vzdálené pomoci na počítačích s Windows](request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md) – Vysvětluje, jak můžete uživatelům počítačů s Intune poskytnout vzdálenou pomoc, a popisuje požadavky a instalaci softwaru TeamViewer.
-
 
 

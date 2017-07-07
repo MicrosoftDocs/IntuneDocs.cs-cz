@@ -1,5 +1,5 @@
 ---
-title: "Správa licencí Intune pomocí PowerShellu | Dokumentace Microsoftu"
+title: "Správa licencí Intune pomocí PowerShellu"
 description: "Ke správě licencí Intune můžete použít PowerShell."
 keywords: 
 author: nathbarn
@@ -14,22 +14,19 @@ ms.assetid: d2d31c80-c32c-4315-8271-1b0cf9a1f78a
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 211b1aba54924204a7e2d33301824f9d7eb9c030
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 35bb4e87888a8769b3606659b93e3a73480b566f
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="manage-intune-licenses-using-powershell"></a>Správa licencí Intune pomocí PowerShellu
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 V tomto tématu najdou správci informace o tom, jak spravovat uživatelské licence Intune pomocí PowerShellu.
 
-Než se bude moct uživatel přihlásit ke službě Intune a používat ji nebo registrovat své zařízení ke správě, musíte mu nejdřív přiřadit licenci k vašemu předplatnému této služby, jak je popsáno v části [Správa licencí Intune](start-with-a-paid-subscription-to-microsoft-intune-step-4.md). Organizace, které používají Microsoft Enterprise Mobility + Security, však můžou mít uživatele, kteří v balíčku EMS vyžadují jenom služby Azure Active Directory Premium nebo Intune. Pomocí [rutin PowerShellu pro Azure Active Directory](https://msdn.microsoft.com/library/jj151815.aspx) můžete přiřadit jednu službu nebo podmnožinu služeb.
+Než se bude moct uživatel přihlásit ke službě Intune a používat ji nebo registrovat své zařízení ke správě, musíte mu nejdřív přiřadit licenci k vašemu předplatnému této služby, jak je popsáno v části [Správa licencí Intune](/intune/licenses-assign). Organizace, které používají Microsoft Enterprise Mobility + Security, však můžou mít uživatele, kteří v balíčku EMS vyžadují jenom služby Azure Active Directory Premium nebo Intune. Pomocí [rutin PowerShellu pro Azure Active Directory](https://msdn.microsoft.com/library/jj151815.aspx) můžete přiřadit jednu službu nebo podmnožinu služeb.
 
 Pokud chcete selektivně přiřadit uživatelské licence pro služby EMS, otevřete PowerShell jako správce v počítači, kde je instalovaný [modul Azure Active Directory pro Windows PowerShell](https://msdn.microsoft.com/library/jj151815.aspx#bkmk_installmodule). PowerShell můžete nainstalovat na místní počítač nebo na server služby AD FS.
 
@@ -71,6 +68,4 @@ Ověřte pomocí:
 ### <a name="next-steps"></a>Další kroky
 Gratulujeme! Právě jste dokončili krok 4 *úvodní příručky Intune*.
 >[!div class="step-by-step"]
-
->[&larr; **Synchronizace uživatelů do Intune**](.\start-with-a-paid-subscription-to-microsoft-intune-step-2.md)     [**Organizace uživatelů a zařízení** &rarr;](.\start-with-a-paid-subscription-to-microsoft-intune-step-5.md)  
-
+(/intune/custom-domain-name-configure) [&larr; **Synchronizace uživatelů do Intune**](/intune/custom-domain-name-configure)     [**Organizace uživatelů a zařízení** &rarr;](.\start-with-a-paid-subscription-to-microsoft-intune-step-5.md)  

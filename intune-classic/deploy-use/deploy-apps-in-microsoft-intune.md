@@ -1,5 +1,5 @@
 ---
-title: "Postup nasazení aplikací | Dokumentace Microsoftu"
+title: Jak nasadit aplikace
 description: "Informace v tomto tématu vám pomůžou nasadit aplikace pomocí Microsoft Intune."
 keywords: 
 author: robstackmsft
@@ -14,12 +14,11 @@ ms.assetid: 3b42019e-73da-4538-a496-212f11d5bf9b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 7451b1872a848ac322db4ec485564f2ebf983f0d
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: f684a1b8d74f7625d3262d4f02eb9841a203e883
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="deploy-apps-in-microsoft-intune"></a>Nasazení aplikací v Microsoft Intune
 
@@ -62,7 +61,7 @@ V tomto postupu nasadíte aplikaci pro vybrané skupiny zařízení nebo uživat
 
 ## <a name="example"></a>Příklad
 
-V tomto příkladu jste nasadili aplikace jako **K dispozici** do zařízení s iOS.
+V tomto příkladu jste nasadili aplikace jako **K dispozici** do zařízení s iOSem.
 Aplikace se v zařízeních uživatelů zobrazí na portálu společnosti a uživatelé ji odtud můžou nainstalovat.
 
 Například na tomto snímku obrazovky byla aplikace Bing for iOS nasazená pomocí typu instalace **Externí odkaz** s vlastní ikonou. Byla vybraná možnost **Zobrazit jako doporučenou aplikaci a upozornit na ni na portálu společnosti**.  
@@ -74,4 +73,3 @@ Pokud je aplikace nasazená jako **Požadovaná**, dostane uživatel oznámení,
 ## <a name="next-steps"></a>Další kroky
 
 Po nasazení aplikace můžete monitorovat její postup. Další informace najdete v tématu [Monitorování aplikací v Microsoft Intune](monitor-apps-in-microsoft-intune.md).
-

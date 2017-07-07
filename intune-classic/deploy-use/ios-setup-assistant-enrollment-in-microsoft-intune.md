@@ -1,5 +1,5 @@
 ---
-title: "Registrace zařízení s iOSem pomocí pomocníka s nastavením | Dokumentace Microsoftu"
+title: "Registrace zařízení s iOSem pomocí Pomocníka s nastavením"
 description: "Použití nástroje Apple Configurator k registraci zařízení s iOSem patřících společnosti, aby bylo možné obnovit jejich tovární nastavení a připravit je ke spuštění pomocníka s nastavením (Setup Assistant)."
 keywords: 
 author: nathbarn
@@ -14,15 +14,12 @@ ms.assetid: 46e5b027-4280-4809-b45f-651a6ab6d0cd
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 12466562ea8431156e9644e63fda16231ac70f32
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 402b5b469b1536e9f2ea13948e45c9232baca458
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="enroll-ios-devices-with-apple-configurator-by-using-setup-assistant"></a>Použití pomocníka s nastavením k registraci zařízení s iOSem v Apple Configuratoru
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -175,4 +172,3 @@ Zařízení jsou připravená na registraci ve společnosti. Vypněte zařízen�
 
 ### <a name="see-also"></a>Související témata
 [Předpoklady registrace zařízení](prerequisites-for-enrollment.md)
-

@@ -1,5 +1,5 @@
 ---
-title: "Správa počítačů s klientským softwarem | Dokumentace Microsoftu"
+title: "Správa počítačů pomocí klientského softwaru"
 description: "Spravujte počítače s Windows pomocí instalace klientského softwaru Intune."
 keywords: 
 author: nathbarn
@@ -14,16 +14,15 @@ ms.assetid: 3b8d22fe-c318-4796-b760-44f1ccf34312
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 6bd4e3315fd27201e8005b1053fa6e15bf2c21b5
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: e217648c744d76d4cde6b8927137cd569b8d0a2e
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Správa počítačů s Windows jako počítačů prostřednictvím softwarového klienta Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Intune poskytuje organizacím ucelené řešení pro správu mobilních zařízení. Pomocí moderních funkcí pro správu zařízení, které jsou součástí operačního systému Windows 10, dokáže Intune spravovat počítače s Windows 10 jako mobilní zařízení. Kvůli splnění potřeb správy vaší organizace dokáže Intune s využitím softwarového klienta Intune spravovat počítače s Windows také jako počítače. Tato metoda správy využívá tradiční funkce pro správu počítačů ve starších operačních systémech Windows.
 
@@ -79,7 +78,7 @@ I když klientský software Intune podporuje [možnosti správy, které pomáhaj
 
 Pokud ke správě počítačů s Windows používáte klientský software Intune, můžete používat jenom zásady, které jsou uvedené v části **Správa počítače**.
 
-Intune slouží ke správě počítačů s Windows pomocí zásad, podobně jako Active Directory Domain Services Windows Serveru ve vaší organizaci /intune-classic/deploy-use/resolve-gpo-and-microsoft-intune-policy-conflicts/). Další informace najdete v článku [Zásady skupiny pro začátečníky](https://technet.microsoft.com/library/hh147307.aspx).
+Intune spravuje počítače s Windows pomocí zásad, podobně jako to dělají objekty zásad skupiny (GPO) služby AD DS (Active Directory Domain Services) Windows Serveru. Pokud počítače připojené k doméně Active Directory spravujete pomocí Intune, [zajistěte, aby zásady Intune nekolidovaly s jinými objekty zásad skupiny](/intune-classic/deploy-use/resolve-gpo-and-microsoft-intune-policy-conflicts) používanými ve vaší organizaci. Další informace najdete v článku [Zásady skupiny pro začátečníky](https://technet.microsoft.com/library/hh147307.aspx).
 
   ![Výběr šablony pro nové zásady počítačů PC se systémem Windows](../media/select-template-for-pc-policy.png)
 
@@ -115,4 +114,3 @@ Uvědomte si také, že v konzole správce Intune se některé části, jako nap
 Klientský software Intune obvykle běží tiše na pozadí a nevyžaduje skoro žádnou interakci ze strany uživatele ani řešení potíží. Pokud potřebujete vyřešit problémy týkající se správy počítačů PC, můžete si projít informace v protokolech. Klientský software Intune a odpovídající protokoly jsou nainstalované v adresáři %Program Files%\Microsoft\OnlineManagement.
 
 Můžete si také projít informace v článku [Řešení potíží s instalací klientů v Microsoft Intune](/intune-classic/troubleshoot/troubleshoot-client-setup-in-microsoft-intune), kde zjistíte, k jakým problémům by mohlo dojít a jaká (alternativní) řešení je možné použít.
-

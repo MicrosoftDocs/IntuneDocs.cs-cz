@@ -14,15 +14,12 @@ ms.assetid: f996842c-e9a4-4819-acb4-ee66e8fb35b8
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: 67810c51c7a7b2ec1e1ff33c11a27a8757b2bcbd
-ms.contentlocale: cs-cz
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="compliance-policy-settings-for-windows-devices-in-microsoft-intune"></a>Nastavení zásad dodržování předpisů pro zařízení s Windows v Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -156,4 +153,3 @@ K vyhledání verze operačního systému, kterou máte použít v nastaveních 
 
 - U počítačů s Windows 10 musí být verze nastavená jako **10.0** plus číslo sestavení operačního systému vrácené příkazem **winver**. Může to být třeba 10.0.10586.
 > ![Verze sestavení operačního systému zvýrazněná v dialogovém okně „O produktu Windows“](./media/ca_win10-os-version.png)
-

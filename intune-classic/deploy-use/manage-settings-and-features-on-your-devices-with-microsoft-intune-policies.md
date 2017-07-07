@@ -1,5 +1,5 @@
 ---
-title: "Správa nastavení zařízení pomocí zásad | Dokumentace Microsoftu"
+title: "Správa nastavení zařízení pomocí zásad"
 description: "Pomocí Intune můžete vytvořit a nasadit zásady, které řídí nastavení a funkce na zaregistrovaných zařízeních, která spravujete."
 keywords: 
 author: robstackmsft
@@ -14,15 +14,12 @@ ms.assetid: 09bae0b9-4f79-4658-8ca1-a71ab992c1b2
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 8f1a4cb3bcab4aee534fc5fb9a1f1a1eb5a6f3a1
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: f8ceb98181543d846934a16b8c9551207892ae0e
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="manage-settings-and-features-on-your-devices-with-microsoft-intune-policies"></a>Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -213,4 +210,3 @@ Pokud odstraníte zásadu nebo odeberete zařízení ze skupiny, na kterou byla 
 ### <a name="where-can-i-find-help-troubleshooting-policies"></a>Kde najdu nápovědu k odstraňování potíží se zásadami?
 
 Projděte si téma [Řešení potíží se zásadami v Microsoft Intune](/intune-classic/troubleshoot/troubleshoot-policies-in-microsoft-intune).
-

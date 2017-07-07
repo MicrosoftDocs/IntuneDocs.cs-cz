@@ -1,5 +1,5 @@
 ---
-title: "Vytvoření zásad a publikování aplikace pro uživatele | Dokumentace Microsoftu"
+title: "Vytvoření zásad a publikování aplikace pro uživatele"
 description: "Vytvoření zásad a publikování aplikace při registraci bezplatné 30denní zkušební verze Intune"
 keywords: 
 author: lindavr
@@ -14,16 +14,12 @@ ms.assetid: c3a17884-442a-44f5-bc81-4589e823f65e
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 0e836571b869e7a32b19968da1d78035a6bae7f2
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 335d91cd6583052bfcc72fc018b387eed8823b7e
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="create-policies-and-publish-an-app-to-evaluation-users"></a>Vytvoření zásad a publikování aplikace pro testovací uživatele
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -102,7 +98,6 @@ Tím končí příručka pro správu mobilních zařízení v Intune, ale dalš�
 ## <a name="next-steps"></a>Další kroky
 Získejte další informace o ostatních [možnostech Intune](get-started-with-a-30-day-trial-of-microsoft-intune-step-6.md).
 
-Přečtěte si o [běžných způsobech použití Intune](common-ways-to-use-intune.md).
+Přečtěte si o [běžných způsobech použití Intune](/intune/common-scenarios).
 
 Přejděte na [placené předplatné](get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md).
-

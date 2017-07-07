@@ -1,5 +1,5 @@
 ---
-title: "Monitorování nasazení aplikací | Dokumentace Microsoftu"
+title: "Monitorování nasazení aplikací"
 description: "Přečtěte si, jak monitorovat aplikace, které jste nasadili s Intune."
 keywords: 
 author: robstackmsft
@@ -14,16 +14,12 @@ ms.assetid: 5daad56d-71c8-455b-8a55-f8b33e279a8a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 808268faa797d8576f5fb693d9940d97d17abf21
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 9255a9cb966ef02aba11e0a6aaf7caf7e808a41c
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="monitor-app-deployments-in-microsoft-intune"></a>Monitorování nasazení aplikací v Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -49,4 +45,3 @@ Ze seznamu aplikací vyberte některou aplikaci a pak vyberte **Zobrazit vlastno
 Na stránce **Vlastnosti softwaru** vyberte některou z těchto karet: **Obecné** – zobrazuje obecné informace o aplikaci a stavu její instalace, **Zařízení** – zobrazuje zařízení s úspěšně nainstalovanou a nasazenou aplikací a **Uživatelé** – zobrazuje uživatele s úspěšně nainstalovanou a nasazenou aplikací.
 
 I tady můžete použít rozevírací seznam **Filtry** ke konfiguraci hodnot, které se zobrazí na každé kartě.
-

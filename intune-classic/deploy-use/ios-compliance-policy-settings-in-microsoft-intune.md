@@ -1,6 +1,6 @@
 ---
-title: "Nastavení zásad dodržování předpisů pro zařízení s iOSem | Dokumentace Microsoftu"
-description: "Toto téma popisuje pravidla a nastavení, která můžete použít v zásadách dodržování předpisů pro zařízení s iOS."
+title: "Nastavení zásad dodržování předpisů pro zařízení s iOSem"
+description: "Toto téma popisuje pravidla a nastavení, která můžete použít v zásadách dodržování předpisů pro zařízení s iOSem."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -14,16 +14,12 @@ ms.assetid: 4a59d24f-ed58-49b1-b874-b2d4aea3ec76
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: fbb2e7ced783160fb6034aecc893d0c5dde639d7
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 1d3248747740dafe858a581ed19a02ba87c4b761
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="compliance-policy-settings-for-ios-devices-in-microsoft-intune"></a>Nastavení zásad dodržování předpisů pro zařízení s iOSem v Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -84,4 +80,3 @@ Pokud hledáte informace o jiných platformách, vyberte jednu z těchto možnos
 Zobrazí se odkaz s informacemi, jak upgradovat. Uživatel může zvolit upgrade svého zařízení. Pak může přistupovat k prostředkům společnosti.
 
 - **Maximální povolená verze operačního systému:** Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný a uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nepůjde přes toto zařízení přistupovat k prostředkům společnosti.
-

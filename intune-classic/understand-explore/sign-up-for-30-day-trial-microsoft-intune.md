@@ -1,5 +1,5 @@
 ---
-title: "Registrace 30denní bezplatné zkušební verze Microsoft Intune | Dokumentace Microsoftu"
+title: "Registrace 30denní bezplatné zkušební verze Microsoft Intune"
 description: "Registrace a nastavení 30denního bezplatného testování Microsoft Intune"
 keywords: 
 author: lindavr
@@ -13,15 +13,12 @@ ms.technology:
 ms.assetid: 619a1d11-3d22-4635-8f70-770eba3e1712
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 560765fa9d9afa4a1050515e1b2304c998f8c158
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ffa07d5e36abc8686cedd600123494180c286011
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="sign-up-for-a-microsoft-intune-free-trial"></a>Registrace bezplatné zkušební verze Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -29,7 +26,7 @@ ms.lasthandoff: 05/23/2017
 Tento článek vás provede procesem registrace zkušební verze Intune a pomůže vám ve zkušební verzi nastavit uživatele, abyste mohli postupovat podle příručky pro testování a vyzkoušet si, jak se v Intune spravují mobilní zařízení. <!---or app data when devices are not enrolled in Intune.--->
 
 >[!Note]
-> Od prosince 2016 se Microsoft Intune přesouvá na portál Azure Portal. Některé registrace bezplatných zkušebních verzí se budou provádět v Intune na portálu Azure Portal, zatímco jiné se budou provádět na portálu Classic služby Intune. Pokud se vaše zkušební verze nachází na portálu Azure Portal, po dokončení postupu uvedeného v tomto článku pro vás bude [obsah Intune Azure Preview](/intune/what-is--intune) užitečnější.
+> Od prosince 2016 se Microsoft Intune přesouvá na portál Azure Portal. Některé registrace bezplatných zkušebních verzí se budou provádět v Intune na portálu Azure Portal, zatímco jiné se budou provádět na portálu Classic služby Intune. Pokud se vaše zkušební verze nachází na portálu Azure Portal, po dokončení postupu uvedeného v tomto článku pro vás bude [obsah Intune Azure Preview](/intune/what-is-intune) užitečnější.
 
 ## <a name="assumptions"></a>Předpoklady
 Tento článek o registraci a příručka pro testování předpokládají, že zkušební verzi používáte jenom pro účely vyhodnocení a poté, co se přihlásíte k odběru, plánujete použít čisté prostředí.
@@ -41,7 +38,7 @@ Ve zkušební verzi můžete provádět vše, co je možné i v placené verzi. 
 ## <a name="sign-up-for-your-trial"></a>Zaregistrování zkušební verze
 Přejděte na stránku [registrace Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20) a vyplňte formulář pro registraci zkušebního předplatného.
 
-Pokud máte pracovní nebo školní účet a chcete ho použít pro zkušební verzi Intune, postupujte místo toho podle [těchto pokynů pro přihlášení](/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-1). V tomto článku a příručce pro testování se však předpokládá, že takový účet nepoužíváte.
+Pokud máte pracovní nebo školní účet a chcete ho použít pro zkušební verzi Intune, postupujte místo toho podle [těchto pokynů pro přihlášení](/intune/account-sign-up). V tomto článku a příručce pro testování se však předpokládá, že takový účet nepoužíváte.
 
 > [!TIP]
 > Pokud se většina pracovníků IT oddělení a uživatelů nachází v jiném národním prostředí než vy, můžete u vaší zkušební verze nastavit toto národní prostředí za účelem testování výkonu.
@@ -56,7 +53,7 @@ Pokud se vaše zkušební verze nachází na **portálu Azure Portal**, přejdě
 ## <a name="add-users"></a>Přidávání uživatelů
 Než přejdete z Centra pro správu Office 365 do Intune, je třeba přidat uživatele ke zkušebnímu účtu.
 
-V Centru pro správu Office 365 můžete přidávat uživatele jednotlivě nebo hromadně načtením souboru .csv. Při nastavení vaší zkušební verze použijeme obě možnosti. V produkčním prostředí budete však pravděpodobně chtít využít uživatelské účty služby Azure Active Directory. O této možnosti se můžete dozvědět více v [Příručce Začínáme](/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3) a v části [Další kroky](#Next-steps) v tomto článku.
+V Centru pro správu Office 365 můžete přidávat uživatele jednotlivě nebo hromadně načtením souboru .csv. Při nastavení vaší zkušební verze použijeme obě možnosti. V produkčním prostředí budete však pravděpodobně chtít využít uživatelské účty služby Azure Active Directory. O této možnosti se můžete dozvědět více v [Příručce Začínáme](/intune/users-permissions-add) a v části [Další kroky](#next-steps) v tomto článku.
 
 ### <a name="add-an-individual-user"></a>Přidání jednotlivého uživatele
 1. Zvolte některou z možností přidání uživatele a otevřete formulář, který umožňuje vytvořit uživatele. Požadované jsou jenom položky s hvězdičkou (\*).
@@ -110,8 +107,8 @@ Pokud chcete z Intune přejít zpátky do Centra pro správu Office 365, zvolte 
 
 ![Obrázek odkazu zpět na Centrum pro správu Office 365](./media/sign-up/task-add-users.png)
 
-### <a name="intune-azure-preview"></a>Intune Azure preview
-Pro Intune Azure Preview budete používat tři portály:
+### <a name="intune-on-azure"></a>Intune v Azure
+Pro Intune v Azure budete používat tři portály:
 - Centrum pro správu Office 365 ([portal.office.com](https://portal.office.com))
 - Řídicí panel Intune v Azure ([portal.azure.com](https://portal.azure.com))
 - Klasická konzola pro správu Intune ([manage.microsoft.com](https://manage.microsoft.com))
@@ -138,8 +135,8 @@ K návratu z Intune zpět do Centra pro správu Office 365 zadejte na adresní �
 ### <a name="classic-intune"></a>Klasická služba Intune
 Scénář hodnocení: [Hodnocení správy mobilních zařízení v Microsoft Intune](mobile-device-management-trial-guide-microsoft-intune.md)
 
-### <a name="intune-azure-preview"></a>Intune Azure preview
-Přečtěte si další informace o [Intune v Azure Portal Preview](/intune/what-is-intune).
+### <a name="intune-on-azure"></a>Intune v Azure
+Další informace o [Intune v Azure](/intune/what-is-intune)
 
 ### <a name="integration-with-other-products"></a>Integrace s dalšími produkty
 Přečtěte si další informace o používání uživatelských účtů služby Azure Active Directory v Intune:
@@ -148,4 +145,3 @@ Přečtěte si další informace o používání uživatelských účtů služby
 - [Požadavky na vícefaktorové ověřování](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-multifactor-auth-requirements)
 
 Přečtěte si další informace o používání [Intune s nástrojem System Center Configuration Manager.](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management)
-

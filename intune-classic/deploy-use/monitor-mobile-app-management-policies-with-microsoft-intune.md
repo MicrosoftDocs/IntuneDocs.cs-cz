@@ -1,5 +1,5 @@
 ---
-title: "Monitorování zásad MAM s Microsoft Intune | Dokumentace Microsoftu"
+title: "Monitorování zásad MAM pomocí Microsoft Intune"
 description: "Podívejte se, kolik uživatelů má přiřazené zásady. Přechodem k podrobnostem zjistíte další informace."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: d3aa6c74-6b5d-4b50-aa66-a040ec44393e
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: d80632aceaa675f08eb4b23ce59e3bcabb72b4d0
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: c3c41f5e3b0fc81232b03fe547bee7f72fb427a0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="monitor-app-protection-policies-with-microsoft-intune"></a>Sledování zásad ochrany aplikací pomocí Microsoft Intune
 Stav dodržování zásad ochrany aplikací, které jste použili u uživatelů, můžete monitorovat. Budete moct vyhledat informace o uživatelích, na které se vztahují zásady ochrany aplikací, stavu dodržování zásad a všech problémech, se kterými se uživatelé můžou setkat.
 
@@ -134,6 +131,5 @@ Pokud chcete vygenerovat sestavu ochrany aplikací, postupujte takto:
 ## <a name="see-also"></a>Související témata
 [Správa přenosu dat mezi aplikacemi pro iOS](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 
-* [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
-* [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
-
+* [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](/intune/end-user-mam-apps-android)
+* [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](/intune/end-user-mam-apps-ios)

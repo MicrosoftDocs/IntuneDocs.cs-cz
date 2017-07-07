@@ -11,19 +11,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: efb3c261-1f6c-4d39-bfa4-18661f8c59c7
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 2b2c86a46c671d35551a8485b5b1a70674168ac5
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="your-password-does-not-meet-your-it-admins-requirements"></a>Heslo nesplňuje požadavky správce IT
 
 Heslo, které používáte pro přístup k prostředkům společnosti nebo školy, nesplňuje některé požadavky nastavené správcem IT. Pokud chcete problém vyřešit, postupujte podle pokynů, které se zobrazí na vašem zařízení. Následující výčet obsahuje popis problémů.
@@ -51,4 +47,3 @@ Popis problémů s kódem PIN nebo heslem:
 - **Heslo není dostatečně složité a nesplňuje požadavky.** Správce požaduje, abyste v hesle použili i složitější znaky. Zkuste použít třeba číslice, velká písmena a symboly jako $, % a #. Tento problém může vzniknout i u dalších účtů na vašem zařízení. Zkontrolujte proto všechny případné další pracovní účty a zajistěte, aby vaše heslo splňovalo požadavky nastavené správcem IT pro vaše zařízení.
 
 Pokud máte potíže s tím, jak vytvořit heslo v souladu s požadavky, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-

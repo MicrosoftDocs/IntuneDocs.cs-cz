@@ -11,21 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 74c51f7b-7bd8-45cf-99bd-02d1972267cb
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 510e35a7c60709a6f002907e0f7963ba5b78f35c
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="an-existing-company-email-account-was-found"></a>Našel se existující e-mailový účet společnosti
 
 U své organizace nebo společnosti už máte zřízený e-mailový účet a teď chcete mít k tomuto účtu přístup i na svém mobilním zařízení. Správce IT potřebuje vaši pomoc, aby mohl zabezpečit přístup k e-mailu po celou cestu od odesílatele až na vaše zařízení. Váš současný e-mail možná funguje, ale následující postup vám pomůže zabezpečit informace ještě lépe.
@@ -39,4 +35,3 @@ U své organizace nebo společnosti už máte zřízený e-mailový účet a te�
 3.  Po chvilce se pro vaše zařízení automaticky použije nové nastavení e-mailu.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-

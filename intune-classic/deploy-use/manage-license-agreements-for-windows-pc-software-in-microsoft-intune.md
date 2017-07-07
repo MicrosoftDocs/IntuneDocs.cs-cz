@@ -1,5 +1,5 @@
 ---
-title: "Správa licenčních smluv k softwaru pro počítače se softwarovým klientem Intune | Dokumentace Microsoftu"
+title: "Správa licenčních smluv k softwaru v počítačích se softwarovým klientem Intune"
 description: "Intune umožňuje spravovat licenční smlouvy pro software zakoupený prostřednictvím multilicenční smlouvy s Microsoftem i pro jinak zakoupený software."
 keywords: 
 author: robstackmsft
@@ -14,16 +14,16 @@ ms.assetid: c59d8635-3f66-40f5-824a-a71c738e0341
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 18fbeb0e5bbf46795a02590a8dce205342a3a357
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: afaeb5b1af35008e6aa778e4391cafeda979bdc0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Správa licenčních smluv pro software počítačů s Windows v Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Microsoft Intune umožňuje přidávat a spravovat informace o licenční smlouvě pro software zakoupený prostřednictvím multilicenční smlouvy s Microsoftem. To můžete provést i pro software Microsoftu nebo třetího výrobce, zakoupený jiným způsobem. Tyto informace můžete uspořádat do logických skupin.
 
 > [!IMPORTANT]
@@ -181,4 +181,3 @@ Licenční smlouvy na software se dají přidat do skupin licencí. Skupiny lice
 |Přejmenování skupiny licencí|V pracovním prostoru **Licence** zvolte skupinu licencí a pak v nabídce **Úlohy** klikněte na **Upravit skupinu licencí**.|
 |Odstranění skupiny licencí|V pracovním prostoru **Licence** zvolte skupinu licencí a pak v nabídce **Úlohy** klikněte na **Odstranit skupinu licencí**. **Tip:** Všechny licence se z odstraněné skupiny přesunou do skupiny licencí **Nepřiřazené smlouvy**.|
 |Odstranění licenční smlouvy|V pracovním prostoru **Licence** zvolte smlouvu a klikněte na **Odstranit**. **Tip:** Pokud chcete po odstranění multilicenčních smluv aktualizovat informace o licencích, klikněte na **Aktualizovat** na stránce **Přehled licencí** nebo na kartě **Obecné** konkrétní skupiny licencí.|
-

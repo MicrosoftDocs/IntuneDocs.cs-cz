@@ -1,5 +1,5 @@
 ---
-title: "Nastavení zásad dodržování předpisů pro Android | Dokumentace Microsoftu"
+title: "Nastavení zásad dodržování předpisů pro Android"
 description: "Toto téma popisuje nastavení zásad dodržování předpisů pro zařízení s Androidem."
 keywords: 
 author: andredm7
@@ -14,16 +14,12 @@ ms.assetid: e721c5c7-9678-4f3b-81d4-564da5efd337
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 06996ca5d6c330357d6fdee19963d425bc353070
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: cc698998491fa56769376c013fb76ac75b5627bb
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="compliance-policy-settings-for-android-devices-in-microsoft-intune"></a>Nastavení zásad dodržování předpisů pro zařízení s Androidem v Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -90,4 +86,3 @@ Pokud hledáte informace o jiných platformách, vyberte jednu z těchto možnos
   Zobrazí se odkaz s informacemi, jak upgradovat. Uživatel si může zařízení upgradovat. Potom bude mít přístup k prostředkům společnosti.
 
 - **Maximální povolená verze operačního systému:** Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný a uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud se neprovede změna pravidla, která tuto verzi operačního systému povolí, nepůjde přes toto zařízení přistupovat k prostředkům společnosti.
-

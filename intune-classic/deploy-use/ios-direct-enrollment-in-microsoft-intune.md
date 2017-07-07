@@ -1,5 +1,5 @@
 ---
-title: "Přímá registrace zařízení s iOSem | Dokumentace Microsoftu"
+title: "Přímá registrace zařízení s iOSem"
 description: "Použijte nástroj Apple Configurator k přímé registraci zařízení s iOSem vlastněných společností pomocí předdefinované zásady tak, že je připojíte přes USB do počítače Mac."
 keywords: 
 author: nathbarn
@@ -14,15 +14,12 @@ ms.assetid: a692b90c-72ae-47d1-ba9c-67a2e2576cc2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: ee0320db2c4a1a977326f62fcd20597fa39aba24
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 9909e1dd4f9891a2efb47383242ed7765d3f0291
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="directly-enroll-ios-devices-by-using-apple-configurator"></a>Přímá registrace zařízení s iOSem pomocí Apple Configuratoru
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -76,9 +73,9 @@ Při přímé registraci zařízení s iOSem můžete zařízení zaregistrovat 
 
     4.  Pomocí nástroje pro výběr souborů vyberte soubor .mobileconfig, který jste exportovali z Intune, a zvolte **Přidat**. Profil se přidá do zařízení.  Pokud má zařízení nastavenou možnost **Bez dohledu**, instalace bude vyžadovat přijetí na zařízení.
 
-8.  Teď můžete profil nainstalovat na zařízení s iOS. Je potřeba, aby už byl v zařízení dokončený Pomocník s nastavením a aby bylo připravené k použití. Pokud registrace zahrnuje nasazení aplikací, zařízení by mělo mít nastavené Apple ID, protože při nasazení aplikace bude potřeba přihlásit se do obchodu App Store pomocí Apple ID.
+8.  Teď můžete profil nainstalovat na zařízení s iOSem. Je potřeba, aby už byl v zařízení dokončený Pomocník s nastavením a aby bylo připravené k použití. Pokud registrace zahrnuje nasazení aplikací, zařízení by mělo mít nastavené Apple ID, protože při nasazení aplikace bude potřeba přihlásit se do obchodu App Store pomocí Apple ID.
 
-    1.  Odemkněte zařízení s iOS.
+    1.  Odemkněte zařízení s iOSem.
 
     2.  V dialogovém okně **Nainstalovat profil** pro **Profil správy** zvolte **Instalovat**.
 
@@ -93,4 +90,3 @@ Při přímé registraci zařízení s iOSem můžete zařízení zaregistrovat 
 9.  Na zařízení s iOSem otevřete **Nastavení** a přejděte na **Obecné** &gt; **Správa zařízení** &gt; **Profil pro správu**. Potvrďte, že je zde instalace profilu uvedená, a zkontrolujte omezení zásad iOS a nainstalované aplikace. Zobrazení omezení vyplývajících ze zásad a aplikací na zařízení může trvat až 10 minut.
 
 10.  Distribuujte zařízení. Zařízení s iOSem je teď zaregistrované v Intune a spravované.
-

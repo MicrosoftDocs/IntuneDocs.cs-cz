@@ -1,5 +1,5 @@
 ---
-title: "Endpoint Protection pro počítače s Windows | Dokumentace Microsoftu"
+title: "Služba Endpoint Protection pro počítače s Windows"
 description: "Chraňte své spravované počítače pomocí služby Endpoint Protection, která poskytuje ochranu proti malwarovým hrozbám v reálném čase."
 keywords: 
 author: nathbarn
@@ -14,16 +14,16 @@ ms.assetid: 002241bf-6cd0-4c75-a4f0-891ac7e6721a
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 180da5e2e0d6980214fff1cfffa3fb1d5b0058d3
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: c51f9e471b432b13e0680538c5cf4ad68c1c12f1
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune"></a>Pomoc se zabezpečením počítačů s Windows pomocí služby Endpoint Protection pro Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Microsoft Intune vám může pomoct zabezpečit spravované počítače pomocí služby Endpoint Protection, která zajišťuje ochranu v reálném čase proti malwarovým hrozbám, udržuje definice malwaru aktuální a automaticky kontroluje počítače. Endpoint Protection také poskytuje nástroje, které pomáhají se správou a monitorováním malwarových útoků.
 
 Pokud jste ještě na svých počítačích nenainstalovali klienta Intune, přečtěte si téma [Instalace klienta na počítači s Windows pomocí Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
@@ -192,4 +192,3 @@ Další pomoc a podporu najdete v tématu [Řešení potíží se službou Endpo
 
 ### <a name="see-also"></a>Viz také
 [Zásady ochrany počítačů se systémem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)
-

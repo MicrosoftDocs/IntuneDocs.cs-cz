@@ -1,5 +1,5 @@
 ---
-title: Ochrana e-mailu na Exchangi Online | Dokumentace Microsoftu
+title: Ochrana e-mailu na Exchangi Online
 description: "Chraňte a kontrolujte přístup k podnikovým e-mailům na Exchange Online pomocí podmíněného přístupu."
 keywords: 
 author: andredm7
@@ -14,16 +14,12 @@ ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 742a989744a11dbc1c9e17a25b70388e06dd5ae7
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/31/2017
-
-
+ms.openlocfilehash: c428d7f01872c9f0968bb69dc4dc1886a7c1828b
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="protect-email-access-to-exchange-online-and-new-exchange-online-dedicated-with-intune"></a>Ochrana přístupu k e-mailu na Exchangi Online a v novém Exchangi Online Dedicated s Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -210,7 +206,7 @@ Vyhodnocují se jenom skupiny, které jsou cílem zásad podmíněného přístu
         Tato volba vyžaduje, aby každé zařízení používané k přístupu k **Exchangi Online** bylo zaregistrované v Intune a dodržovalo tyto zásady. Všechny klientské aplikace používající **moderní ověřování** podléhají zásadám podmíněného přístupu. Pokud Intune příslušnou platformu aktuálně nepodporuje, je přístup k **Exchangi Online** zablokovaný.
 
         Výběr volby **Všechny platformy** způsobí, že Azure Active Directory tyto zásady uplatní na všechny požadavky na ověření bez ohledu na platformu, která je ohlášena klientskou aplikací. Všechny platformy musí být zaregistrované a vyhovující, s těmito výjimkami:
-        *    Zařízení s Windows, která musejí být zaregistrovaná a vyhovující, připojená k doméně s místním Active Directory nebo obojí
+        *   Zařízení s Windows, která musejí být zaregistrovaná a vyhovující, připojená k doméně s místním Active Directory nebo obojí
         * Nepodporované platformy jako Mac OS. Aplikace, které používají moderní ověřování a pocházejí z těchto platforem, však budou i nadále zablokované.
 
     -   **Specifické platformy**
@@ -275,4 +271,3 @@ Zvolením dlaždice **Zařízení blokovaná systémem Exchange** na řídicím 
 - [Ochrana přístupu k SharePointu Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 
 - [Ochrana přístupu k Online Skypu pro firmy](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
-

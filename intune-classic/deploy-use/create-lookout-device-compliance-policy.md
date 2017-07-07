@@ -1,5 +1,5 @@
 ---
-title: "Povolení pravidla ochrany zařízení | Dokumentace Microsoftu"
+title: "Povolení pravidla ochrany zařízení"
 description: "Povolení pravidla ochrany před mobilními hrozbami v zásadách dodržování předpisů zařízení."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: c951692d-6538-46c0-a9f0-d607ded189ae
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 67913bfcbca3cef52e309ad86bfe722db6e16895
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 28ae825a9e33547a1987989d38667417214b97b2
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="create-lookout-device-compliance-policy-in-intune"></a>Vytváření zásad dodržování předpisů zařízení pro Lookout ve službě Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -62,4 +59,3 @@ Pokud si chcete zobrazit stav dodržování předpisů zařízení, přejděte n
   * [SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
   * [Online Skype pro firmy](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
   * [Dynamics CRM](restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
-
