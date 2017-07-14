@@ -14,13 +14,14 @@ ms.assetid: fd8cb5f7-19f0-4d80-8825-2bafa49624af
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8806dc965653deaca5ab370c290403ae049e5c58
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 032427a9965f368d7be17339e3cbe5b426800347
+ms.sourcegitcommit: ce363409d1206e4a3d669709863ccc9eb22b7d5f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/11/2017
 ---
-# <a name="determine-use-case-scenario-requirements"></a>Určení požadavků na scénáře použití
+# Určení požadavků na scénáře použití
+<a id="determine-use-case-scenario-requirements" class="xliff"></a>
 
 V této části určíte požadavky každé organizační skupiny při každém scénáři použití. Tento postup vám pomůže připravit se na další oblasti plánování nasazení Intune, jako je architektura, návrh, registrace a zavedení. Pomůže vám také identifikovat možné mezery a problémy spojené s projektem nasazení Intune.
 
@@ -41,7 +42,8 @@ Tady je několik příkladů scénářů použití v organizaci s různými sada
 Pokud chcete zadat požadavky na scénáře použití a dílčí scénáře použití ve vaší organizaci, [stáhněte si šablonu předchozí tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
 
 
-## <a name="examples-of-requirements"></a>Příklady požadavků
+## Příklady požadavků
+<a id="examples-of-requirements" class="xliff"></a>
 
 Tady jsou další příklady požadavků, které můžete použít ve sloupci Požadavky:
 
@@ -62,6 +64,7 @@ Tady jsou další příklady požadavků, které můžete použít ve sloupci Po
     - Office 365 se zásadami ochrany aplikace
     - Obchodní aplikace se zásadami ochrany
 
-## <a name="next-section"></a>Další část
+## Další kroky
+<a id="next-steps" class="xliff"></a>
 
 V další části najdete pokyny pro [přípravu plánu spuštění Intune](planning-guide-rollout-plan.md).

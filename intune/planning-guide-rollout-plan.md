@@ -14,17 +14,19 @@ ms.assetid: 3a63f78f-a7e7-4f44-9288-16b28d5d58ca
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0b3f13dbc5abb8110627cfb39aa61040a977bf38
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 9dda530be47b5449a9c1ed610d8e409fd62148d7
+ms.sourcegitcommit: ce363409d1206e4a3d669709863ccc9eb22b7d5f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/11/2017
 ---
-# <a name="develop-a-rollout-plan"></a>Vývoj plánu nasazení
+# Vývoj plánu nasazení
+<a id="develop-a-rollout-plan" class="xliff"></a>
 
 V plánu nasazení identifikujete organizační skupiny, kterým chcete Intune zavést, časový rámec nasazení u každé skupiny a použité přístupy při registraci.
 
-## <a name="targeted-groups-and-timeframes"></a>Cílové skupiny a časové rámce
+## Cílové skupiny a časové rámce
+<a id="targeted-groups-and-timeframes" class="xliff"></a>
 
 Nejprve si prohlédněte skupiny, kterým chcete zavést Intune a které jste zjistili ve [scénářích použití](planning-guide-scenarios.md).
 
@@ -36,17 +38,20 @@ V dalším kroku určete pro každou cílovou skupinu časový rámec. Tento úk
 * Zeměpisná poloha
 * Obchodní riziko
 
-## <a name="rollout-phases"></a>Fáze uvedení
+## Fáze uvedení
+<a id="rollout-phases" class="xliff"></a>
 Organizace se většinou rozhodnou, že zahájí zavedení Intune úvodním pilotním projektem určeným pro malou skupinu uživatelů v oddělení IT. Pilotní projekt se dá rozšířit na širší skupinu uživatelů IT a mohou se ho účastnit i další organizační skupiny.
 
-### <a name="pilot"></a>Pilotní nasazení
+### Pilotní nasazení
+<a id="pilot" class="xliff"></a>
 V první fázi by řešení mělo být nasazeno u pilotních uživatelů. Těm je potřeba vysvětlit, že jsou první, kteří nové řešení používají. Proto musí být ochotni poskytnout zpětnou vazbu, která pomůže zlepšit konfiguraci, dokumentaci, oznámení a usnadní cestu všem dalším uživatelům v pozdějších fázích implementace. Nedoporučuje se, aby to byli členové vedení ani důležití uživatelé.
 
 Pilotní projekt je vhodnou příležitostí k otestování [problémů](planning-guide-deployment-goals.md) a zpřesnění dříve shromážděných [požadavků](planning-guide-requirements.md).
 
 Nezapomeňte zahrnout plán [komunikace](planning-guide-communication-plan.md), [podpory](planning-guide-support-plan.md), [testování a ověřování](planning-guide-test-validation.md), abyste případné problémy dokázali vyřešit, dokud je dopad na uživatele ještě malý.
 
-### <a name="production-rollout"></a>Nasazení v ostrém provozu
+### Nasazení v ostrém provozu
+<a id="production-rollout" class="xliff"></a>
 Po úspěšném pilotním projektu jste připraveni spustit nasazení v plném provozu, kdy se zapojí i zbývající organizační skupiny. Tady je několik příkladů různých zaváděcích skupin a fází:
 
 -   **Oddělení** <br/>Fáze nasazení se může účastnit každé oddělení. Zaměříte se vždy jen na jedno oddělení. Při tomto typu nasazení je větší pravděpodobnost, že uživatelé budou v každém oddělení používat mobilní zařízení stejným způsobem a budou přistupovat ke stejným aplikacím. Uživatelé také budou mít stejné typy zásad.
@@ -66,22 +71,26 @@ V následujícím příkladu je plán zavedení Intune, který obsahuje cílové
 | 3. fáze nasazení v ostrém provozu |  |  |  | Personalistika (50 uživatelů), finance (40 uživatelů), vedení (30 uživatelů) |
 
 K zadání fází nasazení pro svou organizaci si můžete [stáhnout šablonu předchozí tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
-## <a name="match-rollout-groups-to-enrollment-approaches"></a>Sladění skupin a přístupů při nasazení
+## Sladění skupin a přístupů při nasazení
+<a id="match-rollout-groups-to-enrollment-approaches" class="xliff"></a>
 
 Když jste určili cílové skupiny a časové rámce nasazení Intune, zvolte pro každou skupinu nejvhodnější přístup k registraci do této služby. Můžete použít různé přístupy k registraci:
 * Samoobslužná služba pro uživatele
 * Registrace s asistencí pro uživatele
 * Technický veletrh IT
 
-### <a name="user-self-service"></a>Samoobslužná služba pro uživatele
+### Samoobslužná služba pro uživatele
+<a id="user-self-service" class="xliff"></a>
 
 V tomto případě za registraci zařízení odpovídá uživatel. Ten se obvykle řídí pokyny, které dostane od týmu IT v organizaci. Tento přístup se nejčastěji používá v organizacích, protože nabízí větší škálovatelnost než asistovaná registrace uživatele.
 
-### <a name="user-assisted-enrollment"></a>Asistovaná registrace
+### Asistovaná registrace
+<a id="user-assisted-enrollment" class="xliff"></a>
 
 Tento přístup se považuje za šetrnější. Uživateli s registrací pomáhá člen týmu IT. Pomoc může být osobní nebo přes Skype. Tento přístup se často používá u vedoucích pracovníků a jiných skupin, které vyžadují při registraci větší pomoc.
 
-### <a name="it-tech-fair"></a>Technický veletrh IT
+### Technický veletrh IT
+<a id="it-tech-fair" class="xliff"></a>
 
 Další možností, jak registrovat uživatele do Intune, je uspořádat technický veletrh IT. Na tuto událost připraví skupina IT registrační stánek Intune, kde mohou uživatelé získat informace o registraci do Intune, mohou se ptát a získat pomoc s registrací. Tento způsob může být – zejména v počátečních fázích zavádění Intune – výhodný jak pro skupinu IT, tak pro uživatele.
 
@@ -102,6 +111,7 @@ Tady je aktualizovaný příklad plánu nasazení Intune, který zahrnuje různ�
 | Samoobslužný provoz |  |  |  | Personalistika, finance |
 | Šetrný způsob |  |  |  | Vedení |
 
-## <a name="next-section"></a>Další část
+## Další kroky
+<a id="next-steps" class="xliff"></a>
 
 V další části najdete pokyny k [přípravě komunikačního plánu pro zavedení Intune](planning-guide-communication-plan.md).

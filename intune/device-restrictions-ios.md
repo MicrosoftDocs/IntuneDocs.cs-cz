@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/04/2017
+ms.date: 07/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,19 @@ ms.assetid: 73590192-54ca-4833-9f1d-83e1b654399f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 365b56082207c2110965681663432cce10f27c99
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 7ec66c3864aae3d680c006ada95859df0e7f0e84
+ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
-# <a name="ios-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení s iOSem v Microsoft Intune
+# Nastavení omezení pro zařízení s iOSem v Microsoft Intune
+<a id="ios-device-restriction-settings-in-microsoft-intune" class="xliff"></a>
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-## <a name="general"></a>Obecné
+## Obecné
+<a id="general" class="xliff"></a>
 -   **Kamera** – Vyberte, jestli je možné používat fotoaparát v zařízení.   
 -   **Odeslání diagnostických dat** – Povolí nebo zablokuje odesílání diagnostických dat ze zařízení do společnosti Apple.
 -   **FaceTime** – Povolí používání aplikace FaceTime v zařízení.
@@ -73,7 +75,8 @@ To platí také pro nastavení dostupná z aplikace pro nastavení iOSu, např�
 - **Apple News (jenom pod dohledem)** – Povolí používání aplikace Apple News.
 - **Změny profilu konfigurace** – Povolí uživateli instalovat konfigurační profily.
 
-## <a name="password"></a>Heslo
+## Heslo
+<a id="password" class="xliff"></a>
 -   **Zadání hesla nutné** – Vyžaduje, aby koncový uživatel zadal heslo k přístupu k zařízení.
 -   **Jednoduchá hesla** – Umožňuje použití jednoduchých hesel, jako je třeba 0000 nebo 1234.
 -   **Požadovaný typ hesla** – Určuje typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.
@@ -88,7 +91,8 @@ To platí také pro nastavení dostupná z aplikace pro nastavení iOSu, např�
 
 <sup>1</sup>Když nakonfigurujete nastavení **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka** a **Maximální počet minut po uzamčení obrazovky, po kterém bude nutné zadat heslo**, použijí se postupně. Pokud například pro obě nastavení nastavíte hodnotu **5** minut, obrazovka se po 5 minutách automaticky vypne a po dalších 5 minutách se zařízení zamkne. Pokud ale uživatel vypne obrazovku ručně, druhé nastavení se použije okamžitě. V tomto příkladě se zařízení po tom, co uživatel vypne obrazovku, zamkne po 5 minutách.
 
-## <a name="app-store-doc-viewing-gaming"></a>App Store, zobrazování dokumentů, hraní her
+## App Store, zobrazování dokumentů, hraní her
+<a id="app-store-doc-viewing-gaming" class="xliff"></a>
 
 
 -   **App Store (jenom pod dohledem)** – Zablokuje přístup k obchodu s aplikacemi v zařízeních pod dohledem.
@@ -106,7 +110,8 @@ To platí také pro nastavení dostupná z aplikace pro nastavení iOSu, např�
 -   **Oblast hodnocení** – Zvolte oblast hodnocení, pro kterou chcete konfigurovat povolené soubory ke stažení, a potom zvolte povolená hodnocení pro **filmy** a **televizní pořady**.
 -   **Aplikace** – Zvolte povolená hodnocení aplikací podle věku, které budou uživatelé moct stahovat, nebo můžete zvolit **Povolit všechny aplikace**.
 
-## <a name="restricted-apps"></a>Omezené aplikace
+## Omezené aplikace
+<a id="restricted-apps" class="xliff"></a>
 
 V seznamu omezených aplikací můžete nakonfigurovat jeden z následujících seznamů:
 
@@ -115,7 +120,8 @@ V seznamu omezených aplikací můžete nakonfigurovat jeden z následujících 
 
 Pokud chcete seznam nakonfigurovat, klikněte na **Přidat**, zadejte libovolný název, volitelně vydavatele aplikace a nakonec adresu URL aplikace v App Storu.
 
-### <a name="how-to-specify-the-url-to-an-app-in-the-store"></a>Jak zadat adresu URL pro aplikaci ve Storu
+### Jak zadat adresu URL pro aplikaci ve Storu
+<a id="how-to-specify-the-url-to-an-app-in-the-store" class="xliff"></a>
 
 Pokud chcete zadat adresu URL aplikace do seznamu aplikací, použijte následující formát:
 
@@ -130,11 +136,13 @@ Příklad: Vyhledejte Microsoft Word pro iPad. Použitá adresa URL bude https:/
 
 
 
-### <a name="additional-options"></a>Další možnosti
+### Další možnosti
+<a id="additional-options" class="xliff"></a>
 
 Můžete také kliknout na **Import** a naplnit seznam ze souboru csv ve formátu <*adresa url aplikace*>, <*název aplikace*>, <*vydavatel aplikace*> nebo kliknout na **Export** a vytvořit si soubor csv obsahující seznam aplikací s omezeným přístupem ve stejném formátu.
 
-## <a name="show-or-hide-apps"></a>Zobrazit nebo skrýt aplikace
+## Zobrazit nebo skrýt aplikace
+<a id="show-or-hide-apps" class="xliff"></a>
 
 V seznamu Zobrazit nebo skrýt aplikace můžete nakonfigurovat jeden z následujících seznamů (vyžaduje zařízení pod dohledem se systémem iOS 9.3 nebo novější).
 
@@ -143,7 +151,8 @@ Seznam **Viditelné aplikace** – Určuje seznam aplikací, které uživatelé 
 
 Pokud chcete seznam nakonfigurovat, klikněte na **Přidat**, zadejte libovolný název, volitelně vydavatele aplikace a nakonec adresu URL aplikace v App Storu.
 
-### <a name="how-to-specify-the-url-to-an-app-in-the-store"></a>Jak zadat adresu URL pro aplikaci ve Storu
+### Jak zadat adresu URL pro aplikaci ve Storu
+<a id="how-to-specify-the-url-to-an-app-in-the-store" class="xliff"></a>
 
 Pokud chcete zadat adresu URL aplikace do seznamu aplikací, použijte následující formát:
 
@@ -155,19 +164,22 @@ Příklad: Vyhledejte Microsoft Word pro iPad. Použitá adresa URL bude https:/
 > [!Note]
 > Pomocí softwaru iTunes taky můžete najít aplikaci a pomocí příkazu **Kopírovat odkaz** získat adresu URL aplikace.
 
-### <a name="additional-options"></a>Další možnosti
+### Další možnosti
+<a id="additional-options" class="xliff"></a>
 
 Můžete také kliknout na **Import** a naplnit seznam ze souboru csv ve formátu <*adresa url aplikace*>, <*název aplikace*>, <*vydavatel aplikace*> nebo klikněte na **Export** a vytvořte soubor csv obsahující seznam skrytých nebo viditelných aplikací ve stejném formátu.
 
 
-## <a name="cellular"></a>Mobilní služby
+## Mobilní služby
+<a id="cellular" class="xliff"></a>
 -   **Datový roaming** – Povolí datový roaming, když je zařízení v mobilní síti.
 -   **Globální načítání na pozadí při roamingu** – Povolí zařízení, aby při roamingu v mobilní síti načítalo data, třeba e-maily.
 -   **Hlasové vytáčení** – Umožňuje používat v zařízení funkci hlasového vytáčení.
 -   **Hlasový roaming** – Povolí hlasový roaming, když je zařízení v mobilní síti.
 -   **Změny nastavení využití mobilních dat v aplikaci (jenom pod dohledem)** – Umožní uživateli řídit, které aplikace můžou používat mobilní data.
 
-## <a name="cloud-and-storage"></a>Cloud a úložiště
+## Cloud a úložiště
+<a id="cloud-and-storage" class="xliff"></a>
 -   **Zálohování do iCloudu** – Povolí uživateli zálohovat zařízení do iCloudu.
 -   **Synchronizace dokumentů s iCloudem (jenom pod dohledem)** – Povolí synchronizaci dokumentu a párů klíč-hodnota s úložným prostorem iCloudu.
 -   **Synchronizace datového proudu fotografií s iCloudem** – Umožňuje uživatelům povolit na jejich zařízeních **Můj fotostream**, který umožňuje synchronizovat fotky na iCloud, aby byly k dispozici na všech zařízeních uživatelů.
@@ -177,11 +189,13 @@ Můžete také kliknout na **Import** a naplnit seznam ze souboru csv ve formát
 -   **Sdílený stream fotek** – Pokud chcete na zařízení zakázat **Sdílení fotek na iCloudu**, nastavte možnost na **Ne**.
 -   **Pokračování aktivity** – Umožní uživateli, aby v práci, kterou zahájil na zařízení s iOSem, pokračoval na jiném zařízení s iOSem nebo macOS (Handoff).
 
-## <a name="autonomous-single-app-mode-supervised-only"></a>Autonomní režim jedné aplikace (jenom pod dohledem)
+## Autonomní režim jedné aplikace (jenom pod dohledem)
+<a id="autonomous-single-app-mode-supervised-only" class="xliff"></a>
 
 Tato nastavení použijte ke konfiguraci, aby zařízení s iOSem spouštěla zadané aplikace v autonomním režimu jedné aplikace. Pokud je tento režim nakonfigurovaný a uživatel spustí aplikaci, v zařízení se zablokuje spuštění jakékoli další aplikace. Příkladem je nakonfigurování aplikace, která uživatelům umožňuje absolvovat na zařízení test. Když se akce aplikace dokončí nebo tuto zásadu odeberete, zařízení se vrátí do normálního stavu.
 
-### <a name="settings"></a>Nastavení
+### Nastavení
+<a id="settings" class="xliff"></a>
 
 - **Název aplikace** – zadejte název aplikace, jak se bude zobrazovat v seznamu aplikací v tomto okně.
 - **ID sady prostředků aplikace** – zadejte ID sady prostředků aplikace. Pomůžou vám **Referenční informace o ID sady prostředků pro integrované aplikace pro iOS** v tomto tématu.
@@ -191,54 +205,57 @@ Po zadání názvů jednotlivých aplikací a ID prostředků aplikace zvolte **
 - **Importovat** – slouží k importu textového souboru s oddělovači (.csv), který obsahuje seznam názvů aplikací a k nim přidružených ID prostředků aplikace.
 - **Exportovat** – slouží k exportu názvů aplikací a k nim přidružených ID prostředků aplikace, které jste nakonfigurovali, do textového souboru s oddělovači (.csv).
 
-### <a name="bundle-id-reference-for-built-in-ios-apps"></a>Referenční informace o ID sady prostředků pro integrované aplikace pro iOS
+### Referenční informace o ID sady prostředků pro integrované aplikace pro iOS
+<a id="bundle-id-reference-for-built-in-ios-apps" class="xliff"></a>
 
 Tento seznam zobrazuje ID sady prostředků některých běžných integrovaných aplikací pro iOS. Pokud chcete najít ID sady prostředků jiných aplikací, obraťte se na dodavatele softwaru.
 
-|||
-|-|-|
-|Název aplikace|ID sady prostředků|
-|App Store|com.apple.AppStore|
-|Kalkulačka|com.apple.calculator|
-|Kalendář|com.apple.mobilecal|
-|Fotoaparát|com.apple.camera|
-|Hodiny|com.apple.mobiletimer|
-|Kompas|com.apple.compass|
-|Kontakty|com.apple.MobileAddressBook|
-|FaceTime|com.apple.facetime|
-|Najít přátele|com.apple.mobileme.fmf1|
-|Najít iPhone|com.apple.mobileme.fmip1|
-|Herní centrum|com.apple.gamecenter|
-|GarageBand|com.apple.mobilegarageband|
-|Stav|com.apple.Health|
-|iBooks|com.apple.iBooks|
-|iTunes Store|com.apple.MobileStore|
-|iTunes U|com.apple.itunesu|
-|Keynote|com.apple.Keynote|
-|Mail|com.apple.mobilemail|
-|Mapy|com.apple.Maps|
-|Zprávy|com.apple.MobileSMS|
-|Hudba|com.apple.Music|
-|News|com.apple.news|
-|Poznámky|com.apple.mobilenotes|
-|Numbers|com.apple.Numbers|
-|Pages|com.apple.Pages|
-|Photo Booth|com.apple.Photo-Booth|
-|Fotky|com.apple.mobileslideshow|
-|Podcasty|com.apple.podcasts|
-|Připomínky|com.apple.reminders|
-|Safari|com.apple.mobilesafari|
-|Nastavení|com.apple.Preferences|
-|Stocks|com.apple.stocks|
-|Tipy|com.apple.tips|
-|Videa|com.apple.videos|
-|Diktafon|com.apple.VoiceMemos|
-|Wallet|com.apple.Passbook|
-|Watch|com.apple.Bridge|
-|Počasí|com.apple.weather|
+```
+,com.apple.AppStore,App Store,Apple
+,com.apple.calculator,Calculator,Apple
+,com.apple.mobilecal,Calendar,Apple
+,com.apple.camera,Camera,Apple
+,com.apple.mobiletimer,Clock,Apple
+,com.apple.compass,Compass,Apple
+,com.apple.MobileAddressBook,Contacts,Apple
+,com.apple.facetime,FaceTime,Apple
+,com.apple.mobileme.fmf1,Find Friends,Apple
+,com.apple.mobileme.fmip1,Find iPhone,Apple
+,com.apple.gamecenter,Game Center,Apple
+,com.apple.mobilegarageband,GarageBand,Apple
+,com.apple.Health,Health,Apple
+,com.apple.iBooks,iBooks,Apple
+,com.apple.MobileStore,iTunes Store,Apple
+,com.apple.itunesu,iTunes U,Apple
+,com.apple.Keynote,Keynote,Apple
+,com.apple.mobilemail,Mail,Apple
+,com.apple.MapsMaps,Apple
+,com.apple.MobileSMS,Messages,Apple
+,com.apple.Music,Music,Apple
+,com.apple.news,News,Apple
+,com.apple.mobilenotes,Notes,Apple
+,com.apple.Numbers,Numbers,Apple
+,com.apple.Pages,Pages,Apple
+,com.apple.Photo-Booth,Photo Booth,Apple
+,com.apple.mobileslideshow,Photos,Apple
+,com.apple.podcasts,Podcasts,Apple
+,com.apple.reminders,Reminders,Apple
+,com.apple.mobilesafariSafari,Apple
+,com.apple.Preferences,Settings,Apple
+,com.apple.stocks,Stocks,Apple
+,com.apple.tips,Tips,Apple
+,com.apple.videos,Videos,Apple
+,com.apple.VoiceMemos,VoiceMemos,Apple
+,com.apple.Passbook,Wallet,Apple
+,com.apple.Bridge,Watch,Apple
+,com.apple.weather,Weather,Apple
 
 
-## <a name="kiosk"></a>Kiosk
+```
+
+
+## Kiosk
+<a id="kiosk" class="xliff"></a>
 -   **Zámek aktivace** – Povolí zámek aktivace na zařízeních s iOSem, které jsou pod dohledem.
 -   **Aplikace, která běží v beznabídkovém režimu** – Zvolte **Spravovaná aplikace** a vyberte aplikaci, kterou jste přidali do Intune, nebo zvolte **Aplikace pro Store** a zadejte adresu URL k aplikaci v úložišti. Žádné jiné aplikace nebudou mít dovoleno se na zařízení spouštět. Další nápovědu najdete v části Určení adres URL na obchody s aplikacemi dál v tomto tématu.
 -   **Dotykové ovládání s asistencí** – Povolí nebo zakáže nastavení usnadnění **dotykového ovládání**, která uživateli pomáhá provádět na obrazovce gesta, která by pro něho mohla být obtížná.
@@ -262,7 +279,8 @@ Tento seznam zobrazuje ID sady prostředků některých běžných integrovanýc
 > Než budete moct nakonfigurovat nastavení zařízení s iOSem pro celoobrazovkový (beznabídkový) režim, musíte převést zařízení do režimu dohledu pomocí nástroje Apple Configurator nebo Programu registrace zařízení Apple. Další informace o nástroji Apple Configurator získáte v dokumentaci Apple.
 >Pokud se určená aplikace pro iOS nainstaluje až po přiřazení profilu, nepřejde zařízení do celoobrazovkového režimu, dokud ho nerestartujete.
 
-## <a name="safari"></a>Safari
+## Safari
+<a id="safari" class="xliff"></a>
 -   **Safari (jenom pod dohledem)** – Určuje, jestli se na zařízení může používat prohlížeč Safari.
 -   **Automatické vyplňování** – Umožní uživatelům měnit nastavení automatického dokončování v prohlížeči.
 -   **Soubory cookie** – Povolí prohlížeči používat soubory cookie.
@@ -271,18 +289,22 @@ Tento seznam zobrazuje ID sady prostředků některých běžných integrovanýc
 -   **Automaticky otevíraná okna** – Povolí nebo zakáže blokování automaticky otevíraných oken v prohlížeči.
 
 
-## <a name="domains"></a>Domains
+## Domains
+<a id="domains" class="xliff"></a>
 
-### <a name="unmarked-email-domains"></a>Zrušení označení e-mailových domén
+### Zrušení označení e-mailových domén
+<a id="unmarked-email-domains" class="xliff"></a>
 
 V poli **Adresa URL e-mailové domény** přidejte do seznamu minimálně jednu adresu URL. Když koncoví uživatelé dostanou e-mail z jiné domény, než z té, kterou jste nakonfigurovali, označí se v aplikaci iOS Mail daný e-mail jako nedůvěryhodný.
 
 
-### <a name="managed-web-domains"></a>Spravované webové domény
+### Spravované webové domény
+<a id="managed-web-domains" class="xliff"></a>
 
 V poli **Adresa URL webové domény** přidejte do seznamu minimálně jednu adresu URL. Když pak z těchto zadaných domén stáhnete dokumenty, budou se považovat za spravované. Toto nastavení platí jenom pro dokumenty stažené prostřednictvím prohlížeče Safari.
 
 
-### <a name="safari-password-auto-fill-domains"></a>Domény pro automatické vyplňování hesel v Safari
+### Domény pro automatické vyplňování hesel v Safari
+<a id="safari-password-auto-fill-domains" class="xliff"></a>
 
 V poli **Adresa URL domény** přidejte do seznamu minimálně jednu adresu URL. Uživatelé si mohou uložit jenom webová hesla z adres URL uvedených v tomto seznamu. Toto nastavení platí jenom pro prohlížeč Safari a pro zařízení s iOSem 9.3 a novějším v režimu pod dohledem. Pokud nezadáte žádné adresy URL, můžete si uložit hesla ze všech webů.

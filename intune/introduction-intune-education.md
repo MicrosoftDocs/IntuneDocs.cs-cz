@@ -14,13 +14,14 @@ ms.assetid: ca36589b-804d-40b8-b112-9195d8897800
 ms.reviewer: lindavr
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d69727762e63f0258eacc084801827c50eaa1454
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: c094d59d7261b602c51196233286d10c27732236
+ms.sourcegitcommit: 2a6ad3c233d15a9fb441362105f64b2bdd550c34
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/13/2017
 ---
-# <a name="what-is-intune-for-education"></a>Co je Intune for Education?
+# Co je Intune for Education?
+<a id="what-is-intune-for-education" class="xliff"></a>
 
 Intune for Education umožňuje učitelům a studentům dosáhnout produktivní výuky a zároveň chránit školní údaje. Intune je cloudová služba pro správu podnikové mobility (EMM), která je základem Intune for Education.
 
@@ -30,7 +31,7 @@ Intune for Education umožňuje spravovat zařízení s Windows 10 pomocí kompl
 
 Intune for Education je možné používat samostatně nebo v kombinaci s [kompletním prostředím pro správu zařízení dostupným v Intune](introduction-intune.md). Dá se používat také společně s ostatními nástroji dostupnými v sadě [Microsoft Education](https://microsoft.com/education), což usnadňuje použití Intune for Education s jinými užitečnými vzdělávacími nástroji od Microsoftu.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ukrnCwcLvV8" frameborder="0" allowfullscreen></iframe>
+> [!VIDEO https://www.youtube.com/embed/ukrnCwcLvV8]
 
 Intune a Intune for Education umožňují:
 * Spravovat mobilní zařízení, která vaši pracovníci používají pro přístup k datům
@@ -38,7 +39,8 @@ Intune a Intune for Education umožňují:
 * Chránit informace vaší organizace určením způsobu, jak k nim vaši pracovníci přistupují a jak je sdílejí
 * Zajistit, aby zařízení a aplikace splňovaly požadavky na zabezpečení
 
-### <a name="next-steps"></a>Další kroky
+### Další kroky
+<a id="next-steps" class="xliff"></a>
 * Seznamte se s tímto produktem [prostřednictvím 30denní zkušební verze Intune](/intune-classic/understand-explore/sign-up-for-30-day-trial-microsoft-intune).
 * Přečtěte si, jak můžete co nejrychleji [začít používat Intune for Education](/intune-education/what-is-express-configuration).
 * Podrobně se seznamte s [technickými požadavky a možnostmi](/intune/supported-devices-browsers) služby Intune.
