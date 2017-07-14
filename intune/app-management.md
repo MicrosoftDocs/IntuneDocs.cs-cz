@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/16/2017
+ms.date: 07/11/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,14 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 515d4e2b089d077ec708fc1dea1e1747169a60ae
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 33ddb60df7aebe36ff652e1da6da592442b96d4b
+ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
-# <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
+# Co je správa aplikací v Microsoft Intune?
+<a id="what-is-microsoft-intune-app-management" class="xliff"></a>
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -36,7 +37,8 @@ Navíc potřebujete přiřazovat a spravovat aplikace na zařízeních, která n
 
 Intune nabízí celou řadu funkcí, které vám pomůžou zajistit, aby na požadovaných zařízeních byly potřebné aplikace.
 
-## <a name="app-management-capabilities-by-platform"></a>Funkce správy aplikací podle platformy
+## Funkce správy aplikací podle platformy
+<a id="app-management-capabilities-by-platform" class="xliff"></a>
 
 ||||||
 |-|-|-|-|-|
@@ -56,11 +58,12 @@ Intune nabízí celou řadu funkcí, které vám pomůžou zajistit, aby na pož
 |Aplikace z obchodu|Ano|Ano|Ano|Ano|
 |Aktualizace aplikací|Ano|Ano|Ano|Ano|
 
-<sup>1</sup> Zvažte ochranu aplikací na zařízení s Windows 10 pomocí služby [Windows Information Protection]windows-information-protection-configure.md).
+<sup>1</sup> Při ochraně aplikací na zařízeních s Windows 10 uvažujte o použití funkce [Windows Information Protection](windows-information-protection-configure.md).
 
 <sup>2</sup> Platí jen pro zařízení spravovaná přes Intune.
 
-## <a name="how-to-get-started"></a>Informace o tom, jak začít
+## Informace o tom, jak začít
+<a id="how-to-get-started" class="xliff"></a>
 
 Většinu toho, co souvisí s aplikacemi, najdete v úloze **Mobilní aplikace**, ke které se dostanete takto:
 
@@ -70,7 +73,8 @@ Většinu toho, co souvisí s aplikacemi, najdete v úloze **Mobilní aplikace**
 
     ![Úloha Mobilní aplikace](./media/apps-workload.png)
 
-### <a name="manage"></a>Správa
+### Správa
+<a id="manage" class="xliff"></a>
 - **Aplikace** – v tomto uzlu budete přidávat, přiřazovat a monitorovat většinu aplikací.
     - [Přidání aplikací](apps-add.md)
     - [Přiřazení aplikací](apps-deploy.md)
@@ -85,7 +89,8 @@ Většinu toho, co souvisí s aplikacemi, najdete v úloze **Mobilní aplikace**
 - **Zřizovací profily iOS** – aplikace pro iOS obsahují zřizovací profil a kód, který je podepsaný certifikátem. Když tomuto certifikátu vyprší platnost, není možné aplikaci spustit. Intune poskytuje nástroje pro proaktivní přiřazení nových zásad zřizovacího profilu k zařízením s aplikacemi, kterým brzy vyprší platnost.
     - [Zřizovací profily aplikací pro iOS](app-provisioning-profile-ios.md)
 
-### <a name="monitor"></a>Monitorování
+### Monitorování
+<a id="monitor" class="xliff"></a>
 - **Licencované aplikace** – zde můžete zobrazit, přiřadit a monitorovat aplikace hromadně zakoupené v obchodech s aplikacemi.
     - [Aplikace hromadně zakoupené ve Windows Storu pro firmy](windows-store-for-business.md)
 - **Zjištěné aplikace** – zobrazuje všechny aplikace přiřazené přes Intune a nainstalované v zařízení.
@@ -94,7 +99,8 @@ Většinu toho, co souvisí s aplikacemi, najdete v úloze **Mobilní aplikace**
 
 Podrobnosti najdete v článku [Monitorování aplikací](apps-monitor.md).
 
-### <a name="setup"></a>Nastavení
+### Nastavení
+<a id="setup" class="xliff"></a>
 <!--- **iOS VPP Tokens**
     - [iOS volume-purchased apps](vpp-apps-ios.md) --->
 - **Windows Store pro firmy** – integrace nastavení do Windows Storu pro firmy. Potom můžete zakoupené aplikace synchronizovat s Intune, přiřazovat je a sledovat využití licencí.
