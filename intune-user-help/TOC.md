@@ -2,6 +2,7 @@
 ## [Práce pomocí spravovaných zařízení](use-managed-devices-to-get-work-done.md)
 ## [Jaké informace může moje společnost vidět s Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 ## [Co se stane, když obnovím tovární nastavení zařízení?](what-happens-if-you-reset-your-device-cpwebsite.md)
+## [Přihlášení k Portálu společnosti](sign-in-to-the-company-portal.md)
 ## [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 ### [Co se stane při registraci zařízení s Androidem?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
 ### [Řešení běžných problémů s Androidem](troubleshoot-your-device-android.md)
