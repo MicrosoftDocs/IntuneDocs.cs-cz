@@ -38,9 +38,9 @@
 ### [Implementace](planning-guide-onboarding.md)
 ### [Testování a ověřování](planning-guide-test-validation.md)
 ### [Další zdroje informací](planning-guide-resources.md)
-<!-- ## Scenario implementation guides
-### [BYOD](/enterprise-mobility-security/solutions/enable-byod?toc=/intune/toc.json)
-### [Protect O365 data](/enterprise-mobility-security/solutions/protect-office365-data-with-intune?toc=/intune/toc.json)
+## Příručky k implementaci scénářů
+### [Uživatelé s vlastním zařízením (BYOD)](byod-enable.md)
+<!--### [Protect O365 data](/enterprise-mobility-security/solutions/protect-office365-data-with-intune?toc=/intune/toc.json)
 ### [Protect on-premises data](/enterprise-mobility-security/solutions/protect-on-premises-data-with-intune?toc=/intune/toc.json)
 ### [Protect data without enrollment](/enterprise-mobility-security/solutions/protect-company-data-without-managing-devices?toc=/intune/toc.json)
 ### [Manage company-owned devices](/enterprise-mobility-security/solutions/issue-corp-devices?toc=/intune/toc.json)
@@ -64,14 +64,13 @@
 #### [Využití šířky pásma sítě](network-bandwidth-use.md)
 ### [Přihlášení k Intune](account-sign-up.md)
 ### [Konfigurace domén](custom-domain-name-configure.md)
-### [Přidávání uživatelů](users-permissions-add.md)
+### [Přidávání uživatelů](users-add.md)
 ### [Přidání skupin](groups-add.md)
-### [Přiřazení licencí](licenses-assign.md)       
-### [Přizpůsobení Portálu společnosti](company-portal-customize.md)     
+### [Přiřazení licencí](licenses-assign.md)
 ### [Nastavení autority pro správu mobilních zařízení (MDM)](mdm-authority-set.md)
 
 ## [Registrovat zařízení](device-enrollment.md)
-### Možnosti nastavení
+### [Možnosti registrace](enrollment-options.md)
 #### [Podmínky a ujednání](terms-and-conditions-create.md)
 #### [Omezení](enrollment-restrictions-set.md)
 #### [Certifikát Apple MDM Push Certificate](apple-mdm-push-certificate-get.md)
@@ -105,7 +104,6 @@
 ### [Resetování PIN kódu ve Windows 10](device-windows-pin-reset.md)
 ### [Prozkoumání inventáře zařízení](device-inventory.md)
 
-## [Správa uživatelů](user-management.md)
 <!--### Add and delete users -->
 
 ## [Správa aplikací](app-management.md)
@@ -219,32 +217,24 @@
 
 #### [Nastavení Lookoutu](lookout-mobile-threat-defense-connector.md)
 ##### [Integrace Lookoutu a Intune](lookout-mtd-connector-integration.md)
+
 #### [Nastavení služby Skycure](skycure-mobile-threat-defense-connector.md)
-##### [Konfigurace jednotného přihlašování v Azure AD](skycure-azure-sso-configure.md)
-##### [Stažení zásad pro konfiguraci aplikací pro iOS](skycure-ios-app-configuration-policy-download.md)
 ##### [Integrace služeb Skycure a Intune](skycure-mtd-connector-integration.md)
+
+#### [Nastavení Check Pointu](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
+##### [Integrace Check Pointu a Intune](checkpoint-sandblast-mobile-mtd-connector-integration.md)
+
 #### [Přidání aplikací MTD](mtd-apps-ios-app-configuration-policy-add-assign.md)
 #### [Povolení MTD v Intune](mtd-connector-enable.md)
 #### [Vytvoření zásad dodržování předpisů pro zařízení MTD](mtd-device-compliance-policy-create.md)
 
 ### [Řízení přístupu k síti](network-access-control-integrate.md)
 
-
-<!-- ### Set up mobile threat protection        
-#### Prerequisites
-#### Set up Lookout
-#### Set up Skycure
-#### Enable mobile threat protection in Intune
-#### Create a mobile threat protection compliance policy -->
-
 ### [Nastavení Windows Hello](windows-hello.md)        
 <!-- ### Protect devices with remote actions -->
 
 ## [Správa rolí](role-based-access-control.md)
-<!-- ### Create a custom role
-### Assign a role -->
 
-<!-- ### Custom role settings -->
 
 ## [Správa počítačů pomocí softwarového agenta](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune?toc=/intune/toc.json)
 ### [Srovnání správy počítačů](/intune-classic/deploy-use/pc-management-comparison?toc=/intune/toc.json)
