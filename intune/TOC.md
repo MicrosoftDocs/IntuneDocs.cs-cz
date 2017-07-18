@@ -118,6 +118,7 @@
 #### [Aplikace pro Windows Store](store-apps-windows.md)
 #### [Obchodní aplikace pro Windows](lob-apps-windows.md)
 #### [Aplikace pro Android for Work](apps-add-android-for-work.md)
+#### [Aplikace Office 365 pro Windows 10](apps-add-office365.md)
 ### [Přiřazení aplikací](apps-deploy.md)
 ### [Monitorování aplikací](apps-monitor.md)
 ### [Konfiguračních profily aplikací pro iOS](app-configuration-policies-use-ios.md)
