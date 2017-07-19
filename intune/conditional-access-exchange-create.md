@@ -1,7 +1,7 @@
 ---
 title: "Vytvoření a přiřazení zásad podmíněného přístupu pro místní Exchange"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Jak nakonfigurovat podmíněný přístup pro místní Exchange v Intune a starší verze Exchange Online Dedicated v Intune"
+titleSuffix: Intune on Azure
+description: "Jak nakonfigurovat podmíněný přístup pro místní Exchange v Intune a starší verze Exchange Online Dedicated v Intune"
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -14,18 +14,15 @@ ms.technology:
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 2f1775eb98d6518ce35dcc38852e167c5eada616
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: b72dbe27b52be187a907392aea5a1803fb36e4d3
+ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/03/2017
 ---
+# <a name="how-to-create-and-assign-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated-in-microsoft-intune"></a>Vytvoření a přiřazení zásad podmíněného přístupu pro místní Exchange a starší verze Exchange Online Dedicated v Microsoft Intune
 
-# <a name="how-to-create-and-assign-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated-in-microsoft-intune-azure-preview"></a>Vytvoření a přiřazení zásad podmíněného přístupu pro místní Exchange a starší verze Exchange Online Dedicated v Microsoft Intune Azure Preview
-
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Toto téma vás provede procesem konfigurace podmíněného přístupu pro místní Exchange založeného na dodržování předpisů zařízeními.
 
@@ -85,7 +82,7 @@ Nativní aplikace **Pošta** ve Windows 8.1 a novějších verzích (při regist
 
 4. Zvolte **Intune** a zobrazí se **řídicí panel Intune**.
 
-5.  Zvolte **Podmíněný přístup** a potom zvolte
+5. Zvolte **Místní přístup** a pak zvolte
 
 6. V okně **Místní** se zobrazí stav zásad podmíněného přístupu a zařízení, na která má vliv.
 
@@ -93,8 +90,8 @@ Nativní aplikace **Pošta** ve Windows 8.1 a novějších verzích (při regist
 
 8. V okně **Přístup k místnímu Exchangi** zvolte **Ano** a povolte tak řízení přístupu k místnímu Exchangi.
 
-      > [!NOTE]
-      > Pokud jste nenakonfigurovali místní Exchange Connector s protokolem Exchange Active Sync, bude tato možnost zakázaná.  Před povolením podmíněného přístupu pro místní Exchange musíte nejdřív nainstalovat a nakonfigurovat tento konektor. Další podrobnosti najdete v tématu [Instalace místního Exchange Connectoru v Intune](exchange-connector-install.md).
+    > [!NOTE]
+    > Pokud jste nenakonfigurovali místní Exchange Connector s protokolem Exchange Active Sync, bude tato možnost zakázaná.  Před povolením podmíněného přístupu pro místní Exchange musíte nejdřív nainstalovat a nakonfigurovat tento konektor. Další podrobnosti najdete v tématu [Instalace místního Exchange Connectoru v Intune](exchange-connector-install.md).
 
 9. V části **Přiřazení** zvolte **Zahrnuté skupiny**.  Použijte skupinu zabezpečení uživatelů, která by měla mít přiřazený podmíněný přístup. Bude to vyžadovat, aby uživatelé zaregistrovali svoje zařízení v Intune a vyhověli podmínkám profilů pro dodržování předpisů.
 
@@ -114,12 +111,12 @@ Nativní aplikace **Pošta** ve Windows 8.1 a novějších verzích (při regist
 
 15. V okně **Místní** uložte kliknutím na tlačítko **Uložit** zásady podmíněného přístupu.
 
-## <a name="create-azure-ad-conditional-access-policies-in-intune-azure-preview"></a>Vytvoření zásad podmíněného přístupu Azure AD v Intune Azure Preview
+## <a name="create-azure-ad-conditional-access-policies-in-intune"></a>Vytvoření zásad podmíněného přístupu Azure AD v Intune
 
-Počínaje verzí 1704 můžou správci vytvořit zásady podmíněného přístupu Azure AD v Intune Azure Preview. Má to tu výhodu, že se nemusí přepínat mezi úlohami Azure a Intune.
+Počínaje verzí 1704 můžou správci vytvořit zásady podmíněného přístupu Azure AD z portálu Intune Azure Portal. Má to tu výhodu, že se nemusí přepínat mezi úlohami Azure a Intune.
 
 > [!IMPORTANT]
-> Abyste mohli vytvořit zásady podmíněného přístupu Azure AD na portálu Intune Azure Preview, musíte mít licenci Azure AD Premium.
+> Abyste mohli vytvořit zásady podmíněného přístupu Azure AD na portálu Intune Azure Portal, musíte mít licenci Azure AD Premium.
 
 ### <a name="to-create-azure-ad-conditional-access-policy"></a>Vytvoření zásad podmíněného přístupu Azure AD
 

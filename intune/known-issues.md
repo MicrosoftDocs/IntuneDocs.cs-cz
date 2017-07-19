@@ -1,12 +1,12 @@
 ---
-title: "Známé problémy v Microsoft Intune Preview"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Přečtěte si informace o známých problémech ve verzi Preview."
+title: "Známé problémy v Microsoft Intune na Azure"
+titleSuffix: Intune on Azure
+description: "Informace o známých problémech v Intune"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/25/2017
+ms.date: 06/27/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,51 +15,116 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 36b35e5311f6262c545a266003fb72b2febb277c
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 4fda224613d8b69be82ef7f9681ba9165be33e52
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
-# <a name="known-issues-in-the-microsoft-intune-preview"></a>Známé problémy v Microsoft Intune Preview
-
-
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+# <a name="known-issues-in-microsoft-intune"></a>Známé problémy v Microsoft Intune
 
 
-Toto téma vám pomůže dozvědět se více o známých problémech v Intune Preview.
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Pokud chcete nahlásit chybu, která tu není uvedená, [otevřete žádost o podporu](https://docs.microsoft.com/intune-classic/troubleshoot/get-support).
 
-Pokud chcete zažádat o přidání nové funkce do Intune, zvažte vyplnění zprávy na webu [Uservoice](https://microsoftintune.uservoice.com/forums/291681-ideas/category/189016-azure-admin-console).
+Toto téma vám pomůže dozvědět se více o známých problémech v Microsoft Intune.
+
+Pokud chcete nahlásit chybu, která tu není uvedená, [otevřete žádost o podporu](get-support.md).
+
+Pokud chcete zažádat o novou funkci pro Intune, zvažte zaslání zprávy na webu [Uservoice](https://microsoftintune.uservoice.com/forums/291681-ideas/category/189016-azure-admin-console).
+
+## <a name="migration"></a>Migrace
 
 ### <a name="groups-created-by-intune-during-migration-might-affect-functionality-of-other-microsoft-products"></a>Skupiny vytvořené pomocí Intune během migrace můžou ovlivnit funkčnost jiných produktů Microsoftu
 
-Při migraci z klasického portálu Intune na portál Azure Portal se může zobrazit nová skupina s názvem **Všichni uživatelé – b0b08746-4dbe-4a37-9adf-9e7652c0b421**. Všimněte si, že tato skupina obsahuje všechny uživatele ve vašem Azure Active Directory, ne jenom uživatele s licencí Intune. To může způsobit problémy s jinými produkty Microsoftu, pokud očekáváte, že někteří existující nebo noví uživatelé nebudou členem žádné skupiny.
+Při migraci z klasického portálu Intune na Azure se může zobrazit nová skupina s názvem **Všichni uživatelé – b0b08746-4dbe-4a37-9adf-9e7652c0b421**. Tato skupina obsahuje všechny uživatele ve vašem Azure Active Directory, ne jenom uživatele s licencí Intune. Toto použití může způsobit problémy s jinými produkty Microsoftu, pokud očekáváte, že někteří existující nebo noví uživatelé nebudou členem žádné skupiny.
 
-### <a name="altering-groups-created-by-intune-during-migration-will-delay-migration"></a>Změna skupin vytvořených pomocí Intune během migrace zpozdí migraci
+### <a name="secondary-migration-required-for-select-capabilities"></a>Pro vybrané možnosti se vyžaduje sekundární migrace
 
-Během přípravy na migraci se skupiny zkopírují z Intune do Azure AD. Všechny další změny, které provedete v klasickém portálu Intune, se aktualizují ve skupině Azure AD. Žádné změny provedené v Azure AD se však nesynchronizují zpět do klasické konzoly Intune. Následkem toho se migrace na portál Azure Portal nemusí povést a může docházet ke zpožděním v migraci.
+Účty Intune vytvořené před lednem 2017 je nutné před použitím těchto schopností na portálu Azure Portal migrovat:
 
-### <a name="compliance-policies-from-intune-will-not-show-up-in-new-console"></a>Zásady dodržování předpisů z Intune se v nové konzole nezobrazí
+- Profily registrace podnikových zařízení
+- Program Apple Device Enrollment Program
+- Firemní předregistrovaná zařízení podle skupiny sériových čísel iOSu
+- Správci registrace zařízení
+- Apple Volume Purchase Program
 
-Zásady dodržování předpisů, které jste vytvořili v klasickém portálu Intune, se migrují, ale na portálu Azure Portal se nezobrazí. Důvodem je změna návrhu na portálu Azure Portal. Zásady dodržování předpisů, které jste vytvořili v klasickém portálu Intune, se stále uplatňují, ale musíte je prohlížet a upravovat na klasické portálu.
-A nové zásady dodržování předpisů, které vytvoříte na portálu Azure Portal, se nezobrazí v klasickém portálu.
+Protože tyto schopnosti nejde spravovat z klasické konzoly Silverlight i konzoly Azure, migrace:
+- Zakáže schopnosti v klasické konzole.
+- Povolí schopnosti v konzole Azure.  
+
+Pokud teď tyto schopnosti Intune spravujete na portálu Azure Portal, mějte na paměti tyto body:
+
+#### <a name="removes-default-corporate-device-enrollment-profiles-in-apple-dep"></a>Odebrání výchozích profilů registrace podnikových zařízení v programu Apple DEP
+Azure Portal nepodporuje výchozí profil registrace podnikového zařízení pro zařízení programu Apple DEP (Device Enrollment Program). Tato funkce, která je dostupná v klasické konzole Silverlight Intune, se vyřazuje, aby nedocházelo k neúmyslnému přiřazení profilů. Když se na portálu Azure Portal synchronizují sériová čísla DEP, nepřiřadí se žádný profil registrace podnikového zařízení. Před použitím zařízení musí být registrační profil přiřazený.
+
+#### <a name="apple-dep-token-restored-with-migration"></a>Obnovení tokenu Apple DEP při migraci
+
+Pokud v klasickém (Silverlight) portálu Intune odstraníte token Apple Device Enrollment Programu a neodešlete nový token na portálu Azure Portal, původní token se při migraci na novém portálu Azure Portal obnoví. Pokud chcete tento token odebrat a zabránit registraci v programu DEP, odstraňte token z portálu Azure Portal.
+
+### <a name="status-blades-for-migrated-policies-do-not-work"></a>Okna stavu pro migrované zásady nefungují
+
+Nejde zobrazit informace o stavu pro zásady, které se migrovaly z klasického portálu na portál Azure Portal. Můžete ale dál zobrazovat sestavy pro tyto zásady na portálu Classic.
+Pokud chcete zobrazit informace o stavu migrovaných konfiguračních zásad, na portálu Azure Portal je znovu vytvořte.
+
+## <a name="apps"></a>Aplikace
+
+### <a name="ios-volume-purchased-apps-only-available-in-default-intune-tenant-language"></a>Hromadně zakoupené aplikace pro iOS jsou k dispozici pouze ve výchozím jazyce tenanta Intune
+Hromadně zakoupené aplikaci pro iOS se zobrazují a jde je přiřadit pouze ke stejnému kódu země, jaký má účet Intune. Intune synchronizuje pouze aplikace ze stejného národního prostředí iTunes, jako je kód země účtu tenanta Intune. Pokud tedy například koupíte aplikaci, která je k dispozici pouze pro USA, ale váš účet Intune je německý, Intune tuto aplikaci nezobrazí.
+
+### <a name="multiple-copies-of-the-same-ios-volume-purchase-program-are-uploaded"></a>Nahrálo se více kopií jednoho hromadně zakoupeného programu pro iOS
+Neklikejte u jednoho tokenu VPP na tlačítko **Nahrát** vícekrát. Pokud to uděláte, nahrají se duplicitní tokeny VPP a aplikace se u stejného tokenu VPP budou synchronizovat vícekrát. 
+
+<!-- ## Groups -->
+
+## <a name="device-configuration"></a>Konfigurace zařízení
+
+### <a name="you-cannot-save-a-windows-information-protection-policy-for-some-devices"></a>Nejde uložit zásadu Windows Information Protection pro některá zařízení
+
+Pro zařízení, která nejsou zaregistrovaná v Intune, můžete do pole **Podniková identita** v nastavení pro zásadu Windows Information Protection zadat jenom primární doménu.
+Pokud přidáte další domény (pomocí možnosti **Upřesnit nastavení** > **Hranice sítě** > **Přidat chráněnou doménu**), zásadu nejde uložit. Zobrazená chybová zpráva se brzy změní, aby byla přesnější.
+
+### <a name="cisco-anyconnect-vpn-client-support"></a>Podpora klientů VPN Cisco AnyConnect
+ 
+Nejnovější vydaná verze klienta VPN Cisco AnyConnect (4.0.07072) v současnosti není kompatibilní s Intune. Budoucí aktualizace Intune umožní kompatibilitu s touto verzí klienta VPN. Do té doby doporučujeme klienta VPN Cisco AnyConnect neaktualizovat a dál používat stávající verzi.
+
+### <a name="using-the-numeric-password-type-with-macos-sierra-devices"></a>Použití číselného typu hesla pro zařízení s macOS Sierra
+
+Když v současnosti v profilu omezení zařízení pro zařízení s macOS Sierra vyberete jako **Požadovaný typ hesla** možnost **Číselné**, vynutí se **Alfanumerické**. Pokud s těmito zařízeními chcete použít číselné heslo, toho nastavení nekonfigurujte.
+Tento problém se možná vyřeší v budoucí verzi macOS.
+
+Další informace o těchto nastaveních najdete v tématu [Nastavení omezení pro zařízení s macOS v Microsoft Intune](device-restrictions-macos.md).
+
+## <a name="compliance"></a>Dodržování předpisů
+
+### <a name="compliance-policies-from-intune-do-not-show-up-in-new-console"></a>Zásady dodržování předpisů z Intune se v nové konzole nezobrazí
+
+Zásady dodržování předpisů, které jste vytvořili v klasickém portálu, se migrují, ale na portálu Azure Portal se nezobrazí kvůli změnám v návrhu na portálu Azure Portal. Zásady dodržování předpisů, které jste vytvořili v klasickém portálu Intune, se stále vynucují, ale musíte je prohlížet a upravovat na klasické portálu Intune.
+A nové zásady dodržování předpisů, které vytvoříte na portálu Azure Portal, se nezobrazí v klasickém portálu Intune.
+
 Další informace najdete v článku [Co je dodržování předpisů zařízením](device-compliance.md).
 
+<!-- ## Enrollment -->
+
+
+<!-- ## Data protection -->
+
+
+## <a name="administration-and-accounts"></a>Správa a účty
+
+Globální správci (také označovaní jako správci tenanta) můžou dál vykonávat běžné úkony správy bez samostatné licence služby Intune nebo sady EMS (Enterprise Mobility Suite). Pokud ale chtějí službu používat, třeba zaregistrovat si vlastní nebo firemní zařízení nebo používat Portál společnosti Intune, potřebují licenci Intune nebo EMS.
+
+<!-- ## Additional items -->
 
 
 
-### <a name="administration-and-accounts"></a>Správa a účty
 
-Globální správci (také označovaní jako správci tenanta) můžou dál vykonávat běžné úkony správy bez samostatné licence služby Intune nebo sady EMS (Enterprise Mobility Suite). Pokud ale chtějí globální správci službu používat, například zaregistrovat si svoje vlastní nebo firemní zařízení nebo používat portál společnosti Intune, budou potřebovat licenci služby Intune nebo sady EMS jako ostatní uživatelé.
 
-### <a name="apple-enrollment-profile-migration"></a>Migrace profilu registrace Apple
-Během pár následujících měsíců vám Intune umožní spravovat vaše registrace v Apple Device Enrollment Programu a Apple Configuratoru prostřednictvím nového portálu Azure Portal. Pokud odstraníte token Apple Device Enrollment Programu a neodešlete aktualizovaný token, původní token se v rámci migrace vašeho účtu Intune na novém portálu Azure Portal obnoví. Pokud chcete tento token odebrat a zabránit registraci v programu DEP, stačí token odstranit z portálu Azure Portal. 
 
-### <a name="rbac-for-apple-corporate-owned-device-enrollment"></a>RBAC pro registraci zařízení Apple vlastněných společností
-Role klienta nebo správce služby Azure AD se vyžadují k provedení úloh registrace Apple DEP a Apple Configuratoru, i když je oprávnění RBAC uvedeno a je dostupné v rámci vlastní role uživatele. Podpora role RBAC pro tyto funkce bude oznámena v budoucnu.
 
+
+
+
+
+
+ 

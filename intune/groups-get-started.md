@@ -1,7 +1,7 @@
 ---
-title: "Začínáme se skupinami na portálu Intune Azure Preview"
-titleSuffix: Intune Azure preview
-description: "Seznamte se s novinkami ohledně skupin na portálu Intune Azure Portal Preview."
+title: "Skupiny Intune Classic na portálu Azure Portal"
+titleSuffix: Intune on Azure
+description: "Seznamte se s novinkami ve skupinách na portálu Azure pro Intune."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
@@ -13,32 +13,29 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 323f384d-8a76-4adc-999b-e508d641bfa1
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 0a6e2b75b1c85c0cd0ed98623dcd9d87b15eb082
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 3e7cf02ed43507eabdf6038940058f94eb09b0fa
+ms.sourcegitcommit: d1ad84edf4f03cb4c11fe55131556b43fc3a4500
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/05/2017
 ---
+# <a name="intune-classic-groups-in-the-azure-portal"></a>Skupiny Intune Classic na portálu Azure Portal
 
-# <a name="get-started-with-groups"></a>Začínáme se skupinami
-
-[!INCLUDE[azure preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Vyslyšeli jsme vaše názory a změnili jsme způsob práce se skupinami v Microsoft Intune.
 Pokud Intune používáte z portálu Azure Portal, pak se vaše skupiny Intune migrovaly do skupin zabezpečení Azure Active Directory.
 
-Výhoda pro vás spočívá v tom, že teď používáte stejné prostředí skupin ve všech aplikacích Enterprise Mobility + Security a Azure AD. Kromě toho budete moct použít rozhraní API prostředí PowerShell a Graph a tuto novou funkci si rozšířit a přizpůsobit.
+Výhoda pro vás spočívá v tom, že teď používáte stejné prostředí skupin ve všech aplikacích Enterprise Mobility + Security a Azure AD. Kromě toho můžete použít rozhraní API prostředí PowerShell a Graph a tuto novou funkci si rozšířit a přizpůsobit.
 
-Skupiny zabezpečení služby Azure AD podporují všechny typy nasazení Intune pro uživatele i zařízení. Kromě toho můžete používat dynamické skupiny Azure AD, které se automaticky aktualizují na základě atributů, které zadáte. Můžete například vytvořit skupinu zařízení se systémem iOS 9. Vždycky, když se zařízení se systémem iOS 9 zaregistruje, zobrazí se toto zařízení automaticky v dynamické skupině.
+Skupiny zabezpečení služby Azure AD podporují všechny typy nasazení Intune pro uživatele i zařízení. Kromě toho můžete používat dynamické skupiny Azure AD, které se automaticky aktualizují na základě atributů, které zadáte. Můžete například vytvořit skupinu zařízení se systémem iOS 9. Vždy, když se zařízení se systémem iOS 9 zaregistruje, zobrazí se toto zařízení automaticky v dynamické skupině.
 
 ## <a name="what-is-not-available"></a>Co není dostupné?
 
 Některé možnosti skupin Intune, které jste dříve možná používali, nejsou v Azure AD dostupné:
 
 - Nejsou už dostupné skupiny Intune **Neseskupení uživatelé** a **Neseskupená zařízení**.
-- Možnost **Vyloučit konkrétní členy** ze skupiny na portálu Azure Portal neexistuje. Toto chování ale můžete nahradit pomocí skupiny zabezpečení Azure AD s rozšířenými pravidly. Pokud například chcete vytvořit rozšířené pravidlo, které do skupiny zabezpečení zahrne všechny pracovníky vašeho prodejního oddělení, kromě těch, kteří mají v názvu pracovní pozice slovo asistent, můžete použít toto rozšířené pravidlo:
+- Možnost **Vyloučit konkrétní členy** ze skupiny na portálu Azure Portal neexistuje. Toto chování ale můžete nahradit pomocí skupiny zabezpečení Azure AD s rozšířenými pravidly. Pokud například chcete vytvořit pokročilé pravidlo, které do skupiny zabezpečení zahrne všechny pracovníky vašeho prodejního oddělení, ale vynechá všechny skupiny, které mají v názvu slovo „Asistent“, můžete použít toto rozšířené pravidlo:
 
   `(user.department -eq "Sales") -and -not (user.jobTitle -contains "Assistant")`.
 - Skupina **Všechna zařízení spravovaná prostřednictvím protokolu Exchange ActiveSync** na konzole Intune se do Azure AD nemigrovala. K informacím o zařízeních spravovaných přes EAS však stále máte přístup z portálu Azure Portal.
@@ -46,9 +43,9 @@ Některé možnosti skupin Intune, které jste dříve možná používali, nejs
 ## <a name="how-to-get-started"></a>Jak začít?
 
 - Přečtěte si následující témata, kde najdete další informace o skupinách zabezpečení služby Azure AD a jak fungují:
-    -  [Správa přístupu k prostředkům prostřednictvím skupin Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-manage-groups/)
-    -  [Správa skupin ve službě Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-accessmanagement-manage-groups/)
-    -  [Vytváření pokročilých pravidel pomocí atributů](https://azure.microsoft.com/en-us/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/)
+    -  [Správa přístupu k prostředkům prostřednictvím skupin Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-manage-groups/)
+    -  [Správa skupin ve službě Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
+    -  [Vytváření pokročilých pravidel pomocí atributů](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/)
 -  Všechny správce, kteří potřebují vytvářet skupiny, je potřeba přidat do role Azure AD **Správce služby Intune**. Role správce služby Azure AD nemá oprávnění **Spravovat skupinu**.
 -  Pokud vaše skupiny Intune použily možnost **Vyloučit konkrétní členy**, rozhodněte se, jestli chcete tyto skupiny znovu vytvořit bez vyloučení nebo jestli potřebujete rozšířená pravidla, abyste vyhověli potřebám firmy.
 
@@ -56,7 +53,7 @@ Některé možnosti skupin Intune, které jste dříve možná používali, nejs
 ## <a name="what-happened-to-intune-groups"></a>Co se stalo se skupinami Intune?
 Při migraci skupin z klasického portálu Intune na Azure Portal se použijí následující pravidla:
 
-| Skupiny v Intune|Skupiny v Azure AD|
+| Skupiny v klasické službě Intune|Skupiny ve službě Azure AD|
 |-----------------------------------------------------------------------|-------------------------------------------------------------|
 |Statická skupina uživatelů|Statická skupina zabezpečení Azure AD|
 |Dynamická skupina uživatelů|Statické skupiny zabezpečení služby Azure AD s hierarchií skupiny zabezpečení služby Azure AD|
@@ -64,14 +61,14 @@ Při migraci skupin z klasického portálu Intune na Azure Portal se použijí n
 |Dynamická skupina zařízení|Dynamická skupina zabezpečení Azure AD|
 |Skupina s podmínkou zahrnutí|Statická skupina zabezpečení Azure AD obsahující všechny statické nebo dynamické členy z podmínky zahrnutí v Intune|
 |Skupina s podmínkou vyloučení|Nemigruje se.|
-|Předdefinované skupiny:<br>- **Všichni uživatelé**<br>- **Neseskupení uživatelé**<br>- **Všechna zařízení**<br>- **Neseskupená zařízení**<br>- **Všechny počítače**<br>- **Všechna mobilní zařízení**<br>- **Všechna zařízení spravovaná přes MDM**<br>- **Všechna zařízení spravovaná přes EAS**|Skupiny zabezpečení služby Azure AD|
+|Předdefinované skupiny:<br>- **Všichni uživatelé**<br>- **Neseskupení uživatelé**<br>- **Všechna zařízení**<br>- **Neseskupená zařízení**<br>- **Všechny počítače**<br>- **Všechna mobilní zařízení**<br>- **Všechna zařízení spravovaná systémem MDM**<br>- **Všechna zařízení spravovaná systémem EAS**|Skupiny zabezpečení služby Azure AD|
 
 ## <a name="group-hierarchy"></a>Hierarchie skupin
 
 V klasické konzole Intune měly všechny skupiny nadřazenou skupinu. Skupiny mohly obsahovat jenom členy ze svojí nadřazené skupiny. V Azure AD můžou podřízené skupiny obsahovat členy, které nejsou v jejich nadřazené skupině.
 
 ## <a name="group-attributes"></a>Atributy skupin
-Atributy jsou vlastnosti zařízení, které se dají použít při definování skupin. Tato tabulka popisuje, jak budou tato kritéria migrována na skupiny zabezpečení služby Azure AD.
+Atributy jsou vlastnosti zařízení, které se dají použít při definování skupin. Tato tabulka popisuje, jak se kritéria přesouvají do skupin zabezpečení služby Azure AD.
 
 | Atribut v Intune|Atribut v Azure AD|
 |-----------------------------------------------------------------------|-------------------------------------------------------------|
@@ -87,5 +84,4 @@ Atributy jsou vlastnosti zařízení, které se dají použít při definování
 
 ## <a name="what-happens-to-policies-and-apps-you-previously-deployed"></a>Co se stane se zásadami a aplikacemi, které jste už nasadili?
 
-Zásady a aplikace jsou i nadále nasazené do skupin, stejně jako dříve. Tyto skupiny teď ovšem budete spravovat z portálu Azure Portal místo z konzoly Intune Classic.
-
+Zásady a aplikace jsou i nadále nasazené do skupin, stejně jako dříve. Tyto skupiny teď ovšem budete spravovat z portálu Azure Portal místo z konzoly Intune Classic.

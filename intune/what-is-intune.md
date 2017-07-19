@@ -1,12 +1,12 @@
 ---
-title: "Úvod do Intune na portálu Azure Portal Preview"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Získejte základní informace o Intune na portálu Azure Portal Preview a o tom, jak vám pomůže se správou zařízení."
+title: "Úvod do Intune na portálu Azure Portal"
+titleSuffix: Intune on Azure
+description: "Získejte základní informace o Intune na portálu Azure Portal a o tom, jak vám pomůže se správou zařízení."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 nmanager: angrobe
-ms.date: 04/24/2017
+ms.date: 06/13/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,35 +14,30 @@ ms.technology:
 ms.assetid: 4a085264-232a-4af0-97f1-747496c44517
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 16d7ff50eb821e0927c3c6ea21f3cdb1257762a0
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 7549f3277c23c3951090502f2babfe7c47b0a201
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
+# <a name="introduction-to-microsoft-intune-in-the-azure-portal"></a>Úvod do Microsoft Intune na portálu Azure Portal
 
 
-# <a name="introduction-to-microsoft-intune-in-the-azure-portal-preview"></a>Úvod do Microsoft Intune na portálu Azure Portal Preview
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
-
-Microsoft Intune se přesouvá na portál Azure Portal, což znamená, že pracovní postupy a funkce, na které jste zvyklí, se změní.
-Tento nový portál nabízí ukázku nových a aktualizovaných funkcí portálu Azure Portal, na kterém můžete spravovat mobilní zařízení, počítače a aplikace svojí organizace.
-Všechny funkce Intune se nakonec přesunou na Azure, mnoho úloh Intune ale můžete na portálu Azure Portal dělat už dnes. Protože toto nové prostředí je ve verzi Preview, nemusí některé funkce na tomto portálu ještě existovat. Podrobnosti najdete v části [Co je nového](#whats-new).
+Microsoft Intune je teď na portálu Azure Portal, což znamená, že pracovní postupy a funkce, na které jste zvyklí, se mění.
+Nový portál nabízí nové a aktualizované funkce portálu Azure Portal, na kterém můžete spravovat mobilní zařízení, počítače a aplikace svojí organizace.
 
 > [!IMPORTANT]
 > **Ještě nový portál nevidíte?**<br>
-> Verzi Preview jsme už začali zavádět do vybraných tenantů. Existující tenanti se do nového prostředí začnou migrovat začátkem kalendářního roku 2017. Před migrací vašeho tenanta obdržíte oznámení v Centru zpráv Office.
+> Provádí se migrace stávajících tenantů do nového prostředí. Před migrací tenanta se v Office Message Center zobrazí oznámení.
 >
-> Zpřístupnění pracovních postupů registrace Apple v Azure bude u účtů Intune vytvořených před lednem 2017 vyžadovat jednorázovou migraci. Plán této migrace zatím nebyl oznámen, podrobnosti ale budou zpřístupněny co nejdříve. Pokud váš existující účet nemá k tomuto náhledu přístup, k otestování tohoto nového prostředí důrazně doporučujeme vytvořit zkušební účet.
+> Zpřístupnění pracovních postupů registrace Apple v Azure u účtů Intune vytvořených před lednem 2017 vyžaduje jednorázovou migraci. Plán pro migraci ještě nebyl oznámen. Pokud váš stávající účet nemá k portálu Azure Portal přístup, doporučujeme vytvořit zkušební účet.
+>
+> Podívejte se na seznam potenciálních problémů, které mohou migraci zablokovat: https://blogs.technet.microsoft.com/intunesupport/2017/05/17/intune-migration-blockers-for-grouping-targeting/
 
 
-Dokumentaci nového produktu najdete v této knihovně, která bude v průběhu verze Preview nepřetržitě aktualizována. Pokud máte nějaké návrhy, poskytněte nám prosím zpětnou vazbu v komentářích k tomuto tématu. Rádi bychom znali vaše názory.
-
-<!--- You can view the new Intune technical preview console in Azure at [portal.azure.com]. --->
+V této knihovně může najít průběžně aktualizované informace o novém portálu. Pokud máte nějaké návrhy, poskytněte nám zpětnou vazbu v komentářích k tomuto tématu. Rádi bychom znali vaše názory.
 
 K tomu nejdůležitějšímu v novém prostředí patří:
 
@@ -78,9 +73,9 @@ Do této dokumentace je promítnuto rozložení portálu Intune, abyste mohli sn
 ![Úlohy portálu Azure Portal](./media/azure-portal-workloads.png)
 
 ### <a name="introduction-and-get-started"></a>Úvod a začínáme
-Tato část obsahuje informace o [novinkách](whats-new.md), [známých problémech](known-issues.md), [možnostech získání podpory](get-support.md) a o tom, jak [začít pracovat s bezplatnou zkušební verzí](free-trial-sign-up.md) Intune.
+Tato část obsahuje [úvodní informace](introduction-intune.md), které vám pomůžou v začátcích používání Intune.
 ### <a name="plan-and-design"></a>Plánování a navrhování
-Informace, které vám usnadní [plánování a navrhování](/intune-classic/plan-and-design/introduction) prostředí Intune
+Informace, které vám usnadní [plánování a navrhování](/intune-classic/plan-design/introduction) prostředí Intune
 ### <a name="device-enrollment"></a>Registrace zařízení
 [Zjistěte, jak zajistíte správu zařízení přes Intune](device-enrollment.md).
 ### <a name="device-compliance"></a>Dodržování předpisů zařízení
@@ -108,5 +103,4 @@ Informace, které vám usnadní [plánování a navrhování](/intune-classic/pl
 
 ## <a name="whats-new"></a>Co je nového
 
-[Zjistěte, co nového tato verze Preview přináší](whats-new.md).
-
+[Zjistěte, co je nového v Intune](whats-new.md).

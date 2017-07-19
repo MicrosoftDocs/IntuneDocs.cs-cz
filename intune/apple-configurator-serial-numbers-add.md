@@ -1,7 +1,7 @@
 ---
 title: "Přidání sériových čísel Apple Configuratoru"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Přečtěte si, jak pomocí Apple Configuratoru přidat sériová čísla k zařízením se systémem iOS, která vlastní firma."
+titleSuffix: Intune on Azure
+description: "Přečtěte si, jak pomocí Apple Configuratoru přidat sériová čísla k zařízením s iOSem vlastněným společností.\""
 keywords: 
 author: nathbarn
 ms.author: nathbarn
@@ -15,18 +15,15 @@ ms.assetid: d408aa38-7d1e-40df-9067-246e53f6e26f
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: e3d56d93e2e229faad8effa63eeb91e627468a3a
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 689008f278e676ce0bab075c6ad6b54748e56313
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="add-apple-configurator-serial-numbers"></a>Přidání sériových čísel Apple Configuratoru
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Tento postup použijte, pokud chcete přidat sériová čísla k Intune, když chcete [zaregistrovat zařízení se systémem iOS vlastněná firmou pomocí Apple Configuratoru s Průvodcem nastavením](apple-configurator-setup-assistant-enroll-ios.md). Sériová čísla můžete přidávat postupně nebo můžete nahrát soubor se sériovými čísly ve formátu CSV. K přidaným číslům můžete přiřadit profil. Profil obsahuje specifická nastavení správy, která chcete použít u zařízení.
 
@@ -76,4 +73,3 @@ Sériová čísla zařízení můžou mít jeden ze dvou stavů:
 **Zobrazení stavu sériového čísla**
 
 V okně **Sériová čísla Apple Configuratoru** vyberte sériové číslo, jehož stav chcete zobrazit, a podívejte se na informace u položky **Stav**.
-

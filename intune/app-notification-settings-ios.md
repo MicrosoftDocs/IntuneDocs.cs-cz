@@ -1,12 +1,12 @@
 ---
 title: "Nastavení oznámení aplikací pro zařízení s iOSem v Intune"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Přečtěte si o nastaveních, pomocí kterých můžete řídit oznámení z aplikací na zařízeních s iOSem."
+titleSuffix: Intune on Azure
+description: "Přečtěte si o nastaveních, pomocí kterých můžete řídit oznámení z aplikací na zařízeních s iOSem."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/12/2017
+ms.date: 07/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,37 +15,34 @@ ms.assetid: bda26d1d-2a3b-4669-adf8-a5aa7f994916
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: c64167275a2628c6a3a4e899e00c25df4c10b06b
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 36a9e9a5be9b2dc45ded1a99c7a5871780f7d9b2
+ms.sourcegitcommit: c9b3a95bf529b6cb2a2bdacbc49127dfa0c233e5
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/05/2017
 ---
+# <a name="intune-app-notifications-settings-for-ios-devices"></a>Nastavení oznámení aplikací pro zařízení s iOSem v Intune
 
-# <a name="intune-app-notifications-settings-for-ios-devices"></a>Nastavení oznámení aplikací pro zařízení s iOSem v Intune
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
-
-Umožňuje konfigurovat, jak aplikace nainstalované v zařízení zasílají oznámení. Toto nastavení podporuje zařízení pod dohledem s iOSem 9.3 a novějším.
+Umožňuje konfigurovat, jak aplikace nainstalované v zařízení zasílají oznámení. Tato nastavení podporují zařízení pod dohledem s iOSem 9.3 a novějším.
 
 ## <a name="configure-settings"></a>Konfigurace nastavení
 
-1. V okně **Funkce zařízení** zvolte **Oznámení aplikací (jenom pod dohledem)**.
+1. V okně Funkce zařízení zvolte **Oznámení aplikací (jenom pod dohledem)**.
 2. V okně **Oznámení aplikací** zvolte **Přidat**a pak nakonfigurujte tyto hodnoty:
     - **ID sady prostředků aplikace** –zadejte **ID sady prostředků aplikace**, kterou chcete konfigurovat. Pomůžou vám **Referenční informace o ID sady prostředků pro integrované aplikace pro iOS** dále v tomto tématu.
-    - **Název aplikace** –zadejte název aplikace, kterou chcete konfigurovat. V zařízení se tato hodnota nezobrazuje a slouží ke snadnější identifikaci aplikace v seznamu.
-    - **Vydavatel** –zadejte vydavatele, kterou chcete konfigurovat. V zařízení se tato hodnota nezobrazuje a slouží ke snadnější identifikaci aplikace v seznamu.
+    - **Název aplikace** –zadejte název aplikace, kterou chcete konfigurovat. V zařízení se tento název nezobrazuje a slouží ke snadnější identifikaci aplikace v seznamu.
+    - **Vydavatel** –zadejte vydavatele, kterou chcete konfigurovat. V zařízení se tento název vydavatele nezobrazuje a slouží pouze ke snadnější identifikaci aplikace v seznamu.
     - **Oznámení** – povolte nebo zakažte aplikaci zasílání oznámení v zařízení. Pokud toto nastavení zakážete, zakážou se i následující nastavení.
-        - **Zobrazit v Centru oznámení** – povolením umožníte, aby aplikace zobrazovala oznámení v centru oznámení zařízení.
-        - **Zobrazit na zamykací obrazovce** – povolením umožníte zobrazování oznámení z aplikace na zamykací obrazovce zařízení.
+        - **Zobrazit v Centru oznámení** – povolením tohoto nastavení umožníte, aby aplikace zobrazovala oznámení v Centru oznámení zařízení.
+        - **Zobrazit na zamykací obrazovce** – povolením tohoto nastavení umožníte zobrazování oznámení z aplikace na zamykací obrazovce zařízení.
         - **Typ výstrahy** – vyberte požadovaný typ oznámení, když je zařízení odemčené, z těchto možností:
             - **Žádné** – nezobrazí se žádné oznámení.
             - **Informační zpráva** – krátce se zobrazí informační zpráva zobrazující oznámení.
             - **Modální** – zobrazí se oznámení a uživatel ho musí ručně zavřít, aby mohl pokračovat v používání zařízení.
-        - **Odznáček na ikoně aplikace** – když tuto možnost povolíte, na ikonu aplikace se přidá odznáček udávající, že aplikace odeslala oznámení.
-        - **Zvuky** – když tuto možnost povolíte, při doručení oznámení se přehraje zvuk.
+        - **Odznáček na ikoně aplikace** – když toto nastavení povolíte, na ikonu aplikace se přidá odznáček udávající, že aplikace odeslala oznámení.
+        - **Zvuky** – když toto nastavení povolíte, při doručení oznámení se přehraje zvuk.
 3. Přidejte tolik aplikací, kolik potřebujete. Po dokončení zvolte **OK**.
 4. Zvolením **OK** se vraťte do okna **Vytvořit profil** a pak zvolte **Vytvořit**. 
 
@@ -95,3 +92,7 @@ Tento seznam zobrazuje ID sady prostředků některých běžných integrovanýc
 |Wallet|com.apple.Passbook|
 |Watch|com.apple.Bridge|
 |Počasí|com.apple.weather|
+
+## <a name="next-steps"></a>Další kroky
+
+Nyní můžete profil zařízení přiřadit do požadované skupiny. Podrobnosti najdete v tématu [Přiřazení profilů zařízení](device-profile-assign.md).
