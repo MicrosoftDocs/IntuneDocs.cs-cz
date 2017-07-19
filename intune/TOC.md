@@ -15,6 +15,7 @@
 ### [Životní cyklus zařízení](device-lifecycle.md)
 ### [Životní cyklus aplikace](app-lifecycle.md)
 ## [Typické scénáře](common-scenarios.md)
+## [Popis služby](microsoft-intune-service-description.md)
 ## [Známé problémy](known-issues.md)
 ## [Získání podpory](get-support.md)
 
@@ -81,10 +82,10 @@
 #### [Registrace zařízení s Windows](windows-enroll.md)
 #### [Hromadná registrace](windows-bulk-enroll.md)
 ### [Nastavení registrace zařízení s Androidem](android-enroll.md)
-### Nastavení registrace zařízení s iOSem
-#### [Pomocí programu registrace zařízení](device-enrollment-program-enroll-ios.md)
-#### [Pomocí Apple School Manageru](apple-school-manager-set-up-ios.md)
-#### [Pomocí Apple Configuratoru](apple-configurator-setup-assistant-enroll-ios.md)
+### [Nastavení registrace zařízení s iOSem](ios-enroll.md)
+#### [Program registrace zařízení](device-enrollment-program-enroll-ios.md)
+#### [Apple School Manager](apple-school-manager-set-up-ios.md)
+#### [Apple Configurator](apple-configurator-setup-assistant-enroll-ios.md)
 ### [Nastavení registrace macOS](macos-enroll.md)
 
 ## [Správa zařízení](device-management.md)
