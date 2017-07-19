@@ -1,12 +1,12 @@
 ---
-title: "Přiřazení aplikací do skupin | Dokumentace Microsoftu"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Po přidání aplikace do Intune bude vhodné ji přiřadit do skupin uživatelů nebo zařízení."
+title: "Postup přiřazení aplikací do skupin"
+titleSuffix: Intune on Azure
+description: "Po přidání aplikace do Intune bude vhodné ji přiřadit do skupin uživatelů nebo zařízení."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/09/2017
+ms.date: 06/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,19 +15,17 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 1246ef539c044b894b4e4a93f449e60e6462600a
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: 059c6d2c65c78b6a94f93c26d606abe0451edbbb
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Po přidání aplikace do Intune ji budete chtít dostat k uživatelům a do zařízení. To uděláte jejím přiřazením.
+Po přidání aplikace do Intune ji můžete přiřadit k uživatelům a zařízením.
 
 Aplikace se dají přiřadit k zařízením, ať už jsou spravované službou Intune nebo ne. Následující tabulka vám pomůže pochopit různé možnosti pro přiřazení aplikací uživatelům a zařízením:
 
@@ -46,33 +44,6 @@ Aplikace se dají přiřadit k zařízením, ať už jsou spravované službou I
 > [!NOTE]
 > V současné době můžete přiřadit aplikace pro iOS a Android (firemní i koupené ve Storu) k zařízením, která nejsou zaregistrovaná v Intune.
 
-## <a name="changes-to-how-you-assign-apps-to-groups-in-the-intune-preview"></a>Změny způsobu přiřazování aplikací do skupin v Intune Preview
-
-V Intune Azure Preview se k přiřazování aplikací už nepoužívají skupiny Intune. Nyní se používají skupiny zabezpečení Azure Active Directory (Azure AD). Z tohoto důvodu budete potřebovat informace o některých změnách týkajících se způsobu, jakým přiřazování aplikací funguje, zejména pokud jste aplikace přiřadili do podřízených skupin Intune.
-Nejdůležitější informací, které byste si měli všimnout, je to, že v Azure AD neexistuje koncept podřízených skupin. Některé skupiny však mohou obsahovat stejné členy. V tomto případě se chování služby Intune Classic od chování Intune Azure Preview liší. Je to znázorněno v následující tabulce:
-
-||||||
-|-|-|-|-|-|
-|**Služba Intune Classic (před migrací tenanta)**|-|**Intune Azure (po dokončení migrace tenanta)**|-|**Další informace**|
-|**Záměr přiřazení nadřazené skupiny**|**Záměr přiřazení podřízené skupiny**|**Výsledný záměr přiřazení pro společné členy předchozí nadřazené a podřízené skupiny**|**Akce pro výsledný záměr přiřazení pro členy nadřazené skupiny**|-|
-|K dispozici|Povinné|Povinné a K dispozici|K dispozici|Povinné a K dispozici znamená, že aplikace přiřazené jako povinné je možné také prohlížet v aplikaci Portál společnosti.
-|Nelze použít|K dispozici|Nelze použít|Nelze použít|Alternativní řešení: Z nadřazené skupiny Intune odeberte záměr přiřazení Nelze použít.
-|Povinné|K dispozici|Povinné a K dispozici|Povinné|-|
-|Povinné a K dispozici<sup>1</sup>|K dispozici|Povinné a K dispozici|Povinné a K dispozici|-|
-|Povinné|Nelze použít|Povinné|Povinné|-|
-|Povinné a K dispozici|Nelze použít|Povinné a K dispozici|Povinné a K dispozici|-|
-|Povinné|Odinstalace|Povinné|Povinné|-|
-|Povinné a K dispozici|Odinstalace|Povinné a K dispozici|Povinné a K dispozici|-|
-<sup>1</sup> Pouze pro spravované aplikace pro App Store (iOS) platí, že pokud je přidáte do Intune a přiřadíte jako Povinné, vytvoří se automaticky se záměry Povinné i K dispozici.
-
-Konfliktům v přiřazení můžete zabránit takto:
-
-1.    Pokud jste dříve přiřadili aplikace do souvisejících nadřazených a podřízených skupin Intune, zvažte odebrání těchto přiřazení před zahájením migrace tenanta.
-2.    Odeberte podřízené skupiny z nadřazených skupin a vytvořte novou skupinu obsahující členy původní podřízené skupiny. Pak můžete vytvořit nové přiřazení aplikací do této skupiny.
-Poznámky: Pokud předchozí nadřazená skupina byla typu Všichni uživatelé, budete muset vytvořit novou dynamickou skupinu, která neobsahuje členy podřízené skupiny.
-Pro skupiny uživatelů a zařízení musíte veškeré změny provést na portálu [Azure Portal](https://portal.azure.com/). [Klasický portál Azure Portal](https://manage.windowsazure.com/) vám umožní provádět pouze změny skupin uživatelů.
-
-
 ## <a name="how-to-assign-an-app"></a>Postup přiřazení aplikace
 
 1. Přihlaste se k portálu Azure Portal.
@@ -87,10 +58,53 @@ Pro skupiny uživatelů a zařízení musíte veškeré změny provést na port�
     - **Nelze použít** – Aplikace není nainstalovaná nebo se na Portálu společnosti nezobrazuje.
     - **Povinné** – Aplikace se nainstaluje na zařízení ve vybraných skupinách.
     - **Odinstalovat** – Aplikace se odinstaluje ze zařízení ve vybraných skupinách.
-    - **K dispozici s registrací i bez ní** – Přiřadí tuto aplikaci do skupin uživatelů, jejichž zařízení nejsou zaregistrovaná v Intune. Nápovědu najdete v tabulce výše.
+    - **K dispozici s registrací i bez ní** – Přiřadí tuto aplikaci do skupin uživatelů, jejichž zařízení nejsou zaregistrovaná v Intune.
 6. Až to budete mít, zvolte **Uložit**.
 
-Aplikace je teď přiřazená do skupiny, kterou jste zvolili.
+Aplikace je teď přiřazená do skupiny, kterou jste vybrali.
+
+## <a name="how-conflicts-between-app-intents-are-resolved"></a>Řešení konfliktů mezi záměry aplikace
+
+Někdy je tatáž aplikace přiřazena více skupinám, ale s různými záměry. V těchto případech si můžete dohledat výsledný záměr v níže uvedené tabulce.
+
+||||
+|-|-|-|
+|Záměr skupiny 1|Záměr skupiny 2|Výsledný záměr|
+|Uživatel: Povinné|Uživatel: K dispozici|Povinné a K dispozici|
+|Uživatel: Povinné|Uživatel: Není k dispozici|Povinné|
+|Uživatel: Povinné|Uživatel: Odinstalace|Povinné|
+|Uživatel: K dispozici|Uživatel: Není k dispozici|Není k dispozici|
+|Uživatel: K dispozici|Uživatel: Odinstalace|Odinstalace|
+|Uživatel: Není k dispozici|Uživatel: Odinstalace|Odinstalace
+|Uživatel: Povinné|Zařízení: Povinné|Existuje obojí, zpracování bránou je povinné 
+|Uživatel: Povinné|Zařízení: Odinstalace|Existuje obojí, řešení bránou je povinné 
+|Uživatel: K dispozici|Zařízení: Povinné|Existuje obojí, řešení bránou je povinné (Povinné a K dispozici)
+|Uživatel: K dispozici|Zařízení: Odinstalace|Existuje obojí, řešení bránou je k dispozici<br>Aplikace se zobrazí na Portálu společnosti.<br>Pokud je už aplikace nainstalovaná (jako požadovaná aplikace s předchozím záměrem), pak se aplikace odinstaluje.<br>Pokud ale uživatel klikne na portálu společnosti na instalaci, aplikace se instaluje a záměr odinstalace není dodržen.|
+|Uživatel: Není k dispozici|Zařízení: Povinné|Povinné|
+|Uživatel: Není k dispozici|Zařízení: Odinstalace|Odinstalace|
+|Uživatel: Odinstalace|Zařízení: Povinné|Existuje obojí, řešení bránou je povinné|
+|Uživatel: Odinstalace|Zařízení: Odinstalace|Existuje obojí, řešení bránou prostřednictvím odinstalace|
+|Zařízení: Povinné|Zařízení: Odinstalace|Povinné|
+|Uživatel: Povinné a K dispozici|Uživatel: K dispozici|Povinné a K dispozici|
+|Uživatel: Povinné a K dispozici|Uživatel: Odinstalace|Povinné a K dispozici|
+|Uživatel: Povinné a K dispozici|Uživatel: Není k dispozici|Povinné a K dispozici|
+|Uživatel: Povinné a K dispozici|Zařízení: Povinné|Existuje obojí, Povinné a K dispozici
+|Uživatel: Povinné a K dispozici|Zařízení: Není k dispozici|Povinné a K dispozici|
+|Uživatel: Povinné a K dispozici|Zařízení: Odinstalace|Existuje obojí, řešení bránou je povinné Povinné + K dispozici
+|Uživatel: Není k dispozici|Zařízení: Není k dispozici|Není k dispozici|
+|Uživatel: K dispozici|Zařízení: Není k dispozici|K dispozici|
+|Uživatel: Povinné|Zařízení: Není k dispozici|Povinné|
+|Uživatel: K dispozici bez registrace|Uživatel: Povinné a K dispozici|Povinné a K dispozici
+|Uživatel: K dispozici bez registrace|Uživatel: Povinné|Povinné
+|Uživatel: K dispozici bez registrace|Uživatel: Není k dispozici|Není k dispozici
+|Uživatel: K dispozici bez registrace|Uživatel: K dispozici|K dispozici|
+|Uživatel: K dispozici bez registrace|Zařízení: Povinné|Povinné a K dispozici bez registrace|
+|Uživatel: K dispozici bez registrace|Zařízení: Není k dispozici|K dispozici bez registrace|
+|Uživatel: K dispozici bez registrace|Zařízení: Odinstalace|Odinstalace a K dispozici bez registrace.<br>Pokud uživatel nenainstaloval aplikaci z portálu společnosti, bude provedena odinstalace.<br>Pokud uživatel aplikaci nainstaluje z portálu společnosti, bude mít instalace prioritu před odinstalací.|
+
+>[!NOTE]
+>Pouze pro spravované aplikace pro App Store (iOS) platí, že pokud je přidáte do Intune a přiřadíte jako Povinné, vytvoří se automaticky se záměry Povinné i K dispozici.
+
+## <a name="next-steps"></a>Další kroky
 
 Informace, s kterými budete moct lépe sledovat přiřazování aplikací, najdete v článku [Jak sledovat přiřazení aplikací](apps-monitor.md).
-

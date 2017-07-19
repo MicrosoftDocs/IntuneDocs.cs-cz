@@ -5,25 +5,22 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/13/2017
+ms.date: 06/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 68e5a234-4353-4cb9-b869-4f2af5e59f31
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: d3401f32994fcd0e54d35a2615a636c5d06183d2
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ab021708898fe87c2c5acf7d8b33df5a57e36c84
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="install-the-company-portal-app-for-android"></a>Instalace aplikace Portál společnosti pro Android
 
@@ -45,7 +42,6 @@ Portál společnosti je aplikace, která umožňuje přístup k podnikovým nebo
 
     ![android-accept-company-portal-terms](./media/and-cpinstall-3-cp-accept.png)
 
-Po stažení aplikace Portál společnosti si nejspíše budete chtít [zaregistrovat zařízení v Intune](enroll-your-device-in-Intune-android.md), abyste získali úplný přístup k pracovním informacím.
+Po stažení aplikace Portál společnosti si nejspíše budete chtít [zaregistrovat zařízení v Intune](enroll-your-device-in-Intune-android.md), abyste získali úplný přístup k pracovním informacím. Můžete se také [přihlásit pomocí jiného zařízení](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal#signing-in-from-another-device).
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
-

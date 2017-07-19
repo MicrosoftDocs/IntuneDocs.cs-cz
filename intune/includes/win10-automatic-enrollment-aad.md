@@ -34,6 +34,9 @@ Automatická registrace umožňuje uživatelům zaregistrovat zařízení s Wind
     - **Adresa URL zjišťování MDM**
     - **Adresa URL s předpisy služby MDM**
 
+    > [!IMPORTANT]
+    > Pokud je uživatel členem skupiny, u které je povolena jak registrace MDM, tak MAM, a uživatel se pokusí připojit k pracovišti své osobní zařízení, je povoleno pouze MAM. 
+
 6. Vyberte **Uložit**.
 
 Ve výchozím nastavení není pro službu povolené dvoufaktorové ověřování. Při registraci zařízení ale dvoufaktorové ověřování doporučujeme. Před vyžádáním dvoufaktorového ověřování pro tuto službu musíte v Azure Active Directory nakonfigurovat zprostředkovatele dvoufaktorového ověřování a u uživatelských účtů nakonfigurovat vícefaktorové ověřování. Informace najdete v článku [Začínáme s Azure Multi-Factor Authentication Serverem](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).

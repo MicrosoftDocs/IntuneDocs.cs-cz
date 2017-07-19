@@ -1,12 +1,12 @@
 ---
-title: Role Intune (RBAC) pro Microsoft Intune
+title: "Řízení správy na základě rolí s Intune"
 titleSuffix: Intune Azure preview
 description: "Intune Azure Preview: Informace o tom, jak RBAC umožňuje určovat, kdo může provádět akce a změny."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 04/26/2017
+ms.date: 06/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,161 +15,119 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 9a6dfde1d02313e51f59d4fd101a175f347f6cec
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: e2302b0e53254b945215aadbb13107c85f345412
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
+# <a name="role-based-administration-control-rbac-with-intune"></a>Řízení správy na základě rolí (RBAC) s Intune
 
-# <a name="intune-roles-rbac-for-microsoft-intune"></a>Role Intune (RBAC) pro Microsoft Intune
+Řízení správy na základě rolí pomáhá řídit, kdo může provádět různé úlohy Intune ve vaší organizaci a koho se tyto úlohy týkají. Můžete buď použít předdefinované role, které vyhovují běžným situacím v Intune, nebo si vytvořit své vlastní role. Roli definuje toto:
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+- **Definice role**: Název role, prostředky, které spravuje, a oprávnění udělená pro jednotlivé prostředky
+- **Členové**: Skupiny uživatelů, kterým se přidělují oprávnění
+- **Obor**: Skupiny uživatelů nebo zařízení, které můžou členové spravovat
+- **Přiřazení**: Přiřazení role po nakonfigurování definice, členů a oboru
 
-Jednoduše řečeno, **role** Intune (neboli RBAC) pomáhají určovat, kdo může v Intune provádět různé akce a na koho se tyto akce vztahují. Můžete buď použít předdefinované role, které vyhovují běžným situacím v Intune, nebo si vytvořit své vlastní role.
+![Příklad řízení správy na základě rolí s Intune](./media/intune-rbac-1.PNG)
 
-Roli definuje toto:
+Počínaje novým portálem Intune poskytuje **Azure Active Directory (Azure AD)** dvě role adresáře, které je možné s Intune použít. Tyto role mají přidělena úplná oprávnění provádět v Intune všechny aktivity:
 
-- **Definice** – Název role a oprávnění, která tato role konfiguruje
-- **Členové** – Uživatel nebo skupina uživatelů, kterým se tato oprávnění udělí
-- **Obor** – Uživatelé nebo zařízení, které zadaná osoba (člen) může spravovat
-- **Přiřazení** – Po nakonfigurování členů, definic a oboru se role přiřadí.
+- **Globální správce:** Uživatelé s touto rolí mají přístup ke všem funkcím pro správu ve službě Azure AD a službám s federováním do služby Azure AD, jako je Exchange Online, SharePoint Online a Online Skype pro firmy. Osoba, která se zaregistruje k tenantovi Azure AD, se stane globálním správcem. Další role správců můžou přiřazovat jenom globální správci Azure AD. Organizace může mít víc globálních správců. Globální správci můžou resetovat heslo kteréhokoliv uživatele a všech ostatních správců.
+
+- **Správce služby Intune:** Uživatelé s touto rolí mají globální oprávnění v rámci Intune, pokud se tato služba používá. Kromě toho tato role umožňuje spravovat uživatele, zařízení a vytvářet a spravovat skupiny.
+
+- **Správce podmíněného přístupu:** Uživatelé s touto rolí mají oprávnění zobrazovat, vytvářet, měnit a odstraňovat zásady podmíněného přístupu.
+
+    > [!IMPORTANT]
+    > Role Správce služby Intune neumožňuje spravovat nastavení podmíněného přístupu k Azure AD.
+
+    > [!TIP]
+    > V Intune jsou také tři rozšíření Azure AD: **Uživatelé**, **Skupiny** a **Podmíněný přístup** řízená prostřednictvím Azure AD RBAC. **Správce uživatelských účtů** navíc provádí jenom aktivity uživatele nebo skupiny AAD a nemá úplná oprávnění provádět všechny aktivity v Intune. Další detaily naleznete v tématu [Řízení správy na základě rolí s Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).
+
+## <a name="roles-created-in-the-intune-classic-console"></a>Role vytvořené v klasické konzole Intune
+
+Z klasické konzoly Intune do Intune v Azure se migrují jenom **správci služeb** Intune s úplnými oprávněními. **Správce služeb** v Intune s přístupem jen pro čtení nebo helpdesk je nutné odebrat z klasického portálu a znovu jim přiřadit role v Intune na portálu Azure.
+
+> [!IMPORTANT]
+> Pokud budou vaši správci dál potřebovat přístup ke správě počítačů pomocí Intune, bude nutné zachovat přístup Správce služby Intune na klasické konzole.
 
 ## <a name="built-in-roles"></a>Předdefinované role
 
-Následující role jsou integrované do Intune a můžete si je buď přizpůsobit, nebo je přiřadit ke skupinám, aniž byste jejich konfiguraci měnili.
+Následující role jsou integrované do Intune a můžete je přiřadit ke skupinám, aniž byste dál měnili jejich konfiguraci:
 
-- **Správce Intune** – Má úplná oprávnění pro všechny operace Intune.
-- **Správce aplikací** – Spravuje a nasazuje aplikace a profily.
-- **Správce zásad konfigurace** – Spravuje a nasazuje nastavení a profily konfigurace.
-- **Pracovník helpdesku** – Provádí vzdálené úkoly a může zobrazovat informace o uživateli a zařízení.
-- **Operátor jen pro čtení** – Může zobrazovat informace na portálu Intune, ale nemůže provádět změny.
+- **Operátor helpdesku**: Provádí vzdálené úlohy u uživatelů a zařízení a může uživatelům a zařízením přiřazovat aplikace nebo zásady. 
+- **Správce zásad a profilů**: Spravuje zásady dodržování předpisů, konfigurační profily, registrace Apple a identifikátory podnikových zařízení.
+- **Operátor s oprávněními pouze ke čtení**: Zobrazuje informace o uživatelích, zařízeních, registraci, konfiguraci a aplikacích a nemůže provádět změny v Intune.
+- **Správce aplikací**: Spravuje mobilní a spravované aplikace a může číst informace o zařízeních.
 
+### <a name="to-assign-a-built-in-role"></a>Přiřazení předdefinované role
 
-## <a name="custom-roles"></a>Vlastní role
+1. V části **Role Intune** zvolte předdefinovanou roli, kterou chcete přiřadit.
 
-Pokud vašim potřebám nevyhovuje žádná z předdefinovaných rolí, můžete volbou nastavení, která pokrývají mnoho funkcí Intune, vytvořit svoji vlastní roli. Níže v tomto tématu najdete seznam dostupných nastavení.
+2. V okně <*název role*> – **Vlastnosti** zvolte **Spravovat**, **Přiřazení**.
 
-### <a name="example"></a>Příklad
+    > [!NOTE] 
+    > Předdefinované role není možné odstranit ani upravit.
+    
+3. V okně vlastní role zvolte **Přiřadit**.
 
-Zaměstnáte nového správce IT, který bude mít na starost nasazování a správu aplikací pro uživatele na londýnské pobočce. Uživatelé jsou ve skupině služby Azure AD pojmenované **London**. Chcete zajistit, aby správce IT nemohl nasazovat aplikace uživatelům na jiných pobočkách. Provedete následující akce:
-
-- Přiřadíte integrovanou roli **Správce aplikací** s následujícími vlastnostmi:
-    - **Členové** – Vyberte skupinu, která obsahuje správce IT, který bude nasazovat aplikace.
-    - **Obor** – Vyberte skupinu **London** služby Azure AD.
-
-    >[!IMPORTANT]
-    >Abyste mohli vytvářet, upravovat nebo přiřazovat role, váš účet musí mít ve službě Azure AD jedno z těchto oprávnění:
-    >- **Globální správce AAD**
-    >- **Správce služby Intune**
-
-### <a name="how-to-create-a-custom-role"></a>Jak vytvořit vlastní roli
-
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Role Intune**.
-![Úloha řízení přístupu](./media/axxess-control.png)
-1. V okně **Role** úlohy **Řízení přístupu** zvolte **Přidat vlastní**.
-2. V okně **Přidat vlastní roli** zadejte název a popis nové role a klikněte na **Oprávnění**.
-3. V okně **Oprávnění** zvolte oprávnění, která chcete v této roli použít. S výběrem vám pomůže referenční seznam nastavení vlastních rolí, který najdete níže v tomto tématu.
-4. Po dokončení klikněte na **OK**.
-5. V okně **Přidat vlastní roli** klikněte na **Vytvořit**.
-
-Nová role se zobrazí v seznamu v okně **Role**.
-
-## <a name="how-to-assign-a-role"></a>Jak přiřadit roli
-
-1. V okně **Role** úlohy **Řízení přístupu** zvolte předdefinovanou nebo vlastní roli, kterou chcete přiřadit.
-2. V okně <*název role*> – **Vlastnosti** zvolte **Spravovat** > **Přiřazení**. V tomto okně můžete navíc upravovat nebo odstraňovat existující role.
-3. V dalším okně zvolte **Přiřadit**.
 4. V okně **Přiřazení rolí** zadejte **Název** a volitelný **Popis** přiřazení a zvolte následující:
     - **Členové** – Vyberte skupinu, která obsahuje uživatele, kterému chcete udělit oprávnění.
     - **Obor** – Vyberte skupinu, která obsahuje uživatele, které člen výše bude moct spravovat.
-5. Po dokončení klikněte na **OK**.
+<br></br>
+5. Po dokončení klikněte na **OK**. Nové přiřazení se zobrazí v seznamu přiřazení.
 
-Nové přiřazení se zobrazí v seznamu přiřazení.
+### <a name="intune-rbac-table"></a>Řízení správy na základě rolí s Intune
 
-## <a name="custom-role-settings-reference"></a>Referenční informace o nastavení vlastních rolí
+- Stáhněte si [tabulku Řízení správy na základě rolí s Intune](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a), ve které naleznete další podrobné informace o tom, co můžou dělat jednotlivé role.
 
-Když vytvoříte vlastní roli, můžete nakonfigurovat jednu nebo více z těchto nastavení:
+## <a name="custom-roles"></a>Vlastní role
 
-### <a name="device-configurations"></a>Konfigurace zařízení
+Můžete vytvořit vlastní roli, která zahrnuje všechna oprávnění nutná pro konkrétní pracovní funkci. Pokud například skupina oddělení IT spravuje aplikace, zásady a profily konfigurace, můžete všechna tato oprávnění přidat společně v jedné vlastní roli.
 
-|||
-|-|-|
-|**Přiřadit**|Přiřazení profilů zařízení ke skupinám|
-|**Vytvořit**|Vytvoření profilů zařízení|
-|**Odstranit**|Odstranění profilů zařízení|
-|**Číst**|Čtení profilů zařízení a jejich vlastností|
-|**Aktualizovat**|Aktualizace existujících profilů zařízení|
+> [!IMPORTANT]
+> Abyste mohli vytvářet, upravovat nebo přiřazovat role, váš účet musí mít ve službě Azure AD jedno z těchto oprávnění:
+> - **Globální správce**
+> - **Správce služby Intune**
 
-### <a name="managed-apps"></a>Spravované aplikace
+### <a name="to-create-a-custom-role"></a>Jak vytvořit vlastní roli
 
-|||
-|-|-|
-|**Přiřadit**|Přiřazení spravovaných aplikací ke skupinám|
-|**Vytvořit**|Přidání nových spravovaných aplikací do Intune|
-|**Odstranit**|Odstranění spravovaných aplikací|
-|**Číst**|Čtení spravovaných aplikací a jejich vlastností|
-|**Aktualizovat**|Aktualizace existujících spravovaných aplikací|
-|**Vymazání**|Vymazání spravovaných aplikací ze zařízení|
+1. Přihlaste se na [Azure Portal](https://portal.azure.com) pomocí svých přihlašovacích údajů k Intune.
 
-### <a name="managed-devices"></a>Spravovaná zařízení
+2. V nabídce vlevo zvolte **Další služby** a do filtru textového pole pak zadejte **Intune**.
 
-|||
-|-|-|
-|**Odstranit**|Odstranění spravovaných zařízení z Intune|
-|**Číst**|Zobrazení informací o spravovaných zařízeních na portálu Intune|
-|**Aktualizovat**|Aktualizace informací o spravovaných zařízeních|
+3. Zvolte **Intune**. Na řídicím panelu Intune, který se otevře, zvolte **Role Intune**.
 
-### <a name="mobile-apps"></a>Mobilní aplikace
+4. V okně **Role Intune** zvolte **Role Intune** a potom **Přidat vlastní**.
 
-|||
-|-|-|
-|**Přiřadit**|Přiřazení mobilních aplikací ke skupinám|
-|**Vytvořit**|Přidání nových mobilních aplikací do Intune|
-|**Odstranit**|Odstranění mobilních aplikací|
-|**Číst**|Čtení mobilních aplikací a jejich vlastností|
-|**Aktualizovat**|Aktualizace existujících mobilních aplikací|
+5. V okně **Přidat vlastní roli** zadejte název a popis nové role a klikněte na **Oprávnění**.
 
-### <a name="organization"></a>Organizace
+3. V okně **Oprávnění** zvolte oprávnění, která chcete v této roli použít. Rozhodnout se, která oprávnění chcete použít, vám pomůže [tabulka Řízení správy na základě rolí s Intune](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
 
-|||
-|-|-|
-|**Číst**|Čtení nastavení tenanta|
-|**Aktualizovat**|Aktualizace nastavení tenanta|
+4. Když jste hotovi, klikněte na **OK**.
 
-### <a name="remote-tasks"></a>Vzdálené úlohy
+5. V okně **Přidat vlastní roli** klikněte na **Vytvořit**. Nová role se zobrazí v seznamu v okně **Role Intune**.
 
-|||
-|-|-|
-|**Vynechat zámek aktivace**|Odebrání zámku aktivace ze zařízení s iOSem bez Apple ID a hesla uživatele |
-|**Zakázat režim ztráty**|Zákaz režimu ztráty. Režim ztráty umožňuje zadat zprávu a telefonní číslo, které se zobrazí na zamykací obrazovce zařízení.|
-|**Povolit režim ztráty**|Povolení režimu ztráty. Režim ztráty umožňuje zadat zprávu a telefonní číslo, které se zobrazí na zamykací obrazovce zařízení.|
-|**Vyhledat zařízení**|-|
-|**Okamžitě restartovat**|Restartuje zařízení.|
-|**Vzdálené uzamčení**|Zamkne zařízení. Vlastník zařízení musí k jeho odemčení použít heslo.|
-|**Resetovat heslo**|Vygeneruje pro zařízení nové heslo, které se zobrazí v okně Přehled <device name>.|
-|**Vyřadit**|Odebere jenom firemní data spravovaná přes Intune. Osobní data ze zařízení neodebere.|
-|**Vymazání**|Vrátí zařízení na výchozí nastavení.|
+### <a name="to-assign-a-custom-role"></a>Přiřazení vlastní role
 
+1. V části **Role Intune** zvolte vlastní roli, kterou chcete přiřadit.
 
+2. V okně <*název role*> – **Vlastnosti** zvolte **Spravovat**, **Přiřazení**. V tomto okně můžete navíc upravovat nebo odstraňovat existující role.
 
-### <a name="telecom-expenses"></a>Výdaje na telekomunikaci
+3. V okně vlastní role zvolte **Přiřadit**.
 
-|||
-|-|-|
-|**Číst**|Čtení nastavení služby TEM (Telecom Expense Management)|
-|**Aktualizovat**|Aktualizace nastavení služby TEM (Telecom Expense Management)|
+4. V okně **Přiřazení rolí** zadejte **Název** a volitelný **Popis** přiřazení a zvolte následující:
+    - **Členové** – Vyberte skupinu, která obsahuje uživatele, kterému chcete udělit oprávnění.
+    - **Obor** – Vyberte skupinu, která obsahuje uživatele, které člen výše bude moct spravovat.
+<br></br>
+5. Po dokončení klikněte na **OK**. Nové přiřazení se zobrazí v seznamu přiřazení.
 
-### <a name="terms-and-conditions"></a>podmínky a ujednání
+## <a name="next-steps"></a>Další kroky
 
-|||
-|-|-|
-|**Přiřadit**|Přiřazení podmínek a ujednání ke skupinám|
-|**Vytvořit**|Vytvoření nastavení podmínek a ujednání|
-|**Odstranit**|Odstranění nastavení podmínek a ujednání|
-|**Číst**|Čtení nastavení podmínek a ujednání na portálu Intune|
-|**Aktualizovat**|Aktualizace existujících podmínek a ujednání|
+[Použití role operátora helpdesku v Intune a portálu pro řešení potíží](help-desk-operators.md)
+
+## <a name="see-also"></a>Související témata
+
+[Přiřazení rolí pomocí služby Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-users-assign-role-azure-portal)

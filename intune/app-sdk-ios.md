@@ -5,7 +5,7 @@ keywords:
 author: mtillman
 manager: angrobe
 ms.author: mtillman
-ms.date: 12/15/2016
+ms.date: 06/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,12 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
-ms.openlocfilehash: 9fad536aab83f0e8ae12aff8cab44943ae1ac82d
-ms.contentlocale: cs-cz
-ms.lasthandoff: 06/08/2017
-
-
+ms.openlocfilehash: 0fb1d52a97a03609ddefb94caf707bd8cbee8f12
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
 > [!NOTE]
@@ -460,6 +457,17 @@ MAMTelemetryDisabled| Logická hodnota| Určuje, jestli SDK nebude odesílat ž�
 > [!NOTE]
 > Pokud bude aplikace vydaná v App Storu, možnost `MAMPolicyRequired` musí být podle standardů App Storu nastavená na NE.
 
+## <a name="enabling-mam-targeted-configuration-for-your-ios-applications"></a>Povolení konfigurace určené pro správu mobilních aplikací pro iOS
+Konfigurace určená pro správu mobilních aplikací (MAM) umožňuje aplikacím přijímat konfigurační data prostřednictvím sady SDK aplikace Intune. Formát a varianty těchto dat musí vlastník aplikace nebo její vývojář definovat a oznámit zákazníkům, kteří využívají Intune. Správci Intune mohou konfigurační data zacílit a nasadit prostřednictvím konzoly Intune Azure. Od sady Intune App SDK pro iOS (verze 7.0.1) mohou aplikace s konfigurací určenou pro MAM získávat prostřednictvím služby MAM konfigurační data určená pro správu mobilních zařízení. Konfigurační data aplikace se odešlou přímo do aplikace přes službu MAM, nikoliv prostřednictvím kanálu MDM. Sada Intune App SDK nabízí třídu pro přístup k datům načteným z těchto konzol. Následující požadavky je potřeba vzít v úvahu: <br>
+* Abyste měli přístup ke konfiguračnímu uživatelskému rozhraní určenému pro MAM, musí být aplikace zaregistrovaná ve službě MAM-WE. Další informace o službě MAM-WE najdete v části [Zásady ochrany aplikací bez registrace zařízení v příručce k sadě SDK pro Intune](https://docs.microsoft.com/en-us/intune/app-sdk-ios#app-protection-policy-without-device-enrollment).
+* Do zdrojových souborů aplikace je potřeba zahrnout soubor ```IntuneMAMAppConfigManager.h```.
+* K získání konfiguračního objektu aplikace je potřeba volat ```[[IntuneMAMAppConfig instance] appConfigForIdentity:]```.
+* U objektu ```IntuneMAMAppConfig``` je potřeba volat odpovídající selektor. Pokud je například klíčem aplikace řetězec, měli byste použít ```stringValueForKey``` nebo ```allStringsForKey```. Soubor ```IntuneMAMAppConfig.h header``` se týká vrácených hodnot / chybových podmínek.
+
+Další informace o možnostech rozhraní Graph API s ohledem na hodnoty konfigurace určené pro MAM najdete v článku [Referenční informace o rozhraní Graph API týkající se konfigurace určené pro MAM](https://graph.microsoft.io/en-us/docs/api-reference/beta/api/intune_mam_targetedmanagedappconfiguration_create). <br>
+
+Další informace o vytváření zásad konfigurace aplikací určených pro MAM v iOSu najdete v části o konfiguraci aplikací určených pro MAM v článku [Použití zásad konfigurace aplikací v Microsoft Intune pro iOS](https://docs.microsoft.com/en-us/intune/app-configuration-policies-use-ios).
+
 ## <a name="telemetry"></a>Telemetrie
 
 Intune App SDK pro iOS ve výchozím nastavení protokoluje telemetrická data týkající se následujících událostí použití. Tato data se odešlou do Microsoft Intune.
@@ -656,4 +664,3 @@ Buildy statické knihovny i modelu pro Intune App SDK jsou univerzální binárn
     cp ~/Desktop/IntuneMAM.device_only ~/Desktop/IntuneMAM.framework/IntuneMAM
     ```
     První příkaz odstraní architektury simulátoru ze souboru DYLIB modelu. Druhý příkaz zkopíruje soubor DYLIB jen pro zařízení zpět do adresáře modelu.
-

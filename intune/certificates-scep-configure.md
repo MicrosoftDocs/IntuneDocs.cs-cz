@@ -1,12 +1,12 @@
 ---
 title: "Konfigurace a správa certifikátů SCEP pomocí Intune"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Přečtěte si, jak nakonfigurovat infrastrukturu a pak vytvořit a přiřadit profily certifikátů Intune SCEP."
+titleSuffix: Intune on Azure
+description: "Přečtěte si, jak nakonfigurovat infrastrukturu a pak vytvořit a přiřadit profily certifikátů Intune SCEP."
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 05/05/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,14 @@ ms.assetid: d567d85f-e4ee-458e-bef7-6e275467efce
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: ad0dc380eca386438e9568bf212ac9c5ad66ceb6
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: e29e79b8598eddba951b3f8ee7a7bcd5c6271f83
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="configure-and-manage-scep-certificates-with-intune"></a>Konfigurace a správa certifikátů SCEP pomocí Intune
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Toto téma popisuje, jak pomocí Intune konfigurovat infrastrukturu a pak vytvořit a přiřadit profily certifikátů SCEP (Simple Certificate Enrollment Protocol).
 
@@ -84,6 +83,10 @@ Před konfigurací profilů certifikátů musíte provést následující úlohy
 
 **Krok 5**: Povolení, instalace a konfigurace Intune Certificate Connectoru
 
+> [!NOTE]
+> Kvůli známému problému stahujte, instalujte a konfigurujte Certificate Connector pomocí následujícího postupu: [Konfigurace infrastruktury certifikátů pro SCEP -> Konfigurace infrastruktury -> Úkol 5](/intune-classic/deploy-use/configure-certificate-infrastructure-for-scep)
+
+
 #### <a name="step-1---create-an-ndes-service-account"></a>Krok 1: Vytvoření účtu služby NDES
 
 Vytvořte účet uživatele domény, který chcete použít jako účet služby NDES. Tento účet zadáte při konfiguraci šablon ve vydávající certifikační autoritě před instalací a konfigurací NDES. Ověřte, že uživatel má výchozí práva **Povolit místní přihlášení**, **Přihlásit jako službu** a **Přihlásit jako dávkovou úlohu**. Některé organizace mají zásady posílení zabezpečení, které tato práva zakazují.
@@ -100,6 +103,9 @@ V této úloze:
 1.  Přihlaste se jako správce podnikové sítě.
 
 2.  Ve vydávající certifikační autoritě použijte modul snap-in Šablony certifikátů k vytvoření nové vlastní šablony nebo zkopírování existující šablony a následnému upravení existující šablony (jako je šablona Uživatel) pro použití s NDES.
+
+    >[!NOTE]
+    > Šablona certifikátu NDES musí být založena na modulu snap-in Šablony certifikátů verze 2 (kvůli kompatibilitě s Windows 2003).
 
     Šablona musí obsahovat následující konfigurace:
 
@@ -246,7 +252,7 @@ V této úloze:
 
     ![Test NDES](.\media\SCEP_NDES_URL.png)
 
-    Pokud se zobrazí **503 Služba nedostupná**, zkontrolujte eventviewer. Je pravděpodobné, že se fond aplikací zastavil kvůli chybějícímu oprávnění pro uživatele NDES. Tato práva jsou popsaná v úloze 1.
+    Pokud se zobrazí **503 - Služba není k dispozici** , zkontrolujte prohlížeč událostí. Je pravděpodobné, že se fond aplikací zastavil kvůli chybějícímu oprávnění pro uživatele NDES. Tato práva jsou popsaná v úloze 1.
 
 ##### <a name="to-install-and-bind-certificates-on-the-ndes-server"></a>Instalace a vytvoření vazby certifikátů na serveru NDES
 
@@ -304,7 +310,7 @@ Stáhnete, nainstalujete a nakonfigurujete Certificate Connector na serveru NDES
 ##### <a name="to-enable-support-for-the-certificate-connector"></a>Povolení podpory pro Certificate Connector
 
 1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Jiné** > **Intune**.
+2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 3. V okně **Intune** zvolte **Konfigurovat zařízení**.
 4. V okně **Konfigurace zařízení** vyberte **Certifikační autorita**.
 5.  Vyberte **Zapnout Certificate Connector**.
@@ -312,10 +318,10 @@ Stáhnete, nainstalujete a nakonfigurujete Certificate Connector na serveru NDES
 ##### <a name="to-download-install-and-configure-the-certificate-connector"></a>Stažení, instalace a konfigurace Certificate Connectoru
 
 > [!NOTE]
-> Kvůli známému problému stahujte, instalujte a konfigurujte Certificate Connector pomocí následujícího postupu: [Konfigurace infrastruktury certifikátů pro SCEP -> Konfigurace infrastruktury -> Úkol 5](https://docs.microsoft.com/intune-classic/deploy-use/certificates-scep-configure#a-namebkmkconfigureinfrastructureaconfigure-your-infrastructure)
+> Kvůli známému problému stahujte, instalujte a konfigurujte Certificate Connector pomocí následujícího postupu: [Konfigurace infrastruktury certifikátů pro SCEP -> Konfigurace infrastruktury -> Úkol 5](/intune-classic/deploy-use/configure-certificate-infrastructure-for-scep)
 
 1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Jiné** > **Intune**.
+2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 3. V okně **Intune** zvolte **Konfigurovat zařízení**.
 4. V okně **Konfigurace zařízení** vyberte **Certifikační autorita**.
 5. Zvolte **Stáhnout Certificate Connector**.
@@ -377,6 +383,8 @@ Pokud chcete ověřit, jestli je služba spuštěná, spusťte prohlížeč a za
         - **Běžný název**
         - **Běžný název včetně e-mailové adresy**
         - **Běžný název jako e-mail**
+        - **Vlastní** – když vyberete tuto možnost, zobrazí se další pole rozevíracího seznamu. V tomto poli můžete zadat vlastní formát názvu subjektu. Dvě proměnné, které jsou aktuálně podporované pro vlastní formát, jsou **Běžný název (CN)** a **E-mail (E)**. Pomocí kombinace jedné této proměnné nebo mnoha proměnných a statických řetězců můžete vytvořit vlastní formát názvu subjektu jako například tento: **CN={{UserName}},E={{EmailAddress}},OU=Mobilni,O=Finance,L=Brno,C=CZ**. V tomto příkladu jste vytvořili formát názvu subjektu, který kromě proměnných CN a E využívá řetězce pro organizační jednotku, organizaci, umístění a zemi. V [tomto tématu](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) si můžete přečíst další informace o funkci **CertStrToName** a jejích podporovaných řetězcích.
+        
     - **Alternativní název subjektu** – Určete způsob, jak má Intune automaticky vytvořit hodnoty pro alternativní název subjektu (SAN) v žádosti o certifikát. Pokud jste zvolili třeba uživatelský typ certifikátu, můžete do alternativního názvu subjektu zahrnout hlavní název uživatele (UPN). Pokud bude klientský certifikát sloužit k ověřování na server NPS (Network Policy Server), musíte alternativní název subjektu nastavit na UPN. 
     - **Použití klíče** – Zadejte možnosti použití klíče pro certifikát. Vybírat můžete z těchto možností: 
         - **Šifrování klíče** – Umožňuje výměnu klíče jenom v případě, že je klíč zašifrovaný. 
@@ -392,10 +400,6 @@ Pokud chcete ověřit, jestli je služba spuštěná, spusťte prohlížeč a za
 
 Profil se vytvoří a zobrazí se v okně se seznamem profilů.
 
->[!Note]
-> Jenom pro zařízení s iOSem: V části Formát názvu subjektu můžete vybrat Vlastní a zadat vlastní formát názvu subjektu.
-> Dvě proměnné, které jsou aktuálně podporované pro vlastní formát, jsou **Common Name (CN)** a **Email (E)**. Pomocí kombinace těchto proměnných a statických řetězců můžete vytvořit vlastní formát názvu subjektu jako například tento: **CN={{UserName}},E={{EmailAddress}},OU=Mobilni,O=Finance,L=Brno,C=CZ**. V tomto příkladu jste vytvořili formát názvu subjektu, který kromě proměnných CN a E využívá řetězce pro organizační jednotku, organizaci, umístění a zemi. V [tomto tématu](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) si můžete přečíst další informace o funkci **CertStrToName** a jejích podporovaných řetězcích.
-
 ## <a name="how-to-assign-the-certificate-profile"></a>Přiřazení profilu certifikátu
 
 Před přiřazením profilů certifikátů ke skupinám vezměte v úvahu následující:
@@ -407,5 +411,4 @@ Před přiřazením profilů certifikátů ke skupinám vezměte v úvahu násle
 - I když se každý profil přiřazuje samostatně, je třeba přiřadit jak důvěryhodnou kořenovou certifikační autoritu, tak profil SCEP nebo PKCS. Jinak zásady certifikátu SCEP nebo PKCS nebudou fungovat.
 
 Informace o tom, jak přiřadit profily, najdete v tématu [Přiřazení profilů zařízení](device-profile-assign.md).
-
 

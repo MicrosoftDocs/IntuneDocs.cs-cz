@@ -1,33 +1,29 @@
 ---
-title: "Nastavení Intune pro aplikaci Classroom pro iOS | Dokumentace Microsoftu"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Přečtěte si o nastaveních Intune, pomocí kterých můžete ovládat nastavení aplikace Classroom na zařízeních s iOSem."
+title: "Nastavení Intune pro aplikaci Classroom pro iOS"
+titleSuffix: Intune on Azure
+description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete ovládat nastavení aplikace Classroom na zařízeních s iOSem."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/02/2017
+ms.date: 06/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
-ms.reviewer: heenamac
+ms.reviewer: derriw
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 6f24636687291ff55686277c3f24b2774cfb32f4
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 4188c3951c9cb864b77bde52a5d19f022f17c11c
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="how-to-configure-intune-settings-for-the-ios-classroom-app"></a>Jak nakonfigurovat nastavení Intune pro aplikaci Classroom pro iOS
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="introduction"></a>Úvod
 [Classroom](https://itunes.apple.com/app/id1085319084) je aplikace, která učitelům umožňuje vést výuku a ovládat zařízení studentů v učebně. Tato aplikace učitelům například umožňuje:
@@ -45,7 +41,7 @@ S využitím **vzdělávacího** profilu zařízení s iOSem v Intune a informac
 Než tato nastavení začnete konfigurovat, zvažte následující skutečnosti:
 
 - iPady učitelů i studentů musí být zaregistrované v Intune.
-- Zajistěte, aby na zařízení učitele byla nainstalovaná aplikace [Apple Classroom](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8). Můžete to udělat buď ručně, nebo přes [správu aplikací Intune](app-management.md).
+- Zajistěte, aby na zařízení učitele byla nainstalovaná aplikace [Apple Classroom](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8). Můžete aplikaci nainstalovat buď ručně, nebo přes [správu aplikací Intune](app-management.md).
 - Musíte nakonfigurovat certifikáty pro ověření připojení mezi zařízeními učitelů a studentů (viz krok 2).
 - iPady učitelů a studentů musí být ve stejné Wi-Fi síti a musí mít povolené Bluetooth.
 - Aplikace Classroom běží na iPadech s iOSem 9.3 nebo novější verzí, které jsou pod dohledem.
@@ -57,9 +53,9 @@ Než tato nastavení začnete konfigurovat, zvažte následující skutečnosti:
 Pomocí služby Microsoft SDS (School Data Sync) naimportujte školní záznamy z existujícího studentského informačního systému (SIS) do služby Azure Active Directory (Azure AD).
 Služba SDS synchronizuje informace z vašeho systému SIS a uloží je do služby Azure AD. Azure AD je systém správy od Microsoftu, který pomáhá s organizací uživatelů a zařízení. Tato data vám pak pomohou se správou vašich studentů a zařízení. [Přečtěte si další informace o nasazení SDS](https://support.office.com/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91).
 
-### <a name="how-to-import-data-using-sds"></a>Jak naimportovat data pomocí SDS?
+### <a name="how-to-import-data-using-sds"></a>Jak naimportovat data pomocí SDS
 
-Informace můžete do SDS naimportovat jedním z následujících způsobů:
+Informace můžete do SDS naimportovat jednou z následujících metod:
 
 - [Soubory CSV](https://support.office.com/article/Follow-these-steps-71d5fe4a-aa51-4f35-9b53-348898a390a1) – ruční export a sestavení textových souborů s oddělovačem (.csv)
 - [PowerSchool API](https://support.office.com/article/Follow-these-steps-851b5edc-558f-43a9-9122-b2d63458cb8f) – poskytovatel SIS, který zjednodušuje synchronizaci se službou Azure AD
@@ -77,14 +73,14 @@ Informace můžete do SDS naimportovat jedním z následujících způsobů:
 ### <a name="configure-general-settings"></a>Konfigurace obecných nastavení
 
 1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Jiné** > **Intune**.
-3.    V okně **Intune** zvolte **Konfigurovat zařízení**.
-4.    V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
-5.    V okně profilů zvolte **Vytvořit profil**.
-6.    V okně **Vytvořit profil** zadejte **Název** a **Popis** vzdělávacího profilu iOS.
-7.    Z rozevíracího seznamu **Platforma** zvolte **iOS**.
-8.    Z rozevíracího seznamu **Typ profilu** zvolte **Vzdělávání**.
-9.    Zvolte **Nastavení** > **Konfigurovat**.
+2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+3.  V okně **Intune** zvolte **Konfigurovat zařízení**.
+4.  V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
+5.  V okně profilů zvolte **Vytvořit profil**.
+6.  V okně **Vytvořit profil** zadejte **Název** a **Popis** vzdělávacího profilu iOS.
+7.  Z rozevíracího seznamu **Platforma** zvolte **iOS**.
+8.  Z rozevíracího seznamu **Typ profilu** zvolte **Vzdělávání**.
+9.  Zvolte **Nastavení** > **Konfigurovat**.
 
 
 Dále potřebujete certifikáty k navázání vztahu důvěryhodnosti mezi iPady učitelů a studentů. Certifikáty se používají k bezproblémovému a bezobslužnému ověřování připojení mezi zařízeními bez nutnosti zadávání uživatelských jmen a hesel.
@@ -92,7 +88,7 @@ Dále potřebujete certifikáty k navázání vztahu důvěryhodnosti mezi iPady
 >[!IMPORTANT]
 >Použité certifikáty učitelů a studentů musí být vystavené odlišnými certifikačními autoritami (CA). Musíte vytvořit dvě nové podřízené certifikační autority propojené s vaší existující certifikační infrastrukturou; jednu pro učitele a druhou pro studenty.
 
-Vzdělávací profily iOS podporují jen certifikáty PFX, nikoli certifikáty SCEP.
+Vzdělávací profily iOS podporují pouze certifikáty PFX. Certifikáty SCEP podporovány nejsou.
 
 Certifikáty, které vytvoříte, musí kromě ověřování uživatelů podporovat také ověřování serverů.
 
@@ -120,8 +116,8 @@ Po dokončení konfigurace certifikátů zvolte **OK**.
 
 ### <a name="configure-student-certificates"></a>Konfigurace certifikátů studentů
 
-1.    V okně **Vzdělávání** zvolte **Certifikáty studentů**.
-2.    V okně **Certifikáty studentů** zvolte v seznamu **Typ certifikátů studentských zařízení** možnost **1:1**.
+1.  V okně **Vzdělávání** zvolte **Certifikáty studentů**.
+2.  V okně **Certifikáty studentů** zvolte v seznamu **Typ certifikátů studentských zařízení** možnost **1:1**.
 
 #### <a name="configure-student-root-certificate"></a>Konfigurace kořenového certifikátu studenta
 
@@ -143,8 +139,8 @@ Až dokončíte konfiguraci certifikátů, zvolte **OK**.
 
 ## <a name="finish-up"></a>Dokončení
 
-1.    V okně **Vzdělávání** zvolte OK.
-2.    V okně **Vytvořit profil** zvolte **Vytvořit**.
+1.  V okně **Vzdělávání** zvolte OK.
+2.  V okně **Vytvořit profil** zvolte **Vytvořit**.
     
 Profil se vytvoří a zobrazí se v okně se seznamem profilů.
 
@@ -156,3 +152,4 @@ Když teď učitel použije aplikaci Classroom, bude mít plnou kontrolu nad za�
 
 Další informace o aplikaci Classroom najdete v [nápovědě pro Classroom](https://help.apple.com/classroom/ipad/2.0/) na webu Applu.
 
+Pokud chcete konfigurovat sdílená zařízení iPad pro studenty, podívejte se na článek o [konfiguraci nastavení vzdělávání Intune pro sdílená zařízení s iOSem](education-settings-configure-ios-shared.md).

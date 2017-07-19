@@ -1,12 +1,12 @@
 ---
 title: "Nastavení AirPrintu pro zařízení s iOSem a macOS pomocí Intune"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Zjistěte, jak pomocí Intune automaticky připojit zařízení s iOSem a macOS k tiskárnám kompatibilním s AirPrintem."
+titleSuffix: Intune on Azure
+description: "Zjistěte, jak pomocí Intune automaticky připojit zařízení s iOSem a macOS k tiskárnám kompatibilním s AirPrintem."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/12/2017
+ms.date: 07/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,26 +15,23 @@ ms.assetid: 712a79fb-14ef-4f6b-aba5-1dfca900afd2
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 55486693e2f5678ceeb20dd3a0ef3c52553871d2
-ms.contentlocale: cs-cz
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 743eb9a71efe1a5ea18b15312fdd4fe684f0ff07
+ms.sourcegitcommit: c9b3a95bf529b6cb2a2bdacbc49127dfa0c233e5
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/05/2017
 ---
-
 # <a name="airprint-settings-for-ios-and-macos-devices"></a>Nastavení AirPrintu pro zařízení s iOSem a macOS
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Pomocí těchto nastavení můžete nakonfigurovat zařízení s iOSem nebo macOS tak, aby se automaticky připojovala k tiskárnám ve vaší síti, které jsou kompatibilní s AirPrintem. Budete k tomu potřebovat IP adresy a cesty prostředků tiskáren.
+Pomocí těchto nastavení můžete nakonfigurovat zařízení s iOSem nebo macOS tak, aby se automaticky připojovala k tiskárnám ve vaší síti, které jsou kompatibilní s AirPrintem. Budete k tomu potřebovat IP adresy a cesty prostředků tiskáren.
 
 ## <a name="find-airprint-printer-information"></a>Vyhledání informací o tiskárně s AirPrintem
 
 Pomocí tohoto postupu můžete přidat informace o AirPrintu do datové části AirPrintu, aby uživatelé zařízení s iOSem mohli používat známé tiskárny s AirPrintem.
 
-1. Na Macu, který je připojený ke stejné místní síti (stejné podsíti) jako tiskárny s Airprintem, otevřete Terminál (z **/Aplikace/Utility**)
+1. Na Macu, který je připojený ke stejné místní síti (stejné podsíti) jako tiskárny s AirPrintem, otevřete Terminál (z **/Aplikace/Utility**)
 2. V Terminálu zadejte **ippfind** a stiskněte Enter.
 3. Poznamenejte si všechny informace o tiskárně, které příkaz vrátí, například: **ipp://myprinter.local.:631/ipp/port1**. První část informací je název tiskárny a druhá část je cesta prostředku.
 4. V Terminálu zadejte **ping.myprinter.local** a stiskněte Enter.
@@ -49,3 +46,7 @@ Pomocí tohoto postupu můžete přidat informace o AirPrintu do datové části
 
 Můžete také importovat seznam tiskáren ze souboru hodnot oddělených čárkami (.csv) nebo seznam exportovat.
 
+
+## <a name="next-steps"></a>Další kroky
+
+Nyní můžete profil zařízení přiřadit do požadované skupiny. Podrobnosti najdete v tématu [Přiřazení profilů zařízení](device-profile-assign.md).

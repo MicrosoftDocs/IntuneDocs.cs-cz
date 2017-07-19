@@ -14,15 +14,12 @@ ms.assetid: 5d3215e7-0a5c-44bd-afb0-aeafce98c43f
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: 64c6eb58246ac3ad232c1b8ee89d12a83e7e1784
-ms.contentlocale: cs-cz
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="enable-enrollment-for-mobile-devices"></a>Povolení registrace mobilních zařízení
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -33,8 +30,7 @@ Pokud chcete nastavit správu mobilních zařízení v Intune, je potřeba nejd�
 
 ## <a name="enable-device-enrollment"></a>Povolení registrace zařízení
 
-1. **Nastavení Intune jako autority pro správu mobilního zařízení**
-    V [konzole pro správu Intune](https://manage.microsoft.com/) zvolte **Správa** > **Správa mobilních zařízení** a v části **Úkoly** zvolte **Nastavit autoritu MDM**.  
+1. **Nastavení Intune jako autority pro správu mobilního zařízení** V [konzole pro správu Intune](https://manage.microsoft.com/) zvolte **Správa** > **Správa mobilních zařízení** a v části **Úkoly** zvolte **Nastavit autoritu MDM**.  
 
 2. V dialogovém okně Autorita MDM vyberte **Ano**.
 
@@ -70,4 +66,3 @@ Gratulujeme! Právě jste dokončili poslední krok *úvodní příručky Intune
 
 >[!div class="step-by-step"]
 >[&larr; **Registrace zařízení**](.\start-with-a-paid-subscription-to-microsoft-intune-step-8.md)     [**Úlohy po konfiguraci** &rarr;](.\post-configuration-tasks.md)  
-

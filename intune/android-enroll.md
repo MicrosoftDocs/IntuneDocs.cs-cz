@@ -1,23 +1,29 @@
-mdm-authority-set---
-# <a name="required-metadata"></a>požadovaná metadata
-
-title: Registrace zařízení s Androidem v Intune titleSuffix: Intune Azure Preview description: Intune Azure Preview: Přečtěte si, jak zaregistrovat zařízení s Androidem v Intune Azure Preview.
-keywords: author: nathbarn ms.author: nathbarn manager: angrobe ms.date: 04/12/2017 ms.topic: article ms.prod: ms.service: microsoft-intune ms.technology: ms.assetid: f276d98c-b077-452a-8835-41919d674db5
-
-# <a name="optional-metadata"></a>volitelná metadata
-
-#<a name="robots"></a>ROBOTS:
-#<a name="audience"></a>audience:
-#<a name="msdevlang"></a>ms.devlang:
-ms.reviewer: chrisbal ms.suite: ems
-#<a name="mstgtpltfrm"></a>ms.tgt_pltfrm:
-ms.custom: intune-azure
-
 ---
-
+title: "Registrace zařízení s Androidem v Intune"
+titleSuffix: Intune on Azure
+description: "Zjistěte, jak zaregistrovat zařízení s Androidem v Intune."
+keywords: 
+author: nathbarn
+ms.author: nathbarn
+manager: angrobe
+ms.date: 06/28/2017
+ms.topic: article
+ms.prod: 
+ms.service: microsoft-intune
+ms.technology: 
+ms.assetid: f276d98c-b077-452a-8835-41919d674db5
+ms.reviewer: chrisbal
+ms.suite: ems
+ms.custom: intune-azure
+ms.openlocfilehash: 295315dae52662c386055747862717b85ed4b877
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/01/2017
+---
 # <a name="enroll-android-devices"></a>Registrace zařízení s Androidem
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Intune vám jako správci Intune umožňuje spravovat zařízení s Androidem včetně zařízení používajících Samsung Knox Standard. Můžete také spravovat pracovní profily na [zařízeních s Androidem for Work](#enable-enrollment-of-android-for-work-devices).
 
@@ -25,15 +31,13 @@ U zařízení, která používají Samsung KNOX Standard, je podporována správ
 
 ## <a name="prerequisite"></a>Předpoklad
 
-Při přípravě na správu mobilních zařízení musíte nastavit autoritu MDM na **Microsoft Intune**. Pokyny k tomu najdete v článku [Nastavení autority MDM](mdm-authority-set.md). Tato možnost se nastavuje jenom jednou při prvním nastavování Intune pro správu mobilních zařízení, takže je možné, že ji už máte nastavenou.
+Při přípravě na správu mobilních zařízení musíte nastavit autoritu MDM na **Microsoft Intune**. Pokyny k tomu najdete v článku [Nastavení autority MDM](mdm-authority-set.md). Tato možnost se nastavuje jenom jednou při prvním nastavování Intune pro správu mobilních zařízení.
 
 ## <a name="set-up-android-enrollment"></a>Nastavení registrace zařízení s Androidem
 
 Standardně je služba Intune nastavená tak, aby umožňovala registraci zařízení používajících Android a Samsung Knox Standard.
 
-Pokud chcete blokovat registraci zařízení s Androidem nebo blokovat jenom zařízení s Androidem v osobním vlastnictví, přečtěte si téma [Nastavení omezení typu zařízení](enrollment-restrictions-set.md#set-device-type-restrictions).
-
-Jestliže chcete nastavit maximální počet zařízení, která může uživatel zaregistrovat, přečtěte si téma [Nastavení omezení limitu počtu zařízení](enrollment-restrictions-set.md#set-device-limit-restrictions).
+Pokud chcete blokovat registraci zařízení s Androidem nebo blokovat jenom zařízení s Androidem v osobním vlastnictví, přečtěte si téma [Nastavení omezení typu zařízení](enrollment-restrictions-set.md).
 
 Aby bylo možné povolit správu zařízení, musí uživatelé zaregistrovat svoje zařízení tak, že si stáhnou aplikaci Intune Company Portal, která je dostupná na Google Play, a pak otevřou tuto aplikaci a zaregistrují se podle pokynů. Když jsou zařízení s Androidem spravována, můžete [přiřadit zásady dodržování předpisů](compliance-policy-create-android.md), [spravovat aplikace](app-management.md) a další.
 
@@ -47,7 +51,7 @@ Pokud chcete umožnit správu pracovního profilu na zařízeních, která [podp
 Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení [nastavením autority pro správu mobilních zařízení](mdm-authority-set.md) na **Microsoft Intune**.
 
 2. **Konfigurace vazby na Android for Work**<br>
-   Jako správce Intune na portálu Azure vyberte **Další služby** > **Monitorování + správa** > **Intune**.
+    Jako správce Intune na portálu Azure Portal vyberte **Další služby** > **Monitorování + správa** > **Intune**.
 
     1. V okně **Intune** vyberte **Registrace zařízení** > **Registrace Androidu for Work**, klikněte na **Konfigurovat** a otevřete web Androidu for Work na Google Play. Tento web se otevře v nové záložce prohlížeče.
   ![Snímek obrazovky zobrazující odkaz na konfiguraci vazby na Android for Work](./media/android-work-bind.png)
@@ -78,7 +82,7 @@ Uživatelům také můžete poslat odkaz na postup online registrace: [Zaregistr
 
 Informace o dalších úlohách koncových uživatelů najdete v článcích:
 
-- [Materiály o prostředí Microsoft Intune pro koncové uživatele](https://docs.microsoft.com/intune-classic/deploy-use/how-to-educate-your-end-users-about-microsoft-intune)
+- [Materiály o prostředí Microsoft Intune pro koncové uživatele](end-user-educate.md)
 - [Použití zařízení Android s Intune](https://docs.microsoft.com/intune-user-help/using-your-android-device-with-intune)
 
 ## <a name="unbinding-your-android-for-work-administrative-account"></a>Zrušení vazby na účet pro správu Androidu for Work
@@ -88,7 +92,7 @@ Registraci a správu Androidu for Work můžete vypnout. Při kliknutí na možn
 ### <a name="how-to-unbind-an-android-for-work-account"></a>Jak zrušit vazbu na účet Android for Work
 
 1. **Zrušení vazby na Android for Work**<br>
-   Jako správce Intune na portálu Azure vyberte **Další služby** > **Monitorování + správa** > **Intune**.  V okně **Intune** zvolte **Registrace zařízení** > **Registrace Androidu for Work** a klikněte na **Zrušit vazbu**.
+    Jako správce Intune na portálu Azure Portal vyberte **Další služby** > **Monitorování + správa** > **Intune**.  V okně **Intune** zvolte **Registrace zařízení** > **Registrace Androidu for Work** a klikněte na **Zrušit vazbu**.
 
 2. **Souhlas s odstraněním vazby na Android for Work**<br>
   Kliknutím na **Ano** odstraníte vazbu a zrušíte v Intune registraci všech zařízení s Androidem for Work.
