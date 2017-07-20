@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/13/2017
+ms.date: 07/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,27 +16,27 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: af3313e6ba5cbf9184aaaa9b197f7a3b2b9d4c3e
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 4d7ad138a8aa59ceeff00866469e59e2e1d19520
+ms.sourcegitcommit: 2a6ad3c233d15a9fb441362105f64b2bdd550c34
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/13/2017
 ---
 # <a name="enroll-your-ios-device-in-intune"></a>Registrace zařízení se systémem iOS do Intune
 
 Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svoje zařízení s iOSem zaregistrovat a získat tak přístup k e-mailům, souborům a dalším prostředkům společnosti. Když si svoje zařízení zaregistrujete, může vaše IT oddělení tyto pracovní nebo školní prostředky spravovat, udržovat je v bezpečí a zároveň vám umožnit, abyste k plnění úkolů používali zařízení, které preferujete. Další informace o registraci najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 
-<iframe src="https://channel9.msdn.com/Series/IntuneEnrollment/iOS-Enrollment/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+> [!VIDEO https://channel9.msdn.com/Series/IntuneEnrollment/iOS-Enrollment/player]
 
 > [!NOTE]
-> Pokud se snažíte zaregistrovat zařízení s macOS (například MacBook Pro nebo iMac), [vyzkoušejte místo toho tyto pokyny](enroll-your-device-in-intune-macos.md).
+> Pokud se snažíte zaregistrovat zařízení s macOS (například MacBook Pro nebo iMac), [vyzkoušejte místo toho tento postup](enroll-your-device-in-intune-macos.md).
 
 **Než začnete:**
 
-- Po zahájení tohoto postupu nezapomeňte registraci dokončit. Přerušení registrace na více než několik minut obvykle celý proces zastaví a bude vyžadovat, abyste ho zahájili znovu.
+- Po zahájení tohoto postupu nezapomeňte registraci dokončit. Přerušení registrace na více než několik minut obvykle celý proces zastaví a bude vyžadovat jeho opětovné zahájení.
 - Pokud se vaše registrace z jakéhokoli důvodu nezdaří, budete se muset vrátit do aplikace Portál společnosti a zkusit to znovu.
 - Ověřte, že vám funguje Wi-Fi. V opačném případě registrace selže.
-- Pokud jste v zařízení zablokovali Safari, odblokujte ho. K registraci musíte použít Safari.
+- Pokud jste v zařízení zablokovali Safari, odblokujte ho. Safari je součástí procesu registrace zařízení.
 
 
 **Registrace zařízení s iOSem**
@@ -51,8 +51,8 @@ Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svoje 
 
     ![ios-enroll-why-enroll](./media/ios-enroll-1b-why-enroll.png)
 
-> [!NOTE]
-> Žluté trojúhelníky neznamenají, že už došlo k chybě. Tyto ikony označují, že ještě existují kroky, které se musí v procesu registrace dokončit.
+  > [!NOTE]
+  > Žluté trojúhelníky neznamenají, že už došlo k chybě. Tyto ikony označují, že ještě existují kroky, které se musí v procesu registrace dokončit.
 
 4. Prohlédněte si seznam toho, co váš správce IT uvidí nebo neuvidí ve vašem zařízení, a klepněte na **Pokračovat**.
 
@@ -88,7 +88,7 @@ Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svoje 
 
     ![ios-enroll-open-comp-portal](./media/ios-enroll-7-open-cp.png)
 
-12. Na obrazovce **Nastavení firemního přístupu** klepněte na **Pokračovat**. Pokud váš správce IT nastavil dodatečné požadavky na zabezpečení, třeba nutnost nastavení hesla, pokračujte podle pokynů na obrazovce, dokud nebudete splňovat všechny požadavky na dodržování předpisů a nevrátíte se na obrazovku Nastavení firemního přístupu. Pak klepněte na **Pokračovat**.
+12. Na obrazovce **Nastavení firemního přístupu** klepněte na **Pokračovat**. Na této obrazovce vidíte, jaké další požadavky může být nutné splnit, aby vaše zařízení vyhovovalo zásadám, jako je například nastavení hesla. Postupujte podle pokynů na obrazovce, dokud nesplníte všechny požadavky týkající se dodržování předpisů. Po dokončení se vrátíte na obrazovku nastavení firemního přístupu. Klepněte na **Pokračovat**.
 
     ![ios-enroll-comp-access-tap-continue](./media/ios-enroll-8-comp-access-setup-compliance.png)
 
@@ -99,6 +99,6 @@ Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svoje 
 Zařízení je nyní zaregistrováno v Intune a budete přesměrováni zpět do aplikace Portál společnosti.
 
 > [!Note]
-> Pokud vaše organizace používá software pro správu telekomunikačních výdajů (Telecom Expense Management), budete muset před úplnou registrací zařízení provést několik dalších kroků. Další informace najdete [tady](enroll-your-device-with-telecom-expense-management-ios.md).
+> K úplné registraci zařízení je potřeba dokončit ještě několik kroků. Přečtěte si další informace o [registraci zařízení s použitím softwaru pro správu telekomunikačních výdajů](enroll-your-device-with-telecom-expense-management-ios.md). Pokud vaše organizace používá program registrace zařízení společnosti Apple, přečtěte si další informace [tady](enroll-your-device-dep-ios.md).
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).

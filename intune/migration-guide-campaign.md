@@ -1,11 +1,11 @@
 ---
 title: "Zahájení kampaně k migraci do Intune"
-description: "Tento článek uvádí postup zahájení kampaně migrace."
+description: "Tento článek obsahuje pokyny, jak spustit kampaň migrace."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 06/12/2017
+ms.date: 07/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,30 +13,27 @@ ms.technology:
 ms.assetid: f781b029-50f2-46ee-8ff7-03b4a6719e80
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: 9690572fd5f17fece0de7b533c98bfc52d77615b
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: a272d9c822a2c17592d7800c20278ce222d615bd
+ms.sourcegitcommit: 388c5f59bc992375ac63968fd7330af5d84a1348
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="phase-2-migration-campaign"></a>Fáze 2: Kampaň migrace
 
-[!INCLUDE[note for both-portals](./includes/note-for-both-portals.md)]
-
-Organizace by si měla zvolit přístup k migraci, který bude nejvíc vyhovovat jejím potřebám, a přizpůsobit taktiku implementace vlastním požadavkům. Zbývající část tohoto průvodce vás seznámí s nástroji, které budete potřebovat k úspěšnému zaregistrování zařízení vašich uživatelů do Intune.
+Zvolte takový postup migrace, který bude nejvíc vyhovovat potřebám organizace, a přizpůsobte taktiku implementace vlastním požadavkům. Zbývající část tohoto průvodce vás seznámí s nástroji, které budete potřebovat k úspěšné registraci zařízení vašich uživatelů do Intune.
 
 ## <a name="keys-to-a-successful-migration"></a>Klíč k úspěšné migraci
 
-Hlavní poučení o migraci od jiných poskytovatelů MDM do Intune:
+Klíčové předpoklady pro úspěšnou migraci od jiného poskytovatele MDM do Intune:
 
--   Klíčem ke spokojenosti koncových uživatelů a minimalizaci výpadků je komunikace.
+-   Výpadky koncových uživatelů a jejich nespokojenost může minimalizovat srozumitelná a užitečná komunikace.
 
 -   Poskytněte uživatelům konkrétní pokyny k migraci.
 
 -   Před registrací do Intune musí být zrušena registrace všech spravovaných zařízení u vašeho stávajícího poskytovatele MDM.
 
--   Poskytněte koncovým uživatelům pokyny od vašeho stávajícího poskytovatele MDM ke zrušení registrace zařízení.
+-   Předejte koncovým uživatelům pokyny týkající se zrušení registrace zařízení od vašeho stávajícího poskytovatele MDM.
 
 -   Proveďte migraci v několika fázích. Začněte s malou, zkušební skupinou uživatelů a postupně přidávejte další skupiny uživatelů, dokud nedosáhnete nasazení v plném rozsahu.
 
@@ -52,21 +49,21 @@ Hlavní poučení o migraci od jiných poskytovatelů MDM do Intune:
 
     -   Zabezpečení dat:
 
-        -   Generování sestav dodržování předpisů
+        -   Generují se sestavy dodržování předpisů.
 
-        -   Vynucení ochrany mobilních aplikací
+        -   Vynucuje se ochrana mobilních aplikací.
 
--   Pokud jste spokojení s první fází migrace, zopakujte cyklus migrace (popsaný níže jako Typický cyklus migrace) pro další fázi.
+Pokud jste spokojení s první fází migrace, zopakujte daný [cyklus migrace](migration-guide-cycle.md) v další fázi.
 
 -   Opakujte cykly migrace, dokud nebudou všichni uživatelé migrovaní do Intune.
 
--   Zajistěte, aby byl tým technické podpory během kampaně migrace připraven pomoct koncovým uživatelům. Spusťte dobrovolnou migraci, abyste byli schopni odhadnout zátěž telefonních linek technické podpory.
+-   Zajistěte připravenost týmu technické podpory pomoct během kampaně migrace koncovým uživatelům. Spusťte dobrovolnou migraci, abyste byli schopni odhadnout zátěž telefonních linek technické podpory.
 
--   Nestanovujte konečný termín registrace, dokud nebude tým technické podpory schopný vyřídit dotazy zbývajících uživatelů.
+-   Nestanovujte konečný termín registrace, dokud nebude tým technické podpory schopný zpracovat zbývající uživatele.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Vyhněte se tomu, abyste konfigurovali použití ovládacích prvků přístupu k prostředkům, jako je Exchange nebo SharePoint Online, současně pro Intune i vaše stávající řešení MDM. Kromě toho by měla být zařízení registrována vždy jen v jednom řešení.
 
 ## <a name="next-steps"></a>Další kroky
 
-[Plán komunikace](migration-guide-communication-plan.md)
+Vytvořte svůj [plán komunikace](migration-guide-communication-plan.md).

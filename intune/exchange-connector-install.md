@@ -1,12 +1,12 @@
 ---
 title: "Nastavení Exchange Connectoru pro místní EAS přes Intune"
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Exchange ActiveSync MDM – použijte nástroj Connector k umožnění komunikace mezi Intune a místním Exchange Serverem."
+titleSuffix: Intune Azure
+description: "Intune Azure: Exchange ActiveSync MDM – použijte nástroj Connector k povolení komunikace mezi Intune a místním Exchange Serverem."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 06/08/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9f4a310078a30f7dfefe66a9aba60cc74ad4e29b
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 1dd5143ce6c604f416af1c6b6b1df684346e2f6d
+ms.sourcegitcommit: be12974a7eaa4ce9cffe45aabe456c858d582e20
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/14/2017
 ---
-# <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure-preview"></a>Nastavení místního Exchange Connectoru pro Intune v Microsoft Intune Azure Preview
+# <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Nastavení místního Exchange Connectoru pro Intune v Microsoft Intune Azure
 
 Místní prostředí Exchange Serveru můžou pomocí místního Exchange Connectoru pro Intune spravovat přístup zařízení k místním poštovním schránkám Exchange v závislosti na tom, jestli jsou daná zařízení zaregistrovaná do Intune a jestli splňují zásady dodržování předpisů zařízení Intune. Místní Exchange Connector rovněž prostřednictvím synchronizace stávajícího záznamu EAS (Exchange Active Sync) s Intune zjišťuje mobilní zařízení, která se připojují k místním systémům Exchange Server.
 
@@ -42,8 +42,8 @@ V následující tabulce jsou uvedené požadavky na počítač, na který insta
 |operační systémy;|Intune podporuje místní Exchange Connector na počítači, na kterém běží kterákoli edice Windows Serveru 2008 SP2 (64bitová verze), Windows Serveru 2008 R2, Windows Serveru 2012 nebo Windows Serveru 2012 R2.<br /><br />Connector není podporovaný v žádné instalaci jádra serveru.|
 |Microsoft Exchange|Místní Connectory vyžadují Microsoft Exchange 2010 SP1 nebo novější, nebo starší Exchange Online Dedicated. Pokud chcete zjistit, jestli je vaše prostředí Exchange Online Dedicated v **nové** nebo **starší** konfiguraci, kontaktujte svého správce účtů.|
 |Autorita pro správu mobilních zařízení| [Nastavte autoritu pro správu mobilních zařízení na Intune](https://docs.microsoft.com/intune-classic/deploy-use/prerequisites-for-enrollment#step-2-mdm-authority-set).|
-|Hardware|Počítač, na který nainstaluje konektor, musí mít minimálně 1,6GHz procesor s 2 GB paměti RAM a 10 GB volného místa na disku.|users-permissions-add.md
-|Synchronizace se službou Active Directory|Než použijete Connector k připojení Intune ke svému Exchange Serveru, je potřeba [nastavit synchronizaci služby Active Directory](users-permissions-add.md) tak, aby byli místní uživatelé a skupiny zabezpečení synchronizovaní s vaší instancí Azure Active Directory.|
+|Hardware|Počítač, na který nainstaluje konektor, musí mít minimálně 1,6GHz procesor s 2 GB paměti RAM a 10 GB volného místa na disku.|users-add.md
+|Synchronizace se službou Active Directory|Než použijete Connector k připojení Intune ke svému Exchange Serveru, je potřeba [nastavit synchronizaci služby Active Directory](users-add.md) tak, aby byli místní uživatelé a skupiny zabezpečení synchronizovaní s vaší instancí Azure Active Directory.|
 |Další software|Počítač hostující konektor musí mít úplnou instalaci rozhraní Microsoft .NET Framework 4.5 a musí na něm být nainstalované prostředí Windows PowerShell 2.0.|
 |Síť|Počítač, na který jste nainstalovali konektor, musí být v doméně, která má vztah důvěryhodnosti k doméně hostující váš Exchange Server.<br /><br />Počítač vyžaduje konfigurace, které mu umožňují přístup ke službě Intune přes brány firewall nebo proxy servery přes porty 80 a 443. Mezi domény používané službou Intune patří tyto: manage.microsoft.com, &#42;manage.microsoft.com a &#42;.manage.microsoft.com.|
 

@@ -5,7 +5,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 12/28/2016
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,28 +14,23 @@ ms.assetid: ac7bd764-5365-4920-8fd0-ea57d5ebe039
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ade7caf544d71c062c0fa251d7a113facb700a36
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 71558786cc7f058cee31e9bbe3960ed75a76891b
+ms.sourcegitcommit: ce363409d1206e4a3d669709863ccc9eb22b7d5f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/11/2017
 ---
-# <a name="intune-implementation"></a>Implementace Intune
+# <a name="implement-your-intune-plan"></a>Implementace plánu Intune
 
-[!INCLUDE[note for both-portals](./includes/note-for-both-portals.md)]
-
-V zaváděcí fázi budete Intune implementovat do svého produkčního prostředí. Proces implementace spočívá v nastavení a konfiguraci Intune a externích závislostí (pokud jsou potřeba) na základě [požadavků na použití](planning-guide-requirements.md), které jste sestavili v předchozích částech tohoto průvodce.
+V zaváděcí fázi budete Intune nasazovat do svého produkčního prostředí. Proces implementace spočívá v nastavení a konfiguraci Intune a externích závislostí (pokud jsou potřeba) na základě [požadavků na použití](planning-guide-requirements.md).
 
 Následující část nabízí přehledný popis procesu implementace Intune, včetně požadavků a nejdůležitějších úkolů.
 
->[!TIP]
-> Další informace o procesu implementace Intune najdete v části [Další materiály a zdroje informací](planning-guide-resources.md).
-
 ## <a name="intune-requirements"></a>Požadavky Intune
 
-Tady jsou požadavky samotné služby Intune:
+Požadavky samotné služby Intune:
 
--   Předplatné EMS/Intune
+-   Předplatné Enterprise Mobility + Security (EMS) předplatné služby Intune
 
 -   Předplatné Office 365 (pro aplikace Office a aplikace spravované zásadou MAM)
 
@@ -43,100 +38,103 @@ Tady jsou požadavky samotné služby Intune:
 
 -   Azure AD Connect (pro synchronizaci adresáře)
 
--   Místní konektor Intune pro Exchange (pro CA pro místní Exchange, pokud je potřeba)
+-   Místní konektor Intune pro Exchange (pro podmíněný přístup pro místní Exchange, pokud je potřeba)
 
 -   Konektor certifikátu Intune (pro nasazení certifikátu SCEP, pokud je potřeba)
 
 >[!TIP]
-> Další informace o požadavcích samotné služby Intune najdete [zde](/intune/supported-devices-browsers).
+> Úplný seznam zařízení, která můžete spravovat pomocí Intune, najdete v seznamu [podporovaných zařízení](supported-devices-browsers.md).
 
 ## <a name="intune-implementation-process"></a>Proces implementace Intune
 
-### <a name="overview-of-implementation-tasks"></a>Přehled implementačních úkolů
+Pro implementaci nasazení Intune jsme identifikovali 13 samostatných úloh. V závislosti na požadavcích vaší firmy, stávající infrastruktury a strategie správy zařízení už mohly být některé z těchto úloh provedeny. Některé se nemusí vašeho plánu týkat.
 
-Tady je přehled všech úkolů při implementaci Intune.
+### <a name="task-1-get-an-intune-subscription"></a>1. úkol: Správa předplatného Intune
 
-#### <a name="task-1-add-intune-subscription"></a>1. úkol: Přidání předplatného Intune
-
-V předchozí části věnované požadavkům jsme uvedli, že je potřeba předplatné EMS nebo Intune. Pokud organizace nemá předplatné EMS nebo Intune, obraťte se na Microsoft nebo na tým, které se stará o účty Microsoft, a informujte je, že se zajímáte o nákup řešení Enterprise Mobility + Security (EMS) nebo Intune.
+Jak je uvedeno v části s požadavky pro Intune výše, potřebujete předplatné EMS nebo Intune. Pokud ho organizace nemá, obraťte se na Microsoft nebo na tým, který se stará o účty Microsoft, a informujte je, že se zajímáte o nákup řešení Enterprise Mobility + Security (EMS) nebo Intune.
 
 -   Další informace o [nákupu Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-pricing).
 
-#### <a name="task-2-add-office-365-subscription"></a>2. úkol: Přidání předplatného Office 365
+### <a name="task-2-add-office-365-subscription"></a>2. úkol: Přidání předplatného Office 365
 
-Tento krok je nepovinný. V předchozí části věnované požadavkům jsme uvedli, že pokud plánujete používat Exchange Online a chcete spravovat mobilní aplikace Office pomocí zásad MAM, potřebujete předplatné Office 365. Pokud organizace nemá předplatné Office 365, obraťte se na Microsoft nebo na tým, které se stará o účty Microsoft, a informujte je, že se zajímáte o nákup Office 365.
+Tento krok je nepovinný. Pokud plánujete používat Exchange Online a spravovat mobilní aplikace Office pomocí zásad ochrany aplikací, potřebujete předplatné Office 365. Pokud organizace nemá předplatné Office 365, obraťte se na Microsoft nebo na tým, který se stará o účty Microsoft, a informujte je, že se zajímáte o nákup Office 365.
 
 -   Další informace o [nákupu Office 365](https://products.office.com/business/compare-office-365-for-business-plans).
 
-#### <a name="task-3-add-users-groups-in-azure-ad"></a>3. úkol: Přidání skupin uživatelů do Azure AD
+### <a name="task-3-add-users-groups-in-azure-ad"></a>3. úkol: Přidání skupin uživatelů do Azure AD
 
-Na základě scénáře použití a požadavků na nasazení Intune možná bude potřeba přidat do služby AD nebo AAD uživatele nebo skupiny zabezpečení. Zkontrolujte současné uživatele a skupiny zabezpečení ve službě Active Directory nebo Azure Active Directory a zjistěte, jestli plně odpovídají vašim potřebám. Noví uživatelé a skupiny zabezpečení se nejčastěji přidávají v Active Directory a synchronizují se s Azure Active Directory prostřednictvím služby Azure AD Directory Connect.
+Na základě scénáře použití a požadavků na nasazení Intune možná bude potřeba přidat do služby Active Directory nebo Azure Active Directory uživatele nebo skupiny zabezpečení. Zkontrolujte současné uživatele a skupiny zabezpečení ve službě Active Directory nebo Azure Active Directory a zjistěte, jestli plně vyhovují vašim potřebám. Při přidávání nových uživatelů a skupin zabezpečení doporučujeme, abyste je přidali ve službě Active Directory a synchronizovali je s Azure Active Directory s použitím Azure AD Connect.
+
 
 -   Další informace o [přidání uživatelů nebo skupin v Intune](users-permissions-add.md).
+<!---why not send them to the AAD connect topic? Question out to Andre: https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnect--->
 
-#### <a name="task-4-assign-intune-and-office-365-user-licenses"></a>4. úkol: Přiřazení uživatelských licencí Intune a Office 365
+
+
+### <a name="task-4-assign-intune-and-office-365-user-licenses"></a>4. úkol: Přiřazení uživatelských licencí Intune a Office 365
 
 Všichni uživatelé, u kterých budete zavádět EMS/Intune a Office 365, musí mít přiřazenou licenci. Licence k EMS/Intune a Office 365 můžete přiřadit na portálu Centra pro správu Office 365.
 
 -   Další informace o [přiřazení licencí Intune](licenses-assign.md).
 
-#### <a name="task-5-set-mobile-device-management-authority-to-intune"></a>5. úkol: Nastavení autority pro správu mobilních zařízení v Intune
+### <a name="task-5-set-mobile-device-management-authority-to-intune"></a>5. úkol: Nastavení autority pro správu mobilních zařízení v Intune
 
-Než začnete v Intune nastavovat, konfigurovat, spravovat a registrovat zařízení, musíte nastavit autoritu pro správu mobilních zařízení v Intune. Autoritu pro správu mobilních zařízení nastavíte na portálu pro správu Intune v pracovním prostoru správce.
+Než začnete v Intune nastavovat, konfigurovat, spravovat a registrovat zařízení, musíte nastavit autoritu pro správu mobilních zařízení v Intune.
 
--   Další informace o [nastavení autority pro správu mobilních zařízení](/intune-classic/deploy-use/prerequisites-for-enrollment#step-2-set-mdm-authority).
+-   Další informace o [nastavení autority pro správu mobilních zařízení](mdm-authority-set.md).
 
-#### <a name="task-6-enable-device-platforms"></a>6. úkol: Povolení platforem zařízení
+### <a name="task-6-enable-device-platforms"></a>6. úkol: Povolení platforem zařízení
 
-Ve výchozím nastavení je v konzole pro správu Intune povolena většina platforem zařízení. Výjimkou jsou zařízení Apple (iOS a Mac). Předtím, než budete v Intune registrovat a spravovat zařízení s iOSem, musíte tuto platformu zařízení povolit. Povolení platformy pro zařízení s iOSem se skládá ze tří kroků: vytvoření certifikátu APNs, jeho stažení a nahrání tohoto certifikátu do Intune.
+Ve výchozím nastavení je povolená většina platforem zařízení. Výjimkou jsou zařízení Apple (iOS a Mac). Předtím, než budete v Intune registrovat a spravovat zařízení s iOSem, musíte tuto platformu zařízení povolit. K tomu potřebujete vytvořit MDM Push Certificate a přidat ho do Intune.
 
--   Další informace o tom, [jak funguje nastavení správy zařízení iOS a Mac](/intune-classic/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune).
+-   Další informace o [povolení registrace zařízení Apple](apple-mdm-push-certificate-get.md).
 
-#### <a name="task-7-add-and-deploy-terms-and-conditions-policies"></a>7. úkol: Přidání a nasazení zásad pro podmínky a ujednání
+### <a name="task-7-add-and-deploy-terms-and-conditions-policies"></a>7. úkol: Přidání a nasazení zásad pro podmínky a ujednání
 
-Microsoft Intune podporuje přidání a nasazení zásad pro podmínky a ujednání. Zásady pro podmínky a ujednání můžete přidat na portálu pro správu Intune v pracovním prostoru Zásady. Podle potřeby přidejte zásady pro podmínky a ujednání a nasaďte je u cílových skupin na základě způsobu použití nasazené služby Intune a požadavků.
+Intune podporuje zásady pro podmínky a ujednání. Podle potřeby přidejte zásady pro podmínky a ujednání a nasaďte je u cílových skupin na základě způsobu použití nasazené služby Intune a požadavků.
 
--   Další informace o [přidání a nasazení zásad pro podmínky a ujednání](/intune-classic/deploy-use/terms-and-condition-policy-settings-in-microsoft-intune).
+-   Další informace o [přidání a nasazení zásad pro podmínky a ujednání](terms-and-conditions-create.md).
 
-#### <a name="task-8-add-and-deploy-configuration-policies"></a>8. úkol: Přidání a nasazení zásad konfigurace
+### <a name="task-8-add-and-deploy-configuration-policies"></a>8. úkol: Přidání a nasazení zásad konfigurace
 
-Microsoft Intune podporuje přidání a nasazení dvou typů zásad konfigurace: obecných a vlastních. Zásady konfigurace můžete přidat na portálu pro správu Intune v pracovním prostoru Zásady. Podle potřeby přidejte zásady konfigurace a nasaďte je u cílových skupin na základě způsobu použití nasazené služby Intune a požadavků.
+Intune podporuje dva typy zásad konfigurace: obecné a vlastní. Podle potřeby přidejte zásady konfigurace a nasaďte je u cílových skupin na základě způsobu použití nasazené služby Intune a požadavků.
 
--   Další informace o [přidání a nasazení zásad konfigurace](/intune-classic/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies).
+-   Další informace o [přidání a nasazení zásad konfigurace](device-profiles.md).
 
-#### <a name="task-9-add-and-deploy-resource-profiles"></a>9. úkol: Přidání a nasazení profilů prostředků
+### <a name="task-9-add-and-deploy-resource-profiles"></a>9. úkol: Přidání a nasazení profilů prostředků
 
-Microsoft Intune podporuje profily e-mailu, Wi-Fi a VPN. Přidání a nasazení profilů se provádí na portálu pro správu Intune v pracovním prostoru Zásady. Podle potřeby přidejte profily e-mailu, Wi-Fi a VPN a nasaďte je u cílových skupin na základě způsobu použití nasazené služby Intune a požadavků.
+Intune podporuje profily e-mailu, Wi-Fi a VPN. Podle potřeby přidejte tyto profily a nasaďte je u cílových skupin na základě způsobu použití nasazené služby Intune a požadavků.
 
--   Další informace o [povolení přístupu k firemním prostředkům v Intune](/intune-classic/deploy-use/enable-access-to-company-resources-with-microsoft-intune).
+-   Přečtěte si další informace o [povolení přístupu k firemním prostředkům v Intune](device-profiles.md).
 
-#### <a name="task-10-add-and-deploy-apps"></a>10. úkol: Přidání a nasazení aplikací
+### <a name="task-10-add-and-deploy-apps"></a>10. úkol: Přidání a nasazení aplikací
 
-Microsoft Intune podporuje nasazení webových aplikací, obchodních aplikací a aplikací z veřejného Storu. Služba také podporuje správu aplikací integrovaných do sady Intune SDK jejich přidružením k zásadám MAM. Aplikace můžete přidat a nasadit na portálu pro správu Intune v pracovním prostoru Aplikace. Zásady MAM můžete přidat na portálu pro správu Intune v pracovním prostoru Zásady. Podle potřeby přidejte aplikace a nasaďte je u cílových skupin na základě způsobu použití nasazené služby Intune a požadavků.
+Intune podporuje nasazení webových aplikací, obchodních aplikací a aplikací z veřejného Storu. Také můžete spravovat aplikace s integrovanou sadou Intune SDK na základě jejich přidružení k zásadám MAM. Podle potřeby přidejte aplikace a nasaďte je u cílových skupin na základě způsobu použití nasazené služby Intune a požadavků.
 
--   Další informace o [přidání a nasazení aplikací](/intune-classic/deploy-use/deploy-apps).
+-   Další informace o [přidání a nasazení aplikací](app-management.md).
 
-#### <a name="task-11-add-and-deploy-compliance-policies"></a>11. úkol: Přidání a nasazení zásad dodržování předpisů
+### <a name="task-11-add-and-deploy-compliance-policies"></a>11. úkol: Přidání a nasazení zásad dodržování předpisů
 
-Microsoft Intune podporuje zásady dodržování předpisů. Zásady dodržování předpisů můžete přidat a nasadit na portálu pro správu Intune v pracovním prostoru Zásady. Podle potřeby přidejte zásady dodržování předpisů a nasaďte je u cílových skupin na základě způsobu použití nasazené služby Intune a požadavků.
+Intune podporuje zásady dodržování předpisů. Podle potřeby přidejte zásady dodržování předpisů a nasaďte je u cílových skupin na základě způsobu použití nasazené služby Intune a požadavků.
 
--   Další informace o [zásadách dodržování předpisů](/intune-classic/deploy-use/introduction-to-device-compliance-policies-in-microsoft-intune).
+-   Další informace o [zásadách dodržování předpisů](device-compliance.md).
 
-#### <a name="task-12-enable-conditional-access-policies"></a>12. úkol: Povolení zásad podmíněného přístupu
+### <a name="task-12-enable-conditional-access-policies"></a>12. úkol: Povolení zásad podmíněného přístupu
 
-Microsoft Intune podporuje podmíněný přístup pro Exchange Online i pro místní Exchange, dále pro SharePoint Online, Online Skype pro firmy a Dynamics CRM Online. Zásady podmíněného přístupu povolíte na portálu pro správu Intune v pracovním prostoru Zásady. Podle potřeby povolte a nakonfigurujte podmíněný přístup na základě [způsobu použití nasazené služby Intune a požadavků](planning-guide-requirements.md).
+Intune podporuje podmíněný přístup pro Exchange Online i pro místní Exchange, dále pro SharePoint Online, Online Skype pro firmy a Dynamics CRM Online. Podle potřeby povolte a nakonfigurujte podmíněný přístup na základě způsobu použití nasazené služby Intune a požadavků.
 
--   Další informace o [podmíněném přístupu](/intune-classic/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune).
+-   Další informace o [podmíněném přístupu](conditional-access.md).
 
-#### <a name="task-13-enroll-devices"></a>13. úkol: Registrace zařízení
+### <a name="task-13-enroll-devices"></a>13. úkol: Registrace zařízení
 
 Intune podporuje tyto platformy zařízení: iOS, Mac OS, Android, Windows pro stolní počítače a Windows Mobile. Podle potřeby zaregistrujte požadované platformy mobilních zařízení na základě způsobu použití nasazené služby Intune a požadavků.
 
--   Další informace o [registraci zařízení](/intune-classic/deploy-use/enroll-devices-in-microsoft-intune).
+-   Další informace o [registraci zařízení](device-enrollment.md).
 
->[!TIP]
-> Další informace o procesu implementace Intune najdete v tomto [modulu relací Microsoft Virtual Academy](https://mva.microsoft.com/training-courses/deploying-microsoft-enterprise-mobility-suite-16408?l=PPWNoZxvD_1404778676).
 
-## <a name="next-section"></a>Další část
+## <a name="next-steps"></a>Další kroky
 
-Další část obsahuje pokyny k [testování a ověřování nasazeného řešení Intune](planning-guide-test-validation.md).
+Další informace o procesu implementace Intune najdete v tomto [modulu relací Microsoft Virtual Academy](https://mva.microsoft.com/en-US/training-courses/deploying-microsoft-enterprise-mobility-suite-16408).
+
+
+Přečtěte si pokyny k [testování a ověřování nasazeného řešení Intune](planning-guide-test-validation.md).

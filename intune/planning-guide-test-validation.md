@@ -1,11 +1,11 @@
 ---
 title: "Testování a ověřování Intune"
-description: "V tomto článku najdete všechny podrobnosti, které je potřeba vzít v úvahu při testování a ověřování cloudového řešení Intune ve vašem prostředí."
+description: "Co je potřeba zvážit při testování a ověřování čistě cloudového řešení s Intune ve vašem prostředí."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 12/20/2016
+ms.date: 07/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,48 +13,41 @@ ms.technology:
 ms.assetid: 4f82ee0c-4bd6-4623-9b10-9249d316ccf5
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: 4ea2974c4724564cd8f9972fdb238b06d1b100e6
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: ddeb71c6a678ff42b5075d65c2bb4e0d89ae47f1
+ms.sourcegitcommit: ce363409d1206e4a3d669709863ccc9eb22b7d5f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/11/2017
 ---
 # <a name="intune-testing-and-validation"></a>Testování a ověřování Intune
 
-[!INCLUDE[note for both-portals](./includes/note-for-both-portals.md)]
+Fáze testování probíhá během fáze implementace i po ní. K otestování všech požadovaných scénářů pro IT (správci) a koncové uživatele (případy použití), které jste předem identifikovali, potřebujete testovací účty, skupiny a zařízení.
 
-Testovací fáze by měla probíhat během implementační fáze a po ní. K testování všech požadovaných scénářů pro IT (správci) a koncové uživatele (případy použití) budete potřebovat testovací účty, skupiny a zařízení.
-
-Doporučuje se do testovací fáze zapojit pracovníky IT, kteří mají na starosti podporu/helpdesk, aby byla vytvořena podpůrná dokumentace a tito pracovníci si zvykli na podporou produktu. Pokud fungování součásti nebo scénáře neodpovídá případu použití, popište potřebné změny a uveďte důvod provedené změny.
+Doporučujeme do testovací fáze zapojit pracovníky IT, kteří mají na starosti podporu a helpdesk, aby vytvořili podpůrnou dokumentaci a zvykli si na podporou produktu. Pokud fungování součásti nebo scénáře neodpovídá případu použití, popište potřebné změny a uveďte důvod provedené změny.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-Doporučuje se dokumentovat následující věci:
+Doporučujeme vytvořit následující dokumentaci:
 
--   **Testovací kritérium:** Identifikuje srovnávací testy použité k měření.
+-   **Testovací kritéria:** Identifikujte srovnávací testy pro měření.
 
--   **Součásti návrhu:** Musí existovat alespoň jedno testovací kritérium.
+-   **Součásti návrhu:** Musí existovat minimálně v jednom testovacím kritériu.
 
-Pokud pro součást návrhu neexistuje aspoň jedno testovací kritérium, které odpovídá požadavku nebo scénáři, zvažte, jestli je tato součást návrhu potřeba. Nezapomeňte si také připravit následující věci:
+Pokud součást návrhu neexistuje minimálně v jednom testovacím kritériu, které odpovídá požadavku nebo scénáři, zvažte, jestli je tato součást návrhu potřeba. Nezapomeňte si také připravit následující věci:
 
--   **Účty:** Při testování byste měli používat testovací účty licencované pro EMS a Office 365, aby bylo možné testovat všechny scénáře použití.
+-   **Účty:** Testovací účty licencované pro EMS a Office 365, aby bylo možné testovat všechny scénáře použití.
 
--   **Zařízení:** Zařízení, která používáte v tomto okamžiku, by měla být testovací, abyste je mohli případně vymazat nebo na nich obnovit tovární nastavení.
+-   **Zařízení:** Testovací zařízení, která je možné vymazat nebo resetovat do výchozího továrního nastavení.
 
 -   **Integrované komponenty:** Všechny integrované komponenty (Certificate Connector, Intune Service to Service Connector pro hostovaný Exchange a konektor Intune pro místní Exchange) by měly být nainstalované a nakonfigurované, pokud jsou potřeba.
 
 V případě nečekaných komplikací možná bude potřeba změnit návrh. Všechny změny návrhu musí být plně dokumentované, včetně důvodu každé změny. Následující příklad ilustruje, o jaký druh změn může jít:
 
--   Zjistili jste, že nesplňujete požadavky služby zápisu síťových zařízení (NDES). Dále jste zjistili, že ke konfiguraci profilů VPN a Wi-Fi můžete použít kořenovou CA, která vyhovuje stejným požadavkům bez implementace NDES.
+<blockquote>Zjistili jste, že nesplňujete požadavky služby zápisu síťových zařízení (NDES). Dále jste zjistili, že ke konfiguraci profilů VPN a Wi-Fi můžete použít kořenovou CA, která vyhovuje stejným požadavkům bez implementace NDES.</blockquote>
 
-Při testování a ověřování se mohou vyskytnout problémy, které vyžadují technickou pomoc nebo odborné řešení potíží. Pokud hledáte pomoc, doporučujeme se obrátit na kanály podpory Microsoftu.
+Při testování a ověřování se mohou vyskytnout problémy, které vyžadují technickou pomoc nebo odborné řešení potíží. Pokud hledáte pomoc, doporučujeme požádat o podporu prostřednictvím kanálů podpory Microsoftu.
 
--   [Informace o tom, jak získat podporu pro Intune](/intune-classic/troubleshoot/how-to-get-support-for-microsoft-intune)
-
--   [Obecné tipy pro odstraňování potíží v Microsoft Intune](/intune-classic/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
-
--   [Informace o tom, jak získat podporu pro Microsoft Intune](/intune-classic/troubleshoot/how-to-get-support-for-microsoft-intune)
+-   [Informace o tom, jak získat podporu pro Intune](get-support.md)
 
 -   [Kontakt na odbornou telefonickou podporu Microsoft Intune](/intune-classic/troubleshoot/contact-assisted-phone-support-for-microsoft-intune)
 
@@ -76,10 +69,12 @@ Ověřovací testování správce IT se provádí, aby se ověřilo správné fu
 
 ### <a name="end-user"></a>koncový uživatel
 
-Ověřovací testování koncového uživatele se provádí, aby se ověřilo, zda pracovní prostředí koncového uživatele funguje očekávaným způsobem a je správně prezentované při veškeré komunikaci uživatele. Důležité je ověřit správnost prostředí koncového uživatele, protože pokud ho neověříte, může to zhoršit míru osvojení řešení koncovými uživateli a zvýšit počet volání helpdesku.
+Ověřovací testování koncového uživatele se provádí, aby se ověřilo, jestli pracovní prostředí koncového uživatele funguje očekávaným způsobem a je správně prezentované při veškeré komunikaci uživatele. Je důležité k ověření, jestli má uživatel k dispozici funkce, které potřebuje. Pokud se vám ověření nepodaří, může se snížit míra přijetí a zvýšit objem volání na helpdesk.
 
 ![9. část – tabulka 3](./media/section-9-image-3-table.PNG)
 
 ## <a name="next-steps"></a>Další kroky
 
-Jakmile jste otestovali a ověřili funkce a scénáře použití Intune, jste připraveni zahájit ostrý provoz Intune. Další informace najdete v části [Další materiály a zdroje informací](planning-guide-resources.md).
+Jakmile jste otestovali a ověřili funkce a scénáře použití Intune, jste připraveni zahájit [ostrý provoz Intune](planning-guide-rollout-plan.md).
+
+Další šablony a informace k plánování najdete v části s informacemi o [dalších prostředcích](planning-guide-resources.md).
