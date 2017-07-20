@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/12/2017
+ms.date: 07/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 1830720b-16cb-4f2f-a71a-62967f882563
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ca51c413e3148039b05a9d05a9a511e7158c9a1c
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 361777884187937632b2af02d7a7f15f0574193f
+ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="android-for-work-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení s Androidem for Work v Microsoft Intune
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 07/01/2017
 ### <a name="work-profile-password"></a>Heslo pracovního profilu
 - **Vyžadovat heslo pracovního profilu** (Android 7.0 a vyšší s povoleným pracovním profilem) – definujte zásady hesla, které se budou vztahovat jenom na aplikace v pracovním profilu. Ve výchozím nastavení má koncový uživatel možnost použít dva samostatně definované PIN kódy, nebo se může rozhodnout zkombinovat tyto dva nadefinované PIN kódy do silnějšího z nich.
 - **Minimální délka hesla** – zadejte minimální počet znaků, které uživatelské heslo musí obsahovat (**4** až **16**).
-- **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka** – vyberte dobu, po jejímž uplynutí bude neaktivní zařízení ke spuštění aplikace v pracovním profilu vyžadovat od uživatele opětovné zadání hesla pracovního profilu.
+- **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka** – umožňuje vybrat dobu, která má uplynout před tím, než se zamkne pracovní profil. Potom musí uživatel zadat svoje přihlašovací údaje znovu, když bude chtít získat přístup.
 - **Počet neúspěšných přihlášení před vymazáním obsahu zařízení** – zadejte, kolikrát může uživatel zadat nesprávné heslo před tím, než se pracovní profil ze zařízení smaže.
 - **Konec platnosti hesla (dny)** – zadejte počet dnů, které mají uplynout, než uživatel bude muset změnit heslo (**1** až **255**).
 - **Požadovaný typ hesla** – vyberte typ hesla, které musí být na zařízení nastaveno. Vybírejte z těchto možností:
@@ -77,3 +77,7 @@ ms.lasthandoff: 07/01/2017
 - **Znemožnit opakované použití předchozích hesel** – zadejte počet nových hesel, které je třeba použít před tím, než uživatel bude moci znovu použít staré heslo (**1** až **24**).
 - **Odemknutí pomocí otisků prstů** – blokuje koncovému uživateli možnost používat skener otisků prstů zařízení k odemknutí zařízení.
 - **Smart Lock a jiní agenti pro určování důvěryhodnosti** – umožňuje řídit funkci Smart Lock na kompatibilních zařízeních. Tato funkce telefonů, které se někdy říká agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo uzamčené obrazovky zařízení, pokud se zařízení nachází v důvěryhodném umístění (například pokud je připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC). Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
+
+## <a name="next-steps"></a>Další kroky
+
+S použitím informací v tématu [Jak nakonfigurovat nastavení omezení zařízení](device-restrictions-configure.md) uložte a přiřaďte profil uživatelům a zařízením.

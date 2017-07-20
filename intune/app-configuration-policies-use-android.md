@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/05/2017
+ms.date: 07/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f9ea697cafa0f277c176e55443250d32ca378dbb
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: b86d2d7f4d295ed41168c9dfdbaf8d4c253a0f75
+ms.sourcegitcommit: 388c5f59bc992375ac63968fd7330af5d84a1348
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="how-to-use-microsoft-intune-app-configuration-policies-for-android-for-work"></a>Použití zásad konfigurace aplikací v Microsoft Intune pro Android for Work
 
@@ -65,7 +65,7 @@ Tyto zásady nepřiřazujte přímo uživatelům a zařízením. Místo toho př
 
 Zásady se vytvoří a zobrazí se v okně se seznamem zásad.
 
-Potom pokračujte s [přiřazením](apps-deploy.md) a [sledováním](apps-monitor.md) aplikace jako obvykle.
+
 
 Spuštěná aplikace přiřazená zařízení se spustí s nastavením, které jste nakonfigurovali v zásadách konfigurace aplikací.
 
@@ -89,3 +89,8 @@ Předem nakonfigurovat můžete také oprávnění aplikací k přístupu k funk
 8. Přiřaďte zásadu konfigurace aplikace výběrem příslušné zásady, kliknutím na **Přiřazení** a potom na **Vybrat skupiny**.
 9. Zvolte požadovanou skupinu uživatelů a potom klikněte na **Vybrat**.
 10. Kliknutím na **Uložit** zásadu přiřaďte.
+
+## <a name="next-steps"></a>Další kroky
+
+Pokračujte s [přiřazením](apps-deploy.md) a [sledováním](apps-monitor.md) aplikace jako obvykle.
+
