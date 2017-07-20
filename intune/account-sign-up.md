@@ -14,11 +14,11 @@ ms.assetid: 0f3ce07a-b718-42a9-bace-f99a8b8abd94
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 389196cd5c36859589e68ccadd576ceeac1bc279
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: ead4f7308679359398383a2821b9c7e015ce59de
+ms.sourcegitcommit: 3b21f20108e2bf1cf47c141b36a7bdae609c4ec3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/10/2017
 ---
 # <a name="sign-up-or-sign-in-to-intune"></a>Registrace nebo přihlášení k Intune
 
@@ -26,23 +26,22 @@ ms.lasthandoff: 07/01/2017
 
 V tomto tématu najdou správci systému informace o tom, jak se můžou zaregistrovat a získat účet Intune.
 
-Než se budete moci zaregistrovat nebo přihlásit do Intune, je třeba zjistit, jestli vaše organizace již nemá pracovní nebo školní účet Microsoft Online Services nebo jestli neuzavřela s Microsoftem smlouvu Enterprise nebo podobnou multilicenční smlouvu. Pracovní nebo školní účet získáte při podpisu multilicenční smlouvy s Microsoftem nebo při registraci k jiným cloudovým službám Microsoftu, jako je například Office 365.
+Před přihlášením do Intune si zjistěte, jestli máte účet služeb Microsoft Online Services, smlouvu Enterprise nebo jinou rovnocennou multilicenční smlouvu. Multilicenční smlouva se společností Microsoft nebo jiné předplatné cloudových služeb Microsoft, jako je Office 365, obvykle zahrnují pracovní nebo školní účet.
 
-Pokud už máte pracovní nebo školní účet, stačí se pouze s použitím tohoto účtu **přihlásit** a přidat Intune do vašeho existujícího předplatného. Jinak se budete muset **zaregistrovat** a vytvořit nový účet, který budete používat pro správu Intune ve vaší organizaci.
+Pokud už máte svůj pracovní nebo školní účet, **přihlaste se** s jeho použitím a přidejte Intune k svému předplatnému. V opačném případě si můžete **zaregistrovat** pro svoji organizaci nový účet Intune.
 
 >[!WARNING]
->Pokud registrujete nový účet, nebudete moct později použít stávající pracovní nebo školní účet ke správě vašeho předplatného, nebo ho spojovat se stávajícími multilicenčními smlouvami.
+>Když si zaregistrujete nový účet, nebude možné s ním kombinovat stávající pracovní nebo školní účet.
 
 ## <a name="how-to-sign-up-or-sign-in-to-intune"></a>Registrace nebo přihlášení k Intune
 
-1.  Přejděte na stránku [registrace Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20).
+1.  Přejděte na [stránku pro registraci k Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20).
 
-2.  Na stránce **Registrace** se přihlaste nebo zaregistrujte ke správě nového předplatného služby Intune.
+  ![Snímek webové stránky registrace účtu zkušební verze Microsoft Intune](./media/account-sign-up-site.png)
+
+2.  Na stránce pro registraci se přihlaste nebo zaregistrujte ke správě nového předplatného služby Intune.
 
 ## <a name="post-sign-up-considerations"></a>Aspekty ke zvážení po registraci
-Pokud se zaregistrujete k novému předplatnému, na e-mailovou adresu, kterou jste zadali během procesu registrace, vám přijde e-mailová zpráva s informacemi o účtu. Ta potvrzuje, že je vaše předplatné aktivní.
+Pokud se zaregistrujete k novému předplatnému, přijde vám na e-mailovou adresu, kterou jste zadali během procesu registrace, e-mailová zpráva s informacemi o účtu. Ta potvrzuje, že je vaše předplatné aktivní.
 
-Po dokončení procesu registrace budete přesměrováni na stránku, na které můžete přidat uživatele a přiřadit jim licence pomocí Centra pro správu Office 365. Pokud budete používat jen cloudové účty ve výchozí doméně onmicrosoft.com, můžete ihned začít přidávat uživatele a přidělovat jim licence. Pokud ale budete chtít používat vlastní doménu organizace nebo synchronizovat informace o uživatelských účtech s místní službou Active Directory, můžete zavřít okno prohlížeče a přejít na krok 2 této stručné příručky. Další informace najdete také v článku [Informace o vaší počáteční doméně onmicrosoft.com v Office 365](https://support.office.com/article/Domains-FAQ-1272bad0-4bd4-4796-8005-67d6fb3afc5a?ui=en-US&rs=en-US&ad=US&fromAR=1#bkmk_whydoihaveanonmicrosoft.comdomain).
-
->[!TIP]
-> Při příštím přihlášení do iTune budete automaticky přesměrováni na konzolu pro správu Intune.
+Po dokončení procesu registrace budete přesměrováni na Centrum pro správu Office 365, které se používá k přidání uživatelů a přiřazení uživatelských licencí. Pokud budete používat jen cloudové účty ve výchozí doméně onmicrosoft.com, můžete ihned začít přidávat uživatele a přidělovat jim licence. Pokud ale budete chtít používat [vlastní název domény](custom-domain-name-configure.md) nebo [synchronizovat informace o uživatelských účtech](users-add.md#sync-active-directory-and-add-users-to-intune) s místní službou Active Directory, můžete toto okno prohlížeče zavřít.

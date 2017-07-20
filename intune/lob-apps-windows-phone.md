@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/12/2017
+ms.date: 07/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: a097b7b2-d01d-454b-954c-da4f3cd0ae86
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5c27b1a7d0c24bacc206cabe65bd3529a50fc2b4
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: f27ad720556a866b5f2a9326df0a574cc37f2a5d
+ms.sourcegitcommit: f100c943a635f5a08254ba7cf30f1aaebb7e810e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/13/2017
 ---
 # <a name="how-to-add-windows-phone-line-of-business-lob-apps-to-microsoft-intune"></a>Přidání obchodních aplikací pro Windows Phone do Microsoft Intune
 
@@ -45,11 +45,11 @@ ms.lasthandoff: 07/01/2017
 ## <a name="step-3---configure-app-information"></a>Krok 3 – konfigurace informací o aplikaci
 
 1. V okně **Přidat aplikaci** zvolte **Soubor balíčku aplikace**.
-2. V okně **Informace o aplikaci** nakonfigurujte následující údaje. V závislosti na zvolené aplikaci mohou být některé hodnoty v tomto okně vyplněny automaticky:
+2. V okně **Informace o aplikaci** nakonfigurujte následující informace o aplikaci. V závislosti na zvolené aplikaci mohou být některé hodnoty v tomto okně vyplněny automaticky:
     - **Název** – zadejte název aplikace, který se zobrazí na portálu společnosti. Ověřte, že názvy všech používaných aplikací jsou jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
-    - **Popis** – zadejte popis aplikace. Zobrazí se uživatelům na portálu společnosti.
+    - **Popis** – zadejte popis aplikace. Popis se uživatelům zobrazí na portálu společnosti.
     - **Vydavatel** – zadejte název vydavatele aplikace.
-    - **Kategorie** – vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste si vytvořili sami. Uživatelé ji budou moct při procházení portálu snáz najít.
+    - **Kategorie** – vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste si vytvořili sami. S použitím kategorií budou moct uživatelé aplikaci při procházení portálu společnosti jednodušeji najít.
     - **Zobrazit na Portálu společnosti jako vybranou aplikaci** – aplikace se zobrazí na význačném místě hlavní stránky portálu společnosti, když uživatelé vyhledávají aplikace.
     - **Adresa URL informací** – volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
     - **Adresa URL informací o ochraně osobních údajů** – volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
@@ -63,5 +63,7 @@ ms.lasthandoff: 07/01/2017
 
 1. V okně **Přidat aplikaci** zkontrolujte správnost nakonfigurovaných informací.
 2. Zvolte **Přidat** a nahrajte aplikaci do Intune.
+
+## <a name="next-steps"></a>Další kroky
 
 Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřadit ke zvoleným skupinám. Nápovědu najdete v článku [Přiřazení aplikací do skupin](apps-deploy.md).

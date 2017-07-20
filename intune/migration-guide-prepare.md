@@ -1,6 +1,6 @@
 ---
 title: "Příprava Intune na správu mobilních zařízení"
-description: "Tento článek vám pomůže vyhodnotit před migrací do Intune technické požadavky vaší firmy."
+description: "Před migrací na Intune vyhodnoťte svoje obchodní a technické požadavky."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -13,26 +13,23 @@ ms.technology:
 ms.assetid: 58591442-6606-4f39-a06b-f17a1f25af25
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: 65e3bb4b6a4e6e8dcfa1dd16738ae47758f4fb9b
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 9e935531c785a1c907454d563550f237ebffdb13
+ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="phase-1-prepare-intune-for-mobile-device-management-mdm"></a>Fáze 1: Příprava Intune na správu mobilních zařízení (MDM)
 
-[!INCLUDE[note for both-portals](./includes/note-for-both-portals.md)]
-
-Než začneme probírat podrobnosti nastavení Intune, zaměřme se na posouzení požadavků vaší organizace na správu mobilních zařízení. Doporučujeme, abyste spustili sestavy aktivních uživatelů u aktuálního poskytovatele řešení MDM a identifikovali kritické skupiny uživatelů. Potom můžete odpovědět na otázky [v části Vyhodnocení požadavků na MDM](migration-guide-prepare.md#assess-mdm-requirements).
+Než začneme probírat podrobnosti nastavení Intune, zaměřme se na posouzení požadavků vaší organizace na správu mobilních zařízení. Může být vhodné spustit sestavy aktivních uživatelů v aktuálním zprostředkovateli MDM a identifikovat tak nejdůležitější skupiny uživatelů. Pak můžete začít řešit otázky v části [Vyhodnocení požadavků na MDM](migration-guide-prepare.md#assess-mdm-requirements).
 
 ## <a name="assess-mdm-requirements"></a>Vyhodnocení požadavků na MDM
 
 ### <a name="what-kinds-of-devices-do-you-need-to-manage"></a>Jaké druhy zařízení potřebujete spravovat?
 
--   Pro které [platformy](/intune-classic/get-started/supported-mobile-devices-and-computers) potřebujete podporu?
+-   Pro které [platformy](supported-devices-browsers.md) potřebujete podporu?
 
--   Jsou zařízení, která potřebujete podporovat, podniková nebo osobní (BYOD)?
+-   Jsou zařízení, která potřebujete podporovat, podniková nebo osobní?
 
 -   Jaký druh připojení používáte? Wi-Fi, mobilní síť nebo VPN?
 
@@ -51,7 +48,6 @@ Než začneme probírat podrobnosti nastavení Intune, zaměřme se na posouzen�
 -   Jaké podmínky použití potřebujete?
 
     -   Zapojte do plánování včas právní oddělení.
-
     -   Jaké lokalizace budou potřeba?
 
 -   Jsou uživatelé obeznámeni s technologiemi a IT obecně?
@@ -60,30 +56,23 @@ Než začneme probírat podrobnosti nastavení Intune, zaměřme se na posouzen�
 
 -   Potřebujete šifrování na úrovni zařízení?
 
--   Jaké máte požadavky na hesla nebo pin kódy zařízení?
+-   Jakou délku má vaše aktuální heslo nebo PIN kód k zařízení?
 
--   Potřebujete zakázat některé funkce zařízení nebo omezit určité chování zařízení?
+-   Potřebujete zakázat některé funkce zařízení nebo omezit určité chování zařízení? Pomocí profilů konfigurace zařízení můžete určovat různá nastavení specifická pro platformu, například:
+      - Zakázat fotoaparát
+      - Uzamknout zařízení do režimu jedné aplikace<br/>
 
-    -   Pomocí profilů konfigurace zařízení můžete určovat různá nastavení specifická pro platformu, například zakázat fotoaparát nebo uzamknout zařízení do režimu jedné aplikace.
-<br></br>
--   Jaký druh ověřování je potřeba podporovat?
-
-    -   Pokud potřebujete ověřování na základě certifikátů, jaký druh certifikátů je potřeba poskytovat?
-
-        -   Intune můžete poskytovat certifikáty s profily přístupu k prostředkům pro zaregistrovaná zařízení.
-<br></br>
+-   Jaký druh ověřování je potřeba podporovat? Pokud potřebujete ověřování na základě certifikátů, jaký druh certifikátů je potřeba poskytovat?
+  - Intune můžete poskytovat certifikáty s profily přístupu k prostředkům pro zaregistrovaná zařízení.
     -   Jaký typ infrastruktury veřejných klíčů (PKI) potřebujete podporovat?
 <br></br>
 -   Potřebujete podporovat virtuální privátní síť (VPN) na úrovni zařízení nebo aplikace?
 
     -   Intune může zřídit konfigurace sítě VPN i pro poskytovatele sítí VPN třetích stran.
-<br></br>
+<br/><br/>
 -   Je možné zavést pro některé požadavky dočasné výjimky, aby se zabránilo výpadkům? Nebo musí zařízení s přístupem vždy splňovat všechny požadavky na zabezpečení?
 
-## <a name="additional-information"></a>Další informace
-
--   Další podrobnější příklady najdete v těchto [případových studiích](https://customers.microsoft.com/story/mwh-global-now-part-of-stantec-secures-mobile-devices-with-intune) z různých oborů, které jsou ukázkou toho, jak organizace vyhodnotily svoje požadavky na správu mobilních zařízení.
-
 ## <a name="next-steps"></a>Další kroky
+Přečtete si tyto [případové studie](https://customers.microsoft.com/story/mwh-global-now-part-of-stantec-secures-mobile-devices-with-intune) z různých oborů, abyste získali představu, jak organizace vyhodnotily svoje požadavky na správu mobilních zařízení.
 
-[Základní nastavení](migration-guide-setup.md)
+Zkontrolujte [základní nastavení Intune](migration-guide-setup.md).

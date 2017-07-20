@@ -4,7 +4,7 @@ description: "Tento průvodce vám pomůže se správou počítače s Windows kl
 keywords: 
 author: nathbarn
 ms.author: nathbarn
-ms.date: 03/27/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,11 +13,11 @@ ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 356ada64224f8982baf93ddaccb44df123c4568c
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 8e10f3a72cf522888108895f9f7141480b9af0b3
+ms.sourcegitcommit: 2a6ad3c233d15a9fb441362105f64b2bdd550c34
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/13/2017
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalace klientského softwaru Intune na počítače se systémem Windows
 
@@ -32,6 +32,8 @@ Počítače se systémem Windows se dají zaregistrovat přes klientský softwar
 Klientský software Intune obsahuje minimální software nutný k registraci počítače v systému správy Intune. Po registraci počítače klientský software Intune stáhne kompletní klientský software potřebný ke správě počítače.
 
 Toto postupné stahování snižuje vliv na šířku pásma sítě a zkracuje čas potřebný k počáteční registraci počítače v Intune na minimum. Zajistí také to, že po dokončení druhého stahování bude mít klient k dispozici nejnovější dostupný software.
+
+Jedna licence služby Intune umožňuje instalovat klientský software Intune až na pět počítačů.
 
 ## <a name="download-the-intune-client-software"></a>Stažení klientského softwaru Intune
 

@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/28/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +14,17 @@ ms.assetid: 2b770f4f-6d36-41e4-b535-514b46e29aaa
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 18272f21799253128cfe0ad6aa66e108b24a0b50
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: aae944c86029be6eaa111ce7c274a466095651d1
+ms.sourcegitcommit: f100c943a635f5a08254ba7cf30f1aaebb7e810e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/13/2017
 ---
 # <a name="add-apps-with-microsoft-intune"></a>Přidávání aplikací s Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Před zahájením nasazování aplikací s Microsoft Intune se seznamte s koncepty představenými v tomto tématu. Tyto koncepty vám pomůžou porozumět tomu, které aplikace můžete nasadit na kterou platformu. Taky vám pomůžou pochopit požadavky, které musí být před nasazením aplikací splněné.
+Před zahájením nasazování aplikací s Microsoft Intune se seznamte s koncepty představenými v tomto tématu. Tyto koncepty vám pomůžou porozumět tomu, které aplikace můžete nasadit na kterou platformu. Taky vám pomůžou pochopit požadavky, které musí být splněné před nasazením aplikací.
 
 ## <a name="app-types-that-you-can-deploy"></a>Typy aplikací, které můžete nasadit
 
@@ -37,7 +37,7 @@ Před zahájením nasazování aplikací s Microsoft Intune se seznamte s koncep
 |**Balíček aplikace pro iOS (&#42;.ipa)**|Pokud chcete nasadit aplikace systému iOS, budete potřebovat platný balíček .ipa.<br><br>Balíček .ipa musí být podepsaný společností Apple a datum vypršení platnosti v profilu zřizování musí být platné. Intune může distribuovat aplikace iOS s podnikovým certifikátem.<br><br>Nejsou podporované všechny aplikace certifikátu vývojáře Apple.<br><br>Vaše společnost musí mít zaregistrovaný iOS Developer Enterprise Program.<br><br>Ujistěte se, že brána firewall vaší organizace umožňuje přístup na weby zřizování a certifikace pro iOS.<br><br>S aplikací není nutné nasazovat soubor manifestu (.plist).|
 |**Balíček aplikace pro Windows Phone (&#42;.xap, .appx, .appxbundle)**|Pokud chcete nasazovat aplikace, musíte mít podnikový certifikát podepisování mobilního kódu. Další informace najdete v tématu [Nastavení správy pro zařízení Windows Phone v Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md).|
 |**Balíček aplikace pro Windows (.appx, .appxbundle)**|Pokud chcete nasazovat aplikace, musíte mít podnikový certifikát podepisování mobilního kódu. Podrobnosti najdete v tématu [Nastavení správy pro zařízení Windows v Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md).|
-|**Instalační služba systému Windows pomocí MDM (&#42;.msi)**|Tuto aplikaci můžete použít k vytvoření a nasazení aplikací založených na instalační službě systému Windows na zaregistrované počítače s Windows 10. Tyto počítače jsou spravované pomocí správy mobilních zařízení (MDM).<br /><br />Můžete nahrát jenom jeden soubor s příponou .msi.<br><br>Kód produktu a verze produktu v souboru se používají ke zjišťování aplikací.<br><br>Použije se výchozí chování aplikace při restartování. Intune ho neřídí.<br><br>Balíčky MSI na uživatele se nainstalují pro jednoho uživatele.<br><br>Balíčky MSI na zařízení se nainstalují pro všechny uživatele v zařízení.<br><br>Balíčky MSI v duálním režimu se momentálně nainstalují jenom pro všechny uživatele v zařízení.<br><br>Aktualizace aplikací jsou podporované, když kód produktu MSI jednotlivých verzí je stejný.<br>
+|**Instalační služba systému Windows pomocí MDM (&#42;.msi)**|Tuto aplikaci můžete použít k vytvoření a nasazení aplikací založených na instalační službě systému Windows na zaregistrované počítače s Windows 10. Tyto počítače jsou spravované pomocí správy mobilních zařízení (MDM).<br /><br />Můžete nahrát jenom jeden soubor s příponou .msi.<br><br>Kód produktu a verze produktu v souboru se používají ke zjišťování aplikací.<br><br>Použije se chování, které je při restartování aplikace výchozí. Intune toto chování neřídí.<br><br>Balíčky MSI na uživatele se nainstalují pro jednoho uživatele.<br><br>Balíčky MSI na zařízení se nainstalují pro všechny uživatele zařízení.<br><br>Balíčky MSI v duálním režimu se momentálně nainstalují jenom pro všechny uživatele v zařízení.<br><br>Aktualizace aplikací jsou podporované, když kód produktu MSI jednotlivých verzí je stejný.<br>
 Všechny typy aplikací instalačního programu softwaru se odešlou do úložiště v cloudu.
 
 ### <a name="external-link"></a>**Externí odkaz**
@@ -60,8 +60,8 @@ Když přidáváte nebo odebíráte aplikace pomocí konzoly pro správu Intune,
 
 Než začnete používat vydavatele softwaru, musíte nainstalovat plnou verzi rozhraní [Microsoft .NET Framework 4.0](https://www.microsoft.com/download/details.aspx?id=17851). Po instalaci může být nutný restart počítače, aby se vydavatel softwaru otevřel správně.
 
-## <a name="cloud-storage-space"></a>Prostor v cloudovém úložišti
-Všechny aplikace, které vytváříte pomocí instalace typu Instalační program softwaru (například obchodní aplikace), se zabalí a nahrají do cloudového úložiště Microsoft Intune. Zkušební předplatné Intune zahrnuje 2 gigabajty (GB) cloudového úložiště, které se používá k ukládání spravovaných aplikací a aktualizací. Úplné předplatné zahrnuje 20 GB úložného prostoru.
+## <a name="cloud-storage-space"></a>prostor v cloudovém úložišti
+Všechny aplikace, které vytváříte pomocí instalace typu Instalační program softwaru, se nahrají do cloudového úložiště Microsoft Intune. Zkušební předplatné Intune zahrnuje 2 gigabajty (GB) cloudového úložiště, které se používá k ukládání spravovaných aplikací a aktualizací. Úplné předplatné zahrnuje 20 GB úložného prostoru.
 
 Objem využitého úložiště je dostupný v uzlu **Využití úložiště** pracovního prostoru **Správce**. Další úložiště pro Intune můžete zakoupit stejným způsobem jako u původního nákupu.  Pokud jste platili fakturou nebo platební kartou, navštivte [portál pro správu předplatných](https://portal.office.com/adminportal/home?switchtomodern=true#/subscriptions).  Jinak kontaktujte svého partnera nebo prodejního zástupce.
 
@@ -74,7 +74,7 @@ Požadavky na cloudové úložiště jsou následující:
 ## <a name="support-for-universal-windows-platform-uwp-apps"></a>Podpora aplikací pro Univerzální platformu Windows
 Počítače s Windows 10 nevyžadují k instalaci obchodních aplikací klíč pro zkušební načtení. Kvůli povolení zkušebního načtení ale musí mít klíč registru **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps** hodnotu **1**.
 
-Pokud není tento klíč registru nakonfigurovaný, Intune při prvním nasazení aplikace do zařízení automaticky nastaví hodnotu **1**. Pokud nastavíte hodnotu **0**, Intune ji nemůže automaticky změnit a instalace obchodních aplikací se nezdaří.
+Pokud není tento klíč registru nakonfigurovaný, nastaví Intune při prvním nasazení aplikace do zařízení automaticky hodnotu **1**. Pokud nastavíte hodnotu **0**, nemůže ji Intune automaticky změnit a instalace obchodních aplikací se nezdaří.
 
 Obchodní aplikace pro Univerzální platformu Windows musí být podepsané certifikátem pro podpis kódu, který musí být důvěryhodný pro všechna zařízení, ve kterých chcete aplikaci nasadit. Můžete použít certifikát z interní infrastruktury PKI nebo certifikát z veřejného kořenového certifikátu od jiného výrobce nainstalovaný v zařízení.
 
@@ -84,7 +84,7 @@ V zařízeních se systémem Windows 10 Mobile můžete k podepisování univerz
 
 Když do Intune přidáte balíček appxbundle Windows 10 UPW, musíte také zajistit, aby se nahrály všechny závislosti pro aplikaci.
 Zkontrolujte, jestli složka **Závislosti**, která se vytvořila při vytvoření aplikace, je ve stejné složce jako samotný soubor .appxbundle.
-Když pak aplikaci nahrajete do Intune, nahrají se také všechny soubory ve složce **Závislosti**. Následující snímek obrazovky to znázorňuje:
+Když pak aplikaci nahrajete do Intune, nahrají se také všechny soubory ve složce **Závislosti**. Tento proces můžete vidět na následujícím obrázku:
 
 
 ![Jak vybrat závislosti balíčku appxbundle Windows 10 UPW](./media/w10-dependencies.png)
@@ -92,4 +92,4 @@ Když pak aplikaci nahrajete do Intune, nahrají se také všechny soubory ve sl
 
 ## <a name="next-steps"></a>Další kroky
 
-Před nasazením aplikací je musíte přidat do konzoly Intune. Můžete přidávat aplikace pro [registrovaná zařízení](add-apps-for-mobile-devices-in-microsoft-intune.md) nebo pro [počítače s Windows spravované klientským softwarem Intune](add-apps-for-windows-pcs-in-microsoft-intune.md).
+Aplikace musíte před nasazením přidat do konzoly Intune. Můžete přidávat aplikace pro [registrovaná zařízení](add-apps-for-mobile-devices-in-microsoft-intune.md) nebo pro [počítače s Windows spravované klientským softwarem Intune](add-apps-for-windows-pcs-in-microsoft-intune.md).

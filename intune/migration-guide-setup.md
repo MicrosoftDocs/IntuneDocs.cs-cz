@@ -13,42 +13,37 @@ ms.technology:
 ms.assetid: 60cfa440-0723-4ea0-bacf-3c5d26f9a1d3
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: c3129b2a8d93e91493455da5f3e5fd1a59dd77bb
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 9ea12f3707b830f0e3426526a7ae91d176d6e809
+ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="basic-setup"></a>Základní nastavení
 
-[!INCLUDE[note for both-portals](./includes/note-for-both-portals.md)]
-
-Když jste zhodnotili prostředí, je čas na nastavení Intune.
+Po vyhodnocení prostředí je čas nastavit Intune.
 
 ## <a name="external-dependencies-for-an-intune-deployment"></a>Externí závislosti pro nasazení Intune
 
 ### <a name="identity"></a>Identita
 
-Intune vyžaduje, aby identitu a seskupování uživatelů poskytovala služba Azure Active Directory (AAD).
+Intune vyžaduje, aby identitu a seskupování uživatelů poskytovala služba Azure Active Directory (AAD). Další informace pro:
 
--   Další informace o [požadavcích na identitu](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview).
+-  [Požadavky na identity](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
 
--   Další informace o [požadavcích na synchronizaci adresáře](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements).
+-   [Požadavky na synchronizaci adresáře](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
 
--   Další informace o [požadavcích na vícefaktorové ověřování](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-multifactor-auth-requirements).
+-   [Požadavky vícefaktorového ověřování](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-multifactor-auth-requirements)
 
--   Další informace o [plánování skupin uživatelů a zařízení](/intune/users-permissions-add).
+-   [Plánování skupin uživatelů a zařízení](users-add.md)
 
--   Další informace o [vytváření skupin uživatelů a zařízení](/intune/groups-get-started).
+-   [Vytváření skupin uživatelů a zařízení](groups-get-started.md)
 
-Pokud už organizace používá Office 365, je důležité, aby služba Intune používala stejné prostředí Azure Active Directory.
+Pokud už používá organizace Office 365, musí služba Intune používat stejné prostředí Azure Active Directory.
 
 ### <a name="pki-optional"></a>PKI (volitelné)
 
-Pokud plánujete, že budete v Intune používat ověřování profilů VPN, Wi-Fi nebo e-mailových profilů pomocí certifikátů, musíte ověřit, jestli [máte infrastrukturu PKI](/intune/certificates-configure) a jestli je připravená k vytvoření a nasazení profilů certifikátů.
-
-Další informace o konfiguraci certifikátů v Intune najdete níže.
+Pokud plánujete, že budete v Intune používat ověřování profilů VPN, Wi-Fi nebo e-mailových profilů pomocí certifikátů, musíte ověřit, jestli [máte infrastrukturu PKI](certificates-configure.md) a jestli je připravená k vytvoření a nasazení profilů certifikátů. Další informace o konfiguraci certifikátů v Intune:
 
 -   [Jak konfigurovat infrastrukturu certifikátů pro SCEP](/intune/certificates-scep-configure)
 
@@ -82,8 +77,8 @@ Nastavte autoritu MDM na **Intune** a povolte tak portál Azure Portal pro Intun
 > [!IMPORTANT]
 > Pokud přenášíte správu mobilního zařízení na Intune poprvé, měli byste nastavit autoritu MDM na Intune.
 
--   Podívejte se, [jak nastavit autoritu pro správu mobilních zařízení](/intune/mdm-authority-set).
+Podívejte se, [jak nastavit autoritu pro správu mobilních zařízení](mdm-authority-set.md).
 
 ## <a name="next-step"></a>Další krok
 
-[Konfigurace zásad pro správu zařízení a aplikací](migration-guide-configure-policies.md)
+Nakonfigurujte [zásady pro správu zařízení a aplikací](migration-guide-configure-policies.md).
