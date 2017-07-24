@@ -183,13 +183,12 @@
 ### [Monitorování profilů](device-profile-monitor.md)
 ### [Řešení potíží s profily](device-profile-troubleshoot.md)
 
-## [Nastavení dodržování předpisů zařízením](device-compliance.md)
-### [Požadavky](device-compliance-get-started.md)
+## [Nastavení dodržování předpisů zařízením](device-compliance-get-started.md)
 ### [Vytvoření zásad pro Android](compliance-policy-create-android.md)
 ### [Vytvoření zásad pro Android for Work](compliance-policy-create-android-for-work.md)
 ### [Vytvoření zásad pro iOS](compliance-policy-create-ios.md)
+### [Vytvoření zásad pro macOS](compliance-policy-create-mac-os.md)
 ### [Vytvoření zásad pro Windows](compliance-policy-create-windows.md)
-### Vytvoření akcí při nedodržení předpisů
 ### [Monitorování dodržování zásad v zařízeních](compliance-policy-monitor.md)
 
 ## [Nastavení podmíněného přístupu](conditional-access.md)
