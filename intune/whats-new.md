@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.date: 07/03/2017
+ms.date: 07/13/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fdda99bfd72c71d36a19449d43bc6cbf6a00babe
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: dec4fb1d373f49c1f6c15b1f2a9acb2f8d20138d
+ms.sourcegitcommit: be12974a7eaa4ce9cffe45aabe456c858d582e20
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/14/2017
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -55,25 +55,25 @@ Intune nyní podporuje ukládání sériových čísel v systémech iOS, macOS 
 
 ### <a name="device-management"></a>Správa zařízení
 #### <a name="new-remote-actions-for-ios-devices----854689---"></a>Nové vzdálené akce pro zařízení s iOSem <!-- 854689 -->
-V této verzi jsme zařízením s iOSem přidali dvě nové akce se vzdáleným zařízením:
+V této verzi jsme přidali dvě nové akce vzdáleného zařízení pro sdílené iPady, které spravují aplikaci Apple Classroom:
 
 -   [Odhlásit aktuálního uživatele](device-logout-user.md) – odhlásí aktuálního uživatele na vybraném zařízení s iOSem.
 -   [Odebrat uživatele](device-remove-user.md) – odstraní vybraného uživatele z místní mezipaměti zařízení s iOSem.
 
-
-Pomocí těchto vzdálených akcí mohou správci spravovat uživatelské účty uložené v mezipaměti na sdíleném iPadu a také z tohoto zařízení odhlásit momentálně přihlášeného uživatele.
-
-Při registraci správce určí maximální počet uživatelských účtů, které bude možné do mezipaměti zařízení uložit. Možnost Odebrat uživatele umožňuje správcům odebrat konkrétní uživatele uložené v mezipaměti.
-
-Možnost Odhlásit aktuálního uživatele odhlásí uživatele, který je momentálně k zařízení přihlášený. Tuto akci najdete v horní části okna Přehled zařízení, kde se obvykle akce zařízení nachází.
-
-Možnost Odebrat uživatele odstraní vybraného uživatele z místní mezipaměti zařízení. Tuto akci najdete, když přejdete na Monitorování -> Uživatelé -> a pravým tlačítkem kliknete na konkrétního uživatele na seznamu. Všechna nesynchronizovaná data spojená s tímto uživatelským účtem budou ztracena. Může to trvat až 24 hodin, než se odebrání uživatele ze seznamu uživatelů projeví.
 
 #### <a name="support-for-shared-ipads-with-the-ios-classroom-app----1044681---"></a>Podpora pro sdílené iPady s aplikací Classroom pro iOS<!-- 1044681 -->
 V této verzi jsme rozšířili podporu správy aplikace Classroom pro iOS tak, aby zahrnovala studenty, kteří se přihlásí do sdílených iPadů pomocí svých spravovaných Apple ID.
 
 
 ### <a name="app-management"></a>Správa aplikací  
+
+#### <a name="changes-to-intune-built-in-apps----1332306---"></a>Změny integrovaných aplikací Intune <!-- 1332306 -->
+
+Dříve služba Intune obsahovala řadu integrovaných aplikací, které jste mohli rychle přiřadit. Na základě vaší zpětné vazby jsme tento seznam odebrali a integrované aplikace už neuvidíte.
+Pokud jste už ale nějaké integrované aplikace přiřadili, budou se v seznamu aplikací dál zobrazovat. Tyto aplikace můžete dál přiřazovat podle potřeby.
+V novější verzi plánujeme přidat jednodušší způsob výběru a přiřazování integrovaných aplikací z portálu Intune.
+
+
 #### <a name="support-for-offline-apps-from-the-windows-store-for-business-----777044----"></a>Podpora pro offline aplikace z Windows Storu pro firmy <!--- 777044 --->
 Offline aplikace zakoupené ve Windows Storu pro firmy, se nyní budou synchronizovat na portálu Intune. Tyto aplikace můžete nasadit pro skupiny zařízení nebo skupiny uživatelů. Offline aplikace bude instalovat služba Intune, nikoli Store.
 
@@ -266,12 +266,16 @@ Existující role pro správu mobilních aplikací (MAM) (Přispěvatel, Vlastn�
 
 ## <a name="whats-coming"></a>Co připravujeme
 
+### <a name="end-of-support-for-android-43-and-lower----1171127-1326920----"></a>Konec podpory pro Android verze 4.3 a nižší <!---1171127, 1326920 --->
+Spravované aplikace a aplikace Portál společnosti pro Android budou pro přístup k firemním prostředkům vyžadovat operační systém Android 4.4 nebo novější. Zařízení, která nebudou do začátku října aktualizována, již nebudou mít k těmto aplikacím nebo k Portálu společnosti přístup. Od prosince budou všechna zaregistrovaná zařízení vyřazena, čímž dojde ke ztrátě přístupu k firemním prostředkům. Pokud používáte zásady ochrany aplikací bez správy mobilních zařízení MDM, aplikace nebudou získávat aktualizace a kvalita jejich činnosti bude časem upadat.
+
+
 ### <a name="platform-support-reminder-windows-phone-81-mainstream-support-will-end-july-11-2017"></a>Připomenutí podpory platformy: všeobecná podpora Windows Phone 8.1 končí 11. července 2017
 <!-- 1327781 -->
 
 11. července 2017 končí všeobecná podpora platformy Windows Phone 8.1. Podporu počítačů s Windows 8.1 to neovlivní.
 
-Na žádné zařízení s Windows Phone 8.1, které je spravováno službou Intune, to nebude mít okamžitý vliv. Zaregistrovaná zařízení budou nadále fungovat a všechny zásady, konfigurace a aplikace také. Všimněte si, že pro aplikaci Portál společnosti pro Windows Phone 8.1 ani pro platformu Windows Phone 8.1 v rámci služby Intune neexistují žádná cílená vylepšení. 
+Na žádné zařízení s Windows Phone 8.1, které je spravováno službou Intune, to nebude mít okamžitý vliv. Zaregistrovaná zařízení budou nadále fungovat a všechny zásady, konfigurace a aplikace také. Všimněte si, že pro aplikaci Portál společnosti pro Windows Phone 8.1 ani pro platformu Windows Phone 8.1 v rámci služby Intune neexistují žádná cílená vylepšení.
 
 Doporučujeme vám, abyste při nejbližší příležitosti způsobilá zařízení s Windows Phone 8.1 upgradovali na Windows 10 Mobile. 
 

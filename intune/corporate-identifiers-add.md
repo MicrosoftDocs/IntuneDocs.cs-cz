@@ -6,7 +6,7 @@ keywords:
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 06/28/2017
+ms.date: 07/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,21 +15,21 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 57ab3b79ad53a4b195fac426d211a114f054602f
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: a9852759983a4bc68c596146e2f5691893376cfd
+ms.sourcegitcommit: 388c5f59bc992375ac63968fd7330af5d84a1348
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="add-corporate-identifiers"></a>Přidání podnikových identifikátorů
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Jako správce IT můžete vytvořit a importovat textový soubor s oddělovači (CSV) se seznamem kódů IMEI (International Mobile Equipment Identity) nebo sériových čísel, který vám umožní identifikovat zařízení ve vlastnictví firmy. Je možné deklarovat pouze sériová čísla zařízení s iOSem a Androidem. Každý kód IMEI nebo sériové číslo může mít v tomto seznamu uvedené podrobnosti pro účely správy.
+Jako správce Intune můžete vytvořit a importovat textový soubor s oddělovači (CSV) se seznamem kódů IMEI (International Mobile Equipment Identity) nebo sériových čísel. Intune pomocí těchto identifikátorů určuje, která zařízení jsou ve vlastnictví firmy. Je možné deklarovat jenom čísla IMEI všech podporovaných platforem. Je možné deklarovat pouze sériová čísla zařízení s iOSem a Androidem. Každý kód IMEI nebo sériové číslo může mít v tomto seznamu uvedené podrobnosti pro účely správy.
 
 <!-- When you upload serial numbers for company-owned iOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple’s device enrollment program (DEP) or Apple Configurator to have them appear as company-owned. -->
 
-[Přečtete si, jak zjistit sériové číslo zařízení Apple](https://support.apple.com/HT204308).
+[Přečtete si, jak zjistit sériové číslo zařízení Apple](https://support.apple.com/HT204308).<br>
 [Přečtete si, jak zjistit sériové číslo zařízení s Androidem](https://support.google.com/store/answer/3333000).
 
 ## <a name="add-corporate-identifiers"></a>Přidání podnikových identifikátorů
@@ -50,7 +50,10 @@ V textovém editoru vypadá soubor .csv takhle:
 ```
 
 > [!IMPORTANT]
-> Některá zařízení s Androidem mají více kódů IMEI. Intune dokáže přečíst jen jeden kód IMEI na každé zaregistrované zařízení. Pokud importujete kód IMEI, který ale není kódem IMEI, který má v inventáři služba Intune, bude zařízení označené jako osobní, a ne jako firemní. Pokud importujete více kódů IMEI pro jedno zařízení, zobrazí se u kódů, které nejsou v inventáři, stav registrace **Neznámý**.
+> Některá zařízení s Androidem mají více kódů IMEI. Intune dokáže přečíst jen jeden kód IMEI na každé zaregistrované zařízení. Pokud importujete kód IMEI, který ale není kódem IMEI v inventáři služby Intune, označí se zařízení jako osobní, a ne jako firemní. Pokud importujete více kódů IMEI pro jedno zařízení, zobrazí se u kódů, které nejsou v inventáři, stav registrace **Neznámý**.<br>
+>Poznámka: Sériová čísla Androidu nemusí být jedinečná nebo existovat. Pokud chcete zjistit, jestli je sériové číslo spolehlivým identifikátorem zařízení, obraťte se na dodavatele zařízení.
+>Sériová čísla, která službě Intune oznámí zařízení, se nemusí shodovat se zobrazenými identifikátory v nabídkách zařízení Nastavení/ O zařízení. Ověřte si typ sériového čísla oznámeného výrobcem zařízení.
+
 
 **Předání seznamu firemních zařízení ve formátu .csv**
 
@@ -62,9 +65,9 @@ V textovém editoru vypadá soubor .csv takhle:
 
 3. Klikněte na ikonu složky a určete cestu k seznamu, který chcete importovat. Přejděte do souboru .csv a vyberte **Přidat**. Pokud se chcete podívat na identifikátory nového zařízení, můžete kliknout na **Aktualizovat**.
 
-Jakmile bude import hotový, tato zařízení mohou nebo nemusí být zaregistrována a mohou získat stav buď **Zaregistrované**, nebo **Nekontaktované**. **Nekontaktované** znamená, že toto zařízení nikdy se službou Intune nekomunikovalo.
+Importovaná zařízení nemusí být nutně zaregistrovaná. Zařízení můžou mít stav **Zaregistrované** nebo **Nekontaktované**. **Nekontaktované** znamená, že toto zařízení nikdy se službou Intune nekomunikovalo.
 
-## <a name="delete--corporate-identifiers"></a>Odstranění podnikových identifikátorů
+## <a name="delete-corporate-identifiers"></a>Odstranění podnikových identifikátorů
 
 1. Na portálu Intune zvolte **Registrace zařízení** > **Omezení registrace**, zvolte **Identifikátory podnikových zařízení** a pak zvolte **Odstranit**.
 

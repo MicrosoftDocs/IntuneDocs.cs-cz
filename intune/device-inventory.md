@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/25/2017
+ms.date: 07/11/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dae92c117bcf8a4a8ff133ed613f9f77ea0c07c2
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 3618c5ee0b4a7ff0e7b6a4d6ed58f77a2af0ba66
+ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="how-to-view-intune-device-inventory"></a>Jak zobrazit inventář zařízení spravovaných přes Intune
 
@@ -44,9 +44,13 @@ Teď zvolte jednu z následujících možností:
     ![Inventář hardwaru spravovaných zařízení](./media/hardware-inventory.png)
     - **Zjištěné aplikace** – zobrazí seznam všech nainstalovaných aplikací, které služba Intune našla na zařízení.
     ![Uzel zjištěných aplikací](./media/detected-applications.png)
+    
+
+
     - **Dodržování předpisů zařízením** – zobrazí, jak se na zařízení dodržují všechny zásady dodržování předpisů, které k němu byly přiřazeny.
     - **Konfigurace zařízení** – zobrazí, jak se na zařízení dodržují všechny zásady konfigurace zařízení, které k němu byly přiřazeny.
 - **Monitorování** – volbou možnosti **Akce zařízení** zobrazíte seznam akcí, které byly na spravovaných zařízeních provedeny, a jejich aktuální stav.
 - **Nastavení** > **Konektor pro TeamViewer**  – umožňuje konfiguraci vzdálené správy na zařízeních pomocí softwaru TeamViewer. Další informace najdete v tématu [Poskytování vzdálené pomoci pro zařízení s Androidem, která se spravují přes Intune](/intune/device-profile-android-teamviewer).
 
-
+>[!NOTE]
+> Intune shromažďuje inventář aplikací jenom na zařízeních vlastněných společností. Na osobních zařízeních se aplikace neinventarizují. V případě počítačů s Windows 10 se shromažďuje jenom inventář moderních aplikací na zařízeních vlastněných společností. Intune neshromažďuje informace o aplikacích Win32 na zařízeních.

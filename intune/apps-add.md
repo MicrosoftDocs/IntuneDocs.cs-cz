@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/28/2017
+ms.date: 07/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6a4dfa9e0066a2ac6f410aa9f8e4d77a40484ea5
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 69b1540d325f7cfa49e11f91fcb72a464f8a2e0e
+ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="how-to-add-an-app-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune
 
@@ -79,34 +79,9 @@ Když přidáte aplikaci do Intune, budete mít možnost vybrat požadovanou kat
 
 ## <a name="apps-added-automatically-by-intune"></a>Aplikace přidaní automaticky službou Intune
 
-Následující aplikace, které jsou publikované Microsoftem, jsou v Intune integrované a připravené na přiřazení:
-
-|||
-|-|-|
-|Název|Platforma|Typ aplikace|
-|Azure Information Protection|Android|Spravovaná aplikace obchodu pro Android|
-|Dynamics CRM pro telefony|Android|Spravovaná aplikace obchodu pro Android|
-|Dynamics CRM pro tablety|Android|Spravovaná aplikace obchodu pro Android|
-|Excel|iOS|Spravovaná aplikace obchodu pro iOS|
-|Excel|Android|Spravovaná aplikace obchodu pro Android|
-|spravovaný prohlížeč|Android|Spravovaná aplikace obchodu pro Android|
-|spravovaný prohlížeč|iOS|Spravovaná aplikace obchodu pro iOS|
-|Microsoft Dynamics CRM na telefonech|iOS|Spravovaná aplikace obchodu pro iOS|
-|Microsoft Dynamics CRM na tabletech|iOS|Spravovaná aplikace obchodu pro iOS|
-|Microsoft Power BI|iOS|Spravovaná aplikace obchodu pro iOS|
-|Microsoft Power BI|Android|Spravovaná aplikace obchodu pro Android|
-|Microsoft SharePoint|iOS|Spravovaná aplikace obchodu pro iOS|
-|Microsoft SharePoint|Android|Spravovaná aplikace obchodu pro Android|
-|Microsoft Teams|Android|Spravovaná aplikace obchodu pro Android|
-|Microsoft Teams|iOS|Spravovaná aplikace obchodu pro iOS|
-|OneDrive|iOS|Spravovaná aplikace obchodu pro iOS|
-|OneDrive|Android|Spravovaná aplikace obchodu pro Android|
-|OneNote|iOS|Spravovaná aplikace obchodu pro iOS|
-|Outlook|Android|Spravovaná aplikace obchodu pro Android|
-|Outlook|iOS|Spravovaná aplikace obchodu pro iOS|
-|Outlook Groups|Android|Spravovaná aplikace obchodu pro Android|
-|Outlook Groups|iOS|Spravovaná aplikace obchodu pro iOS|
-|PowerPoint|iOS|Spravovaná aplikace obchodu pro iOS|
+Dříve služba Intune obsahovala řadu integrovaných aplikací, které jste mohli rychle přiřadit. Na základě vaší zpětné vazby jsme tento seznam odebrali a integrované aplikace už neuvidíte.
+Pokud jste už ale nějaké integrované aplikace přiřadili, budou se v seznamu aplikací dál zobrazovat. Tyto aplikace můžete dál přiřazovat podle potřeby.
+V novější verzi plánujeme přidat jednodušší způsob výběru a přiřazování integrovaných aplikací z portálu Intune.
 
 ## <a name="next-steps"></a>Další kroky
 
