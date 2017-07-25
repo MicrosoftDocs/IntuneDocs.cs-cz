@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/15/2017
+ms.date: 07/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,17 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 112f60ff208c27825ddd0f4c812535b255894333
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: 0cbcf70af17ba7690f54196790da04becd8ba1eb
+ms.sourcegitcommit: 388c5f59bc992375ac63968fd7330af5d84a1348
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="how-to-use-microsoft-intune-app-configuration-policies-for-ios"></a>Použití zásad konfigurace aplikací v Intune pro iOS
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastavení, která se mohou vyžadovat, když uživatelé spustí aplikaci pro iOS. Aplikace může například vyžadovat, aby uživatelé zadali:
+Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastavení, která se použijí, když uživatelé spustí aplikaci pro iOS. Aplikace může například vyžadovat, aby uživatelé zadali:
 
 -   Vlastní číslo portu
 
@@ -50,61 +50,39 @@ Tyto zásady nepřiřazujte přímo uživatelům a zařízením. Místo toho př
 > Další informace o typech instalace aplikací najdete v tématu [Přidání aplikace do Microsoft Intune](apps-add.md).
 
 ## <a name="create-an-app-configuration-policy"></a>Vytvoření zásad konfigurace aplikací
-
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Mobilní aplikace**.
-1.  V úloze **Mobilní aplikace** zvolte **Spravovat** > **Zásady konfigurace aplikací**.
-
-2.  V okně seznamu zásad zvolte **Přidat**.
-
-3.  V okně **Přidat zásady konfigurace** zadejte název a volitelný popis pro zásady konfigurace aplikace.
-4.  Zvolte **Přidružená aplikace** a pak v okně **Přidružená aplikace** zvolte spravovanou aplikaci, u které chcete použít konfiguraci.
-5.  V okně **Přidat zásady konfigurace** zvolte **Nastavení konfigurace** a potom v okně Nastavení konfigurace, zvolte způsob, jak se mají určit hodnoty XML, které tvoří konfigurační profil:
-    - **Zadat XML data** – zadejte nebo vložte seznam vlastností XML, který obsahuje požadované konfigurační nastavení aplikace. Formát seznamu vlastností XML se bude lišit v závislosti na aplikaci, kterou konfigurujete. Podrobnosti o přesném formátu, který se má použít, získáte od dodavatele aplikace.
-    Intune zkontroluje, že má zadaný kód XML platný formát. Nekontroluje, že seznam vlastností XML bude fungovat s aplikací, ke které je přidružený.
-    Další informace o seznamech vlastností XML najdete v tématu [Vysvětlení seznamů vlastností XML](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) v knihovně iOS Developer Library.
-    - **Použít návrháře konfigurace** – umožňuje určit dvojice klíče a hodnoty XML přímo na portálu.
-8. Až to budete mít, vraťte se do okna **Přidat zásady konfigurace** a klikněte na **Vytvořit**.
+1.  Přihlaste se k portálu Azure Portal.
+2.  Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+3.  V okně **Intune** zvolte **Mobilní aplikace**.
+4.  V úloze **Mobilní aplikace** zvolte **Spravovat** > **Zásady konfigurace aplikací**.
+5.  V okně seznamu zásad zvolte **Přidat**.
+6.  V okně **Přidat zásady konfigurace** zadejte **Název** a volitelný **Popis** pro zásady konfigurace aplikace.
+7.  Jako **Typ registrace zařízení** vyberte jednu z těchto možností:
+    - **Zaregistrováno přes Intune** – pro aplikace, které integrovaly sadu Intune App SDK a jsou spravované pomocí Intune.
+    - **Nezaregistrováno přes Intune** – pro aplikace, které integrovaly sadu Intune App SDK a nejsou spravované pomocí Intune nebo jsou spravované jiným řešením.
+8.  Jako **platformu** zvolte **iOS** (jenom pro zařízení zaregistrovaná přes Intune).
+9.  Zvolte **Přidružená aplikace** a pak v okně **Přidružená aplikace** zvolte spravovanou aplikaci, u které chcete použít konfiguraci.
+10. V okně **Přidat zásady konfigurace** zvolte **Nastavení konfigurace**.
+11. V okně **Nastavení konfigurace** zvolte způsob, jak se mají určit hodnoty XML, které tvoří konfigurační profil:
+    - **Zadat XML data**(jenom pro zařízení zaregistrovaná přes Intune) – zadejte nebo vložte seznam vlastností XML, který obsahuje požadované konfigurační nastavení aplikace. Formát seznamu vlastností XML se liší v závislosti na aplikaci, kterou konfigurujete. Podrobnosti o přesném formátu, který se má použít, získáte od dodavatele aplikace.
+Intune zkontroluje, že má zadaný kód XML platný formát. Nekontroluje, jestli seznam vlastností XML funguje s aplikací, ke které je přidružený.
+Další informace o seznamech vlastností XML najdete v tématu [Vysvětlení seznamů vlastností XML](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) v knihovně iOS Developer Library.
+    - **Použít návrháře konfigurace** (bez ohledu na to, jestli je zařízení zaregistrováno přes Intune) – umožňuje určit dvojice klíče a hodnoty XML přímo na portálu.
+11. Až to budete mít, vraťte se do okna **Přidat zásady konfigurace** a klikněte na **Vytvořit**.
 
 Zásady se vytvoří a zobrazí se v okně se seznamem zásad.
 
-Potom pokračujte s [přiřazením](apps-deploy.md) a [sledováním](apps-monitor.md) aplikace jako obvykle.
 
-Spuštěná aplikace přiřazená zařízení se spustí s nastavením, které jste nakonfigurovali v zásadách konfigurace aplikací.
 
-> [!TIP]
-> V případě konfliktu jedné nebo více zásad konfigurace aplikací se nevynutí žádná zásada.
+>[!Note]
+>Pomocí sady [Intune App SDK](https://docs.microsoft.com/intune/app-sdk-ios) můžete připravit, aby se obchodní aplikace spravovaly pomocí zásad ochrany aplikací Intune a zásad konfigurace aplikací bez ohledu na to, jestli je zařízení zaregistrováno přes Intune. Můžete třeba použít zásadu konfigurace aplikací ke konfiguraci povolených a blokovaných adres URL pro [Intune Managed Browser](app-configuration-managed-browser.md). Když je aplikace s těmito zásadami kompatibilní, můžete ji pomocí zásad nakonfigurovat.
 
-## <a name="create-a-mam-targeted-configuration-policy"></a>Vytvoření zásady konfigurace cílené na MAM
-Konfigurace určená pro správu mobilních aplikací (MAM) umožňuje aplikacím přijímat konfigurační data prostřednictvím sady SDK aplikace Intune. Formát a varianty těchto dat musí vlastník aplikace nebo její vývojář definovat a oznámit zákazníkům, kteří využívají Intune. Správci Intune mohou konfigurační data zacílit a nasadit prostřednictvím konzoly Intune Azure. Data konfigurace cílené na MAM lze předávat do aplikací s podporou MAM-WE prostřednictvím služby MAM. Seznam povolených/zakázaných adres URL má například [Intune Managed Browser](https://docs.microsoft.com/intune/app-configuration-managed-browser). Konfigurační data aplikace se odešlou přímo do aplikace přes službu MAM, nikoliv prostřednictvím kanálu MDM. [Zásady konfigurace aplikací MDM](https://docs.microsoft.com/intune/app-configuration-policies-use-ios#create-an-app-configuration-policy) představují nativní řešení prostřednictvím správy mobilních zařízení (MDM). Od konfigurace cílené na MAM se liší hlavně v tom, že zařízení, na kterém je aplikace spuštěná, nemusí být v MDM zaregistrované. Konfigurace cílená na MAM je k dispozici pro iOS i Android. Pro iOS musí mít aplikace začleněnou sadu Intune App SDK pro iOS (verze 7.0.1) a musí se účastnit nastavení konfigurace aplikace. Zásadu konfigurace cílené na MAM vytvoříte tímto způsobem: 
 
-1. Přihlaste se k **portálu Azure Portal**.
+Když se přiřazená aplikace na zařízení spustí, použijí se nastavení, která jste nakonfigurovali v zásadách konfigurace aplikací.
+Informace o tom, co se stane, když jedna nebo více zásad aplikací kolidují, najdete v dokumentaci k aplikaci, kterou konfigurujete.
 
-2. Vyberte **Intune > Mobilní aplikace – Zásady konfigurace aplikací**.
+>[!Tip]
+>K provedení těchto úkolů můžete použít také Graph API. Podrobnosti najdete v [referenčních informacích o cílové konfiguraci MAM pomocí Graph API](https://graph.microsoft.io/docs/api-reference/beta/api/intune_mam_targetedmanagedappconfiguration_create).
 
-3. V okně **Zásady konfigurace aplikací** vyberte možnost **Přidat**.
-
-4. Zadejte **název** a volitelný **popis** nastavení konfigurace aplikace a potom vyberte **Nezaregistrováno přes Intune**.
-
-5. Klikněte na **Vyberte požadované aplikace** a potom v okně **Cílové aplikace** zvolte aplikace pro požadované platformy. <br>
-**Poznámka:** U obchodních aplikací klikněte na **Další aplikace**. Zadejte ID balíčku vaší aplikace.
-
-6. Kliknutím na **OK** se vraťte do okna **Přidat konfiguraci aplikace**.
-
-7. Vyberte možnost **Definovat konfiguraci**. V okně **Konfigurace** definujte dvojice klíč-hodnota, které budou určovat konfiguraci.
-
-8. Když jste hotovi, klikněte na **OK**.
-
-9. V okně **Přidat konfiguraci aplikace** vyberte možnost **Vytvořit**.
-
-Vytvoří se nová konfigurace, která se zobrazí v okně Konfigurace aplikací.
-
-Potom pokračujte s [přiřazením](apps-deploy.md) a [sledováním](apps-monitor.md) aplikace jako obvykle.
-
-Aplikace přiřazená zařízení (integrovaná se sadou Intune APP SDK) se spustí s nastavením, které jste nakonfigurovali v zásadě konfigurace cílené na MAM. Součástí přiřazené aplikace musí být podporovaná verze sady Intune APP SDK. Další informace o požadavcích na použití zásad konfigurace cílené na MAM při vývoji aplikací najdete v článku [Průvodce integrací sady Intune APP SDK pro iOS](https://docs.microsoft.com/intune/app-sdk-ios).
-
-Další informace o možnostech rozhraní Graph API s ohledem na hodnoty konfigurace cílené na MAM najdete v článku [Referenční informace pro Graph API: Konfigurace cílená na MAM](https://graph.microsoft.io/docs/api-reference/beta/api/intune_mam_targetedmanagedappconfiguration_create).
 
 ## <a name="information-about-the-xml-file-format"></a>Informace o formátu souboru XML
 
@@ -161,3 +139,7 @@ Když vytvoříte soubor konfigurace aplikací, můžete pomocí tohoto formátu
 </dict>
 
 ```
+
+## <a name="next-steps"></a>Další kroky
+
+Pokračujte s [přiřazením](apps-deploy.md) a [sledováním](apps-monitor.md) aplikace jako obvykle.

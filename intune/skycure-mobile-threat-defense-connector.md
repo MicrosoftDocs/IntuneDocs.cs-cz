@@ -15,11 +15,11 @@ ms.assetid: df4ce3f6-a093-432c-ab86-7a83865e389e
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c55fa5b3ea86127648850ae7374107ca65db9764
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 2a7c15cf695fd88ba5961611c78ecc28a29238af
+ms.sourcegitcommit: 3b21f20108e2bf1cf47c141b36a7bdae609c4ec3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/10/2017
 ---
 # <a name="skycure-mobile-threat-defense-connector"></a>Konektor ochrany před mobilními hrozbami Skycure
 
@@ -115,14 +115,10 @@ Více informací najde na [webu Skycure](https://www.skycure.com/skycure-microso
 
 Zde jsou uvedené další kroky, které potřebujete k integraci služby Intune se službou Skycure:
 
-1.  [Konfigurace služby Skycure k použití jednotného přihlašování služby Azure Active Directory (SSO)](skycure-azure-sso-configure.md)
+1.  [Přidání a přiřazení aplikací Skycure, aplikace Microsoft Authenticator a zásad konfigurace aplikace pro iOS](mtd-apps-ios-app-configuration-policy-add-assign.md)
 
-2.  [Stažení zásad konfigurace aplikace Skycure pro iOS](skycure-ios-app-configuration-policy-download.md)
+2.  [Nastavení integrace služby Skycure se službou Intune](skycure-mtd-connector-integration.md)
 
-3.  [Přidání a přiřazení aplikací Skycure, aplikace Microsoft Authenticator a zásad konfigurace aplikace pro iOS](mtd-apps-ios-app-configuration-policy-add-assign.md)
+3.  [Povolení konektoru MTD Skycure v Intune](mtd-connector-enable.md)
 
-4.  [Nastavení integrace služby Skycure se službou Intune](skycure-mtd-connector-integration.md)
-
-5.  [Povolení ochrany před mobilními hrozbami Skycure ve službě Intune](mtd-connector-enable.md)
-
-6.  [Vytvoření zásad dodržování předpisů pro ochranu zařízení před mobilními hrozbami Skycure v Intune](mtd-device-compliance-policy-create.md)
+4.  [Vytvoření zásad dodržování předpisů pro zařízení se službou Skycure v Intune](mtd-device-compliance-policy-create.md)
