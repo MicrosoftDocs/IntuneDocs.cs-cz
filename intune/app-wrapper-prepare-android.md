@@ -5,7 +5,7 @@ keywords:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.date: 07/06/2017
+ms.date: 07/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: oldang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 299e2ed0a84c7158a582ee874f0711eb3c379532
-ms.sourcegitcommit: bee30f4c9e04129d70305fcafc4152c6e062a8b0
+ms.openlocfilehash: ebea9fe4cbf0c6c788ba4a209132856eda06445e
+ms.sourcegitcommit: 5eb209ae48173ddfdbbab131f12f3ac3498dcd87
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/18/2017
 ---
 # <a name="prepare-android-apps-for-mobile-application-management-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro Android na správu mobilních aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -121,6 +121,17 @@ invoke-AppWrappingTool -InputPath .\app\HelloWorld.apk -OutputPath .\app_wrapped
 Zobrazí se výzva k zadání parametrů **KeyStorePassword** a **KeyPassword**. Zadejte uživatelské jméno a heslo, které jste použili k vytvoření souboru úložiště klíčů.
 
 Zabalená aplikace a soubor protokolu se vygenerují a uloží do zadané výstupní cesty.
+
+## <a name="reusing-signing-certificates-and-wrapping-apps"></a>Opětovné použití podpisových certifikátů a balení aplikací
+Android vyžaduje, že všechny aplikace musí být podepsané platným certifikátem, aby je bylo možné nainstalovat na zařízení s Androidem.
+
+Zabalené aplikace je možné podepsat jako součást procesu zabalení nebo *po* zabalení pomocí stávajících podpisových nástrojů (veškeré podpisové informace v aplikaci budou před zabalením zahozeny).
+ 
+Pokud je to možné, měly by se během balení použít podpisové informace použité již během sestavování buildu. V některých organizacích to může vyžadovat spolupráci s těmi, kdo vlastní informace o úložišti klíčů (tedy s týmem, který vytvořil build aplikace). 
+
+Pokud předchozí podpisový certifikát nelze použít nebo aplikace zatím nebyla nasazena, můžete vytvořit nový podpisový certifikát podle pokynů v [Příručce pro vývojáře pro Android](https://developer.android.com/studio/publish/app-signing.html#signing-manually).
+
+Pokud již aplikace byla dříve nasazena s jiným podpisovým certifikátem, není ji možné po upgradu nahrát do konzoly Intune. Pokud bude aplikace podepsána s jiným certifikátem, než je ten, se kterým byla sestavena, naruší se scénáře upgradu aplikace. Všechny nové podpisové certifikáty je tedy nutné uchovat pro upgrady aplikací. 
 
 ## <a name="security-considerations-for-running-the-app-wrapping-tool"></a>Důležité informace o zabezpečení při spuštění nástroje App Wrapping Tool
 Pro zabránění potenciálnímu falšování identity, zpřístupnění informací a zvýšení oprávnění pro útoky zajistěte toto:

@@ -14,11 +14,11 @@ ms.assetid: 0f737d48-24bc-44cd-aadd-f0a1d59f6893
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f5af3aefe814a52ae3b43a894242ac972e0cc8fc
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: 531112301d0c3827ec7eb3ab4087218caa331b90
+ms.sourcegitcommit: 2b7d644c7a4f85315e11a7d0c5885cc66975c2ad
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/14/2017
 ---
 # <a name="intune-network-bandwidth-use"></a>Využití šířky pásma Intune
 
@@ -30,7 +30,7 @@ Tyto pokyny pomůžou správcům Intune porozumět požadavkům služby Intune n
 Tabulka uvádí přibližnou velikost a četnost u nejčastějšího obsahu přenášeného po síti u každého klienta.
 
 > [!NOTE]
-> Aby mohly počítače a mobilní zařízení přijímat potřebné aktualizace a obsah ze služby Intune, musí se pravidelně připojovat k Internetu. Čas potřebný k přijetí aktualizací nebo obsahu se bude lišit. Obecně ale platí, že by počítače a mobilní zařízení měly být trvale připojené k Internetu každý den alespoň jednu hodinu.
+> Aby bylo zajištěno, že zařízení obdrží aktualizace a obsah z Intune, musí se pravidelně připojovat k internetu. Čas potřebný k přijetí aktualizací nebo obsahu se může lišit. Zařízení by ale měla být připojená k internetu každý den nepřetržitě alespoň po dobu jedné hodiny.
 
 |Typ obsahu|Přibližná velikost|Četnost a podrobnosti|
 |----------------|--------------------|-------------------------|
@@ -51,9 +51,9 @@ Tabulka uvádí přibližnou velikost a četnost u nejčastějšího obsahu pře
 Ke snížení využití šířky pásma sítě pro klienty Intune můžete použít jeden nebo více těchto způsobů.
 
 ### <a name="use-a-proxy-server-to-cache-content-requests"></a>Používání proxy serveru pro ukládání požadavků obsahu do mezipaměti
-Použitím proxy serveru, který může ukládat do mezipaměti obsah, můžete snížit počet duplicitních souborů ke stažení a snížit využití šířky pásma sítě klienty, kteří požadují obsah z Internetu.
+Proxy server může ukládat do mezipaměti obsah a snížit tak počet duplicitních položek ke stažení a redukovat u obsahu z internetu využití šířky pásma sítě.
 
-Proxy server s možností ukládání do mezipaměti přijme požadavky na obsah z klientských počítačů ve vaší síti, načte tento obsah z Internetu a potom uloží odpovědi HTTP a binární soubory ke stažení do mezipaměti. Tento server využívá informace uložené v mezipaměti k odpovědi na následné žádosti z klientských počítačů Intune.
+Proxy server ukládající do mezipaměti, který dostává z klientů žádosti o obsah, může takový obsah načíst a může uložit do mezipaměti odpovědi z webu i stahované položky. Server používá data uložená v mezipaměti pro odpovědi na následné žádosti z klientských počítačů.
 
 Tady jsou obvyklá nastavení proxy serveru, který do mezipaměti ukládá obsah pro klienty Intune.
 
@@ -70,7 +70,7 @@ Intune podporuje používání Služby inteligentního přenosu na pozadí (BITS
 Další informace o službě BITS a počítačích s Windows najdete v části [Služba inteligentního přenosu na pozadí](http://technet.microsoft.com/library/bb968799.aspx) v knihovně TechNet.
 
 ### <a name="use-branchcache-on-computers"></a>Používání BranchCache na počítačích
-Klienti Intune můžou díky BranchCache omezit přenos v síti WAN. Tyto operační systémy, které jsou podporované jako klienti, taky podporují BranchCache:
+Klienti Intune můžou díky BranchCache omezit přenos v síti WAN. BranchCache podporují následující operační systémy:
 
 - Windows 7
 - Windows 8.0
@@ -79,22 +79,26 @@ Klienti Intune můžou díky BranchCache omezit přenos v síti WAN. Tyto opera�
 
 Abyste mohli BranchCache používat, musíte na klientském počítači povolit BranchCache a pak ho nakonfigurovat pro **režim distribuované mezipaměti**.
 
-Ve výchozím nastavení jsou BranchCache a režim distribuované mezipaměti při instalaci klienta Intune na počítači povolené. Pokud už ale klient má zásady skupiny zakazující BranchCache, Intune nemůže tyto zásady přepsat a služba BranchCache zůstane na tomto počítači zakázaná.
+Ve výchozím nastavení jsou BranchCache a režim distribuované mezipaměti při instalaci klienta Intune na počítače povolené. Pokud ale zásady skupiny BranchCache zakázaly, nemůže Intune přepsat tyto zásady a služba BranchCache zůstane zakázaná.
 
-Pokud používáte BranchCache, měli byste komunikovat s ostatními správci ve vaší organizaci, kteří spravují zásady skupiny a zásady brány firewall pro Intune, a zajistit, aby nenasazovali zásady zakazující BranchCache nebo výjimky brány firewall. Další informace o BranchCache najdete v tématu [BranchCache – přehled](http://technet.microsoft.com/library/hh831696.aspx).
+Pokud používáte BranchCache, měli byste při správě zásad skupiny a zásad brány firewall pro Intune spolupracovat s ostatními správci ve vaší organizaci. Nesmí být nasazeny zásady zakazující BranchCache nebo výjimky brány firewall. Další informace o BranchCache najdete v tématu [BranchCache – přehled](http://technet.microsoft.com/library/hh831696.aspx).
 
 ## <a name="network-communication-requirements"></a>Požadavky na síťovou komunikaci
 
-Musíte povolit síťovou komunikaci mezi zařízeními, která spravujete a používáte ke správě předplatného Intune, a weby požadovanými pro cloudové služby.
+Povolte síťovou komunikaci mezi zařízeními, která spravujete, a weby požadovanými pro cloudové služby.
 
 Intune nepoužívá místní infrastrukturu, jako jsou servery se softwarem Intune, ale existují možnosti používání místní infrastruktury včetně nástrojů pro synchronizaci Exchange a Active Directory.
 
-Abyste mohli spravovat počítače, které jsou za bránami firewall nebo proxy servery, je potřeba nastavit brány firewall a proxy servery a povolit komunikaci pro Intune. Pokud chcete spravovat počítače, které jsou za proxy serverem, mějte na paměti následující okolnosti:
+Pokud chcete spravovat počítače za branami firewall a proxy servery, je nutné povolit komunikaci pro Intune.
 
 -   Proxy server musí podporovat **HTTP (80)** i **HTTPS (443)**, protože klienti Intune používají oba protokoly.
--   U některých operací, jako je stahování softwaru a aktualizací, vyžaduje Intune přístup k neověřenému proxy serveru manage.microsoft.com.
+-   U některých úloh, jako je stahování softwaru a aktualizací, vyžaduje Intune neověřený přístup k proxy serveru manage.microsoft.com.
 
 Nastavení proxy serveru můžete upravit na jednotlivých klientských počítačích, nebo můžete nastavení změnit pomocí zásad skupiny u všech klientských počítačů, které jsou umístěné za zadaným proxy serverem.
+
+
+<!--
+> [!NOTE] If Windows 8.1 devices haven't cached proxy server credentials, enrollment might fail because the request doesn't prompt for credentials. Enrollment fails without warning as the request wait for a connection. If users might experience this issue, instruct them to open their browser settings and save proxy server settings to enable a connection.   -->
 
 Spravovaná zařízení musí být nakonfigurovaná tak, aby **všichni uživatelé** měli přístup ke službám přes brány firewall.
 

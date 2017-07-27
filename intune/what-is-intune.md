@@ -6,35 +6,32 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 nmanager: angrobe
-ms.date: 06/13/2017
+ms.date: 07/17/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4a085264-232a-4af0-97f1-747496c44517
 ms.suite: ems
-ms.custom: intune-azure
-ms.openlocfilehash: 7549f3277c23c3951090502f2babfe7c47b0a201
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.custom: 
+ms.openlocfilehash: a51b3c59d922b0c150073017222dca0c90c5b7a0
+ms.sourcegitcommit: 36ae73f59ff5e9fdfe4f930ad0aa4b7795fe11f2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/18/2017
 ---
 # <a name="introduction-to-microsoft-intune-in-the-azure-portal"></a>Úvod do Microsoft Intune na portálu Azure Portal
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Microsoft Intune je teď na portálu Azure Portal, což znamená, že pracovní postupy a funkce, na které jste zvyklí, se mění.
+Microsoft Intune je teď na portálu Azure Portal, což znamená, že se mění pracovní postupy a funkce, na které jste zvyklí.
 Nový portál nabízí nové a aktualizované funkce portálu Azure Portal, na kterém můžete spravovat mobilní zařízení, počítače a aplikace svojí organizace.
 
-> [!IMPORTANT]
-> **Ještě nový portál nevidíte?**<br>
-> Provádí se migrace stávajících tenantů do nového prostředí. Před migrací tenanta se v Office Message Center zobrazí oznámení.
->
-> Zpřístupnění pracovních postupů registrace Apple v Azure u účtů Intune vytvořených před lednem 2017 vyžaduje jednorázovou migraci. Plán pro migraci ještě nebyl oznámen. Pokud váš stávající účet nemá k portálu Azure Portal přístup, doporučujeme vytvořit zkušební účet.
->
-> Podívejte se na seznam potenciálních problémů, které mohou migraci zablokovat: https://blogs.technet.microsoft.com/intunesupport/2017/05/17/intune-migration-blockers-for-grouping-targeting/
+* Téma [Kde v Azure najdu svoje funkce](ui-changes.md) obsahuje referenční informace, kde můžete vidět konkrétní pracovní postupy a uživatelská rozhraní, která se změnila s přechodem na Azure.
+* V tématu [Skupiny klasického Intune na portálu Azure](groups-get-started.md) je vysvětlené, jaký dopad má přechod na skupiny zabezpečení Azure Active Directory na správu skupin.
+
+
 
 
 V této knihovně může najít průběžně aktualizované informace o novém portálu. Pokud máte nějaké návrhy, poskytněte nám zpětnou vazbu v komentářích k tomuto tématu. Rádi bychom znali vaše názory.
@@ -47,7 +44,14 @@ K tomu nejdůležitějšímu v novém prostředí patří:
 - Skupiny Azure Active Directory (AD) pro zajištění kompatibility mezi všemi aplikacemi Azure
 - Podpora většiny moderních prohlížečů
 
-Pokud hledáte dokumentaci konzoly Intune Classic, podívejte se do [knihovny dokumentace Intune](https://docs.microsoft.com/intune-classic/).
+> [!IMPORTANT]
+> **Ještě nový portál nevidíte?**<br>
+> Provádí se migrace stávajících tenantů do nového prostředí. Před migrací tenanta se v Office Message Center zobrazí oznámení.
+>
+> Zpřístupnění pracovních postupů registrace Apple v Azure u účtů Intune vytvořených před lednem 2017 vyžaduje jednorázovou migraci. Plán pro migraci ještě nebyl oznámen. Pokud váš stávající účet nemá k portálu Azure Portal přístup, doporučujeme vytvořit zkušební účet.
+>
+> Podívejte se na seznam potenciálních problémů, které mohou migraci zablokovat: https://blogs.technet.microsoft.com/intunesupport/2017/05/17/intune-migration-blockers-for-grouping-targeting/
+
 
 ## <a name="before-you-start"></a>Než začnete
 
@@ -91,7 +95,7 @@ Informace, které vám usnadní [plánování a navrhování](/intune-classic/pl
 ### <a name="on-premises-access"></a>Místní přístup
 [Konfigurace přístupu k Exchangi ActiveSync a místnímu Exchangi](/intune-classic/deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune)
 ### <a name="users"></a>Uživatelé
-[Další informace o uživatelích zařízení, která spravujete, a řazení prostředků do skupin](user-management.md)
+[Další informace o uživatelích zařízení, která spravujete, a řazení prostředků do skupin](users-add.md)
 ### <a name="groups"></a>Skupiny
 [Informace o tom, jak můžete používat skupiny Azure Active Directory s Intune](groups-get-started.md)
 ### <a name="intune-roles"></a>Role Intune

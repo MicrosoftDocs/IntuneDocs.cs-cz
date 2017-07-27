@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/16/2017
+ms.date: 07/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ee43647190da705581eaa5a266db3712391e06f2
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: e47e6fd8bbb3476beb8bd9df22376fdfd339ba2e
+ms.sourcegitcommit: 83dd7a127898dd9528187aa8d430cc1be9dd7738
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/15/2017
 ---
 # <a name="use-managed-apps-on-your-ios-device"></a>Použití spravovaných aplikací na zařízení s iOSem
 
@@ -38,6 +38,8 @@ Spravované aplikace můžete získat několika různými způsoby:
 -   Při registraci zařízení v Microsoft Intune buď nainstalujete aplikaci z aplikace Portál společnosti nebo webu Portál společnosti, nebo ji na vaše zařízení nainstaluje správce IT. Další informace o registraci najdete v tématu [Registrace zařízení s macOS do Intune](enroll-your-device-in-intune-ios.md) nebo [Registrace zařízení s iOSem do Intune](enroll-your-device-in-intune-macos.md).
 
 -   Nainstalujte aplikaci z App Storu a potom se přihlaste pomocí svého firemního uživatelského účtu spravovaného službou Intune.
+
+Váš správce IT může někdy nakoupit pro aplikaci, kterou instalujete, více licencí. Pokud se zobrazí zpráva, že máte přijmout smlouvu Apple Volume Purchase Program, není to nic nezvyklého a můžete ji přijmout. Pokud ji nepřijmete, nebudete si moct aplikaci nainstalovat.
 
 ### <a name="what-can-my-it-admin-manage-in-an-app"></a>Co může správce IT spravovat v mé aplikaci?
 Tady jsou některé příklady možností, které může správce IT spravovat v aplikaci a které můžou ovlivnit vaši interakci s firemními daty na zařízení:

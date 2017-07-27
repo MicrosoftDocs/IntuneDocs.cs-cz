@@ -1,82 +1,141 @@
 ---
-title: "Začínáme s dodržováním předpisů zařízeními"
+title: "Zásady dodržování předpisů zařízeními v Intune"
 titleSuffix: Intune on Azure
-description: "V tomto tématu jsou vysvětlené potřebné předpoklady k vytváření zásad dodržování předpisů v Microsoft Intune."
+description: "V tomto tématu se dozvíte o dodržování předpisů zařízením v Microsoft Intune."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 07/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 8103df7f-1700-47b4-9a72-c196d2a02f22
+ms.assetid: a916fa0d-890d-4efb-941c-7c3c05f8fe7c
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: aa9a5c8c44b82dcbc1ae7a4609b12e22c6599e9e
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 9723e5a8b001068e8b7c9994723e6c7111e7a80d
+ms.sourcegitcommit: abd8f9f62751e098f3f16b5b7de7eb006b7510e4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/20/2017
 ---
-# <a name="get-started-with-device-compliance-in-intune"></a>Začínáme s dodržováním předpisů zařízeními v Intune
-
+# <a name="get-started-with-intune-device-compliance-policies"></a>Začínáme se zásadami dodržování předpisů zařízeními v Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-V tomto tématu se dozvíte toto: 
+## <a name="what-is-device-compliance-in-intune"></a>Co je dodržování předpisů zařízením v Intune?
 
-- Co potřebujete, abyste mohli začít s vytvářením zásad dodržování předpisů zařízeními.
-- Rychlý přehled toho, co můžete vidět a dělat na portálu Intune Azure Portal. 
+Zásady dodržování předpisů zařízeními v Intune definují pravidla a nastavení, která jsou pro zařízení povinná, pokud má toto zařízení vyhovět zásadám Intune.
 
-Pokud o dodržování předpisů zařízeními moc nevíte, můžete se v [tomto tématu](device-compliance.md) dozvědět, co dodržování předpisů zařízeními vlastně je a jak se dá používat ve vaší organizaci.
+Mezi tyto pravidla patří:
+
+- Používání hesla pro přístup k zařízení
+
+- Šifrování
+
+- Jestli je zařízení s jailbreakem nebo rootem
+
+- Požadavek na minimální verzi operačního systému
+
+- Maximální povolená verze operačního systému
+
+- Požadavek, aby zařízení bylo na určité úrovni Mobile Threat Defense nebo pod ní
+
+Zásady dodržování předpisů zařízeními můžete používat i k monitorování stavu dodržování předpisů u vašich zařízení.
+
+### <a name="device-compliance-requirements"></a>Požadavky na dodržování předpisů zařízení
+
+Požadavky na dodržování předpisů jsou v podstatě pravidla, například vyžadování PIN kódu zařízení nebo šifrování, která můžete v zásadách dodržování předpisů určit jako povinná nebo nepovinná.
+
+<!---### Actions for noncompliance
+
+You can specify what needs to happen when a device is determined as noncompliant. This can be a sequence of actions during a specific time.
+When you specify these actions, Intune will automatically initiate them in the sequence you specify. See the following example of a sequence of
+actions for a device that continues to be in the noncompliant status for
+a week:
+
+-   When the device is first determined to be non-compliant, an email with noncompliant notification is sent to the user.
+
+-   3 days after initial noncompliance state, a follow up reminder is sent to the user.
+
+-   5 days after initial noncompliance state, a final reminder with a notification that access to company resources will be blocked on the device in 2 days if the compliance issues are not remediated is sent to the user.
+
+-   7 days after initial noncompliance state, access to company resources is blocked. This requires that you have conditional access policy that specifies that access from noncompliant devices should    be blocked for services such as Exchange and SharePoint.
+
+### Grace Period
+
+This is the time between when a device is first determined as
+noncompliant to when access to company resources on that device is blocked. This time allows for time that the user has to resolve
+compliance issues on the device. You can also use this time to create your action sequences to send notifications to the user before their access is blocked.
+
+Remember that you need to implement conditional access policies in addition to compliance policies in order for access to company resources to be blocked.--->
 
 ##  <a name="pre-requisites"></a>Požadavky
 
--   Předplatné Intune
+Pokud chcete používat zásady dodržování předpisů zařízeními s Intune, potřebujete následující předplatná:
 
--   Předplatné Azure Active Directory
+- Intune EMS
 
-##  <a name="supported-platforms"></a>Podporované platformy:
+- Azure AD Premium
+
+###  <a name="supported-platforms"></a>Podporované platformy:
 
 -   Android
 
 -   iOS
 
--   Windows 8.1
+-   macOS (preview)
+
+-   Windows 8.1
 
 -   Windows Phone 8.1
 
 -   Windows 10
 
-##  <a name="azure-portal-workflow"></a>Pracovní postup na portálu Azure Portal
+> [!IMPORTANT]
+> Aby mohla zařízení oznamovat stavy dodržování předpisů, musejí být zaregistrovaná v Intune.
 
-Tady je přehled toho, jak můžete vytvořit a spravovat zásady dodržování předpisů zařízeními na portálu Azure Portal pro Intune.
+## <a name="how-intune-device-compliance-policies-work-with-azure-ad"></a>Jak fungují zásady dodržování předpisů zařízeními v Intune s Azure AD
 
-<!---### Overview
+Pokud je zařízení zaregistrované v Intune, proběhne proces registrace Azure AD, který aktualizuje v Azure AD informace týkající se atributů zařízení. Jednou z klíčových informací je stav dodržování předpisů zařízením, který používají zásady podmíněného přístupu k blokování nebo povolení přístupu k e-mailu a dalším podnikovým prostředkům.
 
-When you choose the **Set device compliance** workload, the blade opens with an  **Overview** section that displays a summary view of your compliance policies that you have created and the status of the devices they have been applied to. If you
-don’t have any policies configured yet, the overview will just include the various reports but with no data.--->
+- Přečtěte si další informace o [procesu registrace Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-overview).
 
-### <a name="manage"></a>Správa
+##  <a name="ways-to-use-device-compliance-policies"></a>Způsoby používání zásad dodržování předpisů zařízeními
 
-Můžete vytvářet, upravovat a odstraňovat zásady dodržování předpisů. Také můžete přiřadit zásady uživatelům.
+### <a name="with-conditional-access"></a>S podmíněným přístupem
+Zásady dodržování předpisů spolu s podmíněným přístupem umožňují povolit přístup k e-mailu a dalším podnikovým prostředkům jenom zařízením, která vyhovují jednomu nebo více pravidlům zásad dodržování předpisů zařízeními.
 
-<!---### Monitor
+### <a name="without-conditional-access"></a>Bez podmíněného přístupu
+Zásady dodržování předpisů zařízeními se dají používat nezávisle na podmíněném přístupu. Při nezávislém použití zásad dodržování předpisů se cílová zařízení vyhodnotí a nahlásí se jejich stav dodržování předpisů. Můžete si například nechat nahlásit, kolik zařízení není šifrovaných nebo která zařízení mají jailbreak nebo root. Pokud ale tyto zásady použijete nezávisle, nefunguje žádné omezení přístupu k prostředkům společnosti.
 
-This section is a detailed view of what you see in the **Overview**. A list of all the reports are displayed in this section and you can interactively drill down through each of these reports.--->
+Zásady dodržování předpisů se nasazují uživatelům. Po nasazení zásady dodržování předpisů uživateli se u jeho zařízení kontroluje dodržování předpisů. Další informace o tom, jak dlouho trvá, než mobilní zařízení načte zásady po jejich nasazení, najdete v článku Správa nastavení a funkcí na vašich zařízeních.
 
-### <a name="setup"></a>Nastavení
+##  <a name="using-device-compliance-policies-in-the-intune-classic-portal-vs-azure-portal"></a>Použití zásad dodržování předpisů zařízeními na klasickém portálu Intune a na portálu Azure Portal
 
-Doba platnosti stavu dodržování předpisů
+Abychom vám pomohli při přechodu na nový pracovní postup pro dodržování zásad zařízeními na portálu Azure Portal, chtěli bychom vás upozornit na hlavní rozdíly.
+
+- Zásady dodržování předpisů se na portálu Azure Portal vytvářejí zvlášť pro každou podporovanou platformu.
+- Na klasickém portálu Intune měly všechny podporované platformy společnou jednu zásadu dodržování předpisů zařízeními.
+
+<!--- -   In the Azure portal, you have the ability to specify actions and notifications that are intiated when a device is determined to be noncompliant. This ability does not exist in the Intune admin console.
+
+-   In the Azure portal, you can set a grace period to allow time for the end-user to get their device back to compliance status before they completely lose the ability to get company data on their device. This is not available in the Intune admin console.--->
+
+##  <a name="migrate-device-compliance-policies-from-the-intune-classic-portal-to-the-azure-portal"></a>Migrace zásad dodržování předpisů zařízeními z klasického portálu Intune na portál Azure Portal
+
+Zásady dodržování předpisů zařízeními vytvořené na [klasickém portálu Intune](https://manage.microsoft.com) se na novém portálu [Azure Portal v Intune](https://portal.azure.com) nezobrazí. Pro uživatele ale nadále platí a dají se spravovat prostřednictvím klasického portálu Intune.
+
+Pokud chcete využívat nové funkce související s dodržováním předpisů zařízeními na portálu Azure Portal, musíte vytvořit nové zásady dodržování předpisů zařízeními přímo na portálu Azure Portal. Pokud přiřadíte nové zásady dodržování předpisů zařízeními na portálu Azure Portal uživateli, kterému byly přiřazeny zásady dodržování předpisů zařízeními také na klasickém portálu Intune, budou mít zásady na portálu Azure Portal přednost před těmi, které byly vytvořeny na klasickém portálu Intune.
 
 ##  <a name="next-steps"></a>Další kroky
-[Vytvoření zásady dodržování předpisů pro Android](compliance-policy-create-android.md)
 
-[Vytvoření zásady dodržování předpisů pro Android for Work](compliance-policy-create-android-for-work.md)
+Vytvoření zásad dodržování předpisů zařízeními pro následující platformy:
 
-[Vytvoření zásady dodržování předpisů pro iOS](compliance-policy-create-ios.md)
-
-[Vytvoření zásady dodržování předpisů pro Windows](compliance-policy-create-windows.md)
+- [Android](compliance-policy-create-android.md)
+- [Android for work](compliance-policy-create-android-for-work.md)
+- [iOS](compliance-policy-create-ios.md)
+- [macOS](compliance-policy-create-mac-os.md)
+- [Windows](compliance-policy-create-windows.md)

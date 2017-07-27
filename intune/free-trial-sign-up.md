@@ -1,7 +1,7 @@
 ---
-title: "Registrace bezplatné 30denní zkušební verze"
-titleSuffix: Intune on Azure
-description: "Registrace k Intune na platformě Azure"
+title: "Registrace 30denní bezplatné zkušební verze Microsoft Intune"
+titleSuffix: 
+description: "Registrace 30denní bezplatné zkušební verze Intune"
 keywords: 
 author: lindavr
 ms.author: lindavr
@@ -13,22 +13,22 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.suite: ems
-ms.custom: intune-azure
-ms.openlocfilehash: 7dafdb974dd975eaa7f3268119de6c047c50f858
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.custom: 
+ms.openlocfilehash: de86b6c9938d4be3f90d62e96080d8b967886792
+ms.sourcegitcommit: 5eb209ae48173ddfdbbab131f12f3ac3498dcd87
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/18/2017
 ---
-# <a name="sign-up-for-a-microsoft-intune-free-trial-for-the-azure-portal"></a>Registrace bezplatné zkušební verze Microsoft Intune pro portál Azure Portal
+# <a name="sign-up-for-a-microsoft-intune-free-trial"></a>Registrace bezplatné zkušební verze Microsoft Intune
 
 
 Tento článek vás provede registrací bezplatné zkušební verze samostatné služby Intune pro portál Azure Portal.
 
 1. Přejděte na stránku [registrace Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20) a vyplňte formulář pro registraci zkušebního předplatného.
-account-sign-up.md
+* Pokud máte pracovní nebo školní účet a chcete ho použít pro zkušební verzi Intune, postupujte místo toho podle [těchto pokynů pro přihlášení](/intune/account-sign-up).
 
-  Pokud se většina pracovníků IT oddělení a uživatelů nachází v jiném národním prostředí než vy, můžete toto národní prostředí vybrat v části **Umístění vaší společnosti**.
+* Pokud se většina pracovníků IT oddělení a uživatelů nachází v jiném národním prostředí než vy, můžete toto národní prostředí vybrat v části **Umístění vaší společnosti**.
 
 2. Na konci procesu registrace dostanete zprávu s informacemi o novém účtu. <br/> ![Obrázek s informacemi o účtu](./media/2-end-of-sign-up-process.png) <br/>Pokud v tuto chvíli kliknete na **Můžete začít**, přejdete do Centra pro správu Office 365, kde můžete přidat uživatele a otestovat tak prostředí. <br/><br/>Pokud ale chcete přejít přímo na portál Azure Portal pro Intune, otevřete v prohlížeči nové okno a do adresního řádku zadejte **https://portal.azure.com**. Přejdete na přihlašovací stránku Azure, kde se můžete přihlásit pomocí přidělených přihlašovacích údajů. Tuto adresu použijte vždy, když se budete chtít přihlásit ke zkušební verzi služby Intune. <br/> ![Obrázek přihlašovací stránky Azure Portal](./media/azure-portal-signin.png)
 
@@ -70,8 +70,6 @@ K návratu z Intune zpět do Centra pro správu Office 365 zadejte na adresní �
 
 ### <a name="intune-on-azure"></a>Intune v Azure
 Přečtěte si další informace o [Intune na portálu Azure Portal](what-is-intune.md).
-### <a name="classic-intune"></a>Classic Intune
-Scénář hodnocení: [Hodnocení správy mobilních zařízení v Microsoft Intune](https://docs.microsoft.com/intune-classic/understand-explore/mobile-device-management-trial-guide-microsoft-intune)
 
 ### <a name="integration-with-other-products"></a>Integrace s dalšími produkty
 Přečtěte si další informace o používání uživatelských účtů služby Azure Active Directory v Intune:

@@ -13,11 +13,11 @@ ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8e10f3a72cf522888108895f9f7141480b9af0b3
-ms.sourcegitcommit: 2a6ad3c233d15a9fb441362105f64b2bdd550c34
+ms.openlocfilehash: 2720cf6f1c5d6b71966c4b4987734cc40dca8aa9
+ms.sourcegitcommit: 2b7d644c7a4f85315e11a7d0c5885cc66975c2ad
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/14/2017
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalace klientského softwaru Intune na počítače se systémem Windows
 
@@ -43,11 +43,11 @@ Všechny způsoby (s výjimkou toho, kdy si uživatelé instalují klientský so
 
   ![Stažení počítačového klienta Intune](../media/pc-sa-client-download.png)
 
-2.  Na stránce **Stažení klientského softwaru** klikněte na **Stáhnout klientský software**. Uložte balíček **Microsoft_Intune_Setup.zip**, který obsahuje software, do zabezpečeného umístění v síti.
+2. Na stránce **Stažení klientského softwaru** klikněte na **Stáhnout klientský software**. Uložte balíček **Microsoft_Intune_Setup.zip**, který obsahuje software, do zabezpečeného umístění v síti.
 
-Instalační balíček klientského softwaru Intune obsahuje jedinečné a specifické informace o vašem účtu, které jsou dostupné prostřednictvím vloženého certifikátu. Pokud k instalačnímu balíčku získají přístup neoprávnění uživatelé, můžou zaregistrovat počítače k účtu, který je reprezentovaný vloženým certifikátem, a můžou tak získat přístup k podnikovým prostředkům.
+  Instalační balíček klientského softwaru Intune obsahuje jedinečné a specifické informace o vašem účtu, které jsou dostupné prostřednictvím vloženého certifikátu. Pokud k instalačnímu balíčku získají přístup neoprávnění uživatelé, můžou zaregistrovat počítače k účtu, který je reprezentovaný vloženým certifikátem, a můžou tak získat přístup k podnikovým prostředkům.
 
-3.  Extrahujte obsah instalačního balíčku do zabezpečeného umístění v síti.
+3. Extrahujte obsah instalačního balíčku do zabezpečeného umístění v síti.
 
     > [!IMPORTANT]
     > Extrahovaný soubor **ACCOUNTCERT** nepřejmenovávejte ani neodebírejte, jinak se instalace klientského softwaru nezdaří.
@@ -198,13 +198,10 @@ Na příkazovém řádku se zvýšenými oprávněními spusťte jeden z násled
 
 **Metoda 1**:
 
-    ```
     "C:\Program Files\Microsoft\OnlineManagement\Common\ProvisioningUtil.exe" /UninstallAgents /MicrosoftIntune
-    ```
 
 **Metoda 2**<br>Ve všech verzích SKU systému Windows jsou nainstalovaní všichni tito agenti:
 
-    ```
     wmic product where name="Microsoft Endpoint Protection Management Components" call uninstall<br>
     wmic product where name="Microsoft Intune Notification Service" call uninstall<br>
     wmic product where name="System Center 2012 - Operations Manager Agent" call uninstall<br>
@@ -237,7 +234,6 @@ Na příkazovém řádku se zvýšenými oprávněními spusťte jeden z násled
     wmic product where name="Windows Online Management Update Manager" call uninstall<br>
     wmic product where name="Windows Online Management Agent Installer" call uninstall<br>
     wmic product where name="Windows Intune" call uninstall
-    ```
 
 > [!TIP]
 > Zrušení registrace klienta zanechá pro tohoto klienta zastaralý záznam na straně serveru. Proces zrušení registrace je asynchronní a odinstalovává se devět agentů. Dokončení odinstalace tak může trvat až 30 minut.
@@ -255,10 +251,8 @@ Zkontrolujte cestu %ProgramFiles%\Microsoft\OnlineManagement a ujistěte se, že
 
 Proces zrušení registrace neodebere složku OnlineManagement. Po dokončení odinstalace počkejte 30 minut a spusťte tento příkaz. Pokud byste ho spustili příliš brzy, odinstalace by mohla zůstat v neznámém stavu. Složku odeberte spuštěním příkazového řádku se zvýšenými oprávněními a spuštěním následujícího příkazu:
 
-    ```
     "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
-    ```
 
-### <a name="see-also"></a>Viz taky
+### <a name="next-steps"></a>Další kroky
 [Správa počítačů s Windows pomocí Intune](manage-windows-pcs-with-microsoft-intune.md)
 [Řešení potíží s instalací klientů](../troubleshoot/troubleshoot-client-setup-in-microsoft-intune.md)

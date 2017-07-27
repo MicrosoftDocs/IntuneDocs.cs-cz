@@ -6,7 +6,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 06/12/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 0f8b08f2-504c-4b38-bea2-b8a4ef0526b8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 537087b720338413261b3947365a4d90fed89fbb
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 272628c501d15dc9661a1110e7dcab2d0e9f1d02
+ms.sourcegitcommit: 21a9db380956a50031dbea360b4c76664cbc2768
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/17/2017
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací pro iOS
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -41,7 +41,7 @@ Existují dvě kategorie nastavení zásad:nastavení přemístění dat a nasta
 | **Šifrovat data aplikace** | U aplikací spravovaných podle zásad se data šifrují v klidu pomocí schématu šifrování na úrovni zařízení poskytovaného iOSem. Když se vyžaduje PIN, data se zašifrují podle nastavení v zásadách ochrany aplikací. <br><br> Přejděte na oficiální dokumentaci společnosti Apple [tady](https://support.apple.com/HT202739) a podívejte se, které šifrovací moduly iOS jsou certifikované jako FIPS 140-2 nebo které na tuto certifikaci čekají. <br><br> Určete, kdy se budou šifrovat pracovní nebo školní data v této aplikaci. Vybírejte z těchto možností: <ul><li>**Když je zařízení blokované:** Všechna data aplikace přidružená k této zásadě jsou při uzamčení zařízení zašifrovaná.</li><li>**Když je zařízení uzamčené a existují otevřené soubory:** Všechna data aplikace přidružená k této zásadě jsou při uzamčení zařízení zašifrovaná, kromě dat v souborech, které jsou v aplikaci aktuálně otevřené.</li><li>**Po restartování zařízení:** Všechna data aplikace přidružená k této zásadě jsou při restartování zařízení zašifrovaná až do doby, než se zařízení poprvé odemkne.</li><li>**Použít nastavení zařízení:** Data aplikace se zašifrují podle výchozího nastavení v zařízení. </li></ul> Pokud povolíte toto nastavení, je možné, že si uživatel bude muset nastavit kód PIN a používat ho pro přístup k zařízení.  Pokud není PIN zařízení nastavený a vyžaduje se šifrování, aplikace se neotevře a uživateli se místo toho zobrazí zpráva, že jeho organizace vyžaduje, aby pro přístup k této aplikaci nejdřív povolil PIN zařízení.  | Když je zařízení blokované |
 | **Zakázat synchronizaci kontaktů** | Pokud nechcete, aby aplikace ukládala data do nativní aplikace Kontakty na zařízení, zvolte **Ano**. Když zvolíte **Ne**, může aplikace ukládat data do nativní aplikace Kontakty na zařízení. <br><br>Když budete z aplikace selektivně mazat pracovní nebo školní data, odeberou se kontakty synchronizované přímo z aplikace do nativní aplikace Kontakty. Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. To se v současné době týká jenom aplikace Microsoft Outlook. | Ne |
 | **Zakázat tisk** | Pokud chcete v aplikaci zakázat tisk pracovních nebo školních dat, zvolte **Ano**. | Ne |
-| **Vyberte, do kterých služeb úložiště se můžou ukládat firemní data** | Uživatelé můžou ukládat data do vybraných služeb (OneDrive pro firmy, SharePoint a Místní úložiště). Všechny ostatní služby budou blokované. | Vybráno: 0 |
+| **Vyberte, do kterých služeb úložiště se můžou ukládat firemní data** | Uživatelé můžou ukládat data do vybraných služeb (OneDrive pro firmy, SharePoint a místní úložiště). Všechny ostatní služby budou blokované. | Vybráno: 0 |
 
 > [!NOTE]
 > Žádné z nastavení přemístění dat na zařízeních s iOSem neřídí funkci otevírání v aplikaci spravované Applem. Pokud chcete spravovat funkci Otevřít v od Applu, přečtěte si [Správa přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune](data-transfer-between-apps-manage-ios.md).
@@ -71,8 +71,8 @@ U některých aplikací a služeb platformy, které mají výjimku, můžou zás
 | **Znovu zkontrolovat požadavky na přístup po (minuty)** | Proveďte konfiguraci následujících nastavení: <ul><li>**Časový limit:** Toto je počet minut před opakovaným zkontrolováním požadavků na přístup k aplikaci (definovaným dříve v zásadách). Správce například v zásadách zapne kód PIN, uživatel otevře aplikaci MAM a musí zadat PIN. Při použití tohoto nastavení nemusí uživatel u žádné aplikace MAM zadávat PIN dalších **30 minut** (výchozí hodnota).</li><li>**Období odkladu pro offline režim:** Toto je počet minut, po které může aplikace MAM běžet offline. Zadejte dobu (v minutách) před opakovaným zkontrolováním požadavků na přístup k aplikaci. Výchozí hodnota = **720** minut (12 hodin) Aby mohla aplikace po uplynutí této doby dál běžet, bude vyžadovat ověření uživatele ve službě AAD.</li></ul>| Časový limit: 30 <br><br> Offline: 720 |
 | **Doba v offline režimu (ve dnech) před vymazáním dat** | Po tomto počtu dnů (definovaném správcem) běhu v offline režimu provede aplikace sama selektivní vymazání. Je to stejné selektivní vymazání, jaké může vyvolat správce v pracovním postupu vymazání MAM. <br><br> | 90 dnů |
 | **Zakázat PIN kód aplikace, když je PIN kód zařízení spravovaný** | Pokud chcete zakázat PIN kód aplikace, když bude na zaregistrovaném zařízení zjištěn zámek zařízení, zvolte **Ano**. | Ne |
-| **Vyžadovat minimální verzi operačního systému iOS** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi operačního systému iOS. Uživateli bude zablokován přístup, pokud verze iOS v zařízení nesplňuje tento požadavek. | Ne |
-| **Vyžadovat minimální verzi operačního systému iOS (jenom upozornění)** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi operačního systému iOS. Uživateli se zobrazí oznámení, pokud verze iOS v zařízení nesplňuje tento požadavek. Toto oznámení je možné zavřít. | Ne |
+| **Vyžadovat minimální verzi operačního systému iOS** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi operačního systému iOS. Uživateli bude zablokován přístup, pokud verze iOS v zařízení nesplňuje tento požadavek. Tato zásada podporuje jedno desetinné místo, například iOS 10.3. | Ne |
+| **Vyžadovat minimální verzi operačního systému iOS (jenom upozornění)** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi operačního systému iOS. Uživateli se zobrazí oznámení, pokud verze iOS v zařízení nesplňuje tento požadavek. Toto oznámení je možné zavřít. Tato zásada podporuje jedno desetinné místo, například iOS 10.3. | Ne |
 | **Vyžadovat minimální verzi aplikace** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi aplikace. Uživateli bude zablokován přístup, pokud verze aplikace v zařízení nesplňuje tento požadavek.<br><br>Vzhledem k tomu, že aplikace mívají často odlišná schémata verzí, vytvořte zásadu, ve které bude jedna minimální verze zacílená na jednu aplikaci (např. „Zásada verze Outlooku“). <br><br> | Ne | 
 | **Vyžadovat minimální verzi aplikace (jenom upozornění)** | Zvolte **Ano**, pokud k používání této aplikace doporučujete minimální verzi aplikace. Uživateli se zobrazí oznámení, pokud verze aplikace v zařízení nesplňuje tento požadavek. Toto oznámení je možné zavřít.<br><br>Vzhledem k tomu, že aplikace mívají často odlišná schémata verzí, vytvořte zásadu, ve které bude jedna minimální verze zacílená na jednu aplikaci (např. „Zásada verze Outlooku“). <br><br> | Ne | 
 | **Vyžadovat minimální verzi sady SDK zásad ochrany aplikací Intune** | Zvolte **Ano**, pokud požadujete, aby tato aplikace používala minimální verzi sady SDK zásad ochrany aplikací Intune. Uživateli bude zablokován přístup, pokud verze sady SDK zásad ochrany aplikací Intune nesplňuje tento požadavek. <br> <br> Další informace o sadě SDK zásad ochrany aplikací Intune najdete v článku [Přehled sady Intune App SDK](app-sdk.md). <br><br> | Ne |

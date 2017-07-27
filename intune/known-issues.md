@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/27/2017
+ms.date: 07/17/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4fda224613d8b69be82ef7f9681ba9165be33e52
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: b08a097e785f85d8b9260cdaa60e720ed88cb4a1
+ms.sourcegitcommit: 21a9db380956a50031dbea360b4c76664cbc2768
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/17/2017
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Známé problémy v Microsoft Intune
 
@@ -107,7 +107,11 @@ Další informace najdete v článku [Co je dodržování předpisů zařízen�
 <!-- ## Enrollment -->
 
 
-<!-- ## Data protection -->
+## <a name="data-protection"></a>Ochrana dat
+
+### <a name="ios-app-protection-policies"></a>Zásady ochrany aplikací pro iOS
+
+Můžete definovat [zásady ochrany aplikací pro iOS](app-protection-policy-settings-ios.md), které jsou k dispozici pro uživatele na zařízeních spravovaných prostřednictvím správy MAM bez registrace. Kvůli dočasné chybě můžete tyto zásady definovat pouze pro verze iOS s jedním desetinným místem (ne více). Namísto nastavení minimální verze iOS 10.3.1 nastavíte iOS 10.3. Tento problém se vyřeší v chystané aktualizaci iOS SDK.
 
 
 ## <a name="administration-and-accounts"></a>Správa a účty
