@@ -14,17 +14,17 @@ ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0b09daa05db673817bea67cd8b88c2ac63be7f1e
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 1627627ab1744f963d738dcedde6a772bb3ae663
+ms.sourcegitcommit: 5eb209ae48173ddfdbbab131f12f3ac3498dcd87
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/18/2017
 ---
 # <a name="protect-line-of-business-apps-and-data-on-devices-that-are-not-enrolled-in-microsoft-intune"></a>Ochrana obchodních aplikací a dat na zařízeních, která nejsou zaregistrovaná v Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Zásady správy mobilních aplikací (MAM) pomáhají chránit data společnosti tím, že omezují akce, které by mohly způsobit únik těchto dat, a vynucují požadavky pro přístup k datům, jako je například PIN aplikace. Pokud chcete zásady MAM použít u obchodních aplikací pro iOS nebo Android, musíte aplikace nejdřív zabalit pomocí nástroje Microsoft Intune App Wrapping. Zabalení aplikace je proces použití vrstvy pro správu mobilní aplikace, který nevyžaduje přípravu aplikace, ale umožňuje ji distribuovat uživatelům.  
+Zásady správy mobilních aplikací (MAM) pomáhají chránit data společnosti tím, že omezují akce, které by mohly způsobit únik těchto dat, a vynucují požadavky pro přístup k datům, jako je například PIN aplikace. Pokud chcete zásady MAM použít u obchodních aplikací pro iOS nebo Android, musíte aplikace nejdřív zabalit pomocí nástroje Microsoft Intune App Wrapping. Proces zabalení aplikace je proces přiřazení vrstvy správy k mobilní aplikaci, aniž by bylo nutné v ní provádět změny, a její distribuce uživatelům.  
 
 Toto téma vysvětluje kroky nutné k použití zásad MAM u aplikací, ke kterým zaměstnanci přistupují na **svých vlastních zařízeních, která nejsou spravovaná**, a na zařízeních, která jsou spravovaná pomocí **řešení správy mobilních zařízení (MDM) třetí strany**.  Příprava obchodních aplikací, které běží na **zařízeních zaregistrovaných v MDM Intune**, je popsaná v tématu [Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune](/intune/apps-prepare-mobile-application-management).
 

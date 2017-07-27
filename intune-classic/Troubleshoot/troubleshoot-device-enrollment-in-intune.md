@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 05/31/2017
+ms.date: 07/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f0c55caa70c1a23da549f2fe8804c2ae69ef6045
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 14407e26a0715f3d5aa8cf570a2109dac7140079
+ms.sourcegitcommit: 21a9db380956a50031dbea360b4c76664cbc2768
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/17/2017
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Řešení potíží s registrací do služby Intune
 
@@ -151,6 +151,17 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 
 
 ## <a name="android-issues"></a>Problémy na zařízeních s Androidem
+
+### <a name="android-enrollment-errors"></a>Chyby registrace zařízení s Androidem
+
+Následující tabulka obsahuje chyby, které se můžou koncovým uživatelům zobrazit při registraci zařízení s Androidem v Intune.
+
+|Chybová zpráva|Problém|Řešení|
+|---|---|---|
+|**Správce IT musí přiřadit licence pro přístup**<br>Váš správce IT vám neudělil přístup k této aplikaci. Požádejte ho o pomoc nebo to zkuste znovu.|Zařízení není možné zaregistrovat, protože účet uživatele nemá potřebnou licenci.|Aby si mohli uživatelé zaregistrovat svoje zařízení, musí mít přiřazenou potřebnou licenci. Tato zpráva znamená, že má uživatel špatný typ licence pro určenou autoritu pro správu mobilních zařízení. Pokud je třeba určenou autoritou pro správu mobilních zařízení Intune a uživatel používá licenci nástroje System Center 2012 R2 Configuration Manager, zobrazí se tato chyba.<br><br>Přečtěte si informace o tom, jak [si přiřadíte licence Intune k uživatelským účtům](/intune/licenses-assign.md).
+|**Správce IT musí nastavit autoritu MDM.<br>Zdá se, že váš správce IT nenastavil autoritu MDM. Požádejte ho o pomoc nebo to zkuste znovu.|Autorita pro správu mobilních zařízení není definovaná.|Autorita pro správu mobilních zařízení není určená v Intune. Přečtěte si, jak [nastavit autoritu pro správu mobilních zařízení](/intune/mdm-authority-set.md).|
+
+
 ### <a name="devices-fail-to-check-in-with-the-intune-service-and-display-as-unhealthy-in-the-intune-admin-console"></a>Zařízení se nepodařilo registrovat ve službě Intune a jeho stav v konzole pro správu se zobrazuje jako Není v pořádku
 **Problém:** Některá zařízení Samsung s Androidem verze 4.4.x a 5.x můžou ukončit registraci ve službě Intune. Pokud se zařízení nezaregistrují, platí pro ně tyto podmínky:
 
