@@ -20,8 +20,7 @@ ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/13/2017
 ---
-# Co je Intune for Education?
-<a id="what-is-intune-for-education" class="xliff"></a>
+# <a name="what-is-intune-for-education"></a>Co je Intune for Education?
 
 Intune for Education umožňuje učitelům a studentům dosáhnout produktivní výuky a zároveň chránit školní údaje. Intune je cloudová služba pro správu podnikové mobility (EMM), která je základem Intune for Education.
 
@@ -39,8 +38,7 @@ Intune a Intune for Education umožňují:
 * Chránit informace vaší organizace určením způsobu, jak k nim vaši pracovníci přistupují a jak je sdílejí
 * Zajistit, aby zařízení a aplikace splňovaly požadavky na zabezpečení
 
-### Další kroky
-<a id="next-steps" class="xliff"></a>
+### <a name="next-steps"></a>Další kroky
 * Seznamte se s tímto produktem [prostřednictvím 30denní zkušební verze Intune](/intune-classic/understand-explore/sign-up-for-30-day-trial-microsoft-intune).
 * Přečtěte si, jak můžete co nejrychleji [začít používat Intune for Education](/intune-education/what-is-express-configuration).
 * Podrobně se seznamte s [technickými požadavky a možnostmi](/intune/supported-devices-browsers) služby Intune.
