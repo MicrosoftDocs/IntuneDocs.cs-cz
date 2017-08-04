@@ -55,7 +55,7 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v níže uvedeném sezn
 - **Role** (pouze Pulse Secure) – zadejte název role uživatele, která má přístup k tomuto připojení. Role uživatele definuje osobní nastavení a možnosti a povolí nebo zakáže určité funkce přístupu.
 - **Sféra** (pouze Pulse Secure) – zadejte název sféry ověření, kterou chcete použít. Sféra ověření je seskupení prostředků ověření používaných typem připojení Pulse Secure.
 
-- **Seznam hledání přípon DNS** – **Přidejte** minimálně jednu příponu DNS. Každá zadaná přípona DNS se bude vyhledávat při připojení k webu pomocí krátkého názvu. Když například zadáte přípony **domain1.contoso.com** a **domain2.contoso.com** a navštívíte adresu **http://mywebsite**, vyhledají se adresy **http://mywebsite.domain1.contoso.com** a **http://mywebsite.domain2.contoso.com**.
+- **Seznam hledání přípon DNS** - **Přidejte** minimálně jednu příponu DNS. Každá zadaná přípona DNS se bude vyhledávat při připojení k webu pomocí krátkého názvu. Když například zadáte přípony **domain1.contoso.com** a **domain2.contoso.com** a navštívíte adresu **http://mywebsite**, vyhledají se adresy **http://mywebsite.domain1.contoso.com** a **http://mywebsite.domain2.contoso.com**.
 
 - **Vlastní XML** – zadejte vlastní příkazy XML pro konfiguraci připojení VPN.
 
@@ -86,7 +86,7 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v níže uvedeném sezn
 
 Další informace o tom, jak psát vlastní příkazy XML, najdete v dokumentaci k síti VPN jednotlivých výrobců.
 
-- **Rozdělit tunel** – tuto možnost můžete **povolit** nebo **zakázat**, aby se mohla zařízení rozhodnout, které připojení se má v závislosti na typech přenosů používat. Uživatel v hotelu například bude pro přístup k pracovním souborům používat připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu.
+- **Rozdělit tunel** - tuto možnost můžete **povolit** nebo **zakázat**, aby se mohla zařízení rozhodnout, které připojení se má v závislosti na typech přenosů používat. Uživatel v hotelu například bude pro přístup k pracovním souborům používat připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu.
 
 
 

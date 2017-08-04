@@ -20,15 +20,13 @@ ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/12/2017
 ---
-# Nastavení zásad pro iOS v Microsoft Intune
-<a id="ios-policy-settings-in-microsoft-intune" class="xliff"></a>
+# <a name="ios-policy-settings-in-microsoft-intune"></a>Nastavení zásad pro iOS v Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete konfigurovat v zařízeních s iOSem. Navíc můžete použít nástroj Apple Configurator k vytvoření vlastních nastavení, která nejsou k dispozici prostřednictvím Intune.
 
-## Obecná nastavení zásad konfigurace
-<a id="general-configuration-policy-settings" class="xliff"></a>
+## <a name="general-configuration-policy-settings"></a>Obecná nastavení zásad konfigurace
 
 Pomocí **zásad obecné konfigurace pro iOS** v Microsoft Intune můžete nakonfigurovat nastavení pro:
 
@@ -43,8 +41,7 @@ Pomocí **zásad obecné konfigurace pro iOS** v Microsoft Intune můžete nakon
 
 Pokud v tomto tématu není uvedené nastavení, které hledáte, je možné, že ho budete moct vytvořit pomocí vlastních zásad pro iOS, které vám umožní naimportovat nastavení vytvořená pomocí [nástroje Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12). Další informace najdete v části Nastavení vlastních zásad dál v tomto tématu.
 
-### Nastavení zabezpečení
-<a id="security-settings" class="xliff"></a>
+### <a name="security-settings"></a>Nastavení zabezpečení
 Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
@@ -63,8 +60,7 @@ Všechna nastavení platí pro iOS 8.0 a novější.
 |**Povolit odemknutí otiskem prstu**|Povolí odemknutí zařízení otiskem prstu.|
 <sup>1</sup>Pokud pro zařízení s iOSem nakonfigurujete nastavení **Počet minut nečinnosti před vypnutím displeje** a **Počet minut nečinnosti před vyžádáním hesla**, použijí se postupně. Pokud například pro obě nastavení nastavíte hodnotu **5** minut, obrazovka se po 5 minutách automaticky vypne a po dalších 5 minutách se zařízení zamkne. Pokud ale uživatel vypne obrazovku ručně, druhé nastavení se použije okamžitě. V tomto příkladě se zařízení po tom, co uživatel vypne obrazovku, zamkne po 5 minutách.
 
-### Nastavení systému
-<a id="system-settings" class="xliff"></a>
+### <a name="system-settings"></a>Nastavení systému
 Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
@@ -77,8 +73,7 @@ Všechna nastavení platí pro iOS 8.0 a novější.
 |**Povolit odeslání diagnostických dat**|Povolí nebo blokuje odesílání diagnostických dat ze zařízení do společnosti Apple.|
 |**Povolit aplikaci Passbook při uzamčení**|Povolí uživateli přístup k aplikaci Passbook, když je zařízení uzamčené.|
 
-### Nastavení cloudu pro dokumenty a data
-<a id="cloud-settings-for-documents-and-data" class="xliff"></a>
+### <a name="cloud-settings-for-documents-and-data"></a>Nastavení cloudu pro dokumenty a data
 Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
@@ -92,8 +87,7 @@ Všechna nastavení platí pro iOS 8.0 a novější.
 |**Povolit sdílení fotek na iCloudu**|Pokud chcete na zařízení zakázat **Sdílení fotek na iCloudu**, nastavte možnost na **Ne**.|
 |**Povolit Knihovnu fotografií na iCloudu**|Pokud je možnost nastavená na **Ne**, zakáže použití knihovny fotografií iCloudu, přes kterou můžou uživatelé ukládat fotografie a videa v cloudu.   Všechny fotky, které nejsou kompletně stažené z Knihovny fotografií na iCloudu do zařízení, se ze zařízení odeberou, pokud je tato možnost nastavená na **Ne**.|
 
-### Nastavení aplikace pro prohlížeč
-<a id="application-settings-for-the-browser" class="xliff"></a>
+### <a name="application-settings-for-the-browser"></a>Nastavení aplikace pro prohlížeč
 Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
@@ -105,8 +99,7 @@ Všechna nastavení platí pro iOS 8.0 a novější.
 |**Povolit skriptování v Javě**|Povolí v prohlížeči spuštění skriptů jazyka Java.|
 |**Povolit upozornění na podvod**|Povolí v prohlížeči upozornění na podvod.|
 
-### Nastavení aplikací pro aplikace
-<a id="application-settings-for-apps" class="xliff"></a>
+### <a name="application-settings-for-apps"></a>Nastavení aplikací pro aplikace
 Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
@@ -120,8 +113,7 @@ Všechna nastavení platí pro iOS 8.0 a novější.
 |**Povolit uživateli důvěřovat autorům nových podnikových aplikací**|Umožní uživateli vybrat možnost, že důvěřuje aplikacím, které nebyly staženy z App Store.|
 
 
-### Nastavení aplikací pro hry
-<a id="application-settings-for-games" class="xliff"></a>
+### <a name="application-settings-for-games"></a>Nastavení aplikací pro hry
 Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
@@ -129,8 +121,7 @@ Všechna nastavení platí pro iOS 8.0 a novější.
 |**Povolit přidávání přátel v herním centru**|Povolí uživateli přidat přátele z herního centra.|
 |**Povolit hru s více hráči**|Povolí uživateli hrát na zařízení hry pro víc hráčů.|
 
-### Nastavení aplikací pro mediální obsah
-<a id="application-settings-for-media-content" class="xliff"></a>
+### <a name="application-settings-for-media-content"></a>Nastavení aplikací pro mediální obsah
 Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
@@ -140,8 +131,7 @@ Všechna nastavení platí pro iOS 8.0 a novější.
 |**Povolit uživateli stažení obsahu z obchodu iBooks, který má označení „erotika“**|Povolí uživateli stahování knih z kategorie „erotika“.|
 
 
-### Nastavení možností zařízení pro hardware
-<a id="device-capabilities-settings-for-hardware" class="xliff"></a>
+### <a name="device-capabilities-settings-for-hardware"></a>Nastavení možností zařízení pro hardware
 Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
@@ -150,8 +140,7 @@ Všechna nastavení platí pro iOS 8.0 a novější.
 |**Vynutit u spárovaných Apple Watch používání detekce zápěstí**|Když se povolí, Apple Watch nebudou zobrazovat oznámení, dokud si je uživatel nenasadí.|
 |**Vyžadovat párovací heslo pro odchozí požadavky AirPlay**|Vyžaduje párovací heslo, pokud uživatel použije AirPlay ke streamování obsahu do dalších zařízení Apple.|
 
-### Nastavení možností zařízení pro mobilní funkce
-<a id="device-capabilities-settings-for-cellular" class="xliff"></a>
+### <a name="device-capabilities-settings-for-cellular"></a>Nastavení možností zařízení pro mobilní funkce
 Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
@@ -160,8 +149,7 @@ Všechna nastavení platí pro iOS 8.0 a novější.
 |**Povolit datový roaming**|Povolí datový roaming, když je zařízení v mobilní síti.|
 |**Povolit globální načítání na pozadí při roamingu**|Povolí zařízení, aby při roamingu v mobilní síti načítalo data na pozadí, třeba e-maily.|
 
-### Nastavení možností zařízení pro funkce
-<a id="device-capabilities-settings-for-features" class="xliff"></a>
+### <a name="device-capabilities-settings-for-features"></a>Nastavení možností zařízení pro funkce
 Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
@@ -172,8 +160,7 @@ Všechna nastavení platí pro iOS 8.0 a novější.
 |**Nepovolovat AirDrop ze spravovaných aplikací**|Znemožní spravovaným aplikacím posílat data přes Airdrop.|
 
 
-### Nastavení pro aplikace dodržující a nedodržující předpisy
-<a id="settings-for-compliant-and-noncompliant-apps" class="xliff"></a>
+### <a name="settings-for-compliant-and-noncompliant-apps"></a>Nastavení pro aplikace dodržující a nedodržující předpisy
 V seznamu **Kompatibilní a nekompatibilní aplikace** zadejte seznam kompatibilních a nekompatibilních aplikací s využitím následujících informací.
 
 > [!NOTE]
@@ -190,8 +177,7 @@ V seznamu **Kompatibilní a nekompatibilní aplikace** zadejte seznam kompatibil
 
 Zásady obsahující kompatibilní a nekompatibilní nastavení aplikace musí být nasazeny na skupiny uživatelů.
 
-### Nastavení celoobrazovkovém režimu
-<a id="kiosk-mode-settings" class="xliff"></a>
+### <a name="kiosk-mode-settings"></a>Nastavení celoobrazovkovém režimu
 
 |Název nastavení|Podrobnosti|
 |----------------|--------------------|
@@ -218,20 +204,17 @@ Zásady obsahující kompatibilní a nekompatibilní nastavení aplikace musí b
 > -   Než budete moct nakonfigurovat nastavení zařízení iOS pro celoobrazovkový režim, musíte převést zařízení do režimu dohledu pomocí nástroje [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) nebo [Programu registrace zařízení Apple](ios-device-enrollment-program-in-microsoft-intune.md). Další informace o nástroji Apple Configurator získáte v dokumentaci Apple.
 > -   Pokud se určená aplikace pro iOS nainstaluje až po nasazení zásad konfigurace, zařízení nepřejde do celoobrazovkového režimu, dokud ho nerestartujete.
 
-### Referenční informace pro aplikace nesplňující předpisy
-<a id="reference-information-for-compliant-and-noncompliant-apps" class="xliff"></a>
+### <a name="reference-information-for-compliant-and-noncompliant-apps"></a>Referenční informace pro aplikace nesplňující předpisy
 
 Pomocí **sestavy nekompatibilních aplikací** zobrazte kompatibilitu povolených a blokovaných aplikací.
 
-##### Spuštění sestavy nekompatibilních aplikací
-<a id="to-run-the-noncompliant-apps-report" class="xliff"></a>
+##### <a name="to-run-the-noncompliant-apps-report"></a>Spuštění sestavy nekompatibilních aplikací
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte **Sestavy** &gt; **Sestava aplikací nedodržujících předpisy**.
 
 2.  Vyberte skupiny zařízení, které chcete zkontrolovat, určete, jestli se mají kontrolovat aplikace dodržující předpisy, aplikace nedodržující předpisy nebo obojí, a potom vyberte **Zobrazit sestavu**.
 
-#### Určení adres URL na obchody s aplikacemi
-<a id="how-to-specify-urls-to-app-stores" class="xliff"></a>
+#### <a name="how-to-specify-urls-to-app-stores"></a>Určení adres URL na obchody s aplikacemi
 Pokud chcete zadat adresu URL aplikace do seznamu kompatibilních a nekompatibilních aplikací nebo použít možnost **Vybrat spravovanou aplikaci, která se může spouštět, když je zařízení v celoobrazovkovém režimu** (jenom iOS), použijte následující formát:
 
 1. Pomocí vyhledávacího modulu najděte aplikaci, kterou chcete použít v iTunes App Storu, a otevřete stránku pro tuto aplikaci.
@@ -243,20 +226,17 @@ Pokud chcete zadat adresu URL aplikace do seznamu kompatibilních a nekompatibil
 > [!NOTE]
 > Pomocí softwaru iTunes taky můžete najít aplikaci a pomocí příkazu **Kopírovat odkaz** získat adresu URL aplikace.
 
-### Nastavení registrace
-<a id="enrollment-settings" class="xliff"></a>
+### <a name="enrollment-settings"></a>Nastavení registrace
 Všechna nastavení platí pro iOS 8.0 a novější.
 
 |Název nastavení|Podrobnosti|
 |----------------|--------------------|
 |**Povolit zámek aktivace, když je zařízení v režimu pod dohledem**|Povolí zámek aktivace na zařízeních s iOSem, které jsou pod dohledem.|
 
-### Nastavení režimu dohledu
-<a id="supervised-mode-settings" class="xliff"></a>
+### <a name="supervised-mode-settings"></a>Nastavení režimu dohledu
 Na zařízeních se systémem iOS 8.0 a novějším, která jsou v režimu pod dohledem, je možné nakonfigurovat následující nastavení.
 
-### Nastavení režimu dohledu – omezení zařízení
-<a id="supervised-mode-settings-for-device-restrictions" class="xliff"></a>
+### <a name="supervised-mode-settings-for-device-restrictions"></a>Nastavení režimu dohledu – omezení zařízení
 
 |Název nastavení|Podrobnosti|
 |----------------|--------------------|
@@ -272,8 +252,7 @@ Na zařízeních se systémem iOS 8.0 a novějším, která jsou v režimu pod d
 |**Povolit úpravy nastavení oznámení**|Umožní uživateli přenastavit v zařízení oznámení.|
 |**Povolit úpravy tapety**|Umožní uživateli změnit v zařízení tapetu.|
 
-### Nastavení režimu dohledu – omezení funkcí
-<a id="supervised-mode-settings-for-feature-restrictions" class="xliff"></a>
+### <a name="supervised-mode-settings-for-feature-restrictions"></a>Nastavení režimu dohledu – omezení funkcí
 
 |Název nastavení|Podrobnosti|
 |----------------|--------------------|
@@ -287,8 +266,7 @@ Na zařízeních se systémem iOS 8.0 a novějším, která jsou v režimu pod d
 |**Povolit kontrolu pravopisu klávesnice**|Povolí v zařízení kontrolu pravopisu.|
 |**Povolit klávesové zkratky**|Umožní používání klávesových zkratek.|
 
-### Nastavení režimu dohledu – omezení aplikací
-<a id="supervised-mode-settings-for-app-restrictions" class="xliff"></a>
+### <a name="supervised-mode-settings-for-app-restrictions"></a>Nastavení režimu dohledu – omezení aplikací
 
 |Název nastavení|Podrobnosti|
 |----------------|--------------------|
@@ -305,8 +283,7 @@ Na zařízeních se systémem iOS 8.0 a novějším, která jsou v režimu pod d
 |**Povolit Game Center**|Povolí použití aplikace Herní centrum.|
 
 
-### Zobrazit nebo skrýt aplikace
-<a id="show-or-hide-apps" class="xliff"></a>
+### <a name="show-or-hide-apps"></a>Zobrazit nebo skrýt aplikace
 
 Pomocí seznamu **Skryté a zobrazené aplikace** můžete na dozorovaných zařízeních se systémem iOS 9.3 kontrolovat následující:
 
@@ -314,8 +291,7 @@ Pomocí seznamu **Skryté a zobrazené aplikace** můžete na dozorovaných zař
 - Určení seznamu aplikací, které uživatelé mohou zobrazit a spustit. Žádné jiné aplikace nebude možné zobrazit ani spustit.
 
 
-#### Jak vytvořit seznamy skrytých nebo zobrazených aplikací
-<a id="how-to-create-a-hidden-or-shown-app-list" class="xliff"></a>
+#### <a name="how-to-create-a-hidden-or-shown-app-list"></a>Jak vytvořit seznamy skrytých nebo zobrazených aplikací
 
 Určete následující nastavení:
 
@@ -329,8 +305,7 @@ Určete následující nastavení:
 |**Upravit**|Tady můžete upravit název, vydavatele a adresu URL vybrané aplikace.|
 |**Odstranit**|Odstraní vybranou aplikaci ze seznamu.|
 
-#### Informace o aplikaci pro vestavěné aplikace iOS
-<a id="app-information-for-built-in-ios-apps" class="xliff"></a>
+#### <a name="app-information-for-built-in-ios-apps"></a>Informace o aplikaci pro vestavěné aplikace iOS
 
 Informace z tohoto seznamu můžete použít k identifikaci názvu, vydavatele a adresy URL nebo ID sady aplikace pro vestavěné aplikace iOS, které chcete skrýt nebo zobrazit. Pokud chcete zobrazit nebo skrýt všechny aplikace v seznamu, můžete zkopírovat následující data do textového souboru s příponou **.csv** a pak pomocí možnosti **Importovat aplikace** naimportovat všechny najednou.
 
@@ -380,30 +355,26 @@ Informace z tohoto seznamu můžete použít k identifikaci názvu, vydavatele a
 
 
 
-## Nastavení vlastních zásad
-<a id="custom-policy-settings" class="xliff"></a>
+## <a name="custom-policy-settings"></a>Nastavení vlastních zásad
 
 Pomocí **vlastní zásady iOSu** služby Microsoft Intune nasaďte do zařízení s iOSem nastavení, které jste vytvořili pomocí nástroje [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12). Pomocí tohoto nástroje se dá vytvořit spousta nastavení, která řídí provoz těchto zařízení, a exportovat je do konfiguračního profilu. Potom tento konfigurační profil můžete naimportovat do vlastní zásady iOS služby Intune a nasadit nastavení pro uživatele a zařízení ve vaší organizaci.
 
 Díky této funkci můžete nasadit nastavení iOS, která nejdou konfigurovat pomocí obecných zásad konfigurace Intune.
 
-### Požadavky
-<a id="prerequisites" class="xliff"></a>
+### <a name="prerequisites"></a>Požadavky
 Než začnete, je potřeba nainstalovat Apple Configurator a vytvořit konfigurační soubor s nastaveními, která chcete nasadit pro uživatele nebo zařízení. Apple Configurator si můžete stáhnout z [Mac App Storu](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12), kde o něm také najdete další informace.
 
 > [!NOTE]
 > Intune nevytváří sestavu dodržování předpisů pro jednotlivá nastavení vlastní zásady iOS. Vytvoří se ale sestava celkového dodržování zásad.
 
-### Obecná nastavení
-<a id="general-settings" class="xliff"></a>
+### <a name="general-settings"></a>Obecná nastavení
 
 |Název nastavení|Podrobnosti|
     |----------------|--------------------|
     |**Název**|Zadejte jedinečný název vlastní zásady pro iOS, abyste ji mohli v konzole Intune snadno identifikovat.|
     |**Popis**|Zadejte popis, který bude shrnovat účel vlastní zásady pro iOS, a uveďte jakékoli další důležité informace, které vám pomůžou zásadu najít.|
 
-### Vlastní nastavení
-<a id="custom-settings" class="xliff"></a>
+### <a name="custom-settings"></a>Vlastní nastavení
 
 |Název nastavení|Podrobnosti|
     |----------------|--------------------|
@@ -411,6 +382,5 @@ Než začnete, je potřeba nainstalovat Apple Configurator a vytvořit konfigura
 |**Soubor konfiguračního profilu**|Vyberte **Importovat** a potom vyhledejte konfigurační profil, který jste vytvořili pomocí nástroje Apple Configurator. **Poznámka:** Nastavení, které exportujete z nástroje Apple Configurator, musí být kompatibilní s verzí iOS na zařízeních, na která nasazujete vlastní zásady pro iOS. Informace o tom, jak se řeší nekompatibilní nastavení, najdete v **referenčních materiálech ke konfiguračnímu profil** a **referenčních materiálech k protokolu správy mobilního zařízení** na [webu pro vývojáře Apple](https://developer.apple.com/).|
     |**Podrobnosti konfiguračního profilu**|Zobrazí kód XML pro konfigurační profil, který jste importovali.|
 
-### Související témata
-<a id="see-also" class="xliff"></a>
+### <a name="see-also"></a>Související témata
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)

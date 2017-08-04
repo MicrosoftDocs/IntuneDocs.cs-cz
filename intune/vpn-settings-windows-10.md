@@ -80,7 +80,7 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v níže uvedeném sezn
 
 Další informace o tom, jak psát vlastní příkazy XML, najdete v dokumentaci k síti VPN jednotlivých výrobců.
 
-**Rozdělit tunel** – tuto možnost můžete **povolit** nebo **zakázat**, aby se mohla zařízení rozhodnout, které připojení se má v závislosti na typech přenosů používat. Uživatel v hotelu například bude pro přístup k pracovním souborům používat připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu.
+**Rozdělit tunel** - tuto možnost můžete **povolit** nebo **zakázat**, aby se mohla zařízení rozhodnout, které připojení se má v závislosti na typech přenosů používat. Uživatel v hotelu například bude pro přístup k pracovním souborům používat připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu.
 - **Rozdělit tunelové trasy pro toto připojení k síti VPN** – přidejte volitelné trasy pro externí poskytovatele připojení VPN. Pro každou trasu zadejte předponu cíle a velikost předpony.
 
 ## <a name="apps-and-traffic-rules"></a>Pravidla pro aplikace a síťové přenosy
@@ -96,7 +96,10 @@ Další informace o tom, jak psát vlastní příkazy XML, najdete v dokumentaci
 
 ## <a name="conditional-access"></a>Podmíněný přístup
 
-**Podmíněný přístup pro toto připojení k síti VPN** – **Jednotné přihlašování s alternativním certifikátem** – **Rozšířené použití klíče** – **Hodnota hash vystavitele** -
+**Podmíněný přístup pro toto připojení k síti VPN** -
+**Jednotné přihlašování s alternativním certifikátem** -
+**Rozšířené použití klíče** -
+**Hodnota hash vystavitele** -
 
 ## <a name="dns-settings"></a>Nastavení DNS
 

@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/08/2017
+ms.date: 07/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 8519e411-3d48-44eb-9b41-3e4fd6a93112
 ms.reviewer: lancecra
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9d03f3936d608b9d526724eccbbdadbe030b53b8
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 036899c5e438355cc10da8ab2bd47ec0830c9946
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="help-protect-your-data-with-full-or-selective-wipe-using-microsoft-intune"></a>Lepší ochrana dat s využitím plného nebo selektivního vymazání pomocí Microsoft Intune
 
@@ -99,8 +99,8 @@ Pokud je zařízení zapnuté a připojené, trvá vymazání všech typů zař�
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty jsou odebrané a odvolané.|
 |Agent pro správu|Profil pro správu se odebere.|
-|E-mailu|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune, a odstraní se e-maily uložené v mezipaměti zařízení. Pokud je Microsoft Exchange hostovaný na místním serveru, e-mailové profily a e-maily uložené v mezipaměti se neodeberou.|
-|Outlook|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro iOS.</br>Výjimka: Pokud je Exchange hostovaný na místním serveru, e-maily se neodeberou.|
+|E-mailu|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune, a odstraní se e-maily uložené v mezipaměti zařízení.|
+|Outlook|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro iOS.|
 |Zrušení služby Azure Active Directory (AAD)|Odebere se záznam AAD.|
 |Kontakty | Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou.  Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. <br /> <br />V současné době se podporuje jen aplikace Outlook.
 
@@ -118,7 +118,7 @@ Pokud je zařízení zapnuté a připojené, trvá vymazání všech typů zař�
 |Nastavení profilu certifikátu|Certifikáty se zruší, ale neodeberou.|Certifikáty se odeberou a zruší.|
 |Agent pro správu|Zruší se oprávnění správce zařízení.|Zruší se oprávnění správce zařízení.|
 |E-mailu|není k dispozici Viz položka Outlook.|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune, a odstraní se e-maily uložené v mezipaměti zařízení.|
-|Outlook|E-mail přijatý aplikací Microsoft Outlook pro Android se odebere, ale pouze v případě, že je Outlook chráněný zásadami MAM. V opačném případě se Outlook při zrušení registrace nevymaže.</br>Výjimka: Pokud je Exchange hostovaný na místním serveru, e-maily se neodeberou.|E-mail přijatý aplikací Microsoft Outlook pro Android se odebere, ale pouze v případě, že je Outlook chráněný zásadami MAM. V opačném případě se Outlook při zrušení registrace nevymaže.</br>Výjimka: Pokud je Exchange hostovaný na místním serveru, e-maily se neodeberou.|
+|Outlook|E-mail přijatý aplikací Microsoft Outlook pro Android se odebere, ale pouze v případě, že je Outlook chráněný zásadami MAM. V opačném případě se Outlook při zrušení registrace nevymaže.|E-mail přijatý aplikací Microsoft Outlook pro Android se odebere, ale pouze v případě, že je Outlook chráněný zásadami MAM. V opačném případě se Outlook při zrušení registrace nevymaže.|
 |Zrušení služby Azure Active Directory (AAD)|Odebere se záznam AAD.|Odebere se záznam AAD.|
 |Kontakty | Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou.  Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. <br /> <br />V současné době se podporuje jen aplikace Outlook.|Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou.  Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. <br /> <br />V současné době se podporuje jen aplikace Outlook.
 
@@ -134,7 +134,7 @@ Při selektivním vymazání na zařízení Android for Work se odeberou všechn
 |Nastavení|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|Odebrány.|Není podporováno.|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty se odeberou a zruší.|Certifikáty se odeberou a zruší.|Není podporováno.|Certifikáty se odeberou a zruší.|
-|E-mailu|Odebere se e-mail se zapnutým systémem souborů EFS, včetně e-mailů a příloh aplikace Pošta pro Windows.|Není podporováno.|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune, a odstraní se e-maily uložené v mezipaměti zařízení.|Odebere se e-mail se zapnutým systémem souborů EFS, včetně e-mailů a příloh aplikace Pošta pro Windows. Odebere e-mailové účty, které byly zřízené Intune.</br>**Výjimka**: Pokud je Microsoft Exchange hostovaný na místním serveru, e-mailové účty se neodeberou.|
+|E-mailu|Odebere se e-mail se zapnutým systémem souborů EFS, včetně e-mailů a příloh aplikace Pošta pro Windows.|Není podporováno.|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune, a odstraní se e-maily uložené v mezipaměti zařízení.|Odebere se e-mail se zapnutým systémem souborů EFS, včetně e-mailů a příloh aplikace Pošta pro Windows. Odebere e-mailové účty, které byly zřízené Intune.|
 |Zrušení služby Azure Active Directory (AAD)|Ne.|Ne.|Odebere se záznam AAD.|Nelze použít. Systém Windows 10 nepodporuje selektivní vymazání zařízení připojených k Azure Active Directory.|
 
 ## <a name="wipe-encryption-file-system-efs-enabled-content"></a>Vymazání obsahu s povoleným šifrováním systému souborů EFS (Encryption File System)

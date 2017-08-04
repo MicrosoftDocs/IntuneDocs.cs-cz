@@ -44,7 +44,7 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v níže uvedeném sezn
     - **Cisco (IPSec)**
     - **Citrix**
     - **Vlastní VPN**
-- **Rozdělit tunel** – tuto možnost můžete **povolit** nebo **zakázat**, aby se mohla zařízení rozhodnout, které připojení se má v závislosti na typech přenosů používat. Uživatel v hotelu například bude pro přístup k pracovním souborům používat připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu.
+- **Rozdělit tunel** - tuto možnost můžete **povolit** nebo **zakázat**, aby se mohla zařízení rozhodnout, které připojení se má v závislosti na typech přenosů používat. Uživatel v hotelu například bude pro přístup k pracovním souborům používat připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu.
 
 
 ## <a name="custom-vpn-settings"></a>Vlastní nastavení sítě VPN
