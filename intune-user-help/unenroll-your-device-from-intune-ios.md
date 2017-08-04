@@ -22,8 +22,7 @@ ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/13/2017
 ---
-# Zrušení registrace zařízení s iOSem v Intune
-<a id="unenroll-your-ios-device-from-intune" class="xliff"></a>
+# <a name="unenroll-your-ios-device-from-intune"></a>Zrušení registrace zařízení s iOSem v Intune
 
 Když zrušíte registraci zařízení s iOSem v Intune, nebude mít už dále přístup k prostředkům společnosti a nebude ho už dále spravovat Intune.
 

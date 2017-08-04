@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,21 +15,22 @@ ms.assetid: fe5785e9-8d35-4ad7-95e8-d50f8d87154a
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: da190ddeda62ce3385aab4308595b473c3059ed6
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: 56a133105df88d0efede1dd8829285cc845d3621
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="windows-81-and-later-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení Windows 8.1 a novější v Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="general"></a>Obecné
--   **Použít všechny konfigurace ve Windows 10** – Umožňuje použít nastavení v této zásadě kromě zařízení s Windows 8.1 také na zařízení s Windows 10.
+
 -   **Odeslání diagnostických dat** – Povolí zařízení odesílat diagnostické informace Microsoftu.
 -   **Firewall** – Vyžaduje zapnutí brány Windows Firewall.
 -   **Řízení uživatelských účtů** – Vyžaduje použití řízení uživatelských účtů (UAC) v zařízeních.
+
 ## <a name="password"></a>Heslo
 -   **Požadovaný typ hesla** – Vyžaduje, aby koncový uživatel zadal heslo k přístupu k zařízení.
 -   **Minimální délka hesla** – Konfiguruje minimální vyžadovanou délku hesla (ve znacích).
@@ -62,8 +63,10 @@ Pokud vynutíte šifrování na zařízení, je obnovovací klíč přístupný 
 -   **Přístup do nabídky Režim rozlehlé sítě** – Umožňuje uživatelům přistupovat k možnostem nabídky podnikového režimu z Internet Exploreru.
 Když zapnete toto nastavení můžete také určit **Umístění sestavy protokolování**, které obsahuje adresu URL sestavy, která zobrazuje weby, pro které uživatelé zapnuli přístup v podnikovém režimu.
 -   **Umístění seznamu webů využívajících Režim rozlehlé sítě** – Určuje umístění seznamu webů, které budou používat podnikový režim, pokud bude aktivní.
+
 ## <a name="cellular"></a>Mobilní služby
 -   **Datový roaming** – Povolí datový roaming, když je zařízení v mobilní síti.
+
 ## <a name="cloud-and-storage"></a>Cloud a úložiště
 -   **Adresa URL pracovních složek** – Nastaví adresu URL pracovní složky, aby bylo možné synchronizovat dokumenty na všech zařízeních.
 -   **Přístup k aplikaci Windows Pošta bez účtu Microsoft** – Povolí přístup k aplikaci Windows Pošta bez účtu Microsoft.    

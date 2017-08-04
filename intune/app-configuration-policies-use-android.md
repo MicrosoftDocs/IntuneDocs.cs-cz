@@ -38,7 +38,7 @@ Tyto zásady nepřiřazujte přímo uživatelům a zařízením. Místo toho př
     - **Název**: Název profilu, který se zobrazí v konzole Intune
     - **Popis**: Popis profilu, který se zobrazí v konzole Intune
     - **Platforma**: Vyberte **Android**.
-    - **Typ registrace zařízení**: možnost **Zaregistrováno přes Intune** je předem vybraná.
+    - **Typ registrace zařízení** - možnost **Zaregistrováno přes Intune** je předem vybraná.
 3. Kliknutím na **Přidružená aplikace** přejděte na výběr aplikace, pro kterou chcete definovat zásadu konfigurace.  Ze seznamu vyberte některou z aplikací pro Android for Work, které jste schválili a synchronizovali s Intune.
 4. Klikněte na **Nastavení konfigurace**.
 5. U položky **Formát nastavení konfigurace** zvolte možnost **Použít návrháře konfigurace**.
@@ -56,7 +56,7 @@ Tyto zásady nepřiřazujte přímo uživatelům a zařízením. Místo toho př
     - **Název**: Název profilu, který se zobrazí v konzole Intune
     - **Popis**: Popis profilu, který se zobrazí v konzole Intune
     - **Platforma**: Vyberte **Android**.
-    - **Typ registrace zařízení**: možnost **Zaregistrováno přes Intune** je předem vybraná.
+    - **Typ registrace zařízení** - možnost **Zaregistrováno přes Intune** je předem vybraná.
 3. Kliknutím na **Přidružená aplikace** přejděte na výběr aplikace, pro kterou chcete definovat zásadu konfigurace.  Ze seznamu vyberte některou z aplikací pro Android for Work, které jste schválili a synchronizovali s Intune.
 5. Vyberte **Nastavení konfigurace**.
 6. U položky **Formát nastavení konfigurace** zvolte možnost pro **otevření editoru JSON**.
@@ -78,7 +78,7 @@ Předem nakonfigurovat můžete také oprávnění aplikací k přístupu k funk
     - **Název**: Název profilu, který se zobrazí v konzole Intune
     - **Popis**: Popis profilu, který se zobrazí v konzole Intune
     - **Platforma**: Vyberte **Android**.
-    - **Typ registrace zařízení**: možnost **Zaregistrováno přes Intune** je předem vybraná.
+    - **Typ registrace zařízení** - možnost **Zaregistrováno přes Intune** je předem vybraná.
 3. Kliknutím na **Přidružená aplikace** přejděte na výběr aplikace, pro kterou chcete definovat zásadu konfigurace.  Ze seznamu vyberte některou z aplikací pro Android for Work, které jste schválili a synchronizovali s Intune.
 5. Klikněte na **Oprávnění** a potom na **Přidat**.
 6. Ze seznamu vyberte příslušné oprávnění aplikace a klikněte na **OK**.

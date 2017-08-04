@@ -22,8 +22,7 @@ ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/13/2017
 ---
-# Registrace zařízení s Windows 10 v Intune
-<a id="enroll-your-windows-10-device-in-intune" class="xliff"></a>
+# <a name="enroll-your-windows-10-device-in-intune"></a>Registrace zařízení s Windows 10 v Intune
 
 > [!NOTE]
 > Windows 10 funguje na nejrůznějších typech zařízení. Ať už používáte stolní počítač, telefon nebo tablet, postup je stejný, může se jen trochu vizuálně lišit od obrázků na této stránce.
