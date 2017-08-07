@@ -8,9 +8,7 @@
 ### [Co je nového v uživatelském rozhraní aplikace](whats-new-app-ui.md)
 ### [Archiv novinek (portál Azure Portal)](whats-new-archive.md)
 ### [Archiv novinek (portál Classic)](whats-new-archive-classic.md)
-
-<!--## High-level architecture-->
-
+## [Architektura vysoké úrovně](high-level-architecture.md)
 ## [Životní cyklus zařízení a aplikací](introduction-device-app-lifecycles.md)
 ### [Životní cyklus zařízení](device-lifecycle.md)
 ### [Životní cyklus aplikace](app-lifecycle.md)
@@ -264,6 +262,8 @@
 
 # Monitorování a odstraňování potíží
 ## [Používání role pracovníka odborné pomoci](help-desk-operators.md)
+## [Používání datového skladu Intune](reports-nav-create-intune-reports.md)
+### [Připojení k datovému skladu pomocí Power BI](reports-proc-get-a-link-powerbi.md)
 
 # Vývoj a přizpůsobení
 ## [Konfigurace vlastních nastavení zařízení](custom-settings-configure.md)
@@ -288,5 +288,16 @@
 ### [Komponenta Xamarin sady Intune App SDK](app-sdk-xamarin.md)
 ## [Jak používat rozhraní Intune Graph API](intune-graph-apis.md)
 ## [Rozhraní Intune Graph API](https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview)
+## [Rozhraní API datového skladu Intune](reports-nav-intune-date-warehouse.md)
+<!-- ### [Get data from the Data Warehouse API with a REST client](reports-proc-data-rest.md) -->
+### [Koncový bod rozhraní API datového skladu](reports-api-url.md)
+### [Datový model datového skladu](reports-ref-data-model.md)
+#### [Referenční informace pro entitu dat](reports-ref-date.md)
+#### [Referenční informace pro entitu uživatele](reports-ref-user.md)
+#### [Referenční informace pro entity správy mobilních aplikací](reports-ref-mobile-app-management.md)
+#### [Referenční informace pro entity zařízení](reports-ref-devices.md)
+#### [Referenční informace pro entity aplikací](reports-ref-application.md)
+#### [Referenční informace pro entity zásad](reports-ref-policy.md)
+<!-- #### [Relationship of Entities](reports-api-entity-relationships.md) !-->
 
 # [Glosář](intune-glossary.md)
