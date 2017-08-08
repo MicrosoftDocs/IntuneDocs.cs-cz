@@ -83,7 +83,7 @@
 ### [Nastavení registrace zařízení s iOSem](ios-enroll.md)
 #### [Program registrace zařízení](device-enrollment-program-enroll-ios.md)
 #### [Apple School Manager](apple-school-manager-set-up-ios.md)
-#### [Apple Configurator](apple-configurator-setup-assistant-enroll-ios.md)
+#### [Apple Configurator](apple-configurator-enroll-ios.md)
 ### [Nastavení registrace macOS](macos-enroll.md)
 
 ## [Správa zařízení](device-management.md)
@@ -101,6 +101,7 @@
 ### [Odebrání uživatele](device-remove-user.md)
 ### [Vzdálené řízení pro Android](device-profile-android-teamviewer.md)
 ### [Resetování PIN kódu ve Windows 10](device-windows-pin-reset.md)
+### [Synchronizace zařízení](device-sync.md)
 ### [Prozkoumání inventáře zařízení](device-inventory.md)
 
 <!--### Add and delete users -->
@@ -171,6 +172,7 @@
 ### [Konfigurace nastavení Windows 10 Education](education-settings-configure.md)
 ### [Konfigurace nastavení iOS Education](education-settings-configure-ios.md)
 ### [Konfigurace sdílených zařízení s iOS Education](education-settings-configure-ios-shared.md)
+### [Konfigurace zásad aktualizací pro iOS](software-updates-ios.md)
 ### [Konfigurace nastavení služby Windows Update pro firmy](windows-update-for-business-configure.md)
 ### [Konfigurace certifikátů](certificates-configure.md)
 #### [SCEP](certificates-scep-configure.md)
