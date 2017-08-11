@@ -14,11 +14,11 @@ ms.assetid: d3aa6c74-6b5d-4b50-aa66-a040ec44393e
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: c3c41f5e3b0fc81232b03fe547bee7f72fb427a0
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 5be08d2535acefe099429ab732d6d5d99205b2e7
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="monitor-app-protection-policies-with-microsoft-intune"></a>Sledování zásad ochrany aplikací pomocí Microsoft Intune
 Stav dodržování zásad ochrany aplikací, které jste použili u uživatelů, můžete monitorovat. Budete moct vyhledat informace o uživatelích, na které se vztahují zásady ochrany aplikací, stavu dodržování zásad a všech problémech, se kterými se uživatelé můžou setkat.
@@ -43,11 +43,13 @@ V okně **Správa mobilních aplikací Intune** si můžete prohlédnout souhrnn
 
 ![Dlaždice souhrnu okna Správa mobilních aplikací Intune](../media/mam-azure-portal-user-status-summary.png)
 
--   **Uživatelé**: Celkový počet uživatelů ve společnosti, kteří používají aplikace spojené se zásadou.
+-   **Uživatelé**: celkový počet uživatelů ve společnosti, kteří používají aplikaci spojenou se zásadou v pracovním kontextu.
 
--   **SPRAVOVÁNO ZÁSADOU:** Počet uživatelů, kteří použili aspoň jednu aplikaci v pracovním kontextu.
+-   **SPRAVOVÁNO ZÁSADOU**: počet uživatelů, kteří použili aplikaci a je jim v pracovním kontextu přiřazena zásada.
 
--   **ŽÁDNÉ ZÁSADY:** Počet uživatelů, kteří sice používají aplikace spojené se zásadou, ale zásada se na ně nevztahuje. Tyto uživatele případně můžete k zásadě přidat.
+-   **ŽÁDNÉ ZÁSADY**: počet uživatelů, kteří používají aplikaci, na kterou není v pracovním kontextu zamířena žádná zásada. Tyto uživatele případně můžete k zásadě přidat.
+    > [!NOTE]
+    > Pokud máte pro každou platformu víc zásad, bude uživatel považován za spravovaného zásadou, pokud je mu přiřazena aspoň jedna zásada.
 
 - **Uživatelé označení příznakem:** Počet uživatelů, kteří mají problémy. V současnosti jsou v části **Uživatelé označení příznakem** jenom uživatelé zařízení, u kterých byla zrušena softwarová omezení (zařízení s jailbreakem).
 

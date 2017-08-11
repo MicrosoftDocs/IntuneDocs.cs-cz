@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/03/2017
+ms.date: 07/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 16b7ce81eb63a81534af2911b34904d870ac41ad
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: 433cec8e0bc2012090e680e0a28a9a77d7b13a38
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="how-to-manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Správa aplikací pro iOS nakoupených prostřednictvím programu hromadného nákupu pomocí Microsoft Intune
 
@@ -33,6 +33,19 @@ Microsoft Intune pomáhá spravovat aplikace koupené prostřednictvím tohoto p
 - Importuje informace o licenci z App Storu.
 - Sleduje počet použitých licencí.
 - Brání instalaci více kopií aplikace, než vlastníte.
+
+Hromadně zakoupené aplikace můžete přiřadit dvěma způsoby:
+
+### <a name="device-licensing"></a>Licencování zařízení
+
+Když aplikaci přiřadíte k zařízením, použije se jedna licence aplikace, která zůstane spojená se zařízením, jemuž jste ji přiřadili.
+Když k zařízení přiřadíte hromadně zakoupené aplikace, nemusí koncový uživatel zařízení zadávat Apple ID pro přístup do obchodu. 
+
+### <a name="user-licensing"></a>Licencování uživatelů
+
+Když aplikaci přiřadíte k uživatelům, použije se jedna licence aplikace, která bude spojená s uživatelem. Aplikaci je možné spouštět na více zařízeních, která uživatel vlastní.
+Když k uživatelům přiřadíte hromadně zakoupené aplikace, každý koncový uživatel musí mít platné Apple ID pro přístup k obchodu s aplikacemi.
+
 
 V Intune také můžete synchronizovat, spravovat a přiřazovat knihy, které jste koupili v Apple Storu v rámci multilicenčního programu. Knihy můžete spravovat pomocí úlohy **Knihy** na portálu Intune. Postupy správy knih jsou stejné jako při správě aplikací.
 Než začnete, musíte nahrát token pro Apple Volume Purchase Program. V současné době můžete knihy přiřadit jenom v rámci **povinné** instalace.
@@ -81,24 +94,28 @@ Data ukládaná společností Apple můžete kdykoli synchronizovat s Intune vý
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Přiřazení aplikace zakoupené v rámci multilicenčního programu
 
-1. V úloze **Mobilní aplikace** zvolte **Spravovat** > **Licencované aplikace**.
-2. V okně se seznamem aplikací zvolte aplikaci, kterou chcete přiřadit, a pak zvolte tlačítko se třemi tečkami (**...**). > **Přiřaďte skupiny**.
-3. V okně <*název aplikace*> – **Přiřazené skupiny** zvolte **Spravovat** > **Přiřazené skupiny**.
-4. Zvolte **Přiřadit skupiny** a pak v okně **Vybrat skupiny** zvolte skupiny uživatelů nebo zařízení Azure AD, ke kterým chcete aplikaci přiřadit.
-Musíte zvolit akci přiřazení **Povinné**. Kromě toho jsou přiřazení ke skupinám zařízení dostupná pro nové tenanty vytvořené po lednu 2017. Pokud váš tenant vznikl před tímto datem, a nemáte možnost přiřadit skupinám zařízení aplikace získané v rámci programu VPP, obraťte se na podporu Intune.
-5. Až to budete mít, zvolte **Uložit**.
+1.  V úloze **Mobilní aplikace** zvolte **Spravovat** > **Licence aplikací**.
+2.  V okně se seznamem aplikací zvolte aplikaci, kterou chcete přiřadit, a pak zvolte tlačítko se třemi tečkami (**...**). > **Přiřaďte skupiny**.
+3.  V okně *<app name>* - **Přiřazení** zvolte **Spravovat** > **Přiřazení**.
+4.  Zvolte **Vybrat skupiny** a pak v okně **Vybrat skupiny** zvolte skupiny uživatelů nebo zařízení Azure AD, ke kterým chcete aplikaci přiřadit.
+5.  Pro každou zvolenou skupinu vyberte následující nastavení:
+    - **Typ** – vyberte, jestli bude aplikace **k dispozici** (koncoví uživatelé můžou aplikaci nainstalovat z Portálu společnosti), nebo **povinná** (aplikace se na zařízení koncových uživatelů nainstaluje automaticky).
+Když přiřadíte aplikaci VPP jako **K dispozici**, obsah aplikace a licence se přiřadí přímo z App Storu.
+    - **Typ licence** – vyberte **Licencování uživatelů** nebo **Licencování zařízení**.
+6.  Až to budete mít, zvolte **Uložit**.
+
 
 >[!NOTE]
 >V seznamu zobrazené aplikace jsou přidružené k tokenu. Pokud máte aplikaci, která je spojená s více tokeny VPP, zobrazí se stejná aplikace několikrát – jednou u každého tokenu.
 
-Informace, s kterými budete moct lépe sledovat přiřazování aplikací, najdete v článku [Jak sledovat přiřazení aplikací](apps-monitor.md).
-
 ## <a name="further-information"></a>Další informace
 
-Když přiřazujete aplikaci s typem instalace **Požadovaná**, každý uživatel, který aplikaci nainstaluje, využije jednu licenci.
-
-Když chcete licenci získat zpět, musíte nastavit akci přiřazení na **Odinstalovat**. Až se aplikace odinstaluje, licence se uvolní.
+Když chcete licenci získat zpět, musíte nastavit akci přiřazení na Odinstalovat. Až se aplikace odinstaluje, licence se uvolní.
 
 Když se uživatel s oprávněným zařízením poprvé pokusí nainstalovat aplikaci z programu VPP, zobrazí se výzva k účasti v programu Apple Volume Purchase Program (VPP). Aby mohla instalace pokračovat, musí uživatel potvrdit svou účast. Aby se mohl uživatel připojit do programu Apple Volume Purchase Program, musí používat na zařízení s iOSem aplikaci iTunes. Pokud jste nastavili zásadu, která zakazuje aplikace z iTunes Storu, nebude licencování založené na uživatelích pro aplikace z programu VPP fungovat. Řešením je odebrat zásady a povolit tak aplikaci iTunes nebo použít licencování na základě zařízení.
 
-Když přiřadíte aplikaci VPP jako dostupnou, obsah aplikace a licence se přiřadí přímo z App Storu.
+
+
+## <a name="next-steps"></a>Další kroky
+
+Informace, s kterými budete moct lépe sledovat přiřazování aplikací, najdete v článku [Jak sledovat přiřazení aplikací](apps-monitor.md).

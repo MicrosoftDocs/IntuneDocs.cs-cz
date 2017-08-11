@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 04/14/2017
+ms.date: 07/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3df23e1f29543701cf3806a8fecc132ef3ac4f43
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 915b432ed32565e820e16a65932fcdeac00d9bc3
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Získání certifikátu Apple MDM Push Certificate
 
@@ -28,13 +28,15 @@ ms.lasthandoff: 07/01/2017
 V Intune můžete spravovat tato mobilní zařízení: iPady, iPhony a počítače Mac. Intune uživatelům nabízí přístup k firemnímu e-mailu a aplikacím. Pro správu zařízení s iOSem a počítačů Mac potřebuje Intune certifikát MDM Push. Po přidání certifikátu do Intune si uživatelé můžou nainstalovat aplikaci Portál společnosti, aby si mohli zaregistrovat zařízení. Můžete také nastavit správu zařízení s iOSem vlastněných společností pomocí Device Enrollment Programu společnosti Apple nebo zařízení zaregistrovat například pomocí Apple Configuratoru. Další informace o možnostech registrace najdete v článku o [způsobech registrace zařízení s iOSem](enrollment-method-choose-ios.md).
 
 ## <a name="steps-to-get-your-certificate"></a>Kroky k získání certifikátu
-Na portálu Intune zvolte možnost **Registrace zařízení** > **Registrace Apple** **Apple MDM Push Certificate** a pak na portálu Azure Portal postupujte podle níže uvedených očíslovaných kroků.
+Na portálu Intune zvolte **Registrace zařízení** > **Registrace Apple** **Apple MDM Push Certificate** a pak na portálu Azure Portal postupujte podle následujících kroků.
 
 **Krok 1: Stáhněte si žádost o podepsání certifikátu (CSR) pro Intune, která je potřebná k vytvoření certifikátu Apple MDM Push Certificate.**<br>
-Vyberte **Stáhnout CSR** a uložte si soubor .csr místně. Soubor .csr slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple Push Certificates Portal.
+Vyberte **Stáhnout CSR** a uložte si soubor žádosti .csr místně. Soubor slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple Push Certificates Portal.
+
+  ![Snímek obrazovky Konfigurace certifikátu MDM Push Certificate s nenastaveným certifikátem MDM Push.](./media/create-mdm-push-certificate.png)
 
 **Krok 2: Vytvořte certifikát Apple MDM Push Certificate.**<br>
-Vyberte **Vytvořit certifikát MDM Push Certificate**. Tím přejdete na Apple Push Certificates Portal. Přihlaste se pod Apple ID vaší společnosti, abyste mohli vytvořit certifikát Push Certificate pomocí souboru .csr. Když na portálu Apple Push Certificate Portal zvolíte **Upload** (Nahrát), získáte soubor .json. Tento soubor nepoužívejte pro certifikát Push Certificate. Dokončete stahování a vraťte se na portál Apple Push Certificates Portal do nabídky certifikátů pro servery třetích stran a zvolte **Download** (Stáhnout). Stáhněte si certifikát Push Certficate (soubor .pem) a uložte si ho místně.
+Vyberte **Vytvořit certifikát MDM Push Certificate**. Tím přejdete na Apple Push Certificates Portal. Přihlaste se pod Apple ID vaší společnosti, abyste mohli vytvořit certifikát Push Certificate pomocí souboru žádosti. Když na portálu Apple Push Certificate Portal zvolíte **Upload** (Nahrát), získáte soubor .json. Tento soubor nepoužívejte pro certifikát Push Certificate. Dokončete stahování a vraťte se na portál Apple Push Certificates Portal do nabídky certifikátů pro servery třetích stran a zvolte **Download** (Stáhnout). Stáhněte si certifikát Push Certficate (soubor .pem) a uložte si ho místně.
 
 > [!NOTE]
 > Certifikát je přidružený k Apple ID, pomocí kterého byl vytvořen. Doporučujeme použít Apple ID společnosti pro úlohy správy. Nikdy nepoužívejte svoje osobní Apple ID.
@@ -52,10 +54,10 @@ Certifikát je přidružený k Apple ID, pomocí kterého byl vytvořen. Obnovte
 > [!NOTE]
 > Certifikát je přidružený k Apple ID, pomocí kterého byl vytvořen. Doporučujeme použít Apple ID společnosti pro úlohy správy. Nikdy nepoužívejte svoje osobní Apple ID.
 
-1. Na portálu Intune zvolte možnost **Registrace zařízení** > **Registrace Apple** a poté vyberte **Apple MDM Push Certificate**.
-2. Vyberte **Stáhnout CSR** a uložte si soubor .csr místně. Soubor .csr slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple Push Certificates Portal.
+1. Na portálu Intune zvolte možnost **Registrace zařízení** > **Registrace Apple** a pak vyberte **Apple MDM Push Certificate**.
+2. Vyberte **Stáhnout CSR** a uložte si soubor žádosti .csr místně. Soubor slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple Push Certificates Portal.
 3. Najděte certifikát, který chcete obnovit, a vyberte **Obnovit**.
-4. Na obrazovce **Obnovit certifikát push** zadejte poznámky, které vám v budoucnosti pomůžou certifikát identifikovat, vyberte **Zvolit soubor**, přejděte na nový soubor .csr, který jste stáhli, a zvolte **Nahrát**.
+4. Na obrazovce **Obnovit certifikát push** zadejte poznámky, které vám v budoucnosti pomůžou certifikát identifikovat, vyberte **Zvolit soubor**, přejděte na nový soubor žádosti, který jste stáhli, a zvolte **Nahrát**.
 5. Na obrazovce **Potvrzení** vyberte **Stáhnout** a uložte si soubor .pem místně.
 6. Na portálu Azure Intune vyberte ikonu procházení **Apple MDM Push Certificate**, vyberte soubor .pem stažený z webu společnosti Apple a zvolte **Nahrát**.
 

@@ -15,11 +15,11 @@ ms.assetid: f0a2b858-a824-4598-ab81-bdd8e62ac3b3
 ms.reviewer: amyros
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ce779e8dad2c9813d5faf1f03bca9b33690508fe
-ms.sourcegitcommit: b287025b1a0d09d41faf51cf98c34b676fa1d98e
+ms.openlocfilehash: c8b945cf1722d25a9242a4a7776d023a58fe0036
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="add-groups-in-intune"></a>Přidání skupin do Intune
 Služba Intune používá ke správě zařízení a uživatelů skupiny Azure Active Directory (AD). Jako správce Intune můžete nastavit skupiny tak, aby odpovídaly potřebám vaší organizace. Vytvořte skupiny, které uživatele nebo zařízení uspořádají podle zeměpisné polohy, oddělení nebo vlastností hardwaru. Skupiny použijte ke spravování úloh se škálováním. Například můžete nastavit zásady pro mnoho uživatelů nebo nasadit aplikace řadě zařízení.
@@ -28,14 +28,14 @@ Toto téma vysvětluje, jak do Intune přidat skupiny, které se mají použív
 
 Můžete přidat následující typy skupin:
 - **Přiřazené skupiny** – Přidejte uživatele nebo zařízení do statické skupiny ručně.
-- **Dynamické skupiny** – (Azure Active Directory Premium) Umožňují vám vytvořit skupiny pro uživatele nebo zařízení definované jednoduchými nebo pokročilými pravidly.
+- **Dynamické skupiny** – (pomocí Azure Active Directory Premium) Umožňují vytvořit skupiny pro uživatele nebo zařízení definované jednoduchými nebo pokročilými pravidly.
 
 ## <a name="add-a-new-group"></a>Přidání nové skupiny
 
 Pomocí následujícího postupu vytvořte novou skupinu.
 1. Na portálu Intune přejděte na **Skupiny** a potom v okně **Všechny skupiny** zvolte **Nová skupina**.
   ![Snímek obrazovky portálu Intune s vybranou možností Nová skupina](./media/groups-add-new.png)
-2. Zadejte **název** a **popis** nové skupiny. Tyto vlastnosti se objeví pouze na portálu Intune a uživatelům se nezobrazí.
+2. Zadejte **název** a **popis** nové skupiny. Tyto vlastnosti se objeví jenom na portálu správy a uživatelům se nezobrazí.
 
 3. Zvolte **typ členství**:
   - **Přiřazené** – vytvoří skupinu z ručně přiřazených členů. Další informace o [přiřazených skupinách Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal).
@@ -46,7 +46,7 @@ Pomocí následujícího postupu vytvořte novou skupinu.
 
   Azure AD vám umožňuje vytvořit dynamické skupiny na základě pravidel, která definují členství. Naučte se [vytvářet dynamické skupiny podle atributů](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal).
 
-4. Pokud chcete dát členům skupiny uživatelů přístup ke sdíleným aplikacím Office 365, můžete vybrat **Povolit funkce Office**.
+4. Pokud chcete dát členům skupiny uživatelů přístup ke sdíleným aplikacím Office 365, můžete vybrat **Povolit funkce Office**. Přečtěte si další informace o [Skupinách Office 365](https://support.office.com/article/Learn-about-Office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 5. Novou skupinu přidáte tlačítkem **Vytvořit**.
 
 ## <a name="see-also"></a>Související témata

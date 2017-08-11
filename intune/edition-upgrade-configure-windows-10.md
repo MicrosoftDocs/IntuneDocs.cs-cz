@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/03/2017
+ms.date: 07/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: ae8b6528-7979-47d8-abe0-58cea1905270
 ms.reviewer: coryfe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 30cea0ecfa62e9bbc0200d15eff94782d48a81fa
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 7da261fcb59b8ac90ea412155d093dd09bf41d46
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="how-to-configure-windows-10-edition-upgrades-in-microsoft-intune"></a>Konfigurace nastavení upgradu edice Windows 10 v Microsoft Intune
 
@@ -43,8 +43,8 @@ Podporují se tyto možnosti upgradu:
 ## <a name="before-you-start"></a>Než začnete
 Před zahájením upgradu zařízení na nejnovější verzi budete potřebovat:
 
-- Kód Product Key, který opravňuje k instalaci nové verze Windows ve všech zařízeních, na která touto zásadou cílíte (pro edice Windows 10 Desktop). Můžete využít klíče k vícenásobné aktivaci (MAK) nebo kódy serveru správy klíčů (KMS). Další možností je použít licenční soubor od Microsoftu, který obsahuje licenční informace pro instalaci nové verze Windows ve všech zařízeních, na která touto zásadou cílíte (pro edice Windows 10 Mobile a Windows 10 Holographic).
-- Cílová zařízení Windows 10 musí být registrovaná v Microsoft Intune. Zásady upgradu edice nejde použít pro počítače s klientským softwarem Intune pro počítače.
+- Kód Product Key, který opravňuje k instalaci nové verze Windows ve všech zařízeních, na která touto zásadou cílíte (pro edice Windows 10 Desktop). Můžete použít aktivační klíče MAK (Multiple Activation Keys) nebo klíče KMS (Key Management Server). Nebo můžete použít Licenční soubor od Microsoftu, který obsahuje licenční informace pro instalaci nové verze Windows ve všech zařízeních, na která touto zásadou cílíte (pro edice Windows 10 Mobile a Windows 10 Holographic).
+- Zařízení Windows 10, kterým zásady přiřazujete, musí být zaregistrovaná v Microsoft Intune. Zásady upgradu edice nejde použít pro počítače s klientským softwarem Intune pro počítače.
 
 ## <a name="create-a-device-profile-containing-device-restriction-settings"></a>Vytvoření profilu zařízení obsahujícího nastavení omezení zařízení
 
@@ -64,5 +64,11 @@ Před zahájením upgradu zařízení na nejnovější verzi budete potřebovat:
 8. Až to budete mít, vraťte se do okna **Vytvořit profil** a klikněte na **Vytvořit**.
 
 Profil se vytvoří a zobrazí se v okně se seznamem profilů.
+
+## <a name="next-steps"></a>Další kroky
+
 Pokud chcete pokračovat a přiřadit tento profil ke skupinám, podívejte se na téma [Jak přiřadit profily zařízení](device-profile-assign.md).
+
+>[!NOTE]
+>Pokud později přiřazení zásady odeberete, verze Windows v zařízení se nevrátí zpět a bude dál normálně fungovat.
 

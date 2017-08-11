@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 7a61c3703cd1016ef63c8baa371c3a21dca127fc
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 7aad054f0861522174faa01b979083a818c106af
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="help-users-with-the-troubleshooting-portal-in-microsoft-intune"></a>Pomoc uživatelům prostřednictvím portálu pro řešení potíží v Microsoft Intune
 
@@ -26,52 +26,50 @@ ms.lasthandoff: 07/01/2017
 
 Portál pro řešení potíží umožňuje operátorům helpdesku a správcům Intune zobrazit informace o uživatelích a použít je k řešení jejich žádostí o pomoc. Pokud má organizace mezi svými pracovníky i operátory helpdesku, může přiřadit roli **operátora helpdesku** skupině uživatelů, kteří potom mohou prostřednictvím okna Řešení potíží pomáhat uživatelům.
 
-Když například uživatel kontaktuje podporu ohledně technického problému s Intune, zadá operátor helpdesku jméno uživatele. Intune zobrazí relevantní informace, které mohou přispět k vyřešení mnoha problémů první úrovně, jako je například stav uživatele, chyba při instalaci aplikace nebo problémy s dodržováním předpisů. Lze tak vyřešit například tyto problémy:
+Když například uživatel kontaktuje podporu ohledně technického problému s Intune, zadá operátor helpdesku jméno uživatele. Intune zobrazuje užitečná data, která vám můžou pomoct s řešením řady problémů úrovně 1 včetně těchto:
+- Stav uživatele
+- Přiřazení
+- Chyba při instalaci aplikace
+- Problémy se shodou
 - Zařízení neodpovídá
 -   Zařízení nedokáže získat nastavení sítě VPN nebo Wi-Fi
 -   Instalace aplikace se nezdařila
 
 
 ## <a name="add-help-desk-operators"></a>Přidání operátorů helpdesku
-Jako správce Intune máte dvě možnosti, jak můžete uživatelům přiřadit oprávnění operátora helpdesku:
-- Přiřadit předdefinovanou roli **operátora helpdesku**
-- Vytvořit a přiřadit vlastní roli
+Jako správce Intune můžete přiřadit roli operátora helpdesku skupině uživatelů. Členové této skupiny můžou používat portál pro správu k řešení problémů uživatelů. Pro přístup k portálu Intune je potřeba, aby měl každý operátor helpdesku licenci Intune. Podívejte se, [jak přiřadit licence pro Intune](licenses-assign.md).
 
-## <a name="assign-help-desk-operator-role"></a>Přiřazení role operátora helpdesku
-Jako správce Intune můžete přiřadit roli operátora helpdesku skupině uživatelů. Portál pro správu pak mohou využívat všichni členové dané skupiny. Pro přístup k portálu Intune je potřeba, aby měl každý operátor helpdesku licenci Intune. Podívejte se, [jak přiřadit licence pro Intune](licenses-assign.md).
+Přidání uživatelů helpdesku:
+1. V případě potřeby [přidejte uživatele do Intune](users-add.md).
+2. [Vytvořte skupinu helpdesku](groups-add.md) a přidejte do ní uživatele.
+3. [Přiřaďte roli RBAC operátora helpdesku](role-based-access-control.md#built-in-roles) nebo [vytvořte vlastní roli](role-based-access-control.md#custom-roles) s následujícími oprávněními:
+  - Mobilní aplikace: Číst
+  - Spravované aplikace: Číst
+  - Spravovaná zařízení: Číst
+  - Organizace: Číst
+  - Zásady dodržování předpisů zařízením: Číst
+  - Konfigurace zařízení: Číst
 
-1. Přihlaste se k portálu Intune jako správce Intune a vyberte **Role Intune**.
-2. V úloze **Role Intune** vyberte **Operátor helpdesku** > **Přiřazení** a potom vyberte **Přiřadit**.
-  ![Snímky obrazovky portálu Intune se zvýrazněnými rolemi Intune a seznamem předdefinovaných rolí včetně role operátora helpdesku se zvýrazněnou položkou Přiřazení a červeným rámečkem okolo položky Přiřadit](./media/help-desk-user-assign.png)
-3. Zadejte **Název přiřazení** (to je povinná položka), **Popis přiřazení** (tuto položku zadávat nemusíte) a potom přiřaďte **Členy (Skupiny)** a **Rozsah (Skupiny)**.
-4. Členové role Operátor helpdesku nyní mohou používat portál pro řešení potíží.
+  ![Snímky obrazovky portálu Intune se zvýrazněnými rolemi Intune a seznamem předdefinovaných rolí včetně role operátora helpdesku](./media/help-desk-user-add.png)
 
-Další informace o rolích Intune najdete v článku [Role Intune (RBAC)](role-based-access-control.md).
-
-## <a name="create-a-custom-role-for-troubleshooting"></a>Vytvoření vlastní role pro řešení potíží
-Jako správce Intune můžete vytvořit vlastní roli, která uživatelům umožní využívat portál pro řešení potíží a zajistí jim oprávnění podle potřeb vaší organizace. Další informace o rolích Intune najdete v článku [Role Intune (RBAC)](role-based-access-control.md).
-
-![Snímky obrazovky portálu Intune se zvýrazněnými rolemi Intune a seznamem předdefinovaných rolí včetně role operátora helpdesku](./media/help-desk-user-add.png)
-
-Pokud se konzola Intune používá pro helpdeskové zobrazení, měla by mít vlastní role operátora helpdesku následující oprávnění:
-- Mobilní aplikace: Číst
-- Spravované aplikace: Číst
-- Spravovaná zařízení: Číst
-- Organizace: Číst
+4. Abyste operátorům helpdesku poskytli oprávnění k zobrazení stavu služby a otvírání lístků podpory pro Intune, [udělte uživatelům oprávnění správce](https://docs.microsoft.com/azure/active-directory/active-directory-users-assign-role-azure-portal) jako **Správce služeb**. Neudělujte oprávnění **Správce služby Intune**, protože tato role adresáře má víc práv, než operátoři helpdesku potřebují.
 
 ## <a name="access-the-troubleshooting-portal"></a>Přístup k portálu pro řešení potíží
 
 Pracovníci helpdesku a správci Intune mají přístup k portálu pro řešení potíží dvěma způsoby:
-- Ve webovém prohlížeči otevřete [http://aka.ms/intunetroubleshooting](http://aka.ms/intunetroubleshooting).
-- V portálu Intune přejděte na **Nápověda a podpora** > **Řešení potíží**.
+- Otevřením adresy [http://aka.ms/intunetroubleshooting](http://aka.ms/intunetroubleshooting) ve webovém prohlížeči zobrazte jenom portál pro řešení potíží.
+  ![Snímek obrazovky konzoly pro řešení potíží](./media/help-desk-console.png)
+- Přihlaste se k portálu Azure Portal, zvolte **Další služby** > **Monitorování + správa** > **Intune** a pak přejděte na **Nápověda a podpora** > **Řešení potíží**.
+
+Kliknutím na **Vybrat uživatele** zobrazíte uživatele a podrobnosti o něm.
 
 ![Snímek obrazovky s úlohou Řešení potíží Intune a s odkazem Vybrat uživatele](media/help-desk-user.png)
 
 ## <a name="use-the-troubleshooting-portal"></a>Použití portálu pro řešení potíží
 
 Na portálu pro řešení potíží můžete zvolit **Vybrat uživatele** a zobrazit informace o uživatelích. Informace o uživateli vám mohou pomoci porozumět aktuálnímu stavu uživatelů a jejich zařízení. Na portálu pro řešení potíží se zobrazí následující podrobnosti o řešení potíží:
-- **Stav tenanta**
+- **Stav účtu**
 - **Stav uživatele**
-- **Zařízení** a akce zařízení
+- **Zařízení** s akcemi zařízení
 - **Členství ve skupině**
 - **Stav ochrany aplikace**

@@ -14,11 +14,11 @@ ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1627627ab1744f963d738dcedde6a772bb3ae663
-ms.sourcegitcommit: 5eb209ae48173ddfdbbab131f12f3ac3498dcd87
+ms.openlocfilehash: 205c9c52759d5fee2429fe46d19c8882aacafa7a
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="protect-line-of-business-apps-and-data-on-devices-that-are-not-enrolled-in-microsoft-intune"></a>Ochrana obchodních aplikací a dat na zařízeních, která nejsou zaregistrovaná v Microsoft Intune
 
@@ -31,7 +31,7 @@ Toto téma vysvětluje kroky nutné k použití zásad MAM u aplikací, ke kter�
 
 ##  <a name="step-1-prepare-the-app"></a>Krok 1: Příprava aplikace
 
-Před použitím zásad MAM u aplikace ji musíte nejprve zabalit pomocí nástroje Microsoft Intune App Wrapping Tool for iOS. Funkce Intune pro ochranu aplikací také můžete integrovat ručně pomocí sady [Intune App SDK](/intune/app-sdk).
+Před použitím zásad MAM u aplikace musíte aplikaci nejdřív zabalit pomocí nástroje Microsoft Intune App Wrapping pro [iOS](/intune/app-wrapper-prepare-ios) nebo [Android](/intune/app-wrapper-prepare-android) nebo ručně integrovat funkce Intune pro ochranu aplikací pomocí [sady Intune App SDK](/intune/app-sdk).
 
 Další informace o použití nástroje App Wrapping nebo sady Intune App SDK najdete v tématu [Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune](/intune/apps-prepare-mobile-application-management).
 

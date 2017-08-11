@@ -6,7 +6,7 @@ keywords:
 author: lindavr
 ms.author: lindavr
 manager: angrobe
-ms.date: 01/09/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: ayesham
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 302f646bfb9ff0ac024687fa0b3926d83158995c
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: d21b6a03cdc8094bc8da3cecd5331b3f11400302
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps"></a>Jak vaši uživatelé budou moct používat základní ochranu ve spravovaných aplikacích Office 365
 
@@ -48,15 +48,14 @@ Jako příklad tento článek používá OneDrive pro firmy, pomocí kterého uk
 
 1. Spuštěním aplikace OneDrive pro firmy otevřete přihlašovací stránku.  <br/> ![Snímek přihlašovací obrazovky OneDrivu pro iOS](./media/onedrive-ios-sign-in.png)
 2. Zadejte uživatelské jméno pracovního účtu. Budete přesměrováni na ověřovací stránku Office 365, kde zadáte pracovní přihlašovací údaje. <br/> ![Snímek přihlašovací stránky Office 365](./media/o365-sign-in-ios.png)
-3. Po úspěšném ověření přihlašovacích údajů službou Azure Active Directory se použijí zásady správy mobilních aplikací (MAM) a zobrazí se vám výzva restartovat aplikaci OneDrive pro firmy.  <br/>![Snímek výzvy na restartování pro iOS](./media/ios-restart-prompt.png)
->[!NOTE]
->Zpráva s informacemi o vyžadovaném restartování se zobrazí pouze na zařízeních, která nejsou zaregistrovaná v Intune.
+3. Po úspěšném ověření přihlašovacích údajů službou Azure Active Directory se použijí zásady ochrany aplikací a zobrazí se výzva k restartování aplikace OneDrive pro firmy.  <br/>![Snímek výzvy na restartování pro iOS](./media/ios-restart-prompt.png)    
+  > [!NOTE]
+  > Zpráva s informacemi o vyžadovaném restartování se zobrazí pouze na zařízeních, která nejsou zaregistrovaná v Intune.
 
 
-4. Znovu spusťte aplikaci OneDrive pro firmy. Aplikace se spustí se zapnutými zásadami MAM a zobrazí se vám výzva k zadání PIN kódu pro zařízení (pokud na něm ještě PIN kód nastavený nemáte). <br/> ![Snímek výzvy k vytvoření PIN kódu](./media/pin-prompt-ios.png)
-
->[!NOTE]
->Většině vašich uživatelů se tato výzva nezobrazí. Uživatelům, kteří na svém zařízení s iOSem nemají nastavený PIN kód, se tato výzva zobrazí.
+4. Znovu spusťte aplikaci OneDrive pro firmy. Aplikace se spustí se zapnutými zásadami ochrany aplikací a zobrazí se výzva k zadání PIN kódu pro zařízení (pokud na něm ještě PIN kód nastavený nemáte). <br/> ![Snímek výzvy k vytvoření PIN kódu](./media/pin-prompt-ios.png)    
+  > [!NOTE]
+  > Většině vašich uživatelů se tato výzva nezobrazí. Uživatelům, kteří na svém zařízení s iOSem nemají nastavený PIN kód, se tato výzva zobrazí.
 
 
 5. Jakmile PIN kód nastavíte a potvrdíte, vraťte se do aplikace OneDrive pro firmy. Zobrazí se vám jednorázová zpráva, že váš správce IT teď chrání pracovní data ve OneDrivu. <br/> ![Snímek jednorázového oznámení vašeho správce IT](./media/one-time-notice.png)
@@ -70,9 +69,9 @@ Jako příklad tento článek používá OneDrive pro firmy, pomocí kterého uk
 
 1. Spuštěním aplikace OneDrive pro firmy otevřete přihlašovací stránku.  <br/> ![Snímek uvítací obrazovky aplikace OneDrive](./media/onedrive-android-welcome.png)
 2. Zadejte uživatelské jméno pracovního účtu. Budete přesměrováni na ověřovací stránku Office 365, kde zadáte pracovní přihlašovací údaje. <br/> ![Snímek přihlášení O365 v Androidu](./media/o365-sign-in-android.png)
-3. Pokud na zařízení ještě není nainstalovaná aplikace Portál společnosti, po úspěšném ověření přihlašovacích údajů službou Azure Active Directory se vám zobrazí zpráva s pokyny k její instalaci. Pokračujte klepnutím na **Přejít do obchodu**. <br/> ![Snímek zprávy o získání aplikace Portál společnosti](./media/get-company-portal-android.png) <br/>Pokud máte na svém telefonu aplikaci Portál společnosti nainstalovanou, aplikace OneDrive pro firmy se automaticky spustí a můžete přeskočit na poslední poznámku.
->[!IMPORTANT]
->Po nastavení aplikací Office tak, aby se spravovaly přes zásady MAM, **musí** uživatel zařízení s Androidem nainstalovat aplikaci Portál společnosti, aby mohl přistupovat k pracovním e-mailům a dokumentům, i když koncový uživatel pro samotné čtení e-mailů a dokumentů nemusí aplikaci otevírat a přihlašovat se k ní.
+3. Pokud na zařízení ještě není nainstalovaná aplikace Portál společnosti, po úspěšném ověření přihlašovacích údajů službou Azure Active Directory se vám zobrazí zpráva s pokyny k její instalaci. Pokračujte klepnutím na **Přejít do obchodu**. <br/> ![Snímek zprávy o získání aplikace Portál společnosti](./media/get-company-portal-android.png) <br/>Pokud máte na svém telefonu aplikaci Portál společnosti nainstalovanou, aplikace OneDrive pro firmy se automaticky spustí a můžete přeskočit na poslední poznámku.    
+  > [!IMPORTANT]
+  > Po nastavení aplikací Office tak, aby se spravovaly přes zásady ochrany aplikací, **musí** uživatel zařízení s Androidem nainstalovat aplikaci Portál společnosti, aby mohl přistupovat k pracovním e-mailům a dokumentům, i když koncový uživatel pro samotné čtení e-mailů a dokumentů nemusí aplikaci otevírat a přihlašovat se k ní.
 
 4. Teď jste v obchodě Google Play, kde si můžete stáhnout a nainstalovat aplikaci Portál společnosti. Tato aplikace vám pomůže uchovávat data v bezpečí. <br/> ![Snímek aplikace v obchodu Google Play](./media/google-play-get-app-android.png)
 5. Po dokončení instalace aplikace přijměte podmínky zvolením **Přijmout**. Aplikace OneDrive pro firmy se automaticky spustí.
@@ -118,9 +117,9 @@ Jako příklad tento článek používá OneDrive pro firmy, pomocí kterého uk
 ### <a name="why-is-an-app-pin-policy-only-configured-for-android-devices"></a>Proč se zásady PIN kódu aplikace konfigurují jenom pro zařízení s Androidem?
 Šifrování v iOSu a Androidu funguje rozdílně.
 
-V iOSu se data aplikací přidružených k zásadám Intune MAM šifrují při nečinnosti pomocí šifrování na úrovni zařízení poskytovaného operačním systémem. Proto, když zapnete zásady šifrování aplikací, automaticky požadujete, aby uživatel měl a zadal pro přístup k pracovním datům PIN kód zařízení. Uživatelům, kteří na zařízení PIN kód nakonfigurovaný nemají, se zobrazí výzva vytvořit PIN kód zařízení.
+V iOSu se data aplikací přidružených k zásadám ochrany aplikací Intune šifrují při nečinnosti pomocí šifrování na úrovni zařízení poskytovaného operačním systémem. Proto, když zapnete zásady šifrování aplikací, automaticky požadujete, aby uživatel měl a zadal pro přístup k pracovním datům PIN kód zařízení. Uživatelům, kteří na zařízení PIN kód nakonfigurovaný nemají, se zobrazí výzva vytvořit PIN kód zařízení.
 
-V Androidu se data aplikací přidružených k zásadám Intune MAM šifrují synchronně během vstupně-výstupních úloh se soubory. Obsah v úložišti zařízení je zašifrovaný vždycky. Na zařízeních, která nejsou spravovaná pomocí MDM, zásady MAM nemůžou vynutit požadavek na PIN kód zařízení. Aby uživatelé museli pro přístup k pracovním datům použít PIN kód, průvodce povolí zásady PIN kódu aplikace.
+V Androidu se data aplikací přidružených k zásadám ochrany aplikací Intune šifrují synchronně během vstupně-výstupních úloh se soubory. Obsah v úložišti zařízení je zašifrovaný vždycky. Na zařízeních, která nejsou spravovaná pomocí MDM, zásady ochrany aplikací nemůžou vynutit požadavek na PIN kód zařízení. Aby uživatelé museli pro přístup k pracovním datům použít PIN kód, průvodce povolí zásady PIN kódu aplikace.
 
 Vždy můžete tato nastavení zásad upravit tak, aby odpovídala požadavkům vaší organizace.
 

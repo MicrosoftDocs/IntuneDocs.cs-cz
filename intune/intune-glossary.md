@@ -1,37 +1,35 @@
 ---
 title: "Glosář služby Intune"
-titleSuffix: Intune on Azure
+titleSuffix: 
 description: "Přečtěte si něco o terminologii používané v Microsoft Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/15/2017
+ms.date: 07/28/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: bd7b5613-ee9f-4dc3-990c-ab4c1d40720d
 ms.custom: intune-azure
-ms.openlocfilehash: a9b43fc1a1877a3fc8bf4c5ee00e02dfee3cdea8
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 2df6c8c79954c2145ffa6eb33782cee690d78b1d
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="microsoft-intune-glossary"></a>Glosář Microsoft Intune
-
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="a"></a>A
 
 |||
 |-|-|
 |přiřazení aplikací|Umožňuje uživatelům [vyhledat, stáhnout a nainstalovat](/intune/app-management) aplikace, které potřebují. Toto se dřív označovalo jako *nasazení aplikací*.|
-|konfigurační profil aplikace|Nakonfiguruje konkrétní nastavení aplikace pro [iOS](/intune/app-configuration-policies-use-ios) nebo [Android](/intune/app-configuration-policies-use-android) před jejím spuštěním.|
+|konfigurační profil aplikace <br/><br/>zásady konfigurace aplikací|K dispozici pro mobilní aplikace se specifickou konfigurací podle dodavatele. Nakonfiguruje konkrétní nastavení aplikace pro [iOS](/intune/app-configuration-policies-use-ios) nebo [Android](/intune/app-configuration-policies-use-android) před jejím spuštěním.|
 |monitorování aplikace|Umožňuje [zobrazit poslední stav a aktivitu](/intune/apps-monitor) související s přiřazením aplikace.|
 |úloha odebrání dat ochrany aplikace|[Odebere data aplikace](/intune/app-protection-policies) ze zařízení uživatele.|
-|zásady ochrany aplikací|Zajišťují, aby aplikace uživatele odpovídaly [firemním zásadám ochrany dat](/intune/app-protection-policies).|
+|zásady ochrany aplikací|K dispozici pro mobilní aplikace, které se integrují s technologií Enterprise Mobility + Security (EMS). Zajišťují, aby aplikace uživatele odpovídaly [firemním zásadám ochrany dat](/intune/app-protection-policies).|
 |App SDK (sada)|Sada [Microsoft Intune App SDK](/intune/app-sdk) vám umožní do vámi vytvářených aplikací přidat funkce, díky kterým bude tyto aplikace možné spravovat prostřednictvím zásad ochrany aplikací v Intune.|
 |akce odinstalace aplikace|Umožňuje [odinstalovat aplikace](/intune/apps-deploy) ze zařízení uživatele.|
 |App Wrapping Tool|[Aplikace příkazového řádku](/intune/apps-prepare-mobile-application-management), která vytvoří kolem obchodní aplikace obálku. Tato obálka potom umožní správu aplikace pomocí zásad ochrany aplikací v Intune.|
@@ -103,7 +101,7 @@ ms.lasthandoff: 07/01/2017
 |-|-|
 |spravovaný prohlížeč|[Aplikace na procházení webu](/intune/app-configuration-managed-browser), kterou můžete přiřadit v organizaci pomocí Intune. Zásady spravovaného prohlížeče konfigurují seznam povolených nebo blokovaných webů. Tyto seznamy omezují weby, které můžou uživatelé spravovaného prohlížeče navštívit.|
 |autorita pro správu mobilních zařízení (MDM)|[Autorita MDM](/intune/mdm-authority-set) definuje službu správy s oprávněním ke správě určité sady zařízení. Příklady možných autorit MDM zahrnují Intune samostatně a Configuration Manager s Intune.|
-|zásady konfigurace mobilních aplikací|Zásady pro [iOS](/intune/app-configuration-policies-use-ios) nebo [Android](/intune/app-configuration-policies-use-android), které slouží k předávání nastavení do kompatibilních aplikací při jejich spuštění – například mohou dodávat název společnosti nebo serverovou adresu.|
+|zásady konfigurace mobilních aplikací|K dispozici pro mobilní aplikace se specifickou konfigurací podle dodavatele. Například zásady pro [iOS](/intune/app-configuration-policies-use-ios) nebo [Android](/intune/app-configuration-policies-use-android), které slouží k předávání nastavení do kompatibilních aplikací při jejich spuštění, třeba názvu společnosti nebo adresy serveru.|
 |Zásady zřizování mobilních aplikací|Zásady pro iOS, které pomáhají zajistit, že [zřizovacím profilům](/intune/app-provisioning-profile-ios) aplikací pro iOS, které přiřadíte, nevyprší platnost.|
 |Správa mobilních aplikací|[Správa mobilních aplikací (MAM)](/intune/app-lifecycle) umožňuje publikovat, doručovat, konfigurovat, zabezpečovat, monitorovat a aktualizovat mobilní aplikace pro uživatele.
 |Správa mobilních zařízení|[Správa mobilních zařízení (MDM)](/intune/device-lifecycle) umožňuje registrovat zařízení do Intune, takže můžete tato zařízení zřizovat, konfigurovat, monitorovat a spravovat.
@@ -131,7 +129,7 @@ ms.lasthandoff: 07/01/2017
 ## <a name="s"></a>S
 |||
 |-|-|
-|selektivní vymazání|[Selektivní vymazání](/intune/device-company-data-remove) odebere ze zařízení jenom firemní data, včetně případných dat správy mobilních aplikací (MAM), nastavení a e-mailových profilů. Při selektivním vymazání se osobní údaje uživatele na zařízení ponechají.|
+|selektivní vymazání|[Selektivní vymazání](/intune/device-company-data-remove) odebere ze zařízení jenom firemní data chráněná zásadami ochrany aplikací včetně nastavení a e-mailových profilů. Při selektivním vymazání se osobní údaje uživatele na zařízení ponechají.|
 |Zkušební načtení před prodejem|Akce instalace obchodní aplikace, aniž by k ní byl přístup v App Storu.|
 |Předplatné|Zadaná smlouva, která vám umožňuje přístup ke klientovi Intune.|
 

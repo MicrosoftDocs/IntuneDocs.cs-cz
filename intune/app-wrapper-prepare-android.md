@@ -14,11 +14,11 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: oldang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ebea9fe4cbf0c6c788ba4a209132856eda06445e
-ms.sourcegitcommit: 5eb209ae48173ddfdbbab131f12f3ac3498dcd87
+ms.openlocfilehash: fed97412df96d0bdffaf3b10ad5306a6f56d0066
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="prepare-android-apps-for-mobile-application-management-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro Android na správu mobilních aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -50,16 +50,7 @@ Před spuštěním nástroje si přečtěte část [Důležité informace o zabe
     > [!NOTE]
     > V některých případech může 32bitová verze Javy způsobit potíže s pamětí. Proto je vhodné nainstalovat 64bitovou verzi.
 
-- Android vyžaduje, aby byly všechny balíčky aplikací (.apk) podepsané. Ke generování přihlašovacích údajů potřebných k podpisu zabalené výstupní aplikace použijte Java keytool. Klíče pro nástroj App Wrapping Tool použité k podpisu zabalené výstupní aplikace můžete vygenerovat například následujícím příkazem, který ke generování klíčů používá spustitelný Java soubor keytool.exe.
-
-    ```
-    keytool.exe -genkeypair -v -keystore mykeystorefile -alias mykeyalias -keyalg RSA -keysize 2048 -validity 50000
-    ```
-    V tomto příkladu se ke generování dvojice klíčů (veřejný klíč a spojený privátní klíč o velikosti 2048 bitů) použije šifrovací algoritmus RSA. Tento algoritmus pak zabalí veřejný klíč do certifikátu X.509 v3 podepsaného svým držitelem, který se uloží jako řetěz certifikátu s jedním prvkem. Tento řetěz certifikátů a privátní klíč jsou uložené v nové položce úložiště klíčů s názvem „mykeystorefile“ a označené aliasem „mykeyalias“. Položka úložiště klíčů je platná po dobu 50 000 dní.
-
-    Příkaz vás vyzve k zadání hesel k úložišti klíčů a ke klíči. Používejte hesla, která jsou bezpečná, ale nezapomeňte si je poznamenat, protože je budete potřebovat ke spuštění nástroje App Wrapping Tool.
-
-    Jestli se chcete o nástroji Java [keytool](http://docs.oracle.com/javase/6/docs/technotes/tools/windows/keytool.html) a [úložišti klíčů](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html) v Javě dozvědět něco víc, projděte si podrobnou dokumentaci na webu společnosti Oracle.
+- Android vyžaduje, aby byly všechny balíčky aplikací (.apk) podepsané. Informace o **opětovném použití** existujících certifikátů a celkové pokyny k podpisovým certifikátům najdete v tématu [Opětovné použití podpisových certifikátů a balení aplikací](https://docs.microsoft.com/en-us/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps). Ke generování **nových** přihlašovacích údajů potřebných k podpisu zabalené výstupní aplikace se používá spustitelný soubor Java keytool.exe. Nastavená hesla musí být bezpečná, ale nezapomeňte si je poznamenat, protože je budete potřebovat ke spuštění nástroje App Wrapping Tool.
 
 ## <a name="install-the-app-wrapping-tool"></a>Instalace nástroje App Wrapping Tool
 
@@ -95,7 +86,7 @@ Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umíst
 |**-KeyStorePassword**&lt;SecureString&gt;|Heslo použité k dešifrování úložiště klíčů. Android vyžaduje, aby všechny balíčky aplikace (.apk) byly podepsané. Ke generování hesla k úložišti klíčů (parametr KeyStorePassword) použijte nástroj Java keytool. Další informace o úložišti klíčů Java si můžete přečíst [tady](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html).| |
 |**-KeyAlias**&lt;String&gt;|Název klíče, který se má použít pro podepisování.| |
 |**-KeyPassword**&lt;SecureString&gt;|Heslo použité k dešifrování privátního klíče, který se použije pro podepisování.| |
-|**-SigAlg**&lt;SecureString&gt;| (Volitelně) Název podpisového algoritmu, který se má použít k podepsání. Algoritmus musí být kompatibilní s privátním klíčem.|Příklady: SHA256withRSA, SHA1withRSA, MD5withRSA|
+|**-SigAlg**&lt;SecureString&gt;| (Volitelně) Název podpisového algoritmu, který se má použít k podepsání. Algoritmus musí být kompatibilní s privátním klíčem.|Příklady: SHA256withRSA, SHA1withRSA|
 | **&lt;CommonParameters&gt;** | (Volitelně) Příkaz podporuje běžné parametry PowerShellu, jako je verbose a debug. |
 
 
