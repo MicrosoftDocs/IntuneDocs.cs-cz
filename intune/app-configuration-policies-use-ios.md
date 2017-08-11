@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/12/2017
+ms.date: 07/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0cbcf70af17ba7690f54196790da04becd8ba1eb
-ms.sourcegitcommit: 388c5f59bc992375ac63968fd7330af5d84a1348
+ms.openlocfilehash: b261834c85a9dd3cbc6f8fae40933dd7a79acf93
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="how-to-use-microsoft-intune-app-configuration-policies-for-ios"></a>Použití zásad konfigurace aplikací v Intune pro iOS
 
@@ -37,7 +37,7 @@ Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastav
 
 Když tato nastavení zadají uživatelé špatně, můžete to zvýšit zatížení vašeho helpdesku a zpomalit přijímání nových aplikací.
 
-Zásady konfigurace aplikací pomůžou tyto problémy eliminovat tím, že vám dovolí pomocí zásad přiřadit tato nastavení uživatelům dřív, než aplikaci spustí. Nastavení jsou pak zadaná automaticky a uživatelé nemusí provádět žádnou akci.
+Zásady konfigurace aplikací pomůžou tyto problémy eliminovat tím, že vám dovolí pomocí zásad přiřadit tato nastavení uživatelům dřív, než aplikaci spustí. Nastavení jsou pak zadaná automaticky a uživatelé nemusí provádět žádnou akci. Aplikace musejí být napsané tak, aby podporovaly používání konfigurací aplikací. Další informace získáte od dodavatele aplikace.
 
 Tyto zásady nepřiřazujte přímo uživatelům a zařízením. Místo toho přidružíte zásadu k aplikaci a pak přiřadíte tuto aplikaci. Nastavení zásad se použije vždy, když je aplikace zkontroluje (obvykle při prvním spuštění).
 
@@ -57,8 +57,8 @@ Tyto zásady nepřiřazujte přímo uživatelům a zařízením. Místo toho př
 5.  V okně seznamu zásad zvolte **Přidat**.
 6.  V okně **Přidat zásady konfigurace** zadejte **Název** a volitelný **Popis** pro zásady konfigurace aplikace.
 7.  Jako **Typ registrace zařízení** vyberte jednu z těchto možností:
-    - **Zaregistrováno přes Intune** – pro aplikace, které integrovaly sadu Intune App SDK a jsou spravované pomocí Intune.
-    - **Nezaregistrováno přes Intune** – pro aplikace, které integrovaly sadu Intune App SDK a nejsou spravované pomocí Intune nebo jsou spravované jiným řešením.
+    - **Zaregistrováno přes Intune** – pro aplikace, které jsou spravované pomocí Intune.
+    - **Nezaregistrováno přes Intune** – pro aplikace, které nejsou spravované pomocí Intune nebo jsou spravované jiným řešením.
 8.  Jako **platformu** zvolte **iOS** (jenom pro zařízení zaregistrovaná přes Intune).
 9.  Zvolte **Přidružená aplikace** a pak v okně **Přidružená aplikace** zvolte spravovanou aplikaci, u které chcete použít konfiguraci.
 10. V okně **Přidat zásady konfigurace** zvolte **Nastavení konfigurace**.

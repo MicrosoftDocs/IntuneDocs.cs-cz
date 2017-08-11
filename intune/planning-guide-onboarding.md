@@ -5,7 +5,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 07/10/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: ac7bd764-5365-4920-8fd0-ea57d5ebe039
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 71558786cc7f058cee31e9bbe3960ed75a76891b
-ms.sourcegitcommit: ce363409d1206e4a3d669709863ccc9eb22b7d5f
+ms.openlocfilehash: b535c137d16ed8e17f4aee22d1fe2e922247f088
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="implement-your-intune-plan"></a>Implementace plánu Intune
 
@@ -32,7 +32,7 @@ Požadavky samotné služby Intune:
 
 -   Předplatné Enterprise Mobility + Security (EMS) předplatné služby Intune
 
--   Předplatné Office 365 (pro aplikace Office a aplikace spravované zásadou MAM)
+-   Předplatné Office 365 (pro aplikace Office a aplikace spravované zásadou ochrany aplikací)
 
 -   Certifikát Apple APNs (pro správu platformy zařízení iOS)
 
@@ -109,7 +109,7 @@ Intune podporuje profily e-mailu, Wi-Fi a VPN. Podle potřeby přidejte tyto pro
 
 ### <a name="task-10-add-and-deploy-apps"></a>10. úkol: Přidání a nasazení aplikací
 
-Intune podporuje nasazení webových aplikací, obchodních aplikací a aplikací z veřejného Storu. Také můžete spravovat aplikace s integrovanou sadou Intune SDK na základě jejich přidružení k zásadám MAM. Podle potřeby přidejte aplikace a nasaďte je u cílových skupin na základě způsobu použití nasazené služby Intune a požadavků.
+Intune podporuje nasazení webových aplikací, obchodních aplikací a aplikací z veřejného Storu. Také můžete spravovat aplikace s integrovanou sadou Intune SDK na základě jejich přidružení k zásadám ochrany aplikací. Podle potřeby přidejte aplikace a nasaďte je u cílových skupin na základě způsobu použití nasazené služby Intune a požadavků.
 
 -   Další informace o [přidání a nasazení aplikací](app-management.md).
 

@@ -1,11 +1,11 @@
 ---
 title: "Povolení vlastních zařízení v Microsoft Intune"
-description: 
+description: "Pracovní postup vysoké úrovně, který je důležitý pro nastavení služby Intune, aby bylo možné ve vaší organizaci povolit řešení umožňující přinést vlastní zařízení (BYOD)."
 keywords: 
 author: lindavr
 ms.author: lindavr
 manager: angrobe
-ms.date: 06/13/2017
+ms.date: 07/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 
 ms.reviewer: vlpetros
 ms.suite: ems
-ms.openlocfilehash: 880b83a63eefe13a96ab8838c7092c185aa32cd0
-ms.sourcegitcommit: ce363409d1206e4a3d669709863ccc9eb22b7d5f
+ms.openlocfilehash: 8684ea31420edd836038dc9337bd8bdf56e78ba6
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="enable-byod-with-intune"></a>Přineste si vlastní zařízení s Intune
 
@@ -27,7 +27,7 @@ Pracovní postup se dělí na tři následující procesy. Jednotlivé aspekty k
 
 -   **[Registrace zařízení a kontrola dodržování předpisů](#enroll-devices-and-check-for-compliance)** popisuje, jak povolit uživatelům registraci vlastních zařízení do správy pomocí Intune. Intune spravuje zařízení s iOSem, macOS, Androidem a Windows. V této části najdete také popis toho, jak nasadit zásady na zařízení a zajistit, že splňují požadavky na základní zabezpečení.
 
-- V části **[Poskytnutí přístupu k prostředkům společnosti](#provide-access-to-company-resources)** se dozvíte, jak může IT zajistit, že budou uživatelé získávat přístup k prostředkům společnosti snadno a zabezpečeně. Používá se k tomu nasazení přístupových profilů na spravovaná zařízení. V této části je vysvětlené také to, jak spravovat nasazení aplikací zakoupených v rámci multilicenčního programu s Intune.
+- V části **[Poskytnutí přístupu k prostředkům společnosti](#provide-access-to-company-resources)** se dozvíte, jak můžete zajistit, aby uživatelé získávali přístup k prostředkům společnosti snadno a zabezpečeně. Používá se k tomu nasazení přístupových profilů na spravovaná zařízení. V této části je vysvětlené také to, jak spravovat nasazení aplikací zakoupených v rámci multilicenčního programu s Intune.
 
 -   Část **[Ochrana dat společnosti](#protect-company-data)** vám pomůže získat informace tom, jak poskytnout podmíněný přístup k podnikovým prostředkům, jak zajistit ochranu před únikem informací a jak odebrat podnikové aplikace a data ze zařízení, když už nejsou potřeba k práci nebo dojde k jejich ztrátě nebo odcizení.
 
@@ -38,19 +38,17 @@ Pracovní postup se dělí na tři následující procesy. Jednotlivé aspekty k
 ## <a name="before-you-begin"></a>Před zahájením
 Než budou moct uživatelé zaregistrovat zařízení, je nejprve nutné připravit samotnou službu Intune. K tomu je potřeba [přiřadit licence uživatelům](licenses-assign.md) a [nastavit autoritu správy mobilních zařízení](mdm-authority-set.md).
 
-S tím současně byste měli také [přizpůsobit portál společnosti](company-portal-customize.md). Přidání firemního brandingu a poskytnutí informací o podpoře uživatelům. Zajistíte jim tak důvěryhodné prostředí registrace a podpory.
+S tím současně byste měli také [přizpůsobit portál společnosti](company-portal-customize.md). Přidání firemního brandingu a poskytnutí informací o podpoře uživatelům. Zajistíte jim tak důvěryhodné prostředí registrace a podpory. Můžete také vytvořit [podmínky použití](terms-and-conditions-create.md), které musí uživatelé před registrací přijmout, nebo [omezení zařízení](enrollment-restrictions-set.md) k určení platforem, které podporujete.
 
 ## <a name="enroll-devices-and-check-for-compliance"></a>Registrace zařízení a kontrola splnění požadavků na zabezpečení
 
 Po přípravě služby Intune je potřeba zajistit splnění různých požadavků na registraci pro různé typy zařízení, které chcete spravovat. Proces registrace zařízení do systému správy je jednoduchý, ale pro různé typy zařízení se mírně liší.
 
--   **Zařízení s iOSem a počítače Mac**: Aby bylo možné zaregistrovat iPady, iPhony nebo zařízení s MacOS, budete potřebovat [certifikát APNs (Apple Push Notification service)](apple-mdm-push-certificate-get.md). Až nahrajete certifikát APNs do Intune, můžou uživatelé [zaregistrovat zařízení s iOSem](/intune-user-help/enroll-your-device-in-intune-ios) pomocí aplikace Portál společnosti a na webu Portál společnosti můžou [zaregistrovat zařízení s MacOS](/intune-user-help/enroll-your-device-in-intune-macos).
+-   **Zařízení s iOSem a počítače Mac**: Aby bylo možné zaregistrovat iPady, iPhony nebo zařízení s MacOS, budete potřebovat [certifikát Apple MDM Push Certificate](apple-mdm-push-certificate-get.md). Až nahrajete certifikát MDM Push Certificate do Intune, můžou uživatelé [zaregistrovat zařízení s iOSem](/intune-user-help/enroll-your-device-in-intune-ios) pomocí aplikace Portál společnosti a na webu Portál společnosti můžou [zaregistrovat zařízení s MacOS](/intune-user-help/enroll-your-device-in-intune-macos).
 
--   **Zařízení s Androidem**: Pokud chcete zaregistrovat zařízení s Androidem, nemusíte službu Intune nijak připravovat. Stačí, když uživatelé [zapíšou svá zařízení s Androidem](/intune-user-help/enroll-your-device-in-intune-android.md) do systému správy pomocí aplikace Portál společnosti dostupné na Google Play.
+-   **Zařízení s Androidem**: Pokud chcete zaregistrovat zařízení s Androidem, nemusíte službu Intune nijak připravovat. Stačí, když uživatelé [zapíšou svá zařízení s Androidem](/intune-user-help/enroll-your-device-in-intune-android) do systému správy pomocí aplikace Portál společnosti dostupné na Google Play.
 
--   **Zařízení Windows Phone a počítače PC**: Pro [server registrace byste měli nastavit alias DNS](windows-enroll.md#enable-windows-enrollment-without-azure-ad-premium) a usnadnit tak registraci zařízení s Windows. Jinak můžou uživatelé [zaregistrovat zařízení s Windows](/intune-user-help/enroll-your-w10-phone-or-w10-pc-windows) přidáním pracovního nebo školního účtu.
-
-  - Pokud máte Azure AD Premium, usnadníte uživatelům registraci zařízení s Windows, když jim [umožníte automatickou registraci](windows-enroll.md). Tato funkce registruje zařízení do služby Intune automaticky, když uživatel přidá pracovní nebo školní účet, aby si zaregistroval osobní zařízení. Funguje i pro zařízení vlastněná společností, která se připojí k Azure AD ve vaší organizaci.
+-   **Zařízení Windows Phone a osobní počítače**: Zařízení s Windows se můžou zaregistrovat s dodatečnou konfigurací. Abyste uživatelům usnadnili práci, můžete povolit automatickou registraci pro osobní počítače a mobilní zařízení s Windows 10 v Azure Active Directory (AD) Premium. Pokud nemáte Azure AD Premium nebo potřebujete podporu Windows 8.1, můžete k usnadnění registrace vytvořit [alias DNS pro server registrace](windows-enroll.md#enable-windows-enrollment-without-azure-ad-premium).
 
 
 ### <a name="make-sure-that-managed-devices-meet-basic-security-requirements"></a>Spravovaná zařízení musí splňovat základní požadavky na zabezpečení
@@ -61,13 +59,13 @@ Když [nasadíte zásady dodržování předpisů](device-compliance-get-started
 
 ## <a name="provide-access-to-company-resources"></a>Poskytnutí přístupu k podnikovým prostředkům
 
-První věcí, kterou chce mít většina zaměstnanců na svých mobilních zařízeních, je přístup k podnikovému e-mailu a dokumentům. Navíc očekávají, že se nastavení obejde bez složitého postupu nebo volání na technickou podporu. Intune usnadňuje [vytvoření a nasazení nastavení e-mailu](conditional-access-intune-common-ways-use.md) pro nativní e-mailové aplikace, které jsou předem nainstalované na mobilních zařízeních.
-<!--- this was old link: (https://docs.microsoft.com/intune/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune). check with Andre--->
+První věcí, kterou chce mít většina zaměstnanců na svých mobilních zařízeních, je přístup k podnikovému e-mailu a dokumentům. Navíc očekávají, že se nastavení obejde bez složitého postupu nebo volání na technickou podporu. Intune usnadňuje [vytvoření a nasazení nastavení e-mailu](email-settings-configure.md) pro nativní e-mailové aplikace, které jsou předem nainstalované na mobilních zařízeních.
+
 
 > [!NOTE]
 > Intune podporuje konfiguraci e-mailového profilu Android for Work pro e-mailové aplikace Gmail a Nine Work, které najdete v obchodě Google Play.
 
-Intune také pomáhá řídit a chránit přístup k místním datům společnosti, když uživatelé pracují mimo pracoviště. Profily [Wi-Fi](https://docs.microsoft.com/intune/deploy-use/wi-fi-connections-in-microsoft-intune), [VPN](https://docs.microsoft.com/intune/deploy-use/vpn-connections-in-microsoft-intune#create-a-vpn-profile) a e-mailu Intune společně pomáhají zajistit odkudkoli přístup k souborům a prostředkům, které uživatelé potřebují ke své práci. Webové aplikace vašeho podniku a služby hostované místně je možné bezpečně zobrazovat a chránit také pomocí proxy aplikace Azure Active Directory a podmíněného přístupu.
+Intune také pomáhá řídit a chránit přístup k místním datům společnosti, když uživatelé pracují mimo pracoviště. Profily [Wi-Fi](wi-fi-settings-configure.md), [VPN](vpn-settings-configure.md) a e-mailu Intune společně pomáhají zajistit odkudkoli přístup k souborům a prostředkům, které potřebují ke své práci. Webové aplikace vašeho podniku a služby hostované místně je možné bezpečně zobrazovat a chránit také pomocí proxy aplikace Azure Active Directory a podmíněného přístupu.
 
 ### <a name="manage-volume-purchased-apps"></a>Správa hromadně zakoupených aplikací
 S Intune je možné snadno:
@@ -109,8 +107,8 @@ Pomocí [zásad WIP (Windows Information Protection)](app-protection-policies-co
 
 ### <a name="wipe-company-data-while-leaving-personal-data-intact"></a>Vymazání podnikových dat a ponechání osobních dat beze změny
 
-Pokud už zařízení není pro práci potřeba, mění se účel jeho používání nebo se prostě ztratilo, je nutné z něj odebrat podnikové aplikace a data. K tomu můžete použít možnosti služby Intune pro selektivní a úplné vymazání. Uživatelé také mohou vzdáleně vymazat svá vlastní zařízení z Portálu společnosti Intune, pokud jsou tato zařízení v Intune zaregistrovaná.
+Pokud už zařízení není pro práci potřeba, mění se účel jeho používání nebo se prostě ztratilo, můžete z něj odebrat podnikové aplikace a data. K tomu můžete použít možnosti služby Intune pro selektivní a úplné vymazání. Uživatelé také mohou vzdáleně vymazat svá vlastní zařízení z Portálu společnosti Intune, pokud jsou tato zařízení v Intune zaregistrovaná.
 
 [Úplné vymazání](devices-wipe.md) obnoví v zařízení výchozí nastavení od výrobce a odebere uživatelská data a nastavení. [Selektivní vymazání](devices-wipe.md#selective-wipe) odebere ze zařízení jenom firemní data, ale osobní data uživatelů ponechá beze změn.
 
-Po zahájení zařízení ihned spustí proces selektivního vymazání pro odebrání ze správy. Po dokončení procesu se všechna podniková data odstraní a název zařízení už se nebude zobrazovat v konzole pro správu služby Intune. Ukončí se tak životní cyklus správy zařízení.
+Po zahájení zařízení ihned spustí proces selektivního vymazání pro odebrání ze správy. Po dokončení procesu se všechna podniková data odstraní a název zařízení už se odebere z portálu Intune. Ukončí se tak životní cyklus správy zařízení.

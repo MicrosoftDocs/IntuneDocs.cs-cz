@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/17/2017
+ms.date: 07/31/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b08a097e785f85d8b9260cdaa60e720ed88cb4a1
-ms.sourcegitcommit: 21a9db380956a50031dbea360b4c76664cbc2768
+ms.openlocfilehash: d069775cf51e8c077a6f30123bf4fa2fe58b6bd8
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Známé problémy v Microsoft Intune
 
@@ -37,7 +37,7 @@ Pokud chcete zažádat o novou funkci pro Intune, zvažte zaslání zprávy na w
 
 ### <a name="groups-created-by-intune-during-migration-might-affect-functionality-of-other-microsoft-products"></a>Skupiny vytvořené pomocí Intune během migrace můžou ovlivnit funkčnost jiných produktů Microsoftu
 
-Při migraci z klasického portálu Intune na Azure se může zobrazit nová skupina s názvem **Všichni uživatelé – b0b08746-4dbe-4a37-9adf-9e7652c0b421**. Tato skupina obsahuje všechny uživatele ve vašem Azure Active Directory, ne jenom uživatele s licencí Intune. Toto použití může způsobit problémy s jinými produkty Microsoftu, pokud očekáváte, že někteří existující nebo noví uživatelé nebudou členem žádné skupiny.
+Při migraci z klasického portálu Intune na portál Azure Portal se může zobrazit nová skupina s názvem **Všichni uživatelé – b0b08746-4dbe-4a37-9adf-9e7652c0b421**. Tato skupina obsahuje všechny uživatele ve vašem Azure Active Directory, ne jenom uživatele s licencí Intune. Toto použití může způsobit problémy s jinými produkty Microsoftu, pokud očekáváte, že někteří existující nebo noví uživatelé nebudou členem žádné skupiny.
 
 ### <a name="secondary-migration-required-for-select-capabilities"></a>Pro vybrané možnosti se vyžaduje sekundární migrace
 
@@ -64,13 +64,12 @@ Pokud v klasickém (Silverlight) portálu Intune odstraníte token Apple Device 
 
 ### <a name="status-blades-for-migrated-policies-do-not-work"></a>Okna stavu pro migrované zásady nefungují
 
-Nejde zobrazit informace o stavu pro zásady, které se migrovaly z klasického portálu na portál Azure Portal. Můžete ale dál zobrazovat sestavy pro tyto zásady na portálu Classic.
-Pokud chcete zobrazit informace o stavu migrovaných konfiguračních zásad, na portálu Azure Portal je znovu vytvořte.
+Nejde zobrazit informace o stavu pro zásady, které se migrovaly z klasického portálu na portál Azure Portal. Můžete ale dál zobrazovat sestavy pro tyto zásady na portálu Classic. Pokud chcete zobrazit informace o stavu migrovaných konfiguračních zásad, na portálu Azure Portal je znovu vytvořte.
 
 ## <a name="apps"></a>Aplikace
 
 ### <a name="ios-volume-purchased-apps-only-available-in-default-intune-tenant-language"></a>Hromadně zakoupené aplikace pro iOS jsou k dispozici pouze ve výchozím jazyce tenanta Intune
-Hromadně zakoupené aplikaci pro iOS se zobrazují a jde je přiřadit pouze ke stejnému kódu země, jaký má účet Intune. Intune synchronizuje pouze aplikace ze stejného národního prostředí iTunes, jako je kód země účtu tenanta Intune. Pokud tedy například koupíte aplikaci, která je k dispozici pouze pro USA, ale váš účet Intune je německý, Intune tuto aplikaci nezobrazí.
+Hromadně zakoupené aplikaci pro iOS se zobrazují a jde je přiřadit pouze ke stejnému kódu země, jaký má účet Intune. Intune synchronizuje pouze aplikace ze stejného národního prostředí iTunes, jako je kód země účtu tenanta Intune. Pokud třeba koupíte aplikaci, která je k dispozici jenom pro USA, ale váš účet Intune je český, Intune tuto aplikaci nezobrazí.
 
 ### <a name="multiple-copies-of-the-same-ios-volume-purchase-program-are-uploaded"></a>Nahrálo se více kopií jednoho hromadně zakoupeného programu pro iOS
 Neklikejte u jednoho tokenu VPP na tlačítko **Nahrát** vícekrát. Pokud to uděláte, nahrají se duplicitní tokeny VPP a aplikace se u stejného tokenu VPP budou synchronizovat vícekrát. 
@@ -111,7 +110,7 @@ Další informace najdete v článku [Co je dodržování předpisů zařízen�
 
 ### <a name="ios-app-protection-policies"></a>Zásady ochrany aplikací pro iOS
 
-Můžete definovat [zásady ochrany aplikací pro iOS](app-protection-policy-settings-ios.md), které jsou k dispozici pro uživatele na zařízeních spravovaných prostřednictvím správy MAM bez registrace. Kvůli dočasné chybě můžete tyto zásady definovat pouze pro verze iOS s jedním desetinným místem (ne více). Namísto nastavení minimální verze iOS 10.3.1 nastavíte iOS 10.3. Tento problém se vyřeší v chystané aktualizaci iOS SDK.
+Můžete definovat [zásady ochrany aplikací pro iOS](app-protection-policy-settings-ios.md), které jsou k dispozici pro uživatele na zařízeních spravovaných prostřednictvím správy mobilních zařízení (MAM) bez registrace. Kvůli dočasné chybě můžete tyto zásady definovat pouze pro verze iOS s jedním desetinným místem (ne více). Namísto nastavení minimální verze iOS 10.3.1 nastavíte iOS 10.3. Tento problém se vyřeší v chystané aktualizaci iOS SDK.
 
 
 ## <a name="administration-and-accounts"></a>Správa a účty

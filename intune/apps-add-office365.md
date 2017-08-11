@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/17/2017
+ms.date: 07/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,15 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0f6a3cdc2b5d95f57f1ffc1f68b6748b357f2ef4
-ms.sourcegitcommit: 21a9db380956a50031dbea360b4c76664cbc2768
+ms.openlocfilehash: 1a97e58f1d108932e44b0b4e36bda5a30b7a90da
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="how-to-assign-office-365-proplus-2016-apps-to-windows-10-devices-with-microsoft-intune"></a>Přiřazení aplikací Office 365 ProPlus 2016 k zařízením s Windows 10 pomocí Microsoft Intune
 
-Tento typ aplikace vám usnadní přiřazování aplikací Office 365 ProPlus 2016 na vámi spravovaná zařízení s Windows 10. Kromě toho si můžete nainstalovat také aplikace pro klienta pro stolní počítače Microsoft Project Online a Microsoft Visio Pro Office 365, pokud vlastníte jejich licence. Požadované aplikace se v seznamu aplikací v konzole Intune zobrazí jako jedna aplikace.
+Tento typ aplikace vám usnadní přiřazování aplikací Office 365 ProPlus 2016 na vámi spravovaná zařízení s Windows 10. Můžete si také nainstalovat aplikace pro klienta pro stolní počítače Microsoft Project Online a Microsoft Visio Pro Office 365, pokud vlastníte jejich licence. Požadované aplikace se v seznamu aplikací v konzole Intune zobrazí jako jedna aplikace.
 
 
 ## <a name="before-you-start"></a>Než začnete
@@ -34,11 +34,8 @@ Tento typ aplikace vám usnadní přiřazování aplikací Office 365 ProPlus 20
 - Zařízení, na která chcete tyto aplikace nasadit, musí mít aktualizaci Windows 10 Creators Update nebo novější.
 - Intune podporuje přidání aplikací Office jenom ze sady Office 365 ProPlus 2016.
 - Pokud jsou spuštěné nějaké aplikace Office, když Intune instaluje sadu aplikací, můžou koncoví uživatelé přijít o data z neuložených souborů.
-- Pokud instalujete Office na zařízení, na kterém už je Office nainstalovaný, přečtěte si, na co je potřeba myslet:
-    - Bez ohledu na verzi Office, kterou používáte, není možné nainstalovat na stejné zařízení 32bitové i 64bitové produkty Office současně.
-    - Na stejné zařízení není možné nainstalovat stejnou verzi technologie Klikni a spusť a instalační služby MSI systému Office, ale můžete nainstalovat různé hlavní verze.
-    - Pokud už máte starší verzi Office, kterou jste si nainstalovali pomocí technologie Klikni a spusť, musíte odebrat všechny aplikace, které chcete nahradit novější verzí. Pokud máte například na zařízení starší verzi Wordu a chcete přiřadit nejnovější verzi, musíte starou verzi nejdříve odebrat.
-    - Pokud už je na zařízení nainstalovaný Office 365, může být nutné v případě přiřazení sady Office 365 ProPlus 2016 k tomuto zařízení změnit úroveň předplatného Office.
+- Tato metoda instalace není podporovaná v zařízeních s Windows 10S.
+- Pokud tento typ aplikace přiřadíte jako K dispozici a zacílíte různá přiřazení na více uživatelů, uvidí jenom poslední zacílené přiřazení.
 
 
 ## <a name="get-started"></a>Začínáme

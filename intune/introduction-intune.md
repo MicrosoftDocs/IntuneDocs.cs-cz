@@ -5,7 +5,7 @@ keywords: co je Intune
 author: Lindavr
 ms.author: lindavr
 manager: angrobe
-ms.date: 05/04/2017
+ms.date: 07/28/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology:
 ms.assetid: 3b4e778d-ac13-4c23-974f-5122f74626bc
 ms.reviewer: pmay
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: b1fbc73c0bc3589856f09bd3b9858fef66b82b08
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.custom: 
+ms.openlocfilehash: 53115eba5e5150139b8ff0f359cde279df297d47
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="what-is-intune"></a>Co je Intune?
 
@@ -72,10 +72,10 @@ Když Intune použijete s dalšími službami v EMS, můžete organizaci poskytn
 
 * [Jednotné přihlašování](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis)  
 *   [Vícefaktorové ověřování](https://docs.microsoft.com/multi-factor-authentication/multi-factor-authentication)
-* [Podmíněný přístup aplikací – povolení přístupu, pokud mobilní aplikace obsahuje firemní data](app-based-conditional-access-intune.md) ([konzola Classic](/intune-classic/deploy-use/allow-policy-managed-apps-access-to-o365))
-* [Izolování firemních dat od osobních dat uvnitř stejné aplikace](app-protection-policy.md) ([konzola Classic](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune))
-* [Zásady ochrany aplikací (PIN, šifrování, uložit jako, schránka atd.)](app-protection-policies.md) ([konzola Classic](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune))
-* [Vymazání firemních dat z mobilní aplikace](/intune-classic/deploy-use/wipe-managed-company-app-data-with-microsoft-intune)
+* [Podmíněný přístup aplikací – povolení přístupu, pokud mobilní aplikace obsahuje firemní data](app-based-conditional-access-intune.md)
+* [Izolování firemních dat od osobních dat uvnitř stejné aplikace](app-protection-policy.md)
+* [Zásady ochrany aplikací (PIN, šifrování, uložit jako, schránka atd.)](app-protection-policies.md)
+* [Vymazání firemních dat z mobilní aplikace](apps-selective-wipe.md)
 * [Podpora správy přístupových práv](https://docs.microsoft.com/information-protection/understand-explore/what-is-azure-rms)
 
 ![Obrázek ukazující úrovně zabezpečení dat správy aplikací](./media/managing-mobile-apps.png)
@@ -110,6 +110,6 @@ Následující seznam obchodních problémů odkazuje na podrobnější informac
 * [Poskytnutí sdílených tabletů s omezeným použitím pracovníkům, kteří provádějí konkrétní úlohy](common-scenarios.md#issue-limited-use-shared-tablets-to-your-employees)
 
 ### <a name="next-steps"></a>Další kroky
-* Přečtěte si o některých [běžných způsobech použití Intune](common-scenarios.md) ([konzola Classic](/intune-classic/understand-explore/common-ways-to-use-intune)).
-* Seznamte se s tímto produktem [prostřednictvím 30denní zkušební verze Intune](free-trial-sign-up.md) ([konzola Classic](/intune-classic/understand-explore/sign-up-for-30-day-trial-microsoft-intune)).
-* Podrobně se seznamte s [technickými požadavky a možnostmi](supported-devices-browsers.md) ([konzola Classic](/intune-classic/get-started/what-to-know-before-you-start-microsoft-in)) služby Intune.
+* Přečtěte si o některých [běžných způsobech použití Intune](common-scenarios.md).
+* Seznamte se s tímto produktem [prostřednictvím 30denní zkušební verze Intune](free-trial-sign-up.md).
+* Podrobně se seznamte s [technickými požadavky a možnostmi](supported-devices-browsers.md) služby Intune.

@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 06/28/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,16 +14,64 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1e2e1eb6da9114c689aae5eb06f7d7c780f35817
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 948a7d2e4e0ad80088d864708db5733f08db77c5
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 Zjistěte, jaké jsme v uživatelském rozhraní aplikací udělali změny, které koncoví uživatelé uvidí v této verzi Microsoft Intune. Pomůže vám to při komunikaci s uživateli a aktualizaci vlastní dokumentace, kterou jste vytvořili za účelem podpory vašeho nasazení. Můžete také zjistit, jak lépe řešit problémy uživatelů, když požádají helpdesk o podporu pomocí Portálu společnosti.
 
-## <a name="week-of-june-12-2017"></a>Týden 12. června 2017
+## <a name="week-of-july-31-2017"></a>Týden od 31. července 2017
+
+### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Vylepšené přihlašování k aplikacím Portál společnosti na všech platformách <!--User Story 1132123-->
+
+Avizujeme změnu, kterou uvedeme během několika nadcházejících měsíců a která vylepší přihlašování k aplikacím Portál společnosti Intune v systémech Android, iOS a Windows. Nové uživatelské prostředí se automaticky zobrazí na všech platformách pro aplikaci Portál společnosti, až Azure AD tuto změnu provede. Kromě toho se teď uživatelé můžou k Portálu společnosti přihlašovat z jiného zařízení pomocí vygenerovaného kódu na jedno použití. To se hodí hlavně v případech, kdy se uživatelé potřebují přihlásit bez přihlašovacích údajů.  
+
+Níže můžete vidět předchozí způsob přihlašování, nový způsob přihlašování pomocí přihlašovacích údajů a nový způsobu přihlašování z jiného zařízení.
+
+__Předchozí způsob přihlašování__
+
+![Přihlašovací stránka Portálu společnosti s ikonou osoby před grafickým znázorněním webu. Pod tím je tlačítko „Přihlásit se“. Odkaz dole vede na informace Microsoftu o ochraně osobních údajů a souborech cookie.](./media/cp_ios_aad_signin_before_1704_001.png)
+
+![Po klepnutí na Přihlásit se uživatel zadá své přihlašovací údaje na této stránce, která požádá o uživatelův e-mail a heslo a současně nabídne způsoby, jak vyřešit problémy s heslem.](./media/cp_ios_aad_signin_before_1704_002.png)
+
+![Po zadání hesla aplikace Portál společnosti zobrazí pruh načítání a přihlásí se.](./media/cp_ios_aad_signin_before_1704_003.png)
+
+__Nový způsob přihlašování__
+
+![Přihlašovací stránka Portálu společnosti s ikonou osoby před grafickým znázorněním webu. Pod tím je tlačítko „Přihlásit se“. Odkaz dole vede na informace Microsoftu o ochraně osobních údajů a souborech cookie.](./media/cp_ios_aad_signin_after_1704_001.png)
+
+![Uživatel je vyzván, aby zadal jenom e-mailovou adresu místo zadání e-mailu a hesla na stejné obrazovce.](./media/cp_ios_aad_signin_after_1704_002.png)
+
+![Po přijetí e-mailové adresy je uživatel vyzván k zadání hesla.](./media/cp_ios_aad_signin_after_1704_003.png)
+
+![Po absolvování procesu ověřování aplikace Portál společnosti zobrazí pruh načítání a přihlásí se.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
+
+__Nový způsob přihlášení při přihlašování z jiného zařízení__
+
+![Přihlašovací stránka Portálu společnosti s ikonou osoby před grafickým znázorněním webu. Pod tím je tlačítko „Přihlásit se“. Odkaz dole vede na informace Microsoftu o ochraně osobních údajů a souborech cookie.](./media/cp_ios_aad_signin_from_another_device_after_1704_001.png)
+
+Klepněte na odkaz __Přihlásit z jiného zařízení__.
+
+![Zobrazí se pokyny, abyste ze svého pracovního počítače přešli na stránku aka.ms/devicelogin s jedinečným přístupovým kódem a pak kód použili k přihlášení.](./media/cp_ios_aad_signin_from_another_device_after_1704_003.png)
+
+Spusťte prohlížeč a přejděte na [https://aka.ms/devicelogin](https://aka.ms/devicelogin).
+
+![Obrázek uživatelova prohlížeče na pracovním počítači místo aplikace Portál společnosti. Zobrazená stránka „Přihlášení na zařízení“ uživatele vyzve k zadání kódu, který dostal v aplikaci Portál společnosti.](./media/cp_ios_aad_signin_from_another_device_after_1704_004.png)
+
+Zadejte kód, který se vám zobrazil v aplikaci Portál společnosti. Když vyberete __Pokračovat__, budete moct provést ověření pomocí libovolné metody, kterou vaše společnost podporuje, například pomocí čipové karty.
+
+![Uživatel zadal svůj jedinečný kód do pole a web „Přihlášení na zařízení“ požádal o potvrzení, že je Portál společnosti Intune správnou aplikací, která má získat ověření pro přihlášení.](./media/cp_ios_aad_signin_from_another_device_after_1704_005.png)
+
+![Potvrzovací stránka, která uvádí, že se uživatel na svém zařízení přihlásil k aplikaci Portál společnosti a že tuto stránku může zavřít.](./media/cp_ios_aad_signin_from_another_device_after_1704_006.png)
+
+Aplikace Portál společnosti se začne přihlašovat.
+
+![Po absolvování procesu ověřování aplikace Portál společnosti zobrazí pruh načítání a přihlásí se.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
+
+## <a name="week-of-june-12-2017"></a>Týden od 12. června 2017
 
 ### <a name="company-portal-app-for-android-now-has-a-new-end-user-experience-for-app-protection-policies---1305217--"></a>Aplikace Portál společnosti pro Android má teď novou činnost koncového uživatele pro zásady ochrany aplikací <!--1305217-->
 Na základě zpětné vazby od zákazníků jsme aplikaci Portál společnosti pro Android upravili tak, aby zobrazovala tlačítko **Přístup k obsahu společnosti**. Naším záměrem je předejít zbytečné registraci koncových uživatelů, když pouze potřebují přístup k aplikacím s podporou zásad ochrany aplikací – funkce správy mobilních aplikací Intune.
@@ -70,7 +118,7 @@ Na základě zpětné vazby od uživatelů jsme do aplikace Portál společnosti
 
 ![Obrázek potvrzovacího okna, které se otevře, když v nabídce akcí vyberete možnost Odebrat Portál společnosti. V dialogovém okně se uživateli zobrazí následující informace: „Pokud odeberete Portál společnosti, váš správce IT už nebude vaše zařízení spravovat a může odebrat přístup k podnikovým datům, aplikacím a e-mailu.“ Pak uživatele vyzve, aby potvrdil, že chce aplikaci Portál společnosti skutečně odebrat. Pokud ji uživatel chce odebrat, vybere Ano.](./media/android_remove_cp_menu_confirmation_after_1705.png)
 
-## <a name="week-of-june-5-2017"></a>Týden 5. června 2017
+## <a name="week-of-june-5-2017"></a>Týden od 5. června 2017
 
 ### <a name="improvements-to-the-app-tiles-in-the-company-portal-app-for-ios"></a>Vylepšení dlaždic aplikací v aplikaci Portál společnosti pro iOS
 Aktualizovali jsme vzhled dlaždic aplikací na domovské stránce tak, aby odrážely barvu brandingu nastavenou v Portálu společnosti.
@@ -180,52 +228,13 @@ Zde najdete plánované aktualizace našeho uživatelského rozhraní, které vy
 > [!Note]
 > Upozorňujeme, že následující obrázky mohou být náhledy a avizovaný produkt se od prezentovaných verzí může lišit.
 
-### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Vylepšené přihlašování k aplikacím Portál společnosti na všech platformách <!--User Story 1132123-->
+### <a name="ui-updates-to-the-company-portal-website---1313244-part-2--"></a>Aktualizace uživatelského rozhraní webu Portál společnosti <!--1313244 part 2-->
 
-Avizujeme změnu, kterou uvedeme během několika nadcházejících měsíců a která vylepší přihlašování k aplikacím Portál společnosti Intune v systémech Android, iOS a Windows. Nové uživatelské prostředí se automaticky zobrazí na všech platformách pro aplikaci Portál společnosti, až Azure AD tuto změnu provede. Kromě toho se teď uživatelé můžou k Portálu společnosti přihlašovat z jiného zařízení pomocí vygenerovaného kódu na jedno použití. To se hodí hlavně v případech, kdy se uživatelé potřebují přihlásit bez přihlašovacích údajů.  
+__Aktualizace Vybraných aplikací__ Přidali jsme na web vyhrazenou stránku, kde můžou uživatelé procházet aplikace, které jste speciálně vybrali, a upravili jsme uživatelské rozhraní sekce Vybrané na domovské stránce.
 
-Níže můžete vidět předchozí způsob přihlašování, nový způsob přihlašování pomocí přihlašovacích údajů a nový způsobu přihlašování z jiného zařízení.
+![Barevné dlaždice, které zobrazují aplikace. Jsou to velké barevné čtverce pod každou aplikací, pro které se použije primární barva v rámci loga aplikace. Sekce „Vybrané aplikace“ se zobrazuje v horní části aplikace Portál společnosti.](./media/cp_win10_colorful_tiles_after_1708.png)
 
-__Předchozí způsob přihlašování__
-
-![Přihlašovací stránka Portálu společnosti s ikonou osoby před grafickým znázorněním webu. Pod tím je tlačítko „Přihlásit se“. Odkaz dole vede na informace Microsoftu o ochraně osobních údajů a souborech cookie.](./media/cp_ios_aad_signin_before_1704_001.png)
-
-![Po klepnutí na Přihlásit se uživatel zadá své přihlašovací údaje na této stránce, která požádá o uživatelův e-mail a heslo a současně nabídne způsoby, jak vyřešit problémy s heslem.](./media/cp_ios_aad_signin_before_1704_002.png)
-
-![Po zadání hesla aplikace Portál společnosti zobrazí pruh načítání a přihlásí se.](./media/cp_ios_aad_signin_before_1704_003.png)
-
-__Nový způsob přihlašování__
-
-![Přihlašovací stránka Portálu společnosti s ikonou osoby před grafickým znázorněním webu. Pod tím je tlačítko „Přihlásit se“. Odkaz dole vede na informace Microsoftu o ochraně osobních údajů a souborech cookie.](./media/cp_ios_aad_signin_after_1704_001.png)
-
-![Uživatel je vyzván, aby zadal jenom e-mailovou adresu místo zadání e-mailu a hesla na stejné obrazovce.](./media/cp_ios_aad_signin_after_1704_002.png)
-
-![Po přijetí e-mailové adresy je uživatel vyzván k zadání hesla.](./media/cp_ios_aad_signin_after_1704_003.png)
-
-![Po absolvování procesu ověřování aplikace Portál společnosti zobrazí pruh načítání a přihlásí se.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
-
-__Nový způsob přihlášení při přihlašování z jiného zařízení__
-
-![Přihlašovací stránka Portálu společnosti s ikonou osoby před grafickým znázorněním webu. Pod tím je tlačítko „Přihlásit se“. Odkaz dole vede na informace Microsoftu o ochraně osobních údajů a souborech cookie.](./media/cp_ios_aad_signin_from_another_device_after_1704_001.png)
-
-Klepněte na odkaz __Přihlásit z jiného zařízení__.
-
-![Zobrazí se pokyny, abyste ze svého pracovního počítače přešli na stránku aka.ms/devicelogin s jedinečným přístupovým kódem a pak kód použili k přihlášení.](./media/cp_ios_aad_signin_from_another_device_after_1704_003.png)
-
-Spusťte prohlížeč a přejděte na [https://aka.ms/devicelogin](https://aka.ms/devicelogin).
-
-![Obrázek uživatelova prohlížeče na pracovním počítači místo aplikace Portál společnosti. Zobrazená stránka „Přihlášení na zařízení“ uživatele vyzve k zadání kódu, který dostal v aplikaci Portál společnosti.](./media/cp_ios_aad_signin_from_another_device_after_1704_004.png)
-
-Zadejte kód, který se vám zobrazil v aplikaci Portál společnosti. Když vyberete __Pokračovat__, budete moct provést ověření pomocí libovolné metody, kterou vaše společnost podporuje, například pomocí čipové karty.
-
-![Uživatel zadal svůj jedinečný kód do pole a web „Přihlášení na zařízení“ požádal o potvrzení, že je Portál společnosti Intune správnou aplikací, která má získat ověření pro přihlášení.](./media/cp_ios_aad_signin_from_another_device_after_1704_005.png)
-
-![Potvrzovací stránka, která uvádí, že se uživatel na svém zařízení přihlásil k aplikaci Portál společnosti a že tuto stránku může zavřít.](./media/cp_ios_aad_signin_from_another_device_after_1704_006.png)
-
-Aplikace Portál společnosti se začne přihlašovat.
-
-![Po absolvování procesu ověřování aplikace Portál společnosti zobrazí pruh načítání a přihlásí se.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
-### <a name="see-also"></a>Viz taky
+### <a name="see-also"></a>Související témata
 * [Blog Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
 * [Plán cloudové platformy](https://www.microsoft.com/server-cloud/roadmap/Indevelopment.aspx?TabIndex=0&dropValue=Intune)
 * [Co je nového v Intune](https://docs.microsoft.com/intune/whats-new)

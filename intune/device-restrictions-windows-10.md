@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/28/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 89f2d806-2e97-430c-a9a1-70688269627f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c3819042d3b6e7236506c288156f98a0e55c15ea
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: b49c227e3cae6c5dca8655362cfbfa6fd3f94807
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení Windows 10 a novější v Microsoft Intune
 
@@ -43,14 +43,9 @@ ms.lasthandoff: 07/01/2017
 -   **Obnovení továrního nastavení telefonu** – Určuje, jestli uživatel může na svém zařízení obnovit tovární nastavení.
 -   **Připojení USB (jenom mobilní zařízení)** – Určuje, jestli má zařízení přístup k zařízením externího úložiště prostřednictvím připojení USB.
 -   **Režim AntiTheft (jenom mobilní verze)** – Umožňuje nakonfigurovat, jestli má být povolený režim Windows Antitheft.
--   **Oznámení centra akcí (jenom mobilní verze)** – Povolí nebo zakáže oznámení Centra akcí na zamykací obrazovce zařízení (jenom Windows 10 Mobile).
 -   **Cortana** – Povolí nebo zakáže hlasovou asistentku Cortanu.
 -   **Záznam hlasu (jenom mobilní verze)** – Povolí nebo zablokuje na zařízení použití hlasového záznamu.
--   **Změny nastavení napájení a režimu spánku (jenom desktopové verze)** – Zabrání koncovému uživateli ve změně nastavení napájení a režimu spánku na zařízení.
--   **Změny nastavení oblasti (jenom desktopové verze)** – Zabrání koncovému uživateli ve změně nastavení oblasti na zařízení.
--   **Změny nastavení oblasti (jenom desktopové verze)** – Zabrání uživateli ve změně nastavení jazyka na zařízení.
--   **Změny systémového času** – Zabrání koncovému uživateli ve změně data a času zařízení.
--   **Změny názvu zařízení** – Zabrání koncovému uživateli ve změně názvu zařízení.
+-   **Změny názvu zařízení** – Zabrání koncovému uživateli ve změně názvu zařízení (jenom Windows 10 Mobile).
 -   **Přidávat zřizovací balíčky** – Blokuje agenta konfigurace modulu runtime, který instaluje zřizovací balíčky.
 -   **Odebírat zřizovací balíčky** – Blokuje agenta konfigurace modulu runtime, který odebírá zřizovací balíčky.
 -   **Zjišťování zařízení** – Zablokuje zjišťování zařízení jinými zařízeními.
@@ -67,7 +62,7 @@ Pro zařízení s Windows 10: Jakmile se nepovede určený počet pokusů o při
     -   **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka** – Určuje dobu, po kterou musí být zařízení v nečinnosti, než se zamkne obrazovka.
     -   **Konec platnosti hesla (dny)** – Určuje dobu, po jejímž uplynutí je třeba změnit heslo k zařízení.
     -   **Znemožnit opakované použití předchozích hesel** – Určuje počet dříve použitých hesel, která se na zařízení zapamatovávají.
-    -   **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti** – Určuje, že uživatel musí zadat heslo k odemknutí zařízení (jenom Windows 10 Mobile).
+    -   **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti (jenom mobilní verze)** – Určuje, že uživatel musí zadat heslo k odemknutí zařízení (jenom Windows 10 Mobile).
     -   **Jednoduchá hesla** – Umožňuje používat jednoduchá hesla, třeba 1111 nebo 1234. Toto nastavení také povolí obrázková hesla Windows (nebo je zablokuje).
 -   **Šifrování** – Povolí šifrování na cílových zařízeních (jenom Windows 10 Mobile).
 
@@ -105,6 +100,7 @@ Pro zařízení s Windows 10: Jakmile se nepovede určený počet pokusů o při
 -   **Nainstalovat data aplikací na systémový svazek** – Zabrání aplikacím ukládat data na systémový svazek zařízení.
 -   **Nainstalovat aplikace na systémovou jednotku** – Zabrání aplikacím ukládat data na systémovou jednotku zařízení.
 -   **Záznam ze hry (jenom desktopové verze)** – Umožňuje nakonfigurovat, zda jsou povolené záznam a vysílání z her.
+-   **Jen aplikace ze Storu** – Konfiguruje, jestli uživatelé můžou instalovat aplikace odjinud než z obchodu s aplikacemi.
 
 
 
@@ -112,7 +108,6 @@ Pro zařízení s Windows 10: Jakmile se nepovede určený počet pokusů o při
 -   **Prohlížeč Microsoft Edge (jenom mobilní verze)** – Povolí používání webového prohlížeče Edge na zařízení.
 -   **Rozevírání panelu Adresa (jenom stolní počítače)** – Tímto nastavením zastavíte Edge, aby v rozevíracím seznamu při psaní zobrazoval seznam návrhů. Pomůžete tím minimalizovat používanou šířku pásma sítě mezi Edgem a službami Microsoftu.
 -   **Synchronizovat oblíbené položky mezi prohlížeči Microsoft (jenom stolní počítače)** – Umožňuje Windows synchronizovat oblíbené položky mezi Internet Explorerem a Edgem.
--   **SmartScreen** – Povolí nebo zakáže filtr SmartScreen, který blokuje podvodné weby.
 -   **Odesílat hlavičky Do Not Track** – Nakonfiguruje prohlížeč Edge tak, aby se webům, které uživatelé navštíví, posílaly hlavičky DNT (Do Not Track).
 -   **Soubory cookie** – Umožní prohlížeči ukládat internetové soubory cookie do zařízení.
 -   **JavaScript** – Umožní, aby se v prohlížeči Edge mohly spouštět skripty, třeba JavaScript.
@@ -130,13 +125,16 @@ Pro zařízení s Windows 10: Jakmile se nepovede určený počet pokusů o při
 -   **Domovské stránky** – Přidá seznam webů, které chcete v prohlížeči Edge použít jako domovské stránky (jenom desktopové verze).
 -   **Změny domovské stránky** – Umožňuje uživatelům změnit počáteční stránky, které se zobrazí při otevření Edge. K vytvoření stránky nebo seznamu stránek, které se otevřou při spuštění Edge, použijte nastavení Domovské stránky.
 -   **Blokovat přístup k značkám s informacemi** – Zabrání koncovému uživateli v přístupu ke stránce about:flags v Edgi, která obsahuje vývojářské a experimentální nastavení.
--   **Přepsání výzvy SmartScreen** – Povolí koncovému uživateli obejít upozornění filtru SmartScreen na potenciálně škodlivé weby.
--   **Přepsání výzvy SmartScreen pro soubory** – Povolí koncovému uživateli obejít upozornění filtru SmartScreen na stažení potenciálně škodlivých souborů.
 -   **IP adresa LocalHost pro WebRtc** – Zablokuje zobrazení IP adresy LocalHost uživatele při telefonování pomocí protokolu WebRTC.
 -   **Výchozí vyhledávací web** – Určuje výchozí vyhledávací web, který se má použít. Koncoví uživatelé mohou tuto hodnotu kdykoli změnit.
 -   **Vymazat údaje o procházení při ukončení** – Vymaže historii a údaje o procházení, když uživatel zavře Edge.
 -   **Shromažďování dat pro živé dlaždice** – Zastaví ve Windows shromažďování informací pro živé dlaždice, když uživatelé v Edgi připnou web k nabídce Start.
 
+## <a name="edge-browser-smartscreen"></a>SmartScreen prohlížeče Edge
+
+-   **SmartScreen** – Povolí nebo zakáže filtr SmartScreen, který blokuje podvodné weby.
+-   **Přepsání výzvy SmartScreen** – Povolí koncovému uživateli obejít upozornění filtru SmartScreen na potenciálně škodlivé weby.
+-   **Přepsání výzvy SmartScreen pro soubory** – Povolí koncovému uživateli obejít upozornění filtru SmartScreen na stažení potenciálně škodlivých souborů.
 
 ## <a name="search"></a>Hledat
 - **Bezpečné vyhledávání (jenom mobilní verze)** – Řídí, jak Cortana filtruje ve výsledcích obsah pro dospělé. Můžete vybrat možnost **Striktní**, **Pokročilé** nebo povolit koncovým uživatelům, aby si zvolili vlastní nastavení.
@@ -156,7 +154,6 @@ Pro zařízení s Windows 10: Jakmile se nepovede určený počet pokusů o při
 -   **Zjistitelnost zařízení Bluetooth** – Umožní, aby bylo toto zařízení zjistitelné jinými zařízeními podporujícími Bluetooth.
 -   **Párování Bluetooth předem** – Umožní automatické párování určitých zařízení Bluetooth se zařízením hostitele.
 -   **Reklama přes Bluetooth** – Umožní zařízení přijímat přes Bluetooth inzerci.
--   **Název zařízení Bluetooth** – Zadejte název zařízení Bluetooth. Pokud název nezadáte, použije se výchozí název zařízení.
 -   **Služba připojených zařízení** – Umožní vybrat, jestli povolíte službu připojených zařízení, abyste mohli zjišťovat jiná zařízení Bluetooth a připojovat se k nim.
 -   **Bezkontaktní komunikace (NFC)** – Umožní uživateli povolit a konfigurovat na zařízení možnosti bezkontaktní komunikace.
 -   **Wi-Fi** – Umožní uživateli povolit a konfigurovat Wi-Fi na zařízení (jenom Windows 10 Mobile).
@@ -170,11 +167,16 @@ Pro zařízení s Windows 10: Jakmile se nepovede určený počet pokusů o při
 
 -   **Aplikace Nastavení** – Zablokuje přístup k aplikaci Nastavení Windows.
     -   **Systém** – Zablokuje přístup k systémové oblasti v aplikaci Nastavení.
+        -   **Změny nastavení napájení a režimu spánku (jenom desktopové verze)** – Zabrání koncovému uživateli ve změně nastavení napájení a režimu spánku na zařízení.
     -   **Zařízení** – Zablokuje přístup k oblasti zařízení v aplikaci Nastavení.
     -   **Síť a internet** – Zablokuje přístup k oblasti sítě a internetu v aplikaci Nastavení.
     -   **Přizpůsobení** – Zablokuje přístup k oblasti přizpůsobení v aplikaci Nastavení.
     -   **Účty** – Zablokuje přístup k oblasti účtů v aplikaci Nastavení.
     -   **Čas a jazyk** – Zablokuje přístup k oblasti času a jazyka v aplikaci Nastavení.
+        -   **Změny systémového času** – Zabrání koncovému uživateli ve změně data a času zařízení.
+        -   **Změny nastavení oblasti (jenom desktopové verze)** – Zabrání koncovému uživateli ve změně nastavení oblasti na zařízení.
+        -   **Změny nastavení oblasti (jenom desktopové verze)** – Zabrání uživateli ve změně nastavení jazyka na zařízení.
+    -   **Hry** – Zablokuje přístup k aplikaci Hry v Nastavení.
     -   **Usnadnění přístupu** – Zablokuje přístup k oblasti usnadnění přístupu v aplikaci Nastavení.
     -   **Soukromí** – Zablokuje přístup k oblasti soukromí v aplikaci Nastavení.
     -   **Aktualizace a zabezpečení** – Zablokuje přístup k oblasti aktualizací a zabezpečení v aplikaci Nastavení.
@@ -237,17 +239,17 @@ Pokud jsou soubory na jednotce určené jen pro čtení, nemůže z nich Defende
 ## <a name="windows-spotlight"></a>Windows Spotlight
 
 
-- Windows Spotlight – Toto nastavení použijte k zablokování všech funkcí Windows Spotlight na zařízeních s Windows 10. Pokud toto nastavení zablokujete, nebudou následující nastavení k dispozici.
+- **Windows Spotlight** – Toto nastavení použijte k zablokování všech funkcí Windows Spotlight na zařízeních s Windows 10. Pokud toto nastavení zablokujete, nebudou následující nastavení k dispozici.
     - **Windows Spotlight na zamykací obrazovce** – Zastaví zobrazování informací z Windows Spotlight na zamykací obrazovce zařízení.
     - **Návrhy třetích stran ve Windows Spotlightu** – Zastaví ve Windows Spotlightu návrhy obsahu, který nebyl vydán Microsoftem.
-    - **Tipy Windows** – Umožňuje zablokovat zobrazování automaticky otevíraných tipů ve Windows.
     - **Uživatelské funkce** – Umožňuje zablokovat uživatelské funkce, jako jsou návrhy nabídky Start a oznámení o členství.
+    - **Tipy Windows** – Umožňuje zablokovat zobrazování automaticky otevíraných tipů ve Windows.
     - **Windows Spotlight v centru akcí** – Zablokuje zobrazování návrhů Windows Spotlightu na nové aplikace nebo obsah týkající se zabezpečení v Centru akcí systému Windows.
     - **Přizpůsobení Windows Spotlightu** – Zastaví přizpůsobování výsledků ve Windows Spotlightu na základě použití zařízení.
     - **Prostředí uvítání systémem Windows** – Zablokuje prostředí uvítání systémem Windows, které uživateli zobrazuje informace o nových nebo aktualizovaných funkcích.
 
 
-## <a name="display"></a>Zobrazit
+## <a name="projection"></a>Promítání
 
 - **Uživatelský vstup z přijímačů bezdrátového zobrazení** – Zablokuje uživatelský vstup z přijímačů bezdrátového zobrazení.
 - **Promítání na tento počítač** – Zabrání ostatním zařízením, aby zjišťovala tento počítač pro promítání.

@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/12/2016
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 465d84490f5000b13a2c7371677cee77baadc4d2
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 701ee2081d8f696a1c37eaa2857ab92942d79f48
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Řešení potíží při registraci zařízení s Windows 10
 Pokud jste použili postup v části [Registrace zařízení s Windows 10 Mobile nebo Windows 10 Desktop v Intune](enroll-your-w10-phone-or-w10-pc-windows.md), ale stále nemáte přístup ke svému školnímu nebo pracovnímu e-mailu a souborům, zkuste tyto kroky pro řešení potíží.
@@ -35,7 +35,7 @@ Pokud jste použili postup v části [Registrace zařízení s Windows 10 Mobile
 
     ![settings-accounts-your-account](./media/W10-enroll-2-accounts-your-account.png)
 
-## <a name="troubleshooting-steps-to-follow-if-you-see-access-work-or-school"></a>Postup řešení potíží, pokud se zobrazí Přístup do práce nebo do školy
+## <a name="troubleshooting-steps-to-follow-if-you-see-access-work-or-school"></a>Postup řešení potíží, pokud se zobrazí „Přístup do práce nebo do školy“
 
 1.  Pokud jste použili tento postup, ale pořád nemáte přístup k pracovnímu nebo školnímu e-mailu a souborům, vraťte se k položce **Přístup do práce nebo do školy**.
 
@@ -47,12 +47,16 @@ Pokud jste použili postup v části [Registrace zařízení s Windows 10 Mobile
 
     - Pokud se informace o připojení nezobrazují nebo pokud je vidíte, ale nezobrazují se všechny možnosti, klepněte na **Připojit** a přihlaste se pomocí pracovních nebo školních přihlašovacích údajů. Teď byste měli být připojení.
 
-## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>Postup řešení potíží, pokud se zobrazí Váš účet
+## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>Postup řešení potíží, pokud se zobrazí „Váš účet“
 
 Pokud jste použili tento postup, ale pořád nemáte přístup k pracovnímu nebo školnímu e-mailu, souborům a dalším datům, vraťte se k položce **Účty** a klepněte na **Přístup do práce**.
 
 - Pokud vidíte svůj pracovní nebo školní účet, gratulujeme. Jste připojení.
 
 - Pokud svůj pracovní nebo školní účet nevidíte, klepněte na **Připojit** a přihlaste se pomocí přihlašovacích údajů svého pracovního nebo školního účtu.
+
+## <a name="troubleshooting-steps-to-follow-if-you-see-set-up-a-work-or-school-account"></a>Postup řešení potíží, pokud se zobrazí „Nastavení pracovního nebo školního účtu“
+
+Pokud se zobrazí zpráva __Nemůžeme automaticky zjistit koncový bod správy odpovídající zadanému uživatelskému jménu. Zkontrolujte prosím své uživatelské jméno a zkuste to znovu. Pokud znáte adresu URL koncového bodu správy, zadejte ji prosím.__ , zkuste znovu zadat uživatelské jméno a heslo. Pokud ani to nepomůže, zjistěte od správce IT, jaký web je potřeba zadat do textového pole **Koncový bod správy**. Web pravděpodobně vypadá nějak takto: **www.vasespolecnost.onmicrosoft.com**. 
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).

@@ -15,11 +15,11 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e2302b0e53254b945215aadbb13107c85f345412
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 3aff61f6201d6569e35aa9d556aa655d28775d2f
+ms.sourcegitcommit: 18cdbdc226f64368de892a8c5cff157c37986c57
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="role-based-administration-control-rbac-with-intune"></a>Řízení správy na základě rolí (RBAC) s Intune
 
@@ -57,9 +57,9 @@ Z klasické konzoly Intune do Intune v Azure se migrují jenom **správci služe
 
 Následující role jsou integrované do Intune a můžete je přiřadit ke skupinám, aniž byste dál měnili jejich konfiguraci:
 
-- **Operátor helpdesku**: Provádí vzdálené úlohy u uživatelů a zařízení a může uživatelům a zařízením přiřazovat aplikace nebo zásady. 
+- **Operátor helpdesku**: Provádí vzdálené úlohy u uživatelů a zařízení a může uživatelům a zařízením přiřazovat aplikace nebo zásady.
 - **Správce zásad a profilů**: Spravuje zásady dodržování předpisů, konfigurační profily, registrace Apple a identifikátory podnikových zařízení.
-- **Operátor s oprávněními pouze ke čtení**: Zobrazuje informace o uživatelích, zařízeních, registraci, konfiguraci a aplikacích a nemůže provádět změny v Intune.
+- **Operátor s oprávněními pouze ke čtení**: Zobrazuje informace o uživatelích, zařízeních, registraci, konfiguraci a aplikacích. Nemůže provádět změny v Intune.
 - **Správce aplikací**: Spravuje mobilní a spravované aplikace a může číst informace o zařízeních.
 
 ### <a name="to-assign-a-built-in-role"></a>Přiřazení předdefinované role
@@ -68,9 +68,9 @@ Následující role jsou integrované do Intune a můžete je přiřadit ke skup
 
 2. V okně <*název role*> – **Vlastnosti** zvolte **Spravovat**, **Přiřazení**.
 
-    > [!NOTE] 
+    > [!NOTE]
     > Předdefinované role není možné odstranit ani upravit.
-    
+
 3. V okně vlastní role zvolte **Přiřadit**.
 
 4. V okně **Přiřazení rolí** zadejte **Název** a volitelný **Popis** přiřazení a zvolte následující:
