@@ -15,15 +15,15 @@ ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
 ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9846dfb66becc04e6786ce6e49327cb2fbc75c5c
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: 8c761b3e5c1acb36f5604dc3bf1cd9ce08b29494
+ms.sourcegitcommit: 99ffed621855357de427d6fdf7b70d4e543197e9
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak získat podporu pro Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE[azure_portal](./includes/note-for-both-portals.md)]
 
 Microsoft poskytuje pro Microsoft Intune globální technickou a předprodejní podporu a podporu k fakturaci a správě předplatného. Podpora je k dispozici online i po telefonu pro placené i zkušební předplatné. Online technická podpora je k dispozici v angličtině a japonštině. V dalších jazycích je k dispozici podpora po telefonu a online podpora k fakturaci.
 
@@ -34,7 +34,7 @@ Microsoft poskytuje pro Microsoft Intune globální technickou a předprodejní 
 
 Jako správce IT můžete lístek podpory zadat na portálu Azure Portal. Tady je postup:
 
-1. Přihlaste se na portálu Azure Portal (https://portal.azure.com) pod přihlašovacími údaji správce Intune zvolte ikonu **?** v pravém horním rohu portálu a pak vyberte **Nápověda a podpora**, abyste přešli na stránku [Nápověda a podpora Azure](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview target=_blank).
+1. Přihlaste se na portálu Azure Portal (https://portal.azure.com) pod přihlašovacími údaji správce Intune zvolte ikonu **?** v pravém horním rohu portálu a pak vyberte možnost **Nápověda a podpora**, kterou přejdete na stránku [nápovědy a podpory Azure](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview target=_blank).
 
     ![Snímek obrazovky nápovědy a podpory na portálu Azure Portal s odkazem v podobě otazníku a se zvýrazněným odkazem Nápověda a podpora](./media/azure-get-support.png)
 
