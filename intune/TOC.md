@@ -263,7 +263,7 @@
 ### [Jak získat aplikace pro Windows](end-user-apps-windows.md)
 
 # Monitorování a odstraňování potíží
-## [Používání role pracovníka odborné pomoci](help-desk-operators.md)
+## [Pomoc uživatelům s řešením problémů](help-desk-operators.md)
 ## [Používání datového skladu Intune](reports-nav-create-intune-reports.md)
 ### [Připojení k datovému skladu pomocí Power BI](reports-proc-get-a-link-powerbi.md)
 
