@@ -14,13 +14,13 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 7aad054f0861522174faa01b979083a818c106af
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 066f8668ea37e928455792f512e4e337a1f19c20
+ms.sourcegitcommit: 2ed8d1c39d4b3e3282111f1d758afb3a50f19f8f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/10/2017
 ---
-# <a name="help-users-with-the-troubleshooting-portal-in-microsoft-intune"></a>Pomoc uživatelům prostřednictvím portálu pro řešení potíží v Microsoft Intune
+# <a name="use-the-troubleshooting-portal-to-help-users"></a>Použití portálu pro řešení potíží k poskytování pomoci uživatelům
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -35,22 +35,21 @@ Když například uživatel kontaktuje podporu ohledně technického problému s
 -   Zařízení nedokáže získat nastavení sítě VPN nebo Wi-Fi
 -   Instalace aplikace se nezdařila
 
-
 ## <a name="add-help-desk-operators"></a>Přidání operátorů helpdesku
 Jako správce Intune můžete přiřadit roli operátora helpdesku skupině uživatelů. Členové této skupiny můžou používat portál pro správu k řešení problémů uživatelů. Pro přístup k portálu Intune je potřeba, aby měl každý operátor helpdesku licenci Intune. Podívejte se, [jak přiřadit licence pro Intune](licenses-assign.md).
 
 Přidání uživatelů helpdesku:
 1. V případě potřeby [přidejte uživatele do Intune](users-add.md).
 2. [Vytvořte skupinu helpdesku](groups-add.md) a přidejte do ní uživatele.
-3. [Přiřaďte roli RBAC operátora helpdesku](role-based-access-control.md#built-in-roles) nebo [vytvořte vlastní roli](role-based-access-control.md#custom-roles) s následujícími oprávněními:
-  - Mobilní aplikace: Číst
-  - Spravované aplikace: Číst
-  - Spravovaná zařízení: Číst
-  - Organizace: Číst
-  - Zásady dodržování předpisů zařízením: Číst
-  - Konfigurace zařízení: Číst
+3. [Přiřadit roli RBAC operátora helpdesku.](role-based-access-control.md#built-in-roles)
 
-  ![Snímky obrazovky portálu Intune se zvýrazněnými rolemi Intune a seznamem předdefinovaných rolí včetně role operátora helpdesku](./media/help-desk-user-add.png)
+  ![Snímky obrazovky portálu Intune se zvýrazněnými rolemi Intune a seznamem předdefinovaných rolí včetně role operátora helpdesku](./media/help-desk-user-add.png) Můžete také [vytvořit vlastní roli](role-based-access-control.md#custom-roles), kterou můžete dále upravit, abyste operátorům helpdesku poskytli potřebný přístup.  Operátoři helpdesku potřebují následující oprávnění, aby mohli řešit potíže uživatelů:
+    - Mobilní aplikace: Číst
+    - Spravované aplikace: Číst
+    - Spravovaná zařízení: Číst
+    - Organizace: Číst
+    - Zásady dodržování předpisů zařízením: Číst
+    - Konfigurace zařízení: Číst
 
 4. Abyste operátorům helpdesku poskytli oprávnění k zobrazení stavu služby a otvírání lístků podpory pro Intune, [udělte uživatelům oprávnění správce](https://docs.microsoft.com/azure/active-directory/active-directory-users-assign-role-azure-portal) jako **Správce služeb**. Neudělujte oprávnění **Správce služby Intune**, protože tato role adresáře má víc práv, než operátoři helpdesku potřebují.
 
