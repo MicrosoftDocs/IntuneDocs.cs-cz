@@ -15,11 +15,11 @@ ms.assetid: 89f2d806-2e97-430c-a9a1-70688269627f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b49c227e3cae6c5dca8655362cfbfa6fd3f94807
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: bd84f24400c5ca0828fb13a36963ffda274ba073
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení Windows 10 a novější v Microsoft Intune
 
@@ -72,7 +72,7 @@ Pro zařízení s Windows 10: Jakmile se nepovede určený počet pokusů o při
 
 ## <a name="privacy"></a>Ochrana osobních údajů
 
--   **Přizpůsobení vstupu** – Zakáže použití cloudových hlasových služeb pro Cortanu, diktování nebo aplikace z Windows Storu. Pokud tyto služby povolíte, může Microsoft kvůli vylepšení služby shromažďovat hlasová data.
+-   **Přizpůsobení vstupu** – Zakáže použití cloudových hlasových služeb pro Cortanu, diktování nebo aplikace z Microsoft Storu. Pokud tyto služby povolíte, může Microsoft kvůli vylepšení služby shromažďovat hlasová data.
 -   **Automatické přijetí párování a výzev k udělení souhlasu uživatele s ochranou osobních údajů** – Umožňuje Windows u spuštěných aplikací automaticky potvrzovat zprávy o párování a ochraně osobních údajů.
 
 
@@ -91,12 +91,12 @@ Pro zařízení s Windows 10: Jakmile se nepovede určený počet pokusů o při
 ## <a name="app-store"></a>App Store
 
 -   **App Store (jenom mobilní verze)** – Povolí nebo zablokuje použití App Storu na zařízeních s Windows 10 Mobile.
--   **Automaticky aktualizovat aplikace ze Storu** – Povolí automatickou aktualizaci aplikací nainstalovaných z Windows Storu.
+-   **Automaticky aktualizovat aplikace ze Storu** – Povolí automatickou aktualizaci aplikací nainstalovaných z Microsoft Storu.
 -   **Instalace důvěryhodné aplikace** – Povolí, aby se aplikace podepsané důvěryhodným certifikátem instalovaly bokem.
 -   **Odemčení pro vývojáře** – Povolí nastavení pro vývojáře Windows, například možnost povolit koncovým uživatelům provádět změny aplikací nainstalovaných bokem.
 -   **Sdílená data aplikací uživatele** – Povolí aplikacím sdílet data mezi různými uživateli na stejném zařízení.
 -   **Použít pouze privátní úložiště** – Tuto možnost povolte, pokud chcete koncovým uživatelům povolit jenom stahování aplikací z vašeho privátního úložiště.
--   **Spuštění aplikace pocházející ze Storu** – Slouží k zákazu všech aplikací předinstalovaných na zařízení nebo stažených z Windows Storu.
+-   **Spuštění aplikace pocházející ze Storu** – Slouží k zákazu všech aplikací předinstalovaných na zařízení nebo stažených z Microsoft Storu.
 -   **Nainstalovat data aplikací na systémový svazek** – Zabrání aplikacím ukládat data na systémový svazek zařízení.
 -   **Nainstalovat aplikace na systémovou jednotku** – Zabrání aplikacím ukládat data na systémovou jednotku zařízení.
 -   **Záznam ze hry (jenom desktopové verze)** – Umožňuje nakonfigurovat, zda jsou povolené záznam a vysílání z her.

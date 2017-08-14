@@ -15,17 +15,28 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7079a22afc04b5674eb8f12a2833961e86939a28
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 8197e03e8a3eb42c6a5be3b6357d959ed9428454
+ms.sourcegitcommit: 0e012f25fb22124f66193f20f244362493c6b8bb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Povolení registrace zařízení s iOSem pomocí Apple School Manageru
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Toto téma pomáhá správcům IT povolit registraci zařízení s iOSem zakoupená prostřednictvím programu [Apple School Manager](https://school.apple.com/). Microsoft Intune umožňuje vzdáleně nasadit registrační profil, který zaregistruje zařízení Apple School Manageru pro správu. Správce se žádného spravovaného zařízení nemusí vůbec dotknout. Registrační profil obsahuje nastavení správy, která se v zařízeních použijí během registrace, včetně možností Pomocníka s nastavením.
+Toto téma vám pomůže zprovoznit registraci zařízení s iOSem zakoupená prostřednictvím programu [Apple School Manager](https://school.apple.com/). Pomocí Intune s Apple School Managerem můžete registrovat velký počet zařízení s iOSem, aniž byste je museli uchopit do ruky. Když student nebo učitel zařízení zapne, Pomocník s nastavením provede předem nakonfigurovaná nastavení a zařízení se zaregistruje ke správě.
+
+Při povolení registrace přes Apple School Manager budete používat portál Intune i portál Apple School Manager. Abyste mohli zařízení přiřadit do Intune ke správě, potřebujete seznam sériových čísel nebo čísla nákupních objednávek. Vytvoříte registrační profily DEP obsahující nastavení aplikovaná na zařízení během registrace.
+
+Mimochodem registraci přes Apple School Manager nejde používat s [programem registrace zařízení (DEP) společnosti Apple](device-enrollment-program-enroll-ios.md) ani se [správcem registrace zařízení](device-enrollment-manager-enroll.md).
+
+**Požadavky**
+- [Certifikát Apple MDM Push Certificate](apple-mdm-push-certificate-get.md)
+- [Autorita pro správu mobilních zařízení (MDM)](mdm-authority-set.md)
+- [Certifikát Apple MDM Push Certificate](apple-mdm-push-certificate-get.md)
+- Přidružení uživatelů vyžaduje [koncový bod WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Přečtěte si další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+- Zařízení zakoupená z programu [Apple School Management](http://school.apple.com)
 
 **Kroky registrace Apple School Manageru**
 1. [Získání tokenu Apple School Manageru a přiřazení zařízení](#get-the-apple-token-and-assign-devices)
@@ -36,33 +47,37 @@ Toto téma pomáhá správcům IT povolit registraci zařízení s iOSem zakoupe
 6. [Distribuce zařízení uživatelům](#distribute-devices-to-users)
 
 >[!NOTE]
->Registraci Apple School Manageru nejde použít s [DEP společnosti Apple](device-enrollment-program-enroll-ios.md) ani se [správcem registrace zařízení](device-enrollment-manager-enroll.md).
+>Při registraci na zařízeních spravovaných Apple School Managerem s přidružením uživatelů nefunguje vícefaktorové ověřování (MFA). Po registraci vícefaktorové ověřování na těchto zařízeních funguje podle očekávání. Po registraci vícefaktorové ověřování na zařízeních funguje podle očekávání. Zařízení nemůžou vyzvat uživatele, kteří při prvním přihlášení potřebují změnit své heslo. Výzva k resetování hesla se během registrace nezobrazí ani uživatelům, kterým vypršela platnost hesla. Uživatelé musí heslo resetovat z jiného zařízení.
+
 
 ## <a name="get-the-apple-token-and-assign-devices"></a>Získání tokenu Apple a přiřazení zařízení
 
 Než budete moct registrovat zařízení s iOSem vlastněná společností pomocí Apple School Manageru, potřebujete získat soubor tokenu (.p7m) od společnosti Apple. Tento token umožňuje Intune synchronizovat informace o zařízeních v Apple School Manageru. Token také umožňuje Intune odesílat společnosti Apple registrační profily a přiřazovat k těmto profilům zařízení. Na portálu společnosti Apple můžete také přiřadit sériová čísla zařízení pro správu.
 
-**Požadavky**
-- [Certifikát Apple MDM Push Certificate](apple-mdm-push-certificate-get.md)
-- Registrace do [Apple School Manageru](http://school.apple.com)
-
 **Krok 1: Stáhněte si certifikát veřejného klíče Intune, který je potřebný k vytvoření tokenu Apple.**<br>
-1. Na portálu [Intune](https://aka.ms/intuneportal) zvolte **Registrace zařízení** a pak vyberte **Token Programu registrace**.
-2. V okně **Token Programu registrace** vyberte **Stáhnout veřejný klíč** a stáhněte a místně uložte soubor šifrovacího klíče (.pem). Soubor .pem slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple School Manager.
+1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení** a pak zvolte **Token Programu registrace**.
+
+  ![Snímek obrazovky s podoknem Token Programu registrace v pracovním prostoru Certifikáty Apple pro stažení veřejného klíče](./media/enrollment-program-token-download.png)
+
+2. V okně **Token Programu registrace** zvolte **Stáhnout veřejný klíč** a stáhněte a místně uložte soubor šifrovacího klíče (.pem). Soubor .pem slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple School Manager.
 
 **Krok 2: Stáhněte si token a přiřaďte zařízení.**<br>
-Vyberte **Vytvořit token prostřednictvím Apple School Manageru** a přihlaste se pomocí Apple ID vaší společnosti. Toto Apple ID můžete použít k obnovení tokenu Apple School Manageru.
+1. Zvolte **Vytvořit token prostřednictvím Apple School Manageru** a přihlaste se pomocí Apple ID vaší společnosti. Toto Apple ID můžete použít k obnovení tokenu Apple School Manageru.
+2.  Na portálu [Apple School Manager](https://school.apple.com) přejděte na **MDM Servers** (MDM servery) a vpravo nahoře zvolte **Add MDM Server** (Přidat MDM server).
+3.  Zadejte **název MDM serveru**. Název serveru slouží pro vaši informaci, abyste mohli identifikovat server pro správu mobilních zařízení (MDM). Není to název serveru Microsoft Intune ani jeho URL.
+   ![Snímek obrazovky portálu Apple School Manager s vybranou možností Sériové číslo](./media/asm-server-assignment.png)
 
-   1.  Na portálu [Apple School Manager](https://school.apple.com) přejděte na **MDM Servers** (MDM servery) a vpravo nahoře vyberte **Add MDM Server** (Přidat MDM server).
-   2.  Zadejte **název MDM serveru**. Název serveru slouží pro vaši informaci, abyste mohli identifikovat server pro správu mobilních zařízení (MDM). Není to název serveru Microsoft Intune ani jeho URL.
-   3.  Na portálu společnosti Apple vyberte **Upload File...** (Nahrát soubor...), vyhledejte soubor .pem a vpravo dole vyberte **Save MDM Server** (Uložit MDM server).
-   4.  Vyberte **Get Token** (Získat token) a stáhněte si soubor tokenu serveru (.p7m) do svého počítače.
-   5. Přejděte na **Device Assignments** (Přiřazení zařízení) a **vyberte zařízení** pomocí možností **Serial Numbers** (Sériová čísla), **Order Number** (Číslo objednávky) nebo **Upload CSV File** (Nahrát CSV soubor).
-   6.   Vyberte akci **Assign to Server** (Přiřadit k serveru) a vyberte **MDM Server**, který jste vytvořili.
-   7. Určete, jak **Vybrat zařízení**, a pak zadejte informace o zařízení a podrobnosti.
-   8. Zvolte **Přiřadit k serveru**, zvolte &lt;název_serveru&gt; zadaný pro Microsoft Intune a potom zvolte **OK**.
+4.  Na portálu společnosti Apple zvolte **Upload File...** (Nahrát soubor...), vyhledejte soubor .pem a vpravo dole zvolte **Save MDM Server** (Uložit MDM server).
+5.  Zvolte **Get Token** (Získat token) a stáhněte si soubor tokenu serveru (.p7m) do svého počítače.
+6. Přejděte na **Device Assignments** (Přiřazení zařízení) a **vyberte zařízení** pomocí možností **Serial Numbers** (Sériová čísla), **Order Number** (Číslo objednávky) nebo **Upload CSV File** (Nahrát CSV soubor).
+     ![Snímek obrazovky portálu Apple School Manager s vybranou možností Sériové číslo](./media/asm-device-assignment.png)
+7.  Zvolte akci **Assign to Server** (Přiřadit k serveru) a zvolte **MDM Server**, který jste vytvořili.
+8. Určete, jak **Vybrat zařízení**, a pak zadejte informace o zařízení a podrobnosti.
+9. Zvolte **Přiřadit k serveru**, zvolte &lt;název_serveru&gt; zadaný pro Microsoft Intune a potom zvolte **OK**.
 
 **Krok 3: Zadejte Apple ID, které jste použili k vytvoření tokenu Apple School Manageru.**<br>Toto ID se má použít k obnovení tokenu Apple School Manageru a je uloženo pro budoucí použití.
+
+![Snímek obrazovky s Apple ID použitým k vytvoření tokenu programu registrace a přechodem na token programu registrace](./media/enrollment-program-token-apple-id.png)
 
 **Krok 4: Vyhledejte a nahrajte svůj token.**<br>
 Přejděte k souboru certifikátu (p7m), zvolte **Otevřít** a pak zvolte **Nahrát**. Intune automaticky synchronizuje vaše zařízení Apple School Manageru z portálu společnosti Apple.
@@ -70,25 +85,21 @@ Přejděte k souboru certifikátu (p7m), zvolte **Otevřít** a pak zvolte **Nah
 ## <a name="create-an-apple-enrollment-profile"></a>Vytvoření registračního profilu Apple
 Registrační profil zařízení definuje nastavení, která se během registrace použijí pro skupinu zařízení.
 
-1. Na portálu Intune zvolte **Registrace zařízení** a pak zvolte **Registrace Apple**.
-2. V části **Program registrace** vyberte **Profily Programu registrace**.
-3. V okně **Profily Programu registrace** vyberte **Vytvořit**.
-4. V okně **Vytvořit registrační profil** zadejte **název** a **popis** profilu, který se zobrazí na portálu Intune.
+1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** a pak zvolte **Registrace Apple**.
+2. V části **Program registrace** zvolte **Profily Programu registrace**.
+3. V okně **Profily Programu registrace** zvolte **Vytvořit**.
+4. V okně **Vytvořit registrační profil** zadejte **název** a **popis** profilu, který se zobrazí v Intune.
 5. V části **Přidružení uživatele** zvolte, jestli se zařízení s tímto profilem budou registrovat s přidružením uživatele nebo bez.
 
  - **Zaregistrovat s přidružením uživatele** – během instalace přidruží zařízení k uživateli.
 
- >[!NOTE]
- >Při registraci na zařízeních spravovaných Apple School Managerem s přidružením uživatelů nefunguje vícefaktorové ověřování (MFA). Po registraci vícefaktorové ověřování na těchto zařízeních funguje podle očekávání.
-
   Režim Sdílený iPad programu Apple School Manager vyžaduje registraci uživatele bez přidružení uživatele.
 
- >[!NOTE]
-    >Apple School Manager s přidružením uživatele vyžaduje aktivaci [uživatelského jména / smíšeného koncového bodu WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints), aby mohl požádat o token uživatele. [Přečtěte si další informace o WS-Trust 1.3](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+ - **Zaregistrovat bez přidružení uživatele** – zvolte pro zařízení nespojená s jedním uživatelem, například nesdílená zařízení. Použijte u zařízení určených k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, jako je aplikace Portál společnosti, nefungují.
 
- - **Zaregistrovat bez přidružení uživatele** – K zařízení není přidružený žádný uživatel. Toto spřažení použijte u zařízení určených k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, které vyžadují přidružení uživatele (včetně aplikace Portál společnosti používané k instalaci obchodních aplikací), nebudou fungovat.
+6. Zvolte **Nastavení správy zařízení**. Tyto položky jsou nastaveny při aktivaci a jejich změna vyžaduje obnovení továrního nastavení. nakonfigurujte následující nastavení profilu a potom zvolte **Uložit**:
 
-6. Vyberte **Nastavení správy zařízení**. Tyto položky jsou nastaveny při aktivaci a jejich změna vyžaduje obnovení továrního nastavení. nakonfigurujte následující nastavení profilu a potom vyberte **Uložit**:
+  ![Snímek obrazovky s výběrem režimu správy. Zařízení má následující nastavení: Pod dohledem, Uzamčená registrace, Povolit párování nastaveno na Zamítnout vše. Možnost Certifikáty Apple Configuratoru je pro nový profil programu registrace zobrazena šedě.](./media/enrollment-program-profile-mode.png)
 
     - **Pod dohledem** – Režim, který nabízí více možností správy a ve výchozím nastavení má zakázaný zámek aktivace. Pokud políčko nezaškrtnete, budete mít omezené možnosti správy.
 
@@ -105,7 +116,7 @@ Registrační profil zařízení definuje nastavení, která se během registrac
 
     - **Certifikáty Apple Configuratoru** – Pokud jste v části **Povolit párování** zvolili **Povolit Apple Configurator podle certifikátu**, vyberte certifikát Apple Configuratoru, který chcete importovat.
 
-7. Vyberte **Nastavení Pomocníka s nastavením**, nakonfigurujte následující nastavení profilu a potom vyberte **Uložit**:
+7. Zvolte **Nastavení Pomocníka s nastavením**, nakonfigurujte následující nastavení profilu a potom zvolte **Uložit**:
 
     - **Název oddělení** – Zobrazí se, když uživatelé klepnou při aktivaci na **O konfiguraci**.
 
@@ -127,20 +138,23 @@ Registrační profil zařízení definuje nastavení, která se během registrac
 ## <a name="connect-school-data-sync"></a>Připojení služby School Data Sync
 (Volitelné) Apple School Manager podporuje synchronizaci třídních seznamů do Azure Active Directory (AD) pomocí služby Microsoft School Data Sync (SDS). Pokud chcete použít službu SDS k synchronizaci školních dat, proveďte následující kroky.
 
-1. V okně **Token Programu registrace** vyberte buď modrou informační zprávu nebo možnost **Připojit SDS**.
-2. Vyberte **Povolit službě Microsoft School Data Sync používat tento token** a nastavte hodnotu **Povolit**. Toto nastavení umožňuje službě Intune propojení se službou SDS v Office 365.
-3. Pokud chcete povolit připojení mezi Apple School Managerem a Azure AD, vyberte možnost **Nastavit Microsoft School Data Sync**. Další informace o [jak nastavit službu School Data Sync](https://support.office.com/article/Install-the-School-Data-Sync-Toolkit-8e27426c-8c46-416e-b0df-c29b5f3f62e1).
+1. V okně **Token Programu registrace** zvolte buď modrou informační zprávu, nebo možnost **Připojit SDS**.
+2. Zvolte **Povolit službě Microsoft School Data Sync používat tento token** a nastavte hodnotu **Povolit**. Toto nastavení umožňuje službě Intune propojení se službou SDS v Office 365.
+3. Pokud chcete povolit připojení mezi Apple School Managerem a Azure AD, zvolte možnost **Nastavit Microsoft School Data Sync**. Další informace o [jak nastavit službu School Data Sync](https://support.office.com/article/Install-the-School-Data-Sync-Toolkit-8e27426c-8c46-416e-b0df-c29b5f3f62e1).
 4. Kliknutím na tlačítko **OK** uložte nastavení a pokračujte.
 
 ## <a name="sync-managed-devices"></a>Synchronizace spravovaných zařízení
-Když jste službě Intune přiřadili oprávnění ke správě zařízení Apple School Manageru, můžete Intune synchronizovat se službou Apple, aby se spravovaná zařízení zobrazila na portálu Intune.
+Když jste službě Intune přiřadili oprávnění ke správě zařízení Apple School Manageru, můžete Intune synchronizovat se službou Apple, aby se spravovaná zařízení zobrazila v Intune.
 
-1. Na portálu Intune zvolte **Registrace zařízení** a pak zvolte **Registrace Apple**.
+1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** a pak zvolte **Registrace Apple**.
 2. V části **Zařízení Programu registrace** vyberte **Synchronizovat**. Indikátor průběhu vám ukáže dobu, jakou budete muset počkat před dalším vyžádáním synchronizace.
+3. V okně **Synchronizovat** vyberte **Požadovat synchronizaci**. Indikátor průběhu vám ukáže dobu, jakou budete muset počkat před dalším vyžádáním synchronizace.
 
-    Pro dosažení souladu s podmínkami společnosti Apple pro přijatelné přenosy platí v Intune následující omezení:
-     -  Úplná synchronizace se nesmí pouštět častěji než jednou za sedm dní. Během úplné synchronizace Intune aktualizuje všechna sériová čísla, která společnost Apple přiřadila Intune, bez ohledu na jejich dřívější synchronizaci. Pokud se o úplnou synchronizaci pokusíte do sedmi dnů od předchozí úplné synchronizace, aktualizuje Intune jenom sériová čísla, která ještě nejsou v Intune.
-     -  Každá žádost o synchronizaci má 15 minut na dokončení. Po tuto dobu nebo do úspěšného vykonání požadavku je tlačítko **Synchronizovat** neaktivní.
+  ![Snímek obrazovky synchronizačního okna s vybraným odkazem Požadovat synchronizaci](./media/enrollment-program-device-request-sync.png)
+
+  Pro dosažení souladu s podmínkami společnosti Apple pro přijatelné přenosy platí v Intune následující omezení:
+   -    Úplná synchronizace se nesmí pouštět častěji než jednou za sedm dní. Během úplné synchronizace Intune aktualizuje všechna sériová čísla, která společnost Apple přiřadila Intune, bez ohledu na jejich dřívější synchronizaci. Pokud se o úplnou synchronizaci pokusíte do sedmi dnů od předchozí úplné synchronizace, aktualizuje Intune jenom sériová čísla, která ještě nejsou v Intune.
+   -    Každá žádost o synchronizaci má 15 minut na dokončení. Po tuto dobu nebo do úspěšného vykonání požadavku je tlačítko **Synchronizovat** neaktivní.
 
 >[!NOTE]
 >V okně **Zařízení Programu registrace** můžete také přiřadit sériová čísla Apple School Manageru k profilům.
@@ -148,18 +162,19 @@ Když jste službě Intune přiřadili oprávnění ke správě zařízení Appl
 ## <a name="assign-a-profile-to-devices"></a>Přiřazení profilu k zařízením
 Zařízením Apple School Manageru spravovaným v Intune musíte před registrací přiřadit registrační profil.
 
-1. Na portálu Intune zvolte **Registrace zařízení** > **Registrace Apple** a vyberte **Profily Programu registrace**.
-2. V seznamu **profilů programu registrace** vyberte profil, který chcete přiřadit k zařízením, a potom vyberte **Přiřazení zařízení**.
-3. Vyberte **Přiřadit** a pak vyberte zařízení Apple School Manageru, ke kterým chcete tento profil přiřadit. Dostupná zařízení můžete filtrovat:
+1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** > **Registrace Apple** a pak zvolte **Profily Programu registrace**.
+2. V seznamu **Profily Programu registrace** zvolte profil, který chcete zařízením přiřadit, a pak zvolte **Přiřazení zařízení**.
+
+ ![Snímek obrazovky přiřazení zařízení s vybranou možností Přiřadit.](./media/enrollment-program-device-assign.png)
+
+3. Zvolte **Přiřadit** a pak zvolte zařízení Apple School Manageru, ke kterým chcete tento profil přiřadit. Dostupná zařízení můžete filtrovat:
   - **nepřiřazené**
   - **libovolné**
-  - **&lt;Název profilu Apple School Manageru&gt;**
+  - **&lt;název profilu&gt;**
 4. Vyberte zařízení, která chcete přiřadit. Zaškrtávací políčko nad sloupcem umožňuje vybrat až 1 000 uvedených zařízení. Klikněte na tlačítko **Přiřadit**. Pokud chcete registrovat více než 1 000 zařízení, opakujte postup, dokud nebudou mít všechna zařízení přiřazený profil registrace.
+
+  ![Snímek obrazovky s tlačítkem Přiřadit pro přiřazení profilu programu registrace v Intune](media/dep-profile-assignment.png)
 
 ## <a name="distribute-devices-to-users"></a>Distribuce zařízení uživatelům
 
 Zařízení patřící společnosti teď můžete distribuovat uživatelům. Pokud je zařízení Apple School Manageru s iOSem zapnuté, zaregistruje se pro správu službou Intune. Pokud bylo zařízení aktivováno a používá se, nemůže být profil použit, dokud nebude zařízení obnoveno do továrního nastavení.
-
-### <a name="how-users-install-and-use-the-company-portal-on-their-devices"></a>Jak uživatelé instalují a používají aplikaci Portál společnosti na svých zařízeních
-
-Zařízení nakonfigurovaná s přidružením uživatele umožňují instalaci a spuštění aplikace Portál společnosti, která slouží ke stahování aplikací a správě zařízení. Když uživatelé obdrží zařízení, musí spustit Pomocníka s nastavením a nainstalovat aplikaci Portál společnosti.

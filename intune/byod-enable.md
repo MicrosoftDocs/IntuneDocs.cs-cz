@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 
 ms.reviewer: vlpetros
 ms.suite: ems
-ms.openlocfilehash: 8684ea31420edd836038dc9337bd8bdf56e78ba6
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 0d05918a62549559a186376d99e28c952af16b9c
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="enable-byod-with-intune"></a>Přineste si vlastní zařízení s Intune
 
@@ -75,14 +75,14 @@ S Intune je možné snadno:
 * [Dodávat aplikace ze obchodu na spravovaná zařízení](apps-deploy.md)
 * Zacílit aplikace na nespravovaná zařízení s použitím webu portálu společnosti
 
-Intune také umožňuje spravovat a nasazovat aplikace zakoupené v multilicenčních verzích z App Storu pro iOS a Windows Storu pro firmy. Můžete tak snížit administrativní režii při sledování hromadně zakoupených aplikací.
+Intune také umožňuje spravovat a nasazovat aplikace zakoupené v multilicenčních verzích z App Storu pro iOS a Microsoft Storu pro firmy. Můžete tak snížit administrativní režii při sledování hromadně zakoupených aplikací.
 
 > [!TIP]
 > Můžete [nakonfigurovat jednotné přihlašování (SSO) s použitím Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect). Jednotné přihlašování umožňuje uživatelům přihlášení do aplikací s použitím doménového uživatelského jména a hesla, které používají místně. Kromě toho můžete [poskytnout internetový přístup k místně hostovaným webovým aplikacím](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) pomocí proxy aplikací služby Azure Active Directory.
 
 -   [Správa hromadně koupených aplikací pro zařízení s iOSem](vpp-apps-ios.md). K hromadnému nákupu licencí pro aplikace iOS se používá program [Apple Volume Purchase Program for Business](http://www.apple.com/business/vpp/). Je nutné vytvořit účet Apple VPP na webu Apple a nahrát do Intune token Apple VPP. Potom je možné synchronizovat informace o hromadném nákupu s Intune a sledovat využití aplikací, které jste tímto způsobem zakoupili.
 
--   [Správa aplikací koupených z Windows Storu pro firmy](windows-store-for-business.md) [Windows Store pro firmy](https://www.microsoft.com/business-store) je místo, kde můžete najít a zakoupit aplikace pro svoji organizaci, a to jednotlivě i hromadně. Pokud obchod propojíte s Intune, můžete spravovat hromadně zakoupené aplikace pomocí portálu Intune.
+-   [Správa aplikací koupených z Microsoft Storu pro firmy](windows-store-for-business.md) [Microsoft Store pro firmy](https://www.microsoft.com/business-store) je místo, kde můžete najít a zakoupit aplikace pro svou organizaci, a to jednotlivě i hromadně. Pokud obchod propojíte s Intune, můžete spravovat hromadně zakoupené aplikace pomocí portálu Intune.
 
 ## <a name="protect-company-data"></a>Ochrana dat společnosti
 
@@ -105,10 +105,10 @@ Pomocí [zásad ochrany aplikací služby Intune](app-protection-policies.md) m�
 
 Pomocí [zásad WIP (Windows Information Protection)](app-protection-policies-configure-windows-10.md) můžete to samé dělat u spravovaných zařízení s Windows 10. Tyto zásady fungují, aniž by narušovaly činnost zaměstnanců. Nevyžadují změny prostředí vaší sítě ani jiných aplikací.
 
-### <a name="wipe-company-data-while-leaving-personal-data-intact"></a>Vymazání podnikových dat a ponechání osobních dat beze změny
+### <a name="remove-company-data-while-leaving-personal-data-intact"></a>Odebrání podnikových dat a ponechání osobních dat beze změny
 
-Pokud už zařízení není pro práci potřeba, mění se účel jeho používání nebo se prostě ztratilo, můžete z něj odebrat podnikové aplikace a data. K tomu můžete použít možnosti služby Intune pro selektivní a úplné vymazání. Uživatelé také mohou vzdáleně vymazat svá vlastní zařízení z Portálu společnosti Intune, pokud jsou tato zařízení v Intune zaregistrovaná.
+Pokud už zařízení není pro práci potřeba, mění se účel jeho používání nebo se prostě ztratilo, můžete z něj odebrat podnikové aplikace a data. K tomuto účelu můžete použít funkce pro odebrání firemních dat a obnovení továrního nastavení v Intune. Uživatelé můžou obnovit tovární nastavení vlastních zařízení i vzdáleně, a to z Portálu společnosti Intune, pokud jsou tato zařízení v Intune zaregistrovaná.
 
-[Úplné vymazání](devices-wipe.md) obnoví v zařízení výchozí nastavení od výrobce a odebere uživatelská data a nastavení. [Selektivní vymazání](devices-wipe.md#selective-wipe) odebere ze zařízení jenom firemní data, ale osobní data uživatelů ponechá beze změn.
+Při [obnovení továrního nastavení](devices-wipe.md) se v zařízení obnoví výchozí nastavení od výrobce, odeberou se uživatelská data a nastavení a zařízení se odebere ze správy v Intune. Při [odebrání firemních dat](devices-wipe.md#remove-company-data) se ze zařízení odeberou jenom firemní data, ale osobní data uživatelů zůstanou beze změn.
 
-Po zahájení zařízení ihned spustí proces selektivního vymazání pro odebrání ze správy. Po dokončení procesu se všechna podniková data odstraní a název zařízení už se odebere z portálu Intune. Ukončí se tak životní cyklus správy zařízení.
+Po spuštění tohoto procesu zařízení hned začne proces obnovování továrního nastavení. Po dokončení procesu se všechna podniková data odstraní a název zařízení se odebere z Intune. Ukončí se tak životní cyklus správy zařízení.
