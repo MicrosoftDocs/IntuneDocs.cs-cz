@@ -74,6 +74,7 @@
 #### [Omezení](enrollment-restrictions-set.md)
 #### [Certifikát Apple MDM Push Certificate](apple-mdm-push-certificate-get.md)
 #### [Podnikové identifikátory](corporate-identifiers-add.md)
+#### [Vícefaktorové ověřování](multi-factor-authentication.md)
 #### [Správce registrace zařízení](device-enrollment-manager-enroll.md)
 #### [Mapování zařízení na skupiny](device-group-mapping.md)
 ### Nastavení registrace zařízení s Windows
@@ -291,7 +292,7 @@
 ## [Jak používat rozhraní Intune Graph API](intune-graph-apis.md)
 ## [Rozhraní Intune Graph API](https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview)
 ## [Rozhraní API datového skladu Intune](reports-nav-intune-date-warehouse.md)
-<!-- ### [Get data from the Data Warehouse API with a REST client](reports-proc-data-rest.md) -->
+### [Získání dat z rozhraní API datového skladu pomocí klienta REST](reports-proc-data-rest.md)
 ### [Koncový bod rozhraní API datového skladu](reports-api-url.md)
 ### [Datový model datového skladu](reports-ref-data-model.md)
 #### [Referenční informace pro entitu dat](reports-ref-date.md)
@@ -300,6 +301,6 @@
 #### [Referenční informace pro entity zařízení](reports-ref-devices.md)
 #### [Referenční informace pro entity aplikací](reports-ref-application.md)
 #### [Referenční informace pro entity zásad](reports-ref-policy.md)
-<!-- #### [Relationship of Entities](reports-api-entity-relationships.md) !-->
+<!-- #### [Relationship of Entities](reports-api-entity-relationships.md) -->
 
 # [Glosář](intune-glossary.md)
