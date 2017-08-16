@@ -291,7 +291,7 @@
 ### [Komponenta Xamarin sady Intune App SDK](app-sdk-xamarin.md)
 ## [Jak používat rozhraní Intune Graph API](intune-graph-apis.md)
 ## [Rozhraní Intune Graph API](https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview)
-## [Rozhraní API datového skladu Intune](reports-nav-intune-date-warehouse.md)
+## [Rozhraní API datového skladu Intune](reports-nav-intune-data-warehouse.md)
 ### [Získání dat z rozhraní API datového skladu pomocí klienta REST](reports-proc-data-rest.md)
 ### [Koncový bod rozhraní API datového skladu](reports-api-url.md)
 ### [Datový model datového skladu](reports-ref-data-model.md)
