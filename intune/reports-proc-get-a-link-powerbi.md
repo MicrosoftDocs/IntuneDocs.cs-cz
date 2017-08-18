@@ -14,17 +14,17 @@ ms.assetid: 5E5A35D3-88F8-441B-8A0B-C5D7A1E5137B
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a9d99b71b9f84eea45ae597ed0f69010f6e95805
-ms.sourcegitcommit: addf6a40caa22c22adfd2e2eff7d666cd1877e3c
+ms.openlocfilehash: b70bf3410e20dd792c0fcff050292ddea714d63e
+ms.sourcegitcommit: 99ffed621855357de427d6fdf7b70d4e543197e9
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Připojení k datovému skladu pomocí Power BI
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Můžete si stáhnout soubor pro použití s Microsoft Power BI, který vám umožní načíst interaktivní, dynamicky generované sestavy vašeho tenanta Intune. Soubor Power BI datového skladu (pbix) obsahuje nastavení připojení k vašemu tenantovi a následující ukázkové sestavy a grafy: 
+Můžete si stáhnout soubor pro použití s Microsoft Power BI, který vám umožní načíst interaktivní, dynamicky generované sestavy vašeho tenanta Intune. Soubor Power BI datového skladu (pbix) obsahuje nastavení připojení k vašemu tenantovi a následující ukázkové sestavy a grafy:  
 
   -  Zařízení
   -  Registrace
@@ -45,6 +45,9 @@ Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktop 
 ## <a name="load-the-data-and-reports-using-the-power-bi-file-pbix"></a>Načtení dat a sestav pomocí souboru Power BI (pbix)
 
 Soubor Power BI (pbix) obsahuje informace o připojení pro vašeho tenanta a sadu předem vytvořených sestav založených na datovém modelu datového skladu. Soubor otevřete v aplikaci Power BI Desktop a přihlaste se k Azure AD. Sestava načte data z vašeho tenanta Intune.
+
+> [!Important]  
+> Jednotlivé soubory Power BI (pbix) se můžou lišit podle umístění tenanta. Pokud spravujete několik tenantů Intune, je nutné použít soubor, který jste z portálu Azure Portal stáhli, když jste byli přihlášení k požadovanému tenantovi.  
 
 1.  Přihlaste se k webu Azure Portal a zvolte **Monitorování + správa** > **Intune**. Můžete také vyhledat prostředky pro **Intune**.  
 2.  Otevřete okno **Rozhraní API datového skladu Microsoft Intune (Preview)**.

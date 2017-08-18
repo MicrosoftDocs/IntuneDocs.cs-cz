@@ -14,11 +14,11 @@ ms.assetid: 068a73bb-e6b3-44a6-8f6e-4cf7d455bbf3
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 37c4c3a1b51479b1a6450cc66ab502d579804015
-ms.sourcegitcommit: f100c943a635f5a08254ba7cf30f1aaebb7e810e
+ms.openlocfilehash: a09235d53b9340d853dba95299fc5788494ed165
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Porovnání správy počítačů s Windows jako počítačů nebo jako mobilních zařízení
 
@@ -35,7 +35,7 @@ Organizace mohou v Microsoft Intune spravovat počítače s Windows buď jako mo
 |**Profily zařízení**|Není k dispozici|K dispozici <br>[Co jsou profily zařízení v Microsoft Intune?](https://docs.microsoft.com/intune-azure/configure-devices/what-are-device-profiles)|
 |**Registrace bez agenta**|Není k dispozici |K dispozici<br>[Registrace zařízení s Windows](https://docs.microsoft.com/intune-azure/enroll-devices/enroll-windows-devices)|
 |**Správa aktualizací softwaru**| Aktualizace Windows a aplikací od Microsoftu<br>[Udržování počítačů s Windows v aktuálním stavu díky softwarovým aktualizacím](https://docs.microsoft.com/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune)|Microsoft Store pro firmy pro aktualizace Windows 10 a aktualizace aplikací od Microsoftu<br> [Konfigurace nastavení služby Windows Update pro firmy](https://docs.microsoft.com/intune-azure/configure-devices/how-to-configure-windows-update-for-business) |
-|**Správa softwarových licencí**|K dispozici <br>[Správa licenčních smluv na software počítačů s Windows](https://docs.microsoft.com/intune/deploy-use/manage-license-agreements-for-windows-pc-software-in-microsoft-intune)|Microsoft Store pro firmy (pouze aplikace .appx)<br>[Správa aplikací koupených z Windows Storu pro firmy](https://docs.microsoft.com/intune-azure/manage-apps/wsfb-apps)|
+|**Správa softwarových licencí**|K dispozici <br>[Správa licenčních smluv na software počítačů s Windows](https://docs.microsoft.com/intune/deploy-use/manage-license-agreements-for-windows-pc-software-in-microsoft-intune)|Microsoft Store pro firmy (pouze aplikace .appx)<br>[Správa aplikací koupených z Microsoft Storu pro firmy](https://docs.microsoft.com/intune-azure/manage-apps/wsfb-apps)|
 |**Inventář**|K dispozici <br>[Zobrazení inventáře hardwaru a softwaru pro počítače s Windows](https://docs.microsoft.com/intune/deploy-use/view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune)|K dispozici <br>[Jak monitorovat informace o aplikacích](https://docs.microsoft.com/intune/apps-monitor)<br>[Co je správa zařízení?](https://docs.microsoft.com/intune/device-management)|
 |**Zásady brány Windows Firewall**|K dispozici <br>[Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall](https://docs.microsoft.com/intune/deploy-use/help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune) |Není k dispozici|
 |**Ochrana proti malwaru**|Endpoint Protection<br>[Pomoc se zabezpečením počítačů s Windows pomocí služby Endpoint Protection](https://docs.microsoft.com/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune)|Windows Defender<br>[Nastavení programu Windows Defender](https://docs.microsoft.com/intune-azure/configure-devices/custom-for-windows-10#windows-defender-settings)|

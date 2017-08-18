@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/04/2017
+ms.date: 08/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 494b3892-916e-4b40-9b67-61adec889bdf
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 014e59c017eac0d54a632e545692e1a1a8053164
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 45a3a8fe4960cc1bb8c5f2150f57d34d59c08e0a
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="custom-settings-for-android-devices-in-microsoft-intune"></a>Vlastní nastavení pro zařízení s Androidem v Microsoft Intune
 
@@ -40,3 +40,13 @@ Tato vlastnost umožňuje přiřadit nastavení Androidu, která nejdou konfigur
     - **OMA-URI** – zadejte OMA-URI, u kterého chcete zadat nastavení.
     - **Hodnota** – zadejte hodnotu, kterou chcete přidružit k uvedenému OMA-URI.
 4. Po dokončení klikněte na **OK**. Další nastavení můžete přidávat podle potřeby.
+
+## <a name="next-steps"></a>Další kroky
+
+Po dokončení nastavení se vytvoří profil, který se zobrazí v okně se seznamem profilů. Pokud chcete pokračovat a přiřadit tento profil ke skupinám, podívejte se na téma [Jak přiřadit profily zařízení](device-profile-assign.md).
+
+Některé příklady užitečných vlastních nastavení najdete v částech:
+
+- [Vytvoření profilu sítě Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení v Microsoft Intune](/intune/wi-fi-profile-shared-key)
+- [Vytvoření profilu VPN pro aplikaci pro zařízení s Androidem můžete pomocí vlastního profilu Microsoft Intune](/intune/android-pulse-secure-per-app-vpn)
+- [Použití vlastních zásad pro povolení a blokování aplikací pro zařízení se Samsung KNOX Standardem v Microsoft Intune](/intune/samsung-knox-apps-allow-block)

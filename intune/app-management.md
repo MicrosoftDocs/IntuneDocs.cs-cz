@@ -15,11 +15,11 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 33ddb60df7aebe36ff652e1da6da592442b96d4b
-ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
+ms.openlocfilehash: c05b2257fe03cd23ad5ba71a3fee217cd4802650
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 
@@ -87,7 +87,7 @@ Většinu toho, co souvisí s aplikacemi, najdete v úloze **Mobilní aplikace**
 
 ### <a name="monitor"></a>Monitorování
 - **Licencované aplikace** – zde můžete zobrazit, přiřadit a monitorovat aplikace hromadně zakoupené v obchodech s aplikacemi.
-    - [Aplikace hromadně zakoupené ve Windows Storu pro firmy](windows-store-for-business.md)
+    - [Aplikace hromadně zakoupené v Microsoft Storu pro firmy](windows-store-for-business.md)
 - **Zjištěné aplikace** – zobrazuje všechny aplikace přiřazené přes Intune a nainstalované v zařízení.
 - **Stav instalace aplikace** – zobrazuje stav vytvořeného přiřazení aplikace.
 - **Stav ochrany aplikací** – zobrazuje stav zásad ochrany aplikací pro vybraného uživatele.
@@ -97,7 +97,7 @@ Podrobnosti najdete v článku [Monitorování aplikací](apps-monitor.md).
 ### <a name="setup"></a>Nastavení
 <!--- **iOS VPP Tokens**
     - [iOS volume-purchased apps](vpp-apps-ios.md) --->
-- **Windows Store pro firmy** – integrace nastavení do Windows Storu pro firmy. Potom můžete zakoupené aplikace synchronizovat s Intune, přiřazovat je a sledovat využití licencí.
-    - [Aplikace hromadně zakoupené ve Windows Storu pro firmy](windows-store-for-business.md)
+- **Microsoft Store pro firmy** – integrace nastavení do Microsoft Storu pro firmy. Potom můžete zakoupené aplikace synchronizovat s Intune, přiřazovat je a sledovat využití licencí.
+    - [Aplikace hromadně zakoupené v Microsoft Storu pro firmy](windows-store-for-business.md)
 - **Značky Portálu společnosti** – Portál společnosti můžete přizpůsobit o značku své firmy.
     - [Konfigurace Portálu společnosti](company-portal-app.md)

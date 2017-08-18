@@ -14,11 +14,11 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 14407e26a0715f3d5aa8cf570a2109dac7140079
-ms.sourcegitcommit: 21a9db380956a50031dbea360b4c76664cbc2768
+ms.openlocfilehash: d7a51094851af8c3b6d872300cd9b23e845c6494
+ms.sourcegitcommit: 2ee1e8248814d74cef80b609a8e43f59fa0b2618
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Řešení potíží s registrací do služby Intune
 
@@ -159,7 +159,7 @@ Následující tabulka obsahuje chyby, které se můžou koncovým uživatelům 
 |Chybová zpráva|Problém|Řešení|
 |---|---|---|
 |**Správce IT musí přiřadit licence pro přístup**<br>Váš správce IT vám neudělil přístup k této aplikaci. Požádejte ho o pomoc nebo to zkuste znovu.|Zařízení není možné zaregistrovat, protože účet uživatele nemá potřebnou licenci.|Aby si mohli uživatelé zaregistrovat svoje zařízení, musí mít přiřazenou potřebnou licenci. Tato zpráva znamená, že má uživatel špatný typ licence pro určenou autoritu pro správu mobilních zařízení. Pokud je třeba určenou autoritou pro správu mobilních zařízení Intune a uživatel používá licenci nástroje System Center 2012 R2 Configuration Manager, zobrazí se tato chyba.<br><br>Přečtěte si informace o tom, jak [si přiřadíte licence Intune k uživatelským účtům](/intune/licenses-assign.md).
-|**Správce IT musí nastavit autoritu MDM.<br>Zdá se, že váš správce IT nenastavil autoritu MDM. Požádejte ho o pomoc nebo to zkuste znovu.|Autorita pro správu mobilních zařízení není definovaná.|Autorita pro správu mobilních zařízení není určená v Intune. Přečtěte si, jak [nastavit autoritu pro správu mobilních zařízení](/intune/mdm-authority-set.md).|
+|**Správce IT musí nastavit autoritu MDM**<br>Zdá se, že váš správce IT nenastavil autoritu MDM. Požádejte ho o pomoc nebo to zkuste znovu.|Autorita pro správu mobilních zařízení není definovaná.|Autorita pro správu mobilních zařízení není určená v Intune. Přečtěte si, jak [nastavit autoritu pro správu mobilních zařízení](/intune/mdm-authority-set.md).|
 
 
 ### <a name="devices-fail-to-check-in-with-the-intune-service-and-display-as-unhealthy-in-the-intune-admin-console"></a>Zařízení se nepodařilo registrovat ve službě Intune a jeho stav v konzole pro správu se zobrazuje jako Není v pořádku
