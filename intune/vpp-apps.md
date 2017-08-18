@@ -15,11 +15,11 @@ ms.assetid: 85b07f57-661a-4bc8-87d2-7b446d5cf4d6
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e8f938e81740d1bb08e0e9995cab94329c2fe5e7
-ms.sourcegitcommit: c9b3a95bf529b6cb2a2bdacbc49127dfa0c233e5
+ms.openlocfilehash: fced0a52db719fe2228d6cd91786b7de8f539f57
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="manage-volume-purchased-apps-and-books-with-microsoft-intune"></a>Správa aplikací a knih zakoupených v rámci multilicenčního programu pomocí Microsoft Intune
 
@@ -33,8 +33,8 @@ Microsoft Intune vám pomůže spravovat aplikace a knihy, které jste zakoupili
 
 ## <a name="which-types-of-apps-and-books-can-you-manage"></a>Jaké typy aplikací a knih můžete spravovat?
 
-S Intune můžete spravovat aplikace a knihy zakoupené v rámci multilicenčního programu v obchodě pro iOS a aplikace, které jste si koupili z Windows Storu pro firmy. Informace o způsobech správy licencovaných aplikací z jednotlivých obchodů najdete v následujících tématech:
+S Intune můžete spravovat aplikace a knihy zakoupené v rámci multilicenčního programu v obchodě pro iOS a aplikace, které jste si koupili z Microsoft Storu pro firmy. Informace o způsobech správy licencovaných aplikací z jednotlivých obchodů najdete v následujících tématech:
 
 - [Správa hromadně koupených aplikací iOS](vpp-apps-ios.md)
-- [Správa hromadně koupených aplikací z Windows Storu pro firmy](windows-store-for-business.md)
+- [Správa hromadně koupených aplikací z Microsoft Storu pro firmy](windows-store-for-business.md)
 - [Správa e-knih pro iOS](vpp-ebooks-ios.md)

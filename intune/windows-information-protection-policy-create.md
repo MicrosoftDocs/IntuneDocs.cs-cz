@@ -15,23 +15,23 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 17736751a6cd1813bd03f8092739d8433eb5d9dc
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: b5758d5af0a478335d4a7503c13af785c9c512fb
+ms.sourcegitcommit: 3bafbec5822bb5baa2d313f2bd19f35a67438beb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Počínaje verzí Intune 1704 můžete používat zásady ochrany aplikací u Windows 10 ve správě mobilních aplikací (MAM) bez scénáře registrace.
+Počínaje verzí Intune 1704 můžete používat zásady ochrany aplikací u Windows 10 k ochraně aplikací bez registrace zařízení.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
 Povězme si o několika konceptech při přidání zásady WIP.
 
-### <a name="list-of-allowed-and-exempt-apps"></a>Seznamy Povolené aplikace a Aplikace s výjimkou
+### <a name="list-of-allowed-and-exempt-apps"></a>Seznamy povolených aplikací a aplikací s výjimkou
 
 -   **Povolené aplikace:** Tyto aplikace musí tuto zásadu dodržovat.
 
@@ -39,17 +39,15 @@ Povězme si o několika konceptech při přidání zásady WIP.
 
 ### <a name="types-of-apps"></a>Typy aplikací
 
--   **Doporučené aplikace:** Předem naplněný seznam aplikací (většinou Microsoft Office), které správcům umožňují snadný import do zásady.
+-   **Doporučené aplikace:** Předvyplněný seznam aplikací (většinou Microsoft Office), které můžete snadno importovat do zásady. <!---I really don't know what you mean by "easily import into policy"--->
 
--   **Aplikace pro Store:** Správce může do zásady přidat libovolnou aplikaci z Windows Storu.
+-   **Aplikace pro Store:** Do zásad můžete přidat libovolnou aplikaci z Microsoft Storu.
 
--   **Desktopové aplikace Windows:** Správce může do zásady přidat libovolné tradiční desktopové aplikace Windows (např. soubory typu exe, dll atd.)
+-   **Desktopové aplikace Windows:** Do zásad můžete přidat libovolné tradiční desktopové aplikace Windows (např. soubory typu exe nebo dll).
 
 ## <a name="pre-requisites"></a>Požadavky
 
-Abyste mohli vytvořit zásadu ochrany aplikací WIP, musíte nejdříve nakonfigurovat poskytovatele MAM.
-
--   Přečtěte si další informace o tom, [jak nakonfigurovat poskytovatele MAM u Intune](https://docs.microsoft.com/app-protection-policies-configure-windows-10.md).
+Abyste mohli vytvořit zásadu ochrany aplikací WIP, musíte nejdříve nakonfigurovat poskytovatele MAM. Přečtěte si další informace o tom, [jak nakonfigurovat poskytovatele MAM u Intune](https://docs.microsoft.com/app-protection-policies-configure-windows-10.md).
 
 Navíc musíte mít toto:
 
@@ -58,12 +56,13 @@ Navíc musíte mít toto:
 
 > [!IMPORTANT]
 > WIP nepodporuje víc identit. Vždy může existovat jenom jedna spravovaná identita.
+<!---Should you be linking to a topic that explains what multi-identity is?--->
 
 ## <a name="to-add-a-wip-policy"></a>Přidání zásady WIP
 
-Pokud už máte v organizaci nastavenou službu Intune, můžete přes portál [Azure Portal](https://docs.microsoft.com/intune-classic/deploy-use/azure-portal-for-microsoft-intune-mam-policies) vytvořit zásadu specifickou pro WIP.
+Pokud už máte v organizaci nastavenou službu Intune, můžete přes portál [Azure Portal](https://docs.microsoft.com/intune-classic/deploy-use/azure-portal-for-microsoft-intune-mam-policies) vytvořit zásadu specifickou pro WIP. <!---Is there an azure topic you can use instead of a classic? if not, should this topic be moved into the azure docset?--->
 
-1.  Přejděte na **řídicí panel Správa mobilních aplikací Intune**, zvolte **Všechna nastavení** a potom zvolte **Zásada aplikace**.
+1.  Přejděte na **řídicí panel Správa mobilních aplikací Intune** a zvolte **Všechna nastavení** > **Zásada aplikace**.
 
 2.  V okně **Zásada aplikace** zvolte **Přidat zásadu** a pak zadejte následující hodnoty:
 
@@ -120,46 +119,43 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete přes portál [
 > [!NOTE]
 > Pokud chcete přidat najednou víc **desktopových aplikací**, můžete na konci řádku aplikace kliknout na nabídku **(…)** a pokračovat přidáváním dalších aplikací. Až budete hotovi, zvolte **OK**.
 
-## <a name="windows-information-protection-wip-learning"></a>Kurzy k WIP (Windows Information Protection)
-
+## <a name="wip-learning"></a>Kurzy k WIP
+<!---You've already defined WIP earlier in the topic. You don't need to keep doing so. --->
 Po přidání aplikací, které chcete chránit pomocí WIP, je potřeba použít režim ochrany prostřednictvím **Kurzů k WIP**.
 
 ### <a name="before-you-begin"></a>Před zahájením
 
-Kurzy k WIP (Windows Information Protection) je sestava, která správcům umožňuje monitorovat aplikace pro WIP neznámé. Neznámé aplikace jsou aplikace, které nenasadilo IT oddělení vaší organizace. Správce může tyto aplikace ze sestavy exportovat a přidat je do zásad WIP. Zabrání tak přerušení produktivity po dobu, než vynutí WIP v režimu Skrýt potlačení.
+Kurzy k WIP jsou sestava umožňující monitorovat neznámé aplikace v rámci WIP. Neznámé aplikace jsou aplikace, které nenasadilo IT oddělení vaší organizace. Můžete je ze sestavy exportovat a přidat do zásad WIP. Zabráníte tak přerušení produktivity po dobu, než vynutíte WIP v režimu Skrýt potlačení.
 
 Doporučujeme začít s režimem **Tiché** nebo **Povolit potlačení** a u malé skupiny ověřit, jestli máte v seznamu povolených aplikací správné aplikace. Až budete hotovi, můžete režim změnit na konečnou zásadu vynucení **Skrýt potlačení**.
 
-#### <a name="what-the-protection-modes-are"></a>Jaké jsou režimy ochrany?
+### <a name="what-are-the-protection-modes"></a>Co jsou režimy ochrany?
 
-- **Skrýt potlačení:**
-    - WIP hledá nepatřičné postupy sdílení dat a zabrání uživateli dokončit akci.
-    - K takovým postupům může patřit sdílení mezi podnikově nechráněnými aplikacemi a sdílení podnikových dat mezi dalšími lidmi a zařízeními mimo vaši organizaci.
-<br></br>
+#### <a name="hide-overrides"></a>Skrýt potlačení
+WIP hledá nepatřičné postupy sdílení dat a zabrání uživateli dokončit akci. K takovým postupům může patřit sdílení mezi podnikově nechráněnými aplikacemi a sdílení podnikových dat mezi dalšími lidmi a zařízeními mimo vaši organizaci.
 
-- **Povolit potlačení:**
-    - WIP hledá nepatřičné sdílení dat, a pokud uživatelé udělají něco potenciálně nebezpečného, upozorní je na to.
-    - Uživatel ale může v tomto režimu zásady potlačit a data sdílet. Akce se v takovém případě zaznamená do protokolu auditu.
-<br></br>
-- **Tiché:**
-    - WIP běží tiše s protokolováním nepatřičného sdílení dat. Neblokuje nic, co by v režimu Povolit potlačení vyžadovalo interakci uživatele.
-    - Nepovolené akce, jako jsou nepatřičné pokusy aplikací o přístup k síťovému prostředku nebo k datům chráněným pomocí WIP, budou ale zastaveny.
-<br></br>
-- **Vypnuto (nedoporučuje se):**
-    - WIP je vypnuté a nepomáhá chránit nebo auditovat data.
-    - Když WIP vypnete, proběhne pokus o dešifrování všech souborů označených přes WIP na místně připojených jednotkách. Dejte pozor: Po opětovném zapnutí WIP se vaše předchozí šifrování a informace zásady znovu automaticky nepoužijí.
+#### <a name="allow-overrides"></a>Povolit potlačení
+WIP hledá nepatřičné sdílení dat, a pokud uživatelé udělají něco potenciálně nebezpečného, upozorní je na to. Uživatel ale může v tomto režimu zásady potlačit a data sdílet. Akce se v takovém případě zaznamená do protokolu auditu.
 
-### <a name="to-add-a-protection-mode"></a>Přidání režimu ochrany
+#### <a name="silent"></a>Tiché
+WIP běží bez upozorňování s protokolováním nepatřičného sdílení dat. Neblokuje nic, co by v režimu Povolit potlačení vyžadovalo interakci uživatele. Nepovolené akce, jako jsou nepatřičné pokusy aplikací o přístup k síťovému prostředku nebo k datům chráněným pomocí WIP, budou ale zastaveny.
 
-1.  V okně **Zásada aplikace**  zvolte název zásady a potom v okně **Přidat zásadu** klikněte na **Požadovaná nastavení**.
+#### <a name="off-not-recommended"></a>Vypnuto (nedoporučuje se)
+WIP je vypnuté a nepomáhá chránit nebo auditovat data.
+
+Když WIP vypnete, proběhne pokus o dešifrování všech souborů označených přes WIP na místně připojených jednotkách. Dejte pozor: Po opětovném zapnutí WIP se vaše předchozí šifrování a informace zásady znovu automaticky nepoužijí.
+
+### <a name="add-a-protection-mode"></a>Přidání režimu ochrany
+
+1.  V okně **Zásada aplikace** zvolte název zásady a potom zvolte **Povinná nastavení**.
 
     ![Snímek obrazovky s režimem Kurzy](./media/learning-mode-sc1.png)
 
-1.  Zvolte **Uložit**.
+1.  Vyberte **Uložit**.
 
-### <a name="to-use-wip-learning"></a>Použití Kurzů k WIP
+### <a name="use-wip-learning"></a>Použití Kurzů k WIP
 
-1. Přejděte na řídicí panel Azure.
+1. Přejděte na řídicí panel Azure. <!---since they're changing from Intune MAM to Intune proper, a screenshot might be helpful.--->
 
 2. V nabídce vlevo zvolte **Další služby** a do filtru textového pole pak zadejte **Intune**.
 
@@ -170,14 +166,16 @@ Doporučujeme začít s režimem **Tiché** nebo **Povolit potlačení** a u mal
 > [!IMPORTANT]
 > Když se tyto aplikace objeví v sestavě protokolování Kurzy k WIP, můžete je přidat do zásad ochrany aplikací.
 
-## <a name="to-deploy-your-wip-app-protection-policy"></a>Nasazení zásady ochrany aplikací WIP
+## <a name="deploy-your-wip-app-protection-policy"></a>Nasazení zásady ochrany aplikací WIP
 
 > [!IMPORTANT]
-> Toto platí pro WIP se správou mobilních aplikací (MAM) bez scénáře registrace.
+> Následující informace platí pro zásady WIP bez registrace zařízení.
+
+<!---not sure why you need the Important note. Isn't this what the topic is about? app protection w/o enrollment?--->
 
 Když jste vytvořili zásadu ochrany aplikací WIP, potřebujete ji nasadit ve vaší organizaci s použitím MAM.
 
-1.  V okně **Zásada aplikace** zvolte vaši nově vytvořenou zásadu pro ochranu aplikací, zvolte **Skupiny uživatelů** a potom zvolte **Přidat skupinu uživatelů**.
+1.  V okně **Zásada aplikace** vyberte svoji nově vytvořenou zásadu pro ochranu aplikací a zvolte **Skupiny uživatelů** > **Přidat skupinu uživatelů**.
 
     V okně **Přidat skupinu uživatelů** se otevře seznam skupin uživatelů, který obsahuje všechny skupiny zabezpečení v Azure Active Directory.
 

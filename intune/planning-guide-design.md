@@ -5,7 +5,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 06/13/2017
+ms.date: 08/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,22 +13,16 @@ ms.technology:
 ms.assetid: a8e38e29-f5e3-4a71-a170-d3b1a06e37c6
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: 3f08f110163159c1219492539107cc6b33c8012d
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.custom: 
+ms.openlocfilehash: 73e9a634e579b85ac5acabebf38c8a08bc1af86c
+ms.sourcegitcommit: ee7f69efe9f32a1d6bdeb1fab73d03dbfe1ae58c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
-[!INCLUDE[note for both-portals](./includes/note-for-both-portals.md)]
-
-Tuto část průvodce doporučujeme použít zároveň s dalšími tématy ve 2. části. Tento návrh vychází ze shromážděných informací a z vašich rozhodnutí v předchozích částech tohoto průvodce. V této části návrhu se zaměříme na samotnou cloudovou službu Intune od Microsoftu.
-
-Přestože jsou požadavky na místní infrastrukturu minimální, je potřeba vytvořit plán návrhu, který bude zárukou správného řešení pro správu mobilních zařízení a bude odpovídat vašim cílům, úkolům a požadavkům.
-
-V implementační a testovací fázi se návrh často mění. Nezapomeňte tyto změny průběžně dokumentovat, včetně úvah, které k nim vedly. Návrh se týká následujících oblastí:
+Návrh Intune vychází z informací, které shromáždíte, a rozhodnutí, která učiníte při čtení jiných [oddílů této příručky](planning-guide.md). Pomůže vám zkombinovat:
 
 -   Současné prostředí
 
@@ -40,11 +34,14 @@ V implementační a testovací fázi se návrh často mění. Nezapomeňte tyto 
 
 -   Závazné požadavky  
 
+Přestože jsou požadavky na místní infrastrukturu minimální, pomůže vám plán návrhu zajistit, abyste ke správě mobilních zařízení používali správné řešení, které splňuje vaše cíle, účely a požadavky.
+
 Pojďme se na každou z těchto oblastí podívat podrobněji. 
 
-## <a name="record-your-environment"></a>Záznam prostředí
+## <a name="record-your-current-environment"></a>Popis současného prostředí
+Během fáze implementace a testování dochází často ke změnám návrhu. Použijte plán návrhu k dokumentaci těchto změn a jejich odůvodnění.
 
-První krok před vytvořením návrhu spočívá v zaznamenání současného prostředí. Současné prostředí ovlivňuje vaše rozhodování o návrhu. Proto když rozhodujete o návrhu Intune, měli byste svá rozhodnutí dokumentovat a vytvořit na ně odkazy. Tady je několik příkladů poznámek o současném prostředí:
+Vaše současné prostředí může ovlivnit rozhodování o návrhu a mělo by být zdokumentováno a popsáno, když činíte jiná rozhodnutí ohledně návrhu Intune. Tady je několik příkladů poznámek o současném prostředí:
 
 -   **Identita v cloudu**
 
@@ -52,21 +49,21 @@ První krok před vytvořením návrhu spočívá v zaznamenání současného p
 
     -   Je vaše prostředí federované?
 
-    -   Je zapnuté vícefaktorové ověřování?
+    -   Je aktivní vícefaktorové ověřování?
 
 -   **Prostředí e-mailu**
 
-    -   Používáte místní nebo cloudový Exchange?
+    -   Používáte Exchange? Jedná se o místní nebo cloudové nasazení?
 
     -   Probíhá u vás projekt migrace Exchange do cloudu?
 
--   **Současné řešení pro správu mobilních zařízení (MDM)**
+-   **Současné řešení správy mobilních zařízení (MDM)**
 
     -   Používáte v současnosti nějaká jiná řešení MDM?
 
-    -   Jaká řešení MDM máte nasazená ve scénářích použití firemních zařízení a ve scénářích BYOD?
+    -   Jaká řešení MDM používáte ve scénářích použití firemních zařízení a ve scénářích BYOD?
 
-    -   Jaké používáte funkce (např. nastavení zařízení aplikace, konfigurace Wi-Fi atd.)?
+    -   Jaké používáte funkce (například aplikace, nastavení zařízení, konfigurace Wi-Fi)?
 
     -   Jaké platformy zařízení jsou podporované?
 
@@ -90,10 +87,10 @@ První krok před vytvořením návrhu spočívá v zaznamenání současného p
 
     -   Používáte ho ve scénářích použití firemních zařízení i ve scénářích BYOD?
 
-Při popisu současného prostředí MDM nezapomeňte poznamenat probíhající projekty a jiné plány na změnu prostředí. Následující příklad ukazuje, jak popsat současné prostředí. Tento popis vám pomůže při vytváření vlastního návrhu Intune:
+Při popisu současného prostředí MDM nezapomeňte zaznamenat všechny projekty nebo jakékoli jiné plány, které by mohly vaše prostředí ovlivnit. Následující příklad ukazuje, jak při vytváření návrhu Intune můžete popsat současné prostředí:
 
 | **Oblast řešení** | **Současné prostředí** | **Komentář** |
-|:---:|:---:|:---:|
+|---|---|---|
 | **Identita** | Azure AD, Azure AD Connect, nefederované, bez MFA | Probíhá projekt, který umožní koncem roku začít používat MFA. |                 
 | **Prostředí e-mailu** | Místní Exchange, Exchange Online | V současnosti se místní Exchange migruje na Exchange Online. Už je migrovaných 75 % poštovních schránek. Zbývajících 25 % bude migrováno do začátku pilotního nasazení Intune. |                
 | **SharePoint** | Místní SharePoint | Plány přechodu na SharePoint Online neexistují. |  
@@ -102,15 +99,16 @@ Při popisu současného prostředí MDM nezapomeňte poznamenat probíhající 
 | **Správa systému** | System Center Configuration Manager CB 1606 | Zájem o hybridní řešení Intune |
 | **Řešení VPN** | Cisco AnyConnect |  |
 
+
+Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a použít ji k vypracování vlastního plánu návrhu Intune.
+
 ## <a name="choose-an-intune-deployment-option"></a>Volba způsobu nasazení Intune
 
-Intune nabízí dvě možnosti nasazení: samostatné a hybridní. Rozhodněte se, co lépe vyhovuje vašim podnikovým požadavkům. Samostatné znamená, že Intune běží v cloudu. Hybridní znamená integraci Intune do System Center Configuration Manageru.
-
-- Další informace o [volbě mezi samostatným řešením Microsoft Intune a hybridním řešením pro správu mobilních zařízení se System Center Configuration Managerem](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
+Intune nabízí dvě možnosti nasazení: samostatné a hybridní. Samostatné znamená, že Intune běží v cloudu. Hybridní znamená integraci Intune do System Center Configuration Manageru. Tato příručka je určená primárně pro možnost samostatného nasazení. [Rozhodněte, která možnost vyhovuje požadavkům vaší firmy](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
 
 ## <a name="intune-tenant-location"></a>Umístění tenanta Intune
 
-V případě mezinárodní organizace nezapomeňte při přihlášení k odběru služby naplánovat, kde bude tenant. Země se definuje při prvním přihlášení ke službě Intune a mapuje se na následující oblasti rozmístěné po celém světě:
+Pokud máte globální působnost, nezapomeňte při zřizování předplatného služby naplánovat, kde se bude nacházet tenant. Země se definuje při první registraci předplatného Intune a odpovídá následujícím oblastem ve světě:
 
 -   Severní Amerika
 
@@ -123,59 +121,61 @@ V případě mezinárodní organizace nezapomeňte při přihlášení k odběru
 
 ## <a name="external-dependencies"></a>Externí závislosti
 
-Externí závislosti jsou služby a produkty, které jsou oddělené od Intune, ale tato služba je vyžaduje nebo jsou do ní integrované. U externích závislostí je potřeba identifikovat požadavky a způsob konfigurace. Tady je několik příkladů nejčastějších externích závislostí:
+Externí závislosti jsou služby a produkty, které jsou oddělené od Intune, ale tato služba je vyžaduje nebo jsou do ní integrované. U externích závislostí je důležité identifikovat požadavky a způsob jejich konfigurace. Zde je několik příkladů nejčastějších externích závislostí:
 
 -   Identita
 
 -   Skupiny uživatelů a zařízení
 
--   INFRASTRUKTURY VEŘEJNÝCH KLÍČŮ
+-   Infrastruktura veřejných klíčů (PKI)
 
 Pojďme se na nejčastější externí závislosti podívat podrobněji.
 
 ### <a name="identity"></a>Identita
 
-Identita představuje způsob identifikace uživatelů, kteří patří do organizace a zaregistrují si zařízení. Intune vyžaduje, aby identitu uživatelů poskytovala služba Azure Active Directory (Azure AD). Pokud už tuto službu používáte, můžete stávající identitu využít v cloudu. Doporučeným nástrojem k synchronizaci místních identit uživatelů s cloudovými službami Microsoftu je Azure AD Connect. Pokud už organizace používá Office 365, je důležité, aby služba Intune používala stejné prostředí Azure Active Directory.
+Identita představuje způsob identifikace uživatelů, kteří patří do organizace a zaregistrují si zařízení. Intune vyžaduje, aby identitu uživatelů poskytovala služba Azure Active Directory (Azure AD). Pokud tuto službu už používáte, můžete použít svou existující identitu, kterou už máte v cloudu. Doporučeným nástrojem k synchronizaci místních identit uživatelů s cloudovými službami Microsoftu je Azure AD Connect. Pokud v organizaci už používáte Office 365, je důležité, aby služba Intune používala stejné prostředí Azure AD.
 
-Tady jsou další informace o požadavcích na identitu v Intune:
+Přečtěte si další informace o následujících požadavcích na identitu Intune:
 
--   Další informace o [požadavcích na identitu](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview).
+- [Požadavky na identitu](https://docs.microsoft.com/en-us/azure/active-directory/understand-azure-identity-solutions)
 
--   Další informace o [požadavcích na synchronizaci adresáře](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements).
+- [Požadavky na synchronizaci adresáře](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnect)
 
--   Další informace o [požadavcích na vícefaktorové ověřování](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-multifactor-auth-requirements).
+- [Požadavky na vícefaktorové ověřování](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud)
 
 ### <a name="user-and-device-groups"></a>Skupiny uživatelů a zařízení
 
-Skupiny uživatelů a zařízení určují, kdo bude cílovým příjemcem nasazeného řešení. Nasazení může být zaměřené na zásady, aplikace a profily. Čistě cloudová služba Intune podporuje skupiny uživatelů a zařízení. Potřebujete tedy zjistit požadované skupiny uživatelů a zařízení. Doporučujeme všechny skupiny vytvořit v místním systému Active Directory a potom je synchronizovat s Azure Active Directory. Tady jsou další informace o plánování a vytváření skupin uživatelů a zařízení:
+Skupiny uživatelů a zařízení určují cíl nasazení včetně zásad, aplikací a profilů. Potřebujete určit, jaké skupiny uživatelů a zařízení budou zapotřebí.
 
--   Další informace o [plánování skupin uživatelů a zařízení](/intune-classic/deploy-use/plan-your-user-and-device-groups).
+Doporučujeme, abyste všechny skupiny vytvořili v místní službě Active Directory a následně je synchronizovali se službou Azure AD. Přečtěte si další informace o plánování a vytváření skupin uživatelů a zařízení:
 
--   Další informace o [vytváření skupin uživatelů a zařízení](/intune-classic/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
+-   [Plánování skupin uživatelů a zařízení](users-add.md)
+
+-   [Vytváření skupin uživatelů a zařízení](groups-add.md)
 
 ### <a name="public-key-infrastructure-pki"></a>Infrastruktura veřejných klíčů (PKI)
+Infrastruktura veřejných klíčů dodává certifikáty zařízením nebo uživatelům, aby je služba mohla bezpečně ověřit. Intune podporuje infrastrukturu veřejných klíčů Microsoftu. Certifikáty zařízení a uživatele mohou být vydány mobilnímu zařízení, aby byly splněny požadavky na ověřování na základě certifikátů. Před použitím certifikátů musíte určit, jestli je potřebujete, jestli síťová infrastruktura podporuje ověřování na základě certifikátů a jestli se ve stávajícím prostředí momentálně používají certifikáty.
 
-Infrastruktura veřejných klíčů dodává certifikáty zařízením nebo uživatelům, aby je služba mohla bezpečně ověřit. Intune podporuje infrastrukturu veřejných klíčů Microsoftu. Mobilnímu zařízení, které splňuje požadavky ověřování založeného na certifikátech, můžete vydat certifikáty zařízení a uživatele. Před implementací certifikátů je potřeba zjistit, jestli je opravdu potřebujete, jestli síťová infrastruktura podporuje ověřování založené na certifikátech a jestli se certifikáty v současném prostředí používají.
+Pokud plánujete, že budete v Intune používat certifikáty s profily VPN, Wi-Fi nebo e-mailu, ověřte, že máte podporovanou [infrastrukturu PKI](certificates-configure.md) připravenou k vytváření a nasazování profilů certifikátů.
 
-Pokud plánujete, že budete v Intune používat certifikáty s profily VPN, Wi-Fi nebo s e-mailovými profily, musíte ověřit, jestli [máte infrastrukturu PKI](/intune-classic/deploy-use/secure-resource-access-with-certificate-profiles) a jestli je připravená k vytvoření a nasazení profilů certifikátů.
+V případě vydávání certifikátů SCEP musíte také určit, jaký server bude hostovat funkci NDES (Network Device Enrollment Service) a jak bude probíhat komunikace.
 
-V případě vydání certifikátů SCEP musíte také určit, jaký server bude hostovat funkci NDES (Network Device Enrollment Service) a jak bude probíhat komunikace.
+Další informace pro:
 
-Další informace o konfiguraci certifikátů v Intune:
+-   [Jak konfigurovat profily certifikátů Intune](certificates-configure.md)
 
--   [Jak konfigurovat infrastrukturu certifikátů pro SCEP](/intune-classic/deploy-use/configure-certificate-infrastructure-for-scep)
+-   [Jak konfigurovat infrastrukturu certifikátů pro SCEP](certificates-scep-configure.md)
 
--   [Jak konfigurovat infrastrukturu certifikátů pro PFX](/intune-classic/deploy-use/configure-certificate-infrastructure-for-pfx)
+-   [Jak konfigurovat infrastrukturu certifikátů pro PFX](certficates-pfx-configure.md)
 
--   [Jak konfigurovat profily certifikátů Intune](/intune-classic/deploy-use/configure-intune-certificate-profiles)
 
--   [Jak konfigurovat zásady přístupu k prostředkům](/intune-classic/deploy-use/enable-access-to-company-resources-with-microsoft-intune)
+
 
 ## <a name="device-platform-considerations"></a>Informace o platformě zařízení
 
-K pochopení správné správy zařízení je potřeba se důkladněji podívat na spravovaná zařízení.
+Seznamte se blíže s následujícími aspekty svých zařízení, abyste věděli, jak se správně mají spravovat.
 
--   Určení podporovaných platforem zařízení
+-   Podporované platformy zařízení
 
 -   Zařízení
 
@@ -189,13 +189,11 @@ Pojďme se na tyto oblasti podívat podrobněji.
 
 Při vytváření návrhu potřebujete vědět, jaká zařízení budou v prostředí, a musíte ověřit, jestli je Intune podporuje nebo ne. Intune podporuje platformy iOS, Android a Windows.
 
--   Další informace o tom, jaká [zařízení Intune podporuje](/intune/supported-devices-browsers).
+[Vytvořte seznam zařízení podporovaných službou Intune](supported-devices-browsers.md).
 
 ### <a name="devices"></a>Zařízení
 
-Intune slouží ke správě mobilních zařízení. Zabezpečuje firemní data a umožňuje koncovým uživatelům pracovat z více míst. Intune podporuje více platforem zařízení. Proto doporučujeme dokumentovat zařízení a platformy OS, která návrh ve vaší organizaci podporuje. Můžete vyjít ze zařízení a platforem vytvořených v části věnované požadavkům na použití.
-
-Při kontrole funkcí zařízení podle platformy a verze OS se také doporučuje znát verze, na které seznam odkazuje. Zde najdete příklad:
+Intune slouží ke správě mobilních zařízení. Zabezpečuje firemní data a umožňuje koncovým uživatelům pracovat z více míst. Intune podporuje množství platforem zařízení, proto doporučujeme, abyste zdokumentovali zařízení, platformy operačních systémů a verze, které budou v návrhu vaší organizace podporované. Například:
 
 | **Platforma zařízení** | **Verze OS** |
 |:---:|:---:|
@@ -204,21 +202,21 @@ Při kontrole funkcí zařízení podle platformy a verze OS se také doporučuj
 | Android – Samsung Knox Standard | 4.0+ |
 | Tablet s Windows 10 | 10+ |
 
+
+Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a použít ji k vypracování vlastního seznamu zařízení.
 ### <a name="device-ownership"></a>Vlastnictví zařízení
 
-Intune podporuje zařízení v majetku společnosti i uživatele s vlastním zařízením (BYOD). Zařízení se považuje za majetek společnosti, pokud ho zaregistruje správce registrace nebo je evidované v programu registrace zařízení. Zařízení třeba může být zaregistrované prostřednictvím programu Apple DEP, kde bude označené jako firemní, a bude zařazené do skupiny zařízení určené pro firemní zásady a aplikace.
+Intune podporuje jak zařízení vlastněná firmou, tak osobní zařízení. Zařízení se považuje za vlastněné firmou, pokud ho zaregistrujete pomocí některého správce nebo programu pro registraci zařízení. Pokud je například zařízení zaregistrované pomocí Programu registrace zařízení společnosti Apple (DEP – Device Enrollment Program), označí se jako vlastněné firmou a umístí se do skupiny zařízení, která dostává cílené firemní zásady a aplikace.
 
-Další informace o případech použití firemních zařízení a zařízení patřících uživatelům (BYOD) najdete v [části 3: Stanovení požadavků pro různé scénáře použití](planning-guide-requirements.md).
+Další informace o případech použití zařízení vlastněných firmou a zařízení BYOD najdete v [oddílu 3: Určení požadavků scénářů pro případy použití](planning-guide-requirements.md).
 
-### <a name="bulk-enrollment"></a>Hromadný zápis
+### <a name="bulk-enrollment"></a>Hromadná registrace
 
-Existují různé možnosti, jak zaregistrovat zařízení v Intune, které doplňují samoobslužnou registraci na portálu společnosti. Hromadná registrace může probíhat různě – záleží na konkrétní platformě. Pokud požadujete hromadnou registraci, napřed určete, jakým způsobem bude probíhat, a potom tento způsob zapracujte do svého návrhu. Níže najdete další informace o různých způsobech hromadné registrace.
-
--   Další informace o [hromadné registraci](/intune-classic/deploy-use/enroll-devices-in-microsoft-intune).
+ V závislosti na platformě můžete zařízení různými způsoby hromadně zaregistrovat. Pokud požadujete hromadnou registraci, napřed [určete, jakým způsobem bude probíhat](device-enrollment.md), a potom tento způsob zapracujte do svého návrhu.
 
 ## <a name="feature-requirements"></a>Funkční požadavky
 
-V těchto oddílech si probereme následující funkce a možnosti, které odpovídají požadavkům podle různých scénářů použití:
+V těchto oddílech si probereme následující funkce a možnosti, které odpovídají požadavkům na váš scénář použití:
 
 -   Zásady pro podmínky a ujednání
 
@@ -228,7 +226,7 @@ V těchto oddílech si probereme následující funkce a možnosti, které odpov
 
 -   Aplikace
 
--   Zásady dodržování předpisů
+-   zásady dodržování předpisů
 
 -   Podmíněný přístup
 
@@ -236,20 +234,23 @@ Pojďme se na každou z těchto oblastí podívat podrobněji.
 
 ### <a name="terms-and-conditions-policies"></a>Zásady pro podmínky a ujednání
 
-Podmínky a ujednání je možné použít k vysvětlení zásad nebo podmínek, které musí uživatel před registrací přijmout. Intune podporuje možnost přidat a nasadit u skupin uživatelů různé zásady pro podmínky a ujednání. Musíte určit, jestli jsou zásady pro podmínky a ujednání potřeba. Pokud tomu tak je, kdo v organizaci odpovídá za poskytování těchto informací.
+[Zásady a ujednání](terms-and-conditions-create.md) slouží k vysvětlení zásad nebo ujednání, která koncový uživatel musí přijmout, aby mohl své zařízení zaregistrovat. Intune podporuje možnost přidat a nasadit u skupin uživatelů různé zásady pro podmínky a ujednání.
 
--   Přečtěte si, [jak v Intune vytvářet zásady pro podmínky a ujednání](/intune-classic/deploy-use/terms-and-condition-policy-settings-in-microsoft-intune). Následující příklad vysvětluje, jak dokumentovat zásadu pro podmínky a ujednání.
+Musíte určit, jestli jsou zásady pro podmínky a ujednání potřeba. Pokud tomu tak je, kdo v organizaci odpovídá za poskytování těchto informací. Následující příklad vysvětluje, jak dokumentovat zásadu pro podmínky a ujednání.
 
 | **Název podmínek a ujednání** | **Případ použití** | **Cílová skupina** |
 |:---:|:---:|:---:|
 | Firemní podmínky a ujednání | Firemní | Firemní uživatelé |                 
 | Podmínky a ujednání pro uživatele s vlastním zařízením | Uživatelé s vlastním zařízením | Uživatelé s vlastním zařízením |                
 
+
+Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a namapovat podmínky a ujednání na své skupiny uživatelů.
+
 ### <a name="configuration-policies"></a>Zásady konfigurace
 
-Zásady konfigurace se používají ke správě nastavení zabezpečení a funkcí na zařízení. Při návrhu zásad konfigurace se podívejte na část věnovanou požadavkům pro různé případy použití, kde zjistíte požadovanou konfiguraci zařízení pro Intune. Poznamenejte si nastavení a způsob konfigurace zařízení. Poznamenejte si také, jakým uživatelům nebo skupinám zařízení je zásada konfigurace určena.
+Zásady konfigurace slouží ke správě nastavení a funkcí zabezpečení v zařízení. Při návrhu zásad konfigurace se podívejte na část věnovanou požadavkům pro různé případy použití, kde zjistíte požadovanou konfiguraci zařízení pro Intune. Zdokumentujte nastavení a způsob, jak mají být nakonfigurována. Rovněž zdokumentujte, které skupiny uživatelů nebo zařízení budou jejich cílem.
 
-Měli byste vytvořit aspoň jednu zásadu konfigurace pro každou platformu. Pokud to bude potřeba, můžete pro každou platformu vytvořit více zásad konfigurace. Následující příklad ilustruje návrh čtyř různých zásad konfigurace pro různé platformy a scénáře použití.
+Měli byste vytvořit alespoň jednu zásadu konfigurace pro každou platformu. V případě potřeby můžete pro každou platformu vytvořit několik zásad konfigurace. Následující příklad ilustruje návrh čtyř různých zásad konfigurace pro různé platformy a scénáře použití.
 
 | **Název zásady** | **Platforma zařízení** | **Nastavení** | **Cílová skupina** |   
 |:---:|:---:|:---:|:---:|
@@ -258,9 +259,12 @@ Měli byste vytvořit aspoň jednu zásadu konfigurace pro každou platformu. Po
 | Vlastní zařízení uživatelů – iOS  | iOS | PIN je povinný, délka 4 znaky | Vlastní zařízení uživatelů |
 | Vlastní zařízení uživatelů – Android  | Android | PIN je povinný, délka 4 znaky | Vlastní zařízení uživatelů |
 
+
+Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní zásady konfigurace.
+
 ### <a name="profiles"></a>Profily
 
-Profily pomáhají koncovému uživateli, aby se mohl připojit k firemním datům. Intune podporuje různé typy profilů. Pokud chcete určit, kdy se budou [profily](/intune-classic/deploy-use/enable-access-to-company-resources-with-microsoft-intune) konfigurovat, podívejte se na případy použití a požadavky. Všechny profily zařízení jsou zařazené do kategorií podle typu platformy a měly by být součástí dokumentace k návrhu.
+Profily pomáhají koncovému uživateli připojit se k firemním datům. Intune podporuje různé typy profilů. Pokud chcete určit, kdy se budou profily konfigurovat, podívejte se na případy použití a požadavky. Všechny profily zařízení jsou zařazené do kategorií podle typu platformy a měly by být součástí dokumentace k návrhu.
 
 -   Profily certifikátů
 
@@ -272,7 +276,7 @@ Profily pomáhají koncovému uživateli, aby se mohl připojit k firemním dat�
 
 Pojďme se podrobněji podívat na každý typ profilu.
 
-##### <a name="certificate-profiles"></a>Profily certifikátů
+#### <a name="certificate-profiles"></a>Profily certifikátů
 
 Profily certifikátů umožňují službě Intune vydat certifikát uživateli nebo zařízení. Jaké certifikáty podporuje Intune:
 
@@ -282,10 +286,10 @@ Profily certifikátů umožňují službě Intune vydat certifikát uživateli n
 
 -   Certifikát PFX
 
-Doporučuje se dokumentovat, jaké skupiny uživatelů certifikát potřebují, kolik profilů certifikátů bude potřeba a jakým skupinám uživatelů budete profily zavádět.
+Doporučujeme, abyste zdokumentovali, jaké skupiny uživatelů potřebují certifikát, kolik profilů certifikátů potřebujete a kterým skupinám uživatelů je nasadíte.
 
 >[!NOTE]
-> Pamatujte, že certifikát SCEP vyžaduje důvěryhodný kořenový certifikát. Proto zajistěte, aby všichni uživatelé určení pro certifikát SCEP obdrželi i důvěryhodný kořenový certifikát. Pokud potřebujete certifikáty SCEP, navrhněte a popište, jaké šablony certifikátu SCEP budou potřeba.
+> Pamatujte, že certifikát SCEP vyžaduje důvěryhodný kořenový certifikát. Proto zajistěte, aby všichni uživatelé určení pro certifikát SCEP obdrželi i důvěryhodný kořenový certifikát. Pokud potřebujete certifikáty SCEP, navrhněte a zdokumentujte, které šablony certifikátů SCEP jsou zapotřebí.
 
 Tady je příklad, jak při návrhu dokumentovat certifikáty:
 
@@ -294,11 +298,12 @@ Tady je příklad, jak při návrhu dokumentovat certifikáty:
 | Kořenová CA | Firemní kořenová CA | Android, iOS, Windows Mobile | Firemní zařízení, vlastní zařízení uživatelů  |                                                           
 | SCEP | Uživatelský certifikát | Android, iOS, Windows Mobile | Firemní zařízení, vlastní zařízení uživatelů |                                                           
 
-##### <a name="wi-fi-profile"></a>Wi-Fi profil
 
-Profily Wi-Fi se používají k automatickému připojení mobilního zařízení k bezdrátové síti. Intune podporuje nasazení profilů Wi-Fi pro všechny podporované platformy.
+Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní profily certifikátů.
 
--   Přečtěte si další informace o tom, [jak Intune podporuje profily Wi-Fi.](/intune-classic/deploy-use/wi-fi-connections-in-microsoft-intune)
+#### <a name="wi-fi-profile"></a>Profil Wi-Fi
+
+Profily Wi-Fi se používají k automatickému připojení mobilního zařízení k bezdrátové síti. Intune podporuje nasazení profilů Wi-Fi pro všechny podporované platformy. Přečtěte si další informace o tom, [jak Intune podporuje profily Wi-Fi.](wi-fi-settings-configure.md)
 
 Tady je příklad návrhu profilu Wi-Fi:
 
@@ -307,11 +312,12 @@ Tady je příklad návrhu profilu Wi-Fi:
 | Wi-Fi | Profil Wi-Fi pro Asii | Android | Firemní zařízení, vlastní zařízení uživatelů, oblast Asie|                                                           
 | Wi-Fi | Profil Wi-Fi pro Severní Ameriku | Android, iOS, Windows 10 Mobile | Firemní zařízení, vlastní zařízení uživatelů, oblast Severní Amerika |                                                           
 
-##### <a name="vpn-profile"></a>profil VPN
 
-Profily VPN nabízejí uživatelům bezpečný přístup k síti ze vzdálených míst. Intune podporuje profily VPN nativních mobilních připojení VPN a externích dodavatelů.
+Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní profily Wi-Fi.
 
--   Další informace o [profilech VPN a dodavatelích podporovaných službou Intune](/intune-classic/deploy-use/vpn-connections-in-microsoft-intune).
+#### <a name="vpn-profile"></a>Profil VPN
+
+Profily VPN nabízejí uživatelům bezpečný přístup k síti ze vzdálených míst. Intune podporuje profily VPN nativních mobilních připojení VPN a externích dodavatelů. Další informace o [profilech VPN a dodavatelích podporovaných službou Intune](vpn-settings-configure.md).
 
 Tady je příklad, jak dokumentovat návrh profilu VPN.
 
@@ -320,11 +326,11 @@ Tady je příklad, jak dokumentovat návrh profilu VPN.
 | Síť VPN | Profil VPN Cisco pro jakékoli připojení | Android, iOS, Windows 10 Mobile | Firemní zařízení, vlastní zařízení uživatelů, oblast Severní Amerika a Německo|                                                           
 | Síť VPN | Pulse Secure | Android | Firemní zařízení, vlastní zařízení uživatelů, oblast Asie |                                                           
 
-##### <a name="email-profile"></a>e-mailový profil
 
-E-mailové profily umožňují e-mailovému klientovi automatické nastavení informací o připojení a nastavení e-mailové konfigurace. Intune podporuje e-mailové profily jen na některých zařízeních.
+Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní profily VPN.
+#### <a name="email-profile"></a>E-mailový profil
 
--   Další informace o [e-mailových profilech](/intune-classic/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) a podporovaných platformách.
+E-mailové profily umožňují automatické nastavení e-mailového klienta pomocí informací o připojení a konfigurace e-mailu. Intune podporuje e-mailové profily jen na některých zařízeních. Přečtěte si další informace o [e-mailových profilech a podporovaných platformách](email-settings-configure.md).
 
 Tady je příklad, jak dokumentovat návrh e-mailových profilů:
 
@@ -333,19 +339,21 @@ Tady je příklad, jak dokumentovat návrh e-mailových profilů:
 | e-mailový profil | E-mailový profil pro iOS | iOS | Firemní – informatik (uživatel s vlastním zařízením) |                                                           
 | e-mailový profil | E-mailový profil pro Android Knox | Android Knox | Uživatelé s vlastním zařízením |
 
+
+Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní e-mailové profily.
 ### <a name="apps"></a>Aplikace
 
-Intune podporuje různé způsoby poskytování aplikací uživatelům nebo zařízením. Typem poskytované aplikace mohou být aplikace se softwarovým instalačním programem, aplikace z veřejného obchodu, externí odkazy nebo spravované aplikace pro iOS. Kromě individuálně nasazených aplikací můžete spravovat a nasazovat i aplikace nakoupené hromadně prostřednictvím programů VPP (Volume Purchase Program) pro iOS a Windows. Tady jsou další informace o tom, jak služba Intune podporuje aplikace a programy VPP.
+Intune můžete použít k několika způsobům doručování aplikací uživatelům nebo zařízením. Mezi typy aplikací patří instalační aplikace softwaru, aplikace z veřejného obchodu s aplikacemi, externí odkazy nebo spravované aplikace pro iOS. Kromě nasazení individuálních aplikací můžete spravovat a nasazovat také hromadně nakoupené aplikace pořízené prostřednictvím programů hromadného nákupu pro iOS a Windows. Další informace pro:
 
--   Další informace o [typech aplikací](/intune-classic/deploy-use/enroll-devices-in-microsoft-intune).
+-   [Typy aplikací, které můžete doručovat](app-management.md)
 
--   Další informace o [programu VPP (Volume Purchase Program for Business) pro iOS](/intune-classic/deploy-use/manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune).
+-   [Program iOS VPP (Volume Purchase Program) pro firmy](vpp-apps-ios.md)
 
--   Další informace o [Windows Storu pro firmy](/intune-classic/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune).
+-   [Aplikace pro Windows Store pro firmy](windows-store-for-business.md)
 
 #### <a name="app-type-requirements"></a>Požadavky různých typů aplikací
 
-Aplikace můžete nasazovat uživatelům a zařízením. Doporučujeme, abyste se rozhodli, jaké aplikace chcete v Intune spravovat. Při sestavování seznamu se pokuste odpovědět na následující otázky:
+Protože aplikace můžete nasazovat uživatelům a zařízením, doporučujeme, abyste se rozhodli, jaké aplikace budou spravované přes Intune. Při sestavování seznamu se pokuste odpovědět na následující otázky:
 
 -   Vyžadují aplikace integraci s cloudovými službami?
 
@@ -353,28 +361,29 @@ Aplikace můžete nasazovat uživatelům a zařízením. Doporučujeme, abyste s
 
 -   Jaké jsou u těchto aplikací možnosti nasazení?
 
--   Potřebuje společnost pro své partnery zajistit přístup k datům aplikací SaaS (software jako služba)?
+-   Potřebuje vaše firma zajistit pro své partnery přístup k datům aplikací SaaS (software jako služba)?
 
 -   Vyžadují aplikace, aby zařízení uživatelů měla přístup k internetu?
 
--   Jsou aplikace veřejně dostupné v App Storu nebo jde o vlastní oborové aplikace?
+-   Jsou aplikace veřejně dostupné v obchodu s aplikacemi, nebo jde o vlastní obchodní aplikace?
 
-
->[!TIP]
-> Podívejte se na [různé typy aplikací, které podporuje Intune](/intune-classic/deploy-use/add-apps).
 
 #### <a name="app-protection-policies"></a>Zásady ochrany aplikace
 
-Zásady ochrany aplikace minimalizují ztrátu dat tím, že definují, jak aplikace spravuje firemní data. Intune podporuje zásady ochrany pro každou aplikaci vytvořenou tak, aby fungovala se správou mobilních aplikací. Při návrhu zásad ochrany aplikace potřebujete určit, jaká omezení firemních dat u dané aplikace použijete. Doporučuje se kontrolovat, jak [zásady ochrany aplikace](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) fungují. Tady je příklad, jak dokumentovat stávající aplikace a jakou ochranu potřebují.
+Zásady ochrany aplikace minimalizují ztrátu dat tím, že definují, jak aplikace spravuje firemní data. Intune podporuje zásady ochrany pro každou aplikaci vytvořenou tak, aby fungovala se správou mobilních aplikací. Při návrhu zásad ochrany aplikací se musíte rozhodnout, jaká omezení chcete uplatnit na firemní data v dané aplikaci. Doporučujeme vám prostudovat, jak [zásady ochrany aplikací](app-protection-policy.md) fungují. Tady je příklad, jak dokumentovat stávající aplikace a jakou ochranu potřebují.
 
 | **Aplikace** | **Účel** | **Platformy** | **Případ použití** | **Zásada ochrany aplikace** |
 |:---:|:---:|:---:|:---:|:---:|
 | Outlook Mobile  | K dispozici | iOS | Firemní – vedení | Nelze provést jailbreak, šifrování souborů |                                                         
 | Word | K dispozici | iOS, Android – Samsung Knox, jiný systém než Knox, Windows 10 Mobile | Firemní zařízení, vlastní zařízení uživatelů | Nelze provést jailbreak, šifrování souborů |                                                         
 
-#### <a name="compliance-policies"></a>Zásady slučitelnosti
 
-Zásady dodržování předpisů určují, zda zařízení vyhovuje určitým požadavkům. Služba Intune používá zásady dodržování předpisů k tomu, aby zjistila, jestli zařízení vyhovuje nebo nevyhovuje. Stav dodržování předpisů je pak možné použít k omezení přístupu k prostředkům společnosti. Pokud je potřeba podmíněný přístup, doporučuje se navrhnout [zásady dodržování předpisů zařízení](/intune-classic/deploy-use/introduction-to-device-compliance-policies-in-microsoft-intune). Pokud chcete zjistit, kolik zásad dodržování předpisů zařízení potřebujete a jaké skupiny uživatelů jsou cílové, přečtěte si požadavky a případy použití. Potřebujete také určit, jak dlouho smí být zařízení offline nezaregistrované, než se bude považovat za nevyhovující.
+Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní zásady ochrany aplikací.
+#### <a name="compliance-policies"></a>Zásady dodržování předpisů
+
+Zásady dodržování předpisů určují, zda zařízení vyhovuje určitým požadavkům. Služba Intune používá zásady dodržování předpisů k tomu, aby zjistila, jestli zařízení vyhovuje nebo nevyhovuje. Stav dodržování předpisů je pak možné použít k zakázání nebo povolení přístupu k firemním prostředkům. Pokud se vyžaduje podmíněný přístup, doporučujeme navrhnout [zásady dodržování předpisů zařízením](device-compliance.md).
+
+Pokud chcete zjistit, kolik zásad dodržování předpisů zařízením potřebujete a jaké skupiny uživatelů jsou cílové, přečtěte si požadavky a případy použití. Dále musíte rozhodnout, jak dlouho smí být zařízení offline bez přihlášení, než se začne považovat za nedodržující předpisy.
 
 Tady je příklad návrhu zásad dodržování předpisů:
 
@@ -382,21 +391,17 @@ Tady je příklad návrhu zásad dodržování předpisů:
 |:---:|:---:|:---:|:---:|
 | zásady dodržování předpisů | iOS, Android – Samsung Knox, jiný systém než Knox, Windows 10 Mobile | PIN – povinný, nelze provést jailbreak | Firemní zařízení, vlastní zařízení uživatelů |
 
+
+Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní zásady dodržování předpisů.
 #### <a name="conditional-access-policies"></a>Zásady podmíněného přístupu
 
-Podmíněný přístup se používá, když chcete přístup k firemním prostředkům povolit jenom vyhovujícím zařízením. Při kontrole přístupu k prostředkům společnosti funguje Intune s celým řešením EMS (Enterprise Mobility + Security). Musíte se rozhodnout, jestli je podmíněný přístup potřeba a co musí být zabezpečené.
+Podmíněný přístup se používá, když chcete přístup k e-mailu a jiným firemním prostředkům povolit jen zařízením, která dodržují předpisy. Při řízení přístupu k firemním prostředkům spolupracuje Intune s řešením Enterprise Mobility + Security (EMS). Musíte se rozhodnout, jestli je podmíněný přístup potřeba a co musí být zabezpečené. Další informace o [podmíněném přístupu](conditional-access.md).
 
--   Další informace o [podmíněném přístupu](/intune-classic/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune).
-
-U online přístupu je potřeba určit, na jaké platformy a skupiny uživatelů budou zásady podmíněného přístupu zaměřeny.
-
-Musíte také rozhodnout, jestli potřebujete instalovat/konfigurovat konektor Intune Service to Service Connector pro Exchange Online nebo místní Exchange.
-
-Další informace o instalaci a konfiguraci konektorů Intune Service to Service Connector:
+U online přístupu rozhodněte, jaké platformy a skupiny uživatelů budou cílem zásad podmíněného přístupu. Dále rozhodněte, jestli potřebujete nainstalovat nebo nakonfigurovat Intune Service to Service Connector pro Exchange Online nebo místní Exchange. Přečtěte si další informace o instalaci a konfiguraci konektorů Intune Service to Service Connector: <!---these links are correct--->
 
 -   [Exchange Online](/intune-classic/deploy-use/intune-service-to-service-exchange-connector)
 
--   [Místní Exchange](/intune-classic/deploy-use/intune-on-premises-exchange-connector)
+-   [Místní Exchange](exchange-connector-install.md)
 
 Tady je příklad, jak dokumentovat zásady podmíněného přístupu:
 
@@ -405,6 +410,8 @@ Tady je příklad, jak dokumentovat zásady podmíněného přístupu:
 | Exchange Online | iOS, Android | Blokování nevyhovujících zařízení na platformách podporovaných službou Intune | Firemní zařízení, vlastní zařízení uživatelů |
 | SharePoint Online | iOS, Android |  | Firemní zařízení, vlastní zařízení uživatelů |
 
-## <a name="next-section"></a>Další část
+Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní zásady podmíněného přístupu.
+
+## <a name="next-steps"></a>Další kroky
 
 Další část obsahuje pokyny k [procesu implementace Intune](planning-guide-onboarding.md).

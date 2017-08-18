@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 0053e37a-f26e-452f-9524-5039a635b52e
 ms.reviewer: damionw
 ms.custom: intune-classic
-ms.openlocfilehash: ab52ba70403da5192cd3539dfd6d1e64bd79268c
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: dc37cfb782e1d1e1e076d90fef160c2ce910cda4
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Hromadná registrace pro zařízení s Windows
 
@@ -36,7 +36,7 @@ Hromadná registrace pro zařízení s Windows vyžaduje:
 
 ## <a name="create-a-provisioning-package"></a>Vytvoření zřizovacího balíčku
 
-1. Stáhněte si [Windows Configuration Designer (WCD)](https://www.microsoft.com/store/apps/9nblggh4tx22) z Windows Storu.
+1. Stáhněte si [Windows Configuration Designer (WCD)](https://www.microsoft.com/store/apps/9nblggh4tx22) z Microsoft Storu.
 ![Snímek obrazovky se snímky obrazovky a popisem aplikace Windows Configuration Designer ve Storu](../media/bulk-enroll-store.png)
 
 2. Otevřete aplikaci **Windows Configuration Designer** a vyberte **Provision desktop devices** (Zřídit počítačová zařízení).

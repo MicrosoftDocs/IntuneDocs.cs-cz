@@ -11,11 +11,11 @@ ms.service:
 ms.technology: 
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 ms.custom: intune-classic
-ms.openlocfilehash: d668e50b3880bdaf569380fa5a5fd25f5ed4564e
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 790b9b0a5feb40cd22d366438fca566b93d2138b
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Registrace obchodních aplikací, aby je bylo možné nasadit na zařízení s Windows pomocí Intune
 
@@ -64,7 +64,7 @@ Následující postup vám pomůže získat požadovaný certifikát a podepsat 
 
 ## <a name="example-download-sign-and-deploy-the-company-portal-app-for-windows-devices"></a>Příklad: Stažení, podepsání a nasazení aplikace Portál společnosti pro zařízení s Windows
 
-Aplikaci Portál společnosti můžete nasadit na zařízení s Windows, včetně zařízení Windows Phone a mobilní zařízení s Windows 10, pomocí služby Intune místo instalace z Windows Storu. Musíte si stáhnout aplikaci Portál společnosti a podepsat ji svým certifikátem.  To je nutné pouze v případě, že uživatelé nebudou používat Store společnosti a chcete nasadit firemní portál na zařízení Windows Phone 8.1.
+Aplikaci Portál společnosti můžete místo instalace z Microsoft Storu nasadit na zařízení s Windows, včetně zařízení Windows Phone a mobilních zařízení s Windows 10, pomocí Intune. Musíte si stáhnout aplikaci Portál společnosti a podepsat ji svým certifikátem.  To je nutné pouze v případě, že uživatelé nebudou používat Store společnosti a chcete nasadit firemní portál na zařízení Windows Phone 8.1.
 
 
 1.  **Stáhněte Portál společnosti**
@@ -75,7 +75,7 @@ Aplikaci Portál společnosti můžete nasadit na zařízení s Windows, včetn�
 
     -   WinPhoneCompanyPortal.ps1 – Powershellový skript, který můžete použít k podepsání aplikace Portál společnosti, aby se dala nasadit na zařízení s Windows Phone 8.1
 
-    Alternativně si můžete stáhnout Portál společnosti pro Windows Phone 8.1 (offline licencovaný balíček) nebo Portál společnosti pro Windows 10 (offline licencovaný balíček) z [Windows Storu pro firmy](http://businessstore.microsoft.com/). Aplikaci Portál společnosti bude nutné si pořídit s offline licencí a příslušným balíčkem staženým pro offline použití. Platformy Windows 8 a Windows Phone 8 uvedené ve výběru odkazují na své ekvivalenty 8.1. Podrobnosti o tom, jak to provést v Intune, najdete v tématu [Správa aplikací zakoupených ve Windows Store pro firmy](/intune-classic/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune).
+    Alternativně si můžete stáhnout Portál společnosti pro Windows Phone 8.1 (offline licencovaný balíček) nebo Portál společnosti pro Windows 10 (offline licencovaný balíček) z [Microsoft Storu pro firmy](http://businessstore.microsoft.com/). Aplikaci Portál společnosti bude nutné si pořídit s offline licencí a příslušným balíčkem staženým pro offline použití. Platformy Windows 8 a Windows Phone 8 uvedené ve výběru odkazují na své ekvivalenty 8.1. Podrobnosti o tom, jak to provést v Intune, najdete v tématu [Správa aplikací zakoupených v Microsoft Storu pro firmy](/intune-classic/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune).
 
 2.  **Stažení sady Windows Phone SDK** Stáhněte si sadu Windows Phone SDK 8.0 (http://go.microsoft.com/fwlink/?LinkId=615570) a nainstalujte si ji do počítače. Potřebujete ji k vygenerování tokenu pro registraci aplikace.
 
@@ -144,12 +144,12 @@ Certifikát Symantecu, který se používá k nasazení mobilních aplikací pro
 5.  Zaregistrujte všechny nové a aktualizované podnikové aplikace pomocí nového certifikátu. Stávající aplikace není nutné znovu podepisovat a nasazovat.
 
 ## <a name="manually-deploy-windows-10-company-portal-app"></a>Ruční nasazení aplikace Portál společnosti pro Windows 10
-Aplikaci Portál společnosti pro Windows 10 můžete ručně nasadit přímo z Intune, i když službu Intune nemáte integrovanou s Windows Storem pro firmy.
+Aplikaci Portál společnosti pro Windows 10 můžete ručně nasadit přímo z Intune, i když službu Intune nemáte integrovanou s Microsoft Storem pro firmy.
 
  > [!NOTE]
  > Tato možnost vyžaduje, abyste ručně nasazovali aktualizace pokaždé, když je vydaná aktualizace aplikace.
 
-1. Přihlaste se ke svému účtu ve [Windows Storu pro firmy](https://www.microsoft.com/business-store) a získejte verzi aplikace Portál společnosti s **offline licencí** .  
+1. Přihlaste se ke svému účtu v [Microsoft Storu pro firmy](https://www.microsoft.com/business-store) a získejte verzi aplikace Portál společnosti s **offline licencí** .  
 2. Jakmile aplikaci získáte, vyberte ji na stránce **Inventář**.  
 3. Vyberte **Windows 10 – všechna zařízení** jako **platformu**, potom vyberte příslušnou **architekturu** a stahujte. Pro tuto aplikaci není nutné mít soubor s licencí aplikace.
 ![Windows 10 – všechna zařízení a architektura x86 – obrázek s podrobnostmi balíčku ke stažení](./media/Win10CP-all-devices.png)
@@ -186,7 +186,7 @@ Pokud je aplikace Portál společnosti pro Windows 10 podepsaná a nasazená tí
 Aplikaci můžete tímto způsobem podepsat a nasadit takto:
 
 1. Stáhněte si podepisovací skript Microsoft Intune pro aplikaci Portál společnosti pro Windows 10 z webu [https://aka.ms/win10cpscript](https://aka.ms/win10cpscript).  Tento skript vyžaduje, aby na hostitelském počítači byla nainstalovaná sada Windows SDK pro Windows 10. Sadu Windows SDK pro Windows 10 si můžete stáhnout z webu [https://go.microsoft.com/fwlink/?LinkId=619296](https://go.microsoft.com/fwlink/?LinkId=619296).
-2. Stáhněte si aplikaci Portál společnosti pro Windows 10 z Windows Storu pro firmy (podrobnosti jsou uvedené výše).  
+2. Stáhněte si aplikaci Portál společnosti pro Windows 10 z Microsoft Storu pro firmy (podrobnosti jsou uvedené výše).  
 3. Spusťte skript se vstupními parametry popsanými v hlavičce skriptu, abyste podepsali aplikaci Portál společnosti pro Windows 10 (extrahovanou níže). Závislosti není nutné do skriptu předávat. Jsou vyžadované jenom v případě, když aplikaci nahráváte do konzoly pro správu Intune.
 
 |Parametr | Popis|

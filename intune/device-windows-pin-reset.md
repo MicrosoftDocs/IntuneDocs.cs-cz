@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/05/2017
+ms.date: 08/09/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,23 @@ ms.technology:
 ms.assetid: 5027d012-d6c2-4971-a9ac-217f91d67d87
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3688eef68fc9dcfced976db02c8d50126fa30da8
-ms.sourcegitcommit: fd5b7aa26446d2fa92c21638cb29371e43fe169f
+ms.openlocfilehash: 9cf2549852c5949ff1c95af12b40f59136d56e34
+ms.sourcegitcommit: 2ed8d1c39d4b3e3282111f1d758afb3a50f19f8f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2017
+ms.lasthandoff: 08/10/2017
 ---
 # <a name="reset-the-passcode-on-windows-devices-integrated-with-the-microsoft-pin-reset-service-using-intune"></a>Resetování hesla pomocí služby Intune na zařízeních s Windows, na kterých je integrovaná služba Microsoft PIN Reset Service
 
 Funkce resetování hesla pro zařízení s Windows, na kterých je integrovaná služba Microsoft PIN Reset Service, vám umožňuje vygenerovat nové heslo pro zařízení se systémem Windows 10 Mobile. Zařízení musí mít aktualizaci Windows 10 Creators Update nebo novější.
+
+## <a name="supported-platforms"></a>Podporované platformy
+
+- Windows – podporováno ve Windows 10 Creators Update a novějších verzích (při připojení k Azure AD)
+- Windows Phone – nepodporováno
+- iOS – nepodporováno
+- macOS – nepodporováno
+- Android – nepodporováno
 
 
 ## <a name="before-you-start"></a>Než začnete
@@ -40,13 +48,14 @@ Než budete moct vzdáleně resetovat heslo na vámi spravovaných zařízeních
 
 ### <a name="configure-windows-devices-to-use-pin-reset"></a>Konfigurace zařízení s Windows, aby používaly službu PIN Reset Service
 
-Pokud chcete nakonfigurovat službu PIN Reset Service na vámi spravovaných zařízeních s Windows, můžete k zapnutí této funkce použít [vlastní zásady zařízení s Windows 10 v Intune](custom-settings-windows-10.md). Zásady nakonfigurujte pomocí následujících poskytovatelů konfiguračních služeb (CSP) pro zásady ve Windows:
+Pokud chcete nakonfigurovat službu PIN Reset Service na vámi spravovaných zařízeních s Windows, můžete k zapnutí této funkce použít [vlastní zásady zařízení s Windows 10 v Intune](custom-settings-windows-10.md). Zásady nakonfigurujte pomocí následujících poskytovatelů konfiguračních služeb (CSP) pro zásady Windows:
 
 
-- **Pro uživatele** - **./User/Vendor/MSFT/PassportForWork/<tenant ID>/Policies/EnablePinRecovery**
-- **Pro zařízení** - **./Device/Vendor/MSFT/PassportForWork/<tenant ID>/Policies/EnablePinRecovery**
+- **Pro zařízení** - **./Device/Vendor/MSFT/PassportForWork/*ID tenanta*/Policies/EnablePinRecovery**
 
-Hodnoty těchto poskytovatelů konfiguračních služeb musí být obě nastaveny na hodnotu **True**.
+*ID tenanta* je ID adresáře služby Azure Active Directory, které získáte na stránce **Vlastnosti** služby Azure Active Directory.
+
+Nastavte hodnotu pro tohoto poskytovatele konfiguračních služeb na **True**.
 
 ## <a name="steps-to-reset-the-passcode"></a>Postup resetování hesla
 

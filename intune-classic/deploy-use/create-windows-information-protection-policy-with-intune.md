@@ -2,8 +2,8 @@
 title: "Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune"
 description: "Vytvoření a nasazení zásady ochrany aplikací WIP u Intune"
 keywords: 
-author: andredm7
-ms.author: andredm
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
 ms.date: 04/18/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: 51e53e28-5c34-4d0f-a4b1-6390a337514c
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 7aa879307ef3b72660d1ba7b3c3c2f99fc82dc97
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 78352c995311f5b097954ce86098165408d5d810
+ms.sourcegitcommit: 2ee1e8248814d74cef80b609a8e43f59fa0b2618
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune
 
@@ -35,6 +35,13 @@ Povězme si o několika konceptech při přidání zásady WIP.
 -   **Povolené aplikace:** Tyto aplikace musí tuto zásadu dodržovat.
 
 -   **Aplikace s výjimkou:** Tyto aplikace mají z této zásady výjimku a můžou k podnikovým datům přistupovat bez omezení.
+
+> [!IMPORTANT]  
+> Aby aplikace Portál společnosti správně fungovala, doporučuje se v Intune přidat ji do seznamu aplikací s výjimkou. Uděláte to tak, že do seznamu **Aplikace s výjimkou** přidáte následující **aplikaci pro Store**:  
+>   - Název: Portál společnosti  
+>   - Vydavatel: CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US  
+>   - Název produktu: Microsoft.CompanyPortal  
+
 
 ### <a name="types-of-apps"></a>Typy aplikací
 

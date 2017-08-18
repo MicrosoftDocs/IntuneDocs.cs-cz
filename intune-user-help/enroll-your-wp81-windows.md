@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 307999a7bb18a7b33d111bec212922558a5e10bf
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: c7c03148d4063d0752a7c615222047bc6f02f58e
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="enroll-your-windows-phone-81-device-in-intune"></a>Registrace zařízení s Windows Phone 8.1 v Intune
 
@@ -29,11 +29,11 @@ Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svá z
 
 Pokud chcete své zařízení s Phone 8.1 zaregistrovat v Intune, postupujte podle pokynů, které se vztahují na vaši společnost nebo školu:
 
--   [Pokud vám vaše společnost umožňuje používat Portál společnosti z Windows Storu](#if-your-company-lets-you-use-the-company-portal-from-the-windows-store)
+-   [Pokud vám vaše společnost umožňuje používat Portál společnosti z Microsoft Storu](#if-your-company-lets-you-use-the-company-portal-from-the-windows-store)
 
--   [Pokud nemáte oprávnění k přístupu do Windows Storu z Windows Phonu nebo pokud ještě nemáte účet Microsoft](#if-you-are-not-allowed-to-access-the-windows-store-from-your-windows-phone-or-if-you-do-not-have-a-microsoft-account)
+-   [Pokud nemáte oprávnění k přístupu do Microsoft Storu z Windows Phonu nebo pokud ještě nemáte účet Microsoft](#if-you-are-not-allowed-to-access-the-windows-store-from-your-windows-phone-or-if-you-do-not-have-a-microsoft-account)
 
-## <a name="if-your-company-lets-you-use-the-company-portal-from-the-windows-store"></a>Pokud vám vaše společnost umožňuje používat Portál společnosti z Windows Storu
+## <a name="if-your-company-lets-you-use-the-company-portal-from-the-microsoft-store"></a>Pokud vám vaše společnost umožňuje používat Portál společnosti z Microsoft Storu
 Nainstalujte si do zařízení aplikaci Portál společnosti:
 
 1.  Klepněte na **Start** &gt; **Store**.
@@ -72,7 +72,7 @@ Zaregistrujte své zařízení:
 
     ![Obrazovka přidání účtu](./media/WP81-enroll-4-account-added.png)
 
-## <a name="if-you-are-not-allowed-to-access-the-windows-store-from-your-windows-phone-or-if-you-do-not-have-a-microsoft-account"></a>Pokud nemáte oprávnění k přístupu do Windows Storu z Windows Phonu nebo pokud ještě nemáte účet Microsoft
+## <a name="if-you-are-not-allowed-to-access-the-microsoft-store-from-your-windows-phone-or-if-you-do-not-have-a-microsoft-account"></a>Pokud nemáte oprávnění k přístupu do Microsoft Storu z Windows Phonu nebo pokud ještě nemáte účet Microsoft
 
 1.  Klepněte na **Nastavení** &gt; **Pracoviště**.
 

@@ -14,11 +14,11 @@ ms.assetid: b399fba0-5dd4-4777-bc9b-856af038ec41
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0893d511c73e4154c61063d96e26937ea2825467
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 9899f08cac650b1fea05370eb52327bc3c204a48
+ms.sourcegitcommit: 3bafbec5822bb5baa2d313f2bd19f35a67438beb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Podmíněný přístup na základě aplikace s Intune
 
@@ -26,18 +26,20 @@ ms.lasthandoff: 07/01/2017
 
 [Zásady ochrany aplikací Intune](app-protection-policy.md) pomáhají chránit vaše firemní data na zařízeních, která jsou zaregistrovaná v Intune. Zásady ochrany aplikací můžete použít také u zařízení vlastněných zaměstnanci, která nejsou zaregistrovaná ke správě v Intune. V takovém případě potřebujete mít pořád jistotu, že jsou vaše firemní data a prostředky chráněné, i když tato zařízení vaše společnost nespravuje.
 
-Podmíněný přístup na základě aplikace a správa mobilních aplikací tvoří další vrstvu zabezpečení, protože zajišťují, že přístup k Exchangi Online a dalším službám Office 365 budou mít pouze mobilní aplikace podporující zásady ochrany aplikací Intune.
+Podmíněný přístup na základě aplikace a správa mobilních aplikací tvoří další vrstvu zabezpečení, protože zajišťují, že přístup k Exchangi Online a dalším službám Office 365 budou mít pouze mobilní aplikace podporující zásady Intune App Protection.
 
 > [!NOTE]
 > Spravovaná aplikace je taková aplikace, která využívá zásady ochrany aplikací a která lze spravovat pomocí Intune.
 
 Blokovat integrované e-mailové aplikace na zařízeních s iOSem a Androidem můžete jen tehdy, pokud aplikaci Microsoft Outlook povolíte přístup k Exchangi Online. Kromě toho můžete u aplikací, které nepoužívají zásady ochrany aplikací Intune, blokovat přístup k SharePointu Online.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 Před vytvořením zásady podmíněného přístupu na základě aplikace je potřeba mít:
 
-- **Předplatné Azure Active Directory Premium nebo Enterprise Mobility + Security** a uživatelé musí být licencovaní pro EMS nebo Azure AD.
-    - Další informace najdete na [stránce s cenami služby Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) nebo na [stránce s cenami služby Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
+- **Řešení Enterprise Mobility + Security (EMS)** nebo **předplatné Azure Active Directory (AD) Premium**
+- Uživatelé musí mít licenci pro EMS nebo Azure AD.
+
+Další informace najdete na stránce s [cenami Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) nebo [cenami Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
 ## <a name="supported-apps"></a>Podporované aplikace
 
@@ -53,14 +55,13 @@ Před vytvořením zásady podmíněného přístupu na základě aplikace je po
 <br></br>
 - **Microsoft Teams**
 
-    > [!NOTE] 
-    > Podmíněný přístup na základě aplikace [podporuje také obchodní aplikace](https://docs.microsoft.com/intune-classic/deploy-use/block-apps-with-no-modern-authentication). Ty ale musí využívat [moderní ověřování Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a).
+Podmíněný přístup na základě aplikace [podporuje také obchodní aplikace](https://docs.microsoft.com/intune-classic/deploy-use/block-apps-with-no-modern-authentication). Ty ale musí využívat [moderní ověřování Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a).
 
 ## <a name="how-app-based-conditional-access-works"></a>Jak podmíněný přístup na základě aplikace funguje
 
 V tomto příkladu použil správce zásady ochrany aplikací u aplikace Outlook a následné pravidlo podmíněného přístupu. To přidá Outlook na seznam schválených aplikací, které lze využít k přístupu k firemnímu e-mailu.
 
-> [!NOTE] 
+> [!NOTE]
 > Vývojový diagram vyobrazený níže lze použít i pro další spravované aplikace.
 
 ![Vývojový diagram podmíněného přístupu na základě aplikace s Intune](./media/ca-intune-common-ways-3.png)
@@ -69,8 +70,7 @@ V tomto příkladu použil správce zásady ochrany aplikací u aplikace Outlook
 
 2.  Při prvním pokusu o ověření je uživatel přesměrován do obchodu s aplikacemi, odkud si má nainstalovat zprostředkující aplikaci. Zprostředkující aplikací může být buď Microsoft Authenticator pro zařízení s iOSem, nebo Portál společnosti Microsoft pro zařízení s Androidem.
 
-    > [!NOTE]
-    > Pokud se v tomto scénáři uživatel pokusí použít nativní e-mailovou aplikaci, bude přesměrován do obchodu s aplikacemi, aby si nainstaloval aplikaci Outlook.
+ Pokud se uživatelé pokusí použít nativní e-mailovou aplikaci, budou přesměrováni do obchodu s aplikacemi, aby si nainstalovali Outlook.
 
 3.  Zprostředkující aplikace se nainstaluje na zařízení.
 

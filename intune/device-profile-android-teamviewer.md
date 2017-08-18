@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/24/2017
+ms.date: 08/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,15 @@ ms.assetid: 72cdd888-efca-46e6-b2e7-fb9696bb2fba
 ms.reviewer: davidra
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 15a005ae2b84c7bd4f913f892089965c10f3b23e
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: bf25ec3fbdec76fb1defb5e4cb12be6dcdf03b0d
+ms.sourcegitcommit: ee7f69efe9f32a1d6bdeb1fab73d03dbfe1ae58c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="provide-remote-assistance-for-intune-managed-android-devices"></a>Poskytování vzdálené pomoci pro zařízení s Androidem, která se spravují přes Intune
 
-Intune vám pomocí softwaru [TeamViewer](https://www.teamviewer.com), který se kupuje zvlášť, umožňuje poskytovat vzdálenou pomoc uživatelům, kteří používají zařízení s Androidem. K nastavení a zahájení práce použijte informace v tomto tématu.
+Intune vám prostřednictvím softwaru [TeamViewer](https://www.teamviewer.com) (kupuje se zvlášť) umožňuje poskytovat vzdálenou pomoc uživatelům, kteří používají zařízení s Androidem. Informace v tomto tématu vám pomůžou začít tuto možnost využívat.
 
 ## <a name="before-you-start"></a>Než začnete
 
@@ -31,14 +31,14 @@ Intune vám pomocí softwaru [TeamViewer](https://www.teamviewer.com), který se
 
 Zkontrolujte, jestli má uživatel portálu Azure Portal přiřazená jako [role Intune](https://docs.microsoft.com/intune-azure/access-control/role-based-access-control) následující oprávnění:
 - Aby mohl správce změnit nastavení Konektoru pro TeamViewer, udělte mu oprávnění **Aktualizovat Vzdálenou pomoc**.
-- Aby mohl správce iniciovat nastavení nové vzdálené pomoci, udělte mu oprávnění **Požádat o Vzdálenou pomoc**. Uživatelé s tímto oprávněním můžou požadovat zahájení relace pro libovolného uživatele. Neomezuje to žádný rozsah přiřazení rolí Intune. Rozsahy přiřazení rolí Intune neomezují zařízení nebo uživatele, pro které lze iniciovat žádosti o Vzdálenou pomoc.
+- Aby mohl správce iniciovat novou žádost o vzdálenou pomoc, udělte mu oprávnění **Požádat o Vzdálenou pomoc**. Uživatelé s oprávněním **Požádat o Vzdálenou pomoc** můžou požádat o zahájení relace pro libovolného uživatele. Neomezuje je při tom žádný rozsah přiřazení rolí v Intune. Rozsahy přiřazení rolí Intune neomezují zařízení nebo uživatele, pro které lze iniciovat žádosti o Vzdálenou pomoc.
 
 >[!NOTE]
 >Tím, že povolíte TeamViewer, umožníte Konektoru pro TeamViewer služby Intune vytvářet relace TeamVieweru, číst data služby Active Directory a ukládat přístupový token účtu TeamVieweru.
 
 ### <a name="configure-the-intune-teamviewer-connector"></a>Konfigurace Konektoru pro TeamViewer služby Intune
 
-Předtím, než budete moct poskytovat vzdálenou pomoc pro zařízení s Androidem, je nutné pomocí následujících kroků nakonfigurovat Konektor pro TeamViewer služby Intune:
+Než budete moct poskytovat vzdálenou pomoc pro zařízení s Androidem, je nutné pomocí následujících kroků nakonfigurovat Konektor pro TeamViewer služby Intune:
 
 
 1. Přihlaste se k portálu Azure Portal.
@@ -63,9 +63,9 @@ Předtím, než budete moct poskytovat vzdálenou pomoc pro zařízení s Androi
 
 V okně TeamVieweru můžete na zařízení s Androidem provádět různé vzdálené akce, například vzdálené řízení zařízení. Úplné informace o akcích, které můžete provádět, najdete v [dokumentaci k TeamVieweru](https://www.teamviewer.com/support/documents/).
 
-Až budete hotoví, zavřete okno TeamVieweru.
+Až budete hotovi, okno TeamVieweru zavřete.
 
-## <a name="end-user-notifications"></a>Oznámení koncovému uživateli
+## <a name="end-user-notifications"></a>Oznámení pro koncového uživatele
 
-Koncovému uživateli se zobrazí na jeho zařízení u ikony aplikace Portál společnosti příznak oznámení. Při otevření aplikace se mu také zobrazí oznámení. Potom může žádost o vzdálenou pomoc přijmout.
+Koncovému uživateli se na zařízení u ikony aplikace Portál společnosti zobrazí příznak oznámení. Oznámení se zobrazí také při otevření aplikace. Potom může žádost o vzdálenou pomoc přijmout.
 

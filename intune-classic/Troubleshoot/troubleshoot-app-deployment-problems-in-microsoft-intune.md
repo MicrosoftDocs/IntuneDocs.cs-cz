@@ -14,11 +14,11 @@ ms.assetid: 28ac298e-fb73-4c1c-b3fd-8336639e05e6
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 4d214ea9e85d6f08ecff42555cc7fbc36512a825
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: f935a454f077caf096c43c892980a948dcd4c3a3
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="troubleshoot-app-deployment-problems-in-microsoft-intune"></a>Řešení problémů s nasazením aplikací v Microsoft Intune
 
@@ -36,9 +36,9 @@ Pokud máte potíže s nasazením a správou aplikací v Intune, začněte zde. 
 |0x80073CFB|Zadaný balíček je už nainstalovaný a přeinstalace balíčku je blokovaná.|Tato chybová zpráva se může zobrazit při instalaci balíčku, který není totožný s balíčkem, který už je nainstalovaný. Potvrďte, že součástí balíčku je i digitální podpis. Pokud se balíček znovu vytvoří nebo znovu podepíše, nebude už tento balíček při bitovém porovnání totožný s dříve nainstalovaným balíčkem. Tuto chybu můžete odstranit jedním ze dvou způsobů:<br /><br />-   Zvýšíte číslo verze aplikace a pak balíček znova sestavíte a podepíšete.<br />-   Než budete instalovat nový balíček, odeberte starý balíček pro každého uživatele v systému.|
 |0x87D1041C|Instalace aplikace úspěšně proběhla, ale není zjištěna aplikace.|- Aplikace byla úspěšně nasazena službou Intune a následně byla odinstalována (zřejmě koncovým uživatelem). Dejte uživateli pokyn, aby aplikaci znovu nainstaloval z portálu společnosti. Požadované aplikace budou automaticky znovu nainstalovány, jakmile se zařízení příště připojí.|
 
-## <a name="troubleshooting-apps-from-the-windows-store"></a>Řešení problémů s aplikacemi z Windows Storu
+## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Řešení problémů s aplikacemi z Microsoft Storu
 
-Informace v tématu [Řešení problémů s vytvářením balíčků, nasazením a dotazy aplikací pro Windows Store](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) vám pomohou s řešením běžných problémů, na které můžete narazit při instalaci aplikací z Windows Storu, ať již pomocí služby Intune nebo jinak.
+Informace v tématu [Řešení problémů s vytvářením balíčků, nasazením a dotazy aplikací pro Microsoft Store](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) vám pomůžou s řešením běžných problémů, na které můžete narazit při instalaci aplikací z Microsoft Storu, ať už k ní využíváte službu Intune, nebo jiný nástroj.
 
 ## <a name="troubleshooting-app-deployment-to-pcs-managed-by-the-intune-software-client"></a>Řešení problémů s nasazením aplikací do počítačů spravovaných softwarovým klientem Intune
 Při řešení problémů s nasazením aplikací do počítačů spravovaných softwarovým klientem Intune vám může pomoct nahlédnout do následujících dvou souborů protokolu:

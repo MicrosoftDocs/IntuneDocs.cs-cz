@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/05/2017
+ms.date: 08/09/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: d2412418-d91a-4767-a3d6-bc88bb29caa2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8f066e62e323fffb7c6954d83b2b55ee63f4be46
-ms.sourcegitcommit: fd5b7aa26446d2fa92c21638cb29371e43fe169f
+ms.openlocfilehash: e0fc5337b92ac604a448038f685b27623b6153f9
+ms.sourcegitcommit: ee7f69efe9f32a1d6bdeb1fab73d03dbfe1ae58c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2017
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Co je správa zařízení v Microsoft Intune?
 
@@ -30,8 +30,9 @@ ms.lasthandoff: 07/06/2017
 1. Přihlaste se k portálu Azure Portal.
 2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 3. V okně **Intune** zvolte **Zařízení**.
+4. Teď můžete se vzdáleným zařízením provádět uvedené akce. Dostupné akce se liší podle platformy zařízení a jeho konfigurace:
 
-Nyní můžete provést následující akce:
+## <a name="available-device-actions"></a>Dostupné akce zařízení
 
 - [Zobrazit inventář zařízení](device-inventory.md)
 - Provádění akcí se vzdáleným zařízením:
@@ -46,29 +47,8 @@ Nyní můžete provést následující akce:
     - [Restartovat](device-restart.md)
     - [Resetovat PIN kód ve Windows 10](device-windows-pin-reset.md)
     - [Vzdálené řízení pro Android](device-profile-android-teamviewer.md)
+    - [Synchronizace zařízení](device-sync.md)
 
-
-## <a name="support-for-each-device-action"></a>Podpora jednotlivých akcí zařízení
-
-Použijte následující tabulku, abyste pochopili, jak jsou platformy zařízení podporovány jednotlivými akcemi.
-
-|||||||
-|-|-|-|-|-|-|
-|Akce zařízení|Windows|Windows Phone|iOS|macOS|Android|
-|**Odebrat firemní data**|Ano|Ano|Ano|Ano|Ano|
-|**Obnovení továrního nastavení**|Windows 8.1 a novější (zařízení nespravovaná systémem EAS)|Ano|Ano|Ne|Android for Work není podporovaný.|
-|**Odstranit**|Ano|Ano|Ano|Ano|Ano|
-|**Vzdálené uzamčení**|Ne|Windows Phone 8.1 nebo novější|Ano|Ne|Ano|
-|**Resetovat heslo**|Ne|Windows Phone 8.1 až Windows 10 Creators Update bez připojení k Azure AD, Windows 10 Creators Update a novější – vše|Ano|Ne|Systémy Android starší než verze 7 a Android for Work nejsou podporované|
-|**Nové heslo** (pro zařízení s Windows 10)|Ne|Windows 10 Creators Update a novější (připojené k Azure AD)|Ne|Ne|Android for Work není podporovaný.|
-|**Vynechat zámek aktivace**|Ne|Ne|Pouze zařízení ve vlastnictví firmy|Ne|Ne|
-|**Režim ztráty**|Ne|Ne|Zařízení s iOSem 9.3 nebo novějším, pod dohledem a ve vlastnictví firmy|Ne|Ne|
-|**Najít zařízení**|Ne|Ne|Režim ztráty zařízení s iOSem 9.3 nebo novějším, pod dohledem a ve vlastnictví firmy|Ne|Ne|
-|**Odhlásit aktuálního uživatele**|Ne|Ne|Zařízení s iOSem 9.3 nebo novějším (pouze sdílené iPady)|Ne|Ne|
-|**Restartovat**|Windows 8.1 a vyšší|Windows Phone 8.1 nebo novější|Ne|Ne|Ne|
-|**Začít znovu**|Windows 10 Creators Update a novější|Ne|Ne|Ne|Ne|
-|**Nová relace Vzdálené pomoci**|Ne|Ne|Ne|Ne|Ano|
-|**Odebrat uživatele**|Ne|Ne|Zařízení s iOSem 9.3 nebo novějším (pouze sdílené iPady)|Ne|Ne|
 
 ## <a name="next-steps"></a>Další kroky
 

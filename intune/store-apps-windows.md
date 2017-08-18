@@ -15,11 +15,11 @@ ms.assetid: 07241b6d-86d8-4abb-83a2-3fc5feae5788
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7ad1156076f0ec34d5ac110e32a19a8332c8f863
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 812bdf5bde724798289668937ed2502438c524e0
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="how-to-add-windows-store-apps-to-microsoft-intune"></a>Přidání aplikací pro Windows Store do Microsoft Intune
 
@@ -51,12 +51,12 @@ ms.lasthandoff: 07/01/2017
 Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřadit ke zvoleným skupinám. Nápovědu najdete v článku [Přiřazení aplikací do skupin](apps-deploy.md).
 
 ## <a name="manually-assign-windows-10-company-portal-app"></a>Ruční přiřazení aplikace Portál společnosti pro Windows 10
-Koncoví uživatelé můžou aplikaci Portál společnosti ke správě zařízení a instalaci aplikací nainstalovat z Windows Storu. Pokud ale potřeby vaší firmy vyžadují přiřazení aplikace Portál společnosti, můžete aplikaci Portál společnosti pro Windows 10 ručně přiřadit přímo z Intune, i když službu Intune nemáte integrovanou s Windows Storem pro firmy.
+Koncoví uživatelé můžou aplikaci Portál společnosti ke správě zařízení a instalaci aplikací nainstalovat z Microsoft Storu. Pokud ale potřeby vaší firmy vyžadují přiřazení aplikace Portál společnosti, můžete aplikaci Portál společnosti pro Windows 10 ručně přiřadit přímo z Intune, i když službu Intune nemáte integrovanou s Microsoft Storem pro firmy.
 
  > [!NOTE]
  > Tato možnost vyžaduje ruční přiřazení aktualizace pokaždé, když se vydá aktualizace aplikace.
 
-1. Přihlaste se ke svému účtu ve [Windows Storu pro firmy](https://www.microsoft.com/business-store) a získejte verzi aplikace Portál společnosti s **offline licencí** .  
+1. Přihlaste se ke svému účtu v [Microsoft Storu pro firmy](https://www.microsoft.com/business-store) a získejte verzi aplikace Portál společnosti s **offline licencí** .  
 2. Jakmile aplikaci získáte, vyberte ji na stránce **Inventář**.  
 3. Vyberte **Windows 10 – všechna zařízení** jako **platformu**, potom vyberte příslušnou **architekturu** a stahujte. Pro tuto aplikaci není nutné mít soubor s licencí aplikace.
 ![Windows 10 – všechna zařízení a architektura x86 – obrázek s podrobnostmi balíčku ke stažení](./media/Win10CP-all-devices.png)
@@ -93,7 +93,7 @@ Pokud je aplikace Portál společnosti pro Windows 10 podepsaná a přiřazená 
 Aplikaci můžete tímto způsobem podepsat a přiřadit takto:
 
 1. Stáhněte si podepisovací skript Microsoft Intune pro aplikaci Portál společnosti pro Windows 10 z webu [https://aka.ms/win10cpscript](https://aka.ms/win10cpscript).  Tento skript vyžaduje, aby na hostitelském počítači byla nainstalovaná sada Windows SDK pro Windows 10. Sadu Windows SDK pro Windows 10 si můžete stáhnout z webu [https://go.microsoft.com/fwlink/?LinkId=619296](https://go.microsoft.com/fwlink/?LinkId=619296).
-2. Stáhněte si aplikaci Portál společnosti pro Windows 10 z Windows Storu pro firmy (podrobnosti jsou uvedené výše).  
+2. Stáhněte si aplikaci Portál společnosti pro Windows 10 z Microsoft Storu pro firmy (podrobnosti jsou uvedené výše).  
 3. Spusťte skript se vstupními parametry popsanými v hlavičce skriptu, abyste podepsali aplikaci Portál společnosti pro Windows 10 (extrahovanou níže). Závislosti není nutné do skriptu předávat. Jsou vyžadované jenom v případě, když aplikaci nahráváte do konzoly pro správu Intune.
 
 |Parametr | Popis|

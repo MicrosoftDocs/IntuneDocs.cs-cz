@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/05/2017
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e85306934b68f64bad8c223ac117190607db8473
-ms.sourcegitcommit: fd5b7aa26446d2fa92c21638cb29371e43fe169f
+ms.openlocfilehash: b87857425a40beb9fc07a78ab144f5b14a4d7c8e
+ms.sourcegitcommit: 7674efb7de5ad54390801165364f5d9c58ccaf84
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2017
+ms.lasthandoff: 08/05/2017
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Správa přístupu k internetu pomocí zásad aplikace Managed Browser v Microsoft Intune
 
@@ -49,6 +49,11 @@ Zásady aplikace Managed Browser můžete vytvořit pro následující typy zař
 -   Zařízení se systémem Android 4 nebo novější verzí
 
 -   Zařízení se systémem iOS 8.0 nebo novější verzí
+
+>[!IMPORTANT]
+>Od října 2017 bude aplikace Intune Managed Browser pro Android podporovat jen zařízení se systémem Android 4.4 a novější. Aplikace Intune Managed Browser pro iOS bude podporovat jen zařízení se systémem iOS 9.0 a novější.
+>Starší verze systému Android a iOS budou moct Managed Browser dál používat, ale nepůjde do nich nainstalovat nové verze této aplikace a nebudou mít přístup ke všem jejím možnostem. Doporučujeme vám tato zařízení aktualizovat na podporovanou verzi operačního systému.
+
 
 Intune Managed Browser podporuje otevírání webového obsahu od [partnerů nabízejících aplikace pro Microsoft Intune](https://www.microsoft.com/server-cloud/products/microsoft-intune/partners.aspx).
 
@@ -84,19 +89,15 @@ Nastavení přiřazujete skupinám uživatelů ve službě Azure AD. Pokud má d
 
 Aplikaci Intune Managed Browser a [Proxy aplikací Azure AD]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) lze použít společně za účelem podpory následujících scénářů pro uživatele zařízení s iOSem nebo Androidem:
 
-- Uživatel stáhne aplikaci Microsoft Outlook a přihlásí se do ní.  Zásady ochrany aplikací Intune se automaticky použijí. Zašifrují uložená data a zablokují uživateli možnost přesouvat firemní soubory do nespravovaných aplikací nebo umístnění na zařízení. Když uživatel potom v Outlooku klikne na odkaz směřující na intranetový server, můžete nastavit, aby takový odkaz otevřel místo běžného prohlížeče aplikaci Managed Browser.
-Prohlížeč Managed Browser rozpozná, že tento intranetový server byl uživateli zpřístupněn prostřednictvím proxy aplikací. Uživatel je automaticky přesměrován prostřednictvím proxy aplikací, aby před zpřístupněním intranetového serveru provedl ověření pomocí příslušného vícefaktorového ověřování a podmíněného přístupu. Tento server, který nebylo dříve možné najít, když byl uživatel vzdálený, je nyní dostupný a odkaz v Outlooku funguje podle očekávání.  
-
-- Vzdálený uživatel otevře prohlížeč Managed Browser a přejde na intranetový server pomocí interní adresy URL. Prohlížeč Managed Browser rozpozná, že tento intranetový server byl uživateli zpřístupněn prostřednictvím proxy aplikací. Uživatel je automaticky přesměrován prostřednictvím proxy aplikací, aby před zpřístupněním intranetového serveru provedl ověření pomocí příslušného vícefaktorového ověřování a podmíněného přístupu.
-Tento server, který nebylo možné najít, když byl uživatel vzdálený, je nyní dostupný.  
+- Uživatel stáhne aplikaci Microsoft Outlook a přihlásí se do ní. Zásady ochrany aplikací Intune se automaticky použijí. Zašifrují uložená data a zablokují uživateli možnost přesouvat firemní soubory do nespravovaných aplikací nebo umístnění na zařízení. Když uživatel potom v Outlooku klikne na odkaz směřující na intranetový server, můžete nastavit, aby takový odkaz otevřel místo běžného prohlížeče aplikaci Managed Browser. Prohlížeč Managed Browser rozpozná, že tento intranetový server byl uživateli zpřístupněn prostřednictvím proxy aplikací. Uživatel je automaticky přesměrován prostřednictvím proxy aplikací, aby před zpřístupněním intranetového serveru provedl ověření pomocí příslušného vícefaktorového ověřování a podmíněného přístupu. Tento server, který nebylo dříve možné najít, když byl uživatel vzdálený, je nyní dostupný a odkaz v Outlooku funguje podle očekávání.
+- Vzdálený uživatel otevře prohlížeč Managed Browser a přejde na intranetový server pomocí interní adresy URL. Prohlížeč Managed Browser rozpozná, že tento intranetový server byl uživateli zpřístupněn prostřednictvím proxy aplikací. Uživatel je automaticky přesměrován prostřednictvím proxy aplikací, aby před zpřístupněním intranetového serveru provedl ověření pomocí příslušného vícefaktorového ověřování a podmíněného přístupu. Tento server, který nebylo možné najít, když byl uživatel vzdálený, je nyní dostupný.
 
 ### <a name="before-you-start"></a>Než začnete
 
-- Ujistěte se, že jsou vaše interní aplikace publikované prostřednictvím proxy aplikací Azure AD.
-- Postup konfigurace proxy aplikací a publikování aplikací najdete v [dokumentaci k instalaci]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#how-to-get-started). 
-- Musíte používat minimálně verzi 1.2.0 aplikace Managed Browser.
-- Uživatelé prohlížeče Managed Browser mají k této aplikaci přiřazené [zásady ochrany aplikací Intune]( app-protection-policy.md).
-- Uživatel může vidět automatické přesměrování pouze u aplikací proxy aplikací, které jim byly přiřazeny.
+- Nastavte svoje interní aplikace prostřednictvím proxy aplikací Azure AD.
+    - Postup konfigurace proxy aplikací a publikování aplikací najdete v [dokumentaci k instalaci]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#how-to-get-started). 
+    - Musíte používat minimálně verzi 1.2.0 aplikace Managed Browser.
+    - Uživatelé prohlížeče Managed Browser mají k této aplikaci přiřazené [zásady ochrany aplikací Intune]( app-protection-policy.md).
 
 #### <a name="step-1-enable-automatic-redirection-to-the-managed-browser-from-outlook"></a>Krok 1: Zapněte automatické přesměrování z Outlooku do prohlížeče Managed Browser.
 Outlook musí být nakonfigurován zásadami ochrany aplikací, které povolují nastavení **Omezit webový obsah tak, aby se spouštěl v Managed Browseru**.
