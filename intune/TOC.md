@@ -17,11 +17,12 @@
 ## [Známé problémy](known-issues.md)
 ## [Získání podpory](get-support.md)
 
-# [Začínáme](get-started-evaluation.md)
-## [Vytvoření skupiny](get-started-groups.md)
+# [Začínáme s Intune](get-started-evaluation.md)
+## [Navigace na portálu Azure Portal](get-started-azure.md)
 ## [Vytvoření uživatele](get-started-users.md)
-## [Registrovat zařízení](get-started-enroll.md)
+## [Vytvoření skupiny](get-started-groups.md)
 ## [Přiřazení zásad](get-started-policies.md)
+## [Registrovat zařízení](get-started-enroll.md)
 ## [Přiřazení aplikací](get-started-apps.md)
 
 
