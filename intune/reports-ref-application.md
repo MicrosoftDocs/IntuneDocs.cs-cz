@@ -14,11 +14,11 @@ ms.assetid: A92DEF30-5D01-4774-9917-E26F5F0E2E68
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 2e12792445b36ba6657cbe6b2f6c924f6d97fe3c
-ms.sourcegitcommit: addf6a40caa22c22adfd2e2eff7d666cd1877e3c
+ms.openlocfilehash: 6107059888c8d2fb6227277202a5906491ac9092
+ms.sourcegitcommit: b8ef9d8387b4d9b2ea4e6ce937635304771e6532
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="reference-for-application-entities"></a>Referenční informace o entitách aplikací
 
@@ -52,9 +52,9 @@ Entita **AppRevision** obsahuje seznam všech verzí aplikací.
 | IsCurrent |Určuje, jestli tato verze aplikace v datovém skladu je nebo není aktuální |True nebo False |
 | RowLastModifiedDateTimeUTC |Datum a čas ve standardu UTC, kdy se tato verze aplikace v datovém skladu naposledy změnila |23.11.2016 12:00:00 |
 
-## <a name="appinstallertypes"></a>AppInstallerTypes
+## <a name="apptypes"></a>AppTypes
 
-Entita **AppInstallerTypes** obsahuje seznam zdrojů instalace aplikace.
+Entita **AppTypes** obsahuje seznam zdrojů instalace aplikace.
 
 | Vlastnost  | Popis |
 |---------|------------|
@@ -80,44 +80,6 @@ Entita **AppInstallerTypes** obsahuje seznam zdrojů instalace aplikace.
 | 11 |Windows Mobile MSI |Obchodní aplikace MSI |
 | 12 |Obchodní aplikace pro Windows Phone |Obchodní aplikace pro Windows Phone |
 
-## <a name="applicationtypes"></a>ApplicationTypes
-
-Entita **ApplicationTypes** obsahuje seznam možných typů aplikace.
-
-| Vlastnost  | Popis |
-|---------|------------|
-| ApplicationTypeID |ID pro daný typ |
-| ApplicationTypeKey |Náhradní klíč pro daný klíč |
-| ApplicationTypeName |Typ aplikace |
-
-## <a name="example"></a>Příklad
-
-| ApplicationTypeID  | Název | Popis |
-|---------|------------|--------|
-| 0 |InHouse |Interně vyvinutá aplikace |
-| 1 |DeepLink |Odkaz na aplikaci v App Storu |
-| 2 |WebLink |Odkaz na webovou aplikaci |
-
-## <a name="managedsoftwaretypes"></a>ManagedSoftwareTypes
-
-Entita **ManagedSoftwareTypes** obsahuje seznam možných typů spravovaného softwaru pro aplikaci.
-
-| Vlastnost  | Popis |
-|---------|------------|
-| SoftwareTypeID |ID pro daný typ |
-| SoftwareTypeKey |Náhradní klíč pro daný klíč |
-| SoftwareTypeName |Typ softwaru |
-
-## <a name="example"></a>Příklad
-
-| SoftwareTypeID  | Název | Popis |
-|---------|------------|--------|
-| 0 |Desktop |Desktopová aplikace |
-| 2 |Aktualizovat |Aktualizace okna |
-| 5 |SideCarAgent | |
-| 1 |Mobilní |Mobilní aplikace |
-| 3 |WebLink |Webový odkaz |
-| 4 |VppDeepLink |Odkaz na aplikaci v App Storu, která je součástí programu VPP (Volume Purchase Program) |
 
 ## <a name="vppprogramtypes"></a>VppProgramTypes
 

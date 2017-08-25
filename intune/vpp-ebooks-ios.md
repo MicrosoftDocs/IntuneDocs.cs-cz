@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/13/2017
+ms.date: 08/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f5617074-2384-4812-b913-dc94f64c0818
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e23c40eb4c13fd0d2593742c72086fc943fe2b54
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 43ab9e906f05a069b1399ab53a4861d7289b7024
+ms.sourcegitcommit: 6a089eb45ea3fb18ae0b2dac96683466f52f95bf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/18/2017
 ---
 # <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Správa e-knih pro iOS zakoupených v rámci multilicenčního programu pomocí Microsoft Intune
 
@@ -44,7 +44,6 @@ Než začnete, musíte od společnosti Apple získat token VPP a nahrát ho do s
 * Ve výchozím nastavení se Intune synchronizuje se službou Apple VPP dvakrát denně. Ruční synchronizaci můžete spustit kdykoli.
 * Po naimportování tokenu VPP do Intune neimportujte stejný token do žádného jiného řešení správy zařízení. Pokud byste to udělali, mohli byste ztratit přiřazení licence a uživatelských záznamů.
 * Než začnete používat knihy pro iOS s Intune, odeberte všechny existující uživatelské účty VPP vytvořené pomocí jiných řešení správy mobilních zařízení (MDM). V rámci bezpečnostních opatření Intune nesynchronizuje tyto uživatelské účty do Intune. Intune synchronizuje jenom ta data ze služby Apple VPP, která jsou vytvořená pomocí Intune.
-* V současné době můžete knihy přiřadit jenom v rámci **povinné** instalace. Když přiřazujete knihu s typem instalace **Požadovaná**, využije každý uživatel, který knihu nainstaluje, jednu licenci.
 * Když přiřadíte knihu k zařízení, musí být v daném zařízení nainstalovaná integrovaná aplikace iBooks. Pokud není, musí koncový uživatel aplikaci přeinstalovat, aby si mohl knihu přečíst. V současné době není možné prostřednictvím Intune obnovit odebrané integrované aplikace.
 * Přiřadit je možné jenom knihy z webu Apple Volume Purchase Program. Není možné nahrát a potom přiřadit knihy, které jste vytvořili interně.
 * V současné době není možné přiřazovat ke kategoriím koncových uživatelů knihy stejně jako aplikace.
@@ -72,10 +71,10 @@ Data ukládaná společností Apple můžete kdykoli synchronizovat s Intune vý
 ## <a name="to-assign-a-volume-purchased-app"></a>Přiřazení aplikace zakoupené v rámci multilicenčního programu
 
 1. V úloze **E-knihy** zvolte **Správa** > **Všechny e-knihy**.
-2. V okně se seznamem knih zvolte knihu, kterou chcete přiřadit, a pak zvolte tlačítko se třemi tečkami (**...**). > **Přiřaďte skupiny**.
+2. V okně se seznamem knih zvolte knihu, kterou chcete přiřadit, a pak zvolte **...** > **Přiřadit skupiny**.
 3. V okně <*název knihy*> – **Přiřazené skupiny** zvolte **Spravovat** > **Přiřazené skupiny**.
 4. Zvolte **Přiřadit skupiny** a potom v okně **Vybrat skupiny** zvolte skupiny uživatelů Azure AD, ke kterým chcete aplikaci přiřadit. V současné době není dostupná podpora skupin zařízení.
-Zvolte akci přiřazení **Povinné**. 
+Jako akci přiřazení zvolte **K dispozici** nebo **Povinné**. 
 5. Až to budete mít, zvolte **Uložit**.
 
 ## <a name="next-steps"></a>Další kroky

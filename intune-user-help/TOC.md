@@ -1,16 +1,111 @@
 # Uživatelská nápověda pro Intune
+
 ## [Práce pomocí spravovaných zařízení](use-managed-devices-to-get-work-done.md)
+
 ## [Jaké informace může moje společnost vidět s Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+
 ## [Co se stane, když obnovím tovární nastavení zařízení?](what-happens-if-you-reset-your-device-cpwebsite.md)
+
 ## [Přihlášení k Portálu společnosti](sign-in-to-the-company-portal.md)
+
 ## [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
 ### [Co se stane při registraci zařízení s Androidem?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
+### [Registrace zařízení](enroll-your-device-in-Intune-android.md)
+#### [Registrace zařízení s Androidem for Work](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
+### [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-android.md)
+### [Zašifrování zařízení](encrypt-your-device-android.md)
+### [Nastavení PIN kódu nebo hesla](set-your-pin-or-password-android.md)
+### [Co se stane, když obnovím tovární nastavení zařízení?](what-happens-if-you-reset-your-device-using-the-company-portal-android.md)
+### [Resetování zařízení](reset-erase-your-device-cpwebsite.md)
+### [Nastavení doby nečinnosti před uzamčením zařízení](set-the-amount-of-time-before-your-device-is-locked-android.md)
+### [Instalace sítě VPN](install-your-companys-virtual-private-network-VPN-android.md)
+### [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-android.md)
+### [Co se stane, když zrušíte registraci zařízení v Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
+#### [Zrušení registrace zařízení](unenroll-your-device-from-intune-android.md)
+#### [Zrušení registrace zařízení, pokud odmítnete podmínky použití](unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)
+
 ### [Řešení běžných problémů s Androidem](troubleshoot-your-device-android.md)
+#### [Kontrola dodržování předpisů pro zařízení](check-compliance-on-your-device-android.md)
+
+#### [Oprava chyb pomocí protokolů]
+##### [Zapnutí podrobného protokolování](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
+##### [Odeslání protokolů e-mailem](send-logs-to-your-it-admin-by-email-android.md)
+##### [Odeslání protokolů přes USB kabel](send-logs-to-your-it-admin-using-cable-android.md)
+##### [Odeslání chyb registrace](send-enrollment-errors-to-your-it-admin-android.md)
+
+### Dotazy k operačnímu systému
+#### [Aktualizace zařízení](you-need-to-update-your-android-device.md)
+#### [Nepodporovaná verze](your-android-version-isnt-yet-supported.md)
+#### [Zařízení obsahuje root a nemůže se připojit](your-device-is-rooted-and-you-cant-connect-android.md)
+#### [Chybí požadovaný certifikát](your-device-is-missing-a-required-certificate-landing-android.md)
+#### [Vypnutí neznámých zdrojů](you-need-to-turn-off-unknown-sources-android.md)
+#### [Vypnutí ladění USB](you-need-to-turn-off-usb-debugging-android.md)
+#### [Zapnutí vyhledávání bezpečnostních hrozeb](you-need-to-turn-on-scanning-for-security-threats-android.md)
+#### [Nepodporovaná oprava zabezpečení](you-need-to-update-your-device-OS-security-patch-android.md)
+#### [Zařízení s chybami šifrování](your-device-appears-encrypted-but-cp-says-otherwise-android.md)
+
+### Mobile Threat Defense
+#### [Instalace aplikace Mobile Threat Defense](you-are-prompted-to-install-mtd-android.md)
+#### [Vyřešení hrozby](you-need-to-resolve-a-threat-found-by-mtd-android.md)
+
+
 ## [Použití zařízení s iOSem nebo macOS s Intune](using-your-iOS-or-macOS-device-with-intune.md)
 ### [Co se stane při registraci zařízení s iOSem?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
+### [Instalace a přihlášení do Portálu společnosti](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
+### [Registrace zařízení s iOSem](enroll-your-device-in-intune-ios.md)
+### [Registrace zařízení s macOS](enroll-your-device-in-intune-macos.md)
+### [Registrace zařízení s macOS pomocí Portálu společnosti](enroll-your-device-in-intune-macos-cp.md)
+
+### [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-ios.md)
+### [Nastavení nebo změna hesla](set-or-change-your-passcode-ios.md)
+### [Co se stane, když resetujete zařízení pomocí Portálu společnosti?](what-happens-if-you-reset-your-device-using-the-company-portal-ios.md)
+### [Resetování zařízení](reset-erase-your-device-cpwebsite.md)
+### [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-ios.md)
+### [Zrušení registrace zařízení](unenroll-your-device-from-intune-ios.md)
+#### [Co se stane, když zrušíte registraci zařízení?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
+### [Ruční synchronizace zařízení](sync-your-device-manually-ios.md)
+
 ### [Řešení běžných problémů s iOSem](troubleshoot-your-device-iOS.md)
-## [Použití zařízení Windows s Intune](using-your-windows-device-with-intune.md)
+#### [Opakované připojení k ohroženému zařízení s iOSem](how-to-reconnect-a-compromised-ios-device.md)
+#### [Odeslání chyb do společnosti](send-errors-to-your-it-admin-ios.md)
+#### [Odeslání chyb do Microsoftu](send-logs-to-microsoft-ios.md)
+#### [Došlo k chybě](you-get-an-error-while-using-the-company-portal-app-ios.md)
+#### [Identifikace zařízení](you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md)
+#### [Vyhledání sériového čísla](how-do-i-find-the-serial-number-on-my-device-ios.md)
+#### [Aktualizace zařízení s iOSem](you-need-to-update-your-ios-device.md)
+#### [Moje verze iOSu ještě není podporovaná](your-ios-version-isnt-yet-supported.md)
+
+### Mobile Threat Defense
+#### [Instalace aplikace Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md)
+#### [Vyřešení hrozby](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
+
+
+## [Použití zařízení s Windows](using-your-windows-device-with-intune.md)
 ### [Co se stane při registraci zařízení s Windows 10?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)
-### [Co se stane při registraci zařízení s Windows?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
+### [Co se stane, když zaregistrujete zařízení s Windows pomocí jiné verze Windows?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
+
+### [Registrace zařízení s Windows](enroll-your-device-in-intune-windows.md)
+### [Co se stane, když nainstalujete aplikaci Portál společnosti a zaregistrujete zařízení v Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
+### [Resetování zařízení](reset-erase-your-device-cpwebsite.md)
+
+### [Zašifrování zařízení](encrypt-your-device-windows.md)
+### [Nastavení nebo změna hesla](set-or-change-your-password-windows.md)
+### [Zrušení registrace zařízení v Intune](unenroll-your-device-from-intune-windows.md)
+### [Co se stane, když zrušíte registraci zařízení?](what-happens-if-you-unenroll-your-device-from-intune-windows.md)
+### [Co se stane, když obnovíte tovární nastavení zařízení?](what-happens-if-you-reset-your-device-using-the-company-portal-windows.md)
+### [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-windows.md)
+### [Ruční synchronizace zařízení](sync-your-device-manually-windows.md)
+
 ### [Řešení běžných problémů s Windows](troubleshoot-your-device-windows.md)
+#### [Moje zařízení s Windows 10 se nedá zaregistrovat](troubleshoot-your-windows-10-device-windows.md)
+#### [Aktualizace zařízení s Windows](you-need-to-update-your-windows-device.md)
+#### [Odeslání protokolů z aplikace Portál společnosti](send-logs-to-your-it-admin-cp-windows.md)
+#### [Odeslání protokolů z aplikace Nastavení](send-logs-to-your-it-admin-settings-windows.md)
+#### [Moje verze Windows ještě není podporovaná](your-windows-version-isnt-yet-supported.md)
+#### [Povolení šifrování Windows](you-need-to-enable-windows-encryption.md)
+#### [Moje zařízení potřebuje antimalwarový software](your-device-needs-antimalware-software.md)
+#### [Povolení zabezpečeného spuštění](you-need-to-enable-secure-boot-windows.md)
+#### [Povolení integrity kódu](you-need-to-enable-code-integrity.md)
+
+
 ## [Použití webu Portál společnosti Intune](using-the-intune-company-portal-website.md)

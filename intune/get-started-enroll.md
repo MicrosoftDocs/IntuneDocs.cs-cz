@@ -1,12 +1,12 @@
 ---
 title: "Začínáme s registrací zařízení"
 titleSuffix: Intune on Azure
-description: 
+description: "Projděte si celý proces registrace zařízení s iOS a zjistěte, jak registrace probíhá."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 08/02/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,37 +15,26 @@ ms.assetid: b595848d-c451-43ab-812d-b22e0170fb7a
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7f52c9d44a91ed6547aadd712db42ea68cfd01dc
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: b072ca0ee5a1e4d0a4feb6972ee80fe717fe9f83
+ms.sourcegitcommit: 45204e0fb8cb4cce449e65f2f1d7bb6f6ac4ccf5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/16/2017
 ---
-# <a name="getting-started-enrolling-devices"></a>Začínáme s registrací zařízení
-
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+# <a name="get-started-enrolling-devices"></a>Začínáme s registrací zařízení
 
 Microsoft Intune umožňuje vybavit vaše pracovníky mobilními zařízeními a zároveň mít chráněná firemní data. Vzhledem k tomu, že koncoví uživatelé budou s Intune pracovat na svých zařízeních, a nikoli na konzole pro správce, nezapomeňte se důkladně seznámit s registračním prostředím. To vám umožní spojit důkladně připravené zásady dodržování předpisů s vaším prostředím, abyste mohli uživatelům projevit potřebnou dávku empatie. Je to zvlášť důležité, protože uživatelé přesně vědí, jaké informace jako správce vidíte:
 
-## <a name="what-it-cannot-see"></a>Co správci IT neuvidí
-* Historie volání a procházení webu
-* Umístění
-* Osobní e-mail
-* Textové zprávy
-* Kontakty
-* Hesla k osobním účtům
-* Události kalendáře
-* Obrázky, včetně těch, které jsou ve fotografických aplikacích nebo mezi obrázky z fotoaparátu
-
-## <a name="what-it-can-see"></a>Co správci IT uvidí
-* Model
-* Sériové číslo
-* Verze operačního systému
-* Názvy aplikací
-* Vlastník
-* Název zařízení
-* Výrobce (pro zařízení, která nejsou vyrobená společností Apple)
-* Telefonní číslo (pro pracovní zařízení celé číslo, pro osobní zařízení jenom poslední čtyři číslice)
+| Co správci IT neuvidí | Co správci IT uvidí |
+|---|---|
+| Historie volání a procházení webu | Model |
+| Umístění | Sériové číslo |
+| Osobní e-mail | Verze operačního systému |
+| Textové zprávy | Názvy aplikací |
+| Kontakty | Vlastník |
+| Hesla k osobním účtům | Název zařízení |
+| Události kalendáře | Výrobce (pro zařízení, která nejsou vyrobená společností Apple) |
+| Obrázky, včetně těch, které jsou ve fotografických aplikacích nebo mezi obrázky z fotoaparátu | Telefonní číslo (pro pracovní zařízení celé číslo, pro osobní zařízení jenom poslední čtyři číslice) |
 
 ## <a name="how-do-i-enroll-a-device"></a>Jak zaregistruji zařízení?
 
@@ -67,3 +56,13 @@ Registrace zařízení je pro mnoho koncových uživatelů první zkušeností s
 14. Po změně obrazovky, která signalizuje dokončení instalace profilu, klepněte na **Hotovo**.
 15. Na obrazovce se zobrazí zpráva o registraci zařízení a potom se zobrazí zpráva o tom, že zařízení bylo úspěšně zaregistrováno. Zobrazí se místní nabídka s dotazem, jestli chcete otevřít stránku na Portálu společnosti. Klepněte na **Otevřít**.
 16. Vrátíte se na obrazovku **Nastavení přístupu k firmě**. Pokud jste nenastavili testovací zásady, mělo by se zařízení zobrazit jako vyhovující. Pokud jste je nastavili, po klepnutí na **Dodržování předpisů zařízením** se zobrazí, co je potřeba udělat, aby bylo zařízení bezpečné.
+
+## <a name="next-steps"></a>Další kroky
+
+[Začínáme s přidáváním aplikací](get-started-apps.md) – najděte a přidejte aplikace do zařízení, aby mohli vaši zaměstnanci plnit úkoly.
+
+## <a name="learn-more"></a>Další informace
+
+* [Možnosti registrace pro Intune](enrollment-options.md)
+* [Jak v Intune povolit funkci Přineste si vlastní zařízení](byod-enable.md)
+* [Poučení koncových uživatelů o registraci a správě zařízení](end-user-educate.md)

@@ -11,11 +11,11 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: cf4ad6d4-423f-4826-ab8d-6eb7a7cfb559
-ms.openlocfilehash: dcc97e5bcffb35752b65e8ce275d38b9578da6fa
-ms.sourcegitcommit: bee30f4c9e04129d70305fcafc4152c6e062a8b0
+ms.openlocfilehash: 3514b580a4e35cc9e0813d6dd7fd0e1eee550d7c
+ms.sourcegitcommit: af013af8d9a63c9aa16e5e9eddf38ad9c5a77898
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 08/12/2017
 ---
 # <a name="enrollment-options-for-intune"></a>Možnosti registrace zařízení pro Intune
 
@@ -41,6 +41,9 @@ Pro registraci zařízení s iOSem a macOS je nutný MDM Push Certificate. Pře�
 ## <a name="corporate-identifiers"></a>Podnikové identifikátory
 
 Pro účely identifikace zařízení, která vlastní firma, můžete vytvořit seznam čísel IMEI a sériových čísel. Přečtěte si další informace o [podnikových identifikátorech](corporate-identifiers-add.md).
+## <a name="multi-factor-authentication"></a>Vícefaktorové ověřování
+
+Při registraci zařízení můžete uživatele požádat, aby použili dodatečnou metodu ověření, například telefon, PIN kód nebo biometrické údaje. Přečtěte si další informace o [vícefaktorovém ověřování](multi-factor-authentication.md).
 
 ## <a name="device-enrollment-manager"></a>správce registrace zařízení
 Můžete nastavit uživatele jako správce registrace zařízení.  Uživatelé – správci registrace zařízení můžou registrovat velké počty mobilních zařízení s jediným uživatelským účtem. Účet správce registrace zařízení (DEM – Device Enrollment Manager) může zaregistrovat až 1 000 zařízení. Přečtěte si další informace o [správcích registrace zařízení](device-enrollment-manager-enroll.md).

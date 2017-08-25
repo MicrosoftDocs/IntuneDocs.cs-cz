@@ -6,7 +6,7 @@ keywords:
 author: NathBarn
 ms.author: NathBarn
 manager: angrobe
-ms.date: 06/28/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 066f8668ea37e928455792f512e4e337a1f19c20
-ms.sourcegitcommit: 2ed8d1c39d4b3e3282111f1d758afb3a50f19f8f
+ms.openlocfilehash: 32d3d014abc48eb2c3d0e10a71dc7f4616c49db8
+ms.sourcegitcommit: af013af8d9a63c9aa16e5e9eddf38ad9c5a77898
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2017
+ms.lasthandoff: 08/12/2017
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users"></a>Použití portálu pro řešení potíží k poskytování pomoci uživatelům
 
@@ -41,7 +41,7 @@ Jako správce Intune můžete přiřadit roli operátora helpdesku skupině uži
 Přidání uživatelů helpdesku:
 1. V případě potřeby [přidejte uživatele do Intune](users-add.md).
 2. [Vytvořte skupinu helpdesku](groups-add.md) a přidejte do ní uživatele.
-3. [Přiřadit roli RBAC operátora helpdesku.](role-based-access-control.md#built-in-roles)
+3. [Přiřaďte roli RBAC operátora helpdesku](role-based-access-control.md#built-in-roles).
 
   ![Snímky obrazovky portálu Intune se zvýrazněnými rolemi Intune a seznamem předdefinovaných rolí včetně role operátora helpdesku](./media/help-desk-user-add.png) Můžete také [vytvořit vlastní roli](role-based-access-control.md#custom-roles), kterou můžete dále upravit, abyste operátorům helpdesku poskytli potřebný přístup.  Operátoři helpdesku potřebují následující oprávnění, aby mohli řešit potíže uživatelů:
     - Mobilní aplikace: Číst
@@ -61,8 +61,6 @@ Pracovníci helpdesku a správci Intune mají přístup k portálu pro řešení
 - Přihlaste se k portálu Azure Portal, zvolte **Další služby** > **Monitorování + správa** > **Intune** a pak přejděte na **Nápověda a podpora** > **Řešení potíží**.
 
 Kliknutím na **Vybrat uživatele** zobrazíte uživatele a podrobnosti o něm.
-
-![Snímek obrazovky s úlohou Řešení potíží Intune a s odkazem Vybrat uživatele](media/help-desk-user.png)
 
 ## <a name="use-the-troubleshooting-portal"></a>Použití portálu pro řešení potíží
 

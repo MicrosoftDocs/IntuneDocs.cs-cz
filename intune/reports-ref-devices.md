@@ -14,11 +14,11 @@ ms.assetid: 6955E12D-70D7-4802-AE3B-8B276F01FA4F
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8013d7f091c154709f0dd98dcda2e7f5f09056d2
-ms.sourcegitcommit: addf6a40caa22c22adfd2e2eff7d666cd1877e3c
+ms.openlocfilehash: 2dad8cf3e9a38625b4657e284f8d8bb53ba289c0
+ms.sourcegitcommit: c8fb42fcb8735af432c7e07c380d956171012bd4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="reference-for-devices-entities"></a>Referenční informace o entitách zařízení
 
@@ -261,96 +261,41 @@ Entita **DevicePropertyHistory** obsahuje stejné vlastnosti jako tabulka zaří
 |---------|------------|
 | DateKey |Odkaz na tabulku kalendářních dat udávající den |
 | DeviceKey |Jedinečný identifikátor zařízení v datovém skladu – náhradní klíč jedná se o odkaz na tabulku zařízení obsahující ID zařízení v Intune. |
-| DeviceModel |Model zařízení |
-| Operační systém |Operační systém zařízení |
 | DeviceName |Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemůže být dostupný pro všechna zařízení. |
-| SoftwareVersion |Toto je ve většině případů verze operačního systému, kromě platforem Apple, kde se tato hodnota neshoduje s verzí operačního systému |
-| Imei |Číslo IMEI |
-| HardwareInventoryTimeUtc |Čas prvního nahlášení inventáře pro toto zařízení |
-| InventoryModifiedTimeUtc |Čas posledního uložení inventáře při pořízení tohoto snímku |
-| InventoryReportingTimeUtc |Čas posledního shromáždění inventáře pro toto zařízení |
-| ExchangeActiveSyncId |ID zařízení protokolu Exchange ActiveSync |
-| ComputerSystemDescription |Popis systému |
-| ComputerSystemName |Název systému |
-| ComputerSystemManufacturer |Výrobce systému |
-| ComputerSystemModel |Model systému |
-| UserName |Uživatelské jméno |
-| OSType |Typ operačního systému |
-| OSCaption |Popisek operačního systému |
-| OSName |Název operačního systému |
-| OSManufacturer |Výrobce operačního systému |
-| OSProductSuite |Sada produktů operačního systému |
-| OSProductType |Typ produktu operačního systému |
-| Locale |Národní prostředí operačního systému |
-| PhysicalMemoryCapacity |Kapacita fyzické paměti (v bajtech) |
-| PhysicalMemoryRemovable |Fyzická vyměnitelná paměť (v bajtech) |
-| SystemEnclosureChassisTypesInnerText |Definuje typ skříně systému pro toto zařízení. Čísla určují následující hodnoty: 0 nebo nic = neznámý typ, 1 = stolní počítač, 2 = přenosný počítač, 3 = pracovní stanice, 4 = podnikový server, 100 = je telefon, 101 = tablet, 102/103 = jiný neznámý typ mobilního zařízení |
-| SystemEnclosureModel |Model počítačové skříně |
-| SystemEnclosureSerialNumber |Sériové číslo počítačové skříně |
-| NetworkAdapterConfigurationText |Text konfigurace ze síťového adaptéru |
-| MacAddress |Adresa MAC |
-| SmsID |ID zařízení v Intune |
-| CertExpiry |Datum vypršení platnosti certifikátu pro správu MDM |
-| DeviceClientAgentVersion |Verze agenta klienta |
-| DeviceClientID |ID klienta zařízení |
-| SerialNumber |Sériové číslo |
-| DeviceManufacturer |Výrobce zařízení |
-| DMVersion |Verze DM |
-| FirmwareVersion |Verze firmwaru |
-| HardwareVersion |Verze hardwaru |
-| PlatformType |Typ platformy |
-| ProcessorLevel |Úroveň procesoru |
-| ProcessorRevision |Revize procesoru |
-| Produkt |Produkt |
-| ProductVersion |Verze produktu |
-| OEM |Výrobce OEM |
-| DeviceBuildVersion |Verze sestavení zařízení |
-| Meid |Identifikátor mobilního zařízení |
-| PhoneNumber |Telefonní číslo |
-| SubscriberCarrierNetwork |Název sítě telefonního operátora |
-| CellularTechnology |Typ sítě telefonního operátora (CDMA/GSM) |
-| Imsi |Číslo IMSI |
-| JailBroken |Hodnota True, pokud se jedná o zařízení s jailbreakem nebo rootem |
-| IsActivationLockEnabled |Hodnota True znamená, že zámek aktivace je povolený. |
-| DeviceType |Typ zařízení |
-| IsSupervised |Je pod dohledem |
-| DeviceDisplayNumberOfColors |Počet barev zobrazení zařízení |
-| HorizontalResolution |Horizontální rozlišení obrazovky zařízení |
-| VerticalResolution |Vertikální rozlišení obrazovky zařízení |
-| StorageFree |Volné místo úložiště (v bajtech) |
-| StorageTotal |Celková velikost úložiště (v bajtech) |
-| ProgramFree |Volná paměť pro programy (v bajtech) |
-| ProgramTotal |Celková velikost paměti pro programy (v bajtech) |
-| RemovableStorageFree |Volné vyměnitelné úložiště (v bajtech) |
-| RemovableStorageTotal |Celková velikost vyměnitelného úložiště (v bajtech) |
-| DeviceMemoryDeviceCapacity |Kapacita paměti zařízení |
-| DeviceMemoryAvailableDeviceCapacity |Dostupná kapacita paměti zařízení |
-| DeviceOSVersion |Verze operačního systému |
-| DeviceOSPlatform |Platforma operačního systému |
-| DeviceOSLanguage |Jazyk operačního systému |
-| PasswordMaxAttemptsBeforeWipe |Maximální povolený počet pokusů o zadání hesla před vymazáním zařízení |
-| PasswordMinComplexChars |Minimální požadovaný počet složitých znaků v hesle |
-| PasswordMinLength |Minimální požadovaná délka hesla |
-| PasswordHistory |Heslo – minimální počet nepřijatých historických hesel |
-| PasswordEnabled |Heslo – povolené? |
-| PasswordExpiration |Heslo – datum vypršení platnosti |
-| AllowRecoveryPassword |Povolit obnovení hesla |
-| PasswordAutoLockTimeout |Heslo – časový limit pro automatické zamykání |
-| PasswordType |Typ hesla |
-| BacklightACTimeout |Časový limit podsvícení při připojení ke zdroji napájení |
-| BacklightBatTimeout |Časový limit podsvícení při používání baterie |
-| PowerBackupPercent |Procento zálohy napájení |
-| BatteryPercent |Zbývající procento baterie |
-| PlatformID |ID platformy |
-| ExchangeDeviceID |ID výměny zařízení |
-| SmsProcessorDescription |Popis procesoru |
-| OwnerEmailAddress |E-mailová adresa vlastníka |
-| DeviceOSName |Název operačního systému |
-| WifiMac |Wi-Fi adresa MAC |
-| EthernetMac |Ethernetová adresa MAC |
-| RequireEncryption |Určuje, jestli zařízení je nebo není zašifrované. |
-| ActivationLockBypassCode |Kód pro překonání zámku aktivace |
-
+| DeviceTypeKey |Klíč atributu typu zařízení pro toto zařízení |
+| ClientRegisterationStateKey |Klíč atributu stavu registrace klienta pro toto zařízení |
+| OwnerTypeKey |Klíč atributu typu vlastníka pro toto zařízení: podnikový, osobní nebo neznámý. |
+| objectSourceKey |Ignorujte tento sloupec. |
+| CreatedDate |Datum, kdy se zařízení zaregistrovalo |
+| LastContact |Poslední známé přihlášení zařízení k Intune |
+| LastContactNotification |Čas posledního upozornění Intune, aby se zařízení přihlásilo k Intune |
+| LastContactWorkplaceJoin |Časové razítko označující poslední známý stav připojení k pracovišti pro toto zařízení |
+| ManagementAgentKey |Klíč agenta správy, který je přidružený k tomuto zařízení |
+| ManagementStateKey |Klíč stavu správy, který je přidružený k tomuto zařízení a který udává poslední stav vzdálené akce nebo informaci, jestli jde o zařízení s jailbreakem nebo rootem |
+| ReferenceId |ID zařízení v Azure Active Directory |
+| WorkPlaceJoinStateKey |Klíč stavu připojení k pracovišti, který je přidružený k tomuto zařízení |
+| CategoryId |Ignorujte tento sloupec. |
+| EnrollmentTypeKey |Klíč typu registrace, který je přidružený k tomuto zařízení a který udává metodu registrace |
+| CertExpirationDate |Datum vypršení platnosti certifikátu pro správu MDM |
+| MdmStatusKey |Klíč stavu MDM |
+| OSFamily |Řada operačního systému (Windows, iOS, Android atd.) |
+| OSVersion |Verze operačního systému |
+| OSMajorVersion |Řetězec hlavní verze v zápisu verze operačního systému (hlavní.podverze.sestavení.revize) |
+| OSMinorVersion |Řetězec podverze v zápisu verze operačního systému (hlavní.podverze.sestavení.revize) |
+| OSBuildNumber |Řetězec sestavení v zápisu verze operačního systému (hlavní.podverze.sestavení.revize) |
+| OSRevisionNumber |Řetězec revize v zápisu verze operačního systému (hlavní.podverze.sestavení.revize) |
+| EasID |ID EAS tohoto zařízení, pokud se zařízení spravuje pomocí protokolu Exchange Active Sync |
+| GraphDeviceIsManaged |Poslední stav správy, který Intune nastavil v AAD |
+| GraphDeviceIsCompliant |Poslední stav kompatibility, který Intune nastavil v AAD |
+| SerialNumber |Sériové číslo zařízení, pokud je dostupné |
+| EnrolledByUser |ID uživatele, který toto zařízení zaregistroval, odkazující na sloupec userId v tabulce Uživatel |
+| RowLastModifiedDateTimeUTC |Čas poslední změny tohoto záznamu |
+| ProcessorArchitecture |Architektura procesoru |
+| DeviceAction |Poslední vystavená akce zařízení, zatím ignorujte. |
+| Výrobce |Výrobce zařízení |
+| Model |Model zařízení |
+| LastPolicyUpdateUtc |Čas poslední aktualizace zásad na daném zařízení |
+| LastExchangeStatusUtc |Čas poslední synchronizace zařízení s Exchange |
 ## <a name="mdmdeviceinventoryhistories"></a>MdmDeviceInventoryHistories
 
 Entita **MdmDeviceInventoryHistories** obsahuje denní snímky dat inventáře pro zařízení spravovaná pomocí MDM za posledních 90 dnů. Sloupec DateKey označuje den pro daný řádek. U některých zařízení se nemusí některé vlastnosti používat nebo vyplňovat. Další podrobnosti najdete na této stránce. Další informace najdete v tématu [Seznámení se zařízeními s inventářem v Microsoft Intune](https://docs.microsoft.com/Intune-classic/deploy-use/understand-your-devices-with-inventory-in-microsoft-Intune).

@@ -1,12 +1,12 @@
 ---
-title: "Přidání identifikátorů IMEI do Intune"
+title: "Přidání podnikových identifikátorů do Intune"
 titleSuffix: Intune on Azure
-description: "Přečtěte si, jak přidat podnikové identifikátory (kódy IMEI) do Microsoft Intune. \""
+description: "Zjistěte, jak můžete do Microsoft Intune přidat podnikové identifikátory (způsob registrace, číslo IMEI a sériové číslo). \""
 keywords: 
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 07/05/2017
+ms.date: 08/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,31 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6b38bf2da70537d07a050fa21be9a2a3062ca84b
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 03a278762401ee9697909cf45b3fe86212393e66
+ms.sourcegitcommit: 0b164f806165d312acfc88815a60e325e3d02672
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="add-corporate-identifiers"></a>Přidání podnikových identifikátorů
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Jako správce Intune můžete vytvořit a importovat textový soubor s oddělovači (CSV) se seznamem kódů IMEI (International Mobile Equipment Identity) nebo sériových čísel. Intune pomocí těchto identifikátorů určuje, která zařízení jsou ve vlastnictví firmy. Můžete deklarovat čísla IMEI všech podporovaných platforem. Je možné deklarovat pouze sériová čísla zařízení s iOSem a Androidem. Každý kód IMEI nebo sériové číslo může mít v tomto seznamu uvedené podrobnosti pro účely správy.
+Jako správce Intune můžete zařízení ve firemním vlastnictví identifikovat různými způsoby. Ze zařízení ve firemním vlastnictví dokáže Intune shromažďovat dodatečné informace. U zařízení můžete také nastavit omezení a zabránit registraci zařízení, která nejsou ve firemním vlastnictví.
+
+Zařízení se identifikuje jako ve vlastnictví firmy, pokud je splněná libovolná z následujících podmínek:
+
+- Je registrované pomocí nějakého účtu [správce registrace zařízení](device-enrollment-manager-enroll.md) (všechny platformy)
+- Je registrované přes [Program registrace zařízení](device-enrollment-program-enroll-ios.md) od Applu, [Apple School Manager](apple-school-manager-set-up-ios.md) nebo [Apple Configurator](apple-configurator-enroll-ios.md) (jen iOS)
+- Je předem deklarované pomocí čísla IMEI (International Mobile Equipment Identifier) (všechny platformy s číslem IMEI) nebo sériového čísla (iOS a Android)
+- Je registrované ve službě Azure Active Directory nebo Enterprise Mobility Suite jako zařízení s Windows 10 Enterprise (jen Windows 10)
+- Je označené jako **Firemní** ve **vlastnostech** zařízení
+
+V záznamech zařízení v Intune se u zařízení ve firemním vlastnictví zobrazuje ve sloupci **Vlastnictví** text **Firemní**. Zobrazíte je tak, že přejdete na **Zařízení** > **Všechna zařízení**.
+
+## <a name="predeclare-a-device-with-imei-or-serial-number"></a>Předběžná deklarace zařízení pomocí čísla IMEI nebo sériového čísla
+
+Jako správce Intune můžete vytvořit a naimportovat textový soubor s oddělovači (.csv) se seznamem čísel IMEI nebo sériových čísel. Intune pomocí těchto identifikátorů určuje, která zařízení jsou ve vlastnictví firmy. Můžete deklarovat čísla IMEI všech podporovaných platforem. Je možné deklarovat pouze sériová čísla zařízení s iOSem a Androidem. Každý kód IMEI nebo sériové číslo může mít v tomto seznamu uvedené podrobnosti pro účely správy.
 
 <!-- When you upload serial numbers for company-owned iOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple’s device enrollment program (DEP) or Apple Configurator to have them appear as company-owned. -->
 
@@ -54,10 +68,9 @@ V textovém editoru vypadá soubor .csv takhle:
 >Poznámka: Sériová čísla Androidu nemusí být jedinečná nebo existovat. Pokud chcete zjistit, jestli je sériové číslo spolehlivým identifikátorem zařízení, obraťte se na dodavatele zařízení.
 >Sériová čísla, která službě Intune oznámí zařízení, se nemusí shodovat se zobrazenými identifikátory v nabídkách zařízení Nastavení/ O zařízení. Ověřte si typ sériového čísla oznámeného výrobcem zařízení.
 
+### <a name="add-a-csv-list-of-corporate-identifiers"></a>Přidání seznamu podnikových identifikátorů ve formátu .csv
 
-**Předání seznamu firemních zařízení ve formátu .csv**
-
-1. Na portálu Intune zvolte **Registrace zařízení** > **Omezení registrace**, zvolte **Identifikátory podnikových zařízení** a pak klikněte na **Přidat**.
+1. V Intune na Azure Portalu zvolte **Registrace zařízení** > **Identifikátory podnikových zařízení** a klikněte na **Přidat**.
 
  ![Snímek obrazovky pracovního prostoru s identifikátorem podnikového zařízení a zvýrazněným tlačítkem Přidat.](./media/add-corp-id.png)
 
@@ -69,9 +82,11 @@ Importovaná zařízení nemusí být nutně zaregistrovaná. Zařízení můžo
 
 ## <a name="delete-corporate-identifiers"></a>Odstranění podnikových identifikátorů
 
-1. Na portálu Intune zvolte **Registrace zařízení** > **Omezení registrace**, zvolte **Identifikátory podnikových zařízení** a pak zvolte **Odstranit**.
+1. V Intune na Azure Portalu zvolte **Registrace zařízení** > **Identifikátory podnikových zařízení**.
+2. Vyberte identifikátory zařízení, které chcete odstranit, a zvolte **Odstranit**.
+3. Potvrďte odstranění.
 
-3. V okně **Odstranit identifikátory** přejděte na soubor .csv s identifikátory zařízení, které chcete odstranit, a pak klikněte na **Odstranit**.
+Při odstranění podnikového identifikátoru zaregistrovaného zařízení se nezmění vlastnictví zařízení. Pokud chcete změnit vlastnictví zařízení, přejděte na **Zařízení** > **Všechna zařízení**, vyberte zařízení, zvolte **Vlastnosti** a změňte **Vlastnictví zařízení**.
 
 ## <a name="imei-specifications"></a>Specifikace IMEI
 Podrobné specifikace o číslech IMEI najdete na stránce [3GGPP TS 23.003](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=729).

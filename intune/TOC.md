@@ -175,7 +175,6 @@
 ### [Konfigurace nastavení iOS Education](education-settings-configure-ios.md)
 ### [Konfigurace sdílených zařízení s iOS Education](education-settings-configure-ios-shared.md)
 ### [Konfigurace zásad aktualizací pro iOS](software-updates-ios.md)
-### [Konfigurace nastavení služby Windows Update pro firmy](windows-update-for-business-configure.md)
 ### [Konfigurace certifikátů](certificates-configure.md)
 #### [SCEP](certificates-scep-configure.md)
 #### [PKCS](certficates-pfx-configure.md)
@@ -237,7 +236,7 @@
 <!-- ### Protect devices with remote actions -->
 
 ## [Správa rolí](role-based-access-control.md)
-
+## [Správa aktualizací softwaru](windows-update-for-business-configure.md)
 
 ## [Správa počítačů pomocí softwarového agenta](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune?toc=/intune/toc.json)
 ### [Srovnání správy počítačů](/intune-classic/deploy-use/pc-management-comparison?toc=/intune/toc.json)

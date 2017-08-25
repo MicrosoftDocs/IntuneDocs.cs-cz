@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8197e03e8a3eb42c6a5be3b6357d959ed9428454
-ms.sourcegitcommit: 0e012f25fb22124f66193f20f244362493c6b8bb
+ms.openlocfilehash: 91fd4719a4305f5e422163f9049684ebd9e9e656
+ms.sourcegitcommit: bb1a1e4e0bc26543a9c8fb52cb208e298c6b8e3f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/19/2017
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Povolení registrace zařízení s iOSem pomocí Apple School Manageru
 
@@ -29,7 +29,7 @@ Toto téma vám pomůže zprovoznit registraci zařízení s iOSem zakoupená pr
 
 Při povolení registrace přes Apple School Manager budete používat portál Intune i portál Apple School Manager. Abyste mohli zařízení přiřadit do Intune ke správě, potřebujete seznam sériových čísel nebo čísla nákupních objednávek. Vytvoříte registrační profily DEP obsahující nastavení aplikovaná na zařízení během registrace.
 
-Mimochodem registraci přes Apple School Manager nejde používat s [programem registrace zařízení (DEP) společnosti Apple](device-enrollment-program-enroll-ios.md) ani se [správcem registrace zařízení](device-enrollment-manager-enroll.md).
+Mimochodem, registraci přes Apple School Manager nejde používat s [programem registrace zařízení (DEP) společnosti Apple](device-enrollment-program-enroll-ios.md) ani se [správcem registrace zařízení](device-enrollment-manager-enroll.md).
 
 **Požadavky**
 - [Certifikát Apple MDM Push Certificate](apple-mdm-push-certificate-get.md)
@@ -103,18 +103,16 @@ Registrační profil zařízení definuje nastavení, která se během registrac
 
     - **Pod dohledem** – Režim, který nabízí více možností správy a ve výchozím nastavení má zakázaný zámek aktivace. Pokud políčko nezaškrtnete, budete mít omezené možnosti správy.
 
-    - **Uzamčená registrace** – Vyžaduje režim správy Pod dohledem. Zakáže nastavení iOSu, která by mohla umožnit odebrání profilu správy. Pokud políčko nezaškrtnete, půjde profil správy odebrat z nabídky Nastavení.
+     - **Uzamčená registrace** – Vyžaduje režim správy Pod dohledem. Zakáže nastavení iOSu, která by mohla umožnit odebrání profilu správy. Pokud políčko nezaškrtnete, půjde profil správy odebrat z nabídky Nastavení.
+   - **Sdílený iPad** – (Vyžaduje režimy **Zaregistrovat bez přidružení uživatele** a **Pod dohledem**.) Umožňuje více uživatelům přihlásit se k zaregistrovaným iPadům pomocí spravovaného Apple ID. Spravovaná Apple ID se vytváří na portálu Apple School Manager. Přečtěte si další informace o [sdíleném iPadu](education-settings-configure-ios-shared.md).
+   >[!NOTE]
+   >Pokud je **Přidružení uživatele** nastavené na **S přidružením uživatele** nebo je režim **Pod dohledem** nastavený na **Vypnuto**, je režim Sdílený iPad pro registrační profil zakázaný.
 
-  - **Sdílený iPad** – (Vyžaduje režimy **Zaregistrovat bez přidružení uživatele** a **Pod dohledem**.) Umožňuje více uživatelům přihlásit se k zaregistrovaným iPadům pomocí spravovaného Apple ID. Spravovaná Apple ID se vytváří na portálu Apple School Manager.
-
-  >[!NOTE]
-  >Pokud je **Přidružení uživatele** nastavené na **S přidružením uživatele** nebo je režim **Pod dohledem** nastavený na **Vypnuto**, je režim Sdílený iPad pro registrační profil zakázaný.
-
-  - **Maximální počet uživatelů v mezipaměti** – (Vyžaduje režim **Sdílený iPad** = **Ano**) Vytvoří pro jednotlivé uživatele oddíl na zařízení. Doporučená hodnota je počet studentů, kteří budou pravděpodobně používat zařízení po určitou dobu. Pokud například zařízení běžně používá šest studentů týdně,nastavte toto číslo na šest.  
+        - **Maximum Cached Users** - (Requires **Shared iPad** = **Yes**) Creates a partition on the device for each user. The recommended value is the number of students likely to use the device over a period of time. For example, if six students use the device regularly during the week, set this number to six.  
 
     - **Povolit párování** – Určuje, jestli se zařízení s iOSem můžou synchronizovat s počítači. Pokud vyberete **Povolit Apple Configurator podle certifikátu**, musíte zvolit certifikát v části **Certifikáty Apple Configuratoru**.
 
-    - **Certifikáty Apple Configuratoru** – Pokud jste v části **Povolit párování** zvolili **Povolit Apple Configurator podle certifikátu**, vyberte certifikát Apple Configuratoru, který chcete importovat.
+      - **Certifikáty Apple Configuratoru** – Pokud jste v části **Povolit párování** zvolili **Povolit Apple Configurator podle certifikátu**, vyberte certifikát Apple Configuratoru, který chcete importovat.
 
 7. Zvolte **Nastavení Pomocníka s nastavením**, nakonfigurujte následující nastavení profilu a potom zvolte **Uložit**:
 
