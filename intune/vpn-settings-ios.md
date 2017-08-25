@@ -15,26 +15,26 @@ ms.assetid: 1447c123-ea33-4ea0-aab4-69577cdb8d00
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a6cc079b05037cc18b7d27dd0d2674e87e1d54d0
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: d6adeca6189f9452c7e07bd0dea26564c62e1804
+ms.sourcegitcommit: b8ef9d8387b4d9b2ea4e6ce937635304771e6532
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="vpn-settings-for-ios-devices-in-microsoft-intune"></a>Nastavení sítě VPN pro zařízení s iOSem v Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-V závislosti na tom, jaká nastavení zvolíte, nebudou v níže uvedeném seznamu konfigurovatelné všechny hodnoty.
+V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím seznamu konfigurovatelné všechny hodnoty.
 
 ## <a name="base-vpn-settings"></a>Základní nastavení sítě VPN
 
 
-**Název připojení** – zadejte název tohoto připojení. Tento název uživatelé uvidí, když budou na svém zařízení procházet seznamem dostupných připojení VPN.
-- **IP adresa nebo plně kvalifikovaný název domény** – zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se budou zařízení připojovat. Příklady: **192.168.1.1**, **vpn.contoso.com**.
-- **Metoda ověřování** – zvolte způsob, kterým se budou zařízení ověřovat u serveru VPN:
+**Název připojení** – zadejte název tohoto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí seznamem dostupných připojení VPN.
+- **IP adresa nebo plně kvalifikovaný název domény** – zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojí. Příklady: **192.168.1.1**, **vpn.contoso.com**.
+- **Metoda ověřování** – zvolte způsob, kterým se zařízení ověřují vůči serveru VPN:
     - **Certifikáty** – v části **Ověřovací certifikát** vyberte profil certifikátu SCEP nebo PKCS, který jste vytvořili za účelem ověřování připojení. Další informace o profilech certifikátů najdete v článku [Konfigurace certifikátů](certificates-configure.md).
-    - **Uživatelé jméno a heslo** – koncoví uživatelé musí zadat uživatelské jméno a heslo, aby se mohli přihlásit k VPN serveru.
+    - **Uživatelé jméno a heslo** – koncoví uživatelé musí zadat uživatelské jméno a heslo, aby se mohli přihlásit k serveru VPN.
 - **Typ připojení** – z následujícího seznamu dodavatelů vyberte typ připojení VPN:
     - **Check Point Capsule VPN**
     - **Cisco AnyConnect**
@@ -44,7 +44,7 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v níže uvedeném sezn
     - **Cisco (IPSec)**
     - **Citrix**
     - **Vlastní VPN**
-- **Rozdělit tunel** - tuto možnost můžete **povolit** nebo **zakázat**, aby se mohla zařízení rozhodnout, které připojení se má v závislosti na typech přenosů používat. Uživatel v hotelu například bude pro přístup k pracovním souborům používat připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu.
+- **Rozdělit tunel** - tuto možnost můžete **povolit** nebo **zakázat**, aby se zařízení mohla rozhodnout, které připojení se má v závislosti na typech přenosů používat. Uživatel v hotelu například pro přístup k pracovním souborům použije připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu.
 
 
 ## <a name="custom-vpn-settings"></a>Vlastní nastavení sítě VPN
@@ -56,13 +56,13 @@ Pokud jste jako typ připojení vybrali **Vlastní VPN**, nakonfigurujte tato da
 
 ## <a name="apps-per-app-vpn-settings"></a>Nastavení aplikací (VPN pro jednotlivé aplikace)
 
-- **VPN pro jednotlivé aplikace** – tuto možnost povolte, pokud chcete adresy URL, které povolí připojení VPN, když na ně uživatel přejde v prohlížeči Safari. Pokud to chcete nakonfigurovat, musíte nejprve v základním nastavení sítě VPN jako metodu ověřování vybrat **Certifikáty**.
-- **Adresy URL umožňují připojení k síti VPN pomocí prohlížeče Safari** – kliknutím na Přidat přidejte jednu nebo více adres URL webů. Pokud uživatel tyto adresy URL navštíví, povolí se připojení VPN.
+- **VPN pro jednotlivé aplikace** – tuto možnost povolte, pokud chcete používat adresy URL, které umožňují připojení VPN, když na ně uživatel přejde v prohlížeči Safari. Pokud to chcete nakonfigurovat, musíte nejprve v základním nastavení sítě VPN jako metodu ověřování vybrat **Certifikáty**.
+- **Adresy URL, které umožňují připojení VPN při používání prohlížeče Safari** – kliknutím na Přidat přidejte jednu nebo více adres URL webů. Při návštěvě těchto adres URL je aktivní připojení VPN.
 
 - **Pravidla na vyžádání** – toto nastavení vám umožní nakonfigurovat podmíněná pravidla, která řídí, kdy se má aktivovat připojení VPN. Můžete například vytvořit podmínku, že se připojení VPN použije, pouze pokud zařízení není připojené k některé z firemních Wi-Fi sítí. Můžete také vytvořit podmínku, která zajistí, že se připojení VPN neaktivuje, pokud zařízení nemá přístup k zadané doméně hledání DNS.
 
-    - **SSID nebo domény hledání DNS** – vyberte, zda se v této podmínce budou používat identifikátory **SSID** bezdrátové sítě nebo **domény hledání DNS**. Zvolte Přidat a nakonfigurujte minimálně jeden identifikátor SSID nebo doménu hledání.
-    - **Test řetězce adresy URL** – volitelně můžete zadat také adresu URL, kterou bude pravidlo používat pro účely testování. Pokud zařízení, na kterém je tento profil nainstalovaný, má k této adrese URL přístup bez přesměrování, aktivuje se připojení VPN a zařízení se připojí k cílové adrese URL. Uživatel neuvidí web testu řetězce adresy URL. Příkladem testu řetězce adresy URL je adresa auditujícího webového serveru, který zkontroluje splnění bezpečnostních předpisů zařízením předtím, než ho připojí k VPN. Další možností je, že adresa URL otestuje schopnost VPN připojit se k webu předtím, než se zařízení připojí k cílové adrese URL skrze VPN.
+    - **Identifikátory SSID nebo domény hledání DNS** – vyberte, jestli se v této podmínce používají identifikátory **SSID** bezdrátové sítě nebo **domény hledání DNS**. Zvolte Přidat a nakonfigurujte minimálně jeden identifikátor SSID nebo doménu hledání.
+    - **Test řetězce adresy URL** – volitelně můžete zadat také adresu URL, kterou bude pravidlo používat pro účely testování. Pokud zařízení, na kterém je tento profil nainstalovaný, má k této adrese URL přístup bez přesměrování, aktivuje se připojení VPN a zařízení se připojí k cílové adrese URL. Uživatel neuvidí web testu řetězce adresy URL. Příkladem testu řetězce adresy URL je adresa auditujícího webového serveru, který zkontroluje splnění bezpečnostních předpisů zařízením předtím, než ho připojí k VPN. Další možností je, že adresa URL otestuje schopnost sítě VPN připojit se k webu předtím, než se zařízení připojí k cílové adrese URL přes síť VPN.
     - **Akce domény** – zvolte jednu z následujících možností:
         - Připojit v případě potřeby – 
         - Nikdy nepřipojovat – 

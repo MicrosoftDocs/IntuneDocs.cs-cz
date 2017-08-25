@@ -15,11 +15,11 @@ ms.assetid: 495e4ed6-b2ef-47cc-a110-13fa9b5f85a6
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6f112983a33c1af24d288f19140114084575f36d
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 8e7fb7697f50706566210063605e9b5d750e0c90
+ms.sourcegitcommit: 5a4529aae710ca2abac5b4d2cfd92cb2df7e67cb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/17/2017
 ---
 # <a name="vpn-settings-for-windows-10-devices-in-microsoft-intune"></a>Nastavení sítě VPN pro zařízení s Windows 10 v Microsoft Intune
 
@@ -96,10 +96,13 @@ Další informace o tom, jak psát vlastní příkazy XML, najdete v dokumentaci
 
 ## <a name="conditional-access"></a>Podmíněný přístup
 
-**Podmíněný přístup pro toto připojení k síti VPN** -
-**Jednotné přihlašování s alternativním certifikátem** -
-**Rozšířené použití klíče** -
-**Hodnota hash vystavitele** -
+**Podmíněný přístup pro toto připojení k síti VPN** – umožňuje, aby se dodržování předpisů zařízením přenášelo směrem od klienta. Když je tato funkce povolená, pokusí se klient sítě VPN komunikovat se službou Azure Active Directory a získat certifikát pro účely ověření. U sítě VPN by mělo být nastavené ověřování certifikátem a server VPN musí důvěřovat serveru, který mu vrátí služba Azure Active Directory.
+
+**Jednotné přihlašování s alternativním certifikátem** – pro dodržování předpisů zařízením použijte pro ověřování protokolem Kerberos certifikát, který je odlišný od ověřovacího certifikátu sítě VPN. Tento certifikát určete pomocí následujících nastavení: 
+
+- **Rozšířené použití klíče** – název rozšířeného použití klíče (EKU)
+- **Identifikátor objektu** – identifikátor objektu pro EKU
+- **Hodnota hash vystavitele** – kryptografický otisk certifikátu pro jednotné přihlašování
 
 ## <a name="dns-settings"></a>Nastavení DNS
 

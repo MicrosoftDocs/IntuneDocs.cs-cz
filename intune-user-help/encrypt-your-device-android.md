@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/13/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 8ba85e15fb55a4de1b2f1db53bc5b9962de84394
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: fe406fe2deb89fca1f3ab9d949ea78b779ee13af
+ms.sourcegitcommit: eb726c7e3a6e7defb74e69861447c96de0d1bb65
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/17/2017
 ---
 # <a name="how-to-protect-your-android-device-using-encryption"></a>Jak chránit zařízení s Androidem pomocí šifrování
 
@@ -33,8 +33,8 @@ Pokud byste zrušili registraci telefonu, zůstane zašifrovaný.
 
 1.  Zkontrolujte, že je pro vaše zařízení nastavený kód PIN nebo heslo zamykací obrazovky.
 
-2.  V **Nastavení** zvolte **Zabezpečení** &gt; **Šifrovat zařízení**.
-    (na některých telefonech budete muset najít možnost šifrování tak, že zvolíte **Úložiště** &gt; **Šifrování úložiště** nebo **Úložiště** &gt; **Zamykací obrazovka a zabezpečení** &gt; **Další nastavení zabezpečení**).
+2.  V **Nastavení** zvolte **Zabezpečení** > **Šifrovat zařízení**.
+    (Na některých telefonech budete muset najít možnost šifrování tak, že zvolíte **Úložiště** > **Šifrování úložiště** nebo **Úložiště** > **Zamykací obrazovka a zabezpečení** > **Další nastavení zabezpečení**.)
 
 3.  Postupujte podle pokynů na obrazovce. Během šifrování se zařízení může několikrát restartovat.
 
@@ -54,14 +54,16 @@ Pokud byste zrušili registraci telefonu, zůstane zašifrovaný.
 - Zkontrolujte, že jste na zařízení nastavili PIN kód nebo heslo.
 - Pokud jste na zařízení nastavili PIN nebo heslo, vyzkoušejte následující postup, který může správce IT vyžadovat kvůli většímu zabezpečení zařízení. Zobrazované názvy nabídek se mohou mírně lišit od názvů nabídek uvedených v postupech podle toho, jaký máte typ zařízení s Androidem.
 
-    1. Přejděte k položce **Nastavení** > **Zabezpečení** > **Zamykací obrazovka**. Potvrďte aktuální PIN kód nebo heslo.
+    1. Přejděte na **Nastavení** > **Zamykací obrazovka a zabezpečení** > **Zámek obrazovky**. Potvrďte aktuální PIN kód nebo heslo.
 
-    2. Na obrazovce **Vyberte zámek obrazovky** vyberte typ zámku obrazovky, který chcete použít.
+    2. Na obrazovce **Vyberte zámek obrazovky** vyberte typ zámku obrazovky, který chcete použít. 
 
-    3. Na obrazovce **Bezpečné spuštění** klepněte na **Při spuštění zařízení požadovat kód PIN** a pak na **Pokračovat**.
+    3. Po zvolení zámku obrazovky se vraťte na obrazovku **Zamykací obrazovka a zabezpečení** a vyberte **Zabezpečené spuštění**. 
+    
+    4. Na obrazovce **Zabezpečené spuštění** klepněte na **Ke spuštění zařízení požadovat kód PIN** a pak na **Pokračovat**.
 
-    4. Zvolte kód PIN (můžete zadat stejný jako ten, který jste zadali dříve) a klepněte na **Potvrďte kód PIN**.
+    5. Zvolte kód PIN (můžete zadat stejný jako ten, který jste zadali dříve) a klepněte na **Potvrďte kód PIN**.
 
-    5. Otevřete Portál společnosti, vyberte své zařízení a klepněte na možnost **Kontrola dodržování předpisů**.
+    6. Otevřete Portál společnosti, vyberte své zařízení a klepněte na možnost **Kontrola dodržování předpisů**.
 
 Potřebujete ještě další pomoc? Obraťte se na správce IT (kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.

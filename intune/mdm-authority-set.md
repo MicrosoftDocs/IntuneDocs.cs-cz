@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 05/31/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 8deff871-5dff-4767-9484-647428998d82
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 97dede1ac393a434342f62d1f8488389dcb28d44
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: dfcd7b97848ed68edb4572429abc53a1cc8f8558
+ms.sourcegitcommit: 0b164f806165d312acfc88815a60e325e3d02672
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Nastavení autority pro správu mobilních zařízení
 
@@ -40,11 +40,27 @@ V Configuration Manageru verze 1610 a vyšší a v Microsoft Intune verze 1705 m
 
 ## <a name="set-mdm-authority-to-intune"></a>Nastavení autority MDM na Intune
 
-1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-  ![Snímek obrazovky s úlohou Řešení potíží Intune a s odkazem Vybrat uživatele](media/set-mdm-auth.png)
+1. Na [Azure Portalu](https://portal.azure.com) zvolte **Další služby** > **Monitorování a správa** > **Intune**.
 2. V okně Intune zvolte **Registrace zařízení** a pak zvolte **Přehled**.
+![Snímek obrazovky Intune s nastavením autority pro správu mobilních zařízení](media/set-mdm-auth.png)
 
-3. V okně **Začátek správy zařízení** zvolte **Nastavit autoritu MDM na Intune**. Zobrazí se zpráva, že jste úspěšně nastavili autoritu MDM na Intune.
+3. V oblasti **Autorita pro správu mobilních zařízení** zvolte některou autoritu MDM z následujících možností:
+  - **Autorita MDM Intune**
+  - **Autorita MDM Configuration Manageru**
+  - **Žádné**
+
+  Zobrazí se zpráva, že jste úspěšně nastavili autoritu MDM na Intune.
+
+## <a name="enable-device-enrollment"></a>Povolení registrace zařízení
+
+Když jako autoritu MDM nastavíte Intune, můžou si uživatelé zaregistrovat zařízení v osobním vlastnictví a získat přístup k prostředkům, jako je e-mail, pokud si nainstalují Portál společnosti (iOS a Android), přidají pracovní přihlašovací údaje (Windows) nebo přejdou na web Portál společnosti (iOS, Android, macOS).
+
+Různé platformy mají následující požadavky, které umožňují nebo zjednodušují registraci:
+- **iOS** – (povinné) [opatřete si certifikát Apple MDM Push Certificate](apple-mdm-push-certificate-get.md) a pak [povolte registraci pro zařízení s iOS vlastněná firmou](ios-enroll.md) (nepovinné).
+- **Android** – (nepovinné) [povolte pracovní profily Androidu](android-enroll.md).
+- **Windows** – (nepovinné) povolte [automatickou registraci](windows-enroll.md) nebo [hromadnou registraci](windows-bulk-enroll.md).
+- **macOS** – žádné požadavky
+
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Vyčištění mobilních zařízení po vypršení platnosti certifikátu MDM
 

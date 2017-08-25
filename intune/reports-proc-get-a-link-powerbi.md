@@ -14,11 +14,11 @@ ms.assetid: 5E5A35D3-88F8-441B-8A0B-C5D7A1E5137B
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b70bf3410e20dd792c0fcff050292ddea714d63e
-ms.sourcegitcommit: 99ffed621855357de427d6fdf7b70d4e543197e9
+ms.openlocfilehash: 6b3ce7e895920d2bb9ff3537fd0ef87ecb4efcc0
+ms.sourcegitcommit: b8ef9d8387b4d9b2ea4e6ce937635304771e6532
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Připojení k datovému skladu pomocí Power BI
 
@@ -60,18 +60,20 @@ Soubor Power BI (pbix) obsahuje informace o připojení pro vašeho tenanta a sa
 
 S klientem ověřeným v Azure AD se adresa URL pro OData připojí ke koncovému bodu RESTful v rozhraní API datového skladu, který zveřejní datový model do klienta sestav. Pokud chcete použít aplikaci Power BI Desktop pro připojení a vytvoření vlastních sestav, postupujte podle těchto pokynů. Nejste omezeni aplikací Power BI Desktop. Můžete použít oblíbený analytický nástroj s adresou URL pro OData, za předpokladu, že klient podporuje ověřování OAUTH2.0 a standard OData v4.0.
 
-1.  Načtěte **adresu URL pro OData** v okně vytváření sestav, například `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`.
-2.  Otevřete aplikaci **Power BI Desktop**.
-3.  Zvolte **Domů** > **Získat data**. Vyberte **Datový kanál OData**.
-4.  Zvolte **Základní**.
-5.  Do pole adresy URL zadejte nebo vložte **adresu URL pro OData**.
-6.  Klikněte na **OK**.
-7.  Pokud jste se službě Azure AD pro vašeho tenanta neověřili z klienta aplikace Power BI Desktop, zadejte své přihlašovací údaje.  
-    a.  Vyberte **Účet organizace**.  
-    b.  Zadejte své uživatelské jméno a heslo.  
-    c.  Klikněte na **Přihlásit se**.  
-    d.  Klikněte na možnost **Připojit**.  
-8.  Klikněte na **Načíst**.
+1.  Přihlaste se k webu Azure Portal a zvolte **Monitorování + správa** > **Intune**. Můžete také vyhledat prostředky pro **Intune**.  
+2.  Otevřete okno **Rozhraní API datového skladu Microsoft Intune (Preview)**.
+3. V okně vytváření sestav načtěte adresu URL vlastního informačního kanálu, například `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`.
+4. Otevřete aplikaci **Power BI Desktop**.
+5. Zvolte **Domů** > **Získat data**. Vyberte **Datový kanál OData**.
+6. Zvolte **Základní**.
+7. Do pole adresy URL zadejte nebo vložte **adresu URL pro OData**.
+8. Klikněte na **OK**.
+9. Pokud jste se službě Azure AD pro vašeho tenanta neověřili z klienta aplikace Power BI Desktop, zadejte své přihlašovací údaje.  
+    1.  Vyberte **Účet organizace**.  
+    2.  Zadejte své uživatelské jméno a heslo.  
+    3.  Klikněte na **Přihlásit se**.  
+    4.  Klikněte na možnost **Připojit**.  
+10. Klikněte na **Načíst**.
 
 ## <a name="next-steps"></a>Další kroky
 
@@ -79,4 +81,4 @@ Můžete získat odpovědi na otázky týkající se vašeho prostředí, např�
 
 <!-- -  You can use Power BI Desktop to create additional report types with your data. For example, you could create a custom chart representing the ratio of device manufactures in your enterprise. For more information about creating custom reports with Power BI and the Intune Data Warehouse, see `BLOG POST ON POWER BI`. -->
  -  Data tenanta budou uspořádána tak, aby vám pomohla získat lepší přehled. Další informace o způsobu uspořádání dat najdete v tématu [Datový model datového skladu](reports-ref-data-model.md). 
-<!-- -  You can also access the data from a RESTful interface and incorporate the data into your own app. For more information, see [Get data from the Data Warehouse API with a REST client](reports-proc-data-rest.md). -->
+ -  K datům můžete získat přístup také z rozhraní RESTful a začlenit je do své vlastní aplikace. Další informace najdete v článku [Získání dat z rozhraní API datového skladu pomocí klienta REST](reports-proc-data-rest.md).

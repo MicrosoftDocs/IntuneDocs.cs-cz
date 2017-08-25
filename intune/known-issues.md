@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/31/2017
+ms.date: 08/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d069775cf51e8c077a6f30123bf4fa2fe58b6bd8
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 5a9b7f69cded9258efb6c8a897e0c026f3228a6b
+ms.sourcegitcommit: c248b5a15894f0ade23bad4644c3b7035a9fcce8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/15/2017
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Známé problémy v Microsoft Intune
 
@@ -41,26 +41,28 @@ Při migraci z klasického portálu Intune na portál Azure Portal se může zob
 
 ### <a name="secondary-migration-required-for-select-capabilities"></a>Pro vybrané možnosti se vyžaduje sekundární migrace
 
-Účty Intune vytvořené před lednem 2017 je nutné před použitím těchto schopností na portálu Azure Portal migrovat:
+Účty Intune vytvořené před lednem 2017 je nutné před použitím následujících možností na Azure Portalu migrovat:
 
 - Profily registrace podnikových zařízení
-- Program Apple Device Enrollment Program
-- Firemní předregistrovaná zařízení podle skupiny sériových čísel iOSu
-- Správci registrace zařízení
+- Program registrace zařízení od Applu
+- Předběžná deklarace firemních zařízení pomocí sériového čísla iOS
+- Účty správce registrace zařízení
 - Apple Volume Purchase Program
 
-Protože tyto schopnosti nejde spravovat z klasické konzoly Silverlight i konzoly Azure, migrace:
-- Zakáže schopnosti v klasické konzole.
-- Povolí schopnosti v konzole Azure.  
+Protože tyto možnosti nelze spravovat jak z klasické konzoly Intune (Silverlight), tak z Azure Portalu, tato migrace:
+- Zakáže tyto možnosti v klasické konzole
+- Povolí tyto možnosti na Azure Portalu  
+
+Po 11. září 2017 bude migrace těchto funkcí sloučena s primární migrací na Azure. Pokud byl váš účet už migrován a používá Azure Portal, proběhne tato sekundární migrace mezi 11. a 22. zářím 2017. Jakmile bude migrace vašeho účtu zahájena, dokončí se ve stejný den. Migrace může trvat až 6 hodin od okamžiku zakázání těchto funkcí v klasické konzole Intune.
 
 Pokud teď tyto schopnosti Intune spravujete na portálu Azure Portal, mějte na paměti tyto body:
 
 #### <a name="removes-default-corporate-device-enrollment-profiles-in-apple-dep"></a>Odebrání výchozích profilů registrace podnikových zařízení v programu Apple DEP
-Azure Portal nepodporuje výchozí profil registrace podnikového zařízení pro zařízení programu Apple DEP (Device Enrollment Program). Tato funkce, která je dostupná v klasické konzole Silverlight Intune, se vyřazuje, aby nedocházelo k neúmyslnému přiřazení profilů. Když se na portálu Azure Portal synchronizují sériová čísla DEP, nepřiřadí se žádný profil registrace podnikového zařízení. Před použitím zařízení musí být registrační profil přiřazený.
+Azure Portal nepodporuje výchozí profil registrace podnikového zařízení pro zařízení v Programu registrace zařízení od Applu (DEP). Tato funkce, která je dostupná v klasické konzole Intune (Silverlight), se vyřazuje, aby nedocházelo k neúmyslnému přiřazení profilů. Když se na portálu Azure Portal synchronizují sériová čísla DEP, nepřiřadí se žádný profil registrace podnikového zařízení. Před použitím zařízení musí být registrační profil přiřazený.
 
 #### <a name="apple-dep-token-restored-with-migration"></a>Obnovení tokenu Apple DEP při migraci
 
-Pokud v klasickém (Silverlight) portálu Intune odstraníte token Apple Device Enrollment Programu a neodešlete nový token na portálu Azure Portal, původní token se při migraci na novém portálu Azure Portal obnoví. Pokud chcete tento token odebrat a zabránit registraci v programu DEP, odstraňte token z portálu Azure Portal.
+Pokud jste v klasickém portálu Intune (Silverlight) odstranili token Programu registrace zařízení od Applu a nenahrajete nový token na Azure Portal, při migraci se na Azure Portalu obnoví původní token. Pokud chcete tento token odebrat a zabránit registraci v programu DEP, odstraňte token z portálu Azure Portal.
 
 ### <a name="status-blades-for-migrated-policies-do-not-work"></a>Okna stavu pro migrované zásady nefungují
 
@@ -72,7 +74,7 @@ Nejde zobrazit informace o stavu pro zásady, které se migrovaly z klasického 
 Hromadně zakoupené aplikaci pro iOS se zobrazují a jde je přiřadit pouze ke stejnému kódu země, jaký má účet Intune. Intune synchronizuje pouze aplikace ze stejného národního prostředí iTunes, jako je kód země účtu tenanta Intune. Pokud třeba koupíte aplikaci, která je k dispozici jenom pro USA, ale váš účet Intune je český, Intune tuto aplikaci nezobrazí.
 
 ### <a name="multiple-copies-of-the-same-ios-volume-purchase-program-are-uploaded"></a>Nahrálo se více kopií jednoho hromadně zakoupeného programu pro iOS
-Neklikejte u jednoho tokenu VPP na tlačítko **Nahrát** vícekrát. Pokud to uděláte, nahrají se duplicitní tokeny VPP a aplikace se u stejného tokenu VPP budou synchronizovat vícekrát. 
+Neklikejte u jednoho tokenu VPP na tlačítko **Nahrát** vícekrát. Pokud to uděláte, nahrají se duplicitní tokeny VPP a aplikace se u stejného tokenu VPP budou synchronizovat vícekrát.
 
 <!-- ## Groups -->
 
@@ -84,8 +86,9 @@ Pro zařízení, která nejsou zaregistrovaná v Intune, můžete do pole **Podn
 Pokud přidáte další domény (pomocí možnosti **Upřesnit nastavení** > **Hranice sítě** > **Přidat chráněnou doménu**), zásadu nejde uložit. Zobrazená chybová zpráva se brzy změní, aby byla přesnější.
 
 ### <a name="cisco-anyconnect-vpn-client-support"></a>Podpora klientů VPN Cisco AnyConnect
- 
-Nejnovější vydaná verze klienta VPN Cisco AnyConnect (4.0.07072) v současnosti není kompatibilní s Intune. Budoucí aktualizace Intune umožní kompatibilitu s touto verzí klienta VPN. Do té doby doporučujeme klienta VPN Cisco AnyConnect neaktualizovat a dál používat stávající verzi.
+
+Nejnovější vydaná verze klienta VPN Cisco AnyConnect (4.0.07072) v současnosti není kompatibilní s Intune.
+Budoucí aktualizace Intune umožní kompatibilitu s touto verzí klienta VPN. Do té doby doporučujeme klienta VPN Cisco AnyConnect neaktualizovat a dál používat stávající verzi.
 
 ### <a name="using-the-numeric-password-type-with-macos-sierra-devices"></a>Použití číselného typu hesla pro zařízení s macOS Sierra
 
@@ -118,16 +121,3 @@ Můžete definovat [zásady ochrany aplikací pro iOS](app-protection-policy-set
 Globální správci (také označovaní jako správci tenanta) můžou dál vykonávat běžné úkony správy bez samostatné licence služby Intune nebo sady EMS (Enterprise Mobility Suite). Pokud ale chtějí službu používat, třeba zaregistrovat si vlastní nebo firemní zařízení nebo používat Portál společnosti Intune, potřebují licenci Intune nebo EMS.
 
 <!-- ## Additional items -->
-
-
-
-
-
-
-
-
-
-
-
-
- 

@@ -1,12 +1,12 @@
 ---
 title: "Začínáme se zásadami"
 titleSuffix: Intune on Azure
-description: 
+description: "Vytvořením zásad zabráníte uživatelům, aby se svými zařízeními dělali něco neoprávněného."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 08/02/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,13 @@ ms.assetid: 1ac74ba5-7441-44ac-98b5-9d8bb8899747
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dd3279288fe5ea1fec16224c70b4562fcf53555d
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: b12b80ac13868b6706d2d4e7532ec13cba9a5b7e
+ms.sourcegitcommit: 45204e0fb8cb4cce449e65f2f1d7bb6f6ac4ccf5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/16/2017
 ---
-# <a name="getting-started-with-policies"></a>Začínáme se zásadami
-
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+# <a name="get-started-with-policies"></a>Začínáme se zásadami
 
 Jedním z hlavních cílů, proč začít používat Intune, je registrace zařízení, abyste měli jistotu, že odpovídají zásadám společnosti. Zásady dodržování předpisů pomáhají spravovat nejen zvláštní typy zařízení, jako jsou firemní veřejné terminály, ale i osobní zařízení (vlastní zařízení uživatelů), tablety a zařízení bez uživatele.
 
@@ -56,3 +54,12 @@ __Jak vytvořím zásadu?__
 7. Vraťte se do okna **Vytvořit zásadu** a vyberte **Vytvořit**.
 8. Jakmile zásadu vytvoříte, vyberte **Přiřazení** a přiřaďte ji testovací skupině. Vyberte testovací skupinu, ve které je váš testovací uživatel, a kliknutím na **Uložit** jí zásadu přiřaďte.
 9. Počkejte pár minut. Na zaregistrovaném zařízení by se měla zobrazit výzva k zadání aktualizovaného hesla, aby zařízení dále vyhovovalo firemním zásadám. Nastavení také můžete zkontrolovat ručně v **aplikaci Portál společnosti pro iOS**, když klepnete na název zařízení a pak na tlačítko **Synchronizovat**.
+
+## <a name="next-steps"></a>Další kroky
+
+[Začínáme s registrací zařízení](get-started-enroll.md) – projděte si celý proces registrace zařízení s iOS a zjistěte, jak registrace probíhá.
+
+## <a name="learn-more"></a>Další informace
+
+* [Monitorování zásad dodržování předpisů zařízením v Intune](compliance-policy-monitor.md)
+* [Běžné způsoby používání zásad podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md)
