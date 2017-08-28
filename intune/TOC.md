@@ -40,6 +40,8 @@
 ### [Další zdroje informací](planning-guide-resources.md)
 ## Příručky k implementaci scénářů
 ### [Uživatelé s vlastním zařízením (BYOD)](byod-enable.md)
+### [Ochrana Exchange Online](exchange-online-protect.md)
+### [Snížení nákladů na technickou podporu](password-reset.md)
 <!--### [Protect O365 data](/enterprise-mobility-security/solutions/protect-office365-data-with-intune?toc=/intune/toc.json)
 ### [Protect on-premises data](/enterprise-mobility-security/solutions/protect-on-premises-data-with-intune?toc=/intune/toc.json)
 ### [Protect data without enrollment](/enterprise-mobility-security/solutions/protect-company-data-without-managing-devices?toc=/intune/toc.json)
