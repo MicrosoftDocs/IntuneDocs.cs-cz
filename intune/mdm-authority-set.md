@@ -6,20 +6,20 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 08/16/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 8deff871-5dff-4767-9484-647428998d82
-ms.reviewer: dagerrit
+ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dfcd7b97848ed68edb4572429abc53a1cc8f8558
-ms.sourcegitcommit: 0b164f806165d312acfc88815a60e325e3d02672
+ms.openlocfilehash: 4eb211fdeb8c51b67edc08f956c99c2af8319679
+ms.sourcegitcommit: ce8a1f0f4e95444949556600d1837937b6efd769
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Nastavení autority pro správu mobilních zařízení
 
@@ -41,13 +41,13 @@ V Configuration Manageru verze 1610 a vyšší a v Microsoft Intune verze 1705 m
 ## <a name="set-mdm-authority-to-intune"></a>Nastavení autority MDM na Intune
 
 1. Na [Azure Portalu](https://portal.azure.com) zvolte **Další služby** > **Monitorování a správa** > **Intune**.
-2. V okně Intune zvolte **Registrace zařízení** a pak zvolte **Přehled**.
-![Snímek obrazovky Intune s nastavením autority pro správu mobilních zařízení](media/set-mdm-auth.png)
-
+2. Výběrem oranžové informační zprávy otevřete nastavení **Autorita pro správu mobilních zařízení**.
 3. V oblasti **Autorita pro správu mobilních zařízení** zvolte některou autoritu MDM z následujících možností:
   - **Autorita MDM Intune**
   - **Autorita MDM Configuration Manageru**
   - **Žádné**
+
+  ![Snímek obrazovky Intune s nastavením autority pro správu mobilních zařízení](media/set-mdm-auth.png)
 
   Zobrazí se zpráva, že jste úspěšně nastavili autoritu MDM na Intune.
 

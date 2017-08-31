@@ -6,7 +6,7 @@ keywords:
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 08/22/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 03a278762401ee9697909cf45b3fe86212393e66
-ms.sourcegitcommit: 0b164f806165d312acfc88815a60e325e3d02672
+ms.openlocfilehash: 12556e394e2e09307c4f89e1ae56bb3f268b28ae
+ms.sourcegitcommit: ce8a1f0f4e95444949556600d1837937b6efd769
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 08/28/2017
 ---
-# <a name="add-corporate-identifiers"></a>Přidání podnikových identifikátorů
+# <a name="identify-devices-as-corporate-owned"></a>Identifikace zařízení jako vlastněných společností
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -31,15 +31,13 @@ Zařízení se identifikuje jako ve vlastnictví firmy, pokud je splněná libov
 
 - Je registrované pomocí nějakého účtu [správce registrace zařízení](device-enrollment-manager-enroll.md) (všechny platformy)
 - Je registrované přes [Program registrace zařízení](device-enrollment-program-enroll-ios.md) od Applu, [Apple School Manager](apple-school-manager-set-up-ios.md) nebo [Apple Configurator](apple-configurator-enroll-ios.md) (jen iOS)
-- Je předem deklarované pomocí čísla IMEI (International Mobile Equipment Identifier) (všechny platformy s číslem IMEI) nebo sériového čísla (iOS a Android)
-- Je registrované ve službě Azure Active Directory nebo Enterprise Mobility Suite jako zařízení s Windows 10 Enterprise (jen Windows 10)
-- Je označené jako **Firemní** ve **vlastnostech** zařízení
+- [Před registrací je identifikované jako ve vlastnictví firmy](#identify-corporate-owned-devices-with-imei-or-serial-number) pomocí čísla IMEI (International Mobile Equipment Identifier) (všechny platformy s čísly IMEI) nebo sériového čísla (iOS a Android)
+- Je registrované ve službě Azure Active Directory nebo Enterprise Mobility + Security jako zařízení s Windows 10 Enterprise (jen Windows 10)
+- Ve vlastnostech zařízení je uvedené [firemní vlastnictví zařízení](#change-device-ownership)
 
-V záznamech zařízení v Intune se u zařízení ve firemním vlastnictví zobrazuje ve sloupci **Vlastnictví** text **Firemní**. Zobrazíte je tak, že přejdete na **Zařízení** > **Všechna zařízení**.
+## <a name="identify-corporate-owned-devices-with-imei-or-serial-number"></a>Identifikace zařízení ve vlastnictví firmy pomocí čísla IMEI nebo sériového čísla
 
-## <a name="predeclare-a-device-with-imei-or-serial-number"></a>Předběžná deklarace zařízení pomocí čísla IMEI nebo sériového čísla
-
-Jako správce Intune můžete vytvořit a naimportovat textový soubor s oddělovači (.csv) se seznamem čísel IMEI nebo sériových čísel. Intune pomocí těchto identifikátorů určuje, která zařízení jsou ve vlastnictví firmy. Můžete deklarovat čísla IMEI všech podporovaných platforem. Je možné deklarovat pouze sériová čísla zařízení s iOSem a Androidem. Každý kód IMEI nebo sériové číslo může mít v tomto seznamu uvedené podrobnosti pro účely správy.
+Jako správce Intune můžete vytvořit a naimportovat textový soubor s oddělovači (.csv) se seznamem čísel IMEI nebo sériových čísel. Intune pomocí těchto identifikátorů během registrace určuje, že zařízení je ve vlastnictví firmy. Můžete deklarovat čísla IMEI všech podporovaných platforem. Je možné deklarovat pouze sériová čísla zařízení s iOSem a Androidem. Každý kód IMEI nebo sériové číslo může mít v tomto seznamu uvedené podrobnosti pro účely správy.
 
 <!-- When you upload serial numbers for company-owned iOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple’s device enrollment program (DEP) or Apple Configurator to have them appear as company-owned. -->
 
@@ -80,7 +78,7 @@ V textovém editoru vypadá soubor .csv takhle:
 
 Importovaná zařízení nemusí být nutně zaregistrovaná. Zařízení můžou mít stav **Zaregistrované** nebo **Nekontaktované**. **Nekontaktované** znamená, že toto zařízení nikdy se službou Intune nekomunikovalo.
 
-## <a name="delete-corporate-identifiers"></a>Odstranění podnikových identifikátorů
+### <a name="delete-corporate-identifiers"></a>Odstranění podnikových identifikátorů
 
 1. V Intune na Azure Portalu zvolte **Registrace zařízení** > **Identifikátory podnikových zařízení**.
 2. Vyberte identifikátory zařízení, které chcete odstranit, a zvolte **Odstranit**.
@@ -88,5 +86,16 @@ Importovaná zařízení nemusí být nutně zaregistrovaná. Zařízení můžo
 
 Při odstranění podnikového identifikátoru zaregistrovaného zařízení se nezmění vlastnictví zařízení. Pokud chcete změnit vlastnictví zařízení, přejděte na **Zařízení** > **Všechna zařízení**, vyberte zařízení, zvolte **Vlastnosti** a změňte **Vlastnictví zařízení**.
 
-## <a name="imei-specifications"></a>Specifikace IMEI
+### <a name="imei-specifications"></a>Specifikace IMEI
 Podrobné specifikace o číslech IMEI najdete na stránce [3GGPP TS 23.003](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=729).
+
+## <a name="change-device-ownership"></a>Změna vlastnictví zařízení
+
+U každého záznamu zařízení v Intune se ve vlastnostech zařízení zobrazuje **Vlastnictví**. Jako správce můžete zařízení označit jako **Osobní** nebo **Firemní**.
+
+**Vlastnictví zařízení změníte takto:**
+1. V Intune na Azure Portalu přejděte na **Zařízení** > **Všechna zařízení** a zvolte požadované zařízení.
+3. Zvolte **Vlastnosti**.
+4. Určete **Vlastnictví zařízení** jako **Osobní** nebo **Firemní**.
+
+  ![Snímek obrazovky s vlastnostmi zařízení a možnostmi Kategorie zařízení a Vlastnictví zařízení](./media/device-properties.png)
