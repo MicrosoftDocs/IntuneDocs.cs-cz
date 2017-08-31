@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 08/15/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,25 +13,46 @@ ms.technology:
 ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: 33d1f28cd5522ed47c3fdf83b289116728ded12b
-ms.sourcegitcommit: 0b164f806165d312acfc88815a60e325e3d02672
+ms.custom: intune-azure
+ms.openlocfilehash: 6db9bc7a3bafd61d03513ea1b6e1f0246faaab57
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 Zjistěte, jaké jsme v uživatelském rozhraní aplikací udělali změny, které koncoví uživatelé uvidí v této verzi Microsoft Intune. Pomůže vám to při komunikaci s uživateli a aktualizaci vlastní dokumentace, kterou jste vytvořili za účelem podpory vašeho nasazení. Můžete také zjistit, jak lépe řešit problémy uživatelů, když požádají helpdesk o podporu pomocí Portálu společnosti.
 
+## <a name="week-of-august-21-2017"></a>Týden od 21. srpna 2017
+
+### <a name="intune-mobile-application-management-mam-dialog-boxes-will-have-a-modern-interface----1199015---"></a>Dialogová okna správy mobilních aplikací (MAM) Intune mají moderní rozhraní <!-- 1199015 -->
+
+Dialogová okna správy mobilních aplikací (MAM) Intune byla aktualizována na moderní vzhled. Dialogová okna fungují stejně jako v předchozím stylu.
+
+**Předchozí prostředí**
+
+![původní rozhraní](media\NewUI_Old_AttachFileHandler.jpg)
+
+**Moderní prostředí**
+
+![moderní rozhraní](media\NewUI_Modern_AttachFileHandler.jpg)
+
+
 ## <a name="week-of-august-14-2017"></a>Týden od 14. srpna 2017
 
-### <a name="updates-to-the-device-details-page-on-the-company-portal-app-for-windows-10"></a>Aktualizace stránky Detaily zařízení v aplikaci Portál společnosti pro Windows 10
+### <a name="updates-to-the-device-details-page-on-the-company-portal-app-for-windows-10----1287448---"></a>Aktualizace stránky Detaily zařízení v aplikaci Portál společnosti pro Windows 10 <!---1287448--->
 
 V aplikaci Portál společnosti pro Windows 10 se značka __Kategorie__ přesouvá z oblasti pod názvem do vlastnosti na stránce __Detaily zařízení__.
 
 ![Obrazovka Detaily zařízení aplikace Portál společnosti pro Windows, na které se teď pole Kategorie zobrazuje ve formě vlastnosti, ne přímo pod názvem této obrazovky](./media/cp_win10_category_tag_move_after_1708.png)
 
 ## <a name="week-of-july-31-2017"></a>Týden od 31. července 2017
+
+### <a name="apps-details-pages-will-display-new-information-for-android-devices---1287476--"></a>Stránky podrobností o aplikacích zobrazují nové informace pro zařízení s Androidem <!--1287476-->
+
+Na stránce podrobností o aplikacích v aplikaci Portál společnosti pro Android se nyní zobrazují kategorie aplikací, které správce IT pro tuto aplikaci určil.
+
+![Nová stránka podrobností o aplikacích](./media/cp_android_appdetails_after_1708.png)
 
 ### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Vylepšené přihlašování k aplikacím Portál společnosti na všech platformách <!--User Story 1132123-->
 
@@ -128,7 +149,7 @@ Na základě zpětné vazby od uživatelů jsme do aplikace Portál společnosti
 
 ## <a name="week-of-june-5-2017"></a>Týden od 5. června 2017
 
-### <a name="improvements-to-the-app-tiles-in-the-company-portal-app-for-ios"></a>Vylepšení dlaždic aplikací v aplikaci Portál společnosti pro iOS
+### <a name="improvements-to-the-app-tiles-in-the-company-portal-app-for-ios---1230777--"></a>Vylepšení dlaždic aplikací v aplikaci Portál společnosti pro iOS <!--1230777-->
 Aktualizovali jsme vzhled dlaždic aplikací na domovské stránce tak, aby odrážely barvu brandingu nastavenou v Portálu společnosti.
 
 **Dříve**

@@ -14,11 +14,11 @@ ms.assetid: d1693515-de18-4553-91ef-801976cd3ec7
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a7f054868d0bae061f348239614f3a40b96a15b1
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: 88db3730be62a9b481d924b4f09b70be775cb067
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="set-up-app-based-conditional-access-policies"></a>Nastavení zásad podmíněného přístupu k aplikacím
 
@@ -59,9 +59,30 @@ V tomto tématu najdete pokyny k nastavení zásad podmíněného přístupu k a
 2. Kliknutím na tři tečky zobrazíte možnosti odstranění.
 3. Volbou možnosti **Odstranit** odeberte tuto skupinu uživatelů ze seznamu.
 
+## <a name="create-app-based-conditional-access-policies-in-azure-ad-workload"></a>Vytvoření zásad podmíněného přístupu na základě aplikace v úloze Azure AD
+
+Počínaje verzí Intune 1708 můžou správci IT vytvářet zásady podmíněného přístupu na základě aplikace v úloze Azure AD. Má to tu výhodu, že není potřeba přepínat mezi úlohami Azure a Intune.
+
+> [!IMPORTANT]
+> Abyste mohli vytvořit zásady podmíněného přístupu Azure AD na portálu Intune Azure Portal, musíte mít licenci Azure AD Premium.
+
+### <a name="to-create-an-app-based-conditional-access-policy"></a>Vytvoření zásady podmíněného přístupu na základě aplikace
+
+> [!IMPORTANT]
+> Než začnete využívat zásady podmíněného přístupu na základě aplikace, je potřeba použít pro vaše aplikace [zásady ochrany aplikací Intune](app-protection-policies.md).
+
+1. Na **řídicím panelu Intune** zvolte **Podmíněný přístup**.
+
+2. V okně **Zásady** vytvořte novou zásadu podmíněného přístupu na základě aplikace výběrem možnosti **Nová zásada**.
+
+4. Zadejte název zásady a nakonfigurujte nastavení dostupná v části **Přiřazení** a potom v části **Ovládací prvky přístupu** zvolte **Přiřazení**.
+
+5. Vyberte **Vyžadovat klientem schválenou aplikaci**, klikněte na **Vybrat** a potom novou zásadu uložte kliknutím na **OK**.
+
 ## <a name="next-steps"></a>Další kroky
 [Blokování aplikací, které nepoužívají moderní ověřování](app-modern-authentication-block.md)
 
 ### <a name="see-also"></a>Související témata
 
 [Ochrana dat aplikací pomocí zásad ochrany aplikací](app-protection-policies.md)
+[Podmíněný přístup ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)
