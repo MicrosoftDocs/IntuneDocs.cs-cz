@@ -4,7 +4,7 @@ description: "Sada Intune App SDK je dostupná pro platformy iOS i Android a umo
 keywords: 
 author: mtillman
 manager: angrobe
-ms.date: 12/15/2016
+ms.date: 08/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,11 +13,11 @@ ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8a9b0c398c4b6dd46823ceaaefd68ee193ab4502
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: c509e324788828d8ce5a3e9ac556c82ce57e9b07
+ms.sourcegitcommit: ce8a1f0f4e95444949556600d1837937b6efd769
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="intune-app-sdk-overview"></a>Přehled sady Intune App SDK
 Intune App SDK, dostupná pro iOS i Android, povoluje ve vaší aplikaci zásady ochrany aplikací Intune. Usiluje o minimalizaci nutných změn kódu, které musí vývojáře aplikace provádět. Zjistíte, že většinu funkcí sady SDK můžete povolit bez změny chování vaší aplikace. Za účelem zlepšení činnosti koncových uživatelů a správců IT můžete využít rozhraní API k přizpůsobení chování vaší aplikace pro funkce, které vyžadují zapojení vaší aplikace.
@@ -62,8 +62,7 @@ Tato funkce více identit vám pomůže vyřešit problém s ochranou dat, se kt
 ### <a name="app-protection-without-device-enrollment"></a>Ochrana aplikací bez registrace zařízení
 
 >[!IMPORTANT]
->Ochrana aplikací Intune bez registrace zařízení ještě není v Intune App SDK pro Android dostupná. Je dostupná v Intune App Wrapping Tools, SDK pro iOS, komponentě SDK Xamarin a modulu plug-in SDK Cordova.
-
+>Ochrana aplikací Intune bez registrace zařízení je dostupná prostřednictvím nástrojů Intune App Wrapping Tools, sady Intune App SDK pro Android, sady Intune App SDK pro iOS, součásti SDK Xamarin a modulu plug-in SDK Cordova.
 
 Mnoho uživatelů s osobními zařízeními chce pracovat s podnikovými daty bez registrace svého osobního zařízení u poskytovatele správy mobilních zařízení (MDM). Registrace MDM vyžaduje globální kontrolu nad zařízením, proto uživatelé často váhají předat tuto kontrolu nad vlastním osobním zařízením podniku.
 
