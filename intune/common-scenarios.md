@@ -14,11 +14,11 @@ ms.assetid: 1f37d4ff-b5a7-4a89-8884-a6184908b09c
 ms.reviewer: robstackmsft
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 237e141eacb413eb130b17217116b6d0c7e085f8
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: d5db079d224f145336b5d3c9b9963f8a5f2c306a
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="common-ways-to-use-intune"></a>Běžné způsoby použití Intune
 
@@ -42,7 +42,7 @@ Většina strategií z hlediska využívání mobilních zařízení v podnicíc
 
 Intune a Microsoft Enterprise Mobility + Security (EMS) poskytují jedinečně integrované [řešení podmíněného přístupu](conditional-access.md) ([portál Classic](/intune-classic/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune)) pro Exchange Server, které zajišťuje, aby žádné mobilní aplikace neměly přístup k e-mailu, dokud zařízení není zaregistrované v Intune. To všechno můžete udělat bez nasazení dalšího počítače brány na hranici firemní sítě.
 
-Intune podporuje také povolení přístupu k mobilním aplikacím, které vyžadují zabezpečený přístup k místním datům, třeba serverům obchodních aplikací. To se obvykle provádí pomocí [certifikátů spravovaných službou Intune](certificates-configure.md) ([portál Classic](/intune-classic/deploy-use/secure-resource-access-with-certificate-profiles)) pro řízení přístupu v kombinaci se standardní bránou sítě VPN nebo proxy serverem v hraniční síti, například Microsoft Azure Active Directory Application Proxy.  
+Intune podporuje také povolení přístupu k mobilním aplikacím, které vyžadují zabezpečený přístup k místním datům, třeba serverům obchodních aplikací. To se obvykle provádí pomocí [certifikátů spravovaných službou Intune](certificates-configure.md) ([portál Classic](/intune-classic/deploy-use/secure-resource-access-with-certificate-profiles)) pro řízení přístupu v kombinaci se standardní bránou sítě VPN nebo proxy serverem v hraniční síti, například Microsoft Azure Active Directory Application Proxy. 
 
 V takových případech je možné k podnikovým datům získat přístup jedině po zaregistrování zařízení v systému správy. Po zaregistrování zařízení pak systém pro správu zajišťuje, aby zařízení před přístupem k podnikovým datům splňovala vaše zásady. Kromě toho můžou [nástroj Intune App Wrapping Tool a sada App SDK](apps-prepare-mobile-application-management.md) pomoct zajistit, aby šlo firemní data využívat jenom v rámci dané podnikové aplikace a nešlo je předat zákaznickým aplikacím nebo službám.
 
@@ -75,7 +75,7 @@ Využívání tohoto přístupu v organizacích se těší čím dál větší o
 
 Jestliže registrace zařízení není vhodným řešením, nabízí Intune alternativní BYOD přístup, v rámci kterého se jednoduše [spravují jenom aplikace obsahující podniková data](app-protection-policies.md) ([portál Classic](/intune-classic/deploy-use/protect-apps-and-data-with-microsoft-intune)). Intune chrání podniková data i v případě, že daná aplikace přistupuje jak k podnikovým, tak k osobním datům, což je případ mobilních aplikací Office.  
 
-Z pohledu správce můžete vyžadovat, aby uživatelé pro přístup k Office 365 využívali mobilní aplikace Office. Můžete také pro tyto aplikace nakonfigurovat zásady, které umožní zajistit, aby data zůstala chráněná (třeba šifrováním, ochranou pomocí PIN kódu atd.). Tyto zásady zabraňují úniku dat z nespravovaných aplikací a úložišť, a to jak v rámci těchto aplikací, tak mimo ně. Zásady například zabrání uživateli ve zkopírování textu z podnikového e-mailového profilu do soukromého e-mailového profilu, a to i v případě, že jsou oba profily nakonfigurované v rámci Outlooku Mobile. Podobné konfigurace můžou být nasazené i pro další služby a aplikace, které vaši uživatelé vyžadují v rámci programu BYOD.
+Z pohledu správce můžete vyžadovat, aby uživatelé pro přístup k Office 365 využívali mobilní aplikace Office. Můžete také pro tyto aplikace nakonfigurovat zásady, které umožní zajistit, aby data zůstala chráněná (třeba šifrováním, ochranou pomocí PIN kódu atd.). Tyto zásady ochrany aplikací zabraňují úniku dat z nespravovaných aplikací a úložišť, a to jak v rámci těchto aplikací, tak mimo ně. Zásady například zabrání uživateli ve zkopírování textu z podnikového e-mailového profilu do soukromého e-mailového profilu, a to i v případě, že jsou oba profily nakonfigurované v rámci Outlooku Mobile. Podobné konfigurace můžou být nasazené i pro další služby a aplikace, které vaši uživatelé vyžadují v rámci programu BYOD.
 
 <!-- Learn more about how to plan and deploy Intune to support BYOD.-->
 

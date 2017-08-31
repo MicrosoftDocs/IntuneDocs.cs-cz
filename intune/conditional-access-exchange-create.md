@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b02d7dfd2331db232269869fd941b687465f8221
-ms.sourcegitcommit: 7674efb7de5ad54390801165364f5d9c58ccaf84
+ms.openlocfilehash: be626985a020d518bd4285a4d0b280c6c66932a6
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="how-to-create-and-assign-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated-in-microsoft-intune"></a>Vytvoření a přiřazení zásad podmíněného přístupu pro místní Exchange a starší verze Exchange Online Dedicated v Microsoft Intune
 
@@ -122,12 +122,8 @@ Počínaje verzí 1704 můžou správci vytvořit zásady podmíněného příst
 
 1. Na **řídicím panelu Intune** zvolte **Podmíněný přístup**.
 
-2. Na **řídicím panelu Podmíněný přístup** zvolte **Podmíněný přístup ve službě Azure Active Directory**.
+2. V okně **Zásady** vytvořte novou zásadu podmíněného přístupu Azure AD výběrem možnosti **Nová zásada**.
 
-3. Zvolte **Nové zásady** a vytvořte nové zásady podmíněného přístupu Azure AD.
-
-    ![Zásady podmíněného přístupu Azure AD](./media/Azure-AD-CA-Intune.png)
-
-## <a name="see-also"></a>Viz taky
+## <a name="see-also"></a>Související témata
 
 [Podmíněný přístup ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)

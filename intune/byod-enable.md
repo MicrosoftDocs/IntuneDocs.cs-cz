@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 
 ms.reviewer: vlpetros
 ms.suite: ems
-ms.openlocfilehash: 0d05918a62549559a186376d99e28c952af16b9c
-ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
+ms.openlocfilehash: fa70e21b9e9f7adfc508e24bd442a48c834ed7db
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="enable-byod-with-intune"></a>Přineste si vlastní zařízení s Intune
 
@@ -44,7 +44,7 @@ S tím současně byste měli také [přizpůsobit portál společnosti](company
 
 Po přípravě služby Intune je potřeba zajistit splnění různých požadavků na registraci pro různé typy zařízení, které chcete spravovat. Proces registrace zařízení do systému správy je jednoduchý, ale pro různé typy zařízení se mírně liší.
 
--   **Zařízení s iOSem a počítače Mac**: Aby bylo možné zaregistrovat iPady, iPhony nebo zařízení s MacOS, budete potřebovat [certifikát Apple MDM Push Certificate](apple-mdm-push-certificate-get.md). Až nahrajete certifikát MDM Push Certificate do Intune, můžou uživatelé [zaregistrovat zařízení s iOSem](/intune-user-help/enroll-your-device-in-intune-ios) pomocí aplikace Portál společnosti a na webu Portál společnosti můžou [zaregistrovat zařízení s MacOS](/intune-user-help/enroll-your-device-in-intune-macos).
+-   **Zařízení s iOSem a počítače Mac**: Aby bylo možné zaregistrovat iPady, iPhony nebo zařízení s MacOS, budete potřebovat [certifikát Apple MDM Push Certificate](apple-mdm-push-certificate-get.md). Jakmile certifikát MDM Push Certificate nahrajete do Intune, můžou uživatelé [zaregistrovat zařízení s iOSem](/intune-user-help/enroll-your-device-in-intune-ios) pomocí aplikace Portál společnosti a na webu Portál společnosti můžou [zaregistrovat zařízení s MacOS](/intune-user-help/enroll-your-device-in-intune-macos).
 
 -   **Zařízení s Androidem**: Pokud chcete zaregistrovat zařízení s Androidem, nemusíte službu Intune nijak připravovat. Stačí, když uživatelé [zapíšou svá zařízení s Androidem](/intune-user-help/enroll-your-device-in-intune-android) do systému správy pomocí aplikace Portál společnosti dostupné na Google Play.
 
@@ -55,11 +55,11 @@ Po přípravě služby Intune je potřeba zajistit splnění různých požadavk
 
 Až si uživatelé zaregistrují zařízení v systému správy, musí IT pracovníci zajistit, že budou zařízení používaná pro přístup k podnikovým aplikacím a datům splňovat základní požadavky na zabezpečení. Mezi tyto pravidla může patřit používání kódu PIN pro přístup k zařízením a šifrování dat uložených na zařízeních. Sada těchto pravidel se označuje jako [zásady dodržování předpisů](device-compliance.md).
 
-Když [nasadíte zásady dodržování předpisů](device-compliance-get-started.md) pro uživatele, zkontroluje Intune všechna zařízení, která spravuje, aby se zjistilo, jestli vyhovují základním požadavkům na zabezpečení, které jste definovali jako součást zásad Přineste si vlastní zařízení. Po vyhodnocení dodržování zásad se nahlásí stav zpátky do Intune. V některých případech můžou být uživatelé vyzváni k opravě nastavení, například PIN kódu nebo šifrování zařízení. Jindy aplikace Portál společnosti jednoduše upozorní uživatele na veškeré nastavení, které nevyhovuje zásadám.
+Když [nasadíte zásady dodržování předpisů](device-compliance-get-started.md) pro uživatele, zkontroluje Intune všechna spravovaná zařízení, aby se zjistilo, jestli vyhovují základním požadavkům na zabezpečení, které jste definovali v rámci zásad Přineste si vlastní zařízení. Po vyhodnocení dodržování zásad se nahlásí stav zpátky do Intune. V některých případech můžou být uživatelé vyzváni k opravě nastavení, například PIN kódu nebo šifrování zařízení. Jindy aplikace Portál společnosti jednoduše upozorní uživatele na veškeré nastavení, které nevyhovuje zásadám.
 
 ## <a name="provide-access-to-company-resources"></a>Poskytnutí přístupu k podnikovým prostředkům
 
-První věcí, kterou chce mít většina zaměstnanců na svých mobilních zařízeních, je přístup k podnikovému e-mailu a dokumentům. Navíc očekávají, že se nastavení obejde bez složitého postupu nebo volání na technickou podporu. Intune usnadňuje [vytvoření a nasazení nastavení e-mailu](email-settings-configure.md) pro nativní e-mailové aplikace, které jsou předem nainstalované na mobilních zařízeních.
+První věcí, kterou chce mít většina zaměstnanců na svých mobilních zařízeních, je přístup k podnikovému e-mailu a dokumentům. Očekávají také, že se nastavení obejde bez složitého postupu nebo volání na technickou podporu. Intune usnadňuje [vytvoření a nasazení nastavení e-mailu](email-settings-configure.md) pro nativní e-mailové aplikace, které jsou předem nainstalované na mobilních zařízeních.
 
 
 > [!NOTE]
@@ -86,7 +86,7 @@ Intune také umožňuje spravovat a nasazovat aplikace zakoupené v multilicenč
 
 ## <a name="protect-company-data"></a>Ochrana dat společnosti
 
-Intune chrání firemní data prostřednictvím řady technologických vrstev. Ve vrstvě identity se s použitím podmíněného přístupu chrání přístup ke službám. Podmíněný přístup umožňuje přístup k firemním prostředkům jenom spravovaným a vyhovujícím zařízením. V klientské aplikační vrstvě zajišťuje správa mobilních aplikací (MAM) ochranu před únikem informací.  Zásady ochrany aplikací znemožňují přesun dat do nechráněných aplikací nebo umístění úložišť. Tyto zásady vám také umožní vymazat firemní data v případě ztráty nebo odcizení zařízení.
+Intune chrání firemní data prostřednictvím řady technologických vrstev. Ve vrstvě identity se s použitím podmíněného přístupu chrání přístup ke službám. Podmíněný přístup umožňuje přístup k firemním prostředkům jenom spravovaným a vyhovujícím zařízením. Ve vrstvě klientské aplikace chrání zásady ochrany aplikací před únikem informací. Zásady ochrany aplikací znemožňují přesun dat do nechráněných aplikací nebo umístění úložišť. Tyto zásady vám také umožní vymazat firemní data v případě ztráty nebo odcizení zařízení.
 
 ### <a name="enforce-conditional-access-to-company-resources"></a>Vynucení podmíněného přístupu k podnikovým prostředkům
 
@@ -97,17 +97,17 @@ third link was (https://docs.microsoft.com/intune/deploy-use/restrict-access-to-
 > [!IMPORTANT]
 > Zásady podmíněného přístupu nebudou fungovat, pokud nebudou existovat zásady dodržování předpisů, které by dodržování předpisů ověřily.
 
-### <a name="prevent-data-loss-of-company-data-with-application-protection-policies"></a>Ochrana před únikem informací z podnikových dat pomocí zásad ochrany aplikací
+### <a name="prevent-data-loss-of-company-data-with-app-protection-policies"></a>Ochrana před únikem informací z podnikových dat pomocí zásad ochrany aplikací
 
-Se zásadami ochrany aplikací služby Intune si můžete zvolit, jakým způsobem se bude získávat přístup k datům – s registrací zařízení nebo bez ní. Tato univerzálnost umožňuje chránit firemní data, takže i přesto, že uživatel nezaregistruje svoje zařízení do Intune, bude mít k firemním datům zabezpečený přístup.
+Se zásadami ochrany aplikací Intune si můžete zvolit, jakým způsobem se bude získávat přístup k datům – s registrací zařízení nebo bez ní. Tato univerzálnost umožňuje chránit firemní data, takže i přesto, že uživatel nezaregistruje svoje zařízení do Intune, bude mít k firemním datům zabezpečený přístup.
 
-Pomocí [zásad ochrany aplikací služby Intune](app-protection-policies.md) můžete chránit podniková data, ke kterým uživatelé přistupují ze zařízení s iOSem a Androidem. Když používáte tyto zásady na úrovni aplikace, můžete řídit způsob, jakým zaměstnanci používají a sdílejí podniková data, i když samotné zařízení služba Intune nespravuje.
+Pomocí [zásad ochrany aplikací Intune](app-protection-policies.md) můžete chránit podniková data, ke kterým se přistupuje ze zařízení s iOSem a Androidem. Když používáte tyto zásady na úrovni aplikace, můžete řídit způsob, jakým zaměstnanci používají a sdílejí podniková data, i když samotné zařízení služba Intune nespravuje.
 
-Pomocí [zásad WIP (Windows Information Protection)](app-protection-policies-configure-windows-10.md) můžete to samé dělat u spravovaných zařízení s Windows 10. Tyto zásady fungují, aniž by narušovaly činnost zaměstnanců. Nevyžadují změny prostředí vaší sítě ani jiných aplikací.
+Pomocí [Windows Information Protection (WIP)](app-protection-policies-configure-windows-10.md) můžete to samé dělat u spravovaných zařízení s Windows 10. Tyto zásady fungují, aniž by narušovaly činnost zaměstnanců. Nevyžadují změny prostředí vaší sítě ani jiných aplikací.
 
 ### <a name="remove-company-data-while-leaving-personal-data-intact"></a>Odebrání podnikových dat a ponechání osobních dat beze změny
 
-Pokud už zařízení není pro práci potřeba, mění se účel jeho používání nebo se prostě ztratilo, můžete z něj odebrat podnikové aplikace a data. K tomuto účelu můžete použít funkce pro odebrání firemních dat a obnovení továrního nastavení v Intune. Uživatelé můžou obnovit tovární nastavení vlastních zařízení i vzdáleně, a to z Portálu společnosti Intune, pokud jsou tato zařízení v Intune zaregistrovaná.
+Pokud už zařízení není pro práci potřeba, mění se účel jeho používání nebo se ztratilo, můžete z něj odebrat podnikové aplikace a data. K tomuto účelu můžete použít funkce pro odebrání firemních dat a obnovení továrního nastavení v Intune. Uživatelé můžou obnovit tovární nastavení vlastních zařízení i vzdáleně, a to z Portálu společnosti Intune, pokud jsou tato zařízení v Intune zaregistrovaná.
 
 Při [obnovení továrního nastavení](devices-wipe.md) se v zařízení obnoví výchozí nastavení od výrobce, odeberou se uživatelská data a nastavení a zařízení se odebere ze správy v Intune. Při [odebrání firemních dat](devices-wipe.md#remove-company-data) se ze zařízení odeberou jenom firemní data, ale osobní data uživatelů zůstanou beze změn.
 
