@@ -94,6 +94,7 @@
 ### [Přidání aplikací pro klientské počítače Intune](deploy-use/add-apps-for-windows-pcs-in-microsoft-intune.md)
 #### [Správa licenčních smluv](deploy-use/manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)
 ### [Řešení konfliktů zásad](deploy-use/resolve-gpo-and-microsoft-intune-policy-conflicts.md)
+### [Správa výstrah](deploy-use/get-notified-by-alerts.md)
 ## Konfigurace zařízení
 ### [Správa nastavení a funkcí v zařízeních pomocí zásad](deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
 #### [Nastavení iOSu](deploy-use/ios-policy-settings-in-microsoft-intune.md)
