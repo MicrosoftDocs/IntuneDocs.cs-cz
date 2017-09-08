@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 07/25/2017
+ms.date: 09/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 915b432ed32565e820e16a65932fcdeac00d9bc3
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: a100b436ecf257c1e3886c23f15fa967fb877b7c
+ms.sourcegitcommit: 10e3ab2aeb79a1fb2243bef2748ccc003fdd4cc7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/02/2017
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Získání certifikátu Apple MDM Push Certificate
 
@@ -36,15 +36,16 @@ Vyberte **Stáhnout CSR** a uložte si soubor žádosti .csr místně. Soubor sl
   ![Snímek obrazovky Konfigurace certifikátu MDM Push Certificate s nenastaveným certifikátem MDM Push.](./media/create-mdm-push-certificate.png)
 
 **Krok 2: Vytvořte certifikát Apple MDM Push Certificate.**<br>
-Vyberte **Vytvořit certifikát MDM Push Certificate**. Tím přejdete na Apple Push Certificates Portal. Přihlaste se pod Apple ID vaší společnosti, abyste mohli vytvořit certifikát Push Certificate pomocí souboru žádosti. Když na portálu Apple Push Certificate Portal zvolíte **Upload** (Nahrát), získáte soubor .json. Tento soubor nepoužívejte pro certifikát Push Certificate. Dokončete stahování a vraťte se na portál Apple Push Certificates Portal do nabídky certifikátů pro servery třetích stran a zvolte **Download** (Stáhnout). Stáhněte si certifikát Push Certficate (soubor .pem) a uložte si ho místně.
+Vyberte **Vytvořit certifikát MDM Push Certificate**. Tím přejdete na Apple Push Certificates Portal. Přihlaste se pomocí Apple ID společnosti a potom klikněte na **Vytvořit certifikát**. Vyberte **Vybrat soubor**, procházením vyhledejte soubor žádosti o podepsání certifikátu a potom zvolte **Nahrát**. Na stránce Potvrzení vyberte **Stáhnout**, stáhněte soubor certifikátu (.pem) a uložte ho do místního umístění.
 
 > [!NOTE]
 > Certifikát je přidružený k Apple ID, pomocí kterého byl vytvořen. Doporučujeme použít Apple ID společnosti pro úlohy správy. Nikdy nepoužívejte svoje osobní Apple ID.
 
-**Krok 3: Zadejte Apple ID, které jste použili k vytvoření certifikátu Apple MDM Push Certificate.**
+**Krok 3: Zadejte Apple ID, které jste použili k vytvoření certifikátu Apple MDM Push Certificate.**<br>
+Poznamenejte si toto ID jako připomenutí na dobu, kdy bude třeba obnovit tento certifikát.
 
 **Krok 4: Procházením vyhledejte certifikát Apple MDM Push Certificate, který chcete nahrát.**<br>
-Přejděte k souboru certifikátu (.pem), zvolte **Otevřít** a pak zvolte **Nahrát**. S certifikátem Push Certificate může Intune registrovat a spravovat zařízení s iOSem a vynucovat zásady na zaregistrovaných mobilních zařízeních.
+Přejděte k souboru certifikátu (.pem), zvolte **Otevřít** a pak zvolte **Nahrát**. Pomocí certifikátu Push Certificate může Intune zaregistrovat a spravovat zařízení Apple.
 
 ## <a name="renew-apple-mdm-push-certificate"></a>Obnovení certifikátu Apple MDM Push Certificate
 Certifikát Apple MDM Push Certificate je platný po dobu jednoho roku a je potřeba ho každý rok obnovit, aby nedošlo k přerušení správy zařízení s iOSem a macOS. Pokud platnost certifikátu vyprší, nelze zaregistrovaná zařízení Apple kontaktovat.

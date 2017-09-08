@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 08/23/2017
+ms.date: 09/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,35 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6db9bc7a3bafd61d03513ea1b6e1f0246faaab57
-ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
+ms.openlocfilehash: c5f6c5a4f5d76845c435ce979068988807120769
+ms.sourcegitcommit: 2d67df51af66ec859587b66a6ce3965461601c29
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 Zjistěte, jaké jsme v uživatelském rozhraní aplikací udělali změny, které koncoví uživatelé uvidí v této verzi Microsoft Intune. Pomůže vám to při komunikaci s uživateli a aktualizaci vlastní dokumentace, kterou jste vytvořili za účelem podpory vašeho nasazení. Můžete také zjistit, jak lépe řešit problémy uživatelů, když požádají helpdesk o podporu pomocí Portálu společnosti.
+
+## <a name="week-of-august-28-2017"></a>Týden od 28. srpna 2017
+
+
+### <a name="ios-11-mail-app-will-support-oauth----1196951---"></a>Aplikace Mail v iOSu 11 bude podporovat OAuth <!---1196951--->
+
+Podmíněný přístup s Intune podporuje zabezpečenější ověřování na zařízeních s iOSem pomocí OAuth. Pro podporu této funkce teď bude v aplikaci Portál společnosti pro iOS odlišný tok, který umožní ověřování s větším zabezpečením. Když se koncoví uživatelé pokusí v aplikaci Mail přihlásit k novému účtu Exchange, zobrazí se jim výzva ve webovém zobrazení. Při registraci v Intune se uživatelům zobrazí výzva, aby nativní aplikaci Mail povolili přístup k certifikátu. Většině koncových uživatelů se už nebudou zobrazovat žádné další e-maily v karanténě. Existující poštovní účty budou i nadále používat základní ověřovací protokol, a proto se uživatelům těchto účtů budou stále doručovat e-maily v karanténě. Prostředí pro přihlášení koncových uživatelů se podobá prostředí v mobilních aplikacích Office.
+
+![Výběr typu účtu v nativní e-mailové aplikaci](./media/ios-11-ca-email-after-1708-01.png)
+
+![Po výběru Exchange se v zařízení s iOSem zobrazí výzva se žádostí o zadání e-mailové adresy a názvu účtu.](./media/ios-11-ca-email-after-1708-02.png)
+
+![Zadejte e-mailovou adresu a název účtu.](./media/ios-11-ca-email-after-1708-03.png)
+
+![Přesunutí na externí přihlašovací stránku Microsoft.](./media/ios-11-ca-email-after-1708-04.png)
+
+![Zadání hesla na stránce Microsoft.](./media/ios-11-ca-email-after-1708-05.png)
+
+![Microsoft vyzve uživatele, aby si zaregistroval zařízení v systému správy.](./media/ios-11-ca-email-after-1708-06.png)
+
+![Uživatel je vyzván k registraci na webu Portál společnosti.](./media/ios-11-ca-email-after-1708-07.png)
 
 ## <a name="week-of-august-21-2017"></a>Týden od 21. srpna 2017
 
@@ -31,11 +52,11 @@ Dialogová okna správy mobilních aplikací (MAM) Intune byla aktualizována na
 
 **Předchozí prostředí**
 
-![původní rozhraní](media\NewUI_Old_AttachFileHandler.jpg)
+![původní rozhraní](./media/NewUI_Old_AttachFileHandler.jpg)
 
 **Moderní prostředí**
 
-![moderní rozhraní](media\NewUI_Modern_AttachFileHandler.jpg)
+![moderní rozhraní](./media/NewUI_Modern_AttachFileHandler.jpg)
 
 
 ## <a name="week-of-august-14-2017"></a>Týden od 14. srpna 2017

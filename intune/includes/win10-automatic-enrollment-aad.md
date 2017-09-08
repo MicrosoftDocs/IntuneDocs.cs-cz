@@ -1,6 +1,6 @@
 ## <a name="enable-windows-10-automatic-enrollment"></a>Povolení automatické registrace pro Windows 10
 
-Automatická registrace umožňuje uživatelům zaregistrovat zařízení s Windows 10 do Intune, když přidávají pracovní účet do svého osobního zařízení nebo připojují zařízení vlastněná společností k Azure Active Directory. Na pozadí se uživatelovo zařízení zaregistruje a připojí ke službě Azure Active Directory. Po registraci je zařízení spravováno přes Intune.
+Automatická registrace umožňuje uživatelům, aby si svoje zařízení s Windows 10 zaregistrovali v Intune. Při registraci si uživatelé přidají pracovní účet do svého vlastního zařízení nebo připojí zařízení, která patří společnosti, ke službě Azure Active Directory. Na pozadí se zařízení zaregistruje a připojí ke službě Azure Active Directory. Po registraci je zařízení spravováno přes Intune.
 
 **Požadavky**
 - Předplatné Azure Active Directory Premium ([zkušební předplatné](http://go.microsoft.com/fwlink/?LinkID=816845))
@@ -9,7 +9,7 @@ Automatická registrace umožňuje uživatelům zaregistrovat zařízení s Wind
 
 ### <a name="configure-automatic-mdm-enrollment"></a>Konfigurace automatického zápisu MDM
 
-1. Přihlaste se k [portálu pro správu Azure](https://portal.azure.com) (https://manage.windowsazure.com) a vyberte **Azure Active Directory**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com) a vyberte **Azure Active Directory**.
 
   ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-azure-main.png)
 
@@ -21,7 +21,7 @@ Automatická registrace umožňuje uživatelům zaregistrovat zařízení s Wind
 
   ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-intune.png)
 
-4. Konfigurujte **Obor uživatele MDM**. Zadejte, která uživatelská zařízení by měla být spravována přes službu Microsoft Intune. Tato uživatelská zařízení se systémem Windows 10 budou automaticky zaregistrována pro správu přes službu Microsoft Intune.
+4. Konfigurujte **Obor uživatele MDM**. Zadejte, která uživatelská zařízení by měla být spravována přes službu Microsoft Intune. Tato zařízení s Windows 10 se mohou automaticky zaregistrovat pro správu přes Microsoft Intune.
 
   - **Žádné**
   - **Některé**
@@ -35,8 +35,8 @@ Automatická registrace umožňuje uživatelům zaregistrovat zařízení s Wind
     - **Adresa URL s předpisy služby MDM**
 
     > [!IMPORTANT]
-    > Pokud je uživatel členem skupiny, u které je povolena jak registrace MDM, tak MAM, a uživatel se pokusí připojit k pracovišti své osobní zařízení, je povoleno pouze MAM. 
+    > Pokud u skupiny povolíte jak **obor uživatele MAM**, tak i automatickou registraci MDM (**obor uživatele MDM**), povolí se jenom MAM. Při připojení osobního zařízení k pracovnímu prostoru se pro uživatele v dané skupině přidá jenom MAM. Zařízení se v MDM neregistrují automaticky.
 
 6. Vyberte **Uložit**.
 
-Ve výchozím nastavení není pro službu povolené dvoufaktorové ověřování. Při registraci zařízení ale dvoufaktorové ověřování doporučujeme. Před vyžádáním dvoufaktorového ověřování pro tuto službu musíte v Azure Active Directory nakonfigurovat zprostředkovatele dvoufaktorového ověřování a u uživatelských účtů nakonfigurovat vícefaktorové ověřování. Informace najdete v článku [Začínáme s Azure Multi-Factor Authentication Serverem](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
+Ve výchozím nastavení není pro službu povolené dvoufaktorové ověřování. Při registraci zařízení ale dvoufaktorové ověřování doporučujeme. Pokud chcete povolit dvoufaktorové ověřování, nakonfigurujte v Azure AD zprostředkovatele dvoufaktorového ověřování a u uživatelských účtů nakonfigurujte vícefaktorové ověřování. Informace najdete v článku [Začínáme s Azure Multi-Factor Authentication Serverem](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).

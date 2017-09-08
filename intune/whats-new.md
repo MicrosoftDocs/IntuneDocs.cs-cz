@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.date: 08/23/2017
+ms.date: 09/01/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 77f433037e4e576b29cf5800e9666008300ce568
-ms.sourcegitcommit: 3d1ec7a68977e6f5727821366ffd25657b459818
+ms.openlocfilehash: b50856bdc500cab4b206a105275b4842680d4423
+ms.sourcegitcommit: 71cdf99d639530e70dbe48d611d399e52c3150b0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -62,9 +62,15 @@ Pomocí podokna filtru můžete navíc vyhledat zařízení podle telefonního �
  
 Další podrobnosti o inventáři zařízení najdete v článku [Jak zobrazit inventář zařízení spravovaných přes Intune](device-inventory.md).
 
-#### <a name="conditional-access-support-for-mac-devices"></a>Podpora podmíněného přístupu pro zařízení Mac 
+#### <a name="conditional-access-support-for-macos-devices"></a>Podpora podmíněného přístupu pro zařízení s macOS 
 <!-- 720172 -->
 Teď můžete nastavit zásady podmíněného přístupu, které po zařízeních Mac vyžadují registraci v Intune a soulad se zásadami dodržování předpisů pro zařízení. Uživatelé si mohou například stáhnout aplikaci Portál společnosti Intune pro macOS a zaregistrovat svá zařízení Mac ve službě Intune. Intune prostřednictvím požadavků, jako je kód PIN, šifrování, verze operačního systému a integrita systému, vyhodnotí, zda zařízení Mac předpisy dodržuje nebo ne.
+
+- Přečtěte si další informace o [podpoře podmíněného přístupu pro zařízení s macOS](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
+
+#### <a name="company-portal-app-for-macos-is-in-public-preview----1484796---"></a>Aplikace Portál společnosti pro macOS ve verzi Public Preview <!---1484796--->
+Aplikace Portál společnosti pro macOS je teď k dispozici jako součást verze Public Preview pro podmíněný přístup v Enterprise Mobility + Security. Tato verze podporuje macOS 10.11 a novější. Získáte ji na [https://aka.ms/macOScompanyportal](https://aka.ms/macOScompanyportal). 
+
 
 #### <a name="new-device-restriction-settings-for-windows-10"></a>Nová nastavení omezení pro zařízení s Windows 10    
 <!--1063965, 1308850  -->
@@ -87,12 +93,29 @@ Další informace najdete v tématu o [nastavení služby Endpoint Protection 
 #### <a name="new-signed-in-experience-for-android-company-portal-users-and-app-protection-policy-users----621669---"></a>Nové prostředí po přihlášení pro uživatele Portálu společnosti pro Android a uživatele zásad ochrany aplikací <!-- 621669 -->
 Koncoví uživatelé teď můžou pomocí aplikace Portál společnosti pro Android procházet aplikace, spravovat zařízení a zobrazit kontakt na IT oddělení, aniž by své zařízení s Androidem zaregistrovali. Pokud už koncový uživatel používá aplikaci chráněnou zásadami Intune App Protection a spustí Portál společnosti pro Android, už se mu navíc nezobrazí výzva k registraci zařízení.
 
+### <a name="new-setting-in-the-android-company-portal-app-to-toggle-battery-optimization---1405990--"></a>Nové nastavení v aplikaci Portál společnosti pro Android k přepnutí optimalizace baterie <!--1405990-->
+Stránka **Nastavení** v aplikaci Portál společnosti pro Android obsahuje nové nastavení, které uživatelům umožní snadno vypnout optimalizaci baterie pro aplikace Portál společnosti a Microsoft Authenticator. Název aplikace uvedený v nastavení se liší v závislosti na tom, která aplikace spravuje pracovní účet. Doporučujeme, aby uživatelé optimalizaci baterie vypnuli kvůli lepšímu výkonu pracovních aplikací, které synchronizují e-maily a data. 
+
 #### <a name="multi-identity-support-for-onenote-for-ios---------1234281---"></a>Podpora více identit ve OneNotu pro iOS      <!-- 1234281 -->
 Koncoví uživatelé teď můžou v Microsoft OneNotu pro iOS používat různé účty (pracovní a osobní). Na firemní data v pracovních poznámkových blocích lze uplatnit zásady ochrany aplikací, aniž to ovlivní osobní poznámkové bloky. Pomocí zásad můžete například uživateli povolit hledání informací v pracovních poznámkových blocích, ale zabránit v kopírování a vkládání firemních dat z pracovních do osobních poznámkových bloků.
  
 - Přečtěte si další informace o aplikacích, které podporují [ochranu aplikací a více identit](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) s Intune.
 
+#### <a name="new-settings-to-allow-and-block-apps-on-samsung-knox-standard-devices"></a>Povolení a blokování aplikací na zařízeních se Samsung KNOX Standard pomocí nových nastavení
+<!-- 1305423 -->  
+V této verzi přidáváme nová [nastavení omezení zařízení](device-restrictions-android.md), která vám umožní zadat následující seznamy aplikací:
+ 
+- Aplikace, které mají uživatelé dovoleno instalovat.
+- Aplikace, které mají uživatelé zakázáno spouštět.
+- Aplikace, které jsou před uživatelem zařízení skryté.
+ 
+Aplikaci můžete zadat pomocí adresy URL, názvu balíčku nebo ze seznamu spravovaných aplikací.
 
+#### <a name="new-azure-ad-app-based-conditional-access-policy-ui-link-from-intune"></a>Odkaz na nové uživatelské rozhraní zásad podmíněného přístupu na základě aplikací Azure AD z Intune
+
+Správci IT teď můžou nastavit podmíněné zásady na základě aplikací prostřednictvím nového uživatelského rozhraní zásad podmíněného přístupu v úloze Azure AD. Podmíněný přístup na základě aplikací, který je v části Intune App Protection na portálu Azure Portal, prozatím zůstane a bude se vynucovat souběžně. Užitečný odkaz na nové uživatelské rozhraní zásad podmíněného přístup obsahuje také úloha Intune.
+
+- Přečtěte si další informace o [podmíněném přístupu na základě aplikací v Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference).
 
 
 ## <a name="notices"></a>Sdělení
@@ -112,6 +135,9 @@ Existující role pro správu mobilních aplikací (MAM) (Přispěvatel, Vlastn�
 
 
 ## <a name="whats-coming"></a>Co připravujeme
+
+#### <a name="ios-11-mail-app-will-support-oauth----1196951---"></a>Aplikace Mail v iOSu 11 bude podporovat OAuth <!---1196951--->
+Podmíněný přístup s Intune podporuje zabezpečenější ověřování na zařízeních s iOSem pomocí OAuth. Pro podporu této funkce teď bude v aplikaci Portál společnosti pro iOS odlišný tok, který umožní ověřování s větším zabezpečením. Když se koncoví uživatelé pokusí v aplikaci Mail přihlásit k novému účtu Exchange, zobrazí se jim výzva ve webovém zobrazení. Při registraci v Intune se uživatelům zobrazí výzva, aby nativní aplikaci Mail povolili přístup k certifikátu. Většině koncových uživatelů se už nebudou zobrazovat žádné další e-maily v karanténě. Existující poštovní účty budou i nadále používat základní ověřovací protokol, a proto se uživatelům těchto účtů budou stále doručovat e-maily v karanténě. Prostředí pro přihlášení koncových uživatelů se podobá prostředí v mobilních aplikacích Office.
 
 ### <a name="end-of-support-for-ios-80----1164477---"></a>Konec podpory pro systém iOS 8.0 <!---1164477--->
 Spravované aplikace a aplikace Portál společnosti pro iOS budou pro přístup k firemním prostředkům vyžadovat operační systém iOS 9.0 nebo novější. Zařízení, která nebudou do tohoto září aktualizována, již nebudou mít k těmto aplikacím nebo k Portálu společnosti přístup. 
