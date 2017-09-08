@@ -55,7 +55,7 @@ Výchozí omezení registrace se použijí pro všechny registrace zařízení s
 
   Klikněte na **Uložit**.
 6. V části **Všichni uživatelé** vyberte **Konfigurace platforem** a zvolte následující konfigurace. Pro každou z povolených platforem můžete nakonfigurovat následující možnosti:
-  - **Verze** – Určete **minimální** a **maximální** verzi operačního systému platformy pro zařízení s Androidem a iOSem. Verze operačního systému se nevztahují na zařízení registrovaná v programu registrace zařízení, pomocí Apple School Manageru ani v aplikaci Apple Configurator.
+  - **Verze** – Určete **minimální** a **maximální** verzi operačního systému platformy pro zařízení s Androidem a iOSem. Verze operačního systému se nevztahují na zařízení registrovaná v Programu registrace zařízení, pomocí Apple School Manageru ani v aplikaci Apple Configurator.
   - **V osobním vlastnictví** – Určete, jestli se mají **povolit**, nebo **blokovat** zařízení s Androidem, iOSem a macOS.
   ![Snímek obrazovky pracovního prostoru Omezení zařízení s výchozími konfiguracemi platformy zařízení zobrazující konfiguraci nastavení pro osobní vlastnictví](media/device-restrictions-platform-configurations.png)
   Klikněte na **Uložit**.

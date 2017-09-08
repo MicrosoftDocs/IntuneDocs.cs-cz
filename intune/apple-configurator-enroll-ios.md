@@ -54,7 +54,7 @@ Profil registrace zařízení definuje nastavení, která se během registrace p
   ![Snímek obrazovky Vytvořit profil s vybranou volbou Zaregistrovat s přidružením uživatele](./media/apple-configurator-profile-create.png)
 
 7. Určete **Přidružení uživatele**:
-   - **Zaregistrovat s přidružením uživatele** – Zařízení musí mít přidruženého uživatele (pomocí Průvodce nastavením), aby mohlo dostat přístup k firemním datům a e-mailu. Přidružení uživatele se vyžaduje u spravovaných zařízení, která patří konkrétním uživatelům a potřebují používat portál společnosti kvůli službám, jako je instalace aplikací.
+   - **Zaregistrovat s přidružením uživatele** – Zařízení musí mít přidruženého uživatele (pomocí Průvodce nastavením), aby mohlo dostat přístup k firemním datům a e-mailu. Přidružení uživatele se vyžaduje u spravovaných zařízení, která patří konkrétním uživatelům a potřebují používat Portál společnosti kvůli službám, jako je instalace aplikací.
    - **Zaregistrovat bez přidružení uživatele** – K zařízení není přidružený žádný uživatel. Toto spřažení použijte u zařízení určených k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, které vyžadují přidruženého uživatele (včetně aplikace Portál společnosti používané k instalaci obchodních aplikací), nebudou fungovat. Vyžaduje se pro přímou registraci.
 
 6. Uložte profil pomocí tlačítka **Vytvořit**.
