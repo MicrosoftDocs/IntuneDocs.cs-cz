@@ -1,6 +1,6 @@
 ---
 title: "Nastavení Intune na sdíleném zařízení pro aplikaci Classroom pro iOS"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete ovládat nastavení aplikace Classroom na zařízeních s iOSem."
 keywords: 
 author: robstackmsft
@@ -15,11 +15,11 @@ ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b95133d402b40085a61dedfdbd4abbb4eae73855
-ms.sourcegitcommit: bb1a1e4e0bc26543a9c8fb52cb208e298c6b8e3f
+ms.openlocfilehash: 860efd0fb312aab13e543b9a2b4114f408e7137e
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="how-to-configure-intune-education-settings-for-shared-ipad-devices"></a>Konfigurace nastavení vzdělávání Intune pro sdílená zařízení iPad
 

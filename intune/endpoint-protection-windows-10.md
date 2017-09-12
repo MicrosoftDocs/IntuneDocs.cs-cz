@@ -1,6 +1,6 @@
 ---
 title: "Nastavení ochrany koncového bodu Intune pro Windows 10"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení ochrany koncového bodu, jako je BitLocker, na zařízeních s Windows 10."
 keywords: 
 author: robstackmsft
@@ -15,11 +15,11 @@ ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f38320ca84a734f645c3d8554c5aef53836fd1be
-ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
+ms.openlocfilehash: 6c8e9d6b63557a5c73ff027d9bf476a6980f8314
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="endpoint-protection-settings-for-windows-10-and-later-in-microsoft-intune"></a>Nastavení ochrany koncového bodu pro Windows 10 a novější ve službě Microsoft Intune
 
