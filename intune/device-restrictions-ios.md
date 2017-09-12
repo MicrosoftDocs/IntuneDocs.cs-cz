@@ -1,6 +1,6 @@
 ---
 title: "Nastavení omezení pro zařízení s iOSem v Intune"
-titleSuffix: Intune on Azure
+titleSuffix: Azure portal
 description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s iOSem."
 keywords: 
 author: robstackmsft
@@ -15,11 +15,11 @@ ms.assetid: 73590192-54ca-4833-9f1d-83e1b654399f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: eec078fa0ddc0414b2912e3df841841d96b2e79e
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 10b27d6fc806ab2565631353761ed1c31795610d
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="ios-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení s iOSem v Microsoft Intune
 
@@ -73,7 +73,7 @@ To platí také pro nastavení dostupná z aplikace pro nastavení iOSu, např�
 
 -   **App Store** – Zablokuje přístup k obchodu s aplikacemi v zařízeních pod dohledem.
     - **Instalace aplikací z App Storu (jenom pod dohledem)** – Zablokuje App Store z domovské obrazovky zařízení. Koncoví uživatelé můžou aplikace dál instalovat pomocí iTunes nebo Apple Configuratoru.
-    - **Automatické stahování aplikací (jenom pod dohledem)**  – Zamezí stažení aplikací zakoupených na jiném zařízení s iOSem do tohoto zařízení.
+    - **Automatické stahování aplikací (jenom pod dohledem) ** – Zamezí stažení aplikací zakoupených na jiném zařízení s iOSem do tohoto zařízení.
 -   **Heslo pro přístup k obchodu s aplikacemi** – Vyžaduje, aby uživatel zadal heslo, než bude moci navštívit obchod s aplikacemi.
 -   **Nákupy v aplikaci** – Povolí ve spuštěné aplikaci nákupy v obchodě.
 -   **Explicitní obsah v hudbě, podcastech nebo zprávách z iTunes (jenom pod dohledem)** – Povolí zařízení přístup k obsahu z obchodu, který je označený jako obsah pro dospělé.

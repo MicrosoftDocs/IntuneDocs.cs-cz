@@ -1,6 +1,6 @@
 ---
 title: "Glosář služby Intune"
-titleSuffix: 
+titleSuffix: Azure portal
 description: "Přečtěte si něco o terminologii používané v Microsoft Intune."
 keywords: 
 author: robstackmsft
@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: bd7b5613-ee9f-4dc3-990c-ab4c1d40720d
 ms.custom: intune-azure
-ms.openlocfilehash: 2df6c8c79954c2145ffa6eb33782cee690d78b1d
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 8eaf82e995e3b572d897b63aaf36480424603ce6
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="microsoft-intune-glossary"></a>Glosář Microsoft Intune
 
@@ -86,7 +86,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="i"></a>I
 |||
 |-|-|
-|portál Intune|Portál Azure Portal, který používáte k většině operací správy Intune.|
+|Portál Azure Portal|Portál Azure Portal, který používáte k většině operací správy Intune.|
 |softwarový klient Intune|Alternativní způsob [správy některých počítačů s Windows](/intune-classic/get-started/choose-how-to-manage-devices), který vám pomůže zvolit vhodnou metodu|
 |Intune Software Publisher|Nástroj k [definování aplikací, které chcete nasadit, a jejich nahrání do cloudového úložiště](/intune-classic/deploy-use/add-apps)|
 |inventář|Slouží k zobrazení [hardwaru a nainstalovaného softwaru](/intune/device-inventory) v zařízeních, která spravujete.|
