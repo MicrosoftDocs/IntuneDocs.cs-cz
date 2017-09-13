@@ -1,0 +1,599 @@
+- name: Úvod
+  href: introduction-intune.md
+  expanded: true
+  items:
+    - name: Co je Azure Portal?
+      href: what-is-intune.md
+    - name: Co je Intune for Education?
+      href: introduction-intune-education.md
+    - name: Funkce Intune v Azure
+      href: ui-changes.md
+      items:
+        - name: "Změny v\_rámci skupin"
+          href: groups-get-started.md
+    - name: Registrace bezplatné zkušební verze
+      href: free-trial-sign-up.md
+    - name: Co je nového
+      href: whats-new.md
+      items:
+        - name: Co je nového v uživatelském rozhraní aplikace
+          href: whats-new-app-ui.md
+        - name: Archiv novinek (Azure Portal)
+          href: whats-new-archive.md
+        - name: Archiv novinek (klasický portál)
+          href: whats-new-archive-classic.md
+    - name: Architektura z širší perspektivy
+      href: high-level-architecture.md
+    - name: Životní cyklus zařízení a aplikací
+      href: introduction-device-app-lifecycles.md
+      items:
+        - name: Životní cyklus zařízení
+          href: device-lifecycle.md
+        - name: Životní cyklus aplikace
+          href: app-lifecycle.md
+    - name: Typické scénáře
+      href: common-scenarios.md
+    - name: Popis služby
+      href: microsoft-intune-service-description.md
+    - name: Známé problémy
+      href: known-issues.md
+    - name: Získání podpory
+      href: get-support.md
+- name: Začínáme s Intune
+  href: get-started-evaluation.md
+  items:
+    - name: Navigace na Azure Portalu
+      href: get-started-azure.md
+    - name: Umožňuje vytvořit uživatele.
+      href: get-started-users.md
+    - name: Vytvoření skupiny
+      href: get-started-groups.md
+    - name: Přiřazení zásad
+      href: get-started-policies.md
+    - name: Registrovat zařízení
+      href: get-started-enroll.md
+    - name: Přiřazení aplikací
+      href: get-started-apps.md
+- name: Nasazení plánu
+  items:
+    - name: Průvodce plánováním
+      href: planning-guide.md
+      items:
+        - name: Určení cílů a záměrů
+          href: planning-guide-deployment-goals.md
+        - name: Identifikace scénářů
+          href: planning-guide-scenarios.md
+        - name: Určení požadavků
+          href: planning-guide-requirements.md
+        - name: Vývoj plánu nasazení
+          href: planning-guide-rollout-plan.md
+        - name: Vývoj plánu komunikace
+          href: planning-guide-communication-plan.md
+        - name: Příprava plánu podpory
+          href: planning-guide-support-plan.md
+        - name: Návrh
+          href: planning-guide-design.md
+        - name: Implementace
+          href: planning-guide-onboarding.md
+        - name: Testování a ověřování
+          href: planning-guide-test-validation.md
+        - name: Další materiály a zdroje informací
+          href: planning-guide-resources.md
+    - name: Příručky k implementaci scénářů
+      items:
+        - name: Uživatelé s vlastním zařízením
+          href: byod-enable.md
+        - name: Ochrana Exchange Online
+          href: exchange-online-protect.md
+        - name: Snížení nákladů na helpdesk
+          href: password-reset.md
+    - name: Průvodce migrací
+      href: migration-guide.md
+      items:
+        - name: Příprava Intune
+          href: migration-guide-prepare.md
+          items:
+            - name: Základní nastavení
+              href: migration-guide-setup.md
+            - name: Konfigurace zásad pro správu zařízení a aplikací
+              href: migration-guide-configure-policies.md
+            - name: Konfigurace zásad pro ochranu aplikací
+              href: migration-guide-app-protection-policies.md
+            - name: Posouzení migrace
+              href: migration-guide-considerations.md
+        - name: Kampaň migrace
+          href: migration-guide-campaign.md
+          items:
+            - name: Plán komunikace
+              href: migration-guide-communication-plan.md
+            - name: Jak prosadit přijetí
+              href: migration-guide-drive-adoption.md
+            - name: Typický cyklus migrace
+              href: migration-guide-cycle.md
+- name: Postupy
+  items:
+    - name: Nastavení Intune
+      href: setup-steps.md
+      items:
+        - name: Požadavky
+          href: supported-devices-browsers.md
+          items:
+            - name: Využití šířky pásma sítě
+              href: network-bandwidth-use.md
+        - name: Přihlášení k Intune
+          href: account-sign-up.md
+        - name: Konfigurace domén
+          href: custom-domain-name-configure.md
+        - name: Přidávání uživatelů
+          href: users-add.md
+        - name: Přidání skupin
+          href: groups-add.md
+        - name: Přiřazení licencí
+          href: licenses-assign.md
+        - name: Nastavení autority pro správu mobilních zařízení (MDM)
+          href: mdm-authority-set.md
+    - name: Registrovat zařízení
+      href: device-enrollment.md
+      items:
+        - name: Možnosti registrace
+          href: enrollment-options.md
+          items:
+            - name: podmínky a ujednání
+              href: terms-and-conditions-create.md
+            - name: Omezení
+              href: enrollment-restrictions-set.md
+            - name: Certifikát Apple MDM Push Certificate
+              href: apple-mdm-push-certificate-get.md
+            - name: Podnikové identifikátory
+              href: corporate-identifiers-add.md
+            - name: Vícefaktorové ověřování
+              href: multi-factor-authentication.md
+            - name: správce registrace zařízení
+              href: device-enrollment-manager-enroll.md
+            - name: Mapování zařízení na skupiny
+              href: device-group-mapping.md
+        - name: "Nastavení registrace zařízení s\_Windows"
+          items:
+            - name: "Registrace zařízení s\_Windows"
+              href: windows-enroll.md
+            - name: Hromadná registrace
+              href: windows-bulk-enroll.md
+        - name: Nastavení registrace zařízení s Androidem
+          href: android-enroll.md
+        - name: Nastavení registrace zařízení s iOSem
+          href: ios-enroll.md
+          items:
+            - name: Program DEP (Device Enrollment Program)
+              href: device-enrollment-program-enroll-ios.md
+            - name: Apple School Manager
+              href: apple-school-manager-set-up-ios.md
+            - name: Apple Configurator
+              href: apple-configurator-enroll-ios.md
+        - name: Nastavení registrace zařízení s macOS
+          href: macos-enroll.md
+    - name: Spravujte zařízení.
+      href: device-management.md
+      items:
+        - name: Vynechat zámek aktivace
+          href: device-activation-lock-bypass.md
+        - name: Správa funkce Začít znovu pro Windows
+          href: device-fresh-start.md
+        - name: Vyhledání ztracených zařízení s iOSem
+          href: device-locate.md
+        - name: Povolení režimu ztráty zařízení s iOSem
+          href: device-lost-mode.md
+        - name: Uzamčení zařízení
+          href: device-remote-lock.md
+        - name: Resetování hesla
+          href: device-passcode-reset.md
+        - name: Restartování zařízení
+          href: device-restart.md
+        - name: Odhlášení aktuálního uživatele
+          href: device-logout-user.md
+        - name: Odebrání uživatele
+          href: device-remove-user.md
+        - name: Vzdálené řízení pro Android
+          href: device-profile-android-teamviewer.md
+        - name: Resetování PIN kódu ve Windows 10
+          href: device-windows-pin-reset.md
+        - name: Synchronizace zařízení
+          href: device-sync.md
+        - name: Prozkoumání inventáře zařízení
+          href: device-inventory.md
+        - name: Odebrání zařízení
+          href: devices-wipe.md
+    - name: Správa aplikací
+      href: app-management.md
+      items:
+        - name: Přidání aplikací
+          href: apps-add.md
+          items:
+            - name: Aplikace pro Android Store
+              href: store-apps-android.md
+            - name: Obchodní aplikace pro Android
+              href: lob-apps-android.md
+            - name: Aplikace pro iOS Store
+              href: store-apps-ios.md
+            - name: Obchodní aplikace pro iOS
+              href: lob-apps-ios.md
+            - name: Webové aplikace
+              href: web-app.md
+            - name: Aplikace pro Windows Phone 8.1 Store
+              href: store-apps-windows-phone-8-1.md
+            - name: Obchodní aplikace pro Windows Phone
+              href: lob-apps-windows-phone.md
+            - name: Aplikace pro Microsoft Store
+              href: store-apps-windows.md
+            - name: Obchodní aplikace pro Windows
+              href: lob-apps-windows.md
+            - name: Aplikace pro Android for Work
+              href: apps-add-android-for-work.md
+            - name: Aplikace Office 365 pro Windows 10
+              href: apps-add-office365.md
+        - name: Přiřazení aplikací
+          href: apps-deploy.md
+        - name: Monitorování aplikací
+          href: apps-monitor.md
+        - name: Konfiguračních profily aplikací pro iOS
+          href: app-configuration-policies-use-ios.md
+        - name: Konfiguračních profily aplikací pro Android
+          href: app-configuration-policies-use-android.md
+        - name: Zřizovací profily aplikací pro iOS
+          href: app-provisioning-profile-ios.md
+        - name: Selektivní vymazání aplikací
+          href: apps-selective-wipe.md
+        - name: Práce s hromadně zakoupenými aplikacemi a knihami
+          href: vpp-apps.md
+          items:
+            - name: Aplikace iOS VPP
+              href: vpp-apps-ios.md
+            - name: Aplikace pro Microsoft Store pro firmy
+              href: windows-store-for-business.md
+            - name: E-knihy pro iOS
+              href: vpp-ebooks-ios.md
+        - name: Konfigurace aplikace Portál společnosti
+          href: company-portal-app.md
+        - name: Konfigurace Managed Browseru
+          href: app-configuration-managed-browser.md
+    - name: Konfigurace zařízení
+      href: device-profiles.md
+      items:
+        - name: Konfigurace profilů zařízení
+          href: device-profile-create.md
+        - name: Konfigurace funkcí zařízení
+          href: device-features-configure.md
+          items:
+            - name: AirPrint pro iOS a MacOS
+              href: air-print-settings-ios-macos.md
+            - name: AirPlay pro iOS
+              href: airplay-settings-ios.md
+            - name: Rozložení domovské obrazovky pro iOS
+              href: home-screen-settings-ios.md
+            - name: Oznámení aplikací pro iOS
+              href: app-notification-settings-ios.md
+            - name: Sdílená zařízení pro iOS
+              href: shared-device-settings-ios.md
+            - name: Nastavení webového filtru pro iOS
+              href: web-content-filter-settings-ios.md
+        - name: Konfigurace omezení zařízení
+          href: device-restrictions-configure.md
+          items:
+            - name: Android
+              href: device-restrictions-android.md
+            - name: iOS
+              href: device-restrictions-ios.md
+            - name: macOS
+              href: device-restrictions-macos.md
+            - name: "Windows\_8.1"
+              href: device-restrictions-windows-8-1.md
+            - name: Windows Phone 8.1
+              href: device-restrictions-windows-phone-8-1.md
+            - name: Windows 10
+              href: device-restrictions-windows-10.md
+            - name: Windows 10 Team
+              href: device-restrictions-windows-10-teams.md
+            - name: Android for Work
+              href: device-restrictions-android-for-work.md
+        - name: Konfigurace nastavení e-mailů
+          href: email-settings-configure.md
+          items:
+            - name: Android
+              href: email-settings-android.md
+            - name: iOS
+              href: email-settings-ios.md
+            - name: Windows Phone 8.1
+              href: email-settings-windows-phone-8-1.md
+            - name: Windows 10
+              href: email-settings-windows-10.md
+        - name: Konfigurace nastavení sítě VPN
+          href: vpn-settings-configure.md
+          items:
+            - name: Android
+              href: vpn-settings-android.md
+            - name: iOS
+              href: vpn-settings-ios.md
+            - name: macOS
+              href: vpn-settings-macos.md
+            - name: "Windows\_8.1"
+              href: vpn-settings-windows-8-1.md
+            - name: Windows Phone 8.1
+              href: vpn-settings-windows-phone-8-1.md
+            - name: Windows 10
+              href: vpn-settings-windows-10.md
+        - name: Konfigurace nastavení sítě Wi-Fi
+          href: wi-fi-settings-configure.md
+          items:
+            - name: Android
+              href: wi-fi-settings-android.md
+            - name: iOS
+              href: wi-fi-settings-ios.md
+            - name: macOS
+              href: wi-fi-settings-macos.md
+            - name: Windows 8.1 a Windows 10
+              href: wi-fi-settings-import-windows-8-1.md
+        - name: Konfigurace nastavení upgradu edice Windows 10
+          href: edition-upgrade-configure-windows-10.md
+        - name: Ochrana koncových bodů s Windows 10
+          href: endpoint-protection-windows-10.md
+        - name: Konfigurace nastavení Windows 10 Education
+          href: education-settings-configure.md
+        - name: Konfigurace nastavení iOS Education
+          href: education-settings-configure-ios.md
+        - name: Konfigurace sdílených zařízení s iOS Education
+          href: education-settings-configure-ios-shared.md
+        - name: Konfigurace zásad aktualizací pro iOS
+          href: software-updates-ios.md
+        - name: Konfigurace certifikátů
+          href: certificates-configure.md
+          items:
+            - name: SCEP
+              href: certificates-scep-configure.md
+            - name: PKCS
+              href: certficates-pfx-configure.md
+        - name: Konfigurace nastavení Windows Information Protection
+          href: windows-information-protection-configure.md
+        - name: Monitorování výdajů na telekomunikaci
+          href: telecom-expenses-monitor.md
+        - name: Přiřazení profilů
+          href: device-profile-assign.md
+        - name: Monitorování profilů
+          href: device-profile-monitor.md
+        - name: Řešení potíží s profily
+          href: device-profile-troubleshoot.md
+    - name: Nastavení dodržování předpisů zařízením
+      href: device-compliance-get-started.md
+      items:
+        - name: Vytvoření zásad pro Android
+          href: compliance-policy-create-android.md
+        - name: Vytvoření zásad pro Android for Work
+          href: compliance-policy-create-android-for-work.md
+        - name: Vytvoření zásad pro iOS
+          href: compliance-policy-create-ios.md
+        - name: Vytvoření zásad pro macOS
+          href: compliance-policy-create-mac-os.md
+        - name: Vytvoření zásad pro Windows
+          href: compliance-policy-create-windows.md
+        - name: Monitorování dodržování předpisů zařízením
+          href: compliance-policy-monitor.md
+    - name: Nastavení podmíněného přístupu
+      href: conditional-access.md
+      items:
+        - name: Běžné způsoby použití podmíněného přístupu
+          href: conditional-access-intune-common-ways-use.md
+        - name: Instalace konektoru Exchange On-Premises Connector
+          href: exchange-connector-install.md
+        - name: Vytvoření a přiřazení zásad podmíněného přístupu
+          href: conditional-access-exchange-create.md
+        - name: "Změna přiřazení zásad podmíněného přístupu z\_klasického portálu Intune"
+          href: conditional-access-intune-reassign.md
+        - name: Podmíněný přístup založený na aplikacích
+          href: app-based-conditional-access-intune.md
+        - name: Nastavení podmíněného přístupu založeného na aplikacích
+          href: app-based-conditional-access-intune-create.md
+        - name: ADAL a Intune
+          href: app-modern-authentication-block.md
+        - name: Monitorování dodržování předpisů podmíněného přístupu
+          href: conditional-access-exchange-monitor.md
+    - name: "Ochrana dat aplikací a\_dat zařízení"
+      items:
+        - name: Použití zásad ochrany aplikací
+          href: app-protection-policy.md
+          items:
+            - name: Vytvoření zásad ochrany aplikací
+              href: app-protection-policies.md
+              items:
+                - name: Nastavení Androidu
+                  href: app-protection-policy-settings-android.md
+                - name: Nastavení iOS
+                  href: app-protection-policy-settings-ios.md
+            - name: Ověření zásad ochrany aplikací
+              href: app-protection-policies-validate.md
+            - name: Monitorování stavu uživatele u ochrany aplikací
+              href: app-protection-policies-monitor.md
+            - name: Příprava na zásady ochrany aplikací WIP
+              href: app-protection-policies-configure-windows-10.md
+            - name: Vytvoření a přiřazení zásad ochrany aplikací WIP
+              href: windows-information-protection-policy-create.md
+            - name: Správa přenosu dat mezi aplikacemi pro iOS
+              href: data-transfer-between-apps-manage-ios.md
+        - name: Ochrana před mobilními hrozbami
+          href: mobile-threat-defense.md
+          items:
+            - name: Nastavení Lookoutu
+              href: lookout-mobile-threat-defense-connector.md
+              items:
+                - name: Integrace Lookoutu a Intune
+                  href: lookout-mtd-connector-integration.md
+            - name: Nastavení služby Skycure
+              href: skycure-mobile-threat-defense-connector.md
+              items:
+                - name: Integrace služeb Skycure a Intune
+                  href: skycure-mtd-connector-integration.md
+            - name: Nastavení Check Pointu
+              href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
+              items:
+                - name: Integrace Check Pointu a Intune
+                  href: checkpoint-sandblast-mobile-mtd-connector-integration.md
+            - name: Přidání aplikací MTD
+              href: mtd-apps-ios-app-configuration-policy-add-assign.md
+            - name: Povolení MTD v Intune
+              href: mtd-connector-enable.md
+            - name: Vytvoření zásad dodržování předpisů zařízením MTD
+              href: mtd-device-compliance-policy-create.md
+        - name: Řízení přístupu k síti
+          href: network-access-control-integrate.md
+        - name: Nastavení Windows Hello
+          href: windows-hello.md
+    - name: Správa rolí
+      href: role-based-access-control.md
+    - name: Správa aktualizací softwaru
+      href: windows-update-for-business-configure.md
+    - name: Správa počítačů pomocí softwarového agenta
+      href: /intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune
+      maintainContext: true
+      items:
+        - name: Srovnání správy počítačů
+          href: /intune-classic/deploy-use/pc-management-comparison
+          maintainContext: true
+        - name: Instalace klientského počítače
+          href: /intune-classic/deploy-use/install-the-windows-pc-client-with-microsoft-intune
+          maintainContext: true
+        - name: Běžné úlohy správy počítačů
+          href: /intune-classic/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client
+          maintainContext: true
+          items:
+            - name: Zásady pro počítače
+              href: /intune-classic/deploy-use/use-policies-to-simplify-windows-pc-management
+              maintainContext: true
+            - name: Zobrazení inventáře
+              href: /intune-classic/deploy-use/view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune
+              maintainContext: true
+            - name: Vyřazení počítačů
+              href: /intune-classic/deploy-use/retire-a-windows-pc-with-microsoft-intune
+              maintainContext: true
+            - name: Propojení počítačů s uživateli
+              href: /intune-classic/deploy-use/manage-user-device-linking-for-windows-pcs-with-microsoft-intune
+              maintainContext: true
+            - name: Vzdálená pomoc
+              href: /intune-classic/deploy-use/request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune
+              maintainContext: true
+        - name: Zásady ochrany počítačů se systémem Windows
+          href: /intune-classic/deploy-use/policies-to-protect-windows-pcs-in-microsoft-intune
+          maintainContext: true
+          items:
+            - name: Aktualizace softwaru
+              href: /intune-classic/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune
+              maintainContext: true
+            - name: Brána Windows Firewall
+              href: /intune-classic/deploy-use/help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune
+              maintainContext: true
+            - name: Endpoint Protection
+              href: /intune-classic/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune
+              maintainContext: true
+        - name: Přidání aplikací pro klientské počítače Intune
+          href: /intune-classic/deploy-use/add-apps-for-windows-pcs-in-microsoft-intune
+          maintainContext: true
+        - name: Správa licenčních smluv
+          href: /intune-classic/deploy-use/manage-license-agreements-for-windows-pc-software-in-microsoft-intune
+          maintainContext: true
+        - name: Řešení konfliktů zásad
+          href: /intune-classic/deploy-use/resolve-gpo-and-microsoft-intune-policy-conflicts
+          maintainContext: true
+    - name: Informování uživatelů
+      href: end-user-educate.md
+      items:
+        - name: Zprávy na Portálu společnosti
+          href: end-user-company-portal-messages.md
+        - name: Ochrana aplikací v Androidu
+          href: end-user-mam-apps-android.md
+        - name: Ochrana aplikací v iOSu
+          href: end-user-mam-apps-ios.md
+        - name: Jak získat aplikace pro Android
+          href: end-user-apps-android.md
+        - name: Jak získat aplikace pro iOS
+          href: end-user-apps-ios.md
+        - name: Jak získat aplikace pro Windows
+          href: end-user-apps-windows.md
+- name: Monitorování a odstraňování potíží
+  items:
+    - name: Pomoc uživatelům s řešením problémů
+      href: help-desk-operators.md
+    - name: Použití datového skladu Intune
+      href: reports-nav-create-intune-reports.md
+      items:
+        - name: Připojení k datovému skladu pomocí Power BI
+          href: reports-proc-get-a-link-powerbi.md
+- name: Automatizace a přizpůsobení
+  items:
+    - name: Konfigurace vlastních nastavení zařízení
+      href: custom-settings-configure.md
+      items:
+        - name: Android
+          href: custom-settings-android.md
+          items:
+            - name: Vytvoření profilu Wi-Fi s předsdíleným klíčem
+              href: wi-fi-profile-shared-key.md
+            - name: Profil sítě VPN pro jednotlivé aplikace
+              href: android-pulse-secure-per-app-vpn.md
+            - name: Povolení a blokování aplikací pro Samsung KNOX Standard
+              href: samsung-knox-apps-allow-block.md
+        - name: iOS
+          href: custom-settings-ios.md
+        - name: macOS
+          href: custom-settings-macos.md
+        - name: Windows Phone 8.1
+          href: custom-settings-windows-phone-8-1.md
+        - name: Windows 10
+          href: custom-settings-windows-10.md
+        - name: Android for Work
+          href: custom-settings-android-for-work.md
+    - name: Ochrana aplikací pomocí sady Intune App SDK
+      href: app-sdk.md
+      items:
+        - name: Začínáme se sadou Intune App SDK
+          href: app-sdk-get-started.md
+        - name: Příprava obchodních aplikací na ochranu aplikací
+          href: apps-prepare-mobile-application-management.md
+        - name: Nástroj App Wrapping pro iOS
+          href: app-wrapper-prepare-ios.md
+        - name: Intune App SDK pro iOS
+          href: app-sdk-ios.md
+        - name: Nástroj App Wrapping pro Android
+          href: app-wrapper-prepare-android.md
+        - name: Intune App SDK pro Android
+          href: app-sdk-android.md
+        - name: Modul plug-in Cordova sady Intune App SDK
+          href: app-sdk-cordova.md
+        - name: Komponenta Xamarin sady Intune App SDK
+          href: app-sdk-xamarin.md
+    - name: Vykazování pomocí rozhraní API datového skladu Intune
+      href: reports-nav-intune-data-warehouse.md
+      items:
+        - name: Získání dat z rozhraní API datového skladu pomocí klienta REST
+          href: reports-proc-data-rest.md
+        - name: Koncový bod rozhraní API datového skladu
+          href: reports-api-url.md
+        - name: Datový model datového skladu
+          href: reports-ref-data-model.md
+          items:
+            - name: Referenční informace o entitě Date
+              href: reports-ref-date.md
+            - name: Referenční informace pro entitu uživatele
+              href: reports-ref-user.md
+            - name: Referenční informace o entitách správy mobilních aplikací (MAM)
+              href: reports-ref-mobile-app-management.md
+            - name: Referenční informace o entitách zařízení
+              href: reports-ref-devices.md
+            - name: Referenční informace o entitách aplikací
+              href: reports-ref-application.md
+            - name: Referenční informace pro entity zásad
+              href: reports-ref-policy.md
+    - name: Instalace aplikací pro Windows bokem
+      href: app-sideload-windows.md
+    - name: Použití rozhraní Graph API pro Intune
+      href: intune-graph-apis.md
+      items:
+        - name: Referenční informace o rozhraních Graph API pro Intune
+          href: 'https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview'
+- name: Glosář
+  href: intune-glossary.md
