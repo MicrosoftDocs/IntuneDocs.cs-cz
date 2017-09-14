@@ -1,6 +1,6 @@
 ---
 title: "Použití zásad konfigurace aplikací v Intune pro Android for Work"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Přečtěte si, jak lze pomocí zásad konfigurace aplikací předávat konfigurační data do aplikace pro Android for Work při jejím spuštění."
 keywords: 
 author: mattbriggs
@@ -15,11 +15,11 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7486a62ed11b83f00414a74b2d816f6048826f73
-ms.sourcegitcommit: 4034ac474bfed358270a32459a2cf2fe02f44e45
+ms.openlocfilehash: 4b73202a1a68bd2dd3dcbfa86c21cb09ae00056c
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="how-to-use-microsoft-intune-app-configuration-policies-for-android-for-work"></a>Použití zásad konfigurace aplikací v Microsoft Intune pro Android for Work
 
@@ -27,16 +27,16 @@ ms.lasthandoff: 08/15/2017
 
 Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastavení, která mohou být k dispozici, když uživatel spustí aplikaci pro Android for Work. Ne všechny aplikace ale konfiguraci aplikací podporují. Zeptejte se vývojáře, jestli vaše aplikace zásady konfigurace aplikací podporuje.
 
-Zásady konfigurace aplikací vám umožňují předem nakonfigurovat dostupná nastavení aplikace, ještě než ji uživatel spustí. Některé aplikace pro Android podporují možnosti spravované konfigurace, které můžete nastavit pomocí [návrháře konfigurace](#use-configuration-designer) v konzole Intune. Jiná nastavení konfigurace aplikací (například ta, která využívají typy sad) ale v návrháři zadávat nelze.  Pro tyto hodnoty je potřeba použít [editor JSON](#use-json-editor).   Nastavení se aplikaci poskytne automaticky při její instalaci.
+Zásady konfigurace aplikací vám umožňují předem nakonfigurovat dostupná nastavení aplikace, ještě než ji uživatel spustí. Některé aplikace pro Android podporují možnosti spravované konfigurace, které můžete nastavit pomocí [návrháře konfigurace](#use-configuration-designer) na Azure Portalu. Jiná nastavení konfigurace aplikací (například ta, která využívají typy sad) ale v návrháři zadávat nelze.  Pro tyto hodnoty je potřeba použít [editor JSON](#use-json-editor).   Nastavení se aplikaci poskytne automaticky při její instalaci.
 
 Tyto zásady nepřiřazujte přímo uživatelům a zařízením. Místo toho přidružíte zásadu k aplikaci a pak přiřadíte tuto aplikaci. Nastavení zásad se použije, když je aplikace zkontroluje (obvykle při prvním spuštění).
 
 ## <a name="use-configuration-designer"></a>Použití návrháře konfigurace
 
-1. Na portálu Intune vyberte **Mobilní aplikace**. V části **Spravovat** vyberte **Zásady konfigurace aplikací** a potom klikněte na **Přidat**.
+1. Na Azure Portalu zvolte **Mobilní aplikace**. V části **Spravovat** vyberte **Zásady konfigurace aplikací** a potom klikněte na **Přidat**.
 2. Zadejte tyto podrobnosti:
-    - **Název**: Název profilu, který se zobrazí v konzole Intune
-    - **Popis**: Popis profilu, který se zobrazí v konzole Intune
+    - **Název**: Název profilu, který se zobrazí na Azure Portalu
+    - **Popis**: Popis profilu, který se zobrazí na Azure Portalu
     - **Platforma**: Vyberte **Android**.
     - **Typ registrace zařízení** - možnost **Zaregistrováno přes Intune** je předem vybraná.
 3. Kliknutím na **Přidružená aplikace** přejděte na výběr aplikace, pro kterou chcete definovat zásadu konfigurace.  Ze seznamu vyberte některou z aplikací pro Android for Work, které jste schválili a synchronizovali s Intune.
@@ -51,10 +51,10 @@ Tyto zásady nepřiřazujte přímo uživatelům a zařízením. Místo toho př
 
 ## <a name="use-json-editor"></a>Použití editoru JSON
 
-1. Na portálu Intune vyberte **Mobilní aplikace**. V části **Spravovat** vyberte **Zásady konfigurace aplikací** a potom klikněte na **Přidat**.
+1. Na Azure Portalu zvolte **Mobilní aplikace**. V části **Spravovat** vyberte **Zásady konfigurace aplikací** a potom klikněte na **Přidat**.
 2. Zadejte tyto podrobnosti:
-    - **Název**: Název profilu, který se zobrazí v konzole Intune
-    - **Popis**: Popis profilu, který se zobrazí v konzole Intune
+    - **Název**: Název profilu, který se zobrazí na Azure Portalu
+    - **Popis**: Popis profilu, který se zobrazí na Azure Portalu
     - **Platforma**: Vyberte **Android**.
     - **Typ registrace zařízení** - možnost **Zaregistrováno přes Intune** je předem vybraná.
 3. Kliknutím na **Přidružená aplikace** přejděte na výběr aplikace, pro kterou chcete definovat zásadu konfigurace.  Ze seznamu vyberte některou z aplikací pro Android for Work, které jste schválili a synchronizovali s Intune.
@@ -73,10 +73,10 @@ Spuštěná aplikace přiřazená zařízení se spustí s nastavením, které j
 
 Předem nakonfigurovat můžete také oprávnění aplikací k přístupu k funkcím zařízení s Androidem. Aplikace pro Android, které vyžadují oprávnění zařízení, jako je například přístup k umístění nebo fotoaparátu zařízení, ve výchozím nastavení vyzvou uživatele, aby oprávnění přijali nebo odmítli. Pokud například aplikace používá mikrofon zařízení, potom bude koncový uživatel vyzván, aby aplikaci udělil oprávnění používat mikrofon.
 
-1. Na portálu Intune vyberte **Mobilní aplikace**. V části **Spravovat** vyberte **Zásady konfigurace aplikací** a potom klikněte na **Přidat**.
+1. Na Azure Portalu zvolte **Mobilní aplikace**. V části **Spravovat** vyberte **Zásady konfigurace aplikací** a potom klikněte na **Přidat**.
 2. Zadejte tyto podrobnosti:
-    - **Název**: Název profilu, který se zobrazí v konzole Intune
-    - **Popis**: Popis profilu, který se zobrazí v konzole Intune
+    - **Název**: Název profilu, který se zobrazí na Azure Portalu
+    - **Popis**: Popis profilu, který se zobrazí na Azure Portalu
     - **Platforma**: Vyberte **Android**.
     - **Typ registrace zařízení** - možnost **Zaregistrováno přes Intune** je předem vybraná.
 3. Kliknutím na **Přidružená aplikace** přejděte na výběr aplikace, pro kterou chcete definovat zásadu konfigurace.  Ze seznamu vyberte některou z aplikací pro Android for Work, které jste schválili a synchronizovali s Intune.

@@ -1,6 +1,6 @@
 ---
 title: "Vytvoření a nasazení zásad ochrany aplikací"
-titleSuffix: Intune on Azure
+titleSuffix: Azure portal
 description: "Přečtěte si, jak mohou zásady ochrany aplikací pomoci při ochraně firemních dat, která používají vámi spravované aplikace."
 keywords: 
 author: mattbriggs
@@ -15,11 +15,11 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 47cafd6fa252ca7db9ca1129c5dcc5bd0d70d154
-ms.sourcegitcommit: 2ee1e8248814d74cef80b609a8e43f59fa0b2618
+ms.openlocfilehash: 2e535b2aa11401d51edb33cbad54e9222fd6da6a
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Vytvoření a přiřazení zásad ochrany aplikací
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-Pokud hledáte pokyny pro klasickou konzolu Intune, přejděte na téma [Jak vytvořit zásady ochrany aplikací](https://docs.microsoft.com/intune-classic/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune).
+Pokud hledáte pokyny na klasickém portálu Intune, přečtěte si, [jak vytvořit zásady ochrany aplikací](https://docs.microsoft.com/intune-classic/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune).
 
 Zásady ochrany aplikací je možné použít pro aplikace běžící na zařízeních, která může nebo nemusí spravovat Intune. Podrobnější popis, jak fungují zásady ochrany aplikací, a scénáře podporované zásadami ochrany aplikací Intune najdete v tématu [Co jsou zásady ochrany aplikací Microsoft Intune](app-protection-policy.md).
 

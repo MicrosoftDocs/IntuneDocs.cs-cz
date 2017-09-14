@@ -1,6 +1,6 @@
 ---
 title: "Přidání aplikací do Microsoft Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Tyto postupy vám pomůžou připravit vaše aplikace v Intune pro přiřazení uživatelům a zařízením. \""
 keywords: 
 author: mattbriggs
@@ -15,11 +15,11 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 14f2ac5b25cfe3e688363a21775872baaa9ff89a
-ms.sourcegitcommit: 4034ac474bfed358270a32459a2cf2fe02f44e45
+ms.openlocfilehash: 108f789f16304498cf54387326d112353bf70aa2
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="how-to-add-an-app-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune
 
@@ -81,7 +81,7 @@ Když přidáte aplikaci do Intune, budete mít možnost vybrat požadovanou kat
 
 Dříve služba Intune obsahovala řadu integrovaných aplikací, které jste mohli rychle přiřadit. Na základě vaší zpětné vazby jsme tento seznam odebrali a integrované aplikace už neuvidíte.
 Pokud jste už ale nějaké integrované aplikace přiřadili, budou se v seznamu aplikací dál zobrazovat. Tyto aplikace můžete dál přiřazovat podle potřeby.
-V novější verzi plánujeme přidat jednodušší způsob výběru a přiřazování integrovaných aplikací z portálu Intune.
+V pozdější verzi plánujeme přidat jednodušší způsob výběru a přiřazování integrovaných aplikací z Azure Portalu.
 
 ## <a name="next-steps"></a>Další kroky
 

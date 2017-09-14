@@ -1,6 +1,6 @@
 ---
 title: "Řízení správy na základě rolí s Intune"
-titleSuffix: Intune Azure preview
+titleSuffix: Azure portal
 description: "Intune Azure Preview: Informace o tom, jak RBAC umožňuje určovat, kdo může provádět akce a změny."
 keywords: 
 author: andredm7
@@ -15,11 +15,11 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3aff61f6201d6569e35aa9d556aa655d28775d2f
-ms.sourcegitcommit: 18cdbdc226f64368de892a8c5cff157c37986c57
+ms.openlocfilehash: e9dc65389485d2a77e351b5e781824eed0612054
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="role-based-administration-control-rbac-with-intune"></a>Řízení správy na základě rolí (RBAC) s Intune
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 08/03/2017
 
 ![Příklad řízení správy na základě rolí s Intune](./media/intune-rbac-1.PNG)
 
-Počínaje novým portálem Intune poskytuje **Azure Active Directory (Azure AD)** dvě role adresáře, které je možné s Intune použít. Tyto role mají přidělena úplná oprávnění provádět v Intune všechny aktivity:
+Na novém Azure Portalu poskytuje **Azure Active Directory (Azure AD)** dvě role adresáře, které je možné s Intune použít. Tyto role mají přidělena úplná oprávnění provádět v Intune všechny aktivity:
 
 - **Globální správce:** Uživatelé s touto rolí mají přístup ke všem funkcím pro správu ve službě Azure AD a službám s federováním do služby Azure AD, jako je Exchange Online, SharePoint Online a Online Skype pro firmy. Osoba, která se zaregistruje k tenantovi Azure AD, se stane globálním správcem. Další role správců můžou přiřazovat jenom globální správci Azure AD. Organizace může mít víc globálních správců. Globální správci můžou resetovat heslo kteréhokoliv uživatele a všech ostatních správců.
 
@@ -46,12 +46,12 @@ Počínaje novým portálem Intune poskytuje **Azure Active Directory (Azure AD)
     > [!TIP]
     > V Intune jsou také tři rozšíření Azure AD: **Uživatelé**, **Skupiny** a **Podmíněný přístup** řízená prostřednictvím Azure AD RBAC. **Správce uživatelských účtů** navíc provádí jenom aktivity uživatele nebo skupiny AAD a nemá úplná oprávnění provádět všechny aktivity v Intune. Další detaily naleznete v tématu [Řízení správy na základě rolí s Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).
 
-## <a name="roles-created-in-the-intune-classic-console"></a>Role vytvořené v klasické konzole Intune
+## <a name="roles-created-in-the-intune-classic-portal"></a>Role vytvořené na klasickém portálu Intune
 
-Z klasické konzoly Intune do Intune v Azure se migrují jenom **správci služeb** Intune s úplnými oprávněními. **Správce služeb** v Intune s přístupem jen pro čtení nebo helpdesk je nutné odebrat z klasického portálu a znovu jim přiřadit role v Intune na portálu Azure.
+Z klasického portálu Intune se do Intune na Azure Portalu migrují jenom **správci služeb** Intune s úplnými oprávněními. **Správce služeb** v Intune s přístupem jen pro čtení nebo helpdesk je nutné odebrat z klasického portálu a znovu jim přiřadit role v Intune na portálu Azure.
 
 > [!IMPORTANT]
-> Pokud budou vaši správci dál potřebovat přístup ke správě počítačů pomocí Intune, bude nutné zachovat přístup Správce služby Intune na klasické konzole.
+> Pokud budou vaši správci dál potřebovat přístup ke správě počítačů pomocí Intune, bude nutné zachovat přístup Správce služby Intune na klasickém portálu.
 
 ## <a name="built-in-roles"></a>Předdefinované role
 

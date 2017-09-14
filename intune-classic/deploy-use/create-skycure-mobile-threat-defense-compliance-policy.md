@@ -1,6 +1,6 @@
 ---
 title: "Vytvoření zásad dodržování předpisů pro ochranu před mobilními hrozbami Skycure"
-description: "Vytvořte zásady dodržování předpisů pro ochranu před mobilními hrozbami Skycure v klasické konzole služby Intune."
+description: "Zásady dodržování předpisů pro ochranu před mobilními hrozbami Skycure se vytvářejí na klasickém portálu Intune."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -14,11 +14,11 @@ ms.assetid: 56ff1728-1119-4e8a-aae6-ed5c7fafa052
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 29caf162500e25c2a0151be92aabe4cc432e241b
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: e8f7b6c5c1e8497ca698b83215525ba9b4056f59
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="create-skycure-mobile-threat-defense-compliance-policy"></a>Vytvoření zásad dodržování předpisů pro ochranu před mobilními hrozbami Skycure
 
@@ -38,7 +38,7 @@ V rámci nastavení ochrany před mobilními hrozbami Skycure jste v konzole S
 
 ## <a name="to-create-skycure-compliance-policy"></a>Postup vytvoření zásad dodržování předpisů služby Skycure
 
-1.  Přejděte na stránku [klasické konzoly Intune](https://manage.microsoft.com/) a zadejte své přihlašovací údaje.
+1.  Přejděte na [klasický portál Intune](https://manage.microsoft.com/) a zadejte své přihlašovací údaje.
 
 2.  Zvolte **Předpisy** &gt; **Zásady dodržování předpisů**. Můžete použít stávající zásady dodržování předpisů, nebo vytvořit nové.
 

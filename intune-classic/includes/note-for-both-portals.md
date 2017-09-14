@@ -1,4 +1,4 @@
 |Platí pro: Intune |
 |--|
-|Toto téma platí pro Intune na portálu Azure Portal i pro klasickou konzolu.|
+|Toto téma platí pro Intune na Azure Portalu i na klasickém portálu.|
 | |

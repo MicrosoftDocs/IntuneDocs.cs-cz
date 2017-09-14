@@ -1,6 +1,6 @@
 ---
 title: "Skupiny Intune Classic na portálu Azure Portal"
-titleSuffix: Intune on Azure
+titleSuffix: Azure portal
 description: "Seznamte se s novinkami ve skupinách na portálu Azure pro Intune."
 keywords: 
 author: nathbarn
@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 323f384d-8a76-4adc-999b-e508d641bfa1
 ms.custom: intune-azure
-ms.openlocfilehash: c51c3102cc78cf095e27da4ff199cb3fb5ae14a6
-ms.sourcegitcommit: 45204e0fb8cb4cce449e65f2f1d7bb6f6ac4ccf5
+ms.openlocfilehash: 7ba5c3d0e6f241c5734d629a23f092ac007f8300
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="intune-classic-groups-in-the-azure-portal"></a>Skupiny Intune Classic na portálu Azure Portal
 
@@ -38,7 +38,7 @@ Některé možnosti skupin Intune, které jste dříve možná používali, nejs
 - Možnost **Vyloučit konkrétní členy** ze skupiny na portálu Azure Portal neexistuje. Toto chování ale můžete nahradit pomocí skupiny zabezpečení Azure AD s rozšířenými pravidly. Pokud například chcete vytvořit pokročilé pravidlo, které do skupiny zabezpečení zahrne všechny pracovníky vašeho prodejního oddělení, ale vynechá všechny skupiny, které mají v názvu slovo „Asistent“, můžete použít toto rozšířené pravidlo:
 
   `(user.department -eq "Sales") -and -not (user.jobTitle -contains "Assistant")`.
-- Skupina **Všechna zařízení spravovaná prostřednictvím protokolu Exchange ActiveSync** na konzole Intune se do Azure AD nemigrovala. K informacím o zařízeních spravovaných přes EAS však stále máte přístup z portálu Azure Portal.
+- Skupina **Všechna zařízení spravovaná prostřednictvím protokolu Exchange ActiveSync** v klasické konzole Intune se do služby Azure AD nemigrovala. K informacím o zařízeních spravovaných přes EAS však stále máte přístup z portálu Azure Portal.
 
 ## <a name="how-to-get-started"></a>Jak začít?
 
@@ -51,9 +51,9 @@ Některé možnosti skupin Intune, které jste dříve možná používali, nejs
 
 
 ## <a name="what-happened-to-intune-groups"></a>Co se stalo se skupinami Intune?
-Při migraci skupin z klasického portálu Intune na Azure Portal se použijí následující pravidla:
+Při migraci skupin z Azure Portalu do Intune na Azure Portalu se použijí následující pravidla:
 
-| Skupiny v klasické službě Intune|Skupiny ve službě Azure AD|
+| Skupiny v Intune|Skupiny ve službě Azure AD|
 |-----------------------------------------------------------------------|-------------------------------------------------------------|
 |Statická skupina uživatelů|Statická skupina zabezpečení Azure AD|
 |Dynamická skupina uživatelů|Statické skupiny zabezpečení služby Azure AD s hierarchií skupiny zabezpečení služby Azure AD|
@@ -65,7 +65,7 @@ Při migraci skupin z klasického portálu Intune na Azure Portal se použijí n
 
 ## <a name="group-hierarchy"></a>Hierarchie skupin
 
-V klasické konzole Intune měly všechny skupiny nadřazenou skupinu. Skupiny mohly obsahovat jenom členy ze svojí nadřazené skupiny. V Azure AD můžou podřízené skupiny obsahovat členy, které nejsou v jejich nadřazené skupině.
+V konzole Intune měly všechny skupiny nadřazenou skupinu. Skupiny mohly obsahovat jenom členy ze svojí nadřazené skupiny. V Azure AD můžou podřízené skupiny obsahovat členy, které nejsou v jejich nadřazené skupině.
 
 ## <a name="group-attributes"></a>Atributy skupin
 Atributy jsou vlastnosti zařízení, které se dají použít při definování skupin. Tato tabulka popisuje, jak se kritéria přesouvají do skupin zabezpečení služby Azure AD.
@@ -84,4 +84,4 @@ Atributy jsou vlastnosti zařízení, které se dají použít při definování
 
 ## <a name="what-happens-to-policies-and-apps-you-previously-deployed"></a>Co se stane se zásadami a aplikacemi, které jste už nasadili?
 
-Zásady a aplikace jsou i nadále nasazené do skupin, stejně jako dříve. Tyto skupiny teď ovšem budete spravovat z portálu Azure Portal místo z konzoly Intune Classic.
+Zásady a aplikace jsou i nadále nasazené do skupin, stejně jako dříve. Tyto skupiny teď ale budete spravovat z Azure Portalu, ne z konzoly Intune.

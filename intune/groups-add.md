@@ -1,6 +1,6 @@
 ---
 title: "Nastavení omezení registrace v Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Omezení registrace podle platformy a nastavení limitu počtu zařízení pro registraci zařízení v Intune \""
 keywords: 
 author: nathbarn
@@ -15,11 +15,11 @@ ms.assetid: f0a2b858-a824-4598-ab81-bdd8e62ac3b3
 ms.reviewer: amyros
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c8b945cf1722d25a9242a4a7776d023a58fe0036
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: b74faadfc93485023ea71f42b703f3b102aaa5b3
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="add-groups-in-intune"></a>Přidání skupin do Intune
 Služba Intune používá ke správě zařízení a uživatelů skupiny Azure Active Directory (AD). Jako správce Intune můžete nastavit skupiny tak, aby odpovídaly potřebám vaší organizace. Vytvořte skupiny, které uživatele nebo zařízení uspořádají podle zeměpisné polohy, oddělení nebo vlastností hardwaru. Skupiny použijte ke spravování úloh se škálováním. Například můžete nastavit zásady pro mnoho uživatelů nebo nasadit aplikace řadě zařízení.
@@ -33,8 +33,8 @@ Můžete přidat následující typy skupin:
 ## <a name="add-a-new-group"></a>Přidání nové skupiny
 
 Pomocí následujícího postupu vytvořte novou skupinu.
-1. Na portálu Intune přejděte na **Skupiny** a potom v okně **Všechny skupiny** zvolte **Nová skupina**.
-  ![Snímek obrazovky portálu Intune s vybranou možností Nová skupina](./media/groups-add-new.png)
+1. Na Azure Portalu přejděte na **Skupiny** a potom v okně **Všechny skupiny** zvolte **Nová skupina**.
+  ![Snímek obrazovky Azure Portalu s vybranou možností Nová skupina](./media/groups-add-new.png)
 2. Zadejte **název** a **popis** nové skupiny. Tyto vlastnosti se objeví jenom na portálu správy a uživatelům se nezobrazí.
 
 3. Zvolte **typ členství**:

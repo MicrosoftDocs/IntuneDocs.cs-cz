@@ -14,17 +14,17 @@ ms.assetid: ed2db991-4729-49a7-a1e6-be2ffa0d03d1
 ROBOTS: noindex,nofollow
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 90ce9ae6c1f48b6a42cf62f8873621499ba05256
-ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
+ms.openlocfilehash: a12d3aaf6a893291e4818c76c02c8a3708b6b6a0
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 09/09/2017
 ---
-# <a name="whats-new-in-the-intune-classic-console---previous-months"></a>Co je nového v klasické konzole Intune – předchozí měsíce
+# <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Co je nového na klasickém portálu Intune – předchozí měsíce
 
 [!INCLUDE[classic-portal](./includes/classic-portal.md)]
 
-Tato stránka obsahuje seznam nových funkcí a oznámení dříve zveřejněných na [stránce novinek](whats-new.md) pro klasickou konzolu Intune.
+Tato stránka obsahuje seznam nových funkcí a oznámení dříve zveřejněných na [stránce novinek](whats-new.md) pro klasický portál Intune.
 
 ## <a name="april-2017"></a>Duben 2017
 
@@ -67,7 +67,7 @@ Nový indikátor průběhu najdete na stránce[Co je nového v uživatelském ro
 
 K Azure Active Directory a Intune můžete teď pomocí Windows Configuration Designeru (WCD) připojit velký počet zařízení s Windows 10 Creators Updatem. Pokud chcete pro svého tenanta Azure AD povolit [hromadnou registraci MDM](/intune-classic/deploy-use/bulk-enroll-windows), vytvořte zřizovací balíček, který zařízení k tenantovi Azure AD připojí pomocí Windows Configuration Designeru, a použijte balíček na zařízení ve vlastnictví firmy, která chcete hromadně zaregistrovat a spravovat. Po použití balíčku se zařízení připojí k Azure AD, zaregistrují v Intune a jsou připravená na přihlašování vašich uživatelů z Azure AD.  Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a obdrží přiřazené zásady a požadované aplikace. Samoobslužné scénáře a scénáře s Portálem společnosti v současnosti nejsou podporované.
 
-### <a name="whats-new-in-the-public-preview-of-the-intune-admin-experience-on-azure---736542--"></a>Co je nového ve veřejné verzi Preview prostředí pro správu Intune v Azure<!--736542-->
+### <a name="whats-new-in-the-public-preview-of-intune-in-the-azure-portal--736542--"></a>Co je nového ve veřejné verzi Preview služby Intune na Azure Portalu<!--736542-->
 
 Na začátku kalendářního roku 2017 provedeme migraci celého našeho prostředí pro správu do Azure, což umožní výkonnou a integrovanou správu základních pracovních postupů EMS na moderní platformě pro služby, která je rozšiřitelná pomocí rozhraní Graph API.
 
@@ -81,13 +81,13 @@ Novinky ve verzi Intune v Azure najdete [zde](whats-new.md).
 
 #### <a name="direct-access-to-apple-enrollment-scenarios---951869--"></a>Přímý přístup ke scénářům registrace Apple <!--951869-->
 
-U účtů Intune vytvořených po lednu 2017 umožňuje Intune přímý přístup ke scénářům registrace Apple pomocí úlohy Registrovat zařízení na portálu Azure Preview. Náhled na registraci Apple byl předtím přístupný přes odkazy na portálu klasické služby Intune. Zpřístupnění těchto funkcí v Azure bude u účtů Intune vytvořených před lednem 2017 vyžadovat jednorázovou migraci. Plán této migrace zatím nebyl oznámen, podrobnosti ale budou zpřístupněny co nejdříve. Pokud váš existující účet nemá k tomuto náhledu přístup, k otestování tohoto nového prostředí důrazně doporučujeme vytvořit zkušební účet.
+U účtů Intune vytvořených po lednu 2017 umožňuje Intune přímý přístup ke scénářům registrace Apple pomocí úlohy Registrovat zařízení na portálu Azure Preview. Náhled na registraci Apple byl předtím přístupný jen přes odkazy na Azure Portalu. Zpřístupnění těchto funkcí v Azure bude u účtů Intune vytvořených před lednem 2017 vyžadovat jednorázovou migraci. Plán této migrace zatím nebyl oznámen, podrobnosti ale budou zpřístupněny co nejdříve. Pokud váš existující účet nemá k tomuto náhledu přístup, k otestování tohoto nového prostředí důrazně doporučujeme vytvořit zkušební účet.
 
-#### <a name="whats-coming-for-appx-in-intune-on-azure----1000270---"></a>Co se chystá pro Appx v Intune na Azure <!-- 1000270 -->
+#### <a name="whats-coming-for-appx-in-intune-in-the-azure-portal----1000270---"></a>Co připravujeme pro Appx v Intune na Azure Portalu <!-- 1000270 -->
 
-V rámci migrace do Intune na Azure provádíme tři změny appx:
+Součástí migrace na Intune na Azure Portalu jsou tři změny appx:
 
-1. Přidání nového typu aplikace appx v klasické konzole Intune, který se dá nasadit jenom na zařízení zaregistrovaná v MDM
+1. Přidání nového typu aplikace appx v konzole Intune, který se dá nasadit jenom na zařízení zaregistrovaná v MDM
 2. Změna účelu stávajícího typu aplikace appx, aby byl zacílený jenom na počítače PC spravované pomocí agenta Intune pro počítače PC
 3. Převedení všech stávajících appx na appx MDM v rámci migrace
 
@@ -97,7 +97,7 @@ Nebude to mít vliv na žádné z vašich stávajících nasazení do zařízen�
 
 ##### <a name="what-action-do-i-need-to-take"></a>Co musím udělat
 
-Pokud budete chtít provést nová nasazení do počítačů PC, budete muset po migraci znovu nahrát appx jako appx pro počítače PC. Další informace najdete v článku o [změnách appx v Intune na Azure](https://aka.ms/appxchange) na blogu týmu podpory Intune.  
+Pokud budete chtít provést nová nasazení do počítačů PC, budete muset po migraci znovu nahrát appx jako appx pro počítače PC. Další informace najdete v článku o [změnách Appx v Intune na Azure Portalu](https://aka.ms/appxchange) na blogu týmu podpory Intune.  
 
 #### <a name="administration-roles-being-replaced-in-azure-portal"></a>Nahrazení rolí správy na portálu Azure Portal
 
@@ -235,7 +235,7 @@ Obrázky před a po najdete na [stránce s aktualizacemi uživatelského rozhran
 ### <a name="associate-multiple-management-tools-with-the-microsoft-store-for-business---926135--"></a>Přidružení více nástrojů pro správu k Microsoft Storu pro firmy <!--926135-->
 Pokud k nasazování aplikací pro Microsoft Store pro firmy používáte více nástrojů pro správu, mohli jste k Microsoft Storu pro firmy dříve přidružit jenom jeden z nich. Teď už můžete ke Storu přidružit více nástrojů pro správu, například Intune a Configuration Manager. Podrobnosti najdete v článku [Správa aplikací koupených v Microsoft Storu pro firmy v Microsoft Intune](/intune-classic/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune#associate-your-windows-store-for-business-account-with-intune).
 
-## <a name="whats-new-in-the-public-preview-of-the-intune-admin-experience-on-azure---736542--"></a>Co je nového ve veřejné verzi Preview prostředí pro správu Intune v Azure<!--736542-->
+## <a name="whats-new-in-the-public-preview-of-intune-in-the-azure-portal---736542--"></a>Co je nového ve veřejné verzi Preview služby Intune na Azure Portalu <!--736542-->
 
 Na začátku kalendářního roku 2017 provedeme migraci celého našeho prostředí pro správu do Azure, což umožní výkonnou a integrovanou správu základních pracovních postupů EMS na moderní platformě pro služby, která je rozšiřitelná pomocí rozhraní Graph API.
 
@@ -294,7 +294,7 @@ Portál společnosti pro iOS zavádí na obrazovce spuštění indikátor průb�
 
 ## <a name="december-2016"></a>Prosinec 2016
 
-### <a name="public-preview-of-the-new-intune-admin-experience-on-azure---736542--"></a>Veřejná verze Preview nového prostředí pro správu Intune v Azure <!--736542-->
+### <a name="public-preview-of-intune-in-the-azure-portal--736542--"></a>Veřejná verze Preview služby Intune na Azure Portalu<!--736542-->
 Na začátku kalendářního roku 2017 provedeme migraci celého našeho prostředí pro správu do Azure, což umožní výkonnou a integrovanou správu základních pracovních postupů EMS na moderní platformě pro služby, která je rozšiřitelná pomocí rozhraní Graph API. Před všeobecnou dostupností tohoto portálu pro všechny tenanty Intune s radostí oznamujeme, že později tento měsíc začneme vybraným tenantům zavádět verzi Preview tohoto nového prostředí pro správce.
 
 Prostředí pro správu na webu Azure Portal bude využívat nové funkce seskupování a cílení, které už byly oznámeny. Při migraci vašeho stávajícího tenanta do nového prostředí seskupování se provede také vaše migrace do verze Preview nového prostředí pro správu vašeho tenanta. Zatím můžete zjistit další informace o tom, co pro Microsoft Intune na portálu Azure Portal chystáme, v naší [nové dokumentaci](/intune/what-is-intune).

@@ -1,6 +1,6 @@
 ---
-title: "Správa aktualizací softwaru"
-titleSuffix: Configure Windows Update for Business settings - Intune
+title: "Konfigurace nastavení služby Windows Update pro firmy v Intune"
+titleSuffix: Azure portal
 description: "Zjistěte, jak v Intune konfigurovat nastavení Windows Update pro firmy k řízení aktualizací zařízení s Windows 10."
 keywords: 
 author: dougeby
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 08f659cf-715e-4e10-9ab2-1bac3c6f2366
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: 6d88fd62b84c0cc7c3678692cef5ab547bfb8c5d
-ms.sourcegitcommit: f9b01976c0fc479ac8bc3998eb55bbc517ed2d84
+ms.openlocfilehash: 71dad71cdfa9f503a47e301f0b5d3fef2567f886
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="manage-software-updates"></a>Správa aktualizací softwaru
 
@@ -54,20 +54,20 @@ Po vytvoření aktualizačních kanálů je přiřadíte skupinám zařízení. 
 
     Toto nastavení můžete nakonfigurovat ručně nebo můžete použít profil omezení zařízení Intune pro Windows 10 a novější. To uděláte tak, že nastavení **Obecné** > **Odeslání diagnostických dat** nakonfigurujete aspoň na možnost **Základní**. Další informace o profilech zařízení najdete v tématu [Konfigurace nastavení omezení zařízení](device-restrictions-configure.md).
 
-- V klasické konzole pro správu Intune jsou čtyři nastavení, která řídí chování aktualizací softwaru. Tato nastavení jsou součástí zásad obecné konfigurace pro počítače a mobilní zařízení s Windows 10:
+- V konzole pro správu Intune jsou čtyři nastavení, která řídí chování aktualizací softwaru. Tato nastavení jsou součástí zásad obecné konfigurace pro počítače a mobilní zařízení s Windows 10:
     - **Povolit automatické aktualizace**
     - **Povolit předběžné verze funkcí**
     - **Den plánované instalace**
     - **Čas plánované instalace**
 
-  Tato klasická konzola má také omezený počet dalších nastavení aktualizace Windows 10 v profilu konfigurace zařízení. Pokud máte některé z těchto nastavení v klasické konzole pro správu Intune nakonfigurované při migraci na portál Azure Portal, důrazně doporučujeme, abyste udělali toto:
+  Klasický portál má také omezený počet dalších nastavení aktualizací Windows 10 v profilu konfigurace zařízení. Pokud máte některá z těchto nastavení v konzole pro správu Intune nakonfigurovaná při migraci na Azure Portal, důrazně doporučujeme, abyste udělali toto:
 
 1. Na portále Azure Portal vytvořte aktualizační kanály Windows 10 s nastaveními, která potřebujete. Nastavení **Povolit funkce v předběžné verzi** není na portálu Azure Portal podporované, protože už pro nejnovější buildy Windows 10 neplatí. Při vytvoření aktualizačních kanálů můžete nakonfigurovat ostatní tři nastavení i další nastavení aktualizace Windows 10.
 
   > [!NOTE]
-  > Nastavení aktualizace Windows 10 vytvořená v klasické konzole se na portále Azure Portal po migraci nevytvoří. Tato nastavení se ale dál používají. Pokud jste některé z těchto nastavení migrovali a migrované zásady z portálu Azure Portal upravíte, tato nastavení se ze zásad odeberou.
+  > Nastavení aktualizací Windows 10 vytvořená na klasickém portálu se na Azure Portalu po migraci nezobrazí. Tato nastavení se ale dál používají. Pokud jste některé z těchto nastavení migrovali a migrované zásady z portálu Azure Portal upravíte, tato nastavení se ze zásad odeberou.
 
-2. Odstraňte nastavení aktualizace v klasické konzole. Po migraci na portál Azure Portal a přidání stejných nastavení do aktualizačního kanálu musíte nastavení na klasickém portálu odstranit, aby se zabránilo možným konfliktům zásad. Pokud je třeba stejné nastavení nakonfigurované s různými hodnotami, dojde ke konfliktu, který nepůjde snadno poznat, protože nastavení nakonfigurované v klasické konzole se na portálu Azure Portal nezobrazuje.
+2. Odstraňte nastavení aktualizací na klasickém portálu. Po migraci na portál Azure Portal a přidání stejných nastavení do aktualizačního kanálu musíte nastavení na klasickém portálu odstranit, aby se zabránilo možným konfliktům zásad. Pokud je například stejné nastavení nakonfigurované s různými hodnotami, dojde ke konfliktu, který nepůjde snadno poznat, protože nastavení nakonfigurované na klasickém portálu se na Azure Portalu nezobrazuje.
 
 ## <a name="how-to-create-and-assign-update-rings"></a>Vytvoření a přiřazení aktualizačních kanálů
 
@@ -140,7 +140,7 @@ Je možné pozastavit příjem aktualizací funkcí nebo aktualizací kvality za
 2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 3. V okně **Intune** zvolte **Aktualizace softwaru**.
 4. V okně **Aktualizace softwaru** zvolte **Spravovat** > **Aktualizační kanály Windows 10**.
-5. V okně zobrazujícím seznam aktualizačních kanálů zvolte kanál, který chcete pozastavit, a pak zvolte **...**   >  **Pozastavit kvalitu** > nebo **Pozastavit funkci** v závislosti na typu aktualizací, které chcete pozastavit.
+5. V okně zobrazujícím seznam aktualizačních kanálů zvolte kanál, který chcete pozastavit, a pak zvolte **... **  >  **Pozastavit kvalitu** > nebo **Pozastavit funkci** v závislosti na typu aktualizací, které chcete pozastavit.
 
 > [!IMPORTANT]
 > Když vydáte příkaz k pozastavení, zařízení ho obdrží při dalším přihlášení ke službě. Je možné, že před přihlášením ke službě nainstalují plánovanou aktualizaci.

@@ -1,6 +1,6 @@
 ---
 title: "Migrace zásad podmíněného přístupu z klasického portálu Intune do portálu Azure Portal"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Migrujte zásady podmíněného přístupu z klasického portálu Intune do portálu Azure Portal."
 keywords: 
 author: andredm7
@@ -15,11 +15,11 @@ ms.assetid: 301159ad-5f7e-4fcc-86c7-f72a71701ff4
 ms.reviewer: chrisgree
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d5f1ea2b0ceb32d0aa05a28e0f01f65b80b1ddcf
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 5b0b0982018dcfa3c606ea55b9264e5cd6cd1a82
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Změna přiřazení zásad podmíněného přístupu z klasického portálu Intune do portálu Azure Portal
 
@@ -33,7 +33,7 @@ Pokud jste připraveni přejít na portál Azure Portal, podle pokynů v tomto t
 
 - Podle pokynů v tomto tématu můžete tyto zásady znovu vytvořit na portálu Azure Portal.
 
-- Až si ověříte, že nové zásady na portálu Azure Portal fungují podle očekávání, vypněte podmíněné zásady v klasické konzole Intune.
+- Až si ověříte, že nové zásady na Azure Portalu fungují podle očekávání, zakažte podmíněné zásady na klasickém portálu Intune.
 <br /><br />
     - **Než vypnete** zásady podmíněného přístupu v klasickém portálu Intune, naplánujte si, jak přesunete uživatele na nové zásady. Existují dvě metody:
 <br /><br />
@@ -82,7 +82,7 @@ Okno **Intune App Protection** na portálu Azure Portal umožňuje správcům na
     ![Srovnání uživatelského rozhraní uživatelských skupin na portálu Intune a Azure Portal](./media/reassign-ca-1.png)
 
     > [!IMPORTANT] 
-    > Výběr, který provedete na portálu Azure Portal, musí odpovídat výběru, který jste provedli na portálu Intune. Pokud máte třeba na klasickém portálu Intune vybrané všechny uživatele, vyberte **Všichni uživatelé** na portálu Azure Portal. Pokud jste navíc na klasickém portálu Intune zvolili možnost **Vyloučené skupiny**, tyto vybrané skupiny vylučte i na portálu Azure Portal.
+    > Výběr, který provedete pro Azure Portal, musí odpovídat výběru, který jste provedli pro Azure Portal. Pokud máte třeba na klasickém portálu Intune vybrané všechny uživatele, vyberte **Všichni uživatelé** na portálu Azure Portal. Pokud jste navíc na klasickém portálu Intune zvolili možnost **Vyloučené skupiny**, tyto vybrané skupiny vylučte i na portálu Azure Portal.
 
 5. Jakmile svou skupinu zvolíte, klikněte na **Vybrat** a pak na **Hotovo**.
 
@@ -150,7 +150,7 @@ Pokud jste nastavení protokolu Exchange Active Sync nakonfigurovali na klasick�
     ![Srovnání uživatelského rozhraní uživatelských skupin na portálu Intune a Azure Portal](./media/reassign-ca-12.png)
 
     > [!IMPORTANT] 
-    > Výběr, který provedete na portálu Azure Portal, musí odpovídat výběru, který jste provedli na portálu Intune. Pokud máte třeba na klasickém portálu Intune vybrané všechny uživatele, vyberte **Všichni uživatelé** na portálu Azure Portal. Pokud jste navíc na klasickém portálu Intune zvolili možnost **Vyloučené skupiny**, tyto vybrané skupiny vylučte i na portálu Azure Portal.
+    > Výběr, který provedete pro Azure Portal, musí odpovídat výběru, který jste provedli pro Azure Portal. Pokud máte třeba na klasickém portálu Intune vybrané všechny uživatele, vyberte **Všichni uživatelé** na portálu Azure Portal. Pokud jste navíc na klasickém portálu Intune zvolili možnost **Vyloučené skupiny**, tyto vybrané skupiny vylučte i na portálu Azure Portal.
 
 5. Jakmile svou skupinu zvolíte, klikněte na **Vybrat** a pak na **Hotovo**.
 

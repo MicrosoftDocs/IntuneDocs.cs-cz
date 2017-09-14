@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/21/2017
+ms.date: 09/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,34 +15,36 @@ searchScope: User help
 ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
-ms.openlocfilehash: 88f1d4b3e54a27be86a542e1265ea9606498ab4f
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 8da134d768333fb03cc87ab38230f5f022fee2e1
+ms.sourcegitcommit: 1afff0fd464ece84ffea6bc0c71c78215d59e696
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/08/2017
 ---
-# <a name="what-information-can-my-company-see-when-i-enroll-my-device-in-intune"></a>Jaké informace moje společnost uvidí, když svoje zařízení zaregistruji do Intune?
+# <a name="what-information-can-my-company-see-when-i-enroll-my-device"></a>Jaké informace moje společnost uvidí, když si zaregistruji zařízení?
 
-Když svoje zařízení zaregistrujete do správy, dáváte IT oddělení vaší společnosti oprávnění k přístupu k některým údajům na zařízení kvůli ochraně dat společnosti na tomto zařízení.
+Když zařízení zaregistrujete do správy, dáváte společnosti oprávnění k zobrazení určitých údajů na svém zařízení kvůli ochraně firemních dat na tomto zařízení.
 
-**Co správce IT nevidí**
+**Údaje, které vaše společnost nikdy neuvidí**
 
 - Historie volání a procházení webu
--   Umístění
-- Osobní e-mail
-- Textové zprávy
+- Textové a e-mailové zprávy
 - Kontakty
--   Hesla k osobním účtům
-- Události kalendáře
+- Kalendář
+-   Hesla
 - Obrázky, včetně těch, které jsou ve fotografických aplikacích nebo mezi obrázky z fotoaparátu
 
-**Co správce IT vidí**
+**Údaje, které vaše společnost vždy uvidí**
 
--   Model
--   Sériové číslo
--   Verze operačního systému
--   Názvy aplikací
--   Vlastník
--   Název zařízení
--   Výrobce (pro zařízení, která nejsou vyrobená společností Apple)
--   Telefonní číslo (pro pracovní zařízení celé číslo, pro osobní zařízení jenom poslední čtyři číslice)
+- Model zařízení, například iPhone 7
+- Výrobce, například Microsoft
+- Operační systém, například Android 7.1
+- Názvy aplikací, například Microsoft Word
+- Vlastník zařízení
+- Název zařízení
+- Sériové číslo
+
+**Co vaše společnost může vidět**
+
+-  Telefonní číslo: U zařízení ve **firemním** vlastnictví může být viditelné celé telefonní číslo. U zařízení v **osobním** vlastnictví vidí společnost jen poslední čtyři číslice vašeho telefonního čísla. **Typ vlastnictví** jednotlivých zařízení zobrazíte tak, že otevřete stránku **Podrobnosti zařízení** určitého zařízení. 
+-  Poloha: Vaše společnost nikdy neuvidí polohu vašeho zařízení, pokud nemáte zařízení s iOS, které je pod dohledem a ztratilo se. [Jak to zjistím?](https://go.microsoft.com/fwlink/?linkid=853816)

@@ -1,6 +1,6 @@
 ---
 title: "Registrace zařízení s iOSem – Program registrace zařízení"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Naučte se registrovat zařízení s iOSem ve vlastnictví firmy pomocí Programu registrace zařízení (DEP)."
 keywords: 
 author: nathbarn
@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d88d191e3212e1999376fb2577a85c3dc957a787
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: c14903d227164089f52c9bd3288a99f29a9141b8
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení s iOSem pomocí Programu registrace zařízení společnosti Apple
 
@@ -55,7 +55,7 @@ Abyste mohli zařízení s iOSem v programu DEP zaregistrovat, potřebujete od s
 Token DEP vytvoříte pomocí portálu DEP společnosti Apple. Pomocí portálu DEP také přiřadíte zařízení do Intune ke správě.
 
 > [!NOTE]
-> Když token odstraníte z konzoly Intune Classic před migrací do Azure, může Intune obnovit odstraněný token DEP Apple. Token DEP můžete z portálu Azure Portal znovu odstranit. Token DEP můžete z portálu Azure Portal znovu odstranit.
+> Když token odstraníte z klasického portálu Intune před migrací do Azure, může Intune obnovit odstraněný token DEP Apple. Token DEP můžete z portálu Azure Portal znovu odstranit. Token DEP můžete z portálu Azure Portal znovu odstranit.
 
 **Krok 1: Stáhněte si certifikát veřejného klíče služby Intune, který je potřebný pro vytvoření tokenu DEP Apple.**<br>
 

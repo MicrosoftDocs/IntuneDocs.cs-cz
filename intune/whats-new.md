@@ -1,6 +1,6 @@
 ---
 title: "Co je nového v Microsoft Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Zjistěte, jaké novinky přináší portál Intune Azure."
 keywords: 
 author: brenduns
@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b50856bdc500cab4b206a105275b4842680d4423
-ms.sourcegitcommit: 71cdf99d639530e70dbe48d611d399e52c3150b0
+ms.openlocfilehash: c4787c716f94e95ab98badf924273af5d02751f8
+ms.sourcegitcommit: fa6aaf12611c3e03e38e467806fc30b1d0255e88
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/12/2017
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -102,7 +102,7 @@ Koncoví uživatelé teď můžou v Microsoft OneNotu pro iOS používat různé
 - Přečtěte si další informace o aplikacích, které podporují [ochranu aplikací a více identit](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) s Intune.
 
 #### <a name="new-settings-to-allow-and-block-apps-on-samsung-knox-standard-devices"></a>Povolení a blokování aplikací na zařízeních se Samsung KNOX Standard pomocí nových nastavení
-<!-- 1305423 -->  
+<!-- 1305423 822899-->  
 V této verzi přidáváme nová [nastavení omezení zařízení](device-restrictions-android.md), která vám umožní zadat následující seznamy aplikací:
  
 - Aplikace, které mají uživatelé dovoleno instalovat.
@@ -112,7 +112,7 @@ V této verzi přidáváme nová [nastavení omezení zařízení](device-restri
 Aplikaci můžete zadat pomocí adresy URL, názvu balíčku nebo ze seznamu spravovaných aplikací.
 
 #### <a name="new-azure-ad-app-based-conditional-access-policy-ui-link-from-intune"></a>Odkaz na nové uživatelské rozhraní zásad podmíněného přístupu na základě aplikací Azure AD z Intune
-
+<!-- 1016201 -->
 Správci IT teď můžou nastavit podmíněné zásady na základě aplikací prostřednictvím nového uživatelského rozhraní zásad podmíněného přístupu v úloze Azure AD. Podmíněný přístup na základě aplikací, který je v části Intune App Protection na portálu Azure Portal, prozatím zůstane a bude se vynucovat souběžně. Užitečný odkaz na nové uživatelské rozhraní zásad podmíněného přístup obsahuje také úloha Intune.
 
 - Přečtěte si další informace o [podmíněném přístupu na základě aplikací v Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference).
@@ -124,10 +124,10 @@ Správci IT teď můžou nastavit podmíněné zásady na základě aplikací pr
 K dispozici je [aktualizovaný seznam názvů DNS a IP adres](/intune/network-bandwidth-use) pro nastavení proxy serveru brány firewall.
 
 ### <a name="use-azure-active-directory-for-conditional-access----967947---"></a>Používání Azure Active Directory pro podmíněný přístup <!-- 967947 -->
-Podmíněný přístup je k dispozici v sekci Azure Active Directory konzoly Azure a poskytuje výkonnější a flexibilnější rozhraní pro nastavení zásad pro cloudové aplikace jako Office 365 Exchange Online a SharePoint Online.  Místo klasické konzoly Intune použijte ke konfiguraci nastavení zásad okno **Podmíněný přístup v Azure Active Directory**. Existující zásady v klasické konzole Intune se musí v konzole Azure znovu vytvořit. Další informace najdete v článku [Vytvoření zásad podmíněného přístupu Azure AD](/intune/conditional-access-exchange-create.md#create-azure-ad-conditional-access-policies-in-intune-azure-preview).
+Podmíněný přístup je dostupný v sekci Azure Active Directory na Azure Portalu a poskytuje výkonnější a flexibilnější rozhraní pro nastavení zásad cloudových aplikací, jako jsou Office 365 Exchange Online a SharePoint Online.  Místo konzoly Intune použijte ke konfiguraci nastavení zásad okno **Podmíněný přístup v Azure Active Directory**. Existující zásady v konzole Intune se musí na Azure Portalu znovu vytvořit. Další informace najdete v článku [Vytvoření zásad podmíněného přístupu Azure AD](/intune/conditional-access-exchange-create.md#create-azure-ad-conditional-access-policies-in-intune-azure-preview).
 
 ### <a name="direct-access-to-apple-enrollment-scenarios---951869--"></a>Přímý přístup ke scénářům registrace Apple <!--951869-->
-U účtů Intune vytvořených po lednu 2017 umožňuje Intune přímý přístup ke scénářům registrace Apple pomocí úlohy Registrovat zařízení na portálu Azure Portal. Náhled na registraci Apple byl předtím přístupný přes odkazy na portálu klasické služby Intune. Zpřístupnění těchto funkcí v Azure vyžaduje u účtů Intune vytvořených před lednem 2017 jednorázovou migraci. Plán této migrace zatím nebyl oznámen, podrobnosti ale budou zpřístupněny co nejdříve. Pokud váš existující účet nemá k portálu Azure Portal přístup, k otestování tohoto nového prostředí důrazně doporučujeme vytvořit zkušební účet.
+U účtů Intune vytvořených po lednu 2017 umožňuje Intune přímý přístup ke scénářům registrace Apple pomocí úlohy Registrovat zařízení na portálu Azure Portal. Náhled na registraci Apple byl předtím přístupný jen přes odkazy na klasickém portálu Intune. Zpřístupnění těchto funkcí v Azure vyžaduje u účtů Intune vytvořených před lednem 2017 jednorázovou migraci. Plán této migrace zatím nebyl oznámen, podrobnosti ale budou zpřístupněny co nejdříve. Pokud váš existující účet nemá k portálu Azure Portal přístup, k otestování tohoto nového prostředí důrazně doporučujeme vytvořit zkušební účet.
 
 ### <a name="administration-roles-being-replaced-in-azure-portal"></a>Nahrazení rolí správy na portálu Azure Portal
 Existující role pro správu mobilních aplikací (MAM) (Přispěvatel, Vlastník a Jen pro čtení) používané v klasickém portálu Intune (Silverlight) byly na portálu Azure Portal pro Intune nahrazeny celou řadou nových možností řízení přístupu na základě role (RBAC). Jakmile migrujete na portál Azure Portal, bude potřeba, abyste svým správcům přiřadili tyto nové role správy. Další informace o RBAC a nových rolích najdete v článku [Řízení přístupu na základě role pro Microsoft Intune](/intune/role-based-access-control).
@@ -168,7 +168,7 @@ Přestože nemáme konkrétní datum, dáváme vám to vědět předem, abyste m
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
 Upozorněte své uživatele, že aby mohli naplno využívat nových funkcí služby Intune, musí si iOS aktualizovat na verzi 9.0 nebo novější.  Vyzvěte uživatele, aby si nainstalovali novou verzi aplikace Portál společnosti a mohli využívat nově nabízených funkcí.
 
-Na portálu Azure Portal přejděte do služby Intune, zobrazte si Zařízení > Všechna zařízení a vyfiltrujte si je podle verze systému iOS, abyste viděli všechna zařízení s operačními systémy staršími než iOS 9.
+Pokud chcete vidět všechna aktuální zařízení s operačními systémy staršími než iOS 9, přejděte na Azure Portalu do služby Intune, zobrazte si Zařízení > Všechna zařízení a vyfiltrujte si je podle verze iOSu.
 
 
 ### <a name="apple-to-require-updates-for-application-transport-security---748318--"></a>Apple bude vyžadovat aktualizace ATS (Application Transport Security) <!--748318-->

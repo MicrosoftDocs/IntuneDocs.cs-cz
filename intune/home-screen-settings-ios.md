@@ -1,6 +1,6 @@
 ---
 title: "Nastavení rozložení domovské obrazovky pro zařízení s iOSem"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Přečtěte si o nastaveních, pomocí nichž si můžete přizpůsobit domovskou obrazovku a Dock na zařízeních s iOSem."
 keywords: 
 author: robstackmsft
@@ -15,11 +15,11 @@ ms.assetid: 6aba4491-afb9-43cd-9ccc-14e6a2a5a3b1
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: de15a5f5291a6701782d357d24e2e802d7e7e44b
-ms.sourcegitcommit: c9b3a95bf529b6cb2a2bdacbc49127dfa0c233e5
+ms.openlocfilehash: 4a3f175337d521c92c909db9972d844ac6997cb0
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="intune-home-screen-layout-settings-for-ios-devices"></a>Nastavení rozložení domovské obrazovky pro zařízení s iOSem
 
@@ -60,7 +60,7 @@ Přidejte stránky, které se mají zobrazovat na domovské obrazovce, a aplika
 
 
 1. V okně **Stránky** zvolte **Přidat**.
-2. V okně **Přidat řádek** zadejte **Název stránky**. Tento název se použije pro referenci na portálu Intune a na zařízení s iOSem *se nezobrazí*.
+2. V okně **Přidat řádek** zadejte **Název stránky**. Tento název slouží pro referenci na Azure Portalu, přičemž na zařízení s iOSem *se nezobrazuje*.
 3. Zvolte **Přidat** a potom vyberte, zda na stránku chcete přidat **Aplikaci** nebo **Složku**.
 4. Pomocí informací v tomto tématu nakonfigurujte aplikace a složky, které se mají zobrazit na stránce.
 
@@ -76,7 +76,7 @@ Když přiřadíte zásady k iPhonu, výsledkem bude stránka, která se podob�
 
 ## <a name="how-to-add-an-app-to-the-list"></a>Přidání aplikace do seznamu
 
-1. Zadejte **Název aplikace**. Tento název se použije pro referenci na portálu Intune a na zařízení s iOSem *se nezobrazí*.
+1. Zadejte **Název aplikace**. Tento název slouží pro referenci na Azure Portalu, přičemž na zařízení s iOSem *se nezobrazuje*.
 2. Zadejte **ID sady prostředků aplikace**, kterou chcete zobrazit. Pomůžou vám **Referenční informace o ID sady prostředků pro integrované aplikace pro iOS** dále v tomto tématu.
 3. Klikněte na **OK** a podle potřeby přidejte další položky, maximálně ale **6** pro Dock zařízení a **60** pro stránku zařízení.
 4. Po skončení klikněte na tlačítko **OK**.
@@ -87,8 +87,8 @@ Aplikace, které přidáte na stránku ve složce, jsou seřazené zleva doprava
 
 1. Zadejte **Název složky**. Tento název se uživatelům zobrazí na jejich zařízení.
 2. Zvolte **Přidat** a vytvořte ve složce stránku. Můžete přidat až 20 stránek.
-3. V okně **Přidat řádek** zadejte název stránky. Tento název se použije pro referenci na portálu Intune a na zařízení s iOSem *se nezobrazí*.
-3. Zadejte **Název aplikace**. Tento název se použije pro referenci na portálu Intune a na zařízení s iOSem *se nezobrazí*.
+3. V okně **Přidat řádek** zadejte název stránky. Tento název slouží pro referenci na Azure Portalu, přičemž na zařízení s iOSem *se nezobrazuje*.
+3. Zadejte **Název aplikace**. Tento název slouží pro referenci na Azure Portalu, přičemž na zařízení s iOSem *se nezobrazuje*.
 2. Zadejte **ID sady prostředků aplikace**, kterou chcete zobrazit. Nápovědu získáte v tématu **Přidání aplikace do seznamu**.
 3. Zvolte **Přidat**. Můžete přidat až 60 položek.
 4. Po skončení klikněte na tlačítko **OK**.

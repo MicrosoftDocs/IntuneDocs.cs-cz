@@ -1,6 +1,6 @@
 ---
 title: "Nastavení sítě VPN pro zařízení s Windows Phone 8.1 v Intune"
-titleSuffix: Intune on Azure
+titleSuffix: Azure portal
 description: "Přečtěte si informace o nastavení Intune, pomocí kterého můžete nakonfigurovat připojení VPN na zařízeních s Windows Phone 8.1."
 keywords: 
 author: lleonard-msft
@@ -15,11 +15,11 @@ ms.assetid: c1a9053f-02a7-4735-bc0d-fe4573b31ed4
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a009a16c7c475864f665f6ad0ab8fe1853c801b4
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: debfe6cde108daf88db8d18db1e7da2186fc32ea
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="vpn-settings-for-windows-phone-81-devices-in-microsoft-intune"></a>Nastavení sítě VPN pro zařízení Windows Phone 8.1 v Microsoft Intune
 
@@ -29,7 +29,7 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v níže uvedeném sezn
 
 ## <a name="base-vpn-settings"></a>Základní nastavení sítě VPN
 
-- **Použít všechna nastavení jenom na Windows Phone 8.1** – toto je nastavení, které můžete nakonfigurovat na portálu Classic služby Intune. Na portálu Azure Portal toto nastavení nejde změnit. Pokud je nastavené na **Nakonfigurováno**, použijí se všechna nastavení jenom na zařízení s Windows Phone 8.1. Pokud je nastavené na **Nenakonfigurováno**, použijí se tato nastavení také na zařízení s Windows 10 Mobile.
+- **Použít všechna nastavení jenom na Windows Phone 8.1** – toto je nastavení, které můžete nakonfigurovat na klasickém portálu Intune. Na portálu Azure Portal toto nastavení nejde změnit. Pokud je nastavené na **Nakonfigurováno**, použijí se všechna nastavení jenom na zařízení s Windows Phone 8.1. Pokud je nastavené na **Nenakonfigurováno**, použijí se tato nastavení také na zařízení s Windows 10 Mobile.
 - **Název připojení** – zadejte název tohoto připojení. Tento název uživatelé uvidí, když budou na svém zařízení procházet seznamem dostupných připojení VPN.
 - **Metoda ověřování** – zvolte způsob, kterým se budou zařízení ověřovat u serveru VPN:
     - **Certifikáty** – v části **Ověřovací certifikát** vyberte profil certifikátu SCEP nebo PKCS, který jste vytvořili za účelem ověřování připojení. Další informace o profilech certifikátů najdete v článku [Konfigurace certifikátů](certificates-configure.md).

@@ -1,12 +1,12 @@
 ---
 title: "Obnovení továrního nastavení nebo odebrání firemních dat v zařízení pomocí Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Zjistěte, jak můžete v zařízení odebrat firemní data nebo obnovit tovární nastavení."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 08/07/2017
+ms.date: 08/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 331ced93f0697f7c76d1356aae32b955602d17a3
-ms.sourcegitcommit: 2ed8d1c39d4b3e3282111f1d758afb3a50f19f8f
+ms.openlocfilehash: 41bfb62f90965288d73948650b6935434c986d92
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Odebrání zařízení pomocí obnovení továrního nastavení nebo odebrání firemních dat
 
@@ -106,7 +106,7 @@ Pokud je zařízení zapnuté a připojené, trvá méně než 15 minut, než se
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Odstranění zařízení z portálu služby Azure Active Directory
 
-Kvůli komunikačním problémům nebo ztraceným zařízením můžete potřebovat odstranit zařízení ze služby Azure Active Directory (AD). Příkazem k odstranění se zařízení neodebere ze správy, příkazem **Odstranit** ale můžete z konzoly Azure odebrat záznamy zařízení, o kterých víte, že jsou nedosažitelná a je nepravděpodobné, že by se službou Azure znovu komunikovala.
+Kvůli komunikačním problémům nebo ztraceným zařízením můžete potřebovat odstranit zařízení ze služby Azure Active Directory (AD). Příkazem k odstranění se zařízení neodebere ze správy, příkazem **Odstranit** ale můžete z Azure Portalu odebrat záznamy zařízení, o kterých víte, že jsou nedosažitelná a je nepravděpodobné, že by se službou Azure znovu komunikovala.
 
 1.  Přihlaste se ke službě [Azure Active Directory na Azure Portalu](http://aka.ms/accessaad) pomocí přihlašovacích údajů správce. Můžete se také přihlásit k [portálu Office 365](https://portal.office.com) a pak pomocí odkazu na levé straně stránky zvolit **Správce** &gt; **Azure AD**.
 3.  Pokud nemáte předplatné Azure, vytvořte ho. Pokud máte placený účet, neměli byste potřebovat platební kartu ani zadání platby (zvolte odkaz pro předplatné **Zdarma zaregistrovat službu Azure Active Directory**).

@@ -1,12 +1,12 @@
 ---
 title: "Nastavení omezení pro zařízení s Androidem v Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s Androidem."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 08/08/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 6bdf714a-5d93-485c-8b52-513635c60cb6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 09641b5e34ab8200e7dd9d4c27f0dabf59fa62d2
-ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
+ms.openlocfilehash: db7287dcccf45e0ce98a6fcae3c953dbebc2bb82
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení zařízení používajících Android a Samsung KNOX Standard v Microsoft Intune
 
@@ -67,8 +67,8 @@ Tato nastavení spolu se zásadami omezení pro zařízení s Androidem se použ
 <sup>1</sup> Před přiřazením tohoto nastavení k zařízením zkontrolujte, jestli je aplikace Portál společnosti v daných zařízeních aktualizovaná na nejnovější verzi.
 
 Pokud nakonfigurujete nastavení **Číselné komplexní** a potom ho přiřadíte k zařízení, které používá verzi Androidu starší než 5.0, bude platit následující chování.
-- Pokud aplikace Portál společnosti používá verzi starší než 1704, nepoužijí se u zařízení žádné zásady PIN kódu a na portálu Intune se zobrazí chyba.
-- Pokud aplikace Portál společnosti používá verzi 1704 nebo novější, je možné použít jenom jednoduchý PIN kód. Verze Androidu starší než 5.0 toto nastavení nepodporují. Na portálu Intune se nezobrazí žádná chyba.
+- Pokud má aplikace Portál společnosti verzi starší než 1704, nepoužijí se u zařízení žádné zásady PIN kódu a na Azure Portalu se zobrazí chyba.
+- Pokud má aplikace Portál společnosti verzi 1704 nebo novější, je možné použít jenom jednoduchý PIN kód. Verze Androidu starší než 5.0 toto nastavení nepodporují. Na Azure Portalu se nezobrazí žádná chyba.
 
 
 ## <a name="google-play-store"></a>Obchod Google Play
@@ -79,7 +79,7 @@ Pokud nakonfigurujete nastavení **Číselné komplexní** a potom ho přiřadí
 
 V seznamu omezených aplikací můžete pro zařízení se systémy Android a Samsung KNOX Standard nakonfigurovat některý z následujících seznamů:
 
-**Zakázané aplikace** – Zobrazí seznam aplikací (nespravovaných pomocí Intune), které nemají uživatelé dovolené nainstalovat a spustit.
+Seznam **Zakázané aplikace** – Zobrazí seznam aplikací (nespravovaných přes Intune), které budou nahlášeny, pokud je uživatelé nainstalují a spustí.
 **Schválené aplikace** – Zobrazí seznam aplikací, které mají uživatelé dovolené instalovat. Kvůli zachování kompatibility nesmí uživatelé instalovat jiné aplikace. Aplikace, které spravuje Intune, jsou povolené automaticky.
 Profily zařízení, které obsahují nastavení aplikací s omezeným přístupem, se musí přiřadit skupinám uživatelů.
 
@@ -107,6 +107,21 @@ Můžete také kliknout na **Import** a získat seznam ze souboru csv. Použijte
 - **JavaScript (jenom Samsung KNOX)** – Povolí webovému prohlížeči v zařízení spouštět skripty Java.
 - **Automaticky otevíraná okna (jenom Samsung KNOX)** – Povolí používání blokování automaticky otevíraných oken ve webovém prohlížeči.
 
+## <a name="allow-or-block-apps"></a>Povolení nebo blokování aplikací
+
+Pomocí těchto nastavení můžete určit aplikace, které lze nainstalovat nebo spustit na zařízeních, na kterých se používá jen Samsung KNOX Standard.
+Navíc můžete také určit nainstalované aplikace, které budou uživateli zařízení skryty. Uživatelé tyto aplikace nemůžou spouštět.
+
+- **Aplikace, které je možné nainstalovat (pouze Samsung KNOX Standard)**
+- **Aplikace, jejichž spouštění je blokováno (pouze Samsung KNOX Standard)**
+- **Aplikace, které jsou uživateli skryty (pouze Samsung KNOX Standard)**
+
+Pro každé nastavení nakonfigurujte pomocí jedné z následujících možností seznam aplikací:
+
+- **Přidat aplikace pomocí názvu balíčku** – primárně slouží pro obchodní aplikace. Zadejte název aplikace a název balíčku aplikace. 
+- **Přidat aplikace pomocí adresy URL** – zadejte název aplikace a její adresu URL v obchodě Google Play.
+- **Přidat spravované aplikace** – v seznamu aplikací spravovaných přes Intune vyberte požadovanou aplikaci.
+
 ## <a name="cloud-and-storage"></a>Cloud a úložiště
 
 - **Zálohovací služba Google (jenom Samsung KNOX)** – Povolí použití zálohování Google.
@@ -127,9 +142,9 @@ Můžete také kliknout na **Import** a získat seznam ze souboru csv. Použijte
 
 ## <a name="kiosk"></a>Kiosk
 
-Nastavení Kiosku se týká jenom zařízení se Samsung KNOX Standard.
+Tato nastavení platí jen pro zařízení Samsung KNOX Standard a jen pro aplikace, které spravujete přes Intune.
 
-- **Vyberte spravovanou aplikaci** – Pokud chcete přidat jednu nebo více aplikací, které se budou moct spustit, když je zařízení v beznabídkovém režimu, zvolte jednu z následujících možností. Žádné jiné aplikace se na zařízení nebudou moct spustit.
+- **Vyberte spravovanou aplikaci** – Pokud chcete přidat spravované aplikace, které poběží, když je zařízení v režimu Kiosk, zvolte jednu z následujících možností. Žádné jiné aplikace se na zařízení nebudou moct spustit.
     - **Přidat aplikace pomocí názvu balíčku**
     - **Přidat aplikace pomocí adresy URL**
     - **Přidat spravované aplikace**

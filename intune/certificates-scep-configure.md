@@ -1,6 +1,6 @@
 ---
 title: "Konfigurace a správa certifikátů SCEP pomocí Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Přečtěte si, jak nakonfigurovat infrastrukturu a pak vytvořit a přiřadit profily certifikátů Intune SCEP."
 keywords: 
 author: lleonard-msft
@@ -15,11 +15,11 @@ ms.assetid: d567d85f-e4ee-458e-bef7-6e275467efce
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e29e79b8598eddba951b3f8ee7a7bcd5c6271f83
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 406da09419e13319b8ebf4f59a05ca36eff1edad
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="configure-and-manage-scep-certificates-with-intune"></a>Konfigurace a správa certifikátů SCEP pomocí Intune
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -36,7 +36,7 @@ Toto téma popisuje, jak pomocí Intune konfigurovat infrastrukturu a pak vytvo�
 -  **Server NDES**: Na serveru, na kterém běží Windows Server 2012 R2 nebo novější, musíte nastavit službu zápisu síťových zařízení (NDES). Intune nepodporuje používání služby zápisu síťových zařízení, pokud běží na serveru, na kterém běží taky certifikační autorita organizace. Pokyny k tomu, jak konfigurovat Windows Server 2012 R2 k hostování služby zápisu síťových zařízení, najdete v tématu [Doprovodné materiály ke službě zápisu síťových zařízení](http://technet.microsoft.com/library/hh831498.aspx).
 Server NDES musí být připojený k doméně, která je hostitelem certifikační autority, a nesmí být na stejném serveru jako tato autorita. Další informace o nasazení serveru NDES v samostatné doménové struktuře, izolované síti nebo interní doméně najdete v tématu věnovaném [použití modulu zásad se službou zápisu síťových zařízení](https://technet.microsoft.com/library/dn473016.aspx).
 
--  **Microsoft Intune Certificate Connector**: Prostřednictvím portálu Intune stáhněte instalační program **Certificate Connectoru** (**ndesconnectorssetup.exe**). Pak můžete soubor **ndesconnectorssetup.exe** spustit na počítači, kde chcete konektor Certificate Connector nainstalovat. 
+-  **Microsoft Intune Certificate Connector**: Prostřednictvím Azure Portalu stáhněte instalační program **Certificate Connectoru** (**ndesconnectorssetup.exe**). Pak můžete soubor **ndesconnectorssetup.exe** spustit na počítači, kde chcete konektor Certificate Connector nainstalovat. 
 -  **Proxy server webových aplikací** (volitelné): Jako server služby Proxy webových aplikací (WAP) použijte server se systémem Windows Server 2012 R2 nebo novějším. Tato konfigurace:
     -  Umožňuje zařízením získat certifikáty pomocí připojení k internetu.
     -  Je doporučeným zabezpečením v případě, že se zařízení připojují prostřednictvím internetu za účelem příjmu a obnovení certifikátů.
@@ -252,7 +252,7 @@ V této úloze:
 
     ![Test NDES](.\media\SCEP_NDES_URL.png)
 
-    Pokud se zobrazí **503 - Služba není k dispozici** , zkontrolujte prohlížeč událostí. Je pravděpodobné, že se fond aplikací zastavil kvůli chybějícímu oprávnění pro uživatele NDES. Tato práva jsou popsaná v úloze 1.
+    Pokud se zobrazí **503 - Služba není k dispozici **, zkontrolujte prohlížeč událostí. Je pravděpodobné, že se fond aplikací zastavil kvůli chybějícímu oprávnění pro uživatele NDES. Tato práva jsou popsaná v úloze 1.
 
 ##### <a name="to-install-and-bind-certificates-on-the-ndes-server"></a>Instalace a vytvoření vazby certifikátů na serveru NDES
 
