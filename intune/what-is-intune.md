@@ -1,7 +1,7 @@
 ---
-title: "Úvod do Intune na portálu Azure Portal"
-titleSuffix: Intune on Azure
-description: "Získejte základní informace o Intune na portálu Azure Portal a o tom, jak vám pomůže se správou zařízení."
+title: "Úvod do Intune na Azure Portalu"
+titlesuffix: Azure portal
+description: "Získejte základní informace o Intune na Azure Portalu a o tom, jak vám pomůže se správou zařízení."
 keywords: 
 author: robstackmsft
 ms.author: robstack
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 4a085264-232a-4af0-97f1-747496c44517
 ms.suite: ems
 ms.custom: 
-ms.openlocfilehash: a51b3c59d922b0c150073017222dca0c90c5b7a0
-ms.sourcegitcommit: 36ae73f59ff5e9fdfe4f930ad0aa4b7795fe11f2
+ms.openlocfilehash: 6150434620f055f17563da6269c85c89c70b8e2b
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="introduction-to-microsoft-intune-in-the-azure-portal"></a>Úvod do Microsoft Intune na portálu Azure Portal
 
@@ -72,7 +72,7 @@ Nejnovější informace o podporovaných prohlížečích najdete na portálu [A
 
 ## <a name="whats-in-this-library"></a>Co je v této knihovně?
 
-Do této dokumentace je promítnuto rozložení portálu Intune, abyste mohli snadněji najít informace, které potřebujete.
+Do této dokumentace je promítnuto rozložení Azure Portalu, abyste mohli snadněji najít informace, které potřebujete.
 
 ![Úlohy portálu Azure Portal](./media/azure-portal-workloads.png)
 

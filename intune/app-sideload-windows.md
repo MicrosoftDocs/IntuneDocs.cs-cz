@@ -12,11 +12,11 @@ ms.service:
 ms.technology: 
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 ms.custom: intune-classic
-ms.openlocfilehash: 2a8754d684896f2c945e11ed0fc2577114459069
-ms.sourcegitcommit: 4034ac474bfed358270a32459a2cf2fe02f44e45
+ms.openlocfilehash: 3567f26053a235c5a5af761829f043e0db2f79b5
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Registrace obchodních aplikací, aby je bylo možné nasadit na zařízení s Windows pomocí Intune
 
@@ -55,7 +55,7 @@ Následující postup vám pomůže získat požadovaný certifikát a podepsat 
 6.  **Nahrání aplikace do Intune**<br>
     Nahráním podepsaného souboru aplikace a svého certifikátu pro podpis kódu zpřístupníte aplikaci vašim koncovým uživatelům.
 
-    1.  Na portálu Intune klikněte na **Správa** &gt; **Windows Phone**.
+    1.  Na Azure Portalu klikněte na **Správa** &gt; **Windows Phone**.
 
     2.  Klikněte na **Nahrát podepsaný soubor aplikace** a přihlaste se svým ID správce pro Intune.
 
@@ -118,7 +118,7 @@ Aplikaci Portál společnosti můžete místo instalace z Microsoft Storu nasadi
 
     -   `-EnterpriseId` – ID organizace Musí se zadat buď tento argument, nebo AetxPath. Pokud se tento argument nezadá, ID organizace se přečte ze souboru AETX. Například 1000000001.
 
-6.  Nasazení aplikace Portál společnosti Windows Phone 8.1 (SSP.appx) Pokyny najdete v tématu [Přidání obchodních aplikací pro Windows Phone](lob-apps-windows-phone.md) ([klasická konzola](/intune-classic/deploy-use/deploy-apps-in-microsoft-intune)).
+6.  Nasazení aplikace Portál společnosti Windows Phone 8.1 (SSP.appx) Pokyny najdete v tématu [Přidání obchodních aplikací pro Windows Phone](lob-apps-windows-phone.md) ([klasický portál](/intune-classic/deploy-use/deploy-apps-in-microsoft-intune)).
 
 ## <a name="how-to-renew-the-symantec-enterprise-code-signing-certificate"></a>Jak obnovit certifikát Symantec Enterprise pro podpis kódu
 
@@ -136,7 +136,7 @@ Certifikát Symantecu, který se používá k nasazení mobilních aplikací pro
 
 1.  Zaregistrujte nejnovější verzi své obchodní aplikace.
 
-2.  Otevřete konzolu Intune, přejděte na **Správce** &gt; **Správa mobilních zařízení** &gt; **Windows Phone** a klikněte na **Nahrát podepsanou aplikaci**.
+2.  Otevřete Azure Portal, přejděte na **Správce** &gt; **Správa mobilních zařízení** &gt; **Windows Phone** a klikněte na **Nahrát podepsanou aplikaci**.
 
 3.  Nahrajte nově podepsaný firemní portál. Budete potřebovat nově podepsaný soubor SSP.xap a nový soubor .PFX, který jste dostali od Symantecu, nebo token pro zápis aplikace vytvořený pomocí tohoto nového souboru .PFX.
 

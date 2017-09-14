@@ -5,7 +5,7 @@ keywords: Mac OS X, macOS, OS X
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 08/23/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 1b177b05f065f66deb8c60be768c123fc7991937
-ms.sourcegitcommit: 091f7b34f1fbf73db2bed5b46d92a78ba0dad1e4
+ms.openlocfilehash: 8eaeb2e0c44870dbebf85d98e2b49d46008068cd
+ms.sourcegitcommit: 1afff0fd464ece84ffea6bc0c71c78215d59e696
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Registrace zařízení s macOS v Intune pomocí aplikace Portál společnosti
 
@@ -31,7 +31,7 @@ Přístup k aplikacím, datům a prostředkům vaší organizace vám zjednoduš
   > [!NOTE]
   > Pokud chcete zaregistrovat zařízení s iOS, jako je iPhone nebo iPad, [vyzkoušejte místo toho tyto pokyny](enroll-your-device-in-intune-ios.md).
 
-1. V __Docku__ vyhledejte __Safari__ a otevřete stránku [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55770), ze které si můžete stáhnout aplikaci Portál společnosti pro macOS.
+1.  V __doku__ najděte __Safari__ a přejděte na adresu [aka.ms/macoscompanyportal](https://aka.ms/macoscompanyportal). 
 
 2. Stáhněte si aplikaci. Váš Mac ověří, že soubor ke stažení **CompanyPortal.dmg** můžete bezpečně otevřít. Po jeho otevření ze složky **Stahování** přetáhněte aplikaci **Portál společnosti** do složky **Aplikace**.
 

@@ -1,6 +1,6 @@
 ---
 title: "Registrace 30denní bezplatné zkušební verze Microsoft Intune"
-titleSuffix: 
+titleSuffix: Azure portal
 description: "Registrace 30denní bezplatné zkušební verze Intune"
 keywords: 
 author: lindavr
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.suite: ems
 ms.custom: 
-ms.openlocfilehash: de86b6c9938d4be3f90d62e96080d8b967886792
-ms.sourcegitcommit: 5eb209ae48173ddfdbbab131f12f3ac3498dcd87
+ms.openlocfilehash: 21ee75ab006c1770bc61039facc28d8a0118e706
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="sign-up-for-a-microsoft-intune-free-trial"></a>Registrace bezplatné zkušební verze Microsoft Intune
 
@@ -47,11 +47,11 @@ Když se zaregistrujete ke zkušební verzi, přijde vám na e-mailovou adresu, 
 Pro portál Azure Portal pro Intune se používají tři portály:
 - Řídicí panel Intune na portálu Azure ([portal.azure.com](https://portal.azure.com)), kde můžete prozkoumat [možnosti Intune na webu Azure Portal](what-is-intune.md).
 - Centrum pro správu Office 365 ([portal.office.com](https://portal.office.com)), kde můžete přidat a spravovat uživatele, pokud za tímto účelem nepoužíváte Azure Active Directory. Můžete také spravovat další oblasti svého účtu, včetně fakturace a podpory.
-- Konzola pro správu Intune Classic ([manage.microsoft.com](https://manage.microsoft.com)), kde můžete prozkoumat funkce, které ještě nejsou přidané do Azure.
+- Konzola pro správu Intune ([manage.microsoft.com](https://manage.microsoft.com)), kde můžete prozkoumat funkce, které ještě nejsou přidané do Azure.
 
 Obvykle budete používat řídicí panel Intune, který je na obrázku níže. To je web, na kterém se nastavují a spravují skupiny, zásady, zařízení a aplikace.
 
-Z řídicího panelu můžete přejít do klasické konzoly pro správu Intune výběrem dlaždice **Klasický portál** v horní části řídicího panelu.
+Z řídicího panelu můžete přejít do konzoly pro správu Intune výběrem dlaždice **Klasický portál** v horní části řídicího panelu.
 
 Pokud se chcete vrátit k portálu Azure Portal pro Intune, zadejte na adresní řádek v prohlížeči https://portal.azure.com a pak v seznamu služeb znovu zvolte **Intune**.
 
@@ -68,7 +68,7 @@ K návratu z Intune zpět do Centra pro správu Office 365 zadejte na adresní �
 
 ## <a name="next-steps"></a>Další kroky
 
-### <a name="intune-on-azure"></a>Intune v Azure
+### <a name="intune-in-the-azure-portal"></a>Intune na portálu Azure Portal
 Přečtěte si další informace o [Intune na portálu Azure Portal](what-is-intune.md).
 
 ### <a name="integration-with-other-products"></a>Integrace s dalšími produkty

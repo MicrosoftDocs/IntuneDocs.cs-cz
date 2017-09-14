@@ -1,6 +1,6 @@
 ---
 title: "Řešení potíží s profily zařízení v Microsoft Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Pokud nevíte, jak dál, přečtěte si toto téma, které vám pomůže vyřešit problémy s profily zařízení v Intune."
 keywords: 
 author: robstackmsft
@@ -15,11 +15,11 @@ ms.assetid:
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ed238f35927f17b20402f64586686246afabb900
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 426bed61930e045f38e3c7c658dbb7168dc2f551
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="troubleshooting-device-profiles-in-microsoft-intune"></a>Řešení potíží s profily zařízení v Microsoft Intune
 
@@ -59,7 +59,7 @@ Pokud se stejnému uživateli nebo zařízení přiřadí dvě nebo více zásad
 
 -   Nejvíc omezující nastavení zásad dodržování předpisů se použije při vyhodnocení proti stejnému nastavení v jiné zásadě dodržování předpisů.
 
--   Pokud je nastavení zásady konfigurace v konfliktu s nastavením v rámci jiné zásady konfigurace, zobrazí se tento konflikt v konzole Intune. Takové konflikty je třeba vyřešit ručně.
+-   Pokud je nastavení zásady konfigurace v konfliktu s nastavením jiné zásady konfigurace, zobrazí se tento konflikt na Azure Portalu. Takové konflikty je třeba vyřešit ručně.
 
 ## <a name="what-happens-when-app-protection-policies-conflict-with-each-other-which-one-will-be-applied-to-the-app"></a>Co se stane, když zásady ochrany aplikací navzájem kolidují? Která se použije pro příslušnou aplikaci?
 Nejvíce omezující nastavení dostupná v zásadách ochrany aplikací jsou konfliktní hodnoty s výjimkou polí pro zadání čísel (jako je zadání PIN kódu před resetováním).  Pole pro zadání čísel se nastaví na stejnou hodnotu, jako kdybyste zásadu MAM vytvořili v konzole pomocí možnosti doporučeného nastavení.

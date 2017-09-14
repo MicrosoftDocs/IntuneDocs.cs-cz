@@ -1,7 +1,7 @@
 ---
 title: "Nastavení Exchange Connectoru pro místní EAS přes Intune"
-titleSuffix: Intune Azure
-description: "Intune Azure: Exchange ActiveSync MDM – použijte nástroj Connector k povolení komunikace mezi Intune a místním Exchange Serverem."
+titleSuffix: Azure portal
+description: "Pomocí nástroje Connector umožníte komunikaci mezi Intune a místním Exchange Serverem."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,11 +15,11 @@ ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1dd5143ce6c604f416af1c6b6b1df684346e2f6d
-ms.sourcegitcommit: be12974a7eaa4ce9cffe45aabe456c858d582e20
+ms.openlocfilehash: f9dc93cf0a24032eba051f770af1b35f9932acc9
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Nastavení místního Exchange Connectoru pro Intune v Microsoft Intune Azure
 
@@ -30,7 +30,7 @@ Místní prostředí Exchange Serveru můžou pomocí místního Exchange Connec
 
 Pokud chcete nastavit připojení, které umožňuje komunikaci Microsoft Intune s místním Exchange Serverem, postupujte takto:
 
-1.  Stáhněte si místní Exchange Connector pro Intune z portálu Intune.
+1.  Stáhněte si místní Exchange Connector pro Intune z Azure Portalu.
 2.  Nainstalujte a nakonfigurujte místní Exchange Connector pro Intune.
 3.  Ověřte připojení k Exchangi.
 

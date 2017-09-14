@@ -1,6 +1,6 @@
 ---
 title: "Registrace zařízení – správce registrace zařízení"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Naučte se používat účet správce registrace zařízení k registraci zařízení v Intune. \""
 keywords: 
 author: nathbarn
@@ -15,11 +15,11 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 204df4648f1d79167e8eb5941d91b48d65b90704
-ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
+ms.openlocfilehash: 5caf60d0512a33c0c88f4305b1a9eb189112ba02
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="enroll-devices-using-device-enrollment-manager"></a>Registrace zařízení pomocí správce registrace zařízení
 
@@ -36,7 +36,7 @@ Abyste mohli uživatele přidat jako správce registrace zařízení, musí tito
 
 Restaurace chce pro své číšníky pořídit padesát tabletů POS a monitory na objednávky pro pracovníky kuchyně. Zaměstnanci nikdy nepotřebují přístup k datům společnosti a nepotřebují se přihlašovat jako uživatelé. Správce Intune vytvoří účet správce registrace zařízení a přidá vedoucího restaurace k účtu DEM, čímž mu v podstatě dá nadřízené možnosti DEM. Nadřízený nyní může zaregistrovat padesát zařízení pomocí přihlašovacích údajů DEM.
 
-Správci registrace zařízení můžou být jenom uživatelé v konzole Intune. Správce registrace zařízení nemůže být správcem služby Intune.
+Správci registrace zařízení můžou být jen uživatelé na Azure Portalu. Správce registrace zařízení nemůže být správcem služby Intune.
 
 Uživatel DEM může:
 
@@ -95,5 +95,5 @@ Odebrání správce registrace zařízení nemá vliv na zaregistrovaná zaříz
 
 ## <a name="view-the-properties-of-a-device-enrollment-manager"></a>Zobrazení vlastností správce registrace zařízení
 
-1. Na portálu Intune zvolte **Registrace zařízení** a pak zvolte **Správci registrace zařízení**.
+1. Na Azure Portalu zvolte **Registrace zařízení** a pak zvolte **Správci registrace zařízení**.
 2. V okně **Správci registrace zařízení** klikněte pravým tlačítkem na uživatele DEM a vyberte **Vlastnosti**.

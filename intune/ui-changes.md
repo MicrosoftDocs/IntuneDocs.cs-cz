@@ -1,7 +1,7 @@
 ---
 title: Kde v Azure najdu svoje funkce Intune?
-titleSuffix: Intune on Azure
-description: "Tento článek vám pomůže najít funkce Intune v konzole Azure."
+titlesuffix: Azure portal
+description: "Tento článek vám pomůže najít funkce Intune na Azure Portalu."
 keywords: 
 author: dagerrit
 ms.author: dagerrit
@@ -15,16 +15,16 @@ ms.assetid:
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 18e5ea572bde503600bc33a0b4401efed2e35d18
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 105b874523024b58098205d94da47c07ee432dfc
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Kde v Azure najdu svoje funkce Intune?
-Při přesunu Intune do portálu Azure Portal jsme využili příležitost uspořádat některé úlohy logičtěji. Každé vylepšení ale přichází za cenu toho, že je potřeba se s novým uspořádáním seznámit. Proto jsme vytvořili tento referenční přehled pro ty z vás, kteří dobře znají Intune v klasické konzole a zajímá je, jak v Intune pracovat na platformě Azure. Pokud tento článek nepopisuje funkci, kterou hledáte, uveďte ji v poznámce na konci článku, abychom ho mohli aktualizovat.
+Při přesunu Intune do portálu Azure Portal jsme využili příležitost uspořádat některé úlohy logičtěji. Každé vylepšení ale přichází za cenu toho, že je potřeba se s novým uspořádáním seznámit. Proto jsme vytvořili tento referenční přehled pro ty z vás, kteří dobře znají Intune na klasickém portálu a zajímá je, jak s Intune pracovat na Azure Portalu. Pokud tento článek nepopisuje funkci, kterou hledáte, uveďte ji v poznámce na konci článku, abychom ho mohli aktualizovat.
 ## <a name="quick-reference-guide"></a>Stručný referenční přehled
-|Funkce |Cesta v klasické konzole|Cesta v Intune v Azure|
+|Funkce |Cesta na klasickém portálu|Cesta v Intune na Azure Portalu|
 |------------|---------------|---------------|
 |Program registrace zařízení (DEP) |Správce > Správa mobilních zařízení > iOS a Mac OS X > Program registrace zařízení|[Registrace zařízení > Registrace Apple > Token Programu registrace](#where-did-apple-dep-go) |
 |Program registrace zařízení (DEP)| Správce > Správa mobilních zařízení > iOS a Mac OS X > Program registrace zařízení |[Registrace zařízení > Registrace Apple > Sériová čísla programu registrace](#where-did-apple-dep-go) |
@@ -39,10 +39,10 @@ Při přesunu Intune do portálu Azure Portal jsme využili příležitost uspo�
 
 
 ## <a name="where-do-i-manage-groups"></a>Kde můžu spravovat skupiny?
-Intune na Azure používá ke správě skupin [Azure Active Directory (AD)](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal).
+Intune na Azure Portalu používá ke správě skupin službu [Azure Active Directory (AD)](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal).
 
 ## <a name="where-did-enrollment-rules-go"></a>Kde najdu pravidla registrace?
-V klasické konzole jste mohli nastavit pravidla řídící registraci MDM mobilních a moderních zařízení s Windows a macOS:
+Na klasickém portálu jste mohli nastavit pravidla řídící registraci MDM mobilních a moderních zařízení s Windows a macOS:
 
 ![Obrázek klasických pravidel registrace mobilních zařízení](./media/01-classic-rules.png)
 
@@ -50,11 +50,11 @@ Tato pravidla platila bez výjimky pro všechny uživatele ve vašem účtu Intu
 
 ![Obrázek omezení registrace mobilních zařízení v Azure](./media/02-azure-enroll-restrictions.png)
 
-Výchozí Omezení limitů počtů zařízení odpovídá Limitu pro registraci zařízení v klasické konzole:
+Výchozí Omezení limitů počtů zařízení odpovídá Limitu pro registraci zařízení na klasickém portálu:
 
 ![Obrázek omezení počtů zařízení v Azure](./media/03-azure-device-limit.png)
 
-Výchozí Omezení typů zařízení odpovídá Omezením platformy v klasické konzole:
+Výchozí Omezení typů zařízení odpovídá Omezením platformy na klasickém portálu:
 
 ![Obrázek omezení typu zařízení v Azure](./media/04-azure-platform-restrictions.png)
 
@@ -65,7 +65,7 @@ Schopnost povolit nebo blokovat zařízení v osobním vlastnictví se teď spra
 Nové možnosti omezení budou přidány jenom do portálu Azure Portal.
 
 ## <a name="where-did-apple-dep-go"></a>Kde najdu Program registrace zařízení (DEP) Apple?
-V klasické konzole jste mohli nastavit integraci Intune s Programem registrace zařízení Apple a ručně vyžádat synchronizaci se službou společnosti Apple:
+Na klasickém portálu jste mohli nastavit integraci Intune s Programem registrace zařízení Apple a ručně vyžádat synchronizaci se službou společnosti Apple:
 
 ![Obrázek klasického tokenu DEP](./media/06-classic-dep-token.png)
 
@@ -73,13 +73,13 @@ Na portálu Azure Portal můžete Program registrace zařízení Apple nastavit 
 
 ![Obrázek tokenu DEP v Azure](./media/07-azure-dep-token.png)
 
-Možnost **Synchronizovat** se ale v klasické konzole přesunula do pracovního postupu správy sériových čísel, protože se tam zobrazují výsledky ruční synchronizace:
+Možnost **Synchronizovat** na klasickém portálu se ale přesunula do pracovního postupu správy sériových čísel, protože se tam zobrazí výsledky ruční synchronizace:
 
 ![Obrázek synchronizace DEP v Azure](./media/08-azure-dep-sync.png)
 
 ## <a name="where-did-corporate-pre-enrolled-devices-go"></a>Kde najdu firemní předregistrovaná zařízení?
 ### <a name="by-ios-serial-number"></a>Podle sériového čísla iOSu
-V klasické konzole můžete zařízení s iOSem registrovat prostřednictvím Programu registrace zařízení (DEP) Apple a Apple Configuratoru. Obě metody nabízejí předregistraci zařízení podle sériového čísla a zahrnují přiřazení speciálních profilů Registrace podnikového zařízení. Ještě před registrací můžete přiřazení profilu registrace spravovat prostřednictvím skupiny zařízení **Firemní předregistrované zařízení podle sériového čísla iOS**:
+Na klasickém portálu můžete zařízení s iOSem registrovat prostřednictvím Programu registrace zařízení (DEP) Apple a Apple Configuratoru. Obě metody nabízejí předregistraci zařízení podle sériového čísla a zahrnují přiřazení speciálních profilů Registrace podnikového zařízení. Ještě před registrací můžete přiřazení profilu registrace spravovat prostřednictvím skupiny zařízení **Firemní předregistrované zařízení podle sériového čísla iOS**:
 
 ![Obrázek klasických sériových čísel Apple](./media/09-classic-apple-serials.png)
 
@@ -93,18 +93,18 @@ Tam najdete sériová čísla pro registraci pomocí DEP Apple i Apple Configura
 
 ### <a name="by-imei-all-platforms"></a>Podle IMEI (všechny platformy)
 
-V klasické konzole můžete předem zobrazit seznam čísel IMEI zařízení, abyste je při zaregistrování do Intune mohli označit jako firemní:
+Na klasickém portálu můžete předem vytvořit seznam čísel IMEI zařízení, která se při registraci do Intune označí jako firemní:
 
 ![Obrázek klasického seznamu čísel IMEI](./media/12-classic-corp-imei.png)
 
-V konzole Azure musíte stejné IMEI nahrát do seznamu identifikátorů podnikových zařízení pomocí souboru hodnot oddělených čárkami (CSV). Nový portál nepodporuje ruční zadání čísel IMEI:
+Na Azure Portalu musíte stejné číslo IMEI nahrát do seznamu identifikátorů podnikových zařízení pomocí textového souboru s oddělovači (CSV). Nový portál nepodporuje ruční zadání čísel IMEI:
 
 ![Obrázek seznamu čísel IMEI v Azure](./media/13-azure-corp-imei.png)
 
 Intune na portálu Azure Portal je připravený na budoucnost díky podpoře jiných typů identifikátorů kromě IMEI, ale aktuálně umožňuje předběžné seznamy jenom čísel IMEI.
 
 ## <a name="where-did-corporate-device-enrollment-profiles-go"></a>Kde najdu profily registrace podnikového zařízení?
-Pokud chcete registrovat zařízení s iOSem prostřednictvím Programu registrace zařízení (DEP) Apple nebo pomocí Apple Configuratoru, musíte zadat profil registrace podnikového zařízení, kterému se má zařízení přiřadit. V klasické konzole se tvorba a správa těchto profilů prováděla v jednom seznamu:
+Pokud chcete registrovat zařízení s iOSem prostřednictvím Programu registrace zařízení (DEP) Apple nebo pomocí Apple Configuratoru, musíte zadat profil registrace podnikového zařízení, kterému se má zařízení přiřadit. Na klasickém portálu se vytváření a správa těchto profilů prováděla v jednom seznamu:
 
 ![Obrázek klasických profilů registrace zařízení](./media/14-classic-corp-profiles.png)
 

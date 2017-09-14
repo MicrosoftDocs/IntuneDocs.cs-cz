@@ -1,6 +1,6 @@
 ---
 title: "Přiřazení aplikací zařízení s Androidem for Work"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Pomocí tohoto tématu můžete synchronizovat a následně přiřadit aplikaci zařízení s Androidem for Work z obchodu Google Play for Work."
 keywords: 
 author: mattbriggs
@@ -15,18 +15,18 @@ ms.assetid: 2f6c06bf-e29a-4715-937b-1d2c7cf663d4
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: bbe5be4afead5d80f38e2ef56d12c0b26351dfd8
-ms.sourcegitcommit: 4034ac474bfed358270a32459a2cf2fe02f44e45
+ms.openlocfilehash: 803f1475a220e52a0f7d8a41d58f0a5337ff6555
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="how-to-assign-apps-to-android-for-work-devices-with-intune"></a>Přiřazení aplikací zařízení s Androidem for Work pomocí Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Zařízením s Androidem for Work se aplikace přiřazují jiným způsobem než zařízením se standardním Androidem. Všechny aplikace, které instalujete pro Android for Work, pocházejí z obchodu Google Play for Work. Do tohoto obchodu se přihlásíte, prohlédnete si požadované aplikace a schválíte je.
-Aplikace se pak objeví v uzlu **Licencované aplikace** portálu Intune. Odsud můžete přiřazení aplikace spravovat stejným způsobem, jakým byste přiřadili jakoukoli jinou aplikaci.
+Aplikace se pak objeví v uzlu **Licencované aplikace** Azure Portalu. Odsud můžete přiřazení aplikace spravovat stejným způsobem, jakým byste přiřadili jakoukoli jinou aplikaci.
 
 Pokud jste vytvořili své vlastní obchodní aplikace, můžete je také přiřadit tímto způsobem:
 - Zaregistrujte si vývojářský účet Google, který umožňuje publikování aplikací do privátní oblasti obchodu Google Play.
@@ -34,7 +34,7 @@ Pokud jste vytvořili své vlastní obchodní aplikace, můžete je také přiř
 
 ## <a name="before-you-start"></a>Než začnete
 
-Ověřte, že jste v úloze **Registrace zařízení** portálu Intune nakonfigurovali vzájemnou spolupráci Intune a Androidu for Work.
+Ověřte, že jste v úloze **Registrace zařízení** Azure Portalu nakonfigurovali vzájemnou spolupráci Intune a Androidu for Work.
 
 ## <a name="synchronize-an-app-from-the-google-play-for-work-store"></a>Synchronizace aplikace z obchodu Google Play for Work
 

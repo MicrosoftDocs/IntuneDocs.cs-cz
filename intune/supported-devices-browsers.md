@@ -14,11 +14,11 @@ ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f862129d73c83e078d8b29201f1d92b9b65aa609
-ms.sourcegitcommit: ce8a1f0f4e95444949556600d1837937b6efd769
+ms.openlocfilehash: 00fc685062c090b40e20ed3dfa30afbeeb5c9780
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="supported-devices-and-browsers"></a>Podporovaná zařízení a prohlížeče
 
@@ -31,7 +31,7 @@ Než začnete s nastavováním Microsoft Intune, projděte si následující po�
 - [Podporovaná zařízení a počítače](#intune-supported-devices)
 - [Seznam podporovaných webových prohlížečů k používání Intune](#intune-supported-web-browsers)
 
-Měli byste se také seznámit s [využitím šířky pásma Intune](network-bandwidth-use.md) ([klasická konzola](/intune-classic/get-started/network-bandwidth-use)).
+Měli byste se také seznámit s [využitím šířky pásma Intune](network-bandwidth-use.md) ([klasický portál](/intune-classic/get-started/network-bandwidth-use)).
 
 ## <a name="intune-supported-devices"></a>Zařízení podporovaná pro Intune
 
@@ -43,7 +43,7 @@ Intune se nedá použít ke správě operačních systémů Windows Server.
 
 ### <a name="windows-pc-software-client"></a>Softwarový klient pro počítače s Windows
 
-Jako alternativní metodu registrace jde na počítače s Windows nasadit a nainstalovat [softwarového klienta Intune](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune). Tato funkce je dostupná, jen když používáte klasickou konzolu Intune. Softwarového klienta Intune můžete použít ke správě počítačů s Windows 7 a novějšími s výjimkou Windows 10 Home.
+Jako alternativní metodu registrace jde na počítače s Windows nasadit a nainstalovat [softwarového klienta Intune](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune). Tato funkce je dostupná jen při používání klasického portálu Intune. Softwarového klienta Intune můžete použít ke správě počítačů s Windows 7 a novějšími s výjimkou Windows 10 Home.
 
 <!--  ### Exchange ActiveSync management
 
@@ -54,7 +54,7 @@ You can manage [Exchange ActiveSync devices](/intune-classic/deploy-use/mobile-d
 Různé úlohy správy vyžadují, abyste použili některý z následujících webů pro správu.
 
 - [Portál Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
-- [Portál Intune](https://portal.azure.com/)
+- [Azure Portal](https://portal.azure.com/)
 
 Portály podporují následující prohlížeče:
 - Microsoft Edge (nejnovější verze)
@@ -67,12 +67,12 @@ Portály podporují následující prohlížeče:
 
 Funkce klasického Intune, jako je softwarový počítačový klient Intune a integrace partnerů MTD (Mobile Threat Defense), jsou dostupné jen na klasickém portálu Intune (https://manage.microsoft.com). Klasický portál Intune vyžaduje, aby prohlížeč podporoval Silverlight.
 
-Klasickou konzolu Intune podporují následující prohlížeče vybavené technologií Silverlight:
+Konzolu Intune podporují následující prohlížeče vybavené technologií Silverlight:
 - Internet Explorer 10 nebo novější
 - Google Chrome (verze starší než verze 42)
 - Mozilla Firefox se zapnutým doplňkem Silverlight [Další informace](https://go.microsoft.com/fwlink/?linkid=836872)
 
 > [!Note]
-> Klasická konzola Intune nepodporuje Microsoft Edge ani mobilní prohlížeče, protože nepodporují [Microsoft Silverlight](https://msdn.microsoft.com/library/cc838158(v=vs.95).aspx).
+> Klasický portál Intune nepodporuje Microsoft Edge ani mobilní prohlížeče, protože nepodporují [Microsoft Silverlight](https://msdn.microsoft.com/library/cc838158(v=vs.95).aspx).
 
 K tomuto portálu se můžou přihlásit jen uživatelé, kteří mají oprávnění správce služeb nebo jsou správcem tenanta s rolí globálního správce. Abyste získali přístup ke konzole pro správu, musí mít váš účet licenci k používání Intune a stav registrace **Povoleno**.

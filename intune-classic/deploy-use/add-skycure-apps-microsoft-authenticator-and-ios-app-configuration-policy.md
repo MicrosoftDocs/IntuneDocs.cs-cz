@@ -1,6 +1,6 @@
 ---
 title: "Přidání aplikací Skycure, aplikace Microsoft Authenticator a zásad konfigurace pro iOS"
-description: "Přidejte aplikace Skycure, aplikaci Microsoft Authenticator a zásady konfigurace pro iOS do klasické konzoly Intune."
+description: "Přidejte aplikace Skycure, aplikaci Microsoft Authenticator a zásady konfigurace pro iOS do klasického portálu Intune."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -14,11 +14,11 @@ ms.assetid: 018d26f4-4a75-4e27-bb04-54f54106cb2f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 425b86e92281bb6e3657a6c806be269ccae94311
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 6d762e1aed998642db66908549b2d15d54601aed
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="add-skycure-apps-microsoft-authenticator-app-and-ios-configuration-policy"></a>Přidání aplikací Skycure, aplikace Microsoft Authenticator a zásad konfigurace pro iOS
 
@@ -30,9 +30,9 @@ Kromě toho budete potřebovat [Microsoft Authenticator](https://docs.microsoft.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
--   Níže uvedený postup musíte provést v [klasické konzole Intune](https://manage.microsoft.com/).
+-   Níže uvedený postup musíte provést na [klasickém portálu Intune](https://manage.microsoft.com/).
 
--   K přihlášení do klasické konzoly Intune použijte stejný účet Azure AD, který jste dříve nakonfigurovali v konzole pro správu Skycure.
+-   Použijte stejný účet Azure AD, který jste dříve nakonfigurovali v konzole pro správu Skycure. Mělo by jít o stejný účet, který slouží k přihlašování ke klasickému portálu Intune.
 
 -   Musíte mít připravený integrační soubor Skycure. Je to soubor .zip, který jste v předchozím kroku stáhli z konzoly pro správu Skycure a který obsahoval soubor **skycure\_configuration.plist** s parametry zásad konfigurace aplikace pro iOS.
 
@@ -44,7 +44,7 @@ Kromě toho budete potřebovat [Microsoft Authenticator](https://docs.microsoft.
 
 ## <a name="to-add-the-skycure-app-for-android"></a>Postup přidání aplikace Skycure pro Android
 
-1.  V klasické konzole Intune vyberte **Aplikace** &gt; **Přidat aplikace**. Tím se spustí Vydavatel softwaru Intune. Potom klikněte na **Další**.
+1.  Na klasickém portálu Intune vyberte **Aplikace** &gt; **Přidat aplikace**. Tím se spustí Vydavatel softwaru Intune. Potom klikněte na **Další**.
 
 2.  Na stránce **Instalace softwaru** vyberte **Externí odkaz** a potom v části **Zadejte adresu URL** vložte adresu URL pro [aplikaci Skycure pro Android](https://play.google.com/store/apps/details?id=com.skycure.skycure).
 
@@ -58,7 +58,7 @@ Kromě toho budete potřebovat [Microsoft Authenticator](https://docs.microsoft.
 
 ## <a name="to-add-the-skycure-app-for-ios"></a>Postup přidání aplikace Skycure pro iOS
 
-1.  V klasické konzole Intune vyberte **Aplikace** &gt; **Přidat aplikace**. Tím se spustí Vydavatel softwaru Intune. Potom klikněte na **Další**.
+1.  Na klasickém portálu Intune vyberte **Aplikace** &gt; **Přidat aplikace**. Tím se spustí Vydavatel softwaru Intune. Potom klikněte na **Další**.
 
 2.  Na stránce **Instalace softwaru** vyberte **Spravovaná aplikace pro iOS z App Storu** a potom v části **Zadejte adresu URL** vložte adresu URL pro [aplikaci Skycure pro iOS](https://itunes.apple.com/us/app/skycure/id695620821?mt=8).
 
@@ -74,7 +74,7 @@ Kromě toho budete potřebovat [Microsoft Authenticator](https://docs.microsoft.
 
 ## <a name="to-add-the-microsoft-authenticator-app-for-ios"></a>Postup přidání aplikace Microsoft Authenticator pro iOS
 
-1.  V klasické konzole Intune vyberte **Aplikace** &gt; **Přidat aplikace**. Tím se spustí Vydavatel softwaru Intune. Potom klikněte na **Další**.
+1.  Na klasickém portálu Intune vyberte **Aplikace** &gt; **Přidat aplikace**. Tím se spustí Vydavatel softwaru Intune. Potom klikněte na **Další**.
 
 2.  Na stránce **Instalace softwaru** vyberte **Spravovaná aplikace pro iOS z App Storu** a potom v části **Zadejte adresu URL** vložte adresu URL pro [aplikaci Microsoft Authenticator pro iOS](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8).
 
@@ -90,7 +90,7 @@ Kromě toho budete potřebovat [Microsoft Authenticator](https://docs.microsoft.
 
 ## <a name="to-add-the-skycure-ios-app-configuration-policy"></a>Postup přidání zásad konfigurace aplikace Skycure pro iOS
 
-1.  V klasické konzole Intune vyberte **Zásady** &gt; **Přehled &gt; Přidat zásadu**.
+1.  Na klasickém portálu Intune vyberte **Zásady** &gt; **Přehled &gt; Přidat zásadu**.
 
 2.  V seznamu zásad rozbalte **iOS**, zvolte **Zásada konfigurace mobilní aplikace (iOS 8.0 a novější)** a pak zvolte **Vytvořit zásadu**.
 

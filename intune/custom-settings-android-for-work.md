@@ -1,6 +1,6 @@
 ---
 title: "Nastavení vlastního profilu Intune pro Android for Work"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Zjistěte, jak vytvořit nastavení vlastního profilu Intune pro zařízení s Androidem for Work."
 keywords: 
 author: robstackmsft
@@ -15,11 +15,11 @@ ms.assetid: 4724d6e5-05e5-496c-9af3-b74f083141f8
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1b48fc7bd784b5d6d531ef5bf28fe835e394b106
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 47af10ea2eb04b5e5a470aff36d45d41105feb15
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="create-intune-custom-profile-settings-for-android-for-work-devices"></a>Vytvoření nastavení vlastního profilu Intune pro Android for Work
 
@@ -32,7 +32,7 @@ Tato vlastnost umožňuje přiřadit nastavení Androidu, která nejdou konfigur
 1. Začněte podle pokynů v tématu [Konfigurace vlastního nastavení zařízení](custom-settings-configure.md).
 2. V okně **Vlastní nastavení OMA-URI** pomocí **Přidat** přidejte nové nastavení.
 3. V okně **Přidat řádek** nakonfigurujte tyto údaje:
-    - **Název** – zadejte jedinečný název vlastního nastavení pro Android for Work, abyste ho mohli na portálu Intune snadno identifikovat.
+    - **Název** – zadejte jedinečný název vlastního nastavení pro Android for Work, abyste ho mohli na Azure Portalu snadno identifikovat.
     - **Popis** – zadejte popis, který bude shrnovat účel vlastní zásady pro Android, a uveďte jakékoli další důležité informace, které vám pomůžou zásadu najít.
     - **OMA-URI** – zadejte OMA-URI, pro které chcete zadat nastavení.
     - **Datový typ** – vyberte datový typ, ve kterém toto nastavení OMA-URI určíte. Vyberte z možností **Řetězec**, **Řetězec (soubor XML)**, **Datum a čas**, **Celé číslo**, **Plovoucí desetinná čárka**, **Logická hodnota** nebo **Base64 (soubor)**.
