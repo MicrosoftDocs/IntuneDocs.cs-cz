@@ -115,7 +115,7 @@
     - name: Nastavení Intune
       href: setup-steps.md
       items:
-        - name: Požadavky
+        - name: Podporované konfigurace
           href: supported-devices-browsers.md
           items:
             - name: Využití šířky pásma sítě
@@ -184,13 +184,13 @@
           href: device-lost-mode.md
         - name: Uzamčení zařízení
           href: device-remote-lock.md
-        - name: Resetování hesla
+        - name: Resetovat heslo
           href: device-passcode-reset.md
         - name: Restartování zařízení
           href: device-restart.md
         - name: Odhlášení aktuálního uživatele
           href: device-logout-user.md
-        - name: Odebrání uživatele
+        - name: Odebrat uživatele
           href: device-remove-user.md
         - name: Vzdálené řízení pro Android
           href: device-profile-android-teamviewer.md
@@ -360,7 +360,7 @@
           href: device-profile-monitor.md
         - name: Řešení potíží s profily
           href: device-profile-troubleshoot.md
-    - name: Nastavení dodržování předpisů zařízením
+    - name: Nastavit dodržování předpisů zařízením
       href: device-compliance-get-started.md
       items:
         - name: Vytvoření zásad pro Android
@@ -416,7 +416,7 @@
               href: windows-information-protection-policy-create.md
             - name: Správa přenosu dat mezi aplikacemi pro iOS
               href: data-transfer-between-apps-manage-ios.md
-        - name: Ochrana před mobilními hrozbami
+        - name: Mobile Threat Defense
           href: mobile-threat-defense.md
           items:
             - name: Nastavení Lookoutu

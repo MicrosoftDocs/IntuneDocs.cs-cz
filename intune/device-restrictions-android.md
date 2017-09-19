@@ -3,8 +3,8 @@ title: "Nastavení omezení pro zařízení s Androidem v Intune"
 titlesuffix: Azure portal
 description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s Androidem."
 keywords: 
-author: robstackmsft
-ms.author: robstack
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 ms.date: 09/07/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 6bdf714a-5d93-485c-8b52-513635c60cb6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: db7287dcccf45e0ce98a6fcae3c953dbebc2bb82
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 094fc13705c1b746a4b753c02127478f10754f46
+ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení zařízení používajících Android a Samsung KNOX Standard v Microsoft Intune
 
@@ -68,7 +68,7 @@ Tato nastavení spolu se zásadami omezení pro zařízení s Androidem se použ
 
 Pokud nakonfigurujete nastavení **Číselné komplexní** a potom ho přiřadíte k zařízení, které používá verzi Androidu starší než 5.0, bude platit následující chování.
 - Pokud má aplikace Portál společnosti verzi starší než 1704, nepoužijí se u zařízení žádné zásady PIN kódu a na Azure Portalu se zobrazí chyba.
-- Pokud má aplikace Portál společnosti verzi 1704 nebo novější, je možné použít jenom jednoduchý PIN kód. Verze Androidu starší než 5.0 toto nastavení nepodporují. Na Azure Portalu se nezobrazí žádná chyba.
+- Pokud aplikace Portál společnosti používá verzi 1704 nebo novější, je možné použít jenom jednoduchý PIN kód. Verze Androidu starší než 5.0 toto nastavení nepodporují. Na Azure Portalu se nezobrazí žádná chyba.
 
 
 ## <a name="google-play-store"></a>Obchod Google Play
