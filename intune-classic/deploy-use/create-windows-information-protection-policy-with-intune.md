@@ -5,7 +5,7 @@ keywords:
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 08/14/2017
+ms.date: 9/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 51e53e28-5c34-4d0f-a4b1-6390a337514c
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a08296770ee3a326411d3267705ed6a912ab17bd
-ms.sourcegitcommit: c8fb42fcb8735af432c7e07c380d956171012bd4
+ms.openlocfilehash: 040ce88c47eb12bbe9b228189d90ca422e5185e7
+ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune
 
@@ -35,13 +35,6 @@ Povězme si o několika konceptech při přidání zásady WIP.
 -   **Povolené aplikace:** Tyto aplikace musí tuto zásadu dodržovat.
 
 -   **Aplikace s výjimkou:** Tyto aplikace mají z této zásady výjimku a můžou k podnikovým datům přistupovat bez omezení.
-
-> [!IMPORTANT]  
-> Aby aplikace Portál společnosti správně fungovala, doporučuje se v Intune přidat ji do seznamu aplikací s výjimkou. Uděláte to tak, že do seznamu **Aplikace s výjimkou** přidáte následující **aplikaci pro Store**:  
->   - Název: Portál společnosti  
->   - Vydavatel: CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US  
->   - Název produktu: Microsoft.CompanyPortal  
-
 
 ### <a name="types-of-apps"></a>Typy aplikací
 
@@ -157,7 +150,7 @@ Doporučujeme začít s režimem **Tiché** nebo **Povolit potlačení** a u mal
 
 ### <a name="to-add-a-protection-mode"></a>Přidání režimu ochrany
 
-1.  V okně **Zásada aplikace**  zvolte název zásady a potom v okně **Přidat zásadu** klikněte na **Požadovaná nastavení**.
+1.  V okně **Zásada aplikace ** zvolte název zásady a potom v okně **Přidat zásadu** klikněte na **Požadovaná nastavení**.
 
     ![Snímek obrazovky s režimem Kurzy](../media/AppManagement/learning-mode-sc1.png)
 
