@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 07/21/2017
+ms.date: 09/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6b3ecc9af91d1a78f84dd6d4b8f47f0bf3e8c742
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 787fbdd470b4e1fbb4cb3e22ba4065e52d4c63f8
+ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Povolení registrace zařízení s iOSem pomocí Apple School Manageru
 
@@ -38,17 +38,8 @@ Mimochodem registraci přes Apple School Manager nejde používat s [programem r
 - Přidružení uživatelů vyžaduje [koncový bod WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Přečtěte si další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 - Zařízení zakoupená z programu [Apple School Management](http://school.apple.com)
 
-**Kroky registrace Apple School Manageru**
-1. [Získání tokenu Apple School Manageru a přiřazení zařízení](#get-the-apple-token-and-assign-devices)
-2. [Vytvoření registračního profilu](#create-an-apple-enrollment-profile)
-3. [Připojení služby School Data Sync](#connect-school-data-sync) (volitelné)
-4. [Synchronizace zařízení spravovaných Apple School Managerem](#sync-managed-devices)
-5. [Přiřazení profilu Apple School Manageru k zařízením](#assign-a-profile-to-devices)
-6. [Distribuce zařízení uživatelům](#distribute-devices-to-users)
-
 >[!NOTE]
 >Při registraci na zařízeních spravovaných Apple School Managerem s přidružením uživatelů nefunguje vícefaktorové ověřování (MFA). Po registraci vícefaktorové ověřování na těchto zařízeních funguje podle očekávání. Po registraci vícefaktorové ověřování na zařízeních funguje podle očekávání. Zařízení nemůžou vyzvat uživatele, kteří při prvním přihlášení potřebují změnit své heslo. Výzva k resetování hesla se během registrace nezobrazí ani uživatelům, kterým vypršela platnost hesla. Uživatelé musí heslo resetovat z jiného zařízení.
-
 
 ## <a name="get-the-apple-token-and-assign-devices"></a>Získání tokenu Apple a přiřazení zařízení
 
@@ -104,7 +95,8 @@ Registrační profil zařízení definuje nastavení, která se během registrac
     - **Pod dohledem** – Režim, který nabízí více možností správy a ve výchozím nastavení má zakázaný zámek aktivace. Pokud políčko nezaškrtnete, budete mít omezené možnosti správy.
 
      - **Uzamčená registrace** – Vyžaduje režim správy Pod dohledem. Zakáže nastavení iOSu, která by mohla umožnit odebrání profilu správy. Pokud políčko nezaškrtnete, půjde profil správy odebrat z nabídky Nastavení.
-   - **Sdílený iPad** – (Vyžaduje režimy **Zaregistrovat bez přidružení uživatele** a **Pod dohledem**.) Umožňuje více uživatelům přihlásit se k zaregistrovaným iPadům pomocí spravovaného Apple ID. Spravovaná Apple ID se vytváří na portálu Apple School Manager. Přečtěte si další informace o [sdíleném iPadu](education-settings-configure-ios-shared.md).
+   - **Sdílený iPad** – (Vyžaduje režimy **Zaregistrovat bez přidružení uživatele** a **Pod dohledem**.) Umožňuje více uživatelům přihlásit se k zaregistrovaným iPadům pomocí spravovaného Apple ID. Spravovaná Apple ID se vytváří na portálu Apple School Manager. Přečtěte si další informace o [sdíleném iPadu](education-settings-configure-ios-shared.md). Měli byste si přečíst také [požadavky společnosti Apple na sdílené iPady](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
+
    >[!NOTE]
    >Pokud je **Přidružení uživatele** nastavené na **S přidružením uživatele** nebo je režim **Pod dohledem** nastavený na **Vypnuto**, je režim Sdílený iPad pro registrační profil zakázaný.
 

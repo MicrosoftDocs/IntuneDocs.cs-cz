@@ -15,19 +15,19 @@ ms.assetid:
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 105b874523024b58098205d94da47c07ee432dfc
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 41b358f48412585ec40e369225b4263012bfd2f8
+ms.sourcegitcommit: b8987b8dfb009ea55678d7f640ac5f18a6ab167e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Kde v Azure najdu svoje funkce Intune?
 Při přesunu Intune do portálu Azure Portal jsme využili příležitost uspořádat některé úlohy logičtěji. Každé vylepšení ale přichází za cenu toho, že je potřeba se s novým uspořádáním seznámit. Proto jsme vytvořili tento referenční přehled pro ty z vás, kteří dobře znají Intune na klasickém portálu a zajímá je, jak s Intune pracovat na Azure Portalu. Pokud tento článek nepopisuje funkci, kterou hledáte, uveďte ji v poznámce na konci článku, abychom ho mohli aktualizovat.
 ## <a name="quick-reference-guide"></a>Stručný referenční přehled
 |Funkce |Cesta na klasickém portálu|Cesta v Intune na Azure Portalu|
 |------------|---------------|---------------|
-|Program registrace zařízení (DEP) |Správce > Správa mobilních zařízení > iOS a Mac OS X > Program registrace zařízení|[Registrace zařízení > Registrace Apple > Token Programu registrace](#where-did-apple-dep-go) |
-|Program registrace zařízení (DEP)| Správce > Správa mobilních zařízení > iOS a Mac OS X > Program registrace zařízení |[Registrace zařízení > Registrace Apple > Sériová čísla programu registrace](#where-did-apple-dep-go) |
+|Program registrace zařízení (DEP)[jenom iOS]|Správce > Správa mobilních zařízení > iOS > Program registrace zařízení|[Registrace zařízení > Registrace Apple > Token Programu registrace](#where-did-apple-dep-go) |
+|Program registrace zařízení (DEP)[jenom iOS]| Správce > Správa mobilních zařízení > iOS a Mac OS X > Program registrace zařízení |[Registrace zařízení > Registrace Apple > Sériová čísla programu registrace](#where-did-apple-dep-go) |
 |Pravidla registrace |Správce > Správa mobilních zařízení > Pravidla registrace|[Registrace zařízení > Omezení registrace](#where-did-enrollment-rules-go) |
 |Skupiny podle sériového čísla iOSu |Skupiny > Všechna zařízení > Firemní předregistrovaná zařízení > Podle sériového čísla iOS|[Registrace zařízení > Registrace Apple > Sériová čísla programu registrace](#where-did-corporate-pre-enrolled-devices-go) |
 |Skupiny podle sériového čísla iOSu |Skupiny > Všechna zařízení > Firemní předregistrovaná zařízení > Podle sériového čísla iOS| [Registrace zařízení > Registrace Apple > Sériová čísla AC](#where-did-corporate-pre-enrolled-devices-go)|

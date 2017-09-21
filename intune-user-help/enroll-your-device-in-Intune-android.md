@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 07/13/2017
+ms.date: 09/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: e12f8d31abc4e067a6339e93cc21680921ce88e4
-ms.sourcegitcommit: 2a6ad3c233d15a9fb441362105f64b2bdd550c34
+ms.openlocfilehash: 256aa8f52bd25ddcb860aed25b22f1549053d2b1
+ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="enroll-your-android-device-in-intune"></a>Registrace zařízení se systémem Android do Intune
 
@@ -54,14 +54,14 @@ Pokud se při registraci zařízení do služby Intune zobrazí chybová zpráva
 
 6.  Na obrazovce **Nastavení firemního přístupu** klepněte na **ZAČÍT**.
 
-    ![Obrazovka nastavení přístupu společnosti](./media/and-enroll-4a-comp-access-setup.png)
+    ![Obrazovka nastavení přístupu společnosti](/intune/media/android_cp_enroll_02_post_1709.png)
 
     > [!NOTE]
     > Žluté trojúhelníky neznamenají, že už došlo k chybě. Tyto ikony označují, že ještě existují kroky, které se musí v procesu registrace dokončit.
 
-7. Na obrazovce **Proč zařízení registrovat?** si přečtěte informace o tom, co vám registrace zařízení umožní, a potom klepněte na **POKRAČOVAT**.
+7. Na obrazovce **Výhody správy zařízení** si přečtěte, co vám registrace zařízení umožní, a pak klepněte na **POKRAČOVAT**.
 
-    ![Obrazovka Proč zařízení registrovat](./media/and-enroll-4b-why-enroll.png)
+    ![Obrazovka Výhody správy zařízení](/intune/media/android_cp_enroll_02_post_1709.png)
 
 8.  Prohlédněte si seznam toho, co váš správce IT uvidí nebo neuvidí ve vašem zařízení, a klepněte na **POKRAČOVAT**.
 
@@ -114,13 +114,13 @@ Pokud se při registraci zařízení do služby Intune zobrazí chybová zpráva
 
 14. Když se zobrazí stránka **Nastavení firemního přístupu**, klepněte na **POKRAČOVAT**. Pokud se zobrazí zpráva, že vaše zařízení nedodržuje předpisy, podle pokynů tento problém vyřešte a pak klepněte na **POKRAČOVAT**.
 
-    ![Zařízení nedodržuje předpisy, ale je zaregistrované.](./media/and-enroll-9a-noncompliant-enrolled-device.png)
+    ![Zařízení nedodržuje předpisy, ale je zaregistrované.](/intune/media/android_cp_enroll_05_post_1709.png)
 
-    ![Zobrazí se problémy zařízení s dodržením předpisů, které je potřeba vyřešit.](./media/and-enroll-9b-resolve-compliance-issues.png)
+    ![Zobrazí se problémy zařízení s dodržením předpisů, které je potřeba vyřešit.](/intune/media/android_cp_enroll_03_post_1709.png)
 
     Další informace o problémech zjistíte, když na ně klepnete.
 
-    ![Rozbalené problémy zařízení s dodržením předpisů](./media/and-enroll-9c-resolve-compliance-issues-expanded.png)
+    ![Rozbalené problémy zařízení s dodržením předpisů](/intune/media/android_cp_enroll_04_post_1709.png)
 
     ![Obrazovka nastavení přístupu společnosti](./media/and-enroll-9d-comp-access-setup.png)  
 

@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 07/28/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,19 +15,19 @@ ms.assetid: 6d384cd0-b662-41e7-94f5-0c96790ab20a
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b3ed7fe610f8101d90af044a8ff3849c57146c75
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 5b139db1780881e5bc0aed2345f9dc456a18f0e0
+ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="enroll-ios-devices-with-apple-configurator"></a>Registrace zařízení s iOSem pomocí Apple Configuratoru
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Intune podporuje registraci zařízení s iOSem pomocí [Apple Configuratoru](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) spuštěných na počítačích Mac. Registrace pomocí Apple Configuratoru vyžaduje, abyste každé zařízení s iOSem připojili prostřednictvím USB k počítači Mac a nastavili registraci pro podniky. Zařízení můžete do služby Intune registrovat pomocí Apple Configuratoru dvěma způsoby:
-- **Registrace v průvodci nastavením** – Obnoví tovární nastavení zařízení a připraví ho k registraci v průvodci nastavením.
-- **Přímá registrace** – Neobnoví tovární nastavení zařízení a zaregistruje ho pomoci nastavení iOS. Tato metoda podporuje jenom **zařízení bez přidružení uživatele**.
+- **Registrace Pomocníka s nastavením** – Obnoví tovární nastavení zařízení a připraví ho k registraci Pomocníka s nastavením.
+- **Přímá registrace** – Neobnoví tovární nastavení zařízení a zaregistruje ho pomoci nastavení iOSu. Tato metoda podporuje jenom **zařízení bez přidružení uživatele**.
 
 Metoda registrace pomocí Apple Configuratoru se nedá použít se [Správcem registrace zařízení](device-enrollment-manager-enroll.md).
 
@@ -48,13 +48,17 @@ Profil registrace zařízení definuje nastavení, která se během registrace p
 2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 3. Zvolte **Registrace zařízení** > **Registrace Apple**.
 4. V části **Spravovat nastavení registrace Apple Configuratoru** vyberte **Profily AC**.
-5. V okně **Registrační profily Apple Configuratoru** vyberte **Vytvořit**.
+5. V **Registračních profilech Apple Configuratoru** vyberte **Vytvořit**.
 6. Zadejte **Název** a **Popis** profilu pro účely správy. Uživatelům se tyto údaje nezobrazí. Pole Název můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName, který slouží k přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o dynamických skupinách Azure Active Directory.
 
   ![Snímek obrazovky Vytvořit profil s vybranou volbou Zaregistrovat s přidružením uživatele](./media/apple-configurator-profile-create.png)
 
 7. Určete **Přidružení uživatele**:
-   - **Zaregistrovat s přidružením uživatele** – Zařízení musí mít přidruženého uživatele (pomocí Průvodce nastavením), aby mohlo dostat přístup k firemním datům a e-mailu. Přidružení uživatele se vyžaduje u spravovaných zařízení, která patří konkrétním uživatelům a potřebují používat portál společnosti kvůli službám, jako je instalace aplikací.
+   - **Zaregistrovat s přidružením uživatele** – Zařízení musí mít přidruženého uživatele (pomocí Pomocníka s nastavením), aby mohlo dostat přístup k firemním datům a e-mailu. Přidružení uživatele se vyžaduje u spravovaných zařízení, která patří konkrétním uživatelům a potřebují používat Portál společnosti kvůli službám, jako je instalace aplikací. Tato možnost je podporovaná jenom pro registraci Pomocníka s nastavením. Přidružení uživatelů vyžaduje [koncový bod WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Přečtěte si další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+
+   > [!NOTE]
+   > Při registraci s přidružením uživatelů nefunguje vícefaktorové ověřování (MFA). Po registraci vícefaktorové ověřování na zařízeních funguje podle očekávání. Zařízení nemůžou vyzvat uživatele, kteří při prvním přihlášení potřebují změnit své heslo. Výzva k resetování hesla se během registrace nezobrazí ani uživatelům, kterým vypršela platnost hesla. Uživatelé musí heslo resetovat z jiného zařízení.
+
    - **Zaregistrovat bez přidružení uživatele** – K zařízení není přidružený žádný uživatel. Toto spřažení použijte u zařízení určených k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, které vyžadují přidruženého uživatele (včetně aplikace Portál společnosti používané k instalaci obchodních aplikací), nebudou fungovat. Vyžaduje se pro přímou registraci.
 
 6. Uložte profil pomocí tlačítka **Vytvořit**.
@@ -65,7 +69,7 @@ Profil registrace zařízení definuje nastavení, která se během registrace p
 
 **Přidání sériových čísel Apple Configuratoru k Intune**
 
-1. Vytvořte seznam hodnot oddělených čárkami se dvěma sloupci (.csv) bez záhlaví. Do levého sloupce přidejte sériové číslo a v pravém sloupci uveďte podrobnosti. Aktuálně je maximální počet řádků v seznamu 500. V textovém editoru vypadá seznam CSV přibližně takto:
+1. Vytvořte seznam hodnot oddělených čárkami se dvěma sloupci (.csv) bez záhlaví. Do levého sloupce přidejte sériové číslo a v pravém sloupci uveďte podrobnosti. Aktuálně je maximální počet řádků v seznamu 500. V textovém editoru vypadá seznam .csv takto:
 
     F7TLWCLBX196,podrobnosti o zařízení</br>
     DLXQPCWVGHMJ,podrobnosti o zařízení
@@ -85,20 +89,22 @@ Profil registrace se přiřazuje při importu sériových čísel zařízení s 
 
 #### <a name="assign-from-apple-configurator-devices"></a>Přiřazení v části Zařízení Apple Configuratoru
 1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** a pak **Registrace Apple**.
-3. V okně **Zařízení Apple Configuratoru** vyberte sériová čísla, ke kterým chcete přiřadit profil, a potom vyberte **Přiřadit profil**.
-4. V okně **Přiřadit profil** vyberte **nový profil**, který chcete přiřadit, a potom zvolte **Přiřadit**.
+3. V **Zařízeních Apple Configuratoru** vyberte sériová čísla, ke kterým chcete přiřadit profil, a pak vyberte **Přiřadit profil**.
+4. V možnosti **Přiřadit profil** vyberte **nový profil**, který chcete přiřadit, a pak zvolte **Přiřadit**.
 
 #### <a name="assign-from-profiles"></a>Přiřazení z profilů
 1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** a pak **Registrace Apple**.
 2. Zvolte **Profily AC** a vyberte profil, který chcete sériovým číslům přiřadit.
-3. V okně profilu zvolte **Přiřazená zařízení**a potom **Přiřadit**.
+3. V profilu zvolte **Přiřazená zařízení**a pak **Přiřadit**.
 4. Pomocí filtru vyhledejte sériová čísla zařízení, která chcete k profilu přiřadit, vyberte zařízení a zvolte **Přiřadit**.
 
 ### <a name="export-the-profile"></a>Export profilu
 Po vytvoření profilu a přiřazení sériových čísel je potřeba profil exportovat z Intune jako adresu URL. Tu pak importujete do Apple Configuratoru na počítači Mac, odkud můžete profil nasadit do zařízení.
 
-1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** > Registrace Apple** > **Profily AC** a vyberte profil, který chcete exportovat.
-2. V okně profilu vyberte **Exportovat profil**.
+1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** > **Registrace Apple** > **Profily AC** a vyberte profil, který chcete exportovat.
+2. V profilu vyberte **Exportovat profil**.
+
+  ![Snímek obrazovky Exportovat profil pro registraci Pomocníka s nastavením se zvýrazněnou adresou URL profilu](./media/ios-apple-configurator-expor-sat.png)
 3. Zkopírujte adresu URL profilu. Potom ji můžete přidat do Apple Configuratoru a definovat tak profil Intune používaný zařízeními s iOSem.
 
   V dalším kroku tento profil importujete do Apple Configuratoru a opět definujete profil Intune používaný zařízeními s iOSem.
@@ -110,11 +116,11 @@ Po vytvoření profilu a přiřazení sériových čísel je potřeba profil exp
   > V průběhu registrace se v zařízeních obnoví tovární konfigurace. Doporučuje se zařízení resetovat a zapnout ho. Zařízení by při připojení měla mít nastavenou **úvodní obrazovku**.
 
 2. V podokně **předvoleb** vyberte **Servery** a znaménkem plus (+) spusťte průvodce serveru MDM. Vyberte **Další**.
-3. V části registrace Průvodce nastavením zařízení s iOSem v Microsoft Intune zadejte **název hostitele nebo adresu URL** a **adresu URL pro registraci** serveru MDM. Jako adresu URL pro registraci zadejte adresu URL profilu pro registraci exportovanou z Intune. Vyberte **Další**.  
+3. V části registrace Pomocníka s nastavením zařízení s iOSem v Microsoft Intune zadejte **název hostitele nebo adresu URL** a **adresu URL pro registraci** serveru MDM. Jako adresu URL pro registraci zadejte adresu URL profilu pro registraci exportovanou z Intune. Vyberte **Další**.  
 
   Upozornění na neověřenou adresu URL serveru můžete ignorovat. Vyberte **Další** a pokračujte až do konce průvodce.
 4.  Mobilní zařízení s iOSem připojte kabelem USB k počítači Mac.
-5.  Zvolte **Prepare** (Připravit). V podokně **Prepare iOS Device** (Připravit zařízení s iOSem) vyberte **Manual** (Ručně) a pak zvolte **Next** (Další).
+5.  Vyberte zařízení s iOSem, která chcete spravovat, a pak zvolte **Prepare** (Spravovat). V podokně **Prepare iOS Device** (Připravit zařízení s iOSem) vyberte **Manual** (Ručně) a pak zvolte **Next** (Další).
 6. V podokně **Enroll in MDM Server** (Registrovat na serveru MDM) vyberte název vytvořeného serveru a zvolte **Next** (Další).
 7. V podokně **Supervise Devices** (Dohled nad zařízeními) vyberte úroveň dohledu a pak zvolte **Next** (Další).
 8. V podokně **Create an Organization** (Vytvořit organizaci) zvolte **organizaci** nebo vytvořte novou organizaci a pak zvolte **Next** (Další).
@@ -134,13 +140,20 @@ Aplikace, které vyžadují přidruženého uživatele (včetně aplikace Portá
 ### <a name="export-the-profile-as-mobileconfig-to-ios-devices"></a>Export profilu jako souboru .mobileconfig do zařízení s iOSem
 1. Přihlaste se k portálu Azure Portal.
 2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Exportovat profil** stáhněte registrační profil do [Apple Configuratoru](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12), aby se dal zařízením s iOSem nabídnout jako profil pro správu.
-4. Připravte zařízení pomocí Apple Configuratoru podle následujících kroků.
+3. V části **Exportovat profil** pomocí možnosti **Stáhnout profil** stáhněte profil registrace.
+
+  ![Snímek obrazovky Exportovat profil pro registraci Pomocníka s nastavením se zvýrazněnou adresou URL profilu](./media/ios-apple-configurator-expor-de.png)
+
+4. Soubor přeneste do počítače Mac se spuštěným [Apple Configuratorem](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12). Může se tak odeslat přímo jako profil správy do zařízení s iOSem.
+5. Připravte zařízení pomocí Apple Configuratoru podle následujících kroků.
   1. Na počítači Mac otevřete Apple Configurator 2.0.
   2. Zařízení s iOSem připojte k počítači Mac pomocí kabelu USB. Zavřete Fotky, iTunes a další aplikace, které se otevřou při zjištění zařízení.
   3. V Apple Configuratoru zvolte připojené zařízení s iOSem a potom zvolte tlačítko **Přidat**. V rozevíracím seznamu se zobrazí možnosti, které se dají přidat do zařízení. Vyberte **Profily**.
+
+    ![Snímek obrazovky Exportovat profil pro registraci Pomocníka s nastavením se zvýrazněnou adresou URL profilu](./media/ios-apple-configurator-add-profile.png)
+
   4. Pomocí nástroje pro výběr souborů vyberte soubor .mobileconfig, který jste exportovali z Intune, a zvolte **Přidat**. Profil se přidá do zařízení. Pokud má zařízení nastavenou možnost Bez dohledu, vyžaduje instalace přijetí na zařízení.
-5. Nainstalujte profil na zařízení s iOSem podle následujících kroků. Je potřeba, aby už byl v zařízení dokončený Pomocník s nastavením a aby bylo připravené k použití. Pokud registrace zahrnuje nasazení aplikací, zařízení by mělo mít nastavené Apple ID, protože při nasazení aplikace bude potřeba přihlásit se do obchodu App Store pomocí Apple ID.
+6. Nainstalujte profil na zařízení s iOSem podle následujících kroků. Je potřeba, aby už byl v zařízení dokončený Pomocník s nastavením a aby bylo připravené k použití. Pokud registrace zahrnuje nasazení aplikací, zařízení by mělo mít nastavené Apple ID, protože při nasazení aplikace bude potřeba přihlásit se do App Storu pomocí Apple ID.
    1. Odemkněte zařízení s iOSem.
    2. V dialogovém okně **Nainstalovat profil** pro **Profil správy** zvolte **Instalovat**.
    3. V případě potřeby zadejte heslo zařízení nebo Apple ID.
@@ -148,6 +161,6 @@ Aplikace, které vyžadují přidruženého uživatele (včetně aplikace Portá
    5. Potvrďte **vzdálené upozornění** a zvolte **Důvěřovat**.
    6. Jakmile okno **Profil nainstalován** potvrdí, že se profil nainstaloval, zvolte **Hotovo**.
 
-6. Na zařízení s iOSem otevřete **Nastavení** a přejděte na **Obecné** > **Správa zařízení** > **Profil pro správu**. Potvrďte, že je zde instalace profilu uvedená, a zkontrolujte omezení zásad iOS a nainstalované aplikace. Zobrazení omezení vyplývajících ze zásad a aplikací na zařízení může trvat až 10 minut.
+7. Na zařízení s iOSem otevřete **Nastavení** a přejděte na **Obecné** > **Správa zařízení** > **Profil pro správu**. Potvrďte, že je zde instalace profilu uvedená, a zkontrolujte omezení zásad iOS a nainstalované aplikace. Zobrazení omezení vyplývajících ze zásad a aplikací na zařízení může trvat až 10 minut.
 
-7. Distribuujte zařízení. Zařízení s iOSem je teď zaregistrované v Intune a spravované.
+8. Distribuujte zařízení. Zařízení s iOSem je teď zaregistrované v Intune a spravované.

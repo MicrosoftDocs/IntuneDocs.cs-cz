@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 3df993aa-48c5-4799-b68d-c85fe4f7b02c
 ms.reviewer: jeffgilb
 ms.suite: ems
-ms.openlocfilehash: 6e3a5e39cf3ee38820b1ff79eb54c019dbb68d29
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: f1a5c8a15007a38942fe543e6c1062bf957a481c
+ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Vysvětlení zpráv aplikace Portál společnosti pro koncové uživatele
 
@@ -95,6 +95,17 @@ Při druhém přihlášení k aplikaci Portál společnosti po zamítnutí pří
 ### <a name="how-to-explain-this-to-your-users"></a>Jak to vysvětlit uživatelům
 Nasměrujte uživatele na článek [Odeslání protokolů správci IT e-mailem](/intune-user-help/send-logs-to-your-it-admin-by-email-android). Můžete jim nabídnout také článek [Odeslání protokolů správci IT kabelem](/intune-user-help/send-logs-to-your-it-admin-by-cable-android) pokud chcete, aby obě metody porovnali.
 
+## <a name="your-company-support-needs-to-give-you-access-to-company-resources"></a>Podpora vaší společnosti vám musí udělit přístup k prostředkům společnosti
+
+### <a name="where-it-appears"></a>Místo zobrazení
+Pokud jste aplikaci Portál společnosti nepřidali na seznam **Povolených aplikací** nebo **Aplikací s výjimkou** a uživatel se pokusí přihlásit, přihlášení selže. Zobrazí se tato zpráva:
+
+> **Podpora vaší společnosti vám musí udělit přístup k prostředkům společnosti**  
+> Vaše společnost k ochraně vašeho zařízení používá zásady Windows Information Protection. Podpora společnosti k nim musí Portálu společnosti povolit přístup.
+
+### <a name="what-it-means"></a>Význam
+
+Přidejte Portál společnosti na seznam **Povolených aplikací** nebo **Aplikací s výjimkou** v zásadě ochrany aplikací Windows Information Protection (WIP). Další informace najdete v článku [Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune](/intune-classic/deploy-use/create-windows-information-protection-policy-with-intune).
 
 ### <a name="see-also"></a>Související témata
 [Co říct koncovým uživatelům o používání služby Intune](end-user-educate.md)
