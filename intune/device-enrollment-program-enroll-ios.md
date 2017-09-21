@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 07/31/2017
+ms.date: 09/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c14903d227164089f52c9bd3288a99f29a9141b8
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 94eeb453e5c83c2dadaa757b4c7867f9dd3f62ff
+ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení s iOSem pomocí Programu registrace zařízení společnosti Apple
 
@@ -43,7 +43,6 @@ Registrace DEP mimochodem nefunguje se [správcem registrace zařízení](device
 - Zařízení zakoupená v [Programu registrace zařízení společnosti Apple](http://deploy.apple.com)
 - [Autorita pro správu mobilních zařízení (MDM)](mdm-authority-set.md)
 - [Certifikát Apple MDM Push Certificate](apple-mdm-push-certificate-get.md)
-- Přidružení uživatelů vyžaduje [koncový bod WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Přečtěte si další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
 > [!NOTE]
 > Při registraci v programu DEP pro přidružení uživatelů nefunguje vícefaktorové ověřování (MFA). Po registraci vícefaktorové ověřování na zařízeních funguje podle očekávání. Zařízení nemůžou vyzvat uživatele, kteří při prvním přihlášení potřebují změnit své heslo. Výzva k resetování hesla se během registrace nezobrazí ani uživatelům, kterým vypršela platnost hesla. Uživatelé musí heslo resetovat z jiného zařízení.
@@ -109,7 +108,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 
   V části **Přidružení uživatele** zvolte, jestli se zařízení s tímto profilem budou registrovat s přiřazeným uživatelem nebo bez.
 
- - **Zaregistrovat s přidružením uživatele** – zvolte u zařízení, která patří uživatelům a potřebují pro služby, jako je instalace aplikací, použít portál společnosti.
+ - **Zaregistrovat s přidružením uživatele** – zvolte u zařízení, která patří uživatelům a potřebují pro služby, jako je instalace aplikací, použít portál společnosti. Přidružení uživatelů vyžaduje [koncový bod WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Přečtěte si další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
  - **Zaregistrovat bez přidružení uživatele** – zvolte pro zařízení nespojená s jedním uživatelem. Použijte u zařízení určených k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, jako je aplikace Portál společnosti, nefungují.
 
@@ -120,13 +119,15 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 
     - **Uzamčená registrace** – Vyžaduje režim správy Pod dohledem. Zakáže nastavení iOSu, která by mohla umožnit odebrání profilu správy. Pokud políčko nezaškrtnete, půjde profil správy odebrat z nabídky Nastavení. Po registraci zařízení nemůžete toto nastavení změnit bez obnovení továrního nastavení zařízení.
 
+  - **Povolit sdílený iPad** – Program registrace zařízení společnosti Apple sdílený iPad nepodporuje.
+
     - **Povolit párování** – Určuje, jestli se zařízení s iOSem mohou synchronizovat s počítači. Pokud vyberete **Povolit Apple Configurator podle certifikátu**, musíte zvolit certifikát v části **Certifikáty Apple Configuratoru**.
 
     - **Certifikáty Apple Configuratoru** – Pokud jste v části **Povolit párování** zvolili **Povolit Apple Configurator podle certifikátu**, vyberte certifikát Apple Configuratoru, který chcete importovat.
 
   Vyberte **Uložit**.
 
-5. Vyberte **Nastavení Průvodce nastavením** a nakonfigurujte následující nastavení profilu:
+5. Vyberte **Nastavení Pomocníka s nastavením** a nakonfigurujte následující nastavení profilu:
 
   ![Snímek obrazovky s výběrem nastavení konfigurace s dostupnými nastaveními pro nový profil programu registrace](./media/enrollment-program-profile-settings.png)
     - **Název oddělení** – Zobrazí se, když uživatelé klepnou při aktivaci na **O konfiguraci**.

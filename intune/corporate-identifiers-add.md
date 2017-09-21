@@ -15,24 +15,24 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 85303c503e068ec23c8321b9359760775bbdb6f8
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 58dac14dcc38329cfa0a98746e667bf6e5438170
+ms.sourcegitcommit: b8987b8dfb009ea55678d7f640ac5f18a6ab167e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifikace zařízení jako vlastněných společností
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Jako správce Intune můžete zařízení ve firemním vlastnictví identifikovat různými způsoby. Ze zařízení ve firemním vlastnictví dokáže Intune shromažďovat dodatečné informace. U zařízení můžete také nastavit omezení a zabránit registraci zařízení, která nejsou ve firemním vlastnictví.
+Jako správce Intune můžete identifikovat zařízení jako ve vlastnictví firmy, aby se zlepšila jejich správa a identifikace. Intune můžete provádět další úlohy správy a sbírat další informace, třeba celé telefonní číslo a inventář aplikací ze zařízení ve vlastnictví firmy. Můžete také nastavit omezení zařízení a blokovat tak registraci zařízení, které ve vlastnictví firmy nejsou.
 
 Zařízení se identifikuje jako ve vlastnictví firmy, pokud je splněná libovolná z následujících podmínek:
 
 - Je registrované pomocí nějakého účtu [správce registrace zařízení](device-enrollment-manager-enroll.md) (všechny platformy)
 - Je registrované přes [Program registrace zařízení](device-enrollment-program-enroll-ios.md) od Applu, [Apple School Manager](apple-school-manager-set-up-ios.md) nebo [Apple Configurator](apple-configurator-enroll-ios.md) (jen iOS)
 - [Před registrací je identifikované jako ve vlastnictví firmy](#identify-corporate-owned-devices-with-imei-or-serial-number) pomocí čísla IMEI (International Mobile Equipment Identifier) (všechny platformy s čísly IMEI) nebo sériového čísla (iOS a Android)
-- Je registrované ve službě Azure Active Directory nebo Enterprise Mobility + Security jako zařízení s Windows 10 Enterprise (jen Windows 10)
+- Je registrované v Azure Active Directory nebo Enterprise Mobility + Security jako zařízení s Windows 10 Enterprise
 - Ve vlastnostech zařízení je uvedené [firemní vlastnictví zařízení](#change-device-ownership)
 
 ## <a name="identify-corporate-owned-devices-with-imei-or-serial-number"></a>Identifikace zařízení ve vlastnictví firmy pomocí čísla IMEI nebo sériového čísla

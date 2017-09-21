@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 07/16/2017
+ms.date: 09/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d7a51094851af8c3b6d872300cd9b23e845c6494
-ms.sourcegitcommit: 2ee1e8248814d74cef80b609a8e43f59fa0b2618
+ms.openlocfilehash: d553f62ed2ee1c9e5a6b9121b766e6e427d06bf7
+ms.sourcegitcommit: 75cea2402a3726c72b12df6111f6d3ee93c852bf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/17/2017
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Řešení potíží s registrací do služby Intune
 
@@ -352,7 +352,7 @@ Příklady toho, co máte v těchto souborech protokolu hledat, budou brzy přid
 
 #### <a name="check-how-device-was-removed"></a>Zjištění způsobu odebrání zařízení
 
-1.  V konzole pro správu nástroje Configuration Manager vyberte **Monitorování** &gt;  **Stav systému** &gt; **Dotazy stavových zpráv**.
+1.  V konzole pro správu nástroje Configuration Manager vyberte **Monitorování** &gt; ** Stav systému** &gt; **Dotazy stavových zpráv**.
 
 2.  Klikněte pravým tlačítkem na **Manuálně odstraněné prostředky členů kolekce** a vyberte **Zobrazit zprávy**.
 
@@ -370,7 +370,14 @@ Příklady toho, co máte v těchto souborech protokolu hledat, budou brzy přid
 ### <a name="other-ios-enrollment-errors"></a>Další chyby registrace zařízení s iOSem
 Seznam chyb registrace iOS je uvedený v dokumentaci pro uživatele zařízení v části [Při pokusu o registraci zařízení v Intune se zobrazí chyby](/intune-user-help/using-your-iOS-or-macOS-device-with-intune).
 
-## <a name="pc--issues"></a>Potíže s počítačem
+## <a name="pc-issues"></a>Problémy na počítači
+
+
+|Chybová zpráva|Problém|Řešení|
+|---|---|---|
+|**Správce IT musí přiřadit licence pro přístup**<br>Váš správce IT vám neudělil přístup k této aplikaci. Požádejte ho o pomoc nebo to zkuste znovu.|Zařízení není možné zaregistrovat, protože účet uživatele nemá potřebnou licenci.|Aby si mohli uživatelé zaregistrovat svoje zařízení, musí mít přiřazenou potřebnou licenci. Tato zpráva znamená, že má uživatel špatný typ licence pro určenou autoritu pro správu mobilních zařízení. Pokud je třeba určenou autoritou pro správu mobilních zařízení Intune a uživatel používá licenci nástroje System Center 2012 R2 Configuration Manager, zobrazí se tato chyba.<br>Přečtěte si informace o tom, jak [přiřadit licence Intune k uživatelským účtům](https://docs.microsoft.com/intune/licenses-assign).|
+
+
 
 ### <a name="the-machine-is-already-enrolled---error-hr-0x8007064c"></a>Počítač už je zaregistrovaný – chyba hr 0x8007064c
 **Problém:** Registrace selže s chybou **Počítač už je zaregistrovaný**. V protokolu registrace se zobrazuje chyba **hr 0x8007064c**.
