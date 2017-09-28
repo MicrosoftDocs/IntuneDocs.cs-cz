@@ -1,19 +1,17 @@
 
 
 ### <a name="apple"></a>Apple
-  - Apple iOS 8.0 a novější
+  - Apple iOS 9.0 a novější
   - Mac OS X 10.9 a novější
 
 ### <a name="windows"></a>Windows
   - Windows 10 (verze Home, S, Pro, Education a Enterprise)
   - Windows 10 Mobile
-  - Windows Phone 8.1
-  - Windows 8.1 RT
-  - Počítače se systémem Windows 8.1
   - Zařízení s Windows 10 IoT Enterprise (x86, x64)
   - Zařízení s Windows 10 IoT Mobile Enterprise
   - Windows Holographic a Windows Holographic Enterprise
-
+  - Windows Phone 8.1, Windows 8.1 RT, počítače s Windows 8.1 (udržovací režim)
+  
   Zákazníci s Enterprise Mobility + Security (EMS) také mohou [k registraci zařízení s Windows 10 použít Azure Active Directory (Azure AD)](/intune-classic/deploy-use/set-up-windows-device-management-with-microsoft-intune#azure-active-directory-enrollment).
 
 ### <a name="google"></a>Google
