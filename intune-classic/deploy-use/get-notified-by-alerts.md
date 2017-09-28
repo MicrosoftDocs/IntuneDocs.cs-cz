@@ -14,11 +14,11 @@ ms.assetid: 396ea714 0433 4bd5 a934 8d0b477f28e4
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune classic
-ms.openlocfilehash: 9a84cc5b294a1a330aab978de5ef0fd8cfa4c259
-ms.sourcegitcommit: 30b51c625311398b371c0326d41216f55315f627
+ms.openlocfilehash: 534af980ff66eaa54273aaabf14609b1e221c322
+ms.sourcegitcommit: 63d862f142e2f40a1eedb7d4cbdff4fbf6dd7296
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 09/22/2017
 ---
 #  <a name="use-alerts-to-get-notified-by-microsoft-intune"></a>Upozorňování pomocí výstrah služby Microsoft Intune
 
@@ -61,6 +61,8 @@ V [konzole správce Microsoft Intune](https://manage.microsoft.com) zvolte **Spr
 
 ## <a name="working-with-alerts"></a>Práce s výstrahami
 
+Pokud si chcete zobrazit výstrahy v [konzole pro správu Microsoft Intune](https://manage.microsoft.com), zvolte **Výstrahy** a pak požadovaný typ výstrahy.
+
 Následující možnosti vám pomohou při práci s výstrahami z konzoly pro správu Intune.
 
 |Možnost|Popis|
@@ -70,11 +72,12 @@ Následující možnosti vám pomohou při práci s výstrahami z konzoly pro sp
 |**Zavření výstrahy**|V seznamu výstrah vyberte výstrahu, kterou chcete zavřít, a vyberte **Zavřít výstrahu**.<br /><br />Zavřené výstrahy jsou trvale odstraněny po 90 dnech.|
 |**Opětovná aktivace zavřené výstrahy**|V seznamu výstrah nastavte rozevírací seznam **Filtry** na **Uzavřené**.<br /><br />V seznamu uzavřených výstrah vyberte výstrahu, kterou chcete znovu aktivovat, a pak vyberte **Znovu aktivovat výstrahu**.|
 
-Výstrahy Intune zůstanou aktivní do doby, než:
+Výstrahy Intune zůstanou aktivní po dobu 30 dní nebo do doby, než:
 
 - Dojde k vyřešení problému, který výstrahu způsobil.
 - Výstrahu ručně zavřete.
-- Od vygenerování výstrahy uplynulo 45 dní.
+
+Zavřené výstrahy je možné znovu aktivovat během 30 dnů po zavření. Po 30 dnech se uzavřené a neaktivní výstrahy z Intune odeberou.
 
 > [!TIP]
 > Pokud je stejná výstraha generovaná zařízeními s různým operačním systémem, je pravděpodobné, že se v seznamu výstrah zobrazí několik verzí téže výstrahy.

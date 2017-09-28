@@ -15,11 +15,11 @@ ms.assetid: 5d12254f-ffab-4792-b19c-ab37f5e02f35
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b2cffc21ba78cbd54edfb75eaa892df1539ad62b
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 2e9b1a3dc42a9c18d61fc9b55d5a7b71f00c3e29
+ms.sourcegitcommit: d434dfab7ef7a6c4082d675717fa22d5581b4f51
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Vytvoření zásad dodržování předpisů pro ochranu zařízení před mobilními hrozbami (MTD) v Intune
 
@@ -35,8 +35,6 @@ V rámci nastavení ochrany před mobilními hrozbami (MTD) jste v konzole partn
 Předpoklady zásad dodržování předpisů zařízením pro MTD:
 
 -   Nastavení integrace MTD se službou Intune
-
--   Povolení konektoru MTD v Intune
 
 ## <a name="to-create-a-mtd-device-compliance-policy"></a>Vytvoření zásad dodržování předpisů zařízením pro MTD
 
@@ -77,3 +75,7 @@ Pokud chcete přiřadit zásady dodržování předpisů zařízením uživatel�
 
     > [!NOTE] 
     > Zásady jsou teď použité u uživatelů. U zařízení používaných uživateli, kteří jsou cílem zásad, se bude vyhodnocovat dodržování předpisů.
+
+## <a name="next-steps"></a>Další kroky
+
+- [Povolení MTD v Intune](mtd-connector-enable.md)

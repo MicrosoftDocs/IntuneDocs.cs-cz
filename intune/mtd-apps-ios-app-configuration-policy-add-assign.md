@@ -15,11 +15,11 @@ ms.assetid: 00356258-76a8-4a84-9cf5-64ceedb58e72
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6d0802107353eee9359e0eff17b69037d9a237a6
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 98a5b1b705e79b875b83cecb53cd82d7bf5dff30
+ms.sourcegitcommit: d434dfab7ef7a6c4082d675717fa22d5581b4f51
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Přidání a přiřazení aplikací pro ochranu před mobilními hrozbami (MTD) pomocí Intune
 
@@ -54,16 +54,6 @@ U zařízení se systémem iOS je potřeba [Microsoft Authenticator](https://doc
 #### <a name="microsoft-authenticator-app-for-ios"></a>Aplikace Microsoft Authenticator pro iOS
 
 - Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](store-apps-ios.md). V **kroku 5** v části **Konfigurace informací o aplikaci** použijte tento [odkaz URL na Microsoft Authenticator v obchodě s aplikacemi](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8).
-
-### <a name="skycure"></a>Skycure
-
-#### <a name="android"></a>Android
-
-- Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](store-apps-android.md). V **kroku 7** použijte tento [odkaz URL na Skycure v obchodě s aplikacemi](https://play.google.com/store/apps/details?id=com.skycure.skycure).
-
-#### <a name="ios"></a>iOS
-
-- Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](store-apps-ios.md). V **kroku 5** v části **Konfigurace informací o aplikaci** použijte tento [odkaz URL na Skycure v obchodě s aplikacemi](https://itunes.apple.com/us/app/skycure/id695620821?mt=8).
 
 ### <a name="lookout"></a>Lookout
 
@@ -101,6 +91,16 @@ Následujícím postupem povolte ověřování uživatelů iOS službou Azure Ac
 
 - Podle popisu v tématu [Přidání obchodních aplikací pro iOS do Microsoft Intune](lob-apps-ios.md) nahrajte opětovně podepsaný soubor .ipa. Kromě toho je potřeba nastavit jako minimální verzi operačního systému iOS 8.0 nebo novější.
 
+### <a name="skycure"></a>Skycure
+
+#### <a name="android"></a>Android
+
+- Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](store-apps-android.md). V **kroku 7** použijte tento [odkaz URL na Skycure v obchodě s aplikacemi](https://play.google.com/store/apps/details?id=com.skycure.skycure).
+
+#### <a name="ios"></a>iOS
+
+- Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](store-apps-ios.md). V **kroku 5** v části **Konfigurace informací o aplikaci** použijte tento [odkaz URL na Skycure v obchodě s aplikacemi](https://itunes.apple.com/us/app/skycure/id695620821?mt=8).
+
 ### <a name="check-point-sandblast-mobile"></a>Check Point SandBlast Mobile
 
 #### <a name="android"></a>Android
@@ -111,7 +111,21 @@ Následujícím postupem povolte ověřování uživatelů iOS službou Azure Ac
 
 - Pokud chcete získat aplikaci pro iOS, obraťte se na [Check Point SandBlast Mobile](https://www.checkpoint.com/products/sandblast-mobile/). Přečtěte si pokyny pro [přidání aplikací z iOS Storu do Microsoft Intune](store-apps-ios.md), pak v **kroku 5** v části **Konfigurace informací o aplikaci** použijte adresu URL obchodu App Store společnosti Apple.
 
+### <a name="zimperium"></a>Zimperium
+
+#### <a name="android"></a>Android
+
+- Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](store-apps-android.md). V **kroku 7** použijte tento [odkaz URL na Zimperium v obchodě s aplikacemi](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en).
+
+#### <a name="ios"></a>iOS
+
+- Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](store-apps-ios.md). V **kroku 5** v části **Konfigurace informací o aplikaci** použijte tento [odkaz URL na Zimperium v obchodě s aplikacemi](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8).
+
 ## <a name="to-associate-the-mtd-app-with-an-ios-app-configuration-policy"></a>Přidružení aplikace MTD k zásadám konfigurace aplikace pro iOS
+
+### <a name="for-lookout"></a>Pro Lookout
+
+- Vytvořte zásady konfigurace aplikace pro iOS pomocí tématu [o použití zásad konfigurace aplikace pro iOS](app-configuration-policies-use-ios.md).
 
 ### <a name="for-skycure"></a>Pro Skycure
 
@@ -139,10 +153,6 @@ Obsah souboru **skycure_configuration.plist** můžete zkopírovat i odsud:
 </dict>
 
 ```
-### <a name="for-lookout"></a>Pro Lookout
-
-- Vytvořte zásady konfigurace aplikace pro iOS pomocí tématu [o použití zásad konfigurace aplikace pro iOS](app-configuration-policies-use-ios.md).
-
 ### <a name="for-check-point-sandblast-mobile"></a>Pro Check Point SandBlast Mobile
 
 - Pokud chcete přidat zásady konfigurace aplikace Check Point SandBlast Mobile pro iOS, přečtěte si pokyny ohledně [používání zásad konfigurace aplikací služby Microsoft Intune pro iOS](app-configuration-policies-use-ios.md).
@@ -152,12 +162,30 @@ Obsah souboru **skycure_configuration.plist** můžete zkopírovat i odsud:
 <dict><key>MDM</key><string>INTUNE</string></dict>
 
 ```
+
+### <a name="for-zimperium"></a>Pro Zimperium
+
+- Pokud chcete přidat zásady konfigurace aplikace Zimperium pro iOS, přečtěte si pokyny ohledně [používání zásad konfigurace aplikací služby Microsoft Intune pro iOS](app-configuration-policies-use-ios.md).
+    - V **kroku 8** použijte možnost **Zadat XML data**, zkopírujte obsah níže a vložte ho do těla zásad konfigurace.
+
+```
+<dict>
+<key>provider</key><string>Intune</string>
+<key>userprincipalname</key><string>{{userprincipalname}}</string>
+<key>deviceid</key>
+<string>{{deviceid}}</string>
+<key>serialnumber</key>
+<string>{{serialnumber}}</string>
+<key>udidlast4digits</key>
+<string>{{udidlast4digits}}</string>
+</dict>
+
+```
+
 ## <a name="to-assign-apps-all-mtd-partners"></a>Přiřazení aplikací (všichni partneři MTD)
 
 - Přečtěte si pokyny pro [přiřazení aplikací do skupin pomocí Intune](apps-deploy.md).
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Nastavení integrace služby Lookout s Intune](lookout-mtd-connector-integration.md)
-- [Nastavení integrace služby Skycure s Intune](skycure-mtd-connector-integration.md)
-- [Nastavení integrace služby Check Point SandBlast s Intune](checkpoint-sandblast-mobile-mtd-connector-integration.md)
+- [Přidání zásad dodržování předpisů zařízení pro MTD](mtd-device-compliance-policy-create.md)
