@@ -27,7 +27,7 @@
 ### [Řešení běžných problémů s Androidem](troubleshoot-your-device-android.md)
 #### [Kontrola dodržování předpisů pro zařízení](check-compliance-on-your-device-android.md)
 
-#### [Oprava chyb pomocí protokolů]
+#### Oprava chyb pomocí protokolů
 ##### [Zapnutí podrobného protokolování](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
 ##### [Odeslání protokolů e-mailem](send-logs-to-your-it-admin-by-email-android.md)
 ##### [Odeslání protokolů přes USB kabel](send-logs-to-your-it-admin-using-cable-android.md)
