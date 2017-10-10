@@ -16,19 +16,19 @@ ROBOTS:
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 4293e05d3668c7f6d6d6b9986e006061df5afe80
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 0b490148a932339d4fb4366d28e020416782ceee
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="remove-your-device-from-the-company-portal"></a>Odebrat zařízení z portálu společnosti
 
-Pokud už nechcete, aby vaše zařízení spravovala vaše společnost nebo organizace, můžete ho odebrat z odebrat z portálu společnosti pomocí [webu Portál společnosti](http://portal.manage.microsoft.com). Web Portál společnosti je webová stránka sloužící ke správě počítačů a zařízení, jejichž správu jste si zaregistrovali u svého IT oddělení. Pokud zařízení odeberete, nebude nadále uvedené na Portálu společnosti a můžete také ztratit přístup k firemním nebo školním datům, aplikacím a e-mailům.
+Pokud už nechcete, aby vaše zařízení spravovala vaše společnost nebo organizace, můžete ho odebrat z odebrat z portálu společnosti pomocí [webu Portál společnosti](https://portal.manage.microsoft.com). Web Portál společnosti je webová stránka sloužící ke správě počítačů a zařízení, jejichž správu jste si zaregistrovali u svého IT oddělení. Pokud zařízení odeberete, nebude nadále uvedené na Portálu společnosti a můžete také ztratit přístup k firemním nebo školním datům, aplikacím a e-mailům.
 
 Odebrání zařízení:
 
-1.  Na [webu Portál společnosti](http://portal.manage.microsoft.com) klepněte na tlačítko __nabídky__ ![Malý obrázek tlačítka nabídky, tři vodorovné pruhy nad sebou](/Intune/whats-new/media/CP_hamburger_menu.png) a potom vyberte __Moje zařízení__.
+1.  Na [webu Portál společnosti](https://portal.manage.microsoft.com) klepněte na tlačítko __nabídky__ ![Malý obrázek tlačítka nabídky, tři vodorovné pruhy nad sebou](/Intune/whats-new/media/CP_hamburger_menu.png) a potom vyberte __Moje zařízení__.
 
   ![Obrázek webu Portál společnosti s rozbalenou boční nabídkou na levé straně obrazovky, s tlačítky Domů, Všechny aplikace, Moje zařízení, Helpdesk a Odhlásit se](/media/iwp-expanded-sidebar.png)
 
@@ -42,4 +42,4 @@ Odebrání zařízení:
 
 4. Přečtěte si zprávu s upozorněním a klepnutím na **Odebrat** zařízení odeberte z portálu společnosti.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

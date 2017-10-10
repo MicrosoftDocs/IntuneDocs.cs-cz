@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 847b08efc2424da7ae9483db355f2804ac1e00c1
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: d5d59f5b9c0401e84dddbe21a274b0fed91e5dce
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="you-need-to-identify-your-device-when-youre-trying-to-enroll"></a>Při pokusu o registraci je potřeba identifikovat vaše zařízení
 
@@ -30,4 +30,4 @@ Pokud se pokoušíte zaregistrovat zařízení s iOSem nebo macOS do Intune a ob
 2. Klepněte na **Pokračovat**.
 3. Zadejte poslední čtyři znaky sériového čísla zařízení, aby mohla služba Intune ověřit, jestli už je zařízení zaregistrované. Návod k nalezení sériového čísla najdete v tématu [Jak na zařízení najdu sériové číslo?](how-do-i-find-the-serial-number-on-my-device-ios.md).
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

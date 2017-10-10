@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 4b5bbaf1d475eeb8f6e468d61996131baf9c772b
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 5c2c27f48eec08724b1ced23d564e3df6ab18303
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="you-need-to-update-your-windows-device"></a>Potřebujete si aktualizovat zařízení s Windows
 
@@ -35,4 +35,4 @@ V počítačích s Windows vyhledejte **operační systém** a postupujte podle 
 
 Ve Windows 10 a Windows 8.1 zadejte do __panelu hledání__ text __verze Windows__. V části __Potřebujete pomoc?__ vyberte možnost __verze systému Windows__. Zobrazí se číslo verze. Bude vypadat podobně jako __10.0.14393.447__.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

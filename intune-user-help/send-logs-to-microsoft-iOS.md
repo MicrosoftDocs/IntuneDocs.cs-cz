@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 4abb070d6cf4f8200bdf1b9380ade7db81535622
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: b77c28b7c3ccec979a7c3612483f8682c3094576
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-ios-devices"></a>Odeslání protokolů vývojářům Portálu společnosti pro zařízení s iOSem
 
@@ -33,4 +33,4 @@ Pokud u vás k tomuto problému došlo, tým Portálu společnosti potřebuje ur
 3.  Stiskněte a podržte a pak přetáhněte malé modré tečky nahoru a dolů, dokud nebude vybraný celý text zprávy. V místní nabídce klepněte na __Kopírovat__.
 4.  Otevřete e-mailovou aplikaci a vložte obsah do textu e-mailu. Odešlete e-mail na adresu <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Press and hold, then paste your copied Company Portal app logs here.">IntuneCPiOSfeedback@microsoft.com</a>.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
