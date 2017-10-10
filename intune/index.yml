@@ -9,7 +9,7 @@ metadata:
   author: arob98
   ms.author: angrobe
   manager: angrobe
-  ms.date: 08/06/2017
+  ms.date: 10/07/2017
   ms.topic: article
   ms.devlang: na
   ms.service: microsoft-intune
@@ -68,12 +68,12 @@ sections:
             title: Vytváření sestav pomocí datového skladu Intune (ukázka)
             image:
               src: 'https://docs.microsoft.com/media/common/i_generic-database.svg'
-          - href: 'https://blogs.technet.microsoft.com/intunesupport/2017/08/07/using-the-new-role-based-access-controls-in-intune/'
-            title: '[Blog] Informace o novém řízení přístupu na základě role'
+          - href: 'https://blogs.technet.microsoft.com/intunesupport/2017/08/22/pfx-certificates-issued-using-the-intune-certificate-connector-fix-your-intune-migration-configuration-issues/'
+            title: '[Blog] Certifikáty PFX vystavované pomocí Intune Certificate Connectoru'
             image:
               src: 'https://docs.microsoft.com/media/common/i_blog.svg'
-          - href: 'https://blogs.technet.microsoft.com/intunesupport/2017/06/28/demystifying-service-health-for-microsoft-intune/'
-            title: '[Blog] Princip stavu služby Intune'
+          - href: 'https://blogs.technet.microsoft.com/intunesupport/2017/09/19/support-tip-setting-up-communication-between-mam-managed-and-mdm-managed-apps/'
+            title: '[Blog] Nastavení komunikace mezi aplikacemi spravovanými přes systém správy mobilních aplikací (MAM) a aplikacemi spravovanými přes systém správy mobilních zařízení (MDM)'
             image:
               src: 'https://docs.microsoft.com/media/common/i_blog.svg'
   - title: Videa
@@ -94,7 +94,7 @@ sections:
       - type: list
         style: unordered
         items:
-          - html: <a href="/intune/device-enrollment">Registrace zařízení</a>
+          - html: <a href="/intune/device-enrollment">Registrovat zařízení</a>
           - html: <a href="/intune/device-management">Správa zařízení</a>
           - html: <a href="/intune/app-management">Správa aplikací</a>
           - html: <a href="/intune/device-profiles">Konfigurace zařízení</a>
@@ -128,6 +128,7 @@ sections:
       - type: list
         style: unordered
         items:
+          - html: '<a href="https://fasttrack.microsoft.com/ems">Máte 150 a více licencí? Využijte výhod FastTracku</a>'
           - html: '<a href="https://blogs.technet.microsoft.com/enterprisemobility/">Přečtěte si blog věnovaný Enterprise Mobility + Security</a>'
           - html: '<a href="https://blogs.technet.microsoft.com/intunesupport/">Získejte nápovědu v blogu podpory Intune</a>'
           - html: '<a href="https://microsoftintune.uservoice.com/forums/291681-ideas">Sdělte svůj názor na Intune na webu UserVoice</a>'
