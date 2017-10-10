@@ -16,14 +16,14 @@ ROBOTS:
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: dd28f96d7664d1b1daee9a0f99fa5800f05a30b5
-ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
+ms.openlocfilehash: 0994240c05b372a851823218012ba6573c945d9f
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="your-company-portal-app-for-windows-is-out-of-date"></a>Vaše aplikace Portál společnosti pro Windows je zastaralá
 
 Musíte aplikaci Portál společnosti aktualizovat, abyste si zachovali přístup k prostředkům jako podnikový e-mail, kontakty a dokumenty. Pokud tento problém chcete vyřešit, otevřete **Microsoft Store** a nainstalujte novou verzi aplikace **Portál společnosti**.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

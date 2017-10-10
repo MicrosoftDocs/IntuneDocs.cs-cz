@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ab021708898fe87c2c5acf7d8b33df5a57e36c84
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 32a46b1c82bbe38cf1918ff4053bf650bfe7d26a
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="install-the-company-portal-app-for-android"></a>Instalace aplikace Portál společnosti pro Android
 
@@ -44,4 +44,4 @@ Portál společnosti je aplikace, která umožňuje přístup k podnikovým nebo
 
 Po stažení aplikace Portál společnosti si nejspíše budete chtít [zaregistrovat zařízení v Intune](enroll-your-device-in-Intune-android.md), abyste získali úplný přístup k pracovním informacím. Můžete se také [přihlásit pomocí jiného zařízení](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal#signing-in-from-another-device).
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

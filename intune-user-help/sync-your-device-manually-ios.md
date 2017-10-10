@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 8b73f1f5c7b8beecdb336aba463f5494c4b99160
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 7d4b80227eb9be98ec32a2fafd0938742038fea6
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="sync-your-ios-device-manually"></a>Ruční synchronizace zařízení s iOSem
 
@@ -38,4 +38,4 @@ Někdy může stažení aplikace z Portálu společnosti trvat příliš dlouho.
 
 Na obrazovce se objeví pruh, který se bude postupně načítat, dokud se synchronizace nedokončí.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

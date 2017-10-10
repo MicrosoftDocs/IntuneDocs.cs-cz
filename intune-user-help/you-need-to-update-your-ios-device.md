@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: bb9dfe52aa2c0150bd48f5c5cfad48a03748142c
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: a0fc18f3a0e4fa31d5cd7736e83af289a7cb8e52
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="your-ios-device-doesnt-have-the-required-minimum-operating-system-version"></a>Vaše zařízení s iOSem nemá požadovanou minimální verzi operačního systému
 
@@ -28,4 +28,4 @@ ms.lasthandoff: 07/01/2017
 
 Aktualizujte si zařízení s iOSem klepnutím na **Nastavení** > **Obecné** > **Aktualizace softwaru**.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

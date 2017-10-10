@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: dd8af3f07abc772408ccececf12a062a82a82e71
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 8873fcd3c6cf7f5490f1cd2f85e0182e21dcd30d
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="enroll-your-windows-10-devices-in-intune"></a>Registrace zařízení s Windows 10 v Intune
 
@@ -49,4 +49,4 @@ Chcete se dozvědět více? Zjistěte, co se stane, když [zařízení zaregistr
 3.  V __Informacích o zařízení__ klepněte na __Další informace__. Zobrazí se seznam informací o zařízení. V tomto seznamu najděte __verzi__.        
 4.  Pokud máte verzi __1607__, pokračujte [těmito kroky](enroll-your-w10-device-access-work-or-school.md). Pokud máte verzi __1511 nebo nižší__, pokračujte [těmito kroky](enroll-your-w10-device-your-account.md).
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Jeho kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
