@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: c17389164df2f458ad5e3185f37a92791a83b129
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 778ba1445361a15c43edf0d09f154750beacd3ad
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="how-to-unenroll-your-android-device-from-intune"></a>Zrušení registrace zařízení s Androidem v Intune
 
@@ -36,6 +36,6 @@ Ke zrušení registrace zařízení z Intune a odebrání aplikace Portál spole
 
 3. Zobrazí se potvrzení s dotazem, jestli opravdu chcete odebrat aplikaci Portál společnosti. Zobrazí se také informace o tom, co se stane, když registraci zařízení zrušíte. Po přečtení zprávy pokračujte klepnutím na **OK**. Tím aplikaci odeberete. 
 
-  ![Obrázek potvrzovacího okna, které se otevře, když v nabídce akcí vyberete možnost Odebrat Portál společnosti. V dialogovém okně se uživateli zobrazí následující informace: „Pokud odeberete Portál společnosti, váš správce IT už nebude vaše zařízení spravovat a může odebrat přístup k podnikovým datům, aplikacím a e-mailu.“ Pak uživatele vyzve, aby potvrdil, že chce aplikaci Portál společnosti skutečně odebrat. Pokud ji uživatel chce odebrat, vybere Ano.](./media/android_remove_cp_menu_confirmation_after_1705.png)
+  ![Obrázek potvrzovacího okna, které se otevře, když v nabídce akcí vyberete možnost Odebrat Portál společnosti. V dialogovém okně se uživateli zobrazí zpráva, že pokud odebere Portál společnosti, nebude firemní podpora už moct jeho zařízení spravovat a může mu odebrat přístup k firemním datům, aplikacím a e-mailu. Pak uživatele vyzve, aby potvrdil, že chce aplikaci Portál společnosti skutečně odebrat. Pokud ji uživatel chce odebrat, vybere Ano.](./media/android_remove_cp_menu_confirmation_after_1705.png)
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

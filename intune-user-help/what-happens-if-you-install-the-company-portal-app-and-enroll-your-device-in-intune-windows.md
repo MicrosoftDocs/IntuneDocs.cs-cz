@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 052de47e19f4e171428ee22b4701ed516461231f
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 926e09173918488d6beb1f0e3f725a0cff2971b4
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-device-in-intune"></a>Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Windows v Intune?
 
-Když nainstalujete aplikaci Portál společnosti a pak přes ni zaregistrujete zařízení s Windows nebo Windows Phone, umožníte tím správci IT spravovat vaše zařízení a zajistit tak vyšší zabezpečení dat společnosti. Toto téma popisuje, co se stane u zařízení se systémem starším než Windows 10. Informace pro zařízení s Windows 10 najdete v [souvisejícím tématu](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md).
+Když nainstalujete aplikaci Portál společnosti a pak přes ni zaregistrujete zařízení s Windows nebo Windows Phone, umožníte tím firemní podpoře spravovat vaše zařízení a zajistit tak vyšší zabezpečení firemních dat. Toto téma popisuje, co se stane u zařízení se systémem starším než Windows 10. Informace pro zařízení s Windows 10 najdete v [souvisejícím tématu](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md).
 
 ## <a name="what-happens-to-all-windows-devices-after-enrollment"></a>Co se stane všem zařízením s Windows po registraci
 Registrace zařízení s Windows nebo Windows Phone v Intune nabízí tyto možnosti:
@@ -37,15 +37,15 @@ Registrace zařízení s Windows nebo Windows Phone v Intune nabízí tyto mo�
 
 -   Obnovení továrního nastavení telefonu v případě ztráty nebo odcizení
 
-Když zaregistrujete zařízení, udělujete správci IT oprávnění provést následující akce:
+Když zaregistrujete zařízení, udělujete firemní podpoře oprávnění provést následující akce:
 
 -   Obnovit v zařízení výchozí tovární nastavení. To je užitečné v případě ztráty nebo odcizení zařízení.
 
 -   Odebrat obchodní aplikace a soubory, ale jenom takové, které jsou spojené se společností. *Vaše osobní data a nastavení odebrána nebudou.*
 
--   Správce IT může vidět software nainstalovaný v zařízení, a to i software, který jste si nainstalovali sami.
+-   Firemní podpora může vidět software nainstalovaný v zařízení, a to i software, který jste si nainstalovali sami.
 
--   Nastavit požadavky na zařízení, třeba vyžadovat heslo k zařízení nebo PIN kód a tím lépe chránit data společnosti. Správce IT může také omezit počet možných zadání nesprávného hesla. Když se tento počet překročí, může se zařízení zablokovat.
+-   Nastavit požadavky na zařízení, třeba vyžadovat heslo k zařízení nebo PIN kód a tím lépe chránit data společnosti. Vaše firemní podpora může také omezit počet možných zadání nesprávného hesla. Když se tento počet překročí, může se zařízení zablokovat.
 
 -   Vyžadovat šifrování dat v zařízení kvůli ochraně dat společnosti v případě ztráty nebo odcizení zařízení.
 
@@ -55,22 +55,22 @@ Když zaregistrujete zařízení, udělujete správci IT oprávnění provést n
 
 ## <a name="what-happens-to-all-windows-pcs-after-enrollment"></a>Co se stane všem počítačům s Windows po registraci
 
--  Do vašeho počítače se nainstaluje software, který správci IT umožní spravovat daný počítač a vám umožní přístup k prostředkům společnosti, jako jsou aplikace a informace o podpoře. Správce IT může tento software automaticky aktualizovat.
+-  Do vašeho počítače se nainstaluje software, který firemní podpoře umožní spravovat daný počítač a vám umožní přístup k prostředkům společnosti, jako jsou aplikace a informace o podpoře. Vaše firemní podpora může tento software automaticky aktualizovat.
 
 -  Do vašeho počítače se může nainstalovat služba Intune Endpoint Protection. Tento software vyhledává viry a malware.
 
--  Správce IT může shromažďovat nebo odstraňovat data z pevného disku vašeho počítače.
+-  Firemní podpora může shromažďovat nebo odstraňovat data z pevného disku vašeho počítače.
 
--  Správce IT může do vašeho počítače instalovat aplikace a aktualizace.
+-  Firemní podpora může do vašeho počítače instalovat aplikace a aktualizace.
 
 ## <a name="what-happens-every-eight-hours-after-device-enrollment"></a>Co se stane každých 8 hodin po registraci zařízení
 
 Přibližně každých osm hodin proběhne na zaregistrovaných zařízeních toto:
 
--   Stažení všech zásad nebo aktualizací aplikací, které vám správce IT zpřístupnil
+-   Stažení všech zásad nebo aktualizací aplikací, které vám firemní podpora zpřístupnila.
 
 -   Odeslání všech aktualizací inventáře hardwaru.
 
 -   Odeslání všech aktualizací inventáře aplikací společnosti.
 
-Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Pokud máte otázky, obraťte se na svou firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

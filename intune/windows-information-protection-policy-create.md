@@ -6,7 +6,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 06/12/2017
+ms.date: 10/3/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 524b4b506855b50bb5312dc31e98eb5f451cb66d
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 3cf11c53a5f1ce78dda9c703da32270b0b07874a
+ms.sourcegitcommit: 001577b700f634da2fec0b44af2a378150d1f7ac
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune
 
@@ -143,7 +143,7 @@ WIP běží bez upozorňování s protokolováním nepatřičného sdílení dat
 #### <a name="off-not-recommended"></a>Vypnuto (nedoporučuje se)
 WIP je vypnuté a nepomáhá chránit nebo auditovat data.
 
-Když WIP vypnete, proběhne pokus o dešifrování všech souborů označených přes WIP na místně připojených jednotkách. Dejte pozor: Po opětovném zapnutí WIP se vaše předchozí šifrování a informace zásady znovu automaticky nepoužijí.
+Když WIP vypnete, proběhne pokus o dešifrování všech souborů označených přes WIP na místně připojených jednotkách. Mějte na paměti, že po opětovném zapnutí WIP se předchozí šifrování a informace zásady znovu automaticky nepoužijí.
 
 ### <a name="add-a-protection-mode"></a>Přidání režimu ochrany
 
@@ -155,16 +155,13 @@ Když WIP vypnete, proběhne pokus o dešifrování všech souborů označených
 
 ### <a name="use-wip-learning"></a>Použití Kurzů k WIP
 
-1. Přejděte na řídicí panel Azure. <!---since they're changing from Intune MAM to Intune proper, a screenshot might be helpful.--->
+1. Otevřete portál Azure Portal. Zvolte **Další služby**. Do filtru textového pole zadejte **Intune**.
 
-2. V nabídce vlevo zvolte **Další služby** a do filtru textového pole pak zadejte **Intune**.
+3. Zvolte **Intune** > **Mobilní aplikace**.
 
-3. Zvolte **Intune**. Na **řídicím panelu Intune**, který se otevře, zvolte **Mobilní aplikace**.
-
-4. V části **Monitorování** zvolte **Kurzy k WIP**. Uvidíte neznámé aplikace protokolované prostřednictvím Kurzů k WIP.
-
-> [!IMPORTANT]
-> Když se tyto aplikace objeví v sestavě protokolování Kurzy k WIP, můžete je přidat do zásad ochrany aplikací.
+4. Zvolte **Stav ochrany aplikace** > **Sestavy** > **Kurz k Windows Information Protection**.  
+ 
+    Jakmile se tyto aplikace objeví v sestavě protokolování Kurzy k WIP, můžete je přidat do zásad ochrany aplikací.
 
 ## <a name="deploy-your-wip-app-protection-policy"></a>Nasazení zásady ochrany aplikací WIP
 
@@ -175,7 +172,7 @@ Když WIP vypnete, proběhne pokus o dešifrování všech souborů označených
 
 Když jste vytvořili zásadu ochrany aplikací WIP, potřebujete ji nasadit ve vaší organizaci s použitím MAM.
 
-1.  V okně **Zásada aplikace** vyberte svoji nově vytvořenou zásadu pro ochranu aplikací a zvolte **Skupiny uživatelů** > **Přidat skupinu uživatelů**.
+1.  V okně **Zásada aplikace** vyberte svoji nově vytvořenou zásadu pro ochranu aplikací a zvolte **Skupiny uživatelů** > **Přidat skupinu uživatelů**.
 
     V okně **Přidat skupinu uživatelů** se otevře seznam skupin uživatelů, který obsahuje všechny skupiny zabezpečení v Azure Active Directory.
 

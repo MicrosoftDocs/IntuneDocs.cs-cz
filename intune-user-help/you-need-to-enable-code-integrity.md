@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 4a1639c289e335d4f50c549da7b7d895dd2a10bb
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 4fad2b78b8224fc1a90ad8c81d350917b17e3d57
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="you-need-to-enable-code-integrity"></a>Je nutné povolit integritu kódu
 
@@ -29,8 +29,8 @@ Uchovávání informací v organizaci vyžaduje různé typy zabezpečení, kter
 Integrita kódu se automaticky zapne, pokud váš systém aktivně používá zabezpečené spouštění.
 
 > [!Tip]
-> Povolení zabezpečeného spouštění je pokročilá úloha. Doporučujeme, abyste o pomoc s touto úlohou požádali správce IT.
+> Povolení zabezpečeného spouštění je pokročilá úloha. Doporučujeme, abyste o pomoc s touto úlohou požádali firemní podporu.
 
 Pokud chcete pokračovat, přečtěte si část Opětovné povolení zabezpečeného spouštění na stránce [Zakázání zabezpečeného spouštění](https://msdn.microsoft.com/library/windows/hardware/dn898540(v=vs.85).aspx) a zkuste zabezpečené spouštění povolit sami.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

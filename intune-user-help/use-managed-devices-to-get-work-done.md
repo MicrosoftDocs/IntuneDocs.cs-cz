@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: d57da14ad070275f7cdef639d971c176c1010634
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 9317fd747e52524d97cea5d4c79fed49246b5866
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="use-managed-devices-to-get-work-done"></a>Práce pomocí spravovaných zařízení
 Microsoft Intune je software, který organizacím umožňuje spravovat zařízení (jako jsou smartphony, tablety nebo počítače), aplikace a další firemní prostředky (například e-mail). To zaměstnancům zajistí přístup k pracovním informacím prakticky odkudkoli z jakéhokoli zařízení a současně uchová firemní data v bezpečí.
@@ -33,8 +33,8 @@ IT oddělení vaší společnosti uvidí informace související s vaší prac�
 ## <a name="how-do-i-get-the-company-portal"></a>Jak získám Portál společnosti?
 Můžete ho získat jedním ze dvou způsobů:
 
-- Nainstalováním aplikace Portál společnosti do zařízení. Aplikaci Portál společnosti získáte zpravidla v obchodě s aplikacemi pro vaše zařízení, může vám ji ale také nainstalovat správce IT.
-- Přechodem na [web Portál společnosti](https://portal.manage.microsoft.com), který nastavil váš IT správce.
+- Nainstalováním aplikace Portál společnosti do zařízení. Aplikaci Portál společnosti získáte zpravidla v obchodě s aplikacemi pro vaše zařízení, může vám ji ale také nainstalovat firemní podpora.
+- Přechodem na [web Portál společnosti](https://portal.manage.microsoft.com), který nastavila vaše firemní podpora.
 
 ## <a name="whats-the-difference-between-the-app-and-the-website"></a>Jaký je rozdíl mezi aplikací a webem?
 Mezi aplikací Portál společnosti a webem Portál společnosti jsou drobné rozdíly, u obou ale můžete provádět většinu stejných úloh. Úlohy, které můžete provést:
@@ -54,9 +54,9 @@ Pokud chcete zjistit, co můžete dělat pomocí webu Portál společnosti v por
 - [Použití webu Portál společnosti](using-the-intune-company-portal-website.md)
 
 ## <a name="what-happens-when-you-add-a-computer-or-device-to-the-company-portal"></a>Co se stane, když přidáte počítač nebo zařízení na Portál společnosti?
-Když na Portál společnosti přidáte počítač nebo zařízení, může se nainstalovat určitý software nebo stáhnout aplikace (podle zařízení). Udělujete tím také správci IT oprávnění ke správě vašich zařízení, aby bylo možné lépe chránit firemní informace na daném zařízení.
+Když na Portál společnosti přidáte počítač nebo zařízení, může se nainstalovat určitý software nebo stáhnout aplikace (podle zařízení). Firemní podpoře tím také udělujete oprávnění ke správě vašich zařízení, aby bylo možné lépe chránit firemní informace na daném zařízení.
 
-Pokud vás zajímá, co váš správce IT uvidí nebo naopak neuvidí na vašem zařízení, použijte odkaz, který odpovídá vašemu typu zařízení:
+Pokud vás zajímá, co vaše firemní podpora uvidí nebo naopak neuvidí na vašem zařízení, použijte odkaz, který odpovídá vašemu typu zařízení:
 
 - [Instalace aplikace Portál společnosti pro Android](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
 - [Instalace aplikace Portál společnosti pro iOS a macOS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
@@ -96,4 +96,4 @@ Microsoft doporučuje, abyste se nejprve pokusili vyřešit problém sami. Nabí
 - [Řešení běžných problémů se zařízením s iOSem](troubleshoot-your-device-ios.md)
 - [Řešení běžných problémů se zařízením s Windows](troubleshoot-your-device-windows.md)
 
-Níže můžete zadat komentář, ve kterém požádáte o pomoc. Každá organizace má ovšem jiné požadavky, proto se může stát, že nebudeme moct na vaše otázky odpovědět. Obraťte se na svého správce IT, který vám může nejrychleji pomoct najít relevantní řešení. Příslušné kontaktní informace by měly být k dispozici na [webu Portálu společnosti](https://portal.manage.microsoft.com).
+Níže můžete zadat komentář, ve kterém požádáte o pomoc. Každá organizace má ovšem jiné požadavky, proto se může stát, že nebudeme moct na vaše otázky odpovědět. Obraťte se na svou firemní podporu, která vám může nejrychleji pomoct najít relevantní řešení. Příslušné kontaktní informace by měly být k dispozici na [webu Portálu společnosti](https://portal.manage.microsoft.com).

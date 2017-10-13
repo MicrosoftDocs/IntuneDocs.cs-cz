@@ -16,14 +16,14 @@ ROBOTS:
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 22144721ba6bfad565009b306e7216ad1e5582af
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 162e2262067d38d792e23c8a98d52e81cf548bbe
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="your-ios-devices-operating-system-version-isnt-yet-supported"></a>Verze operačního systému vašeho zařízení s iOSem zatím není podporovaná
 
-Při rychlém tempu vývoje technologie někdy vaše zařízení může předbíhat to, co měl váš správce IT příležitost otestovat. Je možné, že nejnovější verze iOS nemusí fungovat s některými ostatními nástroji vaší společnosti.
+Při rychlém tempu vývoje technologie někdy vaše zařízení může předbíhat to, co měla vaše firemní podpora příležitost otestovat. Je možné, že nejnovější verze iOS nemusí fungovat s některými ostatními nástroji vaší společnosti.
 
-Kvůli vyřešení tohoto problému se budete muset obrátit na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Kvůli vyřešení tohoto problému se budete muset obrátit na firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

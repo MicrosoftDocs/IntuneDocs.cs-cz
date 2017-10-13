@@ -16,16 +16,16 @@ ROBOTS:
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: d94e3a79af1951debc4dd04413efff8f4c716545
-ms.sourcegitcommit: d2a4f4477b3bf90aac6a9db77d41747e64ad7df4
+ms.openlocfilehash: e6d5bb79925588e78d2536e3c322ccbf5dd970c5
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="outlook-wont-sync-managed-email-when-battery-optimization-for-android-is-turned-on"></a>V Outlooku se nesynchronizují spravované e-maily, když je zapnutá optimalizace baterie pro Android
 
 > [!IMPORTANT]
-> Tento problém jsme tady popsali, protože nás o něm informuje řada zákazníků. Pokud budete mít tento problém dál, i když se ho pokusíte vyřešit podle uvedeného postupu, požádejte o další pomoc [správce IT](https://portal.manage.microsoft.com).
+> Tento problém jsme tady popsali, protože nás o něm informuje řada zákazníků. Pokud budete mít tento problém dál, i když se ho pokusíte vyřešit podle uvedeného postupu, požádejte o další pomoc [svou firemní podporu](https://portal.manage.microsoft.com).
 
 Po registraci zařízení v Intune získáte přístup k prostředkům společnosti. Jedním z nejčastěji používaných prostředků je přístup k e-mailu. K problému, který se objevuje při přístupu k e-mailu prostřednictvím Outlooku pro zařízení s Androidem, dochází po zapnutí optimalizace baterie. Optimalizace baterie se může zapnout automaticky, aby mohlo být vaše zařízení napájeno po nejdelší možnou dobu. Optimalizace baterie k tomu může částečně pomoct, protože se pokouší zastavit automatické stahování e-mailů.
 
@@ -73,4 +73,4 @@ Jako příklad dalšího způsobu, jak najít tato nastavení, je možné uvést
 2. Tap **Battery** > **Battery optimization**.
 3. Select the Company Portal and Outlook apps, then select **Don’t optimize**. Tap **Done**.-->
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Jeho kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

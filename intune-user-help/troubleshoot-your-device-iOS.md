@@ -16,18 +16,18 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 3869659ea95f561365f40bcfcd164b82a7795ac0
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 50b4b9c8399e854e2f5961f6711090778b41ba37
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="fix-common-issues-with-your-ios-device"></a>Řešení běžných problémů se zařízením s iOSem
 
-Některé problémy se zařízením s iOSem, které se vám může podařit vyřešit pomocí postupu pro řešení potíží Některé běžné problémy, na které jsme narazili a které se můžete pokusit nejprve odstranit sami, jsou uvedené níže. U složitějších problémů doporučujeme, abyste se obrátili na IT správce. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Některé problémy se zařízením s iOSem, které se vám může podařit vyřešit pomocí postupu pro řešení potíží Některé běžné problémy, na které jsme narazili a které se můžete pokusit nejprve odstranit sami, jsou uvedené níže. U složitějších problémů doporučujeme, abyste se obrátili na svou firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
 
 - [Potřebuji se znovu připojit k ohroženému zařízení s iOSem](how-to-reconnect-a-compromised-ios-device.md)
-- [Potřebuji odeslat chyby správci IT](send-errors-to-your-it-admin-ios.md)
+- [Potřebuji odeslat chyby firemní podpoře](send-errors-to-your-it-admin-ios.md)
 - [Potřebuji odeslat chyby Microsoftu](send-logs-to-microsoft-ios.md)
 - [Při používání aplikace Portál společnosti se zobrazila chybová zpráva](you-get-an-error-while-using-the-company-portal-app-ios.md)
 - [Potřebuji identifikovat svoje zařízení, aby se dalo zaregistrovat](you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md)

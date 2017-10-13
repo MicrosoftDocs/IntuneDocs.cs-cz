@@ -1,12 +1,12 @@
 ---
-title: "Správa hromadně zakoupených aplikací iOS"
+title: "Správa hromadně zakoupených aplikací pro iOS | Dokumentace Microsoftu"
 titlesuffix: Azure portal
 description: "Zjistěte, jak synchronizovat s Intune aplikace zakoupené v rámci multilicenčního programu z App Storu pro zařízení s iOSem a jak následně spravovat a sledovat jejich používání."
 keywords: 
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 08/18/2017
+ms.date: 09/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8be922d6cc839708ff26de2ebe792241b9bf357a
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: dc3160d40d4ddabcd0a7d8d5557b07b4086eea7c
+ms.sourcegitcommit: 4184db38d1a9a223e680bcb4c9b732f7069bf510
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/02/2017
 ---
-# <a name="how-to-manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Správa aplikací pro iOS nakoupených prostřednictvím programu hromadného nákupu pomocí Microsoft Intune
+# <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Správa aplikací pro systém iOS nakoupených prostřednictvím programu hromadného nákupu pomocí Microsoft Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -48,12 +48,17 @@ Když k zařízení přiřadíte hromadně zakoupené aplikace, nemusí koncový
 Když aplikaci přiřadíte k uživatelům, použije se jedna licence aplikace, která bude spojená s uživatelem. Tato aplikace může být spuštěna na více zařízeních, která uživatel vlastní (s limitem, který určuje Apple).
 Když uživatelům přiřadíte hromadně zakoupenou aplikaci, musí mít každý koncový uživatel platné a jedinečné Apple ID pro přístup k App Storu.
 
-
 V Intune také můžete synchronizovat, spravovat a přiřazovat knihy, které jste koupili v Apple Storu v rámci multilicenčního programu. Další informace najdete v článku [Správa e-knih pro iOS zakoupených v rámci multilicenčního programu](vpp-ebooks-ios.md).
 
-
 ## <a name="manage-volume-purchased-apps-for-ios-devices"></a>Správa hromadně koupených aplikací pro zařízení s iOSem
+
+### <a name="supports-apple-volume-purchase-program-volume-purchased-apps-for-ios-devices"></a>Podpora hromadně zakoupených aplikací pro zařízení s iOSem prostřednictvím programu Apple Volume Purchase Program
+
 Nákup více licencí k aplikacím pro iOS je možný prostřednictvím programu [Apple Volume Purchase Program for Business](http://www.apple.com/business/vpp/) nebo [Apple Volume Purchase Program for Education](http://volume.itunes.apple.com/us/store). Součástí tohoto procesu je vytvoření účtu Apple VPP na webu Apple a odeslání tokenu Apple VPP do Intune.  Potom je možné synchronizovat informace o hromadném nákupu s Intune a sledovat využití aplikací, které jste tímto způsobem koupili.
+
+### <a name="supports-business-to-business-volume-purchased-apps-for-ios-devices"></a>Podpora hromadně zakoupených aplikací pro zařízení s iOSem v rámci spolupráce mezi firmami
+
+Vývojáři třetích stran mohou také navíc soukromě distribuovat aplikace autorizovaným členům programu Volume Purchase Program (VPP) for Business, kteří jsou uvedeni ve službě iTunes Connect. Tito členové programu VPP for Business se mohou přihlásit do zvláštního App Storu pro tento program a aplikace si zakoupit. Aplikace VPP for Business zakoupené koncovým uživatelem se potom synchronizují jeho tenantům Intune.
 
 ## <a name="before-you-start"></a>Než začnete
 Než začnete, potřebujete od společnosti Apple získat token VPP a nahrát ho do svého účtu Intune. Měli byste se také seznámit s následujícími kritérii:
@@ -64,12 +69,9 @@ Než začnete, potřebujete od společnosti Apple získat token VPP a nahrát ho
 * Ve výchozím nastavení se Intune synchronizuje se službou Apple VPP dvakrát denně. Ruční synchronizaci můžete spustit kdykoli.
 * Než začnete používat iOS VPP s Intune, odeberte všechny existující uživatelské účty VPP vytvořené pomocí jiných řešení správy zařízení (MDM). V rámci bezpečnostních opatření Intune nesynchronizuje tyto uživatelské účty do Intune. Intune synchronizuje jenom data služby Apple VPP vytvořená službou Intune.
 * Intune podporuje přidání až 256 tokenů VPP.
-* Pokud zařízení zaregistrovanému prostřednictvím profilu pro zápis zařízení nebo prostřednictvím Apple Configuratoru přiřadíte hromadně koupenou aplikaci, bude fungovat, jenom pokud je pro toto zařízení určená. Hromadně zakoupené aplikace nemůžete vyhradit pro uživatele zařízení DEP bez přiřazeného uživatele.
-Důvodem je skutečnost, že licencování uživatelů v programu VPP pro iOS umožňuje registraci stovek zařízení pomocí stejného uživatelského účtu. Licencování uživatelů v programu VPP pro iOS umožňuje, aby si koncový uživatel nainstaloval aplikaci na 5 až 10 zařízení.
-To znamená, že prvních pár zařízení registrovaných v DEM by obdrželo aplikaci programu VPP nainstalovanou pomocí licencování uživatelů, ale ostatní zařízení by tuto aplikaci neobdržela.
+* Program Profil registrace zařízení (DEP) společnosti Apple automatizuje registraci správy mobilních zařízení (MDM). Pomocí programu DEP můžete nakonfigurovat podniková zařízení bezkontaktně. Do programu DEP se můžete zaregistrovat pomocí stejného účtu agenta programu, který jste použili s programem VPP společnosti Apple. ID programu Apple Deployment Program je jedinečné pro programy uvedené na webu v části [Apple Deployment Programs](https://deploy.apple.com) a nelze ho použít pro přihlášení ke službám společnosti Apple, jako je například obchod iTunes. 
 * Token VPP se dá použít vždy jen v jednom účtu Intune. Proto nepoužívejte stejný token VPP ve více tenantech Intune.
-* Když uživatelům nebo zařízením (přiřazeným uživatelům) na základě modelu poskytování uživatelských licencí přiřazujete aplikace získané v rámci programu VPP, musí mít každý uživatel Intune, který na svém zařízení potvrdí smluvní podmínky společnosti Apple, přiřazeno jedinečné Apple ID nebo e-mailovou adresu.
-Dbejte na to, abyste při nastavování zařízení pro nového uživatele Intune nakonfigurovali jedinečné Apple ID nebo e-mailovou adresu. Apple ID nebo e-mailová adresa a uživatel Intune tvoří jedinečný pár, který je možné použít až pro 5 zařízení.
+* Když uživatelům nebo zařízením (přiřazeným uživatelům) na základě modelu poskytování uživatelských licencí přiřazujete aplikace získané v rámci programu VPP, musí mít každý uživatel Intune, který na svém zařízení potvrdí smluvní podmínky společnosti Apple, přiřazeno jedinečné Apple ID nebo e-mailovou adresu. Nepoužívejte stejné Apple ID, které jste použili u programu Apple Deployment Program. Dbejte na to, abyste při nastavování zařízení pro nového uživatele Intune nakonfigurovali jedinečné Apple ID nebo e-mailovou adresu. Apple ID nebo e-mailová adresa a uživatel Intune tvoří jedinečný pár, který lze použít až pro pět zařízení.
 
 >[!IMPORTANT]
 >Po naimportování tokenu VPP do Intune neimportujte stejný token do žádného jiného řešení správy zařízení. Pokud byste to udělali, mohli byste ztratit přiřazení licence a uživatelských záznamů.
@@ -78,17 +80,13 @@ Dbejte na to, abyste při nastavování zařízení pro nového uživatele Intun
 
 1. Přihlaste se k portálu Azure Portal.
 2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Mobilní aplikace**.
-1.  V úloze **Mobilní aplikace** zvolte **Nastavení** > **Tokeny VPP pro iOS**.
-2.  V okně se seznamem tokenů VPP klikněte na **Přidat**.
-3.  V okně **Nový token VPP** zadejte následující informace:
+2.  V okně se seznamem tokenů VPP klikněte na **Vytvořit**.
+4. V okně **Vytvořit token VPP** zadejte následující informace:
     - **Soubor tokenu VPP** – pokud jste to ještě neudělali, zaregistrujte se do programu Volume Purchase Program for Business nebo Volume Purchase Program for Education. Po zaregistrování si stáhněte token Apple VPP pro svůj účet a vyberte ho tady.
-    - **Apple ID** – zadejte Apple ID účtu přidruženého k multilicenčnímu programu.
-    - **Typ účtu VPP** – zvolte jednu z možností: **Obchodní** nebo **Vzdělávání**.
+    - **Automatické aktualizace aplikací** – Přepnutím ze **Zapnuto** na **Vypnuto** povolíte automatické aktualizace. Když jsou povolené, Intune aktualizuje všechny aplikace zakoupené pro konkrétní token prostřednictvím služby Intune, jakmile se zařízení ohlásí. Intune zjistí aktualizace aplikací VPP v App Storu a automaticky je nabídne zařízení, jakmile se zařízení ohlásí.
 4. Po dokončení klikněte na **Nahrát**.
 
 Token se zobrazí v okně se seznamem tokenů.
-
 
 Data ukládaná společností Apple můžete kdykoli synchronizovat s Intune výběrem položky **Synchronizovat nyní**.
 
@@ -97,12 +95,11 @@ Data ukládaná společností Apple můžete kdykoli synchronizovat s Intune vý
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Přiřazení aplikace zakoupené v rámci multilicenčního programu
 
-1.  V úloze **Mobilní aplikace** zvolte **Spravovat** > **Licence aplikací**.
-2.  V okně se seznamem aplikací zvolte aplikaci, kterou chcete přiřadit, a pak zvolte **...** > **Přiřadit skupiny**.
-3.  V okně *<app name>* - **Přiřazení** zvolte **Spravovat** > **Přiřazení**.
-4.  Zvolte **Vybrat skupiny** a pak v okně **Vybrat skupiny** zvolte skupiny uživatelů nebo zařízení Azure AD, ke kterým chcete aplikaci přiřadit.
+1.  V okně **Intune** zvolte v části **Spravovat** **Mobilní aplikace** > **Aplikace**.
+2.  V okně se seznamem aplikací zvolte aplikaci, kterou chcete přiřadit, a pak zvolte **Přiřazení**.
+3.  V okně ***Název aplikace*** - **Přiřazení** zvolte **Vybrat skupiny** a pak v okně **Vybrat skupiny** zvolte skupiny uživatelů nebo zařízení Azure AD, ke kterým chcete aplikaci přiřadit.
 5.  Pro každou zvolenou skupinu vyberte následující nastavení:
-    - **Typ** – vyberte, jestli bude aplikace **k dispozici** (koncoví uživatelé můžou aplikaci nainstalovat z Portálu společnosti), nebo **povinná** (aplikace se na zařízení koncových uživatelů nainstaluje automaticky).
+    - **Typ** – vyberte, jestli bude aplikace **k dispozici** (koncoví uživatelé mohou aplikaci nainstalovat z Portálu společnosti), nebo **povinná** (aplikace se na zařízení koncových uživatelů nainstaluje automaticky).
     - **Typ licence** – vyberte **Licencování uživatelů** nebo **Licencování zařízení**.
 6.  Až to budete mít, zvolte **Uložit**.
 

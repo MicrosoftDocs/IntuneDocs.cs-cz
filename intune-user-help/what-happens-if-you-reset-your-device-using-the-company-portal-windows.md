@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 4c4d46a8d90c3435b640a6135d69df1f3949b6a3
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 0720707c5e24daa9ef1677c549a8d2a763944f3b
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="what-happens-if-you-reset-your-windows-device-using-the-company-portal"></a>Co se stane, když resetujete zařízení s Windows pomocí Portálu společnosti?
 
@@ -28,8 +28,8 @@ Když k resetování zařízení se systémem Windows použijete aplikaci Portá
 
 |Správa a konfigurace zařízení|Typ zařízení|
 |---------------------------------------|---------------|
-|Mobilní zařízení spravuje správce IT|**Windows 10 a Windows Phone 8.1**</br>Zařízení se už nebude zobrazovat na portálu společnosti a portál společnosti se pokusí obnovit výchozí tovární nastavení zařízení. Vaše osobní data, aplikace a nastavení se při tom odeberou. <br /><br />**Windows 10 Mobile**</br>Jediným způsobem, jak zrušit registraci zařízení, je resetovat ho.|
+|Vaše mobilní zařízení spravuje vaše společnost|**Windows 10 a Windows Phone 8.1**</br>Zařízení se už nebude zobrazovat na portálu společnosti a portál společnosti se pokusí obnovit výchozí tovární nastavení zařízení. Vaše osobní data, aplikace a nastavení se při tom odeberou. <br /><br />**Windows 10 Mobile**</br>Jediným způsobem, jak zrušit registraci zařízení, je resetovat ho.|
 |Zařízení má přístup jen k e-mailu společnosti |**Windows Phone 8.1**<br />Zařízení se už nebude zobrazovat na portálu společnosti a váš firemní e-mailový účet a všechny neuložené e-maily se odstraní.<br /><br />**Windows 7 nebo Windows Vista**<br />Tovární nastavení nelze obnovit v počítači s Windows 7 nebo s dřívější verzí systému, který se používá pouze pro e-mail.<br /><br />**Windows 8.1 a Windows 8**<br />Zařízení se už nebude zobrazovat na portálu společnosti a váš firemní e-mailový účet a všechny neuložené e-maily se odstraní.|
 |Stolní a přenosné počítače|**Windows 8.1 a Windows 8**<br />Tovární nastavení lze obnovit v počítači s Windows 8 nebo Windows 8.1 jedině v případě, že se používá pouze pro e-mail.<br /><br />**Windows 7 nebo Windows Vista**<br />Tovární nastavení nelze obnovit v počítači s Windows 7 nebo s dřívější verzí systému.|
 
-Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud máte otázky, obraťte se na svou firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

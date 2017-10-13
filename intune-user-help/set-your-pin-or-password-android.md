@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 393a1aa0f9e917d2a124f4deaa086f0369ded4ef
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 0b6667bc25263cdc8d638027f4e846724e15b1d0
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="set-your-pin-or-password"></a>Nastavení PIN kódu nebo hesla
 
-Pokud Intune používáte pro přístup k pracovním nebo školním datům, může správce IT vyžadovat, abyste na zařízení s Androidem nastavili PIN kód nebo heslo. Mohou se také zobrazit zprávy, které vyžadují, abyste kvůli větší bezpečnosti zadali delší nebo složitější PIN nebo heslo. Tato hesla slouží například k přístupu k zařízení ze zamykací obrazovky.
+Pokud Intune používáte pro přístup k pracovním nebo školním datům, může vaše firemní podpora vyžadovat, abyste na zařízení s Androidem nastavili PIN kód nebo heslo. Mohou se také zobrazit zprávy, které vyžadují, abyste kvůli větší bezpečnosti zadali delší nebo složitější PIN nebo heslo. Tato hesla slouží například k přístupu k zařízení ze zamykací obrazovky.
 
 K nastavení kódu PIN a hesla použijte následující postup.
 
@@ -33,4 +33,4 @@ K nastavení kódu PIN a hesla použijte následující postup.
 2.  Zvolte a potvrďte nové heslo.
 
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

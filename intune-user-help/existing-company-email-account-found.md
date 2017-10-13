@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 510e35a7c60709a6f002907e0f7963ba5b78f35c
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 21d9e6678c9981b3c1d918f337322d50aa0fecb5
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="an-existing-company-email-account-was-found"></a>Našel se existující e-mailový účet společnosti
 
-U své organizace nebo společnosti už máte zřízený e-mailový účet a teď chcete mít k tomuto účtu přístup i na svém mobilním zařízení. Správce IT potřebuje vaši pomoc, aby mohl zabezpečit přístup k e-mailu po celou cestu od odesílatele až na vaše zařízení. Váš současný e-mail možná funguje, ale následující postup vám pomůže zabezpečit informace ještě lépe.
+U své organizace nebo společnosti už máte zřízený e-mailový účet a teď chcete mít k tomuto účtu přístup i na svém mobilním zařízení. Vaše firemní podpora potřebuje vaši pomoc, aby mohla zabezpečit přístup k e-mailu po celou cestu od odesílatele až na vaše zařízení. Váš současný e-mail možná funguje, ale následující postup vám pomůže zabezpečit informace ještě lépe.
 
 1.  Přejděte do **Nastavení** zařízení a odeberte připojení, které jste si dříve nastavili u firemního e-mailu.
 
@@ -34,4 +34,4 @@ U své organizace nebo společnosti už máte zřízený e-mailový účet a te�
 
 3.  Po chvilce se pro vaše zařízení automaticky použije nové nastavení e-mailu.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Jeho kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Jeho kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

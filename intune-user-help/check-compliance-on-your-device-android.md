@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 088012a1dd9ee1997e7d2b578e54774c4bd586fb
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 2692bc1e6652d5290afd577247344762e5bcb91a
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="check-compliance-on-your-android-device"></a>Kontrola dodržování předpisů na zařízení s Androidem
 
@@ -30,4 +30,4 @@ Pokud se vaše zařízení už po nějakou dobu nepřipojilo k Intune, může se
 
 2. Klepněte na **Zkontrolovat dodržování předpisů**.
 
-Pokud se vám ztracené nebo ukradené zařízení nedaří resetovat, požádejte IT správce, aby to udělal za vás. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud se vám ztracené nebo ukradené zařízení nedaří resetovat, požádejte svou firemní podporu, aby to udělala za vás. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

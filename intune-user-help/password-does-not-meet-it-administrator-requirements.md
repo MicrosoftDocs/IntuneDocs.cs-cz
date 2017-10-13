@@ -1,5 +1,5 @@
 ---
-title: "Heslo nesplňuje požadavky správce IT | Dokumentace Microsoftu"
+title: "Heslo nesplňuje požadavky firemní podpory | Dokumentace Microsoftu"
 description: 
 keywords: 
 author: barlanmsft
@@ -14,15 +14,15 @@ ms.assetid: efb3c261-1f6c-4d39-bfa4-18661f8c59c7
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 2b2c86a46c671d35551a8485b5b1a70674168ac5
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 88d7ca7a73f32c90f589cd51b299350879914b69
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="your-password-does-not-meet-your-it-admins-requirements"></a>Heslo nesplňuje požadavky správce IT
+# <a name="your-password-does-not-meet-your-company-supports-requirements"></a>Heslo nesplňuje požadavky firemní podpory
 
-Heslo, které používáte pro přístup k prostředkům společnosti nebo školy, nesplňuje některé požadavky nastavené správcem IT. Pokud chcete problém vyřešit, postupujte podle pokynů, které se zobrazí na vašem zařízení. Následující výčet obsahuje popis problémů.
+Heslo, které používáte pro přístup k prostředkům společnosti nebo školy, nesplňuje některé požadavky nastavené firemní podporou. Pokud chcete problém vyřešit, postupujte podle pokynů, které se zobrazí na vašem zařízení. Následující výčet obsahuje popis problémů.
 
 Pokud potřebujete postup nastavení kódu PIN nebo hesla, použijte odkaz, který odpovídá typu vašeho zařízení:
 
@@ -32,18 +32,18 @@ Pokud potřebujete postup nastavení kódu PIN nebo hesla, použijte odkaz, kter
 
 Popis problémů s kódem PIN nebo heslem:
 
-- **Heslo neobsahuje složité znaky.** Správce požaduje, abyste v hesle použili složité znaky. Složité znaky jsou například, velká písmena a symboly jako $, % a #.
+- **Heslo neobsahuje složité znaky.** Vaše firemní podpora požaduje, abyste v hesle použili složité znaky. Složité znaky jsou například, velká písmena a symboly jako $, % a #.
 
 - **Heslo je příliš jednoduché nebo není dostatečně bezpečné.** Jednoduché heslo je například 1234 nebo 1111. Pokud nevíte, jaký druh hesel je povolený, snažte se o to, aby heslo neobsahovalo čísla, která jdou za sebou nebo se opakují (jako v předchozím příkladu).
 
-- **Platnost hesla vypršela.** Platnost hesla vypršela. Proto musíte nastavit nové heslo, které odpovídá požadavkům nastaveným správcem IT.
+- **Platnost hesla vypršela.** Platnost hesla vypršela, a proto musíte nastavit nové heslo, které odpovídá požadavkům nastaveným firemní podporou.
 
-- **Heslo není nastavené.** Než získáte na svém zařízení přístup k pracovnímu e-mailu a datům, musíte nastavit heslo, které odpovídá požadavkům nastaveným správcem IT.
+- **Heslo není nastavené.** Než na svém zařízení získáte přístup k pracovnímu e-mailu a datům, musíte nastavit heslo, které odpovídá požadavkům nastaveným firemní podporou.
 
-- **Heslo je příliš krátké.** Správce IT vyžaduje, abyste použili delší heslo, které má více znaků.
+- **Heslo je příliš krátké.** Vaše firemní podpora vyžaduje, abyste použili delší heslo, které má více znaků.
 
-- **Heslo bylo použito v nedávné době.** Správce IT vám zakázal používat předchozí hesla, která jste použili v minulosti. Zvolte si heslo, které jste ještě nikdy nepoužili.
+- **Heslo bylo použito v nedávné době.** Firemní podpora vám zakázala používat předchozí hesla, která jste použili v minulosti. Zvolte si heslo, které jste ještě nikdy nepoužili.
 
-- **Heslo není dostatečně složité a nesplňuje požadavky.** Správce požaduje, abyste v hesle použili i složitější znaky. Zkuste použít třeba číslice, velká písmena a symboly jako $, % a #. Tento problém může vzniknout i u dalších účtů na vašem zařízení. Zkontrolujte proto všechny případné další pracovní účty a zajistěte, aby vaše heslo splňovalo požadavky nastavené správcem IT pro vaše zařízení.
+- **Heslo není dostatečně složité a nesplňuje požadavky.** Vaše firemní podpora požaduje, abyste v hesle použili složitější znaky. Zkuste použít třeba číslice, velká písmena a symboly jako $, % a #. Tento problém může vzniknout i u dalších účtů na vašem zařízení. Zkontrolujte proto všechny případné další pracovní účty a zajistěte, aby vaše heslo splňovalo požadavky nastavené správcem IT pro vaše zařízení.
 
-Pokud máte potíže s tím, jak vytvořit heslo v souladu s požadavky, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud máte potíže s tím, jak vytvořit heslo v souladu s požadavky, obraťte se na firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

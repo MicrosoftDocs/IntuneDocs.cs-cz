@@ -1,5 +1,5 @@
 ---
-title: "Odeslání chyb správci IT | Dokumentace Microsoftu"
+title: "Odeslání chyb firemní podpoře | Dokumentace Microsoftu"
 description: 
 keywords: 
 author: barlanmsft
@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 12fe4702217ad180a94dcf4d79326dd6840a7839
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: aff747c4888c0ad9a222735b8eadf40878cc294b
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="send-errors-to-your-it-admin-for-issues-with-your-ios-device"></a>Odesílání chyb správci IT při problémech se zařízením s iOSem
+# <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>Odesílání chyb firemní podpoře při problémech se zařízením s iOSem
 
-Pokud při použití aplikace Portál společnosti dojde k chybám ve vašem zřízení s iOSem, můžete odeslat informace, abyste svému správci IT pomohli potíže vyřešit. Informace o chybě můžete odeslat různými způsoby:
+Pokud při použití aplikace Portál společnosti dojde k chybám na vašem zřízení s iOSem, můžete odeslat informace, abyste své firemní podpoře pomohli potíže vyřešit. Informace o chybě můžete odeslat různými způsoby:
 
 -   U zpráv s chybovou výstrahou klepněte na **Zpráva**.
 
@@ -32,4 +32,4 @@ Pokud při použití aplikace Portál společnosti dojde k chybám ve vašem zř
 
 -   V aplikaci Portál společnosti zatřeste zařízením a po zobrazení diagnostické výstrahy klepněte na **Poslat diagnostickou sestavu**. Pokud zatřesete zařízením, ale žádná výstraha se nezobrazí, otevřete **Nastavení** > **Portál společnosti** a zkontrolujte, jestli je zapnutá možnost **Gesto zatřesením**.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

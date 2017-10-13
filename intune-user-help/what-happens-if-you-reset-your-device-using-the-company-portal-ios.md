@@ -16,17 +16,17 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: be7a0e7650e798babba66344e50abe7f958f1dda
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: cf3c9d121f2e2578219137161a972d5d58255058
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="what-happens-if-you-reset-your-ios-device-using-the-company-portal"></a>Co se stane, když resetujete zařízení s iOS pomocí Portálu společnosti?
 
 Pokud ve svém zařízení iPhone nebo iPad obnovíte výchozí tovární nastavení pomocí portálu společnosti, můžou se odstranit některé aplikace a nastavení v zařízení, včetně některých vašich osobních údajů. Co se u jednotlivých zařízení stane, závisí na způsobu jeho použití, jak je vidět z následujících seznamů.
 
-**Mobilní zařízení spravuje správce IT**
+**Vaše mobilní zařízení spravuje vaše společnost**
 
 -   Vaše zařízení se už nebude zobrazovat na portálu společnosti.
 
@@ -38,4 +38,4 @@ Pokud ve svém zařízení iPhone nebo iPad obnovíte výchozí tovární nastav
 
 -   Bude odstraněn e-mailový účet společnosti včetně všech neuložených e-mailů.
 
-Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Pokud máte otázky, obraťte se na svou firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

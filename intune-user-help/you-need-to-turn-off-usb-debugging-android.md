@@ -14,18 +14,18 @@ ms.assetid: f250f455-898d-46fe-93ac-2b3aec6a0b71
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 42734b9181c7637807bf3f787a058c0403e70abc
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: a44ef5ad6da605ed52526cd92c9c4c20dfb7b498
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="you-need-to-turn-off-usb-debugging"></a>Potřebujete vypnout Ladění USB.
 
-_Ladění USB_ je režim, ve kterém zařízení s Androidem můžou komunikovat s počítači. Cílem je zjednodušit vývojářům ladění aplikací pro Android. Tento režim umožňuje jistý přístup ke zvláštním oblastem telefonu, se kterými nemusí většina lidí pravidelně pracovat. Mít takový přístup je sice užitečné, ale zařízení může být během připojení k počítači vystavené dalšímu ohrožení informací. Správce IT požaduje, aby toto nastavení bylo vypnuté – kvůli lepší ochraně podnikových dat ve vašem zařízení.
+_Ladění USB_ je režim, ve kterém zařízení s Androidem můžou komunikovat s počítači. Cílem je zjednodušit vývojářům ladění aplikací pro Android. Tento režim umožňuje jistý přístup ke zvláštním oblastem telefonu, se kterými nemusí většina lidí pravidelně pracovat. Mít takový přístup je sice užitečné, ale zařízení může být během připojení k počítači vystavené dalšímu ohrožení informací. Vaše firemní podpora požaduje, aby kvůli lepší ochraně firemních dat ve vašem zařízení bylo toto nastavení vypnuté.
 
 Ladění USB můžete vypnout tak, že přejdete na **Nastavení** > **Možnosti pro vývojáře** a vypnete nastavení **Ladění USB**.
 
 Až nastavení **Ladění USB** vypnete, počkejte pár minut a potom můžete zařízení s Androidem používat pro přístup k datům společnosti nebo školy jako obvykle.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

@@ -16,18 +16,18 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: f73b8b8638cfa775edc921edd8b6206191c5d3b5
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 2fe506fc871dd331240823deff5045d2ed5e4dd1
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="how-do-i-find-the-serial-number-on-my-device"></a>Jak na zařízení najdu sériové číslo?
 
-Sériové číslo vašeho zařízení ho jednoznačně identifikuje a může správci IT pomoct s některými úkoly, jako je výměna zařízení za nové. Vyhledání sériového čísla:
+Sériové číslo vašeho zařízení ho jednoznačně identifikuje a může vaší firemní podpoře pomoct s některými úkoly, jako je výměna zařízení za nové. Vyhledání sériového čísla:
 
 1. Přejděte na obrazovku __Domů__.
 2. Klepněte na aplikaci __Nastavení__ a na __Obecné__.
 3. Klepněte na __Informace__ a potom přejděte k __Sériovému číslu__.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

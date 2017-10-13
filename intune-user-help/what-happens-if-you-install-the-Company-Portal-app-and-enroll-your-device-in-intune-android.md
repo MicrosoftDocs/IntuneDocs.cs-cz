@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: e9057866ac8f8e5d8487a93401282117a72015cd
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 38ee5446c679472927f4dccecfdc56f1228fb92c
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-android-device-in-intune"></a>Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Androidem v Intune?
 
@@ -34,13 +34,13 @@ Když nainstalujete aplikaci Portál společnosti a potom v ní zaregistrujete s
 
 -   Obnovení továrního nastavení telefonu v případě ztráty nebo odcizení
 
-Když zaregistrujete zařízení se systémem Android, udělujete správci IT oprávnění pro přístup k zařízení. Může provádět například následující akce:
+Když zaregistrujete zařízení s Androidem, udělujete firemní podpoře oprávnění pro přístup k zařízení. Může provádět například následující akce:
 
 -   Obnovit v zařízení výchozí tovární nastavení. To je užitečné v případě ztráty nebo odcizení zařízení.
 
 -   Odebrat všechna data týkající se společnosti. Vaše osobní údaje a nastavení se při tom neodeberou.
 
--   Nastavit požadavky na zařízení, třeba vyžadovat heslo k zařízení nebo PIN kód a tím lépe chránit data společnosti. Správce IT může také omezit počet možných zadání nesprávného hesla. Když se tento počet překročí, může se zařízení zablokovat.
+-   Nastavit požadavky na zařízení, třeba vyžadovat heslo k zařízení nebo PIN kód a tím lépe chránit data společnosti. Vaše firemní podpora může také omezit počet možných zadání nesprávného hesla. Když se tento počet překročí, může se zařízení zablokovat.
 
 -   Vyžadovat, abyste přijali smluvní podmínky.
 
@@ -50,10 +50,10 @@ Když zaregistrujete zařízení se systémem Android, udělujete správci IT op
 
 Po přidání zařízení do aplikace Portál společnosti se přibližně každých 8 hodin provedou tyto akce:
 
--   Stažení všech zásad nebo aktualizací aplikací, které vám správce IT zpřístupnil
+-   Stažení všech zásad nebo aktualizací aplikací, které vám firemní podpora zpřístupnila.
 
 -   Odeslání všech aktualizací inventáře hardwaru. (Tyto aktualizace neobsahují osobní informace.)
 
 -   Odeslání všech aktualizací inventáře aplikací společnosti. (Tyto aktualizace neobsahují osobní informace.)
 
-Potřebujete pomoc? Obraťte se na správce IT (kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble installing the Company Portal app on my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.
+Potřebujete pomoc? Obraťte se na svou firemní podporu (kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble installing the Company Portal app on my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.

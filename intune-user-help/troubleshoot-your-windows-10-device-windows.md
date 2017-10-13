@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 701ee2081d8f696a1c37eaa2857ab92942d79f48
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 4b0891541de125220aa278a4f4ebc0dec0d9a27b
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Řešení potíží při registraci zařízení s Windows 10
 Pokud jste použili postup v části [Registrace zařízení s Windows 10 Mobile nebo Windows 10 Desktop v Intune](enroll-your-w10-phone-or-w10-pc-windows.md), ale stále nemáte přístup ke svému školnímu nebo pracovnímu e-mailu a souborům, zkuste tyto kroky pro řešení potíží.
@@ -57,6 +57,6 @@ Pokud jste použili tento postup, ale pořád nemáte přístup k pracovnímu ne
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-set-up-a-work-or-school-account"></a>Postup řešení potíží, pokud se zobrazí „Nastavení pracovního nebo školního účtu“
 
-Pokud se zobrazí zpráva __Nemůžeme automaticky zjistit koncový bod správy odpovídající zadanému uživatelskému jménu. Zkontrolujte prosím své uživatelské jméno a zkuste to znovu. Pokud znáte adresu URL koncového bodu správy, zadejte ji prosím.__ , zkuste znovu zadat uživatelské jméno a heslo. Pokud ani to nepomůže, zjistěte od správce IT, jaký web je potřeba zadat do textového pole **Koncový bod správy**. Web pravděpodobně vypadá nějak takto: **www.vasespolecnost.onmicrosoft.com**. 
+Pokud se zobrazí zpráva __Nemůžeme automaticky zjistit koncový bod správy odpovídající zadanému uživatelskému jménu. Zkontrolujte prosím své uživatelské jméno a zkuste to znovu. Pokud znáte adresu URL koncového bodu správy, zadejte ji prosím.__ , zkuste znovu zadat uživatelské jméno a heslo. Pokud ani to nepomůže, zjistěte od své firemní podpory, který web je potřeba zadat do textového pole **Koncový bod správy**. Web pravděpodobně vypadá nějak takto: **www.vasespolecnost.onmicrosoft.com**. 
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

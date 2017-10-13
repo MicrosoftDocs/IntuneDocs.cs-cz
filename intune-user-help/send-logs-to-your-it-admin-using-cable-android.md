@@ -1,5 +1,5 @@
 ---
-title: "Odeslání protokolů správci IT pomocí kabelu USB | Dokumentace Microsoftu"
+title: "Odeslání protokolů firemní podpoře pomocí kabelu USB | Dokumentace Microsoftu"
 description: "Odeslání datových protokolů pomocí kabelu USB"
 keywords: 
 author: barlanmsft
@@ -16,18 +16,18 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 3e91ccb2aae973892044f19d0d26c7f57bd5d786
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: f6df910d60498b0ed272ebeb86d54273e8c6dd1a
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="send-logs-to-your-it-admin-using-a-usb-cable"></a>Odeslání protokolů správci IT pomocí kabelu USB
+# <a name="send-logs-to-your-company-support-using-a-usb-cable"></a>Odeslání protokolů firemní podpoře pomocí kabelu USB
 
-Pokud při použití aplikace Portál společnosti v zařízení s Androidem dojde k chybě, můžete správci IT pomoct potíže vyřešit a poslat mu e-mailem informace o této chybě. Tyto informace se ukládají na zařízení ve speciálním dokumentu s názvem _diagnostický protokol_.
+Pokud při použití aplikace Portál společnosti na zařízení s Androidem dojde k chybě, můžete firemní podpoře pomoct potíže vyřešit tak, že jí pošlete e-mailem informace o této chybě. Tyto informace se ukládají na zařízení ve speciálním dokumentu s názvem _diagnostický protokol_.
 
 > [!Note]
-> Než začnete, ujistěte se, že máte po ruce e-mailovou adresu správce IT. Najdete ji na [webu Portál společnosti](http://portal.manage.microsoft.com) nebo v aplikaci Portál společnosti.
+> Než začnete, ujistěte se, že máte po ruce e-mailovou adresu firemní podpory. Najdete ji na [webu Portál společnosti](https://portal.manage.microsoft.com) nebo v aplikaci Portál společnosti.
 
 1.  Na chybové obrazovce klepněte na **Odeslat informace**. Když se zobrazí zpráva s dotazem, jakou metodu chcete použít k odeslání protokolů, zvolte možnost, která uloží soubory do vašeho zařízení.
 
@@ -35,6 +35,6 @@ Pokud při použití aplikace Portál společnosti v zařízení s Androidem doj
 
 3.  V počítači vyhledejte adresář, který má název vašeho zařízení. V tomto adresáři najděte složku **Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\**.
 
-4.  Vyberte soubory a připojte je k e-mailu. E-mail pošlete správci IT.
+4.  Vyberte soubory a připojte je k e-mailu. Tento e-mail pošlete své firemní podpoře.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

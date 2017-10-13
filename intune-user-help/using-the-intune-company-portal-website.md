@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 90168dae6b73185ae8cdf6c55093c79ab3d729c0
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 6213bcf2e7ee2ad1ffd15010d8741b86b065d147
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="using-the-intune-company-portal-website"></a>Použití webu Portál společnosti Intune
 Na [webu Portál společnosti](https://portal.manage.microsoft.com) mohou koncoví uživatelé spravovat počítače a zařízení, která si zaregistrovali v Intune.
@@ -39,10 +39,10 @@ Na webu Portál společnosti mohou uživatelé provádět následující úlohy:
 
 -   [Ruční synchronizace zařízení, aby se aplikace instalovaly rychleji](sync-your-device-manually-cpwebsite.md)
 
--   Vyhledání kontaktních údajů na správce IT, pokud jste je nakonfigurovali
+-   Vyhledání kontaktních údajů na firemní podporu, pokud jste je nakonfigurovali
 
 -   Zobrazení podrobností o zařízení, včetně toho, jestli vyhovuje zásadám společnosti nebo školy
 
 -   Vzdálená správa počítače (platí jenom pro PC)
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

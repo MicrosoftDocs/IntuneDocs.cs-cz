@@ -15,20 +15,20 @@ searchScope: User help
 ROBOTS: 
 ms.reviewer: priyar
 ms.suite: ems
-ms.openlocfilehash: 526cfed5e8f42d739c57882b454745ba5b20181c
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 483b2155c2f1935a5b0d79b84ab65db1f9fc182d
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="fix-common-issues-with-your-windows-device"></a>Řešení běžných problémů se zařízením s Windows
 
-Některé problémy se zařízením s Windows se vám může podařit vyřešit pomocí postupu pro řešení potíží. Některé běžné problémy, na které jsme narazili a které se můžete pokusit nejprve odstranit sami, jsou uvedené níže. U složitějších problémů doporučujeme, abyste se obrátili na IT správce. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Některé problémy se zařízením s Windows se vám může podařit vyřešit pomocí postupu pro řešení potíží. Některé běžné problémy, na které jsme narazili a které se můžete pokusit nejprve odstranit sami, jsou uvedené níže. U složitějších problémů doporučujeme, abyste se obrátili na svou firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
 
 - [Moje zařízení s Windows 10 se nedá zaregistrovat](troubleshoot-your-windows-10-device-windows.md)
 - [Potřebuji aktualizovat zařízení s Windows](you-need-to-update-your-windows-device.md)
-- [Potřebuji odeslat protokoly z aplikace Portál společnosti mému správci IT](send-logs-to-your-it-admin-cp-windows.md)
-- [Potřebuji odeslat protokoly z aplikace Nastavení mému správci IT](send-logs-to-your-it-admin-settings-windows.md)
+- [Potřebuji odeslat protokoly z aplikace Portál společnosti své firemní podpoře](send-logs-to-your-it-admin-cp-windows.md)
+- [Potřebuji odeslat protokoly z aplikace Nastavení své firemní podpoře](send-logs-to-your-it-admin-settings-windows.md)
 - [Moje verze Windows ještě není podporovaná](your-windows-version-isnt-yet-supported.md)
 - [Potřebuji povolit šifrování Windows](you-need-to-enable-windows-encryption.md)
 - [Moje zařízení potřebuje antimalwarový software](your-device-needs-antimalware-software.md)

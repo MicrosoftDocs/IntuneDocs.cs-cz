@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/11/2017
+ms.date: 10/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 256aa8f52bd25ddcb860aed25b22f1549053d2b1
-ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
+ms.openlocfilehash: 621468db51e7e6172d142501a4637794e4cb57b8
+ms.sourcegitcommit: 53a1f5226d1e1172f013a1b192321dde610b2d6c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/06/2017
 ---
 # <a name="enroll-your-android-device-in-intune"></a>Registrace zařízení se systémem Android do Intune
 
@@ -30,21 +30,19 @@ Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svoje 
 
 Tyto pokyny k registraci jsou určené pro nativní zařízení s Androidem a pro zařízení se sadou Samsung KNOX. Samsung KNOX je typ zabezpečení, které určitá zařízení Samsung používají k zajištění další ochrany nad rámec toho, co poskytuje nativní Android. Pokud chcete zjistit, jestli máte zařízení Samsung KNOX, přejděte na **Nastavení** > **O zařízení**. Pokud se tu nezobrazí verze Knoxu, máte nativní zařízení s Androidem.
 
-Před registrací nebo po ní se může zobrazit výzva k výběru kategorie, která nejlépe vystihuje způsob použití vašeho zařízení. Tato kategorie pomůže správci IT zkontrolovat aplikace, ke kterým máte přístup.
-
-Pokud se při registraci zařízení do služby Intune zobrazí chybová zpráva, můžete [chyby při registraci odeslat správci IT](send-enrollment-errors-to-your-it-admin-android.md).
+Před registrací nebo po ní se může zobrazit výzva k výběru kategorie, která nejlépe vystihuje způsob použití vašeho zařízení. Tato kategorie pomůže firemní podpoře zkontrolovat aplikace, ke kterým máte přístup.
 
 **Postup při registraci zařízení se systémem Android:**
 
 1.  Nainstalujte si bezplatnou aplikaci Portál společnosti Intune z [Google Play](http://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
 
-2.  Otevřete aplikaci Portál společnosti Microsoft Intune.
+2.  Otevřete aplikaci Portál společnosti.
 
-3.  Na **úvodní** obrazovce portálu společnosti klepněte na **Přihlásit** a pak se přihlaste pomocí svého pracovního nebo školního účtu.
+3.  Na **úvodní** obrazovce aplikace Portál společnosti klepněte na **Přihlásit se** a pak se přihlaste pomocí svého pracovního nebo školního účtu.
 
     ![Uvítací stránka aplikace Portál společnosti pro Android, která uživatele žádá, aby se přihlásili pomocí svého požadované pracovního nebo školního účtu. Také varuje, že se nedá použít účet Microsoft ani jiné osobní účty.](./media/and-enroll-0-welcome-screen.png)   
 
-4.  Pokud váš správce IT nastavil firemní podmínky a ujednání, přijměte je klepnutím na **PŘIJMOUT**. V závislosti na verzi Androidu, kterou aktuálně používáte, se může tato obrazovka nepatrně lišit od té, která je znázorněná níže.
+4.  Pokud firemní podpora nastavila firemní podmínky a ujednání, přijměte je klepnutím na **PŘIJMOUT**. V závislosti na verzi Androidu, kterou aktuálně používáte, se může tato obrazovka nepatrně lišit od té, která je znázorněná níže.
 
     ![android-company-portal-sign-in](./media/and-enroll-3-accept-terms.png)
 
@@ -52,28 +50,24 @@ Pokud se při registraci zařízení do služby Intune zobrazí chybová zpráva
 
     ![android-company-portal-sign-in](./media/and-enroll-2-cp-sign-in.png)
 
-6.  Na obrazovce **Nastavení firemního přístupu** klepněte na **ZAČÍT**.
+6.  Na obrazovce **Nastavení firemního přístupu** klepněte na **POKRAČOVAT**.
 
-    ![Obrazovka nastavení přístupu společnosti](/intune/media/android_cp_enroll_02_post_1709.png)
+    ![Obrazovka nastavení přístupu společnosti](/intune/media/android_cp_enroll_01_1709_new.png)
 
     > [!NOTE]
     > Žluté trojúhelníky neznamenají, že už došlo k chybě. Tyto ikony označují, že ještě existují kroky, které se musí v procesu registrace dokončit.
 
-7. Na obrazovce **Výhody správy zařízení** si přečtěte, co vám registrace zařízení umožní, a pak klepněte na **POKRAČOVAT**.
+7.  Prohlédněte si seznam toho, co firemní podpora na vašem zařízení uvidí nebo neuvidí, a klepněte na **POKRAČOVAT**.
 
-    ![Obrazovka Výhody správy zařízení](/intune/media/android_cp_enroll_02_post_1709.png)
+    ![Nastavení ochrany osobních údajů](/intune/media/android_cp_enroll_02_after_1710.png)
 
-8.  Prohlédněte si seznam toho, co váš správce IT uvidí nebo neuvidí ve vašem zařízení, a klepněte na **POKRAČOVAT**.
+9.  Na obrazovce **Co dál?** si přečtěte, co probíhá během registrace, a potom klepněte na **REGISTROVAT**.
 
-    ![Nastavení ochrany osobních údajů](./media/and-enroll-4c-we-care-privacy.png)
-
-9.  Na obrazovce **Co dál?** si přečtěte, co probíhá při registraci, a potom klepněte na **REGISTROVAT**.
-
-    ![Obrazovka Co dál](./media/and-enroll-4d-what-comes-next.png)
+    ![Obrazovka Co dál](/intune/media/android_cp_enroll_03_after_1710.png)
 
 10.  Pokud používáte Android 6.0 nebo novější, proveďte tento krok. V opačném případě přejděte k dalšímu kroku.
 
-    Pokud správce IT nastavil konkrétní zásady, můžou se zobrazit následující zprávy:
+    Pokud firemní podpora nastavila konkrétní zásady, mohou se zobrazit následující zprávy:
     -   **Povolit pro Portál společnosti telefonování a správu telefonních hovorů?**
 
         ![android-company-portal-sign-in](./media/and-enroll-3a-allow-phone-access.png)
@@ -96,9 +90,9 @@ Pokud se při registraci zařízení do služby Intune zobrazí chybová zpráva
 
     Portál společnosti potřebuje ke správě vašeho zařízení roli správce zařízení. Ta umožňuje vašemu správci například zobrazit si, kolikrát jste se pokusili odemknout obrazovku a provést nějaké akce.
 
-    Je důležité si zapamatovat, že tyto akce se provádí ve jménu bezpečnosti. Váš správce IT se nesnaží vám bezdůvodně narušit soukromí nebo vymazat informace, ale chce se ujistit, že jsou firemní data v bezpečí.
+    Je důležité si zapamatovat, že tyto akce se provádí ve jménu bezpečnosti. Vaše firemní podpora se nesnaží vám bezdůvodně narušit soukromí nebo vymazat informace, ale chce se ujistit, že jsou firemní data v bezpečí.
 
-    Microsoft tuto zprávu nemůže nijak ovlivnit a rozumíme, že její formulace se může zdát poněkud radikální. Neexistuje žádný způsob, kterým by Portál společnosti mohl zobrazovat omezení a přístup, které jsou relevantní pouze pro vaši organizaci. Na této obrazovce je udělujete všechny najednou. Pokud máte otázky týkající se použití konkrétně ve své organizaci, požádejte o další informace správce IT (pomocí kontaktních informací na [webu Portál společnosti](http://portal.manage.microsoft.com)).
+    Microsoft tuto zprávu nemůže nijak ovlivnit a rozumíme, že její formulace se může zdát poněkud radikální. Neexistuje žádný způsob, kterým by Portál společnosti mohl zobrazovat omezení a přístup, které jsou relevantní pouze pro vaši organizaci. Na této obrazovce je udělujete všechny najednou. Pokud máte otázky týkající se použití konkrétně ve své organizaci, požádejte o další informace firemní podporu (pomocí kontaktních informací na [webu Portál společnosti](https://portal.manage.microsoft.com)).
 
 12.  Podle pokynů zadejte kód PIN nebo heslo. Pokud jste už kód PIN nebo heslo v daném zařízení nastavili, tato obrazovka se buď neobjeví, nebo budete muset zadat nový kód PIN a heslo.
 
@@ -133,4 +127,6 @@ Než začnete instalovat firemní aplikace, přejděte na **Nastavení** &gt; **
 > [!Note]
 > Pokud vaše organizace používá software pro správu telekomunikačních výdajů (Telecom Expense Management), budete muset před úplnou registrací zařízení provést několik dalších kroků. Další informace najdete [tady](enroll-your-device-with-telecom-expense-management-android.md).
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT (kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.
+Pokud se při registraci zařízení do služby Intune zobrazí chybová zpráva, můžete [chyby při registraci odeslat firemní podpoře](send-enrollment-errors-to-your-it-admin-android.md).
+
+Potřebujete ještě další pomoc? Obraťte se na firemní podporu (kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.

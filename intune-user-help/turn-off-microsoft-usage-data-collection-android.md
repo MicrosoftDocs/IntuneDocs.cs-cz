@@ -16,16 +16,16 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 5c76ad3ea5a2fb7aafe7a40aa2e258a083c2d6c8
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: e7375e6670c15fe186f5e77876e7b46f9021ad9d
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="turn-off-microsoft-usage-data-collection"></a>Vypnutí shromažďování dat Microsoftu o využití
 
-Microsoft automaticky shromažďuje určitá data o našich produktech a službách. Děláme to za účelem zvýšení spolehlivosti a výkonu našich produktů, mezi které patří i aplikace Portál společnosti. I když se tato data upravují tak, aby byla anonymní, nemusí být toto shromažďování dat některým uživatelům příjemné. Vaši správci IT nemají nad shromažďováním těchto dat kontrolu a nemůžou u tohoto nastavení změnit vaši volbu.
+Microsoft automaticky shromažďuje určitá data o našich produktech a službách. Děláme to za účelem zvýšení spolehlivosti a výkonu našich produktů, mezi které patří i aplikace Portál společnosti. I když se tato data upravují tak, aby byla anonymní, nemusí být toto shromažďování dat některým uživatelům příjemné. Vaše firemní podpora nemá nad shromažďováním těchto dat kontrolu a nemůže u tohoto nastavení změnit vaši volbu.
 
 Pokud chcete vypnout shromažďování těchto dat na zařízení s Androidem, otevřete v aplikaci Portál společnosti nastavení **Data o využití**.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

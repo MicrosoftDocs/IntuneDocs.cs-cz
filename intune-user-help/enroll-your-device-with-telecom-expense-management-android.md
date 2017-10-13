@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: fa36b1449cb1ce5d9e0d3b1ca2f3e0db78729f1d
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 87704687947aee7c1169b36009ea1960bec37edd
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="enroll-your-android-device-in-telecom-expense-management"></a>Registrace zařízení s Androidem ve službě TEM (Telecom Expense Management)
 
@@ -30,7 +30,7 @@ Vaše organizace může používat software pro správu telekomunikačních výd
 
 Po výběru příslušné možnosti dostanete oznámení s pokynem k instalaci aplikace [__Datalert__](https://play.google.com/store/apps/details?id=fr.memobox.databox) z obchodu Google Play. Aplikace Datalert umožňuje vaší organizaci měřit využití dat. Pokud má vaše organizace nakonfigurovanou možnost pracovní nebo školní registrace, budete se muset přihlásit pomocí pracovního nebo školního účtu. Pokud taková možnost není povolena, budete muset zadat údaje, jako je vaše telefonní číslo, a ověřit zařízení pomocí kódu, abyste se mohli z aplikace zaregistrovat ve službě Datalert.
 
-Pokračujte klepnutím na šipku __Další__ v pravém horním rohu obrazovky. Váš správce IT by vám měl říct, jestli se budete přihlašovat svým __pracovním nebo školním účtem Microsoft__ nebo jestli budete používat svoje __telefonní číslo__.
+Pokračujte klepnutím na šipku __Další__ v pravém horním rohu obrazovky. Vaše firemní podpora by vám měla říct, jestli se budete přihlašovat svým __pracovním nebo školním účtem Microsoft__ nebo jestli budete používat svoje __telefonní číslo__.
 
   ![Snímek úvodní obrazovky aplikace Datalert se stručným vysvětlením toho, jak vám tato aplikace pomůže využít datový tarif na maximum, a výzvou k přechodu na další obrazovku](./media/and-enroll-12-tem-datalert-setup.png)
 
@@ -62,4 +62,4 @@ Pokračujte klepnutím na šipku __Další__ v pravém horním rohu obrazovky. V
 
 Po registraci začnete v aplikaci Datalert sledovat využití dat.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

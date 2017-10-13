@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 05/29/2017
+ms.date: 10/03/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dda7108aedcc4d3878fe3743ee0b88b26fabbe6f
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: bef73c81d285a6d320cd92b055ff2b5592a55af4
+ms.sourcegitcommit: 001577b700f634da2fec0b44af2a378150d1f7ac
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="what-is-device-enrollment"></a>Co je registrace zařízení?
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -35,6 +35,7 @@ Pokud používáte Exchange ActiveSync, ať už místní nebo hostovaný v cloud
 ## <a name="overview-of-device-enrollment-methods"></a>Přehled metod registrace zařízení
 
 Následující tabulka nabízí přehled metod registrace v Intune a jejich funkce a požadavky, které jsou popsané dole.
+
 **Legenda**
 
 - **Vyžadováno resetování** – Během registrace se obnoví tovární nastavení zařízení.
@@ -79,18 +80,59 @@ Následují scénáře registrace zařízení vlastněných společností (COD).
 Správce registrace zařízení (DEM) je zvláštní uživatelský účet, který se používá k registraci a správě více zařízení vlastněných společností. Správci pak mohou nainstalovat aplikaci Portál společnosti a zaregistrovat velký počet zařízení bez uživatele. Přečtěte si další informace o [DEM](./device-enrollment-manager-enroll.md).
 
 ### <a name="dep"></a>DEP
-Správa programu DEP společnosti Apple umožňuje vytvářet a bezdrátově nasazovat zásady v zařízeních s iOSem zakoupených a spravovaných prostřednictvím programu DEP. Zařízení se zaregistruje, když ho uživatel poprvé zapne a spustí pomocníka pro nastavení iOS (Setup Assistant). Tato metoda podporuje režim **iOS – Pod dohledem**, který pak povoluje následující funkce:
+Správa programu DEP společnosti Apple umožňuje vytvářet a bezdrátově nasazovat zásady v zařízeních s iOSem zakoupených a spravovaných prostřednictvím programu DEP. Zařízení se zaregistruje, když ho uživatel poprvé zapne a spustí pomocníka pro nastavení iOS (Setup Assistant). Tato metoda podporuje režim Pod dohledem systému iOS, který umožňuje nakonfigurovat zařízení následujícími funkcemi:
 
-  - Registrace uzamčeného zařízení
-  - Beznabídkový režim a další pokročilé konfigurace a omezení
+- Zámek aplikace (režim jedné aplikace) 
+- Globální proxy server HTTP 
+- Vyřazení zámku aktivace 
+- Autonomní režim jedné aplikace 
+- Filtr webového obsahu 
+- Nastavení pozadí a zamykací obrazovky 
+- Tiché doručení aplikací bez vyžádání 
+- Vždy zapnutá síť VPN 
+- Povolení pouze instalace spravovaných aplikací 
+- iBooks Store 
+- Zprávy iMessage 
+- Herní centrum 
+- AirDrop 
+- AirPlay 
+- Hostitelské párování 
+- Synchronizace cloudu 
+- Vyhledávání Spotlight 
+- Handoff 
+- Vymazání zařízení 
+- Uživatelské rozhraní pro omezení 
+- Instalace konfiguračních profilů uživatelským rozhraním 
+- News 
+- Klávesové zkratky 
+- Změny hesla 
+- Změny názvu zařízení 
+- Změny tapety 
+- Automatická stahování aplikací 
+- Úpravy vztahu důvěryhodnosti u podnikových aplikací 
+- Apple Music 
+- Doručení pošty 
+- Spárování s Apple Watch 
+
+> [!NOTE]
+> Apple potvrdil, že se některá nastavení přesunou v roce 2018 pouze do režimu Pod dohledem. Doporučujeme, abyste to vzali na vědomí, pokud tato nastavení používáte a nečekáte, než je Apple přesune pouze do režimu Pod dohledem:
+> - Instalace aplikace
+> - Odebrání aplikace
+> - FaceTime
+> - Safari
+> - iTunes
+> - Explicitní obsah
+> - Dokumenty a data v iCloudu
+> - Hry pro víc hráčů
+> - Přidat přátele z herního centra
 
 Registrace DEP pro iOS je podrobněji popsaná zde:
 
-- [Volba způsobu registrace zařízení s iOSem](enrollment-method-choose-ios.md)
+- [Volba způsobu registrace zařízení s iOSem](ios-enroll.md)
 - [Registrace zařízení s iOSem pomocí Programu registrace zařízení (DEP)](device-enrollment-program-enroll-ios.md)
 
 ### <a name="usb-sa"></a>USB (pomocník pro instalaci)
-Správci IT používají k ruční přípravě každého zařízení vlastněného společností pro registraci Apple Configurator (přes USB) a Pomocníka s nastavením. Správce IT vytvoří registrační profil a vyexportuje ho do Apple Configuratoru. Když uživatelé obdrží svá zařízení, budou vyzváni ke spuštění pomocníka pro nastavení a k registraci zařízení. Tato metoda podporuje režim **iOS – Pod dohledem**, který pak povoluje následující funkce:
+Správci IT používají k ruční přípravě každého zařízení vlastněného společností pro registraci Apple Configurator (přes USB) a Pomocníka s nastavením. Správce IT vytvoří registrační profil a vyexportuje ho do Apple Configuratoru. Když uživatelé obdrží svá zařízení, budou vyzváni ke spuštění pomocníka pro nastavení a k registraci zařízení. Tato metoda podporuje režim **iOS – Pod dohledem**, který umožňuje následující funkce:
   - Registrace uzamčeného zařízení
   - Beznabídkový režim a další pokročilé konfigurace a omezení
 

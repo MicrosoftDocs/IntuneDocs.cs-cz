@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/16/2017
+ms.date: 10/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,15 +16,17 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 734856b1598a225f6f3a2aaf640d34d393c744e7
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: fa95dc161adabcf280d9933770ce68b719a47a74
+ms.sourcegitcommit: 53a1f5226d1e1172f013a1b192321dde610b2d6c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 10/06/2017
 ---
 # <a name="create-a-work-profile-and-enroll-your-device-in-intune"></a>Vytvoření pracovního profilu a registrace zařízení v Intune
 
-Registrací zařízení s Androidem získáte přístup k e-mailu, aplikacím a jiným pracovním datům společnosti. Součástí registrace je nastavení pracovního profilu, který v zařízení oddělí osobní a pracovní data. Správce IT může spravovat jen pracovní profil, který obsahuje vaše pracovní data. Správce IT nemůže v zařízení spravovat vaše osobní data. Přečtěte si o tom, [co se stane, když si vytvoříte pracovní profil](what-happens-when-you-create-a-work-profile-android.md).
+Registrací zařízení s Androidem získáte přístup k e-mailu, aplikacím a jiným pracovním datům společnosti. Součástí registrace je nastavení pracovního profilu, který v zařízení oddělí osobní a pracovní data.
+
+Firemní podpora může spravovat jen pracovní profil, který obsahuje vaše pracovní data. Firemní podpora nemůže v zařízení spravovat vaše osobní data. Přečtěte si o tom, [co se stane, když si vytvoříte pracovní profil](what-happens-when-you-create-a-work-profile-android.md).
 
 Pracovní profil vytvoříte takto:
 
@@ -32,27 +34,27 @@ Pracovní profil vytvoříte takto:
 
     ![Úvodní obrazovka aplikace Portál společnosti pro Android](./media/and-enroll-0-welcome-screen.png)
 
-2. Na obrazovce **Nastavení firemního přístupu** klepněte na **ZAČÍT**.
+2. Na obrazovce **Nastavení firemního přístupu** klepněte na **POKRAČOVAT**.
 
-    ![Obrazovka Nastavení firemního přístupu](./media/andr-afw-begin-company-access-setup.png)
+    ![Obrazovka Nastavení firemního přístupu](/intune/media/android_cp_enroll_01_1709_new.png)
 
 3.  Na obrazovce **Proč vytvořit pracovní profil** si přečtěte, co budete moct dělat, a pak klepněte na **POKRAČOVAT**.
 
     ![Proč vytvořit pracovní profil](./media/andr-afw-why-create-a-work-profile.png)
 
-4.  Přečtěte si informace o tom, co správce IT uvidí nebo neuvidí ve vašem zařízení, a klepněte na **POKRAČOVAT**.
+4.  Prohlédněte si seznam toho, co firemní podpora na vašem zařízení uvidí nebo neuvidí, a klepněte na **POKRAČOVAT**.
 
-    ![Co správce IT uvidí nebo neuvidí na vašem zařízení](./media/andr-afw-what-it-can-see-on-your-device.png)
+    ![Co má a nemá firemní podpora oprávnění vidět na vašem zařízení](/intune/media/android_cp_enroll_02_after_1710.png)
 
-5.  Na obrazovce **Co dál** si přečtěte o dalším postupu a pak klepněte na **POKRAČOVAT**.
+5.  Na obrazovce **Co dál?** si přečtěte, co probíhá během registrace, a potom klepněte na **REGISTROVAT**.
 
-    ![Obrazovka Co dál](./media/andr-afw-what-comes-next.png)
+    ![Obrazovka Co dál?](/intune/media/android_work_cp_enroll_03_after_1710.png)
 
 6. Na obrazovce **Nastavit pracovní profil** klepněte na **DALŠÍ** a umožněte aplikaci Portál společnosti přístup k pracovnímu profilu.
 
     ![Udělení přístupu k pracovnímu profilu aplikaci Portál společnosti](./media/andr-afw-tap-next-to-set-up-work-profile.png)
 
-7. Přečtěte si obrazovku, kde Google popisuje, co váš správce IT může dělat, když si vytvoříte pracovní profil, a pak klepněte na **OK**.
+7. Přečtěte si obrazovku, kde Google popisuje, co vaše firemní podpora může dělat, když si vytvoříte pracovní profil, a pak klepněte na **OK**.
 
     ![Přečtení informací Googlu o pracovních profilech](./media/andr-afw-google-screen-what-it-can-do.png)
 
@@ -70,16 +72,12 @@ Pracovní profil vytvoříte takto:
 
     Krátce se zobrazí zpráva o „registraci vašeho zařízení“.
 
-11. Když na obrazovce **Nastavení firemního přístupu** uvidíte, že je všechno správně nastavené, klepněte na **POKRAČOVAT**.
+11. Když na obrazovce **Všechno je nastavené!** uvidíte, že je všechno správně nastavené, klepněte na **HOTOVO**.
 
-    ![Obrazovka Nastavení firemního přístupu znázorňující, že pracovní profil a registrace jsou hotové](./media/andr-afw-company-access-setup-green-checks.png)
-
-12. Na obrazovce **Nastavení firemního přístupu je hotové** klepněte na **HOTOVO**. Pokud správce IT přidal další požadavky, bude potřeba dokončit další kroky.
-
-    ![Nastavení firemního přístupu je hotové](./media/andr-afw-company-access-setup-complete.png)
+    ![Obrazovka Nastavení firemního přístupu znázorňující, že pracovní profil a registrace jsou hotové](/intune/media/android_work_cp_enroll_04_after_1710.png)
 
     Teď můžete získávat firemní aplikace z obchodu Play for Work.
 
     ![Stránka obchodu Google Play for Work s aplikacemi](./media/andr-afw-tap-work-play-store-icon.png)
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
