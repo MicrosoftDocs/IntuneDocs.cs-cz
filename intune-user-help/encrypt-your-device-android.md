@@ -16,18 +16,18 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: fe406fe2deb89fca1f3ab9d949ea78b779ee13af
-ms.sourcegitcommit: eb726c7e3a6e7defb74e69861447c96de0d1bb65
+ms.openlocfilehash: 3a2622c7c981e64b3e220424c6661a5ba9e30751
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="how-to-protect-your-android-device-using-encryption"></a>Jak chránit zařízení s Androidem pomocí šifrování
 
 Při šifrování zařízení balíte informace v zařízení do vrstvy ochranného kódu, který brání neoprávněným osobám v přístupu k nim. Jako další krok k zabezpečení vašich informací vyžaduje vaše organizace, abyste si zašifrovali zařízení s Androidem. Teprve pak budete mít přístup k firemním souborům, e-mailu nebo datům.
 
 > [!Note]
-> Můžete být také vyzváni, abyste si před šifrováním nastavili kód PIN nebo heslo, pokud to váš správce IT vyžaduje.
+> Můžete být také vyzváni, abyste si před šifrováním nastavili kód PIN nebo heslo, pokud to vaše firemní podpora vyžaduje.
 
 Pokud byste zrušili registraci telefonu, zůstane zašifrovaný.
 
@@ -52,7 +52,7 @@ Pokud byste zrušili registraci telefonu, zůstane zašifrovaný.
 
 - Ujistěte se, že je zařízení nabité a připojené k nabíječce.
 - Zkontrolujte, že jste na zařízení nastavili PIN kód nebo heslo.
-- Pokud jste na zařízení nastavili PIN nebo heslo, vyzkoušejte následující postup, který může správce IT vyžadovat kvůli většímu zabezpečení zařízení. Zobrazované názvy nabídek se mohou mírně lišit od názvů nabídek uvedených v postupech podle toho, jaký máte typ zařízení s Androidem.
+- Pokud jste na zařízení nastavili PIN nebo heslo, vyzkoušejte následující postup, který může firemní podpora vyžadovat kvůli většímu zabezpečení zařízení. Zobrazované názvy nabídek se mohou mírně lišit od názvů nabídek uvedených v postupech podle toho, jaký máte typ zařízení s Androidem.
 
     1. Přejděte na **Nastavení** > **Zamykací obrazovka a zabezpečení** > **Zámek obrazovky**. Potvrďte aktuální PIN kód nebo heslo.
 
@@ -66,4 +66,4 @@ Pokud byste zrušili registraci telefonu, zůstane zašifrovaný.
 
     6. Otevřete Portál společnosti, vyberte své zařízení a klepněte na možnost **Kontrola dodržování předpisů**.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT (kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.
+Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu (kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.

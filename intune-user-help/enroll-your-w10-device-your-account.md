@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 39d2dad94b949a39451dca79431be22782cddcb8
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 3c110bab95cbdb7c0dbe3fbe47d34b4cad5aaf07
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="enroll-your-windows-10-device-in-intune"></a>Registrace zařízení s Windows 10 v Intune
 
@@ -50,9 +50,9 @@ ms.lasthandoff: 07/01/2017
 
     ![Když se přihlásíte](./media/W10-enroll-4-sign-in.png)
 
-Stále nemáte přístup k pracovním nebo školním e-mailům, souborům nebo jiným datům? Zkuste přístup opravit pomocí [řešení potíží s vaším účtem](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account). Pokud ani to nepomůže, budete muset o pomoc požádat správce IT.
+Stále nemáte přístup k pracovním nebo školním e-mailům, souborům nebo jiným datům? Zkuste přístup opravit pomocí [řešení potíží s vaším účtem](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account). Pokud ani to nepomůže, budete muset o pomoc požádat firemní podporu.
 
-Snadný způsob, jak získat pomoc od správce IT, je prostřednictvím kontaktních údajů, které jsou k dispozici v aplikaci Portál společnosti. Ta vám také umožní vyhledat a stáhnout doporučené a požadované aplikace pro každodenní práci. Možná už aplikaci Portál společnosti v zařízení nainstalovanou máte. Snadno to zjistíte, když zkusíte najít aplikaci __Portál společnosti__ v seznamu __Všech aplikací__.
+Snadný způsob, jak získat pomoc od firemní podpory, je prostřednictvím kontaktních údajů, které jsou k dispozici v aplikaci Portál společnosti. Ta vám také umožní vyhledat a stáhnout doporučené a požadované aplikace pro každodenní práci. Možná už aplikaci Portál společnosti v zařízení nainstalovanou máte. Snadno to zjistíte, když zkusíte najít aplikaci __Portál společnosti__ v seznamu __Všech aplikací__.
 
 Pokud aplikaci Portál společnosti v seznamu nenajdete, nainstalujte ji podle následujícího postupu.
 

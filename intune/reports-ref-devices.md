@@ -14,11 +14,11 @@ ms.assetid: 6955E12D-70D7-4802-AE3B-8B276F01FA4F
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 2dad8cf3e9a38625b4657e284f8d8bb53ba289c0
-ms.sourcegitcommit: c8fb42fcb8735af432c7e07c380d956171012bd4
+ms.openlocfilehash: 7730a799176a74f1ddb8e4b5e49a110229255428
+ms.sourcegitcommit: 6fae2dfb3a5c8f2e5ccfd120fd15656b26e5d302
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="reference-for-devices-entities"></a>Referenční informace o entitách zařízení
 
@@ -106,7 +106,7 @@ Entita **EnrollmentTypes** určuje, jak se zařízení zaregistrovalo. Typ regis
 
 | enrollmentTypeID  | Název | Popis |
 |---------|------------|--------|
-| 0 |Neznámé |Neznámý typ registrace |
+| 0 |Neznámé |Typ registrace se neshromáždil. |
 | 1 |UserEnrollment |Registrace iniciovaná uživatelem |
 | 2 |DeviceEnrollment |Registrace zařízení pomocí profilu bez uživatele |
 | 3 |DeviceEnrollmentWithUDA |Registrace zařízení pomocí profilu UDA |
@@ -356,7 +356,7 @@ Entita **MdmDeviceInventoryHistories** obsahuje denní snímky dat inventáře p
 | JailBroken |Hodnota True, pokud se jedná o zařízení s jailbreakem nebo rootem |
 | IsActivationLockEnabled |Hodnota True znamená, že zámek aktivace je povolený. |
 | DeviceType |Typ zařízení |
-| IsSupervised |Je pod dohledem |
+| IsSupervised |Je pod dohledem. |
 | DeviceDisplayNumberOfColors |Počet barev zobrazení zařízení |
 | HorizontalResolution |Horizontální rozlišení obrazovky zařízení |
 | VerticalResolution |Vertikální rozlišení obrazovky zařízení |

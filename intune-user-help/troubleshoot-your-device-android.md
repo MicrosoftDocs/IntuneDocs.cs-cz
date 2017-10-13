@@ -15,21 +15,21 @@ searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
-ms.openlocfilehash: f46a93d42427ea41adf71403c91fa95052c0bba2
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 976b58fcc7835b0992c5d53934642bd4fedb5b50
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="fix-common-issues-with-your-android-device"></a>Řešení běžných problémů se zařízením s Androidem
 
-Některé problémy se zařízením s Androidem se vám může podařit vyřešit pomocí postupu pro řešení potíží. Některé běžné problémy, na které jsme narazili a které se můžete pokusit nejprve odstranit sami, jsou uvedené níže. U složitějších problémů doporučujeme, abyste se obrátili na IT správce. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Některé problémy se zařízením s Androidem se vám může podařit vyřešit pomocí postupu pro řešení potíží. Některé běžné problémy, na které jsme narazili a které se můžete pokusit nejprve odstranit sami, jsou uvedené níže. U složitějších problémů doporučujeme, abyste se obrátili na svou firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
 
 - [Kontrola dodržování předpisů na zařízení s Androidem](check-compliance-on-your-device-android.md)
-- [Pomoc správci IT s řešením problémů zařízení pomocí podrobného protokolování](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-- [Odeslání protokolů správci IT pomocí e-mailu](send-logs-to-your-it-admin-by-email-android.md)
-- [Odeslání protokolů správci IT pomocí kabelu USB](send-logs-to-your-it-admin-using-cable-android.md)
-- [Odeslání chyb při registraci vašemu správci IT](send-enrollment-errors-to-your-it-admin-android.md)
+- [Pomoc firemní podpoře s řešením problémů zařízení pomocí podrobného protokolování](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
+- [Odeslání protokolů firemní podpoře pomocí e-mailu](send-logs-to-your-it-admin-by-email-android.md)
+- [Odeslání protokolů firemní podpoře pomocí kabelu USB](send-logs-to-your-it-admin-using-cable-android.md)
+- [Odeslání chyb při registraci firemní podpoře](send-enrollment-errors-to-your-it-admin-android.md)
 - [Potřebujete si aktualizovat zařízení s Androidem](you-need-to-update-your-android-device.md)
 - [Zařízení nevyhovuje maximální verzi operačního systému](your-android-version-isnt-yet-supported.md)
 - [Zařízení obsahuje root a nemůže se připojit](your-device-is-rooted-and-you-cant-connect-android.md)

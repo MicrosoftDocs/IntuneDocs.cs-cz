@@ -1,6 +1,6 @@
 ---
 title: "Správa Apple DEP pro zařízení s iOSem"
-description: "Nasaďte registrační profil, který umožňuje bezdrátovou registraci zařízení s iOSem koupených prostřednictvím programu DEP (Device Enrollment Program) pro zařízení s iOSem, aby bylo možné je spravovat."
+description: "Nasaďte registrační profil, který umožňuje bezdrátovou registraci zařízení s iOSem koupených prostřednictvím programu DEP (Device Enrollment Program) pro zařízení s iOSem, aby bylo možné je spravovat."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
@@ -14,11 +14,11 @@ ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1a02a8b092242df369b382b6cdcc2c2bbd10c10a
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 75d2a54f065e04b3f6c923dc4e83cfea498ead76
+ms.sourcegitcommit: c36f74323b57c9d9ef972322082923c449a1a74f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 10/03/2017
 ---
 # <a name="enroll-corporate-owned-device-enrollment-program-ios-devices"></a>Registrace zařízení s iOSem vlastněných společností do programu DEP (Device Enrollment Program)
 
@@ -28,7 +28,7 @@ Microsoft Intune umožňuje nasadit registrační profil, který bezdrátově za
 
 >[!NOTE]
 >Registrace DEP se nedá použít s metodou [správce registrace zařízení](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md).
->Pokud navíc uživatelé registrují zařízení s iOSem (pomocí aplikace Portál společnosti) a sériová čísla těchto zařízení se pak naimportují a přiřadí k profilu DEP, zruší se tím registrace zařízení v Intune.
+>Navíc platí, že pokud uživatelé zařízení s iOSem zaregistrují (například pomocí aplikace Portál společnosti) a sériová čísla těchto zařízení se pak naimportují a přiřadí k profilu DEP, zruší se tím registrace zařízení v Intune.
 
 ## <a name="prerequisites-for-enrolling-ios-devices-by-using-apple-dep-management"></a>Předpoklady pro registraci zařízení s iOSem pomocí správy programu Apple DEP
 

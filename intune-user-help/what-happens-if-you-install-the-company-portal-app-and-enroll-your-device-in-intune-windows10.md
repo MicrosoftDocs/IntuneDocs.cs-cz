@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 53fe121c5d565fe7bd35843b92f9480cfd5bd5e8
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 31b6545b0518e369b95b6e4830617988aa806112
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-10-device-in-intune"></a>Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Windows 10 v Intune?
 
@@ -34,22 +34,22 @@ Když nainstalujete aplikaci Portál společnosti a potom v ní zaregistrujete s
 
 -   Obnovení továrního nastavení telefonu v případě ztráty nebo odcizení
 
-Kroky registrace najdete v tématu [Registrace zařízení s Windows 10 Mobile nebo Windows 10 Desktop v Intune](enroll-your-w10-phone-or-w10-pc-windows.md). Informace o tom, co váš správce IT uvidí a neuvidí na vašem zařízení, najdete v části [Co všechno uvidí správce IT, když zaregistruji své zařízení do služby Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+Kroky registrace najdete v tématu [Registrace zařízení s Windows 10 Mobile nebo Windows 10 Desktop v Intune](enroll-your-w10-phone-or-w10-pc-windows.md). Informace o tom, co vaše firemní podpora uvidí a neuvidí na vašem zařízení, najdete v tématu [Co všechno uvidí firemní podpora, když zaregistruji své zařízení do služby Intune](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
 Když přidáte počítač:
 
--   Do vašeho počítače se nainstaluje software, který správci IT umožní spravovat daný počítač a vám umožní přístup k prostředkům společnosti, jako jsou aplikace a informace o podpoře. Správce IT může tento software automaticky aktualizovat.
+-   Do vašeho počítače se nainstaluje software, který firemní podpoře umožní spravovat daný počítač a vám umožní přístup k prostředkům společnosti, jako jsou aplikace a informace o podpoře. Vaše firemní podpora může tento software automaticky aktualizovat.
 
 -   Do vašeho počítače se může nainstalovat služba Intune Endpoint Protection. Tento software vyhledává viry a malware.
 
--   Správce IT může inventarizovat veškerý software nainstalovaný v počítači, a to i software, který jste si nainstalovali sami.
+-   Vaše firemní podpora může inventarizovat veškerý software nainstalovaný v počítači, a to i software, který jste si nainstalovali sami.
 
 -   Může se vyžadovat, abyste přijali smluvní podmínky.
 
--   Správce IT může shromažďovat nebo odstraňovat data z pevného disku vašeho počítače. Může také odstranit celý obsah vašeho pevného disku.
+-   Firemní podpora může shromažďovat nebo odstraňovat data z pevného disku vašeho počítače. Může také odstranit celý obsah vašeho pevného disku.
 
--   Správce IT může do vašeho počítače instalovat aplikace a aktualizace.
+-   Firemní podpora může do vašeho počítače instalovat aplikace a aktualizace.
 
--   Může ve vašem počítači vynutit dodržování určitých zásad. Například může vyžadovat, abyste v počítači nastavili heslo nebo kód PIN. Správce IT může také omezit počet možných zadání nesprávného hesla. Když se tento počet překročí, může se počítač zablokovat nebo se můžou odstranit všechna data z pevného disku počítače.
+-   Může ve vašem počítači vynutit dodržování určitých zásad. Například může vyžadovat, abyste v počítači nastavili heslo nebo kód PIN. Firemní podpora může také omezit počet možných zadání nesprávného hesla. Když se tento počet překročí, může se počítač zablokovat nebo se můžou odstranit všechna data z pevného disku počítače.
 
-Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Pokud máte otázky, obraťte se na svou firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

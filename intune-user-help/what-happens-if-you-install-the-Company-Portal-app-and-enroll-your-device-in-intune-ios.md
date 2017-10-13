@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: b0205ebce012912cacc738382cadf56a355482f0
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 8867125c9112089bda574f2bd710ddbc3d0b214c
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-ios-or-macos-device-in-intune"></a>Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s iOSem nebo macOS v Intune?
 
@@ -34,9 +34,9 @@ Když nainstalujete aplikaci Portál společnosti a pak v ní zaregistrujete sv�
 
 -   Automatické nastavení e-mailového účtu vaší společnosti
 
-Když svoje zařízení zaregistrujete do služby Intune, udělíte tím správci IT oprávnění ke správě vašeho zařízení, aby bylo možné lépe chránit informace společnosti na daném zařízení.
+Když svoje zařízení zaregistrujete do služby Intune, udělíte tím firemní podpoře oprávnění ke správě vašeho zařízení, aby bylo možné lépe chránit informace společnosti na daném zařízení.
 
-Po registraci vašeho zařízení může správce IT provádět tyto akce:
+Po registraci zařízení může firemní podpora provádět tyto akce:
 
 -   Obnovit výchozí tovární nastavení v případě ztráty nebo odcizení zařízení.
 
@@ -62,4 +62,4 @@ Po registraci vašeho zařízení může správce IT provádět tyto akce:
 
 -   Povolit nebo zakázat automatickou synchronizaci souborů v režimu roamingu v zařízení. Pokud je automatická synchronizace souborů povolená, můžou se vám účtovat poplatky za roaming.
 
-Pokud máte otázky, na které byste potřebovali odpověď, obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Pokud máte otázky, obraťte se na svou firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/23/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ce0ce291f303b04f0851b93add5f5cde5e2ee13f
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: cadc8ac211f60fd767dbfa7d412b089c3c1c94ea
+ms.sourcegitcommit: f254f49fc65fc75a779ff721e2202c53d03cb981
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 10/02/2017
 ---
 # <a name="reset-your-device-from-the-company-portal-website"></a>Resetování zařízení z webu Portál společnosti
 
-V případě ztráty nebo odcizení zařízení může být vhodné restovat jeho tovární nastavení za účelem zabránění neoprávněného přístupu k vašim údajům. Můžete taky vzdáleně resetovat zařízení pomocí [webu Portál společnosti](http://portal.manage.microsoft.com). Web Portál společnosti je webová stránka sloužící ke správě počítačů a zařízení zaregistrovaných v Intune. Na tomto webu můžete plnit většinou stejné úkoly, jako když používáte aplikaci Portál společnosti.
+V případě ztráty nebo odcizení zařízení může být vhodné restovat jeho tovární nastavení za účelem zabránění neoprávněného přístupu k vašim údajům. Můžete taky vzdáleně resetovat zařízení pomocí [webu Portál společnosti](https://portal.manage.microsoft.com). Web Portál společnosti je webová stránka sloužící ke správě počítačů a zařízení zaregistrovaných v Intune. Na tomto webu můžete plnit většinou stejné úkoly, jako když používáte aplikaci Portál společnosti.
 
 Pokud zařízení resetujete, nebude již uvedené na Portálu společnosti a bude restované do výchozího továrního nastavení.
 
@@ -33,7 +33,7 @@ Pokud zařízení resetujete, nebude již uvedené na Portálu společnosti a bu
 
 Resetování zařízení:
 
-1.  Na [webu Portál společnosti](http://portal.manage.microsoft.com) klepněte na tlačítko __nabídky__ ![Malý obrázek tlačítka nabídky, tři vodorovné pruhy nad sebou](/Intune/whats-new/media/CP_hamburger_menu.png) a potom vyberte __Moje zařízení__.
+1.  Na [webu Portál společnosti](https://portal.manage.microsoft.com) klepněte na tlačítko __nabídky__ a potom vyberte __Moje zařízení__.
 
 2. Na stránce __Moje zařízení__ vyberte název zařízení, které chcete přejmenovat.
 
@@ -47,4 +47,4 @@ Resetování zařízení:
 
 Zařízení se resetovalo.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

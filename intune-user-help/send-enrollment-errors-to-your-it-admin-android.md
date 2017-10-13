@@ -1,5 +1,5 @@
 ---
-title: "Odeslání chyb při registraci správci IT | Dokumentace Microsoftu"
+title: "Odeslání chyb při registraci firemní podpoře | Dokumentace Microsoftu"
 description: "Odeslání chyb při registraci správci"
 keywords: 
 author: barlanmsft
@@ -16,19 +16,19 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 667282ef1ab6e5058e852b6e3b94daecd01c5d53
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 95be9fd1df23e8cc4c6d41f6c9f49cd30eef87cf
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="send-enrollment-errors-to-your-it-admin"></a>Odeslání chyb při registraci správci IT
+# <a name="send-enrollment-errors-to-your-company-support"></a>Odeslání chyb při registraci firemní podpoře
 
-Pokud se při registraci zařízení s Androidem do Intune zobrazí chybová zpráva, můžete registraci zkusit znovu klepnutím na **Opakovat**. Pokud to nepomůže, můžete poslat informace o tom, co se děje, správci IT e-mailem klepnutím na **Poslat informace**.
+Pokud se při registraci zařízení s Androidem do Intune zobrazí chybová zpráva, můžete registraci zkusit znovu klepnutím na **Opakovat**. Pokud to nepomůže, můžete poslat informace o tom, co se děje, firemní podpoře e-mailem klepnutím na **Poslat informace**.
 
-Když klepnete na **Poslat informace**, vytvoří se automaticky e-mail. Jeho příjemcem je správce IT. E-mail obsahuje informace, neboli _protokoly_, které správce IT potřebuje k řešení potíží se zařízením.
+Když klepnete na **Poslat informace**, vytvoří se automaticky e-mail. Jeho příjemcem je vaše firemní podpora. E-mail obsahuje informace, neboli _protokoly_, které firemní podpora potřebuje k řešení potíží se zařízením.
 
-Datové protokoly zařízení můžete správci IT poslat kvůli vyřešení problémů několika způsoby:
+Datové protokoly zařízení můžete firemní podpoře poslat kvůli vyřešení problémů několika způsoby:
 
 - [Použití tlačítka Poslat informace k posílání protokolů e-mailem](send-logs-to-your-it-admin-by-email-android.md)
 - [Použití kabelu USB k poslání protokolů jako přílohy e-mailu](send-logs-to-your-it-admin-using-cable-android.md)

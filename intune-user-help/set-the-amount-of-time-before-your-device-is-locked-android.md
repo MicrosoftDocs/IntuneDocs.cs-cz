@@ -16,18 +16,18 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 2393b7193a81f9489e56d1fe50b85291e5a2260e
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: aa2e08ad0cf2cf101fe602f013a2bc38e90ad631
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="how-to-set-the-amount-of-time-before-your-device-is-locked"></a>Nastavení časového intervalu před zablokováním zařízení
 
-Aby vaše data na zařízení s Androidem byla ve větším bezpečí, může správce IT nastavit zásady, které vyžadují nastavení doby, po kterou může být zařízení neaktivní před automatickým zamčením. Pomocí těchto kroků můžete nastavte dobu, než se zařízení zamkne.
+Aby vaše data na zařízení s Androidem byla ve větším bezpečí, může firemní podpora nastavit zásady, které vyžadují nastavení doby, po kterou může být zařízení neaktivní před automatickým zamčením. Pomocí těchto kroků můžete nastavte dobu, než se zařízení zamkne.
 
 1.  V **Nastavení** zařízení klikněte na **Zabezpečení** &gt; **Automatické uzamčení** (na některých zařízeních se zobrazuje jako **Uzamknout telefon po**).
 
 2.  Zadejte hodnotu časového limitu hesla.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

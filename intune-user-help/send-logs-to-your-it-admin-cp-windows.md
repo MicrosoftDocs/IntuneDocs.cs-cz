@@ -1,5 +1,5 @@
 ---
-title: "Odeslání protokolů správci IT pro zařízení s Windows 10 | Dokumentace Microsoftu"
+title: "Odeslání protokolů firemní podpoře pro zařízení s Windows 10 | Dokumentace Microsoftu"
 description: "Registrace zařízení s Windows 10 1511 v Intune"
 keywords: 
 author: barlanmsft
@@ -16,22 +16,22 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 47e6b663cead876b1b19f61d02efed81be4d0dbc
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: f2287700e96c798be7033eac35539e3490bc3f8a
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="send-logs-to-your-it-admin-from-the-company-portal-app-for-windows-10"></a>Odeslání protokolů správci IT z aplikace Portál společnosti pro Windows 10
+# <a name="send-logs-to-your-company-support-from-the-company-portal-app-for-windows-10"></a>Odeslání protokolů firemní podpoře z aplikace Portál společnosti pro Windows 10
 
-Pokud při použití aplikace Portál společnosti na zařízení s Windows 10 dojde k chybě, můžete správci IT poslat e-mailem informace o této chybě a pomoct mu tak potíže vyřešit. Tyto informace se ukládají na zařízení ve speciálním dokumentu s názvem _diagnostický protokol_.
+Pokud při použití aplikace Portál společnosti v zařízení s Windows 10 dojde k chybě, můžete firemní podpoře pomoct potíže vyřešit tak, že jí pošlete e-mailem informace o této chybě. Tyto informace se ukládají na zařízení ve speciálním dokumentu s názvem _diagnostický protokol_.
 
 1.  Otevřete aplikaci **Portál společnosti**.
 2.  Vyberte ozubené kolečko **Nastavení** a pak **Poslat protokoly**.
-3.  Otevře se okno **Sdílet**. Vyberte **Pošta**. Vytvoří se e-mailová zpráva s připojenými protokoly z portálu společnosti, kterou můžete poslat správci IT.
+3.  Otevře se okno **Sdílet**. Vyberte **Pošta**. Vytvoří se e-mailová zpráva s připojenými protokoly z Portálu společnosti, kterou můžete poslat firemní podpoře.
 
-  ![Dialog Poslat protokoly ze stránky Nastavení v aplikaci Portál společnosti Jedná se o odkaz Poslat protokoly – Když protokoly pro diagnostiku pošlete správci IT, může mu to pomoct vyřešit potíže s portálem společnosti.](./media/w10-share-logs.png)
+  ![Dialog Poslat protokoly ze stránky Nastavení v aplikaci Portál společnosti Jedná se o odkaz Poslat protokoly – Když protokoly pro diagnostiku pošlete firemní podpoře, může jí to pomoct vyřešit potíže s Portálem společnosti.](./media/w10-share-logs.png)
 
-Možná bude také potřeba poskytnout další pomoc správci IT při řešení potíží, které se můžou vyskytnout, a poslat mu [protokoly z aplikace Nastavení](send-logs-to-your-it-admin-settings-windows.md). 
+Možná bude také potřeba odeslat [protokoly z aplikace Nastavení](send-logs-to-your-it-admin-settings-windows.md) a poskytnout tak firemní podpoře další pomoc při řešení potíží, které se můžou vyskytnout. 
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

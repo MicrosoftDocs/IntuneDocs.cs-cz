@@ -16,14 +16,14 @@ ROBOTS:
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 7568ce8f8a5cb648f1f250751f1a03c7c55a0fd2
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 6a2a14548a57e26fe322d0c28cb515e6590acb69
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="your-android-devices-operating-system-version-isnt-yet-supported"></a>Verze operačního systému vašeho zařízení s Androidem zatím není podporovaná
 
-Při rychlém tempu vývoje technologie někdy vaše zařízení může předbíhat to, co měl váš správce IT příležitost otestovat. Je možné, že nejnovější verze Androidu nemusí fungovat s některými jinými nástroji vaší společnosti.
+Při rychlém tempu vývoje technologie někdy vaše zařízení může předbíhat to, co měla vaše firemní podpora příležitost otestovat. Je možné, že nejnovější verze Androidu nemusí fungovat s některými jinými nástroji vaší společnosti.
 
-Kvůli vyřešení tohoto problému se budete muset obrátit na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Kvůli vyřešení tohoto problému se budete muset obrátit na firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

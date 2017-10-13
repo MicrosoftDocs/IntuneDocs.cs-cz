@@ -14,31 +14,31 @@ ms.assetid: 365f72a6-564d-4cbd-8f0a-70ec80b6e253
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: fbb3143baa0063343d639d2df6101ebaec98ee65
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 7272c3d21674e4e0029cf49140638d9a3fd3306f
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="set-or-change-your-passcode"></a>Nastavení nebo změna vašeho přístupového kódu
 
-Pokud zařízení s iOSem není v souladu se zásadami správce IT pro přístupový kód, zobrazí se zpráva, která stručně popisuje problém a vysvětluje, co musíte udělat, aby přístupový kód splňoval požadavky.
+Pokud zařízení s iOSem není v souladu se zásadami firemní podpory pro přístupový kód, zobrazí se zpráva, která stručně popisuje problém a vysvětluje, co musíte udělat, aby přístupový kód splňoval požadavky.
 
-Správce IT může nastavit více než jeden požadavek na přístupový kód. Přístupový kód například musí obsahovat určitý počet znaků a navíc obsahovat kombinaci číslic, písmen a znaků. Protože může být nastavených několik požadavků, vysvětlují tyto pokyny jenom to, jak jde přístupový kód nastavit nebo změnit. Nevysvětlují všechny možné kombinace požadavků. Tato hesla slouží například k přístupu k zařízení ze zamykací obrazovky.
+Firemní podpora může pro přístupový kód nastavit více požadavků. Přístupový kód například musí obsahovat určitý počet znaků a navíc obsahovat kombinaci číslic, písmen a znaků. Protože může být nastavených několik požadavků, vysvětlují tyto pokyny jenom to, jak jde přístupový kód nastavit nebo změnit. Nevysvětlují všechny možné kombinace požadavků. Tato hesla slouží například k přístupu k zařízení ze zamykací obrazovky.
 
-Pokud se vám přístupový kód, který splňuje požadavky na přístupový kód, nedaří nastavit, požádejte o pomoc správce IT.
+Pokud se vám přístupový kód, který splňuje požadavky na přístupový kód, nedaří nastavit, požádejte o pomoc firemní podporu.
 
 ## <a name="set-your-passcode"></a>Nastavení přístupového kódu
 
 1. Klepněte na **Nastavení** > **Touch ID a kódový zámek**.
 2. V nabídce **Touch ID a kódový zámek** klepněte na **Zapnout kódový zámek**.
-3. Zadejte nový přístupový kód, který splňuje požadavky správce IT, a potom ho opětovným zadáním ověřte.
+3. Zadejte nový přístupový kód, který splňuje požadavky firemní podpory, a potom ho opětovným zadáním ověřte.
 
 ## <a name="change-your-passcode"></a>Změna přístupového kódu
 
 1. Klepněte na **Nastavení** > **Touch ID a kódový zámek**.
 2. Zadejte přístupový kód. Otevře se nabídka **Touch ID a kódový zámek**.
 2. Klepněte na **Změnit kódový zámek** a zadejte svoje staré heslo.
-3. Zadejte nový přístupový kód, který splňuje požadavky správce IT, a potom ho opětovným zadáním ověřte.
+3. Zadejte nový přístupový kód, který splňuje požadavky firemní podpory, a potom ho opětovným zadáním ověřte.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
