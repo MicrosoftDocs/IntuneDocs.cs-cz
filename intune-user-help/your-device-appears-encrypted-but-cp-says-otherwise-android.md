@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/29/2017
+ms.date: 10/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 208cf6eb2d29ec5458d97d0a4481cec420acc281
-ms.sourcegitcommit: 59811bf1183b3ef9c9e81eded634bd0d3124d0bb
+ms.openlocfilehash: be68e330c2bd2800ea68fd83845b71e3b257e785
+ms.sourcegitcommit: 751587b1c6ed15877152d770772748e042c1e3ff
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 10/13/2017
 ---
 # <a name="your-android-device-seems-to-be-encrypted-but-company-portal-says-otherwise"></a>Zdá se, že vaše zařízení s Androidem je zašifrované, ale Portál společnosti hlásí, že není
 
@@ -39,6 +39,15 @@ Určitá zařízení s Androidem budou vyžadovat vytvoření spouštěcího PIN
 ### <a name="downgrade-your-version-of-android"></a>Přechod na starší verzi Androidu
 
 Pokud vaše zařízení umožňuje přechod na starší verzi produktu, tedy na verzi Android 6.0+, proveďte to. Pokud se pokusíte přejít na starší verzi produktu, může dojít ke ztrátě dat. Jinak doporučujeme, abyste se kvůli řešení tohoto problému obrátili na svou firemní podporu. Kontaktní údaje na firemní podporu najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+
+### <a name="encrypt-the-entire-device"></a>Zašifrování celého zařízení
+
+Některá zařízení vám dají na výběr, jestli chcete zašifrovat celé zařízení, nebo jenom využité místo. Místo zašifrování jenom využitého místa zvolte možnost zašifrování celého zařízení. Pokud jste už zašifrovali jenom využité místo:
+
+1. [Odeberte zařízení z Portálu společnosti](unenroll-your-device-from-intune-android.md).
+2. Dešifrujte využité místo.
+3. Zašifrujte celé zařízení.
+4. Zařízení znovu zaregistrujte.
 
 ## <a name="specific-manufacturer-issues"></a>Problémy konkrétních výrobců
 
