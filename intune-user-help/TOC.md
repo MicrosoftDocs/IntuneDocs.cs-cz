@@ -62,6 +62,7 @@
 ### [Registrace zařízení s iOSem](enroll-your-device-in-intune-ios.md)
 ### [Registrace zařízení s macOS](enroll-your-device-in-intune-macos.md)
 ### [Registrace zařízení s macOS pomocí Portálu společnosti](enroll-your-device-in-intune-macos-cp.md)
+### [Toto zařízení je trochu jiné](device-little-different-jamf.md)
 
 ### [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-ios.md)
 ### [Nastavení nebo změna hesla](set-or-change-your-passcode-ios.md)
