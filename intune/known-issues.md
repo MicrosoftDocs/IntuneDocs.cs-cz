@@ -1,12 +1,12 @@
 ---
-title: "Známé problémy v Microsoft Intune na Azure Portalu"
+title: "Známé problémy v Microsoft Intune na portálu Azure Portal"
 titlesuffix: Azure portal
 description: "Informace o známých problémech v Intune"
 keywords: 
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 08/14/2017
+ms.date: 10/05/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3bddab9000bfe609856b8e003f9bd4c3802f6e6b
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: 534441a7ae337f99a251831b456ea5c295184bec
+ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/10/2017
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Známé problémy v Microsoft Intune
 
@@ -41,7 +41,7 @@ Při migraci z Intune na Azure Portal se může zobrazit nová skupina s názvem
 
 ### <a name="secondary-migration-required-for-select-capabilities"></a>Pro vybrané možnosti se vyžaduje sekundární migrace
 
-Účty Intune vytvořené před lednem 2017 je nutné před použitím následujících možností na Azure Portalu migrovat:
+Účty Intune vytvořené před lednem 2017 je nutné před použitím následujících možností na portálu Azure Portal migrovat:
 
 - Profily registrace podnikových zařízení
 - Program Apple Device Enrollment Program
@@ -49,11 +49,11 @@ Při migraci z Intune na Azure Portal se může zobrazit nová skupina s názvem
 - Účty správce registrace zařízení
 - Apple Volume Purchase Program
 
-Protože tyto možnosti nelze spravovat jak z konzoly Intune (Silverlight), tak z Azure Portalu, tato migrace:
+Protože tyto možnosti nelze spravovat jak z konzoly Intune (Silverlight), tak z portálu Azure Portal, tato migrace:
 - Zakáže tyto možnosti na klasickém portálu
-- Povolí tyto možnosti na Azure Portalu  
+- Povolí tyto možnosti na portálu Azure Portal  
 
-Po 11. září 2017 bude migrace těchto funkcí sloučena s primární migrací na Azure. Pokud byl váš účet už migrován a používá Azure Portal, proběhne tato sekundární migrace mezi 11. a 22. zářím 2017. Jakmile bude migrace vašeho účtu zahájena, dokončí se ve stejný den. Migrace může trvat až 6 hodin od okamžiku zakázání těchto funkcí na klasickém portálu Intune.
+Po 22. září 2017 bude migrace těchto funkcí sloučena s primární migrací na Azure. Pokud byl váš účet už migrován a používá portál Azure Portal, možná už se tato sekundární migrace dokončila. Pokud ne, budou tyto možnosti migrovány do listopadu. Jakmile bude migrace vašeho účtu zahájena, dokončí se ve stejný den. Migrace může trvat až 6 hodin od okamžiku zakázání těchto funkcí na klasickém portálu Intune.
 
 Pokud teď tyto schopnosti Intune spravujete na portálu Azure Portal, mějte na paměti tyto body:
 
@@ -62,7 +62,7 @@ Azure Portal nepodporuje výchozí profil registrace podnikového zařízení pr
 
 #### <a name="apple-dep-token-restored-with-migration"></a>Obnovení tokenu Apple DEP při migraci
 
-Pokud jste na portálu Intune (Silverlight) odstranili token Programu registrace zařízení od Applu a nenahrajete nový token na Azure Portal, při migraci se na Azure Portalu obnoví původní token. Pokud chcete tento token odebrat a zabránit registraci v programu DEP, odstraňte token z portálu Azure Portal.
+Pokud jste na portálu Intune (Silverlight) odstranili token Programu registrace zařízení od Applu a nenahrajete nový token na Azure Portal, při migraci se na portálu Azure Portal obnoví původní token. Pokud chcete tento token odebrat a zabránit registraci v programu DEP, odstraňte token z portálu Azure Portal.
 
 ### <a name="status-blades-for-migrated-policies-do-not-work"></a>Okna stavu pro migrované zásady nefungují
 
@@ -103,7 +103,7 @@ Další informace o těchto nastaveních najdete v tématu [Nastavení omezení 
 
 Zásady dodržování předpisů, které jste vytvořili v klasickém portálu, se migrují, ale na portálu Azure Portal se nezobrazí kvůli změnám v návrhu na portálu Azure Portal. Zásady dodržování předpisů, které jste vytvořili na klasickém portálu Intune, se stále uplatňují, ale musíte je prohlížet a upravovat na klasickém portálu.
 
-Nové zásady dodržování předpisů, které vytvoříte na Azure Portalu, navíc nejsou na klasickém portálu vidět.
+Nové zásady dodržování předpisů, které vytvoříte na portálu Azure Portal, navíc nejsou na klasickém portálu vidět.
 
 Další informace najdete v článku [Co je dodržování předpisů zařízením](device-compliance.md).
 
