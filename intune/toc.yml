@@ -162,6 +162,8 @@
               href: windows-enroll.md
             - name: Hromadná registrace
               href: windows-bulk-enroll.md
+            - name: Program Windows AutoPilot Deployment
+              href: enrollment-autopilot.md
         - name: Nastavení registrace zařízení s Androidem
           href: android-enroll.md
         - name: Nastavení registrace zařízení s iOSem
@@ -601,11 +603,9 @@
               href: reports-ref-devices.md
             - name: Referenční informace o entitách aplikací
               href: reports-ref-application.md
-            - name: Referenční informace pro entity zásad
-              href: reports-ref-policy.md
+            - name: Referenční informace o entitě přidružení zařízení uživatelů
+              href: reports-ref-userdeviceassociations.md
     - name: Instalace aplikací pro Windows bokem
-      href: app-sideload-windows.md
-    - name: Použití rozhraní Graph API pro Intune
       href: intune-graph-apis.md
       items:
         - name: Referenční informace o rozhraních Graph API pro Intune
