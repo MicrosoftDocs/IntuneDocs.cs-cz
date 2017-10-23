@@ -461,6 +461,8 @@
           href: windows-hello.md
     - name: Správa rolí
       href: role-based-access-control.md
+    - name: Správa verzí operačního systému
+      href: manage-os-versions.md
     - name: Správa aktualizací softwaru
       href: windows-update-for-business-configure.md
     - name: Správa počítačů pomocí softwarového agenta
