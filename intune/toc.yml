@@ -381,6 +381,8 @@
           href: compliance-policy-create-mac-os.md
         - name: Vytvoření zásad pro Windows
           href: compliance-policy-create-windows.md
+        - name: Akce při nedodržení předpisů
+          href: actions-for-noncompliance.md
         - name: Monitorování dodržování předpisů zařízením
           href: compliance-policy-monitor.md
     - name: Nastavení podmíněného přístupu
