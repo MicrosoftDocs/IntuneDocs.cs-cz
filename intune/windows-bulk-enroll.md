@@ -6,7 +6,7 @@ keywords:
 author: NathBarn
 ms.author: NathBarn
 manager: angrobe
-ms.date: 06/18/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: damionw
 ms.custom: intune-azure
-ms.openlocfilehash: 3e374f383275b1e74e22ac037ecaec282eeaa87c
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 372cc50fb4ac36ec875d84a71f3d3437917a2d1a
+ms.sourcegitcommit: 93c8c7e5abe433e35d88cb3b8d3d1e7216d7fe9b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Hromadná registrace pro zařízení s Windows
 
@@ -92,6 +92,10 @@ Zřizování se má používat na nových zařízeních s Windows. Selhání zř
 
 ### <a name="problems-with-bulk-enrollment-and-company-portal"></a>Problémy s hromadnou registrací a Portálem společnosti
 Pokud se uživatel pokouší prostřednictvím Portálu společnosti zaregistrovat zařízení, které už bylo dříve hromadně zaregistrováno, obdrží upozornění, že u jeho zařízení jsou potřeba další kroky – buď nastavení, nebo registrace. Zařízení je zaregistrované, ale aplikace nebo webová stránka Portálu společnosti registraci nerozpoznala.
+
+### <a name="bulk-enrollment-with-wi-fi"></a>Hromadná registrace přes Wi-Fi 
+
+U hromadně registrovaných zařízení není možné použít certifikáty cílené na konkrétní uživatele ani provést nasazení přes Wi-Fi. Ke správě těchto připojení budete muset použít [certifikáty na úrovni zařízení](certificates-configure.md). 
 
 ### <a name="conditional-access"></a>podmíněný přístup
 Podmíněný přístup není k dispozici u zařízení Windows zaregistrovaných pomocí hromadné registrace.
