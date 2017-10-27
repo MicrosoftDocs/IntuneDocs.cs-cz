@@ -26,6 +26,7 @@
 
 ### [Řešení běžných problémů s Androidem](troubleshoot-your-device-android.md)
 #### [Kontrola dodržování předpisů pro zařízení](check-compliance-on-your-device-android.md)
+#### [Synchronizace outlookového e-mailu při používání režimu spořiče baterie](power-saving-mode-android.md)
 
 #### Oprava chyb pomocí protokolů
 ##### [Zapnutí podrobného protokolování](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
