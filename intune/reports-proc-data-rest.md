@@ -14,11 +14,11 @@ ms.assetid: D6D15039-4036-446C-A58F-A5E18175720A
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1bbb0e8ba84e221df3a434da79c513939267648b
-ms.sourcegitcommit: b8ef9d8387b4d9b2ea4e6ce937635304771e6532
+ms.openlocfilehash: f1ffc07d87e98666a882415d63e11bd04bbd5461
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Získání dat z rozhraní API datového skladu Intune pomocí klienta REST
 
@@ -58,7 +58,7 @@ Vytvořte nativní aplikaci v Azure. Tato nativní aplikace představuje klients
 
 Teď máte v Azure definovanou aplikaci. Udělte z této nativní aplikace přístup k rozhraní API Microsoft Intune.
 
-1.  Klikněte na nativní aplikaci. Tuto aplikaci jste pojmenovali jako Intune Data Warehouse Client.
+1.  Klikněte na nativní aplikaci. Tuto aplikaci jste pojmenovali jako **Intune Data Warehouse Client**.
 2.  V okně **Nastavení** klikněte na **Požadovaná oprávnění**.
 3.  V okně **Požadovaná oprávnění** klikněte na **Přidat**.
 4.  Klikněte na **Vyberte rozhraní API**.
@@ -71,7 +71,7 @@ Teď máte v Azure definovanou aplikaci. Udělte z této nativní aplikace pří
 
 9.  Klikněte na **Vybrat**.
 10.  Klikněte na **Hotovo**.
-11.  V okně Požadovaná oprávnění můžete volitelně kliknout na **Udělit oprávnění**. Tím udělíte přístup všem účtům v aktuálním adresáři a zabráníte, aby se jednotlivým uživatelům v tenantovi zobrazilo dialogové okno s vyjádřením souhlasu. Další informace najdete v článku [Integrace aplikací s Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
+11.  V okně Požadovaná oprávnění můžete volitelně kliknout na **Udělit oprávnění**. Tím udělíte přístup všem účtům v aktuálním adresáři. Zabráníte tím tomu, aby se dialogové okno souhlasu zobrazilo pro každého uživatele v tenantovi. Další informace najdete v článku [Integrace aplikací s Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
 12.  Klikněte na **Ano**.
 
 ## <a name="get-data-from-the-microsoft-intune-api-with-postman"></a>Získání dat z rozhraní API Microsoft Intune pomocí nástroje Postman
@@ -137,7 +137,7 @@ Abyste získali nový přístupový token pro nástroj Postman, musíte přidat 
 
 #### <a name="send-the-call-to-the-endpoint-using-postman"></a>Odeslání volání koncovému bodu pomocí nástroje Postman
 
-1.  Klikněte na **Send** (Odeslat).
+1.  Klikněte na **Odeslat**.
 2.  V textu odpovědi nástroje Postman se zobrazí návratová data.
 
     ![Postman 200OK](media\reports-postman_200OK.png)
@@ -152,14 +152,14 @@ Následující vzorový kód obsahuje jednoduchého klienta REST. V kódu se pou
 1.  Otevřete **Microsoft Visual Studio**.
 2.  Zvolte **Soubor** > **Nový projekt**. Rozbalte **Visual C#** a zvolte **Konzolová aplikace (.Net Framework)**. 
 3.  Dejte projektu název ` IntuneDataWarehouseSamples`, přejděte do místa, kam chcete projekt uložit, a klikněte na **OK**.
-3.  V Průzkumníkovi řešení klikněte na toto řešení pravým tlačítkem a vyberte **Spravovat balíčky NuGet pro řešení**. Klikněte na **Procházet** a do vyhledávacího pole zadejte Microsoft.IdentityModel.Clients.ActiveDirectory.
-4. Zvolte tento balíček, v oblasti Spravovat balíčky pro vaše řešení vyberte projekt **IntuneDataWarehouseSamples** a pak klikněte na **Nainstalovat**. 
-5. Kliknutím na **Přijímám** přijměte licenci na tento balíček NuGet.
-6. Otevřete `Program.cs` v Průzkumníkovi řešení.
+4.  V Průzkumníkovi řešení klikněte na toto řešení pravým tlačítkem a vyberte **Spravovat balíčky NuGet pro řešení**. Klikněte na **Procházet** a pak do vyhledávacího pole zadejte `Microsoft.IdentityModel.Clients.ActiveDirectory`.
+5. Zvolte tento balíček, v oblasti Spravovat balíčky pro vaše řešení vyberte projekt **IntuneDataWarehouseSamples** a pak klikněte na **Nainstalovat**. 
+6. Kliknutím na **Přijímám** přijměte licenci na tento balíček NuGet.
+7. Otevřete `Program.cs` v Průzkumníkovi řešení.
 
     ![Projekt v sadě Visual Studio](media\reports-get_rest_data_in.png)
 
-7.  Kód v souboru Program.cs nahraďte následujícím kódem:  
+8.  Kód v souboru Program.cs nahraďte následujícím kódem:  
     ```csharp
 namespace IntuneDataWarehouseSamples
 {
@@ -214,12 +214,12 @@ namespace IntuneDataWarehouseSamples
     }
     ```
 
-8.  Aktualizujte `TODO` ve vzorovém kódu.
-9.  Stisknutím kláves **Ctrl+F5** sestavte a spusťte klienta Intune.DataWarehouseAPIClient v režimu ladění.
+9.  Aktualizujte `TODO` ve vzorovém kódu.
+10.  Stisknutím kláves **Ctrl+F5** sestavte a spusťte klienta Intune.DataWarehouseAPIClient v režimu ladění.
 
     ![Entita dates načtená ve formátu JSON](media\reports-get_rest_data_output.png)
 
-10.  Prohlédněte si výstup konzoly. Výstup obsahuje data ve formátu JSON přetažená z entity **dates** ve vašem tenantovi Intune.
+11.  Prohlédněte si výstup konzoly. Výstup obsahuje data ve formátu JSON přetažená z entity **dates** ve vašem tenantovi Intune.
 
 ## <a name="next-steps"></a>Další kroky
 

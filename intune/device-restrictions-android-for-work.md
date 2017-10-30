@@ -15,18 +15,19 @@ ms.assetid: 1830720b-16cb-4f2f-a71a-62967f882563
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1c749b72949399dbe709b8ac5554cd919e2b09bc
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: b2f91005394d1bb586dcc07f309c89a8a1f1da7a
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="android-for-work-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení s Androidem for Work v Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="work-profile-settings"></a>Nastavení pracovního profilu
-- **Sdílení dat mezi pracovním a osobním profilem** – toto nastavení použijte pro určení, jestli aplikace v pracovním profilu můžou používat sdílení s aplikacemi v osobním profilu. Toto nastavení řídí akce sdílení v rámci aplikací (například možnost **Sdílet** v prohlížeči Chrome), nevztahuje se na chování schránky při kopírování a vkládání. Na rozdíl od [nastavení zásad ochrany aplikací](https://docs.microsoft.com/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) se nastavení omezení pro zařízení spravují na Azure Portalu a k izolování spravovaných aplikací se používá oddíl pracovního profilu Androidu for Work. Vybírejte z těchto možností:
+-   **Kopírování a vkládání mezi pracovními a osobními profily** – ovládá kopírování a vkládání mezi pracovními a osobními aplikacemi. Zvolením možnosti **Blokovat** zapnete blokování. Zvolením možnosti **Nenakonfigurováno** blokování vypnete.
+- **Sdílení dat mezi pracovním a osobním profilem** – toto nastavení použijte pro určení, jestli aplikace v pracovním profilu můžou používat sdílení s aplikacemi v osobním profilu. Toto nastavení řídí akce sdílení v rámci aplikací (například možnost **Sdílet** v prohlížeči Chrome), nevztahuje se na chování schránky při kopírování a vkládání. Na rozdíl od [nastavení zásad ochrany aplikací](https://docs.microsoft.com/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) se nastavení omezení pro zařízení spravují na portálu Intune a k izolování spravovaných aplikací používají oddíl pracovního profilu Androidu for Work. Vybírejte z těchto možností:
     - **Výchozí omezení sdílení** – toto nastavení je výchozí chování zařízení při sdílení, které se liší v závislosti na verzi Androidu používané v zařízení. Ve výchozím nastavení je povolené sdílení z osobního profilu do pracovního profilu. Ve výchozím nastavení je také blokované sdílení z pracovního profilu do osobního profilu. Toto nastavení zabraňuje sdílení dat z pracovního do osobního profilu. Google neposkytuje způsob, jak blokovat sdílení z osobního do pracovního profilu na zařízeních, která používají verze 6.0 a novější.   
     - **Aplikace v pracovním profilu můžou zpracovat žádost o sdílení z osobního profilu** – tuto možnost použijte, pokud chcete povolit integrovanou funkci Androidu, která umožňuje sdílet data z osobního do pracovního profilu. Pokud je tato možnost povolená, žádost o sdílení z aplikace v osobním profilu může sdílet data s aplikacemi v pracovním profilu. Toto nastavení je výchozí chování zařízení s Androidem, která používají verze starší než 6.0.
     - **Povolit sdílení přes hranice** – umožňuje sdílení přes hranice pracovního profilu v obou směrech. Když vyberete toto nastavení, můžou aplikace v pracovním profilu sdílet data s neoznačenými aplikacemi v osobním profilu. Toto nastavení používejte obezřetně, protože povoluje spravovaným aplikacím v pracovním profilu sdílení s aplikacemi v nespravované oblasti zařízení.
@@ -42,10 +43,10 @@ ms.lasthandoff: 09/15/2017
 
 ### <a name="work-profile-password"></a>Heslo pracovního profilu
 - **Vyžadovat heslo pracovního profilu** (Android 7.0 a vyšší s povoleným pracovním profilem) – definujte zásady hesla, které se budou vztahovat jenom na aplikace v pracovním profilu. Ve výchozím nastavení má koncový uživatel možnost použít dva samostatně definované PIN kódy, nebo se může rozhodnout je zkombinovat do silnějšího z nich.
-- **Minimální délka hesla** – zadejte minimální počet znaků, které uživatelské heslo musí obsahovat (**4** až **16**).
+- **Minimální délka hesla** – zadejte minimální počet znaků, které uživatelské heslo musí obsahovat (**4**-**16**)
 - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka** – umožňuje vybrat dobu, která má uplynout před tím, než se zamkne pracovní profil. Potom musí uživatel zadat svoje přihlašovací údaje znovu, když bude chtít získat přístup.
 - **Počet neúspěšných přihlášení před vymazáním obsahu zařízení** – zadejte, kolikrát může uživatel zadat nesprávné heslo před tím, než se pracovní profil ze zařízení smaže.
-- **Konec platnosti hesla (dny)** – zadejte počet dnů, které mají uplynout, než uživatel bude muset změnit heslo (**1** až **255**).
+- **Konec platnosti hesla (dny)** – zadejte počet dnů, které mají uplynout, než uživatel bude muset změnit heslo (**1**-**255**).
 - **Požadovaný typ hesla** – vyberte typ hesla, které musí být na zařízení nastaveno. Vybírejte z těchto možností:
     - **Výchozí ze zařízení**
     - **Biometrika s nízkým zabezpečením**
@@ -55,16 +56,16 @@ ms.lasthandoff: 09/15/2017
     - **Aspoň abecední znaky**
     - **Aspoň alfanumerické znaky**
     - **Aspoň alfanumerické se symboly**
-- **Znemožnit opakované použití předchozích hesel** – zadejte počet nových hesel, které je třeba použít před tím, než uživatel bude moci znovu použít staré heslo (**1** až **24**).
+- **Znemožnit opakované použití předchozích hesel** – zadejte počet nových hesel, které je třeba použít před tím, než uživatel bude moci znovu použít staré heslo (**1**-**24**).
 - **Odemknutí pomocí otisků prstů** – blokuje koncovému uživateli možnost používat skener otisků prstů zařízení k odemknutí zařízení.
 - **Smart Lock a jiní agenti pro určování důvěryhodnosti** – umožňuje řídit funkci Smart Lock na kompatibilních zařízeních. Tato funkce telefonů, které se někdy říká agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo pracovního profilu, pokud se zařízení nachází v důvěryhodném umístění (například pokud je připojené k určitému zařízení Bluetooth nebo když se nachází blízko štítku NFC). Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
 
 ## <a name="device-password"></a>Heslo zařízení
 
-- **Minimální délka hesla** – zadejte minimální počet znaků, které uživatelské heslo musí obsahovat (**4** až **14**).
+- **Minimální délka hesla** – zadejte minimální počet znaků, které uživatelské heslo musí obsahovat (**4**-**14**)
 - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka** – umožňuje vybrat délku doby, která má uplynout před tím, než se neaktivní zařízení automaticky zamkne.
 - **Počet neúspěšných přihlášení před vymazáním obsahu zařízení** – zadejte počet, kolikrát může uživatel zadat nesprávné heslo před tím, než se ze zařízení smažou veškerá data.
-- **Konec platnosti hesla (dny)** – zadejte počet dnů, které mají uplynout, než uživatel bude muset změnit heslo (**1** až **255**).
+- **Konec platnosti hesla (dny)** – zadejte počet dnů, které mají uplynout, než uživatel bude muset změnit heslo (**1**-**255**).
 - **Požadovaný typ hesla** – vyberte typ hesla, které musí být na zařízení nastaveno. Vybírejte z těchto možností:
     - **Výchozí ze zařízení**
     - **Biometrika s nízkým zabezpečením**
@@ -74,7 +75,7 @@ ms.lasthandoff: 09/15/2017
     - **Aspoň abecední znaky**
     - **Aspoň alfanumerické znaky**
     - **Aspoň alfanumerické se symboly**
-- **Znemožnit opakované použití předchozích hesel** – zadejte počet nových hesel, které je třeba použít před tím, než uživatel bude moci znovu použít staré heslo (**1** až **24**).
+- **Znemožnit opakované použití předchozích hesel** – zadejte počet nových hesel, které je třeba použít před tím, než uživatel bude moci znovu použít staré heslo (**1**-**24**).
 - **Odemknutí pomocí otisků prstů** – blokuje koncovému uživateli možnost používat skener otisků prstů zařízení k odemknutí zařízení.
 - **Smart Lock a jiní agenti pro určování důvěryhodnosti** – umožňuje řídit funkci Smart Lock na kompatibilních zařízeních. Tato funkce telefonů, které se někdy říká agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo uzamčené obrazovky zařízení, pokud se zařízení nachází v důvěryhodném umístění (například pokud je připojené k určitému zařízení Bluetooth nebo když se nachází blízko štítku NFC). Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
 

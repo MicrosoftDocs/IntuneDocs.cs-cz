@@ -14,11 +14,11 @@ ms.assetid: D5ADB9D8-D46A-43BD-AB0F-D6927508E3F4
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6af0ff1f463c153e62f6df63ce811076c5f692f2
-ms.sourcegitcommit: addf6a40caa22c22adfd2e2eff7d666cd1877e3c
+ms.openlocfilehash: 079cfe097d6cf462f9ccd0a32d2e327b3b605e40
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="reference-for-policy-entities"></a>Referenční informace pro entity zásad
 
@@ -39,7 +39,7 @@ Entita **Policy** obsahuje seznam konfiguračních profilů zařízení, konfigu
 | PolicyId |Jedinečný identifikátor zásad v datovém skladu |b66bc706-ffff-7437-0340-032819502773 |
 | PolicyName |Název zásad |„Směrný plán Windows 10“ |
 | PolicyVersion |Verze zásad Když dojde k úpravě nebo změně zásad, vytvoří se novější verze. |1, 2, 3 |
-| IsDeleted |Určuje, jestli je záznam zásad aktualizovaný.  True – zásada má nový záznam s aktualizovanými poli. False – jedná se o nejnovější záznam pro zásady. |True nebo False |
+| IsDeleted |Určuje, jestli je záznam zásad aktualizovaný.  <br>True – zásada má nový záznam s aktualizovanými poli. <br>False – jedná se o nejnovější záznam pro zásady. |True nebo False |
 | StartDateInclusiveUTC |Datum a čas ve standardu UTC, kdy se tyto zásady v datovém skladu vytvořily |23.11.2016 12:00:00 |
 | DeletedDateUTC |Datum a čas ve standardu UTC, kdy došlo ke změně vlastnosti IsDeleted na hodnotu True |23.11.2016 12:00:00 |
 | RowLastModifiedDateTimeUTC |Datum a čas ve standardu UTC, kdy se tyto zásady v datovém skladu naposledy změnily |23.11.2016 12:00:00 |
@@ -85,8 +85,8 @@ Entita **PolicyTypeActivity** obsahuje kumulativní počet zařízení v úspě�
 | Vlastnost  | Popis | Příklad |
 |---------|------------|--------|
 | DateKey |Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo |20160703 |
-| PolicyKey |Klíč zásad lze připojit k zásadám a získat tak název zásad |Směrný plán Windows 10 |
-| PolicyTypeKey |Typ klíče zásad lze připojit k typu zásad a získat tak název typu zásad |Zásady dodržování předpisů Windows 10 |
+| PolicyKey |Klíč zásad, který jde připojit k zásadám a získat tak název zásad |Směrný plán Windows 10 |
+| PolicyTypeKey |Typ klíče zásad, který jde připojit k typu zásad a získat tak název typu zásad |Zásady dodržování předpisů Windows 10 |
 | Čeká |Počet jedinečných zařízení v čekajícím stavu |123 |
 | Úspěšné |Počet jedinečných zařízení v úspěšném stavu |12 |
 | Chyba |Počet jedinečných zařízení v chybovém stavu |10 |

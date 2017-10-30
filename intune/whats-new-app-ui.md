@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/05/2017
+ms.date: 10/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,32 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 11a3c96046a194e10d952508669b7e8fac0d1ee8
-ms.sourcegitcommit: 53a1f5226d1e1172f013a1b192321dde610b2d6c
+ms.openlocfilehash: 4719f31b2ea6144bc8113c596155de70aa22ace1
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 Zjistěte, jaké jsme v uživatelském rozhraní aplikací udělali změny, které koncoví uživatelé uvidí v této verzi Microsoft Intune. Pomůže vám to při komunikaci s uživateli a aktualizaci vlastní dokumentace, kterou jste vytvořili za účelem podpory vašeho nasazení. Můžete také zjistit, jak lépe řešit problémy uživatelů, když požádají helpdesk o podporu pomocí Portálu společnosti.
+
+## <a name="week-of-october-16-2017"></a>Týden od 16. října 2017
+
+### <a name="search-improvements-to-the-company-portal-website---1331697--"></a>Vyhledání vylepšení pro web Portál společnosti <!--1331697-->
+Vylepšujeme schopnosti vyhledávání aplikací a začali jsme u [webu Portál společnosti](https://portal.manage.microsoft.com). Vyhledávání bude nyní možné provádět nejen podle polí Název a Popis, ale také na základě kategorií aplikací. Výsledky budou ve výchozím nastavení seřazeny v sestupném pořadí podle relevance. 
+
+Jelikož je web Portál společnosti součástí aplikace Portál společnosti pro iOS, získají tuto změnu i uživatelé systému iOS. Aplikace Portál společnosti pro Android a Windows obdrží podobné aktualizace v nadcházejících měsících.
+
+Stále ještě na vyhodnocení relevance pracujeme, tak nám prosím dejte prostřednictvím odkazu „Váš názor“ v dolní části webu Portál společnosti vědět, jak dobře toto vyhodnocení funguje.
+
+
+### <a name="ios-company-portal-displays-large-icons----1454593---"></a>Portál společnosti pro iOS zobrazuje velké ikony <!-- 1454593 -->
+Tato vydaná verze opravuje známý problém s tím, jak Portál společnosti pro iOS zobrazuje ikony v dlaždici aplikace. Pokud nahrajete ikony aplikace o rozměru 120×120 pixelů nebo větší, zobrazí se teď na [webu Portálu společnosti](https://portal.manage.microsoft.com) a na stránkách aplikací Portálu společnosti pro iOS v plné velikosti dlaždice aplikace.
+
+
+
+
+
 
 ## <a name="week-of-october-2-2017"></a>Týden od 2. října 2017
 
@@ -67,7 +85,7 @@ Proces registrace aplikace Portál společnosti pro Android byl zjednodušen nov
 |![05](./media/android_cp_enroll_05_before_1709.png)|![05](./media/android_cp_enroll_05_post_1709.png)|
 
 
-## <a name="week-of-august-28-2017"></a>Týden od 28. srpna 2017
+## <a name="august-2017"></a>Srpen 2017
 
 ### <a name="ios-11-mail-app-will-support-oauth----1196951---"></a>Aplikace Mail v iOSu 11 bude podporovat OAuth <!---1196951--->
 
@@ -87,7 +105,7 @@ Podmíněný přístup s Intune podporuje zabezpečenější ověřování na za
 
 ![Uživatel je vyzván k registraci na webu Portál společnosti.](./media/ios-11-ca-email-after-1708-07.png)
 
-## <a name="week-of-august-21-2017"></a>Týden od 21. srpna 2017
+
 
 ### <a name="intune-mobile-application-management-mam-dialog-boxes-will-have-a-modern-interface----1199015---"></a>Dialogová okna správy mobilních aplikací (MAM) Intune mají moderní rozhraní <!-- 1199015 -->
 
@@ -102,15 +120,13 @@ Dialogová okna správy mobilních aplikací (MAM) Intune byla aktualizována na
 ![moderní rozhraní](./media/NewUI_Modern_AttachFileHandler.jpg)
 
 
-## <a name="week-of-august-14-2017"></a>Týden od 14. srpna 2017
-
 ### <a name="updates-to-the-device-details-page-on-the-company-portal-app-for-windows-10----1287448---"></a>Aktualizace stránky Detaily zařízení v aplikaci Portál společnosti pro Windows 10 <!---1287448--->
 
 V aplikaci Portál společnosti pro Windows 10 se značka __Kategorie__ přesouvá z oblasti pod názvem do vlastnosti na stránce __Detaily zařízení__.
 
 ![Obrazovka Detaily zařízení aplikace Portál společnosti pro Windows, na které se teď pole Kategorie zobrazuje ve formě vlastnosti, ne přímo pod názvem této obrazovky](./media/cp_win10_category_tag_move_after_1708.png)
 
-## <a name="week-of-july-31-2017"></a>Týden od 31. července 2017
+## <a name="july-2017"></a>Červenec 2017
 
 ### <a name="apps-details-pages-will-display-new-information-for-android-devices---1287476--"></a>Stránky podrobností o aplikacích zobrazují nové informace pro zařízení s Androidem <!--1287476-->
 
@@ -164,7 +180,7 @@ Aplikace Portál společnosti se začne přihlašovat.
 
 ![Po absolvování procesu ověřování aplikace Portál společnosti zobrazí pruh načítání a přihlásí se.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
 
-## <a name="week-of-june-12-2017"></a>Týden od 12. června 2017
+## <a name="june-2017"></a>Červen 2017
 
 ### <a name="company-portal-app-for-android-now-has-a-new-end-user-experience-for-app-protection-policies---1305217--"></a>Aplikace Portál společnosti pro Android má teď novou činnost koncového uživatele pro zásady ochrany aplikací <!--1305217-->
 Na základě zpětné vazby od zákazníků jsme aplikaci Portál společnosti pro Android upravili tak, aby zobrazovala tlačítko **Přístup k obsahu společnosti**. Naším záměrem je předejít zbytečné registraci koncových uživatelů, když pouze potřebují přístup k aplikacím s podporou zásad ochrany aplikací – funkce správy mobilních aplikací Intune.
@@ -210,8 +226,6 @@ Na základě zpětné vazby od uživatelů jsme do aplikace Portál společnosti
 ![Obrázek aplikace Portál společnosti pro Android s otevřenou nabídkou akcí v pravém horním rohu. Nová možnost Odebrat Portál společnosti je k dispozici jako třetí pod možnostmi Můj profil a Nastavení a nad možnostmi Podmínky, Nápověda a váš názor a O produktu.](./media/android_remove_cp_menu_action_after_1705.png)
 
 ![Obrázek potvrzovacího okna, které se otevře, když v nabídce akcí vyberete možnost Odebrat Portál společnosti. V dialogovém okně se uživateli zobrazí následující informace: „Pokud odeberete Portál společnosti, váš správce IT už nebude vaše zařízení spravovat a může odebrat přístup k podnikovým datům, aplikacím a e-mailu.“ Pak uživatele vyzve, aby potvrdil, že chce aplikaci Portál společnosti skutečně odebrat. Pokud ji uživatel chce odebrat, vybere Ano.](./media/android_remove_cp_menu_confirmation_after_1705.png)
-
-## <a name="week-of-june-5-2017"></a>Týden od 5. června 2017
 
 ### <a name="improvements-to-the-app-tiles-in-the-company-portal-app-for-ios---1230777--"></a>Vylepšení dlaždic aplikací v aplikaci Portál společnosti pro iOS <!--1230777-->
 Aktualizovali jsme vzhled dlaždic aplikací na domovské stránce tak, aby odrážely barvu brandingu nastavenou v Portálu společnosti.

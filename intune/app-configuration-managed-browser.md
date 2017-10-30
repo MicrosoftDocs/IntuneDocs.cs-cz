@@ -15,11 +15,11 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e9701bbe4f39d310786fb399b3152595744019a1
-ms.sourcegitcommit: 0ee9909fc041c2e49c0e0312ae05f40bbeb2ee51
+ms.openlocfilehash: e536a31443a7140785a1f30af6fe676451e6f62c
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/14/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Správa přístupu k internetu pomocí zásad aplikace Managed Browser v Microsoft Intune
 
@@ -37,7 +37,11 @@ Vzhledem k tomu, že je tato aplikace integrovaná s Intune SDK, můžete u n
 
 Podrobnosti najdete v článku [Co jsou zásady ochrany aplikací](/intune/app-protection-policy).
 
-Tato nastavení můžete použít na zařízeních zaregistrovaných ve službě Intune nebo v jiném produktu pro správu zařízení a na zařízeních, která nejsou spravovaná.
+Tato nastavení můžete použít na:
+
+- Zařízení, která jsou zaregistrovaná v Intune
+- Zaregistrovaná pomocí jiného produktu MDM
+- Nespravovaná zařízení
 
 Pokud si uživatelé nainstalují aplikaci Managed Browser z obchodu s aplikacemi a služba Intune ji nebude spravovat, mohou ji používat jako základní webový prohlížeč s podporou jednotného přihlašování přes web Microsoft MyApps. Uživatelé jsou přesměrováni přímo na web MyApps, kde uvidí všechny své zřízené aplikace SaaS.
 Pokud aplikace Managed Browser není spravovaná službou Intune, nemá přístup k datům jiných takto spravovaných aplikací. 
