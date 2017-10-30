@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 02ad249e-f098-421f-861f-6b2ff733ac7c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ab24b147b32c94ba51728c0c223de3e6c92dd215
-ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
+ms.openlocfilehash: dadcd33f39827365fc3f22c46d4332f3ea3cbf09
+ms.sourcegitcommit: a1c751959c9b3d5678bd9d67007e762df30eab59
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/23/2017
 ---
 # <a name="sync-devices-with-intune-to-get-the-latest-policies-and-actions"></a>Synchronizace zařízení s Intune s cílem načíst nejnovější zásady a akce
 
@@ -29,11 +29,11 @@ Akce zařízení **Synchronizovat** vybrané zařízení donutí se okamžitě o
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
-- Windows – podporováno
-- Windows Phone – podporováno
-- iOS – podporováno
-- macOS – podporováno
-- Android – podporováno
+- Windows
+- Windows Phone
+- iOS
+- macOS
+- Android
 
 ## <a name="how-to-sync-a-device"></a>Synchronizace zařízení
 
@@ -43,6 +43,26 @@ Akce zařízení **Synchronizovat** vybrané zařízení donutí se okamžitě o
 4. V okně **Zařízení a skupiny** zvolte **Všechna zařízení**.
 5. V seznamu zařízení, která spravujete, zvolte zařízení a potom zvolte akci se vzdáleným zařízením **Synchronizovat**.
 7. Kliknutím na **Ano** akci potvrďte.
+
+
+## <a name="retriable-error-codes"></a>Kódy chyb umožňujících opakovaný pokus
+
+Když správce spustí akci zařízení **Synchronizovat**, aplikace iOS a Android, které selhaly, ale vyvolaly kód chyby umožňující opakovaný pokus, budou pro zařízení dostupné. Aplikace, které vyvolaly kód chyby neumožňující opakovaný pokus, ale musí počkat sedm dní, než můžou být pro zařízení znovu dostupné.
+
+
+| Kód chyby  | Navrhovaný popis                                                                                                                  | Opakovaný pokus |
+|-------------|----------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| 2016330898 | Došlo k neznámé chybě.                                                                                                             | Ne        |
+| 2016330897 | Časový limit vašeho připojení k Intune vypršel. Resetujte připojení.                                                                             | Ano       |
+| 2016330896 | Ztratili jste připojení k internetu. Resetujte připojení.                                                                            | Ano       |
+| 2016330895 | Ztratili jste připojení k internetu. Resetujte připojení.                                                                            | Ano       |
+| 2016330894 | Ztratili jste připojení k internetu. Resetujte připojení.                                                                            | Ano       |
+| 2016330893 | Ztratili jste připojení k internetu. Resetujte připojení.                                                                            | Ano       |
+| 2016330892 | Mezinárodní roaming je zakázaný.                                                                                                     | Ne        |
+| 2016330891 | Během telefonního hovoru nejde získat přístup k mobilnímu datovému připojení pro toto zařízení. Počkejte na dokončení telefonního hovoru. | Ano       |
+| 2016330890 | Pro tato zařízení nešlo v tuto chvíli  použít mobilní síť.                                                   | Ne        |
+| 2016330889 | Nepovedlo se navázat zabezpečené připojení. Resetujte připojení.                                                                                   | Ano       |
+| 2016330888 | Nepovedlo se vyhodnotit důvěryhodnost serveru.                                                                                                | Ne        |
 
 ## <a name="next-steps"></a>Další kroky
 

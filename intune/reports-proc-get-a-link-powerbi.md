@@ -14,11 +14,11 @@ ms.assetid: 5E5A35D3-88F8-441B-8A0B-C5D7A1E5137B
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0b3436a22543eb07cedb0780984766bcb7faa284
-ms.sourcegitcommit: 0ee9909fc041c2e49c0e0312ae05f40bbeb2ee51
+ms.openlocfilehash: 56f80e7cede68364d1a98b58acab3e7dd2f51b73
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/14/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Připojení k datovému skladu pomocí Power BI
 
@@ -38,6 +38,8 @@ Jsou tu také zvýrazněné trendy pro registraci, dodržování předpisů, kon
 
 Následující kroky vám ukážou, jak stáhnout soubor Power BI a jak používat odkaz OData s Power BI.
 
+[!INCLUDE[reports-credential-reqs](./includes/reports-credential-reqs.md)]
+
 ## <a name="install-power-bi"></a>Instalace Power BI
 
 Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktop si můžete stáhnout z webu: [PowerBI.microsoft.com](https://powerbi.microsoft.com/en-us/desktop)
@@ -52,9 +54,9 @@ Soubor Power BI (pbix) obsahuje informace o připojení pro vašeho tenanta a sa
 1.  Přihlaste se k webu Azure Portal a zvolte **Monitorování + správa** > **Intune**. Můžete také vyhledat prostředky pro **Intune**.  
 2.  Otevřete okno **Rozhraní API datového skladu Microsoft Intune (Preview)**.
 3.  Klikněte na **Stáhnout soubor Power BI**. Soubor s příponou PBIX se stáhne do vámi zadaného umístění.
-4.  Soubor otevřete pomocí Power BI. Načtou se *sestavy datového skladu Intune*. Může to ale chvíli trvat, protože se získávají data vašeho tenanta.
+4.  Soubor otevřete pomocí Power BI. Načtou se *sestavy datového skladu Intune*. Získání dat vašeho tenanta ale může chvíli trvat.
 5.  Pokud chcete načíst data tenanta a zkontrolovat sestavy, klikněte na **Aktualizovat**.
-6.  Pokud se služba Power BI neověřila pomocí přihlašovacích údajů pro Azure Active Directory, vyzve vás k zadání vašich přihlašovacích údajů. Při výběru přihlašovacích údajů zvolte jako metodu ověřování **Pracovní účet**.
+6.  Pokud se služba Power BI neověřila pomocí přihlašovacích údajů pro Azure Active Directory, vyzve vás k zadání vašich přihlašovacích údajů. Při výběru přihlašovacích údajů zvolte jako metodu ověřování **Účet organizace**.
 
 ## <a name="load-the-data-in-power-bi-using-the-odata-link"></a>Načtení dat v Power BI pomocí odkazu OData
 
@@ -68,8 +70,8 @@ S klientem ověřeným v Azure AD se adresa URL pro OData připojí ke koncovém
 6. Zvolte **Základní**.
 7. Do pole adresy URL zadejte nebo vložte **adresu URL pro OData**.
 8. Klikněte na **OK**.
-9. Pokud jste se službě Azure AD pro vašeho tenanta neověřili z klienta aplikace Power BI Desktop, zadejte své přihlašovací údaje.  
-    1.  Vyberte **Pracovní účet**.  
+9. Pokud jste se službě Azure AD pro vašeho tenanta neověřili z klienta aplikace Power BI Desktop, zadejte své přihlašovací údaje. Abyste získali přístup k datům, musíte se vůči službě Azure Active Directory (Azure AD) autorizovat protokolem OAuth 2.0.  
+    1.  Vyberte **Účet organizace**.  
     2.  Zadejte své uživatelské jméno a heslo.  
     3.  Klikněte na **Přihlásit se**.  
     4.  Klikněte na možnost **Připojit**.  

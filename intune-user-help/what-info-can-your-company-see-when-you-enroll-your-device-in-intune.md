@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/04/2017
+ms.date: 10/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ searchScope: User help
 ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
-ms.openlocfilehash: 8da134d768333fb03cc87ab38230f5f022fee2e1
-ms.sourcegitcommit: 1afff0fd464ece84ffea6bc0c71c78215d59e696
+ms.openlocfilehash: 04b6d24d5174e49dd6e3f86b534bc59b94344002
+ms.sourcegitcommit: 2707a5fb68749a51c2a3ff54a1bac631bdaa3b87
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="what-information-can-my-company-see-when-i-enroll-my-device"></a>Jaké informace moje společnost uvidí, když si zaregistruji zařízení?
 
@@ -46,5 +46,6 @@ Když zařízení zaregistrujete do správy, dáváte společnosti oprávnění 
 
 **Co vaše společnost může vidět**
 
--  Telefonní číslo: U zařízení ve **firemním** vlastnictví může být viditelné celé telefonní číslo. U zařízení v **osobním** vlastnictví vidí společnost jen poslední čtyři číslice vašeho telefonního čísla. **Typ vlastnictví** jednotlivých zařízení zobrazíte tak, že otevřete stránku **Podrobnosti zařízení** určitého zařízení. 
+-  Telefonní číslo: U zařízení ve **firemním** vlastnictví může být viditelné celé telefonní číslo. U zařízení v **osobním** vlastnictví vidí společnost jen poslední čtyři číslice vašeho telefonního čísla. **Typ vlastnictví** jednotlivých zařízení zobrazíte tak, že otevřete stránku **Podrobnosti zařízení** určitého zařízení.
 -  Poloha: Vaše společnost nikdy neuvidí polohu vašeho zařízení, pokud nemáte zařízení s iOS, které je pod dohledem a ztratilo se. [Jak to zjistím?](https://go.microsoft.com/fwlink/?linkid=853816)
+- Inventář aplikací: Pokud vaše společnost používá ochranu před mobilními hrozbami, uvidí více podrobností o aplikacích, které jsou na vašem zařízení. Přečtěte si další informace o [ochraně před mobilním hrozbami](you-are-prompted-to-install-mtd-ios.md).

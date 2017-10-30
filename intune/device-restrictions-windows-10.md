@@ -15,11 +15,11 @@ ms.assetid: 89f2d806-2e97-430c-a9a1-70688269627f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fee635b6c50355a4af8b418c9f8e7fae8e88cff0
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: 759207adf49308dcd4e6253627e4a1213be22904
+ms.sourcegitcommit: 2e77fe177a3df1dfe48e72f4c2bfaa1f0494c621
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/19/2017
 ---
 # <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení Windows 10 a novější v Microsoft Intune
 
@@ -64,7 +64,7 @@ Pro zařízení s Windows 10: Jakmile se nepovede určený počet pokusů o při
     -   **Znemožnit opakované použití předchozích hesel** – Určuje počet dříve použitých hesel, která se na zařízení zapamatovávají.
     -   **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti (jenom mobilní verze)** – Určuje, že uživatel musí zadat heslo k odemknutí zařízení (jenom Windows 10 Mobile).
     -   **Jednoduchá hesla** – Umožňuje používat jednoduchá hesla, třeba 1111 nebo 1234. Toto nastavení také povolí obrázková hesla Windows (nebo je zablokuje).
--   **Šifrování** – Povolí šifrování na cílových zařízeních (jenom Windows 10 Mobile).
+-   **Šifrování** – Povoluje šifrování na cílových zařízeních.
 
 ## <a name="personalization"></a>Přizpůsobení
 

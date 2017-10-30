@@ -14,27 +14,17 @@ ms.assetid: A7A174EC-109D-4BB8-B460-F53AA2D033E6
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 7723bb42eedcd97142f039ca52b60911fa91838b
-ms.sourcegitcommit: addf6a40caa22c22adfd2e2eff7d666cd1877e3c
+ms.openlocfilehash: f36327f21fbb2f08906a7621b701a4e6c9deee03
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Koncový bod rozhraní API datového skladu Intune
 
 Rozhraní API datového skladu Intune můžete použít s účtem s řízením přístupu na základě konkrétních rolí a přihlašovacími údaji služby Azure AD. Následně pak provedete autorizaci klienta REST s Azure AD pomocí standardu OAuth 2.0. Nakonec vytvoříte smysluplnou adresu URL pro volání prostředku datového skladu.
 
-## <a name="azure-ad-and-intune-credential-requirements"></a>Požadavky na přihlašovací údaje pro Azure AD a Intune
-
-Ověřování a autorizace jsou založené na přihlašovacích údajích Azure AD a řízení přístupu na základě role (RBAC) Intune. Ve výchozím nastavení mají všichni globální správci a správci služby Intune pro vašeho tenanta přístup k rozhraní API. Role Intune můžete použít k poskytnutí přístupu pro další uživatele tak, že jim udělíte přístup k **prostředku generování sestav**.
-
-Požadavky pro přístup k rozhraní API jsou:
-
-  -  Licence Intune musí být přiřazená uživateli.
-  -  Uživatel musí být jedním z těchto uživatelů:
-      -  Globální správce Azure AD
-      -  Správce služby Intune
-      -  Uživatel s přístupem na základě role k prostředku **Sestavy**
+[!INCLUDE[reports-credential-reqs](./includes/reports-credential-reqs.md)]
 
 ## <a name="authorization"></a>Autorizace
 
@@ -64,4 +54,4 @@ Aktuální verze rozhraní API je: `beta`.
 
 ## <a name="odata-query-options"></a>Možnosti dotazu OData
 
-Aktuální verze podporuje následující parametry dotazu OData: `$skip, $top, $filter, $orderby`.
+Aktuální verze podporuje tyto parametry dotazu OData: `$filter, $orderby, $select, $skip,` a `$top`.

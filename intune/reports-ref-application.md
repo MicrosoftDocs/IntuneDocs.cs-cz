@@ -14,11 +14,11 @@ ms.assetid: A92DEF30-5D01-4774-9917-E26F5F0E2E68
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: cd684feec1df6b20f9349052496a21895527710b
-ms.sourcegitcommit: 0d9bfd92bf5958261ed83b1f150bf207b7ba7e56
+ms.openlocfilehash: 9fd14c985b4cedcd0575b2b6ea29e7aa4d8bb2d4
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="reference-for-application-entities"></a>Referenční informace o entitách aplikací
 
@@ -37,7 +37,7 @@ Entita **AppRevision** obsahuje seznam všech verzí aplikací.
 | Vlastnost  | Popis | Příklad |
 |---------|------------|--------|
 | AppKey |Jedinečný identifikátor aplikace |123 |
-| ApplicationId |Jedinečný identifikátor aplikace – podobá se AppKey, ale tento klíč je přirozený. |b66bc706-ffff-7437-0340-032819502773 |
+| ApplicationId |Jedinečný identifikátor aplikace – podobá se AppKey, ale tento klíč je přirozený |b66bc706-ffff-7437-0340-032819502773 |
 | Revize |Verze, kterou uvedl správce během nahrávání binárního souboru |2 |
 | Název |Název aplikace |Excel |
 | Vydavatel |Vydavatel aplikace |Microsoft |
@@ -66,19 +66,19 @@ Entita **AppTypes** obsahuje seznam zdrojů instalace aplikace.
 
 | AppTypeID  | Název | Popis |
 |---------|------------|--------|
-| 0 |Aplikace z obchodu pro Android |Aplikace z obchodu pro Android |
-| 1 |Obchodní aplikace pro Android |Obchodní aplikace pro Android |
-| 2 |Spravovaná aplikace z obchodu pro Android (MAM) |Aplikace z obchodu pro Android s povolenou správou |
-| 3 |Aplikace z obchodu pro iOS |Aplikace z obchodu pro iOS |
-| 4 |Obchodní aplikace pro iOS |Obchodní aplikace pro iOS |
-| 5 |Spravovaná aplikace obchodu pro iOS (MAM) |Aplikace z obchodu pro iOS s povolenou správou |
-| 6 |Sada O365 Pro Plus |Sada Office 365 Pro Plus pro Windows 10 |
-| 7 |Webová aplikace |Webová aplikace |
-| 8 |Aplikace pro Windows Phone 8.1 Store |Aplikace pro Windows Phone 8.1 Store |
-| 9 |Aplikace pro Windows Store |Aplikace pro Windows Store |
-| 10 |Obchodní aplikace pro Windows |Obchodní aplikace Windows AppX |
-| 11 |Windows Mobile MSI |Obchodní aplikace MSI |
-| 12 |Obchodní aplikace pro Windows Phone |Obchodní aplikace pro Windows Phone |
+| 0 |Aplikace z obchodu pro Android | Aplikace z obchodu pro Android |
+| 1 |Obchodní aplikace pro Android | Obchodní aplikace pro Android |
+| 2 |Spravovaná aplikace z obchodu pro Android (MAM) | Aplikace z obchodu pro Android s povolenou správou |
+| 3 |Aplikace z obchodu pro iOS | Aplikace z obchodu pro iOS |
+| 4 |Obchodní aplikace pro iOS | Obchodní aplikace pro iOS |
+| 5 |Spravovaná aplikace obchodu pro iOS (MAM) | Aplikace z obchodu pro iOS s povolenou správou |
+| 6 |Sada O365 Pro Plus | Sada Office 365 Pro Plus pro Windows 10 |
+| 7 |Webová aplikace | Webová aplikace |
+| 8 |Aplikace pro Windows Phone 8.1 Store | Aplikace pro Windows Phone 8.1 Store |
+| 9 |Aplikace pro Windows Store | Aplikace pro Windows Store |
+| 10 |Obchodní aplikace pro Windows | Obchodní aplikace Windows AppX |
+| 11 |Windows Mobile MSI | Obchodní aplikace MSI |
+| 12 |Obchodní aplikace pro Windows Phone | Obchodní aplikace pro Windows Phone |
 
 
 ## <a name="vppprogramtypes"></a>VppProgramTypes
@@ -87,17 +87,17 @@ Entita **VppProgramTypes** obsahuje seznam možných typů programu VPP pro apli
 
 | Vlastnost  | Popis |
 |---------|------------|
-| VppProgramTypeID |ID pro daný typ |
-| VppProgramTypeKey |Náhradní klíč pro daný klíč |
-| VppProgramTypeName |Typ programu VPP |
+| VppProgramTypeID | ID pro daný typ |
+| VppProgramTypeKey | Náhradní klíč pro daný klíč |
+| VppProgramTypeName | Typ programu VPP |
 
 ## <a name="example"></a>Příklad
 
 | VppProgramID  | Název | Popis |
 |---------|------------|--------|
-| 3DDA2474-470B-4503-9830-2665C21C1945 |Microsoft |Program VPP společnosti Microsoft |
-| 00000000-0000-0000-0000-000000000000 |Ještě není k dispozici |Výchozí hodnota, žádný program VPP |
-| B54814E0-68EA-4BA4-8088-B5AAB58E737B |Apple |Program VPP společnosti Apple |
+| 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft | Program VPP společnosti Microsoft |
+| 00000000-0000-0000-0000-000000000000 | Ještě není k dispozici | Výchozí hodnota, žádný program VPP |
+| B54814E0-68EA-4BA4-8088-B5AAB58E737B | Apple | Program VPP společnosti Apple |
 
 
 
@@ -107,8 +107,8 @@ Entita **ApplicationInventory** zobrazuje seznam aplikací, které se na zaříz
 
 | Vlastnost  | Popis |
 |---------|------------|
-| DeviceKey |Jedná se o odkaz na tabulku zařízení obsahující ID zařízení v Intune. |
-| DateKey |Odkaz na tabulku kalendářních dat udávající den inventáře |
-| ApplicationName |Název aplikace |
-| ApplicationVersion |Verze aplikace |
-| BundleSize |Velikost aplikace v bajtech |
+| DeviceKey | Jedná se o odkaz na tabulku zařízení obsahující ID zařízení v Intune. |
+| DateKey | Odkaz na tabulku kalendářních dat udávající den inventáře |
+| ApplicationName | Název aplikace |
+| ApplicationVersion | Verze aplikace |
+| BundleSize | Velikost aplikace v bajtech |
