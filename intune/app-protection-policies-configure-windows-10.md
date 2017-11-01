@@ -6,7 +6,7 @@ keywords:
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 06/12/2017
+ms.date: 10/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,47 +15,44 @@ ms.assetid: 949fddec-5318-4c9a-957e-ea260e6e05be
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d18ef2119ed0f8adc63f6675024c8e694235ee35
-ms.sourcegitcommit: 128770ecc820f6ff3c99b15752bce7a58257f1d5
+ms.openlocfilehash: 09f3edbe8b53371514ae4826246c99201c005762
+ms.sourcegitcommit: b5692ee05e8be1842cb1007facf80c9bce972dc4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 10/26/2017
 ---
 # <a name="get-ready-to-configure-app-protection-policies-for-windows-10"></a>Příprava na konfiguraci zásad ochrany aplikací pro Windows 10
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Než vytvoříte zásady ochrany aplikací pro Windows 10, musíte povolit správu mobilních aplikací (MAM) pro Windows 10 nastavením poskytovatele MAM v Azure AD. Tato konfigurace vám umožní definovat stav registrace při vytváření nových zásad WIP (Windows Information Protection) s Intune.
-
-> [!NOTE]
-> Stav registrace může být MAM nebo MDM (správa mobilních zařízení).
-
-## <a name="to-configure-the-mam-provider"></a>Konfigurace poskytovatele MAM
-
-1.  Přejděte na portál [Azure Portal](https://portal.azure.com/) a přihlaste se pomocí svých přihlašovacích údajů k Intune.
-
-2.  V nabídce vlevo zvolte **Azure Active Directory**.
-
-    ![Konfigurace poskytovatele MAM](./media/mam-provider-sc-1.png)
-
-3.  Otevře se okno **Azure AD**. Zvolte **Mobilita (MDM a MAM)** a potom klikněte na **Microsoft Intune**.
-
-    ![Mobilita (MDM a MAM)](./media/mam-provider-sc-1.png)
-
-4.  Otevře se konfigurační okno. Zvolte **Obnovit výchozí adresy URL MAM** a potom nakonfigurujte toto:
-
-    a.  Obor uživatele MAM: Pomocí MAM můžete chránit firemní data u určité skupiny uživatelů používajících zařízení s Windows 10, nebo u všech uživatelů.
-
-    b.  Adresa URL podmínek použití služby MAM: Je to adresa URL podmínek použití koncového bodu služby MAM. Slouží k zobrazení podmínek služby MAM koncovým uživatelům.
-
-    c.  Adresa URL zjišťování MAM: Zařízení na této adrese URL hledají, když potřebují použít zásady ochrany aplikací.
-
-    d.  Adresa URL s předpisy služby MAM:
-
-5.  Až tato nastavení nakonfigurujete, zvolte **Uložit**.
+Povolte správu mobilních aplikací (MAM) pro Windows 10 nastavením zprostředkovatele MAM v Azure AD. Nastavení poskytovatele MAM v Azure AD vám umožní definovat stav registrace při vytváření nových zásad WIP (Windows Information Protection) s Intune. Stav registrace může být MAM nebo MDM (správa mobilních zařízení).
 
 > [!NOTE]
 > Zařízení se stavem registrace MAM musí být připojená k Azure AD.
+
+## <a name="to-configure-the-mam-provider"></a>Konfigurace poskytovatele MAM
+
+1. Přihlaste se k portálu Azure Portal a vyberte **Azure Active Directory**.
+
+2. Ve skupině **Spravovat** zvolte **Mobilita (MDM a MAM)**.
+
+3. Klikněte na **Microsoft Intune**.
+
+4. Nakonfigurujte nastavení ve skupině **Obnovit výchozí adresy URL MAM** v okně **Konfigurovat**.
+
+    **Obor uživatele MAM**  
+      Pomocí automatické registrace MAM můžete spravovat podniková data na zařízeních zaměstnanců, která používají Windows. Automatická registrace MAM se nakonfiguruje pro scénáře typu Přineste si vlastní zařízení.<ul><li>**Žádné**<br>Vyberte, pokud se do MAM můžou zaregistrovat všichni uživatelé.</li><li>**Některé**<br>Vyberte skupiny Azure AD obsahující uživatele, kteří budou zaregistrováni do MAM.</li><li>**Vše**<br>Vyberte, pokud se do MAM můžou zaregistrovat všichni uživatelé.</li></ul>
+
+    **Adresa URL podmínek použití služby MAM**  
+     Adresa URL koncového bodu podmínek použití služby MAM. Koncový bod podmínek použití slouží k zobrazení podmínek služby koncovým uživatelům před tím, než se jejich zařízení zaregistruje ke správě. Text podmínek použití poskytuje uživatelům informace o zásadách, které se budou pro mobilní zařízení vynucovat.
+
+    **Adresa URL zjišťování MAM**  
+    Adresa URL koncového bodu pro registraci do služby MAM. Koncový bod registrace se používá k registraci zařízení do správy službou MAM.
+
+    **Adresa URL s předpisy služby MAM**  
+      Adresa URL koncového bodu dodržování předpisů služby MAM. Když se uživateli zamítne přístup k prostředku ze zařízení, které nedodržuje předpisy, zobrazí se mu adresa URL, kterou hostuje služba MAM. Na té uživatel najde informace o tom, proč jeho zařízení neodpovídá předpisům. Navíc uživatelé můžou spustit proces samoobslužné nápravy, aby jejich zařízení předpisy dodržovalo a oni měli dál přístup k prostředkům.
+
+5.  Klikněte na **Uložit**.
 
 ## <a name="next-steps"></a>Další kroky
 

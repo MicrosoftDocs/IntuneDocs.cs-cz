@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a2e6fd2381286aa652a04b5ed34ab21c57ed85f6
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: 973408b292261b86f0a49bfaf4c786d6a6dacf28
+ms.sourcegitcommit: b8d3f8da6d8c2bd5d6140d538193a02d5875aefb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="the-early-edition-for-microsoft-intune---october-2017"></a>Časná edice Microsoft Intune – říjen 2017
 
@@ -71,7 +71,7 @@ Ochrana Exploit Guard v programu Windows Defender obsahuje vlastní pravidla pro
 - **Ochrana Exploit Protection** poskytuje omezení paměti, toku řízení a zásad, která se dají využít k ochraně aplikace před zneužitím.
 
 ### <a name="app-conditional-launch-support----1193313---"></a>Podpora podmíněného spouštění aplikací <!-- 1193313 -->
-Správci IT teď můžou pomocí portálu pro správu Azure nastavit požadavek, aby se prostřednictvím správy mobilních aplikací (MAM) při spouštění aplikace místo číselného kódu PIN vynutilo heslo. Při takové konfiguraci bude uživatel muset po zobrazení výzvy nastavit a používat heslo, aby získal přístup k aplikacím s podporou MAM. Heslo je definované jako číselný kód PIN s aspoň jedním speciálním znakem nebo velkým/malým písmenem. Tato verze Intune tuto funkci povolí **jenom v iOSu**. Intune podporuje heslo podobným způsobem jako číselný kód PIN, stanovuje minimální délku a povoluje opakování znaků a sekvencí. Tato funkce vyžaduje zapojení aplikací (např. WXP, Outlook, Managed Browser, Yammer), aby integrovaly sadu Intune APP SDK s kódem pro tuto funkci místo nastavení hesla k vynucení v cílových aplikacích.
+Správci IT teď můžou pomocí portálu pro správu Azure nastavit požadavek, aby se prostřednictvím správy mobilních aplikací (MAM) při spouštění aplikace místo číselného kódu PIN vynutilo heslo. Při takové konfiguraci bude uživatel muset po zobrazení výzvy nastavit a používat heslo, aby získal přístup k aplikacím s podporou MAM. Heslo je definované jako číselný kód PIN s aspoň jedním speciálním znakem nebo velkým/malým písmenem. Tato verze Intune tuto funkci povolí **jenom v iOSu**. Intune podporuje heslo podobným způsobem jako číselný kód PIN, stanovuje minimální délku a povoluje opakování znaků a sekvencí. Tato funkce vyžaduje zapojení aplikací (např. WXP, Outlook, Managed Browser, Yammer), aby integrovaly sadu Intune APP SDK s kódem pro tuto funkci místo vynucení nastavení hesla v cílových aplikacích.
 
 ### <a name="app-version-number-for-line-of-business-in-device-install-status-report----1233999---"></a>Číslo verze aplikace pro obchodní aplikace ve zprávě o stavu instalace zařízení <!-- 1233999 -->  
 Zpráva o stavu instalace zařízení zobrazí číslo verze aplikace u obchodních aplikací pro iOS a Android. Tyto informace můžete využít k řešení potíží s aplikacemi nebo nalezení zařízení, na kterých běží zastaralé verze aplikací.
@@ -152,19 +152,6 @@ S vydáním verze Android Oreo zavádí Google sadu bezpečnostních funkcí s n
 Budete moci vytvořit zásady upgradu edice Windows 10, které zařízení s Windows 10 upgradují na Windows 10 Education, Windows 10 Education N, Windows 10 Professional, Windows 10 Professional N, Windows 10 Professional Education a Windows 10 Professional Education N. Podrobnosti o upgradech edic Windows 10 najdete v článku [Jak nakonfigurovat upgrady edicí Windows 10](edition-upgrade-configure-windows-10.md).
 
 
-### <a name="intune-mam-and-outlook-for-android-add-ins-----1450688---"></a>Doplňky Intune MAM a Outlook pro Android  <!-- 1450688 -->
-V příštích týdnech oznámí tým Office doplňky pro Outlook na Androidu. Tato sada doplňkových funkcí už existuje v Outlooku pro Windows, iOS, web a Mac. Protože se doplňky spravují přes Exchange, budou uživatelé moci kopírovat a sdílet data a zprávy mezi Outlookem a nespravovanými doplňkovými aplikacemi, dokud správce Exchange přístup k doplňkům nevypne. 
-
-Pokud chcete spravovat přístupová oprávnění uživatele k doplňkům, ve spolupráci se správcem Exchange zajistěte, aby se zásady ochrany dat MAM vztahovaly na doplňky.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Pokud už máte zásady Exchange nastavené tak, že zakazují instalaci doplňků bokem nebo běžnou instalaci doplňků, nemusíte číst dál. Vaše zásady MAM se uplatní podle očekávání. Pokud ale máte zásady MAM nastavené tak, že zakazují operace vyjmutí, kopírování a vložení v Outlooku na Androidu a nenastavili jste zásady doplňků v Exchangi, měli byste vědět, že uživatelé budou moci do Outlooku instalovat doplňky. Tyto doplňky můžou mít přístup k textu, předmětu a jiným vlastnostem zprávy. Uživatelům můžete v instalaci doplňků zabránit tak, že správce Exchange požádáte o odebrání rolí Moje aplikace z Marketplace a Moje vlastní aplikace.
-
-Tato změna nastavení v Exchangi se uplatní na Outlook pro Windows, iOS, web, Mac a mobilní zařízení. 
-
-#### <a name="what-do-i-need-to-do"></a>Co musím udělat?
-Ještě dnes zkontrolujte zásady Exchange. Informujte pracovníky IT oddělení a helpdesku. S konkrétními otázkami nebo obavami se obraťte na náš tým podpory. 
-
 
 
 
@@ -181,7 +168,7 @@ Můžete spravovat zařízení a aplikace s kombinací Citrix XenMobile MDX a Mi
 
 Můžete najít úložiště kódu, které obsahuje Intune App Wrapping Tool a sadu Intune App SDK pro iOS a Android, a využít integraci s technologií Citrix MDX mVPN.
 
-#### <a name="how-integration-with-intune-works"></a>Jak integrace se službou Intune funguje
+#### <a name="how-integration-with-intune-works"></a>Jak integrace s Intune funguje
 Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých služba Zimperium běží. Zásady podmíněného přístupu EMS založené na posouzení rizika službou Zimperium můžete nakonfigurovat prostřednictvím zásad dodržování předpisů zařízení služby Intune, kterými můžete na základě odhalených hrozeb u zařízení, které nedodržují předpisy, povolit nebo zablokovat přístup k firemním prostředkům.
 
 ### <a name="on-premises-exchange-connector-high-availability-support-----676614---"></a>Podpora vysoké dostupnosti místního konektoru Exchange Connector  <!-- 676614 -->   

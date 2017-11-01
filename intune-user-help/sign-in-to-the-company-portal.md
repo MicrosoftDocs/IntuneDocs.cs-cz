@@ -1,11 +1,11 @@
 ---
 title: "Přihlášení do aplikace Portál společnosti | Dokumentace Microsoftu"
-description: 
+description: "Zjistěte, jak se přihlásit do aplikace Portál společnosti na více platformách."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 07/31/2017
+ms.date: 10/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ca6d811d884b5405bdb4e5f096366c123d8e00d1
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: caea74745dc58a04c60e780727b318ebdb8ff235
+ms.sourcegitcommit: b8d3f8da6d8c2bd5d6140d538193a02d5875aefb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="how-do-i-sign-in-to-the-company-portal-app---user-story-1132123--"></a>Jak se mám do aplikace Portál společnosti přihlásit? <!--User Story 1132123-->
 
@@ -50,6 +50,16 @@ Následující obrázky se sice vztahují k systému iOS, ale proces je praktick
 4. Jakmile Portál společnosti přijme vaše přihlašovací údaje, proběhne přihlášení a vy získáte přístup k prostředkům společnosti.   
 
   ![Po absolvování procesu ověřování aplikace Portál společnosti zobrazí pruh načítání a přihlásí se.](/intune/media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
+
+## <a name="signing-in-with-certificate-based-authentication"></a>Přihlášení pomocí ověřování na základě certifikátu
+
+1.  Na svém zařízení otevřete aplikaci Portál společnosti.
+
+2.  Zadejte svůj **Pracovní nebo školní účet**.
+
+3.  Klepněte na odkaz **Přihlásit se pomocí certifikátu**.
+
+4.  Klepnutím na **Pokračovat** certifikát použijte.
 
 ## <a name="signing-in-from-another-device"></a>Přihlaste se z jiného zařízení
 
