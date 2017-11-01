@@ -240,10 +240,15 @@
           href: apps-deploy.md
         - name: Monitorování aplikací
           href: apps-monitor.md
-        - name: Konfiguračních profily aplikací pro iOS
-          href: app-configuration-policies-use-ios.md
-        - name: Konfiguračních profily aplikací pro Android
-          href: app-configuration-policies-use-android.md
+        - name: Zásady konfigurace aplikací
+          href: app-configuration-policies-overview.md
+          items:
+            - name: iOS spravovaná zařízení
+              href: app-configuration-policies-use-ios.md
+            - name: Android spravovaná zařízení
+              href: app-configuration-policies-use-android.md
+            - name: Spravované aplikace
+              href: app-configuration-policies-managed-app.md
         - name: Zřizovací profily aplikací pro iOS
           href: app-provisioning-profile-ios.md
         - name: Selektivní vymazání aplikací
