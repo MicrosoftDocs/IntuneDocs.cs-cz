@@ -14,11 +14,11 @@ ms.assetid: b399fba0-5dd4-4777-bc9b-856af038ec41
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9899f08cac650b1fea05370eb52327bc3c204a48
-ms.sourcegitcommit: 3bafbec5822bb5baa2d313f2bd19f35a67438beb
+ms.openlocfilehash: f3a3104c4381028cca69ba3e129f4a30287a8e32
+ms.sourcegitcommit: 42a0e4c83e33c1a25506ca75d673e861e9206945
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/26/2017
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Podmíněný přístup na základě aplikace s Intune
 
@@ -43,17 +43,7 @@ Další informace najdete na stránce s [cenami Enterprise Mobility](https://www
 
 ## <a name="supported-apps"></a>Podporované aplikace
 
-- **Exchange Online**:
-    - Microsoft Outlook pro Android a iOS
-<br></br>
-- **SharePoint Online**
-    - Microsoft Word pro iOS a Android
-    - Microsoft Excel pro iOS a Android
-    - Microsoft PowerPoint pro iOS a Android
-    - Microsoft OneDrive pro firmy pro iOS a Android
-    - Microsoft OneNote pro iOS
-<br></br>
-- **Microsoft Teams**
+Seznam aplikací, které podporují podmíněný přístup na základě aplikace, najdete v [technické referenční dokumentaci k podmíněnému přístupu Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference).
 
 Podmíněný přístup na základě aplikace [podporuje také obchodní aplikace](https://docs.microsoft.com/intune-classic/deploy-use/block-apps-with-no-modern-authentication). Ty ale musí využívat [moderní ověřování Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a).
 

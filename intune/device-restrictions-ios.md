@@ -6,7 +6,7 @@ keywords:
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 09/19/2017
+ms.date: 10/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 73590192-54ca-4833-9f1d-83e1b654399f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ff2c9943a04ec02a83e821a65e1307e311a9d1c0
-ms.sourcegitcommit: 4ce095c0c3fa2e42cf76207b6ff8edf1fe397165
+ms.openlocfilehash: 043bc1ecf652802dc569d2df8b287b2246585f15
+ms.sourcegitcommit: 1416daed6803546445b6f280a86c663e6e00465a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/20/2017
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="ios-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení s iOSem v Microsoft Intune
 
@@ -73,7 +73,7 @@ To platí také pro nastavení dostupná z aplikace pro nastavení iOSu, např�
 
 -   **App Store** – Zablokuje přístup k obchodu s aplikacemi v zařízeních pod dohledem.
     - **Instalace aplikací z App Storu (jenom pod dohledem)** – Zablokuje App Store z domovské obrazovky zařízení. Koncoví uživatelé můžou aplikace dál instalovat pomocí iTunes nebo Apple Configuratoru.
-    - **Automatické stahování aplikací (jenom pod dohledem) ** – Zamezí stažení aplikací zakoupených na jiném zařízení s iOSem do tohoto zařízení.
+    - **Automatické stahování aplikací (jenom pod dohledem)**  – Zamezí stažení aplikací zakoupených na jiném zařízení s iOSem do tohoto zařízení.
 -   **Heslo pro přístup k obchodu s aplikacemi** – Vyžaduje, aby uživatel zadal heslo, než bude moci navštívit obchod s aplikacemi.
 -   **Nákupy v aplikaci** – Povolí ve spuštěné aplikaci nákupy v obchodě.
 -   **Explicitní obsah v hudbě, podcastech nebo zprávách z iTunes (jenom pod dohledem)** – Povolí zařízení přístup k obsahu z obchodu, který je označený jako obsah pro dospělé.
@@ -108,10 +108,8 @@ To platí také pro nastavení dostupná z aplikace pro nastavení iOSu, např�
 
 V seznamu omezených aplikací můžete nakonfigurovat jeden z následujících seznamů:
 
-**Zakázané aplikace** – Zobrazí seznam aplikací (nespravovaných pomocí Intune), které nemají uživatelé dovolené nainstalovat a spustit.
-**Schválené aplikace** – Zobrazí seznam aplikací, které mají uživatelé dovolené instalovat. Uživatelé nesmí instalovat aplikace, které nejsou v seznamu. Aplikace, které spravuje Intune, jsou povolené automaticky.
-
-Pro uživatele není instalace zakázané aplikace znemožněna, ale pokud to udělají, dostanete příslušné hlášení.
+- **Zakázané aplikace** – Zobrazí seznam aplikací (nespravovaných pomocí Intune), které nemají uživatelé dovolené nainstalovat a spustit. Pro uživatele není instalace zakázané aplikace znemožněna, ale pokud to udělají, dostanete příslušné hlášení.
+- **Schválené aplikace** – Zobrazí seznam aplikací, které mají uživatelé dovolené instalovat. Uživatelé nesmí instalovat aplikace, které nejsou v seznamu. Aplikace, které spravuje Intune, jsou povolené automaticky. Uživatelům není instalace aplikace nenacházející se v seznamu povolených znemožněna, ale pokud ji provedou, budete na to upozorněni.
 
 Pokud chcete seznam nakonfigurovat, klikněte na **Přidat**, zadejte libovolný název, volitelně vydavatele aplikace a nakonec adresu URL aplikace v App Storu.
 

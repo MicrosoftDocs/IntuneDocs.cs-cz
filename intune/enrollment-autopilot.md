@@ -11,11 +11,11 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: 76b709f97b349966fbca7115959f64a56741380b
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: 83ab9e4a6fae4fda4c8e97c5fc091d4e5a03f3ea
+ms.sourcegitcommit: b8d3f8da6d8c2bd5d6140d538193a02d5875aefb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="enroll-windows-devices-using-windows-autopilot-deployment-program"></a>Registrace zařízení s Windows pomocí programu Windows AutoPilot Deployment
 Program Windows AutoPilot Deployment zjednodušuje zřizování zařízení. Vytváření a udržování přizpůsobených imagí operačního systému dnes zabírá hodně času. Mnoho času můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a AutoPilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s AutoPilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace atd. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows AutoPilotu](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot).
@@ -47,13 +47,16 @@ Profily nasazení AutoPilotu slouží ke konfiguraci zařízení s AutoPilotem.
    - **Nastavení ochrany osobních údajů**: vyberte, jestli se mají uživatelům zobrazit nastavení ochrany osobních údajů. 
    - **Licenční smlouva s koncovým uživatelem (EULA)**: vyberte, jestli se má uživatelům zobrazit EULA.
    - **Typ uživatelského účtu**: vyberte, jestli je typ účtu uživatele **Správce** nebo **Standardní** uživatel.
+
+     > [!Note]    
+     > Toto nastavení se nevztahuje na účty Globální správce ani Správce společnosti. Tyto účty nemůžou být standardními uživateli, protože mají přístup ke všem funkcím pro správu v Azure AD.
 8. Kliknutím na **Vytvořit** vytvořte profil. Profil nasazení AutoPilotu je teď možné přiřazovat zařízením.
      
-   > [!Note]    
-   > Ve všech profilech nasazení AutoPilotu jsou nakonfigurovaná tato nastavení:
-   > - Přeskočení stránek nastavení registrace Cortana, OneDrive a OEM
-   > - Automatické nastavení pro práci nebo školu
-   > - Prostředí pro přihlašování se značkou společnosti nebo školy    
+> [!Note]    
+> Ve všech profilech nasazení AutoPilotu jsou nakonfigurovaná tato nastavení:
+> - Přeskočení stránek nastavení registrace Cortana, OneDrive a OEM
+> - Automatické nastavení pro práci nebo školu
+> - Prostředí pro přihlašování se značkou společnosti nebo školy    
 
 ## <a name="assign-an-autopilot-deployment-profile"></a>Přiřazení profilu nasazení AutoPilotu
 Po vytvoření profilů nasazení AutoPilotu je můžete přiřadit vybraným zařízením.

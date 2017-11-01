@@ -14,11 +14,11 @@ ms.assetid: 6955E12D-70D7-4802-AE3B-8B276F01FA4F
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6d8c4af1ff091fbb125ec8a06b3c46cc2424a0bd
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: 1e3352335a5804575a39bbbf050ccb41b2674f2c
+ms.sourcegitcommit: 623c52116bc3fdd12680b9686dcd0e1eeb6ea5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="reference-for-devices-entities"></a>Referenční informace o entitách zařízení
 
@@ -130,10 +130,23 @@ Entita **EnrollmentTypes** určuje, jestli je zařízení firemní, v osobním v
 
 Entita **MdmStatuses** označuje stav kompatibility daného zařízení.
 
-| Vlastnost  | Popis | Příklad |
+| Vlastnost  | Popis |
+|---------|------------|
+| MdmStatusID |Jedinečný identifikátor stavu dodržování předpisů |
+| MdmStatusKey |Jedinečný identifikátor stavu kompatibility v datovém skladu – náhradní klíč | 
+| ComplianceStatus |Stav dodržování předpisů zařízením; měl by mít jednu z hodnot z tabulky níže | 
+
+
+## <a name="example"></a>Příklad
+
+| MdmStatusID  | ComplianceStatus | Popis |
 |---------|------------|--------|
-| MdmStatusName |Identifikátor MdmStatus |0 – Neznámé <br>1 – Vyhovuje <br>2 – Nevyhovuje |
-| MdmStatusKey |Jedinečný identifikátor stavu kompatibility v datovém skladu – náhradní klíč | |
+| 0 |Neznámé |Stav dodržování předpisů zařízení je neznámý. |
+| 1 |Vyhovuje |Zařízení dodržuje předpisy. |
+| 2 |Nevyhovuje |Zařízení nedodržuje předpisy. |
+| 3 |Konflikt |Dodržování předpisů zařízení způsobilo konflikt. |
+| 4 |Chyba |Při čtení stavu dodržování předpisů zařízení došlo k chybě. |
+
 
 ## <a name="managementstates"></a>ManagementStates
 

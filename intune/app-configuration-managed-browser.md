@@ -15,11 +15,11 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e536a31443a7140785a1f30af6fe676451e6f62c
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: 99b8b50dbbb2dc2e3d7e8cd5af2f95fa2bb3b861
+ms.sourcegitcommit: 42a0e4c83e33c1a25506ca75d673e861e9206945
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 10/26/2017
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Správa přístupu k internetu pomocí zásad aplikace Managed Browser v Microsoft Intune
 
@@ -147,7 +147,7 @@ Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser zadejte ná
 |||
 |-|-|
 |Klíč|Hodnota|
-|Vybírejte z těchto možností:<br><br>– Určení povolených adres URL (povoleny budou pouze tyto adresy a na jiné weby nebudou mít uživatelé přístup): **com.microsoft.intune.mam.managedbrowser.AllowListURLs**<br><br>– Určení blokovaných adres URL (na všechny ostatní weby budou mít uživatelé přístup): <br><br>**com.microsoft.intune.mam.managedbrowser.BlockListURLs**|Odpovídající hodnotou klíče je seznam adres URL. Zadejte všechny adresy, které chcete povolit nebo blokovat, jako jedinou hodnotu oddělenou znaky svislé čáry **&#124;**.<br><br>Příklady:<br><br>-**URL1&#124;URL2&#124;URL3**<br>-**http://*.contoso.com/*&#124;https://*.bing.com/*&#124;https://expenses.contoso.com**|
+|Vybírejte z těchto možností:<br><br>– Určení povolených adres URL (povoleny budou pouze tyto adresy a na jiné weby nebudou mít uživatelé přístup): **com.microsoft.intune.mam.managedbrowser.AllowListURLs**<br><br>– Určení blokovaných adres URL (na všechny ostatní weby budou mít uživatelé přístup): <br><br>**com.microsoft.intune.mam.managedbrowser.BlockListURLs**|Odpovídající hodnotou klíče je seznam adres URL. Zadejte všechny adresy, které chcete povolit nebo blokovat, jako jedinou hodnotu oddělenou znaky svislé čáry **&#124;**.<br><br>Příklady:<br><br>**URL1&#124;URL2&#124;URL3**<br>**http://*.contoso.com/*&#124;https://*.bing.com/*&#124;https://expenses.contoso.com**|
 
 >[!IMPORTANT]
 >Nezadávejte oba klíče. Pokud budou oba klíče cílit na stejného uživatele, použije se klíč pro určení povolených adres, protože představuje nejvíce omezující možnost.
