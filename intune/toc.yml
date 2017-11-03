@@ -545,6 +545,8 @@
     - name: Použití datového skladu Intune
       href: reports-nav-create-intune-reports.md
       items:
+        - name: Protokol změn pro datový sklad
+          href: reports-changelog.md
         - name: Připojení k datovému skladu pomocí Power BI
           href: reports-proc-get-a-link-powerbi.md
         - name: Vytvoření sestavy z datového kanálu OData pomocí Power BI
@@ -602,18 +604,20 @@
         - name: Datový model datového skladu
           href: reports-ref-data-model.md
           items:
-            - name: Referenční informace o entitě Date
-              href: reports-ref-date.md
-            - name: Referenční informace pro entitu uživatele
-              href: reports-ref-user.md
-            - name: Referenční informace o entitách správy mobilních aplikací (MAM)
-              href: reports-ref-mobile-app-management.md
-            - name: Referenční informace o entitách zařízení
-              href: reports-ref-devices.md
             - name: Referenční informace o entitách aplikací
               href: reports-ref-application.md
-            - name: Referenční informace o entitě přidružení zařízení uživatelů
-              href: reports-ref-userdeviceassociations.md
+            - name: Referenční informace pro entitu dat
+              href: reports-ref-date.md
+            - name: Referenční informace o entitách zařízení
+              href: reports-ref-devices.md
+            - name: Referenční informace o entitách správy mobilních aplikací (MAM)
+              href: reports-ref-mobile-app-management.md
+            - name: Referenční informace pro entity zásad
+              href: reports-ref-policy.md
+            - name: Referenční informace pro přidružení zařízení uživatelů
+              href: reports-ref-user-device.md
+            - name: Referenční informace pro entitu uživatele
+              href: reports-ref-user.md
     - name: Instalace aplikací pro Windows bokem
       href: intune-graph-apis.md
       items:
