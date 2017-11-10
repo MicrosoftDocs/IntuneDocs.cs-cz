@@ -6,7 +6,7 @@ keywords:
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 10/27/2017
+ms.date: 11/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,18 @@ ms.assetid: 73590192-54ca-4833-9f1d-83e1b654399f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 043bc1ecf652802dc569d2df8b287b2246585f15
-ms.sourcegitcommit: 1416daed6803546445b6f280a86c663e6e00465a
+ms.openlocfilehash: 2f35de553259921c76341fe5b4a824e60c71d4a5
+ms.sourcegitcommit: 0f877251e6adf4e45b918cc8dc9193626727f2d9
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="ios-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení s iOSem v Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="general"></a>Obecné
-    
+
 -   **Odeslání diagnostických dat** – Povolí nebo zablokuje odesílání diagnostických dat ze zařízení do společnosti Apple.
 -   **Snímek obrazovky** – Povolí uživateli zachytit obsah obrazovky jako obrázek.
     - **Sledování vzdálených obrazovek v aplikaci Classroom (jenom pod dohledem)** – Povolí nebo zablokuje aplikaci Apple Classroom zobrazovat obrazovku na vzdálených zařízeních s iOSem.
@@ -44,6 +44,54 @@ To platí také pro nastavení dostupná z aplikace pro nastavení iOSu, např�
 - **Změny profilu konfigurace** – Povolí uživateli instalovat konfigurační profily.
 - **Zámek aktivace (jenom pod dohledem)** – Povolí zámek aktivace na zařízeních s iOSem, která jsou pod dohledem.
 
+## <a name="configurations-requiring-supervision"></a>Konfigurace vyžadující dohled
+
+Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavování zařízení prostřednictvím Programu registrace zařízení společnosti Apple nebo prostřednictvím Apple Configuratoru. Po povolení režimu pod dohledem může Intune v zařízení nakonfigurovat následující funkce:
+
+- Zámek aplikace (režim jedné aplikace) 
+- Globální proxy server HTTP 
+- Vyřazení zámku aktivace 
+- Autonomní režim jedné aplikace 
+- Filtr webového obsahu 
+- Nastavení pozadí a zamykací obrazovky 
+- Tiché doručení aplikací bez vyžádání 
+- Vždy zapnutá síť VPN 
+- Povolení pouze instalace spravovaných aplikací 
+- iBooks Store 
+- Zprávy iMessage 
+- Herní centrum 
+- AirDrop 
+- AirPlay 
+- Hostitelské párování 
+- Synchronizace cloudu 
+- Vyhledávání Spotlight 
+- Handoff 
+- Vymazání zařízení 
+- Uživatelské rozhraní pro omezení 
+- Instalace konfiguračních profilů uživatelským rozhraním 
+- News 
+- Klávesové zkratky 
+- Změny hesla 
+- Změny názvu zařízení 
+- Změny tapety 
+- Automatická stahování aplikací 
+- Úpravy vztahu důvěryhodnosti u podnikových aplikací 
+- Apple Music 
+- Doručení pošty 
+- Spárování s Apple Watch 
+
+> [!NOTE]
+> Apple potvrdil, že se některá nastavení přesunou v roce 2018 pouze do režimu Pod dohledem. Doporučujeme, abyste to vzali na vědomí, pokud tato nastavení používáte a nečekáte, než je Apple přesune pouze do režimu Pod dohledem:
+> - Instalace aplikací koncovými uživateli
+> - Odebrání aplikace
+> - FaceTime
+> - Safari
+> - iTunes
+> - Explicitní obsah
+> - Dokumenty a data v iCloudu
+> - Hry pro víc hráčů
+> - Přidat přátele z herního centra
+
 ## <a name="password"></a>Heslo
 -   **Heslo** – Vyžaduje, aby koncový uživatel zadal heslo pro přístup k zařízení.
     -   **Jednoduchá hesla** – Umožňuje použití jednoduchých hesel, jako je třeba 0000 nebo 1234.
@@ -56,7 +104,7 @@ To platí také pro nastavení dostupná z aplikace pro nastavení iOSu, např�
     -   **Konec platnosti hesla (dny)** – Určuje počet dní, než bude nutné změnit heslo zařízení.
     -   **Znemožnit opakované použití předchozích hesel** – Určuje počet dříve použitých hesel, která si zařízení pamatuje.
     -   **Odemknutí pomocí otisků prstů** – Povolí odemknutí kompatibilních zařízení pomocí otisku prstu.
-- **Úprava hesla (jenom pod dohledem)** –Zamezí změně, přidání nebo odebrání hesla. 
+- **Úprava hesla (jenom pod dohledem)** –Zamezí změně, přidání nebo odebrání hesla.
     - **Úprava otisků prstů (jenom pod dohledem)** –Zamezí uživateli ve změně, přidání nebo odebrání nastavení Touch ID.
 
 <sup>1</sup>Když nakonfigurujete nastavení **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka** a **Maximální počet minut po uzamčení obrazovky, po kterém bude nutné zadat heslo**, použijí se postupně. Pokud například pro obě nastavení nastavíte hodnotu **5** minut, obrazovka se po 5 minutách automaticky vypne a po dalších 5 minutách se zařízení zamkne. Pokud ale uživatel vypne obrazovku ručně, druhé nastavení se použije okamžitě. V tomto příkladě se zařízení po tom, co uživatel vypne obrazovku, zamkne po 5 minutách.
@@ -89,7 +137,7 @@ To platí také pro nastavení dostupná z aplikace pro nastavení iOSu, např�
 
 ## <a name="built-in-apps"></a>Integrované aplikace
 
--   **Kamera** – Vyberte, jestli je možné používat fotoaparát v zařízení. 
+-   **Kamera** – Vyberte, jestli je možné používat fotoaparát v zařízení.
     -   **FaceTime** – Povolí používání aplikace FaceTime v zařízení.
 -   **Siri** – Povolí v zařízení používání hlasové asistentky Siri.
     -   **Siri na uzamčeném zařízení** – Povolí používání hlasové asistentky Siri, když je zařízení zamknuté.
@@ -124,9 +172,7 @@ Profily zařízení, které obsahují nastavení aplikací s omezeným přístup
 Příklad: Vyhledejte Microsoft Word pro iPad. Použitá adresa URL bude https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
 
 > [!Note]
-> Pomocí softwaru iTunes taky můžete najít aplikaci a pomocí příkazu **Kopírovat odkaz** získat adresu URL aplikace.
-
-
+> Pomocí iTunes taky můžete najít aplikaci a pomocí příkazu **Kopírovat odkaz** získat adresu URL aplikace.
 
 ### <a name="additional-options"></a>Další možnosti
 
@@ -247,7 +293,7 @@ Tento seznam zobrazuje ID sady prostředků některých běžných integrovanýc
 ,com.apple.mobileslideshow,Photos,Apple
 ,com.apple.podcasts,Podcasts,Apple
 ,com.apple.reminders,Reminders,Apple
-,com.apple.mobilesafariSafari,Apple
+,com.apple.MobileSafari,Safari,Apple
 ,com.apple.Preferences,Settings,Apple
 ,com.apple.stocks,Stocks,Apple
 ,com.apple.tips,Tips,Apple
@@ -305,6 +351,6 @@ V poli **Adresa URL e-mailové domény** přidejte do seznamu minimálně jednu 
 V poli **Adresa URL webové domény** přidejte do seznamu minimálně jednu adresu URL. Když pak z těchto zadaných domén stáhnete dokumenty, budou se považovat za spravované. Toto nastavení platí jenom pro dokumenty stažené prostřednictvím prohlížeče Safari.
 
 
-### <a name="safari-password-auto-fill-domains"></a>Domény pro automatické vyplňování hesel v Safari
+### <a name="safari-password-autofill-domains"></a>Domény pro automatické vyplňování hesel v Safari
 
 V poli **Adresa URL domény** přidejte do seznamu minimálně jednu adresu URL. Uživatelé si mohou uložit jenom webová hesla z adres URL uvedených v tomto seznamu. Toto nastavení platí jenom pro prohlížeč Safari a pro zařízení s iOSem 9.3 a novějším v režimu pod dohledem. Pokud nezadáte žádné adresy URL, můžete si uložit hesla ze všech webů.

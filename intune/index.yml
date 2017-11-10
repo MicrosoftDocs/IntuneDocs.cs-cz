@@ -9,7 +9,7 @@ metadata:
   author: arob98
   ms.author: angrobe
   manager: angrobe
-  ms.date: 10/07/2017
+  ms.date: 10/31/2017
   ms.topic: article
   ms.devlang: na
   ms.service: microsoft-intune
@@ -53,27 +53,27 @@ sections:
         columns: 3
         items:
           - href: what-is-intune.md
-            title: Informace o Intune na Azure Portalu
+            title: Informace o Intune na portálu Azure Portal
             image:
               src: 'https://docs.microsoft.com/media/common/i_portal.svg'
           - href: ui-changes.md
-            title: Kde se na Azure Portalu nacházejí funkce Intune
+            title: Kde se na portálu Azure Portal nacházejí funkce Intune
             image:
               src: 'https://docs.microsoft.com/media/common/i_guide.svg'
           - href: high-level-architecture.md
             title: Architektura Intune z širší perspektivy
             image:
               src: 'https://docs.microsoft.com/media/common/i_architecture.svg'
-          - href: reports-nav-create-intune-reports.md
-            title: Vytváření sestav pomocí datového skladu Intune (ukázka)
+          - href: enrollment-autopilot.md
+            title: Podpora programu Windows AutoPilot Deployment v Microsoft Intune
             image:
               src: 'https://docs.microsoft.com/media/common/i_generic-database.svg'
-          - href: 'https://blogs.technet.microsoft.com/intunesupport/2017/08/22/pfx-certificates-issued-using-the-intune-certificate-connector-fix-your-intune-migration-configuration-issues/'
-            title: '[Blog] Certifikáty PFX vystavované pomocí Intune Certificate Connectoru'
+          - href: 'https://blogs.technet.microsoft.com/intunesupport/2017/10/11/upcoming-security-enhancements-in-the-intune-service-your-action-is-required/'
+            title: '[Blog] Vylepšení zabezpečení ve službě Intune '
             image:
               src: 'https://docs.microsoft.com/media/common/i_blog.svg'
-          - href: 'https://blogs.technet.microsoft.com/intunesupport/2017/09/19/support-tip-setting-up-communication-between-mam-managed-and-mdm-managed-apps/'
-            title: '[Blog] Nastavení komunikace mezi aplikacemi spravovanými přes systém správy mobilních aplikací (MAM) a aplikacemi spravovanými přes systém správy mobilních zařízení (MDM)'
+          - href: 'https://cloudblogs.microsoft.com/enterprisemobility/2017/10/26/intunes-new-troubleshooting-portal-makes-diagnosing-and-resolving-end-user-issues-easier/'
+            title: '[Blog] Snazší diagnostika a řešení chyb u koncových uživatelů díky portálu pro řešení potíží'
             image:
               src: 'https://docs.microsoft.com/media/common/i_blog.svg'
   - title: Videa
