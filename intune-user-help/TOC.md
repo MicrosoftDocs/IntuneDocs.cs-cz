@@ -8,7 +8,7 @@
 
 ## [Přihlášení k Portálu společnosti](sign-in-to-the-company-portal.md)
 
-## [Použití zařízení Android s Intune](using-your-android-device-with-intune.md)
+## [Použití zařízení s Androidem](using-your-android-device-with-intune.md)
 ### [Co se stane při registraci zařízení s Androidem?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
 ### [Registrace zařízení](enroll-your-device-in-Intune-android.md)
 #### [Registrace zařízení s Androidem for Work](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
@@ -57,13 +57,10 @@
 ##### [Použití aplikace SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-android.md)
 ##### [Použití aplikace Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-android.md)
 
-## [Použití zařízení s iOSem nebo macOS s Intune](using-your-iOS-or-macOS-device-with-intune.md)
+## [Používání zařízení s iOSem](using-your-iOS-device-with-intune.md)
 ### [Co se stane při registraci zařízení s iOSem?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
 ### [Instalace a přihlášení do Portálu společnosti](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### [Registrace zařízení s iOSem](enroll-your-device-in-intune-ios.md)
-### [Registrace zařízení s macOS](enroll-your-device-in-intune-macos.md)
-### [Registrace zařízení s macOS pomocí Portálu společnosti](enroll-your-device-in-intune-macos-cp.md)
-### [Toto zařízení je trochu jiné](device-little-different-jamf.md)
 
 ### [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-ios.md)
 ### [Nastavení nebo změna hesla](set-or-change-your-passcode-ios.md)
@@ -96,6 +93,11 @@
 ##### [Použití aplikace SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)
 ##### [Použití aplikace Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
 
+## [Používání zařízení s macOS](using-your-macos-device-with-intune.md)
+### [Co se stane při registraci zařízení s macOS?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
+### [Registrace zařízení s macOS](enroll-your-device-in-intune-macos-cp.md)
+### [Registrace staršího zařízení s macOS](enroll-your-device-in-intune-macos-legacy.md)
+### [Toto zařízení je trochu jiné](device-little-different-jamf.md)
 
 ## [Použití zařízení s Windows](using-your-windows-device-with-intune.md)
 ### [Co se stane při registraci zařízení s Windows 10?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)
@@ -123,6 +125,9 @@
 #### [Moje zařízení potřebuje antimalwarový software](your-device-needs-antimalware-software.md)
 #### [Povolení zabezpečeného spuštění](you-need-to-enable-secure-boot-windows.md)
 #### [Povolení integrity kódu](you-need-to-enable-code-integrity.md)
-
+#### [Potřebuji povolit bránu firewall](you-need-to-enable-defender-firewall-windows.md)
+#### [Potřebuji povolit nástroj Řízení uživatelských účtů](you-need-to-enable-uac-windows.md)
+#### [Potřebuji aktualizovat Windows](you-need-to-update-os-build-version-windows.md)
+#### [Potřebuji zapnout Windows Defender](turn-on-defender-windows.md) 
 
 ## [Použití webu Portál společnosti Intune](using-the-intune-company-portal-website.md)
