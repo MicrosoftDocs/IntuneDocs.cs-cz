@@ -15,11 +15,11 @@ ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8f1b9f6900a5dfded736bd0cc92283fdca2220a5
-ms.sourcegitcommit: 94d3d86f8ae9f82a9872384bbaae53580036a4ff
+ms.openlocfilehash: c7947c9d047c6f206f9f93c389d418379fe8267a
+ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Nastavení místního Exchange Connectoru pro Intune v Microsoft Intune Azure
 
@@ -30,7 +30,7 @@ Místní prostředí Exchange Serveru můžou pomocí místního Exchange Connec
 
 Pokud chcete nastavit připojení, které umožňuje komunikaci Microsoft Intune s místním Exchange Serverem, postupujte takto:
 
-1.  Stáhněte si místní Exchange Connector pro Intune z Azure Portalu.
+1.  Stáhněte si místní Exchange Connector pro Intune z portálu Azure Portal.
 2.  Nainstalujte a nakonfigurujte místní Exchange Connector pro Intune.
 3.  Ověřte připojení k Exchangi.
 
@@ -134,13 +134,18 @@ Až Exchange Connector připojení nastaví, mobilní zařízení přidružená 
 > [!NOTE]
 > Pokud máte nainstalovaný místní Exchange Connector a odstraníte připojení k systému Exchange, musíte místní Exchange Connector z počítače, na kterém je nainstalovaný, odinstalovat.
 
-## <a name="validate-the-exchange-connection"></a>Ověření připojení k systému Exchange
+## <a name="monitor-the-exchange-connector-activity"></a>Monitorování aktivity Exchange Connectoru
 
 Po úspěšné konfiguraci softwaru Exchange Connector můžete zobrazit stav připojení a poslední úspěšný pokus o synchronizaci. Ověření připojení Exchange Connectoru:
 
-- Na řídicím panelu Intune zvolte **Místní přístup**. V části **Správa** vyberte **Přístup k místnímu Exchangi** a ověřte stav připojení.
+1. Na řídicím panelu Intune zvolte **Místní přístup**.
+2. V části **Správa** vyberte **Přístup k místnímu Exchangi** a ověřte stav připojení.
 
 Můžete se taky podívat na datum a čas posledního úspěšného pokusu o synchronizaci.
+
+### <a name="system-center-operations-manager-scom-management-pack"></a>Sada System Center Operations Manager (SCOM) Management Pack
+
+Od verze Intune 1710 můžete používat [sadu SCOM Management Pack pro Exchange Connector a Intune](https://www.microsoft.com/en-us/download/details.aspx?id=55990&751be11f-ede8-5a0c-058c-2ee190a24fa6=True&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True&fa43d42b-25b5-4a42-fe9b-1634f450f5ee=True). V případě potřeby řešení potíží tak máte různé možnosti monitorování Exchange Connectoru.
 
 ## <a name="next-steps"></a>Další kroky
 [Vytvoření zásady podmíněného přístupu pro místní Exchange](conditional-access-exchange-create.md)

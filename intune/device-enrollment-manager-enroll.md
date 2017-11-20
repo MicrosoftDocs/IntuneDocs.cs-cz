@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 05/25/2017
+ms.date: 11/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5caf60d0512a33c0c88f4305b1a9eb189112ba02
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 0faca372a8bc9a632cf99133b9843b4b219f285c
+ms.sourcegitcommit: e692be57ec7044dfc224b70941affbfd7efba421
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="enroll-devices-using-device-enrollment-manager"></a>Registrace zařízení pomocí správce registrace zařízení
 
@@ -36,7 +36,7 @@ Abyste mohli uživatele přidat jako správce registrace zařízení, musí tito
 
 Restaurace chce pro své číšníky pořídit padesát tabletů POS a monitory na objednávky pro pracovníky kuchyně. Zaměstnanci nikdy nepotřebují přístup k datům společnosti a nepotřebují se přihlašovat jako uživatelé. Správce Intune vytvoří účet správce registrace zařízení a přidá vedoucího restaurace k účtu DEM, čímž mu v podstatě dá nadřízené možnosti DEM. Nadřízený nyní může zaregistrovat padesát zařízení pomocí přihlašovacích údajů DEM.
 
-Správci registrace zařízení můžou být jen uživatelé na Azure Portalu. Správce registrace zařízení nemůže být správcem služby Intune.
+Správci registrace zařízení můžou být jen uživatelé na portálu Azure Portal. Správce registrace zařízení nemůže být správcem služby Intune.
 
 Uživatel DEM může:
 
@@ -54,6 +54,7 @@ Zařízení zaregistrovaná pomocí účtu správce registrace zařízení mají
   - V aplikaci nebo na webu Portál společnosti se zobrazí jenom místní zařízení.
   - Uživatelé nemůžou používat aplikace v rámci programu Apple VPP (Volume Purchase Program), protože ke správě těchto aplikací jsou vyžadovaná Apple ID jednotlivých uživatelů.
   - (Pouze iOS) Pokud pomocí DEM zaregistrujete zařízení s iOSem, nemůžete k registraci zařízení využít Apple Configurator, Program registrace zařízení Apple (DEP) ani Apple School Manager (ASM).
+  - (Pouze Android) Počet zařízení s Androidem for Work, která lze zaregistrovat pomocí jednoho účtu DEM, je omezený. Pomocí každého účtu DEM je možné zaregistrovat maximálně 10 zařízení s pracovním profilem Androidu. Toto omezení se nevztahuje na registrace starších verzí Androidu.
   - Každé zařízení vyžaduje licenci na zařízení. Další informace o [uživatelských licencích a licencích na zařízení](licenses-assign.md#how-user-and-device-licenses-affect-access-to-services).
 
 
@@ -95,5 +96,5 @@ Odebrání správce registrace zařízení nemá vliv na zaregistrovaná zaříz
 
 ## <a name="view-the-properties-of-a-device-enrollment-manager"></a>Zobrazení vlastností správce registrace zařízení
 
-1. Na Azure Portalu zvolte **Registrace zařízení** a pak zvolte **Správci registrace zařízení**.
+1. Na portálu Azure Portal zvolte **Registrace zařízení** a pak zvolte **Správci registrace zařízení**.
 2. V okně **Správci registrace zařízení** klikněte pravým tlačítkem na uživatele DEM a vyberte **Vlastnosti**.

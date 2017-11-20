@@ -6,7 +6,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 05/31/2017
+ms.date: 11/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: d10b2d64-8c72-4e9b-bd06-ab9d9486ba5e
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 997f4a612c69a7ddd6d56d4d860614c3bc513d3d
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 3e4dcd7767620d6d3939686f69ad9d72f6a2d8e2
+ms.sourcegitcommit: e692be57ec7044dfc224b70941affbfd7efba421
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps"></a>Správa přenosu dat mezi aplikacemi pro iOS
 ## <a name="manage-ios-apps"></a>Správa aplikací pro iOS
@@ -30,6 +30,7 @@ V rámci ochrany vašich firemních dat je potřeba zajistit, aby přenosy soubo
 -   Aplikace také můžete nasazovat a spravovat prostřednictvím **kanálu správy mobilních zařízení (MDM)**.  K tomu je potřeba, aby byla zařízení zaregistrovaná v nějakém řešení správy mobilních zařízení. Může se jednat o aplikace **spravované zásadami** nebo jiné spravované aplikace.
 
 Funkce **Správa pro Open In** pro zařízení s iOSem může omezit přenosy souborů tak, aby probíhaly jenom mezi aplikacemi, které jsou nasazená prostřednictvím **kanálu MDM**. Omezení správy Open In se nastavují v nastavení konfigurace a nasazují pomocí řešení MDM.  Když uživatel nainstaluje nasazenou aplikaci, použijí se nastavená omezení.
+
 ##  <a name="using-app-protection-with-ios-apps"></a>Používání ochrany aplikací u aplikací pro iOS
 Zásady ochrany aplikací se dají používat společně s funkcí **Správa Open In** k ochraně firemních dat těmito způsoby:
 
@@ -40,30 +41,25 @@ Zásady ochrany aplikací se dají používat společně s funkcí **Správa Ope
 -   **Zařízení spravovaná řešením MDM jiného výrobce:** Pomocí funkce **Správa Open In** můžete omezit přenosy dat jenom do spravovaných aplikací.
 Pokud chcete zajistit, aby aplikace nasazené pomocí řešení MDM jiného výrobce byly také přidružené k zásadám ochrany aplikací, které jste nakonfigurovali v Intune, musíte nakonfigurovat nastavení hlavního názvu uživatele (UPN) podle postupu popsaného v části [Konfigurace nastavení hlavního názvu uživatele (UPN)](#configure-user-upn-setting-for-third-party-emm).  Když je aplikace nasazená s nastavením hlavního názvu uživatele (UPN), použijí se pro ni zásady ochrany aplikací, jakmile se koncový uživatel přihlásí pomocí svého pracovního účtu.
 
-> [!IMPORTANT]
-> Nastavení hlavního názvu uživatele (UPN) se vyžaduje jenom pro aplikace nasazené na zařízení spravovaná řešením MDM jiného výrobce.  U zařízení spravovaných pomocí Intune se toto nastavení nevyžaduje.
-
-
-## <a name="configure-user-upn-setting-for-third-party-emm"></a>Konfigurace nastavení hlavního názvu uživatele (UPN) pro řešení MDM jiného výrobce
-Konfigurace nastavení hlavního názvu uživatele (UPN) je **nutná** pro zařízení spravovaná pomocí řešení MDM jiného výrobce. Níže popsaný postup představuje obecné kroky pro konfiguraci nastavení hlavního názvu uživatele (UPN) a výsledného prostředí koncového uživatele:
-
+## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Konfigurace nastavení hlavního názvu uživatele (UPN) pro Microsoft Intune nebo řešení EMM (Enterprise Mobility Management) jiného výrobce
+Konfigurace nastavení hlavního názvu uživatele (UPN) je **povinná** pro zařízení spravovaná pomocí Intune nebo řešení EMM (Enterprise Mobility Management) jiného výrobce. Níže popsaný postup představuje obecné kroky pro konfiguraci nastavení hlavního názvu uživatele (UPN) a výsledného prostředí koncového uživatele:
 
 1.  Na portálu [Azure Portal](https://portal.azure.com) [vytvořte a přiřaďte zásady ochrany aplikací](app-protection-policies.md) pro platformu iOS. Nakonfigurujte nastavení zásad podle požadavků vaší společnosti a vyberte aplikace iOS, které by tyto zásady měly používat.
 
-2.  Nasaďte aplikace a e-mailový profil, které chcete spravovat **prostřednictvím řešení MDM jiného výrobce**, pomocí níže uvedených obecných kroků. Tato činnost je také popsaná v Příkladu 1.
+2.  Nasaďte aplikace a e-mailový profil, které chcete spravovat prostřednictvím Intune nebo řešení MDM jiného výrobce, pomocí níže uvedených obecných kroků. Tato činnost je také popsaná v Příkladu 1.
 
-  1.  Nasaďte aplikaci s tímto nastavením konfigurace:
+3.  Nasaďte aplikaci s tímto nastavením konfigurace:
 
       **key** = IntuneMAMUPN, **value** = <username@company.com>
 
       Příklad: [‘IntuneMAMUPN’, ‘jondoe@microsoft.com’]
 
-  2.  Nasaďte zásadu správy Open in prostřednictvím jiného poskytovatele řešení MDM do zaregistrovaných zařízení.
+4.  Nasaďte **zásadu správy Open in** prostřednictvím Intune nebo jiného poskytovatele řešení MDM do zaregistrovaných zařízení.
 
 
-### <a name="example-1-admin-experience-in-third-party-mdm-console"></a>Příklad 1: Činnost správce v konzole MDM jiného výrobce
+### <a name="example-1-admin-experience-in-intune-or-third-party-mdm-console"></a>Příklad 1: Činnost správce v Intune nebo konzole řešení MDM jiného výrobce
 
-1. Přejděte do konzoly pro správu od jiného poskytovatele řešení MDM. Přejděte do části konzoly, ve které nasadíte nastavení konfigurace aplikace do zaregistrovaných zařízení s iOSem.
+1. Přejděte do konzoly pro správu Intune nebo poskytovatele řešení MDM jiného výrobce. Přejděte do části konzoly, ve které nasadíte nastavení konfigurace aplikace do zaregistrovaných zařízení s iOSem.
 
 2. V části Konfigurace aplikace zadejte tato nastavení:
 
@@ -73,6 +69,7 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) je **nutná** pro zař�
 
 |Jiný poskytovatel řešení MDM| Konfigurační klíč | Typ hodnoty | Konfigurační hodnota|
 | ------- | ---- | ---- | ---- |
+|Microsoft Intune| IntuneMAMUPN | Řetězec | {UserPrincipalName}|
 |VMware AirWatch| IntuneMAMUPN | Řetězec | {UserPrincipalName}|
 |MobileIron | IntuneMAMUPN | Řetězec | ${userUPN} **nebo** ${userEmailAddress} |
 
@@ -94,7 +91,7 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) je **nutná** pro zař�
 
 6.  Přenos dat bude tentokrát úspěšný a dokument se v aplikaci označí firemní identitou. Kromě toho se data zpracovávají v pracovním kontextu a nastavení zásad jsou použitá odpovídajícím způsobem.
 
-### <a name="validate-user-upn-setting-for-third-party-emm"></a>Ověření nastavení hlavního názvu uživatele (UPN) pro řešení MDM jiného výrobce
+### <a name="validate-user-upn-setting-for-third-party-emm"></a>Ověření nastavení hlavního názvu uživatele (UPN) pro řešení EMM (Enterprise Mobility Management) jiného výrobce
 
 Až nakonfigurujete nastavení hlavního názvu uživatele (UPN), měli byste ověřit schopnost aplikace pro iOS přijmout zásady ochrany aplikací Intune a vyhovět jim.
 

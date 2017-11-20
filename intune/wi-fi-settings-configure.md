@@ -15,11 +15,11 @@ ms.assetid: 1fadb488-9c6c-43c1-ba23-8c69db633b96
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e3333a5addfd0c4ab757121e22e19ac66c0b3e1d
-ms.sourcegitcommit: ec8561b8c63515e0b5f21a858984108dc5dbd5d3
+ms.openlocfilehash: ae5210cb3da5503c4cf1b85be8b8522fa1cfd6ce
+ms.sourcegitcommit: 1df625330f4e8f7f661b5f2b9f16b5590971838d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 11/10/2017
 ---
 # <a name="how-to-configure-wi-fi-settings-in-microsoft-intune"></a>Jak nakonfigurovat nastavení Wi-Fi v Microsoft Intune
 
@@ -58,9 +58,7 @@ Informace v tomto tématu vás seznámí se základy konfigurace profilu Wi-Fi. 
     - **iOS**
     - **macOS**
     - **Windows 8.1 a novější (import profilu)**
-6. V rozevíracím seznamu **Typ profilu** zvolte **Základní Wi-Fi** nebo **Podniková Wi-Fi**.
-    >[!TIP]
-    >Možnost **Základní Wi-Fi** umožňuje nastavit základní funkce, jako je název sítě a SSID. Možnost **Podniková Wi-Fi** umožňuje nastavit rozšířené informace, například o protokolu EAP (Extensible Authentication Protocol), pokud ho vaše síť Wi-Fi využívá. **Import Wi-Fi** (pro Windows 8.1 a Windows 10) umožňuje importovat nastavení Wi-Fi jako soubor XML, který jste předtím vyexportovali z jiného zařízení.
+6. V rozevíracím seznamu **Typ profilu** zvolte **Základní Wi-Fi** nebo **Podniková Wi-Fi**. Možnost **Základní Wi-Fi** umožňuje nastavit základní funkce, jako je název sítě a SSID. Možnost **Podniková Wi-Fi** umožňuje nastavit rozšířené informace, například o protokolu EAP (Extensible Authentication Protocol), pokud ho vaše síť Wi-Fi využívá. **Import Wi-Fi** (pro Windows 8.1 a Windows 10) umožňuje importovat nastavení Wi-Fi jako soubor XML, který jste předtím vyexportovali z jiného zařízení.
 7. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Podrobnosti o nastaveních na jednotlivých platformách najdete v následujících tématech:
     - [Nastavení Androidu a Androidu for Work](wi-fi-settings-android.md)
     - [Nastavení iOSu](wi-fi-settings-ios.md)

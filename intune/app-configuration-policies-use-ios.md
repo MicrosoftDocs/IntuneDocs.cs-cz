@@ -1,5 +1,5 @@
 ---
-title: "Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOSem | Dokumentace Microsoftu"
+title: "Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOSem | Microsoft Docs"
 titlesuffix: Azure portal
 description: "Přečtěte si, jak používat zásady konfigurace aplikací pro účely předání konfiguračních dat do aplikace pro iOS při jejím spuštění."
 keywords: 
@@ -15,11 +15,11 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d293ff6001ef937c7da0055e6642aa5a1226bd2e
-ms.sourcegitcommit: 67c037af31c1f167ec9b4f4baa754631c817e7d1
+ms.openlocfilehash: 2226477d40f2bb70dd047ed58e8789fd9bee4ecb
+ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOSem
 
@@ -40,44 +40,49 @@ Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastav
 1. Přihlaste se k portálu Azure Portal.
 2. Zvolte **Další služby** > **Monitorování + správa** + **Intune**.
 3. Zvolte úlohu **Mobilní aplikace**.
-4. Ve skupině **Spravovat** klikněte na **Zásady konfigurace aplikací** a pak klikněte na **Přidat**.
+4. Ve skupině **Spravovat** zvolte **Zásady konfigurace aplikací** a pak **Přidat**.
 5. Zadejte tyto podrobnosti:
-    - **Název**  
+    - **Název**<br>
       Název profilu, který se zobrazí na portálu Azure Portal
-    - **Popis**  
+    - **Popis**<br>
       Popis profilu, který se zobrazí na portálu Azure Portal
-    - **Typ registrace zařízení**  
+    - **Typ registrace zařízení**<br>
       Zvolte **Spravovaná zařízení**.
-6. Jako **platformu** vyberte **iOS**.
-7.  Zvolte **Přidružená aplikace** a pak v okně **Přidružená aplikace** zvolte spravovanou aplikaci, u které chcete použít konfiguraci.
+6. V poli **Platforma** vyberte **iOS**.
+7.  Zvolte **Přidružená aplikace**. Pak v okně **Přidružená aplikace** zvolte spravovanou aplikaci, u které chcete použít danou konfiguraci.
 8.  V okně **Přidat zásady konfigurace** zvolte **Nastavení konfigurace**.
-9. Vyberte **Formát nastavení konfigurace**. Vyberte jednu z těchto možností:
+9. Vyberte **Formát nastavení konfigurace**. Vyberte jednu z těchto možností:
     - **[Použít návrháře konfigurace](#Use-the-configuration-designer)**
     - **[Zadat XML data](#enter-xml-data)**
-10. Klikněte na **OK** a pak na **Přidat**.
+10. Zvolte **OK** a pak **Přidat**.
 
 ## <a name="use-configuration-designer"></a>Použití návrháře konfigurace
 
-Návrháře konfigurace můžete použít u aplikací jak v zařízeních, která jsou zaregistrovaná v Intune, tak i v zařízeních, která zaregistrovaná nejsou. Návrhář umožňuje nakonfigurovat konkrétní klíče a hodnoty konfigurace. Pro každou hodnotu musíte také zadat datový typ. Nastavení se aplikaci poskytne automaticky při její instalaci.
+Návrháře konfigurace můžete použít u aplikací jak v zařízeních, která jsou zaregistrovaná v Intune, tak i v zařízeních, která zaregistrovaná nejsou. Návrhář umožňuje nakonfigurovat konkrétní klíče a hodnoty konfigurace. Pro každou hodnotu musíte také zadat datový typ. Nastavení se aplikacím poskytne automaticky při jejich instalaci.
 
 ### <a name="add-a-setting"></a>Přidání nastavení
 
-1. Pro každý klíč a hodnotu v konfiguraci nastavte: <ul><li>**Konfigurační klíč**<br>Slouží k jedinečné identifikaci konkrétní konfigurace nastavení.</li><li>**Typ hodnoty**<br>Datový typ konfigurační hodnoty. Mezi typy patří integer, real, string a boolean.</li><li>**Hodnota konfigurace**<br>Hodnota konfigurace</li></ul>
-2. Klikněte na **OK** a zadejte nastavení konfigurace.
+1. Pro každý klíč a hodnotu v konfiguraci nastavte:
+   - **Konfigurační klíč**<br>
+     Klíč, který jedinečně identifikuje konkrétní konfiguraci nastavení
+   - **Typ hodnoty**<br>
+     Datový typ konfigurační hodnoty. Mezi typy patří integer, real, string a boolean.
+   - **Hodnota konfigurace**<br>
+     Hodnota konfigurace
+2. Zvolte **OK** a nastavte tak nastavení konfigurace.
 
 ### <a name="delete-a-setting"></a>Odstranění nastavení
 
-1. Vedle nastavení klikněte na tři tečky (...).
+1. Zvolte tři tečky (**...**) vedle příslušného nastavení.
 2. Vyberte **Odstranit**.
 
 Znaky \{\{ a \}\} se používají jenom pro typy tokenů a nesmí se používat pro jiné účely.
 
-## <a name="enter-xml-data"></a>Zadání dat XML
+## <a name="enter-xml-data"></a>Zadání XML dat
 
 Můžete zadat nebo vložit seznam vlastností XML, který obsahuje nastavení konfigurace aplikace pro zařízení zaregistrovaná v Intune. Formát seznamu vlastností XML se liší v závislosti na aplikaci, kterou konfigurujete. Podrobnosti o přesném formátu, který se má použít, získáte od dodavatele aplikace.
 
 Intune ověří formát XML. Intune ale nekontroluje, jestli bude seznam vlastností XML fungovat s cílovou aplikací.
-Další informace o seznamech vlastností XML najdete v tématu [Vysvětlení seznamů vlastností XML].
 
 Další informace o seznamech vlastností XML:
 
@@ -126,15 +131,15 @@ Intune podporuje v seznamu vlastností následující typy dat:
 ### <a name="tokens-used-in-the-property-list"></a>Tokeny použité v seznamu vlastností
 
 Intune dál v seznamu vlastností podporuje následující typy tokenů:
-- \{\{userprincipalname\}\} – (Příklad: **John@contoso.com**)
-- \{\{mail\}\} – (Příklad: **John@contoso.com**)
-- \{\{partialupn\}\} – (Příklad: **Jan**)
-- \{\{accountid\}\} – (Příklad: **fc0dc142-71d8-4b12-bbea-bae2a8514c81**)
-- \{\{deviceid\}\} – (Příklad: **b9841cd9-9843-405f-be28-b2265c59ef97**)
-- \{\{userid\}\} – (Příklad: **3ec2c00f-b125-4519-acf0-302ac3761822**)
-- \{\{username\}\} – (Příklad: **Jiri Polak**)
-- \{\{serialnumber\}\} – (Příklad: **F4KN99ZUG5V2**) pro zařízení s iOSem
-- \{\{serialnumberlast4digits\}\} – (Příklad: **G5V2**) pro zařízení s iOSem
+- \{\{userprincipalname\}\} – například **John@contoso.com**
+- \{\{mail\}\} – například **John@contoso.com**
+- \{\{partialupn\}\} – například **John**
+- \{\{accountid\}\} – například **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
+- \{\{deviceid\}\} – například **b9841cd9-9843-405f-be28-b2265c59ef97**
+- \{\{userid\}\} – například **3ec2c00f-b125-4519-acf0-302ac3761822**
+- \{\{username\}\} – například **John Doe**
+- \{\{serialnumber\}\} – například **F4KN99ZUG5V2** (pro zařízení s iOSem)
+- \{\{serialnumberlast4digits\}\} – například **G5V2** (pro zařízení s iOSem)
 
 ## <a name="next-steps"></a>Další kroky
 

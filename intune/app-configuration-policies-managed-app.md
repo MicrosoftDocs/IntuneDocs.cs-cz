@@ -1,5 +1,5 @@
 ---
-title: "Přidání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení | Dokumentace Microsoftu"
+title: "Přidání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení | Microsoft Docs"
 titlesuffix: Azure portal
 description: "Přečtěte si, jak přidat zásady konfigurace aplikací pro spravované aplikace bez registrace zařízení."
 keywords: 
@@ -15,11 +15,11 @@ ms.assetid: E61C1618-79D0-41A1-B61F-4123FB6672FC
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 750ce7dbb0dccf08757e076826e2d3650b6e6ab5
-ms.sourcegitcommit: 67c037af31c1f167ec9b4f4baa754631c817e7d1
+ms.openlocfilehash: c46d7e8f4291345a9da87f7a7a6f3180415b69a4
+ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Přidání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení
 
@@ -30,7 +30,7 @@ Zásady konfigurace aplikací můžete používat se spravovanými aplikacemi, k
 1. Přihlaste se k portálu Azure Portal.
 2. Zvolte **Další služby** > **Monitorování + správa** + **Intune**.
 3. Zvolte úlohu **Mobilní aplikace**.
-4. Ve skupině **Spravovat** klikněte na **Zásady konfigurace aplikací** a pak klikněte na **Přidat**.
+4. Ve skupině **Spravovat** zvolte **Zásady konfigurace aplikací** a pak **Přidat**.
 5. Zadejte tyto podrobnosti:
     - **Název**  
       Název profilu, který se zobrazí na portálu Azure Portal
@@ -39,25 +39,25 @@ Zásady konfigurace aplikací můžete používat se spravovanými aplikacemi, k
     - **Typ registrace zařízení**  
       Zvolte **Spravovat aplikace**.
 6. Vyberte **Přidružené aplikace** a zvolte aplikaci, kterou chcete nakonfigurovat. Ze seznamu vyberte některou z aplikací, kterou jste schválili a synchronizovali s Intune.
-7. Pro každé nastavení konfigurace podporované aplikací zadejte **Název** a **Hodnotu** a klikněte na tři tečky (**…**).  
-    Pokud chcete konfiguraci odstranit, klikněte na tři tečky (**…**) a vyberte **Odstranit**.  
+7. Pro každé nastavení konfigurace podporované aplikací zadejte položky **Název** a **Hodnota** a zvolte tři tečky (**…**).  
+    Pokud chcete konfiguraci odstranit, zvolte tři tečky (**…**) a vyberte **Odstranit**.  
     Aplikace s povolenou sadou Intune App SDK podporují konfigurace v párech klíč-hodnota. Nahlédněte do dokumentace k jednotlivým aplikacím, kde zjistíte, které konfigurace klíč-hodnota se podporují.  
     Kromě toho můžete používat tokeny, které se budou dynamicky plnit daty generovanými aplikací.
 
-## <a name="configuration-values-using-tokens"></a>Hodnoty konfigurace používající tokeny
+## <a name="configuration-values-for-using-tokens"></a>Hodnoty konfigurace pro používání tokenů
 
-Intune může některé tokeny vygenerovat a poslat do spravované aplikace. Pokud třeba konfigurace aplikace umožňuje používat nastavení e-mailu, můžete pomocí tokenu přidat dynamický e-mail. Do pole **Název** zadejte název, který aplikace očekává, a potom do pole **Hodnota** zadejte `\{\{mail\}\}`.
+Intune může určité tokeny vygenerovat a odeslat je do spravované aplikace. Pokud třeba konfigurace aplikace umožňuje používat nastavení e-mailu, můžete pomocí tokenu přidat dynamický e-mail. Do pole **Název** zadejte název, který aplikace očekává, a potom do pole **Hodnota** zadejte `\{\{mail\}\}`.
 
 Intune podporuje v nastavení konfigurací následující typy tokenů:
 
-- \{\{userprincipalname\}\} – (Příklad: **John@contoso.com**)
-- \{\{mail\}\} – (Příklad: **John@contoso.com**)
-- \{\{partialupn\}\} – (Příklad: **Jan**)
-- \{\{accountid\}\} – (Příklad: **fc0dc142-71d8-4b12-bbea-bae2a8514c81**)
-- \{\{deviceid\}\} – (Příklad: **b9841cd9-9843-405f-be28-b2265c59ef97**)
-- \{\{userid\}\} – (Příklad: **3ec2c00f-b125-4519-acf0-302ac3761822**)
-- \{\{username\}\} – (Příklad: **Jiri Polak**)
-- \{\{PrimarySMTPAddress\}\} – (Příklad: testuser@ad.domain.com) 
+- \{\{userprincipalname\}\} – například **John@contoso.com**
+- \{\{mail\}\} – například **John@contoso.com**
+- \{\{partialupn\}\} – například **John**
+- \{\{accountid\}\} – například **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
+- \{\{deviceid\}\} – například **b9841cd9-9843-405f-be28-b2265c59ef97**
+- \{\{userid\}\} – například **3ec2c00f-b125-4519-acf0-302ac3761822**
+- \{\{username\}\} – například **John Doe**
+- \{\{PrimarySMTPAddress\}\} – například **testuser@ad.domain.com** 
 
 
 > [!Note]  

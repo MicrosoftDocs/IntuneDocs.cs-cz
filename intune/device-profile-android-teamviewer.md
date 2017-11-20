@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 10/05/2017
+ms.date: 11/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 72cdd888-efca-46e6-b2e7-fb9696bb2fba
 ms.reviewer: davidra
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8bb3061baf42b011c98cf7b196e939448f91cff4
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: 3a4e2b3493467f922b844130829db8e5ba14b246
+ms.sourcegitcommit: 474a24ba67f6bf4f00268bf9e4eba52331a6b82d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="provide-remote-assistance-for-intune-managed-devices"></a>Poskytování vzdálené pomoci pro zařízení spravovaná pomocí Intune
 
@@ -29,13 +29,10 @@ Intune vám prostřednictvím softwaru [TeamViewer](https://www.teamviewer.com) 
 
 ### <a name="supported-devices"></a>Podporovaná zařízení
 
-Vzdálenou správu podporují tato zařízení spravovaná pomocí Intune:
-
-- Zařízení s Androidem spravovaná pomocí Intune
-- Zařízení s Windows spravovaná pomocí Intune a používající Windows 10, Windows 10 Mobile a novější.
+Vzdálenou správu podporují zařízení s Androidem nebo s Windows spravovaná přes Intune.
 
 >[!NOTE]
->Windows Holographic (HoloLens), Windows Team (Surface Hub) a Windows 10 S software TeamViewer nepodporuje.
+>Software TeamViewer nepodporuje Windows Holographic (HoloLens), Windows Team (Surface Hub) a Windows 10 S. 
 
 
 

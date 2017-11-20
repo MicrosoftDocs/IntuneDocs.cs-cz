@@ -6,7 +6,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 08/21/2017
+ms.date: 11/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,21 +14,21 @@ ms.technology:
 ms.assetid: 08f659cf-715e-4e10-9ab2-1bac3c6f2366
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: 4b4c2b008536881a56e768c480338b54a9e87b7e
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: 8abc5e9a1e1d5ec5e0ea632b075209a0ba9456c2
+ms.sourcegitcommit: 474a24ba67f6bf4f00268bf9e4eba52331a6b82d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="manage-software-updates"></a>Správa aktualizací softwaru
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Windows jako služba představuje způsob, jak aktualizovat zařízení s Windows 10. Ve Windows 10 obsahují nové aktualizace funkcí a aktualizace pro zvýšení kvality obsah všech předchozích aktualizací. To znamená, že pokud si nainstalujete nejnovější aktualizaci, máte jistotu, že jsou vaše zařízení s Windows 10 zcela aktuální. Na rozdíl od předchozích verzí Windows je teď nutné nainstalovat celou aktualizaci (a ne jenom její část).
+Windows jako služba představuje způsob, jak aktualizovat zařízení s Windows 10. Ve Windows 10 obsahují nové aktualizace funkcí a aktualizace pro zvýšení kvality obsah všech předchozích aktualizací. To znamená, že pokud si nainstalujete nejnovější aktualizaci, máte jistotu, že jsou vaše zařízení s Windows 10 aktuální. Na rozdíl od předchozích verzí Windows je teď nutné nainstalovat celou aktualizaci (a ne jenom její část).
 
 Pomocí služby Windows Update pro firmy můžete zjednodušit správu aktualizací, abyste nemuseli schvalovat jednotlivé aktualizace pro skupiny zařízení. Konfigurací vhodné strategie zavádění aktualizací budete mít pod kontrolou řízení rizik ve svém prostředí, přičemž služba Windows Update zajistí, aby se aktualizace nainstalovaly ve správný čas. Prostřednictvím Microsoft Intune můžete na zařízeních nakonfigurovat nastavení aktualizací a pozdržet instalaci aktualizací. V Intune nejsou uložené samotné aktualizace, ale jenom přiřazení zásad aktualizací. Zařízení kvůli aktualizacím přistupují přímo k webu Windows Update. Použijte Intune ke konfiguraci a správě **aktualizačních kanálů Windows 10**. Aktualizační kanál obsahuje skupinu nastavení, která konfigurují, kdy a jak se budou aktualizace Windows 10 instalovat. Můžete třeba nakonfigurovat:
 
-- **Obslužná větev Windows 10**: Zvolte, jestli mají skupiny zařízení dostávat aktualizace z Aktuální větve nebo z Aktuální větve pro firmy.  
+- **Kanál pro údržbu Windows 10**: Zvolte, jestli mají skupiny zařízení přijímat aktualizace z Půlročního kanálu (cíleného) nebo z Půlročního kanálu.  
 - **Nastavení odložení**: Nakonfigurujte nastavení odložení aktualizací ke zpoždění instalací aktualizací pro skupiny zařízení. Tato nastavení vám poskytnou rozfázované zavádění aktualizací, abyste mohli kontrolovat jeho průběh.
 - **Pozastavení**: Odložte instalaci aktualizací, pokud kdykoli během zavádění aktualizací zjistíte problém.
 - **Časové období údržby**: Konfigurujte hodiny, kdy se můžou aktualizace instalovat.
@@ -65,7 +65,7 @@ Po vytvoření aktualizačních kanálů je přiřadíte skupinám zařízení. 
 1. Na portále Azure Portal vytvořte aktualizační kanály Windows 10 s nastaveními, která potřebujete. Nastavení **Povolit funkce v předběžné verzi** není na portálu Azure Portal podporované, protože už pro nejnovější buildy Windows 10 neplatí. Při vytvoření aktualizačních kanálů můžete nakonfigurovat ostatní tři nastavení i další nastavení aktualizace Windows 10.
 
   > [!NOTE]
-  > Nastavení aktualizací Windows 10 vytvořená na klasickém portálu se na Azure Portalu po migraci nezobrazí. Tato nastavení se ale dál používají. Pokud jste některé z těchto nastavení migrovali a migrované zásady z portálu Azure Portal upravíte, tato nastavení se ze zásad odeberou.
+  > Nastavení aktualizací Windows 10 vytvořená na klasickém portálu se na portálu Azure Portal po migraci nezobrazí. Tato nastavení se ale dál používají. Pokud jste některé z těchto nastavení migrovali a migrované zásady z portálu Azure Portal upravíte, tato nastavení se ze zásad odeberou.
 
 2. Odstraňte nastavení aktualizací na klasickém portálu. Po migraci na portál Azure Portal a přidání stejných nastavení do aktualizačního kanálu musíte nastavení na klasickém portálu odstranit, aby se zabránilo možným konfliktům zásad. Pokud je třeba stejné nastavení nakonfigurované s různými hodnotami, dojde ke konfliktu, který nepůjde snadno poznat, protože nastavení nakonfigurované na klasickém portálu se na portálu Azure Portal nezobrazuje.
 
@@ -78,7 +78,7 @@ Po vytvoření aktualizačních kanálů je přiřadíte skupinám zařízení. 
 5. V okně se seznamem aktualizačních kanálů zvolte **Vytvořit**.
 6. V okně **Vytvořit aktualizační kanál** zadejte název a volitelný popis aktualizačního kanálu a pak zvolte **Nastavení**.
 7. V okně **Nastavení** nakonfigurujte následující údaje:
-    - **Obslužná větev**: Nastavte větev, pro kterou zařízení dostává aktualizace Windows (Current Branch nebo Current Branch for Business).
+    - **Kanál pro údržbu**: Nastavte kanál, ze kterého má zařízení přijímat aktualizace Windows (Půlroční kanál (cílený) nebo Půlroční kanál).
     - **Aktualizace Microsoft**: Zvolte, jestli se mají kontrolovat aktualizace aplikací z webu Microsoft Update.
     - **Ovladače Windows**: Zvolte, jestli chcete při aktualizacích vyloučit ovladače Windows Update.
     - **Chování automatické aktualizace**: Zvolte, jak se má spravovat chování automatické aktualizace pro kontrolu, stahování a instalaci aktualizací. Podrobnosti najdete v popisu nastavení [Update/AllowAutoUpdate](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/policy-configuration-service-provider#update-allowautoupdate).
@@ -87,12 +87,12 @@ Po vytvoření aktualizačních kanálů je přiřadíte skupinám zařízení. 
     Aktualizace kvality jsou obecně opravy a vylepšení stávajících funkcí Windows a jsou obvykle vydávané první úterý v každém měsíci. Microsoft je ale může vydávat i kdykoli jindy. Můžete definovat, jestli a jak dlouho chcete přijímání aktualizací kvality po jejich vydání odkládat.
     - **Odložení aktualizace funkcí (ve dnech)**: Zadejte, kolik dní budou aktualizace funkcí odložené. Příjem těchto aktualizací funkcí můžete odložit až o 180 dní od jejich vydání.
 
-    Aktualizace funkcí jsou obecně nové funkce pro Windows. Po dokončení konfigurace nastavení **Obslužná větev** (**CB** (Aktuální větev) nebo **CBB** (Aktuální větev pro firmy) pak můžete definovat, jestli a na jak dlouho chcete odložit příjem aktualizací funkcí po tom, co je Microsoft zpřístupní na webu Windows Update.
+    Aktualizace funkcí jsou obecně nové funkce pro Windows. Až nakonfigurujete nastavení **Kanálu pro údržbu** (Půlroční kanál (cílený) nebo Půlroční kanál), můžete definovat, jestli a na jak dlouho chcete odložit příjem aktualizací funkcí po tom, co je Microsoft zpřístupní na webu Windows Update.
 
     Například:  
-    **Pokud je obslužná větev nastavená na CB (Aktuální větev) a doba odložení je 30 dní**: Řekněme, že aktualizace funkce X je poprvé veřejně dostupná na webu Windows Update jako CB (Aktuální větev) v lednu. Zařízení aktualizaci přijme až v únoru – o 30 dní později.
+    **Kanál pro údržbu je nastavený na Půlroční kanál (cílený) a odložení aktualizace je nastavené na 30 dní**: Řekněme, že Aktualizace funkcí X je nejdříve veřejně dostupná na webu Windows Update jako Půlroční kanál (cílený) v lednu. Zařízení aktualizaci přijme až v únoru – o 30 dní později.
 
-    **Pokud je obslužná větev nastavená na CBB (Aktuální větev pro firmy) a doba odložení je 30 dní**: Řekněme, že aktualizace funkce X je poprvé veřejně dostupná na webu Windows Update jako CB (Aktuální větev) v lednu. O čtyři měsíce později, v dubnu, je aktualizace funkce X vydána pro CBB (Aktuální větev pro firmy). Zařízení obdrží aktualizaci funkce 30 dnů po vydání této Aktuální větve pro firmy a aktualizuje se v květnu.
+    **Kanál pro údržbu je nastavený na Půlroční kanál a odložení aktualizace je nastavené na 30 dní**: Řekněme, že Aktualizace funkcí X je nejdříve veřejně dostupná na webu Windows Update jako Půlroční kanál (cílený) v lednu. O čtyři měsíce později, v dubnu, je Aktualizace funkcí X vydána do Půlročního kanálu. Zařízení přijme Aktualizaci funkcí 30 dní po tomto vydání do Půlročního kanálu a bude se aktualizovat v květnu.
 
     - **Optimalizace doručení**: Zvolte metodu, pro kterou budou zařízení stahovat aktualizace Windows. Podrobnosti najdete v části [DeliveryOptimization/DODownloadMode](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/policy-configuration-service-provider#deliveryoptimization-dodownloadmode).
 8. Po dokončení klikněte na **OK** a pak v okně **Vytvořit aktualizační kanál** klikněte na **Vytvořit**.

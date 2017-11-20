@@ -1,5 +1,5 @@
 ---
-title: "Zásady konfigurace aplikací v Intune | Dokumentace Microsoftu"
+title: "Zásady konfigurace aplikací v Intune | Microsoft Docs"
 titlesuffix: Azure portal
 description: "Přečtěte si, jak používat zásady konfigurace aplikací v Intune."
 keywords: 
@@ -15,11 +15,11 @@ ms.assetid: 834B4557-80A9-48C0-A72C-C98F6AF79708
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b690f691278d0cc708ed7e586e30aee4ed6e807a
-ms.sourcegitcommit: 67c037af31c1f167ec9b4f4baa754631c817e7d1
+ms.openlocfilehash: 406d0faa1e03a41d20c1b584d2d37f9810ddbf32
+ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="app-configuration-policies-for-intune"></a>Zásady konfigurace aplikací v Intune
 
@@ -38,7 +38,7 @@ Tyto zásady nepřiřazujte přímo uživatelům a zařízením. Místo toho př
 
 K dispozici máte dvě možnosti použití konfigurací aplikací v Intune:
  - **Spravovaná zařízení**  
-   Zařízení se spravuje přes Intune jako zprostředkovatel MDM.
+   Zařízení spravuje Intune jako zprostředkovatel správy mobilního zařízení (MDM).
  - **Spravované aplikace**  
    Aplikace se spravuje bez registrace zařízení.
 

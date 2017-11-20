@@ -14,11 +14,11 @@ ms.assetid: D6D15039-4036-446C-A58F-A5E18175720A
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f1ffc07d87e98666a882415d63e11bd04bbd5461
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: fb75d895a2100172fab337dcd740c076ff5e85b7
+ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Získání dat z rozhraní API datového skladu Intune pomocí klienta REST
 
@@ -30,49 +30,43 @@ Při nastavování klienta, který má získat data z rozhraní API datového sk
 3. Udělit této klientské aplikaci přístup k rozhraní API Microsoft Intune
 3. Vytvořit místního klienta REST pro získání dat
 
-V následujícím postupu se dozvíte, jak můžete autorizovat a použít nástroj Postman jako klienta. Postman je nástroj často používaný k řešení problémů a vývoji klientů REST pracujících s rozhraními API. Další informace o tomto nástroji najdete na webu [Postman](https://www.getpostman.com). Toto téma obsahuje také vzorový kód v jazyce C#. Tento vzorový kód ukazuje příklad autorizace klienta a získání dat z rozhraní API.
+V následujícím postupu se dozvíte, jak autorizovat rozhraní API a přistupovat k němu pomocí klienta REST. Nejprve se podíváte na používání obecného klienta REST s využitím nástroje Postman. Postman je nástroj často používaný k řešení problémů a vývoji klientů REST pracujících s rozhraními API. Další informace o tomto nástroji najdete na webu [Postman](https://www.getpostman.com). Pak se můžete podívat na ukázku kódu C#. Tento vzorový kód ukazuje příklad autorizace klienta a získání dat z rozhraní API.
 
-## <a name="create-a-native-app-in-azure"></a>Vytvoření nativní aplikace v Azure
+## <a name="create-a-client-app-as-a-native-app-in-azure"></a>Vytvořit klientskou aplikaci jako nativní aplikaci v Azure
 
 Vytvořte nativní aplikaci v Azure. Tato nativní aplikace představuje klientskou aplikaci. Klient běžící na místním počítači odkazuje na rozhraní API datového skladu Intune, když si místní klient vyžádá přihlašovací údaje. 
 
-1. Přihlaste se k Azure Portalu svého tenanta. Zvolením možností **Azure Active Directory** > **Registrace aplikací** otevřete okno **Registrace aplikací**.
-2. Klikněte na **Registrace nové aplikace**.
+1. Přihlaste se k portálu Azure Portal svého tenanta. Zvolením možností **Azure Active Directory** > **Registrace aplikací** otevřete okno **Registrace aplikací**.
+2. Vyberte **Registrace nové aplikace**.
 3. Zadejte podrobnosti této aplikace.
     1.  Do pole **Název** zadejte nějaký popisný název, například Intune Data Warehouse Client.
     2.  Jako **Typ aplikace** vyberte **Nativní**.
     3.  Do pole **Přihlašovací adresa URL** zadejte adresu URL. Přihlašovací adresa URL bude záviset na konkrétní situaci, pokud ale hodláte použít nástroj Postman, zadejte `https://www.getpostman.com/oauth2/callback`. Při ověřování vůči službě Azure AD použijete v kroku ověřování klienta zpětné volání.
-4.  Klikněte na **Vytvořit**.
+4.  Vyberte **Vytvořit**.
 
      ![Rozhraní API datového skladu Intune](media\reports-get_rest_data_client_overview.png)
 
 5. Poznačte si **ID aplikace** této aplikace. Toto ID použijete v další části.
-6. Pokud hodláte použít nástroj Postman, přidejte klíč. Tento klíč slouží jako tajný klíč klienta při ověřování vůči službě Azure AD. Klíč přidáte takto:
-    1.  V okně Nastavení této aplikace klikněte v oblasti **Přístup přes rozhraní API** na **Klíče**.
-    2.  Do pole **Popis** zadejte název klíče, například Tajný klíč klienta.
-    3.  V poli Doba trvání vyberte **1 rok**.
-    4.  Klikněte na **Uložit**. 
-    5.  Zkopírujte hodnotu klíče. Po zavření okna **Nastavení** u klíčů už nebudete moct tento klíč získat.
 
-## <a name="grant-the-native-app-access-to-the-microsoft-intune-api"></a>Udělení přístupu k rozhraní API Microsoft Intune nativní aplikaci
+## <a name="grant-the-client-app-access-to-the-microsoft-intune-api"></a>Udělit této klientské aplikaci přístup k rozhraní API Microsoft Intune
 
 Teď máte v Azure definovanou aplikaci. Udělte z této nativní aplikace přístup k rozhraní API Microsoft Intune.
 
-1.  Klikněte na nativní aplikaci. Tuto aplikaci jste pojmenovali jako **Intune Data Warehouse Client**.
-2.  V okně **Nastavení** klikněte na **Požadovaná oprávnění**.
-3.  V okně **Požadovaná oprávnění** klikněte na **Přidat**.
-4.  Klikněte na **Vyberte rozhraní API**.
+1.  Vyberte nativní aplikaci. Tuto aplikaci jste pojmenovali jako **Intune Data Warehouse Client**.
+2.  V okně **Nastavení** vyberte **Požadovaná oprávnění**.
+3.  V okně **Požadovaná oprávnění** vyberte **Přidat**.
+4.  Vyberte **Vyberte rozhraní API**.
 5.  Vyhledejte název webové aplikace. Její název je **Rozhraní API Microsoft Intune**.
-6.  Klikněte v seznamu na tuto aplikaci.
-7.  Klikněte na **Vybrat**.
+6.  Vyberte v seznamu tuto aplikaci.
+7.  Vyberte **Vybrat**.
 8.  Zaškrtnutím políčka **Delegovaná oprávnění** přidejte možnost **Získat informace datového skladu z Microsoft Intune**.
 
     ![Povolení přístupu](media\reports-get_rest_data_client_access.png)
 
-9.  Klikněte na **Vybrat**.
-10.  Klikněte na **Hotovo**.
-11.  V okně Požadovaná oprávnění můžete volitelně kliknout na **Udělit oprávnění**. Tím udělíte přístup všem účtům v aktuálním adresáři. Zabráníte tím tomu, aby se dialogové okno souhlasu zobrazilo pro každého uživatele v tenantovi. Další informace najdete v článku [Integrace aplikací s Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
-12.  Klikněte na **Ano**.
+9.  Vyberte **Vybrat**.
+10.  Vyberte **Hotovo**.
+11.  V okně Požadovaná oprávnění můžete volitelně vybrat **Udělit oprávnění**. Tím udělíte přístup všem účtům v aktuálním adresáři. Zabráníte tím tomu, aby se dialogové okno souhlasu zobrazilo pro každého uživatele v tenantovi. Další informace najdete v článku [Integrace aplikací s Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
+12.  Vyberte **Ano**.
 
 ## <a name="get-data-from-the-microsoft-intune-api-with-postman"></a>Získání dat z rozhraní API Microsoft Intune pomocí nástroje Postman
 
@@ -86,14 +80,26 @@ Abyste mohli nástrojem Postman uskutečnit volání REST, budete potřebovat n�
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | Adresa URL zpětného volání     | Tento atribut nastavte stejně jako adresu URL zpětného volání na stránce s nastavením aplikace.                                                                                                                              | https://www.getpostman.com/oauth2/callback                                                    |
 | Název tokenu       | Řetězec sloužící k předání přihlašovacích údajů aplikaci Azure. Tento proces vám token vygeneruje, takže můžete uskutečnit volání rozhraní API datového skladu.                          | Bearer                                                                                        |
-| Ověřovací adresa URL         | Toto je adresa URL sloužící k ověření. | https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com |
+| Ověřovací adresa URL         | Toto je adresa URL sloužící k ověření. | https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com/ |
 | Adresa URL přístupového tokenu | Toto je adresa URL sloužící k udělení tokenu.                                                                                                                                              | https://login.microsoftonline.com/common/oauth2/token |
 | ID klienta        | Tento atribut jste vytvořili a poznačili si při vytváření nativní aplikace v Azure.                                                                                               | 4184c61a-e324-4f51-83d7-022b6a81b991                                                          |
-| Tajný klíč klienta    | Tento atribut jste vytvořili a poznačili si při přidávání klíče klientské aplikace v Azure.                                                                                              | JZoRZGPmN9xwsUnfX9UW877dkV5Fn/qQClhr7SuyMUQ=                                                  |
 | Rozsah (nepovinné) | Prázdné                                                                                                                                                                               | Toto pole můžete nechat prázdné.                                                                     |
 | Typ udělení       | Tento token představuje autorizační kód.                                                                                                                                                  | Autorizační kód                                                                            |
 
-Potřebujete koncový bod. V tomto příkladu budeme načítat data z entity **dates**. Entita **dates** má následující formát: `https://fef.{aus}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta` Použijete adresu URL pro správu svého tenanta. Tuto adresu URL jste použili při vytváření webové aplikace.
+### <a name="odata-endpoint"></a>Koncový bod OData
+
+Potřebujete také koncový bod. K získání koncového bodu datového skladu budete potřebovat adresu URL vlastního kanálu. Koncový bod OData můžete získat v okně datového skladu.
+
+1. Přihlaste se k portálu Azure Portal.
+2. Zvolte **Další služby** > **Monitorování + správa** + **Intune**.
+3. V části **Ostatní úkoly** vyberte **Nastavení Datového skladu Intune**.
+4. V části **Použít služby generování sestav třetích stran** zkopírujte adresu URL vlastního kanálu. Měla by vypadat přibližně takto: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
+
+Koncový bod má tento formát: `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`. 
+
+Například entita **dates** vypadá takto: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
+
+Další informace najdete v tématu [Koncový bod rozhraní API datového skladu Intune](reports-api-url.md).
 
 ### <a name="make-the-rest-call"></a>Uskutečnění volání REST
 
@@ -105,39 +111,34 @@ Abyste získali nový přístupový token pro nástroj Postman, musíte přidat 
 2.  Otevřete nástroj Postman. Zvolte operaci HTTP typu **GET**.
 3.  Vložte do adresy adresu URL koncového bodu. Vypadá přibližně takto:  
 
-    `https://fef.msua06.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
+    `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
 4.  Zvolte kartu **Authorization** (Autorizace) a v seznamu **Type** (Typ) vyberte **OAuth 2.0**.
-5.  Klikněte na **Get New Access Token** (Získat nový přístupový token).
+5.  Vyberte **Get New Access Token** (Získat nový přístupový token).
 6.  Ověřte, že jste do své aplikace v Azure už přidali adresu URL zpětného volání. Adresa URL zpětného volání je `https://www.getpostman.com/oauth2/callback`.
 7.  Do pole **Token Name** (Název tokenu) zadejte Bearer.
 8.  Přidejte **Auth URL** (Ověřovací adresa URL). Vypadá přibližně takto:  
 
-    `https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com`
+    `https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com/`
 9.  Přidejte **Access Token URL** (Adresa URL přístupového tokenu). Vypadá přibližně takto:  
 
      `https://login.microsoftonline.com/common/oauth2/token`
 
 10. Přidejte **Client ID** (ID klienta) z nativní aplikace, které jste vytvořili v Azure a pojmenovali jako `Intune Data Warehouse Client`. Vypadá přibližně takto:  
 
-     `4184c61a-e324-4f51-83d7-022b6a81b991`
+     `88C8527B-59CB-4679-A9C8-324941748BB4`
 
-11. Přidejte **Client Secret** (Tajný klíč klienta), který jste definovali jako klíč při vytváření nativní aplikace v Azure. Vypadá přibližně takto: 
+11. Vyberte **Authorization Code** (Autorizační kód) a místně si vyžádejte přístupový token.
 
-     `F360R69M0MS72OB6YAqTyXO9MsXZx/OJTgAE2HB4k2k=`
-
-12. Vyberte **Authorization Code** (Autorizační kód) a místně si vyžádejte přístupový token.
-
-13. Klikněte na **Request Token** (Vyžádat token).
+12. Vyberte **Request Token** (Vyžádat token).
 
     ![Informace pro token](media\reports-postman_getnewtoken.png)
 
-14. Na autorizační stránku služby Azure AD zadejte svoje přihlašovací údaje. Seznam existujících tokenů v nástroji Postman teď obsahuje token s názvem `Bearer`.
-16. Zvolte tento token. V seznamu Add token to (Přidat token do) vyberte **Header** (Hlavička).
-17. Klikněte na **Use Token** (Použít token). Seznam hlaviček obsahuje novou hodnotu klíče pro autorizaci a hodnotu `Bearer <your-authorization-token>`.
+13. Na autorizační stránku služby Azure AD zadejte svoje přihlašovací údaje. Seznam tokenů v nástroji Postman teď obsahuje token s názvem `Bearer`.
+14. Vyberte **Use Token** (Použít token). Seznam hlaviček obsahuje novou hodnotu klíče pro autorizaci a hodnotu `Bearer <your-authorization-token>`.
 
 #### <a name="send-the-call-to-the-endpoint-using-postman"></a>Odeslání volání koncovému bodu pomocí nástroje Postman
 
-1.  Klikněte na **Odeslat**.
+1.  Vyberte **Send** (Odeslat).
 2.  V textu odpovědi nástroje Postman se zobrazí návratová data.
 
     ![Postman 200OK](media\reports-postman_200OK.png)
@@ -151,10 +152,10 @@ Následující vzorový kód obsahuje jednoduchého klienta REST. V kódu se pou
 
 1.  Otevřete **Microsoft Visual Studio**.
 2.  Zvolte **Soubor** > **Nový projekt**. Rozbalte **Visual C#** a zvolte **Konzolová aplikace (.Net Framework)**. 
-3.  Dejte projektu název ` IntuneDataWarehouseSamples`, přejděte do místa, kam chcete projekt uložit, a klikněte na **OK**.
-4.  V Průzkumníkovi řešení klikněte na toto řešení pravým tlačítkem a vyberte **Spravovat balíčky NuGet pro řešení**. Klikněte na **Procházet** a pak do vyhledávacího pole zadejte `Microsoft.IdentityModel.Clients.ActiveDirectory`.
-5. Zvolte tento balíček, v oblasti Spravovat balíčky pro vaše řešení vyberte projekt **IntuneDataWarehouseSamples** a pak klikněte na **Nainstalovat**. 
-6. Kliknutím na **Přijímám** přijměte licenci na tento balíček NuGet.
+3.  Dejte projektu název ` IntuneDataWarehouseSamples`, přejděte do místa, kam chcete projekt uložit, a vyberte **OK**.
+4.  V Průzkumníkovi řešení klikněte na toto řešení pravým tlačítkem a vyberte **Spravovat balíčky NuGet pro řešení**. Vyberte **Procházet** a pak do vyhledávacího pole zadejte `Microsoft.IdentityModel.Clients.ActiveDirectory`.
+5. Zvolte tento balíček, v oblasti Spravovat balíčky pro vaše řešení vyberte projekt **IntuneDataWarehouseSamples** a pak vyberte **Nainstalovat**. 
+6. Výběrem možnosti **Přijímám** přijměte licenci na tento balíček NuGet.
 7. Otevřete `Program.cs` v Průzkumníkovi řešení.
 
     ![Projekt v sadě Visual Studio](media\reports-get_rest_data_in.png)

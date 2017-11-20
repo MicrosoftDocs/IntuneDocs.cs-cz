@@ -42,7 +42,7 @@
 - name: Začínáme s Intune
   href: get-started-evaluation.md
   items:
-    - name: Navigace na Azure Portalu
+    - name: Navigace na portálu Azure Portal
       href: get-started-azure.md
     - name: Umožňuje vytvořit uživatele.
       href: get-started-users.md
@@ -608,19 +608,23 @@
         - name: Datový model datového skladu
           href: reports-ref-data-model.md
           items:
+            - name: Znázornění používání datového skladu Intune uživatelem
+              href: reports-ref-user-timeline.md
             - name: Referenční informace o entitách aplikací
               href: reports-ref-application.md
+            - name: Referenční informace o entitě aktuálního uživatele
+              href: reports-ref-current-user.md
             - name: Referenční informace pro entitu dat
               href: reports-ref-date.md
             - name: Referenční informace o entitách zařízení
               href: reports-ref-devices.md
-            - name: Referenční informace k rozšíření správy Intune
+            - name: Referenční informace o entitě rozšířené správy Intune
               href: reports-ref-intunemanagementextension.md
             - name: Referenční informace o entitách správy mobilních aplikací (MAM)
               href: reports-ref-mobile-app-management.md
             - name: Referenční informace pro entity zásad
               href: reports-ref-policy.md
-            - name: Referenční informace pro přidružení zařízení uživatelů
+            - name: Referenční informace o entitě Přidružení zařízení uživatelů
               href: reports-ref-user-device.md
             - name: Referenční informace pro entitu uživatele
               href: reports-ref-user.md
