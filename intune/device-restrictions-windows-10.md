@@ -15,11 +15,11 @@ ms.assetid: 89f2d806-2e97-430c-a9a1-70688269627f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 759207adf49308dcd4e6253627e4a1213be22904
-ms.sourcegitcommit: 2e77fe177a3df1dfe48e72f4c2bfaa1f0494c621
+ms.openlocfilehash: 903ba99a747689dd8882acedcb24fef2dd00a01d
+ms.sourcegitcommit: af958afce3070a3044aafea490c8afc55301d9df
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2017
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení Windows 10 a novější v Microsoft Intune
 
@@ -31,10 +31,10 @@ ms.lasthandoff: 10/19/2017
 -   **Ruční zrušení zápisu** – Umožňuje uživateli ze zařízení ručně odstranit pracovní účet.
 -   **Ruční instalace kořenového certifikátu (jenom mobilní verze)** – Zabrání uživateli v ruční instalaci kořenových certifikátů a zprostředkujících certifikátů CAP.
 -   **Odeslání diagnostických dat** – Možné hodnoty jsou:
-    -       **Žádné:** Do Microsoftu se nepošlou žádná data.
-    -       **Základní:** Do Microsoftu se pošle omezené množství dat.
-    -       **Rozšířené:** Do Microsoftu se pošlou rozšířená data pro diagnostiku.
-    -       **Úplné:** Pošle stejná data jako možnost Rozšířené a k tomu navíc údaje o stavu zařízení.
+    - **Žádné** – Microsoftu se nepošlou žádná data.
+    - **Základní** – Microsoftu se pošlou omezené informace.
+    - **Rozšířené** – Microsoftu se pošlou rozšířená data pro diagnostiku.
+    - **Úplné:** Pošle stejná data jako možnost Rozšířené a k tomu navíc údaje o stavu zařízení.
 -   **Kamera** – Povolí nebo zablokuje použití fotoaparátu v zařízení.
 -   **Synchronizace souboru OneDrivu** – Zablokuje zařízení možnost synchronizovat soubory s OneDrivem.
 -   **Vyměnitelné úložiště** – Určuje, jestli je možné v zařízení používat externí úložiště, jako jsou karty SD.
@@ -105,6 +105,7 @@ Pro zařízení s Windows 10: Jakmile se nepovede určený počet pokusů o při
 
 
 ## <a name="edge-browser"></a>Prohlížeč Edge
+
 -   **Prohlížeč Microsoft Edge (jenom mobilní verze)** – Povolí používání webového prohlížeče Edge na zařízení.
 -   **Rozevírání panelu Adresa (jenom stolní počítače)** – Tímto nastavením zastavíte Edge, aby v rozevíracím seznamu při psaní zobrazoval seznam návrhů. Pomůžete tím minimalizovat používanou šířku pásma sítě mezi Edgem a službami Microsoftu.
 -   **Synchronizovat oblíbené položky mezi prohlížeči Microsoft (jenom stolní počítače)** – Umožňuje Windows synchronizovat oblíbené položky mezi Internet Explorerem a Edgem.
@@ -180,6 +181,44 @@ Pro zařízení s Windows 10: Jakmile se nepovede určený počet pokusů o při
     -   **Usnadnění přístupu** – Zablokuje přístup k oblasti usnadnění přístupu v aplikaci Nastavení.
     -   **Soukromí** – Zablokuje přístup k oblasti soukromí v aplikaci Nastavení.
     -   **Aktualizace a zabezpečení** – Zablokuje přístup k oblasti aktualizací a zabezpečení v aplikaci Nastavení.
+
+## <a name="kiosk"></a>Veřejný terminál
+
+-   **Beznabídkový režim** – Identifikuje typ [režimu veřejného terminálu](https://docs.microsoft.com/en-us/windows/configuration/kiosk-shared-pc) podporovaného zásadami.  Vaše možnosti jsou:
+
+      - **Nenakonfigurováno** (výchozí) – Zásady nepovolují režim veřejného terminálu. 
+      - **Veřejný terminál s jednou aplikací** – Profil povoluje zařízení jako veřejný terminál s jednou aplikací.
+      - **Veřejný terminál s více aplikacemi** – Profil povoluje zařízení jako veřejný terminál s více aplikacemi.
+
+    Veřejný terminál s jednou aplikací vyžaduje následující nastavení:
+
+      - **Uživatelský účet** – Určuje místní uživatelský účet (v zařízení) nebo přihlášení k účtu Azure AD přidružené k aplikaci veřejného terminálu.  Pro účty připojené k doménám Azure AD zadejte účet ve tvaru `domain\\username@tenant.org`.
+
+         Pro zařízení ve veřejných prostředích použijte účty s minimálními oprávněními, abyste zabránili autorizované aktivitě.  
+
+      - **ID modelu uživatele aplikace (AUMID) dané aplikace** – Určuje AUMID aplikace veřejného terminálu.  Další informace najdete v tématu [Jak najít ID modelu uživatele aplikace (AUMID) nainstalované aplikace](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+
+    Veřejné terminály s více aplikacemi vyžadují konfiguraci veřejného terminálu.  Použijte tlačítko **Přidat** a vytvořte konfiguraci veřejného terminálu, nebo vyberte existující konfiguraci.
+
+    Konfigurace veřejných terminálů s více aplikacemi zahrnují následující nastavení:
+
+    - **Název konfigurace veřejného terminálu** – Popisný název, pomocí kterého se daná konfigurace identifikuje.
+
+    - Jedna nebo více **aplikací veřejného terminálu**, které tvoří:
+
+        - **Typ aplikace** – Určuje typ aplikace veřejného terminálu.  Mezi podporované hodnoty patří:   
+
+            - **Aplikace Win32** – Tradiční desktopová aplikace.  (Budete potřebovat plně kvalifikovanou (absolutní) cestu ke spustitelnému souboru, s ohledem na zařízení.)
+
+            - **Aplikace pro UPW** – Univerzální aplikace pro Windows.  Budete potřebovat [AUMID aplikace](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+
+        - **Identifikátor aplikace** – Určuje buď plně kvalifikovanou (absolutní) cestu spustitelného souboru (u aplikací Win32), nebo [AUMID aplikace](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (u aplikací pro UPW).
+
+    - **Hlavní panel** – Určuje, jestli má být na veřejném terminálu hlavní panel zobrazený (**Povoleno**), nebo skrytý (**Nenakonfigurováno**).
+
+    - **Rozložení nabídky Start** – Určuje soubor XML, který popisuje, jak se mají aplikace [zobrazit v nabídce Start](https://docs.microsoft.com/en-us/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file).
+
+    - **Přiřazení uživatelé** – Určuje jeden nebo více uživatelských účtů přidružených ke konfiguraci veřejného terminálu.  Účet může být místní (v zařízení) nebo přihlášení k účtu Azure AD přidružené k aplikaci veřejného terminálu.  Účty připojené k doménám zadejte ve tvaru `domain\\username@tenant.org`.
 
 ## <a name="defender"></a>Defender
 

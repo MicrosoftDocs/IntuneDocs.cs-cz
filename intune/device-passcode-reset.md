@@ -1,12 +1,12 @@
 ---
-title: "Resetování hesla zařízení přes Intune"
+title: "Resetování nebo odebrání hesel zařízení s Intune"
 titlesuffix: Azure portal
-description: "Informace o tom, jak resetovat heslo na zařízeních, která spravujete přes Intune"
+description: "Informace o tom, jak resetovat nebo odebrat heslo na zařízeních spravovaných přes Intune"
 keywords: 
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 08/09/2017
+ms.date: 11/06/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,20 @@ ms.technology:
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3defec3624944918d14b9c4527487c368c487dd6
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: dfa94d11f978bbe4d23b6672423c849e1f061986
+ms.sourcegitcommit: 474a24ba67f6bf4f00268bf9e4eba52331a6b82d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 11/07/2017
 ---
-# <a name="reset-the-passcode-on-intune-managed-devices"></a>Resetování hesla na zařízeních spravovaných přes Intune
+# <a name="reset-and-remove-the-passcode-on-intune-managed-devices"></a>Resetování nebo odebrání hesla na zařízeních spravovaných přes Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Akce **Resetovat heslo** vygeneruje pro zařízení nové heslo, které se zobrazí v okně <*název zařízení*> **Přehled**.
+Termíny *odebrání* a *resetování*  se v tomto článku používají se zaměnitelným významem.
+
+Akce **Odebrat heslo** vygeneruje pro zařízení nové heslo, které se zobrazí v okně <*název zařízení*> **Přehled**.
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
@@ -41,7 +43,7 @@ Akce **Resetovat heslo** vygeneruje pro zařízení nové heslo, které se zobra
 2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 3. V okně **Intune** zvolte **Zařízení**.
 4. V okně **Zařízení a skupiny** zvolte **Všechna zařízení**.
-5. V seznamu zařízení, která spravujete, zvolte zařízení a potom zvolte akci se vzdáleným zařízením **Resetovat heslo**.
+5. V seznamu zařízení, která spravujete, zvolte zařízení a potom zvolte akci se vzdáleným zařízením **Odebrat heslo**.
 
 ## <a name="next-steps"></a>Další kroky
 

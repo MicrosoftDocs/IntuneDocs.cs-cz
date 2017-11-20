@@ -6,7 +6,7 @@ keywords:
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 10/10/2017
+ms.date: 11/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 99b8b50dbbb2dc2e3d7e8cd5af2f95fa2bb3b861
-ms.sourcegitcommit: 42a0e4c83e33c1a25506ca75d673e861e9206945
+ms.openlocfilehash: 395b48ab71b093c12c244fab1acd22c0ecca4c51
+ms.sourcegitcommit: 0a2897b5104dc33ca0661c27a373026d7f4cc956
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/26/2017
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Správa přístupu k internetu pomocí zásad aplikace Managed Browser v Microsoft Intune
 
@@ -68,7 +68,7 @@ Intune Managed Browser podporuje otevírání webového obsahu od [partnerů nab
 3.  V okně **Mobilní aplikace** v seznamu Spravovat zvolte **Zásady konfigurace aplikací**.
 4.  V okně **Zásady konfigurace aplikací** zvolte **Přidat**.
 5.  V okně **Přidat konfiguraci aplikace** zadejte **název** a volitelný **popis** nastavení konfigurace aplikace.
-6.  Jako typ **Registrace zařízení** zvolte **Spravovaná zařízení** nebo **Spravované aplikace**.
+6.  Jako typ **Registrace zařízení** zvolte **Spravované aplikace**.
 7.  Zvolte možnost **Vyberte požadované aplikace** a potom v okně **Cílové aplikace** zvolte **Managed Browser** pro iOS, Android nebo oba systémy.
 8.  Kliknutím na **OK** se vraťte do okna **Přidat konfiguraci aplikace**.
 9.  Zvolte **Nastavení konfigurace**. V okně **Konfigurace** definujte dvojice klíč-hodnota, které budou určovat nastavení aplikace Managed Browser. Informace o různých párech klíč a hodnota, které můžete definovat, najdete v dalších částech tohoto článku.
@@ -202,6 +202,22 @@ V následující části najdete informace o povolených formátech a zástupný
     -   http://www.contoso.com:&#42;
 
     -   http://www.contoso.com: /&#42;
+
+## <a name="how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios"></a>Jak se dostat k protokolům spravovaných aplikací pomocí Managed Browseru na zařízení s iOSem
+
+Koncoví uživatelé, kteří mají na zařízení s iOSem nainstalovaný prohlížeč Managed Browser, můžou zobrazit stav správy všech aplikací publikovaných Microsoftem. Můžou posílat protokoly kvůli řešení problémů se spravovanými aplikacemi pro iOS.
+
+1. Otevřete **Nastavení** pro iOS.
+2. Vyberte nastavení aplikace **Managed Browser**.
+3. Přepněte **Povolit diagnostiku Intune** a nastavte tak prohlížeč do režimu pro řešení problémů.
+4. Otevřete **Managed Browser**. Klikněte na **Zobrazit stav aplikace v Intune** a zkontrolujte nastavení zásad pro jednotlivé aplikace.
+5. Stiskněte **Začínáme** a **Sdílet protokoly** nebo **Odeslat protokoly do Microsoftu** a pošlete protokoly pro řešení problémů správci IT nebo Microsoftu.
+
+Prohlížeč Managed Browser můžete otevřít v režimu pro řešení problémů také z aplikace.
+
+1. Otevřete Managed Browser.
+2. Do pole adresy zadejte `about:intunehelp`.
+Prohlížeč Managed Browser spustí režim pro řešení problémů.
 
 ## <a name="security-and-privacy-for-the-managed-browser"></a>Zabezpečení a ochrana osobních údajů v aplikaci Managed Browser
 

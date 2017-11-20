@@ -3,10 +3,10 @@ title: "Vytvoření profilu Wi-Fi s předsdíleným klíčem"
 titleSuffix: Azure portal
 description: "Použijte vlastní profil Intune k vytvoření profilu Wi-Fi s předsdíleným klíčem."
 keywords: 
-author: lleonard-msft
-ms.author: alleonar
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.date: 05/15/2017
+ms.date: 11/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c524acc403d6a1c041aa0dcea0948c2707202e03
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: bfcce8d38bc403a13aa28cc762370a7cfaa0bc2d
+ms.sourcegitcommit: 1df625330f4e8f7f661b5f2b9f16b5590971838d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 11/10/2017
 ---
-# <a name="use-a-microsoft-intune-custom-device-profile-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Vytvoření profilu sítě Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení v Microsoft Intune
+# <a name="use-a-custom-device-profile-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Vytvoření profilu sítě Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Zde najdete postup, jak pomocí **vlastních profilů zařízení** služby Intune vytvoříte profil Wi-Fi s předsdíleným klíčem. Toto téma obsahuje také příklad vytvoření profilu Wi-Fi založeného na protokolu EAP.
@@ -205,3 +205,12 @@ Můžete také vytvořit soubor XML z existujícího připojení Wi-Fi:
     Nejvhodnější je použít počítač, který je připojený k co nejmenšímu počtu bezdrátových sítí, protože budete muset prohledávat každý profil, abyste našli ten správný.
 3.     Prohledejte soubory XML a najděte ten se správným názvem.
 4.     Po vyhledání správného souboru XML zkopírujte kód XML a vložte ho do pole Data na stránce nastavení OMA-URI.
+
+## <a name="best-practices"></a>Osvědčené postupy
+Než profil Wi-Fi s předsdíleným klíčem nasadíte, ověřte, jestli se zařízení může přímo připojit ke koncovému bodu.
+
+Při obměně klíčů (hesel) počítejte s výpadky a podle toho naplánujte nasazení. Zvažte zavedení nových profilů Wi-Fi mimo pracovní dobu. Upozorněte také uživatele na možné omezení připojení.
+ 
+Pokud má být přechod hladký a aktualizace zásad mají probíhat podle plánu, zařízení musí mít otevřený alespoň jeden komunikační kanál k Intune. Použijte proto připojení přes mobilní služby nebo poskytněte přístup k síti Wi-Fi pro hosty, který uživatele připojí jenom ke koncovým bodům Intune.
+
+

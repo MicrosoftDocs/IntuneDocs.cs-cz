@@ -42,7 +42,7 @@
 - name: Začínáme s Intune
   href: get-started-evaluation.md
   items:
-    - name: Navigace na Azure Portalu
+    - name: Navigace na portálu Azure Portal
       href: get-started-azure.md
     - name: Umožňuje vytvořit uživatele.
       href: get-started-users.md
@@ -164,6 +164,8 @@
               href: windows-bulk-enroll.md
             - name: Program Windows AutoPilot Deployment
               href: enrollment-autopilot.md
+            - name: Obrazovka stavu registrace
+              href: windows-enrollment-status.md
         - name: Nastavení registrace zařízení s Androidem
           href: android-enroll.md
         - name: Nastavení registrace zařízení s iOSem
@@ -365,6 +367,8 @@
               href: certficates-pfx-configure.md
         - name: Konfigurace nastavení Windows Information Protection
           href: windows-information-protection-configure.md
+        - name: Správa powershellových skriptů
+          href: intune-management-extension.md
         - name: Monitorování výdajů na telekomunikaci
           href: telecom-expenses-monitor.md
         - name: Přiřazení profilů
@@ -556,11 +560,11 @@
     - name: Konfigurace vlastních nastavení zařízení
       href: custom-settings-configure.md
       items:
+        - name: Vytvoření profilu Wi-Fi s předsdíleným klíčem
+          href: wi-fi-profile-shared-key.md
         - name: Android
           href: custom-settings-android.md
           items:
-            - name: Vytvoření profilu Wi-Fi s předsdíleným klíčem
-              href: wi-fi-profile-shared-key.md
             - name: Profil sítě VPN pro jednotlivé aplikace
               href: android-pulse-secure-per-app-vpn.md
             - name: Povolení a blokování aplikací pro Samsung KNOX Standard
@@ -604,19 +608,23 @@
         - name: Datový model datového skladu
           href: reports-ref-data-model.md
           items:
+            - name: Znázornění používání datového skladu Intune uživatelem
+              href: reports-ref-user-timeline.md
             - name: Referenční informace o entitách aplikací
               href: reports-ref-application.md
+            - name: Referenční informace o entitě aktuálního uživatele
+              href: reports-ref-current-user.md
             - name: Referenční informace pro entitu dat
               href: reports-ref-date.md
             - name: Referenční informace o entitách zařízení
               href: reports-ref-devices.md
-            - name: Referenční informace k rozšíření správy Intune
+            - name: Referenční informace o entitě rozšířené správy Intune
               href: reports-ref-intunemanagementextension.md
             - name: Referenční informace o entitách správy mobilních aplikací (MAM)
               href: reports-ref-mobile-app-management.md
             - name: Referenční informace pro entity zásad
               href: reports-ref-policy.md
-            - name: Referenční informace pro přidružení zařízení uživatelů
+            - name: Referenční informace o entitě Přidružení zařízení uživatelů
               href: reports-ref-user-device.md
             - name: Referenční informace pro entitu uživatele
               href: reports-ref-user.md

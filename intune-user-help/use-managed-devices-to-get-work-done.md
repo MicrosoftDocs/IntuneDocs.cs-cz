@@ -1,11 +1,11 @@
 ---
-title: "Práce pomocí spravovaných zařízení | Dokumentace Microsoftu"
+title: "Práce pomocí spravovaných zařízení |Microsoft Docs"
 description: "Seznámíte se s principy registrace zařízení za účelem správy v Intune."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/23/2017
+ms.date: 11/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 9317fd747e52524d97cea5d4c79fed49246b5866
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: d8a5989358da932e4e8ce59528602fefb2265528
+ms.sourcegitcommit: e692be57ec7044dfc224b70941affbfd7efba421
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="use-managed-devices-to-get-work-done"></a>Práce pomocí spravovaných zařízení
 Microsoft Intune je software, který organizacím umožňuje spravovat zařízení (jako jsou smartphony, tablety nebo počítače), aplikace a další firemní prostředky (například e-mail). To zaměstnancům zajistí přístup k pracovním informacím prakticky odkudkoli z jakéhokoli zařízení a současně uchová firemní data v bezpečí.
@@ -28,7 +28,7 @@ Microsoft Intune je software, který organizacím umožňuje spravovat zařízen
 Když si zaregistrujete zařízení do správy pomocí Intune, může vaše IT oddělení tyto pracovní nebo školní prostředky spravovat, udržovat zařízení ve větším bezpečí a zároveň vám jako zaměstnanci umožnit, abyste k plnění úkolů používali zařízení, které preferujete. Základním způsobem, jak toho dosáhnout, je registrace zařízení do správy prostřednictvím Portálu společnosti.
 
 ## <a name="what-information-can-my-company-see-when-i-enroll-my-device-in-intune"></a>Jaké informace moje společnost uvidí, když svoje zařízení zaregistruji do Intune?
-IT oddělení vaší společnosti uvidí informace související s vaší prací, nikoli vaše osobní údaje. To je důležité vědět, když registrujete svoje osobní zařízení, abyste ho používali v práci. Seznam věcí, které správce IT [uvidí nebo neuvidí na vašem zařízení, najdete v dalším článku uživatelské nápovědy](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
+Podpora vaší společnosti uvidí informace související s vaší prací, ale neuvidí vaše osobní údaje. To je důležité vědět, když registrujete svoje osobní zařízení, abyste ho používali v práci. Seznam věcí, které správce IT [uvidí nebo neuvidí na vašem zařízení, najdete v dalším článku uživatelské nápovědy](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
 ## <a name="how-do-i-get-the-company-portal"></a>Jak získám Portál společnosti?
 Můžete ho získat jedním ze dvou způsobů:
@@ -49,7 +49,8 @@ Mezi aplikací Portál společnosti a webem Portál společnosti jsou drobné ro
 Pokud chcete zjistit, co můžete dělat pomocí webu Portál společnosti v porovnání s aplikací Portál společnosti na vašem konkrétním zařízení, zvolte jeden z následujících odkazů:
 
 - [Použití zařízení s Androidem](using-your-android-device-with-intune.md)
-- [Použití zařízení s iOSem nebo macOSem](using-your-ios-or-macOS-device-with-intune.md)
+- [Používání zařízení s iOSem](using-your-ios-device-with-intune.md)
+- [Používání zařízení s macOS](using-your-macos-device-with-intune.md)
 - [Použití zařízení s Windows](using-your-windows-device-with-intune.md)
 - [Použití webu Portál společnosti](using-the-intune-company-portal-website.md)
 

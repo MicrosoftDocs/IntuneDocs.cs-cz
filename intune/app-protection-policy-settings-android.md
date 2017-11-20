@@ -6,7 +6,7 @@ keywords:
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 10/20/2017
+ms.date: 11/6/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8c07125901709d4d7baf3339e4dd09cb5620e8d1
-ms.sourcegitcommit: e9f9fccccef691333143b7523d1b325ee7d1915a
+ms.openlocfilehash: 2383d41c52618710a1d42f0b2236d41d117b42be
+ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="android-app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací pro Android
 Nastavení zásad popsané v tomto tématu se dá [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v okně **Nastavení** na portálu Azure Portal.
@@ -90,3 +90,5 @@ Existují dvě kategorie nastavení zásad:nastavení přemístění dat a nasta
 | **Vyžadovat minimální verzi operačního systému Android (jenom upozornění)** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi operačního systému Android. Uživateli se zobrazí oznámení, pokud verze Androidu v zařízení nesplňuje tento požadavek. Toto oznámení je možné zavřít. | Ne |
 | **Vyžadovat minimální verzi aplikace** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi aplikace. Uživateli bude zablokován přístup, pokud verze aplikace v zařízení nesplňuje tento požadavek.<br><br>Při výběru cílových aplikací si prosím uvědomte, že aplikace mívají často odlišná schémata verzí.<br><br> | Ne | 
 | **Vyžadovat minimální verzi aplikace (jenom upozornění)** | Zvolte **Ano**, pokud k používání této aplikace doporučujete minimální verzi aplikace. Uživateli se zobrazí oznámení, pokud verze aplikace v zařízení nesplňuje tento požadavek. Toto oznámení je možné zavřít.<br><br>Při výběru cílových aplikací si prosím uvědomte, že aplikace mívají často odlišná schémata verzí.<br><br> | Ne | 
+| **Vyžadovat minimální verzi opravy Androidu** | Zvolte **Ano**, pokud požadujete minimální opravu zabezpečení Androidu vydanou Googlem. Uživateli bude zablokován přístup, pokud oprava zabezpečení Androidu v zařízení nesplňuje tento požadavek. | Ne |
+| **Vyžadovat minimální verzi opravy Androidu (jen upozornění)** | Zvolte **Ano**, pokud požadujete minimální opravu zabezpečení Androidu vydanou Googlem. Uživateli se zobrazí oznámení, pokud oprava zabezpečení Androidu v zařízení nesplňuje tento požadavek. Toto oznámení je možné zavřít. | Ne |

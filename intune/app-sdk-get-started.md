@@ -5,7 +5,7 @@ keywords:
 author: mattbriggs
 manager: angrobe
 ms.author: mabriggs
-ms.date: 12/15/2016
+ms.date: 11/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 65350c9a247c5820cb2080d8230d308a37e98d7c
-ms.sourcegitcommit: 42a0e4c83e33c1a25506ca75d673e861e9206945
+ms.openlocfilehash: a0134f19aea3956a6aff852d97e9d95e1882e056
+ms.sourcegitcommit: 0f877251e6adf4e45b918cc8dc9193626727f2d9
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/26/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
 
@@ -113,8 +113,50 @@ Microsoft Intune shromažďuje data statistik využití vaši aplikace.
 
     * Pokud se rozhodnete neodesílat telemetrická data sady SDK z aplikace do Microsoft Intune, musíte ve slovníku IntuneMAMSettings zakázat přenos telemetrie nastavením vlastnosti `MAMTelemetryDisabled` na hodnotu YES.
 
-
 * **Intune App SDK pro Android**: Telemetrické údaje se neprotokolují pomocí sady SDK.
+
+ Je viditelné číslo verze obchodní aplikace pro iOS a Android <!-- 1380712 -->
+
+## <a name="line-of-business-app-version-numbers"></a>Čísla verzí obchodních aplikací
+
+Obchodní aplikace v Intune teď zobrazují číslo verze aplikací pro iOS a Android. Číslo se zobrazuje na portálu Azure Portal v seznamu aplikací a v okně přehledu aplikace. Koncoví uživatelé uvidí číslo aplikace v aplikaci Portál společnosti a na webovém portálu.
+
+### <a name="full-version-number"></a>Celé číslo verze
+
+Celé číslo verze identifikuje konkrétní vydanou verzi aplikace. Číslo se zobrazí jako _Verze_(_build_). Příklad: 2.2(2.2.17560800)
+
+Celé číslo verze tvoří dvě části:
+
+ - **Verze**  
+   Číslo verze je čitelné číslo vydané verze aplikace. Koncovým uživatelům slouží k identifikaci různých vydaných verzí aplikace.
+
+ - **Číslo buildu**  
+    Číslo buildu je interní číslo, které může sloužit k rozpoznání aplikace a její programové správě. Číslo buildu se vztahuje k iteraci aplikace, která odkazuje na změny v kódu.
+
+### <a name="version-and-build-number-in-android-and-ios"></a>Číslo verze a buildu v Androidu a iOSu
+
+Android i iOS používají pro aplikace jak čísla verzí, tak buildů. V obou operačních systémech mají ale svůj konkrétní význam. Následující tabulka vysvětluje, jak spolu tyto termíny souvisí.
+
+Když vyvíjíte obchodní aplikaci pro použití v Intune, nezapomeňte použít jak číslo verze, tak i číslo buildu. Funkce správy aplikací Intune vyžadují smysluplné číslo **CFBundleVersion** (iOS) a **PackageVersionCode** (Android). Tato čísla jsou součástí manifestu aplikace. 
+
+Intune|iOS|Android|Popis|
+|---|---|---|---|
+Číslo verze|CFBundleShortVersionString|PackageVersionName |Toto číslo označuje konkrétní vydanou verzi aplikace pro koncové uživatele.|
+Číslo buildu|CFBundleVersion|PackageVersionCode |Toto číslo slouží k označení iterace v kódu aplikace.|
+
+#### <a name="ios"></a>iOS
+
+- **CFBundleShortVersionString**  
+    Určuje číslo vydané verze sady. Toto číslo označuje vydanou verzi aplikace. Používají ho koncoví uživatelé, když odkazují na aplikaci.
+ - **CFBundleVersion**  
+    Verze buildu sady, která označuje iteraci sady. Číslo může označovat vydanou verzi nebo nevydanou sadu. Slouží ke zjištění aplikace.
+
+#### <a name="android"></a>Android
+
+ - **PackageVersionName**  
+    Číslo verze, které se zobrazuje uživatelům. Tento atribut je možné nastavit jako nezpracovaný řetězec nebo jako odkaz na prostředek řetězce. Řetězec nemá žádný jiný účel než ten, že se zobrazuje uživatelům.
+ - **PackageVersionCode**  
+    Interní číslo verze. Toto číslo slouží jenom k určení aktuálnosti verze, přičemž vyšší čísla označují novější verze. Nejedná se o verzi. 
 
 ## <a name="next-steps-after-integration"></a>Další postup po integraci
 

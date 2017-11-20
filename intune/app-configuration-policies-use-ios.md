@@ -1,12 +1,12 @@
 ---
-title: "Použití zásad konfigurace aplikací v Intune pro iOS"
+title: "Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOSem | Microsoft Docs"
 titlesuffix: Azure portal
-description: "Přečtěte si, jak používat zásady konfigurace aplikací pro účely předání konfiguračních dat do aplikace pro iOS, při jejím spuštění."
+description: "Přečtěte si, jak používat zásady konfigurace aplikací pro účely předání konfiguračních dat do aplikace pro iOS při jejím spuštění."
 keywords: 
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 07/26/2017
+ms.date: 10/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,31 +15,17 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bc42f3cafa83b5f7ba053d03dbd066b725bb1fee
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 2226477d40f2bb70dd047ed58e8789fd9bee4ecb
+ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="how-to-use-microsoft-intune-app-configuration-policies-for-ios"></a>Použití zásad konfigurace aplikací v Intune pro iOS
+# <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOSem
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastavení, která se použijí, když uživatelé spustí aplikaci pro iOS. Aplikace může například vyžadovat, aby uživatelé zadali:
-
--   Vlastní číslo portu
-
--   Nastavení jazyka
-
--   Nastavení zabezpečení
-
--   Nastavení brandingu, jako je logo společnosti
-
-Když tato nastavení zadají uživatelé špatně, můžete to zvýšit zatížení vašeho helpdesku a zpomalit přijímání nových aplikací.
-
-Zásady konfigurace aplikací pomůžou tyto problémy eliminovat tím, že vám dovolí pomocí zásad přiřadit tato nastavení uživatelům dřív, než aplikaci spustí. Nastavení jsou pak zadaná automaticky a uživatelé nemusí provádět žádnou akci. Aplikace musejí být napsané tak, aby podporovaly používání konfigurací aplikací. Další informace získáte od dodavatele aplikace.
-
-Tyto zásady nepřiřazujte přímo uživatelům a zařízením. Místo toho přidružíte zásadu k aplikaci a pak přiřadíte tuto aplikaci. Nastavení zásad se použije vždy, když je aplikace zkontroluje (obvykle při prvním spuštění).
+Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastavení, když uživatelé spustí aplikaci pro iOS. Tyto zásady nepřiřazujte přímo uživatelům a zařízením. Místo toho přidružíte zásadu k aplikaci a pak přiřadíte tuto aplikaci. Nastavení zásad se použijí, když je aplikace zjistí (obvykle při prvním spuštění).
 
 > [!TIP]
 > Tento typ zásad je nyní k dispozici pouze pro zařízení se systémem iOS 8.0 a novějším. Podporuje následující typy instalací aplikací:
@@ -50,67 +36,60 @@ Tyto zásady nepřiřazujte přímo uživatelům a zařízením. Místo toho př
 > Další informace o typech instalace aplikací najdete v tématu [Přidání aplikace do Microsoft Intune](apps-add.md).
 
 ## <a name="create-an-app-configuration-policy"></a>Vytvoření zásad konfigurace aplikací
-1.  Přihlaste se k portálu Azure Portal.
-2.  Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3.  V okně **Intune** zvolte **Mobilní aplikace**.
-4.  V úloze **Mobilní aplikace** zvolte **Spravovat** > **Zásady konfigurace aplikací**.
-5.  V okně seznamu zásad zvolte **Přidat**.
-6.  V okně **Přidat zásady konfigurace** zadejte **Název** a volitelný **Popis** pro zásady konfigurace aplikace.
-7.  Jako **Typ registrace zařízení** vyberte jednu z těchto možností:
-    - **Zaregistrováno přes Intune** – pro aplikace, které jsou spravované pomocí Intune.
-    - **Nezaregistrováno přes Intune** – pro aplikace, které nejsou spravované pomocí Intune nebo jsou spravované jiným řešením.
-8.  Jako **platformu** zvolte **iOS** (jenom pro zařízení zaregistrovaná přes Intune).
-9.  Zvolte **Přidružená aplikace** a pak v okně **Přidružená aplikace** zvolte spravovanou aplikaci, u které chcete použít konfiguraci.
-10. V okně **Přidat zásady konfigurace** zvolte **Nastavení konfigurace**.
-11. V okně **Nastavení konfigurace** zvolte způsob, jak se mají určit hodnoty XML, které tvoří konfigurační profil:
-    - **Zadat XML data**(jenom pro zařízení zaregistrovaná přes Intune) – zadejte nebo vložte seznam vlastností XML, který obsahuje požadované konfigurační nastavení aplikace. Formát seznamu vlastností XML se liší v závislosti na aplikaci, kterou konfigurujete. Podrobnosti o přesném formátu, který se má použít, získáte od dodavatele aplikace.
-Intune zkontroluje, že má zadaný kód XML platný formát. Nekontroluje, jestli seznam vlastností XML funguje s aplikací, ke které je přidružený.
-Další informace o seznamech vlastností XML najdete v tématu [Vysvětlení seznamů vlastností XML](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) v knihovně iOS Developer Library.
-    - **Použít návrháře konfigurace** (bez ohledu na to, jestli je zařízení zaregistrováno přes Intune) – umožňuje určit dvojice klíče a hodnoty XML přímo na portálu.
-11. Až to budete mít, vraťte se do okna **Přidat zásady konfigurace** a klikněte na **Vytvořit**.
 
-Zásady se vytvoří a zobrazí se v okně se seznamem zásad.
+1. Přihlaste se k portálu Azure Portal.
+2. Zvolte **Další služby** > **Monitorování + správa** + **Intune**.
+3. Zvolte úlohu **Mobilní aplikace**.
+4. Ve skupině **Spravovat** zvolte **Zásady konfigurace aplikací** a pak **Přidat**.
+5. Zadejte tyto podrobnosti:
+    - **Název**<br>
+      Název profilu, který se zobrazí na portálu Azure Portal
+    - **Popis**<br>
+      Popis profilu, který se zobrazí na portálu Azure Portal
+    - **Typ registrace zařízení**<br>
+      Zvolte **Spravovaná zařízení**.
+6. V poli **Platforma** vyberte **iOS**.
+7.  Zvolte **Přidružená aplikace**. Pak v okně **Přidružená aplikace** zvolte spravovanou aplikaci, u které chcete použít danou konfiguraci.
+8.  V okně **Přidat zásady konfigurace** zvolte **Nastavení konfigurace**.
+9. Vyberte **Formát nastavení konfigurace**. Vyberte jednu z těchto možností:
+    - **[Použít návrháře konfigurace](#Use-the-configuration-designer)**
+    - **[Zadat XML data](#enter-xml-data)**
+10. Zvolte **OK** a pak **Přidat**.
 
+## <a name="use-configuration-designer"></a>Použití návrháře konfigurace
 
+Návrháře konfigurace můžete použít u aplikací jak v zařízeních, která jsou zaregistrovaná v Intune, tak i v zařízeních, která zaregistrovaná nejsou. Návrhář umožňuje nakonfigurovat konkrétní klíče a hodnoty konfigurace. Pro každou hodnotu musíte také zadat datový typ. Nastavení se aplikacím poskytne automaticky při jejich instalaci.
 
->[!Note]
->Pomocí sady [Intune App SDK](https://docs.microsoft.com/intune/app-sdk-ios) můžete připravit, aby se obchodní aplikace spravovaly pomocí zásad ochrany aplikací Intune a zásad konfigurace aplikací bez ohledu na to, jestli je zařízení zaregistrováno přes Intune. Můžete třeba použít zásadu konfigurace aplikací ke konfiguraci povolených a blokovaných adres URL pro [Intune Managed Browser](app-configuration-managed-browser.md). Když je aplikace s těmito zásadami kompatibilní, můžete ji pomocí zásad nakonfigurovat.
+### <a name="add-a-setting"></a>Přidání nastavení
 
+1. Pro každý klíč a hodnotu v konfiguraci nastavte:
+   - **Konfigurační klíč**<br>
+     Klíč, který jedinečně identifikuje konkrétní konfiguraci nastavení
+   - **Typ hodnoty**<br>
+     Datový typ konfigurační hodnoty. Mezi typy patří integer, real, string a boolean.
+   - **Hodnota konfigurace**<br>
+     Hodnota konfigurace
+2. Zvolte **OK** a nastavte tak nastavení konfigurace.
 
-Když se přiřazená aplikace na zařízení spustí, použijí se nastavení, která jste nakonfigurovali v zásadách konfigurace aplikací.
-Informace o tom, co se stane, když jedna nebo více zásad aplikací kolidují, najdete v dokumentaci k aplikaci, kterou konfigurujete.
+### <a name="delete-a-setting"></a>Odstranění nastavení
 
->[!Tip]
->K provedení těchto úkolů můžete použít také Graph API. Podrobnosti najdete v [referenčních informacích o cílové konfiguraci MAM pomocí Graph API](https://graph.microsoft.io/docs/api-reference/beta/api/intune_mam_targetedmanagedappconfiguration_create).
-
-
-## <a name="information-about-the-xml-file-format"></a>Informace o formátu souboru XML
-
-Intune podporuje v seznamu vlastností následující typy dat:
-
-- &lt;integer&gt;
-- &lt;real&gt;
-- &lt;string&gt;
-- &lt;array&gt;
-- &lt;dict&gt;
-- &lt;true /&gt; nebo &lt;false /&gt;
-
-Další informace o typech dat najdete v tématu [Informace o seznamech vlastností](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html) v knihovně iOS Developer Library.
-
-Intune dál v seznamu vlastností podporuje následující typy tokenů:
-- \{\{userprincipalname\}\} – (Příklad: **John@contoso.com**)
-- \{\{mail\}\} – (Příklad: **John@contoso.com**)
-- \{\{partialupn\}\} – (Příklad: **Jan**)
-- \{\{accountid\}\} – (Příklad: **fc0dc142-71d8-4b12-bbea-bae2a8514c81**)
-- \{\{deviceid\}\} – (Příklad: **b9841cd9-9843-405f-be28-b2265c59ef97**)
-- \{\{userid\}\} – (Příklad: **3ec2c00f-b125-4519-acf0-302ac3761822**)
-- \{\{username\}\} – (Příklad: **Jiri Polak**)
-- \{\{serialnumber\}\} – (Příklad: **F4KN99ZUG5V2**) pro zařízení s iOSem
-- \{\{serialnumberlast4digits\}\} – (Příklad: **G5V2**) pro zařízení s iOSem
+1. Zvolte tři tečky (**...**) vedle příslušného nastavení.
+2. Vyberte **Odstranit**.
 
 Znaky \{\{ a \}\} se používají jenom pro typy tokenů a nesmí se používat pro jiné účely.
 
-## <a name="example-format-for-an-app-configuration-xml-file"></a>Příklad formátu pro soubor XML konfigurace aplikací
+## <a name="enter-xml-data"></a>Zadání XML dat
+
+Můžete zadat nebo vložit seznam vlastností XML, který obsahuje nastavení konfigurace aplikace pro zařízení zaregistrovaná v Intune. Formát seznamu vlastností XML se liší v závislosti na aplikaci, kterou konfigurujete. Podrobnosti o přesném formátu, který se má použít, získáte od dodavatele aplikace.
+
+Intune ověří formát XML. Intune ale nekontroluje, jestli bude seznam vlastností XML fungovat s cílovou aplikací.
+
+Další informace o seznamech vlastností XML:
+
+  -  Přečtěte si článek [Konfigurace aplikací pro iOS pomocí zásad konfigurace mobilních aplikací v Microsoft Intune](/intune-classic/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune).
+  -  Projděte si informace uvedené v článku [Vysvětlení seznamů vlastností XML](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) v knihovně pro vývojáře aplikací pro iOS.
+
+### <a name="example-format-for-an-app-configuration-xml-file"></a>Příklad formátu pro soubor XML konfigurace aplikací
 
 Když vytvoříte soubor konfigurace aplikací, můžete pomocí tohoto formátu zadat jednu nebo několik následujících hodnot:
 
@@ -137,8 +116,30 @@ Když vytvoříte soubor konfigurace aplikací, můžete pomocí tohoto formátu
   <key>udidlast4digits</key>
   <string>{{udidlast4digits}}</string>
 </dict>
-
 ```
+### <a name="supported-xml-plist-data-types"></a>Podporované datové typy v seznamu vlastností XML
+
+Intune podporuje v seznamu vlastností následující typy dat:
+
+- &lt;integer&gt;
+- &lt;real&gt;
+- &lt;string&gt;
+- &lt;array&gt;
+- &lt;dict&gt;
+- &lt;true /&gt; nebo &lt;false /&gt;
+
+### <a name="tokens-used-in-the-property-list"></a>Tokeny použité v seznamu vlastností
+
+Intune dál v seznamu vlastností podporuje následující typy tokenů:
+- \{\{userprincipalname\}\} – například **John@contoso.com**
+- \{\{mail\}\} – například **John@contoso.com**
+- \{\{partialupn\}\} – například **John**
+- \{\{accountid\}\} – například **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
+- \{\{deviceid\}\} – například **b9841cd9-9843-405f-be28-b2265c59ef97**
+- \{\{userid\}\} – například **3ec2c00f-b125-4519-acf0-302ac3761822**
+- \{\{username\}\} – například **John Doe**
+- \{\{serialnumber\}\} – například **F4KN99ZUG5V2** (pro zařízení s iOSem)
+- \{\{serialnumberlast4digits\}\} – například **G5V2** (pro zařízení s iOSem)
 
 ## <a name="next-steps"></a>Další kroky
 

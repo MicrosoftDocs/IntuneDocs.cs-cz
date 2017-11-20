@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/19/2017
+ms.date: 11/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,24 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4719f31b2ea6144bc8113c596155de70aa22ace1
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: dff1cb496b85f933d8f462b94f6e15fa7ff69a28
+ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 Zjistěte, jaké jsme v uživatelském rozhraní aplikací udělali změny, které koncoví uživatelé uvidí v této verzi Microsoft Intune. Pomůže vám to při komunikaci s uživateli a aktualizaci vlastní dokumentace, kterou jste vytvořili za účelem podpory vašeho nasazení. Můžete také zjistit, jak lépe řešit problémy uživatelů, když požádají helpdesk o podporu pomocí Portálu společnosti.
+
+
+## <a name="week-of-november-6-2017"></a>Týden od 6. listopadu 2017
+
+### <a name="search-improvements-to-the-company-portal-apps-and-website---1418189--"></a>Vyhledání vylepšení pro aplikace a web Portál společnosti <!--1418189-->
+Aplikace Portál společnosti teď používají vyhledávání v kategoriích, názvech a popisech aplikací. Výsledky se seřazují v sestupném pořadí podle relevance. Tyto aktualizace jsou dostupné také na [webu Portál společnosti](https://portal.manage.microsoft.com).
+
+Stále ještě na vyhodnocení relevance pracujeme, tak nám prosím dejte prostřednictvím odkazu „Váš názor“ v dolní části webu Portál společnosti vědět, jak dobře toto vyhodnocení funguje.
+
+
 
 ## <a name="week-of-october-16-2017"></a>Týden od 16. října 2017
 

@@ -6,7 +6,7 @@ keywords:
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 05/05/2017
+ms.date: 10/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fbb1d3e11f8ba3e508a261981e461f35c99ca110
-ms.sourcegitcommit: f8672ff73066c2d8bcb78c30f84fda8aa3057a1c
+ms.openlocfilehash: 3736b6d43f5cd3b6c75097a2ceabebffd75f0caa
+ms.sourcegitcommit: e9f9fccccef691333143b7523d1b325ee7d1915a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2017
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="how-to-monitor-app-information-and-assignments-with-microsoft-intune"></a>Postup monitorování informací a přiřazení aplikace pomocí Microsoft Intune
 
@@ -27,8 +27,22 @@ ms.lasthandoff: 10/11/2017
 
 Intune poskytuje několik způsobů, jak můžete monitorovat vlastnosti vámi spravovaných aplikací a stav jejich přiřazení.
 
-1. V úloze **Mobilní aplikace** zvolte **Spravovat** > **Aplikace**.
-2. V okně se seznamem aplikací zvolte aplikaci, pro kterou chcete informace zobrazit. Pak se vám zobrazí okno <*název aplikace*> **Stav instalace zařízení**: ![Stav instalace aplikace.](./media/monitor-apps.png)
+1. Přihlaste se k portálu Azure Portal.
+2. Zvolte **Další služby** > **Monitorování + správa** + **Intune**.
+3. V úloze **Mobilní aplikace** zvolte ve skupině **Spravovat** možnost **Aplikace**.
+     
+    ![Okno stavu instalace aplikace](./media/monitor-apps.png)
+5. V okně seznamu aplikací zvolte aplikaci. Pak se vám zobrazí okno <*název aplikace*> **Stav instalace zařízení**.
+
+Sestava stavu instalace zařízení obsahuje tyto sloupce:
+
+1.  **Název zařízení** – název typu zařízení
+2.  **Uživatelské jméno** – jméno uživatele
+3.   **Platforma** – operační systém nainstalovaný v zařízení
+4.  **Verze** – číslo verze aplikace
+5.   **Stav** – možné stavy aplikací: **Nainstalováno**, **Nenainstalováno**, **Instalace čeká** a **Chyba**
+6. **Podrobnosti stavu** – čitelný popis stavu aplikace v zařízení
+7. **Poslední vrácení se změnami** – čas, kdy se naposledy zařízení vrátilo do Intune se změnami
 
 Pak zjistěte další informace o aplikacích a jejich přiřazení pomocí jedné z následujících akcí.
 

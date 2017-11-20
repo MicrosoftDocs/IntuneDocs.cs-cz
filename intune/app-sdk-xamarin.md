@@ -5,20 +5,20 @@ keywords: SDK, Xamarin, Intune
 author: mattbriggs
 manager: angrobe
 ms.author: mabriggs
-ms.date: 11/15/2016
+ms.date: 11/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
-ms.reviewer: oydang
+ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8ab9807d22aa1a5c232b595df2bd999c0c178b16
-ms.sourcegitcommit: f3b8fb8c47fd2c9941ebbe2c047b7d0a093e5a83
+ms.openlocfilehash: f50ecfbf5a0ac0b05de38e0ad29b27a729ab824b
+ms.sourcegitcommit: 0f877251e6adf4e45b918cc8dc9193626727f2d9
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-component"></a>Komponenta Xamarin sady Microsoft Intune App SDK
 
@@ -29,6 +29,9 @@ ms.lasthandoff: 10/11/2017
 
 ## <a name="overview"></a>Přehled
 [Komponenta Xamarin sady Intune App SDK](https://components.xamarin.com/view/microsoft.intune.mam) umožňuje v aplikacích pro iOS a Android vytvořených pomocí Xamarinu povolit [zásady ochrany aplikací Intune](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune). Komponenta umožňuje vývojářům snadno do aplikací založených na Xamarinu začlenit funkce ochrany aplikace Intune.
+
+> [!NOTE]
+> Podpora sady Intune SDK pro Xamarin je v současné době dostupná ve verzi Preview. 
 
 Komponenta Xamarin sady Microsoft Intune App SDK umožňuje začlenit do vašich aplikací vyvíjených pomocí Xamarinu zásady ochrany aplikací Intune (označované také jako zásady APP nebo MAM). Aplikace s povolenou funkcí MAM je integrovaná se sadou Intune App SDK. Správci IT můžou zásady ochrany aplikací nasadit do vaší mobilní aplikace, když Intune tuto aplikaci aktivně spravuje.
 

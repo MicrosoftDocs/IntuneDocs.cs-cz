@@ -1,12 +1,12 @@
 ---
 title: "Začínáme s Azure Portalem"
 titlesuffix: Azure portal
-description: "Přečtěte si o vytváření a sdílení řídicích panelů v Intune na Azure Portalu."
+description: "Přečtěte si o vytváření a sdílení řídicích panelů pro Intune na portálu Azure Portal."
 keywords: 
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 08/16/2017
+ms.date: 10/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,19 +15,19 @@ ms.assetid: 917c0eed-96d0-49d8-8db8-a6ba13ad0e1f
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 42c43ca5fa1eee28cb245c7a64e47f7f704183f4
-ms.sourcegitcommit: fa6aaf12611c3e03e38e467806fc30b1d0255e88
+ms.openlocfilehash: cce99fb69abd5f99a4a1eae0c6fbe0e5178af450
+ms.sourcegitcommit: fc24d7eb4838b9102088dd4dcf5d1aa6b2c2e590
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 11/03/2017
 ---
-# <a name="getting-started-with-intune-in-the-azure-portal"></a>Začínáme s Intune na Azure Portalu
+# <a name="getting-started-with-intune-in-the-azure-portal"></a>Začínáme s Intune na portálu Azure Portal
 
 Azure Portal je místo, kde najdete službu Intune. Azure obsahuje celou řadu služeb, z nichž většinu nemusíte pravidelně používat. Když si řídicí panel a boční panel přizpůsobíte, najdete velmi rychle ty správné informace, kdykoli se přihlásíte, abyste přes Intune spravovali zařízení.
 
 ## <a name="changing-the-sidebar"></a>Změna bočního panelu
 
-__Boční panel__ na levé straně Azure Portalu zobrazuje seznam všech dostupných služeb Azure. Výchozí zobrazení tohoto kompletního seznamu lze změnit, abyste na očích měli služby, které jsou pro vás nejdůležitější. Jako příklad služby, kterou si přidáte na začátek tohoto seznamu, použijeme Intune.
+__Boční panel__ na levé straně portálu Azure Portal zobrazuje seznam všech dostupných služeb Azure. Výchozí zobrazení tohoto kompletního seznamu se dá změnit, abyste neustále měli na očích služby, které jsou pro vás nejdůležitější. Jako příklad služby, kterou si přidáte na začátek tohoto seznamu, použijeme Intune.
 
 ![Uživatel hledající Intune v seznamu Další služby](./media/azure-add-intune1.png)
 

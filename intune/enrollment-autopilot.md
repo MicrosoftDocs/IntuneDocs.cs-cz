@@ -5,17 +5,17 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/04/2017
+ms.date: 11/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: 83ab9e4a6fae4fda4c8e97c5fc091d4e5a03f3ea
-ms.sourcegitcommit: b8d3f8da6d8c2bd5d6140d538193a02d5875aefb
+ms.openlocfilehash: 736eda24e355024e2abadd57206c0f0423e6d4b4
+ms.sourcegitcommit: af958afce3070a3044aafea490c8afc55301d9df
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enroll-windows-devices-using-windows-autopilot-deployment-program"></a>Registrace zařízení s Windows pomocí programu Windows AutoPilot Deployment
 Program Windows AutoPilot Deployment zjednodušuje zřizování zařízení. Vytváření a udržování přizpůsobených imagí operačního systému dnes zabírá hodně času. Mnoho času můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a AutoPilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s AutoPilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace atd. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows AutoPilotu](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot).
@@ -57,6 +57,13 @@ Profily nasazení AutoPilotu slouží ke konfiguraci zařízení s AutoPilotem.
 > - Přeskočení stránek nastavení registrace Cortana, OneDrive a OEM
 > - Automatické nastavení pro práci nebo školu
 > - Prostředí pro přihlašování se značkou společnosti nebo školy    
+
+## <a name="alerts-for-windows-autopilot-unassigned-devices-----163236---"></a>Upozornění na zařízení, která nemají přiřazený Windows AutoPilot <!-- 163236 -->
+Z upozornění můžete zjistit, kolik zařízení z programu AutoPilot nemá přiřazené profily nasazení AutoPilotu. Na základě informací v upozornění můžete vytvořit profily a přiřadit je potřebným zařízením. Když na upozornění kliknete, zobrazí se úplný seznam zařízení Windows AutoPilotu a podrobné informace o zařízeních. 
+1. Přihlaste se k [Azure](https://portal.azure.com/). 
+2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+3. V okně **Intune** zvolte **Registrace zařízení**.
+4. Zvolte **Přehled** a uvidíte upozornění. Klikněte na upozornění a uvidíte seznam zařízení AutoPilotu.  
 
 ## <a name="assign-an-autopilot-deployment-profile"></a>Přiřazení profilu nasazení AutoPilotu
 Po vytvoření profilů nasazení AutoPilotu je můžete přiřadit vybraným zařízením.

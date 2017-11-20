@@ -1,5 +1,5 @@
 ---
-title: "Vytvoření sestavy z datového kanálu OData pomocí Power BI | Dokumentace Microsoftu"
+title: "Vytvoření sestavy z datového kanálu OData pomocí Power BI | Microsoft Docs"
 description: "Vytvořte vizualizaci mapy stromové struktury pomocí Power BI Desktopu s interaktivním filtrem z rozhraní API datového skladu Intune."
 keywords: "Datový sklad Intune"
 author: mattbriggs
@@ -14,11 +14,11 @@ ms.assetid: A2C8A336-29D3-47DF-BB4A-62748339391D
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 37f36aca0d58f5d87b9d54a1a4bdf18eb011b40b
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: 1e0ffcaa2ff8bd9e622c1d27f27564bd78df0276
+ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Vytvoření sestavy z datového kanálu OData pomocí Power BI
 
@@ -60,16 +60,16 @@ Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktop 
 
     ![Datový kanál OData](media/reports-create-01-odatafeed.png)
 
-9. Klikněte na **OK**.
+9. Vyberte **OK**.
 10. Vyberte **Účet organizace** a pak se přihlaste pomocí přihlašovacích údajů Intune. 
 
     ![Přihlašovací údaje pro účet organizace](media/reports-create-02-org-account.png)
 
-11. Klikněte na možnost **Připojit**. Otevře se Navigátor se seznamem tabulek v datovém skladu Intune. 
+11. Vyberte **Připojit**. Otevře se Navigátor se seznamem tabulek v datovém skladu Intune. 
 
     ![Navigátor](media/reports-create-02-loadentities.png)
 
-12. Vyberte **zařízení** a tabulky **ownerTypes**.  Klikněte na **Načíst**. Power BI načte data do modelu.
+12. Vyberte **zařízení** a tabulky **ownerTypes**.  Vyberte **Načíst**. Power BI načte data do modelu.
 
 ## <a name="create-a-relationship"></a>Vytvoření relace 
 
@@ -77,8 +77,8 @@ Můžete importovat víc tabulek k analýze nejen dat v jedné tabulce, ale souv
 
 ![Správa relací](media/reports-create-03-managerelationships.png)
 
-1. Klikněte na **Spravovat relace**.
-2. Pokud PowerBI ještě relace nerozpoznal, klikněte na **Automatické rozpoznávání**.  
+1. Vyberte **Spravovat relace**.
+2. Pokud PowerBI ještě relace nerozpoznal, vyberte **Automatické rozpoznávání**.  
 Relace se zobrazí ve sloupci Z do sloupce Do. V tomto příkladu datové pole **ownerTypeKey** v tabulce **zařízení** odkazuje na datové pole **ownerTypeKey** v okně **ownerTypes**. Pomocí relace vyhledejte prostý název kódu typu zařízení v tabulce **zařízení**.
 
 ## <a name="create-a-treemap-visualization"></a>Vytvoření vizualizace mapy stromové struktury
@@ -100,7 +100,7 @@ Teď máte vizuál, který znázorňuje rozdělení výrobců zařízení v rám
 
 Do mapy stromové struktury můžete přidat filtr, který vám pomocí vaší aplikace umožní zodpovědět další otázky. 
 
-1. Klikněte na plátno pro sestavy a pak kliknutím na **ikonu Průřez** ( ![Mapa stromové struktury s daty](media/reports-create-slicer.png) ) v části **Vizualizace** přidejte filtr.
+1. Vyberte plátno pro sestavy a pak výběrem **ikony Průřez** ( ![Mapa stromové struktury s daty](media/reports-create-slicer.png) ) v části **Vizualizace** přidejte filtr.
 2. Najděte tabulku **ownerTypes** a přetáhněte datové pole **ownerTypeName** do části **Filtry** na panelu **Vizualizace**.  
    V tabulce zařízení je datové pole s názvem **OwnerTypeKey**, které obsahuje kód, jestli je zařízení ve vlastnictví společnosti, nebo osobní. Protože v tomto filtru chcete zobrazit popisné názvy, najděte tabulku **ownerTypes** a přetáhněte **ownerTypeName**. Toto je příklad, jak datový model podporuje relace mezi tabulkami.
 
@@ -108,8 +108,8 @@ Do mapy stromové struktury můžete přidat filtr, který vám pomocí vaší a
 
 Teď máte interaktivní filtr, pomocí kterého můžete přepínat mezi zařízeními ve vlastnictví společnosti a v osobním vlastnictví, abyste viděli, jak se mění rozdělení.
 
-1. Kliknutím na **Společnost** zobrazíte rozdělení zařízení ve vlastnictví společnosti.
-2. Kliknutím na **Osobní** zobrazíte zařízení v osobním vlastnictví.
+1. Výběrem možnosti **Společnost** zobrazíte rozdělení zařízení ve vlastnictví společnosti.
+2. Výběrem možnosti **Osobní** zobrazíte zařízení v osobním vlastnictví.
 
 ## <a name="next-steps"></a>Další kroky
 

@@ -15,11 +15,11 @@ ms.assetid: 42f9b104-c1f6-4dfc-8aa4-1d33e1eaf61f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8beabb21df8b122b7a1dd18a698a8075604046b5
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: b61ad1c0a114c8a66c174fa34c4520e2f6c6244a
+ms.sourcegitcommit: af958afce3070a3044aafea490c8afc55301d9df
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="how-to-configure-device-restriction-settings-in-microsoft-intune"></a>Konfigurace nastavení omezení zařízení v Microsoft Intune
 
@@ -29,7 +29,7 @@ Pomocí omezení zařízení můžete ovládat širokou škálu nastavení a fun
 
 Informace v tomto tématu vás seznámí se základy konfigurace profilů omezení zařízení. Pak si můžete přečíst další témata pro jednotlivé platformy, kde najdete podrobnosti o specifikách různých zařízení.
 
-## <a name="create-a-device-profile-containing-device-restriction-settings"></a>Vytvoření profilu zařízení obsahujícího nastavení omezení zařízení
+Vytvoření profilu zařízení obsahujícího nastavení omezení zařízení:
 
 1. Přihlaste se k portálu Azure Portal.
 2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
@@ -59,9 +59,12 @@ Informace v tomto tématu vás seznámí se základy konfigurace profilů omezen
 Profil se vytvoří a zobrazí se v okně se seznamem profilů.
 Pokud chcete pokračovat a přiřadit tento profil ke skupinám, podívejte se na téma [Jak přiřadit profily zařízení](device-profile-assign.md).
 
-## <a name="example-of-device-restriction-settings"></a>Příklad nastavení omezení zařízení
+<!--  Removing image as part of design review; retaining source until we known the disposition.
 
-V tomto příkladu vytvoříte zásadu omezení zařízení, která zablokuje použití integrované aplikace Fotoaparát na zařízeních s Androidem.
+## Example of device restriction settings
 
-![Jak zakázat fotoaparát na zařízeních s Androidem](./media/disable-android-camera.png)
+In this high-level example, you'll create a device restriction policy that blocks the use of the built-in camera app on Android devices.
 
+![How to disable the camera on Android devices](./media/disable-android-camera.png)
+
+-->
