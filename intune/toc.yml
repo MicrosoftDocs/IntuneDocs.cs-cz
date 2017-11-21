@@ -42,7 +42,7 @@
 - name: Začínáme s Intune
   href: get-started-evaluation.md
   items:
-    - name: Navigace na portálu Azure Portal
+    - name: Navigace na Azure Portalu
       href: get-started-azure.md
     - name: Umožňuje vytvořit uživatele.
       href: get-started-users.md
@@ -365,6 +365,8 @@
               href: certificates-scep-configure.md
             - name: PKCS
               href: certficates-pfx-configure.md
+            - name: Webová služba správce infrastruktury veřejných klíčů společnosti Symantec
+              href: certificates-symantec-configure.md
         - name: Konfigurace nastavení Windows Information Protection
           href: windows-information-protection-configure.md
         - name: Správa powershellových skriptů
@@ -425,6 +427,8 @@
                   href: app-protection-policy-settings-android.md
                 - name: Nastavení iOS
                   href: app-protection-policy-settings-ios.md
+                - name: Kontrola protokolů ochrany aplikací v Managed Browseru
+                  href: app-protection-policy-settings-log.md
             - name: Ověření zásad ochrany aplikací
               href: app-protection-policies-validate.md
             - name: Monitorování stavu uživatele u ochrany aplikací
