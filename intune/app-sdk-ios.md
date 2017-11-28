@@ -14,11 +14,11 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 56bc71124c5a2714746dffcce256f0e604e9f62c
-ms.sourcegitcommit: ca10ab40fe40e5c9f4b6f6f4950b551eecf4aa03
+ms.openlocfilehash: 6ccc420b3bf334f15d1036eb83d01a2d228fad19
+ms.sourcegitcommit: b2a6678a0e9617f94ee8c65e7981211483b30ee7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -95,6 +95,10 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
         > [!NOTE]
         > Pokud chcete zjistit cestu `PATH_TO_LIB`, vyberte soubor `libIntuneMAM.a` a v nabídce **Soubor** klikněte na **Získat informace**. Cestu (údaj **Kde**) zkopírujte z části **Obecné** v okně **Informace**.
 
+    Přidejte do projektu sadu prostředků `IntuneMAMResources.bundle`. Přetáhněte ji do části **Kopírovat prostředky balíčku** v rámci položky **Fáze buildu**.
+
+    ![Intune App SDK iOS: kopírování prostředků sady](./media/intune-app-sdk-ios-copy-bundle-resources.png)
+
 3. Do projektu přidejte tyto modely iOS:
     * MessageUI.framework
     * Security.framework
@@ -106,12 +110,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
     * LocalAuthentication.framework
     * AudioToolbox.framework
 
-
-4. Přidejte do projektu sadu prostředků `IntuneMAMResources.bundle`. Přetáhněte ji do části **Kopírovat prostředky balíčku** v rámci položky **Fáze buildu**.
-
-    ![Intune App SDK iOS: kopírování prostředků sady](./media/intune-app-sdk-ios-copy-bundle-resources.png)
-
-5. Pokud vaše mobilní aplikace definuje v souboru Info.plist hlavní soubor nib nebo Storyboard, vyjměte pole **Hlavní Storyboard** nebo **Hlavní Nib**. Do souboru Info.plist vložte tato pole a jejich odpovídající hodnoty do nového slovníku s názvem **IntuneMAMSettings** s následujícími názvy klíčů:
+4. Pokud vaše mobilní aplikace definuje v souboru Info.plist hlavní soubor nib nebo Storyboard, vyjměte pole **Hlavní Storyboard** nebo **Hlavní Nib**. Do souboru Info.plist vložte tato pole a jejich odpovídající hodnoty do nového slovníku s názvem **IntuneMAMSettings** s následujícími názvy klíčů:
     * MainStoryboardFile
     * MainStoryboardFile~ipad
     * MainNibFile
@@ -121,7 +120,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 
     Soubor Info.plist můžete zobrazit v nezpracovaném formátu (abyste zjistili názvy klíčů) tak, že kliknete pravým tlačítkem kamkoli do těla dokumentu a změníte typ zobrazení na **Zobrazit nezpracované klíče/hodnoty**.
 
-6. Povolte sdílení řetězce klíčů (pokud ještě není povolené) tak, že v každém cíli projektu kliknete na **Možnosti** a zapnete přepínač **Sdílení řetězce klíčů**. Sdílení řetězce klíčů se vyžaduje pro přechod k dalšímu kroku.
+5. Povolte sdílení řetězce klíčů (pokud ještě není povolené) tak, že v každém cíli projektu kliknete na **Možnosti** a zapnete přepínač **Sdílení řetězce klíčů**. Sdílení řetězce klíčů se vyžaduje pro přechod k dalšímu kroku.
 
   > [!NOTE]
     > Profil zřizování musí podporovat nové hodnoty sdílení řetězce klíčů. Přístupové skupiny pro řetězce klíčů by měly podporovat zástupné znaky. Můžete to ověřit tak, že soubor .mobileprovision otevřete v textovém editoru, najdete **keychain-access-groups** a ověříte, že obsahuje zástupný znak. Například:
@@ -132,7 +131,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
     </array>
     ```
 
-7. Po povolení sdílení řetězce klíčů vytvořte následujícím postupem samostatnou přístupovou skupinu, do které sada Intune App SDK uloží svoje data. Přístupovou skupinu pro řetězce klíčů můžete vytvořit pomocí uživatelského rozhraní nebo pomocí souboru nároků. Pokud k vytvoření přístupové skupiny pro řetězce klíčů používáte uživatelské rozhraní, je třeba dodržovat následující postup:
+6. Po povolení sdílení řetězce klíčů vytvořte následujícím postupem samostatnou přístupovou skupinu, do které sada Intune App SDK uloží svoje data. Přístupovou skupinu pro řetězce klíčů můžete vytvořit pomocí uživatelského rozhraní nebo pomocí souboru nároků. Pokud k vytvoření přístupové skupiny pro řetězce klíčů používáte uživatelské rozhraní, je třeba dodržovat následující postup:
 
     1. Pokud mobilní aplikace nemá definované žádné přístupové skupiny pro řetězce klíčů, přidejte jako první skupinu ID sady prostředků aplikace.
 
@@ -140,24 +139,23 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 
     3. Do existujících přístupových skupin přidejte `com.microsoft.adalcache`.
 
-        4. Do existujících přístupových skupin přidejte `com.microsoft.workplacejoin`.
-            ![Intune App SDK iOS: sdílení řetězců klíčů](./media/intune-app-sdk-ios-keychain-sharing.png)
+        ![Intune App SDK iOS: sdílení řetězců klíčů](./media/intune-app-sdk-ios-keychain-sharing.png)
 
-    5. Pokud k vytvoření přístupové skupiny pro řetězce klíčů používáte soubor nároků, předřaďte v tomto souboru před tuto přístupovou skupinu pro řetězce klíčů kód `$(AppIdentifierPrefix)`. Příklad:
+    4. Pokud přímo upravujete soubor nároků a nepoužíváte k vytvoření přístupové skupiny pro řetězce klíčů výše popsané uživatelské rozhraní Xcode, dejte na začátek přístupové skupiny pro řetězce klíčů předponu `$(AppIdentifierPrefix)` (Xcode to dělá automaticky). Například:
 
             * `$(AppIdentifierPrefix)com.microsoft.intune.mam`
             * `$(AppIdentifierPrefix)com.microsoft.adalcache`
 
     > [!NOTE]
-    > Soubor nároků je soubor XML, který je pro vaši mobilní aplikaci jedinečný. Slouží k určení speciálních oprávnění a schopností ve vaší aplikaci pro iOS.
+    > Soubor nároků je soubor XML, který je pro vaši mobilní aplikaci jedinečný. Slouží k určení speciálních oprávnění a schopností ve vaší aplikaci pro iOS. Pokud vaše aplikace dříve neměla soubor nároků, měl by ho pro ni Xcode vygenerovat při povolení sdílení řetězců klíčů (krok 6).
 
-8. Pokud aplikace v souboru Info.plist definuje schémata URL, přidejte pro každé schéma URL další schéma s příponou `-intunemam`.
+7. Pokud aplikace v souboru Info.plist definuje schémata URL, přidejte pro každé schéma URL další schéma s příponou `-intunemam`.
 
-9. Pokud aplikace definuje v souboru Info.plist typy dokumentu, pro pole každé položky „Identifikátory UTI typu obsahu dokumentu“ přidejte duplicitní položku pro každý řetězec s předponou „com.microsoft.intune.mam“.
+8. Pokud aplikace definuje v souboru Info.plist typy dokumentu, pro pole každé položky „Identifikátory UTI typu obsahu dokumentu“ přidejte duplicitní položku pro každý řetězec s předponou „com.microsoft.intune.mam“.
 
-10. U mobilních aplikací vyvíjených pro iOS 9+ zahrňte všechny protokoly, které aplikace předává do `UIApplication canOpenURL`, do pole `LSApplicationQueriesSchemes` v souboru Info.plist této aplikace. Pro každý protokol uvedený v seznamu přidejte nový protokol s příponou `-intunemam`. Do pole musíte taky zahrnout `http-intunemam`, `https-intunemam`a `ms-outlook-intunemam` .
+9. U mobilních aplikací vyvíjených pro iOS 9+ zahrňte všechny protokoly, které aplikace předává do `UIApplication canOpenURL`, do pole `LSApplicationQueriesSchemes` v souboru Info.plist této aplikace. Pro každý protokol uvedený v seznamu přidejte nový protokol s příponou `-intunemam`. Do pole musíte taky zahrnout `http-intunemam`, `https-intunemam`a `ms-outlook-intunemam` .
 
-11. Pokud má aplikace ve svých nárocích definované skupiny aplikací, přidejte tyto skupiny jako pole řetězců do slovníku **IntuneMAMSettings** pod klíč `AppGroupIdentifiers`.
+10. Pokud má aplikace ve svých nárocích definované skupiny aplikací, přidejte tyto skupiny jako pole řetězců do slovníku **IntuneMAMSettings** pod klíč `AppGroupIdentifiers`.
 
 ## <a name="using-the-intune-mam-configurator-tool"></a>Použití nástroje Intune MAM Configurator Tool
 
@@ -485,7 +483,7 @@ WebViewHandledURLSchemes | Pole řetězců | Určuje schémata URL zpracovávan�
 > Pokud bude aplikace vydaná v App Storu, možnost `MAMPolicyRequired` musí být podle standardů App Storu nastavená na NE.
 
 ## <a name="enabling-mam-targeted-configuration-for-your-ios-applications"></a>Povolení konfigurace určené pro správu mobilních aplikací pro iOS
-Konfigurace určená pro správu mobilních aplikací (MAM) umožňuje aplikacím přijímat konfigurační data prostřednictvím sady SDK aplikace Intune. Formát a varianty těchto dat musí vlastník aplikace nebo její vývojář definovat a oznámit zákazníkům, kteří využívají Intune. Správci Intune mohou konfigurační data zacílit a nasadit prostřednictvím Intune na portál Azure Portal. Od sady Intune App SDK pro iOS (verze 7.0.1) mohou aplikace s konfigurací určenou pro MAM získávat prostřednictvím služby MAM konfigurační data určená pro správu mobilních zařízení. Konfigurační data aplikace se odešlou přímo do aplikace přes službu MAM, nikoliv prostřednictvím kanálu MDM. Sada Intune App SDK nabízí třídu pro přístup k datům načteným z těchto konzol. Následující požadavky je potřeba vzít v úvahu: <br>
+Konfigurace určená pro správu mobilních aplikací (MAM) umožňuje aplikacím přijímat konfigurační data prostřednictvím sady SDK aplikace Intune. Formát a varianty těchto dat musí vlastník aplikace nebo její vývojář definovat a oznámit zákazníkům, kteří využívají Intune. Správci Intune mohou konfigurační data zacílit a nasadit prostřednictvím Intune na Azure Portalu. Od sady Intune App SDK pro iOS (verze 7.0.1) mohou aplikace s konfigurací určenou pro MAM získávat prostřednictvím služby MAM konfigurační data určená pro správu mobilních zařízení. Konfigurační data aplikace se odešlou přímo do aplikace přes službu MAM, nikoliv prostřednictvím kanálu MDM. Sada Intune App SDK nabízí třídu pro přístup k datům načteným z těchto konzol. Následující požadavky je potřeba vzít v úvahu: <br>
 * Abyste měli přístup ke konfiguračnímu uživatelskému rozhraní určenému pro MAM, musí být aplikace zaregistrovaná ve službě MAM-WE. Další informace o službě MAM-WE najdete v části [Zásady ochrany aplikací bez registrace zařízení v příručce k sadě SDK pro Intune](https://docs.microsoft.com/en-us/intune/app-sdk-ios#app-protection-policy-without-device-enrollment).
 * Do zdrojových souborů aplikace je potřeba zahrnout soubor ```IntuneMAMAppConfigManager.h```.
 * K získání konfiguračního objektu aplikace je potřeba volat ```[[IntuneMAMAppConfig instance] appConfigForIdentity:]```.
