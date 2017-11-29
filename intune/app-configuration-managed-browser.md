@@ -15,11 +15,11 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 395b48ab71b093c12c244fab1acd22c0ecca4c51
-ms.sourcegitcommit: 0a2897b5104dc33ca0661c27a373026d7f4cc956
+ms.openlocfilehash: bc11ad516b3256d39d4e859eca6c8aa248fb180b
+ms.sourcegitcommit: 9ccdac76e0b0716723452a6675b091f15a4d31f2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Správa přístupu k internetu pomocí zásad aplikace Managed Browser v Microsoft Intune
 
@@ -100,8 +100,9 @@ Aplikaci Intune Managed Browser a [Proxy aplikací Azure AD]( https://docs.micr
 
 - Nastavte svoje interní aplikace prostřednictvím proxy aplikací Azure AD.
     - Postup konfigurace proxy aplikací a publikování aplikací najdete v [dokumentaci k instalaci]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#how-to-get-started). 
-    - Musíte používat minimálně verzi 1.2.0 aplikace Managed Browser.
-    - Uživatelé prohlížeče Managed Browser mají k této aplikaci přiřazené [zásady ochrany aplikací Intune]( app-protection-policy.md).
+- Musíte používat minimálně verzi 1.2.0 aplikace Managed Browser.
+- Uživatelé prohlížeče Managed Browser mají k této aplikaci přiřazené [zásady ochrany aplikací Intune]( app-protection-policy.md).
+Poznámka: Aktualizovaným datům přesměrování proxy aplikace může trvat až 24 hodin, než se projeví v aplikaci Managed Browser.
 
 #### <a name="step-1-enable-automatic-redirection-to-the-managed-browser-from-outlook"></a>Krok 1: Zapněte automatické přesměrování z Outlooku do prohlížeče Managed Browser.
 Outlook musí být nakonfigurován zásadami ochrany aplikací, které povolují nastavení **Omezit webový obsah tak, aby se spouštěl v Managed Browseru**.
@@ -218,6 +219,8 @@ Prohlížeč Managed Browser můžete otevřít v režimu pro řešení problém
 1. Otevřete Managed Browser.
 2. Do pole adresy zadejte `about:intunehelp`.
 Prohlížeč Managed Browser spustí režim pro řešení problémů.
+
+Seznam nastavení uložených v aplikačních protokolech najdete v tématu [Kontrola protokolů ochrany aplikace v aplikaci Managed Browser](app-protection-policy-settings-log.md).
 
 ## <a name="security-and-privacy-for-the-managed-browser"></a>Zabezpečení a ochrana osobních údajů v aplikaci Managed Browser
 

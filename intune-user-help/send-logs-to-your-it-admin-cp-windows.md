@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/17/2017
+ms.date: 11/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: f2287700e96c798be7033eac35539e3490bc3f8a
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 4c114a8267fd38da173e8aafcd6089dcfb4472fd
+ms.sourcegitcommit: dc2595bec05206a826cd10cb834bf6043145c917
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="send-logs-to-your-company-support-from-the-company-portal-app-for-windows-10"></a>Odeslání protokolů firemní podpoře z aplikace Portál společnosti pro Windows 10
 
@@ -30,8 +30,8 @@ Pokud při použití aplikace Portál společnosti v zařízení s Windows 10 do
 2.  Vyberte ozubené kolečko **Nastavení** a pak **Poslat protokoly**.
 3.  Otevře se okno **Sdílet**. Vyberte **Pošta**. Vytvoří se e-mailová zpráva s připojenými protokoly z Portálu společnosti, kterou můžete poslat firemní podpoře.
 
-  ![Dialog Poslat protokoly ze stránky Nastavení v aplikaci Portál společnosti Jedná se o odkaz Poslat protokoly – Když protokoly pro diagnostiku pošlete firemní podpoře, může jí to pomoct vyřešit potíže s Portálem společnosti.](./media/w10-share-logs.png)
+  ![Dialog Poslat protokoly ze stránky Nastavení v aplikaci Portál společnosti Jedná se o odkaz Poslat protokoly – Když protokoly pro diagnostiku pošlete firemní podpoře, může jí to pomoct vyřešit potíže s Portálem společnosti.](./media/w10-share-logs-after-1711.png)
 
-Možná bude také potřeba odeslat [protokoly z aplikace Nastavení](send-logs-to-your-it-admin-settings-windows.md) a poskytnout tak firemní podpoře další pomoc při řešení potíží, které se můžou vyskytnout. 
+Možná bude také potřeba odeslat [protokoly z aplikace Nastavení](send-logs-to-your-it-admin-settings-windows.md) a poskytnout tak firemní podpoře další pomoc při řešení potíží, které se můžou vyskytnout.
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

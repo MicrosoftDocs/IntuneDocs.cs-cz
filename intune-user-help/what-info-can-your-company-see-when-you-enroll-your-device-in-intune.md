@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/03/2017
+ms.date: 11/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ searchScope: User help
 ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
-ms.openlocfilehash: c03985bd7ca92fe4b4e8ea163b7db421bfae09c2
-ms.sourcegitcommit: 0f877251e6adf4e45b918cc8dc9193626727f2d9
+ms.openlocfilehash: 6595382606b9c53083e7beec9ca02a314abb5899
+ms.sourcegitcommit: dc2595bec05206a826cd10cb834bf6043145c917
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="what-information-can-my-company-see-when-i-enroll-my-device"></a>Jaké informace moje společnost uvidí, když si zaregistruji zařízení?
 
@@ -36,7 +36,7 @@ Když zařízení zaregistrujete do správy, dáváte společnosti oprávnění 
 
 **Údaje, které vaše společnost vždy uvidí**
 
-- Model zařízení, například iPhone 7
+- Model zařízení, jako je Google Pixel
 - Výrobce, například Microsoft
 - Operační systém, například iOS
 - Názvy aplikací, například Microsoft Word
@@ -48,4 +48,5 @@ Když zařízení zaregistrujete do správy, dáváte společnosti oprávnění 
 
 -  Telefonní číslo: U zařízení ve **firemním** vlastnictví může být viditelné celé telefonní číslo. U zařízení v **osobním** vlastnictví vidí společnost jen poslední čtyři číslice vašeho telefonního čísla. **Typ vlastnictví** jednotlivých zařízení zobrazíte tak, že otevřete stránku **Podrobnosti zařízení** určitého zařízení.
 -  Poloha: Vaše společnost nikdy neuvidí polohu vašeho zařízení, pokud nemáte zařízení s iOS, které je pod dohledem a ztratilo se. [Jak to zjistím?](https://go.microsoft.com/fwlink/?linkid=853816)
-- Inventář aplikací: Pokud vaše společnost používá ochranu před mobilními hrozbami, uvidí více podrobností o aplikacích, které jsou na vašem zařízení. Přečtěte si další informace o [ochraně před mobilním hrozbami](you-are-prompted-to-install-mtd-ios.md).
+- Inventář aplikací: Pokud vaše společnost používá ochranu před mobilními hrozbami, bude k dispozici více podrobností o aplikacích, které jsou na vašem zařízení s iOSem. Přečtěte si další informace o [ochraně před mobilním hrozbami](you-are-prompted-to-install-mtd-ios.md).
+- Informace o síti: Některé informace o připojení k síti pro zařízení Android mohou být k dispozici u podpory vaší společnosti. Pokud vaše společnost například vyžaduje, aby zařízení zůstala v určité budově, určí zařízení síť, které je připojeno. 

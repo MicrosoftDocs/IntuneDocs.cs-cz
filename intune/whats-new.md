@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.date: 11/8/2017
+ms.date: 11/18/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f42410c0df0492f57c7c1f33beed1d2f082ff285
-ms.sourcegitcommit: 5b5744aed73384e1df864f8d3f9f739e17607c2c
+ms.openlocfilehash: 8aad2b31b6545c451f27084c6deefaf416ee2710
+ms.sourcegitcommit: 13955af66e3402a0448e236451b97e90a2d29204
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/19/2017
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -41,13 +41,29 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
   ### Monitor and troubleshoot
 
 -->   
-## <a name="week-of-november-6-2017"></a>Týden od 6. listopadu 2017
 
+## <a name="week-of-november-13-2017"></a>Týden od 13. listopadu 2017
+
+### <a name="intune-apps"></a>Aplikace Intune
+#### <a name="company-portal-app-for-macos-is-available---1541700--"></a>Aplikace Portál společnosti pro macOS je k dispozici <!--1541700-->
+Portál společnosti Intune v systému macOS má aktualizované prostředí, které je optimalizované ke správnému zobrazení všech informací a oznámení o dodržování předpisů, což uživatelé potřebují pro všechna zaregistrovaná zařízení. Po nasazení Portálu společnosti Intune do zařízení v něm začne nástroj Microsoft AutoUpdate pro macOS zajišťovat aktualizace. Nový Portál společnosti Intune pro macOS můžete stáhnout po přihlášení na web Portál společnosti pro macOS ze zařízení macOS.
+
+#### <a name="microsoft-planner-is-now-part-of-the-mobile-app-management-mam-list-of-approved-apps-----1248473---"></a>Microsoft Planner je teď součástí seznamu schválených aplikací pro správu mobilních aplikací (MAM) <!-- 1248473 -->
+Aplikace Microsoft Planner pro iOS a Android je teď součástí schválených aplikací pro správu mobilních aplikací (MAM). Aplikaci lze nakonfigurovat prostřednictvím okna Intune App Protection na portálu Azure Portal pro všechny tenanty.
+- Další informace najdete v [seznamu schválených aplikací MAM](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+
+#### <a name="per-app-vpn-requirement-update-frequency-on-ios-devices------1547061---"></a>Frekvence aktualizace požadavků sítě VPN podle aplikace na zařízeních s iOSem <!-- 1547061 -->  
+Správci mohou nyní v aplikacích zařízení s iOSem odebrat požadavky sítě VPN podle aplikace; dotčená zařízení to provedou po jejich dalším vrácení se změnami do Intune, které obvykle probíhá do 15 minut.  
+
+### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
+#### <a name="support-for-system-center-operations-manager-management-pack-for-exchange-connector----885457---"></a>Podpora sady System Center Operations Manager Management Pack pro konektor Exchange Connector <!-- 885457 -->
+Pro pomoc s analýzou protokolů Exchange Connectoru je nyní dostupná sada System Center Operations Manager (SCOM) Management Pack pro Exchange Connector. V případě potřeby řešení potíží tak máte různé možnosti monitorování služby.
+
+## <a name="week-of-november-6-2017"></a>Týden od 6. listopadu 2017
 
 ### <a name="device-enrollment"></a>Registrace zařízení
 #### <a name="co-management-for-windows-10-devices-----1243445---"></a>Společná správa zařízení s Windows 10  <!-- 1243445 -->
 Společná správa je řešení, které představuje most mezi tradiční a moderní správou a poskytne vám cestu k přechodu pomocí přístupu ve fázích. V základu je společná správa řešením, kdy jsou zařízení s Windows 10 současně spravovaná pomocí Configuration Manageru a Microsoft Intune a také připojená k Active Directory (AD) a Azure Active Directory (Azure AD).  Tato konfigurace vám poskytne cestu k modernizaci v průběhu času a tempem, které je nejvhodnější pro vaši organizaci, pokud nemůžete přesunout všechno najednou.  
-
 
 #### <a name="new-enrollment-status-page-for-windows-10-enrollments---1063201--"></a>Nová stránka stavu registrace pro registrace Windows 10 <!--1063201-->    
 Teď můžete nakonfigurovat pozdrav, který se zobrazí, když uživatelé zaregistrují zařízení s Windows 10. Pomocí **Obrazovky stavu registrace** nakonfigurujte vlastní zprávu a hypertextový odkaz, které se mají zobrazit koncovým uživatelům, když zaregistrují zařízení s Windows 10.  **Obrazovka stavu registrace** také koncové uživatele informuje o průběhu nastavení zásad, která se na jejich zařízení aplikují.  
@@ -61,6 +77,7 @@ Intune dál podporuje registraci telefonů a počítačů s Windows 8.1. S minim
 Na stránce **Microsoft Intune** > **Registrace zařízení** > **Přehled** je k dispozici nové upozornění, které se týká zařízení s nepřiřazeným Windows AutoPilotem. Toto upozornění ukazuje, kolik zařízení z programu AutoPilot nemá přiřazené profily nasazení AutoPilotu. Na základě informací v upozornění můžete vytvořit profily a přiřadit je potřebným zařízením. Když na upozornění kliknete, zobrazí se úplný seznam zařízení Windows AutoPilotu a podrobné informace o zařízeních. Další informace najdete v článku [Registrace zařízení s Windows pomocí programu Windows AutoPilot Deployment](https://docs.microsoft.com/intune/enrollment-autopilot).
 
 ### <a name="device-management"></a>Správa zařízení
+
 #### <a name="refresh-button-for-devices-list-------1333581---"></a>Tlačítko pro aktualizaci seznamu zařízení <!-- 1333581 -->
 Protože se seznam zařízení neaktualizuje automaticky, můžete zařízení, která se v seznamu zobrazují, aktualizovat pomocí nového tlačítka Aktualizovat.
 
@@ -85,7 +102,7 @@ Správce bude moct definovat minimální opravu zabezpečení Androidu, která m
 > Tato funkce omezuje jenom opravy zabezpečení vydané společností Google na zařízeních s Androidem 6.0 a novějším.
 
 #### <a name="app-conditional-launch-support----1193313---"></a>Podpora podmíněného spouštění aplikací <!-- 1193313 -->
-Správci IT teď můžou pomocí portálu pro správu Azure nastavit požadavek, aby se prostřednictvím správy mobilních aplikací (MAM) při spouštění aplikace místo číselného kódu PIN vynutilo heslo. Při takové konfiguraci bude uživatel muset po zobrazení výzvy nastavit a používat heslo, aby získal přístup k aplikacím s podporou MAM. Heslo je definované jako číselný kód PIN s aspoň jedním speciálním znakem nebo velkým/malým písmenem. Tato verze Intune tuto funkci povolí **jenom v iOSu**. Intune podporuje heslo podobným způsobem jako číselný kód PIN, stanovuje minimální délku a povoluje opakování znaků a sekvencí. Tato funkce vyžaduje zapojení aplikací (např. WXP, Outlook, Managed Browser, Yammer), aby integrovaly sadu Intune APP SDK s kódem pro tuto funkci místo vynucení nastavení hesla v cílových aplikacích.
+Správci IT teď můžou pomocí portálu pro správu Azure nastavit požadavek, aby se prostřednictvím správy mobilních aplikací (MAM) při spouštění aplikace místo číselného kódu PIN vynutilo heslo. Při takové konfiguraci bude uživatel muset po zobrazení výzvy nastavit a používat heslo, aby získal přístup k aplikacím s podporou MAM. Heslo je definované jako číselný kód PIN s aspoň jedním speciálním znakem nebo velkým/malým písmenem. Tato verze Intune tuto funkci povolí **jenom v iOSu**. Intune podporuje heslo podobným způsobem jako číselný kód PIN, stanovuje minimální délku a povoluje opakování znaků a sekvencí. Tato funkce vyžaduje zapojení aplikací (tj. WXP, Outlook, Managed Browser, Yammer), aby integrovaly sadu Intune App SDK s kódem pro tuto funkci místo vynucení nastavení hesla v cílových aplikacích.
 
 #### <a name="app-version-number-for-line-of-business-in-device-install-status-report----1233999---"></a>Číslo verze aplikace pro obchodní aplikace ve zprávě o stavu instalace zařízení <!-- 1233999 -->
 Od této verze se ve zprávě o stavu instalace zařízení zobrazí u obchodních aplikací pro iOS a Android číslo verze aplikace. Tyto informace můžete využít k řešení potíží s aplikacemi nebo nalezení zařízení, na kterých běží zastaralé verze aplikací.
@@ -115,6 +132,7 @@ Ochrana Exploit Guard v programu Windows Defender obsahuje vlastní pravidla pro
 
 
 #### <a name="manage-powershell-scripts-in-intune-for-windows-10-devices----790537---"></a>Správa powershellových skriptů v Intune u zařízení s Windows 10 <!-- 790537 -->
+
 Rozšíření správy Intune umožňuje nahrát powershellové skripty do Intune, aby je bylo možné spouštět v zařízeních s Windows 10. Toto rozšíření doplňuje funkce správy mobilních zařízení (MDM) s Windows 10 a usnadňuje přechod na moderní správu. Podrobnosti najdete v článku [Správa powershellových skriptů v Intune u zařízení s Windows 10](intune-management-extension.md).
 
 #### <a name="new-device-restriction-settings-for-windows-10---------1308850---"></a>Nová nastavení omezení pro zařízení s Windows 10      <!-- 1308850 -->
@@ -169,28 +187,31 @@ Zákazníci můžou nakonfigurovat profily sítě Wi-Fi, aby mohli na zařízen�
 Když je profil doručený do zařízení, bude další krok záviset na tom, jak je profil nakonfigurovaný.  Pokud je profil nastavený na automatické připojení, aktivuje se připojení automaticky, až bude příště potřeba síť.  Pokud je profil nastavený na ruční připojení, musí uživatel aktivovat připojení ručně.  
 
 ### <a name="intune-apps"></a>Aplikace Intune
+
 #### <a name="access-to-managed-app-logs-for-ios----1469920---"></a>Přístup k protokolům spravovaných aplikací pro iOS <!-- 1469920 -->
 Koncoví uživatelé, kteří mají nainstalovaný Managed Browser, teď můžou zobrazit stav správy všech aplikací publikovaných Microsoftem a posílat protokoly pro řešení problémů se spravovanými aplikacemi pro iOS.
 
 Informace o tom, jak na zařízení s iOSem povolit v Managed Browseru režim pro řešení problémů, najdete v tématu [Jak se dostat k protokolům spravovaných aplikací pomocí Managed Browseru na zařízení s iOSem](app-configuration-managed-browser.md#how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios).
 
+#### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290----1417174---"></a>Vylepšení pracovního postupu instalace zařízení na Portálu společnosti pro iOS verze 2.9.0 <!---1417174--->
+
+Vylepšili jsme pracovní postup instalace zařízení v aplikaci Portál společnosti pro iOS. Jazyk je uživatelsky přívětivější a tam, kde to bylo možné, jsme také sjednotili obrazovky. Také jsme použitím názvu vaší společnosti všude v textu instalace upravili jazyk tak, aby více odpovídal vaší společnosti. Tento aktualizovaný pracovní postup uvidíte  [na stránce Co je nového v uživatelském rozhraní](whats-new-app-ui.md).
 
 ### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
+
 #### <a name="user-entity-contains-latest-user-data-in-data-warehouse-data-model----1544273---"></a>Entita uživatele obsahuje nejnovější uživatelská data v datovém modelu datového skladu<!-- 1544273 -->
 První verze datového modelu datového skladu Intune obsahovala jenom poslední historická data Intune. Při vytváření sestav nebylo možné zachytit aktuální stav uživatele. V této aktualizaci se **entita uživatele** naplní nejnovějšími uživatelskými daty.
 
 
-
-
-
-
 ## <a name="week-of-october-30-2017"></a>Týden od 30. října 2017
-### <a name="ios-and-android-line-of-business-app-version-number-is-visible----1380712---"></a>Je viditelné číslo verze obchodní aplikace pro iOS a Android <!-- 1380712 -->
+
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="ios-and-android-line-of-business-app-version-number-is-visible----1380712---"></a>Je viditelné číslo verze obchodní aplikace pro iOS a Android <!-- 1380712 -->
 
 Aplikace v Intune teď zobrazují číslo verze obchodních aplikací pro iOS a Android. Číslo se zobrazuje na portálu Azure Portal v seznamu aplikací a v okně přehledu aplikace. Koncoví uživatelé uvidí číslo aplikace v aplikaci Portál společnosti a na webovém portálu.
 
-#### <a name="full-version-number"></a>Celé číslo verze
-Celé číslo verze identifikuje konkrétní vydanou verzi aplikace. Číslo se zobrazí jako _Verze_(_build_). Příklad: 2.2(2.2.17560800)
+__Číslo úplné verze:__ Číslo úplné verze identifikuje konkrétní vydanou verzi aplikace. Číslo se zobrazí jako _Verze_(_build_). Příklad: 2.2(2.2.17560800)
 
 Celé číslo verze tvoří dvě části:
 
@@ -202,20 +223,47 @@ Celé číslo verze tvoří dvě části:
 
 Další informace o číslech verzí a vývoji obchodních aplikací si přečtěte v článku [Začínáme s Microsoft Intune App SDK](app-sdk-get-started.md#line-of-business-app-version-numbers).
 
-### <a name="device-and-app-management-integration----677972---"></a>Integrace správy zařízení a aplikací <!-- 677972 -->   
+#### <a name="device-and-app-management-integration----677972---"></a>Integrace správy zařízení a aplikací <!-- 677972 -->   
 Když jsou teď správa mobilních zařízení (MDM) i správa mobilních aplikací (MAM) Intune přístupné z portálu Azure Portal, začala služba Intune integrovat způsoby práce IT správců týkající se správy aplikací a zařízení. Tyto změny jsou zaměřené na zjednodušení způsobu správy zařízení a aplikací.
 
 Další informace o změnách MDM a MAM najdete na [blogu týmu podpory Intune](https://blogs.technet.microsoft.com/intunesupport/2017/09/19/support-tip-setting-up-communication-between-mam-managed-and-mdm-managed-apps/).
 
-### <a name="new-enrollment-alerts-for-apple-devices----1471790---"></a>Nová upozornění registrace pro zařízení Apple <!-- 1471790 -->
+#### <a name="new-enrollment-alerts-for-apple-devices----1471790---"></a>Nová upozornění registrace pro zařízení Apple <!-- 1471790 -->
 Stránka s přehledem registrace bude správcům IT zobrazovat užitečná upozornění týkající se správy zařízení Apple. Upozornění se budou zobrazovat na stránce přehledu vždy, když se bude blížit konec platnosti certifikátu Apple MDM Push Certificate a tokenu Programu registrace zařízení nebo když už jejich platnost vypršela. Budou se zobrazovat také v případě, že v Programu registrace zařízení existují nepřiřazená zařízení.
 
-
-### <a name="support-token-replacement-for-app-configuration-without-device-enrollment----1080364---"></a>Podpora nahrazování tokenů pro konfiguraci aplikací bez registrace zařízení <!-- 1080364 -->
+#### <a name="support-token-replacement-for-app-configuration-without-device-enrollment----1080364---"></a>Podpora nahrazování tokenů pro konfiguraci aplikací bez registrace zařízení <!-- 1080364 -->
 
 U aplikací v zařízeních, která nejsou zaregistrovaná, můžete pro dynamické hodnoty v konfiguracích aplikací použít tokeny. Další informace najdete v článku [Přidání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení](app-configuration-policies-managed-app.md).
 
+### <a name="intune-apps"></a>Aplikace Intune
+
+#### <a name="updates-to-the-company-portal-app-for-windows-10---1299474--"></a>Aktualizace aplikace Portál společnosti pro Windows 10<!--1299474-->
+Stránka Nastavení aplikace Portál společnosti pro Windows 10 je aktualizovaná, aby nastavení a zamýšlené akce uživatelů byly konzistentnější v rámci všech nastavení. Stránka také byla aktualizována tak, aby rozložením odpovídala jiným aplikacím pro Windows. Na stránce [Co je nového v uživatelském rozhraní aplikace](whats-new-app-ui.md) najdete obrázky aplikace před a po aktualizaci.
+
+#### <a name="inform-end-users-what-device-information-can-be-seen-for-windows-10-devices---1337920--"></a>Informace pro koncové uživatele o tom, jaké informace o zařízení si můžou zobrazit v zařízeních s Windows 10 <!--1337920-->
+Na obrazovku Podrobnosti o zařízení v aplikaci Portál společnosti pro Windows 10 jsme přidali **Typ vlastnictví**. Uživatelům to umožní zjistit další informace o ochraně osobních údajů přímo z této stránky z dokumentace Intune pro koncové uživatele. Tyto informace najdou také na obrazovce s informacemi **o produktu**.
+
+#### <a name="feedback-prompts-for-the-company-portal-app-for-android---1165249--"></a>Výzvy k zadání názoru v aplikaci Portál společnosti pro Android <!--1165249-->
+Aplikace portál společnosti pro Android teď požaduje zpětnou vazbu koncového uživatele. Tato zpětná vazba se pošle přímo společnosti Microsoft a poskytne koncovým uživatelům příležitost zadat recenzi aplikace ve veřejném obchodu Google Play. Zpětná vazba není povinná a je možné ji snadno zrušit, takže uživatelé mohou dále používat aplikaci.
+
+#### <a name="update-to-what-device-details-an-organization-can-see---1616825--"></a>Aktualizace: jaké podrobnosti o zařízení lze zobrazit v organizaci <!--1616825-->
+Aplikace Portál společnosti pro Android teď může pomocí funkce geofencing chránit přístup k prostředkům společnosti. Podrobnosti o síti, jako je například IP adresa, adresa výchozí brány a systému DNS (Domain Name), se používají k určení, zda povolit přístup k chráněným prostředkům společnosti.
+
+#### <a name="helping-your-users-help-themselves-with-the-company-portal-app-for-android----1573324-1573150-1558616-1564878---"></a>Pomoc uživatelům při řešení problémů vlastními silami v aplikaci Portál společnosti pro Android <!---1573324, 1573150, 1558616, 1564878--->
+
+Aplikace Portál společnosti pro Android přidala pokyny pro koncové uživatele, které jim pomůžou porozumět novým případům použití a v případě potřeby i vyřešit problém vlastními silami.
+- Koncoví uživatelé budou odkázáni na (portál Azure Active Directory)[https://account.activedirectory.windowsazure.com/r/#/profile], kde odeberou zařízení v případě, že dosáhli maximálního počtu zařízení, která mají povoleno přidat.
+- Koncovým uživatelům se zobrazí postup, který jim pomůže [opravit chyby aktivace na zařízení Samsung KNOX](https://go.microsoft.com/fwlink/?linkid=859718) nebo [vypnout režim snížené spotřeby](/intune-user-help/power-saving-mode-android). Pokud ani jedno z řešení jejich problém nevyřeší, zobrazí se jim vysvětlení, jak mohou [odeslat protokoly do Microsoftu](/intune-user-help/send-logs-to-microsoft-ios).
+
+#### <a name="new-resolve-action-available-for-android-devices----1583480---"></a>Nová akce Vyřešit pro zařízení s Androidem <!---1583480--->
+
+Aplikace Portál společnosti pro Android představuje akci Vyřešit na stránce _Aktualizovat nastavení zařízení_. Výběrem této možnosti koncový uživatel přejde přímo na nastavení, které způsobuje, že jeho zařízení nevyhovuje předpisům. V současné době aplikace Portál společnosti podporuje tuto akci u [hesla zařízení](/intune-user-help/set-your-pin-or-password-android), [šifrování zařízení](/intune-user-help/encrypt-your-device-android), [ladění USB](/intune-user-help/you-need-to-turn-off-usb-debugging-android) a u nastavení [Neznámé zdroje](/intune-user-help/you-need-to-turn-off-unknown-sources-android).
+
+#### <a name="device-setup-progress-indicator-in-android-company-portal----1565657---"></a>Ukazatel průběhu instalace zařízení v Portálu společnosti pro Android <!---1565657--->
+Aplikace Portál společnosti pro Android zobrazuje indikátor průběhu instalace zařízení, když uživatel provádí registraci zařízení. Indikátor zobrazuje nové stavy, od „Nastavení zařízení...“, přes „Probíhá registrace zařízení...“ a „Dokončení registrace zařízení...“ a potom „Dokončení nastavení zařízení...“.
+
 ## <a name="week-of-october-23-2017"></a>Týden od 23. října 2017
+
 ### <a name="intune-apps"></a>Aplikace Intune
 #### <a name="certificate-based-authentication-support-on-the-company-portal-for-ios---1029830--"></a>Podpora ověřování na základě certifikátu v Portálu společnosti pro iOS <!--1029830-->
 Přidali jsme podporu ověřování pomocí certifikátů v aplikaci Portál společnosti pro iOS. Uživatelé s ověřováním pomocí certifikátů zadají svoje uživatelské jméno a pak klepnou na odkaz „Přihlásit se pomocí certifikátu“. V aplikacích Portál společnosti pro Android a Windows je už ověřování pomocí certifikátů podporované. Další informace najdete na stránce o [přihlášení do aplikace Portál společnosti](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal).
@@ -395,9 +443,9 @@ Aplikace Portál společnosti pro Windows 10 umožňuje uživatelům aktualizova
 
 ## <a name="notices"></a>Sdělení
 
-### <a name="deprecating-support-for-os-x-mavericks-1010-and-previous-versions-of-macos---1489263-plan-for-change-for-1802--"></a>Ukončení podpory pro OS X Mavericks 10.10 a předchozí verze macOSu <!--1489263, plan for change for 1802-->
+### <a name="deprecating-support-for-os-x-yosemite-1010-and-previous-versions-of-macos---1489263-plan-for-change-for-1802--"></a>Ukončení podpory pro OS X Yosemite 10.10 a předchozí verze macOS <!--1489263, plan for change for 1802-->
 
-Oznamujeme, že v únoru 2018 začneme ukončovat registraci zařízení s OS X Mavericks 10.10 a předchozími verzemi macOSu. Intune plně podporuje OS X Yosemite 10.11 a novější.
+Oznamujeme, že v únoru 2018 začneme ukončovat registraci zařízení s OS X Yosemite 10.10 a předchozími verzemi macOS. Intune plně podporuje OS X El Capitan 10.11 a novější.
 
 ### <a name="new-path-for-managed-devices-in-graph-api----1586728---"></a>Nová cesta pro spravovaná zařízení v Graph API <!-- 1586728 -->
 Měníme cestu používanou pro přístup ke spravovaným zařízením v beta verzi rozhraní Graph API. 
@@ -419,6 +467,9 @@ Existující role pro správu mobilních aplikací (MAM) (Přispěvatel, Vlastn�
 
 
 ## <a name="whats-coming"></a>Co připravujeme
+
+### <a name="manage-jamf-enrolled-macos-devices-with-intunes-device-compliance-engine----1592747---"></a>Správa zařízení macOS zaregistrovaných v Jamf s modulem dodržování předpisů zařízení Intune <!---1592747--->
+Počínaje začátkem roku 2018 bude Jamf odesílat systému macOS informace o stavu zařízení Intune, který pak vyhodnotí informace o dodržování předpisů se zásadami definovaných v konzole Intune. Podle stavu dodržování předpisů zařízení a také dalších podmínek (třeba umístění, uživatelského rizika atd.) bude podmíněný přístup vynucovat dodržování předpisů pro zařízení macOS, které mají přístup ke cloudovým a místním aplikacím propojených s Azure AD, včetně Office 365.
 
 ### <a name="changes-in-support-for-the-intune-ios-company-portal-app-----1164474----"></a>Změny v podpoře pro aplikaci Portál společnosti Intune pro iOS  <!-- 1164474  -->
 Již brzy bude dostupná nová verze aplikace Portál společnosti Microsoft Intune pro iOS, která bude podporovat pouze zařízení se systémem iOS 9.0 nebo novějším. Verze podporující iOS 8 bude ještě na krátkou dobu k dispozici. Pokud používáte také aplikace iOS s podporou MAM, podporujeme iOS 9.0 a novější, takže budete muset zajistit, aby vaši koncoví uživatelé aktualizovali na nejnovější verzi operačního systému. 

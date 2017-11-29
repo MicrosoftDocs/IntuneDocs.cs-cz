@@ -6,7 +6,7 @@ keywords:
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 10/12/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,20 +15,20 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2b2f2e174c459508dc30a63ab9de3bf1cc069173
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: 620957c04d4114d1f12e9b44101704c370663d3b
+ms.sourcegitcommit: 9ccdac76e0b0716723452a6675b091f15a4d31f2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Správa aplikací pro systém iOS nakoupených prostřednictvím programu hromadného nákupu pomocí Microsoft Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-App Store pro iOS umožňuje pro aplikace, které chcete spouštět ve vaší společnosti, nakoupit víc licencí. Nákupem více kopií aplikace snížíte administrativní režii potřebnou ke sledování více kopií zakoupených aplikací.
+App Store pro iOS umožňuje pro aplikace, které chcete spouštět ve vaší společnosti, nakoupit víc licencí. Zakoupením více kopií můžete efektivně spravovat aplikace ve vaší společnosti.
 
-Microsoft Intune pomáhá spravovat aplikace koupené prostřednictvím tohoto programu:
+Microsoft Intune pomáhá spravovat více kopií aplikací koupených prostřednictvím tohoto programu:
 
 - Vykazuje informace o licencích z App Storu.
 - Sleduje počet použitých licencí.
@@ -38,12 +38,14 @@ Hromadně zakoupené aplikace můžete přiřadit dvěma způsoby:
 
 ### <a name="device-licensing"></a>Licencování zařízení
 
-Když aplikaci přiřadíte k zařízením, použije se jedna licence aplikace, která zůstane spojená se zařízením, jemuž jste ji přiřadili.
+Když aplikaci přiřadíte k zařízením, použije se jedna licence aplikace, která zůstane spojená se zařízením, jemuž jste ji přiřadili. 
+
 Když k zařízení přiřadíte hromadně zakoupené aplikace, nemusí koncový uživatel zařízení zadávat Apple ID pro přístup do obchodu. 
 
 ### <a name="user-licensing"></a>Licencování uživatelů
 
 Když aplikaci přiřadíte uživateli, použije se jedna licence aplikace, která bude s uživatelem spojená. Tato aplikace může být spuštěna na více zařízeních, která uživatel vlastní (s limitem, který určuje Apple).
+
 Když uživatelům přiřadíte hromadně zakoupenou aplikaci, musí mít každý koncový uživatel platné a jedinečné Apple ID pro přístup k App Storu.
 
 V Intune také můžete synchronizovat, spravovat a přiřazovat knihy, které jste koupili v rámci programu Apple Volume Purchase Program (VPP). Další informace najdete v článku [Správa e-knih pro iOS zakoupených v rámci multilicenčního programu](vpp-ebooks-ios.md).
@@ -81,7 +83,7 @@ Dbejte na to, abyste při nastavování zařízení pro nového uživatele Intun
 1. Přihlaste se k portálu Azure Portal.
 2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 1.  V okně **Intune** v části **Nastavení** zvolte **Mobilní aplikace** > **Tokeny VPP pro iOS**.
-2.  V okně se seznamem tokenů VPP klikněte na **Vytvořit**.
+2.  V okně se seznamem tokenů VPP vyberte možnost **Vytvořit**.
 4. V okně **Vytvořit token VPP** zadejte následující informace:
     - **Soubor tokenu VPP** – pokud jste to ještě neudělali, zaregistrujte se do programu Volume Purchase Program for Business nebo Volume Purchase Program for Education. Po zaregistrování si stáhněte token Apple VPP pro svůj účet a vyberte ho tady.
     - **Apple ID** – zadejte Apple ID účtu přidruženého k multilicenčnímu programu.
@@ -91,14 +93,11 @@ Dbejte na to, abyste při nastavování zařízení pro nového uživatele Intun
 
     - **Typ účtu VPP** – zvolte jednu z možností: **Obchodní** nebo **Vzdělávání**.
     - **Automatické aktualizace aplikací** – Přepnutím ze **Zapnuto** na **Vypnuto** povolíte automatické aktualizace. Když jsou povolené, Intune aktualizuje všechny aplikace zakoupené pro konkrétní token prostřednictvím služby Intune, jakmile se zařízení ohlásí. Intune zjistí aktualizace aplikací VPP v App Storu a automaticky je nabídne zařízení, jakmile se zařízení ohlásí.
-4. Po dokončení klikněte na **Nahrát**.
+4. Po dokončení vyberte **Nahrát**.
 
 Token se zobrazí v okně se seznamem tokenů.
 
 Data ukládaná společností Apple můžete kdykoli synchronizovat s Intune výběrem položky **Synchronizovat nyní**.
-
-> [!NOTE]
-> Microsoft Intune synchronizuje jenom informace o aplikacích, které jsou veřejně dostupné prostřednictvím iTunes Storu. **Vlastní B2B aplikace pro iOS** se zatím nepodporují. Pokud tento scénář platí pro vaše aplikace, nebudou se informace o aplikaci synchronizovat.
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Přiřazení aplikace zakoupené v rámci multilicenčního programu
 
@@ -134,7 +133,7 @@ Koncový uživatel obdrží výzvu k instalaci aplikace v rámci VPP v řadě sc
 
 ## <a name="further-information"></a>Další informace
 
-Když chcete licenci získat zpět, musíte nastavit akci přiřazení na Odinstalovat. Až se aplikace odinstaluje, licence se uvolní. Pokud odeberete aplikaci, která byla přiřazena uživateli, pokusí se Intune uvolnit všechny licence aplikace, které byly k tomuto uživateli přidruženy.
+Když chcete licenci získat zpět, musíte nastavit akci přiřazení na **Odinstalovat**. Až se aplikace odinstaluje, licence se uvolní. Pokud odeberete aplikaci, která byla přiřazena uživateli, pokusí se Intune uvolnit všechny licence aplikace, které byly k tomuto uživateli přidruženy.
 
 Když se uživatel s oprávněným zařízením poprvé pokusí do zařízení nainstalovat aplikaci programu VPP, zobrazí se výzva k účasti v programu Apple Volume Purchase Program (VPP). Aby mohla instalace pokračovat, musí uživatel potvrdit svou účast. Aby se mohl uživatel připojit do programu Apple Volume Purchase Program, musí používat na zařízení s iOSem aplikaci iTunes. Pokud jste nastavili zásadu, která zakazuje aplikace z iTunes Storu, nebude licencování založené na uživatelích pro aplikace z programu VPP fungovat. Řešením je odebrat zásady a povolit tak aplikaci iTunes nebo použít licencování na základě zařízení.
 

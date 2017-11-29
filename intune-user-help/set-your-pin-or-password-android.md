@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/13/2017
+ms.date: 11/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 0b6667bc25263cdc8d638027f4e846724e15b1d0
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 68f9f6333cbe3e450027e64399e2c0375459f1ca
+ms.sourcegitcommit: dc2595bec05206a826cd10cb834bf6043145c917
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="set-your-pin-or-password"></a>Nastavení PIN kódu nebo hesla
 
@@ -28,9 +28,10 @@ Pokud Intune používáte pro přístup k pracovním nebo školním datům, mů�
 
 K nastavení kódu PIN a hesla použijte následující postup.
 
-1.  Klepněte na **Nastavení** &gt; **Zabezpečení** &gt; **Zamykací obrazovka** &gt; **Heslo**.
+1.  Klepněte na **Nastavení** > **Zabezpečení** > **Zamykací obrazovka** > **Heslo**.
 
 2.  Zvolte a potvrďte nové heslo.
 
+Pro určitá zařízení musíte kromě hesla obrazovky nastavit spouštěcí kód PIN. Můžete tento problém zkusit vyřešit tak, že v aplikaci nastavení najdete umístění k povolení této možnosti. Třeba na Samsungu Galaxy S7 můžete zabezpečené spuštění povolit tak, že přejdete do **Nastavení** > **Zamykací obrazovka a zabezpečení** > **Zabezpečené spuštění**. Další informace najdete [tady](/intune-user-help/your-device-appears-encrypted-but-cp-says-otherwise). 
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

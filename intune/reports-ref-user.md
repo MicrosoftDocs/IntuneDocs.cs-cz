@@ -5,7 +5,7 @@ keywords: "Datový sklad Intune"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 07/31/2017
+ms.date: 11/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,30 +14,36 @@ ms.assetid: C29A6EEA-72B7-427E-9601-E05B408F3BB0
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8088127f5968c0b4f07f83b1dad02ba90f4e6b9a
-ms.sourcegitcommit: e9f9fccccef691333143b7523d1b325ee7d1915a
+ms.openlocfilehash: 2d81d17bc9489900f9d17101db1f1496ba8d55e9
+ms.sourcegitcommit: d26930f45ba9e6292a49bcb08defb5b3f14b704b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="reference-for-user-entity"></a>Referenční informace pro entitu uživatele
 
 Kategorie **Uživatel** obsahuje entitu **User**, která definuje vlastnosti uživatele a agenta v datovém modelu.
 
-**User**
+## <a name="user"></a>Uživatel
 
 Entita **User** obsahuje seznam všech uživatelů Azure Active Directory (Azure AD) s přiřazenými licencemi ve vaší společnosti.
+
+Kolekce entit **Uživatel** obsahuje data za poslední měsíc. Tyto záznamy zahrnují stavy uživatelů za dobu shromažďování dat i v případě odebrání uživatele. Uživatel například může být přidaný do Intune a potom v průběhu posledního měsíce dojde k jeho odebrání. Přestože tento uživatel není v době vytvoření sestavy přítomen, existují data o uživateli a stavu z předchozího měsíce. Můžete vytvořit sestavu, která ukazuje trvání historické přítomnosti uživatele ve vašich datech.
 
 | Vlastnost  | Popis | Příklad |
 |---------|------------|--------|
 | UserKey |Jedinečný identifikátor uživatele v datovém skladu – náhradní klíč |123 |
 | UserId |Jedinečný identifikátor uživatele – podobá se vlastnosti UserKey, jedná se ale o přirozený klíč. |b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail |E-mailová adresa uživatele |John@constoso.com |
+| UPN | Hlavní název uživatele (UPN) uživatele | John@constoso.com |
 | DisplayName |Zobrazované jméno uživatele |Honza |
 | IntuneLicensed |Určuje, jestli tento uživatel má licenci na službu Intune. |True nebo False |
-| IsDeleted |Určuje, jestli je záznam tohoto uživatele aktualizovaný.  True – tento uživatel má v této tabulce nový záznam s aktualizovanými poli. False – jedná se o nejnovější záznam pro tohoto uživatele. |True nebo False |
-| StartDateInclusiveUTC |Datum a čas ve standardu UTC, kdy se tento uživatel v datovém skladu vytvořil |23.11.2016 12:00:00 |
-| EndDateExclusiveUTC |Datum a čas ve standardu UTC, kdy došlo ke změně vlastnosti IsDeleted na hodnotu True |23.11.2016 12:00:00 |
-| IsCurrent |Určuje, jestli tento záznam uživatele v datovém skladu je nebo není aktuální. |True nebo False |
-| RowLastModifiedDateTimeUTC |Datum a čas ve standardu UTC, kdy se tento uživatel v datovém skladu naposledy změnil |23.11.2016 12:00:00 |
+| IsDeleted | Určuje, zda všem uživatelským licencím vypršela platnost a zda byl proto uživatel odebrán z Intune. Pro jeden záznam se tento příznak nemění. Místo toho se vytvoří nový záznam pro nový stav uživatele. |True nebo False |
+| StartDateInclusiveUTC |Pokud IsDeleted = FALSE, použije se DateTime ve standardu UTC, kdy byla uživateli přiřazena licence a začal existovat v Intune. Pokud IsDeleted = TRUE, použije se DateTime ve standardu UTC, kdy uživateli vypršela platnost licencí a byl odebrán z Intune. |23.11.2016 12:00:00 |
+| EndDateExclusiveUTC |Pokud IsDeleted = FALSE, použije se DateTime ve standardu UTC, kdy uživateli vypršela platnost licence a byl odebrán z Intune. Platnost licence vypršela během předchozího dne. Pokud IsDeleted = TRUE, použije se DateTime ve standardu UTC, kdy uživatel znovu získal novou licenci a byl znovu vytvořen v Intune.  |23.11.2016 12:00:00 |
+| IsCurrent |Určuje, zda tento záznam představuje nejnovější stav uživatele. Může existovat více záznamů pro jednoho uživatele, ale pouze jeden z nich představuje aktuální stav.  |True nebo False |
+| RowLastModifiedDateTimeUTC |Datum a čas ve standardu UTC, kdy se tento záznam v datovém skladu naposledy změnil  |23.11.2016 12:00:00 |
 
+## <a name="next-steps"></a>Další kroky
+ - Kolekci entit **Aktuální uživatel** můžete použít k omezení dat uživatelů na uživatele, kteří jsou aktuálně aktivní. Další informace najdete v tématu [Referenční informace pro entitu aktuálního uživatele](reports-ref-current-user.md). 
+ - Další informace o tom, jak datový sklad sleduje dobu života uživatele v Intune, získáte v článku věnovaném [reprezentaci doby života uživatele v datovém skladu Intune](reports-ref-user-timeline.md).
