@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/13/2017
+ms.date: 11/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 365f72a6-564d-4cbd-8f0a-70ec80b6e253
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 7272c3d21674e4e0029cf49140638d9a3fd3306f
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 5feec496d0f7952b1ae35ed1d905cbfc526bc387
+ms.sourcegitcommit: 0b96ae18524eb976df01a5340631ef331357e666
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="set-or-change-your-passcode"></a>Nastavení nebo změna vašeho přístupového kódu
 
@@ -38,7 +38,7 @@ Pokud se vám přístupový kód, který splňuje požadavky na přístupový k�
 
 1. Klepněte na **Nastavení** > **Touch ID a kódový zámek**.
 2. Zadejte přístupový kód. Otevře se nabídka **Touch ID a kódový zámek**.
-2. Klepněte na **Změnit kódový zámek** a zadejte svoje staré heslo.
+2. Klepněte na **Změnit přístupový kód** a zadejte svoje staré heslo.
 3. Zadejte nový přístupový kód, který splňuje požadavky firemní podpory, a potom ho opětovným zadáním ověřte.
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

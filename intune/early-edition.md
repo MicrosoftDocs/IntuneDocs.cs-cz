@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.date: 11/6/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f7cc595655950ef1bf2586e939b6f02e270e7afc
-ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
+ms.openlocfilehash: f4fd810529732d2b24b948eb0ae741d37e0fb59e
+ms.sourcegitcommit: d64b03bff0566f08d88ecb488dd48f19af74cab3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="the-early-edition-for-microsoft-intune---november-2017"></a>Časná edice Microsoft Intune – listopad 2017
+# <a name="the-early-edition-for-microsoft-intune---december-2017"></a>Časná edice pro Microsoft Intune – prosinec 2017
 
 **Časná edice** poskytuje seznam funkcí, které se chystají v nadcházejících vydáních služby Microsoft Intune. Tyto informace jsou poskytovány v omezené míře a můžou podléhat změnám. Nesdílejte tyto informace mimo společnost. U některých funkcí, které jsou zde uvedeny, existuje riziko, že nebudou do konečného termínu dokončeny, a můžou se proto objevit až v budoucí verzi. Další funkce se testují v pilotní (testovací) verzi, aby bylo zajištěno, že je budou moct zákazníci bez problémů využívat. Pokud máte jakékoli dotazy nebo připomínky, obraťte se na příslušný kontakt pro skupinu produktů společnosti Microsoft.
 
@@ -39,7 +39,102 @@ Tato stránka se pravidelně aktualizuje. Přijďte se tedy znovu podívat, jest
 
 ## <a name="intune-in-the-azure-portal"></a>Intune na portálu Azure Portal
 
+### <a name="app-protection-policies-----679615---"></a>Zásady ochrany aplikací  <!-- 679615 -->
+Zásady Intune App Protection nabízejí možnost vytvoření globálních výchozích zásad, které rychle aktivují ochranu přes všechny uživatele v celém tenantovi.
 
+### <a name="revoking-ios-volume-purchase-program-apps-----820863---"></a>Odvolání aplikací pro iOS koupených přes Volume Purchase Program <!-- 820863 -->
+Pro dané zařízení, které má jednu nebo více aplikací pro iOS koupených přes Volume Purchase Program (VPP), budete moct odvolat přidruženou licenci aplikace na základě zařízení. Odvoláním licence aplikace se příslušná aplikace VPP neodinstaluje ze zařízení. Pokud chcete odinstalovat aplikaci VPP, musíte nastavit akci přiřazení na **Odinstalovat**. Další informace najdete v tématu [Správa aplikací pro systém iOS nakoupených prostřednictvím programu hromadného nákupu pomocí Microsoft Intune](vpp-apps-ios.md).
+
+### <a name="revoke-licenses-for-an-ios-volume-purchasing-program-token----820870---"></a>Odvolání licencí pro token Volume Purchase Program pro iOS <!-- 820870 -->
+Pro daný token VPP budete moct odvolat licenci všech aplikací pro iOS koupených přes Volume Purchase Program (VPP).
+
+### <a name="delete-an-ios--volume-purchasing-program-token----820879---"></a>Odstranění tokenu Volume Purchase Program pro iOS <!-- 820879 -->
+Pomocí konzoly budete moct odstranit token programu Volume Purchase Program (VPP) pro iOS. To může být nutné v případě, že máte duplicitní instance tokenu VPP.
+
+### <a name="network-access-control-nac-device-check-in-reporting-----1232250---"></a>Vytváření sestav ohlášení zařízení pro řízení přístupu k síti (NAC) <!-- 1232250 -->
+Před touto změnou nemohli správci IT určit ze strany Intune, zda zařízení spravované pomocí NAC komunikovalo s jejich řešením NAC nebo ne. Když zařízení spravované pomocí NAC nekomunikuje s daným řešením NAC, považuje řešení NAC dané zařízení za nevyhovující, zablokuje ho a následně ho zablokují i zásady podmíněného přístupu, které jsou závislé na stavu dodržování předpisů pro zařízení.
+
+Díky této změně mohou správci IT sledovat, která zařízení spravovaná pomocí NAC úspěšně komunikovala s jejich řešením NAC a která ne. Tento nový prvek se skládá z dvou nových funkcí monitorování umístěných v úloze dodržování předpisů zařízení v Intune. Viz statistika níže:
+- **Průměrný počet volání NAC za poslední hodinu**
+- **Poslední příchozí žádost NAC (datum a čas)**
+
+### <a name="new-ios-device-action------1244701---"></a>Nová akce pro zařízení s iOSem  <!-- 1244701 -->
+Zařízení s iOSem 10.3, která jsou pod dohledem, je možné vypnout. Tato akce vypne zařízení okamžitě, bez upozornění pro koncového uživatele. Akci **Vypnout (jen pod dohledem)** najdete ve vlastnostech zařízení, když zařízení vyberete v úloze **Zařízení**.
+
+### <a name="palo-alto-vpn-now-supported----1333680-eeready---"></a>Nyní podpora VPN Palo Alto <!-- 1333680 eeready -->
+Seznam **Typ připojení** bude při konfiguraci základní sítě VPN zahrnovat položku VPN Palo Alto.
+
+### <a name="multiple-connector-support-for-scep-and-pfx-certificate-handling----1361755-eeready---"></a>Podpora více konektorů pro zpracování certifikátů SCEP a PFX <!-- 1361755 eeready -->
+Zákazníci, kteří používají místní konektor NDES k dodání certifikátů do zařízení, budou moci konfigurovat více konektorů v jednom tenantovi.
+
+Tato nová funkce podporuje následující scénář:
+
+- **Vysoká dostupnost**
+
+    Každý konektor NDES si vyžádá žádosti o certifikát z Intune.  Pokud jeden konektor NDES přejde do offline režimu, může další konektor dál zpracovávat žádosti.
+
+### <a name="new-automatic-redeployment-setting----1469168---"></a>Nové nastavení automatického opětovného nasazení <!-- 1469168 -->
+Toto nastavení umožňuje uživatelům s právy správce odstranit všechna uživatelská data a nastavení pomocí **CTRL + Win + R** na zamykací obrazovce zařízení. Zařízení se znovu automaticky nakonfiguruje zaregistruje do správy.
+
+Toto nastavení najdete v části Windows 10 -> Omezení zařízení -> Obecné -> Automatické opětovné nasazení.
+
+### <a name="install-office-apps-on-macos-devices----1494311---"></a>Instalace aplikací Office na zařízeních macOS <!-- 1494311 -->
+Budete moct nainstalovat aplikace Office v zařízeních macOS. Tento nový typ aplikace vám umožní nainstalovat Word, Excel, PowerPoint, Outlook a OneNote. Tyto aplikace se také dodávají s nástrojem Microsoft AutoUpdater (MAU), abyste je měli zabezpečené a aktuální.
+
+### <a name="surface-hub-resource-account-supported----1566442-eeready---"></a>Podpora účtu zdroje pro Surface Hub <!-- 1566442 eeready -->
+Přibude nová akce zařízení, která umožní správcům definovat a aktualizovat účet zdroje přidružený k zařízení Surface Hub.
+
+Surface Hub využívá účet zdroje k ověření přes Skype nebo Exchange, aby bylo možné se připojit ke schůzce. Můžete vytvořit jedinečný účet zdroje, takže se Surface Hub zobrazí ve schůzce jako konferenční místnost. Účet zdroje se například může zobrazit jako *Konferenční místnost B41/6233*. Účet zdroje (známý také jako účet zařízení) pro Surface Hub je obvykle potřeba nakonfigurovat pro umístění konferenční místnosti a v případě, kdy je nutné změnit další parametry účtu zdroje.
+
+Pokud chtějí správci aktualizovat účet zdroje v zařízení, musí zadat aktuální přihlašovací údaje služby Active Directory nebo Azure Active Directory přidružené k tomuto zařízení. Pokud je na zařízení aktivní rotace hesla, musí správce přejít do Azure Active Directory a heslo najít.
+
+> [!NOTE]
+> Všechna pole se odešlou ve skupině a přepíšou všechna dříve nakonfigurovaná pole. Také prázdná pole mohou přepsat existující pole.
+
+Správci mohou nakonfigurovat následující nastavení:
+
+- **Účet zdroje**  
+
+   - **Uživatel služby Active Directory**   
+   Název_domény\uživatelské_jméno nebo hlavní název uživatele (UPN): user@domainname.com
+   - **Heslo**
+
+
+- **Volitelné parametry účtu zdroje** (musí se nastavit pomocí daného účtu zdroje)
+   - **Období rotace hesla**   
+     Zajišťuje, že Surface Hub automaticky aktualizuje heslo k účtu každý týden z bezpečnostních důvodů. Pokud chcete nakonfigurovat jakékoli parametry po zapnutí této možnosti, musíte nejprve resetovat heslo k účtu ve službě Azure Active Directory.
+
+   - **Adresa protokolu SIP (Session Initiation Protocol)**    
+     Používá se pouze v případě nezdařeného automatického zjišťování.
+
+   - **E-mail**    
+     E-mailová adresu účtu zdroje nebo zařízení.
+
+   - **Server Exchange**    
+     Je potřeba, pouze pokud se nezdaří automatické zjišťování.
+
+   - **Synchronizace kalendáře**    
+     Určuje, zda je povolená synchronizace kalendáře a dalších služeb serveru Exchange. Například: synchronizace schůzek.
+
+### <a name="intune-now-provides-the-account-move-operation-----1573558-1579830---"></a>Intune teď poskytuje operaci přesunutí účtu <!-- 1573558, 1579830 -->
+Funkce **Přesunutí účtu** migruje tenanta z jedné jednotky škálování Azure (ASU) do jiné. Funkci **Přesunutí účtu** lze použít jak pro scénář zahájený zákazníkem, kdy o přesunutí požádáte tým podpory Intune, tak pro scénář řízený společností Microsoft, kdy musí Microsoft provést úpravy služby na straně back-end. Během **Přesunutí účtu** tenant přejde do režimu jen pro čtení (ROM). Operace služby, jako je registrace, přejmenování zařízení nebo aktualizuje stavu dodržování předpisů, se během režimu jen pro čtení nezdaří.
+
+### <a name="new-windows-defender-security-center-wdsc-device-configuration-profile-settings----1335507---"></a>Nové nastavení v profilu konfigurace zařízení v aplikaci Centrum zabezpečení v programu Windows Defender (WDSC) <!-- 1335507 -->
+Intune přidá nový oddíl nastavení profilu konfigurace zařízení v části Endpoint Protection s názvem **Centrum zabezpečení v programu Windows Defender**. Správci IT mohou nakonfigurovat, ke kterým pilířům aplikace Centrum zabezpečení v programu Windows Defender mají mít koncoví uživatelé přístup. Pokud správce IT skryje pilíř v aplikaci Centrum zabezpečení v programu Windows Defender, nezobrazují se v zařízení uživatele žádná oznámení související s skrytým pilířem.
+
+Toto jsou pilíře, které mohou správci skrýt z nastavení profilu konfigurace zařízení v aplikaci Centrum zabezpečení v programu Windows Defender:
+- Ochrana proti virům a ohrožením
+- Výkon a stav zařízení
+- Ochrana brány firewall a sítě
+- Aplikace a ovládací prvek Prohlížeč
+- Možnosti pro rodinu
+
+Správci IT mohou také přizpůsobit výběr oznámení, která budou uživatelé dostávat. Můžete například nakonfigurovat, jestli uživatelé dostanou všechna oznámení vygenerovaná viditelnými pilíři WDSC nebo pouze závažná oznámení. Nezávažná oznámení zahrnují pravidelné přehledy aktivity nástroje Antivirová ochrana v programu Windows Defender a oznámení o času dokončení kontroly. Všechna další oznámení se považují za závažná. Kromě toho můžete také upravit samotný obsah oznámení. Například můžete přidat kontaktní informace oddělení IT, která se vloží do oznámení publikovaných v zařízeních uživatelů.
+
+
+
+
+<!-- the following are present prior to 1712 -->
 ### <a name="assign-office-365-mobile-apps-to-ios-and-android-devices-using-built-in-app-type----1332318---"></a>Přiřazení mobilních aplikací Office 365 k zařízením s iOSem a Androidem pomocí integrovaného typu aplikace <!-- 1332318 -->
 **Integrovaný** typ aplikace vám usnadní vytvoření aplikací Office 365 a jejich přiřazení k zařízením s iOSem a Androidem, která spravujete. Mezi tyto aplikace O365 se řadí například Word, Excel, PowerPoint a OneDrive. K typu aplikace můžete přiřadit konkrétní aplikace a pak upravit konfiguraci informací o aplikaci.
 

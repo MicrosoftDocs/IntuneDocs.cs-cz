@@ -1,11 +1,11 @@
 ---
-title: "Registrace zařízení s iOSem v Intune | Dokumentace Microsoftu"
-description: "Popisuje registraci zařízení s iOSem v Intune."
+title: "Nastavení přístupu k prostředkům společnosti | Microsoft Docs"
+description: "Popisuje, jak začít spravovat zařízení s iOSem pomocí Intune"
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/01/2017
+ms.date: 11/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,89 +16,63 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 41f39740b62074e06ccc64c6211d642d224efd6c
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: ee4275ec7b9b455cf6ebf032123127fde97a9a74
+ms.sourcegitcommit: 0b96ae18524eb976df01a5340631ef331357e666
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 11/15/2017
 ---
-# <a name="enroll-your-ios-device-in-intune"></a>Registrace zařízení se systémem iOS do Intune
+# <a name="set-up-access-to-your-company-resources"></a>Nastavení přístupu k prostředkům společnosti
 
-Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svoje zařízení s iOSem zaregistrovat a získat tak přístup k e-mailům, souborům a dalším prostředkům společnosti. Když si svoje zařízení zaregistrujete, může vaše IT oddělení tyto pracovní nebo školní prostředky spravovat, udržovat je v bezpečí a zároveň vám umožnit, abyste k plnění úkolů používali zařízení, které preferujete. Další informace o registraci najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
+Vaše společnost má spoustu vlastnických informací z e-mailu, souborů, sítí a dalších zdrojů. Vaše společnost používá Microsoft Intune k lepší ochraně těchto informací při přístupu ze zařízení s iOSem. Je tak možné spravovat tyto prostředky, zvýšit jejich zabezpečení a dát vám volnost při výběru zařízení, s jakým chcete pracovat.
 
 > [!VIDEO https://channel9.msdn.com/Series/IntuneEnrollment/iOS-Enrollment/player]
 
 > [!NOTE]
 > Pokud se pokoušíte získat přístup k firemnímu e-mailu v aplikaci Mail, pravděpodobně se vám zobrazí výzva ke správě zařízení, abyste zajistili jeho zabezpečení. Podle pokynů uvedených níže získáte přístup ke svému e-mailu a dalším prostředkům společnosti na zařízení s iOSem.
 
-**Než začnete:**
+## <a name="before-you-start"></a>Než začnete
 
-- Po zahájení tohoto postupu nezapomeňte registraci dokončit. Přerušení registrace na více než několik minut obvykle celý proces zastaví a bude vyžadovat jeho opětovné zahájení.
-- Pokud se vaše registrace z jakéhokoli důvodu nezdaří, budete se muset vrátit do aplikace Portál společnosti a zkusit to znovu.
-- Ověřte, že vám funguje Wi-Fi. V opačném případě registrace selže.
-- Pokud jste v zařízení zablokovali Safari, odblokujte ho. Safari je součástí procesu registrace zařízení.
+- Ujistěte se, že když začnete, budete moct celý proces dokončit najednou. Přerušení na více než několik minut obvykle celý proces zastaví a bude vyžadovat jeho opětovné zahájení.
+- Pokud by se proces nezdařil, budete se muset vrátit do aplikace Portál společnosti a začít znovu.
+- Zkontrolujte, že je funkční Wi-Fi a že aplikace Safari funguje ve vašem zařízení.
+- Stáhněte si téma [Instalace a přihlášení do aplikace Portál společnosti Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md).
 
 
-**Registrace zařízení s iOSem**
+## <a name="using-the-company-portal-app-to-set-up-access-to-company-resources"></a>Nastavení přístupu k prostředkům společnosti pomocí aplikace Portál společnosti
 
-1.  Postupujte podle návodu v tématu [Instalace a přihlášení do aplikace Portál společnosti Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md).
-
-2. Na stránce **Nastavení firemního přístupu** klepněte na **Začít**.
-
-    ![ios-enroll-comp-access-setup-begin](./media/ios-enroll-1a-comp-access-setup.png)
-
-3. Na obrazovce **Proč zařízení registrovat?** si přečtěte informace o tom, co vám registrace zařízení umožní, a potom klepněte na **Pokračovat**.
-
-    ![ios-enroll-why-enroll](./media/ios-enroll-1b-why-enroll.png)
-
-  > [!NOTE]
-  > Žluté trojúhelníky neznamenají, že už došlo k chybě. Tyto ikony označují, že ještě existují kroky, které se musí v procesu registrace dokončit.
-
-4. Prohlédněte si seznam toho, co vaše firemní podpora na vašem registrovaném zařízení uvidí nebo neuvidí, a klepněte na **Pokračovat**.
-
-    ![ios-enroll-what-it-can-see](./media/ios-enroll-1c-we-care-privacy.png)
-
-5.  Na obrazovce **Co dál?** si přečtěte, co probíhá při registraci, a potom klepněte na **Registrovat**.
-
-    ![ios-enroll-what-comes-next](./media/ios-enroll-1d-what-comes-next.png)
-
-6.  Na obrazovce **Nainstalovat profil** klepněte na **Instalovat**, a pokud se zobrazí výzva, zadejte své heslo.
-
-    ![ios-enroll-install-profile](./media/ios-enroll-2-mgt-profile-install.png)
-
-7.  Klepněte na **Instalovat**.
-
-    ![ios-enroll-tap-install](./media/ios-enroll-3-mgt-profile-install-2.png)    
-
-8.  Klepnutím na **Instalovat** dejte najevo, že jste si přečetli upozornění.
-
-    ![ios-enroll-tap-install-after-warning](./media/ios-enroll-4-warning.png)
-
-9.  Klepněte na **Důvěřovat**.
-
-    ![ios-enroll-tap-trust](./media/ios-enroll-5-trust.png)
-
-10.  Po změně obrazovky a dokončení instalace profilu klepněte na **Hotovo**.
-
-    ![ios-enroll-tap-done](./media/ios-enroll-6-done.png)
-
-    Na obrazovce se objeví zpráva, že se „zařízení registruje“.
-
-11.  Pokud se zobrazí zpráva s dotazem, jestli chcete otevřít stránku Portálu společnosti, klepněte na **Otevřít**.
-
-    ![ios-enroll-open-comp-portal](./media/ios-enroll-7-open-cp.png)
-
-12. Na obrazovce **Nastavení firemního přístupu** klepněte na **Pokračovat**. Na této obrazovce vidíte, jaké další požadavky může být nutné splnit, aby vaše zařízení vyhovovalo zásadám, jako je například nastavení hesla. Postupujte podle pokynů na obrazovce, dokud nesplníte všechny požadavky týkající se dodržování předpisů. Po dokončení se vrátíte na obrazovku nastavení firemního přístupu. Klepněte na **Pokračovat**.
-
-    ![ios-enroll-comp-access-tap-continue](./media/ios-enroll-8-comp-access-setup-compliance.png)
-
-13. Klepněte na **Hotovo**.
-
-    ![ios-enroll-tap-done](./media/ios-enroll-9-comp-access-setup-complete.png)
-
-Zařízení je nyní zaregistrováno v Intune a budete přesměrováni zpět do aplikace Portál společnosti.
+|Co se zobrazí|Vysvětlení|
+|---|---|
+|![Přihlašovací obrazovka aplikace Portál společnosti s tlačítkem Přihlásit se v dolní části.](./media/ios-0-cp-enroll-1711.png)|Otevřete aplikaci Portál společnosti na zařízení a klepněte na **Přihlásit se**.|
+|![Výzva k přihlášení do služby Azure AD.](./media/ios-0a-cp-enroll-1711.png)|Zadejte e-mailovou adresu vaší společnosti a pak klepněte na **Další**.|
+|![Výzva k zadání hesla Azure AD.](./media/ios-0b-cp-enroll-1711.png)|Zadejte heslo a potom klepněte na **Přihlásit se**.|
+|![Úvodní obrazovka načítání firemních prostředků](./media/ios-1-cp-enroll-1711.png)|Počkejte na načtení.|
+|![Podmínky a ujednání](./media/ios-2-cp-enroll-1711.png)|Přečtěte si podmínky a ujednání a vyberte možnost **Přijmout vše**.|
+|![Nastavte obrazovku firemního přístupu. Aktuálně je potřeba vyřešit správu a nastavení.](./media/ios-3-cp-enroll-1711.png)|Klepnutím na volbu **Nechte si spravovat zařízení** zahájíte proces zpřístupnění prostředků společnosti pro vaše zařízení. Pokud to nemůžete udělat teď hned, můžete proces **Odložit**, ale znamená to, že nebudete moct získat e-mail, dokumenty atd.|
+|![Obrazovka Co uvidí moje společnost.](./media/ios-4-cp-enroll-1711.png)|**Další informace** o tom, co vaše může společnost zobrazit, získáte klepnutím na odkaz dole. Jinak klepněte na **Pokračovat**.|
+|![Obrazovka Co dál?](./media/ios-5-cp-enroll-1711.png)|Tato obrazovka vás provede kroky instalace. K dokončení procesu budete využívat prohlížeč Safari, aplikaci Nastavení a aplikaci Portál společnosti. Klepněte na **Další**.|
+|![Načítání obrazovky po klepnutí na možnost Další na obrazovce Co dál](./media/ios-6-cp-enroll-1711.png)||
+|![Přepnutí do Safari pro registraci](./media/ios-7-cp-enroll-1711.png)|Přesměruje vás to do prohlížeče Safari, abyste získali informace o správě vašeho zařízení.|
+|![Výzva systému ke spuštění aplikace Nastavení](./media/ios-8-cp-enroll-1711.png)|Klepnutím na **Povolit** otevřete aplikaci Nastavení, která stáhne konfigurační profil. Touto instalací umožníte vaší společnosti spravovat podnikové informace ve vašem zařízení.|
+|![Otevřený profil v nastavení](./media/ios-9-cp-enroll-1711.png)|Klepněte na **Instalovat**.|
+|![Modální dialogové okno instalace profilu z dolní části obrazovky](./media/ios-10-cp-enroll-1711.png)|Klepněte na **Instalovat**.|
+|![Obrazovka načítání instalace profilu](./media/ios-11-cp-enroll-1711.png)|Počkejte na načtení.|
+|![Obrazovka upozornění správy profilu](./media/ios-12-cp-enroll-1711.png)|Toto upozornění vydané společností Apple poskytuje více informací o typech akcí, které lze provést v zařízení v rámci správy. Další informace o tom, [jaké informace může vaše společnost zobrazit](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)|
+|![Výzva systému s žádostí o vztah důvěryhodnosti vzdálené správy](./media/ios-13-cp-enroll-1711.png)|Klepnutím na **Důvěřovat** umožníte vaší společnosti spravovat podnikové informace a nastavení v daném zařízení.|
+|![Obrazovka načítání pro dokončení instalace profilu](./media/ios-14-cp-enroll-1711.png)|Počkejte na načtení.|
+|![Obrazovka nainstalovaného profilu](./media/ios-15-cp-enroll-1711.png)|Váš profil je nainstalovaný a podnikové informace a nastavení vašeho zařízení již brzo bude možné spravovat.|
+|![Přepnutí do Safari pro registraci](./media/ios-16-cp-enroll-1711.png)|Přecházíte zpět do prohlížeče Safari, abyste dokončili získání informací o správě vašeho zařízení. |
+|![Výzva systému k otevření portálu společnosti](./media/ios-17-cp-enroll-1711.png)|Klepněte na **Otevřít**.|
+|![Obrazovka načítání prostředků společnosti](./media/ios-18-cp-enroll-1711.png)|Počkejte na načtení.|
+|![Vyberte kategorii zařízení v aplikaci portálu společnosti.](./media/ios-19-cp-enroll-1711.png)|Zvolte nejvhodnější kategorii pro vaše zařízení. To obvykle souvisí s majitelem zařízení nebo s jeho převládajícím umístěním.|
+|![Vybraná kategorie](./media/ios-20-cp-enroll-1711.png)||
+|![Správa zařízení probíhá úspěšně. Teď je potřeba aktualizovat nastavení.](./media/ios-21-cp-enroll-1711.png)|Úspěšně jste začali vaše zařízení spravovat. Existují pravděpodobně stále nastavení, jako je délka hesla, která po vás může chtít vaše společnost aktualizovat. Pokračujte klepnutím na možnost **Aktualizovat nastavení zařízení**.|
+|![Potvrzení nastavení zařízení](./media/ios-22-cp-enroll-1711.png)|Portál společnosti zkontroluje, zda je nutné aktualizovat některá nastavení.|
+|![Kontrola nastavení byla dokončena s nesprávnou verzí operačního systému.](./media/ios-23-cp-enroll-1711.png)|Portál společnosti vám poskytne pokyny, jak opravit problémy s nastavením. Jakmile dokončíte opravu problémů, klepněte na možnost **Zkontrolovat nastavení**.|
+|![Obrazovka načítání pro potvrzení nastavení zařízení](./media/ios-24-cp-enroll-1711.png)|Zařízení zkontroluje, jestli jsou nastavení dostatečně zabezpečená pro přístup k prostředkům společnosti.|
+|![Úspěšně zaregistrované a aktualizované nastavení](./media/ios-25-cp-enroll-1711.png)|Gratulujeme! Právě jste zaregistrovali své zařízení do služby Intune.|
 
 > [!Note]
-> K úplné registraci zařízení je potřeba dokončit ještě několik kroků. Přečtěte si další informace o [registraci zařízení s použitím softwaru pro správu telekomunikačních výdajů](enroll-your-device-with-telecom-expense-management-ios.md). Pokud vaše organizace používá program registrace zařízení společnosti Apple, přečtěte si další informace [tady](enroll-your-device-dep-ios.md).
+> K dokončení přípravy zařízení pro správu je potřeba dokončit ještě několik kroků. Přečtěte si další informace o [registraci zařízení s použitím softwaru pro správu telekomunikačních výdajů](enroll-your-device-with-telecom-expense-management-ios.md). Pokud vaše organizace používá program registrace zařízení společnosti Apple, přečtěte si další informace [tady](enroll-your-device-dep-ios.md).
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).

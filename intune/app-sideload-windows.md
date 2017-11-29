@@ -12,11 +12,11 @@ ms.service:
 ms.technology: 
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 ms.custom: intune-classic
-ms.openlocfilehash: 3567f26053a235c5a5af761829f043e0db2f79b5
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 904041ba4936917dc976fd0a6de869e931927c2d
+ms.sourcegitcommit: f9bfdaed6037bd76f8715fa7ca15a3457d26370a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Registrace obchodních aplikací, aby je bylo možné nasadit na zařízení s Windows pomocí Intune
 
@@ -41,7 +41,7 @@ Následující postup vám pomůže získat požadovaný certifikát a podepsat 
     Jakmile se žádost schválí, obdržíte e-mail s pokyny k importování certifikátů. Postupujte podle pokynů v e-mailu pro import certifikátů.
 
 4.  **Ověření importovaných certifikátů**<br>
-    Chcete-li ověřit, zda byly certifikáty správně naimportovány, přejděte k modulu snap-in **Certifikáty**, klikněte pravým tlačítkem na položku **Certifikáty** a vyberte možnost **Hledat certifikáty**. Do pole **Obsahuje** zadejte Symantec a klikněte na **Najít**. Importované certifikáty by se měly zobrazit ve výsledcích.
+    Pokud chcete ověřit, zda byly certifikáty správně naimportovány, přejděte k modulu snap-in **Certifikáty**, klikněte pravým tlačítkem na položku **Certifikáty** a vyberte možnost **Hledat certifikáty**. Do pole **Obsahuje** zadejte Symantec a klikněte na **Najít**. Importované certifikáty by se měly zobrazit ve výsledcích.
 
     ![Hledání certifikátu Symantec](./media/wit.gif)
 
@@ -55,7 +55,7 @@ Následující postup vám pomůže získat požadovaný certifikát a podepsat 
 6.  **Nahrání aplikace do Intune**<br>
     Nahráním podepsaného souboru aplikace a svého certifikátu pro podpis kódu zpřístupníte aplikaci vašim koncovým uživatelům.
 
-    1.  Na Azure Portalu klikněte na **Správa** &gt; **Windows Phone**.
+    1.  Na portálu Azure Portal klikněte na **Správa** &gt; **Windows Phone**.
 
     2.  Klikněte na **Nahrát podepsaný soubor aplikace** a přihlaste se svým ID správce pro Intune.
 
@@ -193,7 +193,8 @@ Aplikaci můžete tímto způsobem podepsat a nasadit takto:
 |Parametr | Popis|
 | ------------- | ------------- |
 |InputWin10AppxBundle |Cesta k umístění zdrojového souboru appxbundle |
-|OutputWin10AppxBundle |Výstupní cesta pro podepsaný soubor appxbundle  Win81Appx Cesta k umístění souboru Portálu společnosti pro Windows 8.1 nebo Windows Phone 8.1 (.APPX)|
+|OutputWin10AppxBundle |Výstupní cesta pro podepsaný soubor appxbundle |
+|Win81Appx | Cesta k umístění souboru Portálu společnosti pro Windows 8.1 nebo Windows Phone 8.1 (.APPX)|
 |PfxFilePath |Cesta k souboru certifikátu Symantec Enterprise Mobile Code Signing Certificate (.PFX) |
 |PfxPassword| Heslo certifikátu Symantec Enterprise Mobile Code Signing Certificate |
 |PublisherId |ID vydavatele dané organizace. Pokud chybí, použije se pole Subject certifikátu Symantec Enterprise Mobile Code Signing Certificate.|

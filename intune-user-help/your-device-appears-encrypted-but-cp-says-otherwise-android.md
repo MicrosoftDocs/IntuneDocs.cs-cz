@@ -1,11 +1,11 @@
 ---
-title: "Vaše zařízení s Androidem je zřejmě šifrované"
+title: "Vaše zařízení Android je zřejmě zašifrované | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/12/2017
+ms.date: 11/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: be68e330c2bd2800ea68fd83845b71e3b257e785
-ms.sourcegitcommit: 751587b1c6ed15877152d770772748e042c1e3ff
+ms.openlocfilehash: 04ce17615055d67f38e49158bec806de9f322bfd
+ms.sourcegitcommit: dc2595bec05206a826cd10cb834bf6043145c917
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/13/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="your-android-device-seems-to-be-encrypted-but-company-portal-says-otherwise"></a>Zdá se, že vaše zařízení s Androidem je zašifrované, ale Portál společnosti hlásí, že není
 
@@ -40,7 +40,7 @@ Určitá zařízení s Androidem budou vyžadovat vytvoření spouštěcího PIN
 
 Pokud vaše zařízení umožňuje přechod na starší verzi produktu, tedy na verzi Android 6.0+, proveďte to. Pokud se pokusíte přejít na starší verzi produktu, může dojít ke ztrátě dat. Jinak doporučujeme, abyste se kvůli řešení tohoto problému obrátili na svou firemní podporu. Kontaktní údaje na firemní podporu najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
 
-### <a name="encrypt-the-entire-device"></a>Zašifrování celého zařízení
+### <a name="encrypt-the-entire-device"></a>Zašifrujte celé zařízení.
 
 Některá zařízení vám dají na výběr, jestli chcete zašifrovat celé zařízení, nebo jenom využité místo. Místo zašifrování jenom využitého místa zvolte možnost zašifrování celého zařízení. Pokud jste už zašifrovali jenom využité místo:
 
@@ -69,5 +69,7 @@ Pokud máte některé z následujících zařízení, můžete na tento problém
 
 Pro níže uvedená zařízení není možné tento problém vyřešit. Pro přístup k prostředkům společnosti budete možná muset použít jiná zařízení. 
 
-- [Huawei Mate 8](http://consumer.huawei.com/en/mobile-phones/mate8/index.htm)
+- [Huawei Mate 8](https://consumer.huawei.com/en/mobile-phones/mate8/index.htm)
+- [Zařízení OPPO](http://www.oppo.com/en/smartphones)
+- [Zařízení Vivo](https://www.vivo.co.in)
 - [Chytré telefony Xiaomi Mi](https://xiaomi-mi.com/mi-smartphones/)

@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/06/2017
+ms.date: 11/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,24 +14,49 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dff1cb496b85f933d8f462b94f6e15fa7ff69a28
-ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
+ms.openlocfilehash: 7ec7f322f0d35d50a7c84d8e40d43a6a04ae1b7d
+ms.sourcegitcommit: 0b96ae18524eb976df01a5340631ef331357e666
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 Zjistěte, jaké jsme v uživatelském rozhraní aplikací udělali změny, které koncoví uživatelé uvidí v této verzi Microsoft Intune. Pomůže vám to při komunikaci s uživateli a aktualizaci vlastní dokumentace, kterou jste vytvořili za účelem podpory vašeho nasazení. Můžete také zjistit, jak lépe řešit problémy uživatelů, když požádají helpdesk o podporu pomocí Portálu společnosti.
 
+## <a name="week-of-november-13-2017"></a>Týden od 13. listopadu 2017
+
+### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290----1417174---"></a>Vylepšení pracovního postupu instalace zařízení na Portálu společnosti pro iOS verze 2.9.0 <!---1417174--->
+
+Vylepšili jsme pracovní postup instalace zařízení v aplikaci Portál společnosti pro iOS. Jazyk je uživatelsky přívětivější a tam, kde to bylo možné, jsme také sjednotili obrazovky. Také jsme použitím názvu vaší společnosti všude v textu instalace upravili jazyk tak, aby více odpovídal vaší společnosti.
+
+> [!NOTE]
+> Používáme název společnosti, který jste nastavili na portálu Azure Portal v **Microsoft Intune** > **Mobilní aplikace** > **Značky Portálu společnosti**  >  **Název společnosti**. Pokud jste nenastavili tuto hodnotu, budeme používat název tenanta nastavený v **Azure Active Directory** > **Vlastnosti** > **Název**. Pokud jste nenastavili název společnosti v poli Značky Portálu společnosti a nechcete zobrazovat název tenanta, doporučujeme nastavit název společnosti na Portálu společnosti na kartě značky. Pokud nechcete, aby se tento řetězec zobrazoval v záhlaví Portálu společnosti, můžete zrušit zaškrtnutí políčka Vedle loga zobrazit název společnosti.
+
+|Dříve|Nyní|
+|---|---|
+|![01](./media/ios_cp_enroll_01_before_1711.png)|![01](./media/ios_cp_enroll_01_after_1711.png)|
+|![02](./media/ios_cp_enroll_02_before_1711.png)|*Zkombinováno s předchozím krokem*|
+|![03](./media/ios_cp_enroll_03_before_1711.png)|![03](./media/ios_cp_enroll_03_after_1711.png)|
+|![04](./media/ios_cp_enroll_04_before_1711.png)|![04](./media/ios_cp_enroll_04_after_1711.png)|
+|![05](./media/ios_cp_enroll_05_before_1711.png)|![05](./media/ios_cp_enroll_05_after_1711.png)|
+|![06](./media/ios_cp_enroll_06_before_1711.png)|![06](./media/ios_cp_enroll_06_after_1711.png)|
+|![07](./media/ios_cp_enroll_07_before_1711.png)|![07](./media/ios_cp_enroll_07_after_1711.png)|
+
 
 ## <a name="week-of-november-6-2017"></a>Týden od 6. listopadu 2017
+
+### <a name="updates-to-the-company-portal-app-for-windows-10---1299474--"></a>Aktualizace aplikace Portál společnosti pro Windows 10<!--1299474-->
+Stránka Nastavení aplikace Portál společnosti pro Windows 10 je aktualizovaná, aby nastavení a zamýšlené akce uživatelů byly konzistentnější v rámci všech nastavení. Stránka také byla aktualizována tak, aby rozložením odpovídala jiným aplikacím pro Windows.
+
+|Dříve|Nyní|
+|---|---|
+|![01](./media/w10-share-logs.png)|![02](./media/w10-share-logs-after-1711.png)|
+
 
 ### <a name="search-improvements-to-the-company-portal-apps-and-website---1418189--"></a>Vyhledání vylepšení pro aplikace a web Portál společnosti <!--1418189-->
 Aplikace Portál společnosti teď používají vyhledávání v kategoriích, názvech a popisech aplikací. Výsledky se seřazují v sestupném pořadí podle relevance. Tyto aktualizace jsou dostupné také na [webu Portál společnosti](https://portal.manage.microsoft.com).
 
 Stále ještě na vyhodnocení relevance pracujeme, tak nám prosím dejte prostřednictvím odkazu „Váš názor“ v dolní části webu Portál společnosti vědět, jak dobře toto vyhodnocení funguje.
-
-
 
 ## <a name="week-of-october-16-2017"></a>Týden od 16. října 2017
 
@@ -45,10 +70,6 @@ Stále ještě na vyhodnocení relevance pracujeme, tak nám prosím dejte prost
 
 ### <a name="ios-company-portal-displays-large-icons----1454593---"></a>Portál společnosti pro iOS zobrazuje velké ikony <!-- 1454593 -->
 Tato vydaná verze opravuje známý problém s tím, jak Portál společnosti pro iOS zobrazuje ikony v dlaždici aplikace. Pokud nahrajete ikony aplikace o rozměru 120×120 pixelů nebo větší, zobrazí se teď na [webu Portálu společnosti](https://portal.manage.microsoft.com) a na stránkách aplikací Portálu společnosti pro iOS v plné velikosti dlaždice aplikace.
-
-
-
-
 
 
 ## <a name="week-of-october-2-2017"></a>Týden od 2. října 2017

@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 08/16/2017
+ms.date: 11/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,18 +16,18 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 3a2622c7c981e64b3e220424c6661a5ba9e30751
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 895a089a58845da609423ab7fd74fbf26e0b967f
+ms.sourcegitcommit: dc2595bec05206a826cd10cb834bf6043145c917
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="how-to-protect-your-android-device-using-encryption"></a>Jak chránit zařízení s Androidem pomocí šifrování
 
 Při šifrování zařízení balíte informace v zařízení do vrstvy ochranného kódu, který brání neoprávněným osobám v přístupu k nim. Jako další krok k zabezpečení vašich informací vyžaduje vaše organizace, abyste si zašifrovali zařízení s Androidem. Teprve pak budete mít přístup k firemním souborům, e-mailu nebo datům.
 
 > [!Note]
-> Můžete být také vyzváni, abyste si před šifrováním nastavili kód PIN nebo heslo, pokud to vaše firemní podpora vyžaduje.
+> Určitá zařízení Android, včetně některých od výrobce Huawei, Vivo a OPPO, nelze zašifrovat. Další informace najdete [tady](your-device-appears-encrypted-but-cp-says-otherwise-android.md).
 
 Pokud byste zrušili registraci telefonu, zůstane zašifrovaný.
 
@@ -37,9 +37,6 @@ Pokud byste zrušili registraci telefonu, zůstane zašifrovaný.
     (Na některých telefonech budete muset najít možnost šifrování tak, že zvolíte **Úložiště** > **Šifrování úložiště** nebo **Úložiště** > **Zamykací obrazovka a zabezpečení** > **Další nastavení zabezpečení**.)
 
 3.  Postupujte podle pokynů na obrazovce. Během šifrování se zařízení může několikrát restartovat.
-
-> [!Note]
-> Některá zařízení s Androidem se nedají zašifrovat. Další informace najdete [tady](your-device-appears-encrypted-but-cp-says-otherwise-android.md).
 
 ### <a name="what-to-do-if-you-have-issues"></a>Co dělat v případě problémů
 **Problém:** Zařízení jste už zašifrovali a dojde k jedné z těchto situací:
