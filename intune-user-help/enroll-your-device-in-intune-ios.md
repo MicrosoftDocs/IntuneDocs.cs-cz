@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/14/2017
+ms.date: 11/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ee4275ec7b9b455cf6ebf032123127fde97a9a74
-ms.sourcegitcommit: 0b96ae18524eb976df01a5340631ef331357e666
+ms.openlocfilehash: 790b935b71b641aec3093a9cdd7f7a98ba90babb
+ms.sourcegitcommit: 71e6e80b7370024624ce2e5fad1ca5b372975748
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-up-access-to-your-company-resources"></a>Nastavení přístupu k prostředkům společnosti
 
@@ -48,7 +48,7 @@ Vaše společnost má spoustu vlastnických informací z e-mailu, souborů, sít
 |![Výzva k zadání hesla Azure AD.](./media/ios-0b-cp-enroll-1711.png)|Zadejte heslo a potom klepněte na **Přihlásit se**.|
 |![Úvodní obrazovka načítání firemních prostředků](./media/ios-1-cp-enroll-1711.png)|Počkejte na načtení.|
 |![Podmínky a ujednání](./media/ios-2-cp-enroll-1711.png)|Přečtěte si podmínky a ujednání a vyberte možnost **Přijmout vše**.|
-|![Nastavte obrazovku firemního přístupu. Aktuálně je potřeba vyřešit správu a nastavení.](./media/ios-3-cp-enroll-1711.png)|Klepnutím na volbu **Nechte si spravovat zařízení** zahájíte proces zpřístupnění prostředků společnosti pro vaše zařízení. Pokud to nemůžete udělat teď hned, můžete proces **Odložit**, ale znamená to, že nebudete moct získat e-mail, dokumenty atd.|
+|![Nastavte obrazovku firemního přístupu. Aktuálně je potřeba vyřešit správu a nastavení.](./media/ios-3-cp-enroll-1711.png)|Klepnutím na volbu **Začít** zahájíte proces zpřístupnění prostředků společnosti pro vaše zařízení. Pokud to nemůžete udělat teď hned, můžete proces **Odložit**, ale znamená to, že nebudete moct získat e-mail, dokumenty atd.|
 |![Obrazovka Co uvidí moje společnost.](./media/ios-4-cp-enroll-1711.png)|**Další informace** o tom, co vaše může společnost zobrazit, získáte klepnutím na odkaz dole. Jinak klepněte na **Pokračovat**.|
 |![Obrazovka Co dál?](./media/ios-5-cp-enroll-1711.png)|Tato obrazovka vás provede kroky instalace. K dokončení procesu budete využívat prohlížeč Safari, aplikaci Nastavení a aplikaci Portál společnosti. Klepněte na **Další**.|
 |![Načítání obrazovky po klepnutí na možnost Další na obrazovce Co dál](./media/ios-6-cp-enroll-1711.png)||
@@ -66,7 +66,7 @@ Vaše společnost má spoustu vlastnických informací z e-mailu, souborů, sít
 |![Obrazovka načítání prostředků společnosti](./media/ios-18-cp-enroll-1711.png)|Počkejte na načtení.|
 |![Vyberte kategorii zařízení v aplikaci portálu společnosti.](./media/ios-19-cp-enroll-1711.png)|Zvolte nejvhodnější kategorii pro vaše zařízení. To obvykle souvisí s majitelem zařízení nebo s jeho převládajícím umístěním.|
 |![Vybraná kategorie](./media/ios-20-cp-enroll-1711.png)||
-|![Správa zařízení probíhá úspěšně. Teď je potřeba aktualizovat nastavení.](./media/ios-21-cp-enroll-1711.png)|Úspěšně jste začali vaše zařízení spravovat. Existují pravděpodobně stále nastavení, jako je délka hesla, která po vás může chtít vaše společnost aktualizovat. Pokračujte klepnutím na možnost **Aktualizovat nastavení zařízení**.|
+|![Správa zařízení probíhá úspěšně. Teď je potřeba aktualizovat nastavení.](./media/ios-21-cp-enroll-1711.png)|Úspěšně jste začali vaše zařízení spravovat. Existují pravděpodobně stále nastavení, jako je délka hesla, která po vás může chtít vaše společnost aktualizovat. Pokračujte klepnutím na **Pokračovat**.|
 |![Potvrzení nastavení zařízení](./media/ios-22-cp-enroll-1711.png)|Portál společnosti zkontroluje, zda je nutné aktualizovat některá nastavení.|
 |![Kontrola nastavení byla dokončena s nesprávnou verzí operačního systému.](./media/ios-23-cp-enroll-1711.png)|Portál společnosti vám poskytne pokyny, jak opravit problémy s nastavením. Jakmile dokončíte opravu problémů, klepněte na možnost **Zkontrolovat nastavení**.|
 |![Obrazovka načítání pro potvrzení nastavení zařízení](./media/ios-24-cp-enroll-1711.png)|Zařízení zkontroluje, jestli jsou nastavení dostatečně zabezpečená pro přístup k prostředkům společnosti.|
