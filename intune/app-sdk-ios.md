@@ -14,11 +14,11 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6ccc420b3bf334f15d1036eb83d01a2d228fad19
-ms.sourcegitcommit: b2a6678a0e9617f94ee8c65e7981211483b30ee7
+ms.openlocfilehash: 6d7b22c871ed1e62bfdc148f30fb832786baf294
+ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -172,9 +172,9 @@ Pomocí nástroje Intune MAM Configurator Tool můžete aktualizovat:
 * Libovolné ze schémat URL definovaných vaší aplikací v jejím souboru Info.plist s příponou -intunemam (pro každé schéma URL).
 * Libovolný z typů dokumentů definovaných vaší aplikací v jejím souboru Info.plist; pro pole každé položky „Identifikátory UTI typu obsahu dokumentu“ přidejte duplicitní položku pro každý řetězec s předponou „com.microsoft.intune.mam“.
 * Libovolnou ze skupin aplikací definovaných vaší aplikací v jejích nárocích; přidejte tyto skupiny do slovníku IntuneMAMSettings v klíči AppGroupIdentifiers jako pole řetězců.
-
     
->[!NOTE] Pokud se rozhodnete použít tento nástroj místo ruční manipulace se souborem Info.plist, doporučujeme tento nástroj znovu spustit po jakýchkoli změnách souboru Info.plist nebo nároků vaší aplikace.
+> [!Note]
+> Pokud se rozhodnete použít tento nástroj místo ruční manipulace se souborem Info.plist, doporučujeme tento nástroj znovu spustit po jakýchkoli změnách souboru Info.plist nebo nároků vaší aplikace.
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>Konfigurace knihovny ADAL (Azure Active Directory Authentication Library)
 
