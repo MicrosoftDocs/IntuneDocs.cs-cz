@@ -284,6 +284,8 @@
               href: app-notification-settings-ios.md
             - name: Sdílená zařízení pro iOS
               href: shared-device-settings-ios.md
+            - name: Nakonfigurování Intune na jednotné přihlašování pro zařízení s iOSem
+              href: sso-ios.md
             - name: Nastavení webového filtru pro iOS
               href: web-content-filter-settings-ios.md
         - name: Konfigurace omezení zařízení
