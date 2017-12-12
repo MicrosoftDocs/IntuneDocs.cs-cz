@@ -89,8 +89,8 @@
           href: data-outside-protect.md
         - name: Zabránění únikům dat na nespravovaných zařízeních
           href: data-leak-prevention.md
-        - name: Uživatelé s vlastním zařízením
-          href: byod-enable.md
+        - name: Porovnání správy mobilních zařízení (MDM) a správy mobilních aplikací (MAM)
+          href: byod-technology-decisions.md
     - name: Průvodce migrací
       href: migration-guide.md
       items:
