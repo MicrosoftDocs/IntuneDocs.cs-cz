@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 784fec4e29f64db0445c857e5073ddd7e890a795
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 4a771416273ee29d0b44cb74b6b32d9535e43e41
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="your-android-device-is-missing-a-certificate-required-by-your-company-support"></a>Ve vašem zařízení s Androidem chybí certifikát, který vyžaduje firemní podpora
 
@@ -35,9 +35,9 @@ Pokud chcete tyto potíže vyřešit a získat požadovaný certifikát, musíte
 
 ## <a name="identify-the-missing-certificate-by-looking-on-a-company-or-school-pc"></a>Určení chybějícího certifikátu pomocí pracovního nebo školního počítače
 
-1. Na počítači otevřete aplikaci Internet Explorer. Pokud nemáte počítač, který byste k těmto účelům mohli využít, obraťte se na firemní podporu. Kontaktní informace na svou firemní podporu najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+1. Na počítači otevřete aplikaci Internet Explorer. Pokud nemáte počítač, který byste k těmto účelům mohli využít, obraťte se na firemní podporu. Kontaktní informace na svou firemní podporu najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
 
-2. Přejděte na [web Portál společnosti](https://portal.manage.microsoft.com) a přihlaste se pomocí pracovních nebo školních přihlašovacích údajů.
+2. Přejděte na [web Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog) a přihlaste se pomocí pracovních nebo školních přihlašovacích údajů.
 
 3. Na adresním řádku prohlížeče vyberte úplně vpravo symbol, který vypadá jako visací zámek, jak je vidět na následujícím snímku obrazovky.
 
@@ -69,4 +69,4 @@ Pokud chcete tyto potíže vyřešit a získat požadovaný certifikát, musíte
 
 7. Aplikaci Portál společnosti znovu otevřete. Teď už by mělo být možné se k aplikaci Portál společnosti přihlásit. Pokud potřebujete pomoc, obraťte se na firemní podporu.
 
-Pokud se vám stejná zpráva typu Chybějící certifikát už zobrazila a už jste použili popsaný postup, pravděpodobně je ještě další certifikát, s jehož instalací vám musí pomoct firemní podpora. Obraťte se o pomoc na firemní podporu prostřednictvím kontaktních informací, které jsou dostupné na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Pokud se vám stejná zpráva typu Chybějící certifikát už zobrazila a už jste použili popsaný postup, pravděpodobně je ještě další certifikát, s jehož instalací vám musí pomoct firemní podpora. Obraťte se o pomoc na firemní podporu prostřednictvím kontaktních informací, které jsou dostupné na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).

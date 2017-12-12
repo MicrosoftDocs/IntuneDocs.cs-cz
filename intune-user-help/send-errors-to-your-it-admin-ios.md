@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: aff747c4888c0ad9a222735b8eadf40878cc294b
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 2aa8ee8803e3001abeb8da92fb61c93c81ffb135
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>Odesílání chyb firemní podpoře při problémech se zařízením s iOSem
 
@@ -32,4 +32,4 @@ Pokud při použití aplikace Portál společnosti dojde k chybám na vašem zř
 
 -   V aplikaci Portál společnosti zatřeste zařízením a po zobrazení diagnostické výstrahy klepněte na **Poslat diagnostickou sestavu**. Pokud zatřesete zařízením, ale žádná výstraha se nezobrazí, otevřete **Nastavení** > **Portál společnosti** a zkontrolujte, jestli je zapnutá možnost **Gesto zatřesením**.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).

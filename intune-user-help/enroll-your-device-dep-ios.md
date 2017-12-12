@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: c06146c2a8abe15f346be532cf02e1fe6d97cc99
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 0d469a52c10a3c6080a3e900d55d18d7798bb534
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="enroll-your-ios-device-in-intune-with-the-device-enrollment-program"></a>Registrace zařízení s iOSem v Intune pomocí programu registrace zařízení
 
@@ -33,4 +33,4 @@ Program registrace zařízení nabízí společnost Apple společnostem a organi
 5.  Odsouhlaste **podmínky a ujednání** a rozhodněte se, jestli chcete posílat diagnostické informace do společnosti Apple.
 6.  Po registraci může vaše zařízení zobrazit výzvu k provedení dalších akcí. Může se jednat o zadání vašeho hesla pro přístup k e-mailům, nastavení hesla, souhlas s instalacemi aplikací, podle toho, co nastaví správce Intune ve vaší společnosti.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).

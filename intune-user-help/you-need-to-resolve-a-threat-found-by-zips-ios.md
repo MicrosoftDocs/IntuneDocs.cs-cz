@@ -14,11 +14,11 @@ ms.assetid: eaccd9c0-cd46-48e2-8675-4c022c74f672
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 6b435156b89bf0ba55e83158c2c5ac62c590cdf4
-ms.sourcegitcommit: 668b408819c75ba5e827e36974935aafaf85871e
+ms.openlocfilehash: 32bd0436c6d883bb351a4e00bda181ab820a94d4
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="you-need-to-resolve-a-threat-found-by-zimperium-zips"></a>Je třeba vyřešit hrozbu, kterou objevila aplikace Zimperium zIPS
 
@@ -30,7 +30,7 @@ Pokud chcete problém vyřešit, spusťte aplikaci Zimperium zIPS a postupujte 
 
 Pokud registrované zařízení obsahuje virus nebo jinou bezpečnostní hrozbu a vy se pokusíte o přístup k firemnímu e-mailu nebo souborům, zobrazí se zpráva aplikace Zimperium zIPS s výzvou k akci.
 
-Klepněte na odkaz na **portál pro správu zařízení** a přejděte na [web Portál společnosti](https://portal.manage.microsoft.com), kde můžete najít pokyny k vyřešení problému.
+Klepněte na odkaz na **portál pro správu zařízení** a přejděte na [web Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog), kde můžete najít pokyny k vyřešení problému.
 
 ## <a name="example-of-an-app-that-zimperium-zips-sees-as-a-threat"></a>Příklad aplikace, kterou Zimperium zIPS vnímá jako hrozbu
 
@@ -38,4 +38,4 @@ Pokud jste nainstalovali aplikaci, kterou Zimperium zIPS považuje za hrozbu, up
 
 Jakmile k tomu dojte, odinstalujte aplikaci, abyste ihned znovu získali přístup k firemnímu e-mailu a datům. Pokud aplikaci neodinstalujete, ztratíte přístup k e-mailu a datům až do odinstalace aplikace.
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).

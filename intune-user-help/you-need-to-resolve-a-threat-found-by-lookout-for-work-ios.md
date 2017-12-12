@@ -14,11 +14,11 @@ ms.assetid: dd6aec3a-4063-4054-8d0f-d2f2034f0d3d
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 1b5a49c4bb29f5511dc13b7d12928b11fd98b2de
-ms.sourcegitcommit: 668b408819c75ba5e827e36974935aafaf85871e
+ms.openlocfilehash: 6cfc144b188b1701a2e5e599af43d12c98d48496
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="resolve-a-threat-found-by-lookout-for-work"></a>Vyřešení hrozby, kterou zjistila aplikace Lookout for Work
 
@@ -34,7 +34,7 @@ Pokud registrované zařízení obsahuje virus nebo jinou bezpečnostní hrozbu 
 
 ![Chybová zpráva aplikace Lookout for Work s odkazem na web Portál společnosti](./media/mtd-go-to-device-management-portal-android.png)
 
-Klepněte na odkaz na **portál pro správu zařízení** a přejděte na [web Portál společnosti](https://portal.manage.microsoft.com), kde se zobrazí pokyny k vyřešení problému.
+Klepněte na odkaz na **portál pro správu zařízení** a přejděte na [web Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog), kde se zobrazí pokyny k vyřešení problému.
 
 ## <a name="example-of-an-app-that-lookout-for-work-sees-as-a-threat"></a>Příklad aplikace, kterou Lookout for Work vnímá jako hrozbu
 
@@ -46,5 +46,5 @@ Pokud se něco takového zobrazí, klepněte na název aplikace v horní části
 
 Po odinstalaci aplikace ihned znovu získáte přístup k e-mailu a dalším datům společnosti nebo školy. Pokud budete požadavek na odinstalaci aplikace ignorovat, ztratíte přístup k firemnímu e-mailu a datům, dokud aplikaci neodinstalujete.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
 

@@ -16,19 +16,19 @@ ROBOTS:
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 8023e3a75dbf9a3275654b7ed8f917546d401168
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 59d9ed0ddc6b24d680f665eb6f5c9976001d940b
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="rename-your-device-from-the-company-portal-website"></a>Přejmenování zařízení z webu Portál společnosti
 
-Pokud chcete, můžete zařízení přejmenovat, abyste ho mohli snadněji identifikovat. Můžete to udělat na [webu Portál společnosti](https://portal.manage.microsoft.com). Web Portál společnosti je webová stránka sloužící ke správě počítačů a zařízení, jejichž správu jste si zaregistrovali u svého IT oddělení.
+Pokud chcete, můžete zařízení přejmenovat, abyste ho mohli snadněji identifikovat. Můžete to udělat na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog). Web Portál společnosti je webová stránka sloužící ke správě počítačů a zařízení, jejichž správu jste si zaregistrovali u svého IT oddělení.
 
 Přejmenování zařízení:
 
-1.  Na [webu Portál společnosti](https://portal.manage.microsoft.com) klepněte na tlačítko __nabídky__ ![Malý obrázek tlačítka nabídky, tři vodorovné pruhy nad sebou](/Intune/whats-new/media/CP_hamburger_menu.png) a potom vyberte __Moje zařízení__.
+1.  Na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog) klepněte na tlačítko __nabídky__ ![Malý obrázek tlačítka nabídky, tři vodorovné pruhy nad sebou](/Intune/whats-new/media/CP_hamburger_menu.png) a potom vyberte __Moje zařízení__.
 
 2. Na stránce __Moje zařízení__ vyberte název zařízení, které chcete přejmenovat.
 
@@ -40,4 +40,4 @@ Přejmenování zařízení:
 
 4.  Do pole, ve kterém se zobrazí název vašeho zařízení, zadejte nový název zařízení a potom klepněte na tlačítko **Přejmenovat**. Zařízení se teď zobrazí s novým názvem.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).

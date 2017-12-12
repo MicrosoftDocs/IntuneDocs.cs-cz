@@ -6,7 +6,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/14/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 4b6dcbcc-4661-4463-9a36-698d673502c6
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6b37ffd23f8cf8764ba457b0803dfc308cf1c071
-ms.sourcegitcommit: 82088d297eef629e3da6011681ead442ae7e25f7
+ms.openlocfilehash: 87ddb1a5f6ca5cc9be2815aacc9c1570a51e792f
+ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrace Jamf Pro s Intune pro dodržování předpisů
 
@@ -58,14 +58,14 @@ Intune propojíte s Jamf Pro následujícími postupy:
 2. Klikněte na možnost **Registrace nové aplikace**.
 3. Zadejte **Zobrazovaný název**, jako například **Podmíněný přístup Jamf**.
 4. Vyberte možnost **Webová aplikace nebo API**.
-5. Zadejte **Přihlašovací adresu URL** pro Jamf Pro.
+5. Pomocí adresy URL instance Jamf Pro zadejte **přihlašovací adresu URL**.
 6. Klikněte na **Vytvořit aplikaci**.
-7. Uložte nově vytvořené **ID aplikace**, pak otevřete **Všechna nastavení** > **Klíče** a vytvořte nový klíč aplikace. Uložte klíč aplikace.
+7. Uložte nově vytvořené **ID aplikace**, otevřete **Nastavení** a přejděte na **Přístup přes rozhraní API** > **Klíče** a vytvořte nový klíč aplikace. Zadejte **Popis**, jak dlouho se má čekat, než **vyprší jeho platnost**, a potom klíč aplikace uložte. 
 
-  > [!NOTE]
+  > [!IMPORTANT]
   > Klíč aplikace se zobrazí pouze jednou během tohoto procesu. Nezapomeňte ho uložit, abyste ho měli snadno k dispozici.
 
-8. Přejděte na **Všechna nastavení** > **Přístup přes rozhraní API** > **Požadovaná oprávnění** a odstraňte všechna oprávnění.
+8. Otevřete **Nastavení**, přejděte na **Přístup přes rozhraní API** > **Požadovaná oprávnění** a odstraňte všechna oprávnění.
 
   > [!NOTE]
   > Přidejte nové požadované oprávnění. Aplikace bude správně fungovat, pouze pokud má jediné požadované oprávnění.
@@ -79,16 +79,20 @@ Intune propojíte s Jamf Pro následujícími postupy:
 
 ## <a name="enable-intune-to-integrate-with-jamf-pro"></a>Povolení integrace Intune s Jamf Pro
 
-1. Na portálu Microsoft Azure otevřete **Microsoft Intune** > **Dodržování předpisů zařízením** > **Konektor dodržování předpisů pro Jamf**.
+1. Na portálu Microsoft Azure Portal otevřete **Microsoft Intune** > **Dodržování předpisů zařízením** > **Správa partnerského zařízení**.
 2. Povolte konektor dodržování předpisů pro Jamf vložením ID aplikace do pole **ID aplikace Azure AD pro Jamf**.
 3. Klikněte na **Uložit**.
 
-## <a name="configure-conditional-access-in-jamf-pro"></a>Konfigurace podmíněného přístupu v aplikaci Jamf Pro
+## <a name="configure-microsoft-intune-integration-in-jamf-pro"></a>Konfigurace integrace Microsoft Intune v Jamf Pro
 
-1. V Jamf Pro přejděte do části **Global Management (Globální správa)** > **Conditional Access (Podmíněný přístup)**. Klikněte na tlačítko **Edi t(Upravit)** na kartě **Microsoft**.
-2. Zaškrtněte políčko **Enable Conditional Access with Microsoft (Povolit podmíněný přístup pro Microsoft)**.
+1. V Jamf Pro přejděte do části **Global Management (Globální správa)** > **Conditional Access (Podmíněný přístup)**. Klikněte na tlačítko **Edit** (Upravit) na kartě **Microsoft Intune Integration** (Integrace Microsoft Intune).
+2. Zaškrtněte políčko **Enable Microsoft Intune Integration** (Povolit integraci Microsoft Intune).
 3. Zadejte požadované informace o vašem tenantovi Azure včetně polí **Location (Umístění)**, **Domain name (Název domény)** a **Application ID (ID aplikace)** a **Application Key (Klíč aplikace)**, která jste uložili v předchozích krocích.
-4. Klikněte na **Save (Uložit)**. Jamf Pro otestuje nastavení a ověří úspěšné propojení.
+4. Klikněte na **Uložit**. Jamf Pro otestuje nastavení a ověří úspěšné propojení.
+
+## <a name="set-up-compliance-policies-and-register-devices"></a>Nastavení zásad dodržování předpisů a registrace zařízení
+
+Po dokončení konfigurace integrace mezi Intune a Jamf musíte [použít zásady dodržování předpisů pro zařízení spravovaná aplikací Jamf](conditional-access-assign-jamf.md).
 
 ## <a name="information-shared-from-jamf-pro-to-intune"></a>Informace sdílené z Jamf Pro do Intune
 

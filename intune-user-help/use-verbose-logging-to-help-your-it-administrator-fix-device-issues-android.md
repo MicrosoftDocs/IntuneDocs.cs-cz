@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: a8364778943171bb1a949f61ad696427ff914c99
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 055bfcf088d46c1010206bd1e77ffbad76611c7c
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="help-your-company-support-fix-device-issues-with-verbose-logging"></a>Pomoc firemní podpoře s řešením problémů zařízení pomocí podrobného protokolování
 
@@ -28,4 +28,4 @@ Pokud je vaše zařízení s Androidem zaregistrované v Intune, můžete pomoc�
 
 Pokud chcete podrobné protokolování zapnout nebo vypnout, přihlaste se k aplikaci Portál společnosti pomocí svých pracovních nebo školních přihlašovacích údajů, klepněte na **Nastavení** a pak klepněte na tlačítko pro zapnutí/vypnutí vedle položky **Podrobné protokolování**.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).

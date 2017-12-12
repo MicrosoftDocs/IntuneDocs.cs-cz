@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 790b935b71b641aec3093a9cdd7f7a98ba90babb
-ms.sourcegitcommit: 71e6e80b7370024624ce2e5fad1ca5b372975748
+ms.openlocfilehash: 206de56ee967f4cd142e5cd7c9d63971b9b727c6
+ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="set-up-access-to-your-company-resources"></a>Nastavení přístupu k prostředkům společnosti
 
@@ -36,7 +36,7 @@ Vaše společnost má spoustu vlastnických informací z e-mailu, souborů, sít
 - Ujistěte se, že když začnete, budete moct celý proces dokončit najednou. Přerušení na více než několik minut obvykle celý proces zastaví a bude vyžadovat jeho opětovné zahájení.
 - Pokud by se proces nezdařil, budete se muset vrátit do aplikace Portál společnosti a začít znovu.
 - Zkontrolujte, že je funkční Wi-Fi a že aplikace Safari funguje ve vašem zařízení.
-- Stáhněte si téma [Instalace a přihlášení do aplikace Portál společnosti Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md).
+- Stáhněte a nainstalujte [aplikaci Portál společnosti Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md).
 
 
 ## <a name="using-the-company-portal-app-to-set-up-access-to-company-resources"></a>Nastavení přístupu k prostředkům společnosti pomocí aplikace Portál společnosti

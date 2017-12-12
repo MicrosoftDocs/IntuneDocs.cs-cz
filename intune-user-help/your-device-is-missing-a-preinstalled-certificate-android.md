@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 52070573560b798044c929b0fa9476cf1f7bbf89
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: d6bd59800b13539558fbf56afab9fe5293f3e5bd
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="your-android-device-is-missing-a-certificate-that-usually-comes-installed-on-your-phone"></a>Ve vašem zařízení s Androidem chybí certifikát, který je v telefonu obvykle nainstalovaný
 
@@ -42,9 +42,9 @@ Tento problém můžete opravit, když si požadovaný certifikát stáhnete ze 
 
 5. Zavřete prohlížeč a aplikaci Portál společnosti.
 
-6. Aplikaci Portál společnosti znovu otevřete. Teď už by mělo být možné se k aplikaci Portál společnosti přihlásit. Pokud stále nemůžete aplikaci Portál společnosti použít, obraťte se na svou firemní podporu pomocí informací uvedených na [webu Portál společnosti](https://portal.manage.microsoft.com), a požádejte ji, aby vám sdělila další pokyny.
+6. Aplikaci Portál společnosti znovu otevřete. Teď už by mělo být možné se k aplikaci Portál společnosti přihlásit. Pokud stále nemůžete aplikaci Portál společnosti použít, obraťte se na svou firemní podporu pomocí informací uvedených na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog), a požádejte ji, aby vám sdělila další pokyny.
 
 >[!NOTE]
 > Pokud instalace tohoto certifikátu problém nevyřeší a zobrazí se vám jiná zpráva o chybějícím certifikátu, bude nutné provést další kroky k [instalaci chybějícího certifikátu](your-device-is-missing-an-IT-required-certificate-android.md).
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).

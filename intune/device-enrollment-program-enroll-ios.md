@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 311bb42f2ef9fbf689e32eacca7420c8189251bf
-ms.sourcegitcommit: 001577b700f634da2fec0b44af2a378150d1f7ac
+ms.openlocfilehash: a10d158816f17c7fbe07fd14172d1a9abb9ed9b9
+ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení s iOSem pomocí Programu registrace zařízení společnosti Apple
 
@@ -157,11 +157,11 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 ## <a name="sync-managed-devices"></a>Synchronizace spravovaných zařízení
 Teď, když má Intune oprávnění spravovat vaše zařízení, můžete synchronizovat Intune s Apple, aby se spravovaná zařízení zobrazila v Intune na portálu Azure Portal.
 
-1. V Intune na portálu Azure Portal vyberte **Registrace zařízení** >  **Registrace Apple** > **Zařízení Programu registrace**.
-2. V části **Zařízení Programu registrace** vyberte **Synchronizovat**.
+1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** > **Registrace Apple** > **Zařízení Programu registrace** > **Synchronizovat**. Indikátor průběhu vám ukáže dobu, jakou budete muset počkat před dalším vyžádáním synchronizace.
 
   ![Snímek obrazovky s vybraným uzlem Zařízení Programu registrace a vybraným odkazem pro synchronizaci](./media/enrollment-program-device-sync.png)
-3. V okně **Synchronizovat** vyberte **Požadovat synchronizaci**. Indikátor průběhu vám ukáže dobu, jakou budete muset počkat před dalším vyžádáním synchronizace.
+  
+2. V okně **Synchronizovat** vyberte **Požadovat synchronizaci**. Indikátor průběhu vám ukáže dobu, jakou budete muset počkat před dalším vyžádáním synchronizace.
 
   ![Snímek obrazovky synchronizačního okna s vybraným odkazem Požadovat synchronizaci](./media/enrollment-program-device-request-sync.png)
 
@@ -170,7 +170,7 @@ Teď, když má Intune oprávnění spravovat vaše zařízení, můžete synchr
      -  Každá žádost o synchronizaci má 15 minut na dokončení. Po tuto dobu nebo do úspěšného vykonání požadavku je tlačítko **Synchronizovat** neaktivní.
      - Intune synchronizuje nová a odebraná zařízení se společností Apple každých 24 hodin.
 
-4. Pokud chcete zobrazit zařízení, zvolte v pracovním prostoru Programu registrace zařízení možnost **Aktualizovat**.
+3. Pokud chcete zobrazit zařízení, zvolte v pracovním prostoru Programu registrace zařízení možnost **Aktualizovat**.
 
 ## <a name="assign-an-enrollment-profile-to-devices"></a>Přiřazení profilu registrace zařízením
 Než se můžou zařízení zaregistrovat, musíte přiřadit profil programu registrace.

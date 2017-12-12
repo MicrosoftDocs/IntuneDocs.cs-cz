@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 50b4b9c8399e854e2f5961f6711090778b41ba37
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 656c2891a0f3c1b54d419f9d5dc3138126f7dc96
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="fix-common-issues-with-your-ios-device"></a>Řešení běžných problémů se zařízením s iOSem
 
-Některé problémy se zařízením s iOSem, které se vám může podařit vyřešit pomocí postupu pro řešení potíží Některé běžné problémy, na které jsme narazili a které se můžete pokusit nejprve odstranit sami, jsou uvedené níže. U složitějších problémů doporučujeme, abyste se obrátili na svou firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Některé problémy se zařízením s iOSem, které se vám může podařit vyřešit pomocí postupu pro řešení potíží Některé běžné problémy, na které jsme narazili a které se můžete pokusit nejprve odstranit sami, jsou uvedené níže. U složitějších problémů doporučujeme, abyste se obrátili na svou firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
 
 - [Potřebuji se znovu připojit k ohroženému zařízení s iOSem](how-to-reconnect-a-compromised-ios-device.md)
 - [Potřebuji odeslat chyby firemní podpoře](send-errors-to-your-it-admin-ios.md)
