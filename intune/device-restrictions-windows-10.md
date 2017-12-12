@@ -3,8 +3,8 @@ title: "Nastavení omezení pro zařízení s Windows 10 v Intune"
 titlesuffix: Azure portal
 description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s Windows 10."
 keywords: 
-author: lleonard-msft
-ms.author: alleonar
+author: vhorne
+ms.author: victorh
 manager: angrobe
 ms.date: 08/23/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 89f2d806-2e97-430c-a9a1-70688269627f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 903ba99a747689dd8882acedcb24fef2dd00a01d
-ms.sourcegitcommit: af958afce3070a3044aafea490c8afc55301d9df
+ms.openlocfilehash: cf39d06bb033f15a667a88f7628bcfc1401a275e
+ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení Windows 10 a novější v Microsoft Intune
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/09/2017
 -   **Ruční instalace kořenového certifikátu (jenom mobilní verze)** – Zabrání uživateli v ruční instalaci kořenových certifikátů a zprostředkujících certifikátů CAP.
 -   **Odeslání diagnostických dat** – Možné hodnoty jsou:
     - **Žádné** – Microsoftu se nepošlou žádná data.
-    - **Základní** – Microsoftu se pošlou omezené informace.
+    - **Základní:** Microsoftu se odešle omezené množství dat.
     - **Rozšířené** – Microsoftu se pošlou rozšířená data pro diagnostiku.
     - **Úplné:** Pošle stejná data jako možnost Rozšířené a k tomu navíc údaje o stavu zařízení.
 -   **Kamera** – Povolí nebo zablokuje použití fotoaparátu v zařízení.
@@ -182,7 +182,7 @@ Pro zařízení s Windows 10: Jakmile se nepovede určený počet pokusů o při
     -   **Soukromí** – Zablokuje přístup k oblasti soukromí v aplikaci Nastavení.
     -   **Aktualizace a zabezpečení** – Zablokuje přístup k oblasti aktualizací a zabezpečení v aplikaci Nastavení.
 
-## <a name="kiosk"></a>Veřejný terminál
+## <a name="kiosk"></a>Kiosk
 
 -   **Beznabídkový režim** – Identifikuje typ [režimu veřejného terminálu](https://docs.microsoft.com/en-us/windows/configuration/kiosk-shared-pc) podporovaného zásadami.  Vaše možnosti jsou:
 

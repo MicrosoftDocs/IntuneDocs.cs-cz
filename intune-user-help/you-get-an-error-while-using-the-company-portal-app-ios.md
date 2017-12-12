@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 407ef838fca1f47a191b5a99648dcc68433621f6
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 55fd0e87545666220721c4e874bcf0cc6e9b5e88
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="you-get-an-error-while-using-the-company-portal-app"></a>Při použití aplikace Portál společnosti se zobrazí chyba
 
@@ -32,4 +32,4 @@ Pokud při použití aplikace Portál společnosti v zařízení s iOSem dojde k
 
 -   Když jste v aplikaci Portál společnosti, zatřeste zařízením a po zobrazení diagnostické výstrahy klepněte na **E-mail**. Pokud zatřesete zařízením, ale žádná výstraha se nezobrazí, otevřete **Nastavení** > **Portál společnosti** a zkontrolujte, jestli je zapnutá možnost **Gesto zatřesením**.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).

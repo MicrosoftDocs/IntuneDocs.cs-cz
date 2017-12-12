@@ -6,7 +6,7 @@ keywords:
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 06/03/2017
+ms.date: 11/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,17 @@ ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1f0d518edc26c382d6df71b95b84328eb375baf6
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: e9e511cef22fdfc8e2975bd14f7b969067317a44
+ms.sourcegitcommit: 2ad0d88d3ef5b81563c6a54eaf52f09e126abeaf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="how-to-configure-certificates-in-microsoft-intune"></a>Konfigurace certifikátů v Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Když uživatelům poskytnete přístup k podnikovým prostředkům prostřednictvím sítě VPN, Wi-Fi nebo e-mailových profilů, můžete tato připojení ověřovat pomocí certifikátů. Tím odpadne nutnost zadávat uživatelské jméno a heslo pro ověření připojení.
+Když uživatelům poskytnete přístup k podnikovým prostředkům prostřednictvím sítě VPN, Wi-Fi nebo e-mailových profilů, můžete tato připojení ověřovat pomocí certifikátů. Když používáte certifikáty, nemusíte zadávat uživatelské jméno a heslo pro ověření připojení.
 
 Pomocí Intune můžete přiřadit tyto certifikáty k zařízením, která spravujete. Intune podporuje přiřazování a správu těchto typů certifikátů:
 
@@ -37,7 +37,7 @@ Každý z těchto typů certifikátů má vlastní požadované součásti a po�
 ## <a name="general-workflow"></a>Obecný pracovní postup
 
 1. Zajistěte, abyste měli připravenou správnou infrastrukturu certifikátů. Můžete použít [certifikáty SCEP](certificates-scep-configure.md) a [certifikáty PKCS](certficates-pfx-configure.md).
-2. Na každé zařízení nainstalujte kořenový certifikát nebo certifikát zprostředkující certifikační autority (CA), aby zařízení rozpoznalo legitimitu vaší certifikační autority. K tomuto účelu vytvořte a přiřaďte **profil důvěryhodného certifikátu**. Po přiřazení tohoto profilu budou zařízení, která spravujete v Intune, požadovat a přijímat kořenový certifikát. Pro každou platformu budete muset vytvořit samostatný profil. Profily důvěryhodného certifikátu jsou dostupné pro tyto platformy:
+2. Na každé zařízení nainstalujte kořenový certifikát nebo certifikát zprostředkující certifikační autority (CA), aby zařízení rozpoznalo legitimitu vaší certifikační autority. K tomuto účelu vytvořte a přiřaďte **profil důvěryhodného certifikátu**. Po přiřazení tohoto profilu budou zařízení, která spravujete v Intune, požadovat a přijímat kořenový certifikát. Pro každou platformu musíte vytvořit samostatný profil. Profily důvěryhodného certifikátu jsou dostupné pro tyto platformy:
     - iOS 8.0 a novější
     - macOS 10.9 a novější
     - Android 4.0 a novější
@@ -45,27 +45,30 @@ Každý z těchto typů certifikátů má vlastní požadované součásti a po�
     - Windows 8.1 a vyšší
     - Windows Phone 8.1 a novější
     - Windows 10 a novější
-3. Vytvořte profily certifikátů. Zařízení si vyžádají certifikát, který se má používat k ověření přístupu k VPN, Wi-Fi a e-mailu. Pro zařízení s následujícími platformami můžete vytvořit a přiřadit profil certifikátu **PKCS** nebo **SCEP**:
-    - iOS 8.0 a novější
-    - Android 4.0 a novější
-    - Android for Work
-    - Windows 10 (desktopové a mobilní) a novější
+3. Vytvořte profily certifikátů. Zařízení si vyžádají certifikát, který se má používat k ověření přístupu k VPN, Wi-Fi a e-mailu.
 
-    Pro zařízení s následujícími platformami můžete použít jenom profil certifikátu SCEP:
+   Pro zařízení s následujícími platformami můžete vytvořit a přiřadit profil certifikátu **PKCS** nebo **SCEP**:
 
--   macOS 10.9 a novější
--   Windows Phone 8.1 a novější
+   - iOS 8.0 a novější
+   - Android 4.0 a novější
+   - Android for Work
+   - Windows 10 (Desktop a Mobile) a novější
+
+   Profil certifikátu **SCEP** můžete použít jenom pro zařízení s těmito platformami:
+
+   - macOS 10.9 a novější
+   - Windows Phone 8.1 a novější
 
 Pro každou platformu zařízení musíte vytvořit samostatný profil. Při vytváření profil přidružíte k profilu důvěryhodného kořenového certifikátu, který jste vytvořili dříve.
 
 ### <a name="further-considerations"></a>Další pravidla
 
 - Pokud nemáte certifikační autoritu organizace, musíte ji vytvořit.
-- Pokud se na základě platforem zařízení rozhodnete použít profil SCEP (Simplified Certificate Enrollment Protocol), musíte taky nakonfigurovat server Služby zápisu síťových zařízení (NDES).
+- Pokud používáte profily SCEP, musíte také nakonfigurovat server služby zápisu síťových zařízení.
 - Bez ohledu na to, jestli plánujete používat profily SCEP nebo PKCS, si musíte stáhnout a nakonfigurovat Microsoft Intune Certificate Connector.
 
 
-## <a name="step-1--configure-your-certificate-infrastructure"></a>Krok 1: Konfigurace infrastruktury certifikátu
+## <a name="step-1-configure-your-certificate-infrastructure"></a>Krok 1: Konfigurace infrastruktury certifikátu
 
 Potřebujete-li nápovědu ke konfiguraci infrastruktury jednotlivých typů profilů certifikátů, přečtěte si tato témata:
 
@@ -73,11 +76,11 @@ Potřebujete-li nápovědu ke konfiguraci infrastruktury jednotlivých typů pro
 - [Konfigurace a správa certifikátů PKCS pomocí Intune](certficates-pfx-configure.md)
 
 
-## <a name="step-2---export-your-trusted-root-ca-certificate"></a>Krok 2: Export certifikátu důvěryhodné kořenové certifikační autority
+## <a name="step-2-export-your-trusted-root-ca-certificate"></a>Krok 2: Export certifikátu důvěryhodné kořenové certifikační autority
 
 Exportujte certifikát důvěryhodné kořenové certifikační autority jako soubor **.cer** z vydávající certifikační autority nebo z jakéhokoli zařízení, které vaší vydávající certifikační agentuře důvěřuje. Privátní klíč neexportujte.
 
-Tento certifikát budete importovat při nastavování profilu důvěryhodného certifikátu.
+Tento certifikát naimportujete při nastavování profilu důvěryhodného certifikátu.
 
 ## <a name="step-3-create-trusted-certificate-profiles"></a>Krok 3: Vytvoření profilů důvěryhodných certifikátů
 Před vytvořením profilu certifikátu SCEP nebo PKCS musíte vytvořit profil důvěryhodného certifikátu. Potřebujete profil důvěryhodného certifikátu a profil SCEP nebo PKCS pro každou platformu zařízení. Postup vytvoření důvěryhodných certifikátů je obdobný pro každou platformu zařízení.
@@ -97,7 +100,7 @@ Před vytvořením profilu certifikátu SCEP nebo PKCS musíte vytvořit profil 
     - **Windows Phone 8.1**
     - **Windows 8.1 a novější**
     - **Windows 10 a novější**
-6. V rozevíracím seznamu **Typ profilu** zvolte **Důvěryhodný certifikát**.
+6. V rozevíracím seznamu **Typ profilu** zvolte **Důvěryhodný certifikát**.
 7. Procházením vyhledejte certifikát, který jste si uložili v rámci úlohy 1, a pak klikněte na **OK**.
 8. Jenom pro zařízení s Windows 8.1 a Windows 10 vyberte **cílové úložiště** pro důvěryhodný certifikát z těchto možností:
     - **Úložiště počítačových certifikátů – kořenové**

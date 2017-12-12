@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: angrobe
-ms.date: 11/6/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,62 +15,110 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 463278e4dc9ad677f654754d4710b110b376cc2d
-ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
+ms.openlocfilehash: 376236634ba9579e6496fa252c6a3638197fbcb9
+ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Jako správce služby Intune můžete určit, která zařízení se mohou registrovat do systému správy pomocí Intune. Na portálu Azure Portal můžete nastavit následující omezení pro registraci zařízení:
+Jako správce Intune můžete vytvořit a spravovat omezení registrace definující počet a typy zařízení, u kterých můžete zaregistrovat správu přes Intune. Můžete vytvořit více omezení a použít je u různých skupin uživatelů. Pro různá omezení můžete nastavit [pořadí priority](#change-enrollment-restriction-priority).
+
+>[!NOTE]
+>Omezení registrací nepatří k funkcím zabezpečení. Ohrožená zařízení mohou poskytovat zavádějící informace. Tato omezení jsou jen určitou bariérou pro uživatele bez zlých úmyslů. 
+
+Mezi konkrétní omezení registrace, která můžete vytvořit, patří:
 
 - Maximální počet zaregistrovaných zařízení
 - Platformy zařízení, které se mohou zaregistrovat:
   - Android
+  - Android for Work
   - iOS
   - macOS
   - Windows
-- Verze operačního systému platformy pro iOS, Android a Windows (můžou být použity jenom verze Windows 10; pokud je povolený systém Windows 8.1, ponechte toto prázdné)
+- Verze operačního systému platformy iOS, Android, Android for Work a Windows (můžou být použity jenom verze Windows 10; pokud je povolený systém Windows 8.1, ponechte toto prázdné)
   - Minimální verze
   - Maximální verze
-- Omezení soukromých zařízení (pouze iOS, Android a macOS)
+- Omezení soukromých zařízení (pouze iOS, Android, Android for Work a macOS)
 
->[!NOTE]
->Omezení registrací nepatří k funkcím zabezpečení. Ohrožená zařízení mohou poskytovat zavádějící informace. Tato omezení jsou jen určitou bariérou pro uživatele bez zlých úmyslů.
+## <a name="default-restrictions"></a>Výchozí omezení
+
+Pro omezení registrace typu i limitu počtu zařízení se automaticky poskytnou výchozí omezení. Možnosti výchozích omezení můžete změnit. Výchozí omezení se použijí pro všechny registrace zařízení s uživateli i bez uživatelů. Tato výchozí omezení můžete přepsat tak, že vytvoříte nová omezení s vyšší prioritou.
+
+## <a name="create-a-restriction"></a>Vytvoření omezení
+
+1. Přihlaste se k portálu Azure Portal.
+2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
+3. Zvolte **Registrace zařízení** > **Omezení registrace**.
+4. Zvolte **Vytvořit omezení**.
+5. Pojmenujte omezení a zadejte jeho popis.
+6. Zvolte **Typ omezení** a pak klikněte na **Vytvořit**.
+7. Pokud u omezení počtu zařízení chcete nastavit maximální počet zařízení, která uživatel může zaregistrovat, klikněte na **Limit počtu zařízení**.
+8. Pokud u omezení typu zařízení chcete povolit nebo blokovat různé platformy a verze, klikněte na **Platformy** a **Konfigurace platforem**.
+9. Klikněte na **Přiřazení** > **+ Vybrat skupiny**.
+10. V části **Vybrat skupiny** vyberte alespoň jednu skupinu a klikněte na **Vybrat**. Omezení platí jenom u skupin, ke kterým je přiřazeno. Pokud omezení nepřiřadíte alespoň k jedné skupině, nebude mít žádný efekt.
+11. Klikněte na **Uložit**.
+12. Priorita nově vytvořeného omezení bude o jeden stupeň vyšší než výchozí omezení. [Prioritu můžete změnit](#change-enrollment-restriction-priority).
 
 ## <a name="set-device-type-restrictions"></a>Nastavení omezení typů zařízení
-Výchozí omezení registrace se použijí pro všechny registrace zařízení s uživateli i bez uživatelů.
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. Zvolte **Registrace zařízení** > **Omezení registrace**.
-4. V části **Omezení registrace** > **Omezení typů zařízení** vyberte **Výchozí**.
-5. V části **Všichni uživatelé** vyberte **Platformy**. Zvolte u každé platformy **Povolit** nebo **Blokovat**:
-  - **Android**
-  - **iOS**
-  - **macOS**
-  - **Windows**
 
-  Klikněte na **Uložit**.
-6. V části **Všichni uživatelé** vyberte **Konfigurace platforem** a zvolte následující konfigurace. Pro každou z povolených platforem můžete nakonfigurovat následující možnosti:
-  - **Verze** – Určete **minimální** a **maximální** verzi operačního systému platformy pro zařízení s Androidem, iOSem nebo Windows. Systém Android podporuje major.minor.rev.build. Systém iOS podporuje major.minor.rev. Systém Windows podporuje jenom major.minor.rev.build pro Windows 10. Verze operačního systému se nevztahují na zařízení Apple registrovaná v Programu registrace zařízení, pomocí Apple School Manageru ani v aplikaci Apple Configurator. 
-  - **V osobním vlastnictví** – Určete, jestli se mají **povolit**, nebo **blokovat** zařízení s Androidem, iOSem a macOS.
-  ![Snímek obrazovky pracovního prostoru Omezení zařízení s výchozími konfiguracemi platformy zařízení zobrazující konfiguraci nastavení pro osobní vlastnictví](media/device-restrictions-platform-configurations.png)
-  Klikněte na **Uložit**.
+Nastavení omezení typu zařízení můžete změnit podle následujícího postupu:
+
+1. Přihlaste se k portálu Azure Portal.
+2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
+3. Zvolte **Registrace zařízení** > **Omezení registrace**.
+4. V části **Omezení typů zařízení** zvolte omezení, které chcete nastavit.
+5. V části názvu omezení (u výchozího omezení se jedná o **Všichni uživatelé**) vyberte **Platformy**. U každé uvedené platformy zvolte **Povolit** nebo **Blokovat**.
+6. Klikněte na **Uložit**.
+7. V části názvu omezení (u výchozího omezení se jedná o **Všichni uživatelé**) zvolte **Konfigurace platforem** a u uvedených platforem vyberte minimální a maximální **verzi**. Podporované verze zahrnují:
+  - Android a Android for Work podporují major.minor.rev.build.
+  - Systém iOS podporuje major.minor.rev.
+  - Systém Windows podporuje jenom major.minor.rev.build pro Windows 10.
+  Verze operačního systému se nevztahují na zařízení Apple registrovaná v Programu registrace zařízení, pomocí Apple School Manageru ani v aplikaci Apple Configurator. 
+8. U každé uvedené platformy zadejte, zda chcete **Povolit** nebo **Blokovat**  zařízení **v osobním vlastnictví**.
+
+    ![Snímek obrazovky pracovního prostoru Omezení zařízení s výchozími konfiguracemi platformy zařízení zobrazující konfiguraci nastavení pro osobní vlastnictví](media/device-restrictions-platform-configurations.png)
+9. Klikněte na **Uložit**.
 
 >[!NOTE]
->Když zablokujete registraci zařízení s Androidem v osobním vlastnictví, stále půjde zaregistrovat zařízení v osobním vlastnictví, která používají verzi Android for Work.
+>- Když zablokujete registraci zařízení s Androidem v osobním vlastnictví, stále půjde zaregistrovat zařízení v osobním vlastnictví, která používají verzi Android for Work.
+>- Ve výchozím nastavení budou nastavení zařízení s Androidem for Work stejná jako nastavení zařízení s Androidem. Po změně nastavení Androidu for Work tomu už tak nebude.
+>- Pokud zablokujete registraci Androidu for Work u osobních zařízení, budou se jako Android for Work moct zaregistrovat jenom firemní zařízení s Androidem.
 
 ## <a name="set-device-limit-restrictions"></a>Nastavení omezení limitů počtu zařízení
-Výchozí omezení registrace se použijí pro všechny uživatele.
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. Zvolte **Registrace zařízení** > **Omezení registrace**.
-4. Na portálu Azure Portal zvolte **Registrace zařízení** a potom **Omezení registrace**.
-5. Zvolte **Omezení registrace** > **Omezení limitů počtů zařízení**.
-6. V části **Všichni uživatelé** vyberte **Limit počtu zařízení**. Zadejte maximální počet zaregistrovaných zařízení na jednoho uživatele.  
-![Snímek obrazovky okna Omezení limitů počtů zařízení s omezením limitu počtu zařízení](./media/device-restrictions-limit.png)
 
-  Klikněte na **Uložit**.
+Nastavení omezení počtu zařízení můžete změnit podle následujícího postupu:
+
+1. Přihlaste se k portálu Azure Portal.
+2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
+3. Zvolte **Registrace zařízení** > **Omezení registrace**.
+4. V části **Omezení počtu zařízení** zvolte omezení, které chcete nastavit.
+5. Zvolte **Limit počtu zařízení** a potom v rozevíracím seznam vyberte maximální počet zařízení, která uživatel může zaregistrovat.
+    ![Snímek obrazovky okna Omezení limitů počtů zařízení s omezením limitu počtu zařízení](./media/device-restrictions-limit.png)
+6. Klikněte na **Uložit**.
+
+## <a name="change-enrollment-restriction-priority"></a>Změna priority omezení registrace
+
+Priorita se používá, když uživatel existuje v několika skupinách, ke kterým jsou přiřazena omezení. Uživatelé podléhají jenom omezení s nejvyšší prioritou přiřazenému ke skupině, ve které se nacházejí. Jan je například ve skupině A, která má přiřazena omezení s prioritou 5, a ve skupině B, na kterou se vztahují omezení s prioritou 2. U Jana se uplatní jenom omezení s prioritou 2. 
+
+Když vytvoříte omezení, přidá se do seznamu bezprostředně nad výchozí omezení.
+
+Registrace zařízení obsahuje výchozí omezení jak pro omezení typu zařízení, tak pro omezení limitu počtu zařízení. Tato dvě omezení platí pro všechny uživatele, pokud je nepřepíšete omezeními s vyšší prioritou. 
+
+Prioritu kteréhokoli nevýchozího omezení můžete změnit. 
+
+**Změna priority omezení**
+
+1. Přihlaste se k portálu Azure Portal.
+2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
+3. Zvolte **Registrace zařízení** > **Omezení registrace**.
+4. Najeďte kurzorem myši na omezení v seznamu priorit.
+5. Pomocí tří svislých teček přetáhněte prioritu na požadované místo v seznamu.
+
+
+
+
+

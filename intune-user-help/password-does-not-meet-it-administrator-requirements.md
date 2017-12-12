@@ -14,11 +14,11 @@ ms.assetid: efb3c261-1f6c-4d39-bfa4-18661f8c59c7
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 88d7ca7a73f32c90f589cd51b299350879914b69
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: d6372efef833268dedf9e18e878fa66f1417a03d
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="your-password-does-not-meet-your-company-supports-requirements"></a>Heslo nesplňuje požadavky firemní podpory
 
@@ -46,4 +46,4 @@ Popis problémů s kódem PIN nebo heslem:
 
 - **Heslo není dostatečně složité a nesplňuje požadavky.** Vaše firemní podpora požaduje, abyste v hesle použili složitější znaky. Zkuste použít třeba číslice, velká písmena a symboly jako $, % a #. Tento problém může vzniknout i u dalších účtů na vašem zařízení. Zkontrolujte proto všechny případné další pracovní účty a zajistěte, aby vaše heslo splňovalo požadavky nastavené správcem IT pro vaše zařízení.
 
-Pokud máte potíže s tím, jak vytvořit heslo v souladu s požadavky, obraťte se na firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Pokud máte potíže s tím, jak vytvořit heslo v souladu s požadavky, obraťte se na firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).

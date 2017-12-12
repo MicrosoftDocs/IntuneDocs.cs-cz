@@ -14,11 +14,11 @@ ms.assetid: eb1884b2-d760-4a14-800b-378a33774a41
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 395afad276db8502896f6d903c8d97d1578ca5dd
-ms.sourcegitcommit: 668b408819c75ba5e827e36974935aafaf85871e
+ms.openlocfilehash: 5d151953ef2ccb5ae46c603be6073695f134f308
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="install-zimperium-zips-on-your-android-device"></a>Instalace aplikace Zimperium zIPS na zařízení s Androidem
 
@@ -56,4 +56,4 @@ Pokud máte s instalací potíže, zkuste provést kroky k odstranění potíž�
 
 V některých případech může instalace selhat kvůli technickým problémům mimo vaši kontrolu. V takovém případě zkuste aplikaci Zimperium zIPS nainstalovat [ručně z obchodu Play](https://play.google.com/store/apps/details?id=com.zimperium.zips).
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).

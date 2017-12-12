@@ -14,11 +14,11 @@ ms.assetid: b5521762-a80c-4630-ae30-38b471da216b
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 341226bcc5ba3ca0b7f12aedeb137580a49b9f18
-ms.sourcegitcommit: 668b408819c75ba5e827e36974935aafaf85871e
+ms.openlocfilehash: 1fa368ad494ae60a9db5cbe32ce678ce6fd56c0d
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="resolve-a-threat-found-by-symantec-endpoint-protection-mobile"></a>Vyřešení hrozby, kterou zjistila aplikace Symantec Endpoint Protection Mobile
 
@@ -34,7 +34,7 @@ Pokud registrované zařízení obsahuje virus nebo jinou bezpečnostní hrozbu 
 
 ![Chybová zpráva aplikace Skycure s odkazem na web Portál společnosti](./media/skycure-list-of-potential-issues-android.png)
 
-Klepněte na odkaz na **portál pro správu zařízení** a přejděte na [web Portál společnosti](https://portal.manage.microsoft.com), kde se zobrazí pokyny k vyřešení problému.
+Klepněte na odkaz na **portál pro správu zařízení** a přejděte na [web Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog), kde se zobrazí pokyny k vyřešení problému.
 
 ## <a name="example-of-an-app-that-symantec-endpoint-protection-mobile-sees-as-a-threat"></a>Příklad aplikace, kterou Symantec Endpoint Protection Mobile vnímá jako hrozbu
 
@@ -44,5 +44,5 @@ Pokud jste nainstalovali aplikaci, kterou Symantec Endpoint Protection Mobile po
 
 Po odinstalaci aplikace ihned znovu získáte přístup k firemnímu e-mailu a datům. Pokud budete požadavek na odinstalaci aplikace ignorovat, ztratíte přístup k e-mailu a datům až do odinstalace aplikace.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
 

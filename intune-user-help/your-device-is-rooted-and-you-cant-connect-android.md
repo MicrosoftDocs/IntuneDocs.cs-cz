@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 0a91b167911d203cd3bd1e7645e5cacbc2eb6534
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 6859bb6f8fd93259ebbae63484bf0c53602592ea
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="your-android-device-is-rooted-so-you-cant-connect"></a>Byl proveden root zařízení s Androidem a zařízení nemůže se připojit
 
@@ -32,6 +32,6 @@ Zařízení může být rootované několika způsoby:
 
 - Mohli jste na zařízení instalovat aplikaci, o které software pro zjišťování rootu předpokládá, že je bezpečnostním rizikem. Pokud se tato zpráva zobrazí okamžitě po instalaci nějaké aplikace, zkuste aplikaci odinstalovat.
 
-- Výrobce zařízení instaloval na zařízení software, o které software pro zjišťování rootu předpokládá, že je bezpečnostním rizikem. V takovém případě musíte požádat o pomoc firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+- Výrobce zařízení instaloval na zařízení software, o které software pro zjišťování rootu předpokládá, že je bezpečnostním rizikem. V takovém případě musíte požádat o pomoc firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
 
 Pokud jste zařízení rootovali sami, budete muset provést opačný proces a obnovit zařízení do nerootovaného stavu.

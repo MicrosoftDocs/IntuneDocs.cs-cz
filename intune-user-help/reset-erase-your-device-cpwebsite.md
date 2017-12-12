@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: cadc8ac211f60fd767dbfa7d412b089c3c1c94ea
-ms.sourcegitcommit: f254f49fc65fc75a779ff721e2202c53d03cb981
+ms.openlocfilehash: 98bc92eeba4c92a38aacf05f0eab1ea742dff031
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="reset-your-device-from-the-company-portal-website"></a>Resetování zařízení z webu Portál společnosti
 
-V případě ztráty nebo odcizení zařízení může být vhodné restovat jeho tovární nastavení za účelem zabránění neoprávněného přístupu k vašim údajům. Můžete taky vzdáleně resetovat zařízení pomocí [webu Portál společnosti](https://portal.manage.microsoft.com). Web Portál společnosti je webová stránka sloužící ke správě počítačů a zařízení zaregistrovaných v Intune. Na tomto webu můžete plnit většinou stejné úkoly, jako když používáte aplikaci Portál společnosti.
+V případě ztráty nebo odcizení zařízení může být vhodné restovat jeho tovární nastavení za účelem zabránění neoprávněného přístupu k vašim údajům. Můžete taky vzdáleně resetovat zařízení pomocí [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog). Web Portál společnosti je webová stránka sloužící ke správě počítačů a zařízení zaregistrovaných v Intune. Na tomto webu můžete plnit většinou stejné úkoly, jako když používáte aplikaci Portál společnosti.
 
 Pokud zařízení resetujete, nebude již uvedené na Portálu společnosti a bude restované do výchozího továrního nastavení.
 
@@ -33,7 +33,7 @@ Pokud zařízení resetujete, nebude již uvedené na Portálu společnosti a bu
 
 Resetování zařízení:
 
-1.  Na [webu Portál společnosti](https://portal.manage.microsoft.com) klepněte na tlačítko __nabídky__ a potom vyberte __Moje zařízení__.
+1.  Na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog) klepněte na tlačítko __nabídky__ a potom vyberte __Moje zařízení__.
 
 2. Na stránce __Moje zařízení__ vyberte název zařízení, které chcete přejmenovat.
 
@@ -47,4 +47,4 @@ Resetování zařízení:
 
 Zařízení se resetovalo.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).

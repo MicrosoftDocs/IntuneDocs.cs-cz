@@ -15,11 +15,11 @@ ms.assetid: 6bdf714a-5d93-485c-8b52-513635c60cb6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 094fc13705c1b746a4b753c02127478f10754f46
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: 97e125d768ca7b0cf58a2892d78675dfa42ef7ce
+ms.sourcegitcommit: fa0f0402dfd25ec56a0df08c23708c7e2ad41120
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení zařízení používajících Android a Samsung KNOX Standard v Microsoft Intune
 
@@ -42,7 +42,7 @@ Tato nastavení spolu se zásadami omezení pro zařízení s Androidem se použ
 - **Snímek obrazovky (jenom Samsung KNOX)** – Umožňuje uživateli zachytit obsah obrazovky v podobě obrázku.
 - **Hlasový asistent (jenom Samsung KNOX)** – Povolí používání softwaru hlasového pomocníka na zařízení.
 - **YouTube (jenom Samsung KNOX)** – Povolí používání aplikace YouTube na zařízení.
-- **Sdílená zařízení** – Nakonfigurujte spravované zařízení Samsung KNOX Standard jako sdílené. V tomto režimu se koncoví uživatelé můžou přihlásit k zařízení pomocí svých přihlašovacích údajů Azure AD a odhlásit se od něho. Zařízení zůstává spravované bez ohledu na to, jestli se používá.<br>Když se koncoví uživatelé přihlásí, mají přístup k aplikacím a také se na ně vztahují všechny zásady. Po odhlášení uživatelů se všechna data aplikací vymažou.
+- **Sdílená zařízení (jenom Samsung KNOX)** – Umožňuje nakonfigurovat spravované zařízení Samsung KNOX Standard jako sdílené. V tomto režimu se koncoví uživatelé můžou přihlásit k zařízení pomocí svých přihlašovacích údajů Azure AD a odhlásit se od něho. Zařízení zůstává spravované bez ohledu na to, jestli se používá.<br>Při použití ve spojení s profilem certifikátu SCEP umožňuje tato funkce koncovým uživatelům sdílet zařízení se stejnou skupinou aplikací pro všechny uživatele, ale s vlastním uživatelským certifikátem SCEP.  Po odhlášení uživatelů se všechna data aplikací vymažou.  Tato funkce je omezená jenom na obchodní aplikace.
 
 ## <a name="password"></a>Heslo
 

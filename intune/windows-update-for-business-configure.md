@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 08f659cf-715e-4e10-9ab2-1bac3c6f2366
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: 8abc5e9a1e1d5ec5e0ea632b075209a0ba9456c2
-ms.sourcegitcommit: 474a24ba67f6bf4f00268bf9e4eba52331a6b82d
+ms.openlocfilehash: ca1f1c0572a2a3c1484b9c23bd14e029e506e536
+ms.sourcegitcommit: a7c1e10e615e5c975bb5d52eca986c5cf5287687
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="manage-software-updates"></a>Správa aktualizací softwaru
 
@@ -65,7 +65,7 @@ Po vytvoření aktualizačních kanálů je přiřadíte skupinám zařízení. 
 1. Na portále Azure Portal vytvořte aktualizační kanály Windows 10 s nastaveními, která potřebujete. Nastavení **Povolit funkce v předběžné verzi** není na portálu Azure Portal podporované, protože už pro nejnovější buildy Windows 10 neplatí. Při vytvoření aktualizačních kanálů můžete nakonfigurovat ostatní tři nastavení i další nastavení aktualizace Windows 10.
 
   > [!NOTE]
-  > Nastavení aktualizací Windows 10 vytvořená na klasickém portálu se na portálu Azure Portal po migraci nezobrazí. Tato nastavení se ale dál používají. Pokud jste některé z těchto nastavení migrovali a migrované zásady z portálu Azure Portal upravíte, tato nastavení se ze zásad odeberou.
+  > Nastavení aktualizací Windows 10 vytvořená na klasickém portálu se na Azure Portalu po migraci nezobrazí. Tato nastavení se ale dál používají. Pokud jste některé z těchto nastavení migrovali a migrované zásady z portálu Azure Portal upravíte, tato nastavení se ze zásad odeberou.
 
 2. Odstraňte nastavení aktualizací na klasickém portálu. Po migraci na portál Azure Portal a přidání stejných nastavení do aktualizačního kanálu musíte nastavení na klasickém portálu odstranit, aby se zabránilo možným konfliktům zásad. Pokud je třeba stejné nastavení nakonfigurované s různými hodnotami, dojde ke konfliktu, který nepůjde snadno poznat, protože nastavení nakonfigurované na klasickém portálu se na portálu Azure Portal nezobrazuje.
 
@@ -94,8 +94,8 @@ Po vytvoření aktualizačních kanálů je přiřadíte skupinám zařízení. 
 
     **Kanál pro údržbu je nastavený na Půlroční kanál a odložení aktualizace je nastavené na 30 dní**: Řekněme, že Aktualizace funkcí X je nejdříve veřejně dostupná na webu Windows Update jako Půlroční kanál (cílený) v lednu. O čtyři měsíce později, v dubnu, je Aktualizace funkcí X vydána do Půlročního kanálu. Zařízení přijme Aktualizaci funkcí 30 dní po tomto vydání do Půlročního kanálu a bude se aktualizovat v květnu.
 
-    - **Optimalizace doručení**: Zvolte metodu, pro kterou budou zařízení stahovat aktualizace Windows. Podrobnosti najdete v části [DeliveryOptimization/DODownloadMode](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/policy-configuration-service-provider#deliveryoptimization-dodownloadmode).
-8. Po dokončení klikněte na **OK** a pak v okně **Vytvořit aktualizační kanál** klikněte na **Vytvořit**.
+    - **Optimalizace doručení**: Zvolte metodu, pro kterou budou zařízení stahovat aktualizace Windows. Podrobnosti najdete v části [DeliveryOptimization/DODownloadMode](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#download-mode).
+1. Po dokončení klikněte na **OK** a pak v okně **Vytvořit aktualizační kanál** klikněte na **Vytvořit**.
 
 Nový aktualizační kanál se zobrazí v seznamu aktualizačních kanálů.
 

@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1ea734e83cfab3fff22c775764ac9814012d52b6
-ms.sourcegitcommit: 70dc0aaad51b447e173b663d1092d993dc81ffdd
+ms.openlocfilehash: 35bf193563deb34ac59df245c622bbc011d80b76
+ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="the-early-edition-for-microsoft-intune---december-2017"></a>Časná edice pro Microsoft Intune – prosinec 2017
 
@@ -60,9 +60,6 @@ Díky této změně mohou správci IT sledovat, která zařízení spravovaná p
 
 ### <a name="new-ios-device-action------1244701---"></a>Nová akce pro zařízení s iOSem  <!-- 1244701 -->
 Zařízení s iOSem 10.3, která jsou pod dohledem, je možné vypnout. Tato akce vypne zařízení okamžitě, bez upozornění pro koncového uživatele. Akci **Vypnout (jen pod dohledem)** najdete ve vlastnostech zařízení, když zařízení vyberete v úloze **Zařízení**.
-
-### <a name="palo-alto-vpn-now-supported----1333680-eeready---"></a>Nyní podpora VPN Palo Alto <!-- 1333680 eeready -->
-Seznam **Typ připojení** bude při konfiguraci základní sítě VPN zahrnovat položku VPN Palo Alto.
 
 ### <a name="multiple-connector-support-for-scep-and-pfx-certificate-handling----1361755-eeready---"></a>Podpora více konektorů pro zpracování certifikátů SCEP a PFX <!-- 1361755 eeready -->
 Zákazníci, kteří používají místní konektor NDES k dodání certifikátů do zařízení, budou moci konfigurovat více konektorů v jednom tenantovi.

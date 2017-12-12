@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 41bfb62f90965288d73948650b6935434c986d92
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 4ee4e9b4abb99e280bf2529f9f60d295096426c0
+ms.sourcegitcommit: 4e0ed4087a1e596831fa215135824ca5d38e33f7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Odebrání zařízení pomocí obnovení továrního nastavení nebo odebrání firemních dat
 
@@ -39,7 +39,21 @@ Zařízení, která už nepotřebujete, která využíváte k jinému účelu ne
 2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 3. V okně **Zařízení a skupiny** zvolte **Všechna zařízení**.
 4. Zvolte název zařízení, jehož tovární nastavení chcete obnovit.
-5. V okně, kde se zobrazuje název zařízení, zvolte **Obnovení továrního nastavení**, a volbou možnosti **Ano** tuto akci potvrďte.
+5. V okně, ve kterém se zobrazuje název zařízení zvolte **Obnovení továrního nastavení**.
+6. U Windows 10 verze 1709 nebo vyšší je k dispozici další možnost – Zachovat stav registrace a uživatelský účet. 
+    
+    |Při obnovení továrního nastavení se zachová|Nezachová se|
+    | -------------|------------|
+    |Uživatelské účty přidružené k zařízení|Soubory uživatele|
+    |Stav počítače \(připojení k doméně, připojení k Azure Active Directory)| Aplikace nainstalované uživatelem \(aplikace ze Storu a aplikace Win32)|
+    |Registrace správy mobilních zařízení|Nevýchozí nastavení zařízení|
+    |Aplikace nainstalované výrobcem OEM \(aplikace ze Storu a aplikace Win32)||
+    |Profil uživatele||
+    |Uživatelská data mimo profil uživatele||
+    |Automatické přihlášení uživatele|| 
+    
+         
+7. Kliknutím na **Ano** potvrďte obnovení továrního nastavení.
 
 Pokud je zařízení zapnuté a připojené, trvá méně než 15 minut, než se příkaz k obnovení továrního nastavení rozšíří do všech typů zařízení.
 

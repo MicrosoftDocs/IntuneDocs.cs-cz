@@ -16,18 +16,18 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: f6df910d60498b0ed272ebeb86d54273e8c6dd1a
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 6444c129869db467b582593677b20cd4de8f319d
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="send-logs-to-your-company-support-using-a-usb-cable"></a>Odeslání protokolů firemní podpoře pomocí kabelu USB
 
 Pokud při použití aplikace Portál společnosti na zařízení s Androidem dojde k chybě, můžete firemní podpoře pomoct potíže vyřešit tak, že jí pošlete e-mailem informace o této chybě. Tyto informace se ukládají na zařízení ve speciálním dokumentu s názvem _diagnostický protokol_.
 
 > [!Note]
-> Než začnete, ujistěte se, že máte po ruce e-mailovou adresu firemní podpory. Najdete ji na [webu Portál společnosti](https://portal.manage.microsoft.com) nebo v aplikaci Portál společnosti.
+> Než začnete, ujistěte se, že máte po ruce e-mailovou adresu firemní podpory. Najdete ji na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog) nebo v aplikaci Portál společnosti.
 
 1.  Na chybové obrazovce klepněte na **Odeslat informace**. Když se zobrazí zpráva s dotazem, jakou metodu chcete použít k odeslání protokolů, zvolte možnost, která uloží soubory do vašeho zařízení.
 
@@ -37,4 +37,4 @@ Pokud při použití aplikace Portál společnosti na zařízení s Androidem do
 
 4.  Vyberte soubory a připojte je k e-mailu. Tento e-mail pošlete své firemní podpoře.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).

@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 3976327decf6b1850baed8e781609e458d375aa1
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: f5c2536e4566baa2661b77f5574085410784a787
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Vzdálené uzamčení zařízení z webu Portál společnosti
 
@@ -28,7 +28,7 @@ Nehody se stávají a někdy se ztrácejí i zařízení. Pokud jste zařízení
 
 [!INCLUDE[wit_nextref](includes/end-user-password-guidance.md)]
 
-Abyste byli v bezpečí, můžete zařízení uzamknout pomocí možnosti Vzdálené uzamčení na [webu Portál společnosti](https://portal.manage.microsoft.com). Vzdálené uzamčení funguje na těchto platformách:
+Abyste byli v bezpečí, můžete zařízení uzamknout pomocí možnosti Vzdálené uzamčení na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog). Vzdálené uzamčení funguje na těchto platformách:
 
 * Android
 * iOS
@@ -38,7 +38,7 @@ Abyste byli v bezpečí, můžete zařízení uzamknout pomocí možnosti Vzdál
 
 ## <a name="to-use-remote-lock-to-lock-your-device"></a>Použití vzdáleného uzamčení k uzamčení zařízení
 
-1.  Na [webu Portál společnosti](https://portal.manage.microsoft.com) klepněte na tlačítko __nabídky__ ![Malý obrázek tlačítka nabídky, tři vodorovné pruhy nad sebou](/Intune/whats-new/media/CP_hamburger_menu.png) a potom vyberte __Moje zařízení__.
+1.  Na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog) klepněte na tlačítko __nabídky__ ![Malý obrázek tlačítka nabídky, tři vodorovné pruhy nad sebou](/Intune/whats-new/media/CP_hamburger_menu.png) a potom vyberte __Moje zařízení__.
 
   ![Obrázek webu Portál společnosti s rozbalenou boční nabídkou na levé straně obrazovky, s tlačítky Domů, Všechny aplikace, Moje zařízení, Helpdesk a Odhlásit se](/media/iwp-expanded-sidebar.png)
 
@@ -65,4 +65,4 @@ Abyste byli v bezpečí, můžete zařízení uzamknout pomocí možnosti Vzdál
 
 Pokud najdete své zařízení a chcete ho odemknout po použití vzdáleného uzamčení, stačí zadat heslo.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).

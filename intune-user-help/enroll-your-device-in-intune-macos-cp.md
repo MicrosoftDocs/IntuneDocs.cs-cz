@@ -1,5 +1,5 @@
 ---
-title: "Registrace zařízení s macOS v Intune pomocí Portálu společnosti | Microsoft Docs"
+title: "Registrace zařízení s macOS v Intune pomocí Portálu společnosti | Dokumentace Microsoftu"
 description: "Popisuje postup registrace zařízení s macOS v Intune pomocí aplikace Portál společnosti."
 keywords: Mac OS X, macOS, OS X
 author: barlanmsft
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: a49df5ee93138bd15052bfd630633b443e026e5d
-ms.sourcegitcommit: e692be57ec7044dfc224b70941affbfd7efba421
+ms.openlocfilehash: 1559692de1a8c9c356a3f5b30e80d1abd31853d2
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Registrace zařízení s macOS v Intune pomocí aplikace Portál společnosti
 
@@ -29,7 +29,7 @@ Přístup k aplikacím, datům a prostředkům vaší organizace vám zjednoduš
 > [!NOTE]
 > Pokyny pro registraci zařízení s macOS využívající dřívější verze macOS najdete [tady](enroll-your-device-in-intune-macos-legacy.md).
 
-1. V __Docku__ vyhledejte __Safari__ a otevřete nové okno. Potom otevřete [web Portál společnosti](https://portal.manage.microsoft.com).
+1. V __Docku__ vyhledejte __Safari__ a otevřete nové okno. Potom otevřete [web Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
 
 2. Přihlaste se na web Portál společnosti přes svůj pracovní nebo školní účet.
 
@@ -62,4 +62,4 @@ Přístup k aplikacím, datům a prostředkům vaší organizace vám zjednoduš
 
 11. Spustí se registrace vašeho Macu do systému správy. V průběhu tohoto procesu můžete být vyzváni k zadání přihlašovacích údajů počítače. Registrace může trvat několik minut. Během toho ale můžete s počítačem pracovat. Jakmile se dokončí nastavení přístupu společnosti, zobrazí se zpráva, že je vše hotovo.
 
-Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu. Kontaktní informace správce najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu. Kontaktní informace správce najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).

@@ -3,8 +3,8 @@ title: "Nastavení Airplay pro zařízení s iOSem v Intune"
 titlesuffix: Azure portal
 description: "Zjistěte, jak můžete Intune využít k tomu, aby se zařízení s iOSem automaticky připojovala k zařízením kompatibilním s AirPlay."
 keywords: 
-author: lleonard-msft
-ms.author: alleonar
+author: vhorne
+ms.author: victorh
 manager: angrobe
 ms.date: 07/03/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 712a79fb-14ef-4f6b-aba5-1dfca900afd2
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ff64e8657d65ea8e233cde8d3e3219d2bdab6ce7
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: 9a1472d86a0a25e35ef26be1c579ff491437676b
+ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="intune-airplay-settings-for-ios-devices"></a>Nastavení Airplay pro zařízení s iOSem v Intune
 

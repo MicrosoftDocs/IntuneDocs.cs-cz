@@ -5,7 +5,7 @@ keywords: Sada SDK
 author: mattbriggs
 manager: angrobe
 ms.author: mabriggs
-ms.date: 09/01/2017
+ms.date: 11/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 27725d28ac621bae9500d0e6639a82d6f033e4dc
-ms.sourcegitcommit: 42a0e4c83e33c1a25506ca75d673e861e9206945
+ms.openlocfilehash: f6a7df413cb8107e8dabc6e1de6ddabd441eaeca
+ms.sourcegitcommit: fa0f0402dfd25ec56a0df08c23708c7e2ad41120
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/26/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -35,6 +35,7 @@ Sada Intune App SDK obsahuje tyto soubory:
 * **Microsoft.Intune.MAM.SDK.aar**: Komponenty SDK kromě souborů JAT Support.V4 a Support.V7. Tento soubor jde použít místo individuálních komponent, pokud buildovací systém podporuje soubory AAR.
 * **Microsoft.Intune.MAM.SDK.Support.v4.jar**: Rozhraní nutná pro povolení MAM v aplikacích, které využívají knihovnu podpory Android v4. Aplikace, které vyžadují tuto podporu, musí na soubor JAR odkazovat přímo.
 * **Microsoft.Intune.MAM.SDK.Support.v7.jar**: Rozhraní nutná pro povolení MAM v aplikacích, které využívají knihovnu podpory Android v7. Aplikace, které vyžadují tuto podporu, musí na soubor JAR odkazovat přímo.
+* **Microsoft.Intune.MDM.SDK.DownlevelStubs.jar**: Tento soubor JAR obsahuje zástupné procedury pro systémové třídy Androidu, které jsou k dispozici jenom na novějších zařízeních, ale na které odkazují metody v MAMActivity. Novější zařízení budou tyto zástupné třídy ignorovat. Tento soubor JAR je nutný jenom v případě, že aplikace provádí reflexi u tříd odvozených z MAMActivity. U většiny aplikací není nutné ho používat. Pokud chcete tento soubor JAR použít, musíte při vylučování všech jeho tříd z ProGuard postupovat opatrně. Všechny třídy budou v kořenovém balíčku „android“.
 * **proguard.txt**: Obsahuje pravidla nástroje ProGuard, která je nutné použít, pokud ProGuard používáte při vytváření aplikací.
 * **CHANGELOG.txt**: Obsahuje záznam změn provedených v každé verzi sady SDK.
 * **THIRDPARTYNOTICES.TXT**: Označení autorství kódu OSS nebo kódu třetí strany, který se zkompiluje do vaší aplikace
@@ -47,8 +48,7 @@ Pokud váš buildovací systém nepodporuje soubory AAR, můžete místo souboru
 
 ## <a name="requirements"></a>požadavky
 
-Intune App SDK je zkompilovaný projekt pro Android. Proto je do značné míry lhostejné, kterou verzi Androidu aplikace využívá jako minimální nebo cílovou verzi API. SDK podporuje Android API 19 (Android 4.4+) až Android API 25 (Android 7.1).
-
+Intune App SDK je zkompilovaný projekt pro Android. Proto je do značné míry lhostejné, kterou verzi Androidu aplikace využívá jako minimální nebo cílovou verzi API. SDK podporuje Android API 19 (Android 4.4+) až Android API 26 (Android 8.0).
 
 
 ### <a name="company-portal-app"></a>Aplikace Portál společnosti
@@ -88,7 +88,7 @@ Běžné aplikace pro Android mají jeden režim a můžou přistupovat do syst�
 
 ## <a name="replace-classes-methods-and-activities-with-their-mam-equivalent"></a>Náhrada tříd, metod a aktivit odpovídajícím ekvivalentem MAM
 
-Základní třídy Androidu se musí nahradit odpovídajícími ekvivalenty MAM. Uděláte to tak, že vyhledáte všechny instance tříd uvedených v následující tabulce a nahradíte je ekvivalenty ze sady Intune App SDK.
+Základní třídy Androidu se musí nahradit odpovídajícími ekvivalenty MAM. Uděláte to tak, že vyhledáte všechny instance tříd uvedených v následující tabulce a nahradíte je ekvivalenty ze sady Intune App SDK. Většina z nich jsou třídy, ze kterých budou dědit třídy vaší aplikace, ale v některých případech se jedná o třídy (např. MediaPlayer), které vaše aplikace používá bez odvození.
 
 | Základní třída Android | Náhrada ze sady Intune App SDK |
 |--|--|
@@ -103,7 +103,7 @@ Základní třídy Androidu se musí nahradit odpovídajícími ekvivalenty MAM.
 | android.app.LauncherActivity | MAMLauncherActivity |
 | android.app.ListActivity | MAMListActivity |
 | android.app.NativeActivity | MAMNativeActivity |
-| android.app.PendingIntent | MAMPendingIntent (viz poznámka níže) |
+| android.app.PendingIntent | MAMPendingIntent (viz [PendingIntent](#pendingintent)) |
 | android.app.Service | MAMService |
 | android.app.TabActivity | MAMTabActivity |
 | android.app.TaskStackBuilder | MAMTaskStackBuilder |
@@ -114,9 +114,13 @@ Základní třídy Androidu se musí nahradit odpovídajícími ekvivalenty MAM.
 | android.content.BroadcastReceiver | MAMBroadcastReceiver |
 | android.content.ContentProvider | MAMContentProvider |
 | android.os.Binder | MAMBinder (nutné jen v případě, že se třída Binder negeneruje z rozhraní AIDL (Android Interface Definition Language)) |
+| android.media.MediaPlayer | MAMMediaPlayer |
+| android.media.MediaMetadataRetriever | MAMMediaMetadataRetriever |
 | android.provider.DocumentsProvider | MAMDocumentsProvider |
 | android.preference.PreferenceActivity | MAMPreferenceActivity |
 
+> [!NOTE]
+> I když není nutné, aby vaše aplikace používala vlastní odvozenou třídu `Application`, [přečtěte si část `MAMApplication` níže](#mamapplication).
 
 ### <a name="microsoftintunemamsdksupportv4jar"></a>Microsoft.Intune.MAM.SDK.Support.v4.jar:
 
@@ -125,6 +129,7 @@ Základní třídy Androidu se musí nahradit odpovídajícími ekvivalenty MAM.
 | android.support.v4.app.DialogFragment | MAMDialogFragment
 | android.support.v4.app.FragmentActivity | MAMFragmentActivity
 | android.support.v4.app.Fragment | MAMFragment
+| android.support.v4.app.JobIntentService | MAMJobIntentService
 | android.support.v4.app.TaskStackBuilder | MAMTaskStackBuilder
 | android.support.v4.content.FileProvider | MAMFileProvider
 
@@ -132,14 +137,15 @@ Základní třídy Androidu se musí nahradit odpovídajícími ekvivalenty MAM.
 
 |Třída Androidu | Náhrada ze sady Intune App SDK |
 |--|--|
-|android.support.v7.app.ActionBarActivity | MAMActionBarActivity |
-
+|android.support.v7.app.AppCompatActivity | MAMAppCompatActivity |
 
 ### <a name="renamed-methods"></a>Přejmenované metody
 
 
 V mnoha případech je metoda dostupná ve třídě Androidu označená v náhradní třídě MAM jako finální. Náhradní třída MAM pak poskytuje metodu s podobným názvem (obecně s příponou `MAM`), kterou byste měli přepsat místo toho. Třeba při odvozování od třídy `MAMActivity` musí `Activity` místo přepsání `onCreate()` a volání `super.onCreate()` přepsat `onMAMCreate()` a volat `super.onMAMCreate()`. Kompilátor Javy by měl vynutit finální omezení, která zabrání náhodnému přepsání původní metody místo jejího ekvivalentu MAM.
 
+### <a name="mamapplication"></a>MAMApplication
+Z důvodu omezení v sadě SDK MAM **musíte** vytvořit podtřídu `com.microsoft.intune.mam.client.app.MAMApplication` a nastavit ji jako název třídy `Application` použité ve vašem manifestu. `MAMApplication` je abstraktní a vyžaduje přepis pro `byte[] getADALSecretKey`. Další informace o implementaci této funkce najdete na Javadoc.
 ### <a name="pendingintent"></a>PendingIntent
 Namísto metody `PendingIntent.get*` musíte použít metodu `MAMPendingIntent.get*`. Pak můžete výslednou třídu `PendingIntent` použít obvyklým způsobem.
 
@@ -256,6 +262,15 @@ boolean getIsManagedBrowserRequired();
 boolean getIsContactSyncAllowed();
 
 /**
+ * This method is intended for diagnostic/telemetry purposes only. It can be used to discover whether
+ * file encryption is in use. File encryption is transparent to the app, and the app should not need
+ * to make any business logic decisions based on this.
+ * 
+ * @return True if file encryption is in use.
+ */
+boolean diagnosticIsFileEncryptionInUse();
+
+/**
  * Return the policy in string format to the app.
  *  
  * @return The string representing the policy.
@@ -274,7 +289,8 @@ String toString();
 Pokud aplikace využívá vlastní kód PIN a správce nastavil sadu SDK tak, aby od uživatele vyžadovala zadání kódu PIN aplikace, možná ho bude potřeba zakázat. K určení, jestli je zásada zadávání PIN pro tuto aplikaci nakonfigurovaná, použijte pro aktuálního koncového uživatele toto volání:
 
 ```java
-MAMComponents.get(AppPolicy.class).getIsPinRequired();
+
+MAMPolicyManager.getPolicy(currentActivity).getIsPinRequired();
 ```
 
 ### <a name="example-determine-the-primary-intune-user"></a>Příklad: Určení primárního uživatele Intune
@@ -312,9 +328,9 @@ Spousta aplikací implementuje funkce, které koncovému uživateli umožňují 
 K určení, jestli je tato zásada vynucená, použije následující volání:
 
 ```java
-MAMComponents.get(AppPolicy.class).getIsSaveToLocationAllowed(
+MAMPolicyManager.getPolicy(currentActivity).getIsSaveToLocationAllowed(
 SaveLocation service, String username);
-```
+``````
 
 ... kde `service` je jedním z parametrů SaveLocation:
 
@@ -344,13 +360,13 @@ Vaše aplikace se musí k oznámením ze sady SDK registrovat vytvořením tří
 ```java
 @Override
 public void onCreate() {
-    super.onCreate();
-    MAMComponents.get(MAMNotificationReceiverRegistry.class)
-        .registerReceiver(
-            new ToastNotificationReceiver(),
-            MAMNotificationType.WIPE_USER_DATA);
-    }
-```
+  super.onCreate();
+  MAMComponents.get(MAMNotificationReceiverRegistry.class)
+    .registerReceiver(
+      new ToastNotificationReceiver(),
+      MAMNotificationType.WIPE_USER_DATA);
+  }
+``````
 
 ### <a name="mamnotificationreceiver"></a>MAMNotificationReceiver
 
@@ -456,9 +472,8 @@ V této části najdete běžné způsoby konfigurace aplikace s knihovnou ADAL.
     |--|--|
     | Autorita | Požadované prostředí, ve kterém jsou nakonfigurované účty AAD |
     | ClientID | ClientID aplikace (u zaregistrovaných aplikací je generuje AzureAD) |
-    | NonBrokerRedirectURI | Platný identifikátor URI přesměrování pro aplikaci nebo `urn:ietf:wg:oauth:2.0:oob` 
-    . <br><br> Nakonfigurujte tuto hodnotu jako přípustný identifikátor URI pro přesměrování pro ClientID vaší aplikace.
-   | SkipBroker | False (Nepravda) |
+    | NonBrokerRedirectURI | Platný identifikátor URI přesměrování pro aplikaci nebo výchozí `urn:ietf:wg:oauth:2.0:oob` <br><br> Nakonfigurujte tuto hodnotu jako přípustný identifikátor URI pro přesměrování pro ClientID vaší aplikace.
+    | SkipBroker | False (Nepravda) |
 
 
 3. **Aplikace integruje ADAL, ale nepodporuje zprostředkované ověřování / jednotné přihlašování:**
@@ -797,16 +812,15 @@ Následující metody u třídy `MAMPolicyManager` můžete použít k nastaven�
 
   public static String getCurrentThreadIdentity();
 
-  /**
-   * Get the currently applicable app policy. Same as
-   * MAMComponents.get(AppPolicy.class). This method does
-   * not take the context identity into account.
+/**
+   * Get the current app policy. This does NOT take the UI (Context) identity into account.
+   * If the current operation has any context (e.g. an Activity) associated with it, use the overload below.
    */
   public static AppPolicy getPolicy();
 
   /**
-  * Get the current app policy. This does NOT take the UI (Context) identity into account.
-   * If the current operation has any context (e.g. an Activity) associated with it, use the overload below.
+  * Get the current app policy. This DOES take the UI (Context) identity into account.
+   * If the current operation has any context (e.g. an Activity) associated with it, use this function.
    */
   public static AppPolicy getPolicy(final Context context);
 
@@ -929,7 +943,33 @@ Metoda `onMAMIdentitySwitchRequired` se volá u všech implicitních změn ident
 
   Pokud je požadovaná identita spravovaná (to si ověříte pomocí `MAMPolicyManager.getIsIdentityManaged`), ale aplikace nemůže tento účet používat (například kvůli tomu, že se v aplikaci musí nejprve nastavit e-mailové nebo jiné účty), mělo by se přepnutí identity odmítnout.
 
+### <a name="preserving-identity-in-async-operations"></a>Zachování identity v asynchronních operacích
+Operace vlákna uživatelského rozhraní běžně odesílají úlohy na pozadí do jiného vlákna. Aplikace s více identitami bude chtít zajistit, že tyto úlohy na pozadí probíhají pod správnou identitou. Často se jedná o stejnou identitu používanou aktivitou, která je odeslala. Z důvodu usnadnění a pomoci při zachování identity sada SDK MAM poskytuje `MAMAsyncTask` a `MAMIdentityExecutors`.
+#### <a name="mamasynctask"></a>MAMAsyncTask
 
+Pokud chcete používat `MAMAsyncTask`, nastavte úlohu AsynTask jednoduše tak, aby dědila z uvedené úlohy, a nahraďte `doInBackground` a `onPreExecute` metodou `doInBackgroundMAM` a `onPreExecuteMAM` v uvedeném pořadí. Konstruktor `MAMAsyncTask` převezme kontext aktivity. Například:
+
+```java
+  AsyncTask<Object, Object, Object> task = new MAMAsyncTask<Object, Object, Object>(thisActivity) {
+
+    @Override
+    protected Object doInBackgroundMAM(final Object[] params) {
+        // Do operations.
+    }
+    
+    @Override
+    protected void onPreExecuteMAM() {
+        // Do setup.
+    };
+```
+
+### <a name="mamidentityexecutors"></a>MAMIdentityExecutors
+`MAMIdentityExecutors` umožňuje zabalit existující instanci `Executor` nebo `ExecutorService` jako `Executor`/`ExecutorService` s metodami `wrapExecutor` a `wrapExecutorService`. Příklad:
+
+```java
+  Executor wrappedExecutor = MAMIdentityExecutors.wrapExecutor(originalExecutor, activity);
+  ExecutorService wrappedService = MAMIdentityExecutors.wrapExecutorService(originalExecutorService, activity);
+```
 
   ### <a name="file-protection"></a>Ochrana souborů
 
@@ -1122,7 +1162,7 @@ public final class MAMDataProtectionManager {
 
 ### <a name="content-providers"></a>Poskytovatelé obsahu
 
-Pokud aplikace poskytuje podniková data jiná než **ParcelFileDescriptor** prostřednictvím **ContentProvider**, musí aplikace v `MAMContentProvider` volat metodu `isProvideContentAllowed(String)`, čímž předá hlavní název uživatele (UPN) identity vlastníka pro daný obsah. Pokud tato funkce vrací hodnotu False, *nemusí* se obsah vrátit zpět volajícímu. Popisovače souborů, které se vrátí přes poskytovatele obsahu, se automaticky zpracují podle identity souboru.
+Pokud aplikace poskytuje podniková data jiná než **ParcelFileDescriptor** prostřednictvím **ContentProvider**, musí aplikace v `MAMContentProvider` volat metodu `isProvideContentAllowed(String)`, čímž předá hlavní název uživatele (UPN) identity vlastníka pro daný obsah. Pokud tato funkce vrací hodnotu False, *nesmí* se obsah vrátit zpět volajícímu. Popisovače souborů, které se vrátí přes poskytovatele obsahu, se automaticky zpracují podle identity souboru.
 
 ### <a name="selective-wipe"></a>Selektivní vymazání
 
@@ -1342,6 +1382,8 @@ Omezení formátu spustitelných souborů Dalvik se stává problémem u rozsáh
 
  Soubor AndroidManifest.xml zahrnutý v sadě Intune App SDK obsahuje službu **MAMNotificationReceiverService**, která musí být exportovanou službou, aby umožňovala Portálu společnosti odesílat oznámení do vylepšené aplikace. Služba zkontroluje volajícího, aby zajistila, že odesílat oznámení může jenom portál společnosti.
 
+### <a name="reflection-limitations"></a>Omezení reflexe
+Některé základní třídy (např. MAMActivity, MAMDocumentsProvider) obsahují metody (založené na původních základních třídách Androidu), které používají typy parametrů nebo návratové typy nacházející se nad určitými úrovněmi rozhraní API. Z tohoto důvodu nemusí být vždycky možné používat reflexi k výčtu všech metod součástí aplikací. Toto omezení se nevztahuje jenom na MAM. Jedná se o stejné omezení, které by se použilo v případě, že by aplikace samotná implementovala tyto metody ze základních tříd Androidu.
 ## <a name="expectations-of-the-sdk-consumer"></a>Očekávání uživatele sady SDK
 
 Intune SDK udržuje kontrakt poskytovaný rozhraním Android API, i když podmínky selhání můžou být vyvolány častěji v důsledku vynucení zásad. Tyto doporučené postupy pro Android sníží pravděpodobnost selhání:
