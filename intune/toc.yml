@@ -552,6 +552,8 @@
   items:
     - name: Pomoc uživatelům s řešením problémů
       href: help-desk-operators.md
+    - name: Protokoly auditu pro aktivity v Intune
+      href: monitor-audit-logs.md
     - name: Použití datového skladu Intune
       href: reports-nav-create-intune-reports.md
       items:
