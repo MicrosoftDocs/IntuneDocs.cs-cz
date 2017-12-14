@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/21/2017
+ms.date: 12/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 206de56ee967f4cd142e5cd7c9d63971b9b727c6
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: 7e1ff77fef9e084000938022fb36217b21279c28
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="set-up-access-to-your-company-resources"></a>Nastavení přístupu k prostředkům společnosti
 
@@ -57,7 +57,7 @@ Vaše společnost má spoustu vlastnických informací z e-mailu, souborů, sít
 |![Otevřený profil v nastavení](./media/ios-9-cp-enroll-1711.png)|Klepněte na **Instalovat**.|
 |![Modální dialogové okno instalace profilu z dolní části obrazovky](./media/ios-10-cp-enroll-1711.png)|Klepněte na **Instalovat**.|
 |![Obrazovka načítání instalace profilu](./media/ios-11-cp-enroll-1711.png)|Počkejte na načtení.|
-|![Obrazovka upozornění správy profilu](./media/ios-12-cp-enroll-1711.png)|Toto upozornění vydané společností Apple poskytuje více informací o typech akcí, které lze provést v zařízení v rámci správy. Další informace o tom, [jaké informace může vaše společnost zobrazit](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)|
+|![Obrazovka upozornění správy profilu](./media/ios-12-cp-enroll-1711.png)|Toto upozornění vydané společností Apple poskytuje více informací o typech akcí, které lze provést v zařízení v rámci správy. Přečtěte si další informace o tom, [jaké informace může vaše společnost zobrazit](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).|
 |![Výzva systému s žádostí o vztah důvěryhodnosti vzdálené správy](./media/ios-13-cp-enroll-1711.png)|Klepnutím na **Důvěřovat** umožníte vaší společnosti spravovat podnikové informace a nastavení v daném zařízení.|
 |![Obrazovka načítání pro dokončení instalace profilu](./media/ios-14-cp-enroll-1711.png)|Počkejte na načtení.|
 |![Obrazovka nainstalovaného profilu](./media/ios-15-cp-enroll-1711.png)|Váš profil je nainstalovaný a podnikové informace a nastavení vašeho zařízení již brzo bude možné spravovat.|
@@ -75,4 +75,4 @@ Vaše společnost má spoustu vlastnických informací z e-mailu, souborů, sít
 > [!Note]
 > K dokončení přípravy zařízení pro správu je potřeba dokončit ještě několik kroků. Přečtěte si další informace o [registraci zařízení s použitím softwaru pro správu telekomunikačních výdajů](enroll-your-device-with-telecom-expense-management-ios.md). Pokud vaše organizace používá program registrace zařízení společnosti Apple, přečtěte si další informace [tady](enroll-your-device-dep-ios.md).
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
