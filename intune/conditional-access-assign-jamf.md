@@ -6,7 +6,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/30/2017
+ms.date: 12/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 06cc4d70b30ec92946baefbc020aa4cda28b0c88
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: fd9a9444d5a91a44672d9e0a60fb6da961883986
+ms.sourcegitcommit: 548b9e6c1e50074a5ffb89160ae23ee3caa5ba65
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Vynucení dodržování předpisů v počítačích Mac spravovaných aplikací Jamf Pro
 
@@ -42,12 +42,9 @@ Pomocí Azure Active Directory a zásad podmíněného přístupu pro Microsoft 
 
 ## <a name="deploy-the-company-portal-app-for-macos-in-jamf-pro"></a>Nasazení aplikace Portál společnosti pro macOS v Jamf Pro
 
-Aplikaci Portál společnosti pro macOS v Jamf Pro můžete nasadit dvěma způsoby:
+Aplikaci Portál společnosti pro macOS v Jamf Pro byste měli nasadit jako instalaci na pozadí podle tohoto postupu:
 
-- Můžete aplikaci Portál společnosti zpřístupnit ve službě Jamf Self Service. – nebo –
-- Můžete ji nasadit jako instalaci na pozadí, aby uživatelé mohli postupovat podle tohoto postupu:
-
-1. V zařízení s macOS stáhněte [aplikaci Portál společnosti pro macOS](https://go.microsoft.com/fwlink/?linkid=862280).
+1. V zařízení s macOS stáhněte [aplikaci Portál společnosti pro macOS](https://go.microsoft.com/fwlink/?linkid=862280). Neinstalujte ji. Kopii aplikace potřebujete k nahrání do Jamf Pro.
 2. Spusťte aplikaci Jamf Pro a pak přejděte do části **Správa počítače (Computer management)** > **Balíčky (Packages)**.
 3. Pomocí aplikace Portál společnosti pro macOS vytvořte nový balíček a pak klikněte na **Uložit**.
 4. V části **Computers (Počítače)** > **Policies (Zásady)** vyberte možnost **New (Nová)**.
@@ -71,7 +68,7 @@ Koncoví uživatelé musí aplikaci Portál společnosti spustit prostřednictv�
 > Aby bylo možné zahájit registraci zařízení, musí se aplikace Portál společnosti spustit ze služby Jamf Self Service. <br><br>Když aplikaci Portál společnosti spustíte ručně (například ze složek Aplikace nebo Stažené položky), zařízení se nezaregistruje. Pokud koncový uživatel spustí Portál společnosti ručně, zobrazí se mu upozornění, že účet není připojen (AccountNotOnboarded).
 
 1. V Jamf Pro přejděte na **Počítače (Computers)** > **Zásady (Policies)** a vytvořte novou zásadu pro registraci zařízení.
-2. Nakonfigurujte datovou část **Microsoft Intune Integration** (Integrace Microsoft Intune) včetně frekvence aktivační události a spouštění. Nastaví prioritu na hodnotu **After (Po)**.
+2. Nakonfigurujte datovou část **Microsoft Intune Integration** (Integrace Microsoft Intune) včetně frekvence aktivační události a spouštění.
 3. Kliknutím na kartu **Scope (Obor)** nastavte obor zásad na všechna cílová zařízení.
 4. Kliknutím na kartu **Self Service (Samoobslužná služba)** zpřístupněte zásady v samoobslužné službě Jamf. Zahrňte zásadu v kategorii **Device Compliance (Dodržování předpisů zařízením)**. Klikněte na **Uložit**.
 

@@ -3,10 +3,10 @@ title: "Konfigurace a správa certifikátů SCEP pomocí Intune"
 titlesuffix: Azure portal
 description: "Přečtěte si, jak nakonfigurovat infrastrukturu a pak vytvořit a přiřadit profily certifikátů Intune SCEP."
 keywords: 
-author: lleonard-msft
-ms.author: alleonar
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.date: 11/29/2017
+ms.date: 12/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: d567d85f-e4ee-458e-bef7-6e275467efce
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 03c78fde793809713e630f371a02c48393b68810
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: 36c495767d41c83c1393d837a808961ed9868bed
+ms.sourcegitcommit: 6d5c919286b0e285f709d9b918624b927f99f979
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="configure-and-manage-scep-certificates-with-intune"></a>Konfigurace a správa certifikátů SCEP pomocí Intune
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -164,7 +164,7 @@ V této úloze:
 
 
 
-   1.  Na serveru, který bude hostitelem NDES, se musíte přihlásit jako **Správce podnikové sítě**a potom pomocí [Průvodce přidáním rolí a funkcí](https://technet.microsoft.com/library/hh831809.aspx) instalovat NDES:
+   1.  Na serveru, který je hostitelem NDES, se přihlaste jako **Správce podnikové sítě** a pak pomocí [Průvodce přidáním rolí a funkcí](https://technet.microsoft.com/library/hh831809.aspx) instalujte NDES:
 
     1.  V průvodci vyberte možnost **Služba AD CS (Active Directory Certificate Services)** , abyste získali přístup ke službám rolí ve službě AD CS. Vyberte **Službu zápisu síťových zařízení**, zrušte zaškrtnutí políčka **Certifikační autorita**a pak dokončete průvodce.
 
@@ -239,7 +239,7 @@ V této úloze:
     |HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters|MaxRequestBytes|DWORD|65534 (desítkově)|
 
 
-4. Ve modulu Správce služby IIS manager zvolte **Výchozí web** -> **Filtrování požadavků** -> **Upravit nastavení funkcí** a změňte **Maximální délka adresy URL** a **Maximální délka řetězce dotazu** na *65534* (viz obrázek).
+4. V modulu Správce služby IIS manager zvolte **Výchozí web** -> **Filtrování požadavků** -> **Upravit nastavení funkcí** a změňte nastavení **Maximální délka adresy URL** a **Maximální délka řetězce dotazu** na *65534* (viz obrázek).
 
     ![Maximální délka dotazu a adresy URL ve službě IIS](.\media\SCEP_IIS_max_URL.png)
 
@@ -255,7 +255,7 @@ V této úloze:
 1.  Na serveru NDES vyžádejte a nainstalujte **ověřovací certifikát serveru** z vaší interní nebo veřejné certifikační autority. Pro tento certifikát SSL pak vytvoříte vazbu ve službě IIS.
 
     > [!TIP]
-    > Po vytvoření vazby certifikátu SSL ve službě IIS nainstalujete taky certifikát pro ověřování klientů. Tento certifikát může být vydaný certifikační autoritou, která je důvěryhodná pro server NDES. I když se nejedná o osvědčený postup, můžete použít stejný certifikát pro ověřování serverů i klientů, pokud má obě rozšířená použití klíče (EKU). Informace o těchto ověřovacích certifikátech najdete v následujících krocích.
+    > Po vytvoření vazby certifikátu SSL ve službě IIS nainstalujte certifikát pro ověřování klientů. Tento certifikát může být vydaný certifikační autoritou, která je důvěryhodná pro server NDES. I když se nejedná o osvědčený postup, můžete použít stejný certifikát pro ověřování serverů i klientů, pokud má obě rozšířená použití klíče (EKU). Informace o těchto ověřovacích certifikátech najdete v následujících krocích.
 
     1.  Po obdržení ověřovacího certifikátu serverů otevřete **Správce služby IIS**, vyberte **Výchozí webový server** v podokně **Připojení** a pak klikněte na **Vazby** v podokně **Akce** .
 
@@ -300,29 +300,16 @@ V této úloze:
 V této úloze:
 
 - Povolíte podporu NDES ve službě Intune.
-
-- Stáhnete, nainstalujete a nakonfigurujete Certificate Connector na serveru NDES.
-
-   > [!NOTE]
-   > Pokud chcete podporovat vysokou dostupnost, můžete nainstalovat více instancí konektoru Certificate Connector.
-
-<!--1528104 we need to flesh out the HA recommendation in the note above -->
-
-##### <a name="to-enable-support-for-the-certificate-connector"></a>Povolení podpory pro Certificate Connector
-
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Konfigurovat zařízení**.
-4. V okně **Konfigurace zařízení** vyberte **Certifikační autorita**.
-5.  Vyberte **Zapnout Certificate Connector**.
+- Stáhnete, nainstalujete a nakonfigurujete Certificate Connector na serveru ve vašem prostředí. Pokud chcete podporovat vysokou dostupnost, můžete nainstalovat více konektorů Certificate Connector na různé servery.
 
 ##### <a name="to-download-install-and-configure-the-certificate-connector"></a>Stažení, instalace a konfigurace Certificate Connectoru
-
-1. Přihlaste se k portálu Azure Portal.
+![ConnectorDownload](./media/certificates-download-connector.png)   
+ 
+1. Přihlaste se k portálu Azure Portal. 
 2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Konfigurovat zařízení**.
+3. V okně **Intune** zvolte **Konfigurace zařízení**.
 4. V okně **Konfigurace zařízení** vyberte **Certifikační autorita**.
-5. Zvolte **Stáhnout Certificate Connector**.
+5. Klikněte na **Přidat** a vyberte **Stáhnout konektor**. Uložte stažený soubor do umístění, kam máte přístup ze serveru, na který ho budete instalovat. 
 6.  Po dokončení stahování spusťte stažený instalační program (**ndesconnectorssetup.exe**) na serveru se systémem Windows Server 2012 R2. Tento instalační program nainstaluje taky modul zásad pro NDES a webovou službu CRP. (Webová služba CRP, CertificateRegistrationSvc, běží ve službě ve službě IIS jako aplikace).
 
     > [!NOTE]
@@ -358,7 +345,7 @@ Pokud chcete ověřit, jestli je služba spuštěná, spusťte prohlížeč a za
 ## <a name="how-to-create-a-scep-certificate-profile"></a>Vytvoření profilu certifikátu SCEP
 
 1. Na portálu Azure Portal vyberte úlohu **Konfigurovat zařízení**.
-2. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
+2. V okně **Konfigurace zařízení** vyberte **Spravovat** > **Profily**.
 3. V okně profilů zvolte **Vytvořit profil**.
 4. V okně **Vytvořit profil** zadejte **název** a **popis** profilu certifikátu SCEP.
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení pro tento certifikát SCEP. V současné době můžete pro nastavení omezení zařízení zvolit jednu z těchto platforem:
