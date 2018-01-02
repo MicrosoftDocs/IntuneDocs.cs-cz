@@ -6,7 +6,7 @@ keywords:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: angrobe
-ms.date: 11/16/2017
+ms.date: 12/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 105b5fc73bc537eaca67a0e6943701ba25a53972
-ms.sourcegitcommit: 2b35c99ca7d3dbafe2dfe1e0b9de29573db403b9
+ms.openlocfilehash: b72c4899debb0bbb7cb755327606cad1e239c611
+ms.sourcegitcommit: 6d5c919286b0e285f709d9b918624b927f99f979
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="configure-and-manage-pkcs-certificates-with-intune"></a>Konfigurace a správa certifikátů PKCS pomocí Intune
 
@@ -101,22 +101,20 @@ Pro ověření pomocí sítě VPN, WiFi nebo jiných prostředků musíte mít c
 
 ![ConnectorDownload][ConnectorDownload]
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Přejděte do **Intune**, **Konfigurace zařízení**, **Certifikační autorita** a klikněte na tlačítko **Stáhnout Certificate Connector**.
-   * Uložte stažený soubor do umístění na serveru, kam máte přístup a na který ho budete instalovat.
-3. Přihlaste se k serveru, na který chcete nainstalovat Microsoft Intune Certificate Connector.
-4. Spusťte instalační program a přijměte výchozí umístění. Konektor se nainstaluje do C:\Program Files\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.
+1. Na portálu Azure Portal vyberte **Další služby** > **Monitorování + správa** > **Intune**.
+2. V okně **Intune** zvolte **Konfigurace zařízení**. 
+3. V okně **Konfigurace zařízení** vyberte **Certifikační autorita**. 
+4. Klikněte na **Přidat** a vyberte **Stáhnout konektor**. Uložte stažený soubor do umístění, kam máte přístup ze serveru, na který ho budete instalovat. 
+5.  Přihlaste se k serveru, na který chcete nainstalovat Microsoft Intune Certificate Connector.
+6.  Spusťte instalační program a přijměte výchozí umístění. Konektor se nainstaluje do C:\Program Files\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.
+    1. Na stránce možností instalačního programu zvolte **Distribuce PFX** a klikněte na tlačítko **Další**.
+    2. Klikněte na tlačítko **Nainstalovat** a počkejte na dokončení instalace.
+    3. Na stránce Dokončení zaškrtněte políčko pro **spuštění Intune Connectoru** a klikněte na tlačítko **Dokončit**.
+7.  Otevře se okno NDES Connector na kartě **Zápis**. Pokud chcete povolit připojení k Intune, klikněte na **Přihlásit se** a zadejte účet s oprávněním správce.
+8.  Na kartě **Upřesnit** můžete nechat vybraný přepínač **Použít účet SYSTEM tohoto počítače (výchozí)**.
+9.  Klikněte na tlačítko **Použít** pak **Zavřít**.
+10. Nyní se vraťte na portál Azure Portal. V části **Intune** > **Konfigurace zařízení** > **Certifikační autorita** byste po několika minutách měli vidět zelené zaškrtnutí a slovo **Aktivní** v části **Stav připojení**. Toto potvrzení vás informuje o tom, že server konektoru komunikuje s Intune.
 
-      a. Na stránce možností instalačního programu zvolte **Distribuce PFX** a klikněte na tlačítko **Další**.
-
-   b. Klikněte na tlačítko **Nainstalovat** a počkejte na dokončení instalace.
-
-   c. Na stránce dokončení zaškrtněte políčko **Spustit Intune Connector** a klikněte na tlačítko **Dokončit**.
-
-5. Otevře se okno NDES Connector na kartě **Zápis**. Pokud chcete povolit připojení k Intune, musíte kliknout na možnost **Přihlásit se** a zadat účet s oprávněním správce.
-6. Na kartě **Upřesnit** můžete nechat vybraný přepínač **Použít účet SYSTEM tohoto počítače (výchozí)**.
-7. Klikněte na tlačítko **Použít** pak **Zavřít**.
-8. Nyní se vraťte na portál Azure Portal. V části **Intune**, **Konfigurace zařízení**, **Certifikační autorita** byste po několika minutách měli vidět zelené zaškrtnutí a slovo **Aktivní** v části **Stav připojení**. Toto potvrzení vás informuje o tom, že server konektoru komunikuje s Intune.
 
 ## <a name="create-a-device-configuration-profile"></a>Vytvoření profilu konfigurace zařízení
 
@@ -169,4 +167,4 @@ Pro ověření pomocí sítě VPN, WiFi nebo jiných prostředků musíte mít c
 
 [NavigateIntune]: ./media/certificates-pfx-configure-profile-new.png "Přechod do Intune na webu Azure Portal a vytvoření nového profilu důvěryhodného certifikátu"
 [ProfileSettings]: ./media/certificates-pfx-configure-profile-fill.png "Vytvoření profilu a nahrání důvěryhodného certifikátu"
-[ConnectorDownload]: ./media/certificates-pfx-configure-connector-download.png "Stažení konektoru certifikátu z portálu Azure Portal"
+[ConnectorDownload]: ./media/certificates-download-connector.png "Stažení konektoru certifikátu z portálu Azure Portal"  
