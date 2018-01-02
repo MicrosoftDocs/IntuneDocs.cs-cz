@@ -15,11 +15,11 @@ ms.assetid: 5b0d7644-3183-45ba-a165-0d82d70cb71e
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6a9925b91b009f43c08533222a5fdfc765ea51c2
-ms.sourcegitcommit: d434dfab7ef7a6c4082d675717fa22d5581b4f51
+ms.openlocfilehash: 6d63ddcd8f60ac3491087e3e76949f2a49cf7b9b
+ms.sourcegitcommit: a7c1e10e615e5c975bb5d52eca986c5cf5287687
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="set-up-your-lookout-mobile-threat-defense-integration-with-intune"></a>Nastavení integrace ochrany před mobilními hrozbami Lookout s Intune
 
@@ -72,7 +72,8 @@ V následujícím postupu se dozvíte, jak získat informace, které je třeba s
 2.  Při prvním přihlášení ke konzole Lookout je nutné použít uživatelský účet, který má v Azure AD roli globálního správce, aby bylo možné zaregistrovat tenanta Azure AD. Při dalších přihlášeních se už tato úroveň oprávnění v Azure AD nevyžaduje. Zobrazí se stránka pro vyjádření souhlasu. Vyberte možnost **přijmout** a dokončete registraci. Po přijetí a vyjádření souhlasu budete přesměrováni na konzolu Lookout.
 
     ![snímek obrazovky stránky prvního přihlášení do konzoly Lookout](./media/lookout_mtp_initial_login.png)
-    > [POZNÁMKA] Nápovědu k problémům při přihlášení najdete v [řešení potíží s integrací služby Lookout](https://docs.microsoft.com/intune/troubleshoot/troubleshooting-lookout-integration).
+    > [!NOTE] 
+    > Nápovědu k problémům při přihlášení najdete v [řešení potíží s integrací služby Lookout](https://docs.microsoft.com/intune/troubleshoot/troubleshooting-lookout-integration).
 
 3.  V [konzole Lookout](https://aad.lookout.com) zvolte v modulu **Systém** kartu **Konektory** a vyberte **Intune**.
 
@@ -85,7 +86,8 @@ V následujícím postupu se dozvíte, jak získat informace, které je třeba s
 ## <a name="configure-enrollment-groups"></a>Konfigurace skupin pro registraci
 1. Osvědčeným postupem je vytvořit na [portálu pro správu Azure AD](https://manage.windowsazure.com) skupinu zabezpečení Azure AD, která obsahuje malý počet uživatelů a umožňuje otestovat integraci se službou Lookout.
 
-    > [POZNÁMKA] Všechna identifikovaná a podporovaná zařízení uživatelů ve skupině pro registraci v Azure AD, která Lookout podporuje a jsou zaregistrovaná v Intune, se zaregistrují a bude možné je aktivovat v konzole Lookout MTD.
+    > [!NOTE] 
+    > Všechna identifikovaná a podporovaná zařízení uživatelů ve skupině pro registraci v Azure AD, která Lookout podporuje a jsou zaregistrovaná v Intune, se zaregistrují a bude možné je aktivovat v konzole Lookout MTD.
 
 2. V [konzole Lookout](https://aad.lookout.com) zvolte v modulu **Systém** kartu **Konektory** a vyberte **Správa registrace**, abyste mohli definovat sadu uživatelů, jejichž zařízení se mají ve službě Lookout zaregistrovat. Přidejte **zobrazovaný název** skupiny zabezpečení Azure AD pro registraci.
 

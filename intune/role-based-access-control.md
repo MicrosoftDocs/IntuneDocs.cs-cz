@@ -15,11 +15,11 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e9dc65389485d2a77e351b5e781824eed0612054
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 791d93326ed1af173606d28639e92647ed7c1312
+ms.sourcegitcommit: a7c1e10e615e5c975bb5d52eca986c5cf5287687
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="role-based-administration-control-rbac-with-intune"></a>Řízení správy na základě rolí (RBAC) s Intune
 
@@ -36,7 +36,7 @@ Na novém Azure Portalu poskytuje **Azure Active Directory (Azure AD)** dvě rol
 
 - **Globální správce:** Uživatelé s touto rolí mají přístup ke všem funkcím pro správu ve službě Azure AD a službám s federováním do služby Azure AD, jako je Exchange Online, SharePoint Online a Online Skype pro firmy. Osoba, která se zaregistruje k tenantovi Azure AD, se stane globálním správcem. Další role správců můžou přiřazovat jenom globální správci Azure AD. Organizace může mít víc globálních správců. Globální správci můžou resetovat heslo kteréhokoliv uživatele a všech ostatních správců.
 
-- **Správce služby Intune:** Uživatelé s touto rolí mají globální oprávnění v rámci Intune, pokud se tato služba používá. Kromě toho tato role umožňuje spravovat uživatele, zařízení a vytvářet a spravovat skupiny.
+- **Správce služby Intune:** Uživatelé s touto rolí mají globální oprávnění v rámci Intune, pokud se tato služba používá. Kromě všech nahrazujících omezení Azure umožňuje tato role také spravovat uživatele a zařízení a vytvářet a spravovat skupiny Intune.
 
 - **Správce podmíněného přístupu:** Uživatelé s touto rolí mají oprávnění zobrazovat, vytvářet, měnit a odstraňovat zásady podmíněného přístupu.
 

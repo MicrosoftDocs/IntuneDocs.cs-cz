@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 11/08/2017
+ms.date: 12/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 68d93fe98b89f27c947e07d79eca9a0e02dea582
-ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
+ms.openlocfilehash: 1c78c41b9883cac41b4506c1c02790008115e210
+ms.sourcegitcommit: a7c1e10e615e5c975bb5d52eca986c5cf5287687
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="enroll-android-devices"></a>Registrace zařízení s Androidem
 
@@ -69,6 +69,17 @@ Pokud jste to ještě neudělali, připravte se na správu mobilních zařízen�
    - **Spravovat všechna zařízení jako Android for Work:** Všechna zařízení s Androidem včetně zařízení podporujících Android for Work se zaregistrují jako zařízení s konvenčním Androidem.
    - **Spravovat podporovaná zařízení jako Android for Work:** Všechna zařízení, která podporují Android for Work, se zaregistrují jako zařízení s Androidem for Work. Jakékoli zařízení s Androidem, které nepodporuje Android for Work, se zaregistruje jako zařízení s konvenčním Androidem.
    - **Spravovat podporovaná zařízení pro uživatele v těchto skupinách jako Android for Work:** Můžete pro správu Androidu for Work určit omezenou sadu uživatelů. Jen zařízení členů vybraných skupin, kteří zaregistrují zařízení podporující Android for Work, se zaregistrují jako zařízení s Androidem for Work. Všechna ostatní se zaregistrují jako zařízení s Androidem. To se hodí při pilotním nasazení Androidu for Work.
+
+## <a name="approve-the-company-portal-app-in-the-managed-google-play-store"></a>Schválení aplikace Portál společnosti ve spravovaném obchodu Google Play
+Bude potřeba, abyste aplikaci Portál společnosti pro Android schválili ve spravovaném obchodu Google Play a zajistili tak, že bude dostávat automatické aktualizace. Pokud ji neschválíte, bude Portál společnosti časem zastaralý a nemusí dostávat důležité opravy chyb a nové funkce, které Microsoft vydává.
+
+Při schvalování Portálu společnosti Intune postupujte takto:
+
+1.  Stáhněte si aplikaci Portál společnosti ze [spravovaného obchodu Google Play](https://play.google.com/work/apps/details?id=com.microsoft.windowsintune.companyportal).
+2.  Přihlaste se do spravovaného obchodu Google Play pomocí stejného účtu Google, který jste použili ke konfiguraci vazby pro Android for Work.
+3.  Klikněte na **Approve** (Schválit).  Otevře se nový dialog.
+4.  Zkontrolujte oprávnění v tomto dialogu a pak klikněte na **Approve** (Schválit). Aby aplikace Portál společnosti mohla spravovat pracovní profil v daném zařízení, je nutné povolit tato oprávnění.
+5.  Vyberte **Keep approved when app requests new permissions** (Pokud aplikace vyžaduje nová oprávnění, zachovat jako schválené) a pak klikněte na **Save** (Uložit).
 
 <!--  ## Next steps for Android for Work
 After configuring the Android for Work binding and settings, you can do the following:

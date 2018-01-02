@@ -142,7 +142,7 @@
         - name: Možnosti registrace
           href: enrollment-options.md
           items:
-            - name: podmínky a ujednání
+            - name: "Podmínky a\_ujednání"
               href: terms-and-conditions-create.md
             - name: Omezení
               href: enrollment-restrictions-set.md
@@ -152,7 +152,7 @@
               href: corporate-identifiers-add.md
             - name: Vícefaktorové ověřování
               href: multi-factor-authentication.md
-            - name: správce registrace zařízení
+            - name: Správce registrace zařízení
               href: device-enrollment-manager-enroll.md
             - name: Mapování zařízení na skupiny
               href: device-group-mapping.md
@@ -198,7 +198,7 @@
           href: device-logout-user.md
         - name: Odebrat uživatele
           href: device-remove-user.md
-        - name: Vzdálené řízení pro Android
+        - name: Vzdálené řízení mobilních zařízení
           href: device-profile-android-teamviewer.md
         - name: Resetování PIN kódu ve Windows 10
           href: device-windows-pin-reset.md
@@ -236,6 +236,8 @@
               href: apps-add-android-for-work.md
             - name: Aplikace Office 365 pro Windows 10
               href: apps-add-office365.md
+            - name: Aplikace Office 365 pro macOS
+              href: apps-add-office365-macos.md
         - name: Přiřazení aplikací
           href: apps-deploy.md
         - name: Monitorování aplikací
@@ -297,7 +299,7 @@
               href: device-restrictions-ios.md
             - name: macOS
               href: device-restrictions-macos.md
-            - name: "Windows\_8.1"
+            - name: Windows 8.1
               href: device-restrictions-windows-8-1.md
             - name: Windows Phone 8.1
               href: device-restrictions-windows-phone-8-1.md
@@ -329,7 +331,7 @@
               href: vpn-setting-configure-per-app.md
             - name: macOS
               href: vpn-settings-macos.md
-            - name: "Windows\_8.1"
+            - name: Windows 8.1
               href: vpn-settings-windows-8-1.md
             - name: Windows Phone 8.1
               href: vpn-settings-windows-phone-8-1.md
@@ -417,6 +419,10 @@
           href: app-modern-authentication-block.md
         - name: Monitorování dodržování předpisů podmíněného přístupu
           href: conditional-access-exchange-monitor.md
+        - name: Integrace Jamf Pro s Intune pro dodržování předpisů
+          href: conditional-access-integrate-jamf.md
+        - name: Vynucení dodržování předpisů v počítačích Mac spravovaných aplikací Jamf Pro
+          href: conditional-access-assign-jamf.md
     - name: "Ochrana dat aplikací a\_dat zařízení"
       items:
         - name: Použití zásad ochrany aplikací
