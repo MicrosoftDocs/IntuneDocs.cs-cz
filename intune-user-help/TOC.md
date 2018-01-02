@@ -4,7 +4,7 @@
 
 ## [Jaké informace může moje společnost vidět s Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
-## [Co se stane, když obnovím tovární nastavení zařízení?](what-happens-if-you-reset-your-device-cpwebsite.md)
+## [Resetování zařízení](what-happens-if-you-reset-your-device-cpwebsite.md)
 
 ## [Přihlášení k Portálu společnosti](sign-in-to-the-company-portal.md)
 
@@ -66,15 +66,15 @@
 ### [Nastavení nebo změna hesla](set-or-change-your-passcode-ios.md)
 ### [Co se stane, když resetujete zařízení pomocí Portálu společnosti?](what-happens-if-you-reset-your-device-using-the-company-portal-ios.md)
 ### [Resetování zařízení](reset-erase-your-device-cpwebsite.md)
-### [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-ios.md)
 ### [Zrušení registrace zařízení](unenroll-your-device-from-intune-ios.md)
 #### [Co se stane, když zrušíte registraci zařízení?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
 ### [Ruční synchronizace zařízení](sync-your-device-manually-ios.md)
 
-### [Řešení běžných problémů s iOSem](troubleshoot-your-device-iOS.md)
+#### [Řešení běžných problémů s iOSem](troubleshoot-your-device-iOS.md)
 #### [Opakované připojení k ohroženému zařízení s iOSem](how-to-reconnect-a-compromised-ios-device.md)
 #### [Odeslání chyb do společnosti](send-errors-to-your-it-admin-ios.md)
 #### [Odeslání chyb do Microsoftu](send-logs-to-microsoft-ios.md)
+#### [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-ios.md)
 #### [Došlo k chybě](you-get-an-error-while-using-the-company-portal-app-ios.md)
 #### [Identifikace zařízení](you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md)
 #### [Vyhledání sériového čísla](how-do-i-find-the-serial-number-on-my-device-ios.md)
@@ -97,11 +97,20 @@
 ### [Co se stane při registraci zařízení s macOS?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
 ### [Registrace zařízení s macOS](enroll-your-device-in-intune-macos-cp.md)
 ### [Registrace staršího zařízení s macOS](enroll-your-device-in-intune-macos-legacy.md)
-### [Toto zařízení je trochu jiné](device-little-different-jamf.md)
+### [Zrušení registrace zařízení s macOS](unenroll-your-device-from-intune-macos.md)
+
+### [Řešení běžných problémů s macOS](troubleshoot-your-device-macos.md)
+#### [Moje verze macOS ještě není podporovaná](your-macos-version-isnt-yet-supported.md)
+#### [Aktualizace zařízení s macOS](you-need-to-update-your-macos-device.md)
+#### [Odeslání chyb Portálu společnosti](send-errors-macos.md)
+#### [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-macos.md)
+#### [Toto zařízení je trochu jiné](device-little-different-jamf.md)
+#### [Vyhledání sériového čísla](how-do-i-find-the-serial-number-on-my-device-macos.md)
+#### [Identifikace zařízení](you-are-asked-to-identify-your-device-when-trying-to-enroll-macos.md)
 
 ## [Použití zařízení s Windows](using-your-windows-device-with-intune.md)
-### [Co se stane při registraci zařízení s Windows 10?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)
-### [Co se stane, když zaregistrujete zařízení s Windows pomocí jiné verze Windows?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
+### [Registrace zařízení s Windows 10](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)
+### [Registrace jiných verzí Windows](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
 
 ### [Registrace zařízení s Windows](enroll-your-device-in-intune-windows.md)
 ### [Co se stane, když nainstalujete aplikaci Portál společnosti a zaregistrujete zařízení v Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
@@ -128,6 +137,6 @@
 #### [Potřebuji povolit bránu firewall](you-need-to-enable-defender-firewall-windows.md)
 #### [Potřebuji povolit nástroj Řízení uživatelských účtů](you-need-to-enable-uac-windows.md)
 #### [Potřebuji aktualizovat Windows](you-need-to-update-os-build-version-windows.md)
-#### [Potřebuji zapnout Windows Defender](turn-on-defender-windows.md) 
+#### [Potřebuji zapnout Windows Defender](turn-on-defender-windows.md)
 
 ## [Použití webu Portál společnosti Intune](using-the-intune-company-portal-website.md)

@@ -3,8 +3,8 @@ title: "Nastavení omezení pro zařízení s iOSem v Intune"
 titleSuffix: Azure portal
 description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s iOSem."
 keywords: 
-author: lleonard-msft
-ms.author: alleonar
+author: vhorne
+ms.author: victorh
 manager: angrobe
 ms.date: 11/03/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 73590192-54ca-4833-9f1d-83e1b654399f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2f35de553259921c76341fe5b4a824e60c71d4a5
-ms.sourcegitcommit: 0f877251e6adf4e45b918cc8dc9193626727f2d9
+ms.openlocfilehash: b871726c887916662986008010e0728811f2ba98
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="ios-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení s iOSem v Microsoft Intune
 
@@ -41,7 +41,7 @@ To platí také pro nastavení dostupná z aplikace pro nastavení iOSu, např�
 - **Úprava nastavení oznámení (jenom pod dohledem)** – Umožní uživateli přenastavit v zařízení oznámení.
 - **Úprava tapety (jenom pod dohledem)** – Umožní uživateli změnit v zařízení tapetu.
 - **Úprava nastavení vztahu důvěryhodnosti podnikové aplikace (jenom pod dohledem)** – Umožní uživateli vybrat možnost, že důvěřuje aplikacím, které nebyly staženy z App Storu.
-- **Změny profilu konfigurace** – Povolí uživateli instalovat konfigurační profily.
+- **Změny profilu konfigurace (jenom pod dohledem)** – Povolí uživateli instalovat konfigurační profily.
 - **Zámek aktivace (jenom pod dohledem)** – Povolí zámek aktivace na zařízeních s iOSem, která jsou pod dohledem.
 
 ## <a name="configurations-requiring-supervision"></a>Konfigurace vyžadující dohled

@@ -1,9 +1,9 @@
 ---
-title: "Instalace aplikací pro Windows a Windows Phone bokem"
+title: "Instalace aplikací pro Windows a Windows Phone pro Intune bokem"
 description: "Tady je postup, jak zaregistrovat obchodní aplikace, aby je bylo možné nasadit pomocí Intune."
 keywords: 
-author: mattbriggs
-ms.author: mabrigg
+author: erikre
+ms.author: erikre
 manager: angrobe
 ms.date: 06/07/2017
 ms.topic: article
@@ -12,11 +12,11 @@ ms.service:
 ms.technology: 
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 ms.custom: intune-classic
-ms.openlocfilehash: 904041ba4936917dc976fd0a6de869e931927c2d
-ms.sourcegitcommit: f9bfdaed6037bd76f8715fa7ca15a3457d26370a
+ms.openlocfilehash: d6b66c44b1c6b5b5977d7a26d279c32eb39ff7ff
+ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Registrace obchodních aplikací, aby je bylo možné nasadit na zařízení s Windows pomocí Intune
 
@@ -32,7 +32,7 @@ Následující postup vám pomůže získat požadovaný certifikát a podepsat 
 
 
 1. **Registrace jako vývojář Microsoftu**<br>
-   [Zaregistrujte se jako vývojář Microsoftu](http://go.microsoft.com/fwlink/?LinkId=268442) pomocí informací o firemním účtu, které jste použili při přihlašování k zakoupení firemního účtu. Certifikát pro podepisování kódu obdržíte až po schválení žádosti vedoucím pracovníkem společnosti.
+   [Zaregistrujte se jako vývojář Microsoftu](http://go.microsoft.com/fwlink/?LinkId=268442) pomocí informací o firemním účtu, které jste použili při přihlašování za účelem zakoupení firemního účtu. Certifikát pro podepisování kódu obdržíte až po schválení žádosti vedoucím pracovníkem společnosti.
 
 2. **Získejte pro společnost certifikát Symantec**<br>
   Pomocí ID společnosti Symantec zakupte certifikát z [webu společnosti Symantec](http://go.microsoft.com/fwlink/?LinkId=268441) . Po zakoupení certifikátu obdrží schvalovatel, kterého jste uvedli při registraci jako vývojář Microsoftu, e-mail požadující schválení žádosti o certifikát. Další informace o požadavku na certifikát Symantec najdete v tématu [Proč Windows Phone vyžaduje certifikát Symantec?](https://technet.microsoft.com/library/dn764959.aspx#BKMK_Symantec) Nejčastější dotazy k registraci zařízení Windows
@@ -41,7 +41,7 @@ Následující postup vám pomůže získat požadovaný certifikát a podepsat 
     Jakmile se žádost schválí, obdržíte e-mail s pokyny k importování certifikátů. Postupujte podle pokynů v e-mailu pro import certifikátů.
 
 4.  **Ověření importovaných certifikátů**<br>
-    Pokud chcete ověřit, zda byly certifikáty správně naimportovány, přejděte k modulu snap-in **Certifikáty**, klikněte pravým tlačítkem na položku **Certifikáty** a vyberte možnost **Hledat certifikáty**. Do pole **Obsahuje** zadejte Symantec a klikněte na **Najít**. Importované certifikáty by se měly zobrazit ve výsledcích.
+    Chcete-li ověřit, zda byly certifikáty správně naimportovány, přejděte k modulu snap-in **Certifikáty**, klikněte pravým tlačítkem na položku **Certifikáty** a vyberte možnost **Hledat certifikáty**. Do pole **Obsahuje** zadejte Symantec a klikněte na **Najít**. Importované certifikáty by se měly zobrazit ve výsledcích.
 
     ![Hledání certifikátu Symantec](./media/wit.gif)
 
@@ -55,7 +55,7 @@ Následující postup vám pomůže získat požadovaný certifikát a podepsat 
 6.  **Nahrání aplikace do Intune**<br>
     Nahráním podepsaného souboru aplikace a svého certifikátu pro podpis kódu zpřístupníte aplikaci vašim koncovým uživatelům.
 
-    1.  Na portálu Azure Portal klikněte na **Správa** &gt; **Windows Phone**.
+    1.  Na Azure Portalu klikněte na **Správa** &gt; **Windows Phone**.
 
     2.  Klikněte na **Nahrát podepsaný soubor aplikace** a přihlaste se svým ID správce pro Intune.
 

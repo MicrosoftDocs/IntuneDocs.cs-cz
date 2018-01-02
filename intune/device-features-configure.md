@@ -3,10 +3,10 @@ title: "Konfigurace nastavení funkce zařízení ve službě Intune"
 titleSuffix: Azure portal
 description: "Naučte se pomocí služby Intune konfigurovat funkce na zařízeních, která spravujete."
 keywords: 
-author: lleonard-msft
-ms.author: alleonar
+author: vhorne
+ms.author: victorh
 manager: angrobe
-ms.date: 06/03/2017
+ms.date: 12/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 42f9b104-c1f6-4dfc-8aa4-1d33e1eaf61f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4a2723bfc0adecd9b6265b4af43e6fe185882b5e
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: ea280ac6858485aa4e3d64d11835f002c5bb35ca
+ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="how-to-configure-device-feature-settings-in-microsoft-intune"></a>Konfigurace nastavení funkce zařízení ve službě Microsoft Intune
 
@@ -47,6 +47,7 @@ Informace v tomto tématu vás seznámí se základy konfigurace profilů funkc
     - [Nastavení rozložení domovské obrazovky pro iOS](home-screen-settings-ios.md)
     - [Nastavení oznámení aplikace pro iOS](app-notification-settings-ios.md)
     - [Nastavení konfigurace sdíleného zařízení pro iOS](shared-device-settings-ios.md)
+    - [Nakonfigurování Intune na jednotné přihlašování pro zařízení s iOSem](sso-ios.md)
     - [Nastavení filtru webového obsahu pro iOS](web-content-filter-settings-ios.md)
 
 8. Až to budete mít, vraťte se do okna **Vytvořit profil** a klikněte na **Vytvořit**.

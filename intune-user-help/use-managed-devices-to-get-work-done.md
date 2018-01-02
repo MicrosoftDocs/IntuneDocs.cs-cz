@@ -1,11 +1,11 @@
 ---
-title: "Práce pomocí spravovaných zařízení |Microsoft Docs"
+title: "Práce pomocí spravovaných zařízení | Microsoft Docs"
 description: "Seznámíte se s principy registrace zařízení za účelem správy v Intune."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/07/2017
+ms.date: 12/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: d8a5989358da932e4e8ce59528602fefb2265528
-ms.sourcegitcommit: e692be57ec7044dfc224b70941affbfd7efba421
+ms.openlocfilehash: 599da7c664c139eac472c8d9ec2e418c01eeaeb4
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="use-managed-devices-to-get-work-done"></a>Práce pomocí spravovaných zařízení
 Microsoft Intune je software, který organizacím umožňuje spravovat zařízení (jako jsou smartphony, tablety nebo počítače), aplikace a další firemní prostředky (například e-mail). To zaměstnancům zajistí přístup k pracovním informacím prakticky odkudkoli z jakéhokoli zařízení a současně uchová firemní data v bezpečí.
@@ -34,7 +34,7 @@ Podpora vaší společnosti uvidí informace související s vaší prací, ale
 Můžete ho získat jedním ze dvou způsobů:
 
 - Nainstalováním aplikace Portál společnosti do zařízení. Aplikaci Portál společnosti získáte zpravidla v obchodě s aplikacemi pro vaše zařízení, může vám ji ale také nainstalovat firemní podpora.
-- Přechodem na [web Portál společnosti](https://portal.manage.microsoft.com), který nastavila vaše firemní podpora.
+- Přechodem na [web Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog), který nastavila vaše firemní podpora.
 
 ## <a name="whats-the-difference-between-the-app-and-the-website"></a>Jaký je rozdíl mezi aplikací a webem?
 Mezi aplikací Portál společnosti a webem Portál společnosti jsou drobné rozdíly, u obou ale můžete provádět většinu stejných úloh. Úlohy, které můžete provést:
@@ -60,8 +60,9 @@ Když na Portál společnosti přidáte počítač nebo zařízení, může se n
 Pokud vás zajímá, co vaše firemní podpora uvidí nebo naopak neuvidí na vašem zařízení, použijte odkaz, který odpovídá vašemu typu zařízení:
 
 - [Instalace aplikace Portál společnosti pro Android](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
-- [Instalace aplikace Portál společnosti pro iOS a macOS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
-- [Instalace aplikace Portál společnosti pro Windows](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+- [Instalace aplikace Portál společnosti pro iOS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
+- [Instalace aplikace Portál společnosti pro macOS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
+- [Instalace aplikace Portál společnosti pro Windows](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)
 
 ## <a name="what-kind-of-computers-or-devices-can-you-add-to-the-company-portal"></a>Jaký typ počítačů nebo zařízení můžete přidávat na Portál společnosti?
 -   Zařízení Apple používající iOS (například iPhone a iPad) a macOS (například MacBook a iMac)
@@ -78,7 +79,8 @@ Počítač nebo zařízení můžete z Portálu společnosti odebrat nebo obnovi
 Když počítač nebo zařízení *odeberete* z Portálu společnosti, zrušíte tím registraci zařízení v Intune. Při zrušení registrace se už z tohoto zařízení nedostanete na Portál společnosti a můžou se z něho odebrat některá firemní data. Pokud chcete zjistit, jak zařízení odebrat z Portálu společnosti, zvolte jeden z následujících odkazů:
 
 - [Zrušení registrace zařízení s Androidem](unenroll-your-device-from-intune-android.md)
-- [Zrušení registrace zařízení s iOSem a macOSem](unenroll-your-device-from-intune-ios.md)
+- [Zrušení registrace zařízení s iOSem](unenroll-your-device-from-intune-ios.md)
+- [Zrušení registrace zařízení s macOS](unenroll-your-device-from-intune-macos.md)
 - [Zrušení registrace zařízení s Windows](unenroll-your-device-from-intune-windows.md)
 
 Když počítač nebo zařízení *obnovíte*, Portál společnosti se pokusí počítač nebo zařízení obnovit do výchozího továrního nastavení. Při obnovení se ze zařízení odeberou všechna firemní i osobní data. Pokud jste zařízení ztratili, můžete ho také z webu Portál společnosti obnovit vzdáleně.
@@ -95,6 +97,7 @@ Microsoft doporučuje, abyste se nejprve pokusili vyřešit problém sami. Nabí
 
 - [Řešení běžných problémů se zařízením s Androidem](troubleshoot-your-device-android.md)
 - [Řešení běžných problémů se zařízením s iOSem](troubleshoot-your-device-ios.md)
+- [Řešení běžných problémů se zařízením s macOS](troubleshoot-your-device-macos.md)
 - [Řešení běžných problémů se zařízením s Windows](troubleshoot-your-device-windows.md)
 
-Níže můžete zadat komentář, ve kterém požádáte o pomoc. Každá organizace má ovšem jiné požadavky, proto se může stát, že nebudeme moct na vaše otázky odpovědět. Obraťte se na svou firemní podporu, která vám může nejrychleji pomoct najít relevantní řešení. Příslušné kontaktní informace by měly být k dispozici na [webu Portálu společnosti](https://portal.manage.microsoft.com).
+Níže můžete zadat komentář, ve kterém požádáte o pomoc. Každá organizace má ovšem jiné požadavky, proto se může stát, že nebudeme moct na vaše otázky odpovědět. Obraťte se na svou firemní podporu, která vám může nejrychleji pomoct najít relevantní řešení. Příslušné kontaktní informace by měly být k dispozici na [webu Portálu společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
