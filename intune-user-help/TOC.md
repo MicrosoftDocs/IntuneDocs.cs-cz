@@ -27,12 +27,14 @@
 ### [Řešení běžných problémů s Androidem](troubleshoot-your-device-android.md)
 #### [Kontrola dodržování předpisů pro zařízení](check-compliance-on-your-device-android.md)
 #### [Synchronizace outlookového e-mailu při používání režimu spořiče baterie](power-saving-mode-android.md)
+#### [Řešení běžných problémů se Samsung Knox](samsung-knox-errors-android.md)
 
 #### Oprava chyb pomocí protokolů
 ##### [Zapnutí podrobného protokolování](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
 ##### [Odeslání protokolů e-mailem](send-logs-to-your-it-admin-by-email-android.md)
 ##### [Odeslání protokolů přes USB kabel](send-logs-to-your-it-admin-using-cable-android.md)
 ##### [Odeslání chyb registrace](send-enrollment-errors-to-your-it-admin-android.md)
+##### [Odeslání chyb do Microsoftu](send-logs-to-microsoft-android.md)
 
 ### Dotazy k operačnímu systému
 #### [Aktualizace zařízení](you-need-to-update-your-android-device.md)
@@ -74,6 +76,7 @@
 #### [Opakované připojení k ohroženému zařízení s iOSem](how-to-reconnect-a-compromised-ios-device.md)
 #### [Odeslání chyb do společnosti](send-errors-to-your-it-admin-ios.md)
 #### [Odeslání chyb do Microsoftu](send-logs-to-microsoft-ios.md)
+#### [Našel se existující e-mailový účet společnosti](existing-company-email-account-found.md)
 #### [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-ios.md)
 #### [Došlo k chybě](you-get-an-error-while-using-the-company-portal-app-ios.md)
 #### [Identifikace zařízení](you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md)
@@ -109,13 +112,13 @@
 #### [Identifikace zařízení](you-are-asked-to-identify-your-device-when-trying-to-enroll-macos.md)
 
 ## [Použití zařízení s Windows](using-your-windows-device-with-intune.md)
-### [Registrace zařízení s Windows 10](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)
-### [Registrace jiných verzí Windows](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
-
+### [Co se stane při registraci zařízení s Windows 10?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)
+#### [Co se stane při registraci jiných verzí Windows?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
 ### [Registrace zařízení s Windows](enroll-your-device-in-intune-windows.md)
-### [Co se stane, když nainstalujete aplikaci Portál společnosti a zaregistrujete zařízení v Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
+#### [Registrace zařízení s Windows 10](enroll-your-w10-phone-or-w10-pc-windows.md)
+#### [Registrace zařízení s Windows 8.1 nebo Windows RT 8.1](enroll-your-w81-or-rt81-windows.md)
+#### [Registrace zařízení Windows Phone 8.1](enroll-your-wp81-windows.md)
 ### [Resetování zařízení](reset-erase-your-device-cpwebsite.md)
-
 ### [Zašifrování zařízení](encrypt-your-device-windows.md)
 ### [Nastavení nebo změna hesla](set-or-change-your-password-windows.md)
 ### [Zrušení registrace zařízení v Intune](unenroll-your-device-from-intune-windows.md)
