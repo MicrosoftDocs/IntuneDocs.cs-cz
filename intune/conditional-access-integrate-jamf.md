@@ -6,7 +6,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/29/2017
+ms.date: 01/04/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 4b6dcbcc-4661-4463-9a36-698d673502c6
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 87ddb1a5f6ca5cc9be2815aacc9c1570a51e792f
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: 8207c77688bcc6e14064322ab2447435c2377b09
+ms.sourcegitcommit: 229f9bf89efeac3eb3d28dff01e9a77ddbf618eb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrace Jamf Pro s Intune pro dodržování předpisů
 
@@ -28,18 +28,12 @@ ms.lasthandoff: 12/01/2017
 |Hledáte dokumentaci k Intune na klasickému portálu? [Přejděte sem](/intune/introduction-intune?toc=/intune-classic/toc.json).|
 | |
 
-|Aktuálně ve verzi Private Preview|
-|--|
-|Funkce popsané v tomto tématu jsou zákazníkům momentálně k dispozici jen ve verzi Private Preview. Jakmile budou vydány pro všechny zákazníky, tato zpráva zmizí.|
-| |
-
 Pokud vaše organizace používá [Jamf Pro](https://www.jamf.com) ke správě koncových uživatelů Mac, můžete použít zásady dodržování předpisů Microsoft Intune s podmíněným přístupem Azure Active Directory a zajistit, že zařízení ve vaší organizaci splňují požadavky.
 
 ## <a name="prerequisites"></a>Požadavky
 
 Pro konfiguraci podmíněného přístupu s Jamf Pro je potřeba následující:
 
-- Přístup k Intune Private Preview pro macOS k zajištění podmíněného přístupu
 - Jamf Pro 10.1.0 nebo novější
 - [Aplikaci Portál společnosti pro macOS](https://aka.ms/macoscompanyportal)
 - Zařízení macOS se systémem OS X 10.11 Yosemite nebo novější
@@ -60,7 +54,7 @@ Intune propojíte s Jamf Pro následujícími postupy:
 4. Vyberte možnost **Webová aplikace nebo API**.
 5. Pomocí adresy URL instance Jamf Pro zadejte **přihlašovací adresu URL**.
 6. Klikněte na **Vytvořit aplikaci**.
-7. Uložte nově vytvořené **ID aplikace**, otevřete **Nastavení** a přejděte na **Přístup přes rozhraní API** > **Klíče** a vytvořte nový klíč aplikace. Zadejte **Popis**, jak dlouho se má čekat, než **vyprší jeho platnost**, a potom klíč aplikace uložte. 
+7. Uložte nově vytvořené **ID aplikace**, otevřete **Nastavení** a přejděte na **Přístup přes rozhraní API** > **Klíče** a vytvořte nový klíč aplikace. Zadejte **Popis**, jak dlouho se má čekat, než **vyprší jeho platnost**, a potom klíč aplikace uložte.
 
   > [!IMPORTANT]
   > Klíč aplikace se zobrazí pouze jednou během tohoto procesu. Nezapomeňte ho uložit, abyste ho měli snadno k dispozici.
@@ -105,7 +99,7 @@ Jamf Pro zaznamená informace o inventáři spravovaných zařízeních macOS. J
 * Šifrované (FileVault 2)
 * Stav serveru gatekeeper
 * Heslo: minimální počet znakových sad
-* Omezená platnost hesla (ve dnech)
+* Vypršení platnosti hesla (dny)
 * Typ hesla – jednoduché, alfanumerické nebo neznámé
 * Zakázat automatické přihlášení
 * Požadovaná délka hesla

@@ -3,8 +3,8 @@ title: "Nastavení podmínek a ujednání v Microsoft Intune"
 titlesuffix: Azure portal
 description: "Nastavte si podmínky a ujednání, které uvidí uživatelé na Portálu společnosti pro Intune. "
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: angrobe
 ms.date: 10/31/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 4a3a11a8-9c0c-4334-8c6b-6fea4d0a2efb
 ms.reviewer: amyro
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 63434cbbc9edc668d59fb99968727551e0c4cc40
-ms.sourcegitcommit: 94d3d86f8ae9f82a9872384bbaae53580036a4ff
+ms.openlocfilehash: fa35cb7b08f0bbf677dd7d8b5122b8b286c49b72
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ensure-users-accept-company-terms-for-access"></a>Ujistěte se, že uživatelé přijmou firemní podmínky pro přístup.
 
@@ -73,13 +73,13 @@ Podmínky a ujednání můžete přiřadit skupinám uživatelů, kteří je př
 
 ## <a name="monitor-terms-and-conditions"></a>Monitorování podmínek a ujednání
 
-1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**. V okně Intune zvolte **Registrace zařízení** a pak zvolte **Podmínky**.
+1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování a správa** > **Intune**. V okně Intune zvolte **Registrace zařízení** a pak zvolte **Podmínky**.
 2. V seznamu podmínek a ujednání vyberte podmínky, u kterých chcete zobrazit jejich přijetí, a pak vyberte **Stavy přijetí**.
 
 ## <a name="work-with-multiple-versions-of-terms-and-conditions"></a>Práce s více verzemi podmínek a ujednání
 Podmínky a ujednání můžete upravit a spravovat jejich verze. Doporučujeme zvýšit číslo verze a požadovat přijetí podmínek a ujednání vždy, když v podmínkách a ujednáních provedete významné změny. Aktuální verzi zachovejte, pokud například opravujete překlepy nebo měníte formátování.
 
-1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování a správa** > **Intune**.
 
 2. V okně Intune vyberte **Registrace zařízení**, vyberte **Podmínky**, vyberte podmínky a ujednání, které chcete upravit, a potom vyberte **Vlastnosti**.
 
