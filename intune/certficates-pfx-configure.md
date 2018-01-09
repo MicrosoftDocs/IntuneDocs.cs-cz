@@ -15,11 +15,11 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b72c4899debb0bbb7cb755327606cad1e239c611
-ms.sourcegitcommit: 6d5c919286b0e285f709d9b918624b927f99f979
+ms.openlocfilehash: a51d260718e0d0c3984966fab69e202b854c1847
+ms.sourcegitcommit: b2467a653ffd36c2248a30b69cb88e3dc7cca2ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="configure-and-manage-pkcs-certificates-with-intune"></a>Konfigurace a správa certifikátů PKCS pomocí Intune
 
@@ -53,12 +53,13 @@ Pro ověření pomocí sítě VPN, WiFi nebo jiných prostředků musíte mít c
 2. Otevřete příkazový řádek jako správce.
 3. Exportujte certifikát kořenové certifikační autority do umístění, kam budete mít později přístup.
 
-   Například:
+   Příklad:
+
+4.  Po dokončení průvodce klikněte před jeho zavřením na **Spustit uživatelské rozhraní konektoru Certificate Connector**.
 
    `certutil -ca.cert certnew.cer`
 
    Další informace najdete v tématu [Úkoly programu CertUtil pro správu certifikátů](https://technet.microsoft.com/library/cc772898.aspx#BKMK_ret_sign).
-
 
 ## <a name="configure-certificate-templates-on-the-certification-authority"></a>Konfigurace šablon certifikátů v certifikační autoritě
 

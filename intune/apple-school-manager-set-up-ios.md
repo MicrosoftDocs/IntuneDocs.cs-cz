@@ -3,8 +3,8 @@ title: "Nastavení registrace programu Apple School Manager pro zařízení s iO
 titlesuffix: Azure portal
 description: "Přečtěte si, jak pomocí Intune nastavit registraci programu Apple School Manager pro zařízení s iOSem vlastněná společností.\""
 keywords: 
-author: nathbarn
-ms.author: nathbarn
+author: ErikjeMS
+ms.author: erikje
 manager: angrobe
 ms.date: 09/13/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5aaefd6bfbff3394b4c0f79948ac23e32536f1e3
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: f93453bf88c9f70043fe9d0cf548e1dba99100ac
+ms.sourcegitcommit: 9fabf1a8db53842f7b00762374de5b137158ee25
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Povolení registrace zařízení s iOSem pomocí Apple School Manageru
 
@@ -76,7 +76,7 @@ Přejděte k souboru certifikátu (p7m), zvolte **Otevřít** a pak zvolte **Nah
 ## <a name="create-an-apple-enrollment-profile"></a>Vytvoření registračního profilu Apple
 Registrační profil zařízení definuje nastavení, která se během registrace použijí pro skupinu zařízení.
 
-1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** a pak zvolte **Registrace Apple**.
+1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** a pak **Registrace Apple**.
 2. V části **Program registrace** zvolte **Profily Programu registrace**.
 3. V okně **Profily Programu registrace** zvolte **Vytvořit**.
 4. V okně **Vytvořit registrační profil** zadejte **název** a **popis** profilu, který se zobrazí v Intune.

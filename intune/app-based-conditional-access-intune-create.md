@@ -2,8 +2,8 @@
 title: "Zásady podmíněného přístupu k aplikacím v Intune"
 description: "Toto téma popisuje, jak v Intune nakonfigurovat zásadu podmíněného přístupu k aplikacím."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 06/28/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: d1693515-de18-4553-91ef-801976cd3ec7
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 88db3730be62a9b481d924b4f09b70be775cb067
-ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
+ms.openlocfilehash: ccbbe448a61d19b18c9f4f02f90aefa4f415d80b
+ms.sourcegitcommit: 9fabf1a8db53842f7b00762374de5b137158ee25
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-up-app-based-conditional-access-policies"></a>Nastavení zásad podmíněného přístupu k aplikacím
 
@@ -82,7 +82,7 @@ Počínaje verzí Intune 1708 můžou správci IT vytvářet zásady podmíněn�
 ## <a name="next-steps"></a>Další kroky
 [Blokování aplikací, které nepoužívají moderní ověřování](app-modern-authentication-block.md)
 
-### <a name="see-also"></a>Související témata
+### <a name="see-also"></a>Viz taky
 
 [Ochrana dat aplikací pomocí zásad ochrany aplikací](app-protection-policies.md)
 [Podmíněný přístup ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)
