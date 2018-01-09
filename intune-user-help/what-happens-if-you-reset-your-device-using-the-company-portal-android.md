@@ -16,17 +16,17 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 476f1cfa59f562a8c0953236184693e1c5674ee3
-ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
+ms.openlocfilehash: 4095ffc0da85501ec4649940d886b4d9a4719c7a
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="what-happens-if-you-reset-your-android-device-using-the-company-portal"></a>Co se stane, když resetujete zařízení s Androidem pomocí Portálu společnosti?
 
 Při resetování zařízení s Androidem pomocí Portálu společnosti se odstraní všechny aplikace, nastavení a osobní data v zařízení. V zařízení se obnoví výchozí tovární nastavení.
 
-Pokud máte zařízení Samsung KNOX, můžete provést selektivní vymazání tak, že na Portálu společnosti zvolíte možnost **odebrání zařízení**. Selektivní vymazání odebere jenom:
+Pokud máte zařízení Samsung Knox, můžete provést selektivní vymazání tak, že na Portálu společnosti zvolíte možnost **odebrání zařízení**. Selektivní vymazání odebere jenom:
 
 - Firemní aplikace, které vám podpora ve vaší společnosti zpřístupní
 - E-mail, VPN a Wi-Fi

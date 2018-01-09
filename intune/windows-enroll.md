@@ -3,9 +3,9 @@ title: "Registrace zařízení s Windows"
 titlesuffix: Azure portal
 description: "Naučte se povolit správu mobilních zařízení (MDM) v Intune pro zařízení s Windows."
 keywords: 
-author: nathbarn
-manager: nathbarn
-ms.date: 11/29/2017
+author: ErikjeMS
+manager: erikje
+ms.date: 12/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bf9ae5f05e21fa2ca7be4af08dace5b96315cec3
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 308522e0a54d47595294b8f1c31e92a965a09ef4
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="enroll-windows-devices"></a>Registrace zařízení s Windows
 
@@ -75,7 +75,7 @@ Pokud máte více než jednu příponu UPN, musíte vytvořit jeden CNAME pro ka
 Změny záznamů DNS se mohou projevit až po 72 hodinách. Před rozšířením záznamu DNS nemůžete v Intune ověřit změny DNS.
 
 **Krok 2: Ověřte záznamy CNAME** (volitelné)<br>
-Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**. V okně Intune zvolte **Registrovat zařízení** > **Registrace zařízení s Windows**. Do pole **Zadejte název ověřené domény** zadejte adresu URL webu společnosti a zvolte **Test automatického zjištění**.
+Na portálu Azure Portal zvolte **Další služby** > **Monitorování a správa** > **Intune**. V okně Intune zvolte **Registrovat zařízení** > **Registrace zařízení s Windows**. Do pole **Zadejte název ověřené domény** zadejte adresu URL webu společnosti a zvolte **Test automatického zjištění**.
 
 ## <a name="tell-users-how-to-enroll-windows-devices"></a>Informování uživatelů, jak zařízení s Windows zaregistrovat
 Informujte uživatele, jak si mají svá zařízení s Windows zaregistrovat a co můžou očekávat od zařazení do systému správy.

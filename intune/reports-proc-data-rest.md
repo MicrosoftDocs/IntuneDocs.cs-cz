@@ -2,8 +2,8 @@
 title: "Získání dat z rozhraní API datového skladu pomocí klienta REST"
 description: "Načtěte pomocí rozhraní RESTful API data z datového skladu Intune."
 keywords: 
-author: mattbriggs
-ms.author: mabrigg
+author: Erikre
+ms.author: erikre
 manager: angrobe
 ms.date: 07/31/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: D6D15039-4036-446C-A58F-A5E18175720A
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: fb75d895a2100172fab337dcd740c076ff5e85b7
-ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
+ms.openlocfilehash: 4991a2b26b97428fc54234ff35871d446107b950
+ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Získání dat z rozhraní API datového skladu Intune pomocí klienta REST
 
@@ -36,7 +36,7 @@ V následujícím postupu se dozvíte, jak autorizovat rozhraní API a přistupo
 
 Vytvořte nativní aplikaci v Azure. Tato nativní aplikace představuje klientskou aplikaci. Klient běžící na místním počítači odkazuje na rozhraní API datového skladu Intune, když si místní klient vyžádá přihlašovací údaje. 
 
-1. Přihlaste se k portálu Azure Portal svého tenanta. Zvolením možností **Azure Active Directory** > **Registrace aplikací** otevřete okno **Registrace aplikací**.
+1. Přihlaste se k Azure Portalu svého tenanta. Zvolením možností **Azure Active Directory** > **Registrace aplikací** otevřete okno **Registrace aplikací**.
 2. Vyberte **Registrace nové aplikace**.
 3. Zadejte podrobnosti této aplikace.
     1.  Do pole **Název** zadejte nějaký popisný název, například Intune Data Warehouse Client.

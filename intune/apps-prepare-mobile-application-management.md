@@ -2,10 +2,10 @@
 title: "Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune"
 description: "Informace v tomto tématu vám pomůžou rozhodnout, kdy byste měli použít nástroj App Wrapping a sadu App SDK, aby vaše vlastní obchodní aplikace mohly používat zásady správy mobilních aplikací."
 keywords: 
-author: mattbriggs
-ms.author: mabriggs
+author: erikre
+ms.author: erikre
 manager: angrobe
-ms.date: 02/08/2017
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: oldang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e6c464e16079df0c1188870b234615c811963f08
-ms.sourcegitcommit: f3b8fb8c47fd2c9941ebbe2c047b7d0a093e5a83
+ms.openlocfilehash: 40d0ddf78ed181dfc712bbaeee9499e3c56753ca
+ms.sourcegitcommit: 9fabf1a8db53842f7b00762374de5b137158ee25
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Příprava obchodních aplikací na zásady ochrany aplikací
 
@@ -70,7 +70,7 @@ Další informace o sadě SDK najdete v tématu [Přehled](app-sdk.md). Pokud ch
 |**Intune App SDK** |**Xamarin** |**Cordova**
 |------|----|----|
 |**iOS**|Ano – Použijte [komponentu Xamarin sady Intune App SDK](app-sdk-xamarin.md).|Ano – Použijte [modul plug-in Cordova sady Intune App SDK](app-sdk-cordova.md).|
-|**Android**| Ano – Použijte [komponentu Xamarin sady Intune App SDK](app-sdk-xamarin.md).|Ano – Použijte [modul plug-in Cordova sady Intune App SDK](app-sdk-cordova.md).|
+|**Androidemem**| Ano – Použijte [komponentu Xamarin sady Intune App SDK](app-sdk-xamarin.md).|Ano – Použijte [modul plug-in Cordova sady Intune App SDK](app-sdk-cordova.md).|
 
 ## <a name="feature-comparison"></a>Porovnání funkcí
 Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a nástroji App Wrapping.
