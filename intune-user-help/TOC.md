@@ -6,6 +6,8 @@
 
 ## [Resetování zařízení](what-happens-if-you-reset-your-device-cpwebsite.md)
 
+## [Aktualizace mého hesla](password-does-not-meet-it-administrator-requirements.md)
+
 ## [Přihlášení k Portálu společnosti](sign-in-to-the-company-portal.md)
 
 ## [Použití zařízení s Androidem](using-your-android-device-with-intune.md)
@@ -72,7 +74,7 @@
 #### [Co se stane, když zrušíte registraci zařízení?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
 ### [Ruční synchronizace zařízení](sync-your-device-manually-ios.md)
 
-#### [Řešení běžných problémů s iOSem](troubleshoot-your-device-iOS.md)
+### [Řešení běžných problémů s iOSem](troubleshoot-your-device-iOS.md)
 #### [Opakované připojení k ohroženému zařízení s iOSem](how-to-reconnect-a-compromised-ios-device.md)
 #### [Odeslání chyb do společnosti](send-errors-to-your-it-admin-ios.md)
 #### [Odeslání chyb do Microsoftu](send-logs-to-microsoft-ios.md)
@@ -116,6 +118,7 @@
 #### [Co se stane při registraci jiných verzí Windows?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
 ### [Registrace zařízení s Windows](enroll-your-device-in-intune-windows.md)
 #### [Registrace zařízení s Windows 10](enroll-your-w10-phone-or-w10-pc-windows.md)
+#### [Registrace zařízení s Windows 10 pomocí funkce Přístup do práce nebo do školy](enroll-your-w10-device-access-work-or-school.md)
 #### [Registrace zařízení s Windows 8.1 nebo Windows RT 8.1](enroll-your-w81-or-rt81-windows.md)
 #### [Registrace zařízení Windows Phone 8.1](enroll-your-wp81-windows.md)
 ### [Resetování zařízení](reset-erase-your-device-cpwebsite.md)
