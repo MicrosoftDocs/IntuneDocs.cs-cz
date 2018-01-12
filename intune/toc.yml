@@ -642,7 +642,7 @@
               href: reports-ref-user-device.md
             - name: Referenční informace pro entitu uživatele
               href: reports-ref-user.md
-    - name: Instalace aplikací pro Windows bokem
+    - name: Rozhraní Intune Graph API
       href: intune-graph-apis.md
       items:
         - name: Referenční informace o rozhraních Graph API pro Intune
