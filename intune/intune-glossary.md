@@ -7,17 +7,17 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 ms.date: 07/28/2017
-ms.topic: get-started-article
+ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: bd7b5613-ee9f-4dc3-990c-ab4c1d40720d
 ms.custom: intune-azure
-ms.openlocfilehash: 5d094e59b374ca306482cd1cb87f8a950df7fe14
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: 08fc3be9e1e4f4b5692f871fc57108d431d5836d
+ms.sourcegitcommit: 22ab1c6a6bfeb4fef9850d12b29829c3fecbbeed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="microsoft-intune-glossary"></a>Glosář Microsoft Intune
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 09/15/2017
 ## <a name="h"></a>H
 |||
 |-|-|
-|hybridní|Konfigurace, kdy můžete spravovat zařízení registrovaná do Intune prostřednictvím konzoly System Center Configuration Manager.|
+|Hybridní|Konfigurace, kdy můžete spravovat zařízení registrovaná do Intune prostřednictvím konzoly System Center Configuration Manager.|
 
 ## <a name="i"></a>I
 |||
@@ -103,7 +103,7 @@ ms.lasthandoff: 09/15/2017
 |autorita pro správu mobilních zařízení (MDM)|[Autorita MDM](/intune/mdm-authority-set) definuje službu správy s oprávněním ke správě určité sady zařízení. Příklady možných autorit MDM zahrnují Intune samostatně a Configuration Manager s Intune.|
 |zásady konfigurace mobilních aplikací|K dispozici pro mobilní aplikace se specifickou konfigurací podle dodavatele. Například zásady pro [iOS](/intune/app-configuration-policies-use-ios) nebo [Android](/intune/app-configuration-policies-use-android), které slouží k předávání nastavení do kompatibilních aplikací při jejich spuštění, třeba názvu společnosti nebo adresy serveru.|
 |Zásady zřizování mobilních aplikací|Zásady pro iOS, které pomáhají zajistit, že [zřizovacím profilům](/intune/app-provisioning-profile-ios) aplikací pro iOS, které přiřadíte, nevyprší platnost.|
-|Správa mobilních aplikací|[Správa mobilních aplikací (MAM)](/intune/app-lifecycle) umožňuje publikovat, doručovat, konfigurovat, zabezpečovat, monitorovat a aktualizovat mobilní aplikace pro uživatele.
+|správa mobilních aplikací|[Správa mobilních aplikací (MAM)](/intune/app-lifecycle) umožňuje publikovat, doručovat, konfigurovat, zabezpečovat, monitorovat a aktualizovat mobilní aplikace pro uživatele.
 |Správa mobilních zařízení|[Správa mobilních zařízení (MDM)](/intune/device-lifecycle) umožňuje registrovat zařízení do Intune, takže můžete tato zařízení zřizovat, konfigurovat, monitorovat a spravovat.
 
 
@@ -144,7 +144,7 @@ ms.lasthandoff: 09/15/2017
 |||
 |-|-|
 |hromadně zakoupené aplikace a knihy|Některé App Story umožňují zakoupit více licencí pro aplikace nebo knihy, které chcete používat ve vaší společnosti. Intune vám pomůže spravovat aplikace a knihy, které jste [zakoupili prostřednictvím takového programu](/intune/vpp-apps). Můžete importovat licenční informace z App Storu, sledovat, kolik licencí jste už použili, a zabraňovat v instalaci více kopií aplikace, než na kolik máte licence.|
-|profil VPN|Zásady, které přiřazují [nastavení VPN](/intune/vpn-settings-configure) do vámi spravovaných zařízení. Minimalizují se tak nároky na nastavení, která musí provést koncový uživatel.|
+|Profil VPN|Zásady, které přiřazují [nastavení VPN](/intune/vpn-settings-configure) do vámi spravovaných zařízení. Minimalizují se tak nároky na nastavení, která musí provést koncový uživatel.|
 
 ## <a name="w"></a>W
 |||
