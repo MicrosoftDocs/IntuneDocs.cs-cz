@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 08/31/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4ee4e9b4abb99e280bf2529f9f60d295096426c0
-ms.sourcegitcommit: 4e0ed4087a1e596831fa215135824ca5d38e33f7
+ms.openlocfilehash: 343078bf802aa45ec0cd0a3f2e554ab74e1f0b8a
+ms.sourcegitcommit: e76dbd0882526a86b6933ace2504f442e04de387
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Odebrání zařízení pomocí obnovení továrního nastavení nebo odebrání firemních dat
 
@@ -77,7 +77,7 @@ Příkaz k **odebrání firemních dat** odebere data případných spravovanýc
 
 ### <a name="android"></a>Android
 
-|Datový typ|Android|Android Samsung KNOX Standard|
+|Datový typ|Android|Android Samsung Knox Standard|
 |-------------|-----------|------------------------|
 |Webové odkazy|Odebrány.|Odebrány.|
 |Nespravované aplikace Google Play|Aplikace a data zůstanou nainstalována.|Aplikace a data zůstanou nainstalována.|
@@ -89,13 +89,25 @@ Příkaz k **odebrání firemních dat** odebere data případných spravovanýc
 |Nastavení profilu certifikátu|Certifikáty se zruší, ale neodeberou.|Certifikáty se odeberou a zruší.|
 |Agent pro správu|Zruší se oprávnění správce zařízení.|Zruší se oprávnění správce zařízení.|
 |E-mailu|Není k dispozici (zařízení s Androidem nepodporují e-mailové profily)|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune, a odstraní se e-maily uložené v mezipaměti zařízení.|
-|Outlook|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro Android.|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro Android.|
+|Outlook|E-mail přijatý aplikací Microsoft Outlook pro Android se odebere, ale pouze v případě, že je Outlook chráněný zásadami MAM. V opačném případě se Outlook při zrušení registrace nevymaže.|E-mail přijatý aplikací Microsoft Outlook pro Android se odebere, ale pouze v případě, že je Outlook chráněný zásadami MAM. V opačném případě se Outlook při zrušení registrace nevymaže.|
 |Zrušení služby Azure Active Directory (AD)|Odebere se záznam služby Azure AD.|Odebere se záznam služby Azure AD.|
 |Kontakty | Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou.  Kontakty synchronizované z nativního adresáře do jiného externího zdroje není možné odebrat. <br /> <br />V současné době se podporuje jen aplikace Outlook.|Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou.  Kontakty synchronizované z nativního adresáře do jiného externího zdroje není možné odebrat. <br /> <br />V současné době se podporuje jen aplikace Outlook.
 
 ### <a name="android-for-work"></a>Android for Work
 
 Při odebrání firemních dat v zařízení Android for Work se odeberou všechna data, aplikace a nastavení v pracovním profilu na tomto zařízení. Zařízení se tím vyřadí ze správy pomocí Intune. Android for Work nepodporuje obnovení továrního nastavení.
+
+
+### <a name="macos"></a>macOS
+
+|Datový typ|macOS|
+|-------------|-------|
+|Nastavení|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|
+|Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|
+|Nastavení profilu certifikátu|Certifikáty nasazené prostřednictvím správy mobilních zařízení se odeberou a odvolají.|
+|Agent pro správu|Profil pro správu se odebere.|
+|Outlook|Při povolení podmíněného přístupu nebude zařízení přijímat žádnou novou poštu.|
+|Zrušení služby Azure Active Directory (AD)|Odebere se záznam služby Azure AD.|
 
 ### <a name="windows"></a>Windows
 
