@@ -14,11 +14,11 @@ ms.assetid: 4b3c9af9-78da-44d2-8bd2-3f0f8885952d
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 864f99f52e0c8b46307f1ec24d11da51d8f52662
-ms.sourcegitcommit: 94d3d86f8ae9f82a9872384bbaae53580036a4ff
+ms.openlocfilehash: c77e2f9f46e61442261f65ddaa90877fc0063906
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Identifikace scénářů použití při správě mobilních zařízení
 
@@ -52,37 +52,37 @@ Tady je několik příkladů scénářů použití a dílčích scénářů pou�
 | Firemní | Informatik |              
 | Firemní | Vedení |           
 | Firemní | Kiosk |
-| Uživatelé s vlastním zařízením | Informatik |           
-| Uživatelé s vlastním zařízením | Vedení |
+| uživatelé s vlastním zařízením (BYOD) | Informatik |           
+| uživatelé s vlastním zařízením (BYOD) | Vedení |
 
 Pokud chcete zadat scénáře použití a dílčí scénáře použití ve vaší organizaci, můžete si [stáhnout šablonu předchozí tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
 
 ## <a name="organizational-groups-for-your-scenarios"></a>Organizační skupiny pro scénáře
 
-Teď potřebujete určit organizační skupiny přidružené ke každému hlavnímu a dílčímu scénáři použití. Například:
+Teď potřebujete určit organizační skupiny přidružené ke každému hlavnímu a dílčímu scénáři použití. Příklad:
 
 | **Případy použití** | **Dílčí případy použití** | **Organizační skupiny** |
 |:---:|:---:|:---:|
 | Firemní | Informatik | Personalistika, finance |               
 | Firemní | Vedení | Personalistika, finance |            
 | Firemní | Kiosk | Maloobchod |
-| Uživatelé s vlastním zařízením | Informatik | Marketing, prodej |            
-| Uživatelé s vlastním zařízením | Vedení | Marketing, prodej |
+| uživatelé s vlastním zařízením (BYOD) | Informatik | Marketing, prodej |            
+| uživatelé s vlastním zařízením (BYOD) | Vedení | Marketing, prodej |
 
 
 ## <a name="mobile-device-platforms-for-your-scenarios"></a>Platformy mobilních zařízení pro vaše scénáře
 
 V dalším kroku budete identifikovat platformy mobilních zařízení přidružené ke každému scénáři použití. Může jich být více.
 
-Scénář firemního použití může například podporovat platformy zařízení iOS a Android Samsung KNOX. Zásady pro uživatele s vlastním zařízením (BYOD) ale mohou zahrnovat podporu dalších platforem mobilních zařízení, jako je Android (jiný než Samsung KNOX) a Windows 10 Mobile. Pokud budeme vycházet z předchozích příkladů, přidružíme každému scénáři použití následující platformy mobilních zařízení.
+Scénář firemního použití může například podporovat platformy zařízení s iOSem a Android Samsung Knox. Zásady pro uživatele s vlastním zařízením (BYOD) ale mohou zahrnovat podporu dalších platforem pro mobilní zařízení, jako je Android (bez zabezpečení Samsung KNOX) a Windows 10 Mobile. Pokud budeme vycházet z předchozích příkladů, přidružíme každému scénáři použití následující platformy mobilních zařízení.
 
 | **Případy použití** | **Dílčí případy použití** | **Skupiny** | **Platformy zařízení** |   
 |:---:|:---:|:---:|:---:|
 | Firemní | Informatik | Personalistika, finance | iOS |                                                           
 | Firemní | Vedení | Personalistika, finance | iOS |                                                           
 | Firemní | Kiosk | Maloobchod | Android |
-| Uživatelé s vlastním zařízením | Informatik | Marketing, prodej | iOS |                                                           
-| Uživatelé s vlastním zařízením | Vedení | Marketing, prodej | iOS |
+| uživatelé s vlastním zařízením (BYOD) | Informatik | Marketing, prodej | iOS |                                                           
+| uživatelé s vlastním zařízením (BYOD) | Vedení | Marketing, prodej | iOS |
 
 ## <a name="next-steps"></a>Další kroky
 

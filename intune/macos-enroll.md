@@ -3,8 +3,8 @@ title: "Registrace zařízení s macOS v Intune"
 titlesuffix: Azure portal
 description: "Zjistěte, jak zaregistrovat zařízení s macOS v Intune."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 nmanager: angrobe
 ms.date: 10/30/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 46429114-2e26-4ba7-aa21-b2b1a5643e01
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a18aa5091c8be2095e2ac95717c2b8294b845cd5
-ms.sourcegitcommit: 623c52116bc3fdd12680b9686dcd0e1eeb6ea5ed
+ms.openlocfilehash: 3d1382e85b9ce58cd65380a799ca8eb4da98b84c
+ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="enroll-macos-devices-in-intune"></a>Registrace zařízení s macOS v Intune
 
@@ -46,7 +46,7 @@ Pokud chcete u zařízení se systémem macOS registraci blokovat, přečtěte s
 
 ## <a name="tell-your-users-how-to-enroll-their-devices-to-access-company-resources"></a>Informujte uživatele, jak můžou svá zařízení zaregistrovat, aby získali přístup k firemním prostředkům
 
-Je potřeba koncovým uživatelům sdělit, že mají přejít na [web Portál společnosti](http://portal.manage.microsoft.com) a podle pokynů zaregistrovat svá zařízení. Můžete jim také poslat odkaz na postup online registrace: [Zaregistrujte svoje zařízení se systémem macOS v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos).
+Sdělte koncovým uživatelům, že mají přejít na [web Portál společnosti](http://portal.manage.microsoft.com) a podle pokynů zaregistrovat svoje zařízení. Můžete jim také poslat odkaz na postup online registrace: [Zaregistrujte svoje zařízení se systémem macOS v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos).
 
 Informace o dalších úlohách koncových uživatelů najdete v článcích:
 

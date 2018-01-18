@@ -16,17 +16,17 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 1c4813649092dd12b6be2c07b900d6c1af957bcb
-ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
+ms.openlocfilehash: 13ad914f076f00d1a505510b726f84645ba22cc1
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-set-the-amount-of-time-before-your-android-device-locks-its-screen"></a>Nastavení doby do zamknutí obrazovky zařízení s Androidem
 
 Abyste se mohli znovu připojit ke své práci, budete muset na svém zařízení nastavit časový limit hesla podle pokynů pro typ vašeho zařízení.
 
-## <a name="native-non-samsung-knox-device"></a>Nativní zařízení (ne Samsung KNOX)
+## <a name="native-non-samsung-knox-device"></a>Nativní zařízení (bez zabezpečení Samsung Knox)
 
 1.  V **Nastavení** zařízení klepněte na **Zabezpečení** &gt; **Automatické uzamčení** (na některých zařízeních se zobrazuje jako **Uzamknout telefon po**).
 
@@ -34,7 +34,7 @@ Abyste se mohli znovu připojit ke své práci, budete muset na svém zařízen�
 
 2.  Vyberte hodnotu časového limitu hesla.
 
-## <a name="samsung-knox-device"></a>Zařízení Samsung KNOX
+## <a name="samsung-knox-device"></a>Zařízení se zabezpečením Samsung Knox
 
 1.  V **Nastavení** vašeho zařízení klepněte na **Zamykací obrazovka a zabezpečení** &gt; **Uzamknout automaticky**.
 

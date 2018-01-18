@@ -3,8 +3,8 @@ title: "Hromadný zápis pro Windows 10"
 titlesuffix: Azure portal
 description: "Vytvoření balíčku hromadné registrace pro Microsoft Intune"
 keywords: 
-author: NathBarn
-ms.author: NathBarn
+author: Erikje
+ms.author: erikje
 manager: angrobe
 ms.date: 10/23/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: damionw
 ms.custom: intune-azure
-ms.openlocfilehash: 7738935675595bbdd3ba1f6411a78a2646894073
-ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
+ms.openlocfilehash: f24bf5f8767763c3ca56d51127ab1d3f484e51d8
+ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Hromadná registrace pro zařízení s Windows
 
@@ -29,8 +29,6 @@ Jako správce můžete k Azure Active Directory a Intune připojit větší poč
 Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a obdrží přiřazené zásady Intune a požadované aplikace. Samoobslužné scénáře a scénáře s Portálem společnosti v současnosti nejsou podporované.
 
 ## <a name="prerequisites-for-windows-devices-bulk-enrollment"></a>Předpoklady pro hromadnou registraci zařízení s Windows
-
-Hromadná registrace pro zařízení s Windows vyžaduje:
 
 - Zařízení se systémem Windows 10 Creators Update nebo novějším
 - [Automatická registrace Windows](windows-enroll.md#enable-windows-10-automatic-enrollment)
@@ -43,15 +41,15 @@ Hromadná registrace pro zařízení s Windows vyžaduje:
 2. Otevřete aplikaci **Windows Configuration Designer** a vyberte **Provision desktop devices** (Zřídit počítačová zařízení).
 ![Snímek obrazovky s výběrem možnosti Provision desktop devices ve Windows Configuration Designeru](media/bulk-enroll-select.png)
 
-3. Otevře se okno **New project** (Nový projekt), kde zadáte:
+3. Otevře se okno **New project** (Nový projekt), kde zadáte tyto údaje:
   - **Name** (Název) – název vašeho projektu
-  - **Project folder** (Složka projektu) – kam se projekt uloží
+  - **Project folder** (Složka projektu) – místo pro ukládání projektu
   - **Description** (Popis) – volitelný popis projektu ![Snímek obrazovky se zadáním názvu, složky projektu a popisu v aplikaci Windows Configuration Designer](media/bulk-enroll-name.png)
 
 4.  Zadejte jedinečný název pro zařízení. Názvy můžou obsahovat sériové číslo (%%SERIAL%%) nebo náhodnou sadu znaků. Volitelně můžete také zadat kód Product Key, pokud provádíte upgrade edice Windows, nakonfigurovat zařízení pro sdílené používání a odebrat předinstalovaný software.
 ![Snímek obrazovky se zadáním názvu, složky projektu a popisu v aplikaci Windows Configuration Designer](media/bulk-enroll-device.png)
 
-5.  Volitelně můžete nakonfigurovat síť Wi-Fi, ke které se zařízení připojí při prvním spuštění.  Pokud ji nenakonfigurujete, musí být zařízení při prvním spuštění připojené k drátové síti.
+5.  Volitelně můžete nakonfigurovat síť Wi-Fi, ke které se zařízení připojí při prvním spuštění.  Pokud síťová zařízení nejsou nakonfigurovaná, musí být při prvním spuštění zařízení připojeno ke kabelové síti.
 ![Snímek obrazovky s povolením Wi-Fi včetně SSID sítě a typu sítě v aplikaci Windows Configuration Designer](media/bulk-enroll-network.png)
 
 6.  Vyberte **Enroll in Azure AD** (Zaregistrovat v Azure AD), zadejte datum **Bulk Token Expiry** (Vypršení platnosti hromadného tokenu) a pak vyberte **Get Bulk Token** (Získat hromadný token).
@@ -77,7 +75,7 @@ Hromadná registrace pro zařízení s Windows vyžaduje:
 
  Podrobné pokyny k aplikování zřizovacího balíčku najdete v článku o [aplikování zřizovacího balíčku](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package).
 
-3. Po aplikování balíčku se zařízení za 1 minutu automaticky restartuje.
+3. Po použití balíčku se zařízení za minutu automaticky restartuje.
  ![Snímek obrazovky se zadáním názvu, složky projektu a popisu v aplikaci Windows Configuration Designer](media/bulk-enroll-add.png)
 
 4. Po restartu se zařízení připojí k Azure Active Directory a zaregistruje v Microsoft Intune.
@@ -88,7 +86,7 @@ Hromadná registrace pro zařízení s Windows vyžaduje:
 Zřizování se má používat na nových zařízeních s Windows. Selhání zřizování může vyžadovat tovární resetování zařízení nebo obnovení zařízení ze spouštěcí image. Tyto příklady popisují některé důvody pro selhání zřizování:
 
 - Zřizovací balíček snažící se připojit k doméně Active Directory nebo tenantovi Azure Active Directory, který nevytváří místní účet, může způsobit, že bude zařízení nedostupné, pokud proces připojení k doméně selže kvůli chybějícímu připojení k síti.
-- Skripty spouštěné zřizovacím balíčkem se spouštějí v kontextu systému a dokáží provádět libovolné změny v systému souborů a konfiguracích zařízení. Škodlivý nebo chybný skript by mohl zařízení uvést do stavu, který jde obnovit jenom pomocí obnovení z image nebo továrního resetování zařízení.
+- Skripty spouštěné zřizovacím balíčkem se spouštějí v kontextu systému. Tyto skripty mohou v zařízení libovolně měnit systém souborů i jeho konfiguraci. Škodlivý nebo chybný skript by mohl zařízení uvést do stavu, který jde obnovit jenom pomocí obnovení z image nebo továrního resetování zařízení.
 
 ### <a name="problems-with-bulk-enrollment-and-company-portal"></a>Problémy s hromadnou registrací a Portálem společnosti
 Pokud se uživatel pokouší prostřednictvím Portálu společnosti zaregistrovat zařízení, které už bylo dříve hromadně zaregistrováno, obdrží upozornění, že u jeho zařízení jsou potřeba další kroky – buď nastavení, nebo registrace. Zařízení je zaregistrované, ale aplikace nebo webová stránka Portálu společnosti registraci nerozpoznala.

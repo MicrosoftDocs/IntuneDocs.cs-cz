@@ -14,11 +14,11 @@ ms.assetid: 1f37d4ff-b5a7-4a89-8884-a6184908b09c
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6cf2d958e5775281cca7878c54b2c9d9f593f509
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: 485517f589649bdb805f94503df716b82de17b06
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="common-ways-to-use-intune"></a>Běžné způsoby použití Intune
 
@@ -82,7 +82,7 @@ Z pohledu správce můžete vyžadovat, aby uživatelé pro přístup k Office 3
 ## <a name="issue-corporate-owned-phones-to-your-employees"></a>Poskytnutí podnikových telefonů zaměstnancům
 Řada zaměstnanců je v dnešní době mobilní, což s sebou přináší nutnost, aby byli na těchto mobilních zařízeních stejně produktivní. Tito zaměstnanci potřebují snadný přístup ke všem podnikovým aplikacím a datům, a to kdykoli a bez ohledu na to, kde právě jsou. Je potřeba zajistit zabezpečení podnikových dat a udržet nízké náklady na správu.  
 
-Intune nabízí [řešení hromadného zřizování a správy](device-enrollment.md) ([portál Classic](/intune-classic/deploy-use/manage-corporate-owned-devices)), která jsou integrovaná s hlavními platformami pro správu firemních zařízení, které jsou dnes na trhu, včetně programu Apple Device Enrollment Program a platformy Samsung KNOX pro zabezpečení mobilních zařízení. Centralizované vytváření konfigurací zařízení prostřednictvím služby Intune pomáhá zřizování podnikových zařízení do značné míry zautomatizovat.  
+Intune nabízí [řešení hromadného zřizovaní a správy](device-enrollment.md) ([klasický portál](/intune-classic/deploy-use/manage-corporate-owned-devices)) integrovaná do hlavních platforem pro správu zařízení ve společnosti, která jsou dnes na trhu, včetně programu Apple Device Enrollment Program a mobilní bezpečnostní platformy Samsung Knox. Centralizované vytváření konfigurací zařízení prostřednictvím služby Intune pomáhá zřizování podnikových zařízení do značné míry zautomatizovat.  
 
 Představte si tuto situaci: dáte zaměstnanci nerozbalenou krabičku s nových iPhonem. Zaměstnanec iPhone zapne a je proveden kroky nastavení specifickými pro vaši firmu, v rámci kterých se musí ověřit. iPhone se bez problémů nakonfiguruje pomocí [zásad zabezpečení](device-profiles.md) ([portál Classic](/intune-classic/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies)).
 

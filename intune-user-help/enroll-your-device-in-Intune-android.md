@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 7a90ae7db1141b40934648c951276e3f4d43bc05
-ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
+ms.openlocfilehash: 52364f7c5586f6021ac3bf83e73701d9781c4468
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="enroll-your-android-device-in-intune"></a>Registrace zařízení se systémem Android do Intune
 
@@ -28,7 +28,7 @@ Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svoje 
 
 > [!VIDEO https://channel9.msdn.com/Series/IntuneEnrollment/Android-Enrollment/player]
 
-Tyto pokyny k registraci jsou určené pro nativní zařízení s Androidem a pro zařízení se sadou Samsung KNOX. Samsung KNOX je typ zabezpečení, které určitá zařízení Samsung používají k zajištění další ochrany nad rámec toho, co poskytuje nativní Android. Pokud chcete zjistit, jestli máte zařízení Samsung KNOX, přejděte na **Nastavení** > **O zařízení**. Pokud se tu nezobrazí verze Knoxu, máte nativní zařízení s Androidem.
+Pokyny pro registraci se týkají nativních zařízení a zařízení se zabezpečením Samsung Knox Android. Samsung Knox je typ zabezpečení, které některá zařízení Samsung používají k zajištění další ochrany nad rámec toho, co nabízí nativní systém Android. Pokud se chcete podívat, jestli je ve vašem zařízení Samsung Knox, přejděte na **Nastavení** > **O zařízení**. Pokud v informacích o zařízení není „Verze Knox“, máte nativní zařízení Android.
 
 Před registrací nebo po ní se může zobrazit výzva k výběru kategorie, která nejlépe vystihuje způsob použití vašeho zařízení. Tato kategorie pomůže firemní podpoře zkontrolovat aplikace, ke kterým máte přístup.
 
@@ -98,9 +98,9 @@ Před registrací nebo po ní se může zobrazit výzva k výběru kategorie, kt
 
     ![Zadání kódu PIN nebo hesla](./media/and-enroll-6-PIN-native.png)
 
-13.  Pokud používáte zařízení Samsung KNOX, klepněte na **Potvrdit** a zobrazí se zpráva o registraci zařízení. Pokud používáte nativní zařízení s Androidem, všimnete si jenom následující obrazovky, která označuje, že vaše zařízení se registruje.
+13.  Pokud používáte zařízení s funkcí Samsung Knox, klepněte na **Potvrdit** a zobrazí se zpráva o registraci zařízení. Pokud používáte nativní zařízení s Androidem, všimnete si jenom následující obrazovky, která označuje, že vaše zařízení se registruje.
 
-    ![Zásady ochrany osobních údajů Samsung KNOX](./media/and-enroll-7-knox-privacy-policy.png)
+    ![Zásady ochrany osobních údajů Samsung Knox](./media/and-enroll-7-knox-privacy-policy.png)
 
     Tato obrazovka informuje o registraci zařízení.
 

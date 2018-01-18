@@ -3,10 +3,10 @@ title: "Integrace řešení Zimperium do Intune"
 titleSuffix: Intune on Azure
 description: "Integrace Intune s řešením Zimperium"
 keywords: 
-author: andredm7
-ms.author: andredm
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.date: 09/06/2017
+ms.date: 12/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,24 +15,24 @@ ms.assetid: 363fd280-1865-4a61-855b-eb75c3c62753
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1b4adb2db14c2e1c83be8e7b3644944c1910cb97
-ms.sourcegitcommit: d434dfab7ef7a6c4082d675717fa22d5581b4f51
+ms.openlocfilehash: 515f99f694a9125d60bb9210becc6722bfb9e24f
+ms.sourcegitcommit: a3a744ea55f38a360ca9f788c77a5b3018d1add5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 12/30/2017
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integrace řešení Zimperium do Intune
 
-Pro integraci řešení Zimperium Mobile Threat Defense s Intune je třeba provést následující kroky.
+Při integraci řešení Zimperium Mobile Threat Defense do Intune je potřeba provést následující kroky.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
 > [!NOTE]
-> Následující postup je třeba provést na [konzole Zimperium MTD](https://staging2-console.zimperium.com).
+> Následující kroky je potřeba provést v [konzole Zimperium MTD](https://staging2-console.zimperium.com).
 
 Před zahájením procesu integrace řešení Zimperium a Intune zkontrolujte, že máte následující:
 
--   Předplatné služby Microsoft Intune
+-   Odběr služby Microsoft Intune
 
 -   Přihlašovací údaje správce Azure Active Directory pro udělení následujících oprávnění:
 
@@ -48,7 +48,7 @@ Před zahájením procesu integrace řešení Zimperium a Intune zkontrolujte, �
 
 ### <a name="zimperium-app-authorization"></a>Autorizace aplikace Zimperium
 
-Proces autorizace aplikace Zimperium:
+Postup autorizace aplikace Zimperium:
 
 -   Povolte službě Zimperium předávání informací týkajících se stavu zařízení zpět do Intune.
 
@@ -68,14 +68,14 @@ Proces autorizace aplikace Zimperium:
 
 4.  Zvolte **Add MDM** (Přidat MDM) a pak vyberte **Microsoft Intune** ze seznamu **MDM provider** (Zprostředkovatel MDM).
 
-5.  Po nastavení Microsoft Intune jako služby MDM se zobrazí okno pro **konfiguraci Microsoft Intune**. Zvolte **Add Azure Active Directory** (Přidat Azure Active Directory) pro každou z možností: **Zimperium zConsole** a **zIPS iOS and Android apps** (Aplikace zIPS pro iOS a Android). Tím povolíte komunikaci řešení Zimperium s Intune a Azure AD prostřednictvím jednotného přihlašování Azure AD.
+5.  Po nastavení Microsoft Intune jako služby MDM se zobrazí okno pro **konfiguraci Microsoft Intune**. Zvolte **Přidat uživatele Azure Active Directory** pro každou z těchto možností: **Zimperium zConsole** a **zIPS pro iOS a Android**. Tím povolíte, aby řešení Zimperium komunikovalo s Intune a Azure AD prostřednictvím jednotného přihlašování Azure AD.
 
     > [!IMPORTANT]
     > Pro dokončení procesu integrace s Intune je nutné přidat aplikace zConsole Zimperium a zIPS pro iOS a Android.
 
 6.  Volbou **Accept** (Přijmout) povolte komunikaci aplikace Zimperium s Intune a Azure Active Directory.
 
-7.  Až přidáte aplikace **Zimperium zConsole** a **zIPS pro iOS a Android** do Azure AD, musíte přidat skupiny zabezpečení Azure AD, aby Zimperium mohlo příslušnou skupinu zabezpečení Azure AD synchronizovat se svými službami.
+7.  Po přidání aplikací **Zimperium zConsole** a **zIPS pro iOS a Android** do Azure AD přidejte skupiny zabezpečení Azure AD, aby Zimperium mohlo příslušnou skupinu zabezpečení Azure AD synchronizovat se svou službou.
 
 8.  Volbou **Finish** (Dokončit) uložte konfiguraci a spusťte první synchronizaci skupiny zabezpečení Azure AD.
 

@@ -3,10 +3,10 @@ title: "Registrace zařízení – správce registrace zařízení"
 titlesuffix: Azure portal
 description: "Naučte se používat účet správce registrace zařízení k registraci zařízení v Intune. \""
 keywords: 
-author: nathbarn
-ms.author: nathbarn
+author: ErikjeMS
+ms.author: erikje
 manager: angrobe
-ms.date: 11/08/2017
+ms.date: 01/03/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0faca372a8bc9a632cf99133b9843b4b219f285c
-ms.sourcegitcommit: e692be57ec7044dfc224b70941affbfd7efba421
+ms.openlocfilehash: 03facdde2ff5652799cc3d2113a48ea5ae772ea9
+ms.sourcegitcommit: 5fd17a57989c6da3d325ed2e0018ce16fe20bb79
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="enroll-devices-using-device-enrollment-manager"></a>Registrace zařízení pomocí správce registrace zařízení
 
@@ -30,13 +30,13 @@ Organizace můžou pomocí Intune spravovat velké počty mobilních zařízení
 Abyste mohli uživatele přidat jako správce registrace zařízení, musí tito uživatelé existovat na portálu Azure Portal. Z důvodu optimálního zabezpečení by uživatel DEM neměl být současně i správcem Intune.
 
 >[!NOTE]
->Metodu registrace pomocí správce registrace zařízení (DEM) nejde použít s těmito dalšími metodami registrace: [Apple Configurator s Pomocníkem s nastavením](apple-configurator-setup-assistant-enroll-ios.md), [Apple Configurator s přímou registrací](apple-configurator-direct-enroll-ios.md), [Apple School Manager (ASM)](apple-school-manager-set-up-ios.md) nebo [Program registrace zařízení (DEP)](device-enrollment-program-enroll-ios.md).
+>Metodu registrace pomocí správce registrace zařízení (DEM) nejde použít s těmito dalšími metodami registrace: [Apple Configurator s Pomocníkem s nastavením](apple-configurator-setup-assistant-enroll-ios.md), [Apple Configurator s přímou registrací](apple-configurator-direct-enroll-ios.md), [Apple School Manager (ASM)](apple-school-manager-set-up-ios.md) nebo [Program registrace zařízení (DEP)](device-enrollment-program-enroll-ios.md). Nejde ji použít ani k registraci zařízení s macOS. 
 
 ## <a name="example-of-a-device-enrollment-manager-scenario"></a>Příklad scénáře využití správce registrace zařízení
 
 Restaurace chce pro své číšníky pořídit padesát tabletů POS a monitory na objednávky pro pracovníky kuchyně. Zaměstnanci nikdy nepotřebují přístup k datům společnosti a nepotřebují se přihlašovat jako uživatelé. Správce Intune vytvoří účet správce registrace zařízení a přidá vedoucího restaurace k účtu DEM, čímž mu v podstatě dá nadřízené možnosti DEM. Nadřízený nyní může zaregistrovat padesát zařízení pomocí přihlašovacích údajů DEM.
 
-Správci registrace zařízení můžou být jen uživatelé na portálu Azure Portal. Správce registrace zařízení nemůže být správcem služby Intune.
+Správci registrace zařízení můžou být jen uživatelé na Azure Portalu. Správce registrace zařízení nemůže být správcem služby Intune.
 
 Uživatel DEM může:
 
@@ -65,7 +65,7 @@ Zařízení zaregistrovaná pomocí účtu správce registrace zařízení mají
 
 ## <a name="add-a-device-enrollment-manager"></a>Přidání správce registrace zařízení
 
-1.  Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+1.  Na portálu Azure Portal zvolte **Další služby** > **Monitorování a správa** > **Intune**.
 
 2.  V okně Intune zvolte **Registrovat zařízení** a pak zvolte **Správci registrace zařízení**.
 
@@ -90,11 +90,11 @@ Odebrání správce registrace zařízení nemá vliv na zaregistrovaná zaříz
 
 **Odebrání správce registrace zařízení**
 
-1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování a správa** > **Intune**.
 2. V okně Intune zvolte **Registrovat zařízení** a pak zvolte **Správci registrace zařízení**.
 3. V okně **Správci registrace zařízení** klikněte pravým tlačítkem na uživatele DEM a vyberte **Odebrat**.
 
 ## <a name="view-the-properties-of-a-device-enrollment-manager"></a>Zobrazení vlastností správce registrace zařízení
 
-1. Na portálu Azure Portal zvolte **Registrace zařízení** a pak zvolte **Správci registrace zařízení**.
+1. Na Azure Portalu zvolte **Registrace zařízení** a pak zvolte **Správci registrace zařízení**.
 2. V okně **Správci registrace zařízení** klikněte pravým tlačítkem na uživatele DEM a vyberte **Vlastnosti**.

@@ -6,7 +6,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: angrobe
-ms.date: 07/11/2017
+ms.date: 01/08/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5a1cbd6fc3244686c1f5a1db3e4365e615662f0e
-ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
+ms.openlocfilehash: 0ea0c9a406d6ddb78cd016a7b594d077d7181952
+ms.sourcegitcommit: 12b2111839e648f85374c1c0db4288f08e0ef85d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/08/2017
 Jako správce IT musíte zajistit, aby koncoví uživatelé měli přístup k aplikacím, které potřebují ke své práci. To může být náročné z těchto důvodů:
 - Existuje široký sortiment platforem zařízení a typů aplikací.
 - Potřebujete spravovat aplikace na firemních zařízeních i na zařízeních vlastněných uživateli.
-- Musíte zajistit síť a data musí zůstat zabezpečená.
+- Musíte zajistit zabezpečení sítě a dat.
 
 Navíc potřebujete přiřazovat a spravovat aplikace na zařízeních, která nejsou zaregistrovaná v Intune.
 
@@ -85,19 +85,33 @@ Většinu toho, co souvisí s aplikacemi, najdete v úloze **Mobilní aplikace**
 - **Zřizovací profily iOS** – aplikace pro iOS obsahují zřizovací profil a kód, který je podepsaný certifikátem. Když tomuto certifikátu vyprší platnost, není možné aplikaci spustit. Intune poskytuje nástroje pro proaktivní přiřazení nových zásad zřizovacího profilu k zařízením s aplikacemi, kterým brzy vyprší platnost.
     - [Zřizovací profily aplikací pro iOS](app-provisioning-profile-ios.md)
 
+Další podrobnosti najdete v tématu [Správa aplikací](app-management.md).
+
 ### <a name="monitor"></a>Monitorování
-- **Licencované aplikace** – zde můžete zobrazit, přiřadit a monitorovat aplikace hromadně zakoupené v obchodech s aplikacemi.
+- **Licence aplikací** – zde můžete zobrazit, přiřadit a monitorovat aplikace hromadně zakoupené v obchodech s aplikacemi.
     - [Aplikace hromadně zakoupené v Microsoft Storu pro firmy](windows-store-for-business.md)
 - **Zjištěné aplikace** – zobrazuje všechny aplikace přiřazené přes Intune a nainstalované v zařízení.
 - **Stav instalace aplikace** – zobrazuje stav vytvořeného přiřazení aplikace.
 - **Stav ochrany aplikací** – zobrazuje stav zásad ochrany aplikací pro vybraného uživatele.
+- **Protokoly auditu** – zobrazuje aktivity související s aplikacemi v Intune, které provedli všichni správci IT.
 
-Podrobnosti najdete v článku [Monitorování aplikací](apps-monitor.md).
+Další podrobnosti najdete v tématu [Monitorování aplikací](apps-monitor.md).
 
 ### <a name="setup"></a>Nastavení
-<!--- **iOS VPP Tokens**
-    - [iOS volume-purchased apps](vpp-apps-ios.md) --->
+- **Tokeny VPP pro iOS** – přiřazuje a zobrazuje licence programu VPP (Volume Purchase Program) pro iOS.
+    - [Multilicenční aplikace pro iOS](vpp-apps-ios.md)
+- **Certifikát Windows Enterprise** – přiřazuje a zobrazuje stav certifikátu pro podepisování kódu, který se používá k distribuci-obchodních aplikací do spravovaných zařízení s Windows. 
+- **Certifikát Windows Symantec** – přiřazuje a zobrazuje stav certifikátu Symantec pro podepisování kódu, který je nutný k distribuci souborů appx pro XAP a WP8.x na zařízení s Windows 10 Mobile. 
 - **Microsoft Store pro firmy** – integrace nastavení do Microsoft Storu pro firmy. Potom můžete zakoupené aplikace synchronizovat s Intune, přiřazovat je a sledovat využití licencí.
     - [Aplikace hromadně zakoupené v Microsoft Storu pro firmy](windows-store-for-business.md)
+- **Klíče pro instalaci bokem ve Windows** – můžete přidat klíč pro instalaci bokem ve Windows, který lze použít k instalaci aplikace přímo do zařízení (místo publikování aplikace a jejího stahování z Windows Storu).
+    - [Instalace aplikace pro Windows bokem](app-sideload-windows.md) 
 - **Značky Portálu společnosti** – Portál společnosti můžete přizpůsobit o značku své firmy.
     - [Konfigurace Portálu společnosti](company-portal-app.md)
+- **Kategorie aplikací** – zde můžete přidat, připnout a odstranit názvy kategorií aplikací.
+- **Android for Work** – zde můžete schválit a synchronizovat aplikace schválené pro váš podnik.
+    - [Aplikace pro Android for Work](apps-add-android-for-work.md) 
+
+### <a name="help-and-support"></a>Nápověda a podpora
+- **Nápověda a podpora** – zde můžete řešit potíže, požádat o podporu nebo zobrazit stav Intune.
+    - [Odstraňování potíží](help-desk-operators.md)

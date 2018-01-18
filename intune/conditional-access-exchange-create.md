@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 840ef2ce59551a45cd753190b784e8ca0bba617a
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 6b598441d39d90a4ae81df7fffff99f9a5ccc451
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-create-and-assign-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated-in-microsoft-intune"></a>Vytvoření a přiřazení zásad podmíněného přístupu pro místní Exchange a starší verze Exchange Online Dedicated v Microsoft Intune
 
@@ -47,7 +47,7 @@ Než nakonfigurujete podmíněný přístup, ověřte, jestli jsou splněné tyt
 
 - Pokud jsou pro určitého uživatele nakonfigurované zásady podmíněného přístupu, může se tento uživatel připojit k e-mailu teprve tehdy, když jeho **zařízení** splňuje tyto požadavky:
     - Musí být **zaregistrovaný** ve službě Intune nebo se musí jednat o počítač připojený k doméně.
-    - **Musí být zaregistrované v Azure Active Directory**. Kromě toho musí být ve službě Azure Active Directory zaregistrované ID protokolu Exchange ActiveSync klienta.
+    - **Je zaregistrované v Azure Active Directory**. Kromě toho musí být ve službě Azure Active Directory zaregistrované ID protokolu Exchange ActiveSync klienta.
 <br></br>
 - Pro zákazníky Intune a Office 365 je služba AAD DRS aktivovaná automaticky. Zákazníci, kteří už mají nasazenou službu AD FS Device Registration Service, registrovaná zařízení ve svojí místní službě Active Directory neuvidí. **To neplatí pro počítače s Windows ani zařízení Windows Phone**.
 
@@ -105,7 +105,7 @@ Nativní aplikace **Pošta** ve Windows 8.1 a novějších verzích (při regist
 
 13. U zařízení, na která nemá vliv podmíněný přístup ani další pravidla, můžete zvolit povolení přístupu k Exchangi, nebo tento přístup můžete zablokovat.
   - Pokud povolíte přístup, budou mít všechna zařízení okamžitě přístup k místnímu Exchangi.  U zařízení, která patří uživatelům v **zahrnutých skupinách**, se bude blokovat přístup v případě, že budou vyhodnocená jako zařízení, která nevyhovují zásadám nebo nejsou zaregistrovaná v Intune.
-  - Při nastavení blokování přístupu se bude hned na začátku blokovat přístup na Exchange u všech zařízení.  Zařízení, která patří uživatelům v **zahrnutých skupinách**, budou mít přístup po registraci v Intune a jejich stav se vyhodnotí jako vyhovující zásadám. Zařízení s Androidem, která nepoužívají standard Samsung KNOX, se budou vždycky blokovat, protože nepodporují toto nastavení.
+  - Při nastavení blokování přístupu se bude hned na začátku blokovat přístup na Exchange u všech zařízení.  Zařízení, která patří uživatelům v **zahrnutých skupinách**, budou mít přístup po registraci v Intune a jejich stav se vyhodnotí jako vyhovující zásadám. Zařízení s Androidem, která nepoužívají Samsung Knox Standard, budou blokována vždy, protože nastavení nepodporují.
 <br></br>
 14. V části **Výjimky platformy zařízení** zvolte **Přidat** a určete platformy. Pokud je u nastavení **Nespravovaný přístup zařízení** nastavená možnost **Blokováno**, budou zařízení, která jsou zaregistrovaná a vyhovují podmínkám zásad, povolená i tehdy, když bude existovat výjimka pro blokování platformy. Kliknutím na **OK** uložte nastavení.
 
@@ -124,6 +124,6 @@ Počínaje verzí 1704 můžou správci vytvořit zásady podmíněného příst
 
 2. V okně **Zásady** vytvořte novou zásadu podmíněného přístupu Azure AD výběrem možnosti **Nová zásada**.
 
-## <a name="see-also"></a>Související témata
+## <a name="see-also"></a>Viz taky
 
 [Podmíněný přístup ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)

@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 04/10/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
-ms.openlocfilehash: dd211b9dd8b09f2e3eab570eab48664fab55e3df
-ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
+ms.openlocfilehash: a83d938abbaefe35d028e50ed13c422b97bc3987
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="fix-common-issues-with-your-android-device"></a>Řešení běžných problémů se zařízením s Androidem
 
@@ -30,6 +30,7 @@ Některé problémy se zařízením s Androidem se vám může podařit vyřeši
 - [Odeslání protokolů firemní podpoře pomocí e-mailu](send-logs-to-your-it-admin-by-email-android.md)
 - [Odeslání protokolů firemní podpoře pomocí kabelu USB](send-logs-to-your-it-admin-using-cable-android.md)
 - [Odeslání chyb při registraci firemní podpoře](send-enrollment-errors-to-your-it-admin-android.md)
+- [Odeslání chyb do Microsoftu](send-logs-to-microsoft-android.md)
 - [Potřebujete si aktualizovat zařízení s Androidem](you-need-to-update-your-android-device.md)
 - [Zařízení nevyhovuje maximální verzi operačního systému](your-android-version-isnt-yet-supported.md)
 - [Zařízení obsahuje root a nemůže se připojit](your-device-is-rooted-and-you-cant-connect-android.md)
@@ -41,3 +42,4 @@ Některé problémy se zařízením s Androidem se vám může podařit vyřeši
 - [Zdá se, že vaše zařízení je zašifrované, ale Portál společnosti hlásí, že není](your-device-appears-encrypted-but-cp-says-otherwise-android.md)
 - [Zobrazí se výzva k instalaci aplikace Ochrana zařízení před internetovými útoky na zařízení s Androidem](you-are-prompted-to-install-mtd-android.md)
 - [Je potřeba vyřešit hrozbu, kterou aplikace Ochrana zařízení před internetovými útoky objevila na vašem zařízení s Androidem](you-need-to-resolve-a-threat-found-by-mtd-android.md)
+- [Oprava chyb u zařízení se zabezpečením Samsung Knox](samsung-knox-errors-android.md)

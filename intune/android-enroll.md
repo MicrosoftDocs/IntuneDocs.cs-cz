@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: angrobe
-ms.date: 12/07/2017
+ms.date: 01/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ad018bdfa55b030f5d714017ae09f616ae2bf164
-ms.sourcegitcommit: 9fabf1a8db53842f7b00762374de5b137158ee25
+ms.openlocfilehash: 7877d0bb6ba7a9c9d51cd261a7f1fbf555f88961
+ms.sourcegitcommit: 0795870bfe941612259ebec0fe313a783a44d9b9
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="enroll-android-devices"></a>Registrace zařízení s Androidem
 
@@ -75,7 +75,7 @@ Bude potřeba, abyste aplikaci Portál společnosti pro Android schválili ve sp
 
 Při schvalování Portálu společnosti Intune postupujte takto:
 
-1.  Stáhněte si aplikaci Portál společnosti ze [spravovaného obchodu Google Play](https://play.google.com/work/apps/details?id=com.microsoft.windowsintune.companyportal).
+1.  Ve [spravovaném obchodě Google Play](https://play.google.com/work/apps/details?id=com.microsoft.windowsintune.companyportal) přejděte na aplikaci Portál společnosti.
 2.  Přihlaste se do spravovaného obchodu Google Play pomocí stejného účtu Google, který jste použili ke konfiguraci vazby pro Android for Work.
 3.  Klikněte na **Approve** (Schválit).  Otevře se nový dialog.
 4.  Zkontrolujte oprávnění v tomto dialogu a pak klikněte na **Approve** (Schválit). Aby aplikace Portál společnosti mohla spravovat pracovní profil v daném zařízení, je nutné povolit tato oprávnění.

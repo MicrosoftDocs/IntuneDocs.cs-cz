@@ -15,11 +15,11 @@ ms.assetid: 494b3892-916e-4b40-9b67-61adec889bdf
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 86f5b505923a709cd8f8ab4e2d91c6a891e2acc6
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 3b1ccb3b0b7b2ce024ff6a09d7f9d8366896fb67
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="custom-settings-for-android-devices-in-microsoft-intune"></a>Vlastní nastavení pro zařízení s Androidem v Microsoft Intune
 
@@ -31,7 +31,7 @@ Tato vlastnost umožňuje přiřadit následující nastavení Androidu, která 
 
 - [Vytvoření profilu sítě Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení v Microsoft Intune](/intune/wi-fi-profile-shared-key)
 - [Vytvoření profilu VPN pro aplikaci pro zařízení s Androidem můžete pomocí vlastního profilu Microsoft Intune](/intune/android-pulse-secure-per-app-vpn)
-- [Použití vlastních zásad pro povolení a blokování aplikací pro zařízení se Samsung KNOX Standardem v Microsoft Intune](/intune/samsung-knox-apps-allow-block)
+- [Použití vlastních zásad, které v Microsoft Intune povolí nebo blokují aplikace pro zařízení se zabezpečením Samsung Knox Standard](/intune/samsung-knox-apps-allow-block)
 
 >[!IMPORTANT]
 >Tímto typem profilu se v současnosti dají konfigurovat jenom nastavení uvedená výše. Zařízení s Androidem nezveřejňují úplný seznam nastavení OMA-URI, která můžete konfigurovat. Pokud chcete, abychom přidali další nastavení, požádejte o ně na [webu Intune Uservoice](https://microsoftintune.uservoice.com/forums/291681-ideas).

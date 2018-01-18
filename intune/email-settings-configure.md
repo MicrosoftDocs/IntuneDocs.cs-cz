@@ -15,11 +15,11 @@ ms.assetid: 484bd9b0-fbf1-4f4f-940c-6b12fa07e228
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8dc9c67db2a93b6cd0f1db1894b079183ee9c945
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: f697b575a5cdc1fa4009d08a14452508eacb8de1
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-configure-email-settings-in-microsoft-intune"></a>Jak nakonfigurovat nastavení e-mailu v Microsoft Intune
 
@@ -31,7 +31,7 @@ Na většině platforem se podporuje integrovaný poštovní klient. Většina e
 
 E-mailové profily můžete použít ke konfiguraci nativních e-mailových klientů na těchto typech zařízení:
 
-- Zařízení, na kterém běží Android Samsung KNOX Standard 4.0 nebo novější
+- Android Samsung Knox Standard 4.0 a novější
 - Android for Work
 - iOS 8.0 a novější
 - Windows Phone 8.1 a novější
@@ -48,14 +48,14 @@ Informace v tomto tématu vás seznámí se základy konfigurace e-mailového pr
 3. V okně profilů zvolte **Vytvořit profil**.
 4. V okně **Vytvořit profil** zadejte **název** a **popis** e-mailového profilu.
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete použít nastavení e-mailu. V současné době můžete pro nastavení e-mailu na zařízení zvolit jednu z následujících platforem:
-    - **Android** (jenom Samsung Android KNOX Standard)
+    - **Android** (jenom Samsung Android Knox Standard)
     - **Android for Work**
     - **iOS**
     - **Windows Phone 8.1**
     - **Windows 10 a novější**
 6. V rozevíracím seznamu **Typ profilu** zvolte **E-mail**.
 7. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Podrobnosti o nastaveních na jednotlivých platformách najdete v následujících tématech:
-    - [Nastavení Androidu for Work a Samsung KNOX Standard](email-settings-android.md)
+    - [Nastavení Androidu for Work a platformy Samsung Knox Standard](email-settings-android.md)
     - [Nastavení iOSu](email-settings-ios.md)
     - [Nastavení Windows Phone 8.1](email-settings-windows-phone-8-1.md)
     - [Nastavení Windows 10](email-settings-windows-10.md)
@@ -86,7 +86,7 @@ Pokud má už uživatel nakonfigurovaný e-mailový účet, pak výsledek přiř
 
 - **iOS:** Na základě názvu hostitele a e-mailové adresy se detekuje existující duplicitní e-mailový profil. Duplicitní e-mailový profil zablokuje přiřazení profilu Intune. Portál společnosti v tomto případě informuje uživatele o tom, že nesplňuje požadavky, a vyzve ho k odebrání ručně nakonfigurovaného profilu. Pokud chcete tomuto problému zabránit, požádejte uživatele, aby se zaregistrovali před instalací e-mailového profilu, čímž se umožní, aby profil nastavila služba Intune.
 - **Windows:** Na základě názvu hostitele a e-mailové adresy se detekuje existující duplicitní e-mailový profil. Intune přepíše existující e-mailový profil vytvořený uživatelem.
-- **Android Samsung KNOX Standard:** Na základě e-mailové adresy se detekuje existující duplicitní e-mailový profil a přepíše se profilem Intune.
+- **Android Samsung Knox Standard:** Na základě e-mailové adresy se zjistí přítomnost duplicitního e-mailového profilu, který se přepíše profilem Intune.
 Vzhledem k tomu, že Android nevyužívá k identifikaci profilu název hostitele, doporučujeme nevytvářet více e-mailových profilů pro použití se stejnou e-mailovou adresou na různých hostitelích, protože by se vzájemně přepisovaly.
 - **Android for Work:** Intune poskytuje dva e-mailové profily pro Android for Work – jeden pro každou z e-mailových aplikací Gmail a Nine Work. Tyto aplikace jsou dostupné v obchodě Google Play a můžete je nainstalovat do pracovního profilu zařízení, aby nedošlo k vytvoření duplicitních profilů. Obě aplikace podporují připojení k Exchangi. Pokud chcete umožnit připojení k e-mailu, nasaďte jednu z těchto e-mailových aplikací do zařízení uživatelů a pak vytvořte a nasaďte příslušný e-mailový profil. E-mailové aplikace, jako je Nine Work, nemusí být bezplatné. Přečtěte si podrobné informace o licencování aplikace nebo se v případě dotazů obraťte na společnost, která aplikaci vytvořila.
 

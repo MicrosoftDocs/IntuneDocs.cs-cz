@@ -7,7 +7,7 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 ms.date: 10/31/2017
-ms.topic: get-started-article
+ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
@@ -15,11 +15,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 372e25968005258fd1e00cbab7db542ad0211206
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: c4210d77e52abba07454d8606ba7715c03078ca6
+ms.sourcegitcommit: 22ab1c6a6bfeb4fef9850d12b29829c3fecbbeed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Známé problémy v Microsoft Intune
 
@@ -43,31 +43,6 @@ Funkce správy Windows 10 v Intune na portálu Azure Portal je k dispozici prost
 
 Při migraci z Intune na Azure Portal se může zobrazit nová skupina s názvem **Všichni uživatelé – b0b08746-4dbe-4a37-9adf-9e7652c0b421**. Tato skupina obsahuje všechny uživatele ve vašem Azure Active Directory, ne jenom uživatele s licencí Intune. Toto použití může způsobit problémy s jinými produkty Microsoftu, pokud očekáváte, že někteří existující nebo noví uživatelé nebudou členem žádné skupiny.
 
-### <a name="secondary-migration-required-for-select-capabilities"></a>Pro vybrané možnosti se vyžaduje sekundární migrace
-
-Účty Intune vytvořené před lednem 2017 je nutné před použitím následujících možností na Azure Portalu migrovat:
-
-- Profily registrace podnikových zařízení
-- Program Apple Device Enrollment Program
-- Předběžná deklarace firemních zařízení pomocí sériového čísla iOS
-- Účty správce registrace zařízení
-- Apple Volume Purchase Program
-
-Protože tyto možnosti nelze spravovat jak z konzoly Intune (Silverlight), tak z Azure Portalu, tato migrace:
-- Zakáže tyto možnosti na klasickém portálu
-- Povolí tyto možnosti na Azure Portalu  
-
-Po 22. září 2017 bude migrace těchto funkcí sloučena s primární migrací na Azure. Pokud byl váš účet už migrován a používá portál Azure Portal, možná už se tato sekundární migrace dokončila. Pokud ne, budou tyto možnosti migrovány do listopadu. Jakmile bude migrace vašeho účtu zahájena, dokončí se ve stejný den. Migrace může trvat až 6 hodin od okamžiku zakázání těchto funkcí na klasickém portálu Intune.
-
-Pokud teď tyto schopnosti Intune spravujete na portálu Azure Portal, mějte na paměti tyto body:
-
-#### <a name="removes-default-corporate-device-enrollment-profiles-in-apple-dep"></a>Odebrání výchozích profilů registrace podnikových zařízení v programu Apple DEP
-Azure Portal nepodporuje výchozí profil registrace podnikového zařízení pro zařízení programu Apple DEP (Device Enrollment Program). Tato funkce, která je dostupná v konzole Intune (Silverlight), se vyřazuje, aby nedocházelo k neúmyslnému přiřazení profilů. Když se na portálu Azure Portal synchronizují sériová čísla DEP, nepřiřadí se žádný profil registrace podnikového zařízení. Před použitím zařízení musí být registrační profil přiřazený.
-
-#### <a name="apple-dep-token-restored-with-migration"></a>Obnovení tokenu Apple DEP při migraci
-
-Pokud jste na portálu Intune (Silverlight) odstranili token Programu registrace zařízení od Applu a nenahrajete nový token na Azure Portal, při migraci se na Azure Portalu obnoví původní token. Pokud chcete tento token odebrat a zabránit registraci v programu DEP, odstraňte token z portálu Azure Portal.
-
 ### <a name="status-blades-for-migrated-policies-do-not-work"></a>Okna stavu pro migrované zásady nefungují
 
 Nejde zobrazit informace o stavu pro zásady, které se migrovaly z klasického portálu na portál Azure Portal. Můžete ale dál zobrazovat sestavy pro tyto zásady na portálu Classic. Pokud chcete zobrazit informace o stavu migrovaných konfiguračních zásad, na portálu Azure Portal je znovu vytvořte.
@@ -79,6 +54,7 @@ Hromadně zakoupené aplikaci pro iOS se zobrazují a jde je přiřadit pouze ke
 
 ### <a name="multiple-copies-of-the-same-ios-volume-purchase-program-are-uploaded"></a>Nahrálo se více kopií jednoho hromadně zakoupeného programu pro iOS
 Neklikejte u jednoho tokenu VPP na tlačítko **Nahrát** vícekrát. Pokud to uděláte, nahrají se duplicitní tokeny VPP a aplikace se u stejného tokenu VPP budou synchronizovat vícekrát.
+
 
 <!-- ## Groups -->
 

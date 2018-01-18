@@ -6,7 +6,7 @@ keywords:
 author: dagerrit
 ms.author: dagerrit
 manager: angrobe
-ms.date: 03/31/2017
+ms.date: 1/4/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ms.assetid:
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 41b358f48412585ec40e369225b4263012bfd2f8
-ms.sourcegitcommit: b8987b8dfb009ea55678d7f640ac5f18a6ab167e
+ms.openlocfilehash: d5f4947191ddc7462749bb03f86919fc38196672
+ms.sourcegitcommit: 6e91c1aed7e4d3bb57051b41ce69cc15d70844f6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Kde v Azure najdu svoje funkce Intune?
-Při přesunu Intune do portálu Azure Portal jsme využili příležitost uspořádat některé úlohy logičtěji. Každé vylepšení ale přichází za cenu toho, že je potřeba se s novým uspořádáním seznámit. Proto jsme vytvořili tento referenční přehled pro ty z vás, kteří dobře znají Intune na klasickém portálu a zajímá je, jak s Intune pracovat na Azure Portalu. Pokud tento článek nepopisuje funkci, kterou hledáte, uveďte ji v poznámce na konci článku, abychom ho mohli aktualizovat.
+Při přesunu Intune do portálu Azure Portal jsme využili příležitost uspořádat některé úlohy logičtěji. Každé vylepšení ale přichází za cenu toho, že je potřeba se s novým uspořádáním seznámit. Proto jsme vytvořili tento referenční přehled pro ty z vás, kteří dobře znají Intune na klasickém portálu a zajímá je, jak s Intune pracovat na portálu Azure Portal. Pokud tento článek nepopisuje funkci, kterou hledáte, uveďte ji v poznámce na konci článku, abychom ho mohli aktualizovat.
 ## <a name="quick-reference-guide"></a>Stručný referenční přehled
 |Funkce |Cesta na klasickém portálu|Cesta v Intune na Azure Portalu|
 |------------|---------------|---------------|
@@ -36,6 +36,7 @@ Při přesunu Intune do portálu Azure Portal jsme využili příležitost uspo�
 | Profil Registrace podnikového zařízení | Zásady > Registrace podnikového zařízení | [Registrace zařízení > Registrace Apple > Profily AC](#where-did-corporate-pre-enrolled-devices-go) |
 | Android for Work | Správce > Správa mobilních zařízení > Android for Work | Registrace zařízení > Registrace Androidu for Work |
 | Podmínky a ujednání | Zásady > Podmínky a ujednání | Registrace zařízení > Podmínky a ujednání |
+Nastavení Portálu společnosti|Správce > Portál společnosti|**Správa** > Mobilní aplikace<br> **Nastavení** > Značky Portálu společnosti
 
 
 ## <a name="where-do-i-manage-groups"></a>Kde můžu spravovat skupiny?
@@ -62,7 +63,7 @@ Schopnost povolit nebo blokovat zařízení v osobním vlastnictví se teď spra
 
 ![Obrázek nastavení blokování osobních zařízení v Azure](./media/05-azure-personal-block.png)
 
-Nové možnosti omezení budou přidány jenom do portálu Azure Portal.
+Nové možnosti omezení se přidají jenom do portálu Azure Portal.
 
 ## <a name="where-did-apple-dep-go"></a>Kde najdu Program registrace zařízení (DEP) Apple?
 Na klasickém portálu jste mohli nastavit integraci Intune s Programem registrace zařízení Apple a ručně vyžádat synchronizaci se službou společnosti Apple:
