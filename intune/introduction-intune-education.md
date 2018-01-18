@@ -5,22 +5,22 @@ keywords: co je Intune
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 05/02/2017
+ms.date: 12/21/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: ca36589b-804d-40b8-b112-9195d8897800
-ms.reviewer: lindavr
+ms.reviewer: travisj
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: c094d59d7261b602c51196233286d10c27732236
-ms.sourcegitcommit: 2a6ad3c233d15a9fb441362105f64b2bdd550c34
+ms.custom: intune-azure
+ms.openlocfilehash: 78286293dc57bfded09eb29c5809c09e5acff49b
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 01/03/2018
 ---
-# <a name="what-is-intune-for-education"></a>Co je Intune for Education?
+# <a name="how-is-intune-for-education-different-from-the-full-device-management-experience-in-intune"></a>Jak se Intune for Education liší od plnohodnotného prostředí pro správu zařízení v Intune?
 
 Intune for Education umožňuje učitelům a studentům dosáhnout produktivní výuky a zároveň chránit školní údaje. Intune je cloudová služba pro správu podnikové mobility (EMM), která je základem Intune for Education.
 
@@ -33,12 +33,12 @@ Intune for Education je možné používat samostatně nebo v kombinaci s [kompl
 > [!VIDEO https://www.youtube.com/embed/ukrnCwcLvV8]
 
 Intune a Intune for Education umožňují:
-* Spravovat mobilní zařízení, která vaši pracovníci používají pro přístup k datům
+* Spravovat mobilní zařízení, která vaši pracovníci a studenti používají pro přístup k datům.
 * Spravovat mobilní aplikace, které uživatelé používají každý den
 * Chránit informace vaší organizace určením způsobu, jak k nim vaši pracovníci přistupují a jak je sdílejí
 * Zajistit, aby zařízení a aplikace splňovaly požadavky na zabezpečení
 
 ### <a name="next-steps"></a>Další kroky
-* Seznamte se s tímto produktem [prostřednictvím 30denní zkušební verze Intune](/intune-classic/understand-explore/sign-up-for-30-day-trial-microsoft-intune).
+* K seznámení s produktem můžete použít [90denní bezplatnou zkušební verzi Intune](https://signup.microsoft.com/Signup?OfferId=5eec053c-cc40-4cd5-a06a-ea8d75cf2686&ali=1). Pokud máte přístup, můžete rovnou začít na webu https://intuneeducation.portal.azure.com.
 * Přečtěte si, jak můžete co nejrychleji [začít používat Intune for Education](/intune-education/what-is-express-configuration).
 * Podrobně se seznamte s [technickými požadavky a možnostmi](/intune/supported-devices-browsers) služby Intune.

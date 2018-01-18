@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 11/06/2017
+ms.date: 12/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 72cdd888-efca-46e6-b2e7-fb9696bb2fba
 ms.reviewer: davidra
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3a4e2b3493467f922b844130829db8e5ba14b246
-ms.sourcegitcommit: 474a24ba67f6bf4f00268bf9e4eba52331a6b82d
+ms.openlocfilehash: 46e850cdda27444d18354b972d10b0cd02c036d9
+ms.sourcegitcommit: 000684953cbb3ceae0e2bcaa51186c9221f7aa86
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="provide-remote-assistance-for-intune-managed-devices"></a>Poskytování vzdálené pomoci pro zařízení spravovaná pomocí Intune
 
@@ -32,7 +32,7 @@ Intune vám prostřednictvím softwaru [TeamViewer](https://www.teamviewer.com) 
 Vzdálenou správu podporují zařízení s Androidem nebo s Windows spravovaná přes Intune.
 
 >[!NOTE]
->Software TeamViewer nepodporuje Windows Holographic (HoloLens), Windows Team (Surface Hub) a Windows 10 S. 
+>Software TeamViewer nepodporuje Windows Holographic (HoloLens), Windows Team (Surface Hub) a Windows 10 S. Na klasickém portálu Intune budete ke správě zařízení dále potřebovat [klienta pro PC](/intune-classic/deploy-use/pc-management-comparison?toc=/intune/toc.json).
 
 
 
@@ -77,4 +77,3 @@ Až budete hotovi, okno TeamVieweru zavřete.
 ## <a name="next-steps"></a>Další kroky
 
 Koncovému uživateli se na zařízení u ikony aplikace Portál společnosti zobrazí příznak oznámení. Oznámení se zobrazí také při otevření aplikace. Potom může žádost o vzdálenou pomoc přijmout.
-

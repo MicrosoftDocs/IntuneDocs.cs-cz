@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 2ec41724eacc4abca994b1dadff6e6d9df63c74d
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 50adfb13c619f81a8429c46e798b7f78acf3217e
+ms.sourcegitcommit: 229f9bf89efeac3eb3d28dff01e9a77ddbf618eb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Řešení potíží s registrací do služby Intune
 
@@ -37,6 +37,12 @@ Než začnete řešit potíže, ujistěte se, že jste správně nakonfigurovali
 -   [Nastavení správy pro zařízení s Windows](/intune-classic/deploy-use/set-up-windows-device-management-with-microsoft-intune)
 -   [Nastavení správy zařízení s Androidem](/intune-classic/deploy-use/set-up-android-management-with-microsoft-intune) – nejsou třeba žádné další kroky
 -   [Nastavení správy zařízení s Androidem for Work](/intune-classic/deploy-use/set-up-android-for-work)
+
+Můžete také zkontrolovat správné nastavení času a data na zařízení uživatele:
+
+1. Restartujte zařízení.
+2. Zkontrolujte, že nastavení času a data se přibližně shoduje s časem GMT (interval -12 až +12 hodin vzhledem k času GMT, podle časového pásma koncového uživatele).
+3. Odinstalujte a znovu nainstalujte Portál společnosti Intune (pokud se používá).
 
 Uživatelé spravovaných zařízení můžou pro vaši potřebu shromažďovat protokoly registrace a diagnostiky. Pokyny pro uživatele ke shromažďování protokolů najdete tady:
 
@@ -229,27 +235,29 @@ Pokud řešení 2 nefunguje, nechte uživatele provést následující postup, a
 
 **Řešení 1**:
 
-Požádejte uživatele, aby postupovali podle pokynů v článku [Zařízení nemá požadovaný certifikát](/intune-user-help/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator). Pokud se chyba i potom stále zobrazuje, zkuste Řešení 2.
+Uživatel možná bude moct načíst chybějící certifikát podle pokynů v tématu [Zařízení nemá požadovaný certifikát](/intune-user-help/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator). Pokud chyba přetrvává, vyzkoušejte Řešení 2.
 
 **Řešení 2**:
 
-Pokud se uživatelům stále zobrazuje chyba chybějícího certifikátu po tom, co zadali své podnikové přihlašovací údaje a byli přesměrováni na federované přihlašování, možná na vašem serveru Active Directory Federation Services (AD FS) chybí zprostředkující certifikát.
+Pokud se uživatelům stále zobrazuje chyba chybějícího certifikátu po tom, co zadali svoje podnikové přihlašovací údaje a byli přesměrováni na federované přihlašování, možná na vašem serveru Active Directory Federation Services (AD FS) chybí zprostředkující certifikát.
 
-K chybě certifikátu dochází proto, že zařízení s Androidem vyžadují, aby [zpráva Hello serveru SSL](https://technet.microsoft.com/library/cc783349.aspx) obsahovala zprostředkující certifikáty, ale výchozí instalace serveru AD FS nebo serveru proxy AD FS v současnosti odesílá ve zprávě Hello serveru SSL na zprávu Hello klienta SSL jenom certifikát SSL služby AD FS.
+Příčinou chyby certifikátu je, že zařízení s Androidem vyžadují zahrnutí zprostředkujících certifikátů do odpovědi [SSL Server hello](https://technet.microsoft.com/library/cc783349.aspx). Momentálně výchozí instalace serveru AD FS nebo proxy serveru WAP – AD FS odesílá v odpovědi SSL Server hello na zprávu SSL Client hello jenom certifikát SSL služby AD FS.
 
 Pokud chcete problém vyřešit, naimportujte certifikáty do osobních certifikátů počítačů na serveru nebo proxy serverech AD FS následujícím způsobem:
 
-1.  Na servery a proxy serverech AD FS spusťte konzolu Správa certifikátů pro místní počítač tak, že kliknete pravým tlačítkem na **Start**, vyberete **Spustit** a zadáte příkaz **certlm.msc**.
-2.  Rozbalte **Osobní** a vyberte **Certifikáty**.
+1.  Na serveru AD FS a proxy serverech klikněte pravým tlačítkem myši na **Start** > **Spustit** > **certlm.msc**. Tím se spustí konzola pro správu certifikátů místního počítače.
+2.  Rozbalte **Osobní** a zvolte **Certifikáty**.
 3.  Najděte certifikát pro vaši komunikaci služby AD FS (veřejně podepsaný certifikát) a poklikáním zobrazte jeho vlastnosti.
-4.  Vyberte kartu **Cesta k certifikátu**, kde uvidíte nadřazené certifikáty certifikátu.
-5.  U každého nadřazeného certifikátu vyberte **Zobrazit certifikát**.
-6.  Vyberte kartu **Podrobnosti** a vyberte **Kopírovat do souboru**.
-7.  Postupujte podle pokynů průvodce a vyexportujte nebo uložte veřejný klíč certifikátu do požadovaného umístění souborů.
-8.  Naimportujte nadřazené certifikáty, které jste ve 3. kroku vyexportovali, do složky Místní počítač\Osobní\Certifikáty, a to tak, že pravým tlačítkem kliknete na **Certifikáty**, vyberete **Všechny úkoly** > **Importovat** a pak podle výzev průvodce certifikáty naimportujete.
-9.  Restartujte servery AD FS.
-10. Výše uvedené kroky zopakujte na všech serverech a proxy serverech AD FS.
-Teď už by měl uživatel být schopný se ze zařízení s Androidem k aplikaci Portál společnosti přihlásit.
+4.  Zvolte kartu **Cesta k certifikátu**, kde uvidíte nadřazené certifikáty certifikátu.
+5.  U každého nadřazeného certifikátu zvolte **Zobrazit certifikát**.
+6.  Zvolte kartu **Podrobnosti** > **Kopírovat do souboru**.
+7.  Postupujte podle pokynů průvodce a vyexportujte nebo uložte veřejný klíč nadřazeného certifikátu do požadovaného umístění souborů.
+8.  Klikněte pravým tlačítkem myši na **Certifikáty** > **Všechny úkoly** > **Importovat**.
+9.  Postupujte podle pokynů průvodce a naimportujte nadřazené certifikáty do **Místní počítač\Osobní\Certifikáty**.
+10. Restartujte servery AD FS.
+11. Výše uvedené kroky zopakujte na všech serverech a proxy serverech AD FS.
+
+K ověření správné instalace certifikátu můžete použít diagnostický nástroj, který je dostupný na [https://www.digicert.com/help/](https://www.digicert.com/help/). Do pole **Server Address** (Adresa serveru) zadejte plně kvalifikovaný název domény serveru AD FS (například sts.contso.com) a klikněte na **Check Server** (Zkontrolovat server).
 
 **Pokud chcete ověřit, jestli se certifikát správně nainstaloval**:
 
@@ -306,7 +314,7 @@ Po registraci se zařízení vrátí do stavu správné funkce a znovu získá p
 ### <a name="verify-ws-trust-13-is-enabled"></a>Ověření, že koncový bod WS-Trust 1.3 je povolený
 **Problém:** Zařízení s iOSem a programem registrace zařízení (DEP) není možné přihlásit.
 
-Přihlášení zařízení s programem registrace zařízení s přidružením uživatele vyžaduje aktivaci uživatelského jména / smíšeného koncového bodu WS-Trust 1.3, aby bylo možné požádat o tokeny uživatele. Active Directory má tento koncový bod ve výchozím nastavení povolený. Seznam povolených koncových bodů získáte použitím rutiny prostředí PowerShell Get-AdfsEndpoint a vyhledáním koncového bodu trust/13/UsernameMixed. Například:
+Přihlášení zařízení s programem registrace zařízení s přidružením uživatele vyžaduje aktivaci uživatelského jména / smíšeného koncového bodu WS-Trust 1.3, aby bylo možné požádat o tokeny uživatele. Active Directory má tento koncový bod ve výchozím nastavení povolený. Seznam povolených koncových bodů získáte použitím rutiny prostředí PowerShell Get-AdfsEndpoint a vyhledáním koncového bodu trust/13/UsernameMixed. Příklad:
 
       Get-AdfsEndpoint -AddressPath “/adfs/services/trust/13/UsernameMixed”
 

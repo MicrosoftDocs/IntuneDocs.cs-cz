@@ -2,10 +2,10 @@
 title: "Podporovaná zařízení – Microsoft Intune"
 description: "Seznam podporovaných platforem zařízení a prohlížečů pro správu zařízení přes Intune"
 keywords: 
-author: nathbarn
-ms.author: nathbarn
+author: ErikjeMS
+ms.author: erikje
 manager: angrobe
-ms.date: 11/06/2017
+ms.date: 01/03/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b168cbf5282b4e016133d071c56c8abd54c2e23b
-ms.sourcegitcommit: dc2595bec05206a826cd10cb834bf6043145c917
+ms.openlocfilehash: 56516562b9a7510020475d226c74bf719bdd33a3
+ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="supported-devices-and-browsers"></a>Podporovaná zařízení a prohlížeče
 
@@ -39,11 +39,14 @@ Pomocí správy mobilních zařízení Intune můžete spravovat následující 
 
 [!INCLUDE[mdm-supported-devices](./includes/mdm-supported-devices.md)]
 
-### <a name="supported-samsung-knox-standard-devices"></a>Podporovaná zařízení Samsung KNOX Standard
+### <a name="supported-samsung-knox-standard-devices"></a>Podporovaná zařízení Samsung Knox Standard
 
-Během registrace MDM se aplikace Portál společnosti pokusí aktivovat Samsung KNOX jenom v případě, že je zařízení uvedené v [seznamu podporovaných zařízení KNOX](https://www.samsungknox.com/knox-supported-devices/knox-workspace). To pomáhá předejít chybám aktivace KNOX, které brání v registraci MDM. Zařízení, která nepodporují aktivaci Samsung KNOX, se zaregistrují jako standardní zařízení s Androidem. Některá čísla modelů zařízení Samsung mohou podporovat KNOX, některá nemusí. Než si zařízení Samsung koupíte a nasadíte, ověřte si u prodejce, zda je vaše zařízení kompatibilní se systémem KNOX.
+Během registrace MDM se aplikace Portál společnosti pokusí aktivovat Samsung Knox jenom v případě, že je zařízení uvedené v [seznamu podporovaných zařízení Knox](https://www.samsungknox.com/knox-supported-devices/knox-workspace). To pomáhá předejít chybám aktivace Knox, které brání v registraci MDM. Zařízení, která nepodporují aktivaci Samsung Knox, se zaregistrují jako standardní zařízení s Androidem. Některá čísla modelů zařízení Samsung mohou podporovat Knox, některá nemusí. Než zařízení Samsung koupíte a nasadíte, ověřte si u prodejce, jestli je kompatibilní se systémem Knox.
 
-Následující modely zařízení Samsung nepodporují KNOX a aplikace Portál společnosti pro Android je nezaregistruje jako nativní zařízení s Androidem:
+> [!NOTE]
+> Registrace zařízení Samsung Knox může vyžadovat, abyste [povolili přístup k serverům Samsung](https://support.samsungknox.com/hc/articles/115013833108-Our-corporate-devices-are-behind-a-firewall-How-do-I-enable-Knox-Workspace-devices-to-contact-Samsung-servers). 
+
+Následující modely zařízení Samsung nepodporují Knox a aplikace Portál společnosti pro Android je nezaregistruje jako nativní zařízení s Androidem:
 
 | **Název zařízení** | **Číslo modelu zařízení** |
 | --- | --- |

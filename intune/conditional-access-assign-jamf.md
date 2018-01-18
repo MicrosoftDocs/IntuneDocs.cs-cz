@@ -1,12 +1,12 @@
 ---
-title: "Použití zásad dodržování předpisů pro zařízení spravovaná aplikací Jamf"
+title: "Dodržování zásad u zařízení spravovaných v aplikaci Jamf"
 titlesuffix: Azure portal
 description: "Zajistěte dodržování předpisů k lepšímu zabezpečení zařízení spravovaných aplikací Jamf."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 12/05/2017
+ms.date: 12/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,22 +15,17 @@ ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fd9a9444d5a91a44672d9e0a60fb6da961883986
-ms.sourcegitcommit: 548b9e6c1e50074a5ffb89160ae23ee3caa5ba65
+ms.openlocfilehash: c72de87b87775155672994163140e342b7ba99b4
+ms.sourcegitcommit: 000684953cbb3ceae0e2bcaa51186c9221f7aa86
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Vynucení dodržování předpisů v počítačích Mac spravovaných aplikací Jamf Pro
 
 |Platí pro: Intune na portálu Azure Portal |
 |--|
 |Hledáte dokumentaci k Intune na klasickému portálu? [Přejděte sem](/intune/introduction-intune?toc=/intune-classic/toc.json).|
-| |
-
-|Aktuálně ve verzi Private Preview|
-|--|
-|Funkce popsané v tomto tématu jsou zákazníkům momentálně k dispozici jen ve verzi Private Preview. Jakmile budou vydány pro všechny zákazníky, tato zpráva zmizí.|
 | |
 
 Pomocí Azure Active Directory a zásad podmíněného přístupu pro Microsoft Intune zajistíte, aby vaši koncoví uživatelé splňovali požadavky organizace. Tyto zásady můžete použít na počítače Mac, které jsou [spravované pomocí Jamf Pro](conditional-access-integrate-jamf.md). To vyžaduje přístup ke konzolám Intune a Jamf Pro.
@@ -48,7 +43,7 @@ Aplikaci Portál společnosti pro macOS v Jamf Pro byste měli nasadit jako inst
 2. Spusťte aplikaci Jamf Pro a pak přejděte do části **Správa počítače (Computer management)** > **Balíčky (Packages)**.
 3. Pomocí aplikace Portál společnosti pro macOS vytvořte nový balíček a pak klikněte na **Uložit**.
 4. V části **Computers (Počítače)** > **Policies (Zásady)** vyberte možnost **New (Nová)**.
-5. Nakonfigurujte nastavení zásad pomocí datové části **General** (Obecné). Měli byste nastavit: 
+5. Nakonfigurujte nastavení zásad pomocí datové části **General** (Obecné). Měli byste nastavit:
    - Trigger: Vyberte **Enrollment Complete** (Registrace dokončena) a **Recurring Check-in** (Opakované vrácení se změnami).
    - Execution Frequency (Četnost spuštění): Vyberte **Once per computer** (Jednou na počítač).
 6. Vyberte datovou část **Packages (Balíčky)** klikněte na **Configure (Konfigurovat)**.

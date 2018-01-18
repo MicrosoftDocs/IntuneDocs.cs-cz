@@ -15,11 +15,11 @@ ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c7947c9d047c6f206f9f93c389d418379fe8267a
-ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
+ms.openlocfilehash: 9650afefc8ba0ba782e95b28feaaf1aaceea8d7f
+ms.sourcegitcommit: 06abc5ccc8b868c9ff3ad3f8f62473a87b2da481
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Nastavení místního Exchange Connectoru pro Intune v Microsoft Intune Azure
 
@@ -30,7 +30,7 @@ Místní prostředí Exchange Serveru můžou pomocí místního Exchange Connec
 
 Pokud chcete nastavit připojení, které umožňuje komunikaci Microsoft Intune s místním Exchange Serverem, postupujte takto:
 
-1.  Stáhněte si místní Exchange Connector pro Intune z portálu Azure Portal.
+1.  Stáhněte si místní Exchange Connector pro Intune z Azure Portalu.
 2.  Nainstalujte a nakonfigurujte místní Exchange Connector pro Intune.
 3.  Ověřte připojení k Exchangi.
 
@@ -133,6 +133,13 @@ Až Exchange Connector připojení nastaví, mobilní zařízení přidružená 
 
 > [!NOTE]
 > Pokud máte nainstalovaný místní Exchange Connector a odstraníte připojení k systému Exchange, musíte místní Exchange Connector z počítače, na kterém je nainstalovaný, odinstalovat.
+
+## <a name="on-premises-exchange-connector-high-availability-support"></a>Podpora vysoké dostupnosti místního konektoru Exchange 
+Jakmile konektor Exchange vytvoří připojení k Exchangi pomocí určeného serveru CAS může konektor zjišťovat další servery CAS. Pokud primární server CAS není dostupný, přepne konektor na další server CAS (pokud je k dispozici), až bude primární server CAS znovu dostupný. Tato funkce je ve výchozím nastavení zapnutá. K jejímu vypnutí použijte následující postup:
+1. Na serveru s nainstalovaným Exchange Connectorem přejděte ke složce %*ProgramData*%\Microsoft\Windows Intune Exchange Connector. 
+2. V textovém editoru otevřete soubor **OnPremisesExchangeConnectorServiceConfiguration.xml**.
+3. Pokud chcete funkci vypnout, změňte parametr &lt;IsCasFailoverEnabled&gt;**true**&lt;/IsCasFailoverEnabled&gt; na &lt;IsCasFailoverEnabled&gt;**false**&lt;/IsCasFailoverEnabled&gt;.    
+
 
 ## <a name="monitor-the-exchange-connector-activity"></a>Monitorování aktivity Exchange Connectoru
 

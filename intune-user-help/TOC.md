@@ -79,6 +79,7 @@
 #### [Odeslání chyb do společnosti](send-errors-to-your-it-admin-ios.md)
 #### [Odeslání chyb do Microsoftu](send-logs-to-microsoft-ios.md)
 #### [Našel se existující e-mailový účet společnosti](existing-company-email-account-found.md)
+#### [Bylo dosaženo limitu počtu zařízení](device-limit-wpj-ios.md)
 #### [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-ios.md)
 #### [Došlo k chybě](you-get-an-error-while-using-the-company-portal-app-ios.md)
 #### [Identifikace zařízení](you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md)
@@ -112,6 +113,7 @@
 #### [Toto zařízení je trochu jiné](device-little-different-jamf.md)
 #### [Vyhledání sériového čísla](how-do-i-find-the-serial-number-on-my-device-macos.md)
 #### [Identifikace zařízení](you-are-asked-to-identify-your-device-when-trying-to-enroll-macos.md)
+#### [Bylo dosaženo limitu počtu zařízení](device-limit-wpj-macos.md)
 
 ## [Použití zařízení s Windows](using-your-windows-device-with-intune.md)
 ### [Co se stane při registraci zařízení s Windows 10?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)
