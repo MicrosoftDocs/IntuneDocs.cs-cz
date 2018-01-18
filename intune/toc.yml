@@ -1,4 +1,4 @@
-- name: Úvod
+- name: Přehled
   href: introduction-intune.md
   expanded: true
   items:
@@ -22,24 +22,13 @@
           href: whats-new-archive.md
         - name: Archiv novinek (klasický portál)
           href: whats-new-archive-classic.md
-    - name: Architektura z širší perspektivy
-      href: high-level-architecture.md
-    - name: Životní cyklus zařízení a aplikací
-      href: introduction-device-app-lifecycles.md
-      items:
-        - name: Životní cyklus zařízení
-          href: device-lifecycle.md
-        - name: Životní cyklus aplikace
-          href: app-lifecycle.md
-    - name: Typické scénáře
-      href: common-scenarios.md
     - name: Popis služby
       href: microsoft-intune-service-description.md
     - name: Známé problémy
       href: known-issues.md
     - name: Získání podpory
       href: get-support.md
-- name: Začínáme s Intune
+- name: Rychlý start
   href: get-started-evaluation.md
   items:
     - name: Navigace na Azure Portalu
@@ -54,6 +43,31 @@
       href: get-started-enroll.md
     - name: Přiřazení aplikací
       href: get-started-apps.md
+- name: Příručky k implementaci scénářů
+  items:
+    - name: Ochrana Exchange Online
+      href: exchange-online-protect.md
+    - name: Snížení nákladů na helpdesk
+      href: password-reset.md
+    - name: Zabránění neoprávněnému přístupu
+      href: data-outside-protect.md
+    - name: Zabránění únikům dat na nespravovaných zařízeních
+      href: data-leak-prevention.md
+    - name: Porovnání správy mobilních zařízení (MDM) a správy mobilních aplikací (MAM)
+      href: byod-technology-decisions.md
+- name: Koncepty
+  items:
+    - name: Architektura z širší perspektivy
+      href: high-level-architecture.md
+    - name: Životní cyklus zařízení a aplikací
+      href: introduction-device-app-lifecycles.md
+      items:
+        - name: Životní cyklus zařízení
+          href: device-lifecycle.md
+        - name: Životní cyklus aplikace
+          href: app-lifecycle.md
+    - name: Typické scénáře
+      href: common-scenarios.md
 - name: Nasazení plánu
   items:
     - name: Průvodce plánováním
@@ -79,18 +93,6 @@
           href: planning-guide-test-validation.md
         - name: Další materiály a zdroje informací
           href: planning-guide-resources.md
-    - name: Příručky k implementaci scénářů
-      items:
-        - name: Ochrana Exchange Online
-          href: exchange-online-protect.md
-        - name: Snížení nákladů na helpdesk
-          href: password-reset.md
-        - name: Zabránění neoprávněnému přístupu
-          href: data-outside-protect.md
-        - name: Zabránění únikům dat na nespravovaných zařízeních
-          href: data-leak-prevention.md
-        - name: Porovnání správy mobilních zařízení (MDM) a správy mobilních aplikací (MAM)
-          href: byod-technology-decisions.md
     - name: Průvodce migrací
       href: migration-guide.md
       items:
@@ -114,7 +116,7 @@
               href: migration-guide-drive-adoption.md
             - name: Typický cyklus migrace
               href: migration-guide-cycle.md
-- name: Postupy
+- name: Návody
   items:
     - name: Nastavení Intune
       href: setup-steps.md
@@ -214,35 +216,39 @@
         - name: Přidání aplikací
           href: apps-add.md
           items:
-            - name: Aplikace pro Android Store
-              href: store-apps-android.md
-            - name: Obchodní aplikace pro Android
-              href: lob-apps-android.md
-            - name: Aplikace pro iOS Store
-              href: store-apps-ios.md
-            - name: Obchodní aplikace pro iOS
-              href: lob-apps-ios.md
+            - name: Aplikace ze Storu
+              items:
+                - name: Aplikace pro Android Store
+                  href: store-apps-android.md
+                - name: Aplikace pro iOS Store
+                  href: store-apps-ios.md
+                - name: Aplikace pro Windows Phone 8.1 Store
+                  href: store-apps-windows-phone-8-1.md
+                - name: Aplikace pro Microsoft Store
+                  href: store-apps-windows.md
+                - name: Aplikace pro Android for Work
+                  href: apps-add-android-for-work.md
+                - name: Aplikace Office 365 pro Windows 10
+                  href: apps-add-office365.md
+                - name: Aplikace Office 365 pro macOS
+                  href: apps-add-office365-macos.md
+            - name: Vytvoření aplikace (obchodní)
+              items:
+                - name: Obchodní aplikace pro Android
+                  href: lob-apps-android.md
+                - name: Obchodní aplikace pro iOS
+                  href: lob-apps-ios.md
+                - name: Obchodní aplikace pro Windows Phone
+                  href: lob-apps-windows-phone.md
+                - name: Obchodní aplikace pro Windows
+                  href: lob-apps-windows.md
             - name: Webové aplikace
               href: web-app.md
-            - name: Aplikace pro Windows Phone 8.1 Store
-              href: store-apps-windows-phone-8-1.md
-            - name: Obchodní aplikace pro Windows Phone
-              href: lob-apps-windows-phone.md
-            - name: Aplikace pro Microsoft Store
-              href: store-apps-windows.md
-            - name: Obchodní aplikace pro Windows
-              href: lob-apps-windows.md
-            - name: Aplikace pro Android for Work
-              href: apps-add-android-for-work.md
-            - name: Aplikace Office 365 pro Windows 10
-              href: apps-add-office365.md
-            - name: Aplikace Office 365 pro macOS
-              href: apps-add-office365-macos.md
-        - name: Přiřazení aplikací
+        - name: Nasazení aplikací
           href: apps-deploy.md
         - name: Monitorování aplikací
           href: apps-monitor.md
-        - name: Zásady konfigurace aplikací
+        - name: Konfigurace aplikací
           href: app-configuration-policies-overview.md
           items:
             - name: iOS spravovaná zařízení
@@ -251,23 +257,25 @@
               href: app-configuration-policies-use-android.md
             - name: Spravované aplikace
               href: app-configuration-policies-managed-app.md
-        - name: Zřizovací profily aplikací pro iOS
-          href: app-provisioning-profile-ios.md
-        - name: Selektivní vymazání aplikací
-          href: apps-selective-wipe.md
-        - name: Práce s hromadně zakoupenými aplikacemi a knihami
-          href: vpp-apps.md
+            - name: Zřizovací profily aplikací pro iOS
+              href: app-provisioning-profile-ios.md
+            - name: Práce s hromadně zakoupenými aplikacemi a knihami
+              href: vpp-apps.md
+              items:
+                - name: Aplikace iOS VPP
+                  href: vpp-apps-ios.md
+                - name: Aplikace pro Microsoft Store pro firmy
+                  href: windows-store-for-business.md
+                - name: E-knihy pro iOS
+                  href: vpp-ebooks-ios.md
+            - name: Konfigurace aplikace Portál společnosti
+              href: company-portal-app.md
+            - name: Konfigurace Managed Browseru
+              href: app-configuration-managed-browser.md
+        - name: Ochrana aplikací
           items:
-            - name: Aplikace iOS VPP
-              href: vpp-apps-ios.md
-            - name: Aplikace pro Microsoft Store pro firmy
-              href: windows-store-for-business.md
-            - name: E-knihy pro iOS
-              href: vpp-ebooks-ios.md
-        - name: Konfigurace aplikace Portál společnosti
-          href: company-portal-app.md
-        - name: Konfigurace Managed Browseru
-          href: app-configuration-managed-browser.md
+            - name: Selektivní vymazání aplikací
+              href: apps-selective-wipe.md
     - name: Konfigurace zařízení
       href: device-profiles.md
       items:
@@ -435,8 +443,6 @@
                   href: app-protection-policy-settings-android.md
                 - name: Nastavení iOS
                   href: app-protection-policy-settings-ios.md
-                - name: Kontrola protokolů ochrany aplikací v nástroji Managed Browser
-                  href: app-protection-policy-settings-log.md
             - name: Ověření zásad ochrany aplikací
               href: app-protection-policies-validate.md
             - name: Monitorování stavu uživatele u ochrany aplikací
@@ -554,45 +560,42 @@
           href: end-user-apps-ios.md
         - name: Jak získat aplikace pro Windows
           href: end-user-apps-windows.md
-- name: Monitorování a odstraňování potíží
-  items:
-    - name: Pomoc uživatelům s řešením problémů
-      href: help-desk-operators.md
-    - name: Protokoly auditu pro aktivity v Intune
-      href: monitor-audit-logs.md
-    - name: Použití datového skladu Intune
-      href: reports-nav-create-intune-reports.md
+    - name: Monitorování a odstraňování potíží
       items:
-        - name: Protokol změn pro datový sklad
-          href: reports-changelog.md
-        - name: Připojení k datovému skladu pomocí Power BI
-          href: reports-proc-get-a-link-powerbi.md
-        - name: Vytvoření sestavy z datového kanálu OData pomocí Power BI
-          href: reports-proc-create-with-odata.md
-- name: Automatizace a přizpůsobení
-  items:
-    - name: Konfigurace vlastních nastavení zařízení
-      href: custom-settings-configure.md
+        - name: Pomoc uživatelům s řešením problémů
+          href: help-desk-operators.md
+        - name: Protokoly auditu pro aktivity v Intune
+          href: monitor-audit-logs.md
+        - name: Kontrola protokolů ochrany aplikace
+          href: app-protection-policy-settings-log.md
+    - name: Automatizace a přizpůsobení
       items:
-        - name: Vytvoření profilu Wi-Fi s předsdíleným klíčem
-          href: wi-fi-profile-shared-key.md
-        - name: Android
-          href: custom-settings-android.md
+        - name: Konfigurace vlastních nastavení zařízení
+          href: custom-settings-configure.md
           items:
-            - name: Profil sítě VPN pro jednotlivé aplikace
-              href: android-pulse-secure-per-app-vpn.md
-            - name: Povolení a blokování aplikací pro Samsung Knox Standard
-              href: samsung-knox-apps-allow-block.md
-        - name: iOS
-          href: custom-settings-ios.md
-        - name: macOS
-          href: custom-settings-macos.md
-        - name: Windows Phone 8.1
-          href: custom-settings-windows-phone-8-1.md
-        - name: Windows 10
-          href: custom-settings-windows-10.md
-        - name: Android for Work
-          href: custom-settings-android-for-work.md
+            - name: Vytvoření profilu Wi-Fi s předsdíleným klíčem
+              href: wi-fi-profile-shared-key.md
+            - name: Android
+              href: custom-settings-android.md
+              items:
+                - name: Profil sítě VPN pro jednotlivé aplikace
+                  href: android-pulse-secure-per-app-vpn.md
+                - name: Povolení a blokování aplikací pro Samsung Knox Standard
+                  href: samsung-knox-apps-allow-block.md
+            - name: iOS
+              href: custom-settings-ios.md
+            - name: macOS
+              href: custom-settings-macos.md
+            - name: Windows Phone 8.1
+              href: custom-settings-windows-phone-8-1.md
+            - name: Windows 10
+              href: custom-settings-windows-10.md
+            - name: Android for Work
+              href: custom-settings-android-for-work.md
+        - name: Zavedení obchodních aplikací pro Windows bokem (mimo Store)
+          href: app-sideload-windows.md
+- name: Informace pro vývojáře
+  items:
     - name: Ochrana aplikací pomocí sady Intune App SDK
       href: app-sdk.md
       items:
@@ -612,6 +615,15 @@
           href: app-sdk-cordova.md
         - name: Komponenta Xamarin sady Intune App SDK
           href: app-sdk-xamarin.md
+    - name: Použití datového skladu Intune
+      href: reports-nav-create-intune-reports.md
+      items:
+        - name: Protokol změn pro datový sklad
+          href: reports-changelog.md
+        - name: Připojení k datovému skladu pomocí Power BI
+          href: reports-proc-get-a-link-powerbi.md
+        - name: Vytvoření sestavy z datového kanálu OData pomocí Power BI
+          href: reports-proc-create-with-odata.md
     - name: Vykazování pomocí rozhraní API datového skladu Intune
       href: reports-nav-intune-data-warehouse.md
       items:
@@ -642,10 +654,12 @@
               href: reports-ref-user-device.md
             - name: Referenční informace pro entitu uživatele
               href: reports-ref-user.md
-    - name: Rozhraní Intune Graph API
+    - name: Používání Azure AD pro přístup k rozhraním Intune API v Microsoft Graphu
       href: intune-graph-apis.md
       items:
-        - name: Referenční informace o rozhraních Graph API pro Intune
-          href: 'https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview'
-- name: Glosář
-  href: intune-glossary.md
+        - name: Referenční dokumentace k rozhraní Intune API
+          href: 'https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/intune_graph_overview'
+- name: Prostředky
+  items:
+    - name: Glosář
+      href: intune-glossary.md
