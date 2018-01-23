@@ -2,23 +2,23 @@
 title: Aplikace | Dokumentace Microsoftu
 description: "Téma referenčních informací ke kategorii Aplikace pro kolekce entit v rozhraní API datového skladu Intune"
 keywords: "Datový sklad Intune"
-author: mattbriggs
-ms.author: mabrigg
+author: Erikre
+ms.author: erikre
 manager: angrobe
-ms.date: 07/31/2017
+ms.date: 12/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: A92DEF30-5D01-4774-9917-E26F5F0E2E68
-ms.reviewer: jeffgilb
+ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9fd14c985b4cedcd0575b2b6ea29e7aa4d8bb2d4
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: a4008aa1c5e8c8219b45fffd1b021965bb83be17
+ms.sourcegitcommit: d44c32aad3e84f6c0b296bdb010981d3a818befb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="reference-for-application-entities"></a>Referenční informace o entitách aplikací
 
@@ -37,7 +37,7 @@ Entita **AppRevision** obsahuje seznam všech verzí aplikací.
 | Vlastnost  | Popis | Příklad |
 |---------|------------|--------|
 | AppKey |Jedinečný identifikátor aplikace |123 |
-| ApplicationId |Jedinečný identifikátor aplikace – podobá se AppKey, ale tento klíč je přirozený |b66bc706-ffff-7437-0340-032819502773 |
+| ApplicationId |Jedinečný identifikátor aplikace – podobá se AppKey, ale tento klíč je přirozený. |b66bc706-ffff-7437-0340-032819502773 |
 | Revize |Verze, kterou uvedl správce během nahrávání binárního souboru |2 |
 | Název |Název aplikace |Excel |
 | Vydavatel |Vydavatel aplikace |Microsoft |
@@ -62,7 +62,7 @@ Entita **AppTypes** obsahuje seznam zdrojů instalace aplikace.
 | AppTypeKey |Náhradní klíč pro daný klíč |
 | AppTypeName |Typ aplikace |
 
-## <a name="example"></a>Příklad
+### <a name="example"></a>Příklad
 
 | AppTypeID  | Název | Popis |
 |---------|------------|--------|
@@ -91,7 +91,7 @@ Entita **VppProgramTypes** obsahuje seznam možných typů programu VPP pro apli
 | VppProgramTypeKey | Náhradní klíč pro daný klíč |
 | VppProgramTypeName | Typ programu VPP |
 
-## <a name="example"></a>Příklad
+### <a name="example"></a>Příklad
 
 | VppProgramID  | Název | Popis |
 |---------|------------|--------|
@@ -112,3 +112,26 @@ Entita **ApplicationInventory** zobrazuje seznam aplikací, které se na zaříz
 | ApplicationName | Název aplikace |
 | ApplicationVersion | Verze aplikace |
 | BundleSize | Velikost aplikace v bajtech |
+
+## <a name="mobileappinstallstate"></a>MobileAppInstallState
+
+Entita **MobileAppInstallState** představuje stav instalace mobilní aplikace po jejím přiřazení do skupiny obsahující zařízení, uživatele, nebo obě tyto možnosti.
+
+| Vlastnost | Popis |
+|---|---|
+| AppInstallStateKey | Jedinečné ID stavu instalace aplikace pro váš účet |
+| AppInstallState | Hodnota výčtu stavu instalace aplikace |
+| AppInstallStateName | Název stavu instalace aplikace |
+
+## <a name="mobileappdeviceuserinstallstatus"></a>MobileAppDeviceUserInstallStatus
+
+**MobileAppDeviceUserInstallStatus** představuje stav instalace mobilní aplikace pro dané zařízení a uživatele.
+
+| Vlastnost | Popis |
+|---|---|
+| DateKey | Klíč data záznamu stavu instalace aplikace |
+| AppKey | Klíč mobilní aplikace, který se používá k identifikaci instance AppRevision |
+| DeviceKey | Klíč cílového zařízení, který se používá k identifikaci instance Device |
+| UserKey | Klíč cílového uživatele, který se používá k identifikaci instance User |
+|AppInstallStateKey | Klíč stavu instalace aplikace, který se používá k identifikaci instance MobileAppInstallState |
+| ErrorCode | Kód chyby, který vrací instalační program aplikace, mobilní platforma nebo služba, které se instalace aplikace týká |

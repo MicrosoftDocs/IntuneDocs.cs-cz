@@ -12,14 +12,14 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: d10b2d64-8c72-4e9b-bd06-ab9d9486ba5e
-ms.reviewer: jeffgilb
+ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3e4dcd7767620d6d3939686f69ad9d72f6a2d8e2
-ms.sourcegitcommit: e692be57ec7044dfc224b70941affbfd7efba421
+ms.openlocfilehash: 83ef0050380b8b5e3741dc7b8ea57574df6df658
+ms.sourcegitcommit: d44c32aad3e84f6c0b296bdb010981d3a818befb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps"></a>Správa přenosu dat mezi aplikacemi pro iOS
 ## <a name="manage-ios-apps"></a>Správa aplikací pro iOS
@@ -91,7 +91,7 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) je **povinná** pro za�
 
 6.  Přenos dat bude tentokrát úspěšný a dokument se v aplikaci označí firemní identitou. Kromě toho se data zpracovávají v pracovním kontextu a nastavení zásad jsou použitá odpovídajícím způsobem.
 
-### <a name="validate-user-upn-setting-for-third-party-emm"></a>Ověření nastavení hlavního názvu uživatele (UPN) pro řešení EMM (Enterprise Mobility Management) jiného výrobce
+### <a name="validate-user-upn-setting-for-third-party-emm"></a>Ověření nastavení hlavního názvu uživatele (UPN) pro řešení MDM jiného výrobce
 
 Až nakonfigurujete nastavení hlavního názvu uživatele (UPN), měli byste ověřit schopnost aplikace pro iOS přijmout zásady ochrany aplikací Intune a vyhovět jim.
 

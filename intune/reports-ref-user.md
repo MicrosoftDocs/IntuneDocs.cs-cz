@@ -2,33 +2,33 @@
 title: "Uživatel – datový sklad Intune | Dokumentace Microsoftu"
 description: "Referenční téma pro kategorii Uživatel v kolekcích entit v rozhraní API datového skladu Intune"
 keywords: "Datový sklad Intune"
-author: mattbriggs
-ms.author: mabrigg
+author: erikre
+ms.author: erikre
 manager: angrobe
-ms.date: 11/14/2017
+ms.date: 12/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: C29A6EEA-72B7-427E-9601-E05B408F3BB0
-ms.reviewer: jeffgilb
+ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 2d81d17bc9489900f9d17101db1f1496ba8d55e9
-ms.sourcegitcommit: d26930f45ba9e6292a49bcb08defb5b3f14b704b
+ms.openlocfilehash: 1f213cb735ab4dcad20c97b5924fef98774192ce
+ms.sourcegitcommit: d44c32aad3e84f6c0b296bdb010981d3a818befb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="reference-for-user-entity"></a>Referenční informace pro entitu uživatele
 
-Kategorie **Uživatel** obsahuje entitu **User**, která definuje vlastnosti uživatele a agenta v datovém modelu.
+Kategorie **Uživatel** obsahuje entitu **Uživatel**, která definuje vlastnosti uživatele datového modelu.
 
 ## <a name="user"></a>Uživatel
 
 Entita **User** obsahuje seznam všech uživatelů Azure Active Directory (Azure AD) s přiřazenými licencemi ve vaší společnosti.
 
-Kolekce entit **Uživatel** obsahuje data za poslední měsíc. Tyto záznamy zahrnují stavy uživatelů za dobu shromažďování dat i v případě odebrání uživatele. Uživatel například může být přidaný do Intune a potom v průběhu posledního měsíce dojde k jeho odebrání. Přestože tento uživatel není v době vytvoření sestavy přítomen, existují data o uživateli a stavu z předchozího měsíce. Můžete vytvořit sestavu, která ukazuje trvání historické přítomnosti uživatele ve vašich datech.
+Kolekce entit **Uživatel** obsahuje uživatelská data. Tyto záznamy zahrnují stavy uživatelů za dobu shromažďování dat i v případě odebrání uživatele. Uživatel například může být přidaný do Intune a potom v průběhu posledního měsíce dojde k jeho odebrání. Přestože tento uživatel není v době vytvoření sestavy přítomen, existují data o uživateli a stavu z předchozího měsíce. Můžete vytvořit sestavu, která ukazuje trvání historické přítomnosti uživatele ve vašich datech.
 
 | Vlastnost  | Popis | Příklad |
 |---------|------------|--------|
@@ -45,5 +45,5 @@ Kolekce entit **Uživatel** obsahuje data za poslední měsíc. Tyto záznamy za
 | RowLastModifiedDateTimeUTC |Datum a čas ve standardu UTC, kdy se tento záznam v datovém skladu naposledy změnil  |23.11.2016 12:00:00 |
 
 ## <a name="next-steps"></a>Další kroky
- - Kolekci entit **Aktuální uživatel** můžete použít k omezení dat uživatelů na uživatele, kteří jsou aktuálně aktivní. Další informace najdete v tématu [Referenční informace pro entitu aktuálního uživatele](reports-ref-current-user.md). 
+ - Kolekci entit **Aktuální uživatel** můžete použít k omezení dat uživatelů na uživatele, kteří jsou aktuálně aktivní. Další informace najdete v tématu [Referenční informace pro entitu aktuálního uživatele](reports-ref-current-user.md).
  - Další informace o tom, jak datový sklad sleduje dobu života uživatele v Intune, získáte v článku věnovaném [reprezentaci doby života uživatele v datovém skladu Intune](reports-ref-user-timeline.md).
