@@ -124,7 +124,7 @@
         - name: Podporované konfigurace
           href: supported-devices-browsers.md
           items:
-            - name: Využití šířky pásma sítě
+            - name: Konfigurace sítě
               href: network-bandwidth-use.md
         - name: Přihlášení k Intune
           href: account-sign-up.md
@@ -166,6 +166,8 @@
               href: windows-bulk-enroll.md
             - name: Program Windows AutoPilot Deployment
               href: enrollment-autopilot.md
+            - name: Obrazovka stavu registrace
+              href: windows-enrollment-status.md
         - name: Nastavení registrace zařízení s Androidem
           href: android-enroll.md
         - name: Nastavení registrace zařízení s iOSem
