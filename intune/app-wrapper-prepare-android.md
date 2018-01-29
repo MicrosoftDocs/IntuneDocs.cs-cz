@@ -14,11 +14,11 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a691786ce2ee975086899844b285a91f676aa71f
-ms.sourcegitcommit: e76dbd0882526a86b6933ace2504f442e04de387
+ms.openlocfilehash: 1673fa1e9c580c1554537530341f87b1580e79eb
+ms.sourcegitcommit: 53d272defd2ec061dfdfdae3668d1b676c8aa7c6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro Android na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -81,7 +81,7 @@ Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umíst
 |Vlastnost|Informace|Příklad|
 |-------------|--------------------|---------|
 |**-InputPath**&lt;String&gt;|Cesta ke zdrojové aplikaci pro Android (.apk).| |
-|**-OutputPath**&lt;String&gt;|Cesta k výstupní aplikaci pro Android. Když je to cesta ke stejnému adresáři jako InputPath, vytváření balíčků selže.| |
+ |**-OutputPath**&lt;String&gt;|Cesta k výstupní aplikaci pro Android. Když je to cesta ke stejnému adresáři jako InputPath, vytváření balíčků selže.| |
 |**-KeyStorePath**&lt;String&gt;|Cesta k souboru v úložišti klíčů s dvojicí veřejného a privátního klíče, které se používají k podpisu.|Ve výchozím nastavení jsou soubory v úložišti klíčů uložené ve složce „C:\Program Files (x86)\Java\jreX.X.X_XX\bin“. |
 |**-KeyStorePassword**&lt;SecureString&gt;|Heslo použité k dešifrování úložiště klíčů. Android vyžaduje, aby všechny balíčky aplikace (.apk) byly podepsané. Ke generování hesla k úložišti klíčů (parametr KeyStorePassword) použijte nástroj Java keytool. Další informace o úložišti klíčů Java si můžete přečíst [tady](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html).| |
 |**-KeyAlias**&lt;String&gt;|Název klíče, který se má použít pro podepisování.| |
@@ -115,7 +115,7 @@ Zabalená aplikace a soubor protokolu se vygenerují a uloží do zadané výstu
 
 ## <a name="how-often-should-i-rewrap-my-android-application-with-the-intune-app-wrapping-tool"></a>Jak často mám balit svoji aplikaci pro Android pomocí nástroje Intune App Wrapping Tool?
 Hlavní situace, ve kterých potřebujete znovu zabalit svoje aplikace, jsou tyto:
-* Aplikace sama vydala novou verzi.
+* Aplikace sama vydala novou verzi. Do konzoly Intune byla zabalena a nahrána předchozí verze aplikace.
 * Nástroj Intune App Wrapping Tool for Android vydal novou verzi, která přináší důležité opravy chyb nebo nové specifické funkce zásad ochrany aplikace Intune. Pro [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) se toto děje každých 6–8 týdnů prostřednictvím úložiště GitHub.
 
 Mezi osvědčené postupy pro opětovné balení patří: 
@@ -144,6 +144,32 @@ Pro zabránění potenciálnímu falšování identity, zpřístupnění informa
 -   Aplikace musí pocházet z důvěryhodného zdroje.
 
 -   Zabezpečte výstupní adresář se zabalenou aplikací. Zvažte použití adresáře na úrovni uživatele pro výstup.
+
+## <a name="requiring-user-login-prompt-for-an-automatic-app-we-service-enrollment-requiring-intune-app-protection-policies-in-order-to-use-your-wrapped-android-lob-app-and-enabling-adal-sso-optional"></a>Vyžadování výzvy k přihlášení uživatele při automatické registraci služby APP-WE, vyžadování zásad ochrany aplikací Intune k tomu, aby bylo možné použít zabalenou obchodní aplikaci pro Android, a povolení jednotného přihlašování ADAL (volitelné)
+
+Následující část obsahuje postup pro vyžadování výzvy uživateli při spuštění aplikace pro registraci služby APP-WE (v této části to označujeme jako **výchozí registraci**) a vyžadování zásad ochrany aplikací Intune, aby zabalenou obchodní aplikaci pro Android mohli používat jenom uživatelé s ochranou Intune. Obsahuje také postup pro povolení jednotného přihlašování pro zabalenou obchodní aplikaci pro Android. 
+
+> [!NOTE] 
+> Mezi výhody **výchozí registrace** patří zjednodušený způsob získání zásad ze služby APP-WE pro aplikaci na daném zařízení.
+
+### <a name="general-requirements"></a>Obecné požadavky
+* Tým pro sadu Intune SDK bude vyžadovat ID vaší aplikace. Tento údaj najdete na portálu [Azure Portal](https://portal.azure.com/) v části **Všechny aplikace** ve sloupci pro **ID aplikace**. Vhodným způsobem, jak kontaktovat tým pro sadu Intune SDK, je odeslání e-mailu na adresu msintuneappsdk@microsoft.com.
+     
+### <a name="working-with-the-intune-sdk"></a>Práce se sadou Intune SDK
+Tyto pokyny se týkají všech aplikací pro Android a Xamarin, u kterých chcete při použití na zařízení koncového uživatele vyžadovat zásady ochrany aplikací Intune.
+
+1. Nakonfigurujte ADAL pomocí postupu, který je uvedený v [příručce Intune SDK pro Android](https://docs.microsoft.com/en-us/intune/app-sdk-android#configure-azure-active-directory-authentication-library-adal).
+> [!NOTE] 
+> Termín „ID klienta“, který se váže na vaši aplikaci, je shodný s termínem „ID aplikace“ z portálu Azure Portal, který se váže na vaši aplikaci. 
+* Pokud chcete povolit jednotné přihlašování, použijte postup uvedený v části Obvyklé konfigurace ADAL v bodě 2.
+
+2. Povolte výchozí registraci tak, že do manifestu vložíte následující hodnotu: ```xml <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />```
+> [!NOTE] 
+> Musí jít o jedinou integraci MAM-WE v dané aplikaci. Pokud existují další pokusy o volání rozhraní API instance MAMEnrollmentManager, může docházet ke konfliktům.
+
+3. Povolte požadované zásady MAM tak, že do manifestu vložíte následující hodnotu: ```xml <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />```
+> [!NOTE] 
+> Tím vynutíte, aby si uživatel na zařízení stáhl Portál společnosti a před použitím provedl postup výchozí registrace.
 
 ### <a name="see-also"></a>Viz taky
 - [Rozhodování o způsobu přípravy aplikací na jejich správu v Microsoft Intune](apps-prepare-mobile-application-management.md)

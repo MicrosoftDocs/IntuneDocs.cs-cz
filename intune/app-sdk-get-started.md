@@ -5,7 +5,7 @@ keywords:
 author: erikre
 manager: angrobe
 ms.author: erikre
-ms.date: 11/03/2017
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: bd7d48a6511b1ae8ecf5a6f413ae2f682434244c
-ms.sourcegitcommit: e76dbd0882526a86b6933ace2504f442e04de387
+ms.openlocfilehash: 546c5d3f373b863e75afa05b7e9bd842f8a8eb46
+ms.sourcegitcommit: 53d272defd2ec061dfdfdae3668d1b676c8aa7c6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
 
@@ -34,7 +34,7 @@ Aplikaci *nemusíte* registrovat. Interní obchodní aplikace nasazuje správce 
 
 ### <a name="if-your-app-will-be-released-to-a-public-app-store-like-the-apple-app-store-or-google-play"></a>Pokud bude vaše aplikace vydána ve veřejném obchodě s aplikacemi, například Apple App Storu nebo Google Play:
 
-_**Musíte**_ aplikaci nejdřív zaregistrovat ve službě Microsoft Intune a odsouhlasit podmínky registrace. Správci IT potom můžou u podporované aplikace použít zásady ochrany aplikací. Ta pak bude uvedená jako partnerská aplikace Intune.
+_**Musíte**_ aplikaci nejdřív zaregistrovat ve službě Microsoft Intune a odsouhlasit podmínky registrace. Správci IT potom můžou u spravované aplikace použít zásady ochrany aplikací. Ta pak bude uvedená jako partnerská aplikace Intune.
 
 Do té doby, než bude registrace dokončena a potvrzena týmem Microsoft Intune, nebudou mít správci Intune možnost použít zásady ochrany aplikací na přímý odkaz na vaši aplikaci. Microsoft vaši aplikací přidá také na [stránku partnerů Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps). Tady se zobrazí ikona aplikace označující, že aplikace podporuje zásady ochrany aplikací Intune.
 
@@ -60,8 +60,6 @@ Pokud se v budoucnosti přímý odkaz na aplikaci změní, budete ji muset znovu
 > [!NOTE]
 > Informujte nás prosím v případě, že aktualizujete aplikaci novou verzí sady Intune App SDK.
 
-
-
 ## <a name="download-the-sdk-files"></a>Stažení souborů sady SDK
 
 Sady Intune App SDK pro nativní systémy iOS a Android jsou hostované v účtu služby Microsoft GitHub. Tato veřejná úložiště obsahují soubory sady SDK pro nativní iOS a Android:
@@ -75,10 +73,6 @@ Pokud je vaše aplikace vytvořená v Xamarinu nebo Cordově, použijte prosím 
 * [Modul plug-in Cordova sady Intune App SDK](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam)
 
 Doporučujeme, abyste si zaregistrovali na GitHubu účet, který je možné použít k operacím fork a pull v našich úložištích. GitHub vývojářům umožňuje komunikovat s naším produktovým týmem, hlásit problémy a dostávat rychlé odpovědi, zobrazit poznámky k verzi a posílat připomínky do Microsoftu. S dotazy ke GitHubu pro Intune App SDK se obraťte na msintuneappsdk@microsoft.com.
-
-
-
-
 
 ## <a name="enable-your-ios-or-android-app-for-app-protection-policy"></a>Povolení zásad ochrany aplikací v aplikaci pro iOS nebo Android
 
@@ -102,9 +96,6 @@ Budete potřebovat jednu z následujících příruček pro vývojáře, která 
  
  * [ID klienta AAD](https://docs.microsoft.com/en-us/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#optional-configure-a-native-client-application) pro vaši aplikaci musí být v rámci platforem Android a iOS jedinečné.
  
- 
- 
-
 ## <a name="configure-telemetry-for-your-app"></a>Konfigurace telemetrie pro vaši aplikaci
 
 Microsoft Intune shromažďuje data statistik využití vaši aplikace.
@@ -113,7 +104,10 @@ Microsoft Intune shromažďuje data statistik využití vaši aplikace.
 
     * Pokud se rozhodnete neodesílat telemetrická data sady SDK z aplikace do Microsoft Intune, musíte ve slovníku IntuneMAMSettings zakázat přenos telemetrie nastavením vlastnosti `MAMTelemetryDisabled` na hodnotu YES.
 
-* **Intune App SDK pro Android**: Telemetrické údaje se neprotokolují pomocí sady SDK.
+* **Sada Intune App SDK pro Android**: Sada Intune App SDK pro Android neřídí shromažďování dat z vaší aplikace. Aplikace Portál společnosti ve výchozím nastavení protokoluje telemetrická data. Tato data se odešlou do Microsoft Intune. V souladu se zásadami Microsoftu neshromažďujeme žádné identifikovatelné osobní údaje. 
+
+    * Pokud se koncoví uživatelé rozhodnou tato data neodesílat, musí v nastavení aplikace Portál společnosti vypnout telemetrii. Další informace najdete v článku [Vypnutí shromažďování dat Microsoftu o využití](https://docs.microsoft.com/en-us/intune-user-help/turn-off-microsoft-usage-data-collection-android). 
+
 
  Je viditelné číslo verze obchodní aplikace pro iOS a Android <!-- 1380712 -->
 
@@ -123,7 +117,7 @@ Obchodní aplikace v Intune teď zobrazují číslo verze aplikací pro iOS a An
 
 ### <a name="full-version-number"></a>Celé číslo verze
 
-Celé číslo verze identifikuje konkrétní vydanou verzi aplikace. Číslo se zobrazí jako _Verze_(_build_). Příklad: 2.2(2.2.17560800)
+Celé číslo verze identifikuje konkrétní vydanou verzi aplikace. Číslo se zobrazí jako _Verze_(_build_). Například 2.2(2.2.17560800). 
 
 Celé číslo verze tvoří dvě části:
 
@@ -163,7 +157,7 @@ Intune|iOS|Android|Popis|
 ### <a name="test-your-app"></a>Otestování aplikace
 Po dokončení nezbytných kroků k integraci vaší aplikace pro iOS nebo Android se sadou Intune App SDK se musíte ujistit, že mají uživatelé a správci IT povolené a funkční všechny zásady ochrany aplikací. K testování integrované aplikace budete potřebovat následující:
 
-* **Testovací účet Microsoft Intune**: Jestli chcete otestovat aplikaci podporující Intune s funkcemi ochrany aplikací Intune, budete potřebovat účet Microsoft Intune.
+* **Testovací účet Microsoft Intune**: Pokud budete chtít otestovat aplikaci spravovanou prostřednictvím Intune s funkcemi ochrany aplikací Intune, budete potřebovat účet Microsoft Intune.
 
     * Pokud jste nezávislý dodavatel softwaru a povolujete zásady ochrany aplikací v Intune pro aplikace ze Storu pro iOS nebo Android, dostanete po dokončení registrace v Microsoft Intune propagační kód (jak je uvedeno během registrace). Tento propagační kód vám umožní zaregistrovat si Microsoft Intune po zkušební verzi na další rok používání.
 
@@ -171,7 +165,7 @@ Po dokončení nezbytných kroků k integraci vaší aplikace pro iOS nebo Andro
 
 * **Zásady ochrany aplikací Intune**: Pokud chcete otestovat aplikaci se všemi zásadami ochrany aplikací Intune, měli byste vědět, jaké chování je očekávané pro každé nastavení zásad. Více najdete v popisech [zásad ochrany aplikací pro iOS](/intune-classic/deploy-use/ios-mam-policy-settings) a [zásad ochrany aplikací pro Android](/intune-classic/deploy-use/android-mam-policy-settings).
 
-* **Řešení potíží**: Pokud narazíte na problémy při ručním testování uživatelského prostředí vaší aplikace, podívejte se na [Řešení potíží se správou mobilních aplikací](/intune-classic/troubleshoot/troubleshoot-mam). Tento článek poskytuje nápovědu pro běžné problémy, dialogová okna a chybové zprávy, s kterými se můžete setkat v aplikacích podporujících Intune. 
+* **Řešení potíží**: Pokud narazíte na problémy při ručním testování uživatelského prostředí vaší aplikace, podívejte se na [Řešení potíží se správou mobilních aplikací](/intune-classic/troubleshoot/troubleshoot-mam). Tento článek poskytuje nápovědu pro běžné problémy, dialogová okna a chybové zprávy, se kterými se můžete setkat v aplikacích spravovaných prostřednictvím Intune. 
 
 ### <a name="badge-your-app-optional"></a>Označte si aplikaci (volitelné)
 
