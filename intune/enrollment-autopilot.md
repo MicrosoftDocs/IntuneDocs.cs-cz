@@ -11,11 +11,11 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: cbccff7ac58c98e85f5a038950feb5bd6590922b
-ms.sourcegitcommit: 5fd17a57989c6da3d325ed2e0018ce16fe20bb79
+ms.openlocfilehash: dae736aef57489880915c269cb30785371380a52
+ms.sourcegitcommit: 53d272defd2ec061dfdfdae3668d1b676c8aa7c6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="enroll-windows-devices-using-windows-autopilot-deployment-program"></a>Registrace zařízení s Windows pomocí programu Windows AutoPilot Deployment
 Program Windows AutoPilot Deployment zjednodušuje zřizování zařízení. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a AutoPilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s AutoPilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace atd. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows AutoPilotu](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot).
@@ -101,6 +101,7 @@ Pokud nemáte zájem o správu mobilních zařízení, máte možnost AutoPilot 
 - Synchronizovat profily vytvořené na jiném portálu
 - Zobrazit změny v přiřazeních profilu provedených na jiném portálu
 - Synchronizovat přiřazení profilu provedená na jiném portálu
+- Zobrazit změny v seznamu zařízení, které byly provedeny na jiném portálu
 
 ## <a name="next-steps"></a>Další kroky
 Po konfiguraci Windows AutoPilotu pro registrovaná zařízení s Windows 10 zjistěte, jak taková zařízení spravovat. Další informace najdete v článku [Co je správa zařízení v Microsoft Intune](https://docs.microsoft.com/intune/device-management).

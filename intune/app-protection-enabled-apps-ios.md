@@ -15,11 +15,11 @@ ms.assetid: 586d9440-3813-4dec-b865-8bd319befde0
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 44e96ba9fac5b95e6a508b7c2c314a49c04a6d30
-ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
+ms.openlocfilehash: a85207effabfb1f986ba3901051bd51886c5e7be
+ms.sourcegitcommit: 53d272defd2ec061dfdfdae3668d1b676c8aa7c6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací
 
@@ -41,7 +41,7 @@ U zařízení, která jsou **zaregistrovaná pro správu v Intune**, se koncové
 
 Zásady ochrany aplikací se použijí jenom při použití aplikace v pracovním kontextu, takže v závislosti na kontextu (pracovní nebo osobní účely) se může chování aplikací lišit.  
 
-U aplikací podporujících více identit použije Intune zásady ochrany aplikací jenom v případě, že koncový uživatel používá danou aplikaci v pracovním kontextu.  Koncovému uživateli se například při přístupu k pracovním datům zobrazí výzva k zadání kódu PIN.  U **aplikace Outlook** se koncovému uživateli zobrazí výzva k zadání kódu PIN při spouštění aplikace. U **aplikace OneDrive** k tomu dojde, když koncový uživatel použije pracovní účet.  U aplikací Microsoft **Word**, **PowerPoint* a **Excel** k tomu dojde, když koncový uživatel přistupuje k dokumentům uloženým v umístění OneDrive pro firmy pro danou společnost.
+U aplikací podporujících více identit použije Intune zásady ochrany aplikací jenom v případě, že koncový uživatel používá danou aplikaci v pracovním kontextu.  Koncovému uživateli se například při přístupu k pracovním datům zobrazí výzva k zadání kódu PIN.  U **aplikace Outlook** se koncovému uživateli zobrazí výzva k zadání kódu PIN při spouštění aplikace. U **aplikace OneDrive** k tomu dojde, když koncový uživatel použije pracovní účet.  U aplikací Microsoft **Word**, **PowerPoint** a **Excel** k tomu dojde, když koncový uživatel přistupuje k dokumentům uloženým v umístění OneDrive pro firmy pro danou společnost.
 ##  <a name="managing-user-accounts-on-the-device"></a>Správa uživatelských účtů v zařízení
 
 Intune podporuje nasazení zásad ochrany aplikací jenom na jeden uživatelský účet v každém zařízení.
@@ -65,5 +65,5 @@ Pokud používáte zařízení s iOSem, může se při pokusu o přidání druh�
 
 ## <a name="next-steps"></a>Další kroky
 [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](app-protection-enabled-apps-android.md)
-### <a name="see-also"></a>Související témata
+### <a name="see-also"></a>Viz taky
 [Vytvoření a nasazení zásad ochrany aplikací pomocí Microsoft Intune](app-protection-policies.md)

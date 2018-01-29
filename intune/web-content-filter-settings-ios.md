@@ -6,20 +6,19 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: angrobe
-ms.date: 12/03/2017
+ms.date: 1/18/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 16aa0f3c-8977-4495-9fbe-ca30ad278c9e
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0d0d8a6e198a58fc513645db68ae3a3ef84a3653
-ms.sourcegitcommit: a3a744ea55f38a360ca9f788c77a5b3018d1add5
+ms.openlocfilehash: 54202baa7871f38581f4828bb80213be0f88ef61
+ms.sourcegitcommit: 1a390b47b91e743fb0fe82e88be93a8d837e8b6a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/30/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="web-content-filter-settings-for-ios-devices"></a>Nastavení filtru webového obsahu pro zařízení s iOSem
 
@@ -47,8 +46,11 @@ Pokud nezadáte žádné adresy URL, koncoví uživatelé nebudou mít přístup
 ## <a name="configure-urls"></a>Konfigurovat adresy URL
 
 1. Podle potřeby v okně **Filtr webového obsahu** vyberte jedno z následujících nastavení:
-    - **Povolené adresy URL** – v okně **Povolené adresy URL** zadejte adresy URL, které chcete povolit (pomocí obcházení webového filtru Apple), a po každé z nich použijte Enter.
-    - **Blokované adresy URL** – v okně **Blokované adresy URL** zadejte adresy URL, které chcete blokovat (bez ohledu na nastavení webového filtru Apple), a po každé z nich použijte Enter.
+   - **Povolené adresy URL** – v okně **Povolené adresy URL** zadejte adresy URL, které chcete povolit (pomocí obcházení webového filtru Apple), a po každé z nich použijte Enter.
+     > [!NOTE]
+     > Adresy URL, které tady zadáte, nechcete vystavit webovému filtru Apple. Tyto adresy URL nepředstavují seznam jediných povolených webů. Pokud požadujete toto, použijte možnost **Jenom konkrétní weby**.
+
+   - **Blokované adresy URL** – v okně **Blokované adresy URL** zadejte adresy URL, které chcete blokovat (bez ohledu na nastavení webového filtru Apple), a po každé z nich použijte Enter.
 2. Po skončení klikněte na tlačítko **OK**.
 
 

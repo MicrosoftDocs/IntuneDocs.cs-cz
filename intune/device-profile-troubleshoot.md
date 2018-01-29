@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 11/09/2017
+ms.date: 1/17/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid:
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ff950ce35c491ca576dc9cc77ab561e2cfef0381
-ms.sourcegitcommit: 1df625330f4e8f7f661b5f2b9f16b5590971838d
+ms.openlocfilehash: 0bc5ad6e0467fe8a8c98c1ad2d71b967c18b8233
+ms.sourcegitcommit: 967a7c23b863123398c40b812e2eb02c921a0afe
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshooting-device-profiles-in-microsoft-intune"></a>Řešení potíží s profily zařízení v Microsoft Intune
 
@@ -45,42 +45,44 @@ Existují některé další osvědčené postupy, kterými se můžete řídit:
 ## <a name="how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned"></a>Jak dlouho trvá mobilnímu zařízení, než získá zásady nebo aplikace potom, co byly přiřazené?
 Po přiřazení zásady nebo aplikace se Intune hned začne pokoušet upozornit zařízení, že se mělo ohlásit službě Intune. To obvykle trvá méně než pět minut.
 
-Pokud se zařízení neohlásí po odeslání prvního oznámení, Intune provede tři další pokusy.  Když je zařízení offline (je třeba vypnuté nebo není připojené k síti), nemusí oznámení vůbec dostat. V takovém případě zařízení získá zásadu při dalším plánovaném ohlášení své přítomnosti ve službě Intune:
+Pokud se zařízení neohlásí po odeslání prvního oznámení, Intune provede tři další pokusy. Když je zařízení offline (je třeba vypnuté nebo není připojené k síti), nemusí oznámení vůbec dostat. V takovém případě zařízení získá zásadu při dalším plánovaném ohlášení své přítomnosti ve službě Intune:
 
 - iOS a macOS: Každých 6 hodin
-- Android: Každých 8 hodin.
-- Windows Phone: Každých 8 hodin.
-- Počítače s Windows 8.1 a Windows 10 zaregistrované jako zařízení: Každých 8 hodin.
+- Android: Každých 8 hodin
+- Windows Phone: Každých 8 hodin
+- Počítače s Windows 8.1 a Windows 10 zaregistrované jako zařízení: Každých 8 hodin
 
 Pokud se zařízení právě zaregistrovalo, četnost ohlašování bude vyšší:
 
 - iOS a macOS: Prvních 6 hodin každých 15 minut a potom každých 6 hodin
-- Android: Prvních 15 minut každé 3 minuty, další 2 hodiny každých 15 minut a potom každých 8 hodin.
-- Windows Phone: Prvních 15 minut každých 5 minut, další 2 hodiny každých 15 minut a potom každých 8 hodin.
-- Počítače s Windows zaregistrované jako zařízení: Prvních 30 minut každé 3 minuty a potom každých 8 hodin.
+- Android: Prvních 15 minut každé 3 minuty, další 2 hodiny každých 15 minut a potom každých 8 hodin
+- Windows Phone: Prvních 15 minut každých 5 minut, další 2 hodiny každých 15 minut a potom každých 8 hodin
+- Počítače s Windows zaregistrované jako zařízení: Prvních 30 minut každé 3 minuty a potom každých 8 hodin
 
 Uživatelé můžou taky otevřít aplikaci Portál společnosti a synchronizovat zařízení. Zásady se tak zkontrolují hned.
 
+U zařízení bez přidružení uživatele se frekvence synchronizace hned po registraci může lišit v rozpětí od několika hodin až po jeden den nebo více. Intune v různých intervalech odesílá žádosti, aby se zařízení službě ohlásilo. Záleží ale na příslušném zařízení, jestli to skutečně udělá. Po počáteční registraci zařízení se nedá podle typu registrace a zásad a profilů přiřazených k zařízení předpovědět, jak dlouho bude trvat, než se dané zařízení ohlásí. Po registraci zařízení a použití všech počátečních zásad by však zařízení mělo zjišťovat nové zásady přibližně každých 6 hodin.
+
 ## <a name="what-actions-cause-intune-to-immediately-send-a-notification-to-a-device"></a>Které akce způsobí, že Intune hned pošle oznámení do zařízení?
-Zařízení se ohlašují službě Intune, buď když dostanou oznámení, že se mají ohlásit, nebo při pravidelném plánovaném ohlašování.  Když akce, jako je vymazání, zamknutí, resetování hesla, přiřazení aplikace, přiřazení profilu (WiFi, VPN, e-mailu atd.), nebo přiřazení zásad cílí na konkrétního uživatele nebo zařízení, Intune se hned pokusí zařízení upozornit, že by se mělo ohlásit službě Intune a získat tyto aktualizace.
+Zařízení se ohlašují službě Intune, buď když dostanou oznámení, že se mají ohlásit, nebo při pravidelném plánovaném ohlašování. Když akce, jako je vymazání, zamknutí, resetování hesla, přiřazení aplikace, přiřazení profilu (Wi-Fi, VPN, e-mail atd.) nebo přiřazení zásad, cílí na konkrétního uživatele nebo zařízení, Intune se hned pokusí zařízení upozornit, že by se mělo ohlásit službě Intune a získat tyto aktualizace.
 
 Ostatní změny, jako je třeba úprava kontaktních informací na portálu společnosti, nezpůsobí okamžité odeslání oznámení.
 
-## <a name="if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-will-get-applied"></a>Pokud se stejnému zařízení nebo uživateli přiřadí několik zásad, jak poznám, které nastavení se použije?
+## <a name="if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied"></a>Pokud se stejnému zařízení nebo uživateli přiřadí několik zásad, jak poznám, které nastavení se použije?
 Pokud se stejnému uživateli nebo zařízení přiřadí dvě nebo více zásad, dochází k vyhodnocení toho, které nastavení se použije, na úrovni jednotlivých nastavení:
 
 -   Nastavení zásad dodržování předpisů mají vždycky přednost před nastaveními zásad konfigurace.
 
 -   Nejvíc omezující nastavení zásad dodržování předpisů se použije při vyhodnocení proti stejnému nastavení v jiné zásadě dodržování předpisů.
 
--   Pokud je nastavení zásady konfigurace v konfliktu s nastavením jiné zásady konfigurace, zobrazí se tento konflikt na portálu Azure Portal. Takové konflikty je třeba vyřešit ručně.
+-   Pokud je nastavení zásady konfigurace v konfliktu s nastavením jiné zásady konfigurace, zobrazí se tento konflikt na Azure Portalu. Takové konflikty je třeba vyřešit ručně.
 
-## <a name="what-happens-when-app-protection-policies-conflict-with-each-other-which-one-will-be-applied-to-the-app"></a>Co se stane, když zásady ochrany aplikací navzájem kolidují? Která se použije pro příslušnou aplikaci?
-Nejvíce omezující nastavení dostupná v zásadách ochrany aplikací jsou konfliktní hodnoty s výjimkou polí pro zadání čísel (jako je zadání PIN kódu před resetováním).  Pole pro zadání čísel se nastaví na stejnou hodnotu, jako kdybyste zásadu MAM vytvořili v konzole pomocí možnosti doporučeného nastavení.
+## <a name="what-happens-when-app-protection-policies-conflict-with-each-other-which-one-is-applied-to-the-app"></a>Co se stane, když zásady ochrany aplikací navzájem kolidují? Která se použije pro příslušnou aplikaci?
+Nejvíce omezující nastavení dostupná v zásadách ochrany aplikací jsou konfliktní hodnoty s výjimkou polí s počtem zadání (jako je zadání PIN kódu před resetováním). Pole s počtem zadání se nastaví na stejnou hodnotu, jako když zásadu MAM vytvoříte v konzole pomocí možnosti doporučeného nastavení.
 
-Konflikt nastane, když je nastavení dvou profilů stejné.  Představte si třeba, že jste nakonfigurovali dvě zásady MAM, které jsou stejné až na nastavení kopírování/vkládání.  V tomto scénáři se nastavení kopírování/vkládání nastaví na nejvíc omezující hodnotu, ale ostatní nastavení se použijí tak, jak se nakonfigurovala.
+Konflikt nastane, když je nastavení dvou profilů stejné. Představte si třeba, že jste nakonfigurovali dvě zásady MAM, které jsou stejné až na nastavení kopírování/vkládání. V tomto scénáři se nastavení kopírování/vkládání nastaví na nejvíce omezující hodnotu, ale ostatní nastavení se použijí tak, jak se nakonfigurovala.
 
-Pokud se jeden profil přiřadí aplikaci a uplatní se a pak se přiřadí druhý profil, bude mít první profil přednost a zůstane uplatněný, zatímco u druhého se zobrazí konflikt. Když se uplatní oba současně, což znamená, že neexistuje žádný předchozí profil, budou v konfliktu oba. Všechna konfliktní nastavení se nastaví na nejvíc omezující hodnoty.
+Pokud se jeden profil přiřadí aplikaci a uplatní se a pak se přiřadí druhý profil, bude mít první profil přednost a zůstane uplatněný, zatímco u druhého se zobrazí konflikt. Když se uplatní oba současně, což znamená, že neexistuje žádný předchozí profil, budou v konfliktu oba. Všechna konfliktní nastavení se nastaví na nejvíce omezující hodnoty.
 
 ## <a name="what-happens-when-ios-custom-policies-conflict"></a>Co se stane při konfliktu vlastních zásad iOS?
 Intune nevyhodnocuje datovou část konfiguračních souborů Apple ani vlastní profil OMA-URI (Open Mobile Alliance Uniform Resource Identifier). Slouží jenom jako mechanismus doručování.
@@ -131,8 +133,8 @@ Pokud odstraníte profil nebo odeberete zařízení ze skupiny, ke které byl pr
 Zařízení s Windows Phone neumožňují zmírnění zásad zabezpečení nastavených přes MDM nebo EAS potom, co je nastavíte. Nastavíte třeba **Minimální počet znaků hesla** na hodnotu 8 a tu se pak pokusíte snížit na 4. V zařízení se už používá více omezující profil.
 
 Pokud chcete profil změnit na méně zabezpečenou hodnotu, v závislosti na platformě zařízení může být potřeba resetovat zásady zabezpečení.
-Například ve Windows otevřete potáhnutím prstu z pravého okraje plochy panel **ovládacích tlačítek** a zvolte **Nastavení** &gt; **Ovládací panely**.  Vyberte aplet **Uživatelské účty** .
-V navigační nabídce vlevo najdete dole odkaz **Resetovat zásady zabezpečení** . Zvolte jej a potom zvolte tlačítko **Resetovat zásady** .
+Například ve Windows otevřete potáhnutím prstu z pravého okraje plochy panel **ovládacích tlačítek** a zvolte **Nastavení** &gt; **Ovládací panely**. Vyberte aplet **Uživatelské účty** .
+V navigační nabídce vlevo najdete dole odkaz **Resetovat zásady zabezpečení**. Zvolte jej a potom zvolte tlačítko **Resetovat zásady** .
 Jiná zařízení MDM, například zařízení se systémy Android, Windows Phone 8.1 (a novějšími) a iOS, může být potřeba vyřadit a znovu zaregistrovat do služby, abyste mohli použít méně omezující profil.
 
 

@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 12/11/2017
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,22 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 61306d1da81340ef2e922abdf944243eac8de219
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 1662245fdf9ba557fbc62fbb2e9c0e1aa29888b2
+ms.sourcegitcommit: 5877b650d93fc9a5e8f058f845acbdbfdff828b7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 Zjistěte, jaké jsme v uživatelském rozhraní aplikací udělali změny, které koncoví uživatelé uvidí v této verzi Microsoft Intune. Pomůže vám to při komunikaci s uživateli a aktualizaci vlastní dokumentace, kterou jste vytvořili za účelem podpory vašeho nasazení. Můžete také zjistit, jak lépe řešit problémy uživatelů, když požádají helpdesk o podporu pomocí Portálu společnosti.
+
+## <a name="week-of-december-11-2017"></a>Týden od 11. prosince 2017
+
+### <a name="end-user-messaging-for-accounts---1573558-1712-changes-to-be-made-for-other-platforms-for-1801--"></a>Zasílání zpráv o účtech koncovým uživatelům <!--1573558, 1712; changes to be made for other platforms for 1801-->
+
+Uživatelé webu Portál společnosti budou mít zablokované akce, které vyžadují, aby měl tenant přístup pro zápis. Uživatelům se zobrazí odpovídající chybová zpráva s vysvětlením, že probíhá údržba jejich účtu. Podobné změny budou brzy platit i pro aplikace na Portálu společnosti pro Android, iOS, macOS a Windows.
+
+![Chybová zpráva zobrazená při přesunu účtu](./media/account-move-rom-iwp-user-1712.png)
 
 ## <a name="week-of-november-27-2017"></a>Týden od 27. listopadu 2017
 
@@ -293,10 +301,10 @@ Managed Browser dostal aktualizované ikony pro verze aplikace pro Android i iOS
    <table id="wrapper">
       <tr>
          <td>
-            <img src="/intune/media/cp_manbro_before_042017.png" alt="The previous version of the Managed Browser app icon." width=200 height=366 align=center>
+            <img src="/intune/media/cp_manbro_before_042017.png" alt="The previous version of the Managed Browser app icon." width="200" height="366" align="center">
           </td>
           <td>
-             <img src="/intune/media/cp_manbro_after_042017.png" alt="The updated version of the Managed Browser app icon." width=200 height=366 align=center>
+             <img src="/intune/media/cp_manbro_after_042017.png" alt="The updated version of the Managed Browser app icon." width="200" height="366" align="center">
            </td>
       </tr>
    </table>
@@ -314,13 +322,13 @@ Aktualizace aplikace Portál společnosti pro Android zobrazuje indikátor průb
    <table id="wrapper">
       <tr>
          <td>
-            <img src="/intune/media/cp_android_connecting_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it." width=200 height=366 align=center>
+            <img src="/intune/media/cp_android_connecting_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it." width="200" height="366" align="center">
           </td>
           <td>
-             <img src="/intune/media/cp_android_signing_in_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Signing in' underneath it." width=200 height=366 align=center>
+             <img src="/intune/media/cp_android_signing_in_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Signing in' underneath it." width="200" height="366" align="center">
            </td>
            <td>
-              <img src="/intune/media/cp_android_checking_security_reqs_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Checking for security requirements' underneath it." width=200 height=366 align=center>
+              <img src="/intune/media/cp_android_checking_security_reqs_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Checking for security requirements' underneath it." width="200" height="366" align="center">
            </td>
       </tr>
    </table>
@@ -354,7 +362,7 @@ Od března bude aplikace Portál společnosti pro Android odpovídat [specifikac
    <table id="wrapper">
       <tr>
          <td>
-            <img src="/intune/media/cp_android_contactit_after.png" alt="The Company Portal app for Android displaying an updated version of the Contact IT tab. The tab shows available contact information for IT, including phone number, email address, IT website, and IT contact information." width=200 height=366 align=center>
+            <img src="/intune/media/cp_android_contactit_after.png" alt="The Company Portal app for Android displaying an updated version of the Contact IT tab. The tab shows available contact information for IT, including phone number, email address, IT website, and IT contact information." width="200" height="366" align="center">
           </td>
       </tr>
    </table>
@@ -374,13 +382,23 @@ Zde najdete plánované aktualizace našeho uživatelského rozhraní, které vy
 > [!Note]
 > Upozorňujeme, že následující obrázky mohou být náhledy a avizovaný produkt se od prezentovaných verzí může lišit.
 
+### <a name="user-experience-update-for-the-company-portal-app-for-ios---1412866--"></a>Aktualizace uživatelského prostředí aplikace Portál společnosti pro iOS <!--1412866-->
+
+Připravujeme k vydání důležitou aktualizaci uživatelského prostředí aplikace Portál společnosti pro iOS. Tato aktualizace bude mít zcela přepracovaný vizuální design, který bude zahrnovat modernizaci vzhledu a chování a lepší použitelnost a přístupnost. Všechny aktuální funkce aplikace Portál společnosti pro iOS budou zachované.
+
+V rámci programu Apple TestFlight vám nabízíme předprodejní verzi aktualizované aplikace Portál společnosti pro iOS, abyste si ji mohli vyzkoušet a sdělit nám svoje názory. Pro přístup k programu TestFlight se zaregistrujte na https://aka.ms/intune_ios_cp_testflight.
+
+![obrázky upoutávek na novou aplikaci Portál společnosti pro iOS](./media/ios-cp-app-redesign-1801-teaser.png)
+
 ### <a name="ui-updates-to-the-company-portal-website---1313244-part-2--"></a>Aktualizace uživatelského rozhraní webu Portál společnosti <!--1313244 part 2-->
 
 __Aktualizace Vybraných aplikací__ Přidali jsme na web vyhrazenou stránku, kde můžou uživatelé procházet aplikace, které jste speciálně vybrali, a upravili jsme uživatelské rozhraní sekce Vybrané na domovské stránce.
 
 ![Barevné dlaždice, které zobrazují aplikace. Jsou to velké barevné čtverce pod každou aplikací, pro které se použije primární barva v rámci loga aplikace. Sekce „Vybrané aplikace“ se zobrazuje v horní části aplikace Portál společnosti.](./media/cp_win10_colorful_tiles_after_1708.png)
 
-### <a name="see-also"></a>Související témata
+
+
+### <a name="see-also"></a>Viz taky
 * [Blog Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
 * [Plán cloudové platformy](https://www.microsoft.com/server-cloud/roadmap/Indevelopment.aspx?TabIndex=0&dropValue=Intune)
 * [Co je nového v Intune](https://docs.microsoft.com/intune/whats-new)

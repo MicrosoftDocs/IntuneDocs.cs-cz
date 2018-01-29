@@ -15,11 +15,11 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7877d0bb6ba7a9c9d51cd261a7f1fbf555f88961
-ms.sourcegitcommit: 0795870bfe941612259ebec0fe313a783a44d9b9
+ms.openlocfilehash: 632a5b2a5f6f5188ef034bdcff927af6a7fe1a59
+ms.sourcegitcommit: 53d272defd2ec061dfdfdae3668d1b676c8aa7c6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="enroll-android-devices"></a>Registrace zařízení s Androidem
 
@@ -58,7 +58,7 @@ Pokud jste to ještě neudělali, připravte se na správu mobilních zařízen�
    ![Snímek obrazovky zobrazující odkaz na konfiguraci vazby na Android for Work](./media/android-work-bind.png)
 
    b. **Přihlášení ke Googlu**<br>
-   Na přihlašovací stránce Googlu zadejte účet Google, který bude přidružený ke všem úlohám správy Androidu for Work v tomto tenantovi. Jedná se o účet Google, který správci IT ve vaší společnosti sdílejí a používají ke správě a publikování aplikací v konzole Play for Work.
+   Na přihlašovací stránce Googlu zadejte účet Google, který bude přidružený ke všem úlohám správy Androidu for Work v tomto tenantovi. Jedná se o účet Google, který správci IT ve vaší společnosti sdílejí a používají ke správě a publikování aplikací v konzole Play for Work. Můžete použít existující účet Google, nebo vytvořte nový.  Zvolený účet nesmí být přidružený k doméně G-Suite.
 
    c. **Zadání podrobností o organizaci**<br>
    Do pole **Název organizace** zadejte název vaší společnosti. Jako **Poskytovatel EMM (Enterprise Mobility Management)** by se měl zobrazit **Microsoft Intune**. Vyjádřete souhlas se smlouvou pro Android for Work a zvolte **Potvrdit**. Vaše žádost bude zpracována.

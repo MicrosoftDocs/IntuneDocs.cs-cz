@@ -5,7 +5,7 @@ keywords: Sada SDK
 author: erikre
 manager: angrobe
 ms.author: erikre
-ms.date: 11/28/2017
+ms.date: 01/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,18 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 7bb78d05f9225c681c5b8a3bb6f1fcee4581a0de
-ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
+ms.openlocfilehash: c3c6c82dcec8d85d0748d5966f6898f219b620d7
+ms.sourcegitcommit: 53d272defd2ec061dfdfdae3668d1b676c8aa7c6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
 > [!NOTE]
 > Možná si budete chtít nejdříve přečíst článek [Přehled sady Intune App SDK](app-sdk.md), který vysvětluje aktuální funkce sady SDK a popisuje postup přípravy integrace na jednotlivých podporovaných platformách.
 
-Sada Microsoft Intune App SDK pro Android umožňuje začlenit do vaší nativní aplikace pro Android zásady ochrany aplikací Intune (označované také jako **zásady APP** nebo MAM). Aplikace s podporou Intune je integrovaná se sadou Intune App SDK. Správci Intune můžou zásady ochrany aplikací snadno nasadit do vaší aplikace podporující Intune, když Intune tuto aplikaci aktivně spravuje.
+Sada Microsoft Intune App SDK pro Android umožňuje začlenit do vaší nativní aplikace pro Android zásady ochrany aplikací Intune (označované také jako **zásady APP** nebo MAM). Aplikace spravovaná prostřednictvím Intune je aplikace integrovaná se sadou Intune App SDK. Správci Intune můžou zásady ochrany aplikací snadno nasadit do vaší aplikace spravované prostřednictvím Intune, když Intune tuto aplikaci aktivně spravuje.
 
 
 ## <a name="whats-in-the-sdk"></a>Co je v sadě SDK
@@ -55,7 +55,7 @@ Intune App SDK je zkompilovaný projekt pro Android. Proto je do značné míry 
 Intune App SDK pro Android se při povolení zásad ochrany aplikací spoléhá na přítomnost [Portálu společnosti](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) v zařízení. Portál společnosti načítá zásady ochrany aplikací ze služeb Intune. Při inicializaci načte aplikace z Portálu společnosti zásadu a kód, který ji vynucuje.
 
 > [!NOTE]
-> Pokud Portál společnosti na zařízení chybí, aplikace s podporou Intune se chová jako běžná aplikace, která nepodporuje zásady ochrany aplikací Intune.
+> Pokud Portál společnosti na zařízení chybí, chová se aplikace spravovaná prostřednictvím Intune jako běžná aplikace, která nepodporuje zásady ochrany aplikací Intune.
 
 U ochrany aplikací bez registrace zařízení _**nemusí**_ uživatel registrovat zařízení přes aplikaci Portál společnosti.
 
@@ -875,7 +875,7 @@ Metodu na `MAMActivity` můžete také přepsat, aby mohla být aplikace informo
 
 ### <a name="implicit-identity-changes"></a>Implicitní změny identity
 
-Kromě schopnosti aplikace nastavit identitu se může změnit vlákno nebo identita objektu Context podle příchozího přenosu dat z jiné aplikace s podporou Intune a zásadami ochrany aplikací.
+Kromě schopnosti aplikace nastavit identitu se může vlákno nebo identita objektu Context změnit na základě příchozího přenosu dat z jiné aplikace spravované prostřednictvím Intune, která používá zásady ochrany aplikací.
 
 #### <a name="examples"></a>Příklady
 
@@ -947,7 +947,7 @@ Metoda `onMAMIdentitySwitchRequired` se volá u všech implicitních změn ident
 Operace vlákna uživatelského rozhraní běžně odesílají úlohy na pozadí do jiného vlákna. Aplikace s více identitami bude chtít zajistit, že tyto úlohy na pozadí probíhají pod správnou identitou. Často se jedná o stejnou identitu používanou aktivitou, která je odeslala. Z důvodu usnadnění a pomoci při zachování identity sada SDK MAM poskytuje `MAMAsyncTask` a `MAMIdentityExecutors`.
 #### <a name="mamasynctask"></a>MAMAsyncTask
 
-Pokud chcete používat `MAMAsyncTask`, nastavte úlohu AsynTask jednoduše tak, aby dědila z uvedené úlohy, a nahraďte `doInBackground` a `onPreExecute` metodou `doInBackgroundMAM` a `onPreExecuteMAM` v uvedeném pořadí. Konstruktor `MAMAsyncTask` převezme kontext aktivity. Například:
+Pokud chcete používat `MAMAsyncTask`, nastavte úlohu AsynTask jednoduše tak, aby dědila z uvedené úlohy, a nahraďte `doInBackground` a `onPreExecute` metodou `doInBackgroundMAM` a `onPreExecuteMAM` v uvedeném pořadí. Konstruktor `MAMAsyncTask` převezme kontext aktivity. Příklad:
 
 ```java
   AsyncTask<Object, Object, Object> task = new MAMAsyncTask<Object, Object, Object>(thisActivity) {
@@ -1353,6 +1353,32 @@ Níže najdete kompletní seznam povolených atributů stylu, prvků uživatelsk
 | Barva motivu | Ohraničení pole pro zadání PIN kódu při zvýraznění <br> Hypertextové odkazy |accent_color | Barva |
 | Logo aplikace | Velká ikona, která se zobrazuje na obrazovce pro zadání PIN kódu aplikace Intune | logo_image | Nákres |
 
+## <a name="requiring-user-login-prompt-for-an-automatic-app-we-service-enrollment-requiring-intune-app-protection-policies-in-order-to-use-your-sdk-integrated-android-lob-app-and-enabling-adal-sso-optional"></a>Vyžadování výzvy k přihlášení uživatele při automatické registraci služby APP-WE, vyžadování zásad ochrany aplikací Intune k tomu, aby bylo možné použít obchodní aplikaci pro Android, která je integrovaná se sadou SDK, a povolení jednotného přihlašování ADAL (volitelné)
+
+Následující část obsahuje postup pro vyžadování výzvy uživateli při spuštění aplikace pro registraci služby APP-WE (v této části to označujeme jako **výchozí registraci**) a vyžadování zásad ochrany aplikací Intune, aby obchodní aplikaci pro Android, která je integrovaná se sadou SDK, mohli používat jenom uživatelé s ochranou Intune. Obsahuje také postup pro povolení jednotného přihlašování pro obchodní aplikaci pro Android, která je integrovaná se sadou SDK. Tento postup se **nepodporuje** u aplikací pro store, které můžou používat uživatelé nevyužívající službu Intune.
+
+> [!NOTE] 
+> Mezi výhody **výchozí registrace** patří zjednodušený způsob získání zásad ze služby APP-WE pro aplikaci na daném zařízení.
+
+### <a name="general-requirements"></a>Obecné požadavky
+* Tým pro sadu Intune SDK bude vyžadovat ID vaší aplikace. Tento údaj najdete na portálu [Azure Portal](https://portal.azure.com/) v části **Všechny aplikace** ve sloupci pro **ID aplikace**. Vhodným způsobem, jak kontaktovat tým pro sadu Intune SDK, je odeslání e-mailu na adresu msintuneappsdk@microsoft.com.
+     
+### <a name="working-with-the-intune-sdk"></a>Práce se sadou Intune SDK
+Tyto pokyny se týkají všech aplikací pro Android a Xamarin, u kterých chcete při použití na zařízení koncového uživatele vyžadovat zásady ochrany aplikací Intune.
+
+1. Nakonfigurujte ADAL pomocí postupu, který je uvedený v [příručce Intune SDK pro Android](https://docs.microsoft.com/en-us/intune/app-sdk-android#configure-azure-active-directory-authentication-library-adal).
+> [!NOTE] 
+> Termín „ID klienta“, který se váže na vaši aplikaci, je shodný s termínem „ID aplikace“ z portálu Azure Portal. 
+* Pokud chcete povolit jednotné přihlašování, použijte postup uvedený v části Obvyklé konfigurace ADAL v bodě 2.
+
+2. Povolte výchozí registraci tak, že do manifestu vložíte následující hodnotu: ```xml <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />```
+> [!NOTE] 
+> Musí jít o jedinou integraci MAM-WE v dané aplikaci. Pokud existují další pokusy o volání rozhraní API instance MAMEnrollmentManager, může docházet ke konfliktům.
+
+3. Povolte požadované zásady MAM tak, že do manifestu vložíte následující hodnotu: ```xml <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />```
+> [!NOTE] 
+> Tím vynutíte, aby si uživatel na zařízení stáhl Portál společnosti a před použitím provedl postup výchozí registrace.
+
 ## <a name="limitations"></a>Omezení
 
 ### <a name="file-size-limitations"></a>Omezení velikosti souborů
@@ -1380,7 +1406,7 @@ Omezení formátu spustitelných souborů Dalvik se stává problémem u rozsáh
     
 ### <a name="exported-services"></a>Exportované služby
 
- Soubor AndroidManifest.xml zahrnutý v sadě Intune App SDK obsahuje službu **MAMNotificationReceiverService**, která musí být exportovanou službou, aby umožňovala Portálu společnosti odesílat oznámení do vylepšené aplikace. Služba zkontroluje volajícího, aby zajistila, že odesílat oznámení může jenom portál společnosti.
+ Soubor AndroidManifest.xml zahrnutý v sadě Intune App SDK obsahuje službu **MAMNotificationReceiverService**, která musí být exportovanou službou, aby umožňovala Portálu společnosti odesílat oznámení do spravované aplikace. Služba zkontroluje volajícího, aby zajistila, že odesílat oznámení může jenom portál společnosti.
 
 ### <a name="reflection-limitations"></a>Omezení reflexe
 Některé základní třídy (např. MAMActivity, MAMDocumentsProvider) obsahují metody (založené na původních základních třídách Androidu), které používají typy parametrů nebo návratové typy nacházející se nad určitými úrovněmi rozhraní API. Z tohoto důvodu nemusí být vždycky možné používat reflexi k výčtu všech metod součástí aplikací. Toto omezení se nevztahuje jenom na MAM. Jedná se o stejné omezení, které by se použilo v případě, že by aplikace samotná implementovala tyto metody ze základních tříd Androidu.

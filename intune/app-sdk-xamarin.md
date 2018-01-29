@@ -14,11 +14,11 @@ ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 4ef0f754980a9bc2823129c62f7100edbcdc7524
-ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
+ms.openlocfilehash: 73caf124e94994acf816c98f0788efdabe024cc4
+ms.sourcegitcommit: c3bd0d192d712fcfd52f64dd1377155796239fcb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-component"></a>Komponenta Xamarin sady Microsoft Intune App SDK
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 12/08/2017
 
 
 ## <a name="overview"></a>Přehled
-[Komponenta Xamarin sady Intune App SDK](https://components.xamarin.com/view/microsoft.intune.mam) umožňuje v aplikacích pro iOS a Android vytvořených pomocí Xamarinu povolit [zásady ochrany aplikací Intune](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune). Komponenta umožňuje vývojářům snadno do aplikací založených na Xamarinu začlenit funkce ochrany aplikace Intune.
+[Komponenta Xamarin sady Intune App SDK](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) umožňuje v aplikacích pro iOS a Android vytvořených pomocí Xamarinu povolit [zásady ochrany aplikací Intune](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune). Komponenta umožňuje vývojářům snadno do aplikací založených na Xamarinu začlenit funkce ochrany aplikace Intune.
 
 > [!NOTE]
 > Podpora sady Intune SDK pro Xamarin je v současné době dostupná ve verzi Preview. 
@@ -64,7 +64,7 @@ Aplikace Xamarinu vytvořené pomocí komponenty Xamarin sady Intune App SDK te�
 
 2. Přečtěte si [licenční podmínky](https://components.xamarin.com/license/microsoft.intune.mam) pro komponentu Microsoft Intune MAM Xamarin.
 
-3.  Stáhněte složku komponenty Xamarin sady Intune App SDK z [GitHubu](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) nebo [Xamarinu](https://components.xamarin.com/license/microsoft.intune.mam) a extrahujte ji. Oba soubory stažené v kroku 1 a 3 musí být na úrovni stejného adresáře.
+3.  Stáhněte složku komponenty Xamarin sady Intune App SDK z [GitHubu](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) nebo [Nuget.org](https://www.nuget.org/profiles/msintuneappsdk) a extrahujte ji. Oba soubory stažené v kroku 1 a 3 musí být na úrovni stejného adresáře.
 
 4.  Na příkazovém řádku jako správce spusťte `Xamarin.Component.exe install <.xam> file`.
 
@@ -75,37 +75,23 @@ Aplikace Xamarinu vytvořené pomocí komponenty Xamarin sady Intune App SDK te�
 
 
 ## <a name="enabling-intune-app-protection-polices-in-your-ios-mobile-app"></a>Povolení zásad ochrany aplikací Intune v mobilní aplikaci pro iOS
-1.  Abyste inicializovali sadu Intune App SDK, budete muset provést volání libovolného API ve třídě `AppDelegate.cs`. Například:
+1.  Při integraci sady Intune App SDK do mobilní aplikace pro iOS dodržujte obecné pokyny. Začněte od 3. kroku popsaného v [příručce pro vývojáře k sadě Intune App SDK pro iOS](app-sdk-ios.md#build-the-sdk-into-your-mobile-app).
+    **Důležité:** Povolení sdílení klíčenky aplikace je v sadě Visual Studio trochu jiné než v Xcode. Otevřete soubor Entitlements.plist aplikace a zkontrolujte, že je povolená možnost „Enable Keychain“ (Povolit klíčenku) a že jsou do oddílu přidané odpovídající skupiny pro sdílení klíčenky. Zkontrolujte, že je v poli „Custom Entitlements“ (Vlastní oprávnění) v možnostech podepsání sady prostředků aplikace pro iOS zadaný soubor Entitlements.plist, a to pro všechny kombinace konfigurace a platformy, které připadají v úvahu.
+2.  Jakmile součást přidáte a aplikaci správně nakonfigurujete, může aplikace začít používat rozhraní API sady Intune SDK. Aby to bylo možné, musíte přidat následující obor názvů:
 
       ```csharp
-      public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
-      {
-            Console.WriteLine ("Is Managed: {0}", IntuneMAMPolicyManager.Instance.PrimaryUser != null);
-            return true;
-      }
-
+      using Microsoft.Intune.MAM;
       ```
-
-2.  Když je teď komponenta přidaná a inicializovaná, můžete postupovat podle obecných kroků potřebných k začlenění App SDK do mobilní aplikace pro iOS. Kompletní dokumentaci k povolení nativních aplikací iOS najdete v tématu [Intune APP SDK pro iOS – Příručka vývojáře](app-sdk-ios.md).
-3. **Důležité**: Existuje několik modifikací, které jsou specifické pro aplikace iOS založené na Xamarinu. Abyste například zahrnuli ukázkovou aplikaci Xamarinu, kterou jsme zahrnuli do komponenty, je nutné při povolování skupin řetězců klíčů přidat následující kód. Tady je příklad skupin, které byste potřebovali mít ve skupinách přístupu řetězce klíčů:
-
-      ```xml
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-            <dict>
-                  <key>keychain-access-groups</key>
-                  <array>
-                        <string>$(AppIdentifierPrefix)com.xamarin.microsoftintunesample</string>
-                        <string>$(AppIdentifierPrefix)com.xamarin.microsoftintunesample.intunemam</string>
-                        <string>$(AppIdentifierPrefix)com.microsoft.intune.mam</string>
-                        <string>$(AppIdentifierPrefix)com.microsoft.adalcache</string>
-                  </array>
-            </dict>
-      </plist>
+3.    Aby aplikace mohly začít přijímat zásady ochrany, musíte je zaregistrovat do služby Intune MAM. Pokud aplikace k ověřování uživatelů používá knihovnu Azure Active Directory Authentication Library (ADAL), měla by aplikace po úspěšném ověření předat hlavní název uživatele (UPN) metodě registerAndEnrollAccount instance IntuneMAMEnrollmentManager:
+      ```csharp
+      IntuneMAMEnrollmentManager.Instance.RegisterAndEnrollAccount(string identity);
       ```
-
-Dokončili jste kroky potřebné k začlenění komponenty do aplikace iOS založené na Xamarinu. Pokud k vytvoření projektu využíváte Xcode, můžete použít `Intune App SDK Settings.bundle`. To vám při tvorbě projektu umožní zapínat a vypínat nastavení zásad Intune kvůli testování a ladění. Pokud chcete využít výhod této sady, postupujte podle kroků v tématu [Intune App SDK pro iOS – Příručka vývojáře](app-sdk-ios.md) a přečtěte si část o [ladění v Xcodu](app-sdk-ios.md#status-result-and-debug-notifications).
+      **Důležité:** Nezapomeňte přepsat výchozí nastavení knihovny ADAL sady Intune App SDK nastavením vaší aplikace. Můžete to udělat prostřednictvím slovníku IntuneMAMSettings v souboru Info.plist aplikace podle popisu v [příručce pro vývojáře k sadě Intune App SDK pro iOS](app-sdk-ios.md#configure-settings-for-the-intune-app-sdk) nebo můžete použít vlastnosti přepisu AAD v instanci IntuneMAMPolicyManager. Způsob se souborem Info.plist se doporučuje použít u aplikací se statickým nastavením ADAL. Vlastnosti přepisu se doporučují použít u aplikací, které tyto hodnoty zjišťují za běhu. 
+      
+      Pokud aplikace knihovnu ADAL nepoužívá a chcete, aby ověřování prováděla sada Intune SDK, musí aplikace volat metodu loginAndEnrollAccount instance IntuneMAMEnrollmentManager.
+      ```csharp
+       IntuneMAMEnrollmentManager.Instance.LoginAndEnrollAccount([NullAllowed] string identity);
+      ```
 
 ## <a name="enabling-app-protection-policies-in-your-android-mobile-app"></a>Povolení zásad ochrany aplikací v mobilní aplikaci pro Android
 U aplikací pro Android založených na Xamarinu, které nevyužívají architekturu uživatelského rozhraní, si přečtěte téma [Intune APP SDK pro Android – Příručka vývojáře](app-sdk-android.md) a postupujte podle něj. V aplikaci pro Android založené na Xamarinu je potřeba nahradit třídu, metody a aktivity jejich ekvivalentem MAM podle [tabulky](app-sdk-android.md#replace-classes-methods-and-activities-with-their-mam-equivalent), kterou v průvodci najdete. Pokud vaše aplikace nedefinuje třídu `android.app.Application`, budete ji muset vytvořit a zajistit, abyste dědili z `MAMApplication`.

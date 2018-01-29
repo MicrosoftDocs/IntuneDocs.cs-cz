@@ -6,20 +6,19 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 12/09/2017
+ms.date: 1/18/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: d567d85f-e4ee-458e-bef7-6e275467efce
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 36c495767d41c83c1393d837a808961ed9868bed
-ms.sourcegitcommit: 6d5c919286b0e285f709d9b918624b927f99f979
+ms.openlocfilehash: 3082bd52460bc9bd852edb3b560e96fb718a71c3
+ms.sourcegitcommit: 1a390b47b91e743fb0fe82e88be93a8d837e8b6a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configure-and-manage-scep-certificates-with-intune"></a>Konfigurace a správa certifikátů SCEP pomocí Intune
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -330,6 +329,9 @@ V této úloze:
 
     Klikněte na **Přihlásit** a zadejte své přihlašovací údaje správce služby Intune nebo přihlašovací údaje správce klienta s oprávněním pro globální správu.
 
+    > [!IMPORTANT]
+    > K uživatelskému účtu musí být přiřazená platná licence pro Intune. Pokud daný uživatelský účet nemá platnou licenci pro Intune, spuštění příkazu NDESConnectorUI.exe se nezdaří.
+
     Pokud vaše organizace používá proxy server a ten je vyžadovaný pro přístup serveru NDES k internetu, klikněte na **Použít proxy server** a potom zadejte název proxy serveru, port a přihlašovací údaje účtu pro připojení.
 
     Vyberte kartu **Upřesnit** a pak zadejte přihlašovací údaje pro účet, který má oprávnění **Vydávat a spravovat certifikáty** ve vaší vydávající certifikační autoritě, a pak klikněte na **Použít**.
@@ -349,7 +351,7 @@ Pokud chcete ověřit, jestli je služba spuštěná, spusťte prohlížeč a za
 3. V okně profilů zvolte **Vytvořit profil**.
 4. V okně **Vytvořit profil** zadejte **název** a **popis** profilu certifikátu SCEP.
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení pro tento certifikát SCEP. V současné době můžete pro nastavení omezení zařízení zvolit jednu z těchto platforem:
-    - **Android**
+    - **Androidemem**
     - **iOS**
     - **macOS**
     - **Windows Phone 8.1**

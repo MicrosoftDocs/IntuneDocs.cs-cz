@@ -1,6 +1,6 @@
 ---
-title: "Používání Azure AD pro přístup k rozhraní Intune Graph API"
-description: "Popisuje postup nutný pro aplikace, které používají pro přístup k rozhraní Intune Graph API službu Azure AD."
+title: "Používání Azure AD pro přístup k rozhraním Intune API v Microsoft Graphu"
+description: "Popisuje postup nutný pro aplikace, které používají pro přístup k rozhraní Intune API v Microsoft Graphu službu Azure AD."
 keywords: "intune graphapi c# powershell role oprávnění"
 author: vhorne
 manager: angrobe
@@ -13,20 +13,20 @@ ms.technology:
 ms.assetid: 79A67342-C06D-4D20-A447-678A6CB8D70A
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 351a066c8852125b6fbf26c039dd3718b63f8980
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 6637d7269f7620dc348b80533661afac8f12e0ba
+ms.sourcegitcommit: d6dc1211e9128c2e0608542b72d1caa4d6ba691d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="how-to-use-azure-ad-to-access-the-intune-graph-api"></a>Používání Azure AD pro přístup k rozhraní Intune Graph API
+# <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Používání Azure AD pro přístup k rozhraním Intune API v Microsoft Graphu
 
-Rozhraní [Microsoft Graph API](https://developer.microsoft.com/graph/) teď podporuje Microsoft Intune pomocí určitých rozhraní API a rolí oprávnění.  Rozhraní Graph API používá k ověřování a řízení přístupu službu Azure Active Directory (Azure AD).  
-Přístup k rozhraní Intune Graph API vyžaduje:
+Rozhraní [Microsoft Graph API](https://developer.microsoft.com/graph/) teď podporuje Microsoft Intune pomocí určitých rozhraní API a rolí oprávnění.  Rozhraní Microsoft Graph API používá k ověřování a řízení přístupu službu Azure Active Directory (Azure AD).  
+Přístup k rozhraním Intune API v Microsoft Graphu vyžaduje:
 
 - ID aplikace s těmito oprávněními:
 
-    - Oprávnění k volání služby Azure AD a rozhraní Graph API
+    - Oprávnění k volání služby Azure AD a rozhraní Microsoft Graph API
     - Obory oprávnění, které jsou relevantní pro konkrétní úlohy aplikace
 
 - Pověření uživatele s těmito oprávněními:
@@ -38,11 +38,11 @@ Přístup k rozhraní Intune Graph API vyžaduje:
 
 V tomto článku najdete:
 
-- Postup pro registraci aplikace s přístupem k rozhraní Graph API a příslušnými oprávněními rolí
+- Postup pro registraci aplikace s přístupem k rozhraní Microsoft Graph API a příslušnými oprávněními rolí
 
-- Popis rolí oprávnění rozhraní Intune Graph API
+- Popis rolí oprávnění rozhraní Intune API
 
-- Příklady ověřování rozhraní Intune Graph API pro C# a PowerShell
+- Příklady ověřování rozhraní Intune API pro C# a PowerShell
 
 - Popis postupu pro podporu více tenantů
 
@@ -53,9 +53,9 @@ Další informace najdete v tématech:
 - [Integrace aplikací s Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)
 - [Principy OAuth 2.0](https://oauth.net/2/)
 
-## <a name="register-apps-to-use-graph-api"></a>Registrace aplikací k používání rozhraní Graph API
+## <a name="register-apps-to-use-the-microsoft-graph-api"></a>Registrace aplikací k používání rozhraní Microsoft Graph API
 
-Postup pro registraci aplikace k používání rozhraní Graph API:
+Postup pro registraci aplikace k používání rozhraní Microsoft Graph API:
 
 1.  Přihlaste se k portálu [Azure Portal](https://portal.azure.com) pomocí pověření správce.
 
@@ -127,15 +127,15 @@ V tomto okamžiku můžete udělat také toto:
 
 ## <a name="intune-permission-scopes"></a>Obory oprávnění pro Intune
 
-Azure AD a rozhraní Graph API používají obory oprávnění k řízení přístupu k podnikovým prostředkům.  
+Azure AD a Microsoft Graph používají obory oprávnění k řízení přístupu k podnikovým prostředkům.  
 
-Obory oprávnění (označují se také jako _rozsahy OAuth_) řídí přístup ke konkrétním entitám Intune a jejich vlastnostem. Tento oddíl shrnuje obory oprávnění pro funkce rozhraní Intune Graph API.
+Obory oprávnění (označují se také jako _rozsahy OAuth_) řídí přístup ke konkrétním entitám Intune a jejich vlastnostem. Tento oddíl shrnuje obory oprávnění pro funkce rozhraní Intune API.
 
 Další informace najdete v tématech:
 - [Ověřování Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
 - [Obory oprávnění aplikací](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-scopes)
 
-Když udělujete oprávnění pro rozhraní Graph API, můžete určit následující obory pro řízení přístupu k funkcím Intune: Následující tabulka shrnuje obory oprávnění rozhraní Graph API Intune.  V prvním sloupci je název funkce, který se zobrazuje na portálu Azure Portal, a ve druhém sloupci je název oboru oprávnění.
+Když udělujete oprávnění pro Microsoft Graph, můžete určit následující obory pro řízení přístupu k funkcím Intune: Následující tabulka shrnuje obory oprávnění rozhraní Intune API.  V prvním sloupci je název funkce, který se zobrazuje na portálu Azure Portal, a ve druhém sloupci je název oboru oprávnění.
 
 Nastavení _Povolit přístup_ | Název oboru
 :--|:--
@@ -153,7 +153,7 @@ __Čtení konfigurace v Microsoft Intune__ | [DeviceManagementServiceConfig.Read
 
 Tabulka uvádí seznam nastavení v pořadí, ve kterém se zobrazují na portálu Azure Portal. Následující oddíly popisují obory v abecedním pořadí.
 
-V současné době všechny obory oprávnění Intune vyžadují přístup správce.  To znamená, že ke spouštění aplikací nebo skriptů přistupujících k prostředkům Intune Graph API, se vyžadují odpovídající pověření.
+V současné době všechny obory oprávnění Intune vyžadují přístup správce.  To znamená, že ke spouštění aplikací nebo skriptů přistupujících k prostředkům s rozhraním Intune API se vyžadují odpovídající pověření.
 
 ### <a name="app-ro"></a>DeviceManagementApps.Read.All
 
@@ -319,7 +319,7 @@ Při testování příkladů se vám můžou zobrazovat chyby stavu protokolu HT
 
 Pokud k tomu dojde, ověřte platnost těchto skutečností:
 
-- Aktualizovali jste ID aplikace na takové, které má autorizaci k používání rozhraní Graph API a oboru oprávnění `DeviceManagementManagedDevices.Read.All`.
+- Aktualizovali jste ID aplikace na takové, které má autorizaci k používání rozhraní Microsoft Graph API a oboru oprávnění `DeviceManagementManagedDevices.Read.All`.
 
 - Pověření tenanta podporují funkce správy.
 
