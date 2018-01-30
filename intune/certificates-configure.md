@@ -5,7 +5,7 @@ description: "Získejte informace, jak pomocí Intune vytvářet a přiřazovat 
 keywords: 
 author: vhorne
 ms.author: victorh
-manager: angrobe
+manager: dougeby
 ms.date: 11/28/2017
 ms.topic: article
 ms.prod: 
@@ -15,11 +15,11 @@ ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9c74ee1daf6602a4958d9955c3955b465495e013
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 0245491540a2ade2dbb453a865ee73312fc759e0
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-configure-certificates-in-microsoft-intune"></a>Konfigurace certifikátů v Microsoft Intune
 
@@ -43,7 +43,7 @@ Každý z těchto typů certifikátů má vlastní požadované součásti a po�
     - Android 4.0 a novější
     - Android for Work
     - Windows 8.1 a vyšší
-    - Windows Phone 8.1 a novější
+    - Windows Phone 8.1 nebo novější
     - Windows 10 a novější
 3. Vytvořte profily certifikátů. Zařízení si vyžádají certifikát, který se má používat k ověření přístupu k VPN, Wi-Fi a e-mailu.
 
@@ -57,7 +57,7 @@ Každý z těchto typů certifikátů má vlastní požadované součásti a po�
    Profil certifikátu **SCEP** můžete použít jenom pro zařízení s těmito platformami:
 
    - macOS 10.9 a novější
-   - Windows Phone 8.1 a novější
+   - Windows Phone 8.1 nebo novější
 
 Pro každou platformu zařízení musíte vytvořit samostatný profil. Při vytváření profil přidružíte k profilu důvěryhodného kořenového certifikátu, který jste vytvořili dříve.
 
@@ -94,7 +94,7 @@ Před vytvořením profilu certifikátu SCEP nebo PKCS musíte vytvořit profil 
 3. V okně profilů zvolte **Vytvořit profil**.
 4. V okně **Vytvořit profil** zadejte **název** a **popis** profilu důvěryhodného certifikátu.
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení pro tento důvěryhodný certifikát. V současné době můžete pro nastavení certifikátů zvolit jednu z následujících platforem:
-    - **Android**
+    - **Androidemem**
     - **iOS**
     - **macOS**
     - **Windows Phone 8.1**

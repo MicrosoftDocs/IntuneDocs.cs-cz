@@ -4,7 +4,7 @@ description: "Zjistěte, jak Intune v rámci řešení Enterprise Mobility + Sec
 keywords: co je Intune
 author: Lindavr
 ms.author: lindavr
-manager: angrobe
+manager: dougeby
 ms.date: 07/28/2017
 ms.topic: get-started-article
 ms.prod: 
@@ -14,11 +14,11 @@ ms.assetid: 3b4e778d-ac13-4c23-974f-5122f74626bc
 ms.reviewer: pmay
 ms.suite: ems
 ms.custom: 
-ms.openlocfilehash: 527a2a1578fcf9ef8e8f80c68091e582f8f2ebd2
-ms.sourcegitcommit: 6fae2dfb3a5c8f2e5ccfd120fd15656b26e5d302
+ms.openlocfilehash: 64fd5e506d0c2fdfa5d99e6ac96d6e12c886fcbe
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="what-is-intune"></a>Co je Intune?
 
@@ -47,7 +47,7 @@ Intune je součást řešení Enterprise Mobility + Security (EMS), která slou�
 
 Podívejte se na [větší verzi](./media/intunearchitecture.svg) diagramu architektury Intune.
 
-Způsob využívání funkcí Intune pro správu zařízení a aplikací a ochrany dat EMS závisí na [obchodním problému, který se snažíte řešit](#common-business-problems-that-intune-helps-solve). Například:
+Způsob využívání funkcí Intune pro správu zařízení a aplikací a ochrany dat EMS závisí na [obchodním problému, který se snažíte řešit](#common-business-problems-that-intune-helps-solve). Příklad:
 * Správu zařízení rozhodně využijete, pokud vytváříte fond jednoúčelových zařízení, která mají sdílet pracovníci střídající se na směnách v prodejně.
 * O správu aplikací a ochranu dat se můžete opřít, pokud pracovníkům umožníte používat jejich osobní zařízení (BYOD) pro přístup k firemním datům.  
 * Pokud zaměstnancům pracujícím s informacemi poskytujete firemní telefony, můžete spoléhat na všechny uvedené technologie.

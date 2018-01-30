@@ -5,7 +5,7 @@ description: "Migrujte zásady podmíněného přístupu z klasického portálu 
 keywords: 
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 06/28/2017
 ms.topic: article
 ms.prod: 
@@ -15,11 +15,11 @@ ms.assetid: 301159ad-5f7e-4fcc-86c7-f72a71701ff4
 ms.reviewer: chrisgree
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 18ee7adcdb396c1b7010100803c82dbf0daa767c
-ms.sourcegitcommit: 82088d297eef629e3da6011681ead442ae7e25f7
+ms.openlocfilehash: bdb64d4cc668bf382c39a235111547c2f4e21c9c
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Změna přiřazení zásad podmíněného přístupu z klasického portálu Intune do portálu Azure Portal
 
@@ -33,7 +33,7 @@ Pokud jste připraveni přejít na portál Azure Portal, podle pokynů v tomto t
 
 - Podle pokynů v tomto tématu můžete tyto zásady znovu vytvořit na portálu Azure Portal.
 
-- Až si ověříte, že nové zásady na portálu Azure Portal fungují podle očekávání, zakažte podmíněné zásady na klasickém portálu Intune.
+- Až si ověříte, že nové zásady na Azure Portalu fungují podle očekávání, zakažte podmíněné zásady na klasickém portálu Intune.
 <br /><br />
     - **Než vypnete** zásady podmíněného přístupu v klasickém portálu Intune, naplánujte si, jak přesunete uživatele na nové zásady. Existují dvě metody:
 <br /><br />
@@ -198,7 +198,7 @@ Po změně přiřazení zásad podmíněného přístupu na portálu Azure Porta
 
     ![Vypnutí zásad podmíněného přístupu na klasickém portálu Intune](./media/reassign-ca-18.png)
 
-## <a name="see-also"></a>Související témata
+## <a name="see-also"></a>Viz taky
 
 - [Běžné způsoby používání podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md)
 - [Podmíněný přístup na základě aplikace s Intune](app-based-conditional-access-intune.md)
