@@ -4,23 +4,24 @@ description:
 keywords: 
 author: barlanmsft
 ms.author: barlan
-manager: angrobe
-ms.date: 02/23/2017
+manager: dougeby
+ms.date: 01/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: adc6af23-b22f-42e5-955a-4dffbdb8b42b
-searchScope: User help
+searchScope:
+- User help
 ROBOTS: 
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: f5c2536e4566baa2661b77f5574085410784a787
-ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
+ms.openlocfilehash: 3926b64bacb1acde29146aed9d3030729e8b9b17
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Vzdálené uzamčení zařízení z webu Portál společnosti
 
@@ -33,14 +34,13 @@ Abyste byli v bezpečí, můžete zařízení uzamknout pomocí možnosti Vzdál
 * Android
 * iOS
 * macOS
+* Windows 10
 * Windows 10 Mobile (pokud už je pro zařízení nastaveno heslo)
 * Windows Phone 8.1 (pokud už je pro zařízení nastaveno heslo)
 
 ## <a name="to-use-remote-lock-to-lock-your-device"></a>Použití vzdáleného uzamčení k uzamčení zařízení
 
-1.  Na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog) klepněte na tlačítko __nabídky__ ![Malý obrázek tlačítka nabídky, tři vodorovné pruhy nad sebou](/Intune/whats-new/media/CP_hamburger_menu.png) a potom vyberte __Moje zařízení__.
-
-  ![Obrázek webu Portál společnosti s rozbalenou boční nabídkou na levé straně obrazovky, s tlačítky Domů, Všechny aplikace, Moje zařízení, Helpdesk a Odhlásit se](/media/iwp-expanded-sidebar.png)
+1.  Na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog) klepněte na tlačítko __nabídky__ a potom vyberte __Moje zařízení__.
 
 2. Na stránce __Moje zařízení__ vyberte název zařízení, které chcete zamknout.
 
