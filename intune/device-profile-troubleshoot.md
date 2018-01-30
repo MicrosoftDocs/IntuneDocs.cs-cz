@@ -5,7 +5,7 @@ description: "Pokud nevíte, jak dál, přečtěte si toto téma, které vám po
 keywords: 
 author: arob98
 ms.author: angrobe
-manager: angrobe
+manager: dougeby
 ms.date: 1/17/2018
 ms.topic: article
 ms.prod: 
@@ -15,11 +15,11 @@ ms.assetid:
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0bc5ad6e0467fe8a8c98c1ad2d71b967c18b8233
-ms.sourcegitcommit: 967a7c23b863123398c40b812e2eb02c921a0afe
+ms.openlocfilehash: 6424be562401c672966c0f7f3fbe145c19182299
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-device-profiles-in-microsoft-intune"></a>Řešení potíží s profily zařízení v Microsoft Intune
 
@@ -78,7 +78,7 @@ Pokud se stejnému uživateli nebo zařízení přiřadí dvě nebo více zásad
 -   Pokud je nastavení zásady konfigurace v konfliktu s nastavením jiné zásady konfigurace, zobrazí se tento konflikt na Azure Portalu. Takové konflikty je třeba vyřešit ručně.
 
 ## <a name="what-happens-when-app-protection-policies-conflict-with-each-other-which-one-is-applied-to-the-app"></a>Co se stane, když zásady ochrany aplikací navzájem kolidují? Která se použije pro příslušnou aplikaci?
-Nejvíce omezující nastavení dostupná v zásadách ochrany aplikací jsou konfliktní hodnoty s výjimkou polí s počtem zadání (jako je zadání PIN kódu před resetováním). Pole s počtem zadání se nastaví na stejnou hodnotu, jako když zásadu MAM vytvoříte v konzole pomocí možnosti doporučeného nastavení.
+Nejvíce omezující nastavení dostupná v zásadách ochrany aplikací jsou konfliktní hodnoty s výjimkou polí pro zadání čísel (jako je zadání PIN kódu před resetováním). Pole s počtem zadání se nastaví na stejnou hodnotu, jako když zásadu MAM vytvoříte v konzole pomocí možnosti doporučeného nastavení.
 
 Konflikt nastane, když je nastavení dvou profilů stejné. Představte si třeba, že jste nakonfigurovali dvě zásady MAM, které jsou stejné až na nastavení kopírování/vkládání. V tomto scénáři se nastavení kopírování/vkládání nastaví na nejvíce omezující hodnotu, ale ostatní nastavení se použijí tak, jak se nakonfigurovala.
 

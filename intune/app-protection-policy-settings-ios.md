@@ -5,7 +5,7 @@ description: "Toto téma popisuje nastavení zásad ochrany aplikací pro zaří
 keywords: 
 author: erikre
 ms.author: erikre
-manager: angrobe
+manager: dougeby
 ms.date: 01/05/2018
 ms.topic: article
 ms.prod: 
@@ -15,11 +15,11 @@ ms.assetid: 0f8b08f2-504c-4b38-bea2-b8a4ef0526b8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2f4b5ee3d8dc5c01d2c4021bfee51aedba8c49aa
-ms.sourcegitcommit: 0795870bfe941612259ebec0fe313a783a44d9b9
+ms.openlocfilehash: 494eda1c9f953a78e13ae7cf0caee84f29c4d7d8
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/25/2018
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací pro iOS
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -71,8 +71,8 @@ U některých aplikací a služeb platformy, které mají výjimku, můžou zás
 | **Znovu zkontrolovat požadavky na přístup po (minuty)** | Proveďte konfiguraci následujících nastavení: <ul><li>**Časový limit:** Toto je počet minut před opakovaným zkontrolováním požadavků na přístup k aplikaci (definovaným dříve v zásadách). Správce například v zásadách zapne kód PIN, uživatel otevře aplikaci spravovanou přes Intune a musí zadat kód PIN. Při použití tohoto nastavení nemusí uživatel u žádné aplikace MAM zadávat PIN dalších **30 minut** (výchozí hodnota). <br><br>**Poznámka:** V iOSu se kód PIN sdílí mezi všemi aplikacemi spravovanými přes Intune od **stejného vydavatele**. Časovač konkrétního kódu PIN se vynuluje, jakmile se aplikace přestane v zařízení zobrazovat na popředí. Po dobu časového limitu definovaného tímto nastavením nemusí uživatel zadávat kód PIN u žádné aplikace spravované přes Intune, která svůj kód PIN sdílí. <br><br> Tento formát nastavení zásady podporuje kladné celé číslo.</li><li>**Období odkladu pro offline režim:** Toto je počet minut, po které může aplikace MAM běžet offline. Zadejte dobu (v minutách) před opakovaným zkontrolováním požadavků na přístup k aplikaci. Výchozí hodnota = **720** minut (12 hodin) Aby mohla aplikace po uplynutí této doby dál běžet, bude vyžadovat ověření uživatele ve službě AAD.<br><br> Tento formát nastavení zásady podporuje kladné celé číslo.</li></ul>| Časový limit: 30 <br><br> Offline: 720 |
 | **Doba v offline režimu (ve dnech) před vymazáním dat** | Po tomto počtu dnů (určeném správcem) spuštění v offline režimu bude aplikace vyžadovat, aby se uživatel připojil k síti a znovu provedl ověření. Pokud je ověření uživatele úspěšné, může ke svým datům dál přistupovat a doba v offline režimu se resetuje.  Pokud se ověření uživatele nezdaří, aplikace provede selektivní vymazání uživatelova účtu a dat.  Další informace o tom, která data se selektivním vymazáním odstraní, najdete v tématu [Jak z aplikací spravovaných pomocí Intune vymazat jenom firemní data](https://docs.microsoft.com/en-us/intune/apps-selective-wipe). <br><br> Tento formát nastavení zásady podporuje kladné celé číslo. | 90 dnů |
 | **Zakázat PIN kód aplikace, když je PIN kód zařízení spravovaný** | Pokud chcete zakázat PIN kód aplikace, když bude na zaregistrovaném zařízení zjištěn zámek zařízení, zvolte **Ano**. <br><br> **Poznámka:** Vyžaduje se, aby aplikace měla verzi Intune SDK 7.0.1 nebo vyšší. | Ne |
-| **Vyžadovat minimální verzi operačního systému iOS** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi operačního systému iOS. Uživateli bude zablokován přístup, pokud verze iOS v zařízení nesplňuje tento požadavek. <br><br> Tento formát nastavení zásady podporuje jedno desetinné místo, například iOS 10.3. <br><br> **Poznámka:** Vyžaduje se, aby aplikace měla verzi Intune SDK 7.0.1 nebo vyšší. | Ne |
-| **Vyžadovat minimální verzi operačního systému iOS (jenom upozornění)** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi operačního systému iOS. Uživateli se zobrazí oznámení, pokud verze iOS v zařízení nesplňuje tento požadavek. Toto oznámení je možné zavřít. <br><br> Tento formát nastavení zásady podporuje jedno desetinné místo, například iOS 10.3. <br><br> **Poznámka:** Vyžaduje se, aby aplikace měla verzi Intune SDK 7.0.1 nebo vyšší. | Ne |
+| **Vyžadovat minimální verzi operačního systému iOS** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi operačního systému iOS. Uživateli bude zablokován přístup, pokud verze iOS v zařízení nesplňuje tento požadavek. <br> **Poznámka:** Vyžaduje se, aby aplikace měla verzi Intune SDK 7.0.1 nebo vyšší. | Ne |
+| **Vyžadovat minimální verzi operačního systému iOS (jenom upozornění)** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi operačního systému iOS. Uživateli se zobrazí oznámení, pokud verze iOS v zařízení nesplňuje tento požadavek. Toto oznámení je možné zavřít. <br> **Poznámka:** Vyžaduje se, aby aplikace měla verzi Intune SDK 7.0.1 nebo vyšší. | Ne |
 | **Vyžadovat minimální verzi aplikace** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi aplikace. Uživateli bude zablokován přístup, pokud verze aplikace v zařízení nesplňuje tento požadavek.<br><br>Vzhledem k tomu, že aplikace mívají často odlišná schémata verzí, vytvořte zásadu, ve které bude jedna minimální verze zacílená na jednu aplikaci (např. „Zásada verze Outlooku“). <br><br> Tento formát nastavení zásady podporuje vlastnosti major.minor, major.minor.build a major.minor.build.revision. <br><br> **Poznámka:** Vyžaduje se, aby aplikace měla verzi Intune SDK 7.0.1 nebo vyšší. | Ne | 
 | **Vyžadovat minimální verzi aplikace (jenom upozornění)** | Zvolte **Ano**, pokud k používání této aplikace doporučujete minimální verzi aplikace. Uživateli se zobrazí oznámení, pokud verze aplikace v zařízení nesplňuje tento požadavek. Toto oznámení je možné zavřít.<br><br>Vzhledem k tomu, že aplikace mívají často odlišná schémata verzí, vytvořte zásadu, ve které bude jedna minimální verze zacílená na jednu aplikaci (např. „Zásada verze Outlooku“). <br><br> Tento formát nastavení zásady podporuje vlastnosti major.minor, major.minor.build a major.minor.build.revision. <br><br> **Poznámka:** Vyžaduje se, aby aplikace měla verzi Intune SDK 7.0.1 nebo vyšší. | Ne | 
 | **Vyžadovat minimální verzi sady SDK zásad ochrany aplikací Intune** | Zvolte **Ano**, pokud požadujete, aby tato aplikace používala minimální verzi sady SDK zásad ochrany aplikací Intune. Uživateli bude zablokován přístup, pokud verze sady SDK zásad ochrany aplikací Intune nesplňuje tento požadavek. <br> <br> Další informace o sadě SDK se zásadami ochrany aplikací Intune najdete v článku [Přehled sady Intune App SDK](app-sdk.md). <br><br> Tento formát nastavení zásady podporuje vlastnosti major.minor, major.minor.build a major.minor.build.revision. <br><br> **Poznámka:** Vyžaduje se, aby aplikace měla verzi Intune SDK 7.0.1 nebo vyšší. | Ne |

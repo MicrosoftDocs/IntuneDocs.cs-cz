@@ -5,7 +5,7 @@ description: "Zjistěte, jak v Intune konfigurovat nastavení Windows Update pro
 keywords: 
 author: dougeby
 ms.author: dougeby
-manager: angrobe
+manager: dougeby
 ms.date: 11/01/2017
 ms.topic: article
 ms.prod: 
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 08f659cf-715e-4e10-9ab2-1bac3c6f2366
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: ca1f1c0572a2a3c1484b9c23bd14e029e506e536
-ms.sourcegitcommit: a7c1e10e615e5c975bb5d52eca986c5cf5287687
+ms.openlocfilehash: fa9b09f97568b54a68f34a609c91426eb12b71e0
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="manage-software-updates"></a>Správa aktualizací softwaru
 
@@ -89,7 +89,7 @@ Po vytvoření aktualizačních kanálů je přiřadíte skupinám zařízení. 
 
     Aktualizace funkcí jsou obecně nové funkce pro Windows. Až nakonfigurujete nastavení **Kanálu pro údržbu** (Půlroční kanál (cílený) nebo Půlroční kanál), můžete definovat, jestli a na jak dlouho chcete odložit příjem aktualizací funkcí po tom, co je Microsoft zpřístupní na webu Windows Update.
 
-    Například:  
+    Příklad:  
     **Kanál pro údržbu je nastavený na Půlroční kanál (cílený) a odložení aktualizace je nastavené na 30 dní**: Řekněme, že Aktualizace funkcí X je nejdříve veřejně dostupná na webu Windows Update jako Půlroční kanál (cílený) v lednu. Zařízení aktualizaci přijme až v únoru – o 30 dní později.
 
     **Kanál pro údržbu je nastavený na Půlroční kanál a odložení aktualizace je nastavené na 30 dní**: Řekněme, že Aktualizace funkcí X je nejdříve veřejně dostupná na webu Windows Update jako Půlroční kanál (cílený) v lednu. O čtyři měsíce později, v dubnu, je Aktualizace funkcí X vydána do Půlročního kanálu. Zařízení přijme Aktualizaci funkcí 30 dní po tomto vydání do Půlročního kanálu a bude se aktualizovat v květnu.

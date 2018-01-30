@@ -4,7 +4,7 @@ description: "Tento článek vám pomůže vytvořit a implementovat návrh clou
 keywords: 
 author: arob98
 ms.author: angrobe
-manager: angrobe
+manager: dougeby
 ms.date: 10/31/2017
 ms.topic: article
 ms.prod: 
@@ -14,11 +14,11 @@ ms.assetid: a8e38e29-f5e3-4a71-a170-d3b1a06e37c6
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: 
-ms.openlocfilehash: bd8f3372f3546b5fba20a253611e382f780b3236
-ms.sourcegitcommit: 94d3d86f8ae9f82a9872384bbaae53580036a4ff
+ms.openlocfilehash: 38cae4b0726d4ad96c243dd87ea2581a691da306
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
@@ -193,7 +193,7 @@ Při vytváření návrhu potřebujete vědět, jaká zařízení budou v prost�
 
 ### <a name="devices"></a>Zařízení
 
-Intune slouží ke správě mobilních zařízení. Zabezpečuje firemní data a umožňuje koncovým uživatelům pracovat z více míst. Intune podporuje množství platforem zařízení, proto doporučujeme, abyste zdokumentovali zařízení, platformy operačních systémů a verze, které budou v návrhu vaší organizace podporované. Například:
+Intune slouží ke správě mobilních zařízení. Zabezpečuje firemní data a umožňuje koncovým uživatelům pracovat z více míst. Intune podporuje množství platforem zařízení, proto doporučujeme, abyste zdokumentovali zařízení, platformy operačních systémů a verze, které budou v návrhu vaší organizace podporované. Příklad:
 
 | **Platforma zařízení** | **Verze OS** |
 |:---:|:---:|
@@ -228,7 +228,7 @@ V těchto oddílech si probereme následující funkce a možnosti, které odpov
 
 -   zásady dodržování předpisů
 
--   Podmíněný přístup
+-   podmíněný přístup
 
 Pojďme se na každou z těchto oblastí podívat podrobněji.
 
@@ -241,7 +241,7 @@ Musíte určit, jestli jsou zásady pro podmínky a ujednání potřeba. Pokud t
 | **Název podmínek a ujednání** | **Případ použití** | **Cílová skupina** |
 |:---:|:---:|:---:|
 | Firemní podmínky a ujednání | Firemní | Firemní uživatelé |                 
-| Podmínky a ujednání pro uživatele s vlastním zařízením | Uživatelé s vlastním zařízením | Uživatelé s vlastním zařízením |                
+| Podmínky a ujednání pro uživatele s vlastním zařízením | uživatelé s vlastním zařízením (BYOD) | Uživatelé s vlastním zařízením |                
 
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a namapovat podmínky a ujednání na své skupiny uživatelů.
@@ -270,7 +270,7 @@ Profily pomáhají koncovému uživateli připojit se k firemním datům. Intune
 
 -   Wi-Fi profil
 
--   profil VPN
+-   Profil VPN
 
 -   e-mailový profil
 
@@ -328,7 +328,7 @@ Tady je příklad, jak dokumentovat návrh profilu VPN.
 
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní profily VPN.
-#### <a name="email-profile"></a>E-mailový profil
+#### <a name="email-profile"></a>e-mailový profil
 
 E-mailové profily umožňují automatické nastavení e-mailového klienta pomocí informací o připojení a konfigurace e-mailu. Intune podporuje e-mailové profily jen na některých zařízeních. Přečtěte si další informace o [e-mailových profilech a podporovaných platformách](email-settings-configure.md).
 
@@ -337,7 +337,7 @@ Tady je příklad, jak dokumentovat návrh e-mailových profilů:
 | **Typ** | **Název profilu** | **Platforma zařízení** | **Případy použití** |   
 |:---:|:---:|:---:|:---:|
 | e-mailový profil | E-mailový profil pro iOS | iOS | Firemní – informatik (uživatel s vlastním zařízením) |                                                           
-| e-mailový profil | E-mailový profil pro Android Knox | Android Knox | Uživatelé s vlastním zařízením |
+| e-mailový profil | E-mailový profil pro Android Knox | Android Knox | uživatelé s vlastním zařízením (BYOD) |
 
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní e-mailové profily.
@@ -349,7 +349,7 @@ Intune můžete použít k několika způsobům doručování aplikací uživate
 
 -   [Program iOS VPP (Volume Purchase Program) pro firmy](vpp-apps-ios.md)
 
--   [Aplikace pro Windows Store pro firmy](windows-store-for-business.md)
+-   [Aplikace pro Microsoft Store pro firmy](windows-store-for-business.md)
 
 #### <a name="app-type-requirements"></a>Požadavky různých typů aplikací
 

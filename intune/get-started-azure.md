@@ -5,7 +5,7 @@ description: "Přečtěte si o vytváření a sdílení řídicích panelů pro 
 keywords: 
 author: arob98
 ms.author: angrobe
-manager: angrobe
+manager: dougeby
 ms.date: 10/31/2017
 ms.topic: article
 ms.prod: 
@@ -15,13 +15,13 @@ ms.assetid: 917c0eed-96d0-49d8-8db8-a6ba13ad0e1f
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cce99fb69abd5f99a4a1eae0c6fbe0e5178af450
-ms.sourcegitcommit: fc24d7eb4838b9102088dd4dcf5d1aa6b2c2e590
+ms.openlocfilehash: 27567c8a8b8b406bbffceafc1d742b202999425f
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="getting-started-with-intune-in-the-azure-portal"></a>Začínáme s Intune na portálu Azure Portal
+# <a name="getting-started-with-intune-in-the-azure-portal"></a>Začínáme s Intune na Azure Portalu
 
 Azure Portal je místo, kde najdete službu Intune. Azure obsahuje celou řadu služeb, z nichž většinu nemusíte pravidelně používat. Když si řídicí panel a boční panel přizpůsobíte, najdete velmi rychle ty správné informace, kdykoli se přihlásíte, abyste přes Intune spravovali zařízení.
 
