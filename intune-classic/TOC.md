@@ -7,7 +7,7 @@
 
 # [Začínáme](get-started/get-started.md)
 ## [Nastavení Intune](/intune/setup-steps?toc=/intune-classic/toc.json)
-### Předpoklady
+### Požadavky
 #### [Podporovaná zařízení](/intune/supported-devices-browsers?toc=/intune-classic/toc.json)
 #### [Využití sítě](/intune/network-bandwidth-use?toc=/intune-classic/toc.json)
 ### [Přihlášení k Intune](/intune/account-sign-up?toc=/intune-classic/toc.json)
