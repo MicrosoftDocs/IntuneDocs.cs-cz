@@ -30,8 +30,9 @@
 #### [Kontrola dodržování předpisů pro zařízení](check-compliance-on-your-device-android.md)
 #### [Synchronizace outlookového e-mailu při používání režimu spořiče baterie](power-saving-mode-android.md)
 #### [Řešení běžných problémů se Samsung Knox](samsung-knox-errors-android.md)
+#### [Aktualizace vašeho zařízení za účelem instalace Outlooku](update-device-outlook-android.md)
 
-#### Oprava chyb pomocí protokolů
+#### Oprava problémů pomocí protokolů
 ##### [Zapnutí podrobného protokolování](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
 ##### [Odeslání protokolů e-mailem](send-logs-to-your-it-admin-by-email-android.md)
 ##### [Odeslání protokolů přes USB kabel](send-logs-to-your-it-admin-using-cable-android.md)
@@ -85,6 +86,7 @@
 #### [Identifikace zařízení](you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md)
 #### [Vyhledání sériového čísla](how-do-i-find-the-serial-number-on-my-device-ios.md)
 #### [Aktualizace zařízení s iOSem](you-need-to-update-your-ios-device.md)
+#### [Aktualizace vašeho zařízení za účelem instalace Outlooku](update-device-outlook-ios.md)
 #### [Moje verze iOSu ještě není podporovaná](your-ios-version-isnt-yet-supported.md)
 
 ### Mobile Threat Defense
