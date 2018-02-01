@@ -5,7 +5,7 @@ description: "Podpůrná dokumentace k průvodci správou aplikací Office 365."
 keywords: 
 author: lindavr
 ms.author: lindavr
-manager: angrobe
+manager: dougeby
 ms.date: 08/01/2017
 ms.topic: article
 ms.prod: 
@@ -16,11 +16,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: ayesham
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b818152d2172ccf85a8323ba3ff70a0b270d20df
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 36dc2924602ffa060d01d3ba932c657fd52552c7
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps"></a>Jak vaši uživatelé budou moct používat základní ochranu ve spravovaných aplikacích Office 365
 
@@ -31,7 +31,7 @@ Průvodce zapne tyto zásady:
 **iOS**
 * Zašifrovat data aplikací
 
-**Android**
+**Androidemem**
 * Zašifrovat data aplikací
 * Požadovat jednoduchý kód PIN pro přístup
 
@@ -125,7 +125,7 @@ Vždy můžete tato nastavení zásad upravit tak, aby odpovídala požadavkům 
 
 ### <a name="how-can-i-view-and-edit-the-policies-created-by-the-wizard"></a>Jak můžu zobrazit a upravit zásady, které vytvořil průvodce?
 Pokud chcete tyto zásady, nebo jiné zásady vytvořené na portálu Azure pro Intune, zobrazit nebo aktualizovat, zvolte na řídicím panelu **Spravovat aplikace** > **Zásady ochrany aplikací**. Vpravo se otevře seznam zásad. Zvolte zásadu, kterou si chcete zobrazit, a zobrazí se vám její nastavení, která můžete upravit. <br/>
-![Snímek cesty uživatelského rozhraní pro zobrazení zásad](./media/image-for-faq.png)
+![Obrázek cesty uživatelského rozhraní pro zobrazení zásad](./media/image-for-faq.png)
 
 ## <a name="next-steps"></a>Další kroky
 Další informace o [zásadách ochrany aplikací](https://docs.microsoft.comapp-protection-policy.md)
