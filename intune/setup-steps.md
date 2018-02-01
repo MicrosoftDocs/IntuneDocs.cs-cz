@@ -4,8 +4,8 @@ description: "Požadavky a předpoklady k tomu, abyste se vaše předplatné Int
 keywords: 
 author: arob98
 ms.author: angrobe
-manager: angrobe
-ms.date: 10/31/2017
+manager: dougeby
+ms.date: 01/24/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: d158503c-1276-422b-ab81-5f66c1cd7e7a
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 54f2bdd4a415cb8a4432a8bdcf93c56ba995c201
-ms.sourcegitcommit: 94d3d86f8ae9f82a9872384bbaae53580036a4ff
+ms.openlocfilehash: a1203cf22fad93f245508284d93024df40e11b9a
+ms.sourcegitcommit: 4509039cbfd4d450324a3475fb5841906720baa1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="set-up-intune"></a>Nastavení Intune
 
@@ -47,3 +47,4 @@ Pokud ke správě počítačů a serverů aktuálně používáte Microsoft Syst
 | 8 | [Konfigurace zařízení](device-profiles.md) – nastavte profily, které slouží ke správě nastavení zařízení. Profily zařízení umožňují předem nakonfigurovat nastavení e-mailu, VPN, Wi-Fi a funkcí zařízení. Dokážou zařízení rovněž omezit, což pomůže chránit samotná zařízení i data.  |
 | 9 | [Přizpůsobení Portálu společnosti](company-portal-app.md) – přizpůsobte Portál společnosti Intune, který uživatelé používají k registraci zařízení a instalaci aplikací. Tato nastavení se nacházejí jak v aplikaci Portál společnosti, tak na webu Portál společnosti Intune. |
 | 10 | [Povolení registrace zařízení](mdm-authority-set.md) – povolte správu zařízení se systémy iOS, Windows, Android a zařízení Mac v Intune nastavením autority pro správu mobilních zařízení a povolením konkrétních platforem. |
+| 11 | [Konfigurace zásad aplikací](app-protection-policy.md) – zadejte konkrétní nastavení na základě zásad ochrany aplikací v Microsoft Intune. |

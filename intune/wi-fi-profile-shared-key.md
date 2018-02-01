@@ -5,7 +5,7 @@ description: "Použijte vlastní profil Intune k vytvoření profilu Wi-Fi s př
 keywords: 
 author: arob98
 ms.author: angrobe
-manager: angrobe
+manager: dougeby
 ms.date: 11/09/2017
 ms.topic: article
 ms.prod: 
@@ -15,11 +15,11 @@ ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7d78ec07a31a54ff16cb6ca7deb2a883da632139
-ms.sourcegitcommit: e76dbd0882526a86b6933ace2504f442e04de387
+ms.openlocfilehash: 395a7136630a9393f44037c65e3c8db760149c38
+ms.sourcegitcommit: b982f9d50da4f958fb0c48c56ba46c8ef71500c4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Vytvoření profilu sítě Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -210,7 +210,5 @@ Můžete také vytvořit soubor XML z existujícího připojení Wi-Fi:
 Než profil Wi-Fi s předsdíleným klíčem nasadíte, ověřte, jestli se zařízení může přímo připojit ke koncovému bodu.
 
 Při obměně klíčů (hesel) počítejte s výpadky a podle toho naplánujte nasazení. Zvažte zavedení nových profilů Wi-Fi mimo pracovní dobu. Upozorněte také uživatele na možné omezení připojení.
- 
-Pokud má být přechod hladký a aktualizace zásad mají probíhat podle plánu, zařízení musí mít otevřený alespoň jeden komunikační kanál k Intune. Použijte proto připojení přes mobilní služby nebo poskytněte přístup k síti Wi-Fi pro hosty, který uživatele připojí jenom ke koncovým bodům Intune.
 
-
+Pokud chcete zajistit hladký přechod, zkontroluje, že zařízení koncového uživatele má připojení k internetu. Koncový uživatel například musí být schopný přepnout zpět na hostovanou Wi-Fi (nebo jinou síť Wi-Fi) nebo musí mít mobilní připojení, aby mohl komunikovat s Intune. To mu umožní i nadále přijímat aktualizace zásad, když dojde k aktualizaci firemního profilu Wi-Fi na zařízení.

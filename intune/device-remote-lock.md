@@ -5,8 +5,8 @@ description: "Informace o tom, jak přes Intune vzdáleně uzamknout zařízení
 keywords: 
 author: arob98
 ms.author: angrobe
-manager: angrobe
-ms.date: 11/21/2017
+manager: dougeby
+ms.date: 01/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 3b67f285-229d-4a0f-ae34-0402a20b4518
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 45d27b709ba8d4ff1d8fb4417a217ad008c19c36
-ms.sourcegitcommit: 22ab1c6a6bfeb4fef9850d12b29829c3fecbbeed
+ms.openlocfilehash: ecd7fa03b35e91b5a77906858fb251348796704d
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="remotely-lock-managed-devices-with-intune"></a>Vzdálené uzamčení spravovaných zařízení přes Intune
 
@@ -29,14 +29,19 @@ Akce **Vzdálené uzamčení** uzamkne vybrané zařízení. Vlastník zařízen
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
-- Windows – nepodporováno
-- Windows Phone – podporováno ve Windows Phone 8.1 a novějších verzích
-- iOS – podporováno
-- macOS – podporováno
+Vzdálené uzamčení se podporuje u následujících platforem:
 
-    > [!Note]  
-    > Nastavte šestimístný číselný kód PIN pro obnovení. Když se zařízení zamkne, v okně **přehledu zařízení** se bude zobrazovat kód PIN, dokud se nepošle jiná akce zařízení.
-- Android – podporováno
+|Platforma|Stav podpory|
+|---|---|
+|Android|Ano|
+|iOS|Ano|
+|macOS|Ano|
+|Windows 10|Ano|
+|Windows 10 Mobile|Ano|
+|Windows Phone|Ano, pro Windows Phone 8.1 a novější|
+
+> [!NOTE]  
+> Pro zařízení s macOS nastavíte šestimístní číselný kód PIN pro obnovení. Když se zařízení zamkne, v okně **přehledu zařízení** se bude zobrazovat kód PIN, dokud se nepošle jiná akce zařízení.
 
 ## <a name="how-to-remote-lock-a-device"></a>Vzdálené uzamčení zařízení
 

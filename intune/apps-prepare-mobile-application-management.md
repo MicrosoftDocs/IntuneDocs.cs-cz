@@ -5,7 +5,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: angrobe
-ms.date: 08/02/2017
+ms.date: 01/24/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1612f5af24bd4c96aced4e3a6f1572a4c49d9913
-ms.sourcegitcommit: e76dbd0882526a86b6933ace2504f442e04de387
+ms.openlocfilehash: 6b2ab30f9bf061e7ea4a34372e7c99e059c6e30f
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Příprava obchodních aplikací na zásady ochrany aplikací
 
@@ -50,7 +50,7 @@ Další informace o nástroji App Wrapping Tool pro zásady ochrany aplikací na
 |**Nástroj App Wrapping** | **Xamarin** |**Cordova** |
 |------|----|----|
 |**iOS** |Ano|Ano|
-|**Androidemem**| Ne |Ano|
+|**Androidemem**| Ve verzi Preview |Ano|
 
 ## <a name="intune-app-sdk"></a>Sada Intune App SDK
 Sada App SDK je určená hlavně zákazníkům, kteří mají aplikace v App Storu nebo obchodu Google Play a chtějí mít možnost spravovat je pomocí Intune. Nicméně využít integraci sady SDK může jakákoli aplikace, i obchodní aplikace.

@@ -4,7 +4,7 @@ description: "V tomto tématu se naučíte balit aplikace pro iOS bez změny sam
 keywords: 
 author: erikre
 ms.author: erikre
-manager: angrobe
+manager: dougeby
 ms.date: 01/18/2018
 ms.topic: article
 ms.prod: 
@@ -14,11 +14,11 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: dc031b12ed49766c70a6a4ff373a7c5843ca21ad
-ms.sourcegitcommit: 1a390b47b91e743fb0fe82e88be93a8d837e8b6a
+ms.openlocfilehash: 4925fc86596437d0560bd7fa2598eaf95126df16
+ms.sourcegitcommit: cede2e15bd62f1073131fbc9af7623cdfc3730cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro iOS na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -172,6 +172,9 @@ K distribuci aplikací zabalených pomocí Intune budete potřebovat toto:
 3. Výběrem možnosti **Souhlasím** přijměte podmínky smlouvy EULA. Tím připojíte balíček k počítači.
 
 4.  Otevřete složku **IntuneMAMPackager** a uložte její obsah do počítače s macOS. Teď můžete nástroj App Wrapping spustit.
+
+> [!NOTE]
+> Intune MAM Packager se může připojit k počítači s macOS samostatně a může způsobit chybu nenalezení souboru při spuštění příkazů pro zabalení. Proto přesunutím obsahu složky IntuneMAMPackager umožníte při zabalení najít cestu k nástroji pro sestavování balíčků.
 
 ## <a name="run-the-app-wrapping-tool"></a>Spuštění nástroje App Wrapping Tool
 

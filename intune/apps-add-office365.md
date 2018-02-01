@@ -5,7 +5,7 @@ description: "Přečtěte si, jak můžete použít Intune a usnadnit instalaci 
 keywords: 
 author: dougeby
 ms.author: dougeby
-manager: angrobe
+manager: dougeby
 ms.date: 08/14/2017
 ms.topic: article
 ms.prod: 
@@ -15,11 +15,11 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7f1958e4a0fb5aeba3225ee7ea5fae1e7fb39db3
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: 7ee1657351551ea83c6089c5ac52655b9cd64fc2
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-assign-office-365-proplus-2016-apps-to-windows-10-devices-with-microsoft-intune"></a>Přiřazení aplikací Office 365 ProPlus 2016 k zařízením s Windows 10 pomocí Microsoft Intune
 
@@ -35,7 +35,7 @@ Tento typ aplikace vám usnadní přiřazování aplikací Office 365 ProPlus 20
 - Intune podporuje přidání aplikací Office jenom ze sady Office 365 ProPlus 2016.
 - Pokud jsou spuštěné nějaké aplikace Office, když Intune instaluje sadu aplikací, můžou koncoví uživatelé přijít o data z neuložených souborů.
 - Tato metoda instalace není podporovaná v zařízeních s Windows 10S.
-- Intune nepodporuje instalaci desktopových aplikací Office 365 z Windows Storu (označovaných jako aplikace Office Centennial) na zařízení, na která jste už nasadili aplikace Office 365 s použitím Intune. Pokud nainstalujete tuto konfiguraci, může to způsobit ztrátu nebo poškození dat.
+- Intune nepodporuje instalaci desktopových aplikací Office 365 z Microsoft Storu (označovaných jako aplikace Office Centennial) na zařízení, na která jste už nasadili aplikace Office 365 pomocí Intune. Pokud nainstalujete tuto konfiguraci, může to způsobit ztrátu nebo poškození dat.
 
 
 ## <a name="get-started"></a>Začínáme
@@ -63,7 +63,7 @@ V tomto kroku vyberte aplikace Office, které chcete přiřadit k zařízení.
 V tomto kroku zadejte informace o sadě aplikací. Tyto informace vám ji pomůžou identifikovat v Intune a uživatelům ji pomůžou najít v aplikaci Portál společnosti.
 
 1.  V okně **Přidat aplikaci** zvolte možnost pro **informace o sadě aplikací**.
-2.  V okně s **informacemi o sadě aplikací** zadejte následující informace: 
+2.  V okně s **informacemi o sadě aplikací** zadejte následující informace:
     - **Název sady** – zadejte název sady aplikací, který se zobrazí na portálu společnosti. Názvy všech používaných aplikací musí být jedinečné. Pokud stejný název sady aplikací existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
     - **Popis sady** – zadejte popis sady aplikací. Můžete například uvést aplikace, které jste vybrali pro zahrnutí.
     - **Vydavatel** – zadejte název vydavatele aplikace.
@@ -82,9 +82,9 @@ V tomto kroku zadejte informace o sadě aplikací. Tyto informace vám ji pomů�
 V tomto kroku nakonfigurujte možnosti instalace pro sadu aplikací. Nastavení budou platit pro všechny aplikace přidané k sadě.
 
 1.  V okně **Přidat aplikaci** zvolte možnost pro **nastavení sady aplikací**.
-2.  V okně s **nastavením sady aplikací** zadejte následující informace: 
+2.  V okně s **nastavením sady aplikací** zadejte následující informace:
     - **Verze Office** – vyberte, jestli chcete přiřadit 32bitovou nebo 64bitovou verzi Office. 32bitovou verzi můžete nainstalovat na 32bitová i 64bitová zařízení, ale 64bitovou verzi můžete nainstalovat jenom na 64bitová zařízení.
-    - **Kanál aktualizací** – zvolte, jak se na těchto zařízeních aktualizuje Office. Informace o jiných kanálech aktualizací najdete v tématu Přehled kanálů aktualizací pro Office 365 ProPlus. Vybírejte z těchto možností: 
+    - **Kanál aktualizací** – zvolte, jak se na těchto zařízeních aktualizuje Office. Informace o jiných kanálech aktualizací najdete v tématu Přehled kanálů aktualizací pro Office 365 ProPlus. Vybírejte z těchto možností:
         - **Current**
         - **Deferred**
         - **Current Channel pro nové verze**
@@ -104,19 +104,19 @@ Až skončíte, zvolte v okně **Přidat aplikaci** možnost **Uložit**. Aplika
 
 V následující tabulce jsou uvedené běžné kódy chyb, se kterými se můžete setkat, a jejich význam.
 
-### <a name="status-for-office-csp"></a>Stav pro Office CSP: 
+### <a name="status-for-office-csp"></a>Stav pro Office CSP:
 
 ||||
 |-|-|-|
 |Stav|Fáze|Popis|
 |1460 (ERROR_TIMEOUT)|Stažení|Nepodařilo se stáhnout nástroj pro nasazení Office.|    
-|13 (ERROR_INVALID_DATA)|-|Nelze ověřit podpis staženého nástroje pro nasazení Office.| 
+|13 (ERROR_INVALID_DATA)|-|Nelze ověřit podpis staženého nástroje pro nasazení Office.|
 |Kód chyby z CertVerifyCertificateChainPolicy|-|Nezdařila se kontrola certifikace staženého nástroje pro nasazení Office.|    
-|997|WIP|Instalace| 
+|997|WIP|Instalace|
 |0|Po instalaci|Instalace proběhla úspěšně.|    
 |1603 (ERROR_INSTALL_FAILURE)|-|Nezdařila se kontrola předpokladů, například:<br>– SxS (pokus o instalaci, když je nainstalovaná MSI 2016)<br>– neshoda verzí<br>– atd.|     
 |0x8000ffff (E_UNEXPECTED)|-|Pokus odinstalovat, když na počítači není technologie Office Klikni a spusť|    
-|17002|-|Scénář se nepodařilo dokončit (nainstalovat). Možné důvody:<br>– Instalace zrušena uživatelem<br>– Instalace zrušena jinou instalací<br>– Nedostatek místa na disku během instalace<br>– Neznámý identifikátor jazyka| 
+|17002|-|Scénář se nepodařilo dokončit (nainstalovat). Možné důvody:<br>– Instalace zrušena uživatelem<br>– Instalace zrušena jinou instalací<br>– Nedostatek místa na disku během instalace<br>– Neznámý identifikátor jazyka|
 |17004|-|Neznámé skladové položky|   
 
 
@@ -124,15 +124,15 @@ V následující tabulce jsou uvedené běžné kódy chyb, se kterými se můž
 
 |||||
 |-|-|-|-|
-|Scénář|Návratový kód|Uživatelské rozhraní|Poznámka| 
-|Pokus odinstalovat bez aktivní instalace Klikni a spusť|-2147418113, 0x8000ffff nebo 2147549183|Kód chyby: 30088-1008<br>Kód chyby: 30125-1011 (404)|Nástroj pro nasazení systému Office| 
-|Instalace, když je nainstalovaná verze MSI|1603|-|Nástroj pro nasazení systému Office| 
-|Instalace byla zrušena uživatelem nebo jinou instalací.|17002|-|Klikni a spusť| 
-|Pokus nainstalovat 64bitovou verzi na zařízení, na kterém je nainstalovaná 32bitová verze.|1603|-|Návratový kód nástroje pro nasazení Office| 
-|Pokus nainstalovat neznámou skladovou položku (případ neoprávněného použití Office CSP, protože je nutné předávat jenom platné skladové položky)|17004|-|Klikni a spusť| 
-|Nedostatek místa|17002|-|Klikni a spusť| 
-|Klienta s technologií Klikni a spusť se nepodařilo spustit (neočekávané)|17000|-|Klikni a spusť| 
-|U klienta s technologií Klikni a spusť se nepodařilo zařadit scénář do fronty (neočekávané)|17001|-|Klikni a spusť| 
+|Scénář|Návratový kód|Uživatelské rozhraní|Poznámka|
+|Pokus odinstalovat bez aktivní instalace Klikni a spusť|-2147418113, 0x8000ffff nebo 2147549183|Kód chyby: 30088-1008<br>Kód chyby: 30125-1011 (404)|Nástroj pro nasazení systému Office|
+|Instalace, když je nainstalovaná verze MSI|1603|-|Nástroj pro nasazení systému Office|
+|Instalace byla zrušena uživatelem nebo jinou instalací.|17002|-|Klikni a spusť|
+|Pokus nainstalovat 64bitovou verzi na zařízení, na kterém je nainstalovaná 32bitová verze.|1603|-|Návratový kód nástroje pro nasazení Office|
+|Pokus nainstalovat neznámou skladovou položku (případ neoprávněného použití Office CSP, protože je nutné předávat jenom platné skladové položky)|17004|-|Klikni a spusť|
+|Nedostatek místa|17002|-|Klikni a spusť|
+|Klienta s technologií Klikni a spusť se nepodařilo spustit (neočekávané)|17000|-|Klikni a spusť|
+|U klienta s technologií Klikni a spusť se nepodařilo zařadit scénář do fronty (neočekávané)|17001|-|Klikni a spusť|
 
 ## <a name="next-steps"></a>Další kroky
 

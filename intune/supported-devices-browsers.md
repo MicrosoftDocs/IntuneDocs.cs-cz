@@ -4,7 +4,7 @@ description: "Seznam podporovaných platforem zařízení a prohlížečů pro s
 keywords: 
 author: ErikjeMS
 ms.author: erikje
-manager: angrobe
+manager: dougeby
 ms.date: 01/03/2018
 ms.topic: get-started-article
 ms.prod: 
@@ -14,28 +14,28 @@ ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 56516562b9a7510020475d226c74bf719bdd33a3
-ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
+ms.openlocfilehash: 1e6b14d5152df8420c5d358ccd9057d7ba427800
+ms.sourcegitcommit: d9de1e92c3913f731d5da3c51a5e1e9b2686894b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="supported-devices-and-browsers"></a>Podporovaná zařízení a prohlížeče
+# <a name="supported-operating-systems-and-browsers"></a>Podporované operační systémy a prohlížeče
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
-Tento článek je určený pro správce systému, kteří se v podniku starají o zařízení. Nápovědu k instalaci Intune do telefonu najdete v článku [Práce pomocí spravovaných zařízení](/intune-user-help/company-portal-frequently-asked-questions).
+Tento článek je určený pro správce systému, kteří se v podniku starají o zařízení. Nápovědu k instalaci Intune na zařízení najdete v článku věnovanému [práci pomocí spravovaných zařízení](/intune-user-help/company-portal-frequently-asked-questions).
 
 Než začnete s nastavováním Microsoft Intune, projděte si následující požadavky:
 
-- [Podporovaná zařízení a počítače](#intune-supported-devices)
+- [Podporované operační systémy](#intune-supported-operating-systems)
 - [Seznam podporovaných webových prohlížečů k používání Intune](#intune-supported-web-browsers)
 
 Měli byste se také seznámit s [využitím šířky pásma Intune](network-bandwidth-use.md) ([klasický portál](/intune-classic/get-started/network-bandwidth-use)).
 
-## <a name="intune-supported-devices"></a>Zařízení podporovaná pro Intune
+## <a name="intune-supported-operating-systems"></a>Operační systémy podporované službou Intune
 
-Pomocí správy mobilních zařízení Intune můžete spravovat následující zařízení:
+Můžete spravovat zařízení, která používají následující operační systémy:
 
 [!INCLUDE[mdm-supported-devices](./includes/mdm-supported-devices.md)]
 
@@ -85,7 +85,6 @@ Následující modely zařízení Samsung nepodporují Knox a aplikace Portál s
 | Galaxy V Plus | SM-G318HZ |
 | Galaxy Young 2 Duos | SM-G130BU |
 
-Intune se nedá použít ke správě operačních systémů Windows Server.
 
 ### <a name="windows-pc-software-client"></a>Softwarový klient pro počítače s Windows
 

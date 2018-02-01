@@ -5,7 +5,7 @@ description: "Přečtěte si, jak nakonfigurovat Intune na jednotné přihlašov
 keywords: 
 author: vhorne
 ms.author: victorh
-manager: angrobe
+manager: dougeby
 ms.date: 12/7/2017
 ms.topic: article
 ms.prod: 
@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ff71239a360b09ca831a6e99f5f7a759b08f5d56
-ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
+ms.openlocfilehash: 07ac355232c1e4ac290c87191d3764e3df45327e
+ms.sourcegitcommit: 4509039cbfd4d450324a3475fb5841906720baa1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-intune-for-ios-device-single-sign-on"></a>Nakonfigurování Intune na jednotné přihlašování pro zařízení s iOSem
 
@@ -89,7 +89,7 @@ Vzory `http://.com` a `https://.com` odpovídají všem adresám URL typu HTTP a
 
 Určete aplikace na zařízení koncového uživatele, které můžou používat datovou část jednotného přihlašování.
 
-Pole `AppIdentifierMatches` musí obsahovat řetězce, které odpovídají hodnotám ID sady prostředků aplikace. Tyto řetězce můžou být přesné shody (například `com.contoso.myapp`) nebo můžou určovat shodu předpony u ID sady prostředků pomocí zástupného znaku *. Zástupný znak se musí zadat po tečce (.) a může se objevit jenom jednou, a to na konci řetězce (například `com.contoso.*`). Při použití zástupného znaku se udělí přístup k účtu všem aplikacím, jejichž ID sady prostředků začíná příslušnou předponou.
+Pole `AppIdentifierMatches` musí obsahovat řetězce, které odpovídají hodnotám ID sady prostředků aplikace. Tyto řetězce můžou být přesné shody (například `com.contoso.myapp`) nebo můžou určovat shodu předpony u ID sady prostředků pomocí zástupného znaku *\. Zástupný znak se musí zadat po tečce (.) a může se objevit jenom jednou, a to na konci řetězce (například `com.contoso.*`). Při použití zástupného znaku se udělí přístup k účtu všem aplikacím, jejichž ID sady prostředků začíná příslušnou předponou.
 
 Pole **Název aplikace** se používá k přidání popisného názvu, který vám pomůže dané ID sady prostředků identifikovat.
 
