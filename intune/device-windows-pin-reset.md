@@ -5,7 +5,7 @@ description: "Naučte se používat službu Intune k resetování hesla na zař
 keywords: 
 author: arob98
 ms.author: angrobe
-manager: angrobe
+manager: dougeby
 ms.date: 08/09/2017
 ms.topic: article
 ms.prod: 
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 5027d012-d6c2-4971-a9ac-217f91d67d87
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 144313b63c1a6349a59220c901072dbf9d4c6f43
-ms.sourcegitcommit: 22ab1c6a6bfeb4fef9850d12b29829c3fecbbeed
+ms.openlocfilehash: b6149eeb3da2da3be3a137845eee5a0a515a4e39
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="reset-the-passcode-on-windows-devices-integrated-with-the-microsoft-pin-reset-service-using-intune"></a>Resetování hesla pomocí služby Intune na zařízeních s Windows, na kterých je integrovaná služba Microsoft PIN Reset Service
 
@@ -51,7 +51,7 @@ Než budete moct vzdáleně resetovat heslo na vámi spravovaných zařízeních
 Pokud chcete nakonfigurovat službu PIN Reset Service na vámi spravovaných zařízeních s Windows, můžete k zapnutí této funkce použít [vlastní zásady zařízení s Windows 10 v Intune](custom-settings-windows-10.md). Zásady nakonfigurujte pomocí následujících poskytovatelů konfiguračních služeb (CSP) pro zásady Windows:
 
 
-- **Pro zařízení** - **./Device/Vendor/MSFT/PassportForWork/*ID tenanta*/Policies/EnablePinRecovery**
+- **Pro zařízení:** **./Device/Vendor/MSFT/PassportForWork/*ID tenanta*/Policies/EnablePinRecovery**
 
 *ID tenanta* je ID adresáře služby Azure Active Directory, které získáte na stránce **Vlastnosti** služby Azure Active Directory.
 

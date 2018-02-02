@@ -4,7 +4,7 @@ description: "Článek obsahuje informace k plánu komunikace a strategii migrac
 keywords: 
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 07/12/2017
 ms.topic: article
 ms.prod: 
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e6a52506-2d29-41f7-a171-5d684a740dd4
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.openlocfilehash: 806e355acd84f5c70029f8612c444b077c0631e4
-ms.sourcegitcommit: 623c52116bc3fdd12680b9686dcd0e1eeb6ea5ed
+ms.openlocfilehash: e36e917c035d4bbadccd629ef4cc21552cc62ec6
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="plan-communications"></a>Plán komunikace
 
@@ -30,13 +30,13 @@ Doporučujeme následující plán komunikace s využitím e-mailů. Vytvořili 
 -   **E-mail č. 1:** Vysvětlete, jaké jsou výhody, co se očekává a jaký je plán. Využijte této příležitosti a představte nové služby, ke kterým budou mít uživatelé přístup na zařízeních spravovaných v Intune.<br/><br/>
 
 
-    -   [Stáhnout šablonu e-mailu č. \#1](https://gallery.technet.microsoft.com/Intune-migration-guide-end-e3209b35)
+    -   [Stáhnout šablonu e-mailu č. 1](https://gallery.technet.microsoft.com/Intune-migration-guide-end-e3209b35)
 <br></br>
 
 -   **E-mail č. 2:** Oznamte uživatelům, že mají přístup ke službám v Intune. Řekněte uživatelům, aby se zaregistrovali. Připomeňte jim výhody a strategické důvody migrace.<br/><br/>
 
 
-    -   [Stáhnout šablonu e-mailu č. \#2](https://gallery.technet.microsoft.com/Intune-migration-guide-end-a9d25eb5)
+    -   [Stáhnout šablonu e-mailu č. 2](https://gallery.technet.microsoft.com/Intune-migration-guide-end-a9d25eb5)
 <br></br>
 
 -   **E-mail č. \#3:** Poskytněte uživatelům časovou osu s informacemi o tom, kdy bude ovlivněn jejich přístup. Znovu jim připomeňte výhody a strategické důvody migrace. Časový plán posílání e-mailů by měl zahrnovat posuvné okno, aby bylo možné přizpůsobení jednotlivým fázím. Například v červnu pošlete e-mail č. \#1 uživatelům fáze 1, e-mail č. \#2 uživatelům fáze 2 a e-mail č. \#3 uživatelům fáze 3.<br/><br/>
