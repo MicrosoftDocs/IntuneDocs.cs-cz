@@ -126,10 +126,6 @@
           items:
             - name: Konfigurace sítě
               href: network-bandwidth-use.md
-            - name: Windows Holographic for Business
-              href: windows-holographic-for-business.md
-            - name: Upgrade softwaru Windows Holographic
-              href: holographic-upgrade.md
         - name: Přihlášení k Intune
           href: account-sign-up.md
         - name: Konfigurace domén
@@ -148,7 +144,7 @@
         - name: Možnosti registrace
           href: enrollment-options.md
           items:
-            - name: podmínky a ujednání
+            - name: "Podmínky a\_ujednání"
               href: terms-and-conditions-create.md
             - name: Omezení
               href: enrollment-restrictions-set.md
@@ -158,7 +154,7 @@
               href: corporate-identifiers-add.md
             - name: Vícefaktorové ověřování
               href: multi-factor-authentication.md
-            - name: správce registrace zařízení
+            - name: Správce registrace zařízení
               href: device-enrollment-manager-enroll.md
             - name: Mapování zařízení na skupiny
               href: device-group-mapping.md
@@ -206,6 +202,8 @@
           href: device-logout-user.md
         - name: Odebrat uživatele
           href: device-remove-user.md
+        - name: Vymazání zařízení
+          href: device-erase.md
         - name: Vzdálené řízení mobilních zařízení
           href: device-profile-android-teamviewer.md
         - name: Resetování PIN kódu ve Windows 10
@@ -250,8 +248,13 @@
                   href: lob-apps-windows.md
             - name: Webové aplikace
               href: web-app.md
+            - name: Integrované aplikace
+              href: apps-add-bulit-in.md
         - name: Nasazení aplikací
           href: apps-deploy.md
+          items:
+            - name: Zahrnutí a vyloučení aplikací
+              href: apps-inc-exl-assignments.md
         - name: Monitorování aplikací
           href: apps-monitor.md
         - name: Konfigurace aplikací
@@ -313,7 +316,7 @@
               href: device-restrictions-ios.md
             - name: macOS
               href: device-restrictions-macos.md
-            - name: "Windows\_8.1"
+            - name: Windows 8.1
               href: device-restrictions-windows-8-1.md
             - name: Windows Phone 8.1
               href: device-restrictions-windows-phone-8-1.md
@@ -347,7 +350,7 @@
               href: vpn-setting-configure-per-app.md
             - name: macOS
               href: vpn-settings-macos.md
-            - name: "Windows\_8.1"
+            - name: Windows 8.1
               href: vpn-settings-windows-8-1.md
             - name: Windows Phone 8.1
               href: vpn-settings-windows-phone-8-1.md
@@ -541,7 +544,7 @@
             - name: Brána Windows Firewall
               href: /intune-classic/deploy-use/help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune
               maintainContext: true
-            - name: Funkce Endpoint Protection
+            - name: Endpoint Protection
               href: /intune-classic/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune
               maintainContext: true
         - name: Přidání aplikací pro klientské počítače Intune
@@ -553,6 +556,11 @@
         - name: Řešení konfliktů zásad
           href: /intune-classic/deploy-use/resolve-gpo-and-microsoft-intune-policy-conflicts
           maintainContext: true
+    - name: Správa softwaru Windows Holographic
+      href: windows-holographic-for-business.md
+      items:
+        - name: Upgrade softwaru Windows Holographic
+          href: holographic-upgrade.md
     - name: Informování uživatelů
       href: end-user-educate.md
       items:
