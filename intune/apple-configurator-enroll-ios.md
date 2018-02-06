@@ -15,11 +15,11 @@ ms.assetid: 6d384cd0-b662-41e7-94f5-0c96790ab20a
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3554623db2a153fd7f281a3b8453bedf1de3c77a
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 3e79ee1ddd2f8a8a9d7a3089e21b8807b9895d2c
+ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="enroll-ios-devices-with-apple-configurator"></a>Registrace zařízení s iOSem pomocí Apple Configuratoru
 
@@ -71,8 +71,8 @@ Profil registrace zařízení definuje nastavení, která se během registrace p
 
 1. Vytvořte seznam hodnot oddělených čárkami se dvěma sloupci (.csv) bez záhlaví. Do levého sloupce přidejte sériové číslo a v pravém sloupci uveďte podrobnosti. Aktuálně je maximální počet řádků v seznamu 5 000. V textovém editoru vypadá seznam .csv takto:
 
-    F7TLWCLBX196,podrobnosti o zařízení</br>
-    DLXQPCWVGHMJ,podrobnosti o zařízení
+  F7TLWCLBX196,podrobnosti o zařízení</br>
+  DLXQPCWVGHMJ,podrobnosti o zařízení
 
    Přečtete si, [jak zjistit sériové číslo zařízení s iOSem](https://support.apple.com/HT204073).
 2. V Intune na portálu Azure Portal zvolte **Registrace zařízení** a pak **Registrace Apple**.
@@ -164,3 +164,5 @@ Aplikace, které vyžadují přidruženého uživatele (včetně aplikace Portá
 7. Na zařízení s iOSem otevřete **Nastavení** a přejděte na **Obecné** > **Správa zařízení** > **Profil pro správu**. Potvrďte, že je zde instalace profilu uvedená, a zkontrolujte omezení zásad iOS a nainstalované aplikace. Zobrazení omezení vyplývajících ze zásad a aplikací na zařízení může trvat až 10 minut.
 
 8. Distribuujte zařízení. Zařízení s iOSem je teď zaregistrované v Intune a spravované.
+
+
