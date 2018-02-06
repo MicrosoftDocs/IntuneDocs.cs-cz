@@ -14,11 +14,11 @@ ms.technology:
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4cd446310256a71e7306364b4142bfacce482fe4
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: fc50d6f5c4b0350d0117b5d68a0b9ac3e9ec3ab3
+ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení Windows 10 a novější v Microsoft Intune
 
@@ -254,7 +254,7 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 
 ## <a name="kiosk-preview"></a>Beznabídkový režim (Preview)
 
--   **Beznabídkový režim** – Identifikuje typ [režimu veřejného terminálu](https://docs.microsoft.com/en-us/windows/configuration/kiosk-shared-pc) podporovaného zásadami. Vaše možnosti jsou:
+-   **Beznabídkový režim** – Identifikuje typ [režimu veřejného terminálu](https://docs.microsoft.com/windows/configuration/kiosk-shared-pc) podporovaného zásadami. Vaše možnosti jsou:
 
       - **Nenakonfigurováno** (výchozí) – Zásady nepovolují režim veřejného terminálu. 
       - **Veřejný terminál s jednou aplikací** – Profil povoluje zařízení jako veřejný terminál s jednou aplikací.
@@ -266,7 +266,7 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 
          Pro zařízení ve veřejných prostředích použijte účty s minimálními oprávněními, abyste zabránili autorizované aktivitě.  
 
-      - **ID modelu uživatele aplikace (AUMID) dané aplikace** – Určuje AUMID aplikace veřejného terminálu. Další informace najdete v tématu [Jak najít ID modelu uživatele aplikace (AUMID) nainstalované aplikace](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+      - **ID modelu uživatele aplikace (AUMID) dané aplikace** – Určuje AUMID aplikace veřejného terminálu. Další informace najdete v tématu [Jak najít ID modelu uživatele aplikace (AUMID) nainstalované aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
     Veřejné terminály s více aplikacemi vyžadují konfiguraci veřejného terminálu. Použijte tlačítko **Přidat** a vytvořte konfiguraci veřejného terminálu, nebo vyberte existující konfiguraci.
 
@@ -280,13 +280,13 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 
             - **Aplikace Win32** – Tradiční desktopová aplikace. (Budete potřebovat plně kvalifikovanou (absolutní) cestu ke spustitelnému souboru, s ohledem na zařízení.)
 
-            - **Aplikace pro UPW** – Univerzální aplikace pro Windows. Budete potřebovat [AUMID aplikace](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+            - **Aplikace pro UPW** – Univerzální aplikace pro Windows. Budete potřebovat [AUMID aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
-        - **Identifikátor aplikace** – Určuje buď plně kvalifikovanou (absolutní) cestu spustitelného souboru (u aplikací Win32), nebo [AUMID aplikace](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (u aplikací pro UPW).
+        - **Identifikátor aplikace** – Určuje buď plně kvalifikovanou (absolutní) cestu spustitelného souboru (u aplikací Win32), nebo [AUMID aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (u aplikací pro UPW).
 
     - **Hlavní panel** – Určuje, jestli má být na veřejném terminálu hlavní panel zobrazený (**Povoleno**), nebo skrytý (**Nenakonfigurováno**).
 
-    - **Rozložení nabídky Start** – Určuje soubor XML, který popisuje, jak se mají aplikace [zobrazit v nabídce Start](https://docs.microsoft.com/en-us/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file).
+    - **Rozložení nabídky Start** – Určuje soubor XML, který popisuje, jak se mají aplikace [zobrazit v nabídce Start](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file).
 
     - **Přiřazení uživatelé** – Určuje jeden nebo více uživatelských účtů přidružených ke konfiguraci veřejného terminálu. Účet může být místní (v zařízení) nebo přihlášení k účtu Azure AD přidružené k aplikaci veřejného terminálu. Účty připojené k doménám zadejte ve tvaru `domain\\username@tenant.org`.
 
