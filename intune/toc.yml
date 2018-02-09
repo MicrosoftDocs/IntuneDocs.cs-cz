@@ -68,6 +68,8 @@
           href: app-lifecycle.md
     - name: Typické scénáře
       href: common-scenarios.md
+    - name: MAM – NEJČASTĚJŠÍ DOTAZY
+      href: mam-faq.md
 - name: Nasazení plánu
   items:
     - name: Průvodce plánováním
@@ -144,7 +146,7 @@
         - name: Možnosti registrace
           href: enrollment-options.md
           items:
-            - name: "Podmínky a\_ujednání"
+            - name: podmínky a ujednání
               href: terms-and-conditions-create.md
             - name: Omezení
               href: enrollment-restrictions-set.md
@@ -154,7 +156,7 @@
               href: corporate-identifiers-add.md
             - name: Vícefaktorové ověřování
               href: multi-factor-authentication.md
-            - name: Správce registrace zařízení
+            - name: správce registrace zařízení
               href: device-enrollment-manager-enroll.md
             - name: Mapování zařízení na skupiny
               href: device-group-mapping.md
@@ -316,7 +318,7 @@
               href: device-restrictions-ios.md
             - name: macOS
               href: device-restrictions-macos.md
-            - name: Windows 8.1
+            - name: "Windows\_8.1"
               href: device-restrictions-windows-8-1.md
             - name: Windows Phone 8.1
               href: device-restrictions-windows-phone-8-1.md
@@ -350,7 +352,7 @@
               href: vpn-setting-configure-per-app.md
             - name: macOS
               href: vpn-settings-macos.md
-            - name: Windows 8.1
+            - name: "Windows\_8.1"
               href: vpn-settings-windows-8-1.md
             - name: Windows Phone 8.1
               href: vpn-settings-windows-phone-8-1.md
@@ -544,7 +546,7 @@
             - name: Brána Windows Firewall
               href: /intune-classic/deploy-use/help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune
               maintainContext: true
-            - name: Endpoint Protection
+            - name: Funkce Endpoint Protection
               href: /intune-classic/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune
               maintainContext: true
         - name: Přidání aplikací pro klientské počítače Intune
