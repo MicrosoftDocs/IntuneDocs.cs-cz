@@ -15,11 +15,11 @@ ms.assetid: 00356258-76a8-4a84-9cf5-64ceedb58e72
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4d84ecc31d266deb196192c8e1b3eeade6eb5ea3
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: ba0bbe8d10b3161af19b45e3a37f51101730d567
+ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Přidání a přiřazení aplikací pro ochranu před mobilními hrozbami (MTD) pomocí Intune
 
@@ -74,7 +74,7 @@ Podrobné pokyny k opětovnému podepsání aplikace Lookout for Work pro iOS na
 
 Následujícím postupem povolte ověřování uživatelů iOS službou Azure Active Directory:
 
-1. Přejděte na [portál Azure Portal](https://portal.sazure.com), přihlaste se pomocí svých přihlašovacích údajů a přejděte na stránku aplikace.
+1. Přejděte na [portál Azure Portal](https://portal.azure.com), přihlaste se pomocí svých přihlašovacích údajů a přejděte na stránku aplikace.
   
 2. Přidejte **aplikaci Lookout for Work pro iOS** jako **nativní klientskou aplikaci**.
 
