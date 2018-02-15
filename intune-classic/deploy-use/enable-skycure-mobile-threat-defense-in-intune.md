@@ -25,7 +25,7 @@ ms.lasthandoff: 10/10/2017
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Pokud chcete povolit ochranu před mobilními hrozbami Skycure, měli byste už mít konektor Intune v konzole Skycure nakonfigurovaný (/intune-classic/deploy-use/setup-the-skycure-integration-with-Intune).
+Pokud chcete povolit ochranu před mobilními hrozbami Skycure, měli byste už mít [konektor Intune v konzole Skycure nakonfigurovaný] (/intune-classic/deploy-use/setup-the-skycure-integration-with-Intune).
 
 ## <a name="to-enable-the-skycure-mtd-connection-in-intune"></a>Postup povolení připojení ochrany před mobilními hrozbami Skycure ve službě Intune
 
