@@ -6,7 +6,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: dougeby
-ms.date: 04/24/2017
+ms.date: 02/14/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 02b130ed13b3bb8869e35b035e787c97b76b5e85
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 70c3de614b0f5ed5075b669ecdffc08e1226817d
+ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="how-to-create-and-assign-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated-in-microsoft-intune"></a>Vytvoření a přiřazení zásad podmíněného přístupu pro místní Exchange a starší verze Exchange Online Dedicated v Microsoft Intune
 
@@ -65,7 +65,7 @@ Než nakonfigurujete podmíněný přístup, ověřte, jestli jsou splněné tyt
 - **Zařízení s Androidem for Work** se poštovními klienty EAS: Na zařízeních s Androidem for Work jsou v **pracovním profilu** podporované jenom aplikace **Gmail** a **Nine Work**. Aby v Androidu for Work fungoval podmíněný přístup, musíte nasadit e-mailový profil pro aplikaci Gmail nebo Nine Work a zároveň tyto aplikace nasadit jako požadovanou instalaci.
 
 > [!NOTE]
-> Aplikace Microsoft Outlook pro Android a iOS se nepodporuje. V současné době do tenantů Intune zavádíme Android for Work. Zavádění bude probíhat ještě několika dalších měsíců.
+> Aplikace Microsoft Outlook pro Android a iOS se nepodporuje. 
 
 ### <a name="support-for-pcs"></a>Podpora počítačů
 
