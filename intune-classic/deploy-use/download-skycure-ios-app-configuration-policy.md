@@ -30,7 +30,7 @@ ms.lasthandoff: 10/10/2017
 K provedení dalších kroků je potřeba, abyste se přihlásili do konzoly pro správu Skycure.
 
 > [!TIP] 
-> Pokud používáte Microsoft Internet Explorer 11 nebo Edge, budete možná muset otevřít konzolu pro správu Skycure v anonymním okně prohlížeče.
+> Pokud používáte Microsoft Internet Explorer 11 nebo Microsoft Edge, budete možná muset otevřít konzolu pro správu Skycure v anonymním okně prohlížeče.
 
 ## <a name="to-download-the-ios-app-configuration-policy"></a>Postup stažení zásad konfigurace aplikace pro iOS
 
