@@ -116,12 +116,12 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 
 |Název nastavení|Další informace (kde jsou potřeba)|
 |----------------|----------------------|
-|**Povolit webový prohlížeč**|Umožňuje na zařízení používat webový prohlížeč Edge.<br>(jenom Windows 10 Mobile)|
+|**Povolit webový prohlížeč**|Umožňuje na zařízení používat webový prohlížeč Microsoft Edge.<br>(jenom Windows 10 Mobile)|
 |**Povolit návrhy vyhledávání v panelu Adresa**|Umožňuje, aby vám vyhledávací web při psaní hledaného textu navrhoval weby.|
 |**Povolit odesílání intranetového provozu do Internet Exploreru**|Umožňuje uživatelům otevírat intranetové weby v Internet Exploreru.<br>(jenom Windows 10 Desktop)|
 |**Povolit Do Not Track**|Nakonfiguruje prohlížeč Microsoft tak, aby se webům, které uživatelé navštíví, odesílaly hlavičky DNT (Do Not Track).|
 |**Povolit filtr SmartScreen**||
-|**Povolit aktivní skriptování**|Umožňuje, aby se v prohlížeči Edge mohly spustit skripty, třeba JavaScript.|
+|**Povolit aktivní skriptování**|Umožňuje, aby se v prohlížeči Microsoft Edge mohly spustit skripty, třeba JavaScript.|
 |**Povolit automaticky otevíraná okna**|Platí jen pro Windows 10 Desktop|
 |**Povolit soubory cookie**||
 |**Povolit automatické vyplňování**|Umožňuje uživatelům změnit nastavení automatického dokončování v prohlížeči.<br>(jenom Windows 10 Desktop)|

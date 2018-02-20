@@ -36,7 +36,7 @@ Informace v tomto tématu vám pomůžou přidat do Intune aplikace z obchodu pr
 Pomocí této metody můžete aplikace přiřazovat jen v případě, že jsou v obchodě s aplikacemi bezplatné. Pokud chcete pomocí Intune přiřazovat placené aplikace, zvažte použití [programu hromadného nákupu iOS](vpp-apps-ios.md).
 
 >[!NOTE]
->Při práci s Microsoft Intune jsou doporučenými prohlížeči Chrome a Edge.
+>Při práci s Microsoft Intune jsou doporučenými prohlížeči Chrome a Microsoft Edge.
 
 ## <a name="step-1---search-for-the-app-in-the-store"></a>Krok 1 – vyhledání aplikace ve Storu
 
