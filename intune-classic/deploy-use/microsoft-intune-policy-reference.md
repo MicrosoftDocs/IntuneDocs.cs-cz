@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1dbac49ad8fe94e9000e609dea8ae8dd6749be52
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: bf92e34c5bb94fe0cb3c0cc9dabd687a0f2710b9
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="microsoft-intune-configuration-policy-reference"></a>Referenční informace o zásadách konfigurace služby Intune
 
@@ -105,7 +105,7 @@ Platí jenom pro Windows Phone a zaregistrovaná zařízení s Windows.
 |Název zásady|Použijte v případě, že chcete|
 |---------------|------------------------|
 |**Zásady Exchange ActiveSync**|Konfigurovat nastavení zabezpečení mobilních zařízení a funkční nastavení pro zařízení, která se spravují přes Exchange ActiveSync<br /><br />Podrobnosti najdete v tématu [Nastavení zásad Exchange ActiveSync v Microsoft Intune](exchange-activesync-policy-settings-in-microsoft-intune.md).|
-|**Zásady zabezpečení mobilních zařízení**|<ul><li>Konfiguruje nastavení pro mobilní zařízení (všechny platformy), včetně:<br /><br /><ul><li>Zabezpečení</li><li>Šifrování</li><li>Systému</li><li>E-mailu</li><li>Aplikací</li></ul></li></ul>
+|**Zásady zabezpečení mobilních zařízení**|<ul><li>Konfiguruje nastavení pro mobilní zařízení (všechny platformy), včetně:<br /><br /><ul><li>Zabezpečení</li><li>Šifrování</li><li>Systém</li><li>E-mailu</li><li>Aplikace</li></ul></li></ul>
 > [!IMPORTANT]
 Microsoft Intune teď nabízí oddělené **zásady konfigurace** pro každou platformu zařízení a tyto zásady obsahují nejaktuálnější nastavení, které můžete použít. Můžete pokračovat v používání zásad zabezpečení mobilních zařízení a všechna existující nasazení budou i nadále fungovat, měli byste ale naplánovat, aby se v co nejbližší době provedla migrace na nové zásady konfigurace.<br />Podrobnosti najdete v tématu [Zásady zabezpečení mobilních zařízení v Microsoft Intune](mobile-device-security-policy-settings-in-microsoft-intune.md).
 

@@ -14,11 +14,11 @@ ms.assetid: a8e38e29-f5e3-4a71-a170-d3b1a06e37c6
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: 
-ms.openlocfilehash: 38cae4b0726d4ad96c243dd87ea2581a691da306
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: b24b7615c6070614bb19aac0f4edb7d12ddc65c5
+ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
@@ -137,11 +137,11 @@ Identita představuje způsob identifikace uživatelů, kteří patří do organ
 
 Přečtěte si další informace o následujících požadavcích na identitu Intune:
 
-- [Požadavky na identitu](https://docs.microsoft.com/en-us/azure/active-directory/understand-azure-identity-solutions)
+- [Požadavky na identitu](https://docs.microsoft.com/azure/active-directory/understand-azure-identity-solutions)
 
-- [Požadavky na synchronizaci adresáře](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnect)
+- [Požadavky na synchronizaci adresáře](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
 
-- [Požadavky na vícefaktorové ověřování](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud)
+- [Požadavky na vícefaktorové ověřování](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud)
 
 ### <a name="user-and-device-groups"></a>Skupiny uživatelů a zařízení
 

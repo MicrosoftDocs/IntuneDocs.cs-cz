@@ -14,11 +14,11 @@ ms.assetid: 1f37d4ff-b5a7-4a89-8884-a6184908b09c
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a9cd5b0cddedc70c001ed8c50ecfbbc3334462f9
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 040076248629faa40745b16f90b694331c60a9b1
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="common-ways-to-use-intune"></a>Běžné způsoby použití Intune
 
@@ -34,7 +34,7 @@ Níže najdete krátký přehled šesti nejběžnějších scénářů, pro kter
 >Chcete vědět, jak IT oddělení Microsoftu využívá Intune k tomu, aby měli zaměstnanci Microsoftu přístup k podnikovým prostředkům na mobilních zařízeních a současně podniková data zůstala chráněná? [Přečtěte si tuto technickou případovou studii](https://www.microsoft.com/itshowcase/Article/Content/588), kde najdete podrobné informace o tom, jak IT oddělení společnosti Microsoft používá Intune a další služby ke správě identit, zařízení, aplikací a dat.  
 
 >[!IMPORTANT]
->Vzhledem k nedávným malwarovým útokům typu „Trident“ na zařízení s iOSem chceme zajistit, aby mobilní zařízení byla aktuální. Proto jsme publikovali blogový příspěvek o [aktualizaci mobilních zařízení pomocí Microsoft Intune](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/26/ensuring-mobile-devices-are-up-to-date-using-microsoft-intune/). Najdete v něm informace o různých způsobech, jak vám může Intune pomoct s tím, aby vaše zařízení zůstávala zabezpečená a aktuální.
+>Vzhledem k nedávným malwarovým útokům typu „Trident“ na zařízení s iOSem chceme zajistit, aby mobilní zařízení byla aktuální. Proto jsme publikovali blogový příspěvek o [aktualizaci mobilních zařízení pomocí Microsoft Intune](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/26/ensuring-mobile-devices-are-up-to-date-using-microsoft-intune/). Najdete v něm informace o různých způsobech, jak vám může Intune pomoct s tím, aby vaše zařízení byla stále zabezpečená a aktuální.
 
 ## <a name="protecting-your-on-premises-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices"></a>Ochrana místních e-mailů a dat, aby je mohli uživatelé bezpečně používat na mobilních zařízeních
 Většina strategií z hlediska využívání mobilních zařízení v podnicích začíná plánem zajistit zabezpečený přístup k e-mailům pro zaměstnance s mobilními zařízeními, která se připojují k internetu. Celá řada organizací ještě v dnešní době využívá místní datové a aplikační servery, jako je Microsoft Exchange, které má hostované ve své podnikové síti.
@@ -44,7 +44,7 @@ Intune a Microsoft Enterprise Mobility + Security (EMS) poskytují jedinečně i
 
 Intune podporuje také povolení přístupu k mobilním aplikacím, které vyžadují zabezpečený přístup k místním datům, třeba serverům obchodních aplikací. To se obvykle provádí pomocí [certifikátů spravovaných službou Intune](certificates-configure.md) ([portál Classic](/intune-classic/deploy-use/secure-resource-access-with-certificate-profiles)) pro řízení přístupu v kombinaci se standardní bránou sítě VPN nebo proxy serverem v hraniční síti, například Microsoft Azure Active Directory Application Proxy. 
 
-V takových případech je možné k podnikovým datům získat přístup jedině po zaregistrování zařízení v systému správy. Po zaregistrování zařízení pak systém pro správu zajišťuje, aby zařízení před přístupem k podnikovým datům splňovala vaše zásady. Kromě toho můžou [nástroj Intune App Wrapping Tool a sada App SDK](apps-prepare-mobile-application-management.md) pomoct zajistit, aby šlo firemní data využívat jenom v rámci dané podnikové aplikace a nešlo je předat zákaznickým aplikacím nebo službám.
+V takových případech je možné k podnikovým datům získat přístup jedině po zaregistrování zařízení v systému správy. Po zaregistrování zařízení pak systém pro správu zajišťuje, aby zařízení před přístupem k podnikovým datům splňovala vaše zásady. Kromě toho můžou [nástroj Intune App Wrapping Tool a sada Intune App SDK](apps-prepare-mobile-application-management.md) pomoct zajistit, aby šlo firemní data využívat jenom v rámci dané podnikové aplikace a nešlo je předat zákaznickým aplikacím nebo službám.
 
 <!-- Learn more about how to plan and deploy Intune to help secure on-premises email and data. -->
 

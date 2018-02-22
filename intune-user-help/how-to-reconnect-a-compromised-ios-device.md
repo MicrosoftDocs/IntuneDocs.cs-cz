@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: dougeby
-ms.date: 03/16/2017
+ms.date: 02/05/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -17,14 +17,14 @@ ROBOTS:
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 147ac06dbc472f1488b09766ef42b4ac2ab5685f
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 64e8cc7fdb2405dad61e0db2093339c255d666aa
+ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="how-to-reconnect-a-compromised-ios-device"></a>Opakované připojení k ohroženému zařízení se systémem iOS
 
-Vaše firemní podpora zjistila, že používáte zařízení s jailbreakem. To, že je zařízení tzv. „jailbreakované“, znamená, že se pozměnilo, aby byl povolený neomezený přístup k určitým nezbytným souborům, což může ohrozit zabezpečení a znamenat hrozbu pro vaše podnikové prostředky.
+Vaše firemní podpora zjistila, že používáte zařízení s jailbreakem. To, že je zařízení tzv. „jailbreakované“, znamená, že se pozměnilo, aby byl povolený neomezený přístup k určitým nezbytným souborům, což může ohrozit zabezpečení a znamenat hrozbu pro vaše podnikové prostředky. 
 
-Pokud k tomu dojde, nebude už vaše zařízení mít přístup k prostředkům společnosti a musíte požádat o pomoc svou firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Pokud k tomu dojde, vaše zařízení už nebude mít nadále přístup k podnikovým prostředkům a budete pravděpodobně muset obnovit zařízení do továrního nastavení. Doporučujeme, abyste požádali o pomoc podporu vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).

@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 21053cd7ce930bd11625807f7fdda3ebbdd953f3
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 5f16e14b32508adf1fc4f3f448f53a7dcad8e137
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="troubleshoot-conditional-access"></a>Řešení potíží s podmíněným přístupem
 
@@ -90,7 +90,7 @@ Zařízení může mít zablokovaný podmíněný přístup bez přijetí aktiva
 - Zkontrolujte v protokolech Exchange Connectoru aktivitu odesílání e-mailu a vyhledejte chyby. Příkladem hledaného příkazu je SendEmail z účtu pro oznámení na e-mailovou adresu uživatele.
 - Než Exchange Connector začne blokovat zařízení, odešle aktivační e-mail. Pokud je zařízení offline, nemusí aktivační e-mail obdržet. Zkontrolujte, jestli e-mailový klient v zařízení přijímá e-maily pomocí operace Push, a ne Poll, protože to může také způsobit, že uživatel nedostane e-mail. Přepněte na Poll a zkontrolujte, jestli zařízení obdrží e-mail.
 
-## <a name="non-compliant-device-not-blocked"></a>Zařízení nevyhovující předpisům není blokované.
+## <a name="noncompliant-device-not-blocked"></a>Zařízení nevyhovující předpisům není blokované
 
 Pokud narazíte na zařízení, které nevyhovuje předpisům, ale má nadále přístup, proveďte následující kroky.
 

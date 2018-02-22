@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/29/2017
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d3e3f35648784de860eb7e3f2e203488bc77a96d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: fab385762efa3ab095553fe21fb045f4f11ff197
+ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
@@ -31,7 +31,7 @@ Jako správce Intune můžete vytvořit a spravovat omezení registrace definuj�
 >Omezení registrací nepatří k funkcím zabezpečení. Ohrožená zařízení mohou poskytovat zavádějící informace. Tato omezení jsou jen určitou bariérou pro uživatele bez zlých úmyslů.
 
 >[!NOTE]
->Níže popsané omezení registrace přiřazené skupinám a funkce priority se v současnosti zavádí napříč zákaznickou základnou Intune. Než se zavedení dokončí, možná nebudete mít k funkcím skupin a priority přístup. 
+>Níže popsané omezení registrace přiřazené skupinám a funkce priority se v současnosti zavádí napříč zákaznickou základnou Intune. Než se zavedení dokončí, možná nebudete mít k funkcím skupin a priority přístup.
 
 Mezi konkrétní omezení registrace, která můžete vytvořit, patří:
 
@@ -80,7 +80,7 @@ Nastavení omezení typu zařízení můžete změnit podle následujícího pos
   - Android a Android for Work podporují major.minor.rev.build.
   - Systém iOS podporuje major.minor.rev.
   - Systém Windows podporuje jenom major.minor.rev.build pro Windows 10.
-  Verze operačního systému se nevztahují na zařízení Apple registrovaná v Programu registrace zařízení, pomocí Apple School Manageru ani v aplikaci Apple Configurator. 
+  Verze operačního systému se nevztahují na zařízení Apple registrovaná v Programu registrace zařízení, pomocí Apple School Manageru ani v aplikaci Apple Configurator.
 8. U každé uvedené platformy zadejte, zda chcete **Povolit** nebo **Blokovat**  zařízení **v osobním vlastnictví**.
 
     ![Snímek obrazovky pracovního prostoru Omezení zařízení s výchozími konfiguracemi platformy zařízení zobrazující konfiguraci nastavení pro osobní vlastnictví](media/device-restrictions-platform-configurations.png)
@@ -103,15 +103,19 @@ Nastavení omezení počtu zařízení můžete změnit podle následujícího p
     ![Snímek obrazovky okna Omezení limitů počtů zařízení s omezením limitu počtu zařízení](./media/device-restrictions-limit.png)
 6. Klikněte na **Uložit**.
 
+Při dosažení limitu počtu zaregistrovaných zařízení se koncovému uživateli zobrazí oznámení. Například v iOSu by vypadalo takto:
+
+![Snímek obrazovky s oznámením o dosažení limitu počtu zařízení s iOSem](./media/enrollment-restrictions-ios-set-limit-notification.png)
+
 ## <a name="change-enrollment-restriction-priority"></a>Změna priority omezení registrace
 
-Priorita se používá, když uživatel existuje v několika skupinách, ke kterým jsou přiřazena omezení. Uživatelé podléhají jenom omezení s nejvyšší prioritou přiřazenému ke skupině, ve které se nacházejí. Jan je například ve skupině A, která má přiřazena omezení s prioritou 5, a ve skupině B, na kterou se vztahují omezení s prioritou 2. U Jana se uplatní jenom omezení s prioritou 2. 
+Priorita se používá, když uživatel existuje v několika skupinách, ke kterým jsou přiřazena omezení. Uživatelé podléhají jenom omezení s nejvyšší prioritou přiřazenému ke skupině, ve které se nacházejí. Jan je například ve skupině A, která má přiřazena omezení s prioritou 5, a ve skupině B, na kterou se vztahují omezení s prioritou 2. U Jana se uplatní jenom omezení s prioritou 2.
 
 Když vytvoříte omezení, přidá se do seznamu bezprostředně nad výchozí omezení.
 
-Registrace zařízení obsahuje výchozí omezení jak pro omezení typu zařízení, tak pro omezení limitu počtu zařízení. Tato dvě omezení platí pro všechny uživatele, pokud je nepřepíšete omezeními s vyšší prioritou. 
+Registrace zařízení obsahuje výchozí omezení jak pro omezení typu zařízení, tak pro omezení limitu počtu zařízení. Tato dvě omezení platí pro všechny uživatele, pokud je nepřepíšete omezeními s vyšší prioritou.
 
-Prioritu kteréhokoli nevýchozího omezení můžete změnit. 
+Prioritu kteréhokoli nevýchozího omezení můžete změnit.
 
 **Změna priority omezení**
 
@@ -120,8 +124,3 @@ Prioritu kteréhokoli nevýchozího omezení můžete změnit.
 3. Zvolte **Registrace zařízení** > **Omezení registrace**.
 4. Najeďte kurzorem myši na omezení v seznamu priorit.
 5. Pomocí tří svislých teček přetáhněte prioritu na požadované místo v seznamu.
-
-
-
-
-

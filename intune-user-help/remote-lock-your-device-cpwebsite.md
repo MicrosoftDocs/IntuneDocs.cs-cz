@@ -1,5 +1,5 @@
 ---
-title: "Uzamknutí zařízení z Portálu společnosti | Dokumentace Microsoftu"
+title: "Uzamknutí zařízení z Portálu společnosti | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
@@ -17,11 +17,11 @@ ROBOTS:
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 3926b64bacb1acde29146aed9d3030729e8b9b17
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 9faaacb321dfd13c053768ea27f0cca38b30d077
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Vzdálené uzamčení zařízení z webu Portál společnosti
 
@@ -61,7 +61,7 @@ Abyste byli v bezpečí, můžete zařízení uzamknout pomocí možnosti Vzdál
     * Dlaždice zobrazující název zařízení v části stránky **Moje zařízení**.
 
 > [!Note]
-> Pokud se zobrazí oznámení, že se vzdálené uzamčení nezdařilo, počkejte několik minut a zkuste zařízení znovu zamknout. Po zahájení nového pokusu se stav změní zpět na Vzdálené uzamčení čeká na vyřízení. Pokud se nový pokus nezdaří, budete se muset obrátit na svou firemní podporu, aby vám pomohla.
+> Pokud se zobrazí oznámení, že se vzdálené uzamčení nezdařilo, počkejte několik minut a zkuste zařízení znovu zamknout. Po zahájení nového pokusu se stav změní zpět na Vzdálené uzamčení čeká na vyřízení. Pokud se nový pokus nezdaří, budete muset požádat o pomoc firemní podporu.
 
 Pokud najdete své zařízení a chcete ho odemknout po použití vzdáleného uzamčení, stačí zadat heslo.
 

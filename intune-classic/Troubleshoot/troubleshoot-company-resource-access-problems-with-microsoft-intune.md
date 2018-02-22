@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: tscott
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f77e6c0e473e2e713186b927485d4dcda1b0f5e1
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: e6649962402dd8c8d11ea7357b48edee268b0f05
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="troubleshoot-company-resource-access-problems-with-microsoft-intune"></a>Řešení problémů s přístupem k prostředkům společnosti ve službě Microsoft Intune
 
@@ -376,7 +376,7 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 |-2016345904|0x87D100D0|Konflikt se vyřešil tím, že „vyhrál“ příkaz klienta. Z odpovědi vyplývá, že při aktualizaci došlo ke konfliktu, který se vyřešil vítězstvím příkazu klienta.|
 |-2016345905|0x87D100CF|Konflikt se vyřešil sloučením. Z odpovědi vyplývá, že žádost vytvořila konflikt, který se vyřešil sloučením klientských a serverových instancí dat. Odpověď obsahuje v položce stavu zdrojové i cílové adresy URL. Se sloučenými daty je dál vrácený příkaz Replace.|
 |-2016345906|0x87D100CE|Z odpovědi vyplývá, že je dokončená jenom část příkazu. Jestli může být zbytek příkazu dokončený později, tak při dokončení by se MĚL vytvořit další odpovídající stavový kód žádosti o dokončení.|
-|-2016345907|0x87D100CD|Zdroj by MĚL aktualizovat obsah. Odesílatel požadavku dostane informaci, že by MĚL synchronizovat obsah, aby získal aktuální verzi.|
+|-2016345907|0x87D100CD|Zdroj by MĚL aktualizovat obsah. Odesílatel požadavku dostane informaci o tom, ŽE BY MĚL synchronizovat obsah, aby získal aktuální verzi.|
 |-2016345908|0x87D100CC|Žádost se úspěšně dokončila, ale nevrátila se žádná data. Když v cíli není obsah, vrátí se v reakci na příkaz Get kód odpovědi.|
 |-2016345909|0x87D100CB|Nespolehlivá odpověď. Na žádost odpověděla jiná entita, než jaké byla určená. Odpověď se vrátí jenom tehdy, když důvěryhodný cíl vrátí na žádost kód odpovědi 200.|
 |-2016345910|0x87D100CA|Přijaté ke zpracování. Žádost o vzdálené spuštění aplikace nebo o upozornění uživatele nebo aplikace se úspěšně provedla.|

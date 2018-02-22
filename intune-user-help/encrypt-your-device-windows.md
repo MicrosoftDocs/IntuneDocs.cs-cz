@@ -1,11 +1,11 @@
 ---
-title: "Jak chránit zařízení s Windows pomocí šifrování | Dokumentace Microsoftu"
+title: "Jak chránit zařízení s Windows pomocí šifrování | Microsoft Docs"
 description: "Popisuje šifrování zařízení s Windows."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: dougeby
-ms.date: 01/23/2017
+ms.date: 01/29/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -17,18 +17,21 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 0cd9107462348e92c9b1a3122c19591bcab6a00e
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: ed8475956a13e2f35d37b57f0d404f916c239998
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="how-to-protect-your-windows-device-using-encryption"></a>Jak chránit zařízení s Windows pomocí šifrování
 
-Při šifrování zařízení balíte informace v zařízení do vrstvy ochranného kódu, který brání neoprávněným osobám v přístupu k nim. Jako další krok k zabezpečení vašich informací vyžaduje vaše organizace, abyste si pro účely ochrany firemních nebo školních dat zašifrovali zařízení s Windows.
+Při šifrování zařízení balíte informace v zařízení do vrstvy ochranného kódu, který brání neoprávněným osobám v přístupu k nim. Jako další krok k zabezpečení vašich informací vyžaduje vaše organizace, abyste si pro účely ochrany firemních nebo školních dat zašifrovali zařízení s Windows. 
+
+Pokud máte telefon s Windows a zaregistrovali jste si ho, zařízení se zašifruje automaticky, pokud se vyžaduje šifrování.
 
 > [!Note]
-> Pokud máte telefon s Windows a zaregistrovali jste si ho, zařízení se zašifruje automaticky, pokud se vyžaduje šifrování.
+> Ve Windows 10 Home se šifrování nepodporuje. Přečtěte si, jak provést upgrade z [Windows 10 Home na Windows 10 Pro](https://support.microsoft.com/help/12384/windows-10-upgrading-home-to-pro).
+
 
 Pokud máte stolní zařízení, je jeho zašifrování popsané v následujících pokynech.
 

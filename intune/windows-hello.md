@@ -6,20 +6,18 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 11/28/2017
+ms.date: 1/25/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 541be8b8-8668-41be-afce-3f3e08c12191
-ms.reviewer: davidra
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9ce18162391318374729b55aaeb302d850c17939
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 3fb7de9fb320b74895b702167750e149eba34e1e
+ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="use-windows-hello-for-business"></a>Použití Windows Hello pro firmy
 
@@ -43,7 +41,7 @@ Intune se s Hello pro firmy integruje dvěma způsoby:
 
 >Anniversary Update sloučil tyhle dva kódy do jediného PIN zařízení.
 Veškeré zásady konfigurace Intune, které mají nastaveno, že ovládají PIN zařízení, a také jakékoli nakonfigurované zásady Windows Hello pro firmy teď nastavují hodnotu tohoto nového kódu PIN.
-Pokud jste o obou typů zásad nastavili, že ovládají kód PIN, použijí se na desktopových i mobilních zařízeních s Windows 10 zásady Windows Hello pro firmy.
+Pokud jste u obou typů zásad nastavili, že ovládají kód PIN, použijí se v zařízeních s desktopovými i mobilními verzemi Windows 10 zásady Windows Hello pro firmy.
 Abyste předešli konfliktům mezi zásadami a zajistili, že zásady kódu PIN se budou aplikovat správně, aktualizujte zásady Windows Hello pro firmy, tak aby odpovídaly nastavení zásad konfigurace. Potom požádejte uživatele, aby si svá zařízení synchronizovali v aplikaci Portál společnosti.
 
 
@@ -94,6 +92,18 @@ Abyste předešli konfliktům mezi zásadami a zajistili, že zásady kódu PIN 
 
  - **Použít přihlášení telefonem**. Pokud je tato možnost nastavená na hodnotu **Ano**, uživatelé můžou použít vzdálenou službu Passport, která bude sloužit jako přenosné doprovodné zařízení pro ověřování stolního počítače. Stolní počítač musí být připojený ke službě Azure Active Directory a v doprovodném zařízení musí být nakonfigurovaný kód PIN služby Windows Hello pro firmy.
 
+## <a name="windows-holographic-for-business-support"></a>Podpora Windows Holographic for Business
+
+Windows Holographic for Business podporuje následující nastavení Windows Hello pro firmy:
+
+- Použít čip TPM (Trusted Platform Module)
+- Minimální délka PIN kódu
+- Maximální délka PIN kódu
+- Malá písmena v PIN kódu
+- Velká písmena v PIN kódu
+- Speciální znaky v PIN kódu
+- Vypršení platnosti PIN kódu (v dnech)
+- Pamatovat si historii PIN kódů
 
 ## <a name="further-information"></a>Další informace
 Další informace o službě Microsoft Passport najdete v [příručce](https://technet.microsoft.com/library/mt589441.aspx) v dokumentaci k Windows 10.

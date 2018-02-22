@@ -15,11 +15,11 @@ ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a6645261e2a90ea3890dc22b42fe65d6af4af6e5
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: ac997e9543df5d964b6a8fba83677baa49af38e8
+ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="what-are-app-protection-policies"></a>Co jsou zásady ochrany aplikací?
 
@@ -72,6 +72,7 @@ V současné době není dostupná podpora zařízení s Windows. Pokud zaříze
 ![Obrázek, který znázorňuje, že pokud se nepoužívají zásady ochrany aplikací, můžou se data volně přesouvat mezi aplikacemi](./media/apps-without-protection-policies.png)
 
 Pokud se aplikace používají bez omezení, můžou se osobní a firemní data prolínat.  Firemní data můžou být uložená v osobním úložišti nebo přenesená do aplikací mimo váš dosah, a může tím dojít ke ztrátě dat. Šipky v diagramu znázorňují neomezený přesun dat mezi aplikacemi (podnikovými a osobními) a úložišti.
+
 
 ### <a name="data-protection-with-app-protection-policies"></a>Ochrana dat pomocí zásad ochrany aplikací
 
@@ -134,3 +135,6 @@ Pokud třeba uživatel spustí aplikaci OneDrive pomocí svého pracovního úč
 ##  <a name="next-steps"></a>Další kroky
 
 [Jak vytvořit a nasadit zásady ochrany aplikací pomocí Microsoft Intune](app-protection-policies.md)
+
+## <a name="see-also"></a>Viz taky
+Aplikace jiných firem, například mobilní aplikace Salesforce, fungují s Intune specifickým způsobem, aby se chránila podniková data. Další informace o tom, jak konkrétně aplikace Salesforce funguje s Intune (včetně nastavení konfigurace aplikace MDM), najdete v článku [Aplikace Salesforce a Microsoft Intune](https://gallery.technet.microsoft.com/Salesforce-App-and-Intune-c47d44ee/file/188000/1/Salesforce%20App%20and%20Intune%20for%20external.pdf).

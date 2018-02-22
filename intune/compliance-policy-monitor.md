@@ -15,11 +15,11 @@ ms.assetid: 503d1dd2-a647-4aea-bf48-55319a3dd8a7
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 999cb6a9ec37c42b216cda1f6963bbd61ec8fa66
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: f82293ee3803f189cbb67549b1a6cd653572eaaf
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorování zásad dodržování předpisů zařízením v Intune
 
@@ -143,7 +143,7 @@ Když kliknete na dlaždici Dodržování zásad a pak na některou ze zásad do
 
 ### <a name="per-setting-device-compliance-report"></a>Sestava dodržování předpisů zařízením podle nastavení
 
-Tato sestava umožňuje zobrazit celkový počet zařízení v jednotlivých stavech dodržování předpisů podle nastavení dodržování předpisů. Dlaždice **Nastavení dodržování předpisů** je k dispozici na **Řídicím panelu pro dodržování předpisů zařízením** a zobrazuje všechna nastavení zásad dodržování předpisů zařízením ze všech zásad dodržování předpisů zařízením vytvořených správcem, platformy, pro které nastavení zásad platí, a počet zařízení nedodržujících předpisy.
+Tato sestava umožňuje zobrazit celkový počet zařízení v jednotlivých stavech dodržování předpisů podle nastavení dodržování předpisů. Dlaždice **Nastavení dodržování předpisů** je k dispozici na **řídicím panelu pro dodržování předpisů zařízením** a zobrazuje všechna nastavení zásad dodržování předpisů zařízením ze všech zásad dodržování předpisů zařízením vytvořených správcem, platformy, pro které nastavení zásad platí, a počet zařízení nedodržujících předpisy.
 
 ![Sestava dodržování předpisů zařízením podle nastavení](./media/idc-10.png)
 

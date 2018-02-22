@@ -2,10 +2,10 @@
 title: Modul plug-in Cordova sady Intune App SDK
 description: 
 keywords: SDK, Cordova, Intune
-author: arob98
-ms.author: angrobe
+author: Erikre
+ms.author: erikre
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 02/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,20 +14,23 @@ ms.assetid: bb940cb9-d43f-45ca-b065-ac0adc61dc6f
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 00c1c805dbbf661bdcd4ad6b153fee8b2bbba9ee
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: d42f8418e2f277dca0fbb2f01248f5a815606cb6
+ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="microsoft-intune-app-sdk-cordova-plugin"></a>Modul plug-in Cordova sady Intune App SDK
 
-> [!NOTE]
-> Možná si budete chtít nejdřív přečíst článek [Začínáme s Intune App SDK](app-sdk-get-started.md), který vysvětluje postup přípravy integrace na jednotlivých podporovaných platformách.
+> [!IMPORTANT]
+> Intune ukončuje od 1. května 2018 podporu modulu plug-in Cordova sady Microsoft Intune App SDK. Doporučujeme, abyste místo něj používali nástroj Intune App Wrapping Tool. Další informace o nástroji App Wrapping Tool najdete v tématech [Nástroj App Wrapping Tool pro iOS](app-wrapper-prepare-ios.md) a [Nástroj App Wrapping Tool pro Android](app-wrapper-prepare-android.md). Další informace o této změně najdete v části [Sdělení](whats-new.md#notices) v tématu [Co je nového v Microsoft Intune](whats-new.md).
 
 ## <a name="overview"></a>Přehled
 
 [Modul plug-in Cordova sady Intune App SDK](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) v aplikacích pro iOS a Android sestavené pomocí Cordovy Modul plug-in umožňuje vývojářům integrovat do své aplikace založené na Cordově funkce Intune pro ochranu aplikací a dat.
+
+> [!NOTE]
+> Možná si budete chtít nejdřív přečíst článek [Začínáme s Intune App SDK](app-sdk-get-started.md), který vysvětluje postup přípravy integrace na jednotlivých podporovaných platformách.
 
 Funkce SDK můžete povolit beze změny chování aplikace. Po integraci modulu plug-in do aplikace pro iOS nebo Android bude moct správce Microsoft Intune nasadit zásady ochrany aplikací Intune, které se skládají z různých funkcí pro ochranu dat. Modul plug-in je vytvořený tak, aby se většina kroků prováděla automaticky v procesu sestavování Cordovy. Díky tomu byste měli být schopní v aplikaci rychle povolit ochranu aplikací Intune. Začněte podle následujících kroků na základě vaší cílové platformy.
 
@@ -65,7 +68,7 @@ Aplikace Cordova vytvořené pomocí modulu plug-in Cordova sady Intune App SDK 
 
 
 
-## <a name="quick-start"></a>Rychlý start
+## <a name="quickstart"></a>Rychlý start
 
 1. Aktualizujte si verzi ADAL:
 

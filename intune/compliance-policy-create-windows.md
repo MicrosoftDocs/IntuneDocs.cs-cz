@@ -6,29 +6,27 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: dougeby
-ms.date: 12/07/2016
+ms.date: 1/24/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 13fc7783-d4de-47d0-b1b8-4c8710a9e6ab
-ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 59a68bbe3c7030e44e4b1eacb5601dd7a3121673
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 05fb016277f8645c661bc8dee213ed98b95c0198
+ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-create-a-device-compliance-policy-for-windows-devices-in-intune"></a>Vytvoření zásad dodržování předpisů pro zařízení s Windows v Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Zásady dodržování předpisů se vytvářejí pro jednotlivé platformy.  Zásady dodržování předpisů můžete vytvořit na portálu Azure Portal. Další informace o tom, co jsou zásady dodržování předpisů, najdete v tématu [Co jsou zásady dodržování předpisů u zařízení](device-compliance.md). Další informace o požadavcích, kterým je potřeba vyhovět před vytvořením zásad dodržování předpisů, najdete v tématu [Začínáme se zásadami dodržování předpisů u zařízení](device-compliance-get-started.md).
+Zásady dodržování předpisů se vytvářejí pro jednotlivé platformy. Zásady dodržování předpisů můžete vytvořit na portálu Azure Portal. Další informace o tom, co jsou zásady dodržování předpisů, najdete v tématu [Co jsou zásady dodržování předpisů u zařízení](device-compliance.md). Další informace o požadavcích, kterým je potřeba vyhovět před vytvořením zásad dodržování předpisů, najdete v tématu [Začínáme se zásadami dodržování předpisů u zařízení](device-compliance-get-started.md).
 
-Tabulka níže popisuje, jak se postupuje u nevyhovujícího nastavení při použití zásad dodržování předpisů se zásadami podmíněného přístupu.
+Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení při použití zásad dodržování předpisů se zásadami podmíněného přístupu.
 
 ---------------------------
 
@@ -55,7 +53,7 @@ Tabulka níže popisuje, jak se postupuje u nevyhovujícího nastavení při pou
 
 1. V okně **Intune** zvolte **Nastavit dodržování předpisů zařízením**. V části **Správa** zvolte možnost pro **Všechny zásady dodržování předpisů zařízení** a zvolte **Vytvořit**.
 2. Zadejte název a popis a zvolte platformu, u které chcete použít tyto zásady.
-3. Zvolte **Požadavky na dodržování předpisů** a otevřete tak okno s požadavky na dodržování předpisů.  Můžete tady zadat nastavení pro **Zabezpečení**, **Stav zařízení** a **Vlastnosti zařízení**. Až skončíte, klikněte na **Ok**.
+3. Zvolte **Požadavky na dodržování předpisů** a otevřete tak okno s požadavky na dodržování předpisů.  Můžete tady zadat nastavení pro **Zabezpečení**, **Stav zařízení** a **Vlastnosti zařízení**. Až to budete mít, zvolte **OK**.
 
 <!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant with this policy.
 5. In the **Actions for noncompliance** blade, choose **Add** to create a new action.  The action parameters blade allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
@@ -71,7 +69,7 @@ Pokud chcete přiřadit zásady dodržování předpisů uživatelům, vyberte z
 1. Vyberte zásady, které chcete přiřadit uživatelům, a zvolte **Přiřazení**. Otevře se okno, kde můžete vybrat **skupiny zabezpečení Azure Active Directory** a přiřadit je k zásadám.
 2. Zvolte **Vybrat skupiny** a otevřete tak okno, ve kterém se zobrazí skupiny zabezpečení v Azure AD.  Po zvolení možnosti **Vybrat** se zásady nasadí u uživatelů.
 
-Zásady jsou teď použité u uživatelů.  U zařízení používaných uživateli, kteří jsou cílem zásad, se bude vyhodnocovat dodržování předpisů.
+Zásady jsou teď použité u uživatelů. U zařízení používaných uživateli, kteří jsou cílem zásad, se bude vyhodnocovat dodržování předpisů.
 
 <!---## Compliance policy settings--->
 
@@ -82,7 +80,7 @@ Zásady jsou teď použité u uživatelů.  U zařízení používaných uživat
 - **Vyžadovat heslo k odemknutí mobilních zařízení:** Pokud tuto možnost nastavíte na **Ano**, budou muset uživatelé zadat heslo, aby mohli získat přístup ke svému zařízení.
 - **Povolit jednoduchá hesla**: Pokud tuto možnost nastavíte na **Ano**, umožníte uživatelům vytvářet jednoduchá hesla, třeba **1234** nebo **1111**.
 - **Minimální délka hesla**: Určuje minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
-- **Požadovaný typ hesla**: Určuje, jestli musí uživatelé vytvořit heslo typu **Alfanumerické** nebo **Číselné**.
+- **Vyžadovaný typ hesla:** Určuje, jestli musí uživatelé vytvořit heslo typu **Alfanumerický**, nebo **Číslo**.
 
 U zařízení s Windows zabezpečených účtem Microsoft se zásada dodržování předpisů nevyhodnotí správně, pokud je minimální délka hesla větší než osm znaků nebo pokud je minimální počet znakových sad větší než dvě.
 
@@ -94,7 +92,7 @@ U zařízení s Windows zabezpečených účtem Microsoft se zásada dodržován
 
 Pokud se v tomto nastavení nastaví větší číslo, uživatelé budou muset vytvářet složitější hesla. U zařízení s Windows zabezpečených účtem Microsoft se zásada dodržování předpisů nevyhodnotí správně, pokud je minimální délka hesla větší než osm znaků nebo pokud je minimální počet znakových sad větší než dvě.
 
-- **Počet minut nečinnosti před vyžádáním hesla**: Určuje dobu nečinnosti, než bude muset uživatel znovu zadat heslo.
+- **Počet minut nečinnosti před vyžádáním hesla:** Určuje dobu nečinnosti, než bude muset uživatel znovu zadat heslo.
 - **Konec platnosti hesla (dny)**: Vyberte počet dní, za který skončí platnost uživatelského hesla a uživatel bude muset vytvořit nové.
 - **Pamatovat si historii hesel:** Pokud chcete zabránit uživatelům ve vytváření hesel, která používali dřív, použijte toto nastavení spolu s nastavením **Zakázat opakované použití předchozích hesel**.
 - **Zakázat opakované použití předchozích hesel:** Pokud je zvolená možnost **Pamatovat si historii hesel**, zadejte počet předchozích hesel, která se nesmí znovu použít.
@@ -132,19 +130,19 @@ Informace o způsobu fungování služby ověření stavu najdete v tématu [Pos
 
 Určuje minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
 
-U zařízení s Windows zabezpečených účtem Microsoft se zásada dodržování předpisů nevyhodnotí správně, pokud je **Minimální délka hesla** větší než 8 znaků nebo pokud je **Minimální počet znakových sad** větší než 2.
+U zařízení s Windows zabezpečených účtem Microsoft se zásada dodržování předpisů nevyhodnotí správně, pokud je **minimální délka hesla** větší než osm znaků nebo pokud je **minimální počet znakových sad** větší než dvě.
 
 - **Požadovaný typ hesla**: Podporuje se ve Windows RT, Windows RT 8.1 a Windows 8.1.
 
-Určuje, jestli musí uživatelé vytvořit heslo typu **Alfanumerické** nebo **Číselné**.
+Určuje, jestli musí uživatelé vytvořit heslo typu **Alfanumerický**, nebo **Číslo**.
 
-- **Minimální počet znakových sad**: Podporuje se ve Windows RT, Windows RT 8.1 a Windows 8.1. Pokud se **Požadovaný typ hesla** nastaví na **Alfanumerické**, určuje toto nastavení nejmenší počet znakových sad, které musí heslo obsahovat. Jde o tyto čtyři znakové sady:
+- **Minimální počet znakových sad**: Podporuje se ve Windows RT, Windows RT 8.1 a Windows 8.1. Pokud se **Požadovaný typ hesla** nastaví na **Alfanumerické**, toto nastavení určuje nejmenší počet znakových sad, které musí heslo obsahovat. Jde o tyto čtyři znakové sady:
   - Malá písmena
   - Velká písmena
   - Symboly
   - Čísla: Pokud se v tomto nastavení nastaví větší číslo, budou uživatelé muset vytvářet složitější hesla.
 
-U zařízení s Windows zabezpečených účtem Microsoft se zásada dodržování předpisů nevyhodnotí správně, pokud je **Minimální délka hesla** větší než 8 znaků nebo pokud je **Minimální počet znakových sad** větší než dvě.
+U zařízení s Windows zabezpečených účtem Microsoft se zásada dodržování předpisů nevyhodnotí správně, pokud je **minimální délka hesla** větší než osm znaků nebo pokud je **minimální počet znakových sad** větší než dvě.
 
 - **Počet minut nečinnosti před vyžádáním hesla:** Podporuje se ve Windows RT, Windows RT 8.1 a Windows 8.1.
 
@@ -169,7 +167,7 @@ Pokud je zvolená možnost **Pamatovat si historii hesel**, zadejte počet před
   - **Povolený nástroj BitLocker:** Když je nástroj BitLocker zapnutý, při vypnutém systému nebo v režimu hibernace je zařízení schopné chránit data uložená na disku před neoprávněným přístupem. Nástroj Windows BitLocker Drive Encryption zašifruje všechna data uložená na svazku operačního systému Windows. Nástroj BitLocker chrání data operačního systému Windows a uživatelská data pomocí čipu TPM a pomáhá zajistit, aby s počítačem nemohl nikdo manipulovat, ani když ho uživatel ponechá bez dozoru nebo dojde k jeho ztrátě nebo odcizení. Pokud je počítač vybavený kompatibilním čipem TPM, nástroj BitLocker pomocí čipu TPM uzamkne šifrovací klíče, které chrání data. V důsledku toho se ke klíčům nedá získat přístup, dokud čip TPM neověří stav počítače.
   - **Povolená integrita kódu:** Integrita kódu je funkce, která ověřuje integritu ovladače nebo systému souboru při každém načtení do paměti. Integrita kódu zjistí, jestli se do jádra nenačítá nepodepsaný ovladač nebo systémový soubor nebo jestli nedošlo k úpravě některého systémového souboru škodlivým softwarem spuštěným pomocí uživatelského účtu s oprávněním správce.
   - **Povolené zabezpečené spouštění:** Pokud je povolené zabezpečené spouštění, musí se systém spouštět do důvěryhodného stavu z výroby. Kromě toho platí, že při povoleném zabezpečeném spouštění musí mít komponenty jádra sloužící ke spuštění počítače správné kryptografické podpisy, které jsou podle výrobce zařízení důvěryhodné. Firmware UEFI to nejdřív ověří a až potom povolí spuštění počítače. Pokud u některých souborů došlo k manipulaci, při které se porušil podpis, systém se nespustí.
-  - **Je povolený ovladač ELAM (Early Launch Antimalware):** Ovladač ELAM (Early Launch Antimalware) chrání počítače v síti během spouštění a před inicializací ovladačů jiných výrobců.
+  - **Musí být povolené prvotní spuštění antimalwarového programu:** Prvotní spuštění antimalwarového programu (ELAM – Early Launch Antimalware) chrání počítače v síti během spouštění a před inicializací ovladačů jiných výrobců.
 
 Informace o způsobu fungování služby ověření stavu najdete v tématu [Poskytovatel CSP služby Health Attestation](https://msdn.microsoft.com/library/dn934876.aspx).
 
@@ -185,10 +183,18 @@ Pokud má zařízení starší verzi operačního systému, než je zadaná verz
 
 Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný a uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nepůjde přes toto zařízení přistupovat k prostředkům společnosti.
 
-K vyhledání verze operačního systému, kterou máte použít v nastaveních **Minimální verze OS** a **Maximální verze OS**, spusťte z příkazového řádku příkaz **winver**. Příkaz winver vrátí verzi operačního systému.
+K vyhledání verze operačního systému, kterou máte použít v nastaveních **Minimální požadovaný operační systém** a **Maximální povolená verze operačního systému** spusťte z příkazového řádku příkaz **winver**. Příkaz winver vrátí verzi operačního systému.
 
 - Počítače s Windows 8.1 vrací verzi **3**. Pokud je pravidlo verze operačního systému pro Windows nastavené na Windows 8.1, bude se zařízení uvádět jako nekompatibilní i v případě, že bude používat Windows 8.1.
 - U počítačů s Windows 10 musí být verze nastavená jako &quot;10.0&quot; + číslo sestavení operačního systému vrácené příkazem winver.
+
+## <a name="windows-holographic-for-business-support"></a>Podpora Windows Holographic for Business
+
+Windows Holographic for Business podporuje následující nastavení:
+
+- Zabezpečení systému / šifrování
+
+  **Šifrování datového úložiště na zařízení**
 
 <!--- ## Next steps
 

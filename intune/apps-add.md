@@ -3,7 +3,7 @@ title: "Přidání aplikací do Microsoft Intune"
 titlesuffix: Azure portal
 description: "Tyto postupy vám pomůžou připravit vaše aplikace v Intune pro přiřazení uživatelům a zařízením. \""
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/17/2018
@@ -15,11 +15,11 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f84adced59d2057cd4d18f05ff6953293f7c44cc
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 4c753ebfc48365d0d586773585552026ad17b6f6
+ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="how-to-add-an-app-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune
 
@@ -33,6 +33,7 @@ Intune umožňuje přidat a přiřadit tyto typy aplikací:
 | Aplikace na webu                           | Intune vytvoří zástupce webové aplikace na domovské obrazovce zařízení.          | Aktualizace aplikací jsou automatické.     |
 | Interně napsané aplikace (obchodní)  | Intune nainstaluje aplikaci na zařízení (vy dodáte instalační soubor).    | Aplikaci musíte aktualizovat sami.       |
 | Aplikace ze Storu                       | Intune nainstaluje aplikaci na zařízení.                                       | Aktualizace aplikací jsou automatické.     |
+| Aplikace, které jsou integrované                        | Intune nainstaluje aplikaci na zařízení.                                       | Aktualizace aplikací jsou automatické.     |
 
 
 Kromě webových aplikací Intune podporuje následující konkrétní platformy pro aplikace ze Storu a obchodní aplikace:
@@ -49,6 +50,7 @@ Kromě webových aplikací Intune podporuje následující konkrétní platformy
     - Obchodní aplikace (LOB) pro iOS
     - Obchodní aplikace (LOB) pro Windows Phone (soubory .xap)
     - Obchodní aplikace (LOB) pro Windows (pouze soubory .msi)
+- Integrované aplikace    
 
 >[!TIP]
 > Obchodní aplikace (LOB) je aplikace, kterou přidáte z instalačního souboru aplikace. Když například chcete nainstalovat obchodní aplikaci iOS, přidáte aplikaci tak, že jako **Typ aplikace** v okně **Přidat aplikaci** vyberete **Obchodní aplikace**. Potom vyberte soubor balíčku aplikace (má příponu .ipa). Tyto typy aplikací obvykle vznikají interně.
@@ -147,4 +149,5 @@ Informace o tom, jak do Intune přidat aplikace pro jednotlivé platformy, najde
 - [Aplikace pro Windows Store](store-apps-windows.md)
 - [Obchodní aplikace pro Windows](lob-apps-windows.md)
 - [Aplikace Office 365 pro Windows 10](apps-add-office365.md)
+- [Integrované aplikace](apps-add-bulit-in.md)
 

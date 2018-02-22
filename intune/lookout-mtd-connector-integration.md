@@ -15,11 +15,11 @@ ms.assetid: 5b0d7644-3183-45ba-a165-0d82d70cb71e
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6b5d9a5fafdec0750e943dcfb3542d4dfd69f6ae
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 891fbda72d38b829397158a75bdceeb452bc8d3b
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="set-up-your-lookout-mobile-threat-defense-integration-with-intune"></a>Nastavení integrace ochrany před mobilními hrozbami Lookout s Intune
 
@@ -113,7 +113,7 @@ V nastavení **Správa chyb** zadejte e-mailovou adresu příjemce, který má d
 ![snímek obrazovky zobrazující stránku správy chyb konektoru Intune](./media/lookout-mtp-connector-error-notifications.png)
 
 ## <a name="configure-enrollment-settings"></a>Konfigurace nastavení registrace
-V modulu **Systém** zadejte na stránce **Konektory** počet dnů, po jejichž uplynutí se zařízení bude považovat za odpojené.  Odpojená zařízení se považují za nevyhovující a bude jim zablokován přístup k firemním aplikacím na základě zásad podmíněného přístupu Intune. Můžete zadat hodnotu mezi 1 a 90 dny.
+V modulu **Systém** zadejte na stránce **Konektory** počet dnů, po jejichž uplynutí se zařízení bude považovat za odpojené.  Odpojená zařízení se považují za nevyhovující a přístup k firemním aplikacím se jim zablokuje na základě zásad podmíněného přístupu Intune. Můžete zadat hodnotu mezi 1 a 90 dny.
 
 ![Nastavení registrace služby Lookout](./media/lookout-console-enrollment-settings.png)
 

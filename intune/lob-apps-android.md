@@ -15,11 +15,11 @@ ms.assetid: 061d793c-c724-4cd9-9240-adb0cbda5661
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7b2aa6893e1d01fe83e92c711c7a487f49b92706
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: b63ab13dcedaa4787e9bae12ce713899b9c3e334
+ms.sourcegitcommit: 0a5f424a8f683daa919b13b5c363173040d561c8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="how-to-add-android-line-of-business-lob-apps-to-microsoft-intune"></a>Přidání obchodních aplikací pro Android do Microsoft Intune
 
@@ -69,7 +69,10 @@ Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřadit
 
 ## <a name="step-5---update-a-line-of-business-app"></a>Krok 5 – aktualizace obchodní aplikace
 
-[!INCLUDE[shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)] Poznámka: Aby služba Intune úspěšně nasadila nový soubor APK do zařízení, musíte zvýšit hodnotu řetězce android:versionCode v souboru AndroidManifest.xml v balíčku APK.
+[!INCLUDE[shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)]
+
+> [!Note] 
+> Aby služba Intune úspěšně nasadila nový soubor APK do zařízení, musíte zvýšit hodnotu řetězce android:versionCode v souboru AndroidManifest.xml v balíčku APK.
 
 ## <a name="next-steps"></a>Další kroky
 
