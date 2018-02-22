@@ -138,6 +138,8 @@
           href: groups-add.md
         - name: Přiřazení licencí
           href: licenses-assign.md
+        - name: Licence Intune
+          href: licenses.md
         - name: Nastavení autority pro správu mobilních zařízení (MDM)
           href: mdm-authority-set.md
     - name: Registrovat zařízení
@@ -194,6 +196,8 @@
           href: device-locate.md
         - name: Povolení režimu ztráty zařízení s iOSem
           href: device-lost-mode.md
+        - name: Zapnutí režimu pod dohledem v iOSu
+          href: device-supervised-mode.md
         - name: Uzamčení zařízení
           href: device-remote-lock.md
         - name: Resetovat heslo
@@ -251,7 +255,7 @@
             - name: Webové aplikace
               href: web-app.md
             - name: Integrované aplikace
-              href: apps-add-bulit-in.md
+              href: apps-add-built-in.md
         - name: Nasazení aplikací
           href: apps-deploy.md
           items:
