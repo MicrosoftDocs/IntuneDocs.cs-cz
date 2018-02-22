@@ -150,3 +150,4 @@
 #### [Potřebuji zapnout Windows Defender](turn-on-defender-windows.md)
 
 ## [Použití webu Portál společnosti Intune](using-the-intune-company-portal-website.md)
+### [Vzdálené uzamčení zařízení](remote-lock-your-device-cpwebsite.md)

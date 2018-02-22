@@ -15,11 +15,11 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 97f9407c8ba93307059e44c8becf4f7a36c6861a
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 940c4bc17face7ecef2b6888e199ba47073659ba
+ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune
 
@@ -125,9 +125,11 @@ Po přidání aplikací, které chcete chránit pomocí WIP, je potřeba použí
 
 ### <a name="before-you-begin"></a>Před zahájením
 
-Kurzy k WIP jsou sestava umožňující monitorovat neznámé aplikace v rámci WIP. Neznámé aplikace jsou aplikace, které nenasadilo IT oddělení vaší organizace. Můžete je ze sestavy vyexportovat a přidat do zásad WIP. Zabráníte tak přerušení produktivity po dobu, než vynutíte WIP v režimu Blokovat.
+Kurzy k WIP jsou sestava umožňující monitorovat vaše aplikace podporující WIP a neznámé aplikace v rámci WIP. Neznámé aplikace jsou aplikace, které nenasadilo IT oddělení vaší organizace. Můžete je ze sestavy vyexportovat a přidat do zásad WIP. Zabráníte tak přerušení produktivity po dobu, než vynutíte WIP v režimu Blokovat.
 
-Doporučujeme začít s režimem **Tiché** nebo **Povolit potlačení** a u malé skupiny ověřit, jestli máte v seznamu povolených aplikací správné aplikace. Až budete hotovi, můžete režim změnit na konečnou zásadu vynucení **Blokovat**.
+<!-- 1631908 --> In addition to viewing information about WIP-enabled apps, you can view a summary of the devices that have shared work data with websites. With this information, you can determine which websites should be added to group and user WIP policies. The summary shows which website URLs are accessed by WIP-enabled apps.
+
+Když pracujete s aplikacemi podporujícími WIP a s neznámými aplikacemi v rámci WIP, doporučujeme začít s režimem **Tiché** nebo **Povolit potlačení** a u malé skupiny ověřit, jestli máte v seznamu povolených aplikací správné aplikace. Až budete hotovi, můžete režim změnit na konečnou zásadu vynucení **Blokovat**.
 
 ### <a name="what-are-the-protection-modes"></a>Co jsou režimy ochrany?
 

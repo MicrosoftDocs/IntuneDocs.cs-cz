@@ -14,11 +14,11 @@ ms.assetid: 7e3135c1-df26-48c9-aa4c-cdab6168897a
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 31bb6cf7d118e121a5a8d8a74f92c2b3cf5da7bc
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 52d9c05d0bb2ed1c8592ac3b2c5cdeb07114367d
+ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="how-your-ios-users-get-their-apps"></a>Jak uživatelé systému iOS získávají svoje aplikace
 
@@ -47,7 +47,7 @@ Zaregistrovaní uživatelé můžou používat aplikace po klepnutí na následu
 
 ![Obrazovka aplikací na Portálu společnosti pro iOS](./media/ios-cp-app-main-apps-screen.png)
 
-Informace o tom, jak přidat aplikace a umístit je do těchto dlaždic, najdete v tématu [Přidávání aplikací pro zaregistrovaná zařízení do Intune](/intune-classic/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune.md).
+Další informace o přidávání aplikací najdete v článku [Přidání aplikací do Microsoft Intune](apps-add.md).
 
 ### <a name="see-also"></a>Viz taky
 [Jak uživatelé s Androidem získávají svoje aplikace](end-user-apps-android.md)

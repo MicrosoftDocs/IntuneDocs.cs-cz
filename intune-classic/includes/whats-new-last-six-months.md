@@ -55,9 +55,9 @@ Novinky ve verzi Intune v Azure najdete [zde](/intune/whats-new).
 
 U účtů Intune vytvořených po lednu 2017 umožňuje Intune přímý přístup ke scénářům registrace Apple pomocí úlohy Registrovat zařízení na portálu Azure Preview. Náhled na registraci Apple byl předtím přístupný přes odkazy na portálu klasické služby Intune. Zpřístupnění těchto funkcí v Azure bude u účtů Intune vytvořených před lednem 2017 vyžadovat jednorázovou migraci. Plán této migrace zatím nebyl oznámen, podrobnosti ale budou zpřístupněny co nejdříve. Pokud váš existující účet nemá k tomuto náhledu přístup, k otestování tohoto nového prostředí důrazně doporučujeme vytvořit zkušební účet.
 
-#### <a name="whats-coming-for-appx-in-intune-in-the-azure-portal----1000270---"></a>Co připravujeme pro Appx v Intune na Azure Portalu <!-- 1000270 -->
+#### <a name="whats-coming-for-appx-in-intune-in-the-azure-portal----1000270---"></a>Co připravujeme pro Appx v Intune na portálu Azure Portal <!-- 1000270 -->
 
-Součástí migrace na Intune na Azure Portalu jsou tři změny appx:
+Součástí migrace na Intune na portálu Azure Portal jsou tři změny appx:
 
 1. Přidání nového typu aplikace appx v klasické konzole Intune, který se dá nasadit jenom na zařízení zaregistrovaná v MDM
 2. Změna účelu stávajícího typu aplikace appx, aby byl zacílený jenom na počítače PC spravované pomocí agenta Intune pro počítače PC
@@ -69,7 +69,7 @@ Nebude to mít vliv na žádné z vašich stávajících nasazení do zařízen�
 
 ##### <a name="what-action-do-i-need-to-take"></a>Co musím udělat
 
-Pokud budete chtít provést nová nasazení do počítačů PC, budete muset po migraci znovu nahrát appx jako appx pro počítače PC. Další informace najdete v článku o [změnách Appx v Intune na Azure Portalu](https://aka.ms/appxchange) na blogu týmu podpory Intune.  
+Pokud budete chtít provést nová nasazení do počítačů PC, budete muset po migraci znovu nahrát appx jako appx pro počítače PC. Další informace najdete v článku o [změnách Appx v Intune na portálu Azure Portal](https://aka.ms/appxchange) na blogu týmu podpory Intune.  
 
 #### <a name="administration-roles-being-replaced-in-azure-portal"></a>Nahrazení rolí správy na portálu Azure Portal
 
@@ -302,7 +302,7 @@ Ke komunikaci se službou Microsoft Intune používá aplikace Portál společno
 |selektivní vymazání| Resetování zařízení| Resetování zařízení|
 |Nasazení nových nebo aktualizovaných aplikací| Instalace dostupných obchodních aplikací| Resetování hesla zařízení|
 |Vzdálené uzamčení|||
-|Resetování hesla|||
+|resetování hesla|||
 
 ### <a name="deprecations"></a>Vyřazení
 

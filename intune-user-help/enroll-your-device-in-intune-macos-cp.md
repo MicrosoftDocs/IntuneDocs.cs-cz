@@ -1,5 +1,5 @@
 ---
-title: "Registrace zařízení s macOS v Intune pomocí Portálu společnosti | Dokumentace Microsoftu"
+title: "Registrace zařízení s macOS v Intune pomocí Portálu společnosti | Microsoft Docs"
 description: "Popisuje postup registrace zařízení s macOS v Intune pomocí aplikace Portál společnosti."
 keywords: Mac OS X, macOS, OS X
 author: barlanmsft
@@ -17,11 +17,11 @@ ROBOTS:
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 0da2ba5d842a004f167a4bbeca62d4b00f756612
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 4f01a5aa9567ea914da2c36756e8c3f12f55c58d
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Registrace zařízení s macOS v Intune pomocí aplikace Portál společnosti
 
@@ -34,7 +34,7 @@ Přístup k aplikacím, datům a prostředkům vaší organizace vám zjednoduš
 
 2. Přihlaste se na web Portál společnosti přes svůj pracovní nebo školní účet.
 
-[!INCLUDE[wit_nextref](includes/end-user-password-guidance.md)]
+  [!INCLUDE[wit_nextref](includes/end-user-password-guidance.md)]
 
 3. Po přihlášení klikněte na **Nabídku** v levém horním rohu stránky a vyberte **Moje zařízení**.
 
@@ -59,7 +59,7 @@ Přístup k aplikacím, datům a prostředkům vaší organizace vám zjednoduš
 
 9. Na první obrazovce vás aplikace Portál společnosti vyzve, abyste se **přihlásili** pomocí stejného pracovního nebo školního účtu, jako jste použili k přihlášení na web Portál společnosti.
 
-10. Portál společnosti potvrdí informace o vašem účtu a zobrazí stav **registrace zařízení** a **dodržování předpisů zařízení**. Žluté trojúhelníky vás informují, že je potřeba provést akce, které zajistí, že bude Mac bezpečný pro použití v práci. Kliknutím na **Začít** zahájíte [registraci zařízení do systému správy](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
+10. Portál společnosti potvrdí informace o vašem účtu a zobrazí stav **registrace zařízení** a **dodržování předpisů zařízení**. Žluté trojúhelníky vás informují, že je potřeba provést akce, které zajistí, že váš Mac bude bezpečný pro použití v práci. Kliknutím na **Začít** zahájíte [registraci zařízení do systému správy](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
 11. Spustí se registrace vašeho Macu do systému správy. V průběhu tohoto procesu můžete být vyzváni k zadání přihlašovacích údajů počítače. Registrace může trvat několik minut. Během toho ale můžete s počítačem pracovat. Jakmile se dokončí nastavení přístupu společnosti, zobrazí se zpráva, že je vše hotovo.
 

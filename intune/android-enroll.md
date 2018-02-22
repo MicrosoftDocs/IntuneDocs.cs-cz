@@ -1,12 +1,12 @@
 ---
-title: "Registrace zařízení s Androidem v Intune | Dokumentace Microsoftu"
+title: "Registrace zařízení s Androidem v Intune | Microsoft Docs"
 titlesuffix: Azure portal
 description: "Přečtěte si, jak zaregistrovat zařízení s Androidem v Intune."
 keywords: 
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/10/2017
+ms.date: 01/31/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a37497dcf015a611e8b770b5a28e519c0e397c87
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: e137da3ad4121f4b9cdfbb765ee00f71beca610a
+ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="enroll-android-devices"></a>Registrace zařízení s Androidem
 
@@ -49,6 +49,9 @@ Při registraci zařízení s Androidem for Work pomocí účtu [správce regist
 
 ## <a name="add-android-for-work-binding-for-intune"></a>Přidání vazby na Android for Work do Intune
 
+> [!NOTE]
+> Protože dochází k interakci mezi doménami Google a Microsoft, může tento krok vyžadovat pro účely úspěšného dokončení úpravu nastavení prohlížeče.  Zkontrolujte, jestli jsou portal.azure.com a play.google.com ve vašem prohlížeči ve stejné zóně zabezpečení.
+
 1. **Nastavení Intune MDM**<br>
 Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení [nastavením autority pro správu mobilních zařízení](mdm-authority-set.md) na **Microsoft Intune**.
 2. **Konfigurace vazby na Android for Work**<br>
@@ -64,11 +67,10 @@ Pokud jste to ještě neudělali, připravte se na správu mobilních zařízen�
    Do pole **Název organizace** zadejte název vaší společnosti. Jako **Poskytovatel EMM (Enterprise Mobility Management)** by se měl zobrazit **Microsoft Intune**. Vyjádřete souhlas se smlouvou pro Android for Work a zvolte **Potvrdit**. Vaše žádost bude zpracována.
 
 ## <a name="specify-android-for-work-enrollment-settings"></a>Nastavení registrace Androidu for Work
-   Android for Work se podporuje jenom na určitých zařízeních s Androidem. Přečtěte si [požadavky Googlu na Android for Work](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012 style="target=new_window"). Zařízení, které podporuje Android for Work, podporuje také správu konvenčního Androidu. Intune umožňuje určit, jak se mají spravovat zařízení podporující Android for Work:
+Android for Work se podporuje jenom na určitých zařízeních s Androidem. Přečtěte si [požadavky Googlu na Android for Work](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012%20style=%22target=new_window%22). Zařízení, které podporuje Android for Work, podporuje také správu konvenčního Androidu. Intune umožňuje určit, jak se mají spravovat zařízení podporující Android for Work v rámci [Omezení registrace](enrollment-restrictions-set.md).
 
-   - **Spravovat všechna zařízení jako Android for Work:** Všechna zařízení s Androidem včetně zařízení podporujících Android for Work se zaregistrují jako zařízení s konvenčním Androidem.
-   - **Spravovat podporovaná zařízení jako Android for Work:** Všechna zařízení, která podporují Android for Work, se zaregistrují jako zařízení s Androidem for Work. Jakékoli zařízení s Androidem, které nepodporuje Android for Work, se zaregistruje jako zařízení s konvenčním Androidem.
-   - **Spravovat podporovaná zařízení pro uživatele v těchto skupinách jako Android for Work:** Můžete pro správu Androidu for Work určit omezenou sadu uživatelů. Jen zařízení členů vybraných skupin, kteří zaregistrují zařízení podporující Android for Work, se zaregistrují jako zařízení s Androidem for Work. Všechna ostatní se zaregistrují jako zařízení s Androidem. To se hodí při pilotním nasazení Androidu for Work.
+- **Blokovat (standardně nastaveno)**: Všechna zařízení s Androidem včetně zařízení podporujících Android for Work se zaregistrují jako zařízení s konvenčním Androidem.
+- **Povolit**: Všechna zařízení, která podporují Android for Work, se zaregistrují jako zařízení s Androidem for Work. Jakékoli zařízení s Androidem, které nepodporuje Android for Work, se zaregistruje jako zařízení s konvenčním Androidem.
 
 ## <a name="approve-the-company-portal-app-in-the-managed-google-play-store"></a>Schválení aplikace Portál společnosti ve spravovaném obchodu Google Play
 Bude potřeba, abyste aplikaci Portál společnosti pro Android schválili ve spravovaném obchodu Google Play a zajistili tak, že bude dostávat automatické aktualizace. Pokud ji neschválíte, bude Portál společnosti časem zastaralý a nemusí dostávat důležité opravy chyb a nové funkce, které Microsoft vydává.

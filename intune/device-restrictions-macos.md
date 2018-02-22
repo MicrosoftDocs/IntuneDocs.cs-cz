@@ -6,20 +6,18 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 08/01/2017
+ms.date: 1/31/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 3129cbaf-96c2-4837-8907-ca87a605a496
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 69fc2959c7694a0120efff8653ce8d619f33a9d3
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: a88cf11209726a622863339c3a6c117f7b83be1e
+ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="macos-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení s macOS v Microsoft Intune
 
@@ -42,8 +40,8 @@ Pomocí těchto nastavení můžete spravovat zařízení s macOS.
 
 V seznamu omezených aplikací můžete nakonfigurovat jeden z následujících seznamů:
 
-**Zakázané aplikace** – Zobrazí seznam aplikací (nespravovaných pomocí Intune), které nemají uživatelé dovolené nainstalovat a spustit.
-**Schválené aplikace** – Zobrazí seznam aplikací, které mají uživatelé dovolené instalovat. Aby byla zachovaná kompatibilita, uživatelé nesmí instalovat aplikace, které nejsou v seznamu. Aplikace, které spravuje Intune, jsou povolené automaticky.
+- **Zakázané aplikace** – Zobrazí seznam aplikací (nespravovaných pomocí Intune), které nemají uživatelé dovolené nainstalovat a spustit. Uživatelům není instalace zakázané aplikace znemožněna, ale pokud ji provedou, budete na to upozorněni.
+- **Schválené aplikace** – Zobrazí seznam aplikací, které mají uživatelé dovolené instalovat. Uživatelé nesmí instalovat aplikace, které nejsou v seznamu. Aplikace, které spravuje Intune, jsou povolené automaticky. Uživatelům není instalace aplikace nenacházející se v seznamu povolených aplikací znemožněna, ale pokud ji provedou, budete na to upozorněni.
 
 Jestli chcete nakonfigurovat seznam, klikněte na **Přidat**, zadejte nějaký název, případně i vydavatele aplikace, a ID sady prostředků aplikace (například *com.apple.calculator*).
 

@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: cd5a0a3b-0013-4be3-a233-ce6e9083149f
 ROBOTS: NOINDEX,NOFOLLOW
 ms.custom: intune-classic
-ms.openlocfilehash: 645414169dcdf5c2e548bda9d21e017e8a18f76d
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 15baae06398d135557439c0e67b50f7e1326b6fe
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Řešení potíží se správou mobilních aplikací
 
@@ -105,7 +105,7 @@ Dialog / chybová zpráva | Příčina | Odstranění rizika |
 **Nenašla se žádná aplikace**: Na tomto zařízení nejsou žádné aplikace, ve kterých by vaše organizace povolovala otevření tohoto obsahu. Požádejte o pomoc správce IT. | Uživatel se pokusil otevřít pracovní nebo školní data pomocí jiné aplikace, ale Intune nemůže najít žádné jiné spravované aplikace, které jsou k otevírání těchto dat povolené. | Zkontrolujte, jestli jsou ve skupině zabezpečení uživatele nasazené zásady ochrany aplikací pro Android a cílí aspoň na jednu další aplikaci povolenou v MAM, která může požadovaná data otevírat.
 **Přihlášení se nezdařilo**: Zkuste se znovu přihlásit. Pokud s tím budou dál problémy, požádejte o pomoc správce IT. | Nepodařilo se ověřit účet, pomocí kterého se uživatel pokusil přihlásit. | Zkontrolujte, jestli se uživatel přihlašuje pomocí pracovního nebo školního účtu, který je už zaregistrovaný službou Intune MAM (první pracovní nebo školní účet, který se do této aplikace úspěšně přihlásil). <br><br> Vymažte data aplikace. <br><br> Zkontrolujte, jestli je verze aplikace aktuální. <br><br> Zkontrolujte, jestli je verze Portálu společnosti aktuální.
 **Vyžaduje se připojení k internetu** : Musíte být připojení k internetu, abychom mohli ověřit, že můžete používat tuto aplikaci. | Zařízení není připojené k internetu. | Připojte zařízení k síti Wi-Fi nebo mobilní síti.
-**Zařízení nesplňuje požadavky**: Tuto aplikaci nejde použít, protože používáte rootované zařízení. Požádejte o pomoc správce IT. | Intune zjistil, že uživatel je na rootovaném zařízení. | Resetujte zařízení na výchozí tovární nastavení.
+**Zařízení nesplňuje požadavky**: Tuto aplikaci nejde použít, protože používáte zařízení s rootem. Požádejte o pomoc správce IT. | Intune zjistil, že uživatel je na rootovaném zařízení. | Resetujte zařízení na výchozí tovární nastavení.
 **Nenastaven účet**: Tato aplikace se musí spravovat přes Microsoft Intune, ale nemáte nastavený účet. Požádejte o pomoc správce IT. | Uživatelský účet nemá licenci pro Intune A Direct. | Zkontrolujte, jestli má uživatelský účet přiřazenou licenci Intune v [portálu Office](http://portal.office.com).
 **Aplikaci nejde zaregistrovat**: Tato aplikace se musí spravovat přes Microsoft Intune, ale momentálně jsme ji nemohli zaregistrovat. Požádejte o pomoc správce IT. Požádejte o pomoc správce IT. | Nepodařilo se aplikaci automaticky zaregistrovat ve službě MAM, když jsou požadovány zásady ochrany aplikací. | Vymažte data aplikace. <br><br> Odešlete protokoly do Intune prostřednictvím aplikace Portál společnosti nebo [tady](how-to-get-support-for-microsoft-intune.md) vytvořte lístek podpory.
 

@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/13/2017
+ms.date: 02/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,30 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 666ce43e3bd87db5a8245694d22401819c369951
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 87e4c16fbb87ee83a01fe44a46c55c6243c8fc8a
+ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Povolení registrace zařízení s iOSem pomocí Apple School Manageru
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Toto téma vám pomůže zprovoznit registraci zařízení s iOSem zakoupená prostřednictvím programu [Apple School Manager](https://school.apple.com/). Pomocí Intune s Apple School Managerem můžete registrovat velký počet zařízení s iOSem, aniž byste je museli uchopit do ruky. Když student nebo učitel zařízení zapne, Pomocník s nastavením provede předem nakonfigurovaná nastavení a zařízení se zaregistruje ke správě.
+> [!NOTE]
+> ### <a name="temporary-user-interface-differences"></a>Dočasné rozdíly v uživatelském rozhraní
+>
+>Uživatelská rozhraní pro funkce popsané na této stránce se právě aktualizují. Tyto aktualizace se budou u všech uživatelských účtů zavádět postupně do konce dubna.
+>
+>Pokud vaše stránka **Registrace zařízení** vypadá jako na obrázku níže, váš účet se ještě neaktualizoval na nové uživatelské rozhraní a můžete použít tuto stránku nápovědy.
+>
+>![Staré uživatelské rozhraní](./media/appleenroll-oldui.png)
+>
+>Pokud vaše stránka **Registrace zařízení** vypadá jako na obrázku níže, máte aktualizované uživatelské rozhraní.  Přejděte na [tuto stránku nápovědy](apple-school-manager-set-up-ios-newui.md).
+>
+>![Nové uživatelské rozhraní](./media/appleenroll-newui.png)
+
+Toto téma vám pomůže zprovoznit registraci zařízení s iOSem zakoupená prostřednictvím programu [Apple School Manager](https://school.apple.com/). Pomocí Intune s Apple School Managerem můžete registrovat velký počet zařízení s iOSem, aniž byste je museli uchopit do ruky. Když student nebo učitel zařízení zapne, Průvodce nastavením provede předem nakonfigurovaná nastavení a zařízení se zaregistruje ke správě.
 
 Při povolení registrace přes Apple School Manager budete používat portál Intune i portál Apple School Manager. Abyste mohli zařízení přiřadit do Intune ke správě, potřebujete seznam sériových čísel nebo čísla nákupních objednávek. Vytvoříte registrační profily DEP obsahující nastavení aplikovaná na zařízení během registrace.
 
@@ -106,22 +119,22 @@ Registrační profil zařízení definuje nastavení, která se během registrac
 
       - **Certifikáty Apple Configuratoru** – Pokud jste v části **Povolit párování** zvolili **Povolit Apple Configurator podle certifikátu**, vyberte certifikát Apple Configuratoru, který chcete importovat.
 
-7. Zvolte **Nastavení Pomocníka s nastavením**, nakonfigurujte následující nastavení profilu a potom zvolte **Uložit**:
+7. Zvolte **Nastavení Průvodce nastavením**, nakonfigurujte následující nastavení profilu a potom zvolte **Uložit**:
 
     - **Název oddělení** – Zobrazí se, když uživatelé klepnou při aktivaci na **O konfiguraci**.
 
     - **Telefon na oddělení** – Zobrazí se, když uživatel při aktivaci klikne na tlačítko Potřebuji nápovědu.
-    - **Možnosti Pomocníka s nastavením** – Nastavení, která nebyla provedena v možnostech Pomocníka s nastavením, je možné nastavit později v nabídce **Nastavení** systému iOS.
+    - **Možnosti Průvodce nastavením** – Nastavení, která nebyla provedena v možnostech Průvodce nastavením, je možné nastavit později v nabídce **Nastavení** systému iOS.
         - **Heslo** – Při aktivaci se zobrazí výzva k zadání hesla. Vyžaduje vždy heslo, pokud zařízení nebude zabezpečené nebo nebude mít přístup kontrolovaný jiným způsobem (třeba pomocí celoobrazovkového režimu, který omezuje zařízení na jednu aplikaci).
-        - **Zjišťování polohy** – Pokud je toto nastavení povolené, Pomocník s nastavením zobrazí při aktivaci výzvu služby.
-        - **Obnovit** – Pokud je toto nastavení povolené, Pomocník s nastavením zobrazí při aktivaci výzvu k zálohování do úložiště iCloud.
+        - **Zjišťování polohy** – Pokud je toto nastavení povolené, Průvodce nastavením zobrazí při aktivaci výzvu služby.
+        - **Obnovit** – Pokud je toto nastavení povolené, Průvodce nastavením zobrazí při aktivaci výzvu k zálohování do úložiště iCloud.
         - **Apple ID** – Pokud je povolené, vyzve iOS uživatele při pokusu Intune o instalaci aplikace bez ID, aby zadali Apple ID. Apple ID je potřeba ke stahování aplikací pro iOS z App Storu, včetně těch instalovaných službou Intune.
-        - **Podmínky a ujednání** – V případě povolení Pomocník nastavení vyzve uživatele k přijetí podmínek a ujednání společnosti Apple během aktivace.
-        - **Dotykový identifikátor** – V případě povolení Pomocník s nastavením zobrazí během aktivace výzvu pro tuto službu.
-        - **Dotykový identifikátor** – V případě povolení Pomocník s nastavením zobrazí během aktivace výzvu pro tuto službu.
-        - **Zvětšení** – V případě povolení Pomocník s nastavením zobrazí během aktivace výzvu pro tuto službu.
-        - **Siri** – V případě povolení Pomocník s nastavením zobrazí během aktivace výzvu pro tuto službu.
-        - **Diagnostická data** – V případě povolení Pomocník s nastavením zobrazí během aktivace výzvu pro tuto službu.
+        - **Podmínky a ujednání** – V případě povolení Průvodce nastavením vyzve uživatele k přijetí podmínek a ujednání společnosti Apple během aktivace.
+        - **Dotykový identifikátor** – V případě povolení Průvodce nastavením zobrazí během aktivace výzvu pro tuto službu.
+        - **Dotykový identifikátor** – V případě povolení Průvodce nastavením zobrazí během aktivace výzvu pro tuto službu.
+        - **Zvětšení** – V případě povolení Průvodce nastavením zobrazí během aktivace výzvu pro tuto službu.
+        - **Siri** – V případě povolení Průvodce nastavením zobrazí během aktivace výzvu pro tuto službu.
+        - **Diagnostická data** – V případě povolení Průvodce nastavením zobrazí během aktivace výzvu pro tuto službu.
 
 8. Uložte nastavení profilu tak, že v okně **Vytvořit registrační profil** zvolíte **Vytvořit**.
 

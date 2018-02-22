@@ -6,26 +6,24 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 12/03/2017
+ms.date: 1/25/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 2c4e9b19-b268-4f6d-9663-7cdbe4e4a8dd
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a587ef87afd9a8629ac6a274fe87406fb24f79f7
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 5b4b77f9c9c1c957e3332c20e010a5e8e8ec2b56
+ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-import-wi-fi-settings-for-windows-81-and-later-devices-in-microsoft-intune"></a>Import nastavení Wi-Fi pro zařízení s Windows 8.1 a novější verzí v Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-U zařízení, na kterých běží Windows 8.1. nebo Windows 10 Desktop či Mobile, můžete importovat konfigurační profil Wi-Fi, který jste předtím exportovali do souboru.
+Pro zařízení s Windows 8.1, Windows 10 Desktop, Windows 10 Mobile nebo Windows Holographic for Business můžete importovat konfigurační profil Wi-Fi, který jste si předtím vyexportovali do souboru.
 
 ## <a name="export-wi-fi-settings-from-a-windows-device"></a>Export nastavení Wi-Fi ze zařízení s Windows
 
@@ -43,9 +41,13 @@ Ve Windows použijte k exportu stávajícího profilu Wi-Fi do souboru XML, kter
 2. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
 3. V okně s profily zvolte **Vytvořit profil**.
 4. V okně **Vytvořit profil** zadejte **Název** a **Popis** profilu pro omezení zařízení.
+
+   > [!WARNING]
+   > Název **musí** být stejný jako atribut name v souboru XML profilu Wi-Fi, jinak dojde k chybě.
+
 5. V rozevíracím seznamu **Platforma** zvolte **Windows 8.1 a novější**.
 6. V rozevíracím seznamu **Profil** zvolte **Import Wi-Fi**.
-7. V okně **Základní Wi-Fi** nakonfigurujte tyto údaje:
+7. V okně pro **základní nastavení Wi-Fi** nakonfigurujte následující nastavení:
     - **Název připojení** – zadejte název tohoto připojení Wi-Fi. Tento název se zobrazí koncovým uživatelům, když budou procházet dostupné Wi-Fi sítě.
     - **XML profilu** – klikněte na tlačítko Procházet a vyberte soubor XML obsahující nastavení profilu Wi-Fi, která chcete naimportovat do Intune.
     - **Obsah souboru** – zobrazuje kód XML vybraného konfiguračního profilu.

@@ -13,27 +13,30 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e7bd1d15276f93b50a22c7b47de6bd1eb619264a
-ms.sourcegitcommit: 4509039cbfd4d450324a3475fb5841906720baa1
+ms.openlocfilehash: d126853051bb4a6c2f1ea6fbd54195ae06254b51
+ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="vpn-settings-for-windows-10-devices-in-microsoft-intune"></a>Nastavení sítě VPN pro zařízení s Windows 10 v Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-V závislosti na nastaveních, která zvolte, nebudou v následujícím seznamu konfigurovatelné všechny hodnoty.
+V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím seznamu konfigurovatelné všechny hodnoty.
+
+> [!NOTE]
+> Tato nastavení platí také pro zařízení s Windows Holographic for Business.
 
 
 ## <a name="base-vpn-settings"></a>Základní nastavení sítě VPN
 
 
-- **Název připojení** – zadejte název tohoto připojení. Tento název uživatelé uvidí, když budou na svém zařízení procházet seznamem dostupných připojení VPN.
+- **Název připojení** – zadejte název tohoto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí seznamem dostupných připojení VPN.
 - **Servery** – přidejte minimálně jeden VPN server, ke kterému se budou zařízení připojovat.
     - **Přidat** – otevře okno **Přidat řádek**, ve kterém můžete zadat následující informace:
         - **Popis** – zadejte popisný název serveru, například **VPN server Contoso**.
-        - **IP adresa nebo plně kvalifikovaný název domény** – zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se budou zařízení připojovat. Příklady: **192.168.1.1**, **vpn.contoso.com**.
+        - **IP adresa nebo plně kvalifikovaný název domény** – zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojí. Příklady: **192.168.1.1**, **vpn.contoso.com**.
         - **Výchozí server** – povolí tento server jako výchozí server, který budou zařízení používat k navázání připojení. Jako výchozí server musí být nastavený jenom jeden server.
     - **Importovat** – vyhledejte soubor, který obsahuje seznam serverů oddělených čárkami ve formátu popis, IP adresa nebo plně kvalifikovaný název domény, výchozí server. Zvolte **OK** a naimportujte tak servery do seznamu **Servery**.
     - **Exportovat** – exportuje seznam serverů do textového souboru s oddělovači (CSV).
@@ -80,7 +83,7 @@ V závislosti na nastaveních, která zvolte, nebudou v následujícím seznamu 
 
 Další informace o tom, jak psát vlastní příkazy XML, najdete v dokumentaci k síti VPN jednotlivých výrobců.
 
-Další informace o vytváření vlastních dat XML protokolu EAP najdete v tématu [Konfigurace protokolu EAP](https://docs.microsoft.com/en-us/windows/client-management/mdm/eap-configuration).
+Další informace o vytváření vlastních dat XML protokolu EAP najdete v tématu [Konfigurace protokolu EAP](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration).
 
 **Rozdělit tunel** - tuto možnost můžete **povolit** nebo **zakázat**, aby se mohla zařízení rozhodnout, které připojení se má v závislosti na typech přenosů používat. Uživatel v hotelu například bude pro přístup k pracovním souborům používat připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu.
 - **Rozdělit tunelové trasy pro toto připojení k síti VPN** – přidejte volitelné trasy pro externí poskytovatele připojení VPN. Pro každou trasu zadejte předponu cíle a velikost předpony.
@@ -88,12 +91,12 @@ Další informace o vytváření vlastních dat XML protokolu EAP najdete v tém
 ## <a name="apps-and-traffic-rules"></a>Pravidla pro aplikace a síťové přenosy
 
 **Omezit připojení ze sítě VPN k těmto aplikacím** – tuto možnost povolte, pokud chcete, aby toto připojení VPN používaly jenom aplikace, které určíte.
-**Přidružené aplikace** – zadejte seznam aplikací, které budou automaticky používat připojení VPN. Typ aplikace bude určovat identifikátor aplikace. Pro univerzální aplikace zadejte identitu aplikace (PFN). Pro desktopové aplikace zadejte cestu k souboru aplikace.
+**Přidružené aplikace** – zadejte seznam aplikací, které automaticky používají připojení VPN. Typ aplikace určuje identifikátor aplikace. Pro univerzální aplikace zadejte identitu aplikace (PFN). Pro desktopové aplikace zadejte cestu k souboru aplikace.
 
 >[!IMPORTANT]
 >Doporučujeme zabezpečit všechny seznamy aplikací, které zkompilujete pro použití v konfiguraci sítě VPN pro jednotlivé aplikace. Pokud seznam upraví neoprávněný uživatel a vy seznam naimportujete do seznamu aplikací sítě VPN pro jednotlivé aplikace, potenciálně tím autorizujete přístup k síti VPN pro aplikace, které by přístup mít neměly. Jedním ze způsobů, jak zabezpečit seznamy aplikací, je použít seznam řízení přístupu (ACL).
 
-**Pravidla síťových přenosů pro toto připojení k síti VPN** – vyberte protokoly a rozsahy místních a vzdálených adres, které budou povolené pro připojení VPN. Když nevytvoříte pravidlo pro provoz sítě, budou povolené všechny protokoly, porty a rozsahy adres. Po vytvoření pravidla se pro připojení VPN použijí jenom protokoly, porty a rozsahy adres, které určíte v tomto pravidle.
+**Pravidla síťových přenosů pro toto připojení k síti VPN** – vyberte protokoly a rozsahy místních a vzdálených portů a adres, které budou povolené pro připojení VPN. Když nevytvoříte pravidlo pro provoz sítě, budou povolené všechny protokoly, porty a rozsahy adres. Po vytvoření pravidla se pro připojení VPN použijí jenom protokoly, porty a rozsahy adres, které určíte v tomto pravidle.
 
 
 ## <a name="conditional-access"></a>Podmíněný přístup
@@ -117,7 +120,7 @@ Pro každý server zadejte:
 ## <a name="proxy-settings"></a>Nastavení proxy serveru
 
 - **Automaticky zjišťovat nastavení proxy serveru** – pokud VPN server vyžaduje pro připojení proxy server, zadejte, jestli mají zařízení automaticky zjišťovat nastavení připojení. Další informace najdete v dokumentaci k Windows Serveru.
-- **Skript automatické konfigurace** – ke konfiguraci proxy serveru použijte konfigurační soubor. Zadejte **Adresu URL proxy serveru** (například **http://proxy.contoso.com**), na které se nachází konfigurační soubor.
+- **Skript automatické konfigurace** – ke konfiguraci proxy serveru použijte konfigurační soubor. Zadejte **adresu URL proxy serveru** (například **http://proxy.contoso.com), na které se nachází konfigurační soubor.
 - **Použít proxy server** – tuto možnost povolte, pokud chcete zadat nastavení proxy serveru ručně.
     - **Adresa** – zadejte adresu proxy serveru (jako IP adresu).
     - **Číslo portu** – zadejte číslo portu přidruženého k proxy serveru.

@@ -10,11 +10,11 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
-ms.openlocfilehash: ede4be83b995bbb415184275c34f0e1b4feb4091
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 78abef01e968b59b81a74dcd6b67df31dbf29def
+ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Správa verzí operačního systému pomocí Intune
 Na moderních mobilních a počítačových platformách jsou velké aktualizace, opravy a nové verze vydávány rychlým tempem. Ve Windows máte nad úplnou správou aktualizací a oprav kontrolu, ale jiné platformy jako iOS a Android vyžadují, aby se procesu účastnili koncoví uživatelé.  Microsoft Intune má možnosti, které vám pomůžou se strukturováním správy verzí operačního systému napříč různými platformami.
@@ -35,7 +35,7 @@ Organizace využívají omezení typu zařízení k řízení přístupu k prost
 1. Pomocí minimální verze operačního systému dosáhnete toho, aby koncoví uživatelé ve vaší organizaci stále používali aktuální a podporované platformy. 
 2. Ponechte maximální verzi operačního systému nezadanou (bez omezení) nebo ji nastavte na poslední ověřenou verzi ve vaší organizaci, abyste získali čas na interní testování nových verzí operačního systému.
 
-Podrobnosti najdete v sekci [Nastavení omezení typu zařízení](https://docs.microsoft.com/en-us/intune/enrollment-restrictions-set#set-device-type-restrictions).
+Podrobnosti najdete v sekci [Nastavení omezení typu zařízení](https://docs.microsoft.com/intune/enrollment-restrictions-set#set-device-type-restrictions).
  
 ## <a name="operating-system-version-reporting-and-compliance-with-intune-mdm-device-compliance-policies"></a>Vytváření sestav o verzích operačního systému a soulad se zásadami dodržování předpisů zařízením v MDM Intune
 Zásady dodržování předpisů zařízením v MDM Intune poskytují tyto nástroje: 
@@ -50,7 +50,7 @@ Stejně jako omezení registrace i zásady dodržování předpisů zařízením
 ### <a name="in-practice"></a>V praxi
 Organizace využívají zásady dodržování předpisů zařízením pro stejné scénáře jako omezení registrace. Díky těmto zásadám používají uživatelé ve vaší organizaci aktuální ověřené verze operačního systému. Když zařízení koncových uživatelů přestanou předpisy dodržovat, může být přístup k prostředkům organizace zablokován prostřednictvím podmíněného přístupu, dokud nebudou koncoví uživatelé používat operační systém z podporovaného rozsahu pro vaši organizaci. Koncoví uživatelé jsou informováni, že jejich zařízení nedodržují předpisy, a dostanou k dispozici kroky, jak přístup znovu získat.   
 
-Podrobnosti najdete v tématu [Začínáme se zásadami dodržování předpisů zařízeními v Intune](https://docs.microsoft.com/en-us/intune/device-compliance-get-started).
+Podrobnosti najdete v tématu [Začínáme se zásadami dodržování předpisů zařízeními v Intune](https://docs.microsoft.com/intune/device-compliance-get-started).
  
 ## <a name="operating-system-version-controls-using-intune-app-protection-policies"></a>Správa verzí operačního systému pomocí zásad ochrany aplikací Intune    
 Nastavení přístupu v zásadách ochrany aplikací Intune a správě mobilních aplikací (MAM) umožňují zadat minimální verzi operačního systému ve vrstvě aplikací. Můžete tak koncové uživatele informovat a vybídnout nebo po nich vyžadovat, aby svůj operační systém aktualizovali na zadanou minimální verzi.
@@ -72,7 +72,7 @@ Podrobnosti najdete v tématu [Vytvoření a přiřazení zásad ochrany aplikac
 Možností Intune popsaných v tomto článku můžete využít k přechodu organizace na novou verzi operačního systému v rámci časového plánu, který určíte. Následující kroky popisují ukázkový model nasazení pro přechod vašich uživatelů z operačního systému verze 1 na operační systém verze 2 během sedmi dní.
 - **Krok 1**: Pomocí omezení registrace vyžadujte operační systém verze 2 jako minimální verzi k registraci zařízení. To zajistí, aby nová zařízení koncových uživatelů v době registrace dodržovala předpisy.
 - **Krok 2a**: Pomocí zásad ochrany aplikací Intune uživatele při spuštění nebo obnovení aplikace upozorněte, že je vyžadován operační systém verze 2.
-- **Krok 2b**: Pomocí zásad dodržování předpisů zařízením vyžadujte operační systém verze 2 jako minimální verzi k tomu, aby zařízení dodržovalo předpisy. Pomocí **Akcí** pro nedodržování předpisů umožněte sedmidenní období odkladu a zašlete koncovým uživatelům oznamovací e-mail s časovým plánem a požadavky.
+- **Krok 2b**: Pomocí zásad dodržování předpisů zařízením vyžadujte operační systém verze 2 jako minimální verzi k tomu, aby zařízení dodržovalo předpisy. Pomocí **akcí** při nedodržení předpisů umožněte sedmidenní období odkladu a zašlete koncovým uživatelům oznamovací e-mail s časovým plánem a požadavky.
   -  Tyto zásady budou koncové uživatele informovat, že stávající zařízení se musí aktualizovat, a to prostřednictvím e-mailu, Portálu společnosti Intune a při spuštění aplikace v případě aplikací, pro které jsou aktivní zásady ochrany aplikací.
   - Můžete spustit sestavu dodržování předpisů, abyste identifikovali uživatele, kteří předpisy nedodržují. 
 - **Krok 3a**: Pomocí zásad ochrany aplikací Intune uživatele při spuštění nebo obnovení aplikace zablokujte, pokud zařízení nepoužívá operační systém verze 2.
@@ -82,6 +82,6 @@ Možností Intune popsaných v tomto článku můžete využít k přechodu orga
 ## <a name="next-steps"></a>Další kroky
 Ke správě verzí operačního systému ve vaší organizaci můžete využít tyto prostředky: 
 
-- [Nastavení omezení typů zařízení](https://docs.microsoft.com/en-us/intune/enrollment-restrictions-set#set-device-type-restrictions)
-- [Začínáme s dodržováním předpisů zařízeními](https://docs.microsoft.com/en-us/intune/device-compliance-get-started)
+- [Nastavení omezení typů zařízení](https://docs.microsoft.com/intune/enrollment-restrictions-set#set-device-type-restrictions)
+- [Začínáme s dodržováním předpisů zařízeními](https://docs.microsoft.com/intune/device-compliance-get-started)
 - [Vytvoření a přiřazení zásad ochrany aplikací](https://docs.microsoft.com/intune/app-protection-policies)

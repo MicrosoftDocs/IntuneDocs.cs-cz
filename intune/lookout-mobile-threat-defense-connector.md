@@ -15,11 +15,11 @@ ms.assetid: 3a730a5d-2a90-42b0-aa28-aadfc7a18788
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 41270fb217c87880e67c1c5e0adf319576031126
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 2647875ed6753cf437d4487faf0137e28bd40f43
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="lookout-mobile-threat-defense-connector-with-intune"></a>Konektor Lookout Mobile Threat Defense s Intune
 
@@ -35,7 +35,7 @@ Na mobilní zařízení se nainstaluje a spustí mobilní aplikace Lookoutu **Lo
 
 Zásady dodržování předpisů ve službě Intune obsahují pravidlo pro ochranu před mobilními hrozbami Lookout založené na posouzení rizik služby Lookout. Když je toto pravidlo aktivní, Intune vyhodnocuje soulad zařízení se zásadami, které jste povolili.
 
-Pokud se zjistí, že zařízení dané předpisy nedodržuje, dá se zablokovat přístup k prostředkům, jako jsou Exchange Online a SharePoint Online. Uživatelé dostanou na blokovaná zařízení informace o tom, jak problém vyřešit a jak znovu získat přístup. Pokyny se spouští z aplikace Lookout for Work.
+Pokud se zjistí, že zařízení dané předpisy nedodržuje, dá se zablokovat přístup k prostředkům, jako jsou Exchange Online a SharePoint Online. Uživatelé dostanou na blokovaná zařízení informace o tom, jak problém vyřešit a jak znovu získat přístup. Pokyny se spouští z aplikace Lookout for Work.
 
 ## <a name="supported-platforms"></a>Podporované platformy
 Pro Lookout se podporují tyto platformy, pokud jsou zaregistrované v Intune:

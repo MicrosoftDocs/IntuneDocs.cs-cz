@@ -15,11 +15,11 @@ ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 39fb4b4b91eb6769eb1d5d95736cbbde141c6812
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: cb82b1a9af0cc8dd2f394747ce7ed8b695260bb9
+ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Nastavení místního Exchange Connectoru pro Intune v Microsoft Intune Azure
 
@@ -30,7 +30,7 @@ Místní prostředí Exchange Serveru můžou pomocí místního Exchange Connec
 
 Pokud chcete nastavit připojení, které umožňuje komunikaci Microsoft Intune s místním Exchange Serverem, postupujte takto:
 
-1.  Stáhněte si místní Exchange Connector pro Intune z Azure Portalu.
+1.  Stáhněte si místní Exchange Connector pro Intune z portálu Azure Portal.
 2.  Nainstalujte a nakonfigurujte místní Exchange Connector pro Intune.
 3.  Ověřte připojení k Exchangi.
 
@@ -39,7 +39,7 @@ V následující tabulce jsou uvedené požadavky na počítač, na který insta
 
 |Požadavek|Další informace|
 |---------------|--------------------|
-|operační systémy;|Intune podporuje místní Exchange Connector na počítači, na kterém běží kterákoli edice Windows Serveru 2008 SP2 (64bitová verze), Windows Serveru 2008 R2, Windows Serveru 2012 nebo Windows Serveru 2012 R2.<br /><br />Connector není podporovaný v žádné instalaci jádra serveru.|
+|operační systémy;|Intune podporuje místní Exchange Connector na počítači, na kterém běží kterákoli edice systému Windows Server 2008 SP2 (64bitová verze), Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 nebo Windows Server 2016.<br /><br />Connector není podporovaný v žádné instalaci jádra serveru.|
 |Microsoft Exchange|Místní Connectory vyžadují Microsoft Exchange 2010 SP1 nebo novější, nebo starší Exchange Online Dedicated. Pokud chcete zjistit, jestli je vaše prostředí Exchange Online Dedicated v **nové** nebo **starší** konfiguraci, kontaktujte svého správce účtů.|
 |Autorita pro správu mobilních zařízení| [Nastavte autoritu pro správu mobilních zařízení na Intune](https://docs.microsoft.com/intune-classic/deploy-use/prerequisites-for-enrollment#step-2-mdm-authority-set).|
 |Hardware|Počítač, na který nainstaluje konektor, musí mít minimálně 1,6GHz procesor s 2 GB paměti RAM a 10 GB volného místa na disku.|users-add.md
@@ -152,7 +152,7 @@ Můžete se taky podívat na datum a čas posledního úspěšného pokusu o syn
 
 ### <a name="system-center-operations-manager-scom-management-pack"></a>Sada System Center Operations Manager (SCOM) Management Pack
 
-Od verze Intune 1710 můžete používat [sadu SCOM Management Pack pro Exchange Connector a Intune](https://www.microsoft.com/en-us/download/details.aspx?id=55990&751be11f-ede8-5a0c-058c-2ee190a24fa6=True&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True&fa43d42b-25b5-4a42-fe9b-1634f450f5ee=True). V případě potřeby řešení potíží tak máte různé možnosti monitorování Exchange Connectoru.
+Od verze Intune 1710 můžete používat [sadu SCOM Management Pack pro Exchange Connector a Intune](https://www.microsoft.com/download/details.aspx?id=55990&751be11f-ede8-5a0c-058c-2ee190a24fa6=True&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True&fa43d42b-25b5-4a42-fe9b-1634f450f5ee=True). V případě potřeby řešení potíží tak máte různé možnosti monitorování Exchange Connectoru.
 
 ## <a name="next-steps"></a>Další kroky
 [Vytvoření zásady podmíněného přístupu pro místní Exchange](conditional-access-exchange-create.md)

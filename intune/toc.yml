@@ -287,6 +287,26 @@
           items:
             - name: Selektivní vymazání aplikací
               href: apps-selective-wipe.md
+            - name: Použití zásad ochrany aplikací
+              href: app-protection-policy.md
+              items:
+                - name: Vytvoření zásad ochrany aplikací
+                  href: app-protection-policies.md
+                  items:
+                    - name: Nastavení Androidu
+                      href: app-protection-policy-settings-android.md
+                    - name: Nastavení iOS
+                      href: app-protection-policy-settings-ios.md
+                - name: Ověření zásad ochrany aplikací
+                  href: app-protection-policies-validate.md
+                - name: Monitorování stavu uživatele u ochrany aplikací
+                  href: app-protection-policies-monitor.md
+                - name: Příprava na zásady ochrany aplikací WIP
+                  href: app-protection-policies-configure-windows-10.md
+                - name: Vytvoření a přiřazení zásad ochrany aplikací WIP
+                  href: windows-information-protection-policy-create.md
+                - name: Správa přenosu dat mezi aplikacemi pro iOS
+                  href: data-transfer-between-apps-manage-ios.md
     - name: Konfigurace zařízení
       href: device-profiles.md
       items:
@@ -444,28 +464,8 @@
           href: conditional-access-integrate-jamf.md
         - name: Vynucení dodržování předpisů v počítačích Mac spravovaných aplikací Jamf Pro
           href: conditional-access-assign-jamf.md
-    - name: "Ochrana dat aplikací a\_dat zařízení"
+    - name: Ochrana dat zařízení
       items:
-        - name: Použití zásad ochrany aplikací
-          href: app-protection-policy.md
-          items:
-            - name: Vytvoření zásad ochrany aplikací
-              href: app-protection-policies.md
-              items:
-                - name: Nastavení Androidu
-                  href: app-protection-policy-settings-android.md
-                - name: Nastavení iOS
-                  href: app-protection-policy-settings-ios.md
-            - name: Ověření zásad ochrany aplikací
-              href: app-protection-policies-validate.md
-            - name: Monitorování stavu uživatele u ochrany aplikací
-              href: app-protection-policies-monitor.md
-            - name: Příprava na zásady ochrany aplikací WIP
-              href: app-protection-policies-configure-windows-10.md
-            - name: Vytvoření a přiřazení zásad ochrany aplikací WIP
-              href: windows-information-protection-policy-create.md
-            - name: Správa přenosu dat mezi aplikacemi pro iOS
-              href: data-transfer-between-apps-manage-ios.md
         - name: Mobile Threat Defense
           href: mobile-threat-defense.md
           items:
@@ -651,6 +651,8 @@
           href: reports-proc-data-rest.md
         - name: Koncový bod rozhraní API datového skladu
           href: reports-api-url.md
+        - name: Ověřování v Data Warehouse pouze na úrovni aplikace
+          href: data-warehouse-app-only-auth.md
         - name: Datový model datového skladu
           href: reports-ref-data-model.md
           items:

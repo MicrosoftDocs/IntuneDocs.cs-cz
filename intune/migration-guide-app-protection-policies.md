@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 93cda587-bf56-4d41-b123-9fe203fad788
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.openlocfilehash: d3c176b84a8555de245a1f4014c39885e50ab21d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 009759aa826872fc2c608c6786749d6706cd2f93
+ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-app-protection-policies-optional"></a>Konfigurace zásad ochrany aplikací (volitelné)
 
@@ -33,7 +33,7 @@ Zásady ochrany aplikací používají zabezpečení na úrovni aplikace, takže
 
 ## <a name="app-protection-policies-with-lob-apps"></a>Zásady ochrany obchodních aplikací
 
-Zásady ochrany mobilních aplikací můžete rozšířit také na obchodní aplikace (LOB), když využijete [Microsoft Intune App SDK](app-sdk-get-started.md) nebo nástroj Microsoft Intune App Wrapping pro platformy [iOS](https://www.microsoft.com/download/details.aspx?id=45218&751be11f-ede8-5a0c-058c-2ee190a24fa6=True) a [Android](https://www.microsoft.com/download/details.aspx?id=47267).
+Zásady ochrany mobilních aplikací můžete rozšířit také na obchodní aplikace (LOB), když využijete [Microsoft Intune App SDK](app-sdk-get-started.md) nebo nástroj Microsoft Intune App Wrapping pro platformy iOS i Android. Další informace najdete v článcích [Nástroj App Wrapping Tool pro iOS](app-wrapper-prepare-ios.md) a [Nástroj App Wrapping Tool pro Android](app-wrapper-prepare-android.md). Dále se můžete podívat na článek [Příprava obchodních aplikací na ochranu aplikací](apps-prepare-mobile-application-management.md).
 
 ## <a name="how-do-app-protection-policies-help-during-migration"></a>Jak zásady ochrany aplikací pomáhají při migraci?
 
