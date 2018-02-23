@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 nmanager: dougeby
-ms.date: 10/30/2017
+ms.date: 02/14/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,29 +14,25 @@ ms.technology:
 ms.assetid: 4a085264-232a-4af0-97f1-747496c44517
 ms.suite: ems
 ms.custom: 
-ms.openlocfilehash: 19b5d98165be67b32afa86ba942c42fc4a3048b3
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 6e2528c243938e81a6f730a950ee3949ca44047c
+ms.sourcegitcommit: cccbb6730a8c84dc3a62093b8910305081ac9d24
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="introduction-to-microsoft-intune-in-the-azure-portal"></a>Úvod do Microsoft Intune na portálu Azure Portal
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Microsoft Intune je teď na portálu Azure Portal, což znamená, že se mění pracovní postupy a funkce, na které jste zvyklí.
-Nový portál nabízí nové a aktualizované funkce portálu Azure Portal, na kterém můžete spravovat mobilní zařízení, počítače a aplikace svojí organizace.
+Podobně jako jiné služby Azure je Microsoft Intune k dispozici na portálu Azure Portal. Po výběru **Intune** na portálu Azure Portal můžete spravovat mobilní zařízení, počítače a aplikace vaší organizace.
 
-* Téma [Kde v Azure najdu svoje funkce](ui-changes.md) obsahuje referenční informace, kde můžete vidět konkrétní pracovní postupy a uživatelská rozhraní, která se změnila s přechodem na Azure.
-* V tématu [Skupiny klasického Intune na portálu Azure](groups-get-started.md) je vysvětlené, jaký dopad má přechod na skupiny zabezpečení Azure Active Directory na správu skupin.
+>[!NOTE] 
+> Pokud jste používali dřívější verzi Microsoft Intune, můžou pro vás být užitečné následující informace:
+    * Téma [Kde v Azure najdu svoje funkce](ui-changes.md) obsahuje referenční informace, kde můžete vidět konkrétní pracovní postupy a uživatelská rozhraní, která se změnila s přechodem na Azure.
+    * V tématu [Skupiny klasického Intune na portálu Azure](groups-get-started.md) je vysvětlené, jaký dopad má přechod na skupiny zabezpečení Azure Active Directory na správu skupin.
 
-
-
-
-V této knihovně může najít průběžně aktualizované informace o novém portálu. Pokud máte nějaké návrhy, poskytněte nám zpětnou vazbu v komentářích k tomuto tématu. Rádi bychom znali vaše názory.
-
-K tomu nejdůležitějšímu v novém prostředí patří:
+Mezi nejdůležitější prvky prostředí Microsoft Intune na portálu Azure Portal patří:
 
 - Integrovaná konzola pro všechny součásti EMS (Enterprise Mobility + Security)
 - Konzola HTML postavená na webových standardech
@@ -61,41 +57,37 @@ V současnosti se podporují následující prohlížeče:
 
 Nejnovější informace o podporovaných prohlížečích najdete na portálu [Azure Portal](https://docs.microsoft.com/azure/azure-preview-portal-supported-browsers-devices).
 
-## <a name="whats-in-this-library"></a>Co je v této knihovně?
+## <a name="microsoft-intune-in-the-azure-portal"></a>Microsoft Intune na portálu Azure Portal
 
-Do této dokumentace je promítnuto rozložení Azure Portalu, abyste mohli snadněji najít informace, které potřebujete.
+[Azure Portal](https://portal.azure.com) je místo, kde najdete službu Microsoft Intune. Azure obsahuje několik služeb, z nichž většinu nemusíte pravidelně používat. Stručný návod pro přizpůsobení prostředí portálu najdete v tématu [Začínáme s Intune na portálu Azure Portal](get-started-azure.md).
+
+## <a name="the-microsoft-intune-documentation"></a>Dokumentace k Microsoft Intune
+
+Toto téma, stejně jako celá dokumentace k Microsoft Intune, se průběžně aktualizuje. Pokud máte nějaké návrhy, poskytněte nám zpětnou vazbu v komentářích k tomuto tématu. Rádi bychom znali vaše názory.
+
+Tato dokumentace odráží rozložení Microsoft Intune na portálu Azure Portal (zobrazeno níže), abyste mohli snadněji najít informace, které potřebujete.
 
 ![Úlohy portálu Azure Portal](./media/azure-portal-workloads.png)
 
-### <a name="introduction-and-get-started"></a>Úvod a začínáme
-Tato část obsahuje [úvodní informace](introduction-intune.md), které vám pomůžou v začátcích používání Intune.
-### <a name="plan-and-design"></a>Plánování a navrhování
-Informace, které vám usnadní [plánování a navrhování](/intune-classic/plan-design/introduction) prostředí Intune
-### <a name="device-enrollment"></a>Registrace zařízení
-[Zjistěte, jak zajistíte správu zařízení přes Intune](device-enrollment.md).
-### <a name="device-compliance"></a>Dodržování předpisů zařízení
-[Definujte úroveň dodržování předpisů pro svá zařízení a dostávejte zprávy o všech zařízeních, která je nedodržují](device-compliance.md).
-### <a name="device-configuration"></a>Konfigurace zařízení
-[Informace o profilech, s jejichž pomocí můžete na spravovaných zařízeních nakonfigurovat nastavení a funkce](device-profiles.md)
-### <a name="devices"></a>Zařízení
-[Inventář a sestavy vám poskytnou přehled o spravovaných zařízeních](device-management.md).
-### <a name="mobile-apps"></a>Mobilní aplikace
-[Informace o publikování, správě, konfiguraci a ochraně aplikací](app-management.md)
-### <a name="conditional-access"></a>podmíněný přístup
-[Omezte přístup ke službám Exchange na základě určených podmínek](conditional-access.md).
-### <a name="on-premises-access"></a>Místní přístup
-[Konfigurace přístupu k Exchangi ActiveSync a místnímu Exchangi](/intune-classic/deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune)
-### <a name="users"></a>Uživatelé
-[Další informace o uživatelích zařízení, která spravujete, a řazení prostředků do skupin](users-add.md)
-### <a name="groups"></a>Skupiny
-[Informace o tom, jak můžete používat skupiny Azure Active Directory s Intune](groups-get-started.md)
-### <a name="intune-roles"></a>Role Intune
-[Určete, kdo může v Intune provádět různé akce a na koho se tyto akce vztahují](role-based-access-control.md). Můžete buď použít předdefinované role, které vyhovují běžným situacím v Intune, nebo si vytvořit své vlastní role.
-### <a name="software-updates"></a>Aktualizace softwaru
-[Informace o tom, jak nakonfigurovat aktualizace softwaru pro zařízení s Windows 10](windows-update-for-business-configure.md)
+### <a name="documentation-guide"></a>Průvodce dokumentací
 
+Pomocí následující tabulky můžete rychle vyhledat hlavní oblasti Microsoft Intune a seznámit se s nimi.
 
+| Oddíl                                                      | Popis                                                                                                                                                                                                                                                                                      |
+|--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Úvod a začínáme](introduction-intune.md)       | Vysvětlení základních principů Intune, například:<br /> - běžná řešení<br /> - způsob, jak Microsoft Intune funguje<br /> - správa zařízení v Intune<br /> - správa aplikací v Intune<br /> - správa mobility velkých organizací (EMM) s registrací zařízení i bez ní                                                         |
+| [Plánování a navrhování](planning-guide.md)                         | Pokyny, které vám pomůžou úspěšně naplánovat a navrhnout prostředí Microsoft Intune                                                                                                                                                                                                             |
+| [Registrace zařízení](device-enrollment.md)                    | Vysvětlení, jak Microsoft Intune usnadňuje správu zařízení pracovníků díky registraci zařízení do služby Intune. Zařízení pracovníků lze registrovat několika způsoby.                                                                                                         |
+| [Dodržování předpisů zařízeními](device-compliance.md)                    | Zásady dodržování předpisů zařízeními v Intune definují pravidla a nastavení, která jsou pro zařízení povinná, pokud má toto zařízení vyhovět zásadám Microsoft Intune. Příkladem takových zásad je třeba vyžadování hesla pro přístup k zařízení, šifrování zařízení nebo vyžadování minimální verze operačního systému. |
+| [Konfigurace zařízení](device-profiles.md)                   | Po vytvoření profilů zařízení v Microsoft Intune můžete nakonfigurovat nastavení a funkce na všech zařízeních, která spravujete. Můžete například nakonfigurovat funkce, jako jsou oznámení, sdílení dat, e-mailová podpora, připojení wi-fi, certifikáty a Endpoint Protection.              |
+| [Zařízení](device-management.md)                              | Můžete zajistit, aby spravovaná zařízení poskytovala prostředky, které vaši koncoví uživatelé potřebují k práci, a současně aby data společnosti byla chráněná před možnými riziky. Můžete zařízení spravovat pomocí kontroly inventáře zařízení pracovníků a prováděním akcí se vzdáleným zařízením.                                                      |
+| [Mobilní aplikace](app-management.md)                             | Vysvětlení, jak přidat, nasadit, monitorovat, nakonfigurovat a chránit aplikace                                                                                                                                                                                                                             |
+| [Podmíněný přístup](conditional-access.md)                  | Můžete definovat podmínky pro zařízení a pro aplikace, které budou chránit přístup k firemním datům.                                                                                                                                                                                                            |
+| [Uživatelé](users-add.md)                                        | Přečtěte si, jak můžete přidat uživatele zařízení a aplikací, které spravujete.                                                                                                                                                                                                                                           |
+| [Skupiny](groups-get-started.md)                              | Přečtěte si, jak můžete vytvořit a spravovat skupiny v Intune. Pomocí skupin můžete rychle přiřadit zařízení a nakonfigurovat zásady ochrany aplikací.                                                                                                                                             |
+| [Role Intune](role-based-access-control.md)                 | Přečtěte si, jak určovat, kdo může v Intune provádět různé akce a jak se tyto akce používají. Můžete buď použít předdefinované role, které vyhovují běžným situacím v Intune, nebo si vytvořit své vlastní role.                                                                                 |
+| [Aktualizace softwaru](windows-update-for-business-configure.md) | Přečtěte si informace o tom, jak nakonfigurovat aktualizace softwaru pro zařízení s Windows 10.                                                                                                                                                                                                                                  |
 
 ## <a name="whats-new"></a>Co je nového
 
-[Zjistěte, co je nového v Intune](whats-new.md).
+Informace o nejnovějších funkcích Microsoft Intune najdete v části [Co je nového](whats-new.md).

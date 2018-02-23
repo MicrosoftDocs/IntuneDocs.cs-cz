@@ -2,8 +2,8 @@
 title: "Přiřazení licencí Intune"
 description: "Přiřaďte uživatelům licence k předplatnému Intune."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 10/31/2017
 ms.topic: get-started-article
@@ -14,17 +14,17 @@ ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
 ms.reviewer: amyro
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: fd407b8b933c7edce449cd25a9fbd53f4299fcc3
-ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
+ms.openlocfilehash: 2ad754ce3d81469bb172081b6b7f43937f45ffd9
+ms.sourcegitcommit: cccbb6730a8c84dc3a62093b8910305081ac9d24
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="assign-intune-licenses-to-your-user-accounts"></a>Přiřazení licencí Intune uživatelským účtům
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
-Ať už přidáváte uživatele ručně, nebo provádíte synchronizaci z místní služby Active Directory, musíte nejdřív všem uživatelům přiřadit licence Intune, aby mohli svá zařízení registrovat do Intune.
+Ať už přidáváte uživatele ručně, nebo provádíte synchronizaci z místní služby Active Directory, musíte nejdřív všem uživatelům přiřadit licence Intune, aby mohli svá zařízení registrovat do Intune. Seznam licencí najdete v tématu [Licence zahrnující Intune](licenses.md).
 
 ## <a name="assign-an-intune-license-in-the-office-365-admin-center"></a>Přiřazení licence Intune v Centru pro správu Office 365
 

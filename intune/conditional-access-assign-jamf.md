@@ -6,7 +6,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: dougeby
-ms.date: 12/14/2017
+ms.date: 02/16/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0844852aaa1e5833e0d5013ac9dea8862d7d752b
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 747e54a1c62618f267c3ed07ec3f8858cf97b184
+ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Vynucení dodržování předpisů v počítačích Mac spravovaných aplikací Jamf Pro
 
@@ -66,6 +66,12 @@ Koncoví uživatelé musí aplikaci Portál společnosti spustit prostřednictv�
 2. Nakonfigurujte datovou část **Microsoft Intune Integration** (Integrace Microsoft Intune) včetně frekvence aktivační události a spouštění.
 3. Kliknutím na kartu **Scope (Obor)** nastavte obor zásad na všechna cílová zařízení.
 4. Kliknutím na kartu **Self Service (Samoobslužná služba)** zpřístupněte zásady v samoobslužné službě Jamf. Zahrňte zásadu v kategorii **Device Compliance (Dodržování předpisů zařízením)**. Klikněte na **Uložit**.
+
+## <a name="removing-a-jamf-managed-device-from-intune"></a>Odebrání zařízení spravovaného prostřednictvím Jamf z Intune
+
+Zařízení spravované prostřednictvím Jamf nejde odebrat z Intune. Zařízení spravovaná prostřednictvím Jamf budete muset odebrat z aplikace Jamf Pro a ta je pak z Intune odebere. 
+
+Přečtěte si informace o [odebírání zařízení spravovaného prostřednictvím Jamf v dokumentaci k Jamf Pro](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information). Můžete také pomocí lístku podpory požádat o další pomoc [podporu Jamf](https://www.jamf.com/support/). 
 
 ## <a name="next-steps"></a>Další kroky
 

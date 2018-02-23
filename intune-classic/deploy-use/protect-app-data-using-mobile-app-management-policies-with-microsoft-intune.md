@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 23dca24c69cca3c7a2851cb3fa7d9959f31df8e7
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: e5f9eb33ca877fba0d59cfd9ddbc23f5eb2cd05c
+ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="protect-app-data-using-app-protection-policies-with-microsoft-intune"></a>Ochrana dat aplikací pomocí zásad ochrany aplikací v Microsoft Intune
 
@@ -57,9 +57,7 @@ Použití MDM se zásadami ochrany aplikací přináší i další výhody. Spol
 - **Zásady ochrany aplikací zajišťují použití ochrany na úrovni aplikací.** Můžete například vytvořit zásadu, která bude při otevření aplikace v pracovním kontextu vyžadovat kód PIN, zabrání sdílení dat mezi aplikacemi nebo zabrání ukládání podnikových dat do osobního úložiště.
 
 ## <a name="devices-that-support-mam"></a>Zařízení podporující MAM
-Zásady ochrany aplikací jsou aktuálně podporované v těchto systémech:
--   iOS 8.1 nebo novější
--   Android 4 nebo novější
+Podpora platforem pro zásady ochrany aplikací Intune je spojená s podporou platforem pro aplikace Office. Podrobnosti najdete v tématu [Požadavky na systém pro Office](https://products.office.com/en-US/office-system-requirements).
 
 >[!NOTE]
 >Zařízení s Windows nejsou ve scénáři MAM bez registrace podporované. Pokud zařízení s Windows 10 zaregistrujete do Intune, můžete použít sadu Windows Information Protection, která nabízí podobné funkce. Podrobnosti najdete v tématu věnovanému [ochraně podnikových dat pomocí sady Windows Information Protection](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
