@@ -104,7 +104,6 @@
 ## [Používání zařízení s macOS](using-your-macos-device-with-intune.md)
 ### [Co se stane při registraci zařízení s macOS?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
 ### [Registrace zařízení s macOS](enroll-your-device-in-intune-macos-cp.md)
-### [Registrace staršího zařízení s macOS](enroll-your-device-in-intune-macos-legacy.md)
 ### [Zrušení registrace zařízení s macOS](unenroll-your-device-from-intune-macos.md)
 
 ### [Řešení běžných problémů s macOS](troubleshoot-your-device-macos.md)
@@ -140,6 +139,7 @@
 #### [Odeslání protokolů z aplikace Portál společnosti](send-logs-to-your-it-admin-cp-windows.md)
 #### [Odeslání protokolů z aplikace Nastavení](send-logs-to-your-it-admin-settings-windows.md)
 #### [Moje verze Windows ještě není podporovaná](your-windows-version-isnt-yet-supported.md)
+#### [Instalace Office 365 na zařízení s Windows 10](install-office-windows.md)
 #### [Povolení šifrování Windows](you-need-to-enable-windows-encryption.md)
 #### [Moje zařízení potřebuje antimalwarový software](your-device-needs-antimalware-software.md)
 #### [Povolení zabezpečeného spuštění](you-need-to-enable-secure-boot-windows.md)

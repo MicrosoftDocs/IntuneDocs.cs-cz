@@ -6,19 +6,18 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 11/01/2017
+ms.date: 1/30/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 08f659cf-715e-4e10-9ab2-1bac3c6f2366
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: fa9b09f97568b54a68f34a609c91426eb12b71e0
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 1a7d047de1faa019eb137516ef75d64657e22e5a
+ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="manage-software-updates"></a>Správa aktualizací softwaru
 
@@ -45,8 +44,9 @@ Po vytvoření aktualizačních kanálů je přiřadíte skupinám zařízení. 
 - Windows Update podporuje následující verze Windows 10:
     - Windows 10
     - Windows 10 Team (pro zařízení Surface Hubu)
+    - [Windows Holographic for Business](#windows-holographic-for-business-support)
 
- Zařízení se systémem Windows 10 Mobile a Windows 10 Holographic nejsou podporovaná.
+ Zařízení s Windows 10 Mobile nejsou podporovaná.
 
 - Na zařízení s Windows musí být **Zpětná vazba a diagnostika** > **Diagnostika a data o používání** nastavené aspoň na **Základní**.
 
@@ -65,7 +65,7 @@ Po vytvoření aktualizačních kanálů je přiřadíte skupinám zařízení. 
 1. Na portále Azure Portal vytvořte aktualizační kanály Windows 10 s nastaveními, která potřebujete. Nastavení **Povolit funkce v předběžné verzi** není na portálu Azure Portal podporované, protože už pro nejnovější buildy Windows 10 neplatí. Při vytvoření aktualizačních kanálů můžete nakonfigurovat ostatní tři nastavení i další nastavení aktualizace Windows 10.
 
   > [!NOTE]
-  > Nastavení aktualizací Windows 10 vytvořená na klasickém portálu se na Azure Portalu po migraci nezobrazí. Tato nastavení se ale dál používají. Pokud jste některé z těchto nastavení migrovali a migrované zásady z portálu Azure Portal upravíte, tato nastavení se ze zásad odeberou.
+  > Nastavení aktualizací Windows 10 vytvořená na klasickém portálu se na portálu Azure Portal po migraci nezobrazí. Tato nastavení se ale dál používají. Pokud jste některé z těchto nastavení migrovali a migrované zásady z portálu Azure Portal upravíte, tato nastavení se ze zásad odeberou.
 
 2. Odstraňte nastavení aktualizací na klasickém portálu. Po migraci na portál Azure Portal a přidání stejných nastavení do aktualizačního kanálu musíte nastavení na klasickém portálu odstranit, aby se zabránilo možným konfliktům zásad. Pokud je třeba stejné nastavení nakonfigurované s různými hodnotami, dojde ke konfliktu, který nepůjde snadno poznat, protože nastavení nakonfigurované na klasickém portálu se na portálu Azure Portal nezobrazuje.
 
@@ -89,8 +89,7 @@ Po vytvoření aktualizačních kanálů je přiřadíte skupinám zařízení. 
 
     Aktualizace funkcí jsou obecně nové funkce pro Windows. Až nakonfigurujete nastavení **Kanálu pro údržbu** (Půlroční kanál (cílený) nebo Půlroční kanál), můžete definovat, jestli a na jak dlouho chcete odložit příjem aktualizací funkcí po tom, co je Microsoft zpřístupní na webu Windows Update.
 
-    Příklad:  
-    **Kanál pro údržbu je nastavený na Půlroční kanál (cílený) a odložení aktualizace je nastavené na 30 dní**: Řekněme, že Aktualizace funkcí X je nejdříve veřejně dostupná na webu Windows Update jako Půlroční kanál (cílený) v lednu. Zařízení aktualizaci přijme až v únoru – o 30 dní později.
+    Například: **Kanál pro údržbu je nastavený na Půlroční kanál (cílený) a odložení aktualizace je nastavené na 30 dní**: Řekněme, že Aktualizace funkcí X je nejdříve veřejně dostupná na webu Windows Update jako Půlroční kanál (cílený) v lednu. Zařízení aktualizaci přijme až v únoru – o 30 dní později.
 
     **Kanál pro údržbu je nastavený na Půlroční kanál a odložení aktualizace je nastavené na 30 dní**: Řekněme, že Aktualizace funkcí X je nejdříve veřejně dostupná na webu Windows Update jako Půlroční kanál (cílený) v lednu. O čtyři měsíce později, v dubnu, je Aktualizace funkcí X vydána do Půlročního kanálu. Zařízení přijme Aktualizaci funkcí 30 dní po tomto vydání do Půlročního kanálu a bude se aktualizovat v květnu.
 
@@ -154,3 +153,11 @@ Je možné pozastavit příjem aktualizací funkcí nebo aktualizací kvality za
 > [!IMPORTANT]
 > Když vydáte příkaz k pozastavení, zařízení ho obdrží při dalším přihlášení ke službě. Je možné, že před přihlášením ke službě nainstalují plánovanou aktualizaci.
 > Kromě toho platí, že pokud je cílové zařízení při vydání příkazu k pozastavení vypnuté, může po zapnutí stáhnout a nainstalovat plánované aktualizace před tím, než se přihlásí k Intune.
+
+## <a name="windows-holographic-for-business-support"></a>Podpora Windows Holographic for Business
+
+Windows Holographic for Business podporuje následující nastavení:
+
+- **Chování automatické aktualizace**
+- **Aktualizace produktů Microsoftu**
+- **Kanál pro údržbu**

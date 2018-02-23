@@ -6,20 +6,19 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: dougeby
-ms.date: 11/17/2017
+ms.date: 2/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 0444183e-f924-4605-96a8-48fdfbc58fd1
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7eb36cc8de655766afabc60f33a316cb6ef3bfb8
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: a5f1caeddbd3d171092ef59cfb092404b31154f2
+ms.sourcegitcommit: 754fcc31155b28d6910bba45419c6be745f8793e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="create-a-device-compliance-policy-for-macos-devices-with-intune"></a>Vytvoření zásad dodržování předpisů pro zařízení s macOS v Intune
 
@@ -35,20 +34,16 @@ Než začnete vytvářet a přiřazovat zásady dodržování předpisů pro za�
 > [!IMPORTANT]
 > Zásady dodržování předpisů pro zařízení je nutné vytvořit pro každou platformu zvlášť. Nastavení zásad dodržování předpisů zařízeními v Intune závisí na možnostech platformy, pro které je určené nastavení prostřednictvím protokolu MDM.
 
-Tabulka níže popisuje, jak se postupuje u nevyhovujícího nastavení při použití zásad dodržování předpisů se zásadami podmíněného přístupu.
-
--------------------------------
+Následující tabulka popisuje, jak jsou spravovaná nevyhovující nastavení při použití zásad dodržování předpisů se zásadami podmíněného přístupu:
 
 
-| **Nastavení zásad** | **macOS 10.11 a novější** |
+| Nastavení zásad | macOS 10.11 a novější |
 | --- | --- |
 | **Konfigurace kódu PIN nebo hesla** | Opravené |   
 | **Šifrování zařízení** | Opravené (nastavením PIN kódu) |
 | **E-mailový profil** | V karanténě |
 |**Minimální verze operačního systému** | V karanténě |
 | **Maximální verze operačního systému** | V karanténě |  
-| **Ověření stavu Windows** | Nelze použít |  
-----------------------------
 
 
 **Opravené** = operační systém zařízení vynucuje dodržování předpisů. (Uživatel musí třeba zadat kód PIN.)
@@ -70,27 +65,27 @@ Při vytváření nových zásad dodržování předpisů zařízeními s Intune
 
 ### <a name="device-health"></a>Stav zařízení
 
-- **Vyžadovat ochranu integrity systému**: Pokud chcete kontrolovat, jestli mají zařízení s macOS povolenou ochranu integrity systému, nastavte u této možnosti **Vyžadovat**.
+- **Vyžadovat ochranu integrity systému** – Pokud chcete kontrolovat, jestli mají zařízení s macOS povolenou ochranu integrity systému, nastavte na **Vyžadovat**.
 
 ### <a name="device-properties"></a>Vlastnosti zařízení
 
-- **Minimální verze OS**: Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, označí se jako nekompatibilní. Zobrazí se odkaz s informacemi, jak upgradovat. Uživatel může zvolit upgrade svého zařízení. Pak může přistupovat k prostředkům společnosti.
+- **Minimální verze OS** – Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, označí se jako nekompatibilní. Zobrazí se odkaz s informacemi, jak upgradovat. Uživatel může zvolit upgrade svého zařízení. Pak může přistupovat k prostředkům společnosti.
 
-- **Maximální verze OS**: Pokud zařízení používá verzi operačního systému, která je novější než verze uvedená v pravidle, bude přístup k prostředkům společnosti zablokovaný a uživateli se zobrazí výzva, že má kontaktovat správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nepůjde přes toto zařízení přistupovat k prostředkům společnosti.
+- **Maximální verze OS** – Pokud zařízení používá verzi operačního systému, která je novější než verze uvedená v pravidle, bude přístup k prostředkům společnosti zablokovaný a uživateli se zobrazí výzva, že má kontaktovat správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nepůjde přes toto zařízení přistupovat k prostředkům společnosti.
 
 ### <a name="system-security-settings"></a>Systémové nastavení zabezpečení
 
 #### <a name="password"></a>Heslo
 
-- **Vyžadovat heslo k odemknutí mobilních zařízení**: Pokud u této možnosti nastavíte **Vyžadovat**, budou muset uživatelé zadat heslo, aby mohli získat přístup ke svému zařízení.
+- **Vyžadovat heslo k odemknutí mobilních zařízení** – Pokud nastavíte **Vyžadovat**, budou muset uživatelé zadat heslo, aby mohli získat přístup ke svému zařízení.
 
-- **Jednoduchá hesla**: Pokud u této možnosti nastavíte **Blokovat**, nebude moct uživatel používat jednoduchá hesla, jako je třeba **1234** nebo **1111**.
+- **Jednoduchá hesla** – Pokud nastavíte **Blokovat**, nebude moct uživatel vytvořit jednoduché heslo, jako je třeba **1234** nebo **1111**.
 
-- **Minimální délka hesla**: Určuje minimální počet číslic nebo znaků, které musí obsahovat heslo uživatele.
+- **Minimální délka hesla** – Určuje minimální počet číslic nebo znaků, které musí obsahovat heslo uživatele.
 
-- **Typ hesla**: Určuje, jestli musí uživatel vytvořit **alfanumerické** nebo **číselné** heslo.
+- **Typ hesla** – Určuje, jestli musí uživatel vytvořit **alfanumerické** nebo **číselné** heslo.
 
-- **Počet nealfanumerických znaků v hesle**: Pokud nastavíte u možnosti **Požadovaný typ hesla** hodnotu **Alfanumerické**, určuje toto nastavení nejmenší počet znakových sad, které musí heslo mít. 
+- **Počet nealfanumerických znaků v hesle** – Pokud nastavíte u možnosti **Požadovaný typ hesla** hodnotu **Alfanumerické**, určuje toto nastavení nejmenší počet znakových sad, které musí heslo mít. 
 
     > [!NOTE]
     > Po nastavení vyššího čísla bude uživatel muset vytvořit složitější heslo.
@@ -98,11 +93,11 @@ Při vytváření nových zásad dodržování předpisů zařízeními s Intune
     > [!IMPORTANT]
     > Pro zařízení s macOS toto nastavení určuje počet speciálních znaků (třeba **!** , **#**, **&amp;**), které musí heslo obsahovat.
 
-- **Maximální počet minut nečinnosti, po kterém bude nutné zadat heslo**: Určete dobu nečinnosti, než musí uživatel znovu zadat heslo.
+- **Maximální počet minut nečinnosti, po kterém bude nutné zadat heslo** – Určete dobu nečinnosti, která musí uplynout, aby se po uživateli znovu požadovalo zadání hesla.
 
-- **Konec platnosti hesla (dny)**: Vyberte počet dní (1 až 250), za který skončí platnost hesla a uživatel bude muset vytvořit nové.
+- **Konec platnosti hesla (dny)** – Vyberte počet dní (1 až 250), za který skončí platnost hesla a uživatel bude muset vytvořit nové.
 
-- **Počet předchozích hesel, která se nesmí použít znovu**: Zadejte počet dříve použitých hesel, která se nesmí znova použít.
+- **Počet předchozích hesel, která se nesmí použít znovu** – Zadejte počet dříve použitých hesel, která se nesmí znovu použít.
 
     > [!IMPORTANT]
     > Když se požadavek na heslo na zařízení s macOS změní, projeví se to až při příští změně hesla uživatelem. Pokud třeba nastavíte omezení délky hesla na osm číslic a zařízení s macOS má aktuálně šestičíselné heslo, bude zařízení dál splňovat předpisy až do doby, kdy uživatel heslo na zařízení změní.

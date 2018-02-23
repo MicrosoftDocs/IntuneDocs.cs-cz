@@ -15,11 +15,11 @@ ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f33598abe08ffb958ddac9eb7725ab500f9db981
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 35c33fb189187a678efa04d10706fe752d683e17
+ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="endpoint-protection-settings-for-windows-10-and-later-in-microsoft-intune"></a>Nastavení ochrany koncového bodu pro Windows 10 a novější ve službě Microsoft Intune
 
@@ -225,7 +225,9 @@ Pokud chcete zapnout ochranu Exploit Protection, vytvořte soubor XML, který bu
 
 Pomocí **zásad integrity kódu pro řízení aplikací** zvolte další aplikace, které je potřeba auditovat pomocí Řízení aplikací v programu Windows Defender nebo které tento nástroj může považovat za důvěryhodné, aby bylo možné povolit jejich spuštění. Součásti systému Windows a všechny aplikace z obchodu Windows Store se za důvěryhodné považují automaticky.
 
-Aplikace spuštěné v režimu „pouze audit“ nebudou blokované. Režim „pouze audit“ zapisuje všechny události do protokolů místního klienta.
+Aplikace spuštěné v režimu **Pouze audit** nebudou blokované. Režim **Pouze audit** zapisuje všechny události do protokolů místního klienta.
+
+Po aktivaci se dá řízení aplikací deaktivovat jenom změnou režimu z **Vynutit** na **Pouze audit**. Změna režimu z **Vynutit** na **Nenakonfigurováno** způsobí, že řízení aplikací se na přiřazených zařízeních bude dále vynucovat.
 
 ## <a name="windows-defender-security-center"></a>Centrum zabezpečení v programu Windows Defender
 
