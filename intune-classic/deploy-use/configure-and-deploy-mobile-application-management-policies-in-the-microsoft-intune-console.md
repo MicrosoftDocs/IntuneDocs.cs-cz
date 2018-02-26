@@ -102,7 +102,7 @@ Po ověření úspěšného nahrání aplikace pokračujte krokem 3.
 
 2.  V části **Vyberte, jakým způsobem má být tento software zpřístupněn pro zařízení** vyberte možnost **Instalační program softwaru**.
 
-3.  V části **Typ souboru instalačního programu softwaru** vyberte **Balíček aplikace pro systém iOS (soubor &#42.ipa)**.
+3.  V části **Typ souboru instalačního programu softwaru** vyberte **Balíček aplikace pro systém iOS (soubor &#42;.ipa)**.
 
 Po dokončení nahrávání se zobrazí **Ano** u **Zásad správy aplikace** na stránce **Vlastnosti softwaru** nahrané aplikace.
 
