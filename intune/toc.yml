@@ -196,7 +196,7 @@
           href: device-locate.md
         - name: Povolení režimu ztráty zařízení s iOSem
           href: device-lost-mode.md
-        - name: Zapnutí režimu pod dohledem v iOSu
+        - name: Zapnutí režimu iOSu Pod dohledem
           href: device-supervised-mode.md
         - name: Uzamčení zařízení
           href: device-remote-lock.md
@@ -470,6 +470,30 @@
           href: conditional-access-assign-jamf.md
     - name: Ochrana dat zařízení
       items:
+        - name: Použití zásad ochrany aplikací
+          href: app-protection-policy.md
+          items:
+            - name: Vytvoření zásad ochrany aplikací
+              href: app-protection-policies.md
+              items:
+                - name: Nastavení Androidu
+                  href: app-protection-policy-settings-android.md
+                - name: Nastavení iOS
+                  href: app-protection-policy-settings-ios.md
+                - name: Výjimky zásad pro přenos dat
+                  href: app-protection-policies-exception.md
+                - name: Kontrola protokolů ochrany aplikací v nástroji Managed Browser
+                  href: app-protection-policy-settings-log.md
+            - name: Ověření zásad ochrany aplikací
+              href: app-protection-policies-validate.md
+            - name: Monitorování stavu uživatele u ochrany aplikací
+              href: app-protection-policies-monitor.md
+            - name: Příprava na zásady ochrany aplikací WIP
+              href: app-protection-policies-configure-windows-10.md
+            - name: Vytvoření a přiřazení zásad ochrany aplikací WIP
+              href: windows-information-protection-policy-create.md
+            - name: Správa přenosu dat mezi aplikacemi pro iOS
+              href: data-transfer-between-apps-manage-ios.md
         - name: Mobile Threat Defense
           href: mobile-threat-defense.md
           items:

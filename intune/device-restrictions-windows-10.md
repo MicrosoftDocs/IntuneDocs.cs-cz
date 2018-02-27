@@ -6,19 +6,18 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 1/8/2018
+ms.date: 2/15/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b4b576e9b6195f3db8d162e1f880faf9f669f2c1
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: 128e16ad989293e168d2bb53d5974e479e09a000
+ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení Windows 10 a novější v Microsoft Intune
 
@@ -28,6 +27,8 @@ ms.lasthandoff: 02/09/2018
 - **Snímek obrazovky (jenom mobilní verze)** – Umožňuje uživateli zachytit obrazovku zařízení v podobě obrázku.
 - **Kopírování a vložení (jenom mobilní verze)** – Povolí akce kopírování a vkládání mezi aplikacemi na zařízení.
 - **Ruční zrušení zápisu** – Umožňuje uživateli ze zařízení ručně odstranit pracovní účet.
+   - Nastavení této zásady se neuplatní, pokud je počítač připojený ke službě Azure Active Directory a je povolená automatická registrace. 
+   - Nastavení této zásady neplatí pro počítače s Windows 10 Home.
 - **Ruční instalace kořenového certifikátu (jenom mobilní verze)** – Zabrání uživateli v ruční instalaci kořenových certifikátů a zprostředkujících certifikátů CAP.
 - **Odeslání diagnostických dat** – Možné hodnoty jsou:
     - **Žádné** – Microsoftu se nepošlou žádná data.
@@ -68,7 +69,7 @@ Pro zařízení s Windows 10: Jakmile se nepovede určený počet pokusů o při
 
 ## <a name="personalization"></a>Přizpůsobení
 
-- **Adresa URL obrázku na pozadí plochy (jenom desktopové verze)** – Určuje adresu URL obrázku ve formátu PNG, JPG nebo JPEG, který se použije jako tapeta na ploše Windows. Uživatelé nemůžou toto nastavení změnit.
+- **Adresa URL obrázku na pozadí plochy (jenom desktopové verze)** – Určuje adresu URL obrázku ve formátu JPEG, který se použije jako tapeta na ploše Windows. Uživatelé nemůžou toto nastavení změnit.
 
 ## <a name="privacy"></a>Ochrana osobních údajů
 
@@ -156,11 +157,11 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 ## <a name="edge-browser"></a>Prohlížeč Microsoft Edge
 
 -   **Prohlížeč Microsoft Edge (jenom mobilní verze)** – Povolí používání webového prohlížeče Edge na zařízení.
--   **Rozevírání panelu Adresa (jenom stolní počítače)** – Tímto nastavením zastavíte Microsoft Edge, aby v rozevíracím seznamu při psaní zobrazoval seznam návrhů. Pomůžete tím minimalizovat používanou šířku pásma sítě mezi Edgem a službami Microsoftu.
+-   **Rozevírání panelu Adresa (jenom stolní počítače)** – Tímto nastavením zastavíte Edge, aby v rozevíracím seznamu při psaní zobrazoval seznam návrhů. Pomůžete tím minimalizovat používanou šířku pásma sítě mezi Edgem a službami Microsoftu.
 -   **Synchronizovat oblíbené položky mezi prohlížeči Microsoft (jenom stolní počítače)** – Umožňuje Windows synchronizovat oblíbené položky mezi Internet Explorerem a Edgem.
--   **Odesílat hlavičky Do Not Track** – Nakonfiguruje prohlížeč Microsoft Edge tak, aby se webům, které uživatelé navštíví, posílaly hlavičky DNT (Do Not Track).
+-   **Odesílat hlavičky Do Not Track** – Nakonfiguruje prohlížeč Edge tak, aby se webům, které uživatelé navštíví, posílaly hlavičky DNT (Do Not Track).
 -   **Soubory cookie** – Umožní prohlížeči ukládat internetové soubory cookie do zařízení.
--   **JavaScript** – Umožní, aby se v prohlížeči Microsoft Edge mohly spouštět skripty, třeba JavaScript.
+-   **JavaScript** – Umožní, aby se v prohlížeči Edge mohly spouštět skripty, třeba JavaScript.
 -   **Automaticky otevíraná okna** – Blokuje automaticky otevíraná okna v prohlížeči (platí jenom pro Windows 10 Desktop).
 -   **Návrhy hledání** – Umožní, aby vám vyhledávací web při psaní hledaného textu navrhoval weby.
 -   **Odesílat intranetové přenosy do Internet Exploreru** – Umožňuje uživatelům otevírat intranetové weby v Internet Exploreru (jenom Windows 10 Desktop).
@@ -168,16 +169,16 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 -   **Správce hesel** – Povolí nebo zakáže funkci Správce hesel v Edgi.
 -   **Umístění seznamu webů využívajících Režim rozlehlé sítě** – Určuje, kde najít seznam webů, které se otevřou v podnikovém režimu rozlehlé sítě. Uživatelé nemohou tento seznam upravovat.<br>(jenom Windows 10 Desktop)
 -   **Vývojářské nástroje** – Zabrání koncovému uživateli v otevření vývojářských nástrojů Edge.
--   **Rozšíření** – Povolí koncovému uživateli nainstalovat rozšíření Microsoft Edge na zařízení.
+-   **Rozšíření** – Povolí koncovému uživateli nainstalovat rozšíření Edge na zařízení.
 -   **Procházení InPrivate** – Zabrání koncovému uživateli v otevírání relací procházení InPrivate.
--   **Zobrazit stránku prvního spuštění** – Zastaví zobrazování úvodní stránky při prvním spuštění Microsoft Edge.
+-   **Zobrazit stránku prvního spuštění** – Zastaví zobrazování úvodní stránky při prvním spuštění Edge.
     -   **Adresa URL při prvním spuštění** – Určuje adresu URL stránky, která se uživateli zobrazí při prvním spuštění Microsoft Edge (jenom Windows 10 Mobile).
 -   **Domovské stránky** – Přidá seznam webů, které chcete v prohlížeči Microsoft Edge použít jako domovské stránky (jenom desktopové verze).
 -   **Změny domovské stránky** – Umožňuje uživatelům změnit počáteční stránky, které se zobrazí při otevření Microsoft Edge. K vytvoření stránky nebo seznamu stránek, které se otevřou při spuštění Microsoft Edge, použijte nastavení Domovské stránky.
 -   **Blokovat přístup k značkám s informacemi** – Zabrání koncovému uživateli v přístupu ke stránce about:flags v Edgi, která obsahuje vývojářské a experimentální nastavení.
 -   **IP adresa LocalHost pro WebRtc** – Zablokuje zobrazení IP adresy LocalHost uživatele při telefonování pomocí protokolu WebRTC.
 -   **Výchozí vyhledávací web** – Určuje výchozí vyhledávací web, který se má použít. Koncoví uživatelé mohou tuto hodnotu kdykoli změnit.
--   **Vymazat údaje o procházení při ukončení** – Vymaže historii a údaje o procházení, když uživatel zavře Microsoft Edge.
+-   **Vymazat údaje o procházení při ukončení** – Vymaže historii a údaje o procházení, když uživatel zavře Edge.
 -   **Shromažďování dat pro živé dlaždice** – Zastaví ve Windows shromažďování informací pro živé dlaždice, když uživatelé v Edgi připnou web k nabídce Start.
 
 ## <a name="windows-defender-smart-screen"></a>Filtr SmartScreen v programu Windows Defender
