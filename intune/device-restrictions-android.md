@@ -15,11 +15,11 @@ ms.assetid: 6bdf714a-5d93-485c-8b52-513635c60cb6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0c2ebbe451f83dc14a9294c78a21ecfd30e5d155
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: 559550860d0882b20a005a5d0957be761978cbe6
+ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení zařízení používajících Android a Samsung Knox Standard v Microsoft Intune
 
@@ -68,8 +68,8 @@ Tato nastavení spolu se zásadami omezení pro zařízení s Androidem se použ
 <sup>1</sup> Před přiřazením tohoto nastavení k zařízením zkontrolujte, jestli je aplikace Portál společnosti v daných zařízeních aktualizovaná na nejnovější verzi.
 
 Pokud nakonfigurujete nastavení **Číselné komplexní** a potom ho přiřadíte k zařízení, které používá verzi Androidu starší než 5.0, bude platit následující chování.
-- Pokud má aplikace Portál společnosti verzi starší než 1704, nepoužijí se u zařízení žádné zásady PIN kódu a na portálu Azure Portal se zobrazí chybová zpráva.
-- Pokud aplikace Portál společnosti používá verzi 1704 nebo novější, je možné použít jenom jednoduchý PIN kód. Verze Androidu starší než 5.0 toto nastavení nepodporují. Na portálu Azure Portal se nezobrazí žádná chybová zpráva.
+- Pokud má aplikace Portál společnosti verzi starší než 1704, nepoužijí se u zařízení žádné zásady PIN kódu a na Azure Portalu se zobrazí chyba.
+- Pokud aplikace Portál společnosti používá verzi 1704 nebo novější, je možné použít jenom jednoduchý PIN kód. Verze Androidu starší než 5.0 toto nastavení nepodporují. Na Azure Portalu se nezobrazí žádná chyba.
 
 
 ## <a name="google-play-store"></a>Obchod Google Play
@@ -94,7 +94,7 @@ V [oddílu Aplikace na Google Play](https://play.google.com/store/apps) najděte
 
 Otevřete instalační stránku aplikace a zkopírujte adresu URL do schránky. Tuto adresu URL teď můžete použít v seznamu kompatibilních nebo nekompatibilních aplikací.
 
-Příklad: Na webu Google Play vyhledejte systém Microsoft Office Mobile. Použijte adresu URL: **https://play.google.com/store/apps/details?id=com.microsoft.office.officehub**.
+Příklad: Vyhledání aplikace **Microsoft Planner** v [oddílu Aplikace na Google Play](https://play.google.com/store/apps) Použijte tuto adresu URL: **https://play.google.com/store/apps/details?id=com.microsoft.planner**.
 
 ### <a name="additional-options"></a>Další možnosti
 

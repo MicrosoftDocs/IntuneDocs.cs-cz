@@ -3,23 +3,21 @@ title: "Zásady dodržování předpisů zařízeními v Intune"
 titleSuffix: Azure portal
 description: "V tomto tématu se dozvíte o dodržování předpisů zařízením v Microsoft Intune."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: vhorne
+ms.author: victorh
 manager: dougeby
-ms.date: 07/18/2017
+ms.date: 2/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: a916fa0d-890d-4efb-941c-7c3c05f8fe7c
-ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6f4a9f70762c3d30a49a686bcf1cfa9de4851b6c
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 98a9a93efb93697b454cb9bc06d1ac268ebaf9d8
+ms.sourcegitcommit: cccbb6730a8c84dc3a62093b8910305081ac9d24
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="get-started-with-intune-device-compliance-policies"></a>Začínáme se zásadami dodržování předpisů zařízeními v Intune
 
@@ -29,7 +27,7 @@ ms.lasthandoff: 02/03/2018
 
 Zásady dodržování předpisů zařízeními v Intune definují pravidla a nastavení, která jsou pro zařízení povinná, pokud má toto zařízení vyhovět zásadám Intune.
 
-Mezi tyto pravidla patří:
+Mezi tato pravidla patří:
 
 - Používání hesla pro přístup k zařízení
 
@@ -99,9 +97,63 @@ Pokud chcete používat zásady dodržování předpisů zařízeními s Intune,
 
 ## <a name="how-intune-device-compliance-policies-work-with-azure-ad"></a>Jak fungují zásady dodržování předpisů zařízeními v Intune s Azure AD
 
-Pokud je zařízení zaregistrované v Intune, proběhne proces registrace Azure AD, který aktualizuje v Azure AD informace týkající se atributů zařízení. Jednou z klíčových informací je stav dodržování předpisů zařízením, který používají zásady podmíněného přístupu k blokování nebo povolení přístupu k e-mailu a dalším podnikovým prostředkům.
+Když je zařízení zaregistrované v Intune, proběhne proces registrace služby Azure AD, který ve službě Azure AD aktualizuje atributy zařízení o další informace. Klíčovou informací je stav dodržování předpisů zařízením, který používají zásady podmíněného přístupu k blokování nebo povolení přístupu k e-mailu a dalším podnikovým prostředkům.
 
-- Přečtěte si další informace o [procesu registrace Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-overview).
+- Přečtěte si další informace o [procesu registrace Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/device-management-introduction).
+
+### <a name="assigning-a-resulting-device-configuration-profile-status"></a>Přiřazení výsledného stavu konfiguračního profilu zařízení
+
+Pokud je k nějakému zařízení přiřazených několik konfiguračních profilů a toto zařízení má pro dva nebo více z nich různé stavy dodržování předpisů, musí se mu přiřadit jediný výsledný stav dodržování předpisů. Toto přiřazení vychází z koncepční úrovně závažnosti přiřazené jednotlivých stavům dodržování předpisů. Jednotlivé stavy dodržování předpisů mají následující úroveň závažnosti:
+
+
+|Stav  |Závažnost  |
+|---------|---------|
+|Čeká     |1|
+|Úspěšné     |2|
+|Neúspěch     |3|
+|Chyba     |4|
+
+Výsledný stav dvou nebo více konfiguračních profilů se pak přiřadí tak, že se vybere nejvyšší úroveň závažnosti všech profilů přiřazených k zařízení.
+
+Dejme tomu, že k zařízení jsou přiřazené tři profily: jeden má stav Čeká (závažnost 1), jeden má stav Úspěšné (závažnost 2) a jeden má stav Chyba (závažnost 4). Stav Chyba má nejvyšší úroveň závažnosti, takže se přiřadí jako výsledný stav dodržování předpisů všech tří profilů.
+
+### <a name="assigning-an-ingraceperiod-status-for-an-assigned-compliance-policy"></a>Přiřazení stavu V období odkladu pro přiřazené zásady dodržování předpisů
+
+Stav V období odkladu pro zásady dodržování předpisů je hodnota určená kombinací období odkladu zařízení a skutečného stavu zařízení s ohledem na přiřazené zásady dodržování předpisů. 
+
+Konkrétně, pokud má zařízení pro přiřazené zásady dodržování předpisů stav Nevyhovující předpisům a:
+
+- k zařízení není přiřazené žádné období odkladu, přiřadí se zásadám dodržování předpisů hodnota Nevyhovující předpisům.
+- zařízení má období odkladu, které vypršelo, přiřadí se zásadám dodržování předpisů hodnota Nevyhovující předpisům.
+- zařízení má období odkladu, které je v budoucnosti, přiřadí se zásadám dodržování předpisů hodnota V období odkladu.
+
+Předchozí body jsou shrnuty v následující tabulce:
+
+
+|Skutečný stav dodržování předpisů|Hodnota přiřazeného období odkladu|Účinný stav dodržování předpisů|
+|---------|---------|---------|
+|Nevyhovující předpisům |Bez přiřazeného období odkladu |Nevyhovující předpisům |
+|Nevyhovující předpisům |Včerejší datum|Nevyhovující předpisům|
+|Nevyhovující předpisům |Zítřejší datum|V období odkladu|
+
+Další informace o monitorování zásad dodržování předpisů zařízením najdete v článku [Monitorování zásad dodržování předpisů zařízením v Intune](compliance-policy-monitor.md).
+
+### <a name="assigning-a-resulting-compliance-policy-status"></a>Přiřazení výsledného stavu zásad dodržování předpisů
+
+Pokud je k nějakému zařízení přiřazených několik zásad dodržování předpisů a toto zařízení má pro dvě nebo více z nich různé stavy dodržování předpisů, musí se mu přiřadit jediný výsledný stav dodržování předpisů. Toto přiřazení vychází z koncepční úrovně závažnosti přiřazené jednotlivých stavům dodržování předpisů. Jednotlivé stavy dodržování předpisů mají následující úroveň závažnosti: 
+
+|Stav  |Závažnost  |
+|---------|---------|
+|Neznámé     |1|
+|Neužívá se     |2|
+|Vyhovuje|3|
+|V období odkladu|4|
+|Nevyhovující předpisům|5|
+|Chyba|6|
+
+Výsledný stav dvou nebo více zásad dodržování předpisů se pak určí tak, že se vybere nejvyšší úroveň závažnosti všech zásad přiřazených k zařízení.
+ 
+Dejme tomu, že k zařízení jsou přiřazené tři zásady dodržování předpisů: jedna má stav Neznámé (závažnost 1), jedna má stav Vyhovuje (závažnost 3) a jedna má stav V období odkladu (závažnost 4). Stav V období odkladu má nejvyšší úroveň závažnosti, takže se přiřadí jako výsledný stav dodržování předpisů všech tří profilů.  
 
 ##  <a name="ways-to-use-device-compliance-policies"></a>Způsoby používání zásad dodržování předpisů zařízeními
 
@@ -112,6 +164,10 @@ Zásady dodržování předpisů spolu s podmíněným přístupem umožňují p
 Zásady dodržování předpisů zařízeními se dají používat nezávisle na podmíněném přístupu. Při nezávislém použití zásad dodržování předpisů se cílová zařízení vyhodnotí a nahlásí se jejich stav dodržování předpisů. Můžete si například nechat nahlásit, kolik zařízení není šifrovaných nebo která zařízení mají jailbreak nebo root. Pokud ale tyto zásady použijete nezávisle, nefunguje žádné omezení přístupu k prostředkům společnosti.
 
 Zásady dodržování předpisů se nasazují uživatelům. Po nasazení zásady dodržování předpisů uživateli se u jeho zařízení kontroluje dodržování předpisů. Další informace o tom, jak dlouho trvá, než mobilní zařízení načte zásady po jejich nasazení, najdete v článku [Řešení potíží s profily zařízení v Microsoft Intune](device-profile-troubleshoot.md#how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned).
+
+#### <a name="actions-for-non-compliance"></a>Akce při nedodržení předpisů
+
+Akce při nedodržení předpisů umožňují konfigurovat časově řazenou posloupnost akcí, které se použijí na zařízeních, která nevyhovují kritériím zásad dodržování předpisů. Další informace najdete v článku [Automatizace akcí při nedodržení předpisů](actions-for-noncompliance.md).
 
 ##  <a name="using-device-compliance-policies-in-the-intune-classic-portal-vs-azure-portal"></a>Použití zásad dodržování předpisů zařízeními na klasickém portálu Intune a na portálu Azure Portal
 
@@ -126,16 +182,18 @@ Abychom vám pomohli při přechodu na nový pracovní postup pro dodržování 
 
 ##  <a name="migrate-device-compliance-policies-from-the-intune-classic-portal-to-the-azure-portal"></a>Migrace zásad dodržování předpisů zařízeními z klasického portálu Intune na portál Azure Portal
 
-Zásady dodržování předpisů zařízeními vytvořené na [klasickém portálu Intune](https://manage.microsoft.com) se na novém portálu [Azure Portal v Intune](https://portal.azure.com) nezobrazí. Pro uživatele ale nadále platí a dají se spravovat prostřednictvím klasického portálu Intune.
+Zásady dodržování předpisů zařízeními vytvořené na [klasickém portálu Intune](https://manage.microsoft.com) se v novém [Intune na Azure Portalu](https://portal.azure.com) nezobrazují. Pro uživatele ale nadále platí a dají se spravovat prostřednictvím klasického portálu Intune.
 
-Pokud chcete využívat nové funkce související s dodržováním předpisů zařízeními na portálu Azure Portal, musíte vytvořit nové zásady dodržování předpisů zařízeními přímo na portálu Azure Portal. Pokud přiřadíte nové zásady dodržování předpisů zařízeními na portálu Azure Portal uživateli, kterému byly přiřazeny zásady dodržování předpisů zařízeními také na klasickém portálu Intune, budou mít zásady na portálu Azure Portal přednost před těmi, které byly vytvořeny na klasickém portálu Intune.
+Pokud chcete využívat nové funkce související s dodržováním předpisů zařízeními na Azure Portalu, musíte vytvořit nové zásady dodržování předpisů zařízeními přímo na Azure Portalu. Pokud přiřadíte nové zásady dodržování předpisů zařízeními na portálu Azure Portal uživateli, kterému byly přiřazeny zásady dodržování předpisů zařízeními také na klasickém portálu Intune, budou mít zásady na portálu Azure Portal přednost před těmi, které byly vytvořeny na klasickém portálu Intune.
 
 ##  <a name="next-steps"></a>Další kroky
 
-Vytvoření zásad dodržování předpisů zařízeními pro následující platformy:
+- Vytvoření zásad dodržování předpisů zařízeními pro následující platformy:
 
-- [Androidemem](compliance-policy-create-android.md)
-- [Android for work](compliance-policy-create-android-for-work.md)
-- [iOS](compliance-policy-create-ios.md)
-- [macOS](compliance-policy-create-mac-os.md)
-- [Windows](compliance-policy-create-windows.md)
+   - [Androidemem](compliance-policy-create-android.md)
+   - [Android for work](compliance-policy-create-android-for-work.md)
+   - [iOS](compliance-policy-create-ios.md)
+   - [macOS](compliance-policy-create-mac-os.md)
+   - [Windows](compliance-policy-create-windows.md)
+
+- Informace o entitách zásad Datového skladu Intune najdete v článku [Referenční informace pro entity zásad](reports-ref-policy.md).

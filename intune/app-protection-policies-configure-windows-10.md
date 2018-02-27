@@ -3,10 +3,10 @@ title: "Příprava na konfiguraci zásad ochrany aplikací pro Windows 10"
 titlesuffix: Azure portal
 description: "Nastavení poskytovatele správy mobilních aplikací (MAM) v Azure AD"
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/25/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 949fddec-5318-4c9a-957e-ea260e6e05be
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f4b6a442f83491160f72955d02b8023ee4d949f2
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: 5514ea423f67e5bc824b4ee947f630c7f1b43d8f
+ms.sourcegitcommit: 754fcc31155b28d6910bba45419c6be745f8793e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="get-ready-to-configure-app-protection-policies-for-windows-10"></a>Příprava na konfiguraci zásad ochrany aplikací pro Windows 10
 
@@ -40,17 +40,17 @@ Povolte správu mobilních aplikací (MAM) pro Windows 10 nastavením zprostřed
 
 4. Nakonfigurujte nastavení ve skupině **Obnovit výchozí adresy URL MAM** v okně **Konfigurovat**.
 
-    **Obor uživatele MAM**  
-      Pomocí automatické registrace MAM můžete spravovat podniková data na zařízeních zaměstnanců, která používají Windows. Automatická registrace MAM se nakonfiguruje pro scénáře typu Přineste si vlastní zařízení.<ul><li>**Žádné**<br>Vyberte, pokud se do MAM můžou zaregistrovat všichni uživatelé.</li><li>**Některé**<br>Vyberte skupiny Azure AD obsahující uživatele, kteří budou zaregistrováni do MAM.</li><li>**Vše**<br>Vyberte, pokud se do MAM můžou zaregistrovat všichni uživatelé.</li></ul>
+   **Obor uživatele MAM**  
+   Pomocí automatické registrace MAM můžete spravovat podniková data na zařízeních zaměstnanců, která používají Windows. Automatická registrace MAM se nakonfiguruje pro scénáře typu Přineste si vlastní zařízení.<ul><li>**Žádné**<br>Vyberte, pokud se do MAM můžou zaregistrovat všichni uživatelé.</li><li>**Některé**<br>Vyberte skupiny Azure AD obsahující uživatele, kteří budou zaregistrováni do MAM.</li><li>**Vše**<br>Vyberte, pokud se do MAM můžou zaregistrovat všichni uživatelé.</li></ul>
 
-    **Adresa URL podmínek použití služby MAM**  
-     Adresa URL koncového bodu podmínek použití služby MAM. Koncový bod podmínek použití slouží k zobrazení podmínek služby koncovým uživatelům před tím, než se jejich zařízení zaregistruje ke správě. Text podmínek použití poskytuje uživatelům informace o zásadách, které se budou pro mobilní zařízení vynucovat.
+   **Adresa URL podmínek použití služby MAM**  
+   Adresa URL podmínek použití služby MAM není pro Microsoft Intune podporovaná. Aby zásady ochrany platily, musí toto vstupní pole zůstat prázdné.
 
-    **Adresa URL zjišťování MAM**  
-    Adresa URL koncového bodu pro registraci do služby MAM. Koncový bod registrace se používá k registraci zařízení do správy službou MAM.
+   **Adresa URL zjišťování MAM**  
+   Adresa URL koncového bodu pro registraci do služby MAM. Koncový bod registrace se používá k registraci zařízení do správy službou MAM.
 
-    **Adresa URL s předpisy služby MAM**  
-      Adresa URL koncového bodu dodržování předpisů služby MAM. Když se uživateli zamítne přístup k prostředku ze zařízení, které nedodržuje předpisy, zobrazí se mu adresa URL, kterou hostuje služba MAM. Na té uživatel najde informace o tom, proč jeho zařízení neodpovídá předpisům. Navíc uživatelé můžou spustit proces samoobslužné nápravy, aby jejich zařízení předpisy dodržovalo a oni měli dál přístup k prostředkům.
+   **Adresa URL s předpisy služby MAM**  
+   Adresa URL s předpisy služby MAM není pro Microsoft Intune podporovaná. Aby zásady ochrany platily, musí toto vstupní pole zůstat prázdné. 
 
 5.  Klikněte na **Uložit**.
 
