@@ -7,7 +7,7 @@
 ### <a name="google"></a>Google
 - Android 4.4 a novější (včetně řešení Samsung Knox Standard 4.4 a novějších)
 
-  Kompletní seznam ověřených zařízení se zabezpečením Samsung Knox Standard najdete v [nastavení zásad pro Android a Samsung Knox Standard](/intune-classic/deploy-use/android-policy-settings-in-microsoft-intune.md#supported-samsung-knox-standard-devices).
+  Kompletní seznam ověřených zařízení se zabezpečením Samsung Knox Standard najdete v [nastavení zásad pro Android a Samsung Knox Standard](/intune/supported-devices-browsers#supported-samsung-knox-standard-devices).
 
 
 - Android for Work [(požadavky)](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012 style="target=new_window")
