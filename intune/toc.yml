@@ -236,6 +236,9 @@
                   href: store-apps-windows-phone-8-1.md
                 - name: Aplikace pro Microsoft Store
                   href: store-apps-windows.md
+                  items:
+                    - name: Ruční přidání aplikace Portál společnosti
+                      href: store-apps-company-portal-app.md
                 - name: Aplikace pro Android for Work
                   href: apps-add-android-for-work.md
                 - name: Aplikace Office 365 pro Windows 10
@@ -441,6 +444,8 @@
           href: compliance-policy-create-mac-os.md
         - name: Vytvoření zásad pro Windows
           href: compliance-policy-create-windows.md
+        - name: Evaluate Policy (Vyhodnotit zásadu)
+          href: policy-evaluate.md
         - name: Akce při nedodržení předpisů
           href: actions-for-noncompliance.md
         - name: Monitorování dodržování předpisů zařízením
