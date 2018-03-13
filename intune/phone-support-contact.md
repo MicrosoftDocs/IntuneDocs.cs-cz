@@ -1,10 +1,10 @@
 ---
-title: Kontaktujte odbornou telefonickou podporu Intune
-titlesuffix: Azure portal
-description: "Telefonní čísla pro nápovědu k Microsoft Intune."
+title: Kontaktujte odbornou telefonickou podporu pro Microsoft Intune
+titlesuffix: Microsoft Intune
+description: "Obsahuje telefonní čísla na telefonickou podporu pro Microsoft Intune."
 keywords: "pracovní doba"
-author: arob98
-ms.author: angrobe
+author: dougeby
+ms.author: dougeby
 manager: dougeby
 ms.date: 02/27/2017
 ms.topic: article
@@ -15,15 +15,18 @@ ms.assetid: 1326e65e-56cc-4987-9006-3a788597ca19
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 3de5f7524982c2a068bb8a62f90778722b037605
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: fffe789f287d68a341e529e8f27b7f76156fa798
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="contact-assisted-phone-support-for-microsoft-intune"></a>Kontaktujte odbornou telefonickou podporu pro Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+
+Toto téma obsahuje kontaktní údaje odborné telefonické podpory pro Microsoft Intune.
 
 ## <a name="phone-numbers-and-business-hours"></a>Telefonní čísla a pracovní doba
 
