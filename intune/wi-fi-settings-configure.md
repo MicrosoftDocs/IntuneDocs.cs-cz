@@ -1,7 +1,7 @@
 ---
 title: "Jak nakonfigurovat nastavení Wi-Fi v Intune"
-titleSuffix: Azure portal
-description: "Naučte se pomocí Intune nakonfigurovat připojení Wi-Fi pro zařízení, která spravujete."
+titleSuffix: Microsoft Intune
+description: "Naučte se pomocí Microsoft Intune nakonfigurovat připojení Wi-Fi pro zařízení, která spravujete."
 keywords: 
 author: vhorne
 ms.author: victorh
@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e03df2525b413ca33f81836292a05dac11bb8349
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 21bc79d3440e57ec91f7e4482112d77cf233575f
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-configure-wi-fi-settings-in-microsoft-intune"></a>Jak nakonfigurovat nastavení Wi-Fi v Microsoft Intune
 
@@ -46,7 +46,7 @@ Informace v tomto tématu vás seznámí se základy konfigurace profilu Wi-Fi. 
 
 ## <a name="create-a-device-profile-containing-wi-fi-settings"></a>Vytvoření profilu zařízení obsahujícího nastavení Wi-Fi
 
-1. Přihlaste se k portálu Azure Portal.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
 3. V okně **Intune** zvolte **Konfigurace zařízení**.
 2. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
@@ -60,9 +60,9 @@ Informace v tomto tématu vás seznámí se základy konfigurace profilu Wi-Fi. 
     - **Windows 8.1 a novější (import profilu)**
 
    > [!IMPORTANT]
-   > Pokud chcete vytvořit profil pro zařízení se systémem Windows 10, včetně Windows Holographic for Business, musíte zvolit platformu **Windows 8.1 a novější**. Platformy **Windows 10 a novější** nezahrnují typ profilu sítě Wi-Fi. 
+   > Pokud chcete vytvořit profil pro zařízení se systémem Windows 10, včetně Windows Holographic for Business, musíte zvolit platformu **Windows 8.1 a novější**. Platforma **Windows 10 a novější** nezahrnuje typ profilu sítě Wi-Fi. 
 
-6. Pro zařízení Apple nebo Android vyberte v rozevíracím seznamu **Typ Wi-Fi** možnost **Základní** nebo **Enterprise**. Možnost **Základní** umožňuje nastavit základní funkce, jako je název sítě a SSID. Možnost **Enterprise** umožňuje nastavit rozšířené informace, například k protokolu EAP (Extensible Authentication Protocol), pokud ho vaše síť Wi-Fi využívá. 
+6. Pro zařízení Apple nebo Android vyberte v rozevíracím seznamu **Typ Wi-Fi** možnost **Základní** nebo **Enterprise**. Možnost **Základní** umožňuje nastavit základní funkce, jako je název sítě a SSID. Možnost **Enterprise** umožňuje nastavit rozšířené informace, například o protokolu EAP (Extensible Authentication Protocol), pokud ho vaše síť Wi-Fi využívá. 
 
    Profil **Import Wi-Fi** (pro Windows 8.1 a novější verze) umožňuje importovat nastavení Wi-Fi jako soubor XML, který jste předtím vyexportovali z jiného zařízení.
 1. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Podrobnosti o nastaveních na jednotlivých platformách najdete v následujících tématech:

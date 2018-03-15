@@ -1,31 +1,31 @@
 ---
-title: "Nastavení e-mailu pro zařízení s iOSem v Intune"
-titleSuffix: Azure portal
-description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete nakonfigurovat připojení e-mailu na zařízeních s iOSem."
+title: "Nastavení e-mailu pro zařízení s iOSem v Microsoft Intune"
+titleSuffix: 
+description: "Přečtěte si informace o nastaveních Microsoft Intune, která můžete použít ke konfiguraci nastavení e-mailu na zařízeních s iOSem."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 02/24/2017
+ms.date: 3/2/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 9f0fa6af-3669-439a-bd0d-75d8b1a0b135
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7baec2990b9020e8125395b589fba7a965ba86ee
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 1634512c85c156046d0324953463d745be06d649
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="email-profile-settings-for-ios-devices-in-microsoft-intune"></a>Nastavení e-mailového profilu pro zařízení s iOSem v Microsoft Intune
+# <a name="email-profile-settings-in-microsoft-intune-for-devices-running-ios"></a>Nastavení e-mailového profilu v Microsoft Intune pro zařízení s iOSem 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
+Tento článek ukazuje nastavení e-mailového profilu, které můžete konfigurovat pro zařízení se systémem iOS.
 
+## <a name="email-settings"></a>Nastavení e-mailu
 
 - **E-mailový server** – Název hostitele vašeho Exchange serveru.
 - **Název účtu** – Zobrazovaný název e-mailového účtu tak, jak ho uvidí uživatelé na svých zařízeních.

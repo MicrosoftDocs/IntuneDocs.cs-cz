@@ -1,25 +1,26 @@
 ---
-title: "Nastavení omezení pro zařízení s Windows 10 v Intune"
-titlesuffix: Azure portal
-description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s Windows 10."
+title: "Nastavení omezení pro zařízení s Windows 10 v Microsoft Intune"
+titlesuffix: 
+description: "Přečtěte si o nastaveních Microsoft Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s Windows 10."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 2/15/2018
+ms.date: 3/1/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 128e16ad989293e168d2bb53d5974e479e09a000
-ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
+ms.openlocfilehash: 861c971c98493f6adab78e6bc93d560bbc1d5243
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení Windows 10 a novější v Microsoft Intune
+#<a name="microsoft-intune-windows-10-and-later-device-restriction-settings"></a>Nastavení omezení pro zařízení Windows 10 a novější v Microsoft Intune
+Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s Windows 10.
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -30,11 +31,7 @@ ms.lasthandoff: 02/19/2018
    - Nastavení této zásady se neuplatní, pokud je počítač připojený ke službě Azure Active Directory a je povolená automatická registrace. 
    - Nastavení této zásady neplatí pro počítače s Windows 10 Home.
 - **Ruční instalace kořenového certifikátu (jenom mobilní verze)** – Zabrání uživateli v ruční instalaci kořenových certifikátů a zprostředkujících certifikátů CAP.
-- **Odeslání diagnostických dat** – Možné hodnoty jsou:
-    - **Žádné** – Microsoftu se nepošlou žádná data.
-    - **Základní:** Microsoftu se odešle omezené množství dat.
-    - **Rozšířené** – Microsoftu se pošlou rozšířená data pro diagnostiku.
-    - **Úplné:** Pošle stejná data jako možnost Rozšířené a k tomu navíc údaje o stavu zařízení.
+
 - **Kamera** – Povolí nebo zablokuje použití fotoaparátu v zařízení.
 - **Synchronizace souboru OneDrivu** – Zablokuje zařízení možnost synchronizovat soubory s OneDrivem.
 - **Vyměnitelné úložiště** – Určuje, jestli je možné v zařízení používat externí úložiště, jako jsou karty SD.
@@ -51,6 +48,7 @@ ms.lasthandoff: 02/19/2018
 - **Zjišťování zařízení** – Zablokuje zjišťování zařízení jinými zařízeními.
 - **Přepínání úloh (jenom mobilní verze)** – Zablokuje přepínání úloh na zařízení.
 - **Chybový dialog SIM karty (jenom mobilní verze)** – Zablokuje zobrazování chybových zpráv na zařízení, pokud se nezjistí žádná SIM karta.
+- **Pracovní prostor Ink** – Brání uživatelům v přístupu k Pracovnímu prostoru Ink. Pokud toto nastavení není nakonfigurované, je tento pracovní prostor povolený (funkce je zapnutá) a uživatel ho může používat nad zamykací obrazovkou.
 - **Automatické opětovné nasazení** – Umožňuje uživatelům s právy správce odstranit všechna uživatelská data a nastavení pomocí klávesové zkratky **CTRL+Win+R** na zamykací obrazovce zařízení. Zařízení se automaticky překonfiguruje a znovu zaregistruje ke správě.
 
 
@@ -75,6 +73,9 @@ Pro zařízení s Windows 10: Jakmile se nepovede určený počet pokusů o při
 
 -   **Přizpůsobení vstupu** – Zakáže použití cloudových hlasových služeb pro Cortanu, diktování nebo aplikace z Microsoft Storu. Pokud tyto služby povolíte, může Microsoft kvůli vylepšení služby shromažďovat hlasová data.
 -   **Automatické přijetí párování a výzev k udělení souhlasu uživatele s ochranou osobních údajů** – Umožňuje Windows u spuštěných aplikací automaticky potvrzovat zprávy o párování a ochraně osobních údajů.
+- **Publikovat aktivity uživatele**: Tuto možnost nastavte na **Blokovat**, pokud chcete zabránit ve sdílení a zjišťování naposledy použitých prostředků při přepínání úloh.
+- **Jen místní aktivity**: Tuto možnost nastavte na **Blokovat**, pokud chcete zabránit ve sdílení a zjišťování naposledy použitých prostředků při přepínání úloh jen u místní aktivity.
+
 
 Můžete definovat informace, ke kterým budou mít přístup všechny aplikace na zařízení. Pomocí **výjimek ze zásad ochrany osobních údajů pro jednotlivé aplikace** můžete definovat výjimky.
 
@@ -130,7 +131,7 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 ## <a name="locked-screen-experience"></a>Prostředí zamknuté obrazovky
 
 - **Oznámení Centra akcí (jenom mobilní verze)** – Povolí zobrazovat oznámení centra akcí na zamykací obrazovce zařízení (jenom Windows 10 Mobile).
-- **Adresa URL obrázku pro zamknutou obrazovku (jenom desktopové verze)** – Určuje adresu URL obrázku ve formátu PNG, JPG nebo JPEG, který se použije jako tapeta zamknuté obrazovky Windows. Uživatelé nemůžou toto nastavení změnit.
+- **Adresa URL obrázku pro zamknutou obrazovku (jenom desktopové verze)** – Určuje adresu URL obrázku ve formátu JPEG, který se použije jako tapeta zamknuté obrazovky Windows. Uživatelé nemůžou toto nastavení změnit.
 -   **Uživatelem konfigurovatelný časový limit obrazovky (jenom mobilní verze)** – Umožňuje uživatelům konfigurovat časový limit. 
 -   **Cortana na zamknuté obrazovce (jenom stolní počítač)** – Nepovolí uživateli pracovat s Cortanou, když je na zařízení aktivovaná zamykací obrazovka (jenom Windows 10 Desktop).
 -   **Informační zprávy na zamknuté obrazovce** – Blokuje zobrazení upozornění na zamykací obrazovce zařízení.
@@ -180,6 +181,8 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 -   **Výchozí vyhledávací web** – Určuje výchozí vyhledávací web, který se má použít. Koncoví uživatelé mohou tuto hodnotu kdykoli změnit.
 -   **Vymazat údaje o procházení při ukončení** – Vymaže historii a údaje o procházení, když uživatel zavře Edge.
 -   **Shromažďování dat pro živé dlaždice** – Zastaví ve Windows shromažďování informací pro živé dlaždice, když uživatelé v Edgi připnou web k nabídce Start.
+-  **Seznam oblíbených položek** – Definuje cestu k souboru oblíbených položek. Příklad: http://contoso.com/favorites.html.
+-  **Omezit změny oblíbených položek** – Když tuto možnost nastavíte na **Blokovat**, zabráníte tak uživatelům v přidávání, importování, řazení a úpravách seznamu oblíbených položek. 
 
 ## <a name="windows-defender-smart-screen"></a>Filtr SmartScreen v programu Windows Defender
 

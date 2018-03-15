@@ -1,7 +1,7 @@
 ---
 title: "Přidání podnikových identifikátorů do Intune"
-titlesuffix: Azure portal
-description: "Zjistěte, jak můžete do Microsoft Intune přidat podnikové identifikátory (způsob registrace, číslo IMEI a sériové číslo). \""
+titlesuffix: Microsoft Intune
+description: "Zjistěte, jak můžete do Microsoft Intune přidat podnikové identifikátory (způsob registrace, číslo IMEI a sériové číslo)."
 keywords: 
 author: ErikjeMS
 ms.author: erikje
@@ -15,11 +15,11 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5b2be1f71887b7812ff17b69b679d54a920d3261
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 29c3d331cae06b0474fc3a2b31790719d99c678e
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifikace zařízení jako vlastněných společností
 
@@ -72,7 +72,7 @@ V textovém editoru vypadá soubor .csv takhle:
 
 1. V Intune na Azure Portalu zvolte **Registrace zařízení** > **Identifikátory podnikových zařízení** a klikněte na **Přidat**.
 
- ![Snímek obrazovky pracovního prostoru s identifikátorem podnikového zařízení a zvýrazněným tlačítkem Přidat.](./media/add-corp-id.png)
+ ![Pracovní prostor s identifikátory podnikových zařízení a zvýrazněným tlačítkem Přidat](./media/add-corp-id.png)
 
 2. V okně **Přidat identifikátory** zadejte typ identifikátoru: **IMEI** nebo **Sériové**. Můžete určit, jestli se má pro dříve importovaná čísla použít nastavení **Přepište podrobnosti u existujících identifikátorů**.
 
@@ -100,4 +100,4 @@ U každého záznamu zařízení v Intune se ve vlastnostech zařízení zobrazu
 3. Zvolte **Vlastnosti**.
 4. Určete **Vlastnictví zařízení** jako **Osobní** nebo **Firemní**.
 
-  ![Snímek obrazovky s vlastnostmi zařízení a možnostmi Kategorie zařízení a Vlastnictví zařízení](./media/device-properties.png)
+  ![Vlastnosti zařízení s možnostmi Kategorie zařízení a Vlastnictví zařízení](./media/device-properties.png)

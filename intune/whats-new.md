@@ -5,9 +5,9 @@ description: "Zjistěte, jaké novinky přináší portál Intune Azure."
 keywords: 
 author: ErikjeMS
 ms.author: erikje
-manager: dougeby
-ms.date: 02/01/2018
-ms.topic: article
+manager: angrobe
+ms.date: 01/02/2018
+ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5058428dca9212d8b20364f58ac463939a699221
-ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
+ms.openlocfilehash: 7490302c7bd928417cdf946cbbf74f8b8b7531ed
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/19/2018
 Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete také získat informace o [nadcházejících změnách](#whats-coming), [důležitá oznámení](#notices) o službě a informace o [minulých verzích](whats-new-archive.md).
 
 > [!Note]
-> Informace o nových funkcích v hybridní správě mobilních zařízení (MDM) najdete na [stránce s novinkami pro hybridní MDM](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management).
+> Informace o nových funkcích v hybridní správě mobilních zařízení (MDM) najdete na [stránce Co je nového pro hybridní MDM](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management).
 
 
 <!-- Common categories:  
@@ -41,6 +41,107 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
   ### Monitor and troubleshoot
 
 -->   
+
+
+## <a name="week-of-february-19-2018"></a>Týden od 19. února 2018
+### <a name="device-enrollment"></a>Registrace zařízení
+
+#### <a name="intune-support-for-multiple-apple-dep--apple-school-manager-accounts----747685---"></a>Podpora Intune pro více účtů Apple DEP nebo Apple School Manager <!-- 747685 -->
+ 
+Intune teď podporuje registraci zařízení z až 100 různých účtů Apple DEP (Device Enrollment Program) nebo Apple School Manager. Pro každý nahraný token lze profily registrace a zařízení spravovat samostatně. K jednotlivým nahraným tokenům DEP nebo School Manager lze automaticky přiřadit různé profily registrace. Pokud je nahraných více tokenů School Manager, může se v každém okamžiku sdílet pomocí služby Microsoft School Data Sync jenom jeden.
+
+Po dokončení migrace už nebudou fungovat beta verze rozhraní Graph API a publikované skripty pro správu Apple DEP nebo ASM přes rozhraní Graph. Nové beta verze rozhraní Graph API jsou ve vývoji a budou se vydávat po dokončení migrace.
+
+#### <a name="see-enrollment-restrictions-per-user----1634444-eeready-wnready---"></a>Nastavení omezení registrace na uživatele <!-- 1634444 eeready wnready -->
+V okně **Řešení potíží** teď můžete zobrazit platná omezení registrace pro jednotlivé uživatele tak, že v seznamu **Přiřazení** vyberete **Omezení registrace**.
+
+### <a name="device-management"></a>Správa zařízení
+#### <a name="windows-defender-health-status-and-threat-status-reports---854704---"></a>Sestavy stavu hrozby a stavu programu Windows Defender <!--854704 -->
+
+Klíčem ke správě počítačů s Windows je pochopení stavu programu Windows Defender.  Touto aktualizací Intune přidá do stavu agenta Windows Defender nové sestavy a akce. Pomocí souhrnné sestavy stavu v úloze dodržování předpisů zařízením zjistíte, která zařízení vyžadují:
+- aktualizaci signatur,
+- Restartovat
+- ruční zásah,
+- úplnou kontrolu,
+- stavy ostatních agentů vyžadujících zásah.
+
+Podrobná sestava pro jednotlivé kategorie stavu uvádí jednotlivé počítače, které vyžadují pozornost, nebo ty, které jsou **čisté**.
+
+#### <a name="new-privacy-settings-for-device-restrictions---1308926---"></a>Nové nastavení ochrany osobních údajů pro omezení zařízení <!--1308926 -->
+Pro zařízení jsou k dispozici dvě nová nastavení ochrany osobních údajů:
+- **Publikovat aktivity uživatele**: Tuto možnost nastavte na **Blokovat**, pokud chcete zabránit ve sdílení a zjišťování naposledy použitých prostředků při přepínání úloh.
+- **Jen místní aktivity**: Tuto možnost nastavte na **Blokovat**, pokud chcete zabránit ve sdílení a zjišťování naposledy použitých prostředků při přepínání úloh jen u místní aktivity.
+
+#### <a name="new-settings-for-the-edge-browser---1469166---"></a>Nové nastavení prohlížeče Microsoft Edge <!--1469166 -->
+Pro zařízení s prohlížečem Edge jsou teď k dispozici dvě nová nastavení: **Path to favorites file** (Cesta k souboru oblíbených položek) a **Changes to Favorites** (Změny oblíbených položek). 
+
+### <a name="app-management"></a>Správa aplikací
+#### <a name="protocol-exceptions-for-applications---1035509---"></a>Výjimky protokolu pro aplikace <!--1035509 -->
+
+Můžete teď vytvořit výjimky ze zásady přenosu dat ve správě mobilních dat Intune, abyste mohli otevřít konkrétní nespravované aplikace. Tyto aplikace musí být pro IT důvěryhodné. Pokud zásady přenosu dat nastavíte **jenom na spravované aplikace**, bude kromě vytvořených výjimek přenos dat i nadále omezený jen na aplikace, které se spravují přes Intune. Tato omezení můžete vytvořit pomocí protokolů (iOS) nebo balíčků (Android).
+ 
+Do zásad přenosu aplikací MAM můžete například přidat jako výjimku balíček Webex. To umožní, aby se odkazy Webex ve spravované outlookové e-mailové zprávě otevíraly přímo v aplikaci Webex. V ostatních nespravovaných aplikacích bude přenos dat i nadále omezen. Další informace najdete v tématu [Výjimky zásad přenosu dat pro aplikace](app-protection-policies-exception.md).
+
+#### <a name="windows-information-protection-wip-encrypted-data-in-windows-search-results----1469193---"></a>Šifrovaná data Windows Information Protection (WIP) ve výsledcích hledání ve Windows <!-- 1469193 -->
+Nastavení v zásadách Windows Information Protection (WIP) vám teď umožňuje řídit, jestli se mají do výsledků hledání ve Windows zahrnovat šifrovaná data WIP. Tuto možnost zásad ochrany aplikací nastavíte tak, že v zásadách Windows Information Protection v části **Upřesnit nastavení** vyberete **Povolit Windows Search Indexeru prohledávat šifrované položky**. Zásady ochrany aplikací musí být nastavené pro platformu *Windows 10* a možnost **Stav registrace** musí být nastavená na hodnotu **S registrací**. Další informace najdete v části týkající se možnosti [Povolit Windows Search Indexeru prohledávat šifrované položky](windows-information-protection-policy-create.md#allow-windows-search-indexer-to-search-encrypted-items).
+
+#### <a name="configuring-a-self-updating-mobile-msi-app----1740840---"></a>Konfigurace automaticky aktualizovaných mobilních aplikací MSI <!-- 1740840 -->
+Známou automaticky aktualizovanou mobilní aplikaci MSI můžete nakonfigurovat tak, aby ignorovala proces kontroly verzí. Tato možnost je užitečná, když chcete předejít konfliktu časování. K tomuto typu konfliktu časování může například dojít, když aplikaci automaticky aktualizuje vývojář a současně Intune. Jak vývojář, tak Intune můžou vynucovat verzi aplikace na klientovi Windows, což může způsobit konflikt. Pro tyto automaticky aktualizované aplikace MSI můžete v okně **Informace o aplikaci** nakonfigurovat nastavení **Ignorovat verzi aplikace**. Po přepnutí tohoto nastavení na **Ano** bude Microsoft Intune ignorovat verzi aplikace, která je nainstalovaná na klientovi Windows. 
+
+#### <a name="related-sets-of-app-licenses-supported-in-intune----1864117---"></a>Podpora souvisejících sad licencí aplikací v Intune <!-- 1864117 -->
+Intune na portálu Azure Portal teď podporuje související sady licencí aplikací jako jedinou položku aplikace v uživatelském rozhraní. Kromě toho všechny aplikace licencované offline a synchronizované z Microsoft Storu pro firmy se sloučí do jediné položky aplikace a všechny podrobnosti nasazení z jednotlivých balíčků se budou migrovat do jediné položky. Pokud se chcete podívat na související sady licencí aplikací na portálu Azure Portal, vyberte **Licence aplikací** v okně **Mobilní aplikace**.
+
+### <a name="device-configuration"></a>Konfigurace zařízení
+#### <a name="windows-information-protection-wip-file-extensions-for-automatic-encryption----1463582---"></a>Přípony souborů Windows Information Protection (WIP) pro automatické šifrování <!-- 1463582 -->
+Nastavení v zásadách Windows Information Protection (WIP) teď umožňuje určit, které přípony souborů se při kopírování ze sdílené složky SMB (Server Message Block) v rámci hranic firmy definovaných zásadami WIP mají automaticky šifrovat.
+
+#### <a name="configure-resource-account-settings-for-surface-hubs"></a>Konfigurace nastavení účtu prostředku pro Surface Huby
+
+Můžete teď vzdáleně nakonfigurovat nastavení účtu prostředku pro Surface Huby.
+
+Surface Hub využívá účet prostředku k ověření u Skypu nebo Exchange, aby bylo možné se připojit ke schůzce. Můžete vytvořit jedinečný účet prostředku, aby se Surface Hub mohl zobrazit ve schůzce jako konferenční místnost. Účet prostředku se například může zobrazit jako **Konferenční místnost B41/6233**.
+
+> [!NOTE]
+> - Pokud pole ponecháte prázdná, přepíšete dříve nakonfigurované atributy na zařízení.
+>
+> - Vlastnosti účtu prostředku se můžou na Surface Hubu dynamicky měnit. Jedná se například o případ zapnutí rotace hesla. Proto je možné, že bude chvíli trvat, než se realita na zařízení promítne u hodnot v konzole Azure. 
+>
+>   Pokud chcete zjistit, co je aktuálně nakonfigurováno na Surface Hubu, můžete zahrnout informace o účtu prostředku do inventáře hardwaru (který už má sedmidenní interval) nebo jako vlastnosti jen pro čtení. Z důvodu vyšší přesnosti po provedení vzdálené akce můžete získat stav parametrů ihned po spuštění akce aktualizace účtu nebo parametrů na Surface Hubu.
+
+
+##### <a name="attack-surface-reduction"></a>Omezení možností útoku
+
+
+|Název nastavení  |Možnosti nastavení  |Popis  |
+|---------|---------|---------|
+|Execution of password-protected executable content from email (Spuštění spustitelného obsahu chráněného heslem z e-mailu)|Blokovat, Audit, Nenakonfigurováno|Umožňuje zabránit spuštění spustitelných souborů chráněných heslem, které se stáhly prostřednictvím e-mailu.|
+|Advanced ransomware protection (Rozšířená ochrana před ransonwarem)|Povoleno, Audit, Nenakonfigurováno|Umožňuje použít agresivní ochranu před ransomwarem.|
+|Flag credential stealing from the Windows local security authority subsystem (Označit příznakem použití jiných přihlašovacích údajů ze subsystému Windows Local Security Authority)|Povoleno, Audit, Nenakonfigurováno|Umožňuje označit příznakem použití jiných přihlašovacích údajů ze subsystému Windows Local Security Authority (lsass.exe).|
+|Process creation from PSExec and WMI commands (Vytvoření procesů z příkazů PSExec a WMI)|Blokovat, Audit, Nenakonfigurováno|Umožňuje zablokovat vytváření procesů pocházejících z příkazů PSExec a WMI.|
+|Untrusted and unsigned processes that run from USB (Nedůvěryhodné a nepodepsané procesy spouštěné z USB)|Blokovat, Audit, Nenakonfigurováno|Umožňuje zablokovat nedůvěryhodné a nepodepsané procesy, které se spouští z USB.|
+|Executables that don’t meet a prevalence, age, or trusted list criteria (Spustitelné soubory, které nesplňují kritéria prevalence, stáří nebo seznamu důvěryhodných položek)|Blokovat, Audit, Nenakonfigurováno|Umožňuje zablokovat spuštění spustitelných souborů, dokud nesplní kritéria prevalence, stáří nebo seznamu důvěryhodných položek.|
+
+##### <a name="controlled-folder-access"></a>Řízený přístup ke složkám
+
+|Název nastavení  |Možnosti nastavení  |Popis  |
+|---------|---------|---------|
+|Ochrana složek (již implementováno)|Nenakonfigurováno, Povolit, Pouze audit (již implementováno)<br><br> **Nové**<br>Block disk modification (Blokovat změny disku), Audit disk modification (Auditovat změny disku)|
+Umožňuje chránit soubory a složky před neautorizovanými změnami od neznámých aplikací.<br><br>**Povolit**: Brání nedůvěryhodným aplikacím ve změnách nebo odstranění souborů v chráněných složkách a v zápisu do sektorů disku.<br><br>
+**Block disk modification only** (Blokovat jenom změny disku):<br>Umožňuje zablokovat nedůvěryhodným aplikacím možnost zapisovat do sektorů disku. Nedůvěryhodné aplikace stále můžou změnit nebo odstranit soubory v chráněných složkách.|
+
+#### <a name="additions-to-system-security-settings-for-windows-10-and-later-compliance-policies---1704133--"></a>Další nastavení zabezpečení systému pro zásady dodržování předpisů pro Windows 10 a novější <!--1704133-->
+
+Teď jsou dostupná další nastavení dodržování předpisů pro Windows 10, včetně vyžadování brány firewall a Antivirové ochrany v programu Windows Defender. 
+
+
+### <a name="role-based-access-control"></a>Řízení přístupu na základě role
+### <a name="intune-apps"></a>Aplikace Intune
+#### <a name="support-for-offline-apps-from-the-microsoft-store-for-business---1222672--"></a>Podpora pro offline aplikace z Microsoft Storu pro firmy <!--1222672-->
+Aplikace Offline zakoupené v Microsoft Storu pro firmy se teď synchronizují na portálu Azure Portal. Tyto aplikace můžete nasadit pro skupiny zařízení nebo skupiny uživatelů. Offline aplikace instaluje Intune, nikoli Store.
+
+#### <a name="prevent-end-users-from-manually-adding-or-removing-accounts-in-the-work-profile----1728700---"></a>Znemožněte koncovým uživatelům ruční přidávání nebo odebírání účtů v pracovním profilu <!-- 1728700 -->
+
+Když nasadíte aplikaci Gmail do profilu Android for Work, můžete teď zabránit tomu, aby koncoví uživatelé ručně přidávali nebo odebírali účty v pracovním profilu s použitím nastavení **Přidat nebo odebrat účty** v profilu omezení pro zařízení s Androidem for Work.
 
 ## <a name="week-of-february-5-2018"></a>Týden od 5. února 2018
 
@@ -69,6 +170,10 @@ Po dokončení migrace už nebudou fungovat beta verze rozhraní Graph API a pub
 
 ### <a name="remote-printing-over-a-secure-network----1709994----"></a>Vzdálený tisk přes zabezpečenou síť <!-- 1709994  -->
 Řešení PrinterOn pro bezdrátový mobilní tisk umožní uživatelům vzdáleně tisknout odkudkoli a kdykoli přes zabezpečenou síť. PrinterOn se integruje s Intune App SDK pro iOS i Android. Zásady ochrany aplikací budete moct cílit na tuto aplikaci pomocí okna **Zásady ochrany aplikací** v Intune v konzole pro správu. Koncoví uživatelé si budou moct stáhnout aplikaci PrinterOn for Microsoft prostřednictvím Obchodu Play nebo iTunes a pak ji používat ve svém ekosystému Intune.
+
+### <a name="macos-company-portal-support-for-enrollments-that-use-the-device-enrollment-manager----1352411---"></a>Podpora registrací přes Správce registrace zařízení na Portálu společnosti v macOS <!-- 1352411 -->
+
+Uživatelé teď můžou používat Správce registrace zařízení při registraci na Portálu společnosti v macOS.
 
 ## <a name="week-of-january-29-2018"></a>Týden od 29. ledna 2018
 
@@ -104,16 +209,6 @@ Pro dané zařízení, které má jednu nebo více aplikací pro iOS koupených 
 #### <a name="including-and-excluding-app-assignment-based-on-groups----1406920---"></a>Zahrnutí a vyloučení přiřazení aplikací na základě skupin <!-- 1406920 -->
 
 Během přiřazování aplikací a po výběru typu přiřazení můžete vybrat skupiny, které se mají zahrnout, a také skupiny, které se mají vyloučit.
-
-#### <a name="website-learning-mode----1631908---"></a>Výukový režim pro weby <!-- 1631908 -->
-
-Intune teď má rozšíření výukového režimu WIP (Windows Information Protection). Kromě zobrazování informací o aplikacích s podporou WIP můžete zobrazit souhrn zařízení, která sdílí pracovní data s weby. Pomocí těchto informací můžete určit, které weby by se měly přidat do zásad WIP pro skupiny a uživatele.
-
-#### <a name="approve-the-company-portal-app-for-android-for-work---1797090---"></a>Schválení aplikace Portál společnosti pro Android for Work <!--1797090 -->
-Pokud vaše organizace používá Android for Work a chcete, aby aplikace Portál společnosti dále přijímala automatické aktualizace ze spravovaného obchodu Google Play, budete muset aplikaci Portál společnosti pro Android ručně schválit.
-
-#### <a name="faceid-on-ios-devices----1807377---"></a>FaceID na zařízeních s iOSem <!-- 1807377 -->
-Zásady ochrany aplikací Intune teď podporují nastavení, které řídí funkci FaceID na zařízeních s iOSem. Toto nastavení je určené pro zařízení, která podporují funkci FaceID (aktuálně jenom iPhone X). Toto nastavení je oddělené od aktuálně podporovaných ovládacích prvků TouchID. Organizace mají možnost rozhodnout, jestli při ověřování osob budou pro zadání kódu PIN důvěřovat funkci FaceID (jako alternativě k ovládacím prvkům TouchID).
 
 ### <a name="device-configuration"></a>Konfigurace zařízení
 
@@ -159,7 +254,7 @@ Zásady upgradu edice Windows 10 teď můžete použít k upgradu z dalších ed
 
 #### <a name="new-windows-defender-security-center-wdsc-device-configuration-profile-settings----1335507---"></a>Nové nastavení v profilu konfigurace zařízení v aplikaci Centrum zabezpečení v programu Windows Defender (WDSC) <!-- 1335507 -->
 
-Intune přidá nový oddíl nastavení profilu konfigurace zařízení v části Endpoint Protection s názvem **Centrum zabezpečení v programu Windows Defender**. Správci IT mohou nakonfigurovat, ke kterým pilířům aplikace Centrum zabezpečení v programu Windows Defender mají koncoví uživatelé přístup. Pokud správce IT skryje pilíř v aplikaci Centrum zabezpečení v programu Windows Defender, nezobrazují se v zařízení uživatele žádná oznámení související s skrytým pilířem.
+Intune přidá nový oddíl nastavení profilu konfigurace zařízení v části Endpoint Protection s názvem **Centrum zabezpečení v programu Windows Defender**. Správci IT mohou nakonfigurovat, ke kterým pilířům aplikace Centrum zabezpečení v programu Windows Defender mají mít koncoví uživatelé přístup. Pokud správce IT skryje pilíř v aplikaci Centrum zabezpečení v programu Windows Defender, nezobrazují se v zařízení uživatele žádná oznámení související s skrytým pilířem.
 
 Toto jsou pilíře, které mohou správci skrýt z nastavení profilu konfigurace zařízení v aplikaci Centrum zabezpečení v programu Windows Defender:
 - Ochrana proti virům a ohrožením
@@ -196,7 +291,7 @@ Kontrolovaná zařízení s iOSem 10.3 teď můžete vypnout. Tato akce vypne za
 
 #### <a name="disallow-datetime-changes-to-samsung-knox-devices----1468103---"></a>Zakázání změn data/času u zařízení se zabezpečením Samsung Knox <!-- 1468103 -->
 
-Na zařízeních Samsung Knox teď můžete zablokovat změny data a času. Tuto funkci najdete zde: **Profily konfigurace zařízení** > **Omezení zařízení (Android)** > **Obecné**.
+Přidali jsme novou funkci, která v zařízeních se zabezpečením Samsung Knox umožňuje zablokovat změnu změny data a času. Najdete je zde: **Profily konfigurace zařízení** > **Omezení zařízení (Android)** > **Obecné**.
 
 #### <a name="surface-hub-resource-account-supported----1566442----"></a>Podpora účtu zdroje pro Surface Hub <!-- 1566442  -->
 
@@ -241,7 +336,7 @@ Správci mohou nakonfigurovat následující nastavení:
      Určuje, zda je povolená synchronizace kalendáře a dalších služeb serveru Exchange. Například: synchronizace schůzek.
 
 #### <a name="install-office-apps-on-macos-devices----1494311---"></a>Instalace aplikací Office na zařízeních macOS <!-- 1494311 -->
-Teď můžete na zařízení macOS instalovat aplikace Office. Tento nový typ aplikace umožňuje instalovat Word, Excel, PowerPoint, Outlook a OneNote. Tyto aplikace jsou také dodávané prostřednictvím funkce Microsoft AutoUpdate (MAU). Je to kvůli jejich zabezpečení a aktuálnosti.
+Teď můžete na zařízení macOS instalovat aplikace Office. Tento nový typ aplikace vám umožní nainstalovat Word, Excel, PowerPoint, Outlook a OneNote. Tyto aplikace jsou také dodávané prostřednictvím funkce Microsoft AutoUpdate (MAU). Je to kvůli jejich zabezpečení a aktuálnosti.
 
 ### <a name="app-management"></a>Správa aplikací
 
@@ -267,8 +362,7 @@ Naproti tomu nová kolekce entit **Aktuální uživatel** obsahuje pouze uživat
 
 ### <a name="updated-graph-apis----1736360---"></a>Aktualizované rozhraní API služby Graph <!-- 1736360 -->
 
-Aktualizovali jsme několik rozhraní Graph API pro Intune, která jsou v beta verzi. Další informace najdete v měsíčním [protokolu změn rozhraní Graph API ](https://developer.microsoft.com/graph/docs/concepts/changelog).
-
+V této verzi jsme aktualizovali několik rozhraní API služby Graph pro Intune. V této chvíli se jedná o beta verze. Další informace najdete v měsíčním [protokolu změn rozhraní API služby Graph](https://developer.microsoft.com/graph/docs/concepts/changelog).
 
 ## <a name="week-of-december-4-2017"></a>Týden od 4. prosince 2017
 
@@ -599,6 +693,28 @@ První verze datového modelu datového skladu Intune obsahovala jenom poslední
 
 
 ## <a name="notices"></a>Sdělení
+
+
+### <a name="coming-soon-workflow-updates-to-intune-administration-ui"></a>Připravujeme: Aktualizace pracovních postupů pro uživatelské rozhraní pro správu Intune
+
+V březnovém vydání verze služby se v Intune aktualizuje prostředí pro správu. Nebudete muset provádět žádnou akci, ale chceme vás na to upozornit v rámci snahy společnosti Microsoft o transparentnost. Pokud je povolená správa zařízení s Androidem nebo správa zařízení Apple, Intune odesílá informace o zařízení a uživateli kvůli zajištění integrace s těmito službami třetích stran a správy příslušných zařízení. Vylepšené uživatelské prostředí pro správu, které zavádíme v březnovém vydání verze služby, bude poskytovat vyšší transparentnost z hlediska sdílených dat. Žádná z těchto změn uživatelského rozhraní nebude mít dopad na koncového uživatele.
+
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+
+Mezi scénáře, pro které se přidávají okna pro souhlas se sdílením dat, patří:
+- Povolení Androidu for Work 
+- Povolení a nahrání certifikátů Apple MDM Push Certificate 
+- Povolení některé ze služeb Apple, jako jsou například Device Enrollment Program, School Manager a Volume Purchasing Program
+
+Souhlas se vždy týká výhradně používání služby pro správu mobilního zařízení, například potvrzení, že správce IT udělil zařízení Google nebo Apple oprávnění k registraci. Tady je dokumentace obsahující informace, které se po přechodu na nové pracovní postupy budou sdílet:
+- [Data z Intune odesílaná Googlu](data-intune-sends-to-google.md)
+- [Data z Intune odesílaná Applu](data-intune-sends-to-apple.md)
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
+
+Na tuto změnu se nemusíte nijak připravovat, protože jde o menší aktualizace uživatelského rozhraní pracovních postupů. Další informace o dodržování nařízení GDPR v Microsoftu najdete v Centru zabezpečení, které je dostupné prostřednictvím odkazu Další informace.
+
+
 
 ### <a name="plan-for-change-update-where-you-configure-your-app-protection-policies"></a>Plánovaná změna: Aktualizace místa, kde konfigurujete zásady ochrany aplikací
 

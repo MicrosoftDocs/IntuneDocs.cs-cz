@@ -1,12 +1,12 @@
 ---
-title: "Portál helpdesku pro řešení potíží | Dokumentace Microsoftu"
-titlesuffix: Azure portal
+title: "Portál helpdesku pro řešení potíží"
+titlesuffix: Microsoft Intune
 description: "Pracovníci helpdesku používají portál pro řešení potíží, aby pomohli uživatelům s řešením technických problémů."
 keywords: 
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/26/2017
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 2da1a37af1ab0b0b1566738bf1ecdfe990dd760d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 7997bf0494ff52ad25b09301173b65f2478dca37
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="use-the-troubleshooting-portal-to-help-users"></a>Použití portálu pro řešení potíží k poskytování pomoci uživatelům
+# <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Použití portálu pro řešení potíží k poskytování pomoci uživatelům ve vaší společnosti
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -63,7 +63,7 @@ V okně **Řešení potíží** můžete zkontrolovat informace o uživateli.
 | 1.   | Stav účtu  | Zobrazuje stav aktuálního tenanta Intune, například **Aktivní** nebo **Neaktivní**.       |
 | 2.   | Výběr uživatele  | Jméno aktuálně vybraného uživatele. Kliknutím na **Změnit uživatele** zvolíte nového uživatele.       |
 | 3.   | Stav uživatele  | Zobrazí stav uživatelovy licence Intune, počet zařízení, dodržování předpisů u každého zařízení, počet aplikací a dodržování předpisů u aplikací.       |
-| 4.   | Údaje uživatele  | Pomocí seznamu můžete vybrat podrobnosti, které chcete v okně zkontrolovat. <br>Můžete vybrat: <ul><li>Mobilní aplikace<li>Zásady ochrany aplikace<li>Zásady dodržování předpisů<li> Zásady konfigurace</ul>      |
+| 4.   | Údaje uživatele  | Pomocí seznamu můžete vybrat podrobnosti, které chcete v okně zkontrolovat. <br>Můžete vybrat: <ul><li>Mobilní aplikace<li>Zásady ochrany aplikace<li>Zásady dodržování předpisů<li> Zásady konfigurace<li> Omezení registrace</ul>      |
 | 5.   | Členství ve skupině  | Yadda       |
 
 ## <a name="mobile-apps-reference"></a>Informace o mobilních aplikacích

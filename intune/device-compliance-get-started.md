@@ -1,33 +1,32 @@
 ---
-title: "Zásady dodržování předpisů zařízeními v Intune"
-titleSuffix: Azure portal
-description: "V tomto tématu se dozvíte o dodržování předpisů zařízením v Microsoft Intune."
+title: "Zásady dodržování předpisů zařízeními v Microsoft Intune"
+titleSuffix: 
+description: "Informace o zásadách dodržování předpisů zařízeními v Microsoft Intune"
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 2/6/2018
+ms.date: 3/1/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 98a9a93efb93697b454cb9bc06d1ac268ebaf9d8
-ms.sourcegitcommit: cccbb6730a8c84dc3a62093b8910305081ac9d24
+ms.openlocfilehash: fb3ec168844708d80c83909ab6c58a52ca62e53c
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/12/2018
 ---
-# <a name="get-started-with-intune-device-compliance-policies"></a>Začínáme se zásadami dodržování předpisů zařízeními v Intune
+# <a name="get-started-with-microsoft-intune-device-compliance-policies"></a>Začínáme se zásadami dodržování předpisů zařízeními v Microsoft Intune
+
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-## <a name="what-is-device-compliance-in-intune"></a>Co je dodržování předpisů zařízením v Intune?
-
 Zásady dodržování předpisů zařízeními v Intune definují pravidla a nastavení, která jsou pro zařízení povinná, pokud má toto zařízení vyhovět zásadám Intune.
 
-Mezi tato pravidla patří:
+Mezi tyto pravidla patří:
 
 - Používání hesla pro přístup k zařízení
 
@@ -43,7 +42,7 @@ Mezi tato pravidla patří:
 
 Zásady dodržování předpisů zařízeními můžete používat i k monitorování stavu dodržování předpisů u vašich zařízení.
 
-### <a name="device-compliance-requirements"></a>Požadavky na dodržování předpisů zařízení
+## <a name="device-compliance-requirements"></a>Požadavky na dodržování předpisů zařízení
 
 Požadavky na dodržování předpisů jsou v podstatě pravidla, například vyžadování PIN kódu zařízení nebo šifrování, která můžete v zásadách dodržování předpisů určit jako povinná nebo nepovinná.
 
@@ -74,7 +73,7 @@ Remember that you need to implement conditional access policies in addition to c
 
 Pokud chcete používat zásady dodržování předpisů zařízeními s Intune, potřebujete následující předplatná:
 
-- Intune EMS
+- Intune
 
 - Azure AD Premium
 
@@ -145,10 +144,10 @@ Pokud je k nějakému zařízení přiřazených několik zásad dodržování p
 |Stav  |Závažnost  |
 |---------|---------|
 |Neznámé     |1|
-|Neužívá se     |2|
+|NotApplicable     |2|
 |Vyhovuje|3|
-|V období odkladu|4|
-|Nevyhovující předpisům|5|
+|InGracePeriod|4|
+|NonCompliant|5|
 |Chyba|6|
 
 Výsledný stav dvou nebo více zásad dodržování předpisů se pak určí tak, že se vybere nejvyšší úroveň závažnosti všech zásad přiřazených k zařízení.

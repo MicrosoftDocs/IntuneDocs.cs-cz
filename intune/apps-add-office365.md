@@ -1,12 +1,12 @@
 ---
-title: "Instalace aplikací Office 365 na mobilní zařízení pomocí Intune"
-titlesuffix: Azure portal
-description: "Přečtěte si, jak můžete použít Intune a usnadnit instalaci aplikací Office 365 na zařízení s Windows 10."
+title: "Instalace aplikací Office 365 na zařízení pomocí Intune"
+titlesuffix: 
+description: "Zjistěte, jak můžete s Microsoft Intune zjednodušit instalaci aplikací Office 365 na zařízení s Windows 10."
 keywords: 
-author: dougeby
-ms.author: dougeby
+author: Erikre
+ms.author: erikre
 manager: dougeby
-ms.date: 01/29/2018
+ms.date: 02/26/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f6ef1d1dab39a6939b80bd13ba090424a67c6f53
-ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
+ms.openlocfilehash: 1a8045261f93c6ac0282a03f13ac7bb7a7caac0d
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-assign-office-365-proplus-apps-to-windows-10-devices-with-microsoft-intune"></a>Přiřazení aplikací Office 365 ProPlus k zařízením s Windows 10 pomocí Microsoft Intune
 
@@ -85,11 +85,11 @@ V tomto kroku nakonfigurujte možnosti instalace pro sadu aplikací. Nastavení 
 1.  V okně **Přidat aplikaci** zvolte možnost pro **nastavení sady aplikací**.
 2.  V okně s **nastavením sady aplikací** zadejte následující informace:
     - **Verze Office** – vyberte, jestli chcete přiřadit 32bitovou nebo 64bitovou verzi Office. 32bitovou verzi můžete nainstalovat na 32bitová i 64bitová zařízení, ale 64bitovou verzi můžete nainstalovat jenom na 64bitová zařízení.
-    - **Kanál aktualizací** – zvolte, jak se na těchto zařízeních aktualizuje Office. Informace o jiných kanálech aktualizací najdete v tématu Přehled kanálů aktualizací pro Office 365 ProPlus. Vybírejte z těchto možností:
-        - **Current**
-        - **Deferred**
-        - **Current Channel pro nové verze**
-        - **Deferred Channel pro nové verze**
+    - **Kanál aktualizací** – zvolte, jak se na těchto zařízeních aktualizuje Office. Informace o různých kanálech aktualizací najdete v článku [Přehled kanálů aktualizací pro Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus). Vybírejte z těchto možností:
+        - **Měsíčně**
+        - **Měsíční (cílený)**
+        - **Půlroční**
+        - **Půlroční (cílený)**
     - **Automaticky přijmout licenční smlouvu s koncovým uživatelem aplikace** – tuto možnost vyberte, pokud nevyžadujete přijetí licenční smlouvy koncovými uživateli. Intune pak smlouvu přijme automaticky.
     - **Použít aktivaci pro sdílené počítače** – aktivace pro sdílené počítače se používá, když počítač sdílí více uživatelů. Další informace najdete v Přehledu aktivace pro sdílené počítače pro Office 365 ProPlus.
     - **Jazyky** – Office se automaticky nainstaluje ve všech podporovaných jazycích nainstalovaných s Windows na zařízení koncových uživatelů. Tuto možnost zvolte, pokud chcete nainstalovat se sadou aplikací další jazyky.

@@ -2,10 +2,10 @@
 title: "Protokol změn v datovém skladu Intune | Microsoft Docs"
 description: "Seznam změn v rozhraní API datového skladu Intune"
 keywords: "Datový sklad Intune"
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/12/2017
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +14,40 @@ ms.assetid: E85DBB2D-67BB-4E10-82D6-E43046B9C43C
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 306cceb704c1153b5691181d576561d9c93a36d3
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 67eedf528763ae302e3850710b3fab026e15f813
+ms.sourcegitcommit: 80a2eefc1896a42cc2bc16be23093d1abf58b088
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Protokol změn pro rozhraní API datového skladu Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Udržujte si přehled o aktualizacích datového skladu Intune.
+
+## <a name="1801"></a>1801
+_Vydáno v lednu 2018_
+
+### <a name="intune-data-warehouse-application-only-authentication----1867540---"></a>Ověřování v datovém skladu Intune pouze na úrovni aplikace <!-- 1867540 -->
+
+Můžete nastavit aplikaci pomocí Azure Active Directory (Azure AD) a ověřit ji přes Intune Data Warehouse. Další informace najdete v tématu [Ověřování v datovém skladu Intune pouze na úrovni aplikace](data-warehouse-app-only-auth.md).
+
+### <a name="azure-ad-and-intune-credential-requirements----2077525---"></a>Požadavky na přihlašovací údaje pro Azure AD a Intune <!-- 2077525 -->
+
+- Při přístupu k datovému skladu Intune (včetně rozhraní API) se už nevyžaduje přiřazení licence Intune uživateli.
+- Název role Intune **Sestavy** se změnil na **Datový sklad Intune**. 
+
+    Další informace najdete v tématu [Požadavky na přihlašovací údaje pro Azure AD a Intune](reports-api-url.md#azure-ad-and-intune-credential-requirements).
+
+### <a name="odata-query-options----2077711---"></a>Možnosti dotazu OData <!-- 2077711 -->
+
+Jako parametr dotazu OData můžete použít <code>$select</code>. Aktuální verze podporuje tyto parametry dotazu OData: <code>$filter</code>, <code>$orderby</code>, <code>$select</code>, <code>$skip</code> a <code>$top</code>. Další informace najdete v tématu [Možnosti dotazu OData](reports-api-url.md#odata-query-options).
+
+### <a name="new-entities-in-the-in-data-warehouse-data-model----2077804---"></a>Nové entity v datovém modelu datového skladu <!-- 2077804 -->
+
+ - Byla přidána entita [**MobileAppDeviceuserInstallStatus**](reports-ref-application.md#mobileappdeviceuserinstallstatus). **MobileAppDeviceUserInstallStatus** představuje stav instalace mobilní aplikace pro dané zařízení a uživatele.
+ - Byla přidána entita [**MobileAppInstallState**](reports-ref-application.md#mobileappinstallstate). Entita **MobileAppInstallState** představuje stav instalace mobilní aplikace po jejím přiřazení do skupiny obsahující zařízení, uživatele, nebo obě tyto možnosti. 
 
 ## <a name="1710"></a>1710
 _Vydáno v listopadu 2017_

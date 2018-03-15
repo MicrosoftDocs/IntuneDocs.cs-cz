@@ -1,5 +1,5 @@
 ---
-title: "Správa hromadně zakoupených aplikací pro iOS | Microsoft Docs"
+title: "Správa hromadně zakoupených aplikací pro iOS | Dokumentace Microsoftu"
 titlesuffix: Azure portal
 description: "Zjistěte, jak synchronizovat s Intune aplikace zakoupené v rámci multilicenčního programu z App Storu pro zařízení s iOSem a jak následně spravovat a sledovat jejich používání."
 keywords: 
@@ -15,11 +15,11 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dc5ebd90483b0fa0e25461574085bd4160f012ea
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 3694cbde1aeba8b185c67e65269b7afbd530b048
+ms.sourcegitcommit: 3cc3a6554691c6edeff985e7d8fa402e7e49e8d3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Správa aplikací pro systém iOS nakoupených prostřednictvím programu hromadného nákupu pomocí Microsoft Intune
 
@@ -134,17 +134,20 @@ Koncový uživatel obdrží výzvu k instalaci aplikace v rámci VPP v řadě sc
 
 ## <a name="revoking-app-licenses-and-deleting-tokens"></a>Odvolání licencí aplikací a odstranění tokenů 
 
-<!-- 820863 -->For a given device that has one or more iOS volume-purchase program (VPP) apps, you revoke all associated device-based app licenses for the device. Revoking an app license will not uninstall the related VPP app from the device. To uninstall a VPP app and reclaim a license, you must change the assignment type of the VPP app to **Uninstall**. If you remove an app that was assigned to a user, Intune reclaims the user or device license and uninstallS the app from the device.
+<!-- 820863 -->  
+Pro dané zařízení, které má jednu nebo více aplikací pro iOS koupených přes Volume Purchase Program (VPP), můžete odvolat všechny licence aplikací přidružené na základě zařízení. Odvoláním licence aplikace se příslušná aplikace VPP neodinstaluje ze zařízení. Pokud chcete odinstalovat aplikaci VPP a získat licenci zpět, je nutné změnit typ přiřazení aplikace VPP na **Odinstalovat**. Pokud odeberete aplikaci, která byla přiřazena uživateli, Intune získá zpět licenci uživatele nebo zařízení a odinstaluje aplikaci ze zařízení.
 
 >[!NOTE]
 >Když zaměstnanec opustí společnost a není už členem skupin AAD, Intune odvolá všechny licence aplikací programu VPP pro iOS daného uživatele.
 
-<!-- 820879 -->You can delete a iOS Volume Purchasing Program (VPP) token using the console. This may be necessary when you have duplicate instances of a VPP token. Deleting a token will also delete any associated apps and assignment. However, deleting a token does not revoke app licenses or uninstall apps. 
+<!-- 820879 -->  
+K odstranění tokenu programu Volume Purchasing Program (VPP) pro iOS můžete použít konzolu. To může být nutné v případě, že máte duplicitní instance tokenu VPP. Odstraněním tokenu se odstraní také všechny přidružené aplikace a přiřazení. Odstraněním tokenu se ale licence aplikací neodvolají ani aplikace neodinstalují. 
 
 >[!NOTE]
 >Po odstranění tokenu nemůže Intune odvolat licence aplikací. 
 
-<!-- 820870 -->To revoke the license of all VPP apps for a given VPP token, you must first revoke all app licenses associated with the token, then delete the token.
+<!-- 820870 -->  
+K odvolání licencí všech aplikací VPP pro daný token VPP je nutné nejprve odvolat všechny licence aplikací, které jsou k tomuto tokenu přidružené, a potom daný token odstranit.
 
 ## <a name="further-information"></a>Další informace
 

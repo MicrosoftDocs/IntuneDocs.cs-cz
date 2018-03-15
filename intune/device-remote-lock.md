@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 3b67f285-229d-4a0f-ae34-0402a20b4518
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ecd7fa03b35e91b5a77906858fb251348796704d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 0a8f3c93507cde4363570a9a39f8b3b1f69c07df
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="remotely-lock-managed-devices-with-intune"></a>Vzdálené uzamčení spravovaných zařízení přes Intune
 
@@ -36,7 +36,7 @@ Vzdálené uzamčení se podporuje u následujících platforem:
 |Android|Ano|
 |iOS|Ano|
 |macOS|Ano|
-|Windows 10|Ano|
+|Stolní počítač s Windows 10|Ne|
 |Windows 10 Mobile|Ano|
 |Windows Phone|Ano, pro Windows Phone 8.1 a novější|
 
@@ -45,12 +45,12 @@ Vzdálené uzamčení se podporuje u následujících platforem:
 
 ## <a name="how-to-remote-lock-a-device"></a>Vzdálené uzamčení zařízení
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V okně **Intune** zvolte **Zařízení**.
-4. V okně **Zařízení a skupiny** zvolte **Všechna zařízení**.
+4. V okně **Zařízení** zvolte **Všechna zařízení**.
 5. V seznamu zařízení, která spravujete, zvolte zařízení a potom zvolte akci se vzdáleným zařízením **Vzdálené uzamčení**.
 
 ## <a name="next-steps"></a>Další kroky
 
-Stav akce, kterou jste spustili, zobrazíte tak, že v okně **Zařízení a skupiny** zvolíte **Akce zařízení**.
+Stav akce, kterou jste spustili, zobrazíte tak, že v okně **Zařízení** zvolíte **Akce zařízení**.

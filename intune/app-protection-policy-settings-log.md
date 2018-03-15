@@ -1,7 +1,7 @@
 ---
-title: "Protokoly zásad ochrany aplikací"
-titlesuffix: Azure portal
-description: "Toto téma popisuje záznamy nastavení zásad ochrany aplikací uložené v aplikačních protokolech."
+title: "Podívejte se na protokoly zásad ochrany aplikací"
+titlesuffix: Microsoft Intune
+description: "Přečtěte si informace o nastaveních, která můžete zkontrolovat v protokolech ochrany aplikace."
 keywords: 
 author: erikre
 ms.author: erikre
@@ -15,15 +15,15 @@ ms.assetid: 4CD5EE94-7BA6-4F59-8E28-1EBCA7CA6436
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 76b7771f974fb1c9a5de8afe52ef79eaa0ed0c2a
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: f91328561f0dd4dc669844c0398a89f1abf15bf8
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="review-client-app-protection-logs"></a>Kontrola protokolů ochrany klientské aplikace
 
-Přístup k protokolům získáte povolením režimu Diagnostika Intune pro aplikaci v mobilním klientovi. Následující tabulka ukazuje názvy a vysvětlení nastavení zaznamenaných do protokolu.
+Přečtěte si informace o nastaveních, která můžete zkontrolovat v protokolech ochrany aplikace. Přístup k protokolům získáte tak, že pro aplikaci v mobilním klientu povolíte režim Diagnostika Intune. Následující tabulka ukazuje názvy a vysvětlení nastavení zaznamenaných do protokolu.
 
 ## <a name="app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací
 

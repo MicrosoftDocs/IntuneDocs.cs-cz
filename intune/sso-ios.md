@@ -1,25 +1,25 @@
 ---
-title: "Nakonfigurování Intune na jednotné přihlašování pro zařízení s iOSem"
-titlesuffix: Azure portal
-description: "Přečtěte si, jak nakonfigurovat Intune na jednotné přihlašování pro zařízení s iOSem."
+title: "Nakonfigurování Microsoft Intune na jednotné přihlašování pro zařízení s iOSem"
+titlesuffix: 
+description: "Přečtěte si, jak nakonfigurovat Microsoft Intune na jednotné přihlašování pro zařízení s iOSem."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 12/7/2017
+ms.date: 3/2/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 07ac355232c1e4ac290c87191d3764e3df45327e
-ms.sourcegitcommit: 4509039cbfd4d450324a3475fb5841906720baa1
+ms.openlocfilehash: b11f2b3a560d33503e381f96804bfe5489fe367d
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="configure-intune-for-ios-device-single-sign-on"></a>Nakonfigurování Intune na jednotné přihlašování pro zařízení s iOSem
+# <a name="configure-microsoft-intune-for-ios-device-single-sign-on"></a>Nakonfigurování Microsoft Intune na jednotné přihlašování pro zařízení s iOSem
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -35,16 +35,16 @@ Pokud chcete využívat jednotné přihlašování na zařízení s iOSem, musí
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Konfigurace zařízení**.
-2. V okně **Konfigurace zařízení** zvolte **Profily**.
-3. V okně Profily zvolte **Vytvořit profil**, zadejte název a popis a nakonfigurujte následující nastavení:
+3. Na stránce **Intune** zvolte **Konfigurace zařízení**.
+2. Na stránce **Konfigurace zařízení** zvolte **Profily**.
+3. Na stránce Profily zvolte **Vytvořit profil**, zadejte název a popis a nakonfigurujte následující nastavení:
    - **Platforma**: Zvolte **iOS**. 
    - **Typ profilu**: Zvolte **Funkce zařízení**.
-4. V okně **Funkce zařízení** zvolte **Jednotné přihlašování**.
+4. Na stránce **Funkce zařízení** zvolte **Jednotné přihlašování**.
 
-   ![Okno Jednotné přihlašování](./media/sso-blade.png)
+   ![Stránka Jednotné přihlašování](./media/sso-blade.png)
 
-2. Vyplňování polí v okně **Jednotné přihlašování** vám usnadní následující souhrnná tabulka. Podrobnosti najdete v oddílech za tabulkou.
+2. Vyplňování polí na stránce **Jednotné přihlašování** vám usnadní následující souhrnná tabulka. Podrobnosti najdete v oddílech za tabulkou.
    
    |Pole  |Poznámky|
    |---------|---------|
@@ -82,7 +82,7 @@ Když se uživatel připojí k některému z těchto webů, zařízení s iOSem 
 > [!NOTE]
 > V těchto adresách URL se musí používat správně naformátovaný plně kvalifikovaný název domény. Apple vyžaduje, aby tyto adresy byly ve formátu `http://<yourURL.domain>`.
 
-Odpovídající vzory adres URL musí mít na začátku `http://` nebo `https://`. Provádí se prosté ověření shody řetězců, takže předpona adresy URL `http://www.contoso.com/` neodpovídá adrese `http://www.contoso.com:80/`. V iOSu 9.0 a v novějších verzích se ale k určení všech odpovídajících hodnot může použít jeden zástupný znak *. Například adresa `http://*.contoso.com/` odpovídá adrese `http://store.contoso.com/` i adrese `http://www.contoso.com`.
+Odpovídající vzory adres URL musí mít na začátku `http://` nebo `https://`. Provádí se prosté ověření shody řetězců, takže předpona adresy URL `http://www.contoso.com/` neodpovídá adrese `http://www.contoso.com:80/`. V iOSu 9.0 a v novějších verzích se ale k určení všech odpovídajících hodnot může použít jeden zástupný znak \*. Například adresa `http://*.contoso.com/` odpovídá adrese `http://store.contoso.com/` i adrese `http://www.contoso.com`.
 Vzory `http://.com` a `https://.com` odpovídají všem adresám URL typu HTTP a HTTPS, v uvedeném pořadí.
 
 ### <a name="apps-that-will-use-single-sign-on"></a>Aplikace, které použijí jednotné přihlašování

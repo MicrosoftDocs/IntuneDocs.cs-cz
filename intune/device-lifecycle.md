@@ -1,30 +1,28 @@
 ---
-title: "Přehled životního cyklu správy mobilních zařízení (MDM)"
-description: "Zjistěte, jak Intune vám pomůže spravovat zařízení prostřednictvím jejich životního cyklu od registrace přes konfiguraci až po závěrečné vyřazení."
+title: "Přehled životního cyklu Microsoft Intune MDM"
+description: "Zjistěte, jak vám pomůže Intune spravovat zařízení prostřednictvím jejich životního cyklu od registrace přes konfiguraci až po závěrečné vyřazení."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 06/07/2017
+ms.date: 3/2/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: f6051fa7-133f-4712-86a5-e5f5bc5ab3c7
-ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 46297080dcb332734b1e175a62e17c6c5666b469
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 8755faef07e6ddae2177a2fc2453e15f1ea0fefe
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="overview-of-the-mobile-device-management-mdm-lifecycle"></a>Přehled životního cyklu správy mobilních zařízení (MDM)
+# <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Přehled životního cyklu správy mobilních zařízení (MDM) v Microsoft Intune
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
-Všechna zařízení, která spravujete, mají takzvaný *životní cyklus*. Intune vám může pomoci při správě tohoto životního cyklu od registrace přes konfiguraci a ochranu až po vyřazení zařízení, když už nebude potřebné:
+Všechna zařízení, která spravujete, mají *životní cyklus*. Intune vám může pomoci při správě tohoto životního cyklu od registrace přes konfiguraci a ochranu až po vyřazení zařízení, když už nebude potřeba.
 
 ![Životní cyklus zařízení](./media/device-lifecycle.png "Životní cyklus zařízení Intune")
 

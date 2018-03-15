@@ -3,8 +3,8 @@ title: "Integrace řešení Zimperium do Intune"
 titleSuffix: Intune on Azure
 description: "Integrace Intune s řešením Zimperium"
 keywords: 
-author: arob98
-ms.author: angrobe
+author: msmimart
+ms.author: mimart
 manager: dougeby
 ms.date: 12/29/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 363fd280-1865-4a61-855b-eb75c3c62753
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4759bab0c302f758f3f0a4af5ca333a5f560f3b3
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 062a2f0d573bd711dff75c7ab0eb3bef8ac23161
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integrace řešení Zimperium do Intune
 
@@ -30,7 +30,7 @@ Při integraci řešení Zimperium Mobile Threat Defense do Intune je potřeba p
 > [!NOTE]
 > Následující kroky je potřeba provést v [konzole Zimperium MTD](https://staging2-console.zimperium.com).
 
-Před zahájením procesu integrace řešení Zimperium a Intune zkontrolujte, že máte následující:
+Před zahájením procesu integrace řešení Zimperium do Intune zkontrolujte, že máte následující předplatné a přihlašovací údaje:
 
 -   Odběr služby Microsoft Intune
 
@@ -52,7 +52,7 @@ Postup autorizace aplikace Zimperium:
 
 -   Povolte službě Zimperium předávání informací týkajících se stavu zařízení zpět do Intune.
 
--   Zimperium se synchronizuje s členstvím skupiny registrace Azure AD, aby se mohla naplnit databáze zařízení.
+-   Zimperium se synchronizuje s členstvím skupiny registrace Azure Active Directory (AD), aby se mohla naplnit databáze zařízení.
 
 -   Povolte u konzoly pro správu Zimperium použití jednotného přihlašování (SSO) k Azure AD.
 
@@ -75,7 +75,7 @@ Postup autorizace aplikace Zimperium:
 
 6.  Volbou **Accept** (Přijmout) povolte komunikaci aplikace Zimperium s Intune a Azure Active Directory.
 
-7.  Po přidání aplikací **Zimperium zConsole** a **zIPS pro iOS a Android** do Azure AD přidejte skupiny zabezpečení Azure AD, aby Zimperium mohlo příslušnou skupinu zabezpečení Azure AD synchronizovat se svou službou.
+7.  Po přidání aplikací **Zimperium zConsole** a **zIPS pro iOS a Android** do Azure AD přidejte skupiny zabezpečení Azure AD. Tím umožníte, aby aplikace Zimperium mohla příslušnou skupinu zabezpečení Azure AD synchronizovat se svou službou.
 
 8.  Volbou **Finish** (Dokončit) uložte konfiguraci a spusťte první synchronizaci skupiny zabezpečení Azure AD.
 

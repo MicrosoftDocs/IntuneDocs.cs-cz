@@ -1,10 +1,10 @@
 ---
 title: "Vyřazení zámku aktivace v iOSu přes Intune"
-titlesuffix: Azure portal
+titlesuffix: Microsoft Intune
 description: "Přečtěte si, jak se dá přes Intune vyřadit zámek aktivace v iOSu, aby bylo možné přistupovat k uzamčeným zařízením."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 08/22/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 9ca3b0ba-e41c-45fb-af28-119dff47c59f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 15c288b31ab3fb31080aff72d2461dc1d24ec5ae
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 6141b325c5087544a1b78e03209322023f2374e3
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="bypass-activation-lock-on-supervised-ios-devices-with-intune"></a>Vyřazení zámku aktivace přes Intune na zařízeních s iOSem, která jsou pod dohledem
 
@@ -69,11 +69,11 @@ Než budete moct zámek aktivace na zařízeních vyřadit, musíte ho nejdřív
 
 Akce Intune se vzdáleným zařízením **Vynechat zámek aktivace** odebere zámek aktivace ze zařízení s iOSem bez použití Apple ID a hesla uživatele. Když zámek aktivace vynecháte, zařízení ho znovu zapne při spuštění aplikace Najít iPhone. Zámek aktivace vynechejte jenom v případě, že máte k zařízení fyzický přístup.
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V okně **Intune** zvolte **Zařízení**.
-4. V okně **Zařízení a skupiny** zvolte **Všechna zařízení**.
-5. V seznamu spravovaných zařízení zvolte zařízení s iOSem, které je pod dohledem, a potom zvolte akci se vzdáleným zařízením **Vynechat zámek aktivace**.
+4. V okně **Zařízení** zvolte **Všechna zařízení**.
+5. V seznamu spravovaných zařízení zvolte zařízení s iOSem, které je pod dohledem, zvolte **Více** a potom zvolte akci se vzdáleným zařízením **Vynechat zámek aktivace**.
 
 ## <a name="next-steps"></a>Další kroky
 

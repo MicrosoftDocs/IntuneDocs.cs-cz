@@ -1,12 +1,12 @@
 ---
-title: "Co je správa aplikací"
-titlesuffix: Azure portal
-description: "V tomto tématu se dozvíte základy správy aplikací pomocí Microsoft Intune."
+title: "Co je správa aplikací v Microsoft Intune"
+titlesuffix: 
+description: "Naučte se základy správy aplikací pomocí Microsoft Intune."
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/08/2018
+ms.date: 03/01/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 00e6b9f05f967da9066639dbf1b25bc76a49541b
-ms.sourcegitcommit: 0a5f424a8f683daa919b13b5c363173040d561c8
+ms.openlocfilehash: 9372a77a63f48c8215a02ccd784fb0a812f5a12f
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 
@@ -27,14 +27,14 @@ ms.lasthandoff: 02/13/2018
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 
-Jako správce IT musíte zajistit, aby koncoví uživatelé měli přístup k aplikacím, které potřebují ke své práci. To může být náročné z těchto důvodů:
+Microsoft Intune vám jakožto správci IT umožňuje spravovat mobilní aplikace, které používají pracovníci vaší společnosti. Tato funkce doplňuje správu zařízení a ochranu dat. Jednou z vašich priorit v rámci této funkce je zajistit, aby koncoví uživatelé měli přístup k aplikacím, které potřebují k práci. To může být náročné z těchto důvodů:
 - Existuje široký sortiment platforem zařízení a typů aplikací.
 - Potřebujete spravovat aplikace na firemních zařízeních i na zařízeních vlastněných uživateli.
 - Musíte zajistit zabezpečení sítě a dat.
 
 Navíc potřebujete přiřazovat a spravovat aplikace na zařízeních, která nejsou zaregistrovaná v Intune.
 
-Intune nabízí celou řadu funkcí, které vám pomůžou zajistit, aby na požadovaných zařízeních byly potřebné aplikace.
+Intune nabízí celou řadu funkcí, které vám pomůžou zajistit, aby na požadovaných zařízeních byly potřebné aplikace. Následující tabulka nabízí souhrn funkcí správy aplikací. Pod tabulkou jsou informace o tom, jak začít rozumět službě Microsoft Intune na portálu Azure Portal. 
 
 ## <a name="app-management-capabilities-by-platform"></a>Funkce správy aplikací podle platformy
 
@@ -64,8 +64,8 @@ Intune nabízí celou řadu funkcí, které vám pomůžou zajistit, aby na pož
 
 Většinu toho, co souvisí s aplikacemi, najdete v úloze **Mobilní aplikace**, ke které se dostanete takto:
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V okně **Intune** zvolte **Mobilní aplikace**.
 
     ![Úloha Mobilní aplikace](./media/apps-workload.png)
@@ -115,3 +115,7 @@ Další podrobnosti najdete v tématu [Monitorování aplikací](apps-monitor.md
 ### <a name="help-and-support"></a>Nápověda a podpora
 - **Nápověda a podpora** – zde můžete řešit potíže, požádat o podporu nebo zobrazit stav Intune.
     - [Odstraňování potíží](help-desk-operators.md)
+    
+## <a name="next-steps"></a>Další kroky
+
+- [Přidání aplikací do Microsoft Intune](apps-add.md)

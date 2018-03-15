@@ -3,10 +3,10 @@ title: "Podmíněný přístup s Intune"
 titlesuffix: Azure portal
 description: "Běžné způsoby používání podmíněného přístupu s Intune"
 keywords: 
-author: andredm7
-ms.author: andredm
+author: Erikre
+ms.author: erikre
 manager: dougeby
-ms.date: 11/14/2017
+ms.date: 02/22/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +14,19 @@ ms.technology:
 ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8987f8e6eb7a770a90d187c0787589acfbacdb09
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: d5ec945cdbc4efa791edc51e659a1546876446c5
+ms.sourcegitcommit: 1978a30ab1af0f43aa5f447690d0bbcdcb9b563b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="common-ways-to-use-conditional-access-with-intune"></a>Běžné způsoby používání podmíněného přístupu s Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-K zavedení dodržování předpisů podmíněného přístupu ve vaší organizaci musíte nakonfigurovat zásady dodržování předpisů mobilních zařízení Intune a schopnosti správy mobilních aplikací (MAM) Intune. Pojďme se seznámit s běžnými způsoby používání podmíněného přístupu s Intune.
+Existují dva hlavní typy podmíněného přístupu s Intune. Prvním typem je podmíněný přístup na základě zařízení. Druhým typem je podmíněný přístup založený na aplikacích. K zavedení dodržování předpisů podmíněného přístupu ve vaší organizaci musíte nakonfigurovat související zásady dodržování předpisů.
+
+Níže uvedené informace objasňují, jak se používají možnosti dodržování předpisů mobilními *zařízeními* Intune a možnosti správy mobilních *aplikací* (MAM) Intune. 
 
 ## <a name="device-based-conditional-access"></a>Podmíněný přístup podle zařízení
 
@@ -32,11 +34,11 @@ Intune a Azure Active Directory spolupracují a zajišťují, aby přístup k e-
 
 Intune poskytuje schopnosti zásad dodržování předpisů pro zařízení, které vyhodnocují stav dodržování předpisů ze strany zařízení. Stav dodržování předpisů se oznamuje službě Azure Active Directory, která ho využívá k vynucení zásady podmíněného přístupu vytvořené v Azure Active Directory, když se uživatel pokusí získat přístup k firemním prostředkům.
 
-Počínaje [novým portálem Azure Portal](https://docs.microsoft.com/intune-azure/introduction/what-is-microsoft-intune) se zásady podmíněného přístupu na základě zařízení pro Exchange online a další produkty Office 365 konfigurují prostřednictvím portálu Azure Portal.
+Zásady podmíněného přístupu na základě zařízení pro Exchange Online a další produkty Office 365 se konfigurují prostřednictvím portálu [Azure Portal](https://docs.microsoft.com/intune-azure/introduction/what-is-microsoft-intune).
 
 -   Přečtěte si další informace o [podmíněném přístupu v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
 
--   Přečtěte si další informace o tom, [co je dodržování předpisů zařízením v Intune](device-compliance.md).
+-   Přečtěte si další informace o [dodržování předpisů zařízením v Intune](device-compliance.md).
 
 -   Přečtěte si další informace o [ochraně e-mailu, Office 365 a dalších služeb pomocí podmíněného přístupu v Intune](https://docs.microsoft.com/intune-classic/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune).
 

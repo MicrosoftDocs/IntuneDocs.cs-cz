@@ -3,8 +3,8 @@ title: "Nastavení integrace služby Lookout s Intune"
 titlesuffix: Azure portal
 description: "Nastavení předplatného služby Lookout pomocí Intune"
 keywords: 
-author: andredm7
-ms.author: andredm
+author: msmimart
+ms.author: mimart
 manager: dougeby
 ms.date: 06/21/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 5b0d7644-3183-45ba-a165-0d82d70cb71e
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 891fbda72d38b829397158a75bdceeb452bc8d3b
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: fa13ee9239dcb1f62f4fb06e876ecc272a8f620c
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-up-your-lookout-mobile-threat-defense-integration-with-intune"></a>Nastavení integrace ochrany před mobilními hrozbami Lookout s Intune
 
@@ -94,7 +94,7 @@ V následujícím postupu se dozvíte, jak získat informace, které je třeba s
     ![snímek obrazovky zobrazující stránku registrace konektoru Intune](./media/lookout-mtp-enrollment.png)
 
     >[!IMPORTANT]
-    > V **zobrazovaném názvu** se rozlišují velká a malá písmena, jak je vidět na stránce **vlastností** skupiny zabezpečení na webu Azure Portal. Na obrázku níže vidíte, že **zobrazovaný název** skupiny zabezpečení je ve stylu CamelCase, zatímco v nadpisu jsou všechna písmena malá. V konzole Lookout použijte pro **zobrazovaný název** stejnou velikost písmen jako u skupiny zabezpečení.
+    > V **zobrazovaném názvu** se rozlišují velká a malá písmena, jak je vidět ve **vlastnostech** skupiny zabezpečení na webu Azure Portal. Na obrázku níže vidíte, že **zobrazovaný název** skupiny zabezpečení je ve stylu CamelCase, zatímco v nadpisu jsou všechna písmena malá. V konzole Lookout použijte pro **zobrazovaný název** stejnou velikost písmen jako u skupiny zabezpečení.
     >![snímek obrazovky portálu Azure Portal, služby Azure Active Directory a stránky vlastností](./media/aad-group-display-name.png)
 
     >[!NOTE] 
@@ -131,7 +131,7 @@ Ochrana před mobilními hrozbami Lookout klasifikuje mobilní hrozby podle růz
 > Úrovně rizik jsou důležitou součástí ochrany před mobilními hrozbami, protože integrace se službou Intune vypočítává míru dodržování předpisů u zařízení za běhu právě podle těchto úrovní rizik. Správce Intune nastaví v zásadách pravidlo, které určí, že zařízení nesplňuje předpisy, pokud pro něj existuje aktivní hrozba minimálně **vysoké**, **střední** nebo**nízké** úrovně. Zásady klasifikace hrozeb v ochraně před mobilními hrozbami Lookout přímo řídí výpočet dodržování předpisů zařízením ve službě Intune.
 
 ## <a name="watching-enrollment"></a>Sledování registrací
-Po dokončení nastavení začne ochrana před mobilními hrozbami Lookout posílat do služby Azure AD dotazy na zařízení, která odpovídají určeným skupinám pro registraci.  Informace o registrovaných zařízeních najdete v modulu Zařízení.  Počáteční stav u zařízení je čekající na vyřízení.  Stav zařízení se změní, jakmile se na zařízení nainstaluje, otevře a aktivuje aplikace Lookout for Work.  Podrobnosti o tom, jak aplikaci Lookout for Work přidat do zařízení, najdete v tématu o tom, jak [přidat službu Lookout pro pracovní aplikace pomocí Intune ](mtd-apps-ios-app-configuration-policy-add-assign.md).
+Po dokončení nastavení začne ochrana před mobilními hrozbami Lookout posílat do služby Azure AD dotazy na zařízení, která odpovídají určeným skupinám pro registraci.  Informace o registrovaných zařízeních najdete v modulu Zařízení.  Počáteční stav u zařízení je čekající na vyřízení.  Stav zařízení se změní, jakmile se na zařízení nainstaluje, otevře a aktivuje aplikace Lookout for Work.  Podrobnosti o tom, jak aplikaci Lookout for Work přidat do zařízení, najdete v tématu [Přidání aplikací Lookout for Work pomocí Intune](mtd-apps-ios-app-configuration-policy-add-assign.md).
 
 ## <a name="next-steps"></a>Další kroky
 

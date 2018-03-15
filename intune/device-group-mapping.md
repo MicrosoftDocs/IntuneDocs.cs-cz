@@ -1,7 +1,7 @@
 ---
-title: "Používání kategorií zařízení v Intune"
-titleSuffix: Azure portal
-description: "Naučte se používat kategorie zařízení, které uživatelé můžou volit, když si registrují svoje zařízení v Intune."
+title: "Kategorizace zařízení do skupin v Intune"
+titleSuffix: Microsoft Intune
+description: "Zjistěte, jak můžete pomocí kategorizace zařízení do skupin zajistit snadnější správu."
 keywords: 
 author: ErikjeMS
 ms.author: erikje
@@ -14,13 +14,13 @@ ms.technology:
 ms.assetid: 7b668c37-40b9-4c69-8334-5d8344e78c24
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e1200ce4ab5d24f8c9212c064961a167e0ec6c42
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 416ce4fb671494efabf805595426f25d027d256e
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="map-device-groups"></a>Mapování skupin zařízení
+# <a name="categorize-devices-into-groups-for-easier-management"></a>Snadnější správa pomocí kategorizace zařízení do skupin
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -41,11 +41,11 @@ Můžete vytvořit libovolné kategorie zařízení, například:
 ## <a name="how-to-configure-device-categories"></a>Jak konfigurovat kategorie zařízení
 
 ### <a name="step-1---create-device-categories-in-the-intune-blade-of-the-azure-portal"></a>Krok 1: Vytvoření kategorií zařízení v okně Intune na portálu Azure Portal
-1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování a správa** > **Intune**.
+1. Na portálu [Azure Portal](https://portal.azure.com) zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V okně **Intune** zvolte **Registrace zařízení**.
 3. V okně **Registrace zařízení** zvolte **Kategorie zařízení**.
-4. V okně **Kategorie zařízení** zvolte **Vytvořit**, abyste mohli přidat novou kategorii.
-5. V dalším okně zadejte **název** nové kategorii a případně i její **popis**.
+4. Na stránce **Kategorie zařízení** zvolte **Vytvořit**, abyste mohli přidat novou kategorii.
+5. V okně **Vytvořit kategorii zařízení** zadejte **název** nové kategorie a případně i její **popis**.
 6. Až skončíte, klikněte na **Vytvořit**. Novou kategorii uvidíte v seznamu kategorií.
 
 Název kategorie zařízení použijete při vytváření skupin zabezpečení Azure Active Directory v kroku 2.
@@ -61,27 +61,29 @@ Až nakonfigurujete skupiny zařízení, bude se uživatelům při registrován�
 
 ### <a name="how-to-view-the-categories-of-devices-you-manage"></a>Zobrazení kategorií spravovaných zařízení
 
-1.  Na portálu Azure Portal zvolte **Další služby** > **Monitorování a správa** > **Intune**.
+1.  Na portálu [Azure Portal](https://portal.azure.com) zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 
-2. V okně Intune na portálu Azure Portal zvolte **Zařízení a skupiny**.
+2. V okně Intune na portálu Azure Portal zvolte **Zařízení**.
 
 3.  V části **Spravovat** klikněte na **Všechna zařízení**.
 
-4.  V seznamu zařízení zkontrolujte sloupec **Kategorie**.
+4.  V seznamu zařízení zkontrolujte sloupec **Kategorie zařízení**.
 
-Pokud sloupec **Kategorie** není zobrazený, klikněte na **Sloupce**, zvolte v seznamu položku **Kategorie** a pak klikněte na **Použít**.
+Pokud sloupec **Kategorie zařízení** není zobrazený, klikněte na **Sloupce**, zvolte v seznamu položku **Kategorie zařízení** a pak klikněte na **Použít**.
 
 ### <a name="to-change-the-category-of-a-device"></a>Změna kategorie zařízení
 
-1. Na portálu Azure Portal zvolte **Další služby** > **Monitorování a správa** > **Intune**.
-3. V okně **Intune** zvolte **Zařízení a skupiny**.
-4. V okně **Zařízení a skupiny** zvolte **Spravovat** > **Všechna zařízení**.
-5. Zvolte požadované zařízení v seznamu a pak v okně s vlastnostmi zařízení zvolte **Spravovat** > **Vlastnosti**.
+1. Na portálu [Azure Portal](https://portal.azure.com) zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V okně **Intune** zvolte **Zařízení**.
+4. V okně **Zařízení** v části **Spravovat** zvolte **Všechna zařízení**.
+5. Zvolte v seznamu požadované zařízení a pak v okně s vlastnostmi zařízení v části **Spravovat** zvolte **Vlastnosti**.
 6. V dalším okně můžete pro vybrané zařízení změnit nastavení **Kategorie zařízení** na kterýkoliv z názvů kategorií, které jste dříve nakonfigurovali.
 
 ## <a name="after-you-configure-device-groups"></a>Po konfiguraci skupin zařízení
 
 Když koncoví uživatelé zařízení s iOSem a Androidem registrují svá zařízení, musí zvolit některou kategorii ze seznamu nakonfigurovaných kategorií. Potom, co zvolí kategorii a dokončí registraci, se jejich zařízení přidá do skupiny zařízení Intune nebo do skupiny zabezpečení Active Directory, která odpovídá zvolené kategorii.
+
+Koncoví uživatelé s Windows by měli k výběru kategorie použít web Portál společnosti.
 
 Bez ohledu na platformu můžou koncoví uživatelé po registraci zařízení vždy přejít na portal.manage.microsoft.com. Uživatelé by měli mít přístup k webu Portál společnosti a měli by přejít na **Moje zařízení**. Na této stránce můžou zvolit zaregistrované zařízení a pak vybrat kategorii.
 

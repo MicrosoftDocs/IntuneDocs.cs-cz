@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8ff5fb2634e2bc6019404d55d1c322146b32eb7f
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 4e1496d24fd9d3bb636a4eab00c254b753210f63
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="reset-and-remove-the-passcode-on-intune-managed-devices"></a>Resetování nebo odebrání hesla na zařízeních spravovaných přes Intune
 
@@ -39,12 +39,12 @@ Akce **Odebrat heslo** vygeneruje pro zařízení nové heslo, které se zobraz�
 
 ## <a name="how-to-reset-a-passcode"></a>Resetování hesla
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V okně **Intune** zvolte **Zařízení**.
-4. V okně **Zařízení a skupiny** zvolte **Všechna zařízení**.
-5. V seznamu zařízení, která spravujete, zvolte zařízení a potom zvolte akci se vzdáleným zařízením **Odebrat heslo**.
+4. V okně **Zařízení** zvolte **Všechna zařízení**.
+5. V seznamu zařízení, která spravujete, zvolte zařízení, zvolte **Více** a pak zvolte vzdálenou akci **Odebrat heslo**.
 
 ## <a name="next-steps"></a>Další kroky
 
-Stav akce, kterou jste spustili, zobrazíte tak, že v okně **Zařízení a skupiny** zvolíte **Akce zařízení**.
+Stav akce, kterou jste spustili, zobrazíte tak, že v okně **Zařízení** zvolíte **Akce zařízení**.

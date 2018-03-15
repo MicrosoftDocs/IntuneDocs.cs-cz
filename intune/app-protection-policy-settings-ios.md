@@ -1,12 +1,12 @@
 ---
 title: "Nastavení zásad ochrany aplikací pro iOS"
-titlesuffix: Azure portal
+titlesuffix: Microsoft Intune
 description: "Toto téma popisuje nastavení zásad ochrany aplikací pro zařízení s iOSem."
 keywords: 
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/15/2018
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,16 +15,16 @@ ms.assetid: 0f8b08f2-504c-4b38-bea2-b8a4ef0526b8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5366062588d518a7072fb4d56e4eade0f492bebf
-ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
+ms.openlocfilehash: 6225afab71d1f47793ea295553dfcaf169374a06
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací pro iOS
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Nastavení zásad popsané v tomto tématu se dá [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v okně **Nastavení** na portálu Azure Portal.
+Nastavení zásad popsané v tomto tématu se dá [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v okně **Přidat zásadu** > **Nastavení** na portálu Azure Portal.
 
 Existují dvě kategorie nastavení zásad:nastavení přemístění dat a nastavení přístupu. ***Aplikace spravované podle zásad*** v tomto tématu označují aplikace, které mají nakonfigurované zásady ochrany aplikací.
 
@@ -32,8 +32,8 @@ Existují dvě kategorie nastavení zásad:nastavení přemístění dat a nasta
 
 | Nastavení | Způsob použití | Výchozí hodnota |
 |------|------|------|
-| **Zakázat zálohování dat v iTunes a na iCloudu** | Zvolte **Ano**, pokud chcete zakázat zálohování všech spravovaných souborů do iTunes iCloudu. Zvolte **Ne**, pokud chcete této aplikaci povolit zálohování spravovaných souborů do iTunes a iCloudu.| Ano |
-| **Povolit aplikaci přenos dat do ostatních aplikací** | Určete, jaké aplikace můžou přijímat data z této aplikace: <ul><li> **Aplikace spravované podle zásad:** Povoluje přenos jenom do jiných aplikací spravovaných podle zásad.</li> <li>**Všechny aplikace**: Povoluje přenos do všech aplikací. </li> <li>**Žádné:** Nepovoluje přenos dat do žádné aplikace, včetně ostatních aplikací spravovaných podle zásad.</li></ul> Pokud nastavíte tuto možnost na hodnotu **Aplikace spravované podle zásad** nebo **Žádné**, bude blokovaná funkce iOS 9, která umožňuje vyhledávání Spotlight dat v rámci aplikací. <br><br> Do některých aplikací a služeb, které mají výjimku, může Intune povolit přenos dat. Kompletní seznam těchto aplikací a služeb najdete v části [Výjimky přenosu dat](#data-transfer-exemptions). | Všechny aplikace |
+| **Zakázat zálohování dat v iTunes a na iCloudu** | Zvolte **Ano**, pokud chcete této aplikaci zabránit v zálohování pracovních nebo školních dat na iTunes a iCloud. Zvolte **Ne**, pokud chcete této aplikaci povolit zálohování pracovních nebo školních dat na iTunes a iCloud.| Ano |
+| **Povolit aplikaci přenos dat do ostatních aplikací** | Určete, jaké aplikace můžou přijímat data z této aplikace: <ul><li> **Aplikace spravované podle zásad:** Povoluje přenos jenom do jiných aplikací spravovaných podle zásad.</li> <li>**Všechny aplikace**: Povoluje přenos do všech aplikací. </li> <li>**Žádné:** Nepovoluje přenos dat do žádné aplikace, včetně ostatních aplikací spravovaných podle zásad.</li></ul> Pokud nastavíte tuto možnost na hodnotu **Aplikace spravované podle zásad** nebo **Žádné**, bude blokovaná funkce iOS 9, která umožňuje vyhledávání Spotlight dat v rámci aplikací. <br><br> U některých aplikací a služeb, které mají výjimku, může být v Intune standardně povolený přenos dat. Pokud potřebujete povolit přenos dat do aplikace, která nepodporuje aplikaci v Intune, můžete také vytvořit vlastní výjimky. Další informace najdete v tématu [Výjimky přenosu dat](#data-transfer-exemptions). | Všechny aplikace |
 | **Povolit aplikaci, aby přijímala data z jiných aplikací** | Určete, jaké aplikace můžou převádět data do této aplikace: <ul><li>**Aplikace spravované podle zásad:** Povoluje přenos jenom z jiných aplikací spravovaných podle zásad.</li><li>**Všechny aplikace**: Povoluje přenos dat ze všech aplikací.</li><li>**Žádné:** Nepovoluje přenos dat z žádné aplikace, včetně ostatních aplikací spravovaných podle zásad.</li></ul> Z některých aplikací a služeb, které mají výjimku, může Intune povolit přenos dat. Kompletní seznam těchto aplikací a služeb najdete v části [Výjimky přenosu dat](#data-transfer-exemptions). Aplikace, které podporují více identit a umožňují správu mobilních aplikací (MAM) na neregistrovaných zařízeních s iOSem, tuto zásadu ignorují a povolí všechna příchozí data. | Všechny aplikace |
 | **Zakázat možnost Uložit jako** | Pokud chcete v této aplikaci zakázat možnost Uložit jako, zvolte **Ano**. Pokud chcete povolit použití možnosti Uložit jako, vyberte **Ne**. | Ne |
 | **Omezit vyjmutí, kopírování a vkládání v ostatních aplikacích** | Určete, kdy se můžou v této aplikaci použít akce vyjmutí, kopírování a vložení. Vybírejte z těchto možností: <ul><li>**Blokováno:** Nepovoluje akce vyjmutí, kopírování a vložení mezi touto a jakoukoliv jinou aplikací.</li><li>**Aplikace spravované podle zásad:** Povoluje operace vyjmutí, kopírování a vložení mezi touto aplikací a jinými aplikacemi spravovanými podle zásad.</li><li>**Aplikace s vložením spravované podle zásad:** Povoluje vyjmutí a kopírování mezi touto aplikací a jinými aplikacemi spravovanými podle zásad. Povoluje vložení dat z jakékoliv aplikace do této aplikace.</li><li>**Libovolná aplikace:** Operace vyjmutí, kopírování a vložení do a z této aplikace nejsou nijak omezené. | Libovolná aplikace |
@@ -53,13 +53,12 @@ U některých aplikací a služeb platformy, které mají výjimku, můžou zás
 | Název aplikace nebo služby | Popis |
 | ---- | --- |
 |<code>tel; telprompt</code> | Nativní telefonní aplikace |
-| <code>skype</code> | Skype |
-| <code>app-settings</code> | Nastavení zařízení |
-| <code>itms; itmss; itms-apps; itms-appss; itms-services</code> | App Store |
-| <code>calshow</code> | Nativní kalendář |
+|<code>skype</code> | Skype |
+|<code>app-settings</code> | Nastavení zařízení |
+|<code>itms; itmss; itms-apps; itms-appss; itms-services</code> | App Store |
+|<code>calshow</code> | Nativní kalendář |
 
-
-
+Další informace najdete v tématu [Výjimky zásad přenosu dat pro aplikace](app-protection-policies-exception.md). 
 
 ## <a name="access-settings"></a>Nastavení přístupu
 

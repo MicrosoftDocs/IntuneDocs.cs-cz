@@ -1,12 +1,12 @@
 ---
 title: "Vytvoření a nasazení zásad ochrany aplikací"
-titleSuffix: Azure portal
-description: "Přečtěte si, jak mohou zásady ochrany aplikací pomoci při ochraně firemních dat, která používají vámi spravované aplikace."
+titleSuffix: Microsoft Intune
+description: "Podívejte se, jak vytvořit a přiřadit zásady ochrany aplikací Microsoft Intune."
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/24/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,18 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4fbb9a1f6697a8339a2854e4352749ca04bb612e
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: c7ad60a27e32aaab49e77789364aecdc5ea7fc60
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Vytvoření a přiřazení zásad ochrany aplikací
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+
+Podívejte se, jak vytvořit a přiřadit zásady ochrany aplikací Microsoft Intune k uživatelům. Toto téma také popisuje, jak změnit existující zásady.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
@@ -34,89 +37,91 @@ Zásady ochrany aplikací je možné použít pro aplikace běžící na zaříz
 Pokud hledáte seznam aplikací s podporou MAM, přejděte na [seznam aplikací MAM](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
 ##  <a name="create-an-app-protection-policy"></a>Vytvoření zásady ochrany aplikací
-1.  V úloze **Mobilní aplikace** zvolte **Spravovat** > **Zásady ochrany aplikací**.
-
-2.  Otevře se okno **Zásady ochrany aplikací**, kde můžete vytvářet nové zásady a upravovat zásady, které už existují. Zvolte **Přidat zásadu**.
+1.  V úloze **Mobilní aplikace** vyberte **Zásady ochrany aplikací** v oddíle **Správa**. Po výběru této možnosti se zobrazí detaily **Zásady ochrany aplikací**, kde můžete vytvářet nové zásady a upravovat stávající.
+2. Zvolte **Přidat zásadu**.
 
   ![Snímek obrazovky okna Přidat zásadu](./media/app-protection-add-policy.png)
 
-3.  Zadejte název zásady, přidejte stručný popis a vyberte, jestli se má zásada vytvořit pro platformu iOS nebo Android. Pro každou platformu můžete vytvořit několik zásad.
+3.  Zadejte název zásady, přidejte stručný popis a vyberte pro zásadu typ platformy. V případě potřeby je možné pro každou platformu vytvořit několik zásad.
 
-4.  Zvolením možnosti **Aplikace** otevřete **okno Aplikace**, kde se zobrazí seznam dostupných aplikací. Ze seznamu vyberte jednu nebo několik aplikací a přidružte je k zásadě, kterou vytváříte. Jakmile vyberete aplikace, uložte svůj výběr zvolením **Vybrat** v dolní části okna **Aplikace**.
+4.  Zvolte možnost **Aplikace** a otevřete tak okno **Aplikace**, kde se zobrazí seznam dostupných aplikací. Ze seznamu vyberte jednu nebo několik aplikací a přidružte je k zásadě, kterou vytváříte.
+5. Jakmile vyberete aplikace, uložte vybrané možnosti volbou **Vybrat**.
 
     > [!IMPORTANT]
     > Při vytváření zásady musíte vybrat aspoň jednu aplikaci.
 
-5.  V **okně Přidat zásadu** zvolte **Konfigurovat požadované nastavení**. Otevře se okno nastavení zásad.
+6.  V okně **Přidat zásadu** zvolte **Konfigurovat požadované nastavení**. Otevře se **Nastavení**.
 
-    Existují dvě kategorie nastavení zásad, **Přemístění dat** a **Přístup**.  Zásady přemístění dat platí pro přesun dat do aplikace a z aplikace, zatímco zásady přístupu určují, jak koncový uživatel přistupuje k aplikaci v pracovním kontextu.
+    Existují dvě kategorie nastavení zásad, **Přemístění dat** a **Přístup**.  Zásady přemístění dat platí pro přesun dat do aplikace a z aplikace. Zásady přístupu určují, jak získává koncový uživatel přístup k aplikacím v pracovním kontextu.
     Nastavením zásad jsou pro začátek přiřazené výchozí hodnoty. Pokud tyto výchozí hodnoty splňují vaše požadavky, nemusíte nic měnit.
 
     > [!TIP]
-    > Tato nastavení zásad se vynutí jenom při použití aplikace v pracovním kontextu.  Když uživatel použije aplikaci k provedení osobní úlohy, tyto zásady ho neovlivní.
+    > Tato nastavení zásad se vynutí jenom při použití aplikace v pracovním kontextu. Když koncový uživatel použije aplikaci k provedení osobní úlohy, nebudou mít tyto zásady na ni vliv.
 
+7.  Tuto konfiguraci uložíte zvolením tlačítka **OK**. A jste zpátky v podokně **Přidat zásadu**. Zvolením možnosti **Vytvořit** vytvoříte zásadu a uložíte své nastavení.
+8. Tuto konfiguraci uložíte zvolením tlačítka **OK**. A jste zpátky v okně **Přidat zásadu**.
+9. Zvolením možnosti **Vytvořit** vytvoříte zásadu a uložíte své nastavení.
 
-
-6.  Tuto konfiguraci uložíte zvolením tlačítka **OK**. A jste zpátky v okně **Přidat zásadu**. Zvolením možnosti **Vytvořit** vytvoříte zásadu a uložíte své nastavení.
-
-
-Zásada není po vytvoření pomocí výš uvedeného postupu nasazená pro žádného uživatele. Pokud chcete nasadit zásadu, přečtěte si následující část „Nasazení zásady pro uživatele“.
+Zásada není po vytvoření pomocí výš uvedeného postupu nasazená pro žádného uživatele. Pokud chcete nasadit zásadu, přečtěte si téma [Nasazení zásady pro uživatele](app-protection-policies.md#deploy-a-policy-to-users).
 
 ## <a name="deploy-a-policy-to-users"></a>Nasazení zásady pro uživatele
 
-1.  V okně **Zásada** zvolte **Skupiny uživatelů**. Otevře se okno **Skupiny uživatelů**. Zvolením možnosti **Přidat skupinu uživatelů** v okně **Skupiny uživatelů** otevřete okno **Přidat skupinu uživatelů**.
 
-  ![Snímek obrazovky okna Skupiny uživatelů se zvýrazněnou možností nabídky Přidat skupinu uživatelů](./media/app-protection-policy-add-users.png)
+1. V podokně **Zásady ochrany aplikací** vyberte zásadu.
 
-2.  V okně **Přidat skupinu uživatelů** se zobrazí seznam skupin uživatelů. Je to seznam všech skupin zabezpečení v **Azure Active Directory**. Vyberte skupiny uživatelů, pro které chcete tuto zásadu použít, a pak zvolte **Vybrat**. Zvolením možnosti **Vybrat** nasadíte tuto zásadu uživatelům.
-  ![Snímek obrazovky okna Přidat skupinu uživatelů zobrazující seznam uživatelů Azure Active Directory](./media/azure-ad-user-group-list.png)
+1. V podokně **Zásada** vyberte **Přiřazení**. Otevře se podokno **Intune App Protection – Přiřazení**. Zvolte **Vybrat skupiny, které se zahrnou** v podokně **Přiřazení** a otevřete tak podokno **Vybrat skupiny, které se zahrnou**.
 
-Teď je zásada vytvořená a nasazená uživatelům.
+   ![Snímek obrazovky podokna Přiřazení se zvýrazněnou možností nabídky Vybrat skupiny, které se zahrnou](./media/app-protection-policy-add-users.png)
 
-Tyto zásady ovlivní jenom uživatele, kteří mají přiřazené licence Microsoft Intune. Na uživatele ve vybrané skupině zabezpečení, kteří nemají přiřazenou licenci Microsoft Intune, nebudou mít tyto zásady vliv.
+2.  V podokně **Přidat skupinu uživatelů** se zobrazí seznam skupin uživatelů. Je to seznam všech skupin zabezpečení v **Azure Active Directory**. Vyberte skupiny uživatelů, pro které chcete tuto zásadu použít, a pak zvolte **Vybrat**. Zvolením možnosti **Vybrat** nasadíte tuto zásadu uživatelům.
+
+    ![Snímek obrazovky podokna Přidat skupinu uživatelů zobrazující seznam uživatelů Azure Active Directory](./media/azure-ad-user-group-list.png)
+
+Teď je zásada vytvořená a nasazená u uživatelů.
+
+Tyto zásady ovlivní jenom uživatele, kteří mají přiřazené licence Microsoft Intune. Nemají vliv na uživatele ve vybrané skupině zabezpečení, kteří nemají přiřazenou licenci pro Intune.
 
 >[!IMPORTANT]
-> Pokud ke správě zařízení s iOSem a Androidem používáte Intune s Configuration Managerem, zásady se použijí jenom pro uživatele přímo ve skupinách, které jste vybrali. Členy podřízených skupin vnořených ve skupině, kterou jste vybrali, tyto zásady neovlivní.
+> Pokud ke správě zařízení používáte Intune s Configuration Managerem, použijí se zásady jenom pro uživatele přímo ve skupinách, které jste vybrali. Na členy podřízených skupin vnořených ve skupině, kterou jste vybrali, tyto zásady nemají vliv.
 
 Koncoví uživatelé můžou stahovat aplikace z App Storu nebo Google Play. Více informací najdete v následujících tématech:
 * [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](app-protection-enabled-apps-android.md)
 * [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](app-protection-enabled-apps-ios.md)
 
 ##  <a name="change-existing-policies"></a>Změna existujících zásad
-Podle potřeby můžete upravit existující zásady a použít je pro cílové uživatele. Když ale změníte existující zásady, změny se uživatelům, kteří se už přihlásili k aplikacím, po dobu 8 hodin nezobrazí.
+Podle potřeby můžete upravit existující zásady a použít je pro cílové uživatele. Když ale změníte existující zásady, nezobrazí se po dobu 8 hodin změny uživatelům, kteří se už přihlásili k aplikacím.
 
-Pokud koncový uživatel chce, aby se změny zásady projevily hned, musí se odhlásit od aplikace a pak se k ní zase přihlásit.
+Pokud koncový uživatel chce, aby se změny projevily hned, musí se odhlásit od aplikace a pak se k ní zase přihlásit.
 
 ### <a name="to-change-the-list-of-apps-associated-with-the-policy"></a>Změna seznamu aplikací přidružených k zásadě
 
-1.  V okně **Zásady aplikací** zvolte zásadu, kterou chcete změnit. Otevře se speciální okno pro právě vybranou zásadu.
+1.  V podokně **Zásady ochrany aplikací** vyberte zásadu, kterou chcete změnit, a otevřete tak podokno specifické pro právě vybranou zásadu.
 
-2.  V okně zásady zvolte **Cílené aplikace**. Otevře se seznam aplikací.
+2.  V podokně zásady zvolte **Cílené aplikace**. Otevře se seznam aplikací.
 
 3.  V seznamu odeberte nebo přidejte aplikace a zvolením ikony **Uložit** uložte změny, které jste provedli.
 
 ### <a name="to-change-the-list-of-user-groups"></a>Změna seznamu skupin uživatelů
 
-1.  V okně **Zásady aplikací** zvolte zásadu, kterou chcete změnit. Otevře se speciální okno pro právě vybranou zásadu.
 
-2.  V okně zásady zvolte **Skupiny uživatelů**. Otevře se okno **Skupiny uživatelů**, ve kterém se zobrazí seznam aktuálních skupin uživatelů s touto zásadou.
+1.  V podokně **Zásady ochrany aplikací** vyberte zásadu, kterou chcete změnit, a otevřete tak podokno specifické pro vybranou zásadu.
 
-3.  Pokud chcete k zásadě přidat novou skupinu uživatelů, zvolte **Přidat skupinu uživatelů** a vyberte skupinu uživatelů. Zvolením možnosti **Vybrat** nasadíte zásadu do skupiny uživatelů, kterou jste vybrali.
+2.  V podokně zásady zvolte **Přiřazení** a otevřete tak podokno **Intune App Protection – Přiřazení** se seznamem aktuálních skupin uživatelů, kteří mají tuto zásadu.
 
-4.  Pokud chcete skupinu uživatelů odstranit, zvýrazněte skupinu uživatelů, kterou chcete odebrat. Pak vyberte tři tečky (...) a zvolením **Odstranit** skupinu uživatelů odeberte.
-  ![Snímek obrazovky s možností Odstranit](./media/app-protection-policy-delete-user.png)
+3.  Pokud chcete přidat k zásadě novou skupinu uživatelů, zvolte na kartě **Zahrnout** možnost **Vybrat skupiny, které se zahrnou** a vyberte skupinu uživatelů. Zvolením možnosti **Vybrat** nasadíte zásadu do skupiny uživatelů, kterou jste vybrali.
+
+4.  Pokud chcete odstranit skupinu uživatelů, zvolte na kartě **Vyjmout** možnost **Vybrat skupiny, které se vyloučí** a vyberte skupinu uživatelů. Skupinu uživatelů odeberte pomocí možnosti **Vybrat**.
 
 ### <a name="to-change-policy-settings"></a>Změna nastavení zásad
 
-1.  V okně **Zásady aplikací** klikněte na zásadu, kterou chcete změnit. Otevře se speciální okno pro právě vybranou zásadu.
+1.  V podokně **Zásady ochrany aplikací** vyberte zásadu, kterou chcete změnit, a otevřete tak podokno specifické pro právě vybranou zásadu.
 
-
-2.  Zvolením možnosti **Nastavení zásad** otevřete okno **Nastavení zásad**.
+2.  Zvolte možnost **Nastavení zásad** a otevřete tak podokno **Nastavení zásad**.
 
 3.  Změňte nastavení a pak změny uložte zvolením ikony **Uložit**.
 
 ## <a name="policy-settings"></a>Nastavení zásad
-Pokud chcete zobrazit úplný seznam nastavení zásad pro iOS a Android, vyberte jednu z následujících možností:
+Pokud chcete zobrazit úplný seznam nastavení zásad pro iOS a Android, vyberte jeden z následujících odkazů:
 
 - [Zásady pro iOS](app-protection-policy-settings-ios.md)
 - [Zásady pro Android](app-protection-policy-settings-android.md)

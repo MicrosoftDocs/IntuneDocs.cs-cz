@@ -1,10 +1,10 @@
 ---
 title: "Jak získat podporu pro Microsoft Intune"
-titlesuffix: Azure portal
-description: "Podpora je k dispozici online a po telefonu pro placené i zkušební předplatné."
+titlesuffix: Microsoft Intune
+description: "Získejte online podporu a podporu po telefonu pro placené i zkušební předplatné Microsoft Intune."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: dougeby
+ms.author: dougeby
 manager: dougeby
 ms.date: 06/28/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
 ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 00a7bf5b3f5df58e29c3eb92a516b1ace3eea705
-ms.sourcegitcommit: 754fcc31155b28d6910bba45419c6be745f8793e
+ms.openlocfilehash: 5cb06625351e67bea8b467f6ab6873d258ee8175
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak získat podporu pro Microsoft Intune
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/14/2018
 Microsoft poskytuje pro Microsoft Intune globální technickou a předprodejní podporu a podporu k fakturaci a správě předplatného. Podpora je k dispozici online i po telefonu pro placené i zkušební předplatné. Online technická podpora je k dispozici v angličtině a japonštině. V dalších jazycích je k dispozici podpora po telefonu a online podpora k fakturaci.
 
 >[!IMPORTANT]
-> Pokud potřebujete technickou podporu k produktům, které spolupracují s Intune, ale nevyrábí je Microsoft, jako je Saaswedo, Cisco nebo Lookout, obraťte se nejprve na dodavatele konkrétního produktu. Než otevřete žádost o podporu Intune, ověřte, že máte druhý produkt správně nakonfigurovaný.
+> Pokud potřebujete technickou podporu k produktům třetích stran, které fungují s Intune (jako je Saaswedo, Cisco nebo Lookout), obraťte se nejdřív na dodavatele konkrétního produktu. Než otevřete žádost o podporu Intune, zkontrolujte, jestli máte produkt správně nakonfigurovaný.
 
 ## <a name="create-an-online-support-ticket"></a>Vytvoření lístku online podpory
 
@@ -41,31 +41,37 @@ Jako správce IT můžete lístek podpory zadat na portálu Azure Portal. Tady j
 2. Na stránce Nápověda a podpora Azure vyberte **Nová žádost o podporu**.
 
     ![Snímek stránky obrazovky nápovědy a podpory na portálu Azure Portal se zvýrazněným odkazem na novou žádost o podporu](./media/azure-support-ticket-link.png)
+
 3. Pro většinu problémů spojených s technickou podporou Intune vyberte v okně **Základní** následující možnosti:
     - **Typ problému**: **Technický**
     - **Služba**: **Microsoft Intune**
-    - **Plán podpory**: **Technická podpora – Zahrnuto** (Pro technické problémy týkající se Intune je podpora bezplatná.)
-
+    - **Plán podpory**: **Technická podpora – Zahrnuto** (pro technické problémy týkající se Intune je podpora bezplatná) nebo **Premier**
+    
     >[!IMPORTANT]
-    >Podpora pro Intune a pro Intune při použití s nástrojem Configuration Manager je bezplatná. Pokud se chcete podívat na podrobnosti nabídky Premier Support, přečtěte si v dokumentu [Popis služeb](https://www.microsoft.com/microsoftservices/services-list.aspx) oddíl 5.3.3 Poradenské služby.
+    >- Pokud jste **zákazníkem podpory Premier**, ale možnost **Plán podpory: Premier** se nezobrazuje, kontaktujte svého zástupce TAM (Technical Account Manager) a požádejte o pomoc s propojením smlouvy a tenanta.
+    >- Podpora pro Intune a pro Intune při použití s nástrojem Configuration Manager je bezplatná. Pokud se chcete podívat na podrobnosti nabídky Premier Support, přečtěte si v dokumentu [Popis služeb](https://enterprise.microsoft.com/en-us/services/services-list/) oddíl 5.3.3 Poradenské služby.
 
     Pokračujte výběrem položky **Další**.
-4. V okně **Problém** ověřte, že je žádost adresovaná správnému odborníkovi na váš problém. Vyberte následující možnosti:
+
+4. V okně **Problém** zajistěte, aby byla žádost adresovaná správnému odborníkovi na váš problém. Vyberte následující možnosti:
+
     - **Závažnost**
     - **Typ problému**
     - **Kategorie**
 
-    Tyto podrobnosti nám také umožní, abychom vám poskytli **související nápovědu**, která by vám mohla pomoct problém vyřešit bez vyplňování lístku.
+    Tyto podrobnosti nám také umožní, abychom vám poskytli **Související nápovědu**, která vám může pomoct problém vyřešit bez vyplňování lístku.
 
     ![Snímek stránky obrazovky nápovědy a podpory na portálu Azure Portal s vyplněnými informacemi o problému a s řešeními zobrazenými na základě vašeho problému](./media/support-need-solutions.png)
 
-    Abychom vám mohli pomoct problém vyřešit, zadejte následující údaje:
-    -   **Podrobnosti**
+    Abych vám tým podpory mohl pomoct problém vyřešit, zadejte následující informace:
+    
+    - **Podrobnosti**
     - **Datum**
     - **Čas**
-    - Doplňující údaje
+    - **Doplňující údaje**
 
     Vyberte **Další**.
+
 5. U tohoto typu žádosti zadejte **Kontaktní informace**. Podpora Microsoftu tyto údaje použije, aby vás kontaktovala.
 6. Pokud chcete žádost o podporu odeslat, zvolte **Vytvořit**.
 
@@ -74,6 +80,5 @@ Jako správce IT můžete lístek podpory zadat na portálu Azure Portal. Tady j
 
 ## <a name="additional-resources"></a>Další materiály a zdroje informací
 - [Kontakt na odbornou telefonickou podporu Microsoft Intune](phone-support-contact.md)
-- [Volume Licensing Service Center](http://go.microsoft.com/fwlink/p/?LinkID=282016)
 - [Podpora správy fakturace a předplatného](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
 - [Multilicence](http://go.microsoft.com/fwlink/p/?LinkID=282015)

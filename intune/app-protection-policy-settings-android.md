@@ -1,12 +1,12 @@
 ---
 title: "Nastavení zásad ochrany aplikací pro Android"
-titlesuffix: Azure portal
+titlesuffix: Microsoft Intune
 description: "Toto téma popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem."
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/15/2018
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 10c09b4669371fbb61ad4d30f44fcaf5e2db3482
-ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
+ms.openlocfilehash: 330826307e4f3db24532908d42da77a1a857a681
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="android-app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací pro Android
-Nastavení zásad popsané v tomto tématu se dá [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v okně **Nastavení** na portálu Azure Portal.
+Toto téma popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem. Popsané nastavení zásad se dá [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v okně **Nastavení** na portálu Azure Portal.
 Existují dvě kategorie nastavení zásad:nastavení přemístění dat a nastavení přístupu. *Aplikace spravované podle zásad* v tomto tématu označují aplikace, které mají nakonfigurované zásady ochrany aplikací.
 
 ##  <a name="data-relocation-settings"></a>Nastavení přemístění dat
@@ -30,7 +30,7 @@ Existují dvě kategorie nastavení zásad:nastavení přemístění dat a nasta
 | Nastavení | Způsob použití | Výchozí hodnoty |
 |------|------|------|
 | **Zakázat zálohování dat v zařízeních s Androidem** | Pokud chcete zabránit této aplikaci v zálohování pracovních nebo školních dat do služby **Android Backup Service**, zvolte [Ano](https://developer.android.com/google/backup/index.html). Pokud jí chcete zálohování pracovních nebo školních dat povolit, zvolte **Ne**.| Ano |
-| **Povolit aplikaci přenos dat do ostatních aplikací** | Určete, jaké aplikace můžou přijímat data z této aplikace: <ul><li> **Aplikace spravované podle zásad:** Povoluje přenos jenom do jiných aplikací spravovaných podle zásad.</li> <li>**Všechny aplikace**: Povoluje přenos do všech aplikací. </li> <li>**Žádné:** Nepovoluje přenos dat do žádné aplikace, včetně ostatních aplikací spravovaných podle zásad.</li></ul> <p>Do některých aplikací a služeb, které mají výjimku, může Intune povolit přenos dat. Úplný seznam takových aplikací a služeb najdete v části [Výjimky přenosu dat](#Data-transfer-exemptions).<p>**Poznámka:** Intune momentálně nepodporuje funkci Android Instant Apps. Intune jakékoli datové připojení k aplikaci nebo z aplikace zablokuje.  Další informace najdete v dokumentaci pro vývojáře Androidu v části [Android Instant Apps](https://developer.android.com/topic/instant-apps/index.html).</p>| Všechny aplikace |
+| **Povolit aplikaci přenos dat do ostatních aplikací** | Určete, jaké aplikace můžou přijímat data z této aplikace: <ul><li> **Aplikace spravované podle zásad:** Povoluje přenos jenom do jiných aplikací spravovaných podle zásad.</li> <li>**Všechny aplikace**: Povoluje přenos do všech aplikací. </li> <li>**Žádné:** Nepovoluje přenos dat do žádné aplikace, včetně ostatních aplikací spravovaných podle zásad.</li></ul> <p>U některých aplikací a služeb, které mají výjimku, může být v Intune standardně povolený přenos dat. Pokud potřebujete povolit přenos dat do aplikace, která nepodporuje aplikaci v Intune, můžete také vytvořit vlastní výjimky. Další informace najdete v tématu [Výjimky přenosu dat](#Data-transfer-exemptions).<p>**Poznámka:** Intune momentálně nepodporuje funkci Android Instant Apps. Intune jakékoli datové připojení k aplikaci nebo z aplikace zablokuje.  Další informace najdete v dokumentaci pro vývojáře Androidu v části [Android Instant Apps](https://developer.android.com/topic/instant-apps/index.html).</p>| Všechny aplikace |
 | **Povolit aplikaci, aby přijímala data z jiných aplikací** | Určete, jaké aplikace můžou převádět data do této aplikace: <ul><li>**Aplikace spravované podle zásad:** Povoluje přenos jenom z jiných aplikací spravovaných podle zásad.</li><li>**Všechny aplikace**: Povoluje přenos dat ze všech aplikací.</li><li>**Žádné:** Nepovoluje přenos dat z žádné aplikace, včetně ostatních aplikací spravovaných podle zásad. </li></ul> <p>Z některých aplikací a služeb, které mají výjimku, může Intune povolit přenos dat. Úplný seznam takových aplikací a služeb najdete v části [Výjimky přenosu dat](#Data-transfer-exemptions). | Všechny aplikace |
 | **Zakázat možnost Uložit jako** | Pokud chcete v této aplikaci zakázat možnost Uložit jako, zvolte **Ano**. Pokud chcete povolit použití možnosti Uložit jako, vyberte **Ne**. <p><br>**Vyberte, do kterých služeb úložiště se můžou ukládat firemní data** <br>Uživatelé můžou ukládat data do vybraných služeb (OneDrive pro firmy, SharePoint a Místní úložiště). Všechny ostatní služby budou blokované.</p> | Ne <br><br> Vybráno: 0 |
 | **Omezit vyjmutí, kopírování a vkládání v ostatních aplikacích** | Určete, kdy se můžou v této aplikaci použít akce vyjmutí, kopírování a vložení. Vybírejte z těchto možností: <ul><li>**Blokováno:** Nepovoluje akce vyjmutí, kopírování a vložení mezi touto a jakoukoliv jinou aplikací.</li><li>**Aplikace spravované podle zásad:** Povoluje operace vyjmutí, kopírování a vložení mezi touto aplikací a jinými aplikacemi spravovanými podle zásad.</li><li>**Aplikace s vložením spravované podle zásad:** Povoluje vyjmutí a kopírování mezi touto aplikací a jinými aplikacemi spravovanými podle zásad. Povoluje vložení dat z jakékoliv aplikace do této aplikace.</li><li>**Libovolná aplikace:** Operace vyjmutí, kopírování a vložení do a z této aplikace nejsou nijak omezené. | Libovolná aplikace |
@@ -73,7 +73,7 @@ Existují dvě kategorie nastavení zásad:nastavení přemístění dat a nasta
   | com.android.providers.media | Poskytovatel multimediálního obsahu pro Android | Poskytovatel multimediálního obsahu je povolený jenom pro akci výběru vyzváněcího tónu. |
   | com.google.android.gms, com.google.android.gsf | Balíčky Služeb Google Play | Tyto balíčky jsou povolené pro akce Google Cloud Messaging, například pro nabízená oznámení. |
 
-
+Další informace najdete v tématu [Výjimky zásad přenosu dat pro aplikace](app-protection-policies-exception.md). 
 
 ##  <a name="access-settings"></a>Nastavení přístupu
 

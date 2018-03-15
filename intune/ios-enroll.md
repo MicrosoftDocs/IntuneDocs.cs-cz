@@ -1,7 +1,7 @@
 ---
-title: "Volba způsobu registrace zařízení s Windows v Intune"
-titlesuffix: Azure portal
-description: "Přečtěte si, jak nastavit registraci zařízení s Windows v Microsoft Intune."
+title: "Volba způsobu registrace zařízení s iOSem v Intune"
+titlesuffix: Microsoft Intune
+description: "Nastavení registrace zařízení s iOSem v Microsoft Intune"
 keywords: 
 author: ErikjeMS
 ms.author: erikje
@@ -15,11 +15,11 @@ ms.assetid: 439c33a6-e80c-4da9-ba09-a51fc36f62ad
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f36e579282f7aeaec74c3e80d866e52dfa508d3d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 602c4c1da553215ad222a7e593531fdd879c996c
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="enroll-ios-devices-in-intune"></a>Registrace zařízení s iOSem v Intune
 
@@ -34,7 +34,7 @@ Před povolením zařízení s iOSem proveďte následující kroky:
 
 ## <a name="user-owned-ios-devices-byod"></a>Zařízení se systémem iOS vlastněné uživatelem (BYOD)
 
-Uživatelům můžete umožnit, aby si zaregistrovali svoje osobní zařízení pro správu Intune. Tato možnost se označuje jako Přineste si vlastní zařízení neboli BYOD. Po splnění požadavků a přiřazení uživatelských licencí si uživatelé budou moct stáhnout aplikaci Portál společnosti pro iOS z App Storu a podle pokynů v aplikaci si zařízení zaregistrovat.
+Uživatelům můžete umožnit, aby si zaregistrovali svoje osobní zařízení pro správu Intune. Tato možnost se označuje jako Přineste si vlastní zařízení neboli BYOD. Po splnění požadavků a přiřazení uživatelských licencí si uživatelé můžou stáhnout aplikaci Portál společnosti z App Storu a podle pokynů v aplikaci si zařízení zaregistrovat.
 
 ## <a name="company-owned-ios-devices"></a>Zařízení s iOSem patřící společnosti
 U organizací, které svým uživatelům zařízení pořizují, Intune podporuje následující způsoby registrace zařízení s iOSem patřící společnosti:

@@ -1,12 +1,12 @@
 ---
-title: "Přiřazení aplikací zařízení s Androidem for Work"
-titlesuffix: Azure portal
-description: "Pomocí tohoto tématu můžete synchronizovat a následně přiřadit aplikaci zařízení s Androidem for Work z obchodu Google Play for Work."
+title: "Přiřazení aplikací zařízením s Androidem for Work"
+titlesuffix: Microsoft Intune
+description: "Naučte se synchronizovat a přiřadit aplikace zařízením s Androidem for Work z obchodu Google Play for Work."
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/13/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,17 @@ ms.assetid: 2f6c06bf-e29a-4715-937b-1d2c7cf663d4
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 248dcc978b5324733d5d640230aba2b6db1a2c62
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 6a0b488120ed62031f8af5b8b65d9e90ea6d252b
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="how-to-assign-apps-to-android-for-work-devices-with-intune"></a>Přiřazení aplikací zařízení s Androidem for Work pomocí Intune
+# <a name="how-to-assign-apps-to-android-for-work-devices-with-intune"></a>Přiřazení aplikací zařízením s Androidem for Work pomocí Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Zařízením s Androidem for Work se aplikace přiřazují jiným způsobem než zařízením se standardním Androidem. Všechny aplikace, které instalujete pro Android for Work, pocházejí z obchodu Google Play for Work. Do tohoto obchodu se přihlásíte, prohlédnete si požadované aplikace a schválíte je.
-Aplikace se pak objeví v uzlu **Licencované aplikace** Azure Portalu. Odsud můžete přiřazení aplikace spravovat stejným způsobem, jakým byste přiřadili jakoukoli jinou aplikaci.
+Android for Work je program pro zařízení s Androidem. Všechny aplikace, které instalujete na zařízení s Androidem for Work, pocházejí z obchodu Google Play for Work. Zařízením s Androidem for Work se aplikace přiřazují jiným způsobem než zařízením se standardním Androidem. Do tohoto obchodu se přihlásíte, prohlédnete si požadované aplikace a schválíte je. Aplikace se pak objeví v uzlu **Licencované aplikace** Azure Portalu. Odsud můžete přiřazení aplikace spravovat stejným způsobem, jakým byste přiřadili jakoukoli jinou aplikaci.
 
 Pokud jste vytvořili své vlastní obchodní aplikace, můžete je také přiřadit tímto způsobem:
 - Zaregistrujte si vývojářský účet Google, který umožňuje publikování aplikací do privátní oblasti obchodu Google Play.

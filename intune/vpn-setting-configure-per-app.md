@@ -1,7 +1,7 @@
 ---
 title: "Nastavení sítě VPN pro jednotlivé aplikace v Microsoft Intune pro zařízení s iOSem"
-titleSuffix: Intune on Azure
-description: "Zadejte spravované aplikace, které mohou používat síť VPN na zařízeních s iOSem spravovaných pomocí Intune."
+titleSuffix: 
+description: "Určete, které spravované aplikace můžou používat vaši virtuální privátní síť (VPN) na zařízeních s iOSem spravovaných pomocí Intune."
 keywords: 
 author: Erikre
 ms.author: erikre
@@ -15,15 +15,15 @@ ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6f7e53f9a440d945d834c17b9db85ed5f6e42229
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 4e01ca43cc42ee7228e42cd3b0176475905ef566
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="set-up-per-app-vpn-in-microsoft-intune-for-ios-devices"></a>Nastavení sítě VPN pro jednotlivé aplikace v Microsoft Intune pro zařízení s iOSem
+# <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Nastavení virtuální privátní sítě (VPN) pro jednotlivé aplikace v Intune pro zařízení s iOSem
 
-Můžete zadat spravované aplikace, které mohou používat vaši virtuální privátní síť (VPN) na zařízeních s iOSem spravovaných pomocí Intune. Když v Intune zadáte síť VPN pro jednotlivé aplikace, koncový uživatel se při přístupu k firemním dokumentům automaticky připojí přes vaši síť VPN.
+Můžete určit, které spravované aplikace můžou používat vaši virtuální privátní síť (VPN) na zařízeních s iOSem spravovaných pomocí Intune. Když v Intune vytvoříte síť VPN pro jednotlivé aplikace, koncový uživatel se při přístupu k firemním dokumentům automaticky připojí přes vaši síť VPN.
 
 ## <a name="prerequisites-for-the-per-app-vpn"></a>Předpoklady pro síť VPN pro jednotlivé aplikace:
 

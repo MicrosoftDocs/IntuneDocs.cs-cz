@@ -1,11 +1,11 @@
 ---
-title: "Registrace zařízení s macOS v Intune"
-titlesuffix: Azure portal
-description: "Zjistěte, jak zaregistrovat zařízení s macOS v Intune."
+title: "Nastavení registrace pro zařízení s macOSem"
+titlesuffix: Microsoft Intune
+description: "Přečtěte si, jak nastavit registraci zařízení s macOSem v Intune."
 keywords: 
 author: ErikjeMS
 ms.author: erikje
-nmanager: dougeby
+manager: dougeby
 ms.date: 10/30/2017
 ms.topic: article
 ms.prod: 
@@ -15,13 +15,13 @@ ms.assetid: 46429114-2e26-4ba7-aa21-b2b1a5643e01
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f896ebd51f989c0e441043d320247946cdb8997b
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: 77a1551321079765f00f0e35d57211ae4c99e5a6
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="enroll-macos-devices-in-intune"></a>Registrace zařízení s macOS v Intune
+# <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Nastavení registrace pro zařízení s macOSem v Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -37,6 +37,13 @@ Před nastavením registrace zařízení s macOS zajistěte splnění následuj�
 - [Konfigurace aplikace Portál společnosti](company-portal-app.md)
 - Přiřazení uživatelských licencí na [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Získání certifikátu Apple MDM push certificate](apple-mdm-push-certificate-get.md)
+
+## <a name="user-owned-ios-devices-byod"></a>Zařízení se systémem iOS vlastněné uživatelem (BYOD)
+
+Uživatelům můžete umožnit, aby si zaregistrovali svoje osobní zařízení pro správu Intune. Tato možnost se označuje jako Přineste si vlastní zařízení neboli BYOD. Po splnění požadavků a přiřazení uživatelských licencí si uživatelé můžou stáhnout aplikaci Portál společnosti pro macOS z App Storu a podle pokynů v aplikaci si zařízení zaregistrovat.
+
+## <a name="company-owned-ios-devices"></a>Zařízení s iOSem patřící společnosti
+U organizací, které svým uživatelům zařízení pořizují, Intune podporuje registraci zařízení s macOSem patřících společnosti pomocí účtu [správce registrace zařízení](device-enrollment-manager-enroll.md).
 
 ## <a name="set-up-macos-enrollment"></a>Nastavení registrace zařízení s macOS
 
