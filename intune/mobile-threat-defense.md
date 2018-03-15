@@ -3,8 +3,8 @@ title: "Ochrana před mobilními hrozbami s Intune"
 titleSuffix: Azure portal
 description: "Přístup k prostředkům společnosti můžete chránit podle rizika zařízení."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: msmimart
+ms.author: mimart
 manager: dougeby
 ms.date: 11/28/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: ac77b590-a7ec-45a0-9516-ebf5243b6210
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f1d5957acde86b3621009e5c38df42bc894a413c
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: da0f21a822608052846200e13ef37ca4606e6079
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Integrace ochrany před mobilními hrozbami do Intune
 
@@ -34,7 +34,7 @@ V minulosti byly společnosti aktivní při ochraně počítačů před útoky, 
 
 ## <a name="how-the-intune-mobile-threat-defense-connectors-work"></a>Jak fungují konektory Intune Mobile Threat Defense?
 
-Konektor chrání firemní prostředky tím, že mezi Intune a vaším dodavatelem zvoleného konektoru Mobile Threat Defense vytvoří komunikační kanál. Partneři Intune Mobile Threat Defense nabízejí intuitivní a snadno nasaditelné aplikace pro mobilní zařízení, která aktivně kontrolují a analyzují informace o hrozbách, aby je sdílely s Intune pro účely nahlášení nebo vynucení. 
+Konektor chrání firemní prostředky tím, že mezi Intune a vaším dodavatelem zvoleného konektoru Mobile Threat Defense vytvoří komunikační kanál. Partneři Intune Mobile Threat Defense nabízejí intuitivní a snadno nasaditelné aplikace pro mobilní zařízení, které aktivně kontrolují a analyzují informace o hrozbách, aby je sdílely s Intune pro účely nahlášení nebo vynucení. 
 
 Pokud třeba připojená aplikace Mobile Threat Defense nahlásí dodavateli Mobile Threat Defense, že telefon ve vaší síti je právě připojený k síti, která se dá snadno napadnout útokem třetí osobou (man-in-the-middle), tyto informace se nasdílí a zařadí do příslušné úrovně rizika (nízké, střední nebo vysoké), která se dá pak porovnat s vaší nakonfigurovanou úrovní rizika v Intune, aby se zjistilo, jestli se má při ohrožení zařízení odvolat přístup k určitým zvoleným zdrojům.
 

@@ -1,6 +1,7 @@
 ---
-title: "Zprávy Portálu společnosti, které uživatelé můžou vidět v Androidu"
-description: "Tento článek popisuje zprávy aplikace Portál společnosti, které se mohou zobrazit koncovým uživatelům Intune."
+title: "Zprávy Portálu společnosti, které se můžou uživatelům zobrazit na zařízeních"
+titlesuffix: Microsoft Intune
+description: "Vysvětlení různých zpráv, které se můžou koncovým uživatelům zobrazit v aplikaci Portál společnosti"
 keywords: 
 author: barlanmsft
 ms.author: barlan
@@ -13,11 +14,11 @@ ms.technology:
 ms.assetid: 3df993aa-48c5-4799-b68d-c85fe4f7b02c
 ms.reviewer: aanavath
 ms.suite: ems
-ms.openlocfilehash: 58468a81d0ec3e7bfc051a6edc6a09ef1c5e62a2
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: e78d43cf1cb96575ebc8d8143b7b4fc1103a9bd1
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Vysvětlení zpráv aplikace Portál společnosti pro koncové uživatele
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 02/09/2018
 > [!NOTE]
 > Následující informace se vztahují jenom na zařízení s Androidem 6.0 a novějším.
 
-V různých fázích procesu registrace uvidí koncoví uživatelé dvě odlišné zprávy, které mohou být příčinou znepokojení.
+Tady najdete vysvětlení různých zpráv, které se můžou koncovým uživatelům zobrazit v aplikaci Portál společnosti. Tyto zprávy aplikace se běžně zobrazují v různých okamžicích procesu registrace. Zjistěte, kde se tyto zprávy objevují, co znamenají a co se stane, když uživatel přístup zamítne. Také se dozvíte, jak zprávy nejlépe vysvětlit uživatelům.
 
 - __Povolit pro Portál společnosti telefonování a správu telefonních hovorů?__
 - __Povolit pro Portál společnosti přístup k fotkám, médiím a souborům ve vašem zařízení?__
@@ -81,7 +82,7 @@ Nasměrujte uživatele na článek [Registrace zařízení s Androidem v Intune]
 Zpráva **Povolit pro Portál společnosti přístup k fotkám, médiím a souborům ve vašem zařízení?** se zobrazí, když uživatel klepnutím na **Odeslat data** odešle protokoly svému správci IT.
 
 ### <a name="what-it-means"></a>Význam
-Přijetím této výzvy umožní uživatel zápis datových protokolů na SD kartu zařízení a jejich přesun pomocí USB kabelu.   
+Přijetím této výzvy umožní uživatel zápis datových protokolů na SD kartu zařízení. Také se tím umožní přesun těchto protokolů pomocí USB kabelu.   
 
 > [!NOTE]
 > **Aplikace Portál společnosti nikdy nemá přístup k fotografiím, médiím a souborům uživatele!** Text zprávy je pod kontrolu Googlu a nejde ho změnit.
@@ -89,7 +90,7 @@ Přijetím této výzvy umožní uživatel zápis datových protokolů na SD kar
 ### <a name="what-happens-if-users-deny-access"></a>Co se stane, když uživatel přístup zamítne
 Pokud uživatel přístup zamítne, může pořád odesílat datové protokoly e-mailem, ale tyto protokoly se nezkopírují na SD kartu zařízení.
 
-Při druhém přihlášení k aplikaci Portál společnosti po zamítnutí přístupu se ve zprávě zobrazí zaškrtávací políčko **Příště se už neptat**, takže uživatel může určit, že se tato zpráva už nebude zobrazovat. Pokud uživatel povolí přístup, ale později ho zamítne, zobrazí se tato zpráva při příštím pokusu o odeslání protokolů. Pokud se uživatel rozhodne povolit přístup později, může přejít na **Nastavení** > **Aplikace** > **Portál společnosti** > **Oprávnění** > **Úložiště** a toto oprávnění zapnout.
+Při druhém přihlášení k aplikaci Portál společnosti po zamítnutí přístupu se ve zprávě zobrazí zaškrtávací políčko **Příště se už neptat**, takže uživatel může určit, že se tato zpráva už nebude zobrazovat. Pokud uživatel povolí přístup, ale později ho zamítne, zobrazí se tato zpráva při příštím pokusu o odeslání protokolů. Pokud se ale uživatel rozhodne povolit přístup později, může přejít na **Nastavení** > **Aplikace** > **Portál společnosti** > **Oprávnění** > **Úložiště** a toto oprávnění zapnout.
 
 
 ### <a name="how-to-explain-this-to-your-users"></a>Jak to vysvětlit uživatelům
@@ -101,7 +102,7 @@ Nasměrujte uživatele na článek [Odeslání protokolů správci IT e-mailem](
 Pokud jste aplikaci Portál společnosti nepřidali na seznam **Povolených aplikací** nebo **Aplikací s výjimkou** a uživatel se pokusí přihlásit, přihlášení selže. Zobrazí se tato zpráva:
 
 > **Podpora vaší společnosti vám musí udělit přístup k prostředkům společnosti**  
-> Vaše společnost k ochraně vašeho zařízení používá zásady Windows Information Protection. Podpora společnosti k nim musí Portálu společnosti povolit přístup.
+> Vaše společnost k ochraně vašeho zařízení používá zásady Windows Information Protection. Podpora společnosti musí Portálu společnosti povolit k těmto prostředkům přístup.
 
 ### <a name="what-it-means"></a>Význam
 

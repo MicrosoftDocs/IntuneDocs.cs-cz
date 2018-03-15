@@ -1,31 +1,30 @@
 ---
-title: "Nastavení omezení pro zařízení s Androidem v Intune"
-titlesuffix: Azure portal
+title: "Nastavení omezení pro zařízení s Androidem v Microsoft Intune"
+titlesuffix: 
 description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s Androidem."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 12/11/2017
+ms.date: 3/1/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 6bdf714a-5d93-485c-8b52-513635c60cb6
-ms.reviewer: heenamac
+ms.reviewer: ayesham
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 559550860d0882b20a005a5d0957be761978cbe6
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: d939d86f6ccd7f9851cfc52f1080fddaeee6a947
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="android-and-samsung-knox-standard-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení zařízení používajících Android a Samsung Knox Standard v Microsoft Intune
+# <a name="microsoft-intune-android-and-samsung-knox-standard-device-restriction-settings"></a>Nastavení omezení zařízení používajících Android a Samsung Knox Standard pro Microsoft Intune 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Tato nastavení spolu se zásadami omezení pro zařízení s Androidem se používají ke konfiguraci zařízení v organizaci.
+Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s Androidem.
 
 >[!TIP]
 >Pokud požadovaná nastavení nejsou k dispozici, možná budete moct zařízení nakonfigurovat pomocí [vlastního profilu](custom-settings-android.md).
@@ -111,7 +110,7 @@ Můžete také kliknout na **Import** a získat seznam ze souboru csv. Použijte
 ## <a name="allow-or-block-apps"></a>Povolení nebo blokování aplikací
 
 Tato nastavení můžete použít k určení aplikací instalovatelných nebo spustitelných jenom na zařízeních se spuštěným zabezpečením Samsung Knox Standard.
-Navíc můžete také určit nainstalované aplikace, které budou uživateli zařízení skryty. Uživatelé tyto aplikace nemůžou spouštět.
+Navíc můžete také určit nainstalované aplikace, které se uživateli zařízení skryjí. Uživatelé tyto aplikace nemůžou spouštět.
 
 - **Aplikace, které je možné nainstalovat (pouze Samsung Knox Standard)**
 - **Aplikace, jejichž spouštění je blokováno (pouze Samsung Knox Standard)**

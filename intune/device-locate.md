@@ -14,18 +14,18 @@ ms.technology:
 ms.assetid: 3e544286-12ad-4a3a-86f8-d2cf16940b1f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 90b1321c0df49f446bfdeccbacdfd5642396dacd
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 864d528091de7a6113485347304b0dc254af2c7d
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="locate-lost-or-stolen-ios-devices-with-intune"></a>Vyhledání ztracených nebo odcizených zařízení s iOSem přes Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Akce **Najít zařízení** umožňuje zobrazit polohu ztraceného nebo odcizeného zařízení s iOSem na mapě. Musí se jednat o zařízení s iOSem ve vlastnictví firmy, které je zaregistrované prostřednictvím programu DEP a je v režimu dohledu. Než tuto akci použijete, musíte pro zařízení zapnout [režim ztráty](/intune-azure/manage-devices/lost-mode.md).
+Akce **Najít zařízení** umožňuje zobrazit polohu ztraceného nebo odcizeného zařízení s iOSem na mapě. Musí se jednat o zařízení s iOSem ve vlastnictví firmy, které je zaregistrované prostřednictvím programu DEP a je v režimu dohledu. Než tuto akci použijete, musíte pro zařízení zapnout [režim ztráty](device-lost-mode.md).
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
@@ -37,11 +37,11 @@ Akce **Najít zařízení** umožňuje zobrazit polohu ztraceného nebo odcizen�
 
 ## <a name="how-to-locate-a-lost-or-stolen-device"></a>Vyhledání ztraceného nebo odcizeného zařízení
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V okně **Intune** zvolte **Zařízení**.
-4. V okně **Zařízení a skupiny** zvolte **Všechna zařízení**.
-5. V seznamu zařízení, která spravujete, zvolte zařízení s iOSem a potom zvolte vzdálenou akci **Najít zařízení**.
+4. V okně **Zařízení** zvolte **Všechna zařízení**.
+5. V seznamu zařízení, která spravujete, zvolte zařízení s iOSem, zvolte **Více** a pak zvolte vzdálenou akci **Najít zařízení**.
 6. Poloha nalezeného zařízení se zobrazí v okně **Najít zařízení**.
     ![Okno Najít zařízení](./media/locate-device.png)
 
@@ -58,4 +58,4 @@ Akce **Najít zařízení** umožňuje zobrazit polohu ztraceného nebo odcizen�
 
 ## <a name="next-steps"></a>Další kroky
 
-Stav akce, kterou jste spustili, zobrazíte tak, že v okně **Zařízení a skupiny** zvolíte **Akce zařízení**.
+Stav akce, kterou jste spustili, zobrazíte tak, že v okně **Zařízení** zvolíte **Akce zařízení**.

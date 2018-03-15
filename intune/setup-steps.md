@@ -1,9 +1,9 @@
 ---
-title: "Nastavení Intune"
+title: "Nastavení Microsoft Intune"
 description: "Požadavky a předpoklady k tomu, abyste se vaše předplatné Intune dalo začít používat"
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 01/24/2018
 ms.topic: get-started-article
@@ -14,17 +14,17 @@ ms.assetid: d158503c-1276-422b-ab81-5f66c1cd7e7a
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a1203cf22fad93f245508284d93024df40e11b9a
-ms.sourcegitcommit: 4509039cbfd4d450324a3475fb5841906720baa1
+ms.openlocfilehash: d2abd140dc83cffa11777ab75f7fb40e76fc1b83
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="set-up-intune"></a>Nastavení Intune
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
-Tento postup nastavení vám umožní povolit správu mobilních zařízení (MDM). Abyste mohli dát uživatelům přístup k firemním prostředkům nebo spravovat nastavení na jejich zařízeních, musí být jejich zařízení spravovaná.
+Tento postup nastavení vám umožní povolit správu mobilních zařízení (MDM) pomocí Intune. Abyste mohli dát uživatelům přístup k firemním prostředkům nebo spravovat nastavení na jejich zařízeních, musí být jejich zařízení spravovaná.
 
 Některé kroky, například nastavení předplatného Intune a nastavení autority pro správu mobilních zařízení, jsou ve většině situací povinné. Jiné kroky, například konfigurace vlastní domény nebo přidání aplikací, jsou nepovinné a závisejí na potřebách vaší firmy.
 

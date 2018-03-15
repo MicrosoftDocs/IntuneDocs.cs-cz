@@ -1,12 +1,12 @@
 ---
-title: "Přidání obchodních aplikací pro Windows do Intune"
-titlesuffix: Azure portal
-description: "Podívejte se, jak do Intune přidat obchodní aplikace pro Windows."
+title: "Přidání obchodních aplikací pro Windows do Microsoft Intune"
+titlesuffix: 
+description: "Zjistěte, jak přidat obchodní aplikace pro Windows do Microsoft Intune."
 keywords: 
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/3/2017
+ms.date: 02/16/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,16 +15,17 @@ ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 72e0a9011ba6dda324ace96fb2dbefb42c608641
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: b687b71f9d264364ff758fdd46b0739465c16865
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-add-windows-line-of-business-lob-apps-to-microsoft-intune"></a>Přidání obchodních aplikací pro Windows do Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
+Obchodní aplikace (LOB) je aplikace, kterou přidáte z instalačního souboru aplikace. Tyto typy aplikací obvykle vznikají interně. Následující kroky obsahují pokyny k přidání obchodní aplikace pro Windows do Microsoft Intune.
 
 ## <a name="step-1---specify-the-software-setup-file"></a>Krok 1 – určení instalačního souboru softwaru
 
@@ -68,6 +69,10 @@ ms.lasthandoff: 01/30/2018
 ## <a name="step-5---update-a-line-of-business-app"></a>Krok 5 – aktualizace obchodní aplikace
 
 [!INCLUDE[shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)]
+
+## <a name="configuring-a-self-updating-mobile-msi-app-to-ignore-the-version-check-process"></a>Konfigurace automaticky aktualizované mobilní aplikace MSI na ignorování procesu kontroly verzí
+
+Známou automaticky aktualizovanou mobilní aplikaci MSI můžete nakonfigurovat tak, aby ignorovala proces kontroly verzí. Některé aplikace založené na instalační službě MSI automaticky aktualizuje vývojář aplikace. Pro tyto automaticky aktualizované aplikace MSI můžete v okně **Informace o aplikaci** nakonfigurovat nastavení **Ignorovat verzi aplikace**. Po přepnutí tohoto nastavení na **Ano** nebude Microsoft Intune vynucovat verzi aplikace instalovanou na klientovi Windows. Tato možnost je užitečná, když chcete předejít konfliktu časování. K tomuto typu konfliktu časování může například dojít, když aplikaci automaticky aktualizuje vývojář a současně Intune. Jak vývojář, tak Intune můžou vynucovat verzi aplikace na klientovi Windows, což může způsobit konflikt.
 
 ## <a name="next-steps"></a>Další kroky
 

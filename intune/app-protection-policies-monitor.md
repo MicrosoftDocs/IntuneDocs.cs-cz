@@ -1,7 +1,7 @@
 ---
 title: "Jak monitorovat zásady ochrany aplikací"
-titleSuffix: Azure portal
-description: "Podívejte se, kolik uživatelů má přiřazené zásady. Přechodem k podrobnostem zjistíte další informace."
+titleSuffix: Microsoft Intune
+description: "Monitorujte stav dodržování zásad správy mobilních aplikací v Intune."
 keywords: 
 author: erikre
 ms.author: erikre
@@ -15,11 +15,11 @@ ms.assetid: 9b0afb7d-cd4e-4fc6-83e2-3fc0da461d02
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f4dae7edb99dae26c7498e55d5eead3cee2e9a8f
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: fb777bb8f04adb708f8c01c6f0bfcd08f7c663f5
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Jak monitorovat zásady ochrany aplikací
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -27,7 +27,7 @@ ms.lasthandoff: 01/25/2018
 Toto téma popisuje, [jak vytvořit zásady ochrany aplikací](https://docs.microsoft.com/intune-classic/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune) na klasickém portálu Intune, **pokud nejste na Azure Portalu**.
 
 
-Můžete monitorovat stav dodržování zásad správy mobilních aplikací (MAM), které jste použili u uživatelů v okně ochrany aplikace Intune na portálu [Azure Portal](https://portal.azure.com). Budete moct vyhledat informace o uživatelích dotčených zásadami MAM, stavu dodržování zásad a všech problémech, se kterými se uživatelé mohou setkat.
+Monitorujte stav dodržování zásad správy mobilních aplikací (MAM), které jste použili u uživatelů v podokně ochrany aplikace Intune na portálu [Azure Portal](https://portal.azure.com). Najděte informace o uživatelích dotčených zásadami MAM, stavu dodržování zásad a všech problémech, se kterými se uživatelé můžou setkat.
 
 Stav dodržování zásad můžete monitorovat na třech místech:
 
@@ -39,12 +39,12 @@ Stav dodržování zásad můžete monitorovat na třech místech:
 
 ## <a name="summary-view"></a>Souhrnné zobrazení
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Mobilní aplikace**.
-4. V úloze **Mobilní aplikace** zvolte **Monitorovat** > **Stav uživatele ochrany aplikací**, abyste si zobrazili souhrnné zobrazení:
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. Na stránce **Intune** zvolte **Mobilní aplikace**.
+4. V úloze **Mobilní aplikace** zvolte **Monitorovat** > **Stav ochrany aplikace** a zobrazte tak souhrnné zobrazení:
 
-![Dlaždice souhrnu okna Správa mobilních aplikací Intune](./media/app-protection-user-status-summary.png)
+![Dlaždice souhrnu podokna Správa mobilních aplikací Intune](./media/app-protection-user-status-summary.png)
 
 -   **Uživatelé**: celkový počet uživatelů ve společnosti, kteří používají aplikaci spojenou se zásadou v pracovním kontextu.
 
@@ -52,7 +52,7 @@ Stav dodržování zásad můžete monitorovat na třech místech:
 
 -   **ŽÁDNÉ ZÁSADY**: počet uživatelů, kteří používají aplikaci, na kterou není v pracovním kontextu zamířena žádná zásada. Tyto uživatele případně můžete k zásadě přidat.
     > [!NOTE]
-    > Pokud máte pro každou platformu víc zásad, bude uživatel považován za spravovaného zásadou, pokud je mu přiřazena aspoň jedna zásada.
+    > Pokud máte pro každou platformu více zásad, bude se uživatel považovat za spravovaného zásadou, pokud má přiřazenou minimálně jednu zásadu.
 
 - **Uživatelé označení příznakem:** Počet uživatelů, kteří mají problémy. V současnosti jsou v části **Uživatelé označení příznakem** jenom uživatelé zařízení, u kterých byla zrušena softwarová omezení (zařízení s jailbreakem).
 
@@ -61,7 +61,7 @@ Stav dodržování zásad můžete monitorovat na třech místech:
 Pokud se chcete podívat na podrobnosti přehledu, zvolte dlaždici **Stav uživatele** (podle platformy operačního systému) a pak dlaždici **Uživatelé označení příznakem**.
 
 ### <a name="user-status"></a>Stav uživatele
-Můžete vyhledat konkrétního uživatele a zkontrolovat u něj stav dodržování předpisů. V okně **Vytváření sestav aplikace** se zobrazují následující informace o vybraném uživateli:
+Můžete vyhledat konkrétního uživatele a zkontrolovat u něj stav dodržování předpisů. V podokně **Vytváření sestav aplikace** se zobrazují následující informace o vybraném uživateli:
 - Zařízení přidružená k účtu uživatele
 
 - Aplikace se zásadou MAM u zařízení
@@ -73,17 +73,17 @@ Můžete vyhledat konkrétního uživatele a zkontrolovat u něj stav dodržová
   - **Není zaregistrováno:** Zásada byla u uživatele nasazena, ale aplikace od té doby nebyla použita v pracovním kontextu.
 
 >[!NOTE]
-> Pokud uživatel, kterého jste hledali, nemá nasazené zásady MAM, zobrazí se zpráva, že uživatel není cílem žádné zásady MAM.
+> Pokud uživatel, kterého jste hledali, nemá nasazené zásady MAM, zobrazí se zpráva, že na uživatele není zacílená žádná zásada MAM.
 
 Pokud chcete zobrazit vytváření sestav pro uživatele, postupujte takto:
 
 1.  Uživatele vyberte tak, že zvolíte dlaždici **Souhrn**.
 
-    ![Snímek obrazovky 3](./media/MAM-reporting-6.png)
+    ![Snímek obrazovky se zvýrazněnou dlaždicí souhrnu v okně Nastavení ve správě mobilních aplikací Intune](./media/MAM-reporting-6.png)
 
-2. Otevře se okno **Vytváření sestav aplikace**. Zvolte **Vybrat uživatele** a najděte uživatele služby Azure Active Directory.
+2. Otevře se podokno **Vytváření sestav aplikace**. Zvolte **Vybrat uživatele** a najděte uživatele služby Azure Active Directory.
 
-    ![Možnost výběru uživatele v okně Vytváření sestav aplikace](./media/MAM-reporting-2.png)
+    ![Snímek obrazovky se zvýrazněnou možností Vybrat uživatele v podokně pro vytváření sestav aplikace](./media/MAM-reporting-2.png)
 
 3. Vyberte uživatele ze seznamu. Zobrazí se podrobné informace o konkrétním uživateli a stavu dodržování předpisů.
 
@@ -94,7 +94,7 @@ V podrobném přehledu se zobrazí chybová zpráva, otevíraná aplikace v okam
 
 Najdete tady stejné sestavy jako v Podrobném zobrazení, ale i další sestavy, které vám pomůžou se stavem dodržování zásad MAM:
 
-![Snímek obrazovky 4](./media/MAM-reporting-7.png)
+![Snímek obrazovky se zvýrazněnými dvěma sestavami dostupnými v podokně Nastavení](./media/MAM-reporting-7.png)
 
 -   **Sestava uživatele ochrany aplikací:** Obsahuje stejné informace, které najdete v sestavě **Stav uživatele** v části Podrobné zobrazení výše.
 
@@ -110,7 +110,7 @@ Najdete tady stejné sestavy jako v Podrobném zobrazení, ale i další sestavy
 
         -   Všechny aplikace jsou zaregistrované, ale nejsou u nich použité žádné zásady MAM.
 
-![Snímek obrazovky 2](./media/MAM-reporting-4.png)
+![Snímek obrazovky zobrazující okno se sestavami aplikace uživatele s tabulkou podrobností pro tři registrované aplikace](./media/MAM-reporting-4.png)
 
 ## <a name="table-grouping"></a>Seskupování tabulek
 
@@ -125,13 +125,13 @@ Všechny aktivity ochrany aplikací můžete vyexportovat do jediného souboru .
 
 Pokud chcete vygenerovat sestavu ochrany aplikací, postupujte takto:
 
-1. V okně správy mobilních aplikací Intune zvolte Sestava ochrany aplikací.
+1. V podokně správy mobilních aplikací Intune zvolte **Sestava ochrany aplikací**.
 
-    ![Snímek obrazovky 6](./media/app-protection-report-csv-2.png)
+    ![Snímek obrazovky se zvýrazněným odkazem na stažení App Protection v podokně pro správu mobilních aplikací Intune](./media/app-protection-report-csv-2.png)
 
 2. Zvolte Ano, aby se vaše sestava uložila, a pak zvolte Uložit jako a vyberte složku, do které chcete sestavu uložit.
 
-    ![Snímek obrazovky 7](./media/app-protection-report-csv-1.png)
+    ![Snímek obrazovky pole pro potvrzení uložení sestavy](./media/app-protection-report-csv-1.png)
 
 ## <a name="see-also"></a>Viz taky
 [Správa přenosu dat mezi aplikacemi pro iOS](data-transfer-between-apps-manage-ios.md)

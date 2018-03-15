@@ -1,12 +1,12 @@
 ---
-title: "Obnovení továrního nastavení nebo odebrání firemních dat v zařízení pomocí Intune"
-titlesuffix: Azure portal
+title: "Obnovení továrního nastavení nebo odebrání firemních dat v zařízení pomocí Microsoft Intune"
+titlesuffix: 
 description: "Zjistěte, jak můžete v zařízení odebrat firemní data nebo obnovit tovární nastavení."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: dougeby
-ms.date: 01/12/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 46cb8510e80db7092de472a769fb5dc78eb5e167
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: b56f7d7bcf576a0b2342c7c5394c08661b6a45fd
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Odebrání zařízení pomocí obnovení továrního nastavení nebo odebrání firemních dat
 
@@ -36,10 +36,10 @@ Zařízení, která už nepotřebujete, která využíváte k jinému účelu ne
 ### <a name="to-factory-reset-a-device"></a>Jak u zařízení obnovit tovární nastavení
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Zařízení a skupiny** zvolte **Všechna zařízení**.
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V okně **Zařízení** zvolte **Všechna zařízení**.
 4. Zvolte název zařízení, jehož tovární nastavení chcete obnovit.
-5. V okně, ve kterém se zobrazuje název zařízení zvolte **Obnovení továrního nastavení**.
+5. V okně, ve kterém se zobrazuje název zařízení, zvolte **Obnovení továrního nastavení**.
 6. U Windows 10 verze 1709 nebo vyšší je k dispozici další možnost – Zachovat stav registrace a uživatelský účet. 
     
     |Při obnovení továrního nastavení se zachová|Nezachová se|
@@ -123,8 +123,8 @@ Při odebrání firemních dat v zařízení Android for Work se odeberou všech
 ### <a name="to-remove-company-data"></a>Jak odebrat firemní data
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Zařízení a skupiny** zvolte **Všechna zařízení**.
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V okně **Zařízení** zvolte **Všechna zařízení**.
 4. Zvolte název zařízení, ze kterého chcete odebrat firemní data.
 5. V okně, kde se zobrazuje název zařízení, zvolte **Odebrat firemní data**, a volbou možnosti **Ano** tuto akci potvrďte.
 
@@ -132,11 +132,11 @@ Pokud je zařízení zapnuté a připojené, trvá méně než 15 minut, než se
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Odstranění zařízení z portálu služby Azure Active Directory
 
-Kvůli komunikačním problémům nebo ztraceným zařízením můžete potřebovat odstranit zařízení ze služby Azure Active Directory (AD). Příkazem k odstranění se zařízení neodebere ze správy, příkazem **Odstranit** ale můžete z portálu Azure Portal odebrat záznamy zařízení, o kterých víte, že jsou nedosažitelná a je nepravděpodobné, že by se službou Azure znovu komunikovala.
+Kvůli komunikačním problémům nebo ztraceným zařízením můžete potřebovat odstranit zařízení ze služby Azure Active Directory (AD). Příkazem k odstranění se zařízení neodebere ze správy, příkazem **Odstranit** ale můžete z Azure Portalu odebrat záznamy zařízení, o kterých víte, že jsou nedosažitelná a je nepravděpodobné, že by se službou Azure znovu komunikovala.
 
-1.  Přihlaste se ke službě [Azure Active Directory na portálu Azure Portal](http://aka.ms/accessaad) pomocí přihlašovacích údajů správce. Můžete se také přihlásit k [portálu Office 365](https://portal.office.com) a pak pomocí odkazu na levé straně stránky zvolit **Správce** &gt; **Azure AD**.
+1.  Přihlaste se ke službě [Azure Active Directory na Azure Portalu](http://aka.ms/accessaad) pomocí přihlašovacích údajů správce. Můžete se také přihlásit k [portálu Office 365](https://portal.office.com) a pak pomocí odkazu na levé straně stránky zvolit **Centra pro správu** &gt; **Azure AD**.
 3.  Pokud nemáte předplatné Azure, vytvořte ho. Pokud máte placený účet, neměli byste potřebovat platební kartu ani zadání platby (zvolte odkaz pro předplatné **Zdarma zaregistrovat službu Azure Active Directory**).
-4.  Vyberte možnost **Active Directory** a potom vyberte svoji organizaci.
+4.  Vyberte možnost **Azure Active Directory** a potom vyberte svoji organizaci.
 5.  Vyberte kartu **Uživatelé** .
 6.  Vyberte uživatele, jehož zařízení chcete odstranit.
 7.  Zvolte **Zařízení**.

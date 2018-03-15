@@ -1,6 +1,7 @@
 ---
-title: "Registrace zařízení s Windows pomocí programu Windows AutoPilot Deployment"
-description: "Zjistěte, jak registrovat nová zařízení s Windows 10 pomocí programu Windows AutoPilot Deployment."
+title: "Registrace zařízení pomocí programu Windows AutoPilot Deployment"
+titleSuffix: Microsoft Intune
+description: "Zjistěte, jak registrovat zařízení s Windows 10 pomocí programu Windows AutoPilot Deployment."
 keywords: 
 author: ErikjeMS
 ms.author: erikje
@@ -11,13 +12,13 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: d1276818b6c35602f768a7c10074aa6388b01547
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: dfdc712f3cf1b9ce928574ee9e9078c80bd696bb
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="enroll-windows-devices-using-windows-autopilot-deployment-program"></a>Registrace zařízení s Windows pomocí programu Windows AutoPilot Deployment
+# <a name="enroll-windows-devices-by-using-the-windows-autopilot-deployment-program"></a>Registrace zařízení s Windows pomocí programu Windows AutoPilot Deployment
 Program Windows AutoPilot Deployment zjednodušuje zřizování zařízení. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a AutoPilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s AutoPilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace atd. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows AutoPilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
 
 ## <a name="prerequisites"></a>Požadavky

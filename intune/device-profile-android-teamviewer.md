@@ -1,12 +1,11 @@
 ---
-title: "Použití TeamVieweru ke vzdálené správě zařízení"
-titlesuffix: Azure portal
-description: "Přečtěte si, jak vzdáleně spravovat zařízení pomocí TeamVieweru."
+title: "Vzdálená správa zařízení v Microsoft Intune – Azure | Microsoft Docs"
+description: "Podívejte se na role, které jsou potřeba pro použití TeamVieweru, jak nainstalovat konektor TeamVieweru a přečtěte si podrobné pokyny ke vzdálené správě zařízení pomocí Microsoft Intune na portálu Azure Portal."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 2/14/2018
+ms.date: 03/01/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,65 +13,52 @@ ms.technology:
 ms.assetid: 72cdd888-efca-46e6-b2e7-fb9696bb2fba
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0219993e0322be06dbf9b26707789332039001f1
-ms.sourcegitcommit: cccbb6730a8c84dc3a62093b8910305081ac9d24
+ms.openlocfilehash: 64f6dd6bf787a6f590655f03ac8f04312836e0b5
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="provide-remote-assistance-for-intune-managed-devices"></a>Poskytování vzdálené pomoci pro zařízení spravovaná pomocí Intune
+# <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Vzdálená správa zařízení s Intune pomocí TeamVieweru
 
-Intune vám prostřednictvím softwaru [TeamViewer](https://www.teamviewer.com) (kupuje se zvlášť) umožňuje poskytovat vzdálenou pomoc uživatelům zařízení, která spravujete. Informace v tomto tématu vám pomůžou začít tuto možnost využívat.
+Zařízení spravovaná pomocí Intune je možné spravovat vzdáleně pomocí [TeamVieweru](https://www.teamviewer.com). TeamViewer je program od jiného výrobce, který se kupuje samostatně. V tomto tématu můžete vidět, jak nakonfigurovat TeamViewer v rámci Intune a vzdáleně spravovat zařízení. 
 
-## <a name="before-you-start"></a>Než začnete
+## <a name="prerequisites"></a>Požadavky
 
-### <a name="supported-devices"></a>Podporovaná zařízení
+- Používejte podporované zařízení. Vzdálenou správu podporují zařízení s Androidem nebo s Windows spravovaná přes Intune. TeamViewer nemusí podporovat Windows Holographic (HoloLens), Windows Team (Surface Hub) nebo Windows 10 S. Informace týkající se aktualizací podpory najdete v části [TeamViewer](https://www.teamviewer.com).
 
-Vzdálenou správu podporují zařízení s Androidem nebo s Windows spravovaná přes Intune.
+- Správce Intune musí mít na portálu Azure Portal tyto [role Intune](role-based-access-control.md):  
 
->[!NOTE]
->Software TeamViewer nepodporuje Windows Holographic (HoloLens), Windows Team (Surface Hub) a Windows 10 S.
+    - **Aktualizovat vzdálenou pomoc**: Umožňuje správcům upravit nastavení konektoru TeamVieweru.
+    - **Požádat o vzdálenou pomoc**: Umožňuje správcům zahájit pro libovolného uživatele novou relaci vzdálené pomoci. Uživatele s touto rolí neomezuje žádná role Intune, která je v daném rozsahu. Uživatelé nebo skupiny zařízení, kteří mají přiřazenou roli Intune v rámci rozsahu, si také můžou vyžádat vzdálenou pomoc. 
 
+- Účet [TeamViewer](https://www.teamviewer.com) s přihlašovacími údaji
 
+Když použijete TeamViewer, umožníte Konektoru pro TeamViewer služby Intune vytvářet relace TeamVieweru, číst data služby Active Directory a uložit přístupový token účtu TeamVieweru.
 
-### <a name="required-permissions"></a>Požadovaná oprávnění
+## <a name="configure-the-teamviewer-connector"></a>Konfigurace konektoru pro TeamViewer
 
-Zkontrolujte, jestli má uživatel portálu Azure Portal přiřazená jako [role Intune](https://docs.microsoft.com/intune-azure/access-control/role-based-access-control) následující oprávnění:
-- Aby mohl správce změnit nastavení Konektoru pro TeamViewer, udělte mu oprávnění **Aktualizovat Vzdálenou pomoc**.
-- Aby mohl správce iniciovat novou žádost o vzdálenou pomoc, udělte mu oprávnění **Požádat o Vzdálenou pomoc**. Uživatelé s oprávněním **Požádat o Vzdálenou pomoc** můžou požádat o zahájení relace pro libovolného uživatele. Neomezuje je při tom žádný rozsah přiřazení rolí v Intune. Rozsahy přiřazení rolí Intune neomezují zařízení nebo uživatele, pro které lze iniciovat žádosti o Vzdálenou pomoc.
+Abyste mohli poskytovat vzdálenou pomoc pro zařízení, nakonfigurujte si s použitím následujícího postupu konektor pro TeamViewer a Intune:
 
->[!NOTE]
->Tím, že povolíte TeamViewer, umožníte Konektoru pro TeamViewer služby Intune vytvářet relace TeamVieweru, číst data služby Active Directory a ukládat přístupový token účtu TeamVieweru.
+1. Na portálu [Azure Portal](https://portal.azure.com) vyberte **Všechny služby** a vyhledejte **Microsoft Intune**.
+2. V **Microsoft Intune** vyberte **Zařízení** a potom vyberte **Konektor pro TeamViewer**.
+3. Vyberte **Připojit** a přijměte podmínky licenční smlouvy.
+4. Zvolte **Přihlásit se k TeamVieweru pro autorizaci**.
+5. Otevře se webová stránka TeamVieweru. Zadejte přihlašovací údaje pro svoji licenci TeamVieweru a pak se **přihlaste**.
 
-### <a name="configure-the-intune-teamviewer-connector"></a>Konfigurace Konektoru pro TeamViewer služby Intune
+## <a name="remotely-administer-a-device"></a>Vzdálená správa zařízení
 
-Než budete moct poskytovat vzdálenou pomoc pro zařízení, je nutné pomocí následujících kroků nakonfigurovat konektor Intune pro TeamViewer:
+Po konfiguraci konektoru jste připravení vzdáleně spravovat zařízení. Postupujte podle následujících pokynů: 
 
+1. Na portálu [Azure Portal](https://portal.azure.com) vyberte **Všechny služby** a vyhledejte **Microsoft Intune**.
+2. V **Microsoft Intune** vyberte **Zařízení** a potom **Všechna zařízení**.
+3. V seznamu vyberte zařízení, které chcete vzdáleně spravovat. Ve vlastnostech zařízení vyberte **Nová relace Vzdálené pomoci**.
+4. Až se Intune ke službě TeamViewer připojí, zobrazí se některé informace o zařízení. Ke spuštění vzdálené relace použijte možnost **Připojit**.
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Zařízení**.
-4. V okně **Zařízení a skupiny** zvolte **Nastavení** > **Konektor pro TeamViewer**.
-5. V okně **Konektor pro TeamViewer** klikněte na **Povolit**, potom zobrazte licenční smlouvu služby TeamViewer a přijměte ji.
-6. Zvolte **Přihlásit se k TeamVieweru pro autorizaci**.
-7. Otevře se webová stránka TeamVieweru. Zadejte přihlašovací údaje pro svoji licenci TeamVieweru a pak klikněte na **Přihlásit se**.
+![Vzdálená správa zařízení s Androidem pomocí TeamVieweru – příklad](./media/android-teamviewer.png)
 
+Když spustíte vzdálenou relaci, zobrazí se koncovému uživateli na zařízení na ikoně aplikace Portál společnosti příznak oznámení. Oznámení se zobrazí také při spuštění aplikace. Uživatel pak může přijmout žádost o vzdálenou pomoc.
 
-## <a name="how-to-remotely-administer-a-device"></a>Vzdálená správa zařízení
+V TeamVieweru můžete provést na zařízení řadu akcí, včetně převzetí řízení zařízení. Úplné podrobnosti s informacemi, co můžete dělat, najdete v tématu [Pokyny k TeamVieweru](https://www.teamviewer.com/support/documents/).
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Zařízení**.
-4. V okně **Zařízení** zvolte **Spravovat** > **Všechna zařízení**.
-5. Vyberte zařízení, které chcete vzdáleně spravovat, a v okně vlastností zařízení zvolte **Další** > **Nová relace Vzdálené pomoci**.
-6. Až se Intune ke službě TeamViewer připojí, zobrazí se některé informace o zařízení. Vzdálenou relaci spustíte volbou **Připojit**.
-
-![Příklad TeamVieweru pro Android](./media/android-teamviewer.png)
-
-V okně TeamVieweru můžete na zařízení provádět různé vzdálené akce, třeba vzdálené řízení zařízení. Úplné informace o akcích, které můžete provádět, najdete v [dokumentaci k TeamVieweru](https://www.teamviewer.com/support/documents/).
-
-Až budete hotovi, okno TeamVieweru zavřete.
-
-## <a name="next-steps"></a>Další kroky
-
-Koncovému uživateli se na zařízení u ikony aplikace Portál společnosti zobrazí příznak oznámení. Oznámení se zobrazí také při otevření aplikace. Potom může žádost o vzdálenou pomoc přijmout.
+Až budete mít hotovo, okno TeamVieweru zavřete.

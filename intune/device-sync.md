@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 02ad249e-f098-421f-861f-6b2ff733ac7c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8f784143535188c6bee2082c5717b752f08c5490
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 7d48b81e6df912815d9ef843b4588f8c1076a8a7
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sync-devices-with-intune-to-get-the-latest-policies-and-actions"></a>Synchronizace zařízení s Intune s cílem načíst nejnovější zásady a akce
 
@@ -37,17 +37,17 @@ Akce zařízení **Synchronizovat** vybrané zařízení donutí se okamžitě o
 
 ## <a name="how-to-sync-a-device"></a>Synchronizace zařízení
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V okně **Intune** zvolte **Zařízení**.
-4. V okně **Zařízení a skupiny** zvolte **Všechna zařízení**.
-5. V seznamu zařízení, která spravujete, zvolte zařízení a potom zvolte akci se vzdáleným zařízením **Synchronizovat**.
+4. V okně **Zařízení** zvolte **Všechna zařízení**.
+5. V seznamu zařízení, která spravujete, zvolte zařízení, zvolte **Více** a pak zvolte vzdálenou akci **Synchronizovat**.
 7. Kliknutím na **Ano** akci potvrďte.
 
 
 ## <a name="retriable-error-codes"></a>Kódy chyb umožňujících opakovaný pokus
 
-Když správce spustí akci zařízení **Synchronizovat**, aplikace iOS a Android, které selhaly, ale vyvolaly kód chyby umožňující opakovaný pokus, budou pro zařízení dostupné. Aplikace, které vyvolaly kód chyby neumožňující opakovaný pokus, ale musí počkat sedm dní, než můžou být pro zařízení znovu dostupné.
+Když správce spustí akci zařízení **Synchronizovat**, aplikace pro iOS a Android, které selhaly, ale vyvolaly kód chyby umožňující opakovaný pokus, budou pro zařízení dostupné. Aplikace, které vyvolaly kód chyby neumožňující opakovaný pokus, ale musí počkat sedm dní, než můžou být pro zařízení znovu dostupné.
 
 
 | Kód chyby  | Navrhovaný popis                                                                                                                  | Opakovaný pokus |

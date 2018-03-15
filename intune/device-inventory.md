@@ -5,7 +5,7 @@ description: "Informace o tom, jak zobrazit zařízení spravovaná přes Intune
 keywords: 
 author: arob98
 ms.author: angrobe
-nmanager: dougeby
+manager: dougeby
 ms.date: 11/10/2017
 ms.topic: article
 ms.prod: 
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 39351e76c2510f7411c64d4bc3e3275bc051c63e
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 772e2b1380626384d618e653b90b31a1f421eb72
+ms.sourcegitcommit: 80a2eefc1896a42cc2bc16be23093d1abf58b088
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="how-to-view-intune-device-inventory"></a>Jak zobrazit inventář zařízení spravovaných přes Intune
 
@@ -29,8 +29,8 @@ ms.lasthandoff: 01/25/2018
 
 Zobrazení inventáře zařízení:
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V okně **Intune** zvolte **Zařízení**.
 
 Teď zvolte jednu z následujících možností:

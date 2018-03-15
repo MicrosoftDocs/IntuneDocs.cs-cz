@@ -1,12 +1,12 @@
 ---
-title: "Zřizovací profily aplikací"
-titlesuffix: Azure portal
+title: "Zřizovací profily pro aplikace iOS v Microsoft Intune"
+titlesuffix: 
 description: "Intune poskytuje nástroje pro proaktivní přiřazení nového zřizovacího profilu k zařízením s aplikacemi, kterým brzy vyprší platnost."
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/03/2017
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: bbc3ba4a-df48-4aeb-988b-69a177764e3a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6aa1fe56726f320d971f35cc971253707f968442
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: 7637dcb3aba4f46a3e97c8de47d974b46af27b47
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="use-ios-mobile-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Jak zabránit vypršení platnosti aplikací pomocí mobilních zřizovacích profilů pro iOS
+# <a name="use-ios-mobile-provisioning-profiles-in-intune-to-prevent-your-apps-from-expiring"></a>Jak zabránit vypršení platnosti aplikací pomocí mobilních zřizovacích profilů pro iOS v Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -39,12 +39,12 @@ Po vypršení platnosti certifikátu musíte aplikaci znovu podepsat pomocí nov
 
 ## <a name="how-to-create-an-ios-mobile-app-provisioning-profile"></a>Jak vytvořit mobilní zřizovací profil aplikace pro iOS
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Mobilní aplikace**.
-1.  V úloze **Mobilní aplikace** zvolte **Spravovat** > **Zřizovací profily iOS**.
-2.  V okně se seznamem profilů zvolte **Vytvořit profil**.
-3. V okně **Vytvořit profil** nakonfigurujte následující hodnoty:
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. Na stránce **Intune** zvolte **Mobilní aplikace**.
+1.  V úloze **Mobilní aplikace** zvolte **Správa** > **Zřizovací profily aplikací pro iOS**.
+2.  V podokně se seznamem profilů zvolte **Vytvořit profil**.
+3. V podokně **Vytvořit profil** nakonfigurujte následující hodnoty:
     - **Název** – Zadejte název tohoto mobilního zřizovacího profilu.
     - **Popis** – Volitelně zadejte popis pro tuto zásadu.
     - **Odeslat soubor profilu** – Zvolte **Importovat** a pak zvolte soubor mobilního konfiguračního profilu Apple (s příponou **.mobileprovision**), který jste stáhli z webu pro vývojáře Apple.

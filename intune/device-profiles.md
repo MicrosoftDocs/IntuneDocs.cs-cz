@@ -1,12 +1,11 @@
 ---
-title: "Co jsou profily zařízení v Microsoft Intune?"
-titlesuffix: Azure portal
-description: "Poznejte profily zařízení Intune a zjistěte, jak vám pomůžou se správou a ochranou zařízení ve firmě."
+title: "Profily zařízení v Microsoft Intune – Azure | Microsoft Docs"
+description: "Přehled různých profilů zařízení Microsoft Intune, včetně funkcí, omezení, e-mailu, Wi-Fi, VPN, vzdělávání, certifikátů, upgradu Windows 10, BitLockeru a Windows Defenderu, Windows Information Protection a nastavení konfigurace vlastních zařízení na portálu Azure Portal Tento profil použijte ke správě a ochraně dat a zařízení ve vaší společnosti."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 08/23/2017
+ms.date: 03/01/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,75 +14,125 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0c745f9f745802e0de7a58e3dd7570c0e363ab5d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 79ca6eaf22233dd6d024a28e456e57a8a74d02aa
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="what-are-microsoft-intune-device-profiles"></a>Co jsou profily zařízení v Microsoft Intune?
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Úloha **Konfigurace zařízení** ve službě Microsoft Intune slouží ke správě nastavení a funkcí na všech zařízeních, která spravujete. Tuto úlohu použijete nejčastěji k vytvoření profilů zařízení, které umožňují spravovat a řídit na zařízeních celou řadu různých funkcí.
+Microsoft Intune zahrnuje nastavení a funkce, které můžete povolit nebo zakázat na různých zařízeních v rámci vaší organizace. Tato nastavení a funkce se spravují pomocí profilů. Například: 
 
-Když tuto úlohu otevřete, uvidíte následující možnosti:
+- Profil Wi-Fi, který dává různým zařízením přístup k vaší podnikové síti Wi-Fi
+- Profil VPN, který poskytuje různým zařízením přístup k serveru VPN ve vaší podnikové síti
 
-- **Přehled** – na této stránce se zobrazuje stav a sestavy, které vám pomůžou monitorovat konfigurace zařízení přiřazené uživatelům a zařízením.
-- **Spravovat profily** – sem přejdete, když budete vytvářet profily konfigurace zařízení. Dále v tomto tématu najdete seznam všech typů profilů, které můžete vytvořit.
-- **Nastavit certifikační autoritu** – tento pracovní postup vás provede kroky potřebnými ke konfiguraci profilů certifikátů Intune.
+Toto téma obsahuje přehled různých profilů, které můžete vytvořit pro zařízení. Tyto profily umožňují povolit nebo zakázat některé funkce na zařízeních.
 
-## <a name="getting-started"></a>Začínáme
+## <a name="before-you-begin"></a>Před zahájením
+Pokud chcete zobrazit dostupné funkce, otevřete [Azure Portal](https://portal.azure.com) a spusťte prostředek Intune. 
 
-Pracovní postup při vytváření profilů zařízení je pro všechny profily podobný. Další informace najdete v článku [Vytváření profilů konfigurace zařízení v Microsoft Intune](device-profile-create.md). Pak si přečtěte konkrétní informace o vytvoření nastavení pro jednotlivé typy profilů.
+**Konfigurace zařízení** zahrnuje následující možnosti:
 
-U zařízení můžete spravovat následující funkce:
+- **Přehled**: Zobrazí stav profilů a další podrobnosti o profilech, které jste přiřadili uživatelům a zařízením.
+- **Správa**: Umožňuje vytvořit profily zařízení a nahrát vlastní [powershellové skripty](intune-management-extension.md) ke spuštění v rámci profilu.
+- **Monitorování**: Umožňuje zkontrolovat stav profilu, jestli se jedná o úspěch nebo chybu, a také zobrazit protokoly vašich profilů.
+- **Instalační program**: Umožňuje přidat k profilu certifikační autoritu (SCEP nebo PFX) nebo povolit službu TEM (Telecom Expense Management).
 
-## <a name="device-features"></a>Funkce zařízení
+## <a name="create-the-profile"></a>Vytvoření profilu
 
-Funkcemi zařízení můžete ovládat funkce na zařízeních s iOSem a macOS, jako jsou AirPrint, oznámení a konfigurace sdílených zařízení.
-Další informace najdete v tématu [Postup konfigurace nastavení funkce zařízení](device-features-configure.md). Podporované platformy: iOS a macOS.
+[Vytvoření profilů zařízení](device-profile-create.md) obsahuje podrobné informace k vytvoření profilu. 
 
-## <a name="device-restrictions"></a>Omezení zařízení
-Pomocí omezení zařízení můžete regulovat řadu nastavení na vámi spravovaných zařízeních v různých kategoriích včetně nastavení zabezpečení, hardwaru a sdílení dat. Můžete například vytvořit profil omezení zařízení, který uživatelům zařízení s iOSem zabraňuje v přístupu k fotoaparátu.
-Další informace najdete v článku [Konfigurace nastavení omezení zařízení](device-restrictions-configure.md). Podporované platformy: Android, iOS, macOS, Windows 10 a Windows 10 Team.
+## <a name="device-features-profile"></a>Profil Funkce zařízení
 
-## <a name="email"></a>E-mailu
-E-mailové profily vám umožní na spravovaných zařízeních vytvořit, přiřadit a monitorovat nastavení e-mailů Exchange ActiveSync. E-mailové profily přispívají ke konzistentnosti, omezují volání na podporu a dávají uživatelům přístup k firemnímu e-mailu na jejich osobních zařízeních bez toho, aby museli něco nastavovat.
-Další informace najdete v článku [Jak nakonfigurovat nastavení e-mailu](email-settings-configure.md). Podporované platformy: Android, iOS, Windows Phone 8.1 a Windows 10.
+[Funkce zařízení](device-features-configure.md) ovládají funkce na zařízeních s iOSem a macOS, jako jsou třeba AirPrint, oznámení a konfigurace sdílených zařízení.
 
-## <a name="wi-fi"></a>Wi-Fi
-Profily Wi-Fi umožňují přiřadit nastavení bezdrátové sítě uživatelům a zařízením ve vaší organizaci. Po přiřazení profilu Wi-Fi získají uživatelé přístup k vaší podnikové síti, aniž by ji museli konfigurovat sami.
-Další informace najdete v článku [Jak nakonfigurovat nastavení Wi-Fi](wi-fi-settings-configure.md). Podporované platformy: Android, iOS, macOS a Windows 8.1 (jen import).
+Tato funkce podporuje:  
+- iOS 
+- macOS
 
-## <a name="vpn"></a>Síť VPN
-Virtuální privátní sítě (VPN) umožňují uživatelům zabezpečený vzdálený přístup k firemní síti. Zařízení používají profil připojení VPN k navázání připojení se serverem VPN. Přiřazením profilů sítě VPN uživatelům a zařízením v organizaci jim umožníte snadné a bezpečné připojení k síti.
-Další informace najdete v článku [Jak nakonfigurovat nastavení sítě VPN](vpn-settings-configure.md).
-Podporované platformy: Android, iOS, macOS, Windows Phone 8.1, Windows 8.1 a Windows 10.
+## <a name="device-restrictions-profile"></a>Profil Omezení zařízení
+[Omezení zařízení](device-restrictions-configure.md) řídí zabezpečení, hardware, sdílení dat a další nastavení na zařízeních. Můžete například vytvořit profil omezení zařízení, který uživatelům zařízení s iOSem zakazuje použít fotoaparát v zařízení. 
 
-## <a name="education"></a>Vzdělávání
-Umožňuje vám nakonfigurovat možnosti pro aplikaci Windows Zkuste si test. Když tyto možnosti nakonfigurujete, žádnou jinou aplikaci nepůjde na zařízení spustit, dokud nebude test dokončen.
-Další informace najdete v článku [Konfigurace nastavení vzdělávání](education-settings-configure.md).
+Tato funkce podporuje: 
 
-## <a name="certificates"></a>Certifikáty
-Tento typ profilu umožňuje nakonfigurovat důvěryhodné certifikáty a certifikáty SCEP a PKCS, které lze přiřadit k zařízením a použít k ověření profilů Wi-Fi, sítě VPN a e-mailu.
-Další informace najdete v článku [Konfigurace certifikátů](certificates-configure.md). Podporované platformy: Android, iOS, Windows Phone 8.1, Windows 8.1 a Windows 10.
+- Android
+- iOS
+- macOS
+- Windows 10
+- Windows 10 Team
 
-## <a name="edition-upgrade"></a>Upgrade edice
-Tento typ profilu vám umožní automaticky upgradovat zařízení s některými verzemi Windows 10 na novější edici.
-Další informace najdete v článku [Konfigurace nastavení upgradu edice Windows 10](edition-upgrade-configure-windows-10.md). Podporované platformy: jen Windows 10.
+## <a name="email-profile"></a>e-mailový profil
+Profil [Nastavení e-mailu](email-settings-configure.md) vytvoří, přiřadí a sleduje nastavení e-mailu Exchange ActiveSync na zařízeních. E-mailové profily pomáhají zajistit konzistentnost, omezují volání na podporu a dávají uživatelům přístup k firemnímu e-mailu na jejich osobních zařízeních bez toho, aby museli něco nastavovat. 
 
-## <a name="endpoint-protection"></a>Ochrana koncového bodu
-Tento typ profilu vám umožní nakonfigurovat nastavení BitLockeru a Windows Defenderu pro zařízení s Windows 10.
-Další informace najdete v tématu o [nastavení ochrany koncového bodu pro Windows 10 a novější](endpoint-protection-windows-10.md). Podporované platformy: jen Windows 10.
+Tato funkce podporuje: 
 
-## <a name="windows-information-protection"></a>Windows Information Protection
-Služba Windows Information Protection pomáhá chránit před únikem dat, aniž by jinak zasahovala do činnosti zaměstnanců. Pomáhá také chránit podnikové aplikace a data před náhodnými úniky dat na zařízeních ve vlastnictví společnosti a osobních zařízeních, která si uživatelé přinesou do práce, a nevyžaduje přitom žádné změny prostředí nebo ostatních aplikací.
-Další informace najdete v článku [Jak nakonfigurovat službu Windows Information Protection](windows-information-protection-configure.md). Podporované platformy: jen Windows 10.
+- Android
+- iOS
+- Windows Phone 8.1
+- Windows 10
 
-## <a name="custom"></a>Vlastní
-Pomocí vlastních nastavení můžete k zařízení přiřadit nastavení, která nejsou předdefinovaná v Intune. Například u zařízení s Androidem můžete určit hodnoty OMA-URI, které slouží ke konfiguraci zařízení. U zařízení s iOSem můžete naimportovat konfigurační soubor, který jste vytvořili v nástroji Apple Configurator.
-Další informace najdete v článku [Konfigurace vlastního nastavení](custom-settings-configure.md). Podporované platformy: Android, iOS, macOS a Windows Phone 8.1.
+## <a name="wi-fi-profile"></a>Wi-Fi profil
+[Nastavení Wi-Fi](wi-fi-settings-configure.md) přiřadí uživatelům a zařízením nastavení bezdrátové sítě. Po přiřazení profilu Wi-Fi získají uživatelé přístup k vaší podnikové síti, aniž by ji museli konfigurovat sami. 
 
-## <a name="next-steps"></a>Další kroky
-Zvolte jeden z typů profilů na seznamu a začněte s konfigurací zařízení.
+Tato funkce podporuje: 
+
+- Android
+- iOS
+- macOS
+- Windows 8.1 (pouze import)
+
+## <a name="vpn-profile"></a>Profil VPN
+[Nastavení VPN](vpn-settings-configure.md) přiřadí uživatelům a zařízením v organizaci profily sítě VPN, aby se mohli snadno a bezpečně připojit k síti. 
+
+Virtuální privátní sítě (VPN) umožňují uživatelům zabezpečený vzdálený přístup k firemní síti. Zařízení používají profil připojení VPN k navázání připojení se serverem VPN. 
+
+Tato funkce podporuje: 
+
+- Android
+- iOS
+- macOS
+- Windows Phone 8.1
+- Windows 8.1
+- Windows 10
+
+## <a name="education-profile"></a>Profil Vzdělávání
+[Nastavení Vzdělávání](education-settings-configure.md) konfiguruje možnosti pro [aplikaci Windows Zkuste si test](https://education.microsoft.com/gettrained/win10takeatest). Když tyto možnosti nakonfigurujete, žádnou jinou aplikaci nepůjde na zařízení spustit, dokud nebude test dokončen.
+
+## <a name="certificates-profile"></a>Profil Certifikáty
+[Certifikáty](certificates-configure.md) umožňují nakonfigurovat důvěryhodné certifikáty a certifikáty SCEP a PKCS, které je možné přiřadit k zařízením a použít k ověření profilů Wi-Fi, sítě VPN a e-mailu.
+
+Tato funkce podporuje: 
+
+- Android
+- iOS
+- Windows Phone 8.1
+- Windows 8.1
+- Windows 10
+
+## <a name="edition-upgrade-profile"></a>Profil Upgrade edice
+[Upgrady edice Windows 10](edition-upgrade-configure-windows-10.md) automaticky upgradují zařízení s některými verzemi Windows 10 na novější edici.
+
+Tato funkce podporuje: jenom Windows 10
+
+## <a name="endpoint-protection-profile"></a>Profil Ochrana koncového bodu
+[Nastavení služby Ochrana koncového bodu pro Windows 10](endpoint-protection-windows-10.md) konfiguruje nastavení pro BitLocker a Windows Defender pro zařízení s Windows 10.
+
+Tato funkce podporuje: jenom Windows 10
+
+## <a name="windows-information-protection-profile"></a>Profil Windows Information Protection
+[Služba Windows Information Protection](windows-information-protection-configure.md) pomáhá chránit před únikem dat, aniž by zasahovala do možností zaměstnanců. Pomáhá také chránit podnikové aplikace a data před náhodnými úniky dat na zařízeních ve vlastnictví společnosti a osobních zařízeních, která zaměstnanci používají v práci. Probíhá to bez nutnosti provádět změny prostředí nebo ostatních aplikací.
+
+Tato funkce podporuje: jenom Windows 10
+
+## <a name="custom-profile"></a>Profil Vlastní
+[Vlastní nastavení](custom-settings-configure.md) zahrnuje možnost přiřadit k zařízení nastavení, která nejsou předdefinovaná v Intune. Například na zařízení s Androidem, můžete zadat hodnoty OMA-URI. U zařízení s iOSem můžete naimportovat konfigurační soubor, který jste vytvořili v nástroji Apple Configurator. 
+
+Tato funkce podporuje: 
+
+- Android
+- iOS
+- macOS
+- Windows Phone 8.1

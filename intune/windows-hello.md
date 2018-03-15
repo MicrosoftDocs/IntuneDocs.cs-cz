@@ -1,32 +1,32 @@
 ---
-title: "Použití Windows Hello pro firmy"
-titleSuffix: Azure portal
+title: "Postup při integraci Windows Hello pro firmy s Microsoft Intune"
+titleSuffix: 
 description: "Naučte se vytvářet zásady pro řízení použití Windows Hello pro firmy na spravovaných zařízeních."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 02/12/2018
+ms.date: 3/2/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 465de83c5bd15cfab67a4307000c0aa9cbfb1730
-ms.sourcegitcommit: cccbb6730a8c84dc3a62093b8910305081ac9d24
+ms.openlocfilehash: 46bb82fd49fa58e87c22c8bf0abb57e1587b8b40
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="use-windows-hello-for-business"></a>Použití Windows Hello pro firmy
+# <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrace Windows Hello pro firmy s Microsoft Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Microsoft Intune umožňuje integraci se službou Windows Hello pro firmy (dříve Microsoft Passport for Work). Je to alternativní metoda pro přihlašování pomocí účtu služby Active Directory nebo Azure Active Directory, která může nahradit hesla, čipové karty a virtuální čipové karty.
+Windows Hello pro firmy (dříve Microsoft Passport for Work) můžete integrovat s Microsoft Intune.
 
-Hello pro firmy umožňuje používat k přihlášení *gesto uživatele* místo hesla. Gesto uživatele může být jednoduchý PIN kód, biometrické ověřování jako třeba Windows Hello nebo externí zařízení, jako je třeba čtečka otisků prstů.
+ Hello pro firmy je alternativní metoda pro přihlašování pomocí účtu služby Active Directory nebo Azure Active Directory, která může nahradit hesla, čipové karty a virtuální čipové karty. Umožňuje používat k přihlášení místo hesla *gesto uživatele*. Gesto uživatele může být jednoduchý PIN kód, biometrické ověřování jako třeba Windows Hello nebo externí zařízení, jako je třeba čtečka otisků prstů.
 
 Intune se s Hello pro firmy integruje dvěma způsoby:
 
@@ -50,17 +50,17 @@ Abyste předešli konfliktům mezi zásadami a zajistili, že zásady kódu PIN 
 
 1.  Na portálu Azure Portal zvolte **Další služby** > **Monitorování a správa** > **Intune**.
 
-2.  V okně Intune zvolte **Registrace zařízení** a pak zvolte **Registrace zařízení s Windows** > **Windows Hello pro firmy**.
+2.  Na stránce Intune zvolte **Registrace zařízení** a pak zvolte **Registrace zařízení s Windows** > **Windows Hello pro firmy**.
 
-3.  V okně, které se otevře, zvolte **výchozí** nastavení.
+3.  Na stránce, která se otevře, zvolte **výchozí** nastavení.
 
-4.  V okně **Všichni uživatelé** klikněte na **Vlastnosti** a pak zadejte **název** a volitelně **popis** pro nastavení Windows Hello pro firmy.
+4.  Na stránce **Všichni uživatelé** klikněte na **Vlastnosti** a pak zadejte **název** a volitelně **popis** pro nastavení Windows Hello pro firmy.
 
-5. V okně **Všichni uživatelé** klikněte na **Nastavení** a pak pro možnost **Konfigurovat Windows Hello pro firmy** zvolte jednu z těchto hodnot:
+5. Na stránce **Všichni uživatelé** klikněte na **Nastavení** a pak pro možnost **Konfigurovat Windows Hello pro firmy** zvolte jednu z těchto hodnot:
 
     - **Zakázáno**. Toto nastavení vyberte, pokud Windows Hello pro firmy nechcete používat. Všechna ostatní nastavení na obrazovce jsou nedostupná.
     - **Povoleno**. Toto nastavení vyberte, pokud chcete konfigurovat nastavení Windows Hello pro firmy.
-    - **Není nakonfigurováno**. Toto nastavení vyberte, pokud k řízení nastavení Windows Hello pro firmy nechcete používat Intune. Veškerá stávající nastavení Windows Hello pro firmy v zařízeních s Windows 10 se nezmění. Všechna ostatní nastavení v okně jsou nedostupná.
+    - **Není nakonfigurováno**. Toto nastavení vyberte, pokud k řízení nastavení Windows Hello pro firmy nechcete používat Intune. Veškerá stávající nastavení Windows Hello pro firmy v zařízeních s Windows 10 se nezmění. Žádná ostatní nastavení na stránce nejsou dostupná.
 
 6.  Pokud jste v předchozím kroku vybrali **Povoleno**, nakonfigurujte požadovaná nastavení, která se použijí pro všechna zaregistrovaná zařízení s Windows 10 a Windows 10 Mobile.
 

@@ -1,25 +1,23 @@
 ---
-title: "Konfigurace nastavení omezení zařízení v Intune"
-titleSuffix: Azure portal
-description: "Naučte se pomocí Intune konfigurovat nastavení a funkce na zařízeních, která spravujete."
+title: "Konfigurace nastavení omezení zařízení v Microsoft Intune"
+titleSuffix: 
+description: "Naučte se pomocí Microsoft Intune konfigurovat nastavení a funkce na zařízeních, která spravujete."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 04/12/2017
+ms.date: 3/1/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 42f9b104-c1f6-4dfc-8aa4-1d33e1eaf61f
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 93b6a642f26ec6273853f75d063fd368698f3864
-ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
+ms.openlocfilehash: c5ccb928b8ff3f9cebbd6f51d99cddd1f36fb074
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-configure-device-restriction-settings-in-microsoft-intune"></a>Konfigurace nastavení omezení zařízení v Microsoft Intune
 
@@ -33,16 +31,16 @@ Pomocí omezení zařízení můžete ovládat širokou škálu spravovaných na
 
 Můžete například vytvořit profil omezení zařízení, který uživatelům zařízení s iOSem zabraňuje v přístupu k fotoaparátu.
 
-Informace v tomto tématu vás seznámí se základy konfigurace profilů omezení zařízení. Pak si můžete přečíst další témata pro jednotlivé platformy, kde najdete podrobnosti o specifikách různých zařízení.
+Naučte se základy o profilech omezení zařízení a pak si přečtěte další články pro jednotlivé platformy, abyste zjistili zvláštnosti zařízení.
 
-Vytvoření profilu zařízení obsahujícího nastavení omezení zařízení:
+## <a name="create-a-device-profile-containing-device-restriction-settings"></a>Vytvoření profilu zařízení obsahujícího nastavení omezení zařízení
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Konfigurovat zařízení**.
-2. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
-3. V okně profilů zvolte **Vytvořit profil**.
-4. V okně **Vytvořit profil** zadejte **Název** a **Popis** profilu pro omezení zařízení.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. Na stránce **Intune** zvolte **Konfigurace zařízení**.
+2. Na stránce **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
+3. Na stránce **Profily** zvolte **Vytvořit profil**.
+4. Na stránce **Vytvořit profil** zadejte **Název** a **Popis** profilu pro omezení zařízení.
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete vlastní nastavení použít. V současné době můžete pro nastavení omezení zařízení zvolit jednu z těchto platforem:
     - **Androidemem**
     - **iOS**
@@ -61,9 +59,9 @@ Vytvoření profilu zařízení obsahujícího nastavení omezení zařízení:
     - [Nastavení Windows 10 Team](device-restrictions-windows-10-teams.md)
     - [Nastavení Windows Holographic for Business](device-restrictions-windows-holographic.md)
     - [Nastavení Androidu for Work](device-restrictions-android-for-work.md)
-8. Až to budete mít, vraťte se do okna **Vytvořit profil** a klikněte na **Vytvořit**.
+8. Až to budete mít, vraťte se na stránku **Vytvořit profil** a klikněte na **Vytvořit**.
 
-Profil se vytvoří a zobrazí se v okně se seznamem profilů.
+Profil se vytvoří a zobrazí se na stránce se seznamem profilů.
 Pokud chcete pokračovat a přiřadit tento profil ke skupinám, podívejte se na téma [Jak přiřadit profily zařízení](device-profile-assign.md).
 
 <!--  Removing image as part of design review; retaining source until we known the disposition.

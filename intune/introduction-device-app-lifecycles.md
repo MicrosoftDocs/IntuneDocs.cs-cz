@@ -1,11 +1,12 @@
 ---
 title: "Přehled životních cyklů zařízení a aplikací"
-description: "Přehled životních cyklů zařízení a aplikací v Intune"
+titleSuffix: Microsoft Intune
+description: "Přehled životních cyklů zařízení a aplikací v Microsoft Intune"
 keywords: 
-author: arob98
-ms.author: angrobe
+author: Erikre
+ms.author: erikre
 manager: dougeby
-ms.date: 06/07/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,19 +15,19 @@ ms.assetid: 38e08253-14a0-4cc4-87be-7b110c12a523
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a2f2c8df4b3f4b5cb73e26ff6083aea1b58001c0
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: d262d5679ceb802320bd5aa496d91f549ec12952
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="overview-of-device-and-app-lifecycles"></a>Přehled životních cyklů zařízení a aplikací
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
-Ačkoli se potřeby jednotlivých organizací mohou lišit, existují určité společné kroky, které musí průběžně provádět všechny organizace bez ohledu na své ostatní provozní potřeby. Ty mohou být seskupeny do dvou hlavních kategorií, označovaných jako **životní cykly**. Životní cyklus nasazení, kterým se budete řídit, závisí na scénáři, který se pokoušíte povolit. Můžete například potřebovat jenom životní cyklus zařízení, životní cyklus aplikace, nebo obojí.
+I když se potřeby jednotlivých organizací můžou lišit, existují určité společné kroky, které musí při správě mobilních zařízení a mobilních aplikací průběžně provádět všechny organizace. Ty mohou být seskupeny do dvou hlavních kategorií, označovaných jako **životní cykly**. Životní cyklus nasazení, kterým se budete řídit, závisí na scénáři, který se pokoušíte povolit. Můžete například potřebovat jenom životní cyklus zařízení, životní cyklus aplikace, nebo obojí.
 
-![Životní cyklus MDM a aplikace](./media/device-app-lifecycle.png "životní cykly mobilních zařízení a aplikací")
+![Životní cykly správy mobilních zařízení a správy mobilních aplikací](./media/device-app-lifecycle.png)
 
 Pro účely správy mají všechna zařízení životní cyklus. Začne při registraci zařízení a pokračuje až do jeho vyřazení. [Životní cyklus správy zařízení](device-lifecycle.md) vás provede fázemi, jak zařízení zaregistrovat, jak ho konfigurovat a chránit a jak ho pak odebrat ze správy.
 

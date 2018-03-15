@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 126a7489-fe3e-43fd-a681-defb2fe0bb66
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7884682b765fe0df0ecb8b55b18f7a85ac4b2ec9
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: fcdd5e6fa844d4c475462cd0b2a4883f8ff9ba90
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="activate-lost-mode-on-ios-devices"></a>Aktivace režimu ztráty u zařízení s iOSem
 
@@ -37,11 +37,11 @@ Akce zařízení **Režim ztráty** usnadňuje aktivaci režimu ztráty u ztrace
 
 ## <a name="how-to-activate-lost-mode"></a>Jak aktivovat režim ztráty
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V okně **Intune** zvolte **Zařízení**.
-4. V okně **Zařízení a skupiny** zvolte **Všechna zařízení**.
-5. V seznamu zařízení, která spravujete, zvolte zařízení s iOSem a potom zvolte vzdálenou akci **Režim ztráty**.
+4. V okně **Zařízení** zvolte **Všechna zařízení**.
+5. V seznamu zařízení, která spravujete, zvolte zařízení s iOSem, zvolte **Více** a pak zvolte vzdálenou akci **Režim ztráty**.
 6. V okně **Režim ztráty** povolte režim ztráty. Pak zadejte zprávu, která se má zobrazovat, a volitelně kontaktní telefonní číslo.
 7. Klikněte na **OK**.
 
@@ -57,5 +57,5 @@ Abyste mohli režim ztráty použít, musí se jednat o zařízení s iOS ve vla
 
 ## <a name="next-steps"></a>Další kroky
 
-Stav akce, kterou jste spustili, zobrazíte tak, že v okně **Zařízení a skupiny** zvolíte **Akce zařízení**.
+Stav akce, kterou jste spustili, zobrazíte tak, že v okně **Zařízení** zvolíte **Akce zařízení**.
 

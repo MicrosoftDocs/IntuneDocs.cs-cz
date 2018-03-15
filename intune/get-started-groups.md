@@ -1,10 +1,10 @@
 ---
-title: "Začínáme se skupinami"
-titleSuffix: Azure portal
+title: "Vytvoření skupiny v Microsoft Intune"
+titleSuffix: 
 description: "Když uživatele uspořádáte do skupin, usnadníte si správu zásad a aplikací, ke kterým mají přístup."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 10/31/2017
 ms.topic: article
@@ -15,15 +15,15 @@ ms.assetid: 39a93fb5-d318-4997-a409-b64549a00e7a
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 63a35c04a14ebd79ac55f1dab2680d70008ee0ed
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: e052f7c8d5742859d009816473fe97a98c499b17
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="get-started-with-groups"></a>Začínáme se skupinami
+# <a name="create-a-group-to-manage-your-users-and-data-access"></a>Vytvoření skupiny pro správu uživatelů a přístupu k datům
 
-Skupiny se používají ke správě uživatelů a určují přístup vašich zaměstnanců k firemním prostředkům. Tyto prostředky můžou být součástí vašeho adresáře, nebo se může jednat o externí prostředky, jako jsou aplikace SaaS nebo sharepointové weby.
+Skupiny se používají ke správě uživatelů a řídí přístup zaměstnanců k firemním prostředkům. Tyto prostředky můžou být součástí vašeho adresáře, nebo se může jednat o externí prostředky, jako jsou aplikace SaaS nebo sharepointové weby.
 
 Microsoft Intune používá ke správě přístupu k firemním prostředkům službu Azure Active Directory (Azure AD). Ke kontrole přístupu slouží role v adresáři. Intune pak spravuje přístup mobilních zařízení, aby členové příslušné skupiny měli přístup k prostředkům.
 

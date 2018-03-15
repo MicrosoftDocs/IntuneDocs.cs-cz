@@ -1,12 +1,12 @@
 ---
 title: "Správa webového přístupu pomocí aplikace Managed Browser"
-titlesuffix: Azure portal
-description: "Nasazením aplikace Managed Browser, můžete omezit procházení webu a přenos dat z webu do jiných aplikací."
+titlesuffix: Microsoft Intune
+description: "Nasazením aplikace Managed Browser můžete omezit procházení webu a přenos dat z webu do jiných aplikací."
 keywords: 
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/06/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 613099d1d30a8be3787bd0004a376302da3dc231
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: f7c36639272bd8738bff33f6039a2d26e6147729
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Správa přístupu k internetu pomocí zásad aplikace Managed Browser v Microsoft Intune
 
@@ -63,17 +63,17 @@ Intune Managed Browser podporuje otevírání webového obsahu od [partnerů nab
 
 ## <a name="create-a-managed-browser-app-configuration"></a>Vytvoření konfigurace aplikace Managed Browser
 
-1.  Přihlaste se k portálu Azure Portal.
-2.  Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3.  V okně **Mobilní aplikace** v seznamu Spravovat zvolte **Zásady konfigurace aplikací**.
-4.  V okně **Zásady konfigurace aplikací** zvolte **Přidat**.
-5.  V okně **Přidat konfiguraci aplikace** zadejte **název** a volitelný **popis** nastavení konfigurace aplikace.
+4.  V okně **Zásady konfigurace aplikací** vyberte možnost **Přidat**.
+5.  V okně **Přidat zásady konfigurace** zadejte **Název** a volitelný **Popis** nastavení konfigurace aplikace.
 6.  Jako typ **Registrace zařízení** zvolte **Spravované aplikace**.
-7.  Zvolte možnost **Vyberte požadované aplikace** a potom v okně **Cílové aplikace** zvolte **Managed Browser** pro iOS, Android nebo oba systémy.
-8.  Kliknutím na **OK** se vraťte do okna **Přidat konfiguraci aplikace**.
+7.  Zvolte **Vybrat požadovanou aplikaci** a potom v okně **Cílové aplikace** zvolte **Managed Browser** pro iOS, Android nebo oba systémy.
+8.  Zvolte **OK** a vraťte se tak do okna **Přidat zásady konfigurace**.
 9.  Zvolte **Nastavení konfigurace**. V okně **Konfigurace** definujte dvojice klíč-hodnota, které budou určovat nastavení aplikace Managed Browser. Informace o různých párech klíč a hodnota, které můžete definovat, najdete v dalších částech tohoto článku.
 10. Když jste hotovi, klikněte na **OK**.
-11. V okně **Přidat konfiguraci aplikace** vyberte možnost **Vytvořit**.
+11. V okně **Přidat zásady konfigurace** zvolte **Přidat**.
 12. Vytvoří se nová konfigurace, která se zobrazí v okně **Konfigurace aplikací**.
 
 >[!IMPORTANT]
@@ -83,10 +83,10 @@ Intune Managed Browser podporuje otevírání webového obsahu od [partnerů nab
 
 Nastavení přiřazujete skupinám uživatelů ve službě Azure AD. Pokud má daný uživatel aplikaci Managed Browser nainstalovanou, je spravována na základě vámi zadaného nastavení.
 
-1. V okně **Nastavení** na řídicím panelu Správa mobilních aplikací Intune zvolte **Konfigurace aplikací**.
+1. V okně **Mobilní aplikace** řídicího panelu správy mobilních aplikací Intune zvolte **Zásady konfigurace aplikací**.
 2. V seznamu konfigurací aplikací vyberte tu, kterou chcete přiřadit.
-3. V dalším okně vyberte možnost **Skupiny uživatelů**.
-4. V okně **Skupiny uživatelů** vyberte skupinu uživatelů ve službě Azure AD, které chcete přiřadit konfiguraci aplikace, a potom klikněte na **OK**.
+3. V dalším okně zvolte **Přiřazení**.
+4. V okně **Přiřazení** vyberte skupinu uživatelů ve službě Azure AD, kterým chcete přiřadit konfiguraci aplikace, a potom zvolte **OK**.
 
 
 ## <a name="how-to-configure-application-proxy-settings-for-the-managed-browser"></a>Postup konfigurace nastavení proxy aplikací pro Managed Browser

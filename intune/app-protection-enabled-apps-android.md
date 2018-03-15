@@ -1,7 +1,7 @@
 ---
 title: "Aplikace pro Android se zásadami ochrany aplikací"
-titlesuffix: Azure portal
-description: "Toto téma popisuje, co můžete očekávat, když ke správě aplikace pro Android používáte zásady ochrany aplikací."
+titlesuffix: Microsoft Intune
+description: "Zjistěte, co můžete očekávat od aplikace pro Android, která má zásady ochrany."
 keywords: 
 author: erikre
 ms.author: erikre
@@ -15,50 +15,50 @@ ms.assetid: a6816285-8e43-4dc8-bca0-e80ec5ef01e6
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7ee7977d8608327560b4df0c1bfbcc60ff150da9
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: af25dc918907e086441a89f222985a75199bbe95
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="what-to-expect-when-your-android-app-is-managed-by-app-protection-policies"></a>Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Toto téma popisuje uživatelské prostředí u aplikací se zásadami ochrany aplikací. Zásady ochrany aplikací se použijí jenom v případě, že se aplikace používají v pracovním kontextu: třeba pro přístup k aplikacím pomocí pracovního účtu nebo pro přístup k souborům uloženým v umístění OneDrivu pro danou společnost.
+Zjistěte, co můžete očekávat od aplikací pro Android, které mají zásady ochrany aplikací. Zásady ochrany aplikací se použijí jenom v případě, že se aplikace používají k práci. Například při přístupu k aplikaci pomocí pracovního účtu nebo když zobrazujete soubory uložené na OneDrivu vaší společnosti.
 ##  <a name="accessing-apps"></a>Přístup k aplikacím
 
-Všechny aplikace přidružené k zásadám ochrany aplikací na zařízeních se systémem Android vyžadují aplikaci Portál společnosti.
+Všechny aplikace na zařízeních s Androidem, které mají zásady ochrany aplikací, vyžadují aplikaci Portál společnosti.
 
-U zařízení nezaregistrovaných v Intune je potřeba nainstalovat aplikaci Portál společnosti. Před použitím aplikací spravovaných pomocí zásad ochrany aplikací ale uživatel nemusí aplikaci Portál společnosti spouštět ani se do ní nemusí přihlašovat.
-Aplikace Portál společnosti představuje pro Intune možnost sdílení dat v zabezpečeném umístění, a proto se tato aplikace vyžaduje, i když zařízení není zaregistrované v Intune.
+Nainstalujte aplikaci Portál společnosti na všechna zařízení, která nejsou zaregistrovaná v Intune. Uživatelé se nemusí přihlašovat k aplikaci Portál společnosti, aby mohli používat aplikace, které mají zásady ochrany aplikací.
+Aplikace Portál společnosti umožňuje sdílet data v zabezpečeném umístění. Požaduje se tedy i pro neregistrovaná zařízení.
 
 
 ##  <a name="using-apps-with-multi-identity-support"></a>Použití aplikací s podporou víc identit
 
-Zásady ochrany aplikací se použijí jenom při použití aplikace v pracovním kontextu, takže v závislosti na kontextu (pracovní nebo osobní účely) se může chování aplikací lišit.
+Zásady ochrany aplikací se projeví, jenom když se uživatel pokusí o přístup k pracovním datům.  Když chce uživatel použít aplikaci pro osobní účely, může se aplikace chovat jinak.
 
-U aplikací podporujících více identit použije Intune zásady ochrany aplikací jenom v případě, že koncový uživatel používá danou aplikaci v pracovním kontextu.  Koncovému uživateli se například při přístupu k pracovním datům zobrazí výzva k zadání kódu PIN.  U **aplikace Outlook** se koncovému uživateli zobrazí výzva k zadání kódu PIN při spouštění aplikace. U **aplikace OneDrive** k tomu dojde, když koncový uživatel použije pracovní účet.  U aplikací Microsoft **Word**, **PowerPoint* a **Excel** k tomu dojde, když koncový uživatel přistupuje k dokumentům uloženým v umístění OneDrive pro firmy pro danou společnost.
+Některé aplikace podporují více identit. V takovém případě použije Intune zásady ochrany aplikací jenom při přístupu uživatele k pracovním datům.  Uživateli se například může zobrazit výzva k zadání kódu PIN.  V **aplikaci Outlook** se výzva zobrazí uživateli při spuštění. V **aplikaci OneDrive** se zobrazí výzva, když uživatel použije pracovní účet.  V aplikaci Microsoft **Word**, **PowerPoint** a **Excel** se zobrazí výzva, když uživatel zobrazuje dokumenty na OneDrivu.
 ##  <a name="managing-user-accounts-on-the-device"></a>Správa uživatelských účtů v zařízení
 
-Intune podporuje nasazení zásad ochrany aplikací jenom na jeden uživatelský účet v každém zařízení.
+Intune podporuje nasazení zásad ochrany aplikací na jeden uživatelský účet v jednom zařízení.
 
 * V závislosti na aplikaci, kterou používáte, může být druhý uživatel v zařízení blokovaný (ale nemusí). Ve všech případech ale mají tyto zásady vliv jenom na prvního uživatele, kterému se přiřadí zásady ochrany aplikací.
 
-  * Aplikace **Microsoft Word**, **Excel** a **PowerPoint** neblokují druhý uživatelský účet, ale na tento druhý uživatelský účet nemají zásady ochrany aplikací vliv.
+  * **Microsoft Word**, **Excel** a **PowerPoint** nebudou blokovat přístup k dalším uživatelským účtům. Na tyto uživatelské účty se ale nebudou vztahovat zásady ochrany aplikací.
 
-  * U aplikací **OneDrive a Outlook** smíte používat jenom jeden pracovní účet.  Přidávání více pracovních účtů se v těchto aplikacích blokuje.  Na zařízení ale můžete odebrat uživatele a přidat jiného uživatele.
-
-
-* Pokud zařízení obsahuje před nasazením zásad ochrany aplikací víc uživatelských účtů, budou zásady ochrany aplikací služby Intune spravovat ten účet, u kterého se zásady ochrany aplikací nasadí dřív.
+  * U aplikací **OneDrive a Outlook** smíte používat jenom jeden pracovní účet.  Přidávání více pracovních účtů se v těchto aplikacích blokuje.  Můžete však ze zařízení odebrat uživatele a pak přidat jiného.
 
 
-Přečtěte si níže uvedený ukázkový scénář, abyste lépe pochopili, jak se pracuje s několika uživatelskými účty.
+* Před nasazením zásad ochrany aplikací může mít zařízení několik existujících uživatelských účtů. V takovém případě spravují zásady ochrany aplikací Intune první účet, na který jsou nasazené zásady ochrany aplikací.
 
-Uživatel A pracuje ve dvou společnostech, **společnosti X** a **společnosti Y**. Uživatel A má pro každou společnost pracovní účet a obě společnosti používají Intune k nasazení zásad ochrany aplikací. **Společnost X** nasadí zásady ochrany aplikací **dřív než** **společnost Y**. Účet přidružený ke **společnosti X** získá zásady ochrany aplikací, ale účet přidružený ke společnosti Y ne. Pokud chcete, aby účet přidružený ke společnosti Y spravovaly zásady ochrany aplikací, musíte uživatelský účet přidružený ke společnosti X odebrat.
+
+Přečtěte si následující ukázkový scénář, kde se dozvíte, jak Intune zachází s několika uživatelskými účty.
+
+Uživatel A pracuje ve dvou společnostech: ve **společnosti X** a ve **společnosti Y**. Uživatel A má pro každou společnost pracovní účet a obě společnosti používají Intune k nasazení zásad ochrany aplikací. **Společnost X** nasadí zásady ochrany aplikací **dřív než** **společnost Y**. Účet přidružený ke **společnosti X** získá zásady ochrany aplikací, ale účet přidružený ke společnosti Y ne. Pokud chcete, aby uživatelský účet přidružený ke společnosti Y spravovaly zásady ochrany aplikací, musí uživatel A odebrat uživatelský účet společnosti X.
 ### <a name="adding-a-second-account"></a>Přidání druhého účtu
 ####  <a name="android"></a>Android
-Pokud používáte zařízení s Androidem, může se zobrazit zpráva o blokování s pokyny k odstranění existujícího účtu a přidání nového účtu.  Když chcete odebrat existující účet, přejděte na **Nastavení &gt; Obecné &gt; Správce aplikací &gt; Portál společnosti a vyberte Vymazat data**.
+Může se zobrazit výzva k odebrání existujícího účtu a přidání nového.  Když chcete odebrat existující účet, přejděte na **Nastavení &gt;Obecné &gt; Správce aplikací &gt; Portál společnosti. Potom vyberte možnost pro vymazání dat.**
 
 ![Snímek obrazovky s chybovou zprávou a pokyny k odebrání účtu](./media/android-switch-user.png)
 
@@ -77,7 +77,7 @@ Podporovány jsou následující typy souborů:
 ------------
 |**pfile**|**text**|
 |----|----|
-|Pfile je obecný „obálkový“ formát pro chráněné soubory, který zapouzdřuje šifrovaný obsah a licence služby Azure Information Protection. Lze jej použít pro ochranu libovolného typu souboru.|Textové soubory včetně souborů XML, CSV atd. lze otevřít pro zobrazení v aplikaci, i když jsou chráněny. Typy souborů: txt, ptxt, csv, pcsv, log, plog, xml, pxml.|
+|Pfile je obecný formát obálky pro chráněné soubory. Zapouzdřuje šifrovaný obsah a licence Azure Information Protection. Dá se použít pro ochranu libovolného typu souboru.|Textové soubory včetně souborů XML, CSV atd. lze otevřít pro zobrazení v aplikaci, i když jsou chráněny. Typy souborů: txt, ptxt, csv, pcsv, log, plog, xml, pxml.|
 ---------------
 ## <a name="next-steps"></a>Další kroky
 [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](app-protection-enabled-apps-ios.md)

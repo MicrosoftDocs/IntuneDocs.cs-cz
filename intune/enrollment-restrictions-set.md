@@ -1,7 +1,7 @@
 ---
-title: "Nastavení omezení registrace v Intune"
-titlesuffix: Azure portal
-description: "Omezení registrace podle platformy a nastavení limitu počtu zařízení pro registraci zařízení v Intune \""
+title: "Nastavení omezení registrace v Microsoft Intune"
+titlesuffix: 
+description: "Omezení registrace podle platformy a nastavení limitu počtu zařízení pro registraci zařízení v Intune"
 keywords: 
 author: ErikjeMS
 ms.author: erikje
@@ -15,17 +15,17 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fab385762efa3ab095553fe21fb045f4f11ff197
-ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
+ms.openlocfilehash: 396c8881ba0dfae5cfad4eab9bf787b6a9f33d44
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Jako správce Intune můžete vytvořit a spravovat omezení registrace definující počet a typy zařízení, u kterých můžete zaregistrovat správu přes Intune. Můžete vytvořit více omezení a použít je u různých skupin uživatelů. Pro různá omezení můžete nastavit [pořadí priority](#change-enrollment-restriction-priority).
+Jako správce Intune můžete vytvořit a spravovat omezení pro zápis. Tato omezení definují počet a typy zařízení, která můžete zaregistrovat do správy pomocí Intune. Můžete vytvořit více omezení a použít je u různých skupin uživatelů. Pro různá omezení můžete nastavit [pořadí priority](#change-enrollment-restriction-priority).
 
 >[!NOTE]
 >Omezení registrací nepatří k funkcím zabezpečení. Ohrožená zařízení mohou poskytovat zavádějící informace. Tato omezení jsou jen určitou bariérou pro uživatele bez zlých úmyslů.
@@ -83,7 +83,7 @@ Nastavení omezení typu zařízení můžete změnit podle následujícího pos
   Verze operačního systému se nevztahují na zařízení Apple registrovaná v Programu registrace zařízení, pomocí Apple School Manageru ani v aplikaci Apple Configurator.
 8. U každé uvedené platformy zadejte, zda chcete **Povolit** nebo **Blokovat**  zařízení **v osobním vlastnictví**.
 
-    ![Snímek obrazovky pracovního prostoru Omezení zařízení s výchozími konfiguracemi platformy zařízení zobrazující konfiguraci nastavení pro osobní vlastnictví](media/device-restrictions-platform-configurations.png)
+    ![Snímek obrazovky pracovního prostoru omezení zařízení s výchozí platformou zařízení nakonfigurovanou pro zařízení v osobním vlastnictví](media/device-restrictions-platform-configurations.png)
 9. Klikněte na **Uložit**.
 
 >[!NOTE]
@@ -100,7 +100,7 @@ Nastavení omezení počtu zařízení můžete změnit podle následujícího p
 3. Zvolte **Registrace zařízení** > **Omezení registrace**.
 4. V části **Omezení počtu zařízení** zvolte omezení, které chcete nastavit.
 5. Zvolte **Limit počtu zařízení** a potom v rozevíracím seznam vyberte maximální počet zařízení, která uživatel může zaregistrovat.
-    ![Snímek obrazovky okna Omezení limitů počtů zařízení s omezením limitu počtu zařízení](./media/device-restrictions-limit.png)
+    ![Snímek obrazovky okna s omezeními limitu zařízení](./media/device-restrictions-limit.png)
 6. Klikněte na **Uložit**.
 
 Při dosažení limitu počtu zaregistrovaných zařízení se koncovému uživateli zobrazí oznámení. Například v iOSu by vypadalo takto:

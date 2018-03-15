@@ -1,12 +1,12 @@
 ---
 title: "Jak z aplikací vymazat jenom firemní data"
-titleSuffix: Azure portal
+titleSuffix: Microsoft Intune
 description: "Přečtěte si, jak selektivně vymazat data z aplikací v Microsoft Intune."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: Erikre
+ms.author: erikre
 manager: dougeby
-ms.date: 12/05/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 42605e6e-5b84-44ff-b86e-346ea123b53e
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7a9690e75e0d0dced9ad30951b0178685813eeae
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: dfd1b37c1b944a545234b93b44d651ead8f0f486
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Jak z aplikací spravovaných pomocí Intune vymazat jenom firemní data
 
@@ -39,21 +39,23 @@ Pokud chcete selektivně odebrat data firemních aplikací, vytvořte žádost o
 
 1.  Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 
-2.  Zvolte **Další služby**, do textového pole filtru zadejte **Intune** a vyberte **Intune**. Otevře se okno v Intune. Zvolte **Mobilní aplikace**.
+2.  Zvolte **Další služby**, do textového pole filtru zadejte **Intune** a vyberte **Intune**. Otevře se okno Intune. Vyberte **Mobilní aplikace**.
 
     ![Snímek obrazovky s oknem Microsoft Intune](./media/apps-selective-wipe01.png)
 
 3.  V okně **Mobilní aplikace** zvolte **Selektivní vymazání aplikace**.
 
-4.  Zvolte **Nová žádost o vymazání**. Otevře se okno **Nová žádost o vymazání**.
+4.  Zvolte **Nová žádost o vymazání**. Otevře se podokno **Nová žádost o vymazání**.
 
-    ![Snímek obrazovky okna Nová žádost o vymazání](./media/AzurePortal_MAM_NewWipeRequest.png)
+    ![Snímek obrazovky s podoknem Nová žádost o vymazání](./media/AzurePortal_MAM_NewWipeRequest.png)
 
 5.  Vyberte **Uživatel** k otevření okna **Uživatel** a vyberte uživatele, jehož data aplikací chcete vymazat.
 
-6.  Potom v okně **Nová žádost o vymazání** zvolte **Zařízení**. Otevře se okno **Vybrat zařízení** se seznamem všech zařízení přidružených k vybranému uživateli. Jeho součástí jsou dva sloupce: jeden s názvem zařízení, což je popisný název definovaný uživatelem, a jeden s typem zařízení, který označuje jeho platformu. Vyberte zařízení, které chcete vymazat.
+6.  Potom v okně **Nová žádost o vymazání** zvolte **Zařízení**. Tím se otevře podokno **Vybrat zařízení**. Zobrazí se v něm všechna zařízení přidružená k vybranému uživateli. V tomto podokně se zobrazí také název zařízení, což je popisný název definovaný uživatelem, a typ zařízení, který označuje platformu zařízení. 
 
-7.  Teď jste zpátky v okně **Nová žádost o vymazání**. Pokud chcete vytvořit žádost o vymazání, vyberte **OK**.
+7. V seznamu vyberte zařízení, které chcete vymazat.
+
+8.  Teď jste zpátky v okně **Nová žádost o vymazání**. Pokud chcete vytvořit žádost o vymazání, vyberte **OK**.
 
 Služba vytvoří a sleduje samostatnou žádost o vymazání pro každou chráněnou aplikaci na zařízení a uživatele přidruženého k této žádosti o vymazání.
 
@@ -63,22 +65,22 @@ Můžete získat souhrnnou sestavu, která zobrazuje celkový stav žádostí o 
 
 1.  V okně **Mobilní aplikace – Selektivní vymazání aplikace** můžete zobrazit seznam žádostí seskupených podle uživatele. Protože systém vytvoří žádost o vymazání pro každou chráněnou aplikaci spuštěnou na zařízení, může být u uživatele více žádostí. Stav označuje, jestli je žádost o vymazání **nevyřízená**, **selhala** nebo byla **úspěšná**.
 
-    ![Snímek obrazovky se stavem žádosti o vymazání v okně Selektivní vymazání aplikace](./media/wipe-request-status-1.png)
+    ![Snímek obrazovky se stavem žádosti o vymazání v podokně Selektivní vymazání aplikace](./media/wipe-request-status-1.png)
 
-Uvidíte také název zařízení a jeho typ, což vám pomůže při orientaci v těchto sestavách.
+Uvidíte také název zařízení a jeho typ, což vám pomůže při orientaci v sestavách.
 
 >[!IMPORTANT]
 > Aby k vymazání došlo, musí uživatel otevřít aplikaci. Po zadání požadavku může vymazání samotné trvat až 30 minut.
 
 ## <a name="delete-a-wipe-request"></a>Odstranění žádosti o vymazání
 
-Vymazání v čekajícím stavu se zobrazují, dokud je ručně neodstraníte.  Ruční odstranění žádosti o vymazání:
+Vymazání v čekajícím stavu se zobrazují, dokud je ručně neodstraníte. Ruční odstranění žádosti o vymazání:
 
-1.  Přejděte do okna **Mobilní aplikace – Selektivní vymazání aplikace**.
+1.  Otevřete okno **Mobilní aplikace – Selektivní vymazání aplikace**.
 
 2.  V seznamu klikněte pravým tlačítkem na žádost o vymazání, kterou chcete odstranit, a zvolte **Odstranit žádost o vymazání**.
 
-    ![Snímek obrazovky se seznamem žádostí o vymazání v okně Selektivní vymazání aplikace](./media/delete-wipe-request.png)
+    ![Snímek obrazovky se seznamem žádostí o vymazání v podokně Selektivní vymazání aplikace](./media/delete-wipe-request.png)
 
 3.  Zobrazí se výzva k potvrzení odstranění. Zvolte **Ano** nebo **Ne** a klikněte na **OK**.
 

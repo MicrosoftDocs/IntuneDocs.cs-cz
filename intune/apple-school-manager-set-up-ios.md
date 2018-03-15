@@ -1,7 +1,7 @@
 ---
 title: "Nastavení registrace programu Apple School Manager pro zařízení s iOSem"
-titlesuffix: Azure portal
-description: "Přečtěte si, jak pomocí Intune nastavit registraci programu Apple School Manager pro zařízení s iOSem vlastněná společností.\""
+titlesuffix: Microsoft Intune
+description: "Přečtěte si, jak pomocí Intune nastavit registraci programu Apple School Manager pro zařízení s iOSem vlastněná společností."
 keywords: 
 author: ErikjeMS
 ms.author: erikje
@@ -15,13 +15,13 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 87e4c16fbb87ee83a01fe44a46c55c6243c8fc8a
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: f639a61c4d481a891156383c3a23e0e1511a5fbe
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Povolení registrace zařízení s iOSem pomocí Apple School Manageru
+# <a name="set-up-ios-device-enrollment-with-apple-school-manager"></a>Nastavení registrace zařízení s iOSem pomocí Apple School Manageru
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -32,13 +32,13 @@ ms.lasthandoff: 02/09/2018
 >
 >Pokud vaše stránka **Registrace zařízení** vypadá jako na obrázku níže, váš účet se ještě neaktualizoval na nové uživatelské rozhraní a můžete použít tuto stránku nápovědy.
 >
->![Staré uživatelské rozhraní](./media/appleenroll-oldui.png)
+>![Původní uživatelské rozhraní Intune](./media/appleenroll-oldui.png)
 >
 >Pokud vaše stránka **Registrace zařízení** vypadá jako na obrázku níže, máte aktualizované uživatelské rozhraní.  Přejděte na [tuto stránku nápovědy](apple-school-manager-set-up-ios-newui.md).
 >
->![Nové uživatelské rozhraní](./media/appleenroll-newui.png)
+>![Nové uživatelské rozhraní Intune](./media/appleenroll-newui.png)
 
-Toto téma vám pomůže zprovoznit registraci zařízení s iOSem zakoupená prostřednictvím programu [Apple School Manager](https://school.apple.com/). Pomocí Intune s Apple School Managerem můžete registrovat velký počet zařízení s iOSem, aniž byste je museli uchopit do ruky. Když student nebo učitel zařízení zapne, Průvodce nastavením provede předem nakonfigurovaná nastavení a zařízení se zaregistruje ke správě.
+Toto téma vám pomůže nastavit registraci zařízení s iOSem pro zařízení zakoupená prostřednictvím programu [Apple School Manager](https://school.apple.com/). Pomocí Intune s Apple School Managerem můžete registrovat velký počet zařízení s iOSem, aniž byste je museli uchopit do ruky. Když student nebo učitel zařízení zapne, Pomocník s nastavením provede předem nakonfigurovaná nastavení a zařízení se zaregistruje ke správě.
 
 Při povolení registrace přes Apple School Manager budete používat portál Intune i portál Apple School Manager. Abyste mohli zařízení přiřadit do Intune ke správě, potřebujete seznam sériových čísel nebo čísla nákupních objednávek. Vytvoříte registrační profily DEP obsahující nastavení aplikovaná na zařízení během registrace.
 
@@ -61,7 +61,7 @@ Než budete moct registrovat zařízení s iOSem vlastněná společností pomoc
 **Krok 1: Stáhněte si certifikát veřejného klíče Intune, který je potřebný k vytvoření tokenu Apple.**<br>
 1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení** a pak zvolte **Token Programu registrace**.
 
-  ![Snímek obrazovky s podoknem Token Programu registrace v pracovním prostoru Certifikáty Apple pro stažení veřejného klíče](./media/enrollment-program-token-download.png)
+  ![Podokno Token Programu registrace v pracovním prostoru Certifikáty Apple pro stažení veřejného klíče](./media/enrollment-program-token-download.png)
 
 2. V okně **Token Programu registrace** zvolte **Stáhnout veřejný klíč** a stáhněte a místně uložte soubor šifrovacího klíče (.pem). Soubor .pem slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple School Manager.
 
@@ -69,19 +69,19 @@ Než budete moct registrovat zařízení s iOSem vlastněná společností pomoc
 1. Zvolte **Vytvořit token prostřednictvím Apple School Manageru** a přihlaste se pomocí Apple ID vaší společnosti. Toto Apple ID můžete použít k obnovení tokenu Apple School Manageru.
 2.  Na portálu [Apple School Manager](https://school.apple.com) přejděte na **MDM Servers** (MDM servery) a vpravo nahoře zvolte **Add MDM Server** (Přidat MDM server).
 3.  Zadejte **název MDM serveru**. Název serveru slouží pro vaši informaci, abyste mohli identifikovat server pro správu mobilních zařízení (MDM). Není to název serveru Microsoft Intune ani jeho URL.
-   ![Snímek obrazovky portálu Apple School Manager s vybranou možností Sériové číslo](./media/asm-server-assignment.png)
+   ![Portál Apple School Manager s vybranou možností Sériové číslo](./media/asm-server-assignment.png)
 
 4.  Na portálu společnosti Apple zvolte **Upload File...** (Nahrát soubor...), vyhledejte soubor .pem a vpravo dole zvolte **Save MDM Server** (Uložit MDM server).
 5.  Zvolte **Get Token** (Získat token) a stáhněte si soubor tokenu serveru (.p7m) do svého počítače.
 6. Přejděte na **Device Assignments** (Přiřazení zařízení) a **vyberte zařízení** pomocí možností **Serial Numbers** (Sériová čísla), **Order Number** (Číslo objednávky) nebo **Upload CSV File** (Nahrát CSV soubor).
-     ![Snímek obrazovky portálu Apple School Manager s vybranou možností Sériové číslo](./media/asm-device-assignment.png)
+     ![Portál Apple School Manager s vybranou možností Sériové číslo](./media/asm-device-assignment.png)
 7.  Zvolte akci **Assign to Server** (Přiřadit k serveru) a zvolte **MDM Server**, který jste vytvořili.
 8. Určete, jak **Vybrat zařízení**, a pak zadejte informace o zařízení a podrobnosti.
 9. Zvolte **Přiřadit k serveru**, zvolte &lt;název_serveru&gt; zadaný pro Microsoft Intune a potom zvolte **OK**.
 
 **Krok 3: Zadejte Apple ID, které jste použili k vytvoření tokenu Apple School Manageru.**<br>Toto ID se má použít k obnovení tokenu Apple School Manageru a je uloženo pro budoucí použití.
 
-![Snímek obrazovky s Apple ID použitým k vytvoření tokenu programu registrace a přechodem na token programu registrace](./media/enrollment-program-token-apple-id.png)
+![Zadání Apple ID použitého k vytvoření tokenu programu registrace a přechod na token programu registrace](./media/enrollment-program-token-apple-id.png)
 
 **Krok 4: Vyhledejte a nahrajte svůj token.**<br>
 Přejděte k souboru certifikátu (p7m), zvolte **Otevřít** a pak zvolte **Nahrát**. Intune automaticky synchronizuje vaše zařízení Apple School Manageru z portálu společnosti Apple.
@@ -103,7 +103,7 @@ Registrační profil zařízení definuje nastavení, která se během registrac
 
 6. Zvolte **Nastavení správy zařízení**. Tyto položky jsou nastaveny při aktivaci a jejich změna vyžaduje obnovení továrního nastavení. nakonfigurujte následující nastavení profilu a potom zvolte **Uložit**:
 
-  ![Snímek obrazovky s výběrem režimu správy. Zařízení má následující nastavení: Pod dohledem, Uzamčená registrace a Povolit párování nastaveno na Zamítnout vše. Možnost Certifikáty Apple Configuratoru je pro nový profil programu registrace zobrazena šedě.](./media/enrollment-program-profile-mode.png)
+  ![Výběr režimu správy](./media/enrollment-program-profile-mode.png)
 
     - **Pod dohledem** – Režim, který nabízí více možností správy a ve výchozím nastavení má zakázaný zámek aktivace. Pokud políčko nezaškrtnete, budete mít omezené možnosti správy.
 
@@ -119,22 +119,22 @@ Registrační profil zařízení definuje nastavení, která se během registrac
 
       - **Certifikáty Apple Configuratoru** – Pokud jste v části **Povolit párování** zvolili **Povolit Apple Configurator podle certifikátu**, vyberte certifikát Apple Configuratoru, který chcete importovat.
 
-7. Zvolte **Nastavení Průvodce nastavením**, nakonfigurujte následující nastavení profilu a potom zvolte **Uložit**:
+7. Zvolte **Nastavení Pomocníka s nastavením**, nakonfigurujte následující nastavení profilu a potom zvolte **Uložit**:
 
     - **Název oddělení** – Zobrazí se, když uživatelé klepnou při aktivaci na **O konfiguraci**.
 
     - **Telefon na oddělení** – Zobrazí se, když uživatel při aktivaci klikne na tlačítko Potřebuji nápovědu.
-    - **Možnosti Průvodce nastavením** – Nastavení, která nebyla provedena v možnostech Průvodce nastavením, je možné nastavit později v nabídce **Nastavení** systému iOS.
+    - **Možnosti Pomocníka s nastavením** – Nastavení, která nebyla provedena v možnostech Pomocníka s nastavením, je možné nastavit později v nabídce **Nastavení** systému iOS.
         - **Heslo** – Při aktivaci se zobrazí výzva k zadání hesla. Vyžaduje vždy heslo, pokud zařízení nebude zabezpečené nebo nebude mít přístup kontrolovaný jiným způsobem (třeba pomocí celoobrazovkového režimu, který omezuje zařízení na jednu aplikaci).
-        - **Zjišťování polohy** – Pokud je toto nastavení povolené, Průvodce nastavením zobrazí při aktivaci výzvu služby.
-        - **Obnovit** – Pokud je toto nastavení povolené, Průvodce nastavením zobrazí při aktivaci výzvu k zálohování do úložiště iCloud.
+        - **Zjišťování polohy** – Pokud je toto nastavení povolené, Pomocník s nastavením zobrazí při aktivaci výzvu služby.
+        - **Obnovit** – Pokud je toto nastavení povolené, Pomocník s nastavením zobrazí při aktivaci výzvu k zálohování do úložiště iCloud.
         - **Apple ID** – Pokud je povolené, vyzve iOS uživatele při pokusu Intune o instalaci aplikace bez ID, aby zadali Apple ID. Apple ID je potřeba ke stahování aplikací pro iOS z App Storu, včetně těch instalovaných službou Intune.
-        - **Podmínky a ujednání** – V případě povolení Průvodce nastavením vyzve uživatele k přijetí podmínek a ujednání společnosti Apple během aktivace.
-        - **Dotykový identifikátor** – V případě povolení Průvodce nastavením zobrazí během aktivace výzvu pro tuto službu.
-        - **Dotykový identifikátor** – V případě povolení Průvodce nastavením zobrazí během aktivace výzvu pro tuto službu.
-        - **Zvětšení** – V případě povolení Průvodce nastavením zobrazí během aktivace výzvu pro tuto službu.
-        - **Siri** – V případě povolení Průvodce nastavením zobrazí během aktivace výzvu pro tuto službu.
-        - **Diagnostická data** – V případě povolení Průvodce nastavením zobrazí během aktivace výzvu pro tuto službu.
+        - **Podmínky a ujednání** – V případě povolení Pomocník nastavení vyzve uživatele k přijetí podmínek a ujednání společnosti Apple během aktivace.
+        - **Dotykový identifikátor** – V případě povolení Pomocník s nastavením zobrazí během aktivace výzvu pro tuto službu.
+        - **Dotykový identifikátor** – V případě povolení Pomocník s nastavením zobrazí během aktivace výzvu pro tuto službu.
+        - **Zvětšení** – V případě povolení Pomocník s nastavením zobrazí během aktivace výzvu pro tuto službu.
+        - **Siri** – V případě povolení Pomocník s nastavením zobrazí během aktivace výzvu pro tuto službu.
+        - **Diagnostická data** – V případě povolení Pomocník s nastavením zobrazí během aktivace výzvu pro tuto službu.
 
 8. Uložte nastavení profilu tak, že v okně **Vytvořit registrační profil** zvolíte **Vytvořit**.
 
@@ -151,10 +151,10 @@ Když jste službě Intune přiřadili oprávnění ke správě zařízení Appl
 
 1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** > **Registrace Apple** > **Zařízení Programu registrace** > **Synchronizovat**. Indikátor průběhu vám ukáže dobu, jakou budete muset počkat před dalším vyžádáním synchronizace.
 
-  ![Snímek obrazovky s vybraným uzlem Zařízení Programu registrace a vybraným odkazem pro synchronizaci](./media/enrollment-program-device-sync.png)
+  ![Vybraný uzel Zařízení Programu registrace a vybraný odkaz Synchronizovat](./media/enrollment-program-device-sync.png)
 2. V okně **Synchronizovat** vyberte **Požadovat synchronizaci**. Indikátor průběhu vám ukáže dobu, jakou budete muset počkat před dalším vyžádáním synchronizace.
 
-  ![Snímek obrazovky synchronizačního okna s vybraným odkazem Požadovat synchronizaci](./media/enrollment-program-device-request-sync.png)
+  ![Synchronizační okno s vybraným odkazem Požadovat synchronizaci](./media/enrollment-program-device-request-sync.png)
 
   Pro dosažení souladu s podmínkami společnosti Apple pro přijatelné přenosy platí v Intune následující omezení:
    -    Úplná synchronizace se nesmí pouštět častěji než jednou za sedm dní. Během úplné synchronizace Intune aktualizuje všechna sériová čísla, která společnost Apple přiřadila Intune, bez ohledu na jejich dřívější synchronizaci. Pokud se o úplnou synchronizaci pokusíte do sedmi dnů od předchozí úplné synchronizace, aktualizuje Intune jenom sériová čísla, která ještě nejsou v Intune.
@@ -169,7 +169,7 @@ Zařízením Apple School Manageru spravovaným v Intune musíte před registrac
 1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** > **Registrace Apple** a pak zvolte **Profily Programu registrace**.
 2. V seznamu **Profily Programu registrace** zvolte profil, který chcete zařízením přiřadit, a pak zvolte **Přiřazení zařízení**.
 
- ![Snímek obrazovky přiřazení zařízení s vybranou možností Přiřadit.](./media/enrollment-program-device-assign.png)
+ ![Přiřazení zařízení s vybranou možností Přiřadit](./media/enrollment-program-device-assign.png)
 
 3. Zvolte **Přiřadit** a pak zvolte zařízení Apple School Manageru, ke kterým chcete tento profil přiřadit. Dostupná zařízení můžete filtrovat:
   - **nepřiřazené**
@@ -177,7 +177,7 @@ Zařízením Apple School Manageru spravovaným v Intune musíte před registrac
   - **&lt;název profilu&gt;**
 4. Vyberte zařízení, která chcete přiřadit. Zaškrtávací políčko nad sloupcem umožňuje vybrat až 1 000 uvedených zařízení. Klikněte na tlačítko **Přiřadit**. Pokud chcete registrovat více než 1 000 zařízení, opakujte postup, dokud nebudou mít všechna zařízení přiřazený profil registrace.
 
-  ![Snímek obrazovky s tlačítkem Přiřadit pro přiřazení profilu programu registrace v Intune](media/dep-profile-assignment.png)
+  ![Tlačítko Přiřadit pro přiřazení profilu programu registrace v Intune](media/dep-profile-assignment.png)
 
 ## <a name="distribute-devices-to-users"></a>Distribuce zařízení uživatelům
 

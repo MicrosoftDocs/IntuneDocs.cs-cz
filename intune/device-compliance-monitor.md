@@ -1,10 +1,10 @@
 ---
-title: "Monitorování dodržování zásad v zařízeních"
-titlesuffix: Azure portal
+title: "Monitorování dodržování předpisů zařízením"
+titlesuffix: Microsoft Intune
 description: "Informace o tom, jak monitorovat dodržování zásad v zařízeních"
 keywords: 
-author: andredm7
-ms.author: andredm
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 12/07/2016
 ms.topic: article
@@ -15,24 +15,24 @@ ms.assetid: 0790934b-48b9-435b-a8aa-e83ed5b73191
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9cd8bb0486164dd9dfe020261da9079ea5a68633
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 708ed5a335d3475c213a536da9072afb1ad32ef9
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="how-to-monitor-device-compliance-in-intune"></a>Monitorování dodržování zásad v zařízeních v Intune
+# <a name="monitor-device-compliance-in-intune"></a>Monitorování dodržování předpisů zařízením v Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 V okně **Přehled** si můžete zobrazit souhrn stavu vašich **profilů dodržování předpisů**.
-Klikáním v grafech si můžete interaktivně zobrazit podrobnosti. Pokud máte nakonfigurovaných několik profilů dodržování předpisů, můžete si navíc zobrazit stav jednotlivých zásad. Stačí přejít na okno zásad a v části **Spravovat** zvolit **Sestavy**.  Podrobnosti sestav, které jsou k dispozici, jsou uvedené níže.
+Klikáním v grafech si můžete interaktivně zobrazit podrobnosti. Pokud máte nakonfigurovaných několik profilů dodržování předpisů, můžete si zobrazit stav zásad v okně zásad v části **Spravovat** > **Sestavy**.
 
 ##  <a name="device-compliance"></a>Dodržování předpisů zařízení
 
-Souhrnné zobrazení sestavy dodržování předpisů zařízením začíná agregovanými informacemi o počtu zařízení, která se hlásí jako jedna z následujících:
+Souhrnné zobrazení sestavy dodržování předpisů zařízením uvádí agregované informace o počtu zařízení, která se hlásí v jednom z následujících stavů:
 
-- **Vyhovující**: Nedávno se vyhodnotilo dodržování předpisů daným zařízením. Zařízení se vyhodnotilo jako vyhovující nastavením profilu dodržování předpisů, která jste určili.
+- **Vyhovující**: Zařízení se nedávno vyhodnotilo jako vyhovující nastavením profilu dodržování předpisů, která jste určili.
 - **Nevyhovující**: Zařízení se vyhodnotilo jako nevyhovující.  Pokud se v profilu nastavilo období odkladu, při přechodu zařízení do stavu Nevyhovující toto období vypršelo.
 - **Období odkladu**: Zařízení se vyhodnotilo jako nevyhovující. Stále ale běží období odkladu, do jehož skončení se zařízení neoznačí jako nevyhovující.
 
@@ -40,7 +40,7 @@ V každé sekci si můžete zobrazit podrobnosti o jednotlivých zařízeních a
 
 ## <a name="setting-compliance"></a>Dodržování nastavení
 
-Sestava dodržování nastavení poskytuje podrobnosti pro jednotlivá nastavení dodržování předpisů, jako je:
+Sestava dodržování nastavení poskytuje podrobnosti pro jednotlivá nastavení dodržování předpisů, jako jsou například:
 
 - Počet zařízení nevyhovujících danému nastavení
 - Platforma, na kterou se nastavení vztahuje

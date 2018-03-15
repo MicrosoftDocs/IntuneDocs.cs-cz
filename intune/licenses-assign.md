@@ -1,6 +1,6 @@
 ---
-title: "Přiřazení licencí Intune"
-description: "Přiřaďte uživatelům licence k předplatnému Intune."
+title: "Přiřazení licencí Microsoft Intune"
+description: "Přiřazení licencí uživatelům, aby mohli zaregistrovat zařízení v Intune"
 keywords: 
 author: ErikjeMS
 ms.author: erikje
@@ -14,13 +14,13 @@ ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
 ms.reviewer: amyro
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 2ad754ce3d81469bb172081b6b7f43937f45ffd9
-ms.sourcegitcommit: cccbb6730a8c84dc3a62093b8910305081ac9d24
+ms.openlocfilehash: 45baadb24ac646a6456e04c85a701842774c7930
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="assign-intune-licenses-to-your-user-accounts"></a>Přiřazení licencí Intune uživatelským účtům
+# <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Přiřazení licencí uživatelům, aby mohli zaregistrovat zařízení v Intune
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
@@ -36,7 +36,7 @@ Pomocí [portálu služeb Office 365](http://go.microsoft.com/fwlink/p/?LinkId=6
 
 3.  Přepněte **Intune** nebo **Enterprise Mobility + Security** na **Zapnuto** a vyberte **Uložit**.
 
-  ![Obrázek přiřazení licence k produktu na portálu Office 365](./media/office-assign-license.png)
+  ![Snímek obrazovky s portálem Office 365 – část Licence na produkty](./media/office-assign-license.png)
 
 4. Uživatelský účet má teď oprávnění potřebná k používání služby a registraci zařízení pro správu.
 
@@ -46,11 +46,11 @@ Pomocí [portálu služeb Office 365](http://go.microsoft.com/fwlink/p/?LinkId=6
 ## <a name="use-school-data-sync-to-assign-licenses-to-users-in-intune-for-education"></a>Přiřazení licencí uživatelům v Intune for Education pomocí služby SDS (School Data Sync)
 Pokud patříte mezi vzdělávací organizace, můžete k přiřazení licencí na Intune for Education synchronizovaným uživatelům použít službu SDS (School Data Sync). Při nastavování profilu SDS stačí zaškrtnout políčko Intune for Education.  
 
-![Obrázek nastavení profilu SDS](./media/i4e-sds-profile-setup-setting.png)
+![Snímek obrazovky s nastavením profilu SDS](./media/i4e-sds-profile-setup-setting.png)
 
 Při přiřazování licence na Intune for Education ověřte, že je přiřazená také licence Intune A Direct.
 
-![Obrázek nastavení produktové licence](./media/i4e-set-licenses.png)
+![Snímek obrazovky s nastavením produktové licence](./media/i4e-set-licenses.png)
 
 Další informace o službě SDS najdete v článku [Přehled služby SDS (School Data Sync)](https://support.office.com/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91).
 

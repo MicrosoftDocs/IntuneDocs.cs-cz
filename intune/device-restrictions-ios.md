@@ -1,27 +1,26 @@
 ---
-title: "Nastavení omezení pro zařízení s iOSem v Intune"
-titleSuffix: Azure portal
+title: "Nastavení omezení pro zařízení s iOSem v Microsoft Intune"
+titleSuffix: 
 description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s iOSem."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 11/03/2017
+ms.date: 3/1/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 73590192-54ca-4833-9f1d-83e1b654399f
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b450becb45aea7ba5aa6ac2b6798e2062c08b4f2
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: bc53a7a6a4c961a649d01f23f30c59ff4dc90fe2
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="ios-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení s iOSem v Microsoft Intune
+# <a name="microsoft-intune-ios-device-restriction-settings"></a>Nastavení omezení pro zařízení s iOSem v Microsoft Intune
+Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s iOSem.
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -95,7 +94,7 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 ## <a name="password"></a>Heslo
 -   **Heslo** – Vyžaduje, aby koncový uživatel zadal heslo pro přístup k zařízení.
     -   **Jednoduchá hesla** – Umožňuje použití jednoduchých hesel, jako je třeba 0000 nebo 1234.
-    -   **Požadovaný typ hesla** – Určuje typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.
+    -   **Požadovaný typ hesla** – Určuje typ hesla, který se vyžaduje, například jenom číslice nebo alfanumerické znaky.
     -   **Počet nealfanumerických znaků v hesle** – Určuje počet znaků symbolu (jako například **#** nebo **@**), které musí heslo obsahovat.
     -   **Minimální délka hesla** – Určuje minimální počet znaků v hesle.
     -   **Počet neúspěšných přihlášení před vymazáním obsahu zařízení** – Určuje počet neúspěšných pokusů o přihlášení, než toto nastavení vymaže zařízení.
@@ -107,7 +106,7 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 - **Úprava hesla (jenom pod dohledem)** –Zamezí změně, přidání nebo odebrání hesla.
     - **Úprava otisků prstů (jenom pod dohledem)** –Zamezí uživateli ve změně, přidání nebo odebrání nastavení Touch ID.
 
-<sup>1</sup>Když nakonfigurujete nastavení **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka** a **Maximální počet minut po uzamčení obrazovky, po kterém bude nutné zadat heslo**, použijí se postupně. Pokud například pro obě nastavení nastavíte hodnotu **5** minut, obrazovka se po 5 minutách automaticky vypne a po dalších 5 minutách se zařízení zamkne. Pokud ale uživatel vypne obrazovku ručně, druhé nastavení se použije okamžitě. V tomto příkladě se zařízení po tom, co uživatel vypne obrazovku, zamkne po 5 minutách.
+<sup>1</sup>Když nakonfigurujete nastavení **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka** a **Maximální počet minut po uzamčení obrazovky, po kterém bude nutné zadat heslo**, použijí se postupně. Pokud například pro obě nastavení nastavíte hodnotu **5** minut, obrazovka se po pěti minutách automaticky vypne a po dalších pěti minutách se zařízení zamkne. Pokud ale uživatel vypne obrazovku ručně, druhé nastavení se použije okamžitě. Ve stejném příkladu se zařízení po tom, co uživatel vypne obrazovku, zamkne po pěti minutách.
 
 ## <a name="locked-screen-experience"></a>Prostředí zamknuté obrazovky
 
@@ -133,7 +132,7 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 -   **Game Center (jenom pod dohledem)** – Zablokuje nebo povolí používání aplikace Game Center.
 -   **Hry pro více hráčů** – Povolí uživateli hrát na zařízení hry pro více hráčů.
 -   **Oblast hodnocení** – Zvolte oblast hodnocení, pro kterou chcete konfigurovat povolené soubory ke stažení, a potom zvolte povolená hodnocení pro **filmy** a **televizní pořady**.
--   **Aplikace** – Zvolte povolená hodnocení aplikací podle věku, které budou uživatelé moct stahovat, nebo můžete zvolit **Povolit všechny aplikace**.
+-   **Aplikace** – Zvolte povolená hodnocení aplikací podle věku, které si můžou uživatelé stahovat, nebo můžete zvolit **Povolit všechny aplikace**.
 
 ## <a name="built-in-apps"></a>Integrované aplikace
 
@@ -156,8 +155,8 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 
 V seznamu omezených aplikací můžete nakonfigurovat jeden z následujících seznamů:
 
-- **Zakázané aplikace** – Zobrazí seznam aplikací (nespravovaných pomocí Intune), které nemají uživatelé dovolené nainstalovat a spustit. Pro uživatele není instalace zakázané aplikace znemožněna, ale pokud to udělají, dostanete příslušné hlášení.
-- **Schválené aplikace** – Zobrazí seznam aplikací, které mají uživatelé dovolené instalovat. Uživatelé nesmí instalovat aplikace, které nejsou v seznamu. Aplikace, které spravuje Intune, jsou povolené automaticky. Uživatelům není instalace aplikace nenacházející se v seznamu povolených znemožněna, ale pokud ji provedou, budete na to upozorněni.
+- **Zakázané aplikace** – Zobrazí seznam aplikací (nespravovaných pomocí Intune), které nemají uživatelé dovolené nainstalovat a spustit. Uživatelům není instalace zakázané aplikace znemožněna, ale pokud ji provedou, budete na to upozorněni.
+- **Schválené aplikace** – Zobrazí seznam aplikací, které mají uživatelé dovolené instalovat. Uživatelé nesmí instalovat aplikace, které nejsou v seznamu. Aplikace, které spravuje Intune, jsou povolené automaticky. Uživatelům není instalace aplikace nenacházející se v seznamu povolených aplikací znemožněna, ale pokud ji provedou, budete na to upozorněni.
 
 Pokud chcete seznam nakonfigurovat, klikněte na **Přidat**, zadejte libovolný název, volitelně vydavatele aplikace a nakonec adresu URL aplikace v App Storu.
 
@@ -169,7 +168,7 @@ Pomocí vyhledávacího modulu najděte aplikaci, kterou chcete použít v iTune
 Zkopírujte adresu URL stránky a použijte ji jako URL ke konfiguraci seznamu povolených a zakázaných aplikací nebo aplikace, kterou chcete spustit v celoobrazovkovém režimu.
 Profily zařízení, které obsahují nastavení aplikací s omezeným přístupem, se musí přiřadit skupinám uživatelů.
 
-Příklad: Vyhledejte Microsoft Word pro iPad. Použitá adresa URL bude https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
+Příklad: Vyhledejte Microsoft Word pro iPad. Použijte adresu URL https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
 
 > [!Note]
 > Pomocí iTunes taky můžete najít aplikaci a pomocí příkazu **Kopírovat odkaz** získat adresu URL aplikace.
@@ -182,7 +181,7 @@ Můžete také kliknout na **Import** a naplnit seznam ze souboru csv ve formát
 
 V seznamu Zobrazit nebo skrýt aplikace můžete nakonfigurovat jeden z následujících seznamů (vyžaduje zařízení pod dohledem se systémem iOS 9.3 nebo novější).
 
-Seznam **Skryté aplikace** – Určuje seznam aplikací, které budou uživatelům skryté. Uživatelé nebudou moci tyto aplikace zobrazit ani spustit.
+Seznam **Skryté aplikace** – Určuje seznam aplikací, které jsou uživatelům skryté. Uživatelé nebudou moci tyto aplikace zobrazit ani spustit.
 Seznam **Viditelné aplikace** – Určuje seznam aplikací, které uživatelé můžou zobrazit a spustit. Žádné jiné aplikace nebude možné zobrazit ani spustit.
 
 Pokud chcete seznam nakonfigurovat, klikněte na **Přidat**, zadejte libovolný název, volitelně vydavatele aplikace a nakonec adresu URL aplikace v App Storu.
@@ -194,7 +193,7 @@ Pokud chcete zadat adresu URL aplikace do seznamu aplikací, použijte následuj
 Pomocí vyhledávacího modulu najděte aplikaci, kterou chcete použít v iTunes App Storu, a otevřete stránku pro tuto aplikaci.
 Zkopírujte adresu URL stránky a použijte ji jako URL ke konfiguraci seznamu povolených a zakázaných aplikací nebo aplikace, kterou chcete spustit v celoobrazovkovém režimu.
 
-Příklad: Vyhledejte Microsoft Word pro iPad. Použitá adresa URL bude https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
+Příklad: Vyhledejte Microsoft Word pro iPad. Použijte adresu URL https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
 
 > [!Note]
 > Pomocí softwaru iTunes taky můžete najít aplikaci a pomocí příkazu **Kopírovat odkaz** získat adresu URL aplikace.
@@ -238,9 +237,9 @@ Můžete také kliknout na **Import** a naplnit seznam ze souboru csv ve formát
 ## <a name="cloud-and-storage"></a>Cloud a úložiště
 -   **Zálohování do iCloudu** – Povolí uživateli zálohovat zařízení do iCloudu.
 -   **Synchronizace dokumentů s iCloudem (jenom pod dohledem)** – Povolí synchronizaci dokumentu a párů klíč-hodnota s úložným prostorem iCloudu.
--   **Synchronizace datového proudu fotografií s iCloudem** – Umožňuje uživatelům povolit na jejich zařízeních **Můj fotostream**, který umožňuje synchronizovat fotky na iCloud, aby byly k dispozici na všech zařízeních uživatelů.
+-   **Synchronizace datového proudu fotografií s iCloudem** – Umožňuje uživatelům povolit na svých zařízeních **Můj fotostream**, který umožňuje synchronizovat fotky na iCloud, aby byly k dispozici na všech zařízeních uživatelů.
 -   **Šifrované zálohování** – Vyžaduje, aby všechny zálohy zařízení byly šifrované.
--   **Knihovna fotografií na iCloudu** – Pokud je možnost nastavená na **Ne**, zakáže použití knihovny fotografií iCloudu, přes kterou můžou uživatelé ukládat fotografie a videa v cloudu.    Všechny fotky, které nejsou kompletně stažené z Knihovny fotografií na iCloudu do zařízení, se ze zařízení odeberou, pokud je tato možnost nastavená na **Ne**.
+-   **Knihovna fotografií na iCloudu** – Pokud je tato možnost nastavená na **Ne**, zakáže použití knihovny fotografií iCloudu, přes kterou můžou uživatelé ukládat fotografie a videa v cloudu.   Všechny fotky, které nejsou kompletně stažené z Knihovny fotografií na iCloudu do zařízení, se ze zařízení odeberou, pokud je tato možnost nastavená na **Ne**.
 -   **Synchronizace spravovaných aplikací do cloudu** – Povolí aplikacím, které spravujete přes Intune, synchronizaci dat s uživatelským účtem iCloudu.
 -   **Sdílený stream fotek** – Pokud chcete na zařízení zakázat **Sdílení fotek na iCloudu**, nastavte možnost na **Ne**.
 -   **Pokračování aktivity** – Umožní uživateli, aby v práci, kterou zahájil na zařízení s iOSem, pokračoval na jiném zařízení s iOSem nebo macOS (Handoff).
@@ -251,7 +250,7 @@ Tato nastavení použijte ke konfiguraci, aby zařízení s iOSem spouštěla za
 
 ### <a name="settings"></a>Nastavení
 
-- **Název aplikace** – zadejte název aplikace, jak se bude zobrazovat v seznamu aplikací v tomto okně.
+- **Název aplikace** – zadejte název aplikace, jak se zobrazí v seznamu aplikací v tomto okně.
 - **ID sady prostředků aplikace** – zadejte ID sady prostředků aplikace. Pomůžou vám **Referenční informace o ID sady prostředků pro integrované aplikace pro iOS** v tomto tématu.
 
 Po zadání názvů jednotlivých aplikací a ID prostředků aplikace zvolte **Přidat** a přidejte je do seznamu.
@@ -308,7 +307,7 @@ Tento seznam zobrazuje ID sady prostředků některých běžných integrovanýc
 
 
 ## <a name="kiosk-supervised-only"></a>Veřejný terminál (jenom pod dohledem)
--   **Aplikace, která běží v beznabídkovém režimu** – Zvolte **Spravovaná aplikace** a vyberte aplikaci, kterou jste přidali do Intune, nebo zvolte **Aplikace pro Store** a zadejte adresu URL k aplikaci v úložišti. Žádné jiné aplikace nebudou mít dovoleno se na zařízení spouštět. Další nápovědu najdete v části Určení adres URL na obchody s aplikacemi dál v tomto tématu.
+-   **Aplikace, která běží v beznabídkovém režimu** – Zvolte **Spravovaná aplikace** a vyberte aplikaci, kterou jste přidali do Intune, nebo zvolte **Aplikace pro Store** a zadejte adresu URL k aplikaci v úložišti. Žádné jiné aplikace se na zařízení nebudou moct spustit. Další nápovědu najdete v části Určení adres URL na obchody s aplikacemi dál v tomto tématu.
     -   **Dotykové ovládání s asistencí** – Povolí nebo zakáže nastavení usnadnění **dotykového ovládání**, která uživateli pomáhá provádět na obrazovce gesta, která by pro něho mohla být obtížná.
     -   **Invertovat barvy** – Povolí nebo zakáže nastavení usnadnění Invertovat barvy, které upraví displej tak, aby pomáhal uživatelům se zrakovým postižením.
     -   **Monofonní zvuk** – Povolí nebo zakáže nastavení usnadnění Monofonní zvuk.
@@ -343,12 +342,12 @@ Tento seznam zobrazuje ID sady prostředků některých běžných integrovanýc
 
 ### <a name="unmarked-email-domains"></a>Zrušení označení e-mailových domén
 
-V poli **Adresa URL e-mailové domény** přidejte do seznamu minimálně jednu adresu URL. Když koncoví uživatelé dostanou e-mail z jiné domény, než z té, kterou jste nakonfigurovali, označí se v aplikaci iOS Mail daný e-mail jako nedůvěryhodný.
+V poli **Adresa URL e-mailové domény** přidejte do seznamu minimálně jednu adresu URL. Když koncoví uživatelé dostanou e-mail z jiné domény než z té, kterou jste nakonfigurovali, označí se v aplikaci iOS Pošta tento e-mail jako nedůvěryhodný.
 
 
 ### <a name="managed-web-domains"></a>Spravované webové domény
 
-V poli **Adresa URL webové domény** přidejte do seznamu minimálně jednu adresu URL. Když pak z těchto zadaných domén stáhnete dokumenty, budou se považovat za spravované. Toto nastavení platí jenom pro dokumenty stažené prostřednictvím prohlížeče Safari.
+V poli **Adresa URL webové domény** přidejte do seznamu minimálně jednu adresu URL. Když z těchto zadaných domén stahujete dokumenty, považují se za spravované. Toto nastavení platí jenom pro dokumenty stažené prostřednictvím prohlížeče Safari.
 
 
 ### <a name="safari-password-autofill-domains"></a>Domény pro automatické vyplňování hesel v Safari

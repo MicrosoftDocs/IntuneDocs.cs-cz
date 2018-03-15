@@ -1,12 +1,12 @@
 ---
 title: "Přidání aplikací do Microsoft Intune"
-titlesuffix: Azure portal
-description: "Tyto postupy vám pomůžou připravit vaše aplikace v Intune pro přiřazení uživatelům a zařízením. \""
+titlesuffix: 
+description: "Zjistěte, jak přidat aplikace do Microsoft Intune, aby je bylo možné přiřadit uživatelům a zařízením. Intune podporuje širokou škálu různých typů aplikací."
 keywords: 
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/17/2018
+ms.date: 03/01/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4c753ebfc48365d0d586773585552026ad17b6f6
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: 91762eafbba5f96ce04f3ffd4d83f63434a3ac74
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-add-an-app-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune
 
@@ -121,8 +121,8 @@ Požadavky na cloudové úložiště jsou následující:
 Když aplikace seřadíte do kategorií, uživatelé je jednodušeji najdou na portálu společnosti. K aplikaci můžete přiřadit jednu kategorii i více, například **Aplikace pro vývojáře** nebo **Aplikace pro komunikaci**.
 Když přidáte aplikaci do Intune, budete mít možnost vybrat požadovanou kategorii. Informace k přidání aplikací a přiřazení kategorií získáte v tématech pro jednotlivé platformy. Pokud chcete vytvořit a upravit vlastní kategorie, postupujte podle následujících pokynů:
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V okně **Intune** zvolte **Mobilní aplikace**.
 4. V úloze **Mobilní aplikace** zvolte **Spravovat** > **Kategorie aplikací**.
 5. V okně **Kategorie aplikací** se zobrazí seznam aktuálních kategorií. Vyberte jednu z následujících akcí:
@@ -149,5 +149,5 @@ Informace o tom, jak do Intune přidat aplikace pro jednotlivé platformy, najde
 - [Aplikace pro Windows Store](store-apps-windows.md)
 - [Obchodní aplikace pro Windows](lob-apps-windows.md)
 - [Aplikace Office 365 pro Windows 10](apps-add-office365.md)
-- [Integrované aplikace](apps-add-bulit-in.md)
+- [Integrované aplikace](apps-add-built-in.md)
 

@@ -1,8 +1,8 @@
 ---
 title: "Microsoft Intune App SDK pro iOS – Příručka pro vývojáře"
-description: "Microsoft Intune App SDK pro iOS umožňuje začlenit do vaší aplikace pro iOS zásady ochrany aplikace Intune, a to ve formě správy mobilních aplikací (MAM)."
+description: "Sada Microsoft Intune App SDK pro iOS umožňuje začlenit do vaší nativní aplikace pro iOS zásady ochrany aplikací Intune (označované také jako zásady APP nebo MAM)."
 keywords: 
-author: erikre
+author: Erikre
 manager: dougeby
 ms.author: erikre
 ms.date: 01/10/2018
@@ -14,11 +14,11 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f74b996b3b96dfa808771f3dd4fc70f9c29324c2
-ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
+ms.openlocfilehash: 49ffac609ec24917b8490c535ebd74c6d2729ccd
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -464,7 +464,7 @@ WebViewHandledURLSchemes | Pole řetězců | Určuje schémata URL zpracovávan�
 > Pokud bude aplikace vydaná v App Storu, možnost `MAMPolicyRequired` musí být podle standardů App Storu nastavená na NE.
 
 ## <a name="enabling-mam-targeted-configuration-for-your-ios-applications"></a>Povolení konfigurace určené pro správu mobilních aplikací pro iOS
-Konfigurace určená pro správu mobilních aplikací (MAM) umožňuje aplikacím přijímat konfigurační data prostřednictvím sady SDK aplikace Intune. Formát a varianty těchto dat musí vlastník aplikace nebo její vývojář definovat a oznámit zákazníkům, kteří využívají Intune. Správci Intune mohou konfigurační data zacílit a nasadit prostřednictvím Intune na portálu Azure Portal. Od verze 7.0.1 sady Intune App SDK pro iOS můžou aplikace s konfigurací určenou pro MAM získávat prostřednictvím služby MAM konfigurační data určená pro správu mobilních zařízení. Konfigurační data aplikace se odešlou přímo do aplikace přes službu MAM, nikoliv prostřednictvím kanálu MDM. Sada Intune App SDK nabízí třídu pro přístup k datům načteným z těchto konzol. Následující požadavky je potřeba vzít v úvahu: <br>
+Konfigurace určená pro správu mobilních aplikací (MAM) umožňuje aplikacím přijímat konfigurační data prostřednictvím sady SDK aplikace Intune. Formát a varianty těchto dat musí vlastník aplikace nebo její vývojář definovat a oznámit zákazníkům, kteří využívají Intune. Správci Intune mohou konfigurační data zacílit a nasadit prostřednictvím Intune na Azure Portalu. Od verze 7.0.1 sady Intune App SDK pro iOS můžou aplikace s konfigurací určenou pro MAM získávat prostřednictvím služby MAM konfigurační data určená pro správu mobilních zařízení. Konfigurační data aplikace se odešlou přímo do aplikace přes službu MAM, nikoliv prostřednictvím kanálu MDM. Sada Intune App SDK nabízí třídu pro přístup k datům načteným z těchto konzol. Následující požadavky je potřeba vzít v úvahu: <br>
 * Kvůli přístupu k uživatelskému rozhraní pro konfiguraci MAM musí být aplikace zaregistrovaná ve službě Intune MAM. Další informace najdete v části [Příjem zásad ochrany aplikací](#receiving-app-protection-policy).
 * Do zdrojových souborů aplikace je potřeba zahrnout soubor ```IntuneMAMAppConfigManager.h```.
 * K získání konfiguračního objektu aplikace je potřeba volat ```[[IntuneMAMAppConfigManager instance] appConfigForIdentity:]```.

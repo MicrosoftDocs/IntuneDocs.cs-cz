@@ -3,10 +3,10 @@ title: "Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Informati
 titlesuffix: Azure portal
 description: "Vytvoření a nasazení zásady ochrany aplikací WIP u Intune"
 keywords: 
-author: arob98
-ms.author: angrobe
-manager: dougeby
-ms.date: 12/29/2017
+author: Erikre
+ms.author: erikre
+manager: doubeby
+ms.date: 02/16/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 940c4bc17face7ecef2b6888e199ba47073659ba
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 647e6fd129593156f2ba24299a19e96686206165
+ms.sourcegitcommit: 1978a30ab1af0f43aa5f447690d0bbcdcb9b563b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune
 
@@ -47,9 +47,9 @@ Povězme si o několika konceptech při přidání zásady WIP.
 
 ## <a name="pre-requisites"></a>Požadavky
 
-Abyste mohli vytvořit zásadu ochrany aplikací WIP, musíte nejdříve nakonfigurovat poskytovatele MAM. Přečtěte si další informace o tom, [jak nakonfigurovat poskytovatele MAM u Intune](https://docs.microsoft.com/app-protection-policies-configure-windows-10.md).
+Abyste mohli vytvořit zásadu ochrany aplikací WIP, musíte nejdříve nakonfigurovat poskytovatele MAM. Přečtěte si další informace o tom, [jak nakonfigurovat poskytovatele MAM u Intune](app-protection-policies-configure-windows-10.md).
 
-Navíc musíte mít toto:
+Navíc musíte mít následující licenci a aktualizaci:
 
 -   Licence [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium)
 -   [Windows Creators Update](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
@@ -60,7 +60,7 @@ Navíc musíte mít toto:
 
 ## <a name="to-add-a-wip-policy"></a>Přidání zásady WIP
 
-Pokud už máte v organizaci nastavenou službu Intune, můžete přes portál [Azure Portal](https://docs.microsoft.com/intune-classic/deploy-use/azure-portal-for-microsoft-intune-mam-policies) vytvořit zásadu specifickou pro WIP. <!---Is there an azure topic you can use instead of a classic? if not, should this topic be moved into the azure docset?--->
+Pokud už máte v organizaci nastavenou službu Intune, můžete přes portál [Azure Portal](https://docs.microsoft.com/intune-classic/deploy-use/azure-portal-for-microsoft-intune-mam-policies) vytvořit zásadu specifickou pro WIP. <!---Is there an azure topic you can use instead of a classic? if not, should this topic be moved into the azure doc set?--->
 
 1.  Přejděte na **řídicí panel Správa mobilních aplikací Intune** a zvolte **Všechna nastavení** > **Zásada aplikace**.
 
@@ -80,7 +80,7 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete přes portál [
 
 1.  V okně **Zásada aplikace** zvolte název zásady a potom v okně **Přidat zásadu** zvolte možnost **Povolené aplikace**. Otevře se okno **Povolené aplikace** a zobrazí se v něm všechny aplikace, které už jsou obsažené v seznamu pro tuto zásadu ochrany aplikací.
 
-2.  V okně **Povolené aplikace** zvolte **Přidat aplikace**. Otevře se okno **Přidat aplikace** a zobrazí se v něm všechny aplikace, které jsou součástí tohoto seznamu.
+2.  V okně **Povolené aplikace** zvolte **Přidat aplikace**. V okně **Přidat aplikace** se zobrazí všechny aplikace, které jsou součástí tohoto seznamu.
 
 3.  Otevřete každou aplikaci, která má mít přístup k podnikovým datům, a zvolte **OK**. Okno **Povolené aplikace** se aktualizuje a zobrazí se v něm všechny vaše vybrané aplikace.
 
@@ -145,15 +145,15 @@ WIP běží bez upozorňování s protokolováním nepatřičného sdílení dat
 #### <a name="off-not-recommended"></a>Vypnuto (nedoporučuje se)
 WIP je vypnuté a nepomáhá chránit nebo auditovat data.
 
-Když WIP vypnete, proběhne pokus o dešifrování všech souborů označených přes WIP na místně připojených jednotkách. Mějte na paměti, že po opětovném zapnutí WIP se předchozí šifrování a informace zásady znovu automaticky nepoužijí.
+Když WIP vypnete, proběhne pokus o dešifrování všech souborů označených přes WIP na místně připojených jednotkách. Mějte na paměti, že po opětovném zapnutí WIP se předchozí informace o šifrování a zásadách znovu automaticky nepoužijí.
 
 ### <a name="add-a-protection-mode"></a>Přidání režimu ochrany
 
-1.  V okně **Zásada aplikace** zvolte název zásady a potom zvolte **Povinná nastavení**.
+1.  V okně **Zásada aplikace** zvolte název zásady a potom zvolte **Požadovaná nastavení**.
 
     ![Snímek obrazovky s režimem Kurzy](./media/learning-mode-sc1.png)
 
-1.  Zvolte **Uložit**.
+2.  Zvolte **Uložit**.
 
 ### <a name="use-wip-learning"></a>Použití Kurzů k WIP
 
@@ -165,10 +165,23 @@ Když WIP vypnete, proběhne pokus o dešifrování všech souborů označených
  
     Jakmile se tyto aplikace objeví v sestavě protokolování Kurzy k WIP, můžete je přidat do zásad ochrany aplikací.
 
+## <a name="allow-windows-search-indexer-to-search-encrypted-items"></a>Povolit Windows Search Indexeru prohledávat šifrované položky
+Tato zásada povolí nebo zakáže indexování položek. Souvisí s Windows Search Indexerem a určuje, jestli se mají indexovat šifrované položky, třeba chráněné soubory Windows Information Protection (WIP).
+
+Tato zásada ochrany aplikací se nachází v zásadách Windows Information Protection v části **Upřesnit nastavení**. Zásady ochrany aplikací musí být nastavené pro platformu *Windows 10* a možnost **Stav registrace** musí být nastavená na hodnotu **S registrací**. 
+
+Pokud je tato zásada povolená, chráněné položky WIP se indexují a metadata o nich se ukládají do nešifrovaného umístění. Součástí metadat jsou takové položky jako cesta k souboru a datum změny.
+
+Pokud je tato zásada zakázaná, chráněné položky WIP se neindexují a ve výsledcích v Cortaně nebo v Průzkumníkovi souborů se nezobrazují. Pokud se v zařízení nachází mnoho souborů médií chráněných WIP, může to mít také dopad na výkon fotografií a aplikací Groove.
+
+## <a name="add-encrypted-file-extensions"></a>Přidat přípony šifrovaných souborů
+
+Kromě nastavení možnosti **Povolit Windows Search Indexeru prohledávat šifrované položky** můžete zadat seznam přípon souborů. Při kopírování ze sdílené složky SMB (Server Message Block) v rámci hranic firmy definovaných seznamem síťových umístění se soubory s těmito příponami budou šifrovat. Když se tato zásada nezadá, použije se stávající chování automatického šifrování. Pokud se tato zásada nakonfiguruje, budou se šifrovat jenom soubory, které mají přípony uvedené v seznamu.
+
 ## <a name="deploy-your-wip-app-protection-policy"></a>Nasazení zásady ochrany aplikací WIP
 
 > [!IMPORTANT]
-> Následující informace platí pro zásady WIP bez registrace zařízení.
+> Následující informace platí pro WIP bez registrace zařízení.
 
 <!---not sure why you need the Important note. Isn't this what the topic is about? app protection w/o enrollment?--->
 
@@ -178,4 +191,8 @@ Když jste vytvořili zásadu ochrany aplikací WIP, potřebujete ji nasadit ve 
 
     V okně **Přidat skupinu uživatelů** se otevře seznam skupin uživatelů, který obsahuje všechny skupiny zabezpečení v Azure Active Directory.
 
-1.  Zvolte skupinu, u které chcete zásadu použít, a kliknutím na **Vybrat** zásadu nasaďte.
+2.  Zvolte skupinu, u které chcete zásadu použít, a kliknutím na **Vybrat** zásadu nasaďte.
+
+## <a name="next-steps"></a>Další kroky
+
+- Další informace o službě Windows Information Protection najdete v tématu [Ochrana podnikových dat pomocí služby Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip). 

@@ -1,6 +1,6 @@
 ---
 title: "Co je registrace zařízení v Microsoft Intune?"
-titlesuffix: Azure portal
+titlesuffix: Microsoft Intune
 description: "Přečtěte si o registraci zařízení s iOSem, Androidem a Windows."
 keywords: 
 author: ErikjeMS
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a94703ecc1d7fd464f565855bb9b8dd9ee3c3bfb
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 9f49178a2d8e8a73a693ed2f374b86b8e702680f
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="what-is-device-enrollment"></a>Co je registrace zařízení?
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -37,6 +37,14 @@ Jak ukazují následující tabulky, registrují se zařízení zaměstnanců n�
 |**[DEP](#apple-device-enrollment-program)**|   Ano |   Volitelné |  Volitelné|[Další informace](./device-enrollment-program-enroll-ios.md)|
 |**[USB-SA](#usb-sa)**| Ano |   Volitelné |  Ne| [Další informace](./apple-configurator-setup-assistant-enroll-ios.md)|
 |**[USB (přímo)](#usb-direct)**| Ne |    Ne  | Ne|[Další informace](./apple-configurator-direct-enroll-ios.md)|
+
+## <a name="macos-enrollment-methods"></a>Metody registrace zařízení s macOS
+
+| **Metoda** |  **Vyžadováno resetování** |  **Přidružení uživatele** | **Uzamčeno** | **Podrobnosti**|
+|:---:|:---:|:---:|:---:|:---:|
+|**[Uživatelé s vlastním zařízením (BYOD)](#bring-your-own-device)** | Ne| Ano | Ne | [Další informace](./macos-enroll.md)|
+|**[DEM](#device-enrollment-manager)**| Ne |Ne |Ne  | [Další informace](./device-enrollment-manager-enroll.md)|
+
 
 ## <a name="windows-enrollment-methods"></a>Metody registrace zařízení s Windows
 

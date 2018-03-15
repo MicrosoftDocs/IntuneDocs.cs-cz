@@ -1,6 +1,6 @@
 ---
-title: "Registrace zařízení s Androidem v Intune | Microsoft Docs"
-titlesuffix: Azure portal
+title: "Registrace zařízení s Androidem v Intune"
+titlesuffix: Microsoft Intune
 description: "Přečtěte si, jak zaregistrovat zařízení s Androidem v Intune."
 keywords: 
 author: ErikjeMS
@@ -15,11 +15,11 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e137da3ad4121f4b9cdfbb765ee00f71beca610a
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 0a72199c9e38f4f4d9d7317469eea2e6254efee7
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="enroll-android-devices"></a>Registrace zařízení s Androidem
 
@@ -43,7 +43,7 @@ Aby bylo možné povolit správu zařízení, musí uživatelé zaregistrovat sv
 
 ## <a name="enable-enrollment-of-android-for-work-devices"></a>Povolení registrace zařízení s Androidem for Work
 
-Pokud chcete umožnit správu pracovního profilu na zařízeních, která [podporují Android for Work](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012), musíte do Intune přidat vazbu na Android for Work. Abyste mohli registrovat zařízení, která podporují Android for Work, ale byla předtím zaregistrovaná jako běžná zařízení s Androidem, musíte registraci těchto zařízení zrušit a pak je znovu zaregistrovat.
+Pokud chcete umožnit správu pracovního profilu na zařízeních, která [podporují Android for Work](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012), musíte do Intune přidat vazbu na Android for Work. Pokud chcete zaregistrovat zařízení v Androidu for Work, ale tato zařízení jsou už zaregistrovaná jako běžná zařízení s Androidem, musíte registraci těchto zařízení zrušit a pak je znovu zaregistrovat.
 
 Při registraci zařízení s Androidem for Work pomocí účtu [správce registrace zařízení](device-enrollment-manager-enroll.md) platí omezení, že pomocí jednoho účtu je možné zaregistrovat maximálně 10 zařízení.
 
@@ -58,7 +58,7 @@ Pokud jste to ještě neudělali, připravte se na správu mobilních zařízen�
     Jako správce Intune na portálu Azure Portal vyberte **Další služby** > **Monitorování + správa** > **Intune**.
 
    a. V okně **Intune** vyberte **Registrace zařízení** > **Registrace Androidu for Work**, zvolte **Konfigurovat** a otevřete web Androidu for Work na Google Play. Web se otevře v prohlížeči na nové kartě.
-   ![Snímek obrazovky zobrazující odkaz na konfiguraci vazby na Android for Work](./media/android-work-bind.png)
+   ![Obrazovka registrace Androidu for Work](./media/android-work-bind.png)
 
    b. **Přihlášení ke Googlu**<br>
    Na přihlašovací stránce Googlu zadejte účet Google, který bude přidružený ke všem úlohám správy Androidu for Work v tomto tenantovi. Jedná se o účet Google, který správci IT ve vaší společnosti sdílejí a používají ke správě a publikování aplikací v konzole Play for Work. Můžete použít existující účet Google, nebo vytvořte nový.  Zvolený účet nesmí být přidružený k doméně G-Suite.
@@ -79,7 +79,7 @@ Při schvalování Portálu společnosti Intune postupujte takto:
 
 1.  Ve [spravovaném obchodě Google Play](https://play.google.com/work/apps/details?id=com.microsoft.windowsintune.companyportal) přejděte na aplikaci Portál společnosti.
 2.  Přihlaste se do spravovaného obchodu Google Play pomocí stejného účtu Google, který jste použili ke konfiguraci vazby pro Android for Work.
-3.  Klikněte na **Approve** (Schválit).  Otevře se nový dialog.
+3.  Klikněte na **Approve** (Schválit) a otevře se nové dialogové okno.
 4.  Zkontrolujte oprávnění v tomto dialogu a pak klikněte na **Approve** (Schválit). Aby aplikace Portál společnosti mohla spravovat pracovní profil v daném zařízení, je nutné povolit tato oprávnění.
 5.  Vyberte **Keep approved when app requests new permissions** (Pokud aplikace vyžaduje nová oprávnění, zachovat jako schválené) a pak klikněte na **Save** (Uložit).
 

@@ -1,12 +1,12 @@
 ---
 title: "Postup monitorování informací a přiřazení aplikace"
-titlesuffix: Azure portal
+titlesuffix: Microsoft Intune
 description: "Po přiřazení aplikace uživatelům nebo zařízením můžete použít tyto informace, které vám usnadní monitorování jejího stavu."
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/21/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 85ecc9729d7c03cb760c14bda0ca4d6321af548e
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 6bd915093ae45ff0fc3d51a2d7279493bc783d43
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="how-to-monitor-app-information-and-assignments-with-microsoft-intune"></a>Postup monitorování informací a přiřazení aplikace pomocí Microsoft Intune
 
@@ -27,9 +27,9 @@ ms.lasthandoff: 01/25/2018
 
 Intune poskytuje několik způsobů, jak můžete monitorovat vlastnosti vámi spravovaných aplikací a stav jejich přiřazení.
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** + **Intune**.
-3. V úloze **Mobilní aplikace** zvolte ve skupině **Spravovat** možnost **Aplikace**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. Zvolte **Mobilní aplikace** a pak ve skupině **Spravovat** zvolte možnost **Aplikace**.
 5. V okně seznamu aplikací zvolte aplikaci. Pak se vám zobrazí okno <*název aplikace*> **Stav instalace zařízení**.
 
 ## <a name="app-overview-blade"></a>Přehled okna aplikací

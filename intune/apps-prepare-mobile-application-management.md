@@ -1,10 +1,11 @@
 ---
-title: "Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune"
-description: "Informace v tomto tématu vám pomůžou rozhodnout, kdy byste měli použít nástroj App Wrapping a sadu App SDK, aby vaše vlastní obchodní aplikace mohly používat zásady správy mobilních aplikací."
+title: "Příprava obchodních aplikací na zásady ochrany aplikací"
+titlesuffix: Microsoft Intune
+description: "Pokud chcete povolit u vlastních obchodních aplikací použití zásad ochrany aplikací v Microsoft Intune, použijte nástroj App Wrapping a sadu SDK aplikace."
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
-manager: angrobe
+manager: dougeby
 ms.date: 01/24/2018
 ms.topic: article
 ms.prod: 
@@ -14,11 +15,11 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6b2ab30f9bf061e7ea4a34372e7c99e059c6e30f
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 76330c926ecac9ae8b071837465d800f48f925fb
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Příprava obchodních aplikací na zásady ochrany aplikací
 
@@ -102,6 +103,7 @@ Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a 
 |Konfigurace cílové aplikace |X||
 |Podpora víc identit|X||
 |Přizpůsobitelný styl |X|||
+
 ## <a name="next-steps"></a>Další kroky
 
 Další informace o zásadách ochrany aplikací a službě Intune najdete v těchto tématech:

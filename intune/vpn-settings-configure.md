@@ -1,7 +1,7 @@
 ---
-title: "Konfigurace nastavení sítě VPN v Intune"
-titleSuffix: Azure portal
-description: "Zjistěte, jak pomocí Intune nakonfigurovat připojení VPN pro zařízení, která spravujete."
+title: "Konfigurace nastavení sítě VPN v Microsoft Intune"
+titleSuffix: 
+description: "Naučte se pomocí Microsoft Intune nakonfigurovat připojení virtuální privátní sítě (VPN) pro zařízení, která spravujete."
 keywords: 
 author: vhorne
 ms.author: victorh
@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 772b7f025adc7ae80d0f14c5c630209c4c7529b2
-ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
+ms.openlocfilehash: feba7e7dc3e88d7d9beefc548c20bf19fbba662d
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-configure-vpn-settings-in-microsoft-intune"></a>Konfigurace nastavení sítě VPN v Microsoft Intune
 
@@ -88,7 +88,7 @@ Profily VPN můžou používat spoustu různých typů připojení a protokoly o
 
 ### <a name="certificates"></a>Certifikáty
 
-Při vytváření profilu VPN zvolíte certifikátu SCEP nebo PKCS, který jste předtím vytvořili v Intune. Označuje se jako certifikát identity. Slouží k ověřování vůči profilu důvěryhodného certifikátu (neboli *kořenového certifikátu*), jehož vytvořením jste potvrdili, že se zařízení uživatele může připojit. Tento důvěryhodný certifikát se přiřazuje počítači, který ověřuje připojení VPN. Zpravidla se jedná o server VPN.
+Při vytváření profilu VPN zvolíte certifikátu SCEP nebo PKCS, který jste předtím vytvořili v Intune. Tento profil se označuje jako certifikát identity. Slouží k ověřování vůči profilu důvěryhodného certifikátu (neboli *kořenového certifikátu*), jehož vytvořením jste potvrdili, že se zařízení uživatele může připojit. Tento důvěryhodný certifikát se přiřazuje počítači, který ověřuje připojení VPN. Zpravidla se jedná o server VPN.
 
 Další informace o vytváření a používání profilů certifikátů v Intune najdete v tématu [Jak konfigurovat certifikáty pomocí Microsoft Intune](certificates-configure.md).
 

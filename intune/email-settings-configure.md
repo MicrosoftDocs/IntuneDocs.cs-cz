@@ -1,25 +1,23 @@
 ---
-title: "Jak nakonfigurovat nastavení e-mailu v Intune"
-titleSuffix: Azure portal
-description: "Naučte se nakonfigurovat v Intune připojení k podnikovému e-mailu na zařízeních, která spravujete."
+title: "Jak nakonfigurovat nastavení e-mailu v Microsoft Intune"
+titleSuffix: 
+description: "Naučte se nakonfigurovat v Microsoft Intune připojení k podnikovému e-mailu na zařízeních, která spravujete."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 06/03/2017
+ms.date: 3/1/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 484bd9b0-fbf1-4f4f-940c-6b12fa07e228
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b8558da2460b6443cbd4d42f7dec420d3e7abc7d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: d805d10efccb92ca3fe65b771bf7689e22f42088
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-configure-email-settings-in-microsoft-intune"></a>Jak nakonfigurovat nastavení e-mailu v Microsoft Intune
 
@@ -37,16 +35,16 @@ E-mailové profily můžete použít ke konfiguraci nativních e-mailových klie
 - Windows Phone 8.1 a novější
 - Windows 10 (pro stolní počítače) a Windows 10 Mobile
 
-Informace v tomto tématu vás seznámí se základy konfigurace e-mailového profilu. Pak si můžete přečíst další témata pro jednotlivé platformy, kde najdete podrobnosti o specifikách různých zařízení.
+Informace v tomto článku vás seznámí se základy konfigurace e-mailového profilu. Pak si můžete přečíst další témata pro jednotlivé platformy, abyste zjistili zvláštnosti zařízení.
 
 ## <a name="create-a-device-profile-containing-email-settings"></a>Vytvoření profilu zařízení obsahujícího nastavení e-mailu
 
 1. Přihlaste se k portálu Azure Portal.
 2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Konfigurace zařízení**.
-2. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
-3. V okně profilů zvolte **Vytvořit profil**.
-4. V okně **Vytvořit profil** zadejte **název** a **popis** e-mailového profilu.
+3. Na stránce **Intune** zvolte **Konfigurace zařízení**.
+2. Na stránce **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
+3. Na stránce profilů zvolte **Vytvořit profil**.
+4. Na stránce **Vytvořit profil** zadejte **Název** a **Popis** e-mailového profilu.
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete použít nastavení e-mailu. V současné době můžete pro nastavení e-mailu na zařízení zvolit jednu z následujících platforem:
     - **Android** (jenom Samsung Android Knox Standard)
     - **Android for Work**
@@ -59,16 +57,16 @@ Informace v tomto tématu vás seznámí se základy konfigurace e-mailového pr
     - [Nastavení iOSu](email-settings-ios.md)
     - [Nastavení Windows Phone 8.1](email-settings-windows-phone-8-1.md)
     - [Nastavení Windows 10](email-settings-windows-10.md)
-8. Až to budete mít, vraťte se do okna **Vytvořit profil** a klikněte na **Vytvořit**.
+8. Až to budete mít, vraťte se na stránku **Vytvořit profil** a klikněte na **Vytvořit**.
 
-Profil se vytvoří a zobrazí se v okně se seznamem profilů.
+Profil se vytvoří a zobrazí se na stránce se seznamem profilů.
 Pokud chcete pokračovat a přiřadit tento profil ke skupinám, podívejte se na téma [Jak přiřadit profily zařízení](device-profile-assign.md).
 
 ## <a name="further-information"></a>Další informace
 
 ### <a name="remove-an-email-profile"></a>Odebrání e-mailového profilu
 
-Pokud byste chtěli e-mailový profil ze zařízení odebrat, upravte přiřazení a odeberte všechny skupiny, ve kterých je zařízení členem. Nezapomeňte, že pokud se jedná o jediný e-mailový profil na zařízení, nemůžete tento profil takto odebrat.
+Pokud byste chtěli e-mailový profil ze zařízení odebrat, upravte přiřazení a odeberte všechny skupiny, ve kterých je zařízení členem. Pokud se jedná o jediný e-mailový profil na zařízení, nemůžete tento profil takto odebrat.
 
 ### <a name="securing-email-access"></a>Zabezpečení přístupu k e-mailu
 

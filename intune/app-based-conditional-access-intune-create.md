@@ -1,9 +1,9 @@
 ---
-title: "Zásady podmíněného přístupu k aplikacím v Intune"
-description: "Toto téma popisuje, jak v Intune nakonfigurovat zásadu podmíněného přístupu k aplikacím."
+title: "Nastavení zásad podmíněného přístupu na základě aplikace v Intune"
+description: "Zjistěte, jak vytvořit zásadu podmíněného přístupu na základě aplikace."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: Erikre
+ms.author: erikre
 manager: dougeby
 ms.date: 06/28/2017
 ms.topic: article
@@ -14,48 +14,46 @@ ms.assetid: d1693515-de18-4553-91ef-801976cd3ec7
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c1d938a21e041055c61e6638e94841a056e20b38
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 89ee7c0df2fde740c18b84f1d9f028d59ba5d81d
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="set-up-app-based-conditional-access-policies"></a>Nastavení zásad podmíněného přístupu k aplikacím
+# <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Nastavení zásad podmíněného přístupu na základě aplikace v Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-V tomto tématu najdete pokyny k nastavení zásad podmíněného přístupu k aplikacím, které jsou na seznamu schválených aplikací. Na seznamu schválených aplikací jsou aplikace, které testoval Microsoft.
+Tento článek popisuje, jak pro aplikace, které jsou na seznamu schválených aplikací, nastavit zásady podmíněného přístupu na základě aplikace. Na seznamu schválených aplikací jsou aplikace, které testoval Microsoft.
 
 > [!IMPORTANT]
-> Toto téma vás provede jednotlivými kroky přidání zásady podmíněného přístupu k aplikaci pomocí Exchange Online, ale stejný postup můžete použít k přidání dalších aplikací, jako je SharePoint Online, Microsoft Teams a další ze seznamu schválených aplikací.
+> Tento článek vás provede jednotlivými kroky přidání zásady podmíněného přístupu na základě aplikace s použitím Exchange Online, ale stejný postup můžete použít při přidání dalších aplikací, jako je SharePoint Online, Microsoft Teams, a dalších aplikací ze seznamu schválených aplikací.
 
 ## <a name="to-create-an-app-based-conditional-access-policy"></a>Vytvoření zásady podmíněného přístupu na základě aplikace
 1.  Přejděte na [portál Azure Portal](https://portal.azure.com) a přihlaste se.
 
-2.  Zvolte **Další služby** a zadejte „Intune“.
+2.  Zvolte **Všechny služby** a zadejte: Intune.
 
-3.  Zvolte **Ochrana aplikací Intune**.
+3.  Zvolte **Intune App Protection**.
 
-4.  V okně **Správa mobilních aplikací Intune** zvolte **Všechna nastavení**.
+4.  V podokně **Intune App Protection** v části **Podmíněný přístup** zvolte **Exchange Online**.
 
-5.  V části **Podmíněný přístup** zvolte **Exchange Online**.
+    ![Snímek obrazovky s podoknem nastavení, ve kterém se zobrazuje sekce podmíněného přístupu se zvýrazněnou možností Exchange Online](./media/MAM-conditional-access-1.png)
 
-    ![Snímek obrazovky s oknem nastavení, ve kterém se zobrazuje sekce podmíněného přístupu se zvýrazněnou možností Exchange Online](./media/MAM-conditional-access-1.png)
-
-6. V okně **Povolené aplikace** zvolte možnost **Povolit aplikace, které podporují zásady aplikací Intune**. Tím umožníte, aby přístup k Exchangi Online měly jenom aplikace podporované zásadami ochrany aplikací Intune. Při výběru této možnosti se zobrazí seznam podporovaných aplikací.
+6. V podokně **Povolené aplikace** zvolte možnost **Povolit aplikace, které podporují zásady aplikací Intune**. Tím umožníte, aby přístup k Exchangi Online měly jenom aplikace podporované zásadami ochrany aplikací Intune. Při výběru této možnosti se zobrazí seznam podporovaných aplikací.
 
     > [!NOTE]
-    > Všem poštovním klientům Exchange Active Sync, včetně integrovaných poštovních klientů v iOSu a Androidu, kteří se připojují k Exchangi Online, se zakáže odesílání a příjem e-mailů. Místo toho uživatelé dostanou e-mail, který je informuje o tom, že musí použít poštovní aplikaci Outlook.
+    > Všichni poštovní klienti Exchange Active Sync, včetně integrovaných poštovních klientů v iOSu a Androidu, kteří se připojují k Exchangi Online, mají zakázané odesílání a příjem e-mailů. Místo toho uživatelé dostanou e-mail, který je informuje o tom, že musí použít poštovní aplikaci Outlook.
 
-7. Pokud tuto zásadu chcete uplatnit na uživatele, otevřete okno **Omezené skupiny uživatelů** a zvolte **Přidat skupinu uživatelů**. Vyberte skupiny uživatelů, které by tuto zásadu měly obdržet.
+7. Pokud chcete tuto zásadu uplatnit na uživatele, otevřete podokno **Omezené skupiny uživatelů** a zvolte **Přidat skupinu uživatelů**. Vyberte skupiny uživatelů, které by tuto zásadu měly obdržet.
 
-    ![Snímek obrazovky okna s omezenou skupinou uživatelů a zvýrazněnou možností Přidat skupinu uživatelů](./media/mam-ca-add-user-group.png)
+    ![Snímek obrazovky s podoknem s omezenou skupinou uživatelů a zvýrazněnou možností Přidat skupinu uživatelů](./media/mam-ca-add-user-group.png)
 
-8. Můžete chtít, aby pro některé uživatele ve skupině uživatelů, kterou jste vybrali v předchozím kroku, tato zásada neplatila. V takovém případě přidejte skupinu uživatelů do seznamu vyloučených skupin uživatelů. V okně **Exchange Online** zvolte **Vyloučené skupiny uživatelů**. Zvolením možnosti **Přidat skupinu uživatelů** otevřete seznam skupin uživatelů. Vyberte skupiny, které chcete z této zásady vyloučit.
+8. Můžete chtít, aby pro některé uživatele ve skupině uživatelů, kterou jste vybrali v předchozím kroku, tato zásada neplatila. V takovém případě přidejte skupinu uživatelů do seznamu vyloučených skupin uživatelů. V podokně **Exchange Online** zvolte **Vyloučené skupiny uživatelů**. Zvolením možnosti **Přidat skupinu uživatelů** otevřete seznam skupin uživatelů. Vyberte skupiny, které chcete z této zásady vyloučit.
 
 ## <a name="to-modify-or-delete-user-groups-from-an-existing-app-based-ca-policy"></a>Úprava nebo odstranění skupin uživatelů z existujících zásad podmíněného přístupu na základě aplikace
 
-1. Otevřete okno **Omezené skupiny uživatelů**, pak zvýrazněte skupinu uživatelů, kterou chcete odstranit.
+1. Otevřete podokno **Omezené skupiny uživatelů** a pak zvýrazněte skupinu uživatelů, kterou chcete odstranit.
 2. Kliknutím na tři tečky zobrazíte možnosti odstranění.
 3. Volbou možnosti **Odstranit** odeberte tuto skupinu uživatelů ze seznamu.
 
@@ -73,11 +71,11 @@ Počínaje verzí Intune 1708 můžou správci IT vytvářet zásady podmíněn�
 
 1. Na **řídicím panelu Intune** zvolte **Podmíněný přístup**.
 
-2. V okně **Zásady** vytvořte novou zásadu podmíněného přístupu na základě aplikace výběrem možnosti **Nová zásada**.
+2. V podokně **Zásady** vytvořte novou zásadu podmíněného přístupu na základě aplikace výběrem možnosti **Nová zásada**.
 
 4. Zadejte název zásady a nakonfigurujte nastavení dostupná v části **Přiřazení** a potom v části **Ovládací prvky přístupu** zvolte **Přiřazení**.
 
-5. Vyberte **Vyžadovat klientem schválenou aplikaci**, klikněte na **Vybrat** a potom novou zásadu uložte kliknutím na **OK**.
+5. Zvolte **Vyžadovat klientem schválenou aplikaci**, klikněte na **Vybrat** a potom novou zásadu uložte kliknutím na **Vytvořit**.
 
 ## <a name="next-steps"></a>Další kroky
 [Blokování aplikací, které nepoužívají moderní ověřování](app-modern-authentication-block.md)

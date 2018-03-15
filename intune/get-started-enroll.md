@@ -1,10 +1,10 @@
 ---
-title: "Začínáme s registrací zařízení"
-titlesuffix: Azure portal
+title: "Popis prostředí pro registraci zařízení s iOSem"
+titlesuffix: Microsoft Intune
 description: "Projděte si celý proces registrace zařízení s iOS a zjistěte, jak registrace probíhá."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 10/31/2017
 ms.topic: article
@@ -15,13 +15,13 @@ ms.assetid: b595848d-c451-43ab-812d-b22e0170fb7a
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3818556f300821fb9acaa260300ae683f43b13e3
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 18a3225ef81d7f13b8656326540e30cf5ee07f1e
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="get-started-enrolling-devices"></a>Začínáme s registrací zařízení
+# <a name="understand-the-users-experience-enrolling-an-ios-device"></a>Popis prostředí uživatele registrujícího zařízení s iOSem
 
 Microsoft Intune umožňuje vybavit vaše pracovníky mobilními zařízeními a zároveň mít chráněná firemní data. Vzhledem k tomu, že koncoví uživatelé budou s Intune pracovat na svých zařízeních, a nikoli na konzole pro správce, nezapomeňte se důkladně seznámit s registračním prostředím. To vám umožní spojit důkladně připravené zásady dodržování předpisů s vaším prostředím, abyste mohli uživatelům projevit potřebnou dávku empatie. Je to zvlášť důležité, protože uživatelé přesně vědí, jaké informace jako správce vidíte:
 
