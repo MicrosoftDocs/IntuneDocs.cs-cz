@@ -1,30 +1,34 @@
 ---
-title: "Nastavení omezení pro zařízení v Intune pro Android for Work"
-titlesuffix: Azure portal
+title: "Nastavení omezení pro zařízení s Androidem for Work v Microsoft Intune"
+titlesuffix: 
 description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s Androidem for Work."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 1/23/2018
+ms.date: 3/2/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c7c69bb3984ae4ffa81aa81ae24cfe17663bc191
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: d4d8089d7ae57c4bf95038e5f9dc88f4949f069e
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="android-for-work-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení s Androidem for Work v Microsoft Intune
+# <a name="microsoft-intune-android-for-work-device-restriction-settings"></a>Nastavení omezení pro zařízení s Androidem for Work v Microsoft Intune
+
+Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s Androidem for Work.
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="work-profile-settings"></a>Nastavení pracovního profilu
+
+### <a name="general-settings"></a>Obecná nastavení
+
 -   **Kopírování a vkládání mezi pracovními a osobními profily** – ovládá kopírování a vkládání mezi pracovními a osobními aplikacemi. Zvolením možnosti **Blokovat** zapnete blokování. Zvolením možnosti **Nenakonfigurováno** blokování vypnete.
 - **Sdílení dat mezi pracovním a osobním profilem** – toto nastavení použijte pro určení, jestli aplikace v pracovním profilu můžou používat sdílení s aplikacemi v osobním profilu. Toto nastavení řídí akce sdílení v rámci aplikací (například možnost **Sdílet** v prohlížeči Chrome), nevztahuje se na chování schránky při kopírování a vkládání. Na rozdíl od [nastavení zásad ochrany aplikací](https://docs.microsoft.com/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) se nastavení omezení pro zařízení spravují na portálu Intune a k izolování spravovaných aplikací používají oddíl pracovního profilu Androidu for Work. Vybírejte z těchto možností:
     - **Výchozí omezení sdílení** – toto nastavení je výchozí chování zařízení při sdílení, které se liší v závislosti na verzi Androidu používané v zařízení. Ve výchozím nastavení je povolené sdílení z osobního profilu do pracovního profilu. Ve výchozím nastavení je také blokované sdílení z pracovního profilu do osobního profilu. Toto nastavení zabraňuje sdílení dat z pracovního do osobního profilu. Google neposkytuje způsob, jak blokovat sdílení z osobního do pracovního profilu na zařízeních, která používají verze 6.0 a novější.   
@@ -39,6 +43,12 @@ ms.lasthandoff: 01/25/2018
     -   **Automaticky odepřít**
 
     Stav udělení oprávnění pro konkrétní aplikace je možné dále definovat pomocí zásad konfigurace pro jednotlivé aplikace (v části **Mobilní aplikace** > **Zásady konfigurace aplikací**).
+
+- **Přidat nebo odebrat účty**
+
+   Zabrání koncovým uživatelům ručně přidávat nebo odebírat účty v pracovním profilu.
+
+   Když třeba nasadíte aplikaci Gmail do profilu Androidu for Work, můžete zabránit tomu, aby koncoví uživatelé přidávali nebo odebírali účty v tomto pracovním profilu.
 
 ### <a name="work-profile-password"></a>Heslo pracovního profilu
 - **Vyžadovat heslo pracovního profilu** (Android 7.0 a vyšší s povoleným pracovním profilem) – definujte zásady hesla, které se budou vztahovat jenom na aplikace v pracovním profilu. Ve výchozím nastavení má koncový uživatel možnost použít dva samostatně definované PIN kódy, nebo se může rozhodnout je zkombinovat do silnějšího z nich.
@@ -83,8 +93,8 @@ ms.lasthandoff: 01/25/2018
  - **Kontrola ohrožení aplikací** – vynutí zapnutí nastavení **Ověřovat aplikace** pro pracovní a osobní profily.
 
    > [!Note]  
-   > Toto nastavení bude fungovat jenom u zařízení s Androidem O a vyšším. 
+   > Toto nastavení funguje jenom u zařízení s Androidem O a vyšším. 
 
 ## <a name="next-steps"></a>Další kroky
 
-S použitím informací v tématu [Jak nakonfigurovat nastavení omezení zařízení](device-restrictions-configure.md) uložte a přiřaďte profil uživatelům a zařízením.
+S použitím informací v článku [Konfigurace nastavení omezení zařízení](device-restrictions-configure.md) uložte a přiřaďte profil uživatelům a zařízením.
