@@ -66,6 +66,7 @@
 ### [Co se stane při registraci zařízení s iOSem?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
 ### [Instalace a přihlášení do Portálu společnosti](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### [Registrace zařízení s iOSem](enroll-your-device-in-intune-ios.md)
+### [Registrace zařízení s iOSem pomocí Programu registrace zařízení (DEP)](enroll-your-device-dep-ios.md)
 
 ### [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-ios.md)
 ### [Nastavení nebo změna hesla](set-or-change-your-passcode-ios.md)
