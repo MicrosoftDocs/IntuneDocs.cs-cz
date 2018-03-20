@@ -6,7 +6,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/17/2017
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f5617074-2384-4812-b913-dc94f64c0818
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 01c90818cf789bdb79b3b4efe5a1db8a2cf1cdfe
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 6053eba7bcda74eaf3b2d7de8eecd81487ea3a8d
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Správa e-knih pro iOS zakoupených v rámci multilicenčního programu pomocí Microsoft Intune
 
@@ -52,28 +52,29 @@ Než začnete, musíte od společnosti Apple získat token VPP a nahrát ho do s
 
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Získání a odeslání tokenu Apple VPP
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Mobilní aplikace**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. Na stránce **Intune** zvolte **Mobilní aplikace**.
 1.  V úloze **Mobilní aplikace** zvolte **Nastavení** > **Tokeny VPP pro iOS**.
-2.  V okně se seznamem tokenů VPP klikněte na **Přidat**.
-3.  V okně **Nový token VPP** zadejte následující informace:
+2.  V podokně se seznamem tokenů VPP klikněte na **Vytvořit**.
+3.  V podokně **Nový token VPP** zadejte tyto informace:
     - **Soubor tokenu VPP** – je potřeba se zaregistrovat v rámci programu Volume Purchase Program for Business nebo Volume Purchase Program for Education. Potom si stáhněte token Apple VPP pro svůj účet a vyberte ho tady.
     - **Apple ID** – zadejte Apple ID účtu přidruženého k multilicenčnímu programu.
     - **Typ účtu VPP** – zvolte jednu z možností: **Obchodní** nebo **Vzdělávání**.
-4. Po dokončení klikněte na **Nahrát**.
+4. Až skončíte, klikněte na **Vytvořit**.
 
-Token se zobrazí v okně se seznamem tokenů.
+Token se zobrazí v podokně se seznamem tokenů.
 
 
 Data ukládaná společností Apple můžete kdykoli synchronizovat s Intune výběrem položky **Synchronizovat nyní**.
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Přiřazení aplikace zakoupené v rámci multilicenčního programu
 
+3. V podokně **Intune** zvolte **E-knihy**.
 1. V úloze **E-knihy** zvolte **Správa** > **Všechny e-knihy**.
-2. V okně se seznamem knih zvolte knihu, kterou chcete přiřadit, a pak zvolte **...** > **Přiřadit skupiny**.
-3. V okně <*název knihy*> – **Přiřazené skupiny** zvolte **Spravovat** > **Přiřazené skupiny**.
-4. Zvolte **Přiřadit skupiny** a potom v okně **Vybrat skupiny** zvolte skupiny uživatelů Azure AD, ke kterým chcete aplikaci přiřadit. V současné době není dostupná podpora skupin zařízení.
+2. V podokně se seznamem knih zvolte knihu, kterou chcete přiřadit, a pak zvolte **...** > **Přiřadit skupiny**.
+3. V podokně <*název knihy*> – **Přiřazené skupiny** zvolte **Spravovat** > **Přiřazené skupiny**.
+4. Zvolte **Přiřadit skupiny** a pak v podokně **Vybrat skupiny** zvolte skupiny uživatelů Azure AD, ke kterým chcete aplikaci přiřadit. V současné době není dostupná podpora skupin zařízení.
 Jako akci přiřazení zvolte **K dispozici** nebo **Povinné**. 
 5. Až to budete mít, zvolte **Uložit**.
 

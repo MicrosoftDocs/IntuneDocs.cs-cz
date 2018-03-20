@@ -1,12 +1,12 @@
 ---
-title: "Přidání aplikací z obchodu pro Android do Microsoft Intune"
+title: "Přidání aplikací pro Android Store do Microsoft Intune"
 titleSuffix: 
 description: "Zjistěte, jak do Microsoft Intune přidat aplikace z obchodu pro Android."
 keywords: 
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/13/2018
+ms.date: 02/26/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,25 +15,25 @@ ms.assetid: 4433000a-23e9-4cad-a818-48c28eedc1f5
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c2cbc68aa3ea11e3b5593597a94aa059dd2927ed
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 87fea551dea1f80ee071fe6b477b84729e000874
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="how-to-add-android-store-apps-to-microsoft-intune"></a>Přidání aplikací z obchodu pro Android do Microsoft Intune
+# <a name="how-to-add-android-store-apps-to-microsoft-intune"></a>Přidání aplikací pro Android Store do Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Před přiřazením aplikace k zařízení nebo skupině uživatelů je nejprve potřeba danou aplikaci přidat do Microsoft Intune. Aplikaci z obchodu pro Android přidáte do Intune z portálu Azure Portal následujícím postupem.
+Před přiřazením aplikace k zařízení nebo skupině uživatelů je nejprve potřeba danou aplikaci přidat do Microsoft Intune. Aplikaci pro Android Store přidáte do Intune z portálu Azure Portal následujícím postupem.
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Microsoft Intune** zvolte **Mobilní aplikace**.
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. Na stránce **Intune** zvolte **Mobilní aplikace**.
 4. V úloze **Mobilní aplikace** zvolte v oddílu **Spravovat** možnost **Aplikace**.
 5. Nad seznamem aplikací zvolte **Přidat**.
-6. V okně **Přidat aplikaci** vyberte v dostupných typech **Aplikace pro Store** možnost **Android**.
-7. Vyberte **Konfigurovat** a nakonfigurujte následující informace o aplikaci. Některé hodnoty v tomto okně můžou být v závislosti na zvolené aplikaci automaticky vyplněné:
+6. V podokně **Přidat aplikaci** vyberte v dostupných typech **Aplikace pro Store** možnost **Android**.
+7. Vyberte **Konfigurovat** a nakonfigurujte následující informace o aplikaci. Některé hodnoty v tomto podokně mohou být v závislosti na zvolené aplikaci automaticky vyplněné:
     - **Název** – zadejte název aplikace, který se zobrazí na portálu společnosti. Ověřte, že názvy všech používaných aplikací jsou jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
     - **Popis** – zadejte popis aplikace. Tento popis se zobrazí uživatelům na portálu společnosti.
     - **Vydavatel** – zadejte název vydavatele aplikace.

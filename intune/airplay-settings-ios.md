@@ -6,7 +6,7 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 07/03/2017
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 712a79fb-14ef-4f6b-aba5-1dfca900afd2
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fc1a30a86ae924777b435c67e67f926819753d67
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 9de6f0e2f7c74e7aec45c27f0fa20189b26c5e22
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="intune-airplay-settings-for-ios-devices"></a>Nastavení Airplay pro zařízení s iOSem v Intune
 
@@ -33,19 +33,20 @@ Díky tomu můžete:
 
 ## <a name="get-started"></a>Začínáme
 
-1. V okně **Funkce zařízení** zvolte **AirPlay**.
-2. V okně **AirPlay** zvolte jednu nebo obě z následujících akcí:
+1. Z [Intune na portálu Azure Portal](https://portal.azure.com) přejděte na [**Funkce zařízení** v oblasti konfigurace zařízení](device-features-configure.md). 
+1. V podokně **Funkce zařízení** zvolte **AirPlay**.
+2. V podokně **AirPlay** zvolte jednu nebo obě z těchto akcí:
 
 ## <a name="configure-a-device-and-password-list"></a>Konfigurace seznamu zařízení a hesel
 
-1. V okně **Hesla** zadejte **Název zařízení** a **Heslo** zařízení s AirPlay, například **Contoso Apple TV**.
+1. V podokně **Hesla** zadejte **Název zařízení** a **Heslo** zařízení s AirPlay, třeba **Contoso Apple TV**.
 2. Po zadání údajů zařízení klikněte na **Přidat**. Zařízení se zobrazí v seznamu **Název zařízení**.
 3. Přidejte další zařízení podle potřeby. Po dokončení zvolte **OK**.
 
 
 ## <a name="configure-allowed-destinations"></a>Konfigurace povolených cílů
 
-1. V okně **Povolené cíle (jenom pod dohledem)** zadejte **ID zařízení** zařízení s AirPlay, například 52:46:CD:51:83:4C.
+1. V podokně **Povolené cíle (jenom pod dohledem)** zadejte **ID zařízení** zařízení s AirPlay, třeba 52:46:CD:51:83:4C.
 2. Po zadání ID zařízení klikněte na **Přidat**. ID se zobrazí v seznamu **ID zařízení**.
 3. Přidejte další zařízení podle potřeby. Po dokončení zvolte **OK**.
 

@@ -1,10 +1,10 @@
 ---
-title: "Monitorování zásad dodržování předpisů zařízením v Intune"
-titlesuffix: Azure portal
-description: "Zjistěte, jak monitorovat zásady dodržování předpisů v zařízeních."
+title: "Monitorování zásad dodržování předpisů zařízeními v Microsoft Intune"
+titlesuffix: 
+description: "Na řídicím panelu pro dodržování předpisů zařízením můžete monitorovat celkový stav dodržování předpisů zařízením, zobrazit sestavy a dodržování předpisů zařízením podle jednotlivých zásad a nastavení."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: msmimart
+ms.author: mimart
 manager: dougeby
 ms.date: 2/27/2018
 ms.topic: article
@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2f80d46e3e7c25c2b2e7a7c1af9604de1257a21e
-ms.sourcegitcommit: a55c009a2ab223f79dc7439539937b284aee0626
+ms.openlocfilehash: 146b8034022ed5f5a50de9910d28baf27f7482ac
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorování zásad dodržování předpisů zařízením v Intune
 
@@ -25,15 +25,15 @@ Sestavy dodržování předpisů pomáhají správcům analyzovat stav dodržov�
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-Podle následujících pokynů na portálu Azure Portal najděte **řídicí panel Intune pro dodržování předpisů zařízením**:
+Podle těchto pokynů vyhledejte na portálu Azure Portal **řídicí panel Intune pro dodržování předpisů zařízením**:
 
 1.  Přejděte na portál [Azure Portal](https://portal.azure.com) a přihlaste se pomocí svých přihlašovacích údajů k Intune.
 
-2.  V nabídce vlevo zvolte **Další služby** a do filtru textového pole pak zadejte **Intune**.
+2.  V nabídce vlevo zvolte **Všechny služby** a do filtru textového pole pak zadejte **Intune**.
 
 3.  Zvolte **Intune** &gt; **Dodržování předpisů zařízením** &gt; **Přehled** a pak se otevře **řídicí panel pro dodržování předpisů zařízením**.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Aby mohla zařízení přijímat zásady dodržování předpisů, musejí být zaregistrovaná v Intune.
 
 ## <a name="device-compliance-dashboard"></a>Řídicí panel pro dodržování předpisů zařízením
@@ -46,7 +46,7 @@ V **řídicím panelu pro dodržování předpisů zařízením** můžete monit
 
 -   Dodržování předpisů zařízením podle nastavení
 
-![Řídicí panel pro dodržování předpisů zařízením](./media/idc-1.png)
+![Obrázek řídicího panelu pro dodržování předpisů zařízením](./media/idc-1.png)
 
 Můžete také zobrazit konkrétní zásady a nastavení dodržování předpisů, které platí pro jednotlivá zařízení, a konečný stav dodržování předpisů pro každé z těchto nastavení na zařízení.
 
@@ -62,28 +62,28 @@ Jde o prstencový graf zobrazující souhrnný stav dodržování předpisů pro
 
     -   Přečtěte si další informace o akcích pro zařízení nedodržující předpisy.
 
--   **Zařízení není synchronizované:** Zařízení se nepodařilo oznámit svůj stav zásad dodržování předpisů kvůli některé z těchto příčin:
+-   **Zařízení není synchronizované**: Zařízení se nepodařilo oznámit svůj stav zásad dodržování předpisů zařízením z některého z následujících důvodů:
 
     -   **Neznámý**: Zařízení je offline nebo se mu s Intune nebo Azure AD nepodařilo komunikovat z jiných důvodů.
 
     -   **Chyba**: Zařízení se nepodařilo komunikovat s Intune a Azure AD a obdrželo chybovou zprávu s odůvodněním.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Zařízení, která jsou zaregistrovaná v Intune, ale nejsou na ně zacílené žádné zásady dodržování předpisů zařízením, jsou v této sestavě uvedená jako **Vyhovující předpisům**.
 
 #### <a name="drill-down-option"></a>Možnost přechodu k podrobnostem
 
 Když v **řídicím panelu pro dodržování předpisů zařízením** kliknete na dlaždici Dodržování předpisů zařízením, můžete přejít ke konkrétnímu **stavu dodržování předpisů**, **e-mailovému aliasu uživatele**, **modelu zařízení** a **umístění** pro každé zařízení, na které cílily zásady dodržování předpisů zařízením.
 
-![Podrobnosti na řídicím panelu pro dodržování předpisů zařízením](./media/idc-2.png)
+![Obrázek podrobností na řídicím panelu pro dodržování předpisů zařízením](./media/idc-2.png)
 
 Pokud potřebujete další podrobnosti týkající se konkrétního uživatele, můžete sestavu grafu dodržování předpisů zařízením filtrovat zadáním e-mailového aliasu uživatele.
 
-![Konkrétní uživatel na řídicím panelu pro dodržování předpisů zařízením](./media/idc-3.png)
+![Obrázek znázorňující konkrétního uživatele na řídicím panelu pro dodržování předpisů zařízením](./media/idc-3.png)
 
 Můžete také kliknout na různé stavy dodržování předpisů v grafu dodržování předpisů zařízením. Tím zobrazíte další podrobnosti o stavech zásad dodržování předpisů zařízeními uživatele.
 
-![Různé stavy na řídicím panelu pro dodržování zásad zařízením](./media/idc-4.png)
+![Obrázek různých stavů na řídicím panelu pro dodržování zásad zařízením](./media/idc-4.png)
 
 #### <a name="filter"></a>Filtr
 
@@ -99,7 +99,7 @@ Pokud kliknete na **tlačítko Filtr**, otevře se nabídka s těmito možnostmi
 
     -   iOS
 
-    -   Mac OS
+    -   macOS
 
     -   Windows
 
@@ -121,41 +121,22 @@ Pokud kliknete na **tlačítko Aktualizovat**, nabídka by se měla zavřít a v
 
 ##### <a name="device-details"></a>Podrobnosti o zařízení
 
-Kliknutím na zařízení se otevře **okno zařízení** s vybraným zařízením. Nabízí další podrobnosti o nastavení zásad dodržování předpisů zařízením, které je na toto zařízení použité.
-
-![Řídicí panel pro dodržování předpisů zařízením](./media/idc-6.png)
+Kliknutím na zařízení otevřete **podokno zařízení** s vybraným zařízením, které obsahuje další podrobnosti o nastavení zásad dodržování předpisů zařízením použitým u daného zařízení.
 
 Když kliknete na samotné nastavení zásad zařízení, uvidíte název zásady dodržování předpisů zařízením, ze které nastavení dodržování předpisů zařízení cílené správcem pochází.
 
-![Název nastavení dodržování předpisů zařízením](./media/idc-7.png)
-
-## <a name="policy-compliance-report"></a>Sestava Dodržování zásad
+### <a name="per-policy-device-compliance-report"></a>Sestava dodržování předpisů zařízením podle zásad
 
 Tato sestava poskytuje zobrazení podle zásad dodržování předpisů a celkový počet zařízení v jednotlivých stavech dodržování předpisů. Dlaždice **Dodržování zásad** je k dispozici na **řídicím panelu pro dodržování předpisů zařízením** a zobrazuje všechny zásady v minulosti vytvořené správcem, platformy, pro které zásady platí, počet zařízení dodržujících předpisy a počet zařízení nedodržujících předpisy.
 
-![Sestava dodržování předpisů zařízením podle zásad](./media/idc-8.png)
+![Obrázek sestavy dodržování předpisů zařízením podle zásad](./media/idc-8.png)
 
 Když kliknete na dlaždici Dodržování zásad a pak na některou ze zásad dodržování předpisů zařízením, uvidíte **stav dodržování předpisů**, **e-mailový alias uživatele**, **model zařízení** a **umístění** pro každé zařízení, na které zásady dodržování předpisů zařízením cílí.
-
-![Dlaždice Dodržování zásad](./media/idc-9.png)
 
 ## <a name="setting-compliance-report"></a>Sestava Nastavení dodržování předpisů
 
 Tato sestava umožňuje zobrazit celkový počet zařízení v jednotlivých stavech dodržování předpisů podle nastavení dodržování předpisů. Dlaždice **Nastavení dodržování předpisů** je k dispozici na **řídicím panelu pro dodržování předpisů zařízením** a zobrazuje všechna nastavení zásad dodržování předpisů zařízením ze všech zásad dodržování předpisů zařízením vytvořených správcem, platformy, pro které nastavení zásad platí, a počet zařízení nedodržujících předpisy.
 
-![Sestava dodržování předpisů zařízením podle nastavení](./media/idc-10.png)
+![Obrázek sestavy dodržování předpisů zařízením podle nastavení](./media/idc-10.png)
 
 Když kliknete na dlaždici Nastavení dodržování předpisů a pak na některé z nastavení zásad dodržování předpisů zařízením, uvidíte **stav dodržování předpisů**, **e-mailový alias uživatele**, **model zařízení** a **umístění** pro každé zařízení, na které nastavení zásad dodržování předpisů zařízením cílí.
-
-![Dlaždice Nastavení dodržování předpisů](./media/idc-11.png)
-
-## <a name="threat-agent-status-report"></a>Sestava Stav agenta hrozeb
-
-Tato sestava umožňuje zobrazit stav agenta Windows Defenderu. Pomocí souhrnné sestavy stavu v části **Dodržování předpisů zařízením** zjistíte zařízení, která vyžadují některé z následujících akcí:
-- Aktualizace signatur
-- Restartovat
-- Ruční zásah
-- Úplná kontrola
-- Stavy ostatních agentů vyžadujících zásah
-
-Podrobná sestava pro jednotlivé kategorie stavu uvádí jednotlivé počítače vyžadující pozornost a počítače, které jsou **čisté**.

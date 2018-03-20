@@ -14,17 +14,17 @@ ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b9d181c4a6e490018c88214a2ed91c90327f2526
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 5b1691e3474b021754e0ee6a1a1977efecc82eac
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Konfigurace profilu certifikátu pro zařízení v Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Když uživatelům poskytnete přístup k podnikovým prostředkům prostřednictvím sítě VPN, Wi-Fi nebo e-mailových profilů, můžete tato připojení ověřovat pomocí certifikátů. Když používáte certifikáty, nemusíte zadávat uživatelské jméno a heslo pro ověření připojení. 
+Když uživatelům poskytnete přístup k podnikovým prostředkům prostřednictvím sítě VPN, Wi-Fi nebo e-mailových profilů, můžete tato připojení ověřovat pomocí certifikátů. Když používáte certifikáty, nemusíte zadávat uživatelské jméno a heslo pro ověření připojení.
 
 Pomocí Intune můžete přiřadit tyto certifikáty k zařízením, která spravujete. Intune podporuje přiřazování a správu těchto typů certifikátů:
 
@@ -85,10 +85,13 @@ Tento certifikát naimportujete při nastavování profilu důvěryhodného cert
 ## <a name="step-3-create-trusted-certificate-profiles"></a>Krok 3: Vytvoření profilů důvěryhodných certifikátů
 Před vytvořením profilu certifikátu SCEP nebo PKCS je potřeba vytvořit profil důvěryhodného certifikátu. Potřebujete profil důvěryhodného certifikátu a profil SCEP nebo PKCS pro každou platformu zařízení. Postup vytvoření důvěryhodných certifikátů je pro jednotlivé platformy zařízení podobný.
 
-1. Na portálu [Azure Portal](https://portal.azure.com) vyberte **Všechny služby** a vyhledejte **Microsoft Intune**.
-2. V **Microsoft Intune** vyberte **Konfigurace zařízení** a pak **Profily**. Pak vyberte **Vytvořit profil**.
-3. Zadejte **název** a **popis** profilu důvěryhodného certifikátu.
-4. U možnosti **Platforma** vyberte platformu zařízení pro tento důvěryhodný certifikát: 
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V podokně **Intune** zvolte **Konfigurace zařízení**.
+2. V podokně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
+3. V podokně profilů zvolte **Vytvořit profil**.
+4. V podokně **Vytvořit profil** zadejte **název** a **popis** profilu důvěryhodného certifikátu.
+5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení pro tento důvěryhodný certifikát. V současné době můžete pro nastavení certifikátů zvolit jednu z následujících platforem:
 
     - **Androidemem**
     - **Android for Work**
@@ -98,15 +101,13 @@ Před vytvořením profilu certifikátu SCEP nebo PKCS je potřeba vytvořit pro
     - **Windows 8.1 a novější**
     - **Windows 10 a novější**
 
-5. Jako **typ profilu** vyberte **Důvěryhodný certifikát**. Vyhledejte dříve uložený certifikát (*CertificateName*.cer) (krok 2).
-
-    Jenom pro zařízení s Windows 8.1 a Windows 10 vyberte **cílové úložiště** pro důvěryhodný certifikát z těchto možností:  
-
+6. V rozevíracím seznamu **Typ profilu** zvolte **Důvěryhodný certifikát**.
+7. Procházením vyhledejte certifikát, který jste si uložili v rámci úlohy 1, a pak klikněte na **OK**.
+8. Jenom pro zařízení s Windows 8.1 a Windows 10 vyberte **cílové úložiště** pro důvěryhodný certifikát z těchto možností:
     - **Úložiště počítačových certifikátů – kořenové**
     - **Úložiště počítačových certifikátů – zprostředkující**
     - **Úložiště uživatelských certifikátů – zprostředkující**
-
-6. Kliknutím na **OK** uložte změny a vyberte **Vytvořit** a uložte tak nový profil.
+8. Až to budete mít, zvolte **OK**, vraťte se zpět do podokna **Vytvořit profil** a vyberte **Vytvořit**.
 
 Profil se vytvoří a zobrazí se v seznamu. Pokud chcete přiřadit tento profil ke skupinám, podívejte se na téma [Přiřazení profilů zařízení](device-profile-assign.md).
 

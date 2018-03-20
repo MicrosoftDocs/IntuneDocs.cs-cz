@@ -6,18 +6,18 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 1/25/2018
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: feba7e7dc3e88d7d9beefc548c20bf19fbba662d
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 9480f19a8cd71e001d196674d3e285c8f2a8bb09
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-configure-vpn-settings-in-microsoft-intune"></a>Konfigurace nastavení sítě VPN v Microsoft Intune
 
@@ -37,7 +37,7 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
 |Cisco (IPSec)|Ne|Ano|Ne|Ne|Ne|Ne|
 |Citrix|Ano|Ano|Ne|Ne|Ne|Ano|
 |F5 Edge Client|Ano|Ano|Ano|Ano|Ano|Ano|
-|Dell SonicWALL Mobile Connect|Ano|Ano|Ano|Ano|Ano|Ano|
+|SonicWall Mobile Connect|Ano|Ano|Ano|Ano|Ano|Ano|
 |Check Point Capsule VPN|Ano|Ano|Ano|Ano|Ano|Ano|
 |Cisco AnyConnect|Ano|Ano|Ano|Ne|Ne|Ne|
 |Automaticky|Ne|Ne|Ne|Ne|Ne|Ano|
@@ -54,12 +54,12 @@ Postup vytváření vlastních profilů VPN pomocí nastavení URI najdete v té
 
 ## <a name="create-a-device-profile-containing-vpn-settings"></a>Vytvoření profilu zařízení obsahujícího nastavení VPN
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Konfigurace zařízení**.
-2. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
-3. V okně profilů zvolte **Vytvořit profil**.
-4. V okně **Vytvořit profil** zadejte **Název** a **Popis** profilu VPN.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V podokně **Intune** zvolte **Konfigurace zařízení**.
+2. V podokně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
+3. V podokně profilů zvolte **Vytvořit profil**.
+4. V podokně **Vytvořit profil** zadejte **Název** a **Popis** profilu VPN.
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete použít nastavení VPN. V současné době můžete pro nastavení VPN na zařízení zvolit jednu z následujících platforem:
     - **Androidemem**
     - **Android for Work**
@@ -76,9 +76,9 @@ Postup vytváření vlastních profilů VPN pomocí nastavení URI najdete v té
     - [Nastavení Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
     - [Nastavení Windows 8.1](vpn-settings-windows-8-1.md)
     - [Nastavení Windows 10](vpn-settings-windows-10.md) (včetně Windows Holographic for Business)
-8. Až to budete mít, vraťte se do okna **Vytvořit profil** a klikněte na **Vytvořit**.
+8. Až to budete mít, vraťte se do podokna **Vytvořit profil** a vyberte **Vytvořit**.
 
-Profil se vytvoří a zobrazí se v okně se seznamem profilů.
+Profil se vytvoří a zobrazí se v podokně se seznamem profilů.
 Pokud chcete pokračovat a přiřadit tento profil ke skupinám, podívejte se na téma [Jak přiřadit profily zařízení](device-profile-assign.md).
 
 

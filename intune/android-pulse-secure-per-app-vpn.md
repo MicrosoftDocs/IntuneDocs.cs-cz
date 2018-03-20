@@ -6,7 +6,7 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 06/03/2017
+ms.date: 03/05/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: d035ebf5-85f4-4001-a249-75d24325061a
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 46555f776ff93207f4672dc5d97abbaa2323b234
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 2a207f15e7c5b678368eeb54e8452638ff5a01ef
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>K vytvoření profilu VPN pro aplikaci pro zařízení s Androidem můžete použít vlastní profil Microsoft Intune.
 
@@ -37,12 +37,12 @@ Po přiřazení této zásady skupinám zařízení nebo uživatelů Android by 
 ## <a name="step-1-create-a-vpn-profile"></a>Krok 1: Vytvoření profilu sítě VPN
 
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Konfigurace zařízení**.
-2. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
-2. V okně seznamu profilů zvolte **Vytvořit profil**.
-3. V okně **Vytvořit profil** zadejte **Název** a nepovinný **Popis** profilu VPN.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V podokně **Intune** zvolte **Konfigurace zařízení**.
+2. V podokně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
+2. V podokně se seznamem profilů zvolte **Vytvořit profil**.
+3. V podokně **Vytvořit profil** zadejte **Název** a nepovinný **Popis** profilu VPN.
 4. V rozevíracím seznamu **Platforma** zvolte **Android**.
 5. V rozevíracím seznamu **Typ profilu** zvolte **VPN**.
 3. Zvolte **Nastavení** > **Konfigurovat** a nakonfigurujte profil VPN podle nastavení v [Jak konfigurovat nastavení VPN](vpn-settings-configure.md) a [Nastavení Intune VPN pro zařízení s Androidem](vpn-settings-android.md).
@@ -51,19 +51,19 @@ Poznamenejte si hodnotu **Název připojení**, kterou zadáváte při vytváře
 
 ## <a name="step-2-create-a-custom-configuration-policy"></a>Krok 2: Vytvoření vlastní zásady konfigurace
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Konfigurace zařízení**.
-2. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
-3. V okně s profily zvolte **Vytvořit profil**.
-4. V okně **Vytvořit profil** zadejte **název** a **popis** vlastního profilu.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V podokně **Intune** zvolte **Konfigurace zařízení**.
+2. V podokně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
+3. V podokně s profily klikněte na **Vytvořit profil**.
+4. V podokně **Vytvořit profil** zadejte **Název** a **Popis** vlastního profilu.
 5. V rozevíracím seznamu **Platforma** zvolte **Android**.
 6. V rozevíracím seznamu **Typ profilu** zvolte **Vlastní**.
 7. Zvolte **Nastavení** > **Konfigurovat**.
-3. V okně **Vlastní nastavení OMA-URI** zvolte **Přidat**.
+3. V podokně **Vlastní nastavení OMA-URI** zvolte **Přidat**.
     - Zadejte název nastavení.
-    - Jako **Datový typ** určete **String** (Řetězec).
     - Pro **OMA-URI** zadejte tento řetězec: **./Vendor/MSFT/VPN/Profile/*název*/PackageList**, kde *název* je název profilu VPN, který jste si poznamenali v kroku 1. V tomto příkladu by se použil řetězec **./Vendor/MSFT/VPN/Profile/profil_VPN_pro_moje_aplikace/PackageList**.
+    - Jako **Datový typ** určete **String** (Řetězec).
     - Do pole **Hodnota** zadejte seznam balíčků (oddělených středníkem), které mají být k tomuto profilu přidružené. Pokud třeba chcete, aby připojení VPN používal Excel a prohlížeč Google Chrome, zadejte **com.microsoft.office.excel;com.android.chrome**.
 
 ![Příklad vlastní zásady VPN pro aplikaci pro Android](./media/android_per_app_vpn_oma_uri.png)
@@ -71,10 +71,10 @@ Poznamenejte si hodnotu **Název připojení**, kterou zadáváte při vytváře
 ### <a name="set-your-app-list-to-blacklist-or-whitelist-optional"></a>Nastavení seznamu aplikací jako zakázaných nebo povolených (volitelné)
   Pomocí hodnoty *BLACKLIST* můžete určit, že jde o seznam aplikací, pro které **není povoleno** použít připojení VPN. Všechny ostatní aplikace se připojují prostřednictvím VPN.
 Další možností je určit pomocí hodnoty **WHITELIST** aplikace, které *jediné* budou moci připojení VPN používat. Aplikace, které nejsou v seznamu, se nepřipojují prostřednictvím VPN.
-  1.    V okně **Vlastní nastavení OMA-URI** zvolte **Přidat**.
+  1.    V podokně **Vlastní nastavení OMA-URI** zvolte **Přidat**.
   2.    Zadejte název nastavení.
-  3.    Jako **Datový typ** určete **String** (Řetězec).
-  4.    Pro **OMA-URI** použijte tento řetězec: **./Vendor/MSFT/VPN/Profile/*název*/Mode**, kde *název* je název profilu VPN, který jste si poznamenali v kroku 1. V našem příkladu by se tedy použil řetězec **./Vendor/MSFT/VPN/Profile/profil_VPN_pro_moje_aplikace/Mode**.
+  3.    Pro **OMA-URI** použijte tento řetězec: **./Vendor/MSFT/VPN/Profile/*název*/Mode**, kde *název* je název profilu VPN, který jste si poznamenali v kroku 1. V našem příkladu by se tedy použil řetězec **./Vendor/MSFT/VPN/Profile/profil_VPN_pro_moje_aplikace/Mode**.
+  4.    Jako **Datový typ** určete **String** (Řetězec).
   5.    Do pole **Hodnota** zadejte **BLACKLIST** nebo **WHITELIST**.
 
 

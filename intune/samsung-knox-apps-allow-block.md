@@ -1,31 +1,29 @@
 ---
-title: "Zásady Intune, které povolí/blokují aplikace pro Samsung Knox"
-titlesuffix: Azure portal
+title: "Zásady Microsoft Intune k povolení/blokování aplikací pro Samsung Knox"
+titlesuffix: 
 description: "Vytvořte vlastní profil, který zařízením se zabezpečením Samsung Knox Standard povolí nebo zablokuje aplikace."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 06/03/2017
+ms.date: 3/5/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: d035ebf5-85f4-4001-a249-75d24325061a
-ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 606f3dbb4d68592f6920ee900d36be1befe56568
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 95f35cfd869975a43fd54a1e6a9ff6ae35ffa6af
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="use-custom-policies-to-allow-and-block-apps-for-samsung-knox-standard-devices-in-microsoft-intune"></a>Použití vlastních zásad v Microsoft Inune, které zařízením se zabezpečením Samsung Knox Standard povolí nebo blokují aplikace
+# <a name="use-custom-policies-in-microsoft-intune-to-allow-and-block-apps-for-samsung-knox-standard-devices"></a>Použití vlastních zásad v Microsoft Intune, které v povolí nebo blokují aplikace pro zařízení se zabezpečením Samsung Knox Standard 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Postupy v tomto tématu použijte k vytvoření vlastní zásady Microsoft Intune, která obsahuje jeden z těchto seznamů:
+Postupy v tomto článku použijte k vytvoření vlastní zásady Microsoft Intune, která obsahuje jeden z těchto seznamů:
 
 - Seznam aplikací, u kterých je v příslušném zařízení blokované spuštění. Aplikace v tomto seznamu nebude možné spouštět ani v případě, že již byly nainstalované v okamžiku nasazení zásady.
 - Seznam aplikací, které si uživatelé příslušného zařízení mohou nainstalovat z obchodu Google Play. Je možné instalovat jen aplikace uvedené na seznamu. Z tohoto obchodu nejde nainstalovat žádné další aplikace.
@@ -34,33 +32,33 @@ Tato nastavení mohou používat jenom zařízení se spuštěnou aplikací Sams
 
 ## <a name="create-an-allowed-or-blocked-app-list"></a>Vytvoření seznamu povolených nebo blokovaných aplikací
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Konfigurace zařízení**.
-2. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
-2. V okně seznamu profilů zvolte **Vytvořit profil**.
-3. V okně **Vytvořit profil** zadejte **Název** a nepovinně **Popis** profilu zařízení.
-2. Jako **typ platformy** zvolte **Android** a jako typ profilu **Vlastní**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V podokně **Intune** zvolte **Konfigurace zařízení**.
+2. V podokně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
+2. V podokně se seznamem profilů zvolte **Vytvořit profil**.
+3. V podokně **Vytvořit profil** zadejte **Název** a nepovinně **Popis** profilu zařízení.
+2. Jako **Platformu** zvolte **Android** a jako **Typ profilu** zvolte **Vlastní**.
 3. Klikněte na **Nastavení**.
-3. V okně **Vlastní nastavení OMA-URI** zvolte **Přidat**.
-4. V dialogovém okně **Přidat nebo upravit nastavení OMA-URI** zadejte následující informace:
+3. V podokně **Vlastní nastavení OMA-URI** zvolte **Přidat**.
+4. V dialogovém okně **Přidat nebo upravit nastavení OMA-URI** zadejte tato nastavení:
 
-### <a name="for-a-list-of-apps-that-are-blocked-from-running-on-the-device"></a>Seznam aplikací, u kterých je v příslušném zařízení blokované spuštění:
+   Seznam aplikací, u kterých je v příslušném zařízení blokované spuštění:
 
-- **Název** – zadejte **PreventStartPackages**.
-- **Popis** – zadejte volitelný popis, např.: Seznam zakázaných aplikací.
--   **Datový typ** – z rozevíracího seznamu zvolte **Řetězec**.
--   **OMA-URI** – zadejte **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**.
--   **Hodnota** – zadejte seznam názvů balíčků aplikací, které chcete povolit. Jako oddělovač můžete použít **; : ,** nebo **|**. (Příklad: package1;package2;)
+   - **Název** – zadejte **PreventStartPackages**.
+   - **Popis** – zadejte volitelný popis, např.: Seznam zakázaných aplikací.
+   -    **Datový typ** – z rozevíracího seznamu zvolte **Řetězec**.
+   -    **OMA-URI** – zadejte **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**.
+   -    **Hodnota** – zadejte seznam názvů balíčků aplikací, které chcete povolit. Jako oddělovač můžete použít **; : ,** nebo **|**. (Příklad: package1;package2;)
 
-### <a name="for-a-list-of-apps-that-users-are-allowed-to-install-from-the-google-play-store-while-excluding-all-other-apps"></a>Pro seznam aplikací, které si uživatelé můžou nainstalovat z obchodu Google Play, s vyloučením všech ostatních:
-- **Název** – zadejte **AllowInstallPackages**.
-- **Popis** – zadejte volitelný popis, například Seznam aplikací povolených pro instalaci z Google Play.
-- **Datový typ** – z rozevíracího seznamu zvolte **Řetězec**.
-- **OMA-URI** – zadejte **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/AllowInstallPackages**.
-- **Hodnota** – zadejte seznam názvů balíčků aplikací, které chcete povolit. Jako oddělovač můžete použít **; : ,** nebo **|**. (Příklad: package1;package2;)
+   Pro seznam aplikací, které si uživatelé můžou nainstalovat z obchodu Google Play, s vyloučením všech ostatních:
+   - **Název** – zadejte **AllowInstallPackages**.
+   - **Popis** – zadejte volitelný popis, například Seznam aplikací povolených pro instalaci z Google Play.
+   - **Datový typ** – z rozevíracího seznamu zvolte **Řetězec**.
+   - **OMA-URI** – zadejte **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/AllowInstallPackages**.
+   - **Hodnota** – zadejte seznam názvů balíčků aplikací, které chcete povolit. Jako oddělovač můžete použít **; : ,** nebo **|**. (Příklad: package1;package2;)
 
-4. Klikněte na tlačítko **OK** a pak v okně **Vytvořit profil** zvolte **Vytvořit**.
+4. Klikněte na **OK** a pak v podokně **Vytvořit profil** zvolte **Vytvořit**.
 
 >[!TIP]
 > ID balíčku aplikace najdete tak, že na tuto aplikaci přejdete v obchodě Google Play. ID balíčku je součástí adresy URL stránky aplikace. Třeba aplikace Microsoft Word má ID balíčku **com.microsoft.office.word**.

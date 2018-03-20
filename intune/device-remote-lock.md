@@ -1,12 +1,11 @@
 ---
-title: "Vzdálené uzamčení spravovaných zařízení přes Intune"
-titlesuffix: Azure portal
-description: "Informace o tom, jak přes Intune vzdáleně uzamknout zařízení, která spravujete"
+title: "Uzamčení zařízení pomocí Microsoft Intune – Azure | Microsoft Docs"
+description: "Akci Vzdáleného uzamčení v Microsoft Intune použijte k uzamčení zařízení chráněného kódem PIN nebo heslem."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2018
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,43 +13,41 @@ ms.technology:
 ms.assetid: 3b67f285-229d-4a0f-ae34-0402a20b4518
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0a8f3c93507cde4363570a9a39f8b3b1f69c07df
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 59a55de54a5a18f5fd1080fefa15c0e4801a1456
+ms.sourcegitcommit: 9cf05d3cb8099e4a238dae9b561920801ad5cdc6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="remotely-lock-managed-devices-with-intune"></a>Vzdálené uzamčení spravovaných zařízení přes Intune
-
+# <a name="remotely-lock-devices-with-intune"></a>Vzdálené uzamčení zařízení přes Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Akce **Vzdálené uzamčení** uzamkne vybrané zařízení. Vlastník zařízení musí k jeho odemčení použít heslo. Vzdáleně můžete uzamknout jen zařízení s nastaveným PIN kódem nebo heslem.
+Akce **Vzdálené uzamčení** uzamkne zařízení. Vlastník zařízení musí k jeho odemčení zadat heslo. Vzdáleně uzamknout můžete zařízení, která mají nastavený kód PIN nebo heslo. Zařízení bez kódu PIN nebo hesla nejdou vzdáleně zamknout.
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
 Vzdálené uzamčení se podporuje u následujících platforem:
 
-|Platforma|Stav podpory|
-|---|---|
-|Android|Ano|
-|iOS|Ano|
-|macOS|Ano|
-|Stolní počítač s Windows 10|Ne|
-|Windows 10 Mobile|Ano|
-|Windows Phone|Ano, pro Windows Phone 8.1 a novější|
+- Android
+- iOS
+- macOS
+- Windows 10 Mobile
+- Windows Phone 8.1 nebo novější
 
-> [!NOTE]  
-> Pro zařízení s macOS nastavíte šestimístní číselný kód PIN pro obnovení. Když se zařízení zamkne, v okně **přehledu zařízení** se bude zobrazovat kód PIN, dokud se nepošle jiná akce zařízení.
+**Nepodporuje se** pro:
+- Stolní počítač s Windows 10
 
-## <a name="how-to-remote-lock-a-device"></a>Vzdálené uzamčení zařízení
+> [!NOTE]
+> Pro zařízení s macOS nastavíte šestimístní číselný kód PIN pro obnovení. Když se zařízení zamkne, **přehled zařízení** bude zobrazovat kód PIN, dokud se nepošle jiná akce zařízení.
+
+## <a name="remote-lock-a-device"></a>Vzdáleně uzamknout zařízení
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V okně **Intune** zvolte **Zařízení**.
-4. V okně **Zařízení** zvolte **Všechna zařízení**.
-5. V seznamu zařízení, která spravujete, zvolte zařízení a potom zvolte akci se vzdáleným zařízením **Vzdálené uzamčení**.
+2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+3. Vyberte **Zařízení** a potom **Všechna zařízení**.
+4. V seznamu zařízení vyberte zařízení a pak vyberte akci **Vzdálené uzamčení**.
 
 ## <a name="next-steps"></a>Další kroky
 
-Stav akce, kterou jste spustili, zobrazíte tak, že v okně **Zařízení** zvolíte **Akce zařízení**.
+Pokud chcete zobrazit stav této akce, otevřete **Akce zařízení** (Microsoft Intune > Zařízení). Další akce, které vám můžou pomoct se správou zařízení, najdete v tématu [Dostupné akce](device-management.md).

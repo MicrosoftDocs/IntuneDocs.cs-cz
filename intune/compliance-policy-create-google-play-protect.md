@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/20/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: E9810BEB-000A-4DFB-B5C7-A22A92082B22
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 13aa627515b74d3c9fe6d091c44dd5147bd786bd
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 01b26a6165db6e3016d2b3d7063a4bca60ce0266
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-create-a-device-compliance-policy-to-enable-google-play-protect"></a>Jak vytvořit zásadu dodržování předpisů zařízeními pro službu Google Play Protect
 
@@ -29,14 +29,15 @@ Zásadu dodržování předpisů, která vyžaduje potřebná nastavení, může
 
 ## <a name="create-a-compliance-policy"></a>Tvorba zásady dodržování předpisů
 
-1. Přihlaste se k portálu Azure Portal. Zvolte **Další služby** > **Monitorování + správa** + **Intune**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 2. Ve skupině **Spravovat** zvolte **Dodržování předpisů zařízením**. 
-3. Zvolte **Zásady** a potom **Vytvořit zásadu**.
+3. Zvolte **Zásady** a pak **Vytvořit zásadu**.
 4. Zadejte pro zásadu **Název** a **Popis**.
 5. Jako platformu vyberte **Android**.
 6. Zvolte **Nastavení** > **Stav zařízení**.
 7. Nakonfigurujte nastavení **Google Play Protect**.
-8. Po nakonfigurování nastavení Google Play Protect zadejte nastavení **Zabezpečení** a **Vlastnosti zařízení**. Když jste hotovi, klikněte na **OK**.
+8. Po nakonfigurování nastavení Google Play Protect zadejte nastavení **Zabezpečení systému** a **Vlastnosti zařízení**. Když jste hotovi, klikněte na **OK**.
 
 ## <a name="configure-the-google-play-protect-settings"></a>Konfigurace nastavení Google Play Protect
 

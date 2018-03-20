@@ -1,7 +1,7 @@
 ---
-title: "Přidání a přiřazení aplikací MTD do Intune"
-titleSuffix: Azure portal
-description: "Pomocí Intune na Azure Portalu můžete přidat aplikace MTD, aplikaci Microsoft Authenticator a zásady konfigurace iOS."
+title: "Přidání a přiřazení aplikací pro ochranu před mobilními hrozbami (MTD) do Microsoft Intune"
+titleSuffix: 
+description: "Pomocí Intune můžete přidat aplikace pro ochranu před mobilními hrozbami (MTD), aplikaci Microsoft Authenticator a zásady konfigurace iOS na portálu Azure Portal."
 keywords: 
 author: msmimart
 ms.author: mimart
@@ -15,11 +15,11 @@ ms.assetid: 00356258-76a8-4a84-9cf5-64ceedb58e72
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7afe03c635b63053ef0cc0f622bc9324f31ec68b
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: 3fc71620fee1b1df907a4027c1c57cd91b53032e
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Přidání a přiřazení aplikací pro ochranu před mobilními hrozbami (MTD) pomocí Intune
 

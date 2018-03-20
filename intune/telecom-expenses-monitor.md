@@ -1,12 +1,12 @@
 ---
 title: "Nastavení služby TEM (Telecom Expense Management)"
-titleSuffix: Azure portal
-description: "Nakonfigurujte službu správy telekomunikačních výdajů TEM společnosti Saaswedo, aby byla integrována do Intune."
+titleSuffix: Microsoft Intune
+description: "Integrujte službu správy telekomunikačních výdajů Saaswedo do Intune."
 keywords: Saaswedo
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,18 @@ ms.assetid: b7bf5802-4b65-4aeb-ac99-8e639dd89c2a
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e9b0b22dc3831cbb14ab876b5f4e58f82cf53abc
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: ef755a1fd5f94342f551ac168136217dbc82b244
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Nastavení služby TEM (Telecom Expense Management) v Intune
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Intune umožňuje spravovat výdaje za telekomunikační služby vzniklé v závislosti na používání dat na mobilních zařízeních vlastněných firmou. Pokud chcete aktivovat tuto funkci, obsahuje Intune integrované řešení pro správu výdajů na telekomunikaci Datalert od externího vývojáře softwaru Saaswedo. Datalert je software pro správu výdajů na telekomunikaci v reálném čase, který umožňuje spravovat využití telekomunikačních dat a předejít tak finančně nákladnému a neočekávanému nadlimitnímu využití dat a roamingu u zařízení spravovaných pomocí Intune.
+Intune umožňuje spravovat výdaje za telekomunikační služby vzniklé v závislosti na používání dat na mobilních zařízeních vlastněných firmou. Pokud chcete aktivovat tuto funkci, obsahuje Intune integrované řešení pro správu výdajů na telekomunikaci Datalert od externího vývojáře softwaru Saaswedo. Datalert je software pro správu telekomunikačních výdajů v reálném čase, který umožňuje spravovat využití telekomunikačních dat. Pomůže vám vyhnout se nákladným a neočekávaným překročením limitů dat a roamingu u vašich zařízení spravovaných pomocí Intune.
 
-Integrace Intune s Datalertem umožňuje centrálně nastavit, monitorovat a vynutit limity využití roamingu a domácích dat pomocí automatických výstrah, které se zobrazí, když limity překročí definované prahové hodnoty. Službu můžete nakonfigurovat tak, aby se použily různé akce u jednotlivců nebo skupin koncových uživatelů, včetně zákazu roamingu v případě, že uživatelé překročí stanovenou prahovou hodnotu. Sestavy využití a monitorování dat jsou dostupné v konzole pro správu Datalertu.
+Integrace Intune s Datalertem umožňuje centrálně nastavit, monitorovat a vynutit limity využití roamingu a domácích dat. Automatické výstrahy se zobrazí, když limity překročí definované prahové hodnoty. Službu můžete nakonfigurovat tak, aby se použily různé akce u jednotlivců nebo skupin koncových uživatelů (třeba zákaz roamingu při překročení prahové hodnoty). Sestavy využití a monitorování dat jsou dostupné v konzole pro správu Datalertu.
 
 V následujícím schématu můžete vidět, jak se Intune integruje s řešením Datalert.
 
@@ -68,7 +68,7 @@ Než začnete, musíte mít Intune a předplatné služby TEM Datalert.
 
     Když vyberete možnost **Připojení**, služba Datalert zkontroluje v Intune, že dosud neexistuje žádné připojení Datalert v Intune. Po několika sekundách se otevře přihlašovací stránka Microsoft a po ní ověření Azure pro Datalert.
 
-6. Na ověřovací stránce Microsoft vyberte **Přijmout**. Budete přesměrováni na stránku Datalert s poděkováním, která se po pár sekundách zavře. Datalert ověří připojení a zobrazí zelenou značku zaškrtnutí vedle seznamu ověřených položek. Pokud se ověření nezdaří, zobrazí se zpráva zvýrazněná červeně. Pokud k tomu dojde, obraťte se na podporu Datalertu se žádostí o pomoc.
+6. Na ověřovací stránce Microsoft vyberte **Přijmout**. Budete přesměrováni na stránku Datalert s poděkováním, která se po pár sekundách zavře. Datalert ověří připojení a zobrazí zelenou značku zaškrtnutí vedle seznamu ověřených položek. Pokud se ověření nezdaří, zobrazí se červená zpráva a měli byste Datalert požádat o pomoc.
 
     Na následujícím snímku obrazovky vidíte zelené značky zaškrtnutí, které označují úspěšné připojení.
 
@@ -78,37 +78,39 @@ Než začnete, musíte mít Intune a předplatné služby TEM Datalert.
 
 Po dokončení kroku 1 výše by se mělo automaticky povolit připojení a na portálu Azure Portal by se měl zobrazit stav připojení **Aktivní**. V tomto postupu vidíte, jak zkontrolovat stav **Aktivní**.
 
-1. Přihlaste se k portálu Azure Portal.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 
-3. V okně **Intune** zvolte **Konfigurace zařízení**.
+3. V podokně **Intune** zvolte **Konfigurace zařízení**.
 
-4. V okně **Konfigurace zařízení** zvolte **Nastavení** > **Služba TEM (Telecom Expense Management)**.
+4. V podokně **Konfigurace zařízení** zvolte **Nastavení** > **Služba TEM (Telecom Expense Management)**.
 
    V horní části stránky se podívejte, jestli je stav připojení **Aktivní**.
 
-  ![Azure Portal se zobrazeným aktivním stavem připojení Datalertu](./media/tem-azure-portal-enable-service.png)
+  ![Stránka Intune zobrazující aktivní stav připojení Datalertu](./media/tem-azure-portal-enable-service.png)
 
 ### <a name="step-3-deploy-the-datalert-app-to-corporate-enrolled-devices"></a>Krok 3: Nasazení aplikace Datalert na podniková zaregistrovaná zařízení
 
-Aby se shromažďovaly informace jenom o použití dat na linkách vlastněných firmou, je potřeba vytvořit v Intune kategorie zařízení a potom aplikaci Datalert zacílit jenom na podnikové telefony. Postupujte podle pokynů v následujících oddílech.
+Aby se zajistilo, že se bude zjišťovat využití dat jenom z firemních linek, musíte udělat dvě věci:
+- vytvořit kategorie zařízení v Intune
+- zacílit aplikaci Datalert jenom na firemní telefony
 
 #### <a name="define-device-categories-and-device-groups-mapped-to-the-categories"></a>Definování kategorií zařízení a skupin zařízení namapovaných do kategorií
 
-V závislosti na potřebách organizace budete muset vytvořit alespoň dvě kategorie zařízení (například podniková a osobní) a pro každou kategorii vytvořit dynamické skupiny zařízení. Podle potřeby pro svoji organizaci můžete vytvořit více kategorií.
+V závislosti na potřebách organizace vytvořte aspoň dvě kategorie zařízení (třeba Firemní a Osobní). Pak pro každou kategorii vytvořte dynamické skupiny zařízení. Podle potřeby pro svoji organizaci můžete vytvořit více kategorií.
 
 Tyto kategorie se budou zobrazovat uživatelům při registraci. Podle toho, kterou kategorii uživatelé zvolí, se registrované zařízení přesune do příslušné skupiny zařízení. Postup vytvoření kategorií zařízení najdete v tématu [Mapování zařízení na skupiny](device-group-mapping.md).
 
-  ![Snímek obrazovky okna Přidat zásadu](./media/tem-dynamic-membership-rules.png)
+  ![Snímek obrazovky s podoknem Přidat zásadu](./media/tem-dynamic-membership-rules.png)
 
 #### <a name="create-the-datalert-app-in-intune"></a>Vytvoření aplikace Datalert v Intune
 
 Podle následujících pokynů vytvořte v Intune aplikaci Datalert pro jednotlivé platformy. Jako příklad v tomto postupu použijeme iOS.
 
-1. V okně **Intune** na portálu Azure Portal zvolte **Mobilní aplikace**.
+1. V podokně **Intune** na portálu [Azure Portal](https://portal.azure.com) zvolte **Mobilní aplikace**.
 
-2. V okně **Mobilní aplikace** zvolte **Spravovat** > **Aplikace**.
+2. V podokně **Mobilní aplikace** zvolte **Spravovat** > **Aplikace**.
 
 3. Vyberte **Přidat**, abyste mohli přidat aplikaci.
 
@@ -116,39 +118,39 @@ Podle následujících pokynů vytvořte v Intune aplikaci Datalert pro jednotli
 
 5. V části **Hledat v App Storu** vyhledejte aplikaci Datalert tak, že zadáte v okně hledání **Datalert**.
 
-6. Vyberte aplikaci **Datalert** a **OK**.
+6. Vyberte aplikaci **Datalert** a **Vybrat**.
 
-  ![Snímek obrazovky okna Přidat zásadu](./media/tem-select-app-from-apple-app-store.png)
+   ![Snímek obrazovky s podoknem Přidat zásadu](./media/tem-select-app-from-apple-app-store.png)
 
 7. Pomocí zbývajících kroků v postupu vytvořte aplikaci pro iOS.
 
-  ![Snímek obrazovky okna Přidat zásadu](./media/tem-steps-to-create-the-app.png)
+   ![Snímek obrazovky s podoknem Přidat zásadu](./media/tem-steps-to-create-the-app.png)
 
 #### <a name="assign-the-datalert-app-to-the-corporate-device-group"></a>Přiřazení aplikace Datalert ke skupině firemních zařízení
 
-1. Vyberte aplikaci Datalert pro iOS, kterou jste vytvořili v předchozím kroku.
+1. V podokně **Mobilní aplikace – Aplikace** vyberte aplikaci Datalert pro iOS, kterou jste vytvořili v předchozím kroku.
 
-2. V okně **Aplikace** přejděte na **Správa** > **Přiřazení**.
+2. V podokně **Aplikace** zvolte **Spravovat** > **Přiřazení**.
 
-3. Zvolte **Vybrat skupiny** a postupujte podle pokynů pro výběr skupiny firemních zařízení.
+3. Zvolte **Přidat skupinu** a postupujte podle pokynů pro výběr skupiny firemních zařízení.
 
 4. Vyberte, jestli chcete, aby byla instalace aplikace pro skupinu povinná nebo volitelná. Na následujícím snímku obrazovky s příkladem vidíte povinnou instalaci, což znamená, že uživatelé musí po registraci svých zařízení aplikaci Datalert nainstalovat.
 
-  ![Snímek obrazovky okna Přidat zásadu](./media/tem-assign-datalert-app-to-device-group.png)
+  ![Snímek obrazovky s podoknem Přidat zásadu](./media/tem-assign-datalert-app-to-device-group.png)
 
 ### <a name="step-4-add-corporate-paid-phone-lines-to-the-datalert-console"></a>Krok 4: Přidejte do konzoly Datalert placené firemní telefonní linky
 
-Teď máte služby Intune a Datalert nakonfigurované tak, aby spolu komunikovaly. Teď musíte přidat placené firemní telefonní linky ke konzole Datalert a definovat prahové hodnoty a akce pro veškerá porušení použití mobilních nebo roamingových služeb. Placené firemní telefonní linky můžete ke konzole Datalert přidat buď ručně, nebo je nechat přidat automaticky po registraci zařízení v Intune.
+Teď máte služby Intune a Datalert nakonfigurované tak, aby spolu komunikovaly. Teď musíte přidat placené firemní telefonní linky ke konzole Datalert a definovat prahové hodnoty a akce pro veškerá porušení použití mobilních nebo roamingových služeb. Placené firemní telefonní linky můžete ke konzole Datalert přidat ručně nebo je přidat automaticky po registraci zařízení v Intune.
 
 Pokud chcete nastavit tyto položky, přejděte na [stránku nastavení služby Datalert pro Microsoft Intune](http://www.datalert.fr/microsoft-intune/intune-setup) (http://www.datalert.fr/microsoft-intune/intune-setup) a postupujte podle pokynů v průvodci instalací na kartě **Nastavení**.
 
-  ![Snímek obrazovky okna Přidat zásadu](./media/tem-add-phone-lines-to-datalert-console.png)
+  ![Snímek obrazovky s podoknem Přidat zásadu](./media/tem-add-phone-lines-to-datalert-console.png)
 
 
 Služba Datalert je nyní aktivní. Spustí monitorování využití dat a zakáže mobilní a roamingová data u zařízení, která překročí nakonfigurované limity využití.
 
 ## <a name="client-enrollment-experience"></a>Možnosti registrace klienta
-Při registraci klienta se zobrazí tyto možnosti:
+K registraci klienta si můžete přečíst tato témata:
 -   [Registrace zařízení s iOSem ve službě TEM (Telecom Expense Management)](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-ios)
 -   [Registrace zařízení s Androidem ve službě TEM (Telecom Expense Management)](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-android)
 
@@ -162,7 +164,7 @@ Zakázání služby Datalert na portálu Azure Portal bude mít za následek tot
 
 **Vypnutí služby**
 
-1. V okně **Služba TEM (Telecom Expense Management)** na portálu Azure Portal vyberte **Zakázat**.
+1. V podokně **Služba TEM (Telecom Expense Management)** na portálu Azure Portal vyberte **Zakázat**.
 
 2. Vyberte **Uložit**.
 

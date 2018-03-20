@@ -1,12 +1,12 @@
 ---
 title: "Instalace aplikací Office 365 na zařízení pomocí Intune"
 titlesuffix: 
-description: "Zjistěte, jak můžete s Microsoft Intune zjednodušit instalaci aplikací Office 365 na zařízení s Windows 10."
+description: "Zjistěte, jak můžete s Microsoft Intune zjednodušit instalaci aplikací Office 365 na zařízeních s Windows 10."
 keywords: 
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2018
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,15 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1a8045261f93c6ac0282a03f13ac7bb7a7caac0d
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 076d228f3b18416e4ecb8fd1b3543a58d037e386
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/12/2018
 ---
-# <a name="how-to-assign-office-365-proplus-apps-to-windows-10-devices-with-microsoft-intune"></a>Přiřazení aplikací Office 365 ProPlus k zařízením s Windows 10 pomocí Microsoft Intune
+# <a name="how-to-assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Přiřazení aplikací Office 365 k zařízením s Windows 10 pomocí Microsoft Intune
 
-Tento typ aplikace vám usnadní přiřazování aplikací Office 365 ProPlus k zařízením s Windows 10, která spravujete. Můžete si také nainstalovat aplikace pro klienta pro stolní počítače Microsoft Project Online a Microsoft Visio Pro Office 365, pokud vlastníte jejich licence. Požadované aplikace se v seznamu aplikací v konzole Intune zobrazí jako jedna položka.
+Tento typ aplikace vám usnadní přiřazování aplikací Office 365 na vámi spravovaná zařízení s Windows 10. Můžete si také nainstalovat aplikace pro klienta pro stolní počítače Microsoft Project Online a Microsoft Visio Pro Office 365, pokud vlastníte jejich licence. Požadované aplikace se v seznamu aplikací v konzole Intune zobrazí jako jedna položka.
 
 
 ## <a name="before-you-start"></a>Než začnete
@@ -32,7 +32,7 @@ Tento typ aplikace vám usnadní přiřazování aplikací Office 365 ProPlus k 
 >Tato metoda instalace Office se podporuje jenom v případě, že nejsou na zařízení nainstalované jiné verze Microsoft Office.
 
 - Zařízení, na která chcete tyto aplikace nasadit, musí mít aktualizaci Windows 10 Creators Update nebo novější.
-- Intune podporuje přidání aplikací Office jenom ze sady Office 365 ProPlus.
+- Intune podporuje přidání aplikací Office jenom ze sady Office 365.
 - Pokud jsou spuštěné nějaké aplikace Office, když Intune instaluje sadu aplikací, může instalace selhat a koncoví uživatelé můžou přijít o data z neuložených souborů.
 - Tato metoda instalace není podporovaná na zařízeních s Windows 10 S, Windows Home, Windows Team, Windows Holographic a Windows Holographic for Business.
 - Intune nepodporuje instalaci desktopových aplikací Office 365 z Microsoft Storu (označovaných jako aplikace Office Centennial) na zařízení, na která jste už nasadili aplikace Office 365 pomocí Intune. Pokud nainstalujete tuto konfiguraci, může to způsobit ztrátu nebo poškození dat.
@@ -41,12 +41,13 @@ Tento typ aplikace vám usnadní přiřazování aplikací Office 365 ProPlus k 
 
 ## <a name="get-started"></a>Začínáme
 
-1.  Přihlaste se k portálu Azure Portal.
-2.  Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+1.  Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2.  Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3.  V okně **Intune** zvolte **Mobilní aplikace**.
-4.  V úloze **Mobilní aplikace** zvolte **Spravovat** > **Aplikace**.
+4.  V úloze **Mobilní aplikace** zvolte v části **Spravovat** možnost **Aplikace**.
 5.  Nad seznamem aplikací zvolte **Přidat**.
-6.  V okně **Přidat aplikaci** zvolte **Office 365 ProPlus Suite (Windows 10)**.
+6.  V seznamu **Typ aplikace** v okně **Přidat aplikace** vyberte v části **Sada Office 365** možnost **Windows 10**.
+    Teď můžete sadu aplikací nakonfigurovat.
 
 ## <a name="configure-the-app-suite"></a>Konfigurace sady aplikací
 
@@ -61,7 +62,7 @@ V tomto kroku vyberte aplikace Office, které chcete přiřadit k zařízení.
 
 ## <a name="configure-app-information"></a>Konfigurace informací o aplikaci
 
-V tomto kroku zadejte informace o sadě aplikací. Tyto informace vám ji pomůžou identifikovat v Intune a uživatelům ji pomůžou najít v aplikaci Portál společnosti.
+V tomto kroku je třeba zadat informace o sadě aplikací. Tyto informace vám pomůžou sadu aplikací v Intune identifikovat a uživatelům ji pomůžou najít v aplikaci Portál společnosti.
 
 1.  V okně **Přidat aplikaci** zvolte možnost pro **informace o sadě aplikací**.
 2.  V okně s **informacemi o sadě aplikací** zadejte následující informace:
@@ -75,7 +76,7 @@ V tomto kroku zadejte informace o sadě aplikací. Tyto informace vám ji pomů�
     - **Vývojář** – volitelně zadejte jméno vývojáře aplikace.
     - **Vlastník** – volitelně zadejte vlastníka aplikace, například **Personální oddělení**.
     - **Poznámky** – zadejte jakékoli poznámky, které chcete k aplikaci přidružit.
-    - **Nahrát ikonu** – nahrajte ikonu, která se zobrazí u aplikace, když uživatelé procházejí portál společnosti.
+    - **Logo** – nahrajte ikonu, která se zobrazí u aplikace, když uživatelé procházejí portál společnosti.
 3.  Po dokončení klikněte na **OK**.
 
 ## <a name="configure-app-settings"></a>Konfigurace nastavení aplikace
@@ -91,7 +92,7 @@ V tomto kroku nakonfigurujte možnosti instalace pro sadu aplikací. Nastavení 
         - **Půlroční**
         - **Půlroční (cílený)**
     - **Automaticky přijmout licenční smlouvu s koncovým uživatelem aplikace** – tuto možnost vyberte, pokud nevyžadujete přijetí licenční smlouvy koncovými uživateli. Intune pak smlouvu přijme automaticky.
-    - **Použít aktivaci pro sdílené počítače** – aktivace pro sdílené počítače se používá, když počítač sdílí více uživatelů. Další informace najdete v Přehledu aktivace pro sdílené počítače pro Office 365 ProPlus.
+    - **Použít aktivaci pro sdílené počítače** – aktivace pro sdílené počítače se používá, když počítač sdílí více uživatelů. Další informace najdete v Přehledu aktivace pro sdílené počítače pro Office 365.
     - **Jazyky** – Office se automaticky nainstaluje ve všech podporovaných jazycích nainstalovaných s Windows na zařízení koncových uživatelů. Tuto možnost zvolte, pokud chcete nainstalovat se sadou aplikací další jazyky.
 
 >[!IMPORTANT]
@@ -99,7 +100,7 @@ V tomto kroku nakonfigurujte možnosti instalace pro sadu aplikací. Nastavení 
 
 ## <a name="finish-up"></a>Dokončení
 
-Až skončíte, zvolte v okně **Přidat aplikaci** možnost **Uložit**. Aplikace, kterou jste vytvořili, se zobrazí v seznamu aplikací.
+Až skončíte, zvolte v okně **Přidat aplikaci** možnost **Přidat**. Aplikace, kterou jste vytvořili, se zobrazí v seznamu aplikací.
 
 ## <a name="error-codes-when-installing-the-app-suite"></a>Kódy chyb při instalaci sady aplikací
 
@@ -137,4 +138,4 @@ V následující tabulce jsou uvedené běžné kódy chyb, se kterými se můž
 
 ## <a name="next-steps"></a>Další kroky
 
-Nyní můžete přiřadit aplikace do skupin podle vlastního výběru. Nápovědu najdete v článku [Přiřazení aplikací do skupin](/intune-azure/manage-apps/deploy-apps).
+- Nyní můžete aplikace přiřadit vybraným skupinám. Přečtěte si článek [Přiřazení aplikací do skupin](/intune-azure/manage-apps/deploy-apps).

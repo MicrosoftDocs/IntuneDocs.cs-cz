@@ -6,8 +6,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2018
-ms.topic: get-started-article
+ms.date: 02/26/2018
+ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
@@ -15,11 +15,11 @@ ms.assetid: 917c0eed-96d0-49d8-8db8-a6ba13ad0e1f
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bd2a5af8c5535fc45083b1386f378604b0b67353
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: f2d0a77c9e9e36db53c23031fd9f06f508fef15d
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="getting-started-with-microsoft-intune-in-the-azure-portal"></a>Začínáme s Microsoft Intune na portálu Azure Portal
 
@@ -31,7 +31,7 @@ __Boční panel__ na levé straně portálu Azure Portal zobrazuje seznam všech
 
 ![Hledání služby Microsoft Intune v seznamu Další služby](./media/azure-add-intune1.png)
 
-1. Vyberte **Další služby** v dolní části bočního panelu na levé straně stránky.
+1. Na bočním panelu na levé straně stránky vyberte **Všechny služby**.
 2. V poli filtru vyhledejte **Intune**.
 3. Výběrem **hvězdičky** přidáte Intune na konec seznamu svých oblíbených služeb.
 4. Najeďte na službu Intune myší. Vyberte a přetáhněte Intune pomocí **tří svislých teček** na pravé straně názvu služby.
@@ -52,7 +52,7 @@ Tato možnost bude užitečnější, až si do Intune přidáte další obsah, j
 
 ## <a name="using-services"></a>Používání služeb
 
-Kdykoli v Azure otevřete Microsoft Intune nebo jakoukoli jinou službu, zobrazí se v **okně**. Některé z prvních úloh, které v Intune použijete, jako jsou **Uživatelé**, **Skupiny** a **Mobilní aplikace**, se zobrazí v okně přes celou obrazovku. Při výběru úlohy se toto okno otevře přes celou stránku. Jiná okna se při otevření vysunou z pravé strany okna a následně sbalí pod hlavní okno, ze kterého pocházejí.
+Kdykoli v Azure otevřete Intune nebo jakoukoli jinou službu, objeví se v **podokně**. Některé z prvních úloh, které v Intune použijete, jako jsou **Uživatelé**, **Skupiny** a **Mobilní aplikace**, se zobrazí v podokně přes celou obrazovku. Při výběru úlohy se toto podokno otevře přes celou stránku. Jiná podokna se při otevření vysunou z pravé strany podokna a následně sbalí pod hlavní podokno, ze kterého pocházejí.
 
 ## <a name="next-steps"></a>Další kroky
 

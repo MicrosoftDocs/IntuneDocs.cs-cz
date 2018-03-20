@@ -1,12 +1,12 @@
 ---
-title: "Vytvoření a přiřazení zásad podmíněného přístupu pro místní Exchange"
-titlesuffix: Azure portal
+title: "Vytvoření zásad podmíněného přístupu pro Exchange"
+titlesuffix: Microsoft Intune
 description: "Konfigurace podmíněného přístupu pro místní Exchange a starší verze Exchange Online Dedicated v Intune"
 keywords: 
-author: andredm7
-ms.author: andredm
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 02/14/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +14,17 @@ ms.technology:
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 70c3de614b0f5ed5075b669ecdffc08e1226817d
-ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
+ms.openlocfilehash: 4cfe5916668de6d8bb3c42f2fd6afb6221bbc07e
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="how-to-create-and-assign-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated-in-microsoft-intune"></a>Vytvoření a přiřazení zásad podmíněného přístupu pro místní Exchange a starší verze Exchange Online Dedicated v Microsoft Intune
+# <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Vytvořte zásady podmíněného přístupu pro místní Exchange a starší verze Exchange Online Dedicated
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Toto téma vás provede procesem konfigurace podmíněného přístupu pro místní Exchange založeného na dodržování předpisů zařízeními.
+Tento článek popisuje, jak nakonfigurovat podmíněný přístup pro místní Exchange na základě dodržování předpisů zařízením.
 
 Pokud máte vyhrazené prostředí Exchange Online a potřebujete zjistit, jestli má novou, nebo starší verzi konfigurace, obraťte se na správce svého účtu. Pokud chcete řídit přístup k e-mailům v místním Exchangi nebo ve starším vyhrazeném prostředí Exchange Online, nakonfigurujte v Intune podmíněný přístup k místnímu Exchangi.
 
@@ -41,7 +41,7 @@ Než nakonfigurujete podmíněný přístup, ověřte, jestli jsou splněné tyt
 
 - Konektor může být nainstalovaný na každém počítači, který má schopnost komunikovat se serverem Exchange.
 
-- Tento konektor podporuje **prostředí Exchange CAS**. Z technického hlediska můžete konektor nainstalovat přímo na server Exchange CAS, ale nedoporučuje se to, protože to zvýší zátěž serveru. Při konfiguraci musíte konektor nastavit tak, aby komunikoval s jedním ze serverů Exchange CAS.
+- Tento konektor podporuje **prostředí Exchange CAS**. Z technického hlediska můžete konektor nainstalovat přímo na server Exchange CAS, ale nedoporučuje se to, protože se tím zvýší zátěž serveru. Při konfiguraci musíte konektor nastavit tak, aby komunikoval s jedním ze serverů Exchange CAS.
 
 - Protokol **Exchange ActiveSync** je potřeba nakonfigurovat s ověřováním na základě certifikátů nebo zadávání přihlašovacích údajů uživateli.
 
@@ -49,7 +49,7 @@ Než nakonfigurujete podmíněný přístup, ověřte, jestli jsou splněné tyt
     - Musí být **zaregistrovaný** ve službě Intune nebo se musí jednat o počítač připojený k doméně.
     - **Je zaregistrované v Azure Active Directory**. Kromě toho musí být ve službě Azure Active Directory zaregistrované ID protokolu Exchange ActiveSync klienta.
 <br></br>
-- Pro zákazníky Intune a Office 365 je služba AAD DRS aktivovaná automaticky. Zákazníci, kteří už mají nasazenou službu AD FS Device Registration Service, registrovaná zařízení ve svojí místní službě Active Directory neuvidí. **To neplatí pro počítače s Windows ani zařízení Windows Phone**.
+- Pro zákazníky Intune a Office 365 je služba AAD DRS aktivovaná automaticky. Zákazníci, kteří už mají nasazenou službu AD FS Device Registration Service, registrovaná zařízení ve svojí místní službě Active Directory nevidí. **To neplatí pro počítače s Windows ani zařízení Windows Phone**.
 
 - **Musí splňovat** zásady dodržování předpisů, které jsou nasazené na toto zařízení.
 
@@ -76,44 +76,43 @@ Nativní aplikace **Pošta** ve Windows 8.1 a novějších verzích (při regist
 
 1. Přejděte na portál [Azure Portal](https://portal.azure.com/) a přihlaste se pomocí svých přihlašovacích údajů k Intune.
 
-2. Po úspěšném přihlášení se zobrazí **řídicí panel Azure**.
+1. Po úspěšném přihlášení se zobrazí **řídicí panel Azure**.
 
-3. V nabídce vlevo zvolte **Další služby** a do filtru textového pole pak zadejte **Intune**.
+1. V nabídce vlevo zvolte **Všechny služby** a do filtru textového pole pak zadejte **Intune**.
 
-4. Zvolte **Intune** a zobrazí se **řídicí panel Intune**.
+1. Zvolte **Intune** a zobrazí se **řídicí panel Intune**.
 
-5. Zvolte **Místní přístup** a pak zvolte
+1. Vyberte **Místní přístup**. V podokně **Místní přístup** se zobrazí stav zásad podmíněného přístupu a zařízení, na která má vliv.
 
-6. V okně **Místní** se zobrazí stav zásad podmíněného přístupu a zařízení, na která má vliv.
+1. V části **Správa** zvolte **Přístup k místnímu Exchangi**.
 
-7. V části **Správa** zvolte **Přístup k místnímu Exchangi**.
-
-8. V okně **Přístup k místnímu Exchangi** zvolte **Ano** a povolte tak řízení přístupu k místnímu Exchangi.
+1. V podokně **Přístup k místnímu Exchangi** zvolte **Ano** a povolte tak řízení přístupu k místnímu Exchangi.
 
     > [!NOTE]
-    > Pokud jste nenakonfigurovali místní Exchange Connector s protokolem Exchange Active Sync, bude tato možnost zakázaná.  Před povolením podmíněného přístupu pro místní Exchange musíte nejdřív nainstalovat a nakonfigurovat tento konektor. Další podrobnosti najdete v tématu [Instalace místního Exchange Connectoru v Intune](exchange-connector-install.md).
+    > Pokud jste nenakonfigurovali místní Exchange Connector s protokolem Exchange Active Sync, je tato možnost zakázaná.  Před povolením podmíněného přístupu pro místní Exchange musíte nejdřív nainstalovat a nakonfigurovat tento konektor. Další podrobnosti najdete v tématu [Instalace místního Exchange Connectoru v Intune](exchange-connector-install.md).
 
-9. V části **Přiřazení** zvolte **Zahrnuté skupiny**.  Použijte skupinu zabezpečení uživatelů, která by měla mít přiřazený podmíněný přístup. Bude to vyžadovat, aby uživatelé zaregistrovali svoje zařízení v Intune a vyhověli podmínkám profilů pro dodržování předpisů.
+1. V části **Přiřazení** zvolte **Zahrnuté skupiny**.  Použijte skupinu zabezpečení uživatelů, která by měla mít přiřazený podmíněný přístup. Tato akce vyžaduje, aby uživatelé zaregistrovali svoje zařízení v Intune a vyhověli podmínkám profilů pro dodržování předpisů.
 
-10. Pokud chcete vyloučit určité skupiny uživatelů, můžete to udělat tak, že zvolíte **Vyloučené skupiny** a vyberte skupinu uživatelů, kterou chcete vyloučit z povinné registrace zařízení a dodržování předpisů.
+1. Pokud chcete vyloučit určité skupiny uživatelů, můžete to udělat tak, že zvolíte **Vyloučené skupiny** a vyberte skupinu uživatelů, kterou chcete vyloučit z povinné registrace zařízení a dodržování předpisů.
 
-11. Pokud chcete upravit výchozí e-mailovou zprávu, zvolte v části **Nastavení** možnost **Oznámení uživateli**. Tato zpráva se pošle uživatelům, pokud jejich zařízení nevyhovuje zásadám, a uživatelé chtějí získat přístup k místnímu Exchangi. Šablona zprávy používá jazyk využívající značky.  V průběhu psaní se zobrazí také náhled toho, jak bude zpráva vypadat.
+1. Pokud chcete upravit výchozí e-mailovou zprávu, zvolte v části **Nastavení** možnost **Oznámení uživateli**. Tato zpráva se pošle uživatelům, pokud jejich zařízení nevyhovuje zásadám, a uživatelé chtějí získat přístup k místnímu Exchangi. Šablona zprávy používá jazyk využívající značky.  V průběhu psaní se zobrazí také náhled toho, jak bude zpráva vypadat.
     > [!TIP]
     > Další informace o jazyku využívajícím značky najdete v [článku](https://en.wikipedia.org/wiki/Markup_language) na Wikipedii.
 
-12. V okně **Upřesnit nastavení přístupu k Exchange ActiveSyncu** nastavte globální výchozí pravidlo pro přístup ze zařízení, která se nespravují v Intune, a pro pravidla na úrovni platformy, jak popisují další dva kroky.
+1. V podokně **Upřesnit nastavení přístupu k Exchange ActiveSyncu** nastavte globální výchozí pravidlo pro přístup ze zařízení, která se nespravují v Intune, a pro pravidla na úrovni platformy, jak popisují další dva kroky.
 
-13. U zařízení, na která nemá vliv podmíněný přístup ani další pravidla, můžete zvolit povolení přístupu k Exchangi, nebo tento přístup můžete zablokovat.
-  - Pokud povolíte přístup, budou mít všechna zařízení okamžitě přístup k místnímu Exchangi.  U zařízení, která patří uživatelům v **zahrnutých skupinách**, se bude blokovat přístup v případě, že budou vyhodnocená jako zařízení, která nevyhovují zásadám nebo nejsou zaregistrovaná v Intune.
-  - Při nastavení blokování přístupu se bude hned na začátku blokovat přístup na Exchange u všech zařízení.  Zařízení, která patří uživatelům v **zahrnutých skupinách**, budou mít přístup po registraci v Intune a jejich stav se vyhodnotí jako vyhovující zásadám. Zařízení s Androidem, která nepoužívají Samsung Knox Standard, budou blokována vždy, protože nastavení nepodporují.
-<br></br>
-14. V části **Výjimky platformy zařízení** zvolte **Přidat** a určete platformy. Pokud je u nastavení **Nespravovaný přístup zařízení** nastavená možnost **Blokováno**, budou zařízení, která jsou zaregistrovaná a vyhovují podmínkám zásad, povolená i tehdy, když bude existovat výjimka pro blokování platformy. Kliknutím na **OK** uložte nastavení.
+1. U zařízení, na která nemá vliv podmíněný přístup ani další pravidla, můžete zvolit povolení přístupu k Exchangi, nebo tento přístup můžete zablokovat.
 
-15. V okně **Místní** uložte kliknutím na tlačítko **Uložit** zásady podmíněného přístupu.
+   - Pokud povolíte přístup, všechna zařízení mají okamžitě přístup k místnímu Exchangi.  U zařízení, která patří uživatelům v **zahrnutých skupinách**, se bude blokovat přístup v případě, že budou vyhodnocená jako zařízení, která nevyhovují zásadám nebo nejsou zaregistrovaná v Intune.
+   - Při nastavení blokování přístupu se hned na začátku blokuje přístup na Exchange u všech zařízení.  Zařízení, která patří uživatelům v **zahrnutých skupinách**, získají přístup po registraci v Intune a jejich stav se vyhodnotí jako vyhovující zásadám. Zařízení s Androidem, která nepoužívají Samsung Knox Standard, jsou blokována vždy, protože nastavení nepodporují.
+
+1. V části **Výjimky platformy zařízení** zvolte **Přidat** a určete platformy. Pokud je u nastavení **Nespravovaný přístup zařízení** nastavená možnost **Blokováno**, jsou zařízení, která jsou zaregistrovaná a vyhovují podmínkám zásad, povolená i tehdy, když existuje výjimka pro blokování platformy. Kliknutím na **OK** uložte nastavení.
+
+1. V podokně **Místní** kliknutím na tlačítko **Uložit** uložte zásady podmíněného přístupu.
 
 ## <a name="create-azure-ad-conditional-access-policies-in-intune"></a>Vytvoření zásad podmíněného přístupu Azure AD v Intune
 
-Počínaje verzí 1704 můžou správci vytvořit zásady podmíněného přístupu Azure AD z portálu Intune Azure Portal. Má to tu výhodu, že se nemusí přepínat mezi úlohami Azure a Intune.
+Počínaje verzí 1704 můžou správci vytvořit zásady podmíněného přístupu Azure AD z portálu Intune Azure Portal, abyste nemuseli přepínat mezi úlohami Azure a Intune.
 
 > [!IMPORTANT]
 > Abyste mohli vytvořit zásady podmíněného přístupu Azure AD na portálu Intune Azure Portal, musíte mít licenci Azure AD Premium.
@@ -122,7 +121,7 @@ Počínaje verzí 1704 můžou správci vytvořit zásady podmíněného příst
 
 1. Na **řídicím panelu Intune** zvolte **Podmíněný přístup**.
 
-2. V okně **Zásady** vytvořte novou zásadu podmíněného přístupu Azure AD výběrem možnosti **Nová zásada**.
+2. V podokně **Zásady** vytvořte novou zásadu podmíněného přístupu Azure AD výběrem možnosti **Nová zásada**.
 
 ## <a name="see-also"></a>Viz taky
 

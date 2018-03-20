@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/30/2018
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 396c8881ba0dfae5cfad4eab9bf787b6a9f33d44
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: a6466d62cf8af4e6b8a14980db5e9a244deb45c4
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
@@ -53,8 +53,8 @@ Pro omezení registrace typu i limitu počtu zařízení se automaticky poskytno
 
 ## <a name="create-a-restriction"></a>Vytvoření omezení
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. Zvolte **Registrace zařízení** > **Omezení registrace**.
 4. Zvolte **Vytvořit omezení**.
 5. Pojmenujte omezení a zadejte jeho popis.
@@ -70,8 +70,8 @@ Pro omezení registrace typu i limitu počtu zařízení se automaticky poskytno
 
 Nastavení omezení typu zařízení můžete změnit podle následujícího postupu:
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. Zvolte **Registrace zařízení** > **Omezení registrace**.
 4. V části **Omezení typů zařízení** zvolte omezení, které chcete nastavit.
 5. V části názvu omezení (u výchozího omezení se jedná o **Všichni uživatelé**) vyberte **Platformy**. U každé uvedené platformy zvolte **Povolit** nebo **Blokovat**.
@@ -81,10 +81,10 @@ Nastavení omezení typu zařízení můžete změnit podle následujícího pos
   - Systém iOS podporuje major.minor.rev.
   - Systém Windows podporuje jenom major.minor.rev.build pro Windows 10.
   Verze operačního systému se nevztahují na zařízení Apple registrovaná v Programu registrace zařízení, pomocí Apple School Manageru ani v aplikaci Apple Configurator.
-8. U každé uvedené platformy zadejte, zda chcete **Povolit** nebo **Blokovat**  zařízení **v osobním vlastnictví**.
+6. U každé uvedené platformy zadejte, zda chcete **Povolit** nebo **Blokovat**  zařízení **v osobním vlastnictví**.
 
     ![Snímek obrazovky pracovního prostoru omezení zařízení s výchozí platformou zařízení nakonfigurovanou pro zařízení v osobním vlastnictví](media/device-restrictions-platform-configurations.png)
-9. Klikněte na **Uložit**.
+7. Klikněte na **Uložit**.
 
 >[!NOTE]
 >- Když zablokujete registraci zařízení s Androidem v osobním vlastnictví, stále půjde zaregistrovat zařízení v osobním vlastnictví, která používají verzi Android for Work.
@@ -95,13 +95,13 @@ Nastavení omezení typu zařízení můžete změnit podle následujícího pos
 
 Nastavení omezení počtu zařízení můžete změnit podle následujícího postupu:
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. Zvolte **Registrace zařízení** > **Omezení registrace**.
 4. V části **Omezení počtu zařízení** zvolte omezení, které chcete nastavit.
 5. Zvolte **Limit počtu zařízení** a potom v rozevíracím seznam vyberte maximální počet zařízení, která uživatel může zaregistrovat.
     ![Snímek obrazovky okna s omezeními limitu zařízení](./media/device-restrictions-limit.png)
-6. Klikněte na **Uložit**.
+4. Klikněte na **Uložit**.
 
 Při dosažení limitu počtu zaregistrovaných zařízení se koncovému uživateli zobrazí oznámení. Například v iOSu by vypadalo takto:
 
@@ -119,8 +119,8 @@ Prioritu kteréhokoli nevýchozího omezení můžete změnit.
 
 **Změna priority omezení**
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. Zvolte **Registrace zařízení** > **Omezení registrace**.
 4. Najeďte kurzorem myši na omezení v seznamu priorit.
-5. Pomocí tří svislých teček přetáhněte prioritu na požadované místo v seznamu.
+5. Pomocí tří svislých teček nalevo přetáhněte prioritu na požadované místo v seznamu.

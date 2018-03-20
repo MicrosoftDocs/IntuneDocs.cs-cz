@@ -1,29 +1,29 @@
 ---
-title: "Nastavení omezení pro zařízení s macOS v Intune"
-titlesuffix: Azure portal
+title: "Nastavení omezení pro zařízení s macOS v Microsoft Intune"
+titlesuffix: 
 description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s macOS."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 1/31/2018
+ms.date: 3/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a88cf11209726a622863339c3a6c117f7b83be1e
-ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
+ms.openlocfilehash: 72c9036bd6062e719d55876d77f44123fe2af392
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="macos-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení s macOS v Microsoft Intune
+# <a name="microsoft-intune-macos-device-restriction-settings"></a>Nastavení omezení pro zařízení s macOS v Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Pomocí těchto nastavení můžete spravovat zařízení s macOS.
+Tento článek ukazuje nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s macOS.
 
 ## <a name="password"></a>Heslo
 -   **Heslo** – Vyžaduje, aby koncový uživatel zadal heslo pro přístup k zařízení.
@@ -49,5 +49,5 @@ Jestli chcete nakonfigurovat seznam, klikněte na **Přidat**, zadejte nějaký 
 
 ### <a name="unmarked-email-domains"></a>Zrušení označení e-mailových domén
 
-V poli **Adresa URL e-mailové domény** přidejte do seznamu minimálně jednu adresu URL. Když koncoví uživatelé dostanou e-mail z jiné domény než z té, kterou jste nakonfigurovali, označí se v aplikaci iOS Mail daný e-mail jako nedůvěryhodný.
+V poli **Adresa URL e-mailové domény** přidejte do seznamu minimálně jednu adresu URL. Když uživatelé dostanou e-mail z jiné domény než z té, kterou jste nakonfigurovali, označí se v aplikaci iOS Mail daný e-mail jako nedůvěryhodný.
 

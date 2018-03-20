@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: dougeby
-ms.date: 01/17/2018
+ms.date: 02/27/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2e89ba73869d7453b74edb1e7f87f6c8edb210bf
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: c19a3b8a6df82780d54f277d5477b947f050b1cc
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="role-based-administration-control-rbac-with-intune"></a>Řízení správy na základě rolí (RBAC) s Intune
 
@@ -76,16 +76,19 @@ Následující role jsou integrované do Intune a můžete je přiřadit ke skup
 
 ### <a name="to-assign-a-built-in-role"></a>Přiřazení předdefinované role
 
-1. V části **Role Intune** zvolte předdefinovanou roli, kterou chcete přiřadit.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V podokně **Intune** vyberte **Role Intune** a pak **Všechny role**.
+1. V podokně **Role Intune – Všechny role** zvolte předdefinovanou roli, kterou chcete přiřadit.
 
-2. V okně <*název role*> – **Vlastnosti** zvolte **Spravovat**, **Přiřazení**.
+2. V podokně <*název role*> – **Přehled** zvolte **Spravovat** a pak **Přiřazení**.
 
     > [!NOTE]
     > Předdefinované role není možné odstranit ani upravit.
 
-3. V okně vlastní role zvolte **Přiřadit**.
+3. V podokně vlastní role zvolte **Přiřadit**.
 
-4. V okně **Přiřazení rolí** zadejte **Název** a volitelný **Popis** přiřazení a zvolte následující:
+4. V podokně **Přiřazení rolí** zadejte **Název** a volitelný **Popis** přiřazení a pak zvolte následující:
     - **Členové** – Vyberte skupinu, která obsahuje uživatele, kterému chcete udělit oprávnění.
     - **Obor** – Vyberte skupinu, která obsahuje uživatele, které člen výše bude moct spravovat.
 <br></br>
@@ -108,29 +111,29 @@ Můžete vytvořit vlastní roli, která zahrnuje všechna oprávnění nutná p
 
 1. Přihlaste se na [Azure Portal](https://portal.azure.com) pomocí svých přihlašovacích údajů k Intune.
 
-2. V nabídce vlevo zvolte **Další služby** a do filtru textového pole pak zadejte **Intune**.
+2. V nabídce vlevo zvolte **Všechny služby** a do filtru textového pole pak zadejte **Intune**.
 
 3. Zvolte **Intune**. Na řídicím panelu Intune, který se otevře, zvolte **Role Intune**.
 
-4. V okně **Role Intune** zvolte **Role Intune** a potom **Přidat vlastní**.
+4. V podokně **Role Intune** zvolte **Všechny role** a pak **Přidat vlastní**.
 
-5. V okně **Přidat vlastní roli** zadejte název a popis nové role a klikněte na **Oprávnění**.
+5. V podokně **Přidat vlastní roli** zadejte název a popis nové role a klikněte na **Oprávnění**.
 
-3. V okně **Oprávnění** zvolte oprávnění, která chcete v této roli použít. Rozhodnout se, která oprávnění chcete použít, vám pomůže [tabulka Řízení správy na základě rolí s Intune](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
+3. V podokně **Oprávnění** zvolte oprávnění, která chcete v této roli použít. Rozhodnout se, která oprávnění chcete použít, vám pomůže [tabulka Řízení správy na základě rolí s Intune](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
 
 4. Když jste hotovi, klikněte na **OK**.
 
-5. V okně **Přidat vlastní roli** klikněte na **Vytvořit**. Nová role se zobrazí v seznamu v okně **Role Intune**.
+5. V podokně **Přidat vlastní roli** klikněte na **Vytvořit**. Nová role se zobrazí v seznamu v podokně **Role Intune – Všechny role**.
 
 ### <a name="to-assign-a-custom-role"></a>Přiřazení vlastní role
 
-1. V části **Role Intune** zvolte vlastní roli, kterou chcete přiřadit.
+1. V podokně **Role Intune – Všechny role** zvolte vlastní roli, kterou chcete přiřadit.
 
-2. V okně <*název role*> – **Vlastnosti** zvolte **Spravovat**, **Přiřazení**. V tomto okně můžete navíc upravovat nebo odstraňovat existující role.
+2. V podokně <*název role*> – **Přehled** zvolte **Spravovat** a pak **Přiřazení**. V tomto podokně můžete také existující role upravovat nebo odstraňovat.
 
-3. V okně vlastní role zvolte **Přiřadit**.
+3. V podokně vlastní role zvolte **Přiřadit**.
 
-4. V okně **Přiřazení rolí** zadejte **Název** a volitelný **Popis** přiřazení a zvolte následující:
+4. V podokně **Přiřazení rolí** zadejte **Název** a volitelný **Popis** přiřazení a pak zvolte následující:
     - **Členové** – Vyberte skupinu, která obsahuje uživatele, kterému chcete udělit oprávnění.
     - **Obor** – Vyberte skupinu, která obsahuje uživatele, které člen výše bude moct spravovat.
 <br></br>

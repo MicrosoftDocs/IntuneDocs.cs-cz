@@ -1,25 +1,25 @@
 ---
-title: "Nastavení Intune pro omezení zařízení s Windows Holographic for Business"
-titlesuffix: Azure portal
+title: "Nastavení Microsoft Intune pro omezení zařízení s Windows Holographic for Business"
+titleSuffix: 
 description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s Windows Holographic for Business."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: angrobe
-ms.date: 2/13/2018
+ms.date: 3/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0ecf5e17bb66ac6515a3e67f4b0a1bc82ec9c3ba
-ms.sourcegitcommit: 754fcc31155b28d6910bba45419c6be745f8793e
+ms.openlocfilehash: 9acce571330a754de85b65caf8ec71912fd36a69
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/17/2018
 ---
-# <a name="windows-holographic-for-business-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení s Windows Holographic for Business v Microsoft Intune
+# <a name="microsoft-intune-windows-holographic-for-business-device-restriction-settings"></a>Nastavení omezení pro zařízení s Windows Holographic for Business v Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 

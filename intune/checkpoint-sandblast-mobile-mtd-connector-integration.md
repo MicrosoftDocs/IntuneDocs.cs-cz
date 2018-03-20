@@ -1,7 +1,7 @@
 ---
-title: "Nastavení integrace Check Point SandBlast a Intune"
-titlesuffix: Azure portal
-description: "Nastavení integrace Check Point SandBlast a Intune"
+title: Check Point SandBlast MTD s Microsoft Intune
+titlesuffix: 
+description: "Jak nastavit Check Point SandBlast Mobile Threat Defense (MTD) s Intune za účelem regulace přístupu mobilních zařízení k firemním prostředkům."
 keywords: 
 author: msmimart
 ms.author: mimart
@@ -15,11 +15,11 @@ ms.assetid: 1e9b1576-b239-48cc-a672-da6b5fb7be0a
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0b1ea4804005abb1e2fcbc5dc3b5ef1382edd4db
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: b864d78fd7bfd7fb4e177b568b3587bc1e28b209
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="integrate-check-point-sandblast-mobile-with-intune"></a>Integrace Check Point SandBlast Mobile a Intune
 
@@ -68,7 +68,7 @@ Proces autorizace aplikace Check Point SandBlast:
 
 5.  Po nastavení Microsoft Intune jako služby MDM Service se zobrazí okno pro **konfiguraci Microsoft Intune**. U každé platformy zařízení: iOS, Android a Windows zvolte **Add to my organization** (Přidat do mojí organizace), aby bylo možné autorizovat komunikaci Check Point SandBlast Mobile s Intune a Azure AD.
 
-    ![Konfigurace Check Point MTD v Intune](./media/checkpoint-MTD-1.PNG)
+    ![Obrázek znázorňující konfiguraci Check Point MTD v Intune](./media/checkpoint-MTD-1.PNG)
 
     > [!IMPORTANT]
     > Aby bylo možné pokračovat k dalšímu kroku, je nutné přidat platformy všech zařízení.

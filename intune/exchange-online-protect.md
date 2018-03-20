@@ -1,9 +1,10 @@
 ---
-title: "Ochrana Office 365 Exchange Online bez nutnosti správy zařízení"
-description: "Zaměstnancům můžete umožnit přístup k pracovnímu e-mailu. Nemusíte přitom zavádět správu zařízení."
+title: "Exchange bez správy zařízení"
+titleSuffix: Microsoft Intune
+description: "Použijte Microsoft Intune, abyste zaměstnancům poskytli přístup k e-mailu Office 365 Exchange Online bez zavedení systému pro správu zařízení."
 keywords: "Přístup k e-mailu Office 365 Exchange"
-author: arob98
-ms.author: angrobe
+author: msmimart
+ms.author: mimart
 manager: dougeby
 ms.date: 10/31/2017
 ms.prod: 
@@ -13,15 +14,15 @@ ms.assetid: 88a0d3b9-2622-403b-8374-1396afd8066e
 ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 53872921bc4c7a52224741ab3b743a1d9ac52f42
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: e677a8418aba9aca4db753695444140ea9f6f941
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="protect-office-365-exchange-online-without-requiring-device-management"></a>Ochrana Office 365 Exchange Online bez nutnosti správy zařízení
 
-Pokud chcete zaměstnancům umožnit přístup k pracovnímu e-mailu a nezabývat se přitom zavedením systému pro správu zařízení, můžete. Přístup k Office 365 Exchange Online je možné poskytnout prostřednictvím Intune. Před provedením potřebných kroků ověřte, že máte licence na Microsoft 365 nebo Azure Active Directory (Premium) a Intune. Zaměstnanci musí mít [podporovaná zařízení s iOS nebo Androidem](supported-devices-browsers.md). 
+Pokud chcete zaměstnancům umožnit přístup k pracovnímu e-mailu a nezabývat se přitom zavedením systému pro správu zařízení, můžete. Přístup k Office 365 Exchange Online je možné poskytnout prostřednictvím Intune. Před provedením potřebných kroků ověřte, že máte licence na Microsoft 365 nebo Azure Active Directory (Premium) a Intune. Zaměstnanci musí mít [podporovaná zařízení s iOSem nebo Androidem](supported-devices-browsers.md). 
 
 Pokud se rozhodnete zavést systém pro správu zřízení, můžete. Tento typ ochrany aplikací funguje nezávisle na správě zařízení. 
 

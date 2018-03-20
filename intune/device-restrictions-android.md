@@ -6,19 +6,19 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 3/1/2018
+ms.date: 03/05/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.reviewer: ayesham
+ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d939d86f6ccd7f9851cfc52f1080fddaeee6a947
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: f938967951045d24ae65315b3b4d40749c1bc20f
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="microsoft-intune-android-and-samsung-knox-standard-device-restriction-settings"></a>Nastavení omezení zařízení používajících Android a Samsung Knox Standard pro Microsoft Intune 
 
@@ -144,7 +144,7 @@ Pro každé nastavení nakonfigurujte pomocí jedné z následujících možnost
 
 Nastavení platí jen pro zařízení se zabezpečením Samsung Knox Standard a jen pro aplikace, které spravujete přes Intune.
 
-- **Vyberte spravovanou aplikaci** – Pokud chcete přidat spravované aplikace, které poběží, když je zařízení v režimu Kiosk, zvolte jednu z následujících možností. Žádné jiné aplikace se na zařízení nebudou moct spustit.
+- **Vyberte spravovanou aplikaci** – Pokud chcete přidat spravované aplikace, které poběží, když je zařízení v režimu Kiosk, zvolte jednu z následujících možností. Žádné jiné aplikace se na zařízení nebudou moct spustit. Předinstalované prohlížeče není možné definovat jako aplikace, které se mohou spouštět, když je zařízení v celoobrazovkovém režimu. Pokud se vyžaduje prohlížeč, zvažte použití řešení [Managed Browser](app-configuration-managed-browser.md).
     - **Přidat aplikace pomocí názvu balíčku**
     - **Přidat aplikace pomocí adresy URL**
     - **Přidat spravované aplikace**

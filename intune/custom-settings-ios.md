@@ -1,27 +1,25 @@
 ---
-title: "Vlastní nastavení Intune pro zařízení s iOSem"
+title: "Vlastní nastavení Microsoft Intune pro zařízení s iOSem"
 titleSuffix: Azure portal
-description: "Zjistěte, jaká nastavení je možné použít ve vlastním profilu iOS."
+description: "Zjistěte, jaká nastavení je možné použít ve vlastním profilu iOSu."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 05/04/2017
+ms.date: 3/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 6da8caa8-65c2-4f47-842f-9570dcb1ac22
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 761b19de8442e88717a5dcd52f7f0375bace91da
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 40e34a2e22c9349cad63d813b892863e0e8a2933
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="microsoft-intune-custom-settings-for-ios-devices"></a>Vlastní nastavení Microsoft Intune pro zařízení s iOSem
+# <a name="microsoft-intune-custom-device-settings-for-devices-running-ios"></a>Vlastní nastavení Microsoft Intune pro zařízení s iOSem
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -31,10 +29,10 @@ Tato funkce umožňuje přiřadit nastavení iOS, která nejdou konfigurovat pom
 
 
 1. Začněte podle pokynů v tématu [Jak nakonfigurovat vlastní nastavení zařízení v Microsoft Intune](custom-settings-configure.md).
-2. V okně **Vytvořit profil** zadejte následující informace:
+2. V podokně **Vlastní konfigurační profil** nakonfigurujte všechna tato nastavení:
 
-- **Název vlastního konfiguračního profilu** – zadejte název zásady v podobě, v jaké se bude zobrazovat na zařízení a ve stavu Intune.
+- **Název vlastního konfiguračního profilu** – zadejte název zásady tak, jak se zobrazí na zařízení a ve stavu Intune.
 - **Soubor konfiguračního profilu** – přejděte na konfigurační profil, který jste vytvořili pomocí Apple Configuratoru.
 Nastavení, která exportujete z nástroje Apple Configurator, musí být kompatibilní s verzí iOS na zařízeních, kterým přiřazujete vlastní zásady pro iOS. Informace o tom, jak se řeší nekompatibilní nastavení, najdete v **referenčních materiálech ke konfiguračnímu profil** a **referenčních materiálech k protokolu správy mobilního zařízení** na [webu pro vývojáře Apple](https://developer.apple.com/).
 
-Importovaný soubor se zobrazí v oblasti okna **Obsah souboru**.
+Importovaný soubor se zobrazí v oblasti podokna **Obsah souboru**.

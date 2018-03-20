@@ -1,10 +1,10 @@
 ---
-title: "Dodržování zásad u zařízení spravovaných v aplikaci Jamf"
-titlesuffix: Azure portal
-description: "Zajistěte dodržování předpisů k lepšímu zabezpečení zařízení spravovaných aplikací Jamf."
+title: "Zásady dodržování předpisů pro zařízení Jamf"
+titlesuffix: Microsoft Intune
+description: "Použijte zásady dodržování předpisů Microsoft Intune s podmíněným přístupem Azure Active Directory k lepšímu zabezpečení zařízení spravovaných pomocí Jamf."
 keywords: 
-author: barlanmsft
-ms.author: barlan
+author: msmimart
+ms.author: mimart
 manager: dougeby
 ms.date: 02/16/2018
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 747e54a1c62618f267c3ed07ec3f8858cf97b184
-ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
+ms.openlocfilehash: 5320f160efde054586b1e37722a67db375511049
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Vynucení dodržování předpisů v počítačích Mac spravovaných aplikací Jamf Pro
 

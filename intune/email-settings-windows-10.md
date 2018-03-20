@@ -1,30 +1,29 @@
 ---
-title: "Nastavení e-mailu pro zařízení s Windows 10 v Intune"
-titleSuffix: Azure portal
-description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete nakonfigurovat připojení e-mailu na zařízeních s Windows 10."
+title: "Nastavení e-mailu Microsoft Intune pro zařízení s Windows 10"
+titleSuffix: 
+description: "Přečtěte si o nastaveních Microsoft Intune, která můžete použít ke konfiguraci nastavení e-mailu na zařízeních s Windows 10."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 02/15/2017
+ms.date: 3/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 2ffafbd0-4b5d-4c86-a46b-611f9b7a58e5
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c3ea7974600daccb8308cd558ccb365c2f5e8bff
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: b02579895123995f9b4205d64e9bf67ce04de746
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="email-profile-settings-for-windows-10-devices-in-microsoft-intune"></a>Nastavení e-mailového profilu pro zařízení s Windows 10 v Microsoft Intune
+# <a name="email-profile-settings-in-microsoft-intune-for-devices-running-windows-10"></a>Nastavení e-mailového profilu v Microsoft Intune pro zařízení s Windows 10
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
+Tento článek ukazuje nastavení e-mailového profilu, která můžete konfigurovat pro zařízení s Windows 10.
 
 
 - **E-mailový server** – Název hostitele vašeho Exchange serveru.
@@ -42,7 +41,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="synchronization-settings"></a>Nastavení synchronizace
 
 - **Počet e-mailů k synchronizaci** – Zvolte počet dní, za které se mají e-maily synchronizovat, nebo vyberte **Bez omezení**, pokud chcete synchronizovat všechny dostupné e-maily.
-- **Plán synchronizace** – Vyberte plán, podle kterého budou zařízení synchronizovat data z Exchange serveru. Můžete také vybrat **Při doručování zpráv**, aby se data synchronizovala hned po doručení, nebo **Ruční**, aby musel synchronizaci zahájit uživatel zařízení.
+- **Plán synchronizace** – Vyberte plán, podle kterého zařízení synchronizují data z Exchange Serveru. Můžete také vybrat **Při doručování zpráv**, aby se data synchronizovala hned po doručení, nebo **Ruční**, aby musel synchronizaci zahájit uživatel zařízení.
 
 ## <a name="content-sync-settings"></a>Nastavení synchronizace obsahu
 

@@ -1,12 +1,12 @@
 ---
-title: "Nastavení ochrany koncového bodu Intune pro Windows 10"
-titlesuffix: Azure portal
+title: "Nastavení ochrany koncového bodu Microsoft Intune pro Windows 10"
+titlesuffix: 
 description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení ochrany koncového bodu, jako je BitLocker, na zařízeních s Windows 10."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 01/16/2018
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,34 +15,34 @@ ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 35c33fb189187a678efa04d10706fe752d683e17
-ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
+ms.openlocfilehash: 02a32f678b40b2b40535984e17b41e0a864d8fdf
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="endpoint-protection-settings-for-windows-10-and-later-in-microsoft-intune"></a>Nastavení ochrany koncového bodu pro Windows 10 a novější ve službě Microsoft Intune
+# <a name="create-endpoint-protection-settings-for-windows-10-and-later-in-microsoft-intune"></a>Vytvořte nastavení ochrany koncového bodu pro Windows 10 a novější ve službě Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Profil ochrany koncového bodu vám umožňuje ovládat funkce zabezpečení na zařízeních s Windows 10, jako je například BitLocker nebo Windows Defender.
+Profil ochrany koncového bodu vám umožňuje ovládat funkce zabezpečení na zařízeních s Windows 10, jako je BitLocker nebo Windows Defender.
 
-V tomto tématu se dozvíte, jak vytvářet profily ochrany koncového bodu.
+V tomto článku se dozvíte, jak vytvářet profily ochrany koncového bodu.
 
 > [!Note]
 > Tato nastavení nejsou podporována v edicích Windows 10 Home a Professional.
 
 ## <a name="create-an-endpoint-protection-profile"></a>Vytvoření profilu ochrany koncového bodu
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V okně **Intune** zvolte **Konfigurace zařízení**.
-2. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
+2. V okně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
 3. V okně profilů zvolte **Vytvořit profil**.
 4. V okně **Vytvořit profil** zadejte **Název** a **Popis** profilu pro funkce zařízení.
 5. V rozevíracím seznamu **Platforma** vyberte **Windows 10 a novější**.
 6. V rozevíracím seznamu **Typ profilu** zvolte **Ochrana koncového bodu**.
-7. Nakonfigurujte požadované nastavení. V podrobných informacích v tomto tématu se dozvíte, jaká je funkce každého nastavení. Po dokončení zvolte **OK**.
+7. Nakonfigurujte požadované nastavení. V podrobných informacích v tomto článku se dozvíte, jaká je funkce každého nastavení. Po dokončení zvolte **OK**.
 8. Vraťte se zpět do okna **Vytvořit profil** a zvolte **Vytvořit**.
 
 Profil se vytvoří a zobrazí se v okně se seznamem profilů.
@@ -57,6 +57,7 @@ Ochrana Application Guard je dostupná jenom pro zařízení s Windows 10 (64bit
 - **Tisk z virtuálního prohlížeče** – Povolí tisknout obsah z virtuálního prohlížeče do souborů PDF, XPS a na místní nebo síťové tiskárny.
 - **Shromažďovat protokoly** – Shromáždí protokoly pro události, ke kterým dojde v relaci procházení ochrany Application Guard.
 - **Zachovat uživatelem vygenerovaná data prohlížeče** – Povolí ukládání dat uživatelů (třeba hesla, oblíbené položky a soubory cookie), která se vytvoří během virtuální relace procházení ochrany Application Guard.
+- **Akcelerace grafiky** – Umožňuje rychleji načítat weby náročné na grafiku, když se pracuje v relaci virtuálního procházení ochrany Application Guard, díky umožnění přístupu k virtuálnímu grafickému procesoru.
 
 
 ## <a name="windows-defender-firewall"></a>Firewall v programu Windows Defender
@@ -100,7 +101,7 @@ Tato nastavení platí pro určité typy sítě, například pro typy **Doménov
 
 ## <a name="windows-encryption"></a>Šifrování Windows
 
-### <a name="windows-settings"></a>Nastavení Windows
+### <a name="windows-settings"></a>Nastavení systému Windows
 
 Tato nastavení platí pro všechny verze Windows 10.
 

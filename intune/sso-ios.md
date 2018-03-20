@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b11f2b3a560d33503e381f96804bfe5489fe367d
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 3bb7c3bdffb19e26f2f2178c1750d1ef31a02556
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="configure-microsoft-intune-for-ios-device-single-sign-on"></a>Nakonfigurování Microsoft Intune na jednotné přihlašování pro zařízení s iOSem
 
@@ -34,18 +34,19 @@ Pokud chcete využívat jednotné přihlašování na zařízení s iOSem, musí
 
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. Na stránce **Intune** zvolte **Konfigurace zařízení**.
-2. Na stránce **Konfigurace zařízení** zvolte **Profily**.
-3. Na stránce Profily zvolte **Vytvořit profil**, zadejte název a popis a nakonfigurujte následující nastavení:
-   - **Platforma**: Zvolte **iOS**. 
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V podokně **Intune** zvolte **Konfigurace zařízení**.
+4. V podokně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
+5. V podokně profilů zvolte **Vytvořit profil**.
+6. Zadejte název a popis a nakonfigurujte následující nastavení:
+   - **Platforma**: Zvolte **iOS**.
    - **Typ profilu**: Zvolte **Funkce zařízení**.
-4. Na stránce **Funkce zařízení** zvolte **Jednotné přihlašování**.
+7. V podokně **Funkce zařízení** zvolte **Jednotné přihlašování**.
 
-   ![Stránka Jednotné přihlašování](./media/sso-blade.png)
+   ![Podokno Jednotné přihlašování](./media/sso-blade.png)
 
-2. Vyplňování polí na stránce **Jednotné přihlašování** vám usnadní následující souhrnná tabulka. Podrobnosti najdete v oddílech za tabulkou.
-   
+8. Vyplňování polí v podokně **Jednotné přihlašování** vám usnadní následující souhrnná tabulka. Podrobnosti najdete v oddílech za tabulkou.
+
    |Pole  |Poznámky|
    |---------|---------|
    |**Atribut uživatelského jména z AAD**|Atribut, který Intune načte pro každého uživatele z AAD a kterým vyplní příslušné pole (například hlavní název uživatele (UPN)) před vygenerováním datové části XML, která se instaluje na zařízení|
@@ -95,7 +96,7 @@ Pole **Název aplikace** se používá k přidání popisného názvu, který v�
 
 ### <a name="credential-renewal-certificate"></a>Certifikát pro prodloužení platnosti přihlašovacích údajů
 
-Pokud používáte k ověření koncových uživatelů certifikáty (a ne hesla), použijte toto pole k výběru certifikátu SCEP nebo PFX, který se má danému uživateli nasadit jako ověřovací certifikát. Obvykle je to stejný certifikát, který se danému uživateli nasazuje pro jiné profily, jako jsou například VPN, Wi-Fi nebo E-mail.
+Pokud používáte k ověření koncových uživatelů certifikáty (a ne hesla), použijte toto pole k výběru certifikátu SCEP nebo PFX, který se má danému uživateli nasadit jako ověřovací certifikát. Obvykle je to stejný certifikát, který se danému uživateli nasazuje pro jiné profily, jako jsou například VPN, Wi-Fi nebo e-mail.
 
 ## <a name="next-steps"></a>Další kroky
 

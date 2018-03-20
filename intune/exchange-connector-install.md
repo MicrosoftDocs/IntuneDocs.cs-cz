@@ -1,12 +1,12 @@
 ---
-title: "Nastavení Exchange Connectoru pro místní EAS přes Intune"
-titleSuffix: Azure portal
-description: "Pomocí nástroje Connector umožníte komunikaci mezi Intune a místním Exchange Serverem."
+title: "Nastavení místního Exchange Connectoru pro Microsoft Intune"
+titleSuffix: 
+description: "Pomocí místního konektor Exchange můžete spravovat přístup zařízení k poštovním schránkám Exchange na základě registrace do Intune a Exchange Active Sync (EAS)."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cb82b1a9af0cc8dd2f394747ce7ed8b695260bb9
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 0caea2e8b7704fe2dfcbec937b59000ac2a12ae5
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Nastavení místního Exchange Connectoru pro Intune v Microsoft Intune Azure
 
@@ -30,7 +30,7 @@ Místní prostředí Exchange Serveru můžou pomocí místního Exchange Connec
 
 Pokud chcete nastavit připojení, které umožňuje komunikaci Microsoft Intune s místním Exchange Serverem, postupujte takto:
 
-1.  Stáhněte si místní Exchange Connector pro Intune z portálu Azure Portal.
+1.  Stáhněte si místní Exchange Connector pro Intune z Azure Portalu.
 2.  Nainstalujte a nakonfigurujte místní Exchange Connector pro Intune.
 3.  Ověřte připojení k Exchangi.
 
@@ -70,11 +70,11 @@ Musíte vytvořit uživatelský účet služby Active Directory, který bude kon
 
 1. V podporovaném operačním systému Windows Server pro místní Exchange Connector otevřete [portál Azure Portal](http://portal.azure.com) a přihlaste se uživatelským účtem, který je správcem místního Exchange Serveru a který má licenci k používání Exchange Serveru.
 
-2. V nabídce vlevo zvolte **Další služby** a do filtru textového pole pak zadejte **Intune**.
+2. V nabídce vlevo zvolte **Všechny služby** a do filtru textového pole pak zadejte **Intune**.
 
 3. Zvolte **Intune**. Na řídicím panelu Intune, který se otevře, zvolte **Místní přístup**.
 
-4. V okně **Místní přístup – Exchange ActiveSync Connector** v části **nastavení** zvolte **Stáhnout software On-Premises Connector**.
+4. Vyberte **Konektor Exchange ActiveSync** a pak vyberte **Stáhnout software On-Premises Connector**.
 
 5.  Místní Exchange Connector je v komprimované složce (.zip), která se dá otevřít nebo uložit. V dialogovém okně **Stažení souboru** vyberte na **Uložit** a uložte komprimovanou složku do zabezpečeného umístění.
 
@@ -93,7 +93,7 @@ Při instalaci místního Intune Exchange Connectoru použijte tento postup. Mí
 
 3.  V dialogovém okně **Microsoft Intune Exchange Connector** vyberte **On-premises Microsoft Exchange Server** nebo **Hostovaný Microsoft Exchange Server**.
 
-  ![Vyberte typ systému Exchange Server](./media/intune-sa-exchange-connector-config.png)
+  ![Obrázek znázorňující, kde vybrat typ Exchange Serveru](./media/intune-sa-exchange-connector-config.png)
 
   V případě místního Exchange zadejte název serveru nebo plně kvalifikovaný název domény Exchange serveru, který je hostitelem role **Server pro klientský přístup**.
 
@@ -116,7 +116,7 @@ Při instalaci místního Intune Exchange Connectoru použijte tento postup. Mí
 
     5. Do polí **Uživatel (doména\uživatel)** a **Heslo** zadejte přihlašovací údaje potřebné k připojení k Exchange serveru.
 
-    6.  Zadejte přihlašovací údaje správce potřebné pro odesílání oznámení do poštovní schránky Exchange Serveru uživatele. Tato oznámení můžete nakonfigurovat díky zásadám podmíněného přístupu v Intune.
+    6.  Zadejte přihlašovací údaje potřebné pro odesílání oznámení do poštovní schránky Exchange Serveru uživatele. Tento uživatel může být vyhrazený jenom pro oznámení. Uživatel pro oznámení potřebuje poštovní schránku Exchange, aby mohl odesílat oznámení e-mailem. Tato oznámení můžete nakonfigurovat díky zásadám podmíněného přístupu v Intune.  
 
         Zkontrolujte, že je na serveru Exchange pro klientský přístup nainstalovaná služba Automatická konfigurace a Webové služby systému Exchange. Další informace najdete v tématu [Server pro klientský přístup](https://technet.microsoft.com/library/dd298114.aspx).
 

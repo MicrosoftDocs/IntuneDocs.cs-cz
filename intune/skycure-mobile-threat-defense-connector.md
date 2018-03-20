@@ -1,7 +1,7 @@
 ---
-title: Konektor Skycure s Intune
-titlesuffix: Azure portal
-description: Integrace konektoru Skycure do Intune
+title: Konektor Skycure s Microsoft Intune
+titlesuffix: 
+description: "Přečtěte si o integraci Intune se službou Skycure Mobile Threat Defense za účelem regulace přístupu mobilních zařízení k firemním prostředkům."
 keywords: 
 author: msmimart
 ms.author: mimart
@@ -15,11 +15,11 @@ ms.assetid: df4ce3f6-a093-432c-ab86-7a83865e389e
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 333322022882566b55e869e5d6a1a1e2b203b830
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: b3148a24b077dfd491ce06fcf708a81de7d12dc1
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="skycure-mobile-threat-defense-connector"></a>Konektor ochrany před mobilními hrozbami Skycure
 
@@ -69,7 +69,7 @@ Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba ma
 
 **Přístup udělený po nápravě:**
 
-![Udělení přístupu po zjištění přítomnosti škodlivých aplikací](./media/skycure-arch-2.png)
+![Přistup udělený po nápravě po zjištění škodlivých aplikací](./media/skycure-arch-2.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Řízení přístupu na základě ohrožení sítě
 
