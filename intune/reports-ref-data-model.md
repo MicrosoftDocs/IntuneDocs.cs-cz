@@ -1,11 +1,12 @@
 ---
-title: "Datový model datového skladu | Dokumentace Microsoftu"
-description: "Datový sklad Intune denně vzorkuje data, aby mohl poskytovat historický přehled průběžně se měnícího mobilního prostředí."
+title: "Datový model datového skladu"
+titlesuffix: Microsoft Intune
+description: "Datový sklad Microsoft Intune denně vzorkuje data, aby mohl poskytovat historický přehled průběžně se měnícího mobilního prostředí."
 keywords: "Datový sklad Intune"
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/14/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +15,17 @@ ms.assetid: 4D04D3D9-4B6C-41CD-AAF8-466AF8FA6032
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f52531f854c57551613b1e94f0cfd0925c6d3d12
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 7bf893acd5a3d162b767744001fe2257824d86a4
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="data-warehouse-data-model"></a>Datový model datového skladu
 
-Datový sklad Intune denně vzorkuje data, aby mohl poskytovat historický přehled průběžně se měnícího prostředí mobilních zařízení. Zobrazení se skládá z časově souvisejících věcí.
+Datový sklad Intune denně vzorkuje data, aby mohl poskytovat historický přehled průběžně se měnícího prostředí mobilních zařízení. Zobrazení se skládá z časově souvisejících entit.
 
-## <a name="things-entity-sets"></a>Věci: sady entit
+## <a name="entities-entity-sets"></a>Entity: sady entit
 
 Sklad zveřejňuje data v následujících oblastech vyšší úrovně:
 
@@ -33,7 +34,7 @@ Sklad zveřejňuje data v následujících oblastech vyšší úrovně:
   -  Inventář aplikací a softwaru
   -  Konfigurace zařízení a zásady dodržování předpisů
 
-Tyto oblasti obsahují entity nebo věci, které mají smysl v daném prostředí Intune. V následujících tématech se můžete podívat na podrobnosti o sadách entit:
+Tyto oblasti obsahují entity, které mají smysl v daném prostředí Intune. V následujících tématech se můžete podívat na podrobnosti o sadách entit:
 
   -  [Aplikace](reports-ref-application.md)
   -  [Datum](reports-ref-date.md)

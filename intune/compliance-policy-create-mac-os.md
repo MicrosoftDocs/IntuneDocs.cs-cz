@@ -1,12 +1,12 @@
 ---
-title: "Vytváření zásad dodržování předpisů pro macOS"
-titleSuffix: Azure portal
-description: "Přečtěte si, jak vytvářet zásady dodržování předpisů pro zařízení s macOS."
+title: "Vytvoření zásady dodržování předpisů pro zařízení s macOS v Microsoft Intune"
+titleSuffix: 
+description: "Vytvořte v Microsoft Intune zásadu dodržování předpisů zařízením pro zařízení s macOS umožňující vám zadat požadavky, které zařízení musí splnit, aby vyhovovalo předpisům."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 2/13/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,16 +14,18 @@ ms.technology:
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a5f1caeddbd3d171092ef59cfb092404b31154f2
-ms.sourcegitcommit: 754fcc31155b28d6910bba45419c6be745f8793e
+ms.openlocfilehash: e7703b8ea26d6ce53b82e806a78c788d14ae05b4
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-a-device-compliance-policy-for-macos-devices-with-intune"></a>Vytvoření zásad dodržování předpisů pro zařízení s macOS v Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+Zásada dodržování předpisů Intune pro zařízení s macOS určuje pravidla a nastavení, které musí zařízení s macOS splňovat, aby bylo považováno za dodržující předpisy. Tyto zásady můžete použít s podmíněným přístupem k povolení nebo zablokování přístupu k prostředkům společnosti. Můžete také získat sestavy zařízení a provádět kroky v případě, že zařízení předpisy nedodržuje. Zásady dodržování předpisů zařízení pro každou platformu vytvoříte na portálu Intune Azure.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
@@ -108,7 +110,7 @@ Při vytváření nových zásad dodržování předpisů zařízeními s Intune
 
 2. Když se úspěšně přihlásíte, zobrazí se vám **řídicí panel Azure**.
 
-3. V nabídce vlevo zvolte **Další služby** a do filtru textového pole pak zadejte **Intune**.
+3. V nabídce vlevo zvolte **Všechny služby** a do filtru textového pole pak zadejte **Intune**.
 
 4. Zvolte **Intune** a zobrazí se **řídicí panel Intune**.
 
@@ -118,7 +120,7 @@ Při vytváření nových zásad dodržování předpisů zařízeními s Intune
 
 7. Zadejte název a popis a zvolte platformu, u které chcete použít tyto zásady.
 
-8. Otevře se okno **Zásady dodržování předpisů v macOS**. Zvolte kategorie nastavení zásad zařízení **Zabezpečení**, **Stav zařízení** a **Vlastnosti zařízení** a zadejte požadovaná nastavení.
+8. Otevře se podokno **Zásady dodržování předpisů na Macu**. Zvolte kategorie nastavení zásad zařízení **Zabezpečení systému**, **Stav zařízení** a **Vlastnosti zařízení** a zadejte svá nastavení.
 
 10. Po dokončení nastavení vyberte u každé kategorie nastavení zásad dodržování předpisů zařízením **OK**.
 
@@ -126,15 +128,15 @@ Při vytváření nových zásad dodržování předpisů zařízeními s Intune
 
 ## <a name="assign-user-groups"></a>Přiřazení skupin uživatelů
 
-Pokud chcete přiřadit zásady dodržování předpisů uživatelům, vyberte zásady, které jste nakonfigurovali. Existující zásady najdete v okně **Zásady dodržování předpisů**.
+Pokud chcete přiřadit zásady dodržování předpisů uživatelům, vyberte zásady, které jste nakonfigurovali. Existující zásady najdete v podokně **Dodržování předpisů zařízením – Zásady**.
 
-1. Vyberte zásady dodržování předpisů zařízením, které chcete přiřadit uživatelům, a zvolte **Přiřazení**. Otevře se okno, kde můžete vybrat **skupiny zabezpečení Azure Active Directory** a přiřadit je k zásadám.
+1. Vyberte zásady dodržování předpisů zařízením, které chcete přiřadit uživatelům, a zvolte **Přiřazení**. Otevře se podokno, kde můžete vybrat **skupiny zabezpečení Azure Active Directory** a přiřadit je k zásadám.
 
-2. Zvolte **Vybrat skupiny** a otevřete tak okno, ve kterém se zobrazí skupiny zabezpečení v Azure AD.
+2. Zvolte **Vybrat skupiny** a otevřete tak podokno, kde se zobrazí skupiny zabezpečení v Azure AD.
 
-3. Zvolte **Vybrat** a pak **Uložit** a přiřaďte zásady dodržování předpisů zařízením do skupin zabezpečení Azure AD.
+3. Zvolte **Uložit**. Tím se zásady dodržování předpisů zařízením přiřadí do skupin zabezpečení Azure AD.
 
-4. Jakmile jste hotovi s přiřazením zásad dodržování předpisů zařízením do skupin, můžete okno **Přiřazení** zavřít.
+4. Až přiřazování zásad dodržování předpisů zařízením do skupin dokončíte, můžete podokno **Přiřazení** zavřít.
 
     > [!TIP]
     > Ve výchozím nastavení kontrolují zařízení dodržování předpisů každých 8 hodin, ale uživatelé můžou tento proces v aplikaci Portál společnosti Intune vynutit.

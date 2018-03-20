@@ -1,6 +1,6 @@
 ---
 title: "Hromadný zápis pro Windows 10"
-titlesuffix: Azure portal
+titlesuffix: Microsoft Intune
 description: "Vytvoření balíčku hromadné registrace pro Microsoft Intune"
 keywords: 
 author: Erikje
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: damionw
 ms.custom: intune-azure
-ms.openlocfilehash: 8b4c9f5685c12bb6c15d15d85c73d573dfcd66e8
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 851be6ad98383937a3457a33e47115933f309cea
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Hromadná registrace pro zařízení s Windows
 
@@ -36,7 +36,7 @@ Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a ob
 ## <a name="create-a-provisioning-package"></a>Vytvoření zřizovacího balíčku
 
 1. Stáhněte si [Windows Configuration Designer (WCD)](https://www.microsoft.com/store/apps/9nblggh4tx22) z Microsoft Storu.
-![Snímek obrazovky se snímky obrazovky a popisem aplikace Windows Configuration Designer ve Storu](media/bulk-enroll-store.png)
+![Snímek obrazovky s aplikací Windows Configuration Designer ve Storu](media/bulk-enroll-store.png)
 
 2. Otevřete aplikaci **Windows Configuration Designer** a vyberte **Provision desktop devices** (Zřídit počítačová zařízení).
 ![Snímek obrazovky s výběrem možnosti Provision desktop devices ve Windows Configuration Designeru](media/bulk-enroll-select.png)
@@ -47,23 +47,24 @@ Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a ob
   - **Description** (Popis) – volitelný popis projektu ![Snímek obrazovky se zadáním názvu, složky projektu a popisu v aplikaci Windows Configuration Designer](media/bulk-enroll-name.png)
 
 4.  Zadejte jedinečný název pro zařízení. Názvy můžou obsahovat sériové číslo (%%SERIAL%%) nebo náhodnou sadu znaků. Volitelně můžete také zadat kód Product Key, pokud provádíte upgrade edice Windows, nakonfigurovat zařízení pro sdílené používání a odebrat předinstalovaný software.
-![Snímek obrazovky se zadáním názvu, složky projektu a popisu v aplikaci Windows Configuration Designer](media/bulk-enroll-device.png)
+
+    ![Snímek obrazovky se zadáním názvu kódu Product Key v aplikaci Windows Configuration Designer](media/bulk-enroll-device.png)
 
 5.  Volitelně můžete nakonfigurovat síť Wi-Fi, ke které se zařízení připojí při prvním spuštění.  Pokud síťová zařízení nejsou nakonfigurovaná, musí být při prvním spuštění zařízení připojeno ke kabelové síti.
 ![Snímek obrazovky s povolením Wi-Fi včetně SSID sítě a typu sítě v aplikaci Windows Configuration Designer](media/bulk-enroll-network.png)
 
 6.  Vyberte **Enroll in Azure AD** (Zaregistrovat v Azure AD), zadejte datum **Bulk Token Expiry** (Vypršení platnosti hromadného tokenu) a pak vyberte **Get Bulk Token** (Získat hromadný token).
-![Snímek obrazovky se zadáním názvu, složky projektu a popisu v aplikaci Windows Configuration Designer](media/bulk-enroll-account.png)
+![Snímek obrazovky se správou účtů v aplikaci Windows Configuration Designer](media/bulk-enroll-account.png)
 
 7. Zadejte přihlašovací údaje k Azure AD, abyste získali hromadný token.
-![Snímek obrazovky se zadáním názvu, složky projektu a popisu v aplikaci Windows Configuration Designer](media/bulk-enroll-cred.png)
+![Snímek obrazovky s přihlášením do aplikace Windows Configuration Designer](media/bulk-enroll-cred.png)
 
 8.  Když se **Bulk Token** (Hromadný token) úspěšně načte, klikněte na **Next** (Další).
 
 9. Volitelně můžete **Add applications** (Přidat aplikace) a **Add certificates** (Přidat certifikáty). Tyto aplikace a certifikáty se zřídí v zařízení.
 
 10. Volitelně můžete zřizovací balíček ochránit heslem.  Klikněte na **Vytvořit**.
-![Snímek obrazovky se zadáním názvu, složky projektu a popisu v aplikaci Windows Configuration Designer](media/bulk-enroll-create.png)
+![Snímek obrazovky s ochranou balíčku v aplikaci Windows Configuration Designer](media/bulk-enroll-create.png)
 
 ## <a name="provision-devices"></a>Zřízení zařízení
 

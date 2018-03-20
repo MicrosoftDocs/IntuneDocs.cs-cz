@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f639a61c4d481a891156383c3a23e0e1511a5fbe
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: d3a599ff1dff3e27214dfcca694f6b97333f370a
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="set-up-ios-device-enrollment-with-apple-school-manager"></a>Nastavení registrace zařízení s iOSem pomocí Apple School Manageru
 
@@ -89,7 +89,7 @@ Přejděte k souboru certifikátu (p7m), zvolte **Otevřít** a pak zvolte **Nah
 ## <a name="create-an-apple-enrollment-profile"></a>Vytvoření registračního profilu Apple
 Registrační profil zařízení definuje nastavení, která se během registrace použijí pro skupinu zařízení.
 
-1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** a pak **Registrace Apple**.
+1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení** a potom **Registrace Apple**.
 2. V části **Program registrace** zvolte **Profily Programu registrace**.
 3. V okně **Profily Programu registrace** zvolte **Vytvořit**.
 4. V okně **Vytvořit registrační profil** zadejte **název** a **popis** profilu, který se zobrazí v Intune.
@@ -149,7 +149,7 @@ Registrační profil zařízení definuje nastavení, která se během registrac
 ## <a name="sync-managed-devices"></a>Synchronizace spravovaných zařízení
 Když jste službě Intune přiřadili oprávnění ke správě zařízení Apple School Manageru, můžete Intune synchronizovat se službou Apple, aby se spravovaná zařízení zobrazila v Intune.
 
-1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** > **Registrace Apple** > **Zařízení Programu registrace** > **Synchronizovat**. Indikátor průběhu vám ukáže dobu, jakou budete muset počkat před dalším vyžádáním synchronizace.
+1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení** > **Registrace Apple** > **Zařízení Programu registrace** > **Synchronizovat**. Indikátor průběhu vám ukáže dobu, jakou budete muset počkat před dalším vyžádáním synchronizace.
 
   ![Vybraný uzel Zařízení Programu registrace a vybraný odkaz Synchronizovat](./media/enrollment-program-device-sync.png)
 2. V okně **Synchronizovat** vyberte **Požadovat synchronizaci**. Indikátor průběhu vám ukáže dobu, jakou budete muset počkat před dalším vyžádáním synchronizace.
@@ -166,7 +166,7 @@ Když jste službě Intune přiřadili oprávnění ke správě zařízení Appl
 ## <a name="assign-a-profile-to-devices"></a>Přiřazení profilu k zařízením
 Zařízením Apple School Manageru spravovaným v Intune musíte před registrací přiřadit registrační profil.
 
-1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** > **Registrace Apple** a pak zvolte **Profily Programu registrace**.
+1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení** > **Registrace Apple** a potom **Profily Programu registrace**.
 2. V seznamu **Profily Programu registrace** zvolte profil, který chcete zařízením přiřadit, a pak zvolte **Přiřazení zařízení**.
 
  ![Přiřazení zařízení s vybranou možností Přiřadit](./media/enrollment-program-device-assign.png)

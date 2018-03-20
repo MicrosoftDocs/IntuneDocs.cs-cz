@@ -6,18 +6,18 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 3/2/2018
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 46bb82fd49fa58e87c22c8bf0abb57e1587b8b40
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: d415628419bec26c24494b38a13bd3801051c603
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrace Windows Hello pro firmy s Microsoft Intune
 
@@ -48,19 +48,19 @@ Abyste předešli konfliktům mezi zásadami a zajistili, že zásady kódu PIN 
 
 ## <a name="create-a-windows-hello-for-business-policy"></a>Vytvoření zásad pro službu Windows Hello pro firmy
 
-1.  Na portálu Azure Portal zvolte **Další služby** > **Monitorování a správa** > **Intune**.
+1.  Na portálu [Azure Portal](https://portal.azure.com) zvolte **Všechny služby** > **Monitorování a správa** > **Intune**.
 
-2.  Na stránce Intune zvolte **Registrace zařízení** a pak zvolte **Registrace zařízení s Windows** > **Windows Hello pro firmy**.
+2.  V podokně Intune zvolte **Registrace zařízení** a potom zvolte **Registrace zařízení s Windows** > **Windows Hello pro firmy**.
 
-3.  Na stránce, která se otevře, zvolte **výchozí** nastavení.
+3.  V podokně, které se otevře, zvolte **výchozí** nastavení.
 
-4.  Na stránce **Všichni uživatelé** klikněte na **Vlastnosti** a pak zadejte **název** a volitelně **popis** pro nastavení Windows Hello pro firmy.
+4.  V podokně **Všichni uživatelé** klikněte na **Vlastnosti** a potom zadejte **název** a volitelný **popis** pro nastavení Windows Hello pro firmy.
 
-5. Na stránce **Všichni uživatelé** klikněte na **Nastavení** a pak pro možnost **Konfigurovat Windows Hello pro firmy** zvolte jednu z těchto hodnot:
+5. V podokně **Všichni uživatelé** klikněte na **Nastavení** a pak pro možnost **Konfigurovat Windows Hello pro firmy** zvolte jednu z těchto hodnot:
 
     - **Zakázáno**. Toto nastavení vyberte, pokud Windows Hello pro firmy nechcete používat. Všechna ostatní nastavení na obrazovce jsou nedostupná.
     - **Povoleno**. Toto nastavení vyberte, pokud chcete konfigurovat nastavení Windows Hello pro firmy.
-    - **Není nakonfigurováno**. Toto nastavení vyberte, pokud k řízení nastavení Windows Hello pro firmy nechcete používat Intune. Veškerá stávající nastavení Windows Hello pro firmy v zařízeních s Windows 10 se nezmění. Žádná ostatní nastavení na stránce nejsou dostupná.
+    - **Není nakonfigurováno**. Toto nastavení vyberte, pokud k řízení nastavení Windows Hello pro firmy nechcete používat Intune. Veškerá stávající nastavení Windows Hello pro firmy v zařízeních s Windows 10 se nezmění. Žádná ostatní nastavení v podokně nejsou dostupná.
 
 6.  Pokud jste v předchozím kroku vybrali **Povoleno**, nakonfigurujte požadovaná nastavení, která se použijí pro všechna zaregistrovaná zařízení s Windows 10 a Windows 10 Mobile.
 
@@ -69,9 +69,9 @@ Abyste předešli konfliktům mezi zásadami a zajistili, že zásady kódu PIN 
      - **Požadované** (výchozí). Windows Hello pro firmy můžou zřídit jenom zařízení s přístupným čipem TPM.
      - **Preferované**. Zařízení se nejdřív pokusí použít čip TPM. Pokud není dostupný, můžou použít softwarové šifrování.
 
- - **Vyžadovat minimální délku PIN kódu**/**Vyžadovat maximální délku PIN kódu**. Konfiguruje zařízení, aby k zajištění bezpečného přihlášení vyžadovala minimální a maximální délky kódu PIN. Výchozí délka kódu PIN je 6 znaků, ale můžete vynutit minimální délku 4 znaky. Maximální délka kódu PIN je 127 znaků.
+ - **Minimální délka PIN kódu**/**Maximální délka PIN kódu**. Konfiguruje zařízení, aby k zajištění bezpečného přihlášení vyžadovala minimální a maximální délky kódu PIN. Výchozí délka kódu PIN je 6 znaků, ale můžete vynutit minimální délku 4 znaky. Maximální délka kódu PIN je 127 znaků.
 
- - **Vyžadovat v PIN kódu malá písmena**/**Vyžadovat v PIN kódu velká písmena**/**Vyžadovat v PIN kódu speciální znaky**. Silnější kódy PIN můžete vynutit tím, že se v nich bude vyžadovat použití velkých a malých písmen a speciálních znaků. Vybírejte z těchto možností:
+ - **Malá písmena v PIN kódu**/**Velká písmena v PIN kódu**/**Speciální znaky v PIN kódu**. Silnější kódy PIN můžete vynutit tím, že se v nich bude vyžadovat použití velkých a malých písmen a speciálních znaků. Vybírejte z těchto možností:
 
      - **Povolené**. Uživatelé můžou tyto typy znaků ve svých kódech PIN použít, ale není to povinné.
 
@@ -90,7 +90,7 @@ Abyste předešli konfliktům mezi zásadami a zajistili, že zásady kódu PIN 
 
  - **Použít vylepšenou ochranu proti falšování identity, pokud je dostupná**. Konfiguruje, jestli se v zařízení použijí funkce ochrany proti falšování identity Windows Hello, pokud je zařízení podporuje (třeba rozpoznání fotografie tváře místo skutečné tváře).<br>Pokud je nastavená hodnota **Ano**, Windows vyžaduje, aby všichni uživatelé používali pro funkce rozpoznávání obličeje ochranu proti falšování, pokud je podporovaná.
 
- - **Použít přihlášení telefonem**. Pokud je tato možnost nastavená na hodnotu **Ano**, uživatelé můžou použít vzdálenou službu Passport, která bude sloužit jako přenosné doprovodné zařízení pro ověřování stolního počítače. Stolní počítač musí být připojený ke službě Azure Active Directory a v doprovodném zařízení musí být nakonfigurovaný kód PIN služby Windows Hello pro firmy.
+ - **Povolit přihlašování telefonem**. Pokud je tato možnost nastavená na hodnotu **Ano**, uživatelé můžou použít vzdálenou službu Passport, která bude sloužit jako přenosné doprovodné zařízení pro ověřování stolního počítače. Stolní počítač musí být připojený ke službě Azure Active Directory a v doprovodném zařízení musí být nakonfigurovaný kód PIN služby Windows Hello pro firmy.
 
 ## <a name="windows-holographic-for-business-support"></a>Podpora Windows Holographic for Business
 

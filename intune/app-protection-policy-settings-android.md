@@ -15,11 +15,11 @@ ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 330826307e4f3db24532908d42da77a1a857a681
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 34334186fbf74507b54d1bf4df347de2c16c39c0
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="android-app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací pro Android
 Toto téma popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem. Popsané nastavení zásad se dá [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v okně **Nastavení** na portálu Azure Portal.
@@ -73,7 +73,7 @@ Existují dvě kategorie nastavení zásad:nastavení přemístění dat a nasta
   | com.android.providers.media | Poskytovatel multimediálního obsahu pro Android | Poskytovatel multimediálního obsahu je povolený jenom pro akci výběru vyzváněcího tónu. |
   | com.google.android.gms, com.google.android.gsf | Balíčky Služeb Google Play | Tyto balíčky jsou povolené pro akce Google Cloud Messaging, například pro nabízená oznámení. |
 
-Další informace najdete v tématu [Výjimky zásad přenosu dat pro aplikace](app-protection-policies-exception.md). 
+Další informace najdete v tématu [Výjimky zásad přenosu dat pro aplikace](app-protection-policies-exception.md).
 
 ##  <a name="access-settings"></a>Nastavení přístupu
 
@@ -88,7 +88,10 @@ Další informace najdete v tématu [Výjimky zásad přenosu dat pro aplikace](
 | **Zakázat PIN kód aplikace, když je PIN kód zařízení spravovaný** | Pokud chcete zakázat PIN kód aplikace, když bude na zaregistrovaném zařízení zjištěn zámek zařízení, zvolte **Ano**. | Ne |
 | **Vyžadovat minimální verzi operačního systému Android** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi operačního systému Android. Uživateli bude zablokován přístup, pokud verze Androidu v zařízení nesplňuje tento požadavek.<br><br> Tento formát nastavení zásady podporuje vlastnosti major.minor, major.minor.build a major.minor.build.revision.| Ne |
 | **Vyžadovat minimální verzi operačního systému Android (jenom upozornění)** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi operačního systému Android. Uživateli se zobrazí oznámení, pokud verze Androidu v zařízení nesplňuje tento požadavek. Toto oznámení je možné zavřít.<br><br> Tento formát nastavení zásady podporuje vlastnosti major.minor, major.minor.build a major.minor.build.revision. | Ne |
-| **Vyžadovat minimální verzi aplikace** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi aplikace. Uživateli bude zablokován přístup, pokud verze aplikace v zařízení nesplňuje tento požadavek.<br><br>Vzhledem k tomu, že aplikace mívají často odlišná schémata verzí, vytvořte zásadu, ve které bude jedna minimální verze zacílená na jednu aplikaci (např. „Zásada verze Outlooku“). <br><br> Tento formát nastavení zásady podporuje vlastnosti major.minor, major.minor.build a major.minor.build.revision.| Ne | 
-| **Vyžadovat minimální verzi aplikace (jenom upozornění)** | Zvolte **Ano**, pokud k používání této aplikace doporučujete minimální verzi aplikace. Uživateli se zobrazí oznámení, pokud verze aplikace v zařízení nesplňuje tento požadavek. Toto oznámení je možné zavřít.<br><br>Vzhledem k tomu, že aplikace mívají často odlišná schémata verzí, vytvořte zásadu, ve které bude jedna minimální verze zacílená na jednu aplikaci (např. „Zásada verze Outlooku“). <br><br> Tento formát nastavení zásady podporuje vlastnosti major.minor, major.minor.build a major.minor.build.revision.| Ne | 
+| **Vyžadovat minimální verzi aplikace** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi aplikace. Uživateli bude zablokován přístup, pokud verze aplikace v zařízení nesplňuje tento požadavek.<br><br>Vzhledem k tomu, že aplikace mívají často odlišná schémata verzí, vytvořte zásadu, ve které bude jedna minimální verze zacílená na jednu aplikaci (např. „Zásada verze Outlooku“). <br><br> Tento formát nastavení zásady podporuje vlastnosti major.minor, major.minor.build a major.minor.build.revision.| Ne |
+| **Vyžadovat minimální verzi aplikace (jenom upozornění)** | Zvolte **Ano**, pokud k používání této aplikace doporučujete minimální verzi aplikace. Uživateli se zobrazí oznámení, pokud verze aplikace v zařízení nesplňuje tento požadavek. Toto oznámení je možné zavřít.<br><br>Vzhledem k tomu, že aplikace mívají často odlišná schémata verzí, vytvořte zásadu, ve které bude jedna minimální verze zacílená na jednu aplikaci (např. „Zásada verze Outlooku“). <br><br> Tento formát nastavení zásady podporuje vlastnosti major.minor, major.minor.build a major.minor.build.revision.| Ne |
 | **Vyžadovat minimální verzi opravy Androidu** | Zvolte **Ano**, pokud požadujete minimální opravu zabezpečení Androidu vydanou Googlem. Uživateli bude zablokován přístup, pokud oprava zabezpečení Androidu v zařízení nesplňuje tento požadavek.<br><br> Tento formát nastavení zásad podporuje formát data RRRR-MM-DD. | Ne |
 | **Vyžadovat minimální verzi opravy Androidu (jen upozornění)** | Zvolte **Ano**, pokud požadujete minimální opravu zabezpečení Androidu vydanou Googlem. Uživateli se zobrazí oznámení, pokud oprava zabezpečení Androidu v zařízení nesplňuje tento požadavek. Toto oznámení je možné zavřít.<br><br> Tento formát nastavení zásad podporuje formát data RRRR-MM-DD. | Ne |
+
+> [!NOTE]
+> Další informace o tom, jak v Androidu fungují různá nastavení Intune App Protection nakonfigurovaná v části Přístup u stejné skupiny aplikací a uživatelů, najdete v tématu [Nejčastější dotazy k Intune MAM](mam-faq.md).

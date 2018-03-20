@@ -1,29 +1,29 @@
 ---
-title: "Nastavení sítě VPN pro zařízení s iOSem v Intune"
-titlesuffix: Azure portal
-description: "Přečtěte si informace o nastavení Intune, s jehož použitím můžete nakonfigurovat připojení VPN na zařízeních s iOSem."
+title: "Nastavení sítě VPN v Microsoft Intune pro zařízení s iOSem"
+titlesuffix: 
+description: "Zjistěte, jaká nastavení můžete v Intune použít ke konfiguraci připojení VPN na zařízeních s iOSem."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 12/15/2017
+ms.date: 3/5/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 1447c123-ea33-4ea0-aab4-69577cdb8d00
-ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d3db57b851c405758c9cccdc3e70c96ca9e76000
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 70721d1d2f360527af0e269a93d6243b6a42431b
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/12/2018
 ---
-# <a name="vpn-settings-for-ios-devices-in-microsoft-intune"></a>Nastavení sítě VPN pro zařízení s iOSem v Microsoft Intune
+# <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-ios"></a>Nastavení sítě VPN v Microsoft Intune pro zařízení s iOSem
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+Tento článek popisuje, jaká nastavení můžete v Intune použít ke konfiguraci připojení VPN na zařízeních s iOSem.
 
 V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím seznamu konfigurovatelné všechny hodnoty.
 
@@ -38,7 +38,7 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
 - **Typ připojení** – z následujícího seznamu dodavatelů vyberte typ připojení VPN:
     - **Check Point Capsule VPN**
     - **Cisco AnyConnect**
-    - **Dell SonicWALL Mobile Connect**
+    - **SonicWall Mobile Connect**
     - **F5 Edge Client**
     - **Pulse Secure**
     - **Cisco (IPSec)**
@@ -75,6 +75,6 @@ Pokud jste jako typ připojení vybrali **Vlastní VPN**, nakonfigurujte tato da
 
 ## <a name="proxy-settings"></a>Nastavení proxy serveru
 
-- **Skript automatické konfigurace** – ke konfiguraci proxy serveru použijte konfigurační soubor. Zadejte **Adresu URL proxy serveru** (například **http://proxy.contoso.com**), na které se nachází konfigurační soubor.
+- **Skript automatické konfigurace** – ke konfiguraci proxy serveru použijte konfigurační soubor. Zadejte **adresu URL proxy serveru** (například **http://proxy.contoso.com**), na které se nachází konfigurační soubor.
 - **Adresa** – zadejte adresu proxy serveru (jako IP adresu).
 - **Číslo portu** – zadejte číslo portu přidruženého k proxy serveru.

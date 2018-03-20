@@ -1,54 +1,54 @@
 ---
-title: "Nastavení Intune VPN pro zařízení s Windows 8.1"
-titleSuffix: Azure portal
-description: "Přečtěte si informace o nastaveních Intune, pomocí kterých můžete nakonfigurovat připojení VPN na zařízeních s Windows 8.1."
+title: "Nastavení sítě VPN pro zařízení s Windows 8.1 v Microsoft Intune"
+titleSuffix: 
+description: "Zjistěte, jaká nastavení můžete v Intune použít ke konfiguraci připojení VPN na zařízeních s Windows 8.1."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 12/15/2017
+ms.date: 3/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
-ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0126c483ec905d4c073e19b35498c27069ecd285
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 8ced3e03fa337034076af75c7984a30cd75105bb
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/12/2018
 ---
-# <a name="vpn-settings-for-windows-81-devices-in-microsoft-intune"></a>Nastavení sítě VPN pro zařízení s Windows 8.1 v Microsoft Intune
+# <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-windows-81"></a>Nastavení sítě VPN v Microsoft Intune pro zařízení s Windows 8.1
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-V závislosti na tom, jaká nastavení zvolíte, nebudou v níže uvedeném seznamu konfigurovatelné všechny hodnoty.
+Tento článek popisuje, jaká nastavení můžete v Intune použít ke konfiguraci připojení VPN na zařízeních s Windows 8.1.
+
+V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím seznamu konfigurovatelné všechny hodnoty.
 
 ## <a name="base-vpn-settings"></a>Základní nastavení sítě VPN
 
 
-- **Použít všechna nastavení jenom na Windows 8.1** – toto je nastavení, které můžete nakonfigurovat na klasickém portálu Intune. Na portálu Azure Portal toto nastavení nejde změnit. Pokud je nastavené na **Nakonfigurováno**, budou tato nastavení platit jenom pro zařízení s Windows 8.1. Pokud je nastavené na **Nenakonfigurováno**, budou tato nastavení platit také pro zařízení s Windows 10.
-- **Název připojení** – zadejte název pro toto připojení. Tento název uživatelé uvidí, když budou na svém zařízení procházet seznamem dostupných připojení VPN.
+- **Použít všechna nastavení jenom na Windows 8.1** – toto je nastavení, které můžete nakonfigurovat na klasickém portálu Intune. Na portálu Azure Portal toto nastavení nejde změnit. Pokud je nastavené na **Nakonfigurováno**, nastavení platí jenom pro zařízení s Windows 8.1. Pokud je nastavené na **Nenakonfigurováno**, platí nastavení také pro zařízení s Windows 10.
+- **Název připojení** – zadejte název tohoto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí seznamem dostupných připojení VPN.
 - **Servery** – přidejte minimálně jeden VPN server, ke kterému se budou zařízení připojovat.
-    - **Přidat** – otevře okno **Přidat řádek**, ve kterém můžete zadat následující informace:
+    - **Přidat** – otevře podokno **Přidat řádek**, ve kterém můžete zadat následující informace:
         - **Popis** – zadejte popisný název serveru, například **VPN server Contoso**.
-        - **IP adresa nebo plně kvalifikovaný název domény** – zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se budou zařízení připojovat. Příklady: **192.168.1.1**, **vpn.contoso.com**.
+        - **IP adresa nebo plně kvalifikovaný název domény** – zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojí. Příklady: **192.168.1.1**, **vpn.contoso.com**.
         - **Výchozí server** – povolí tento server jako výchozí server, který budou zařízení používat k navázání připojení. Jako výchozí server musí být nastavený jenom jeden server.
-    - **Importovat** – přejděte k souboru, který obsahuje seznam serverů oddělených čárkami ve formátu popis, IP adresa nebo plně kvalifikovaný název domény, výchozí server. Zvolte **OK** a naimportujte tak servery do seznamu **Servery**.
+    - **Importovat** – vyhledejte soubor, který obsahuje seznam serverů oddělených čárkami ve formátu popis, IP adresa nebo plně kvalifikovaný název domény, výchozí server. Zvolte **OK** a naimportujte tak servery do seznamu **Servery**.
     - **Exportovat** – exportuje seznam serverů do textového souboru s oddělovači (CSV).
 
 - **Typ připojení** – vyberte typ připojení VPN z tohoto seznamu dodavatelů:
 - **Check Point Capsule VPN**
-- **Dell SonicWALL Mobile Connect**
+- **SonicWall Mobile Connect**
 - **F5 Edge Client**
 - **Pulse Secure**
 
 <!--- **Fingerprint** (Check Point Capsule VPN only) - Specify a string (for example, "Contoso Fingerprint Code") that will be used to verify that the VPN server can be trusted. A fingerprint can be sent to the client so it knows to trust any server that presents the same fingerprint when connecting. If the device doesn’t already have the fingerprint, it will prompt the user to trust the VPN server that they are connecting to while showing the fingerprint. (The user manually verifies the fingerprint and chooses **trust** to connect.) --->
 
-- **Doména nebo skupina přihlášení** (pouze Dell SonicWALL Mobile Connect) – zadejte název domény nebo skupiny přihlášení, ke které se chcete připojit.
+- **Doména nebo skupina přihlášení** (jenom SonicWall Mobile Connect) – zadejte název domény nebo skupiny přihlášení, ke které se chcete připojit.
 
 - **Role** (pouze Pulse Secure) – zadejte název role uživatele, která má přístup k tomuto připojení. Role uživatele definuje osobní nastavení a možnosti a povolí nebo zakáže určité funkce přístupu.
 
@@ -70,7 +70,7 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v níže uvedeném sezn
 
 ```
 
-**Příklad pro Dell SonicWALL Mobile Connect:**
+**Příklad pro SonicWall Mobile Connect:**
 ```
     <MobileConnect><Compression>false</Compression><debugLogging>True</debugLogging><packetCapture>False</packetCapture></MobileConnect>
 

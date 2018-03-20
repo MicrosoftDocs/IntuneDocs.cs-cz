@@ -6,7 +6,7 @@ keywords:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: dougeby
-ms.date: 11/17/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5c02ea2df53b1524933cea72a8bcc3de89772e62
-ms.sourcegitcommit: 0a5f424a8f683daa919b13b5c363173040d561c8
+ms.openlocfilehash: 0f2d37a9033464381de5c23a558d0205f85fe56a
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="set-up-intune-certificate-connector-for-symantec-pki-manager-web-service"></a>Nastavení nástroje Intune Certificate Connector pro webovou službu správce infrastruktury veřejných klíčů Symantec
 
@@ -166,8 +166,11 @@ Následující postup použijte k získání certifikátu RA od certifikační a
 
 Pokud už používáte nejnovější nástroj Intune Certificate Connector pro stávající CA Microsoft a chcete přidat podporu CA Symantec, tento krok přeskočte. Jinak stáhněte nejnovější Intune Certificate Connector z portálu pro správu Intune a postupujte podle následujících pokynů.
 
-1. Přihlaste se k webu https://portal.azure.com pomocí přihlašovacích údajů správce tenanta Intune a vyhledejte prostředky Intune.
-2. Stáhněte si soubor NDESConnectorSetup.exe z **Microsoft Intune** > **Konfigurace zařízení** > **Certifikační autorita**  >  **Stáhnout odkaz na Certificate Connector**
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V podokně **Intune** zvolte **Konfigurace zařízení**.
+4. V podokně **Konfigurace zařízení** vyberte **Certifikační autorita**.
+5. Klikněte na **Přidat** a vyberte **Stáhnout soubor konektoru**. Uložte stažený soubor do umístění, kam máte přístup ze serveru, na který ho budete instalovat. 
 3. Soubor NDESConnectorSetup.exe spusťte se zvýšenými oprávněními.
 
     a. Na obrazovce **Možnosti instalace** vyberte možnost **Distribuce PFX**, jak je znázorněno na následujícím snímku obrazovky.  Zbytek instalace dokončete s výchozími nastaveními.
@@ -233,7 +236,7 @@ Certifikáty PKCS nasazené pro zařízení spravovaná pomocí Intune musí bý
 
     a. Přihlaste se k [Azure Portal](https://portal.azure.com) pomocí přihlašovacích údajů správce tenanta Intune a vyhledejte prostředky Intune.
 
-    b. Vytvořte profil důvěryhodného certifikátu v části **Microsoft Intune** > **Konfigurace zařízení** - **Profily**  >  **Vytvořit profil**.
+    b. Vytvořte profil důvěryhodného certifikátu v části **Microsoft Intune** > **Konfigurace zařízení** > **Profily**  >  **Vytvořit profil**.
 
     c. Zadejte požadované informace do polí **Název** a **Popis** a potom vyberte cílovou platformu. 
 
@@ -264,7 +267,7 @@ Identifikátor objektu profilu certifikátu je přidružený k šabloně profilu
 ## <a name="create-a-pkcs-certificate-profile"></a>Vytvoření profilu certifikátu PKCS
 
 1. Přihlaste se k portálu [Azure Portal](https://portal.azure.com) pomocí přihlašovacích údajů správce tenanta Intune a vyhledejte prostředky Intune.
-2. Vytvořte profil certifikátu PKCS v části **Microsoft Intune** > **Konfigurace zařízení – profily** > **Vytvořit profil**  >  **Certifikát PKCS**.
+2. Vytvořte profil certifikátu PKCS v části **Microsoft Intune** > **Konfigurace zařízení > Profily** > **Vytvořit profil**.
 
     a. Zadejte požadované informace do pole **Název** a **Popis** a potom vyberte cílovou platformu.
 

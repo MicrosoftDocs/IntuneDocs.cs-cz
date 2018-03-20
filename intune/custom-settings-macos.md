@@ -1,27 +1,25 @@
 ---
-title: "Vlastní nastavení pro zařízení s macOS v Intune"
-titleSuffix: Azure portal
+title: "Vlastní nastavení Microsoft Intune pro zařízení s macOS"
+titleSuffix: 
 description: "Zjistěte, jaká nastavení je možné použít ve vlastním profilu macOS."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 05/04/2017
+ms.date: 3/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 68100ea5-7d9b-4c0b-8df7-b9a24b2442c8
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 88224849de0727418197fcfdb96cac3b4c2ca0e7
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 5ccc9d48eb16ce155bbed2bbdf38793b8f3bdfda
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="custom-settings-for-macos-devices-in-microsoft-intune"></a>Vlastní nastavení pro zařízení s macOS v Microsoft Intune
+# <a name="microsoft-intune-custom-device-settings-for-devices-running-macos"></a>Vlastní nastavení Microsoft Intune pro zařízení s macOS
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -31,10 +29,10 @@ Tato funkce umožňuje přiřadit nastavení macOS, která nejdou konfigurovat p
 
 
 1. Začněte podle pokynů v tématu [Jak nakonfigurovat vlastní nastavení zařízení v Microsoft Intune](custom-settings-configure.md).
-2. V okně **Vytvořit profil** zadejte následující informace:
+2. V podokně **Vlastní konfigurační profil** nakonfigurujte všechna tato nastavení:
 
-- **Název vlastního konfiguračního profilu** – zadejte název zásady v podobě, v jaké se bude zobrazovat na zařízení a ve stavu Intune.
+- **Název vlastního konfiguračního profilu** – zadejte název zásady tak, jak se zobrazí na zařízení a ve stavu Intune.
 - **Soubor konfiguračního profilu** – přejděte na konfigurační profil, který jste vytvořili pomocí Apple Configuratoru.
 Nastavení, která exportujete z nástroje Apple Configurator, musí být kompatibilní s verzí macOS na zařízeních, kterým přiřazujete vlastní zásady pro macOS. Informace o tom, jak se řeší nekompatibilní nastavení, najdete v **referenčních materiálech ke konfiguračnímu profil** a **referenčních materiálech k protokolu správy mobilního zařízení** na [webu pro vývojáře Apple](https://developer.apple.com/).
 
-Importovaný soubor se zobrazí v oblasti okna **Obsah souboru**.
+Importovaný soubor se zobrazí v oblasti podokna **Obsah souboru**.

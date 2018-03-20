@@ -1,12 +1,11 @@
 ---
-title: "Aktivace režimu ztráty v iOS přes Intune"
-titlesuffix: Azure portal
-description: "Informace o tom, jak u ztracených nebo odcizených zařízení s iOSem aktivovat režim ztráty přes Intune"
+title: "Aktivace režimu ztráty u zařízení s iOSem pomocí Microsoft Intune – Azure | Microsoft Docs"
+description: "Pomocí Microsoft Intune zapněte nebo spusťte režim ztráty a přizpůsobte zprávu, která se zobrazí na zamykací obrazovce ztraceného nebo odcizeného zařízení s iOSem. Při použití akce Režim ztráty získáte také podrobnosti o zabezpečení a ochraně osobních údajů."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 08/09/2017
+ms.date: 03/05/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,48 +13,46 @@ ms.technology:
 ms.assetid: 126a7489-fe3e-43fd-a681-defb2fe0bb66
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fcdd5e6fa844d4c475462cd0b2a4883f8ff9ba90
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: 47d6314dfaed546e5b4cff7f93a5540ba512bde9
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="activate-lost-mode-on-ios-devices"></a>Aktivace režimu ztráty u zařízení s iOSem
-
+# <a name="enable-lost-mode-on-ios-devices-with-intune"></a>Zapnutí režimu ztráty u zařízení s iOSem pomocí Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Akce zařízení **Režim ztráty** usnadňuje aktivaci režimu ztráty u ztracených nebo odcizených zařízení s iOSem. Tento režim vám umožňuje zadat zprávu a telefonní číslo, které se zobrazuje na zamykací obrazovce zařízení.
+Akce zařízení **Režim ztráty** usnadňuje aktivaci režimu ztráty u ztracených nebo odcizených zařízení s iOSem. Tento režim vám umožňuje zadat zprávu a telefonní číslo, které se zobrazuje na zamykací obrazovce zařízení. Abyste mohli režim ztráty použít, musí se jednat o zařízení s iOSem ve vlastnictví firmy, které je v režimu dohledu.
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
-- Windows – nepodporováno
-- Windows Phone – nepodporováno
-- iOS – podporováno v iOS 9.3 a novější verzi, pod dohledem a ve vlastnictví firmy
-- macOS – nepodporováno
-- Android – nepodporováno
+- iOS 9.3 nebo novější
 
-## <a name="how-to-activate-lost-mode"></a>Jak aktivovat režim ztráty
+Tato funkce se **nepodporuje** u následujících systémů: 
+- Windows
+- Windows Phone
+- macOS
+- Android
+
+## <a name="enable-lost-mode"></a>Zapnutí režimu ztráty
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V okně **Intune** zvolte **Zařízení**.
-4. V okně **Zařízení** zvolte **Všechna zařízení**.
-5. V seznamu zařízení, která spravujete, zvolte zařízení s iOSem, zvolte **Více** a pak zvolte vzdálenou akci **Režim ztráty**.
-6. V okně **Režim ztráty** povolte režim ztráty. Pak zadejte zprávu, která se má zobrazovat, a volitelně kontaktní telefonní číslo.
-7. Klikněte na **OK**.
+2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+3. Vyberte **Zařízení** a potom **Všechna zařízení**.
+4. V seznamu zařízení, která spravujete, zvolte zařízení s iOSem, zvolte **Více** a pak zvolte vzdálenou akci **Režim ztráty**.
+5. V **režimu ztráty** zapněte tuto funkci. Pak zadejte zprávu, která se má zobrazovat, a kontaktní telefonní číslo.
+6. Výběrem **OK** uložte změny.
 
-Když zapnete režim ztráty, zablokujete veškeré možnosti použití zařízení. Koncový uživatel nebude mít k zařízení přístup, dokud režim ztráty nevypnete. Když je režim ztráty zapnutý, můžete pomocí akce **Najít zařízení** zjistit, kde se zařízení nachází.
-Abyste mohli režim ztráty použít, musí se jednat o zařízení s iOS ve vlastnictví firmy, které je v režimu dohledu.
+Když zapnete režim ztráty, zablokujete veškeré možnosti použití zařízení. Koncový uživatel nebude mít k zařízení přístup, dokud režim ztráty nevypnete. Když je režim ztráty zapnutý, můžete pomocí akce [Najít zařízení](device-locate.md) zjistit, kde se zařízení nachází.
 
 ## <a name="security-and-privacy-information-for-the-lost-mode-and-locate-device-actions"></a>Informace o zabezpečení a ochraně osobních údajů pro akce Režim ztráty a Najít zařízení
 - Dokud tuto akci nezapnete, neodesílají se do Intune žádné informace o poloze zařízení.
 - Když použijete akci Najít zařízení, údaje o poloze zařízení – zeměpisná šířka a délka – se odešlou do Intune a zobrazí se na portálu Azure Portal.
 - Tady tyto údaje zůstanou uložené 24 hodin a pak se odeberou. Údaje o poloze se nedají ručně odebrat.
 - Údaje o poloze jsou při uložení i při přenosu zašifrované.
-- Doporučujeme, abyste do zprávy, která se má zobrazit na zamykací obrazovce, zadali informace, které případnému nálezci usnadní vrácení zařízení.
+- Ve zprávě, která se zobrazí na zamykací obrazovce, nezapomeňte uvést konkrétní podrobnosti o vrácení ztraceného zařízení.
 
 ## <a name="next-steps"></a>Další kroky
 
-Stav akce, kterou jste spustili, zobrazíte tak, že v okně **Zařízení** zvolíte **Akce zařízení**.
-
+Pokud se chcete podívat na stav zapnutí režimu ztráty, otevřete **Zařízení** a vyberte **Akce zařízení**.

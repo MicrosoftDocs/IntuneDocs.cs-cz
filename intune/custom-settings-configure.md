@@ -1,51 +1,53 @@
 ---
-title: "Konfigurace vlastního nastavení pro zařízení v Intune"
-titleSuffix: Azure portal
-description: "Naučte se pomocí Intune nakonfigurovat vlastní nastavení pro zařízení, která spravujete."
+title: "Používání vlastního nastavení zařízení v Microsoft Intune – Azure | Microsoft Docs"
+description: "Přidejte nebo vytvořte profil k používání vlastních nastavení pro zařízení s Windows, Androidem a iOSem pomocí Microsoft Intune"
 keywords: 
-author: vhorne
-ms.author: victorh
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 06/03/2017
+ms.date: 03/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cafcf95cc9025872ce0fbb9605c9d820aa7a19c0
-ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
+ms.openlocfilehash: adecb332c91f17cf92362295b6b0c81445f5acaf
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="how-to-configure-custom-device-settings-in-microsoft-intune"></a>Konfigurace vlastního nastavení v Microsoft Intune
+# <a name="create-a-profile-with-custom-settings-in-intune"></a>Vytvoření profilu s vlastním nastavením v Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-## <a name="when-to-use-custom-settings"></a>Kdy použít vlastní nastavení
+Intune nemusí mít všechna předdefinovaná nastavení, která potřebujete nebo chcete. Nebo můžete chtít použít nastavení, které je k dispozici v jiných profilech zařízení. Pokud tato nastavení chcete přidat, vytvořte profil zařízení a nakonfigurujte v něm vlastní nastavení zařízení.
 
-Vlastní nastavení zařízení můžou být užitečná, když nastavení, která chcete nakonfigurovat, nejsou v Intune předdefinovaná, ale jsou dostupná z jiných profilů zařízení.
-Vlastní nastavení se konfigurují pro každou platformu jinak. U zařízení s Androidem a Windows můžete například funkce zařízení ovládat zadáním hodnot OMA-URI (Open Mobile Alliance Uniform Resource Identifier). Pro zařízení Apple můžete naimportovat soubor vytvořený pomocí [Apple Configuratoru](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12).
+V tomto článku najdete základní kroky k vytvoření profilu s vlastním nastavením. Obsahuje také odkazy na podrobnější informace o vytváření vlastních nastavení s různými platformami.
 
-Informace v tomto tématu vás seznámí se základy konfigurace profilů s vlastními nastaveními. Pak si můžete přečíst další témata pro jednotlivé platformy, kde najdete podrobnosti o specifikách různých zařízení.
+## <a name="custom-settings-on-different-platforms"></a>Vlastní nastavení na různých platformách
+Vlastní nastavení se konfigurují pro každou platformu jinak. Třeba k ovládání funkcí na zařízeních s Androidem a Windows můžete zadat hodnoty OMA-URI (Open Mobile Alliance Uniform Resource Identifier). Pro zařízení Apple můžete naimportovat soubor vytvořený pomocí [Apple Configuratoru](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12).
 
-## <a name="create-a-device-profile-containing-custom-settings"></a>Vytvoření profilu zařízení obsahujícího vlastní nastavení
+## <a name="create-the-profile"></a>Vytvoření profilu
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Konfigurace zařízení**.
-2. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
-3. V okně profilů zvolte **Vytvořit profil**.
-4. V okně **Vytvořit profil** zadejte **název** a **popis** vlastního profilu.
-5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete vlastní nastavení použít. V současné době můžete pro vlastní nastavení zařízení zvolit jednu z následujících platforem:
-    - **Androidemem**
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+3. Vyberte **Konfigurace zařízení**, pak **Profily** a pak zvolte **Vytvořit profil**.
+4. Zadejte **Název** a **Popis** vlastního profilu.
+5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, na kterou chcete vlastní nastavení použít. Můžete vybrat kteroukoli z těchto platforem:
+
+    - **Androidem**
+    - **Android for Work**
     - **iOS**
     - **macOS**
     - **Windows Phone 8.1**
+    - **Windows 8.1 a novější**
     - **Windows 10 a novější**
+
 6. V rozevíracím seznamu **Typ profilu** zvolte **Vlastní**.
-7. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Podrobnosti o nastaveních na jednotlivých platformách najdete v následujících tématech:
+7. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Další podrobnosti o vlastních nastaveních pro každou platformu najdete na těchto odkazech:
+
     - [Nastavení Androidu](custom-settings-android.md)
     - [Nastavení iOSu](custom-settings-ios.md)
     - [Nastavení macOS](custom-settings-macos.md)
@@ -53,7 +55,7 @@ Informace v tomto tématu vás seznámí se základy konfigurace profilů s vlas
     - [Nastavení Windows 10](custom-settings-windows-10.md)
     - [Nastavení Windows Holographic for Business](custom-settings-windows-holographic.md)
     - [Nastavení Androidu for Work](custom-settings-android-for-work.md)
-8. Až to budete mít, vraťte se do okna **Vytvořit profil** a klikněte na **Vytvořit**.
 
-Profil se vytvoří a zobrazí se v okně se seznamem profilů.
-Pokud chcete pokračovat a přiřadit tento profil ke skupinám, podívejte se na téma [Jak přiřadit profily zařízení](device-profile-assign.md).
+8. Až budete hotoví, vyberte **Vytvořit**.
+
+Profil se vytvoří a zobrazí se v seznamu profilů. Pokud chcete tento profil přiřadit ke skupinám, přečtěte si článek [Přiřazení profilů zařízení](device-profile-assign.md).

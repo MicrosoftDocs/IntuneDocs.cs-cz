@@ -1,29 +1,30 @@
 ---
-title: "Nastavení omezení pro zařízení s Windows 8.1 v Intune"
-titleSuffix: Azure portal
+title: "Nastavení omezení pro zařízení s Windows 8.1 v Microsoft Intune"
+titleSuffix: 
 description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s Windows 8.1."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 08/01/2017
+ms.date: 3/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: fe5785e9-8d35-4ad7-95e8-d50f8d87154a
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3c96340255e9b71694278b5a396d907a6212541d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 8cfaad3c35a0035546e5ebb7a55b9978da8025d8
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="windows-81-and-later-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení Windows 8.1 a novější v Microsoft Intune
+# <a name="microsoft-intune-windows-81-and-later-device-restriction-settings"></a>Nastavení omezení pro zařízení s Windows 8.1 a novější v Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+Tento článek ukazuje nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s Windows 8.1 a novější.
+
 
 ## <a name="general"></a>Obecné
 
@@ -52,7 +53,7 @@ Pokud vynutíte šifrování na zařízení, je obnovovací klíč přístupný 
 -   **Filtr SmartScreen** – Povolí nebo zakáže upozornění na potenciální podvodné weby.
 -   **JavaScript** – Povolí prohlížeči spouštění skriptů, jako třeba skriptu Java.
 -   **Automaticky otevíraná okna** – Povolí nebo zakáže blokování automaticky otevíraných oken v prohlížeči.
--   **Odesílat hlavičky Do Not Track** – Odesílá v Internet Exploreru hlavičku DNT (do not track) navštíveným webům.
+-   **Odesílat hlavičky Do Not Track** – Odesílá v Internet Exploreru hlavičku Do Not Track navštíveným webům.
 -   **Moduly plug-in** – Umožní uživatelům přidávat do Internet Exploreru moduly plug-in.
 -   **Jednoslovné zadání na intranetovém webu** – Umožňuje použití jednoho slova pro přesměrování Internet Exploreru na web, jako třeba Bing.
 -   **Automaticky zjistit intranetový web** – Pomáhá konfigurovat zabezpečení intranetových serverů v Internet Exploreru.
@@ -62,7 +63,7 @@ Pokud vynutíte šifrování na zařízení, je obnovovací klíč přístupný 
 -   **Vysoké zabezpečení pro weby s omezeným přístupem** – Nakonfiguruje úroveň zabezpečení pro zónu serverů s omezeným přístupem.
 -   **Přístup do nabídky Režim rozlehlé sítě** – Umožňuje uživatelům přistupovat k možnostem nabídky podnikového režimu z Internet Exploreru.
 Když zapnete toto nastavení můžete také určit **Umístění sestavy protokolování**, které obsahuje adresu URL sestavy, která zobrazuje weby, pro které uživatelé zapnuli přístup v podnikovém režimu.
--   **Umístění seznamu webů využívajících Režim rozlehlé sítě** – Určuje umístění seznamu webů, které budou používat podnikový režim, pokud bude aktivní.
+-   **Umístění seznamu webů využívajících Režim rozlehlé sítě** – Určuje umístění seznamu webů, které používají podnikový režim, pokud bude aktivní.
 
 ## <a name="cellular"></a>Mobilní služby
 -   **Datový roaming** – Povolí datový roaming, když je zařízení v mobilní síti.

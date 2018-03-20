@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/31/2018
+ms.date: 03/05/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0a72199c9e38f4f4d9d7317469eea2e6254efee7
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 7e65a32843cec48268c7e205ab4a064038c28415
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="enroll-android-devices"></a>Registrace zařízení s Androidem
 
@@ -55,9 +55,9 @@ Při registraci zařízení s Androidem for Work pomocí účtu [správce regist
 1. **Nastavení Intune MDM**<br>
 Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení [nastavením autority pro správu mobilních zařízení](mdm-authority-set.md) na **Microsoft Intune**.
 2. **Konfigurace vazby na Android for Work**<br>
-    Jako správce Intune na portálu Azure Portal vyberte **Další služby** > **Monitorování + správa** > **Intune**.
+    Jako správce Intune vyberte na portálu [Azure Portal](https://portal.azure.com) možnost **Všechny služby** > **Monitorování a správa** > **Intune**.
 
-   a. V okně **Intune** vyberte **Registrace zařízení** > **Registrace Androidu for Work**, zvolte **Konfigurovat** a otevřete web Androidu for Work na Google Play. Web se otevře v prohlížeči na nové kartě.
+   a. V podokně **Intune** zvolte **Registrace zařízení** > **Registrace Androidu for Work**  a potom **Spravovaný obchod Google Play – Konfigurovat**, abyste mohli otevřít web Android for Work obchodu Google Play. Web se otevře v prohlížeči na nové kartě.
    ![Obrazovka registrace Androidu for Work](./media/android-work-bind.png)
 
    b. **Přihlášení ke Googlu**<br>
@@ -106,7 +106,7 @@ Registraci a správu Androidu for Work můžete vypnout. Výběrem možnosti **Z
 ### <a name="to-unbind-an-android-for-work-account"></a>Zrušení vazby na účet Androidu for Work
 
 1. **Zrušení vazby na Android for Work**<br>
-    Jako správce Intune na portálu Azure Portal vyberte **Další služby** > **Monitorování + správa** > **Intune**.  V okně **Intune** zvolte **Registrace zařízení** > **Registrace Androidu for Work** a pak **Zrušit vazbu**.
+    Jako správce Intune vyberte na portálu [Azure Portal](https://portal.azure.com) možnost **Všechny služby** > **Monitorování a správa** > **Intune**.  V podokně **Intune** zvolte **Registrace zařízení** > **Registrace Androidu for Work** a potom vyberte **Zrušit vazbu**.
 
 2. **Souhlas s odstraněním vazby na Android for Work**<br>
   Výběrem možnosti **Ano** odstraníte vazbu a zrušíte v Intune registraci všech zařízení s Androidem for Work.

@@ -6,18 +6,18 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 1/25/2018
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 21bc79d3440e57ec91f7e4482112d77cf233575f
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 90d2df028d5a61bb134b6a2b76efa570eed80f20
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-configure-wi-fi-settings-in-microsoft-intune"></a>Jak nakonfigurovat nastavení Wi-Fi v Microsoft Intune
 
@@ -47,17 +47,19 @@ Informace v tomto tématu vás seznámí se základy konfigurace profilu Wi-Fi. 
 ## <a name="create-a-device-profile-containing-wi-fi-settings"></a>Vytvoření profilu zařízení obsahujícího nastavení Wi-Fi
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Konfigurace zařízení**.
-2. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
-3. V okně profilů zvolte **Vytvořit profil**.
-4. V okně **Vytvořit profil** zadejte **název** a **popis** profilu Wi-Fi.
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V podokně **Intune** zvolte **Konfigurace zařízení**.
+2. V podokně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
+3. V podokně profilů zvolte **Vytvořit profil**.
+4. V podokně **Vytvořit profil** zadejte **název** a **popis** profilu Wi-Fi.
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete použít nastavení Wi-Fi. V současné době můžete pro nastavení Wi-Fi na zařízení zvolit jednu z následujících platforem:
     - **Androidemem**
     - **Android for Work**
     - **iOS**
     - **macOS**
-    - **Windows 8.1 a novější (import profilu)**
+    - **Windows Phone 8.1**
+    - **Windows 8.1 a novější**
+    - **Windows 10 a novější**
 
    > [!IMPORTANT]
    > Pokud chcete vytvořit profil pro zařízení se systémem Windows 10, včetně Windows Holographic for Business, musíte zvolit platformu **Windows 8.1 a novější**. Platforma **Windows 10 a novější** nezahrnuje typ profilu sítě Wi-Fi. 
@@ -70,9 +72,9 @@ Informace v tomto tématu vás seznámí se základy konfigurace profilu Wi-Fi. 
     - [Nastavení iOSu](wi-fi-settings-ios.md)
     - [Nastavení macOS](wi-fi-settings-macos.md)
     - [Nastavení Windows 8.1 a novějších verzí](wi-fi-settings-import-windows-8-1.md) (včetně Windows Holographic for Business)
-1. Až to budete mít, vraťte se do okna **Vytvořit profil** a klikněte na **Vytvořit**.
+1. Až to budete mít, vraťte se do podokna **Vytvořit profil** a klikněte na **Vytvořit**.
 
-Profil se vytvoří a zobrazí se v okně se seznamem profilů.
+Profil se vytvoří a zobrazí se v podokně se seznamem profilů.
 
 ## <a name="next-steps"></a>Další kroky
 

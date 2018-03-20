@@ -6,20 +6,20 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 3/2/2018
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ad8553506752cce99f22283e50cc5f490d72ed0b
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 88be142c98d7b89720d245c738a45a26ac825395
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="microsoft-intune-home-screen-layout-settings-for-devices-running-ios"></a>Nastavení rozložení domovské obrazovky Microsoft Intune pro zařízení s iOSem 
+# <a name="microsoft-intune-home-screen-layout-settings-for-devices-running-ios"></a>Nastavení rozložení domovské obrazovky Microsoft Intune pro zařízení s iOSem
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -27,20 +27,21 @@ Pomocí těchto nastavení můžete konfigurovat rozložení aplikací a složky
 
 Zařízení s iOSem, ke kterým přiřadíte profil, musí být v režimu pod dohledem a musí používat iOS 9.3 nebo novější verzi.
 
-1. Na stránce **Konfigurace zařízení**, **Vytvořit profil**, **Funkce zařízení** vyberte **Rozložení domovské obrazovky (jenom pod dohledem)**.
-2. Na stránce **Rozložení domovské obrazovky (jenom pod dohledem)** zvolte, jestli chcete nakonfigurovat rozložení **Ukotvit** nebo **Stránky**.
+1. Z [Intune na portálu Azure Portal](https://portal.azure.com) přejděte na [**Funkce zařízení** v oblasti konfigurace zařízení](device-features-configure.md).
+2. V podokně **Funkce zařízení** zvolte **Rozložení domovské obrazovky (jenom pod dohledem)**.
+3. V podokně **Rozložení domovské obrazovky (jenom pod dohledem)** zvolte, jestli chcete nakonfigurovat rozložení **Ukotvit** nebo **Stránky**.
 
 ## <a name="add-items-to-the-dock"></a>Přidání položek do Docku
 
-Na stránce **Ukotvit** můžete přidat až šest položek nebo složek do Docku obrazovky iOSu. Mnoho zařízení však podporuje méně položek – zařízení iPhone například podporují maximálně čtyři položky. V takovém případě se na zařízení zobrazí jenom první čtyři položky, které nakonfigurujete.
+V podokně **Ukotvit** můžete přidat až šest položek nebo složek do Docku obrazovky iOSu. Mnoho zařízení však podporuje méně položek – zařízení iPhone například podporují maximálně čtyři položky. V takovém případě se na zařízení zobrazí jenom první čtyři položky, které nakonfigurujete.
 
 1. Zvolte **Přidat** a přidejte položku do Docku.
-2. Na stránce **Přidat řádek** zvolte, jestli chcete přidat **Aplikaci** nebo **Složku**.
+2. V podokně **Přidat řádek** zvolte, jestli chcete přidat **Aplikaci** nebo **Složku**.
 3. Pomocí informací v tomto tématu nakonfigurujte aplikace a složky, které se mají zobrazit v Docku.
-4. Přidejte další položky podle potřeby. Až skončíte s přidáváním položek, klikněte na každé stránce na **OK**, dokud se nevrátíte na stránku **Vytvořit profil**. Zvolte **Vytvořit**.
+4. Přidejte další položky podle potřeby. Až skončíte s přidáváním položek, klikněte v každém podokně na **OK**, dokud se nevrátíte do podokna **Vytvořit profil**. Zvolte **Vytvořit**.
 
 >[!TIP]
-> Přetažením položek na kterékoli domovské obrazovce a v seznamech stránek můžete změnit jejich položek. 
+> Přetažením položek na kterékoli domovské obrazovce a v seznamech stránek můžete změnit jejich položek.
 
 ### <a name="example"></a>Příklad
 
@@ -56,9 +57,8 @@ Když přiřadíte zásady k iPhonu, výsledkem bude Dock, který se podobá to
 
 Přidejte stránky, které se mají zobrazovat na domovské obrazovce, a aplikace, které se zobrazí na jednotlivých stránkách. Aplikace, které přidáte na stránku, jsou seřazené zleva doprava v pořadí, v jakém jsou uvedeny v seznamu. Pokud přidáte více aplikací, než se vejde na stránku, přesunou se na další stránku.
 
-
-1. Na stránce **Stránky** zvolte **Přidat**.
-2. Na stránce **Přidat řádek** zadejte **Název stránky**. Tento název slouží pro referenci na Azure Portalu, přičemž na zařízení s iOSem *se nezobrazuje*.
+1. V podokně **Stránky** zvolte **Přidat**.
+2. V podokně **Přidat řádek** zadejte **Název stránky**. Tento název slouží pro referenci na Azure Portalu, přičemž na zařízení s iOSem *se nezobrazuje*.
 3. Zvolte **Přidat** a potom vyberte, zda na stránku chcete přidat **Aplikaci** nebo **Složku**.
 4. Pomocí informací v tomto tématu nakonfigurujte aplikace a složky, které se mají zobrazit na stránce.
 
@@ -85,7 +85,7 @@ Aplikace, které přidáte na stránku ve složce, jsou seřazené zleva doprava
 
 1. Zadejte **Název složky**. Tento název se uživatelům zobrazí na jejich zařízení.
 2. Zvolte **Přidat** a vytvořte ve složce stránku. Můžete přidat až 20 stránek.
-3. Na stránce **Přidat řádek** zadejte název stránky. Tento název slouží pro referenci na Azure Portalu, přičemž na zařízení s iOSem *se nezobrazuje*.
+3. V podokně **Přidat řádek** zadejte název stránky. Tento název slouží pro referenci na Azure Portalu, přičemž na zařízení s iOSem *se nezobrazuje*.
 3. Zadejte **Název aplikace**. Tento název slouží pro referenci na Azure Portalu, přičemž na zařízení s iOSem *se nezobrazuje*.
 2. Zadejte **ID sady prostředků aplikace**, kterou chcete zobrazit. Nápovědu získáte v tématu **Přidání aplikace do seznamu**.
 3. Zvolte **Přidat**. Můžete přidat až 60 položek.
@@ -94,7 +94,7 @@ Aplikace, které přidáte na stránku ve složce, jsou seřazené zleva doprava
 
 ## <a name="bundle-id-reference-for-built-in-ios-apps"></a>Referenční informace o ID sady prostředků pro integrované aplikace pro iOS
 
-Tento seznam zobrazuje ID sady prostředků některých běžných integrovaných aplikací pro iOS. Pokud chcete najít ID sady prostředků jiných aplikací, obraťte se na dodavatele softwaru. 
+Tento seznam zobrazuje ID sady prostředků některých běžných integrovaných aplikací pro iOS. Pokud chcete najít ID sady prostředků jiných aplikací, obraťte se na dodavatele softwaru.
 
 |||
 |-|-|

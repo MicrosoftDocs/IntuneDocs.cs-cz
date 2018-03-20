@@ -1,12 +1,12 @@
 ---
-title: "Povolení konektoru Mobile Threat Defense s Intune"
+title: "Povolení konektoru Mobile Threat Defense v Microsoft Intune"
 titlesuffix: Azure portal
-description: "Povolení konektoru Mobile Threat Defense v Intune."
+description: "Povolte konektor mezi vaším partnerem Mobile Threat Defense (MTD) a Microsoft Intune."
 keywords: 
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 06/21/2017
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,30 +15,30 @@ ms.assetid: dbb6a37e-ba47-4b69-922c-d25e66c279f6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 99b73cb0885c4d93cf91ea219ca98a8a81d67b39
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: 28233965fb68ef1b83b07d14d39568b5bd997c89
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="enable-mobile-threat-defense-in-intune"></a>Povolení služby Mobile Threat Defense v Intune
+# <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Povolení konektoru Mobile Threat Defense v Intune
 
 > [!NOTE] 
 > Toto téma se týká všech partnerů ochrany před mobilními hrozbami.
 
-Pokud chcete v Intune povolit připojení ochrany před mobilními hrozbami (MTD), měli byste nakonfigurovat konektor Intune v konzole partnera MTD.
+Při nastavení Mobile Threat Defense (MTD) jste v konzole partnera MTD nakonfigurovali zásadu pro klasifikaci hrozeb a vytvořili jste zásadu dodržování předpisů zařízením v Intune. Pokud jste už nakonfigurovali konektor Intune v konzole partnera MTD, můžete teď v Intune povolit připojení MTD.
 
 ## <a name="to-enable-the-mtd-connector"></a>Povolení konektoru MTD
 
 1. Přejděte na portál [Azure Portal](https://portal.azure.com) a přihlaste se pomocí svých přihlašovacích údajů k Intune. Po úspěšném přihlášení se zobrazí **řídicí panel Azure**.
 
-2. Na **řídicím panelu Azure** zvolte v nabídce vlevo **Další služby** a do filtru textového pole zadejte **Intune**.
+2. Na **Řídicím panelu Azure** zvolte v nabídce vlevo **Všechny služby** a potom do filtru textového pole zadejte **Intune**.
 
-3. Zvolte **Intune** a zobrazí se **řídicí panel Intune**.
+3. Zvolte **Intune** a zobrazí se **Řídicí panel Intune**.
 
 4. Na **řídicím panelu Intune** zvolte **Dodržování předpisů zařízením** a potom v části **Nastavení** zvolte **Mobile Threat Defense**.
 
-5. V okně **Mobile Threat Defense** zvolte **Přidat**.
+5. V podokně **Mobile Threat Defense** zvolte **Přidat**.
 
 6. V rozevíracím seznamu **Vyberte konektor Mobile Threat Defense, který chcete nastavit** vyberte své řešení MTD.
 
@@ -64,4 +64,4 @@ Podle požadavků organizace se můžete rozhodnout, jaké možnosti přepínán
 > Před vytvořením pravidel zásad dodržování předpisů zařízení a podmíněného přístupu musíte přidat a přiřadit aplikace MTD. Tím zajistíte, že aplikace MTD bude připravena a koncoví uživatelé ji budou moci nainstalovat a získat tak přístup k e-mailu a dalším firemním prostředkům.
 
 > [!TIP]
-> Z okna Mobile Threat Defense se můžete podívat na **Stav připojení** a čas **poslední synchronizace** mezi Intune a partnerem MTD.
+> Z podokna Mobile Threat Defense se můžete podívat na **Stav připojení** a čas **poslední synchronizace** mezi Intune a partnerem MTD.

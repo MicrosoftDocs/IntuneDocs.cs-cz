@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 02/26/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 22a232de-ab93-44ab-b0b5-d2b3ccb007fe
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4e06b335c03caee0bd997748f9c48ed78d7d379b
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 53b5be6e5cdf8f60304126e133a727123bfef58d
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="get-started-managing-users"></a>Začínáme se správou uživatelů
 
@@ -28,12 +28,12 @@ Zamyslete se nad všemi různými lidmi, kteří pracují ve vaší organizaci. 
 ## <a name="how-do-i-create-a-user"></a>Jak vytvořím uživatele?
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. V části **Hledat prostředky** vyhledejte **Intune**.
-3. Po otevření okna **Microsoft Intune** vyberte **Uživatelé**. Na stránce **Všichni uživatelé** vyberte **+ Nový uživatel**.
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. Po otevření podokna **Microsoft Intune** vyberte **Uživatelé**. Na stránce **Všichni uživatelé** vyberte **+ Nový uživatel**.
 4. Zadejte podrobnosti o uživateli, jako je **Jméno** a **Uživatelské jméno**. Část uživatelského jména, která odpovídá názvu domény, musí být buď původní výchozí název domény „contoso.onmicrosoft.com“, nebo ověřený nefederovaný název domény, třeba „contoso.com“.
 5. V části **Skupiny** zvolte testovací skupinu, do které chcete uživatele přidat.
 6. Uložte si automaticky vygenerované heslo uživatele, abyste ho mohli použít k přihlášení do testovacího zařízení. Toto heslo musíte dát uživatelům, aby ho mohli změnit na normální heslo, které si zapamatují.
-7. V okně **Uživatel** vyberte **Vytvořit**.
+7. V podokně **Uživatelé** vyberte **Vytvořit**.
 
 ## <a name="assigning-licenses-to-users"></a>Přiřazení licencí uživatelům
 

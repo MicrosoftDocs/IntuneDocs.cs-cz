@@ -1,12 +1,12 @@
 ---
-title: "Přiřazení aplikací zařízením s Androidem for Work"
+title: "Přiřazení aplikací zařízení s Androidem for Work"
 titlesuffix: Microsoft Intune
 description: "Naučte se synchronizovat a přiřadit aplikace zařízením s Androidem for Work z obchodu Google Play for Work."
 keywords: 
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2018
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: 2f6c06bf-e29a-4715-937b-1d2c7cf663d4
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6a0b488120ed62031f8af5b8b65d9e90ea6d252b
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: e3b5a742fb480cf9c4c77106b849eebb95ad2439
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/12/2018
 ---
-# <a name="how-to-assign-apps-to-android-for-work-devices-with-intune"></a>Přiřazení aplikací zařízením s Androidem for Work pomocí Intune
+# <a name="how-to-assign-apps-to-android-for-work-devices-with-intune"></a>Přiřazení aplikací zařízení s Androidem for Work pomocí Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -38,36 +38,35 @@ Ověřte, že jste v úloze **Registrace zařízení** Azure Portalu nakonfiguro
 ## <a name="synchronize-an-app-from-the-google-play-for-work-store"></a>Synchronizace aplikace z obchodu Google Play for Work
 
 1. Přejděte do [obchodu Google Play for Work](https://play.google.com/work). Přihlaste se pomocí stejného účtu, který jste použili ke konfiguraci propojení mezi Intune a Androidem for Work.
-2. Vyhledejte v obchodě aplikaci, kterou chcete přiřadit pomocí Intune.
-3. Na stránce se zvolenou aplikací vyberte **Schválit**. V tomto příkladu je zvolená aplikace Microsoft Excel.<br>
-  ![Příklad schválení aplikace](media/approve.png)
-4. Otevře se okno s žádostí, abyste této aplikaci udělili oprávnění k provádění různých operací. Pokračujte výběrem možnosti **Schválit**.<br>
-  ![Příklad schválení oprávnění aplikace](media/approve-app-permissions.png)
-5. Aplikace se schválí a zobrazí v konzole pro správu.
+2. Vyhledejte a vyberte v obchodě aplikaci, kterou chcete přiřadit pomocí Intune.
+3. Na stránce zobrazující aplikaci vyberte **Schválit**. Následující příklady ukazují zvolenou aplikaci Microsoft Excel.</br>
 
-## <a name="publish-then-synchronize-a-line-of-business-app-from-the-google-play-for-work-store"></a>Publikování a synchronizace obchodní aplikace z obchodu Google Play for Work
+    ![Příklad – schválení aplikace v obchodu Google Play for Work](media/approve.png)</br>
+    
+  Otevře se okno s žádostí, abyste této aplikaci udělili oprávnění k provádění různých operací. 
 
-1. Přejděte do konzoly pro vývojáře Google Play na adrese [play.google.com/apps/publish](https://play.google.com/apps/publish).
-2. Přihlaste se pomocí stejného účtu, který jste použili ke konfiguraci propojení mezi Intune a Androidem for Work. Pokud se přihlašujete poprvé, musíte se zaregistrovat a zaplatit poplatek, abyste se stali členy programu pro vývojáře Google.
-3. V této konzole zvolte **Přidat novou aplikaci**.
-4. Informace o vaší aplikaci nahrajete a zadáte stejným způsobem jako při publikování jakékoli jiné aplikace v obchodě Google Play. Musíte ale vybrat nastavení **Zpřístupnit tuto aplikaci pouze pro moji organizaci (<*název organizace*>)**:<br>
-  ![Možnost zpřístupnění aplikace jen pro organizaci](media/restrict.png)<br>
-Tím zajistíte, aby tato aplikace byla dostupná jen vaší organizaci a nebyla dostupná ve veřejném obchodě Google Play.
-Další informace o nahrávání a publikování aplikací pro Android najdete v [nápovědě ke konzole pro vývojáře Google](https://support.google.com/googleplay/android-developer/answer/113469).
-5. Po publikování aplikace přejděte do [obchodu Google Play for Work](https://play.google.com/work). Přihlaste se pomocí stejného účtu, který jste použili ke konfiguraci propojení mezi Intune a Androidem for Work.
-6. Ověřte, že se v uzlu **Aplikace** tohoto obchodu zobrazuje aplikace, kterou jste publikovali. Synchronizace s Intune bude automaticky schválená.
+4. Pokud chcete přijmout oprávnění aplikace a pokračovat, vyberte **Schválit**.</br>
 
-## <a name="assign-an-android-for-work-app"></a>Přiřazení aplikace pro Android for Work
+    ![Příklad – schválení oprávnění aplikace](media/approve-app-permissions.png)
+
+5. Vyberte, jak se mají zpracovávat nové žádosti oprávnění aplikace. Potom vyberte **Uložit** a uložte způsob zpracování nových žádostí oprávnění aplikace.</br>
+
+    ![Příklad – uložení nové žádosti oprávnění aplikace](media/approve-app-settings.png)</br>
+
+    Aplikace se schválí a zobrazí v konzole pro správu. Teď můžete [aplikaci Android for Work synchronizovat se službou Intune](apps-add-android-for-work.md#sync-an-android-for-work-app-with-intune). 
+
+## <a name="sync-an-android-for-work-app-with-intune"></a>Synchronizace aplikace Android for Work s Intune
 
 Pokud jste aplikaci v tomto obchodě schválili, ale nevidíte ji v uzlu **Licencované aplikace** úlohy **Mobilní aplikace**, vynuťte tímto způsobem okamžitou synchronizaci:
 
-1. Přihlaste se k portálu Azure Portal.
-2. V okně **Intune** zvolte **Mobilní aplikace**.
-3. V úloze **Mobilní aplikace** zvolte **Nastavení** > **Android for Work**.
-4. V okně Android for Work zvolte **Synchronizovat nyní**.
-5. Na této stránce se zobrazuje také čas a stav poslední synchronizace.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. Na stránce **Intune** zvolte **Mobilní aplikace**.
+4. V úloze **Mobilní aplikace** zvolte v části **Nastavení** možnost **Android for Work**.
+5. V podokně Android for Work vyberte **Synchronizovat**. Stránka aktualizuje čas a stav poslední synchronizace.
+6. V úloze **Mobilní aplikace** vyberte **Aplikace** a zobrazte nově dostupnou aplikaci Android for Work.
 
-Když se aplikace objeví v uzlu **Licencované aplikace** úlohy **Mobilní aplikace**, můžete ji [přiřadit stejně jako jakoukoli jinou aplikaci](/intune-azure/manage-apps/deploy-apps). Tuto aplikaci můžete přiřadit jenom skupinám uživatelů.
+Když se aplikace objeví v uzlu **Licence aplikací** úlohy **Mobilní aplikace**, můžete ji [přiřadit stejně jako jakoukoli jinou aplikaci](/intune-azure/manage-apps/deploy-apps). Tuto aplikaci můžete přiřadit jenom skupinám uživatelů.
 
 Po přiřazení se aplikace nainstaluje na zařízení, která jste určili. Uživatel zařízení nebude požádán o schválení instalace.
 
@@ -86,5 +85,21 @@ Pravidelně navštěvujte spravovanou konzolu Google Play a kontrolujte nová op
 
 Případně ale můžete obchod Google Play nastavit tak, aby automaticky schvaloval nová oprávnění pro každou z aplikací. 
 
+## <a name="working-with-a-line-of-business-app-from-the-google-play-for-work-store"></a>Používání obchodní aplikace z obchodu Google Play for Work
 
+1. Přejděte do konzoly pro vývojáře Google Play na adrese [play.google.com/apps/publish](https://play.google.com/apps/publish).
+2. Přihlaste se pomocí stejného účtu, který jste použili ke konfiguraci propojení mezi Intune a Androidem for Work. Pokud se přihlašujete poprvé, musíte se zaregistrovat a zaplatit poplatek, abyste se stali členy programu pro vývojáře Google.
+3. V této konzole zvolte **Přidat novou aplikaci**.
+4. Informace o vaší aplikaci nahrajete a zadáte stejným způsobem jako při publikování jakékoli jiné aplikace v obchodě Google Play. Musíte ale vybrat nastavení **Zpřístupnit tuto aplikaci pouze pro moji organizaci (<*název organizace*>)**:</br>
+
+    ![Možnost zpřístupnění aplikace jen pro organizaci](media/restrict.png)</br>
+
+Tím zajistíte, aby tato aplikace byla dostupná jen vaší organizaci a nebyla dostupná ve veřejném obchodě Google Play.
+Další informace o nahrávání a publikování aplikací pro Android najdete v [nápovědě ke konzole pro vývojáře Google](https://support.google.com/googleplay/android-developer/answer/113469).
+5. Po publikování aplikace přejděte do [obchodu Google Play for Work](https://play.google.com/work). Přihlaste se pomocí stejného účtu, který jste použili ke konfiguraci propojení mezi Intune a Androidem for Work.
+6. Ověřte, že se v uzlu **Aplikace** tohoto obchodu zobrazuje aplikace, kterou jste publikovali. Synchronizace s Intune bude automaticky schválená.
+
+## <a name="next-steps"></a>Další kroky
+
+- [Postup přiřazení aplikací do skupin](apps-deploy.md)
 

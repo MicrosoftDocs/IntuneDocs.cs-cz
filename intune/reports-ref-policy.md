@@ -1,5 +1,6 @@
 ---
-title: "Zásady | Dokumentace Microsoftu"
+title: "zásady"
+titlesuffix: Microsoft Intune
 description: "Téma referenčních informací ke kategorii Zásady pro kolekce entit v rozhraní API datového skladu Intune"
 keywords: "Datový sklad Intune"
 author: Erikre
@@ -13,11 +14,11 @@ ms.technology:
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ab8393f3792611001d15fe4eb031225587126251
-ms.sourcegitcommit: cccbb6730a8c84dc3a62093b8910305081ac9d24
+ms.openlocfilehash: c5546c686a51170c8c854252cddb048685c6b2d2
+ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="reference-for-policy-entities"></a>Referenční informace pro entity zásad
 

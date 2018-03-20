@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 08e1126e05d101669c5796e4bd7fcaf08339fa43
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 7c63c817ccddd0abc6c5c6b0ae2f2a7d1cb2d9bf
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="vpn-connections-in-microsoft-intune"></a>Připojení VPN v Microsoft Intune
 
@@ -53,7 +53,7 @@ Cisco (IPsec)|Ano |Ano   |Ne  |Ne  |Ne | Ne|
 Citrix|Ano |Ano (jen Android)   |Ne  |Ne  |Ne | Ne|
 Pulse Secure|Ano  |Ano |Ano   |Ano  |Ano| Ano|        
 F5 Edge Client|Ano |Ano |Ano |Ano  |   Ano |  Ano|   
-Dell SonicWALL Mobile Connect|Ano |Ano |Ano |Ano |Ano |Ano|         
+SonicWall Mobile Connect|Ano |Ano |Ano |Ano |Ano |Ano|         
 CheckPoint Mobile VPN|Ano |Ano |Ano |Ano|Ano|Ano|
 Protokol SSL společnosti Microsoft (SSTP)|Ne |Ne |Ne |Ne|Ne|VPNv1 OMA-URI*|
 Automaticky pomocí technologie Microsoft|Ne |Ne |Ne |Ne|Ano (OMA-URI)|Ano|
@@ -108,7 +108,7 @@ Název nastavení  |Další informace
 **Název**     |Zadejte jedinečný název profilu sítě VPN, který vám pomůže ho v konzole Intune rozpoznat.         
 **Popis**     |Zadejte popis, který bude shrnovat účel profilu VPN, a uveďte jakékoli další důležité informace, které vám pomůžou ho najít.         
 **Název připojení VPN (zobrazený uživatelům)**     |Zadejte jméno nebo název profilu VPN. Toto je název, který se uživatelům zobrazí v seznamu dostupných připojení VPN na zařízeních.         
-**Typ připojení**     |  Vyberte jeden z následujících typů připojení pro použití s profilem VPN: **Cisco AnyConnect** (není k dispozici pro Windows 8.1 nebo Windows Phone 8.1), **Pulse Secure**, **Citrix**, **F5 Edge Client**, **Dell SonicWALL Mobile Connect**, **CheckPoint Mobile VPN**.
+**Typ připojení**     |  Vyberte jeden z následujících typů připojení pro použití s profilem VPN: **Cisco AnyConnect** (není k dispozici pro Windows 8.1 nebo Windows Phone 8.1), **Pulse Secure**, **Citrix**, **F5 Edge Client**, **SonicWall Mobile Connect**, **CheckPoint Mobile VPN**.
 **Popis serveru VPN**     | Zadejte popis serveru VPN, ke kterému se budou zařízení připojovat. Příklad: **Contoso VPN Server**. Pokud je typ připojení **F5 Edge Client**, použijte pro zadání seznamu popisů a IP adres serveru pole **Seznam serverů**.
 **IP adresa nebo plně kvalifikovaný název domény (FQDN) serveru**    |Zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se bude zařízení připojovat. Příklady: **192.168.1.1**, **vpn.contoso.com**.  Pokud je typ připojení **F5 Edge Client**, použijte pro zadání seznamu popisů a IP adres serveru pole **Seznam serverů**.         |         
 **Seznam serverů**     |Zvolením možnosti **Přidat** přidejte nový server sítě VPN určený pro připojení k síti VPN. Můžete taky určit, který server bude pro připojení výchozí. Tato možnost se zobrazí, jenom když je typ připojení **F5 Edge Client**.         
@@ -118,7 +118,7 @@ Název nastavení  |Další informace
 **Vyberte klientský certifikát pro ověření klienta (certifikát identity)**|Vyberte certifikát klienta SCEP, který jste dříve vytvořili a který se použije k ověření připojení VPN. Další informace o použití profilů certifikátů v Intune najdete v tématu [Zabezpečení přístupu k prostředkům pomocí profilů certifikátů v Microsoft Intune](secure-resource-access-with-certificate-profiles.md). Tato možnost se zobrazí jenom v případě, že je metoda ověřování **Certifikáty**.
 **Role**| Zadejte název role uživatele, který má přístup k tomuto připojení. Role uživatele definuje osobní nastavení a možnosti a povolí nebo zakáže určité funkce přístupu. Tato možnost se zobrazí jenom v případě, že typ připojení je **Pulse Secure** nebo **Citrix**.
 **Sféra**|Zadejte název sféry ověření, kterou chcete použít. Sféra ověření je seskupení prostředků ověření používaných typem připojení Pulse Secure nebo Citrix. Tato možnost se zobrazí jenom v případě, že typ připojení je **Pulse Secure** nebo **Citrix**.
-**Doména nebo skupina přihlášení**|Zadejte název domény nebo skupiny přihlášení, k níž se chcete připojit. Tato možnost se zobrazí jenom v případě, že se je typ připojení **Dell SonicWALL Mobile Connect**.
+**Doména nebo skupina přihlášení**|Zadejte název domény nebo skupiny přihlášení, k níž se chcete připojit. Tato možnost se zobrazí jenom v případě, že se je typ připojení **SonicWall Mobile Connect**.
 **Otisk prstu**|Zadejte řetězec, například „Kód otisku prstu Contoso“, který se použije k ověření, že je možné serveru VPN důvěřovat. Otisk prstu se může odeslat klientovi, aby věděl, že může důvěřovat jakémukoli serveru, který při připojování nabízí ten samý otisk. Pokud zařízení ještě otisk prstu nemá, vyzve uživatele, aby důvěřoval serveru VPN, ke kterému se připojuje. Současně přitom zobrazuje otisk prstu. (Uživatel ho ručně ověří a zvolí **důvěryhodnost** připojení.) Tato možnost se zobrazuje jenom v případě, že je typ připojení **Kontrolní bod – mobilní síť VPN**.
 **VPN na aplikaci**|Tuto možnost vyberte, pokud chcete toto připojení VPN přidružit k aplikaci pro iOS nebo Mac OS X tak, aby se připojení otevřelo při spuštění aplikace. Profil VPN je možné přidružit k aplikaci při nasazení softwaru. Další informace najdete v tématu [Nasazení aplikací v Microsoft Intune](deploy-apps-in-microsoft-intune.md).
 **VPN na vyžádání**|VPN na vyžádání můžete nastavit pro zařízení s iOSem 8.0 a novější verzí. Pokyny pro toto nastavení jsou uvedené v článku [VPN na vyžádání pro zařízení s iOSem](#on-demand-vpn-for-ios-devices).
@@ -126,7 +126,7 @@ Název nastavení  |Další informace
 **Použít automatický konfigurační skript** (jenom iOS, Mac OS X, Windows 8.1 a Windows Phone 8.1)|Pokud server VPN vyžaduje pro připojení proxy server, určete, jestli chcete k definování nastavení použít automatický konfigurační skript, a pak zadejte adresu URL souboru, který obsahuje nastavení. Další informace najdete v dokumentaci k Windows Serveru.
 **Použít proxy server** (jenom iOS, Mac OS X, Windows 8.1 a Windows Phone 8.1)|Pokud server VPN vyžaduje pro připojení proxy server, vyberte tuto možnost a potom zadejte adresu a číslo portu proxy serveru. Další informace najdete v dokumentaci k Windows Serveru.
 **Nepoužívat nastavení proxy pro místní adresy** (jenom iOS, Mac OS X, Windows 8.1 a Windows Phone 8.1)|Pokud VPN server vyžaduje pro připojení proxy server, vyberte tuto možnost, když nechcete používat proxy server pro místní adresy, které zadáte. Další informace najdete v dokumentaci k Windows Serveru.
-**Vlastní XML** (jenom Windows 8.1 a novější a Windows Phone 8.1 a novější)|Zadejte vlastní příkazy XML, které konfigurují připojení VPN. Příklad pro **Pulse Secure**: &lt;pulse-schema&gt;&lt;isSingleSignOnCredential&gt;true&lt;/isSingleSignOnCredential&gt;&lt;/pulse-schema&gt;. Příklad pro **CheckPoint Mobile VPN**: &lt;CheckPointVPN port="443" name="CheckPointSelfhost" sso="true"  debug="3" /&gt;. Příklad pro **Dell SonicWALL Mobile Connect**: &lt;MobileConnect&gt;&lt;Compression&gt;false&lt;/Compression&gt;&lt;debugLogging&gt;True&lt;/debugLogging&gt;&lt;packetCapture&gt;False&lt;/packetCapture&gt;&lt;/MobileConnect&gt;. Příklad pro **F5 Edge Client**: &lt;f5-vpn-conf&gt;&lt;single-sign-on-credential /&gt;&lt;/f5-vpn-conf&gt;. Další informace o tom, jak psát vlastní příkazy XML, najdete v dokumentaci k síti VPN jednotlivých výrobců.
+**Vlastní XML** (jenom Windows 8.1 a novější a Windows Phone 8.1 a novější)|Zadejte vlastní příkazy XML, které konfigurují připojení VPN. Příklad pro **Pulse Secure**: &lt;pulse-schema&gt;&lt;isSingleSignOnCredential&gt;true&lt;/isSingleSignOnCredential&gt;&lt;/pulse-schema&gt;. Příklad pro **CheckPoint Mobile VPN**: &lt;CheckPointVPN port="443" name="CheckPointSelfhost" sso="true"  debug="3" /&gt;. Příklad pro **SonicWall Mobile Connect**: &lt;MobileConnect&gt;&lt;Compression&gt;false&lt;/Compression&gt;&lt;debugLogging&gt;True&lt;/debugLogging&gt;&lt;packetCapture&gt;False&lt;/packetCapture&gt;&lt;/MobileConnect&gt;. Příklad pro **F5 Edge Client**: &lt;f5-vpn-conf&gt;&lt;single-sign-on-credential /&gt;&lt;/f5-vpn-conf&gt;. Další informace o tom, jak psát vlastní příkazy XML, najdete v dokumentaci k síti VPN jednotlivých výrobců.
 **Seznam hledání přípon DNS** (jenom Windows Phone 8.1)|Zadejte jednu příponu DNS na každém řádku. Každá zadaná přípona DNS se bude vyhledávat při připojení k webu pomocí krátkého názvu. Například když zadáte přípony DNS **domain1.contoso.com** a **domain2.contoso.com** a navštívíte adresu **http://mywebsite**, vyhledají se adresy **http://mywebsite.domain1.contoso.com** a **http://mywebsite.domain2.contoso.com**.
 **Obcházet VPN při připojení k síti Wi-Fi společnosti** (jenom Windows Phone 8.1)|Výběrem této možnosti určíte, že se připojení VPN nebude používat při připojení zařízení k podnikové síti Wi-Fi.
 **Obcházet VPN při připojení k domácí síti Wi-Fi** (jenom Windows Phone 8.1)|Výběrem této možnosti určíte, že se připojení VPN nebude používat při připojení zařízení k domácí síti Wi-Fi.

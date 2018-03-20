@@ -1,29 +1,30 @@
 ---
-title: "Nastavení omezení pro zařízení s Windows Phone 8.1 v Intune"
-titleSuffix: Azure portal
+title: "Nastavení omezení pro zařízení s Windows Phone 8.1 v Microsoft Intune"
+titleSuffix: 
 description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s Windows Phone 8.1."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 08/01/2017
+ms.date: 3/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: c2d42714-49ca-43b3-b080-2e67a4268198
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 98734b51cf72a097c6b4a9e425e80457b0b39afa
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 808c8e9ac1ef944b69ae8e548c62d4c6366820d0
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="windows-phone-81-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro zařízení Windows Phone 8.1 v Microsoft Intune
+# <a name="microsoft-intune-windows-phone-81-device-restriction-settings"></a>Nastavení omezení pro zařízení Windows Phone 8.1 v Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+Tento článek ukazuje nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s Windows Phone 8.1.
+
 
 ## <a name="general"></a>Obecné
 
@@ -75,7 +76,7 @@ Příklad: Vyhledání aplikace Skype ve Storu. Použijete adresu URL **http://w
 
 ### <a name="additional-options"></a>Další možnosti
 
-Můžete také kliknout na **Import** a naplnit seznam ze souboru csv ve formátu <*adresa url aplikace*>, <*název aplikace*>, <*vydavatel aplikace*> nebo kliknout na **Export** a vytvořit si soubor csv obsahující seznam aplikací s omezeným přístupem ve stejném formátu.
+Můžete také kliknout na **Import** a naplnit seznam ze souboru csv ve formátu <*adresa url aplikace*>, <*název aplikace*><app publisher> nebo kliknout na **Export** a vytvořit si soubor csv obsahující seznam aplikací s omezeným přístupem ve stejném formátu.
 
 
 ## <a name="browser"></a>Prohlížeč

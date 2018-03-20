@@ -1,6 +1,6 @@
 ---
 title: "Co je nového v Microsoft Intune"
-titlesuffix: Azure portal
+titlesuffix: 
 description: "Zjistěte, jaké novinky přináší portál Intune Azure."
 keywords: 
 author: ErikjeMS
@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7490302c7bd928417cdf946cbbf74f8b8b7531ed
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 513164a1f734fddb6ac66fcaffdc2fb885a4659a
+ms.sourcegitcommit: 9cf05d3cb8099e4a238dae9b561920801ad5cdc6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -762,11 +762,8 @@ Intune ukončuje od 1. května 2018 podporu [modulu plug-in Microsoft Intune App
 Další informace o nástroji App Wrapping Tool najdete v tématech [Nástroj App Wrapping Tool pro iOS](app-wrapper-prepare-ios.md) a [Nástroj App Wrapping Tool pro Android](app-wrapper-prepare-android.md). S případnými problémy nebo dotazy se obraťte na [msintuneappsdk@microsoft.com](mailto:msintuneappsdk@microsoft.com). 
 
 ### <a name="plan-for-change-use-intune-on-azure-now-for-your-mdm-management----1227338---"></a>Plánovaná změna: Ke správě MDM se teď používá Intune v Azure <!-- 1227338 -->
-Před více než rokem jsme oznámili vydání [Intune ve verzi Public Preview na platformě Azure](https://cloudblogs.microsoft.com/enterprisemobility/2016/12/07/public-preview-of-intune-on-azure/) a pak před šesti měsíci [obecnou dostupnost nového prostředí pro správu](https://cloudblogs.microsoft.com/enterprisemobility/2017/06/08/the-new-intune-and-conditional-access-admin-consoles-are-ga/) Intune. Od 2. dubna 2018 vypínáme správu mobilních zařízení (MDM) v klasické konzole Silverlight pro zákazníky, kteří používají Intune samostatně. Místo toho můžete ke svým potřebám MDM používat [Intune v Azure](https://aka.ms/Intune_on_Azure). Pokud k MDM ještě používáte klasickou konzolu, přestaňte ji prosím používat a seznamte se s Intune v Azure. Neočekáváme, že tato změna bude mít nějaký dopad na koncové uživatele. Klasická správa počítačů zůstane v Silverlightu. Další informace o této změně a o jejím dopadu na vás najdete [tady](https://aka.ms/Intune_on_Azure_mdm).
+Před více než rokem jsme oznámili vydání [Intune ve verzi Public Preview na platformě Azure](https://cloudblogs.microsoft.com/enterprisemobility/2016/12/07/public-preview-of-intune-on-azure/) a pak před šesti měsíci [obecnou dostupnost nového prostředí pro správu](https://cloudblogs.microsoft.com/enterprisemobility/2017/06/08/the-new-intune-and-conditional-access-admin-consoles-are-ga/) Intune. Od 31. srpna 2018 vypínáme správu mobilních zařízení (MDM) v klasické konzole Silverlight pro zákazníky, kteří používají Intune samostatně. Místo toho můžete ke svým potřebám MDM používat [Intune v Azure](https://aka.ms/Intune_on_Azure). Pokud k MDM ještě používáte klasickou konzolu, přestaňte ji prosím používat a seznamte se s Intune v Azure. Neočekáváme, že tato změna bude mít nějaký dopad na koncové uživatele. Klasická správa počítačů zůstane v Silverlightu. Další informace o této změně a o jejím dopadu na vás najdete [tady](https://aka.ms/Intune_on_Azure_mdm).
 
-
-### <a name="plan-for-change-easy-assist-end-of-life----1556480---"></a>Plánovaná změna: Ukončení životnosti technologie Easy Assist <!-- 1556480 -->
-Služba Intune používá ke vzdálené správě počítačů technologii Microsoft Easy Assist. Možná jste nevěděli, že technologie Microsoft Easy Assist je součástí služby Office Live Meeting, která byla k 31. prosinci 2017 vyřazena jako zastaralá. To znamená, že ukončení životnosti k 31. prosinci 2017 platí i pro nabídku Easy Assist v Intune.
 
 ### <a name="manage-android-for-work-devices-independently-from-android-devices----1490731-eeready--"></a>Oddělená správa zařízení s Androidem for Work od zařízení s Androidem <!-- 1490731 EEready-->    
 **Poznámka**: Následující změny začneme zavádět od listopadové aktualizace, ale než se promítnou u vašeho účtu, může to chvíli trvat. Jakmile tyto změny začnou platit i pro váš účet, pošleme vám oznámení s potvrzením přes portál Office 365. Po zavedení změn budete mít k dispozici další možnosti správy. Zavádění změn se nijak nedotkne prostředí pro koncové uživatele.
@@ -795,25 +792,8 @@ Pokud jste už platformu používali, závisí vaše situace na nastavení, kter
 
 Ve všech případech se vaše zamýšlená regulace zachová. K tomu, aby se zachovala možnost globálního používání Androidu for Work ve vašem prostředí nebo možnost používání této platformy konkrétními skupinami, nevyžadujeme z vaší strany žádnou akci.
 
-### <a name="deprecating-support-for-os-x-mavericks-1010-and-previous-versions-of-macos---1489263-plan-for-change-for-1802--"></a>Ukončení podpory pro OS X Mavericks 10.10 a předchozí verze macOSu <!--1489263, plan for change for 1802-->
-Ukončení registrace zařízení s OS X Yosemite 10.10 a předchozími verzemi macOS bude zahájeno v únoru 2018. Intune plně podporuje OS X El Capitan 10.11 a novější.
-
-### <a name="new-path-for-managed-devices-in-graph-api----1586728---"></a>Nová cesta pro spravovaná zařízení v Graph API <!-- 1586728 -->
-Cesta používaná pro přístup ke spravovaným zařízením v beta verzi rozhraní Graph API se mění. 
-
-| | |
-|--|--|
-| Aktuální cesta |  https://graph.microsoft.com/beta/managedDevices |
-| Nová cesta | https://graph.microsoft.com/beta/deviceManagement/managedDevices |
-
-Celý říjen budou fungovat obě cesty. Po říjnovém vydání verze služby bude fungovat jenom cesta nová.  Pokud používáte rozhraní Graph API pro přístup ke spravovaným zařízením, aktualizujte a ověřte své skripty a aplikace s novou cestou. Další změny najdete v měsíčním [protokolu změn Graph API](https://developer.microsoft.com/graph/docs/concepts/changelog).
-
-
 ### <a name="direct-access-to-apple-enrollment-scenarios---951869--"></a>Přímý přístup ke scénářům registrace Apple <!--951869-->
 U účtů Intune vytvořených po lednu 2017 umožňuje Intune přímý přístup ke scénářům registrace Apple pomocí úlohy Registrovat zařízení na portálu Azure Portal. Náhled na registraci Apple byl předtím přístupný jen přes odkazy na klasickém portálu Intune. Zpřístupnění těchto funkcí v Azure vyžaduje u účtů Intune vytvořených před lednem 2017 jednorázovou migraci. Plán této migrace zatím nebyl oznámen, podrobnosti ale budou zpřístupněny co nejdříve. Pokud váš existující účet nemá k Azure Portalu přístup, k otestování tohoto nového prostředí důrazně doporučujeme vytvořit zkušební účet.
-
-### <a name="administration-roles-being-replaced-in-azure-portal"></a>Nahrazení rolí správy na portálu Azure Portal
-Existující role pro správu mobilních aplikací (MAM) (Přispěvatel, Vlastník a Jen pro čtení) používané v klasickém portálu Intune (Silverlight) byly na portálu Azure Portal pro Intune nahrazeny celou řadou nových možností řízení přístupu na základě role (RBAC). Jakmile migrujete na portál Azure Portal, bude potřeba, abyste svým správcům přiřadili tyto nové role správy. Další informace o RBAC a nových rolích najdete v článku [Řízení přístupu na základě role pro Microsoft Intune](/intune/role-based-access-control).
 
 ## <a name="whats-coming"></a>Co připravujeme
 
@@ -822,24 +802,6 @@ Existující role pro správu mobilních aplikací (MAM) (Přispěvatel, Vlastn�
 Připravujeme k vydání důležitou aktualizaci uživatelského prostředí aplikace Portál společnosti pro iOS. Tato aktualizace bude mít zcela přepracovaný vizuální design, který bude zahrnovat modernizaci vzhledu a chování a lepší použitelnost a přístupnost. Všechny aktuální funkce aplikace Portál společnosti pro iOS budou zachované.
 
 V rámci programu Apple TestFlight vám nabízíme předprodejní verzi aktualizované aplikace Portál společnosti pro iOS, abyste si ji mohli vyzkoušet a sdělit nám svoje názory. Pro přístup k programu TestFlight se zaregistrujte na https://aka.ms/intune_ios_cp_testflight.
-
-### <a name="conditional-access-policies-for-intune-will-only-be-available-from-the-azure-portal-----1737088---"></a>Zásady podmíněného přístupu pro Intune budou dostupné jenom z portálu Azure Portal  <!-- 1737088 -->
-Zjednodušujeme to, kde a jak se konfiguruje a spravuje podmíněný přístup. V současnosti můžete podmíněný přístup spravovat z okna Intune App Protection (MAM) a prostřednictvím klasického prostředí Azure AD na [Windows Azure Portalu](https://manage.windowsazure.com). Od ledna budete moct zásady konfigurovat a spravovat jenom na portálu [Azure Portal](https://portal.azure.com) z **Azure Active Directory** > **Podmíněný přístup**. Na toto okno se také pohodlně dostanete z Intune na portálu Azure Portal přes **Intune** > **Podmíněný přístup**.
-
-### <a name="manage-jamf-enrolled-macos-devices-with-intunes-device-compliance-engine---1592747--"></a>Správa zařízení macOS zaregistrovaných v Jamf s modulem dodržování předpisů zařízení Intune <!--1592747-->
-Počínaje začátkem roku 2018 bude Jamf odesílat systému macOS informace o stavu zařízení Intune, který pak vyhodnotí informace o dodržování předpisů se zásadami definovaných v konzole Intune. Podle stavu dodržování předpisů zařízení a také dalších podmínek (třeba umístění, uživatelského rizika atd.) bude podmíněný přístup vynucovat dodržování předpisů pro zařízení macOS, které mají přístup ke cloudovým a místním aplikacím propojených s Azure AD, včetně Office 365.
-
-### <a name="changes-in-support-for-the-intune-ios-company-portal-app-----1164474----"></a>Změny v podpoře pro aplikaci Portál společnosti Intune pro iOS  <!-- 1164474  -->
-Již brzy bude dostupná nová verze aplikace Portál společnosti Microsoft Intune pro iOS, která bude podporovat pouze zařízení se systémem iOS 9.0 nebo novějším. Verze podporující iOS 8 bude ještě na krátkou dobu k dispozici. Pokud používáte také aplikace iOS s podporou MAM, podporujeme iOS 9.0 a novější, takže budete muset zajistit, aby vaši koncoví uživatelé aktualizovali na nejnovější verzi operačního systému. 
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Přestože nemáme konkrétní datum, dáváme vám to vědět předem, abyste měli čas si to naplánovat. Zajistěte, aby vaši uživatelé měli iOS 9.0 nebo novější, a jakmile vyjde nová verze aplikace Portál společnosti, požádejte koncové uživatele, aby tuto aplikaci aktualizovali.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-Upozorněte své uživatele, že aby mohli naplno využívat nových funkcí služby Intune, musí si iOS aktualizovat na verzi 9.0 nebo novější.  Vyzvěte uživatele, aby si nainstalovali novou verzi aplikace Portál společnosti a mohli využívat nově nabízených funkcí.
-
-Pokud chcete vidět všechna aktuální zařízení s operačními systémy staršími než iOS 9, přejděte na Azure Portalu do služby Intune, zobrazte si Zařízení > Všechna zařízení a vyfiltrujte si je podle verze iOSu.
-
 
 ### <a name="apple-to-require-updates-for-application-transport-security---748318--"></a>Apple bude vyžadovat aktualizace ATS (Application Transport Security) <!--748318-->
 Apple oznámil, že začne vynucovat specifické požadavky na ATS (Application Transport Security). ATS se používá k vynucení vyššího zabezpečení veškeré komunikace aplikací přes protokol HTTPS. Tato změna ovlivní zákazníky Intune, kteří používají aplikace Portál společnosti pro iOS.

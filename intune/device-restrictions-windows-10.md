@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 861c971c98493f6adab78e6bc93d560bbc1d5243
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: eee23afb4e2398358dc2c6b19b7d85be6b4f9edb
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/12/2018
 ---
 #<a name="microsoft-intune-windows-10-and-later-device-restriction-settings"></a>Nastavení omezení pro zařízení Windows 10 a novější v Microsoft Intune
 Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s Windows 10.
@@ -268,7 +268,7 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 
       - **Uživatelský účet** – Určuje místní uživatelský účet (v zařízení) nebo přihlášení k účtu Azure AD přidružené k aplikaci veřejného terminálu. Pro účty připojené k doménám Azure AD zadejte účet ve tvaru `domain\\username@tenant.org`.
 
-         Pro zařízení ve veřejných prostředích použijte účty s minimálními oprávněními, abyste zabránili autorizované aktivitě.  
+         Pro zařízení ve veřejných prostředích použijte účty s minimálními oprávněními, abyste zabránili neautorizované aktivitě.  
 
       - **ID modelu uživatele aplikace (AUMID) dané aplikace** – Určuje AUMID aplikace veřejného terminálu. Další informace najdete v tématu [Jak najít ID modelu uživatele aplikace (AUMID) nainstalované aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 

@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8e770c39a22b620bb642b7b15a456369bb4acec2
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 24b1ffb1d89f52a51f21dc6c4a588324f3cd87d3
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="automatically-enroll-ios-devices-by-using-apples-device-enrollment-program"></a>Automatická registrace zařízení s iOSem pomocí Programu registrace zařízení společnosti Apple
 
@@ -74,7 +74,7 @@ Token DEP vytvoříte pomocí portálu DEP společnosti Apple. Pomocí portálu 
 
 **Krok 1: Stáhněte si certifikát veřejného klíče služby Intune, který je potřebný pro vytvoření tokenu DEP Apple.**<br>
 
-1. V Intune na portálu Azure Portal vyberte **Registrace zařízení** > **Registrace Apple** > **Token Programu registrace**.
+1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení** > **Registrace Apple** > **Token Programu registrace**.
 
   ![Podokno Token Programu registrace v pracovním prostoru Certifikáty Apple](./media/enrollment-program-token-add.png)
 
@@ -116,7 +116,7 @@ Přejděte k souboru certifikátu (.pem), zvolte **Otevřít** a pak zvolte **Na
 
 Po nainstalování tokenu můžete vytvořit registrační profil pro zařízení DEP. Registrační profil zařízení definuje nastavení, která se během registrace použijí pro skupinu zařízení.
 
-1. V Intune na portálu Azure Portal vyberte **Registrace zařízení** > **Registrace Apple**.
+1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení** > **Registrace Apple**.
 2. V části **Program registrace pro Apple** vyberte **Profily Programu registrace** > **Vytvořit**.
 3. V části **Vytvořit registrační profil** zadejte **Název** a **Popis** profilu pro účely správy. Uživatelům se tyto údaje nezobrazí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [dynamických skupinách Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#using-attributes-to-create-rules-for-device-objects).
 
@@ -169,7 +169,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 ## <a name="sync-managed-devices"></a>Synchronizace spravovaných zařízení
 Teď, když má Intune oprávnění spravovat vaše zařízení, můžete synchronizovat Intune s Apple, aby se spravovaná zařízení zobrazila v Intune na portálu Azure Portal.
 
-1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** > **Registrace Apple** > **Zařízení Programu registrace** > **Synchronizovat**. Indikátor průběhu vám ukáže dobu, jakou budete muset počkat před dalším vyžádáním synchronizace.
+1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení** > **Registrace Apple** > **Zařízení Programu registrace** > **Synchronizovat**. Indikátor průběhu vám ukáže dobu, jakou budete muset počkat před dalším vyžádáním synchronizace.
 
   ![Vybraný uzel Zařízení Programu registrace a vybraný odkaz Synchronizovat](./media/enrollment-program-device-sync.png)
   
@@ -190,7 +190,7 @@ Než se můžou zařízení zaregistrovat, musíte přiřadit profil programu re
 >[!NOTE]
 >Sériová čísla můžete profilům také přiřadit v okně **sériových čísel Apple**.
 
-1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** > **Registrace Apple** a pak vyberte **Profily Programu registrace**.
+1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení** > **Registrace Apple** a potom **Profily Programu registrace**.
 2. V seznamu **Profily Programu registrace** vyberte profil, který chcete zařízením přiřadit, a pak vyberte **Přiřadit zařízení**.
 
  ![Přiřazení zařízení s vybranou možností Přiřadit](./media/enrollment-program-device-assign.png)

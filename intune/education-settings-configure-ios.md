@@ -6,7 +6,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: dougeby
-ms.date: 06/28/2017
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
 ms.reviewer: derriw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f7bbf0ab4196f5e86d7f25aa23f12d89f1bb5ee5
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: d9b2e6df6c40ec142554db22a64d362e02884c1d
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-configure-intune-settings-for-the-ios-classroom-app"></a>Jak nakonfigurovat nastavení Intune pro aplikaci Classroom pro iOS
 
@@ -72,12 +72,12 @@ Informace můžete do SDS naimportovat jednou z následujících metod:
 
 ### <a name="configure-general-settings"></a>Konfigurace obecných nastavení
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3.  V okně **Intune** zvolte **Konfigurovat zařízení**.
-4.  V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
-5.  V okně profilů zvolte **Vytvořit profil**.
-6.  V okně **Vytvořit profil** zadejte **Název** a **Popis** vzdělávacího profilu iOS.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V podokně **Intune** zvolte **Konfigurace zařízení**.
+2. V podokně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
+5.  V podokně profilů zvolte **Vytvořit profil**.
+6.  V podokně **Vytvořit profil** zadejte **Název** a **Popis** vzdělávacího profilu iOS.
 7.  Z rozevíracího seznamu **Platforma** zvolte **iOS**.
 8.  Z rozevíracího seznamu **Typ profilu** zvolte **Vzdělávání**.
 9.  Zvolte **Nastavení** > **Konfigurovat**.
@@ -94,7 +94,7 @@ Certifikáty, které vytvoříte, musí kromě ověřování uživatelů podporo
 
 ### <a name="configure-teacher-certificates"></a>Konfigurace certifikátů učitelů
 
-V okně **Vzdělávání** zvolte **Certifikáty učitelů**.
+V podokně **Vzdělávání** zvolte **Certifikáty učitelů**.
 
 #### <a name="configure-teacher-root-certificate"></a>Konfigurace kořenového certifikátu učitele
 
@@ -116,8 +116,8 @@ Po dokončení konfigurace certifikátů zvolte **OK**.
 
 ### <a name="configure-student-certificates"></a>Konfigurace certifikátů studentů
 
-1.  V okně **Vzdělávání** zvolte **Certifikáty studentů**.
-2.  V okně **Certifikáty studentů** zvolte v seznamu **Typ certifikátů studentských zařízení** možnost **1:1**.
+1.  V podokně **Vzdělávání** zvolte **Certifikáty studentů**.
+2.  V podokně **Certifikáty studentů** zvolte v seznamu **Typ certifikátů studentských zařízení** možnost **1:1**.
 
 #### <a name="configure-student-root-certificate"></a>Konfigurace kořenového certifikátu studenta
 
@@ -139,10 +139,10 @@ Až dokončíte konfiguraci certifikátů, zvolte **OK**.
 
 ## <a name="finish-up"></a>Dokončení
 
-1.  V okně **Vzdělávání** zvolte OK.
-2.  V okně **Vytvořit profil** zvolte **Vytvořit**.
+1.  V podokně **Vzdělávání** zvolte OK.
+2.  V podokně **Vytvořit profil** zvolte **Vytvořit**.
     
-Profil se vytvoří a zobrazí se v okně se seznamem profilů.
+Profil se vytvoří a zobrazí se v podokně se seznamem profilů.
 
 Přiřaďte profil ke studentským zařízením ve skupinách učebny, které se vytvořily při synchronizaci školních dat se službou Azure AD (viz [Přiřazení profilů zařízení](device-profile-assign.md)).
 

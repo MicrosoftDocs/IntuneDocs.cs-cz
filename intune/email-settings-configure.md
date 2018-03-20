@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d805d10efccb92ca3fe65b771bf7689e22f42088
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 83d508f0ce33becb9abcef7434845836d8dd2bca
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-configure-email-settings-in-microsoft-intune"></a>Jak nakonfigurovat nastavení e-mailu v Microsoft Intune
 
@@ -39,17 +39,19 @@ Informace v tomto článku vás seznámí se základy konfigurace e-mailového p
 
 ## <a name="create-a-device-profile-containing-email-settings"></a>Vytvoření profilu zařízení obsahujícího nastavení e-mailu
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. Na stránce **Intune** zvolte **Konfigurace zařízení**.
-2. Na stránce **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
-3. Na stránce profilů zvolte **Vytvořit profil**.
-4. Na stránce **Vytvořit profil** zadejte **Název** a **Popis** e-mailového profilu.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V podokně **Intune** zvolte **Konfigurace zařízení**.
+2. V podokně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
+3. V podokně profilů zvolte **Vytvořit profil**.
+4. V podokně **Vytvořit profil** zadejte **název** a **popis** e-mailového profilu.
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete použít nastavení e-mailu. V současné době můžete pro nastavení e-mailu na zařízení zvolit jednu z následujících platforem:
     - **Android** (jenom Samsung Android Knox Standard)
     - **Android for Work**
     - **iOS**
+    - **macOS**
     - **Windows Phone 8.1**
+    - **Windows 8.1 a novější**
     - **Windows 10 a novější**
 6. V rozevíracím seznamu **Typ profilu** zvolte **E-mail**.
 7. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Podrobnosti o nastaveních na jednotlivých platformách najdete v následujících tématech:
@@ -57,9 +59,9 @@ Informace v tomto článku vás seznámí se základy konfigurace e-mailového p
     - [Nastavení iOSu](email-settings-ios.md)
     - [Nastavení Windows Phone 8.1](email-settings-windows-phone-8-1.md)
     - [Nastavení Windows 10](email-settings-windows-10.md)
-8. Až to budete mít, vraťte se na stránku **Vytvořit profil** a klikněte na **Vytvořit**.
+8. Až to budete mít, vraťte se do podokna **Vytvořit profil** a klikněte na **Vytvořit**.
 
-Profil se vytvoří a zobrazí se na stránce se seznamem profilů.
+Profil se vytvoří a zobrazí se v podokně se seznamem profilů.
 Pokud chcete pokračovat a přiřadit tento profil ke skupinám, podívejte se na téma [Jak přiřadit profily zařízení](device-profile-assign.md).
 
 ## <a name="further-information"></a>Další informace

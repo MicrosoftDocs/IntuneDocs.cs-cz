@@ -1,7 +1,7 @@
 ---
-title: "Nastavení integrace služby Skycure se službou Intune"
-titlesuffix: Azure portal
-description: "Nastavení integrace služby Skycure se službou Microsoft Intune."
+title: "Nastavení integrace služby Skycure s Microsoft Intune"
+titlesuffix: 
+description: "Přečtěte si, jak integrovat řešení Skycure Mobile Threat Defense do Microsoft Intune, abyste mohli regulovat přístup mobilních zařízení k firemním prostředkům."
 keywords: 
 author: msmimart
 ms.author: mimart
@@ -15,15 +15,15 @@ ms.assetid: 359448d9-2384-42ac-a21c-a25148c20a7b
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7a1cea01960512ca484caa643862d90cbb867963
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: 3a09806afae72f60961a94ab27707b4851006cf0
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="set-up-the-skycure-integration-with-intune"></a>Nastavení integrace služby Skycure se službou Intune
 
-Pokud chcete mít možnosti jednotného přihlašování, musíte aplikace Skycure přidat do služby Azure AD.
+Při integraci řešení Skycure Mobile Threat Defense do Intune je potřeba provést následující kroky. Pokud chcete mít možnosti jednotného přihlašování, musíte aplikace Skycure přidat do služby Azure AD.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
@@ -62,15 +62,15 @@ Služba Skycure podporuje dva způsoby integrace se službou Intune:
 
 4.  Klikněte na popisek **iOS App** (Aplikace pro iOS), na kterém je napsáno **Add to Active Directory** (Přidat do služby Active Directory).
 
-    ![Aplikace pro iOS v konzole pro správu Skycure](./media/skycure-setup-1.png)
+    ![Obrázek aplikace pro iOS v konzole pro správu Skycure](./media/skycure-setup-1.png)
 
 5.  Otevře se přihlašovací stránka. Zadejte své přihlašovací údaje do služby Intune a klikněte na **Accept** (Přijmout).
 
-    ![Výzva k přihlášení aplikace pro iOS do služby Intune](./media/skycure-setup-2.png)
+    ![Obrázek výzvy k přihlášení aplikace pro iOS do služby Intune](./media/skycure-setup-2.png)
 
 6.  Jakmile je aplikace ve službě Azure AD přidaná, uvidíte v konzole pro správu Skycure ukazatel, že se aplikace do služby Azure AD úspěšně přidala.
 
-    ![Dokončení přidání aplikace pro iOS](./media/skycure-setup-3.png)
+    ![Obrázek dokončení přidání aplikace pro iOS](./media/skycure-setup-3.png)
 
 > [!NOTE]
 > Stejný postup zopakujte pro aplikaci **Skycure pro Android** a **aplikaci pro správu**.
@@ -79,13 +79,13 @@ Služba Skycure podporuje dva způsoby integrace se službou Intune:
 
 Je potřeba přidat skupinu zabezpečení služby Azure AD, která obsahuje všechna zařízení se službou Skycure.
 
-1.  Zadejte a vyberte všechny skupiny zabezpečení se zařízeními, na kterých běží služba Skycure, a potom klikněte na **Apply changes** (Použít změny).
+-  Zadejte a vyberte všechny skupiny zabezpečení se zařízeními, na kterých běží služba Skycure, a potom klikněte na **Apply changes** (Použít změny).
 
-    ![Konfigurace skupiny zabezpečení v konzole pro správu Skycure](./media/skycure-setup-4.png)
+    ![Obrázek znázorňující, kde konfigurovat skupinu zabezpečení v konzole pro správu Skycure](./media/skycure-setup-4.png)
 
 Služba Skycure sesynchronizuje zařízení, na kterých běží její služba ochrany před mobilními hrozbami se skupinami zabezpečení služby Azure AD.
 
-![Dokončení konfigurace skupiny zabezpečení v konzole pro správu Skycure](./media/skycure-setup-5.png)
+![Obrázek znázorňující dokončení konfigurace skupiny zabezpečení v konzole pro správu Skycure](./media/skycure-setup-5.png)
 
 ## <a name="set-up-the-full-integration-between-intune-and-skycure"></a>Nastavení úplné integrace mezi službami Intune a Skycure
 
@@ -103,7 +103,7 @@ Služba Skycure sesynchronizuje zařízení, na kterých běží její služba o
 
 5.  Klikněte na **Apply changes** (Použít změny).
 
-    ![Dokončení úplné integrace služby Skycure](./media/skycure-setup-6.png)
+    ![Obrázek znázorňující dokončení úplné integrace služby Skycure](./media/skycure-setup-6.png)
 
 ## <a name="next-steps"></a>Další kroky
 

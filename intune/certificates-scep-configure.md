@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: dougeby
-ms.date: 1/18/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 61193cc96f0ea22e9a80d24fe8ee0499e80d4202
-ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
+ms.openlocfilehash: d723bc4d5032a7a5c330367fe83eabd4763917a2
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="configure-and-manage-scep-certificates-with-intune"></a>Konfigurace a správa certifikátů SCEP pomocí Intune
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -35,7 +35,7 @@ Toto téma popisuje, jak pomocí Intune konfigurovat infrastrukturu a pak vytvo�
 -  **Server NDES**: Na serveru, na kterém běží Windows Server 2012 R2 nebo novější, musíte nastavit službu zápisu síťových zařízení (NDES). Intune nepodporuje používání služby zápisu síťových zařízení, pokud běží na serveru, na kterém běží taky certifikační autorita organizace. Pokyny k tomu, jak konfigurovat Windows Server 2012 R2 k hostování služby zápisu síťových zařízení, najdete v tématu [Doprovodné materiály ke službě zápisu síťových zařízení](http://technet.microsoft.com/library/hh831498.aspx).
 Server NDES musí být připojený k doméně, která je hostitelem certifikační autority, a nesmí být na stejném serveru jako tato autorita. Další informace o nasazení serveru NDES v samostatné doménové struktuře, izolované síti nebo interní doméně najdete v tématu [Použití modulu zásad se Službou zápisu síťových zařízení](https://technet.microsoft.com/library/dn473016.aspx).
 
--  **Microsoft Intune Certificate Connector**: Prostřednictvím portálu Azure Portal stáhněte instalační program **Certificate Connectoru** (**ndesconnectorssetup.exe**). Pak můžete soubor **ndesconnectorssetup.exe** spustit na serveru hostujícím roli Služba zápisu síťových zařízení (NDES), na který chcete Certificate Connector nainstalovat. 
+-  **Microsoft Intune Certificate Connector**: Prostřednictvím Azure Portalu stáhněte instalační program **Certificate Connectoru** (**ndesconnectorssetup.exe**). Pak můžete soubor **ndesconnectorssetup.exe** spustit na serveru hostujícím roli Služba zápisu síťových zařízení (NDES), na který chcete Certificate Connector nainstalovat. 
 -  **Proxy server webových aplikací** (volitelné): Jako server služby Proxy webových aplikací (WAP) použijte server se systémem Windows Server 2012 R2 nebo novějším. Tato konfigurace:
     -  Umožňuje zařízením získat certifikáty pomocí připojení k internetu.
     -  Je doporučeným zabezpečením v případě, že se zařízení připojují prostřednictvím internetu za účelem příjmu a obnovení certifikátů.
@@ -304,11 +304,11 @@ V této úloze:
 ##### <a name="to-download-install-and-configure-the-certificate-connector"></a>Stažení, instalace a konfigurace Certificate Connectoru
 ![ConnectorDownload](./media/certificates-download-connector.png)   
  
-1. Přihlaste se k portálu Azure Portal. 
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Konfigurace zařízení**.
-4. V okně **Konfigurace zařízení** vyberte **Certifikační autorita**.
-5. Klikněte na **Přidat** a vyberte **Stáhnout konektor**. Uložte stažený soubor do umístění, kam máte přístup ze serveru, na který ho budete instalovat. 
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V podokně **Intune** zvolte **Konfigurace zařízení**.
+4. V podokně **Konfigurace zařízení** vyberte **Certifikační autorita**.
+5. Klikněte na **Přidat** a vyberte **Stáhnout soubor konektoru**. Uložte stažený soubor do umístění, kam máte přístup ze serveru, na který ho budete instalovat. 
 6.  Po dokončení stahování spusťte stažený instalační program (**ndesconnectorssetup.exe**) na serveru, který je hostitelem role Služba zápisu síťových zařízení (NDES). Tento instalační program nainstaluje taky modul zásad pro NDES a webovou službu CRP. (Webová služba CRP, CertificateRegistrationSvc, běží ve službě ve službě IIS jako aplikace).
 
     > [!NOTE]
@@ -346,10 +346,10 @@ Pokud chcete ověřit, jestli je služba spuštěná, spusťte prohlížeč a za
 
 ## <a name="how-to-create-a-scep-certificate-profile"></a>Vytvoření profilu certifikátu SCEP
 
-1. Na portálu Azure Portal vyberte úlohu **Konfigurovat zařízení**.
-2. V okně **Konfigurace zařízení** vyberte **Spravovat** > **Profily**.
-3. V okně profilů zvolte **Vytvořit profil**.
-4. V okně **Vytvořit profil** zadejte **název** a **popis** profilu certifikátu SCEP.
+1. Na portálu Azure Portal vyberte úlohu **Konfigurace zařízení**.
+2. V podokně **Konfigurace zařízení** vyberte **Spravovat** > **Profily**.
+3. V podokně profilů zvolte **Vytvořit profil**.
+4. V podokně **Vytvořit profil** zadejte **Název** a **Popis** profilu certifikátu SCEP.
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení pro tento certifikát SCEP. V současné době můžete pro nastavení omezení zařízení zvolit jednu z těchto platforem:
     - **Androidemem**
     - **iOS**
@@ -358,7 +358,7 @@ Pokud chcete ověřit, jestli je služba spuštěná, spusťte prohlížeč a za
     - **Windows 8.1 a novější**
     - **Windows 10 a novější**
 6. V rozevíracím seznamu **Typ profilu** zvolte **Certifikát SCEP**.
-7. V okně **Certifikát SCEP** nakonfigurujte následující nastavení:
+7. V podokně **Certifikát SCEP** nakonfigurujte tato nastavení:
     - **Období platnosti certifikátu** – Pokud jste na vydávající CA spustili příkaz **certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**, který umožňuje nastavit vlastní období platnosti, můžete zadat dobu zbývající do vypršení platnosti certifikátu.<br>Zadat můžete hodnotu nižší, než je období platnosti zadané v šabloně certifikátu, ne však vyšší. Pokud je třeba období platnosti certifikátu v šabloně certifikátu dva roky, můžete zadat hodnotu jeden rok, ale ne pět let. Hodnota musí být zároveň nižší než zbývající doba platnosti certifikátu vydávající CA. 
     - **Zprostředkovatel úložiště klíčů (KSP)** (Windows Phone 8.1, Windows 8.1, Windows 10) – Určete, kam se má uložit klíč k certifikátu. Vyberte jednu z těchto hodnot:
         - **Zapsat do KSP na čipu TPM (Trusted Platform Module), pokud existuje, jinak zapsat do softwarového KSP**
@@ -385,9 +385,9 @@ Pokud chcete ověřit, jestli je služba spuštěná, spusťte prohlížeč a za
     - **Nastavení registrace**
         - **Prahová hodnota obnovení (%)** – Zadejte procento doby životnosti certifikátu zbývající v okamžiku, kdy zařízení požádá o obnovení certifikátu.
         - **Serverové adresy URL pro SCEP** – Zadejte jednu nebo více adres URL pro servery NDES, které vystavují certifikáty prostřednictvím SCEP. 
-8. Až to budete mít, vraťte se do okna **Vytvořit profil** a klikněte na **Vytvořit**.
+8. Vyberte **OK** a pak přejděte zpátky do podokna **Vytvořit profil** a vyberte **Vytvořit**.
 
-Profil se vytvoří a zobrazí se v okně se seznamem profilů.
+Profil se vytvoří a zobrazí se v podokně se seznamem profilů.
 
 ## <a name="how-to-assign-the-certificate-profile"></a>Přiřazení profilu certifikátu
 

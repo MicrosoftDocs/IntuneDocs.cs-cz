@@ -1,7 +1,7 @@
 ---
-title: "Ochrana před mobilními hrozbami s Intune"
-titleSuffix: Azure portal
-description: "Přístup k prostředkům společnosti můžete chránit podle rizika zařízení."
+title: "Ochrana před mobilními hrozbami pomocí Microsoft Intune"
+titleSuffix: 
+description: "Pomocí služby Intune Mobile Threat Defense (MTD) a partnerem Mobile Threat Defense můžete chránit přístup k podnikovým prostředkům na základě rizika zařízení."
 keywords: 
 author: msmimart
 ms.author: mimart
@@ -15,13 +15,13 @@ ms.assetid: ac77b590-a7ec-45a0-9516-ebf5243b6210
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: da0f21a822608052846200e13ef37ca4606e6079
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: 2eaba4f04d6a1daedf40b7b37d2b44ed5aff4533
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="mobile-threat-defense-integration-with-intune"></a>Integrace ochrany před mobilními hrozbami do Intune
+# <a name="what-is-mobile-threat-defense-integration-with-intune"></a>Co je integrace služby Mobile Threat Defense s Intune?
 
 
 Konektory Intune Mobile Threat Defense vám umožňují využívat zvoleného dodavatele Mobile Threat Defense jako zdroje informací pro zásady dodržování předpisů a pravidla podmíněného přístupu. Správci IT tak mohou přidat podnikovým prostředkům, jako je například Exchange a SharePoint, vrstvu ochrany z ohrožených mobilních zařízení.
@@ -32,7 +32,7 @@ Společnosti potřebují chránit citlivá data před vznikajícími hrozbami, m
 
 V minulosti byly společnosti aktivní při ochraně počítačů před útoky, ale mobilní zařízení zůstávají nemonitorovaná a nechráněná. Mobilní platformy mají integrovanou ochranu, jako je izolace aplikací nebo obchody s aplikacemi pro prověřené spotřebitele, ale přesto jsou tyto platformy nadále zranitelné sofistikovanými útoky. V dnešní době je více zaměstnanců, kteří k práci využívají nějaká zařízení a potřebují přístup k citlivým údajům. Zařízení je nutné chránit před stále důmyslnějšími útoky.
 
-## <a name="how-the-intune-mobile-threat-defense-connectors-work"></a>Jak fungují konektory Intune Mobile Threat Defense?
+## <a name="how-do-the-intune-mobile-threat-defense-connectors-work"></a>Jak fungují konektory Intune Mobile Threat Defense?
 
 Konektor chrání firemní prostředky tím, že mezi Intune a vaším dodavatelem zvoleného konektoru Mobile Threat Defense vytvoří komunikační kanál. Partneři Intune Mobile Threat Defense nabízejí intuitivní a snadno nasaditelné aplikace pro mobilní zařízení, které aktivně kontrolují a analyzují informace o hrozbách, aby je sdílely s Intune pro účely nahlášení nebo vynucení. 
 
@@ -58,11 +58,11 @@ Inventáře ze zařízení s iOSem 11 a novějším v osobním i firemním vlast
 
 Pokud řešení Mobile Threat Defense považuje zařízení za nakažené:
 
-![Nakažené zařízení s ochranou službou Mobile Threat Defense](./media/MTD-image-1.png)
+![Obrázek znázorňující nakažené zařízení s ochranou pomocí služby Mobile Threat Defense](./media/MTD-image-1.png)
 
 Přístup se udělí, když je zařízení opravené:
 
-![Udělení přístupu službou Mobile Threat Defense](./media/MTD-image-2.png)
+![Obrázek znázorňující udělení přístupu službou Mobile Threat Defense](./media/MTD-image-2.png)
 
 > [!NOTE] 
 > Použití více dodavatelů služby Mobile Threat Defense s Intune není podporováno. Zapnutí několika nástrojů služby MTD vynutí instalaci všech aplikací MTD a zjišťování hrozeb napříč různými zařízeními.

@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/11/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 29c3d331cae06b0474fc3a2b31790719d99c678e
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 7d014ae02f3db2ea9175e74f2a867bd12f1d4f22
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifikace zařízení jako vlastněných společností
 
@@ -70,7 +70,7 @@ V textovém editoru vypadá soubor .csv takhle:
 
 ### <a name="add-a-csv-list-of-corporate-identifiers"></a>Přidání seznamu podnikových identifikátorů ve formátu .csv
 
-1. V Intune na Azure Portalu zvolte **Registrace zařízení** > **Identifikátory podnikových zařízení** a klikněte na **Přidat**.
+1. V [Intune na portálu Azure Portal](https://portal.azure.com) zvolte **Registrace zařízení** > **Identifikátory podnikových zařízení** a potom klikněte na **Přidat**.
 
  ![Pracovní prostor s identifikátory podnikových zařízení a zvýrazněným tlačítkem Přidat](./media/add-corp-id.png)
 
@@ -82,11 +82,11 @@ Importovaná zařízení nemusí být nutně zaregistrovaná. Zařízení můžo
 
 ### <a name="delete-corporate-identifiers"></a>Odstranění podnikových identifikátorů
 
-1. V Intune na Azure Portalu zvolte **Registrace zařízení** > **Identifikátory podnikových zařízení**.
+1. V [Intune na portálu Azure Portal](https://portal.azure.com) zvolte **Registrace zařízení** > **Identifikátory podnikových zařízení**.
 2. Vyberte identifikátory zařízení, které chcete odstranit, a zvolte **Odstranit**.
 3. Potvrďte odstranění.
 
-Při odstranění podnikového identifikátoru zaregistrovaného zařízení se nezmění vlastnictví zařízení. Pokud chcete změnit vlastnictví zařízení, přejděte na **Zařízení** > **Všechna zařízení**, vyberte zařízení, zvolte **Vlastnosti** a změňte **Vlastnictví zařízení**.
+Při odstranění podnikového identifikátoru zaregistrovaného zařízení se nezmění vlastnictví zařízení. Pokud chcete změnit vlastnictví zařízení, přejděte na **Zařízení**, vyberte zařízení, zvolte **Vlastnosti** a změňte **Vlastnictví zařízení**.
 
 ### <a name="imei-specifications"></a>Specifikace IMEI
 Podrobné specifikace o číslech IMEI najdete na stránce [3GGPP TS 23.003](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=729).
@@ -96,7 +96,7 @@ Podrobné specifikace o číslech IMEI najdete na stránce [3GGPP TS 23.003](ht
 U každého záznamu zařízení v Intune se ve vlastnostech zařízení zobrazuje **Vlastnictví**. Jako správce můžete zařízení označit jako **Osobní** nebo **Firemní**.
 
 **Vlastnictví zařízení změníte takto:**
-1. V Intune na Azure Portalu přejděte na **Zařízení** > **Všechna zařízení** a zvolte požadované zařízení.
+1. V [Intune na portálu Azure Portal](https://portal.azure.com) přejděte na **Zařízení** a zvolte požadované zařízení.
 3. Zvolte **Vlastnosti**.
 4. Určete **Vlastnictví zařízení** jako **Osobní** nebo **Firemní**.
 

@@ -5,7 +5,7 @@ keywords: "intune graphapi c# powershell role oprávnění"
 author: vhorne
 manager: dougeby
 ms.author: victorh
-ms.date: 06/20/2017
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 79A67342-C06D-4D20-A447-678A6CB8D70A
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e1c97c32f5f6c81f1112c99b486898c271cc5ff2
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: 7b59d4bc689daf462ac01a106457c3835a78b98b
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Používání Azure AD pro přístup k rozhraním Intune API v Microsoft Graphu
 
@@ -44,7 +44,7 @@ V tomto článku najdete:
 
 - Příklady ověřování rozhraní Intune API pro C# a PowerShell
 
-- Popis postupu pro podporu více tenantů
+- Popisuje postup pro podporu více tenantů.
 
 Další informace najdete v tématech:
 
@@ -97,7 +97,7 @@ Postup pro registraci aplikace k používání rozhraní Microsoft Graph API:
 
     <img src="media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
-    Vyberte požadované role pro aplikaci tak, že zaškrtnete políčko nalevo od příslušného názvu.  Další informace o konkrétních oborech oprávnění pro Intune najdete v tématu [Obory oprávnění pro Intune](#user-content-intune-permission-scopes).  Další informace o dalších oborech oprávnění pro rozhraní Graph API najdete v tématu [Referenční informace o oprávněních pro Microsoft Graph](https://developer.microsoft.com/graph/docs/concepts/permissions_reference).
+    Vyberte požadované role pro aplikaci tak, že zaškrtnete políčko nalevo od příslušného názvu.  Další informace o konkrétních oborech oprávnění pro Intune najdete v tématu [Obory oprávnění pro Intune](#intune-permission-scopes).  Další informace o dalších oborech oprávnění pro rozhraní Graph API najdete v tématu [Referenční informace o oprávněních pro Microsoft Graph](https://developer.microsoft.com/graph/docs/concepts/permissions_reference).
 
     Nejlepších výsledků dosáhnete, když zvolíte co nejméně rolí potřebných k implementaci aplikace.
 
@@ -139,7 +139,7 @@ Když udělujete oprávnění pro Microsoft Graph, můžete určit následujíc�
 
 Nastavení _Povolit přístup_ | Název oboru
 :--|:--
-__Provádění vzdálených akcí s dopadem na uživatele na zařízeních v Microsoft Intune__ | [DeviceManagementManagedDevices.PrivilegedOperations.All](#user-content-mgd-po)
+__Provádění vzdálených akcí s dopadem na uživatele na zařízeních v Microsoft Intune__ | [DeviceManagementManagedDevices.PrivilegedOperations.All](#mgd-po)
 __Čtení a zápis do zařízení v Microsoft Intune__ | [DeviceManagementManagedDevices.ReadWrite.All](#mgd-rw)
 __Čtení zařízení v Microsoft Intune__ | [DeviceManagementManagedDevices.Read.All](#mgd-ro)
 __Čtení a zápis nastavení RBAC v Microsoft Intune__ | [DeviceManagementRBAC.ReadWrite.All](#rac-rw)
@@ -585,7 +585,7 @@ Nezapomeňte uživatele přidat podle potřeby k dalším rolím. Například ab
 
 Také:
 
-- Pomocí webu http://portal.office.com přiřaďte licenci pro Intune k vašemu uživatelskému účtu.
+- Pomocí webu https://portal.office.com přiřaďte licenci pro Intune k vašemu uživatelskému účtu.
 
 - Aktualizujte kód aplikace k ověřování v doméně tenanta služby Azure AD daného klienta, nikoli ve vaší vlastní.
 

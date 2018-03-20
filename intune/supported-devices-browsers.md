@@ -1,5 +1,6 @@
 ---
-title: "Podporovaná zařízení – Microsoft Intune"
+title: "Operační systémy a prohlížeče podporované v Microsoft Intune"
+titleSuffix: 
 description: "Seznam podporovaných platforem zařízení a prohlížečů pro správu zařízení přes Intune"
 keywords: 
 author: ErikjeMS
@@ -14,24 +15,19 @@ ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 11c4336979ee9089b218ea79ac826176d99492d9
-ms.sourcegitcommit: 754fcc31155b28d6910bba45419c6be745f8793e
+ms.openlocfilehash: 1e58201620612118f0984a1c477b3fa3bc7e923a
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="supported-operating-systems-and-browsers"></a>Podporované operační systémy a prohlížeče
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
-Tento článek je určený pro správce systému, kteří se v podniku starají o zařízení. Nápovědu k instalaci Intune na zařízení najdete v článku věnovanému [práci pomocí spravovaných zařízení](/intune-user-help/company-portal-frequently-asked-questions).
+Před nastavením Microsoft Intune zkontrolujte podporované operační systémy a prohlížeče.
 
-Než začnete s nastavováním Microsoft Intune, projděte si následující požadavky:
-
-- [Podporované operační systémy](#intune-supported-operating-systems)
-- [Seznam podporovaných webových prohlížečů k používání Intune](#intune-supported-web-browsers)
-
-Měli byste se také seznámit s [využitím šířky pásma Intune](network-bandwidth-use.md) ([klasický portál](/intune-classic/get-started/network-bandwidth-use)).
+Nápovědu k instalaci Intune na zařízení najdete v článku věnovanému [práci pomocí spravovaných zařízení](/intune-user-help/company-portal-frequently-asked-questions). Měli byste se také seznámit s [využitím šířky pásma Intune](network-bandwidth-use.md) ([klasický portál](/intune-classic/get-started/network-bandwidth-use)).
 
 ## <a name="intune-supported-operating-systems"></a>Operační systémy podporované službou Intune
 

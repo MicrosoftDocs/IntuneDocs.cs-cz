@@ -6,7 +6,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: dougeby
-ms.date: 06/28/2017
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 044f3aaa81a2bb02662bec3d20ea51a2339b91a6
-ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
+ms.openlocfilehash: 8f6dc373f831b574abf7d63e97935a379e731422
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-configure-intune-education-settings-for-shared-ipad-devices"></a>Konfigurace nastavení vzdělávání Intune pro sdílená zařízení iPad
 
@@ -62,12 +62,12 @@ Informace můžete do SDS naimportovat jednou z následujících metod:
 
 ### <a name="configure-general-settings"></a>Konfigurace obecných nastavení
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Jiné** > **Intune**.
-3. V okně **Intune** zvolte **Konfigurovat zařízení**.
-4. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
-5. V okně profilů zvolte **Vytvořit profil**.
-6. V okně **Vytvořit profil** zadejte **Název** a **Popis** vzdělávacího profilu iOS.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V podokně **Intune** zvolte **Konfigurace zařízení**.
+2. V podokně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
+5. V podokně profilů zvolte **Vytvořit profil**.
+6. V podokně **Vytvořit profil** zadejte **Název** a **Popis** vzdělávacího profilu iOS.
 7. Z rozevíracího seznamu **Platforma** zvolte **iOS**.
 8. Z rozevíracího seznamu **Typ profilu** zvolte **Vzdělávání**.
 9. Zvolte **Nastavení** > **Konfigurovat**.
@@ -83,7 +83,7 @@ Certifikáty, které vytvoříte, musí kromě ověřování uživatelů podporo
 
 ### <a name="configure-teacher-certificates"></a>Konfigurace certifikátů učitelů
 
-V okně **Vzdělávání** zvolte **Certifikáty učitelů**.
+V podokně **Vzdělávání** zvolte **Certifikáty učitelů**.
 
 #### <a name="configure-teacher-root-certificate"></a>Konfigurace kořenového certifikátu učitele
 
@@ -104,8 +104,8 @@ Po dokončení konfigurace certifikátů učitelů zvolte **OK**.
 
 ### <a name="configure-student-certificates"></a>Konfigurace certifikátů studentů
 
-1. V okně **Vzdělávání** zvolte **Certifikáty studentů**.
-2. V okně **Certifikáty studentů** zvolte v seznamu **Typ certifikátů studentských zařízení** možnost **Sdílené iPady**.
+1. V podokně **Vzdělávání** zvolte **Certifikáty studentů**.
+2. V podokně **Certifikáty studentů** zvolte v seznamu **Typ certifikátů studentských zařízení** možnost **Sdílené iPady**.
 
 #### <a name="configure-student-root-certificate"></a>Konfigurace kořenového certifikátu studenta
 
@@ -126,78 +126,78 @@ Až dokončíte konfiguraci certifikátů, zvolte **OK**.
 
 ### <a name="complete-certificate-setup"></a>Dokončení nastavení certifikátu
 
-1. V okně **Vzdělávání** zvolte **OK**.
-2. V okně **Vytvořit profil** zvolte **Vytvořit**.
+1. V podokně **Vzdělávání** zvolte **OK**.
+2. V podokně **Vytvořit profil** zvolte **Vytvořit**.
 
-Profil se vytvoří a zobrazí se v okně se seznamem profilů.
+Profil se vytvoří a zobrazí se v podokně se seznamem profilů.
 
 ## <a name="step-3---create-a-device-category"></a>Krok 3 – Vytvoření kategorie zařízení
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Jiné** > **Intune**.
-3. V okně **Intune** zvolte **Registrace zařízení**.
-4. V okně **Registrace – Přehled** zvolte **Kategorie zařízení**.
-5. V okně **Registrace – Kategorie zařízení** zvolte **Vytvořit**.
-6. V okně **Vytvořit kategorii zařízení** zadejte **Název** a **Popis** kategorie.
-7. V okně **Vytvořit kategorii zařízení** zvolte **Vytvořit**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V podokně **Intune** zvolte **Registrace zařízení**.
+4. V podokně **Registrace zařízení – Přehled** zvolte **Kategorie zařízení**.
+5. V podokně **Registrace zařízení – Kategorie zařízení** zvolte **Vytvořit**.
+6. V podokně **Vytvořit kategorii zařízení** zadejte **Název** a **Popis** kategorie.
+7. V podokně **Vytvořit kategorii zařízení** zvolte **Vytvořit**.
 
-Kategorie zařízení se vytváří v okně **Registrace – Kategorie zařízení**.
+Kategorie zařízení se vytváří v podokně **Registrace – Kategorie zařízení**.
 
 ## <a name="step-4--create-a-dynamic-group"></a>Krok 4 – Vytvoření dynamické skupiny
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Jiné** > **Intune**.
-3. V okně **Intune** zvolte **Skupiny**.
-4. V okně **Uživatelé a skupiny – Všechny skupiny** zvolte **Nová skupina**.
-5. V okně **Skupina** přidejte **Název** a **Popis** skupiny.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V podokně **Intune** zvolte **Skupiny**.
+4. V podokně **Uživatelé a skupiny – Všechny skupiny** zvolte **Nová skupina**.
+5. V podokně **Skupina** vyberte **Typ skupiny** a pak zadejte **Název** a **Popis** skupiny.
 6. Z rozevíracího seznamu **Typ členství** zvolte **Dynamické zařízení**.
 7. Zvolte **Členové s dynamickými zařízeními** a vytvořte pravidla členství.
-8. V okně**Pravidla dynamického členství**:
+8. V podokně**Pravidla dynamického členství**:
 1. Z rozevíracího seznamu **Přidat zařízení, kde** vyberte atribut **deviceCategory**.
-2. Zvolte **Rovná se**
-3. Zadejte kategorii zařízení, kterou jste vytvořili v prázdném textovém poli
-9. V okně**Pravidla dynamického členství** zvolte **Přidat dotaz**.
-10. V okně **Skupina** vyberte **Vytvořit**.
+2. Zvolte **Rovná se**.
+3. Zadejte kategorii zařízení, kterou jste vytvořili v prázdném textovém poli.
+9. V podokně**Pravidla dynamického členství** zvolte **Přidat dotaz**.
+10. V podokně **Skupina** vyberte **Vytvořit**.
 
-Dynamická skupina se vytváří v okně **Uživatelé a skupiny – Všechny skupiny**.
+Dynamická skupina se vytvoří v podokně **Uživatelé a skupiny – Všechny skupiny**.
 
 ## <a name="step-5--assign-a-device-to-a-category-carts"></a>Krok 5 – Přiřazení zařízení do kategorie (Košíky)
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Jiné** > **Intune**.
-3. V okně **Intune** zvolte **Zařízení**.
-4. V okně **Zařízení** zvolte **Všechna zařízení**.
-5. V okně **Zařízení – Všechna zařízení** zvolte zařízení.
-6. V okně zařízení zvolte **Vlastnosti**.
-7. V okně vlastností zařízení zadejte kategorii zařízení do textového pole **Kategorie zařízení**.
-8. V okně zařízení zvolte **Uložit**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V podokně **Intune** zvolte **Zařízení**.
+4. V podokně **Zařízení** zvolte **Všechna zařízení**.
+5. V podokně **Zařízení – Všechna zařízení** zvolte zařízení.
+6. V podokně zařízení zvolte **Vlastnosti**.
+7. V podokně vlastností zařízení zadejte kategorii zařízení do textového pole **Kategorie zařízení**.
+8. V podokně zařízení zvolte **Uložit**.
 
 Zařízení je teď přidružené ke kategorii zařízení. Zopakujte tento postup u všech zařízení, která chcete k vytvořené kategorii zařízení přidružit.
 
 ## <a name="step-6--create-classroom-profiles"></a>Krok 6 – Vytvoření profilů učeben
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Jiné** > **Intune**.
-3. V okně **Intune** zvolte **Konfigurovat zařízení**.
-4. V okně **Konfigurace zařízení** zvolte **Spravovat** > **Profily košíků**.
-5. V okně profilů zvolte **Vytvořit profil**.
-6. V okně **Vytvořit přiřazení** zadejte **Název** a **Popis**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V podokně **Intune** zvolte **Konfigurace zařízení**.
+4. V podokně **Konfigurace zařízení** zvolte **Spravovat** > **Profily košíků**.
+5. V podokně profilů zvolte **Vytvořit profil**.
+6. V podokně **Vytvořit přiřazení** zadejte **Název** a **Popis**.
 7. Zvolte **Vyberte třídy** > **Konfigurovat** a přiřaďte skupiny k profilu košíku.
 8. Zvolte třídy, které chcete do profilu košíku zahrnout, a potom zvolte **Vybrat**. 
 9. Zvolte **Vyberte košíky** > **Konfigurovat** a přiřaďte skupiny k profilu košíku.
 10. Zvolte skupiny, které chcete do profilu košíku zahrnout, a potom zvolte **Vybrat**.
-11. V okně **Vytvořit přiřazení** vyberte **Uložit**. Profil košíku se uloží.
+11. V podokně **Vytvořit přiřazení** vyberte **Uložit**. Profil košíku se uloží.
 
-Profil se vytvoří a zobrazí se v okně se seznamem profilů.
+Profil se vytvoří a zobrazí se v podokně se seznamem profilů.
 
 ## <a name="step-7---assign-the-cart-profile-to-classes"></a>Krok 7 – Přiřazení profilu košíku třídám
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Jiné** > **Intune**.
-3. V okně **Intune** zvolte **Konfigurovat zařízení**.
-4. V okně **Konfigurace zařízení** zvolte **Monitorovat** > **Stav přiřazení**.
-5. V okně **Stav přiřazení** vyberte **Profil košíku**, který jste vytvořili.
-6. V okně **Profil košíku** zvolte **Přiřazení** a potom v nabídce **Zahnout** zvolte **Vybrat skupiny, které se zahrnou**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V podokně **Intune** zvolte **Konfigurace zařízení**.
+4. V podokně **Konfigurace zařízení** zvolte **Monitorovat** > **Stav přiřazení**.
+5. V podokně **Stav přiřazení** vyberte **Profil košíku**, který jste vytvořili.
+6. V podokně **Profil košíku** zvolte **Přiřazení** a pak v nabídce **Zahnout** zvolte **Vybrat skupiny, které se zahrnou**.
 7. Vyberte třídy, na které se má profil košíku uplatnit (nevybírejte skupinu), a potom zvolte **Vybrat**. 
 8. Po dokončení zvolte **Uložit**.
 

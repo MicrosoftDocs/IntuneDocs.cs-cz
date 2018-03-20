@@ -1,12 +1,12 @@
 ---
-title: "Správa hromadně zakoupených aplikací pro iOS | Dokumentace Microsoftu"
+title: "Správa hromadně zakoupených aplikací pro iOS | Microsoft Docs"
 titlesuffix: Azure portal
 description: "Zjistěte, jak synchronizovat s Intune aplikace zakoupené v rámci multilicenčního programu z App Storu pro zařízení s iOSem a jak následně spravovat a sledovat jejich používání."
 keywords: 
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/30/2018
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3694cbde1aeba8b185c67e65269b7afbd530b048
-ms.sourcegitcommit: 3cc3a6554691c6edeff985e7d8fa402e7e49e8d3
+ms.openlocfilehash: 04a94e4baee23ac9a4a742a2ff11591087381fde
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Správa aplikací pro systém iOS nakoupených prostřednictvím programu hromadného nákupu pomocí Microsoft Intune
 
@@ -80,11 +80,11 @@ Dbejte na to, abyste při nastavování zařízení pro nového uživatele Intun
 
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Získání a odeslání tokenu Apple VPP
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-1.  V okně **Intune** v části **Nastavení** zvolte **Mobilní aplikace** > **Tokeny VPP pro iOS**.
-2.  V okně se seznamem tokenů VPP vyberte možnost **Vytvořit**.
-4. V okně **Vytvořit token VPP** zadejte následující informace:
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+1.  V podokně **Intune** v části **Nastavení** zvolte **Mobilní aplikace** > **Tokeny VPP pro iOS**.
+2.  V podokně s tokeny VPP vyberte **Vytvořit**.
+4. V podokně **Vytvořit token VPP** zadejte následující informace:
     - **Soubor tokenu VPP** – pokud jste to ještě neudělali, zaregistrujte se do programu Volume Purchase Program for Business nebo Volume Purchase Program for Education. Po zaregistrování si stáhněte token Apple VPP pro svůj účet a vyberte ho tady.
     - **Apple ID** – zadejte Apple ID účtu přidruženého k multilicenčnímu programu.
     - **Země/oblast** – vyberte regionální VPP Store.  Intune synchronizuje aplikace VPP pro všechna národní prostředí z určeného regionálního VPP Storu.
@@ -94,17 +94,17 @@ Dbejte na to, abyste při nastavování zařízení pro nového uživatele Intun
     - **Typ účtu VPP** – zvolte jednu z možností: **Obchodní** nebo **Vzdělávání**.
     - **Automatické aktualizace aplikací** – Přepnutím ze **Zapnuto** na **Vypnuto** povolíte automatické aktualizace. Když jsou povolené, Intune aktualizuje všechny aplikace zakoupené pro konkrétní token prostřednictvím služby Intune, jakmile se zařízení ohlásí.
 Intune zjistí aktualizace aplikací VPP v App Storu a automaticky je nabídne zařízení, jakmile se zařízení ohlásí.
-4. Po dokončení vyberte **Nahrát**.
+4. Až to budete mít, vyberte **Vytvořit**.
 
-Token se zobrazí v okně se seznamem tokenů.
+Token se zobrazí v podokně se seznamem tokenů.
 
 Data ukládaná společností Apple můžete kdykoli synchronizovat s Intune výběrem položky **Synchronizovat nyní**.
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Přiřazení aplikace zakoupené v rámci multilicenčního programu
 
-1.  V okně **Intune** zvolte v části **Spravovat** **Mobilní aplikace** > **Aplikace**.
-2.  V okně se seznamem aplikací zvolte aplikaci, kterou chcete přiřadit, a pak zvolte **Přiřazení**.
-3.  V okně ***Název aplikace*** - **Přiřazení** zvolte **Vybrat skupiny** a pak v okně **Vybrat skupiny** zvolte skupiny uživatelů nebo zařízení Azure AD, ke kterým chcete aplikaci přiřadit.
+1.  V podokně **Intune** v části **Spravovat** zvolte **Mobilní aplikace** > **Aplikace**.
+2.  V podokně se seznamem aplikací zvolte aplikaci, kterou chcete přiřadit, a pak zvolte **Přiřazení**.
+3.  V podokně ***Název aplikace*** - **Přiřazení** zvolte **Přidat skupinu** a pak v podokně **Přidat skupinu** zvolte **Typ přiřazení** a skupiny uživatelů nebo zařízení Azure AD, ke kterým chcete aplikaci přiřadit.
 5.  Pro každou zvolenou skupinu vyberte následující nastavení:
     - **Typ** – vyberte, jestli bude aplikace **k dispozici** (koncoví uživatelé můžou aplikaci nainstalovat z Portálu společnosti), nebo **povinná** (aplikace se na zařízení koncových uživatelů nainstaluje automaticky).
     - **Typ licence** – vyberte **Licencování uživatelů** nebo **Licencování zařízení**.

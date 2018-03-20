@@ -14,19 +14,19 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 7997bf0494ff52ad25b09301173b65f2478dca37
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 9582b53c4f992b5f788f10a262bb802e80580144
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Použití portálu pro řešení potíží k poskytování pomoci uživatelům ve vaší společnosti
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Portál pro řešení potíží umožňuje operátorům helpdesku a správcům Intune zobrazit informace o uživatelích a použít je k řešení jejich žádostí o pomoc. Organizace, které zahrnují helpdesk, můžou skupině uživatelů přiřadit **operátora helpdesku**. Role operátora helpdesku může používat okno **Řešení potíží**.
+Portál pro řešení potíží umožňuje operátorům helpdesku a správcům Intune zobrazit informace o uživatelích a použít je k řešení jejich žádostí o pomoc. Organizace, které zahrnují helpdesk, můžou skupině uživatelů přiřadit **operátora helpdesku**. Role operátora helpdesku může používat podokno **Řešení potíží**.
 
-V okně **Řešení potíží** se zobrazují také problémy s registrací uživatelů. Podrobnosti o problému a navrhované nápravné kroky můžou správcům a pracovníkům technické podpory pomoct problém vyřešit. Některé problémy s registrací nejsou zaznamenané a k některým chybám nemusí návrhy k odstranění problému existovat. 
+V podokně **Řešení potíží** se zobrazují také problémy s registrací uživatelů. Podrobnosti o problému a navrhované nápravné kroky můžou správcům a pracovníkům technické podpory pomoct problém vyřešit. Některé problémy s registrací nejsou zaznamenané a k některým chybám nemusí návrhy k odstranění problému existovat.
 
 Pokyny k přidání role operátora helpdesku najdete v článku [Řízení správy na základě rolí (RBAC) s Intune](/intune/role-based-access-control)
 
@@ -41,20 +41,20 @@ Když uživatel kontaktuje podporu ohledně technického problému s Intune, zad
 
 ## <a name="to-review-troubleshooting-details"></a>Kontrola podrobností o řešení potíží
 
-Zvolením možnosti **Vybrat uživatele** v okně pro řešení potíží zobrazíte informace o uživateli. Informace o uživateli vám mohou pomoci porozumět aktuálnímu stavu uživatelů a jejich zařízení.  
+Zvolením možnosti **Vybrat uživatele** v podokně pro řešení potíží zobrazíte informace o uživateli. Informace o uživateli vám mohou pomoci porozumět aktuálnímu stavu uživatelů a jejich zařízení.  
 
-1. Přihlaste se k portálu Azure Portal.
-2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V okně **Intune** zvolte **Řešení potíží**.
-4. Klikněte na **Vybrat uživatele**.
-5. Vyberte uživatele zadáním jména nebo e-mailové adresy. Klikněte na **Vybrat**. Informace o řešení potíží pro uživatele se zobrazí v okně Řešení potíží. Informace jsou vysvětlené v následujících tabulkách.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+3. V podokně **Intune** zvolte **Řešení potíží**.
+4. Klikněte na **Vybrat** a vyberte uživatele, pro kterého chcete řešit potíže.
+5. Vyberte uživatele zadáním jména nebo e-mailové adresy. Klikněte na **Vybrat**. Informace o řešení potíží pro uživatele se zobrazí v podokně Řešení potíží. Informace jsou vysvětlené v následujících tabulkách.
 
 > [!Note]  
-> Do okna **řešení potíží**  se dostanete také tak, že v prohlížeči přejdete na: [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
+> Do podokna **řešení potíží** se dostanete také tak, že v prohlížeči přejdete na: [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
 
 ## <a name="areas-of-troubleshooting-dashboard"></a>Oblasti řídicího panelu pro řešení potíží
 
-V okně **Řešení potíží** můžete zkontrolovat informace o uživateli. 
+V podokně **Řešení potíží** můžete zkontrolovat informace o uživateli.
 
 ![](/intune/media/troubleshooting-dash.png)
 
@@ -63,7 +63,7 @@ V okně **Řešení potíží** můžete zkontrolovat informace o uživateli.
 | 1.   | Stav účtu  | Zobrazuje stav aktuálního tenanta Intune, například **Aktivní** nebo **Neaktivní**.       |
 | 2.   | Výběr uživatele  | Jméno aktuálně vybraného uživatele. Kliknutím na **Změnit uživatele** zvolíte nového uživatele.       |
 | 3.   | Stav uživatele  | Zobrazí stav uživatelovy licence Intune, počet zařízení, dodržování předpisů u každého zařízení, počet aplikací a dodržování předpisů u aplikací.       |
-| 4.   | Údaje uživatele  | Pomocí seznamu můžete vybrat podrobnosti, které chcete v okně zkontrolovat. <br>Můžete vybrat: <ul><li>Mobilní aplikace<li>Zásady ochrany aplikace<li>Zásady dodržování předpisů<li> Zásady konfigurace<li> Omezení registrace</ul>      |
+| 4.   | Údaje uživatele  | Pomocí seznamu můžete vybrat podrobnosti, které chcete v podokně zkontrolovat. <br>Můžete vybrat: <ul><li>Mobilní aplikace<li>Zásady ochrany aplikace<li>Zásady dodržování předpisů<li> Zásady konfigurace</ul>      |
 | 5.   | Členství ve skupině  | Yadda       |
 
 ## <a name="mobile-apps-reference"></a>Informace o mobilních aplikacích

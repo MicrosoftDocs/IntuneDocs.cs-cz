@@ -13,13 +13,13 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 156d37874529b4ae5a8176d7e9a8873cf440c32c
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 4bb86d0f80a4d337e0ab63ae7f90d6c3541462d9
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="microsoft-intune-custom-device-settings-for-devices-running-windows-10"></a>Vlastní nastavení Microsoft Intune pro zařízení s Windows 10 
+# <a name="microsoft-intune-custom-device-settings-for-devices-running-windows-10"></a>Vlastní nastavení Microsoft Intune pro zařízení s Windows 10
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -29,11 +29,11 @@ Pokud hledáte konkrétní nastavení, mějte na paměti, že [profil omezení z
 ## <a name="configure-custom-settings"></a>Konfigurace vlastního nastavení
 
 1. Začněte podle pokynů v tématu [Jak nakonfigurovat vlastní nastavení zařízení v Microsoft Intune](custom-settings-configure.md).
-2. Pokud chcete přidat nastavení OMA-URI, vyberte na stránce **Vytvořit profil** možnost **Nastavení**.
-3. Na stránce **Vlastní nastavení OMA-URI** klikněte na tlačítko **Přidat**, abyste mohli přidat novou hodnotu. Můžete také kliknout na **Exportovat** a vytvořit seznam všech hodnot, které jste nakonfigurovali v souboru hodnot oddělených čárkami (CSV).
-4. Ke každému nastavení OMA-URI, které chcete přidat, zadejte následující informace. Použijte informace v seznamu v tomto článku, kde zjistíte, jaká nastavení můžete použít:
-    - **Název nastavení** – Zadejte jedinečný název nastavení OMA-URI, který vám pomůže ho rozpoznat v seznamu nastavení.
-    - **Popis nastavení** – Volitelně zadejte popis nastavení.
+1. V podokně **Vlastní nastavení OMA-URI** klikněte na **Přidat**, abyste mohli přidat novou hodnotu. Můžete také kliknout na **Exportovat** a vytvořit seznam všech hodnot, které jste nakonfigurovali v souboru hodnot oddělených čárkami (CSV).
+1. Ke každému nastavení OMA-URI, které chcete přidat, zadejte následující informace. Použijte informace v seznamu v tomto článku, kde zjistíte, jaká nastavení můžete použít:
+    - **Název** – zadejte jedinečný název pro nastavení OMA-URI, který vám pomůže ho rozpoznat v seznamu nastavení.
+    - **Popis** – Volitelně zadejte popis nastavení.
+    - **OMA-URI (rozlišuje velká a malá písmena)** – Uveďte, který OMA-URI chcete nastavit.
     - **Datový typ** – Vybírejte z těchto typů:
         - **Řetězec**
         - **Řetězec (XML)**
@@ -41,13 +41,13 @@ Pokud hledáte konkrétní nastavení, mějte na paměti, že [profil omezení z
         - **Celé číslo**
         - **Číslo s plovoucí desetinnou čárkou**
         - **Logická hodnota**
-    - **OMA-URI (rozlišuje velká a malá písmena)** – Uveďte, který OMA-URI chcete nastavit.
-    - **Hodnota** – Zadejte hodnotu, která má být k uvedenému OMA-URI přidružena.
-5. Až to budete mít, vraťte se na stránku **Vytvořit profil** a klikněte na **Vytvořit**.
-Profil se vytvoří a zobrazí se na stránce se seznamem profilů.
+        - **Base64**
+    - **Hodnota** – Zadejte hodnotu nebo soubor, které se mají k uvedenému OMA-URI přidružit.
+1. Až to budete mít, vyberte **OK**, vraťte se zpět do podokna **Vytvořit profil** a vyberte **Vytvořit**.
+Profil se vytvoří a zobrazí se v podokně se seznamem profilů.
 
 ## <a name="example"></a>Příklad
-Na snímku obrazovky níže je nastavení **Connectivity/AllowVPNOverCellular** povolené. To umožňuje zařízení s Windows 10 spustit připojení VPN přes mobilní síť.
+Na následujícím snímku obrazovky je nastavení **Connectivity/AllowVPNOverCellular** povolené. To umožňuje zařízení s Windows 10 spustit připojení VPN přes mobilní síť.
 
 > ![Příklad vlastní zásady s nastavením VPN](./media/custom-policy-example.png)
 
@@ -59,5 +59,3 @@ Na snímku obrazovky níže je nastavení **Connectivity/AllowVPNOverCellular** 
 Ne všechna nastavení jsou kompatibilní se všemi verzemi Windows 10. V tabulce v článku týkajícím se Windows zjistíte, které verze se pro jednotlivé CSP podporují.
 
 Intune navíc nepodporuje všechna nastavení uvedená v tomto článku. Pokud chcete zjistit, jestli Intune podporuje vámi požadované nastavení, otevřete si článek týkající se daného nastavení. Jednotlivé stránky nastavení zobrazují podporované operace. Aby dané nastavení fungovalo s Intune, musí podporovat operace **Přidat** nebo **Nahradit**.
-
-
