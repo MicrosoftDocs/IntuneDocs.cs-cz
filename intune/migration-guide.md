@@ -1,29 +1,30 @@
 ---
-title: "Průvodce migrací správy mobilních zařízení do Intune"
-description: "Tato příručka vás seznámí s různými detaily migrace od jiného poskytovatele MDM do Microsoft Intune."
-keywords: 
-author: andredm7
-ms.author: andredm
+title: Průvodce migrací správy mobilních zařízení do Intune
+titlesuffix: Microsoft Intune
+description: Tato příručka vás seznámí s různými detaily migrace od jiného poskytovatele MDM do Microsoft Intune.
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
-ms.date: 07/11/2017
+ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: dcfc21f9-1bcd-4371-a46d-f2e18154ec50
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.openlocfilehash: 888624530fe77f22ea9391b688fa9f9b92f0ac75
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 9bfefff2ef5960b6e52a8a37c2fd31466d16cbff
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="intune-migration-guide"></a>Příručka k migraci do Intune
 
-![Příručka k migraci do Intune MDM – schéma](./media/MDM-migration-guide-art.PNG)
+![Příručka k migraci MDM do Microsoft Intune – schéma](./media/MDM-migration-guide-art.PNG)
 
-Úspěšná migrace do Intune začíná vypracováním promyšleného plánu, který bere v úvahu nejen vaše aktuální prostředí pro správu mobilních zařízení (MDM), ale i obchodní cíle a technické požadavky. Kromě toho je potřeba vybrat klíčové účastníky, kteří vám pomůžou plán migrace zrealizovat.
+Úspěšná migrace do Microsoft Intune začíná vypracováním promyšleného plánu, který bere v úvahu nejen vaše aktuální prostředí pro správu mobilních zařízení (MDM), ale i obchodní cíle a technické požadavky. Kromě toho je potřeba zahrnout klíčové účastníky, kteří vám pomůžou plán migrace zrealizovat.
 
 Tato příručka vás seznámí s různými detaily migrace od jiného poskytovatele MDM do Intune.
 

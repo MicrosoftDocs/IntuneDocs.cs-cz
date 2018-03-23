@@ -1,25 +1,25 @@
 ---
-title: "Časná edice"
-description: 
-keywords: 
+title: Časná edice
+description: ''
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/06/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f49650f4-31fa-406c-a4da-d8c9a4a8384d
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9a2c104200518af31fd05e6b8abe853377767aa9
-ms.sourcegitcommit: 9cf05d3cb8099e4a238dae9b561920801ad5cdc6
+ms.openlocfilehash: e91745abb7c3409b31724101b3071157407acec9
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="the-early-edition-for-microsoft-intune---march-2018"></a>Časná edice Microsoft Intune – březen 2018
 
@@ -147,6 +147,33 @@ Bude možné vytvořit vlastní kategorie e-knih a pak k nim přiřadit e-knihy 
 
 Budeme aktualizovat aplikaci Portál společnosti pro Android v souladu s pokyny pro [Material Design](https://material.io/) Androidu. Obrázky nových ikon budeme publikovat v článku [Co je nového v uživatelském rozhraní aplikací](whats-new-app-ui.md), až aplikaci vydáme. 
 
+### <a name="edge-mobile-support-for-intune-app-protection-policies----1817882---"></a>Podpora zásad Intune App Protection v mobilní verzi prohlížeče Edge <!-- 1817882 -->
+
+Prohlížeč Microsoft Edge pro mobilní zařízení bude podporovat zásady ochrany aplikací definované v Intune.
+
+### <a name="use-fully-distinguished-name-as-subject-for-scep-certificate---2221763-eeready--"></a>Použití plně rozlišujícího názvu jako subjektu certifikátu SCEP <!--2221763 eeready-->
+Při vytváření profilu certifikátu SCEP zadáváte název subjektu. Jako subjekt budete moci použít plně rozlišující název. Jako **Název subjektu** vyberte **Vlastní** a pak zadejte `CN={{OnPrem_Distinguished_Name}}`. Pokud chcete použít proměnnou `{{OnPrem_Distinguished_Name}}`, nezapomeňte synchronizovat atribut uživatele `onpremisesdistingishedname` pomocí služby [Azure Active Directory (AD) Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) se službou Azure AD. 
+
+### <a name="ios-devices-are-prompted-for-a-pin-every-15-minutes---1550837-eeready--"></a>Zařízením s iOSem se zobrazuje výzva k zadání PINu každých 15 minut <!--1550837 eeready-->
+Po použití zásad dodržování předpisů nebo konfigurace u zařízení s iOSem se uživatelům bude každých 15 minut zobrazovat výzva k zadání PINu. Uživatelům se výzva bude zobrazovat tak dlouho, dokud nenastaví PIN.
+
+### <a name="enable-bluetooth-contact-sharing---android-for-work---1098983-eeready--"></a>Povolení sdílení kontaktů přes Bluetooth – Android for Work <!--1098983 eeready-->
+Ve výchozím nastavení Android brání v synchronizaci kontaktů v pracovním profilu se zařízeními Bluetooth. V důsledku toho se kontakty pracovního profilu nezobrazují na ID volajícího u zařízení Bluetooth.
+
+V části **Android for Work** > **Omezení zařízení** > **Nastavení pracovního profilu** bude k dispozici nové nastavení:
+- Sdílení kontaktů přes Bluetooth
+
+Správce Intune může toto nastavení nakonfigurovat a povolit sdílení. Toto nastavení je užitečné při párování zařízení se zařízením Bluetooth do auta, které zobrazuje ID volajícího při použití hands-free. Pokud je nastavení povoleno, kontakty pracovního profilu se zobrazí. Pokud není nastavení povoleno, kontakty pracovního profilu se nezobrazí.
+
+Platí pro: Zařízení s pracovním profilem Android v systému Android OS v6.0 a novějších.
+
+### <a name="schedule-your-automatic-updates---1805514---"></a>Plánování automatických aktualizací <!--1805514 -->
+
+Pomocí [nastavení aktualizačního okruhu Windows](windows-update-for-business-configure.md) máte v Intune možnost řídit instalaci automatických aktualizací. Budete moci naplánovat opakované aktualizace na základě týdne, dne a času. 
+
+### <a name="disable-checks-on-device-restart---1805490---"></a>Zákaz kontrol při restartování zařízení <!--1805490 -->
+
+V Intune máte možnost řídit [správu aktualizací softwaru](windows-update-for-business-configure.md). Přidá se vlastnost **Kontroly při restartu** a ve výchozím nastavení se povolí. Pokud chcete přeskočit typické kontroly, které se provádí při restartu zařízení (například aktivní uživatelé, stav baterie a další), vyberte **Přeskočit**. 
 
 <!-- 1802 start -->
 
@@ -160,7 +187,7 @@ Pomocí šestnáctkových kódů si budete moct přizpůsobit barvu motivu v apl
 
 ### <a name="new-windows-defender-credential-guard-settings-added-to-endpoint-protection-settings---1102252---"></a>Nové nastavení Ochrany Credential Guard v programu Windows Defender přidaná do nastavení ochrany koncového bodu <!--1102252 --> 
 
-Do části **Konfigurace zařízení** > **Profily** > **Ochrana koncového bodu** budou přidána nová nastavení [Ochrana Credential Guard v programu Windows Defender] (https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard). Budou přidána následující nastavení: 
+Do části **Konfigurace zařízení** > **Profily** > **Ochrana koncového bodu** se přidají nová nastavení [Ochrana Credential Guard v programu Windows Defender](https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard]. Budou přidána následující nastavení: 
 
 - Úroveň zabezpečení platformy: Zadejte, zda se při příštím restartování povolí úroveň zabezpečení platformy. Zabezpečení na základě virtualizace vyžaduje Zabezpečené spuštění. Zabezpečení na základě virtualizace je možné volitelně povolit s použitím ochran přímého přístupu do paměti (DMA). Ochrany DMA vyžadují hardwarovou podporu a povolí se jenom na správně nakonfigurovaných zařízeních.
 - Zabezpečení na základě virtualizace: Zadejte, zda se při příštím restartování povolí zabezpečení na základě virtualizace. 
@@ -185,29 +212,6 @@ Pro vzdělávací profily bude nové nastavení k dispozici v kategorii **Tiská
 
 ### <a name="ios-app-provisioning-configuration----1581650---"></a>Konfigurace zřizování aplikací pro iOS <!-- 1581650 -->
 Pomocí zahrnutí nebo vyloučení skupin zabezpečení budete moct přiřadit zřizovací profily aplikací pro iOS a zabránit tak vypršení platnosti aplikací.
-
-### <a name="new-windows-defender-exploit-guard-settings----631893---"></a>Nové nastavení Ochrany Exploit Guard v programu Windows Defender <!-- 631893 -->
-
-K dispozici bude šest nových nastavení **Omezení možností útoku** a rozšířené možnosti **Řízený přístup ke složkám: Ochrana složek**. Tato nastavení najdete tady: Konfigurace zařízení\Profily\
-Vytvořit profil\Ochrana koncového bodu\Ochrana Exploit Guard v programu Windows Defender.
-
-#### <a name="attack-surface-reduction"></a>Omezení možností útoku
-
-|Název nastavení  |Možnosti nastavení  |Popis  |
-|---------|---------|---------|
-|Advanced ransomware protection (Rozšířená ochrana před ransonwarem)|Povoleno, Audit, Nenakonfigurováno|Umožňuje použít agresivní ochranu před ransomwarem.|
-|Flag credential stealing from the Windows local security authority subsystem (Označit příznakem použití jiných přihlašovacích údajů ze subsystému Windows Local Security Authority)|Povoleno, Audit, Nenakonfigurováno|Umožňuje označit příznakem použití jiných přihlašovacích údajů ze subsystému Windows Local Security Authority (lsass.exe).|
-|Process creation from PSExec and WMI commands (Vytvoření procesů z příkazů PSExec a WMI)|Blokovat, Audit, Nenakonfigurováno|Umožňuje zablokovat vytváření procesů pocházejících z příkazů PSExec a WMI.|
-|Untrusted and unsigned processes that run from USB (Nedůvěryhodné a nepodepsané procesy spouštěné z USB)|Blokovat, Audit, Nenakonfigurováno|Umožňuje zablokovat nedůvěryhodné a nepodepsané procesy, které se spouští z USB.|
-|Executables that don’t meet a prevalence, age, or trusted list criteria (Spustitelné soubory, které nesplňují kritéria prevalence, stáří nebo seznamu důvěryhodných položek)|Blokovat, Audit, Nenakonfigurováno|Umožňuje zablokovat spuštění spustitelných souborů, dokud nesplní kritéria prevalence, stáří nebo seznamu důvěryhodných položek.|
-
-#### <a name="controlled-folder-access"></a>Řízený přístup ke složkám
-
-|Název nastavení  |Možnosti nastavení  |Popis  |
-|---------|---------|---------|
-|Ochrana složek (již implementováno)|Nenakonfigurováno, Povolit, Pouze audit (již implementováno)<br><br> **Nové**<br>Block disk modification (Blokovat změny disku), Audit disk modification (Auditovat změny disku)|
-Umožňuje chránit soubory a složky před neautorizovanými změnami od neznámých aplikací.<br><br>**Povolit**: Brání nedůvěryhodným aplikacím ve změnách nebo odstranění souborů v chráněných složkách a v zápisu do sektorů disku.<br><br>
-**Block disk modification only** (Blokovat jenom změny disku):<br>Umožňuje zablokovat nedůvěryhodným aplikacím možnost zapisovat do sektorů disku. Nedůvěryhodné aplikace stále můžou změnit nebo odstranit soubory v chráněných složkách.|
 
 ### <a name="new-windows-defender-application-guard-settings----1631890---"></a>Nové nastavení Ochrany Application Guard v programu Windows Defender <!-- 1631890 -->
 

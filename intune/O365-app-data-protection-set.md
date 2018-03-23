@@ -1,28 +1,28 @@
 ---
-title: "Nastavení základní správy dat aplikací Office 365 v Intune"
-titlesuffix: Azure portal
-description: "Podpůrná dokumentace k průvodci správou aplikací Office 365."
-keywords: 
+title: Správa dat aplikací Office 365 v Microsoft Intune
+titlesuffix: ''
+description: Přečtěte si o správě dat aplikací Office 365 v Microsoft Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/01/2017
+ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 852612ac-f146-4372-a900-3f6fdebd05ad
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: ayesham
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e12f5becc1f3c03af0ee6d1fab9cd7ee16f2a547
-ms.sourcegitcommit: 80a2eefc1896a42cc2bc16be23093d1abf58b088
+ms.openlocfilehash: fa784d0b446e3de180ce47ec51d3440522966fad
+ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/16/2018
 ---
-# <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps"></a>Jak vaši uživatelé budou moct používat základní ochranu ve spravovaných aplikacích Office 365
+# <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps-in-microsoft-intune"></a>Přečtěte si, jak vaši uživatelé budou moct používat základní ochranu ve spravovaných aplikacích Office 365 v Microsoft Intune.
 
 Průvodce **Správa aplikací Office 365** vytvoří zásady ochrany aplikací pro jednotlivé platformy zařízení.
 
@@ -46,30 +46,30 @@ Jako příklad tento článek používá OneDrive pro firmy, pomocí kterého uk
 
 ## <a name="user-experience-on-an-ios-device"></a>Možnosti uživatele na zařízení s iOSem
 
-1. Spuštěním aplikace OneDrive pro firmy otevřete přihlašovací stránku.  <br/> ![Snímek přihlašovací obrazovky OneDrivu pro iOS](./media/onedrive-ios-sign-in.png)
-2. Zadejte uživatelské jméno pracovního účtu. Budete přesměrováni na ověřovací stránku Office 365, kde zadáte pracovní přihlašovací údaje. <br/> ![Snímek přihlašovací stránky Office 365](./media/o365-sign-in-ios.png)
-3. Po úspěšném ověření přihlašovacích údajů službou Azure Active Directory se použijí zásady ochrany aplikací a zobrazí se výzva k restartování aplikace OneDrive pro firmy.  <br/>![Snímek výzvy na restartování pro iOS](./media/ios-restart-prompt.png)    
+1. Spuštěním aplikace OneDrive pro firmy otevřete přihlašovací stránku.  
+2. Zadejte uživatelské jméno pracovního účtu. Budete přesměrováni na ověřovací stránku Office 365, kde zadáte pracovní přihlašovací údaje. 
+3. Po úspěšném ověření přihlašovacích údajů službou Azure Active Directory se použijí zásady ochrany aplikací a zobrazí se výzva k restartování aplikace OneDrive pro firmy. 
+
   > [!NOTE]
   > Zpráva s informacemi o vyžadovaném restartování se zobrazí pouze na zařízeních, která nejsou zaregistrovaná v Intune.
 
+4. Znovu spusťte aplikaci OneDrive pro firmy. Aplikace se spustí se zapnutými zásadami ochrany aplikací a zobrazí se výzva k zadání PIN kódu pro zařízení (pokud na něm ještě PIN kód nastavený nemáte).  
 
-4. Znovu spusťte aplikaci OneDrive pro firmy. Aplikace se spustí se zapnutými zásadami ochrany aplikací a zobrazí se výzva k zadání PIN kódu pro zařízení (pokud na něm ještě PIN kód nastavený nemáte). <br/> ![Snímek výzvy k vytvoření PIN kódu](./media/pin-prompt-ios.png)    
   > [!NOTE]
   > Většině vašich uživatelů se tato výzva nezobrazí. Uživatelům, kteří na svém zařízení s iOSem nemají nastavený PIN kód, se tato výzva zobrazí.
 
-
-5. Jakmile PIN kód nastavíte a potvrdíte, vraťte se do aplikace OneDrive pro firmy. Zobrazí se vám jednorázová zpráva, že váš správce IT teď chrání pracovní data ve OneDrivu. <br/> ![Snímek jednorázového oznámení vašeho správce IT](./media/one-time-notice.png)
-6. Abyste mohli přistupovat k souborům ve OneDrivu pro firmy, klikněte někam mimo toto oznámení. <br/> ![Snímek souborů OneDrivu na zařízení s iOSem](./media/onedrive-files-ios.png) <br/>
+5. Jakmile PIN kód nastavíte a potvrdíte, vraťte se do aplikace OneDrive pro firmy. Zobrazí se vám jednorázová zpráva, že váš správce IT teď chrání pracovní data ve OneDrivu. 
+6. Abyste mohli přistupovat k souborům ve OneDrivu pro firmy, klikněte někam mimo toto oznámení. 
 
 >[!NOTE]
 >Při změně nasazených zásad se změny použijí při příštím otevření aplikace.
-
 
 ## <a name="user-experience-on-an-android-device"></a>Možnosti uživatele na zařízení s Androidem
 
 1. Spuštěním aplikace OneDrive pro firmy otevřete přihlašovací stránku.  <br/> ![Snímek uvítací obrazovky aplikace OneDrive](./media/onedrive-android-welcome.png)
 2. Zadejte uživatelské jméno pracovního účtu. Budete přesměrováni na ověřovací stránku Office 365, kde zadáte pracovní přihlašovací údaje. <br/> ![Snímek přihlášení O365 v Androidu](./media/o365-sign-in-android.png)
-3. Pokud na zařízení ještě není nainstalovaná aplikace Portál společnosti, po úspěšném ověření přihlašovacích údajů službou Azure Active Directory se vám zobrazí zpráva s pokyny k její instalaci. Pokračujte klepnutím na **Přejít do obchodu**. <br/> ![Snímek zprávy o získání aplikace Portál společnosti](./media/get-company-portal-android.png) <br/>Pokud máte na svém telefonu aplikaci Portál společnosti nainstalovanou, aplikace OneDrive pro firmy se automaticky spustí a můžete přeskočit na poslední poznámku.    
+3. Pokud na zařízení ještě není nainstalovaná aplikace Portál společnosti, po úspěšném ověření přihlašovacích údajů službou Azure Active Directory se vám zobrazí zpráva s pokyny k její instalaci. Pokračujte klepnutím na **Přejít do obchodu**. <br/> ![Snímek zprávy o získání aplikace Portál společnosti](./media/get-company-portal-android.png) <br/>Pokud máte na svém telefonu aplikaci Portál společnosti nainstalovanou, aplikace OneDrive pro firmy se automaticky spustí a můžete přeskočit na poslední poznámku.   
+
   > [!IMPORTANT]
   > Po nastavení aplikací Office tak, aby se spravovaly přes zásady ochrany aplikací, **musí** uživatel zařízení s Androidem nainstalovat aplikaci Portál společnosti, aby mohl přistupovat k pracovním e-mailům a dokumentům, i když koncový uživatel pro samotné čtení e-mailů a dokumentů nemusí aplikaci otevírat a přihlašovat se k ní.
 
@@ -128,4 +128,4 @@ Pokud chcete tyto zásady, nebo jiné zásady vytvořené na portálu Azure pro 
 ![Obrázek cesty uživatelského rozhraní pro zobrazení zásad](./media/image-for-faq.png)
 
 ## <a name="next-steps"></a>Další kroky
-Další informace o [zásadách ochrany aplikací](app-protection-policy.md)
+- Další informace o [zásadách ochrany aplikací](app-protection-policy.md)

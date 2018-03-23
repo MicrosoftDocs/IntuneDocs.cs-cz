@@ -1,24 +1,24 @@
 ---
 title: Modul plug-in Cordova sady Intune App SDK
-description: 
+description: Modul plug-in Cordova sady Intune App SDK umožňuje vývojářům integrovat do své aplikace založené na Cordově funkce Intune pro ochranu aplikací a dat.
 keywords: SDK, Cordova, Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/02/2018
+ms.date: 03/14/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: bb940cb9-d43f-45ca-b065-ac0adc61dc6f
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d42f8418e2f277dca0fbb2f01248f5a815606cb6
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 84ff217361108ac3518567f31af8943d0b3032fe
+ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="microsoft-intune-app-sdk-cordova-plugin"></a>Modul plug-in Cordova sady Intune App SDK
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 02/03/2018
 > [!NOTE]
 > Možná si budete chtít nejdřív přečíst článek [Začínáme s Intune App SDK](app-sdk-get-started.md), který vysvětluje postup přípravy integrace na jednotlivých podporovaných platformách.
 
-Funkce SDK můžete povolit beze změny chování aplikace. Po integraci modulu plug-in do aplikace pro iOS nebo Android bude moct správce Microsoft Intune nasadit zásady ochrany aplikací Intune, které se skládají z různých funkcí pro ochranu dat. Modul plug-in je vytvořený tak, aby se většina kroků prováděla automaticky v procesu sestavování Cordovy. Díky tomu byste měli být schopní v aplikaci rychle povolit ochranu aplikací Intune. Začněte podle následujících kroků na základě vaší cílové platformy.
+Funkce SDK můžete povolit beze změny chování aplikace. Po integraci modulu plug-in do aplikace pro iOS nebo Android bude moct správce Microsoft Intune nasadit zásady ochrany aplikací Intune, které se skládají z různých funkcí pro ochranu dat. Modul plug-in je vytvořený tak, aby se většina kroků prováděla automaticky v procesu sestavování Cordovy. Díky tomu byste měli být schopní v aplikaci rychle povolit ochranu aplikací Intune. Začněte následujícím postupem podle toho, kterou platformu máte.
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
@@ -118,7 +118,7 @@ Modul plug-in automaticky rozpozná podpisové informace, které jste poskytli C
 
 Další informace o očekávaném formátu najdete v tématu o [podpisových informacích v nástroji Gradle Cordovy](https://cordova.apache.org/docs/en/latest/guide/platforms/android/#using-gradle).
 
-Aktuálně nepodporujeme schopnost poskytovat podpisové informace v souboru `build.json` nebo libovolných umístěních poskytnutých do sestavení Cordovy prostřednictvím parametrů.
+Intune aktuálně nepodporuje schopnost poskytovat podpisové informace v souboru `build.json` nebo libovolných umístěních poskytnutých do sestavení Cordovy prostřednictvím parametrů.
 
 ## <a name="debugging-from-visual-studio"></a>Ladění z Visual Studia
 
@@ -129,8 +129,8 @@ Po prvním spuštění aplikace by se mělo zobrazit dialogové okno oznamujíc�
 ### <a name="android"></a>Android
 
 * Podpora MultiDex je nekompletní.
-* Aplikace musí mít `minSdkVersion` verze 14 a `targetSdkVersion` verze 24 nebo nižší. Aktuálně nepodporujeme aplikace určené pro rozhraní API 25.
-* Aplikace, které jsou podepsané pomocí schématu podpisu V2, nemůžeme znovu podepsat. Když se aplikace podepsané přes V2 zabalí pomocí modulu plug-in, bude výsledný soubor .apk nepodepsaný.
+* Aplikace musí mít `minSdkVersion` verze 14 a `targetSdkVersion` verze 24 nebo nižší. Intune aktuálně nepodporuje aplikace určené pro rozhraní API 25.
+* Aplikace, které jsou podepsané pomocí schématu podpisu V2, Intune nemůže znovu podepsat. Když se aplikace podepsané přes V2 zabalí pomocí modulu plug-in, bude výsledný soubor .apk nepodepsaný.
 *
   * Výchozí podepisování Cordovy přes V2 můžete zakázat přidáním následujícího kódu do vašeho souboru `build-extras.gradle`:
 

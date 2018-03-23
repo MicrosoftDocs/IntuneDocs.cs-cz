@@ -1,25 +1,25 @@
 ---
-title: "Postup monitorování informací a přiřazení aplikace"
+title: Postup monitorování informací a přiřazení aplikace
 titlesuffix: Microsoft Intune
-description: "Po přiřazení aplikace uživatelům nebo zařízením můžete použít tyto informace, které vám usnadní monitorování jejího stavu."
-keywords: 
+description: Po přiřazení aplikace uživatelům nebo zařízením můžete použít tyto informace, které vám usnadní monitorování jejího stavu.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2018
+ms.date: 03/09/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6bd915093ae45ff0fc3d51a2d7279493bc783d43
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 2d1ca013b7000282316a17e02dcb38b3d4f27958
+ms.sourcegitcommit: 820f950d1fc80b1eb5db1b0cf77f44d92a969951
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="how-to-monitor-app-information-and-assignments-with-microsoft-intune"></a>Postup monitorování informací a přiřazení aplikace pomocí Microsoft Intune
 
@@ -28,76 +28,64 @@ ms.lasthandoff: 03/05/2018
 Intune poskytuje několik způsobů, jak můžete monitorovat vlastnosti vámi spravovaných aplikací a stav jejich přiřazení.
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází ve skupině **Monitorování a správa**.
 3. Zvolte **Mobilní aplikace** a pak ve skupině **Spravovat** zvolte možnost **Aplikace**.
-5. V okně seznamu aplikací zvolte aplikaci. Pak se vám zobrazí okno <*název aplikace*> **Stav instalace zařízení**.
+5. V seznamu aplikací zvolte aplikaci, kterou chcete monitorovat. Zobrazí se okno aplikace s přehledem stavu zařízení a uživatele.
 
 ## <a name="app-overview-blade"></a>Přehled okna aplikací
 
-V okně **Stav instalace zařízení** <*název aplikace*>  si můžete zkontrolovat podrobnosti o stavu aplikace ve vašem prostředí.
+V okně konkrétní aplikace si můžete zkontrolovat podrobnosti o stavu aplikace ve vašem prostředí.
 
 ### <a name="essentials"></a>Essentials
-
 Část **Základy** obsahuje následující informace o aplikaci:
 
- - **Vydavatel**  
-Vydavatel aplikace
- - **Operační systém**  
-Operační systém aplikace (Windows, iOS, Android atd.)
- - **Vytvořit**  
-Čas vytvoření této revize
- - **Přiřazeno**  
-Označuje, zda byla aplikace přiřazena – **Ano** nebo **Ne**.
+ | **Podrobnosti aplikace**            | **Popis**                                                      |
+|------------------------|------------------------------------------------------------------|
+| **Vydavatel**          | Vydavatel aplikace                                            |
+| **Operační systém**   | Operační systém aplikace (Windows, iOS, Android atd.) |
+| **Vytvořeno**             | Datum a čas vytvoření této revize                         |
+| **Přiřazeno**           | Označuje, zda byla aplikace přiřazena – **Ano** nebo **Ne**.                  |
 
-### <a name="status"></a>Stav
-Jednotlivé grafy zobrazují počty pro následující stav:
+### <a name="device-and-user-status-graphs"></a>Grafy stavu zařízení a uživatele
+Grafy zobrazují počty pro následující stav:
 
- - **Instalováno**  
-Počet nainstalovaných aplikací
- - **Nenainstalováno**  
-Počet nenainstalovaných aplikací
- - **Instalace čeká**  
-Počet aplikací, které se právě instalují
- - **Neúspěch**  
-Počet neúspěšných instalací
- - **Neznámé**  
-Počet aplikací s neznámým stavem
+| **Stav zařízení**       | **Popis**                                       |
+|-----------------------|-------------------------------------------------------|
+| **Instalováno**         | Počet nainstalovaných aplikací                         |
+| **Nenainstalováno**     | Počet nenainstalovaných aplikací                     |
+| **Neúspěch**            | Počet neúspěšných instalací                   |
+| **Instalace čeká**   | Počet aplikací, které se právě instalují |
+| **Není k dispozici**           | Počet aplikací, u nichž není stav k dispozici            |
 
-### <a name="device-status"></a>Stav zařízení
+### <a name="device-install-status"></a>Stav instalace zařízení
 
-Stav zařízení. Prstencový graf, který zobrazuje stav instalace aplikace na zařízeních. Kliknutím na graf otevřete seznam podrobností o stavu zařízení. Tabulka s podrobnostmi obsahuje následující sloupce:
+Seznam stavů zařízení se zobrazí, když v části **Monitorovat** vyberete **Stav instalace zařízení**. Tabulka s podrobnostmi obsahuje následující sloupce:
 
- - **Název zařízení**  
-Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemůže být dostupný pro všechna zařízení.
- - **Uživatelské jméno**  
-Jméno uživatele
- - **Platforma**  
-Operační systém zařízení (Windows, iOS, Android atd.)
- - **Verze**  
-Číslo verze aplikace. U obchodních aplikací se zobrazuje celé číslo verze aplikace. Celé číslo verze identifikuje konkrétní vydanou verzi aplikace. Číslo se zobrazí jako _Verze_(_build_). Příklad: 2.2(2.2.17560800)
- - **Stav**  
-Stav aplikace
- - **Podrobnosti stavu**  
-Podrobnosti o stavu
- - **Poslední vrácení se změnami**  
-Datum, kdy se zařízení naposledy synchronizovalo s Intune
+| **Sloupec zařízení**      | **Popis**                                                                                                                                                                                                                                            |
+|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Název zařízení**      | Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemusí být dostupný pro všechna zařízení.                                                                       |
+| **Uživatelské jméno**        | Jméno uživatele                                                                                                                                                                                                                                      |
+| **Platforma**         | Operační systém zařízení (Windows, iOS, Android atd.)                                                                                                                                                                                           |
+| **Verze**          | Číslo verze aplikace. U obchodních aplikací se zobrazuje celé číslo verze aplikace. Celé číslo verze identifikuje konkrétní vydanou verzi aplikace. Číslo se zobrazí jako _Verze_(_build_). Příklad: 2.2(2.2.17560800) |
+| **Stav**           | Stav aplikace                                                                                                                                                                                                                                     |
+| **Podrobnosti stavu**   | Podrobnosti o stavu                                                                                                                                                                                                                                     |
+| **Poslední vrácení se změnami**    | Datum, kdy se zařízení naposledy synchronizovalo s Intune                                                                                                                                                                                                                  |
 
 
-### <a name="user-status"></a>Stav uživatele
+### <a name="user-install-status"></a>Stav instalace uživatele
 
-Stav uživatele. Prstencový graf, který zobrazuje stav instalace aplikace u uživatelů. Kliknutím na graf otevřete seznam podrobností o stavu zařízení. Tabulka s podrobnostmi obsahuje následující sloupce:
- - **Název**  
-Jméno uživatele ve službě Azure AD
- - **Uživatelské jméno**  
-Jedinečné jméno uživatele
- - **Instalace**  
-Počet instalací aplikace použitých uživatelem
- - **Chyby**  
-Počet neúspěšných instalací uživatelem
- - **Nenainstalováno**  
-Počet aplikací, které nenainstaloval uživatel
+Seznam stavů uživatele se zobrazí, když v části **Monitorovat** vyberete **Stav instalace uživatele**. Tabulka s podrobnostmi obsahuje následující sloupce:
+
+| **Sloupec uživatele**     | **Popis**                           |
+|---------------------|-------------------------------------------|
+| **Název**            | Jméno uživatele ve službě Azure AD         |
+| **Uživatelské jméno**       | Jedinečné jméno uživatele              |
+| **Instalace**   | Počet instalací aplikace použitých uživatelem |
+| **Chyby**        | Počet neúspěšných instalací uživatelem     |
+| **Nenainstalováno**   | Počet aplikací, které nenainstaloval uživatel |
 
 
 ## <a name="next-steps"></a>Další kroky
 
-Další informace o práci s daty Intune najdete v tématu [Použití datového skladu Intune](reports-nav-create-intune-reports.md).
+- Další informace o práci s daty Intune najdete v tématu [Použití datového skladu Intune](reports-nav-create-intune-reports.md).
+- Další informace o zásadách konfigurace aplikací najdete v tématu [Zásady konfigurace aplikací v Intune](app-configuration-policies-overview.md).

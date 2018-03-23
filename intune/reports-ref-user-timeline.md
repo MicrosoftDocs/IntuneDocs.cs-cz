@@ -1,34 +1,35 @@
 ---
-title: "Časová osa entity uživatele datového skladu | Microsoft Docs"
-description: "Datový sklad Intune představuje uživatele na časové ose."
-keywords: "Datový sklad Intune"
+title: Časová osa entity uživatele datového skladu
+titlesuffix: Microsoft Intune
+description: Přečtěte si, jak datový sklad Intune představuje uživatele na časové ose.
+keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/14/2017
+ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 363D148E-688F-4830-B6DE-AB4FE3648817
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e72f60b9ad604f756f74b1ba7cbbde7e5c2ab9f8
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 7448954fce2b81c5783845c9fbdaaebf43fdf326
+ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/16/2018
 ---
-# <a name="user-lifetime-representation-in-the-intune-data-warehouse"></a>Znázornění používání datového skladu Intune uživatelem
+# <a name="user-lifetime-representation-in-the-microsoft-intune-data-warehouse"></a>Znázornění životnosti uživatele v datovém skladu Microsoft Intune
 
 Odpovědi na otázky o časových trendech získáte ze snímků dat uložených po jeden měsíc v Datovém skladu Intune. Můžete například zobrazit počet uživatelů přidaných za měsíc. Můžete také chtít zjistit počet uživatelů odebraných ze systému.
 
-Datový sklad poskytuje tento přehled díky uloženým historickým informacím. To znamená, že sleduje dobu života entity. Sklad zaznamenává informace o času vytvoření entity, času změny stavu entity a času odstranění entity. Díky historii zachycené kvantitativním měřením denních snímků můžete zpětně porovnávat jednotlivé dny mezi sebou.
+Datový sklad poskytuje tento typový přehled díky uloženým historickým informacím. Datový sklad může sledovat životnost entity. Sklad zaznamenává informace o času vytvoření entity, času změny stavu entity a času odstranění entity. Díky historii zachycené kvantitativním měřením denních snímků můžete zpětně porovnávat jednotlivé dny mezi sebou.
 
 Práce s dobou života entit může být matoucí, protože entity mění stav. To znamená, že když se podíváte na snímek v třicátý den, nemusí v datech existovat uživatelský záznam v aktivním stavu. Ve dnech 29–28 může existovat záznam entity v aktivním stavu. A před dnem 28 uživatel nemusel vůbec neexistovat.
 
-Jasnější to bude, když si projdeme dobu života entity.
+Tento scénář bude jasnější, když si projdete životnost entity.
 
 Představte si uživatele **Jan Macek**, který získá licenci na 1.6.2017. V tabulce **Uživatel** bude následující položka: 
  
