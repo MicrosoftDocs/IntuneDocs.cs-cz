@@ -1,25 +1,25 @@
 ---
-title: "Nastavení autority pro správu mobilních zařízení"
+title: Nastavení autority pro správu mobilních zařízení
 titlesuffix: Microsoft Intune
-description: "Nastavte autoritu pro správu mobilních zařízení v Intune."
-keywords: 
+description: Nastavte autoritu pro správu mobilních zařízení v Intune.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 02/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8deff871-5dff-4767-9484-647428998d82
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c4d91d00995d821b14b3b2a04681b4c57258a7c0
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: ce6464cc6aa67636743479e69ad2b55c9b102ed9
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Nastavení autority pro správu mobilních zařízení
 
@@ -40,7 +40,8 @@ V Configuration Manageru verze 1610 a vyšší a v Microsoft Intune verze 1705 m
 
 ## <a name="set-mdm-authority-to-intune"></a>Nastavení autority MDM na Intune
 
-1. Na [Azure Portalu](https://portal.azure.com) zvolte **Další služby** > **Monitorování a správa** > **Intune**.
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 2. Výběrem oranžové informační zprávy otevřete nastavení **Autorita pro správu mobilních zařízení**.
 3. V oblasti **Autorita pro správu mobilních zařízení** zvolte některou autoritu MDM z následujících možností:
   - **Autorita MDM Intune**
@@ -59,7 +60,7 @@ Různé platformy mají následující požadavky, které umožňují nebo zjedn
 - **iOS** – (povinné) [opatřete si certifikát Apple MDM Push Certificate](apple-mdm-push-certificate-get.md) a pak [povolte registraci pro zařízení s iOS vlastněná firmou](ios-enroll.md) (nepovinné).
 - **Android** – (nepovinné) [povolte pracovní profily Androidu](android-enroll.md).
 - **Windows** – (nepovinné) povolte [automatickou registraci](windows-enroll.md) nebo [hromadnou registraci](windows-bulk-enroll.md).
-- **macOS** – žádné požadavky
+- **macOS** – (povinné) [opatřete si certifikát Apple MDM Push Certificate](apple-mdm-push-certificate-get.md).
 
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Vyčištění mobilních zařízení po vypršení platnosti certifikátu MDM

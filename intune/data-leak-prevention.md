@@ -1,25 +1,27 @@
 ---
-title: "Zabránění únikům dat na nespravovaných zařízeních"
-description: "Můžete povolit přístup k firemním datům na zařízeních a současně chránit data před únikem."
-keywords: "ochrana dat zabránit úniku informací zařízení O365 Office 365"
-author: arob98
+title: Zabránění únikům dat na nespravovaných zařízeních
+titlesuffix: Microsoft Intune
+description: Pomocí Microsoft Intune můžete povolit přístup k firemním datům na zařízeních a zapnout ochranu před úniky dat.
+keywords: ochrana dat zabránit úniku informací zařízení O365 Office 365
+ms.author: dougeby
+author: dougeby
 manager: dougeby
-ms.date: 09/22/2017
+ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: b1512c3a-3bbd-4111-a0df-c874a0a335df
 ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3b917b3718a7630c4a556a41c551aa5d76f4b4aa
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 964422f113e6a722c1134cf49b1b28b494632872
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/17/2018
 ---
-# <a name="prevent-data-leaks-on-non-managed-devices"></a>Zabránění únikům dat na nespravovaných zařízeních
+# <a name="prevent-data-leaks-on-non-managed-devices-using-microsoft-intune"></a>Zabránění únikům dat na nespravovaných zařízeních pomocí Microsoft Intune
 
 Pokud povolíte přístup k firemním datům hostovaným v Office 365, můžete řídit, jak je uživatelé sdílejí a ukládají, abyste předešli riziku úmyslného nebo náhodného úniku. Microsoft Intune poskytuje zásady ochrany aplikací, jejichž nastavením zabezpečíte firemní data na zařízeních vlastněných uživateli. Zařízení není třeba registrovat ve službě Intune. 
 

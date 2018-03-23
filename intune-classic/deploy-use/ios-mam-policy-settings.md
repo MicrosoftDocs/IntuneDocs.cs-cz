@@ -1,27 +1,30 @@
 ---
-title: "Nastavení zásad MAM pro iOS"
-description: "Toto téma popisuje nastavení zásad správy mobilních aplikací pro zařízení s iOSem."
-keywords: 
+title: Nastavení zásad MAM pro iOS
+description: Toto téma popisuje nastavení zásad správy mobilních aplikací pro zařízení s iOSem.
+keywords: ''
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
 ms.date: 04/18/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 673ff872-943c-4076-931c-0be90363aea9
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ae861de505964e830aadc1cd913561462762f282
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: c4a87223a25ba26492e8db1731594f844136e003
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/20/2018
 ---
 #  <a name="ios-mobile-app-protection-policy-settings"></a>Nastavení zásad ochrany mobilních aplikací pro iOS
+
+> [!IMPORTANT]
+> Obsah na této stránce je nyní z velké části zastaralý, protože zásady Intune App Protection byly zcela migrovány na portál Azure Portal. Další informace o [zásadách Intune App Protection pro iOS na portálu Azure Portal](https://docs.microsoft.com/intune/app-protection-policy-settings-ios)
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 

@@ -1,24 +1,24 @@
 ---
-title: "Registrace 30denní bezplatné zkušební verze Microsoft Intune"
-titleSuffix: Azure portal
-description: "Registrace 30denní bezplatné zkušební verze Intune"
-keywords: 
-author: arob98
-ms.author: angrobe
+title: Registrace 30denní bezplatné zkušební verze Microsoft Intune
+titleSuffix: Microsoft Intune
+description: Přečtěte si, jak si zaregistrovat 30denní bezplatnou zkušební verzi Microsoft Intune.
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
 ms.date: 03/04/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.suite: ems
-ms.custom: 
-ms.openlocfilehash: 08fa759515d437e40a751ce39b3ef617dd92e83f
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.custom: ''
+ms.openlocfilehash: 389981fc207371d64064872235fc9babde6b3f6a
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="sign-up-for-a-microsoft-intune-free-trial"></a>Registrace bezplatné zkušební verze Microsoft Intune
 
@@ -30,11 +30,15 @@ Tento článek vás provede registrací bezplatné zkušební verze samostatné 
 
 * Pokud se většina pracovníků IT oddělení a uživatelů nachází v jiném národním prostředí než vy, můžete toto národní prostředí vybrat v části **Umístění vaší společnosti**.
 
-2. Na konci procesu registrace dostanete zprávu s informacemi o novém účtu. <br/> ![Obrázek s informacemi o účtu](./media/2-end-of-sign-up-process.png) <br/>Pokud v tuto chvíli kliknete na **Můžete začít**, přejdete do Centra pro správu Office 365, kde můžete přidat uživatele a otestovat tak prostředí. <br/><br/>Pokud ale chcete přejít přímo na portál Azure Portal pro Intune, otevřete v prohlížeči nové okno a do adresního řádku zadejte **https://portal.azure.com**. Přejdete na přihlašovací stránku Azure, kde se můžete přihlásit pomocí přidělených přihlašovacích údajů. Tuto adresu použijte vždy, když se budete chtít přihlásit ke zkušební verzi služby Intune. <br/> ![Obrázek přihlašovací stránky Azure Portal](./media/azure-portal-signin.png)
+2. Na konci procesu registrace dostanete zprávu s informacemi o novém účtu. <br/> 
+
+![Obrázek s informacemi o účtu](./media/2-end-of-sign-up-process.png) <br/>
+
+Pokud v tuto chvíli kliknete na **Můžete začít**, přejdete do Centra pro správu Office 365, kde můžete přidat uživatele a otestovat tak prostředí. <br/><br/>Pokud ale chcete přejít přímo na portál Azure Portal pro Intune, otevřete v prohlížeči nové okno a do adresního řádku zadejte **https://portal.azure.com**. Přejdete na přihlašovací stránku Azure, kde se můžete přihlásit pomocí přidělených přihlašovacích údajů. Tuto adresu použijte vždy, když se budete chtít přihlásit ke zkušební verzi služby Intune. <br/> ![Obrázek přihlašovací stránky portálu Azure Portal](./media/azure-portal-signin.png)
 
 Při prvním přihlášení na portál [Azure Portal](https://portal.azure.com) pro Intune je možné, že se Intune na řídicím panelu Azure nezobrazí. Přidání služby Intune na řídicí panel Azure:
 1. V seznamu služeb Azure nalevo od řídicího panelu zvolte **Všechny služby >** a do vyhledávacího pole zadejte **Intune**.
-2. V seznamu zvolte **Intune** a vyberte hvězdičku, aby se tato služba přidala do seznamu služeb.<br/> ![Obrázek s výběrem Intune v seznamu služeb](./media/azure-add-intune1.png)
+2. V seznamu zvolte **Intune** a vyberte hvězdičku, aby se tato služba přidala do seznamu služeb.<br/> ![Obrázek výběru služby Microsoft Intune na portálu Azure Portal](./media/azure-add-intune1.png)
 3. Potom výběrem **Intune** v seznamu služeb otevřete řídicí panel Intune.
 
 Když se zaregistrujete ke zkušební verzi, přijde vám na e-mailovou adresu, kterou jste zadali při registraci, také e-mailová zpráva s informacemi o vašem účtu. Ta potvrzuje, že je vaše zkušební verze aktivní.

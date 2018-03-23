@@ -1,35 +1,30 @@
 ---
-title: "Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele"
-description: "Zjistěte, co se změnilo v uživatelském rozhraní aplikací, které fungují s Intune na zařízeních pro koncové uživatele."
-keywords: 
+title: Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
+titlesuffix: Microsoft Intune
+description: Zjistěte, co se změnilo v uživatelském rozhraní aplikací, které fungují s Microsoft Intune na zařízeních pro koncové uživatele.
+keywords: ''
 author: barlanmsft
 ms.author: barlan
 manager: dougeby
-ms.date: 01/18/2018
+ms.date: 03/16/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9f39c908e6de55c0668f507c3d7eed9545deba82
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 753b3a345dc84bee80921fd0c7994dfac79a3df6
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
-Zjistěte, jaké jsme v uživatelském rozhraní aplikací udělali změny, které koncoví uživatelé uvidí v této verzi Microsoft Intune. Pomůže vám to při komunikaci s uživateli a aktualizaci vlastní dokumentace, kterou jste vytvořili za účelem podpory vašeho nasazení. Můžete také zjistit, jak lépe řešit problémy uživatelů, když požádají helpdesk o podporu pomocí Portálu společnosti.
+Zjistěte, jaké jsme v uživatelském rozhraní aplikací udělali změny, které koncoví uživatelé uvidí v této verzi Microsoft Intune. Pochopení těchto aktualizací vám pomůže při komunikaci s uživateli a aktualizaci vlastní dokumentace, kterou jste vytvořili za účelem podpory vašeho nasazení. Můžete také zjistit, jak lépe řešit problémy uživatelů, když požádají helpdesk o podporu pomocí Portálu společnosti.
 
-## <a name="week-of-december-11-2017"></a>Týden od 11. prosince 2017
-
-### <a name="end-user-messaging-for-accounts---1573558-1712-changes-to-be-made-for-other-platforms-for-1801--"></a>Zasílání zpráv o účtech koncovým uživatelům <!--1573558, 1712; changes to be made for other platforms for 1801-->
-
-Uživatelé webu Portál společnosti budou mít zablokované akce, které vyžadují, aby měl tenant přístup pro zápis. Uživatelům se zobrazí odpovídající chybová zpráva s vysvětlením, že probíhá údržba jejich účtu. Podobné změny budou brzy platit i pro aplikace na Portálu společnosti pro Android, iOS, macOS a Windows.
-
-![Chybová zpráva zobrazená při přesunu účtu](./media/account-move-rom-iwp-user-1712.png)
+<!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/account-move-rom-iwp-user-1712.png)--->
 
 ## <a name="week-of-november-27-2017"></a>Týden od 27. listopadu 2017
 
@@ -144,7 +139,7 @@ Podmíněný přístup s Intune podporuje zabezpečenější ověřování na za
 
 ![Zadejte e-mailovou adresu a název účtu.](./media/ios-11-ca-email-after-1708-03.png)
 
-![Přesunutí na externí přihlašovací stránku Microsoft.](./media/ios-11-ca-email-after-1708-04.png)
+![Odeslání na externí přihlašovací stránku Microsoft](./media/ios-11-ca-email-after-1708-04.png)
 
 ![Zadání hesla na stránce Microsoft.](./media/ios-11-ca-email-after-1708-05.png)
 
@@ -185,11 +180,11 @@ Na stránce podrobností o aplikacích v aplikaci Portál společnosti pro Andro
 
 Avizujeme změnu, kterou uvedeme během několika nadcházejících měsíců a která vylepší přihlašování k aplikacím Portál společnosti Intune v systémech Android, iOS a Windows. Nové uživatelské prostředí se automaticky zobrazí na všech platformách pro aplikaci Portál společnosti, až Azure AD tuto změnu provede. Kromě toho se teď uživatelé můžou k Portálu společnosti přihlašovat z jiného zařízení pomocí vygenerovaného kódu na jedno použití. To se hodí hlavně v případech, kdy se uživatelé potřebují přihlásit bez přihlašovacích údajů.  
 
-Níže můžete vidět předchozí způsob přihlašování, nový způsob přihlašování pomocí přihlašovacích údajů a nový způsobu přihlašování z jiného zařízení.
+Níže můžete vidět předchozí způsob přihlašování, nový způsob přihlašování pomocí přihlašovacích údajů a nový způsob přihlašování z jiného zařízení.
 
 __Předchozí způsob přihlašování__
 
-![Přihlašovací stránka Portálu společnosti s ikonou osoby před grafickým znázorněním webu. Pod tím je tlačítko „Přihlásit se“. Odkaz dole vede na informace Microsoftu o ochraně osobních údajů a souborech cookie.](./media/cp_ios_aad_signin_before_1704_001.png)
+![Přihlašovací stránka Portálu společnosti s ikonou osoby před grafickým znázorněním webu. Pod tím je tlačítko Přihlásit se. Odkaz dole vede na informace Microsoftu o ochraně osobních údajů a souborech cookie.](./media/cp_ios_aad_signin_before_1704_001.png)
 
 ![Po klepnutí na Přihlásit se uživatel zadá své přihlašovací údaje na této stránce, která požádá o uživatelův e-mail a heslo a současně nabídne způsoby, jak vyřešit problémy s heslem.](./media/cp_ios_aad_signin_before_1704_002.png)
 
@@ -229,7 +224,7 @@ Aplikace Portál společnosti se začne přihlašovat.
 
 ## <a name="june-2017"></a>Červen 2017
 
-### <a name="company-portal-app-for-android-now-has-a-new-end-user-experience-for-app-protection-policies---1305217--"></a>Aplikace Portál společnosti pro Android má teď novou činnost koncového uživatele pro zásady ochrany aplikací <!--1305217-->
+### <a name="company-portal-app-for-android-now-has-a-new-end-user-experience-for-app-protection-policies"></a>Aplikace Portál společnosti pro Android má teď novou činnost koncového uživatele pro zásady ochrany aplikací
 Na základě zpětné vazby od zákazníků jsme aplikaci Portál společnosti pro Android upravili tak, aby zobrazovala tlačítko **Přístup k obsahu společnosti**. Naším záměrem je předejít zbytečné registraci koncových uživatelů, když pouze potřebují přístup k aplikacím s podporou zásad ochrany aplikací – funkce správy mobilních aplikací Intune.
 
 Uživatel místo zahájení registrace zařízení klepne na tlačítko **Přístup k obsahu společnosti**.
@@ -238,7 +233,7 @@ Uživatel místo zahájení registrace zařízení klepne na tlačítko **Přís
 
 Uživatel je následně přesměrován na webovou stránku Portálu společnosti, aby autorizoval použití aplikace na svém zařízení. Web Portálu společnosti ověří jeho přihlašovací údaje.
 
-![Obrázek webu Portálu společnosti s potvrzením přihlášení.](./media/and_iwp_sign_in_auth_page_after_1706.png)
+![Obrázek webu Portál společnosti s potvrzením přihlášení](./media/and_iwp_sign_in_auth_page_after_1706.png)
 
 Zařízení je stále možné zaregistrovat do plné správy klepnutím na nabídku **akce**.
 
@@ -259,9 +254,9 @@ Tato aktualizace se zobrazí pouze na zařízení s Windows 10 Anniversary Updat
 
 ![Obrázek vstupní stránky aplikace Portálu společnosti pro Windows 10, kde je uprostřed v seznamu zařízení zobrazena stavová zpráva s hlášením, že právě používané zařízení ještě není nastavené pro podnikové použití a že by měl uživatel vybrat zprávu a spustit nastavení.](./media/win10_guided_enroll_select_setup_after_1706.png)
 
-![Obrázek stránky nastavení aplikace Portálu společnosti pro Windows 10, která upozorňuje uživatele, že k zařízení musí přidat podnikový účet a potom ho můžou zaregistrovat do správy.](./media/win10_guided_enroll_we_help_setup_after_1706.png)
+![Obrázek stránky nastavení aplikace Portál společnosti pro Windows 10, která upozorňuje uživatele, že k zařízení musí přidat podnikový účet a potom ho můžou zaregistrovat do správy](./media/win10_guided_enroll_we_help_setup_after_1706.png)
 
-![Obrázek stránky s výzvou k přidání podnikového účtu do zařízení v aplikaci Portál společnosti pro Windows 10, která sděluje uživateli, že musí přejít do aplikace Nastavení a vybrat možnost Připojit, aby bylo možné registraci dokončit. Obrazovka uživateli také říká, že se potom bude muset v rámci dokončení registrace vrátit do aplikace Portál společnosti.](./media/win10_guided_enroll_leaving_for_iwp_after_1706.png)
+![Obrázek stránky s výzvou k přidání podnikového účtu do zařízení v aplikaci Portál společnosti pro Windows 10, která sděluje uživateli, že musí přejít do aplikace Nastavení a vybrat možnost Připojit, aby bylo možné registraci dokončit Obrazovka uživateli také říká, že se potom bude muset v rámci dokončení registrace vrátit do aplikace Portál společnosti.](./media/win10_guided_enroll_leaving_for_iwp_after_1706.png)
 
 ![Obrázek stránky s registrací do správy v aplikaci Portál společnosti pro Windows 10, kde je zobrazená stavová zpráva o dokončení, ve které stojí, že zařízení uživatele je teď zaregistrované a že má pokračovat klepnutím na tlačítko Další.](./media/win10_guided_enroll_youre_now_enrolled_after_1706.png)
 
@@ -322,13 +317,13 @@ Aktualizace aplikace Portál společnosti pro Android zobrazuje indikátor průb
    <table id="wrapper">
       <tr>
          <td>
-            <img src="/intune/media/cp_android_connecting_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it." width="200" height="366" align="center">
+            <img src="/intune/media/cp_android_connecting_042017.png" alt="The Company Portal app for Android sign-in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it." width="200" height="366" align="center">
           </td>
           <td>
-             <img src="/intune/media/cp_android_signing_in_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Signing in' underneath it." width="200" height="366" align="center">
+             <img src="/intune/media/cp_android_signing_in_042017.png" alt="The Company Portal app for Android sign-in screen that shows a partially filled loading bar with the phrase 'Signing in' underneath it." width="200" height="366" align="center">
            </td>
            <td>
-              <img src="/intune/media/cp_android_checking_security_reqs_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Checking for security requirements' underneath it." width="200" height="366" align="center">
+              <img src="/intune/media/cp_android_checking_security_reqs_042017.png" alt="The Company Portal app for Android sign-in screen that shows a partially filled loading bar with the phrase 'Checking for security requirements' underneath it." width="200" height="366" align="center">
            </td>
       </tr>
    </table>
@@ -382,11 +377,28 @@ Zde najdete plánované aktualizace našeho uživatelského rozhraní, které vy
 > [!Note]
 > Upozorňujeme, že následující obrázky mohou být náhledy a avizovaný produkt se od prezentovaných verzí může lišit.
 
+### <a name="ui-iwp"></a>Nová aktualizace uživatelského prostředí pro web Portál společnosti<!--2000968-->
+
+V dubnu představíme nový web Portál společnosti, který bude mít aktualizované uživatelské prostředí, zjednodušené pracovní postupy a lepší přístupnost. Bude zahrnovat rozšíření orientované na zákazníka, jako je sdílení aplikací a vylepšený celkový výkon, která vám přinese lepší uživatelský zážitek.
+
+Na základě zpětné vazby od zákazníků, jako jste vy, jsme přidali několik nových funkcí, které výrazně zlepší stávající funkčnost a použitelnost:
+
+-   Vylepšení uživatelského rozhraní celého webu
+-   Možnost sdílet přímé odkazy na aplikace
+- Vylepšený výkon u velkých katalogů aplikací
+
+V rámci přípravy na tuto změnu nemusíte provádět žádnou akci. Jakmile bude aktualizovaný web Portál společnosti pro vás dostupný, dáme vám vědět. Je však možné, že nakonec budete muset dokumentaci pro koncové uživatele doplnit o aktualizované snímky obrazovky. Nezapomeňte, že možná bude nutné také aktualizovat dokumentaci pro aplikaci Portál společnosti v iOSu, protože web využívá část **Aplikace** v aplikaci pro iOS.
+
+|Aktualizované|Předchozí|
+|---|---|
+|![Aktualizovaná stránka zařízení zobrazuje zařízení přímo nad informacemi o zařízení a zařízení se už nezobrazuje nad celým seznamem.](./media/iwp-device-after-1803.png)|![Předchozí verze stránky zařízení](./media/iwp-device-before-1803.png)|
+|![Aktualizovaná stránka instalace aplikace zobrazuje aplikaci přímo nad popisem a různými informacemi o instalaci, jako jsou datum publikování, verze a typ aplikace.](./media/iwp-app-install-after-1803.png)|![Předchozí verze stránky instalace aplikace](./media/iwp-app-install-before-1803.png)|
+
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios---1412866--"></a>Aktualizace uživatelského prostředí aplikace Portál společnosti pro iOS <!--1412866-->
 
 Připravujeme k vydání důležitou aktualizaci uživatelského prostředí aplikace Portál společnosti pro iOS. Tato aktualizace bude mít zcela přepracovaný vizuální design, který bude zahrnovat modernizaci vzhledu a chování a lepší použitelnost a přístupnost. Všechny aktuální funkce aplikace Portál společnosti pro iOS budou zachované.
 
-V rámci programu Apple TestFlight vám nabízíme předprodejní verzi aktualizované aplikace Portál společnosti pro iOS, abyste si ji mohli vyzkoušet a sdělit nám svoje názory. Pro přístup k programu TestFlight se zaregistrujte na https://aka.ms/intune_ios_cp_testflight.
+V rámci programu Apple TestFlight vám nabízíme předprodejní verzi aktualizované aplikace Portál společnosti pro iOS, abyste si ji mohli vyzkoušet a sdělit nám svoje názory. Zaregistrujte se na https://aka.ms/intune_ios_cp_testflight, abyste získali přístup k programu TestFlight. Nejnovější informace o této aktualizaci najdete na stránce https://aka.ms/iOS_companyportal_update.
 
 ![obrázky upoutávek na novou aplikaci Portál společnosti pro iOS](./media/ios-cp-app-redesign-1801-teaser.png)
 
@@ -400,5 +412,5 @@ __Aktualizace Vybraných aplikací__ Přidali jsme na web vyhrazenou stránku, k
 
 ### <a name="see-also"></a>Viz taky
 * [Blog Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
-* [Plán cloudové platformy](https://www.microsoft.com/server-cloud/roadmap/Indevelopment.aspx?TabIndex=0&dropValue=Intune)
+* [Plán cloudové platformy](https://www.microsoft.com/cloud-platform/roadmap)
 * [Co je nového v Intune](https://docs.microsoft.com/intune/whats-new)

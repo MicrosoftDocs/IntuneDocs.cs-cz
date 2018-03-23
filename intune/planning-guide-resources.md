@@ -1,23 +1,24 @@
 ---
-title: "Šablony a zdroje informací pro plánování a návrh nasazení Intune"
-description: "Tady jsou odkazy na plánovací šablony a další informace o Intune, které mohou být užitečné při plánování nasazení a implementaci Intune."
-keywords: 
-author: arob98
-ms.author: angrobe
+title: Šablony a zdroje informací pro plánování a návrh nasazení Intune
+titlesuffix: Microsoft Intune
+description: Tady jsou odkazy na plánovací šablony a další informace o Intune, které mohou být užitečné při plánování nasazení a implementaci Microsoft Intune.
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 63060896-e00e-4ef0-b2ad-276e55164895
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
-ms.openlocfilehash: 8a5a819fc8d081330be60e8b83944e326baaba2b
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 67476afbd00cf54162b316e6c38967bccbed34ad
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>Další zdroje informací pro plánování nasazení Intune
 
@@ -50,7 +51,7 @@ Další informace, které mohou být užitečné při plánování nasazení ře
 
 -   [Blog o Intune](https://blogs.technet.microsoft.com/enterprisemobility/) – příspěvky, ze kterých se dozvíte, jak Intune zapadá do širšího kontextu Enterprise Mobility.
 
--   [Microsoft Trust Center](http://www.microsoft.com/TrustCenter/default.aspx) – informace o přístupu Microsoftu k zabezpečení, ochraně osobních údajů, dodržování předpisů a transparentnosti všech cloudových produktů a služeb Microsoftu.
+-   [Microsoft Trust Center](http://www.microsoft.com/TrustCenter) – informace o přístupu Microsoftu k zabezpečení, ochraně osobních údajů, dodržování předpisů a transparentnosti všech cloudových produktů a služeb Microsoftu.
 
 -   [Intune User Voice](http://microsoftintune.uservoice.com/) – chcete požádat o funkci nebo hlasovat o funkcích s ostatními zákazníky? Napište nám své připomínky k Intune přes User Voice. Posloucháme vás.
 

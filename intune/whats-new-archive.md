@@ -1,26 +1,26 @@
 ---
-title: "Novinky v Microsoft Intune za předchozí měsíce"
-titlesuffix: 
-description: "Zkontrolujte starší oznámení ze stránky novinek Intune"
-keywords: 
+title: Novinky v Microsoft Intune za předchozí měsíce
+titlesuffix: ''
+description: Zkontrolujte starší oznámení ze stránky novinek Intune
+keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 10/19/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 9ba01d60-4a03-4e3e-9aba-8be905c0054c
 ROBOTS: NOINDEX,NOFOLLOW
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7ba6262c1126a421f2e2ca0e5085796c11df8d9a
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 2326078f57abf3101869b463aca8eba55aad2905
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novinky v Microsoft Intune – předchozí měsíce
 
@@ -220,7 +220,7 @@ Jakmile tyto aplikace budou v udržovacím režimu, budou dostávat jen důleži
 
 ### <a name="block-unsupported-samsung-knox-device-enrollment-----1490695---"></a>Blokování registrace nepodporovaných zařízení Samsung KNOX <!-- 1490695 -->
 
-Aplikace Portál společnosti se pokusí zaregistrovat pouze podporovaná zařízení Samsung Knox. Aby se předešlo chybám při aktivaci zabezpečením Knox, které brání registraci MDM, pokus o registraci proběhne jenom u těch zařízení, která jsou v [seznamu zařízení publikovaném společností Samsung](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Některá čísla modelů zařízení Samsung mohou podporovat Knox, ale jiná nemusí. Než si zařízení koupíte a nasadíte, ověřte si u prodejce, zda je vaše zařízení kompatibilní se systémem Knox. Kompletní seznam ověřených zařízení najdete v [nastavení zásad pro Android a Samsung Knox Standard](/intune/supported-devices-browsers.md#intune-supported-devices).
+Aplikace Portál společnosti se pokusí zaregistrovat pouze podporovaná zařízení Samsung Knox. Aby se předešlo chybám při aktivaci zabezpečením Knox, které brání registraci MDM, pokus o registraci proběhne jenom u těch zařízení, která jsou v [seznamu zařízení publikovaném společností Samsung](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Některá čísla modelů zařízení Samsung mohou podporovat Knox, ale jiná nemusí. Než si zařízení koupíte a nasadíte, ověřte si u prodejce, zda je vaše zařízení kompatibilní se systémem Knox. Kompletní seznam ověřených zařízení najdete v [nastavení zásad pro Android a Samsung Knox Standard](/intune/supported-devices-browsers.md#intune-supported-web-browsers).
 
 ### <a name="end-of-support-for-android-43-and-lower----1171126-1326920---"></a>Konec podpory pro Android verze 4.3 a nižší <!-- 1171126, 1326920 -->
 Spravované aplikace a aplikace Portál společnosti pro Android budou pro přístup k firemním prostředkům vyžadovat operační systém Android 4.4 nebo novější. Od prosince budou všechna zaregistrovaná zařízení vyřazena, čímž dojde ke ztrátě přístupu k firemním prostředkům. Pokud používáte zásady ochrany aplikací bez správy mobilních zařízení MDM, aplikace nebudou získávat aktualizace a kvalita jejich činnosti bude časem upadat.
@@ -281,7 +281,7 @@ Teď můžete nastavit zásady podmíněného přístupu, které po zařízeníc
 - Přečtěte si další informace o [podpoře podmíněného přístupu pro zařízení s macOS](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
 
 ### <a name="company-portal-app-for-macos-is-in-public-preview----1484796---"></a>Aplikace Portál společnosti pro macOS ve verzi Public Preview <!---1484796--->
-Aplikace Portál společnosti pro macOS je teď k dispozici jako součást verze Public Preview pro podmíněný přístup v Enterprise Mobility + Security. Tato verze podporuje macOS 10.11 a novější. Získáte ji na [https://aka.ms/macOScompanyportal](https://aka.ms/macOScompanyportal). 
+Aplikace Portál společnosti pro macOS je teď k dispozici jako součást verze Public Preview pro podmíněný přístup v Enterprise Mobility + Security. Tato verze podporuje macOS 10.11 a novější. Můžete ji získat zde: [https://aka.ms/macOScompanyportal](https://aka.ms/macOScompanyportal). 
 
 
 ### <a name="new-device-restriction-settings-for-windows-10"></a>Nová nastavení omezení pro zařízení s Windows 10    

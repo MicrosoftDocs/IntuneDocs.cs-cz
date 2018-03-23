@@ -1,23 +1,23 @@
 ---
-title: "Konfigurace nastavení služby Windows Update pro firmy v Intune"
-titleSuffix: Azure portal
-description: "Zjistěte, jak v Intune konfigurovat nastavení Windows Update pro firmy k řízení aktualizací zařízení s Windows 10."
-keywords: 
+title: Konfigurace nastavení služby Windows Update pro firmy v Microsoft Intune
+titleSuffix: ''
+description: Zjistěte, jak v Microsoft Intune konfigurovat nastavení služby Windows Update pro firmy k řízení aktualizací zařízení s Windows 10.
+keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: d6ccda2aba0b1383de6c38b7a2fdcfdc742d0e15
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: ac26d0ac1855aa32ef0f00de6a4056bd57c07528
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="manage-software-updates"></a>Správa aktualizací softwaru
 
@@ -140,7 +140,7 @@ V nastavení **Přidat nebo upravit nastavení OMA-URI** můžete použít třeb
 - **Datový typ:** Řetězec
 - **Hodnota**: <*Použijte identifikátor GUID zobrazený na kartě Telemetrie Windows v pracovním prostoru OMS*>
 
-![Nastavení Windows pro diagnostiku a data o používání](./media/commID.png)
+![Nastavení OMA-URI – Přidat řádek](./media/commID.png)
 
 ## <a name="how-to-pause-updates"></a>Pozastavení aktualizací
 Je možné pozastavit příjem aktualizací funkcí nebo aktualizací kvality zařízením až na 35 dní od okamžiku pozastavení aktualizací. Po uplynutí maximálního počtu dní funkce pozastavení automaticky vyprší a zařízení zkontroluje dostupné aktualizace ve Windows Update. Po této kontrole můžete aktualizace znovu pozastavit.

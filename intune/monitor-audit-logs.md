@@ -1,20 +1,21 @@
 ---
-title: Protokoly auditu pro aktivity v Intune
-description: "Přečtěte si, jak kontrolovat protokoly auditu se zaznamenanými aktivitami Intune."
-keywords: 
+title: Protokoly auditu pro aktivity v Microsoft Intune
+description: Přečtěte si, jak kontrolovat protokoly auditu se zaznamenanými aktivitami Microsoft Intune.
+keywords: ''
+ms.author: dougeby
 author: dougeby
 manager: dougeby
 ms.date: 02/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
-ms.openlocfilehash: 55499bc8126958918ac2494fc86059eb3d331c69
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: c7c8b860be9722138f8bd804a66131328b592022
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="audit-logs-for-intune-activities"></a>Protokoly auditu pro aktivity v Intune
 Protokoly auditu obsahují zaznamenané aktivity, které v Microsoft Intune generují změnu. Vytváření, aktualizace (úpravy), odstraňování, přiřazování akcí nebo vzdálené úlohy generují události protokolu, které můžete kontrolovat. V protokolech auditu můžete kontrolovat většinu úloh Intune. Auditování je ve výchozím nastavení povolené pro všechny zákazníky a nedá se zakázat. Události auditu se začaly zaznamenávat od data vydání této součásti v prosinci 2017. Dřívější události nejsou dostupné.

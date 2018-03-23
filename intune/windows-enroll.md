@@ -1,25 +1,25 @@
 ---
-title: "Nastavení registrace pro zařízení s Windows pomocí Microsoft Intune"
-titlesuffix: 
-description: "Nastavte registraci pro zařízení s Windows."
-keywords: 
+title: Nastavení registrace pro zařízení s Windows pomocí Microsoft Intune
+titlesuffix: ''
+description: Nastavte registraci pro zařízení s Windows.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/29/2017
+ms.date: 03/12/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 21849cd4bb1c77334fdc3e9e347365a25ab4df2d
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 896c984cb5831dc84a041d4ad39e4cdf6819f0f8
+ms.sourcegitcommit: 820f950d1fc80b1eb5db1b0cf77f44d92a969951
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Nastavení registrace pro zařízení s Windows
 
@@ -85,6 +85,9 @@ Informujte uživatele, jak si mají svá zařízení s Windows zaregistrovat a c
 > Koncoví uživatelé musí k webu Portál společnosti přistupovat přes Microsoft Edge, aby si mohli zobrazit aplikace Windows, které jste přiřadili ke konkrétním verzím Windows. Jiné prohlížeče, včetně Google Chrome, Mozilla Firefoxu a Internet Exploreru, tento typ filtrování nepodporují.
 
 Postup registrace koncových uživatelů najdete v tématu [Registrace zařízení s Windows v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows). Uživatelům také můžete poradit, aby si přečetli článek o tom, [jaké informace vidí správce IT na zařízení](https://docs.microsoft.com/intune-user-help/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows).
+
+>[!IMPORTANT]
+> Pokud není povolená automatická registrace MDM, ale máte zařízení s Windows 10 připojená ke službě Azure AD, zobrazí se v konzole Intune po registraci dva záznamy. Tomuto chování zabráníte tak, že uživatelé se zařízeními připojenými ke službě Azure AD přejdou na **Účty** > **Přístup do práce nebo do školy** a **Připojit** pomocí stejného účtu. 
 
 Další informace o úlohách pro koncové uživatele najdete v tématu [Materiály o prostředí Microsoft Intune pro koncové uživatele](end-user-educate.md).
 

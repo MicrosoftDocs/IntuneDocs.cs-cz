@@ -1,24 +1,24 @@
 ---
-title: "Popis služby Microsoft Intune"
-description: "Intune je cloudová služba, která pomáhá spravovat zařízení s Windows, iOS, Mac OS X, Androidem a Windows Mobile."
-keywords: 
-author: arob98
-ms.author: angrobe
+title: Popis služby Microsoft Intune
+description: Microsoft Intune je cloudová služba, která pomáhá spravovat zařízení s Windows, iOS, Mac OS X, Androidem a Windows Mobile.
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 01/02/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 40fa5a2e-6c0f-4150-9740-d5ddc0cdbda0
 ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f4671f643f9806945043adcb9279c7bc95d8efe2
-ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
+ms.openlocfilehash: 7b9c3965d99e0058ae0236e1efc3daa840aebc6c
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="microsoft-intune-service-description"></a>Popis služby Microsoft Intune
 
@@ -33,7 +33,7 @@ Intune se úzce integruje se službou Azure Active Directory (Azure AD) kvůli �
 Další informace o správě zařízení, aplikací a ochraně firemních dat v Intune najdete v [dokumentaci k Intune](https://docs.microsoft.com/intune/).
 
 ## <a name="30-day-free-trial"></a>30denní bezplatná zkušební verze
-Můžete začít používat 30denní bezplatnou zkušební verzi Intune, která zahrnuje 100 uživatelských licencí. Jestli chcete začít používat bezplatnou zkušební verzi, [přejděte na registrační stránku Intune](https://www.microsoft.com/server-cloud/products/microsoft-intune/). Jestli má organizace uzavřenou smlouvu Enterprise nebo jinou rovnocennou multilicenční smlouvu, požádejte o nastavení bezplatné zkušební verze zástupce Microsoftu.
+Můžete začít používat 30denní bezplatnou zkušební verzi Intune, která zahrnuje 100 uživatelských licencí. Jestli chcete začít používat bezplatnou zkušební verzi, [přejděte na registrační stránku Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20). Jestli má organizace uzavřenou smlouvu Enterprise nebo jinou rovnocennou multilicenční smlouvu, požádejte o nastavení bezplatné zkušební verze zástupce Microsoftu.
 
 > [!NOTE]
 > Pokud má vaše organizace pracovní nebo školní účet služeb Microsoft Online Services a po skončení zkušební doby budete chtít toto předplatné Intune používat v produkčním prostředí, vyberte na této stránce možnost **Přihlásit se** a přihlaste se pod účtem globálního správce organizace. Tím zajistíte, že se zkušební verze Intune propojí s vaším stávajícím pracovním nebo školním účtem.

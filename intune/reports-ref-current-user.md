@@ -1,24 +1,25 @@
 ---
-title: "Aktuální uživatel – datový sklad Intune | Microsoft Docs"
-description: "Referenční téma pro kategorii Uživatel v kolekcích entit v rozhraní API datového skladu Intune"
-keywords: "Datový sklad Intune"
-author: erikre
+title: Aktuální uživatel – Datový sklad Intune
+titlesuffix: Microsoft Intune
+description: Referenční téma pro kategorii Uživatel v kolekcích entit v rozhraní API datového skladu Intune
+keywords: Datový sklad Intune
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/12/2017
+ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: C10E6752-E925-40AD-ABBF-6B621FB7AFC4
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d25825910e878d428bde72414c4bbee2d5092a89
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 55aaf78df514b373a8627dfcd3b47934085cd8fa
+ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="reference-for-current-user-entity"></a>Referenční informace o entitě aktuálního uživatele
 

@@ -1,25 +1,26 @@
 ---
-title: "Využití podmíněného přístupu k většímu přijetí koncovými uživateli"
-description: "Tento článek obsahuje přehledné informace o tom, jak pomocí podmíněného přístupu zjednodušit registraci Intune."
-keywords: 
-author: andredm7
-ms.author: andredm
+title: Využití podmíněného přístupu k většímu přijetí koncovými uživateli
+titlesuffix: Microsoft Intune
+description: Naučte se využít podmíněný přístup k řízení registrací v Microsoft Intune.
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
-ms.date: 06/12/2017
+ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: c2d7ce3f-fe97-4044-ad9e-25ac8fa301c9
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.openlocfilehash: 180cecde31627192363bb00f58fb13f7ec123744
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 31e2a79e5506666cc5ebe655536600b57a429802
+ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/16/2018
 ---
-# <a name="drive-end-user-adoption-with-conditional-access"></a>Využití podmíněného přístupu k většímu přijetí koncovými uživateli
+# <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Využití podmíněného přístupu v Microsoft Intune pro účely přijetí koncovými uživateli
 
 Povolení funkcí podmíněného přístupu v Intune, například blokování e-mailu pro neregistrovaná zařízení, může zjednodušit registraci a dodržování předpisů, ale není podmínkou pro úspěšnou migraci. Úspěch by měly určovat vaše cíle přijetí migrace a požadavky na zabezpečení.
 

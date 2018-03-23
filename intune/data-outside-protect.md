@@ -1,25 +1,27 @@
 ---
-title: "Zabránění neoprávněnému přístupu k podnikovým datům"
-description: "Zabraňte neoprávněného přístupu k firemním datům, když se sdílí mimo podnikovou síť."
-keywords: "Office 365 O365 Azure Information Protection ochrana firemních dat mimo vaši firemní síť"
-author: arob98
+title: Zabránění neoprávněnému přístupu k podnikovým datům
+titlesuffix: Microsoft Intune
+description: Microsoft Intune vám umožňuje zabránit neoprávněnému přístupu k firemním datům, když se sdílí mimo podnikovou síť.
+keywords: Office 365 O365 Azure Information Protection ochrana firemních dat mimo vaši firemní síť
+ms.author: dougeby
+author: dougeby
 manager: dougeby
-ms.date: 09/22/2017
+ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 6a88573a-aa60-455c-858c-74562798246b
 ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e3a52b2be557139cb2d31dd4919d239daeb81853
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 25f0572d65e6d651c636c8b1961903f7c2c78906
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/17/2018
 ---
-# <a name="prevent-unauthorized-access-to-company-data"></a>Zabránění neoprávněnému přístupu k podnikovým datům 
+# <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>Zabránění neoprávněnému přístupu k podnikovým datům v Microsoft Intune
 
 Dokumenty Office 365 a e-maily můžete klasifikovat, označovat a chránit, aby k nim měli přístup jen oprávnění uživatelé. Když správci IT nebo uživatelé nastaví pravidla a podmínky, začne se toto nastavení spravovat automaticky. Nebo může IT tým poskytnout doporučené nastavení, kterého by se uživatelé měli držet. Správci a uživatelé můžou také odvolat přístup k datům, která se už sdílejí, aniž by museli požádat o pomoc jinou autoritu. Díky těmto funkcím máte možnost řídit, kdo smí otevřít nebo aktualizovat chráněná data, i když opustí firemní síť. 
 
@@ -44,5 +46,5 @@ Můžete sdílet podrobnosti o tom, [jak a kdy chránit dokumenty a e-maily, kte
 
 V dalších krocích se dozvíte o jiných způsobech, jakými můžete zlepšit ochranu firemních dat, mezi které patří: 
 
-* Projděte si další informace o použití [Azure Information Protection na zařízeních s iOSem a Androidem](https://docs.microsoft.com/information-protection/rms-client/mobile-app-faq.
+* Přečtěte si, jak používat [Azure Information Protection na zařízeních s iOSem a Androidem](https://docs.microsoft.com/information-protection/rms-client/mobile-app-faq.
 * V případě telefonů Windows Phone a počítačů Mac najdete další informace v tématu o [aplikaci pro sdílení obsahu Microsoft Rights Management](https://technet.microsoft.com/dn451248).

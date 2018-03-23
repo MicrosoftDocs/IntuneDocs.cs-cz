@@ -1,25 +1,25 @@
 ---
-title: "Správa webového přístupu pomocí aplikace Managed Browser"
+title: Správa webového přístupu pomocí aplikace Managed Browser
 titlesuffix: Microsoft Intune
-description: "Nasazením aplikace Managed Browser můžete omezit procházení webu a přenos dat z webu do jiných aplikací."
-keywords: 
-author: erikre
+description: Nasazením aplikace Managed Browser můžete omezit procházení webu a přenos dat z webu do jiných aplikací.
+keywords: ''
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 03/14/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f7c36639272bd8738bff33f6039a2d26e6147729
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 742173c1ef53337dab35694c0c04cbca60dbb07c
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Správa přístupu k internetu pomocí zásad aplikace Managed Browser v Microsoft Intune
 
@@ -35,7 +35,7 @@ Vzhledem k tomu, že je tato aplikace integrovaná s Intune SDK, můžete u n
 - Prevence pořizování snímků obrazovky
 - Zajištění, že odkazy na obsah, na které uživatelé klikají, se otevřou jedině v ostatních spravovaných aplikacích.
 
-Podrobnosti najdete v článku [Co jsou zásady ochrany aplikací](/intune/app-protection-policy).
+Podrobnosti najdete v článku [Co jsou zásady ochrany aplikací](/intune/app-protection-policy.md).
 
 Tato nastavení můžete použít na:
 
@@ -59,7 +59,47 @@ Zásady aplikace Managed Browser můžete vytvořit pro následující typy zař
 >Starší verze systému Android a iOS budou moct Managed Browser dál používat, ale nepůjde do nich nainstalovat nové verze této aplikace a nebudou mít přístup ke všem jejím možnostem. Doporučujeme vám tato zařízení aktualizovat na podporovanou verzi operačního systému.
 
 
-Intune Managed Browser podporuje otevírání webového obsahu od [partnerů nabízejících aplikace pro Microsoft Intune](https://www.microsoft.com/server-cloud/products/microsoft-intune/partners.aspx).
+Intune Managed Browser podporuje otevírání webového obsahu od [partnerů nabízejících aplikace pro Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+
+## <a name="conditional-access-for-the-intune-managed-browser"></a>Podmíněný přístup pro aplikaci Intune Managed Browser
+
+Managed Browser je nově schválenou klientskou aplikací pro podmíněný přístup. To znamená, že můžete omezit přístup mobilních prohlížečů k webovým aplikacím připojeným ke službě Azure AD tak, aby uživatelé mohli používat jenom Managed Browser, a blokovat přístup ze všech ostatních nechráněných prohlížečů, například Safari nebo Chrome. Tuto ochranu můžete použít u prostředků Azure, jako jsou Exchange Online a SharePoint Online, portál Office a dokonce místní weby, k nimž mají přístup externí uživatelé přes [Proxy aplikací Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started). 
+
+Pokud chcete webovým aplikacím připojeným ke službě Azure AD omezit možnost používání aplikace Intune Managed Browser na mobilních platformách, můžete vytvořit zásadu podmíněného přístupu Azure AD, která vyžaduje schválené klientské aplikace. 
+
+1. Na portálu Azure Portal vyberte **Azure Active Directory** > **Podnikové aplikace** > **Podmíněný přístup** > **Nová zásada**. 
+2. Potom v okně v části **Ovládací prvky přístupu** vyberte **Udělení**. 
+3. Klikněte na **Vyžaduje se klientem schválená aplikace**. 
+4. V okně **Udělení** klikněte na **Vybrat**. Tuto zásadu musíte přiřadit ke cloudovým aplikacím, které mají být dostupné jenom pro aplikaci Intune Managed Browser.
+
+    ![Azure AD – zásada podmíněného přístupu pro Managed Browser](./media/managed-browser-conditional-access-01.png)
+
+5. V části **Přiřazení** vyberte **Podmínky** > **Klientské aplikace**. Zobrazí se okno **Klientské aplikace**.
+6. V části **Konfigurovat** klikněte na **Ano**, aby se zásada použila u konkrétních klientských aplikací.
+7. Zkontrolujte, že je jako klientská aplikace vybraná možnost **Prohlížeč**.
+
+    ![Azure AD – Managed Browser – Výběr klientských aplikací](./media/managed-browser-conditional-access-02.png)
+
+    > [!NOTE]
+    > Pokud chcete omezit to, které nativní (neprohlížečové) aplikace mají přístup k těmto cloudovým aplikacím, můžete také vybrat **Mobilní aplikace a desktopoví klienti**.
+
+8. V části **Přiřazení** vyberte **Uživatelé a skupiny** a potom zvolte uživatele nebo skupiny, ke kterým chcete tuto zásadu přiřadit. 
+
+    > [!NOTE]
+    > Na uživatele musí také cílit zásady Intune App Protection. Další informace o vytváření zásad Intune App Protection najdete v tématu [Co jsou zásady ochrany aplikací?](app-protection-policy.md).
+
+9. V části **Přiřazení** vyberte **Cloudové aplikace** a zvolte, které aplikace chcete chránit pomocí této zásady.
+
+Jakmile nakonfigurujete výše uvedenou zásadu, budou uživatelé pro přístup k webovým aplikacím připojeným ke službě Azure AD, které chráníte pomocí této zásady, nuceni používat Intune Managed Browser. Pokud se uživatel pokusí v tomto scénáři použít nespravovaný prohlížeč, zobrazí se mu zpráva, že musí použít Intune Managed Browser.
+
+##  <a name="single-sign-on-to-azure-ad-connected-web-apps-in-the-intune-managed-browser"></a>Jednotné přihlašování k webovým aplikacím připojeným ke službě Azure AD v aplikaci Intune Managed Browser
+
+Aplikace Intune Managed Browser v iOSu a Androidu může nově využít výhod jednotného přihlašování ke všem webovým aplikacím (SaaS i místním), které jsou připojeny ke službě Azure AD. Když se v iOSu nebo na Portálu společnosti Intune v Androidu nachází aplikace Microsoft Authenticator, uživatelé aplikace Intune Managed Browser budou mít přístup k webovým aplikacím připojeným ke službě Azure AD bez nutnosti opakovaně zadávat svoje přihlašovací údaje.
+
+Jednotné přihlašování v aplikaci Intune Managed Browser vyžaduje, aby bylo vaše zařízení zaregistrováno aplikací Microsoft Authenticator v iOSu nebo na Portálu společnosti Intune v Androidu. Uživatelům s aplikací Authenticator nebo Portálem společnosti Intune se zobrazí výzva, aby si zařízení zaregistrovali, když přejdou do webové aplikace připojené ke službě Azure AD v aplikaci Intune Managed Browser, pokud už nemají zařízení zaregistrováno jinou aplikací. Jakmile se zařízení zaregistruje pomocí účtu spravovaného přes Intune, bude mít tento účet povoleno jednotné přihlašování u webových aplikací připojených ke službě Azure AD. 
+
+> [!NOTE]
+> Registrace zařízení představuje jednoduché vrácení se změnami pomocí služby Azure AD. Nevyžaduje úplnou registraci zařízení a nedává pracovníkům IT žádná další oprávnění k zařízení.
 
 ## <a name="create-a-managed-browser-app-configuration"></a>Vytvoření konfigurace aplikace Managed Browser
 
@@ -102,7 +142,10 @@ Aplikaci Intune Managed Browser a [Proxy aplikací Azure AD]( https://docs.micr
     - Postup konfigurace proxy aplikací a publikování aplikací najdete v [dokumentaci k instalaci]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#how-to-get-started). 
 - Musíte používat minimálně verzi 1.2.0 aplikace Managed Browser.
 - Uživatelé prohlížeče Managed Browser mají k této aplikaci přiřazené [zásady ochrany aplikací Intune]( app-protection-policy.md).
-Poznámka: Aktualizovaným datům přesměrování proxy aplikace může trvat až 24 hodin, než se projeví v aplikaci Managed Browser.
+
+    > [!NOTE]
+    > Aktualizovaným datům přesměrování proxy aplikace může trvat až 24 hodin, než se projeví v aplikaci Managed Browser.
+
 
 #### <a name="step-1-enable-automatic-redirection-to-the-managed-browser-from-outlook"></a>Krok 1: Zapněte automatické přesměrování z Outlooku do prohlížeče Managed Browser.
 Outlook musí být nakonfigurován zásadami ochrany aplikací, které povolují nastavení **Omezit webový obsah tak, aby se spouštěl v Managed Browseru**.
@@ -115,6 +158,7 @@ Tento postup nakonfiguruje prohlížeč Managed Browser tak, aby používal pře
 |Klíč|Hodnota|
 |**com.microsoft.intune.mam.managedbrowser.AppProxyRedirection**|**true**|
 
+Další informace o tom, jak lze aplikaci Managed Browser a Proxy aplikací Azure AD používat společně za účelem bezproblémového (a chráněného) přístupu k místním webovým aplikacím, najdete v blogovém příspěvku Enterprise Mobility + Security s názvem[Better together: Intune and Azure Active Directory team up to improve user access](https://cloudblogs.microsoft.com/enterprisemobility/2017/07/06/better-together-intune-and-azure-active-directory-team-up-to-improve-user-access) (Ve dvou se to lépe táhne: Intune a Azure Active Directory společně vylepšují uživatelský přístup).
 
 ## <a name="how-to-configure-the-homepage-for-the-managed-browser"></a>Postup konfigurace domovské stránky prohlížeče Managed Browser
 
@@ -247,3 +291,7 @@ Microsoft automaticky shromažďuje anonymní informace o výkonu a využití 
 
 ### <a name="turn-off-usage-data"></a>Vypnutí dat o využití
 Microsoft automaticky shromažďuje anonymní informace o výkonu a využití aplikace Managed Browser za účelem zlepšení svých produktů a služeb. Uživatelé můžou shromažďování těchto dat na svých zařízeních vypnout pomocí nastavení **Data o využití**. Nad shromažďováním těchto dat nemáte žádnou kontrolu.
+
+## <a name="next-steps"></a>Další kroky
+
+- [Co jsou zásady ochrany aplikací?](app-protection-policy.md)

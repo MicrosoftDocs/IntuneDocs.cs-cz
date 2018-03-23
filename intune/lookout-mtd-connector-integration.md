@@ -1,25 +1,25 @@
 ---
-title: "Nastavení integrace služby Lookout s Microsoft Intune"
-titlesuffix: 
-description: "Přečtěte si o integraci Intune se službou Lookout Mobile Threat Defense za účelem regulace přístupu mobilních zařízení k firemním prostředkům."
-keywords: 
+title: Nastavení integrace služby Lookout s Microsoft Intune
+titlesuffix: ''
+description: Přečtěte si o integraci Intune se službou Lookout Mobile Threat Defense za účelem regulace přístupu mobilních zařízení k firemním prostředkům.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 06/21/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 5b0d7644-3183-45ba-a165-0d82d70cb71e
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7ffd55a82af4f7fdc8d8df7cab818c59def74109
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 8b1b7d9ef1a7dce0b5a139f3b8acb85ab7d11d4c
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="set-up-your-lookout-mobile-threat-defense-integration-with-intune"></a>Nastavení integrace ochrany před mobilními hrozbami Lookout s Intune
 
@@ -67,13 +67,11 @@ V následujícím postupu se dozvíte, jak získat informace, které je třeba s
 
 ## <a name="configure-your-subscription"></a>Konfigurace předplatného
 
-1. Poté, co podpora služby Lookout vytvoří váš účet Lookout Enterprise, se na adresu primárního kontaktu vaší firmy odešle e-mail s odkazem na přihlašovací stránku: https://aad.lookout.com/les?action=consent.
+1. Poté, co podpora služby Lookout vytvoří váš účet Lookout Enterprise, se na adresu primárního kontaktu vaší firmy odešle e-mail ze služby Lookout s odkazem na přihlašovací stránku: https://aad.lookout.com/les?action=consent.
 
 2.  Při prvním přihlášení ke konzole Lookout je nutné použít uživatelský účet, který má v Azure AD roli globálního správce, aby bylo možné zaregistrovat tenanta Azure AD. Při dalších přihlášeních se už tato úroveň oprávnění v Azure AD nevyžaduje. Zobrazí se stránka pro vyjádření souhlasu. Vyberte možnost **přijmout** a dokončete registraci. Po přijetí a vyjádření souhlasu budete přesměrováni na konzolu Lookout.
 
     ![snímek obrazovky stránky prvního přihlášení do konzoly Lookout](./media/lookout_mtp_initial_login.png)
-    > [!NOTE] 
-    > Nápovědu k problémům při přihlášení najdete v [řešení potíží s integrací služby Lookout](https://docs.microsoft.com/intune/troubleshoot/troubleshooting-lookout-integration).
 
 3.  V [konzole Lookout](https://aad.lookout.com) zvolte v modulu **Systém** kartu **Konektory** a vyberte **Intune**.
 

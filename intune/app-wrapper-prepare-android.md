@@ -1,24 +1,24 @@
 ---
-title: "Zabalení aplikací pro Android nástrojem Intune App Wrapping Tool"
-description: "Naučte se balit aplikace pro Android beze změny samotného kódu aplikace. Připravte aplikace, abyste mohli použít zásady správy mobilních aplikací."
-keywords: 
+title: Zabalení aplikací pro Android nástrojem Intune App Wrapping Tool
+description: Naučte se balit aplikace pro Android beze změny samotného kódu aplikace. Připravte aplikace, abyste mohli použít zásady správy mobilních aplikací.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/05/2018
+ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 33774f1326f961e6072197d46e9eb64f121739c9
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: de63fe9476e4fa0f3f85343659538856f2f841d8
+ms.sourcegitcommit: 820f950d1fc80b1eb5db1b0cf77f44d92a969951
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro Android na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -30,8 +30,6 @@ Jde o nástroj příkazového řádku Windows, který běží v PowerShellu a�
 
 
 Před spuštěním nástroje si přečtěte část [Důležité informace o zabezpečení při spuštění nástroje App Wrapping Tool](#security-considerations-for-running-the-app-wrapping-tool). Nástroj si můžete stáhnout ze stránky [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) na GitHubu.
-
-
 
 ## <a name="fulfill-the-prerequisites-for-using-the-app-wrapping-tool"></a>Splnění požadavků na používání nástroje App Wrapping Tool
 
@@ -51,6 +49,8 @@ Před spuštěním nástroje si přečtěte část [Důležité informace o zabe
     > V některých případech může 32bitová verze Javy způsobit potíže s pamětí. Proto je vhodné nainstalovat 64bitovou verzi.
 
 - Android vyžaduje, aby byly všechny balíčky aplikací (.apk) podepsané. Informace o **opětovném použití** existujících certifikátů a celkové pokyny k podpisovým certifikátům najdete v tématu [Opětovné použití podpisových certifikátů a balení aplikací](https://docs.microsoft.com/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps). Ke generování **nových** přihlašovacích údajů potřebných k podpisu zabalené výstupní aplikace se používá spustitelný soubor Java keytool.exe. Nastavená hesla musí být bezpečná, ale nezapomeňte si je poznamenat, protože je budete potřebovat ke spuštění nástroje App Wrapping Tool.
+
+- (Volitelné) V rámci vstupní aplikace povolte Multidex. Někdy se může stát, že aplikace dosáhne limitu velikosti souboru DEX (Dalvik Executable) kvůli třídám sady Intune MAM SDK, které se přidávají během zabalení. Soubory DEX jsou součástí kompilace aplikace pro Android. V tomto scénáři doporučujeme povolit Multidex přímo v aplikaci. V některých organizacích to může vyžadovat spolupráci s těmi, kteří kompilují aplikaci (tedy s týmem, který vytvořil build aplikace). 
 
 ## <a name="install-the-app-wrapping-tool"></a>Instalace nástroje App Wrapping Tool
 
@@ -159,6 +159,7 @@ Následující část obsahuje postup pro vyžadování výzvy uživateli při s
 Tyto pokyny se týkají všech aplikací pro Android a Xamarin, u kterých chcete při použití na zařízení koncového uživatele vyžadovat zásady ochrany aplikací Intune.
 
 1. Nakonfigurujte ADAL pomocí postupu, který je uvedený v [příručce Intune SDK pro Android](https://docs.microsoft.com/intune/app-sdk-android#configure-azure-active-directory-authentication-library-adal).
+
 > [!NOTE] 
 > Termín „ID klienta“, který se váže na vaši aplikaci, je shodný s termínem „ID aplikace“ z portálu Azure Portal, který se váže na vaši aplikaci. 
 * Pokud chcete povolit jednotné přihlašování, použijte postup uvedený v části Obvyklé konfigurace ADAL v bodě 2.

@@ -1,26 +1,25 @@
 ---
-title: "Konfigurace a správa certifikátů SCEP pomocí Intune"
-titlesuffix: Azure portal
-description: "Přečtěte si, jak nakonfigurovat infrastrukturu a pak vytvořit a přiřadit profily certifikátů Intune SCEP."
-keywords: 
-author: arob98
-ms.author: angrobe
+title: Konfigurace a správa certifikátů SCEP pomocí Microsoft Intune
+description: Přečtěte si, jak v Microsoft Intune konfigurovat infrastrukturu a pak vytvořit a přiřadit profily certifikátů Intune SCEP (Simple Certificate Enrollment Protocol).
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d723bc4d5032a7a5c330367fe83eabd4763917a2
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 88109f1dc4543a5c71f36378fddb110c03afa08f
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
-# <a name="configure-and-manage-scep-certificates-with-intune"></a>Konfigurace a správa certifikátů SCEP pomocí Intune
+# <a name="configure-and-manage-scep-certificates-with-microsoft-intune"></a>Konfigurace a správa certifikátů SCEP pomocí Microsoft Intune
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Toto téma popisuje, jak pomocí Intune konfigurovat infrastrukturu a pak vytvořit a přiřadit profily certifikátů SCEP (Simple Certificate Enrollment Protocol).

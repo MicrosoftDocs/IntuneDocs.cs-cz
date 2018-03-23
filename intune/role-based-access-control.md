@@ -1,27 +1,26 @@
 ---
-title: "Řízení správy na základě rolí s Intune"
-titleSuffix: Azure portal
-description: "Intune Azure Preview: Informace o tom, jak RBAC umožňuje určovat, kdo může provádět akce a změny."
-keywords: 
-author: arob98
-ms.author: angrobe
+title: Řízení přístupu na základě role v Microsoft Intune
+description: Přečtěte si, jak vám řízení přístupu na základě role (RBAC) umožňuje řídit, kdo může provádět akce a změny v Microsoft Intune.
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
 ms.date: 02/27/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c19a3b8a6df82780d54f277d5477b947f050b1cc
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: edf17d98bb733f7567a615eec856fb7122ba251b
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
-# <a name="role-based-administration-control-rbac-with-intune"></a>Řízení správy na základě rolí (RBAC) s Intune
+# <a name="role-based-administration-control-rbac-with-microsoft-intune"></a>Řízení správy na základě role (RBAC) v Microsoft Intune
 
 Řízení správy na základě rolí pomáhá řídit, kdo může provádět různé úlohy Intune ve vaší organizaci a koho se tyto úlohy týkají. Můžete buď použít předdefinované role, které vyhovují běžným situacím v Intune, nebo si vytvořit své vlastní role. Roli definuje toto:
 

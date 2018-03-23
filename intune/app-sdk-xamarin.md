@@ -1,24 +1,24 @@
 ---
 title: Komponenta Xamarin sady Microsoft Intune App SDK
-description: "Komponenta Xamarin sady Intune App SDK umožňuje v aplikacích pro iOS a Android vytvořených pomocí Xamarinu povolit zásady ochrany aplikací Intune."
+description: Komponenta Xamarin sady Intune App SDK umožňuje v aplikacích pro iOS a Android vytvořených pomocí Xamarinu povolit zásady ochrany aplikací Intune.
 keywords: SDK, Xamarin, Intune
 author: Erikre
 manager: dougeby
 ms.author: erikre
-ms.date: 03/02/2018
+ms.date: 03/19/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9fa0d471f91eeeebd0058417aa437e5469f48e09
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: b69cccca8c8be859de94ca8bdb50d6030439233a
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-component"></a>Komponenta Xamarin sady Microsoft Intune App SDK
 
@@ -58,29 +58,20 @@ Aplikace Xamarinu vytvořené pomocí komponenty Xamarin sady Intune App SDK te�
 
 ## <a name="get-started"></a>Začínáme
 
-1.  [Zde](https://components.xamarin.com/submit/xpkg) stáhněte soubor **Xamarin component.exe** a extrahujte ho.
+1. Přečtěte si [licenční podmínky](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf) pro komponentu Microsoft Intune MAM Xamarin.
 
-2. Přečtěte si [licenční podmínky](https://components.xamarin.com/license/microsoft.intune.mam) pro komponentu Microsoft Intune MAM Xamarin.
-
-3.  Stáhněte složku komponenty Xamarin sady Intune App SDK z [GitHubu](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) nebo [Nuget.org](https://www.nuget.org/profiles/msintuneappsdk) a extrahujte ji. Oba soubory stažené v kroku 1 a 3 musí být na úrovni stejného adresáře.
-
-4.  Na příkazovém řádku jako správce spusťte `mono Xamarin.Component.exe install <.xam> file`.
-
-5.  Ve Visual Studiu klikněte pravým tlačítkem na **komponenty** ve dříve vytvořeném projektu Xamarinu.
-
-6.  Vyberte **Upravit komponenty** a přidejte komponentu Intune App SDK, kterou jste stáhli do počítače.
-
-
+2.  Stáhněte si balíčky NuGet komponenty Xamarin sady Intune App SDK z [GitHubu](https://github.com/msintuneappsdk/intune-app-sdk-xamarin). Tyto balíčky budou brzy dostupné na Nuget.org.  
 
 ## <a name="enabling-intune-app-protection-polices-in-your-ios-mobile-app"></a>Povolení zásad ochrany aplikací Intune v mobilní aplikaci pro iOS
-1.  Při integraci sady Intune App SDK do mobilní aplikace pro iOS dodržujte obecné pokyny. Začněte od 3. kroku popsaného v [příručce pro vývojáře k sadě Intune App SDK pro iOS](app-sdk-ios.md#build-the-sdk-into-your-mobile-app).
+1. Do projektu Xamarin.iOS přidejte balíček NuGet `Microsoft.Intune.MAM.Xamarin.iOS`.
+2.  Při integraci sady Intune App SDK do mobilní aplikace pro iOS dodržujte obecné pokyny. Začněte od 3. kroku popsaného v [příručce pro vývojáře k sadě Intune App SDK pro iOS](app-sdk-ios.md#build-the-sdk-into-your-mobile-app). Poslední krok v této části spuštění nástroje IntuneMAMConfigurator můžete přeskočit, protože tento nástroj je součástí balíčku Microsoft.Intune.MAM.Xamarin.iOS a spustí se automaticky při sestavení.
     **Důležité:** Povolení sdílení klíčenky aplikace je v sadě Visual Studio trochu jiné než v Xcode. Otevřete soubor Entitlements.plist aplikace a zkontrolujte, že je povolená možnost „Enable Keychain“ (Povolit klíčenku) a že jsou do oddílu přidané odpovídající skupiny pro sdílení klíčenky. Zkontrolujte, že je v poli „Custom Entitlements“ (Vlastní oprávnění) v možnostech podepsání sady prostředků aplikace pro iOS zadaný soubor Entitlements.plist, a to pro všechny kombinace konfigurace a platformy, které připadají v úvahu.
-2.  Jakmile součást přidáte a aplikaci správně nakonfigurujete, může aplikace začít používat rozhraní API sady Intune SDK. Aby to bylo možné, musíte přidat následující obor názvů:
+3.  Jakmile součást přidáte a aplikaci správně nakonfigurujete, může aplikace začít používat rozhraní API sady Intune SDK. Aby to bylo možné, musíte přidat následující obor názvů:
 
       ```csharp
       using Microsoft.Intune.MAM;
       ```
-3.    Aby aplikace mohly začít přijímat zásady ochrany, musíte je zaregistrovat do služby Intune MAM. Pokud aplikace k ověřování uživatelů používá knihovnu Azure Active Directory Authentication Library (ADAL), měla by aplikace po úspěšném ověření předat hlavní název uživatele (UPN) metodě registerAndEnrollAccount instance IntuneMAMEnrollmentManager:
+4. Aby aplikace mohly začít přijímat zásady ochrany, musíte je zaregistrovat do služby Intune MAM. Pokud aplikace k ověřování uživatelů používá knihovnu Azure Active Directory Authentication Library (ADAL), měla by aplikace po úspěšném ověření předat hlavní název uživatele (UPN) metodě registerAndEnrollAccount instance IntuneMAMEnrollmentManager:
       ```csharp
       IntuneMAMEnrollmentManager.Instance.RegisterAndEnrollAccount(string identity);
       ```
@@ -92,16 +83,17 @@ Aplikace Xamarinu vytvořené pomocí komponenty Xamarin sady Intune App SDK te�
       ```
 
 ## <a name="enabling-app-protection-policies-in-your-android-mobile-app"></a>Povolení zásad ochrany aplikací v mobilní aplikaci pro Android
+Do projektu Xamarin.Android přidejte balíček NuGet `Microsoft.Intune.MAM.Xamarin.Android`.
+
 U aplikací pro Android založených na Xamarinu, které nevyužívají architekturu uživatelského rozhraní, si přečtěte téma [Intune APP SDK pro Android – Příručka vývojáře](app-sdk-android.md) a postupujte podle něj. V aplikaci pro Android založené na Xamarinu je potřeba nahradit třídu, metody a aktivity jejich ekvivalentem MAM podle [tabulky](app-sdk-android.md#replace-classes-methods-and-activities-with-their-mam-equivalent), kterou v průvodci najdete. Pokud vaše aplikace nedefinuje třídu `android.app.Application`, budete ji muset vytvořit a zajistit, abyste dědili z `MAMApplication`.
 
 Pro Xamarin Forms a další architektury uživatelského rozhraní nabízíme nástroj, který se jmenuje `MAM.Remapper`. Nástroj provede nahrazení třídy za vás. Bude ale potřeba provést tyto kroky:
 
-1.  Přidejte odkaz na balíček NuGet `Microsoft.Intune.MAM.Remapper.Tasks` verze 0.1.0.0 nebo vyšší.
+1.  Přidejte balíček NuGet `Microsoft.Intune.MAM.Remapper.Tasks`.
 
-2.  Přidejte následující řádek do souboru csproj Androidu:
+2.  Do souboru csproj Androidu přidejte následující řádek (řetězec x.x.x.x nahraďte skutečnou verzí balíčku):
   ```xml
-  <Import
-  Project="$(NugetPack)\\Microsoft.Intune.MAM.Remapper.Tasks.0.1.X.X\\build\\MonoAndroid10\\Microsoft.Intune.MAM.Remapper.targets" />
+ <Import Project="$(NugetPack)\\Microsoft.Intune.MAM.Remapper.Tasks.x.x.x.x\\build\\MonoAndroid10\\Microsoft.Intune.MAM.Remapper.targets" />
   ```
 
 3.  Nastavte akci tvoření přidaného souboru `remapping-config.json` na **RemappingConfigFile**. Obsažený soubor `remapping-config.json` funguje jenom s Xamarin.Forms. V případě jiných architektur uživatelského rozhraní si přečtěte soubor Readme, který je součástí balíčku NuGet Remapper.

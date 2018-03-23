@@ -1,25 +1,25 @@
 ---
-title: "Nastavení registrace pro zařízení s macOSem"
+title: Nastavení registrace pro zařízení s macOSem
 titlesuffix: Microsoft Intune
-description: "Přečtěte si, jak nastavit registraci zařízení s macOSem v Intune."
-keywords: 
+description: Přečtěte si, jak nastavit registraci zařízení s macOSem v Intune.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/30/2017
+ms.date: 03/15/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 46429114-2e26-4ba7-aa21-b2b1a5643e01
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 77a1551321079765f00f0e35d57211ae4c99e5a6
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: c1fb846dc65ee14315edf7b9ba15e0e24998a3a2
+ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Nastavení registrace pro zařízení s macOSem v Intune
 
@@ -53,9 +53,20 @@ Pokud chcete u zařízení se systémem macOS registraci blokovat, přečtěte s
 
 ## <a name="tell-your-users-how-to-enroll-their-devices-to-access-company-resources"></a>Informujte uživatele, jak můžou svá zařízení zaregistrovat, aby získali přístup k firemním prostředkům
 
-Sdělte koncovým uživatelům, že mají přejít na [web Portál společnosti](http://portal.manage.microsoft.com) a podle pokynů zaregistrovat svoje zařízení. Můžete jim také poslat odkaz na postup online registrace: [Zaregistrujte svoje zařízení se systémem macOS v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos).
+Sdělte koncovým uživatelům, že mají přejít na [web Portál společnosti](https://portal.manage.microsoft.com) a podle pokynů zaregistrovat svoje zařízení. Můžete jim také poslat odkaz na postup online registrace: [Zaregistrujte svoje zařízení se systémem macOS v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos).
 
 Informace o dalších úlohách koncových uživatelů najdete v článcích:
 
 - [Materiály o prostředí Microsoft Intune pro koncové uživatele](end-user-educate.md)
 - [Použití zařízení s macOS s Intune](/intune-user-help/using-your-macos-device-with-intune)
+
+## <a name="enroll-virtual-macos-machines-for-testing"></a>Registrace virtuálních počítačů s macOS pro účely testování
+
+> [!NOTE]
+> Virtuální počítače s macOS se podporují pouze pro testování. Neměli byste je používat jako produkční zařízení pro koncové uživatele. 
+
+Virtuální počítače s macOS pro testování můžete zaregistrovat pomocí softwaru Parallels Desktop nebo VMware Fusion. 
+
+Pro Parallels Desktop musíte nastavit typ hardwaru a sériové číslo virtuálního počítače, aby ho služba Intune mohla rozpoznat. Podle pokynů softwaru Parallels k [nastavení typu hardwaru](http://kb.parallels.com/123594) a [sériového čísla](http://kb.parallels.com/123455) nakonfigurujte potřebná nastavení pro testování. Doporučujeme, abyste nastavili stejný typ hardwaru u zařízení, na kterém běží virtuální počítače, i u samotných virtuálních počítačů, které vytváříte. Tento typ hardwaru najdete v **nabídce Apple** > **O tomto Macu** > **Systémový profil** > **Identifikátor modelu**. 
+
+U softwaru VMware Fusion musíte [upravit soubor .vmx](https://kb.vmware.com/s/article/1014782), abyste mohli nastavit model hardwaru a sériové číslo virtuálního počítače. Doporučujeme, abyste nastavili stejný typ hardwaru u zařízení, na kterém běží virtuální počítače, i u samotných virtuálních počítačů, které vytváříte. Tento typ hardwaru najdete v **nabídce Apple** > **O tomto Macu** > **Systémový profil** > **Identifikátor modelu**. 

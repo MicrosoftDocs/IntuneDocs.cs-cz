@@ -1,24 +1,24 @@
 ---
-title: "Přiřazení licencí Microsoft Intune"
-description: "Přiřazení licencí uživatelům, aby mohli zaregistrovat zařízení v Intune"
-keywords: 
+title: Přiřazení licencí Microsoft Intune
+description: Přiřazení licencí uživatelům, aby mohli zaregistrovat zařízení v Intune
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 10/31/2017
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
 ms.reviewer: amyro
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 45baadb24ac646a6456e04c85a701842774c7930
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 67d12c748c5f4daabcb64eff7a154455b39a57d0
+ms.sourcegitcommit: 820f950d1fc80b1eb5db1b0cf77f44d92a969951
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Přiřazení licencí uživatelům, aby mohli zaregistrovat zařízení v Intune
 
@@ -58,6 +58,17 @@ Další informace o službě SDS najdete v článku [Přehled služby SDS (Schoo
 * Každý **uživatel**, kterému přiřadíte softwarovou licenci pro uživatele, má přístup k online službám a souvisejícímu softwaru (včetně softwaru System Center) a může je používat ke správě aplikací a až 15 zařízení.
 * Každé **zařízení**, kterému přiřadíte softwarovou licenci pro zařízení, má přístup k online službám a souvisejícímu softwaru (včetně softwaru System Center), které na zařízení může používat libovolný počet uživatelů.
 * Pokud zařízení používá více než jeden uživatel, bude každý potřebovat softwarovou licenci pro zařízení nebo budou všichni uživatelé potřebovat softwarovou licenci pro uživatele.
+
+## <a name="understanding-the-type-of-licenses-you-have-purchased"></a>Porozumění typu licencí, které jste zakoupili
+
+Informace o předplatném určuje způsob, jakým jste zakoupili Intune:
+
+- Pokud jste Intune zakoupili na základě smlouvy Enterprise, najdete informace o předplatném na portálu multilicencí v části **Předplatná**.
+- Pokud jste Intune zakoupili přes poskytovatele Cloud Solution Provider, obraťte se na prodejce.
+- Pokud jste Intune zakoupili přes CC# nebo na fakturu, budou vaše licence uživatelské.
+
+
+
 
 ## <a name="use-powershell-to-selectively-manage-ems-user-licenses"></a>Použití PowerShellu k selektivní správě uživatelských licencí pro EMS
 Organizace, které používají Microsoft Enterprise Mobility + Security (dříve Enterprise Mobility Suite), můžou mít uživatele, kteří v balíčku EMS vyžadují jenom služby Azure Active Directory Premium nebo Intune. Pomocí [rutin PowerShellu pro Azure Active Directory](https://msdn.microsoft.com/library/jj151815.aspx) můžete přiřadit jednu službu nebo podmnožinu služeb.

@@ -1,25 +1,25 @@
 ---
-title: "Řešení potíží při registraci zařízení"
-description: "Doporučení pro řešení potíží s registrací zařízení"
-keywords: 
+title: Řešení potíží při registraci zařízení
+description: Doporučení pro řešení potíží s registrací zařízení
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 ms.date: 09/15/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 50adfb13c619f81a8429c46e798b7f78acf3217e
-ms.sourcegitcommit: 229f9bf89efeac3eb3d28dff01e9a77ddbf618eb
+ms.openlocfilehash: 0293614e2654c16b6fd5fd43d40331453b332e3c
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Řešení potíží s registrací do služby Intune
 
@@ -70,7 +70,7 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 
 #### <a name="to-delete-devices-in-the-azure-active-directory-portal"></a>Odstranění zařízení na portálu služby Azure Active Directory
 
-1.  Přejděte na adresu [http://aka.ms/accessaad](http://aka.ms/accessaad) nebo zvolte **Správce** &gt; **Azure AD** na webu [https://portal.office.com](https://portal.office.com).
+1.  Přejděte na [http://aka.ms/accessaad](http://aka.ms/accessaad) nebo zvolte **Správce** &gt; **Azure AD** na [https://portal.office.com](https://portal.office.com).
 
 2.  Použijte odkaz v levé části stránky a přihlaste se pod svým ID organizace.
 
@@ -99,7 +99,7 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 
 1.  Odeberte ze zařízení aplikaci Portál společnosti Intune.
 
-2.  Otevřete v zařízení prohlížeč, přejděte na adresu [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com)a pokuste se přihlásit uživatele.
+2.  Otevřete v zařízení prohlížeč, přejděte na adresu [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) a pokuste se přihlásit uživatele.
 
 3.  Pokud se uživateli nepodaří přihlásit, požádejte ho, ať vyzkouší jinou síť.
 
@@ -165,8 +165,8 @@ Následující tabulka obsahuje chyby, které se můžou koncovým uživatelům 
 
 |Chybová zpráva|Problém|Řešení|
 |---|---|---|
-|**Správce IT musí přiřadit licence pro přístup**<br>Váš správce IT vám neudělil přístup k této aplikaci. Požádejte ho o pomoc nebo to zkuste znovu.|Zařízení není možné zaregistrovat, protože účet uživatele nemá potřebnou licenci.|Aby si mohli uživatelé zaregistrovat svoje zařízení, musí mít přiřazenou potřebnou licenci. Tato zpráva znamená, že má uživatel špatný typ licence pro určenou autoritu pro správu mobilních zařízení. Pokud je třeba určenou autoritou pro správu mobilních zařízení Intune a uživatel používá licenci nástroje System Center 2012 R2 Configuration Manager, zobrazí se tato chyba.<br><br>Přečtěte si informace o tom, jak [si přiřadíte licence Intune k uživatelským účtům](/intune/licenses-assign.md).
-|**Správce IT musí nastavit autoritu MDM**<br>Zdá se, že váš správce IT nenastavil autoritu MDM. Požádejte ho o pomoc nebo to zkuste znovu.|Autorita pro správu mobilních zařízení není definovaná.|Autorita pro správu mobilních zařízení není určená v Intune. Přečtěte si, jak [nastavit autoritu pro správu mobilních zařízení](/intune/mdm-authority-set.md).|
+|**Správce IT musí přiřadit licence pro přístup**<br>Váš správce IT vám neudělil přístup k této aplikaci. Požádejte ho o pomoc nebo to zkuste znovu.|Zařízení není možné zaregistrovat, protože účet uživatele nemá potřebnou licenci.|Aby si mohli uživatelé zaregistrovat svoje zařízení, musí mít přiřazenou potřebnou licenci. Tato zpráva znamená, že má uživatel špatný typ licence pro určenou autoritu pro správu mobilních zařízení. Pokud je třeba určenou autoritou pro správu mobilních zařízení Intune a uživatel používá licenci nástroje System Center 2012 R2 Configuration Manager, zobrazí se tato chyba.<br><br>Přečtěte si informace o tom, jak [si přiřadíte licence Intune k uživatelským účtům](/intune/licenses-assign).
+|**Správce IT musí nastavit autoritu MDM**<br>Zdá se, že váš správce IT nenastavil autoritu MDM. Požádejte ho o pomoc nebo to zkuste znovu.|Autorita pro správu mobilních zařízení není definovaná.|Autorita pro správu mobilních zařízení není určená v Intune. Přečtěte si, jak [nastavit autoritu pro správu mobilních zařízení](/intune/mdm-authority-set).|
 
 
 ### <a name="devices-fail-to-check-in-with-the-intune-service-and-display-as-unhealthy-in-the-intune-admin-console"></a>Zařízení se nepodařilo registrovat ve službě Intune a jeho stav v konzole pro správu se zobrazuje jako Není v pořádku
@@ -332,7 +332,7 @@ Další informace najdete v tématu [Doporučené postupy zabezpečení služby
 
 2.  Zkontrolujte, jestli už není zařízení zaregistrované pomocí jiného poskytovatele správy mobilních zařízení (MDM) a jestli už v něm není nainstalovaný profil správy.
 
-3.  Přejděte na adresu [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) a po zobrazení výzvy se pokuste profil nainstalovat.
+3.  Přejděte na [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) a po zobrazení výzvy zkuste profil nainstalovat.
 
 4.  Potvrďte nastavení výchozích prohlížečů Safari (pro iOS) a povolení souborů cookie.
 
@@ -377,7 +377,7 @@ Příklady toho, co máte v těchto souborech protokolu hledat, budou brzy přid
 
 
 ### <a name="other-ios-enrollment-errors"></a>Další chyby registrace zařízení s iOSem
-Seznam chyb registrace iOS je uvedený v dokumentaci pro uživatele zařízení v části [Při pokusu o registraci zařízení v Intune se zobrazí chyby](/intune-user-help/using-your-iOS-or-macOS-device-with-intune).
+Seznam chyb registrace zařízení s iOSem najdete v dokumentaci v části [Řešení potíží s registrací zařízení s iOSem v Microsoft Intune](https://support.microsoft.com/help/4039809/troubleshooting-ios-device-enrollment-in-intune).
 
 ## <a name="pc-issues"></a>Problémy na počítači
 
