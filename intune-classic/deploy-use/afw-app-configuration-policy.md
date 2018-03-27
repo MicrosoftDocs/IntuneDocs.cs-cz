@@ -1,25 +1,25 @@
 ---
-title: "Zásady konfigurace aplikací pro Android for Work"
-description: "Zásady konfigurace mobilních aplikací v Intune umožňují dodat nastavení, která se můžou vyžadovat, když uživatelé spustí aplikaci pro Android for Work."
-keywords: 
+title: Zásady konfigurace aplikací pro Android for Work
+description: Zásady konfigurace mobilních aplikací v Intune umožňují dodat nastavení, která se můžou vyžadovat, když uživatelé spustí aplikaci pro Android for Work.
+keywords: ''
 author: mattbriggs
 ms.author: mabrigg
-manager: angrobe
+manager: dougeby
 ms.date: 02/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: fc6b645a-e837-4b2a-a10f-144065cbd8dd
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 3fd5e2891eb628fe84fae8842791b4ac4e883d21
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 02934e40346be88cb823bcfa80ff9618e86e757b
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="configure-android-for-work-apps-with-mobile-app-configuration-policies-in-microsoft-intune"></a>Konfigurace aplikací pro Android for Work pomocí zásad konfigurace mobilních aplikací v Microsoft Intune
 
@@ -41,7 +41,7 @@ Zásadu konfigurace aplikace nasadíte stejným uživatelům, jakým jste nasadi
 
 ## <a name="configure-a-mobile-app-configuration-policy"></a>Konfigurace zásady konfigurace mobilních aplikací
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte **Zásady** &gt; **Přehled** &gt; **Přidat zásadu**.
+1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Přehled** &gt; **Přidat zásadu**.
 
 2.  V seznamu zásad rozbalte **Android for Work**, zvolte **Zásady konfigurace mobilních aplikací (Android for Work)** a pak zvolte **Vytvořit zásadu**.
 

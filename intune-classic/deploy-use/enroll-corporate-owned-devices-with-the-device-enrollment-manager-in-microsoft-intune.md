@@ -1,25 +1,25 @@
 ---
-title: "Registrace pomocí správce registrace zařízení"
-description: "Účet správce registrace zařízení (DEM) umožňuje spravovat velké počty sdílených mobilních zařízení vlastněných společností z jediného uživatelského účtu."
-keywords: 
+title: Registrace pomocí správce registrace zařízení
+description: Účet správce registrace zařízení (DEM) umožňuje spravovat velké počty sdílených mobilních zařízení vlastněných společností z jediného uživatelského účtu.
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
-manager: angrobe
+manager: dougeby
 ms.date: 01/03/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: a23abc61-69ed-44f1-9b71-b86aefc6ba03
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b55c5d588eb366487a9e1594a46f88551e0b6ee2
-ms.sourcegitcommit: 5fd17a57989c6da3d325ed2e0018ce16fe20bb79
+ms.openlocfilehash: 0f9ecb8cf16d8c344ea595c53ab91c9b1f00c90e
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune"></a>Registrace firemních zařízení pomocí správce registrace zařízení v Microsoft Intune
 

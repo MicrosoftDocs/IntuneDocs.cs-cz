@@ -1,25 +1,25 @@
 ---
-title: "Ochrana přístupu k sítím s modulem Cisco ISE"
-description: "Použijte Cisco ISE s Intune, aby zařízení byla zaregistrovaná v Intune a vyhovovala zásadám, než se pokusí o přístup k sítím Wi-Fi a VPN řízeným pomocí Cisco ISE."
-keywords: 
-author: arob98
+title: Ochrana přístupu k sítím s modulem Cisco ISE
+description: Použijte Cisco ISE s Intune, aby zařízení byla zaregistrovaná v Intune a vyhovovala zásadám, než se pokusí o přístup k sítím Wi-Fi a VPN řízeným pomocí Cisco ISE.
+keywords: ''
+author: dougeby
 ms.author: angrobe
 manager: angrobe
 ms.date: 01/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 51b3763faa95adcbfe76580e32f5a42bb615c9d9
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: e455f291d9bfdb655f6c66cad7bf859a864e756d
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="using-cisco-ise-with-microsoft-intune"></a>Použití Cisco ISE s Microsoft Intune
 
@@ -120,7 +120,7 @@ Ověřte, že veškerý text leží na jednom řádku.
     “keyCredentials“: [ { “customKeyIdentifier“: “$base64Thumbprint_from_above”, “keyId“: “$keyid_from_above“, “type”: “AsymmetricX509Cert”, “usage”: “Verify”, “value”:  “$base64Value_from_above” }2. 
      ], 
  
-Například:
+Příklad:
  
     “keyCredentials“: [
     {

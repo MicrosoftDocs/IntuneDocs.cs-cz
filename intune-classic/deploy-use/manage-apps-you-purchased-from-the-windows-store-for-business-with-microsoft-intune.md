@@ -1,31 +1,31 @@
 ---
-title: "Správa aplikací pro Microsoft Store pro firmy"
-description: "Pokud chcete spravovat a nasazovat hromadně zakoupené aplikace z konzoly Intune, připojte Microsoft Intune k Microsoft Storu pro firmy."
-keywords: 
+title: Správa aplikací pro Microsoft Store pro firmy
+description: Pokud chcete spravovat a nasazovat hromadně zakoupené aplikace z konzoly Intune, připojte Microsoft Intune k Microsoft Storu pro firmy.
+keywords: ''
 author: mattbriggs
 ms.author: mabrigg
-manager: angrobe
+manager: dougeby
 ms.date: 02/02/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8e38d47d-0c5e-40ce-b379-29d3657f5c28
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: coryfe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 2de00bab670cd414d10750bb6f7f05283ea8bff3
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 50fc27efc34ab6c13fad714e41be0d87c5ab0df9
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Správa aplikací zakoupených v Microsoft Storu pro firmy v Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-[Microsoft Store pro firmy](https://www.microsoft.com/business-store) je místo, kde můžete najít a zakoupit aplikace pro svou organizaci, a to jednotlivě i hromadně. Pokud Store propojíte s Microsoft Intune, můžete spravovat hromadně zakoupené aplikace pomocí konzoly Intune. Například:
+[Microsoft Store pro firmy](https://www.microsoft.com/business-store) je místo, kde můžete najít a zakoupit aplikace pro svou organizaci, a to jednotlivě i hromadně. Pokud Store propojíte s Microsoft Intune, můžete spravovat hromadně zakoupené aplikace pomocí konzoly Intune. Příklad:
 * Můžete synchronizovat seznam aplikací, které jste zakoupili ve Storu, s Intune.
 * Aplikace, které jsou synchronizované, se zobrazí v konzole pro správu Intune a můžete je nasadit stejně jako všechny ostatní aplikace.
 * V konzole pro správu Intune můžete sledovat, kolik licencí je dostupných a kolik se jich právě používá.
@@ -82,5 +82,5 @@ Když nasadíte aplikaci z Microsoft Storu pro firmy, využije licenci každý u
 > Nasazené aplikace jsou dostupné jenom pro uživatele, který zařízení původně zaregistroval. Ostatní uživatelé k nim nemají přístup.
 
 
-### <a name="see-also"></a>Související témata
+### <a name="see-also"></a>Viz taky
 [Přidávání aplikací pro mobilní zařízení do Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md)

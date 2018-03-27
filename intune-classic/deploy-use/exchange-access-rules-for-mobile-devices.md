@@ -1,25 +1,25 @@
 ---
-title: "Pravidla přístupu k Exchangi pro mobilní zařízení"
-description: "Pravidla přístupu k protokolu Exchange ActiveSync pro povolení nebo blokování připojení zařízení s EAS"
-keywords: 
+title: Pravidla přístupu k Exchangi pro mobilní zařízení
+description: Pravidla přístupu k protokolu Exchange ActiveSync pro povolení nebo blokování připojení zařízení s EAS
+keywords: ''
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 07/19/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 208b9f45-02d9-413a-b86a-8bad9b5008fa
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 097d6ee8a7ad6752d48f554ee0bc9b3729311fe2
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 9c3da7d517bd26bf694ea7bfa658ec1a4688d8f8
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="exchange-access-rules-for-mobile-devices"></a>Pravidla přístupu k Exchangi pro mobilní zařízení
 
@@ -48,7 +48,7 @@ Postup vytvoření vlastního pravidla je popsaný v následující části.
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Exchange ActiveSync**.
 
-2.  V seznamu **Výchozí pravidlo** vyberte pravidlo přístupu, které chcete použít u všech mobilních zařízení, pro která neplatí pravidlo nebo osobní výjimka. Vyberte **Uložit**.
+2.  V seznamu **Výchozí pravidlo** vyberte pravidlo přístupu, které chcete použít u všech mobilních zařízení, pro která neplatí pravidlo nebo osobní výjimka. Zvolte **Uložit**.
 
 Následující postup popisuje vytvoření vlastního pravidla:
 
@@ -56,4 +56,4 @@ Následující postup popisuje vytvoření vlastního pravidla:
 
 1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Exchange ActiveSync**.
 
-2.  V seznamu **Výjimky platforem** vyberte **Přidat pravidlo** a potom vytvořte vlastní pravidlo. Vyberte **Uložit**.
+2.  V seznamu **Výjimky platforem** vyberte **Přidat pravidlo** a potom vytvořte vlastní pravidlo. Zvolte **Uložit**.

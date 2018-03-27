@@ -1,25 +1,25 @@
 ---
-title: "Vytvoření a nasazení zásad MAM"
-description: "Podle podrobného postupu v tomto tématu můžete vytvořit a nasadit zásady správy mobilních aplikací."
-keywords: 
+title: Vytvoření a nasazení zásad MAM
+description: Podle podrobného postupu v tomto tématu můžete vytvořit a nasadit zásady správy mobilních aplikací.
+keywords: ''
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 11/14/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: c1b9a343-1737-4a65-a9c6-aca48acad11c
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 93ec41c756c802986b85a45f53329ef6daba6c08
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: e751934549490885c1ebf2445ec8f112f640f5bd
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="create-and-deploy-app-protection-policies-with-microsoft-intune"></a>Vytvoření a nasazení zásad ochrany aplikací pomocí Microsoft Intune
 
@@ -96,7 +96,7 @@ Při vytváření zásad ochrany aplikací postupujte takto:
 Zásada není po vytvoření pomocí výš uvedeného postupu nasazená pro žádného uživatele. Pokud chcete nasadit zásadu, přečtěte si následující část „Nasazení zásady pro uživatele“.
 
 > [!IMPORTANT]
-> Pokud jste zásadu ochrany aplikací vytvořili pomocí konzoly pro správu Intune i pomocí portálu Azure Portal, dostane přednost zásada vytvořená na portálu Azure Portal. Při generování sestav v konzole Configuration Manageru nebo Intune se ale použijí nastavení zásad vytvořená v konzole pro správu Intune. Například:
+> Pokud jste zásadu ochrany aplikací vytvořili pomocí konzoly pro správu Intune i pomocí portálu Azure Portal, dostane přednost zásada vytvořená na portálu Azure Portal. Při generování sestav v konzole Configuration Manageru nebo Intune se ale použijí nastavení zásad vytvořená v konzole pro správu Intune. Příklad:
 >
 > -   V konzole pro správu Intune jste vytvořili zásadu ochrany aplikací, která blokuje kopírování z aplikace.
 > -   V konzole Azure jste vytvořili zásadu ochrany aplikací, která umožňuje kopírování z aplikace.
@@ -216,6 +216,6 @@ Pokud chcete zobrazit úplný seznam nastavení zásad pro iOS a Android, vybert
 ## <a name="next-steps"></a>Další kroky
 [Monitorování stavu dodržování předpisů a uživatele](monitor-mobile-app-management-policies-with-microsoft-intune.md)
 
-### <a name="see-also"></a>Související témata
+### <a name="see-also"></a>Viz taky
 * [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](/intune/end-user-mam-apps-android)
 * [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](/intune/end-user-mam-apps-ios)
