@@ -1,25 +1,25 @@
 ---
-title: "Řešení potíží se zásadami"
-description: "Řešení potíží s konfigurací zásad"
-keywords: 
+title: Řešení potíží se zásadami
+description: Řešení potíží s konfigurací zásad
+keywords: ''
 author: vhorne
 ms.author: victorh
-manager: angrobe
+manager: dougeby
 ms.date: 01/04/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 99fb6db6-21c5-46cd-980d-50f063ab8ab8
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: tscott
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 2e97c47dc2d1744f539f569de4c20ee994d05ffd
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 7f9632a8b769fae5c3ae0fdf7041b968a9707d24
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="troubleshoot-policies-in-microsoft-intune"></a>Řešení potíží se zásadami v Microsoft Intune
 
@@ -32,7 +32,7 @@ Pokud máte potíže s nasazením a správou zásad v Intune, začněte tady. To
 ### <a name="was-a-deployed-policy-applied-to-the-device"></a>Použili jste na zařízení nasazené zásady?
 **Problém:** Nejste si jisti, jestli jste správně použili zásady.
 
-V konzole pro správu služby Intune má každé zařízení v části **Vlastnosti zařízení**vlastní kartu zásad. Každá zásada má **určenou hodnotu** a **Stav**. Určená hodnota označuje to, čeho chcete dosáhnout při přiřazování zásady. Stav označuje to, co se skutečně použije, když jsou společně zpracovány všechny zásady platné pro zařízení a všechna omezení a požadavky na hardware a operační systém. Možné stavy:
+V konzole pro správu služby Intune má každé zařízení v části **Vlastnosti zařízení**vlastní kartu zásad. U každé zásady je **Zamýšlená hodnota** a **Stav**. Určená hodnota označuje to, čeho chcete dosáhnout při přiřazování zásady. Stav označuje to, co se skutečně použije, když jsou společně zpracovány všechny zásady platné pro zařízení a všechna omezení a požadavky na hardware a operační systém. Možné stavy:
 
 -   **Vyhovuje**: Zařízení přijalo zásady a hlásí službě, že vyhovuje danému nastavení.
 

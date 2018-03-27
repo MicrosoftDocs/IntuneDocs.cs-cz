@@ -1,25 +1,25 @@
 ---
-title: "Kategorizace zařízení pomocí mapování skupin zařízení"
-description: "Mapování skupin zařízení Microsoft Intune slouží k seskupení zařízení do kategorií, které definujete, aby bylo možné zjednodušit správu těchto zařízení."
-keywords: 
+title: Kategorizace zařízení pomocí mapování skupin zařízení
+description: Mapování skupin zařízení Microsoft Intune slouží k seskupení zařízení do kategorií, které definujete, aby bylo možné zjednodušit správu těchto zařízení.
+keywords: ''
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 06/06/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8b8c06a3-6b6c-4cf1-8646-b24fa9b1a39e
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d6783f0dbf21d8bb1e652522df7ae1f37cbf4ffd
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 5fd86b380a80529ba7f6c431452ae89e22c0de25
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="categorize-devices-with-device-group-mapping-in-microsoft-intune"></a>Kategorizace zařízení pomocí mapování skupin zařízení v Microsoft Intune
 
@@ -39,7 +39,7 @@ Můžete vytvořit libovolné kategorie zařízení, například:
 * Předváděcí zařízení
 * Prodej
 * Účtárna
-* Správce
+* Manager
 
 ## <a name="important-information-about-a-change-in-group-management-for-intune"></a>Důležité informace o změně ve správě skupin Intune
 

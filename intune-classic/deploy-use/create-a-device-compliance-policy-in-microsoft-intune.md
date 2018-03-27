@@ -1,25 +1,25 @@
 ---
-title: "Vytváření zásad dodržování předpisů pro zařízení"
-description: "Vytvořte zásadu dodržování předpisů, která pomáhá zabezpečit mobilní zařízení a počítače používané pro přístup k firemním datům."
-keywords: 
+title: Vytváření zásad dodržování předpisů pro zařízení
+description: Vytvořte zásadu dodržování předpisů, která pomáhá zabezpečit mobilní zařízení a počítače používané pro přístup k firemním datům.
+keywords: ''
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 10/12/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 5336dac0-a2cc-4cd4-8511-67e4f95bd700
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1e37e5f490254efedf56a383e612f934925be75e
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 03719051179a30b0cc543098861f1b480c66082a
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="create-a-device-compliance-policy-in-microsoft-intune"></a>Vytvoření zásady dodržování předpisů pro zařízení v Microsoft Intune
 
@@ -58,24 +58,24 @@ Následující tabulka uvádí nastavení zásad dodržování předpisů a plat
 -------------
 |Nastavení|iOS|Android|Windows|
 |-----|----|-----|-----|
-|Vyžadovat heslo k odemknutí mobilních zařízení|iOS 6 nebo novější|Android 4.0 nebo novější <br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Windows Phone 8.1 nebo novější|
+|Vyžadovat heslo k odemknutí mobilních zařízení|iOS 6 nebo novější|Android 4.0 a novější <br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Windows Phone 8.1 nebo novější|
 |Povolit jednoduchá hesla|iOS 6 nebo novější|Není podporované|Windows Phone 8.1 nebo novější|
-|Minimální délka hesla|iOS 6 nebo novější| Android 4.0 nebo novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější| Windows Phone 8.1 nebo novější<br>Windows 8.1|
-|Vyžadovaný typ hesla|iOS 6 nebo novější|Není k dispozici|Windows Phone 8.1 nebo novější <br>Windows RT<br> Windows RT 8.1 <br>Windows 8.1|
-|Minimální počet znakových sad|iOS 6 nebo novější|Není k dispozici|Windows Phone 8.1 nebo novější <br>Windows RT<br> Windows RT 8.1 <br>Windows 8.1|
-|Kvalita hesla|Není k dispozici|Android 4.0 nebo novější <br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Není k dispozici|
-|Počet minut nečinnosti před vyžadováním hesla|iOS 6 nebo novější|Android 4.0 nebo novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Windows Phone 8.1 nebo novější<br>Windows RT a Windows RT 8.1<br>Windows 8.1|
-|Vypršení platnosti hesla (dny)|iOS 6 nebo novější|Android 4.0 nebo novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Windows Phone 8.1 nebo novější<br>Windows RT a Windows RT 8.1<br>Windows 8.1|
-|Pamatovat si historii hesel|iOS 6 nebo novější|Android 4.0 nebo novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Windows Phone 8.1 nebo novější<br>Windows RT a Windows RT 8.1<br>Windows 8.1|
-|Zakázat opakované použití předchozích hesel|iOS 6 nebo novější|Android 4.0 nebo novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Windows Phone 8.1 nebo novější<br>Windows RT a Windows RT 8.1<br>Windows 8.1|
+|Minimální délka hesla|iOS 6 nebo novější| Android 4.0 a novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější| Windows Phone 8.1 nebo novější<br>Windows 8.1|
+|Vyžadovaný typ hesla|iOS 6 nebo novější|Není k dispozici|Windows Phone 8.1 nebo novější <br>Windows RT<br> Windows RT 8.1 <br>Windows 8.1|
+|Minimální počet znakových sad|iOS 6 nebo novější|Není k dispozici|Windows Phone 8.1 nebo novější <br>Windows RT<br> Windows RT 8.1 <br>Windows 8.1|
+|Kvalita hesla|Není k dispozici|Android 4.0 a novější <br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Není k dispozici|
+|Počet minut nečinnosti před vyžadováním hesla|iOS 6 nebo novější|Android 4.0 a novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Windows Phone 8.1 nebo novější<br>Windows RT a Windows RT 8.1<br>Windows 8.1|
+|Vypršení platnosti hesla (dny)|iOS 6 nebo novější|Android 4.0 a novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Windows Phone 8.1 nebo novější<br>Windows RT a Windows RT 8.1<br>Windows 8.1|
+|Pamatovat si historii hesel|iOS 6 nebo novější|Android 4.0 a novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Windows Phone 8.1 nebo novější<br>Windows RT a Windows RT 8.1<br>Windows 8.1|
+|Zakázat opakované použití předchozích hesel|iOS 6 nebo novější|Android 4.0 a novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Windows Phone 8.1 nebo novější<br>Windows RT a Windows RT 8.1<br>Windows 8.1|
 |Po návratu zařízení ze stavu nečinnosti vyžadovat heslo| Není k dispozici| Není k dispozici|Windows 10 Mobile|
-|Vyžadovat šifrování u mobilního zařízení|Nelze použít|Android 4.0 nebo novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Windows Phone 8.1 nebo novější<br> Windows 8.1|
+|Vyžadovat šifrování u mobilního zařízení|Nelze použít|Android 4.0 a novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Windows Phone 8.1 nebo novější<br> Windows 8.1|
 |Vyžadování toho, aby byla zařízení hlášená jako v pořádku| Není k dispozici| Není k dispozici|Windows <br>Windows 10 Mobile|
-|U zařízení nesmí být provedený jailbreak nebo root|iOS 6 nebo novější|Android 4.0 nebo novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Není k dispozici|
+|U zařízení nesmí být provedený jailbreak nebo root|iOS 6 nebo novější|Android 4.0 a novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Není k dispozici|
 |E-mailový účet se musí spravovat přes Intune|iOS 6 nebo novější|Není k dispozici| Není k dispozici|
 |Vyberte e-mailový profil, který se musí spravovat přes Intune|iOS 6 nebo novější|Není k dispozici| Není k dispozici|
-|Minimální požadovaný operační systém|iOS 6 nebo novější|Android 4.0 nebo novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější| Windows Phone 8.1 nebo novější<br>Windows 8.1|
-|Maximální povolená verze operačního systému|iOS 6 nebo novější|Android 4.0 nebo novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Windows Phone 8.1 nebo novější<br>Windows 8.1|
+|Minimální požadovaný operační systém|iOS 6 nebo novější|Android 4.0 a novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější| Windows Phone 8.1 nebo novější<br>Windows 8.1|
+|Maximální povolená verze operačního systému|iOS 6 nebo novější|Android 4.0 a novější<br>Zařízení, na kterém běží Samsung KNOX Standard 4.0 nebo novější|Windows Phone 8.1 nebo novější<br>Windows 8.1|
 
 Další informace o nastavení dodržování předpisů podporovaném na jednotlivých platformách získáte výběrem jedné z následujících možností:
 > [!div class="op_single_selector"]

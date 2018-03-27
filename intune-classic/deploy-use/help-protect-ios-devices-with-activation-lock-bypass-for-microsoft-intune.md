@@ -1,25 +1,25 @@
 ---
-title: "Správa zámku aktivace v iOSu na zařízeních"
-description: "Microsoft Intune vám může pomoci spravovat zámek aktivace v iOSu – funkci aplikace Najít iPhone pro zařízení s iOSem 7.1 a novějším."
-keywords: 
-author: arob98
-ms.author: angrobe
-manager: angrobe
+title: Správa zámku aktivace v iOSu na zařízeních
+description: Microsoft Intune vám může pomoci spravovat zámek aktivace v iOSu – funkci aplikace Najít iPhone pro zařízení s iOSem 7.1 a novějším.
+keywords: ''
+author: dougeby
+ms.author: dougeby
+manager: dougeby
 ms.date: 04/24/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: bb49e926-15c4-4f01-b6eb-cee6f7ee1984
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a05c8e6a45c57f5f6f0c90d5fbb48164cde34a1c
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 12363a677bc7d1ffefe224ff0bb10067903132ae
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="help-protect-ios-devices-with-activation-lock-bypass-for-microsoft-intune"></a>Pomoc při ochraně zařízení s iOSem pomocí funkce Vynechat zámek aktivace pro Microsoft Intune
 
@@ -34,7 +34,7 @@ Microsoft Intune vám může pomoci spravovat zámek aktivace v iOSu – funkci 
 -   Znovu aktivovat zařízení
 
 ## <a name="how-activation-lock-affects-you"></a>Jaký vliv má funkce Zámek aktivace na práci se zařízením
-Funkce Zámek aktivace sice pomáhá zabezpečit zařízení se systémem iOS a zvyšuje šance na obnovení zařízení v případě, že dojde k jeho ztrátě nebo odcizení, ale pro vás, jakožto správce IT, může představovat určité problémy. Například:
+Funkce Zámek aktivace sice pomáhá zabezpečit zařízení se systémem iOS a zvyšuje šance na obnovení zařízení v případě, že dojde k jeho ztrátě nebo odcizení, ale pro vás, jakožto správce IT, může představovat určité problémy. Příklad:
 
 -   Uživatel si na zařízení nastaví zámek aktivace. Tento uživatel pak společnost opustí a zařízení vrátí. Bez Apple ID a hesla uživatele neexistuje způsob, jak zařízení znovu aktivovat.
 
@@ -42,7 +42,7 @@ Funkce Zámek aktivace sice pomáhá zabezpečit zařízení se systémem iOS a 
 
 -   Při obnovování zařízení v organizaci chcete některá zařízení přiřadit jinému oddělení. Můžete to provést jedině se zařízeními, ve kterých není zámek aktivace povolený.
 
-Aby bylo možné tyto problémy vyřešit, společnost Apple vydala v iOSu 7.1 funkci vyřazení zámku aktivace. To vám umožní odebrat zámek aktivace z dozorovaných zařízeních i bez Apple ID a hesla uživatele. Dozorovaná zařízení mohou generovat kód pro vyřazení zámku aktivace, který je uložený na aktivačním serveru společnosti Apple.
+Aby bylo možné tyto problémy vyřešit, společnost Apple vydala v iOS 7.1 funkci vyřazení zámku aktivace. To vám umožní odebrat zámek aktivace z dozorovaných zařízeních i bez Apple ID a hesla uživatele. Dozorovaná zařízení mohou generovat kód pro vyřazení zámku aktivace, který je uložený na aktivačním serveru společnosti Apple.
 
 > [!TIP]
 > Režim Pod dohledem pro zařízení s iOSem vám umožňuje pomocí Apple Configuratoru zařízení zamknout a omezit tak jeho funkčnost jenom na konkrétní firemní účely. Dozorový režim je obecně určený výhradně pro zařízení v majetku podniků.
@@ -101,6 +101,6 @@ To, která zařízení zámek aktivace používají, můžete zjistit dvěma zp�
     >Intune přebírá inventář ze zařízení kvůli zámku aktivace každých sedm dní. Z tohoto důvodu se zařízení nemusí v konzole Intune okamžitě zobrazit s jejich stavem zámku aktivace stav.
 
 
-### <a name="see-also"></a>Související témata
+### <a name="see-also"></a>Viz taky
 [Vyřazení zařízení](retire-devices-from-microsoft-intune-management.md)
 [Chraňte svá zařízení pomocí vzdáleného zámku a resetování hesla](use-remote-lock-and-passcode-reset-in-microsoft-intune.md)

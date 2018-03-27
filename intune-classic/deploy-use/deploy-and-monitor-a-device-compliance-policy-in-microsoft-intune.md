@@ -1,25 +1,25 @@
 ---
-title: "Nasazení a monitorování zásady dodržování předpisů"
-description: "Podrobné pokyny v tomto tématu slouží k nasazení a monitorování zásad dodržování předpisů pro zařízení."
-keywords: 
+title: Nasazení a monitorování zásady dodržování předpisů
+description: Podrobné pokyny v tomto tématu slouží k nasazení a monitorování zásad dodržování předpisů pro zařízení.
+keywords: ''
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 11/14/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: d8f246d4-0d86-4c8b-a1bf-9977985506d8
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ae914e755b809eda55abc5dc069c9ee2897d9ff4
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: e24c969206d3e1f34bfee0af46c4398c9d2739a8
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune"></a>Nasazení a monitorování zásad dodržování předpisů zařízení v Microsoft Intune
 
@@ -69,5 +69,5 @@ Konflikty zásad můžou vzniknout, když se na zařízení použije více zása
 Informace o použití zásad dodržování předpisů spolu se zásadami podmíněného přístupu k řízení přístupu ke službám ve vaší organizaci najdete v tématu [Omezení přístupu k e-mailu a službám O365](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
 
-### <a name="see-also"></a>Související témata
+### <a name="see-also"></a>Viz taky
 [Úvod do zásad dodržování předpisů zařízení v Intune](introduction-to-device-compliance-policies-in-microsoft-intune.md)

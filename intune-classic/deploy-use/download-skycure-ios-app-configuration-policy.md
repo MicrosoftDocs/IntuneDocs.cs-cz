@@ -1,25 +1,25 @@
 ---
-title: "Stažení zásad konfigurace aplikace Skycure pro iOS"
-description: "Stáhněte si zásady konfigurace aplikace Skycure pro iOS, které můžete použít s aplikací Skycure pro iOS nasazenou pro koncové uživatele."
-keywords: 
+title: Stažení zásad konfigurace aplikace Skycure pro iOS
+description: Stáhněte si zásady konfigurace aplikace Skycure pro iOS, které můžete použít s aplikací Skycure pro iOS nasazenou pro koncové uživatele.
+keywords: ''
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 03/16/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: d211b876-4d3a-473c-999f-843c0a16cd22
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f452ca2305b83ee106827a7dca4b02a90910a289
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 0f8197146d8b4f42bcf199070551ba13aed92626
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="download-skycure-ios-app-configuration-policy"></a>Stažení zásad konfigurace aplikace Skycure pro iOS
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 10/10/2017
 K provedení dalších kroků je potřeba, abyste se přihlásili do konzoly pro správu Skycure.
 
 > [!TIP] 
-> Pokud používáte Microsoft Internet Explorer 11 nebo Microsoft Edge, budete možná muset otevřít konzolu pro správu Skycure v anonymním okně prohlížeče.
+> Pokud používáte Microsoft Internet Explorer 11 nebo Edge, budete možná muset otevřít konzolu pro správu Skycure v anonymním okně prohlížeče.
 
 ## <a name="to-download-the-ios-app-configuration-policy"></a>Postup stažení zásad konfigurace aplikace pro iOS
 

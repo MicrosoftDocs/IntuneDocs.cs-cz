@@ -1,24 +1,24 @@
 ---
-title: "Zásady brány firewall pro počítače s Windows"
-description: "Intune vám pomůže zabezpečit počítače, které spravujete, mnoha různými způsoby, včetně pomoci při konfiguraci nastavení brány Windows Firewall."
-keywords: 
+title: Zásady brány firewall pro počítače s Windows
+description: Intune vám pomůže zabezpečit počítače, které spravujete, mnoha různými způsoby, včetně pomoci při konfiguraci nastavení brány Windows Firewall.
+keywords: ''
 author: vhorne
 ms.author: victorh
-manager: angrobe
+manager: dougeby
 ms.date: 12/27/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 9549c072-ac3d-4d14-a931-a2eda8846217
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 61ff44a9c2c6271ae72b618c7c09697837f4a516
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 3be77c1042d695ed0bed6ee7cbbc442342e91d8b
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall v Microsoft Intune
 
@@ -133,5 +133,5 @@ Můžete nakonfigurovat výjimky, které povolují konkrétní typy síťového 
 |**Windows Virtual PC**<br>(Windows 7 nebo novější)|Umožňuje virtuálním počítačům komunikovat s dalšími počítači.|
 |**Bezdrátová přenosná zařízení**|Umožňuje přenos multimediálních souborů z fotoaparátu nebo multimediálního zařízení připojeného k síti do spravovaných počítačů pomocí protokolu MTP (Media Transfer Protocol). Toto nastavení používá síťové protokoly SSDP a UPnP.|
 
-### <a name="see-also"></a>Související témata
+### <a name="see-also"></a>Viz taky
 [Zásady ochrany počítačů se systémem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)
