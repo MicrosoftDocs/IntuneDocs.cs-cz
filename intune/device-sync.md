@@ -1,25 +1,25 @@
 ---
-title: "Synchronizace zařízení pomocí Microsoft Intune – Azure | Dokumentace Microsoftu"
-description: "Můžete synchronizovat zařízení zaregistrovaná nebo spravovaná v Microsoft Intune, abyste získali nejnovější zásady a akce. Postup zahrnuje synchronizaci pomocí portálu Azure Portal a zobrazení kódů chyb, které umožňují opakovaný pokus."
-keywords: 
+title: Synchronizace zařízení pomocí Microsoft Intune – Azure | Microsoft Docs
+description: Můžete synchronizovat zařízení zaregistrovaná nebo spravovaná v Microsoft Intune, abyste získali nejnovější zásady a akce. Postup zahrnuje synchronizaci pomocí portálu Azure Portal a zobrazení kódů chyb, které umožňují opakovaný pokus.
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 02ad249e-f098-421f-861f-6b2ff733ac7c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d2d13ce2ed06549a6cd09fd766a0072b15fcd067
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 7af71a2d5c3ad871e69424cf6afbf7c364bb888d
+ms.sourcegitcommit: 390a4be5aa36007c36fb6a5abcfe8d20bc862a4b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="sync-devices-to-get-the-latest-policies-and-actions---intune"></a>Synchronizace zařízení s cílem načíst nejnovější zásady a akce – Intune
+# <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Synchronizace zařízení s cílem načíst nejnovější zásady a akce pomocí Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -37,10 +37,10 @@ Akce zařízení **Synchronizovat** vybrané zařízení donutí se okamžitě o
 ## <a name="sync-a-device"></a>Synchronizace zařízení
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**. 
-3. V **Intune** vyberte **Zařízení** a vyberte **Všechna zařízení**.
-4. V seznamu zařízení, která spravujete, zvolte zařízení, zvolte **Další** a pak vyberte akci **Synchronizovat**.
-5. Vyberte **Ano**. Tím akci potvrdíte.
+2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a pak vyberte **Microsoft Intune**. 
+3. V **Intune** vyberte **Zařízení** > **Všechna zařízení**.
+4. V seznamu zařízení, která spravujete, zvolte zařízení, zvolte **Více** a pak zvolte **Synchronizovat**.
+5. Potvrďte zvolením **Ano**.
 
 
 ## <a name="retryable-error-codes"></a>Kódy chyb umožňujících opakovaný pokus
@@ -62,6 +62,6 @@ Když správce spustí akci zařízení **Synchronizovat**, aplikace pro iOS a A
 | 2016330889 | Nepovedlo se navázat zabezpečené připojení. Resetujte připojení. | Ano|
 | 2016330888 | Nepovedlo se vyhodnotit důvěryhodnost serveru. | Ne|
 
-## <a name="next-step"></a>Další krok
+## <a name="next-steps"></a>Další kroky
 
-V části **Akce zařízení** zobrazíte stav akce Synchronizovat. 
+- K zobrazení stavu akce Synchronizovat vyberte **Akce zařízení**. 

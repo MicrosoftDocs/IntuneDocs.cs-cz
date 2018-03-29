@@ -1,49 +1,42 @@
 ---
-title: "Vytvoření zásady dodržování předpisů pro zařízení s iOSem v Microsoft Intune"
-titleSuffix: 
-description: "Vytvořte v Microsoft Intune zásadu dodržování předpisů zařízením pro zařízení s iOSem umožňující vám zadat požadavky, které zařízení musí splnit, aby vyhovovalo předpisům."
-keywords: 
-author: msmimart
-ms.author: mimart
+title: Vytvoření zásady dodržování předpisů pro zařízení s iOSem v Microsoft Intune – Azure | Microsoft Docs
+description: Můžete vytvořit zásady dodržování předpisů Microsoft Intune pro zařízení s iOSem k zadání e-mailového účtu, kontrole zařízení s jailbreakem, kontrole minimální a maximální verze operačního systému a nastavení omezení pro heslo včetně délky hesla a doby nečinnosti zařízení.
+keywords: ''
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 03/20/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3cfb8222-d05b-49e3-ae6f-36ce1a16c61d
-ms.reviewer: muhosabe
+ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b024c846f9fc79fe214e3e90b094384455f2b086
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: b05eb725adb61ae47a24ca884d0e73ffe0dd269f
+ms.sourcegitcommit: a22309174e617e59ab0cdd0a55abde38711a5f35
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/23/2018
 ---
-# <a name="how-to-create-a-device-compliance-policy-for-ios-devices-in-intune"></a>Vytvoření zásad dodržování předpisů pro zařízení s iOSem v Intune
-
+# <a name="add-a-device-compliance-policy-for-ios-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s iOSem v Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Zásada dodržování předpisů Intune pro zařízení s iOSem určuje pravidla a nastavení, které musí zařízení s iOSem splňovat, aby bylo považováno za dodržující předpisy. Když používáte zásady dodržování předpisů zařízením s podmíněným přístupem, můžete povolit nebo blokovat přístup k prostředkům společnosti. Můžete také získat sestavy zařízení a provádět akce v případě nedodržování předpisů. Zásady dodržování předpisů zařízením pro každou platformu můžete vytvořit na portálu Intune Azure. Další informace o zásadách dodržování předpisů a požadavcích, kterým před vytvořením zásad dodržování předpisů musíte vyhovět, najdete v tématu [Začínáme se zásadami dodržování předpisů zařízeními](device-compliance-get-started.md).
+Zásada dodržování předpisů Intune pro zařízení s iOSem určuje pravidla a nastavení, které musí zařízení s iOSem splňovat, aby dodržovalo předpisy. Když používáte zásady dodržování předpisů zařízením s podmíněným přístupem, můžete povolit nebo blokovat přístup k prostředkům společnosti. Můžete také získat sestavy zařízení a provádět akce v případě nedodržování předpisů. Zásady dodržování předpisů zařízením pro každou platformu můžete vytvořit na portálu Intune Azure. Další informace o zásadách dodržování předpisů a potřebných požadavcích před vytvořením zásad dodržování předpisů najdete v tématu [Začínáme se zásadami dodržování předpisů zařízeními](device-compliance-get-started.md).
 
 Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení při použití zásad dodržování předpisů se zásadami podmíněného přístupu.
 
--------------------------------
-
-
 | **Nastavení zásad** | **iOS 8.0 a novější** |
 | --- | --- |
-| **Konfigurace kódu PIN nebo hesla** | Opravené |   
+| **Konfigurace kódu PIN nebo hesla** | Opravené |
 | **Šifrování zařízení** | Opravené (nastavením PIN kódu) |
 | **Zařízení s jailbreakem nebo rootem** | V karanténě (není nastavení)
 | **E-mailový profil** | V karanténě |
 |**Minimální verze operačního systému** | V karanténě |
-| **Maximální verze operačního systému** | V karanténě |  
-| **Ověření stavu Windows** | Nelze použít |  
-----------------------------
-
+| **Maximální verze operačního systému** | V karanténě |
+| **Ověření stavu Windows** | Nelze použít |
 
 **Opravené** = operační systém zařízení vynucuje dodržování předpisů. (Uživatel musí třeba zadat kód PIN.)
 
@@ -55,10 +48,10 @@ Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení 
 ## <a name="create-a-compliance-policy-in-the-azure-portal"></a>Vytvoření zásad dodržování předpisů na portálu Azure Portal
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-1. V podokně **Intune** zvolte  **Dodržování předpisů zařízením**. Pod **Spravovat** vyberte **Zásady** a zvolte **Vytvořit zásadu**.
-2. Zadejte název a popis a zvolte platformu, u které chcete použít tyto zásady.
-3. Zvolte **Požadavky na dodržování předpisů** a zadejte nastavení pro **Zabezpečení systému**, **Stav zařízení** a **Vlastnosti zařízení**. Až to budete mít, vyberte **OK**.
+2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+3. Vyberte **Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu**.
+4. Zadejte název a popis a zvolte platformu, na kterou chcete zásadu použít.
+5. Zvolte **Nastavení**, kde můžete zadat nastavení **E-mail**, **Stav zařízení**, **Vlastnosti zařízení** a **Zabezpečení systému**. Po dokončení vyberte **OK**.
 
 <!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant with this policy.
 5. In the **Actions for noncompliance** pane, choose **Add** to create a new action.  The action parameters pane allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
@@ -78,31 +71,7 @@ Tím jste zásady uplatnili u uživatelů.  U zařízení používaných uživat
 
 <!---## Compliance policy settings--->
 
-## <a name="system-security-settings"></a>Systémové nastavení zabezpečení
-
-### <a name="password"></a>Heslo
-
-- **Vyžadovat heslo k odemknutí mobilních zařízení:** Pokud tuto možnost nastavíte na **Ano**, bude uživatel muset zadat heslo, aby získal přístup ke svému zařízení. Zařízení s iOSem, která používají heslo, jsou zašifrovaná.
-- **Povolit jednoduchá hesla**: Pokud tuto možnost nastavíte na **Ano**, umožníte uživateli vytvářet hesla jako **1234** nebo **1111**.
-- **Minimální délka hesla**: Určuje minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
-- **Vyžadovaný typ hesla:** Určuje, jestli musí uživatel vytvořit **Alfanumerické** nebo **Číselné** heslo.
-- **Minimální počet znakových sad:** Pokud nastavíte **Požadovaný typ hesla** na možnost **Alfanumerické**, toto nastavení určuje nejmenší počet znakových sad, které musí heslo mít. Jde o tyto čtyři znakové sady:
-  - Malá písmena
-  - Velká písmena
-  - Symboly
-  - Numbers
-
-Po nastavení vyššího čísla bude uživatel muset vytvořit složitější heslo.
-
-Pro zařízení se systémem iOS toto nastavení určuje počet speciálních znaků (třeba **!** , **#**, **&amp;**), které musí heslo obsahovat.
-
-- **Počet minut nečinnosti před vyžádáním hesla:** Určete dobu nečinnosti, než uživatel musí znovu zadat heslo.
-- **Konec platnosti hesla (dny)**: Vyberte počet dní, za který skončí platnost hesla a uživatel bude muset vytvořit nové.
-- **Pamatovat si historii hesel**: Pokud chcete zabránit uživatelům ve vytváření hesel, která používali dřív, použijte toto nastavení spolu s nastavením **Zakázat opakované použití předchozích hesel**.
-- **Zakázat opakované použití předchozích hesel:** Pokud jste zvolili možnost **Pamatovat si historii hesel**, zadejte počet předchozích hesel, která se nesmí znovu použít.
-- **Po návratu zařízení ze stavu nečinnosti vyžadovat heslo:** Toto nastavení použijte v kombinaci s nastavením **Počet minut nečinnosti před vyžádáním hesla**. Pro přístup k zařízení, které bylo nečinné po dobu uvedenou v nastavení **Počet minut nečinnosti před vyžádáním hesla**, se uživatelům zobrazí výzva k zadání hesla.
-
-### <a name="email-profile"></a>e-mailový profil
+## <a name="email"></a>E-mailu
 
 - **E-mailový účet se musí spravovat přes Intune**: Pokud je tato možnost nastavená na hodnotu **Ano**, zařízení musí používat e-mailový profil nasazený na zařízení. Zařízení je považováno za nedodržující předpisy v následujících situacích:
   - E-mailový profil je nasazený do jiné skupiny uživatelů, než je ta, která cílí na zásady dodržování předpisů.
@@ -111,14 +80,34 @@ Pro zařízení se systémem iOS toto nastavení určuje počet speciálních zn
 
 Podrobnosti o e-mailových profilech najdete v tématu [Konfigurace přístupu k podnikovému e-mailu pomocí e-mailových profilů v Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune).
 
-## <a name="device-health-settings"></a>Nastavení stavu zařízení
+## <a name="device-health"></a>Device health
 
-- **Zařízení nesmí mít jailbreak ani root**: Pokud povolíte toto nastavení, budou se zařízení s jailbreakem považovat za nevyhovující předpisům.
+- **Zařízení s Jailbreakem**: Pokud toto nastavení povolíte, zařízení s jailbreakem nebudou dodržovat předpisy.
+- **Vyžadovat, aby zařízení bylo na určité úrovni hrozby pro zařízení nebo pod ní**: Zvolte maximální úroveň hrozby, nad kterou se zařízení označí jako nedodržující předpisy. Pokud třeba úroveň hrozby nastavíte na **Střední**, pak zařízení na úrovních střední, nízké nebo zabezpečené dodržují předpisy. Zařízení s vysokou úrovní hrozby předpisy nedodržují.
 
 ## <a name="device-properties"></a>Vlastnosti zařízení
 
 - **Minimální požadovaný operační systém**: Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, uvede se jako nekompatibilní. Zobrazí se odkaz s informacemi, jak upgradovat. Uživatel může zvolit upgrade svého zařízení. Pak může přistupovat k prostředkům společnosti.
-- **Maximální povolená verze operačního systému:** Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný a uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nepůjde přes toto zařízení přistupovat k prostředkům společnosti.
+- **Maximální povolená verze OS**: Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný. Uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nebude mít toto zařízení přístup k prostředkům společnosti.
+
+## <a name="system-security"></a>Zabezpečení systému
+
+### <a name="password"></a>Heslo
+
+> [!NOTE]
+> Po použití zásad dodržování předpisů nebo konfigurace u zařízení s iOSem se uživatelům bude každých 15 minut zobrazovat výzva k nastavení hesla. Uživatelům se výzva bude zobrazovat tak dlouho, dokud heslo nenastaví.
+
+- **Vyžadovat heslo k odemknutí mobilních zařízení:** Pokud tuto možnost nastavíte na **Ano**, bude uživatel muset zadat heslo, aby získal přístup ke svému zařízení. Zařízení s iOSem, která používají heslo, jsou zašifrovaná.
+- **Jednoduchá hesla**: Pokud tuto možnost nastavíte na **Ano**, umožníte uživateli vytvářet hesla jako **1234** nebo **1111**.
+- **Minimální délka hesla**: Zadejte minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
+- **Vyžadovaný typ hesla:** Zadejte, jestli musí uživatel vytvořit **Alfanumerické** nebo **Číselné** heslo.
+- **Počet nealfanumerických znaků v hesle**: Zadejte minimální počet speciálních znaků (&, #, %, ! a podobně), které musí heslo obsahovat.
+
+    Po nastavení vyššího čísla bude uživatel muset vytvořit složitější heslo.
+
+- **Maximální počet minut nečinnosti, po kterém bude nutné zadat heslo**: Zadejte dobu nečinnosti, která musí uplynout, aby se po uživateli znovu požadovalo zadání hesla.
+- **Konec platnosti hesla (dny)**: Vyberte počet dní, za který skončí platnost hesla a uživatel bude muset vytvořit nové.
+- **Počet předchozích hesel, která se nesmí použít znovu**: Zadejte počet dříve použitých hesel, která se nesmí znovu použít.
 
 <!--- ## Next steps
 

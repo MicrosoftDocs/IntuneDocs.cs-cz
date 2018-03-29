@@ -1,25 +1,25 @@
 ---
-title: "Nastavení zásad pro iOS"
-description: "Vytvořte zásady, které řídí nastavení a funkce na zařízeních s iOSem, která spravujete pomocí Intune."
-keywords: 
+title: Nastavení zásad pro iOS
+description: Vytvořte zásady, které řídí nastavení a funkce na zařízeních s iOSem, která spravujete pomocí Intune.
+keywords: ''
 author: vhorne
 ms.author: victorh
-manager: angrobe
+manager: dougeby
 ms.date: 11/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e9d014eb504098ff4361add7a0f3715f33be9083
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: ff426feff58de8b06fed7be9a0e6a52e9cc40ae3
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-policy-settings-in-microsoft-intune"></a>Nastavení zásad pro iOS v Microsoft Intune
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 12/12/2017
 
 Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete konfigurovat v zařízeních s iOSem. Navíc můžete použít nástroj Apple Configurator k vytvoření vlastních nastavení, která nejsou k dispozici prostřednictvím Intune.
 
-## <a name="general-configuration-policy-settings"></a>Obecná nastavení zásad konfigurace
+## <a name="general-configuration-policy-settings"></a>Nastavení obecných zásad konfigurace
 
 Pomocí **zásad obecné konfigurace pro iOS** v Microsoft Intune můžete nakonfigurovat nastavení pro:
 
@@ -48,7 +48,7 @@ Všechna nastavení platí pro iOS 8.0 a novější.
 |Název nastavení|Podrobnosti|
 |----------------|-------|
 |**Vyžadovat heslo k odemknutí mobilních zařízení**|Určete, jestli uživatel při přístupu ke svému zařízení musí zadat heslo.|
-|**Vyžadovaný typ hesla**|Zadejte typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.|
+|**Požadovaný typ hesla**|Zadejte typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.|
 |**Požadovaný počet složitých znaků v hesle**|Zadejte počet znaků symbolu (jako například **#** nebo **@**), které musí heslo obsahovat.|
 |**Minimální délka hesla**|Zadejte minimální počet znaků v hesle.|
 |**Povolit jednoduchá hesla**|Umožňuje použití jednoduchých hesel, jako je třeba **0000** nebo **1234**.|
@@ -222,7 +222,7 @@ Pokud chcete zadat adresu URL aplikace do seznamu kompatibilních a nekompatibil
 
 2. Zkopírujte adresu URL stránky a použijte ji jako URL ke konfiguraci seznamu kompatibilních nebo nekompatibilních aplikací nebo aplikace, kterou chcete spustit v celoobrazovkovém režimu.
 
-**Příklad:** Vyhledejte **Microsoft Word pro iPad**. Použitá adresa URL bude **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
+**Příklad:** Vyhledejte **Microsoft Word pro iPad**. Adresa URL, kterou použijete, bude **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
 
 > [!NOTE]
 > Pomocí softwaru iTunes taky můžete najít aplikaci a pomocí příkazu **Kopírovat odkaz** získat adresu URL aplikace.
@@ -383,5 +383,5 @@ Než začnete, je potřeba nainstalovat Apple Configurator a vytvořit konfigura
 |**Soubor konfiguračního profilu**|Vyberte **Importovat** a potom vyhledejte konfigurační profil, který jste vytvořili pomocí nástroje Apple Configurator. **Poznámka:** Nastavení, které exportujete z nástroje Apple Configurator, musí být kompatibilní s verzí iOS na zařízeních, na která nasazujete vlastní zásady pro iOS. Informace o tom, jak se řeší nekompatibilní nastavení, najdete v **referenčních materiálech ke konfiguračnímu profil** a **referenčních materiálech k protokolu správy mobilního zařízení** na [webu pro vývojáře Apple](https://developer.apple.com/).|
     |**Podrobnosti konfiguračního profilu**|Zobrazí kód XML pro konfigurační profil, který jste importovali.|
 
-### <a name="see-also"></a>Související témata
+### <a name="see-also"></a>Viz taky
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)

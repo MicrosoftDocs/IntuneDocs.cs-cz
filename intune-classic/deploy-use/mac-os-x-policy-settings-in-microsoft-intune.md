@@ -1,25 +1,25 @@
 ---
-title: "Nastavení zásad pro Mac OS X"
-description: "Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete konfigurovat v zařízeních s Mac OS X. Navíc můžete použít nástroj Apple Configurator k vytvoření vlastních nastavení, která nejsou k dispozici prostřednictvím Intune."
-keywords: 
+title: Nastavení zásad pro Mac OS X
+description: Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete konfigurovat v zařízeních s Mac OS X. Navíc můžete použít nástroj Apple Configurator k vytvoření vlastních nastavení, která nejsou k dispozici prostřednictvím Intune.
+keywords: ''
 author: vhorne
 ms.author: victorh
-manager: angrobe
+manager: dougeby
 ms.date: 12/27/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 98b2f19b-bee8-42d7-a215-a716d56a25a3
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 18f05219d002f0998e25671e39f1e71449b7b6c7
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 873b1041ec7f5a993195e4a988580fd88100b282
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="mac-os-x-configuration-policy-settings-in-microsoft-intune"></a>Nastavení zásad konfigurace pro Mac OS X v Microsoft Intune
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 12/12/2017
 
 Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete konfigurovat v zařízeních s Mac OS X. Navíc můžete použít nástroj Apple Configurator k vytvoření vlastních nastavení, která nejsou k dispozici prostřednictvím Intune.
 
-## <a name="general-configuration-policy-settings"></a>Obecná nastavení zásad konfigurace
+## <a name="general-configuration-policy-settings"></a>Nastavení obecných zásad konfigurace
 
 Pomocí **obecných zásad konfigurace pro Mac OS X** v Microsoft Intune můžete nakonfigurovat nastavení pro:
 
@@ -42,7 +42,7 @@ Pokud se hledané nastavení v seznamu nezobrazí, můžete k jeho vytvoření p
 |Název nastavení|Podrobnosti|
 |----------------|---------------|
 |**Vyžadovat heslo k odemknutí zařízení**|Určete, jestli uživatel musí pro přístup k počítači Mac použít heslo. **Důležité:** Na rozdíl od zařízení iOS se na zařízení Mac OS X uživateli hned nezobrazí upozornění, že si má aktualizovat heslo, aby byla tato zásada dodržená.|
-|**Vyžadovaný typ hesla**|Určete, jestli je možné použít jenom **číselné** heslo nebo jestli je potřeba použít **alfanumerické** heslo (obsahuje písmena i číslice). **Důležité:** Toto nastavení je podporované jenom v systému Mac OS X 10.10.3 a v novějších verzích.|
+|**Požadovaný typ hesla**|Určete, jestli je možné použít jenom **číselné** heslo nebo jestli je potřeba použít **alfanumerické** heslo (obsahuje písmena i číslice). **Důležité:** Toto nastavení je podporované jenom v systému Mac OS X 10.10.3 a v novějších verzích.|
 |**Požadovaný počet složitých znaků v hesle**|Určete požadovaný počet složitých znaků v hesle (**0** až **4**).<br /><br />Složitý znak je symbol, jako třeba **?**.|
 |**Minimální délka hesla**|Zadejte minimální délku hesla (**4** až **14** znaků).|
 |**Povolit jednoduchá hesla**|Umožněte použít jednoduchá hesla, jako je **0000** nebo **1234**.|
@@ -119,5 +119,5 @@ Soubor konfiguračního profilu používaný vlastními zásadami můžete vytvo
 -   Vytvořte soubor sami pomocí příslušného schématu z dokumentu [Apple Configuration Profile Key Reference](https://developer.apple.com/library/ios/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html).
 
 
-### <a name="see-also"></a>Související témata
+### <a name="see-also"></a>Viz taky
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)

@@ -1,24 +1,24 @@
 ---
-title: "Vytvoření profilů zařízení v Microsoft Intune – Azure | Microsoft Docs"
-description: "Přidání nebo konfigurace profilu zařízení v Microsoft Intune, včetně výběru typu platformy a konfigurace nastavení na portálu Azure Portal"
-keywords: 
+title: Vytvoření profilů zařízení v Microsoft Intune – Azure | Microsoft Docs
+description: Můžete přidat nebo konfigurovat profil zařízení v Microsoft Intune, včetně výběru typu platformy a konfigurace nastavení na portálu Azure Portal.
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/01/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: d98aceff-eb35-4e3e-8e40-5f300e7335cc
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e4e1febb5f12de038d2ddd543be883f71ef79005
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: e5070052c0d4cce3cfd81a7bae259bc7dfb22e7f
+ms.sourcegitcommit: e6319ff186d969da34bd19c9730ba003d6cce353
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Vytvořte profil zařízení v Microsoft Intune
 
@@ -27,12 +27,12 @@ ms.lasthandoff: 03/08/2018
 ## <a name="create-the-profile"></a>Vytvoření profilu
 1. Na portálu [Azure Portal](https://portal.azure.com) vyberte **Všechny služby** a vyhledejte **Microsoft Intune**.
 
-2. V **Microsoft Intune** vyberte **Konfigurace zařízení**, **Profily** a pak **Vytvořit profil**.
+2. V **Microsoft Intune** vyberte **Konfigurace zařízení** a pak **Profily**. Pak vyberte **Vytvořit profil**.
 
-3. Zadejte následující vlastnosti:
+3. Zadejte tyto vlastnosti:
 
-    - **Název** – Zadejte popisný název nového profilu.
-    - **Popis**: Volitelné, avšak doporučené: Zadejte popis profilu.
+    - **Název**: Zadejte popisný název nového profilu.
+    - **Popis**: Zadejte popis profilu. (Ten je nepovinný, ale doporučuje se ho zadat.)
     - **Platforma**: Vyberte typ platformy:  
 
         - **Androidemem**
@@ -57,11 +57,11 @@ ms.lasthandoff: 03/08/2018
         -  [Nastavení vzdělávání](education-settings-configure.md)
         -  [Vlastní nastavení](custom-settings-configure.md)
 
-    ![Zadejte nastavení pro vytvoření profilu zařízení](./media/create-device-profile.png)
+    ![Snímek obrazovky znázorňující vytvoření profilu](./media/create-device-profile.png)
 
 4. Po dokončení vyberte **Vytvořit**.
 
-Profil se vytvoří a zobrazí se v seznamu. Pokud chcete přiřadit tento profil ke skupinám, podívejte se na téma [Přiřazení profilů zařízení](device-profile-assign.md).
+Profil se vytvoří a zobrazí se v seznamu.
 
 
 ## <a name="next-steps"></a>Další kroky

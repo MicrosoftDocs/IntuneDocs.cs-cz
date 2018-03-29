@@ -1,25 +1,25 @@
 ---
-title: "Řešení potíží s aplikací Lookout Integration"
-description: "Toto téma popisuje řešení nejčastějších potíží s aplikací Lookout Integration"
-keywords: 
+title: Řešení potíží s aplikací Lookout Integration
+description: Toto téma popisuje řešení nejčastějších potíží s aplikací Lookout Integration
+keywords: ''
 author: NathBarn
 ms.author: nathbarn
-manager: angrobe
+manager: dougeby
 ms.date: 12/19/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: bbe0b5f4-b8bc-49f3-85a9-51fb2f226fca
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6adb0bc2562a16c0111242cc7dd923afa073d84e
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: ec20d87da48fb52207d839da0753eb05524569af
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="troubleshoot-lookout-integration-with-intune"></a>Řešení potíží s aplikací Lookout Integration pomocí služby Intune
 
@@ -36,7 +36,7 @@ Přístup k Lookout MTP mají jenom uživatelé z nakonfigurované skupiny Azure
 
 * E-mail: enterprisesupport@lookout.com
 * Přihlaste se ke [konzole MTP](http://aad.lookout.com) a přejděte do modulu **Podpora**.
-* Přejděte na adresu https://enterprise.support.lookout.com/hc/requests a vytvořte žádost o podporu.
+* Přejděte na https://enterprise.support.lookout.com/hc/requests a požádejte o podporu.
 
 ## <a name="unable-to-sign-in"></a>Nelze se přihlásit
 Pokud globální správce Azure AD nepřijal úvodní nastavení Lookoutu, zobrazí se následující chyba.
@@ -86,5 +86,5 @@ Pokud je nový uživatel v Lookout MTP členem skupiny pro registraci, zobrazí 
 - [Je třeba vyřešit hrozbu, kterou aplikace Lookout for Work objevila na vašem zařízení s iOSem](https://docs.microsoft.com/intune-user-help/you-need-to-resolve-a-threat-found-by-lookout-for-work-ios)
 
 
-### <a name="see-also"></a>Související témata
+### <a name="see-also"></a>Viz taky
 [Nastavení předplatného pro Lookout MTP](/intune-classic/deploy-use/set-up-your-subscription-with-lookout-mtp)

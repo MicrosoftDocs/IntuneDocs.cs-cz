@@ -1,12 +1,11 @@
 ---
-title: Sledování profilů zařízení v Intune
-titlesuffix: Microsoft Intune
-description: Naučte se monitorovat přiřazené profily zařízení v Microsoft Intune.
+title: Zobrazení profilů zařízení v Microsoft Intune – Azure | Microsoft Docs
+description: Zobrazte podrobnosti profilů na zařízeních a zjistěte, která zařízení mají přiřazené nebo nasazené profily zařízení Microsoft Intune.
 keywords: ''
-author: vhorne
-ms.author: victorh
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 03/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,23 +14,21 @@ ms.assetid: 9deaed87-fb4b-4689-ba88-067bc61686d7
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7483d2568ef3a43b7774916ef0a5f8f9b4540e4e
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: ddf8c7366cf97e251d85b995cb620e61f9d5f4ef
+ms.sourcegitcommit: 390a4be5aa36007c36fb6a5abcfe8d20bc862a4b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="how-to-monitor-device-profiles-in-microsoft-intune"></a>Sledování profilů zařízení v Microsoft Intune
+# <a name="monitor-device-profiles-in-microsoft-intune"></a>Sledování profilů zařízení v Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Průběh přiřazení profilů zařízení v Intune můžete monitorovat dvěma způsoby:
-
+Průběh přiřazení profilů zařízení v Intune můžete monitorovat dvěma způsoby.
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V okně **Intune** zvolte **Konfigurace zařízení**.
-2. V okně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
-2. V okně se seznamem profilů zvolte profil, který chcete spravovat, a pak udělejte jednu z těchto dvou věcí:
-    - V okně <*název profilu*> **Profil konfigurace zařízení** zvolte **Přehled**, abyste si zobrazili základní informace o profilu a jeho přiřazeních.
-    - V okně <*název profilu*> **Profil konfigurace zařízení** zvolte **Přiřazení**, abyste si zobrazili podrobnější informace o profilu a jeho přiřazeních.
+2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+3. Vyberte **Konfigurace zařízení** > **Profily**.
+4. V seznamu profilů vyberte profil, který chcete spravovat. Pak udělejte jednu z těchto věcí:
+    - V podokně <*název profilu*> **Profil konfigurace zařízení** zvolte **Přehled**, abyste si zobrazili základní informace o profilu a jeho přiřazeních.
+    - V podokně <*název profilu*> **Profil konfigurace zařízení** zvolte **Přiřazení**, abyste si zobrazili podrobnější informace o profilu a jeho přiřazeních.

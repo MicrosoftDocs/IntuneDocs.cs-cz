@@ -1,24 +1,24 @@
 ---
-title: "Změna autority MDM na Configuration Manager (hybridní MDM)"
-description: "Zjistěte, jak změnit autoritu MDM ze samostatného Intune na Configuration Manager (hybridní MDM)."
-keywords: 
+title: Změna autority MDM na Configuration Manager (hybridní MDM)
+description: Zjistěte, jak změnit autoritu MDM ze samostatného Intune na Configuration Manager (hybridní MDM).
+keywords: ''
 author: dougeby
-manager: angrobe
+manager: dougeby
 ms.date: 10/04/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f1b4bce3-7932-4a0d-aa92-6dacc7060f42
 ROBOTS: NOINDEX,NOFOLLOW
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 64e79da53aec646fc65285e41f86541ecdf6d804
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: b5494e4b2b6a7983d05ac83d9bc495677ee1a1ab
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="change-the-mdm-authority"></a>Změna autority MDM
 Od Configuration Manageru verze 1610 můžete změnit autoritu MDM, aniž by bylo nutné kontaktovat podporu Microsoftu a rušit registraci a následně nově registrovat stávající spravovaná zařízení. Toto téma představuje kroky ke změně existujícího tenanta Microsoft Intune nakonfigurovaného z Intune a s autoritu MDM nastavenou na **Microsoft Intune** (samostatně) na **Configuration Manager** (hybridní MDM), aniž byste museli zrušit registraci existujících spravovaných zařízení a znovu je zaregistrovat.
@@ -132,7 +132,7 @@ Po dokončení změny autority MDM si projděte tyto kroky:
 - Pokud chcete zkontrolovat, jestli po ohlášení a synchronizaci zařízení se službou po změně autority MDM všechno správně funguje, vyhledejte zařízení v konzole Configuration Manageru. Zařízení, která byla dřív spravovaná pomocí Intune, se nyní zobrazují jako spravovaná zařízení v konzole Configuration Manageru.    
 - Během změny autority MDM a ohlašování zařízení do služby bude zařízení přechodně offline. Aby se zajistilo, že zařízení během tohoto přechodného období zůstane chráněné a funkční, zůstanou v zařízení po dobu až sedmi dnů (nebo dokud se zařízení nepřipojí k nové autoritě MDM a neobdrží nová nastavení, která přepíší ta stávající) následující profily:
     - E-mailový profil
-    - profil VPN
+    - Profil VPN
     - Profil certifikátu
     - Wi-Fi profil
     - Konfigurační profily

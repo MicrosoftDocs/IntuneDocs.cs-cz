@@ -1,25 +1,25 @@
 ---
-title: "Přidání aplikací pro zaregistrovaná zařízení"
-description: "Před nasazením aplikace je třeba přidat ji do Intune. Pak je k dispozici v konzole Intune, kde ji můžete nasadit a spravovat."
-keywords: 
+title: Přidání aplikací pro zaregistrovaná zařízení
+description: Před nasazením aplikace je třeba přidat ji do Intune. Pak je k dispozici v konzole Intune, kde ji můžete nasadit a spravovat.
+keywords: ''
 author: mattbriggs
 ms.author: mabrigg
-manager: angrobe
+manager: dougeby
 ms.date: 01/11/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f5b1f1ae-f177-450a-9af9-936a02d052e3
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: c688bf0912ec1150924743a9211a1268427fb13a
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 9f5fec22a17eef39819b38567793a2f579815e59
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="add-apps-for-enrolled-devices-to-intune"></a>Přidávání aplikací pro zaregistrovaná zařízení do Intune
 
@@ -48,14 +48,14 @@ Pomocí Vydavatele softwaru Microsoft Intune nakonfigurujete vlastnosti aplikace
   -   **Externí odkaz** – u aplikací, které chcete vytvořit zadáním odkazu na obchod s aplikacemi:
 
         - **Zadejte adresu URL**. Zadejte některou z těchto adres URL:
-            - Adresa URL obchodu s aplikacemi obsahujícího aplikaci, kterou chcete nasadit. Pokud třeba chcete nasadit aplikaci Vzdálená plocha od Microsoftu pro Android, zadejte **https://play.google.com/store/apps/details?id=com.microsoft.rdc.android**.<br>Pokud chcete vyhledat adresu URL aplikace, pomocí vyhledávacího webu najděte stránku obchodu, který aplikaci obsahuje. Pokud budete chtít najít třeba aplikaci Vzdálená plocha, můžete vyhledat výraz **Microsoft Vzdálená plocha Android**.
+            - Adresa URL obchodu s aplikacemi obsahujícího aplikaci, kterou chcete nasadit. Například pokud chcete nasadit aplikaci Microsoft Remote Desktop pro Android, zadejte **https://play.google.com/store/apps/details?id=com.microsoft.rdc.android**.<br>Pokud chcete vyhledat adresu URL aplikace, pomocí vyhledávacího webu najděte stránku obchodu, který aplikaci obsahuje. Pokud budete chtít najít třeba aplikaci Vzdálená plocha, můžete vyhledat výraz **Microsoft Vzdálená plocha Android**.
             - Web. Intune nasadí na zařízení ikonu zástupce odkazující na daný web.
             - Aplikace na webu. Intune nasadí na zařízení ikonu zástupce odkazující na danou aplikaci.
         - **K otevření tohoto odkazu se vyžaduje spravovaný prohlížeč (jenom Android a iOS):** Když nasadíte odkaz na web nebo do webové aplikace pro uživatele, budou ho moct otevřít jen v prohlížeči spravovaném přes Intune. Tento prohlížeč musí být nainstalovaný na jejich zařízení.<br>Další podrobnosti o spravovaném prohlížeči najdete v tématu [Správa přístupu k internetu pomocí zásad spravovaného prohlížeče v Microsoft Intune](manage-internet-access-using-managed-browser-policies.md).<br>U tohoto typu instalace se nepoužívá žádný prostor cloudového úložiště.
 
   -   **Spravovaná aplikace pro iOS z App Storu** – u bezplatných aplikací z obchodu iTunes, které chcete spravovat pomocí zásad pro správu mobilních aplikací (MAM):
 
-        - **Zadejte adresu URL**. Zadejte adresu URL obchodu s aplikacemi obsahujícího aplikaci, kterou chcete nasadit. Pokud třeba chcete nasadit aplikaci Pracovní složky pro iOS od Microsoftu, zadejte adresu **https://itunes.apple.com/us/app/work-folders/id950878067?mt=8**.<br>U tohoto typu instalace se nepoužívá žádný prostor cloudového úložiště.
+        - **Zadejte adresu URL**. Zadejte adresu URL obchodu s aplikacemi obsahujícího aplikaci, kterou chcete nasadit. Například pokud chcete nasadit aplikaci Microsoft Work Folders pro iOS, zadejte **https://itunes.apple.com/us/app/work-folders/id950878067?mt=8**.<br>U tohoto typu instalace se nepoužívá žádný prostor cloudového úložiště.
 
         Pokud třeba chcete nasadit na zařízení aplikaci Microsoft Word z obchodu iTunes, stránka bude vypadat takto:
 

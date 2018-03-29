@@ -1,23 +1,23 @@
 ---
-title: "Nakonfigurování Microsoft Intune na jednotné přihlašování pro zařízení s iOSem"
-titlesuffix: 
-description: "Přečtěte si, jak nakonfigurovat Microsoft Intune na jednotné přihlašování pro zařízení s iOSem."
-keywords: 
+title: Nakonfigurování Microsoft Intune na jednotné přihlašování pro zařízení s iOSem
+titlesuffix: ''
+description: Přečtěte si, jak nakonfigurovat Microsoft Intune na jednotné přihlašování pro zařízení s iOSem.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/2/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3bb7c3bdffb19e26f2f2178c1750d1ef31a02556
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 8f19320df9a9728cdd77e608fc0ad219272a731f
+ms.sourcegitcommit: e6319ff186d969da34bd19c9730ba003d6cce353
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="configure-microsoft-intune-for-ios-device-single-sign-on"></a>Nakonfigurování Microsoft Intune na jednotné přihlašování pro zařízení s iOSem
 
@@ -90,7 +90,7 @@ Vzory `http://.com` a `https://.com` odpovídají všem adresám URL typu HTTP a
 
 Určete aplikace na zařízení koncového uživatele, které můžou používat datovou část jednotného přihlašování.
 
-Pole `AppIdentifierMatches` musí obsahovat řetězce, které odpovídají hodnotám ID sady prostředků aplikace. Tyto řetězce můžou být přesné shody (například `com.contoso.myapp`) nebo můžou určovat shodu předpony u ID sady prostředků pomocí zástupného znaku *\. Zástupný znak se musí zadat po tečce (.) a může se objevit jenom jednou, a to na konci řetězce (například `com.contoso.*`). Při použití zástupného znaku se udělí přístup k účtu všem aplikacím, jejichž ID sady prostředků začíná příslušnou předponou.
+Pole `AppIdentifierMatches` musí obsahovat řetězce, které odpovídají hodnotám ID sady prostředků aplikace. Tyto řetězce můžou být přesné shody (například `com.contoso.myapp`) nebo můžou určovat shodu předpony u ID sady prostředků pomocí zástupného znaku \*. Zástupný znak se musí zadat po tečce (.) a může se objevit jenom jednou, a to na konci řetězce (například `com.contoso.*`). Při použití zástupného znaku se udělí přístup k účtu všem aplikacím, jejichž ID sady prostředků začíná příslušnou předponou.
 
 Pole **Název aplikace** se používá k přidání popisného názvu, který vám pomůže dané ID sady prostředků identifikovat.
 

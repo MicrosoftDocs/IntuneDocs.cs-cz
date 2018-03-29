@@ -1,23 +1,23 @@
 ---
-title: "Vyhledání ztracených zařízení s iOSem pomocí Microsoft Intune – Azure | Microsoft Docs"
-description: "Ztracená nebo odcizená zařízení s iOSem můžete vyhledat pomocí funkce Najít zařízení v Microsoft Intune. Tato funkce vám umožní zjistit podrobnosti o zabezpečení a ochraně osobních údajů."
-keywords: 
+title: Vyhledání ztracených zařízení s iOSem pomocí Microsoft Intune – Azure | Microsoft Docs
+description: Vyhledejte ztracené nebo odcizené zařízení s iOSem pomocí funkce Najít zařízení v Microsoft Intune. Získejte podrobnosti o zabezpečení a ochraně osobních údajů při používání akce Najít zařízení.
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3e544286-12ad-4a3a-86f8-d2cf16940b1f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4bc51ef7f9af9cc97fd4c11408a1857679aee665
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 473a0b265a9483cbd6f6ffb15074fad85e03e264
+ms.sourcegitcommit: e6319ff186d969da34bd19c9730ba003d6cce353
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="locate-lost-or-stolen-ios-devices-with-intune"></a>Vyhledání ztracených nebo odcizených zařízení s iOSem přes Intune
 
@@ -29,7 +29,7 @@ Pokud chcete zjistit polohu ztraceného nebo odcizeného zařízení s iOSem na 
 
 - iOS 9.3 nebo novější
 
-Tato funkce se **nepodporuje** u následujících systémů: 
+Tato funkce není podporovaná pro tyto systémy: 
 - Windows
 - Windows Phone
 - macOS
@@ -40,12 +40,12 @@ Tato funkce se **nepodporuje** u následujících systémů:
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 3. Vyberte **Zařízení** a potom **Všechna zařízení**.
-4. V seznamu zařízení, která spravujete, zvolte zařízení s iOSem, zvolte **Více** a pak zvolte vzdálenou akci **Najít zařízení**.
-5. Po vyhledání zařízení se jeho poloha zobrazí v části **Najít zařízení**.
-    ![Vyhledání zařízení pomocí Intune v Azure](./media/locate-device.png)
+4. Ze seznamu zařízení, která spravujete, vyberte zařízení s iOSem a vyberte **...Další**. Pak zvolte vzdálenou akci **Najít zařízení**.
+5. Po nalezení zařízení se jeho poloha zobrazí v části **Najít zařízení**.
+    ![Snímek obrazovky z funkcí Najít zařízení pomocí Intune v Azure](./media/locate-device.png)
 
 >[!NOTE]
->Pro účely ochrany osobních údajů je míra zvětšení mapy omezená.
+>Z důvodu ochrany osobních údajů je míra zvětšení mapy omezená.
 
 ## <a name="security-and-privacy-information-for-lost-mode-and-locate-device-actions"></a>Informace o zabezpečení a ochraně osobních údajů pro akce Režim ztráty a Najít zařízení
 - Dokud tuto akci nezapnete, neodesílají se do Intune žádné informace o poloze zařízení.
