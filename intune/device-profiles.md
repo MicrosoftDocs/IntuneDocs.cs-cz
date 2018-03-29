@@ -1,24 +1,24 @@
 ---
-title: "Profily zařízení v Microsoft Intune – Azure | Microsoft Docs"
-description: "Přehled různých profilů zařízení Microsoft Intune, včetně funkcí, omezení, e-mailu, Wi-Fi, VPN, vzdělávání, certifikátů, upgradu Windows 10, BitLockeru a Windows Defenderu, Windows Information Protection a nastavení konfigurace vlastních zařízení na portálu Azure Portal Tento profil použijte ke správě a ochraně dat a zařízení ve vaší společnosti."
-keywords: 
+title: Profily zařízení v Microsoft Intune – Azure | Microsoft Docs
+description: Přehled různých profilů zařízení Microsoft Intune, včetně funkcí, omezení, e-mailu, Wi-Fi, VPN, vzdělávání, certifikátů, upgradu Windows 10, BitLockeru a Windows Defenderu, Windows Information Protection a nastavení konfigurace vlastních zařízení na portálu Azure Portal Tento profil použijte ke správě a ochraně dat a zařízení ve vaší společnosti.
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/01/2018
+ms.date: 03/22/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
-ms.assetid: 
-ms.reviewer: 
+ms.technology: ''
+ms.assetid: ''
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 79ca6eaf22233dd6d024a28e456e57a8a74d02aa
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: e92a10f51fb403c802c1c6d3ea79ccf49a1e93fb
+ms.sourcegitcommit: a22309174e617e59ab0cdd0a55abde38711a5f35
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="what-are-microsoft-intune-device-profiles"></a>Co jsou profily zařízení v Microsoft Intune?
 
@@ -120,6 +120,8 @@ Tato funkce podporuje: jenom Windows 10
 ## <a name="endpoint-protection-profile"></a>Profil Ochrana koncového bodu
 [Nastavení služby Ochrana koncového bodu pro Windows 10](endpoint-protection-windows-10.md) konfiguruje nastavení pro BitLocker a Windows Defender pro zařízení s Windows 10.
 
+Informace o zařazení rozšířené ochrany před internetovými útoky v programu Windows Defender pomocí Microsoft Intune najdete v článku o [konfiguraci koncových bodů pomocí nástrojů pro správu mobilních zařízení (MDM)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-endpoints-mdm-windows-defender-advanced-threat-protection).
+
 Tato funkce podporuje: jenom Windows 10
 
 ## <a name="windows-information-protection-profile"></a>Profil Windows Information Protection
@@ -130,7 +132,7 @@ Tato funkce podporuje: jenom Windows 10
 ## <a name="custom-profile"></a>Profil Vlastní
 [Vlastní nastavení](custom-settings-configure.md) zahrnuje možnost přiřadit k zařízení nastavení, která nejsou předdefinovaná v Intune. Například na zařízení s Androidem, můžete zadat hodnoty OMA-URI. U zařízení s iOSem můžete naimportovat konfigurační soubor, který jste vytvořili v nástroji Apple Configurator. 
 
-Tato funkce podporuje: 
+Tato funkce podporuje:
 
 - Android
 - iOS

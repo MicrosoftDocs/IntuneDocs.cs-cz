@@ -1,52 +1,51 @@
 ---
-title: "Obnovení továrního nastavení nebo odebrání firemních dat v zařízení pomocí Microsoft Intune"
-titlesuffix: 
-description: "Zjistěte, jak můžete v zařízení odebrat firemní data nebo obnovit tovární nastavení."
-keywords: 
-author: nathbarn
-ms.author: nathbarn
+title: Odebrání firemních dat ze zařízení pomocí Microsoft Intune – Azure | Microsoft Docs
+description: Můžete odebrat firemní data společnosti v zařízení nebo obnovit tovární nastavení zařízení s Androidem, Androidem for Work, iOSem, macOS nebo Windows pomocí Microsoft Intune. Můžete také odstranit zařízení z Azure Active Directory.
+keywords: ''
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b56f7d7bcf576a0b2342c7c5394c08661b6a45fd
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: e4581b59de68c2877b122887fa1ffe86eaa2b92c
+ms.sourcegitcommit: 390a4be5aa36007c36fb6a5abcfe8d20bc862a4b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Odebrání zařízení pomocí obnovení továrního nastavení nebo odebrání firemních dat
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Zařízení, která už nepotřebujete, která využíváte k jinému účelu nebo která se ztratila, můžete z Intune odebrat. Dosáhnete toho vydáním příkazu k **odebrání firemních dat** nebo **obnovení továrního nastavení**. Uživatelé můžou rovněž z Portálu společnosti Intune vydat vzdálený příkaz zařízením v osobním vlastnictví, která jsou registrovaná v Intune.
+Zařízení, která už nepotřebujete, která využíváte k jinému účelu nebo která se ztratila, můžete z Intune odebrat. Můžete k tomu použít akce **Odebrat firemní data** nebo **Obnovení továrního nastavení**. Uživatelé můžou také z Portálu společnosti Intune vydat vzdálený příkaz zařízením v osobním vlastnictví, která jsou registrovaná v Intune.
 
 > [!NOTE]
-> Před odebráním uživatele ze služby Azure Active Directory vydejte příkaz k **obnovení továrního nastavení** nebo **odebrání firemních dat** všem zařízením přidruženým k tomuto uživateli. Pokud ze služby Azure Active Directory odeberete uživatele se spravovanými zařízeními, nemůže už Intune vydat těmto zařízením příkaz k obnovení továrního nastavení nebo odebrání firemních dat.
+> Před odebráním uživatele z Azure Active Directory (Azure AD) použijte akce **Obnovení továrního nastavení** nebo **Odebrat firemní data** pro všechna zařízení přidružená k tomuto uživateli. Pokud z Azure AD odeberete uživatele se spravovanými zařízeními, nemůže už Intune těmto zařízením vydat příkaz k obnovení továrního nastavení nebo odebrání firemních dat.
 
 ## <a name="factory-reset"></a>Obnovení továrního nastavení
 
-**Obnovení továrního nastavení** obnoví v zařízení výchozí nastavení výrobce a odebere všechna firemní a uživatelská data a nastavení. Toto zařízení se odebere ze správy v Intune. Obnovení továrního nastavení je vhodné, když chcete zařízení resetovat, abyste ho mohli dát novému uživateli, nebo když došlo k jeho ztrátě nebo odcizení. Při výběru obnovení továrního nastavení buďte obezřetní. Data v zařízení není možné obnovit.
+Akce **Obnovení továrního nastavení** obnoví výchozí tovární nastavení zařízení. Obnovení továrního nastavení odebere všechna firemní a uživatelská data a nastavení. Toto zařízení se odebere ze správy v Intune. Obnovení továrního nastavení je vhodné, když chcete zařízení resetovat, abyste ho mohli dát novému uživateli, nebo když došlo k jeho ztrátě nebo odcizení. Při zvolení **Obnovení továrního nastavení** buďte obezřetní. Data v zařízení není možné obnovit.
 
-### <a name="to-factory-reset-a-device"></a>Jak u zařízení obnovit tovární nastavení
+### <a name="factory-reset-a-device"></a>Obnovení továrního nastavení zařízení
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V okně **Zařízení** zvolte **Všechna zařízení**.
+2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+3. Vyberte **Zařízení** > **Všechna zařízení**.
 4. Zvolte název zařízení, jehož tovární nastavení chcete obnovit.
-5. V okně, ve kterém se zobrazuje název zařízení, zvolte **Obnovení továrního nastavení**.
-6. U Windows 10 verze 1709 nebo vyšší je k dispozici další možnost – Zachovat stav registrace a uživatelský účet. 
+5. V podokně s názvem zařízení vyberte **Obnovení továrního nastavení**.
+6. Pro Windows 10 verze 1709 nebo novější máte také možnost **Zachovat stav registrace a uživatelský účet**. 
     
-    |Při obnovení továrního nastavení se zachová|Nezachová se|
+    |Zachová se při obnovení továrního nastavení|Nezachová se|
     | -------------|------------|
     |Uživatelské účty přidružené k zařízení|Soubory uživatele|
-    |Stav počítače \(připojení k doméně, připojení k Azure Active Directory)| Aplikace nainstalované uživatelem \(aplikace ze Storu a aplikace Win32)|
-    |Registrace správy mobilních zařízení|Nevýchozí nastavení zařízení|
+    |Stav počítače \(připojení k doméně, připojení k Azure AD)| Aplikace nainstalované uživatelem \(aplikace ze Storu a aplikace Win32)|
+    |Registrace ve správě mobilních zařízení (MDM)|Nevýchozí nastavení zařízení|
     |Aplikace nainstalované výrobcem OEM \(aplikace ze Storu a aplikace Win32)||
     |Profil uživatele||
     |Uživatelská data mimo profil uživatele||
@@ -55,25 +54,27 @@ Zařízení, která už nepotřebujete, která využíváte k jinému účelu ne
          
 7. Kliknutím na **Ano** potvrďte obnovení továrního nastavení.
 
-Pokud je zařízení zapnuté a připojené, trvá méně než 15 minut, než se příkaz k obnovení továrního nastavení rozšíří do všech typů zařízení.
+Pokud je zařízení zapnuté a připojené, akce **Obnovení továrního nastavení** se do všech typů zařízení rozšíří do 15 minut.
 
 ## <a name="remove-company-data"></a>Odebrání firemních dat
 
-Příkaz k **odebrání firemních dat** odebere data případných spravovaných aplikací, nastavení a e-mailové profily, které byly přiřazeny přes Intune. Při odebrání firemních dat zůstanou v zařízení osobní data uživatele. Toto zařízení se odebere ze správy v Intune. Následující tabulky popisují, jaká data se odeberou a jaký vliv má odebrání firemních dat na zbývající data v zařízení.
+Akce **Odebrat firemní data** odebere data případných spravovaných aplikací, nastavení a e-mailové profily, které byly přiřazeny přes Intune. Při **odebrání firemních dat** zůstanou v zařízení osobní data uživatele. Toto zařízení se odebere ze správy v Intune. 
+
+Následující tabulky popisují, jaká data se odeberou a jaký vliv má akce **Odebrat firemní data** na zbývající data v zařízení po odebrání firemních dat.
 
 ### <a name="ios"></a>iOS
 
 |Datový typ|iOS|
 |-------------|-------|
 |Firemní aplikace a související data instalovaná službou Intune|Odinstalují se aplikace. Odeberou se data firemních aplikací.<br /><br />Odeberou se data aplikací z aplikací Microsoftu, které používají správu mobilních aplikací. Aplikace se neodebere.|
-|Nastavení|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|
+|Nastavení|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty jsou odebrané a odvolané.|
-|Agent pro správu|Profil pro správu se odebere.|
-|E-mailu|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune, a odstraní se e-maily uložené v mezipaměti zařízení.|
+|Agent pro správu|Odebere se profil pro správu.|
+|E-mailu|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune. Odstraní se e-maily v mezipaměti zařízení.|
 |Outlook|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro iOS.|
-|Zrušení služby Azure Active Directory (AD)|Odebere se záznam služby Azure AD.|
-|Kontakty | Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou.  Kontakty synchronizované z nativního adresáře do jiného externího zdroje není možné odebrat. <br /> <br />V současné době se podporuje jen aplikace Outlook.
+|Zrušení připojení k Azure AD|Odebere se záznam Azure AD.|
+|Kontakty |Odeberou se kontakty synchronizované přímo z aplikace do nativního adresáře. Kontakty synchronizované z nativního adresáře do jiného externího zdroje není možné odebrat. <br /> <br />V současné době se podporuje jenom aplikace Outlook.
 
 ### <a name="android"></a>Android
 
@@ -81,63 +82,63 @@ Příkaz k **odebrání firemních dat** odebere data případných spravovanýc
 |-------------|-----------|------------------------|
 |Webové odkazy|Odebrány.|Odebrány.|
 |Nespravované aplikace Google Play|Aplikace a data zůstanou nainstalována.|Aplikace a data zůstanou nainstalována.|
-|Nespravované obchodní aplikace|Aplikace a data zůstanou nainstalována.|Odinstalují se aplikace a následkem toho se odeberou i jejich místní data. Data mimo aplikaci (například na kartě SD) odebrána nebudou.|
-|Spravované aplikace Google Play|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (například na kartě SD) zůstanou zašifrována, takže nepůjdou použít, ale odebrána nebudou.|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (například na kartě SD) zůstanou zašifrována, ale odebrána nebudou.|
-|Spravované obchodní aplikace|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (například na kartě SD) zůstanou zašifrována, takže nepůjdou použít, ale odebrána nebudou.|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (například na kartě SD) zůstanou zašifrována, takže nepůjdou použít, ale odebrána nebudou.|
-|Nastavení|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|
+|Nespravované obchodní aplikace|Aplikace a data zůstanou nainstalována.|Odinstalují se aplikace a odeberou se jejich místní data. Data mimo aplikaci (například na kartě SD) se neodeberou.|
+|Spravované aplikace Google Play|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním správy mobilních zařízení (MAM) mimo aplikaci (třeba na kartě SD) zůstanou zašifrována, takže nepůjdou použít, ale neodeberou se.|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (třeba na kartě SD) zůstanou zašifrována, ale neodeberou se.|
+|Spravované obchodní aplikace|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (třeba na kartě SD) zůstanou zašifrována, takže nepůjdou použít, ale neodeberou se.|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (třeba na kartě SD) zůstanou zašifrována, takže nepůjdou použít, ale neodeberou se.|
+|Nastavení|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|Odebrány.|
-|Nastavení profilu certifikátu|Certifikáty se zruší, ale neodeberou.|Certifikáty se odeberou a zruší.|
+|Nastavení profilu certifikátu|Certifikáty se zruší, ale neodeberou.|Certifikáty jsou odebrané a odvolané.|
 |Agent pro správu|Zruší se oprávnění správce zařízení.|Zruší se oprávnění správce zařízení.|
-|E-mailu|Není k dispozici (zařízení s Androidem nepodporují e-mailové profily)|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune, a odstraní se e-maily uložené v mezipaměti zařízení.|
-|Outlook|E-mail přijatý aplikací Microsoft Outlook pro Android se odebere, ale pouze v případě, že je Outlook chráněný zásadami MAM. V opačném případě se Outlook při zrušení registrace nevymaže.|E-mail přijatý aplikací Microsoft Outlook pro Android se odebere, ale pouze v případě, že je Outlook chráněný zásadami MAM. V opačném případě se Outlook při zrušení registrace nevymaže.|
-|Zrušení služby Azure Active Directory (AD)|Odebere se záznam služby Azure AD.|Odebere se záznam služby Azure AD.|
-|Kontakty | Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou.  Kontakty synchronizované z nativního adresáře do jiného externího zdroje není možné odebrat. <br /> <br />V současné době se podporuje jen aplikace Outlook.|Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou.  Kontakty synchronizované z nativního adresáře do jiného externího zdroje není možné odebrat. <br /> <br />V současné době se podporuje jen aplikace Outlook.
+|E-mailu|Není k dispozici (zařízení s Androidem nepodporují e-mailové profily)|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune. Odstraní se e-maily v mezipaměti zařízení.|
+|Outlook|E-mail přijatý aplikací Outlook pro Android se odebere, ale jenom v případě, že je Outlook chráněný zásadami MAM. Jinak se Outlook při zrušení registrace zařízení nevymaže.|E-mail přijatý aplikací Outlook pro Android se odebere, ale jenom v případě, že je Outlook chráněný zásadami MAM. Jinak se Outlook při zrušení registrace zařízení nevymaže.|
+|Zrušení připojení k Azure AD|Odebere se záznam Azure AD.|Odebere se záznam Azure AD.|
+|Kontakty |Odeberou se kontakty synchronizované přímo z aplikace do nativního adresáře. Kontakty synchronizované z nativního adresáře do jiného externího zdroje není možné odebrat. <br /> <br />V současné době se podporuje jenom aplikace Outlook.|Odeberou se kontakty synchronizované přímo z aplikace do nativního adresáře. Kontakty synchronizované z nativního adresáře do jiného externího zdroje není možné odebrat. <br /> <br />V současné době se podporuje jenom aplikace Outlook.
 
 ### <a name="android-for-work"></a>Android for Work
 
-Při odebrání firemních dat v zařízení Android for Work se odeberou všechna data, aplikace a nastavení v pracovním profilu na tomto zařízení. Zařízení se tím vyřadí ze správy pomocí Intune. Android for Work nepodporuje obnovení továrního nastavení.
+Při odebrání firemních dat v zařízení Android for Work se odeberou všechna data, aplikace a nastavení v pracovním profilu na tomto zařízení. Zařízení se vyřadí ze správy pomocí Intune. Android for Work nepodporuje obnovení továrního nastavení.
 
 
 ### <a name="macos"></a>macOS
 
 |Datový typ|macOS|
 |-------------|-------|
-|Nastavení|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|
+|Nastavení|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty nasazené prostřednictvím správy mobilních zařízení se odeberou a odvolají.|
-|Agent pro správu|Profil pro správu se odebere.|
+|Agent pro správu|Odebere se profil pro správu.|
 |Outlook|Při povolení podmíněného přístupu nebude zařízení přijímat žádnou novou poštu.|
-|Zrušení služby Azure Active Directory (AD)|Odebere se záznam služby Azure AD.|
+|Zrušení připojení k Azure AD|Odebere se záznam Azure AD.|
 
 ### <a name="windows"></a>Windows
 
-|Datový typ|Windows 8.1 (MDM) a Windows RT 8.1|Windows RT|Windows Phone 8 a Windows Phone 8.1|Windows 10|
+|Datový typ|Windows 8.1 (MDM) a Windows RT 8.1|Windows RT|Windows Phone 8.1 a Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Firemní aplikace a související data instalovaná službou Intune|U souborů chráněných systémem souborů EFS dojde ke zrušení klíče a uživatel nebude moct soubory otevírat.|Neodebere firemní aplikace.|Odinstalují se aplikace původně nainstalované prostřednictvím firemního portálu. Odeberou se data firemních aplikací.|Aplikace jsou odinstalovány a jsou odebrány klíče zkušebního načtení.<br>Ve Windows 10 verze 1703 (Creator Update) a novějších verzích nejsou odebrány aplikace Office 365 ProPlus.|
-|Nastavení|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|Konfigurace nastavené zásadami Intune se nevynucují, tzn. že uživatelé mohou nastavení změnit.|
+|Firemní aplikace a související data instalovaná službou Intune|Odvolají se klíče pro soubory, které jsou chráněné systémem souborů EFS. Uživatel nemůže soubory otevřít.|Firemní aplikace se neodeberou.|Odinstalují se aplikace původně nainstalované prostřednictvím Portálu společnosti. Odeberou se data firemních aplikací.|Odinstalují se aplikace. Odeberou se klíče pro zkušební načtení.<br>Ve Windows 10 verze 1703 (Creators Update) a novějších verzích se neodeberou aplikace Office 365 ProPlus.|
+|Nastavení|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|Odebrány.|Není podporováno.|Odebrány.|
-|Nastavení profilu certifikátu|Certifikáty se odeberou a zruší.|Certifikáty se odeberou a zruší.|Není podporováno.|Certifikáty se odeberou a zruší.|
-|E-mailu|Odebere se e-mail se zapnutým systémem souborů EFS, včetně e-mailů a příloh aplikace Pošta pro Windows.|Není podporováno.|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune, a odstraní se e-maily uložené v mezipaměti zařízení.|Odebere se e-mail se zapnutým systémem souborů EFS, včetně e-mailů a příloh aplikace Pošta pro Windows. Odebere e-mailové účty, které byly zřízené Intune.|
-|Zrušení služby Azure Active Directory (AD)|Ne.|Ne.|Odebere se záznam služby Azure AD.|Nelze použít. Ve Windows 10 se nepodporuje odebrání firemních dat u zařízení připojených ke službě Azure Active Directory.|
+|Nastavení profilu certifikátu|Certifikáty jsou odebrané a odvolané.|Certifikáty jsou odebrané a odvolané.|Není podporováno.|Certifikáty jsou odebrané a odvolané.|
+|E-mailu|Odeberou se e-maily s povoleným systémem souborů EFS. To zahrnuje e-maily a přílohy v aplikaci Pošta pro Windows.|Není podporováno.|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune. Odstraní se e-maily v mezipaměti zařízení.|Odeberou se e-maily s povoleným systémem souborů EFS. To zahrnuje e-maily a přílohy v aplikaci Pošta pro Windows. Odebere e-mailové účty, které byly zřízené Intune.|
+|Zrušení připojení k Azure AD|Ne.|Ne.|Odebere se záznam Azure AD.|Nelze použít. Ve Windows 10 není možné u zařízení připojených k Azure AD firemní data odebrat.|
 
-### <a name="to-remove-company-data"></a>Jak odebrat firemní data
+### <a name="remove-company-data"></a>Odebrání firemních dat
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V okně **Zařízení** zvolte **Všechna zařízení**.
+3. V podokně **Zařízení** zvolte **Všechna zařízení**.
 4. Zvolte název zařízení, ze kterého chcete odebrat firemní data.
-5. V okně, kde se zobrazuje název zařízení, zvolte **Odebrat firemní data**, a volbou možnosti **Ano** tuto akci potvrďte.
+5. V podokně s názvem zařízení vyberte **Odebrat firemní data**. Potvrďte zvolením **Ano**.
 
-Pokud je zařízení zapnuté a připojené, trvá méně než 15 minut, než se příkaz k odebrání dat rozšíří do všech typů zařízení.
+Pokud je zařízení zapnuté a připojené, akce **Odebrat firemní data** se do všech typů zařízení rozšíří do 15 minut.
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Odstranění zařízení z portálu služby Azure Active Directory
 
-Kvůli komunikačním problémům nebo ztraceným zařízením můžete potřebovat odstranit zařízení ze služby Azure Active Directory (AD). Příkazem k odstranění se zařízení neodebere ze správy, příkazem **Odstranit** ale můžete z Azure Portalu odebrat záznamy zařízení, o kterých víte, že jsou nedosažitelná a je nepravděpodobné, že by se službou Azure znovu komunikovala.
+Kvůli komunikačním problémům nebo ztraceným zařízením můžete potřebovat odstranit zařízení z Azure AD. Pomocí akce **Odstranit** můžete z portálu Azure Portal odebrat záznamy zařízení, o kterých víte, že jsou nedosažitelná a je nepravděpodobné, že by se službou Azure znovu komunikovala. Akce **Odstranit** neodebere zařízení ze správy.
 
-1.  Přihlaste se ke službě [Azure Active Directory na Azure Portalu](http://aka.ms/accessaad) pomocí přihlašovacích údajů správce. Můžete se také přihlásit k [portálu Office 365](https://portal.office.com) a pak pomocí odkazu na levé straně stránky zvolit **Centra pro správu** &gt; **Azure AD**.
-3.  Pokud nemáte předplatné Azure, vytvořte ho. Pokud máte placený účet, neměli byste potřebovat platební kartu ani zadání platby (zvolte odkaz pro předplatné **Zdarma zaregistrovat službu Azure Active Directory**).
-4.  Vyberte možnost **Azure Active Directory** a potom vyberte svoji organizaci.
-5.  Vyberte kartu **Uživatelé** .
-6.  Vyberte uživatele, jehož zařízení chcete odstranit.
-7.  Zvolte **Zařízení**.
-8.  Odeberte zařízení podle potřeby, třeba zařízení, která už se nepoužívají, nebo zařízení s nesprávnými definicemi.
+1.  Přihlaste se k [Azure Active Directory na portálu Azure Portal](http://aka.ms/accessaad) pomocí přihlašovacích údajů správce. Můžete se také přihlásit k [portálu Office 365](https://portal.office.com). V nabídce vyberte **Centra pro správu** > **Azure AD**.
+2.  Pokud nemáte předplatné Azure, vytvořte ho. Pokud máte placený účet, neměli byste potřebovat platební kartu ani zadání platby (vyberte odkaz pro předplatné **Zdarma zaregistrovat službu Azure Active Directory** ).
+3.  Vyberte **Azure Active Directory** a pak vyberte svoji organizaci.
+4.  Vyberte kartu **Uživatelé** .
+5. Vyberte uživatele spojeného se zařízením, které chcete odstranit.
+6.  Vyberte **Zařízení**.
+7.  Odeberte zařízení podle potřeby. Můžete třeba odebrat zařízení, která už se nepoužívají, nebo zařízení s nesprávnými definicemi.

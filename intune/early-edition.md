@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e91745abb7c3409b31724101b3071157407acec9
-ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
+ms.openlocfilehash: 99b1436fdf718b54f54f7e90835668d4a632b7ce
+ms.sourcegitcommit: 390a4be5aa36007c36fb6a5abcfe8d20bc862a4b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="the-early-edition-for-microsoft-intune---march-2018"></a>Časná edice Microsoft Intune – březen 2018
 
@@ -51,11 +51,11 @@ S místním konektorem Exchange v Intune můžete spravovat přístup zařízen�
 Nové profily sítě VPN vytvořené pro Cisco AnyConnect pro iOS budou fungovat s Cisco AnyConnect 4.0.7x a vyššími verzemi. Stávající profily sítě VPN Cisco AnyConnect pro iOS budou označené **Cisco Legacy AnyConnect** a budou dál fungovat s Cisco AnyConnect 4.0.5x stejně jako dnes.
 
 > [!NOTE]
-> Tato změna je jenom pro iOS. Pro Android, Android for Work a macOS bude dál jenom jedna možnost Cisco AnyConnect. 
+> Tato změna je jenom pro iOS. Pro Android, Android for Work a macOS bude dál jenom jedna možnost Cisco AnyConnect.
 
 #### <a name="more-information"></a>Další informace
 
-Musíte vytvořit nový profil sítě VPN Cisco AnyConnect pro iOS pro podporu nové aplikace, protože nová aplikace Cisco AnyConnect a aplikace Cisco Legacy AnyConnect jsou samostatné aplikace. Pokud ve svém prostředí spravujete klienta AnyConnect, musíte nasadit také novou aplikaci Cisco AnyConnect. Pokud chcete upgrade provést, musíte také odstranit profil sítě VPN Cisco Legacy AnyConnect a odebrat aplikaci Cisco Legacy AnyConnect. 
+Musíte vytvořit nový profil sítě VPN Cisco AnyConnect pro iOS pro podporu nové aplikace, protože nová aplikace Cisco AnyConnect a aplikace Cisco Legacy AnyConnect jsou samostatné aplikace. Pokud ve svém prostředí spravujete klienta AnyConnect, musíte nasadit také novou aplikaci Cisco AnyConnect. Pokud chcete upgrade provést, musíte také odstranit profil sítě VPN Cisco Legacy AnyConnect a odebrat aplikaci Cisco Legacy AnyConnect.
 
 Integrace řízení přístupu k síti (NAC) nebude pro nového klienta AnyConnect v počáteční verzi fungovat. Pracujeme se společností Cisco na tom, abychom zajistili integraci NAC v budoucí verzi Intune.
 
@@ -64,7 +64,7 @@ Integrace řízení přístupu k síti (NAC) nebude pro nového klienta AnyConne
 Vylepšené zjišťování jailbreaků je novým nastavením dodržování předpisů, které zlepší způsob, jak Intune vyhodnocuje zařízení s jailbreakem. Toto nastavení způsobí, že se zařízení bude k Intune hlásit častěji. K tomu se budou využívat polohové služby a bude to mít vliv na vybíjení baterie.
 
 ### <a name="ability-to-deploy-required-line-of-business-lob-apps-to-all-users-on-windows-10-desktop-devices----1627835-rs4---"></a>Možnost nasadit požadované obchodní aplikace pro všechny uživatele na zařízeních s Windows 10 Desktop <!-- 1627835 RS4 -->
-Zákazníci budou moct nasazovat požadované obchodní aplikace pro Windows 10 k instalaci v kontextech zařízení. Tyto akce tak budou k dispozici pro všechny uživatele v zařízení. Platí to jenom na zařízeních s Windows 10 Desktop. 
+Zákazníci budou moct nasazovat požadované obchodní aplikace pro Windows 10 k instalaci v kontextech zařízení. Tyto akce tak budou k dispozici pro všechny uživatele v zařízení. Platí to jenom na zařízeních s Windows 10 Desktop.
 
 ### <a name="expiring-line-of-business-lob-apps-for-microsoft-intune----748789---"></a>Vypršení platnosti obchodních aplikací pro Microsoft Intune <!-- 748789 -->
 Na portálu Azure Portal vás Intune upozorní na obchodní aplikace, jejichž platnost brzy vyprší. Při nahrání nové verze obchodní aplikace Intune oznámení o vypršení platnosti ze seznamu aplikací odebere.
@@ -73,10 +73,10 @@ Na portálu Azure Portal vás Intune upozorní na obchodní aplikace, jejichž p
 Uživatelé, kteří registrují zařízení pomocí Portálu společnosti ve Windows 10 sestavení 1703 a vyšším, budou moct dokončit první krok registrace bez opuštění aplikace.
 
 ### <a name="new-management-name-column----1333586---"></a>Nový sloupec Název správy <!-- 1333586 -->
-V okně zařízení přibude nový sloupec s názvem **Název správy**. Půjde o automaticky generovaný název bez možnosti úprav, který bude přiřazený podle zařízení na základě tohoto vzorce: 
+V okně zařízení přibude nový sloupec s názvem **Název správy**. Půjde o automaticky generovaný název bez možnosti úprav, který bude přiřazený podle zařízení na základě tohoto vzorce:
 - Výchozí název pro všechna zařízení: <username>_<devicetype>_<enrollmenttimestamp>
-- Pro hromadně přidaná zařízení: <PackageId/ProfileId>_<DeviceType>_<EnrollmentTime> 
- 
+- Pro hromadně přidaná zařízení: <PackageId/ProfileId>_<DeviceType>_<EnrollmentTime>
+
 Je to volitelný sloupec v okně zařízení. Nebude k dispozici ve výchozím nastavení a přístup k němu bude jenom přes výběr sloupců. Na název zařízení nemá tento nový sloupec vliv.
 
 ### <a name="new-settings-for-windows-defender-security-center-notifications-device-configuration-profile----1631906---"></a>Nová nastavení pro profil konfigurace zařízení pro oznámení Centra zabezpečení v programu Windows Defender <!-- 1631906 -->
@@ -107,19 +107,19 @@ Tato nastavení najdete v části **Konfigurace zařízení** -> **Vytvořit pro
 ### <a name="configure-the-mac-application-firewall----1690461---"></a>Konfigurace brány firewall pro aplikace pro Mac <!-- 1690461 -->
 
 Bude možné nakonfigurovat bránu firewall pro aplikace pro Mac. Můžete to využít k řízení připojení na základě jednotlivých aplikací místo na základě portů. Díky tomu snadněji využijete výhod ochrany pomocí brány firewall a pomůže vám to zabránit nežádoucím aplikacím v převzetí kontroly nad síťovými porty otevřenými pro oprávněné aplikace.
- 
+
 Tuto funkci najdete v části **Konfigurace zařízení** -> **Vytvořit profil** -> **macOS** -> **Ochrana koncového bodu**.
 
 Jakmile nastavení brány firewall povolíte, můžete ji nakonfigurovat pomocí dvou strategií:
 
 - Blokovat všechna příchozí připojení
 
-   Můžete blokovat všechna příchozí připojení u cílových zařízení. Pokud se k tomu rozhodnete, zablokují se příchozí připojení u všech aplikací. 
+   Můžete blokovat všechna příchozí připojení u cílových zařízení. Pokud se k tomu rozhodnete, zablokují se příchozí připojení u všech aplikací.
 
 - Povolit nebo blokovat konkrétní aplikace
 
    Můžete povolit nebo blokovat příjem příchozích připojení u konkrétních aplikací. Můžete také povolit neviditelný režim, který zabrání odpovědím na zjišťovací požadavky.
- 
+
 #### <a name="more-information"></a>Další informace
 
 - Blokovat všechna příchozí připojení
@@ -134,7 +134,7 @@ Jakmile nastavení brány firewall povolíte, můžete ji nakonfigurovat pomocí
 - Neviditelný režim
 
    Povolením zabráníte počítači v odpovídání na zjišťovací požadavky. Počítač bude nadále odpovídat na požadavky oprávněných aplikací. Neočekávané požadavky, jako je ICMP (ping), se ignorují.
- 
+
 
 ### <a name="updating-the-help-and-feedback-experience-on-company-portal-app-for-android---1631531---"></a>Aktualizace prostředí nápovědy a odeslání názoru v aplikaci Portál společnosti pro Android <!--1631531 -->
 
@@ -143,16 +143,16 @@ Budeme aktualizovat prostředí nápovědy a odeslání názoru v aplikaci Port�
 ### <a name="custom-book-categories-for-volume-purchase-program-vpp-ebooks----1488911---"></a>Vlastní kategorie e-knih v rámci programu VPP (volume-purchase program) <!-- 1488911 -->
 Bude možné vytvořit vlastní kategorie e-knih a pak k nim přiřadit e-knihy v rámci programu VPP. Koncoví uživatelé pak uvidí nově vytvořené kategorie e-knih a knihy k nim přiřazené.
 
-#### <a name="company-portal-for-android-visual-updates---976944---"></a>Vizuální aktualizace Portálu společnosti pro Android <!--976944 -->
+### <a name="hololens-and-surface-hub-now-appear-in-device-lists---1725868--"></a>V seznamech zařízení <!--1725868--> se teď zobrazují HoloLens a Surface Hub
 
-Budeme aktualizovat aplikaci Portál společnosti pro Android v souladu s pokyny pro [Material Design](https://material.io/) Androidu. Obrázky nových ikon budeme publikovat v článku [Co je nového v uživatelském rozhraní aplikací](whats-new-app-ui.md), až aplikaci vydáme. 
+Do aplikace Portál společnosti pro Android přidáváme podporu zobrazení zařízení HoloLens a Surface Hub zaregistrovaných v Intune.
 
 ### <a name="edge-mobile-support-for-intune-app-protection-policies----1817882---"></a>Podpora zásad Intune App Protection v mobilní verzi prohlížeče Edge <!-- 1817882 -->
 
 Prohlížeč Microsoft Edge pro mobilní zařízení bude podporovat zásady ochrany aplikací definované v Intune.
 
 ### <a name="use-fully-distinguished-name-as-subject-for-scep-certificate---2221763-eeready--"></a>Použití plně rozlišujícího názvu jako subjektu certifikátu SCEP <!--2221763 eeready-->
-Při vytváření profilu certifikátu SCEP zadáváte název subjektu. Jako subjekt budete moci použít plně rozlišující název. Jako **Název subjektu** vyberte **Vlastní** a pak zadejte `CN={{OnPrem_Distinguished_Name}}`. Pokud chcete použít proměnnou `{{OnPrem_Distinguished_Name}}`, nezapomeňte synchronizovat atribut uživatele `onpremisesdistingishedname` pomocí služby [Azure Active Directory (AD) Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) se službou Azure AD. 
+Při vytváření profilu certifikátu SCEP zadáváte název subjektu. Jako subjekt budete moci použít plně rozlišující název. Jako **Název subjektu** vyberte **Vlastní** a pak zadejte `CN={{OnPrem_Distinguished_Name}}`. Pokud chcete použít proměnnou `{{OnPrem_Distinguished_Name}}`, nezapomeňte synchronizovat atribut uživatele `onpremisesdistingishedname` pomocí služby [Azure Active Directory (AD) Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) se službou Azure AD.
 
 ### <a name="ios-devices-are-prompted-for-a-pin-every-15-minutes---1550837-eeready--"></a>Zařízením s iOSem se zobrazuje výzva k zadání PINu každých 15 minut <!--1550837 eeready-->
 Po použití zásad dodržování předpisů nebo konfigurace u zařízení s iOSem se uživatelům bude každých 15 minut zobrazovat výzva k zadání PINu. Uživatelům se výzva bude zobrazovat tak dlouho, dokud nenastaví PIN.
@@ -169,11 +169,11 @@ Platí pro: Zařízení s pracovním profilem Android v systému Android OS v6.0
 
 ### <a name="schedule-your-automatic-updates---1805514---"></a>Plánování automatických aktualizací <!--1805514 -->
 
-Pomocí [nastavení aktualizačního okruhu Windows](windows-update-for-business-configure.md) máte v Intune možnost řídit instalaci automatických aktualizací. Budete moci naplánovat opakované aktualizace na základě týdne, dne a času. 
+Pomocí [nastavení aktualizačního okruhu Windows](windows-update-for-business-configure.md) máte v Intune možnost řídit instalaci automatických aktualizací. Budete moci naplánovat opakované aktualizace na základě týdne, dne a času.
 
 ### <a name="disable-checks-on-device-restart---1805490---"></a>Zákaz kontrol při restartování zařízení <!--1805490 -->
 
-V Intune máte možnost řídit [správu aktualizací softwaru](windows-update-for-business-configure.md). Přidá se vlastnost **Kontroly při restartu** a ve výchozím nastavení se povolí. Pokud chcete přeskočit typické kontroly, které se provádí při restartu zařízení (například aktivní uživatelé, stav baterie a další), vyberte **Přeskočit**. 
+V Intune máte možnost řídit [správu aktualizací softwaru](windows-update-for-business-configure.md). Přidá se vlastnost **Kontroly při restartu** a ve výchozím nastavení se povolí. Pokud chcete přeskočit typické kontroly, které se provádí při restartu zařízení (například aktivní uživatelé, stav baterie a další), vyberte **Přeskočit**.
 
 <!-- 1802 start -->
 
@@ -183,15 +183,15 @@ Na stránce s přehledem registrací uvidíte trend neúspěšných registrací 
 
 ### <a name="customize-your-company-portal-themes-with-hex-codes---1049561---"></a>Přizpůsobení motivů Portálu společnosti pomocí šestnáctkových kódů <!--1049561 -->
 
-Pomocí šestnáctkových kódů si budete moct přizpůsobit barvu motivu v aplikacích Portál společnosti. Když zadáte šestnáctkový kód, Intune určí barvu textu, která poskytuje nejvyšší úroveň kontrastu mezi barvou textu a barvou pozadí podle [standardů WCAG 2.0](http://www.w3.org/TR/WCAG20). Můžete si zobrazit náhled barvy textu a loga společnosti oproti barvě v části **Mobilní aplikace** > **Portál společnosti**. 
+Pomocí šestnáctkových kódů si budete moct přizpůsobit barvu motivu v aplikacích Portál společnosti. Když zadáte šestnáctkový kód, Intune určí barvu textu, která poskytuje nejvyšší úroveň kontrastu mezi barvou textu a barvou pozadí podle [standardů WCAG 2.0](http://www.w3.org/TR/WCAG20). Můžete si zobrazit náhled barvy textu a loga společnosti oproti barvě v části **Mobilní aplikace** > **Portál společnosti**.
 
-### <a name="new-windows-defender-credential-guard-settings-added-to-endpoint-protection-settings---1102252---"></a>Nové nastavení Ochrany Credential Guard v programu Windows Defender přidaná do nastavení ochrany koncového bodu <!--1102252 --> 
+### <a name="new-windows-defender-credential-guard-settings-added-to-endpoint-protection-settings---1102252---"></a>Nové nastavení Ochrany Credential Guard v programu Windows Defender přidaná do nastavení ochrany koncového bodu <!--1102252 -->
 
-Do části **Konfigurace zařízení** > **Profily** > **Ochrana koncového bodu** se přidají nová nastavení [Ochrana Credential Guard v programu Windows Defender](https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard]. Budou přidána následující nastavení: 
+Do části **Konfigurace zařízení** > **Profily** > **Ochrana koncového bodu** se přidají nová nastavení [Ochrana Credential Guard v programu Windows Defender](https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard]. Budou přidána následující nastavení:
 
 - Úroveň zabezpečení platformy: Zadejte, zda se při příštím restartování povolí úroveň zabezpečení platformy. Zabezpečení na základě virtualizace vyžaduje Zabezpečené spuštění. Zabezpečení na základě virtualizace je možné volitelně povolit s použitím ochran přímého přístupu do paměti (DMA). Ochrany DMA vyžadují hardwarovou podporu a povolí se jenom na správně nakonfigurovaných zařízeních.
-- Zabezpečení na základě virtualizace: Zadejte, zda se při příštím restartování povolí zabezpečení na základě virtualizace. 
-- Ochrana Credential Guard v programu Windows Defender: Zapněte ochranu Credential Guard se zabezpečením na základě virtualizace, abyste pomohli ochránit přihlašovací údaje při příštím restartování v případě, že jsou povoleny úroveň zabezpečení platformy se Zabezpečeným spuštěním a zabezpečení na základě virtualizace. Dostupné možnosti zahrnují **Zakázáno**, **Povoleno s uzamčením UEFI**, **Povoleno bez uzamčení** a **Nenakonfigurováno**. 
+- Zabezpečení na základě virtualizace: Zadejte, zda se při příštím restartování povolí zabezpečení na základě virtualizace.
+- Ochrana Credential Guard v programu Windows Defender: Zapněte ochranu Credential Guard se zabezpečením na základě virtualizace, abyste pomohli ochránit přihlašovací údaje při příštím restartování v případě, že jsou povoleny úroveň zabezpečení platformy se Zabezpečeným spuštěním a zabezpečení na základě virtualizace. Dostupné možnosti zahrnují **Zakázáno**, **Povoleno s uzamčením UEFI**, **Povoleno bez uzamčení** a **Nenakonfigurováno**.
   - Možnost Zakázáno vzdáleně vypne ochranu Credential Guard, pokud byla dříve zapnutá pomocí možnosti Povoleno bez uzamčení.
 
   - Možnost Povoleno s uzamčením UEFI zajistí, že ochranu Credential Guard nebude možné zakázat pomocí klíče registru nebo pomocí zásad skupiny. Pokud chcete zakázat ochranu Credential Guard po použití tohoto nastavení, musíte zásady skupiny nastavit na Zakázáno a odebrat funkci zabezpečení z jednotlivých počítačů za osobní přítomnosti uživatele, aby bylo možné vymazat konfiguraci trvale uloženou v UEFI. Dokud je konfigurace UEFI trvale uložena, je ochrana Credential Guard povolena.
@@ -208,7 +208,7 @@ Pomocí nového nastavení možnosti místního zabezpečení zařízení budete
 
 ### <a name="new-printer-settings-for-education-profiles----1308900---"></a>Nové nastavení tiskárny pro vzdělávací profily <!-- 1308900 -->
 
-Pro vzdělávací profily bude nové nastavení k dispozici v kategorii **Tiskárny**: **Tiskárny**, **Výchozí tiskárna**, **Přidat nové tiskárny**. 
+Pro vzdělávací profily bude nové nastavení k dispozici v kategorii **Tiskárny**: **Tiskárny**, **Výchozí tiskárna**, **Přidat nové tiskárny**.
 
 ### <a name="ios-app-provisioning-configuration----1581650---"></a>Konfigurace zřizování aplikací pro iOS <!-- 1581650 -->
 Pomocí zahrnutí nebo vyloučení skupin zabezpečení budete moct přiřadit zřizovací profily aplikací pro iOS a zabránit tak vypršení platnosti aplikací.
@@ -265,5 +265,3 @@ V současné době nejsou aktivní žádná sdělení.
 
 ### <a name="see-also"></a>Viz taky
 Podrobnosti o posledním vývoji najdete v tématu [Co je nového v Microsoft Intune](whats-new.md).
-
-

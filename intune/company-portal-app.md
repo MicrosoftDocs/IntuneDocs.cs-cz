@@ -1,25 +1,25 @@
 ---
-title: "Konfigurace aplikace Portál společnosti"
+title: Konfigurace aplikace Portál společnosti
 titleSuffix: Microsoft Intune
-description: "Přečtěte si, jak je možné použít značku společnosti u aplikace Portál společnosti Intune."
-keywords: 
+description: Přečtěte si, jak je možné použít značku společnosti u aplikace Portál společnosti Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/01/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cd876739fb0f3ad6d2e0fea705825a26ebc9fe03
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 186f6c1749d94a995ad145ca535bb59c6f02875c
+ms.sourcegitcommit: a22309174e617e59ab0cdd0a55abde38711a5f35
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Konfigurace aplikace Portál společnosti služby Microsoft Intune
 
@@ -41,7 +41,7 @@ Název společnosti je zobrazen v záhlaví okna Portálu společnosti. Kontaktn
 |**Název společnosti**|40|Tento název se zobrazí v záhlaví okna Portálu společnosti.|        
 |**Jméno kontaktní osoby oddělení IT**|40|Tento název se zobrazí na stránce **Kontakt na IT**.|      
 |**Telefonní číslo oddělení IT**|20|Toto kontaktní číslo se zobrazí na stránce **Kontakt na IT**.|        
-|E-mailová adresa oddělení IT|40|Tato kontaktní adresa se zobrazí na stránce **Kontakt na IT**. Je potřeba zadat platnou e-mailovou adresu ve formátu **alias@domainname.com**.|     
+|**E-mailová adresa IT oddělení**|40|Tato kontaktní adresa se zobrazí na stránce **Kontakt na IT**. Je potřeba zadat platnou e-mailovou adresu ve formátu **alias@domainname.com**.|     
 |**Další informace**|120|Zobrazí se na stránce **Kontakt na IT**.|      
 |**Adresa URL prohlášení o ochraně osobních údajů společnosti**|79|Můžete přidat vlastní prohlášení o zásadách ochrany osobních údajů společnosti, které se uživatelům zobrazí po kliknutí na příslušné odkazy v Portálu společnosti. Pole musí obsahovat platnou adresu URL ve formátu **https://www.contoso.com**.|        
 

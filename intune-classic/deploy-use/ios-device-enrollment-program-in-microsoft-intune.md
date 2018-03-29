@@ -1,25 +1,25 @@
 ---
-title: "Správa Apple DEP pro zařízení s iOSem"
-description: "Nasaďte registrační profil, který umožňuje bezdrátovou registraci zařízení s iOSem koupených prostřednictvím programu DEP (Device Enrollment Program) pro zařízení s iOSem, aby bylo možné je spravovat."
-keywords: 
+title: Správa Apple DEP pro zařízení s iOSem
+description: Nasaďte registrační profil, který umožňuje bezdrátovou registraci zařízení s iOSem koupených prostřednictvím programu DEP (Device Enrollment Program) pro zařízení s iOSem, aby bylo možné je spravovat.
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
-manager: angrobe
+manager: dougeby
 ms.date: 03/28/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 885e3f0608cd367cb23658c342451a4a56e5474d
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: bf47c802291d802ac890aa4ba00cf79d9d2d10f0
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="enroll-corporate-owned-device-enrollment-program-ios-devices"></a>Registrace zařízení s iOSem vlastněných společností do programu DEP (Device Enrollment Program)
 
@@ -29,13 +29,14 @@ Microsoft Intune umožňuje nasadit registrační profil, který bezdrátově za
 
 >[!NOTE]
 >Registrace DEP se nedá použít s metodou [správce registrace zařízení](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md).
->Navíc platí, že pokud uživatelé zařízení s iOSem zaregistrují (například pomocí aplikace Portál společnosti) a sériová čísla těchto zařízení se pak naimportují a přiřadí k profilu DEP, zruší se tím registrace zařízení v Intune.
+>Dále platí, že pokud uživatelé zařízení s iOSem zaregistrují (například pomocí aplikace Portál společnosti) a sériová čísla těchto zařízení se pak naimportují a přiřadí k profilu DEP, zruší se tím registrace zařízení v Intune.
+> Také platí, že macOS v současnosti DEP nepodporuje.
 
 ## <a name="prerequisites-for-enrolling-ios-devices-by-using-apple-dep-management"></a>Předpoklady pro registraci zařízení s iOSem pomocí správy programu Apple DEP
 
 - [Nainstalujte certifikát služby APN](set-up-ios-and-mac-management-with-microsoft-intune.md).
 
-- Vaše organizace se musí připojit k programu Apple DEP a získat zařízení prostřednictvím tohoto programu. Podrobnosti o tomto procesu najdete na [https://deploy.apple.com](https://deploy.apple.com). Výhodou tohoto programu je bezobslužné nastavení zařízení bez připojení každého zařízení k počítači kabelem USB.
+- Vaše organizace se musí připojit k programu Apple DEP a získat zařízení prostřednictvím tohoto programu. Podrobnosti o procesu najdete na adrese: [https://deploy.apple.com](https://deploy.apple.com). Výhodou tohoto programu je bezobslužné nastavení zařízení bez připojení každého zařízení k počítači kabelem USB.
 
 - Abyste mohli v programu DEP registrovat zařízení s iOSem vlastněná společností, potřebujete od společnosti Apple token DEP. Token umožňuje Intune synchronizovat informace o zařízeních vlastněných společností, která se účastní programu DEP. Token taky umožňuje Intune odesílat společnosti Apple registrační profil a přiřazovat k těmto profilům zařízení.
 
@@ -53,7 +54,7 @@ Následující postup vysvětluje, jak zaregistrovat zařízení s iOSem hned od
 
 ### <a name="get-a-device-enrollment-program-token"></a>Získání tokenu DEP (Device Enrollment Program)
 
-1. Přejděte na [portál programu Device Enrollment Program](https://deploy.apple.com) (https://deploy.apple.com) a přihlaste se pod firemním Apple ID. Toto Apple ID budete muset později použít k obnovení tokenu DEP.
+1. Přejděte na [portál programu Device Enrollment Program](https://deploy.apple.com) (https://deploy.apple.com) a přihlaste se firemním Apple ID. Toto Apple ID budete muset později použít k obnovení tokenu DEP.
 
 2.  Na portálu programu DEP (Device Enrollment Program) přejděte na **Program DEP (Device Enrollment Program)** &gt; **Spravovat servery** a pak zvolte **Přidat server MDM**.
 
@@ -130,7 +131,7 @@ Následující postup vysvětluje, jak zaregistrovat zařízení s iOSem hned od
 
 ### <a name="assign-dep-devices-for-management"></a>Přiřazení zařízení DEP (Device Enrollment Program) pro správu
 
-1. Přejděte na [portál programu Device Enrollment Program](https://deploy.apple.com) (https://deploy.apple.com) a přihlaste se pomocí firemního Apple ID.
+1. Přejděte na [portál programu Device Enrollment Program](https://deploy.apple.com) (https://deploy.apple.com) a přihlaste se firemním Apple ID.
 
 2. Přejděte na **Program nasazení** &gt; **Program DEP (Device Enrollment Program)** &gt; **Spravovat zařízení**.
 

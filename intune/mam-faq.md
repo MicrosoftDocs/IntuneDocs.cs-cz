@@ -1,19 +1,25 @@
---
-# <a name="required-metadata"></a>požadovaná metadata
-
-title: Časté otázky ke správě mobilních aplikací (MAM ) a ochraně aplikací description: Tento článek poskytuje odpovědi na některé časté otázky ke správě mobilních aplikací (MAM) Intune a ochraně aplikací Intune.
-keywords: author: Erikre ms.author: erikre manager: angrobe ms.date: 02/28/2018 ms.topic: article ms.prod: ms.service: microsoft-intune ms.technology: ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
-
-# <a name="optional-metadata"></a>volitelná metadata
-
-#<a name="audience"></a>audience:
-#<a name="msdevlang"></a>ms.devlang:
-ms.reviewer: erikre ms.suite: ems
-#<a name="mstgtpltfrm"></a>ms.tgt_pltfrm:
-ms.custom: intune-azure
-
 ---
-
+title: Časté otázky ke správě mobilních aplikací (MAM) a ochraně aplikací
+description: Tento článek poskytuje odpovědi na některé časté otázky ke správě mobilních aplikací (MAM) Intune a ochraně aplikací Intune.
+keywords: ''
+author: Erikre
+ms.author: erikre
+manager: dougeby
+ms.date: 02/28/2018
+ms.topic: article
+ms.prod: ''
+ms.service: microsoft-intune
+ms.technology: ''
+ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
+ms.reviewer: erikre
+ms.suite: ems
+ms.custom: intune-azure
+ms.openlocfilehash: 0ab616c373482109ccd402199f7b0de69fe27348
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 03/22/2018
+---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Časté otázky ke správě mobilních aplikací (MAM) a ochraně aplikací
 
 Tento článek poskytuje odpovědi na některé časté otázky ke správě mobilních aplikací (MAM) Intune a ochraně aplikací Intune.
@@ -26,9 +32,9 @@ Tento článek poskytuje odpovědi na některé časté otázky ke správě mobi
 **Jaké jsou výhody ochrany aplikací pomocí MAM?** MAM chrání data organizace v rámci aplikace. Díky funkci MAM bez registrace zařízení (MAM-WE) jde pracovní nebo školní aplikaci, která obsahuje citlivá data, spravovat prakticky na jakémkoliv zařízení, včetně osobních zařízení, která uživatelé používají pracovně (BYOD, bring-your-own-device). Mnoho kancelářských aplikací, jako jsou například aplikace Microsoft Office, jde spravovat přes Intune MAM. Podívejte se do oficiálního seznamu [aplikací spravovaných přes Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps), který je veřejně přístupný.
 
 **Jaké konfigurace zařízení MAM podporuje?** Intune MAM podporuje dvě konfigurace:
-- **MDM+MAM Intune**: Správci IT můžou spravovat aplikace pomocí MAM a zásad ochrany aplikací jenom na zařízeních, která jsou zaregistrovaná ve správě mobilních zařízení (MDM) Intune. Pokud zákazníci chtějí spravovat aplikace pomocí MDM+MAM, měli by používat konzolu Intune na portálu Azure na stránce http://portal.azure.com.
+- **MDM+MAM Intune**: Správci IT můžou spravovat aplikace pomocí MAM a zásad ochrany aplikací jenom na zařízeních, která jsou zaregistrovaná ve správě mobilních zařízení (MDM) Intune. Pokud zákazníci chtějí spravovat aplikace pomocí MDM + MAM, měli by používat konzolu Intune na portálu Azure Portal na https://portal.azure.com.
 
-- **MAM bez registrace zařízení:** MAM bez registrace zařízení, neboli MAM-WE, umožňuje správcům IT spravovat aplikace pomocí MAM a zásad ochrany aplikací na zařízeních, která nejsou zaregistrovaná ve správě mobilních zařízení Intune. To znamená, že aplikace je možné spravovat pomocí Intune na zařízeních, která jsou zaregistrovaná u jiných poskytovatelů EMM. Pokud zákazníci chtějí spravovat aplikace pomocí MAM-WE, měli by používat konzolu Intune na portálu Azure na stránce http://portal.azure.com. Aplikace je také možné spravovat pomocí Intune na zařízeních zaregistrovaných pomocí jiných poskytovatelů správy firemních mobilních zařízení (Enterprise Mobility Management (EMM)) nebo na zařízeních vůbec v MDM nezaregistrovaných.
+- **MAM bez registrace zařízení:** MAM bez registrace zařízení, neboli MAM-WE, umožňuje správcům IT spravovat aplikace pomocí MAM a zásad ochrany aplikací na zařízeních, která nejsou zaregistrovaná ve správě mobilních zařízení Intune. To znamená, že aplikace je možné spravovat pomocí Intune na zařízeních, která jsou zaregistrovaná u jiných poskytovatelů EMM. Pokud zákazníci chtějí spravovat aplikace pomocí MAM-WE, měli by používat konzolu Intune na portálu Azure Portal na http://portal.azure.com. Aplikace je také možné spravovat pomocí Intune na zařízeních zaregistrovaných pomocí jiných poskytovatelů správy firemních mobilních zařízení (Enterprise Mobility Management (EMM)) nebo na zařízeních vůbec v MDM nezaregistrovaných.
 
 
 ## <a name="app-protection-policies"></a>Zásady ochrany aplikace
@@ -139,7 +145,7 @@ Při zpracování různých typů nastavení by měl přednost požadavek na ver
 
 ## <a name="app-experience-on-ios"></a>Prostředí aplikací v iOS
 
-**Můžu pomocí rozšíření pro sdílení v iOSu otevírat pracovní nebo školní data v nespravovaných aplikacích, i když je zásada přenosu dat nastavená na „jenom spravované aplikace“ nebo „žádné aplikace“. Nemůže při tom dojít k úniku dat?** Zásady ochrany aplikací pro Intune nemůžou ovládat rozšíření pro sdílení v iOS, když dané zařízení nespravují. Proto Intune _**podniková data před jejich sdílením mimo příslušnou aplikaci zašifruje**_. Můžete si to ověřit tak, že si zkusíte otevřít podnikový soubor mimo spravovanou aplikaci. Měl by být zašifrovaný a mimo spravovanou aplikaci by ho nemělo být možné otevřít.
+**Můžu pomocí rozšíření pro sdílení v iOS otevírat pracovní nebo školní data v nespravovaných aplikacích, i když je zásada přenosu dat nastavená na „jenom spravované aplikace“ nebo „žádné aplikace“. Nemůže při tom dojít k úniku dat?** Zásady ochrany aplikací pro Intune nemůžou ovládat rozšíření pro sdílení v iOS, když dané zařízení nespravují. Proto Intune _**podniková data před jejich sdílením mimo příslušnou aplikaci zašifruje**_. Můžete si to ověřit tak, že si zkusíte otevřít podnikový soubor mimo spravovanou aplikaci. Měl by být zašifrovaný a mimo spravovanou aplikaci by ho nemělo být možné otevřít.
 
 **Jak v iOSu funguje více nastavení přístupu k ochraně aplikací Intune, která jsou nakonfigurovaná na stejnou sadu aplikací a uživatelů?** Zásady ochrany aplikací Intune pro přístup se na zařízení koncových uživatelů, která se pokusí o přístup k cílové aplikaci z firemního účtu, použijí v konkrétním pořadí. Obecně má přednost vymazání, pak blokování, a pak upozornění, které se dá zavřít. Například pokud se aplikuje na konkrétního uživatele nebo aplikaci, nastavení minimální verze operačního systému iOS, které uživatele upozorňuje, aby svou verzi iOSu aktualizoval, se použije po nastavení minimální verze operačního systému, které uživateli zablokuje přístup. Proto ve scénáři, kde správce IT nakonfiguruje minimální operační systém iOS na 11.0.0.0 a minimální operační systém iOS (pouze upozornění) na 11.1.0.0, zatímco zařízení pokoušející se o přístup k aplikaci má iOS 10, by byl koncový uživatel zablokován na základě přísnějšího nastavení pro minimální verzi operačního systému iOS, které vede k zablokování přístupu.
 

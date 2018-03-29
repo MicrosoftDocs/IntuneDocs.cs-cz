@@ -1,25 +1,25 @@
 ---
-title: "Nastavení zásad konfigurace pro Android a Samsung KNOX"
-description: "Vytvořte zásady, které řídí nastavení a funkce na zařízeních s Androidem, která spravujete pomocí Intune."
-keywords: 
+title: Nastavení zásad konfigurace pro Android a Samsung KNOX
+description: Vytvořte zásady, které řídí nastavení a funkce na zařízeních s Androidem, která spravujete pomocí Intune.
+keywords: ''
 author: vhorne
 ms.author: victorh
-manager: angrobe
+manager: dougeby
 ms.date: 10/20/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 71cc39cf-e726-40fd-8d08-78776e099a4b
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8978194dfed956550a6417d4bfbedf3f2c547539
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: a75380f578eeea57b8f6e694923d84b42b844045
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="android-and-samsung-knox-standard-policy-settings-in-microsoft-intune"></a>Nastavení zásad konfigurace pro Android a Samsung KNOX Standard v Microsoft Intune
 
@@ -175,7 +175,7 @@ V [oddílu Aplikace na Google Play](https://play.google.com/store/apps) najděte
 
 Otevřete instalační stránku aplikace a zkopírujte adresu URL do schránky. Tu teď můžete použít jako adresu URL v seznamu kompatibilních nebo nekompatibilních aplikací.
 
-Příklad: Na webu Google Play vyhledejte systém Microsoft Office Mobile. Použijete adresu URL **https://play.google.com/store/apps/details?id=com.microsoft.office.officehub**.
+Příklad: Na webu Google Play vyhledejte systém Microsoft Office Mobile. Adresa URL, kterou použijete, bude **https://play.google.com/store/apps/details?id=com.microsoft.office.officehub**.
 
 ## <a name="custom-policy-settings"></a>Nastavení vlastních zásad
 Pomocí možnosti Microsoft Intune **Zásady vlastní konfigurace pro Android** nasaďte nastavení OMA-URI, které se dá používat k ovládání funkcí na zařízeních s Androidem. Jsou to standardní nastavení, která k ovládání funkcí zařízení používá spousta výrobců mobilních zařízení.
@@ -212,5 +212,5 @@ Během registrace MDM se aplikace Portál společnosti pokusí aktivovat Samsung
 
 Seznam podporovaných zařízení Samsung KNOX najdete společně se seznamem [zařízení podporovaných službou Intune](/intune/supported-devices-browsers.md#intune-supported-devices).
 
-### <a name="see-also"></a>Související témata
+### <a name="see-also"></a>Viz taky
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)

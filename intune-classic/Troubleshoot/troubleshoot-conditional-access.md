@@ -1,25 +1,25 @@
 ---
-title: "Řešení potíží s podmíněným přístupem"
-description: "Popisuje, co dělat, pokud se vašim uživatelům nedaří získat přístup k prostředkům prostřednictvím podmíněného přístupu Intune."
-keywords: 
+title: Řešení potíží s podmíněným přístupem
+description: Popisuje, co dělat, pokud se vašim uživatelům nedaří získat přístup k prostředkům prostřednictvím podmíněného přístupu Intune.
+keywords: ''
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 10/24/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 433fc32c-ca9c-4bad-9616-852c72faf996
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 5f16e14b32508adf1fc4f3f448f53a7dcad8e137
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: 67a2891e4c7a6adcd7bd132c5663c9a78426ea07
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="troubleshoot-conditional-access"></a>Řešení potíží s podmíněným přístupem
 

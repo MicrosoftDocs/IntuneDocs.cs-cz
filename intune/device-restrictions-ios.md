@@ -1,23 +1,23 @@
 ---
-title: "Nastavení omezení pro zařízení s iOSem v Microsoft Intune"
-titleSuffix: 
-description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s iOSem."
-keywords: 
+title: Nastavení omezení pro zařízení s iOSem v Microsoft Intune
+titleSuffix: ''
+description: Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s iOSem.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/1/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b0523a514eb9d6a5c0429f1a2e2fa84d1ca00de4
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 436be436991ea4f2f295291fb95122cddf4e7ac5
+ms.sourcegitcommit: a22309174e617e59ab0cdd0a55abde38711a5f35
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="microsoft-intune-ios-device-restriction-settings"></a>Nastavení omezení pro zařízení s iOSem v Microsoft Intune
 
@@ -40,7 +40,6 @@ To platí také pro nastavení dostupná z aplikace pro nastavení iOSu, např�
 - **Použití možnosti pro vymazání veškerého obsahu a nastavení na zařízení (jenom pod dohledem)** – Zpřístupní uživateli možnost pro vymazání veškerého obsahu a nastavení na zařízení.
 - **Úprava názvu zařízení (jenom pod dohledem)** – Umožní uživateli změnit název zařízení.
 - **Úprava nastavení oznámení (jenom pod dohledem)** – Umožní uživateli přenastavit v zařízení oznámení.
-- **Úprava tapety (jenom pod dohledem)** – Umožní uživateli změnit v zařízení tapetu.
 - **Úprava nastavení vztahu důvěryhodnosti podnikové aplikace (jenom pod dohledem)** – Umožní uživateli vybrat možnost, že důvěřuje aplikacím, které nebyly staženy z App Storu.
 - **Změny profilu konfigurace (jenom pod dohledem)** – Povolí uživateli instalovat konfigurační profily.
 - **Zámek aktivace (jenom pod dohledem)** – Povolí zámek aktivace na zařízeních s iOSem, která jsou pod dohledem.
@@ -74,7 +73,6 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 - Klávesové zkratky 
 - Změny hesla 
 - Změny názvu zařízení 
-- Změny tapety 
 - Automatická stahování aplikací 
 - Úpravy vztahu důvěryhodnosti u podnikových aplikací 
 - Apple Music 
@@ -170,7 +168,7 @@ Pomocí vyhledávacího modulu najděte aplikaci, kterou chcete použít v iTune
 Zkopírujte adresu URL stránky a použijte ji jako URL ke konfiguraci seznamu povolených a zakázaných aplikací nebo aplikace, kterou chcete spustit v celoobrazovkovém režimu.
 Profily zařízení, které obsahují nastavení aplikací s omezeným přístupem, se musí přiřadit skupinám uživatelů.
 
-Příklad: Vyhledejte Microsoft Word pro iPad. Použijte adresu URL https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
+Příklad: Vyhledejte Microsoft Word pro iPad. Adresa URL, kterou použijete, je https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
 
 > [!Note]
 > Pomocí iTunes taky můžete najít aplikaci a pomocí příkazu **Kopírovat odkaz** získat adresu URL aplikace.
@@ -195,7 +193,7 @@ Pokud chcete zadat adresu URL aplikace do seznamu aplikací, použijte následuj
 Pomocí vyhledávacího modulu najděte aplikaci, kterou chcete použít v iTunes App Storu, a otevřete stránku pro tuto aplikaci.
 Zkopírujte adresu URL stránky a použijte ji jako URL ke konfiguraci seznamu povolených a zakázaných aplikací nebo aplikace, kterou chcete spustit v celoobrazovkovém režimu.
 
-Příklad: Vyhledejte Microsoft Word pro iPad. Použijte adresu URL https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
+Příklad: Vyhledejte Microsoft Word pro iPad. Adresa URL, kterou použijete, je https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
 
 > [!Note]
 > Pomocí softwaru iTunes taky můžete najít aplikaci a pomocí příkazu **Kopírovat odkaz** získat adresu URL aplikace.

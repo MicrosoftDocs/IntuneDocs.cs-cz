@@ -1,23 +1,22 @@
 ---
-title: "Vytvoření zásady dodržování předpisů pro zařízení s Windows v Microsoft Intune"
-titleSuffix: 
-description: "Vytvořte v Microsoft Intune zásadu dodržování předpisů zařízením pro zařízení s Windows umožňující vám zadat požadavky, které zařízení musí splnit, aby vyhovovalo předpisům."
-keywords: 
+title: Vytvoření zásady dodržování předpisů pro zařízení s Windows v Microsoft Intune – Azure | Microsoft Docs
+description: Vytvořte v Microsoft Intune zásadu dodržování předpisů zařízením pro zařízení s Windows umožňující vám zadat požadavky, které zařízení musí splnit, aby vyhovovalo předpisům.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 32af54e3e753e7ded3c86d9d44b793da7fe2e9c0
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 211b3c94dd7172d1755e3c12bb4d90dbcf28750d
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-create-a-device-compliance-policy-for-windows-devices-in-intune"></a>Vytvoření zásad dodržování předpisů pro zařízení s Windows v Intune
 
@@ -177,7 +176,7 @@ Informace o způsobu fungování služby ověření stavu najdete v tématu [Pos
 
 - **Minimální požadovaný operační systém:** Podporuje se v systémech Windows 8.1 a Windows 10.
 
-Sem zadejte číslo ve formátu major.minor.build. Číslo verze musí odpovídat verzi vrácené příkazem ```winver```.
+Sem zadejte číslo ve formátu major.minor.build.CU. Číslo verze musí odpovídat verzi vrácené příkazem ```winver```.
 
 Pokud má zařízení starší verzi operačního systému, než je zadaná verze, uvede se jako nekompatibilní. Zobrazí se odkaz s informacemi o postupu upgradu. Koncový uživatel si může upgradovat svoje zařízení. Potom bude mít přístup k prostředkům společnosti.
 

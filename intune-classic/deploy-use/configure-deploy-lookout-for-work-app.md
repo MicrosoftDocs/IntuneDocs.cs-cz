@@ -1,24 +1,24 @@
 ---
-title: "Nasazení aplikace Lookout for Work"
-description: "Konfigurace a nasazení aplikace Lookout for Work pro Android."
+title: Nasazení aplikace Lookout for Work
+description: Konfigurace a nasazení aplikace Lookout for Work pro Android.
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 03/21/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 524c4209-ad57-4d35-955e-a00d796bf858
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: fd0ad36f40463ab56f1a5ab0a11fa9eeb0c35db4
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 5d56dcf54c4f087dbea0dfcd95a2eebbdf384c00
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="configure-and-deploy-lookout-for-work-app"></a>Konfigurace a nasazení aplikace Lookout for Work
 
@@ -29,7 +29,7 @@ Tento článek vysvětluje, jak nakonfigurovat a nasadit aplikaci Lookout for Wo
 ## <a name="android-google-play-store-app"></a>Android (aplikace v obchodě Google Play)
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) přejděte na **Aplikace** a zvolte **Přidat aplikace**.
-2.  U vydavatele na stránce **Instalace softwaru** zvolte **Externí odkaz** a zadejte tuto adresu URL:  https://play.google.com/store/apps/details?id=com.lookout.enterprise
+2.  Na stránce vydavatele **Instalace softwaru** zvolte **Externí odkaz** a zadejte tuto adresu URL: https://play.google.com/store/apps/details?id=com.lookout.enterprise
   >[!NOTE]
   >Nezaškrtávejte políčko, aby byl požadován spravovaný prohlížeč.
 
@@ -88,7 +88,7 @@ Tento článek vysvětluje, jak nakonfigurovat a nasadit aplikaci Lookout for Wo
 ## <a name="what-happens-when-the-deployed-app-is-opened-on-the-device"></a>Co se stane, když se nasazená aplikace otevře v zařízení
 https://github.com/Microsoft/Docs/blob/master/ContributorGuide/index.md Když uživatel v zařízení otevře aplikaci Lookout for Work, bude vyzván, aby aplikaci aktivoval a zvolil možnost Přihlásit pomocí Azure Active Directory. Podrobný návod s postupem pro koncového uživatele najdete v následujících tématech:
 
-* [Jste vyzváni k instalaci aplikace Lookout for Work na zařízení s Androidem](https://docs.microsoft.com/intune-user-help/you-are-prompted-to-install-lookout-for-work-android)
+* [Zobrazuje se výzva k instalaci aplikace Lookout for Work na zařízení s Androidem](https://docs.microsoft.com/intune-user-help/you-are-prompted-to-install-lookout-for-work-android)
 
 * [Je třeba vyřešit hrozbu, kterou objevila aplikace Lookout for Work na zařízení s Androidem](https://docs.microsoft.com/intune-user-help/you-need-to-resolve-a-threat-found-by-lookout-for-work-android)
 

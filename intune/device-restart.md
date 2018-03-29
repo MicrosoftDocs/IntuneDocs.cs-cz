@@ -1,12 +1,11 @@
 ---
-title: Vzdálené restartování zařízení přes Intune
-titlesuffix: Microsoft Intune
-description: Naučte se, jak zařízení vzdáleně restartovat pomocí akce restartování v Microsoft Intune.
+title: Restartování zařízení pomocí Microsoft Intune – Azure | Microsoft Docs
+description: Restartujte zařízení s Windows a iOSem pomocí Microsoft Intune na portálu Azure Portal pomocí vzdálené akce Restartovat.
 keywords: ''
-author: vhorne
-ms.author: victorh
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 03/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +13,11 @@ ms.technology: ''
 ms.assetid: c707e0c4-391a-4bad-9dfd-9a7799c48dd5
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1bd5a01b8aac91c3bd6ea033d62d41e19aab65f8
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: 98b3403e3f45e1aa7169937a05692686d97d7362
+ms.sourcegitcommit: 390a4be5aa36007c36fb6a5abcfe8d20bc862a4b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Vzdálené restartování zařízení přes Intune
 
@@ -34,18 +33,17 @@ Akce zařízení **Restartovat** způsobí, že se zvolené zařízení restartu
 - iOS – podporováno
 
     > [!Note]  
-    > Tento příkaz vyžaduje, aby byla zařízení v režimu pod dohledem, a přístupová práva k **zámku zařízení**. Zařízení se restartuje okamžitě. Zařízení s iOSem zamčená pomocí hesla se po restartování k síti Wi-Fi znovu nepřipojí a je možné, že po restartování nebudou moct komunikovat se serverem.
+    > Tento příkaz vyžaduje, aby bylo zařízení v režimu pod dohledem, a přístupová práva k **zámku zařízení**. Zařízení se restartuje okamžitě. Zařízení s iOSem uzamčená heslem se po restartování znovu nepřipojí k síti Wi-Fi. Po restartování zařízení nemusí být schopné komunikovat se serverem.
 - macOS – nepodporováno
 - Android – nepodporováno
 
-## <a name="how-to-restart-a-device"></a>Restart zařízení
+## <a name="restart-a-device"></a>Restart zařízení
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V okně **Intune** zvolte **Zařízení**.
-4. V okně **Zařízení** zvolte **Všechna zařízení**.
-5. V seznamu zařízení, která spravujete, zvolte zařízení, zvolte **Více** a pak zvolte akci se vzdáleným zařízením **Restartovat**.
+2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+3. Vyberte **Zařízení** > **Všechna zařízení**.
+4. V seznamu zařízení, která spravujete, zvolte zařízení, zvolte **Více** a pak zvolte akci se vzdáleným zařízením **Restartovat**.
 
 ## <a name="next-steps"></a>Další kroky
 
-Stav akce, kterou jste spustili, zobrazíte tak, že v okně **Zařízení** zvolíte **Akce zařízení**.
+- Pokud chcete zobrazit stav akce **Restartovat**, vyberte **Zařízení** > **Akce zařízení**.

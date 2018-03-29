@@ -1,25 +1,25 @@
 ---
-title: "Konfigurace zásad MAM v konzole Intune"
-description: "Zásady správy mobilních aplikací ve službě Microsoft Intune umožňují upravovat funkce aplikací, které nasazujete, a přizpůsobit je zásadám dodržování předpisů a zabezpečení vaší společnosti."
-keywords: 
+title: Konfigurace zásad MAM v konzole Intune
+description: Zásady správy mobilních aplikací ve službě Microsoft Intune umožňují upravovat funkce aplikací, které nasazujete, a přizpůsobit je zásadám dodržování předpisů a zabezpečení vaší společnosti.
+keywords: ''
 author: mattbriggs
 ms.author: mabrigg
-manager: angrobe
+manager: dougeby
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: b4fb33a8-a2fa-4353-bd89-5bda48b68e83
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 881180fec0fe4fca8b49106bcae6ea1ecd52c2eb
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: 94c6a46d2213ba3d1389b52f7684ec531e40228a
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console"></a>Configure and deploy mobile application management policies in the Microsoft Intune console
 
@@ -76,7 +76,7 @@ Například v případě aplikace Outlook:
 
 ## <a name="step-1-get-the-link-to-a-policy-managed-app-create-a-wrapped-app-or-use-the-intune-app-sdk-to-write-a-mam-enabled-app"></a>Krok 1: Získání odkazu na aplikaci spravovanou pomocí zásad, vytvoření zabalené aplikace nebo napsání aplikace s podporou MAM s využitím sady Intune App SDK
 
-V App Storu vyhledejte a poznamenejte si adresu URL aplikace spravované zásadami, kterou chcete nasadit. Adresa URL aplikace Microsoft Word pro iPad je třeba **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
+V App Storu vyhledejte a poznamenejte si adresu URL aplikace spravované zásadami, kterou chcete nasadit. Třeba aplikace Microsoft Word pro iPad má adresu URL **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
 
 
 ## <a name="step-2-publish-the-app-to-your-cloud-storage-space"></a>Krok 2: Publikování aplikace do cloudového úložiště
@@ -102,7 +102,7 @@ Po ověření úspěšného nahrání aplikace pokračujte krokem 3.
 
 2.  V části **Vyberte, jakým způsobem má být tento software zpřístupněn pro zařízení** vyberte možnost **Instalační program softwaru**.
 
-3.  V části **Typ souboru instalačního programu softwaru** vyberte **Balíček aplikace pro systém iOS (soubor &#42;.ipa)**.
+3.  V části **Typ souboru instalačního programu softwaru** vyberte **Balíček aplikace pro systém iOS (soubor &#42.ipa)**.
 
 Po dokončení nahrávání se zobrazí **Ano** u **Zásad správy aplikace** na stránce **Vlastnosti softwaru** nahrané aplikace.
 
