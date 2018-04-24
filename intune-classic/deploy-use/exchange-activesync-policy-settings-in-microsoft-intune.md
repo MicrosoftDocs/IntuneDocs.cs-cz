@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ce43f43e2d5522d947f0db244023b93635f1d19f
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 25bdc7da543cdc38ccbe70651c145750ba96c082
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exchange-activesync-policy-settings-in-microsoft-intune"></a>Nastavení zásad Exchange ActiveSync v Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Pomocí zásady pro Microsoft Intune **Exchange ActiveSync** můžete nakonfigurovat nastavení, které vám umožní ovládat řadu funkcí v zařízení spravovaných protokolem Exchange ActiveSync.
 
@@ -44,10 +44,11 @@ Pomocí zásady pro Microsoft Intune **Exchange ActiveSync** můžete nakonfigur
 
 ## <a name="encryption-settings"></a>Nastavení šifrování
 
-|Název nastavení|Podrobnosti|
-|----------------|---|
-|**Vyžadovat šifrování u mobilního zařízení**<sup>1</sup>|Vyžaduje šifrování dat na zařízení, pokud je podporované.<br><br>Pro zařízení s Windows Phone 8 je potřeba nastavit hodnotu **Ano**.<br /><br />Pokud chcete povolit šifrování na zařízeních iOS, povolte nastavení **Vyžadovat heslo k odemknutí mobilních zařízení**.|
-|**Vyžadovat šifrování u paměťových karet**|Vyžaduje šifrování dat uložených v externích úložištích, jako je karta SD (u podporovaných zařízení).
+|                           Název nastavení                           |                                                                                                                                    Podrobnosti                                                                                                                                    |
+|------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <strong>Vyžadovat šifrování u mobilního zařízení</strong><sup>1</sup> | Vyžaduje šifrování dat na zařízení, pokud je podporované.<br><br>Pro zařízení s Windows Phone 8 je potřeba nastavit hodnotu <strong>Ano</strong>.<br /><br />Pokud chcete povolit šifrování na zařízeních iOS, povolte nastavení <strong>Vyžadovat heslo k odemknutí mobilních zařízení</strong>. |
+|       <strong>Vyžadovat šifrování u paměťových karet</strong>       |                                                                                  Vyžaduje šifrování dat uložených v externích úložištích, jako je karta SD (u podporovaných zařízení).                                                                                  |
+
 <sup>1</sup> Další informace pro zařízení s Windows 8.1
 
 -   Pokud chcete vynutit šifrování na zařízeních s Windows 8.1, musíte na každé zařízení nainstalovat [aktualizaci MDM klienta pro Windows z prosince 2014](https://support.microsoft.com/kb/3013816).

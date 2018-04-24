@@ -1,5 +1,5 @@
 ---
-title: Novinky v Microsoft Intune za předchozí měsíce
+title: Novinky v Microsoft Intune – Azure za předchozí měsíce | Microsoft Docs
 titlesuffix: ''
 description: Zkontrolujte starší oznámení ze stránky novinek Intune
 keywords: ''
@@ -16,15 +16,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2326078f57abf3101869b463aca8eba55aad2905
-ms.sourcegitcommit: a22309174e617e59ab0cdd0a55abde38711a5f35
+ms.openlocfilehash: d87cf0a56a6b114a210242691d0441882c186964
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novinky v Microsoft Intune – předchozí měsíce
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 ## <a name="october-2017"></a>Říjen 2017
 
@@ -570,7 +570,7 @@ Další informace najdete v článku [Nastavení omezení pro zařízení s Andr
 Přidali jsme nová [nastavení omezení zařízení s Windows](device-restrictions-windows-10.md), která řídí funkce, jako jsou bezdrátové displeje, zjišťování zařízení, přepínání úloh a chybové zprávy SIM karet.
 
 #### <a name="updates-to-certificate-configuration----918991-and-823198---"></a>Aktualizace konfigurace certifikátu <!-- 918991 and 823198 -->
-Při vytváření profilu certifikátu SCEP je pro **Formát názvu subjektu** dostupná možnost **Vlastní** pro zařízení s iOSem, Androidem a Windows. Před touto aktualizací bylo pole **Vlastní** k dispozici jenom pro zařízení s iOSem. Další informace najdete v tématu [Vytvoření profilu certifikátu SCEP] (certificates-scep-configure.md#how-to-create-a-scep-certificate-profile).
+Při vytváření profilu certifikátu SCEP je pro <strong>Formát názvu subjektu</strong> dostupná možnost <strong>Vlastní</strong> pro zařízení s iOSem, Androidem a Windows. Před touto aktualizací bylo pole <strong>Vlastní</strong> k dispozici jenom pro zařízení s iOSem. Další informace najdete v tématu [Vytvoření profilu certifikátu SCEP](certificates-scep-configure.md#create-a-scep-certificate-profile).
 
 Při vytváření profilu certifikátu PKCS je pro **Alternativní název subjektu** dostupná možnost **Vlastní atribut Azure AD**. Když vyberete **Vlastní atribut Azure AD**, je dostupná možnost **Oddělení**. Další informace naleznete v tématu [Vytvoření profilu certifikátu PKCS](certficates-pfx-configure.md#create-a-device-configuration-profile).
 

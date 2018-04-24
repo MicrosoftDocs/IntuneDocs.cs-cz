@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e0fa9f66ee0338b21e12a27ef60fb0df22d23030
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 02e821f24c378c15a474adda901699664a9af68a
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune"></a>Konfigurace aplikací pro iOS pomocí zásad konfigurace mobilních aplikací v Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Zásady konfigurace mobilních aplikací v Microsoft Intune slouží k poskytování nastavení, která se můžou požadovat, když uživatelé spustí aplikaci. Aplikace může například vyžadovat, aby uživatelé zadali:
 
@@ -77,14 +77,14 @@ Nová zásada se zobrazí v uzlu **Zásady konfigurace** .
 ## <a name="information-about-the-xml-file-format"></a>Informace o formátu souboru XML
 
 Intune podporuje v seznamu vlastností následující typy dat:
-    
+
 - &lt;integer&gt;
 - &lt;real&gt;
 - &lt;string&gt;
 - &lt;array&gt;
 - &lt;dict&gt;
 - &lt;true /&gt; nebo &lt;false /&gt;
-     
+
 Další informace o typech dat najdete v tématu [Informace o seznamech vlastností](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html) v knihovně iOS Developer Library.
 
 Intune dál v seznamu vlastností podporuje následující typy tokenů:
@@ -97,7 +97,7 @@ Intune dál v seznamu vlastností podporuje následující typy tokenů:
 - \{\{username\}\} – (Příklad: **Jiri Polak**)
 - \{\{serialnumber\}\} – (Příklad: **F4KN99ZUG5V2**) pro zařízení s iOSem
 - \{\{serialnumberlast4digits\}\} – (Příklad: **G5V2**) pro zařízení s iOSem
-    
+
 Znaky \{\{ a \}\} se používají jenom pro typy tokenů a nesmí se používat pro jiné účely.
 
 ## <a name="associate-a-mobile-app-configuration-policy-with-an-app"></a>Přidružení zásady konfigurace mobilních aplikací k aplikaci
@@ -139,5 +139,4 @@ Když vytvoříte soubor konfigurace mobilních aplikací, můžete pomocí toho
   <key>udidlast4digits</key>
   <string>{{udidlast4digits}}</string>
 </dict>
-
 ```

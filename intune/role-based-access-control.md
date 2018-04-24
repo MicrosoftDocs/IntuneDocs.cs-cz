@@ -14,11 +14,11 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: edf17d98bb733f7567a615eec856fb7122ba251b
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: 11b0e1d80740366a638059162d10e3ebcfe9e8a8
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="role-based-administration-control-rbac-with-microsoft-intune"></a>Řízení správy na základě role (RBAC) v Microsoft Intune
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 03/17/2018
 
 - **Definice role**: Název role, prostředky, které spravuje, a oprávnění udělená pro jednotlivé prostředky
 - **Členové**: Skupiny uživatelů, kterým se přidělují oprávnění
-- **Obor**: Skupiny uživatelů nebo zařízení, které můžou členové spravovat
+- **Obor**: Skupiny uživatelů nebo zařízení, jejichž členové mohou cílit na nasazení aplikací nebo zásad nebo provádět vzdálené úlohy
 - **Přiřazení**: Přiřazení role po nakonfigurování definice, členů a oboru
 
 ![Příklad řízení správy na základě rolí s Intune](./media/intune-rbac-1.PNG)

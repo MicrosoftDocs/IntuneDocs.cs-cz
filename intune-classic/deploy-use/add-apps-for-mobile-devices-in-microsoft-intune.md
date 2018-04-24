@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9f5fec22a17eef39819b38567793a2f579815e59
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 4e53acad9fb2cf1e6c18b71900c6b671dd031e98
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-apps-for-enrolled-devices-to-intune"></a>Přidávání aplikací pro zaregistrovaná zařízení do Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Než budete moci aplikaci nasadit nebo spravovat, je třeba přidat ji do Microsoft Intune. V tomto tématu je uveden postup při přidávání aplikací pro zaregistrovaná zařízení.
 
@@ -34,32 +34,32 @@ Než budete moci aplikaci nasadit nebo spravovat, je třeba přidat ji do Micros
 ## <a name="add-the-app"></a>Přidání aplikace
 Pomocí Vydavatele softwaru Microsoft Intune nakonfigurujete vlastnosti aplikace a (kde je to potřeba) ji nahrajete do cloudového úložiště. Použijte následující postup:
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte **Aplikace** &gt; **Přidat aplikace**. Spustí se Vydavatel softwaru Intune.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte **Aplikace** &gt; **Přidat aplikace**. Spustí se Vydavatel softwaru Intune.
 
-    > [!TIP]
-    > Před spuštěním vydavatele softwaru možná budete muset zadat svoje uživatelské jméno a heslo k Intune.
+   > [!TIP]
+   > Před spuštěním vydavatele softwaru možná budete muset zadat svoje uživatelské jméno a heslo k Intune.
 
-2.  Na stránce **Instalace softwaru** ve vydavateli vyberte u položky **Vyberte, jakým způsobem má být tento software zpřístupněn pro zařízení** jednu z těchto možností:
-    - **Instalační program softwaru** – u aplikací s příponou **.msi**:
-        - **Vyberte typ souboru instalačního programu softwaru**. Označuje typ softwaru, který chcete nasadit. Pokud třeba chcete instalovat aplikaci pro iOS, zvolte **Balíček aplikace pro systém iOS (soubor &#42;.ipa)**.
-        - **Zadejte umístění instalačních souborů softwaru**. Zadejte umístění instalačních souborů, nebo zvolte **Procházet** a vyberte umístění ze seznamu.
-        - **Zahrňte další soubory a podsložky ze stejné složky**. Tato možnost je jen pro typ souboru **Instalační služby systému Windows**.<br>Software, který používá Instalační službu systému Windows, někdy potřebuje podpůrné soubory. Ty se většinou nacházejí ve stejné složce jako instalační soubory. Tuto možnost vyberte, když chcete tyto soubory i nasadit.<br>U tohoto typu instalace se využívá část prostoru cloudového úložiště.
+2. Na stránce **Instalace softwaru** ve vydavateli vyberte u položky **Vyberte, jakým způsobem má být tento software zpřístupněn pro zařízení** jednu z těchto možností:
+   - **Instalační program softwaru** – u aplikací s příponou **.msi**:
+       - **Vyberte typ souboru instalačního programu softwaru**. Označuje typ softwaru, který chcete nasadit. Pokud třeba chcete instalovat aplikaci pro iOS, zvolte **Balíček aplikace pro systém iOS (soubor &#42;.ipa)**.
+       - **Zadejte umístění instalačních souborů softwaru**. Zadejte umístění instalačních souborů, nebo zvolte **Procházet** a vyberte umístění ze seznamu.
+       - **Zahrňte další soubory a podsložky ze stejné složky**. Tato možnost je jen pro typ souboru **Instalační služby systému Windows**.<br>Software, který používá Instalační službu systému Windows, někdy potřebuje podpůrné soubory. Ty se většinou nacházejí ve stejné složce jako instalační soubory. Tuto možnost vyberte, když chcete tyto soubory i nasadit.<br>U tohoto typu instalace se využívá část prostoru cloudového úložiště.
 
-  -   **Externí odkaz** – u aplikací, které chcete vytvořit zadáním odkazu na obchod s aplikacemi:
+   -   **Externí odkaz** – u aplikací, které chcete vytvořit zadáním odkazu na obchod s aplikacemi:
 
-        - **Zadejte adresu URL**. Zadejte některou z těchto adres URL:
-            - Adresa URL obchodu s aplikacemi obsahujícího aplikaci, kterou chcete nasadit. Například pokud chcete nasadit aplikaci Microsoft Remote Desktop pro Android, zadejte **https://play.google.com/store/apps/details?id=com.microsoft.rdc.android**.<br>Pokud chcete vyhledat adresu URL aplikace, pomocí vyhledávacího webu najděte stránku obchodu, který aplikaci obsahuje. Pokud budete chtít najít třeba aplikaci Vzdálená plocha, můžete vyhledat výraz **Microsoft Vzdálená plocha Android**.
-            - Web. Intune nasadí na zařízení ikonu zástupce odkazující na daný web.
-            - Aplikace na webu. Intune nasadí na zařízení ikonu zástupce odkazující na danou aplikaci.
-        - **K otevření tohoto odkazu se vyžaduje spravovaný prohlížeč (jenom Android a iOS):** Když nasadíte odkaz na web nebo do webové aplikace pro uživatele, budou ho moct otevřít jen v prohlížeči spravovaném přes Intune. Tento prohlížeč musí být nainstalovaný na jejich zařízení.<br>Další podrobnosti o spravovaném prohlížeči najdete v tématu [Správa přístupu k internetu pomocí zásad spravovaného prohlížeče v Microsoft Intune](manage-internet-access-using-managed-browser-policies.md).<br>U tohoto typu instalace se nepoužívá žádný prostor cloudového úložiště.
+       - **Zadejte adresu URL**. Zadejte některou z těchto adres URL:
+           - Adresa URL obchodu s aplikacemi obsahujícího aplikaci, kterou chcete nasadit. Například pokud chcete nasadit aplikaci Microsoft Remote Desktop pro Android, zadejte **https://play.google.com/store/apps/details?id=com.microsoft.rdc.android**.<br>Pokud chcete vyhledat adresu URL aplikace, pomocí vyhledávacího webu najděte stránku obchodu, který aplikaci obsahuje. Pokud budete chtít najít třeba aplikaci Vzdálená plocha, můžete vyhledat výraz **Microsoft Vzdálená plocha Android**.
+           - Web. Intune nasadí na zařízení ikonu zástupce odkazující na daný web.
+           - Aplikace na webu. Intune nasadí na zařízení ikonu zástupce odkazující na danou aplikaci.
+       - **K otevření tohoto odkazu se vyžaduje spravovaný prohlížeč (jenom Android a iOS):** Když nasadíte odkaz na web nebo do webové aplikace pro uživatele, budou ho moct otevřít jen v prohlížeči spravovaném přes Intune. Tento prohlížeč musí být nainstalovaný na jejich zařízení.<br>Další podrobnosti o spravovaném prohlížeči najdete v tématu [Správa přístupu k internetu pomocí zásad spravovaného prohlížeče v Microsoft Intune](manage-internet-access-using-managed-browser-policies.md).<br>U tohoto typu instalace se nepoužívá žádný prostor cloudového úložiště.
 
-  -   **Spravovaná aplikace pro iOS z App Storu** – u bezplatných aplikací z obchodu iTunes, které chcete spravovat pomocí zásad pro správu mobilních aplikací (MAM):
+   -   **Spravovaná aplikace pro iOS z App Storu** – u bezplatných aplikací z obchodu iTunes, které chcete spravovat pomocí zásad pro správu mobilních aplikací (MAM):
 
-        - **Zadejte adresu URL**. Zadejte adresu URL obchodu s aplikacemi obsahujícího aplikaci, kterou chcete nasadit. Například pokud chcete nasadit aplikaci Microsoft Work Folders pro iOS, zadejte **https://itunes.apple.com/us/app/work-folders/id950878067?mt=8**.<br>U tohoto typu instalace se nepoužívá žádný prostor cloudového úložiště.
+       - **Zadejte adresu URL**. Zadejte adresu URL obchodu s aplikacemi obsahujícího aplikaci, kterou chcete nasadit. Například pokud chcete nasadit aplikaci Microsoft Work Folders pro iOS, zadejte **https://itunes.apple.com/us/app/work-folders/id950878067?mt=8**.<br>U tohoto typu instalace se nepoužívá žádný prostor cloudového úložiště.
 
-        Pokud třeba chcete nasadit na zařízení aplikaci Microsoft Word z obchodu iTunes, stránka bude vypadat takto:
+       Pokud třeba chcete nasadit na zařízení aplikaci Microsoft Word z obchodu iTunes, stránka bude vypadat takto:
 
-        ![Intune Software Publisher](./media/publisher-for-mobile.png)
+       ![Intune Software Publisher](./media/publisher-for-mobile.png)
 
 > [!NOTE]
 > Pokud chcete přidat a nasadit aplikaci z obchodu, musí mít koncoví uživatelé u tohoto obchodu zřízený účet, aby si aplikaci mohli nainstalovat.

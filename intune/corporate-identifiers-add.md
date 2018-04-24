@@ -1,29 +1,29 @@
 ---
-title: "Přidání podnikových identifikátorů do Intune"
+title: Přidání podnikových identifikátorů do Intune
 titlesuffix: Microsoft Intune
-description: "Zjistěte, jak můžete do Microsoft Intune přidat podnikové identifikátory (způsob registrace, číslo IMEI a sériové číslo)."
-keywords: 
+description: Zjistěte, jak můžete do Microsoft Intune přidat podnikové identifikátory (způsob registrace, číslo IMEI a sériové číslo).
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7d014ae02f3db2ea9175e74f2a867bd12f1d4f22
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: d9557c5f962390a9893109bc6f5175b1e709f7cd
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifikace zařízení jako vlastněných společností
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Jako správce Intune můžete identifikovat zařízení jako ve vlastnictví firmy, aby se zlepšila jejich správa a identifikace. Intune můžete provádět další úlohy správy a sbírat další informace, třeba celé telefonní číslo a inventář aplikací ze zařízení ve vlastnictví firmy. Můžete také nastavit omezení zařízení a blokovat tak registraci zařízení, které ve vlastnictví firmy nejsou.
 
@@ -72,7 +72,7 @@ V textovém editoru vypadá soubor .csv takhle:
 
 1. V [Intune na portálu Azure Portal](https://portal.azure.com) zvolte **Registrace zařízení** > **Identifikátory podnikových zařízení** a potom klikněte na **Přidat**.
 
- ![Pracovní prostor s identifikátory podnikových zařízení a zvýrazněným tlačítkem Přidat](./media/add-corp-id.png)
+   ![Pracovní prostor s identifikátory podnikových zařízení a zvýrazněným tlačítkem Přidat](./media/add-corp-id.png)
 
 2. V okně **Přidat identifikátory** zadejte typ identifikátoru: **IMEI** nebo **Sériové**. Můžete určit, jestli se má pro dříve importovaná čísla použít nastavení **Přepište podrobnosti u existujících identifikátorů**.
 
@@ -97,7 +97,7 @@ U každého záznamu zařízení v Intune se ve vlastnostech zařízení zobrazu
 
 **Vlastnictví zařízení změníte takto:**
 1. V [Intune na portálu Azure Portal](https://portal.azure.com) přejděte na **Zařízení** a zvolte požadované zařízení.
-3. Zvolte **Vlastnosti**.
-4. Určete **Vlastnictví zařízení** jako **Osobní** nebo **Firemní**.
+2. Zvolte **Vlastnosti**.
+3. Určete **Vlastnictví zařízení** jako **Osobní** nebo **Firemní**.
 
-  ![Vlastnosti zařízení s možnostmi Kategorie zařízení a Vlastnictví zařízení](./media/device-properties.png)
+   ![Vlastnosti zařízení s možnostmi Kategorie zařízení a Vlastnictví zařízení](./media/device-properties.png)

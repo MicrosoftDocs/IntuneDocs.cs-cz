@@ -1,24 +1,24 @@
 ---
-title: "Začínáme s Microsoft Intune App SDK"
-description: "Umožní vám rychle povolit u vaší mobilní aplikace správu mobilních aplikací (MAM) pomocí Microsoft Intune."
-keywords: 
+title: Začínáme s Microsoft Intune App SDK
+description: Umožní vám rychle povolit u vaší mobilní aplikace správu mobilních aplikací (MAM) pomocí Microsoft Intune.
+keywords: ''
 author: Erikre
 manager: dougeby
 ms.author: erikre
 ms.date: 01/18/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 5827c82d84be45020aa2bdec16c92e0296431cf8
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: e4437e3dbf7e942f084a0c441af7946b53c6d54d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
 
@@ -69,7 +69,7 @@ Sady Intune App SDK pro nativní systémy iOS a Android jsou hostované v účtu
 
 Pokud je vaše aplikace vytvořená v Xamarinu nebo Cordově, použijte prosím následující varianty sady SDK:
 
-* [Komponenta Xamarin sady Intune App SDK](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
+* [Xamarinové vazby sady Intune App SDK](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
 * [Modul plug-in Cordova sady Intune App SDK](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam)
 
 Doporučujeme, abyste si zaregistrovali na GitHubu účet, který je možné použít k operacím fork a pull v našich úložištích. GitHub vývojářům umožňuje komunikovat s naším produktovým týmem, hlásit problémy a dostávat rychlé odpovědi, zobrazit poznámky k verzi a posílat připomínky do Microsoftu. S dotazy ke GitHubu pro Intune App SDK se obraťte na msintuneappsdk@microsoft.com.
@@ -84,7 +84,7 @@ Budete potřebovat jednu z následujících příruček pro vývojáře, která 
 
 * **[Příručka k modulu plug-in Cordova sady Intune App SDK](app-sdk-cordova.md)**: Tento dokument vám pomůže vytvářet aplikace pro iOS a Android pomocí zásad ochrany aplikací Cordova for Intune.
 
-* **[Příručka ke komponentě Xamarin sady Intune App SDK](app-sdk-xamarin.md)**: Tento dokument vám pomůže vytvářet aplikace pro iOS a Android pomocí zásad ochrany aplikací Cordova for Intune.
+* **[Příručka ke xamarinovým vazbám sady Intune App SDK](app-sdk-xamarin.md)**: Tento dokument vám pomůže vytvářet aplikace pro iOS a Android pomocí zásad ochrany aplikací Xamarin pro Intune.
 
 
 
@@ -142,7 +142,7 @@ Intune|iOS|Android|Popis|
 
 - **CFBundleShortVersionString**  
     Určuje číslo vydané verze sady. Toto číslo označuje vydanou verzi aplikace. Používají ho koncoví uživatelé, když odkazují na aplikaci.
- - **CFBundleVersion**  
+  - **CFBundleVersion**  
     Verze buildu sady, která označuje iteraci sady. Číslo může označovat vydanou verzi nebo nevydanou sadu. Slouží ke zjištění aplikace.
 
 #### <a name="android"></a>Android

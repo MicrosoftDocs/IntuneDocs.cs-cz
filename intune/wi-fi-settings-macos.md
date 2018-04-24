@@ -1,27 +1,27 @@
 ---
-title: "Nastavení Wi-Fi pro zařízení s macOS v Microsoft Intune"
-titleSuffix: 
-description: "Zjistěte, jaká nastavení Intune můžete použít ke konfiguraci připojení Wi-Fi na zařízeních s macOS."
-keywords: 
+title: Nastavení Wi-Fi pro zařízení s macOS v Microsoft Intune
+titleSuffix: ''
+description: Zjistěte, jaká nastavení Intune můžete použít ke konfiguraci připojení Wi-Fi na zařízeních s macOS.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 25cc8cd550567d6edc63f1cab416bdb7d978eb52
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 6f0feb00949375cf65428d061af81813cfcd5249
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="wi-fi-settings-for-macos-devices-in-microsoft-intune"></a>Nastavení Wi-Fi pro zařízení s macOS v Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Tento článek ukazuje nastavení Wi-Fi, která můžete nakonfigurovat v Microsoft Intune pro zařízení s macOS.
 
@@ -34,7 +34,7 @@ Tento článek ukazuje nastavení Wi-Fi, která můžete nakonfigurovat v Micros
 - **Nastavení proxy** – zvolte z těchto možností:
     - **Žádné** – nenakonfiguruje se žádné nastavení proxy.
     - **Ručně** – zadejte **adresu proxy serveru** (ve formě IP adresy) a její přidružené **číslo portu**.
-    - **Automaticky** – ke konfiguraci proxy serveru se použije soubor. Zadejte **adresu URL proxy serveru** (například **http://proxy.contoso.com), na které se nachází konfigurační soubor.
+    - **Automaticky** – ke konfiguraci proxy serveru se použije soubor. Zadejte **adresu URL proxy serveru** (například **http://proxy.contoso.com**), na které se nachází konfigurační soubor.
 
 ## <a name="wi-fi-settings-for-basic-profiles-only"></a>Nastavení Wi-Fi jenom pro základní profily
 
@@ -73,7 +73,8 @@ Tento článek ukazuje nastavení Wi-Fi, která můžete nakonfigurovat v Micros
 #### <a name="client-authentication"></a>Ověření klienta
 
 
-|Název nastavení|Další informace|Kdy použít|
-|--------------|-------------|----------|
-|**Klientský certifikát pro ověření klienta (certifikát identity)**|Zvolte profil certifikátu SCEP nebo PKCS použitý k ověření připojení.|Typ EAP je **EAP-TLS**.|
-|**Metoda ověřování**|Vyberte metodu ověřování připojení:<br>- **Certifikáty** – pokud chcete vybrat klientský certifikát SCEP nebo PKCS, který je certifikátem identity předloženým serveru.<br><br>- **Uživatelské jméno a heslo** – pokud chcete zadat jinou metodu ověřování. <br><br>Při výběru možnosti **Uživatelské jméno a heslo** nakonfigurujte tyto údaje:<br><br>-  **Metoda bez protokolu EAP (vnitřní identita)**, pak vyberte, jak se bude připojení ověřovat:<br>- **Žádné**<br>- **Nezašifrované heslo (PAP)**<br>- **Protokol CHAP (Challenge Handshake Authentication Protocol)**<br>- **Protokol Microsoft CHAP (MS-CHAP)**<br>- **Protokol Microsoft CHAP verze 2 (MS-CHAP v2)**<br>Dostupné možnosti závisí na typu EAP, který jste vybrali.<br><br>**a**<br><br>- **Ochrana identity (vnější identita)** – zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.|Typ EAP je **EAP-TTLS** nebo **PEAP**.|
+|                                     Název nastavení                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Další informace                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |                            Kdy použít                            |
+|--------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
+| <strong>Klientský certifikát pro ověření klienta (certifikát identity)</strong> |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Zvolte profil certifikátu SCEP nebo PKCS použitý k ověření připojení.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |              Typ EAP je <strong>EAP-TLS</strong>.              |
+|                        <strong>Metoda ověřování</strong>                        | Vyberte metodu ověřování připojení:<br>- <strong>Certifikáty</strong> – pokud chcete vybrat klientský certifikát SCEP nebo PKCS, který je certifikátem identity předloženým serveru.<br><br>- <strong>Uživatelské jméno a heslo</strong> – pokud chcete zadat jinou metodu ověřování. <br><br>Při výběru možnosti <strong>Uživatelské jméno a heslo</strong> nakonfigurujte tyto údaje:<br><br>-  <strong>Metoda bez protokolu EAP (vnitřní identita)</strong>, pak vyberte, jak se bude připojení ověřovat:<br>- <strong>Žádné</strong><br>- <strong>Nezašifrované heslo (PAP)</strong><br>- <strong>Protokol CHAP (Challenge Handshake Authentication Protocol)</strong><br>- <strong>Protokol Microsoft CHAP (MS-CHAP)</strong><br>- <strong>Protokol Microsoft CHAP verze 2 (MS-CHAP v2)</strong><br>Dostupné možnosti závisí na typu EAP, který jste vybrali.<br><br><strong>a</strong><br><br>- <strong>Ochrana identity (vnější identita)</strong> – zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení. | Typ EAP je <strong>EAP-TTLS</strong> nebo <strong>PEAP</strong>. |
+

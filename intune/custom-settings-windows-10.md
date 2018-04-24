@@ -1,27 +1,27 @@
 ---
-title: "Vlastní nastavení Microsoft Intune pro zařízení s Windows 10"
-titlesuffix: 
-description: "Podívejte se na nastavení, která je možné nakonfigurovat ve vlastním profilu Windows 10."
-keywords: 
+title: Vlastní nastavení Microsoft Intune pro zařízení s Windows 10
+titlesuffix: ''
+description: Podívejte se na nastavení, která je možné nakonfigurovat ve vlastním profilu Windows 10.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/1/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4bb86d0f80a4d337e0ab63ae7f90d6c3541462d9
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: c8e0d56c91b710a86949844d2fd455e4183488f5
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-intune-custom-device-settings-for-devices-running-windows-10"></a>Vlastní nastavení Microsoft Intune pro zařízení s Windows 10
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
  **Vlastní** profil Microsoft Intune pro Windows 10 a Windows 10 Mobile použijte, pokud chcete nasadit nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier), s jehož pomocí se dají ovládat funkce na zařízeních. Ve Windows 10 je dostupných mnoho nastavení Poskytovatele konfiguračních služeb (CSP), například [Poskytovatel konfiguračních služeb pro zásady (CSP pro zásady)](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
 Pokud hledáte konkrétní nastavení, mějte na paměti, že [profil omezení zařízení s Windows 10](device-restrictions-windows-10.md) obsahuje řadu nastavení, která jsou integrovaná do služby Intune a nevyžadují, abyste zadali vlastní hodnoty.

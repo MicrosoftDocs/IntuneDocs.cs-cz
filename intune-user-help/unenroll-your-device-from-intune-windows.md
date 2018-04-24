@@ -1,39 +1,33 @@
 ---
-title: "Zrušení registrace zařízení s Windows v Intune | Dokumentace Microsoftu"
-description: "Popisuje zrušení registrace zařízení s Windows v Intune."
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Odebrání zařízení s Windows z Intune | Microsoft Docs
+description: Popisuje odebrání zařízení s Windows z Intune.
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 03/16/2017
+ms.date: 03/28/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 018bda65-7238-41f5-b92a-e5f67b7fe085
 searchScope:
 - User help
-ROBOTS: 
-ms.reviewer: priyar
+ROBOTS: ''
+ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 898501d2cf87f73243a97b8c1e99633d30bab982
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 9f9051fb393c82031d581f7fec731a3b148cbf2e
+ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
-# <a name="unenroll-your-windows-device-from-intune"></a>Zrušení registrace zařízení s Windows v Intune
+# <a name="remove-your-windows-device-from-intune"></a>Odebrání zařízení s Windows z Intune
 
-Jestli jste se zaregistrovali v Intune, ale zařízení s Windows už nechcete v práci nebo ve škole využívat a nepotřebujete přístup k pracovním nebo školním e-mailům, aplikacím nebo jiným prostředkům, musíte zrušit registraci zařízení. Jakmile zrušíte registraci zařízení v Intune, tyto prostředky už pro vás nebudou přístupné. Další informace o tom, co se stane, pokud zrušíte registraci svého zařízení, najdete v tématu [Co se stane, když zrušíte registraci zařízení v Intune](what-happens-if-you-unenroll-your-device-from-intune-windows.md).
+Pokud jste zařízení s Windows zaregistrovali do Intune, ale nechcete ho používat pro přístup k pracovnímu nebo školnímu e-mailu, aplikacím nebo jiným prostředkům, musíte ho odebrat ze správy. Jakmile zařízení odeberete z Intune, ztratíte k těmto prostředkům přístup. Další informace o tom, co se stane, když zařízení odeberete ze správy, najdete v tématu [Co se stane, když zrušíte registraci zařízení v Intune](what-happens-if-you-unenroll-your-device-from-intune-windows.md).
 
-Informace o tom, jak zrušit registraci zařízení, získáte prostřednictvím odkazu, který je zobrazen výše v části V tomto článku a který odpovídá používanému zařízení:
-
--   [Zrušení registrace zařízení s Windows 10](#unenroll-your-windows-10-device)
--   [Zrušení registrace počítače s Windows 8.1](#unenroll-your-windows-81-computer)
--   [Zrušení registrace zařízení Windows Phone 8.1](#unenroll-your-windows-phone-81-device)
-
-## <a name="unenroll-your-windows-10-device"></a>Zrušení registrace zařízení s Windows 10
+## <a name="remove-your-windows-10-device"></a>Odebrání zařízení s Windows 10
 
 1.  V seznamu aplikací klepněte na aplikaci **Company Portal** .
 
@@ -43,7 +37,7 @@ Informace o tom, jak zrušit registraci zařízení, získáte prostřednictvím
 
 4.  Klepněte na **Odebrat** &gt; **Odebrat**.
 
-## <a name="unenroll-your-windows-81-computer"></a>Zrušení registrace počítače s Windows 8.1
+## <a name="remove-your-windows-81-computer"></a>Odebrání počítače s Windows 8.1
 
 1.  Přejděte na **Nastavení počítače** &gt; **Síť** &gt; **Pracoviště**.
 
@@ -53,7 +47,7 @@ Informace o tom, jak zrušit registraci zařízení, získáte prostřednictvím
 
 4.  V automaticky otevíraném okně, které se otevře, vyberte **Vypnout**.
 
-## <a name="unenroll-your-windows-phone-81-device"></a>Zrušení registrace zařízení Windows Phone 8.1
+## <a name="remove-your-windows-phone-81-mobile-device"></a>Odebrání mobilního zařízení Windows Phone 8.1
 
 1.  Klepněte na **Nastavení** &gt; **Pracoviště**.
 
@@ -62,5 +56,22 @@ Informace o tom, jak zrušit registraci zařízení, získáte prostřednictvím
 3.  V dolní části obrazovky klepněte na **Odstranit**.
 
 4.  V dialogovém okně **Odstranit účet** klepněte na **Odstranit**.
+
+## <a name="removing-your-personal-information-after-removing-the-company-portal"></a>Odebrání osobních údajů po odebrání aplikace Portál společnosti
+
+Aplikace Portál společnosti ukládá do zařízení s Windows dva druhy dat:
+
+-   **Diagnostické protokoly**: Standardní data o aktivitě aplikací, která shromažďuje Microsoft, třeba jak dlouho byla aplikace otevřena nebo jestli havarovala, se vymažou automaticky při odebrání zařízení z webu Portál společnosti.
+-   **Mezipaměť aplikace**: Do ní se ukládají některé podpůrné soubory, které aplikace potřebuje k práci, například ikony a nastavení.
+
+K úplnému odstranění těchto informací je potřeba provést několik kroků.
+
+### <a name="uninstall-the-company-portal"></a>Odinstalace Portálu společnosti  
+
+Když [odinstalujete aplikaci Portál společnosti](https://support.microsoft.com/help/4028003/windows-10-uninstall-apps-and-programs), odeberou se některá data aplikace uložená v zařízení.  
+
+### <a name="reset-the-company-portal"></a>Resetování Portálu společnosti
+
+Zbývající data aplikace Portál společnosti resetujete tím, že v Nastavení tuto aplikaci resetujete. Otevřete **Nastavení** > **Aplikace a funkce** > **Portál společnosti** > **Upřesnit možnosti** > **Resetovat**.
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).

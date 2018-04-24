@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e9572181fb15ec97e7ae4c11a8ab2e4fe4cc9b30
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 1b09545e99f18815e690ad224e11e772e8911c8a
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enable-enrollment-for-mobile-devices"></a>Povolení registrace mobilních zařízení
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Toto téma popisuje, jak může správce Intune povolit registraci mobilních zařízení. Nápovědu k používání Intune na telefonu najdete v článku [Práce pomocí spravovaných zařízení](https://docs.microsoft.com/intune-user-help/company-portal-frequently-asked-questions).
 
@@ -66,4 +66,4 @@ Můžete také povolit řadu scénářů [registrace zařízení vlastněných s
 Gratulujeme! Právě jste dokončili poslední krok *úvodní příručky Intune* Teď, když je počáteční konfigurace dokončená, můžete zvážit povolení dalších funkcí MDM.
 
 >[!div class="step-by-step"]
->[&larr; **Registrace zařízení**](.\start-with-a-paid-subscription-to-microsoft-intune-step-8.md)     [**Úlohy po konfiguraci** &rarr;](.\post-configuration-tasks.md)  
+>[&larr; **Registrace zařízení**](./start-with-a-paid-subscription-to-microsoft-intune-step-8.md)     [**Úlohy po konfiguraci** &rarr;](./post-configuration-tasks.md)  

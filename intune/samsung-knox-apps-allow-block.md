@@ -1,27 +1,27 @@
 ---
-title: "Zásady Microsoft Intune k povolení/blokování aplikací pro Samsung Knox"
-titlesuffix: 
-description: "Vytvořte vlastní profil, který zařízením se zabezpečením Samsung Knox Standard povolí nebo zablokuje aplikace."
-keywords: 
+title: Zásady Microsoft Intune k povolení/blokování aplikací pro Samsung Knox
+titlesuffix: ''
+description: Vytvořte vlastní profil, který zařízením se zabezpečením Samsung Knox Standard povolí nebo zablokuje aplikace.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/5/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 95f35cfd869975a43fd54a1e6a9ff6ae35ffa6af
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 61a4d059eb771e22075796def5e1a273b02d932e
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-custom-policies-in-microsoft-intune-to-allow-and-block-apps-for-samsung-knox-standard-devices"></a>Použití vlastních zásad v Microsoft Intune, které v povolí nebo blokují aplikace pro zařízení se zabezpečením Samsung Knox Standard 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Postupy v tomto článku použijte k vytvoření vlastní zásady Microsoft Intune, která obsahuje jeden z těchto seznamů:
 

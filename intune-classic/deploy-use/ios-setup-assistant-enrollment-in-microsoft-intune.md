@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a33c383cb65d0edfa94117278e3f473699588aa3
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: c68f196ea268e61a175f643244efb855f46eaece
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-ios-devices-with-apple-configurator-by-using-setup-assistant"></a>Použití pomocníka s nastavením k registraci zařízení s iOSem v Apple Configuratoru
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Intune podporuje registraci zařízení s iOSem patřících společnosti pomocí [Apple Configuratoru](http://go.microsoft.com/fwlink/?LinkId=518017) spuštěného na počítači Mac. Tento postup obnoví tovární nastavení zařízení a připraví ho ke spuštění pomocníka s nastavením a k instalaci zásad společnosti pro nového uživatele.
 
@@ -59,7 +59,7 @@ Profil registrace zařízení definuje nastavení, která se použijí pro skupi
 
 1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) přejděte na **Zásady** &gt; **Registrace podnikového zařízení** a zvolte **Přidat**.
 
-  ![Vytvoření profilu registrace zařízení](../media/pol-sa-corp-enroll.png)
+   ![Vytvoření profilu registrace zařízení](../media/pol-sa-corp-enroll.png)
 
 2. Zadejte podrobnosti profilů zařízení:
 
@@ -80,7 +80,7 @@ Profil registrace zařízení definuje nastavení, která se použijí pro skupi
 
    -  **Program DEP (Device Enrollment Program)** – tento program se nedá použít při registraci pomocí průvodce nastavením. Zkontrolujte, že je přepínač nastavený do polohy **Vypnuto**.
 
-3.  Profil přidáte kliknutím na **Uložit profil**.
+3. Profil přidáte kliknutím na **Uložit profil**.
 
 ### <a name="add-ios-devices-to-enroll-with-setup-assistant"></a>Přidejte zařízení s iOSem, která chcete zaregistrovat prostřednictvím pomocníka s nastavením.
 
@@ -90,29 +90,29 @@ Profil registrace zařízení definuje nastavení, která se použijí pro skupi
 
    ![Dialog Přidat zařízení](../media/pol-SA-enroll-iOS-SetupAssistant.png)
 
-   -  **Odesláním souboru CSV se sériovými čísly** – vytvořte seznam oddělený čárkami (.csv), který bude bez záhlaví a bude mít dva sloupce. Soubor může obsahovat maximálně 5000 zařízení, ale nesmí být větší než 5 MB.
+   - **Odesláním souboru CSV se sériovými čísly** – vytvořte seznam oddělený čárkami (.csv), který bude bez záhlaví a bude mít dva sloupce. Soubor může obsahovat maximálně 5000 zařízení, ale nesmí být větší než 5 MB.
 
-    |||
-    |-|-|
-    |&lt;Sériové č. 1&gt;|&lt;Podrobnosti o zařízení č. 1&gt;|
-    |&lt;Sériové č. 2&gt;|&lt;Podrobnosti o zařízení č. 2&gt;|
+     |||
+     |-|-|
+     |&lt;Sériové č. 1&gt;|&lt;Podrobnosti o zařízení č. 1&gt;|
+     |&lt;Sériové č. 2&gt;|&lt;Podrobnosti o zařízení č. 2&gt;|
 
-  Soubor .csv v textovém editoru:
+   Soubor .csv v textovém editoru:
 
     ```
     0000000,PO 1234
     111111111,PO 1234
     ```
 
-  -  **Ručním přidáním podrobností o zařízeních**&mdash; – zadejte sériové číslo a případné poznámky nebo detaily pro až 15 zařízení.
+   -  **Ručním přidáním podrobností o zařízeních**&mdash; – zadejte sériové číslo a případné poznámky nebo detaily pro až 15 zařízení.
 
-  V podokně **Zkontrolovat zařízení** můžete sériová čísla potvrdit. Můžete se také rozhodnout, jestli chcete přepsat **Podrobnosti** pro sériová čísla, která se importují znovu, nebo můžete zrušit zaškrtnutí políčka **Přepsat** a zachovat aktuální podrobnosti.
+   V podokně **Zkontrolovat zařízení** můžete sériová čísla potvrdit. Můžete se také rozhodnout, jestli chcete přepsat **Podrobnosti** pro sériová čísla, která se importují znovu, nebo můžete zrušit zaškrtnutí políčka **Přepsat** a zachovat aktuální podrobnosti.
 
-  > [!NOTE]
-  > V existující konzole správce Intune můžou správci přijímat přidružené podrobnosti z nahraného CSV a přepsat existující podrobnosti pro jednotlivá sériová čísla. V novém portálu Azure Portal budete moct jenom přepsat podrobnosti pro všechna sériová čísla nebo ignorovat nové podrobnosti pro všechna sériová čísla.
+   > [!NOTE]
+   > V existující konzole správce Intune můžou správci přijímat přidružené podrobnosti z nahraného CSV a přepsat existující podrobnosti pro jednotlivá sériová čísla. V novém portálu Azure Portal budete moct jenom přepsat podrobnosti pro všechna sériová čísla nebo ignorovat nové podrobnosti pro všechna sériová čísla.
 
-  > [!NOTE]
-  > Pokud později budete chtít zařízení vlastněná firmou ze správy pomocí služby Intune odebrat, budete asi muset přejít do skupiny zařízení **Podle sériového čísla iOSu** v části **Firemní předregistrovaná zařízení** a odebrat sériové číslo zařízení z Intune, aby se registrace zařízení deaktivovala. Pokud Intune provádí postup zotavení po havárii přibližně v době odebrání sériových čísel, bude potřeba ověřit, že jsou ve skupině jenom sériová čísla aktivních zařízení.
+   > [!NOTE]
+   > Pokud později budete chtít zařízení vlastněná firmou ze správy pomocí služby Intune odebrat, budete asi muset přejít do skupiny zařízení **Podle sériového čísla iOSu** v části **Firemní předregistrovaná zařízení** a odebrat sériové číslo zařízení z Intune, aby se registrace zařízení deaktivovala. Pokud Intune provádí postup zotavení po havárii přibližně v době odebrání sériových čísel, bude potřeba ověřit, že jsou ve skupině jenom sériová čísla aktivních zařízení.
 
 2. Vyberte **Další**.
 
@@ -137,7 +137,7 @@ V seznamu dostupných profilů vyberte profil, který se přiřadí přidaným z
 
 Zařízení s iOSem jsou připojená k počítači Mac a zaregistrovaná do systému správy mobilních zařízení.
 
-1.  Na počítači Mac otevřete **Apple Configurator 2**. V panelu nabídek vyberte **Apple Configurator 2** a potom **Předvolby**.
+1. Na počítači Mac otevřete **Apple Configurator 2**. V panelu nabídek vyberte **Apple Configurator 2** a potom **Předvolby**.
 
    > [!WARNING]
    > V průběhu registrace bude v zařízeních obnovená tovární konfigurace. Doporučuje se zařízení resetovat a zapnout ho. Zařízení by při připojení měla mít nastavenou **úvodní obrazovku**.
@@ -148,12 +148,12 @@ Zařízení s iOSem jsou připojená k počítači Mac a zaregistrovaná do syst
 
    Upozornění na neověřenou adresu URL serveru můžete ignorovat. Vyberte **Další** a pokračujte až do konce průvodce.
 
-4.  Mobilní zařízení s iOSem připojte kabelem USB k počítači Mac.
+4. Mobilní zařízení s iOSem připojte kabelem USB k počítači Mac.
 
-    > [!WARNING]
-    > V průběhu registrace bude v zařízeních obnovená tovární konfigurace. Doporučuje se zařízení resetovat a zapnout ho. Při spuštění pomocníka s nastavením by zařízení měla mít nastavenou **úvodní obrazovku**.
+   > [!WARNING]
+   > V průběhu registrace bude v zařízeních obnovená tovární konfigurace. Doporučuje se zařízení resetovat a zapnout ho. Při spuštění pomocníka s nastavením by zařízení měla mít nastavenou **úvodní obrazovku**.
 
-5.  Vyberte **Připravit**. V podokně přípravy zařízení s iOSem vyberte **Ručně** a pak zvolte **Další**.
+5. Vyberte **Připravit**. V podokně přípravy zařízení s iOSem vyberte **Ručně** a pak zvolte **Další**.
 
 6. V podokně registrace na serveru MDM vyberte název vytvořeného serveru a zvolte **Další**.
 

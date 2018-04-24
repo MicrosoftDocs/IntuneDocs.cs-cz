@@ -1,28 +1,28 @@
 ---
-title: "Hromadný zápis pro Windows 10"
+title: Hromadný zápis pro Windows 10
 titlesuffix: Microsoft Intune
-description: "Vytvoření balíčku hromadné registrace pro Microsoft Intune"
-keywords: 
+description: Vytvoření balíčku hromadné registrace pro Microsoft Intune
+keywords: ''
 author: Erikje
 ms.author: erikje
 manager: dougeby
 ms.date: 10/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: damionw
 ms.custom: intune-azure
-ms.openlocfilehash: 851be6ad98383937a3457a33e47115933f309cea
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 4f7d9cbf4f67a1205189deb836d738a70e940125
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Hromadná registrace pro zařízení s Windows
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Jako správce můžete k Azure Active Directory a Intune připojit větší počet zařízení s Windows. Hromadnou registraci zařízení pro vašeho tenanta Azure AD zahájíte vytvořením zřizovacího balíčku pomocí aplikace Windows Configuration Designer (WCD). Při aplikování zřizovacího balíčku na zařízení ve vlastnictví firmy se tato zařízení připojí k vašemu tenantovi Azure AD a zaregistrují v systému správy pomocí Intune. Po aplikování balíčku se uživatelé Azure AD můžou přihlašovat.
 
@@ -36,48 +36,48 @@ Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a ob
 ## <a name="create-a-provisioning-package"></a>Vytvoření zřizovacího balíčku
 
 1. Stáhněte si [Windows Configuration Designer (WCD)](https://www.microsoft.com/store/apps/9nblggh4tx22) z Microsoft Storu.
-![Snímek obrazovky s aplikací Windows Configuration Designer ve Storu](media/bulk-enroll-store.png)
+   ![Snímek obrazovky s aplikací Windows Configuration Designer ve Storu](media/bulk-enroll-store.png)
 
 2. Otevřete aplikaci **Windows Configuration Designer** a vyberte **Provision desktop devices** (Zřídit počítačová zařízení).
-![Snímek obrazovky s výběrem možnosti Provision desktop devices ve Windows Configuration Designeru](media/bulk-enroll-select.png)
+   ![Snímek obrazovky s výběrem možnosti Provision desktop devices ve Windows Configuration Designeru](media/bulk-enroll-select.png)
 
 3. Otevře se okno **New project** (Nový projekt), kde zadáte tyto údaje:
-  - **Name** (Název) – název vašeho projektu
-  - **Project folder** (Složka projektu) – místo pro ukládání projektu
-  - **Description** (Popis) – volitelný popis projektu ![Snímek obrazovky se zadáním názvu, složky projektu a popisu v aplikaci Windows Configuration Designer](media/bulk-enroll-name.png)
+   - **Name** (Název) – název vašeho projektu
+   - **Project folder** (Složka projektu) – místo pro ukládání projektu
+   - **Description** (Popis) – volitelný popis projektu ![Snímek obrazovky se zadáním názvu, složky projektu a popisu v aplikaci Windows Configuration Designer](media/bulk-enroll-name.png)
 
-4.  Zadejte jedinečný název pro zařízení. Názvy můžou obsahovat sériové číslo (%%SERIAL%%) nebo náhodnou sadu znaků. Volitelně můžete také zadat kód Product Key, pokud provádíte upgrade edice Windows, nakonfigurovat zařízení pro sdílené používání a odebrat předinstalovaný software.
+4. Zadejte jedinečný název pro zařízení. Názvy můžou obsahovat sériové číslo (%%SERIAL%%) nebo náhodnou sadu znaků. Volitelně můžete také zadat kód Product Key, pokud provádíte upgrade edice Windows, nakonfigurovat zařízení pro sdílené používání a odebrat předinstalovaný software.
 
-    ![Snímek obrazovky se zadáním názvu kódu Product Key v aplikaci Windows Configuration Designer](media/bulk-enroll-device.png)
+   ![Snímek obrazovky se zadáním názvu kódu Product Key v aplikaci Windows Configuration Designer](media/bulk-enroll-device.png)
 
-5.  Volitelně můžete nakonfigurovat síť Wi-Fi, ke které se zařízení připojí při prvním spuštění.  Pokud síťová zařízení nejsou nakonfigurovaná, musí být při prvním spuštění zařízení připojeno ke kabelové síti.
-![Snímek obrazovky s povolením Wi-Fi včetně SSID sítě a typu sítě v aplikaci Windows Configuration Designer](media/bulk-enroll-network.png)
+5. Volitelně můžete nakonfigurovat síť Wi-Fi, ke které se zařízení připojí při prvním spuštění.  Pokud síťová zařízení nejsou nakonfigurovaná, musí být při prvním spuštění zařízení připojeno ke kabelové síti.
+   ![Snímek obrazovky s povolením Wi-Fi včetně SSID sítě a typu sítě v aplikaci Windows Configuration Designer](media/bulk-enroll-network.png)
 
-6.  Vyberte **Enroll in Azure AD** (Zaregistrovat v Azure AD), zadejte datum **Bulk Token Expiry** (Vypršení platnosti hromadného tokenu) a pak vyberte **Get Bulk Token** (Získat hromadný token).
-![Snímek obrazovky se správou účtů v aplikaci Windows Configuration Designer](media/bulk-enroll-account.png)
+6. Vyberte **Enroll in Azure AD** (Zaregistrovat v Azure AD), zadejte datum **Bulk Token Expiry** (Vypršení platnosti hromadného tokenu) a pak vyberte **Get Bulk Token** (Získat hromadný token).
+   ![Snímek obrazovky se správou účtů v aplikaci Windows Configuration Designer](media/bulk-enroll-account.png)
 
 7. Zadejte přihlašovací údaje k Azure AD, abyste získali hromadný token.
-![Snímek obrazovky s přihlášením do aplikace Windows Configuration Designer](media/bulk-enroll-cred.png)
+   ![Snímek obrazovky s přihlášením do aplikace Windows Configuration Designer](media/bulk-enroll-cred.png)
 
-8.  Když se **Bulk Token** (Hromadný token) úspěšně načte, klikněte na **Next** (Další).
+8. Když se **Bulk Token** (Hromadný token) úspěšně načte, klikněte na **Next** (Další).
 
 9. Volitelně můžete **Add applications** (Přidat aplikace) a **Add certificates** (Přidat certifikáty). Tyto aplikace a certifikáty se zřídí v zařízení.
 
 10. Volitelně můžete zřizovací balíček ochránit heslem.  Klikněte na **Vytvořit**.
-![Snímek obrazovky s ochranou balíčku v aplikaci Windows Configuration Designer](media/bulk-enroll-create.png)
+    ![Snímek obrazovky s ochranou balíčku v aplikaci Windows Configuration Designer](media/bulk-enroll-create.png)
 
 ## <a name="provision-devices"></a>Zřízení zařízení
 
 1. Najděte zřizovací balíček v umístění, které jste zadali v **Project folder** (Složka projektu) v aplikaci.
 
 2. Zvolte, jakým způsobem zřizovací balíček do zařízení aplikujete.  Zřizovací balíček se dá do zařízení aplikovat jedním z těchto způsobů:
- - Zřizovací balíček umístěte na USB flash disk, připojte USB flash disk k zařízení, které chcete hromadně zaregistrovat, a aplikujte balíček během počáteční instalace.
- - Zřizovací balíček umístěte do síťové složky a aplikujte na zařízení, které chcete po počáteční instalaci hromadně zaregistrovat.
+   - Zřizovací balíček umístěte na USB flash disk, připojte USB flash disk k zařízení, které chcete hromadně zaregistrovat, a aplikujte balíček během počáteční instalace.
+   - Zřizovací balíček umístěte do síťové složky a aplikujte na zařízení, které chcete po počáteční instalaci hromadně zaregistrovat.
 
- Podrobné pokyny k aplikování zřizovacího balíčku najdete v článku o [aplikování zřizovacího balíčku](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package).
+   Podrobné pokyny k aplikování zřizovacího balíčku najdete v článku o [aplikování zřizovacího balíčku](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package).
 
 3. Po použití balíčku se zařízení za minutu automaticky restartuje.
- ![Snímek obrazovky se zadáním názvu, složky projektu a popisu v aplikaci Windows Configuration Designer](media/bulk-enroll-add.png)
+   ![Snímek obrazovky se zadáním názvu, složky projektu a popisu v aplikaci Windows Configuration Designer](media/bulk-enroll-add.png)
 
 4. Po restartu se zařízení připojí k Azure Active Directory a zaregistruje v Microsoft Intune.
 

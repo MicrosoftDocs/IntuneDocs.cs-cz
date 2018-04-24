@@ -1,31 +1,39 @@
 ---
-title: "Konfigurace nastavení sítě VPN v Microsoft Intune"
-titleSuffix: 
-description: "Naučte se pomocí Microsoft Intune nakonfigurovat připojení virtuální privátní sítě (VPN) pro zařízení, která spravujete."
-keywords: 
-author: vhorne
-ms.author: victorh
+title: Vytvoření profilu zařízení VPN v Microsoft Intune – Azure | Microsoft Docs
+description: Přečtěte si, jaké jsou v Microsoft Intune na zařízeních s iOSem typy připojení k virtuální privátní síti (VPN), jak vytvořit profil zařízení VPN na portálu Azure Portal a jaké máte možnosti zabezpečení profilu VPN pomocí certifikátů nebo uživatelského jména a hesla.
+keywords: ''
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 03/02/2018
+ms.date: 04/5/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9480f19a8cd71e001d196674d3e285c8f2a8bb09
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 792e2ae45e6331b91b1727af113604186c9bb72a
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="how-to-configure-vpn-settings-in-microsoft-intune"></a>Konfigurace nastavení sítě VPN v Microsoft Intune
+# <a name="create-vpn-profiles-in-intune"></a>Vytváření profilů sítě VPN v Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Virtuální privátní sítě (VPN) umožňují uživatelům zabezpečený vzdálený přístup k firemní síti. Zařízení používají profil připojení VPN k navázání připojení se serverem VPN. Pomocí **profilů VPN** v Microsoft Intune můžete uživatelům a zařízením v organizaci přiřadit nastavení VPN, aby se mohli snadno a bezpečně připojit k síti.
 
-Chcete třeba zřizovat všechna zařízení s iOSem s nastavením požadovaným pro připojení sdílené položky souboru v podnikové síti. Vytvoříte profil sítě VPN s nastaveními potřebnými pro připojování k podnikové síti a potom tento profil přiřadíte všem uživatelům se zařízeními s iOSem. Uživatelé uvidí připojení VPN v seznamu dostupných sítí a můžou se připojit s minimálním úsilím.
+Chcete třeba zřizovat všechna zařízení s iOSem s nastavením požadovaným pro připojení sdílené položky souboru v podnikové síti. Vytvoříte profil VPN, který obsahuje nastavení pro připojení k podnikové síti. Potom tento profil přiřadíte všem uživatelům využívajícím zařízení s iOSem. Uživatelé uvidí připojení VPN v seznamu dostupných sítí a můžou se připojit s minimálním úsilím.
+
+Zásady vlastní konfigurace Intune můžete použít k vytvoření profilů VPN pro tyto platformy:
+
+* Android 4 a novější
+* Zaregistrovaná zařízení se systémem Windows 8.1 a novějším
+* Windows Phone 8.1 nebo novější
+* Zaregistrovaná zařízení s desktopovým systémem Windows 10
+* Windows 10 Mobile
+* Windows Holographic for Business
 
 ## <a name="vpn-connection-types"></a>Typy připojení VPN
 
@@ -46,41 +54,36 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
 |PPTP|Ne|Ne|Ne|Ne|Ne|Ano|
 |Vlastní|Ne|Ano|Ano|Ne|Ne|Ne|
 
-
 > [!IMPORTANT]
 > Před použitím profilů VPN přiřazených nějakému zařízení je nutné nainstalovat příslušnou aplikaci VPN pro profil. S přiřazením aplikace pomocí Intune vám pomůžou informace v článku [Co je správa aplikací v Microsoft Intune](app-management.md).  
 
-Postup vytváření vlastních profilů VPN pomocí nastavení URI najdete v tématu [Vytvoření vlastních profilů VPN](custom-vpn-profiles-create.md).     
+Postup vytváření vlastních profilů VPN pomocí nastavení URI najdete v tématu [Vytvoření profilu s vlastním nastavením](custom-settings-configure.md).
 
 ## <a name="create-a-device-profile-containing-vpn-settings"></a>Vytvoření profilu zařízení obsahujícího nastavení VPN
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Intune** zvolte **Konfigurace zařízení**.
-2. V podokně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
-3. V podokně profilů zvolte **Vytvořit profil**.
-4. V podokně **Vytvořit profil** zadejte **Název** a **Popis** profilu VPN.
+2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+3. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
+4. Zadejte **název** a **popis** profilu VPN.
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete použít nastavení VPN. V současné době můžete pro nastavení VPN na zařízení zvolit jednu z následujících platforem:
-    - **Androidemem**
-    - **Android for Work**
-    - **iOS**
-    - **macOS**
-    - **Windows Phone 8.1**
-    - **Windows 8.1 a novější**
-    - **Windows 10 a novější**
+  - **Androidemem**
+  - **Android for Work**
+  - **iOS**
+  - **macOS**
+  - **Windows Phone 8.1**
+  - **Windows 8.1 a novější**
+  - **Windows 10 a novější**
 6. V rozevíracím seznamu **Typ profilu** zvolte **VPN**.
 7. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Podrobnosti o nastaveních na jednotlivých platformách najdete v následujících tématech:
-    - [Nastavení Androidu a Androidu for Work](vpn-settings-android.md)
-    - [Nastavení iOSu](vpn-settings-ios.md)
-    - [Nastavení macOS](vpn-settings-macos.md)
-    - [Nastavení Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
-    - [Nastavení Windows 8.1](vpn-settings-windows-8-1.md)
-    - [Nastavení Windows 10](vpn-settings-windows-10.md) (včetně Windows Holographic for Business)
-8. Až to budete mít, vraťte se do podokna **Vytvořit profil** a vyberte **Vytvořit**.
+  - [Nastavení Androidu a Androidu for Work](vpn-settings-android.md)
+  - [Nastavení iOSu](vpn-settings-ios.md)
+  - [Nastavení macOS](vpn-settings-macos.md)
+  - [Nastavení Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
+  - [Nastavení Windows 8.1](vpn-settings-windows-8-1.md)
+  - [Nastavení Windows 10](vpn-settings-windows-10.md) (včetně Windows Holographic for Business)
+8. Po dokončení vyberte **Vytvořit**.
 
-Profil se vytvoří a zobrazí se v podokně se seznamem profilů.
-Pokud chcete pokračovat a přiřadit tento profil ke skupinám, podívejte se na téma [Jak přiřadit profily zařízení](device-profile-assign.md).
-
+Profil se vytvoří a zobrazí se v seznamu profilů. Pokud chcete přiřadit tento profil ke skupinám, podívejte se na téma [Přiřazení profilů zařízení](device-profile-assign.md).
 
 ## <a name="methods-of-securing-vpn-profiles"></a>Metody zabezpečení profilů VPN
 
@@ -88,7 +91,7 @@ Profily VPN můžou používat spoustu různých typů připojení a protokoly o
 
 ### <a name="certificates"></a>Certifikáty
 
-Při vytváření profilu VPN zvolíte certifikátu SCEP nebo PKCS, který jste předtím vytvořili v Intune. Tento profil se označuje jako certifikát identity. Slouží k ověřování vůči profilu důvěryhodného certifikátu (neboli *kořenového certifikátu*), jehož vytvořením jste potvrdili, že se zařízení uživatele může připojit. Tento důvěryhodný certifikát se přiřazuje počítači, který ověřuje připojení VPN. Zpravidla se jedná o server VPN.
+Při vytváření profilu VPN zvolíte certifikátu SCEP nebo PKCS, který jste předtím vytvořili v Intune. Tento profil se označuje jako certifikát identity. Slouží k ověřování vůči profilu důvěryhodného certifikátu (neboli *kořenového certifikátu*), který vytváříte, aby se mohlo zařízení uživatele připojit. Tento důvěryhodný certifikát se přiřazuje počítači, který ověřuje připojení VPN. Zpravidla se jedná o server VPN.
 
 Další informace o vytváření a používání profilů certifikátů v Intune najdete v tématu [Jak konfigurovat certifikáty pomocí Microsoft Intune](certificates-configure.md).
 

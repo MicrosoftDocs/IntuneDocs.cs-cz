@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: tscott
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 944c5771e00d8e256944fe5767217f138797bde2
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: d5d55f6c3efabdde51b5627d5ddd409c2b282f6c
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="general-troubleshooting-tips-for-microsoft-intune"></a>Obecné tipy pro odstraňování potíží v Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Po nasazení Microsoft Intune můžete zjistit, že máte problémy s konfigurací nebo s klientskými zařízeními. Následující informace vám pomůžou zjistit, co je příčinou problému, abyste ho mohli vyřešit.
 
@@ -50,13 +50,13 @@ Po nasazení Microsoft Intune můžete zjistit, že máte problémy s konfigurac
 
 ## <a name="collect-available-data"></a>Shromažďování dostupných dat
 
--   Následující informace vám pomůžou zjistit, jak shromažďovat protokoly zařízení:
+- Následující informace vám pomůžou zjistit, jak shromažďovat protokoly zařízení:
   - [Odeslání protokolů s diagnostickými daty ze zařízení s Androidem správci IT pomocí kabelu USB](/intune-user-help/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
   - [Odeslání protokolů s diagnostickými daty ze zařízení s Androidem správci IT e-mailem](/intune-user-help/send-diagnostic-data-logs-to-your-it-administrator-using-email-android)
   - [Odeslání chyb registrace zařízení s Androidem správci IT](/intune-user-help/send-enrollment-errors-to-your-it-administrator-android)
   - [Odeslání chyb registrace zařízení s iOSem správci IT](/intune-user-help/send-errors-to-your-it-admin-ios)
 
--   Pokud jde o data konzoly správce (například při potížích s implementací zásad), zkontrolujte požadované zásady a jejich stav, jak se popisuje v tématu [Použití skupin pro správu uživatelů a zařízení s Microsoft Intune](/intune-classic/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
+- Pokud jde o data konzoly správce (například při potížích s implementací zásad), zkontrolujte požadované zásady a jejich stav, jak se popisuje v tématu [Použití skupin pro správu uživatelů a zařízení s Microsoft Intune](/intune-classic/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
 
 ## <a name="research-the-solution"></a>Vyhledání řešení
 

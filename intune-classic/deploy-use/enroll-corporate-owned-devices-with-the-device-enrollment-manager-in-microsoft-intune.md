@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0f9ecb8cf16d8c344ea595c53ab91c9b1f00c90e
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 4973e896109589a91891545bbf6db6ca6df45aad
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune"></a>Registrace firemních zařízení pomocí správce registrace zařízení v Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Organizace můžou pomocí Intune spravovat velké počty mobilních zařízení s jediným uživatelským účtem. Účet *správce registrace zařízení* (DEM – Device Enrollment Manager) je speciální uživatelský účet, který může zaregistrovat až 1 000 zařízení. Do účtu DEM můžete přidat existující uživatele a udělit jim tak speciální možnosti DEM. Každé zaregistrované zařízení používá jednu licenci. Zařízení zaregistrovaná pomocí tohoto účtu doporučujeme používat jako sdílená zařízení (tedy bez přidružení uživatele), nikoli jako osobní zařízení („BYOD“).  
 
@@ -67,22 +67,22 @@ Zařízení zaregistrovaná pomocí účtu správce registrace zařízení mají
 
 ## <a name="add-a-device-enrollment-manager"></a>Přidání správce registrace zařízení
 
-1.  Zkontrolujte, že uživatel, kterého chcete přidat do účtu DEM, už existuje. Pokud potřebujete přidat uživatele, přihlaste se k [portálu služeb Office 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) a postupujte podle pokynů uvedených v tématu [Přidání uživatelů na portál služeb Office 365 jednotlivě nebo hromadně](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
+1. Zkontrolujte, že uživatel, kterého chcete přidat do účtu DEM, už existuje. Pokud potřebujete přidat uživatele, přihlaste se k [portálu služeb Office 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) a postupujte podle pokynů uvedených v tématu [Přidání uživatelů na portál služeb Office 365 jednotlivě nebo hromadně](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
 
-2.  Přihlaste se ke [konzole pro správu Microsoft Intune](https://manage.microsoft.com) pomocí přihlašovacích údajů správce.
+2. Přihlaste se ke [konzole pro správu Microsoft Intune](https://manage.microsoft.com) pomocí přihlašovacích údajů správce.
 
-3.  V navigačním podokně zvolte **Správce**, přejděte do části **Správa správců** a vyberte **Správce registrace zařízení**. Otevře se stránka **Správci registrace zařízení**.
+3. V navigačním podokně zvolte **Správce**, přejděte do části **Správa správců** a vyberte **Správce registrace zařízení**. Otevře se stránka **Správci registrace zařízení**.
 
-4.  Zvolte **Přidat**. Otevře se dialog **Přidat správce registrace zařízení** .
+4. Zvolte **Přidat**. Otevře se dialog **Přidat správce registrace zařízení** .
 
-5.  Zadejte **ID uživatele** účtu Intune a zvolte **OK**.
+5. Zadejte **ID uživatele** účtu Intune a zvolte **OK**.
 
-    Uživatel DEM teď může registrovat mobilní zařízení stejným postupem, jaký používá koncový uživatel ve scénáři BYOD na webu Portál společnosti. Koncový uživatel, který je správcem, může nainstalovat aplikaci Portál společnosti a zaregistrovat zařízení pomocí svých přihlašovacích údajů DEM až na 1000 zařízení. Postup registrace koncovým uživatelem pro jednotlivé platformy najdete v následujících tématech:
+   Uživatel DEM teď může registrovat mobilní zařízení stejným postupem, jaký používá koncový uživatel ve scénáři BYOD na webu Portál společnosti. Koncový uživatel, který je správcem, může nainstalovat aplikaci Portál společnosti a zaregistrovat zařízení pomocí svých přihlašovacích údajů DEM až na 1000 zařízení. Postup registrace koncovým uživatelem pro jednotlivé platformy najdete v následujících tématech:
 
-  - [Registrace zařízení s iOSem v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios)
-  - [Registrace zařízení s macOS do Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos)
-  - [Registrace zařízení s Androidem v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-android)
-  - [Registrace zařízení s Windows v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows)
+   - [Registrace zařízení s iOSem v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios)
+   - [Registrace zařízení s macOS do Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos)
+   - [Registrace zařízení s Androidem v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-android)
+   - [Registrace zařízení s Windows v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows)
 
 ## <a name="delete-a-device-enrollment-manager-from-intune"></a>Odstranění správce registrace zařízení ze služby Intune
 

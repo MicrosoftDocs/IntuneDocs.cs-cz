@@ -1,35 +1,35 @@
 ---
-title: "Připojení Wi-Fi"
-description: "Profily sítě Wi-Fi uživatelům usnadní připojení k vašim sítím Wi-Fi."
-keywords: 
+title: Připojení Wi-Fi
+description: Profily sítě Wi-Fi uživatelům usnadní připojení k vašim sítím Wi-Fi.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 02/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0b1b86ed-2e80-474d-8437-17dd4bc07b55
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 99ac426d2210aa22a7c0151aea59e14b848bbe1f
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 5eebe251371d466421bfe936a1f991c988e490b0
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-devices-to-connect-to-your-corporate-wi-fi-networks"></a>Konfigurace zařízení pro připojení k podnikovým sítím Wi-Fi
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Pomocí profilů Wi-Fi služby Intune můžete nasadit nastavení bezdrátové sítě pro uživatele a zařízení ve vaší organizaci. Při nasazování profilu Wi-Fi budou mít uživatelé přístup k vaší podnikové síti, aniž by ji museli konfigurovat sami.
 
 Nainstalujete třeba novou síť Wi-Fi s názvem **Contoso Wi-Fi** a chcete nastavit všechna zařízení iOS pro připojení k této síti. Postup je následující:
 
-![Shrnutí procesu profilu sítě Wi-Fi](..\media\wi-fi-process-diagram.png)
+![Shrnutí procesu profilu sítě Wi-Fi](../media/wi-fi-process-diagram.png)
 
 1.   Vytvoříte profil Wi-Fi obsahující nastavení požadovaná pro připojení k bezdrátové síti **Contoso Wi-Fi**.
 
@@ -42,7 +42,7 @@ Nainstalujete třeba novou síť Wi-Fi s názvem **Contoso Wi-Fi** a chcete nast
 
 Profily Wi-Fi můžete nasadit na následujících platformách:
 
--   Android 4.0 nebo novější
+-   Android 4.0 a novější
 
 -   Android for Work   
 
@@ -67,23 +67,25 @@ U zařízení, na kterých běží desktopové nebo mobilní operační systémy
 
 Pro tento typ zásad nejsou žádná doporučená nastavení. Je potřeba vytvořit vlastní zásadu.
 
-3.  Zadejte název a popis profilu.
+3. Zadejte název a popis profilu.
 
 4. Zadejte hodnoty **síťových připojení**.
- - **Identifikátor SSID (Service Set Identifier)**: Tuto možnost vyberte, pokud se má uživatelům zobrazovat název sítě a ne identifikátor SSID.
- - **Připojit se, když síť nevysílá svůj název (SSID)**:Tuto možnost vyberte, pokud chcete zařízením povolit, aby se připojovala k síti, když tato síť není zobrazená v seznamu sítí (protože je skrytá a nevysílá svůj název).
+   - **Identifikátor SSID (Service Set Identifier)**: Tuto možnost vyberte, pokud se má uživatelům zobrazovat název sítě a ne identifikátor SSID.
+   - **Připojit se, když síť nevysílá svůj název (SSID)**:Tuto možnost vyberte, pokud chcete zařízením povolit, aby se připojovala k síti, když tato síť není zobrazená v seznamu sítí (protože je skrytá a nevysílá svůj název).
 
 5. Nakonfigurujte **Nastavení zabezpečení** pro vybranou platformu. Dostupná nastavení závisí na typu zabezpečení, které vyberete. Jejich popis najdete v části [Nastavení zabezpečení](#security-settings).
 
 6. Nakonfigurujte **nastavení proxy serveru** (jenom iOS a MAC OS X).
 
-    |Název nastavení|Další informace|Kdy ji použít|
-    |----------------|-------------------|-------------|
-    |**Nastavení proxy serveru pro toto připojení Wi-Fi**|Zvolte typ nastavení proxy serveru:<br /><br />-   **Žádné** (výchozí)<br />-   **Ruční** – zadejte ručně adresu URL a číslo portu proxy serveru.<br />-   **Automatické** – ke konfiguraci proxy serveru použijte konfigurační soubor.|Vždy|
-    |**Adresa proxy serveru** a **číslo portu**|Zadejte adresu URL a číslo portu proxy serveru.|**Nastavení proxy serveru pro toto připojení Wi-Fi** je **Ruční**|
-    |**URL proxy serveru**|Zadejte adresu URL souboru, který obsahuje nastavení proxy serveru.|**Nastavení proxy serveru pro toto připojení Wi-Fi** je **Automatické**|
 
-7.  Uložení profilu Wi-Fi
+   |                              Název nastavení                              |                                                                                                                                Další informace                                                                                                                                 |                                            Kdy ji použít                                            |
+   |------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+   |       <strong>Nastavení proxy serveru pro toto připojení Wi-Fi</strong>        | Zvolte typ nastavení proxy serveru:<br /><br />-   <strong>Žádné</strong> (výchozí)<br />-   <strong>Ruční</strong> – zadejte ručně adresu URL a číslo portu proxy serveru.<br />-   <strong>Automatické</strong> – ke konfiguraci proxy serveru použijte konfigurační soubor. |                                              Vždy                                               |
+   | <strong>Adresa proxy serveru</strong> a <strong>číslo portu</strong> |                                                                                                              Zadejte adresu URL a číslo portu proxy serveru.                                                                                                               |  <strong>Nastavení proxy serveru pro toto připojení Wi-Fi</strong> je <strong>Ruční</strong>   |
+   |                   <strong>URL proxy serveru</strong>                    |                                                                                                      Zadejte adresu URL souboru, který obsahuje nastavení proxy serveru.                                                                                                       | <strong>Nastavení proxy serveru pro toto připojení Wi-Fi</strong> je <strong>Automatické</strong> |
+
+
+7. Uložení profilu Wi-Fi
 
 Nová zásada se zobrazí v uzlu **Zásady konfigurace** pracovního prostoru **Zásady**. Další informace o nasazení služby najdete v části **Další kroky**.
 
@@ -177,5 +179,5 @@ Tyto tabulky obsahují podrobné informace o nastavení zabezpečení, které je
 |**Povolit ochranu osobních údajů v rámci identity (vnější identita)**|Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota.<br /><br />Během ověřování se nejdříve odešle tato anonymní identita. Skutečná identifikace se pak odešle přes zabezpečené tunelové propojení.|**Typ protokolu EAP** je nastavený na **PEAP**, **EAP-TTLS** nebo **EAP-FAST**.|
 
 
-### <a name="see-also"></a>Související témata
+### <a name="see-also"></a>Viz taky
 Postup vytvoření profilu Wi-Fi s předsdíleným klíčem najdete v tématu věnovaném [vytvoření profilu Wi-Fi s předsdíleným klíčem](pre-shared-key-wi-fi-profile.md).

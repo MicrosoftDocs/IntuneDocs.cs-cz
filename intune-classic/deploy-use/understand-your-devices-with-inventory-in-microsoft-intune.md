@@ -1,29 +1,29 @@
 ---
-title: "Seznámení se zařízeními s inventářem"
-description: "Použijte Intune k zobrazení informací o hardwaru zařízení, která spravujete."
-keywords: 
+title: Seznámení se zařízeními s inventářem
+description: Použijte Intune k zobrazení informací o hardwaru zařízení, která spravujete.
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 ms.date: 09/05/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 312911fe-b963-4949-9911-ae425e0590b2
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: c72e216201ac019f2cdffaf6e185bd6ff4436737
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: e50a7329512e6b57eb5486792669b7cd102eebdb
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understand-your-devices-with-inventory-in-microsoft-intune"></a>Seznámení se zařízeními s inventářem v Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Microsoft Intune umožňuje zobrazit inventář zaregistrovaných zařízení a počítačů s Windows, na kterých je spuštěn klientský software Intune.
 Intune obvykle shromažďuje inventář ze spravovaných zařízení každých 7 dní. Z tohoto důvodu může dojít ke zpoždění, než sestavy ukážou výsledky nedávných změn, ke kterým na zařízeních došlo, například ke změně názvu zařízení nebo změně volného úložného prostoru.

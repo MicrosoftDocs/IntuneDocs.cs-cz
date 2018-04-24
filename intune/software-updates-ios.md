@@ -11,11 +11,11 @@ ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.openlocfilehash: 39432d09bea822c25ca9e11181a11a1e2298dfef
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 58727a501d6a8ec14e964094eac9fcd6eb3868da
+ms.sourcegitcommit: c3ae3c3dc46b62d9191813d25a196874ba4927be
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configure-ios-update-policies-in-microsoft-intune"></a>Konfigurace zásad aktualizace iOS v Microsoft Intune
 
@@ -54,4 +54,5 @@ Tím jste zásady uplatnili na uživatele nebo zařízení. U zařízení použ�
 
 ## <a name="monitor-ios-device-installation-failures"></a>Sledování selhání instalace na zařízeních s iOSem
 <!-- 1352223 -->
-Sestava **Chyby instalace pro zařízení s iOSem** je k dispozici z podokna **Aktualizace softwaru**. V sestavě můžete zobrazit seznam zařízení s iOSem pod dohledem, na která byla zacílena zásada aktualizace iOSu a která se pokusila o aktualizaci, ale aktualizovat se je nepodařilo. Pro každé zařízení můžete zobrazit stav, proč nebylo automaticky aktualizováno. Zařízení, která jsou v pořádku a aktuální, se v seznamu nezobrazí. Jako aktuální definujeme nejnovější aktualizaci, kterou může samotné zařízení podporovat.
+Sestava **Chyby instalace pro zařízení s iOSem** je k dispozici v podokně **Aktualizace softwaru**. V sestavě můžete zobrazit seznam zařízení s iOSem pod dohledem, na která byla zacílena zásada aktualizace iOSu a která se pokusila o aktualizaci, ale aktualizovat se je nepodařilo. Pro každé zařízení můžete zobrazit stav, proč nebylo automaticky aktualizováno. Zařízení, která jsou v pořádku a aktuální, se v seznamu nezobrazí. Jako aktuální definujeme nejnovější aktualizaci, kterou může samotné zařízení podporovat.
+

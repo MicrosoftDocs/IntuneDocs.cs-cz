@@ -1,29 +1,29 @@
 ---
-title: "Konektor ochrany před mobilními hrozbami Skycure"
-description: "Chraňte přístup k firemním prostředkům podle rizika zařízení, sítě a aplikace prostřednictvím konektoru ochrany před mobilními hrozbami Skycure a služby Intune."
-keywords: 
+title: Konektor ochrany před mobilními hrozbami Skycure
+description: Chraňte přístup k firemním prostředkům podle rizika zařízení, sítě a aplikace prostřednictvím konektoru ochrany před mobilními hrozbami Skycure a služby Intune.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 03/16/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7a004e6c-604a-448c-bfb8-cfda63749f5b
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 096cd7f2f7895531b00d77c5d26413471fb9bbcf
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: f79e793ec6931d6497c6b66eee98aea39786e962
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="skycure-mobile-threat-defense-connector"></a>Konektor ochrany před mobilními hrozbami Skycure
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Přístup mobilních zařízení k podnikovým prostředkům můžete regulovat pomocí podmíněného přístupu na základě posouzení rizik, které provádí služba Skycure. Je to řešení ochrany před mobilními hrozbami integrované ve službě Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých běží služba Skycure. Patří do ní:
 

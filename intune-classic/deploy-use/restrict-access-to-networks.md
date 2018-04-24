@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e455f291d9bfdb655f6c66cad7bf859a864e756d
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 1893410f4993d6feaa218d251dd7e2561286f5a3
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-cisco-ise-with-microsoft-intune"></a>Použití Cisco ISE s Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Integrace Intune s Cisco ISE (Identity Services Engine) umožňuje vytvářet zásady sítě v prostředí ISE na základě stavu registrace zařízení v Intune a jejich stavu dodržování předpisů. Prostřednictvím těchto zásad můžete zajistit, aby byl přístup k síti vaší společnosti omezen na zařízení, která jsou spravována pomocí Intune a vyhovují zásadám Intune.
 
@@ -70,13 +70,13 @@ b. Zvolte ikonu zámku &gt; **Další informace**.
 
 ### <a name="obtain-a-self-signed-cert-from-ise"></a>Získání certifikátu podepsaného svým držitelem ze systému ISE 
 
-1.  V konzole ISE přejděte do části **Správa** > **Certifikáty** > **Systémové certifikáty** > **Generovat certifikát podepsaný jeho držitelem**.  
-2.       Exportujte certifikát podepsaný svým držitelem.
+1. V konzole ISE přejděte do části **Správa** > **Certifikáty** > **Systémové certifikáty** > **Generovat certifikát podepsaný jeho držitelem**.  
+2. Exportujte certifikát podepsaný svým držitelem.
 3. V textovém editoru upravte exportovaný certifikát:
 
- - Odstraňte text: **-----BEGIN CERTIFICATE-----**
- - Odstraňte text: **-----END CERTIFICATE-----**
- 
+   - Odstraňte text: **-----BEGIN CERTIFICATE-----**
+   - Odstraňte text: **-----END CERTIFICATE-----**
+
 Ověřte, že veškerý text leží na jednom řádku.
 
 
@@ -88,13 +88,13 @@ Ověřte, že veškerý text leží na jednom řádku.
 5. Uložte soubor beze změny jeho názvu.
 6. Poskytněte své aplikaci oprávnění pro rozhraní API Microsoft Intune a Microsoft Graph.
 
- a. Pro Microsoft Graph vyberte následující:
+   a. Pro Microsoft Graph vyberte následující:
     - **Oprávnění aplikací**: Čtení dat adresáře
     - **Delegovaná oprávnění**:
         - Časově neomezený přístup k datům uživatele
         - Přihlášení uživatelů
 
- b. Pro rozhraní API Microsoft Intune v části **Oprávnění aplikací** zvolte **Zjistit stav zařízení a jeho stav dodržování předpisů z služby Intune**.
+   b. Pro rozhraní API Microsoft Intune v části **Oprávnění aplikací** zvolte **Zjistit stav zařízení a jeho stav dodržování předpisů z služby Intune**.
 
 7. Zvolte **Zobrazit koncové body** a zkopírujte následující hodnoty pro použití při konfiguraci nastavení ISE:
 
@@ -105,23 +105,40 @@ Ověřte, že veškerý text leží na jednom řádku.
 |Aktualizace kódu s použitím ID klienta|ID klienta|
 
 ### <a name="step-4-upload-the-self-signed-certificate-from-ise-into-the-ise-app-you-created-in-azure-ad"></a>Krok 4: Nahrání certifikátu podepsaného svým držitelem z ISE do aplikace ISE, kterou jste vytvořili ve službě Azure AD
-1.     Získejte hodnotu zakódovaného certifikátu base64 a kryptografický otisk ze souboru certifikátu .cer X509. V tomto příkladu je používáno prostředí PowerShell:
-   
-      
-      $cer = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2    $cer.Import(“mycer.cer”)    $bin = $cer.GetRawCertData()    $base64Value = [System.Convert]::ToBase64String($bin)    $bin = $cer.GetCertHash()    $base64Thumbprint = [System.Convert]::ToBase64String($bin)    $keyid = [System.Guid]::NewGuid().ToString()
- 
-    Uložte hodnoty pro $base64Thumbprint, $base64Value a $keyid, které použijete v dalším kroku.
-2.       Nahrajte certifikát prostřednictvím souboru manifestu. Přihlaste se k [portálu pro správu Azure](https://manage.windowsazure.com)
-2.      Ve snapinu služby Azure AD najděte aplikaci, kterou chcete nakonfigurovat pomocí certifikátu X.509.
-3.      Stáhněte si soubor manifestu aplikace. 
-5.      Nahraďte prázdnou vlastnost “KeyCredentials”: [] následujícím formátem JSON.  Komplexní typ s názvem KeyCredentials je zdokumentován v [ Referenčních informacích k entitám a komplexním typům](https://msdn.microsoft.com/library/azure/ad/graph/api/entity-and-complex-type-reference#KeyCredentialType).
+1. Získejte hodnotu zakódovaného certifikátu base64 a kryptografický otisk ze souboru certifikátu .cer X509. V tomto příkladu je používáno prostředí PowerShell:
 
- 
-    “keyCredentials“: [ { “customKeyIdentifier“: “$base64Thumbprint_from_above”, “keyId“: “$keyid_from_above“, “type”: “AsymmetricX509Cert”, “usage”: “Verify”, “value”:  “$base64Value_from_above” }2. 
-     ], 
- 
+
+~~~
+  $cer = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2
+  $cer.Import(“mycer.cer”)
+  $bin = $cer.GetRawCertData()
+  $base64Value = [System.Convert]::ToBase64String($bin)
+  $bin = $cer.GetCertHash()
+  $base64Thumbprint = [System.Convert]::ToBase64String($bin)
+  $keyid = [System.Guid]::NewGuid().ToString()
+
+Store the values for $base64Thumbprint, $base64Value and $keyid, to be used in the next step.
+~~~
+2. Nahrajte certifikát prostřednictvím souboru manifestu. Přihlaste se k [portálu pro správu Azure](https://manage.windowsazure.com)
+3. Ve snapinu služby Azure AD najděte aplikaci, kterou chcete nakonfigurovat pomocí certifikátu X.509.
+4. Stáhněte si soubor manifestu aplikace. 
+5. Nahraďte prázdnou vlastnost “KeyCredentials”: [] následujícím formátem JSON.  Komplexní typ s názvem KeyCredentials je zdokumentován v [ Referenčních informacích k entitám a komplexním typům](https://msdn.microsoft.com/library/azure/ad/graph/api/entity-and-complex-type-reference#KeyCredentialType).
+
+
+~~~
+“keyCredentials“: [
+{
+ “customKeyIdentifier“: “$base64Thumbprint_from_above”,
+ “keyId“: “$keyid_from_above“,
+ “type”: “AsymmetricX509Cert”,
+ “usage”: “Verify”,
+ “value”:  “$base64Value_from_above”
+ }2. 
+ ], 
+~~~
+
 Příklad:
- 
+
     “keyCredentials“: [
     {
     “customKeyIdentifier“: “ieF43L8nkyw/PEHjWvj+PkWebXk=”,
@@ -131,10 +148,10 @@ Příklad:
     “value”: “MIICWjCCAgSgAwIBA***omitted for brevity***qoD4dmgJqZmXDfFyQ”
     }
     ],
- 
-6.      Uložte změny do souboru manifestu aplikace.
-7.      Nahrajte upravený soubor manifestu aplikace prostřednictvím Portálu pro správu Azure.
-8.      Volitelné: Znovu si stáhněte manifest a zkontrolujte, jestli aplikace obsahuje váš certifikát X.509.
+
+6. Uložte změny do souboru manifestu aplikace.
+7. Nahrajte upravený soubor manifestu aplikace prostřednictvím Portálu pro správu Azure.
+8. Volitelné: Znovu si stáhněte manifest a zkontrolujte, jestli aplikace obsahuje váš certifikát X.509.
 
 >[!NOTE]
 >

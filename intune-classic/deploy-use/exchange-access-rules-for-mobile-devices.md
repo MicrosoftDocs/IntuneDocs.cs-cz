@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9c3da7d517bd26bf694ea7bfa658ec1a4688d8f8
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 93dece592ce5280b1650303484bd24169814465c
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exchange-access-rules-for-mobile-devices"></a>Pravidla přístupu k Exchangi pro mobilní zařízení
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Pravidla přístupu k Exchangi pro mobilní zařízení určují úroveň přístupu k Exchange ActiveSync, kterou tato zařízení mají. Tato nastavení ovlivňují všechna mobilní zařízení včetně zařízení, která nejsou registrovaná v Microsoft Intune. Můžete začít tak, že definujete **Výchozí pravidlo**, které bude platit pro všechna mobilní zařízení, u kterých se nepoužívá vlastní pravidlo.
 
@@ -37,11 +37,13 @@ Pravidla přístupu k Exchangi pro mobilní zařízení určují úroveň přís
 
 Strategie přístupu je tvořená kombinací nastavení **Výchozí pravidlo** a **Výjimky platforem**, která platí pro všechna mobilní zařízení připojená k Exchangi. Některé příklady strategií přístupu jsou uvedené v následující tabulce.
 
-|Strategie přístupu|Popis|
-|-------------------|---------------|
-|Seznam povolených položek|Pomocí *seznamu povolených položek* můžete udělit přístup známým zařízením na seznamu a všem ostatním zařízením přístup zakázat. K tomu musíte vytvořit vlastní pravidla pro platformy zařízení, kterým je povolen přístup k poštovní schránce uživatele. Až takové pravidlo vytvoříte, musíte nastavit výchozí pravidlo přístupu, které všechna ostatní zařízení zablokuje nebo je dá do karantény. Nové zařízení můžete do seznamu povolených položek přidat vytvořením nového vlastního pravidla.|
-|Seznam blokovaných položek|Pomocí *seznamu blokovaných položek* můžete ve výchozím nastavení udělit přístup všem zařízením a zablokovat přístup skupině zařízení, kterým v organizaci nechcete povolit přístup. Seznam blokovaných položek můžete vytvořit tak, že vytvoříte vlastní pravidla pro blokování platforem zařízení, které nechcete synchronizovat s poštovními schránkami organizace. Doporučujeme nastavit výchozí pravidlo tak, aby umožňovalo přístup všem zařízením, která nejsou výslovně blokovaná existujícími pravidly. Nové zařízení nebo skupinu zařízení můžete do seznamu blokovaných položek přidat tak, že vytvoříte nové vlastní pravidlo.|
-|Kombinace seznamů povolených a blokovaných položek|Kromě vytvoření seznamu povolených a blokovaných položek můžete mobilní zařízení, která jsou v organizaci nová a zatím je vyhodnocujete, dát do karantény. Když třeba máte seznam blokovaných položek pro mobilní zařízení, která nejsou v organizaci povolená, a seznam povolených položek pro mobilní zařízení, které jsou v organizaci povolená, můžete nastavit ještě výchozí pravidlo pro karanténu. Všechna ostatní zařízení se automaticky umístí do karantény. To vám umožňuje zjistit nově zaváděná zařízení v organizaci a rozhodnout se, jestli je přidáte do seznamu povolených nebo zakázaných položek.|
+
+|    Strategie přístupu    |                                                                                                                                                                                                                                                                                       Popis                                                                                                                                                                                                                                                                                        |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|      Seznam povolených položek       |                                                                                  Pomocí <em>seznamu povolených položek</em> můžete udělit přístup známým zařízením na seznamu a všem ostatním zařízením přístup zakázat. K tomu musíte vytvořit vlastní pravidla pro platformy zařízení, kterým je povolen přístup k poštovní schránce uživatele. Až takové pravidlo vytvoříte, musíte nastavit výchozí pravidlo přístupu, které všechna ostatní zařízení zablokuje nebo je dá do karantény. Nové zařízení můžete do seznamu povolených položek přidat vytvořením nového vlastního pravidla.                                                                                  |
+|      Seznam blokovaných položek       |                              Pomocí <em>seznamu blokovaných položek</em> můžete ve výchozím nastavení udělit přístup všem zařízením a zablokovat přístup skupině zařízení, kterým v organizaci nechcete povolit přístup. Seznam blokovaných položek můžete vytvořit tak, že vytvoříte vlastní pravidla pro blokování platforem zařízení, které nechcete synchronizovat s poštovními schránkami organizace. Doporučujeme nastavit výchozí pravidlo tak, aby umožňovalo přístup všem zařízením, která nejsou výslovně blokovaná existujícími pravidly. Nové zařízení nebo skupinu zařízení můžete do seznamu blokovaných položek přidat tak, že vytvoříte nové vlastní pravidlo.                               |
+| Kombinace seznamů povolených a blokovaných položek | Kromě vytvoření seznamu povolených a blokovaných položek můžete mobilní zařízení, která jsou v organizaci nová a zatím je vyhodnocujete, dát do karantény. Když třeba máte seznam blokovaných položek pro mobilní zařízení, která nejsou v organizaci povolená, a seznam povolených položek pro mobilní zařízení, které jsou v organizaci povolená, můžete nastavit ještě výchozí pravidlo pro karanténu. Všechna ostatní zařízení se automaticky umístí do karantény. To vám umožňuje zjistit nově zaváděná zařízení v organizaci a rozhodnout se, jestli je přidáte do seznamu povolených nebo zakázaných položek. |
+
 Postup vytvoření vlastního pravidla je popsaný v následující části.
 
 ## <a name="create-a-default-access-rule"></a>Vytvoření výchozího pravidla přístupu

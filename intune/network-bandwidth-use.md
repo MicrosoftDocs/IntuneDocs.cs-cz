@@ -1,29 +1,29 @@
 ---
-title: "Detaily o požadavcích na síť a šířce pásma pro Microsoft Intune"
-titlesuffix: 
-description: "Podívejte se na detaily o požadavcích na konfiguraci sítě a šířce pásma pro Intune."
-keywords: 
+title: Detaily o požadavcích na síť a šířce pásma pro Microsoft Intune
+titlesuffix: ''
+description: Podívejte se na detaily o požadavcích na konfiguraci sítě a šířce pásma pro Intune.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 01/24/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0f737d48-24bc-44cd-aadd-f0a1d59f6893
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b21c4421914294e84bae637e489065c5e4410839
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: c161d1ca120d5a0210cffca01e781f1ae9206fe4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Šířka pásma a požadavky na konfiguraci sítě Intune
 
-[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
+[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 Tyto pokyny pomůžou správcům Intune porozumět požadavkům služby Intune na síť. Tyto informace můžete použít k pochopení požadavků na šířku pásma a nastavení IP adres a portů potřebných k nastavení proxy serverů.
 
@@ -58,11 +58,13 @@ Proxy server ukládající do mezipaměti, který dostává z klientů žádosti
 
 Tady jsou obvyklá nastavení proxy serveru, který do mezipaměti ukládá obsah pro klienty Intune.
 
-|Nastavení|Doporučená hodnota|Podrobnosti|
-|-----------|---------------------|-----------|
-|Velikost mezipaměti|5 GB až 30 GB|Hodnota se liší podle počtu klientských počítačích v síti a používaných konfigurací. Aby se soubory neodstranily příliš brzy, upravte velikost mezipaměti pro vaše prostředí.|
-|Velikost jednotlivých souborů mezipaměti|950 MB|Toto nastavení nemusí být dostupné na všech proxy serverech s ukládáním do mezipaměti.|
-|Typy objektů do mezipaměti|HTTP<br /><br />HTTPS<br /><br />BITS|Balíčky Intune jsou soubory CAB stažené Službou inteligentního přenosu na pozadí (BITS) přes HTTP.|
+
+|          Nastavení           |           Doporučená hodnota           |                                                                                                  Podrobnosti                                                                                                  |
+|----------------------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|         Velikost mezipaměti         |             5 GB až 30 GB             | Hodnota se liší podle počtu klientských počítačích v síti a používaných konfigurací. Aby se soubory neodstranily příliš brzy, upravte velikost mezipaměti pro vaše prostředí. |
+| Velikost jednotlivých souborů mezipaměti |                950 MB                 |                                                                     Toto nastavení nemusí být dostupné na všech proxy serverech s ukládáním do mezipaměti.                                                                     |
+|   Typy objektů do mezipaměti    | HTTP<br /><br />HTTPS<br /><br />BITS |                                               Balíčky Intune jsou soubory CAB stažené Službou inteligentního přenosu na pozadí (BITS) přes HTTP.                                               |
+
 Informace o používání proxy serveru k ukládání obsahu do mezipaměti najdete v dokumentaci k vašemu řešení proxy serveru.
 
 ### <a name="use-background-intelligent-transfer-service-on-computers"></a>Používání Služby inteligentního přenosu na pozadí na počítačích
@@ -159,14 +161,16 @@ Následující tabulky obsahují seznam portů a služeb, ke kterým přistupuje
 |fef.msuc05.manage.microsoft.com|52.230.16.180|
 
 ### <a name="apple-device-network-information"></a>Informace o síti pro zařízení Apple
-| Název hostitele  | Adresa URL (IP adresa/podsíť) | Protokol | Port | Zařízení |
-| --- | --- | --- | --- | --- |
-|  Konzola správce  | gateway.push.apple.com (17.0.0.0/8) | TCP | 2195 | Apple iOS a macOS |
-| Konzola správce  | feedback.push.apple.com(17.0.0.0/8) | TCP | 2196 | Apple iOS a macOS |
-| Konzola správce  | Apple iTunesitunes.apple.com, \*.mzstatic.com, \*.phobos.apple.com, \*.phobos.apple.com.edgesuite.net | HTTP | 80 | Apple iOS a macOS  |
-| Server PI  | gateway.push.apple.com(17.0.0.0/8) feedback.push.apple.com(17.0.0.0/8) | TCP | 2195, 2196 | Platí pro cloudové zasílání zpráv v systémech Apple iOS a macOS. |
-| Služby zařízení  | gateway.push.apple.com | TCP | 2195 | Apple  |
-| Služby zařízení  | feedback.push.apple.com | TCP | 2196 | Apple  |
-| Služby zařízení  | Apple iTunesitunes.apple.com \*.mzstatic.com\*.phobos.apple.com \*.phobos.apple.com.edgesuite.net | HTTP | 80 | Apple  |
-| Zařízení (internet/Wi-Fi) | #-courier.push.apple.com(17.0.0.0/8) | TCP | 5223 a 443 | Pouze Apple. &#39;#&#39; je náhodné číslo od 0 do 200. |
-| Zařízení (internet/Wi-Fi) | phobos.apple.comocsp.apple.comax.itunes.apple.com | HTTP/HTTPS | 80 nebo 443 | Pouze Apple. |
+
+|         Název hostitele         |                                        Adresa URL (IP adresa/podsíť)                                        |  Protokol  |     Port     |                          Zařízení                           |
+|--------------------------|-------------------------------------------------------------------------------------------------------|------------|--------------|-----------------------------------------------------------|
+|      Konzola správce       |                                  gateway.push.apple.com (17.0.0.0/8)                                  |    TCP     |     2195     |                    Apple iOS a macOS                    |
+|      Konzola správce       |                                  feedback.push.apple.com(17.0.0.0/8)                                  |    TCP     |     2196     |                    Apple iOS a macOS                    |
+|      Konzola správce       | Apple iTunesitunes.apple.com, \*.mzstatic.com, \*.phobos.apple.com, \*.phobos.apple.com.edgesuite.net |    HTTP    |      80      |                    Apple iOS a macOS                    |
+|        Server PI         |                gateway.push.apple.com(17.0.0.0/8) feedback.push.apple.com(17.0.0.0/8)                 |    TCP     |  2195, 2196  |         Platí pro cloudové zasílání zpráv v systémech Apple iOS a macOS.          |
+|     Služby zařízení      |                                        gateway.push.apple.com                                         |    TCP     |     2195     |                           Apple                           |
+|     Služby zařízení      |                                        feedback.push.apple.com                                        |    TCP     |     2196     |                           Apple                           |
+|     Služby zařízení      |   Apple iTunesitunes.apple.com \*.mzstatic.com\*.phobos.apple.com \*.phobos.apple.com.edgesuite.net   |    HTTP    |      80      |                           Apple                           |
+| Zařízení (internet/Wi-Fi) |                                 #-courier.push.apple.com(17.0.0.0/8)                                  |    TCP     | 5223 a 443 | Pouze Apple. &#39;#&#39; je náhodné číslo od 0 do 200. |
+| Zařízení (internet/Wi-Fi) |                           phobos.apple.comocsp.apple.comax.itunes.apple.com                           | HTTP/HTTPS |  80 nebo 443   |                        Pouze Apple.                         |
+

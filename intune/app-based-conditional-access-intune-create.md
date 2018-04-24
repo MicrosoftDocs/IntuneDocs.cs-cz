@@ -1,28 +1,28 @@
 ---
-title: "Nastavení zásad podmíněného přístupu na základě aplikace v Intune"
-description: "Zjistěte, jak vytvořit zásadu podmíněného přístupu na základě aplikace."
-keywords: 
+title: Nastavení zásad podmíněného přístupu na základě aplikace v Intune
+description: Zjistěte, jak vytvořit zásadu podmíněného přístupu na základě aplikace.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/28/2017
+ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: d1693515-de18-4553-91ef-801976cd3ec7
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 89ee7c0df2fde740c18b84f1d9f028d59ba5d81d
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: b7e3654021935495189b62da5257793383586137
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Nastavení zásad podmíněného přístupu na základě aplikace v Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Tento článek popisuje, jak pro aplikace, které jsou na seznamu schválených aplikací, nastavit zásady podmíněného přístupu na základě aplikace. Na seznamu schválených aplikací jsou aplikace, které testoval Microsoft.
 
@@ -34,7 +34,7 @@ Tento článek popisuje, jak pro aplikace, které jsou na seznamu schválených 
 
 2.  Zvolte **Všechny služby** a zadejte: Intune.
 
-3.  Zvolte **Intune App Protection**.
+3.  Zvolte **Ochrana aplikací Intune**.
 
 4.  V podokně **Intune App Protection** v části **Podmíněný přístup** zvolte **Exchange Online**.
 

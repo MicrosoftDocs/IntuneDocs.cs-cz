@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ff426feff58de8b06fed7be9a0e6a52e9cc40ae3
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 9785078341c8e3469067042a3f3e8588f29c3a3b
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ios-policy-settings-in-microsoft-intune"></a>Nastavení zásad pro iOS v Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete konfigurovat v zařízeních s iOSem. Navíc můžete použít nástroj Apple Configurator k vytvoření vlastních nastavení, která nejsou k dispozici prostřednictvím Intune.
 
@@ -45,20 +45,22 @@ Pokud v tomto tématu není uvedené nastavení, které hledáte, je možné, ž
 ### <a name="security-settings"></a>Nastavení zabezpečení
 Všechna nastavení platí pro iOS 8.0 a novější.
 
-|Název nastavení|Podrobnosti|
-|----------------|-------|
-|**Vyžadovat heslo k odemknutí mobilních zařízení**|Určete, jestli uživatel při přístupu ke svému zařízení musí zadat heslo.|
-|**Požadovaný typ hesla**|Zadejte typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.|
-|**Požadovaný počet složitých znaků v hesle**|Zadejte počet znaků symbolu (jako například **#** nebo **@**), které musí heslo obsahovat.|
-|**Minimální délka hesla**|Zadejte minimální počet znaků v hesle.|
-|**Povolit jednoduchá hesla**|Umožňuje použití jednoduchých hesel, jako je třeba **0000** nebo **1234**.|
-|**Počet povolených opakovaných neúspěšných přihlášení, než se zařízení vymaže**|Zadejte počet neúspěšných pokusů o přihlášení, než toto nastavení vymaže zařízení.|
-|**Počet minut nečinnosti před vyžádáním hesla**<sup>1</sup>|Zadejte, jak dlouho může zařízení zůstat nečinné, než uživatel musí znovu zadat heslo.|
-|**Vypršení platnosti hesla (dny)**|Zadejte počet dní, než bude nutné změnit heslo zařízení.|
-|**Pamatovat si historii hesel**|Určete, jestli uživatel může použít hesla, která už použil.|
-|**Pamatovat si historii hesel** – **Zabránit opětovnému použití předchozích hesel**|Zadejte počet dříve použitých hesel, která si zařízení pamatuje.|
-|**Počet minut nečinnosti před vypnutím displeje**<sup>1</sup>|Zadejte počet minut, než se displej zařízení vypne.|
-|**Povolit odemknutí otiskem prstu**|Povolí odemknutí zařízení otiskem prstu.|
+
+|                                           Název nastavení                                            |                                                            Podrobnosti                                                             |
+|---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+|                   <strong>Vyžadovat heslo k odemknutí mobilních zařízení</strong>                    |                        Určete, jestli uživatel při přístupu ke svému zařízení musí zadat heslo.                        |
+|                              <strong>Požadovaný typ hesla</strong>                              |                   Zadejte typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.                    |
+|                <strong>Požadovaný počet složitých znaků v hesle</strong>                 | Zadejte počet znaků symbolu (jako například <strong>#</strong> nebo <strong>@</strong>), které musí heslo obsahovat. |
+|                             <strong>Minimální délka hesla</strong>                              |                                   Zadejte minimální počet znaků v hesle.                                    |
+|                              <strong>Povolit jednoduchá hesla</strong>                              |                          Umožňuje použití jednoduchých hesel, jako je třeba <strong>0000</strong> nebo <strong>1234</strong>.                          |
+|     <strong>Počet povolených opakovaných neúspěšných přihlášení, než se zařízení vymaže</strong>      |                       Zadejte počet neúspěšných pokusů o přihlášení, než toto nastavení vymaže zařízení.                        |
+|          <strong>Počet minut nečinnosti před vyžádáním hesla</strong><sup>1</sup>           |                   Zadejte, jak dlouho může zařízení zůstat nečinné, než uživatel musí znovu zadat heslo.                    |
+|                            <strong>Vypršení platnosti hesla (dny)</strong>                            |                             Zadejte počet dní, než bude nutné změnit heslo zařízení.                             |
+|                            <strong>Pamatovat si historii hesel</strong>                             |                           Určete, jestli uživatel může použít hesla, která už použil.                           |
+| <strong>Pamatovat si historii hesel</strong> – <strong>Zabránit opětovnému použití předchozích hesel</strong> |                           Zadejte počet dříve použitých hesel, která si zařízení pamatuje.                           |
+|            <strong>Počet minut nečinnosti před vypnutím displeje</strong><sup>1</sup>             |                             Zadejte počet minut, než se displej zařízení vypne.                             |
+|                             <strong>Povolit odemknutí otiskem prstu</strong>                             |                                        Povolí odemknutí zařízení otiskem prstu.                                         |
+
 <sup>1</sup>Pokud pro zařízení s iOSem nakonfigurujete nastavení **Počet minut nečinnosti před vypnutím displeje** a **Počet minut nečinnosti před vyžádáním hesla**, použijí se postupně. Pokud například pro obě nastavení nastavíte hodnotu **5** minut, obrazovka se po 5 minutách automaticky vypne a po dalších 5 minutách se zařízení zamkne. Pokud ale uživatel vypne obrazovku ručně, druhé nastavení se použije okamžitě. V tomto příkladě se zařízení po tom, co uživatel vypne obrazovku, zamkne po 5 minutách.
 
 ### <a name="system-settings"></a>Nastavení systému
@@ -180,25 +182,26 @@ Zásady obsahující kompatibilní a nekompatibilní nastavení aplikace musí b
 
 ### <a name="kiosk-mode-settings"></a>Nastavení celoobrazovkovém režimu
 
-|Název nastavení|Podrobnosti|
-|----------------|--------------------|
-|**Vyberte spravovanou aplikaci, která se bude dát spustit, když bude zařízení v celoobrazovkovém režimu**|Vyberte **Procházet** a zadejte spravovanou aplikaci nebo aplikaci z obchodu, která se bude moct spouštět, když je zařízení v celoobrazovkovém režimu. Žádné jiné aplikace nebudou mít dovoleno se na zařízení spouštět. Další nápovědu najdete v části Určení adres URL na obchody s aplikacemi dál v tomto tématu.|
-|**Povolit dotykové ovládání**|Na příslušném zařízení povolí nebo zakáže dotykovou obrazovku.|
-|**Povolit otočení obrazovky**|Povolí nebo zakáže změnu orientace obrazovky, když uživatel otočí zařízení.|
-|**Povolit tlačítka hlasitosti**|Povolí nebo zakáže použití tlačítek hlasitosti na zařízení.|
-|**Povolit přepínač vyzvánění**|Povolí nebo zakáže přepínač vyzvánění (ztlumení) na zařízení.|
-|**Povolit tlačítko pro probuzení obrazovky z režimu spánku**|Povolí nebo zakáže na zařízení tlačítko probuzení z režimu spánku obrazovky.|
-|**Povolit automatické uzamčení**|Povolí nebo zakáže automatické uzamykání zařízení.|
-|**Povolit mono zvuk**|Povolí nebo zakáže nastavení usnadnění **Mono zvuk**.|
-|**Povolit hlas na pozadí**|Povolí nebo zakáže nastavení usnadnění **VoiceOver**, které předčítá text na displeji zařízení.|
-|**Povolit úpravy hlasu na pozadí**|Povolí nebo zakáže úpravy hlasového přednesu, které umožňují nastavit funkci nástroje VoiceOver (například rychlost čtení textu na obrazovce).|
-|**Povolit lupu**|Povolí nebo zakáže nastavení usnadnění **Zvětšení**, které vám umožní používat na displeji zařízení funkci zvětšení zobrazení dotykem.|
-|**Povolit úpravy lupy**|Povolí nebo zakáže úpravy zvětšení, které uživateli umožňují nastavit funkci zvětšení.|
-|**Povolit invertování barev**|Povolí nebo zakáže nastavení usnadnění **Invertovat barvy**, které upraví displej pro potřeby uživatelů se zrakovým postižením.|
-|**Povolit úpravy invertování barev**|Povolí nebo zakáže úpravy inverze barev, které uživateli umožňují nastavit funkci inverze barev.|
-|**Povolit funkci dotykového ovládání pro usnadnění**|Povolí nebo zakáže nastavení usnadnění **dotykového ovládání**, která uživateli pomáhá provádět na obrazovce gesta, která by pro něho mohla být obtížná.|
-|**Povolit úpravy funkce dotykového ovládání pro usnadnění**|Povolí nebo zakáže úpravy usnadnění dotykového ovládání, které uživateli umožňují upravit funkce usnadnění dotykového ovládání.|
-|**Povolit výběr řeči**|Povolí nebo zakáže nastavení usnadnění **Výběr řeči**, které může nahlas přečíst text vybraný uživatelem.|
+|                                            Název nastavení                                            |                                                                                                                                      Podrobnosti                                                                                                                                       |
+|----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <strong>Vyberte spravovanou aplikaci, která se bude dát spustit, když bude zařízení v celoobrazovkovém režimu</strong> | Vyberte <strong>Procházet</strong> a zadejte spravovanou aplikaci nebo aplikaci z obchodu, která se bude moct spouštět, když je zařízení v celoobrazovkovém režimu. Žádné jiné aplikace nebudou mít dovoleno se na zařízení spouštět. Další nápovědu najdete v části Určení adres URL na obchody s aplikacemi dál v tomto tématu. |
+|                                    <strong>Povolit dotykové ovládání</strong>                                    |                                                                                                                  Na příslušném zařízení povolí nebo zakáže dotykovou obrazovku.                                                                                                                  |
+|                               <strong>Povolit otočení obrazovky</strong>                               |                                                                                                Povolí nebo zakáže změnu orientace obrazovky, když uživatel otočí zařízení.                                                                                                 |
+|                               <strong>Povolit tlačítka hlasitosti</strong>                                |                                                                                                           Povolí nebo zakáže použití tlačítek hlasitosti na zařízení.                                                                                                           |
+|                                <strong>Povolit přepínač vyzvánění</strong>                                |                                                                                                             Povolí nebo zakáže přepínač vyzvánění (ztlumení) na zařízení.                                                                                                              |
+|                          <strong>Povolit tlačítko pro probuzení obrazovky z režimu spánku</strong>                           |                                                                                                           Povolí nebo zakáže na zařízení tlačítko probuzení z režimu spánku obrazovky.                                                                                                            |
+|                                  <strong>Povolit automatické uzamčení</strong>                                  |                                                                                                                 Povolí nebo zakáže automatické uzamykání zařízení.                                                                                                                 |
+|                                 <strong>Povolit mono zvuk</strong>                                 |                                                                                                      Povolí nebo zakáže nastavení usnadnění <strong>Mono zvuk</strong>.                                                                                                      |
+|                                 <strong>Povolit hlas na pozadí</strong>                                 |                                                                               Povolí nebo zakáže nastavení usnadnění <strong>VoiceOver</strong>, které předčítá text na displeji zařízení.                                                                                |
+|                           <strong>Povolit úpravy hlasu na pozadí</strong>                           |                                                                  Povolí nebo zakáže úpravy hlasového přednesu, které umožňují nastavit funkci nástroje VoiceOver (například rychlost čtení textu na obrazovce).                                                                   |
+|                                    <strong>Povolit lupu</strong>                                    |                                                                         Povolí nebo zakáže nastavení usnadnění <strong>Zvětšení</strong>, které vám umožní používat na displeji zařízení funkci zvětšení zobrazení dotykem.                                                                         |
+|                              <strong>Povolit úpravy lupy</strong>                              |                                                                                                  Povolí nebo zakáže úpravy zvětšení, které uživateli umožňují nastavit funkci zvětšení.                                                                                                  |
+|                               <strong>Povolit invertování barev</strong>                                |                                                                    Povolí nebo zakáže nastavení usnadnění <strong>Invertovat barvy</strong>, které upraví displej pro potřeby uživatelů se zrakovým postižením.                                                                    |
+|                         <strong>Povolit úpravy invertování barev</strong>                          |                                                                                         Povolí nebo zakáže úpravy inverze barev, které uživateli umožňují nastavit funkci inverze barev.                                                                                         |
+|                              <strong>Povolit funkci dotykového ovládání pro usnadnění</strong>                               |                                                     Povolí nebo zakáže nastavení usnadnění <strong>dotykového ovládání</strong>, která uživateli pomáhá provádět na obrazovce gesta, která by pro něho mohla být obtížná.                                                     |
+|                        <strong>Povolit úpravy funkce dotykového ovládání pro usnadnění</strong>                         |                                                                                       Povolí nebo zakáže úpravy usnadnění dotykového ovládání, které uživateli umožňují upravit funkce usnadnění dotykového ovládání.                                                                                       |
+|                              <strong>Povolit výběr řeči</strong>                              |                                                                        Povolí nebo zakáže nastavení usnadnění <strong>Výběr řeči</strong>, které může nahlas přečíst text vybraný uživatelem.                                                                         |
+
 > [!NOTE]
 > Následující poznámky platí pro nastavení celoobrazovkového režimu na zařízeních iOS:
 >
@@ -349,8 +352,6 @@ Informace z tohoto seznamu můžete použít k identifikaci názvu, vydavatele a
 ,com.apple.Passbook,Wallet,Apple
 ,com.apple.Bridge,Watch,Apple
 ,com.apple.weather,Weather,Apple
-
-
 ```
 
 

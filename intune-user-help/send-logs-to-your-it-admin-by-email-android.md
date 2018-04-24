@@ -1,44 +1,47 @@
 ---
-title: "Odeslání protokolů firemní podpoře pomocí e-mailu | Dokumentace Microsoftu"
-description: "Odeslání datových protokolů zařízení s Androidem pomocí e-mailu"
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Odeslání protokolů firemní podpoře pomocí e-mailu | Microsoft Docs
+description: Odeslání datových protokolů zařízení s Androidem pomocí e-mailu
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 03/16/2017
+ms.date: 04/12/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 85c868e7-8d63-480c-9770-4e99614a5c94
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ddd0c1113b7cce6f461b627a3d346806df3bbc8c
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 5e37ab05889a1141464b75a36b4f156f897799ae
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="send-logs-to-your-company-support-using-email"></a>Odeslání protokolů firemní podpoře pomocí e-mailu
+# <a name="email-logs-to-your-company-support"></a>Posílání protokolů e-mailem firemní podpoře
 
-Pokud při použití aplikace Portál společnosti na zařízení s Androidem dojde k chybě, můžete firemní podpoře pomoct potíže vyřešit tak, že jí pošlete e-mailem informace o této chybě. Tyto informace se ukládají na zařízení ve speciálním dokumentu s názvem _diagnostický protokol_.
+Při používání aplikace Portál společnosti na zařízení s Androidem se někdy můžete setkat s chybou. Když se to stane, můžete podrobnosti o chybě poslat e-mailem pracovníkovi firemní podpory. Podrobnosti obsahují souvislosti potřebné k řešení problému.  
+
+Podrobnosti o chybě se v zařízení ukládají do zvláštního dokumentu s názvem _diagnostický protokol_. Když protokoly nahrajete do aplikace Portál společnosti, posílají se napřed vývojářům Microsoftu, kteří na aplikaci pracují. Protokoly používají k vylepšení funkčnosti aplikace a zabránění dalším chybám. Ke konkrétní chybě dostanete ID incidentu, které můžete sdílet s pracovníkem firemní podpory.  
 
 > [!Note]
-> Pokud chcete usnadnit firemní podpoře problém pochopit, měli byste zapnout _podrobné protokolování_. Při podrobném protokolování se do sestavy zahrnou všechny relevantní informace. Postup, jak [zapnout podrobné protokolování, najdete tady](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).
+> Pokud chcete pracovníkům firemní podpory usnadnit nalezení příčiny problému, zapněte _podrobné protokolování_. Podrobné protokolování zaznamenává všechny podrobnosti o chybách, které pak zahrne do zprávy. Postup, jak [zapnout podrobné protokolování, najdete tady](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).  
 
-Odeslání protokolů firemní podpoře pomocí e-mailu:
+Posílání protokolů e-mailem firemní podpoře:
 
 1.  Otevřete aplikaci Portál společnosti.
 
-2.  Klepněte na **Nabídka** >  **Nápověda a váš názor**.
+2.  Klepněte na **Nabídka** > **Nápověda** > **E-mailová podpora**.
 
     > [!NOTE]
     > Podle toho, jaké zařízení s Androidem máte, může být **Nabídka** buď softwarové, nebo hardwarové tlačítko.
 
-3.  V části **Nápověda** klepněte na **Získat nápovědu**.
+3.  Klepněte na **Poslat e-mail a nahrát protokoly**.
+4.  Po nahrání protokolů klepněte na e-mailovou aplikaci. Otevře se e-mailová zpráva s vyplněným ID incidentu v poli Předmět. Do textu e-mailu popište problém, se kterým jste se setkali.  
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).

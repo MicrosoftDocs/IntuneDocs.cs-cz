@@ -1,29 +1,29 @@
 ---
-title: "Použití vzdáleného vymazání při ochraně dat"
-description: "Intune poskytuje možnosti selektivního a úplného vymazání, aby bylo možné odebrat citlivá firemní data a odebrat přístup k mnoha firemním prostředkům."
-keywords: 
+title: Použití vzdáleného vymazání při ochraně dat
+description: Intune poskytuje možnosti selektivního a úplného vymazání, aby bylo možné odebrat citlivá firemní data a odebrat přístup k mnoha firemním prostředkům.
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 ms.date: 07/21/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8519e411-3d48-44eb-9b41-3e4fd6a93112
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: lancecra
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 85907167305e822ddf6a29475f032b2eb5f97a74
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: 82c50be9a8def23fadd8d24fc7654312d5c7ca5c
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="help-protect-your-data-with-full-or-selective-wipe-using-microsoft-intune"></a>Lepší ochrana dat s využitím plného nebo selektivního vymazání pomocí Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Ze zařízení spravovaných pomocí Intune, která už nejsou potřeba, mají se začít používat pro jiné účely nebo se ztratila, můžete vymazat aplikace a data. K tomuto účelu Intune poskytuje možnosti selektivního a úplného vymazání. Uživatelé také mohou odeslat příkaz ke vzdálenému vymazání zařízení z aplikace Portál společnosti Intune nainstalované na soukromých zařízeních zaregistrovaných v Intune.
 
@@ -40,37 +40,37 @@ Ze zařízení spravovaných pomocí Intune, která už nejsou potřeba, mají s
 
 ### <a name="remotely-wipe-a-device-from-the-intune-administrator-console"></a>Vzdálené vymazání zařízení z konzoly správce Intune
 
-1.  Vyberte zařízení, která se mají vymazat. Můžete je vyhledat podle uživatele nebo podle zařízení.
+1. Vyberte zařízení, která se mají vymazat. Můžete je vyhledat podle uživatele nebo podle zařízení.
 
-    -   **Podle uživatele:**
+   - **Podle uživatele:**
 
-        1.  V [konzole správce Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všichni uživatelé**.
+     1.  V [konzole správce Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všichni uživatelé**.
 
-        2.  Zvolte jméno uživatele, pro kterého chcete vymazat mobilní zařízení. Vyberte **Zobrazit vlastnosti**.
+     2.  Zvolte jméno uživatele, pro kterého chcete vymazat mobilní zařízení. Vyberte **Zobrazit vlastnosti**.
 
-        3.  Na stránce **Vlastnosti** tohoto uživatele zvolte **Zařízení** a pak klikněte na název mobilního zařízení, které chcete vymazat. Pokud chcete vybrat více zařízení, použijte Ctrl + kliknutí.
+     3.  Na stránce **Vlastnosti** tohoto uživatele zvolte **Zařízení** a pak klikněte na název mobilního zařízení, které chcete vymazat. Pokud chcete vybrat více zařízení, použijte Ctrl + kliknutí.
 
-    -   **Podle zařízení:**
+   - **Podle zařízení:**
 
-        1.  V [konzole správce Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všechna mobilní zařízení**.
+     1. V [konzole správce Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všechna mobilní zařízení**.
 
-         ![Zahájení operace vymazání nebo vyřazení](../media/dev-sa-wipe.png)
+        ![Zahájení operace vymazání nebo vyřazení](../media/dev-sa-wipe.png)
 
-        2.  Zvolte **Zařízení** a pak vyberte název mobilního zařízení, které chcete vymazat. Pokud chcete vybrat více zařízení, použijte Ctrl + kliknutí.
+     2. Zvolte **Zařízení** a pak vyberte název mobilního zařízení, které chcete vymazat. Pokud chcete vybrat více zařízení, použijte Ctrl + kliknutí.
 
-2.  Zvolte **Vyřadit z provozu či vymazat**.
+2. Zvolte **Vyřadit z provozu či vymazat**.
 
-3.  Zobrazí se zpráva, která žádá o potvrzení, že chcete zařízení vyřadit.
+3. Zobrazí se zpráva, která žádá o potvrzení, že chcete zařízení vyřadit.
 
-    -   Pokud chcete provést **selektivní vymazání**, které odebere jenom aplikace a data společnosti, zvolte **Ano**.
+   -   Pokud chcete provést **selektivní vymazání**, které odebere jenom aplikace a data společnosti, zvolte **Ano**.
 
-    -   Pokud chcete provést **úplné vymazání**, který vymaže všechny aplikace a data a vrátí zařízení do výchozího nastavení z výroby, zvolte **Před vyřazením z provozu zařízení vymazat**. Tato akce se vztahuje na všechny platformy kromě Windows 8.1. **Data odebraná pomocí úplného vymazání nejde obnovit**.
+   -   Pokud chcete provést **úplné vymazání**, který vymaže všechny aplikace a data a vrátí zařízení do výchozího nastavení z výroby, zvolte **Před vyřazením z provozu zařízení vymazat**. Tato akce se vztahuje na všechny platformy kromě Windows 8.1. **Data odebraná pomocí úplného vymazání nejde obnovit**.
 
 Pokud je zařízení zapnuté a připojené, trvá vymazání všech typů zařízení méně než 15 minut.
 
 #### <a name="to-delete-devices-in-the-azure-active-directory-portal"></a>Odstranění zařízení na portálu služby Azure Active Directory
 
-1.  Přejděte na adresu [http://aka.ms/accessaad](http://aka.ms/accessaad) nebo zvolte **Správce** &gt; **Azure AD** na webu [https://portal.office.com](https://portal.office.com).
+1.  Přejděte na [http://aka.ms/accessaad](http://aka.ms/accessaad) nebo zvolte **Správce** &gt; **Azure AD** na [https://portal.office.com](https://portal.office.com).
 
 2.  Použijte odkaz v levé části stránky a přihlaste se pod svým ID organizace.
 

@@ -1,28 +1,28 @@
 ---
-title: "Zabalení aplikací pro iOS nástrojem Intune App Wrapping"
-description: "Naučte se balit aplikace pro iOS beze změny samotného kódu aplikace. Připravte aplikace, abyste mohli použít zásady správy mobilních aplikací."
-keywords: 
+title: Zabalení aplikací pro iOS nástrojem Intune App Wrapping
+description: Naučte se balit aplikace pro iOS beze změny samotného kódu aplikace. Připravte aplikace, abyste mohli použít zásady správy mobilních aplikací.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: c9329c25d6211149102c06b44fdb6d6222b13550
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: e8e2783be3c515aa742a3adc149304e0a2ae3b99
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro iOS na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
-[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
+[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 Pomocí nástroje Microsoft Intune App Wrapping Tool pro iOS můžete zapnout zásady ochrany aplikací Intune pro interní aplikace pro iOS, aniž byste museli měnit kód samotné aplikace.
 
@@ -98,48 +98,48 @@ K distribuci aplikací zabalených pomocí Intune budete potřebovat toto:
 
 4. Klikněte na **Certificates, IDs & Profiles** (Certifikáty, ID a profily).
 
-  ![Portál Apple Developer](./media/iOS-signing-cert-1.png)
+   ![Portál Apple Developer](./media/iOS-signing-cert-1.png)
 
 5. Klikněte na ![znaménko plus portálu Apple Developer](./media/iOS-signing-cert-2.png) v pravém horním rohu, abyste mohli přidat certifikát iOS.
 
 6. V části **Production** (Výroba) zvolte možnost vytvořit **In-House and Ad Hoc** (Interní a ad hoc) certifikát.
 
-  ![Výběr vnitřního a ad hoc certifikátu](./media/iOS-signing-cert-3.png)
+   ![Výběr vnitřního a ad hoc certifikátu](./media/iOS-signing-cert-3.png)
 
-  >[!NOTE]
-  >Pokud nechcete aplikaci distribuovat, ale jenom ji interně testovat, můžete místo certifikátu pro výrobu použít certifikát pro vývoj aplikací pro iOS. Když použijete certifikát pro vývoj, zajistěte, aby mobilní zřizovací profil odkazoval na zařízení, na která se bude aplikace instalovat.
+   >[!NOTE]
+   >Pokud nechcete aplikaci distribuovat, ale jenom ji interně testovat, můžete místo certifikátu pro výrobu použít certifikát pro vývoj aplikací pro iOS. Když použijete certifikát pro vývoj, zajistěte, aby mobilní zřizovací profil odkazoval na zařízení, na která se bude aplikace instalovat.
 
 7. V dolní části stránky klikněte na **Next** (Další).
 
 8. Přečtěte si pokyny k vytváření **žádosti o podepsání certifikátu (CSR)** pomocí aplikace Klíčenka na počítači s macOS.
 
-  ![Přečtěte si pokyny, jak vytvořit CSR](./media/iOS-signing-cert-4.png)
+   ![Přečtěte si pokyny, jak vytvořit CSR](./media/iOS-signing-cert-4.png)
 
 9. Pomocí pokynů výše vytvořte žádost o podepsání certifikátu. Na počítači s macOS spusťte aplikaci **Klíčenka**.
 
 10. V nabídce macOS v horní části obrazovky přejděte na **Klíčenka > Průvodce certifikací > Vyžádat si certifikát od certifikační autority**.  
 
-  ![Žádost o certifikát od certifikační autority v Klíčence](./media/iOS-signing-cert-5.png)
+    ![Žádost o certifikát od certifikační autority v Klíčence](./media/iOS-signing-cert-5.png)
 
 11. Pomocí pokynů na webu Apple Developer výše vytvořte soubor CSR. Uložte soubor CSR na svůj počítač s macOS.
 
-  ![Žádost o certifikát od certifikační autority v Klíčence](./media/iOS-signing-cert-6.png)
+    ![Žádost o certifikát od certifikační autority v Klíčence](./media/iOS-signing-cert-6.png)
 
 12. Vraťte se na web Apple Developer. Klikněte na **Continue** (Pokračovat). Pak nahrajte soubor CSR.
 
 13. Apple vygeneruje váš podpisový certifikát. Stáhněte a uložte si ho do počítače s macOS na nějaké snadno zapamatovatelné místo.
 
-  ![Stažení podpisového certifikátu](./media/iOS-signing-cert-7.png)
+    ![Stažení podpisového certifikátu](./media/iOS-signing-cert-7.png)
 
 14. Na certifikát, který jste si právě stáhli, poklikejte, aby se uložil do svazku klíčů.
 
 15. Znovu otevřete **Klíčenku**. Vyhledejte certifikát zadáním jeho názvu do panelu hledání v pravém horním rohu. Klikněte pravým tlačítkem na danou položku, aby se zobrazila nabídka, a pak klikněte na **Get Info** (Získat informace). V ukázkových obrazovkách používáme místo certifikátu pro výrobu certifikát pro vývoj.
 
-  ![Přidání certifikátu do svazku klíčů](./media/iOS-signing-cert-8.png)
+    ![Přidání certifikátu do svazku klíčů](./media/iOS-signing-cert-8.png)
 
 16. Zobrazí se informační okno. Posuňte se až dolů a podívejte se pod popisek **Fingerprints** (Otisky). Zkopírujte řetězec **SHA1** (rozostřený), který se použije jako argument pro parametr „-c“ nástroje App Wrapping Tool.
 
-  ![Přidání certifikátu do svazku klíčů](./media/iOS-signing-cert-9.png)
+    ![Přidání certifikátu do svazku klíčů](./media/iOS-signing-cert-9.png)
 
 
 
@@ -153,7 +153,7 @@ K distribuci aplikací zabalených pomocí Intune budete potřebovat toto:
 
 4. V části **Distribution** (Distribuce) zvolte možnost vytvořit **In House** (Interní) zřizovací profil.
 
-  ![Výběr interního zřizovacího profilu](./media/iOS-provisioning-profile-1.png)
+   ![Výběr interního zřizovacího profilu](./media/iOS-provisioning-profile-1.png)
 
 5. Klikněte na **Continue** (Pokračovat). Nezapomeňte propojit předtím vygenerovaný podpisový certifikát se zřizovacím profilem.
 
@@ -414,8 +414,8 @@ Následující postup vám pomůže získat protokoly zabalených aplikací, kte
 4. Klikněte na odkaz „Začínáme“.
 5. Teď můžete protokoly sdílet prostřednictvím e-mailu nebo je můžete kopírovat do umístění na OneDrivu.
 
->[!NOTE]
-Funkce protokolování je zapnutá pro aplikace zabalené nástrojem Intune App Wrapping Tool verze 7.1.13 nebo vyšší.
+> [!NOTE]
+> Funkce protokolování je zapnutá pro aplikace zabalené nástrojem Intune App Wrapping Tool verze 7.1.13 nebo vyšší.
 
 ### <a name="see-also"></a>Viz taky
 - [Rozhodování o způsobu přípravy aplikací na jejich správu v Microsoft Intune](apps-prepare-mobile-application-management.md)</br>

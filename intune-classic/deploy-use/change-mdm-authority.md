@@ -14,11 +14,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b5494e4b2b6a7983d05ac83d9bc495677ee1a1ab
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: dc73befb46f1f159d9a8c023bb5604517b9f73f4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="change-the-mdm-authority"></a>Změna autority MDM
 Od Configuration Manageru verze 1610 můžete změnit autoritu MDM, aniž by bylo nutné kontaktovat podporu Microsoftu a rušit registraci a následně nově registrovat stávající spravovaná zařízení. Toto téma představuje kroky ke změně existujícího tenanta Microsoft Intune nakonfigurovaného z Intune a s autoritu MDM nastavenou na **Microsoft Intune** (samostatně) na **Configuration Manager** (hybridní MDM), aniž byste museli zrušit registraci existujících spravovaných zařízení a znovu je zaregistrovat.
@@ -76,16 +76,16 @@ Pokud máte zařízení s iOSem, musíte nakonfigurovat certifikát APNs v Confi
 
 1. **Stáhněte žádost o podepsání certifikátu**
 
-    1. V konzole Configuration Manageru přejděte na **Správa** &gt; **Cloudové služby** &gt; **Předplatné Microsoft Intune** a vyberte **Vytvořit žádost o certifikát APNs**. Tím se otevře dialogové okno **Podat žádost o podepsání certifikátu APNs**.  
-    2. Pomocí možnosti**Procházet** přejděte k cestě, kam chcete uložit nový soubor žádosti o podepsání certifikátu (.csr). Uložte soubor žádosti o podepsání certifikátu (.csr) místně.  
-    3. Klikněte na tlačítko **Download**(Stáhnout). Configuration Manager stáhne a uloží nový soubor .csr služby Microsoft Intune.   
+   1. V konzole Configuration Manageru přejděte na **Správa** &gt; **Cloudové služby** &gt; **Předplatné Microsoft Intune** a vyberte **Vytvořit žádost o certifikát APNs**. Tím se otevře dialogové okno **Podat žádost o podepsání certifikátu APNs**.  
+   2. Pomocí možnosti**Procházet** přejděte k cestě, kam chcete uložit nový soubor žádosti o podepsání certifikátu (.csr). Uložte soubor žádosti o podepsání certifikátu (.csr) místně.  
+   3. Klikněte na tlačítko **Download**(Stáhnout). Configuration Manager stáhne a uloží nový soubor .csr služby Microsoft Intune.   
 
-    > [!IMPORTANT]
-    > Musíte stáhnout novou žádost o podepsání certifikátu. Nepoužívejte stávající soubor, nebo se postup nezdaří.  
+      > [!IMPORTANT]
+      > Musíte stáhnout novou žádost o podepsání certifikátu. Nepoužívejte stávající soubor, nebo se postup nezdaří.  
 
-2.  Přejděte na [Apple Push Certificates Portal](http://go.microsoft.com/fwlink/?LinkId=269844) a přihlaste se pomocí **stejného** Apple ID, jaké se použilo k předchozímu vytvoření a obnovení certifikátu APNs, který jste použili v samostatném Intune.
+2. Přejděte na [Apple Push Certificates Portal](http://go.microsoft.com/fwlink/?LinkId=269844) a přihlaste se pomocí **stejného** Apple ID, jaké se použilo k předchozímu vytvoření a obnovení certifikátu APNs, který jste použili v samostatném Intune.
 
-    ![Přihlašovací stránka Apple Push Certificates Portalu](../media/mdm-change-apns-portal.png)
+   ![Přihlašovací stránka Apple Push Certificates Portalu](../media/mdm-change-apns-portal.png)
 
 3. Vyberte certifikát APNs, který jste použili v samostatném Intune, a pak klikněte na **Renew** (Obnovit).
 

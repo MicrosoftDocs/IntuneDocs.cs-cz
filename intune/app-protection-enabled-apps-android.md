@@ -1,29 +1,29 @@
 ---
-title: "Aplikace pro Android se zásadami ochrany aplikací"
+title: Aplikace pro Android se zásadami ochrany aplikací
 titlesuffix: Microsoft Intune
-description: "Zjistěte, co můžete očekávat od aplikace pro Android, která má zásady ochrany."
-keywords: 
+description: Zjistěte, co můžete očekávat od aplikace pro Android, která má zásady ochrany.
+keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 12/07/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: a6816285-8e43-4dc8-bca0-e80ec5ef01e6
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: af25dc918907e086441a89f222985a75199bbe95
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 450bcd9c807bdfae16e9c2fa1eb813b00444df65
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-to-expect-when-your-android-app-is-managed-by-app-protection-policies"></a>Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Zjistěte, co můžete očekávat od aplikací pro Android, které mají zásady ochrany aplikací. Zásady ochrany aplikací se použijí jenom v případě, že se aplikace používají k práci. Například při přístupu k aplikaci pomocí pracovního účtu nebo když zobrazujete soubory uložené na OneDrivu vaší společnosti.
 ##  <a name="accessing-apps"></a>Přístup k aplikacím
@@ -75,9 +75,11 @@ Podporovány jsou následující typy souborů:
 * **Dokumenty:** PDF, PPDF
 
 ------------
-|**pfile**|**text**|
-|----|----|
-|Pfile je obecný formát obálky pro chráněné soubory. Zapouzdřuje šifrovaný obsah a licence Azure Information Protection. Dá se použít pro ochranu libovolného typu souboru.|Textové soubory včetně souborů XML, CSV atd. lze otevřít pro zobrazení v aplikaci, i když jsou chráněny. Typy souborů: txt, ptxt, csv, pcsv, log, plog, xml, pxml.|
+
+|                                                                                 <strong>pfile</strong>                                                                                 |                                                                      <strong>text</strong>                                                                      |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Pfile je obecný formát obálky pro chráněné soubory. Zapouzdřuje šifrovaný obsah a licence Azure Information Protection. Dá se použít pro ochranu libovolného typu souboru. | Textové soubory včetně souborů XML, CSV atd. lze otevřít pro zobrazení v aplikaci, i když jsou chráněny. Typy souborů: txt, ptxt, csv, pcsv, log, plog, xml, pxml. |
+
 ---------------
 ## <a name="next-steps"></a>Další kroky
 [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](app-protection-enabled-apps-ios.md)

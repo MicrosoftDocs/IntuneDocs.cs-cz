@@ -1,29 +1,29 @@
 ---
-title: "Nastavení zásad pro Windows Phone 8.1"
-description: "Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete konfigurovat v zařízeních s Windows Phone 8.1. Navíc můžete určit hodnoty OMA-URI k vytvoření vlastních nastavení, která nejsou k dispozici prostřednictvím Intune."
-keywords: 
+title: Nastavení zásad pro Windows Phone 8.1
+description: Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete konfigurovat v zařízeních s Windows Phone 8.1. Navíc můžete určit hodnoty OMA-URI k vytvoření vlastních nastavení, která nejsou k dispozici prostřednictvím Intune.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 83f7469c-272e-43f2-8139-b0d7bc34f43f
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 083ac6c4bbab6cdad9fd07ac68cdd7447f14fe5e
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: b44215e301bb712cc4d27722515d2e51b124101b
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="windows-phone-81-policy-settings-in-microsoft-intune"></a>Nastavení zásad pro Windows Phone 8.1 v Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete konfigurovat v zařízeních s Windows Phone 8.1. Navíc můžete určit hodnoty OMA-URI (Open Mobile Alliance Uniform Resource Identifier) k vytvoření vlastních nastavení, která nejsou k dispozici prostřednictvím Intune.
 
@@ -43,18 +43,18 @@ Ke konfiguraci následujících nastavení pro zařízení s Windows Phone 8.1 p
 
 ### <a name="password-settings"></a>Nastavení hesla
 
-|Název nastavení|Podrobnosti|
-|----------------|------|
-|**Vyžadovat heslo k odemknutí mobilních zařízení**|Zadejte, jestli uživatelé při přístupu ke svému zařízení musí zadat heslo.|
-|**Vyžadovaný typ hesla**|Určuje typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.|
-|**Vyžadovaný typ hesla – Minimální počet znakových sad**|Určuje, kolik různých znakových sad musí být v hesle zahrnutých. Používají se čtyři znakové sady: malá písmena, velká písmena, číslice a symboly. Pro zařízení s iOSem ale toto nastavení určuje počet symbolů, které musí heslo obsahovat.|
-|**Minimální délka hesla**|Určuje minimální počet znaků, které heslo musí obsahovat.|
-|**Povolit jednoduchá hesla**|Umožňuje použití jednoduchých hesel, jako je 0000 nebo 1234.|
-|**Počet povolených opakovaných neúspěšných přihlášení, než se zařízení vymaže**|Určuje, kolikrát může uživatel zadat nesprávné heslo, než se zařízení vymaže.|
-|**Počet minut nečinnosti před vypnutím displeje**|Určuje dobu, po kterou musí zařízení zůstat v nečinnosti, než se automaticky uzamkne jeho obrazovka.|
-|**Vypršení platnosti hesla (dny)**|Určuje počet dní, než bude nutné změnit heslo zařízení.|Ano|Ano|
-|**Pamatovat si historii hesel**|Určuje, jestli se dříve použitá hesla pamatují, aby je uživatelé nemohli použít znovu.|
-|**Pamatovat si historii hesel** – **Zabránit opětovnému použití předchozích hesel**|Určuje, kolik dříve použitých hesel se pamatuje.|
+|                                           Název nastavení                                            |                                                                                                                                    Podrobnosti                                                                                                                                     |
+|---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|                   <strong>Vyžadovat heslo k odemknutí mobilních zařízení</strong>                    |                                                                                                     Zadejte, jestli uživatelé při přístupu ke svému zařízení musí zadat heslo.                                                                                                     |
+|                              <strong>Požadovaný typ hesla</strong>                              |                                                                                          Určuje typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.                                                                                           |
+|            <strong>Vyžadovaný typ hesla – Minimální počet znakových sad</strong>             | Určuje, kolik různých znakových sad musí být v hesle zahrnutých. Používají se čtyři znakové sady: malá písmena, velká písmena, číslice a symboly. Pro zařízení s iOSem ale toto nastavení určuje počet symbolů, které musí heslo obsahovat. |
+|                             <strong>Minimální délka hesla</strong>                              |                                                                                                 Určuje minimální počet znaků, které heslo musí obsahovat.                                                                                                  |
+|                              <strong>Povolit jednoduchá hesla</strong>                              |                                                                                                     Umožňuje použití jednoduchých hesel, jako je 0000 nebo 1234.                                                                                                     |
+|     <strong>Počet povolených opakovaných neúspěšných přihlášení, než se zařízení vymaže</strong>      |                                                                                         Určuje, kolikrát může uživatel zadat nesprávné heslo, než se zařízení vymaže.                                                                                         |
+|                <strong>Počet minut nečinnosti před vypnutím displeje</strong>                 |                                                                                       Určuje dobu, po kterou musí zařízení zůstat v nečinnosti, než se automaticky uzamkne jeho obrazovka.                                                                                        |
+|                            <strong>Vypršení platnosti hesla (dny)</strong>                            |                                                                                                    Určuje počet dní, než bude nutné změnit heslo zařízení.                                                                                                    |
+|                            <strong>Pamatovat si historii hesel</strong>                             |                                                                                     Určuje, jestli se dříve použitá hesla pamatují, aby je uživatelé nemohli použít znovu.                                                                                      |
+| <strong>Pamatovat si historii hesel</strong> – <strong>Zabránit opětovnému použití předchozích hesel</strong> |                                                                                                          Určuje, kolik dříve použitých hesel se pamatuje.                                                                                                          |
 
 ### <a name="encryption-settings"></a>Nastavení šifrování
 
@@ -119,14 +119,15 @@ V seznamu **Povolené a blokované aplikace** zadejte seznam aplikací, které c
 > [!NOTE]
 > Jedna zásada může obsahovat seznam jenom povolených, nebo jenom blokovaných aplikací. Nejde zadat oba seznamy v jedné zásadě.
 
-|Název nastavení|Podrobnosti|
-|----------------|--------------------|
-|**Blokovat v zařízeních otevírání uvedených aplikací**|Zobrazí seznam aplikací, které Intune nespravuje a které nemají uživatelé dovolené nainstalovat a spustit.|
-|**Povolit v zařízeních instalovat jenom uvedené aplikace**|Zobrazí seznam aplikací, které mají uživatelé dovoleno instalovat. Uživatelé nemůžou instalovat žádné další aplikace. Aplikace, které spravuje Intune, jsou povolené automaticky.|
-|**Přidat**|Přidá aplikaci do vybraného seznamu. Zadejte název podle své volby, volitelně vydavatele aplikaci a adresu URL aplikace v úložišti aplikací. Další nápovědu najdete v části Určení adres URL na obchody s aplikacemi dál v tomto tématu.
-|**Importovat aplikace**|Importuje seznam aplikací, které jste zadali v souboru hodnot oddělených čárkami. V souboru použijte formát: název aplikace, vydavatel a adresa URL aplikace.|
-|**Upravit**|Tady můžete upravit název, vydavatele a adresu URL vybrané aplikace.|
-|**Odstranit**|Odstraní vybranou aplikaci ze seznamu.|
+|                          Název nastavení                          |                                                                                                      Podrobnosti                                                                                                      |
+|----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  <strong>Blokovat v zařízeních otevírání uvedených aplikací</strong>   |                                                        Zobrazí seznam aplikací, které Intune nespravuje a které nemají uživatelé dovolené nainstalovat a spustit.                                                         |
+| <strong>Povolit v zařízeních instalovat jenom uvedené aplikace</strong> |                                 Zobrazí seznam aplikací, které mají uživatelé dovoleno instalovat. Uživatelé nemůžou instalovat žádné další aplikace. Aplikace, které spravuje Intune, jsou povolené automaticky.                                 |
+|                      <strong>Přidat</strong>                      | Přidá aplikaci do vybraného seznamu. Zadejte název podle své volby, volitelně vydavatele aplikaci a adresu URL aplikace v úložišti aplikací. Další nápovědu najdete v části Určení adres URL na obchody s aplikacemi dál v tomto tématu. |
+|                  <strong>Importovat aplikace</strong>                  |                              Importuje seznam aplikací, které jste zadali v souboru hodnot oddělených čárkami. V souboru použijte formát: název aplikace, vydavatel a adresa URL aplikace.                               |
+|                     <strong>Upravit</strong>                      |                                                                          Tady můžete upravit název, vydavatele a adresu URL vybrané aplikace.                                                                          |
+|                    <strong>Odstranit</strong>                     |                                                                                      Odstraní vybranou aplikaci ze seznamu.                                                                                      |
+
 > [!IMPORTANT]
 > Pokud zadáváte seznam aplikací povolených pro zařízení Windows Phone 8.1, je potřeba přidat do tohoto seznamu aplikaci Portál společnosti, jinak se zablokuje.
 
@@ -140,7 +141,7 @@ Na stránce [Aplikace a hry pro Windows Phone](http://www.windowsphone.com/store
 
 Otevřete stránku aplikace a zkopírujte adresu URL do schránky. Tu teď můžete použít jako adresu URL v seznamu povolených nebo blokovaných aplikací.
 
-**Příklad:** Vyhledání aplikace Skype ve Storu. Použijete adresu URL **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.
+**Příklad:** Vyhledání aplikace Skype ve Storu. Adresa URL, kterou použijete, bude **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.
 
 ## <a name="custom-policy-settings"></a>Nastavení vlastních zásad
 Pomocí možnosti Microsoft Intune **Zásady vlastní konfigurace pro Windows Phone** nasaďte nastavení OMA-URI, které se dá používat k ovládání funkcí na zařízeních s **Windows Phone 8.1**. Jsou to standardní nastavení, která k ovládání funkcí zařízení používá spousta výrobců mobilních zařízení.
@@ -170,5 +171,5 @@ V dialogovém okně **Přidat nebo upravit nastavení OMA-URI** zadejte následu
     |**OMA-URI (rozlišování velkých a malých písmen)**|Zadejte OMA-URI, pro který chcete zadat nastavení.|
     |**Hodnota**|Zadejte hodnotu pro přidružení k OMA-URI, který jste zadali dřív.|
 
-### <a name="see-also"></a>Související témata
+### <a name="see-also"></a>Viz taky
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)

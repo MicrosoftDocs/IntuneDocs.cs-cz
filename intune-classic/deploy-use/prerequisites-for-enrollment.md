@@ -1,29 +1,29 @@
 ---
-title: "Požadavky pro registraci mobilních zařízení"
-description: "Nastavte požadavky správy mobilních zařízení a připravte registraci různých operačních systémů."
-keywords: 
+title: Požadavky pro registraci mobilních zařízení
+description: Nastavte požadavky správy mobilních zařízení a připravte registraci různých operačních systémů.
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9d02a822dc9a403806657f36ae0ac4bfad8246d0
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 57dfc1bf2765de6c2e02352caca58f3859742fd6
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prerequisites-for-mobile-device-management-in-intune"></a>Požadavky na správu mobilních zařízení v Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Pokud chcete zaměstnancům povolit registraci mobilních zařízení s Intune, proveďte následující kroky. Stejné kroky je třeba podniknout i v případě správy zařízení ve vlastnictví společnosti.
 
@@ -39,7 +39,7 @@ Pokud chcete zaměstnancům povolit registraci mobilních zařízení s Intune, 
 
 Hledáte Intune s Configuration Managerem?
 > [!div class="button"]
-[Zobrazit dokumentaci k SCCM >](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm)
+> [Zobrazit dokumentaci k SCCM >](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm)
 
 ## <a name="step-1-enable-connections"></a>Krok 1: Povolení připojení
 
@@ -80,14 +80,15 @@ Přizpůsobení Portálu společnosti pomáhá poskytnout známé a užitečné 
 
 Název společnosti je zobrazen v záhlaví okna Portálu společnosti. Kontaktní informace a podrobnosti se uživatelům zobrazí na obrazovce Kontakt na IT v Portálu společnosti. Prohlášení o ochraně osobních údajů se zobrazí po kliknutí na odkaz na zásady ochrany osobních údajů.
 
-|Název pole|Maximální délka|Další informace|
-    |----------|------------------------|----------------|
-    |Název společnosti|40|Tento název se zobrazí v záhlaví okna Portálu společnosti. **Poznámka:**: povolené jsou jen alfanumerické znaky. Toto pole nepodporuje speciální znaky.|
-    |Jméno kontaktní osoby oddělení IT|40|Tento název se zobrazí na stránce **Kontakt na IT**.|
-    |Telefonní číslo oddělení IT|20|Toto kontaktní číslo se zobrazí na stránce **Kontakt na IT**.|
-    |E-mailová adresa oddělení IT|40|Tato kontaktní adresa se zobrazí na stránce **Kontakt na IT**. Je potřeba zadat platnou e-mailovou adresu ve formátu **alias@domainname.com**.|
-    |Další informace|120|Tyto informace se zobrazí na stránce **Kontakt na IT**.|
-    |Adresa URL prohlášení o zásadách ochrany osobních údajů společnosti|79|Můžete přidat vlastní prohlášení o zásadách ochrany osobních údajů společnosti, které se uživatelům zobrazí po kliknutí na příslušné odkazy v Portálu společnosti. Pole musí obsahovat platnou adresu URL ve formátu https://www.contoso.com.|
+
+|          Název pole           | Maximální délka |                                                                                       Další informace                                                                                        |
+|-------------------------------|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|         Název společnosti          |     40     |                Tento název se zobrazí v záhlaví okna Portálu společnosti. <strong>Poznámka:</strong>: povolené jsou jen alfanumerické znaky. Toto pole nepodporuje speciální znaky.                |
+|  Jméno kontaktní osoby oddělení IT   |     40     |                                                                Tento název se zobrazí na stránce <strong>Kontakt na IT</strong>.                                                                |
+|  Telefonní číslo oddělení IT   |     20     |                                                           Toto kontaktní číslo se zobrazí na stránce <strong>Kontakt na IT</strong>.                                                           |
+|  E-mailová adresa oddělení IT  |     40     |             Tato kontaktní adresa se zobrazí na stránce <strong>Kontakt na IT</strong>. Je potřeba zadat platnou e-mailovou adresu ve formátu <strong>alias@domainname.com</strong>.              |
+|    Další informace     |    120     |                                                            Tyto informace se zobrazí na stránce <strong>Kontakt na IT</strong>.                                                             |
+| Adresa URL prohlášení o zásadách ochrany osobních údajů společnosti |     79     | Můžete přidat vlastní prohlášení o zásadách ochrany osobních údajů společnosti, které se uživatelům zobrazí po kliknutí na příslušné odkazy v Portálu společnosti. Musíte zadat platnou adresu URL ve formátu https://www.contoso.com. |
 
 ### <a name="support-contacts"></a>Kontaktní údaje podpory
 Web podpory je zobrazen uživatelům v Portálu společnosti, aby jim umožnil přístup k online podpoře.
@@ -199,7 +200,7 @@ Odeberte předplatné Intune tak, že kliknete pravým tlačítkem na předplatn
 
 #### <a name="reset-mdm-authority-from-office-365-to-configuration-manager"></a>Resetování autority MDM z Office 365 na Configuration Manager
 
-1. Přejděte na web [https://protection.office.com](https://protection.office.com).
+1. Přejděte na [https://protection.office.com](https://protection.office.com).
 2. Vyberte kartu **Zásady zabezpečení** a pak vyberte **Správa zařízení**.
 3. Vyřaďte všechna zařízení výběrem možnosti **Vymazat selektivně**. Nepokoušejte se vyřadit zařízení ze samotného zařízení. Pokud je selektivní vymazání zakázáno, není už potřeba žádná další akce.
 4. Vyberte kartu **Zásady zabezpečení** a pak vyberte **Zásady zabezpečení zařízení**.

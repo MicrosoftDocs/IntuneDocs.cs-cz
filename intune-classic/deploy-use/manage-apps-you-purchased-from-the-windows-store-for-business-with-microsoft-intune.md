@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: coryfe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 50fc27efc34ab6c13fad714e41be0d87c5ab0df9
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: b32f9c6be910156c26b446b7bf70a7975b4afaff
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Správa aplikací zakoupených v Microsoft Storu pro firmy v Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 [Microsoft Store pro firmy](https://www.microsoft.com/business-store) je místo, kde můžete najít a zakoupit aplikace pro svou organizaci, a to jednotlivě i hromadně. Pokud Store propojíte s Microsoft Intune, můžete spravovat hromadně zakoupené aplikace pomocí konzoly Intune. Příklad:
 * Můžete synchronizovat seznam aplikací, které jste zakoupili ve Storu, s Intune.
@@ -57,8 +57,8 @@ Teď můžete pokračovat a nastavit synchronizaci v konzole Intune.
 1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Správce**.
 2. V pracovním prostoru **Správa** rozbalte **Správa mobilních zařízení** > **Windows** a pak zvolte **Store pro firmy**.
 3. Na stránce **Microsoft Store pro firmy** postupujte takto:
- * Pokud jste to ještě neudělali, klikněte na odkaz pro registraci v Microsoft Storu pro firmy.
- * Až se zaregistrujete, zvolte **Konfigurovat synchronizaci**.
+   * Pokud jste to ještě neudělali, klikněte na odkaz pro registraci v Microsoft Storu pro firmy.
+   * Až se zaregistrujete, zvolte **Konfigurovat synchronizaci**.
 4. V dialogovém okně **Konfigurovat synchronizaci aplikací s Microsoft Storem pro firmy** vyberte **Povolit synchronizaci s Microsoft Storem pro firmy**.
 5. V rozevíracím seznamu **Jazyk** vyberte jazyk, ve kterém se mají aplikace z Microsoft Storu pro firmy zobrazovat v konzole Intune. Bez ohledu na jazyk, ve kterém se budou zobrazovat, se nainstalují v jazyce koncového uživatele, pokud je dostupný.
 6. Klikněte na **OK**.

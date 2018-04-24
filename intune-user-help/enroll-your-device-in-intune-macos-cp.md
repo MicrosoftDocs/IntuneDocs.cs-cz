@@ -1,27 +1,27 @@
 ---
-title: "Registrace zařízení s macOS v Intune pomocí Portálu společnosti | Microsoft Docs"
-description: "Popisuje postup registrace zařízení s macOS v Intune pomocí aplikace Portál společnosti."
+title: Registrace zařízení s macOS v Intune pomocí Portálu společnosti | Dokumentace Microsoftu
+description: Popisuje postup registrace zařízení s macOS v Intune pomocí aplikace Portál společnosti.
 keywords: Mac OS X, macOS, OS X
-author: barlanmsft
-ms.author: barlan
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 11/06/2017
+ms.date: 04/11/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3bb659cc-9b57-4d19-8631-2c26749fa71c
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 4f01a5aa9567ea914da2c36756e8c3f12f55c58d
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: e3990c0670516de907ac048b844152014db5be57
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Registrace zařízení s macOS v Intune pomocí aplikace Portál společnosti
 
@@ -30,11 +30,12 @@ Přístup k aplikacím, datům a prostředkům vaší organizace vám zjednoduš
 > [!NOTE]
 > Pokyny pro registraci zařízení s macOS využívající dřívější verze macOS najdete [tady](enroll-your-device-in-intune-macos-legacy.md).
 
-1. V __Docku__ vyhledejte __Safari__ a otevřete nové okno. Potom otevřete [web Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+1. V __Docku__ vyhledejte __Safari__ a otevřete nové okno. Potom otevřete [web Portál společnosti](https://portal.manage.microsoft.com).
 
 2. Přihlaste se na web Portál společnosti přes svůj pracovní nebo školní účet.
 
-  [!INCLUDE[wit_nextref](includes/end-user-password-guidance.md)]
+   [!INCLUDE [wit_nextref](includes/end-user-password-guidance.md)]
+
 
 3. Po přihlášení klikněte na **Nabídku** v levém horním rohu stránky a vyberte **Moje zařízení**.
 
@@ -54,8 +55,8 @@ Přístup k aplikacím, datům a prostředkům vaší organizace vám zjednoduš
 
 8. Na Macu se zobrazí zpráva o tom, že **Portál společnosti je aplikace stažená z internetu a jestli ji opravdu chcete otevřít.** Klikněte na **Otevřít**.
 
-  > [!NOTE]
-  > Intune potřebuje přístup k počítači pro ověření, že je vaše zařízení natolik bezpečné, že může mít přístup k prostředkům ve vaší organizaci. Pokud váš počítač odmítá aplikaci Portál společnosti otevřít, zkuste [vypnout Gatekeeper](https://support.apple.com/HT202491) a otevřít ji znovu.
+   > [!NOTE]
+   > Intune potřebuje přístup k počítači pro ověření, že je vaše zařízení natolik bezpečné, že může mít přístup k prostředkům ve vaší organizaci. Pokud váš počítač odmítá aplikaci Portál společnosti otevřít, zkuste [vypnout Gatekeeper](https://support.apple.com/HT202491) a otevřít ji znovu.
 
 9. Na první obrazovce vás aplikace Portál společnosti vyzve, abyste se **přihlásili** pomocí stejného pracovního nebo školního účtu, jako jste použili k přihlášení na web Portál společnosti.
 

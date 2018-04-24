@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 5fd86b380a80529ba7f6c431452ae89e22c0de25
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 5a346c321147656d748d3abde78575268b20e9ab
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="categorize-devices-with-device-group-mapping-in-microsoft-intune"></a>Kategorizace zařízení pomocí mapování skupin zařízení v Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 **Mapování skupin zařízení** v Microsoft Intune slouží k automatickému přidávání zařízení do skupin na základě kategorií, které definujete, aby byla správa těchto zařízení jednodušší. 
 
@@ -67,10 +67,10 @@ Vzhledem k postupné implementaci skupin zabezpečení Azure Active Directory mu
 
 ### <a name="step-1---create-device-categories-in-the-intune-administration-console"></a>Krok 1: Vytvoření kategorií zařízení v konzole pro správu Intune
 1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Správce**.
-3. V pracovním prostoru **Správa** rozbalte **Správa mobilních zařízení** a pak zvolte **Kategorie zařízení**.
-4. Na stránce **Kategorie zařízení** uvidíte seznam, kde můžete konfigurovat kategorie zařízení: 
-- Můžete zadat název a kliknutím na **Přidat** ho přidat jako novou kategorii zařízení.
-- Některou kategorii můžete také vybrat a pak ji **Odstranit**.
+2. V pracovním prostoru **Správa** rozbalte **Správa mobilních zařízení** a pak zvolte **Kategorie zařízení**.
+3. Na stránce **Kategorie zařízení** uvidíte seznam, kde můžete konfigurovat kategorie zařízení: 
+4. Můžete zadat název a kliknutím na **Přidat** ho přidat jako novou kategorii zařízení.
+5. Některou kategorii můžete také vybrat a pak ji **Odstranit**.
 
 Název kategorie zařízení použijete při vytváření skupin zabezpečení Azure Active Directory v kroku 2.
 

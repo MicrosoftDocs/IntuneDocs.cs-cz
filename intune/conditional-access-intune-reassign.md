@@ -1,25 +1,25 @@
 ---
-title: "Migrace podmíněného přístupu na portál Azure Portal"
+title: Migrace podmíněného přístupu na portál Azure Portal
 titlesuffix: Microsoft Intune
-description: "Změňte přiřazení zásad podmíněného přístupu, které jste dříve vytvořili v klasickém portálu Intune, na portál Azure Portal."
-keywords: 
+description: Změňte přiřazení zásad podmíněného přístupu, které jste dříve vytvořili v klasickém portálu Intune, na portál Azure Portal.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 06/28/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 301159ad-5f7e-4fcc-86c7-f72a71701ff4
 ms.reviewer: chrisgree
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 80c8c994486dd340c9037817854eb35b32ab3a9e
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: d295ade29522a5593993b5541311eadd9e4c9528
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Změna přiřazení zásad podmíněného přístupu z klasického portálu Intune do portálu Azure Portal
 
@@ -183,8 +183,8 @@ Pokud jste nastavení protokolu Exchange Active Sync nakonfigurovali na klasick�
 
 Po změně přiřazení zásad podmíněného přístupu na portálu Azure Portal je důležité postupně vypínat zásady podmíněného přístupu vytvořené dříve na klasickém portálu Intune. Kromě toho může být potřeba použít stejnou skupinu zabezpečení k uplatnění zásad podmíněného přístupu vytvořených na portálu Azure Portal.
 
-> [!NOTE] 
-    > Před vypnutím zásad podmíněného přístupu na klasickém portálu Intune si přečtěte část [Před zahájením](#before-you-begin) na začátku tohoto tématu.
+> [!NOTE]
+> Před vypnutím zásad podmíněného přístupu na klasickém portálu Intune si přečtěte část [Před zahájením](#before-you-begin) na začátku tohoto tématu.
 
 ### <a name="to-disable-the-conditional-access-policies"></a>Postup vypnutí zásad podmíněného přístupu
 

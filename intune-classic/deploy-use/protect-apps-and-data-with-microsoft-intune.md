@@ -1,29 +1,29 @@
 ---
-title: "Ochrana aplikací a dat"
-description: "Toto téma popisuje různé funkce a možnosti Intune, které jsou k dispozici, aby pomáhaly chránit vaše firemní aplikace a data."
-keywords: 
+title: Ochrana aplikací a dat
+description: Toto téma popisuje různé funkce a možnosti Intune, které jsou k dispozici, aby pomáhaly chránit vaše firemní aplikace a data.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 12/19/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 5c46e188-87eb-4ce2-b184-24809e8bf783
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 59168615548d3c7da8dc284476227ed0f01ceffe
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 2a05444c757b8e99ca0b897acfcd6238d960aeb2
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="protect-apps-and-data-with-microsoft-intune"></a>Ochrana dat a aplikací pomocí Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Intune chrání firemní data prostřednictvím několika technologických vrstev. Ve vrstvě identity podmíněný přístup chrání služby tím, že umožňuje přístup jenom ze spravovaných a kompatibilních zařízení. V klientské aplikační vrstvě chrání správa mobilních aplikací (MAM) před únikem informací. Zabraňuje přesunu dat do nechráněných aplikací nebo úložišť a v případě ztráty nebo odcizení zařízení vymaže data. Doporučujeme používat tyto dvě vrstvy ochrany společně. Zabezpečíte tak data a zajistíte produktivitu mobilních pracovních sil.
 

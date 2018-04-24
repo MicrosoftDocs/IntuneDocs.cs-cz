@@ -1,29 +1,29 @@
 ---
-title: "Nastavení zásad pro Windows 10"
-description: "Nastavení zásad, která jsou uvedena v tomto tématu, vám pomůžou nakonfigurovat předdefinovaná a vlastní nastavení pro zaregistrované počítače s Windows 10 a zařízení Windows 10 Mobile."
-keywords: 
+title: Nastavení zásad pro Windows 10
+description: Nastavení zásad, která jsou uvedena v tomto tématu, vám pomůžou nakonfigurovat předdefinovaná a vlastní nastavení pro zaregistrované počítače s Windows 10 a zařízení Windows 10 Mobile.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 09/05/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: fff34b145660e1d0e78e05de467629f9421fcf7a
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 202f15766aa740755669ab246739a5331ea328a4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="intune-policy-settings-for-windows-10-devices-in-microsoft-intune"></a>Nastavení zásad Intune pro zařízení s Windows 10 v Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Informace v tomto tématu vám pomůžou pochopit nastavení zásad Intune, které je možné použít ke správě zařízení s Windows 10. Přečtěte si toto téma i postupy uvedené v článku [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](/intune-classic/get-started/windows-pc-management-capabilities-in-microsoft-intune).
 
@@ -69,7 +69,7 @@ Ne všechna nastavení jsou kompatibilní se všemi verzemi Windows 10. V tabulc
 
 Intune navíc nepodporuje všechna nastavení uvedená v tomto tématu. Pokud chcete zjistit, jestli Intune podporuje vámi požadované nastavení, otevřete si téma pro dané nastavení. Jednotlivé stránky nastavení zobrazují podporované operace. Aby dané nastavení fungovalo s Intune, musí podporovat operace **Přidat** nebo **Nahradit**.
 
-## <a name="general-configuration-policy-settings"></a>Obecná nastavení zásad konfigurace
+## <a name="general-configuration-policy-settings"></a>Nastavení obecných zásad konfigurace
 
 Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 10 Desktop a Windows 10 Mobile použijte **obecné zásady konfigurace** Microsoft Intune pro Windows 10.
 
@@ -78,7 +78,7 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 |Název nastavení|Další informace (kde jsou potřeba)|
 |----------------|----------------------|
 |**Vyžadovat heslo k odemknutí zařízení**|-|
-|**Vyžadovaný typ hesla**|Určuje, jestli musí být heslo složené z čísel a písmen, nebo jen z čísel.|
+|**Požadovaný typ hesla**|Určuje, jestli musí být heslo složené z čísel a písmen, nebo jen z čísel.|
 |**Vyžadovaný typ hesla** - **Minimální počet znakových sad**| Určuje, kolik znakových sad (malá písmena, velká písmena, číslice a symboly) musí heslo obsahovat.|
 |**Minimální délka hesla**|Platí jen pro Windows 10 Mobile.|
 |**Počet povolených opakovaných neúspěšných přihlášení, než se zařízení vymaže**|Pro zařízení s Windows 10: Pokud má zařízení povolený nástroj BitLocker, přejde do režimu obnovení nástroje BitLocker v případě, že se nepovede určený počet pokusů o přihlášení. Pokud zařízení nemá povolený nástroj BitLocker, toto nastavení se na něho nevztahuje.<br>Pro zařízení s Windows 10: Jakmile se nepovede určený počet pokusů o přihlášení, zařízení bude vymazáno.|
@@ -116,12 +116,12 @@ Ke konfiguraci nastavení pro zaregistrovaná zařízení se systémem Windows 1
 
 |Název nastavení|Další informace (kde jsou potřeba)|
 |----------------|----------------------|
-|**Povolit webový prohlížeč**|Umožňuje na zařízení používat webový prohlížeč Microsoft Edge.<br>(jenom Windows 10 Mobile)|
+|**Povolit webový prohlížeč**|Umožňuje na zařízení používat webový prohlížeč Edge.<br>(jenom Windows 10 Mobile)|
 |**Povolit návrhy vyhledávání v panelu Adresa**|Umožňuje, aby vám vyhledávací web při psaní hledaného textu navrhoval weby.|
 |**Povolit odesílání intranetového provozu do Internet Exploreru**|Umožňuje uživatelům otevírat intranetové weby v Internet Exploreru.<br>(jenom Windows 10 Desktop)|
 |**Povolit Do Not Track**|Nakonfiguruje prohlížeč Microsoft tak, aby se webům, které uživatelé navštíví, odesílaly hlavičky DNT (Do Not Track).|
 |**Povolit filtr SmartScreen**||
-|**Povolit aktivní skriptování**|Umožňuje, aby se v prohlížeči Microsoft Edge mohly spustit skripty, třeba JavaScript.|
+|**Povolit aktivní skriptování**|Umožňuje, aby se v prohlížeči Edge mohly spustit skripty, třeba JavaScript.|
 |**Povolit automaticky otevíraná okna**|Platí jen pro Windows 10 Desktop|
 |**Povolit soubory cookie**||
 |**Povolit automatické vyplňování**|Umožňuje uživatelům změnit nastavení automatického dokončování v prohlížeči.<br>(jenom Windows 10 Desktop)|
@@ -210,5 +210,5 @@ Všechna nastavení jsou jenom pro Windows 10 Desktop.
 |**Povolit automatické aktualizace**|Povolí automatické aktualizace. Nakonfigurováním jednoho z následujících nastavení můžete řídit chování aktualizací:<br />**Upozornění na stahování**<br />**Automaticky nainstalovat v době údržby**<br />**Automaticky nainstalovat a restartovat v době údržby**<br />**Automaticky nainstalovat a restartovat v plánovaném čase**: Pokud je vybraná tato možnost, můžete také nakonfigurovat nastavení **Potlačit oznámení pro koncového uživatele** a **Definujte den instalace pro plánované aktualizace**.<br>(jenom Windows 10 Desktop)|
 |**Povolit předběžné verze funkcí**|Umožňuje Microsoftu do zařízení nasadit předběžné funkce a nastavení do zařízení s Windows 10. Můžete vybrat, že se povolí jenom nastavení, nebo že se nainstalují všechny předběžné funkce a nastavení.|
 
-### <a name="see-also"></a>Související témata
+### <a name="see-also"></a>Viz taky
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)

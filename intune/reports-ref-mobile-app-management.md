@@ -15,11 +15,11 @@ ms.assetid: 084F11AD-F7BA-45A4-8424-45E6E4564930
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: eb9f63199063db34361c7d463b8cef37bb8bfa1f
-ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
+ms.openlocfilehash: 317e884cd54b57f4892c4e101e206089ef335f0c
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Referenční informace o entitách správy mobilních aplikací (MAM)
 
@@ -51,23 +51,24 @@ Entita **MamApplication** obsahuje seznam obchodních aplikací, které jsou spr
 
 Entita **MamApplicationInstance** obsahuje seznam aplikací spravovaných přes správu mobilních aplikací (MAM) jako jedinečné instance pro uživatele a zařízení. Všichni uživatelé a zařízení, kteří jsou v této entitě uvedení, jsou chránění, protože mají přiřazenou aspoň jednu zásadu MAM.
 
-| Vlastnost | Popis | Příklad |
-|---------|------------|--------|
-| ApplicationInstanceKey |Jedinečný identifikátor instance aplikace MAM v datovém skladu – náhradní klíč |123 |
-| UserId |ID uživatele, který má tuto aplikaci MAM nainstalovanou |b66bc706-ffff-7437-0340-032819502773 |
-| ApplicationInstanceId |Jedinečný identifikátor instance aplikace MAM – podobá se vlastnosti ApplicationInstanceKey, ale tento identifikátor představuje přirozený klíč. |b66bc706-ffff-7437-0340-032819502773 |
-| ApplicationId |ID aplikace pro danou aplikaci MAM |com.microsoft.groupies-daily.<IOS> |
-| ApplicationVersion |Verze aplikace pro danou aplikaci MAM |2 |
-| CreatedDate |Datum vytvoření daného záznamu instance aplikace MAM Hodnota může být null. |23.11.2016 12:00:00 |
-| Platforma |Platforma zařízení, na kterém je daná aplikace MAM nainstalovaná |2 |
-| PlatformVersion |Verze platformy zařízení, na kterém je daná aplikace MAM nainstalovaná |2.2 |
-| SdkVersion |Verze sady SDK MAM, pomocí které byla daná aplikace MAM zabalena |3.2 |
-| DeviceId |ID zařízení, na kterém je daná aplikace MAM nainstalovaná |b66bc706-ffff-7437-0340-032819502773 |
-| DeviceName |Název zařízení, na kterém je daná aplikace MAM nainstalovaná |MojeZařízení |
-| IsDeleted |Určuje, jestli je tento záznam instance aplikace MAM aktualizovaný. <br>True – tato instance aplikace MAM má v této tabulce nový záznam s aktualizovanými poli. <br>False – jedná se o nejnovější záznam pro tuto instanci aplikace MAM. |True nebo False |
-| StartDateInclusiveUtc |Datum a čas ve standardu UTC, kdy se tato instance aplikace MAM v datovém skladu vytvořila |23.11.2016 12:00:00 |
-| DeletedDateUtc |Datum a čas ve standardu UTC, kdy došlo ke změně vlastnosti IsDeleted na hodnotu True |23.11.2016 12:00:00 |
-| RowLastModifiedDateTimeUtc |Datum a čas ve standardu UTC, kdy se tato instance aplikace MAM v datovém skladu naposledy změnila |23.11.2016 12:00:00 |
+
+|          Vlastnost          |                                                                                                  Popis                                                                                                  |               Příklad                |
+|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
+|   ApplicationInstanceKey   |                                                               Jedinečný identifikátor instance aplikace MAM v datovém skladu – náhradní klíč                                                                |                 123                  |
+|           UserId           |                                                                              ID uživatele, který má tuto aplikaci MAM nainstalovanou                                                                              | b66bc706-ffff-7437-0340-032819502773 |
+|   ApplicationInstanceId    |                                              Jedinečný identifikátor instance aplikace MAM – podobá se vlastnosti ApplicationInstanceKey, ale tento identifikátor představuje přirozený klíč.                                              | b66bc706-ffff-7437-0340-032819502773 |
+|       ApplicationId        |                                                                                        ID aplikace pro danou aplikaci MAM                                                                                         |  com.microsoft.groupies-daily.<IOS>  |
+|     ApplicationVersion     |                                                                                     Verze aplikace pro danou aplikaci MAM                                                                                      |                  2                   |
+|        CreatedDate         |                                                                 Datum vytvoření daného záznamu instance aplikace MAM Hodnota může být null.                                                                 |        23.11.2016 12:00:00        |
+|          Platforma          |                                                                          Platforma zařízení, na kterém je daná aplikace MAM nainstalovaná                                                                           |                  2                   |
+|      PlatformVersion       |                                                                      Verze platformy zařízení, na kterém je daná aplikace MAM nainstalovaná                                                                       |                 2.2                  |
+|         SdkVersion         |                                                                            Verze sady SDK MAM, pomocí které byla daná aplikace MAM zabalena                                                                            |                 3.2                  |
+|          DeviceId          |                                                                          ID zařízení, na kterém je daná aplikace MAM nainstalovaná                                                                          | b66bc706-ffff-7437-0340-032819502773 |
+|         DeviceName         |                                                                         Název zařízení, na kterém je daná aplikace MAM nainstalovaná                                                                         |              MojeZařízení              |
+|         IsDeleted          | Určuje, jestli je tento záznam instance aplikace MAM aktualizovaný. <br>True – tato instance aplikace MAM má v této tabulce nový záznam s aktualizovanými poli. <br>False – jedná se o nejnovější záznam pro tuto instanci aplikace MAM. |              True nebo False              |
+|   StartDateInclusiveUtc    |                                                              Datum a čas ve standardu UTC, kdy se tato instance aplikace MAM v datovém skladu vytvořila                                                               |        23.11.2016 12:00:00        |
+|       DeletedDateUtc       |                                                                             Datum a čas ve standardu UTC, kdy došlo ke změně vlastnosti IsDeleted na hodnotu True                                                                              |        23.11.2016 12:00:00        |
+| RowLastModifiedDateTimeUtc |                                                           Datum a čas ve standardu UTC, kdy se tato instance aplikace MAM v datovém skladu naposledy změnila                                                            |        23.11.2016 12:00:00        |
 
 ## <a name="mamcheckin"></a>MamCheckin
 
@@ -112,20 +113,23 @@ Entita **MamEffectivePolicy** obsahuje seznam všech platných použitých zása
 
 Entita **MamGlobalApplication** obsahuje seznam aplikací pro Store, které jsou spravované přes správu mobilních aplikací (MAM) bez registrace ve vašem podniku.
 
-| Vlastnost | Popis | Příklad |
-|---------|------------|--------|
-| ApplicationKey |Jedinečný identifikátor aplikace pro Store v datovém skladu, který se označuje jako náhradní klíč |123 |
-| ApplicationId |Jedinečný identifikátor aplikace pro Store. Tento identifikátor se podobá vlastnosti ApplicationKey, ale představuje přirozený klíč. |com.microsoft.skydrive.<ios> |
-| ApplicationName |Název globální aplikace MAM |SkyDrive |
-| RowLastModifiedDateTimeUtc |Datum a čas ve standardu UTC, kdy se tato konkrétní globální aplikace MAM v datovém skladu naposledy změnila |23.11.2016 12:00:00 |
+
+|          Vlastnost          |                                               Popis                                               |           Příklad            |
+|----------------------------|---------------------------------------------------------------------------------------------------------|------------------------------|
+|       ApplicationKey       |          Jedinečný identifikátor aplikace pro Store v datovém skladu, který se označuje jako náhradní klíč          |             123              |
+|       ApplicationId        | Jedinečný identifikátor aplikace pro Store. Tento identifikátor se podobá vlastnosti ApplicationKey, ale představuje přirozený klíč.  | com.microsoft.skydrive.<ios> |
+|      ApplicationName       |                                      Název globální aplikace MAM                                       |           SkyDrive           |
+| RowLastModifiedDateTimeUtc | Datum a čas ve standardu UTC, kdy se tato konkrétní globální aplikace MAM v datovém skladu naposledy změnila |    23.11.2016 12:00:00    |
 
 ## <a name="mamplatform"></a>MamPlatform
 
 Entita **MamPlatform** obsahuje seznam názvů a typů platforem, na kterých byla aplikace MAM nainstalována.
 
-| Vlastnost | Popis | Příklad |
-|---------|------------|--------|
-| PlatformKey |Jedinečný identifikátor platformy v datovém skladu – náhradní klíč |123 |
-| Platforma |Jedinečný identifikátor platformy – podobá se vlastnosti PlatformKey, jedná se ale o přirozený klíč. |123 |
-| PlatformName |Název platformy |Není k dispozici <br>Žádné <br>Windows <br>iOS <br>Android. |
-| RowLastModifiedDateTimeUtc |Datum a čas ve standardu UTC, kdy se tato platforma v datovém skladu naposledy změnila |23.11.2016 12:00:00 |
+
+|          Vlastnost          |                                    Popis                                    |                         Příklad                         |
+|----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
+|        PlatformKey         |     Jedinečný identifikátor platformy v datovém skladu – náhradní klíč      |                           123                           |
+|          Platforma          | Jedinečný identifikátor platformy – podobá se vlastnosti PlatformKey, jedná se ale o přirozený klíč. |                           123                           |
+|        PlatformName        |                                   Název platformy                                   | Není k dispozici <br>Žádné <br>Windows <br>iOS <br>Android. |
+| RowLastModifiedDateTimeUtc | Datum a čas ve standardu UTC, kdy se tato platforma v datovém skladu naposledy změnila  |                 23.11.2016 12:00:00                  |
+

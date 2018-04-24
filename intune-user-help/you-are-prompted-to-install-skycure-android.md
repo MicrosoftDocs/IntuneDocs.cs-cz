@@ -1,25 +1,25 @@
 ---
-title: "Nutnost instalace aplikace Symantec Endpoint Protection Mobile na zařízení s Androidem | Dokumentace Microsoftu"
-description: "Přečtěte si, jak nainstalovat aplikaci SEP Mobile na zařízení s Androidem."
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Nutnost instalace aplikace Symantec Endpoint Protection Mobile na zařízení s Androidem | Dokumentace Microsoftu
+description: Přečtěte si, jak nainstalovat aplikaci SEP Mobile na zařízení s Androidem.
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 627cd171-6e1b-439e-809a-2e6f007c4b3d
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 040b7bad4b62acffa5dad1606d5beb81efc56b68
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 7194f63a3d9b34be00753a66b9929c033bd10b86
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-symantec-endpoint-protection-mobile-on-your-android-device"></a>Instalace Symantec Endpoint Protection Mobile na zařízení s Androidem
 
@@ -45,13 +45,13 @@ Pokud máte s instalací potíže, zkuste provést kroky k odstranění potíž�
 
 8. SEP Mobile začne okamžitě vyhledávat bezpečnostní hrozby na vašem zařízení.
 
-  * Pokud SEP Mobile najde na vašem zařízení bezpečnostní hrozbu, nabídne vám pokyny k vyřešení problému.
+   * Pokud SEP Mobile najde na vašem zařízení bezpečnostní hrozbu, nabídne vám pokyny k vyřešení problému.
 
-  * Pokud se žádné hrozby nenajdou, zobrazí se všechny tři typy hrozeb zeleně.
+   * Pokud se žádné hrozby nenajdou, zobrazí se všechny tři typy hrozeb zeleně.
 
-    * Obrazovka s **podrobnostmi o zařízení** v aplikaci Portál společnosti ukazuje, že teď už splňujete firemní požadavky na zabezpečení.
+     * Obrazovka s **podrobnostmi o zařízení** v aplikaci Portál společnosti ukazuje, že teď už splňujete firemní požadavky na zabezpečení.
 
-    ![Vaše zařízení teď vyhovuje zásadám.](./media/mtd-device-now-compliant-android.png)
+     ![Vaše zařízení teď vyhovuje zásadám.](./media/mtd-device-now-compliant-android.png)
 
 ## <a name="if-the-installation-doesnt-work"></a>Pokud instalace nefunguje
 

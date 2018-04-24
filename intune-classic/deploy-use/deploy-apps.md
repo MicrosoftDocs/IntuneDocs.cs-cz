@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9762c20abb9e4eedded50c92fb10ffb6119be63e
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: dc2a8cb8fc07f87dd0a4e9d8f3935c04a73fe8fd
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-apps-with-microsoft-intune"></a>Nasazení aplikací s Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Toto téma vysvětluje některé koncepty, kterým je třeba porozumět před zahájením nasazování aplikací s Microsoft Intune.
 
@@ -46,18 +46,19 @@ Při nasazování aplikací můžete zvolit jednu z následujících akcí nasaz
 
 #### <a name="understand-which-deployment-actions-are-available-for-each-installer-type"></a>Zjistěte, které akce nasazení jsou dostupné pro jednotlivé typy instalačních programů:
 
-|Typ instalačního programu|povinná instalace|Dostupná instalace|Odinstalovat|Není k dispozici|
-|------------------|--------------------|---------------------|-------------|------------------|
-|Balíček aplikací pro Windows (nasazený pro skupinu uživatelů)|Ano|Ano|Ano|Ano|
-|Balíček aplikací pro Windows (nasazený pro skupinu zařízení)|Ano|Ne|Ano|Ano|
-|Balíček aplikace pro mobilní zařízení (nasazený pro skupinu uživatelů)|Ano|Ano|Ano|Ano|
-|Balíček aplikace pro mobilní zařízení (nasazený pro skupinu zařízení)|Ano|Ne|Ano|Ano|
-|Instalační služba systému Windows (nasazené pro skupinu uživatelů)|Ne|Ano|Ne|Ano|
-|Instalační služba systému Windows (nasazené pro skupinu zařízení)|Ano|Ne|Ano|Ano|
-|Externí odkaz (nasazený pro skupinu uživatelů)|Ne|Ano|Ne|Ano|
-|Externí odkaz (nasazený pro skupinu zařízení)|Ne|Ne|Ne|Ne|
-|Spravovaná aplikace pro iOS z App Storu (nasazené pro skupinu uživatelů)|Ano|Ano|Ano|Ano|
-|Spravovaná aplikace pro iOS z App Storu (nasazené pro skupinu zařízení)|Ano|Ne|Ano|Ano|
+|                         Typ instalačního programu                          | povinná instalace | Dostupná instalace | Odinstalovat | Není k dispozici |
+|-----------------------------------------------------------------|------------------|-------------------|-----------|----------------|
+|         Balíček aplikací pro Windows (nasazený pro skupinu uživatelů)          |       Ano        |        Ano        |    Ano    |      Ano       |
+|        Balíček aplikací pro Windows (nasazený pro skupinu zařízení)         |       Ano        |        Ne         |    Ano    |      Ano       |
+|    Balíček aplikace pro mobilní zařízení (nasazený pro skupinu uživatelů)    |       Ano        |        Ano        |    Ano    |      Ano       |
+|   Balíček aplikace pro mobilní zařízení (nasazený pro skupinu zařízení)   |       Ano        |        Ne         |    Ano    |      Ano       |
+|          Instalační služba systému Windows (nasazené pro skupinu uživatelů)           |        Ne        |        Ano        |    Ne     |      Ano       |
+|         Instalační služba systému Windows (nasazené pro skupinu zařízení)          |       Ano        |        Ne         |    Ano    |      Ano       |
+|            Externí odkaz (nasazený pro skupinu uživatelů)             |        Ne        |        Ano        |    Ne     |      Ano       |
+|           Externí odkaz (nasazený pro skupinu zařízení)            |        Ne        |        Ne         |    Ne     |       Ne       |
+|  Spravovaná aplikace pro iOS z App Storu (nasazené pro skupinu uživatelů)  |       Ano        |        Ano        |    Ano    |      Ano       |
+| Spravovaná aplikace pro iOS z App Storu (nasazené pro skupinu zařízení) |       Ano        |        Ne         |    Ano    |      Ano       |
+
 > [!TIP]
 > Když nasazujete aplikace a vyberete jak skupiny uživatelů, tak zařízení, můžete aplikaci nasadit jenom s možností **Dostupná instalace**.
 

@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 36715859c4c4685aa8d0fc74b360efd2372ee6c2
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 5fdae47509fa2c0606008bf399339a14403ad2fa
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-software-updates-in-microsoft-intune"></a>Řešení potíží s aktualizacemi softwaru ve službě Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Informace uvedené v této části vám můžou pomoct při řešení potíží s aktualizacemi softwaru ve službě Microsoft Intune.
 
@@ -183,7 +183,7 @@ Kódy chyb agenta Intune **Update Agent** jsou uvedené v následující tabulce
 |**0x80cf4FFF**|OM_E_PT_UNEXPECTED|Došlo k chybě komunikace, která není předmětem jiného kódu chyby **OM_E_PT_&#42;**.|
 |**0x80cf6001**|OM_E_DM_URLNOTAVAILABLE|Operaci správce stahování nešlo dokončit, protože požadovaný soubor nemá adresu URL.|
 |**0x80cf6002**|OM_E_DM_INCORRECTFILEHASH|Operaci správce stahování nešlo dokončit, protože nebyla rozpoznána hodnota hash souboru.|
-|**0x80cf6003**|OM_E_DM_UNKNOWNALGORITHM|Operaci správce stahování nešlo dokončit, protože metadata souboru požadovala nerozpoznaný algoritmu hash.|
+|**0x80cf6003**|OM_E_DM_UNKNOWNALGORITHM|Operaci správce stahování nešlo dokončit, protože metadata souboru požadovala nerozpoznaný hashovací algoritmus.|
 |**0x80cf6005**|OM_E_DM_NONETWORK|Operaci správce stahování nešlo dokončit, protože nebylo dostupné síťové připojení.|
 |**0x80cf6007**|OM_E_DM_NOTDOWNLOADED|Aktualizace se nestáhla.|
 |**0x80cf6008**|OM_E_DM_FAILTOCONNECTTOBITS|Operace správce stahování se nepovedla, protože správce stahování nemohl připojit službu BITS (Background Intelligent Transfer Service).|

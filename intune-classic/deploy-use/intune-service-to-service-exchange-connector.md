@@ -15,27 +15,28 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 78b4e91fd61bb79c2a3a6d86d5a79c39b320cc5e
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 8af8d79d6f8ea9037c6bef532ad45185830c358d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-the-intune-service-to-service-connector-for-exchange-online"></a>Konfigurace konektoru Intune Service to Service Connector pro Exchange Online
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Tyto informace vám pomůžou při propojení služeb Microsoft Intune a Exchange Online nebo nové služby Exchange Online Dedicated. Pokud chcete zjistit, jestli máte prostředí Exchange Online Dedicated v **nové** nebo **starší** verzi, kontaktujte svého account manažera. Intune podporuje pro každé předplatné jenom jedno připojení konektoru Exchange libovolného typu.
 
 ## <a name="service-to-service-connector-requirements"></a>Požadavky na konektor Service to Service Connector
 **Konektor Service to Service Connector** podporuje jenom Exchange Online nebo službu Exchange Online Dedicated a nemá žádné požadavky na místní infrastrukturu.
 
-|Požadavek|Další informace|
-|---------------|--------------------|
-|Nakonfigurovaná a spuštěná služba Exchange Online|[Exchange Online](https://technet.microsoft.com/library/jj200580.aspx) |
-|Autorita pro správu mobilních zařízení| [Nastavení autority pro správu mobilních zařízení v Microsoft Intune](prerequisites-for-enrollment.md#step-2-set-mdm-authority)|
-|Verze Microsoft Exchange|Exchange Online nebo nová služba Exchange Online Dedicated|/intune/users-permissions-add
-|Synchronizace se službou Active Directory|Než použijete některý z konektorů Intune, je potřeba [nastavit synchronizaci služby Active Directory](/intune/users-permissions-add) tak, aby byli místní uživatelé a skupiny zabezpečení synchronizovaní s vaší instancí Azure Active Directory.|
+
+|              Požadavek               |                                                                                                            Další informace                                                                                                            |
+|----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nakonfigurovaná a spuštěná služba Exchange Online |                                                                                 [Exchange Online](https://technet.microsoft.com/library/jj200580.aspx)                                                                                 |
+|   Autorita pro správu mobilních zařízení   |                                                       [Nastavení autority pro správu mobilních zařízení v Microsoft Intune](prerequisites-for-enrollment.md#step-2-set-mdm-authority)                                                       |
+|       Verze Microsoft Exchange       |                                                                                      Exchange Online nebo nová služba Exchange Online Dedicated                                                                                      |
+|    Synchronizace se službou Active Directory    | Než použijete některý z konektorů Intune, je potřeba [nastavit synchronizaci služby Active Directory](/intune/users-permissions-add) tak, aby byli místní uživatelé a skupiny zabezpečení synchronizovaní s vaší instancí Azure Active Directory. |
 
 ### <a name="exchange-cmdlet-requirements"></a>Požadavky rutin systému Exchange
 

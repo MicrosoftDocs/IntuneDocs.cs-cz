@@ -1,29 +1,29 @@
 ---
 title: Ochrana Dynamics CRM Online
-description: "Chraňte a kontrolujte přístup k Dynamics CRM Online pomocí podmíněného přístupu."
-keywords: 
+description: Chraňte a kontrolujte přístup k Dynamics CRM Online pomocí podmíněného přístupu.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 01/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f1c4522b-5a34-4f5a-89d2-7809c4352af7
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: bae29ed7eba164ce19ea5db7d003ab38b4683454
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: e2f720c8a6613884397111c2a421fa1cfdc0eb53
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="protect-access-to-dynamics-crm-online-with-intune"></a>Ochrana přístupu k Dynamics CRM Online v Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Přístup k Microsoft Dynamics CRM Online ze zařízení s iOSem a Androidem můžete řídit pomocí podmíněného přístupu v Microsoft Intune.  Podmíněný přístup Intune má dvě součásti:
 * [Zásady dodržování předpisů zařízení](introduction-to-device-compliance-policies-in-microsoft-intune.md), které zařízení musí dodržovat, aby mohlo být považované za vyhovující.
@@ -73,17 +73,17 @@ Až budete připravení, pokračujte Krokem 3.
 ### <a name="step-3-configure-the-dynamics-crm-policy"></a>Krok 3: Konfigurace zásad Dynamics CRM
 V dalším kroku nakonfigurujte zásadu, která bude vyžadovat, aby k Dynamics CRM měla přístup jenom spravovaná a vyhovující zařízení. Tato zásada bude uložená v Azure Active Directory.
 
-1.  V konzole pro správu Intune zvolte **Zásady > Podmíněný přístup > Online zásady pro Dynamics CRM**.
+1. V konzole pro správu Intune zvolte **Zásady > Podmíněný přístup > Online zásady pro Dynamics CRM**.
 
-  ![Snímek obrazovky stránky zásad podmíněného přístupu pro Dynamics CRM Online](../media/mdm-ca-dynamics-crm-policy-configuration.png)
+   ![Snímek obrazovky stránky zásad podmíněného přístupu pro Dynamics CRM Online](../media/mdm-ca-dynamics-crm-policy-configuration.png)
 
-2.  Zvolte **Zapnout zásady podmíněného přístupu**.
-3.  V části **Přístup k aplikaci** můžete použít zásady podmíněného přístupu na:
-  * **iOS**
-  * **Android**
-4.  V části **Cílové skupiny** zvolte **Upravit** a vyberte skupiny zabezpečení Azure Active Directory, na které se zásady vztahují. Můžete cílit na všechny uživatele nebo vybranou skupinu uživatelů.
-5.  V případě potřeby v části **Vyloučené skupiny** zvolte **Upravit** a vyberte skupiny zabezpečení Azure Active Directory, na které se tyto zásady nevztahují.
-6.  Po dokončení vyberte **Uložit**.
+2. Zvolte **Zapnout zásady podmíněného přístupu**.
+3. V části **Přístup k aplikaci** můžete použít zásady podmíněného přístupu na:
+   * **iOS**
+   * **Androidemem**
+4. V části **Cílové skupiny** zvolte **Upravit** a vyberte skupiny zabezpečení Azure Active Directory, na které se zásady vztahují. Můžete cílit na všechny uživatele nebo vybranou skupinu uživatelů.
+5. V případě potřeby v části **Vyloučené skupiny** zvolte **Upravit** a vyberte skupiny zabezpečení Azure Active Directory, na které se tyto zásady nevztahují.
+6. Po dokončení vyberte **Uložit**.
 
 Nyní máte nakonfigurovaný podmíněný přístup pro Dynamics CRM. Zásady podmíněného přístupu není potřeba nasazovat, projeví se okamžitě.
 ##  <a name="monitor-the-compliance-and-conditional-access-policies"></a>Sledování dodržování předpisů a zásad podmíněného přístupu

@@ -1,30 +1,29 @@
 ---
-title: "Vytvoření a nasazení zásad ochrany aplikací"
+title: Vytvoření a nasazení zásad ochrany aplikací
 titleSuffix: Microsoft Intune
-description: "Podívejte se, jak vytvořit a přiřadit zásady ochrany aplikací Microsoft Intune."
-keywords: 
+description: Podívejte se, jak vytvořit a přiřadit zásady ochrany aplikací Microsoft Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c7ad60a27e32aaab49e77789364aecdc5ea7fc60
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 8ffe409e376ec2d15c537fb6ac258e5b3b71cdf2
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Vytvoření a přiřazení zásad ochrany aplikací
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
-
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Podívejte se, jak vytvořit a přiřadit zásady ochrany aplikací Microsoft Intune k uživatelům. Toto téma také popisuje, jak změnit existující zásady.
 
@@ -37,28 +36,28 @@ Zásady ochrany aplikací je možné použít pro aplikace běžící na zaříz
 Pokud hledáte seznam aplikací s podporou MAM, přejděte na [seznam aplikací MAM](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
 ##  <a name="create-an-app-protection-policy"></a>Vytvoření zásady ochrany aplikací
-1.  V úloze **Mobilní aplikace** vyberte **Zásady ochrany aplikací** v oddíle **Správa**. Po výběru této možnosti se zobrazí detaily **Zásady ochrany aplikací**, kde můžete vytvářet nové zásady a upravovat stávající.
+1. V úloze **Mobilní aplikace** vyberte **Zásady ochrany aplikací** v oddíle **Správa**. Po výběru této možnosti se zobrazí detaily **Zásady ochrany aplikací**, kde můžete vytvářet nové zásady a upravovat stávající.
 2. Zvolte **Přidat zásadu**.
 
-  ![Snímek obrazovky okna Přidat zásadu](./media/app-protection-add-policy.png)
+   ![Snímek obrazovky okna Přidat zásadu](./media/app-protection-add-policy.png)
 
-3.  Zadejte název zásady, přidejte stručný popis a vyberte pro zásadu typ platformy. V případě potřeby je možné pro každou platformu vytvořit několik zásad.
+3. Zadejte název zásady, přidejte stručný popis a vyberte pro zásadu typ platformy. V případě potřeby je možné pro každou platformu vytvořit několik zásad.
 
-4.  Zvolte možnost **Aplikace** a otevřete tak okno **Aplikace**, kde se zobrazí seznam dostupných aplikací. Ze seznamu vyberte jednu nebo několik aplikací a přidružte je k zásadě, kterou vytváříte.
+4. Zvolte možnost **Aplikace** a otevřete tak okno **Aplikace**, kde se zobrazí seznam dostupných aplikací. Ze seznamu vyberte jednu nebo několik aplikací a přidružte je k zásadě, kterou vytváříte.
 5. Jakmile vyberete aplikace, uložte vybrané možnosti volbou **Vybrat**.
 
     > [!IMPORTANT]
     > Při vytváření zásady musíte vybrat aspoň jednu aplikaci.
 
-6.  V okně **Přidat zásadu** zvolte **Konfigurovat požadované nastavení**. Otevře se **Nastavení**.
+6. V okně **Přidat zásadu** zvolte **Konfigurovat požadované nastavení**. Otevře se **Nastavení**.
 
-    Existují dvě kategorie nastavení zásad, **Přemístění dat** a **Přístup**.  Zásady přemístění dat platí pro přesun dat do aplikace a z aplikace. Zásady přístupu určují, jak získává koncový uživatel přístup k aplikacím v pracovním kontextu.
-    Nastavením zásad jsou pro začátek přiřazené výchozí hodnoty. Pokud tyto výchozí hodnoty splňují vaše požadavky, nemusíte nic měnit.
+   Existují dvě kategorie nastavení zásad, **Přemístění dat** a **Přístup**.  Zásady přemístění dat platí pro přesun dat do aplikace a z aplikace. Zásady přístupu určují, jak získává koncový uživatel přístup k aplikacím v pracovním kontextu.
+   Nastavením zásad jsou pro začátek přiřazené výchozí hodnoty. Pokud tyto výchozí hodnoty splňují vaše požadavky, nemusíte nic měnit.
 
-    > [!TIP]
-    > Tato nastavení zásad se vynutí jenom při použití aplikace v pracovním kontextu. Když koncový uživatel použije aplikaci k provedení osobní úlohy, nebudou mít tyto zásady na ni vliv.
+   > [!TIP]
+   > Tato nastavení zásad se vynutí jenom při použití aplikace v pracovním kontextu. Když koncový uživatel použije aplikaci k provedení osobní úlohy, nebudou mít tyto zásady na ni vliv.
 
-7.  Tuto konfiguraci uložíte zvolením tlačítka **OK**. A jste zpátky v podokně **Přidat zásadu**. Zvolením možnosti **Vytvořit** vytvoříte zásadu a uložíte své nastavení.
+7. Tuto konfiguraci uložíte zvolením tlačítka **OK**. A jste zpátky v podokně **Přidat zásadu**. Zvolením možnosti **Vytvořit** vytvoříte zásadu a uložíte své nastavení.
 8. Tuto konfiguraci uložíte zvolením tlačítka **OK**. A jste zpátky v okně **Přidat zásadu**.
 9. Zvolením možnosti **Vytvořit** vytvoříte zásadu a uložíte své nastavení.
 
@@ -119,6 +118,16 @@ Pokud koncový uživatel chce, aby se změny projevily hned, musí se odhlásit 
 2.  Zvolte možnost **Nastavení zásad** a otevřete tak podokno **Nastavení zásad**.
 
 3.  Změňte nastavení a pak změny uložte zvolením ikony **Uložit**.
+
+## <a name="target-app-protection-policies-based-on-device-management-state"></a>Cílení zásad ochrany aplikací na základě stavu správy zařízení
+Mnoho organizací běžně umožňuje koncovým uživatelům používat jak zařízení spravovaná přes Intune MDM (Mobile Device Management), například zařízení ve vlastnictví společnosti, tak i nespravovaná zařízení chráněná pouze zásadami ochrany aplikací Intune, jako jsou vlastní zařízení uživatelů (BYOD).
+
+Vzhledem k tomu, že zásady ochrany aplikací Intune cílí na identitu uživatele, nastavení ochrany pro uživatele obvykle platí jak pro zaregistrovaná zařízení (ve správě MDM), tak i pro nezaregistrovaná zařízení (bez správy MDM). Z tohoto důvodu můžete zacílit zásady ochrany aplikací Intune jak na zařízení s iOSem nebo Androidem zaregistrovaná v Intune, tak i na nezaregistrovaná zařízení. Pro nespravovaná zařízení můžete zavést jednu zásadu ochrany, která bude používat přísné mechanismy ochrany před únikem informací, a pro zařízení spravovaná v MDM samostatnou zásadu, která bude používat mírnější mechanismy ochrany před únikem informací. 
+
+Pokud chcete vytvořit tyto zásady, přejděte v konzole Intune na **Mobilní aplikace** > **Zásady ochrany aplikací** a klikněte na **Přidat zásadu**. Můžete také upravit existující zásadu ochranu aplikací. Pokud chcete, aby zásada ochrany aplikací platila pro spravovaná i nespravovaná zařízení, zkontrolujte, že je možnost **Cílit na všechny typy aplikací** nastavena na výchozí hodnotu **Ano**. Pokud chcete zásady přiřazovat podrobněji na základě stavu správy, nastavte možnost **Cílit na všechny typy aplikací** na **Ne**. 
+
+> [!NOTE]
+> Konkrétní informace o podpoře zásad ochrany aplikací pro iOS na základě stavu správy zařízení najdete v tématu [Zásady ochrany MAM zacílené podle stavu správy](whats-new.md#mam-protection-policies-targeted-based-on-management-state----1665993---).
 
 ## <a name="policy-settings"></a>Nastavení zásad
 Pokud chcete zobrazit úplný seznam nastavení zásad pro iOS a Android, vyberte jeden z následujících odkazů:

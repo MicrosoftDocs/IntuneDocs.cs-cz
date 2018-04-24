@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 67a2891e4c7a6adcd7bd132c5663c9a78426ea07
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: eb27605108feb3a2db3072d4a8b7a296f0f74cfc
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-conditional-access"></a>Řešení potíží s podmíněným přístupem
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Obvykle se uživatel pokusí o přístup k e-mailu nebo ke službě SharePoint a obdrží výzvu k registraci. Prostřednictvím této výzvy přejde uživatele na portál společnosti.
 
@@ -49,20 +49,20 @@ Tyto podmínky lze zobrazit pro každé zařízení v portálu pro správu Azure
 
 ## <a name="compliance-issues"></a>Problémy se shodou
 
- -  Zařízení nevyhovuje zásadám Intune. K běžným problémům patří požadavky na šifrování a heslo. Uživatel bude přesměrován na portál společnosti, kde může nakonfigurovat zařízení tak, aby vyhovovalo požadavkům.
- -  Registrace informací o shodě pro zařízení může trvat nějakou dobu. Počkejte několik minut a zkuste akci zopakovat.
- -  Pro zařízení s iOS:
-     -   Existující e-mailový profil vytvořený uživatelem bude blokovat nasazení profilu Intune vytvořeného správcem. Tento problém je běžný, protože uživatelé s iOSem obvykle vytvoří e-mailový profil a potom se zaregistrují. Portál společnosti bude uživatele informovat o tom, že požadavky nejsou splněny kvůli ručně nakonfigurovanému e-mailovému profilu a vyzve uživatele k odebrání příslušného profilu. Uživatel by měl svůj e-mailový profil odebrat, aby bylo možné nasadit profil Intune. Chcete-li problémům zabránit, požádejte své uživatele, aby se zaregistrovali bez instalace e-mailového profilu a aby Intune povolili nasazení profilu.
-     -   Zařízení s iOSem můžou uváznout ve stavu kontroly dodržování předpisů bránit uživateli v inicializaci jiné kontroly. Restartování Portálu společnosti může problém vyřešit a stav dodržování předpisů bude odrážet stav zařízení v Intune. Po shromáždění všech dat ze synchronizace zařízení je kontrola dodržování předpisů rychlá a trvá v průměru méně než půl sekundy.
+- Zařízení nevyhovuje zásadám Intune. K běžným problémům patří požadavky na šifrování a heslo. Uživatel bude přesměrován na portál společnosti, kde může nakonfigurovat zařízení tak, aby vyhovovalo požadavkům.
+- Registrace informací o shodě pro zařízení může trvat nějakou dobu. Počkejte několik minut a zkuste akci zopakovat.
+- Pro zařízení s iOS:
+  - Existující e-mailový profil vytvořený uživatelem bude blokovat nasazení profilu Intune vytvořeného správcem. Tento problém je běžný, protože uživatelé s iOSem obvykle vytvoří e-mailový profil a potom se zaregistrují. Portál společnosti bude uživatele informovat o tom, že požadavky nejsou splněny kvůli ručně nakonfigurovanému e-mailovému profilu a vyzve uživatele k odebrání příslušného profilu. Uživatel by měl svůj e-mailový profil odebrat, aby bylo možné nasadit profil Intune. Chcete-li problémům zabránit, požádejte své uživatele, aby se zaregistrovali bez instalace e-mailového profilu a aby Intune povolili nasazení profilu.
+  - Zařízení s iOSem můžou uváznout ve stavu kontroly dodržování předpisů bránit uživateli v inicializaci jiné kontroly. Restartování Portálu společnosti může problém vyřešit a stav dodržování předpisů bude odrážet stav zařízení v Intune. Po shromáždění všech dat ze synchronizace zařízení je kontrola dodržování předpisů rychlá a trvá v průměru méně než půl sekundy.
 
-        Obvyklým důvodem toho, že zařízení zůstanou v tomto stavu, jsou potíže s připojením ke službě nebo dlouhotrvající synchronizace.  Pokud potíže přetrvávají v různých síťových konfigurací (mobilní, Wi-Fi, VPN) i po restartech zařízení a po ověření, že zprostředkovatel SSP je v zařízení aktuální, obraťte se na podporu Microsoftu podle popisu v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+    Obvyklým důvodem toho, že zařízení zůstanou v tomto stavu, jsou potíže s připojením ke službě nebo dlouhotrvající synchronizace.  Pokud potíže přetrvávají v různých síťových konfigurací (mobilní, Wi-Fi, VPN) i po restartech zařízení a po ověření, že zprostředkovatel SSP je v zařízení aktuální, obraťte se na podporu Microsoftu podle popisu v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
- - Zařízení s Androidem:
-    - Některá zařízení s Androidem můžou působit jako zašifrovaná, ale aplikace Portál společnosti tato zařízení rozpozná jako nezašifrovaná. 
+- Zařízení s Androidem:
+   - Některá zařízení s Androidem můžou působit jako zašifrovaná, ale aplikace Portál společnosti tato zařízení rozpozná jako nezašifrovaná. 
     
-        -   Zařízení, která jsou v tomto stavu, vyžadují, aby uživatel nastavil bezpečné heslo pro spuštění. Uživateli se zobrazí oznámení aplikace Portál společnosti s výzvou k nastavení hesla pro spuštění zařízení. Po klepnutí na oznámení a potvrzení stávajícího PIN kódu nebo hesla zvolte na obrazovce **Zabezpečené spouštění** možnost **Požadovat PIN pro spuštění zařízení**. Pak v aplikaci Portál společnosti klepněte na tlačítko **Zkontrolovat dodržování předpisů** pro dané zařízení. Zařízení by se teď mělo rozpoznat jako zašifrované.
+       -   Zařízení, která jsou v tomto stavu, vyžadují, aby uživatel nastavil bezpečné heslo pro spuštění. Uživateli se zobrazí oznámení aplikace Portál společnosti s výzvou k nastavení hesla pro spuštění zařízení. Po klepnutí na oznámení a potvrzení stávajícího PIN kódu nebo hesla zvolte na obrazovce **Zabezpečené spouštění** možnost **Požadovat PIN pro spuštění zařízení**. Pak v aplikaci Portál společnosti klepněte na tlačítko **Zkontrolovat dodržování předpisů** pro dané zařízení. Zařízení by se teď mělo rozpoznat jako zašifrované.
     
-        -   Někteří výrobci zařízení používají k zašifrování svých zařízení místo tajného PIN kódu nastaveného uživatelem výchozí PIN. Intune považuje šifrování pomocí výchozího PIN kódu jako nezabezpečené, protože tato metoda šifrování dat na zařízení představuje riziko, pokud uživatelé se zlými úmysly mají fyzický přístup k danému zařízení. V případě tohoto problému zvažte použití [zásad ochrany aplikací](/intune-classic/deploy-use/azure-portal-for-microsoft-intune-mam-policies).
+       -   Někteří výrobci zařízení používají k zašifrování svých zařízení místo tajného PIN kódu nastaveného uživatelem výchozí PIN. Intune považuje šifrování pomocí výchozího PIN kódu jako nezabezpečené, protože tato metoda šifrování dat na zařízení představuje riziko, pokud uživatelé se zlými úmysly mají fyzický přístup k danému zařízení. V případě tohoto problému zvažte použití [zásad ochrany aplikací](/intune-classic/deploy-use/azure-portal-for-microsoft-intune-mam-policies).
 
 ## <a name="policy-issues"></a>problémy se zásadami;
 
@@ -118,22 +118,22 @@ Pokud tyto postupy pro řešení potíží problém nevyřeší, může vás pod
 ### <a name="exchange-connector-logs"></a>Protokoly Exchange Connectoru
 
 #### <a name="general-log-information"></a>Obecné informace o protokolech
-Pokud chcete zobrazit protokoly Exchange Connectoru, použijte nástroj Server Trace Viewer Tool (https://msdn.microsoft.com/library/ms732023(v=vs.110).aspx'). Tento nástroj vyžaduje, abyste si stáhli sadu Windows Server SDK.
+Pokud chcete zobrazit protokoly Exchange Connectoru, použijte nástroj Server Trace Viewer Tool (<https://msdn.microsoft.com/library/ms732023(v=vs.110).aspx>'). Tento nástroj vyžaduje, abyste si stáhli sadu Windows Server SDK.
 
 >[!NOTE]
 >Protokoly jsou umístěné v adresáři C:\ProgramData\Microsoft\Windows Intune Exchange Connector\Logs. Protokoly jsou obsažené v posloupnosti 30 souborů, začínající souborem *Connector0.log* a končící souborem *Connector29.log*. Protokoly přecházejí na další po nahromadění 10 MB dat v protokolu. Jakmile se protokoly dostanou k souboru Connector29, začnou zase od Connector0 a budou přepisovat předchozí soubory protokolu.
 
 #### <a name="locating-sync-logs"></a>Vyhledání protokolů synchronizace
 
--    Vyhledejte v protokolech úplnou synchronizaci vyhledáním textu **full sync**. Začátek úplné synchronizace je označený tímto textem:
+- Vyhledejte v protokolech úplnou synchronizaci vyhledáním textu **full sync**. Začátek úplné synchronizace je označený tímto textem:
 
-    „Handling command: Getting the mobile device list without a time filter (full sync) for <number> users“
+  „Handling command: Getting the mobile device list without a time filter (full sync) for <number> users“
 
-    Konec protokolu úplné synchronizace vypadá takto:
+  Konec protokolu úplné synchronizace vypadá takto:
 
-    „Getting the mobile device list without a time filter (full sync) for 4 users completed successfully.“ Details: Inventory command result - Devices synced: 0 Commmand ID: commandIDGUID' Exchange health: 'Server health 'Name: 'PowerShellExchangeServer: <Name=název_poštovního_serveru>' Status: Connected','
+  „Getting the mobile device list without a time filter (full sync) for 4 users completed successfully.“ Details: Inventory command result - Devices synced: 0 Commmand ID: commandIDGUID' Exchange health: 'Server health 'Name: 'PowerShellExchangeServer: <Name=název_poštovního_serveru>' Status: Connected','
 
--   Vyhledejte v protokolech rychlou (rozdílovou) synchronizaci vyhledáním textu **quick sync**.
+- Vyhledejte v protokolech rychlou (rozdílovou) synchronizaci vyhledáním textu **quick sync**.
 
 ##### <a name="exceptions-in-get-next-command"></a>Výjimky v příkazu Get next
 Vyhledejte v protokolech Exchange Connectoru výjimky v **příkazu Get next** a poskytněte je podpoře Microsoftu.

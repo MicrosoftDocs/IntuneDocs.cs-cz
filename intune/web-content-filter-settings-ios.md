@@ -1,28 +1,28 @@
 ---
-title: "Nastavení filtru webového obsahu v Microsoft Intune pro zařízení s iOSem"
-titlesuffix: 
-description: "Přečtěte si, jaká nastavení Microsoft Intune můžete použít k povolení a blokování přístupu k webovým stránkám ze zařízení s iOSem."
-keywords: 
+title: Nastavení filtru webového obsahu v Microsoft Intune pro zařízení s iOSem
+titlesuffix: ''
+description: Přečtěte si, jaká nastavení Microsoft Intune můžete použít k povolení a blokování přístupu k webovým stránkám ze zařízení s iOSem.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a401a3a04d10587606b8ec4862a62e551e7aadf0
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: c5e3dbdc339fd25289e1aed526bc03e4691c3812
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="web-content-filter-settings-for-ios-devices"></a>Nastavení filtru webového obsahu pro zařízení s iOSem
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Tento článek ukazuje nastavení Microsoft Intune, která můžete použít k řízení přístupu prohlížeče k adresám URL ze zařízení s iOSem.
 
@@ -63,7 +63,7 @@ Pokud nezadáte žádné adresy URL, koncoví uživatelé nebudou mít přístup
 2. Po zadání údajů pro jednotlivé weby klikněte na **Přidat**.
 3. Po skončení klikněte na tlačítko **OK**.
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > Intune automaticky povoluje tyto adresy URL:
 > - www.microsoft.com
 > - www.microsoft.net

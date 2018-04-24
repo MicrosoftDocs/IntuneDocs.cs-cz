@@ -15,15 +15,15 @@ ms.assetid: 6e9ec662-465b-4ed4-94c1-cff0fe18f126
 ms.reviewer: dougeby
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6bbfa42b8ec03cfbe97efdae21f493b68c53d769
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 0d38d7671218bfcecd3d2aa4671a565e0cabe37f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Přidání uživatelů a udělení oprávnění pro správu v Intune
 
-[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
+[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 Jako správce můžete uživatele přidat přímo nebo je synchronizovat z místní služby Active Directory. Po přidání můžou uživatelé zaregistrovat zařízení a přistupovat k prostředkům společnosti. Můžete také uživatelům udělit další oprávnění včetně oprávnění *globálního správce* a *správce služeb*.
 
@@ -35,16 +35,16 @@ Uživatele můžete ručně přidat do předplatného Intune prostřednictvím [
 2. V nabídce Office 365 vyberte **Správce**.
 3. V Centru pro správu vyberte **Přidat uživatele**.
 
-  ![Snímek obrazovky sekce Přidat uživatele](media/office-add-user.png)
+   ![Snímek obrazovky sekce Přidat uživatele](media/office-add-user.png)
 
 4. Uveďte následující údaje o uživateli:
-  - **Jméno**
-  - **Příjmení**
-  - **Zobrazované jméno**
-  - **Uživatelské jméno** – hlavní název uživatele (UPN) uložený v Azure Active Directory a používaný pro přístup ke službě
-  - **Umístění**
-  - **Kontaktní informace** (nepovinné)
-  - **Heslo** – automaticky vygenerované nebo vytvořené
+   - **Jméno**
+   - **Příjmení**
+   - **Zobrazované jméno**
+   - **Uživatelské jméno** – hlavní název uživatele (UPN) uložený v Azure Active Directory a používaný pro přístup ke službě
+   - **Umístění**
+   - **Kontaktní informace** (nepovinné)
+   - **Heslo** – automaticky vygenerované nebo vytvořené
 
      ![Snímek obrazovky sekce nového uživatele](media/office-add-user-details.png)
 
@@ -55,16 +55,16 @@ Uživatele můžete ručně přidat do předplatného Intune prostřednictvím [
 1. Přihlaste se k portálu [Azure Portal](https://portal.azure.com) a přejděte na **Všechny služby** > **Monitorování a správa** > **Intune**. Můžete také *vyhledat prostředky* pro **Intune**.
 2. Vyberte **Uživatelé** > **Všichni uživatelé**.
 3. V Centru pro správu vyberte **Nový uživatel**.
-  ![Snímek obrazovky přidání nového uživatele](media/intune-add-user.png)
+   ![Snímek obrazovky přidání nového uživatele](media/intune-add-user.png)
 4. Uveďte následující údaje o uživateli:
-  - **Název**
-  - **Uživatelské jméno** – nové jméno na portálu Azure Active Directory ![Snímek obrazovky přidání jména a uživatelského jména](media/intune-add-user-info.png) Pokračujte výběrem **OK**.
+   - **Název**
+   - **Uživatelské jméno** – nové jméno na portálu Azure Active Directory ![Snímek obrazovky přidání jména a uživatelského jména](media/intune-add-user-info.png) Pokračujte výběrem **OK**.
 5. Volitelně můžete zadat následující vlastnosti uživatele:
-  - **Profil** – údaje týkající se práce včetně **pracovní pozice** a **oddělení**
-  -  **Skupiny** – vyberte skupiny, které chcete pro uživatele přidat
-  - **Role adresáře** – přidělte uživateli oprávnění správce včetně role správce služeb Intune.
+   - **Profil** – údaje týkající se práce včetně **pracovní pozice** a **oddělení**
+   -  **Skupiny** – vyberte skupiny, které chcete pro uživatele přidat
+   - **Role adresáře** – přidělte uživateli oprávnění správce včetně role správce služeb Intune.
 
-  Vyberte **Vytvořit** a přidejte tak nového uživatele do Intune.
+   Vyberte **Vytvořit** a přidejte tak nového uživatele do Intune.
 6. Vyberte **Profil** a potom pro nového uživatele vyberte **Místo využívání**. Místo využívání je nutné zadat, abyste mohli přiřadit novému uživateli licenci Intune. Pokračujte možností **Uložit**.
     ![Snímek obrazovky místa využívání](media/intune-add-user-loc.png)
 7. Vyberte **Licence**. Potom zvolte **Přiřadit** a přiřaďte tomuto uživateli licenci Intune. Licence Intune je nutná pro registraci zařízení a přístup k prostředkům společnosti. Vyberte **Produkty**, zvolte typ licence, **Vybrat** a potom **Přiřadit**.
@@ -112,7 +112,7 @@ Abyste měli přístup na Portál služeb Office 365, musí být u vašeho účt
 Můžete nakonfigurovat synchronizaci adresářů, aby se importovaly uživatelské účty z vaší místní služby Active Directory do Microsoft Azure Active Directory (Azure AD), což zahrnuje uživatele Intune. Když máte místní službu Active Directory připojenou ke všem vašim službám založeným na Azure Active Directory, správa identity uživatele se tím zjednodušuje. Můžete taky nakonfigurovat funkce jednotného přihlašování, aby se prostředí ověřování pro vaše uživatele zjednodušilo a zpřehlednilo. Propojením stejného [tenanta Azure AD](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect/) s více službami se uživatelské účty, které jste předtím synchronizovali, stanou dostupnými pro všechny cloudové služby.
 
 ### <a name="how-to-sync-on-premises-users-with-azure-ad"></a>Synchronizace místních uživatelů s Azure AD
-Jediný nástroj potřebný k synchronizaci uživatelských účtů s Azure AD je [Průvodce Azure AD Connectem](https://www.microsoft.com/download/details.aspx?id=47594). Průvodce Azure AD Connectem je nástroj, který vás zjednodušeně provede připojením místní infrastruktury identit ke cloudu.  Vyberte topologii a potřeby (jeden nebo více adresářů, synchronizaci hesel nebo federaci). Průvodce nasadí a nakonfiguruje všechny komponenty potřebné ke zprovoznění a spuštění vašeho připojení. Včetně služeb synchronizace, Active Directory Federation Services (AD FS) a modulu Azure AD PowerShell.
+Jediný nástroj potřebný k synchronizaci uživatelských účtů s Azure AD je [Průvodce Azure AD Connectem](https://www.microsoft.com/download/details.aspx?id=47594). Průvodce Azure AD Connectem je nástroj, který vás zjednodušeně provede připojením místní infrastruktury identit ke cloudu. Vyberte topologii a potřeby (jeden nebo více adresářů, synchronizaci hodnoty hash, předávací ověřování nebo federaci). Průvodce nasadí a nakonfiguruje všechny komponenty potřebné ke zprovoznění a spuštění vašeho připojení. Včetně služeb synchronizace, Active Directory Federation Services (AD FS) a modulu Azure AD PowerShell.
 
 > [!TIP]
 > Azure AD Connect zahrnuje funkce dřív vydané jako Dirsync a Azure AD Sync. Další informace o [integraci adresáře](http://technet.microsoft.com/library/jj573653.aspx). Informace o synchronizaci uživatelských účtů z místního adresáře do Azure AD najdete v tématu [Podobnosti mezi službou Active Directory a Azure AD](http://technet.microsoft.com/library/dn518177.aspx).

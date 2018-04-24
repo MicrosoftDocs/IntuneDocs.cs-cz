@@ -1,29 +1,28 @@
 ---
-title: "Nastavení ochrany koncového bodu Microsoft Intune pro Windows 10"
-titlesuffix: 
-description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení ochrany koncového bodu, jako je BitLocker, na zařízeních s Windows 10."
-keywords: 
+title: Přidání ochrany koncových bodů pro Windows 10 v Microsoft Intune – Azure | Microsoft Docs
+description: Na zařízeních s Windows 10 můžete v Intune použít nebo nakonfigurovat nastavení ochrany koncového bodu a povolit tak na místních zařízeních funkce Windows Defender, mezi něž patří Application Guard, brána firewall, filtr SmartScreen, šifrování a BitLocker, Exploit Guard, řízení aplikací, Security Center a zabezpečení.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 02/23/2018
+ms.date: 03/28/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 02a32f678b40b2b40535984e17b41e0a864d8fdf
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: afe1e737bb5214af76395db91b8aea72cb5d42a0
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="create-endpoint-protection-settings-for-windows-10-and-later-in-microsoft-intune"></a>Vytvořte nastavení ochrany koncového bodu pro Windows 10 a novější ve službě Microsoft Intune
+# <a name="endpoint-protection-settings-for-windows-10-and-later-in-intune"></a>Nastavení ochrany koncového bodu pro Windows 10 a novější v Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Profil ochrany koncového bodu vám umožňuje ovládat funkce zabezpečení na zařízeních s Windows 10, jako je BitLocker nebo Windows Defender.
 
@@ -31,21 +30,6 @@ V tomto článku se dozvíte, jak vytvářet profily ochrany koncového bodu.
 
 > [!Note]
 > Tato nastavení nejsou podporována v edicích Windows 10 Home a Professional.
-
-## <a name="create-an-endpoint-protection-profile"></a>Vytvoření profilu ochrany koncového bodu
-
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V okně **Intune** zvolte **Konfigurace zařízení**.
-2. V okně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
-3. V okně profilů zvolte **Vytvořit profil**.
-4. V okně **Vytvořit profil** zadejte **Název** a **Popis** profilu pro funkce zařízení.
-5. V rozevíracím seznamu **Platforma** vyberte **Windows 10 a novější**.
-6. V rozevíracím seznamu **Typ profilu** zvolte **Ochrana koncového bodu**.
-7. Nakonfigurujte požadované nastavení. V podrobných informacích v tomto článku se dozvíte, jaká je funkce každého nastavení. Po dokončení zvolte **OK**.
-8. Vraťte se zpět do okna **Vytvořit profil** a zvolte **Vytvořit**.
-
-Profil se vytvoří a zobrazí se v okně se seznamem profilů.
 
 ## <a name="windows-defender-application-guard"></a>Ochrana Application Guard v programu Windows Defender
 
@@ -56,9 +40,9 @@ Ochrana Application Guard je dostupná jenom pro zařízení s Windows 10 (64bit
 - **Externí obsah na firemních webech** – Zablokuje načítání obsahu z neschválených webů.
 - **Tisk z virtuálního prohlížeče** – Povolí tisknout obsah z virtuálního prohlížeče do souborů PDF, XPS a na místní nebo síťové tiskárny.
 - **Shromažďovat protokoly** – Shromáždí protokoly pro události, ke kterým dojde v relaci procházení ochrany Application Guard.
-- **Zachovat uživatelem vygenerovaná data prohlížeče** – Povolí ukládání dat uživatelů (třeba hesla, oblíbené položky a soubory cookie), která se vytvoří během virtuální relace procházení ochrany Application Guard.
-- **Akcelerace grafiky** – Umožňuje rychleji načítat weby náročné na grafiku, když se pracuje v relaci virtuálního procházení ochrany Application Guard, díky umožnění přístupu k virtuálnímu grafickému procesoru.
-
+- **Zachovat uživatelem vygenerovaná data prohlížeče** – Umožní ukládání dat uživatelů (například hesel, oblíbených položek a souborů cookie), která se vytvoří během virtuální relace procházení ochrany Application Guard.
+- **Akcelerace grafiky** – Umožňuje rychleji načítat weby náročné na grafiku, když se pracuje v relaci virtuálního procházení ochrany Application Guard. Když povolíte přístup k virtuálnímu grafickému procesoru, budou se weby načítat rychleji.
+- **Stahovat soubory do systému souborů hostitele** – Umožňuje uživatelům stahovat soubory z virtualizovaného prohlížeče do hostitelského operačního systému.
 
 ## <a name="windows-defender-firewall"></a>Firewall v programu Windows Defender
 
@@ -72,7 +56,7 @@ Tato nastavení platí pro všechny typy sítě.
 - **Výjimky protokolu IPsec** – Nakonfigurujte konkrétní přenosy, u kterých budou platit výjimky protokolu IPsec, například **Zjišťování kódů typu ICMP IPv6 sousedem**, **Protokol ICMP**, **Zjišťování kódů typu ICMP IPv6 směrovačem** a **Přenosy DHCP IPv4 i IPv6**.
 - **Ověření seznamu odvolaných certifikátů** – Nastavte, jak se bude vynucovat ověření seznamu odvolaných certifikátů, například **Zakázat ověření seznamu CRL**, **Neúspěšné ověření seznamu CRL jenom u odvolaného certifikátu** a **Neúspěšné ověření seznamu CRL při každé zjištěné chybě**.
 - **Oportunisticky přiřadit sadu ověřování na klíčovací modul** – Nastaví klíčovací moduly tak, aby v případě, že nepodporují všechny sady ověřování v dané sadě, se celá sada ověřování ignorovala.
-- **Fronty paketů** – Určete, jak se povoluje škálování softwaru na straně příjmu u scénáře se šifrovaným příjmem a předáváním nešifrovaného textu pro bránu tunelového propojení IPsec. Tím se zajistí zachování pořadí paketů.
+- **Fronty paketů** – Určete, jak se povoluje škálování softwaru na straně příjmu u scénáře se šifrovaným příjmem a předáváním nešifrovaného textu pro bránu tunelového propojení IPsec. Toto nastavení zajišťuje zachování pořadí paketů.
 
 ### <a name="network-settings"></a>Nastavení sítě
 
@@ -81,7 +65,7 @@ Tato nastavení platí pro určité typy sítě, například pro typy **Doménov
 #### <a name="general-settings"></a>Obecná nastavení
 
 - **Firewall v programu Windows Defender** – Toto nastavení povolte, pokud chcete blokovat přenosy v síti.
-- **Neviditelný režim** – Zablokuje provoz firewallu v neviditelném režimu. Toto nastavení blokování vám umožňuje zablokovat také **výjimku zabezpečených paketů protokolu IPsec**.
+- **Neviditelný režim** – Zablokuje provoz firewallu v neviditelném režimu. Blokování neviditelného režimu vám umožňuje zablokovat také **výjimku zabezpečených paketů protokolu IPsec**.
 - **Stíněné** – Pokud je toto nastavení i nastavení firewallu povolené, budou se všechny příchozí přenosy blokovat.
 - **Jednosměrové odpovědi na vícesměrová vysílání** – Zablokuje jednosměrové odpovědi na vícesměrová vysílání. Jednosměrové odpovědi na zprávy vícesměrového nebo všesměrového vysílání obvykle nebudete chtít přijímat, protože takové odpovědi můžou naznačovat útok DoS nebo pokus útočníka otestovat známý aktivní počítač.
 - **Příchozí upozornění** – Zablokuje zobrazování upozornění uživatelům, když se blokuje naslouchání aplikace na portu.
@@ -115,53 +99,52 @@ Základní nastavení jsou univerzální nastavení BitLockeru pro všechny typy
 
 - **Upozornění pro další šifrování disku** – Zakáže upozornění pro další šifrování disku v počítačích koncových uživatelů.
 - **Konfigurovat metody šifrování** – Povolení tohoto nastavení umožní konfiguraci algoritmů šifrování operačního systému, dat a vyměnitelných jednotek.
-    - **Šifrování jednotek s operačním systémem** – Umožňuje vybrat metodu šifrování pro jednotky s operačním systémem. Doporučujeme použít algoritmus XTS-AES.
-    - **Šifrování pevných datových jednotek** – Umožňuje vybrat metodu šifrování pro pevné (vestavěné) datové jednotky. Doporučujeme použít algoritmus XTS-AES.
-    - **Šifrování vyměnitelných datových jednotek** – Umožňuje vybrat metodu šifrování pro vyměnitelné datové jednotky. Pokud se vyměnitelná jednotka používá se zařízeními s jiným systémem než Windows 10, doporučujeme použít algoritmus AES-CBC.
+  - **Šifrování jednotek s operačním systémem** – Umožňuje vybrat metodu šifrování pro jednotky s operačním systémem. Doporučujeme použít algoritmus XTS-AES.
+  - **Šifrování pevných datových jednotek** – Umožňuje vybrat metodu šifrování pro pevné (vestavěné) datové jednotky. Doporučujeme použít algoritmus XTS-AES.
+  - **Šifrování vyměnitelných datových jednotek** – Umožňuje vybrat metodu šifrování pro vyměnitelné datové jednotky. Pokud se vyměnitelná jednotka používá se zařízeními s jiným systémem než Windows 10, doporučujeme použít algoritmus AES-CBC.
 
 ### <a name="bitlocker-os-drive-settings"></a>Nastavení BitLockeru pro jednotky s operačním systémem
 
 Tato nastavení platí konkrétně pro datové jednotky s operačním systémem.
 
 - **Další ověření při spuštění** – Umožňuje konfigurovat požadavky na ověření pro spuštění počítače, včetně využití čipu TPM (Trusted Platform Module).
-    - **BitLocker s nekompatibilním čipem TPM**
-    - **Kompatibilní spouštění s čipem TPM** – Umožňuje konfigurovat, jestli je, nebo není povolený čip TMP, nebo jestli je povinný.
-    - **Kompatibilní spouštěcí PIN kód čipu TPM** – Umožňuje konfigurovat, jestli je, nebo není povoleno použití spouštěcího PIN kódu u čipu TPM, nebo jestli je povinné.
-    - **Kompatibilní spouštěcí klíč TPM** – Umožňuje konfigurovat, jestli je, nebo není povoleno použití spouštěcího klíče u čipu TPM, nebo jestli je povinné.
-    - **Kompatibilní spouštěcí klíč a PIN kód čipu TPM** – Umožňuje konfigurovat, jestli je, nebo není povoleno použití spouštěcího klíče a PIN kódu u čipu TPM, nebo jestli je povinné.
+  - **BitLocker s nekompatibilním čipem TPM**
+  - **Kompatibilní spouštění s čipem TPM** – Umožňuje konfigurovat, jestli je, nebo není povolený čip TMP, nebo jestli je povinný.
+  - **Kompatibilní spouštěcí PIN kód čipu TPM** – Umožňuje konfigurovat, jestli je, nebo není povoleno použití spouštěcího PIN kódu u čipu TPM, nebo jestli je povinné.
+  - **Kompatibilní spouštěcí klíč TPM** – Umožňuje konfigurovat, jestli je, nebo není povoleno použití spouštěcího klíče u čipu TPM, nebo jestli je povinné.
+  - **Kompatibilní spouštěcí klíč a PIN kód čipu TPM** – Umožňuje konfigurovat, jestli je, nebo není povoleno použití spouštěcího klíče a PIN kódu u čipu TPM, nebo jestli je povinné.
 - **Minimální délka PIN kódu** – Po povolení tohoto nastavení můžete konfigurovat minimální délku spouštěcího PIN kódu u čipu TPM.
-    - **Minimální počet znaků** – Zadejte počet znaků požadovaný pro spouštěcí PIN kód v rozmezí **4**-**20**.
+  - **Minimální počet znaků** – Zadejte počet znaků požadovaný pro spouštěcí PIN kód v rozmezí **4**-**20**.
 - **Obnovení jednotky s operačním systémem** – Po povolení tohoto nastavení můžete řídit obnovení jednotek s operačním systémem chráněných BitLockerem v situacích, kdy nejsou k dispozici požadované informace pro spuštění.
-    - **Agent obnovení dat založený na certifikátech** – Toto nastavení povolte, pokud chcete, aby bylo u jednotek s operačním systémem chráněných BitLockerem možné používat agenty obnovení dat.
-    - **Vytváření hesla pro obnovení uživatelem** – Můžete nakonfigurovat, jestli mají uživatelé povoleno nebo zakázáno vytvořit 48místné heslo pro obnovení nebo jestli je vytvoření povinné.
-    - **Vytváření obnovovacího klíče uživatelem** – Můžete nakonfigurovat, jestli mají uživatelé povoleno nebo zakázáno vytvořit 256bitové heslo pro obnovení nebo jestli je vytvoření povinné.
-    - **Možnosti obnovení v průvodci nastavením BitLockeru** – Povolením tohoto nastavení zabráníte uživatelům zobrazovat a měnit po zapnutí BitLockeru možnosti obnovení.
-    - **Ukládat informace pro obnovení BitLockeru do AD DS** – Umožňuje ukládání informací pro obnovení BitLockeru do služby Active Directory.
-    - **Informace BitLockeru o obnově uložené v AD DS** – Můžete nakonfigurovat, které části informací BitLockeru o obnově se ukládají ve službě Active Directory. Vybírejte z těchto možností:
-        - **Zálohovat hesla pro obnovení a sady klíčů**
-        - **Zálohovat jenom hesla pro obnovení**
-    - **Ukládat informace o obnově v AD DS před povolením BitLockeru** – Povolením tohoto nastavení zabráníte uživatelům, aby zapínali BitLocker, pokud není zařízení připojené k doméně a informace BitLockeru o obnově nejsou úspěšně uložené ve službě Active Directory.
+  - **Agent obnovení dat založený na certifikátech** – Toto nastavení povolte, pokud chcete, aby bylo u jednotek s operačním systémem chráněných BitLockerem možné používat agenty obnovení dat.
+  - **Vytváření hesla pro obnovení uživatelem** – Můžete nakonfigurovat, jestli mají uživatelé povoleno nebo zakázáno vytvořit 48místné heslo pro obnovení nebo jestli je vytvoření povinné.
+  - **Vytváření obnovovacího klíče uživatelem** – Můžete nakonfigurovat, jestli mají uživatelé povoleno nebo zakázáno vytvořit 256bitové heslo pro obnovení nebo jestli je vytvoření povinné.
+  - **Možnosti obnovení v průvodci nastavením BitLockeru** – Povolením tohoto nastavení zabráníte uživatelům zobrazovat a měnit po zapnutí BitLockeru možnosti obnovení.
+  - **Ukládat informace pro obnovení BitLockeru do AD DS** – Umožňuje ukládání informací pro obnovení BitLockeru do služby Active Directory.
+  - **Informace BitLockeru o obnově uložené v AD DS** – Můžete nakonfigurovat, které části informací BitLockeru o obnově se ukládají ve službě Active Directory. Vybírejte z těchto možností:
+    - **Zálohovat hesla pro obnovení a sady klíčů**
+    - **Zálohovat jenom hesla pro obnovení**
+  - **Ukládat informace o obnově v AD DS před povolením BitLockeru** – Povolením tohoto nastavení zabráníte uživatelům, aby zapínali BitLocker, pokud není zařízení připojené k doméně a informace BitLockeru o obnově nejsou úspěšně uložené ve službě Active Directory.
 - **Zpráva o obnově a adresa URL před spuštěním** – Po povolení tohoto nastavení můžete konfigurovat zprávu a adresu URL, které se zobrazí na obrazovce pro obnovení klíče před spuštěním.
-    - **Zpráva o obnovení před spuštěním** – Můžete konfigurovat, jak se zpráva o obnovení před spuštěním zobrazí uživatelům. Vybírejte z těchto možností:
-        - **Použít výchozí zprávu a adresu URL pro obnovení**
-        - **Použít prázdnou zprávu a adresu URL pro obnovení**
-        - **Použít vlastní zprávu o obnovení**
-        - **Použít vlastní adresu URL pro obnovení**
-
+  - **Zpráva o obnovení před spuštěním** – Můžete konfigurovat, jak se zpráva o obnovení před spuštěním zobrazí uživatelům. Vybírejte z těchto možností:
+    - **Použít výchozí zprávu a adresu URL pro obnovení**
+    - **Použít prázdnou zprávu a adresu URL pro obnovení**
+    - **Použít vlastní zprávu o obnovení**
+    - **Použít vlastní adresu URL pro obnovení**
 
 ### <a name="bitlocker-fixed-data-drive-settings"></a>Nastavení nástroje BitLocker pro pevné datové jednotky
 
 - **Oprávnění k zápisu na pevné datové disky, které nechrání BitLocker** – Pokud je tato možnost povolená, je zápis na všechny pevné (vestavěné) datové jednotky možný jenom tehdy, když je na nich povolený BitLocker.
 - **Obnovení pevného disku** – Pokud povolíte toto nastavení, můžete řídit obnovu pevných jednotek chráněných BitLockerem v případě, že nejsou k dispozici požadované informace pro spuštění.
-    - **Agent obnovení dat** – Toto nastavení povolte, pokud chcete u pevných jednotek chráněných BitLockerem používat agenty obnovení dat.
-    - **Vytváření hesla pro obnovení uživatelem** – Můžete nakonfigurovat, jestli mají uživatelé povoleno nebo zakázáno vytvořit 48místné heslo pro obnovení nebo jestli je vytvoření povinné.  
-    - **Vytváření obnovovacího klíče uživatelem** – Můžete nakonfigurovat, jestli mají uživatelé povoleno nebo zakázáno vytvořit 256bitové heslo pro obnovení nebo jestli je vytvoření povinné.
-    - **Možnosti obnovení v průvodci nastavením BitLockeru** – Povolením tohoto nastavení zabráníte uživatelům zobrazovat a měnit po zapnutí BitLockeru možnosti obnovení.
-    - **Ukládat informace pro obnovení BitLockeru do AD DS** – Umožňuje ukládání informací pro obnovení BitLockeru do služby Active Directory.
-    - **Informace BitLockeru o obnově v AD DS** – Můžete nakonfigurovat, které části informací BitLockeru o obnově se ukládají ve službě Active Directory. Vybírejte z těchto možností:
-        - **Zálohovat hesla pro obnovení a sady klíčů**
-        - **Zálohovat jenom hesla pro obnovení**
-    - **Ukládat informace o obnově v AD DS před povolením BitLockeru** – Povolením tohoto nastavení zabráníte uživatelům, aby zapínali BitLocker, pokud není zařízení připojené k doméně a informace BitLockeru o obnově nejsou úspěšně uložené ve službě Active Directory.
+  - **Agent obnovení dat** – Toto nastavení povolte, pokud chcete u pevných jednotek chráněných BitLockerem používat agenty obnovení dat.
+  - **Vytváření hesla pro obnovení uživatelem** – Můžete nakonfigurovat, jestli mají uživatelé povoleno nebo zakázáno vytvořit 48místné heslo pro obnovení nebo jestli je vytvoření povinné.  
+  - **Vytváření obnovovacího klíče uživatelem** – Můžete nakonfigurovat, jestli mají uživatelé povoleno nebo zakázáno vytvořit 256bitové heslo pro obnovení nebo jestli je vytvoření povinné.
+  - **Možnosti obnovení v průvodci nastavením BitLockeru** – Povolením tohoto nastavení zabráníte uživatelům zobrazovat a měnit po zapnutí BitLockeru možnosti obnovení.
+  - **Ukládat informace pro obnovení BitLockeru do AD DS** – Umožňuje ukládání informací pro obnovení BitLockeru do služby Active Directory.
+  - **Informace BitLockeru o obnově v AD DS** – Můžete nakonfigurovat, které části informací BitLockeru o obnově se ukládají ve službě Active Directory. Vybírejte z těchto možností:
+    - **Zálohovat hesla pro obnovení a sady klíčů**
+    - **Zálohovat jenom hesla pro obnovení**
+  - **Ukládat informace o obnově v AD DS před povolením BitLockeru** – Povolením tohoto nastavení zabráníte uživatelům, aby zapínali BitLocker, pokud není zařízení připojené k doméně a informace BitLockeru o obnově nejsou úspěšně uložené ve službě Active Directory.
 
 ### <a name="bitlocker-removable-data-drive-settings"></a>Nastavení nástroje BitLocker pro vyměnitelné datové jednotky
 
@@ -173,6 +156,8 @@ Tato nastavení platí konkrétně pro datové jednotky s operačním systémem.
 [Ochrana Exploit Guard v programu Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) se používá ke správě a omezení možností útoku na aplikace, které používají vaši zaměstnanci.
 
 ### <a name="attack-surface-reduction"></a>Omezení možností útoku
+
+- **Označit zcizování přihlašovacích údajů ze subsystému místního úřadu zabezpečení Windows**
 
 Používejte [ochranu před akcemi a aplikacemi](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard), které obvykle využívá malware s cílem zneužití a nakažení počítačů.
 
@@ -187,16 +172,25 @@ Aplikacím Office zablokujte provádění následujících akcí:
 
 #### <a name="rules-to-prevent-script-threats"></a>Pravidla pro ochranu před hrozbami od skriptů
 
-Kvůli ochraně před hrozbami od skriptů zablokujte tyto akce:
+Z důvodu ochrany před hrozbami od skriptů zablokujte tyto akce:
 
 - **Obfuskovaný kód js, vbs, ps nebo makra**
 - **Skripty js a vbs spouštějící datovou část staženou z internetu (bez výjimek)**
+- **Vytváření procesů z příkazů PSExec a WMI**
+- **Nedůvěryhodné a nepodepsané procesy, které se spouštějí z USB**
+- **Spustitelné soubory, které nesplňují kritéria četnosti, stáří nebo seznamu důvěryhodných souborů**
 
 #### <a name="rules-to-prevent-email-threats"></a>Pravidla pro ochranu před e-mailovými hrozbami
 
-Kvůli ochraně před e-mailovými hrozbami zablokujte tuto akci:
+Z důvodu ochrany před e-mailovými hrozbami zablokujte tuto akci:
 
 - **Spuštění spustitelného obsahu (exe, dll, ps, js, vbs atd.) doručeného v e-mailu (webová pošta/poštovní klient) (bez výjimek)**
+
+#### <a name="rules-to-protect-against-ransomware"></a>Pravidla, která chrání před ransomwarem
+- **Rozšířená ochrana před ransomwarem**
+
+> [!TIP]
+> Více podrobností o těchto pravidlech najdete v článku [Zmenšení potenciální oblasti útoku pomocí ochrany Exploit Guard v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard).
 
 #### <a name="attack-surface-reduction-exceptions"></a>Výjimky pro omezení možností útoku
 
@@ -247,7 +241,7 @@ Zablokujte přístup koncových uživatelů k různým oblastem aplikace Centrum
 
 #### <a name="it-contact-information"></a>Informace o kontaktu IT
 
-Zadejte kontaktní informace oddělení IT, které se zobrazí v aplikaci Centra zabezpečení v programu Windows Defender a v oznámeních aplikací. Můžete zvolit možnost **Zobrazovat v aplikacích a v oznámeních**, **Zobrazovat jen v aplikaci**, **Zobrazovat jen v oznámeních** nebo **Nezobrazovat**. Je nutné definovat **Název organizace IT** a aspoň jednu z následujících možností kontaktu:
+Zadejte kontaktní informace oddělení IT, které se zobrazí v aplikaci Security Center v programu Windows Defender a v oznámeních aplikací. Můžete zvolit možnost **Zobrazovat v aplikacích a v oznámeních**, **Zobrazovat jen v aplikaci**, **Zobrazovat jen v oznámeních** nebo **Nezobrazovat**. Je nutné definovat **Název organizace IT** a aspoň jednu z následujících možností kontaktu:
 
 - **Telefonní číslo nebo skypové jméno oddělení IT**
 - **E-mailová adresa IT oddělení**
@@ -255,4 +249,4 @@ Zadejte kontaktní informace oddělení IT, které se zobrazí v aplikaci Centra
 
 ## <a name="next-steps"></a>Další kroky
 
-Pokud chcete pokračovat a přiřadit tento profil ke skupinám, podívejte se na téma [Jak přiřadit profily zařízení](device-profile-assign.md).
+Pokud chcete tento profil přiřadit ke skupinám, přečtěte si článek [Přiřazení profilů zařízení](device-profile-assign.md).

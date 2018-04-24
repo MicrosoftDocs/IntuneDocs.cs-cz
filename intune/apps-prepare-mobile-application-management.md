@@ -1,29 +1,29 @@
 ---
-title: "Příprava obchodních aplikací na zásady ochrany aplikací"
+title: Příprava obchodních aplikací na zásady ochrany aplikací
 titlesuffix: Microsoft Intune
-description: "Pokud chcete povolit u vlastních obchodních aplikací použití zásad ochrany aplikací v Microsoft Intune, použijte nástroj App Wrapping a sadu SDK aplikace."
-keywords: 
+description: Pokud chcete povolit u vlastních obchodních aplikací použití zásad ochrany aplikací v Microsoft Intune, použijte nástroj App Wrapping a sadu SDK aplikace.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/24/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 76330c926ecac9ae8b071837465d800f48f925fb
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: d61ba21ba465037fbf2ef4e1c7423f6649fc810f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Příprava obchodních aplikací na zásady ochrany aplikací
 
-[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
+[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 Svým aplikacím můžete umožnit použití zásad ochrany aplikací buď prostřednictvím nástroje Intune App Wrapping Tool, nebo pomocí sady Intune App SDK. V tomto tématu se dozvíte, co tyto dvě metody obnáší a kdy je použít.
 
@@ -70,8 +70,8 @@ Další informace o sadě SDK najdete v tématu [Přehled](app-sdk.md). Pokud ch
 
 |**Intune App SDK** |**Xamarin** |**Cordova**
 |------|----|----|
-|**iOS**|Ano – Použijte [komponentu Xamarin sady Intune App SDK](app-sdk-xamarin.md).|Ano – Použijte [modul plug-in Cordova sady Intune App SDK](app-sdk-cordova.md).|
-|**Androidemem**| Ano – Použijte [komponentu Xamarin sady Intune App SDK](app-sdk-xamarin.md).|Ano – Použijte [modul plug-in Cordova sady Intune App SDK](app-sdk-cordova.md).|
+|**iOS**|Ano – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|Ano – Použijte [modul plug-in Cordova sady Intune App SDK](app-sdk-cordova.md).|
+|**Androidemem**| Ano – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|Ano – Použijte [modul plug-in Cordova sady Intune App SDK](app-sdk-cordova.md).|
 
 ## <a name="feature-comparison"></a>Porovnání funkcí
 Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a nástroji App Wrapping.
@@ -79,30 +79,30 @@ Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a 
 > [!NOTE]
 > Nástroj App Wrapping Tool se dá použít se samostatnou službu Intune nebo Intune s Configuration Managerem.
 
-|Funkce|Sada App SDK|Nástroj App Wrapping|
-|-----------|---------------------|-----------|
-|Omezit zobrazování obsahu webu jenom na podnikový spravovaný prohlížeč|X|X|
-|Zabránit zálohování Androidu, iTunes a iCloudu|X|X|
-|Povolit aplikaci přenos dat do ostatních aplikací|X|X|
-|Povolit aplikaci, aby přijímala data z jiných aplikací|X|X|
-|Omezit operace vyjmutí, kopírování a vložení s jinými aplikacemi|X|X|
-|Požadovat jednoduchý kód PIN pro přístup|X|X|
-|Nahradit integrovaný PIN kód aplikace PIN kódem Intune|X||
-|Určit počet pokusů o zadání PIN kódu před jeho obnovením|X|X|
-|Povolit otisk prstu místo PIN kódu |X|X|
-|Vyžadovat podnikové přihlašovací údaje pro přístup|X|X|
-|Blokovat spuštění spravovaných aplikací v zařízení s jailbreakem nebo rootem|X|X|
-|Zašifrovat data aplikací|X|X|
-|Znovu zkontrolovat požadavky na přístup po zadaném počtu minut|X|X|
-|Zadat období odkladu pro offline režim|X|X|
-|Blokovat snímek obrazovky (jenom Android)|X|X|
-|Podpora MAM bez registrace zařízení|X|X|
-|Úplné vymazání|X|X|
-|Selektivní vymazání <br></br>**Poznámka:** V iOSu platí, že při odebrání profilu pro správu se odebere taky příslušná aplikace.|X||
-|Zabránit možnosti Uložit jako |X||
-|Konfigurace cílové aplikace |X||
-|Podpora víc identit|X||
-|Přizpůsobitelný styl |X|||
+|                                                         Funkce                                                          | Sada App SDK | Nástroj App Wrapping |
+|--------------------------------------------------------------------------------------------------------------------------|---------|-------------------|
+|                              Omezit zobrazování obsahu webu jenom na podnikový spravovaný prohlížeč                              |    X    |         X         |
+|                                        Zabránit zálohování Androidu, iTunes a iCloudu                                        |    X    |         X         |
+|                                         Povolit aplikaci přenos dat do ostatních aplikací                                         |    X    |         X         |
+|                                        Povolit aplikaci, aby přijímala data z jiných aplikací                                         |    X    |         X         |
+|                                      Omezit operace vyjmutí, kopírování a vložení s jinými aplikacemi                                       |    X    |         X         |
+|                                              Požadovat jednoduchý kód PIN pro přístup                                               |    X    |         X         |
+|                                         Nahradit integrovaný PIN kód aplikace PIN kódem Intune                                         |    X    |                   |
+|                                     Určit počet pokusů o zadání PIN kódu před jeho obnovením                                      |    X    |         X         |
+|                                             Povolit otisk prstu místo PIN kódu                                             |    X    |         X         |
+|                                         Vyžadovat podnikové přihlašovací údaje pro přístup                                         |    X    |         X         |
+|                             Blokovat spuštění spravovaných aplikací v zařízení s jailbreakem nebo rootem                              |    X    |         X         |
+|                                                     Zašifrovat data aplikací                                                     |    X    |         X         |
+|                           Znovu zkontrolovat požadavky na přístup po zadaném počtu minut                            |    X    |         X         |
+|                                             Zadat období odkladu pro offline režim                                             |    X    |         X         |
+|                                           Blokovat snímek obrazovky (jenom Android)                                            |    X    |         X         |
+|                                        Podpora MAM bez registrace zařízení                                         |    X    |         X         |
+|                                                        Úplné vymazání                                                         |    X    |         X         |
+| Selektivní vymazání <br></br><strong>Poznámka:</strong> V iOSu platí, že při odebrání profilu pro správu se odebere taky příslušná aplikace. |    X    |                   |
+|                                                    Zabránit možnosti Uložit jako                                                     |    X    |                   |
+|                                            Konfigurace cílové aplikace                                            |    X    |                   |
+|                                                Podpora víc identit                                                |    X    |                   |
+|                                                    Přizpůsobitelný styl                                                    |    X    |                   |
 
 ## <a name="next-steps"></a>Další kroky
 

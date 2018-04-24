@@ -1,25 +1,25 @@
 ---
-title: "Přidání a přiřazení aplikací pro ochranu před mobilními hrozbami (MTD) do Microsoft Intune"
-titleSuffix: 
-description: "Pomocí Intune můžete přidat aplikace pro ochranu před mobilními hrozbami (MTD), aplikaci Microsoft Authenticator a zásady konfigurace iOS na portálu Azure Portal."
-keywords: 
+title: Přidání a přiřazení aplikací pro ochranu před mobilními hrozbami (MTD) do Microsoft Intune
+titleSuffix: ''
+description: Pomocí Intune můžete přidat aplikace pro ochranu před mobilními hrozbami (MTD), aplikaci Microsoft Authenticator a zásady konfigurace iOS na portálu Azure Portal.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 07/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 00356258-76a8-4a84-9cf5-64ceedb58e72
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3fc71620fee1b1df907a4027c1c57cd91b53032e
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 08cebf84443e65ded5f7884218fbe17d722bddf2
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Přidání a přiřazení aplikací pro ochranu před mobilními hrozbami (MTD) pomocí Intune
 
@@ -75,7 +75,7 @@ Podrobné pokyny k opětovnému podepsání aplikace Lookout for Work pro iOS na
 Následujícím postupem povolte ověřování uživatelů iOS službou Azure Active Directory:
 
 1. Přejděte na [portál Azure Portal](https://portal.azure.com), přihlaste se pomocí svých přihlašovacích údajů a přejděte na stránku aplikace.
-  
+
 2. Přidejte **aplikaci Lookout for Work pro iOS** jako **nativní klientskou aplikaci**.
 
 3. Text **com.lookout.enterprise.názevfirmy** nahraďte identifikátorem zákaznického balíčku, který jste vybrali při podepisování IPA.
@@ -133,13 +133,13 @@ Následujícím postupem povolte ověřování uživatelů iOS službou Azure Ac
 
 -   Musíte **stáhnout** soubor zásad konfigurace aplikace pro iOS: 
     -   Přejděte na [konzoly pro správu Skycure](https://aad.skycure.com) a přihlaste se pomocí svých přihlašovacích údajů správce.
-    
+
     -   Přejděte do **Settings** (Nastavení ) &gt; **Device Management Integrations** (Integrace správy zařízení) &gt; **EMM Integration Selection** (Volba integrace EMM), vyberte **Microsoft Intune** a potom svou volbu uložte.
-    
+
     -   Klikněte na odkaz **Integration setup files** (Integrační soubory nastavení) a vygenerovaný soubor \*.zip uložte. Soubor .zip obsahuje soubor **skycure\_configuration.plist**, který se použije k vytvoření zásad konfigurace aplikace pro iOS v Intune.
-    
+
     -   Pokud chcete přidat zásady konfigurace aplikace Skycure pro iOS, přečtěte si pokyny ohledně [používání zásad konfigurace aplikací služby Microsoft Intune pro iOS](app-configuration-policies-use-ios.md).
-    
+
     - V **kroku 8** použijte možnost **Zadat XML data**, zkopírujte obsah ze souboru **skycure_configuration.plist** a vložte ho do těla zásad konfigurace.
 
 Obsah souboru **skycure_configuration.plist** můžete zkopírovat i odsud:
@@ -151,7 +151,6 @@ Obsah souboru **skycure_configuration.plist** můžete zkopírovat i odsud:
     <key>UserEmail</key>
     <string>{{userprincipalname}}</string>
 </dict>
-
 ```
 ### <a name="for-check-point-sandblast-mobile"></a>Pro Check Point SandBlast Mobile
 
@@ -160,7 +159,6 @@ Obsah souboru **skycure_configuration.plist** můžete zkopírovat i odsud:
 
 ```
 <dict><key>MDM</key><string>INTUNE</string></dict>
-
 ```
 
 ### <a name="for-zimperium"></a>Pro Zimperium
@@ -179,7 +177,6 @@ Obsah souboru **skycure_configuration.plist** můžete zkopírovat i odsud:
 <key>udidlast4digits</key>
 <string>{{udidlast4digits}}</string>
 </dict>
-
 ```
 
 ## <a name="to-assign-apps-all-mtd-partners"></a>Přiřazení aplikací (všichni partneři MTD)

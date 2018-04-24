@@ -2,8 +2,8 @@
 title: Omezení zařízení pro Android for Work v Microsoft Intune – Azure | Microsoft Docs
 description: Na zařízeních s Androidem for Work můžete omezit některá nastavení v zařízení, včetně kopírování a vložení, zobrazování oznámení, oprávnění aplikací, sdílení dat, délky hesla, neúspěšných přihlášení, odemykání pomocí otisku prstu, opakovaného použití předchozích hesel a povolení sdílení pracovních kontaktů pomocí Bluetooth.
 keywords: ''
-author: vhorne
-ms.author: victorh
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
 ms.date: 3/19/2018
 ms.topic: article
@@ -12,17 +12,17 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c155817e0bc9df00087908a86fcfcb675fa0ad97
-ms.sourcegitcommit: a22309174e617e59ab0cdd0a55abde38711a5f35
+ms.openlocfilehash: 11ce7fa7fa4d48d9cc292b7b6565b6b4f2be2dc4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="work-device-restriction-settings-in-intune"></a>Nastavení omezení pracovních zařízení v Intune
 
 Tento článek uvádí nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s Androidem for Work.
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 ## <a name="work-profile-settings"></a>Nastavení pracovního profilu
 
@@ -48,6 +48,8 @@ Tento článek uvádí nastavení omezení zařízení v Microsoft Intune, kter�
    Zabrání koncovým uživatelům ručně přidávat nebo odebírat účty v pracovním profilu.
 
    Když třeba nasadíte aplikaci Gmail do profilu Androidu for Work, můžete zabránit tomu, aby koncoví uživatelé přidávali nebo odebírali účty v tomto pracovním profilu.
+
+- **Sdílení kontaktů přes Bluetooth**: Povoluje přístup k pracovním kontaktům z jiného zařízení, například ze zařízení v autě, které je spárováno pomocí Bluetooth. Ve výchozím nastavení toto nastavení není nakonfigurováno a pracovní kontakty se nezobrazují. Vyberte **Povolit** a sdílení povolte, aby se zobrazily kontakty pracovního profilu. Toto nastavení platí pro zařízení s pracovním profilem Android v systému Android OS v6.0 a novějších.
 
 ### <a name="work-profile-password"></a>Heslo pracovního profilu
 

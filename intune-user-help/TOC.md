@@ -128,7 +128,7 @@
 ### [Resetování zařízení](reset-erase-your-device-cpwebsite.md)
 ### [Zašifrování zařízení](encrypt-your-device-windows.md)
 ### [Nastavení nebo změna hesla](set-or-change-your-password-windows.md)
-### [Zrušení registrace zařízení v Intune](unenroll-your-device-from-intune-windows.md)
+### [Odebrat zařízení z Intune](unenroll-your-device-from-intune-windows.md)
 ### [Co se stane, když zrušíte registraci zařízení?](what-happens-if-you-unenroll-your-device-from-intune-windows.md)
 ### [Co se stane, když obnovíte tovární nastavení zařízení?](what-happens-if-you-reset-your-device-using-the-company-portal-windows.md)
 ### [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-windows.md)

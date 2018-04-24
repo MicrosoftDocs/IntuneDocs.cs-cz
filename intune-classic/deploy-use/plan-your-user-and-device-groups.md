@@ -1,28 +1,28 @@
 ---
-title: "Plánování skupin uživatelů a zařízení"
-description: "Naplánujte skupiny tak, aby to vyhovovalo potřebám vaší organizace."
-keywords: 
+title: Plánování skupin uživatelů a zařízení
+description: Naplánujte skupiny tak, aby to vyhovovalo potřebám vaší organizace.
+keywords: ''
 author: sanchusa
 manager: angrobe
 ms.date: 10/25/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f11bb256-1094-4f7e-b826-1314c57f3356
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: lpatha
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 5c1f06cc59ff81483d9e54b23435af720d919155
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 679399f306f3837a010cc01799c7567c1e5b5b39
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="plan-your-user-and-device-groups"></a>Plánování skupin uživatelů a zařízení
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Skupiny v Intune poskytují při správě zařízení a uživatelů velkou flexibilitu. Můžete nastavit skupin tak, aby odpovídaly potřebám vaší organizace podle těchto kritérií:
 
@@ -84,7 +84,7 @@ Zásady se nasazují do skupin, takže hierarchie skupin představuje jedno z kl
 
     Člena ale nemůžete přidat do podřízené skupiny, pokud je vyloučený z nadřazené skupiny.
 
-- Členství ve skupině je rekurzivní. Například:
+- Členství ve skupině je rekurzivní. Příklad:
 
     * **Jan** je členem jenom jedné skupiny, skupiny zabezpečení **Uživatelé přenosných počítačů** .
 

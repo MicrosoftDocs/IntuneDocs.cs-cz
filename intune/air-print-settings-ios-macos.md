@@ -15,15 +15,15 @@ ms.assetid: 712a79fb-14ef-4f6b-aba5-1dfca900afd2
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8402ff3631e18ec6169bc96ef1bb7669bdcfbdd8
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: 9e2781743618c213fc57e21026480f7f30535c67
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="airprint-settings-for-ios-and-macos-devices"></a>Nastavení AirPrintu pro zařízení s iOSem a macOS
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Pomocí těchto nastavení můžete nakonfigurovat zařízení s iOSem nebo macOS tak, aby se automaticky připojovala k tiskárnám ve vaší síti, které jsou kompatibilní s AirPrintem. Budete k tomu potřebovat IP adresy a cesty prostředků tiskáren.
 
@@ -31,7 +31,7 @@ Pomocí těchto nastavení můžete nakonfigurovat zařízení s iOSem nebo macO
 
 Pomocí tohoto postupu můžete přidat informace o AirPrintu do datové části AirPrintu, aby uživatelé zařízení s iOSem mohli používat známé tiskárny s AirPrintem.
 
-1. Na Macu, který je připojený ke stejné místní síti (stejné podsíti) jako tiskárny s AirPrintem, otevřete Terminál (z **/Aplikace/Utility**)
+1. Na Macu, který je připojený ke stejné místní síti (stejné podsíti) jako tiskárny s AirPrintem, otevřete Terminál (z  **/Aplikace/Utility**)
 2. V Terminálu zadejte **ippfind** a stiskněte Enter.
 3. Poznamenejte si všechny informace o tiskárně, které příkaz vrátí, například: **ipp://myprinter.local.:631/ipp/port1**. První část informací je název tiskárny a druhá část je cesta prostředku.
 4. V Terminálu zadejte **ping.myprinter.local** a stiskněte Enter.

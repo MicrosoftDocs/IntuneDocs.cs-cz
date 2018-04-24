@@ -1,28 +1,28 @@
 ---
-title: "Nastavení služby TEM (Telecom Expense Management)"
+title: Nastavení služby TEM (Telecom Expense Management)
 titleSuffix: Microsoft Intune
-description: "Integrujte službu správy telekomunikačních výdajů Saaswedo do Intune."
+description: Integrujte službu správy telekomunikačních výdajů Saaswedo do Intune.
 keywords: Saaswedo
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/28/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: b7bf5802-4b65-4aeb-ac99-8e639dd89c2a
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ef755a1fd5f94342f551ac168136217dbc82b244
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: af81b4cca369cae69cff6ea52bb5df9ce369cd7f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Nastavení služby TEM (Telecom Expense Management) v Intune
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Intune umožňuje spravovat výdaje za telekomunikační služby vzniklé v závislosti na používání dat na mobilních zařízeních vlastněných firmou. Pokud chcete aktivovat tuto funkci, obsahuje Intune integrované řešení pro správu výdajů na telekomunikaci Datalert od externího vývojáře softwaru Saaswedo. Datalert je software pro správu telekomunikačních výdajů v reálném čase, který umožňuje spravovat využití telekomunikačních dat. Pomůže vám vyhnout se nákladným a neočekávaným překročením limitů dat a roamingu u vašich zařízení spravovaných pomocí Intune.
 
@@ -72,7 +72,7 @@ Než začnete, musíte mít Intune a předplatné služby TEM Datalert.
 
     Na následujícím snímku obrazovky vidíte zelené značky zaškrtnutí, které označují úspěšné připojení.
 
-  ![Stránka Datalert zobrazující úspěšné připojení](./media/tem-mdm-configuration-mdm-server-page.png)
+   ![Stránka Datalert zobrazující úspěšné připojení](./media/tem-mdm-configuration-mdm-server-page.png)
 
 ### <a name="step-2-check-that-the-telecom-expense-management-feature-is-active-in-intune"></a>Krok 2: Zkontrolujte v Intune, že je aktivní funkce správy výdajů na telekomunikaci
 
@@ -88,7 +88,7 @@ Po dokončení kroku 1 výše by se mělo automaticky povolit připojení a na p
 
    V horní části stránky se podívejte, jestli je stav připojení **Aktivní**.
 
-  ![Stránka Intune zobrazující aktivní stav připojení Datalertu](./media/tem-azure-portal-enable-service.png)
+   ![Stránka Intune zobrazující aktivní stav připojení Datalertu](./media/tem-azure-portal-enable-service.png)
 
 ### <a name="step-3-deploy-the-datalert-app-to-corporate-enrolled-devices"></a>Krok 3: Nasazení aplikace Datalert na podniková zaregistrovaná zařízení
 
@@ -136,13 +136,13 @@ Podle následujících pokynů vytvořte v Intune aplikaci Datalert pro jednotli
 
 4. Vyberte, jestli chcete, aby byla instalace aplikace pro skupinu povinná nebo volitelná. Na následujícím snímku obrazovky s příkladem vidíte povinnou instalaci, což znamená, že uživatelé musí po registraci svých zařízení aplikaci Datalert nainstalovat.
 
-  ![Snímek obrazovky s podoknem Přidat zásadu](./media/tem-assign-datalert-app-to-device-group.png)
+   ![Snímek obrazovky s podoknem Přidat zásadu](./media/tem-assign-datalert-app-to-device-group.png)
 
 ### <a name="step-4-add-corporate-paid-phone-lines-to-the-datalert-console"></a>Krok 4: Přidejte do konzoly Datalert placené firemní telefonní linky
 
 Teď máte služby Intune a Datalert nakonfigurované tak, aby spolu komunikovaly. Teď musíte přidat placené firemní telefonní linky ke konzole Datalert a definovat prahové hodnoty a akce pro veškerá porušení použití mobilních nebo roamingových služeb. Placené firemní telefonní linky můžete ke konzole Datalert přidat ručně nebo je přidat automaticky po registraci zařízení v Intune.
 
-Pokud chcete nastavit tyto položky, přejděte na [stránku nastavení služby Datalert pro Microsoft Intune](http://www.datalert.fr/microsoft-intune/intune-setup) (http://www.datalert.fr/microsoft-intune/intune-setup) a postupujte podle pokynů v průvodci instalací na kartě **Nastavení**.
+Pokud chcete nastavit tyto položky, přejděte na [stránku nastavení služby Datalert pro Microsoft Intune](http://www.datalert.fr/microsoft-intune/intune-setup) (http://www.datalert.fr/microsoft-intune/intune-setup)) a postupujte podle pokynů v průvodci instalací na kartě **Nastavení**.
 
   ![Snímek obrazovky s podoknem Přidat zásadu](./media/tem-add-phone-lines-to-datalert-console.png)
 

@@ -16,11 +16,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: ayesham
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fa784d0b446e3de180ce47ec51d3440522966fad
-ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
+ms.openlocfilehash: 242ee454ec42c54bb9437fbdf0a7efeca926d193
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps-in-microsoft-intune"></a>Přečtěte si, jak vaši uživatelé budou moct používat základní ochranu ve spravovaných aplikacích Office 365 v Microsoft Intune.
 
@@ -50,13 +50,13 @@ Jako příklad tento článek používá OneDrive pro firmy, pomocí kterého uk
 2. Zadejte uživatelské jméno pracovního účtu. Budete přesměrováni na ověřovací stránku Office 365, kde zadáte pracovní přihlašovací údaje. 
 3. Po úspěšném ověření přihlašovacích údajů službou Azure Active Directory se použijí zásady ochrany aplikací a zobrazí se výzva k restartování aplikace OneDrive pro firmy. 
 
-  > [!NOTE]
-  > Zpráva s informacemi o vyžadovaném restartování se zobrazí pouze na zařízeních, která nejsou zaregistrovaná v Intune.
+   > [!NOTE]
+   > Zpráva s informacemi o vyžadovaném restartování se zobrazí pouze na zařízeních, která nejsou zaregistrovaná v Intune.
 
 4. Znovu spusťte aplikaci OneDrive pro firmy. Aplikace se spustí se zapnutými zásadami ochrany aplikací a zobrazí se výzva k zadání PIN kódu pro zařízení (pokud na něm ještě PIN kód nastavený nemáte).  
 
-  > [!NOTE]
-  > Většině vašich uživatelů se tato výzva nezobrazí. Uživatelům, kteří na svém zařízení s iOSem nemají nastavený PIN kód, se tato výzva zobrazí.
+   > [!NOTE]
+   > Většině vašich uživatelů se tato výzva nezobrazí. Uživatelům, kteří na svém zařízení s iOSem nemají nastavený PIN kód, se tato výzva zobrazí.
 
 5. Jakmile PIN kód nastavíte a potvrdíte, vraťte se do aplikace OneDrive pro firmy. Zobrazí se vám jednorázová zpráva, že váš správce IT teď chrání pracovní data ve OneDrivu. 
 6. Abyste mohli přistupovat k souborům ve OneDrivu pro firmy, klikněte někam mimo toto oznámení. 
@@ -70,8 +70,8 @@ Jako příklad tento článek používá OneDrive pro firmy, pomocí kterého uk
 2. Zadejte uživatelské jméno pracovního účtu. Budete přesměrováni na ověřovací stránku Office 365, kde zadáte pracovní přihlašovací údaje. <br/> ![Snímek přihlášení O365 v Androidu](./media/o365-sign-in-android.png)
 3. Pokud na zařízení ještě není nainstalovaná aplikace Portál společnosti, po úspěšném ověření přihlašovacích údajů službou Azure Active Directory se vám zobrazí zpráva s pokyny k její instalaci. Pokračujte klepnutím na **Přejít do obchodu**. <br/> ![Snímek zprávy o získání aplikace Portál společnosti](./media/get-company-portal-android.png) <br/>Pokud máte na svém telefonu aplikaci Portál společnosti nainstalovanou, aplikace OneDrive pro firmy se automaticky spustí a můžete přeskočit na poslední poznámku.   
 
-  > [!IMPORTANT]
-  > Po nastavení aplikací Office tak, aby se spravovaly přes zásady ochrany aplikací, **musí** uživatel zařízení s Androidem nainstalovat aplikaci Portál společnosti, aby mohl přistupovat k pracovním e-mailům a dokumentům, i když koncový uživatel pro samotné čtení e-mailů a dokumentů nemusí aplikaci otevírat a přihlašovat se k ní.
+   > [!IMPORTANT]
+   > Po nastavení aplikací Office tak, aby se spravovaly přes zásady ochrany aplikací, **musí** uživatel zařízení s Androidem nainstalovat aplikaci Portál společnosti, aby mohl přistupovat k pracovním e-mailům a dokumentům, i když koncový uživatel pro samotné čtení e-mailů a dokumentů nemusí aplikaci otevírat a přihlašovat se k ní.
 
 4. Teď jste v obchodě Google Play, kde si můžete stáhnout a nainstalovat aplikaci Portál společnosti. Tato aplikace vám pomůže uchovávat data v bezpečí. <br/> ![Snímek aplikace v obchodu Google Play](./media/google-play-get-app-android.png)
 5. Po dokončení instalace aplikace přijměte podmínky zvolením **Přijmout**. Aplikace OneDrive pro firmy se automaticky spustí.
@@ -86,6 +86,7 @@ Jako příklad tento článek používá OneDrive pro firmy, pomocí kterého uk
 <!--- Original steps: 6. The next time you open OneDrive for Business, you may be asked to set a PIN, if your IT requires one to use the OneDrive for Business app. ART 7. After you set and confirm the PIN, you can continue on to OneDrive for Business. -->
 
 ## <a name="what-policies-does-this-wizard-set"></a>Jaké zásady tento průvodce nastavuje?
+
 |     |       | |
 |----|--------|-|
 |**Název**|Správa aplikací Office 365| |

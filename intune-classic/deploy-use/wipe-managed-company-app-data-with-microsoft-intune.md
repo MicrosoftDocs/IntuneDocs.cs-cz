@@ -1,29 +1,29 @@
 ---
-title: "Vymazání data spravovaných aplikací společnosti"
-description: "Přečtěte si, jak můžete selektivně odebrat firemní data ze zařízení vzdáleně."
-keywords: 
+title: Vymazání data spravovaných aplikací společnosti
+description: Přečtěte si, jak můžete selektivně odebrat firemní data ze zařízení vzdáleně.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 01/25/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2742e1d5-d2d5-42cd-b719-665dd6e0a0e9
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d7f89d79edcc52892e2988e4b2f152cb68d80070
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 8d946b551118441b737335f6bd8c4603a49e0dd2
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="wipe-company-app-data-with-intune-mam"></a>Vymazání dat firemních aplikací pomocí správy mobilních aplikací Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 V případě ztráty nebo odcizení zařízení nebo když zaměstnanec opouští společnost, je vhodné se ujistit, že byla ze zařízení odebraná firemní data. Nemusí ale být vhodné odebrat ze zařízení osobní data, zvlášť jestli je to zařízení, které vlastní zaměstnanec.
 
@@ -34,7 +34,7 @@ Pokud chcete selektivně odebrat data firemních aplikací, vytvořte žádost o
 
 ## <a name="create-a-wipe-request"></a>Vytvoření žádosti o vymazání
 
-1.  Přihlaste se k [portálu Azure](https://portal.azure.com).
+1.  Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 
 2.  Zvolte **Další služby**, do textového pole filtru zadejte **Intune** a vyberte **Intune App Protection**. Otevře se okno Správa mobilních aplikací Intune.
 
@@ -89,7 +89,7 @@ Vymazání v čekajícím stavu se zobrazují, dokud je ručně neodstraníte.  
 4.  Zobrazí se výzva k potvrzení odstranění. Zvolte **Ano** nebo **Ne** a klikněte na **OK**.
 
 
-### <a name="see-also"></a>Související témata
+### <a name="see-also"></a>Viz taky
 [Ochrana dat aplikací pomocí zásad správy mobilních aplikací](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 
 [Použití portálu Azure Portal](azure-portal-for-microsoft-intune-mam-policies.md)

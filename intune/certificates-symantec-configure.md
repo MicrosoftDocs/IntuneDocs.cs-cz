@@ -15,15 +15,15 @@ ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1fbb0ccd21ff15cf86656d7badf08002f1e42bb3
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: ff642c7d8d836979fadebc799e2e7373cd299f4e
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-intune-certificate-connector-for-symantec-pki-manager-web-service"></a>Nastavení nástroje Intune Certificate Connector pro webovou službu správce infrastruktury veřejných klíčů Symantec
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 V tomto článku se dozvíte, jak nainstalovat a nakonfigurovat nástroj Intune Certificate Connector k vydávání certifikátů PKCS Symantec z webové služby správce infrastruktury veřejných klíčů Symantec do zařízení spravovaných pomocí Intune.
 

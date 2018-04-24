@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ef4eac0e0841ba20a966f2ee30ed51659f25afa3
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 6e4afa232309572016c3f585ecaf27032cafc7ba
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quick-start-guide-publish-mobile-apps-to-your-users"></a>Úvodní příručka: Publikování mobilních aplikací pro vaše uživatele
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Microsoft Intune může přispět k vyšší produktivitě vašich koncových uživatelů tím, že jim rychle a snadno poskytne přístup k potřebným mobilním a desktopovým aplikacím ze zařízení podle jejich vlastního výběru. Tím, že aplikace budou pro koncové uživatele snadno dostupné, se zkrátí čas a sníží úsilí, které by jinak uživatelé vynaložili na hledání a instalaci správných aplikací, a vede to k poklesu volání na helpdesk, pokud by nedokázali potřebné aplikace najít.   
 

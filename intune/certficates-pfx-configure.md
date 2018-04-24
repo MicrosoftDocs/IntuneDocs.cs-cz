@@ -1,28 +1,28 @@
 ---
-title: "Používání certifikátů PKCS s Microsoft Intune – Azure | Micrososft Docs"
-description: "Přidání nebo vytvoření certifikátů PKCS (Public Key Cryptography Standards) pomocí Microsoft Intune včetně postupu, jak exportovat kořenový certifikát, nakonfigurovat šablonu certifikátu, stáhnout a nainstalovat Microsoft Intune Certificate Connector, vytvořit konfigurační profil zařízení, vytvořit profil certifikátu PKCS v Azure a vaší certifikační autoritě"
-keywords: 
+title: Používání certifikátů PKCS s Microsoft Intune – Azure | Micrososft Docs
+description: Přidání nebo vytvoření certifikátů PKCS (Public Key Cryptography Standards) pomocí Microsoft Intune včetně postupu, jak exportovat kořenový certifikát, nakonfigurovat šablonu certifikátu, stáhnout a nainstalovat Microsoft Intune Certificate Connector, vytvořit konfigurační profil zařízení, vytvořit profil certifikátu PKCS v Azure a vaší certifikační autoritě
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
-ms.assetid: 
-ms.reviewer: 
+ms.technology: ''
+ms.assetid: ''
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c0668921f03b24b319c2c37837dbd2cc053370ca
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 0dfcaa2e37fecc4c5a075931489c106b78c17b7e
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Certifikáty slouží k ověření a zabezpečení přístupu k firemním prostředkům, jako je síť VPN nebo Wi-Fi. Tento článek ukazuje, jak exportovat certifikát PKCS a pak ho přidat do profilu Intune. 
 
@@ -56,7 +56,7 @@ Pro ověření pomocí sítě VPN, WiFi nebo jiných prostředků musíte mít v
 
    Příklad:
 
-4.  Po dokončení průvodce klikněte před jeho zavřením na **Spustit uživatelské rozhraní konektoru Certificate Connector**.
+4. Po dokončení průvodce klikněte před jeho zavřením na **Spustit uživatelské rozhraní konektoru Certificate Connector**.
 
    `certutil -ca.cert certnew.cer`
 
