@@ -14,15 +14,15 @@ ms.assetid: d98aceff-eb35-4e3e-8e40-5f300e7335cc
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e5070052c0d4cce3cfd81a7bae259bc7dfb22e7f
-ms.sourcegitcommit: e6319ff186d969da34bd19c9730ba003d6cce353
+ms.openlocfilehash: 3d46960e6ea7e2ae9bed6c0016ddc309bd15f572
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Vytvořte profil zařízení v Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 1. Na portálu [Azure Portal](https://portal.azure.com) vyberte **Všechny služby** a vyhledejte **Microsoft Intune**.
@@ -31,33 +31,33 @@ ms.lasthandoff: 03/20/2018
 
 3. Zadejte tyto vlastnosti:
 
-    - **Název**: Zadejte popisný název nového profilu.
-    - **Popis**: Zadejte popis profilu. (Ten je nepovinný, ale doporučuje se ho zadat.)
-    - **Platforma**: Vyberte typ platformy:  
+   - **Název**: Zadejte popisný název nového profilu.
+   - **Popis**: Zadejte popis profilu. (Ten je nepovinný, ale doporučuje se ho zadat.)
+   - **Platforma**: Vyberte typ platformy:  
 
-        - **Androidemem**
-        - **Android for Work**
-        - **iOS**
-        - **macOS**
-        - **Windows Phone 8.1**
-        - **Windows 8.1 a novější**
-        - **Windows 10 a novější**
+       - **Androidemem**
+       - **Android for Work**
+       - **iOS**
+       - **macOS**
+       - **Windows Phone 8.1**
+       - **Windows 8.1 a novější**
+       - **Windows 10 a novější**
 
-    - **Typ profilu**: Vyberte typ, který chcete vytvořit. Seznam závisí na platformě, kterou vyberete.
-    - **Nastavení**: Informace o nastaveních pro jednotlivé typy profilů najdete v následujících tématech:
+   - **Typ profilu**: Vyberte typ, který chcete vytvořit. Seznam závisí na platformě, kterou vyberete.
+   - **Nastavení**: Informace o nastaveních pro jednotlivé typy profilů najdete v následujících tématech:
 
-        -  [Nastavení funkce zařízení](device-features-configure.md)
-        -  [Nastavení omezení zařízení](device-restrictions-configure.md)
-        -  [Nastavení e-mailu](email-settings-configure.md)
-        -  [Nastavení VPN](vpn-settings-configure.md)
-        -  [Nastavení Wi-Fi](wi-fi-settings-configure.md)
-        -  [Nastavení upgradu edice Windows 10](edition-upgrade-configure-windows-10.md)
-        -  [Nastavení certifikátu](certificates-configure.md)
-        -  [Nastavení Windows Information Protection](windows-information-protection-configure.md)
-        -  [Nastavení vzdělávání](education-settings-configure.md)
-        -  [Vlastní nastavení](custom-settings-configure.md)
+       -  [Nastavení funkce zařízení](device-features-configure.md)
+       -  [Nastavení omezení zařízení](device-restrictions-configure.md)
+       -  [Nastavení e-mailu](email-settings-configure.md)
+       -  [Nastavení VPN](vpn-settings-configure.md)
+       -  [Nastavení Wi-Fi](wi-fi-settings-configure.md)
+       -  [Nastavení upgradu edice Windows 10](edition-upgrade-configure-windows-10.md)
+       -  [Nastavení certifikátu](certificates-configure.md)
+       -  [Nastavení Windows Information Protection](windows-information-protection-configure.md)
+       -  [Nastavení vzdělávání](education-settings-configure.md)
+       -  [Vlastní nastavení](custom-settings-configure.md)
 
-    ![Snímek obrazovky znázorňující vytvoření profilu](./media/create-device-profile.png)
+     ![Snímek obrazovky znázorňující vytvoření profilu](./media/create-device-profile.png)
 
 4. Po dokončení vyberte **Vytvořit**.
 

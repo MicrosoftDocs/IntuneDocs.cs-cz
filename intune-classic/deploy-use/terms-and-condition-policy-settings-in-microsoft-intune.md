@@ -1,29 +1,29 @@
 ---
-title: "Nastavení zásad podmínek a ujednání"
-description: "Pro skupiny uživatelů můžete nasadit podmínky a ujednání Intune a vysvětlit jim tak, jaký vliv má registrace, přístup k pracovním prostředkům a používání aplikace Portálu společnosti na zařízení a uživatele."
-keywords: 
+title: Nastavení zásad podmínek a ujednání
+description: Pro skupiny uživatelů můžete nasadit podmínky a ujednání Intune a vysvětlit jim tak, jaký vliv má registrace, přístup k pracovním prostředkům a používání aplikace Portálu společnosti na zařízení a uživatele.
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 ms.date: 07/11/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 6edf0ac1-4f46-4543-a9e5-f484ac37e9a5
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 75e68a49fb8437bb7742cfa1e458edab5c0b1836
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: e639b603e52df621cddaaf9490773336229fc6a4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="terms-and-condition-policy-settings-in-microsoft-intune"></a>Nastavení zásad podmínek a ujednání v Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Pro skupiny uživatelů můžete nasadit podmínky a ujednání Intune a vysvětlit jim tak, jaký vliv má registrace, přístup k pracovním prostředkům a aplikace Portál společnosti na zařízení a uživatele. Uživatelé musí podmínky použití přijmout, aby mohli pomocí Portálu společnosti zaregistrovat svoje zařízení a získat přístup k prostředkům, které potřebují k práci.
 

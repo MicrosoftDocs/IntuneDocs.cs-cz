@@ -1,25 +1,24 @@
 ---
-title: "Integrace řešení pro řízení přístupu k síti (NAC) do Microsoft Intune"
-titlesuffix: 
-description: "Integrace řešení pro řízení přístupu k síti (NAC) do Intune"
-keywords: 
+title: Integrace řešení pro řízení přístupu k síti (NAC) do Microsoft Intune – Azure | Microsoft Docs
+description: Řešení pro řízení přístupu k síti (NAC) kontrolují u zařízení s Intune stav registrace a dodržování předpisů. Řešení NAC zahrnují určitá chování a pracují s podmíněným přístupem. Prohlédněte si postup, který vám pomůže začít je využívat, a seznam partnerských řešení.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 12/18/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: aa7ecff7-8579-4009-8fd6-e17074df67de
 ms.reviewer: davidra
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6f54f04bc5a63c8a431eddaf4210fcb290942cc3
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: bdf6b5b71c71dd8b1a9a5c9154953d1ebc07d0dc
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integrace řešení pro řízení přístupu k síti (NAC) do Intune
 
@@ -27,7 +26,7 @@ Intune spolupracuje s partnery, kteří řeší přístup k síti, aby organizac
 
 ## <a name="how-do-intune-and-nac-solutions-help-protect-your-organization-resources"></a>Jak Intune a řešení NAC pomáhají chránit prostředky organizace?
 
-Řešení NAC odpovídají za kontrolu registrace zařízení a stav dodržování předpisů v Intune, aby bylo možné rozhodovat o přístupu. Pokud zařízení není zaregistrované, nebo registrované sice je, ale neodpovídá zásadám dodržování předpisů pro zařízení, musí být přesměrováno do Intune, kde proběhne registrace a/nebo kontrola zařízení z hlediska dodržování předpisů.
+Řešení NAC kontrolují registrace zařízení a stav dodržování předpisů v Intune a podporují tak rozhodování o přístupu. Pokud zařízení není zaregistrované, nebo sice registrované je, ale neodpovídá zásadám dodržování předpisů, musí být přesměrováno do Intune, kde proběhne jeho registrace nebo kontrola z hlediska dodržování předpisů.
 
 ### <a name="example"></a>Příklad
 
@@ -35,7 +34,7 @@ Pokud je zařízení zaregistrované a kompatibilní s Intune, mělo by řešen�
 
 ## <a name="feature-behaviors"></a>Chování funkce
 
-Zařízení, která se aktivně synchronizují do Intune, nemohou přejít ze stavu **Vyhovující předpisům** / **Nevyhovující předpisům** do stavu **Nesynchronizované** (nebo **Neznámé**). Stav **Neznámé** je rezervovaný pro nově registrovaná zařízení, u kterých ještě neproběhlo hodnocení, zda dodržují předpisy.
+Zařízení, která se aktivně synchronizují do Intune, nemohou přejít ze stavu **Vyhovující předpisům** / **Nevyhovující předpisům** do stavu **Nesynchronizované** (nebo **Neznámé**). Stav **Neznámé** je rezervovaný pro nově registrovaná zařízení, u kterých ještě neproběhla kontrola dodržování předpisů.
 
 Pokud mají zařízení zablokovaný přístup k prostředkům, musí blokační služba přesměrovat všechny uživatele na [portál pro správu](https://portal.manage.microsoft.com), aby bylo možné zjistit důvod zablokování zařízení.  Když uživatelé tuto stránku navštíví, zároveň se znovu vyhodnotí, zda zařízení dodržuje předpisy.
 
@@ -45,7 +44,7 @@ Pokud mají zařízení zablokovaný přístup k prostředkům, musí blokační
 
 ## <a name="how-the-nac-integration-works"></a>Jak funguje integrace NAC
 
-Tady je přehled fungování integrovaného řešení pro řízení přístupu k síti (NAC) při integraci do Intune. První tři kroky (1–3) vysvětlují proces připojování. Jakmile je řešení NAC integrované do Intune, popisují kroky 4–9 nepřetržitý provoz.
+Následující seznam obsahuje přehled fungování řešení pro řízení přístupu k síti (NAC) při integraci do Intune. První tři kroky (1–3) vysvětlují proces připojování. Kroky 4–9 popisují další provoz řešení NAC po jeho integraci do Intune.
 
 ![Jak funguje NAC s Intune](./media/ca-intune-common-ways-2.png)
 
@@ -64,3 +63,4 @@ Tady je přehled fungování integrovaného řešení pro řízení přístupu k
 - [Integrace řešení Cisco ISE do Intune](http://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)
 - [Integrace řešení Citrix NetScaler do Intune](http://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)
 - [Integrace řešení HP Aruba Clear Pass do Intune](https://support.arubanetworks.com/Documentation/tabid/77/DMXModule/512/Command/Core_Download/Default.aspx?EntryId=23757)
+- [Integrace řešení secRMM (Squadra security Removable Media Manager) do Intune](http://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.9.0.0/secRMMIntuneAccessControlSetupGuide.pdf)

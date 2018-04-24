@@ -1,12 +1,11 @@
 ---
-title: Správa zařízení v Microsoft Intune
-titleSuffix: ''
-description: Přečtěte si, jak můžete zkontrolovat zařízení spravovaná přes Intune a provádět s nimi různé operace.
+title: Správa zařízení pomocí Microsoft Intune – Azure | Microsoft Docs
+description: Prohlédněte si zařízení, která spravujete v Microsoft Intune (můžete také exportovat jejich seznam do formátu CSV), zobrazte zařízení připojená k Azure Active Directory, prohlédněte si změnový protokol akcí se zařízením, využijte konektor TeamVieweru umožňující správcům IT na dálku řešit problémy v zařízeních s Androidem a prohlédněte si všechny akce, které můžete v zařízeních spouštět.
 keywords: ''
-author: ErikjeMS
-ms.author: erikje
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 02/21/2018
+ms.date: 04/02/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,41 +13,47 @@ ms.technology: ''
 ms.assetid: d2412418-d91a-4767-a3d6-bc88bb29caa2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 436eeb306bf4ba343ae4d88a824aeed2077a3426
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 9a003b9ec4208bc3449dfb1b3b2ee889a29b742b
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Co je správa zařízení v Microsoft Intune?
 
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+Jako správce IT musíte zajistit, aby spravovaná zařízení poskytovala prostředky, které vaši koncoví uživatelé potřebují k práci, a současně ochránit data před možnými riziky.
 
-Jako správce IT musíte zajistit, aby spravovaná zařízení poskytovala prostředky, které vaši koncoví uživatelé potřebují k práci, a současně tato data byla chráněná před možnými riziky.
+Úloha **Zařízení** vám poskytuje přehled o spravovaných zařízeních a umožňuje na nich vzdáleně provádět různé úlohy.
 
-Úloha **Zařízení** vám poskytuje přehled o spravovaných zařízeních a umožňuje na nich vzdáleně provádět různé úlohy. Tuto úlohu zpřístupníte takto:
+## <a name="get-to-your-devices"></a>Přístup k zařízením
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V **Intune** zvolte **Zařízení**.
-4. Můžete si zobrazit informace o zařízeních nebo se vzdáleným zařízením provádět tyhle akce:
-    - **Přehled** – snímek zaregistrovaných zařízení, která můžete spravovat.
-    - **Všechna zařízení** – seznam zaregistrovaných zařízení, která spravujete. **Filtr** nebo **Sloupce** vám pomůžou zobrazené informace upřesnit. Vybráním zařízení [zobrazíte inventář zařízení](device-inventory.md).
-    - **Zařízení Azure AD** – seznam zařízení zaregistrovaných nebo spojených s Azure Active Directory (AD). Přečtěte si další informace o [správě zařízení Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
-    - **Akce zařízení** – historie vzdálených akcí provedených na zařízeních, která zahrnuje akci, její stav, iniciátora akce a čas.
+2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+3. Vyberte **Zařízení**. Toto zobrazení obsahuje podrobné informace o jednotlivých zařízeních a o tom, co s nimi můžete dělat, mimo jiné:
 
-        ![Snímek obrazovky s monitorováním akcí zařízení](./media/monitor-device-actions.png)
+   - **Přehled** zobrazuje grafický snímek zaregistrovaných zařízení včetně informací, kolik zařízení používá jednotlivé platformy (Android, iOS a další).
+   - Část **Všechna zařízení** obsahuje seznam zaregistrovaných zařízení, která spravujete.
 
-    - **Protokoly auditu** – protokoly auditu obsahují zaznamenané aktivity, které v Microsoft Intune generují změnu. Přečtěte si další informace o [protokolech auditu](monitor-audit-logs.md).
-    - **Konektor pro TeamViewer** – služba TeamViewer umožňuje uživatelům zařízení s Androidem spravovaných službou Intune získat vzdálenou pomoc od správce IT. Přečtěte si další informace o [TeamVieweru](device-profile-android-teamviewer.md).
-    - **Nápověda a podpora** – zde můžete řešit potíže, požádat o podporu nebo zobrazit stav Intune.  
-    
+     Pomocí funkce **Export** vytvoříte seznam všech zařízení ve formátu CSV, a to v přírůstcích po 10 000 (Internet Explorer) nebo 30 000 (Edge, Chrome).
+
+     Když vyberete libovolné zařízení, můžete o něm [zobrazit další podrobnosti](device-inventory.md), včetně podrobných informací o hardwaru, nainstalovaných aplikací, stavu zásad dodržování předpisů a dalších.
+
+   - Část **Zařízení Azure AD** obsahuje seznam zařízení zaregistrovaných v Azure Active Directory (AD) nebo k této službě připojených. Přečtěte si další informace o [správě zařízení Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
+   - Část **Akce zařízení** zahrnuje historii vzdálených akcí spuštěných v jednotlivých zařízeních, včetně akce, jejího stavu, iniciátora a času.
+
+     ![Snímek obrazovky s monitorováním akcí zařízení](./media/monitor-device-actions.png)
+
+   - **Protokoly auditu** představují záznam aktivity, které v Intune generují změnu. [Protokoly auditu](monitor-audit-logs.md) obsahují podrobnější informace.
+   - **Konektor pro TeamViewer** je služba umožňující uživatelům zařízení s Androidem spravovaných službou Intune získat vzdálenou pomoc od správce IT. Přečtěte si další informace o [TeamVieweru](device-profile-android-teamviewer.md).
+   - **Nápověda a podpora** poskytují rychlý přístup k tipům pro řešení problémů, žádosti o podporu nebo kontrole stavu služby Intune.
+
 ## <a name="available-device-actions"></a>Dostupné akce zařízení
 Dostupné akce se liší podle platformy zařízení a jeho konfigurace.
 
 - [Zobrazit inventář zařízení](device-inventory.md)
-- Provádění akcí se vzdáleným zařízením:
+- Spouštění akcí ve vzdáleném zařízení:
     - [Odebrat firemní data](devices-wipe.md#remove-company-data)
     - [Obnovení továrního nastavení](devices-wipe.md#factory-reset)
     - [Vzdálené uzamčení](device-remote-lock.md)
@@ -62,7 +67,7 @@ Dostupné akce se liší podle platformy zařízení a jeho konfigurace.
     - [Vzdálené řízení pro Android](device-profile-android-teamviewer.md)
     - [Synchronizace zařízení](device-sync.md)
 
-
 ## <a name="next-steps"></a>Další kroky
 
+- V části **Všechna zařízení** vyberte zařízení, o kterém chcete zobrazit další podrobnosti.
 - Zvolte **Akce zařízení**, abyste si zobrazili stav provedených akcí na spravovaných zařízeních.

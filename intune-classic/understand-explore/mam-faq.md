@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 7654e5235fc30f46f67d35544a92c4bd25ac5c86
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 816a235136d91f2691e6be442036515544c004b2
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Časté otázky ke správě mobilních aplikací (MAM) a ochraně aplikací
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Tento článek poskytuje odpovědi na některé časté otázky ke správě mobilních aplikací (MAM) Intune a ochraně aplikací Intune.
 
@@ -61,23 +61,23 @@ Tento článek poskytuje odpovědi na některé časté otázky ke správě mobi
 
 **Jaké jsou další požadavky na používání [mobilní aplikace Outlook](https://www.microsoft.com/outlook-com/mobile/)?**
 
-  1. Koncový uživatel musí mít v zařízení nainstalovanou mobilní aplikaci Outlook.
+1. Koncový uživatel musí mít v zařízení nainstalovanou mobilní aplikaci Outlook.
 
-  2. Koncový uživatel musí mít poštovní schránku [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online) a licenci propojenou se svým účtem Azure Active Directory.
+2. Koncový uživatel musí mít poštovní schránku [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online) a licenci propojenou se svým účtem Azure Active Directory.
 
-  >[!NOTE]
-  > Mobilní aplikace Outlook aktuálně podporuje jenom Microsoft Exchange Online a nepodporuje místní Exchange nebo Exchange v Office 365 Dedicated.
+   >[!NOTE]
+   > Mobilní aplikace Outlook aktuálně podporuje jenom Microsoft Exchange Online a nepodporuje místní Exchange nebo Exchange v Office 365 Dedicated.
 
 **Jaké jsou další požadavky na používání aplikací [Word, Excel a PowerPoint](https://products.office.com/business/office)?**
 
-  1. Koncový uživatel musí mít licenci pro [Office 365 Business nebo Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) propojenou se svým účtem Azure Active Directory. Předplatné musí obsahovat aplikace Office na mobilních zařízeních a může obsahovat účet pro ukládání do cloudu přes [OneDrive pro firmy](https://onedrive.live.com/about/business/). Licence na Office 365 se dají přiřadit na [portálu Office](http://portal.office.com) podle těchto [pokynů](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+1. Koncový uživatel musí mít licenci pro [Office 365 Business nebo Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) propojenou se svým účtem Azure Active Directory. Předplatné musí obsahovat aplikace Office na mobilních zařízeních a může obsahovat účet pro ukládání do cloudu přes [OneDrive pro firmy](https://onedrive.live.com/about/business/). Licence na Office 365 se dají přiřadit na [portálu Office](http://portal.office.com) podle těchto [pokynů](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
-  2. Koncový uživatel musí mít spravované umístění nakonfigurované pomocí granulární funkce Uložit jako v nastavení zásad ochrany aplikace Zakázat možnost Uložit jako. Pokud je spravovaným umístěním třeba OneDrive, musí být v aplikaci Word, Excel a PowerPoint koncového uživatele nakonfigurovaná aplikace [OneDrive](https://onedrive.live.com/about/).
+2. Koncový uživatel musí mít spravované umístění nakonfigurované pomocí granulární funkce Uložit jako v nastavení zásad ochrany aplikace Zakázat možnost Uložit jako. Pokud je spravovaným umístěním třeba OneDrive, musí být v aplikaci Word, Excel a PowerPoint koncového uživatele nakonfigurovaná aplikace [OneDrive](https://onedrive.live.com/about/).
 
-  3. Pokud je spravovaným umístěním OneDrive, musí být aplikace cílem pro zásadu ochrany aplikace nasazenou pro koncového uživatele.
+3. Pokud je spravovaným umístěním OneDrive, musí být aplikace cílem pro zásadu ochrany aplikace nasazenou pro koncového uživatele.
 
-  >[!NOTE]
-  > Mobilní aplikace Office aktuálně podporují jenom SharePoint Online a ne místní SharePoint.
+   >[!NOTE]
+   > Mobilní aplikace Office aktuálně podporují jenom SharePoint Online a ne místní SharePoint.
 
 **Proč je pro Office potřeba spravované umístění (jako OneDrive)?** Intune označuje veškerá data v aplikaci jako podniková (firemní) nebo osobní. Data se považují za podniková, když pocházejí z firemního umístění. U aplikací Office považuje Intune za firemní následující umístění: e-mail (Exchange) nebo cloudové úložiště (aplikace OneDrive s účtem OneDrive pro firmy).
 
@@ -124,15 +124,15 @@ MAM (v iOSu) v současnosti umožňuje, aby PIN na úrovni aplikace obsahoval al
 
 **Jak může Intune vzdáleně smazat data?** Intune může data aplikace smazat třemi způsoby: úplným vymazáním zařízení, selektivním vymazáním pro MDM nebo selektivním vymazáním pro MAM. Další informace o vzdáleném vymazání pro MDM najdete v článku [Lepší ochrana dat s využitím plného nebo selektivního vymazání pomocí Microsoft Intune](../deploy-use/use-remote-wipe-to-help-protect-data-using-microsoft-intune.md). Další informace o selektivním vymazání pro MAM najdete v článku [Vymazání dat spravovaných aplikací společnosti s Microsoft Intune](../deploy-use/wipe-managed-company-app-data-with-microsoft-intune.md)
 
-  1. **Co je úplné vymazání?** [Úplné vymazání](../deploy-use/use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#full-wipe) odebere veškerá uživatelská data a nastavení ze **zařízení** pomocí obnovení výchozího továrního nastavení v zařízení. Zařízení se odebere ze služby Intune.
-  >[!NOTE]
-  > Úplného vymazání jde dosáhnout jenom na zařízeních zaregistrovaných ve správě mobilních zařízení (MDM) Intune.
+1. **Co je úplné vymazání?** [Úplné vymazání](../deploy-use/use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#full-wipe) odebere veškerá uživatelská data a nastavení ze **zařízení** pomocí obnovení výchozího továrního nastavení v zařízení. Zařízení se odebere ze služby Intune.
+   >[!NOTE]
+   > Úplného vymazání jde dosáhnout jenom na zařízeních zaregistrovaných ve správě mobilních zařízení (MDM) Intune.
 
-  2. **Co je selektivní vymazání pro MDM?** O selektivním vymazání si můžete přečíst v článku [Lepší ochrana dat s využitím plného nebo selektivního vymazání pomocí Microsoft Intune](../deploy-use/use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#selective-wipe).
+2. **Co je selektivní vymazání pro MDM?** O selektivním vymazání si můžete přečíst v článku [Lepší ochrana dat s využitím plného nebo selektivního vymazání pomocí Microsoft Intune](../deploy-use/use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#selective-wipe).
 
-  3. **Co je selektivní vymazání pro MAM?** Selektivní vymazání pro MAM jednoduše odebere data aplikace společnosti z aplikace. Žádost se inicializuje pomocí portálu Intune Azure Portal. Informace o tom, jak inicializovat žádost o vymazání, najdete v článku [Vymazání dat spravovaných aplikací společnosti s Microsoft Intune](../deploy-use/wipe-managed-company-app-data-with-microsoft-intune.md).
+3. **Co je selektivní vymazání pro MAM?** Selektivní vymazání pro MAM jednoduše odebere data aplikace společnosti z aplikace. Žádost se inicializuje pomocí portálu Intune Azure Portal. Informace o tom, jak inicializovat žádost o vymazání, najdete v článku [Vymazání dat spravovaných aplikací společnosti s Microsoft Intune](../deploy-use/wipe-managed-company-app-data-with-microsoft-intune.md).
 
-  4. **Jak rychle selektivní vymazání pro MAM proběhne?** Pokud uživatel používá aplikaci, když je zahájeno selektivní vymazání, sada Intune App SDK kontroluje každých 30 minut žádost o selektivní vymazání ze služby Intune MAM. Selektivní vymazání také kontroluje tehdy, když uživatel spustí aplikaci poprvé a přihlásí se pomocí pracovního nebo školního účtu.
+4. **Jak rychle selektivní vymazání pro MAM proběhne?** Pokud uživatel používá aplikaci, když je zahájeno selektivní vymazání, sada Intune App SDK kontroluje každých 30 minut žádost o selektivní vymazání ze služby Intune MAM. Selektivní vymazání také kontroluje tehdy, když uživatel spustí aplikaci poprvé a přihlásí se pomocí pracovního nebo školního účtu.
 
 **Proč místní služby nepracují s aplikacemi chráněnými službou Intune?** Ochrana aplikací Intune závisí na identitě uživatele, aby byla konzistentní mezi aplikací a sadou Intune App SDK. Jediná cesta, která to může zaručit, je moderní ověřování. Jsou situace, kdy aplikace můžou fungovat s místní konfigurací, ale nejsou konzistentní ani nic nezaručují.
 

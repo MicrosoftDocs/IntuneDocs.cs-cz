@@ -1,27 +1,27 @@
 ---
-title: "Řešení potíží při registraci zařízení s Windows 10 | Dokumentace Microsoftu"
-description: 
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Řešení potíží při registraci zařízení s Windows 10 | Dokumentace Microsoftu
+description: ''
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 07/13/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 4ab630b6-47ff-443b-a2a5-be23388bcea7
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 936a336019c37fb5ae5f7ef8f5b1201faee553fc
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 97f23594a5c7b047caf37dbaa39c481585a96d76
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Řešení potíží při registraci zařízení s Windows 10
 Pokud jste použili postup v části [Registrace zařízení s Windows 10 Mobile nebo Windows 10 Desktop v Intune](enroll-your-w10-phone-or-w10-pc-windows.md), ale stále nemáte přístup ke svému školnímu nebo pracovnímu e-mailu a souborům, zkuste tyto kroky pro řešení potíží.
@@ -38,15 +38,15 @@ Pokud jste použili postup v části [Registrace zařízení s Windows 10 Mobile
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-access-work-or-school"></a>Postup řešení potíží, pokud se zobrazí „Přístup do práce nebo do školy“
 
-1.  Pokud jste použili tento postup, ale pořád nemáte přístup k pracovnímu nebo školnímu e-mailu a souborům, vraťte se k položce **Přístup do práce nebo do školy**.
+1. Pokud jste použili tento postup, ale pořád nemáte přístup k pracovnímu nebo školnímu e-mailu a souborům, vraťte se k položce **Přístup do práce nebo do školy**.
 
 2. Udělejte jednu z těchto věcí:
 
-    - Pokud vidíte připojení, které vypadá jako na obrázku níž, klepněte na něj a potom zkontrolujte, že se zobrazují možnosti Správa, Informace a Odpojit. Pokud se tyto možnosti zobrazují, znamená to, že jste zaregistrovaní a připojení.
+   - Pokud vidíte připojení, které vypadá jako na obrázku níž, klepněte na něj a potom zkontrolujte, že se zobrazují možnosti Správa, Informace a Odpojit. Pokud se tyto možnosti zobrazují, znamená to, že jste zaregistrovaní a připojení.
 
-    ![validate-successful-enrollment](./media/w10-enroll-rs1-validate-successful-enrollment.png)
+     ![validate-successful-enrollment](./media/w10-enroll-rs1-validate-successful-enrollment.png)
 
-    - Pokud se informace o připojení nezobrazují nebo pokud je vidíte, ale nezobrazují se všechny možnosti, klepněte na **Připojit** a přihlaste se pomocí pracovních nebo školních přihlašovacích údajů. Teď byste měli být připojení.
+   - Pokud se informace o připojení nezobrazují nebo pokud je vidíte, ale nezobrazují se všechny možnosti, klepněte na **Připojit** a přihlaste se pomocí pracovních nebo školních přihlašovacích údajů. Teď byste měli být připojení.
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>Postup řešení potíží, pokud se zobrazí „Váš účet“
 
@@ -58,6 +58,6 @@ Pokud jste použili tento postup, ale pořád nemáte přístup k pracovnímu ne
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-set-up-a-work-or-school-account"></a>Postup řešení potíží, pokud se zobrazí „Nastavení pracovního nebo školního účtu“
 
-Pokud se zobrazí zpráva __Nemůžeme automaticky zjistit koncový bod správy odpovídající zadanému uživatelskému jménu. Zkontrolujte prosím své uživatelské jméno a zkuste to znovu. Pokud znáte adresu URL koncového bodu správy, zadejte ji prosím.__ , zkuste znovu zadat uživatelské jméno a heslo. Pokud ani to nepomůže, zjistěte od své firemní podpory, který web je potřeba zadat do textového pole **Koncový bod správy**. Web pravděpodobně vypadá nějak takto: **www.vasespolecnost.onmicrosoft.com**.
+Pokud se zobrazí zpráva <strong>Nemůžeme automaticky zjistit koncový bod správy odpovídající zadanému uživatelskému jménu. Zkontrolujte prosím své uživatelské jméno a zkuste to znovu. Pokud znáte adresu URL koncového bodu správy, zadejte ji prosím.</strong> , zkuste znovu zadat uživatelské jméno a heslo. Pokud ani to nepomůže, zjistěte od své firemní podpory, který web je potřeba zadat do textového pole <strong>Koncový bod správy</strong>. Web pravděpodobně vypadá nějak takto: <strong>www.vasespolecnost.onmicrosoft.com</strong>.
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).

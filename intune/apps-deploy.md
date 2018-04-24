@@ -1,29 +1,29 @@
 ---
-title: "Přiřazení aplikací do skupin v Microsoft Intune"
-titlesuffix: 
-description: "Po přidání aplikace do Microsoft Intune bude vhodné ji přiřadit do skupin uživatelů nebo zařízení."
-keywords: 
+title: Přiřazení aplikací do skupin v Microsoft Intune
+titlesuffix: ''
+description: Po přidání aplikace do Microsoft Intune bude vhodné ji přiřadit do skupin uživatelů nebo zařízení.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: eba329be463fbf0593638bd4cf41c404a17f9cc0
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: de95f5516298e8ade9e394fab8b05fc056651b0c
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Po přidání aplikace do Microsoft Intune ji můžete přiřadit k uživatelům a zařízením.
 
@@ -51,26 +51,26 @@ Aplikace se dají přiřadit k zařízením, ať už jsou spravované službou I
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V okně **Intune** zvolte **Mobilní aplikace**.
-1. V úloze **Mobilní aplikace** zvolte v části **Spravovat** možnost **Aplikace**.
-2. V okně se seznamem aplikací klikněte na aplikaci, kterou chcete přiřadit.
-3. V okně **Přehled** konkrétní aplikace vyberte v části **Spravovat** možnost **Přiřazení**.
-4. Výběrem možnosti **Přidat skupinu** zobrazíte okno **Přidat skupinu** pro danou aplikaci.
-5. Pro konkrétní aplikaci zvolte **typ přiřazení**:
-    - **K dispozici zaregistrovaným zařízením** – Uživatelé instalují aplikaci z aplikace nebo webu Portál společnosti.
-    - **K dispozici s registrací i bez ní** – Přiřadí tuto aplikaci do skupin uživatelů, jejichž zařízení nejsou zaregistrovaná v Intune. Všimněte si, že typ **Aplikace Android for Work** tuto možnost nepodporuje. 
-    - **Povinné** – Aplikace se nainstaluje na zařízení ve vybraných skupinách.
-    - **Odinstalovat** – Aplikace se odinstaluje ze zařízení ve vybraných skupinách.
+4. V úloze **Mobilní aplikace** zvolte v části **Spravovat** možnost **Aplikace**.
+5. V okně se seznamem aplikací klikněte na aplikaci, kterou chcete přiřadit.
+6. V okně **Přehled** konkrétní aplikace vyberte v části **Spravovat** možnost **Přiřazení**.
+7. Výběrem možnosti **Přidat skupinu** zobrazíte okno **Přidat skupinu** pro danou aplikaci.
+8. Pro konkrétní aplikaci zvolte **typ přiřazení**:
+   - **K dispozici zaregistrovaným zařízením** – Uživatelé instalují aplikaci z aplikace nebo webu Portál společnosti.
+   - **K dispozici s registrací i bez ní** – Přiřadí tuto aplikaci do skupin uživatelů, jejichž zařízení nejsou zaregistrovaná v Intune. Všimněte si, že typ **Aplikace Android for Work** tuto možnost nepodporuje. 
+   - **Povinné** – Aplikace se nainstaluje na zařízení ve vybraných skupinách.
+   - **Odinstalovat** – Aplikace se odinstaluje ze zařízení ve vybraných skupinách.
 
-    > [!NOTE]
-    > **Jenom pro aplikace pro iOS** – Pokud jste vytvořili profil VPN iOSu, který obsahuje nastavení sítě VPN podle aplikací, můžete ho ve **VPN** vybrat. Při spuštění aplikace se připojení VPN otevře. Další informace najdete v článku o [nastavení VPN pro zařízení s iOSem](vpn-settings-ios.md).
+     > [!NOTE]
+     > **Jenom pro aplikace pro iOS** – Pokud jste vytvořili profil VPN iOSu, který obsahuje nastavení sítě VPN podle aplikací, můžete ho ve **VPN** vybrat. Při spuštění aplikace se připojení VPN otevře. Další informace najdete v článku o [nastavení VPN pro zařízení s iOSem](vpn-settings-ios.md).
 
-6. Výběrem možnosti **Zahrnuté skupiny** zvolte skupiny uživatelů, které budou přiřazením aplikace ovlivněny.
-7. Jakmile vyberete jednu nebo více skupin, které se mají zahrnout, klikněte na **Vybrat**.
-8. Klikněte na **OK** v okně **Přiřadit** a dokončete výběr zahrnutých skupin.
-9. Pokud se rozhodnete vyloučit jakékoli skupiny uživatelů, tak aby nebyly přiřazením aplikace ovlivněny, klikněte na **Vyloučit skupiny**.
-10. Pokud jste se rozhodli některé skupiny vyloučit, klikněte na **Vybrat** v okně **Vybrat skupiny**.
-11. Klikněte na tlačítko **OK** v okně **Přidat skupinu**.
-12. Klikněte na **Uložit** v okně **Přiřazení** a svá přiřazení uložte.
+9. Výběrem možnosti **Zahrnuté skupiny** zvolte skupiny uživatelů, které budou přiřazením aplikace ovlivněny.
+10. Jakmile vyberete jednu nebo více skupin, které se mají zahrnout, klikněte na **Vybrat**.
+11. Klikněte na **OK** v okně **Přiřadit** a dokončete výběr zahrnutých skupin.
+12. Pokud se rozhodnete vyloučit jakékoli skupiny uživatelů, tak aby nebyly přiřazením aplikace ovlivněny, klikněte na **Vyloučit skupiny**.
+13. Pokud jste se rozhodli některé skupiny vyloučit, klikněte na **Vybrat** v okně **Vybrat skupiny**.
+14. Klikněte na tlačítko **OK** v okně **Přidat skupinu**.
+15. Klikněte na **Uložit** v okně **Přiřazení** a svá přiřazení uložte.
 
 Aplikace je teď přiřazená do skupin, které jste vybrali. Další informace o zahrnutí a vyloučení přiřazení aplikací najdete v článku [Zahrnutí a vyloučení přiřazení aplikací](apps-inc-exl-assignments.md).
 

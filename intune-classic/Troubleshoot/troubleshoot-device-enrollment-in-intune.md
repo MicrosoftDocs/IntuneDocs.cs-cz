@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1f53796e08ee962a23ab02929c4451478480e281
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 4c69dec5903f25b9e7f09f6a20fc35068f3329d4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Řešení potíží s registrací do služby Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Toto téma obsahuje doporučení pro řešení potíží s registrací zařízení. Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md), ve kterém najdete další způsoby, jak získat nápovědu.
 
@@ -87,9 +87,9 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 8.  Odeberte zařízení podle potřeby, třeba zařízení, která už se nepoužívají, nebo zařízení s nesprávnými definicemi.
 
 > [!NOTE]
-
+> 
 > Limitu registrace zařízení se můžete vyhnout tak, že použijete účet správce registrace zařízení, jak je popsáno v tématu [Registrace firemních zařízení pomocí správce registrace zařízení v Microsoft Intune](/intune-classic/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune).
->
+> 
 > Pokud se pro přihlašovací údaje uživatele, jehož účet přidáte do účtu správců registrace zařízení, vynucuje zásada podmíněného přístupu, nebude možné dokončit registraci.
 
 ### <a name="company-portal-temporarily-unavailable"></a>Portál společnosti není dočasně k dispozici
@@ -154,7 +154,7 @@ Správci můžou zařízení odstraňovat na portálu služby Azure Active Direc
 **Problém:** Pokud do AD FS přidáte druhou ověřenou doménu, nemusí být uživatelé s příponou hlavního názvu uživatele (UPN) druhé domény schopni se přihlásit na portály nebo zaregistrovat zařízení.
 
 
-**Řešení:** Zákazníci s předplatným Microsoft Office 365, kteří používají jednotné přihlašování (SSO) prostřednictvím služby AD FS 2.0 a mají pro přípony UPN uživatelů v rámci své organizace více domén nejvyšší úrovně (například @contoso.com nebo @fabrikam.com), musí pro každou příponu nasadit samostatnou instanci federační služby AD FS 2.0. K dispozici je teď [kumulativní aktualizace pro službu AD FS 2.0](http://support.microsoft.com/kb/2607496), která ve spojení s přepínačem **SupportMultipleDomain** umožňuje zajistit, aby AD FS server tento scénář podporoval bez vyžadování dalších serverů služby AD FS 2.0. Další informace najdete na [tomto blogu](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+<strong>Řešení:</strong> Zákazníci s předplatným Microsoft Office 365, kteří používají jednotné přihlašování (SSO) prostřednictvím služby AD FS 2.0 a mají pro přípony UPN uživatelů v rámci své organizace více domén nejvyšší úrovně (například @contoso.com nebo @fabrikam.com), musí pro každou příponu nasadit samostatnou instanci federační služby AD FS 2.0. K dispozici je teď [kumulativní aktualizace pro službu AD FS 2.0](http://support.microsoft.com/kb/2607496), která ve spojení s přepínačem <strong>SupportMultipleDomain</strong> umožňuje zajistit, aby AD FS server tento scénář podporoval bez vyžadování dalších serverů služby AD FS 2.0. Další informace najdete na [tomto blogu](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
 
 
 ## <a name="android-issues"></a>Problémy na zařízeních s Androidem
@@ -195,27 +195,27 @@ Pokud řešení 2 nefunguje, nechte uživatele provést následující postup, a
 
 1. Na zařízení spusťte aplikaci Smart Manager.
 
-  ![Výběr ikony Smart Manager na zařízení](./media/smart-manager-app-icon.png)
+   ![Výběr ikony Smart Manager na zařízení](./media/smart-manager-app-icon.png)
 
 2. Zvolte dlaždici **Battery** (Baterie).
 
-  ![Výběr dlaždice Battery](./media/smart-manager-battery-tile.png)
+   ![Výběr dlaždice Battery](./media/smart-manager-battery-tile.png)
 
 3. V části **App power saving** (Úspora energie aplikace) nebo **App optimization** (Optimalizace aplikace) vyberte **Detail** (Podrobnosti).
 
-  ![Výběr možnosti Detail (Podrobnosti) v části App power saving (Úspora energie aplikace) nebo App optimization (Optimalizace aplikace)](./media/smart-manager-app-power-saving-detail.png)
+   ![Výběr možnosti Detail (Podrobnosti) v části App power saving (Úspora energie aplikace) nebo App optimization (Optimalizace aplikace)](./media/smart-manager-app-power-saving-detail.png)
 
 4. V seznamu aplikací vyberte **Portál společnosti**.
 
-  ![Výběr aplikace Portál společnosti ze seznamu aplikací](./media/smart-manager-company-portal.png)
+   ![Výběr aplikace Portál společnosti ze seznamu aplikací](./media/smart-manager-company-portal.png)
 
 5. Zvolte **Turned off** (Vypnuto).
 
-  ![Výběr možnosti Turned off (Vypnuto) v dialogovém okně App optimization (Optimalizace aplikace)](./media/smart-manager-app-optimization-turned-off.png)
+   ![Výběr možnosti Turned off (Vypnuto) v dialogovém okně App optimization (Optimalizace aplikace)](./media/smart-manager-app-optimization-turned-off.png)
 
 6. V části **App power saving** (Snížení spotřeby aplikace) nebo **App optimization** (Optimalizace aplikace) ověřte, že je Portál společnosti vypnutý.
 
-  ![Ověření, že je Portál společnosti vypnutý](./media/smart-manager-verify-comp-portal-turned-off.png)
+   ![Ověření, že je Portál společnosti vypnutý](./media/smart-manager-verify-comp-portal-turned-off.png)
 
 
 ### <a name="profile-installation-failed"></a>Neúspěch instalace profilu

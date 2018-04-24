@@ -13,15 +13,15 @@ ms.technology: ''
 ms.assetid: 86d00901-fac7-4471-aac2-f1d13a4879b6
 ROBOTS: NOINDEX,NOFOLLOW
 ms.custom: intune-classic
-ms.openlocfilehash: b4415b7b4b1cd48accae3f0d0d39caedd9cf6b3c
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 9ddf972795d9ced6aff6dd01da4469d49f11c951
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-intune-glossary"></a>Glosář Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 ## <a name="a"></a>A
 
@@ -40,11 +40,13 @@ ms.lasthandoff: 03/22/2018
 |Azure Portal|Nová konzola pro Intune, která se brzy zavede. [Přečtěte si další informace o novém portálu](/intune/what-is-intune).|
 
 ## <a name="b"></a>B
+
 |||
 |-|-|
 |uživatelé s vlastním zařízením (BYOD)|Anglický akronym je z [Bring Your Own Device](/intune-classic/get-started/choose-how-to-enroll-devices1). Uživatelé si mohou nainstalovat aplikaci Portál společnosti služby Intune na své vlastní zařízení a potom své zařízení zaregistrovat. Tím získají přístup k prostředkům společnosti, jako jsou e-mail, firemní aplikace, firemní data a podpora.|
 
 ## <a name="c"></a>C
+
 |||
 |-|-|
 |profil certifikátu|Tento typ zásad slouží k [zabezpečení přístupu k prostředkům společnosti](/intune-classic/deploy-use/secure-resource-access-with-certificate-profiles) pomocí certifikátů při používání profilů pro Wi-Fi, e-mail nebo VPN.|
@@ -57,6 +59,7 @@ ms.lasthandoff: 03/22/2018
 |vlastní zásady|[Tyto zásady použijete](/intune-classic/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies), když obecné zásady konfigurace neobsahují vestavěná nastavení, která byste potřebovali. Vlastní zásady je možné použít k vytvoření nastavení jinými způsoby (Apple Configurator nebo OMA-URI).|
 
 ## <a name="d"></a>D
+
 |||
 |-|-|
 |nasazení|Odeslání aplikace nebo zásady do zařízení nebo na uživatele, které spravujete.|
@@ -65,6 +68,7 @@ ms.lasthandoff: 03/22/2018
 |mapování skupin zařízení|Pomáhá [automaticky přidávat zařízení do skupin](/intune-classic/deploy-use/categorize-devices-with-device-group-mapping-in-microsoft-intune) na základě kategorie zařízení (typu„Osobní“ nebo „Prodej“), kterou zařízení přiřadíte buď vy, nebo koncový uživatel.|
 
 ## <a name="e"></a>E
+
 |||
 |-|-|
 |e-mailový profil|Tyto zásady lze použít ke konfiguraci [nastavení přístupu k e-mailu](/intune-classic/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) pro konkrétní e-mailové klienty na mobilních zařízeních. Minimalizují se tak nároky na nastavení, která musí provést koncový uživatel.|
@@ -73,21 +77,25 @@ ms.lasthandoff: 03/22/2018
 |registrace|Microsoft Intune využívá [registraci](/intune-classic/deploy-use/enroll-devices-in-microsoft-intune) k začlenění zařízení do správy a povolení přístupu k prostředkům.|
 
 ## <a name="f"></a>F
+
 |||
 |-|-|
 |FastTrack|[Služba společnosti Microsoft](https://technet.microsoft.com/library/mt228265.aspx) pro uživatele Intune se 150 licencemi v plánu splňujícím podmínky. V rámci této služby vám specialisté od Microsoftu pomohou nastavit a zprovoznit službu Intune pro vaši společnost.|
 
 ## <a name="g"></a>G
+
 |||
 |-|-|
 |skupiny|Skupiny vám umožňují [logicky seskupit uživatele nebo zařízení](/intune-classic/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune). Můžete například vytvořit skupinu všech počítačů s Windows. Do těchto skupin pak můžete nasazovat aplikace a zásady.|
 
 ## <a name="h"></a>H
+
 |||
 |-|-|
 |hybridní|Konfigurace, kdy můžete spravovat zařízení registrovaná do Intune [prostřednictvím konzoly System Center Configuration Manager](/intune-classic/get-started/integration-with-cloud-services).|
 
 ## <a name="i"></a>I
+
 |||
 |-|-|
 |konzola pro správu Intune|Současná konzola, kterou používáte k většině operací správy Intune.|
@@ -96,11 +104,13 @@ ms.lasthandoff: 03/22/2018
 |inventář|Slouží k zobrazení [hardwaru a nainstalovaného softwaru](/intune-classic/deploy-use/understand-your-devices-with-inventory-in-microsoft-intune) v zařízeních, která spravujete.|
 
 ## <a name="k"></a>K
+
 |||
 |-|-|
 |celoobrazovkový režim|Tento režim se konfiguruje v rámci [obecných zásad konfigurace](/intune-classic/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) a umožňuje uzamknout zařízení jen pro určitý účel. Můžete například zařízení v prodejně nakonfigurovat tak, aby na něm běžela jen jedna aplikace.|
 
 ## <a name="m"></a>M
+
 |||
 |-|-|
 |spravovaný prohlížeč|[Aplikace na procházení webu](/intune-classic/deploy-use/manage-internet-access-using-managed-browser-policies), kterou můžete nasadit v organizaci pomocí Microsoft Intune. Zásady spravovaného prohlížeče konfigurují seznam povolených nebo blokovaných webů. Tyto seznamy omezují weby, které můžou uživatelé spravovaného prohlížeče navštívit.|
@@ -111,18 +121,21 @@ ms.lasthandoff: 03/22/2018
 |zásady konfigurace mobilních aplikací|Zásady pro iOS, které slouží k [předávání nastavení do kompatibilních aplikací pro iOS](/intune-classic/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune) při jejich spuštění – například mohou dodávat název společnosti nebo serverovou adresu.|
 
 ## <a name="o"></a>O
+
 |||
 |-|-|
 |OMA-DM|Open Mobile Alliance Device Management. Oborový standard, protokol správy zařízení používaný řadou výrobců hardwaru. Umožňuje ovládat určité funkce mobilních zařízení a počítačů.|
 |OMA-URI|Open Mobile Alliance Uniform Resource Identifier. Tyto identifikátory identifikují jednotlivá nastavení v zařízeních, která se řídí standardem OMA-DM. Řadu z nich je možné použít ve [vlastních zásadách Intune](/intune-classic/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies), když není k dispozici vestavěné nastavení, které byste právě potřebovali.|
 
 ## <a name="p"></a>P
+
 |||
 |-|-|
 |zásady|[Balíček informací](/intune-classic/deploy-use/microsoft-intune-policy-reference) odesílaný z Intune do zařízení. Můžete například do zařízení nasadit nastavení zabezpečení nebo informace o dodržování předpisů.|
 |resetování hesla|Funkce služby Intune, která na podporovaných zařízeních umožňuje vynutit, aby si koncoví uživatelé [resetovali heslo](/intune-classic/deploy-use/use-remote-lock-and-passcode-reset-in-microsoft-intune).|
 
 ## <a name="r"></a>R
+
 |||
 |-|-|
 |Vzdálené uzamčení|Funkce služby Intune, která vám umožňuje [uzamknout podporovaná zařízení](/intune-classic/deploy-use/use-remote-lock-and-passcode-reset-in-microsoft-intune), i když dané zařízení právě nemáte k dispozici.|
@@ -131,12 +144,14 @@ ms.lasthandoff: 03/22/2018
 |požadavky|[Operace nasazení aplikace](/intune-classic/deploy-use/add-apps), která vám umožní vybrat požadavky, které musí zařízení splnit, než na něj bude aplikace nainstalována. Můžete například zadat verzi iOS, která musí být nainstalovaná, aby se mohla aplikace nainstalovat.|
 
 ## <a name="s"></a>S
+
 |||
 |-|-|
 |selektivní vymazání|[Selektivní vymazání](/intune-classic/deploy-use/use-remote-wipe-to-help-protect-data-using-microsoft-intune) odebere ze zařízení jenom firemní data, včetně případných dat správy mobilních aplikací (MAM), nastavení a e-mailových profilů. Při selektivním vymazání se osobní údaje uživatele na zařízení ponechají.|
 |Předplatné|Zadaná smlouva, která vám umožňuje přístup ke klientovi Intune.|
 
 ## <a name="t"></a>T
+
 |||
 |-|-|
 |TeamViewer|Aplikace třetí strany, která funguje s Intune a poskytuje [možnosti vzdálené pomoci](/intune-classic/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client#request-and-provide-remote-assistance-for-windows-pcs) pro počítače s Windows spravované pomocí softwarového klienta Intune.|
@@ -144,12 +159,15 @@ ms.lasthandoff: 03/22/2018
 |podmínky a ujednání|Typ zásad, které se nasazují na uživatele. Obsahují informace, které uživatel musí [přečíst a přijmout](/intune-classic/deploy-use/terms-and-condition-policy-settings-in-microsoft-intune) předtím, než bude moci používat Portál společnosti k registraci a přístupu ke své práci.|
 
 ## <a name="v"></a>V
+
 |||
 |-|-|
 |hromadně zakoupené aplikace|Některé App Story umožňují pro aplikace, které chcete spouštět ve vaší společnosti, nakoupit víc licencí. Intune vám pomůže spravovat aplikace, které jste [koupili prostřednictvím takového programu](/intune-classic/deploy-use/manage-volume-purchased-apps-in-microsoft-intune), importem licenčních informací z App Storu, sledováním již použitých licencí a zabráněním instalace více kopií aplikací, než na kolik máte licence.|
 |Profil VPN|Zásady, které nasazují [nastavení VPN](/intune-classic/deploy-use/vpn-connections-in-microsoft-intune) do vámi spravovaných zařízení. Minimalizují se tak nároky na nastavení, která musí provést koncový uživatel.|
 
 ## <a name="w"></a>W
-|||
-|-|-|
-|profil Wi-Fi|Zásady, které nasazují [nastavení bezdrátové sítě](/intune-classic/deploy-use/wi-fi-connections-in-microsoft-intune) do zařízení. Uživatelé se tak budou moci připojit k vaší podnikové síti, aniž by museli znát a konfigurovat nastavení sítě.
+
+|               |                                                                                                                                                                                                                                 |
+|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| profil Wi-Fi | Zásady, které nasazují [nastavení bezdrátové sítě](/intune-classic/deploy-use/wi-fi-connections-in-microsoft-intune) do zařízení. Uživatelé se tak budou moci připojit k vaší podnikové síti, aniž by museli znát a konfigurovat nastavení sítě. |
+

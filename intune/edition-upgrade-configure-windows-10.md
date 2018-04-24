@@ -1,27 +1,27 @@
 ---
-title: "Upgrade zařízení s Windows 10 v Microsoft Intune – Azure | Microsoft Docs"
-description: "Vytvořte profil zařízení v Microsoft Intune pro upgrade zařízení s Windows 10 na novější verze. Najdete zde také podporované možnosti upgradu pro Windows 10 Pro, N Edition, Education, Cloud, Enterprise, Core, Holographic a Mobile."
-keywords: 
+title: Upgrade zařízení s Windows 10 v Microsoft Intune – Azure | Microsoft Docs
+description: Vytvořte profil zařízení v Microsoft Intune pro upgrade zařízení s Windows 10 na novější verze. Najdete zde také podporované možnosti upgradu pro Windows 10 Pro, N Edition, Education, Cloud, Enterprise, Core, Holographic a Mobile.
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: ae8b6528-7979-47d8-abe0-58cea1905270
 ms.reviewer: coryfe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8084f1b2fbd513de596bd97f4ffec995b6f7aac4
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 994ab8e7d955d18b293e4d9e9661e0c44baaaa1f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-windows-10-edition-upgrade-profile-in-intune"></a>Konfigurace profilu upgradu edice Windows 10 v Intune
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Konfigurujte v Intune profil upgradu k automatickému upgradování zařízení, která používají edici Windows 10, na jinou edici. Podívejte se také na podporované možnosti upgradu.
 
@@ -128,10 +128,10 @@ The following lists provide the supported upgrade paths for the Windows 10 editi
 5. V rozevíracím seznamu **Platforma** zvolte **Windows 10 a novější**.
 6. V rozevíracím seznamu **Typ profilu** zvolte **Upgrade edice**.
 7. Ve vlastnostech **Upgradu edice** zadejte tato nastavení:
-  - **Edice, na kterou se má upgradovat** – V rozevíracím seznamu vyberte verzi Windows 10 Desktop, Windows 10 Holographic nebo Windows 10 Mobile, na kterou cílová zařízení upgradujete.
-  - **Kód Product Key** – Zadejte kód Product Key, který jste získali od Microsoftu a který se může použít k upgradu všech cílových zařízení s Windows 10 Desktop. 
+   - **Edice, na kterou se má upgradovat** – V rozevíracím seznamu vyberte verzi Windows 10 Desktop, Windows 10 Holographic nebo Windows 10 Mobile, na kterou cílová zařízení upgradujete.
+   - **Kód Product Key** – Zadejte kód Product Key, který jste získali od Microsoftu a který se může použít k upgradu všech cílových zařízení s Windows 10 Desktop. 
     Až zásadu obsahující kód Product Key vytvoříte, klíč nebude možné aktualizovat a bude z bezpečnostních důvodů skrytý. Pokud chcete kód Product Key změnit, zadejte ho celý znovu.
-  - **Licenční soubor** – Zvolte **Procházet** a vyberte licenční soubor, který jste dostali od Microsoftu. Tento licenční soubor obsahuje informace o licenci pro edici Windows Holographic nebo Windows 10 Mobile, na kterou cílová zařízení upgradujete.
+   - **Licenční soubor** – Zvolte **Procházet** a vyberte licenční soubor, který jste dostali od Microsoftu. Tento licenční soubor obsahuje informace o licenci pro edici Windows Holographic nebo Windows 10 Mobile, na kterou cílová zařízení upgradujete.
 8. Až budete hotoví, vyberte **Vytvořit** k uložení změn.
 
 Profil se vytvoří a zobrazí se v seznamu profilů.

@@ -1,27 +1,27 @@
 ---
-title: "Resetování zařízení z webu Portál společnosti | Dokumentace Microsoftu"
-description: 
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Resetování zařízení z webu Portál společnosti | Dokumentace Microsoftu
+description: ''
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: d3182a85-328b-45b4-bf7a-9f6249984641
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 181c3df521e9cf213367becf00e4a53469ad69a9
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: edb5f8306d728abb62b806f287a31b6a75d25cbd
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reset-your-device-from-the-company-portal-website"></a>Resetování zařízení z webu Portál společnosti
 
@@ -34,17 +34,17 @@ Pokud zařízení resetujete, nebude již uvedené na Portálu společnosti a bu
 
 Resetování zařízení:
 
-1.  Na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog) klepněte na tlačítko __nabídky__ a potom vyberte __Moje zařízení__.
+1. Na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog) klepněte na tlačítko __nabídky__ a potom vyberte __Moje zařízení__.
 
 2. Na stránce __Moje zařízení__ vyberte název zařízení, které chcete přejmenovat.
 
-  ![Snímek obrazovky se stránkou Moje zařízení s několika neidentifikovanými zařízeními zobrazenými nad výzvou k registraci zařízení, která nejsou v seznamu, nebo k identifikaci neidentifikovaných zařízení](./media/macOS_enroll_002_tap_here_banner.png)
+   ![Snímek obrazovky se stránkou Moje zařízení s několika neidentifikovanými zařízeními zobrazenými nad výzvou k registraci zařízení, která nejsou v seznamu, nebo k identifikaci neidentifikovaných zařízení](./media/macOS_enroll_002_tap_here_banner.png)
 
-3.  Zařízení se otevře v místním okně. Klepněte na tlačítko **Resetovat**.
+3. Zařízení se otevře v místním okně. Klepněte na tlačítko **Resetovat**.
 
-    ![Všechny možnosti pro vybrané zařízení na webu Portál společnosti, včetně možnosti Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení ](./media/iwp-screen-with-all-options.png)
+   ![Všechny možnosti pro vybrané zařízení na webu Portál společnosti, včetně možnosti Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení ](./media/iwp-screen-with-all-options.png)
 
-4.  Zobrazí se upozornění, že se chystáte vymazat veškerý obsah zařízení jeho resetováním do výchozího továrního nastavení. Klepnutím na **Resetovat** potvrďte, že to chcete provést.
+4. Zobrazí se upozornění, že se chystáte vymazat veškerý obsah zařízení jeho resetováním do výchozího továrního nastavení. Klepnutím na **Resetovat** potvrďte, že to chcete provést.
 
 Zařízení se resetovalo.
 

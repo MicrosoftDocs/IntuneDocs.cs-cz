@@ -1,25 +1,25 @@
 ---
-title: "Výhody sady Intune App SDK"
+title: Výhody sady Intune App SDK
 titlesuffix: Microsoft Intune
-description: "Sada Intune App SDK je dostupná pro platformy iOS i Android a umožňuje povolit funkce správy mobilních aplikací v Microsoft Intune."
-keywords: 
+description: Sada Intune App SDK je dostupná pro platformy iOS i Android a umožňuje povolit funkce správy mobilních aplikací v Microsoft Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/01/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ae22d3e718fd01330b81206921b6e9a23313a30f
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: b34963761e9700d6cb742cb90979be30d5ae6b3e
+ms.sourcegitcommit: b727b6bd6f138c5def7ac7bf1658068db30a0ec3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="intune-app-sdk-overview"></a>Přehled sady Intune App SDK
 Intune App SDK, dostupná pro iOS i Android, povoluje ve vaší aplikaci zásady ochrany aplikací Intune. Usiluje o minimalizaci nutných změn kódu, které musí vývojáře aplikace provádět. Zjistíte, že většinu funkcí sady SDK můžete povolit bez změny chování vaší aplikace. Za účelem zlepšení činnosti koncových uživatelů a správců IT můžete využít rozhraní API k přizpůsobení chování vaší aplikace pro funkce, které vyžadují zapojení vaší aplikace.
@@ -64,7 +64,7 @@ Tato funkce více identit vám pomůže vyřešit problém s ochranou dat, se kt
 ### <a name="app-protection-without-device-enrollment"></a>Ochrana aplikací bez registrace zařízení
 
 >[!IMPORTANT]
->Ochrana aplikací Intune bez registrace zařízení je dostupná prostřednictvím nástrojů Intune App Wrapping Tools, sady Intune App SDK pro Android, sady Intune App SDK pro iOS, součásti SDK Xamarin a modulu plug-in SDK Cordova.
+>Ochrana aplikací Intune bez registrace zařízení je dostupná v nástrojích Intune App Wrapping Tools a sadách Intune App SDK pro Android, Intune App SDK pro iOS, Xamarinových vazbách sady Intune App SDK a v modulu plug-in SDK Cordova.
 
 Mnoho uživatelů s osobními zařízeními chce pracovat s podnikovými daty bez registrace svého osobního zařízení u poskytovatele správy mobilních zařízení (MDM). Registrace MDM vyžaduje globální kontrolu nad zařízením, proto uživatelé často váhají předat tuto kontrolu nad vlastním osobním zařízením podniku.
 

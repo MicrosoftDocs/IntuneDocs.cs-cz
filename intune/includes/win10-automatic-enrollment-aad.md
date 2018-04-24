@@ -11,21 +11,21 @@ Automatická registrace umožňuje uživatelům, aby si svoje zařízení s Wind
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com) a vyberte **Azure Active Directory**.
 
-  ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-azure-main.png)
+   ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-azure-main.png)
 
 2. Vyberte **Mobilita (MDM a MAM)**.
 
-  ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-mdm.png)
+   ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-mdm.png)
 
 3. Vyberte **Microsoft Intune**.
 
-  ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-intune.png)
+   ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-intune.png)
 
 4. Konfigurujte **Obor uživatele MDM**. Zadejte, která uživatelská zařízení by měla být spravována přes službu Microsoft Intune. Tato zařízení s Windows 10 se mohou automaticky zaregistrovat pro správu přes Microsoft Intune.
 
-  - **Žádná** – automatická registrace MDM je zakázaná.
-  - **Některá** – vyberte **Skupiny**, které můžou automaticky zaregistrovat svá zařízení s Windows 10.
-  - **Všechna** – všichni uživatelé můžou automaticky zaregistrovat svá zařízení s Windows 10.
+   - **Žádná** – automatická registrace MDM je zakázaná.
+   - **Některá** – vyberte **Skupiny**, které můžou automaticky zaregistrovat svá zařízení s Windows 10.
+   - **Všechna** – všichni uživatelé můžou automaticky zaregistrovat svá zařízení s Windows 10.
 
       > [!IMPORTANT]
       > Pokud u skupiny povolíte jak **obor uživatele MAM**, tak i automatickou registraci MDM (**obor uživatele MDM**), povolí se jenom MAM. Při připojení osobního zařízení k pracovnímu prostoru se pro uživatele v dané skupině přidá jenom MAM. Zařízení se v MDM neregistrují automaticky.

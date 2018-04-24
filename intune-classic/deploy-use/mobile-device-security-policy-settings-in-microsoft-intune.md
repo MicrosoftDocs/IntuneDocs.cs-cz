@@ -1,29 +1,29 @@
 ---
-title: "Nastavení zásad zabezpečení mobilního zařízení"
-description: "Intune můžete použít ke konfiguraci široké škály nastavení, která se dají nasadit na spravovaných zařízeních v organizaci."
-keywords: 
+title: Nastavení zásad zabezpečení mobilního zařízení
+description: Intune můžete použít ke konfiguraci široké škály nastavení, která se dají nasadit na spravovaných zařízeních v organizaci.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 11/02/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: e5ab3b76-08af-4893-b294-fb6627fdc4c6
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: fa86e50ebf7e65be0ce8ace65e2cb0bc7e38658e
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 83536a4d9858454505a84a2e394ace1119255049
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mobile-device-security-policy-settings-in-microsoft-intune"></a>Nastavení zásad zabezpečení mobilního zařízení v Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 > [!IMPORTANT]
 > Microsoft Intune teď nabízí oddělené zásady konfigurace pro každou platformu zařízení. Tyto zásady obsahují nejaktuálnější nastavení, která můžete použít. Můžete dál používat zásady zabezpečení mobilních zařízení a všechna existující nasazení budou i nadále fungovat. Měli byste si ale v nejbližší době naplánovat migraci na nové zásady konfigurace, protože zásady zabezpečení mobilních zařízení budou v budoucnu odebrány.
@@ -48,32 +48,34 @@ Zásady zabezpečení mobilních zařízení můžete vytvořit a nasadit u nás
 
 ## <a name="security-settings"></a>Nastavení zabezpečení
 
-|Název nastavení|Windows 8.1 a Windows RT 8.1|Windows RT|Windows Phone 8 a Windows Phone 8.1|iOS|Android a Samsung KNOX Standard|
-|----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
-|**Vyžadovat heslo k odemknutí mobilních zařízení**|Ne|Ne|Ano|Ano|Ano|
-|**Vyžadovaný typ hesla**<br /><br />Určuje typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.|Ano|Ano|Ano|Ano|Ne|
-|**Vyžadovaný typ hesla – Minimální počet znakových sad**<br /><br />Používají se čtyři znakové sady: malá písmena, velká písmena, číslice a symboly. Toto nastavení určuje, kolik různých znakových sad musí být v hesle zahrnutých. Pro zařízení s iOSem ale určuje počet symbolových znaků, které musí heslo obsahovat.|Ano|Ano|Ano|Ano|Ne|
-|**Minimální délka hesla**|Ano|Ano|Ano|Ano|Ano|
-|**Povolit jednoduchá hesla**<br /><br />Příklady jednoduchých hesel: 0000 a 1234.|Ne|Ne|Ano|Ano|Ne|
-|**Počet povolených opakovaných neúspěšných přihlášení, než se zařízení vymaže**|Ano|Ano|Ano|Ano|Ano|
-|**Počet minut nečinnosti před vypnutím displeje**<sup>1</sup>|Ano|Ano|Ano|Ano|Ano|
-|**Vypršení platnosti hesla (dny)**|Ano|Ano|Ano|Ano|Ano|
-|**Pamatovat si historii hesel**|Ano|Ano|Ano|Ano|Ano|
-|**Pamatovat si historii hesel** – **Zabránit opětovnému použití předchozích hesel**|Ano|Ano|Ano|Ano|Ano|
-|**Kvalita hesla**|Ne|Ne|Ne|Ne|Ano|
-|**Povolit obrázkové heslo a PIN**|Ano|Ano|Ne|Ne|Ne|
-|**Počet minut nečinnosti před vyžádáním hesla**|Ne|Ne|Ne|Ano|Ne|
-|**Povolit odemknutí otiskem prstu**|Ne|Ne|Ne|iOS 7 nebo novější|Ne|
+|                                                                                                                                                                                        Název nastavení                                                                                                                                                                                         | Windows 8.1 a Windows RT 8.1 | Windows RT | Windows Phone 8 a Windows Phone 8.1 |       iOS       | Android a Samsung KNOX Standard |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------|------------|---------------------------------------|-----------------|-----------------------------------|
+|                                                                                                                                                                <strong>Vyžadovat heslo k odemknutí mobilních zařízení</strong>                                                                                                                                                                 |               Ne               |     Ne     |                  Ano                  |       Ano       |                Ano                |
+|                                                                                                                 <strong>Požadovaný typ hesla</strong><br /><br />Určuje typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.                                                                                                                 |              Ano               |    Ano     |                  Ano                  |       Ano       |                Ne                 |
+| <strong>Vyžadovaný typ hesla – Minimální počet znakových sad</strong><br /><br />Používají se čtyři znakové sady: malá písmena, velká písmena, číslice a symboly. Toto nastavení určuje, kolik různých znakových sad musí být v hesle zahrnutých. Pro zařízení s iOSem ale určuje počet symbolových znaků, které musí heslo obsahovat. |              Ano               |    Ano     |                  Ano                  |       Ano       |                Ne                 |
+|                                                                                                                                                                          <strong>Minimální délka hesla</strong>                                                                                                                                                                           |              Ano               |    Ano     |                  Ano                  |       Ano       |                Ano                |
+|                                                                                                                                               <strong>Povolit jednoduchá hesla</strong><br /><br />Příklady jednoduchých hesel: 0000 a 1234.                                                                                                                                                |               Ne               |     Ne     |                  Ano                  |       Ano       |                Ne                 |
+|                                                                                                                                                  <strong>Počet povolených opakovaných neúspěšných přihlášení, než se zařízení vymaže</strong>                                                                                                                                                   |              Ano               |    Ano     |                  Ano                  |       Ano       |                Ano                |
+|                                                                                                                                                         <strong>Počet minut nečinnosti před vypnutím displeje</strong><sup>1</sup>                                                                                                                                                          |              Ano               |    Ano     |                  Ano                  |       Ano       |                Ano                |
+|                                                                                                                                                                         <strong>Vypršení platnosti hesla (dny)</strong>                                                                                                                                                                         |              Ano               |    Ano     |                  Ano                  |       Ano       |                Ano                |
+|                                                                                                                                                                         <strong>Pamatovat si historii hesel</strong>                                                                                                                                                                          |              Ano               |    Ano     |                  Ano                  |       Ano       |                Ano                |
+|                                                                                                                                              <strong>Pamatovat si historii hesel</strong> – <strong>Zabránit opětovnému použití předchozích hesel</strong>                                                                                                                                              |              Ano               |    Ano     |                  Ano                  |       Ano       |                Ano                |
+|                                                                                                                                                                              <strong>Kvalita hesla</strong>                                                                                                                                                                              |               Ne               |     Ne     |                  Ne                   |       Ne        |                Ano                |
+|                                                                                                                                                                       <strong>Povolit obrázkové heslo a PIN</strong>                                                                                                                                                                       |              Ano               |    Ano     |                  Ne                   |       Ne        |                Ne                 |
+|                                                                                                                                                             <strong>Počet minut nečinnosti před vyžádáním hesla</strong>                                                                                                                                                              |               Ne               |     Ne     |                  Ne                   |       Ano       |                Ne                 |
+|                                                                                                                                                                          <strong>Povolit odemknutí otiskem prstu</strong>                                                                                                                                                                          |               Ne               |     Ne     |                  Ne                   | iOS 7 nebo novější |                Ne                 |
+
 <sup>1</sup>Pokud pro zařízení s iOSem nakonfigurujete nastavení **Počet minut nečinnosti před vypnutím displeje** a **Počet minut nečinnosti před vyžádáním hesla**, použijí se postupně. Pokud například pro obě nastavení nastavíte hodnotu **5** minut, obrazovka se po 5 minutách automaticky vypne a po dalších 5 minutách se zařízení zamkne. Pokud ale uživatel vypne obrazovku ručně, druhé nastavení se použije okamžitě. V tomto příkladě se zařízení po tom, co uživatel vypne obrazovku, zamkne po 5 minutách.
 
 Když nasadíte zásadu délky hesel na zařízení se systémem Windows RT, budou uživatelé přinucení změnit heslo, i když jejich aktuální heslo odpovídá požadavkům zásady.
 
 ## <a name="encryption-settings"></a>Nastavení šifrování
 
-|Název nastavení|Windows 8.1 a Windows RT 8.1|Windows RT|Windows Phone 8 a Windows Phone 8.1|iOS|Android a Samsung KNOX Standard|
-|----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
-|**Vyžadovat šifrování u mobilního zařízení**<sup>1</sup><br /><br />Pro zařízení s Windows Phone 8 je potřeba nastavit hodnotu **Ano**.<br /><br />Pokud chcete povolit šifrování na zařízeních iOS, povolte nastavení **Vyžadovat heslo k odemknutí mobilních zařízení**.|Ano|Ne|Ano|Ne|Ano|
-|**Vyžadovat šifrování u paměťových karet**<br /><br />Platí i pro zařízení, která spravuje Exchange ActiveSync.|není k dispozici|není k dispozici|není k dispozici <br />Aplikace a související data se šifrují automaticky.|není k dispozici|Ano|
+|                                                                                                                                     Název nastavení                                                                                                                                     | Windows 8.1 a Windows RT 8.1 | Windows RT |              Windows Phone 8 a Windows Phone 8.1              | iOS | Android a Samsung KNOX Standard |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------|------------|-----------------------------------------------------------------|-----|-----------------------------------|
+| <strong>Vyžadovat šifrování u mobilního zařízení</strong><sup>1</sup><br /><br />Pro zařízení s Windows Phone 8 je potřeba nastavit hodnotu <strong>Ano</strong>.<br /><br />Pokud chcete povolit šifrování na zařízeních iOS, povolte nastavení <strong>Vyžadovat heslo k odemknutí mobilních zařízení</strong>. |              Ano               |     Ne     |                               Ano                               | Ne  |                Ano                |
+|                                                                    <strong>Vyžadovat šifrování u paměťových karet</strong><br /><br />Platí i pro zařízení, která spravuje Exchange ActiveSync.                                                                     |              není k dispozici               |    není k dispozici     | není k dispozici <br />Aplikace a související data se šifrují automaticky. | není k dispozici |                Ano                |
+
 <sup>1</sup>Další informace o zařízeních s Windows 8.1:
 
 -   K vynucení šifrování na zařízeních s Windows 8.1 je potřeba na každé zařízení nainstalovat [aktualizaci MDM klienta pro Windows z prosince 2014](http://support.microsoft.com/kb/3013816) .
@@ -114,7 +116,7 @@ Když nasadíte zásadu délky hesel na zařízení se systémem Windows RT, bud
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
 |**Povolit zálohování na iCloud**|Ne|Ne|Ne|Ano|Ne|
 |**Povolit synchronizaci dokumentů s iCloudem**|Ne|Ne|Ne|Ano|Ne|
-|**Povolit synchronizaci streamu fotek s iCloudem**|Ne|Ne|Ne|Ano|Ne|
+|**Povolit synchronizaci datového proudu fotografií s iCloudem**|Ne|Ne|Ne|Ano|Ne|
 |**Vyžadovat šifrované zálohování**|Ne|Ne|Ne|Ano|Ne|
 |**Adresa URL pracovních složek**<br /><br />Nastaví adresu URL pracovní složky, aby bylo možné synchronizovat dokumenty na všech zařízeních.|Ano|Ne|Ne|Ne|Ne|
 |**Povolit zálohy na Googlu**|Ne|Ne|Ne|Ne|Ano (pouze Samsung KNOX Standard)|
@@ -212,5 +214,5 @@ Když nasadíte zásadu délky hesel na zařízení se systémem Windows RT, bud
 |**Povolit sdílení schránky mezi aplikacemi**|Ne|Ne|Ne|Ne|Ano (pouze Samsung KNOX Standard)|
 |**Povolit YouTube**|Ne|Ne|Ne|Ne|Ano (pouze Samsung KNOX Standard)|
 
-### <a name="see-also"></a>Související témata
+### <a name="see-also"></a>Viz taky
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)

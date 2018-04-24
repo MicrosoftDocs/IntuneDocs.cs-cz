@@ -1,28 +1,28 @@
 ---
-title: "Exchange bez správy zařízení"
+title: Exchange bez správy zařízení
 titleSuffix: Microsoft Intune
-description: "Použijte Microsoft Intune, abyste zaměstnancům poskytli přístup k e-mailu Office 365 Exchange Online bez zavedení systému pro správu zařízení."
-keywords: "Přístup k e-mailu Office 365 Exchange"
+description: Použijte Microsoft Intune, abyste zaměstnancům poskytli přístup k e-mailu Office 365 Exchange Online bez zavedení systému pro správu zařízení.
+keywords: Přístup k e-mailu Office 365 Exchange
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 10/31/2017
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 88a0d3b9-2622-403b-8374-1396afd8066e
 ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e677a8418aba9aca4db753695444140ea9f6f941
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: abda78bcc8aa8fcc56d90c433a6ac2cdb989b53e
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="protect-office-365-exchange-online-without-requiring-device-management"></a>Ochrana Office 365 Exchange Online bez nutnosti správy zařízení
 
-Pokud chcete zaměstnancům umožnit přístup k pracovnímu e-mailu a nezabývat se přitom zavedením systému pro správu zařízení, můžete. Přístup k Office 365 Exchange Online je možné poskytnout prostřednictvím Intune. Před provedením potřebných kroků ověřte, že máte licence na Microsoft 365 nebo Azure Active Directory (Premium) a Intune. Zaměstnanci musí mít [podporovaná zařízení s iOSem nebo Androidem](supported-devices-browsers.md). 
+Pokud chcete zaměstnancům umožnit přístup k pracovnímu e-mailu a nezabývat se přitom zavedením systému pro správu zařízení, můžete. Přístup k Office 365 Exchange Online je možné poskytnout prostřednictvím Intune. Před provedením potřebných kroků ověřte, že máte licence na Microsoft 365 nebo Azure Active Directory (Premium) a Intune. Zaměstnanci musí mít [podporovaná zařízení s iOS nebo Androidem](supported-devices-browsers.md). 
 
 Pokud se rozhodnete zavést systém pro správu zřízení, můžete. Tento typ ochrany aplikací funguje nezávisle na správě zařízení. 
 

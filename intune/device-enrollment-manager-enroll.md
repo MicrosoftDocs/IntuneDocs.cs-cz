@@ -1,29 +1,29 @@
 ---
-title: "Registrace zařízení pomocí účtu správce registrace zařízení"
+title: Registrace zařízení pomocí účtu správce registrace zařízení
 titlesuffix: Microsoft Intune
-description: "Naučte se používat účet správce registrace zařízení k registraci zařízení v Intune. \""
-keywords: 
+description: Naučte se používat účet správce registrace zařízení k registraci zařízení v Intune. "
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0f5d723c86c120bb8dee1f4e109b70d9ea4e6091
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 870d61cce47132b19b4c3d8b7357f84a21a443e4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-devices-by-using-a-device-enrollment-manager-account"></a>Registrace zařízení pomocí účtu správce registrace zařízení
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Organizace můžou pomocí Intune spravovat velké počty mobilních zařízení s jediným uživatelským účtem. Účet *správce registrace zařízení* (DEM – Device Enrollment Manager) je speciální uživatelský účet, který může zaregistrovat až 1 000 zařízení. Do účtu DEM můžete přidat existující uživatele a udělit jim tak speciální možnosti DEM. Každé zaregistrované zařízení používá jednu licenci. Zařízení zaregistrovaná pomocí účtu správce registrace zařízení doporučujeme používat jako sdílená zařízení, nikoli jako osobní zařízení („BYOD“).  
 
@@ -49,12 +49,12 @@ Uživatel DEM může:
 Zařízení zaregistrovaná pomocí účtu správce registrace zařízení mají následující omezení:
 
   - Není možný přístup pro konkrétní uživatele. Zařízení nemají přiřazeného uživatele, takže ze zařízení není možný přístup k e-mailu nebo firemním datům. Konfigurace VPN však mohou aplikacím zařízení stále poskytovat přístup k datům.
-  - Není možný podmíněný přístup, protože u podmíněného přístupu se jedná o scénáře pro konkrétní uživatele.
   - Uživatel DEM nemůže přes Portál společnosti zrušit registraci zařízení zaregistrovaného pomocí účtu DEM. Správce Intune může registraci zrušit.
   - V aplikaci nebo na webu Portál společnosti se zobrazí jenom místní zařízení.
-  - Uživatelé nemůžou používat aplikace v rámci programu Apple VPP (Volume Purchase Program), protože ke správě těchto aplikací jsou vyžadovaná Apple ID jednotlivých uživatelů.
+  - Uživatelé nemůžou používat aplikace v rámci programu Apple VPP (Volume Purchase Program) s využitím uživatelských licencí, protože ke správě těchto aplikací jsou vyžadovaná Apple ID jednotlivých uživatelů.
   - (Pouze iOS) Pokud pomocí DEM zaregistrujete zařízení s iOSem, nemůžete k registraci zařízení využít Apple Configurator, Program registrace zařízení Apple (DEP) ani Apple School Manager (ASM).
   - (Pouze Android) Počet zařízení s Androidem for Work, která lze zaregistrovat pomocí jednoho účtu DEM, je omezený. Pomocí každého účtu DEM je možné zaregistrovat maximálně 10 zařízení s pracovním profilem Androidu. Toto omezení se nevztahuje na registrace starších verzí Androidu.
+  - Zařízení můžou instalovat aplikace VPP, pokud mají licence na zařízení.
   - Každé zařízení vyžaduje licenci na zařízení. Další informace o [uživatelských licencích a licencích na zařízení](licenses-assign.md#how-user-and-device-licenses-affect-access-to-services).
 
 

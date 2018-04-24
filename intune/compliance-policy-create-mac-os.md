@@ -1,29 +1,29 @@
 ---
-title: "Vytvoření zásady dodržování předpisů pro zařízení s macOS v Microsoft Intune"
-titleSuffix: 
-description: "Vytvořte v Microsoft Intune zásadu dodržování předpisů zařízením pro zařízení s macOS umožňující vám zadat požadavky, které zařízení musí splnit, aby vyhovovalo předpisům."
-keywords: 
+title: Vytvoření zásady dodržování předpisů pro zařízení s macOS v Microsoft Intune
+titleSuffix: ''
+description: Vytvořte v Microsoft Intune zásadu dodržování předpisů zařízením pro zařízení s macOS umožňující vám zadat požadavky, které zařízení musí splnit, aby vyhovovalo předpisům.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e7703b8ea26d6ce53b82e806a78c788d14ae05b4
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: d6252680e64067e6d12530e0226632a1c5db7d28
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-device-compliance-policy-for-macos-devices-with-intune"></a>Vytvoření zásad dodržování předpisů pro zařízení s macOS v Intune
 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Zásada dodržování předpisů Intune pro zařízení s macOS určuje pravidla a nastavení, které musí zařízení s macOS splňovat, aby bylo považováno za dodržující předpisy. Tyto zásady můžete použít s podmíněným přístupem k povolení nebo zablokování přístupu k prostředkům společnosti. Můžete také získat sestavy zařízení a provádět kroky v případě, že zařízení předpisy nedodržuje. Zásady dodržování předpisů zařízení pro každou platformu vytvoříte na portálu Intune Azure.
 

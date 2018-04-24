@@ -1,43 +1,43 @@
 ---
-title: "Wi-Fi s použitím předsdíleného klíče"
-description: "Použijte vlastní konfiguraci k vytvoření profilu sítě Wi-Fi s předsdíleným klíčem."
-keywords: 
+title: Wi-Fi s použitím předsdíleného klíče
+description: Použijte vlastní konfiguraci k vytvoření profilu sítě Wi-Fi s předsdíleným klíčem.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 10/25/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0e2dff26e6dcbe1db6a9cef58af10901178e432b
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: a023b6829b33c3b3bff94021ecd3c90d8b41f30f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-a-custom-policy-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Použití vlastní zásady k vytvoření profilu sítě Wi-Fi s předsdíleným klíčem
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Zde je postup používání **Vlastní konfigurace** služby Intune k vytvoření profilu sítě Wi-Fi s předsdíleným klíčem. Toto téma obsahuje také příklad vytvoření profilu Wi-Fi založeného na protokolu EAP.
 
 > [!NOTE]
--   Pokud je to pro vás snadnější, můžete zkopírovat kód z počítače připojeného k této síti, jak je popsáno níže.
-- Pro Android máte také možnost použít nástroj [Android PSK Generator](http://johnathonb.com/2015/05/intune-android-pre-shared-key-generator/), který poskytuje Johnathon Biersack.
--   Přidáním dalších nastavení OMA-URI můžete přidat více sítí a klíčů.
--  Pro iOS nastavte profil nástrojem Apple Configurator na stanici Mac. Alternativně můžete použít nástroj [iOS PSK Mobile Config Generator](http://johnathonb.com/2015/05/intune-ios-psk-mobile-config-generator/), který poskytuje Johnathon Biersack.
+> -   Pokud je to pro vás snadnější, můžete zkopírovat kód z počítače připojeného k této síti, jak je popsáno níže.
+> - Pro Android máte také možnost použít nástroj [Android PSK Generator](http://johnathonb.com/2015/05/intune-android-pre-shared-key-generator/), který poskytuje Johnathon Biersack.
+> -   Přidáním dalších nastavení OMA-URI můžete přidat více sítí a klíčů.
+> -  Pro iOS nastavte profil nástrojem Apple Configurator na stanici Mac. Alternativně můžete použít nástroj [iOS PSK Mobile Config Generator](http://johnathonb.com/2015/05/intune-ios-psk-mobile-config-generator/), který poskytuje Johnathon Biersack.
 
 
-1.  Pokud chcete vytvořit profil sítě Wi-Fi s předsdíleným klíčem pro Android nebo Windows, případně profil Wi-Fi založený na protokolu EAP, zvolte při vytváření zásady možnost **Vlastní konfigurace** pro platformu zařízení, namísto profilu Wi-Fi.
+1. Pokud chcete vytvořit profil sítě Wi-Fi s předsdíleným klíčem pro Android nebo Windows, případně profil Wi-Fi založený na protokolu EAP, zvolte při vytváření zásady možnost **Vlastní konfigurace** pro platformu zařízení, namísto profilu Wi-Fi.
 
-2.  Zadejte název a popis.
-3.  Přidejte nové nastavení OMA-URI:
+2. Zadejte název a popis.
+3. Přidejte nové nastavení OMA-URI:
 
    a.   Zadejte název pro toto nastavení sítě Wi-Fi.
 
@@ -47,15 +47,15 @@ Zde je postup používání **Vlastní konfigurace** služby Intune k vytvořen�
 
    d.   **OMA-URI:**
 
-    - **Pro Android:** ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
-    - **Pro Windows:** ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
+   - **Pro Android:** ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
+   - **Pro Windows:** ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
 
-    > [!NOTE]
-Nezapomeňte použít tečku na začátku.
+   > [!NOTE]
+   > Nezapomeňte použít tečku na začátku.
 
-    SSID je identifikátor SSID, pro který vytváříte zásadu. Například `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
+   SSID je identifikátor SSID, pro který vytváříte zásadu. Například `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
 
-  e. **Hodnota pole**: Sem vkládáte svůj kód XML. Tady je příklad. Každá hodnota by měla být přizpůsobena nastavení sítě. Nějaké pokyny najdete v sekci komentáře ke kódu.
+   e. **Hodnota pole**: Sem vkládáte svůj kód XML. Tady je příklad. Každá hodnota by měla být přizpůsobena nastavení sítě. Nějaké pokyny najdete v sekci komentáře ke kódu.
 4. Zvolte **OK** a uložení. Poté zásadu nasaďte.
 
     > [!NOTE]
@@ -202,8 +202,8 @@ Můžete také vytvořit soubor XML z existujícího připojení Wi-Fi:
 1. Na počítači, který je připojený k bezdrátové síti nebo se k ní nedávno připojil, otevřete následující složku: C:\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}.
 
     Nejvhodnější je použít počítač, který je připojený k co nejmenšímu počtu bezdrátových sítí, protože budete muset prohledávat každý profil, abyste našli ten správný.
-3.     Prohledejte soubory XML a najděte ten se správným názvem.
-4.     Po vyhledání správného souboru XML zkopírujte kód XML a vložte ho do pole Data na stránce nastavení OMA-URI.
+2. Prohledejte soubory XML a najděte ten se správným názvem.
+3. Po vyhledání správného souboru XML zkopírujte kód XML a vložte ho do pole Data na stránce nastavení OMA-URI.
 
 ## <a name="deploy-the-policy"></a>Nasazení zásady
 
@@ -217,5 +217,5 @@ Můžete také vytvořit soubor XML z existujícího připojení Wi-Fi:
 
 Když vyberete nasazenou zásadu, zobrazí se v dolní části seznamu zásad další informace o tomto nasazení.
 
-### <a name="see-also"></a>Související témata
+### <a name="see-also"></a>Viz taky
 [Připojení Wi-Fi v Microsoft Intune](wi-fi-connections-in-microsoft-intune.md)

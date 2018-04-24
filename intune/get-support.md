@@ -1,29 +1,29 @@
 ---
-title: "Jak získat podporu pro Microsoft Intune"
+title: Jak získat podporu pro Microsoft Intune
 titlesuffix: Microsoft Intune
-description: "Získejte online podporu a podporu po telefonu pro placené i zkušební předplatné Microsoft Intune."
-keywords: 
+description: Získejte online podporu a podporu po telefonu pro placené i zkušební předplatné Microsoft Intune.
+keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 06/28/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
 ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 5cb06625351e67bea8b467f6ab6873d258ee8175
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 5a823cfb602b4847e702d54e0d8775700b01c8e9
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak získat podporu pro Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/note-for-both-portals.md)]
+[!INCLUDE [azure_portal](./includes/note-for-both-portals.md)]
 
 Microsoft poskytuje pro Microsoft Intune globální technickou a předprodejní podporu a podporu k fakturaci a správě předplatného. Podpora je k dispozici online i po telefonu pro placené i zkušební předplatné. Online technická podpora je k dispozici v angličtině a japonštině. V dalších jazycích je k dispozici podpora po telefonu a online podpora k fakturaci.
 
@@ -34,7 +34,7 @@ Microsoft poskytuje pro Microsoft Intune globální technickou a předprodejní 
 
 Jako správce IT můžete lístek podpory zadat na portálu Azure Portal. Tady je postup:
 
-1. Přihlaste se na portálu Azure Portal (https://portal.azure.com) pod přihlašovacími údaji správce Intune zvolte ikonu **?** v pravém horním rohu portálu a pak vyberte možnost **Nápověda a podpora**, kterou přejdete na stránku [nápovědy a podpory Azure](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview target=_blank).
+1. Přihlaste se na portálu Azure Portal (<https://portal.azure.com>) pomocí svých přihlašovacích údajů správce Intune, zvolte ikonu <strong>?</strong> v pravém horním rohu portálu a pak vyberte možnost <strong>Nápověda a podpora</strong>, kterou přejdete na stránku [nápovědy a podpory Azure](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 
     ![Snímek obrazovky nápovědy a podpory na portálu Azure Portal s odkazem v podobě otazníku a se zvýrazněným odkazem Nápověda a podpora](./media/azure-get-support.png)
 
@@ -43,34 +43,34 @@ Jako správce IT můžete lístek podpory zadat na portálu Azure Portal. Tady j
     ![Snímek stránky obrazovky nápovědy a podpory na portálu Azure Portal se zvýrazněným odkazem na novou žádost o podporu](./media/azure-support-ticket-link.png)
 
 3. Pro většinu problémů spojených s technickou podporou Intune vyberte v okně **Základní** následující možnosti:
-    - **Typ problému**: **Technický**
-    - **Služba**: **Microsoft Intune**
-    - **Plán podpory**: **Technická podpora – Zahrnuto** (pro technické problémy týkající se Intune je podpora bezplatná) nebo **Premier**
+   - **Typ problému**: **Technický**
+   - **Služba**: **Microsoft Intune**
+   - **Plán podpory**: **Technická podpora – Zahrnuto** (pro technické problémy týkající se Intune je podpora bezplatná) nebo **Premier**
     
-    >[!IMPORTANT]
-    >- Pokud jste **zákazníkem podpory Premier**, ale možnost **Plán podpory: Premier** se nezobrazuje, kontaktujte svého zástupce TAM (Technical Account Manager) a požádejte o pomoc s propojením smlouvy a tenanta.
-    >- Podpora pro Intune a pro Intune při použití s nástrojem Configuration Manager je bezplatná. Pokud se chcete podívat na podrobnosti nabídky Premier Support, přečtěte si v dokumentu [Popis služeb](https://enterprise.microsoft.com/en-us/services/services-list/) oddíl 5.3.3 Poradenské služby.
+     >[!IMPORTANT]
+     >- Pokud jste **zákazníkem podpory Premier**, ale možnost **Plán podpory: Premier** se nezobrazuje, kontaktujte svého zástupce TAM (Technical Account Manager) a požádejte o pomoc s propojením smlouvy a tenanta.
+     >- Podpora pro Intune a pro Intune při použití s nástrojem Configuration Manager je bezplatná. Pokud se chcete podívat na podrobnosti nabídky Premier Support, přečtěte si v dokumentu [Popis služeb](https://enterprise.microsoft.com/en-us/services/services-list/) oddíl 5.3.3 Poradenské služby.
 
-    Pokračujte výběrem položky **Další**.
+     Pokračujte výběrem položky **Další**.
 
 4. V okně **Problém** zajistěte, aby byla žádost adresovaná správnému odborníkovi na váš problém. Vyberte následující možnosti:
 
-    - **Závažnost**
-    - **Typ problému**
-    - **Kategorie**
+   - **Závažnost**
+   - **Typ problému**
+   - **Kategorie**
 
-    Tyto podrobnosti nám také umožní, abychom vám poskytli **Související nápovědu**, která vám může pomoct problém vyřešit bez vyplňování lístku.
+     Tyto podrobnosti nám také umožní, abychom vám poskytli **Související nápovědu**, která vám může pomoct problém vyřešit bez vyplňování lístku.
 
-    ![Snímek stránky obrazovky nápovědy a podpory na portálu Azure Portal s vyplněnými informacemi o problému a s řešeními zobrazenými na základě vašeho problému](./media/support-need-solutions.png)
+     ![Snímek stránky obrazovky nápovědy a podpory na portálu Azure Portal s vyplněnými informacemi o problému a s řešeními zobrazenými na základě vašeho problému](./media/support-need-solutions.png)
 
-    Abych vám tým podpory mohl pomoct problém vyřešit, zadejte následující informace:
+     Abych vám tým podpory mohl pomoct problém vyřešit, zadejte následující informace:
     
-    - **Podrobnosti**
-    - **Datum**
-    - **Čas**
-    - **Doplňující údaje**
+   - **Podrobnosti**
+   - **Datum**
+   - **Čas**
+   - **Doplňující údaje**
 
-    Vyberte **Další**.
+     Vyberte **Další**.
 
 5. U tohoto typu žádosti zadejte **Kontaktní informace**. Podpora Microsoftu tyto údaje použije, aby vás kontaktovala.
 6. Pokud chcete žádost o podporu odeslat, zvolte **Vytvořit**.

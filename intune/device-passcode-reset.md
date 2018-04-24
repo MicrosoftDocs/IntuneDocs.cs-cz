@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/06/2018
+ms.date: 03/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,30 +13,30 @@ ms.technology: ''
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4cca5922f036711093469e71489e267af53f05a9
-ms.sourcegitcommit: e6319ff186d969da34bd19c9730ba003d6cce353
+ms.openlocfilehash: 19b30315fa26dd53b5e383bc9e4bef5c65b89962
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Resetování nebo odebrání hesla zařízení v Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Pokud chcete vytvořit nové heslo pro zařízení, použijte akci **Odebrat heslo**.
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
-- Windows Phone 8.1 (nepřipojené k Azure Active Directory), včetně verzí až do Windows 10 Creators Update
-- Windows 10 Creators Update a novější
-- iOS
-- Verze Androidu starší než Android 7
+- Zařízení s Androidem zaregistrovaná s pracovním profilem, verze 7.0 nebo novější
+- Zařízení s Androidem, verze 6.0 nebo starší
+- iOS 
+     
+## <a name="unsupported-platforms"></a>Nepodporované platformy
 
-Tato funkce není podporovaná pro tyto systémy:
-
-- Windows
+- Zařízení s Androidem zaregistrovaná s pracovním profilem, verze 6.0 nebo starší
+- Zařízení s Androidem, verze 7.0 nebo novější
 - macOS
-- Android for Work
+- Windows
 
 ## <a name="reset-a-passcode"></a>Resetování hesla
 
@@ -44,6 +44,14 @@ Tato funkce není podporovaná pro tyto systémy:
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a potom vyberte **Microsoft Intune**.
 3. Vyberte **Zařízení** a potom **Všechna zařízení**.
 4. Ze seznamu zařízení, která spravujete, vyberte zařízení a vyberte **...Další**. Pak zvolte vzdálenou akci zařízení **Odebrat heslo**.
+
+## <a name="resetting-android-for-work-passcodes"></a>Resetování hesla v Androidu for Work
+
+Podporovaná zařízení s Androidem for Work obdrží nové heslo pro odemknutí zařízení nebo výzvu spravovaného profilu pro koncového uživatele. U zařízení s Androidem ve verzi 7.0 nebo novější s pracovními profily obdrží koncový uživatel oznámení s výzvou, aby ihned po dokončení registrace aktivoval svůj token pro resetování hesla. Oznámení se zobrazí, pokud je požadováno a nastaveno heslo pracovního profilu. Po zadání hesla se oznámení zavře.
+
+## <a name="resetting-ios-passcodes"></a>Resetování hesla v iOSu
+
+Ze zařízení s iOSem jsou hesla odebrána. Pokud jsou nastaveny zásady dodržování předpisů vyžadující heslo, zobrazí se v zařízení výzva, aby uživatel zadat nové heslo v nastavení. 
 
 ## <a name="next-steps"></a>Další kroky
 

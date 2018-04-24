@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: bf47c802291d802ac890aa4ba00cf79d9d2d10f0
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 383309944bd185ea2abc79b3bcc3488ad3377b50
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-corporate-owned-device-enrollment-program-ios-devices"></a>Registrace zařízení s iOSem vlastněných společností do programu DEP (Device Enrollment Program)
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Microsoft Intune umožňuje nasadit registrační profil, který bezdrátově zaregistruje zařízení s iOSem zakoupená prostřednictvím programu DEP (Device Enrollment Program). Registrační balíček může zahrnovat možnosti Pomocníka s nastavením pro zařízení.
 
@@ -56,13 +56,13 @@ Následující postup vysvětluje, jak zaregistrovat zařízení s iOSem hned od
 
 1. Přejděte na [portál programu Device Enrollment Program](https://deploy.apple.com) (https://deploy.apple.com) a přihlaste se firemním Apple ID. Toto Apple ID budete muset později použít k obnovení tokenu DEP.
 
-2.  Na portálu programu DEP (Device Enrollment Program) přejděte na **Program DEP (Device Enrollment Program)** &gt; **Spravovat servery** a pak zvolte **Přidat server MDM**.
+2. Na portálu programu DEP (Device Enrollment Program) přejděte na **Program DEP (Device Enrollment Program)** &gt; **Spravovat servery** a pak zvolte **Přidat server MDM**.
 
-3.  Zadejte **název serveru MDM** a zvolte **Další**. Název serveru slouží pro vaši informaci, abyste mohli identifikovat server pro správu mobilních zařízení (MDM). Není to název serveru Microsoft Intune ani jeho URL.
+3. Zadejte **název serveru MDM** a zvolte **Další**. Název serveru slouží pro vaši informaci, abyste mohli identifikovat server pro správu mobilních zařízení (MDM). Není to název serveru Microsoft Intune ani jeho URL.
 
-4.  Otevře se dialog **Přidat server &lt;název_serveru&gt;**. Vyberte **Zvolit soubor**, abyste mohli nahrát soubor .pem, a pak zvolte **Další**.
+4. Otevře se dialog **Přidat server &lt;název_serveru&gt;**. Vyberte **Zvolit soubor**, abyste mohli nahrát soubor .pem, a pak zvolte **Další**.
 
-5.  V dialogovém okně **Přidat server &lt;název_serveru&gt;** se zobrazí odkaz s **tokenem vašeho serveru**. Stáhněte si soubor tokenu serveru (.p7m) do svého počítače a potom zvolte **Hotovo**.
+5. V dialogovém okně **Přidat server &lt;název_serveru&gt;** se zobrazí odkaz s **tokenem vašeho serveru**. Stáhněte si soubor tokenu serveru (.p7m) do svého počítače a potom zvolte **Hotovo**.
 
    Soubor certifikátu (.p7m) se používá k navázání vztahu důvěryhodnosti mezi serverem Intune a serverem programu DEP (Device Enrollment Program) společnosti Apple.
 
@@ -80,8 +80,8 @@ Následující postup vysvětluje, jak zaregistrovat zařízení s iOSem hned od
 
    - **Vyzvat k přidružení uživatele**: Při počátečním nastavení je možné zařízení spojit s uživatelem a potom mu umožnit přístup k firemním datům a e-mailu. U zařízení spravovaných v programu DEP, která patří uživatelům a potřebují používat portál společnosti (tzn. instalovat aplikace), je potřeba nastavit **přidružení uživatele**. Při registraci na zařízeních v programu DEP s přidružením uživatelů nefunguje vícefaktorové ověřování (MFA). Po registraci vícefaktorové ověřování na těchto zařízeních funguje podle očekávání. Novým uživatelům, kteří si musejí změnit heslo, když se poprvé přihlásí, se během registrace na zařízení DEP nezobrazí výzva. Také uživatelům, u jejichž hesel vypršela platnost, se během registrace DEP nezobrazí výzva k resetování hesla a budou muset heslo resetovat z jiného zařízení.
 
-    >[!NOTE]
-    >Program DEP s přidružením uživatele vyžaduje aktivaci [uživatelského jména / smíšeného koncového bodu WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints), aby mohl požádat o token uživatele. [Přečtěte si další informace o WS-Trust 1.3](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+     >[!NOTE]
+     >Program DEP s přidružením uživatele vyžaduje aktivaci [uživatelského jména / smíšeného koncového bodu WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints), aby mohl požádat o token uživatele. [Přečtěte si další informace o WS-Trust 1.3](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
    - **Bez přidružení uživatele**: K zařízení není přidružený žádný uživatel. Toto přidružení použijte u zařízení, která plní úkoly bez přístupu k místním uživatelským datům. Aplikace, které vyžadují přidružené uživatele, včetně aplikace Portál společnosti používané k instalaci obchodních aplikací, nebudou fungovat.
 
@@ -105,7 +105,7 @@ Následující postup vysvětluje, jak zaregistrovat zařízení s iOSem hned od
        - **Zakázat** – Umožňuje odebrání profilu správy z nabídky **Nastavení**.
        - **Povolit** (vyžaduje **Režim přípravy** = **Pod dohledem**) – Zakáže nastavení iOSu, které by mohlo povolovat odebrání profilu správy.
    - **Možnosti Pomocníka s nastavením** – Nastavení jsou volitelná a dají se nastavit později v nabídce **Nastavení** systému iOS.
-        - **Heslo** – Při aktivaci se zobrazí výzva k zadání hesla. Vyžaduje vždy heslo, pokud zařízení nebude zabezpečené nebo nebude mít přístup kontrolovaný jiným způsobem (třeba pomocí beznabídkového režimu, který omezuje zařízení na jednu aplikaci).
+     - **Heslo** – Při aktivaci se zobrazí výzva k zadání hesla. Vyžaduje vždy heslo, pokud zařízení nebude zabezpečené nebo nebude mít přístup kontrolovaný jiným způsobem (třeba pomocí beznabídkového režimu, který omezuje zařízení na jednu aplikaci).
        - **Zjišťování polohy** – Pokud je toto nastavení povolené, Pomocník s nastavením zobrazí při aktivaci výzvu služby.
        - **Obnovit** – Pokud je toto nastavení povolené, Pomocník s nastavením zobrazí při aktivaci výzvu k zálohování do úložiště iCloud.
        - **Apple ID** – Pokud je povolené, vyzve iOS uživatele při pokusu Intune o instalaci aplikace bez ID, aby zadali Apple ID. Apple ID je potřeba ke stahování aplikací pro iOS z App Storu, včetně těch instalovaných službou Intune.
@@ -115,10 +115,10 @@ Následující postup vysvětluje, jak zaregistrovat zařízení s iOSem hned od
        - **Zvětšení** – V případě povolení Pomocník s nastavením zobrazí během aktivace výzvu pro tuto službu.
        - **Siri** – V případě povolení Pomocník s nastavením zobrazí během aktivace výzvu pro tuto službu.
        - **Posílat diagnostická data do Applu** – V případě povolení Pomocník s nastavením zobrazí během aktivace výzvu pro tuto službu.
-   -  **Povolí podrobnější správu přes Apple Configurator** –Nastavení možnosti **Zakázat** zabrání synchronizaci souborů s iTunes nebo správu přes Apple Configurator. Místo použití tohoto nastavení k povolení ručního nasazení s certifikátem nebo bez něj doporučujeme zvolit **Zakázat**, exportovat další konfiguraci z Apple Configuratoru a potom ji nasadit jako vlastní profil konfigurace pro iOS prostřednictvím Intune.
-       - **Zakázat** – Brání zařízení v komunikaci přes USB (zakáže párování).
-       - **Povolit** – Povolí komunikaci zařízení přes USB s libovolným počítačem PC nebo Mac.
-       - **Vyžadovat certifikát** – Umožňuje párování s počítačem Mac s certifikátem importovaným do profilu registrace.
+   - **Povolí podrobnější správu přes Apple Configurator** –Nastavení možnosti **Zakázat** zabrání synchronizaci souborů s iTunes nebo správu přes Apple Configurator. Místo použití tohoto nastavení k povolení ručního nasazení s certifikátem nebo bez něj doporučujeme zvolit **Zakázat**, exportovat další konfiguraci z Apple Configuratoru a potom ji nasadit jako vlastní profil konfigurace pro iOS prostřednictvím Intune.
+      - **Zakázat** – Brání zařízení v komunikaci přes USB (zakáže párování).
+      - **Povolit** – Povolí komunikaci zařízení přes USB s libovolným počítačem PC nebo Mac.
+      - **Vyžadovat certifikát** – Umožňuje párování s počítačem Mac s certifikátem importovaným do profilu registrace.
 
 ### <a name="assign-the-profile-to-devices"></a>Přiřazení profilu k zařízením
 

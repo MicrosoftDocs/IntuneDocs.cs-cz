@@ -1,29 +1,29 @@
 ---
-title: "Registrace zařízení s Androidem v Intune"
+title: Registrace zařízení s Androidem v Intune
 titlesuffix: Microsoft Intune
-description: "Přečtěte si, jak zaregistrovat zařízení s Androidem v Intune."
-keywords: 
+description: Přečtěte si, jak zaregistrovat zařízení s Androidem v Intune.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7e65a32843cec48268c7e205ab4a064038c28415
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: d74f59f1df0a4a4e1285b58d7ac5b3677d3c5e48
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-android-devices"></a>Registrace zařízení s Androidem
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Jako správce Intune můžete spravovat zařízení s Androidem včetně zařízení používajících Samsung Knox Standard. Můžete také spravovat pracovní profily na [zařízeních s Androidem for Work](#enable-enrollment-of-android-for-work-devices).
 
@@ -47,6 +47,8 @@ Pokud chcete umožnit správu pracovního profilu na zařízeních, která [podp
 
 Při registraci zařízení s Androidem for Work pomocí účtu [správce registrace zařízení](device-enrollment-manager-enroll.md) platí omezení, že pomocí jednoho účtu je možné zaregistrovat maximálně 10 zařízení.
 
+Další informace najdete v článku [Data z Intune odesílaná Googlu](data-intune-sends-to-google.md).
+
 ## <a name="add-android-for-work-binding-for-intune"></a>Přidání vazby na Android for Work do Intune
 
 > [!NOTE]
@@ -55,15 +57,18 @@ Při registraci zařízení s Androidem for Work pomocí účtu [správce regist
 1. **Nastavení Intune MDM**<br>
 Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení [nastavením autority pro správu mobilních zařízení](mdm-authority-set.md) na **Microsoft Intune**.
 2. **Konfigurace vazby na Android for Work**<br>
-    Jako správce Intune vyberte na portálu [Azure Portal](https://portal.azure.com) možnost **Všechny služby** > **Monitorování a správa** > **Intune**.
-
-   a. V podokně **Intune** zvolte **Registrace zařízení** > **Registrace Androidu for Work**  a potom **Spravovaný obchod Google Play – Konfigurovat**, abyste mohli otevřít web Android for Work obchodu Google Play. Web se otevře v prohlížeči na nové kartě.
+    
+   a. Přihlaste se k [Intune na portálu Azure Portal](https://aka.ms/intuneportal), vyberte **Registrace zařízení** > **Registrace Androidu** > **Spravovaný obchod Google Play**.
    ![Obrazovka registrace Androidu for Work](./media/android-work-bind.png)
 
-   b. **Přihlášení ke Googlu**<br>
+   b. Vyberte **Souhlasím** a udělte Microsoftu oprávnění k [odesílání informací o uživatelích a zařízení Googlu](data-intune-sends-to-google.md). 
+   
+   c. Vyberte **Pokud se chcete hned připojit, spusťte Google** a otevřete web Androidu for Work v obchodě Google Play. Web se otevře v prohlížeči na nové kartě.
+  
+   d. **Přihlášení ke Googlu**<br>
    Na přihlašovací stránce Googlu zadejte účet Google, který bude přidružený ke všem úlohám správy Androidu for Work v tomto tenantovi. Jedná se o účet Google, který správci IT ve vaší společnosti sdílejí a používají ke správě a publikování aplikací v konzole Play for Work. Můžete použít existující účet Google, nebo vytvořte nový.  Zvolený účet nesmí být přidružený k doméně G-Suite.
 
-   c. **Zadání podrobností o organizaci**<br>
+   e. **Zadání podrobností o organizaci**<br>
    Do pole **Název organizace** zadejte název vaší společnosti. Jako **Poskytovatel EMM (Enterprise Mobility Management)** by se měl zobrazit **Microsoft Intune**. Vyjádřete souhlas se smlouvou pro Android for Work a zvolte **Potvrdit**. Vaše žádost bude zpracována.
 
 ## <a name="specify-android-for-work-enrollment-settings"></a>Nastavení registrace Androidu for Work
@@ -110,3 +115,14 @@ Registraci a správu Androidu for Work můžete vypnout. Výběrem možnosti **Z
 
 2. **Souhlas s odstraněním vazby na Android for Work**<br>
   Výběrem možnosti **Ano** odstraníte vazbu a zrušíte v Intune registraci všech zařízení s Androidem for Work.
+
+## <a name="end-user-experience-when-enrolling-a-samsung-knox-device"></a>Prostředí koncového uživatele při registraci zařízení se zabezpečením Samsung Knox
+Při registraci zařízení se zabezpečením Samsung Know je třeba mít na paměti následující:
+-   I když žádné zásady nevyžadují kód PIN, zařízení musí mít alespoň čtyřmístný číselný kód PIN, aby se mohla zaregistrovat. Pokud zařízení nemá kód PIN, uživateli se zobrazí výzva, aby ho vytvořil.
+-   Pro certifikáty WPJ (Workplace Join) neexistuje žádná interakce uživatele.
+-   Uživateli se zobrazí výzva s informacemi o registraci služby a o tom, co aplikace může dělat.
+-   Uživateli se zobrazí výzva s informacemi o registraci zabezpečení Knox.
+-   Pokud se vynucují zásady šifrování, musí uživatelé nastavit šestiznakové složité heslo jako heslo k zařízení.
+-   Pro přístup k prostředkům společnosti se nezobrazují žádné další výzvy k instalaci certifikátů nabízených službou.
+- Některá starší zařízení se zabezpečením Knox zobrazí výzvu k instalaci dalších certifikátů, které slouží pro přístup k prostředkům společnosti.
+- Pokud se zařízení Samsung Mini nepodaří nainstalovat WPJ a zobrazí se chyba, že **certifikát se nenašel** nebo že **není možné zařízení zaregistrovat**, nainstalujte nejnovější aktualizace firmwaru Samsung.

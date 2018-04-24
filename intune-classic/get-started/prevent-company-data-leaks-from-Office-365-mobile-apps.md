@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b0117ef734a8549593992108105192ce1c4de5b0
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 85233c06d9cbbc697aecabc75ba538612c0fa5fa
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quick-start-guide-prevent-company-data-leaks-from-office-365-mobile-apps"></a>Úvodní příručka: Prevence úniků firemních dat z mobilních aplikací Office 365
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Microsoft Intune může přispět k zabezpečení dat vaší organizace pomocí zásad správy mobilních aplikací (MAM), které zvyšují ochranu proti únikům firemních dat z mobilních aplikací Office 365 nebo jiných obchodních aplikací (LOB). Zásady MAM v Intune je možné použít, aniž by si koncoví uživatelé museli svá zařízení zaregistrovat ve správě mobilních zařízení (MDM) Intune. Takže pokud se vyskytnou uživatelé, kteří si nebudou chtít svá mobilní zařízení (BYOD) s iOSem nebo Androidem zaregistrovat do řešení Microsoft MDM (Intune, Configuration Manager nebo EAS), pokud chcete firemní data chránit bez správy zařízení koncových uživatelů nebo pokud už používáte jiné řešení než Microsoft MDM, pak vám Intune může pomoct zvýšit zabezpečení firemních dat.   
 

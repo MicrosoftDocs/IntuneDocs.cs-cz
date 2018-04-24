@@ -1,30 +1,30 @@
 ---
-title: "Vytvoření zásad dodržování předpisů pro Android for Work"
+title: Vytvoření zásad dodržování předpisů pro Android for Work
 titleSuffix: Microsoft Intune
-description: "Vytvořte v Intune zásadu dodržování předpisů zařízením pro zařízení s Androidem for Work umožňující vám zadat požadavky, které zařízení musí splnit, aby vyhovovalo předpisům."
-keywords: 
+description: Vytvořte v Intune zásadu dodržování předpisů zařízením pro zařízení s Androidem for Work umožňující vám zadat požadavky, které zařízení musí splnit, aby vyhovovalo předpisům.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 9da89713-6306-4468-b211-57cfb4b51cc6
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8ca31d4c83ccc6b786933080b96f66953cf1a108
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 00fa4508cdd4e74a20205ce46025b414cc0bb4cf
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-device-compliance-policy-for-android-for-work-devices-in-intune"></a>Vytvoření zásad dodržování předpisů pro zařízení s Androidem for Work v Intune
 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Zásada dodržování předpisů Intune pro zařízení s Androidem for Work určuje pravidla a nastavení, které musí zařízení s Androidem for Work splňovat, aby bylo považováno za dodržující předpisy. Tyto zásady můžete použít s podmíněným přístupem k povolení nebo zablokování přístupu k prostředkům společnosti. Můžete také získat sestavy zařízení a provádět kroky v případě, že zařízení předpisy nedodržuje. Zásady dodržování předpisů zařízení pro každou platformu vytvoříte na portálu Intune Azure. Další informace o zásadách dodržování předpisů a požadavcích, kterým před vytvořením zásad dodržování předpisů musíte vyhovět, najdete v tématu [Začínáme se zásadami dodržování předpisů zařízeními](device-compliance-get-started.md).
 

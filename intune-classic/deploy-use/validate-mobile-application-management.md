@@ -1,28 +1,28 @@
 ---
-title: "Ověření nastavení MAM"
-description: "V tématu popisujeme, jak otestovat a ověřit, jestli jste správně nastavili zásady MAM a ty fungují podle očekávání."
-keywords: 
+title: Ověření nastavení MAM
+description: V tématu popisujeme, jak otestovat a ověřit, jestli jste správně nastavili zásady MAM a ty fungují podle očekávání.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angerobe
 ms.date: 12/19/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 41d82597-e13e-4c3e-9151-e71392236ca0
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.custom: intune-classic
-ms.openlocfilehash: e0cb44177f830236865dce0ab68bb1084fcebc2d
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 6f11c2f2af53813040417a8f40e983b5c88d5189
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="validating-your-mobile-application-management-setup"></a>Jak ověřit nastavení správy mobilních aplikací
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Toto téma obsahuje informace o tom, jak zkontrolovat, jestli vám správa mobilních aplikací (MAM) funguje bez problémů. Návod se vztahuje k zásadám MAM na webu Azure Portal.
 
@@ -43,7 +43,7 @@ Pokud testování odhalí, že zásady MAM nepřináší očekávané výsledky,
 
 2. Vyberte uživatele ze seznamu nebo ho vyhledejte, pak vyberte a klikněte na **Vybrat uživatele**. V horní části sloupce **Sestavy aplikace** uvidíte, jestli má uživatel licenci k MAM. Níže se zobrazí, jestli má licenci k O365 a jaký je stav aplikace na všech jeho zařízeních.
 
-![Stav aplikace v rámci MAM](..\media\ts-mam-user-apps.png)
+![Stav aplikace v rámci MAM](../media/ts-mam-user-apps.png)
 
 ### <a name="what-to-do"></a>Co dělat
 Postupujte podle stavu uživatele:
@@ -53,7 +53,7 @@ Postupujte podle stavu uživatele:
 - Pokud je uživatelova aplikace uvedena ve stavu **Není zaregistrováno**, zkontrolujte, jestli jste, co se této aplikace týče, správně nakonfigurovali zásady MAM.
 - Dejte pozor, aby se uvedené nastavení použilo pro všechny uživatele, u kterých chcete zásady MAM uplatnit.
 
-### <a name="see-also"></a>Související témata
-[Příprava před konfigurací zásad správy mobilních aplikací pomocí Microsoft Intune](..\deploy-use\get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
+### <a name="see-also"></a>Viz taky
+[Příprava před konfigurací zásad správy mobilních aplikací pomocí Microsoft Intune](../deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 
-[Ochrana aplikačních dat pomocí zásad správy mobilních aplikací v Microsoft Intune](..\deploy-use\protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
+[Ochrana aplikačních dat pomocí zásad správy mobilních aplikací v Microsoft Intune](../deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)

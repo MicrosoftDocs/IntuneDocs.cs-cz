@@ -1,25 +1,25 @@
 ---
-title: "Nastavení sítě VPN pro jednotlivé aplikace v Microsoft Intune pro zařízení s iOSem"
-titleSuffix: 
-description: "Určete, které spravované aplikace můžou používat vaši virtuální privátní síť (VPN) na zařízeních s iOSem spravovaných pomocí Intune."
-keywords: 
+title: Nastavení sítě VPN pro jednotlivé aplikace v Microsoft Intune pro zařízení s iOSem
+titleSuffix: ''
+description: Určete, které spravované aplikace můžou používat vaši virtuální privátní síť (VPN) na zařízeních s iOSem spravovaných pomocí Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d2839a11f95614add0691813a9fdf89dba0a2d5d
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 1b28f809c924ec2699647a3cc377b3bdde86afe5
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Nastavení virtuální privátní sítě (VPN) pro jednotlivé aplikace v Intune pro zařízení s iOSem
 
@@ -67,7 +67,7 @@ Kořenový certifikát serveru VPN vystavený certifikační autoritou naimportu
 4. Klikněte na ikonu složky a vyhledejte certifikát VPN (soubor s příponou .cer), který jste vyexportovali z konzoly pro správu sítě VPN. Klikněte na **OK**.
 5. Klikněte na **Vytvořit**.
 
-    ![Vytvoření profilu důvěryhodného certifikátu](media\vpn-per-app-create-trusted-cert.png)
+    ![Vytvoření profilu důvěryhodného certifikátu](./media/vpn-per-app-create-trusted-cert.png)
 
 ## <a name="create-a-scep-certificate-profile"></a>Vytvoření profilu certifikátu SCEP
 
@@ -94,7 +94,7 @@ Profil důvěryhodného kořenového certifikátu umožňuje iOSu automaticky d�
 14. Klikněte na **OK**.
 15. Klikněte na **Vytvořit**.
 
-    ![Vytvoření profilu certifikátu SCEP](media\vpn-per-app-create-scep-cert.png)
+    ![Vytvoření profilu certifikátu SCEP](./media/vpn-per-app-create-scep-cert.png)
 
 ## <a name="create-a-per-app-vpn-profile"></a>Vytvoření profilu sítě VPN pro jednotlivé aplikace
 
@@ -123,7 +123,7 @@ Součástí profilu sítě VPN je certifikát SCEP, který obsahuje přihlašova
 6. Klikněte na **OK**.
 7. Klikněte na **Vytvořit**.
 
-    ![Vytvoření profilu sítě VPN pro jednotlivé aplikace](media\vpn-per-app-create-vpn-profile.png)
+    ![Vytvoření profilu sítě VPN pro jednotlivé aplikace](./media/vpn-per-app-create-vpn-profile.png)
 
 
 ## <a name="associate-an-app-with-the-vpn-profile"></a>Přidružení aplikace k profilu sítě VPN
@@ -146,7 +146,7 @@ Po přidání profilu sítě VPN přidružte aplikaci a skupinu služby Azure AD
 
 9. Klikněte na **OK** a pak na **Uložit**.
 
-    ![Přidružení aplikace k síti VPN](media\vpn-per-app-app-to-vpn.png)
+    ![Přidružení aplikace k síti VPN](./media/vpn-per-app-app-to-vpn.png)
 
 ## <a name="verify-the-connection-on-the-ios-device"></a>Ověření připojení na zařízení s iOSem
 

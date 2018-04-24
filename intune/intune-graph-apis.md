@@ -14,11 +14,11 @@ ms.technology: ''
 ms.assetid: 79A67342-C06D-4D20-A447-678A6CB8D70A
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 273919a7f5a62ab6b7b625756da29d3b58339578
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: f6e5955b690eedf06872171fcc22eb86a0f7764e
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Používání Azure AD pro přístup k rozhraním Intune API v Microsoft Graphu
 
@@ -118,13 +118,13 @@ V tomto okamžiku můžete udělat také toto:
 
     Postupujte následovně:
 
-    1. V okně aplikace zvolte **Manifest**. Otevře se okno **Upravit manifest**.
+  1. V okně aplikace zvolte **Manifest**. Otevře se okno **Upravit manifest**.
 
-    <img src="media/azure-ad-edit-mft.png" width="295" height="114" alt="The Edit manifest blade" />
+     <img src="media/azure-ad-edit-mft.png" width="295" height="114" alt="The Edit manifest blade" />
 
-    2. Změňte hodnotu nastavení `availableToOtherTenants` na `true`.
+  2. Změňte hodnotu nastavení `availableToOtherTenants` na `true`.
 
-    3. Uložte provedené změny.
+  3. Uložte provedené změny.
 
 ## <a name="intune-permission-scopes"></a>Obory oprávnění pro Intune
 

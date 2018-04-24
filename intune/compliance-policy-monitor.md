@@ -1,27 +1,30 @@
 ---
-title: "Monitorování zásad dodržování předpisů zařízeními v Microsoft Intune"
-titlesuffix: 
-description: "Na řídicím panelu pro dodržování předpisů zařízením můžete monitorovat celkový stav dodržování předpisů zařízením, zobrazit sestavy a dodržování předpisů zařízením podle jednotlivých zásad a nastavení."
-keywords: 
+title: Monitorování zásad dodržování předpisů zařízeními v Microsoft Intune
+titlesuffix: ''
+description: Na řídicím panelu pro dodržování předpisů zařízením můžete monitorovat celkový stav dodržování předpisů zařízením, zobrazit sestavy a dodržování předpisů zařízením podle jednotlivých zásad a nastavení.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 2/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 146b8034022ed5f5a50de9910d28baf27f7482ac
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 557018264da5c21459e47e3e139ddd327a4a5ea6
+ms.sourcegitcommit: c3ae3c3dc46b62d9191813d25a196874ba4927be
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorování zásad dodržování předpisů zařízením v Intune
 
 Sestavy dodržování předpisů pomáhají správcům analyzovat stav dodržování předpisů zařízeními v organizaci a rychle vyřešit potíže související s dodržováním předpisů, na které uživatelé v organizaci narazí. Můžete zobrazit informace o celkovém stavu dodržování předpisů zařízením, stavu dodržování předpisů pro jednotlivá nastavení a stavu dodržování předpisů pro jednotlivé zásady a také procházet podrobnosti o jednotlivých zařízeních, abyste zobrazili konkrétní nastavení a zásady, které mají na zařízení vliv.
+
+> [!NOTE]
+> Na základě vašich připomínek jsme v březnu do služby Intune zavedli několik vylepšení týkající se zabezpečení. V závislosti na vaší konfiguraci zásad dodržování předpisů možná budete muset provést akce, aby koncoví uživatelé nepřišli o přístup ke svému e-mailu. Podrobnosti najdete v článku o [připravovaných vylepšeních zabezpečení](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
 
 ## <a name="before-you-begin"></a>Před zahájením
 
@@ -124,6 +127,19 @@ Pokud kliknete na **tlačítko Aktualizovat**, nabídka by se měla zavřít a v
 Kliknutím na zařízení otevřete **podokno zařízení** s vybraným zařízením, které obsahuje další podrobnosti o nastavení zásad dodržování předpisů zařízením použitým u daného zařízení.
 
 Když kliknete na samotné nastavení zásad zařízení, uvidíte název zásady dodržování předpisů zařízením, ze které nastavení dodržování předpisů zařízení cílené správcem pochází.
+
+### <a name="devices-without-compliance-policy"></a>Zařízení bez zásad dodržování předpisů
+V sestavě najdete zařízení, která nemají přiřazené zásady dodržování předpisů. Pokud zavedete nastavení zabezpečení, které označí všechna zařízení bez zásad dodržování předpisů jako nevyhovující, je důležité, abyste dokázali tato zařízení identifikovat. Potom jim můžete přiřadit aspoň jednu zásadu dodržování předpisů.
+
+> [!NOTE]
+> Nové nastavení zabezpečení můžete konfigurovat na portálu Intune. Vyberte **Dodržování předpisů zařízením** a v části **Nastavení** zvolte **Nastavení zásad dodržování předpisů**. Pak přepínačem nastavte možnost **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako** na **Vyhovující předpisům** nebo **Nevyhovující předpisům**. Další informace najdete v článku o [vylepšeních zabezpečení ve službě Intune](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
+
+![Obrázek sestavy Zařízení bez zásad dodržování předpisů](./media/idc-12.png)
+
+Dlaždice **Zařízení bez zásad dodržování předpisů** je dostupná na panelu Dodržování předpisů zařízením. Tato sestava zobrazuje všechna zařízení bez zásad dodržování předpisů, uživatele zařízení, stav kompatibility a model zařízení.
+
+> [!NOTE]
+> Uživatelé, kteří mají přiřazen kterýkoli typ zásady dodržování předpisů, se v sestavě nezobrazí (bez ohledu na platformu zařízení). Když například uživateli se zařízením Android omylem přiřadíte zásadu dodržování předpisů pro Windows, jeho zařízení se v sestavě nezobrazí. Intune ale toto zařízení s Androidem vyhodnotí jako nevyhovující. Pokud se chcete podobným problémům vyhnout, doporučujeme vytvářet zásady pro každou platformu zařízení zvlášť a nasazovat je u všech uživatelů.
 
 ### <a name="per-policy-device-compliance-report"></a>Sestava dodržování předpisů zařízením podle zásad
 

@@ -1,28 +1,27 @@
 ---
-title: "Nastavení omezení pro zařízení s Windows 10 v Microsoft Intune"
-titlesuffix: 
-description: "Přečtěte si o nastaveních Microsoft Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s Windows 10."
-keywords: 
-author: vhorne
-ms.author: victorh
+title: Nastavení omezení zařízení s Windows 10 v Microsoft Intune – Azure | Microsoft Docs
+description: Přečtěte si o nastaveních Microsoft Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s Windows 10.
+keywords: ''
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 3/1/2018
+ms.date: 4/9/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: eee23afb4e2398358dc2c6b19b7d85be6b4f9edb
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 83027a95edca04f4461cecab341deb3ec10680fb
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
-#<a name="microsoft-intune-windows-10-and-later-device-restriction-settings"></a>Nastavení omezení pro zařízení Windows 10 a novější v Microsoft Intune
+# <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Nastavení omezení zařízení se systémem Windows 10 (a novějším) v Intune
 Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s Windows 10.
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 ## <a name="general"></a>Obecné
 - **Snímek obrazovky (jenom mobilní verze)** – Umožňuje uživateli zachytit obrazovku zařízení v podobě obrázku.
@@ -51,7 +50,6 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
 - **Pracovní prostor Ink** – Brání uživatelům v přístupu k Pracovnímu prostoru Ink. Pokud toto nastavení není nakonfigurované, je tento pracovní prostor povolený (funkce je zapnutá) a uživatel ho může používat nad zamykací obrazovkou.
 - **Automatické opětovné nasazení** – Umožňuje uživatelům s právy správce odstranit všechna uživatelská data a nastavení pomocí klávesové zkratky **CTRL+Win+R** na zamykací obrazovce zařízení. Zařízení se automaticky překonfiguruje a znovu zaregistruje ke správě.
 
-
 ## <a name="password"></a>Heslo
 -   **Heslo** – Vyžaduje, aby koncový uživatel zadal heslo pro přístup k zařízení.
     -   **Požadovaný typ hesla** – Určuje, jestli musí být heslo složené jen z čísel, nebo z čísel a písmen.
@@ -75,7 +73,6 @@ Pro zařízení s Windows 10: Jakmile se nepovede určený počet pokusů o při
 -   **Automatické přijetí párování a výzev k udělení souhlasu uživatele s ochranou osobních údajů** – Umožňuje Windows u spuštěných aplikací automaticky potvrzovat zprávy o párování a ochraně osobních údajů.
 - **Publikovat aktivity uživatele**: Tuto možnost nastavte na **Blokovat**, pokud chcete zabránit ve sdílení a zjišťování naposledy použitých prostředků při přepínání úloh.
 - **Jen místní aktivity**: Tuto možnost nastavte na **Blokovat**, pokud chcete zabránit ve sdílení a zjišťování naposledy použitých prostředků při přepínání úloh jen u místní aktivity.
-
 
 Můžete definovat informace, ke kterým budou mít přístup všechny aplikace na zařízení. Pomocí **výjimek ze zásad ochrany osobních údajů pro jednotlivé aplikace** můžete definovat výjimky.
 
@@ -137,8 +134,6 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 -   **Informační zprávy na zamknuté obrazovce** – Blokuje zobrazení upozornění na zamykací obrazovce zařízení.
 -   **Časový limit obrazovky (jenom mobilní verze)** – Určuje, za jak dlouho (v sekundách) po uzamčení se obrazovka vypne.
 
-
-
 ## <a name="app-store"></a>App Store
 
 -   **App Store (jenom mobilní verze)** – Povolí nebo zablokuje použití App Storu na zařízeních s Windows 10 Mobile.
@@ -152,8 +147,6 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 -   **Nainstalovat aplikace na systémovou jednotku** – Zabrání aplikacím ukládat data na systémovou jednotku zařízení.
 -   **Záznam ze hry (jenom desktopové verze)** – Umožňuje nakonfigurovat, zda jsou povolené záznam a vysílání z her.
 -   **Jen aplikace ze Storu** – Nakonfiguruje, jestli uživatelé můžou instalovat aplikace odjinud než z obchodu s aplikacemi.
-
-
 
 ## <a name="edge-browser"></a>Prohlížeč Microsoft Edge
 
@@ -181,7 +174,7 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 -   **Výchozí vyhledávací web** – Určuje výchozí vyhledávací web, který se má použít. Koncoví uživatelé mohou tuto hodnotu kdykoli změnit.
 -   **Vymazat údaje o procházení při ukončení** – Vymaže historii a údaje o procházení, když uživatel zavře Edge.
 -   **Shromažďování dat pro živé dlaždice** – Zastaví ve Windows shromažďování informací pro živé dlaždice, když uživatelé v Edgi připnou web k nabídce Start.
--  **Seznam oblíbených položek** – Definuje cestu k souboru oblíbených položek. Příklad: http://contoso.com/favorites.html.
+-  **Seznam oblíbených položek** – Definuje cestu k souboru oblíbených položek. Například http://contoso.com/favorites.html.
 -  **Omezit změny oblíbených položek** – Když tuto možnost nastavíte na **Blokovat**, zabráníte tak uživatelům v přidávání, importování, řazení a úpravách seznamu oblíbených položek. 
 
 ## <a name="windows-defender-smart-screen"></a>Filtr SmartScreen v programu Windows Defender
@@ -192,6 +185,7 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 
 ## <a name="search"></a>Hledat
 - **Bezpečné vyhledávání (jenom mobilní verze)** – Řídí, jak Cortana filtruje ve výsledcích obsah pro dospělé. Můžete vybrat možnost **Striktní**, **Pokročilé** nebo povolit koncovým uživatelům, aby si zvolili vlastní nastavení.
+- **Zobrazovat webové výsledky ve vyhledávání** – Umožňuje blokovat nebo povolit zobrazování webových výsledků ve vyhledávání na zařízení.
 
 ## <a name="cloud-and-storage"></a>Cloud a úložiště
 -   **Účet Microsoft** – Umožní uživateli přidružit k zařízení účet Microsoft.
@@ -215,7 +209,6 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 -   **Ruční konfigurace Wi-Fi** – Určuje, jestli může uživatel nakonfigurovat svoje vlastní Wi-Fi připojení, nebo jestli může použít jenom připojení nakonfigurovaná v rámci profilu Wi-Fi sítě (jenom Windows 10 Mobile).
 -   **Interval hledání Wi-Fi** – Určuje, jak často zařízení skenují sítě Wi-Fi. Zadejte hodnotu v intervalu 1 (nejčastěji) až 500 (nejméně často).
 -   **Povolené služby Bluetooth** – Zadejte seznam povolených služeb a profilů Bluetooth (v podobě hexadecimálních řetězců).
-
 
 ## <a name="control-panel-and-settings"></a>Ovládací panely a nastavení
 
@@ -258,41 +251,48 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 
 ## <a name="kiosk-preview"></a>Beznabídkový režim (Preview)
 
--   **Beznabídkový režim** – Identifikuje typ [režimu veřejného terminálu](https://docs.microsoft.com/windows/configuration/kiosk-shared-pc) podporovaného zásadami. Vaše možnosti jsou:
+Zařízení s beznabídkovým režimem obvykle spouští jednu aplikaci nebo konkrétní sadu aplikací. Uživatelé nemají v zařízení přístup k žádným prvkům ani funkcím mimo aplikací veřejného terminálu.
 
-      - **Nenakonfigurováno** (výchozí) – Zásady nepovolují režim veřejného terminálu. 
-      - **Veřejný terminál s jednou aplikací** – Profil povoluje zařízení jako veřejný terminál s jednou aplikací.
-      - **Veřejný terminál s více aplikacemi** – Profil povoluje zařízení jako veřejný terminál s více aplikacemi.
+- **Beznabídkový režim** – Určuje typ režimu veřejného terminálu podporovaného zásadami. Vaše možnosti jsou:
 
-    Veřejný terminál s jednou aplikací vyžaduje následující nastavení:
+  - **Nenakonfigurováno** (výchozí) – Zásady nepovolují režim veřejného terminálu. 
+  - **Veřejný terminál s jednou aplikací** – Profil povoluje v zařízení spouštět pouze jednu aplikaci. Jakmile se uživatel přihlásí, spustí se daná aplikace. Tento režim zároveň brání uživateli v otevírání nových aplikací nebo změně spuštěné aplikace.
+  - **Veřejný terminál s více aplikacemi** – Profil povoluje v zařízení spouštět více aplikací. Uživatel má k dispozici pouze aplikace, které přidáte. Veřejný terminál s více aplikacemi, neboli zařízení s pevně stanoveným účelem, umožňuje poskytovat přehledné prostředí jednotlivým uživatelům, protože jim povoluje přístup pouze k aplikacím, které potřebují, a nezobrazuje aplikace, které nepotřebují.
 
-      - **Uživatelský účet** – Určuje místní uživatelský účet (v zařízení) nebo přihlášení k účtu Azure AD přidružené k aplikaci veřejného terminálu. Pro účty připojené k doménám Azure AD zadejte účet ve tvaru `domain\\username@tenant.org`.
+#### <a name="single-app-kiosks"></a>Veřejné terminály s jednou aplikací
+Zadejte následující nastavení:
 
-         Pro zařízení ve veřejných prostředích použijte účty s minimálními oprávněními, abyste zabránili neautorizované aktivitě.  
+- **Uživatelský účet** – Zadejte místní uživatelský účet (v zařízení) nebo přihlášení k účtu Azure AD přidružené k aplikaci veřejného terminálu. U účtů připojených k doménám Azure AD zadejte účet ve tvaru `domain\username@tenant.org`. 
 
-      - **ID modelu uživatele aplikace (AUMID) dané aplikace** – Určuje AUMID aplikace veřejného terminálu. Další informace najdete v tématu [Jak najít ID modelu uživatele aplikace (AUMID) nainstalované aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+    U terminálů určených veřejnosti s povoleným automatickým přihlašováním je vhodné použít typ uživatele s nejnižšími oprávněními (například místní standardní uživatelský účet). Ke konfiguraci účtu Azure Active Directory (AD) pro beznabídkový režim veřejného terminálu použijte formát `AzureAD\user@contoso.com`.
 
-    [Veřejné terminály s více aplikacemi](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#configure-a-kiosk-in-microsoft-intune) vyžadují konfiguraci veřejného terminálu. Použijte tlačítko **Přidat** a vytvořte konfiguraci veřejného terminálu, nebo vyberte existující konfiguraci.
+- **ID modelu uživatele aplikace (AUMID) dané aplikace** – Zadejte AUMID aplikace veřejného terminálu. Další informace najdete v tématu [Jak najít ID modelu uživatele aplikace (AUMID) nainstalované aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
-    Konfigurace veřejných terminálů s více aplikacemi zahrnují následující nastavení:
+#### <a name="multi-app-kiosks"></a>Veřejné terminály s více aplikacemi
+[Veřejné terminály s více aplikacemi](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#configure-a-kiosk-in-microsoft-intune) používají konfiguraci veřejného terminálu, která zobrazuje povolené aplikace, a další nastavení. 
 
-    - **Název konfigurace veřejného terminálu** – Popisný název, pomocí kterého se daná konfigurace identifikuje.
+Použijte tlačítko **Přidat** a vytvořte konfiguraci veřejného terminálu, nebo vyberte existující konfiguraci. Potom zadejte následující nastavení:
 
-    - Jedna nebo více **aplikací veřejného terminálu**, které tvoří:
+- **Název konfigurace veřejného terminálu** – Zadejte popisný název, pomocí kterého se daná konfigurace identifikuje.
 
-        - **Typ aplikace** – Určuje typ aplikace veřejného terminálu.  Mezi podporované hodnoty patří:   
+- **Aplikace veřejného terminálu** – Zadejte aplikace, které jsou k dispozici v nabídce Start. Aplikace, které přidáte, jsou jediné aplikace, které uživatel může otevřít.
 
-            - **Aplikace Win32** – Tradiční desktopová aplikace. (Budete potřebovat plně kvalifikovanou (absolutní) cestu ke spustitelnému souboru, s ohledem na zařízení.)
+  - **Typ aplikace** – Zvolte typ aplikace veřejného terminálu:
+    - **Aplikace Win32** – Tradiční desktopová aplikace. Budete potřebovat plně kvalifikovanou (absolutní) cestu ke spustitelnému souboru, s ohledem na zařízení.
+    - **Aplikace pro UPW** – Univerzální aplikace pro Windows. Budete potřebovat [AUMID aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
-            - **Aplikace pro UPW** – Univerzální aplikace pro Windows. Budete potřebovat [AUMID aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+  - **Identifikátor** – Zadejte buď plně kvalifikovanou cestu spustitelného souboru (u aplikací Win32), nebo [AUMID aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (u aplikací pro UPW).
 
-        - **Identifikátor aplikace** – Určuje buď plně kvalifikovanou (absolutní) cestu spustitelného souboru (u aplikací Win32), nebo [AUMID aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (u aplikací pro UPW).
+- **Hlavní panel**: Zvolte buď **Povolit**, aby se hlavní panel zobrazoval, nebo ho ponechejte **nenakonfigurovaný** (skrytý) na veřejném terminálu.
 
-    - **Hlavní panel** – Určuje, jestli má být na veřejném terminálu hlavní panel zobrazený (**Povoleno**), nebo skrytý (**Nenakonfigurováno**).
+- **Rozložení nabídky Start** – Zadejte soubor XML, který popisuje, jak se mají aplikace zobrazit v nabídce Start. V článku [Přizpůsobení a export rozložení nabídky Start](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) najdete pokyny a ukázkový soubor XML.
 
-    - **Rozložení nabídky Start** – Určuje soubor XML, který popisuje, jak se mají aplikace [zobrazit v nabídce Start](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file).
 
-    - **Přiřazení uživatelé** – Určuje jeden nebo více uživatelských účtů přidružených ke konfiguraci veřejného terminálu. Účet může být místní (v zařízení) nebo přihlášení k účtu Azure AD přidružené k aplikaci veřejného terminálu. Účty připojené k doménám zadejte ve tvaru `domain\\username@tenant.org`.
+  Článek [Vytvoření veřejného terminálu s Windows 10 umožňujícího použití více aplikací](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file) poskytuje podrobnější informace o používání a vytváření souborů XML.
+
+- **Přiřazení uživatelé** – Přidejte jeden či více uživatelských účtů, které mohou přidané aplikace používat. Přihlášenému účtu jsou k dispozici pouze aplikace definované v konfiguraci. Účet může být místní (v zařízení) nebo přihlášení k účtu Azure AD přidružené k aplikaci veřejného terminálu.
+
+    U terminálů určených veřejnosti s povoleným automatickým přihlašováním je vhodné použít typ uživatele s nejnižšími oprávněními (například místní standardní uživatelský účet). Ke konfiguraci účtu Azure Active Directory (AD) pro beznabídkový režim veřejného terminálu použijte formát `domain\user@tenant.com`.
 
 ## <a name="windows-defender-antivirus"></a>Antivirová ochrana v programu Windows Defender
 
@@ -328,14 +328,11 @@ Pokud jsou soubory na jednotce určené jen pro čtení, nemůže z nich Defende
     -   **Definováno uživatelem**
     -   **Blokováno**
 
-
-
 ### <a name="windows-defender-antivirus-exclusions"></a>Výjimky antivirové ochrany v programu Windows Defender
 
 -   **Soubory a složky, které chcete vyloučit z kontrol a ochrany v reálném čase** – Umožňuje do seznamu vyloučení přidat jeden nebo více souborů a složek, například **C:\Cesta** nebo **%ProgramFiles%\Cesta\název_souboru.exe**. Tyto soubory a složky nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
 -   **Přípony souborů, které chcete vyloučit z kontrol a ochrany v reálném čase** – Umožňuje přidat do seznamu vyloučení jednu nebo více přípon souborů jako **jpg** nebo **txt**. Soubory s těmito příponami nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
 -   **Procesy, které chcete vyloučit z kontrol a ochrany v reálném čase** – Umožňuje přidat do seznamu vyloučení jeden nebo více procesů typu **.exe**, **.com** nebo **.scr**. Tyto procesy nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
-
 
 ## <a name="network-proxy"></a>Síťový proxy server
 
@@ -348,9 +345,7 @@ Pokud jsou soubory na jednotce určené jen pro čtení, nemůže z nich Defende
     -   **Výjimky proxy serveru** – Zadejte adresy URL, které nesmí používat proxy server. Jednotlivé položky oddělte středníkem.
     -   **Obejít proxy server pro místní adresy** – Tuto možnost povolte, pokud nechcete proxy server používat pro místní adresy na vašem intranetu.
 
-
 ## <a name="windows-spotlight"></a>Windows Spotlight
-
 
 - **Windows Spotlight** – Toto nastavení použijte k zablokování všech funkcí Windows Spotlight na zařízeních s Windows 10. Pokud toto nastavení zablokujete, nebudou následující nastavení k dispozici.
     - **Windows Spotlight na zamykací obrazovce** – Zastaví zobrazování informací z Windows Spotlight na zamykací obrazovce zařízení.
@@ -360,7 +355,6 @@ Pokud jsou soubory na jednotce určené jen pro čtení, nemůže z nich Defende
     - **Windows Spotlight v centru akcí** – Zablokuje zobrazování návrhů Windows Spotlightu na nové aplikace nebo obsah týkající se zabezpečení v Centru akcí systému Windows.
     - **Přizpůsobení Windows Spotlightu** – Zastaví přizpůsobování výsledků ve Windows Spotlightu na základě použití zařízení.
     - **Prostředí uvítání systémem Windows** – Zablokuje prostředí uvítání systémem Windows, které uživateli zobrazuje informace o nových nebo aktualizovaných funkcích.
-
 
 ## <a name="projection"></a>Promítání
 
@@ -394,15 +388,3 @@ Pokud jsou soubory na jednotce určené jen pro čtení, nemůže z nich Defende
 - **Synchronizace zpráv (jen mobilní zařízení)** – Zakáže Zasílání zpráv všude a zálohování a obnovování textových zpráv.
 - **MMS (jen mobilní zařízení)** – Zakáže na zařízení funkci přijímání a posílání zpráv MMS.
 - **RCS (jen mobilní zařízení)** – Zakáže na zařízení funkci přijímání a posílání zpráv RCS (Rich Communication Services).
-
-
-
-
-
-
-
-
-
-
-
-

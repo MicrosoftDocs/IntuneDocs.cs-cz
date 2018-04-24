@@ -1,29 +1,29 @@
 ---
-title: "Používání aplikací s podmíněným přístupem MAM"
-description: "Udělejte si představu o tom, jak vám podmíněný přístup MAM pomůže určit, které aplikace mají přístup ke službám O365."
-keywords: 
+title: Používání aplikací s podmíněným přístupem MAM
+description: Udělejte si představu o tom, jak vám podmíněný přístup MAM pomůže určit, které aplikace mají přístup ke službám O365.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 10/24/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 71dcf9bc-bfd1-4e06-b7ad-14b33a2288d0
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 725783751c13b2301e7fbef4dea1a47bc339c8b7
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 2f313fcbfa26c8f82708f8f830404da97a3eca25
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-to-expect-when-using-an-app-with-app-based-ca"></a>Co očekávat při používání aplikace s podmíněným přístupem založeným na aplikaci
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Podmíněný přístup založený na aplikaci ověřuje identitu schválené aplikace pomocí zprostředkující aplikace, která musí existovat v zařízení:
 *  Zprostředkující aplikací pro **iOS** je **aplikace Azure Authenticator**.
@@ -40,8 +40,8 @@ V následujícím seznamu jsou vlastnosti odvozené přímo ze zařízení:
 
 > [!NOTE]
 > Na zařízeních s Androidem:
-  * V zařízení musí být nainstalovaná aplikace Portál společnosti, ale koncový uživatel se k aplikaci nemusí přihlásit.
-  * Registrace zařízení se musí provést prostřednictvím aplikace OneDrive nebo Outlook.
+>   * V zařízení musí být nainstalovaná aplikace Portál společnosti, ale koncový uživatel se k aplikaci nemusí přihlásit.
+>   * Registrace zařízení se musí provést prostřednictvím aplikace OneDrive nebo Outlook.
 
 ## <a name="to-remove-a-device-from-azure-ad-registration"></a>Odebrání zařízení z registrace Azure AD
 Registraci zařízení můžete odebrat prostřednictvím konzoly správce Azure AD. To obvykle dělá správce IT.  Může to také udělat koncový uživatel na samotném zařízení.
@@ -52,7 +52,7 @@ Registraci zařízení můžete odebrat prostřednictvím konzoly správce Azure
 
 ## <a name="app-based-ca-with-device-based-ca"></a>Podmíněný přístup založený na aplikaci s podmíněným přístupem založeným na zařízení  
 
-[Podmíněný přístup na základě dodržování předpisů pro zařízení](restrict-access-to-email-and-o365-services-with-microsoft-intune.md) (**podmíněný přístup zařízení**) můžete nakonfigurovat v [konzole pro správce Intune](https://manage.microsoft.com) nebo v [konzole pro správu služby Azure AD Premium] (https://manage.windowsazure.com). Podmíněný přístup zařízení vyžaduje, aby se uživatelé připojili k Exchangi Online jenom přes zařízení spravovaná službou Intune, která vyhovují její zásadě dodržování předpisů pro zařízení, nebo přes počítače připojené k doméně.  Pokud uživatel patří do některých skupin zabezpečení, které používají zásady podmíněného přístupu založeného na aplikaci i zásady podmíněného přístupu zařízení, musí splňovat jeden z těchto dvou požadavků:
+[Podmíněný přístup na základě dodržování předpisů pro zařízení](restrict-access-to-email-and-o365-services-with-microsoft-intune.md) (<strong>podmíněný přístup zařízení</strong>) můžete nakonfigurovat v [konzole pro správce Intune](https://manage.microsoft.com) nebo v [konzole pro správu služby Azure AD Premium](https://manage.windowsazure.com). Podmíněný přístup zařízení vyžaduje, aby se uživatelé připojili k Exchangi Online jenom přes zařízení spravovaná službou Intune, která vyhovují její zásadě dodržování předpisů pro zařízení, nebo přes počítače připojené k doméně.  Pokud uživatel patří do některých skupin zabezpečení, které používají zásady podmíněného přístupu založeného na aplikaci i zásady podmíněného přístupu zařízení, musí splňovat jeden z těchto dvou požadavků:
 * Aplikace použitá pro přístup ke službě je mobilní aplikace podporovaná 
 * podmíněným přístupem založeným na aplikaci, přičemž v zařízení, na kterém tato aplikace běží, je nainstalovaný **iOS Authenticator (pro zařízení s iOSem)** nebo **aplikace Portál společnosti (pro zařízení s Androidem)**.
 * Zařízení použité pro přístup ke službě je **spravované přes Intune a vyhovuje** zásadě dodržování předpisů pro zařízení, nebo se jedná o **počítač připojený k doméně**.  Tuto situaci ilustrují následující příklady:
@@ -64,6 +64,6 @@ Registraci zařízení můžete odebrat prostřednictvím konzoly správce Azure
 
 [Blokování aplikací, které nepoužívají moderní ověřování](block-apps-with-no-modern-authentication.md)
 
-### <a name="see-also"></a>Související témata
+### <a name="see-also"></a>Viz taky
 
 [Ochrana dat aplikací pomocí zásad ochrany aplikací](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)

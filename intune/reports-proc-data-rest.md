@@ -1,25 +1,25 @@
 ---
-title: "Získání dat z rozhraní API datového skladu pomocí klienta REST"
+title: Získání dat z rozhraní API datového skladu pomocí klienta REST
 titlesuffix: Microsoft Intune
-description: "Načtěte pomocí rozhraní RESTful API data z datového skladu Intune."
-keywords: 
+description: Načtěte pomocí rozhraní RESTful API data z datového skladu Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: D6D15039-4036-446C-A58F-A5E18175720A
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 22bfcc4e2947cba54509409132da3687d51a472d
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 5ba065b53560a4e1d3f1fffbe6cea56e85da0f06
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Získání dat z rozhraní API datového skladu Intune pomocí klienta REST
 
@@ -45,7 +45,7 @@ Vytvořte nativní aplikaci v Azure. Tato nativní aplikace představuje klients
     3.  Do pole **Přihlašovací adresa URL** zadejte adresu URL. Přihlašovací adresa URL bude záviset na konkrétní situaci, pokud ale hodláte použít nástroj Postman, zadejte `https://www.getpostman.com/oauth2/callback`. Při ověřování vůči službě Azure AD použijete v kroku ověřování klienta zpětné volání.
 4.  Vyberte **Vytvořit**.
 
-     ![Rozhraní API datového skladu Intune](media\reports-get_rest_data_client_overview.png)
+     ![Rozhraní API datového skladu Intune](./media/reports-get_rest_data_client_overview.png)
 
 5. Poznačte si **ID aplikace** této aplikace. Toto ID použijete v další části.
 
@@ -62,7 +62,7 @@ Teď máte v Azure definovanou aplikaci. Udělte z této nativní aplikace pří
 7.  Vyberte **Vybrat**.
 8.  Zaškrtnutím políčka **Delegovaná oprávnění** přidejte možnost **Získat informace datového skladu z Microsoft Intune**.
 
-    ![Povolení přístupu – rozhraní API Microsot Intune](media\reports-get_rest_data_client_access.png)
+    ![Povolení přístupu – rozhraní API Microsot Intune](./media/reports-get_rest_data_client_access.png)
 
 9.  Vyberte **Vybrat**.
 10.  Vyberte **Hotovo**.
@@ -132,7 +132,7 @@ Abyste získali nový přístupový token pro nástroj Postman, musíte přidat 
 
 12. Vyberte **Request Token** (Vyžádat token).
 
-    ![Informace pro token](media\reports-postman_getnewtoken.png)
+    ![Informace pro token](./media/reports-postman_getnewtoken.png)
 
 13. Na autorizační stránku služby Azure AD zadejte svoje přihlašovací údaje. Seznam tokenů v nástroji Postman teď obsahuje token s názvem `Bearer`.
 14. Vyberte **Use Token** (Použít token). Seznam hlaviček obsahuje novou hodnotu klíče pro autorizaci a hodnotu `Bearer <your-authorization-token>`.
@@ -142,7 +142,7 @@ Abyste získali nový přístupový token pro nástroj Postman, musíte přidat 
 1.  Vyberte **Send** (Odeslat).
 2.  V textu odpovědi nástroje Postman se zobrazí návratová data.
 
-    ![Postman 200OK](media\reports-postman_200OK.png)
+    ![Postman 200OK](./media/reports-postman_200OK.png)
 
 ## <a name="create-a-rest-client-c-to-get-data-from-the-intune-data-warehouse"></a>Vytvoření klienta REST (v jazyce C#), který získá data z datového skladu Intune
 
@@ -151,45 +151,45 @@ Následující vzorový kód obsahuje jednoduchého klienta REST. V kódu se pou
 > [!Note]  
 > Následující vzorový kód můžete [zpřístupnit na GitHubu](https://github.com/Microsoft/Intune-Data-Warehouse/blob/master/Samples/CSharp/Program.cs). V tomto úložišti GitHubu najdete jeho nejnovější změny a aktualizace.
 
-1.  Otevřete **Microsoft Visual Studio**.
-2.  Zvolte **Soubor** > **Nový projekt**. Rozbalte **Visual C#** a zvolte **Konzolová aplikace (.Net Framework)**.
-3.  Dejte projektu název ` IntuneDataWarehouseSamples`, přejděte do místa, kam chcete projekt uložit, a vyberte **OK**.
-4.  V Průzkumníkovi řešení klikněte na toto řešení pravým tlačítkem a vyberte **Spravovat balíčky NuGet pro řešení**. Vyberte **Procházet** a pak do vyhledávacího pole zadejte `Microsoft.IdentityModel.Clients.ActiveDirectory`.
+1. Otevřete **Microsoft Visual Studio**.
+2. Zvolte **Soubor** > **Nový projekt**. Rozbalte **Visual C#** a zvolte **Konzolová aplikace (.Net Framework)**.
+3. Dejte projektu název ` IntuneDataWarehouseSamples`, přejděte do místa, kam chcete projekt uložit, a vyberte **OK**.
+4. V Průzkumníkovi řešení klikněte na toto řešení pravým tlačítkem a vyberte **Spravovat balíčky NuGet pro řešení**. Vyberte **Procházet** a pak do vyhledávacího pole zadejte `Microsoft.IdentityModel.Clients.ActiveDirectory`.
 5. Zvolte tento balíček, v oblasti Spravovat balíčky pro vaše řešení vyberte projekt **IntuneDataWarehouseSamples** a pak vyberte **Nainstalovat**.
 6. Výběrem možnosti **Přijímám** přijměte licenci na tento balíček NuGet.
 7. Otevřete `Program.cs` v Průzkumníkovi řešení.
 
-    ![Projekt v sadě Visual Studio](media\reports-get_rest_data_in.png)
+    ![Projekt v sadě Visual Studio](./media/reports-get_rest_data_in.png)
 
-8.  Kód v souboru Program.cs nahraďte následujícím kódem:  
-    ```csharp
-namespace IntuneDataWarehouseSamples
-{
-    using System;
-    using System.Net.Http;
-    using System.Net.Http.Headers;
-    using Microsoft.IdentityModel.Clients.ActiveDirectory;
+8. Kód v souboru Program.cs nahraďte následujícím kódem:  
+   ```csharp
+   namespace IntuneDataWarehouseSamples
+   {
+   using System;
+   using System.Net.Http;
+   using System.Net.Http.Headers;
+   using Microsoft.IdentityModel.Clients.ActiveDirectory;
 
-    class Program
-    {
-     static void Main(string[] args)
-  {
+   class Program
+   {
+    static void Main(string[] args)
+   {
    /**
-    * TODO: Replace the below values with your own.
-    * emailAddress - The email address of the user that you will authenticate as.
-    *
-    * password  - The password for the above email address.
-    *    This is inline only for simplicity in this sample. We do not
-    *    recommend storing passwords in plaintext.
-    *
-    * applicationId - The application ID of the native app that was created in AAD.
-    *
-    * warehouseUrl   - The data warehouse URL for your tenant. This can be found in
-    *      the Azure portal.
-    *
-    * collectionName - The name of the warehouse entity collection you would like to
-    *      access.
-    */
+   * TODO: Replace the below values with your own.
+   * emailAddress - The email address of the user that you will authenticate as.
+   *
+   * password  - The password for the above email address.
+   *    This is inline only for simplicity in this sample. We do not
+   *    recommend storing passwords in plaintext.
+   *
+   * applicationId - The application ID of the native app that was created in AAD.
+   *
+   * warehouseUrl   - The data warehouse URL for your tenant. This can be found in
+   *      the Azure portal.
+   *
+   * collectionName - The name of the warehouse entity collection you would like to
+   *      access.
+   */
    var emailAddress = "intuneadmin@yourcompany.com";
    var password = "password_of(intuneadmin@yourcompany.com)";
    var applicationId = "<Application ID>";
@@ -198,9 +198,9 @@ namespace IntuneDataWarehouseSamples
 
    var adalContext = new AuthenticationContext("https://login.windows.net/common/oauth2/token");
    AuthenticationResult authResult = adalContext.AcquireTokenAsync(
-    resource: "https://api.manage.microsoft.com/",
-    clientId: applicationId,
-    userCredential: new UserPasswordCredential(emailAddress, password)).Result;
+   resource: "https://api.manage.microsoft.com/",
+   clientId: applicationId,
+   userCredential: new UserPasswordCredential(emailAddress, password)).Result;
 
    var httpClient = new HttpClient();
    httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authResult.AccessToken);
@@ -212,16 +212,16 @@ namespace IntuneDataWarehouseSamples
 
    Console.Write(response.Content.ReadAsStringAsync().Result);
    Console.ReadKey();
-  }
-    }
-    ```
+   }
+   }
+   ```
 
-9.  Aktualizujte `TODO` ve vzorovém kódu.
-10.  Stisknutím kláves **Ctrl+F5** sestavte a spusťte klienta Intune.DataWarehouseAPIClient v režimu ladění.
+9. Aktualizujte `TODO` ve vzorovém kódu.
+10. Stisknutím kláves **Ctrl+F5** sestavte a spusťte klienta Intune.DataWarehouseAPIClient v režimu ladění.
 
-    ![Entita dates načtená ve formátu JSON](media\reports-get_rest_data_output.png)
+    ![Entita dates načtená ve formátu JSON](./media/reports-get_rest_data_output.png)
 
-11.  Prohlédněte si výstup konzoly. Výstup obsahuje data ve formátu JSON přetažená z entity **dates** ve vašem tenantovi Intune.
+11. Prohlédněte si výstup konzoly. Výstup obsahuje data ve formátu JSON přetažená z entity **dates** ve vašem tenantovi Intune.
 
 ## <a name="next-steps"></a>Další kroky
 

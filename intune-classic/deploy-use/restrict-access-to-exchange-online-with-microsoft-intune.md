@@ -1,29 +1,29 @@
 ---
 title: Ochrana e-mailu na Exchangi Online
-description: "Chraňte a kontrolujte přístup k podnikovým e-mailům na Exchange Online pomocí podmíněného přístupu."
-keywords: 
+description: Chraňte a kontrolujte přístup k podnikovým e-mailům na Exchange Online pomocí podmíněného přístupu.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 01/31/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 5b0bb2b518705c92089e1e9ed1d1cfece7f2572f
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 5ea0e0c31dc3b24c0093d6e3b73d38f2bee50bd7
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="protect-email-access-to-exchange-online-and-new-exchange-online-dedicated-with-intune"></a>Ochrana přístupu k e-mailu na Exchangi Online a v novém Exchangi Online Dedicated s Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Pomocí Microsoft Intune můžete nakonfigurovat podmíněný přístup pro Exchange Online nebo Exchange Online Dedicated. Další informace o tom, jak podmíněný přístup funguje, najdete v článku [Ochrana přístupu k e-mailu, O365 a dalším službám](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
@@ -48,13 +48,13 @@ Pokud chcete nakonfigurovat podmíněný přístup, musíte:
 
 Když nakonfigurujete zásady podmíněného přístupu a jejich cílem je určitý uživatel, může se tento uživatel připojit k e-mailu teprve tehdy, když jeho **zařízení** splňuje tyto požadavky:
 
--   Je počítačem připojeným k doméně nebo **zaregistrovaným** v Intune.
+- Je počítačem připojeným k doméně nebo **zaregistrovaným** v Intune.
 
--  **Je zaregistrované v Azure Active Directory**. K tomu automaticky dojde při registraci zařízení v Intune. Kromě toho musí být ve službě Azure Active Directory zaregistrované ID protokolu Exchange ActiveSync klienta.
+- **Je zaregistrované v Azure Active Directory**. K tomu automaticky dojde při registraci zařízení v Intune. Kromě toho musí být ve službě Azure Active Directory zaregistrované ID protokolu Exchange ActiveSync klienta.
 
   Pro zákazníky s Intune a Office 365 se služba Azure Active Directory Device Registration aktivuje automaticky. Zákazníci, kteří už mají nasazenou službu ADFS Device Registration Service, registrovaná zařízení ve svojí místní službě Active Directory neuvidí.
 
--   Musí **vyhovovat** všem zásadám dodržování předpisů Intune, které jsou nasazené na toto zařízení nebo připojené k místní doméně.
+- Musí **vyhovovat** všem zásadám dodržování předpisů Intune, které jsou nasazené na toto zařízení nebo připojené k místní doméně.
 
 ### <a name="when-the-device-is-not-compliant"></a>Když zařízení nedodržuje předpisy
 
@@ -105,7 +105,7 @@ Přístup k e-mailu na Exchangi můžete chránit z integrovaného **e-mailovéh
 
 Podmíněný přístup se dá nastavit pro počítače, které používají desktopové aplikace Office pro přístup k **Exchangi Online** a **SharePointu Online** a splňují následující požadavky:
 
--   V počítači musí být systém Windows 7.0, Windows 8.1 nebo Windows 10.
+- V počítači musí být systém Windows 7.0, Windows 8.1 nebo Windows 10.
 
   >[!NOTE]
   > Pokud chcete použít podmíněný přístup u počítačů s Windows 10, musíte je aktualizovat na verzi Windows 10 Anniversary Update.
@@ -117,13 +117,13 @@ Podmíněný přístup se dá nastavit pro počítače, které používají desk
   U počítačů připojených k doméně musíte podmíněný přístup nastavit tak, aby se [zařízení automaticky zaregistrovalo](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) do služby Azure Active Directory.
 
   >[!NOTE]
-    >Podmíněný přístup není podporovaný na počítačích, ve kterých běží klient Intune pro počítače.
+  >Podmíněný přístup není podporovaný na počítačích, ve kterých běží klient Intune pro počítače.
 
--   [Musí být povolené moderní ověřování Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) a musí být nainstalované všechny nejnovější aktualizace Office.
+- [Musí být povolené moderní ověřování Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) a musí být nainstalované všechny nejnovější aktualizace Office.
 
-    Moderní ověřování integruje do klientů Office 2013/Windows přihlašování založené na knihovně ADAL (Active Directory Authentication Library). Umožňuje využívat lepší způsoby zabezpečení, jako jsou **vícefaktorové ověřování** a **ověřování na základě certifikátu**.
+  Moderní ověřování integruje do klientů Office 2013/Windows přihlašování založené na knihovně ADAL (Active Directory Authentication Library). Umožňuje využívat lepší způsoby zabezpečení, jako jsou **vícefaktorové ověřování** a **ověřování na základě certifikátu**.
 
--   Nastaví se pravidla deklarací služby AD FS pro blokování jiných než moderních ověřovacích protokolů. Podrobné pokyny obsahuje [Scénář 3: Blokování veškerého přístupu k O365 kromě aplikací využívajících prohlížeč](https://technet.microsoft.com/library/dn592182.aspx).
+- Nastaví se pravidla deklarací služby AD FS pro blokování jiných než moderních ověřovacích protokolů. Podrobné pokyny obsahuje [Scénář 3: Blokování veškerého přístupu k O365 kromě aplikací využívajících prohlížeč](https://technet.microsoft.com/library/dn592182.aspx).
 
 ## <a name="configure-conditional-access"></a>Konfigurace podmíněného přístupu
 ### <a name="step-1-configure-and-deploy-a-compliance-policy"></a>Krok 1: Konfigurace a nasazení zásad dodržování předpisů
@@ -161,10 +161,12 @@ Po spuštění sestavy zkontrolujte tyto čtyři sloupce, abyste zjistili, jestl
 Zařízením, která jsou součástí cílové skupiny, se bude blokovat přístup k Exchangi, pokud se hodnoty ve sloupcích nebudou shodovat s hodnotami uvedenými v této tabulce:
 
 --------------------------
-|Kanál pro správu|Zaregistrováno v AAD|Vyhovuje|ID protokolu Exchange ActiveSync|Výsledná akce|
-|----------------------|------------------|-------------|--------------------------|--------------------|
-|**Spravuje se v Microsoft Intune a Exchange ActiveSync**|Ano|Ano|Je zobrazená hodnota|Přístup k e-mailu je povolený|
-|Jakákoli jiná hodnota|Ne|Ne|Není zobrazená žádná hodnota|Přístup k e-mailu je blokovaný|
+
+|                          Kanál pro správu                          | Zaregistrováno v AAD | Vyhovuje | ID protokolu Exchange ActiveSync |    Výsledná akce     |
+|----------------------------------------------------------------------|----------------|-----------|------------------------|-------------------------|
+| <strong>Spravuje se v Microsoft Intune a Exchange ActiveSync</strong> |      Ano       |    Ano    |  Je zobrazená hodnota  | Přístup k e-mailu je povolený |
+|                           Jakákoli jiná hodnota                            |       Ne       |    Ne     | Není zobrazená žádná hodnota  | Přístup k e-mailu je blokovaný |
+
 ----------------------
 Obsah sestavy můžete vyexportovat a použít sloupec **E-mailová adresa** k informování uživatelů o tom, že budou blokovaní.
 
@@ -185,71 +187,71 @@ Vyhodnocují se jenom skupiny, které jsou cílem zásad podmíněného přístu
 
 ### <a name="step-4-configure-the-conditional-access-policy"></a>Krok 4: Konfigurace zásad podmíněného přístupu
 
->[!NOTE]
+> [!NOTE]
 > Zásady podmíněného přístupu můžete vytvořit i v konzole pro správu Azure AD. Přes konzolu pro správu Azure AD můžete vytvářet i zásady podmíněného přístupu pro zařízení Intune (v Azure AD označované jako **zásady podmíněného přístupu založené na zařízení**), kromě jiných zásad podmíněného přístupu, jako je například vícefaktorové ověřování.
+> 
+> Také můžete nastavit zásady podmíněného přístupu pro podnikové aplikace třetích stran, které Azure AD podporuje, například Salesforce nebo Box. Další informace najdete v tématu [Jak v Azure Active Directory nastavit zásady podmíněného přístupu založené na zařízení a získat tak kontrolu přístupu k aplikacím připojeným k Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
 
->Také můžete nastavit zásady podmíněného přístupu pro podnikové aplikace třetích stran, které Azure AD podporuje, například Salesforce nebo Box. Další informace najdete v tématu [Jak v Azure Active Directory nastavit zásady podmíněného přístupu založené na zařízení a získat tak kontrolu přístupu k aplikacím připojeným k Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
 
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte **Zásady** > **Podmíněný přístup** > **Zásady pro Exchange Online**.
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte **Zásady** > **Podmíněný přístup** > **Zásady pro Exchange Online**.
+2. Na stránce **Zásady pro Exchange Online** zvolte možnost **Zapnout zásady podmíněného přístupu pro Exchange Online**.
 
-2.  Na stránce **Zásady pro Exchange Online** zvolte možnost **Zapnout zásady podmíněného přístupu pro Exchange Online**.
+   > [!NOTE]
+   > Pokud jste zásady dodržování předpisů nenasadili, budou se zařízení považovat za vyhovující.
+   >
+   > Bez ohledu na stav dodržování předpisů se u všech uživatelů, na které jsou zásady zacílené, bude vyžadovat, aby svá zařízení zaregistrovali v Intune.
 
-    > [!NOTE]
-    > Pokud jste zásady dodržování předpisů nenasadili, budou se zařízení považovat za vyhovující.
-    >
-    > Bez ohledu na stav dodržování předpisů se u všech uživatelů, na které jsou zásady zacílené, bude vyžadovat, aby svá zařízení zaregistrovali v Intune.
+3. V části **Přístup k aplikaci** máte pro aplikace, které využívají moderní ověřování, dva způsoby volby platforem, pro které mají zásady platit. Podporovány jsou mimo jiné následující platformy: Android, iOS, Windows a Windows Phone.
 
-3.  V části **Přístup k aplikaci** máte pro aplikace, které využívají moderní ověřování, dva způsoby volby platforem, pro které mají zásady platit. Podporovány jsou mimo jiné následující platformy: Android, iOS, Windows a Windows Phone.
+   -   **Všechny platformy**
 
-    -   **Všechny platformy**
+       Tato volba vyžaduje, aby každé zařízení používané k přístupu k **Exchangi Online** bylo zaregistrované v Intune a dodržovalo tyto zásady. Všechny klientské aplikace používající **moderní ověřování** podléhají zásadám podmíněného přístupu. Pokud Intune příslušnou platformu aktuálně nepodporuje, je přístup k **Exchangi Online** zablokovaný.
 
-        Tato volba vyžaduje, aby každé zařízení používané k přístupu k **Exchangi Online** bylo zaregistrované v Intune a dodržovalo tyto zásady. Všechny klientské aplikace používající **moderní ověřování** podléhají zásadám podmíněného přístupu. Pokud Intune příslušnou platformu aktuálně nepodporuje, je přístup k **Exchangi Online** zablokovaný.
+       Výběr volby **Všechny platformy** způsobí, že Azure Active Directory tyto zásady uplatní na všechny požadavky na ověření bez ohledu na platformu, která je ohlášena klientskou aplikací. Všechny platformy musí být zaregistrované a vyhovující, s těmito výjimkami:
+       *   Zařízení s Windows, která musejí být zaregistrovaná a vyhovující, připojená k doméně s místním Active Directory nebo obojí
+       * Nepodporované platformy jako Mac OS. Aplikace, které používají moderní ověřování a pocházejí z těchto platforem, však budou i nadále zablokované.
 
-        Výběr volby **Všechny platformy** způsobí, že Azure Active Directory tyto zásady uplatní na všechny požadavky na ověření bez ohledu na platformu, která je ohlášena klientskou aplikací. Všechny platformy musí být zaregistrované a vyhovující, s těmito výjimkami:
-        *   Zařízení s Windows, která musejí být zaregistrovaná a vyhovující, připojená k doméně s místním Active Directory nebo obojí
-        * Nepodporované platformy jako Mac OS. Aplikace, které používají moderní ověřování a pocházejí z těchto platforem, však budou i nadále zablokované.
+   -   **Specifické platformy**
 
-    -   **Specifické platformy**
-
-         Zásady podmíněného přístupu platí pro každou klientskou aplikaci, která na určených platformách zařízení používá **moderní ověřování**.
+        Zásady podmíněného přístupu platí pro každou klientskou aplikaci, která na určených platformách zařízení používá **moderní ověřování**.
 
 4. V části **Outlook Web Access (OWA)** je možné povolit přístup k Exchangi Online pouze prostřednictvím podporovaných prohlížečů: Safari (iOS) a Chrome (Android). Přístup z jiných prohlížečů je blokovaný. Omezení platformy, která jste vybrali pro přístup k aplikaci pro Outlook, se použijí i zde.
 
-  V zařízeních s **Androidem** musí uživatelé povolit přístup z prohlížeče. Uživatel proto musí na zaregistrovaném zařízení povolit možnost **Povolit přístup z prohlížeče** následujícím způsobem:
-  1.    Otevřete **aplikaci Portál společnosti**.
-  2.    Přejděte na stránku **Nastavení** prostřednictvím tlačítka se třemi tečkami (...) nebo hardwarového tlačítka nabídky.
-  3.    Stiskněte tlačítko **Povolit přístup z prohlížeče**.
-  4.    V prohlížeči Chrome se odhlaste z Office 365 a znovu spusťte Chrome.
+   V zařízeních s **Androidem** musí uživatelé povolit přístup z prohlížeče. Uživatel proto musí na zaregistrovaném zařízení povolit možnost **Povolit přístup z prohlížeče** následujícím způsobem:
+   1.    Otevřete **aplikaci Portál společnosti**.
+   2.    Přejděte na stránku **Nastavení** prostřednictvím tlačítka se třemi tečkami (...) nebo hardwarového tlačítka nabídky.
+   3.    Stiskněte tlačítko **Povolit přístup z prohlížeče**.
+   4.    V prohlížeči Chrome se odhlaste z Office 365 a znovu spusťte Chrome.
 
-  V platformách **iOS** a **Android** kvůli identifikaci zařízení použitého pro přístup ke službě vydá Azure Active Directory pro příslušné zařízení certifikát TLS (Transport Layer Security). Zařízení zobrazí certifikát s výzvou pro uživatele, aby vybral certifikát, jak je vidět na následujících snímcích obrazovky. Aby mohl uživatel dál používat prohlížeč, musí tento certifikát vybrat.
+   V platformách **iOS** a **Android** kvůli identifikaci zařízení použitého pro přístup ke službě vydá Azure Active Directory pro příslušné zařízení certifikát TLS (Transport Layer Security). Zařízení zobrazí certifikát s výzvou pro uživatele, aby vybral certifikát, jak je vidět na následujících snímcích obrazovky. Aby mohl uživatel dál používat prohlížeč, musí tento certifikát vybrat.
 
-  **iOS**
+   **iOS**
 
-  ![Snímek obrazovky s výzvou k výběru certifikátu na iPadu](../media/mdm-browser-ca-ios-cert-prompt.png)
+   ![Snímek obrazovky s výzvou k výběru certifikátu na iPadu](../media/mdm-browser-ca-ios-cert-prompt.png)
 
-  **Android**
+   **Androidemem**
 
-  ![snímek obrazovky s výzvou ohledně certifikátu řádku v zařízení s Androidem](../media/mdm-browser-ca-android-cert-prompt.png)
+   ![snímek obrazovky s výzvou ohledně certifikátu řádku v zařízení s Androidem](../media/mdm-browser-ca-android-cert-prompt.png)
 
-5.  V části **Aplikace Exchange ActiveSync** se můžete rozhodnout blokovat zařízením, která nesplňují zásady dodržování předpisů, přístup na Exchange Online. Můžete také zvolit, jestli chcete povolit nebo blokovat přístup k e-mailu, pokud zařízení neběží na podporované platformě. Podporovány jsou mimo jiné následující platformy: Android, iOS, Windows a Windows Phone.
+5. V části **Aplikace Exchange ActiveSync** se můžete rozhodnout blokovat zařízením, která nesplňují zásady dodržování předpisů, přístup na Exchange Online. Můžete také zvolit, jestli chcete povolit nebo blokovat přístup k e-mailu, pokud zařízení neběží na podporované platformě. Podporovány jsou mimo jiné následující platformy: Android, iOS, Windows a Windows Phone.
 
- Aplikace Exchange Active Sync na zařízeních s **Androidem for Work**:
- -  Na zařízeních s Androidem for Work se v **pracovním profilu** podporují jenom aplikace **Gmail** a **Nine Work**. Aby na zařízeních s Androidem for Work fungoval podmíněný přístup, je nutné nasadit e-mailový profil pro aplikaci Gmail nebo Nine Work a zároveň ji nasadit jako **požadovanou** instalaci.
+   Aplikace Exchange Active Sync na zařízeních s **Androidem for Work**:
+   -  Na zařízeních s Androidem for Work se v **pracovním profilu** podporují jenom aplikace **Gmail** a **Nine Work**. Aby na zařízeních s Androidem for Work fungoval podmíněný přístup, je nutné nasadit e-mailový profil pro aplikaci Gmail nebo Nine Work a zároveň ji nasadit jako **požadovanou** instalaci.
 
-6.  V části **Cílové skupiny** vyberte skupiny zabezpečení uživatelů Active Directory, na které se zásady vztahují. Můžete cílit na všechny uživatele nebo vybraný seznam skupin uživatelů.
-![Snímek obrazovky se stránkou zásad podmíněného přístupu Exchange Online, na které se zobrazují možnosti Cílové skupiny a Vyloučené skupiny](../media/IntuneSA5eTargetedExemptedGroups.PNG)
-    > [!NOTE]
-    > U uživatelů, kteří jsou v **cílových skupinách**, nahrazují zásady Intune pravidla a zásady Exchange.
-    >
-    > Exchange bude vynucovat pravidla Exchange pro povolování, blokování a karanténu a zásady Exchange jenom v těchto případech:
-    >
-    > -   Uživatel nemá licenci na službu Intune.
-    > -   Uživatel má licenci na službu Intune, ale nepatří do žádné skupiny zabezpečení, na kterou cílí zásady podmíněného přístupu.
+6. V části **Cílové skupiny** vyberte skupiny zabezpečení uživatelů Active Directory, na které se zásady vztahují. Můžete cílit na všechny uživatele nebo vybraný seznam skupin uživatelů.
+   ![Snímek obrazovky se stránkou zásad podmíněného přístupu Exchange Online, na které se zobrazují možnosti Cílové skupiny a Vyloučené skupiny](../media/IntuneSA5eTargetedExemptedGroups.PNG)
+   > [!NOTE]
+   > U uživatelů, kteří jsou v **cílových skupinách**, nahrazují zásady Intune pravidla a zásady Exchange.
+   >
+   > Exchange bude vynucovat pravidla Exchange pro povolování, blokování a karanténu a zásady Exchange jenom v těchto případech:
+   >
+   > -   Uživatel nemá licenci na službu Intune.
+   > -   Uživatel má licenci na službu Intune, ale nepatří do žádné skupiny zabezpečení, na kterou cílí zásady podmíněného přístupu.
 
-6.  V části **Vyloučené skupiny**vyberte skupiny zabezpečení Active Directory uživatelů, kteří jsou z těchto zásad vyloučení. Pokud je uživatel v cílových skupinách i ve vyloučených skupinách, bude ze zásad vyloučený.
+7. V části **Vyloučené skupiny**vyberte skupiny zabezpečení Active Directory uživatelů, kteří jsou z těchto zásad vyloučení. Pokud je uživatel v cílových skupinách i ve vyloučených skupinách, bude ze zásad vyloučený.
 
-7.  Po dokončení vyberte **Uložit**.
+8. Po dokončení vyberte **Uložit**.
 
 -   Zásady podmíněného přístupu nemusíte nasazovat, projeví se okamžitě.
 

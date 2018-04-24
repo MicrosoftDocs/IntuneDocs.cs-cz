@@ -14,15 +14,15 @@ ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
 ms.reviewer: amyro
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 67d12c748c5f4daabcb64eff7a154455b39a57d0
-ms.sourcegitcommit: 820f950d1fc80b1eb5db1b0cf77f44d92a969951
+ms.openlocfilehash: decb2dee8d2029c70f7f08df507f42211e0f21bb
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Přiřazení licencí uživatelům, aby mohli zaregistrovat zařízení v Intune
 
-[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
+[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 Ať už přidáváte uživatele ručně, nebo provádíte synchronizaci z místní služby Active Directory, musíte nejdřív všem uživatelům přiřadit licence Intune, aby mohli svá zařízení registrovat do Intune. Seznam licencí najdete v tématu [Licence zahrnující Intune](licenses.md).
 
@@ -30,13 +30,13 @@ Ať už přidáváte uživatele ručně, nebo provádíte synchronizaci z místn
 
 Pomocí [portálu služeb Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) můžete ručně přidat cloudové uživatele a přiřadit licence účtům cloudových uživatelů i účtům, které se synchronizovaly z místního adresáře služby Active Directory do Azure AD.
 
-1.  Přihlaste se na [portál služeb Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) pomocí svých přihlašovacích údajů správce tenanta a potom vyberte **Uživatelé** > **Aktivní uživatelé**.
+1. Přihlaste se na [portál služeb Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) pomocí svých přihlašovacích údajů správce tenanta a potom vyberte **Uživatelé** > **Aktivní uživatelé**.
 
-2.  Vyberte uživatelský účet, kterému chcete přiřadit uživatelskou licenci Intune, a potom vyberte **Licence na produkty** > **Upravit**.
+2. Vyberte uživatelský účet, kterému chcete přiřadit uživatelskou licenci Intune, a potom vyberte **Licence na produkty** > **Upravit**.
 
-3.  Přepněte **Intune** nebo **Enterprise Mobility + Security** na **Zapnuto** a vyberte **Uložit**.
+3. Přepněte **Intune** nebo **Enterprise Mobility + Security** na **Zapnuto** a vyberte **Uložit**.
 
-  ![Snímek obrazovky s portálem Office 365 – část Licence na produkty](./media/office-assign-license.png)
+   ![Snímek obrazovky s portálem Office 365 – část Licence na produkty](./media/office-assign-license.png)
 
 4. Uživatelský účet má teď oprávnění potřebná k používání služby a registraci zařízení pro správu.
 

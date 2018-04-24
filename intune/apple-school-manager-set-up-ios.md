@@ -1,29 +1,29 @@
 ---
-title: "Nastavení registrace programu Apple School Manager pro zařízení s iOSem"
+title: Nastavení registrace programu Apple School Manager pro zařízení s iOSem
 titlesuffix: Microsoft Intune
-description: "Přečtěte si, jak pomocí Intune nastavit registraci programu Apple School Manager pro zařízení s iOSem vlastněná společností."
-keywords: 
+description: Přečtěte si, jak pomocí Intune nastavit registraci programu Apple School Manager pro zařízení s iOSem vlastněná společností.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d3a599ff1dff3e27214dfcca694f6b97333f370a
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: afcca0cc1f7786f468856f2aacefc0b8168b4934
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-ios-device-enrollment-with-apple-school-manager"></a>Nastavení registrace zařízení s iOSem pomocí Apple School Manageru
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 > [!NOTE]
 > ### <a name="temporary-user-interface-differences"></a>Dočasné rozdíly v uživatelském rozhraní
@@ -61,7 +61,7 @@ Než budete moct registrovat zařízení s iOSem vlastněná společností pomoc
 **Krok 1: Stáhněte si certifikát veřejného klíče Intune, který je potřebný k vytvoření tokenu Apple.**<br>
 1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení** a pak zvolte **Token Programu registrace**.
 
-  ![Podokno Token Programu registrace v pracovním prostoru Certifikáty Apple pro stažení veřejného klíče](./media/enrollment-program-token-download.png)
+   ![Podokno Token Programu registrace v pracovním prostoru Certifikáty Apple pro stažení veřejného klíče](./media/enrollment-program-token-download.png)
 
 2. V okně **Token Programu registrace** zvolte **Stáhnout veřejný klíč** a stáhněte a místně uložte soubor šifrovacího klíče (.pem). Soubor .pem slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple School Manager.
 
@@ -95,20 +95,20 @@ Registrační profil zařízení definuje nastavení, která se během registrac
 4. V okně **Vytvořit registrační profil** zadejte **název** a **popis** profilu, který se zobrazí v Intune.
 5. V části **Přidružení uživatele** zvolte, jestli se zařízení s tímto profilem budou registrovat s přidružením uživatele nebo bez.
 
- - **Zaregistrovat s přidružením uživatele** – během instalace přidruží zařízení k uživateli.
+   - **Zaregistrovat s přidružením uživatele** – během instalace přidruží zařízení k uživateli.
 
-  Režim Sdílený iPad programu Apple School Manager vyžaduje registraci uživatele bez přidružení uživatele.
+   Režim Sdílený iPad programu Apple School Manager vyžaduje registraci uživatele bez přidružení uživatele.
 
- - **Zaregistrovat bez přidružení uživatele** – zvolte pro zařízení nespojená s jedním uživatelem, například nesdílená zařízení. Použijte u zařízení určených k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, jako je aplikace Portál společnosti, nefungují.
+   - **Zaregistrovat bez přidružení uživatele** – zvolte pro zařízení nespojená s jedním uživatelem, například nesdílená zařízení. Použijte u zařízení určených k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, jako je aplikace Portál společnosti, nefungují.
 
 6. Zvolte **Nastavení správy zařízení**. Tyto položky jsou nastaveny při aktivaci a jejich změna vyžaduje obnovení továrního nastavení. nakonfigurujte následující nastavení profilu a potom zvolte **Uložit**:
 
-  ![Výběr režimu správy](./media/enrollment-program-profile-mode.png)
+   ![Výběr režimu správy](./media/enrollment-program-profile-mode.png)
 
-    - **Pod dohledem** – Režim, který nabízí více možností správy a ve výchozím nastavení má zakázaný zámek aktivace. Pokud políčko nezaškrtnete, budete mít omezené možnosti správy.
+   - **Pod dohledem** – Režim, který nabízí více možností správy a ve výchozím nastavení má zakázaný zámek aktivace. Pokud políčko nezaškrtnete, budete mít omezené možnosti správy.
 
      - **Uzamčená registrace** – (Vyžaduje režim správy Pod dohledem.) Zakáže nastavení iOSu, která by mohla umožnit odebrání profilu správy. Pokud políčko nezaškrtnete, půjde profil správy odebrat z nabídky Nastavení.
-   - **Sdílený iPad** – (Vyžaduje režimy **Zaregistrovat bez přidružení uživatele** a Pod dohledem.) Umožňuje více uživatelům přihlásit se k zaregistrovaným iPadům pomocí spravovaného Apple ID. Spravovaná Apple ID se vytváří na portálu Apple School Manager. Přečtěte si další informace o [sdíleném iPadu](education-settings-configure-ios-shared.md). Měli byste si přečíst také [požadavky společnosti Apple na sdílené iPady](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
+     - **Sdílený iPad** – (Vyžaduje režimy **Zaregistrovat bez přidružení uživatele** a Pod dohledem.) Umožňuje více uživatelům přihlásit se k zaregistrovaným iPadům pomocí spravovaného Apple ID. Spravovaná Apple ID se vytváří na portálu Apple School Manager. Přečtěte si další informace o [sdíleném iPadu](education-settings-configure-ios-shared.md). Měli byste si přečíst také [požadavky společnosti Apple na sdílené iPady](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 
    >[!NOTE]
    >Pokud je **Přidružení uživatele** nastavené na **S přidružením uživatele** nebo je režim **Pod dohledem** nastavený na **Vypnuto**, je režim Sdílený iPad pro registrační profil zakázaný.
@@ -151,12 +151,12 @@ Když jste službě Intune přiřadili oprávnění ke správě zařízení Appl
 
 1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení** > **Registrace Apple** > **Zařízení Programu registrace** > **Synchronizovat**. Indikátor průběhu vám ukáže dobu, jakou budete muset počkat před dalším vyžádáním synchronizace.
 
-  ![Vybraný uzel Zařízení Programu registrace a vybraný odkaz Synchronizovat](./media/enrollment-program-device-sync.png)
+   ![Vybraný uzel Zařízení Programu registrace a vybraný odkaz Synchronizovat](./media/enrollment-program-device-sync.png)
 2. V okně **Synchronizovat** vyberte **Požadovat synchronizaci**. Indikátor průběhu vám ukáže dobu, jakou budete muset počkat před dalším vyžádáním synchronizace.
 
-  ![Synchronizační okno s vybraným odkazem Požadovat synchronizaci](./media/enrollment-program-device-request-sync.png)
+   ![Synchronizační okno s vybraným odkazem Požadovat synchronizaci](./media/enrollment-program-device-request-sync.png)
 
-  Pro dosažení souladu s podmínkami společnosti Apple pro přijatelné přenosy platí v Intune následující omezení:
+   Pro dosažení souladu s podmínkami společnosti Apple pro přijatelné přenosy platí v Intune následující omezení:
    -    Úplná synchronizace se nesmí pouštět častěji než jednou za sedm dní. Během úplné synchronizace Intune aktualizuje všechna sériová čísla, která společnost Apple přiřadila Intune, bez ohledu na jejich dřívější synchronizaci. Pokud se o úplnou synchronizaci pokusíte do sedmi dnů od předchozí úplné synchronizace, aktualizuje Intune jenom sériová čísla, která ještě nejsou v Intune.
    -    Každá žádost o synchronizaci má 15 minut na dokončení. Po tuto dobu nebo do úspěšného vykonání požadavku je tlačítko **Synchronizovat** neaktivní.
 
@@ -169,15 +169,15 @@ Zařízením Apple School Manageru spravovaným v Intune musíte před registrac
 1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení** > **Registrace Apple** a potom **Profily Programu registrace**.
 2. V seznamu **Profily Programu registrace** zvolte profil, který chcete zařízením přiřadit, a pak zvolte **Přiřazení zařízení**.
 
- ![Přiřazení zařízení s vybranou možností Přiřadit](./media/enrollment-program-device-assign.png)
+   ![Přiřazení zařízení s vybranou možností Přiřadit](./media/enrollment-program-device-assign.png)
 
 3. Zvolte **Přiřadit** a pak zvolte zařízení Apple School Manageru, ke kterým chcete tento profil přiřadit. Dostupná zařízení můžete filtrovat:
-  - **nepřiřazené**
-  - **libovolné**
-  - **&lt;název profilu&gt;**
+   - **nepřiřazené**
+   - **libovolné**
+   - **&lt;název profilu&gt;**
 4. Vyberte zařízení, která chcete přiřadit. Zaškrtávací políčko nad sloupcem umožňuje vybrat až 1 000 uvedených zařízení. Klikněte na tlačítko **Přiřadit**. Pokud chcete registrovat více než 1 000 zařízení, opakujte postup, dokud nebudou mít všechna zařízení přiřazený profil registrace.
 
-  ![Tlačítko Přiřadit pro přiřazení profilu programu registrace v Intune](media/dep-profile-assignment.png)
+   ![Tlačítko Přiřadit pro přiřazení profilu programu registrace v Intune](media/dep-profile-assignment.png)
 
 ## <a name="distribute-devices-to-users"></a>Distribuce zařízení uživatelům
 

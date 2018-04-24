@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ae0acf53a4987dac21e576826477d32da1f56155
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 2e3e71f52979f6285a14c5cc4fe26ea912cb3a42
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="azure-portal-for-intune-app-protection-policies"></a>Azure Portal pro zásady ochrany aplikací Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Azure Portal slouží k vytváření a správě zásad ochrany aplikací pro:
 
@@ -32,9 +32,9 @@ Azure Portal slouží k vytváření a správě zásad ochrany aplikací pro:
 - Aplikace spuštěné v zařízeních, která **nejsou zaregistrovaná** v žádném řešení MDM
 - Aplikace spuštěné v zařízeních, která **jsou zaregistrovaná v řešení MDM třetí strany**.
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > Azure Portal je nová konzola pro správu, která slouží k vytváření zásad ochrany aplikací, ale umožňuje také vytvářet zásady ochrany aplikací, které podporují aplikace pro zařízení zaregistrované v Intune pomocí [konzoly pro správu Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) pro scénáře MDM.
-
+> 
 > V konzole pro správu Intune se nemusí zobrazovat všechna dostupná nastavení zásad ochrany aplikací. Kromě toho platí, že pokud vytvoříte zásady ochrany aplikací v konzole pro správu Intune i na portálu Azure Portal, přepíšou zásady vytvořené na portálu Azure Portal zásady vytvořené v konzole pro správu Intune. V tomto scénáři se zásady ochrany aplikací vytvořené na portálu Azure Portal použijí u aplikací a nasadí u uživatelů.
 
 

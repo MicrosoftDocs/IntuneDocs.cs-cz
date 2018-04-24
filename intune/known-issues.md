@@ -1,37 +1,35 @@
 ---
-title: "Známé problémy v Microsoft Intune"
-titlesuffix: Microsoft Intune
-description: "Přečtěte si o známých problémech v Microsoft Intune."
-keywords: 
+title: Známé problémy v Microsoft Intune – Azure | Microsoft Docs
+description: Přečtěte si o známých problémech v Microsoft Intune.
+keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 03/08/2018
+ms.date: 03/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 02efc7e2369c590e2d21ac8c27db54ffbaae38c1
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: d0a8a189e708ed140c3cda987a20cebb562fdb34
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Známé problémy v Microsoft Intune
 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-
-Toto téma vám pomůže dozvědět se více o známých problémech v Microsoft Intune.
+V tomto článku se dozvíte více o známých problémech v Microsoft Intune.
 
 Pokud chcete nahlásit chybu, která tu není uvedená, [otevřete žádost o podporu](get-support.md).
 
-Pokud chcete zažádat o novou funkci pro Intune, zvažte zaslání zprávy na webu [Uservoice](https://microsoftintune.uservoice.com/forums/291681-ideas/category/189016-azure-admin-console).
+Pokud chcete zažádat o novou funkci pro Intune, můžete nám zaslat zprávu prostřednictvím webu [Uservoice](https://microsoftintune.uservoice.com/forums/291681-ideas/category/189016-azure-admin-console).
 
 ## <a name="migration"></a>Migrace
 
@@ -50,7 +48,7 @@ Nejde zobrazit informace o stavu pro zásady, které se migrovaly z klasického 
 ## <a name="apps"></a>Aplikace
 
 ### <a name="ios-volume-purchased-apps-only-available-in-default-intune-tenant-language"></a>Hromadně zakoupené aplikace pro iOS jsou k dispozici pouze ve výchozím jazyce tenanta Intune
-Hromadně zakoupené aplikaci pro iOS se zobrazují a jde je přiřadit pouze ke stejnému kódu země, jaký má účet Intune. Intune synchronizuje pouze aplikace ze stejného národního prostředí iTunes, jako je kód země účtu tenanta Intune. Pokud třeba koupíte aplikaci, která je k dispozici jenom pro USA, ale váš účet Intune je český, Intune tuto aplikaci nezobrazí.
+Hromadně zakoupené aplikaci pro iOS se zobrazují a jde je přiřadit pouze ke stejnému kódu země, jaký má účet Intune. Intune synchronizuje jenom aplikace ze stejného národního prostředí iTunes, jako je kód země účtu tenanta Intune. Pokud třeba koupíte aplikaci dostupnou jenom pro USA, ale váš účet Intune je český, Intune tuto aplikaci nezobrazí.
 
 ### <a name="multiple-copies-of-the-same-ios-volume-purchase-program-are-uploaded"></a>Nahrálo se více kopií jednoho hromadně zakoupeného programu pro iOS
 Neklikejte u jednoho tokenu VPP na tlačítko **Nahrát** vícekrát. Pokud to uděláte, nahrají se duplicitní tokeny VPP a aplikace se u stejného tokenu VPP budou synchronizovat vícekrát.
@@ -66,9 +64,8 @@ Pro zařízení, která nejsou zaregistrovaná v Intune, můžete do pole **Podn
 Pokud přidáte další domény (pomocí možnosti **Upřesnit nastavení** > **Hranice sítě** > **Přidat chráněnou doménu**), zásadu nejde uložit. Zobrazená chybová zpráva se brzy změní, aby byla přesnější.
 
 ### <a name="cisco-anyconnect-vpn-client-support"></a>Podpora klientů VPN Cisco AnyConnect
+Nejnovější vydaná verze klienta VPN Cisco AnyConnect (4.0.07072) v současnosti není kompatibilní s Intune. Budoucí aktualizace Intune umožní kompatibilitu s touto verzí klienta VPN. Do té doby doporučujeme klienta VPN Cisco AnyConnect neaktualizovat a dál používat stávající verzi.
 
-Nejnovější vydaná verze klienta VPN Cisco AnyConnect (4.0.07072) v současnosti není kompatibilní s Intune.
-Budoucí aktualizace Intune umožní kompatibilitu s touto verzí klienta VPN. Do té doby doporučujeme klienta VPN Cisco AnyConnect neaktualizovat a dál používat stávající verzi.
 
 ### <a name="using-the-numeric-password-type-with-macos-sierra-devices"></a>Použití číselného typu hesla pro zařízení s macOS Sierra
 

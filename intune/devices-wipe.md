@@ -13,15 +13,15 @@ ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e4581b59de68c2877b122887fa1ffe86eaa2b92c
-ms.sourcegitcommit: 390a4be5aa36007c36fb6a5abcfe8d20bc862a4b
+ms.openlocfilehash: bb191f33133b85613f491220c970947b9e55b79f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Odebrání zařízení pomocí obnovení továrního nastavení nebo odebrání firemních dat
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Zařízení, která už nepotřebujete, která využíváte k jinému účelu nebo která se ztratila, můžete z Intune odebrat. Můžete k tomu použít akce **Odebrat firemní data** nebo **Obnovení továrního nastavení**. Uživatelé můžou také z Portálu společnosti Intune vydat vzdálený příkaz zařízením v osobním vlastnictví, která jsou registrovaná v Intune.
 
@@ -72,7 +72,7 @@ Následující tabulky popisují, jaká data se odeberou a jaký vliv má akce *
 |Nastavení profilu certifikátu|Certifikáty jsou odebrané a odvolané.|
 |Agent pro správu|Odebere se profil pro správu.|
 |E-mailu|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune. Odstraní se e-maily v mezipaměti zařízení.|
-|Outlook|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro iOS.|
+|Outlook|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro iOS. Nejprve ale budete muset uživatelům iOSu nasadit mobilní aplikaci Outlook jako požadovanou aplikaci.|
 |Zrušení připojení k Azure AD|Odebere se záznam Azure AD.|
 |Kontakty |Odeberou se kontakty synchronizované přímo z aplikace do nativního adresáře. Kontakty synchronizované z nativního adresáře do jiného externího zdroje není možné odebrat. <br /> <br />V současné době se podporuje jenom aplikace Outlook.
 

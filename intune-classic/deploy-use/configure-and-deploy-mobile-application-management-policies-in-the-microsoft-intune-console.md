@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 94c6a46d2213ba3d1389b52f7684ec531e40228a
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: e1b4903eedaec53015a01a7711f87401dc02d24e
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console"></a>Configure and deploy mobile application management policies in the Microsoft Intune console
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Zásady správy mobilních aplikací (MAM) ve službě Microsoft Intune umožňují upravovat funkce aplikací, které nasazujete, a přizpůsobit je zásadám dodržování předpisů a zabezpečení vaší společnosti. Můžete třeba omezit operace vyjmutí, kopírování a vložení v rámci spravované aplikace nebo aplikaci nakonfigurovat tak, aby všechny webové odkazy otevírala ve spravovaném prohlížeči.
 
@@ -180,7 +180,7 @@ Po vytvoření a nasazení aplikace přidružené k zásadě správy mobilních 
 
 4.  Vyberte zásady správy mobilní aplikace, jejichž stav chcete zobrazit. Na podrobnosti o zásadě se můžete podívat v dolním podokně a rozbalit její uzel k zobrazení jejího nastavení.
 
-5.  Ve sloupci **Stav** každé ze zásad správy mobilních aplikací se bude zobrazovat hodnota **Vyhovuje**, **Vyhovuje (čekání na schválení)**nebo **Chyba**. Pokud má vybraná zásada jedno nebo víc konfliktních nastavení, zobrazí se v tomto poli hodnota **Chyba**.
+5.  Ve sloupci **Stav** každé ze zásad správy mobilních aplikací se bude zobrazovat hodnota **Vyhovuje**, **Vyhovuje (čekání na schválení)** nebo **Chyba**. Pokud má vybraná zásada jedno nebo víc konfliktních nastavení, zobrazí se v tomto poli hodnota **Chyba**.
 
 6.  Po zjištění konfliktu můžete nastavení konfliktní zásady zkontrolovat, jestli používá stejné nastavení, nebo můžete nasadit jednu zásadu pro aplikaci a uživatele.
 

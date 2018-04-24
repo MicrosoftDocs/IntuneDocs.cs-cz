@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8f19318256dc4480207097d2f4ab393b799e207a
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: b39f7cac8c09813eb9db94e761ec6fa6ab53c7a0
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-lookout-device-compliance-policy-in-intune"></a>Vytváření zásad dodržování předpisů zařízení pro Lookout ve službě Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Služba Intune s ochranou před mobilními hrozbami Lookout umožňuje zjišťovat hrozby a posuzovat rizika na mobilních zařízeních. Můžete vytvořit pravidlo zásad dodržování předpisů, které posuzuje rizika a zjišťuje, jestli je zařízení v souladu s nimi. Pomocí zásad podmíněného přístupu pak můžete zablokovat přístup ke službám podle toho, jestli zařízení dodržuje předpisy.
 
@@ -36,13 +36,13 @@ Požadavky na zásady dodržování předpisů s ochranou zařízení před mobi
 V rámci nastavení ochrany před mobilními hrozbami Lookout jste v [konzole Lookout](https://aad.lookout.com) vytvořili zásadu, která klasifikuje různé hrozby jako vysoké, střední nebo nízké. V zásadách dodržování předpisů Intune nastavujete maximální povolené úrovně hrozby.
 
 1. V [konzole správce Intune](https://manage.microsoft.com) přejděte na stránku **Zásady dodržování předpisů**. Můžete použít stávající zásady dodržování předpisů, nebo vytvořit nové. Přejděte na **Stav zařízení** a povolte možnost **Ochrana zařízení před internetovými útoky**.
-  ![snímek obrazovky zobrazující nastavení pravidla ochrany zařízení před hrozbami](../media/mtp/mtp-compliance-policy-rule.png)
+   ![snímek obrazovky zobrazující nastavení pravidla ochrany zařízení před hrozbami](../media/mtp/mtp-compliance-policy-rule.png)
 
 2. Vyberte **maximální povolenou úroveň ohrožení:**
-  * **Žádná (zabezpečeno):** Toto je nejbezpečnější úroveň.  Zařízení nemůže přistupovat k prostředkům společnosti, pokud je vystavené nějakým hrozbám.  Pokud se najde jakákoli hrozba, zařízení se vyhodnotí jako nevyhovující.  
-  * **Nízká:** Zařízení se vyhodnotí jako vyhovující i v případě, že se v něm nachází jenom hrozby nízké úrovně. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
-  * **Střední:** Zařízení vyhovuje, pokud se v něm přítomné hrozby pohybují na střední nebo nízké úrovni. Pokud se v zařízení zjistí hrozby vysoké úrovně, vyhodnotí se jako nevyhovující.
-  * **Vysoká**: Jedná se o nejméně bezpečnou možnost. Tato možnost povoluje všechny úrovně hrozeb a používá Lookout Mobile Threat Protection jenom pro účely generování sestav.
+   * **Žádná (zabezpečeno):** Toto je nejbezpečnější úroveň.  Zařízení nemůže přistupovat k prostředkům společnosti, pokud je vystavené nějakým hrozbám.  Pokud se najde jakákoli hrozba, zařízení se vyhodnotí jako nevyhovující.  
+   * **Nízká:** Zařízení se vyhodnotí jako vyhovující i v případě, že se v něm nachází jenom hrozby nízké úrovně. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
+   * **Střední:** Zařízení vyhovuje, pokud se v něm přítomné hrozby pohybují na střední nebo nízké úrovni. Pokud se v zařízení zjistí hrozby vysoké úrovně, vyhodnotí se jako nevyhovující.
+   * **Vysoká**: Jedná se o nejméně bezpečnou možnost. Tato možnost povoluje všechny úrovně hrozeb a používá Lookout Mobile Threat Protection jenom pro účely generování sestav.
 
 ![snímek obrazovky zobrazující možnost úrovně hrozeb pro nastavení pravidla ochrany zařízení před internetovými útoky](../media/mtp/mtp-compliance-policy-setting.png)
 

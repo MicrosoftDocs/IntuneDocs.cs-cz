@@ -1,45 +1,45 @@
 ---
-title: "Na zařízení s iOSem je potřeba si nainstalovat aplikaci Lookout for Work | Dokumentace Microsoftu"
-description: "Zjistěte, jak nainstalovat Lookout for Work na zařízení s iOSem."
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Na zařízení s iOSem je potřeba si nainstalovat aplikaci Lookout for Work | Microsoft Docs
+description: Zjistěte, jak nainstalovat Lookout for Work na zařízení s iOSem.
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 09/25/2017
+ms.date: 04/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7adab655-8317-4512-ba7d-beeaa25bbf6c
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: ae05df1478baa8b965cdcd11a47ffc0d694734ab
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: fda95e461fe8412b26289bc601d8282588cd211c
+ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="install-lookout-for-work-on-your-ios-device"></a>Instalace Lookout for Work na zařízení s iOSem
 
 
-Než budete moct začít pracovat, vaše společnost potřebuje, abyste nainstalovali aplikaci Lookout for Work. Ta pomáhá chránit vaše zařízení hledáním potenciálních bezpečnostních hrozeb. V závislosti na tom, jak váš správce IT aplikaci Lookout for Work nastavil, se vám v zařízení můžou zobrazit různé výzvy.
+Než budete moct začít pracovat, vaše společnost potřebuje, abyste nainstalovali aplikaci Lookout for Work. Ta pomáhá chránit vaše zařízení hledáním potenciálních bezpečnostních hrozeb. Na zařízení se můžou zobrazit různé výzvy podle toho, jak správce IT nastavil aplikaci Lookout for Work.
 
 
 ## <a name="what-you-need-to-do"></a>Co je potřeba udělat:
 
 1.  Pokud se zobrazí následující výzva, klepnutím na **Nainstalovat** umožněte nainstalování aplikace Lookout for Work do zařízení.
 
-  ![Klepnutím na Nainstalovat nainstalujte aplikaci Lookout for Work](./media/ios-mtd-install-app-request.png)
+      ![Snímek obrazovky s výzvou k instalaci aplikace a tlačítky Zrušit a Nainstalovat](/intune-user-help/media/ios-mts-install-app-request-after-1804.png)
 
 2. Když se zobrazí následující zpráva, klepněte na **Nastavení**, zapněte **Polohové služby** a pak klepněte na **Pokračovat**.
 
-  ![Klepněte na Nastavení a pak na Polohové služby](./media/ios-lfw-allow-location-services.png)
+      ![Klepněte na Nastavení a pak na Polohové služby](./media/ios-lfw-allow-location-services.png)
 
 3. Zkontrolujte oprávnění, která aplikace Lookout for Work potřebuje, a klepněte na **Pokračovat**.
 
-  ![jste připojeni k aplikaci Lookout for Work](./media/ios-lfw-permissions-lookout-needs.png)
+      ![jste připojeni k aplikaci Lookout for Work](./media/ios-lfw-permissions-lookout-needs.png)
 
 4. Při zobrazení výzvy, která žádá o povolení zasílat oznámení z aplikace Lookout for Work, klepněte na **Povolit**.
 

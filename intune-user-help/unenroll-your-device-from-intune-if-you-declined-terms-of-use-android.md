@@ -1,37 +1,39 @@
 ---
-title: "Zrušení registrace zařízení, pokud odmítnete podmínky použití | Dokumentace Microsoftu"
-description: 
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Odebrání zařízení ze správy při nepřijetí podmínek použití | Microsoft Docs
+description: ''
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 03/13/2017
+ms.date: 03/23/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 4278f000-0258-4de5-93a1-195b48e5061e
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 5207bab5994cc7fc5c23bee92cbe675644d27e97
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: fcf71015d292ea22be1c818e526bc723b1af7165
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="unenroll-your-device-if-you-declined-terms-of-use"></a>Zrušení registrace zařízení, pokud odmítnete podmínky použití
+# <a name="remove-your-device-from-management-if-you-declined-terms-of-use"></a>Odebrání zařízení ze správy při nepřijetí podmínek použití
 
-Nejlepší způsob, jak zrušit registraci zařízení s Androidem, je přijmout podmínky použití, přihlásit se do aplikace Portál společnosti a potom zrušit registraci zařízení pomocí [těchto pokynů](unenroll-your-device-from-intune-android.md). Pokud při pokusu o přihlášení do aplikace Portál společnosti odmítnete přijmout podmínky použití, nebudou další pokusy o přihlášení k této aplikaci v budoucnosti možné. Proto musíte ke zrušení registrace zařízení použít alternativní postup.
+Pokud při pokusu o přihlášení do aplikace Portál společnosti odmítnete přijmout podmínky použití, nebudou další pokusy o přihlášení k této aplikaci v budoucnosti možné. Proto musíte k odebrání zařízení z Intune použít alternativní postup.
 
-Když odinstalujete aplikaci Portál společnosti, zruší se také registrace vašeho zařízení v Intune. Vaše zařízení už nebude mít přístup k prostředkům společnosti. Další informace o tom, co se stane, když zrušíte registraci, najdete v tématu [Co se stane, když zrušíte registraci zařízení v Intune](what-happens-if-you-unenroll-your-device-from-intune-android.md).
+Při odinstalaci aplikace Portál společnosti současně odebíráte zařízení z Intune. Vaše zařízení už nebude mít přístup k prostředkům společnosti. Další informace o důsledcích odebrání zařízení ze správy najdete v tématu [Co se stane, když zrušíte registraci zařízení v Intune](what-happens-if-you-unenroll-your-device-from-intune-android.md).
 
 Než odinstalujete aplikaci Portál společnosti, musíte přejít na nastavení **Správci zařízení** a vypnout **Portál společnosti**. Přesný postup se může mírně lišit v závislosti na tom, jako zařízení se systémem Android používáte.
 
-Postup zrušení registrace zařízení v Intune pomocí aplikace Portál společnosti:
+## <a name="removing-the-device-from-the-company-portal-app"></a>Odebrání zařízení z aplikace Portál společnosti
+
+Postup odebrání zařízení z Intune a odinstalace aplikace Portál společnosti:
 
 1.  Přejděte na **Nastavení** &gt; **Zabezpečení &amp; Zamykací obrazovka** &gt; **Správci zařízení**.
 
@@ -40,5 +42,13 @@ Postup zrušení registrace zařízení v Intune pomocí aplikace Portál spole
 2.  Zrušte zaškrtnutí políčka vedle položky **Portál společnosti** nebo tuto položku vypněte.
 
     Teď můžete aplikaci Portál společnosti odinstalovat.
+
+## <a name="removing-data-collected-by-the-company-portal-app"></a>Odebrání dat shromažďovaných aplikací Portál společnosti
+
+Postup odebrání všech dat, která do zařízení uložila aplikace Portál společnosti pro Android:
+
+  - V Aplikacích vymažte data aplikace -> klikněte na aplikaci -> tlačítko Vymazat data.
+  - Odstraňte složku „\storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal“.
+
 
 Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu (kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having unenrolling my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.

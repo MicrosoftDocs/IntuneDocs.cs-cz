@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6139b656c69b58bdbdd02e296f8a061dd598a1c6
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 512bd38802dbb97a74d3d19d74a7d5086784d327
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="custom-configurations-for-microsoft-intune-vpn-profiles"></a>Vlastní konfigurace pro profily Microsoft Intune VPN
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 ## <a name="create-a-custom-configuration"></a>Vytvoření vlastní konfigurace
 Vlastní konfigurace Intune můžete použít k vytvoření profilů VPN pro:
@@ -39,13 +39,13 @@ Tento typ zásad může být užitečný v případě, že standardní zásady I
 
 ## <a name="to-create-a-custom-configuration-policy"></a>Vytvoření vlastní zásady konfigurace:
 
-   1. V [konzole správce Intune](https://manage.microsoft.com) zvolte **Zásady** > **Přidat zásadu** > *Rozbalit platformu* > **Vlastní konfigurace** > **Vytvořit zásadu**.
-   2. Zadejte název pro tuto zásadu.
-   3. U každého nastavení identifikátoru URI, které chcete zadat, zvolte **Přidat** a zadejte požadované informace. Tady je příklad:
+1. V [konzole správce Intune](https://manage.microsoft.com) zvolte **Zásady** > **Přidat zásadu** > *Rozbalit platformu* > **Vlastní konfigurace** > **Vytvořit zásadu**.
+2. Zadejte název pro tuto zásadu.
+3. U každého nastavení identifikátoru URI, které chcete zadat, zvolte **Přidat** a zadejte požadované informace. Tady je příklad:
 
    ![Dialogové okno vlastní konfigurace profilu VPN](./media/Intune_Add_VPN_URI.png)
 
-   4.  Po zadání všech nastavení identifikátorů URI zvolte **Uložit zásadu** a potom zásadu nasaďte.
+4. Po zadání všech nastavení identifikátorů URI zvolte **Uložit zásadu** a potom zásadu nasaďte.
 
 Pak [zásadu nasaďte](/intune-classic/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies#deploy-a-configuration-policy) jako obvykle.
 

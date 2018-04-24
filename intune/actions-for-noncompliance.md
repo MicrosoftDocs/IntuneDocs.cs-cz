@@ -1,22 +1,22 @@
 ---
-title: "Zpráva a akce při nedodržení předpisů v Microsoft Intune – Azure | Microsoft Docs"
-description: "Vytvořte e-mailové oznámení, které se odešle do zařízení nedodržujícího předpisy. Přidejte akce, které se provedou, když je zařízení označeno jako nedodržující předpisy. Můžete třeba přidat období odkladu, během kterého musí uživatel dodržení předpisů zajistit, nebo vytvořit plán k zablokování přístupu, dokud zařízení nebude předpisy dodržovat. Použijte k tomu Microsoft Intune v Azure."
-keywords: 
+title: Zpráva a akce při nedodržení předpisů v Microsoft Intune – Azure | Microsoft Docs
+description: Vytvořte e-mailové oznámení, které se odešle do zařízení nedodržujícího předpisy. Přidejte akce, které se provedou, když je zařízení označeno jako nedodržující předpisy. Můžete třeba přidat období odkladu, během kterého musí uživatel dodržení předpisů zajistit, nebo vytvořit plán k zablokování přístupu, dokud zařízení nebude předpisy dodržovat. Použijte k tomu Microsoft Intune v Azure.
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/07/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 37a8deca147bbad1e706b814f366a2c3f1247869
-ms.sourcegitcommit: 9cf05d3cb8099e4a238dae9b561920801ad5cdc6
+ms.openlocfilehash: a4b5e55b404da907d8f17a658483b4802af8226d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices---intune"></a>Automatické e-maily a přidání akcí pro zařízení nedodržující předpisy – Intune
 
@@ -54,14 +54,14 @@ Existují dva typy akcí:
 3. Vyberte **Dodržování předpisů zařízením** a pak **Oznámení**. 
 4. Vyberte **Vytvořit oznámení** a zadejte tyto informace:
 
-  - Název
-  - Předmět
-  - Zpráva
-  - Záhlaví e-mailu – připojte logo společnosti
-  - Zápatí e-mailu – uveďte název společnosti
-  - Zápatí e-mailu – uveďte kontaktní údaje
+   - Název
+   - Předmět
+   - Zpráva
+   - Záhlaví e-mailu – připojte logo společnosti
+   - Zápatí e-mailu – uveďte název společnosti
+   - Zápatí e-mailu – uveďte kontaktní údaje
 
-  ![Příklad oznámení o dodržování předpisů v Intune](./media/actionsfornoncompliance-1.PNG)
+   ![Příklad oznámení o dodržování předpisů v Intune](./media/actionsfornoncompliance-1.PNG)
 
 Po přidání informací vyberte **Vytvořit**. Šablona zprávy s oznámením je připravená k použití.
 
@@ -77,7 +77,7 @@ Akci můžete přidat při vytváření nových zásad dodržování předpisů 
 1. Na portálu [Azure Portal](https://portal.azure.com) otevřete **Microsoft Intune** a vyberte **Dodržování předpisů zařízením**.
 2. Vyberte **Zásady**, vyberte jednu ze zásad a pak vyberte **Vlastnosti**. 
 
-  Ještě zásadu nemáte? Vytvořte zásadu pro [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md) nebo jinou platformu.
+   Ještě zásadu nemáte? Vytvořte zásadu pro [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md) nebo jinou platformu.
 
 3. Vyberte **Akce při nedodržení předpisů** a pak pomocí **Přidat** zadejte parametry akce. Můžete vybrat dřív vytvořenou šablonu zprávy, přidat další příjemce a aktualizovat období odkladu. V období můžete zadat počet dní (0 až 365), po kterém můžete vynutit zásady podmíněného přístupu. Pokud zadáte **0** dní, pak podmíněný přístup **okamžitě** zablokuje přístup k podnikovým prostředkům.
 

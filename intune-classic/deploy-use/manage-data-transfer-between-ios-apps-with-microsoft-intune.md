@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6b83e5fa37f9a9844e3011cded3c3cd58f268521
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: c27b191f8a0f9fbd298b820114f27acb4c31f966
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-data-transfer-between-ios-apps-with-microsoft-intune"></a>Správa přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 ## <a name="manage-ios-apps"></a>Správa aplikací pro iOS
 V rámci ochrany vašich firemních dat je potřeba zajistit, aby přenosy souborů mohly probíhat jenom v aplikacích, které spravujete.  Aplikace pro iOS můžete spravovat těmito způsoby:
@@ -51,17 +51,17 @@ Pokud chcete zajistit, aby aplikace nasazené pomocí řešení MDM jiného výr
 Konfigurace nastavení hlavního názvu uživatele (UPN) je **nutná** pro zařízení spravovaná pomocí řešení MDM jiného výrobce. Níže popsaný postup představuje obecné kroky pro konfiguraci nastavení hlavního názvu uživatele (UPN) a výsledného prostředí koncového uživatele:
 
 
-1.  Na portálu Azure Portal [nakonfigurujte zásady ochrany aplikací](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md) pro platformu iOS. Nakonfigurujte nastavení zásad podle požadavků vaší společnosti a vyberte aplikace, které by tyto zásady měly používat.
+1. Na portálu Azure Portal [nakonfigurujte zásady ochrany aplikací](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md) pro platformu iOS. Nakonfigurujte nastavení zásad podle požadavků vaší společnosti a vyberte aplikace, které by tyto zásady měly používat.
 
-2.  Nasaďte aplikace a e-mailový profil, které chcete spravovat **prostřednictvím řešení MDM jiného výrobce**, pomocí níže uvedených obecných kroků. Tato činnost je také popsaná v Příkladu 1.
+2. Nasaďte aplikace a e-mailový profil, které chcete spravovat **prostřednictvím řešení MDM jiného výrobce**, pomocí níže uvedených obecných kroků. Tato činnost je také popsaná v Příkladu 1.
 
-  1.  Nasaďte aplikaci s tímto nastavením konfigurace:
+   1. Nasaďte aplikaci s tímto nastavením konfigurace:
 
       **key** = IntuneMAMUPN, **value** = <username@company.com>
 
       Příklad: [‘IntuneMAMUPN’, ‘jondoe@microsoft.com’]
 
-  2.  Nasaďte zásadu správy Open in prostřednictvím jiného poskytovatele řešení MDM do zaregistrovaných zařízení.
+   2. Nasaďte zásadu správy Open in prostřednictvím jiného poskytovatele řešení MDM do zaregistrovaných zařízení.
 
 
 ### <a name="example-1-admin-experience-in-third-party-mdm-console"></a>Příklad 1: Činnost správce v konzole MDM jiného výrobce
@@ -70,9 +70,9 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) je **nutná** pro zař�
 
 2. V části Konfigurace aplikace zadejte tato nastavení:
 
-  **key** = IntuneMAMUPN, **value** = <username@company.com>
+   **key** = IntuneMAMUPN, **value** = <username@company.com>
 
-  Skutečná syntaxe dvojice klíč/hodnota se může lišit podle toho, jakého máte jiného poskytovatele řešení MDM. Níže uvedená tabulka obsahuje příklady jiných poskytovatelů řešení MDM a přesných hodnot, které je potřeba zadat ve dvojici klíč/hodnota.
+   Skutečná syntaxe dvojice klíč/hodnota se může lišit podle toho, jakého máte jiného poskytovatele řešení MDM. Níže uvedená tabulka obsahuje příklady jiných poskytovatelů řešení MDM a přesných hodnot, které je potřeba zadat ve dvojici klíč/hodnota.
 
 |Jiný poskytovatel řešení MDM| Konfigurační klíč | Typ hodnoty | Konfigurační hodnota|
 | ------- | ---- | ---- | ---- |

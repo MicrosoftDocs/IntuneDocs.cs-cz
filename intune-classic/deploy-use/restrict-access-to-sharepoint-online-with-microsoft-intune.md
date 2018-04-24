@@ -1,29 +1,29 @@
 ---
 title: Ochrana SharePointu Online
-description: "Chraňte a řiďte přístup k podnikovým datům na SharePointu Online pomocí podmíněného přístupu."
-keywords: 
+description: Chraňte a řiďte přístup k podnikovým datům na SharePointu Online pomocí podmíněného přístupu.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 01/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f86508d9b187e0026a74c4e82e94cdd5a4d29c3a
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 2b7285c272efac8eab406393b0b896795fa5d8ed
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="protect-access-to-sharepoint-online-with-microsoft-intune"></a>Ochrana přístupu k SharePointu Online pomocí Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Podmíněný přístup Microsoft Intune se používá k řízení přístupu k souborům umístěným na SharePointu Online.
 Podmíněný přístup má dvě součásti:
@@ -81,16 +81,16 @@ Můžete chránit přístup k SharePointu Online, když k němu zařízení s **
 Podporované systémy:
 - Windows 8.1 nebo novější (když jsou počítače zaregistrované v Intune)
 - Windows 7.0, Windows 8.1 nebo Windows 10 (když jsou počítače připojené k doméně)
-> [!NOTE]
->Pokud chcete použít podmíněný přístup u počítačů s Windows 10, musíte je aktualizovat na verzi Windows 10 Anniversary Update.
+  > [!NOTE]
+  >Pokud chcete použít podmíněný přístup u počítačů s Windows 10, musíte je aktualizovat na verzi Windows 10 Anniversary Update.
 
   - U počítačů připojených k doméně musíte nastavit [automatickou registraci](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) v Azure Active Directory. Pro zákazníky Intune a Office 365 je služba Azure AD Device Registration Service aktivovaná automaticky. Zákazníci, kteří už mají nasazenou službu ADFS Device Registration Service, registrovaná zařízení ve svojí místní službě Active Directory neuvidí.
 
   - Pokud je zásada nastavená tak, aby vyžadovala připojení k doméně, a počítač k doméně připojený není, zobrazí se zpráva, aby uživatel kontaktoval správce IT.
 
   - Pokud je zásada nastavená tak, aby vyžadovala připojení k doméně nebo splňování předpisů, a počítač ani jeden z těchto požadavků nesplňuje, zobrazí se zpráva s pokyny, jak nainstalovat aplikaci Portál společnosti a provést registraci.
-  >[!NOTE]
-  >Podmíněný přístup není podporovaný na počítačích, ve kterých běží klient Intune pro počítače.
+    >[!NOTE]
+    >Podmíněný přístup není podporovaný na počítačích, ve kterých běží klient Intune pro počítače.
 
 [Musí být povolené moderní ověřování Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) a musí být nainstalované všechny nejnovější aktualizace Office.
 
@@ -132,24 +132,24 @@ V dalším kroku nakonfigurujte zásadu, která bude vyžadovat, aby měla k Sha
 > Můžete také vytvořit zásady podmíněného přístupu pro zařízení s Intune v konzole pro správu Azure AD (zásady se v Azure AD označují jako **zásady podmíněného přístupu na základě zařízení**). Kromě toho můžete vytvořit další zásady podmíněného přístupu, třeba vícefaktorové ověřování. Také můžete nastavit zásady podmíněného přístupu pro podnikové aplikace třetích stran, které Azure AD podporuje, například Salesforce nebo Box. Další informace najdete v tématu [Jak ve službě Azure Active Directory nastavit zásady podmíněného přístupu založené na zařízení a získat tak kontrolu přístupu do aplikací napojených na službu Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
 
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Zásady** > **Podmíněný přístup** > **Zásady pro SharePoint Online**.
-![Snímek stránky zásad SharePointu Online](../media/mdm-ca-spo-policy-configuration.png)
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) zvolte **Zásady** > **Podmíněný přístup** > **Zásady pro SharePoint Online**.
+   ![Snímek stránky zásad SharePointu Online](../media/mdm-ca-spo-policy-configuration.png)
 
-2.  Vyberte **Zapnout zásady podmíněného přístupu pro SharePoint Online**.
+2. Vyberte **Zapnout zásady podmíněného přístupu pro SharePoint Online**.
 
-3.  V části **Přístup k aplikaci** můžete použít zásady podmíněného přístupu na:
+3. V části **Přístup k aplikaci** můžete použít zásady podmíněného přístupu na:
 
-    -   **Všechny platformy**
+   - **Všechny platformy**
 
-        To vyžaduje, aby každé zařízení používané pro přístup k **SharePointu Online** bylo registrované v Intune a dodržovalo tyto zásady. Všechny klientské aplikace používající **moderní ověřování** podléhají zásadám podmíněného přístupu. Pokud Intune příslušnou platformu aktuálně nepodporuje, přístup k **SharePointu Online** je zablokovaný.
+     To vyžaduje, aby každé zařízení používané pro přístup k **SharePointu Online** bylo registrované v Intune a dodržovalo tyto zásady. Všechny klientské aplikace používající **moderní ověřování** podléhají zásadám podmíněného přístupu. Pokud Intune příslušnou platformu aktuálně nepodporuje, přístup k **SharePointu Online** je zablokovaný.
 
-        Výběr volby **Všechny platformy** způsobí, že Azure Active Directory tyto zásady uplatní na všechny požadavky na ověření bez ohledu na platformu, která je ohlášena klientskou aplikací. Všechny platformy musí být zaregistrované a vyhovující s těmito výjimkami:
-        *   Zařízení s Windows, která musejí být zaregistrovaná a vyhovující, připojená k doméně s místním Active Directory nebo obojí
-        * Nepodporované platformy jako Mac. Aplikace používající moderní ověřování pocházející z těchto platforem jsou ale i nadále zablokované.
+     Výběr volby **Všechny platformy** způsobí, že Azure Active Directory tyto zásady uplatní na všechny požadavky na ověření bez ohledu na platformu, která je ohlášena klientskou aplikací. Všechny platformy musí být zaregistrované a vyhovující s těmito výjimkami:
+     *   Zařízení s Windows, která musejí být zaregistrovaná a vyhovující, připojená k doméně s místním Active Directory nebo obojí
+     * Nepodporované platformy jako Mac. Aplikace používající moderní ověřování pocházející z těchto platforem jsou ale i nadále zablokované.
 
-    -   **Specifické platformy**
+   - **Specifické platformy**
 
-         Zásady podmíněného přístupu platí pro každou klientskou aplikaci, která na určených platformách zařízení používá moderní ověřování.
+      Zásady podmíněného přístupu platí pro každou klientskou aplikaci, která na určených platformách zařízení používá moderní ověřování.
 
      Počítače s Windows musí být připojené k doméně nebo zaregistrované v Intune a dodržovat předpisy. Můžete nastavit následující požadavky:
 
@@ -157,28 +157,28 @@ V dalším kroku nakonfigurujte zásadu, která bude vyžadovat, aby měla k Sha
 
      -   **Zařízení musí splňovat předpisy.** Tuto možnost vyberte, pokud počítače musí být zaregistrované v Intune a dodržovat předpisy. Pokud počítač není zaregistrovaný, zobrazí se zpráva s pokyny, jak registraci provést.
 
-4.   V části **Přístup z prohlížeče** pro SharePoint Online a OneDrive pro firmy můžete zvolit povolení přístupu k Exchangi Online jen prostřednictvím podporovaných prohlížečů: Safari (iOS) a Chrome (Android). Přístup z jiných prohlížečů je blokovaný. Omezení platformy, která jste vybrali pro přístup z aplikace pro OneDrive, budou použitá i zde.
+4. V části **Přístup z prohlížeče** pro SharePoint Online a OneDrive pro firmy můžete zvolit povolení přístupu k Exchangi Online jen prostřednictvím podporovaných prohlížečů: Safari (iOS) a Chrome (Android). Přístup z jiných prohlížečů je blokovaný. Omezení platformy, která jste vybrali pro přístup z aplikace pro OneDrive, budou použitá i zde.
 
-  V zařízeních s **Androidem** musí uživatelé povolit přístup z prohlížeče. K tomu musí uživatel v zaregistrovaném zařízení zvolit možnost **Povolit přístup z prohlížeče** následujícím způsobem:
-  1.    Otevřete aplikaci **Portál společnosti**.
-  2.    Přejděte na stránku **Nastavení** prostřednictvím tlačítka se třemi tečkami (...) nebo hardwarového tlačítka nabídky.
-  3.    Stiskněte tlačítko **Povolit přístup z prohlížeče**.
-  4.    V prohlížeči Chrome se odhlaste z Office 365 a znovu spusťte Chrome.
+   V zařízeních s **Androidem** musí uživatelé povolit přístup z prohlížeče. K tomu musí uživatel v zaregistrovaném zařízení zvolit možnost **Povolit přístup z prohlížeče** následujícím způsobem:
+   1.    Otevřete aplikaci **Portál společnosti**.
+   2.    Přejděte na stránku **Nastavení** prostřednictvím tlačítka se třemi tečkami (...) nebo hardwarového tlačítka nabídky.
+   3.    Stiskněte tlačítko **Povolit přístup z prohlížeče**.
+   4.    V prohlížeči Chrome se odhlaste z Office 365 a znovu spusťte Chrome.
 
-  V platformách **iOS** a **Android** kvůli identifikaci zařízení použitého pro přístup ke službě vydá Azure Active Directory pro příslušné zařízení certifikát TLS (Transport Layer Security). Zařízení zobrazí certifikát s výzvou pro uživatele, aby vybral certifikát, jak je vidět na následujících snímcích obrazovky. Před tím, než bude moct používat prohlížeč, musí uživatel certifikát vybrat.
+   V platformách **iOS** a **Android** kvůli identifikaci zařízení použitého pro přístup ke službě vydá Azure Active Directory pro příslušné zařízení certifikát TLS (Transport Layer Security). Zařízení zobrazí certifikát s výzvou pro uživatele, aby vybral certifikát, jak je vidět na následujících snímcích obrazovky. Před tím, než bude moct používat prohlížeč, musí uživatel certifikát vybrat.
 
-  **iOS**
+   **iOS**
 
-  ![Snímek obrazovky s výzvou k výběru certifikátu na iPadu](../media/mdm-browser-ca-ios-cert-prompt.png)
+   ![Snímek obrazovky s výzvou k výběru certifikátu na iPadu](../media/mdm-browser-ca-ios-cert-prompt.png)
 
-  **Android**
+   **Androidemem**
 
-  ![Snímek obrazovky s výzvou k výběru certifikátu v zařízení s Androidem](../media/mdm-browser-ca-android-cert-prompt.png)
-5.  V části **Cílové skupiny** zvolte **Upravit** a vyberte skupiny zabezpečení Azure Active Directory, na které se zásady vztahují. Můžete cílit na všechny uživatele nebo vybranou skupinu uživatelů.
+   ![Snímek obrazovky s výzvou k výběru certifikátu v zařízení s Androidem](../media/mdm-browser-ca-android-cert-prompt.png)
+5. V části **Cílové skupiny** zvolte **Upravit** a vyberte skupiny zabezpečení Azure Active Directory, na které se zásady vztahují. Můžete cílit na všechny uživatele nebo vybranou skupinu uživatelů.
 
-6.  V případě potřeby v části **Vyloučené skupiny** zvolte **Upravit** a vyberte skupiny zabezpečení Azure Active Directory, na které se tyto zásady nevztahují.
+6. V případě potřeby v části **Vyloučené skupiny** zvolte **Upravit** a vyberte skupiny zabezpečení Azure Active Directory, na které se tyto zásady nevztahují.
 
-7.  Po dokončení vyberte **Uložit**.
+7. Po dokončení vyberte **Uložit**.
 
 Zásady podmíněného přístupu nemusíte nasazovat, projeví se okamžitě.
 

@@ -1,28 +1,28 @@
 ---
-title: "Nastavení omezení pro zařízení s Androidem v Microsoft Intune"
-titlesuffix: 
-description: "Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s Androidem."
-keywords: 
+title: Nastavení omezení pro zařízení s Androidem v Microsoft Intune
+titlesuffix: ''
+description: Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s Androidem.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f938967951045d24ae65315b3b4d40749c1bc20f
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 77942ef6a5f25708ce43910cde94133e174b4731
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-intune-android-and-samsung-knox-standard-device-restriction-settings"></a>Nastavení omezení zařízení používajících Android a Samsung Knox Standard pro Microsoft Intune 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s Androidem.
 
@@ -93,7 +93,7 @@ V [oddílu Aplikace na Google Play](https://play.google.com/store/apps) najděte
 
 Otevřete instalační stránku aplikace a zkopírujte adresu URL do schránky. Tuto adresu URL teď můžete použít v seznamu kompatibilních nebo nekompatibilních aplikací.
 
-Příklad: Vyhledání aplikace **Microsoft Planner** v [oddílu Aplikace na Google Play](https://play.google.com/store/apps) Použijte tuto adresu URL: **https://play.google.com/store/apps/details?id=com.microsoft.planner**.
+Příklad: Vyhledání aplikace **Microsoft Planner** v [oddílu Aplikace na Google Play](https://play.google.com/store/apps) Použijte adresu URL: **https://play.google.com/store/apps/details?id=com.microsoft.planner**.
 
 ### <a name="additional-options"></a>Další možnosti
 

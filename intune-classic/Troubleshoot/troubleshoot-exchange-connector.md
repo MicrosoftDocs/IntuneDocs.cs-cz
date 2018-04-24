@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a70b2707b38534826577bfe47bcd8e575c09a71f
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 0eef4e2ae3792c601bd4a32cd041d7d041091cca
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-the-exchange-connector"></a>Poradce při potížích s Exchange Connectorem
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Toto téma popisuje, jak řešit problémy, které můžou souviset s Intune Exchange Connectorem.
 
@@ -36,8 +36,8 @@ Zkontrolujte konfiguraci Exchange Connectoru a pak ověřte, jestli je problém 
 - Při konfiguraci Exchange Connectoru zadejte server pro klientský přístup (CAS), který je co nejblíže k hostitelskému serveru Exchange Connectoru. Latence při komunikaci mezi serverem pro klientský přístup a Exchange Connectorem by mohla způsobovat zpoždění při zjišťování zařízení, zejména při použití O365 Dedicated.
 - Mějte na paměti, že mezi synchronizacemi Exchange Connectoru se serverem pro klientský přístup Exchange je časová prodleva. Úplná synchronizace se provádí jednou denně a rozdílová (rychlá) synchronizace delta probíhá každé dvě hodiny. Je pravděpodobné, že u uživatele s nově zaregistrovaným zařízením dojde při získávání přístupu ke zpoždění.
 - 
-## <a name="exchange-activesync-device-not-discovered-from-exchange"></a>Server Exchange nezjistil zařízení s Exchange ActiveSync
-Zkontrolujte, jestli se Exchange Connector synchronizuje se serverem Exchange. Uděláte to tak, že vyhledáte protokoly pro úplnou nebo rozdílovou synchronizaci. Nahlédněte do protokolů Exchange Connectoru. Pokud od připojení zařízení úspěšně proběhla úplná nebo rozdílová synchronizace, pak můžete toto nastavení vyloučit jako zdroj problému. Pokud žádná synchronizace neproběhla, shromážděte synchronizační protokoly a připojte je k žádosti o podporu.
+  ## <a name="exchange-activesync-device-not-discovered-from-exchange"></a>Server Exchange nezjistil zařízení s Exchange ActiveSync
+  Zkontrolujte, jestli se Exchange Connector synchronizuje se serverem Exchange. Uděláte to tak, že vyhledáte protokoly pro úplnou nebo rozdílovou synchronizaci. Nahlédněte do protokolů Exchange Connectoru. Pokud od připojení zařízení úspěšně proběhla úplná nebo rozdílová synchronizace, pak můžete toto nastavení vyloučit jako zdroj problému. Pokud žádná synchronizace neproběhla, shromážděte synchronizační protokoly a připojte je k žádosti o podporu.
 
 - Pokud uživatel nemá licenci pro Intune, Exchange Connector nezjistí jeho zařízení.
 - Pokud se primární adresa SMTP uživatele liší od jeho hlavního názvu uživatele (UPN) v AAD, Exchange Connector nezjistí žádná zařízení tohoto uživatele Intune nebo AAD. Opravte primární adresu SMTP.

@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b5d2ec278d182f3d9dbe03fbdf86791b59debf79
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 52cba4de7d19744e1a011071ac6c9bbb168ffb30
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-ready-to-configure-app-protection-policies-in-the-azure-portal"></a>Příprava na konfiguraci zásad ochrany aplikací na portálu Azure Portal
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 V tomto tématu jsou popsané předpoklady a kroky, které je potřeba provést **před tím**, než na portálu Azure Portal budete moct vytvářet zásady ochrany aplikací.
 
@@ -74,18 +74,18 @@ Pokyny k vytvoření zásad ochrany aplikací v konzole pro správu Intune najde
 
 ## <a name="prerequisites"></a>Požadavky
 
--   **Předplatné služby Microsoft Intune**. K získání aplikací se zásadami ochrany aplikací potřebují uživatelé licence Intune.
-Pokud ke správě svých zařízení v současnosti používáte Intune, už předplatné Intune máte. Pokud jste si zakoupili licenci Enterprise Mobility Suite (EMS), předplatné Intune už také máte. Pokud Intune teprve zkoušíte, abyste se seznámili s funkcemi MAM, můžete na [stránce Microsoft Intune](https://www.microsoft.com/server-cloud/products/microsoft-intune/) získat zkušební účet.
+- **Předplatné služby Microsoft Intune**. K získání aplikací se zásadami ochrany aplikací potřebují uživatelé licence Intune.
+  Pokud ke správě svých zařízení v současnosti používáte Intune, už předplatné Intune máte. Pokud jste si zakoupili licenci Enterprise Mobility Suite (EMS), předplatné Intune už také máte. Pokud Intune teprve zkoušíte, abyste se seznámili s funkcemi MAM, můžete na [stránce Microsoft Intune](https://www.microsoft.com/server-cloud/products/microsoft-intune/) získat zkušební účet.
 
-    Pokud chcete ověřit, jestli máte předplatné Intune, přejděte na portálu Office na stránku **Fakturace**.  Pokud předplatné máte, měla by být služba Intune označená jako **Aktivní**.
+  Pokud chcete ověřit, jestli máte předplatné Intune, přejděte na portálu Office na stránku **Fakturace**.  Pokud předplatné máte, měla by být služba Intune označená jako **Aktivní**.
 
--   **Předplatné Office 365**, které je potřeba v těchto případech:
+- **Předplatné Office 365**, které je potřeba v těchto případech:
 
   - Chcete použít zásady ochrany aplikací pro aplikace s podporou více identit.
 
   - Chcete vytvořit pracovní účty SharePoint Online a Exchange Online. Místní Exchange a místní SharePoint se nepodporují.
 
--   **Nastavení Online Skypu pro firmy pro moderní ověřování**. Další informace najdete v tématu [Povolení moderního ověřování](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx).
+- **Nastavení Online Skypu pro firmy pro moderní ověřování**. Další informace najdete v tématu [Povolení moderního ověřování](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx).
 
 
 - Azure Active Directory (Azure AD) pro vytváření uživatelů. Azure AD ověří uživatele, když otevřou aplikaci a zadají svoje pracovní přihlašovací údaje.

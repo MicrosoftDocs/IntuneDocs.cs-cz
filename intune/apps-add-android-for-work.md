@@ -1,29 +1,29 @@
 ---
-title: "Přiřazení aplikací zařízení s Androidem for Work"
+title: Přiřazení aplikací zařízení s Androidem for Work
 titlesuffix: Microsoft Intune
-description: "Naučte se synchronizovat a přiřadit aplikace zařízením s Androidem for Work z obchodu Google Play for Work."
-keywords: 
+description: Naučte se synchronizovat a přiřadit aplikace zařízením s Androidem for Work z obchodu Google Play for Work.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/07/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2f6c06bf-e29a-4715-937b-1d2c7cf663d4
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e3b5a742fb480cf9c4c77106b849eebb95ad2439
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 4168f78bff8937ca403cdb75b1028954cbbebd6f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-assign-apps-to-android-for-work-devices-with-intune"></a>Přiřazení aplikací zařízení s Androidem for Work pomocí Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Android for Work je program pro zařízení s Androidem. Všechny aplikace, které instalujete na zařízení s Androidem for Work, pocházejí z obchodu Google Play for Work. Zařízením s Androidem for Work se aplikace přiřazují jiným způsobem než zařízením se standardním Androidem. Do tohoto obchodu se přihlásíte, prohlédnete si požadované aplikace a schválíte je. Aplikace se pak objeví v uzlu **Licencované aplikace** Azure Portalu. Odsud můžete přiřazení aplikace spravovat stejným způsobem, jakým byste přiřadili jakoukoli jinou aplikaci.
 
@@ -43,7 +43,7 @@ Ověřte, že jste v úloze **Registrace zařízení** Azure Portalu nakonfiguro
 
     ![Příklad – schválení aplikace v obchodu Google Play for Work](media/approve.png)</br>
     
-  Otevře se okno s žádostí, abyste této aplikaci udělili oprávnění k provádění různých operací. 
+   Otevře se okno s žádostí, abyste této aplikaci udělili oprávnění k provádění různých operací. 
 
 4. Pokud chcete přijmout oprávnění aplikace a pokračovat, vyberte **Schválit**.</br>
 
@@ -79,7 +79,7 @@ Když vývojář aplikace publikuje novou verzi aplikace s aktualizovanými opr�
 
 Pravidelně navštěvujte spravovanou konzolu Google Play a kontrolujte nová oprávnění. Obchod Google Play můžete nastavit tak, aby byl vám nebo jiným uživatelům zaslán e-mail, pokud bude schválená aplikace vyžadovat nová oprávnění. Pokud přiřadíte nějakou aplikaci a zjistíte, že není nainstalovaná na všech zařízeních, zkontrolujte následujícím postupem nová oprávnění:
 
-1. Navštivte stránku http://play.google.com/work.
+1. Navštivte http://play.google.com/work
 2. Přihlaste se pod účtem Google, který jste použili k publikování a schválení aplikací.
 3. Přejděte na kartu **Aktualizace** a zjistěte, jestli některé aplikace vyžadují aktualizaci.  Všechny zde uvedené aplikace vyžadují nová oprávnění a nepřiřadí se, dokud nebudou použita.  
 

@@ -1,31 +1,31 @@
 ---
-title: "Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem"
+title: Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem
 titlesuffix: Microsoft Intune
-description: "Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastavení, když uživatelé spustí aplikaci pro Android for Work."
-keywords: 
+description: Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastavení, když uživatelé spustí aplikaci pro Android for Work.
+keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a448c33e8324492c68d509a12d5901f41ed4873a
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 6fbf70630124614aa1ed302a41d6e3f33c10c63d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastavení, když uživatelé spustí aplikaci pro Android for Work. Tyto zásady nepřiřazujte přímo uživatelům a zařízením. Místo toho přidružíte zásadu k aplikaci a pak přiřadíte tuto aplikaci. Nastavení zásad se použijí, když je aplikace zjistí (obvykle při prvním spuštění).
+Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastavení aplikacím pro Android for Work. K určení nastavení konfigurace pro aplikaci musí její vývojáři zpřístupnit nastavení konfigurace spravovaných aplikací pro Android. Přiřaďte zásady konfigurace aplikací skupině uživatelů, pro kterou chcete nastavení použít.  Nastavení zásad se použijí, když je aplikace zjistí (obvykle při prvním spuštění).
 
 > [!Note]  
 > Některé aplikace konfiguraci aplikací nepodporují. Zeptejte se vývojáře, jestli vaše aplikace zásady konfigurace aplikací podporuje.
@@ -50,16 +50,27 @@ Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastav
 
 ## <a name="use-the-configuration-designer"></a>Použití návrháře konfigurace
 
-Návrháře konfigurace můžete použít u aplikací jak v zařízeních, která jsou zaregistrovaná v Intune, tak i v zařízeních, která zaregistrovaná nejsou. Návrhář umožňuje nakonfigurovat konkrétní klíče a hodnoty konfigurace. Pro každou hodnotu musíte také zadat datový typ.
+U aplikací pro Android, které podporují konfigurace, můžete použít návrháře konfigurace. Konfigurace se uplatní na zařízeních, která jsou zaregistrovaná v Intune. Návrhář vám umožní nakonfigurovat konkrétní hodnoty konfigurace pro nastavení, která aplikace zpřístupňuje.
 
+Volbou **Přidat** vyberte seznam nastavení konfigurace, která chcete pro aplikaci určit.  
 Pro každý klíč a hodnotu v konfiguraci nastavte:
 
-  - **Konfigurační klíč**  
-     Klíč, který jedinečně identifikuje konkrétní konfiguraci nastavení
   - **Typ hodnoty**  
-    Datový typ konfigurační hodnoty. Mezi typy patří integer, real, string a boolean.
+    Datový typ konfigurační hodnoty. U hodnot typu Řetězec můžete případně vybrat jako typ hodnoty proměnnou nebo profil certifikátu.
   - **Hodnota konfigurace**  
-    Hodnota konfigurace 
+    Hodnota konfigurace Pokud vyberete jako typ hodnoty proměnnou nebo certifikát, můžete v rozevírací nabídce hodnot konfigurace vybírat ze seznamu proměnných profilů certifikátů.  Pokud zvolíte certifikát, vyplní se za běhu alias certifikátu nasazeného na zařízení.
+    
+### <a name="supported-variables-for-configuration-values"></a>Podporované proměnné u hodnot konfigurace
+
+Pokud jako typ hodnoty zvolíte proměnnou, můžete vybírat z následujících možností:
+- Hlavní název uživatele — například **John@contoso.com**
+- E-mail — například **John@contoso.com**
+- Část hlavního názvu uživatele — například **Jan**
+- ID účtu — například **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
+- ID zařízení — například **b9841cd9-9843-405f-be28-b2265c59ef97**
+- ID uživatele — například **3ec2c00f-b125-4519-acf0-302ac3761822**
+- Uživatelské jméno — například **Jan Novák**
+
 
 ## <a name="enter-the-json-editor"></a>Použití editoru JSON
 

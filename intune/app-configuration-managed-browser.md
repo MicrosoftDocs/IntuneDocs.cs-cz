@@ -15,15 +15,15 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 742173c1ef53337dab35694c0c04cbca60dbb07c
-ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
+ms.openlocfilehash: 10278dd48552e280ebe7399a61033dfb04fbbd74
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Správa přístupu k internetu pomocí zásad aplikace Managed Browser v Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Managed Browser je aplikace k procházení webu, kterou můžete po stažení z některého z veřejných obchodů s aplikacemi využívat ve své organizaci. Po nakonfigurování se službou Intune můžete v aplikaci Managed Browser:
 - Přistupovat k firemním webům a aplikacím SaaS jednotným přihlašováním prostřednictvím služby MyApps. Data webů přitom zůstávají chráněná.
@@ -91,6 +91,8 @@ Pokud chcete webovým aplikacím připojeným ke službě Azure AD omezit možno
 9. V části **Přiřazení** vyberte **Cloudové aplikace** a zvolte, které aplikace chcete chránit pomocí této zásady.
 
 Jakmile nakonfigurujete výše uvedenou zásadu, budou uživatelé pro přístup k webovým aplikacím připojeným ke službě Azure AD, které chráníte pomocí této zásady, nuceni používat Intune Managed Browser. Pokud se uživatel pokusí v tomto scénáři použít nespravovaný prohlížeč, zobrazí se mu zpráva, že musí použít Intune Managed Browser.
+
+Managed Browser nepodporuje zásady podmíněného přístupu na portálu Classic. Další informace najdete v článku [Migrace zásad z portálu Classic na portálu Azure Portal](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-migration).
 
 ##  <a name="single-sign-on-to-azure-ad-connected-web-apps-in-the-intune-managed-browser"></a>Jednotné přihlašování k webovým aplikacím připojeným ke službě Azure AD v aplikaci Intune Managed Browser
 
@@ -164,11 +166,11 @@ Další informace o tom, jak lze aplikaci Managed Browser a Proxy aplikací Azur
 
 Toto nastavení vám umožňuje nakonfigurovat domovskou stránku, kterou uživatelé uvidí, když prohlížeč Managed Browser spustí nebo když otevřou novou kartu. Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser zadejte následující dvojici klíč-hodnota:
 
-|||
-|-|-|
-|Klíč|Hodnota|
-|**com.microsoft.intune.mam.managedbrowser.homepage**|Zadejte platnou adresu URL. Nesprávné adresy URL se z bezpečnostních důvodů blokují.<br>Příklad: **https://www.bing.com**|
 
+|                                                                   |                                                                                                                            |
+|-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+|                                Klíč                                |                                                           Hodnota                                                            |
+| <strong>com.microsoft.intune.mam.managedbrowser.homepage</strong> | Zadejte platnou adresu URL. Nesprávné adresy URL se z bezpečnostních důvodů blokují.<br>Příklad: <strong><https://www.bing.com></strong> |
 
 ## <a name="how-to-configure-bookmarks-for-the-managed-browser"></a>Postup konfigurace záložek prohlížeče Managed Browser
 
@@ -180,19 +182,21 @@ Toto nastavení vám umožňuje nakonfigurovat sadu záložek, které budou uži
 
 Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser zadejte následující dvojici klíč-hodnota:
 
-|||
-|-|-|
-|Klíč|Hodnota|
-|**com.microsoft.intune.mam.managedbrowser.bookmarks**|Hodnotou pro tuto konfiguraci je seznam záložek. Každou záložku tvoří název záložky a adresa URL záložky. Název a adresu URL oddělte znakem **&#124;**.<br><br>Příklad: **Microsoft Bing&#124;https://www.bing.com**<br><br>Pokud chcete nakonfigurovat více záložek, oddělte každý pár těmito dvěma znaky: **&#124;&#124;**.<br><br>Příklad: **Bing&#124;https://www.bing.com&#124;&#124;Contoso&#124;https://www.contoso.com**|
+
+|                                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|                                Klíč                                 |                                                                                                                                                                                                                                                         Hodnota                                                                                                                                                                                                                                                          |
+| <strong>com.microsoft.intune.mam.managedbrowser.bookmarks</strong> | Hodnotou pro tuto konfiguraci je seznam záložek. Každou záložku tvoří název záložky a adresa URL záložky. Název a adresu URL oddělte znakem <strong>&#124;</strong>.<br><br>Příklad: <strong>Microsoft Bing&#124;<https://www.bing.com></strong><br><br>Pokud chcete nakonfigurovat více záložek, oddělte každý pár těmito dvěma znaky: <strong>&#124;&#124;</strong>.<br><br>Příklad: <strong>Bing&#124;https://www.bing.com&#124;&#124;Contoso&#124;<https://www.contoso.com></strong> |
 
 ## <a name="how-to-specify-allowed-and-blocked-urls-for-the-managed-browser"></a>Určení povolených a blokovaných adres URL v aplikaci Managed Browser
 
 Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser zadejte následující dvojici klíč-hodnota:
 
-|||
-|-|-|
-|Klíč|Hodnota|
-|Vybírejte z těchto možností:<br><br>– Určení povolených adres URL (povoleny budou pouze tyto adresy a na jiné weby nebudou mít uživatelé přístup): **com.microsoft.intune.mam.managedbrowser.AllowListURLs**<br><br>– Určení blokovaných adres URL (na všechny ostatní weby budou mít uživatelé přístup): <br><br>**com.microsoft.intune.mam.managedbrowser.BlockListURLs**|Odpovídající hodnotou klíče je seznam adres URL. Zadejte všechny adresy, které chcete povolit nebo blokovat, jako jedinou hodnotu oddělenou znaky svislé čáry **&#124;**.<br><br>Příklady:<br><br>**URL1&#124;URL2&#124;URL3**<br>**http://*.contoso.com/*&#124;https://*.bing.com/*&#124;https://expenses.contoso.com**|
+
+|                                                                                                                                                                                                                                                                                                                                  |                                                                                                                                                                                                                                                                                                                                                                             |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|                                                                                                                                                               Klíč                                                                                                                                                                |                                                                                                                                                                                    Hodnota                                                                                                                                                                                    |
+| Vybírejte z těchto možností:<br><br>– Určení povolených adres URL (povoleny budou pouze tyto adresy a na jiné weby nebudou mít uživatelé přístup): <strong>com.microsoft.intune.mam.managedbrowser.AllowListURLs</strong><br><br>– Určení blokovaných adres URL (na všechny ostatní weby budou mít uživatelé přístup): <br><br><strong>com.microsoft.intune.mam.managedbrowser.BlockListURLs</strong> | Odpovídající hodnotou klíče je seznam adres URL. Zadejte všechny adresy, které chcete povolit nebo blokovat, jako jedinou hodnotu oddělenou znaky svislé čáry <strong>&#124;</strong>.<br><br>Příklady:<br><br><strong>URL1&#124;URL2&#124;URL3</strong><br><strong>http://<em>.contoso.com/</em>&#124;https://<em>.bing.com/</em>&#124;<https://expenses.contoso.com></strong> |
 
 >[!IMPORTANT]
 >Nezadávejte oba klíče. Pokud budou oba klíče cílit na stejného uživatele, použije se klíč pro určení povolených adres, protože představuje nejvíce omezující možnost.
@@ -201,52 +205,52 @@ Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser zadejte ná
 ### <a name="url-format-for-allowed-and-blocked-urls"></a>Formát adresy URL pro povolené a blokované adresy URL
 V následující části najdete informace o povolených formátech a zástupných znacích, které můžete použít při zadávání adres URL v seznamech povolených a blokovaných webů:
 
--   V souladu s následujícími pravidly můžete v seznamu povolených vzorů použít zástupný znak (**&#42;**).
+- V souladu s následujícími pravidly můžete v seznamu povolených vzorů použít zástupný znak (**&#42;**).
 
--   Při zadávání adres URL do seznamu nezapomeňte u všech uvést předponu **http** nebo **https**.
+- Při zadávání adres URL do seznamu nezapomeňte u všech uvést předponu **http** nebo **https**.
 
--   V adrese můžete specifikovat čísla portů. Pokud nezadáte číslo portu, použijí se tyto hodnoty:
+- V adrese můžete specifikovat čísla portů. Pokud nezadáte číslo portu, použijí se tyto hodnoty:
 
-    -   Port 80 pro protokol HTTP
+  -   Port 80 pro protokol HTTP
 
-    -   Port 443 pro protokol HTTPS
+  -   Port 443 pro protokol HTTPS
 
-    Použití zástupných znaků pro číslo portu se nepodporuje. Nepodporují se například **http&colon;//www&period;contoso&period;com:*;** a **http&colon;//www&period;contoso&period;com: /*;**.
+  Použití zástupných znaků pro číslo portu se nepodporuje. Nepodporují se například <strong>http&colon;//www&period;contoso&period;com:*;</strong> a <strong>http&colon;//www&period;contoso&period;com: /*;</strong>.
 
--   Informace o povolených vzorech, které můžete použít při zadávání adres URL, najdete v následující tabulce:
+- Informace o povolených vzorech, které můžete použít při zadávání adres URL, najdete v následující tabulce:
 
-|Adresa URL|Podrobnosti|Odpovídá|Neodpovídá|
-|-------|---------------|-----------|------------------|
-|http://www.contoso.com|Odpovídá jediné stránce|www.contoso.com|host.contoso.com<br /><br />www.contoso.com/images<br /><br />contoso.com/|
-|http://contoso.com|Odpovídá jediné stránce|contoso.com/|host.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com|
-|http://www.contoso.com/&#42;|Odpovídá všem adresám URL začínajícím na www.contoso.com|www.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com/videos/tvshows|host.contoso.com<br /><br />host.contoso.com/images|
-|http://&#42;.contoso.com/&#42;|Odpovídá všem dílčím doménám domény contoso.com|developer.contoso.com/resources<br /><br />news.contoso.com/images<br /><br />news.contoso.com/videos|contoso.host.com|
-|http://www.contoso.com/images|Odpovídá jediné složce|www.contoso.com/images|www.contoso.com/images/dogs|
-|http://www.contoso.com:80|Odpovídá jediné stránce s použitím čísla portu|http://www.contoso.com:80|
-|https://www.contoso.com|Odpovídá jediné zabezpečené stránce|https://www.contoso.com|http://www.contoso.com|
-|http://www.contoso.com/images/&#42;|Odpovídá jediné složce a všem podsložkám|www.contoso.com/images/dogs<br /><br />www.contoso.com/images/cats|www.contoso.com/videos|
+|                  Adresa URL                  |                     Podrobnosti                      |                                                Odpovídá                                                |                                Neodpovídá                                 |
+|---------------------------------------|--------------------------------------------------|-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+|        http://www.contoso.com         |              Odpovídá jediné stránce               |                                            www.contoso.com                                            |  host.contoso.com<br /><br />www.contoso.com/images<br /><br />contoso.com/   |
+|          http://contoso.com           |              Odpovídá jediné stránce               |                                             contoso.com/                                              | host.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com |
+|    <http://www.contoso.com/&#42>;     | Odpovídá všem adresám URL začínajícím na www.contoso.com |      www.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com/videos/tvshows      |              host.contoso.com<br /><br />host.contoso.com/images              |
+|    http://&#42;.contoso.com/&#42;     |     Odpovídá všem dílčím doménám domény contoso.com     | developer.contoso.com/resources<br /><br />news.contoso.com/images<br /><br />news.contoso.com/videos |                               contoso.host.com                                |
+|     http://www.contoso.com/images     |             Odpovídá jediné složce              |                                        www.contoso.com/images                                         |                          www.contoso.com/images/dogs                          |
+|       http://www.contoso.com:80       |  Odpovídá jediné stránce s použitím čísla portu   |                                       http://www.contoso.com:80                                       |                                                                               |
+|        https://www.contoso.com        |          Odpovídá jediné zabezpečené stránce           |                                        https://www.contoso.com                                        |                            http://www.contoso.com                             |
+| <http://www.contoso.com/images/&#42>; |    Odpovídá jediné složce a všem podsložkám    |                  www.contoso.com/images/dogs<br /><br />www.contoso.com/images/cats                   |                            www.contoso.com/videos                             |
 
--   Tady jsou uvedené příklady některých vstupních hodnot, které nemůžete zadat:
+- Tady jsou uvedené příklady některých vstupních hodnot, které nemůžete zadat:
 
-    -   &#42;.com
+  - &#42;.com
 
-    -   &#42;.contoso/&#42;
+  - &#42;.contoso/&#42;
 
-    -   www.contoso.com/&#42;images
+  - www.contoso.com/&#42;images
 
-    -   www.contoso.com/&#42;images&#42;pigs
+  - www.contoso.com/&#42;images&#42;pigs
 
-    -   www.contoso.com/page&#42;
+  - www.contoso.com/page&#42;
 
-    -   IP adresy
+  - IP adresy
 
-    -   https://&#42;
+  - https://&#42;
 
-    -   http://&#42;
+  - http://&#42;
 
-    -   http://www.contoso.com:&#42;
+  - http://www.contoso.com:&#42;
 
-    -   http://www.contoso.com: /&#42;
+  - http://www.contoso.com: /&#42;
 
 ## <a name="how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios"></a>Jak se dostat k protokolům spravovaných aplikací pomocí Managed Browseru na zařízení s iOSem
 

@@ -1,27 +1,27 @@
 ---
-title: "Nastavení e-mailu pro zařízení s iOSem v Microsoft Intune"
-titleSuffix: 
-description: "Přečtěte si informace o nastaveních Microsoft Intune, která můžete použít ke konfiguraci nastavení e-mailu na zařízeních s iOSem."
-keywords: 
+title: Nastavení e-mailu pro zařízení s iOSem v Microsoft Intune
+titleSuffix: ''
+description: Přečtěte si informace o nastaveních Microsoft Intune, která můžete použít ke konfiguraci nastavení e-mailu na zařízeních s iOSem.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/2/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1634512c85c156046d0324953463d745be06d649
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: d7b050e94114b0d3c9dcec765f4dd6e7700a801f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="email-profile-settings-in-microsoft-intune-for-devices-running-ios"></a>Nastavení e-mailového profilu v Microsoft Intune pro zařízení s iOSem 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Tento článek ukazuje nastavení e-mailového profilu, které můžete konfigurovat pro zařízení se systémem iOS.
 

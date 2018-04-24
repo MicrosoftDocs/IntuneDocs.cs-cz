@@ -1,27 +1,27 @@
 ---
-title: "Nastavení sítě VPN pro zařízení Windows Phone 8.1 v Microsoft Intune"
-titleSuffix: 
-description: "Zjistěte, jaká nastavení můžete v Intune použít ke konfiguraci připojení VPN na zařízeních s Windows Phone 8.1."
-keywords: 
+title: Nastavení sítě VPN pro zařízení Windows Phone 8.1 v Microsoft Intune
+titleSuffix: ''
+description: Zjistěte, jaká nastavení můžete v Intune použít ke konfiguraci připojení VPN na zařízeních s Windows Phone 8.1.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 786a817fbbd821d74f4f1a03fdec5a6893ed890b
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 458586a2d507e913eb702c0ee2e3c0531350f1b4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-windows-phone-81"></a>Nastavení sítě VPN v Microsoft Intune pro zařízení s Windows Phone 8.1
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Tento článek popisuje, jaká nastavení můžete v Intune použít ke konfiguraci připojení VPN na zařízeních s Windows Phone 8.1.
 
@@ -56,7 +56,7 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
 - **Role** (pouze Pulse Secure) – zadejte název role uživatele, která má přístup k tomuto připojení. Role uživatele definuje osobní nastavení a možnosti a povolí nebo zakáže určité funkce přístupu.
 - **Sféra** (pouze Pulse Secure) – zadejte název sféry ověření, kterou chcete použít. Sféra ověření je seskupení prostředků ověření používaných typem připojení Pulse Secure.
 
-- **Seznam hledání přípon DNS** - **Přidejte** minimálně jednu příponu DNS. Každá zadaná přípona DNS se vyhledá při připojení k webu pomocí krátkého názvu. Když například zadáte přípony **domain1.contoso.com** a **domain2.contoso.com** a navštívíte adresu **http://mywebsite**, vyhledají se adresy **http://mywebsite.domain1.contoso.com** a **http://mywebsite.domain2.contoso.com**.
+- **Seznam hledání přípon DNS** - **Přidejte** minimálně jednu příponu DNS. Každá zadaná přípona DNS se vyhledá při připojení k webu pomocí krátkého názvu. Zadáte například přípony DNS **domain1.contoso.com** a **domain2.contoso.com**, přejdete na adresu URL **http://mywebsite** a adresy URL **http://mywebsite.domain1.contoso.com** a **http://mywebsite.domain2.contoso.com se vyhledají**.
 
 - **Vlastní XML** – zadejte vlastní příkazy XML pro konfiguraci připojení VPN.
 
@@ -64,7 +64,6 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
 
 ```
     <pulse-schema><isSingleSignOnCredential>true</isSingleSignOnCredential></pulse-schema>
-
 ```
 
 **Příklad pro CheckPoint Mobile VPN:**
@@ -76,13 +75,11 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
 **Příklad pro SonicWall Mobile Connect:**
 ```
 <MobileConnect><Compression>false</Compression><debugLogging>True</debugLogging><packetCapture>False</packetCapture></MobileConnect>
-
 ```
 
 **Příklad pro F5 Edge Client:**
 ```
     <f5-vpn-conf><single-sign-on-credential /></f5-vpn-conf>
-
 ```
 
 Další informace o tom, jak psát vlastní příkazy XML, najdete v dokumentaci k síti VPN jednotlivých výrobců.
@@ -95,7 +92,7 @@ Další informace o tom, jak psát vlastní příkazy XML, najdete v dokumentaci
 ## <a name="proxy-settings"></a>Nastavení proxy serveru
 
 - **Automaticky zjišťovat nastavení proxy serveru** – pokud VPN server vyžaduje pro připojení proxy server, zadejte, jestli mají zařízení automaticky zjišťovat nastavení připojení. Další informace najdete v dokumentaci k Windows Serveru.
-- **Skript automatické konfigurace** – ke konfiguraci proxy serveru použijte konfigurační soubor. Zadejte **Adresu URL proxy serveru** (například **http://proxy.contoso.com**), na které se nachází konfigurační soubor.
+- **Skript automatické konfigurace** – ke konfiguraci proxy serveru použijte konfigurační soubor. Zadejte **adresu URL proxy serveru** (například **http://proxy.contoso.com**), na které se nachází konfigurační soubor.
 - **Použít proxy server** – tuto možnost povolte, pokud chcete zadat nastavení proxy serveru ručně.
     - **Adresa** – zadejte adresu proxy serveru (jako IP adresu).
     - **Číslo portu** – zadejte číslo portu přidruženého k proxy serveru.

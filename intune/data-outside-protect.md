@@ -1,7 +1,7 @@
 ---
 title: Zabránění neoprávněnému přístupu k podnikovým datům
 titlesuffix: Microsoft Intune
-description: Microsoft Intune vám umožňuje zabránit neoprávněnému přístupu k firemním datům, když se sdílí mimo podnikovou síť.
+description: Microsoft Intune vám umožňuje zabránit neoprávněnému přístupu k firemním datům, když je sdílíte mimo podnikovou síť.
 keywords: Office 365 O365 Azure Information Protection ochrana firemních dat mimo vaši firemní síť
 ms.author: dougeby
 author: dougeby
@@ -15,11 +15,11 @@ ms.assetid: 6a88573a-aa60-455c-858c-74562798246b
 ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 25f0572d65e6d651c636c8b1961903f7c2c78906
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: 1fa717147d8c5fcc33f350cc16bd4af53a31efc7
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>Zabránění neoprávněnému přístupu k podnikovým datům v Microsoft Intune
 

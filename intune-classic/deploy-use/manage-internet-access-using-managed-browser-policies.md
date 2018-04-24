@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 559866fff63b0ad77a43ce337adede5cd8b27302
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 9781af943dbfb782cf367257127021473e35c168
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Správa přístupu k internetu pomocí zásad spravované prohlížeče v Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Spravovaný prohlížeč je aplikace procházení webu, kterou můžete nasadit v organizaci pomocí Microsoft Intune. Zásady spravovaného prohlížeče konfigurují seznam povolených nebo blokovaných webů. Tyto seznamy omezují weby, které můžou uživatelé spravovaného prohlížeče navštívit.
 
@@ -99,52 +99,52 @@ Microsoft automaticky shromažďuje anonymní informace o výkonu a využití 
 ### <a name="url-format-for-allowed-and-blocked-urls"></a>Formát adresy URL pro povolené a blokované adresy URL
 V následující části najdete informace o povolených formátech a zástupných znacích, které můžete použít při zadávání adres URL v seznamech povolených a blokovaných webů:
 
--   V souladu s následujícími pravidly můžete v seznamu povolených vzorů použít zástupný znak (**&#42;**).
+- V souladu s následujícími pravidly můžete v seznamu povolených vzorů použít zástupný znak (**&#42;**).
 
--   Při zadávání adres URL do seznamu nezapomeňte u všech uvést předponu **http** nebo **https**.
+- Při zadávání adres URL do seznamu nezapomeňte u všech uvést předponu **http** nebo **https**.
 
--   V adrese můžete specifikovat čísla portů. Pokud nezadáte číslo portu, použijí se tyto hodnoty:
+- V adrese můžete specifikovat čísla portů. Pokud nezadáte číslo portu, použijí se tyto hodnoty:
 
-    -   Port 80 pro protokol HTTP
+  -   Port 80 pro protokol HTTP
 
-    -   Port 443 pro protokol HTTPS
+  -   Port 443 pro protokol HTTPS
 
-    Použití zástupných znaků pro číslo portu se nepodporuje. Nepodporují se například **http&colon;//www&period;contoso&period;com:*;** a **http&colon;//www&period;contoso&period;com: /*;**.
+  Použití zástupných znaků pro číslo portu se nepodporuje. Nepodporují se například <strong>http&colon;//www&period;contoso&period;com:*;</strong> a <strong>http&colon;//www&period;contoso&period;com: /*;</strong>.
 
--   Informace o povolených vzorech, které můžete použít při zadávání adres URL, najdete v následující tabulce:
+- Informace o povolených vzorech, které můžete použít při zadávání adres URL, najdete v následující tabulce:
 
-|Adresa URL|Podrobnosti|Odpovídá|Neodpovídá|
-    |-------|---------------|-----------|------------------|
-    |http://www.contoso.com|Odpovídá jediné stránce|www.contoso.com|host.contoso.com<br /><br />www.contoso.com/images<br /><br />contoso.com/|
-    |http://contoso.com|Odpovídá jediné stránce|contoso.com/|host.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com|
-    |http://www.contoso.com/&#42;|Odpovídá všem adresám URL začínajícím na www.contoso.com|www.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com/videos/tvshows|host.contoso.com<br /><br />host.contoso.com/images|
-    |http://&#42;.contoso.com/&#42;|Odpovídá všem dílčím doménám domény contoso.com|developer.contoso.com/resources<br /><br />news.contoso.com/images<br /><br />news.contoso.com/videos|contoso.host.com|
-    |http://www.contoso.com/images|Odpovídá jediné složce|www.contoso.com/images|www.contoso.com/images/dogs|
-    |http://www.contoso.com:80|Odpovídá jediné stránce s použitím čísla portu|http://www.contoso.com:80||
-    |https://www.contoso.com|Odpovídá jediné zabezpečené stránce|https://www.contoso.com|http://www.contoso.com|
-    |http://www.contoso.com/images/&#42;|Odpovídá jediné složce a všem podsložkám|www.contoso.com/images/dogs<br /><br />www.contoso.com/images/cats|www.contoso.com/videos|
+|                  Adresa URL                  |                     Podrobnosti                      |                                                Odpovídá                                                |                                Neodpovídá                                 |
+|---------------------------------------|--------------------------------------------------|-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+|        http://www.contoso.com         |              Odpovídá jediné stránce               |                                            www.contoso.com                                            |  host.contoso.com<br /><br />www.contoso.com/images<br /><br />contoso.com/   |
+|          http://contoso.com           |              Odpovídá jediné stránce               |                                             contoso.com/                                              | host.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com |
+|    <http://www.contoso.com/&#42>;     | Odpovídá všem adresám URL začínajícím na www.contoso.com |      www.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com/videos/tvshows      |              host.contoso.com<br /><br />host.contoso.com/images              |
+|    http://&#42;.contoso.com/&#42;     |     Odpovídá všem dílčím doménám domény contoso.com     | developer.contoso.com/resources<br /><br />news.contoso.com/images<br /><br />news.contoso.com/videos |                               contoso.host.com                                |
+|     http://www.contoso.com/images     |             Odpovídá jediné složce              |                                        www.contoso.com/images                                         |                          www.contoso.com/images/dogs                          |
+|       http://www.contoso.com:80       |  Odpovídá jediné stránce s použitím čísla portu   |                                       http://www.contoso.com:80                                       |                                                                               |
+|        https://www.contoso.com        |          Odpovídá jediné zabezpečené stránce           |                                        https://www.contoso.com                                        |                            http://www.contoso.com                             |
+| <http://www.contoso.com/images/&#42>; |    Odpovídá jediné složce a všem podsložkám    |                  www.contoso.com/images/dogs<br /><br />www.contoso.com/images/cats                   |                            www.contoso.com/videos                             |
 
--   Tady jsou uvedené příklady některých vstupních hodnot, které nemůžete zadat:
+- Tady jsou uvedené příklady některých vstupních hodnot, které nemůžete zadat:
 
-    -   &#42;.com
+  - &#42;.com
 
-    -   &#42;.contoso/&#42;
+  - &#42;.contoso/&#42;
 
-    -   www.contoso.com/&#42;images
+  - www.contoso.com/&#42;images
 
-    -   www.contoso.com/&#42;images&#42;pigs
+  - www.contoso.com/&#42;images&#42;pigs
 
-    -   www.contoso.com/page&#42;
+  - www.contoso.com/page&#42;
 
-    -   IP adresy
+  - IP adresy
 
-    -   https://&#42;
+  - https://&#42;
 
-    -   http://&#42;
+  - http://&#42;
 
-    -   http://www.contoso.com:&#42;
+  - http://www.contoso.com:&#42;
 
-    -   http://www.contoso.com: /&#42;
+  - http://www.contoso.com: /&#42;
 
 ### <a name="how-conflicts-between-the-allow-and-block-list-are-resolved"></a>Řešení konfliktů mezi seznamy povolených a blokovaných webů
 Pokud je na zařízení nasazených víc zásad spravovaného prohlížeče a dojde ke konfliktu nastavení, vyhodnotí se konflikty obou režimů (povoleného i blokovaného) a konflikty seznamů adres URL. V případě konfliktu platí následující pravidlo:

@@ -1,29 +1,29 @@
 ---
-title: "Přidání aplikací pro Android Store do Microsoft Intune"
-titleSuffix: 
-description: "Zjistěte, jak do Microsoft Intune přidat aplikace z obchodu pro Android."
-keywords: 
+title: Přidání aplikací pro Android Store do Microsoft Intune
+titleSuffix: ''
+description: Zjistěte, jak do Microsoft Intune přidat aplikace z obchodu pro Android.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/26/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 4433000a-23e9-4cad-a818-48c28eedc1f5
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 87fea551dea1f80ee071fe6b477b84729e000874
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: ece6edee891b147ad2124b987239da6af8e1bc8d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-android-store-apps-to-microsoft-intune"></a>Přidání aplikací pro Android Store do Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Před přiřazením aplikace k zařízení nebo skupině uživatelů je nejprve potřeba danou aplikaci přidat do Microsoft Intune. Aplikaci pro Android Store přidáte do Intune z portálu Azure Portal následujícím postupem.
 
@@ -52,6 +52,6 @@ Před přiřazením aplikace k zařízení nebo skupině uživatelů je nejprve 
 
 Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřazovat vybraným skupinám. 
 
-##<a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další kroky
 
 - [Postup přiřazení aplikací do skupin](apps-deploy.md)

@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a47e1388f640f96c2650e284ae0a5311fd816ba7
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 22018a241664a02aa99b9a3b1a53aa559ab42db5
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-custom-policies-to-allow-and-block-apps-for-samsung-knox-standard-devices"></a>Použití vlastních zásad povolených a blokovaných aplikací pro zařízení se Samsung Knox Standardem
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Postupy v tomto tématu použijte k vytvoření vlastní zásady Microsoft Intune, která obsahuje jeden z těchto seznamů:
 
@@ -39,21 +39,21 @@ Tato nastavení můžou využívat jenom zařízení se Samsung Knox Standardem.
 3. Zadejte název a nepovinný popis zásady, pak v části **Nastavení OMA-URI** zvolte **Přidat**.
 4. V dialogovém okně **Přidat nebo upravit nastavení OMA-URI** zadejte následující informace: Pro seznam aplikací, jejichž spouštění není v zařízení povoleno:
     
-    - **Název nastavení.** Zadejte **PreventStartPackages**.
-    - **Popis nastavení.** Zadejte volitelný popis, např.: Seznam zakázaných aplikací.
-    -   **Datový typ.** Z rozevíracího seznamu vyberte položku **String** (Řetězec).
-    -   **OMA-URI.** Zadejte **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
-    -   **Hodnota.** Zadejte seznam názvů balíčků aplikací, které chcete zakázat. Jako oddělovač můžete použít **; : ,** nebo **|**. (Příklad: package1;package2;)
+   - **Název nastavení.** Zadejte **PreventStartPackages**.
+   - **Popis nastavení.** Zadejte volitelný popis, např.: Seznam zakázaných aplikací.
+   - **Datový typ.** Z rozevíracího seznamu vyberte položku **String** (Řetězec).
+   - **OMA-URI.** Zadejte **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
+   - **Hodnota.** Zadejte seznam názvů balíčků aplikací, které chcete zakázat. Jako oddělovač můžete použít **; : ,** nebo **|**. (Příklad: package1;package2;)
 
-    Pro seznam aplikací, které si uživatelé můžou nainstalovat z obchodu Google Play, s vyloučením všech ostatních:
+     Pro seznam aplikací, které si uživatelé můžou nainstalovat z obchodu Google Play, s vyloučením všech ostatních:
 
-    - **Název nastavení.** Zadejte **AllowInstallPackages**.
-    - **Popis nastavení.** Zadejte volitelný popis, např.: Seznam aplikací povolených pro instalaci z Google Play.
-    - **Datový typ.** Z rozevíracího seznamu vyberte položku **String** (Řetězec).
-    - **OMA-URI.** Zadejte **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/AllowInstallPackages**
-    - **Hodnota.** Zadejte seznam názvů balíčků aplikací, které chcete povolit. Jako oddělovač můžete použít **; : ,** nebo **|**. (Příklad: package1;package2;)
+   - **Název nastavení.** Zadejte **AllowInstallPackages**.
+   - **Popis nastavení.** Zadejte volitelný popis, např.: Seznam aplikací povolených pro instalaci z Google Play.
+   - **Datový typ.** Z rozevíracího seznamu vyberte položku **String** (Řetězec).
+   - **OMA-URI.** Zadejte **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/AllowInstallPackages**
+   - **Hodnota.** Zadejte seznam názvů balíčků aplikací, které chcete povolit. Jako oddělovač můžete použít **; : ,** nebo **|**. (Příklad: package1;package2;)
 
-4. Zvolte **OK** a potom **Uložit změny**. 
+5. Zvolte **OK** a potom **Uložit změny**. 
 
 >[!TIP]
 > ID balíčku aplikace najdete tak, že na tuto aplikaci přejdete v obchodě Google Play. ID balíčku je součástí adresy URL stránky aplikace. Třeba aplikace Microsoft Word má ID balíčku **com.microsoft.office.word**.

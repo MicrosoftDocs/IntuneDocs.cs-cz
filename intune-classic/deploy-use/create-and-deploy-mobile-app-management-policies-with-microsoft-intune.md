@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e751934549490885c1ebf2445ec8f112f640f5bd
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: cc133071f4d6c0d1a3bbb3acc7c0bd5cb45b6cef
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-and-deploy-app-protection-policies-with-microsoft-intune"></a>Vytvoření a nasazení zásad ochrany aplikací pomocí Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Toto téma popisuje proces vytváření zásad ochrany aplikací na **portálu Azure Portal**. Portál Azure Portal je nová konzola pro správu, která slouží k vytváření zásad ochrany aplikací, a doporučujeme tento portál při vytváření zásad ochrany aplikací používat. Portál Azure Portal podporuje následující scénáře MAM:
 
@@ -31,23 +31,23 @@ Toto téma popisuje proces vytváření zásad ochrany aplikací na **portálu A
 - Zařízení spravovaná řešením MDM třetí strany
 - Zařízení, která nejsou spravována žádným řešením MDM (BYOD).
 
->[!IMPORTANT]
-Pokud při správě zařízení používáte **konzolu pro správu Intune**, zvažte toto:
-
+> [!IMPORTANT]
+> Pokud při správě zařízení používáte **konzolu pro správu Intune**, zvažte toto:
+> 
 > * Pomocí [konzoly pro správu Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) můžete vytvořit zásadu ochrany aplikací podporující aplikace pro zařízení zaregistrovaná v Intune.
 > * Zásady ochrany aplikací vytvořené v konzole pro správu Intune se nedají importovat do portálu Azure Portal.  Zásady ochrany aplikací je potřeba znovu vytvořit na portálu Azure Portal.
-
+> 
 > * V konzole pro správu Intune se nemusí zobrazovat všechna nastavení zásad ochrany aplikací. Azure Portal je nová konzola pro správu, kterou je možné používat k vytváření zásad ochrany aplikací.
-
+> 
 > * Pro nasazení spravovaných aplikací musíte vytvořit zásady ochrany aplikací pomocí konzoly pro správu Intune. V takovém případě můžete chtít vytvořit zásady ochrany aplikací v konzole pro správu Intune i na portálu Azure Portal. V konzole proto, abyste si zajistili možnost nasazení spravovaných aplikací, a na portálu Azure Portal proto, že je to nová konzola pro správu obsahující všechna nastavení zásad ochrany aplikací.
-
+> 
 > * Pokud vytvoříte zásady ochrany aplikací v konzole pro správu Intune i na portálu Azure Portal, pro aplikace se použije zásada z portálu Azure Portal.
 
 Pokud chcete zobrazit seznam nastavení zásad, která jsou podporována pro platformy Android a iOS, vyberte jednu z následujících možností:
 
 > [!div class="op_single_selector"]
-- [Zásady pro iOS](ios-mam-policy-settings.md)
-- [Zásady pro Android](android-mam-policy-settings.md)
+> - [Zásady pro iOS](ios-mam-policy-settings.md)
+> - [Zásady pro Android](android-mam-policy-settings.md)
 
 - Podrobnější popis toho, jak zásady ochrany aplikací fungují, a scénáře podporované zásadami ochrany aplikací Intune najdete v tématu o [ochraně dat aplikací pomocí zásady ochrany aplikací](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
 
@@ -129,13 +129,13 @@ Počínaje verzí Intune 1703 máte možnost při vytváření nových zásad oc
 > [!IMPORTANT]
 > Při vytváření nových zásad ochrany aplikací musíte z rozevíracího seznamu platformy zvolit Windows 10.
 
-1.  V okně Přidat zásadu zvolte **Povolené aplikace** nebo **Aplikace s výjimkou**. Tím otevřete příslušné okno.
+1. V okně Přidat zásadu zvolte **Povolené aplikace** nebo **Aplikace s výjimkou**. Tím otevřete příslušné okno.
 
-    > [!NOTE]
-    >
-    - **Povolené aplikace**: Tyto aplikace musejí tyto zásady dodržovat.
-    - **Aplikace s výjimkou**: Tyto aplikace mají z těchto zásad výjimku a můžou k podnikovým datům přistupovat bez omezení.
-<br></br>
+   > [!NOTE]
+   > 
+   > - **Povolené aplikace**: Tyto aplikace musejí tyto zásady dodržovat.
+   > - **Aplikace s výjimkou**: Tyto aplikace mají z těchto zásad výjimku a můžou k podnikovým datům přistupovat bez omezení.
+   > <br></br>
 2. V okně povolených aplikací nebo aplikací s výjimkou klikněte na **Přidat aplikace**. Můžete přidat doporučené aplikace Microsoft, aplikace pro Store nebo desktopové aplikace.
 
     a.  **Doporučené aplikace:** Předem vyplněný seznam aplikací (většinou pro Office), které správcům umožňujeme snadno do zásad importovat.
@@ -210,8 +210,8 @@ Pokud koncový uživatel chce, aby se změny zásady projevily hned, musí se od
 Pokud chcete zobrazit úplný seznam nastavení zásad pro iOS a Android, vyberte jednu z následujících možností:
 
 > [!div class="op_single_selector"]
-- [Zásady pro iOS](ios-mam-policy-settings.md)
-- [Zásady pro Android](android-mam-policy-settings.md)
+> - [Zásady pro iOS](ios-mam-policy-settings.md)
+> - [Zásady pro Android](android-mam-policy-settings.md)
 
 ## <a name="next-steps"></a>Další kroky
 [Monitorování stavu dodržování předpisů a uživatele](monitor-mobile-app-management-policies-with-microsoft-intune.md)

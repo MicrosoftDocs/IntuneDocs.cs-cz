@@ -1,29 +1,29 @@
 ---
-title: "Nastavení zásad pro Windows"
-description: "Ke konfiguraci nastavení pro registrovaná zařízení s Windows 8.1 a Windows 8 použijte obecné zásady konfigurace Windows (Windows 8.1 a novější) Intune."
-keywords: 
+title: Nastavení zásad pro Windows
+description: Ke konfiguraci nastavení pro registrovaná zařízení s Windows 8.1 a Windows 8 použijte obecné zásady konfigurace Windows (Windows 8.1 a novější) Intune.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 6982a2bc-aafa-475a-9236-4840b709e5a1
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9fa8d8454e9d22b2d3c36cd6449805d709c34ffa
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: ccd5bd201de59537dbf99ea9e19d84dbf80c1a20
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="windows-policy-settings-in-microsoft-intune"></a>Nastavení zásad pro Windows v Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Ke konfiguraci následujících nastavení pro zaregistrovaná zařízení s Windows 8, Windows 8.1 a Windows RT 8.1 použijte **obecné zásady konfigurace Windows (Windows 8.1 a novější)** Microsoft Intune:
 
@@ -37,7 +37,7 @@ Ke konfiguraci následujících nastavení pro zaregistrovaná zařízení s Win
 
 |Název nastavení|Podrobnosti|
 |----------------|------|
-|**Vyžadovaný typ hesla**|Určuje vyžadované vlastnosti hesla, například jenom číslice nebo alfanumerické znaky.|
+|**Požadovaný typ hesla**|Určuje vyžadované vlastnosti hesla, například jenom číslice nebo alfanumerické znaky.|
 |**Vyžadovaný typ hesla – Minimální počet znakových sad**|Určuje, kolik různých znakových sad musí být v hesle zahrnutých. Používají se čtyři znakové sady: malá písmena, velká písmena, číslice a symboly. Pro zařízení s iOSem ale toto nastavení určuje počet symbolů, které musí heslo obsahovat.|
 |**Minimální délka hesla**|Konfiguruje minimální vyžadovanou délku hesla (ve znacích).|
 |**Počet povolených opakovaných neúspěšných přihlášení, než se zařízení vymaže**|Vymaže zařízení po zadaném počtu neúspěšných pokusů o přihlášení.|
@@ -45,13 +45,14 @@ Ke konfiguraci následujících nastavení pro zaregistrovaná zařízení s Win
 |**Vypršení platnosti hesla (dny)**|Určuje počet dní, než bude nutné změnit heslo zařízení.|
 |**Pamatovat si historii hesel**|Určuje, jestli uživatel může konfigurovat dříve použitá hesla.|
 |**Pamatovat si historii hesel** – **Zabránit opětovnému použití předchozích hesel**|Určuje počet dříve použitých hesel, která se na zařízení zapamatovávají.|
-|**Povolit obrázkové heslo a PIN**|Povolí použití obrázkového hesla a kódu PIN. Obrázkové heslo umožňuje uživateli přihlášení pomocí gesta na obrázku. Kód PIN umožňuje uživatelům rychlé přihlášení pomocí čtyřmístného kódu.|
+|**Povolit obrázkové heslo a PIN**|Povolí použití obrázkového hesla a kódu PIN. Obrázkové heslo umožňuje uživateli přihlášení pomocí gesta na obrázku. PIN umožňuje uživatelům rychlé přihlášení pomocí čtyřmístného kódu.|
 
 ## <a name="encryption-settings"></a>Nastavení šifrování
 
-|Název nastavení|Podrobnosti|
-|----------------|-----|
-|**Vyžadovat šifrování u mobilního zařízení**<sup>1</sup>|Vyžaduje, aby soubory v zařízení byly šifrované.|
+|                           Název nastavení                           |                     Podrobnosti                      |
+|------------------------------------------------------------------|--------------------------------------------------|
+| <strong>Vyžadovat šifrování u mobilního zařízení</strong><sup>1</sup> | Vyžaduje, aby soubory v zařízení byly šifrované. |
+
 <sup>1</sup> Další informace pro zařízení s Windows 8.1
 
 -   K vynucení šifrování na zařízeních s Windows 8.1 je potřeba na každé zařízení nainstalovat [aktualizaci MDM klienta pro Windows z prosince 2014](http://support.microsoft.com/kb/3013816).
@@ -118,5 +119,5 @@ Ke konfiguraci následujících nastavení pro zaregistrovaná zařízení s Win
 
 
 
-### <a name="see-also"></a>Související témata
+### <a name="see-also"></a>Viz taky
 [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)

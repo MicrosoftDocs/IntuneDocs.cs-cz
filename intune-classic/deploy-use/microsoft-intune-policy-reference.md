@@ -1,29 +1,29 @@
 ---
-title: "Referenční informace o zásadách konfigurace"
-description: "Informace v tomto tématu vám pomohou rozhodnout, jaké zásady Microsoft Intune byste měli používat ke správě svých zařízení."
-keywords: 
+title: Referenční informace o zásadách konfigurace
+description: Informace v tomto tématu vám pomohou rozhodnout, jaké zásady Microsoft Intune byste měli používat ke správě svých zařízení.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: d27f2739-9791-4aae-a9db-01a4e59ccfe5
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: bf92e34c5bb94fe0cb3c0cc9dabd687a0f2710b9
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: 46bc3408f861bcd249ca5071abf1ee80733af10d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-intune-configuration-policy-reference"></a>Referenční informace o zásadách konfigurace služby Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Informace v tomto tématu vám pomohou rozhodnout, které zásady konfigurace Microsoft Intune byste měli používat ke správě svých zařízení.
 
@@ -102,12 +102,13 @@ Platí jenom pro Windows Phone a zaregistrovaná zařízení s Windows.
 
 ## <a name="common-mobile-device-settings"></a>Obecná nastavení mobilních zařízení
 
-|Název zásady|Použijte v případě, že chcete|
-|---------------|------------------------|
-|**Zásady Exchange ActiveSync**|Konfigurovat nastavení zabezpečení mobilních zařízení a funkční nastavení pro zařízení, která se spravují přes Exchange ActiveSync<br /><br />Podrobnosti najdete v tématu [Nastavení zásad Exchange ActiveSync v Microsoft Intune](exchange-activesync-policy-settings-in-microsoft-intune.md).|
-|**Zásady zabezpečení mobilních zařízení**|<ul><li>Konfiguruje nastavení pro mobilní zařízení (všechny platformy), včetně:<br /><br /><ul><li>Zabezpečení</li><li>Šifrování</li><li>Systém</li><li>E-mailu</li><li>Aplikace</li></ul></li></ul>
+|                  Název zásady                   |                                                                                                                       Použijte v případě, že chcete                                                                                                                       |
+|------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  <strong>Zásady Exchange ActiveSync</strong>   | Konfigurovat nastavení zabezpečení mobilních zařízení a funkční nastavení pro zařízení, která se spravují přes Exchange ActiveSync<br /><br />Podrobnosti najdete v tématu [Nastavení zásad Exchange ActiveSync v Microsoft Intune](exchange-activesync-policy-settings-in-microsoft-intune.md). |
+| <strong>Zásady zabezpečení mobilních zařízení</strong> |                                  <ul><li>Konfiguruje nastavení pro mobilní zařízení (všechny platformy), včetně:<br /><br /><ul><li>Zabezpečení</li><li>Šifrování</li><li>Systém</li><li>E-mailu</li><li>Aplikace</li></ul></li></ul>                                  |
+
 > [!IMPORTANT]
-Microsoft Intune teď nabízí oddělené **zásady konfigurace** pro každou platformu zařízení a tyto zásady obsahují nejaktuálnější nastavení, které můžete použít. Můžete pokračovat v používání zásad zabezpečení mobilních zařízení a všechna existující nasazení budou i nadále fungovat, měli byste ale naplánovat, aby se v co nejbližší době provedla migrace na nové zásady konfigurace.<br />Podrobnosti najdete v tématu [Zásady zabezpečení mobilních zařízení v Microsoft Intune](mobile-device-security-policy-settings-in-microsoft-intune.md).
+> Microsoft Intune teď nabízí oddělené **zásady konfigurace** pro každou platformu zařízení a tyto zásady obsahují nejaktuálnější nastavení, které můžete použít. Můžete pokračovat v používání zásad zabezpečení mobilních zařízení a všechna existující nasazení budou i nadále fungovat, měli byste ale naplánovat, aby se v co nejbližší době provedla migrace na nové zásady konfigurace.<br />Podrobnosti najdete v tématu [Zásady zabezpečení mobilních zařízení v Microsoft Intune](mobile-device-security-policy-settings-in-microsoft-intune.md).
 
 ## <a name="policies-for-windows-pcs-managed-by-the-intune-software-client"></a>Zásady pro počítače s Windows spravované softwarovým klientem Intune
 

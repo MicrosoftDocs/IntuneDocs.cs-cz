@@ -1,24 +1,24 @@
 ---
-title: "zásady"
+title: zásady
 titlesuffix: Microsoft Intune
-description: "Téma referenčních informací ke kategorii Zásady pro kolekce entit v rozhraní API datového skladu Intune"
-keywords: "Datový sklad Intune"
+description: Téma referenčních informací ke kategorii Zásady pro kolekce entit v rozhraní API datového skladu Intune
+keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/12/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: c5546c686a51170c8c854252cddb048685c6b2d2
-ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
+ms.openlocfilehash: 0cfeffd4cb466d8bcfc2da072e7e6c028a4e0c8a
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reference-for-policy-entities"></a>Referenční informace pro entity zásad
 
@@ -157,10 +157,12 @@ PolicyKey|Klíč zásad, který jde připojit k zásadám a získat tak název z
 
 Následující tabulka uvádí počet uživatelů v úspěšném, čekajícím, neúspěšném nebo chybovém stavu za den. Číslo odráží data pro jednotlivé profily typu zásad. Pokud se například uživatel nachází v úspěšném stavu pro všechny své přiřazené zásady, posune čítač úspěšných uživatelů pro daný den o jedna nahoru. Pokud má uživatel přiřazené dva profily, jeden je v úspěšném stavu a druhý je v chybovém stavu, započítá se uživatel v chybovém stavu. Entita PolicyUserActivity uvádí, kolik uživatelů je v jakém stavu v daném dni za posledních 30 dní.
 
-|Vlastnost  |Popis  |Příklad  |
-|---------|---------|---------|
-|DateKey|Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo|20160703|
-|Čeká|Počet jedinečných zařízení v čekajícím stavu|123|
-|Úspěšné|Počet jedinečných zařízení v úspěšném stavu|12|
-PolicyKey|Klíč zásad, který jde připojit k zásadám a získat tak název zásad|Směrný plán Windows 10|
-|Chyba|Počet jedinečných zařízení v chybovém stavu|10|
+
+| Vlastnost  |                                         Popis                                         |       Příklad       |
+|-----------|---------------------------------------------------------------------------------------------|---------------------|
+|  DateKey  | Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo |      20160703       |
+|  Čeká  |                         Počet jedinečných zařízení v čekajícím stavu                          |         123         |
+| Úspěšné |                         Počet jedinečných zařízení v úspěšném stavu                          |         12          |
+| PolicyKey |                Klíč zásad, který jde připojit k zásadám a získat tak název zásad                 | Směrný plán Windows 10 |
+|   Chyba   |                          Počet jedinečných zařízení v chybovém stavu                           |         10          |
+

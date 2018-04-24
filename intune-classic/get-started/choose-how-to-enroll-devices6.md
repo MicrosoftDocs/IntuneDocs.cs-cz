@@ -14,26 +14,26 @@ ms.assetid: 40262e47-1ab4-437d-8ca5-c89b5022f91f
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 ms.custom: intune-classic EXPIERIMENT
-ms.openlocfilehash: fd09126b8226828ccb60f30e0daa6135643303e2
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: b730aae4e3e8f576824ac61811018293cc07e080
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="choose-how-to-enroll-mobile-devices"></a>Volba způsobu registrace mobilních zařízení
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Vaše odpovědi na tuto řadu otázek vám pomohou určit nejlepší metody registrace zařízení, která spravujete.
 
 ## <a name="how-will-you-manage-dedicated-corporate-owned-devices"></a>**Jak budete spravovat vyhrazená zařízení ve vlastnictví firmy?**
 
-  > [!div class="button"]
-[iOS DEP >](/intune-classic/deploy-use/ios-device-enrollment-program-in-microsoft-intune)  
 > [!div class="button"]
-[Průvodce nastavením iOS >](/intune-classic/deploy-use/ios-setup-assistant-enrollment-in-microsoft-intune)
+> [iOS DEP >](/intune-classic/deploy-use/ios-device-enrollment-program-in-microsoft-intune)  
 > [!div class="button"]
-[Označení kódem IMEI >](/intune-classic/deploy-use/specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers)
+> [Průvodce nastavením iOS >](/intune-classic/deploy-use/ios-setup-assistant-enrollment-in-microsoft-intune)
+> [!div class="button"]
+> [Označení kódem IMEI >](/intune-classic/deploy-use/specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers)
 
   Zařízení vlastněná společností s vyhrazenými uživateli se dají registrovat těmito způsoby:
 
@@ -44,4 +44,4 @@ Vaše odpovědi na tuto řadu otázek vám pomohou určit nejlepší metody regi
   - **Značka s číslem IMEI:** Naimportováním čísel IMEI (International Mobile Equipment Identity) zařízení vlastněných společností můžete v Intune tato zařízení označit jako zařízení ve vlastnictví společnosti. Toto je jediný způsob, jak identifikovat vyhrazená („jednouživatelská“) zařízení se systémem Windows a Android jako zařízení ve vlastnictví společnosti. Zařízení s iOSem, která nebudou zaregistrovaná pomocí programu registrace zařízení Apple nebo nástroje Apple Configurator, je také možné označit pomocí čísla IMEI. Poté, co zařízení předběžně deklarujete, aby byla označená jako firemní, je můžete distribuovat uživatelům. Uživatelé si pak můžou zaregistrovat svá zařízení jako vyhrazená nainstalováním Portálu společnosti pro přístup k podnikovým prostředkům, například k e-mailu, aplikacím a datům.
 
 > [!div class="button"]
-[< Zpět](choose-how-to-enroll-devices3.md)
+> [< Zpět](choose-how-to-enroll-devices3.md)

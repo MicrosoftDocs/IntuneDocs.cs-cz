@@ -1,27 +1,27 @@
 ---
-title: "Registrace zařízení s Androidem ve službě TEM (Telecom Expense Management) pomocí Intune"
-description: "Přečtěte si, jak můžete zaregistrovat zařízení s Androidem ve službě TEM (Telecom Expense Management)."
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Registrace zařízení s Androidem ve službě TEM (Telecom Expense Management) pomocí Intune
+description: Přečtěte si, jak můžete zaregistrovat zařízení s Androidem ve službě TEM (Telecom Expense Management).
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 04/19/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 26aa3698-7e4d-453a-8852-ab75e72b6485
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 68f760c84b1394245494809de094e603e388e59b
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: dced939de37ca9fe7172ac0a8bec3fa391a24ed1
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-your-android-device-in-telecom-expense-management"></a>Registrace zařízení s Androidem ve službě TEM (Telecom Expense Management)
 
@@ -39,11 +39,11 @@ Pokračujte klepnutím na šipku __Další__ v pravém horním rohu obrazovky. V
 
 1. Vyberte __Zaregistrovat se pomocí účtu Microsoft__.
 
-  ![Snímek obrazovky Nastavení v aplikaci Datalert, na které je v horní části zobrazeno pole pro registraci zařízení a v dolní části možnost registrace pomocí účtu Microsoft, pokud máte účet Microsoft Office 365 a předplatné Intune](./media/and-enroll-12a-tem-datalert-enroll-msft-account.png)
+   ![Snímek obrazovky Nastavení v aplikaci Datalert, na které je v horní části zobrazeno pole pro registraci zařízení a v dolní části možnost registrace pomocí účtu Microsoft, pokud máte účet Microsoft Office 365 a předplatné Intune](./media/and-enroll-12a-tem-datalert-enroll-msft-account.png)
 
 2. Z dostupných účtů zvolte pracovní nebo školní účet. Pokud váš účet není uveden, můžete se přihlásit pomocí tlačítka **Přidat účet**.
 
-  ![Snímek obrazovky Vybrat účet s ukázkovým účtem a tlačítkem Přidat účet](./media/and-enroll-12b-tem-datalert-enroll-select-msft-account.png)
+   ![Snímek obrazovky Vybrat účet s ukázkovým účtem a tlačítkem Přidat účet](./media/and-enroll-12b-tem-datalert-enroll-select-msft-account.png)
 
 3. Datalert se bude instalovat a po chvíli by se měla instalace dokončit. Po dokončení klepněte na __Dokončit__.
 
@@ -51,15 +51,15 @@ Pokračujte klepnutím na šipku __Další__ v pravém horním rohu obrazovky. V
 
 1. Zadejte telefonní číslo zařízení.
 
-  ![Snímek obrazovky aplikace Datalert s žádostí o telefonní číslo](./media/and-enroll-13-tem-datalert-phone-number.png)
+   ![Snímek obrazovky aplikace Datalert s žádostí o telefonní číslo](./media/and-enroll-13-tem-datalert-phone-number.png)
 
 2. Prostřednictvím SMS zprávy pak dostanete ověřovací kód. Zadejte tento kód a klepněte na __OK__.
 
-  ![Snímek obrazovky aplikace Datalert s žádostí o ověřovací kód v SMS zprávě](./media/and-enroll-14-tem-datalert-sms.png)
+   ![Snímek obrazovky aplikace Datalert s žádostí o ověřovací kód v SMS zprávě](./media/and-enroll-14-tem-datalert-sms.png)
 
 3. Jakmile tento ověřovací kód zadáte, instalace aplikace Datalert se dokončí. Po klepnutí na __Dokončit__ budete moci v aplikaci Datalert monitorovat využití dat.
 
-  ![Snímek obrazovky aplikace Datalert s monitorováním dnešního využití dat](./media/and-enroll-15-tem-datalert-monitoring-active.png)
+   ![Snímek obrazovky aplikace Datalert s monitorováním dnešního využití dat](./media/and-enroll-15-tem-datalert-monitoring-active.png)
 
 Po registraci začnete v aplikaci Datalert sledovat využití dat.
 

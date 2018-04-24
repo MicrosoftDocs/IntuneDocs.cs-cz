@@ -1,27 +1,27 @@
 ---
-title: "Instalace klientského softwaru na počítači"
-description: "Tento průvodce vám pomůže se správou počítače s Windows klientským softwarem Microsoft Intune."
-keywords: 
+title: Instalace klientského softwaru na počítači
+description: Tento průvodce vám pomůže se správou počítače s Windows klientským softwarem Microsoft Intune.
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
 ms.date: 07/13/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9316f78155b38f74765a353186a29dc90afce547
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 56ae374f5b930c55fbe12305f4246c52e6213a20
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalace klientského softwaru Intune na počítače se systémem Windows
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Počítače se systémem Windows se dají zaregistrovat přes klientský software Intune. Klientský software Intune je možné nainstalovat následujícími způsoby:
 
@@ -39,13 +39,13 @@ Jedna licence služby Intune umožňuje instalovat klientský software Intune a�
 
 Všechny způsoby (s výjimkou toho, kdy si uživatelé instalují klientský software Intune sami) vyžadují, aby správci IT tento software napřed stáhli, než je možné ho nasadit koncovým uživatelům.
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) klikněte na **Správce** &gt; **Stažení klientského softwaru**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) klikněte na **Správce** &gt; **Stažení klientského softwaru**.
 
-  ![Stažení počítačového klienta Intune](../media/pc-sa-client-download.png)
+   ![Stažení počítačového klienta Intune](../media/pc-sa-client-download.png)
 
 2. Na stránce **Stažení klientského softwaru** klikněte na **Stáhnout klientský software**. Uložte balíček **Microsoft_Intune_Setup.zip**, který obsahuje software, do zabezpečeného umístění v síti.
 
-  Instalační balíček klientského softwaru Intune obsahuje jedinečné a specifické informace o vašem účtu, které jsou dostupné prostřednictvím vloženého certifikátu. Pokud k instalačnímu balíčku získají přístup neoprávnění uživatelé, můžou zaregistrovat počítače k účtu, který je reprezentovaný vloženým certifikátem, a můžou tak získat přístup k podnikovým prostředkům.
+   Instalační balíček klientského softwaru Intune obsahuje jedinečné a specifické informace o vašem účtu, které jsou dostupné prostřednictvím vloženého certifikátu. Pokud k instalačnímu balíčku získají přístup neoprávnění uživatelé, můžou zaregistrovat počítače k účtu, který je reprezentovaný vloženým certifikátem, a můžou tak získat přístup k podnikovým prostředkům.
 
 3. Extrahujte obsah instalačního balíčku do zabezpečeného umístění v síti.
 

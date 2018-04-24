@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d6230fbc50ae79702cfd938f158d2961b5d720c9
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 51da197b9b805fbac22b6a46453617b7703a37e8
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-intune-certificate-profiles"></a>Konfigurace profilů certifikátů Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Po konfiguraci infrastruktury a certifikátů, jak je popsáno v tématu [Konfigurace infrastruktury certifikátů pro SCEP](configure-certificate-infrastructure-for-scep.md) nebo [Konfigurace infrastruktury certifikátů pro PFX](configure-certificate-infrastructure-for-pfx.md), můžete vytvořit profily certifikátů. Postup je následující:
 
@@ -92,39 +92,39 @@ Po vytvoření profilu certifikátu důvěryhodné certifikační autority vytvo
 
 -  Windows Phone 8.1 nebo novější
 
-2.  Přidejte zásadu **Profil certifikátu SCEP**.
+2. Přidejte zásadu **Profil certifikátu SCEP**.
 
-    Další informace: [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
+   Další informace: [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
-3.  Pokud chcete konfigurovat nastavení profilu certifikátu SCEP, postupujte podle pokynů na stránce konfigurace profilu.
-    > [!NOTE]
-    >
-    > Pokud chcete zadat vlastní formát názvu subjektu (jenom profily iOS), v části **Formát názvu subjektu** vyberte **Vlastní**.
-    >
-    > Vlastní formát je aktuálně možné použít pro dvě proměnné, a to `Common Name (CN)` a `Email (E)`. Kombinací těchto proměnných a statických řetězců můžete vytvořit vlastní formát názvu subjektu, jako je třeba tenhle:
+3. Pokud chcete konfigurovat nastavení profilu certifikátu SCEP, postupujte podle pokynů na stránce konfigurace profilu.
+   > [!NOTE]
+   > 
+   > Pokud chcete zadat vlastní formát názvu subjektu (jenom profily iOS), v části **Formát názvu subjektu** vyberte **Vlastní**.
+   > 
+   > Vlastní formát je aktuálně možné použít pro dvě proměnné, a to `Common Name (CN)` a `Email (E)`. Kombinací těchto proměnných a statických řetězců můžete vytvořit vlastní formát názvu subjektu, jako je třeba tenhle:
+   > 
+   >     CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US
+   > 
+   > V příkladu správce vytvořil formát názvu subjektu, který kromě proměnných `CN` a `E` používá řetězce pro hodnoty Organizační jednotka (OU), Organizace (O), Umístění (L), Oblast (S) a Země (C). Výčet podporovaných řetězců je uveden v popisu [funkce CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx).
 
-    >     CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US
-
-    > V příkladu správce vytvořil formát názvu subjektu, který kromě proměnných `CN` a `E` používá řetězce pro hodnoty Organizační jednotka (OU), Organizace (O), Umístění (L), Oblast (S) a Země (C). Výčet podporovaných řetězců je uveden v popisu [funkce CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx).
-
-4.  Vyberte možnost **Uložit zásadu**.
+4. Vyberte možnost **Uložit zásadu**.
 
 Nová zásada se zobrazí v pracovním prostoru **Zásady**. Teď ji můžete nasadit.
 
 ### <a name="to-create-a-pfx-certificate-profile"></a>Vytvoření profilu certifikátu .PFX
 
-1.  V [konzole pro správu Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Přidat zásadu** a zvolte platformu zařízení. Certifikáty .PFX jsou podporované pro:
-  - Android 4 a novější
-  - Android for Work
-  - Windows 10 a novější
-  - Windows Phone 10 a novější
-  - iOS 8.0 a novější    
+1. V [konzole pro správu Intune](https://manage.microsoft.com) zvolte **Zásady** &gt; **Přidat zásadu** a zvolte platformu zařízení. Certifikáty .PFX jsou podporované pro:
+   - Android 4 a novější
+   - Android for Work
+   - Windows 10 a novější
+   - Windows Phone 10 a novější
+   - iOS 8.0 a novější    
 
 
-2.  Přidejte zásadu **Profil certifikátu PFX**.
-      Další informace: [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
-3.  Do formuláře zásad zadejte požadované informace.
-4.  Vyberte možnost **Uložit zásadu**.
+2. Přidejte zásadu **Profil certifikátu PFX**.
+     Další informace: [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
+3. Do formuláře zásad zadejte požadované informace.
+4. Vyberte možnost **Uložit zásadu**.
 
 Nová zásada se zobrazí v pracovním prostoru **Zásady**. Teď ji můžete nasadit.
 

@@ -1,29 +1,29 @@
 ---
 title: Ochrana Online Skypu pro firmy
-description: "Chraňte a řiďte přístup k Online Skypu pro firmy pomocí podmíněného přístupu."
-keywords: 
+description: Chraňte a řiďte přístup k Online Skypu pro firmy pomocí podmíněného přístupu.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 01/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1b2d7125-f63f-43cf-ac1e-94fbedf2a7e8
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 30d1abb3e7411cae73a98be51489cffdfc738e7f
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: d9d912cc0a2d8f815e046d888fc8878a8703c514
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="protect-access-to-skype-for-business-online-with-microsoft-intune"></a>Ochrana přístupu k Online Skypu pro firmy pomocí Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 K řízení přístupu k Online Skypu pro firmy můžete použít zásady podmíněného přístupu k **Online Skypu pro firmy**.
 Podmíněný přístup má dvě součásti:
@@ -87,23 +87,23 @@ Až budete připravení, pokračujte **Krokem 3**.
 ### <a name="step-3-configure-the-skype-for-business-online-policy"></a>Krok 3: Konfigurace zásad pro Online Skype pro firmy
 V dalším kroku nakonfigurujte zásadu, která bude vyžadovat, aby měla k Online Skype pro firmy přístup jenom spravovaná zařízení, která jsou v souladu s předpisy. Tato zásada bude uložená v Azure Active Directory.
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte **Zásady** > **Podmíněný přístup** > **Zásady pro Online Skype pro firmy**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte **Zásady** > **Podmíněný přístup** > **Zásady pro Online Skype pro firmy**.
 
-  ![Snímek obrazovky stránky zásad podmíněného přístupu Online Skypu pro firmy](./media/conditional_access_SFBPolicy.png)
+   ![Snímek obrazovky stránky zásad podmíněného přístupu Online Skypu pro firmy](./media/conditional_access_SFBPolicy.png)
 
-2.  Vyberte **Zapnout zásady podmíněného přístupu**.
+2. Vyberte **Zapnout zásady podmíněného přístupu**.
 
-3.  V části **Přístup k aplikaci** můžete použít zásady podmíněného přístupu na:
+3. V části **Přístup k aplikaci** můžete použít zásady podmíněného přístupu na:
 
-    -   **iOS**
+   -   **iOS**
 
-    -   **Android**
+   -   **Androidemem**
 
-4.  V části **Cílové skupiny** zvolte **Upravit** a vyberte skupiny zabezpečení Azure Active Directory, na které se zásady vztahují. Můžete cílit na všechny uživatele nebo vybranou skupinu uživatelů.
+4. V části **Cílové skupiny** zvolte **Upravit** a vyberte skupiny zabezpečení Azure Active Directory, na které se zásady vztahují. Můžete cílit na všechny uživatele nebo vybranou skupinu uživatelů.
 
-5.  V případě potřeby v části **Vyloučené skupiny** zvolte **Upravit** a vyberte skupiny zabezpečení Azure Active Directory, na které se tyto zásady nevztahují.
+5. V případě potřeby v části **Vyloučené skupiny** zvolte **Upravit** a vyberte skupiny zabezpečení Azure Active Directory, na které se tyto zásady nevztahují.
 
-6.  Po dokončení vyberte **Uložit**.
+6. Po dokončení vyberte **Uložit**.
 
 Nyní máte nakonfigurovaný podmíněný přístup pro Online Skype pro firmy Zásady podmíněného přístupu nemusíte nasazovat, projeví se okamžitě.
 

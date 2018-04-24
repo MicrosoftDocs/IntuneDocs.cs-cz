@@ -1,29 +1,33 @@
 ---
-title: "Vytvoření profilu Wi-Fi s předsdíleným klíčem – Microsoft Intune – Azure | Dokumentace Microsoftu"
-description: "Pokud chcete v Microsoft Intune vytvořit profil Wi-Fi s předsdíleným klíčem, použijte vlastní profil a získáte ukázkový kód XML pro profily Wi-Fi založené na Androidu, Windows a protokolu EAP."
-keywords: 
+title: Vytvoření profilu Wi-Fi s předsdíleným klíčem – Microsoft Intune – Azure | Microsoft Docs
+description: Pokud chcete v Microsoft Intune vytvořit profil Wi-Fi s předsdíleným klíčem, použijte vlastní profil a získáte ukázkový kód XML pro profily Wi-Fi založené na Androidu, Windows a protokolu EAP.
+keywords: ''
 author: mandia
 ms.author: MandiOhlinger
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 85543d87ca79fa301ee1e9c242c053c1c34e18c3
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 27ced5debc7eb063be03f4e6a1932425717318af
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key---intune"></a>Vytvoření profilu Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení – Intune
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Předsdílené klíče (PSK) se obvykle používají k ověřování uživatelů v sítích Wi-Fi nebo bezdrátových sítích LAN. V Intune můžete vytvořit profil Wi-Fi s využitím předsdíleného klíče. Pokud chcete vytvořit profil, použijte funkci **vlastních profilů zařízení** v Intune. Tento článek také obsahuje několik příkladů vytvoření profilu Wi-Fi založeného na protokolu EAP.
+
+> [!IMPORTANT]
+>- Při použití předsdíleného klíče ve Windows 10 se v Intune zobrazí chyba odstranění problému. Když k ní dojde, profil Wi-Fi se správně přiřadí k zařízení a profil bude fungovat podle očekávání.
+>- Pokud exportujete profil Wi-Fi s předsdíleným klíčem, ověřte si, že je soubor chráněný. Klíč má formát prostého textu, takže jeho ochranu zajišťujete vy.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
@@ -46,15 +50,15 @@ Můžete vytvořit vlastní profil s předsdíleným klíčem pro profil Wi-Fi z
 
    d. **OMA-URI:**
 
-    - **Pro Android:** ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
-    - **Pro Windows:** ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
+   - **Pro Android:** ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
+   - **Pro Windows:** ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
 
-    > [!NOTE]
-    > Nezapomeňte použít tečku na začátku.
+     > [!NOTE]
+     > Nezapomeňte použít tečku na začátku.
 
-    SSID je identifikátor SSID, pro který vytváříte zásadu. Zadejte například `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
+     SSID je identifikátor SSID, pro který vytváříte zásadu. Zadejte například `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
 
-  e. **Hodnota pole**: Sem vkládáte svůj kód XML. Podívejte se na příklady v tomto článku. Aktualizujte jednotlivé hodnoty tak, aby odpovídaly nastavení vaší sítě. Nějaké pokyny najdete v sekci komentáře ke kódu.
+   e. **Hodnota pole**: Sem vkládáte svůj kód XML. Podívejte se na příklady v tomto článku. Aktualizujte jednotlivé hodnoty tak, aby odpovídaly nastavení vaší sítě. Nějaké pokyny najdete v sekci komentáře ke kódu.
 3. Vyberte **OK**, zásadu uložte a pak přiřaďte.
 
     > [!NOTE]
@@ -203,7 +207,7 @@ Následujícím postupem můžete také vytvořit soubor XML z existujícího p�
 
 1. Na počítači, který je připojený nebo byl nedávno připojený k bezdrátové síti, otevřete složku `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}`.
 
-  Nejvhodnější je použít počítač, který nebyl připojený k mnoha bezdrátovým sítím. V opačném případě byste možná museli procházet jednotlivé profily, abyste našli ten správný.
+   Nejvhodnější je použít počítač, který nebyl připojený k mnoha bezdrátovým sítím. V opačném případě byste možná museli procházet jednotlivé profily, abyste našli ten správný.
 
 2. Prohledejte soubory XML a najděte ten se správným názvem.
 3. Po vyhledání správného souboru XML zkopírujte kód XML a vložte ho do pole **Data** na stránce nastavení OMA-URI.

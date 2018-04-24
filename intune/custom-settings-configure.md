@@ -1,26 +1,26 @@
 ---
-title: "Používání vlastního nastavení zařízení v Microsoft Intune – Azure | Microsoft Docs"
-description: "Přidejte nebo vytvořte profil k používání vlastních nastavení pro zařízení s Windows, Androidem a iOSem pomocí Microsoft Intune"
-keywords: 
+title: Používání vlastního nastavení zařízení v Microsoft Intune – Azure | Microsoft Docs
+description: Přidejte nebo vytvořte profil k používání vlastních nastavení pro zařízení s Windows, Androidem a iOSem pomocí Microsoft Intune
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/06/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: adecb332c91f17cf92362295b6b0c81445f5acaf
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: ce7c263435f92a041b93dc5d34ffa912c6fa87fb
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Vytvoření profilu s vlastním nastavením v Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Intune nemusí mít všechna předdefinovaná nastavení, která potřebujete nebo chcete. Nebo můžete chtít použít nastavení, které je k dispozici v jiných profilech zařízení. Pokud tato nastavení chcete přidat, vytvořte profil zařízení a nakonfigurujte v něm vlastní nastavení zařízení.
 
@@ -37,7 +37,7 @@ Vlastní nastavení se konfigurují pro každou platformu jinak. Třeba k ovlád
 4. Zadejte **Název** a **Popis** vlastního profilu.
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, na kterou chcete vlastní nastavení použít. Můžete vybrat kteroukoli z těchto platforem:
 
-    - **Androidem**
+    - **Androidemem**
     - **Android for Work**
     - **iOS**
     - **macOS**
