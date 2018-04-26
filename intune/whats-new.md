@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/21/2018
+ms.date: 04/12/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,39 +14,251 @@ ms.technology: ''
 ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
-ms.custom: intune-azure
-ms.openlocfilehash: be4d02419879a765c3d84a99b65a1184f7e8353e
-ms.sourcegitcommit: 390a4be5aa36007c36fb6a5abcfe8d20bc862a4b
+/ms.custom: intune-azure
+ms.openlocfilehash: a2692163977a352e7a26dfc656d601d70ef401b4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
-
-Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete také získat informace o [nadcházejících změnách](#whats-coming), [důležitá oznámení](#notices) o službě a informace o [minulých verzích](whats-new-archive.md).
+Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete také získat informace o [nadcházejících změnách](#whats-coming), [důležitá oznámení](#notices) o službě a informace o [minulých verzích](whats-new-archive.md). Některé funkce můžou vycházet v průběhu několika týdnů a nemusí být k dispozici všem zákazníkům hned první týden.
 
 > [!Note]
-> Informace o nových funkcích v hybridní správě mobilních zařízení (MDM) najdete na [stránce Co je nového pro hybridní MDM](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management).
+> Informace o nových funkcích v hybridní správě mobilních zařízení (MDM) najdete na [stránce s novinkami pro hybridní MDM](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management).
 
 
 <!-- Common categories:  
+  ### App management
   ### Device enrollment
   ### Device management
-  ### App management
   ### Device configuration
-  ### Role-based access control
   ### Intune apps
   ### Monitor and troubleshoot
+  ### Role-based access control
 
 -->   
 
+## <a name="week-of-april-9-2018"></a>Týden od 9. dubna 2018
+
+#### <a name="updated-help-experience-in-company-portal-app-for-android----1631531---"></a>Aktualizované prostředí nápovědy aplikace Portál společnosti pro Android <!-- 1631531 -->
+
+Aktualizovali jsme prostředí nápovědy v aplikaci Portál společnosti pro Android, aby bylo v souladu s osvědčenými postupy pro platformu Android. Když teď dojde k potížím s aplikací, může uživatel klepnout na **Nabídka** > **Nápověda** a:
+- Odeslat Microsoftu diagnostický protokol
+- Odeslat e-mail s popisem problému a ID incidentu pracovníkovi podpory ve své společnosti  
+
+Pokud si chcete aktualizované prostředí nápovědy prohlédnout, přejděte na [Odeslání protokolů e-mailem](/intune-user-help/send-logs-to-your-it-admin-by-email-android.md) a [Odeslání chyb do Microsoftu](/intune-user-help/send-logs-to-microsoft-android.md).
+
+
+#### <a name="new-enrollment-failure-trend-chart-and-failure-reasons-table----1471783---"></a>Nový graf trendu neúspěšných registrací a tabulka důvodů selhání <!-- 1471783 -->
+
+Na stránce s přehledem registrací můžete vidět trend neúspěšných registrací a pět nejčastějších příčin selhání. Kliknutím na tento graf nebo tabulku můžete přejít k podrobnostem a najít rady pro řešení problémů a návrhy vedoucí k nápravě.
+
+#### <a name="update-where-to-configure-your-app-protection-policies----2144597---"></a>Aktualizace místa, kde konfigurujete zásady ochrany aplikací <!-- 2144597 -->
+
+Na portálu Azure Portal v rámci služby Microsoft Intune vás dočasně přesměrujeme z okna služby **Intune App Protection** do okna **Mobilní aplikace**. Všechny vaše zásady ochrany aplikací se už nacházejí v okně **Mobilní aplikace** v Intune v oblasti konfigurace aplikací. Místo přechodu na službu Intune App Protection přejdete přímo na Intune. V dubnu 2018 toto přesměrování ukončíme a okno služby **Intune App Protection** úplně odebereme, aby se zásady ochrany aplikací nacházely v Intune jen na jednom místě. 
+
+**Co to pro mě znamená?**
+Tato změna ovlivní jak zákazníky samostatné verze Intune, tak zákazníky hybridní verze (Intune s Configuration Managerem). Tato integrace pomůže zjednodušit práci se správou cloudu.
+
+**Jak se mám na tuto změnu připravit?**
+Místo okna služby **Intune App Protection** si do oblíbených položek přidejte **Intune** a seznamte se s pracovním postupem zásad ochrany aplikací v okně **Mobilní aplikace** v Intune. Po krátkém období přesměrování okno **App Protection** odebereme. Nezapomeňte, že všechny zásady ochrany aplikací jsou už přenesené do Intune a kterékoli ze zásad podmíněného přístupu můžete upravit. Podrobnosti o úpravách zásad podmíněného přístupu najdete v tématu [Podmíněný přístup ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal). Další informace viz téma [Co jsou zásady ochrany aplikací](app-protection-policy.md). 
+
+
+## <a name="week-of-april-2-2018"></a>Týden od 2. dubna 2018
+
+### <a name="intune-apps"></a>Aplikace Intune
+
+#### <a name="user-experience-update-for-the-company-portal-app-for-ios---1412866---"></a>Aktualizace uživatelského prostředí aplikace Portál společnosti pro iOS <!--1412866 -->
+Vydali jsme důležitou aktualizaci uživatelského prostředí aplikace Portál společnosti pro iOS. Tato aktualizace nabízí zcela přepracovaný vzhled aplikace, včetně modernějšího vzhledu a chování. Zachovali jsme funkčnost aplikace, ale zvýšili její využitelnost a přístupnost.  
+
+Další vylepšení:
+- Podpora pro iPhone X
+- Rychlejší spouštění aplikace a odezva při načítání, které uživateli šetří čas
+- Další indikátory průběhu, které uživatelům poskytují aktuální informace o stavu
+- Vylepšené nahrávání protokolů, které usnadňuje hlášení vzniklých problémů  
+
+Pokud si chcete nový vzhled prohlédnout, přejděte na [Co je nového v uživatelském rozhraní aplikace](whats-new-app-ui.md).
+
+#### <a name="protect-on-premise-exchange-data-using-intune-app-and-ca----1056954---"></a>Ochrana místních dat systému Exchange pomocí zásad ochrany aplikací Intune a podmíněného přístupu <!-- 1056954 -->
+Nově můžete chránit přístup k místním datům systému Exchange z Outlooku Mobile prostřednictvím zásad ochrany aplikací Intune a podmíněného přístupu. Pokud chcete na portálu Azure Portal přidat nebo upravit zásady ochrany aplikací, vyberte **Microsoft Intune** > **Mobilní aplikace** > **Zásady ochrany aplikací**. Ještě než začnete tuto funkci využívat, zkontrolujte, že splňujete [požadavky na Outlook pro iOS a Android](https://technet.microsoft.com/en-us/library/mt846639(v=exchg.160).aspx).
+
+## <a name="week-of-march-26-2018"></a>Týden od 26. března 2018
+
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="alerts-for-expiring-ios-line-of-business-lob-apps-for-microsoft-intune----748789---"></a>Výstrahy k vypršení platnosti obchodních aplikací pro iOS v Microsoft Intune <!-- 748789 -->
+
+Na portálu Azure Portal vás Intune upozorní na obchodní aplikace pro iOS, jejichž platnost brzy vyprší. Při nahrání nové verze obchodní aplikace pro iOS Intune oznámení o vypršení platnosti ze seznamu aplikací odebere. Toto oznámení o vypršení platnosti bude aktivní jen u nově nahraných obchodních aplikací pro iOS. 30 dní před vypršením platnosti profilu pro zřizování obchodních aplikací pro iOS se zobrazí upozornění. Potom se výstraha změní na Platnost vypršela.
+
+#### <a name="customize-your-company-portal-themes-with-hex-codes---1049561---"></a>Přizpůsobení motivů Portálu společnosti pomocí šestnáctkových kódů <!--1049561 -->
+
+Pomocí šestnáctkových kódů si můžete přizpůsobit barvu motivu v aplikacích Portál společnosti. Když zadáte šestnáctkový kód, Intune určí barvu textu, která poskytuje nejvyšší úroveň kontrastu mezi barvou textu a barvou pozadí. Můžete si zobrazit náhled barvy textu a loga společnosti oproti barvě v části **Mobilní aplikace** > **Portál společnosti**.
+
+### <a name="including-and-excluding-app-assignment-based-on-groups-for-android-enterprise----1813081---"></a>Zahrnutí a vyloučení přiřazení aplikací na základě skupin pro Android Enterprise <!-- 1813081 -->
+
+Android Enterprise (dříve Android for Work) umožňuje zahrnout nebo vyloučit skupiny, ale nepodporuje vytvořené integrované skupiny **Všichni uživatelé** a **Všechna zařízení**. Podrobnosti najdete v tématu [Zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune](apps-inc-exl-assignments.md).
+
+
+### <a name="device-management"></a>Správa zařízení
+
+#### <a name="new-security-enhancements-in-the-intune-service-----1637539---"></a>Vylepšení zabezpečení ve službě Intune <!-- 1637539 -->   
+
+Do Intune v Azure jsme přidali přepínací tlačítko, pomocí kterého můžou zákazníci samostatné verze Intune zacházet se zařízením bez přiřazených zásad, jako by bylo **Vyhovující předpisům** (funkce zabezpečení vypnutá), nebo **Nevyhovující předpisům** (funkce zabezpečení zapnutá). To zajistí přístup k prostředkům až po vyhodnocení dodržování předpisů zařízením.
+
+Dopad této funkce závisí na tom, zda už máte přiřazené zásady dodržování předpisů nebo nikoliv.
+
+- Pokud patříte mezi nové nebo stávající účty a nemáte ke svým zařízením přiřazené žádné zásady dodržování předpisů, je tento přepínač automaticky nastaven na **Vyhovující předpisům**. V konzole bude je funkce ve výchozím nastavení vypnutá. Na koncové uživatele to nemá žádný vliv.
+- Pokud patříte mezi stávající účty a máte nějaká zařízení, ke kterým jsou přiřazené zásady dodržování předpisů, je tento přepínač automaticky nastaven na **Nevyhovující předpisům**. Od zavedení březnové aktualizace je tato funkce ve výchozím nastavení zapnutá.
+
+Pokud používáte zásady dodržování předpisů s podmíněným přístupem a tato funkce je zapnutá, jsou teď všechna zařízení bez alespoň jedné přiřazené zásady dodržování předpisů blokovaná podmíněným přístupem. Koncoví uživatelé přidružení k těmto zařízením, kteří měli předtím přístup k e-mailu, o tento přístup přijdou, dokud všem zařízením nepřiřadíte alespoň jednu zásadu dodržování předpisů.   
+
+Mějte na paměti, že ačkoliv se výchozí stav tlačítka zobrazí v uživatelském rozhraní bezprostředně po březnových aktualizacích služby Intune, nevynutí se okamžitě. Veškeré provedené změny přepínacího tlačítka ovlivní dodržování předpisů zařízením až poté, co tlačítko na vašem účtu aktivujeme. Jakmile aktivaci dokončíme, informujeme vás prostřednictvím Centra zpráv. Po provedení březnových aktualizací to může trvat několik dní.
+
+**Další informace**: [https://aka.ms/compliance_policies](https://aka.ms/compliance_policies)
+
+#### <a name="enhanced-jailbreak-detection----846515---"></a>Vylepšené zjišťování jailbreaků <!-- 846515 -->
+
+Vylepšené zjišťování jailbreaků je novým nastavením dodržování předpisů, které zlepší způsob, jak Intune vyhodnocuje zařízení s jailbreakem. Toto nastavení způsobí, že se zařízení bude k Intune hlásit častěji. K tomu se využívají polohové služby a ovlivňuje to vybíjení baterie.
+
+#### <a name="reset-passwords-for-android-o-devices----1238299---"></a>Resetování hesel pro zařízení s Androidem O <!-- 1238299 -->
+U zaregistrovaných zařízení s Androidem 8.0 a pracovním profilem můžete resetovat hesla. Když do zařízení s Androidem 8.0 pošlete žádost o resetování hesla, nastaví se aktuálnímu uživateli nové heslo pro odemčení zařízení nebo výzva spravovaného profilu. Po zaslání se heslo nebo výzva okamžitě projeví.
+
+#### <a name="targeting-compliance-policies-to-devices-in-device-groups---1307012---"></a>Cílení zásad dodržování předpisů na zařízení ve skupinách zařízení <!--1307012 -->
+
+Můžete cílit zásady dodržování předpisů na uživatele ve skupinách uživatelů. Od této aktualizace můžete cílit zásady dodržování předpisů na zařízení ve skupinách zařízení. Zařízení cílená jako součást skupiny zařízení nebudou přijímat akce při nedodržení předpisů.
+
+#### <a name="new-management-name-column----1333586---"></a>Nový sloupec Název správy <!-- 1333586 -->
+ V okně zařízení přibyl nový sloupec s názvem **Název správy**. Půjde o automaticky generovaný název bez možnosti úprav, který bude přiřazený podle zařízení na základě tohoto vzorce:
+- Výchozí název pro všechna zařízení: <username><em><devicetype></em><enrollmenttimestamp>
+- Pro hromadně přidaná zařízení: <PackageId/ProfileId><em><DeviceType></em><EnrollmentTime>
+
+Je to volitelný sloupec v okně zařízení. Není k dispozici ve výchozím nastavení a přístup k němu je jen přes výběr sloupců. Na název zařízení nemá tento nový sloupec vliv.
+
+#### <a name="ios-devices-are-prompted-for-a-pin-every-15-minutes---1550837---"></a>Zařízením s iOSem se zobrazuje výzva k zadání PINu každých 15 minut <!--1550837 -->
+Po použití zásad dodržování předpisů nebo konfigurace u zařízení s iOSem se uživatelům každých 15 minut zobrazí výzva k zadání PINu. Uživatelům se výzva zobrazuje tak dlouho, dokud PIN nenastaví.
 
 
 
+#### <a name="schedule-your-automatic-updates---1805514---"></a>Plánování automatických aktualizací <!--1805514 -->
+Pomocí [nastavení aktualizačního okruhu Windows](windows-update-for-business-configure.md) máte v Intune možnost řídit instalaci automatických aktualizací. Od této aktualizace můžete naplánovat opakované aktualizace na základě týdne, dne a času.
+
+#### <a name="use-fully-distinguished-name-as-subject-for-scep-certificate---2221763---"></a>Použití plně rozlišujícího názvu jako subjektu certifikátu SCEP <!--2221763 -->
+Při vytváření profilu certifikátu SCEP zadáváte název subjektu. Od této aktualizace můžete jako subjekt použít plně rozlišující název. Jako **Název subjektu** vyberte **Vlastní** a pak zadejte `CN={{OnPrem_Distinguished_Name}}`. Pokud chcete použít proměnnou `{{OnPrem_Distinguished_Name}}`, nezapomeňte synchronizovat atribut uživatele `onpremisesdistingishedname` pomocí služby [Azure Active Directory (AD) Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) se službou Azure AD.
+
+### <a name="device-configuration"></a>Konfigurace zařízení
+
+#### <a name="enable-bluetooth-contact-sharing---android-for-work---1098983---"></a>Povolení sdílení kontaktů přes Bluetooth – Android for Work <!--1098983 -->
+Ve výchozím nastavení Android brání v synchronizaci kontaktů v pracovním profilu se zařízeními Bluetooth. V důsledku toho se kontakty pracovního profilu nezobrazují na ID volajícího u zařízení Bluetooth.
+
+Od této aktualizace je v části **Android for Work** > **Omezení zařízení** > **Nastavení pracovního profilu** k dispozici nové nastavení:
+- Sdílení kontaktů přes Bluetooth
+
+Správce Intune může toto nastavení nakonfigurovat a povolit sdílení. Toto nastavení je užitečné při párování zařízení se zařízením Bluetooth do auta, které zobrazuje ID volajícího při použití hands-free. Pokud je nastavení povoleno, kontakty pracovního profilu se zobrazí. Pokud není nastavení povoleno, kontakty pracovního profilu se nezobrazí.
+
+#### <a name="configure-gatekeeper-to-control-macos-app-download-source----1690459---"></a>Konfigurace Gatekeepera ke kontrole nad zdrojem stahování aplikací pro macOS <!-- 1690459 -->
+
+Můžete konfigurovat Gatekeepera, aby vaše zařízení chránil před aplikacemi díky kontrole nad tím, odkud je možné aplikace stahovat. Nakonfigurovat můžete tyto zdroje stahování: **Mac App Store**, **Mac App Store a identifikovaní vývojáři** nebo **Kdekoliv**. Kromě toho je možné nakonfigurovat, jestli uživatelé smí nainstalovat aplikaci kliknutím se stisknutou klávesou Control, které tuto kontrolu Gatekeepera přepíše.
+
+Tato nastavení najdete v části **Konfigurace zařízení** -> **Vytvořit profil** -> **macOS** -> **Ochrana koncového bodu**.
+
+#### <a name="configure-the-mac-application-firewall----1690461---"></a>Konfigurace brány firewall pro aplikace pro Mac <!-- 1690461 -->
+
+Je možné nakonfigurovat bránu firewall pro aplikace pro Mac. Můžete to využít k řízení připojení na základě jednotlivých aplikací místo na základě portů. Díky tomu snadněji využijete výhod ochrany pomocí brány firewall a pomůže vám to zabránit nežádoucím aplikacím v převzetí kontroly nad síťovými porty otevřenými pro oprávněné aplikace.
+
+Tuto funkci najdete v části **Konfigurace zařízení** -> **Vytvořit profil** -> **macOS** -> **Ochrana koncového bodu**.
+
+Jakmile nastavení brány firewall povolíte, můžete ji nakonfigurovat pomocí dvou strategií:
+
+- Blokovat všechna příchozí připojení
+
+   Můžete blokovat všechna příchozí připojení u cílových zařízení. Pokud se k tomu rozhodnete, zablokují se příchozí připojení u všech aplikací.
+
+- Povolit nebo blokovat konkrétní aplikace
+
+   Můžete povolit nebo blokovat příjem příchozích připojení u konkrétních aplikací. Můžete také povolit neviditelný režim, který zabrání odpovědím na zjišťovací požadavky.
+
+##### <a name="more-information"></a>Další informace
+
+- Blokovat všechna příchozí připojení
+
+   Tím se zablokuje příjem příchozích připojení u všech služeb sdílení (jako sdílení souborů a obrazovky). Služby systému, které mají příjem příchozích připojení stále povolený, jsou:
+  - configd – implementuje DHCP a další služby konfigurace sítě
+  - mDNSResponder – implementuje Bonjour
+  - racoon – implementuje protokol IPSec
+
+    Abyste mohli služby sdílení používat, musí být **Příchozí připojení** nastavené na **Nenakonfigurováno** (ne **Blokovat**).
+
+- Neviditelný režim
+
+   Povolením zabráníte počítači v odpovídání na zjišťovací požadavky. Počítač bude nadále odpovídat na požadavky oprávněných aplikací. Neočekávané požadavky, jako je ICMP (ping), se ignorují.
+
+#### <a name="disable-checks-on-device-restart---1805490---"></a>Zákaz kontrol při restartování zařízení <!--1805490 -->
+V Intune máte možnost řídit [správu aktualizací softwaru]](windows-update-for-business-configure.md). Od této aktualizace je k dispozici vlastnost <strong>Kontroly při restartu</strong>, která je ve výchozím nastavení povolená. Pokud chcete přeskočit typické kontroly, které se provádí při restartu zařízení (například aktivní uživatelé, stav baterie a další), vyberte <strong>Přeskočit</strong>.
+
+#### <a name="new-windows-10-insider-preview-channels-available-for-deployment-rings----1746293---"></a>Nové kanály Windows 10 Insider Preview pro kanály nasazení <!-- 1746293 -->
+Nově můžete při vytváření aktualizačního kanálu nasazení Windows 10 vybrat tyto kanály pro údržbu Windows 10 Insider Preview:
+- Sestavení Windows Insider – Fast
+- Sestavení Windows Insider – Slow
+- Sestavení Windows Insider – Release 
+
+Podrobnosti o těchto kanálech najdete v tématu [Správa sestavení Insider Preview](https://insider.windows.com/en-us/for-business-organization-admin/).   
+Informace o vytváření kanálů nasazení v Intune najdete v tématu [Správa softwarových aktualizací v Intune](windows-update-for-business-configure.md).
+
+### <a name="intune-apps"></a>Aplikace Intune
+
+#### <a name="company-portal-enrollment-improved----1874230-eeready--"></a>Vylepšená registrace pomocí Portálu společnosti <!-- 1874230 eeready-->
+Uživatelé, kteří registrují zařízení pomocí Portálu společnosti ve Windows 10 sestavení 1703 a vyšším, teď můžou dokončit první krok registrace bez opuštění aplikace.
+
+#### <a name="hololens-and-surface-hub-now-appear-in-device-lists---1725868---"></a>V seznamech zařízení <!--1725868 --> se teď zobrazují HoloLens a Surface Hub
+Do aplikace Portál společnosti pro Android jsme přidali podporu zobrazení zařízení HoloLens a Surface Hub zaregistrovaných v Intune.
+
+#### <a name="custom-book-categories-for-volume-purchase-progream-vpp-ebooks----1488911---"></a>Vlastní kategorie e-knih v rámci programu VPP (volume-purchase program) <!-- 1488911 -->
+Můžete vytvářet vlastní kategorie e-knih a pak k nim přiřadit e-knihy v rámci programu VPP. Koncoví uživatelé pak uvidí nově vytvořené kategorie e-knih a knihy k nim přiřazené. Podrobnosti najdete v tématu [Správa aplikací a knih zakoupených v rámci multilicenčního programu pomocí Microsoft Intune](vpp-apps.md).
+
+#### <a name="new-windows-defender-application-guard-settings----1631890---"></a>Nové nastavení Ochrany Application Guard v programu Windows Defender <!-- 1631890 -->
+
+- **Enable graphics acceleration (Povolit akceleraci grafiky)**: Správci můžou pro Ochranu Application Guard v programu Windows Defender povolit virtuální grafický procesor. Toto nastavení umožní procesoru přesunout vykreslování grafiky na virtuální grafický procesor. Může zlepšit výkon při práci s graficky náročnými weby nebo při sledování videa v kontejneru.
+
+- **SaveFilestoHost**: Správci můžou povolit předávání souborů z Microsoft Edge, který běží v kontejneru, do hostitelského souborového systému. Zapnutím tohoto nastavení umožníte uživatelům stahovat soubory z Microsoft Edge v kontejneru do hostitelského souborového systému.
+
+#### <a name="mam-protection-policies-targeted-based-on-management-state----1665993---"></a>Cílení na zásady ochrany MAM na základě stavu správy <!-- 1665993 -->
+Můžete cílit na zásady MAM na základě stavu správy zařízení:
+- **Zařízení s Androidem**: Je možné cílit na nespravovaná zařízení, zařízení spravovaná v Intune a Android Enterprise Profiles spravované v Intune (dříve Android for Work).
+- **Zařízení s iOS**: Je možné cílit na nespravovaná zařízení (jen MAM) nebo zařízení spravovaná v Intune.
+
+    > [!NOTE]
+    > - Podporu této funkce pro iOS budeme zavádět v průběhu dubna 2018.
+
+Podrobnosti najdete v tématu [Cílení zásad ochrany aplikací na základě stavu správy zařízení](app-protection-policies.md).
+
+#### <a name="improvements-to-the-language-in-the-company-portal-app-for-windows----1683758---"></a>Vylepšení jazyka v aplikaci Portál společnosti pro Windows <!-- 1683758 -->
+Vylepšili jsme jazyk v aplikaci Portál společnosti pro Windows 10 tak, aby byl uživatelsky přívětivější a lépe přizpůsobený vaší firmě. Obrázky s ukázkami změn najdete v tématu [Co je nového v uživatelském rozhraní aplikací](whats-new-app-ui.md).
+
+#### <a name="new-additions-to-our-docs-about-user-privacy----1440709---"></a>Nové dokumenty týkající se ochrany osobních údajů uživatelů <!-- 1440709 -->
+V rámci naší snahy poskytnout koncovým uživatelům větší kontrolu nad jejich daty a ochranou osobních údajů jsme zaktualizovali naše dokumenty, v nichž vysvětlujeme, jak zobrazit a odebrat data lokálně uložená aplikacemi Portál společnosti. Tyto novinky najdete zde:
+
+- **Android**: [Odebrání zařízení s Androidem z Intune](/intune-user-help/unenroll-your-device-from-intune-android.md)
+- **Android, pokud uživatel odmítnul Podmínky použití**: [Odebrání správy zařízení, pokud jste odmítli Podmínky použití](/intune-user-help/unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)
+- **iOS**: [Odebrání zařízení s iOSem z Intune](/intune-user-help/unenroll-your-device-from-intune-ios.md)
+- **Windows**: [Odebrání zařízení s Windows z Intune](/intune-user-help/unenroll-your-device-from-intune-windows.md)
+
+## <a name="week-of-march-19-2018"></a>Týden od 19. března 2018
+
+### <a name="export-all-devices-into-csv-files-in-ie-edge-or-chrome----2258071---"></a>Export všech zařízení do souborů CSV v Internet Exploreru, Edge a Chromu <!-- 2258071 -->
+V části **Zařízení** > **Všechna zařízení** můžete **exportovat** zařízení do seznamu ve formátu CSV. Uživatelé Internet Exploreru s více než 10 000 zařízeními můžou zařízení úspěšně vyexportovat do více souborů. Každý z nich může obsahovat až 10 000 zařízení.
+
+Uživatelé prohlížečů Edge a Chrome s více než 30 000 zařízeními můžou zařízení úspěšně vyexportovat do více souborů. Každý z nich může obsahovat až 30 000 zařízení.
+
+V tématu [Správa zařízení](device-management.md) se dozvíte podrobnosti o tom, co můžete se spravovanými zařízeními dělat.
 
 ## <a name="week-of-march-12-2018"></a>Týden od 12. března 2018
+
+### <a name="azure-active-directory-web-sites-can-require-the-intune-managed-browser-app-and-support-single-sign-on-for-the-managed-browser-public-preview----710595---"></a>Webové stránky Azure Active Directory můžou vyžadovat aplikaci Intune Managed Browser a podporovat jednotné přihlašování pro Managed Browser (Public Preview) <!-- 710595 -->
+
+Pomocí Azure Active Directory (Azure AD) můžete přístup k webovým stránkám na mobilních zařízeních omezit na aplikaci Intune Managed Browser. V Managed Browseru zůstanou data webových stránek zabezpečená a oddělená od osobních dat koncových uživatelů. Kromě toho bude Managed Browser podporovat možnosti jednotného přihlašování pro weby chráněné pomocí Azure AD. Přihlášení k Managed Browseru nebo jeho používání na zařízení s jinou aplikací, kterou spravuje Intune, umožňuje, aby měl Managed Browser přístup k podnikovým webům chráněným pomocí Azure AD, aniž by uživatel musel zadávat své přihlašovací údaje. Tato funkce se vztahuje na weby jako Outlook Web Access (OWA) a SharePoint Online i na jiné podnikové weby jako prostředky v intranetu, ke kterým se přistupuje prostřednictvím proxy aplikace Azure.
 
 #### <a name="company-portal-app-for-android-visual-updates---976944---"></a>Vizuální aktualizace aplikace Portál společnosti pro Android <!--976944 -->
 
@@ -54,7 +266,7 @@ Aktualizovali jsme aplikaci Portál společnosti pro Android v souladu s pokyny 
 
 ### <a name="new-windows-defender-exploit-guard-settings----1631893---"></a>Nové nastavení Ochrany Exploit Guard v programu Windows Defender <!-- 1631893 -->
 
-Nově je k dispozici šest nových nastavení **Omezení možností útoku** a rozšířené možnosti **Řízený přístup ke složkám: Ochrana složek**. Tato nastavení najdete tady: Konfigurace zařízení\Profily\
+Nově je k dispozici šest nových nastavení <strong>Omezení možností útoku</strong> a rozšířené možnosti <strong>Řízený přístup ke složkám: Ochrana složek</strong>. Tato nastavení najdete tady: Konfigurace zařízení\Profily\
 Vytvořit profil\Ochrana koncového bodu\Ochrana Exploit Guard v programu Windows Defender.
 
 #### <a name="attack-surface-reduction"></a>Omezení možností útoku
@@ -69,9 +281,10 @@ Vytvořit profil\Ochrana koncového bodu\Ochrana Exploit Guard v programu Window
 
 #### <a name="controlled-folder-access"></a>Řízený přístup ke složkám
 
-|Název nastavení  |Možnosti nastavení  |Popis  |
-|---------|---------|---------|
-|Ochrana složek (již implementováno)|Nenakonfigurováno, Povolit, Pouze audit (již implementováno)<br><br> **Nové**<br>Block disk modification (Blokovat změny disku), Audit disk modification (Auditovat změny disku)|
+|              Název nastavení               |                                                              Možnosti nastavení                                                              | Popis |
+|-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
+| Ochrana složek (již implementováno) | Nenakonfigurováno, Povolit, Pouze audit (již implementováno)<br><br> <strong>Nové</strong><br>Block disk modification (Blokovat změny disku), Audit disk modification (Auditovat změny disku) |             |
+
 Umožňuje chránit soubory a složky před neautorizovanými změnami od neznámých aplikací.<br><br>**Povolit**: Brání nedůvěryhodným aplikacím ve změnách nebo odstranění souborů v chráněných složkách a v zápisu do sektorů disku.<br><br>
 **Block disk modification only** (Blokovat jenom změny disku):<br>Umožňuje zablokovat nedůvěryhodným aplikacím možnost zapisovat do sektorů disku. Nedůvěryhodné aplikace stále můžou změnit nebo odstranit soubory v chráněných složkách.|
 
@@ -158,9 +371,10 @@ Můžete vytvořit jedinečný účet prostředku, aby se Surface Hub mohl zobra
 
 ##### <a name="controlled-folder-access"></a>Řízený přístup ke složkám
 
-|Název nastavení  |Možnosti nastavení  |Popis  |
-|---------|---------|---------|
-|Ochrana složek (již implementováno)|Nenakonfigurováno, Povolit, Pouze audit (již implementováno)<br><br> **Nové**<br>Block disk modification (Blokovat změny disku), Audit disk modification (Auditovat změny disku)|
+|              Název nastavení               |                                                              Možnosti nastavení                                                              | Popis |
+|-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
+| Ochrana složek (již implementováno) | Nenakonfigurováno, Povolit, Pouze audit (již implementováno)<br><br> <strong>Nové</strong><br>Block disk modification (Blokovat změny disku), Audit disk modification (Auditovat změny disku) |             |
+
 Umožňuje chránit soubory a složky před neautorizovanými změnami od neznámých aplikací.<br><br>**Povolit**: Brání nedůvěryhodným aplikacím ve změnách nebo odstranění souborů v chráněných složkách a v zápisu do sektorů disku.<br><br>
 **Block disk modification only** (Blokovat jenom změny disku):<br>Umožňuje zablokovat nedůvěryhodným aplikacím možnost zapisovat do sektorů disku. Nedůvěryhodné aplikace stále můžou změnit nebo odstranit soubory v chráněných složkách.|
 
@@ -426,8 +640,6 @@ Služba zápisu síťových zařízení umožňuje, aby mobilní zařízení spu
 Od této aktualizace se podporuje více konektorů NDES.
 
 #### <a name="manage-android-for-work-devices-independently-from-android-devices----1490731-eeready--"></a>Oddělená správa zařízení s Androidem for Work od zařízení s Androidem <!-- 1490731 EEready-->
-
-**Poznámka**: Následující změny začneme zavádět od listopadové aktualizace, ale než se promítnou u vašeho účtu, může to chvíli trvat. Jakmile tyto změny začnou platit i pro váš účet, pošleme vám oznámení s potvrzením přes portál Office 365. Po zavedení budete mít k dispozici další možnosti správy. Zavádění změn se nijak nedotkne prostředí pro koncové uživatele.
 
 Intune podporuje správu registrace zařízení s Androidem for Work odděleně od platformy Android. Tato nastavení se spravují v části **Registrace zařízení** > **Omezení registrace** > **Omezení typů zařízení**. (Dříve se nacházela v části **Registrace zařízení** > **Registrace Androidu for Work** > **Nastavení registrace Android for Work**.)
 
@@ -725,31 +937,19 @@ První verze datového modelu datového skladu Intune obsahovala jenom poslední
 ## <a name="notices"></a>Sdělení
 
 
-### <a name="coming-soon-workflow-updates-to-intune-administration-ui"></a>Připravujeme: Aktualizace pracovních postupů pro uživatelské rozhraní pro správu Intune
-
-V březnovém vydání verze služby se v Intune aktualizuje prostředí pro správu. Nebudete muset provádět žádnou akci, ale chceme vás na to upozornit v rámci snahy společnosti Microsoft o transparentnost. Pokud je povolená správa zařízení s Androidem nebo správa zařízení Apple, Intune odesílá informace o zařízení a uživateli kvůli zajištění integrace s těmito službami třetích stran a správy příslušných zařízení. Vylepšené uživatelské prostředí pro správu, které zavádíme v březnovém vydání verze služby, bude poskytovat vyšší transparentnost z hlediska sdílených dat. Žádná z těchto změn uživatelského rozhraní nebude mít dopad na koncového uživatele.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-
-Mezi scénáře, pro které se přidávají okna pro souhlas se sdílením dat, patří:
-- Povolení Androidu for Work
-- Povolení a nahrání certifikátů Apple MDM Push Certificate
-- Povolení některé ze služeb Apple, jako jsou například Device Enrollment Program, School Manager a Volume Purchasing Program
-
-Souhlas se vždy týká výhradně používání služby pro správu mobilního zařízení, například potvrzení, že správce IT udělil zařízení Google nebo Apple oprávnění k registraci. Tady je dokumentace obsahující informace, které se po přechodu na nové pracovní postupy budou sdílet:
-- [Data z Intune odesílaná Googlu](data-intune-sends-to-google.md)
-- [Data z Intune odesílaná Applu](data-intune-sends-to-apple.md)
-
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
 
 Na tuto změnu se nemusíte nijak připravovat, protože jde o menší aktualizace uživatelského rozhraní pracovních postupů.
 Další informace o dodržování nařízení GDPR v Microsoftu najdete v Centru zabezpečení, které je dostupné prostřednictvím odkazu Další informace.
 
+### <a name="plan-for-change-new-windows-10-setting-for-kiosk-configuration-in-intune----1560072---"></a>Plánovaná změna: Nové nastavení ve Windows 10 pro konfiguraci veřejného terminálu v Intune <!-- 1560072 -->
+Mění se způsob, jak a kde je možné nakonfigurovat plochu ve Windows 10 1709 a novějších (RS3 a novějších) na portálu Intune Azure.
 
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená? 
+Naše záznamy ukazují, že používáte nastavení Windows 10 > Omezení zařízení > Veřejný terminál (Preview). To se v uživatelském rozhraní v květnu přejmenuje na Windows 10 > Omezení zařízení > Veřejný terminál (zastaralé), aby uživatelé věděli, že se jeho použití už nedoporučuje. I nadále bude ale fungovat až do červnové aktualizace Intune. Potom se v back-endu změní na zastaralé a přestane být funkční. Jako alternativu představíme v květnu nový profil konfigurace zařízení (Windows 10 > Veřejný terminál), který bude obsahovat nastavení pro konfiguraci veřejného terminálu na Windows 10 RS4 a novějších.
 
-### <a name="plan-for-change-update-where-you-configure-your-app-protection-policies"></a>Plánovaná změna: Aktualizace místa, kde konfigurujete zásady ochrany aplikací
-
-Počínaje březnem 2018 vás dočasně přesměrujeme z okna služby Intune App Protection na Azure Portalu do okna Mobilní aplikace v Intune na Azure Portalu. Všechny vaše zásady ochrany aplikací se už nacházejí v okně Mobilní aplikace v Intune v oblasti konfigurace aplikací. Místo přechodu na službu Intune App Protection přejdete přímo na Intune. V dubnu toto přesměrování ukončíme a okno služby Intune App Protection zcela odebereme, protože duplikuje to, co je teď součástí Intune.
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?  
+Po vydání květnové aktualizace služby Intune plánované ke konci května zveřejníme pokyny, jak si vyzkoušet a ověřit, že můžete migrovat konfiguraci veřejného terminálu z Windows 10 RS3 do Windows 10 RS4. Podle těchto pokynů můžete zařízení nakonfigurovat jako veřejné terminály s využitím nového konfiguračního profilu zařízení pro veřejné terminály.
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
 Tato změna ovlivní jak zákazníky samostatné verze Intune, tak zákazníky hybridní verze (Intune s Configuration Managerem). Tato integrace pomůže zjednodušit práci se správou cloudu. Při správě skupin, zásad, aplikací a mobilních zařízení vám teď stačí přejít do jednoho okna v Azure, a sice do okna Intune.
@@ -759,31 +959,22 @@ Místo okna služby Intune App Protection si do oblíbených položek přidejte 
 
 **Další informace**: [https://aka.ms/intuneapppolicy](https://aka.ms/intuneapppolicy)
 
-### <a name="updated-new-security-enhancements-in-the-intune-service-----1637539---"></a>Aktualizováno: Nová vylepšení zabezpečení ve službě Intune  <!-- 1637539 -->   
+### <a name="plan-for-change-windows-company-portal-send-feedback-option-may-no-longer-work"></a>Plánovaná změna: Možnost Odeslat názor na Portálu společnosti pro Windows už nemusí fungovat.  
+Aplikace Portál společnosti pro Windows obsahuje možnost **Odeslat názor**, která uživatelům umožňuje odeslat Microsoftu zpětnou vazbu o aplikaci. Počínaje 30. dubnem 2018 bude tato možnost podporována jen v aplikaci Portál společnosti pro Windows 10 spuštěné ve Windows 10 1607 (Anniversary Update) a novějších.  
 
-Do služby Intune zavádíme vylepšení zabezpečení. Jako součást této změny získáte při březnové aktualizaci služby Intune přepínač, kterým v Intune v konzole Azure můžete tuto funkci zabezpečení zapnout nebo vypnout. Když je tato funkce zapnutá, budou zařízení bez přiřazených zásad dodržování předpisů označená jako nedodržující předpisy.
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?  
+V případě, že jste koncovým uživatelům nenainstalovali aplikaci Portál společnosti pro Windows, můžete tuto část ignorovat. Pokud některý z vašich koncových uživatelů má aplikaci Portál společnosti, vezměte na vědomí, že od 30. dubna nebude tlačítko **Odeslat názor** v aplikaci fungovat, a to v těchto situacích:  
+- Aplikace Portál společnosti pro Windows 10 při použití ve Windows 10, verze 1507 a 1511  
+- Aplikace Portál společnosti pro Windows Phone 8.1  
 
-**Zákazníci hybridní verze:** Zákazníkům hybridní verze nebudete tuto změnu prozatím zavádět. Nemusíte proto nic dělat. Důrazně vám ale doporučujeme zajistit, aby k vašim zařízením byla přiřazená alespoň jedna zásada dodržování předpisů.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-
-Když tuto změnu začneme v březnové aktualizaci zavádět, ovlivní vás tato funkce v závislosti na tom, jestli už máte nebo nemáte přiřazené zásady dodržování předpisů.
-
-- Pokud patříte mezi nové nebo stávající tenanty a nemáte ke svým zařízením přiřazené žádné zásady dodržování předpisů, bude tento přepínač automaticky nastaven na **Vyhovující předpisům**. V konzole bude tato funkce ve výchozím nastavení vypnutá. Na koncové uživatele to nebude mít žádný vliv.
-- Pokud patříte mezi stávající tenanty a máte nějaká zařízení, ke kterým jsou přiřazené zásady dodržování předpisů, bude tento přepínač automaticky nastaven na Nevyhovující předpisům. Po zavedení březnové aktualizace bude tato funkce ve výchozím nastavení zapnutá.
-
-Pokud používáte zásady dodržování předpisů s podmíněným přístupem a tato funkce je zapnutá, budou teď všechna zařízení bez alespoň jedné přiřazené zásady dodržování předpisů blokovaná podmíněným přístupem. Koncoví uživatelé přidružení k těmto zařízením, kteří měli předtím přístup k e-mailu, o tento přístup přijdou, dokud všem zařízením nepřiřadíte alespoň jednu zásadu dodržování předpisů.   
+Na ovlivněných zařízeních možnost **Odeslat názor** selže a nebude úspěšná ani při opakovaných pokusech. Pokud chcete poslat Microsoftu zpětnou vazbu týkající se těchto platforem, použijte alternativní kanály uvedené níže.  
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?  
+Informujte o této změně uživatele a v případě potřeby aktualizujte uživatelské pokyny. Informujte koncové uživatele využívající Portál společnosti ve Windows Phone 8.1, Windows 10 1507 a Windows 10 1511, že mají k dispozici dva alternativní kanály zpětné vazby. Jsou to tyto:  
+- Použití aplikace Centrum Feedback ve Windows 10
+- Odeslání e-mailu na adresu WinCPfeedback@microsoft.com  
 
-Pokud používáte podmíněný přístup, doporučujeme, abyste tuto funkci měli zapnutou a přepínač nechali nastavený na **Nevyhovující předpisům**. Aby vaši koncoví uživatelé nepřišli o přístup k e-mailu, zajistěte, aby ke všem zařízením byla přiřazená alespoň jedna zásada dodržování předpisů. Zde je několik změn, které vám s tím pomůžou:   
-
-- V portálu Intune jsme zavedli sestavu s názvem **Zařízení bez zásad dodržování předpisů**, pomocí které můžete ve svém prostředí identifikovat všechna zařízení, ke kterým není přiřazená zásada dodržování předpisů.
-- Možnost **Všichni uživatelé** vám usnadní přiřazení zásad dodržování předpisů všem uživatelům.
-
-Pokud se rozhodnete nechat tento přepínač vypnutý, nemusíte nic dělat.
-
-**Další informace**: [https://aka.ms/compliance_policies](https://aka.ms/compliance_policies)
+Požádejte uživatele s Windows 10 RS1 nebo novějšími, aby si aplikaci Portál společnosti pro Windows aktualizovali na nejnovější verzi dostupnou ve Storu.
 
 ### <a name="plan-for-change-change-in-support-for-the-microsoft-intune-app-sdk-for-cordova-plugin"></a>Plánovaná změna: Změna v podpoře modulu plug-in Microsoft Intune App SDK Cordova
 Intune ukončuje od 1. května 2018 podporu [modulu plug-in Microsoft Intune App SDK Cordova](app-sdk-cordova.md). Doporučujeme místo toho použít k přípravě aplikací využívajících Cordovu pro účely správy a dostupnosti v Intune nástroj Intune App Wrapping. Až tato změna vejde v platnost, nebude se už dále modul plug-in Microsoft Intune APP SDK Cordova udržovat a nebude ani přijímat aktualizace. Vývojáři aplikací nebudou moct tento modul plug-in používat. V Intune se dále počítá s podporou aplikací vytvořených s použitím Cordovy. Všechny aplikace vytvořené s použitím modulu plug-in Microsoft Intune APP SDK Cordova ale budou mít v Intune omezené funkce. Po zabalení s pomocí nástroje Intune App Wrapping Tool bude možné nasadit aplikace koncovým uživatelům jako obvykle. Aplikace pro Android využívající Cordovu vydané do obchodu Google Play:
@@ -795,38 +986,13 @@ Další informace o nástroji App Wrapping Tool najdete v tématech [Nástroj Ap
 ### <a name="plan-for-change-use-intune-on-azure-now-for-your-mdm-management----1227338---"></a>Plánovaná změna: Ke správě MDM se teď používá Intune v Azure <!-- 1227338 -->
 Před více než rokem jsme oznámili vydání [Intune ve verzi Public Preview na platformě Azure](https://cloudblogs.microsoft.com/enterprisemobility/2016/12/07/public-preview-of-intune-on-azure/) a pak před šesti měsíci [obecnou dostupnost nového prostředí pro správu](https://cloudblogs.microsoft.com/enterprisemobility/2017/06/08/the-new-intune-and-conditional-access-admin-consoles-are-ga/) Intune. Od 31. srpna 2018 vypínáme správu mobilních zařízení (MDM) v klasické konzole Silverlight pro zákazníky, kteří používají Intune samostatně. Místo toho můžete ke svým potřebám MDM používat [Intune v Azure](https://aka.ms/Intune_on_Azure). Pokud k MDM ještě používáte klasickou konzolu, přestaňte ji prosím používat a seznamte se s Intune v Azure. Neočekáváme, že tato změna bude mít nějaký dopad na koncové uživatele. Klasická správa počítačů zůstane v Silverlightu. Další informace o této změně a o jejím dopadu na vás najdete [tady](https://aka.ms/Intune_on_Azure_mdm).
 
-
-### <a name="manage-android-for-work-devices-independently-from-android-devices----1490731-eeready--"></a>Oddělená správa zařízení s Androidem for Work od zařízení s Androidem <!-- 1490731 EEready-->    
-**Poznámka**: Následující změny začneme zavádět od listopadové aktualizace, ale než se promítnou u vašeho účtu, může to chvíli trvat. Jakmile tyto změny začnou platit i pro váš účet, pošleme vám oznámení s potvrzením přes portál Office 365. Po zavedení změn budete mít k dispozici další možnosti správy. Zavádění změn se nijak nedotkne prostředí pro koncové uživatele.
-
-Intune podporuje správu registrace zařízení s Androidem for Work odděleně od platformy Android. Tato nastavení se spravují v části **Registrace zařízení** > **Omezení registrace** > **Omezení typů zařízení**. (Dříve se nacházela v části **Registrace zařízení** > **Registrace Androidu for Work** > **Nastavení registrace Android for Work**.)
-
-Ve výchozím nastavení budou nastavení zařízení s Androidem for Work stejná jako nastavení zařízení s Androidem. Po změně nastavení Androidu for Work tomu už tak nebude.
-
-Pokud zablokujete registraci Androidu for Work u osobních zařízení, budou se jako Android for Work moct zaregistrovat jenom firemní zařízení s Androidem.
-
-Při práci s těmito novými nastaveními vezměte v úvahu tyto informace:
-
-#### <a name="if-you-have-never-previously-onboarded-android-for-work-enrollment"></a>Pokud jste ještě nikdy nepoužili registraci Androidu for Work
-
-Nová platforma Android for Work je ve výchozím nastavení omezení typů zařízení zablokovaná. Jakmile začnete funkci používat, můžete zařízením povolit, aby se zaregistrovala v Androidu for Work. Uděláte to tak, že změníte výchozí omezení typu zařízení nebo vytvoříte nové, které bude mít přednost před výchozím omezením.
-
-#### <a name="if-you-have-onboarded-android-for-work-enrollment"></a>Pokud jste už registraci Androidu for Work použili
-
-Pokud jste už platformu používali, závisí vaše situace na nastavení, která jste zvolili:
-
-| Nastavení | Stav Androidu for Work ve výchozím omezení typu zařízení | Poznámky |
-| --- | --- | --- |
-| **Spravovat všechna zařízení jako Android for Work** | Blokované | Všechna zařízení s Androidem se musí zaregistrovat bez Androidu for Work. |
-| **Spravovat podporovaná zařízení jako Android for Work** | Povoleno | Všechna zařízení s Androidem, která podporují Android for Work, se musí zaregistrovat s Androidem for Work. |
-| **Spravovat podporovaná zařízení pro uživatele v těchto skupinách jako Android for Work** | Blokované | Vytvořila se samostatná zásada omezení typu zařízení, která přepíše výchozí zásadu. Tato zásada definuje skupiny, které jste dříve vybrali a povolili jim registraci Androidu for Work. Uživatelé ve vybraných skupinách budou moct dál zaregistrovat svoje zařízení s Androidem for Work. Žádní jiní uživatelé se v Androidu for Work nebudou moct zaregistrovat. |
-
-Ve všech případech se vaše zamýšlená regulace zachová. K tomu, aby se zachovala možnost globálního používání Androidu for Work ve vašem prostředí nebo možnost používání této platformy konkrétními skupinami, nevyžadujeme z vaší strany žádnou akci.
-
 ### <a name="direct-access-to-apple-enrollment-scenarios---951869--"></a>Přímý přístup ke scénářům registrace Apple <!--951869-->
 U účtů Intune vytvořených po lednu 2017 umožňuje Intune přímý přístup ke scénářům registrace Apple pomocí úlohy Registrovat zařízení na portálu Azure Portal. Náhled na registraci Apple byl předtím přístupný jen přes odkazy na klasickém portálu Intune. Zpřístupnění těchto funkcí v Azure vyžaduje u účtů Intune vytvořených před lednem 2017 jednorázovou migraci. Plán této migrace zatím nebyl oznámen, podrobnosti ale budou zpřístupněny co nejdříve. Pokud váš existující účet nemá k Azure Portalu přístup, k otestování tohoto nového prostředí důrazně doporučujeme vytvořit zkušební účet.
 
 ## <a name="whats-coming"></a>Co připravujeme
+
+### <a name="local-device-security-option-settings----1251887---"></a>Nastavení možnosti místního zabezpečení zařízení <!-- 1251887 -->
+Pomocí nového nastavení možnosti místního zabezpečení zařízení budete moct povolit nastavení zabezpečení na zařízeních s Windows 10. Tato nastavení najdete v kategorii Ochrana koncového bodu při vytváření zásad konfigurace zařízení s Windows 10.
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968--"></a>Nová aktualizace uživatelského prostředí pro web Portál společnosti <!--2000968-->
 
@@ -839,16 +1005,10 @@ Na základě zpětné vazby od zákazníků, jako jste vy, jsme přidali několi
 
 V rámci přípravy na tuto změnu nemusíte provádět žádnou akci. Jakmile bude aktualizovaný web Portál společnosti pro vás dostupný, dáme vám vědět. Je však možné, že nakonec budete muset dokumentaci pro koncové uživatele doplnit o aktualizované snímky obrazovky. Nezapomeňte, že možná bude nutné také aktualizovat dokumentaci pro aplikaci Portál společnosti v iOSu, protože web využívá část **Aplikace** v aplikaci pro iOS. Ukázkový obrázek těchto změn najdete na stránce s [novinkami v uživatelském rozhraní aplikace](whats-new-app-ui.md).
 
-### <a name="user-experience-update-for-the-company-portal-app-for-ios---1412866--"></a>Aktualizace uživatelského prostředí aplikace Portál společnosti pro iOS <!--1412866-->
-
-Připravujeme k vydání důležitou aktualizaci uživatelského prostředí aplikace Portál společnosti pro iOS. Tato aktualizace bude mít zcela přepracovaný vizuální design, který bude zahrnovat modernizaci vzhledu a chování a lepší použitelnost a přístupnost. Všechny aktuální funkce aplikace Portál společnosti pro iOS budou zachované.
-
-V rámci programu Apple TestFlight vám nabízíme předprodejní verzi aktualizované aplikace Portál společnosti pro iOS, abyste si ji mohli vyzkoušet a sdělit nám svoje názory. Zaregistrujte se na https://aka.ms/intune_ios_cp_testflight, abyste získali přístup k programu TestFlight. Nejnovější informace o této aktualizaci najdete na stránce https://aka.ms/iOS_companyportal_update.
-
 ### <a name="apple-to-require-updates-for-application-transport-security---748318--"></a>Apple bude vyžadovat aktualizace ATS (Application Transport Security) <!--748318-->
-Apple oznámil, že začne vynucovat specifické požadavky na ATS (Application Transport Security). ATS se používá k vynucení vyššího zabezpečení veškeré komunikace aplikací přes protokol HTTPS. Tato změna ovlivní zákazníky Intune, kteří používají aplikace Portál společnosti pro iOS.
+Apple oznámil, že začne vynucovat specifické požadavky na ATS (Application Transport Security). ATS se používá k vynucení vyššího zabezpečení veškeré komunikace aplikací přes protokol HTTPS. Tato změna ovlivní zákazníky Intune, kteří používají aplikace Portál společnosti pro iOS. S podrobnostmi vás seznámíme na [blogu podpory Intune](https://aka.ms/compportalats).
 
-Prostřednictvím programu Apple TestFlight, který vynucuje nové požadavky na ATS, jsme zpřístupnili verzi aplikace Portál společnosti pro iOS. Pokud si ji chcete vyzkoušet a otestovat, jestli ATS dodržujete, napište nám na adresu <a href="mailto:CompanyPortalBeta@microsoft.com?subject=Register to TestFlight ATS Company Portal app">CompanyPortalBeta@microsoft.com</a> zprávu s vaším jménem a příjmením, e-mailovou adresou a názvem společnosti. Další podrobnosti najdete v [blogu podpory služby Intune](https://aka.ms/compportalats).
+
 
 ## <a name="see-also"></a>Viz taky
 * [Blog Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
