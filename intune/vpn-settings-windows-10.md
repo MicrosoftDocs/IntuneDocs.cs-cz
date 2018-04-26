@@ -13,11 +13,11 @@ ms.technology: ''
 ms.suite: ems
 ms.reviewer: tycast
 ms.custom: intune-azure
-ms.openlocfilehash: 9464b73acc43b9625560156617359c374d7100fb
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 787501892d0955e3396bc8f37e5da8ba0d312c74
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="read-about-the-vpn-settings-in-intune"></a>Přečtěte si o nastaveních sítě VPN v Intune
 
@@ -93,6 +93,7 @@ Další informace o vytváření vlastních dat XML protokolu EAP najdete v tém
 ## <a name="apps-and-traffic-rules"></a>Pravidla pro aplikace a síťové přenosy
 
 **Omezit připojení ze sítě VPN k těmto aplikacím**: tuto možnost povolte, pokud chcete, aby toto připojení VPN používaly jenom některé aplikace.
+
 **Přidružené aplikace**: zadejte seznam aplikací, které automaticky používají připojení VPN. Typ aplikace určuje identifikátor aplikace. Pro univerzální aplikace zadejte identitu aplikace (PFN). Pro desktopové aplikace zadejte cestu k souboru aplikace.
 
 >[!IMPORTANT]

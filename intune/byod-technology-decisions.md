@@ -3,7 +3,7 @@ title: Rozhodnutí o technologiích pro používání vlastních zařízení už
 description: Klíčová rozhodnutí o technologiích, která umožní používání vlastních zařízení uživatelů (BYOD) a ochranu firemních dat, pomocí řešení Microsoft Enterprise Mobility + Security
 keywords: ''
 author: dougeby
-ms.author: pfetty
+ms.author: dougeby
 manager: dougeby
 ms.date: 12/8/2017
 ms.topic: article
@@ -12,11 +12,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
 ms.suite: ems
-ms.openlocfilehash: 7d04abfe7886e4ef42cf168dbb495e987fdba425
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 7fb86ae8d3163e14581ee495004b74f684d30cec
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Rozhodnutí o technologiích, která umožní používání vlastních zařízení uživatelů (BYOD), pomocí řešení Microsoft Enterprise Mobility + Security (EMS)
 
@@ -78,6 +78,6 @@ Jak jsme už uvedli, pomocí podmíněného přístupu lze uživatele přimět k
 |Nechtěné sdílení dat nebo uložení do nezabezpečených umístění | Zakázat tisk | není k dispozici|
 
 ## <a name="next-steps"></a>Další kroky
-Teď je čas na rozhodnutí, jestli se ve vaší organizaci při povolování vlastních zařízení uživatelů (BYOD) zaměříte na správu zařízení, na správu aplikací nebo na kombinaci obou možností. Volba implementace je na vás, ale bez ohledu na zvolenou možnost máte jistotu, že budete mít k dispozici funkce pro práci s identitami a funkce zabezpečení, které jsou dostupné v Azure AD.
+Teď je čas na rozhodnutí, jestli se ve vaší organizaci při povolování vlastních zařízení uživatelů (BYOD) zaměříte na správu zařízení, na správu aplikací nebo na kombinaci obou možností. Volba implementace je na vás, ale bez ohledu na zvolenou možnost máte jistotu, že budete mít k dispozici funkce pro práci s identitami a funkce zabezpečení, které jsou dostupné v Azure AD.  
 
 K navržení další úrovně plánování použijte [průvodce plánováním](planning-guide.md) Intune.
