@@ -12,11 +12,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a4b5e55b404da907d8f17a658483b4802af8226d
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 8e8603ca59b46937b1529e710a8bc83aec5dd4d6
+ms.sourcegitcommit: 4c18352d5b3b30080f7c7257fa63d852b1894850
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices---intune"></a>Automatické e-maily a přidání akcí pro zařízení nedodržující předpisy – Intune
 
@@ -77,7 +77,10 @@ Akci můžete přidat při vytváření nových zásad dodržování předpisů 
 1. Na portálu [Azure Portal](https://portal.azure.com) otevřete **Microsoft Intune** a vyberte **Dodržování předpisů zařízením**.
 2. Vyberte **Zásady**, vyberte jednu ze zásad a pak vyberte **Vlastnosti**. 
 
-   Ještě zásadu nemáte? Vytvořte zásadu pro [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md) nebo jinou platformu.
+  Ještě zásadu nemáte? Vytvořte zásadu pro [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md) nebo jinou platformu.
+  
+  > [!NOTE]
+  > Zařízení JAMF a zařízení nastavená pomocí skupin zařízení nemohou v současnosti přijímat akce dodržování předpisů.
 
 3. Vyberte **Akce při nedodržení předpisů** a pak pomocí **Přidat** zadejte parametry akce. Můžete vybrat dřív vytvořenou šablonu zprávy, přidat další příjemce a aktualizovat období odkladu. V období můžete zadat počet dní (0 až 365), po kterém můžete vynutit zásady podmíněného přístupu. Pokud zadáte **0** dní, pak podmíněný přístup **okamžitě** zablokuje přístup k podnikovým prostředkům.
 

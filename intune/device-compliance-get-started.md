@@ -13,11 +13,11 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3326ecccd0d20602d6a9445b62c39f582354f238
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 2f599f168c1b4ae9aa94324b69ed11e6d426c86d
+ms.sourcegitcommit: 4c18352d5b3b30080f7c7257fa63d852b1894850
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Začínáme se zásadami dodržování předpisů zařízeními v Intune
 
@@ -80,6 +80,8 @@ Pokud chcete používat zásady dodržování předpisů zařízeními, musíte 
   - Windows 10
 
 - Aby mohla zařízení oznamovat stavy dodržování předpisů, musejí být zaregistrovaná v Intune.
+
+- Jsou podporována zařízení zaregistrovaná na jednoho uživatele nebo bez primárního uživatele. Kontexty více uživatelů nejsou podporovány.
 
 ## <a name="how-intune-device-compliance-policies-work-with-azure-ad"></a>Jak fungují zásady dodržování předpisů zařízeními v Intune s Azure AD
 
@@ -148,9 +150,9 @@ Zařízením, která vyhovují pravidlům zásad, můžete udělit přístup k e
 Zásady dodržování předpisů zařízeními se dají používat také bez podmíněného přístupu. Při nezávislém použití zásad dodržování předpisů se cílová zařízení vyhodnotí a nahlásí se jejich stav dodržování předpisů. Můžete si například nechat nahlásit, kolik zařízení není šifrovaných nebo která zařízení mají jailbreak nebo root. Pokud ale tyto zásady použijete bez podmíněného přístupu, neexistuje žádné omezení přístupu k prostředkům společnosti.
 
 ## <a name="ways-to-deploy-device-compliance-policies"></a>Způsoby nasazení zásad dodržování předpisů zařízeními
-Zásady dodržování předpisů můžete nasadit uživatelům ve skupinách uživatelů nebo zařízením ve skupinách zařízení. Po nasazení zásady dodržování předpisů uživateli se u jeho zařízení kontroluje dodržování předpisů.
+Zásady dodržování předpisů můžete nasadit uživatelům ve skupinách uživatelů nebo zařízením ve skupinách zařízení. Po nasazení zásady dodržování předpisů uživateli se u všech jeho zařízení kontroluje dodržování předpisů.
 
-U zařízení ve skupinách zařízení **Nastavení zásad dodržování předpisů** (Azure Portal > Dodržování předpisů zařízením) zahrnuje:
+**Nastavení zásad dodržování předpisů** (Azure Portal > Dodržování předpisů zařízením) zahrnuje:
 
 - **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako**: Tato vlastnost má dvě hodnoty:
 
