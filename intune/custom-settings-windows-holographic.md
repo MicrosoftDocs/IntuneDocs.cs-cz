@@ -12,11 +12,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d1825d99243654c9fecac7729153a95234d435ff
-ms.sourcegitcommit: 4c18352d5b3b30080f7c7257fa63d852b1894850
+ms.openlocfilehash: d15e464ed77499c28bbcaf94289607ced48c140f
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="custom-device-settings-for-devices-running-windows-holographic-for-business-in-intune"></a>Vlastní nastavení zařízení s Windows Holographic for Business v Intune
 
@@ -31,19 +31,18 @@ Pokud hledáte konkrétní nastavení, mějte na paměti, že [profil omezení z
 2. Pokud chcete přidat jedno nebo více nastavení OMA-URI, v části **Vytvořit profil** zvolte **Nastavení**.
 3. V části **Vlastní nastavení OMA-URI** klikněte na **Přidat**, abyste mohli přidat novou hodnotu. Můžete také kliknout na **Exportovat** a vytvořit seznam všech hodnot, které jste nakonfigurovali v souboru hodnot oddělených čárkami (CSV).
 4. Ke každému nastavení OMA-URI, které chcete přidat, zadejte následující informace:
-    - **Název nastavení** – Zadejte jedinečný název nastavení OMA-URI, který vám pomůže ho rozpoznat v seznamu nastavení.
-    - **Popis nastavení** – Volitelně zadejte popis nastavení.
-    - **Datový typ** – Vybírejte z těchto typů:
-        - **Řetězec**
-        - **Řetězec (XML)**
-        - **Datum a čas**
-        - **Celé číslo**
-        - **Číslo s plovoucí desetinnou čárkou**
-        - **Logická hodnota**
-    - **OMA-URI (rozlišuje velká a malá písmena)** – Uveďte, který OMA-URI chcete nastavit.
-    - **Hodnota** – Zadejte hodnotu, která má být k uvedenému OMA-URI přidružena.
-1. Až to budete mít, vraťte se do části **Vytvořit profil** a klikněte na **Vytvořit**.
-Profil se vytvoří a zobrazí se v seznamu profilů.
+  - **Název nastavení**: Zadejte jedinečný název nastavení OMA-URI, který vám pomůže ho rozpoznat v seznamu nastavení.
+  - **Popis nastavení**: Volitelně zadejte popis nastavení.
+  - **Datový typ**: Vybírejte z těchto typů:
+    - **Řetězec**
+    - **Řetězec (XML)**
+    - **Datum a čas**
+    - **Celé číslo**
+    - **Číslo s plovoucí desetinnou čárkou**
+    - **Logická hodnota**
+  - **OMA-URI (rozlišuje velká a malá písmena)**: Zadejte, který OMA-URI chcete nastavit.
+  - **Hodnota**: Zadejte hodnotu, kterou chcete přidružit k zadanému OMA-URI.
+5. Až to budete mít, vraťte se do části **Vytvořit profil** a klikněte na **Vytvořit**. Profil se vytvoří a zobrazí se v seznamu profilů.
 
 ## <a name="recommended-custom-settings"></a>Doporučená vlastní nastavení
 
@@ -52,51 +51,51 @@ Následující nastavení jsou užitečná pro zařízení s Windows Holographic
 ### <a name="allowfastreconnecthttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-authenticationauthentication-allowfastreconnect"></a>[AllowFastReconnect](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowfastreconnect)
 
 ---
-|OMA-URI|Datový typ  |
-|---------|---------|
-|./Vendor/MSFT/Policy/Config/Authentication/AllowFastReconnect|Celé číslo<br>0 – Nepovoluje se.<br>1 – Povoluje se (výchozí).|
+|OMA-URI|Datový typ|
+|---|---|
+|./Vendor/MSFT/Policy/Config/Authentication/AllowFastReconnect|Celé číslo<br/>0 – Nepovoluje se.<br/>1 – Povoluje se (výchozí).|
 
 ### <a name="allowvpnhttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-settingssettings-allowvpn"></a>[AllowVPN](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-allowvpn)
 
 ---
-|OMA-URI|Datový typ  |
-|---------|---------|
-|./Vendor/MSFT/Policy/Config/Settings/AllowVPN|Celé číslo<br>0 – Nepovoluje se.<br>1 – Povoluje se (výchozí).|
+|OMA-URI|Datový typ|
+|---|---|
+|./Vendor/MSFT/Policy/Config/Settings/AllowVPN|Celé číslo<br/>0 – Nepovoluje se.<br/>1 – Povoluje se (výchozí).|
 
 ### <a name="allowupdateservicehttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-updateupdate-allowupdateservice"></a>[AllowUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowupdateservice)
 
 ---
-|OMA-URI|Datový typ  |
-|---------|---------|
-|./Vendor/MSFT/Policy/Config/Update/AllowUpdateService|Celé číslo<br>0 – Služba aktualizací se nepovoluje. <br>1 – Služba aktualizací se povoluje (výchozí).|
+|OMA-URI|Datový typ|
+|---|---|
+|./Vendor/MSFT/Policy/Config/Update/AllowUpdateService|Celé číslo<br/>0 – Služba aktualizací se nepovoluje. <br/>1 – Služba aktualizací se povoluje (výchozí).|
 
 ### <a name="updateserviceurlhttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-updateupdate-updateserviceurl"></a>[UpdateServiceURL](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)
 
 ---
-|OMA-URI|Datový typ  |
-|---------|---------|
-|./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|Řetězec<br>URL – Zařízení vyhledá aktualizace na serveru WSUS na zadané adrese URL.<br>Nenakonfigurováno – Zařízení vyhledá aktualizace ve službě Microsoft Update.|
+|OMA-URI|Datový typ|
+|---|---|
+|./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|Řetězec<br/>URL – Zařízení vyhledá aktualizace na serveru WSUS na zadané adrese URL.<br/>Nenakonfigurováno – Zařízení vyhledá aktualizace ve službě Microsoft Update.|
 
 ### <a name="requireupdatesapprovalhttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-updateupdate-requireupdateapproval"></a>[RequireUpdatesApproval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
 
 ---
-|OMA-URI|Datový typ  |
-|---------|---------|
-|./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|Celé číslo<br>0 – Není nakonfigurováno. Zařízení nainstaluje všechny použitelné aktualizace.<br>1 – Zařízení nainstaluje jenom aktualizace, které jsou použitelné a jsou také v seznamu schválených aktualizací. Pokud chce oddělení IT řídit nasazení aktualizací na zařízení, třeba když je před nasazením nutné testování, nastavte tuto zásadu na 1.|
+|OMA-URI|Datový typ|
+|---|---|
+|./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|Celé číslo<br/>0 – Není nakonfigurováno. Zařízení nainstaluje všechny použitelné aktualizace.<br/>1 – Zařízení nainstaluje jenom aktualizace, které jsou použitelné a jsou také v seznamu schválených aktualizací. Pokud chce oddělení IT řídit nasazení aktualizací na zařízení, třeba když je před nasazením nutné testování, nastavte tuto zásadu na 1.|
 
 ### <a name="approvedupdateshttpsdocsmicrosoftcomwindowsclient-managementmdmupdate-csp"></a>[ApprovedUpdates](https://docs.microsoft.com/windows/client-management/mdm/update-csp)
 
 ---
-|OMA-URI|Datový typ  |
-|---------|---------|
-|./Vendor/MSFT/Update/ApprovedUpdates/*GUID*<br><br>**Důležité**<br>Musíte si přečíst smlouvy EULA k aktualizacím a přijmout je jménem vašich koncových uživatelů. Pokud tak neučiníte, dojde k porušení právních nebo smluvních závazků.|Uzel pro schválení aktualizací a přijetí smlouvy EULA jménem koncového uživatele<br/><br/>Další informace naleznete v tématu [Update CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp).|
+|OMA-URI|Datový typ|
+|---|---|
+|./Vendor/MSFT/Update/ApprovedUpdates/*GUID*<br/><br/>**Důležité**<br/>Musíte si přečíst smlouvy EULA k aktualizacím a přijmout je jménem vašich koncových uživatelů. Pokud tak neučiníte, dojde k porušení právních nebo smluvních závazků.|Uzel pro schválení aktualizací a přijetí smlouvy EULA jménem koncového uživatele<br/><br/>Další informace naleznete v tématu [Update CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp).|
 
 ### <a name="applicationlaunchrestrictionshttpsdocsmicrosoftcomwindowsclient-managementmdmapplocker-csp"></a>[ApplicationLaunchRestrictions](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
 
 ---
-|OMA-URI|Datový typ  |
-|---------|---------|
-|./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*/*ApplicationType*/Policy<br><br>**Důležité**<br>V článku o AppLocker CSP se používají příklady XML, které obsahují pomocné řídicí znaky. Pokud chcete nakonfigurovat nastavení s vlastními profily Intune, je nutné použít prostý XML.|Řetězec<br>Další informace najdete v článku o [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).|
+|OMA-URI|Datový typ|
+|----|---|
+|./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*/*ApplicationType*/Policy<br/><br/>**Důležité**<br/>V článku o AppLocker CSP se používají příklady XML, které obsahují pomocné řídicí znaky. Pokud chcete nakonfigurovat nastavení s vlastními profily Intune, je nutné použít prostý XML.|Řetězec<br/>Další informace najdete v článku o [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).|
 
 ## <a name="find-the-policies-you-can-configure"></a>Vyhledání zásad, které můžete nakonfigurovat
 
