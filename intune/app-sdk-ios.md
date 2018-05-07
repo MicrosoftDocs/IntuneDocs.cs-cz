@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 manager: dougeby
 ms.author: erikre
-ms.date: 01/10/2018
+ms.date: 04/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 74c709790295a971ff9efe7c2cc348d13d471d5a
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 486ff2d22cb201abc926efc96a83455be98e7536
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -458,6 +458,73 @@ WebViewHandledURLSchemes | Pole řetězců | Určuje schémata URL zpracovávan�
 
 > [!NOTE]
 > Pokud bude aplikace vydaná v App Storu, možnost `MAMPolicyRequired` musí být podle standardů App Storu nastavená na NE.
+
+## <a name="sharing-data-via-uiactivityviewcontroller"></a>Sdílení dat přes UIActivityViewController 
+Od verze 8.0.2+ dokáže sada Intune APP SDK filtrovat akce UIActivityViewController, takže nebudou na výběr žádná jiná umístění pro sdílení než ve službě Intune. Toto chování bude řízeno zásadami pro přenos dat aplikací a připravovanou funkcí APP. Tato funkce bude povolena poté, co většina výchozích aplikací Microsoftu ( Word, Excel, PowerPoint) provede požadované změny pro podporu sdílení dat přes UIActivityViewController. 
+ 
+### <a name="copy-to-actions"></a>Akce Zkopírovat do 
+Při sdílení dokumentů přes UIActivityViewController a UIDocumentInteractionController zobrazí iOS akci Zkopírovat do pro každou aplikaci, která podporuje otevření sdíleného dokumentu. Aplikace deklarují podporované typů dokumentů prostřednictvím nastavení CFBundleDocumentTypes v jejich souboru Info.plist. Pokud zásady zakážou sdílení s nespravovanými aplikacemi, nebude už tento typ sdílení k dispozici. Místo toho bude potřeba přidat do aplikací rozšíření Action, které se nevztahuje k uživatelskému rozhraní, a propojit ho se sadou Intune APP SDK pro iOS. Rozšíření Action funguje jako zástupná procedura. Sada SDK implementuje veškeré chování sdílení souborů. Postupujte podle výše uvedených kroků integrace sady SDK a dodržte následující pokyny: 
+ 
+1. Aplikace musí mít v poli CFBundleURLTypes v souboru Info.plist definované aspoň jedno schéma adres URL. 
+2. Vaše aplikace a rozšíření akce musí sdílet aspoň jednu skupinu aplikací a ta musí být uvedená v poli AppGroupIdentifiers ve slovníku IntuneMAMSettings aplikace i rozšíření. 
+3. Pojmenujte rozšíření akce takto: „Open in“ a název aplikace. Lokalizujte podle potřeby soubor Info.plist. 
+4. Navrhněte ikonu šablony pro rozšíření podle pokynů v [dokumentaci pro vývojáře Apple](https://developer.apple.com/ios/human-interface-guidelines/extensions/sharing-and-actions/). Nástroj IntuneMAMConfigurator je případně možné použít ke generování těchto bitových kopií z adresáře .app aplikace. Spusťte IntuneMAMConfigurator -generateOpenInIcons /path/to/app.app -o /path/to/output/directory. 
+5. Do slovníku IntuneMAMSettings v souboru Info.plist rozšíření přidejte logické nastavení s názvem OpenInActionExtension a hodnotou Ano. 
+6. Nakonfigurujte slovník NSExtensionActivationRule tak, aby podporoval jeden soubor a všechny typy z pole CFBundleDocumentTypes aplikace s předponou com.microsoft.intune.mam. Pokud například aplikace podporuje public.text a public.image, bude pravidlo aktivace vypadat takto: 
+
+```
+SUBQUERY ( 
+    extensionItems, 
+    $extensionItem, 
+    SUBQUERY ( 
+        $extensionItem.attachments, 
+        $attachment, 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.microsoft.intune.mam.public.text” || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.microsoft.intune.mam.public.image”).@count == 1 
+).@count == 1 
+```
+
+### <a name="update-existing-share-and-action-extensions"></a>Aktualizace stávajících rozšíření sdílení a akce 
+Pokud už vaše aplikace obsahuje rozšíření sdílení nebo akce, je potřeba upravit jejich slovník NSExtensionActivationRule, aby povoloval typy Intune. Pro každý typ podporovaný rozšířením přidejte ještě jeden typ s předponou „com.microsoft.intune.mam.“. Pokud například existující pravidlo aktivace vypadá takto:  
+
+```
+SUBQUERY ( 
+    extensionItems, 
+    $extensionItem, 
+    SUBQUERY ( 
+        $extensionItem.attachments, 
+        $attachment, 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.url" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.plain-text" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.data" 
+    ).@count > 0 
+).@count > 0 
+ ```
+
+Změňte ho na: 
+
+```
+SUBQUERY ( 
+    extensionItems, 
+    $extensionItem, 
+    SUBQUERY ( 
+        $extensionItem.attachments, 
+        $attachment, 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.url" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.plain-text" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.data" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.microsoft.intune.mam.public.url" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.microsoft.intune.mam.public.plain-text" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.microsoft.intune.mam.public.image" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.microsoft.intune.mam.public.data 
+    ).@count > 0 
+).@count > 0 
+ ```
+
+>[!Note] K přidání typů Intune do pravidla aktivace je možné použít nástroj IntuneMAMConfigurator. Pokud vaše stávající pravidlo aktivace používá předdefinované řetězcové konstanty (například NSExtensionActivationSupportsFileWithMaxCount, NSExtensionActivationSupportsText apod.), může být syntaxe predikátu poměrně složitá. Pomocí nástroje IntuneMAMConfigurator lze také během přidávání typů Intune převést pravidlo aktivace z řetězcové konstanty na řetězec predikátu. Nástroj IntuneMAMConfigurator najdete v našem úložišti GitHub. 
+
 
 ## <a name="enabling-mam-targeted-configuration-for-your-ios-applications"></a>Povolení konfigurace určené pro správu mobilních aplikací pro iOS
 Konfigurace určená pro správu mobilních aplikací (MAM) umožňuje aplikacím přijímat konfigurační data prostřednictvím sady SDK aplikace Intune. Formát a varianty těchto dat musí vlastník aplikace nebo její vývojář definovat a oznámit zákazníkům, kteří využívají Intune. Správci Intune mohou konfigurační data zacílit a nasadit prostřednictvím Intune na Azure Portalu. Od verze 7.0.1 sady Intune App SDK pro iOS můžou aplikace s konfigurací určenou pro MAM získávat prostřednictvím služby MAM konfigurační data určená pro správu mobilních zařízení. Konfigurační data aplikace se odešlou přímo do aplikace přes službu MAM, nikoliv prostřednictvím kanálu MDM. Sada Intune App SDK nabízí třídu pro přístup k datům načteným z těchto konzol. Následující požadavky je potřeba vzít v úvahu: <br>

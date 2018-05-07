@@ -1,11 +1,11 @@
 ---
-title: Použití zařízení s iOSem nebo macOS s Intune |Dokumentace Microsoftu
+title: Použití zařízení s iOSem nebo macOS s Intune | Microsoft Docs
 description: Obsahuje seznam odkazů na úlohy, které můžete dělat v mobilních zařízení s iOSem nebo macOS, když je zařízení registrované v Intune.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/07/2017
+ms.date: 4/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,11 +17,11 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: bbb51300867f273da033b38d05d857034012a24e
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 02ccde8299e4ad5d6aacb2abd120c094f752c5e6
+ms.sourcegitcommit: 9536300a6211bac4bdc733593a40c1ae47611de3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="using-your-macos-device-with-intune"></a>Použití zařízení s macOS s Intune
 
@@ -29,7 +29,7 @@ Intune vám může v mnoha směrech usnadnit práci. Tady je seznam obvyklých p
 
 ## <a name="supported-versions"></a>Podporované verze
 
-Intune teď podporuje macOS 10.9 Mavericks a novější.
+Intune momentálně pro zařízení s macOS podporuje OS X El Capitan 10.11 a novější.
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Registrace do Intune a instalace Portálu společnosti
 

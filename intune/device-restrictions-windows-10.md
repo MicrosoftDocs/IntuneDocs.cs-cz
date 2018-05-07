@@ -12,11 +12,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 83027a95edca04f4461cecab341deb3ec10680fb
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 611ec516b87f42b41a80de605d0d511ed2c58309
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Nastavení omezení zařízení se systémem Windows 10 (a novějším) v Intune
 Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s Windows 10.
@@ -370,6 +370,11 @@ Pokud jsou soubory na jednotce určené jen pro čtení, nemůže z nich Defende
 - **Identifikátor URI prostředku tiskové služby** – identifikátor URI prostředku OAuth pro tiskovou službu tak, jak je nakonfigurovaný na portálu Azure Portal
 - **Maximální počet tiskáren, na který by se měl posílat dotaz (jenom mobilní zařízení)** – maximální počet tiskáren, na které by se měl posílat dotaz z koncového bodu zjišťování
 - **Identifikátor URI prostředku služby zjišťování tiskáren** – identifikátor URI prostředku OAuth pro službu zjišťování tiskáren tak, jak je nakonfigurovaný na portálu Azure Portal
+
+## <a name="local-printer"></a>Místní tiskárna
+- **Tiskárny** – Seznam přidaných místních tiskáren
+- **Výchozí tiskárna** – Nastaví výchozí tiskárnu.
+- **Přístup uživatelů k přidávání nových tiskáren** – Povolí nebo zablokuje používání místních tiskáren.
 
 ## <a name="reporting-and-telemetry"></a>Vytváření sestav a telemetrie
 

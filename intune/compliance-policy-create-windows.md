@@ -1,29 +1,28 @@
 ---
 title: Vytvoření zásady dodržování předpisů pro zařízení s Windows v Microsoft Intune – Azure | Microsoft Docs
-description: Vytvořte v Microsoft Intune zásadu dodržování předpisů zařízením pro zařízení s Windows umožňující vám zadat požadavky, které zařízení musí splnit, aby vyhovovalo předpisům.
+description: Vytvořte nebo nakonfigurujte zásady dodržování předpisů pro zařízení v Microsoft Intune pro Windows Phone 8.1, Windows 8.1 nebo novější a Windows 10 Mobile nebo novější. Kontrolujte dodržování předpisů v nejstarší a nejnovější povolené verzi operačního systému, nastavte délku a další omezení hesel, vyžadujte nástroj BitLocker, nastavte přijatelnou úroveň hrozby a povolte šifrování v úložišti dat, včetně Surface Hubu a Windows Holographic for Business.
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 04/16/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 21ff7b173bb466ee25dd82c82d3668de110b823d
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: bb79a6c18ff8b6eec20f4ce8813d8dea188215e7
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-create-a-device-compliance-policy-for-windows-devices-in-intune"></a>Vytvoření zásad dodržování předpisů pro zařízení s Windows v Intune
-
+# <a name="add-a-device-compliance-policy-for-windows-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s Windows v Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Zásada dodržování předpisů Intune pro zařízení s Windows určuje pravidla a nastavení, které musí zařízení s Windows splňovat, aby bylo považováno za dodržující předpisy. Tyto zásady můžete použít s podmíněným přístupem k povolení nebo zablokování přístupu k prostředkům společnosti. Můžete také získat sestavy zařízení a provádět kroky v případě, že zařízení předpisy nedodržuje. Zásady dodržování předpisů zařízení pro každou platformu vytvoříte na portálu Intune Azure. Další informace o zásadách dodržování předpisů a požadavcích, kterým před vytvořením zásad dodržování předpisů musíte vyhovět, najdete v tématu [Začínáme se zásadami dodržování předpisů zařízeními](device-compliance-get-started.md).
+Zásada dodržování předpisů Intune pro zařízení s Windows určuje pravidla a nastavení, které musí zařízení s Windows splňovat, aby bylo považováno za dodržující předpisy. Pomocí těchto zásad s podmíněným přístupem můžete povolit nebo zablokovat přístup k prostředkům společnosti. Můžete také získat sestavy zařízení a provádět akce v případě nedodržování předpisů. Zásady dodržování předpisů zařízení pro každou platformu vytvoříte na portálu Intune Azure. Další informace o zásadách dodržování předpisů a případných požadavcích najdete v tématu [Začínáme s dodržováním předpisů](device-compliance-get-started.md).
 
 Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení při použití zásad dodržování předpisů se zásadami podmíněného přístupu.
 
@@ -48,13 +47,11 @@ Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení 
 - Zařízení se zablokuje, pokud se zásady podmíněného přístupu vztahují na uživatele.
 - Portál společnosti oznamuje uživateli všechny problémy s dodržováním předpisů.
 
-## <a name="create-a-compliance-policy-in-the-azure-portal"></a>Vytvoření zásad dodržování předpisů na portálu Azure Portal
+## <a name="create-a-device-compliance-policy"></a>Vytváření zásad dodržování předpisů pro zařízení
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-1. V podokně **Intune** zvolte  **Dodržování předpisů zařízením**. Pod **Spravovat** vyberte **Zásady** a zvolte **Vytvořit zásadu**.
-2. Zadejte název a popis a zvolte platformu, u které chcete použít tyto zásady.
-3. Zvolte **Nastavení – Konfigurace** a zadejte nastavení **Zabezpečení systému**, **Stav zařízení** a **Vlastnosti zařízení**. Když jste hotovi, klikněte na **OK**.
+[!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
+5. Pro položku **Platforma** vyberte **Windows Phone 8.1**, **Windows 8.1 a novější** nebo **Windows 10 a novější**.
+6. Zvolte **Nastavení – Konfigurace** a zadejte nastavení **Stav zařízení**, **Vlastnosti zařízení** a **Zabezpečení systému**. Po dokončení zvolte **OK** a **Vytvořit**.
 
 <!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant with this policy.
 5. In the **Actions for noncompliance** pane, choose **Add** to create a new action.  The action parameters pane allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
@@ -63,151 +60,132 @@ Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení 
 8. Choose **Add** to finish creating the action.
 9. You can create multiple actions and the sequence in which they should occur. Choose **Ok** when you are finished creating all the actions.--->
 
-## <a name="assign-user-groups"></a>Přiřazení skupin uživatelů
+## <a name="windows-81-devices-policy-settings"></a>Nastavení zásad pro zařízení s Windows 8.1
 
-Pokud chcete přiřadit zásady dodržování předpisů uživatelům, vyberte zásady, které jste nakonfigurovali. Existující zásady najdete v podokně **Dodržování předpisů zařízením – Zásady**.
+Tato nastavení zásad platí pro zařízení s následujícími platformami:
 
-1. Vyberte zásady, které chcete přiřadit uživatelům, a zvolte **Přiřazení**. Otevře se podokno, kde můžete vybrat **skupiny zabezpečení Azure Active Directory** a přiřadit je k zásadám.
-2. Zvolte **Vybrat skupiny** a otevřete tak podokno, kde se zobrazí skupiny zabezpečení v Azure AD.  Pomocí **Uložit** se zásada nasadí uživatelům.
+- Windows Phone 8.1
+- Windows 8.1 a vyšší
 
-Tím jste zásady uplatnili u uživatelů. U zařízení používaných uživateli, kteří jsou cílem zásad, se bude vyhodnocovat dodržování předpisů.
+### <a name="device-properties"></a>Vlastnosti zařízení
 
-<!---## Compliance policy settings--->
+- **Minimální požadovaný operační systém**: Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, nahlásí se jako nevyhovující. Zobrazí se odkaz s informacemi o postupu upgradu. Koncový uživatel si může zařízení upgradovat. Potom získá přístup k prostředkům společnosti.
+- **Maximální povolená verze OS**: Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný. Uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nebude mít toto zařízení přístup k prostředkům společnosti.
 
-## <a name="compliance-policy-settings-for-windows-phone-devices"></a>Nastavení zásad dodržování předpisů pro zařízení Windows Phone
+Počítače s Windows 8.1 vrací verzi **3**. Pokud je pravidlo verze operačního systému pro Windows nastavené na Windows 8.1, bude se zařízení uvádět jako nekompatibilní i v případě, že bude používat Windows 8.1.
 
-Nastavení uvedené v této části je podporované v systémech Windows Phone 8.1 a novějších.
-### <a name="system-security-settings"></a>Systémové nastavení zabezpečení
+### <a name="system-security"></a>Zabezpečení systému
 
 #### <a name="password"></a>Heslo
 
-- **Vyžadovat heslo k odemknutí mobilních zařízení:** Pokud tuto možnost nastavíte na **Ano**, budou muset uživatelé zadat heslo, aby mohli získat přístup ke svému zařízení.
-- **Povolit jednoduchá hesla**: Pokud tuto možnost nastavíte na **Ano**, umožníte uživatelům vytvářet jednoduchá hesla, třeba **1234** nebo **1111**.
-- **Minimální délka hesla:** Určuje minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
+- **Vyžadovat heslo k odemknutí mobilních zařízení**: **Vyžadujte**, aby uživatelé před získáním přístupu ke svému zařízení zadali heslo.
+- **Jednoduchá hesla**: Pokud nastavíte **Blokovat**, nebudou moct uživatelé vytvořit jednoduchá hesla, jako je třeba **1234** nebo **1111**. Pokud chcete uživatelům umožnit vytváření hesel jako **1234** nebo **1111**, nastavte na **Nenakonfigurováno**.
+- **Minimální délka hesla**: Zadejte minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
 
-  U zařízení s Windows zabezpečených účtem Microsoft se zásada dodržování předpisů nevyhodnotí správně, pokud je minimální délka hesla větší než osm znaků nebo pokud je minimální počet znakových sad větší než dvě.
-- **Vyžadovaný typ hesla:** Určuje, jestli musí uživatelé vytvořit heslo typu **Alfanumerický**, nebo **Číslo**.
+  Pro zařízení s Windows, ke kterým uživatelé přistupují pomocí účtu Microsoft, se zásady dodržování předpisů nevyhodnotí správně:
+  - Pokud je minimální délka hesla větší než osm znaků
+  - Nebo pokud je minimální počet znakových sad větší než dvě
+
+- **Typ hesla**: Zvolte, jestli má heslo obsahovat pouze **číselné** znaky, nebo jestli má obsahovat kombinaci čísel a dalších znaků (**alfanumerické**).
   
-- **Minimální počet znakových sad**: Pokud se **Požadovaný typ hesla** nastaví na **Alfanumerické**, určuje toto nastavení nejmenší počet znakových sad, které musí heslo obsahovat. Jde o tyto čtyři znakové sady:
-  - Malá písmena
-  - Velká písmena
-  - Symboly
-  - Čísla
+  - **Počet nealfanumerických znaků v hesle**: Pokud se **Požadovaný typ hesla** nastaví na **Alfanumerické**, určuje toto nastavení minimální počet znakových sad, které musí heslo obsahovat. Jde o tyto čtyři znakové sady:
+    - Malá písmena
+    - Velká písmena
+    - Symboly
+    - Numbers
 
-  Pokud se v tomto nastavení nastaví větší číslo, uživatelé budou muset vytvářet složitější hesla. U zařízení s Windows zabezpečených účtem Microsoft se zásada dodržování předpisů nevyhodnotí správně, pokud je minimální délka hesla větší než osm znaků nebo pokud je minimální počet znakových sad větší než dvě.
+    Po nastavení vyššího čísla bude uživatel muset vytvořit složitější heslo. U zařízení s Windows zabezpečených účtem Microsoft se zásada dodržování předpisů nevyhodnotí správně, pokud je minimální délka hesla větší než osm znaků nebo pokud je minimální počet znakových sad větší než dvě.
 
-- **Počet minut nečinnosti před vyžádáním hesla:** Určuje dobu nečinnosti, než bude muset uživatel znovu zadat heslo.
-- **Vypršení platnosti hesla (dny):** Zvolte počet dní, za který uživatelské heslo vyprší a uživatel bude muset vytvořit nové.
-- **Pamatovat si historii hesel:** Pokud chcete zabránit uživatelům ve vytváření hesel, která používali dřív, použijte toto nastavení spolu s nastavením **Zakázat opakované použití předchozích hesel**.
-- **Zakázat opakované použití předchozích hesel:** Pokud je zvolená možnost **Pamatovat si historii hesel**, zadejte počet předchozích hesel, která se nesmí znovu použít.
-- **Po návratu zařízení ze stavu nečinnosti vyžadovat heslo:** Toto nastavení by se mělo použít v kombinaci s nastavením **Počet minut nečinnosti před vyžádáním hesla**. Pro přístup k zařízení, které bylo nečinné po dobu uvedenou v nastavení **Počet minut nečinnosti před vyžádáním hesla**, se koncovým uživatelům zobrazí výzva k zadání hesla.
-
-> [!NOTE]
-> Toto nastavení platí jenom pro zařízení s Windows 10 Mobile.
+- **Maximální počet minut nečinnosti, po kterém bude nutné zadat heslo**: Zadejte dobu nečinnosti, která musí uplynout, aby se po uživateli znovu požadovalo zadání hesla.
+- **Konec platnosti hesla (dny)**: Vyberte počet dní, za který skončí platnost hesla a uživatel bude muset vytvořit nové.
+- **Počet předchozích hesel, která se nesmí použít znovu**: Zadejte počet dříve použitých hesel, která se nesmí znovu použít.
 
 #### <a name="encryption"></a>Šifrování
 
-- **Vyžadovat šifrování u mobilního zařízení:** Nastavte možnost **Ano**, pokud chcete, aby muselo být zařízení vyžadující přístup k prostředkům šifrované.
+- **Vyžadovat šifrování u mobilního zařízení:** **Vyžaduje**, aby zařízení přistupující k prostředkům datového úložiště bylo šifrované.
 
+## <a name="windows-10-and-later-policy-settings"></a>Nastavení zásad pro Windows 10 a novější
 
+### <a name="device-health"></a>Device health
 
-### <a name="device-health-settings"></a>Nastavení stavu zařízení
+- **Vyžadovat BitLocker**: Když je nástroj BitLocker zapnutý, zařízení je při vypnutém systému nebo v režimu hibernace schopné chránit data uložená na disku před neoprávněným přístupem. Nástroj Windows BitLocker Drive Encryption zašifruje všechna data uložená na svazku operačního systému Windows. BitLocker používá k ochraně operačního systému Windows a uživatelských dat čip TPM. Také pomáhá zajistit, aby se s počítačem nemanipulovalo ani v případě, že je ponechaný bez dozoru, ztracený nebo odcizený. Pokud je počítač vybavený kompatibilním čipem TPM, nástroj BitLocker pomocí čipu TPM uzamkne šifrovací klíče, které chrání data. V důsledku toho se ke klíčům nedá získat přístup, dokud čip TPM neověří stav počítače.
+- **Vyžadovat, aby na zařízení bylo povolené zabezpečené spuštění**: Pokud je povolené zabezpečené spouštění, musí se systém spouštět do důvěryhodného stavu z výroby. Kromě toho platí, že při povoleném zabezpečeném spouštění musí mít komponenty jádra sloužící ke spuštění počítače správné kryptografické podpisy, které jsou podle výrobce zařízení důvěryhodné. Firmware UEFI nejdříve ověří podpis a až potom povolí spuštění počítače. Pokud u některých souborů došlo k manipulaci, při které se porušil podpis, systém se nespustí.
+- **Vyžadovat integritu kódu**: Integrita kódu je funkce, která ověřuje integritu ovladače nebo systémového souboru při každém načtení do paměti. Integrita kódu zjistí, jestli se do jádra načítá nepodepsaný ovladač nebo systémový soubor. Nebo jestli systémový soubor nebyl změněn škodlivým softwarem spuštěným pomocí uživatelského účtu s oprávněními správce.
+- **Vyžadovat, aby zařízení bylo na určité úrovni hrozby pro zařízení nebo pod ní**: Toto nastavení použijte, pokud chcete jako podmínku dodržování předpisů použít vyhodnocování rizika z vašich služeb ochrany před hrozbami. Vyberte maximální povolenou úroveň hrozby:
+  - **Zabezpečeno**: Tato možnost je nejbezpečnější, protože zařízení nesmí být nijak ohroženo. Pokud se v zařízení zjistí libovolná úroveň hrozeb, vyhodnotí se jako nedodržující předpisy.
+  - **Nízká:** Zařízení je vyhodnoceno jako vyhovující, pokud se v něm nachází i jen nízká úroveň hrozeb. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
+  - **Střední**: Zařízení se vyhodnotí jako vyhovující, pokud se existující hrozby pohybují na střední nebo nízké úrovni. Pokud se zjistí, že zařízení má i hrozby vysoké úrovně, bude vyhodnoceno jako nedodržující předpisy.
+  - **Vysoká**: Tato možnost je nejméně bezpečná a umožňuje všechny úrovně hrozeb. Může být užitečná, pokud toto řešení používáte jen ke generování sestav.
 
-- **Vyžadovat, aby oznámený stav zařízení byl v pořádku:** Můžete nastavit pravidlo, které vyžaduje, že zařízení s **Windows 10 Mobile** musí být v nových nebo existujících zásadách dodržování předpisů hlášená jako v pořádku. Pokud je toto nastavení povolené, vyhodnotí u zařízení s Windows 10 služba Health Attestation Service (HAS) následující datové body:
-  - **Povolený nástroj BitLocker:** Když je nástroj BitLocker zapnutý, při vypnutém systému nebo v režimu hibernace je zařízení schopné chránit data uložená na disku před neoprávněným přístupem. Nástroj Windows BitLocker Drive Encryption zašifruje všechna data uložená na svazku operačního systému Windows. Nástroj BitLocker chrání data operačního systému Windows a uživatelská data pomocí čipu TPM a pomáhá zajistit, aby s počítačem nemohl nikdo manipulovat, ani když ho uživatel ponechá bez dozoru nebo dojde k jeho ztrátě nebo odcizení. Pokud je počítač vybavený kompatibilním čipem TPM, nástroj BitLocker pomocí čipu TPM uzamkne šifrovací klíče, které chrání data. V důsledku toho se ke klíčům nedá získat přístup, dokud čip TPM neověří stav počítače.
-  - **Povolená integrita kódu:** Integrita kódu je funkce, která ověřuje integritu ovladače nebo systému souboru při každém načtení do paměti. Integrita kódu zjistí, jestli se do jádra nenačítá nepodepsaný ovladač nebo systémový soubor nebo jestli nedošlo k úpravě některého systémového souboru škodlivým softwarem spuštěným pomocí uživatelského účtu s oprávněním správce.
-  - **Povolené zabezpečené spouštění:** Pokud je povolené zabezpečené spouštění, musí se systém spouštět do důvěryhodného stavu z výroby. Kromě toho platí, že při povoleném zabezpečeném spouštění musí mít komponenty jádra sloužící ke spuštění počítače správné kryptografické podpisy, které jsou podle výrobce zařízení důvěryhodné. Firmware UEFI to nejdřív ověří a až potom povolí spuštění počítače. Pokud u některých souborů došlo k manipulaci, při které se porušil podpis, systém se nespustí.
+Podrobnosti o fungování služby ověření stavu najdete v tématu [Poskytovatel CSP služby Health Attestation](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp).
 
-Informace o způsobu fungování služby ověření stavu najdete v tématu [Poskytovatel CSP služby Health Attestation](https://msdn.microsoft.com/library/dn934876.aspx).
+### <a name="device-properties"></a>Vlastnosti zařízení
 
-### <a name="device-property-settings"></a>Nastavení vlastností zařízení
+- **Minimální požadovaný operační systém**: Zadejte číslo major.minor.build.CU. Číslo build.CU musí odpovídat verzi vrácené příkazem `ver` nebo `winver`.
 
-- **Minimální požadovaný operační systém:** Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, uvede se jako nekompatibilní. Zobrazí se odkaz s informacemi o postupu upgradu. Koncový uživatel si může upgradovat svoje zařízení. Potom bude mít přístup k prostředkům společnosti.
-- **Maximální povolená verze operačního systému:** Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný a uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nepůjde přes toto zařízení přistupovat k prostředkům společnosti.
+  Pokud má zařízení starší verzi operačního systému, než je zadaná verze, uvede se jako nekompatibilní. Zobrazí se odkaz s informacemi o postupu upgradu. Koncový uživatel si může upgradovat svoje zařízení. Potom bude mít přístup k prostředkům společnosti.
 
-<!---## Compliance policy settings for Windows PCs--->
+- **Maximální povolená verze operačního systému**: Zadejte číslo major.minor.build.CU. Číslo build.CU musí odpovídat verzi vrácené příkazem `ver` nebo `winver`.
 
-## <a name="compliance-policy-settings-for-windows-pcs"></a>Nastavení zásad dodržování předpisů pro počítače s Windows
+  Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný a uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nepůjde přes toto zařízení přistupovat k prostředkům společnosti.
 
-Nastavení uvedené v této části je podporované na počítačích s Windows Phone.
+- **Minimální požadovaný operační systém pro mobilní zařízení**: Zadejte číslo major.minor.build.
+
+  Pokud má zařízení starší verzi operačního systému, než je zadaná verze, uvede se jako nekompatibilní. Zobrazí se odkaz s informacemi o postupu upgradu. Koncový uživatel si může upgradovat svoje zařízení. Potom bude mít přístup k prostředkům společnosti.
+
+- **Maximální požadovaný operační systém pro mobilní zařízení**: Zadejte číslo major.minor.build.
+
+  Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný a uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nepůjde přes toto zařízení přistupovat k prostředkům společnosti.
+
+- **Platná sestavení operačního systému**: Zadejte rozsah pro povolené verze operačního systému, včetně minimální a maximální.
+
 ### <a name="system-security-settings"></a>Systémové nastavení zabezpečení
 
 #### <a name="password"></a>Heslo
 
-- **Minimální délka hesla:** Podporuje se ve Windows 8.1.
+- **Vyžadovat heslo k odemknutí mobilních zařízení**: **Vyžadujte**, aby uživatelé před získáním přístupu ke svému zařízení zadali heslo.
+- **Jednoduchá hesla**: Pokud nastavíte **Blokovat**, nebudou moct uživatelé vytvořit jednoduchá hesla, jako je třeba **1234** nebo **1111**. Pokud chcete uživatelům umožnit vytváření hesel jako **1234** nebo **1111**, nastavte na **Nenakonfigurováno**.
+- **Typ hesla**: Zvolte, jestli má heslo obsahovat pouze **číselné** znaky, nebo jestli má obsahovat kombinaci čísel a dalších znaků (**alfanumerické**).
 
-  Určuje minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
+  - **Počet nealfanumerických znaků v hesle**: Pokud se **Požadovaný typ hesla** nastaví na **Alfanumerické**, určuje toto nastavení minimální počet znakových sad, které musí heslo obsahovat. Jde o tyto čtyři znakové sady:
+    - Malá písmena
+    - Velká písmena
+    - Symboly
+    - Numbers
 
-  U zařízení s Windows zabezpečených účtem Microsoft se zásada dodržování předpisů nevyhodnotí správně, pokud je **minimální délka hesla** větší než osm znaků nebo pokud je **minimální počet znakových sad** větší než dvě.
+    Po nastavení vyššího čísla bude uživatel muset vytvořit složitější heslo.
 
-- **Požadovaný typ hesla**: Podporuje se ve Windows RT, Windows RT 8.1 a Windows 8.1.
+- **Minimální délka hesla**: Zadejte minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
+- **Maximální počet minut nečinnosti, po kterém bude nutné zadat heslo**: Zadejte dobu nečinnosti, která musí uplynout, aby se po uživateli znovu požadovalo zadání hesla.
+- **Konec platnosti hesla (dny)**: Vyberte počet dní, za který skončí platnost hesla a uživatel bude muset vytvořit nové.
+- **Počet předchozích hesel, která se nesmí použít znovu**: Zadejte počet dříve použitých hesel, která se nesmí znovu použít.
+- **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti (Mobile a Holographic)**: Vynutí zadání hesla uživatelem při každém návratu zařízení ze stavu nečinnosti.
 
-  Určuje, jestli musí uživatelé vytvořit heslo typu **Alfanumerický**, nebo **Číslo**.
+### <a name="encryption"></a>Šifrování
 
-- **Minimální počet znakových sad**: Podporuje se ve Windows RT, Windows RT 8.1 a Windows 8.1. Pokud se **Požadovaný typ hesla** nastaví na **Alfanumerické**, toto nastavení určuje nejmenší počet znakových sad, které musí heslo obsahovat. Jde o tyto čtyři znakové sady:
-  - Malá písmena
-  - Velká písmena
-  - Symboly
-  - Numbers 
+- **Šifrování úložiště dat na zařízení**: Vyberte **Vyžadovat** a zašifrujte úložiště dat na vašich zařízeních.
 
-    Pokud se v tomto nastavení nastaví větší číslo, budou uživatelé muset vytvářet složitější hesla. U zařízení s Windows zabezpečených účtem Microsoft se zásada dodržování předpisů nevyhodnotí správně, pokud je **minimální délka hesla** větší než osm znaků nebo pokud je **minimální počet znakových sad** větší než dvě.
+## <a name="windows-holographic-for-business"></a>Windows Holographic for Business
 
-- **Počet minut nečinnosti před vyžádáním hesla:** Podporuje se ve Windows RT, Windows RT 8.1 a Windows 8.1.
+Windows Holographic for Business používá platformu **Windows 10 a novější**. Windows Holographic for Business podporuje následující nastavení:
 
-  Určuje dobu nečinnosti, po které bude uživatel muset zadat svoje heslo znovu.
-
-- **Konec platnosti hesla (dny)**: Podporuje se ve Windows RT, Windows RT 8.1 a Windows 8.1.
-
-  Zvolte počet dní, za který uživatelské heslo vyprší a uživatel bude muset vytvořit nové.
-
-- **Pamatovat si historii hesel:** Podporuje se ve Windows RT, Windows RT 8.1 a Windows 8.1.
-
-  Pokud chcete zabránit uživatelům ve vytváření hesel, která používali dřív, použijte toto nastavení spolu s nastavením **Zakázat opakované použití předchozích hesel**.
-
-- **Zakázat opakované použití předchozích hesel:** Podporuje se ve Windows RT, Windows RT 8.1 a Windows 8.1.
-
-  Pokud je zvolená možnost **Pamatovat si historii hesel**, zadejte počet předchozích hesel, která se nesmí znovu použít.
-
-
-### <a name="device-health-settings"></a>Nastavení stavu zařízení
-
-- **Vyžadovat, aby oznámený stav zařízení byl v pořádku:** Podporuje se na zařízeních s Windows 10. Můžete nastavit, které vyžaduje, že zařízení s Windows 10 musí být v nových nebo existujících zásadách dodržování předpisů hlášená jako v pořádku. Pokud je toto nastavení povolené, vyhodnotí u zařízení s Windows 10 služba Health Attestation Service (HAS) následující datové body:
-  - **Povolený nástroj BitLocker:** Když je nástroj BitLocker zapnutý, při vypnutém systému nebo v režimu hibernace je zařízení schopné chránit data uložená na disku před neoprávněným přístupem. Nástroj Windows BitLocker Drive Encryption zašifruje všechna data uložená na svazku operačního systému Windows. Nástroj BitLocker chrání data operačního systému Windows a uživatelská data pomocí čipu TPM a pomáhá zajistit, aby s počítačem nemohl nikdo manipulovat, ani když ho uživatel ponechá bez dozoru nebo dojde k jeho ztrátě nebo odcizení. Pokud je počítač vybavený kompatibilním čipem TPM, nástroj BitLocker pomocí čipu TPM uzamkne šifrovací klíče, které chrání data. V důsledku toho se ke klíčům nedá získat přístup, dokud čip TPM neověří stav počítače.
-  - **Povolená integrita kódu:** Integrita kódu je funkce, která ověřuje integritu ovladače nebo systému souboru při každém načtení do paměti. Integrita kódu zjistí, jestli se do jádra nenačítá nepodepsaný ovladač nebo systémový soubor nebo jestli nedošlo k úpravě některého systémového souboru škodlivým softwarem spuštěným pomocí uživatelského účtu s oprávněním správce.
-  - **Povolené zabezpečené spouštění:** Pokud je povolené zabezpečené spouštění, musí se systém spouštět do důvěryhodného stavu z výroby. Kromě toho platí, že při povoleném zabezpečeném spouštění musí mít komponenty jádra sloužící ke spuštění počítače správné kryptografické podpisy, které jsou podle výrobce zařízení důvěryhodné. Firmware UEFI to nejdřív ověří a až potom povolí spuštění počítače. Pokud u některých souborů došlo k manipulaci, při které se porušil podpis, systém se nespustí.
-  - **Musí být povolené prvotní spuštění antimalwarového programu:** Prvotní spuštění antimalwarového programu (ELAM – Early Launch Antimalware) chrání počítače v síti během spouštění a před inicializací ovladačů jiných výrobců.
-
-Informace o způsobu fungování služby ověření stavu najdete v tématu [Poskytovatel CSP služby Health Attestation](https://msdn.microsoft.com/library/dn934876.aspx).
-
-### <a name="device-property-settings"></a>Nastavení vlastností zařízení
-
-- **Minimální požadovaný operační systém:** Podporuje se v systémech Windows 8.1 a Windows 10.
-
-  Sem zadejte číslo ve formátu major.minor.build.CU. Číslo build.CU musí odpovídat verzi vrácené příkazem ```winver```.
-
-  Pokud má zařízení starší verzi operačního systému, než je zadaná verze, uvede se jako nekompatibilní. Zobrazí se odkaz s informacemi o postupu upgradu. Koncový uživatel si může upgradovat svoje zařízení. Potom bude mít přístup k prostředkům společnosti.
-
-- **Maximální povolená verze operačního systému:** Podporuje se v systémech Windows 8.1 a Windows 10.
-
-  Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný a uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nepůjde přes toto zařízení přistupovat k prostředkům společnosti.
-
-K vyhledání verze operačního systému, kterou máte použít v nastaveních **Minimální požadovaný operační systém** a **Maximální povolená verze operačního systému** spusťte z příkazového řádku příkaz **winver**. Příkaz winver vrátí hlášenou verzi operačního systému.
-
-- Počítače s Windows 8.1 vrací verzi **3**. Pokud je pravidlo verze operačního systému pro Windows nastavené na Windows 8.1, bude se zařízení uvádět jako nekompatibilní i v případě, že bude používat Windows 8.1.
-- U počítačů s Windows 10 musí být verze nastavená jako „10.0“ + číslo sestavení operačního systému vrácené příkazem winver.
-
-## <a name="windows-holographic-for-business-support"></a>Podpora Windows Holographic for Business
-
-Windows Holographic for Business podporuje následující nastavení:
-
-- Zabezpečení systému / šifrování
-
-  **Šifrování datového úložiště na zařízení**
+- **Zabezpečení systému** > **Šifrování** > **Šifrování datového úložiště na zařízení**.
 
 Pokud chcete ověřit šifrování u zařízení Microsoft HoloLens, přečtěte si článek [Ověření šifrování zařízení](https://docs.microsoft.com/hololens/hololens-encryption#verify-device-encryption).
 
+## <a name="surface-hub"></a>Surface Hub
+Surface Hub používá platformu **Windows 10 a novější**. Zařízení Surface Hub podporují dodržování předpisů i podmíněný přístup. Pokud chcete tyto funkce na zařízeních Surface Hub povolit, doporučujeme [povolit automatickou registraci Windows 10](windows-enroll.md) v Intune (vyžaduje také Azure Active Directory (AAD)) a cílit na zařízení Surface Hub jako na skupiny zařízení. Zařízení Surface Hub je potřeba propojit s Azure Active Directory, aby se zajistilo dodržování předpisů a podmíněný přístup k funkci.
+
+Pokyny najdete v článku [Nastavení registrace pro zařízení s Windows](windows-enroll.md).
+
+## <a name="assign-user-or-device-groups"></a>Přiřazení skupin uživatelů nebo zařízení
+
+1. Vyberte zásadu, kterou jste nakonfigurovali. Existující zásady najdete v **Dodržování předpisů zařízením** > **Zásady**.
+2. Zvolte zásady a pak **Přiřazení**. Můžete zahrnout nebo vyloučit skupiny zabezpečení služby Azure AD.
+3. Vyberte **Vybrané skupiny** a zobrazte skupiny zabezpečení Azure AD. Můžete vybrat skupiny uživatelů nebo zařízení, na které chcete zásady použít, a pak zvolením možnosti **Uložit** tyto zásady uživatelům nasadit.
+
+Nasazení zásad je dokončeno. U zařízení používaných uživateli, na které zásady cílí, se vyhodnotí dodržování předpisů.
+
 ## <a name="next-steps"></a>Další kroky
-
-V následujícím tématu zjistíte, jak monitorovat dodržování předpisů zařízením:
-
-- [Monitorování dodržování zásad v zařízeních](device-compliance-monitor.md)
+[Automatické e-maily a přidání akcí pro zařízení nedodržující předpisy](actions-for-noncompliance.md)  
+[Monitorování zásad dodržování předpisů zařízením v Intune](compliance-policy-monitor.md)

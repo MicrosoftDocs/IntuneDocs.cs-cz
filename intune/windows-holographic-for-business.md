@@ -12,11 +12,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 41c1ea3bf12b83a0f09c8535275ffb58e5f46931
-ms.sourcegitcommit: b727b6bd6f138c5def7ac7bf1658068db30a0ec3
+ms.openlocfilehash: 45d8f5051d9663273c6515717b7930145ff8a964
+ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="customize-devices-running-windows-holographic-with-intune"></a>Přizpůsobení zařízení s Windows Holographic v Intune
 
@@ -38,7 +38,7 @@ Zásady dodržování předpisů jsou pravidla a nastavení, která musí zaří
 
 Další informace najdete v tématu **[Začínáme se zásadami dodržování předpisů](device-compliance-get-started.md)**.
 
-## <a name="deploy-apps"></a>Nasazení aplikací
+## <a name="deploy-and-manage-apps"></a>Nasazení a správa aplikací
 **[Přidání aplikací do Intune](apps-add.md)**
 
 V Intune můžete do zařízení s Windows Holographic for Business přidat aplikace. Existují různé způsoby nasazování aplikací:
@@ -46,6 +46,16 @@ V Intune můžete do zařízení s Windows Holographic for Business přidat apli
 - [Přidání aplikací z Microsoft Storu](store-apps-windows.md)
 - [Přidání vytvořených aplikací](lob-apps-windows.md)
 - [Přiřazení aplikací skupinám](apps-deploy.md)
+
+Microsoft Intune může nasadit univerzální aplikace pro Windows na zařízení Microsoft HoloLens s Windows Holographic for Business. Balíčky aplikací můžete přímo nahrát na portálu Intune Azure nebo je můžete nasadit z Microsoft Storu pro firmy. Další informace o souvisejících oblastech najdete v těchto tématech:
+- Pokud chcete nasadit obchodní aplikace pomocí portálu Intune Azure, přečtěte si téma [Přidání obchodních aplikací pro Windows do Microsoft Intune](lob-apps-windows.md).
+- Pokud chcete nasadit aplikace pomocí Microsoft Storu pro firmy, přečtěte si téma [Správa aplikací zakoupených v Microsoft Storu pro firmy v Microsoft Intune](windows-store-for-business.md). 
+- Pokud se chcete dozvědět informace o správě aplikací v Microsoft Intune, přečtěte si téma [Co je Správa aplikací v Microsoft Intune](app-management.md).
+- Pokud se chcete dozvědět další informace o vývoji aplikací pro Microsoft HoloLens, přečtěte si téma [Aplikace hybridní reality pro Microsoft HoloLens](https://www.microsoft.com/hololens/apps). 
+
+> [!NOTE]
+> Zařízení HoloLens se systémem Windows 10 Holographic for Business 1607 nepodporují online licencované aplikace z Microsoft Storu pro firmy. Další informace najdete v tématu [Instalace aplikací na HoloLens](https://docs.microsoft.com/en-us/hololens/hololens-install-apps).
+
 
 ## <a name="device-categories-and-groups"></a>Kategorie a skupiny zařízení
 **[Zařazení zařízení do skupin](device-group-mapping.md)**

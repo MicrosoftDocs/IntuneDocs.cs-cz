@@ -5,7 +5,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 03/27/2018
+ms.date: 04/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d0a8a189e708ed140c3cda987a20cebb562fdb34
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 388c9f69b6cbee1353b0e21121a47576b58b3ba6
+ms.sourcegitcommit: 407191a92ef356a3d196b6f9959b9b033190ca2c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Známé problémy v Microsoft Intune
 
@@ -63,9 +63,11 @@ Neklikejte u jednoho tokenu VPP na tlačítko **Nahrát** vícekrát. Pokud to u
 Pro zařízení, která nejsou zaregistrovaná v Intune, můžete do pole **Podniková identita** v nastavení pro zásadu Windows Information Protection zadat jenom primární doménu.
 Pokud přidáte další domény (pomocí možnosti **Upřesnit nastavení** > **Hranice sítě** > **Přidat chráněnou doménu**), zásadu nejde uložit. Zobrazená chybová zpráva se brzy změní, aby byla přesnější.
 
-### <a name="cisco-anyconnect-vpn-client-support"></a>Podpora klientů VPN Cisco AnyConnect
-Nejnovější vydaná verze klienta VPN Cisco AnyConnect (4.0.07072) v současnosti není kompatibilní s Intune. Budoucí aktualizace Intune umožní kompatibilitu s touto verzí klienta VPN. Do té doby doporučujeme klienta VPN Cisco AnyConnect neaktualizovat a dál používat stávající verzi.
+### <a name="cisco-anyconnect-and-cisco-legacy-anyconnect-vpn-client-support---ios"></a>Podpora klientů VPN Cisco AnyConnect a Cisco Legacy AnyConnect – iOS
 
+Na zařízeních s iOSem nefunguje integrace NAC s novým klientem Cisco AnyConnect. Pracujeme se společností Cisco, abychom zajistili integraci NAC.
+
+[Vytvoření profilů sítě VPN v Intune](vpn-settings-ios.md) poskytuje další podrobnosti týkající se klientů Cisco AnyConnect a Cisco Legacy AnyConnect.
 
 ### <a name="using-the-numeric-password-type-with-macos-sierra-devices"></a>Použití číselného typu hesla pro zařízení s macOS Sierra
 

@@ -14,11 +14,11 @@ ms.assetid: 068a73bb-e6b3-44a6-8f6e-4cf7d455bbf3
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: c760f9c76e54c0b5f9eb037414870ab1c8943803
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: e2e341e8b8befa43106673607bd5c5264dd18db0
+ms.sourcegitcommit: 2162ed46d939b4a9b85fa4e7e9943f2fb5948f1e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Porovnání správy počítačů s Windows jako počítačů nebo jako mobilních zařízení
 
@@ -37,9 +37,9 @@ Organizace mohou v Microsoft Intune spravovat počítače s Windows buď jako mo
 |**Správa aktualizací softwaru**| Aktualizace Windows a aplikací od Microsoftu<br>[Udržování počítačů s Windows v aktuálním stavu díky softwarovým aktualizacím](https://docs.microsoft.com/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune)|Microsoft Store pro firmy pro aktualizace Windows 10 a aktualizace aplikací od Microsoftu<br> [Konfigurace nastavení služby Windows Update pro firmy](https://docs.microsoft.com/intune-azure/configure-devices/how-to-configure-windows-update-for-business) |
 |**Správa softwarových licencí**|K dispozici <br>[Správa licenčních smluv na software počítačů s Windows](https://docs.microsoft.com/intune/deploy-use/manage-license-agreements-for-windows-pc-software-in-microsoft-intune)|Microsoft Store pro firmy (pouze aplikace .appx)<br>[Správa aplikací koupených z Microsoft Storu pro firmy](https://docs.microsoft.com/intune-azure/manage-apps/wsfb-apps)|
 |**Inventář**|K dispozici <br>[Zobrazení inventáře hardwaru a softwaru pro počítače s Windows](https://docs.microsoft.com/intune/deploy-use/view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune)|K dispozici <br>[Jak monitorovat informace o aplikacích](https://docs.microsoft.com/intune/apps-monitor)<br>[Co je správa zařízení?](https://docs.microsoft.com/intune/device-management)|
-|**Zásady brány Windows Firewall**|K dispozici <br>[Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall](https://docs.microsoft.com/intune/deploy-use/help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune) |Není k dispozici|
+|**Zásady brány Windows Firewall**|K dispozici <br>[Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall](https://docs.microsoft.com/intune/deploy-use/help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune) |K dispozici <br>[Firewall v programu Windows Defender](https://docs.microsoft.com/en-us/intune/endpoint-protection-windows-10#windows-defender-firewall)|
 |**Ochrana proti malwaru**|Funkce Endpoint Protection<br>[Pomoc se zabezpečením počítačů s Windows pomocí služby Endpoint Protection](https://docs.microsoft.com/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune)|Windows Defender<br>[Nastavení programu Windows Defender](https://docs.microsoft.com/intune-azure/configure-devices/custom-for-windows-10#windows-defender-settings)|
-|**Vzdálená pomoc** |TeamViewer<br>[Žádost o poskytnutí vzdálené pomoci na počítačích s Windows](https://docs.microsoft.com/intune/deploy-use/request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune)|Není k dispozici |
+|**Vzdálená pomoc** |TeamViewer<br>[Žádost o poskytnutí vzdálené pomoci na počítačích s Windows](https://docs.microsoft.com/intune/deploy-use/request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune)|TeamViewer<br> [Vzdálená správa zařízení s Intune pomocí TeamVieweru](https://docs.microsoft.com/en-us/intune/device-profile-android-teamviewer) |
 |**Nasazení aplikací** | Není k dispozici pro Microsoft Store pro firmy,<br>jenom .exe, .appx a vícesouborové .msi<br>[Přidání aplikací pro počítače s Windows, na kterých běží softwarový klient Intune](https://docs.microsoft.com/intune/deploy-use/add-apps-for-windows-pcs-in-microsoft-intune)|K dispozici pro aplikace z Microsoft Storu a pro podnikové aplikace<br>[Přidání aplikací pro Windows Store](https://docs.microsoft.com/intune/store-apps-windows)<br>[Přidání obchodních aplikací (LOB) pro Windows](https://docs.microsoft.com/intune/lob-apps-windows)|
 |**Ochrana aplikací**|Není k dispozici|K dispozici <br>[Co jsou zásady ochrany aplikací?](https://docs.microsoft.com/intune-azure/manage-apps/what-is-app-protection-policy)|
 |**Ověření stavu**|Není k dispozici|K dispozici|

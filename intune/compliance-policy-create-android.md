@@ -1,12 +1,11 @@
 ---
-title: Vytvoření zásad dodržování předpisů zařízením pro zařízení s Androidem v Microsoft Intune
-titleSuffix: ''
-description: Vytvořte v Microsoft Intune zásadu dodržování předpisů zařízením pro zařízení s Androidem umožňující vám zadat požadavky, které zařízení musí splnit, aby vyhovovalo předpisům.
+title: Vytvoření zásad dodržování předpisů pro zařízení s Androidem v Microsoft Intune – Azure | Microsoft Docs
+description: Vytvářejte nebo konfigurujte zásady dodržování předpisů zařízením služby Microsoft Intune pro zařízení s Androidem. Rozhodněte se povolit zařízení s jailbreakem, nastavte přijatelnou úroveň hrozby, zkontrolujte Google Play, zadejte minimální a maximální verzi operačního systému, zvolte si požadavky na heslo a povolte bokem instalované aplikace.
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 04/16/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,93 +14,19 @@ ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 586672bf84be6e7bcd8d3b8618aab09088620eb1
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: afc8edb38b667d744bb586d1ed5c82df8ab10f49
+ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="how-to-create-a-device-compliance-policy-for-android-devices-in-intune"></a>Vytvoření zásad dodržování předpisů pro zařízení s Androidem v Intune
-
+# <a name="add-a-device-compliance-policy-for-android-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s Androidem v Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Zásada dodržování předpisů Intune pro zařízení s Androidem určuje pravidla a nastavení, které musí zařízení s Androidem splňovat, aby bylo považováno za dodržující předpisy. Tyto zásady můžete použít s podmíněným přístupem k povolení nebo zablokování přístupu k prostředkům společnosti. Můžete také získat sestavy zařízení a provádět kroky v případě, že zařízení předpisy nedodržuje. Zásady dodržování předpisů zařízení pro každou platformu vytvoříte na portálu Intune Azure. Další informace o zásadách dodržování předpisů a požadavcích, kterým před vytvořením zásad dodržování předpisů musíte vyhovět, najdete v tématu [Začínáme se zásadami dodržování předpisů zařízeními](device-compliance-get-started.md).
+Zásada dodržování předpisů Intune pro zařízení s Androidem určuje pravidla a nastavení, které musí zařízení s Androidem splňovat, aby bylo považováno za dodržující předpisy. Pomocí těchto zásad s podmíněným přístupem můžete povolit nebo zablokovat přístup k prostředkům společnosti. Můžete také získat sestavy zařízení a provádět akce v případě nedodržování předpisů. Zásady dodržování předpisů zařízení pro každou platformu vytvoříte na portálu Intune Azure. Další informace o zásadách dodržování předpisů a případných požadavcích najdete v tématu [Začínáme s dodržováním předpisů](device-compliance-get-started.md).
 
-## <a name="to-create-a-device-compliance-policy"></a>Vytvoření zásad dodržování předpisů pro zařízení
-
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-1. V podokně **Intune** zvolte  **Dodržování předpisů zařízením**. Pod **Spravovat** vyberte **Zásady** a zvolte **Vytvořit zásadu**.
-3. Zvolte **Nastavení – Konfigurace** a zadejte nastavení **Zabezpečení systému**, **Stav zařízení** a **Vlastnosti zařízení**. Když jste hotovi, klikněte na **OK**.
-
-<!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant based on the configured settings in this policy.
-5. In the **Actions for noncompliance** pane, choose **Add** to create a new action.  The action parameters pane allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
-6. The message template option allows you to create several custom emails depending on when the action is set to take. For example, you can create a message for notifications that are sent for the first time and a different message for final warning before access is blocked. The custom messages that you create can be used for all your device compliance policy.
-7. Specify the **Grace period** which determines when that action to take place.  For example, you may want to send a notification as soon as the device is evaluated as noncompliant, but allow some time before enforcing the conditional access policy to block access to company resources like SharePoint online.
-8. Choose **Add** to finish creating the action.
-9. You can create multiple actions and the sequence in which they should occur. Choose **OK** when you are finished creating all the actions.--->
-
-## <a name="to-assign-user-groups"></a>Přiřazení skupin uživatelů
-
-Pokud chcete přiřadit zásady dodržování předpisů uživatelům, vyberte zásady, které jste nakonfigurovali. Existující zásady najdete v podokně **Dodržování předpisů zařízením – Zásady**.
-
-1. Zvolte zásady a pak **Přiřazení**. Otevře se podokno, kde můžete vybrat **skupiny zabezpečení Azure Active Directory** a přiřadit je k zásadám.
-2. Zvolte **Vybrat skupiny** a otevřete tak podokno, kde se zobrazí skupiny zabezpečení v Azure AD. Najdete tady skupiny zabezpečení v Azure Active Directory.  Můžete vybrat skupiny uživatelů, na které chcete zásadu použít, a pak pomocí **Uložit** tuto zásadu uživatelům nasadit.
-
-Tím jste zásady uplatnili u uživatelů.  U zařízení používaných uživateli, kteří jsou cílem zásad, se bude vyhodnocovat dodržování předpisů.
-
-<!---##  Compliance policy settings--->
-
-## <a name="device-health-and-security-settings"></a>Stav zařízení a nastavení zabezpečení
-
-- **Zařízení nesmí mít jailbreak ani root:** Pokud povolíte toto nastavení, budou se zařízení s jailbreakem považovat za nevyhovující předpisům.
-- **Požadovat, aby zařízení bránila instalaci aplikací z neznámých zdrojů (Android 4.0 nebo novější):** Pokud chcete blokovat zařízení, která mají povolenou možnost **Zabezpečení** > **Neznámé zdroje**, toto nastavení povolte a nastavte ho na **Ano**.
-
-### <a name="important"></a>Důležité
-
-Aplikace instalované bokem vyžadují, aby bylo povolené nastavení **Neznámé zdroje**. Tuto zásadu dodržování předpisů vynuťte jenom v případě, že na zařízeních neprovádíte instalaci aplikací pro Android bokem.
-
-- **Požadovat, aby ladění USB bylo zakázané (Android 4.2 nebo novější):** Toto nastavení určuje, jestli se má zjišťovat, zda je na zařízení povolená možnost ladění USB.
-- **Požadovat, aby zařízení měla povolené nastavení Vyhledat v zařízení bezpečnostní hrozby (Android 4.2-4.4):** Toto nastavení určuje, že je v zařízení povolená funkce **Ověřovat aplikace**.
-- **Minimální úroveň oprav zabezpečení Androidu (Android 6.0 nebo novější):** Toto nastavení použijte k určení minimální úrovně oprav Androidu. Zařízení, která nejsou alespoň na této úrovni oprav, budou kompatibilní. Datum musí být zadané ve formátu RRRR-MM-DD.
-- **Vyžadovat, aby byla povolena Ochrana zařízení před internetovými útoky**: Toto nastavení použijte, pokud chcete jako podmínku dodržování předpisů použít vyhodnocování rizika z řešení Lookout MTP. Vyberte jednu z následujících úrovní hrozeb jako maximální povolenou:
-  - **Žádná (zabezpečeno)**: Toto je nejbezpečnější úroveň. Znamená, že zařízení nesmí obsahovat žádné hrozby. Pokud se v zařízení zjistí libovolná úroveň hrozeb, bude vyhodnoceno jako nedodržující předpisy.
-  - **Nízká:** Zařízení je vyhodnoceno jako vyhovující, pokud se v něm nachází i jen nízká úroveň hrozeb. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
-  - **Střední:** Zařízení je vyhodnoceno jako vyhovující, pokud se v něm přítomné hrozby pohybují na střední nebo nízké úrovni. Pokud se zjistí, že zařízení má i hrozby vysoké úrovně, bude vyhodnoceno jako nedodržující předpisy.
-  - **Vysoká**: Jedná se o nejméně bezpečnou možnost. V podstatě umožňuje všechny úrovně hrozeb. Může se hodit, pokud toto řešení používáte jenom ke generování sestav.
-
-## <a name="system-security-settings"></a>Systémové nastavení zabezpečení
-
-### <a name="password"></a>Heslo
-
-- **Vyžadovat heslo k odemknutí mobilních zařízení:** Pokud tuto možnost nastavíte na **Ano**, budou muset uživatelé zadat heslo, aby mohli získat přístup ke svému zařízení.
-- **Minimální délka hesla:** Určete minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
-- **Kvalita hesla:** Toto nastavení rozpozná, jestli jsou na zařízení nastavené požadavky na heslo, které jste zadali. Toto nastavení povolte, pokud uživatelé musí pro zařízení s Androidem splnit určité požadavky na heslo. Vybírejte z těchto možností:
-  - **Biometrika s nízkým zabezpečením**
-  - **Požadováno**
-  - **Aspoň číslice**
-  - **Aspoň abecední znaky**
-  - **Aspoň alfanumerické znaky**
-  - **Alfanumerické znaky se symboly**
-- **Počet minut nečinnosti před vyžádáním hesla:** Určete dobu nečinnosti, než uživatel musí znovu zadat heslo.
-- **Konec platnosti hesla (dny)**: Vyberte počet dní, za který skončí platnost hesla a uživatel bude muset vytvořit nové.
-- **Pamatovat si historii hesel:** Pokud chcete zabránit uživatelům ve vytváření hesel, která používali dřív, použijte toto nastavení spolu s nastavením **Zakázat opakované použití předchozích hesel**.
-- **Zakázat opakované použití předchozích hesel:** Pokud jste zvolili možnost **Pamatovat si historii hesel**, zadejte počet předchozích hesel, která se nesmí znovu použít.
-- **Po návratu zařízení ze stavu nečinnosti vyžadovat heslo:** Toto nastavení použijte v kombinaci s nastavením **Počet minut nečinnosti před vyžádáním hesla**. Pro přístup k zařízení, které bylo nečinné po dobu uvedenou v nastavení **Počet minut nečinnosti před vyžádáním hesla**, se uživatelům zobrazí výzva k zadání hesla.
-
-### <a name="encryption"></a>Šifrování
-
-- **Vyžadovat šifrování u mobilního zařízení:** Nastavte možnost **Ano**, pokud chcete, aby musela být zařízení vyžadující přístup k prostředkům šifrovaná. Zařízení se šifrují, pokud vyberete nastavení **Vyžadovat heslo k odemknutí mobilních zařízení**.
-
-## <a name="device-property-settings"></a>Nastavení vlastností zařízení
-
-- **Minimální požadovaný operační systém**: Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, uvede se jako nekompatibilní. Zobrazí se odkaz s informacemi, jak upgradovat. Uživatel si může zařízení upgradovat. Potom bude mít přístup k prostředkům společnosti.
-- **Maximální povolená verze operačního systému:** Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný a uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidlech, která tuto verzi operačního systému povolí, nepůjde přes toto zařízení přistupovat k prostředkům společnosti.
-
-## <a name="how-noncompliant-settings-work-with-conditional-access-policies"></a>Jak fungují nevyhovující nastavení se zásadami podmíněného přístupu?
-
-Tabulka níže popisuje, jak se postupuje u nevyhovujícího nastavení při použití zásad dodržování předpisů se zásadami podmíněného přístupu.
+Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení při použití zásad dodržování předpisů se zásadami podmíněného přístupu.
 
 --------------------
 
@@ -124,6 +49,88 @@ Tabulka níže popisuje, jak se postupuje u nevyhovujícího nastavení při pou
 - Zařízení se zablokuje, pokud se zásady podmíněného přístupu vztahují na uživatele.
 - Portál společnosti oznamuje uživateli všechny problémy s dodržováním předpisů.
 
-<!--- ## Next steps
+## <a name="create-a-device-compliance-policy"></a>Vytváření zásad dodržování předpisů pro zařízení
 
-[How to monitor device compliance](device-compliance-monitor.md)--->
+[!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
+5. U možnosti **Platforma** vyberte **Android**. Zvolte **Nastavení – Konfigurace** a zadejte nastavení **Stav zařízení**, **Vlastnosti zařízení** a **Zabezpečení systému**. Po dokončení zvolte **OK** a **Vytvořit**.
+
+<!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant based on the configured settings in this policy.
+5. In the **Actions for noncompliance** pane, choose **Add** to create a new action.  The action parameters pane allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
+6. The message template option allows you to create several custom emails depending on when the action is set to take. For example, you can create a message for notifications that are sent for the first time and a different message for final warning before access is blocked. The custom messages that you create can be used for all your device compliance policy.
+7. Specify the **Grace period** which determines when that action to take place.  For example, you may want to send a notification as soon as the device is evaluated as noncompliant, but allow some time before enforcing the conditional access policy to block access to company resources like SharePoint online.
+8. Choose **Add** to finish creating the action.
+9. You can create multiple actions and the sequence in which they should occur. Choose **OK** when you are finished creating all the actions.--->
+
+<!---##  Compliance policy settings--->
+
+## <a name="device-health"></a>Device health
+
+- **Zařízení s rootem**: Pokud toto nastavení povolíte, zařízení s jailbreakem se budou považovat za zařízení nedodržující předpisy.
+- **Vyžadovat, aby zařízení bylo na určité úrovni hrozby pro zařízení nebo pod ní**: Toto nastavení použijte, pokud chcete jako podmínku dodržování předpisů použít vyhodnocování rizika z řešení Lookout MTP. Vyberte maximální povolenou úroveň hrozby:
+  - **Zabezpečeno**: Tato možnost je nejbezpečnější, protože zařízení nesmí být nijak ohroženo. Pokud se v zařízení zjistí libovolná úroveň hrozeb, vyhodnotí se jako nedodržující předpisy.
+  - **Nízká:** Zařízení je vyhodnoceno jako vyhovující, pokud se v něm nachází i jen nízká úroveň hrozeb. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
+  - **Střední**: Zařízení se vyhodnotí jako vyhovující, pokud se existující hrozby pohybují na střední nebo nízké úrovni. Pokud se zjistí, že zařízení má i hrozby vysoké úrovně, bude vyhodnoceno jako nedodržující předpisy.
+  - **Vysoká**: Tato možnost je nejméně bezpečná a umožňuje všechny úrovně hrozeb. Může být užitečná, pokud toto řešení používáte jen ke generování sestav.
+- **Aplikace Služby Google Play je nakonfigurovaná**: Vyžaduje, aby byla nainstalovaná a povolená aplikace Služby Google Play. Aplikace Služby Google Play umožňuje instalaci aktualizací zabezpečení a je základní závislostí pro mnoho funkcí zabezpečení na zařízeních s certifikací Google.
+- **Aktualizovaný poskytovatel zabezpečení**: Vyžaduje, aby aktualizovaný poskytovatel zabezpečení chránil zařízení před známými chybami zabezpečení.
+- **Kontrola ohrožení aplikací**: Vyžaduje, aby byla povolená funkce Androidu **Ověřovat aplikace**.
+
+  > [!NOTE]
+  > Na starších verzích platformy Android tato funkce představuje nastavení dodržování předpisů. Intune může jenom zkontrolovat, jestli je toto nastavení povolené na úrovni zařízení. Na zařízeních s pracovními profily (Android for Work) je toto nastavení dostupné jako nastavení zásad konfigurace. To správcům umožňuje povolit nastavení pro zařízení.
+
+  Pokud vaše společnost používá pracovní profily Androidu, můžete nastavení **Kontrola ohrožení aplikací** povolit pro zaregistrovaná zařízení. Vytvořte profil zařízení a vyžadujte v něm toto nastavení zabezpečení systému. Další informace najdete v článku [Nastavení omezení pro zařízení s Androidem for Work v Intune](device-restrictions-android-for-work.md).
+
+- **Ověření zařízení SafetyNet**: Zadejte úroveň [ověření SafetyNet](https://developer.android.com/training/safetynet/attestation.html), které musí zařízení dosáhnout. Možnosti:
+  - **Není nakonfigurováno**
+  - **Zkontrolovat základní integritu**
+  - **Zkontrolovat základní integritu a certifikovaná zařízení**
+
+## <a name="device-property-settings"></a>Nastavení vlastností zařízení
+
+- **Minimální verze OS**: Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, označí se jako nekompatibilní. Zobrazí se odkaz s informacemi, jak upgradovat. Koncový uživatel si může zařízení upgradovat. Potom získá přístup k prostředkům společnosti.
+- **Maximální verze OS**: Pokud zařízení používá verzi operačního systému, která je novější než verze specifikovaná v pravidle, bude přístup k prostředkům společnosti blokovaný. Uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nebude mít toto zařízení přístup k prostředkům společnosti.
+
+## <a name="system-security-settings"></a>Systémové nastavení zabezpečení
+
+### <a name="password"></a>Heslo
+
+- **Vyžadovat heslo k odemknutí mobilních zařízení**: **Vyžadujte**, aby uživatelé před získáním přístupu ke svému zařízení zadali heslo.
+- **Minimální délka hesla**: Zadejte minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
+- **Požadovaný typ hesla**: Zvolte, jestli má heslo obsahovat pouze číselné znaky, nebo jestli má obsahovat kombinaci čísel a dalších znaků. Vybírejte z těchto možností:
+  - **Výchozí ze zařízení**
+  - **Biometrika s nízkým zabezpečením**
+  - **Aspoň číslice**
+  - **Číselné komplexní**
+  - **Aspoň abecední znaky**
+  - **Aspoň alfanumerické znaky**
+  - **Aspoň alfanumerické se symboly**
+- **Maximální počet minut nečinnosti, po kterém bude nutné zadat heslo**: Zadejte dobu nečinnosti, která musí uplynout, aby se po uživateli znovu požadovalo zadání hesla.
+- **Konec platnosti hesla (dny)**: Vyberte počet dní, za který skončí platnost hesla a uživatel bude muset vytvořit nové.
+- **Počet předchozích hesel, která se nesmí použít znovu**: Zadejte počet dřívějších hesel, která se nesmí znovu použít. Toto nastavení použijte, pokud chcete uživateli zabránit ve vytváření hesel, která používal dříve.
+
+### <a name="encryption"></a>Šifrování
+
+- **Šifrování úložiště dat na zařízení** (Android 4.0 a vyšší nebo KNOX 4.0 a vyšší): Vyberte **Vyžadovat** a zašifrujte úložiště dat na vašich zařízeních. Zařízení se šifrují, pokud vyberete nastavení **Vyžadovat heslo k odemknutí mobilních zařízení**.
+
+### <a name="device-security"></a>Zabezpečení zařízení
+
+- **Blokovat aplikace z neznámých zdrojů**: Rozhodněte se blokovat zařízení s povoleným zdroji v Zabezpečení > Neznámé zdroje (Android 4.0 až Android 7.x, nepodporuje se Androidem 8.0 a novějším.). Pokud chcete instalovat aplikace bokem, musí být povoleny neznámé zdroje. Pokud neprovádíte instalaci aplikací pro Android bokem, potom tuto zásadu dodržování předpisů povolte.
+
+  > [!IMPORTANT]
+  > Aplikace instalované bokem vyžadují, aby bylo povolené nastavení **Blokovat aplikace z neznámých zdrojů**. Tuto zásadu dodržování předpisů vynuťte jenom v případě, že na zařízeních neprovádíte instalaci aplikací pro Android bokem.
+
+- **Integrita modulu runtime aplikace Portál společnosti**: Zkontroluje, jestli má aplikace Portál společnosti nainstalované výchozí prostředí modulu runtime, je správně podepsaná, není v režimu ladění a je nainstalovaná ze známého zdroje.
+- **Blokovat u zařízení ladění USB** (Android 4.2 nebo novější): Vyberte, pokud chcete zabránit tomu, aby zařízení používala funkci ladění USB.
+- **Minimální úroveň opravy zabezpečení** (Android 6.0 nebo novější): Vyberte nejstarší úroveň opravy zabezpečení, kterou může zařízení mít. Zařízení, která nejsou alespoň na této úrovni oprav, nebudou kompatibilní. Datum musí být zadáno ve formátu `YYYY-MM-DD`.
+
+## <a name="assign-user-groups"></a>Přiřazení skupin uživatelů
+
+1. Vyberte zásadu, kterou jste nakonfigurovali. Existující zásady najdete v **Dodržování předpisů zařízením** > **Zásady**.
+2. Zvolte zásady a pak **Přiřazení**. Můžete zahrnout nebo vyloučit skupiny zabezpečení služby Azure Active Directory (AD).
+3. Vyberte **Vybrané skupiny** a zobrazte skupiny zabezpečení Azure AD. Můžete vybrat skupiny uživatelů, na které chcete zásady použít, a pak pomocí **Uložit** tyto zásady uživatelům nasadit.
+
+Tím jste zásady uplatnili u uživatelů. U zařízení používaných uživateli, na které zásady cílí, se vyhodnotí dodržování předpisů.
+
+## <a name="next-steps"></a>Další kroky
+[Automatické e-maily a přidání akcí pro zařízení nedodržující předpisy](actions-for-noncompliance.md)  
+[Monitorování zásad dodržování předpisů zařízením v Intune](compliance-policy-monitor.md)

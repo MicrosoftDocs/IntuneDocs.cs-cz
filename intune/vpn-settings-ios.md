@@ -5,18 +5,18 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/27/2018
+ms.date: 4/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3ce970f942d8ea20eb9ea593c23160757122926e
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 374c3937d04fd546c17d6f147609f448875dddba
+ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-ios"></a>Nastavení sítě VPN v Microsoft Intune pro zařízení s iOSem
 
@@ -36,12 +36,17 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
 - **Typ připojení**: z následujícího seznamu dodavatelů vyberte typ připojení VPN:
   - **Check Point Capsule VPN**
   - **Cisco AnyConnect**
+  - **Cisco Legacy AnyConnect**
   - **SonicWall Mobile Connect**
   - **F5 Edge Client**
   - **Pulse Secure**
   - **Cisco (IPSec)**
   - **Citrix**
   - **Vlastní VPN**
+
+    > [!NOTE]
+    > - Profily **Cisco Legacy AnyConnect VPN** jsou určeny pro aplikaci [Cisco Legacy AnyConnect](https://itunes.apple.com/app/cisco-legacy-anyconnect/id392790924) verze 4.0.5x a starší verze.
+    > - Profily **Cisco AnyConnect VPN** jsou určeny pro aplikaci [Cisco AnyConnect](https://itunes.apple.com/app/cisco-anyconnect/id1135064690) verze 4.0.7x a novější verze.
 
 - **Rozdělit tunel**: tuto možnost můžete **povolit** nebo **zakázat**, aby se zařízení mohla rozhodnout, které připojení se má v závislosti na typech přenosů používat. Uživatel v hotelu například pro přístup k pracovním souborům použije připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu.
 
@@ -75,3 +80,6 @@ Pokud jste jako typ připojení vybrali **Vlastní VPN**, nakonfigurujte také t
 - **Skript automatické konfigurace**: ke konfiguraci proxy serveru použijte konfigurační soubor. Zadejte **adresu URL proxy serveru** (například **http://proxy.contoso.com**), na které se nachází konfigurační soubor.
 - **Adresa**: Zadejte IP adresu plně kvalifikovaného názvu hostitele proxy serveru.
 - **Číslo portu**: Zadejte číslo portu přidruženého k proxy serveru.
+
+## <a name="next-step"></a>Další krok
+[Vytváření profilů sítě VPN v Intune](vpn-settings-configure.md)

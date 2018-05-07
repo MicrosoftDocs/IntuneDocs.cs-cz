@@ -1,27 +1,27 @@
 ---
-title: "Nastavení zásad ochrany aplikací pro Android"
+title: Nastavení zásad ochrany aplikací pro Android
 titlesuffix: Microsoft Intune
-description: "Toto téma popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem."
-keywords: 
-author: Erikre
-ms.author: erikre
+description: Toto téma popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem.
+keywords: ''
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 02/20/2018
+ms.date: 04/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 34334186fbf74507b54d1bf4df347de2c16c39c0
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: c9c14363d9d00a9beecb5eac41966734687f8a93
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="android-app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací pro Android
+# <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Nastavení zásad ochrany aplikací pro Android v Microsoft Intune
 Toto téma popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem. Popsané nastavení zásad se dá [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v okně **Nastavení** na portálu Azure Portal.
 Existují dvě kategorie nastavení zásad:nastavení přemístění dat a nastavení přístupu. *Aplikace spravované podle zásad* v tomto tématu označují aplikace, které mají nakonfigurované zásady ochrany aplikací.
 
@@ -79,7 +79,7 @@ Další informace najdete v tématu [Výjimky zásad přenosu dat pro aplikace](
 
 | Nastavení | Způsob použití | Výchozí hodnoty |
 |------|------|------|
-| **Vyžadovat pro přístup kód PIN** | Zvolte **Ano**, aby se k použití této aplikace vyžadoval kód PIN. Uživateli se zobrazí výzva k nastavení tohoto kódu PIN při prvním spuštění aplikace v pracovním nebo školním kontextu. Výchozí hodnota = **Ano**<br><br> Sílu kódu PIN nakonfigurujete pomocí následujících nastavení: <ul><li>**Počet pokusů před resetem PIN kódu:** Zadejte počet pokusů, které uživatel bude mít k úspěšnému zadání PINu, než bude nutné PIN resetovat. Výchozí hodnota = **5**</li><li> **Povolit jednoduchý kód PIN:** Pokud chcete uživatelům povolit používání jednoduchých posloupností v kódu PIN, třeba 1234 nebo 1111, zvolte **Ano**. V případě, že nechcete, aby jednoduché posloupnosti používali, zvolte **Ne**. Výchozí hodnota = **Ano** </li><li> **Délka kódu PIN:** Zadejte minimální počet číslic v PINu. Výchozí hodnota = **4** <br><br> Tento formát nastavení zásady podporuje kladné celé číslo.</li><li> **Povolit otisk prstu místo kódu PIN (Android 6.0+):** Pokud chcete uživateli ke zpřístupnění aplikace povolit, aby místo kódu PIN použil [ověření otiskem prstu](https://developer.android.com/about/versions/marshmallow/android-6.0.html#fingerprint-authentication), zvolte **Ano**. Výchozí hodnota = **Ano**</li></ul> Na zařízeních se systémem Android můžete nechat uživatele prokázat svoji identitu [ověřením otiskem prstu v Androidu](https://developer.android.com/about/versions/marshmallow/android-6.0.html#fingerprint-authentication) namísto kódu PIN. Když se uživatel pokusí použít tuto aplikaci se svým pracovním nebo školním účtem, zobrazí se výzva k zadání otisku prstu a uživatel nemusí zadávat kód PIN. </li></ul>| Požadovat kód PIN: Ano <br><br> Počet pokusů před resetováním kódu PIN: 5 <br><br> Povolit jednoduchý PIN: Ano <br><br> Délka PINu: 4 <br><br> Povolit otisk prstu: Ano |
+| **Vyžadovat pro přístup kód PIN** | Zvolte **Ano**, aby se k použití této aplikace vyžadoval kód PIN. Uživateli se zobrazí výzva k nastavení tohoto kódu PIN při prvním spuštění aplikace v pracovním nebo školním kontextu. Výchozí hodnota = **Ano**<br><br> Sílu kódu PIN nakonfigurujete pomocí následujících nastavení: <ul><li>**Vyberte typ**: Nastavte požadavek na PIN kódy, které můžou mít podobu čísel nebo hesel a slouží pro přístup k aplikacím, které používají zásady ochrany aplikací. Číselná podoba vyžaduje jen číslice, zatímco heslo může být definované s minimálně 1 abecedním písmenem **nebo** s minimálně 1 speciálním znakem. <br><br> **Poznámka:** Povolené speciální znaky zahrnují speciální znaky a symboly na anglické klávesnici pro Android. Výchozí hodnota = **Čísla**</li><br><li>**Počet pokusů před resetem PIN kódu:** Zadejte počet pokusů, které uživatel bude mít k úspěšnému zadání PINu, než bude nutné PIN resetovat. Výchozí hodnota = **5**</li><li> **Povolit jednoduchý PIN kód**: Pokud chcete uživatelům povolit používání jednoduchých posloupností v PIN kódu, třeba 1234, 1111, abcd nebo aaaa, zvolte **Ano**. V případě, že nechcete, aby jednoduché posloupnosti používali, zvolte **Ne**. <br><br>**Poznámka:** Pokud je nakonfigurovaný PIN kód typu heslo a možnost Povolit jednoduchý PIN kód je nastavená na Ano, uživatel musí mít ve svém PIN kódu alespoň 1 písmeno **nebo** alespoň 1 speciální znak. Pokud je nakonfigurovaný PIN kód typu heslo a možnost Povolit jednoduchý PIN kód je nastavená na Ne, uživatel musí mít ve svém PIN kódu alespoň 1 číslici **a** 1 písmeno **a** alespoň 1 speciální znak. Výchozí hodnota = **Ano** </li><br><li> **Délka kódu PIN:** Zadejte minimální počet číslic v PINu. Výchozí hodnota = **4**</li><li> **Povolit otisk prstu místo kódu PIN (Android 6.0+):** Pokud chcete uživateli ke zpřístupnění aplikace povolit, aby místo kódu PIN použil [ověření otiskem prstu](https://developer.android.com/about/versions/marshmallow/android-6.0.html#fingerprint-authentication), zvolte **Ano**. Výchozí hodnota = **Ano** <br><br>**Poznámka**: Aby se vynucovaly zásady **Povolit otisk prstu místo kódu PIN**, Android for Work vyžaduje registraci samostatného otisku prstu. Tyto zásady budou platit jen pro aplikace spravované pomocí zásad nainstalované v profilu Androidu for Work. Až se registrací na Portálu společnosti vytvoří spravovaný profil Android for Work, musí se samostatný otisk prstu zaregistrovat na zařízení. Další informace o otiscích prstů pracovních profilů v Androidu for Work najdete v článku o [uzamknutí pracovního profilu](https://support.google.com/work/android/answer/7029958).</li></ul> Na zařízeních se systémem Android můžete nechat uživatele prokázat svoji identitu [ověřením otiskem prstu v Androidu](https://developer.android.com/about/versions/marshmallow/android-6.0.html#fingerprint-authentication) namísto kódu PIN. Když se uživatel pokusí použít tuto aplikaci se svým pracovním nebo školním účtem, zobrazí se výzva k zadání otisku prstu a uživatel nemusí zadávat kód PIN. </li></ul>| Požadovat kód PIN: Ano <br><br> Počet pokusů před resetováním kódu PIN: 5 <br><br> Povolit jednoduchý PIN: Ano <br><br> Délka PINu: 4 <br><br> Povolit otisk prstu: Ano |
 | **Vyžadovat podnikové přihlašovací údaje pro přístup** | Pokud chcete, aby se uživatel k získání přístupu k aplikaci přihlašoval pomocí svého pracovního nebo školního účtu namísto zadávání kódu PIN, zvolte **Ano**. Pokud nastavíte **Ano**, přepíše se tím požadavek na PIN nebo Touch ID.  | Ne |
 | **Blokovat spuštění spravovaných aplikací na zařízeních s jailbreakem nebo rootem** |Pokud chcete zabránit spuštění této aplikace v zařízeních s jailbreakem nebo rootem, zvolte **Ano**. Uživatel bude moct dál používat tuto aplikaci pro své osobní účely, ale k práci s pracovními nebo školními daty v této aplikaci bude muset používat jiné zařízení. | Ano |
 | **Znovu zkontrolovat požadavky na přístup po (minuty)** | Proveďte konfiguraci následujících nastavení: <ul><li>**Časový limit:** Počet minut před opakovanou kontrolou požadavků na přístup (které byly dříve definovány v zásadách). Správce například v zásadách zapne kód PIN a zablokuje zařízení s rootem. Uživatel otevře aplikaci spravovanou přes Intune, musí zadat kód PIN a musí aplikaci používat na zařízení bez rootu. Při použití tohoto nastavení nemusí uživatel u žádné aplikace spravované přes Intune zadávat kód PIN ani podstupovat další kontrolu výskytu rootu dalších **30 minut** (výchozí hodnota). <br><br> **Poznámka:** Na Androidu se kód PIN sdílí mezi všemi aplikacemi spravovanými přes Intune. Časovač kódu PIN se vynuluje, když se aplikace v zařízení přestane zobrazovat na popředí. Po dobu časového limitu definovaného tímto nastavením nemusí uživatel zadávat kód PIN u žádné aplikace spravované přes Intune, která svůj kód PIN sdílí. <br><br> Tento formát nastavení zásady podporuje kladné celé číslo.<br></li><li>**Období odkladu pro offline režim:** Toto je počet minut, po které může aplikace MAM běžet offline. Zadejte dobu (v minutách) před opakovaným zkontrolováním požadavků na přístup k aplikaci. Výchozí hodnota = **720** minut (12 hodin) Aby mohla aplikace po uplynutí této doby dál běžet, bude vyžadovat ověření uživatele ve službě AAD.<br><br> Tento formát nastavení zásady podporuje kladné celé číslo.</li></ul>| Časový limit: 30 <br><br> Offline: 720 |

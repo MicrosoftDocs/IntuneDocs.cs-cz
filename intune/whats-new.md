@@ -1,12 +1,12 @@
 ---
-title: Co je nového v Microsoft Intune
+title: Novinky v Microsoft Intune – Azure | Microsoft Docs
 titlesuffix: ''
 description: Zjistěte, jaké novinky přináší portál Intune Azure.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/12/2018
+ms.date: 04/24/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 /ms.custom: intune-azure
-ms.openlocfilehash: a2692163977a352e7a26dfc656d601d70ef401b4
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 9be6e0a3364f6ee0a077c1435d66498aba898430
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -40,6 +40,30 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
   ### Role-based access control
 
 -->   
+
+## <a name="week-of-april-23-2018"></a>Týden od 23. dubna 2018
+
+#### <a name="advanced-threat-protection-atp-and-intune-are-fully-integrated----eeready-1629303---"></a>Rozšířená ochrana před internetovými útoky (ATP) a Intune jsou plně integrované <!-- EEready 1629303 -->
+
+V Centru zabezpečení v programu Windows Defender (portál ATP) můžete vytvořit připojení k Microsoft Intune. Jakmile se vytvoří, pomocí zásad dodržování předpisů Intune se určí přijatelná úroveň ohrožení. Pokud se úroveň ohrožení překročí, zásady podmíněného přístupu služby Azure Active Directory (AD) můžou zablokovat přístup k různým aplikacím v organizaci.
+
+Tato funkce umožňuje ochraně ATP kontrolovat soubory, zjišťovat hrozby a ohlašovat jakákoli rizika pro zařízení s Windows 10.
+
+Přečtěte si článek o [povolení ochrany ATP s podmíněným přístupem v Intune](advanced-threat-protection.md).
+
+## <a name="week-of-april-16-2018"></a>Týden od 16. dubna 2018
+
+#### <a name="use-cisco-anyconnect-client-for-ios----eeready-1333708---"></a>Použití klienta Cisco AnyConnect pro iOS <!-- EEready 1333708 -->
+
+Když vytváříte nový profil VPN pro iOS, jsou teď k dispozici dvě možnosti: **Cisco AnyConnect** a **Cisco Legacy AnyConnect**. Profily Cisco AnyConnect podporují verzi 4.0.7x a novější. Stávající profily VPN Cisco AnyConnect pro iOS jsou označené jako **Cisco Legacy AnyConnect** a budou dál fungovat s Cisco AnyConnect 4.0.5x stejně jako dnes.
+
+> [!NOTE]
+> Tato změna platí jen pro iOS. Pro platformy Android, Android for Work a macOS bude dál existovat jenom jedna možnost Cisco AnyConnect.
+
+#### <a name="jamf-enrolled-macos-devices-can-now-register-with-intune----2370684---"></a>Zařízení s macOSem zaregistrovaná do Jamf se teď registrují do Intune <!-- 2370684 -->
+
+Verze 1.3 a 1.4 portálu společnosti macOS neregistrovaly zařízení Jamf do Intune úspěšně. Verze 1.4.2 portálu macOS tento problém řeší.
+
 
 ## <a name="week-of-april-9-2018"></a>Týden od 9. dubna 2018
 
@@ -140,8 +164,6 @@ Je to volitelný sloupec v okně zařízení. Není k dispozici ve výchozím na
 #### <a name="ios-devices-are-prompted-for-a-pin-every-15-minutes---1550837---"></a>Zařízením s iOSem se zobrazuje výzva k zadání PINu každých 15 minut <!--1550837 -->
 Po použití zásad dodržování předpisů nebo konfigurace u zařízení s iOSem se uživatelům každých 15 minut zobrazí výzva k zadání PINu. Uživatelům se výzva zobrazuje tak dlouho, dokud PIN nenastaví.
 
-
-
 #### <a name="schedule-your-automatic-updates---1805514---"></a>Plánování automatických aktualizací <!--1805514 -->
 Pomocí [nastavení aktualizačního okruhu Windows](windows-update-for-business-configure.md) máte v Intune možnost řídit instalaci automatických aktualizací. Od této aktualizace můžete naplánovat opakované aktualizace na základě týdne, dne a času.
 
@@ -179,6 +201,10 @@ Jakmile nastavení brány firewall povolíte, můžete ji nakonfigurovat pomocí
 - Povolit nebo blokovat konkrétní aplikace
 
    Můžete povolit nebo blokovat příjem příchozích připojení u konkrétních aplikací. Můžete také povolit neviditelný režim, který zabrání odpovědím na zjišťovací požadavky.
+
+####  <a name="detailed-error-codes-and-messages----1376342---"></a>Podrobné kódy chyb a chybové zprávy <!-- 1376342 -->
+
+V Konfiguraci zařízení jsou k dispozici podrobnější kódy chyb a chybové zprávy. Toto vylepšené generování sestav obsahuje nastavení, stav těchto nastavení a podrobnosti o řešení potíží.
 
 ##### <a name="more-information"></a>Další informace
 
@@ -935,12 +961,6 @@ První verze datového modelu datového skladu Intune obsahovala jenom poslední
 
 
 ## <a name="notices"></a>Sdělení
-
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-
-Na tuto změnu se nemusíte nijak připravovat, protože jde o menší aktualizace uživatelského rozhraní pracovních postupů.
-Další informace o dodržování nařízení GDPR v Microsoftu najdete v Centru zabezpečení, které je dostupné prostřednictvím odkazu Další informace.
 
 ### <a name="plan-for-change-new-windows-10-setting-for-kiosk-configuration-in-intune----1560072---"></a>Plánovaná změna: Nové nastavení ve Windows 10 pro konfiguraci veřejného terminálu v Intune <!-- 1560072 -->
 Mění se způsob, jak a kde je možné nakonfigurovat plochu ve Windows 10 1709 a novějších (RS3 a novějších) na portálu Intune Azure.

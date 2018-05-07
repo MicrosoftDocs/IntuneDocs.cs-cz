@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/03/2018
+ms.date: 04/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b6ca8108924c6c062da0d0ef56ab5b68635dd9ca
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: b003fde011fd3a727c7c7a163fedb1dae6779425
+ms.sourcegitcommit: 407191a92ef356a3d196b6f9959b9b033190ca2c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="the-early-edition-for-microsoft-intune---april-2018"></a>Časná edice Microsoft Intune – duben 2018
 
@@ -39,6 +39,16 @@ Tato stránka se pravidelně aktualizuje. Přijďte se tedy znovu podívat, jest
 ## <a name="intune-in-the-azure-portal"></a>Intune na portálu Azure Portal
 
 <!-- 1804 start -->
+
+### <a name="show-caller-id-in-personal-profile---android-for-work---1098984---"></a>Zobrazení ID volajícího v osobním profilu – Android for Work <!--1098984 -->
+Při použití osobního profilu na zařízení nemusejí koncoví uživatelé vidět podrobnosti ID volajícího z pracovního kontaktu. 
+
+Od této aktualizace je v části **Android for Work** > **Omezení zařízení** > **Nastavení pracovního profilu** k dispozici nové nastavení:
+- Zobrazit v osobním profilu ID volajícího pracovního kontaktu
+
+Pokud je povoleno (nenakonfigurováno), podrobnosti volajícího pracovního kontaktu se v osobním profilu zobrazují. V případě blokování se číslo volajícího pracovního kontaktu v osobním profilu nezobrazuje. 
+
+Platí pro: Zařízení s pracovním profilem Android v systému Android OS v6.0 a novějších.
 
 ### <a name="new-windows-defender-credential-guard-settings-added-to-endpoint-protection-settings---1102252-----from-1802--"></a>Nové nastavení Ochrany Credential Guard v programu Windows Defender přidaná do nastavení ochrany koncového bodu <!--1102252 --><!--from 1802-->
 
@@ -112,6 +122,9 @@ V současné době je možné profily nasazení AutoPilot přiřadit vybraným z
 
 ### <a name="play-sounds-on-ios-when-in-lost-mode----1629303---"></a>Přehrávání zvuků v iOSu v režimu ztráty <!-- 1629303 -->
 Pokud zařízení s iOSem pod dohledem jsou v [režimu ztráty](device-lost-mode.md) MDM (Mobile Device Management), můžete přehrát zvuk (**Zařízení** > **Všechna zařízení** > vyberte zařízení s iOSem > **Přehled** > **Další**). Zvuk se bude přehrávat tak dlouho, dokud je u zařízení režim ztráty aktivní nebo dokud uživatel zvuk na zařízení nevypne. Platí pro zařízení s iOSem 9.3 nebo novějším.
+
+### <a name="intune-will-reinstall-required-apps-that-are-uninstalled-by-users----1947010---"></a>Intune přeinstaluje požadované aplikace, které odinstalovali uživatelé <!-- 1947010 -->
+Pokud koncový uživatel odinstaluje požadovanou aplikaci, Intune tuto aplikaci během 24 hodin automaticky přeinstaluje (nebude čekat na 7denní cyklus opakovaného vyhodnocení).
 
 ### <a name="use-a-custom-subject-name-on-scep-certificate----2064190---"></a>Použití vlastního názvu subjektu u certifikátu SCEP <!-- 2064190 -->
 U profilu certifikátu SCEP budete moct ve vlastním subjektu použít běžný název (**OnPremisesSamAccountName**). Můžete například použít `CN={OnPremisesSamAccountName})`.

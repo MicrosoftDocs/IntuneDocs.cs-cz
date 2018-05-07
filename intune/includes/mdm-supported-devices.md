@@ -2,7 +2,7 @@
 
 ### <a name="apple"></a>Apple
 - Apple iOS 9.0 a novější
-- Mac OS X 10.9 a novější
+- Mac OS X 10.11 a novější
 
 ### <a name="google"></a>Google
 - Android 4.4 a novější (včetně řešení Samsung Knox Standard 4.4 a novějších)
@@ -14,6 +14,7 @@
 
 ### <a name="microsoft"></a>Microsoft
 
+- Surface Hub
 - Windows 10 (verze Home, S, Pro, Education a Enterprise)
 - Windows 10 Mobile
 - Windows 10 IoT Enterprise (x86, x64)

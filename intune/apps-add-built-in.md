@@ -1,70 +1,71 @@
 ---
-title: "Přidání integrovaných aplikací na mobilní zařízení pomocí Microsoft Intune"
-titlesuffix: 
-description: "Zjistěte, jak můžete s Intune zjednodušit instalaci na mobilní zařízení s integrovanými aplikacemi."
-keywords: 
+title: Přidání integrovaných aplikací na mobilní zařízení pomocí Microsoft Intune
+titlesuffix: ''
+description: Zjistěte, jak můžete s Intune zjednodušit instalaci na mobilní zařízení s integrovanými aplikacemi.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/07/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0ec8de66-5a0f-4c8d-afbf-c2becc7d6eec
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7d90f86babc2f73acd5ccd1b454c636c6d4f79b2
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 54eb50a47b28d04fc32662098c4ee521ae63589e
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-add-built-in-apps-to-microsoft-intune"></a>Přidání integrovaných aplikací do Microsoft Intune
+# <a name="add-built-in-apps-to-microsoft-intune"></a>Přidání integrovaných aplikací do Microsoft Intune
 
-**Integrovaný** typ aplikace usnadňuje přiřazení kurátorovaných spravovaných aplikací, jako jsou například aplikace Office 365, k zařízením s iOSem a Androidem. Pro tento typ aplikace můžete přiřadit konkrétní aplikace, jako jsou například Excel, OneDrive, Outlook, Skype a další. Po přidání aplikace se zobrazí typ aplikace jako **Integrovaná aplikace pro iOS** nebo **Integrovaná aplikace pro Android**. Když použijete integrovaný typ aplikace, můžete vybrat, které z těchto konkrétních aplikací chcete publikovat do zařízení uživatelů.
+*Integrovaný* typ aplikace usnadňuje přiřazení kurátorovaných spravovaných aplikací, jako jsou například aplikace Office 365, k zařízením s iOSem a Androidem. Pro tento typ aplikace můžete přiřadit konkrétní aplikace, jako jsou například Excel, OneDrive, Outlook, Skype a další. Po přidání aplikace se zobrazí typ aplikace jako *Integrovaná aplikace pro iOS* nebo *Integrovaná aplikace pro Android*. Když použijete integrovaný typ aplikace, můžete vybrat, které z těchto aplikací chcete publikovat do zařízení uživatelů.
 
- Ve starších edicích konzoly Intune bylo v Intune několik výchozích spravovaných aplikací Office 365, jako je Outlook a OneDrive. Typ aplikace se u těchto spravovaných aplikací označoval jako Spravovaná aplikace z obchodu pro iOS nebo Spravovaná aplikace z obchodu pro Android. Doporučujeme, abyste místo typu Spravovaná aplikace z obchodu pro iOS nebo Spravovaná aplikace z obchodu pro Android používali integrovaný typ aplikace. Integrovaný typ aplikace poskytuje větší flexibilitu pro úpravy a odstraňování aplikací Office 365.
+Ve starších verzích konzoly Intune bylo v Intune několik výchozích spravovaných aplikací Office 365, jako je Outlook a OneDrive. Typ aplikace se u těchto spravovaných aplikací označoval jako *Spravovaná aplikace z obchodu pro iOS* nebo *Spravovaná aplikace z obchodu pro Android*. Místo těchto aplikací doporučujeme použít integrovaný typ aplikace. Tyto aplikace poskytují větší flexibilitu pro úpravy a odstraňování aplikací Office 365.
 
 >[!NOTE]
->Výchozí aplikace Office 365, které jsou označené jako Spravovaná aplikace z obchodu pro iOS a Spravovaná aplikace z obchodu pro Android, se při odstranění všech přiřazení ze seznamu aplikací odeberou.
+>Výchozí aplikace Office 365, které jsou označené jako *Spravovaná aplikace z obchodu pro iOS* a *Spravovaná aplikace z obchodu pro Android*, se při odstranění všech přiřazení ze seznamu aplikací odeberou.
 
-## <a name="add-built-in-app"></a>Přidání integrované aplikace
+## <a name="add-a-built-in-app"></a>Přidání integrované aplikace
 
-Následující postup umožňuje přidat integrovanou aplikaci k aplikacím, které jsou dostupné v Microsoft Intune.
-1.  Přihlaste se k portálu Azure Portal.
-2.  Zobrazte okno Microsoft Intune tak, že zvolíte **Další služby** > **Monitorování + správa** > **Intune**.
-3.  V okně **Intune** zvolte **Mobilní aplikace**.
-4.  V okně **Mobilní aplikace** zvolte ve skupině **Spravovat** možnost **Aplikace**.
-5.  Vyberte **Přidat** a přidejte novou aplikaci.
-6.  V okně aplikace **Přidat** vyberte ze seznamu **Typ aplikace** možnost **Integrovaná aplikace**.
-7.  Klikněte na **Vybrat aplikaci** a vyberte integrované aplikace, které chcete zahrnout.
-8.  V okně Integrovaná aplikace vyberte aplikace, které chcete zahrnout.
-9.  Pokud chcete zahrnout aplikace, klikněte v okně **Přidat aplikaci** na tlačítko **Přidat**.
+Postup přidání integrované aplikace k aplikacím dostupným v Microsoft Intune je následující:
+1. Přihlaste se k portálu Azure Portal.
+2. Zobrazte podokno Microsoft Intune tak, že zvolíte **Další služby** > **Monitorování + správa** > **Intune**.
+3. V podokně **Intune** zvolte **Mobilní aplikace**.
+4. V podokně **Mobilní aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
+5. Vyberte **Přidat**.
+6. V podokně **Přidat aplikace** vyberte v seznamu **Typ aplikace** možnost **Integrovaná aplikace**.
+7. Zvolte **Vybrat aplikaci**.
+8. V podokně **Integrovaná aplikace** vyberte aplikace, které chcete zahrnout.
+9. V podokně **Přidat aplikaci** zvolte **Přidat**.
 
 
 ## <a name="configure-app-information"></a>Konfigurace informací o aplikaci
 
-Informace o integrované aplikaci můžete upravit. Tyto informace vám pomůžou identifikovat aplikaci v Intune a také pomůžou uživatelům, aby ji našli v aplikaci Portál společnosti.
-1.  V okně **Mobilní aplikace – Aplikace** vyberte integrovanou aplikaci, kterou chcete upravit. Zobrazí se okno pro integrovanou aplikaci.
-2.  Ve skupině **Spravovat** vyberte možnost **Vlastnosti**.
-3.  Pokud chcete upravit informace o integrované aplikaci, vyberte možnost **Konfigurovat**.
-4.  V okně **Informace o aplikaci** můžete upravit následující údaje:
-    -   **Název** – zadejte název integrované aplikace, který se zobrazí na portálu společnosti. Všechny používané názvy musí být jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
-    -   **Popis** – zadejte popis aplikace. 
-    -   **Vydavatel** – zadejte název vydavatele aplikace.
-    -   **Kategorie** – volitelně vyberte jednu nebo více kategorií integrovaných aplikací. Nastavením této možnosti uživatelům usnadníte vyhledání aplikace při procházení portálu společnosti.
-    -   **Zobrazit na Portálu společnosti jako vybranou aplikaci** – aplikace se zobrazí na význačném místě hlavní stránky portálu společnosti, když uživatelé vyhledávají aplikace.
-    -   **Adresa URL informací** – volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
-    -   **Adresa URL informací o ochraně osobních údajů** – volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
-    -   **Vývojář** – volitelně zadejte jméno vývojáře aplikace.
-    -   **Vlastník** – volitelně zadejte vlastníka aplikace, například Personální oddělení.
-    -   **Poznámky** – zadejte jakékoli poznámky, které chcete k aplikaci přidružit.
-    -   **Nahrát ikonu** – nahrajte ikonu, která se zobrazí u aplikace, když uživatelé procházejí portál společnosti.
-3.  Až to budete mít, klikněte v okně **Informace o aplikaci** na **OK**.
-4.  V okně **Vlastnosti** klikněte na **Uložit**.
+Informace o integrované aplikaci můžete upravit. Tyto informace vám pomůžou identifikovat aplikaci v Intune a také pomůžou uživatelům, aby ji našli na portálu společnosti.
+1. V podokně **Mobilní aplikace – Aplikace** vyberte integrovanou aplikaci, kterou chcete upravit.  
+    Zobrazí se podokno pro integrovanou aplikaci.
+2. V části **Spravovat** vyberte možnost **Vlastnosti**.
+3. Informace o integrované aplikaci můžete upravovat výběrem možnosti **Konfigurovat**.
+4. V podokně **Informace o aplikaci** je možné upravit následující údaje:
+    - **Název**: Zadejte název integrované aplikace, který se zobrazí na portálu společnosti. Všechny používané názvy musí být jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
+    - **Popis**: Zadejte popis aplikace. 
+    - **Vydavatel**: Zadejte název vydavatele aplikace.
+    - **Kategorie**: Volitelně vyberte jednu nebo více kategorií integrovaných aplikací. Nastavením této možnosti uživatelům usnadníte vyhledání aplikace při procházení portálu společnosti.
+    - **Zobrazit na Portálu společnosti jako vybranou aplikaci**: Když uživatelé vyhledávají aplikace, zobrazí se daná aplikace na význačném místě hlavní stránky portálu společnosti.
+    - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
+    - **Adresa URL informací o ochraně osobních údajů**: Volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
+    - **Vývojář**: Volitelně zadejte jméno vývojáře aplikace.
+    - **Vlastník**: Volitelně zadejte vlastníka aplikace, například *Personální oddělení*.
+    - **Poznámky**: Zadejte jakékoli poznámky, které chcete k aplikaci přidružit.
+    - **Nahrát ikonu**: Nahrajte ikonu, která se zobrazí u aplikace, když uživatelé procházejí portál společnosti.
+4. Vyberte **OK**.
+5. V podokně **Vlastnosti** vyberte **Uložit**.
 
 ## <a name="next-steps"></a>Další kroky
 
-- Nyní můžete přiřadit aplikace do skupin podle vlastního výběru. Nápovědu najdete v článku [Přiřazení aplikací do skupin](apps-deploy.md).
+- Nyní můžete přiřadit aplikace do skupin podle vlastního výběru. Podrobnosti najdete v článku [Přiřazení aplikací do skupin](apps-deploy.md).

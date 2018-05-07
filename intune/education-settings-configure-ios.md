@@ -15,18 +15,18 @@ ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
 ms.reviewer: derriw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 63284a1dd5c1d5a6c588775f1c282bfcfef5de67
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: c5820d058479bbf37c5dffdb930792f4f84afa69
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-configure-intune-settings-for-the-ios-classroom-app"></a>Jak nakonfigurovat nastavení Intune pro aplikaci Classroom pro iOS
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 ## <a name="introduction"></a>Úvod
-[Classroom](https://itunes.apple.com/app/id1085319084) je aplikace, která učitelům umožňuje vést výuku a ovládat zařízení studentů v učebně. Tato aplikace učitelům například umožňuje:
+[Classroom](https://itunes.apple.com/app/id1085319084) je aplikace, která učitelům umožňuje vést výuku a ovládat zařízení studentů v učebně. Učitelé například můžou:
 
 - Otevírat aplikace na zařízeních studentů
 - Zamykat a odemykat obrazovku iPadu
@@ -34,16 +34,16 @@ ms.lasthandoff: 04/16/2018
 - Přejít v iPadech studentů na záložku nebo kapitolu v knize
 - Ukázat obrazovku iPadu studenta na Apple TV
 
-S využitím **vzdělávacího** profilu zařízení s iOSem v Intune a informací v tomto tématu nastavíte aplikaci Classroom a zařízení, na kterých se bude používat.
+Pokud chcete na svém zařízení nastavit aplikaci Classroom, je potřeba vytvořit a nakonfigurovat vzdělávací profil zařízení s iOSem v Intune.
 
 ## <a name="before-you-start"></a>Než začnete
 
 Než tato nastavení začnete konfigurovat, zvažte následující skutečnosti:
 
-- iPady učitelů i studentů musí být zaregistrované v Intune.
+- Učitelé i studenti musí být zaregistrovaní v Intune.
 - Zajistěte, aby na zařízení učitele byla nainstalovaná aplikace [Apple Classroom](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8). Můžete aplikaci nainstalovat buď ručně, nebo přes [správu aplikací Intune](app-management.md).
-- Musíte nakonfigurovat certifikáty pro ověření připojení mezi zařízeními učitelů a studentů (viz krok 2).
-- iPady učitelů a studentů musí být ve stejné Wi-Fi síti a musí mít povolené Bluetooth.
+- Musíte nakonfigurovat certifikáty pro ověření připojení mezi zařízeními učitelů a studentů (viz krok 2, Vytvoření a přiřazení vzdělávacího profilu iOS v Intune).
+- iPady učitelů a studentů musí být ve stejné síti Wi-Fi a musí mít povolené Bluetooth.
 - Aplikace Classroom běží na iPadech s iOSem 9.3 nebo novější verzí, které jsou pod dohledem.
 - V této verzi podporuje Intune správu scénáře 1:1, kdy má každý student svůj vlastní vyhrazený iPad.
 
@@ -82,14 +82,14 @@ Informace můžete do SDS naimportovat jednou z následujících metod:
 9.  Zvolte **Nastavení** > **Konfigurovat**.
 
 
-Dále potřebujete certifikáty k navázání vztahu důvěryhodnosti mezi iPady učitelů a studentů. Certifikáty se používají k bezproblémovému a bezobslužnému ověřování připojení mezi zařízeními bez nutnosti zadávání uživatelských jmen a hesel.
+Teď si vytvoříte certifikáty k navázání vztahu důvěryhodnosti mezi iPady učitelů a studentů. Certifikáty se používají k bezproblémovému a bezobslužnému ověřování připojení mezi zařízeními bez nutnosti zadávání uživatelských jmen a hesel.
 
 >[!IMPORTANT]
 >Použité certifikáty učitelů a studentů musí být vystavené odlišnými certifikačními autoritami (CA). Musíte vytvořit dvě nové podřízené certifikační autority propojené s vaší existující certifikační infrastrukturou; jednu pro učitele a druhou pro studenty.
 
 Vzdělávací profily iOS podporují pouze certifikáty PFX. Certifikáty SCEP podporovány nejsou.
 
-Certifikáty, které vytvoříte, musí kromě ověřování uživatelů podporovat také ověřování serverů.
+Vytvořené certifikáty musí podporovat ověřování serverů i ověřování uživatelů.
 
 ### <a name="configure-teacher-certificates"></a>Konfigurace certifikátů učitelů
 
@@ -97,13 +97,15 @@ V podokně **Vzdělávání** zvolte **Certifikáty učitelů**.
 
 #### <a name="configure-teacher-root-certificate"></a>Konfigurace kořenového certifikátu učitele
 
-V části **Kořenový certifikát učitele** vyberte tlačítkem Procházet kořenový certifikát učitele s příponou .cer (DER nebo s kódováním Base64) nebo .P7B (s úplným řetězem nebo bez).
+V části **Kořenový certifikát učitele** vyberte tlačítko Procházet. Vyberte kořenový certifikát s jednou z těchto přípon:
+- .cer (DER nebo s kódováním Base64) 
+- .P7B (s úplným řetězem nebo bez něj)
 
 #### <a name="configure-teacher-pkcs12-certificate"></a>Konfigurace certifikátu PKCS#12 učitele
 
 V části **Certifikát PKCS#12 učitele** nakonfigurujte následující hodnoty:
 
-- **Formát názvu subjektu** – Intune automaticky přidá k běžnému názvu certifikátu předponu **leader** pro certifikát učitele a předponu **member** pro certifikát studenta.
+- **Formát názvu subjektu** – Intune automaticky přidá k běžnému názvu certifikátu učitele předponu **leader**. K certifikátu studenta přidává předponu **member**.
 - **Certifikační autorita** – Certifikační autorita organizace (CA), která běží na verzi Enterprise systému Windows Server 2008 R2 nebo novější. Samostatná certifikační autorita není podporovaná. 
 - **Název certifikační autority** – Zadejte název certifikační autority.
 - **Název šablony certifikátu** – Zadejte název šablony certifikátu, která byla přidána k vystavující certifikační autoritě. 
@@ -111,7 +113,7 @@ V části **Certifikát PKCS#12 učitele** nakonfigurujte následující hodnoty
 - **Období platnosti certifikátu** – Zadejte zbývající dobu do vypršení platnosti certifikátu.
 Zadat můžete hodnotu nižší, než je období platnosti zadané v šabloně certifikátu, ne však vyšší. Pokud je třeba období platnosti certifikátu v šabloně certifikátu dva roky, můžete zadat hodnotu jeden rok, ale ne pět let. Tato hodnota musí být zároveň nižší než zbývající doba platnosti certifikátu vystavující certifikační autority.
 
-Po dokončení konfigurace certifikátů zvolte **OK**.
+Jakmile dokončíte konfiguraci certifikátů, zvolte **OK**.
 
 ### <a name="configure-student-certificates"></a>Konfigurace certifikátů studentů
 
@@ -120,13 +122,15 @@ Po dokončení konfigurace certifikátů zvolte **OK**.
 
 #### <a name="configure-student-root-certificate"></a>Konfigurace kořenového certifikátu studenta
 
-V části **Kořenový certifikát studenta** vyberte tlačítkem Procházet kořenový certifikát studenta s příponou .cer (DER nebo s kódováním Base64) nebo .P7B (s úplným řetězem nebo bez).
+V části **Kořenový certifikát studenta** vyberte tlačítko Procházet. Vyberte kořenový certifikát s jednou z těchto přípon:
+- .cer (DER nebo s kódováním Base64) 
+- .P7B (s úplným řetězem nebo bez něj)
 
 #### <a name="configure-student-pkcs12-certificate"></a>Konfigurace certifikátu PKCS#12 studenta
 
 V části **Certifikát PKCS#12 studenta** nakonfigurujte následující hodnoty:
 
-- **Formát názvu subjektu** – Intune automaticky přidá k běžnému názvu certifikátu předponu **leader** pro certifikát učitele a předponu **member** pro certifikát studenta.
+- **Formát názvu subjektu** – Intune automaticky přidá k běžnému názvu certifikátu učitele předponu **leader**. K certifikátu studenta přidává předponu **member**.
 - **Certifikační autorita** – Certifikační autorita organizace (CA), která běží na verzi Enterprise systému Windows Server 2008 R2 nebo novější. Samostatná certifikační autorita není podporovaná. 
 - **Název certifikační autority** – Zadejte název certifikační autority.
 - **Název šablony certifikátu** – Zadejte název šablony certifikátu, která byla přidána k vystavující certifikační autoritě. 
@@ -134,7 +138,7 @@ V části **Certifikát PKCS#12 studenta** nakonfigurujte následující hodnoty
 - **Období platnosti certifikátu** – Zadejte zbývající dobu do vypršení platnosti certifikátu.
 Zadat můžete hodnotu nižší, než je období platnosti zadané v šabloně certifikátu, ne však vyšší. Pokud je třeba období platnosti certifikátu v šabloně certifikátu dva roky, můžete zadat hodnotu jeden rok, ale ne pět let. Tato hodnota musí být zároveň nižší než zbývající doba platnosti certifikátu vystavující certifikační autority.
 
-Až dokončíte konfiguraci certifikátů, zvolte **OK**.
+Jakmile dokončíte konfiguraci certifikátů, zvolte **OK**.
 
 ## <a name="finish-up"></a>Dokončení
 
