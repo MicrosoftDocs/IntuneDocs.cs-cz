@@ -149,6 +149,6 @@
 #### [Potřebuji povolit nástroj Řízení uživatelských účtů](you-need-to-enable-uac-windows.md)
 #### [Potřebuji aktualizovat Windows](you-need-to-update-os-build-version-windows.md)
 #### [Potřebuji zapnout Windows Defender](turn-on-defender-windows.md)
-
+## [Vzdálené uzamčení zařízení z aplikace Portál společnosti pro Windows](remote-lock-your-device-cp-app.md) 
 ## [Použití webu Portál společnosti Intune](using-the-intune-company-portal-website.md)
 ### [Vzdálené uzamčení zařízení](remote-lock-your-device-cpwebsite.md)

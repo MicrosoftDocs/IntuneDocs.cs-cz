@@ -5,18 +5,18 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/16/2018
+ms.date: 04/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bb79a6c18ff8b6eec20f4ce8813d8dea188215e7
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 2a4bd083027905d00dc317a0103754748bf0236e
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="add-a-device-compliance-policy-for-windows-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s Windows v Intune
 
@@ -94,7 +94,7 @@ Počítače s Windows 8.1 vrací verzi **3**. Pokud je pravidlo verze operační
     - Symboly
     - Numbers
 
-    Po nastavení vyššího čísla bude uživatel muset vytvořit složitější heslo. U zařízení s Windows zabezpečených účtem Microsoft se zásada dodržování předpisů nevyhodnotí správně, pokud je minimální délka hesla větší než osm znaků nebo pokud je minimální počet znakových sad větší než dvě.
+    Po nastavení vyššího čísla bude uživatel muset vytvořit složitější heslo. U zařízení s Windows a účtem Microsoft používaným pro přístup se zásada dodržování předpisů nevyhodnotí správně, pokud bude minimální délka hesla větší než osm znaků nebo bude minimální počet znakových sad větší než dvě.
 
 - **Maximální počet minut nečinnosti, po kterém bude nutné zadat heslo**: Zadejte dobu nečinnosti, která musí uplynout, aby se po uživateli znovu požadovalo zadání hesla.
 - **Konec platnosti hesla (dny)**: Vyberte počet dní, za který skončí platnost hesla a uživatel bude muset vytvořit nové.
@@ -121,23 +121,23 @@ Podrobnosti o fungování služby ověření stavu najdete v tématu [Poskytovat
 
 ### <a name="device-properties"></a>Vlastnosti zařízení
 
-- **Minimální požadovaný operační systém**: Zadejte číslo major.minor.build.CU. Číslo build.CU musí odpovídat verzi vrácené příkazem `ver` nebo `winver`.
+- **Minimální verze operačního systému**: Zadejte minimální povolenou verzi ve formátu major.minor.build.CU. Číslo build.CU musí odpovídat verzi vrácené příkazem `ver` nebo `winver`.
 
   Pokud má zařízení starší verzi operačního systému, než je zadaná verze, uvede se jako nekompatibilní. Zobrazí se odkaz s informacemi o postupu upgradu. Koncový uživatel si může upgradovat svoje zařízení. Potom bude mít přístup k prostředkům společnosti.
 
-- **Maximální povolená verze operačního systému**: Zadejte číslo major.minor.build.CU. Číslo build.CU musí odpovídat verzi vrácené příkazem `ver` nebo `winver`.
+- **Maximální verze operačního systému**: Zadejte maximální povolenou verzi ve formátu major.minor.build.CU. Číslo build.CU musí odpovídat verzi vrácené příkazem `ver` nebo `winver`.
 
   Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný a uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nepůjde přes toto zařízení přistupovat k prostředkům společnosti.
 
-- **Minimální požadovaný operační systém pro mobilní zařízení**: Zadejte číslo major.minor.build.
+- **Minimální verze operačního systému pro mobilní zařízení**: Zadejte minimální povolenou verzi ve formátu major.minor.build.
 
   Pokud má zařízení starší verzi operačního systému, než je zadaná verze, uvede se jako nekompatibilní. Zobrazí se odkaz s informacemi o postupu upgradu. Koncový uživatel si může upgradovat svoje zařízení. Potom bude mít přístup k prostředkům společnosti.
 
-- **Maximální požadovaný operační systém pro mobilní zařízení**: Zadejte číslo major.minor.build.
+- **Maximální verze operačního systému pro mobilní zařízení**: Zadejte maximální povolenou verzi ve formátu major.minor.build.
 
   Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný a uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nepůjde přes toto zařízení přistupovat k prostředkům společnosti.
 
-- **Platná sestavení operačního systému**: Zadejte rozsah pro povolené verze operačního systému, včetně minimální a maximální.
+- **Platná sestavení operačního systému**: Zadejte rozsah pro povolené verze operačního systému, včetně minimální a maximální. Seznam vyhovujících čísel buildů operačních systémů také můžete **exportovat** do textového souboru CSV s oddělovači.
 
 ### <a name="system-security-settings"></a>Systémové nastavení zabezpečení
 
