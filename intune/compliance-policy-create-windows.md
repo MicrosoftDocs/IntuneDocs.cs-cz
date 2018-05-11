@@ -12,11 +12,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2a4bd083027905d00dc317a0103754748bf0236e
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 64df804bf2f882991cccd3f77014369cd86b69a8
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-device-compliance-policy-for-windows-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s Windows v Intune
 
@@ -121,11 +121,11 @@ Podrobnosti o fungování služby ověření stavu najdete v tématu [Poskytovat
 
 ### <a name="device-properties"></a>Vlastnosti zařízení
 
-- **Minimální verze operačního systému**: Zadejte minimální povolenou verzi ve formátu major.minor.build.CU. Číslo build.CU musí odpovídat verzi vrácené příkazem `ver` nebo `winver`.
+- **Minimální verze operačního systému**: Zadejte minimální povolenou verzi ve formátu hlavní verze.podverze.sestavení.číslo revize. Hodnota sestavení.číslo revize musí odpovídat verzi vrácené příkazem `ver` nebo `winver`.
 
   Pokud má zařízení starší verzi operačního systému, než je zadaná verze, uvede se jako nekompatibilní. Zobrazí se odkaz s informacemi o postupu upgradu. Koncový uživatel si může upgradovat svoje zařízení. Potom bude mít přístup k prostředkům společnosti.
 
-- **Maximální verze operačního systému**: Zadejte maximální povolenou verzi ve formátu major.minor.build.CU. Číslo build.CU musí odpovídat verzi vrácené příkazem `ver` nebo `winver`.
+- **Maximální verze operačního systému**: Zadejte maximální povolenou verzi ve formátu hlavní verze.podverze.sestavení.číslo revize. Hodnota sestavení.číslo revize musí odpovídat verzi vrácené příkazem `ver` nebo `winver`.
 
   Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný a uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nepůjde přes toto zařízení přistupovat k prostředkům společnosti.
 
