@@ -255,6 +255,8 @@
                   href: lob-apps-windows-phone.md
                 - name: Obchodní aplikace pro Windows
                   href: lob-apps-windows.md
+                - name: Obchodní aplikace pro macOS
+                  href: lob-apps-macos.md
             - name: Webové aplikace
               href: web-app.md
             - name: Integrované aplikace
@@ -486,10 +488,10 @@
               items:
                 - name: Integrace Lookoutu a Intune
                   href: lookout-mtd-connector-integration.md
-            - name: Nastavení služby Skycure
+            - name: Nastavení Symantecu
               href: skycure-mobile-threat-defense-connector.md
               items:
-                - name: Integrace služeb Skycure a Intune
+                - name: Integrace Symantecu a Intune
                   href: skycure-mtd-connector-integration.md
             - name: Nastavení Check Pointu
               href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md

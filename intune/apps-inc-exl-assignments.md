@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/08/2018
+ms.date: 04/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,35 +15,38 @@ ms.assetid: c59f6df5-3317-4dff-8f19-fdeec33faedf
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 93fd626d580917a3dd5bb20e7696c09c109dcc0b
-ms.sourcegitcommit: c3ae3c3dc46b62d9191813d25a196874ba4927be
+ms.openlocfilehash: aa0b7396c22bd8bc832a6d845d4f40603013608a
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune
 
-Pomocí Intune můžete na základě přiřazení do skupin nebo vyloučení určit, kdo má přístup k aplikaci. Než ale skupiny k aplikaci přiřadíte, musíte nastavit typ přiřazení aplikace. Typ přiřazení nastaví aplikaci jako dostupnou, požadovanou nebo ji odinstaluje. 
+Přiřazením skupin uživatelů, které se mají zahrnout nebo vyloučit, můžete v Intune určit, kdo má přístup k aplikaci. Než skupiny k aplikaci přiřadíte, musíte nastavit typ přiřazení aplikace. Typ přiřazení nastaví aplikaci jako dostupnou, požadovanou nebo ji odinstaluje. 
 
-Při zaměření na dostupnost aplikace zahrnete a vyloučíte její přiřazení ke skupině uživatelů nebo zařízení pomocí kombinace skupinových přiřazení pro zahrnutí a vyloučení. Tato možnost může být užitečná, když aplikaci zpřístupníte zahrnutím velké skupiny a následně upřesníte vybrané uživatele vyloučením menší skupiny. U menší skupiny se může jednat například o testovací skupinu nebo skupinu vedoucích pracovníků. 
+Abyste nastavili dostupnost aplikace, zahrnete a vyloučíte její přiřazení ke skupině uživatelů nebo zařízení pomocí kombinace skupinových přiřazení pro zahrnutí a vyloučení. Tato možnost může být užitečná, když aplikaci zpřístupníte zahrnutím velké skupiny a následně upřesníte vybrané uživatele vyloučením menší skupiny. Menší skupina může být testovací skupina nebo skupinu vedoucích pracovníků. 
 
-Při vyloučení skupin z přiřazení aplikace je nutné vyloučit buď skupiny uživatelů, nebo zařízení, není možné tyto skupiny kombinovat. Při vyloučení skupin se v Intune nebere v úvahu přiřazení uživatelů k zařízením. Pokud zahrnete skupiny uživatelů a současně vyloučíte skupiny zařízení, nebudou výsledky takové, jako očekáváte, protože zahrnutí má přednost před vyloučením. Pokud například nastavíte u aplikace pro iOS možnost **Všichni uživatelé** a vyloučíte **Všechna zařízení iPad**, budou moct ve výsledku danou aplikaci používat všichni uživatelé, kteří používají iPad. Pokud ale nastavíte u aplikace pro iOS možnost **Všechna zařízení** a vyloučíte **Všechna zařízení iPad**, bude nasazení úspěšné.  
+Při vyloučení skupin z přiřazení aplikace je nutné vyloučit jenom skupiny uživatelů, nebo jenom skupiny zařízení. Není možné vyloučit kombinaci skupin uživatelů a skupin zařízení. 
 
->[!NOTE]
->Při nastavování přiřazení skupiny pro aplikaci se přestal používat typ **Neužívá se** a nahradila ho funkce vyloučení skupiny. 
+Při vyloučení skupin se v Intune nebere v úvahu přiřazení uživatelů k zařízením. Zahrnutí skupin uživatelů a současné vyloučení skupin zařízení vám pravděpodobně nepřinese potřebné výsledky. Zahrnutí má přednost před vyloučením. Pokud třeba nastavíte u aplikace pro iOS možnost **Všichni uživatelé** a vyloučíte **Všechna zařízení iPad**, ve výsledku budou moct aplikaci všichni uživatelé, kteří používají iPad, stále používat. Pokud ale nastavíte u aplikace pro iOS možnost **Všechna zařízení** a vyloučíte **Všechna zařízení iPad**, bude nasazení úspěšné.  
+
+> [!NOTE]
+> Při nastavování přiřazení skupiny pro aplikaci se přestal používat typ **Neužívá se** a nahradila ho funkce vyloučení skupiny. 
 >
->V Intune máte v konzole pohodlně k dispozici předem vytvořené skupiny **Všichni uživatelé** a **Všechna zařízení** s integrovanými optimalizacemi. Důrazně doporučujeme, abyste pro cílení na všechny uživatele a zařízení používali tyto skupiny a nepoužívali žádné skupiny Všichni uživatelé nebo Všechna zařízení, které byste sami vytvořili.  
+> V Intune máte v konzole k dispozici předem vytvořené skupiny **Všichni uživatelé** a **Všechna zařízení**. Skupiny mají integrované optimalizace, které vám usnadní práci. Důrazně doporučujeme, abyste pro cílení na všechny uživatele a zařízení používali tyto skupiny a nepoužívali skupiny Všichni uživatelé nebo Všechna zařízení, které byste sami vytvořili.  
 >
->Android Enterprise (dříve Android for Work) umožňuje zahrnout nebo vyloučit skupiny, ale nepodporuje vytvořené integrované skupiny **Všichni uživatelé** a **Všechna zařízení**.
+> Android Enterprise (dříve označovaný jako Android for Work) zahrnutí a vyloučení skupin podporuje. K přiřazení aplikace Android Enterprise můžete použít integrované skupiny **Všichni uživatelé** a **Všechna zařízení**. 
 
-## <a name="including-and-excluding-groups-when-assigning-apps"></a>Zahrnutí a vyloučení skupin při přiřazování aplikací 
+
+## <a name="include-and-exclude-groups-when-assigning-apps"></a>Zahrnutí a vyloučení skupin při přiřazování aplikací 
 Přiřazení aplikace ke skupinám pomocí zahrnutí a vyloučení přiřazení:
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V okně Microsoft Intune vyberte **Mobilní aplikace**.
-4. V okně **Mobilní aplikace** vyberte **Aplikace**. Zobrazí se seznam přidaných aplikací.
-5. Vyberte aplikaci, kterou chcete přiřadit. Zobrazí se řídicí panel související s aplikací. 
-6. V části **Správa** vyberte **Přiřazení**. 
+3. V nabídce **Intune** zvolte **Mobilní aplikace**.
+4. V podokně **Mobilní aplikace** vyberte **Aplikace**. Zobrazí se seznam přidaných aplikací.
+5. Vyberte aplikaci, kterou chcete přiřadit. V řídicím panelu se zobrazí informace o aplikaci. 
+6. V části nabídky **Spravovat** vyberte **Přiřazení**. 
 
     ![Přiřazení aplikací Intune](./media/apps-inc-exl-01.png)
 7. Pokud chcete přidat skupiny uživatelů, kteří jsou přiřazení k aplikaci, vyberte **Přidat skupinu**. 
@@ -53,26 +56,28 @@ Přiřazení aplikace ke skupinám pomocí zahrnutí a vyloučení přiřazení:
     ![Přiřazení aplikací Intune – přidání skupiny](./media/apps-inc-exl-02.png)
 10. Pokud chcete vybrat skupinu uživatelů, které chcete zpřístupnit tuto aplikaci, vyberte **Zahrnuté skupiny**.
 
-    >[!NOTE]
-    >Pokud přidáváte skupinu a pro daný typ přiřazení už byla zahrnuta jakákoliv jiná skupina, bude pro ostatní typy zahrnutí přiřazení předem vybraná a nebude ji možné změnit. Tuto použitou skupinu tedy není možné použít jako zahrnutou skupinu.
+    > [!NOTE]
+    > Pokud přidáváte skupinu a pro konkrétní typ přiřazení už byla zahrnuta jakákoliv jiná skupina, je pro ostatní typy zahrnutí přiřazení předem vybraná a není ji možné změnit. Použitou skupinu není možné použít jako zahrnutou skupinu.
 
 11. Pokud chcete tuto aplikaci zpřístupnit všem uživatelům, vyberte **Ano**.
 
     ![Přiřazení aplikací Intune – zahrnutí skupin](./media/apps-inc-exl-03.png)
-12. Pokud chcete nastavit skupinu k zahrnutí, klikněte na tlačítko **OK**.
+12. Pokud chcete nastavit skupinu k zahrnutí, vyberte **OK**.
 13. Pokud chcete vybrat skupiny uživatelů, které nemají mít přístup k této aplikaci, vyberte **Vyloučené skupiny**. 
-14. Vyberte skupiny, které chcete vyloučit, a zamezte tak jejich přístupu k aplikaci.
+14. Vyberte skupiny, které chcete vyloučit. Tím se aplikace stane pro tyto skupiny nedostupnou.
 
     ![Přiřazení aplikací Intune – vyloučení skupin](./media/apps-inc-exl-04.png)
-15. Kliknutím na tlačítko **Vybrat** dokončete výběr skupin.
-16. Klikněte na tlačítko **OK** v okně **Přidat skupinu**. Zobrazí se seznam **Přiřazení** aplikací.
+15. Pomocí **Vybrat** dokončete výběr skupin.
+16. V podokně **Přidat skupinu** vyberte **OK**. Zobrazí se seznam **Přiřazení** aplikací.
 17. Klikněte na **Uložit** a aktivujte tak přiřazení skupin pro tuto aplikaci.
 
-Při vytváření přiřazení skupin budou skupiny, které již jsou přiřazeny nebo vybrány, zakázané. Pokud chcete vybrat skupinu, která je aktuálně zakázaná, odeberte ji ze seznamu přiřazení k aplikaci. Přiřazení můžete upravit ze seznamu **Přiřazení** aplikací tak, že vyberete řádek, který obsahuje konkrétní přiřazení, které chcete změnit. Kromě toho můžete odebrat přiřazení tak, že kliknete na tři tečky (...) na konci řádku a vyberete **Odebrat**. Zobrazení seznamu **Přiřazení** můžete zobrazit také tak, že vyberete možnost seskupení podle možnosti **Typ přiřazení** nebo **Zahrnuto/Vyloučeno**.
+Když provedete přiřazení skupin, pak už přiřazené skupiny nejsou k dispozici pro změny. Pokud chcete vybrat skupinu, která aktuálně není dostupná, nejdřív ji odeberte ze seznamu přiřazení k aplikaci. 
+
+Přiřazení můžete upravit tak, že ze seznamu **Přiřazení** aplikací vyberete řádek obsahující konkrétní přiřazení, které chcete změnit. Kromě toho můžete odebrat přiřazení tak, že kliknete na tři tečky (**...**) na konci řádku a vyberete **Odebrat**. Zobrazení seznamu **Přiřazení** můžete změnit seskupením podle možnosti **Typ přiřazení** nebo **Zahrnuto/Vyloučeno**.
 
 ![Přiřazení aplikací Intune – dokončení](./media/apps-inc-exl-05.png)
 
 ## <a name="next-steps"></a>Další kroky
 
 - Další informace o zahrnutí a vyloučení přiřazení skupin pro aplikace najdete v [blogu k Microsoft Intune](https://aka.ms/new_app_assignment_process).
-- [Postup monitorování informací a přiřazení aplikace](apps-monitor.md)
+- Přečtěte si, jak [monitorovat informace a přiřazení aplikace](apps-monitor.md).

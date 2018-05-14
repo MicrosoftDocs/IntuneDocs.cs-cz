@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 228198276643f1eb8dfcb0392e4902a7f56875c9
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: f7d3e768e740866d69d675a962dfca6d98c85568
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Odebrání zařízení pomocí obnovení továrního nastavení nebo odebrání firemních dat
 
@@ -58,7 +58,9 @@ Pokud je zařízení zapnuté a připojené, akce **Obnovení továrního nastav
 
 ## <a name="remove-company-data"></a>Odebrání firemních dat
 
-Akce **Odebrat firemní data** odebere data případných spravovaných aplikací, nastavení a e-mailové profily, které byly přiřazeny přes Intune. Při **odebrání firemních dat** zůstanou v zařízení osobní data uživatele. Toto zařízení se odebere ze správy v Intune. 
+Akce **Odebrat firemní data** odebere data případných spravovaných aplikací, nastavení a e-mailové profily, které byly přiřazeny přes Intune. Toto zařízení se odebere ze správy v Intune. K tomu dojde, když se zařízení příště přihlásí a přijme vzdálenou akci **Odebrat firemní data**.
+
+Při **odebrání firemních dat** zůstanou v zařízení osobní data uživatele.  
 
 Následující tabulky popisují, jaká data se odeberou a jaký vliv má akce **Odebrat firemní data** na zbývající data v zařízení po odebrání firemních dat.
 
@@ -123,13 +125,19 @@ Při odebrání firemních dat v zařízení Android for Work se odeberou všech
 
 ### <a name="remove-company-data"></a>Odebrání firemních dat
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Zařízení** zvolte **Všechna zařízení**.
-4. Zvolte název zařízení, ze kterého chcete odebrat firemní data.
-5. V podokně s názvem zařízení vyberte **Odebrat firemní data**. Potvrďte zvolením **Ano**.
+1. Přihlaste se k [Intune na portálu Azure Portal](https://aka.ms/intuneportal).
+2. V podokně **Zařízení** zvolte **Všechna zařízení**.
+3. Zvolte název zařízení, ze kterého chcete odebrat firemní data.
+4. V podokně s názvem zařízení vyberte **Odebrat firemní data**. Potvrďte zvolením **Ano**.
 
 Pokud je zařízení zapnuté a připojené, akce **Odebrat firemní data** se do všech typů zařízení rozšíří do 15 minut.
+
+## <a name="delete-devices-from-the-intune-portal"></a>Odstranění zařízení z portálu Intune
+
+Pokud chcete odebrat zařízení z portálu Intune, můžete je odstranit z podokna konkrétního zařízení. Při příštím přihlášení zařízení se z něj odeberou všechna firemní data.
+
+1. Přihlaste se k [Intune na portálu Azure Portal](https://aka.ms/intuneportal).
+2. Zvolte **Zařízení** > **Všechna zařízení** > vyberte zařízení, která chcete odstranit > **Odstranit**.
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Odstranění zařízení z portálu služby Azure Active Directory
 

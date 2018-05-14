@@ -1,11 +1,11 @@
 ---
 title: Zobrazení profilů zařízení v Microsoft Intune – Azure | Microsoft Docs
-description: Zobrazte podrobnosti profilů na zařízeních a zjistěte, která zařízení mají přiřazené nebo nasazené profily zařízení Microsoft Intune.
+description: Zobrazte si a spravujte podrobnosti konfiguračního profilu zařízení v Microsoft Intune a zobrazte si graf počtu zařízení přiřazených k profilu a zjistěte, která zařízení mají přiřazené nebo nasazené profily.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/21/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,21 +14,52 @@ ms.assetid: 9deaed87-fb4b-4689-ba88-067bc61686d7
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cccd6b1a65e97386458ec68098c4c42521d0f82b
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: e1c2eb08db58940ed575b3dea011395edd6711fc
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Sledování profilů zařízení v Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Průběh přiřazení profilů zařízení v Intune můžete monitorovat dvěma způsoby.
+Intune obsahuje na portálu Azure Portal některé funkce, které pomáhají sledovat a spravovat konfigurační profily zařízení. Můžete třeba kontrolovat stav profilu, zjistit, která zařízení jsou přiřazená, a aktualizovat vlastnosti profilu.
+
+## <a name="view-existing-profiles"></a>Zobrazení existujících profilů
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 3. Vyberte **Konfigurace zařízení** > **Profily**.
-4. V seznamu profilů vyberte profil, který chcete spravovat. Pak udělejte jednu z těchto věcí:
-    - V podokně <*název profilu*> **Profil konfigurace zařízení** zvolte **Přehled**, abyste si zobrazili základní informace o profilu a jeho přiřazeních.
-    - V podokně <*název profilu*> **Profil konfigurace zařízení** zvolte **Přiřazení**, abyste si zobrazili podrobnější informace o profilu a jeho přiřazeních.
+
+Uvedené jsou všechny existující profily včetně podrobností jako platforma nebo jestli je profil přiřazený k nějakým zařízením.
+
+## <a name="view-details-on-a-profile"></a>Zobrazení podrobností profilu
+
+Po vytvoření profilu zařízení Intune nabízí grafy. Tyto grafy zobrazují stav profilu, třeba že je úspěšně přiřazený k zařízením nebo jestli profil vykazuje konflikt.
+
+1. Vyberte existující profil. Můžete třeba vybrat profil macOS.
+2. Vyberte kartu **Přehled**.
+
+    Graf znázorňuje počet zařízení přiřazených ke konkrétnímu profilu zařízení. Pokud třeba konfigurační profil zařízení platí pro zařízení s macOS, zobrazí se v grafu počet zařízení s macOS.
+
+    Ukazuje také počet zařízení pro jiné platformy, která jsou přiřazená ke stejnému profilu zařízení. Může třeba ukazovat počet zařízení bez macOS.
+
+    ![Zobrazení počtu zařízení přiřazených k profilu zařízení](./media/device-configuration-profile-graphical-chart.png)
+
+3. Vyberte kruh v grafu. Otevře se **Stav zařízení**.
+
+    Jsou uvedená zařízení přiřazená k profilu a zobrazuje se, jestli je profil úspěšně nasazený. Všimněte si také, že jsou uvedená jenom zařízení s konkrétní platformou (třeba macOS).
+
+    Zavřete podrobnosti o stavu zařízení.
+
+4. Ve vlastnostech profilu (**Profily** > vyberte konkrétní profil) můžete také změnit stávající vlastnosti:
+  - **Vlastnosti**: Můžete změnit název nebo aktualizovat libovolné existující nastavení.
+  - **Přiřazení**: Můžete zahrnout nebo vyloučit zařízení, pro která mají zásady platit. Pomocí **Vybraných skupin** vyberte konkrétní skupiny.
+  - **Stav zařízení**: Jsou uvedená zařízení přiřazená k profilu a zobrazuje se, jestli je profil úspěšně nasazený. Můžete vybrat konkrétní zařízení a zjistit další podrobnosti, včetně nainstalovaných aplikací.
+  - **Stav uživatele**: Uvádí uživatelská jména se zařízeními, na která má tento profil vliv, a jestli je profil úspěšně nasazený. Můžete vybrat konkrétního uživatele a zjistit další podrobnosti.
+  - **Stav podle nastavení**: Filtruje výstup tím, že zobrazí jednotlivá nastavení v rámci profilu, a zobrazuje, jestli je toto nastavení úspěšně použité.
+
+## <a name="next-steps"></a>Další kroky
+[Přiřazení profilů uživatelů a zařízení](device-profile-assign.md)  
+[Běžné problémy a řešení u profilů zařízení](device-profile-troubleshoot.md)

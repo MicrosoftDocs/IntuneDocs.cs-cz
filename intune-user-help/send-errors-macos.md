@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/07/2017
+ms.date: 04/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,30 +17,34 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: fa294e5df63106f949da94aec766c04839e0171f
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 52431d900ee9abe71458b8b22d8a0946f22ce583
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="submit-errors-to-the-right-people-for-your-managed-macos-device"></a>Odeslání chyb správným osobám pro vaše spravované zařízení s macOS
 
-Pokud při použití aplikace Portál společnosti dojde k chybám na vašem zařízení s macOS, můžete odeslat informace, abyste své firemní podpoře pomohli potíže vyřešit.
+V aplikaci Portál společnosti se někdy vyskytnou nevysvětlitelné chyby. Když se to stane, můžete podrobnosti o chybě poslat e-mailem pracovníkovi firemní podpory. Podrobnosti obsahují souvislosti potřebné k řešení problému.
 
 ## <a name="send-errors-to-your-company-support"></a>Odeslání chyb firemní podpoře
 
- Informace o chybách můžete firemní podpoře odeslat různými způsoby:
+Odeslání podrobností o chybě v aplikaci Portál společnosti:
 
--   Ve zprávě s výstrahou chyby klikněte na **Sestava**.
+-   V zobrazené chybové zprávě klikněte na **Nahlásit**.
 
--   V aplikaci Portál společnosti v nabídce **Nápověda** klikněte na **Uložit diagnostickou sestavu**. Vyberte umístění pro uložení tohoto souboru. V závislosti na vaší společnosti můžete tento soubor odeslat e-mailem nebo ho nahrát pro firemní podporu.
+-   Klikněte na nabídku **Nápověda** > **Uložit diagnostickou sestavu**. Vyberte umístění pro uložení tohoto souboru. Pak soubor zašlete e-mailem nebo nahrajte pracovníkovi firemní podpory.
 
-- Pokud už je vaše e-mailová aplikace nakonfigurovaná, můžete diagnostickou sestavu odeslat také tak, že přejdete na **Nápověda** > **Poslat diagnostickou sestavu**.
+-   Pokud je vaše e-mailová aplikace nakonfigurovaná, můžete diagnostickou sestavu odeslat tak, že přejdete na **Nápověda** > **Poslat diagnostickou sestavu**. Po nahrání protokolů klikněte na **Poslat podrobnosti e-mailem**.
 
 ## <a name="send-errors-to-the-company-portal-developers-for-macos-devices"></a>Odeslání chyb vývojářům Portálu společnosti pro zařízení s macOS
 
-Může se stát, že se aplikace Portál společnosti chová neočekávaně. Informace o takových potížích můžou vývojářům této aplikace pomoct vylepšit její fungování tak, aby v budoucnu k zvláštnímu chování nedocházelo. Tyto informace se ukládají na zařízení do speciálního dokumentu s názvem _diagnostická sestava_.
+Někdy se aplikace Portál společnosti může nečekaně zavřít. Vývojáři aplikací budou rádi, když je o nečekaném chování informujete. Podrobnosti chyb využívají k tomu, aby zjistili hlavní příčinu a zabránili budoucímu výskytu chyby. Podobné chyby se na vašem zařízení ukládají ve speciálním dokumentu s názvem _diagnostický protokol_. Tým Portálu společnosti potřebuje k diagnostice problému protokoly týkající se konkrétně této aplikace.
 
-Pokud je nutné odeslat diagnostické sestavy týmu Microsoftu, který vyvíjí aplikaci Portál společnosti, bude potřeba poskytnout určité informace, které umožní najít původní příčinu a diagnostikovat ji. Místo odeslání diagnostické sestavy týmu firemní podpory použijte <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Press and hold, then paste your copied Company Portal app logs here.">tuto šablonu e-mailu</a> a odešlete ji Microsoftu.
+Protokoly odešlete do Microsoftu takto:
+
+1.  Otevřete aplikaci Portál společnosti.
+2.  Klikněte na nabídku **Nápověda** > **Poslat diagnostickou sestavu**.  Po nahrání protokolů obdržíte identifikátor incidentu. Identifikátor si zkopírujte a uložte.
+3.  E-mail do Microsoftu posílejte pomocí <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Paste your incident ID and describe the incident here.">této šablony</a>.
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).

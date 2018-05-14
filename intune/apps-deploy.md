@@ -1,7 +1,7 @@
 ---
 title: Přiřazení aplikací do skupin v Microsoft Intune
 titlesuffix: ''
-description: Po přidání aplikace do Microsoft Intune bude vhodné ji přiřadit do skupin uživatelů nebo zařízení.
+description: Zjistěte, jak přiřadit aplikace Intune do skupin uživatelů nebo zařízení.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -15,23 +15,25 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: de95f5516298e8ade9e394fab8b05fc056651b0c
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 99eb2c70994fcb2b6ed116530f4a82d8db7bcb9b
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="how-to-assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
+# <a name="assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Po přidání aplikace do Microsoft Intune ji můžete přiřadit k uživatelům a zařízením.
+Po přidání aplikace do Microsoft Intune ji můžete přiřadit uživatelům a zařízením.
 
-Aplikace se dají přiřadit k zařízením, ať už jsou spravované službou Intune nebo ne. Následující tabulka vám pomůže pochopit různé možnosti pro přiřazení aplikací uživatelům a zařízením:
+Aplikaci můžete zařízení přiřadit bez ohledu na to, jestli je zařízení spravované pomocí Intune. 
+
+Následující tabulka obsahuje různé možnosti pro přiřazení aplikací uživatelům a zařízením:
 
 ||||
 |-|-|-|-|
-|&nbsp;|Zařízení zaregistrovaná v Intune|Zařízení nezaregistrovaná v Intune|
+|&nbsp;|**Zařízení zaregistrovaná v Intune**|**Zařízení nezaregistrovaná v Intune**|
 |Přiřadit uživatelům|Ano|Ano|
 |Přiřadit zařízením|Ano|Ne|
 |Přiřadit zabalené aplikace nebo aplikace obsahující sadu Intune SDK (kvůli zásadám ochrany aplikací)|Ano|Ano|
@@ -39,48 +41,49 @@ Aplikace se dají přiřadit k zařízením, ať už jsou spravované službou I
 |Přiřadit aplikace jako Povinné|Ano|Ne|
 |Odinstalovat aplikace|Ano|Ne|
 |Dostávat aktualizace aplikací z Intune|Ano|Ne|
-|Koncoví uživatelé instalují dostupné aplikace z aplikace Portál společnosti.|Ano|Ne|
-|Koncoví uživatelé instalují dostupné aplikace z webového Portálu společnosti.|Ano|Ano|
+|Koncoví uživatelé instalují dostupné aplikace z aplikace Portál společnosti|Ano|Ne|
+|Koncoví uživatelé instalují dostupné aplikace z webového Portálu společnosti|Ano|Ano|
 
 > [!NOTE]
-> V současné době můžete přiřadit aplikace pro iOS a Android (firemní i koupené ve Storu) k zařízením, která nejsou zaregistrovaná v Intune.<br></br><br></br>
-> Pokud chtějí uživatelé získat aktualizace aplikací na zařízeních, která nejsou zaregistrovaná v Intune, musí přejít na portál společnosti a aktualizace aplikací ručně nainstalovat.
+> V současné době můžete přiřadit aplikace pro iOS a Android (firemní i zakoupené v obchodu s aplikacemi) zařízením, která nejsou zaregistrovaná v Intune.
+>
+> Pokud chtějí uživatelé získat aktualizace aplikací na zařízeních, která nejsou zaregistrovaná v Intune, musí přejít na Portál společnosti organizace a aktualizace aplikací nainstalovat ručně.
 
-## <a name="how-to-assign-an-app"></a>Postup přiřazení aplikace
+## <a name="to-assign-an-app"></a>Přiřazení aplikace
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V okně **Intune** zvolte **Mobilní aplikace**.
-4. V úloze **Mobilní aplikace** zvolte v části **Spravovat** možnost **Aplikace**.
-5. V okně se seznamem aplikací klikněte na aplikaci, kterou chcete přiřadit.
-6. V okně **Přehled** konkrétní aplikace vyberte v části **Spravovat** možnost **Přiřazení**.
-7. Výběrem možnosti **Přidat skupinu** zobrazíte okno **Přidat skupinu** pro danou aplikaci.
-8. Pro konkrétní aplikaci zvolte **typ přiřazení**:
-   - **K dispozici zaregistrovaným zařízením** – Uživatelé instalují aplikaci z aplikace nebo webu Portál společnosti.
-   - **K dispozici s registrací i bez ní** – Přiřadí tuto aplikaci do skupin uživatelů, jejichž zařízení nejsou zaregistrovaná v Intune. Všimněte si, že typ **Aplikace Android for Work** tuto možnost nepodporuje. 
-   - **Povinné** – Aplikace se nainstaluje na zařízení ve vybraných skupinách.
-   - **Odinstalovat** – Aplikace se odinstaluje ze zařízení ve vybraných skupinách.
+3. V nabídce **Intune** zvolte **Mobilní aplikace**.
+4. V části nabídky **Spravovat** vyberte **Aplikace**.
+5. V podokně **Aplikace** vyberte aplikaci, kterou chcete přiřadit.
+6. V části nabídky **Spravovat** vyberte **Přiřazení**.
+7. Vyberte **Přidat skupinu**. Tím se otevře podokno **Přidat skupinu** týkající se aplikace.
+8. Pro konkrétní aplikaci vyberte **typ přiřazení**:
+   - **K dispozici zaregistrovaným zařízením**: Uživatelé instalují aplikaci z aplikace nebo webu Portál společnosti.
+   - **K dispozici s registrací i bez ní**: Přiřadí tuto aplikaci do skupin uživatelů, jejichž zařízení nejsou zaregistrovaná v Intune. Typ **Aplikace Android for Work** tuto možnost nepodporuje. 
+   - **Povinné**: Aplikace se nainstaluje na zařízení ve vybraných skupinách.
+   - **Odinstalovat**: Aplikace se odinstaluje ze zařízení ve vybraných skupinách.
 
      > [!NOTE]
-     > **Jenom pro aplikace pro iOS** – Pokud jste vytvořili profil VPN iOSu, který obsahuje nastavení sítě VPN podle aplikací, můžete ho ve **VPN** vybrat. Při spuštění aplikace se připojení VPN otevře. Další informace najdete v článku o [nastavení VPN pro zařízení s iOSem](vpn-settings-ios.md).
+     > **Jenom pro aplikace pro iOS** : Pokud jste vytvořili profil VPN iOSu, který obsahuje nastavení sítě VPN podle aplikací, můžete profil VPN ve **VPN** vybrat. Při spuštění aplikace se připojení VPN otevře. Další informace najdete v článku o [nastavení VPN pro zařízení s iOSem](vpn-settings-ios.md).
 
-9. Výběrem možnosti **Zahrnuté skupiny** zvolte skupiny uživatelů, které budou přiřazením aplikace ovlivněny.
-10. Jakmile vyberete jednu nebo více skupin, které se mají zahrnout, klikněte na **Vybrat**.
-11. Klikněte na **OK** v okně **Přiřadit** a dokončete výběr zahrnutých skupin.
-12. Pokud se rozhodnete vyloučit jakékoli skupiny uživatelů, tak aby nebyly přiřazením aplikace ovlivněny, klikněte na **Vyloučit skupiny**.
-13. Pokud jste se rozhodli některé skupiny vyloučit, klikněte na **Vybrat** v okně **Vybrat skupiny**.
-14. Klikněte na tlačítko **OK** v okně **Přidat skupinu**.
-15. Klikněte na **Uložit** v okně **Přiřazení** a svá přiřazení uložte.
+9. Pokud chcete vybrat skupiny uživatelů, které toto přiřazení aplikace ovlivní, vyberte **Zahrnuté skupiny**.
+10. Po vybrání jedné nebo více skupin, které se mají zahrnout, zvolte **Vybrat**.
+11. V podokně **Přiřadit** vyberte **OK**. Tím výběr zahrnutých skupin dokončíte.
+12. Pokud se rozhodnete některé skupiny uživatelů vyloučit, aby nebyly přiřazením aplikace ovlivněné, klikněte na **Vyloučit skupiny**.
+13. Pokud jste se rozhodli některé skupiny vyloučit, ve **Vybrat skupiny** zvolte **Vybrat**.
+14. V podokně **Přidat skupinu** vyberte **OK**.
+15. V podokně **Přiřazení** aplikace vyberte **Uložit**.
 
 Aplikace je teď přiřazená do skupin, které jste vybrali. Další informace o zahrnutí a vyloučení přiřazení aplikací najdete v článku [Zahrnutí a vyloučení přiřazení aplikací](apps-inc-exl-assignments.md).
 
 ## <a name="how-conflicts-between-app-intents-are-resolved"></a>Řešení konfliktů mezi záměry aplikace
 
-Někdy je tatáž aplikace přiřazena více skupinám, ale s různými záměry. V těchto případech si můžete dohledat výsledný záměr v níže uvedené tabulce.
+Někdy je tatáž aplikace přiřazena do více skupin, ale s různými záměry. Když k tomu dojde, pomůžou vám výsledný záměr pochopit informace v následující tabulce:
 
 ||||
 |-|-|-|
-|Záměr skupiny 1|Záměr skupiny 2|Výsledný záměr|
+|**Záměr skupiny 1**|**Záměr skupiny 2**|**Výsledný záměr**|
 |Uživatel: Povinné|Uživatel: K dispozici|Povinné a K dispozici|
 |Uživatel: Povinné|Uživatel: Není k dispozici|Povinné|
 |Uživatel: Povinné|Uživatel: Odinstalace|Povinné|
@@ -90,7 +93,7 @@ Někdy je tatáž aplikace přiřazena více skupinám, ale s různými záměry
 |Uživatel: Povinné|Zařízení: Povinné|Existuje obojí, zpracování bránou je povinné
 |Uživatel: Povinné|Zařízení: Odinstalace|Existuje obojí, řešení bránou je povinné
 |Uživatel: K dispozici|Zařízení: Povinné|Existuje obojí, řešení bránou je povinné (Povinné a K dispozici)
-|Uživatel: K dispozici|Zařízení: Odinstalace|Existuje obojí, řešení bránou je k dispozici<br>Aplikace se zobrazí na Portálu společnosti.<br>Pokud je už aplikace nainstalovaná (jako požadovaná aplikace s předchozím záměrem), pak se aplikace odinstaluje.<br>Pokud ale uživatel klikne na portálu společnosti na instalaci, aplikace se instaluje a záměr odinstalace není dodržen.|
+|Uživatel: K dispozici|Zařízení: Odinstalace|Existuje obojí, řešení bránou je k dispozici.<br><br>Aplikace se zobrazí na Portálu společnosti.<br><br>Pokud je už aplikace nainstalovaná (jako požadovaná aplikace s předchozím záměrem), aplikace se odinstaluje.<br><br>Pokud ale uživatel vybere **instalaci z Portálu společnosti**, aplikace se instaluje a záměr odinstalace se nedodrží.|
 |Uživatel: Není k dispozici|Zařízení: Povinné|Povinné|
 |Uživatel: Není k dispozici|Zařízení: Odinstalace|Odinstalace|
 |Uživatel: Odinstalace|Zařízení: Povinné|Existuje obojí, řešení bránou je povinné|
@@ -101,7 +104,7 @@ Někdy je tatáž aplikace přiřazena více skupinám, ale s různými záměry
 |Uživatel: Povinné a K dispozici|Uživatel: Není k dispozici|Povinné a K dispozici|
 |Uživatel: Povinné a K dispozici|Zařízení: Povinné|Existuje obojí, Povinné a K dispozici
 |Uživatel: Povinné a K dispozici|Zařízení: Není k dispozici|Povinné a K dispozici|
-|Uživatel: Povinné a K dispozici|Zařízení: Odinstalace|Existuje obojí, řešení bránou je povinné Povinné + K dispozici
+|Uživatel: Povinné a K dispozici|Zařízení: Odinstalace|Existuje obojí, řešení bránou je povinné (Povinné a K dispozici)
 |Uživatel: Není k dispozici|Zařízení: Není k dispozici|Není k dispozici|
 |Uživatel: K dispozici|Zařízení: Není k dispozici|K dispozici|
 |Uživatel: Povinné|Zařízení: Není k dispozici|Povinné|
@@ -111,11 +114,11 @@ Někdy je tatáž aplikace přiřazena více skupinám, ale s různými záměry
 |Uživatel: K dispozici bez registrace|Uživatel: K dispozici|K dispozici|
 |Uživatel: K dispozici bez registrace|Zařízení: Povinné|Povinné a K dispozici bez registrace|
 |Uživatel: K dispozici bez registrace|Zařízení: Není k dispozici|K dispozici bez registrace|
-|Uživatel: K dispozici bez registrace|Zařízení: Odinstalace|Odinstalace a K dispozici bez registrace.<br>Pokud uživatel nenainstaloval aplikaci z portálu společnosti, provede se odinstalace.<br>Pokud uživatel aplikaci nainstaluje z portálu společnosti, bude mít instalace prioritu před odinstalací.|
+|Uživatel: K dispozici bez registrace|Zařízení: Odinstalace|Odinstalace a K dispozici bez registrace.<br><br>Pokud uživatel nenainstaloval aplikaci z Portálu společnosti, provede se odinstalace.<br><br>Pokud uživatel aplikaci nainstaluje z Portálu společnosti, bude mít instalace prioritu před odinstalací.|
 
->[!NOTE]
->Pouze pro spravované aplikace pro App Store (iOS) platí, že pokud je přidáte do Microsoft Intune a přiřadíte jako **Povinné**, vytvoří se automaticky se záměry **Povinné** i **K dispozici**.
+> [!NOTE]
+> Jenom pro spravované aplikace pro App Store (iOS) platí, že pokud je přidáte do Microsoft Intune a přiřadíte jako **Povinné**, vytvoří se automaticky se záměry **Povinné** i **K dispozici**.
 
 ## <a name="next-steps"></a>Další kroky
 
-Informace, s kterými budete moct lépe sledovat přiřazování aplikací, najdete v článku [Jak sledovat přiřazení aplikací](apps-monitor.md).
+Další informace o sledování přiřazení aplikací najdete v článku o [monitorování aplikací](apps-monitor.md).

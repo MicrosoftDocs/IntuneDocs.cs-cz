@@ -1,29 +1,29 @@
 ---
-title: Konektor Skycure s Microsoft Intune
-titlesuffix: 
-description: "Přečtěte si o integraci Intune se službou Skycure Mobile Threat Defense za účelem regulace přístupu mobilních zařízení k firemním prostředkům."
-keywords: 
+title: Konektor Symantec s Microsoft Intune
+titlesuffix: ''
+description: Přečtěte si o integraci Intune se Symantec Endpoint Protection Mobile za účelem regulace přístupu mobilních zařízení k firemním prostředkům.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 12/09/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: df4ce3f6-a093-432c-ab86-7a83865e389e
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b3148a24b077dfd491ce06fcf708a81de7d12dc1
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 577eff3a5f3965065a4066973ea8c61160ab4563
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="skycure-mobile-threat-defense-connector"></a>Konektor ochrany před mobilními hrozbami Skycure
+# <a name="symantec-endpoint-protection-mobile-connector"></a>Konektor Symantec Endpoint Protection Mobile
 
-Přístup mobilních zařízení k podnikovým prostředkům můžete regulovat pomocí podmíněného přístupu na základě posouzení rizik, které provádí služba Skycure. Je to řešení ochrany před mobilními hrozbami integrované ve službě Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých běží služba Skycure. Patří do ní:
+Přístup mobilních zařízení k podnikovým prostředkům můžete regulovat pomocí podmíněného přístupu na základě posouzení rizik, které provádí Symantec Endpoint Protection Mobile (SEP Mobile). Jedná se o řešení ochrany před mobilními hrozbami, které se integruje do Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých běží SEP Mobile. Patří do ní:
 
 -   Fyzická ochrana
 
@@ -33,21 +33,21 @@ Přístup mobilních zařízení k podnikovým prostředkům můžete regulovat
 
 -   Ochrana chyb zabezpečení
 
-Zásady podmíněného přístupu založené na posouzení rizika služby Skycure můžete nakonfigurovat prostřednictvím zásad dodržování předpisů zařízení služby Intune, kterými můžete na základě odhalených hrozeb u zařízení, které nedodržují předpisy, povolit nebo zablokovat přístup k firemním prostředkům.
+Můžete nakonfigurovat posouzení rizik službou SEP Mobile prostřednictvím zásad dodržování předpisů zařízení služby Intune a pak pomocí zásad podmíněného přístupu na základě odhalených hrozeb u zařízení, která nedodržují předpisy, povolit nebo zablokovat přístup k firemním prostředkům.
 
-## <a name="how-do-intune-and-skycure-help-protect-your-company-resources"></a>Jak služby Intune a Skycure pomáhají chránit prostředky společnosti?
+## <a name="how-do-intune-and-sep-mobile-help-protect-your-company-resources"></a>Jak Intune a SEP Mobile pomáhají chránit prostředky společnosti?
 
-Mobilní aplikace Skycure pro Android nebo iOS zaznamenává telemetrii systému souborů, zásobníku sítě, zařízení a aplikací tam, kde je k dispozici, a posílá ji do cloudové služby Skycure, kde se posoudí ohrožení zařízení mobilními hrozbami.
+SEP Mobile pro Android nebo iOS zaznamenává telemetrii systému souborů, zásobníku sítě, zařízení a aplikací tam, kde je k dispozici, a posílá ji do cloudové služby Symantec, kde se posoudí ohrožení zařízení mobilními hrozbami.
 
-Zásady dodržování předpisů, které platí pro zařízení v Intune, zahrnují pravidlo pro službu ochrany před mobilními hrozbami Skycure. Toto pravidlo je založené na hodnocení rizika službou Skycure. Když je toto pravidlo aktivní, Intune vyhodnocuje soulad zařízení se zásadami, které jste povolili.
+Zásady dodržování předpisů, které platí pro zařízení v Intune, zahrnují pravidlo pro SEP Mobile, které je založené na hodnocení rizik službou SEP Mobile. Když je toto pravidlo aktivní, Intune vyhodnocuje soulad zařízení se zásadami, které jste povolili.
 
-Pokud se zjistí, že zařízení dané předpisy nedodržuje, zablokuje se přístup k prostředkům, jako jsou Exchange Online a SharePoint Online. Uživatelé zablokovaných zařízení obdrží od mobilní aplikace Skycure pokyny, jak problém vyřešit a jak opět získat přístup k firemním prostředkům.
+Pokud se zjistí, že zařízení dané předpisy nedodržuje, zablokuje se přístup k prostředkům, jako jsou Exchange Online a SharePoint Online. Uživatelé zablokovaných zařízení obdrží od aplikace SEP Mobile pokyny, jak problém vyřešit a jak k firemním prostředkům znovu získat přístup.
 
-Služba Intune podporuje dva způsoby integrace se službou Skycure:
+Intune podporuje dva režimy integrace s SEP Mobile:
 
--   **Základní nastavení**: Umožňuje v režimu jen pro čtení službě Skycure viditelnost zařízení ve službě Intune.
+-   **Základní nastavení**: Umožňuje v režimu jen pro čtení službě SEP Mobile viditelnost zařízení v Intune.
 
--   **Úplná integrace**: Umožňuje službě Skycure nahlásit riziko zařízení a podrobnosti bezpečnostního incidentu službě Intune.
+-   **Úplná integrace**: Umožňuje službě SEP Mobile nahlásit riziko zařízení a podrobnosti bezpečnostního incidentu službě Intune.
 
 ## <a name="sample-scenarios"></a>Ukázkové scénáře
 
@@ -65,11 +65,11 @@ Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba ma
 
 **Zablokování při zjištění přítomnosti škodlivých aplikací:**
 
-![Zjištění přítomnosti škodlivých aplikací](./media/skycure-arch-1.png)
+![Zjištění přítomnosti škodlivých aplikací](./media/symantec-arch-1.png)
 
 **Přístup udělený po nápravě:**
 
-![Přistup udělený po nápravě po zjištění škodlivých aplikací](./media/skycure-arch-2.png)
+![Přistup udělený po nápravě po zjištění škodlivých aplikací](./media/symantec-arch-2.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Řízení přístupu na základě ohrožení sítě
 
@@ -77,11 +77,11 @@ Zjišťuje hrozby v síti, například **útoky prostředníkem**, a chrání 
 
 **Zablokování přístupu k síti prostřednictvím sítě Wi-Fi:**
 
-![Zablokování přístupu k síti prostřednictvím sítě Wi-Fi](./media/skycure-arch-3.png)
+![Zablokování přístupu k síti prostřednictvím sítě Wi-Fi](./media/symantec-arch-3.png)
 
 **Přístup udělený po nápravě:**
 
-![Přístup udělený po nápravě](./media/skycure-arch-4.png)
+![Přístup udělený po nápravě](./media/symantec-arch-4.png)
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Řízení přístupu k SharePointu Online na základě ohrožení sítě
 
@@ -89,11 +89,11 @@ Zjišťuje hrozby v síti, například **útoky prostředníkem**, a zabraňuj
 
 **Zablokování SharePointu Online v případě, že se zjistí ohrožení sítě:**
 
-![Zablokování SharePointu Online v případě zjištění ohrožení sítě](./media/skycure-arch-5.png)
+![Zablokování SharePointu Online v případě zjištění ohrožení sítě](./media/symantec-arch-5.png)
 
 **Přístup udělený po nápravě:**
 
-![Sharepointový příklad přístupu uděleného po nápravě](./media/skycure-arch-6.png)
+![Sharepointový příklad přístupu uděleného po nápravě](./media/symantec-arch-6.png)
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
@@ -107,18 +107,18 @@ Zjišťuje hrozby v síti, například **útoky prostředníkem**, a zabraňuj
 
 -   Odběr služby Microsoft Intune
 
--   Předplatné ochrany před mobilními hrozbami Skycure
+-   Předplatné Symantec Endpoint Protection Mobile
 
-Více informací najde na [webu Skycure](https://www.skycure.com/skycure-microsoft-integration/).
+Více informací najde na [webu Symantecu](https://www.skycure.com/skycure-microsoft-integration/).
 
 ## <a name="next-steps"></a>Další kroky
 
-Zde jsou uvedené další kroky, které potřebujete k integraci služby Intune se službou Skycure:
+K integraci Intune s SEP Mobile musíte dokončit tyto kroky:
 
-- [Nastavení integrace služby Skycure se službou Intune](skycure-mtd-connector-integration.md)
+- [Nastavení integrace SEP Mobile s Intune](skycure-mtd-connector-integration.md)
 
-- [Přidání a přiřazení aplikací Skycure, aplikace Microsoft Authenticator a zásad konfigurace aplikace pro iOS](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Přidání a přiřazení aplikací SEP Mobile, Microsoft Authenticatoru a zásad konfigurace aplikace pro iOS](mtd-apps-ios-app-configuration-policy-add-assign.md)
 
-- [Vytvoření zásad dodržování předpisů pro zařízení se službou Skycure v Intune](mtd-device-compliance-policy-create.md)
+- [Vytvoření zásad dodržování předpisů pro zařízení s SEP Mobile v Intune](mtd-device-compliance-policy-create.md)
 
-- [Povolení konektoru MTD Skycure v Intune](mtd-connector-enable.md)
+- [Povolení konektoru MTD SEP Mobile v Intune](mtd-connector-enable.md)

@@ -1,30 +1,43 @@
 ---
-title: "Registrace zařízení pomocí programu Windows AutoPilot Deployment"
+title: Registrace zařízení pomocí programu Windows AutoPilot Deployment
 titleSuffix: Microsoft Intune
-description: "Zjistěte, jak registrovat zařízení s Windows 10 pomocí programu Windows AutoPilot Deployment."
-keywords: 
+description: Zjistěte, jak registrovat zařízení s Windows 10 pomocí programu Windows AutoPilot Deployment.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/26/2018
+ms.date: 04/25/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: 4522be0b636a72844fa6177fbb35d3350cfbd00e
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 934b80d1c174c25d37e30695f46afc88c8d8bfc3
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="enroll-windows-devices-by-using-the-windows-autopilot-deployment-program"></a>Registrace zařízení s Windows pomocí programu Windows AutoPilot Deployment
 Program Windows AutoPilot Deployment zjednodušuje zřizování zařízení. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a AutoPilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s AutoPilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace atd. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows AutoPilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
 
 ## <a name="prerequisites"></a>Požadavky
-- [Zařízení musí být zaregistrovaná pro vaši organizaci](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot#device-registration-and-oobe-customization)
 - [Povolená automatická registrace pro Windows](https://docs.microsoft.com/intune-classic/deploy-use/set-up-windows-device-management-with-microsoft-intune#enable-windows-10-automatic-enrollment)
 - [Předplatné Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](http://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+
+## <a name="add-devices"></a>Přidání zařízení
+
+Zařízení Windows AutoPilot můžete přidat importováním souboru CSV s jejich informace.
+
+1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal), vyberte **Registrace zařízení** > **Registrace zařízení s Windows** > **Zařízení** > **Importovat**.
+
+    ![Snímek obrazovky se zařízeními Windows AutoPilot](media/enrollment-autopilot/autopilot-import-device.png)
+
+2. V části **Přidat zařízení Windows AutoPilot** přejděte na soubor CSV obsahující sériová čísla, identifikátory produktů Windows a hodnoty hash hardwaru zařízení, která chcete přidat.
+
+    ![Snímek obrazovky s přidáním zařízení Windows AutoPilot](media/enrollment-autopilot/autopilot-import-device2.png)
+
+3. Pomocí **Importovat** zahajte import informací o zařízeních. Může to trvat několik minut.
 
 ## <a name="synchronize-devices"></a>Synchronizace zařízení
 Synchronizujte registrovaná zařízení do Intune, abyste je mohli nakonfigurovat.
@@ -108,6 +121,16 @@ Z upozornění můžete zjistit, kolik zařízení z programu AutoPilot nemá p�
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V **Intune** zvolte **Registrace zařízení**.
 4. Zvolte **Přehled** a uvidíte upozornění. Klikněte na upozornění a uvidíte seznam zařízení AutoPilotu.  
+
+## <a name="delete-autopilot-devices"></a>Odstranění zařízení AutoPilot
+
+Zařízení Windows AutoPilot, která nejsou zaregistrovaná, můžete odstranit. Můžete zrušit registraci zařízení a pak je odstranit.
+
+1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal), vyberte **Registrace zařízení** > **Registrace zařízení s Windows** > **Zařízení**.
+
+2. V části **Zařízení Windows AutoPilot** vyberte zařízení, která chcete odstranit, a pak vyberte **Odstranit**.
+
+3. Potvrďte odstranění pomocí **Ano**. Odstranění může trvat několik minut.
 
 
 ## <a name="next-steps"></a>Další kroky

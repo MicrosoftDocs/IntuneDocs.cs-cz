@@ -15,11 +15,11 @@ ms.assetid: 00356258-76a8-4a84-9cf5-64ceedb58e72
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 08cebf84443e65ded5f7884218fbe17d722bddf2
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 10502f82d94246f7a70af6b88c0704a4daa0372b
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Přidání a přiřazení aplikací pro ochranu před mobilními hrozbami (MTD) pomocí Intune
 
@@ -53,7 +53,7 @@ U zařízení se systémem iOS je potřeba [Microsoft Authenticator](https://doc
 
 #### <a name="microsoft-authenticator-app-for-ios"></a>Aplikace Microsoft Authenticator pro iOS
 
-- Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](store-apps-ios.md). V **kroku 5** v části **Konfigurace informací o aplikaci** použijte tento [odkaz URL na Microsoft Authenticator v obchodě s aplikacemi](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8).
+- Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](store-apps-ios.md). V **kroku 12** v části **Konfigurace informací o aplikaci** použijte tento [odkaz URL na Microsoft Authenticator v obchodě s aplikacemi](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8).
 
 ### <a name="lookout"></a>Lookout
 
@@ -62,7 +62,7 @@ U zařízení se systémem iOS je potřeba [Microsoft Authenticator](https://doc
 
 #### <a name="ios"></a>iOS
 
-- Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](store-apps-ios.md). V **kroku 5** v části **Konfigurace informací o aplikaci** použijte tento [odkaz URL na aplikaci Lookout for Work pro iOS v App Storu](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8).
+- Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](store-apps-ios.md). V **kroku 12** v části **Konfigurace informací o aplikaci** použijte tento [odkaz URL na aplikaci Lookout for Work pro iOS v App Storu](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8).
 
 #### <a name="lookout-for-work-app-outside-the-apple-store"></a>Aplikace Lookout for Work mimo obchod App Store společnosti Apple
 
@@ -91,15 +91,15 @@ Následujícím postupem povolte ověřování uživatelů iOS službou Azure Ac
 
 - Podle popisu v tématu [Přidání obchodních aplikací pro iOS do Microsoft Intune](lob-apps-ios.md) nahrajte opětovně podepsaný soubor .ipa. Kromě toho je potřeba nastavit jako minimální verzi operačního systému iOS 8.0 nebo novější.
 
-### <a name="skycure"></a>Skycure
+### <a name="symantec-endpoint-protection-mobile-sep-mobile"></a>Symantec Endpoint Protection Mobile (SEP Mobile)
 
 #### <a name="android"></a>Android
 
-- Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](store-apps-android.md). V **kroku 7** použijte tento [odkaz URL na Skycure v obchodě s aplikacemi](https://play.google.com/store/apps/details?id=com.skycure.skycure).
+- Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](store-apps-android.md). V **kroku 7** použijte tento [odkaz URL na SEp Mobile v obchodě s aplikacemi](https://play.google.com/store/apps/details?id=com.skycure.skycure).  Jako **Minimální operační systém** vyberte **Android 4.0 (Ice Cream Sandwich)**.
 
 #### <a name="ios"></a>iOS
 
-- Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](store-apps-ios.md). V **kroku 5** v části **Konfigurace informací o aplikaci** použijte tento [odkaz URL na Skycure v obchodě s aplikacemi](https://itunes.apple.com/us/app/skycure/id695620821?mt=8).
+- Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](store-apps-ios.md). V **kroku 12** v části **Konfigurace informací o aplikaci** použijte tento [odkaz URL na SEP Mobile v obchodě s aplikacemi](https://itunes.apple.com/us/app/skycure/id695620821?mt=8).
 
 ### <a name="check-point-sandblast-mobile"></a>Check Point SandBlast Mobile
 
@@ -109,7 +109,7 @@ Následujícím postupem povolte ověřování uživatelů iOS službou Azure Ac
 
 #### <a name="ios"></a>iOS
 
-- Pokud chcete získat aplikaci pro iOS, obraťte se na [Check Point SandBlast Mobile](https://www.checkpoint.com/products/sandblast-mobile/). Přečtěte si pokyny pro [přidání aplikací z iOS Storu do Microsoft Intune](store-apps-ios.md), pak v **kroku 5** v části **Konfigurace informací o aplikaci** použijte adresu URL obchodu App Store společnosti Apple.
+- Pokud chcete získat aplikaci pro iOS, obraťte se na [Check Point SandBlast Mobile](https://www.checkpoint.com/products/sandblast-mobile/). Přečtěte si pokyny pro [přidání aplikací z iOS Storu do Microsoft Intune](store-apps-ios.md), pak v **kroku 12** v části **Konfigurace informací o aplikaci** použijte adresu URL obchodu App Store společnosti Apple.
 
 ### <a name="zimperium"></a>Zimperium
 
@@ -119,7 +119,7 @@ Následujícím postupem povolte ověřování uživatelů iOS službou Azure Ac
 
 #### <a name="ios"></a>iOS
 
-- Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](store-apps-ios.md). V **kroku 5** v části **Konfigurace informací o aplikaci** použijte tento [odkaz URL na Zimperium v obchodě s aplikacemi](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8).
+- Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](store-apps-ios.md). V **kroku 12** v části **Konfigurace informací o aplikaci** použijte tento [odkaz URL na Zimperium v obchodě s aplikacemi](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8).
 
 ## <a name="to-associate-the-mtd-app-with-an-ios-app-configuration-policy"></a>Přidružení aplikace MTD k zásadám konfigurace aplikace pro iOS
 
@@ -127,31 +127,24 @@ Následujícím postupem povolte ověřování uživatelů iOS službou Azure Ac
 
 - Vytvořte zásady konfigurace aplikace pro iOS pomocí tématu [o použití zásad konfigurace aplikace pro iOS](app-configuration-policies-use-ios.md).
 
-### <a name="for-skycure"></a>Pro Skycure
+### <a name="for-sep-mobile"></a>Pro SEP Mobile
 
--   Použijte stejný účet Azure AD, který jste dříve nakonfigurovali v [konzole pro správu Skycure](https://aad.skycure.com). Mělo by jít o stejný účet, který slouží k přihlašování ke klasickému portálu Intune.
+-   Použijte stejný účet Azure Active Directory, který jste dříve nakonfigurovali v [konzole pro správu Symantec Endpoint Protection](https://aad.skycure.com). Mělo by jít o stejný účet, který slouží k přihlašování ke klasickému portálu Intune.
 
 -   Musíte **stáhnout** soubor zásad konfigurace aplikace pro iOS: 
-    -   Přejděte na [konzoly pro správu Skycure](https://aad.skycure.com) a přihlaste se pomocí svých přihlašovacích údajů správce.
+    -   Přejděte na [konzoly pro správu Symantec Endpoint Protection](https://aad.skycure.com) a přihlaste se pomocí svých přihlašovacích údajů správce.
 
-    -   Přejděte do **Settings** (Nastavení ) &gt; **Device Management Integrations** (Integrace správy zařízení) &gt; **EMM Integration Selection** (Volba integrace EMM), vyberte **Microsoft Intune** a potom svou volbu uložte.
+    -   Přejděte na **Settings** (Nastavení) a v části **Integrations** (Integrace) zvolte **Intune**. Zvolte **EMM Integration Selection** (Výběr integrace EMM). Zvolte **Microsoft** a pak svůj výběr uložte.
 
-    -   Klikněte na odkaz **Integration setup files** (Integrační soubory nastavení) a vygenerovaný soubor \*.zip uložte. Soubor .zip obsahuje soubor **skycure\_configuration.plist**, který se použije k vytvoření zásad konfigurace aplikace pro iOS v Intune.
+    -   Klikněte na odkaz **Integration setup files** (Integrační soubory nastavení) a vygenerovaný soubor \*.zip uložte. Soubor .zip obsahuje soubor ***.plist**, který se použije k vytvoření zásad konfigurace aplikace pro iOS v Intune.
 
-    -   Pokud chcete přidat zásady konfigurace aplikace Skycure pro iOS, přečtěte si pokyny ohledně [používání zásad konfigurace aplikací služby Microsoft Intune pro iOS](app-configuration-policies-use-ios.md).
+    -   Pokud chcete přidat zásady konfigurace aplikace SEP Mobile pro iOS, přečtěte si pokyny ohledně [používání zásad konfigurace aplikací služby Microsoft Intune pro iOS](app-configuration-policies-use-ios.md).
 
-    - V **kroku 8** použijte možnost **Zadat XML data**, zkopírujte obsah ze souboru **skycure_configuration.plist** a vložte ho do těla zásad konfigurace.
+    - V **kroku 8** použijte možnost **Zadat XML data**, zkopírujte obsah ze souboru ***.plist** a vložte ho do těla zásad konfigurace.
 
-Obsah souboru **skycure_configuration.plist** můžete zkopírovat i odsud:
+> [!NOTE]
+> Pokud se vám nedaří soubory načíst, obraťte se na [podporu Symantec Endpoint Protection Mobile pro firmy](https://support.symantec.com/en_US/contact-support.html).
 
-```
-<dict>
-    <key>MdmType</key>
-    <string>Intune</string>
-    <key>UserEmail</key>
-    <string>{{userprincipalname}}</string>
-</dict>
-```
 ### <a name="for-check-point-sandblast-mobile"></a>Pro Check Point SandBlast Mobile
 
 - Pokud chcete přidat zásady konfigurace aplikace Check Point SandBlast Mobile pro iOS, přečtěte si pokyny ohledně [používání zásad konfigurace aplikací služby Microsoft Intune pro iOS](app-configuration-policies-use-ios.md).
