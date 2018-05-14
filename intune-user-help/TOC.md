@@ -125,6 +125,7 @@
 #### [Registrace zařízení s Windows 10 pomocí funkce Přístup do práce nebo do školy](enroll-your-w10-device-access-work-or-school.md)
 #### [Registrace zařízení s Windows 8.1 nebo Windows RT 8.1](enroll-your-w81-or-rt81-windows.md)
 #### [Registrace zařízení Windows Phone 8.1](enroll-your-wp81-windows.md)
+### [Instalace aplikací z aplikace Portál společnosti pro Windows](install-apps-cpapp-windows.md)
 ### [Resetování zařízení](reset-erase-your-device-cpwebsite.md)
 ### [Zašifrování zařízení](encrypt-your-device-windows.md)
 ### [Nastavení nebo změna hesla](set-or-change-your-password-windows.md)
