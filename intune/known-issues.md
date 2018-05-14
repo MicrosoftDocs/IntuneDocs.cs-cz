@@ -14,11 +14,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 388c9f69b6cbee1353b0e21121a47576b58b3ba6
-ms.sourcegitcommit: 407191a92ef356a3d196b6f9959b9b033190ca2c
+ms.openlocfilehash: b8ef4688a5d1a98a27a2fcb6fc5b6ce456b5fd25
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Známé problémy v Microsoft Intune
 
@@ -46,6 +46,14 @@ Při migraci z Intune na Azure Portal se může zobrazit nová skupina s názvem
 Nejde zobrazit informace o stavu pro zásady, které se migrovaly z klasického portálu na portál Azure Portal. Můžete ale dál zobrazovat sestavy pro tyto zásady na portálu Classic. Pokud chcete zobrazit informace o stavu migrovaných konfiguračních zásad, na portálu Azure Portal je znovu vytvořte.
 
 ## <a name="apps"></a>Aplikace
+
+
+### <a name="multiple-app-install-prompts-for-certain-vpp-apps"></a>Zobrazování několika výzev k instalaci aplikací u určitých aplikací VPP
+U některých aplikací VPP, které jsou už nainstalované na zařízeních koncových uživatelů, se můžete setkat s několika výzvami k instalaci aplikací. K tomuto problému dochází, pokud máte možnost **Automatické aktualizace aplikací** nastavenou na **Zapnuto** u tokenu VPP, který jste nahráli na portál Intune Azure Portal.    
+
+Tento problém vyřešíte tak, že u tokenu VPP zakážete **Automatické aktualizace aplikací**. Uděláte to tak, že na portálu Azure Portal otevřete Microsoft Intune. V Intune vyberete **Mobilní aplikace** > **Tokeny VPP pro iOS**. Dále vyberete token VPP, který nasadil ovlivněnou aplikaci, a vyberete **Upravit** > **Automatické aktualizace aplikací** > **Vypnuto** > **Uložit**. Můžete také ukončit nasazení ovlivněné aplikace jako aplikace VPP, čímž zastavíte zobrazování výzev.    
+
+Toto je známý problém v aktuální verzi. Připravujeme opravu, která tento problém vyřeší. Po implementaci této opravy se už uživatelům nebude zobrazovat více výzev k instalaci aplikací.
 
 ### <a name="ios-volume-purchased-apps-only-available-in-default-intune-tenant-language"></a>Hromadně zakoupené aplikace pro iOS jsou k dispozici pouze ve výchozím jazyce tenanta Intune
 Hromadně zakoupené aplikaci pro iOS se zobrazují a jde je přiřadit pouze ke stejnému kódu země, jaký má účet Intune. Intune synchronizuje jenom aplikace ze stejného národního prostředí iTunes, jako je kód země účtu tenanta Intune. Pokud třeba koupíte aplikaci dostupnou jenom pro USA, ale váš účet Intune je český, Intune tuto aplikaci nezobrazí.

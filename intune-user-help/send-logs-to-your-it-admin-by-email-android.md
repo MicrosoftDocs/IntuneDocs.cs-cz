@@ -17,17 +17,17 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 5e37ab05889a1141464b75a36b4f156f897799ae
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: f924ece24fe38346c1abab8964270e4abe5abf76
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="email-logs-to-your-company-support"></a>Posílání protokolů e-mailem firemní podpoře
 
 Při používání aplikace Portál společnosti na zařízení s Androidem se někdy můžete setkat s chybou. Když se to stane, můžete podrobnosti o chybě poslat e-mailem pracovníkovi firemní podpory. Podrobnosti obsahují souvislosti potřebné k řešení problému.  
 
-Podrobnosti o chybě se v zařízení ukládají do zvláštního dokumentu s názvem _diagnostický protokol_. Když protokoly nahrajete do aplikace Portál společnosti, posílají se napřed vývojářům Microsoftu, kteří na aplikaci pracují. Protokoly používají k vylepšení funkčnosti aplikace a zabránění dalším chybám. Ke konkrétní chybě dostanete ID incidentu, které můžete sdílet s pracovníkem firemní podpory.  
+Podrobnosti o chybě se v zařízení ukládají do zvláštního dokumentu s názvem _diagnostický protokol_. Když protokoly nahrajete do aplikace Portál společnosti, posílají se napřed vývojářům Microsoftu, kteří na aplikaci pracují. Protokoly používají k vylepšení funkčnosti aplikace a zabránění dalším chybám. Ke konkrétní chybě dostanete ID incidentu, které můžete předat pracovníkovi firemní podpory a použít pro případy podpory Microsoftu.
 
 > [!Note]
 > Pokud chcete pracovníkům firemní podpory usnadnit nalezení příčiny problému, zapněte _podrobné protokolování_. Podrobné protokolování zaznamenává všechny podrobnosti o chybách, které pak zahrne do zprávy. Postup, jak [zapnout podrobné protokolování, najdete tady](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).  

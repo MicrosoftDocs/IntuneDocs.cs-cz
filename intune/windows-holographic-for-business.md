@@ -5,18 +5,18 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 4/5/2018
+ms.date: 5/1/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 45d8f5051d9663273c6515717b7930145ff8a964
-ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
+ms.openlocfilehash: 18f86580fc4c80fade7aeaa9678e9d8edac9a53e
+ms.sourcegitcommit: b57be56524ddb5026fab94f7638dc516ed118325
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customize-devices-running-windows-holographic-with-intune"></a>Přizpůsobení zařízení s Windows Holographic v Intune
 
@@ -25,6 +25,16 @@ Microsoft Intune podporuje zařízení s Windows Holographic for Business, jako 
 Pokud chcete v Microsoft Intune spravovat zařízení, na kterých běží Windows Holographic, musíte vytvořit profil Upgrade edice. Tento aktualizační profil upgraduje zařízení z Windows Holographic na Windows Holographic for Business. V případě zařízení Microsoft HoloLens můžete požadovanou licenci pro upgrade získat zakoupením edice Commercial Suite. Další informace najdete v tématu [Upgrade zařízení s Windows Holographic na Windows Holographic for Business](holographic-upgrade.md).
 
 Ke správě a přizpůsobení zařízení s Windows Holographic for Business použijte úkoly popsané v tomto článku. Můžete například spravovat softwarové aktualizace, konfigurovat nastavení VPN a provádět další úkoly.
+
+## <a name="azure-active-directory"></a>Azure Active Directory
+
+Azure Active Directory (AD) představuje skvělý prostředek, který vám pomůže se správou a řízením zařízení, na nichž běží Windows Holographic for Business. Pomocí Intune a Azure AD můžete: 
+
+- **[Nastavit zařízení připojená k Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-setup)**: Ve službě Azure Active Directory (AD) můžete přidat zařízení s Windows 10, která jsou ve vlastnictví firmy, včetně zařízení, na nichž běží Windows Holographic for Business. Tato funkce umožňuje službě Azure AD řídit zařízení. Pomůže vám zajistit, že uživatelé používají prostředky společnosti ze zařízení, která jsou v souladu s vámi stanovenými standardy zabezpečení a dodržování předpisů.
+
+  Další informace najdete v článku [Úvod ke správě zařízení ve službě Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
+
+- **[Hromadně registrovat zařízení s Windows](windows-bulk-enroll.md)**: K Azure Active Directory (AD) a Intune můžete připojit větší počet nových zařízení s Windows. Tato funkce se označuje jako hromadná registrace a využívá zřizovací balíčky. Tyto balíčky připojí zařízení s Windows Holographic for Business k tenantovi Azure AD a zaregistrují je v Intune.
 
 ## <a name="company-portal"></a>Portál společnosti
 **[Konfigurace aplikace Portál společnosti](company-portal-app.md)**
@@ -56,6 +66,18 @@ Microsoft Intune může nasadit univerzální aplikace pro Windows na zařízen�
 > [!NOTE]
 > Zařízení HoloLens se systémem Windows 10 Holographic for Business 1607 nepodporují online licencované aplikace z Microsoft Storu pro firmy. Další informace najdete v tématu [Instalace aplikací na HoloLens](https://docs.microsoft.com/en-us/hololens/hololens-install-apps).
 
+## <a name="device-actions"></a>Akce zařízení
+Intune obsahuje několik integrovaných akcí, které správcům IT umožňují provádět různé úlohy, a to buď místně na zařízení, nebo vzdáleně prostřednictvím Intune na portálu Azure Portal. Uživatelé můžou také z Portálu společnosti Intune vydat vzdálený příkaz zařízením v osobním vlastnictví, která jsou registrovaná v Intune.
+
+Když používáte zařízení s Windows Holographic for Business, můžete používat tyto akce: 
+
+- **[Obnovení továrního nastavení](devices-wipe.md#factory-reset)**: Akce **Obnovení továrního nastavení** odebere zařízení z Intune a obnoví ho zpět do výchozího továrního nastavení. Tuto akci použijte v případě, že zařízení dáváte novému uživateli nebo dojde ke ztrátě či odcizení zařízení.
+
+- **[Odebrání firemních dat](devices-wipe.md#remove-company-data)**: Akce **Odebrat firemní data** odebere zařízení z Intune a odebere data a nastavení spravovaných aplikací a e-mailové profily, které mu přiřadila služba Intune. Osobní data uživatele zůstanou na zařízení.
+
+- **[Synchronizace zařízení za účelem získání nejnovějších zásad a akcí](device-sync.md)**: Akce **Synchronizovat** vynutí okamžité připojení zařízení k Intune. Jakmile se zařízení připojí, začne okamžitě přijímat veškeré čekající akce nebo zásady, které mu byly přiřazeny. Tato funkce vám může pomoct ověřit přiřazené zásady nebo s těmito zásadami vyřešit potíže, aniž byste čekali na další naplánované vrácení se změnami.
+
+**Pokud se chcete dozvědět něco o správě zařízení pomocí portálu Azure Portal, najdete užitečné informace v článku [Co je správa zařízení v Microsoft Intune](device-management.md)**. 
 
 ## <a name="device-categories-and-groups"></a>Kategorie a skupiny zařízení
 **[Zařazení zařízení do skupin](device-group-mapping.md)**

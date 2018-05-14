@@ -17,11 +17,11 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 9f9051fb393c82031d581f7fec731a3b148cbf2e
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 89a69f7d5cda31658cc9faf068a2a37698fdd93c
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remove-your-windows-device-from-intune"></a>Odebrání zařízení s Windows z Intune
 
@@ -61,7 +61,7 @@ Pokud jste zařízení s Windows zaregistrovali do Intune, ale nechcete ho použ
 
 Aplikace Portál společnosti ukládá do zařízení s Windows dva druhy dat:
 
--   **Diagnostické protokoly**: Standardní data o aktivitě aplikací, která shromažďuje Microsoft, třeba jak dlouho byla aplikace otevřena nebo jestli havarovala, se vymažou automaticky při odebrání zařízení z webu Portál společnosti.
+-   **Diagnostické protokoly**: Standardní data o aktivitě aplikací, která shromažďuje Microsoft, například jak dlouho byla aplikace otevřená nebo zda se ukončila chybově, se vymažou automaticky při odinstalaci aplikaci Portál společnosti.
 -   **Mezipaměť aplikace**: Do ní se ukládají některé podpůrné soubory, které aplikace potřebuje k práci, například ikony a nastavení.
 
 K úplnému odstranění těchto informací je potřeba provést několik kroků.

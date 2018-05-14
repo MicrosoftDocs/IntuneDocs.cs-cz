@@ -14,11 +14,11 @@ ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9f9cc117925f59c9fb7c55d0ff10aedf09d26f93
-ms.sourcegitcommit: b727b6bd6f138c5def7ac7bf1658068db30a0ec3
+ms.openlocfilehash: 5c9f81761e7e24393471f44da4cf619f017e9bbd
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Xamarinové vazby sady Microsoft Intune App SDK
 
@@ -74,35 +74,35 @@ Přečtěte si [licenční podmínky](https://github.com/msintuneappsdk/intune-a
        IntuneMAMEnrollmentManager.Instance.LoginAndEnrollAccount([NullAllowed] string identity);
       ```
 
-## <a name="enabling-app-protection-policies-in-your-android-mobile-app"></a>Povolení zásad ochrany aplikací v mobilní aplikaci pro Android
-Do svého projektu Xamarin.Android přidejte [balíček NuGet Microsoft.Intune.MAM.Xamarin.Android](https://www.nuget.org/packages/Microsoft.Intune.MAM.Xamarin.Android).
+## <a name="enabling-intune-app-protection-policies-in-your-android-mobile-app"></a>Povolení zásad Intune App Protection v mobilní aplikaci pro Android
 
-U aplikací Xamarin.Android je potřeba si přečíst [příručku pro vývojáře, kteří používají sadu Intune App SDK pro Android](app-sdk-android.md) a důsledně se řídit jejími pokyny, zejména pokyny k nahrazení tříd, metod a aktivit ekvivalentními prvky MAM podle [tabulky](app-sdk-android.md#replace-classes-methods-and-activities-with-their-mam-equivalent) v této příručce. 
+### <a name="xamarinandroid-integration"></a>Integrace Xamarin.Android
+
+1. Do svého projektu Xamarin.Android přidejte nejnovější verzi [balíčku NuGet Microsoft.Intune.MAM.Xamarin.Android](https://www.nuget.org/packages/Microsoft.Intune.MAM.Xamarin.Android). Ten vám poskytne potřebné odkazy, abyste mohli aplikaci v Intune povolit.
+
+2. Přečtěte si celou [příručku pro vývojáře, kteří používají sadu Intune App SDK pro Android](app-sdk-android.md), a zvláštní pozornost věnujte těmto částem:
+    1. [Celá část věnovaná nahrazením tříd a metod](app-sdk-android.md#replace-classes-methods-and-activities-with-their-mam-equivalent). 
+    2. [Část věnovaná MAMApplication](app-sdk-android.md#mamapplication). Zkontrolujte, že podtřída je správně doplněna o atribut `[Application]` a že přepisuje konstruktor `(IntPtr, JniHandleOwnership)`.
+    3. [Část věnovaná integraci ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal), pokud se vaše aplikace ověřuje ve službě AAD.
+    4. [Část věnovaná registraci MAM-WE](app-sdk-android.md#app-protection-policy-without-device-enrollment), pokud plánujete, že vaše aplikace bude získávat zásady ze služby MAM.
 
 > [!NOTE]
-> Pokud vaše aplikace nedefinuje třídu `android.app.Application`, budete ji muset vytvořit a zajistit, abyste dědili z `MAMApplication`.
-
-> [!NOTE]
-> Když se ve vazbách `Microsoft.Intune.MAM.Xamarin.Android` pokoušíte najít odpovídající rozhraní API z [příručky pro vývojáře, kteří používají sadu Intune App SDK pro Android](app-sdk-android.md) nebo se podle této příručky pokoušíte převést fragmenty kódu, mějte na paměti, že xamarinový generátor vazeb v rozhraní API Androidu podstatně mění následující položky:
-> * Všechny identifikátory se převedou na formát PascalCase (com.microsoft.foo -> Com.Microsoft.Foo).
+> Když se ve vazbách `Microsoft.Intune.MAM.Xamarin.Android` pokoušíte najít odpovídající rozhraní API z [příručky pro vývojáře, kteří používají sadu Intune App SDK pro Android](app-sdk-android.md), nebo se z této příručky pokoušíte převést fragmenty kódu, mějte na paměti, že xamarinový generátor vazeb v rozhraní API Androidu podstatně mění následující položky:
+> * Všechny identifikátory se převedou na formát PascalCase (com.foo.bar -> Com.Foo.Bar).
 > * Všechny operace get/set se převedou na operace vlastností (např. Foo.getBar() -> Foo.Bar, Foo.setBar("zap") -> Foo.Bar = "zap").
 > * Všechna rozhraní mají před názvem znak „I“ (FooInterface -> IFooInterface).
 
-Pro aplikace, které využívají Xamarin.Forms nebo jiná uživatelská rozhraní nabízíme nástroj, který má název `Microsoft.Intune.MAM.Remapper`. Nástroj provede nahrazení třídy za vás. Pokud ho chcete použít, postupujte takto:
+### <a name="xamarinforms-integration"></a>Integrace Xamarin.Forms
 
-1.  Přidejte do svého projektu balíček NuGet [Microsoft.Intune.MAM.Remapper.Tasks](https://www.nuget.org/packages/Microsoft.Intune.MAM.Remapper.Tasks).
+**Kromě provedení všech výše uvedených kroků** poskytujeme pro aplikace `Xamarin.Forms` balíček `Microsoft.Intune.MAM.Remapper`. Tento balíček za vás nahradí třídy a vloží třídy `MAM` do hierarchie běžně používaných tříd `Xamarin.Forms`, například `FormsAppCompatActivity` a `FormsApplicationActivity`, abyste tyto třídy mohli i nadále používat tak, že budete poskytovat přepsání ekvivalentních funkcí MAM, jako jsou `OnMAMCreate` a `OnMAMResume`. Pokud ho chcete použít, postupujte takto:
 
-2.  Nastavte sestavovací akci souboru `remapping-config.json`, který je součástí balíčku NuGet, na **RemappingConfigFile**. Obsažený soubor `remapping-config.json` funguje jenom s Xamarin.Forms. V případě jiných architektur uživatelského rozhraní si přečtěte soubor Readme, který je součástí balíčku NuGet Remapper.
+1.  Přidejte do svého projektu balíček NuGet [Microsoft.Intune.MAM.Remapper.Tasks](https://www.nuget.org/packages/Microsoft.Intune.MAM.Remapper.Tasks). Tím se automaticky přidají xamarinové vazby sady Intune APP SDK, pokud jste je ještě nezahrnuli.
 
-3.  Do funkce OnMAMCreate v aplikaci MAM přidejte volání Xamarin.Forms.Forms.Init(Context, Bundle), protože správa Intune umožňuje spustit aplikaci na pozadí.
-
-4.  Proveďte zbývající kroky podle [příručky pro vývojáře, kteří používají sadu Intune App SDK pro Android](app-sdk-android.md), které u vaší aplikace přicházejí v úvahu.
+2.  Přidejte volání `Xamarin.Forms.Forms.Init(Context, Bundle)` ve funkci `OnMAMCreate` třídy `MAMApplication`, kterou jste vytvořili v kroku 2.2 výše. To je nutné, protože se správou přes Intune se aplikace může spustit i na pozadí.
 
 > [!NOTE]
-> Sestavení souborem remapping-config.json můžete někdy resetovat při aktualizaci balíčku Microsoft.Intune.MAM.Remapper.Tasks, kvůli kterému by jinak sestavení selhala.
+> Tato operace znovu zapíše závislost, kterou Visual Studio používá pro automatické dokončování Intellisense, a proto možná budete muset po prvním spuštění nástroje pro přemapování restartovat Visual Studio, aby funkce Intellisense správně rozpoznala změny. 
 
-## <a name="next-steps"></a>Další kroky
-
-Dokončili jste základní kroky při nastavení aplikace pro správu v Intune. Teď budete pokračovat kroky uvedenými v integračních příručkách ke každé platformě uvedené výše.
+## <a name="support"></a>Support
 
 Pokud je vaše organizace stávajícím zákazníkem Intune, obraťte se na zástupce podpory Microsoft a požádejte ho o otevření lístku podpory a vytvoření problému na [stránce problémů s Githubem](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues), abychom vám mohli co nejrychleji pomoci. 

@@ -1,5 +1,5 @@
 ---
-title: Na zařízení s Androidem je potřeba nainstalovat SandBlast Mobile Protect | Dokumentace Microsoftu
+title: Na zařízení s Androidem je potřeba nainstalovat SandBlast Mobile Protect | Microsoft Docs
 description: Zjistěte, jak nainstalovat SandBlast Mobile Protect na zařízení s Androidem.
 keywords: ''
 author: lenewsad
@@ -15,11 +15,11 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 889fb53fc215763b061f5165425df7b0b9960702
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: e453cf1af0d065a367d636c3e6cc8e8ddd79cfda
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="you-need-to-install-sandblast-mobile-protect-on-your-android-device"></a>Na zařízení s Androidem je potřeba nainstalovat SandBlast Mobile Protect
 
@@ -29,7 +29,7 @@ Pokud máte s instalací potíže, zkuste provést kroky k odstranění potíž�
 
 **Co je potřeba udělat:**
 
-1. Tažením shora obrazovky otevřete panel oznámení a klepněte na **Požadovaná aplikace – Instalovat Skycure z Play Storu**. Tuto možnost najdete také v aplikaci Portál společnosti v části __Podrobnosti dodržování předpisů__.
+1. Tažením shora obrazovky otevřete panel oznámení a klepněte na **Požadovaná aplikace – Instalovat SandBlast Mobile Protect z Play Storu**. Tuto možnost najdete také v aplikaci Portál společnosti v části __Podrobnosti dodržování předpisů__.
 
 2. Potom se přesunete na instalační stránku aplikace SandBlast Mobile Protect v obchodě Play. Nainstalujte aplikaci SandBlast Mobile Protect a potom klepněte na **PŘIJMOUT**, abyste umožnili aplikaci SandBlast Mobile Protect přístup k vašemu zařízení.
 

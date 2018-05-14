@@ -14,11 +14,11 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e4437e3dbf7e942f084a0c441af7946b53c6d54d
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: f0fcd4b04541593f41abb35be6558be2375a0131
+ms.sourcegitcommit: 0f1a5d6e577915d2d748d681840ca04a0a2604dd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
 
@@ -67,10 +67,9 @@ Sady Intune App SDK pro nativní systémy iOS a Android jsou hostované v účtu
 * [Intune App SDK pro iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios)
 * [Intune App SDK pro Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android)
 
-Pokud je vaše aplikace vytvořená v Xamarinu nebo Cordově, použijte prosím následující varianty sady SDK:
+Pokud je vaše aplikace vytvořená v Xamarinu, použijte tuto variantu sady SDK:
 
 * [Xamarinové vazby sady Intune App SDK](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
-* [Modul plug-in Cordova sady Intune App SDK](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam)
 
 Doporučujeme, abyste si zaregistrovali na GitHubu účet, který je možné použít k operacím fork a pull v našich úložištích. GitHub vývojářům umožňuje komunikovat s naším produktovým týmem, hlásit problémy a dostávat rychlé odpovědi, zobrazit poznámky k verzi a posílat připomínky do Microsoftu. S dotazy ke GitHubu pro Intune App SDK se obraťte na msintuneappsdk@microsoft.com.
 
@@ -81,8 +80,6 @@ Budete potřebovat jednu z následujících příruček pro vývojáře, která 
 * **[Příručka pro vývojáře sady Intune App SDK pro iOS](app-sdk-ios.md)**: Tento dokument vás detailně provede procesem povolování vaší nativní aplikace pro iOS pomocí Intune App SDK.
 
 * **[Příručka pro vývojáře sady Intune App SDK pro Android](app-sdk-android.md)**: Tento dokument vás detailně provede procesem povolování vaší nativní aplikace pro Android pomocí Intune App SDK.
-
-* **[Příručka k modulu plug-in Cordova sady Intune App SDK](app-sdk-cordova.md)**: Tento dokument vám pomůže vytvářet aplikace pro iOS a Android pomocí zásad ochrany aplikací Cordova for Intune.
 
 * **[Příručka ke xamarinovým vazbám sady Intune App SDK](app-sdk-xamarin.md)**: Tento dokument vám pomůže vytvářet aplikace pro iOS a Android pomocí zásad ochrany aplikací Xamarin pro Intune.
 

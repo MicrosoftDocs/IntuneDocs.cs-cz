@@ -5,18 +5,18 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 4/9/2018
+ms.date: 5/1/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5b0784aeb1dc1022b4be824c2f858f9525d03918
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: e8a1abb4229b3e6b4c91cfd49b4f66dbe739ea7d
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="device-restriction-settings-for-windows-holographic-for-business-in-intune"></a>Nastavení omezení zařízení s Windows Holographic for Business v Intune
 
@@ -68,7 +68,7 @@ Následující nastavení omezení zařízení se podporují na zařízeních s 
 
 - **Změny systémového času** – Zabrání koncovému uživateli ve změně data a času zařízení.
 
-## <a name="kiosk-preview"></a>Beznabídkový režim (Preview)
+## <a name="kiosk"></a>Kiosk
 
 Ve veřejných terminálech obvykle běží konkrétní aplikace. Uživatelé nemají v zařízení přístup k žádným prvkům ani funkcím mimo aplikaci veřejného terminálu.
 
@@ -76,6 +76,9 @@ Ve veřejných terminálech obvykle běží konkrétní aplikace. Uživatelé ne
 
   - **Nenakonfigurováno** (výchozí) – Zásady nepovolují režim veřejného terminálu. 
   - **Veřejný terminál s jednou aplikací** – Profil povoluje v zařízení spouštět pouze jednu aplikaci. Jakmile se uživatel přihlásí, spustí se daná aplikace. Tento režim zároveň brání uživateli v otevírání nových aplikací nebo změně spuštěné aplikace.
+  - **Veřejný terminál s více aplikacemi** – Profil povoluje v zařízení spouštět více aplikací. Uživatel má k dispozici pouze aplikace, které přidáte. Veřejný terminál s více aplikacemi, neboli zařízení s pevně stanoveným účelem, umožňuje poskytovat přehledné prostředí jednotlivým uživatelům, protože jim povoluje přístup pouze k aplikacím, které potřebují. Nezobrazuje aplikace, které nepotřebují. 
+  
+    Když přidáváte aplikace pro prostředí veřejného terminálu s více aplikacemi, potřebujete také soubor rozložení nabídky Start. [Soubor rozložení nabídky Start](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-file-for-intune) obsahuje ukázkový soubor XML, který můžete použít v Intune. 
 
 #### <a name="single-app-kiosks"></a>Veřejné terminály s jednou aplikací
 Zadejte následující nastavení:

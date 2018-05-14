@@ -15,11 +15,11 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 88b8d9aa8e65e0238ab634b23836ee9c02234dd3
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 8c54dd0180788a83ee01607e0e6d895fdb9a85ab
+ms.sourcegitcommit: 0f1a5d6e577915d2d748d681840ca04a0a2604dd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune
 
@@ -155,6 +155,16 @@ Když přidáte aplikaci do Intune, budete mít možnost vybrat požadovanou kat
 ## <a name="apps-that-are-added-automatically-by-intune"></a>Aplikace přidané automaticky službou Intune
 
 Dříve služba Intune obsahovala řadu integrovaných aplikací, které jste mohli rychle přiřadit. Na základě názorů zákazníků Intune jsme tento seznam odebrali a integrované aplikace se už nezobrazují. Pokud jste už ale nějaké integrované aplikace přiřadili, budou se v seznamu aplikací zobrazovat i nadále. Aplikace můžete dál přiřazovat podle potřeby.
+
+## <a name="installing-updating-or-removing-required-apps"></a>Instalace, aktualizace a odebrání požadovaných aplikací
+
+Intune automaticky přeinstaluje, aktualizuje nebo odebere požadovanou aplikaci během 24 hodin a nebude čekat na 7denní cyklus opakovaného vyhodnocení.
+
+Intune automaticky přeinstaluje, aktualizuje nebo odebere požadovanou aplikaci na základě těchto podmínek:
+- Pokud koncový uživatel odinstaluje aplikaci, jejíž instalaci na jeho zařízení požadujete, Intune automaticky tuto aplikaci přeinstaluje po uplynutí naplánované doby.
+- Pokud se požadovanou aplikaci nepodaří nainstalovat nebo aplikace na zařízení z nějakého důvodu chybí, Intune vyhodnotí dodržování předpisů a přeinstaluje aplikaci po uplynutí naplánované doby.  
+- Správce nastaví aplikaci pro skupinu uživatelů jako dostupnou a koncoví uživatelé si ji nainstalují na zařízení z Portálu společnosti. Později správce aktualizuje aplikaci z v1 na v2. Intune aktualizuje aplikaci, jakmile uplyne naplánovaná doba, za předpokladu, že je na zařízení některá z předchozích verzí dané aplikace.
+- Pokud se správce rozhodne aplikaci odinstalovat, ale aplikaci se nepodaří ze zařízení odinstalovat, Intune vyhodnotí dodržování předpisů a odinstaluje aplikaci po uplynutí naplánované doby.   
 
 ## <a name="next-steps"></a>Další kroky
 

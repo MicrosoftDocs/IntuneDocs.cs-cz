@@ -5,7 +5,7 @@ description: Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Info
 keywords: ''
 author: msmimart
 ms.author: mimart
-manager: doubeby
+manager: dougeby
 ms.date: 03/02/2018
 ms.topic: article
 ms.prod: ''
@@ -15,11 +15,11 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7273a29eea9cd9b55e998302de2bc57d26d34e04
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: f08dde25de5962eaaa11487a367b2895c6c047d4
+ms.sourcegitcommit: 2b5d88c434bda7f1cdc32d1ccacc6b341a9a399b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune
 
@@ -33,7 +33,7 @@ Musíte porozumět několika konceptům při přidání zásady WIP:
 
 ### <a name="list-of-allowed-and-exempt-apps"></a>Seznamy povolených aplikací a aplikací s výjimkou
 
--   **Povolené aplikace:** Tyto aplikace musí tuto zásadu dodržovat.
+-   **Chráněné aplikace**: Jedná se o aplikace, které musí tuto zásadu dodržovat.
 
 -   **Aplikace s výjimkou:** Tyto aplikace mají z této zásady výjimku a můžou k podnikovým datům přistupovat bez omezení.
 
@@ -63,7 +63,7 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zása
 2. Zvolte **Všechny služby** > **Intune**.
 3. V okně **Microsoft Intune** vyberte **Mobilní aplikace**.
 4. V okně **Mobilní aplikace** vyberte **Zásady ochrany aplikací**.
-5. Kliknutím na **Přidat zásadu** zobrazte okno **Přidat zásadu**.
+5. Vyberte **Přidat zásadu**, aby se zobrazilo okno **Přidat zásadu**.
 6. Přidejte následující hodnoty:
     - **Název:** Zadejte název nové zásady (povinné).
     - **Popis:** Volitelně zadejte popis.
@@ -71,7 +71,7 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zása
     - **Stav registrace:** Jako stav registrace pro vaši zásadu zvolte **Bez registrace**.
 7.  Zvolte **Vytvořit**. Zásada se vytvoří a objeví se v tabulce v okně **Zásady ochrany aplikací**.
 
-## <a name="to-add-recommended-apps-to-your-allowed-apps-list"></a>Přidání doporučených aplikací do seznamu Povolené aplikace
+## <a name="to-add-recommended-apps-to-your-protected-apps-list"></a>Přidání doporučených aplikací do seznamu chráněných aplikací
 
 1. V okně **Microsoft Intune** vyberte **Mobilní aplikace**.
 2. V okně **Mobilní aplikace** vyberte **Zásady ochrany aplikací**.
@@ -82,7 +82,7 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zása
 7. Klikněte na **OK**. Okno **Chráněné aplikace** se aktualizuje a zobrazí se v něm všechny vaše vybrané aplikace.
 8. Klikněte na **Uložit**.
 
-## <a name="add-a-store-app-to-your-allowed-apps-list"></a>Přidání aplikace ze Storu do seznamu Povolené aplikace
+## <a name="add-a-store-app-to-your-protected-apps-list"></a>Přidání aplikace ze Storu do seznamu chráněných aplikací
 
 **Přidání aplikace ze Storu**
 1. V okně **Microsoft Intune** vyberte **Mobilní aplikace**.
@@ -95,7 +95,7 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zása
 9. Klikněte na **OK**. Okno **Chráněné aplikace** se aktualizuje a zobrazí se v něm všechny vaše vybrané aplikace.
 10. Klikněte na **Uložit**.
 
-## <a name="add-a-desktop-app-to-your-allowed-apps-list"></a>Přidání desktopové aplikace do seznamu Povolené aplikace
+## <a name="add-a-desktop-app-to-your-protected-apps-list"></a>Přidání desktopové aplikace do seznamu chráněných aplikací
 
 **Přidání desktopové aplikace**
 1. V okně **Microsoft Intune** vyberte **Mobilní aplikace**.
@@ -118,7 +118,7 @@ Kurzy k WIP jsou sestava umožňující monitorovat vaše aplikace podporující
 <!-- 1631908 -->
 Kromě zobrazování informací o aplikacích s podporou WIP můžete zobrazit souhrn zařízení, která sdílí pracovní data s weby. Pomocí těchto informací můžete určit, které weby by se měly přidat do zásad WIP pro skupiny a uživatele. Souhrn zobrazuje adresy URL webů, ke kterým mají přístup aplikace podporující WIP.
 
-Když pracujete s aplikacemi podporujícími WIP a s neznámými aplikacemi v rámci WIP, doporučujeme začít s režimem **Tiché** nebo **Povolit potlačení** a u malé skupiny ověřit, jestli máte v seznamu povolených aplikací správné aplikace. Až budete hotovi, můžete režim změnit na konečnou zásadu vynucení **Blokovat**.
+Když pracujete s aplikacemi podporujícími WIP a s neznámými aplikacemi v rámci WIP, doporučujeme začít s režimem **Tiché** nebo **Povolit potlačení** a u malé skupiny ověřit, jestli máte v seznamu chráněných aplikací správné aplikace. Až budete hotovi, můžete režim změnit na konečnou zásadu vynucení **Blokovat**.
 
 ### <a name="what-are-the-protection-modes"></a>Co jsou režimy ochrany?
 
