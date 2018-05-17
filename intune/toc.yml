@@ -170,10 +170,12 @@
               href: windows-bulk-enroll.md
             - name: Program Windows AutoPilot Deployment
               href: enrollment-autopilot.md
-            - name: Obrazovka stavu registrace
-              href: windows-enrollment-status.md
         - name: Nastavení registrace zařízení s Androidem
-          href: android-enroll.md
+          items:
+            - name: Nastavení registrace zařízení s Androidem
+              href: android-enroll.md
+            - name: Registrace mobilního zařízení Samsung Knox
+              href: android-samsung-knox-mobile-enroll.md
         - name: Nastavení registrace zařízení s iOSem
           href: ios-enroll.md
           items:
@@ -462,6 +464,8 @@
           href: conditional-access-intune-common-ways-use.md
         - name: Instalace konektoru Exchange On-Premises Connector
           href: exchange-connector-install.md
+        - name: Instalace konektoru služby Exchange
+          href: exchange-service-connector-configure.md
         - name: Vytvoření a přiřazení zásad podmíněného přístupu
           href: conditional-access-exchange-create.md
         - name: "Změna přiřazení zásad podmíněného přístupu z\_klasického portálu Intune"
@@ -511,7 +515,7 @@
                   href: mtd-device-compliance-policy-create.md
                 - name: Povolení MTD v Intune
                   href: mtd-connector-enable.md
-        - name: Rozšířená ochrana před internetovými útoky
+        - name: Ochrana ATP v programu Windows Defender
           href: advanced-threat-protection.md
         - name: Řízení přístupu k síti
           href: network-access-control-integrate.md
@@ -655,8 +659,6 @@
           href: app-wrapper-prepare-android.md
         - name: Intune App SDK pro Android
           href: app-sdk-android.md
-        - name: Modul plug-in Cordova sady Intune App SDK
-          href: app-sdk-cordova.md
         - name: Komponenta Xamarin sady Intune App SDK
           href: app-sdk-xamarin.md
     - name: Použití datového skladu Intune
@@ -700,7 +702,7 @@
               href: reports-ref-user-device.md
             - name: Referenční informace pro entitu uživatele
               href: reports-ref-user.md
-        - name: Přesunutí vašich dat účtu datového skladu Intune
+        - name: Přesunutí dat účtu datového skladu Intune
           href: data-warehouse-account-move.md
     - name: Používání Azure AD pro přístup k rozhraním Intune API v Microsoft Graphu
       href: intune-graph-apis.md
