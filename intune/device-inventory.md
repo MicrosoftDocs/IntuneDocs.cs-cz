@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/02/2018
+ms.date: 05/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a40b855d1dbaeece1dc91648866285c0a01fb338
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: f66c0695c7e3d1f4bb7a5ca3abceeb13f6af41f2
+ms.sourcegitcommit: 3c4ea8d6809a63042705b5ed4f25ba80f522070e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
 
@@ -46,6 +46,16 @@ V tomto článku se dozvíte, jak si můžete zobrazit všechna zařízení a je
    - Část **Konfigurace zařízení** obsahuje všechny zásady konfigurace přiřazené zařízení a informaci, jestli byly zásady úspěšné.
 
 Intune shromažďuje seznam aplikací jenom na zařízeních vlastněných společností. Na osobních zařízeních se aplikace nekontrolují. V případě počítačů s Windows 10 se uvádí jenom moderní aplikace na zařízeních vlastněných společností. Intune neshromažďuje informace o aplikacích Win32 na zařízeních. V závislosti na operátorovi, kterého zařízení používají, se některé aplikace nemusí shromažďovat.
+
+|Platforma|Pro zařízení v osobním vlastnictví|Pro zařízení ve vlastnictví společnosti|  
+|--------------|---------------------------------|--------------------------------|  
+|Windows 10 (bez klienta Configuration Manageru)|Pouze spravované aplikace|Pouze spravované aplikace|
+|Windows 8.1 (bez klienta Configuration Manageru)|Pouze spravované aplikace|Pouze spravované aplikace|  
+|Windows Phone 8|Pouze spravované aplikace|Pouze spravované aplikace|  
+|Windows RT|Pouze spravované aplikace|Pouze spravované aplikace|  
+|iOS|Pouze spravované aplikace|Všechny aplikace instalované na zařízení|
+|macOS|Všechny aplikace instalované na zařízení|Všechny aplikace instalované na zařízení|  
+|Android|Pouze spravované aplikace|Všechny aplikace instalované na zařízení|  
 
 ## <a name="next-steps"></a>Další kroky
 Podívejte se, jaké další akce [správy zařízení](device-management.md) můžete provádět pomocí Intune.

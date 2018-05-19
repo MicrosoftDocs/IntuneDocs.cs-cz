@@ -1,5 +1,5 @@
 ---
-title: Odeslání protokolů firemní podpoře pro zařízení s Windows 10 | Dokumentace Microsoftu
+title: Odeslání protokolů firemní podpoře pro zařízení s Windows 10 | Microsoft Docs
 description: Registrace zařízení s Windows 10 1511 v Intune
 keywords: ''
 author: lenewsad
@@ -17,15 +17,18 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: f3948ca1dd68e34997a21444f271ae31407d6508
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: ea17263ebd6e836cad154ff2b67229c1c3ae0ed6
+ms.sourcegitcommit: b0ad42fe5b5627e5555b2f9e5bb81bb44dbff078
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="send-logs-to-your-company-support-from-the-company-portal-app-for-windows-10"></a>Odeslání protokolů firemní podpoře z aplikace Portál společnosti pro Windows 10
 
 Pokud při použití aplikace Portál společnosti v zařízení s Windows 10 dojde k chybě, můžete firemní podpoře pomoct potíže vyřešit tak, že jí pošlete e-mailem informace o této chybě. Tyto informace se ukládají na zařízení ve speciálním dokumentu s názvem _diagnostický protokol_.
+
+> [!Note]       
+> Portál společnosti pro Windows 10 bude odesílat protokoly aplikace přímo Microsoftu, když uživatel iniciuje pracovní postup pro získání pomoci s problémem. Usnadní se tak řešení problémů, které jsou předávány Microsoftu.
 
 1. Otevřete aplikaci **Portál společnosti**.
 2. Vyberte ozubené kolečko **Nastavení** a pak **Poslat protokoly**.

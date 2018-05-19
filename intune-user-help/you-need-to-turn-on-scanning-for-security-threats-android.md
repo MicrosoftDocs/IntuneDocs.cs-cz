@@ -1,6 +1,6 @@
 ---
-title: Je potřeba zapnout vyhledávání bezpečnostních hrozeb | Dokumentace Microsoftu
-description: ''
+title: Musíte zapnout vyhledávání bezpečnostních hrozeb
+description: Informace o tom, jak povolit vyhledávání bezpečnostních hrozeb na zařízení
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -15,16 +15,20 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 403b3b50cd8fba7d8d0c8ee6fd6f20d0d5561b76
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: cf2413ee879cf4a6cb2742d34f452105057ccf59
+ms.sourcegitcommit: c1631ad8feba6c6fd03698ab20836b2e5d8a78d2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/12/2018
 ---
-# <a name="you-need-to-make-your-device-able-to-scan-for-security-threats"></a>Potřebujete, aby vaše zařízení mohlo vyhledávat bezpečnostní hrozby.
+# <a name="enable-security-threat-scans-on-your-device"></a>Povolení vyhledávání bezpečnostních hrozeb na zařízení 
+Pokud nechtěně nainstalujete nebezpečnou aplikaci, můžete ohrozit data zařízení. Pokud chcete data na svém zařízení chránit, doporučujeme: 
 
-Do zařízení s Androidem si můžete stáhnout a nainstalovat aplikace, které umí plnit nejrůznější úkoly. Ne všechny aplikace jsou ale stejné a některé můžou způsobovat problémy. Obecně platí, že byste si aplikace měli stahovat jenom z ověřených zdrojů, jako je obchod Google Play. Vaše firemní podpora rozhodla, že data na vašem zařízení mají být chráněná také tím, že v aplikacích, které chcete instalovat, má Google vyhledávat možné bezpečnostní hrozby.
+* Stahovat aplikace pouze z ověřených zdrojů, jako je obchod Google Play  
+* Povolit vyhledávání bezpečnostních hrozeb na zařízení Tato vyhledávání provádí Google a ověřuje tak, že jsou aplikace pro instalaci bezpečné.  
 
-Toto vyhledávání můžete zapnout tak, že přejdete na **Nastavení** > **Google** > **Zabezpečení**, a zapnete možnost **Vyhledat v zařízení bezpečnostní hrozby**.
+Pokud chcete vyhledávání na zařízení povolit, přejděte na **Nastavení** > **Google** > **Zabezpečení**. Zapněte nastavení **Vyhledat bezpečnostní hrozby na zařízení**.  
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Na některých zařízeních Samsung můžete toto nastavení najít v **Nastavení** > **Google** > **Zabezpečení** > **Google Play Protect**.
+
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog). 

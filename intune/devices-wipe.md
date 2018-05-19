@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 05/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,24 +13,35 @@ ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f7d3e768e740866d69d675a962dfca6d98c85568
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 84fc162eda25970c14ed1014b9f67ef3e782c663
+ms.sourcegitcommit: 7e80388b6223c9a632c5729bf9b157f848fe52cc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Odebrání zařízení pomocí obnovení továrního nastavení nebo odebrání firemních dat
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Zařízení, která už nepotřebujete, která využíváte k jinému účelu nebo která se ztratila, můžete z Intune odebrat. Můžete k tomu použít akce **Odebrat firemní data** nebo **Obnovení továrního nastavení**. Uživatelé můžou také z Portálu společnosti Intune vydat vzdálený příkaz zařízením v osobním vlastnictví, která jsou registrovaná v Intune.
+Zařízení, která už nepotřebujete, která využíváte k jinému účelu nebo která se ztratila, můžete z Intune odebrat prostřednictvím akce **Odebrání firemních dat** nebo **Obnovení továrního nastavení**. Uživatelé můžou také z Portálu společnosti Intune vydat vzdálený příkaz zařízením v osobním vlastnictví, která jsou registrovaná v Intune.
 
 > [!NOTE]
 > Před odebráním uživatele z Azure Active Directory (Azure AD) použijte akce **Obnovení továrního nastavení** nebo **Odebrat firemní data** pro všechna zařízení přidružená k tomuto uživateli. Pokud z Azure AD odeberete uživatele se spravovanými zařízeními, nemůže už Intune těmto zařízením vydat příkaz k obnovení továrního nastavení nebo odebrání firemních dat.
 
 ## <a name="factory-reset"></a>Obnovení továrního nastavení
 
-Akce **Obnovení továrního nastavení** obnoví výchozí tovární nastavení zařízení. Obnovení továrního nastavení odebere všechna firemní a uživatelská data a nastavení. Toto zařízení se odebere ze správy v Intune. Obnovení továrního nastavení je vhodné, když chcete zařízení resetovat, abyste ho mohli dát novému uživateli, nebo když došlo k jeho ztrátě nebo odcizení. Při zvolení **Obnovení továrního nastavení** buďte obezřetní. Data v zařízení není možné obnovit.
+Akce **Obnovení továrního nastavení** obnoví výchozí tovární nastavení zařízení. Data uživatele se zachovají nebo vymažou v závislosti na tom, jestli zaškrtnete políčko **Zachovat stav registrace a uživatelský účet**.
+
+|Akce Obnovení továrního nastavení|**Zachovat stav registrace a uživatelský účet**|Odebráno ze správy v Intune|Popis|
+|:-------------:|:------------:|:------------:|------------|
+|**Obnovení továrního nastavení**| Není zaškrtnuto | Ano | Vymaže všechny uživatelské účty, data, zásady MDM a nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
+|**Obnovení továrního nastavení**| Zaškrtnuto | Ne | Vymaže všechny zásady MDM. Zachová uživatelské účty a data. Obnoví nastavení uživatele zpět na výchozí nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
+
+Pro Windows 10 verze 1709 nebo novější máte také možnost **Zachovat stav registrace a uživatelský účet**.
+
+Zásady MDM se znovu použijí při příštím připojení zařízení k Intune.
+
+Obnovení továrního nastavení je vhodné, když chcete zařízení resetovat, abyste ho mohli dát novému uživateli, nebo když došlo k jeho ztrátě nebo odcizení. Při zvolení **Obnovení továrního nastavení** buďte obezřetní. Data v zařízení není možné obnovit.
 
 ### <a name="factory-reset-a-device"></a>Obnovení továrního nastavení zařízení
 

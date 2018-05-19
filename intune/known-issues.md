@@ -14,11 +14,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b8ef4688a5d1a98a27a2fcb6fc5b6ce456b5fd25
-ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
+ms.openlocfilehash: f49b5050f4ce182699f0955bed6224309a4d7c7c
+ms.sourcegitcommit: c1631ad8feba6c6fd03698ab20836b2e5d8a78d2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Známé problémy v Microsoft Intune
 
@@ -61,6 +61,8 @@ Hromadně zakoupené aplikaci pro iOS se zobrazují a jde je přiřadit pouze ke
 ### <a name="multiple-copies-of-the-same-ios-volume-purchase-program-are-uploaded"></a>Nahrálo se více kopií jednoho hromadně zakoupeného programu pro iOS
 Neklikejte u jednoho tokenu VPP na tlačítko **Nahrát** vícekrát. Pokud to uděláte, nahrají se duplicitní tokeny VPP a aplikace se u stejného tokenu VPP budou synchronizovat vícekrát.
 
+### <a name="some-managed-browser-traffic-not-routed-through-azure-app-proxy----2463492---"></a>Část provozu Managed Browseru se nesměruje prostřednictvím Proxy aplikací Azure <!-- 2463492 -->
+Existuje známý problém s integrací Managed Browseru a Proxy aplikací, kdy se určitý terciární provoz (například volání jazyka JavaScript nebo AJAX) nesměruje prostřednictvím Proxy aplikací Azure. Toto je známý problém v aktuální verzi.  
 
 <!-- ## Groups -->
 

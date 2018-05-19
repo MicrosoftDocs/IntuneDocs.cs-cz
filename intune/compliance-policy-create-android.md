@@ -14,11 +14,11 @@ ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: afc8edb38b667d744bb586d1ed5c82df8ab10f49
-ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
+ms.openlocfilehash: 559fd83d83c7312e0efe0d2c3f6bb7e5ec596a1b
+ms.sourcegitcommit: 6a9830de768dd97a0e95b366fd5d2f93980cee05
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="add-a-device-compliance-policy-for-android-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s Androidem v Intune
 
@@ -96,16 +96,16 @@ Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení 
 
 - **Vyžadovat heslo k odemknutí mobilních zařízení**: **Vyžadujte**, aby uživatelé před získáním přístupu ke svému zařízení zadali heslo.
 - **Minimální délka hesla**: Zadejte minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
-- **Požadovaný typ hesla**: Zvolte, jestli má heslo obsahovat pouze číselné znaky, nebo jestli má obsahovat kombinaci čísel a dalších znaků. Vybírejte z těchto možností:
+- **Požadovaný typ hesla**: Zvolte, jestli má heslo obsahovat pouze číselné znaky nebo jestli má obsahovat kombinaci čísel a dalších znaků. Vybírejte z těchto možností:
   - **Výchozí ze zařízení**
   - **Biometrika s nízkým zabezpečením**
   - **Aspoň číslice**
-  - **Číselné komplexní**
+  - **Číselné komplexní**: Opakující se nebo po sobě jdoucí čísla (jako jsou 1111 nebo 1234) nejsou povolena.
   - **Aspoň abecední znaky**
   - **Aspoň alfanumerické znaky**
   - **Aspoň alfanumerické se symboly**
 - **Maximální počet minut nečinnosti, po kterém bude nutné zadat heslo**: Zadejte dobu nečinnosti, která musí uplynout, aby se po uživateli znovu požadovalo zadání hesla.
-- **Konec platnosti hesla (dny)**: Vyberte počet dní, za který skončí platnost hesla a uživatel bude muset vytvořit nové.
+- **Vypršení platnosti hesla (dny):** Zvolte počet dní, za který heslo vyprší a uživatel bude muset vytvořit nové.
 - **Počet předchozích hesel, která se nesmí použít znovu**: Zadejte počet dřívějších hesel, která se nesmí znovu použít. Toto nastavení použijte, pokud chcete uživateli zabránit ve vytváření hesel, která používal dříve.
 
 ### <a name="encryption"></a>Šifrování

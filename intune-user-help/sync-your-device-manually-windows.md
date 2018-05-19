@@ -1,133 +1,142 @@
 ---
-title: Ruční synchronizace zařízení s Windows | Dokumentace Microsoftu
+title: Ruční synchronizace zařízení s Windows | Microsoft Docs
 description: ''
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/19/2017
+ms.date: 05/08/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.assetid: 443c6de7-5187-4dc4-b844-6085a0c659bd
+ms.assetid: ''
 searchScope:
 - User help
 ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: e8b8b1e4ffd4e58b5f3cc1b9acfc004f4b97b40b
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: aa556b2939986759aa92e63750fd161c05afbc38
+ms.sourcegitcommit: 6a9830de768dd97a0e95b366fd5d2f93980cee05
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sync-your-windows-device-manually"></a>Ruční synchronizace zařízení s Windows
 
-Někdy může instalace aplikace na zařízení s Windows trvat déle, než byste předpokládali. V takovém případě můžete zkusit provést ruční synchronizaci zařízení s Windows. Synchronizace může instalaci urychlit.
+Pokud je rychlost instalace aplikace příliš nízká, iniciujte ruční synchronizaci zařízení. Ruční synchronizace vynutí, aby se vaše zařízení spojilo s Intune za účelem nejnovějších aktualizací a komunikací. Po dokončení synchronizace zařízení se může rychlost instalace zvýšit.
 
-> [!Note]
-> Pokud jste v síti s nižší rychlostí nebo s vyšším počtem zařízení, která stahují obsah ve stejnou dobu, může instalace aplikací chvíli trvat.
+Intune podporuje ruční synchronizaci z aplikace Portál společnosti a z aplikace Nastavení zařízení. 
 
-Synchronizovat ručně se dají verze Windows uvedené dále. Pokud vaše zařízení používá jinou verzi Windows, nebude bohužel možné ruční synchronizaci spustit.
+Funkce aplikace Portál společnosti se podporuje v zařízeních se systémem Windows 10 Creators Update (1703) nebo novějším. 
+* [Synchronizace z aplikace Portál společnosti](#Sync-from-Company-Portal-app-for-Windows)  
 
-* [Synchronizace stolního počítače s Windows 10](#windows-10-desktop)
-* [Synchronizace Windows 10 Mobile](#windows-10-mobile)
-* [Synchronizace Windows Phone 8.1](#windows-phone-81)
+Všechna zařízení s Windows, včetně následujících, se dají synchronizovat z aplikace Nastavení v zařízení:
 
-## <a name="windows-10-desktop"></a>Stolní počítač s Windows 10
-Je více verzí Windows 10, a proto existují dvě sady postupů. Pokud chcete zjistit, jaké kroky použít, podívejte se na snímky obrazovky a postupujte podle pokynů, které odpovídají tomu, co vidíte na svém zařízení.
+* [Windows 10 desktop](#windows-10-desktop)  
+* [Microsoft HoloLens](#microsoft-hololens)   
+* [Windows 10 Mobile](#windows-10-mobile)  
+* [Windows Phone 8.1](#windows-phone-81)    
 
-1. Zvolte tlačítko **Start** a pak zvolte **Nastavení**.
+## <a name="sync-from-company-portal-app-for-windows"></a>Synchronizace z aplikace Portál společnosti pro Windows
+Následující postup použijte k ruční synchronizaci jakéhokoli zařízení s Windows 10 a aktualizací Creators Update (verze 1703) nebo novější.
 
-    ![Tlačítko Start](./media/win10pc-sync-1-start-button.png)
+1.  Na svém zařízení otevřete aplikaci Portál společnosti.
 
-2. Na stránce **Nastavení** zvolte **Účty**.
+2.  Vyberte **Nastavení** > **Synchronizace**.
 
-    ![Volba možnosti Účty na obrazovce Nastavení](./media/win10pc-sync-2-settings-accounts.png)
+    ![Snímek obrazovky s domovskou stránkou aplikace Portál společnosti a zvýrazněnou možností Nastavení](./media/RS1_homePage_settings_04.png)  
+    
+    ![Snímek obrazovky stránky nastavení v aplikaci Portál společnosti a zvýrazněným tlačítkem Synchronizovat](./media/RS1_settingspage_sync05.png)    
 
-3. Podívejte se na další dvě obrazovky a najděte tu, která vypadá stejně jako to, co vidíte ve svém zařízení. Použijte postup odpovídající této obrazovce.
+## <a name="sync-from-settings-app"></a>Synchronizace z aplikace Nastavení 
+Následující postup použijte k ruční synchronizaci zařízení se systémem Microsoft HoloLens, Windows 10 Desktop, Windows 10 Mobile nebo Windows Phone 8.1 z aplikace Nastavení.
 
-    Pokud se zobrazí tato obrazovka s informací „Přístup do práce nebo do školy“, postupujte podle pokynů v části [Postup, pokud se zobrazí Přístup do práce nebo do školy](#steps-to-follow-if-you-see-access-work-or-school).
+### <a name="windows-10-desktop"></a>Stolní počítač s Windows 10
+1. Na zařízení vyberte **Start** > **Nastavení**.
 
-    ![Postup synchronizace, pokud se zobrazí Přístup do práce nebo do školy](./media/w10-enroll-rs1-connect-to-work-or-school.png)
+2. Vyberte **Účty**.
 
-    Pokud se zobrazí tato obrazovka s informací „Přístup do práce“, postupujte podle pokynů v části [Postup, pokud se zobrazí Přístup do práce](#steps-to-follow-if-you-see-work-access).
+    ![Volba možnosti Účty na obrazovce Nastavení](./media/win10pc-sync-2-settings-accounts.png)  
+
+3. Pro stolní počítače existuje více verzí systému Windows 10. Porovnejte svoji obrazovku se snímky obrazovky níže a zjistěte, který postup máte provést. 
+
+    * Pokud na své obrazovce vidíte **Přístup do práce nebo do školy**, pokračujte kroky v části [Přístup do práce nebo do školy](#access-work-or-school).
+
+    ![Možnost Přístup do práce nebo do školy v aplikaci Nastavení](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
+
+    * Pokud na své obrazovce vidíte **Přístup do práce**, pokračujte kroky v části [Přístup do práce](#work-access).  
 
     ![Volba účtu typu Přístup do práce](./media/win10pc-sync-3-work-access.png)
 
-### <a name="steps-to-follow-if-you-see-access-work-or-school"></a>Postup, pokud se zobrazí Přístup do práce nebo do školy
+#### <a name="access-work-or-school-steps"></a>Postup pro Přístup do práce nebo do školy
 
-1. Na stránce **Účty** zvolte **Přístup do práce nebo do školy**.
+1. Klikněte na **Přístup do práce nebo do školy**.
 
-    ![Volba Přístup do práce nebo do školy](./media/w10-enroll-rs1-connect-to-work-or-school.png)
+    ![Snímek obrazovky zobrazující možnost Přístup do práce nebo do školy](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
-2. Zvolte svůj pracovní nebo školní účet. V závislosti na nastavení provedeném vaší firemní podporou se můžou zobrazit dva účty, které se podobají účtům v následujícím příkladu. Jeden účet má u sebe aktovku a druhý logo Microsoftu.
-
-   - Pokud vidíte účet s aktovkou, vyberte ho a podívejte se, že je pod ním tlačítko **Informace**.
-   - Pokud vidíte jen účet s logem Microsoftu, vyberte ho a podívejte se, že je pod ním tlačítko **Informace**.
+2. Vyberte účet, vedle kterého je ikona aktovky. Pokud takový účet nevidíte, je možné, že vaše společnost nakonfigurovala nastavení jiným způsobem. Místo toho klikněte na účet, vedle kterého vidíte logo Microsoftu.
 
      ![Volba názvu účtu vedle aktovky nebo loga Microsoftu](./media/win10pc-rs1-sync-info-button.png)
 
-3. Zvolte tlačítko **Informace**. Otevře se dialogové okno, které vypadá podobně jako v následujícím příkladu.
+3. Klikněte na **Informace**. 
 
-    ![Volba názvu účtu vedle aktovky nebo loga Microsoftu](./media/win10pc-rs1-sync-button.png)
+4. Klikněte na **Synchronizovat**. 
 
-4. Zvolte tlačítko **Synchronizovat**. Zařízení se bude synchronizovat s Intune.
+#### <a name="work-access-steps"></a>Postup pro Přístup do práce
 
-### <a name="steps-to-follow-if-you-see-work-access"></a>Postup, pokud se zobrazí Přístup do práce
-
-1. Na stránce **Účty** zvolte **Přístup do práce**.
+1.  Klikněte na **Přístup do práce**.
 
     ![Volba účtu typu Přístup do práce](./media/win10pc-sync-3-work-access.png)
 
-2. V části **Zaregistrovat se ve správě zařízení** zvolte název své firmy.
+2. V části **Zaregistrovat se k správě zařízení** zvolte název své společnosti.
 
     ![Volba názvu firmy pro správu zařízení](./media/win10pc-sync-4-tap-com-name.png)
 
-3. Zvolte tlačítko **Synchronizovat**.
+3. Klikněte na **Synchronizovat**. Tlačítko zůstane deaktivované, dokud se synchronizace nedokončí.
 
-    ![Volba tlačítka Synchronizovat](./media/win10pc-sync-5-tap-sync.png)
+    ![Volba tlačítka Synchronizovat](./media/win10pc-sync-5-tap-sync.png)  
 
-   Tlačítko bude zašedlé, dokud synchronizace neskončí.
 
 ### <a name="windows-10-mobile"></a>Windows 10 Mobile
-Chcete-li ručně synchronizovat mobilní zařízení s Windows 10 pro urychlení pomalé instalace aplikací:
 
-   1. Přejděte na **Všechny aplikace** > **Nastavení** > **Účty**.
+   1. Na zařízení přejděte do **Všechny aplikace** > **Nastavení** > **Účty**.
 
        ![Volba možnosti Účty na obrazovce Nastavení](./media/win10m-sync-1-settings-accounts.png)
 
-   2. Zvolte **Přístup do práce**.
+   2. Vyberte **Přístup do práce**.
 
        ![Volba účtu typu Přístup do práce](./media/win10m-sync-2-work-access.png)
 
-   3. V části **Zaregistrovat se ve správě zařízení** zvolte název své firmy.
+   3. V části **Zaregistrovat se k správě zařízení** zvolte název své společnosti.
 
        ![Volba názvu firmy pro správu zařízení](./media/win10m-sync-3-tap-comp-name.png)
 
-   4. Zvolte ikonu **Synchronizovat**.
+   4. Vyberte ikonu **Synchronizovat**. Tlačítko zůstane deaktivované, dokud se synchronizace nedokončí.
 
-       ![Volba ikony Synchronizovat](./media/win10m-sync-4-tap-sync.png)
+       ![Volba ikony Synchronizovat](./media/win10m-sync-4-tap-sync.png)  
+### <a name="microsoft-hololens"></a>Microsoft HoloLens  
+Tyto pokyny platí pro zařízení HoloLens se systémem Windows 10 Anniversary Update (označovaným také jako RS1). 
+1.  Otevřete na svém zařízení aplikaci Nastavení.  
 
-       V horní části obrazovky se zobrazí zpráva, že „probíhá synchronizace účtu“. Tlačítko **Synchronizovat** je zašedlé, dokud neskončí synchronizace vašeho zařízení.
+2.  Vyberte **Účty** > **Přístup do práce**.  
+    ![Snímek obrazovky s aplikací Nastavení HoloLens a zvýrazněným odkazem Účty](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
 
-## <a name="windows-phone-81"></a>Windows Phone 8.1
-Chcete-li provést ruční synchronizaci mobilního zařízení s Windows 8.1 pro urychlení pomalé instalace aplikací:
+3.  Vyberte připojený účet > **Synchronizovat**. ![Snímek obrazovky s aplikací Nastavení HoloLens a zvýrazněným tlačítkem Synchronizovat](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
+
+### <a name="windows-phone-81"></a>Windows Phone 8.1
 
 1. Přejděte na **Všechny aplikace** > **Nastavení** > **Pracoviště**.
 
     ![Seznam nastavení](./media/wp81-1-sync-settings-workplace.png)
 
-2. Zvolte název své firmy.
+2. Zvolte název společnosti.
 
     ![Volba názvu firmy pro účet pracoviště](./media/wp81-2-sync-tap-compname.png)
 
-3. Zvolte ikonu **Synchronizovat**.
+3. Vyberte ikonu **Synchronizovat**.
 
     ![Volba ikony Synchronizovat](./media/wp81-3-sync-tap-sync-button.png)
-
-   V horní části obrazovky bude až do skončení synchronizace zařízení zobrazená zpráva, že „probíhá synchronizace účtu“.
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
