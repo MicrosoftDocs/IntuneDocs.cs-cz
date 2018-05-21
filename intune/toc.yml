@@ -168,6 +168,8 @@
               href: windows-enroll.md
             - name: Hromadná registrace
               href: windows-bulk-enroll.md
+            - name: Obrazovka stavu registrace (zápisu)
+              href: windows-enrollment-status.md
             - name: Program Windows AutoPilot Deployment
               href: enrollment-autopilot.md
         - name: Nastavení registrace zařízení s Androidem
@@ -308,6 +310,8 @@
                       href: app-protection-policy-settings-android.md
                     - name: Nastavení iOS
                       href: app-protection-policy-settings-ios.md
+                    - name: Výjimky přenosu dat
+                      href: app-protection-policies-exception.md
                 - name: Ověření zásad ochrany aplikací
                   href: app-protection-policies-validate.md
                 - name: Monitorování stavu uživatele u ochrany aplikací
