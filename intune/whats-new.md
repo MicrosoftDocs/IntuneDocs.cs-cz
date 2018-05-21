@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/02/2018
+ms.date: 05/08/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 /ms.custom: intune-azure
-ms.openlocfilehash: 9004441a41c5e7458447b5c5f7e1d91e630bd412
-ms.sourcegitcommit: 2b5d88c434bda7f1cdc32d1ccacc6b341a9a399b
+ms.openlocfilehash: e677e15d1e4ee688a826683ecd1d8d68620d2796
+ms.sourcegitcommit: b0ad42fe5b5627e5555b2f9e5bb81bb44dbff078
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -40,6 +40,18 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
   ### Role-based access control
 
 -->   
+
+## <a name="week-of-may-7-2018"></a>Týden od 7. května 2018
+
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="samsung-knox-mobile-enrollment-support---1112863--"></a>Podpora technologie Samsung Knox Mobile Enrollment <!--1112863-->
+
+Pokud Intune používáte s technologií Samsung Knox Mobile Enrollment (KME), můžete registrovat velké počty zařízení s Androidem vlastněné společností. Uživatelé připojení prostřednictvím Wi-Fi nebo mobilních sítí mohou svá zařízení při prvním zapnutí registrovat několika klepnutími. Při použití aplikace Knox Deployment App se mohou zařízení registrovat pomocí Bluetooth nebo NFC. Další informace najdete v článku věnovaném [automatické registraci zařízení s Androidem pomocí technologie Knox Mobile Enrollment od Samsungu](android-samsung-knox-mobile-enroll.md).
+
+#### <a name="requesting-help-in-the-company-portal-for-windows-10----1874137---"></a>Žádost o nápovědu na Portálu společnosti pro Windows 10 <!-- 1874137 -->
+
+Portál společnosti pro Windows 10 teď odesílá protokoly aplikace přímo Microsoftu, když uživatel iniciuje pracovní postup pro získání pomoci s problémem. Usnadní se tak řešení problémů, které jsou předávány Microsoftu.
 
 ## <a name="week-of-april-23-2018"></a>Týden od 23. dubna 2018
 
@@ -369,12 +381,21 @@ Informace o vytváření kanálů nasazení v Intune najdete v tématu [Správa 
 
 #### <a name="company-portal-enrollment-improved----1874230-eeready--"></a>Vylepšená registrace pomocí Portálu společnosti <!-- 1874230 eeready-->
 Uživatelé, kteří registrují zařízení pomocí Portálu společnosti ve Windows 10 sestavení 1703 a vyšším, teď můžou dokončit první krok registrace bez opuštění aplikace.
-
 #### <a name="hololens-and-surface-hub-now-appear-in-device-lists---1725868---"></a>V seznamech zařízení <!--1725868 --> se teď zobrazují HoloLens a Surface Hub
 Do aplikace Portál společnosti pro Android jsme přidali podporu zobrazení zařízení HoloLens a Surface Hub zaregistrovaných v Intune.
 
 #### <a name="custom-book-categories-for-volume-purchase-progream-vpp-ebooks----1488911---"></a>Vlastní kategorie e-knih v rámci programu VPP (volume-purchase program) <!-- 1488911 -->
-Můžete vytvářet vlastní kategorie e-knih a pak k nim přiřadit e-knihy v rámci programu VPP. Koncoví uživatelé pak uvidí nově vytvořené kategorie e-knih a knihy k nim přiřazené. Podrobnosti najdete v tématu [Správa aplikací a knih zakoupených v rámci multilicenčního programu pomocí Microsoft Intune](vpp-apps.md).
+Můžete vytvářet vlastní kategorie e-knih a pak k nim přiřadit e-knihy v rámci programu VPP. Koncoví uživatelé pak uvidí nově vytvořené kategorie e-knih a knihy k nim přiřazené. Podrobnosti najdete v tématu [Správa aplikací a knih zakoupených v rámci multilicenčního programu pomocí Microsoft Intune](vpp-apps.md).  
+
+#### <a name="support-changes-for-company-portal-app-for-windows-send-feedback-option----2070166---"></a>Změny v podpoře pro možnost odeslání názoru v aplikaci Portál společnosti pro Windows <!-- 2070166 -->
+Od 30. dubna 2018 bude možnost **Váš názor** v aplikaci Portál společnosti pro Windows fungovat pouze u zařízení se systémem Windows 10 Anniversary Update (1607) a novějším. Možnost odeslání názoru se už nebude podporovat při použití aplikace Portál společnosti pro Windows se systémem:  
+- Windows 10, verze 1507  
+- Windows 10, verze 1511  
+- Windows Phone 8.1 
+
+Pokud vaše zařízení používá Windows 10 RS1 nebo novější, stáhněte si nejnovější verzi aplikace Portál společnosti pro Windows ze Storu. Pokud používáte nepodporovanou verzi, odesílejte své názory prostřednictvím následujících kanálů: 
+- Aplikace Centrum Feedback ve Windows 10
+- E-mail WinCPfeedback@microsoft.com  
 
 #### <a name="new-windows-defender-application-guard-settings----1631890---"></a>Nové nastavení Ochrany Application Guard v programu Windows Defender <!-- 1631890 -->
 
@@ -602,8 +623,8 @@ Příkaz pro vymazání odebere ze zařízení všechna data včetně operační
 
 Je nutné nakonfigurovat 6místný PIN kód pro obnovení. Tento PIN kód lze použít k odemknutí vymazaného zařízení, po kterém se zahájí opětovná instalace operačního systému. Když mazání začne, zobrazí se PIN kód ve stavovém řádku v okně přehledu daného zařízení v Intune. PIN kód zůstane zobrazený, dokud probíhá mazání. Po dokončení mazání zařízení úplně zmizí ze správy Intune. Nezapomeňte si PIN kód pro obnovení poznamenat, aby se dal v případě potřeby použít k obnovení zařízení.
 
-#### <a name="revoke-licenses-for-an-ios-volume-purchasing-program-token----820870---"></a>Odvolání licencí pro token Volume Purchase Program pro iOS <!-- 820870 -->
-Pro daný token VPP můžete odvolat licenci všech aplikací pro iOS koupených přes Volume Purchase Program (VPP).
+#### <a name="revoke-licenses-for-an-ios-volume-purchasing-program-token----820870---"></a>Odvolání licencí pro token Programu hromadných nákupů (Volume Purchase Program) pro iOS <!-- 820870 -->
+Pro daný token VPP můžete odvolat licenci všech aplikací pro iOS koupených přes Program hromadných nákupů (VPP – Volume Purchase Program).
 
 ### <a name="app-management"></a>Správa aplikací
 
@@ -747,8 +768,8 @@ Teď můžete na zařízení macOS instalovat aplikace Office. Tento nový typ a
 
 ### <a name="app-management"></a>Správa aplikací
 
-#### <a name="delete-an-ios--volume-purchasing-program-token----820879---"></a>Odstranění tokenu Volume Purchase Program pro iOS <!-- 820879 -->
-K odstranění tokenu programu Volume Purchasing Program (VPP) pro iOS můžete použít konzolu. To může být nutné v případě, že máte duplicitní instance tokenu VPP.
+#### <a name="delete-an-ios--volume-purchasing-program-token----820879---"></a>Odstranění tokenu Programu hromadných nákupů (VPP – Volume Purchase Program) pro iOS <!-- 820879 -->
+K odstranění tokenu Programu hromadných nákupů (VPP – Volume Purchasing Program) pro iOS můžete použít konzolu. To může být nutné v případě, že máte duplicitní instance tokenu VPP.
 
 ### <a name="intune-apps"></a>Aplikace Intune
 
@@ -1110,23 +1131,6 @@ Tato změna ovlivní jak zákazníky samostatné verze Intune, tak zákazníky h
 Místo okna služby Intune App Protection si do oblíbených položek přidejte Intune a seznamte se s pracovním postupem zásad ochrany aplikací v okně Mobilní aplikace v Intune. Po krátkém období přesměrování okno App Protection odebereme. Nezapomeňte, že všechny zásady ochrany aplikací jsou už přenesené do Intune a kterékoli ze zásad podmíněného přístupu můžete upravit podle dokumentace, kterou najdete zde: [https://aka.ms/azuread_ca](https://aka.ms/azuread_ca).
 
 **Další informace**: [https://aka.ms/intuneapppolicy](https://aka.ms/intuneapppolicy)
-
-### <a name="plan-for-change-windows-company-portal-send-feedback-option-may-no-longer-work"></a>Plánovaná změna: Možnost Odeslat názor na Portálu společnosti pro Windows už nemusí fungovat.  
-Aplikace Portál společnosti pro Windows obsahuje možnost **Odeslat názor**, která uživatelům umožňuje odeslat Microsoftu zpětnou vazbu o aplikaci. Počínaje 30. dubnem 2018 bude tato možnost podporována jen v aplikaci Portál společnosti pro Windows 10 spuštěné ve Windows 10 1607 (Anniversary Update) a novějších.  
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?  
-V případě, že jste koncovým uživatelům nenainstalovali aplikaci Portál společnosti pro Windows, můžete tuto část ignorovat. Pokud některý z vašich koncových uživatelů má aplikaci Portál společnosti, vezměte na vědomí, že od 30. dubna nebude tlačítko **Odeslat názor** v aplikaci fungovat, a to v těchto situacích:  
-- Aplikace Portál společnosti pro Windows 10 při použití ve Windows 10, verze 1507 a 1511  
-- Aplikace Portál společnosti pro Windows Phone 8.1  
-
-Na ovlivněných zařízeních možnost **Odeslat názor** selže a nebude úspěšná ani při opakovaných pokusech. Pokud chcete poslat Microsoftu zpětnou vazbu týkající se těchto platforem, použijte alternativní kanály uvedené níže.  
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?  
-Informujte o této změně uživatele a v případě potřeby aktualizujte uživatelské pokyny. Informujte koncové uživatele využívající Portál společnosti ve Windows Phone 8.1, Windows 10 1507 a Windows 10 1511, že mají k dispozici dva alternativní kanály zpětné vazby. Jsou to tyto:  
-- Použití aplikace Centrum Feedback ve Windows 10
-- Odeslání e-mailu na adresu WinCPfeedback@microsoft.com  
-
-Požádejte uživatele s Windows 10 RS1 nebo novějšími, aby si aplikaci Portál společnosti pro Windows aktualizovali na nejnovější verzi dostupnou ve Storu.
 
 ### <a name="plan-for-change-change-in-support-for-the-microsoft-intune-app-sdk-for-cordova-plugin"></a>Plánovaná změna: Změna v podpoře modulu plug-in Microsoft Intune App SDK Cordova
 Intune ukončuje od 1. května 2018 podporu [modulu plug-in Microsoft Intune App SDK Cordova](app-sdk-cordova.md). Doporučujeme místo toho použít k přípravě aplikací využívajících Cordovu pro účely správy a dostupnosti v Intune nástroj Intune App Wrapping. Až tato změna vejde v platnost, nebude se už dále modul plug-in Microsoft Intune APP SDK Cordova udržovat a nebude ani přijímat aktualizace. Vývojáři aplikací nebudou moct tento modul plug-in používat. V Intune se dále počítá s podporou aplikací vytvořených s použitím Cordovy. Všechny aplikace vytvořené s použitím modulu plug-in Microsoft Intune APP SDK Cordova ale budou mít v Intune omezené funkce. Po zabalení s pomocí nástroje Intune App Wrapping Tool bude možné nasadit aplikace koncovým uživatelům jako obvykle. Aplikace pro Android využívající Cordovu vydané do obchodu Google Play:
