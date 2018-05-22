@@ -15,11 +15,11 @@ ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e2759146634f16e5d92ca8c497aa2856f071a679
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 02cc111f8991a855db4f05360e54598af511f28f
+ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Nastavení registrace pro zařízení s Windows
 
@@ -31,7 +31,6 @@ Jako správce Intune můžete registraci zjednodušit. Máte tyto možnosti:
 - [Povolit automatickou registraci](#enable-windows-10-automatic-enrollment) (vyžaduje Azure AD Premium)
 - [Registrace CNAME](#simplify-windows-enrollment-without-azure-ad-premium)
 - [Povolit hromadnou registraci](windows-bulk-enroll.md) (vyžaduje Azure AD Premium a Windows Configuration Designer)
-- [Přidat vlastní zprávu](windows-enrollment-status.md), abyste pozdravili uživatele, když se registrují, a aby viděli průběh použití nastavení zásad
 
 Způsob zjednodušení registrace zařízení s Windows určují dva faktory:
 
