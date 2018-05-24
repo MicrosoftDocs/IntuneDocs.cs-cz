@@ -13,11 +13,11 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2f599f168c1b4ae9aa94324b69ed11e6d426c86d
-ms.sourcegitcommit: 4c18352d5b3b30080f7c7257fa63d852b1894850
+ms.openlocfilehash: 777cfa7d387c2bd19d529dbfc6d1aeab5dbad67e
+ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Začínáme se zásadami dodržování předpisů zařízeními v Intune
 
@@ -159,7 +159,7 @@ Zásady dodržování předpisů můžete nasadit uživatelům ve skupinách už
   - **Vyhovující předpisům**: Funkce zabezpečení je vypnuta.
   - **Nevyhovující předpisům** (výchozí): Funkce zabezpečení je zapnuta.
 
-  Pokud zařízení nemá přiřazeny žádné zásady dodržování předpisů, je považováno za nevyhovující předpisům. Ve výchozím nastavení jsou zařízení označena jako **Nevyhovující předpisům**. Pokud používáte podmíněný přístup, doporučujeme ponechat výchozí nastavení **Nevyhovující předpisům**. Pokud koncový uživatel nevyhovuje předpisům, protože nejsou přiřazeny žádné zásady, na Portálu společnosti je uvedeno `No compliance policies have been assigned`.
+  Pokud zařízení nemá přiřazeny žádné zásady dodržování předpisů, je považováno za nevyhovující předpisům. Ve výchozím nastavení jsou zařízení označena jako **Vyhovující předpisům**. Pokud používáte podmíněný přístup, doporučujeme změnit nastavení na **Nevyhovující předpisům**. Pokud koncový uživatel nevyhovuje předpisům, protože nejsou přiřazeny žádné zásady, na Portálu společnosti je uvedeno `No compliance policies have been assigned`.
 
 - **Vylepšené zjišťování jailbreaků**: Když toto nastavení povolíte, budou se zařízení s iOSem vracet se změnami pomocí Intune častěji. Pokud je povolena, používá tato vlastnost funkce zjišťování polohy zařízení a má vliv na výdrž baterie. Intune data o poloze uživatele neukládá.
 

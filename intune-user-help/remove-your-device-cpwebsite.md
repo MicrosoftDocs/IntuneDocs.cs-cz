@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/23/2017
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,15 +17,15 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: c7cd6380cbb596779a3094b18eef4e91b6161871
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: f22509d780ec4d877e7e780109b34776b269c8b3
+ms.sourcegitcommit: 49dc405bb26270392ac010d4729ec88dfe1b68e4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="remove-your-device-from-the-company-portal"></a>Odebrat zařízení z portálu společnosti
 
-Pokud už nechcete, aby vaše zařízení spravovala vaše společnost nebo organizace, můžete ho odebrat z odebrat z portálu společnosti pomocí [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog). Web Portál společnosti je webová stránka sloužící ke správě počítačů a zařízení, jejichž správu jste si zaregistrovali u svého IT oddělení. Pokud zařízení odeberete, nebude nadále uvedené na Portálu společnosti a můžete také ztratit přístup k firemním nebo školním datům, aplikacím a e-mailům.
+Pokud už nechcete, aby vaše zařízení spravovala vaše společnost nebo organizace, můžete ho odebrat z Portálu společnosti pomocí [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog). Po odebrání se zařízení už nebude na Portálu společnosti zobrazovat. Můžete také přijít o přístup k datům, aplikacím a e-mailu vaší organizace.
 
 Odebrání zařízení:
 

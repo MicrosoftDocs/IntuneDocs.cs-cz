@@ -14,11 +14,11 @@ ms.technology: ''
 ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 619d9e86bd130a617155d262f3e09882ce26ec1e
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 100742b378b30eab84b28c01728b2b382dd5155c
+ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="microsoft-intune-android-and-samsung-knox-standard-device-restriction-settings"></a>Nastavení omezení zařízení používajících Android a Samsung Knox Standard pro Microsoft Intune 
 
@@ -47,6 +47,10 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
 ## <a name="password"></a>Heslo
 
 - **Heslo** – Vyžaduje, aby koncový uživatel zadal heslo pro přístup k zařízení.|Ano|Ano|
+
+    > [!NOTE]
+    > Při registraci MDM zařízení Samsung Knox automaticky vyžadují 4místný číselný kód PIN. Nativní zařízení Android mohou automaticky vyžadovat kód PIN, aby vyhověla podmínkám podmíněného přístupu.
+
 - **Minimální délka hesla** – Zadejte minimální délku hesla, které uživatel musí nakonfigurovat (mezi 4 a 16 znaky).
 - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka** – Určuje počet minut nečinnosti, než se zařízení automaticky zamkne.
 - **Počet neúspěšných přihlášení před vymazáním obsahu zařízení** – Určuje počet povolených neúspěšných přihlášení, než se zařízení vymaže.
@@ -55,7 +59,7 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
     - **Výchozí ze zařízení**
     - **Biometrika s nízkým zabezpečením**
     - **Aspoň číslice**
-    - **Číselné komplexní** – Opakující se nebo po sobě jdoucí čísla, jako jsou 1111 nebo 1234, nejsou povolena.<sup>1</sup>
+    - **Číselné komplexní** – Opakující se nebo po sobě jdoucí čísla (jako jsou 1111 nebo 1234) nejsou povolena.<sup>1</sup>
     - **Aspoň abecední znaky**
     - **Aspoň alfanumerické znaky**
     - **Aspoň alfanumerické se symboly**
@@ -63,6 +67,9 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
 - **Odemykání otiskem prstu (jenom Samsung Knox)** – povolí odemykání podporovaných zařízení otiskem prstu.
 - **Smart Lock a jiní agenti pro určování důvěryhodnosti** – na kompatibilních zařízeních s Androidem (Samsung Knox Standard 5.0 a novější) umožňuje ovládat funkci Smart Lock. Tato funkce telefonů, které se někdy říká agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo zamykací obrazovky zařízení, pokud se zařízení nachází v důvěryhodném umístění. Je možné ji například použít, když je zařízení připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC. Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
 - **Šifrování** – Vyžaduje, aby soubory v zařízení byly šifrované.
+
+    > [!NOTE]
+    > Pokud se vynucují zásady šifrování, zařízení Samsung Knox po uživatelích vyžadují nastavení šestiznakového složitého hesla jako hesla k zařízení.
 
 <sup>1</sup> Před přiřazením tohoto nastavení k zařízením zkontrolujte, jestli je aplikace Portál společnosti v daných zařízeních aktualizovaná na nejnovější verzi.
 

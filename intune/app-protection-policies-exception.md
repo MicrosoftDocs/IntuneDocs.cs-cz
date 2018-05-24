@@ -15,11 +15,11 @@ ms.assetid: f9015e3a-c22c-42eb-90e6-ba48dee3a41d
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 812f73cb0857298f01967cebbb36f0b8220fb9c6
-ms.sourcegitcommit: 179bea63fe52a8cce236b6ca8d82a6bd51bf17a5
+ms.openlocfilehash: b860b68bbf8940a89533159885f471f5337ca0e8
+ms.sourcegitcommit: 91802e78cd5014d20a828ca25a54a381d452f0f8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="how-to-create-exceptions-to-the-intune-mobile-application-management-mam-data-transfer-policy"></a>Vytvoření výjimek zásad přenosu dat ve správě mobilních aplikací Intune (MAM)
 
@@ -31,6 +31,9 @@ Jako správce můžete vytvořit výjimky zásad přenosu dat ve správě mobiln
 > Za provádění změn v zásadách výjimek přenosu dat nesete zodpovědnost. Nespravované aplikace (aplikace, které nejsou spravované pomocí Intune), které přidáte do těchto zásad, budou mít přístup k datům chráněným pomocí spravovaných aplikací. Takový přístup k chráněným datům může mít za následek porušení zabezpečení dat. Výjimky přenosu dat přidávejte jenom pro aplikace, které vaše organizace musí používat, ale které nepodporují zásady ochrany aplikací Intune. Kromě toho přidávejte výjimky jenom pro aplikace, které nepovažujete za rizikové z hlediska úniku dat.
 
 Pokud v rámci zásad Intune Application Protection nastavíte **Povolit aplikaci posílat data do jiných aplikací** na **Aplikace spravované podle zásad**, znamená to, že aplikace může přenášet data pouze do aplikací spravovaných Intune. Pokud chcete povolit přenos dat do konkrétních aplikací, které nepodporují zásady Intune APP, můžete vytvořit výjimky z těchto zásad pomocí možnosti **Vyberte aplikace, které se mají vyloučit**. Výjimky umožňují, aby aplikace spravované Intune vyvolaly nespravované aplikace založené na protokolu URL (iOS) nebo názvu balíčku (Android). Intune přidává ve výchozím nastavení důležité nativní aplikace do seznamu výjimek. 
+
+> [!NOTE]
+> Změna nebo přidání aplikací do výjimek zásad přenosu dat nemá vliv na jiné zásady ochrany aplikací, jako jsou omezení vyjmutí, kopírování a vložení. 
 
 ## <a name="ios-data-transfer-exceptions"></a>Výjimky přenosu dat pro iOS
 U zásad cílících na iOS můžete nakonfigurovat výjimky přenosu dat pomocí protokolu URL. Pokud chcete přidat výjimku, vyhledejte informace o podporovaných protokolech URL v dokumentaci od vývojáře příslušné aplikace. Další informace o výjimkách přenosu dat pro iOS najdete v tématu [Nastavení zásad ochrany aplikací pro iOS – výjimky přenosu dat](app-protection-policy-settings-ios.md#data-transfer-exemptions).

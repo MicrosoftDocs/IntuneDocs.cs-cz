@@ -15,11 +15,11 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d74f59f1df0a4a4e1285b58d7ac5b3677d3c5e48
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 3212d1a3d3454542dd9d34409fc788558f2d7eed
+ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="enroll-android-devices"></a>Registrace zařízení s Androidem
 
@@ -58,8 +58,9 @@ Další informace najdete v článku [Data z Intune odesílaná Googlu](data-int
 Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení [nastavením autority pro správu mobilních zařízení](mdm-authority-set.md) na **Microsoft Intune**.
 2. **Konfigurace vazby na Android for Work**<br>
     
-   a. Přihlaste se k [Intune na portálu Azure Portal](https://aka.ms/intuneportal), vyberte **Registrace zařízení** > **Registrace Androidu** > **Spravovaný obchod Google Play**.
-   ![Obrazovka registrace Androidu for Work](./media/android-work-bind.png)
+   a. Přihlaste se k [Intune na portálu Azure Portal](https://aka.ms/intuneportal), vyberte **Registrace zařízení** > **Registrace Androidu** > **Spravovaný obchod Google Play**.  Pokud používáte vlastní roli správce Intune, vyžaduje přístup k tomuto nastavení oprávnění ke čtení a aktualizaci na úrovni organizace.
+   
+   ![Registrační obrazovka Androidu for Work](./media/android-work-bind.png)
 
    b. Vyberte **Souhlasím** a udělte Microsoftu oprávnění k [odesílání informací o uživatelích a zařízení Googlu](data-intune-sends-to-google.md). 
    

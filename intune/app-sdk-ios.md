@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 manager: dougeby
 ms.author: erikre
-ms.date: 04/06/2018
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: aanavath
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: 486ff2d22cb201abc926efc96a83455be98e7536
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.custom: ''
+ms.openlocfilehash: f8f81b4ff3bf5d17832d2f943fffb905eba52b6e
+ms.sourcegitcommit: 49dc405bb26270392ac010d4729ec88dfe1b68e4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
 > [!NOTE]
-> Možná byste si mohli nejdříve přečíst článek [Začínáme s Intune App SDK](app-sdk-get-started.md), který vysvětluje postup přípravy integrace na jednotlivých podporovaných platformách.
+> Doporučujeme přečíst si článek s pokyny, [jak začít se sadou Intune App SDK](app-sdk-get-started.md), který vysvětluje, jak se připravit na integraci na jednotlivých podporovaných platformách.
 
 Sada Microsoft Intune App SDK pro iOS umožňuje začlenit do vaší nativní aplikace pro iOS zásady ochrany aplikací Intune (označované také jako **zásady APP** nebo **MAM**). Aplikace s povolenou funkcí MAM je integrovaná se sadou Intune App SDK. Správci IT můžou zásady ochrany aplikací nasadit do vaší mobilní aplikace, když Intune tuto aplikaci aktivně spravuje.
 
@@ -81,8 +81,8 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 
 1. **Možnost 1 (doporučeno)**: Propojit `IntuneMAM.framework` s projektem. Přetáhněte `IntuneMAM.framework` do seznamu **vložených binárních souborů** cíle projektu.
 
-    > [!NOTE]
-    > Pokud tento model použijete, nezapomeňte z univerzálního modelu před odesláním aplikace do App Storu odstranit architektury simulátoru. Viz část [Odeslání aplikace do App Storu](#Submit-your-app-to-the-App-Store), kde najdete další podrobnosti.
+   > [!NOTE]
+   > Pokud tento model použijete, nezapomeňte z univerzálního modelu před odesláním aplikace do App Storu odstranit architektury simulátoru. Viz část [Odeslání aplikace do App Storu](#Submit-your-app-to-the-App-Store), kde najdete další podrobnosti.
 
 2. **Možnost 2**: Vytvořte propojení s knihovnou `libIntuneMAM.a`. Přetáhněte knihovnu `libIntuneMAM.a` do **seznamu propojených modelů a knihoven** cíle projektu.
 
@@ -179,7 +179,7 @@ Propojte aplikaci s binárními soubory ADAL podle následujících pokynů:
 
 
 
-### <a name="share-the-adal-token-cache-with-other-apps-signed-with-the-same-provisioning-profile"></a>Sdílet mezipaměť tokenů ADAL s jinými aplikacemi podepsanými pomocí stejného zřizovacího profilu?**
+### <a name="share-the-adal-token-cache-with-other-apps-signed-with-the-same-provisioning-profile"></a>Chcete sdílet mezipaměť tokenů ADAL s jinými aplikacemi podepsanými pomocí stejného zřizovacího profilu?
 
 Pokud chcete sdílet tokeny ADAL mezi aplikacemi, které jsou podepsané pomocí stejného zřizovacího profilu, postupujte následovně:
 
@@ -523,7 +523,8 @@ SUBQUERY (
 ).@count > 0 
  ```
 
->[!Note] K přidání typů Intune do pravidla aktivace je možné použít nástroj IntuneMAMConfigurator. Pokud vaše stávající pravidlo aktivace používá předdefinované řetězcové konstanty (například NSExtensionActivationSupportsFileWithMaxCount, NSExtensionActivationSupportsText apod.), může být syntaxe predikátu poměrně složitá. Pomocí nástroje IntuneMAMConfigurator lze také během přidávání typů Intune převést pravidlo aktivace z řetězcové konstanty na řetězec predikátu. Nástroj IntuneMAMConfigurator najdete v našem úložišti GitHub. 
+> [!NOTE]
+> K přidání typů Intune do pravidla aktivace je možné použít nástroj IntuneMAMConfigurator. Pokud vaše stávající pravidlo aktivace používá předdefinované řetězcové konstanty (například NSExtensionActivationSupportsFileWithMaxCount, NSExtensionActivationSupportsText apod.), může být syntaxe predikátu poměrně složitá. Pomocí nástroje IntuneMAMConfigurator lze také během přidávání typů Intune převést pravidlo aktivace z řetězcové konstanty na řetězec predikátu. Nástroj IntuneMAMConfigurator najdete v našem úložišti GitHub. 
 
 
 ## <a name="enabling-mam-targeted-configuration-for-your-ios-applications"></a>Povolení konfigurace určené pro správu mobilních aplikací pro iOS

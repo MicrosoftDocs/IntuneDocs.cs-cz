@@ -6,18 +6,18 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/2/2018
+ms.date: 5/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0912ec4fdc77b51903b4febd54f9d16972b867a8
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: fe791dce88878fdbde7c62e59452a53ac08ef06b
+ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="email-profile-settings-in-microsoft-intune-for-devices-running-ios"></a>Nastavení e-mailového profilu v Microsoft Intune pro zařízení s iOSem 
 
@@ -35,8 +35,7 @@ Tento článek ukazuje nastavení e-mailového profilu, které můžete konfigur
     - Pokud jste vybrali **Certifikát**, vyberte profil klienta SCEP nebo PKCS, který jste dříve vytvořili a který se použije k ověření připojení Exchange.
 - **SSL** – Při posílání a přijímání e-mailů a komunikaci se serverem Exchange se použije komunikace SSL (Secure Sockets Layer).
 - **S/MIME** – Odchozí e-maily se budou posílat s podpisovým certifikátem S/MIME.
-    - Pokud jste vybrali **Certifikát**, vyberte profil klienta SCEP nebo PKCS, který jste dříve vytvořili a který se použije k ověření připojení Exchange.
-    - Pokud jste vybrali certifikát SCEP, ověřte si, že je na zařízení nainstalovaný certifikát Personal Information Exchange (PFX).
+    - Pokud jste vybrali **Certifikát**, vyberte profil certifikátu PKCS, který jste dříve vytvořili za účelem ověřování připojení Exchange.
 - **Počet e-mailů k synchronizaci** – Zvolte počet dní, za které se mají e-maily synchronizovat, nebo vyberte **Bez omezení**, pokud chcete synchronizovat všechny dostupné e-maily.
 - **Povolit přesunování zpráv na jiné e-mailové účty** – Tato možnost povolí uživatelům přesunovat e-mailové zprávy mezi různými účty, které si na svých zařízeních nakonfigurovali.
 - **Umožnit posílání e-mailů z aplikací třetích stran** – Můžete povolit uživateli, aby tento profil vybral jako výchozí účet pro posílání e-mailů, a povolit aplikacím třetích stran otevírání e-mailů v nativních e-mailových aplikacích, například k připojování souborů k e-mailům.

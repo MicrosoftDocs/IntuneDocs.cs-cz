@@ -5,7 +5,7 @@ keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 05/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: d1693515-de18-4553-91ef-801976cd3ec7
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: da6f351f4ce5cf6b0aeae977ffbef56dab5bd2df
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: c505e881fe06d6f4da217533d0507731ac22a29f
+ms.sourcegitcommit: 698bd1488be3a269bb88c077eb8d99df6e552a9a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Nastavení zásad podmíněného přístupu na základě aplikace v Intune
 
@@ -27,39 +27,11 @@ ms.lasthandoff: 04/26/2018
 Tento článek popisuje, jak pro aplikace, které jsou na seznamu schválených aplikací, nastavit zásady podmíněného přístupu na základě aplikace. Na seznamu schválených aplikací jsou aplikace, které testoval Microsoft.
 
 > [!IMPORTANT]
-> Tento článek vás provede jednotlivými kroky přidání zásady podmíněného přístupu na základě aplikace s použitím Exchange Online, ale stejný postup můžete použít při přidání dalších aplikací, jako je SharePoint Online, Microsoft Teams, a dalších aplikací ze seznamu schválených aplikací.
-
-## <a name="to-create-an-app-based-conditional-access-policy"></a>Vytvoření zásady podmíněného přístupu na základě aplikace
-1.  Přejděte na [portál Azure Portal](https://portal.azure.com) a přihlaste se.
-
-2.  Zvolte **Všechny služby** a zadejte: Intune.
-
-3.  Zvolte **Ochrana aplikací Intune**.
-
-4.  V podokně **Intune App Protection** v části **Podmíněný přístup** zvolte **Exchange Online**.
-
-    ![Snímek obrazovky s podoknem nastavení, ve kterém se zobrazuje sekce podmíněného přístupu se zvýrazněnou možností Exchange Online](./media/MAM-conditional-access-1.png)
-
-6. V podokně **Povolené aplikace** zvolte možnost **Povolit aplikace, které podporují zásady aplikací Intune**. Tím umožníte, aby přístup k Exchangi Online měly jenom aplikace podporované zásadami ochrany aplikací Intune. Při výběru této možnosti se zobrazí seznam podporovaných aplikací.
-
-    > [!NOTE]
-    > Všichni poštovní klienti Exchange Active Sync, včetně integrovaných poštovních klientů v iOSu a Androidu, kteří se připojují k Exchangi Online, mají zakázané odesílání a příjem e-mailů. Místo toho uživatelé dostanou e-mail, který je informuje o tom, že musí použít poštovní aplikaci Outlook.
-
-7. Pokud chcete tuto zásadu uplatnit na uživatele, otevřete podokno **Omezené skupiny uživatelů** a zvolte **Přidat skupinu uživatelů**. Vyberte skupiny uživatelů, které by tuto zásadu měly obdržet.
-
-    ![Snímek obrazovky s podoknem s omezenou skupinou uživatelů a zvýrazněnou možností Přidat skupinu uživatelů](./media/mam-ca-add-user-group.png)
-
-8. Můžete chtít, aby pro některé uživatele ve skupině uživatelů, kterou jste vybrali v předchozím kroku, tato zásada neplatila. V takovém případě přidejte skupinu uživatelů do seznamu vyloučených skupin uživatelů. V podokně **Exchange Online** zvolte **Vyloučené skupiny uživatelů**. Zvolením možnosti **Přidat skupinu uživatelů** otevřete seznam skupin uživatelů. Vyberte skupiny, které chcete z této zásady vyloučit.
-
-## <a name="to-modify-or-delete-user-groups-from-an-existing-app-based-ca-policy"></a>Úprava nebo odstranění skupin uživatelů z existujících zásad podmíněného přístupu na základě aplikace
-
-1. Otevřete podokno **Omezené skupiny uživatelů** a pak zvýrazněte skupinu uživatelů, kterou chcete odstranit.
-2. Kliknutím na tři tečky zobrazíte možnosti odstranění.
-3. Volbou možnosti **Odstranit** odeberte tuto skupinu uživatelů ze seznamu.
+> Tento článek vás provede postupem přidání zásad podmíněného přístupu na základě aplikace. Všimněte si, že aplikace ze seznamu schválených aplikací, jako jsou SharePoint Online, Microsoft Teams a Microsoft Exchange Online, můžete přidat stejným postupem.
 
 ## <a name="create-app-based-conditional-access-policies-in-azure-ad-workload"></a>Vytvoření zásad podmíněného přístupu na základě aplikace v úloze Azure AD
 
-Počínaje verzí Intune 1708 můžou správci IT vytvářet zásady podmíněného přístupu na základě aplikace v úloze Azure AD. Má to tu výhodu, že není potřeba přepínat mezi úlohami Azure a Intune.
+Správci IT můžou vytvářet zásady podmíněného přístupu na základě aplikace v úloze Azure AD. Má to tu výhodu, že není potřeba přepínat mezi úlohami Azure a Intune.
 
 > [!IMPORTANT]
 > Abyste mohli vytvořit zásady podmíněného přístupu Azure AD na portálu Intune Azure Portal, musíte mít licenci Azure AD Premium.

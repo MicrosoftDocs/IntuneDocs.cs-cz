@@ -17,11 +17,11 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 1dd64250c1996c6b13c62f80572282d639112ba6
-ms.sourcegitcommit: 8ee543c864097dc195b6f440471dca713fc21ed2
+ms.openlocfilehash: a3cad6a73b3455790441c594933d599b2c6e89f9
+ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="remove-your-windows-device-from-intune-management"></a>Odebrání zařízení s Windows ze systému správy Intune
 
@@ -72,13 +72,13 @@ Provedením následujících kroků odeberte mobilní zařízení s Windows 8.1 
 ## <a name="removing-your-personal-information-after-removing-the-company-portal"></a>Odebrání osobních údajů po odebrání aplikace Portál společnosti
 Aplikace Portál společnosti ukládá do zařízení s Windows dva druhy dat:
 
--   **Diagnostické protokoly**: Standardní data o aktivitě aplikací, která shromažďuje Microsoft, se vymažou automaticky při odebrání zařízení z Portálu společnosti. Data o aktivitě aplikací jsou například data o tom, jak dlouho byla aplikace otevřena nebo jestli se chybově ukončila.
+-   **Protokoly pro diagnostiku**: Standardní data o aktivitě, která Microsoft shromažďuje. Tato data se automaticky vymažou při odinstalaci aplikace Portál společnosti. Data o aktivitě aplikací jsou například data o tom, jak dlouho byla aplikace otevřena nebo jestli se chybově ukončila.
 -   **Mezipaměť aplikace**: Podpůrné soubory, které aplikace potřebuje k práci, například ikony a nastavení.
 
-K úplnému odstranění těchto informací je potřeba provést několik kroků.
+Pokud chcete odstranit uložené protokoly a mezipaměť, proveďte jeden z následujících kroků:
 
-1. Odinstalujte Portál společnosti. Když [odinstalujete aplikaci Portál společnosti](https://support.microsoft.com/help/4028003/windows-10-uninstall-apps-and-programs), odeberou se některá data aplikace uložená v zařízení.  
+* [Odinstalujte aplikaci Portál společnosti](https://support.microsoft.com/help/4028003/windows-10-uninstall-apps-and-programs). 
 
-2. Pokud chcete obnovit uložená data aplikace, resetujte Portál společnosti. Otevřete aplikaci **Nastavení** a vyberte > **Aplikace** > **Portál společnosti** > **Upřesnit možnosti** > **Resetovat**. 
+* Resetujte aplikaci Portál společnosti. Otevřete aplikaci **Nastavení** a vyberte > **Aplikace** > **Portál společnosti** > **Upřesnit možnosti** > **Resetovat**. 
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).

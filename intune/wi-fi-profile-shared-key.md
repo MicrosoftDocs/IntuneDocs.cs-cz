@@ -14,11 +14,11 @@ ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a3b98dad86b7abe5ce330ae99fdf008137cc2b11
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: eb88bf64db8eaa82a68f56f8c3235030539f1959
+ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key---intune"></a>Vytvoření profilu Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení – Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -35,6 +35,7 @@ Předsdílené klíče (PSK) se obvykle používají k ověřování uživatelů
 - U Androidu můžete také použít nástroj [Android PSK Generator](http://intunepskgenerator.johnathonb.com/).
 - Přidáním dalších nastavení OMA-URI můžete přidat více sítí a klíčů.
 - Pro iOS nastavte profil nástrojem Apple Configurator na stanici Mac. Můžete ale také použít nástroj [iOS PSK Mobile Config Generator](http://intunepskgenerator.johnathonb.com/).
+- PSK vyžaduje řetězec 64 číslic v šestnáctkovém formátu nebo heslo o délce 8 až 63 tisknutelných znaků ASCII. Některé znaky, například hvězdička (*), se nepodporují.
 
 ## <a name="create-a-custom-profile"></a>Vytvoření vlastního profilu
 Můžete vytvořit vlastní profil s předsdíleným klíčem pro profil Wi-Fi založený na Androidu, Windows nebo protokolu EAP. Pokud chcete vytvořit profil na portálu Azure Portal, projděte si část [Vytvoření vlastního nastavení zařízení](custom-settings-configure.md). Při vytvoření profilu zařízení zvolte jako platformu zařízení možnost **Vlastní**. Nevybírejte profil Wi-Fi. Když vyberete možnost Vlastní, nezapomeňte provést toto: 
@@ -50,8 +51,8 @@ Můžete vytvořit vlastní profil s předsdíleným klíčem pro profil Wi-Fi z
 
    d. **OMA-URI:**
 
-   - **Pro Android:** ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
-   - **Pro Windows:** ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
+   - **Pro Android**: ./Vendor/MSFT/WiFi/Profile/SSID/Settings
+   - **Pro Windows**: ./Vendor/MSFT/WiFi/Profile/SSID/WlanXml
 
      > [!NOTE]
      > Nezapomeňte použít tečku na začátku.
