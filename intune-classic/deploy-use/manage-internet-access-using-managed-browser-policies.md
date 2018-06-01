@@ -15,11 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9781af943dbfb782cf367257127021473e35c168
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 1722defcb29c9cd5a15c68e01114f4ffb80e3859
+ms.sourcegitcommit: f21287c66dd5559688f08bd98b6c976a0dea055d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/31/2018
+ms.locfileid: "34456363"
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Správa přístupu k internetu pomocí zásad spravované prohlížeče v Microsoft Intune
 
@@ -57,8 +58,8 @@ Intune Managed Browser podporuje otevírání webového obsahu od [partnerů nab
 
 3.  S konfigurací nastavení zásad spravovaného prohlížeče vám pomůžou následující informace:
 
-    - **Název:** Zadejte jedinečný název zásady spravovaného prohlížeče, abyste ji mohli v konzole Intune snadno identifikovat.
-    - **Popis:** Zadejte popis, který bude shrnovat účel zásady spravovaného prohlížeče, a uveďte jakékoli další důležité informace, které vám pomůžou zásadu najít.
+    - **Název**. Zadejte jedinečný název zásady spravovaného prohlížeče, abyste ji mohli v konzole Intune snadno identifikovat.
+    - **Popis**. Zadejte popis, který bude shrnovat účel zásady spravovaného prohlížeče, a uveďte jakékoli další důležité informace, které vám pomůžou zásadu najít.
     - **Umožňuje povolit používání seznamu povolených nebo blokovaných aplikací, aby se omezily adresy URL, které může Managed Browser otevírat**. Vyberte jednu z následujících možností:
         - **Povolit spravovanému prohlížeči otevření jenom dole vypsaných adres URL**. Určete seznam adres URL, které spravovaný prohlížeč může otevřít.
         - **Blokovat spravovanému prohlížeči otevření dole vypsaných adres URL**. Určete seznam adres URL, u kterých bude ve spravovaném prohlížeči blokované otevření.
@@ -115,14 +116,14 @@ V následující části najdete informace o povolených formátech a zástupný
 
 |                  Adresa URL                  |                     Podrobnosti                      |                                                Odpovídá                                                |                                Neodpovídá                                 |
 |---------------------------------------|--------------------------------------------------|-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-|        http://www.contoso.com         |              Odpovídá jediné stránce               |                                            www.contoso.com                                            |  host.contoso.com<br /><br />www.contoso.com/images<br /><br />contoso.com/   |
-|          http://contoso.com           |              Odpovídá jediné stránce               |                                             contoso.com/                                              | host.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com |
-|    <http://www.contoso.com/&#42>;     | Odpovídá všem adresám URL začínajícím na www.contoso.com |      www.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com/videos/tvshows      |              host.contoso.com<br /><br />host.contoso.com/images              |
+|        http://www.contoso.com         |              Odpovídá jediné stránce               |                                            <www.contoso.com>                                           |  host.contoso.com<br /><br /><www.contoso.com/images><br /><br />contoso.com/   |
+|          http://contoso.com           |              Odpovídá jediné stránce               |                                             contoso.com/                                              | host.contoso.com<br /><br /><www.contoso.com/images><br /><br /><www.contoso.com>  |
+|    <http://www.contoso.com/&#42>;     | Odpovídá všem adresám URL začínajícím na www.contoso.com  |      <www.contoso.com> <br /><br /><www.contoso.com/images><br /><br />www.contoso.com/videos/tvshows      |              host.contoso.com<br /><br />host.contoso.com/images              |
 |    http://&#42;.contoso.com/&#42;     |     Odpovídá všem dílčím doménám domény contoso.com     | developer.contoso.com/resources<br /><br />news.contoso.com/images<br /><br />news.contoso.com/videos |                               contoso.host.com                                |
-|     http://www.contoso.com/images     |             Odpovídá jediné složce              |                                        www.contoso.com/images                                         |                          www.contoso.com/images/dogs                          |
+|     http://www.contoso.com/images     |             Odpovídá jediné složce              |                                        <www.contoso.com/images>                                         |                          <www.contoso.com/images/dogs>                          |
 |       http://www.contoso.com:80       |  Odpovídá jediné stránce s použitím čísla portu   |                                       http://www.contoso.com:80                                       |                                                                               |
 |        https://www.contoso.com        |          Odpovídá jediné zabezpečené stránce           |                                        https://www.contoso.com                                        |                            http://www.contoso.com                             |
-| <http://www.contoso.com/images/&#42>; |    Odpovídá jediné složce a všem podsložkám    |                  www.contoso.com/images/dogs<br /><br />www.contoso.com/images/cats                   |                            www.contoso.com/videos                             |
+| <http://www.contoso.com/images/&#42>; |    Odpovídá jediné složce a všem podsložkám    |                 <www.contoso.com/images/dogs><br /><br /><www.contoso.com/images/cats>                   |                            <www.contoso.com/videos>                             |
 
 - Tady jsou uvedené příklady některých vstupních hodnot, které nemůžete zadat:
 
@@ -130,11 +131,11 @@ V následující části najdete informace o povolených formátech a zástupný
 
   - &#42;.contoso/&#42;
 
-  - www.contoso.com/&#42;images
+  - <www.contoso.com/>&#42;images
 
-  - www.contoso.com/&#42;images&#42;pigs
+  - <www.contoso.com/>&#42;images&#42;pigs
 
-  - www.contoso.com/page&#42;
+  - <www.contoso.com/page>&#42;
 
   - IP adresy
 

@@ -15,11 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 643ac4c96297ffc24d9460546fe183d2a1316654
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 6262fee0051827794c49ebe10361b1a3b280b140
+ms.sourcegitcommit: f21287c66dd5559688f08bd98b6c976a0dea055d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/31/2018
+ms.locfileid: "34470793"
 ---
 # <a name="troubleshoot-lookout-integration-with-intune"></a>Řešení potíží s aplikací Lookout Integration pomocí služby Intune
 
@@ -36,7 +37,7 @@ Přístup k Lookout MTP mají jenom uživatelé z nakonfigurované skupiny Azure
 
 * E-mail: enterprisesupport@lookout.com
 * Přihlaste se ke [konzole MTP](http://aad.lookout.com) a přejděte do modulu **Podpora**.
-* Přejděte na https://enterprise.support.lookout.com/hc/requests a požádejte o podporu.
+* Přejděte na <https://enterprise.support.lookout.com/hc/requests> a požádejte o podporu.
 
 ## <a name="unable-to-sign-in"></a>Nelze se přihlásit
 Pokud globální správce Azure AD nepřijal úvodní nastavení Lookoutu, zobrazí se následující chyba.
@@ -81,7 +82,7 @@ Můžete také přejít v [konzole Lookout](http://aad.lookout.com) do modulu **
 Pokud je nový uživatel v Lookout MTP členem skupiny pro registraci, zobrazí se zařízení ihned poté, co Azure AD přidruží zařízení k novému uživateli.
 
 ## <a name="compliance-remediation-workflows"></a>Pracovní postupy nápravy dodržování předpisů
-- [Zobrazuje se výzva k instalaci aplikace Lookout for Work na zařízení s Androidem]( http://docs.microsoft.com/intune-user-help/you-are-prompted-to-install-lookout-for-work-android)
+- [Zobrazuje se výzva k instalaci aplikace Lookout for Work na zařízení s Androidem](http://docs.microsoft.com/intune-user-help/you-are-prompted-to-install-lookout-for-work-android)
 - [Je třeba vyřešit hrozbu, kterou objevila aplikace Lookout for Work na zařízení s Androidem](http://docs.microsoft.com/intune-user-help/you-need-to-resolve-a-threat-found-by-lookout-for-work-android)
 - [Je třeba vyřešit hrozbu, kterou aplikace Lookout for Work objevila na vašem zařízení s iOSem](https://docs.microsoft.com/intune-user-help/you-need-to-resolve-a-threat-found-by-lookout-for-work-ios)
 
