@@ -17,7 +17,6 @@
 ### [Organizace uživatelů a zařízení](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-5.md)
 ### [Nasazení zásad a aplikací](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-6.md)
 ### [Přizpůsobení Portálu společnosti](/intune/company-portal-customize?toc=/intune-classic/toc.json)
-### [Registrovat zařízení](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-8.md)
 ### [Úlohy po konfiguraci](get-started/post-configuration-tasks.md)
 ## Další kroky
 ### [Prevence úniků firemních dat z mobilních aplikací Office 365](get-started/prevent-company-data-leaks-from-Office-365-mobile-apps.md)
@@ -102,7 +101,6 @@
 #### [Obnovení spravovaných zařízení s iOSem](deploy-use/restore-managed-ios-devices-from-backup.md)
 #### [Nastavení Androidu a Samsung KNOX](deploy-use/android-policy-settings-in-microsoft-intune.md)
 ##### [Použití vlastních zásad pro vytvoření profilu sítě Wi-Fi s předsdíleným klíčem](deploy-use/pre-shared-key-wi-fi-profile.md)
-##### [Použití vlastních zásad pro vytvoření profilu sítě VPN pro jednotlivé aplikace pro zařízení se systémem Android](deploy-use/per-app-vpn-for-android-pulse-secure.md)
 ##### [Použití vlastních zásad povolených a blokovaných aplikací pro zařízení se systémem Samsung KNOX](deploy-use/custom-policy-to-allow-and-block-samsung-knox-apps.md)
 #### [Nastavení Androidu for Work](deploy-use/android-for-work-policy-settings-in-microsoft-intune.md)
 #### [Nastavení Windows 8 a Windows 8.1](deploy-use/windows-configuration-policy-settings-in-microsoft-intune.md)
@@ -137,15 +135,8 @@
 ## [Vyřazení zařízení](deploy-use/retire-devices-from-microsoft-intune-management.md)
 
 ## [Přidání aplikací](deploy-use/add-apps.md)
-### [Přidání aplikací pro zaregistrovaná zařízení](deploy-use/add-apps-for-mobile-devices-in-microsoft-intune.md)
 ### [Instalace aplikací pro Windows bokem](/intune/app-sideload-windows?toc=/intune-classic/toc.json)
 ## [Nasazení aplikací](deploy-use/deploy-apps.md)
-### [Nasazení aplikací na zařízení a počítače](deploy-use/deploy-apps-in-microsoft-intune.md)
-### [Nasazení aplikací na zařízení s Androidem for Work](deploy-use/android-for-work-apps.md)
-### [Monitorování aplikací](deploy-use/monitor-apps-in-microsoft-intune.md)
-### [Správa hromadně zakoupených aplikací](deploy-use/manage-volume-purchased-apps-in-microsoft-intune.md)
-#### [Správa hromadně zakoupených aplikací pro iOS](deploy-use/manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune.md)
-#### [Správa hromadně zakoupených aplikací pro Windows](deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune.md)
 
 ## Konfigurace aplikací
 ### [Aktualizace aplikací](deploy-use/update-apps-using-microsoft-intune.md)
@@ -175,7 +166,6 @@
 #### [Používání aplikací s podmíněným přístupem na bázi aplikací](deploy-use/use-apps-with-mam-ca.md)
 #### [Exchange Online](deploy-use/mam-ca-for-exchange-online.md)
 #### [SharePoint Online](deploy-use/mam-ca-for-sharepoint-online.md)
-#### [Blokování aplikací bez ověřování ADAL](deploy-use/block-apps-with-no-modern-authentication.md)
 ### [Ochrana přístupu k sítím (Cisco ISE)](deploy-use/restrict-access-to-networks.md)
 ### [Ochrana přístupu na základě rizika zařízení, sítě a aplikace](deploy-use/mobile-threat-defense.md)
 #### [Konektor Lookout Mobile Threat Defense](deploy-use/lookout-mobile-threat-defense-connector.md)
@@ -203,8 +193,6 @@
 #### [Ověření zásad ochrany aplikací](deploy-use/validate-mobile-application-management.md)
 #### [Sledování dodržování zásad ochrany aplikací](deploy-use/monitor-mobile-app-management-policies-with-microsoft-intune.md)
 
-#### [Správa přenosu dat mezi aplikacemi pro iOS](deploy-use/manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
-
 #### [Konzola pro správu Intune pro zásady MAM](deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md)
 
 ### [Příprava obchodních aplikací pro MAM](/intune/apps-prepare-mobile-application-management?toc=/intune-classic/toc.json)
@@ -216,7 +204,6 @@
 
 ## Vyřazení aplikací a data z provozu
 ### [Použití úplného nebo selektivního vymazání](deploy-use/use-remote-wipe-to-help-protect-data-using-microsoft-intune.md)
-### [Vyřazení aplikací](deploy-use/retire-apps-using-microsoft-intune.md)
 ### [Vymazání spravovaných dat aplikací společnosti](deploy-use/Wipe-managed-company-app-data-with-microsoft-intune.md)
 
 ## [Změna autority pro správu mobilních zařízení (MDM)](deploy-use/change-mdm-authority.md)

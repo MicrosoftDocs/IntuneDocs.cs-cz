@@ -14,11 +14,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1b08ac6049bc7bbbf5c2203f156a6c03b6fc7a51
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: d997e9db7aa2af4e598d47ab3c9a678e889632e8
+ms.sourcegitcommit: 2061f7a442efc96c8afd5db764d11531563c7e39
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34569387"
 ---
 # <a name="configure-and-deploy-lookout-for-work-app"></a>Konfigurace a nasazení aplikace Lookout for Work
 
@@ -85,11 +86,11 @@ Tento článek vysvětluje, jak nakonfigurovat a nasadit aplikaci Lookout for Wo
 
    Zvolte možnost **Požadovaná instalace**, aby byla instalace aplikace Lookout v zařízení uživatele povinná.
 
-## <a name="what-happens-when-the-deployed-app-is-opened-on-the-device"></a>Co se stane, když se nasazená aplikace otevře v zařízení
-https://github.com/Microsoft/Docs/blob/master/ContributorGuide/index.md Když uživatel v zařízení otevře aplikaci Lookout for Work, bude vyzván, aby aplikaci aktivoval a zvolil možnost Přihlásit pomocí Azure Active Directory. Podrobný návod s postupem pro koncového uživatele najdete v následujících tématech:
+## <a name="what-happens-when-the-deployed-app-is-opened-on-the-device"></a>Co se stane, když se nasazená aplikace otevře v zařízení 
+Když uživatel v zařízení otevře aplikaci Lookout for Work, bude vyzván, aby aplikaci aktivoval a zvolil možnost Přihlásit pomocí Azure Active Directory. Podrobný návod s postupem pro koncového uživatele najdete v následujících tématech:
 
 * [Zobrazuje se výzva k instalaci aplikace Lookout for Work na zařízení s Androidem](https://docs.microsoft.com/intune-user-help/you-are-prompted-to-install-lookout-for-work-android)
-
+    
 * [Je třeba vyřešit hrozbu, kterou objevila aplikace Lookout for Work na zařízení s Androidem](https://docs.microsoft.com/intune-user-help/you-need-to-resolve-a-threat-found-by-lookout-for-work-android)
 
 ## <a name="next-steps"></a>Další kroky
