@@ -20,6 +20,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31017236"
 ---
 # <a name="secure-resource-access-with-certificate-profiles-in-microsoft-intune"></a>Zabezpečení přístupu k prostředkům pomocí profilů certifikátů v Microsoft Intune
 
@@ -37,7 +38,7 @@ Když uživatelům poskytnete přístup k podnikovým prostředkům prostřednic
    -  Windows 8.1 a vyšší
    -  Windows Phone 8.1 nebo novější
 
-3. Vytvořte profily certifikátů. Zařízení si vyžádají certifikát, který se má používat k ověření přístupu k VPN, Wi-Fi a e-mailu, jak je popsáno v tématu [Konfigurace profilů certifikátů Intune](configure-intune-certificate-profiles.md). Můžete vytvořit a nasadit **Profil certifikátu PKCS #12 (.PFX)***nebo* **Profil certifikátu SCEP** pro zařízení s těmito platformami:
+3. Vytvořte profily certifikátů. Zařízení si vyžádají certifikát, který se má používat k ověření přístupu k VPN, Wi-Fi a e-mailu, jak je popsáno v tématu [Konfigurace profilů certifikátů Intune](configure-intune-certificate-profiles.md). Můžete vytvořit a nasadit **Profil certifikátu PKCS #12 (.PFX)** *nebo* **Profil certifikátu SCEP** pro zařízení s těmito platformami:
 
    -  iOS 8.0 a novější
    -  Android 4.0 a novější
