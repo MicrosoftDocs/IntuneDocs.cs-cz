@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/23/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,12 @@ ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 069f71d75c0a9c7cec083a929f89a2b39bb4aac5
-ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
+ms.openlocfilehash: 0831f374b9c6da417d8159dce1b58e40f0d3643c
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744937"
 ---
 # <a name="endpoint-protection-settings-for-windows-10-and-later-in-intune"></a>Nastavení ochrany koncového bodu pro Windows 10 a novější v Intune
 
@@ -300,15 +301,21 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
 
 - **Počet minut neaktivity na zamykací obrazovce, než se aktivuje šetřič obrazovky**: Můžete zadat maximální počet minut nečinnosti na přihlašovací obrazovce interaktivní relace plochy, než se spustí šetřič obrazovky.
 - **K přihlášení vyžadovat CTRL + ALT + DEL**: Můžete vyžadovat, aby uživatel před přihlášením stiskl CTRL + ALT + DEL.
-- **Chování při vyjmutí čipové karty**: Určuje, co se stane, když se ze čtečky čipových karet vyjme čipová karta přihlášeného uživatele.
-Další podrobnosti nabízí [možnosti LocalPoliciesSecurity](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-smartcardremovalbehavior).
+- **Chování při vyjmutí čipové karty**: Určuje, co se stane, když se ze čtečky čipových karet vyjme čipová karta přihlášeného uživatele. Možnosti:
+
+  - **Zamknout pracovní stanici**: Při vyjmutí čipové karty se pracovní stanice zamkne. Tato možnost umožňuje uživatelům opustit danou oblast, vzít si svoji čipovou kartu s sebou a přesto udržovat chráněnou relaci.
+  - **Vynutit odhlášení**: Při vyjmutí čipové karty se uživatel automaticky odhlásí.
+  - **Odpojit, pokud jde o relaci Vzdálené plochy**: Při vyjmutí čipové karty se relace odpojí bez odhlášení uživatele. Tato možnost umožňuje uživateli později vložením čipové karty obnovit danou relaci na tomto počítači nebo na jiném počítači se čtečkou čipových karet, aniž by se musel znovu přihlašovat. Pokud je relace místní, funguje tato zásada stejně jako možnost Zamknout pracovní stanici.
+
+    Další podrobnosti nabízí [možnosti LocalPoliciesSecurity](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-smartcardremovalbehavior).
 
 #### <a name="display"></a>Zobrazit
 
 - **Informace o uživateli na zamykací obrazovce**: Můžete konfigurovat informace o uživateli, které se zobrazí, když je relace uzamčená. Pokud tato možnost není nakonfigurovaná, zobrazí se zobrazované jméno uživatele, doména a uživatelské jméno.
+  - **Nenakonfigurováno**: Zobrazované jméno uživatele, doména a uživatelské jméno
+  - **Zobrazované jméno uživatele, doména a uživatelské jméno**
   - **Jen zobrazované jméno uživatel**
   - **Nezobrazovat informace o uživateli**
-  - **Nenakonfigurováno**: Zobrazované jméno uživatele, doména a uživatelské jméno
 - **Skrýt naposledy přihlášeného uživatele**: Můžete zvolit, aby se nezobrazovalo uživatelské jméno posledního uživatele, který se na tomto zařízení přihlásil.
 - **Skrýt uživatelské jméno při přihlašování**: Můžete zvolit, aby se po zadání přihlašovacích údajů a před zobrazením plochy zařízení nezobrazovalo uživatelské jméno uživatele, který se k tomuto zařízení přihlašuje.
 - **Nadpis zprávy přihlášení**: Můžete nastavit nadpis zprávy pro uživatele pokoušející se přihlásit.
@@ -316,13 +323,13 @@ Další podrobnosti nabízí [možnosti LocalPoliciesSecurity](https://docs.micr
 
 ### <a name="network-access-and-security"></a>Přístup k síti a zabezpečení
 
-- **Anonymní přístup k pojmenovaným kanálům a sdíleným složkám**: Omezuje anonymní přístup k nastavením sdílené složky a pojmenovaného kanálu. Platí pro nastavení, ke kterým se dá přistupovat anonymně.
-- **Anonymní výčty účtů SAM**: Umožňuje anonymním uživatelům vytvořit výčet účtů SAM. Windows umožňuje anonymním uživatelům vytvořit výčet názvů účtů domén a síťových sdílených složek.
-- **Anonymní výčty účtů SAM a sdílených složek**: Může blokovat anonymní výčet účtů SAM a sdílených složek. Windows umožňuje anonymním uživatelům vytvořit výčet názvů účtů domén a síťových sdílených složek.
-- **Ukládání hodnoty hash LAN Manageru při změně hesla**: Můžete vybrat, jestli se při další změně hesla uloží hodnota hash LAN Manageru (LM) pro nové heslo. Ve výchozím nastavení se neukládá.
-- **Žádosti ověření PKU2U**: Můžete blokovat používání online identit žádostmi ověření PKU2U na toto zařízení.
-- **Omezit vzdálená připojení RPC k SAM**: Můžete upravit výchozí řetězec jazyka SDDL (Security Descriptor Definition Language), abyste uživatelům a skupinám povolili nebo odepřeli vzdálená volání SAM.
-- **Popisovač zabezpečení**
+- **Anonymní přístup k pojmenovaným kanálům a sdíleným složkám**: Možnost **Nenakonfigurováno** (výchozí) omezuje anonymní přístup k nastavením sdílené složky a pojmenovaného kanálu. Platí pro nastavení, ke kterým se dá přistupovat anonymně.
+- **Anonymní výčty účtů SAM**: Možnost **Povolit** umožňuje anonymním uživatelům vytvořit výčet účtů SAM. Windows umožňuje anonymním uživatelům vytvořit výčet názvů účtů domén a síťových sdílených složek.
+- **Anonymní výčty účtů SAM a sdílených síťových složek**: Možnost **Nenakonfigurováno** (výchozí) určuje, že anonymní uživatelé můžou vytvořit výčet názvů účtů domén a síťových sdílených složek. Pokud chcete zabránit anonymním výčtům účtů SAM a sdílených síťových složek, nastavte možnost **Blokovat**.
+- **Ukládání hodnoty hash LAN Manageru při změně hesla**: Možnost **Povolit** určuje, že při další změně hesla se uloží hodnota hash LAN Manageru (LM) pro nové heslo. Pokud je nastavená možnost **Nenakonfigurováno** (výchozí), hodnota hash se neuloží.
+- **Žádosti ověření PKU2U**: Možnost **Blokovat** zabraňuje, aby žádosti ověření PKU2U na toto zařízení používaly online identity. Možnost **Nenakonfigurováno** (výchozí) tyto žádosti povoluje.
+- **Omezit vzdálená připojení RPC k SAM**: Možnost **Povolit** určuje, že výchozí řetězec jazyka SDDL (Security Descriptor Definition Language) může uživatelům a skupinám odepřít vzdálená volání SAM. Možnost **Nenakonfigurováno** (výchozí) určuje, že výchozí řetězec jazyka SDDL (Security Descriptor Definition Language) může uživatelům a skupinám povolit vzdálená volání SAM.
+  - **Popisovač zabezpečení**
 
 ### <a name="recovery-console-and-shutdown"></a>Konzola pro zotavení a vypnutí
 
@@ -359,13 +366,13 @@ Další podrobnosti nabízí [možnosti LocalPoliciesSecurity](https://docs.micr
 
 ### <a name="microsoft-network-client"></a>Microsoft Network Client
 
-- **Digitálně podepisovat komunikaci (pokud server souhlasí)**: Určuje, jestli se klient SMB pokusí vyjednat podepisování paketů. Když je tato možnost povolená (výchozí), klient sítě Microsoft požádá server o podepisování paketů SMB při nastavení relace. Pokud je na serveru podepisování paketů povolené, podepisování paketů se vyjedná. Pokud je tato zásada zakázaná, klient SMB podepisování paketů nikdy vyjednávat nebude.
+- **Digitálně podepisovat komunikaci (pokud server souhlasí)**: Určuje, jestli se klient SMB pokusí vyjednat podepisování paketů. Když je tato možnost povolená (nenakonfigurovaná), klient sítě Microsoft požádá server o podepisování paketů SMB při nastavení relace. Pokud je na serveru podepisování paketů povolené, podepisování paketů se vyjedná. Pokud je tato zásada zakázaná, klient SMB podepisování paketů nikdy vyjednávat nebude.
 - **Posílat nešifrované hesla serverům SMB třetích stran**: Když je tato možnost povolená, přesměrovač SMB (Server Message Block) může posílat hesla ve formátu prostého textu jiným serverům SMB než Microsoft, které nepodporují šifrování hesel při ověřování.
 
 ### <a name="microsoft-network-server"></a>Server sítě Microsoft
 
-- **Digitálně podepisovat komunikaci (pokud klient souhlasí)**: Určuje, jestli server SMB vyjednává podepisování paketů SMB s klienty, kteří to požadují. Když je tato možnost povolená, server sítě Microsoft vyjedná podepisování paketů SMB podle požadavku klienta. To znamená, že pokud je v klientovi podepisování paketů povolené, podepisování paketů se vyjedná. Když je tato možnost zakázaná, klient SMB podepisování paketů nikdy vyjednávat nebude.
-- **Digitálně podepisovat komunikaci (vždy)**: Určuje, jestli komponenta serveru SMB požaduje podepisování paketů. Když je tato možnost povolená, nebude server sítě Microsoft s klientem sítě Microsoft komunikovat, pokud tento klient nesouhlasí s podepisováním paketů SMB. Když je zakázaná (výchozí), podepisování paketů SMB mezi klientem a serverem se vyjedná.
+- **Digitálně podepisovat komunikaci (pokud klient souhlasí)**: Určuje, jestli server SMB vyjednává podepisování paketů SMB s klienty, kteří to požadují. Když je tato možnost povolená, server sítě Microsoft vyjedná podepisování paketů SMB podle požadavku klienta. To znamená, že pokud je v klientovi podepisování paketů povolené, podepisování paketů se vyjedná. Když je tato možnost **nenakonfigurovaná** nebo zakázaná (výchozí), klient SMB podepisování paketů nikdy vyjednávat nebude.
+- **Digitálně podepisovat komunikaci (vždy)**: Určuje, jestli komponenta serveru SMB požaduje podepisování paketů. Když je tato možnost povolená, nebude server sítě Microsoft s klientem sítě Microsoft komunikovat, pokud tento klient nesouhlasí s podepisováním paketů SMB. Když je tato možnost **nenakonfigurovaná** nebo zakázaná (výchozí), podepisování paketů SMB mezi klientem a serverem se vyjedná.
 
 ## <a name="next-steps"></a>Další kroky
 

@@ -14,11 +14,12 @@ ms.technology: ''
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 183eb3f121e1b5c53673d10a04d0710baeb5a703
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: a1476ad4237b6355d0cb87fcc643bf0234e7f457
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744767"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Vytvořte zásady podmíněného přístupu pro místní Exchange a starší verze Exchange Online Dedicated
 
@@ -37,9 +38,9 @@ Než nakonfigurujete podmíněný přístup, ověřte, jestli jsou splněné tyt
 - Musíte použít [místní Exchange Connector s protokolem Exchange Active Sync](exchange-connector-install.md), který připojí Intune k místnímu Exchangi.
 
     >[!IMPORTANT]
-    >Místní konektor Exchange je určený výhradně pro vašeho tenanta Intune a nedá se použít s žádným jiným tenantem. Také se ujistěte, že je konektor Exchange pro vašeho tenanta nainstalovaný jenom **na jednom počítači**.
+    >Místní konektor Exchange je určený výhradně pro vašeho tenanta Intune a nedá se použít s žádným jiným tenantem. Intune teď podporuje více místních Exchange Connectorů pro každé předplatné. Pokud máte více než jednu místní organizaci Exchange, můžete pro každou organizaci Exchange nastavit samostatný konektor.
 
-- Konektor může být nainstalovaný na každém počítači, který má schopnost komunikovat se serverem Exchange.
+- Konektor pro místní organizaci Exchange může být nainstalovaný na každém počítači, který může komunikovat se serverem Exchange.
 
 - Tento konektor podporuje **prostředí Exchange CAS**. Z technického hlediska můžete konektor nainstalovat přímo na server Exchange CAS, ale nedoporučuje se to, protože se tím zvýší zátěž serveru. Při konfiguraci musíte konektor nastavit tak, aby komunikoval s jedním ze serverů Exchange CAS.
 
@@ -49,7 +50,7 @@ Než nakonfigurujete podmíněný přístup, ověřte, jestli jsou splněné tyt
     - Musí být **zaregistrovaný** ve službě Intune nebo se musí jednat o počítač připojený k doméně.
     - **Je zaregistrované v Azure Active Directory**. Kromě toho musí být ve službě Azure Active Directory zaregistrované ID protokolu Exchange ActiveSync klienta.
 <br></br>
-- Pro zákazníky Intune a Office 365 je služba AAD DRS aktivovaná automaticky. Zákazníci, kteří už mají nasazenou službu AD FS Device Registration Service, registrovaná zařízení ve svojí místní službě Active Directory nevidí. **To neplatí pro počítače s Windows ani zařízení Windows Phone**.
+- Pro zákazníky s Intune a Office 365 se služba Azure AD Device Registration Service (DRS) aktivuje automaticky. Zákazníci, kteří už mají nasazenou službu AD FS Device Registration Service, registrovaná zařízení ve svojí místní službě Active Directory nevidí. **To neplatí pro počítače s Windows ani zařízení Windows Phone**.
 
 - **Musí splňovat** zásady dodržování předpisů, které jsou nasazené na toto zařízení.
 
@@ -89,11 +90,11 @@ Nativní aplikace **Pošta** ve Windows 8.1 a novějších verzích (při regist
 1. V podokně **Přístup k místnímu Exchangi** zvolte **Ano** a povolte tak řízení přístupu k místnímu Exchangi.
 
     > [!NOTE]
-    > Pokud jste nenakonfigurovali místní Exchange Connector s protokolem Exchange Active Sync, je tato možnost zakázaná.  Před povolením podmíněného přístupu pro místní Exchange musíte nejdřív nainstalovat a nakonfigurovat tento konektor. Další podrobnosti najdete v tématu [Instalace místního Exchange Connectoru v Intune](exchange-connector-install.md).
+    > Pokud jste nenakonfigurovali místní konektor s protokolem Exchange Active Sync, je tato možnost zakázaná.  Před povolením podmíněného přístupu pro místní Exchange je nutné nejdříve nainstalovat a nakonfigurovat aspoň jeden konektor. Další podrobnosti najdete v tématu [Instalace místního Exchange Connectoru v Intune](exchange-connector-install.md).
 
 1. V části **Přiřazení** zvolte **Zahrnuté skupiny**.  Použijte skupinu zabezpečení uživatelů, která by měla mít přiřazený podmíněný přístup. Tato akce vyžaduje, aby uživatelé zaregistrovali svoje zařízení v Intune a vyhověli podmínkám profilů pro dodržování předpisů.
 
-1. Pokud chcete vyloučit určité skupiny uživatelů, můžete to udělat tak, že zvolíte **Vyloučené skupiny** a vyberte skupinu uživatelů, kterou chcete vyloučit z povinné registrace zařízení a dodržování předpisů.
+1. Pokud chcete vyloučit určité skupiny uživatelů, můžete to udělat tak, že zvolíte **Vyloučené skupiny** a vyberete skupinu uživatelů, kterou chcete vyloučit z povinné registrace zařízení a dodržování předpisů.
 
 1. Pokud chcete upravit výchozí e-mailovou zprávu, zvolte v části **Nastavení** možnost **Oznámení uživateli**. Tato zpráva se pošle uživatelům, pokud jejich zařízení nevyhovuje zásadám, a uživatelé chtějí získat přístup k místnímu Exchangi. Šablona zprávy používá jazyk využívající značky.  V průběhu psaní se zobrazí také náhled toho, jak bude zpráva vypadat.
     > [!TIP]

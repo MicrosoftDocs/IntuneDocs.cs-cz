@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/16/2018
+ms.date: 05/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,12 @@ ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 559fd83d83c7312e0efe0d2c3f6bb7e5ec596a1b
-ms.sourcegitcommit: 6a9830de768dd97a0e95b366fd5d2f93980cee05
+ms.openlocfilehash: 2277da45ad1404269571f36dec0c16443409b39f
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744699"
 ---
 # <a name="add-a-device-compliance-policy-for-android-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s Androidem v Intune
 
@@ -122,6 +123,17 @@ Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení 
 - **Integrita modulu runtime aplikace Portál společnosti**: Zkontroluje, jestli má aplikace Portál společnosti nainstalované výchozí prostředí modulu runtime, je správně podepsaná, není v režimu ladění a je nainstalovaná ze známého zdroje.
 - **Blokovat u zařízení ladění USB** (Android 4.2 nebo novější): Vyberte, pokud chcete zabránit tomu, aby zařízení používala funkci ladění USB.
 - **Minimální úroveň opravy zabezpečení** (Android 6.0 nebo novější): Vyberte nejstarší úroveň opravy zabezpečení, kterou může zařízení mít. Zařízení, která nejsou alespoň na této úrovni oprav, nebudou kompatibilní. Datum musí být zadáno ve formátu `YYYY-MM-DD`.
+
+## <a name="locations"></a>Umístění
+
+V zásadách zvolte některé z existujících umístění. Žádné umístění ještě nemáte? Pokyny najdete v tématu o [používání umístění (ochranné sítě) v Intune](use-network-locations.md).
+
+1. Zvolte **Vybrat umístění**.
+2. V seznamu zkontrolujte umístění a zvolte **Vybrat**.
+3. **Uložte** zásady.
+4. Vyberte **Akce při nedodržení předpisů**. Výchozí akce okamžitě označí zařízení jako nedodržující předpisy. Tato akce se použije, když vyberete aspoň jedno umístění a zařízení není připojené do vybraných umístění.
+
+  Dobu akce, kdy se aktualizuje plán v případě, že je zařízení označené jako nedodržující předpisy, můžete změnit, například po uplynutí jednoho dne. Můžete také nakonfigurovat druhou akci, která odešle e-mail uživateli, když zařízení přestane být kompatibilní s vašimi umístěními.
 
 ## <a name="assign-user-groups"></a>Přiřazení skupin uživatelů
 

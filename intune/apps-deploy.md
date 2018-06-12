@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 06/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,19 +15,18 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b31c9d2028bcde6926f1bf1169de85d2f09efd82
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: bc7f827f121ad93498d22f6b9b246abf15dc76e3
+ms.sourcegitcommit: 2061f7a442efc96c8afd5db764d11531563c7e39
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34717974"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Po přidání aplikace do Microsoft Intune ji můžete přiřadit uživatelům a zařízením.
-
-Aplikaci můžete zařízení přiřadit bez ohledu na to, jestli je zařízení spravované pomocí Intune. 
+Po [přidání aplikace](apps-add.md) do Microsoft Intune ji můžete přiřadit uživatelům a zařízením. Je důležité si uvědomit, že aplikaci můžete zařízení přiřadit bez ohledu na to, jestli je zařízení spravované pomocí Intune. 
 
 Následující tabulka obsahuje různé možnosti pro přiřazení aplikací uživatelům a zařízením:
 
@@ -117,7 +116,8 @@ Někdy je tatáž aplikace přiřazena do více skupin, ale s různými záměry
 |Uživatel: K dispozici bez registrace|Zařízení: Odinstalace|Odinstalace a K dispozici bez registrace.<br><br>Pokud uživatel nenainstaloval aplikaci z Portálu společnosti, provede se odinstalace.<br><br>Pokud uživatel aplikaci nainstaluje z Portálu společnosti, bude mít instalace prioritu před odinstalací.|
 
 > [!NOTE]
-> Jenom pro spravované aplikace pro App Store (iOS) platí, že pokud je přidáte do Microsoft Intune a přiřadíte jako **Povinné**, vytvoří se automaticky se záměry **Povinné** i **K dispozici**.
+> Jenom pro spravované aplikace pro App Store (iOS) platí, že pokud je přidáte do Microsoft Intune a přiřadíte jako **Povinné**, vytvoří se automaticky se záměry **Povinné** i **K dispozici**.<br><br>
+> Aplikace iOS pro App Store (nikoli aplikace iOS VPP), které jsou cílené se záměrem Povinné, se na zařízení vynutí při ohlášení zařízení a zobrazí se také v aplikaci Portál společnosti.
 
 ## <a name="next-steps"></a>Další kroky
 

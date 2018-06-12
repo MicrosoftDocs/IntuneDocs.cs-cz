@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/01/2018
+ms.date: 05/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,12 @@ ms.assetid: d98aceff-eb35-4e3e-8e40-5f300e7335cc
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3d46960e6ea7e2ae9bed6c0016ddc309bd15f572
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 3f62e306574606ffa1eb1e6f242c3cb30b1a9c1b
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744648"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Vytvořte profil zařízení v Microsoft Intune
 
@@ -46,16 +47,19 @@ ms.lasthandoff: 04/16/2018
    - **Typ profilu**: Vyberte typ, který chcete vytvořit. Seznam závisí na platformě, kterou vyberete.
    - **Nastavení**: Informace o nastaveních pro jednotlivé typy profilů najdete v následujících tématech:
 
-       -  [Nastavení funkce zařízení](device-features-configure.md)
-       -  [Nastavení omezení zařízení](device-restrictions-configure.md)
-       -  [Nastavení e-mailu](email-settings-configure.md)
-       -  [Nastavení VPN](vpn-settings-configure.md)
-       -  [Nastavení Wi-Fi](wi-fi-settings-configure.md)
-       -  [Nastavení upgradu edice Windows 10](edition-upgrade-configure-windows-10.md)
-       -  [Nastavení certifikátu](certificates-configure.md)
-       -  [Nastavení Windows Information Protection](windows-information-protection-configure.md)
-       -  [Nastavení vzdělávání](education-settings-configure.md)
-       -  [Vlastní nastavení](custom-settings-configure.md)
+       -  [Funkce zařízení](device-features-configure.md)
+       -  [Omezení zařízení](device-restrictions-configure.md)
+       -  [Endpoint Protection](endpoint-protection-configure.md)
+       -  [Veřejný terminál](kiosk-settings.md)
+       -  [E-mail](email-settings-configure.md)
+       -  [VPN](vpn-settings-configure.md)
+       -  [Wi-Fi](wi-fi-settings-configure.md)
+       -  Education pro [Windows 10](education-settings-configure.md) a [iOS](wi-fi-settings-ios.md)
+       -  [Upgrade edice Windows 10](edition-upgrade-configure-windows-10.md)
+       -  [Zásady aktualizací pro iOS](software-updates-ios.md)
+       -  [Certifikáty](certificates-configure.md)
+       -  [Windows Information Protection](windows-information-protection-configure.md)
+       -  [Vlastní](custom-settings-configure.md)
 
      ![Snímek obrazovky znázorňující vytvoření profilu](./media/create-device-profile.png)
 
@@ -63,6 +67,5 @@ ms.lasthandoff: 04/16/2018
 
 Profil se vytvoří a zobrazí se v seznamu.
 
-
 ## <a name="next-steps"></a>Další kroky
-Informace o přiřazování profilů zařízení najdete v tématu [Jak přiřadit profily zařízení pomocí Microsoft Intune](device-profile-assign.md).
+[Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).

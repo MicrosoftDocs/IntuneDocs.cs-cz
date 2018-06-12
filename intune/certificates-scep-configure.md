@@ -1,11 +1,11 @@
 ---
 title: Používání certifikátů SCEP s Microsoft Intune – Azure | Microsoft Docs
-description: Pokud chcete v Microsoft Intune používat certifikáty SCEP, nakonfigurujte místní doménu AD, vytvořte certifikační autoritu, nastavte server NDES a nainstalujte Intune Certificate Connector. Potom vytvořte profil certifikátu SCEP a přiřaďte ho ke skupinám.
+description: Pokud chcete v Microsoft Intune používat certifikáty SCEP, nakonfigurujte místní doménu AD, vytvořte certifikační autoritu, nastavte server NDES a nainstalujte Intune Certificate Connector. Potom vytvořte profil certifikátu SCEP a přiřaďte ho ke skupinám. Podívejte se také na ID různých událostí a jejich popisy a na diagnostické kódy služby konektoru Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/23/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,11 +13,12 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f67ccf1c2fb3b708916ef4ed4209bd3be07d9a5e
-ms.sourcegitcommit: 6a9830de768dd97a0e95b366fd5d2f93980cee05
+ms.openlocfilehash: f5441bb15d6906257432afbfe51fffc6c11a6324
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745022"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -407,3 +408,54 @@ Před přiřazením profilů certifikátů ke skupinám vezměte v úvahu násle
     > U iOSu byste měli počítat s tím, že se v profilu správy zobrazí více kopií certifikátu, pokud nasadíte více profilů prostředků, které používají stejný profil certifikátu.
     
 Informace o tom, jak přiřadit profily, najdete v tématu [Přiřazení profilů zařízení](device-profile-assign.md).
+
+## <a name="intune-connector-events-and-diagnostic-codes"></a>Události a diagnostické kódy konektoru Intune
+
+Služba konektoru Intune od verze 6.1803.x.x zaznamenává události do **Prohlížeče událostí** (**Protokoly aplikací a služeb** > **Konektor Microsoft Intune**). Tyto události vám můžou pomoct při řešení možných problémů v konfiguraci konektoru Intune. Tyto události zaznamenávají úspěšné a neúspěšné operace a obsahují také diagnostické kódy se zprávami, které můžou správci IT usnadnit řešení problémů.
+
+### <a name="event-ids-and-descriptions"></a>ID událostí a jejich popisy
+
+> [!NOTE]
+> Podrobné informace o souvisejících diagnostických kódech pro jednotlivé události najdete v tabulce **Diagnostické kódy** (v tomto článku).
+
+| ID události      | Název události    | Popis události | Související diagnostické kódy |
+| ------------- | ------------- | -------------     | -------------            |
+| 10010 | StartedConnectorService  | Služba konektoru se spustila. | 0x00000000, 0x0FFFFFFF |
+| 10020 | StoppedConnectorService  | Služba konektoru se zastavila. | 0x00000000, 0x0FFFFFFF |
+| 10100 | CertificateRenewal_Success  | Certifikát registrace konektoru se úspěšně obnovil. | 0x00000000, 0x0FFFFFFF |
+| 10102 | CertificateRenewal_Failure  | Certifikát registrace konektoru se nepodařilo obnovit. Přeinstalujte konektor. | 0x00000000, 0x00000405, 0x0FFFFFFF |
+| 10302 | RetrieveCertificate_Error  | Certifikát registrace konektoru se nepodařilo načíst z registru. V podrobnostech události zkontrolujte kryptografický otisk certifikátu, který se vztahuje k této události. | 0x00000000, 0x00000404, 0x0FFFFFFF |
+| 10301 | RetrieveCertificate_Warning  | V podrobnostech události zkontrolujte diagnostické informace. | 0x00000000, 0x00000403, 0x0FFFFFFF |
+| 20100 | PkcsCertIssue_Success  | Certifikát PKCS se úspěšně vystavil. V podrobnostech události zkontrolujte ID zařízení, ID uživatele, název certifikační autority, název šablony certifikátu a kryptografický otisk certifikátu, které se vztahují k této události. | 0x00000000, 0x0FFFFFFF |
+| 20102 | PkcsCertIssue_Failure  | Certifikát PKCS se nepodařilo vystavit. V podrobnostech události zkontrolujte ID zařízení, ID uživatele, název certifikační autority, název šablony certifikátu a kryptografický otisk certifikátu, které se vztahují k této události. | 0x00000000, 0x00000400, 0x00000401, 0x0FFFFFFF |
+| 20200 | RevokeCert_Success  | Certifikát se úspěšně odvolal. V podrobnostech události zkontrolujte ID zařízení, ID uživatele, název certifikační autority a sériové číslo certifikátu, které se vztahují k této události. | 0x00000000, 0x0FFFFFFF |
+| 20202 | RevokeCert_Failure | Certifikát se nepovedlo odvolat. V podrobnostech události zkontrolujte ID zařízení, ID uživatele, název certifikační autority a sériové číslo certifikátu, které se vztahují k této události. Další informace najdete v protokolech SVC NDES.   | 0x00000000, 0x00000402, 0x0FFFFFFF |
+| 20300 | Download_Success | Žádost o podepsání certifikátu se úspěšně stáhla, stáhněte si klientský certifikát nebo odvolejte certifikát. V podrobnostech události zkontrolujte podrobnosti o stažení.  | 0x00000000, 0x0FFFFFFF |
+| 20302 | Download_Failure | Žádost o podepsání certifikátu se nepodařilo stáhnout, stáhněte si klientský certifikát nebo odvolejte certifikát. V podrobnostech události zkontrolujte podrobnosti o stažení. | 0x00000000, 0x0FFFFFFF |
+| 20400 | Upload_Success | Žádost o certifikát nebo údaje o odvolání certifikátu se úspěšně nahrály. V podrobnostech události zkontrolujte podrobnosti o nahrání. | 0x00000000, 0x0FFFFFFF |
+| 20402 | Upload_Failure | Žádost o certifikát nebo údaje o odvolání certifikátu se nepodařilo nahrát. V podrobnostech události zkontrolujte stav nahrávání, abyste zjistili, kde došlo k chybě.| 0x00000000, 0x0FFFFFFF |
+| 20500 | CRPVerifyMetric_Success  | Bod registrace certifikátu úspěšně dokončil ověřovací test klienta. | 0x00000000, 0x0FFFFFFF |
+| 20501 | CRPVerifyMetric_Warning  | Bod registrace certifikátu se dokončil, ale žádost se zamítla. Další podrobnosti poskytne diagnostický kód a zpráva. | 0x00000000, 0x00000411, 0x0FFFFFFF |
+| 20502 | CRPVerifyMetric_Failure  | Bodu registrace certifikátu se nepodařilo ověřovací test klienta úspěšně dokončit. Další podrobnosti poskytne diagnostický kód a zpráva. V podrobnostech zprávy o události vyhledejte ID zařízení, které se vztahuje k tomuto ověřovacímu testu. | 0x00000000, 0x00000408, 0x00000409, 0x00000410, 0x0FFFFFFF |
+| 20600 | CRPNotifyMetric_Success  | Bod registrace certifikátu úspěšně dokončil proces oznamování a odeslal certifikát do klientského zařízení. | 0x00000000, 0x0FFFFFFF |
+| 20602 | CRPNotifyMetric_Failure  | Bodu registrace certifikátu se nepodařilo dokončit proces oznamování. V podrobnostech zprávy o události vyhledejte informace o této žádosti. Ověřte připojení mezi serverem NDES a certifikační autoritou. | 0x00000000, 0x0FFFFFFF |
+
+### <a name="diagnostic-codes"></a>Diagnostické kódy
+
+| Diagnostický kód | Název diagnostiky | Diagnostická zpráva |
+| -------------   | -------------   | -------------      |
+| 0x00000000 | Úspěch  | Úspěch |
+| 0x00000400 | PKCS_Issue_CA_Unavailable  | Certifikační autorita není platná nebo není dostupná. Ověřte, že je certifikační autorita dostupná a že s ní váš server může komunikovat. |
+| 0x00000401 | Symantec_ClientAuthCertNotFound  | Certifikát ověřování klienta Symantec se v místním úložišti certifikátů nenašel. Další informace najdete v článku o [instalaci certifikátu RA Symantec](https://docs.microsoft.com/en-us/intune/certificates-symantec-configure#install-the-symantec-registration-authorization-certificate).  |
+| 0x00000402 | RevokeCert_AccessDenied  | Zadaný účet nemá oprávnění k odvolání certifikátu z certifikační autority. V podrobnostech zprávy o události vyhledejte pole Název certifikační autority, abyste zjistili vydávající certifikační autoritu.  |
+| 0x00000403 | CertThumbprint_NotFound  | Certifikát odpovídající vašemu vstupu se nepodařilo najít. Zaregistrujte si Certificate Connector a zkuste to znovu. |
+| 0x00000404 | Certificate_NotFound  | Certifikát odpovídající zadanému vstupu se nepodařilo najít. Zaregistrujte si znovu Certificate Connector a zkuste to znovu. |
+| 0x00000405 | Certificate_Expired  | Platnost certifikátu vypršela. Zaregistrujte si znovu Certificate Connector, aby se certifikát obnovil, a zkuste to znovu. |
+| 0x00000408 | CRPSCEPCert_NotFound  | Certifikát šifrování CRP se nepodařilo najít. Ověřte správné nastavení NDES a konektoru Intune. |
+| 0x00000409 | CRPSCEPSigningCert_NotFound  | Podpisový certifikát se nepodařilo načíst. Ověřte, že je služba konektoru Intune správně nakonfigurovaná a že je spuštěná. Ověřte také, že se úspěšně dokončily události stažení certifikátu. |
+| 0x00000410 | CRPSCEPDeserialize_Failed  | Žádost ověřovacího testu SCEP se nepodařilo deserializovat. Ověřte správné nastavení NDES a konektoru Intune. |
+| 0x00000411 | CRPSCEPChallenge_Expired  | Žádost se zamítla kvůli vypršení platnosti ověřovacího testu certifikátu. Po načtení nového ověřovacího testu ze serveru pro správu může klientské zařízení pokus opakovat. |
+| 0x0FFFFFFFF | Unknown_Error  | Vaši žádost nemůžeme dokončit, protože došlo k chybě na straně serveru. Zkuste to prosím znovu. |
+
+## <a name="next-steps"></a>Další kroky
+[Použijte certifikáty PKCS](certficates-pfx-configure.md) nebo [vystavte certifikáty PKCS z webové služby správce infrastruktury veřejných klíčů Symantec](certificates-symantec-configure.md).

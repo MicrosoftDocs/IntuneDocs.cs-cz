@@ -372,6 +372,8 @@
               href: endpoint-protection-macos.md
             - name: Windows 10
               href: endpoint-protection-windows-10.md
+        - name: Konfigurace nastavení režimu Veřejný terminál
+          href: kiosk-settings.md
         - name: Konfigurace nastavení e-mailů
           href: email-settings-configure.md
           items:
@@ -411,12 +413,14 @@
               href: wi-fi-settings-macos.md
             - name: Windows 8.1 a Windows 10
               href: wi-fi-settings-import-windows-8-1.md
+        - name: Vzdělávání
+          items:
+            - name: Sdílená zařízení s iOSem
+              href: education-settings-configure-ios-shared.md
+            - name: Windows 10
+              href: education-settings-configure.md
         - name: Konfigurace nastavení upgradu edice Windows 10
           href: edition-upgrade-configure-windows-10.md
-        - name: Konfigurace nastavení Windows 10 Education
-          href: education-settings-configure.md
-        - name: Konfigurace sdílených zařízení s iOS Education
-          href: education-settings-configure-ios-shared.md
         - name: Konfigurace zásad aktualizací pro iOS
           href: software-updates-ios.md
         - name: Konfigurace certifikátů
@@ -455,6 +459,8 @@
           href: compliance-policy-create-mac-os.md
         - name: Vytvoření zásad pro Windows
           href: compliance-policy-create-windows.md
+        - name: Zásady založené na poloze
+          href: use-network-locations.md
         - name: Evaluate Policy (Vyhodnotit zásadu)
           href: policy-evaluate.md
         - name: Akce při nedodržení předpisů

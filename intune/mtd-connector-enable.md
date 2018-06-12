@@ -15,11 +15,12 @@ ms.assetid: dbb6a37e-ba47-4b69-922c-d25e66c279f6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5f0dd0d968cde26ed4fcd4a628db5ff98316bee7
-ms.sourcegitcommit: b0ad42fe5b5627e5555b2f9e5bb81bb44dbff078
+ms.openlocfilehash: 6fccfcbceecc9aa0667aa9fd6656c2fcc524d363
+ms.sourcegitcommit: 2061f7a442efc96c8afd5db764d11531563c7e39
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34569353"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Povolení konektoru Mobile Threat Defense v Intune
 
@@ -53,7 +54,7 @@ Podle požadavků organizace se můžete rozhodnout, jaké možnosti přepínán
 - **Připojit zařízení s Androidem 4.1+ k [název partnera MTD] for Work MTD**: Když tuto možnost povolíte, mohou zařízení se systémem Android verze 4.1 a vyšší hlásit bezpečnostní riziko zpět Intune.
     - **Při nepřijetí dat označit jako nedodržující předpisy**: Pokud Intune na této platformě nedostane od partnera MTD údaje o zařízení, můžete zařízení považovat za nevyhovující.
 <br></br>
-- **Připojit zařízení s iOS 8.0+ k [název partnera MTD] for Work MTD**: Když tuto možnost povolíte, mohou zařízení se systémem iOS verze 8.0 a vyšší hlásit bezpečnostní riziko zpět Intune.
+- **Připojit zařízení s iOSem 8.0+ k [název partnera MTD] for Work MTD**: Když tuto možnost povolíte, mohou zařízení se systémem iOS verze 8.0 a vyšší hlásit bezpečnostní riziko zpět Intune.
     - **Při nepřijetí dat označit jako nedodržující předpisy**: Pokud Intune na této platformě nedostane od partnera MTD údaje o zařízení, můžete zařízení považovat za nevyhovující.
 <br></br>
 - **Povolit synchronizaci aplikací pro zařízení iOS**: Povolí tomuto partnerovi Ochrany před mobilními hrozbami žádat o metadata aplikací pro iOS z Intune, která se použijí pro účely analýzy hrozeb.

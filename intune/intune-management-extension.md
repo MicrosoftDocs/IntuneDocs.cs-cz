@@ -1,12 +1,11 @@
 ---
-title: Správa powershellových skriptů v Microsoft Intune u zařízení s Windows 10
-titlesuffix: ''
-description: Přečtěte si, jak nahrát powershellové skripty do Microsoft Intune, aby je bylo možné používat v zařízeních s Windows 10.
+title: Přidání powershellových skriptů v Microsoft Intune u zařízení s Windows 10 – Azure | Microsoft Docs
+description: Přidejte powershellové skripty, přiřaďte zásady skriptů skupinám Azure Active Directory, použijte sestavy k monitorování skriptů a podívejte se na postup pro odstranění skriptů, které jste přidali na zařízení s Windows 10 v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/27/2018
+ms.date: 05/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +14,12 @@ ms.assetid: 768b6f08-3eff-4551-b139-095b3cfd1f89
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3de7af01ffa64293e420913258919eff118b4abc
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 2046a928525e974eee5f63d772d46864b21f0267
+ms.sourcegitcommit: 2061f7a442efc96c8afd5db764d11531563c7e39
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34583668"
 ---
 # <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Správa powershellových skriptů v Intune u zařízení s Windows 10
 Rozšíření správy Intune umožňuje nahrát powershellové skripty do Intune, aby je bylo možné spouštět v zařízeních s Windows 10. Rozšíření správy doplňuje funkce správy mobilních zařízení (MDM) s Windows 10 a usnadňuje přechod na moderní správu.
@@ -35,39 +35,33 @@ Rozšíření správy Intune doplňuje integrované funkce správy mobilních za
 Rozšíření správy Intune vyžaduje splnění následujících požadavků:
 - Zařízení musí být připojená k Azure AD. (Nezahrnuje zařízení připojená k hybridní službě Azure AD.)
 - Zařízení musí používat Windows 10 verze 1607 nebo novější.
+- Automatická registrace MDM musí být [povolena ve službě Azure AD](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) a zařízení musí být automaticky zaregistrována v Intune.
 
 ## <a name="create-a-powershell-script-policy"></a>Vytvoření zásad powershellových skriptů 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Intune** zvolte **Konfigurace zařízení**.
-4. V podokně **Konfigurace zařízení** zvolte **Spravovat** > **Powershellové skripty**.
-5. V podokně **Powershellové skripty** zvolte **Přidat**.
-6. V podokně **Přidat powershellový skript** zadejte **Název** a **Popis** powershellového skriptu.
-7. V části **Umístění skriptu** vyhledejte powershellový skript. Velikost skriptu musí být menší než 200 kB.
-8. Zvolte **Konfigurovat** a potom zvolte, zda chcete skript spouštět pomocí přihlašovacích údajů uživatele v zařízení (**Ano**) nebo v kontextu systému (**Ne**). Skript se standardně spouští v kontextu systému. Možnost **Ano** vyberte, pokud nechcete, aby se skript spouštěl v kontextu systému. 
+2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+3. Vyberte **Konfigurace zařízení** > **Powershellové skripty** > **Přidat**.
+4. Zadejte **Název** a **Popis** powershellového skriptu. V části **Umístění skriptu** vyhledejte powershellový skript. Velikost skriptu musí být menší než 200 kB (ASCII) nebo 100 kB (Unicode).
+5. Zvolte **Konfigurace**. Potom zvolte, jestli chcete skript spouštět pomocí přihlašovacích údajů uživatele v zařízení (**Ano**) nebo v kontextu systému (**Ne**). Skript se standardně spouští v kontextu systému. Možnost **Ano** vyberte, pokud nechcete, aby se skript spouštěl v kontextu systému. 
   ![Podokno Přidat powershellový skript](./media/mgmt-extension-add-script.png)
-9. Zvolte, zda musí být skript podepsán důvěryhodným vydavatelem (**Ano**). Standardně nejsou stanovené žádné požadavky na to, aby byl skript podepsán. 
-10. Klikněte na **OK** a potom kliknutím na **Vytvořit** skript uložte.
+6. Zvolte, jestli musí být skript podepsán důvěryhodným vydavatelem (**Ano**). Standardně nejsou stanovené žádné požadavky na to, aby byl skript podepsán. 
+7. Výběrem **OK** a **Vytvořit** skript uložíte.
 
 ## <a name="assign-a-powershell-script-policy"></a>Přiřazení zásad powershellových skriptů
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Intune** zvolte **Konfigurace zařízení**.
-4. V podokně **Konfigurace zařízení** zvolte **Spravovat** > **Powershellové skripty**.
-5. V podokně **Powershellové skripty** vyberte skript, který chcete přiřadit, a potom zvolte **Spravovat** > **Přiřazení**.
+1. V části **Powershellové skripty** vyberte skript, který chcete přiřadit, a potom zvolte **Spravovat** > **Přiřazení**.
   ![Podokno Přidat powershellový skript](./media/mgmt-extension-assignments.png)
  
-6. Výběrem možnosti **Vybrat skupiny** zobrazte seznam dostupných skupin Azure AD. 
-7. Vyberte jednu nebo více skupin, které obsahují uživatele, jejichž zařízení bude přijímat tento skript, a pak klikněte na **Vybrat**, aby se zásady přiřadily vybraným skupinám.
+2. Výběrem možnosti **Vybrat skupiny** zobrazte seznam dostupných skupin Azure AD. 
+3. Vyberte jednu nebo více skupin, které obsahují uživatele, jejichž zařízení skript obdrží. Kliknutím na **Vybrat** přiřaďte zásady k vybraným skupinám.
 
 Rozšíření správy Intune se s Intune synchronizuje jednou za hodinu. Po přiřazení zásad ke skupinám Azure AD se powershellový skript spustí a zobrazí se výsledky spuštění. 
  
 ## <a name="monitor-run-status-for-powershell-scripts"></a>Monitorování stavu spuštění powershellových skriptů
 Na portálu Azure Portal můžete monitorovat stav spuštění powershellových skriptů u uživatelů a zařízení.
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Intune** zvolte **Konfigurace zařízení**.
-4. V podokně **Konfigurace zařízení** zvolte **Spravovat** > **Powershellové skripty**.
-5. V podokně **Powershellové skripty** vyberte skript, který chcete monitorovat, zvolte **Monitorovat** a pak zvolte jednu z následujících sestav:
+
+V části **Powershellové skripty** vyberte skript, který chcete monitorovat, zvolte **Monitorovat** a pak zvolte jednu z následujících sestav:
    - **Stav zařízení**
    - **Stav uživatele**
+
+## <a name="delete-a-powershell-script"></a>Odstranění powershellového skriptu
+V části **Powershellové skripty** klikněte pravým tlačítkem na skript a vyberte **Odstranit**.

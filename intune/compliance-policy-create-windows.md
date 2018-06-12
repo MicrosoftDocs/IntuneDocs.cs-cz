@@ -5,18 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/26/2018
+ms.date: 05/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 64df804bf2f882991cccd3f77014369cd86b69a8
-ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
+ms.openlocfilehash: 6e5fb28e001dbe69f392d1ea730e415515fe4c5c
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744903"
 ---
 # <a name="add-a-device-compliance-policy-for-windows-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s Windows v Intune
 
@@ -111,21 +112,20 @@ Počítače s Windows 8.1 vrací verzi **3**. Pokud je pravidlo verze operační
 - **Vyžadovat BitLocker**: Když je nástroj BitLocker zapnutý, zařízení je při vypnutém systému nebo v režimu hibernace schopné chránit data uložená na disku před neoprávněným přístupem. Nástroj Windows BitLocker Drive Encryption zašifruje všechna data uložená na svazku operačního systému Windows. BitLocker používá k ochraně operačního systému Windows a uživatelských dat čip TPM. Také pomáhá zajistit, aby se s počítačem nemanipulovalo ani v případě, že je ponechaný bez dozoru, ztracený nebo odcizený. Pokud je počítač vybavený kompatibilním čipem TPM, nástroj BitLocker pomocí čipu TPM uzamkne šifrovací klíče, které chrání data. V důsledku toho se ke klíčům nedá získat přístup, dokud čip TPM neověří stav počítače.
 - **Vyžadovat, aby na zařízení bylo povolené zabezpečené spuštění**: Pokud je povolené zabezpečené spouštění, musí se systém spouštět do důvěryhodného stavu z výroby. Kromě toho platí, že při povoleném zabezpečeném spouštění musí mít komponenty jádra sloužící ke spuštění počítače správné kryptografické podpisy, které jsou podle výrobce zařízení důvěryhodné. Firmware UEFI nejdříve ověří podpis a až potom povolí spuštění počítače. Pokud u některých souborů došlo k manipulaci, při které se porušil podpis, systém se nespustí.
 - **Vyžadovat integritu kódu**: Integrita kódu je funkce, která ověřuje integritu ovladače nebo systémového souboru při každém načtení do paměti. Integrita kódu zjistí, jestli se do jádra načítá nepodepsaný ovladač nebo systémový soubor. Nebo jestli systémový soubor nebyl změněn škodlivým softwarem spuštěným pomocí uživatelského účtu s oprávněními správce.
-- **Vyžadovat, aby zařízení bylo na určité úrovni hrozby pro zařízení nebo pod ní**: Toto nastavení použijte, pokud chcete jako podmínku dodržování předpisů použít vyhodnocování rizika z vašich služeb ochrany před hrozbami. Vyberte maximální povolenou úroveň hrozby:
-  - **Zabezpečeno**: Tato možnost je nejbezpečnější, protože zařízení nesmí být nijak ohroženo. Pokud se v zařízení zjistí libovolná úroveň hrozeb, vyhodnotí se jako nedodržující předpisy.
-  - **Nízká:** Zařízení je vyhodnoceno jako vyhovující, pokud se v něm nachází i jen nízká úroveň hrozeb. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
-  - **Střední**: Zařízení se vyhodnotí jako vyhovující, pokud se existující hrozby pohybují na střední nebo nízké úrovni. Pokud se zjistí, že zařízení má i hrozby vysoké úrovně, bude vyhodnoceno jako nedodržující předpisy.
-  - **Vysoká**: Tato možnost je nejméně bezpečná a umožňuje všechny úrovně hrozeb. Může být užitečná, pokud toto řešení používáte jen ke generování sestav.
 
 Podrobnosti o fungování služby ověření stavu najdete v tématu [Poskytovatel CSP služby Health Attestation](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp).
 
 ### <a name="device-properties"></a>Vlastnosti zařízení
 
-- **Minimální verze operačního systému**: Zadejte minimální povolenou verzi ve formátu hlavní verze.podverze.sestavení.číslo revize. Hodnota sestavení.číslo revize musí odpovídat verzi vrácené příkazem `ver` nebo `winver`.
+- **Minimální verze OS**: Zadejte minimální povolenou verzi ve formátu **hlavní verze.podverze.sestavení.číslo CU**. Správnou hodnotu získáte, když otevřete příkazový řádek a zadáte `ver`. Příkaz `ver` vrátí verzi v následujícím formátu:
+
+  `Microsoft Windows [Version 10.0.17134.1]`
 
   Pokud má zařízení starší verzi operačního systému, než je zadaná verze, uvede se jako nekompatibilní. Zobrazí se odkaz s informacemi o postupu upgradu. Koncový uživatel si může upgradovat svoje zařízení. Potom bude mít přístup k prostředkům společnosti.
 
-- **Maximální verze operačního systému**: Zadejte maximální povolenou verzi ve formátu hlavní verze.podverze.sestavení.číslo revize. Hodnota sestavení.číslo revize musí odpovídat verzi vrácené příkazem `ver` nebo `winver`.
+- **Maximální verze OS**: Zadejte maximální povolenou verzi ve formátu **hlavní verze.podverze.sestavení.číslo revize**. Správnou hodnotu získáte, když otevřete příkazový řádek a zadáte `ver`. Příkaz `ver` vrátí verzi v následujícím formátu:
+
+  `Microsoft Windows [Version 10.0.17134.1]`
 
   Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný a uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nepůjde přes toto zařízení přistupovat k prostředkům společnosti.
 
@@ -161,9 +161,17 @@ Podrobnosti o fungování služby ověření stavu najdete v tématu [Poskytovat
 - **Počet předchozích hesel, která se nesmí použít znovu**: Zadejte počet dříve použitých hesel, která se nesmí znovu použít.
 - **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti (Mobile a Holographic)**: Vynutí zadání hesla uživatelem při každém návratu zařízení ze stavu nečinnosti.
 
-### <a name="encryption"></a>Šifrování
+#### <a name="encryption"></a>Šifrování
 
 - **Šifrování úložiště dat na zařízení**: Vyberte **Vyžadovat** a zašifrujte úložiště dat na vašich zařízeních.
+
+### <a name="windows-defender-atp"></a>Ochrana ATP v programu Windows Defender
+
+- **Vyžadovat, aby zařízení mělo určité nebo nižší skóre rizika počítače**: Toto nastavení použijte, pokud chcete jako podmínku dodržování předpisů použít vyhodnocování rizika z vašich služeb ochrany před hrozbami. Vyberte maximální povolenou úroveň hrozby:
+  - **Vymazat**: Tato možnost je nejbezpečnější, protože zařízení nesmí být nijak ohroženo. Pokud se v zařízení zjistí libovolná úroveň hrozeb, vyhodnotí se jako nedodržující předpisy.
+  - **Nízká:** Zařízení je vyhodnoceno jako vyhovující, pokud se v něm nachází i jen nízká úroveň hrozeb. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
+  - **Střední**: Zařízení se vyhodnotí jako vyhovující, pokud se existující hrozby pohybují na střední nebo nízké úrovni. Pokud se zjistí, že zařízení má i hrozby vysoké úrovně, bude vyhodnoceno jako nedodržující předpisy.
+  - **Vysoká**: Tato možnost je nejméně bezpečná a umožňuje všechny úrovně hrozeb. Může být užitečná, pokud toto řešení používáte jen ke generování sestav.
 
 ## <a name="windows-holographic-for-business"></a>Windows Holographic for Business
 

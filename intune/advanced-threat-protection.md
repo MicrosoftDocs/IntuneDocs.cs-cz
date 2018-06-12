@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 4/24/2018
+ms.date: 5/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,11 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2e99ed0bd1eb5bae90913aedba5973e5e1282f70
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 99d848fb1efea2ea2d557ab8d4f19881705ec991
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/02/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744665"
 ---
 # <a name="enable-windows-defender-atp-with-conditional-access-in-intune"></a>Povolení Ochrany ATP v programu Windows Defender s podmíněným přístupem v Intune
 
@@ -51,19 +52,19 @@ Abyste mohli používat ATP s Intune, je potřeba mít nakonfigurované a připr
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
-3. Vyberte **Dodržování předpisů zařízením** > **Windows Defender ATP** > **otevřete konzolu pro správu Rozšířené ochrany před internetovými útoky v programu Windows Defender**.
+3. Vyberte **Dodržování předpisů zařízením** > **Windows Defender ATP** > **Otevřít Centrum zabezpečení v programu Windows Defender**.
 
-    ![Alternativní text](./media/atp-device-compliance-open-windows-defender.png)
+    ![Výběrem otevřete Centrum zabezpečení v programu Windows Defender.](./media/atp-device-compliance-open-windows-defender.png)
 
 4. V **Centru zabezpečení v programu Windows Defender**:
     1. Zvolte **Nastavení** > **Pokročilé funkce**.
     2. Přepínač pro **připojení Microsoft Intune** přepněte do polohy **Zapnuto**:
 
-        ![Alternativní text](./media/atp-security-center-intune-toggle.png)
+        ![Povolení připojení k Intune](./media/atp-security-center-intune-toggle.png)
 
     3. Vyberte **Uložit předvolby**.
 
-5. Přejděte zpět do Intune > **Dodržování předpisů zařízením** > **Windows Defender ATP**. Možnost pro **připojení zařízení s Windows 10.0.15063+ k Rozšířené ochraně před internetovými útoky v programu Windows Defender** přepněte do polohy **Zapnuto**.
+5. Přejděte zpět do Intune > **Dodržování předpisů zařízením** > **Windows Defender ATP**. Nastavte **Připojit zařízení s Windows verze 10.0.15063 a vyšší ke konektoru Windows Defender ATP** na **Zapnuto**.
 6. Vyberte **Uložit**.
 
 Tento postup stačí obvykle provést jednou. Takže pokud už ATP v prostředcích Intune povolené máte, není potřeba tento krok opakovat.
@@ -115,9 +116,9 @@ Zásady dodržování předpisů určují přijatelnou úroveň rizika v zaříz
 2. Vyberte **Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu**.
 3. Zadejte **Název** a **Popis**.
 4. V části **Platforma** vyberte **Windows 10 a novější**.
-5. V části **Stav zařízení** nastavte možnost **Vyžadovat, aby zařízení bylo na určité úrovni hrozby pro zařízení nebo pod ní** na požadovanou úroveň:
+5. V části **Windows Defender ATP** nastavte možnost **Vyžadovat, aby zařízení mělo určité nebo nižší skóre rizika počítače** na požadovanou úroveň:
 
-  - **Zabezpečeno:** Tato úroveň poskytuje nejvyšší zabezpečení. Zařízení nemůže přistupovat k prostředkům společnosti, pokud je vystavené nějakým hrozbám. Pokud se najde jakákoli hrozba, zařízení se vyhodnotí jako nevyhovující.
+  - **Vymazat:** Tato úroveň poskytuje nejvyšší zabezpečení. Zařízení nemůže přistupovat k prostředkům společnosti, pokud je vystavené nějakým hrozbám. Pokud se najde jakákoli hrozba, zařízení se vyhodnotí jako nevyhovující.
   - **Nízká:** Zařízení se vyhodnotí jako vyhovující, pokud se v něm nacházejí jenom hrozby nízké úrovně. Zařízení s hrozbami střední nebo vysoké úrovně jsou nevyhovující.
   - **Střední:** Zařízení vyhovuje, pokud se v něm vyskytují hrozby na střední nebo nízké úrovni. Pokud se v zařízení zjistí hrozby vysoké úrovně, vyhodnotí se jako nevyhovující.
   - **Vysoká**: Tato úroveň je nejméně bezpečná a umožňuje všechny úrovně hrozeb. Jako vyhovující se tedy vyhodnotí zařízení s hrozbami nízké, střední i vysoké úrovně.

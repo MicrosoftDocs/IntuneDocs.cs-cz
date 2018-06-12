@@ -5,18 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/5/2018
+ms.date: 05/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 792e2ae45e6331b91b1727af113604186c9bb72a
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 233b61018ad521f44ffea96f991f24649e174e3e
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744597"
 ---
 # <a name="create-vpn-profiles-in-intune"></a>Vytváření profilů sítě VPN v Intune
 
@@ -41,18 +42,19 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
 
 |Typ připojení|Android<br>Android for Work|iOS|macOS|Windows Phone 8.1|Windows 8.1|Windows 10|
 |-|-|-|-|-|-|-|
-|Pulse Secure|Ano|Ano|Ano|Ano|Ano|Ano|
-|Cisco (IPSec)|Ne|Ano|Ne|Ne|Ne|Ne|
-|Citrix|Ano|Ano|Ne|Ne|Ne|Ano|
-|F5 Edge Client|Ano|Ano|Ano|Ano|Ano|Ano|
-|SonicWall Mobile Connect|Ano|Ano|Ano|Ano|Ano|Ano|
+|Automaticky|Ne|Ne|Ne|Ne|Ne|Ano|
 |Check Point Capsule VPN|Ano|Ano|Ano|Ano|Ano|Ano|
 |Cisco AnyConnect|Ano|Ano|Ano|Ne|Ne|Ne|
-|Automaticky|Ne|Ne|Ne|Ne|Ne|Ano|
+|SonicWall Mobile Connect|Ano|Ano|Ano|Ano|Ano|Ano|
+|F5 Edge Client|Ano|Ano|Ano|Ano|Ano|Ano|
+|Palo Alto Networks GlobalProtect|Ne|Ano|Ne|Ne|Ne|Ano|
+|Pulse Secure|Ano|Ano|Ano|Ano|Ano|Ano|
+|Cisco (IPSec)|Ne|Ano|Ne|Ne|Ne|Ne|
+|Citrix|Ano (jen Android)|Ano|Ne|Ne|Ne|Ano|
 |IKEv2|Ne|Ne|Ne|Ne|Ne|Ano|
 |L2TP|Ne|Ne|Ne|Ne|Ne|Ano|
 |PPTP|Ne|Ne|Ne|Ne|Ne|Ano|
-|Vlastní|Ne|Ano|Ano|Ne|Ne|Ne|
+|Vlastní VPN|Ne|Ano|Ano|Ne|Ne|Ne|
 
 > [!IMPORTANT]
 > Před použitím profilů VPN přiřazených nějakému zařízení je nutné nainstalovat příslušnou aplikaci VPN pro profil. S přiřazením aplikace pomocí Intune vám pomůžou informace v článku [Co je správa aplikací v Microsoft Intune](app-management.md).  

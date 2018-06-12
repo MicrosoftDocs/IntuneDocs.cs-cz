@@ -15,11 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: tscott
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d5d55f6c3efabdde51b5627d5ddd409c2b282f6c
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: bbcfa2de4b2d6ef7bff481817a289f56e746ee7f
+ms.sourcegitcommit: 2061f7a442efc96c8afd5db764d11531563c7e39
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34718025"
 ---
 # <a name="general-troubleshooting-tips-for-microsoft-intune"></a>Obecné tipy pro odstraňování potíží v Microsoft Intune
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 Po nasazení Microsoft Intune můžete zjistit, že máte problémy s konfigurací nebo s klientskými zařízeními. Následující informace vám pomůžou zjistit, co je příčinou problému, abyste ho mohli vyřešit.
 
 > [!NOTE]
-> Pokud chcete vytvořit žádost o podporu nebo pokud chcete zobrazit stávající požadavek, [přejděte do Centra pro správu Office 365](https://portal.office.com/admin/default.aspx). Další informace o možnostech podpory najdete v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+> Pokud chcete vytvořit žádost o podporu nebo pokud chcete zobrazit stávající požadavek, přejděte na stránku [nápovědy a podpory Azure](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview). Další informace o možnostech podpory najdete v tématu [Jak získat podporu pro Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 ## <a name="define-the-problem"></a>Definování problému
 

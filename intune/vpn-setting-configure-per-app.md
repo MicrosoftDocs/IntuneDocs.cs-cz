@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/30/2018
+ms.date: 05/16/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,26 +14,31 @@ ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3a467983b0d6ce94c32080f4d5cd78683471fb58
-ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
+ms.openlocfilehash: ed58a6af9b2b4742582c92729e7324841014f31c
+ms.sourcegitcommit: 2bc3b9655517ae874c524c3a270f4fc40c448faa
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753888"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Nastavení virtuální privátní sítě (VPN) pro jednotlivé aplikace v Intune pro zařízení s iOSem
 
 Můžete určit, které spravované aplikace můžou používat vaši virtuální privátní síť (VPN) na zařízeních s iOSem spravovaných pomocí Intune. Když v Intune vytvoříte síť VPN pro jednotlivé aplikace, koncový uživatel se při přístupu k firemním dokumentům automaticky připojí přes vaši síť VPN.
 
-VPN pro aplikaci je v tuto chvíli k dispozici pro následující poskytovatele: 
+VPN pro aplikaci je v tuto chvíli k dispozici pro následující poskytovatele:
 
- - Checkpoint Remote Access VPN
+ - Check Point Remote Access VPN
  - Cisco AnyConnect
+ - Citrix
  - F5
  - Pulse Connect Secure
  - SonicWall
-
+ - Palo Alto Networks GlobalProtect
 
 ## <a name="prerequisites-for-per-app-vpn"></a>Předpoklady sítě VPN pro aplikaci
+
+> [!IMPORTANT]
+> Dodavatel sítě VPN může mít jiné zvláštní požadavky na VPN pro aplikaci, například zvláštní hardware nebo licencování. Nezapomeňte zkontrolovat jeho dokumentaci a splnit tyto požadavky dříve, než VPN pro aplikaci v Intune nastavíte.
 
 Server VPN prokáže svoji identitu tak, že předloží certifikát, který musí zařízení bez vyzvání přijmout. Zajištění automatického schválení certifikátu vyžaduje, abyste vytvořili profil důvěryhodného certifikátu, který obsahuje kořenový certifikát serveru VPN vystavený certifikační autoritou. 
 
@@ -162,14 +167,15 @@ Po nastavení sítě VPN pro jednotlivé aplikace a jejím přidružení k aplik
 
 ### <a name="before-you-attempt-to-connect"></a>Než se pokusíte připojit
 
- - Ověřte, že používáte iOS 7 nebo novější.
+ - Ověřte, že používáte iOS 9 nebo novější.
  - Zkontrolujte, že *všechny* výše uvedené zásady nasazujete do stejné skupiny uživatelů. V opačném případě nebude síť VPN pro jednotlivé aplikace s největší pravděpodobností fungovat.  
  - Zkontrolujte, že máte nainstalovanou podporovanou aplikaci VPN od jiného výrobce. Podporují se tyto aplikace VPN:
-    - Pulse Secure
-    - CheckPoint
+    - Check Point Capsule Connect
     - Cisco AnyConnect
-    - F5
-    - SonicWall
+    - Citrix VPN
+    - F5 Access
+    - Pulse Secure
+    - SonicWall Mobile Connect
 
 ### <a name="connect-using-the-per-app-vpn"></a>Připojení pomocí sítě VPN pro jednotlivé aplikace
 

@@ -15,11 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8dbfff0fadec567bf0d9bd86d71a26174db40c09
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 75e36456c03cd0a769e9741606a2b70fa7e49c35
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744988"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune
 
@@ -153,6 +154,9 @@ Když přidáte aplikaci do Intune, budete mít možnost vybrat požadovanou kat
 ## <a name="apps-that-are-added-automatically-by-intune"></a>Aplikace přidané automaticky službou Intune
 
 Dříve služba Intune obsahovala řadu integrovaných aplikací, které jste mohli rychle přiřadit. Na základě názorů zákazníků Intune jsme tento seznam odebrali a integrované aplikace se už nezobrazují. Pokud jste už ale nějaké integrované aplikace přiřadili, budou se v seznamu aplikací zobrazovat i nadále. Aplikace můžete dál přiřazovat podle potřeby.
+
+> [!NOTE]
+> U instalace vyžadované neobchodní aplikace se Intune pokusí nainstalovat aplikaci odesláním instalačního příkazu pokaždé, když se zařízení ohlásí, za předpokladu, že aplikace není zjištěná a stav instalace aplikace není *Instalace čeká*.
 
 ## <a name="installing-updating-or-removing-required-apps"></a>Instalace, aktualizace a odebrání požadovaných aplikací
 
