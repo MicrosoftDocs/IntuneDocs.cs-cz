@@ -51,14 +51,14 @@ Vytvoření zásad dodržování předpisů založených na síťovém umístěn
 
 2. Zadejte tyto vlastnosti:  
 
-   - Povinné. Zadejte **Název** umístění, například **Výrobní podlaží** nebo **Budova 44 – zabezpečená**.
-   - Nepovinné. Zadejte **rozsah IPv4** s notací CIDR (Classless Interdomain Routing), například `aaa.bbb.ccc.ddd/n`.
-   - Nepovinné. Zadejte adresu **brány IPv4**, například `aaa.bbb.ccc.ddd`.
-   - Nepovinné. Zadejte adresu **serveru DHCP IPv4**, například `aaa.bbb.ccc.ddd`.
-   - Nepovinné. Zadejte seznam adres **serverů DNS IPv4**. Toto nastavení používá **shodu podmnožin**. Pokud servery DNS IPv4 na zařízení jsou podmnožinami definovaných hodnot, zařízení je považované za zařízení UVNITŘ ohraničení. Každou adresu zadejte na samostatném řádku, například:  
+   - Požadováno. Zadejte **Název** umístění, například **Výrobní podlaží** nebo **Budova 44 – zabezpečená**.
+   - Volitelný parametr. Zadejte **rozsah IPv4** s notací CIDR (Classless Interdomain Routing), například `aaa.bbb.ccc.ddd/n`.
+   - Volitelný parametr. Zadejte adresu **brány IPv4**, například `aaa.bbb.ccc.ddd`.
+   - Volitelný parametr. Zadejte adresu **serveru DHCP IPv4**, například `aaa.bbb.ccc.ddd`.
+   - Volitelný parametr. Zadejte seznam adres **serverů DNS IPv4**. Toto nastavení používá **shodu podmnožin**. Pokud servery DNS IPv4 na zařízení jsou podmnožinami definovaných hodnot, zařízení je považované za zařízení UVNITŘ ohraničení. Každou adresu zadejte na samostatném řádku, například:  
      `aaa.bbb.ccc.ddd`  
      `aaa.bbb.ccc.ddd`
-   - Nepovinné. Zadejte seznam **přípon DNS**. Toto nastavení používá **shodu podmnožin**. Pokud přípony DNS na zařízení jsou podmnožinami definovaných hodnot, zařízení je považované za zařízení UVNITŘ ohraničení. Každou doménu zadejte na samostatném řádku, například:  
+   - Volitelný parametr. Zadejte seznam **přípon DNS**. Toto nastavení používá **shodu podmnožin**. Pokud přípony DNS na zařízení jsou podmnožinami definovaných hodnot, zařízení je považované za zařízení UVNITŘ ohraničení. Každou doménu zadejte na samostatném řádku, například:  
      `contoso.com`  
      `contoso.org`
 
