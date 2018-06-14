@@ -137,6 +137,7 @@
 ### [Ruční synchronizace zařízení](sync-your-device-manually-windows.md)
 
 ### [Řešení běžných problémů s Windows](troubleshoot-your-device-windows.md)
+### [Řešení omezení přístupového bodu](resolve-access-point-restrictions.md)
 #### [Moje zařízení s Windows 10 se nedá zaregistrovat](troubleshoot-your-windows-10-device-windows.md)
 #### [Aktualizace zařízení s Windows](you-need-to-update-your-windows-device.md)
 #### [Odeslání protokolů z aplikace Portál společnosti](send-logs-to-your-it-admin-cp-windows.md)
@@ -158,4 +159,3 @@
 ### [Odebrání zařízení](remove-your-device-cpwebsite.md)
 ### [Resetování hesla zařízení](reset-your-passcode-cpwebsite.md)
 ### [Obnovení továrního nastavení a vymazání zařízení](reset-erase-your-device-cpwebsite.md)
-### [Ruční synchronizace zařízení](sync-your-device-manually-cpwebsite.md)
