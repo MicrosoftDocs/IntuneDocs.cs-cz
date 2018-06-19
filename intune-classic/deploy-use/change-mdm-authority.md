@@ -19,6 +19,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31028057"
 ---
 # <a name="change-the-mdm-authority"></a>Změna autority MDM
 Od Configuration Manageru verze 1610 můžete změnit autoritu MDM, aniž by bylo nutné kontaktovat podporu Microsoftu a rušit registraci a následně nově registrovat stávající spravovaná zařízení. Toto téma představuje kroky ke změně existujícího tenanta Microsoft Intune nakonfigurovaného z Intune a s autoritu MDM nastavenou na **Microsoft Intune** (samostatně) na **Configuration Manager** (hybridní MDM), aniž byste museli zrušit registraci existujících spravovaných zařízení a znovu je zaregistrovat.

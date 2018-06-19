@@ -22,6 +22,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31015740"
 ---
 # <a name="installing-office-365-on-your-windows-10-device"></a>Instalace Office 365 na zařízení s Windows 10
 

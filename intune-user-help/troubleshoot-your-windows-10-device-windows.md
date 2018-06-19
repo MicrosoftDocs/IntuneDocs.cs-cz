@@ -22,6 +22,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31018171"
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Řešení potíží při registraci zařízení s Windows 10
 Pokud jste použili postup v části [Registrace zařízení s Windows 10 Mobile nebo Windows 10 Desktop v Intune](enroll-your-w10-phone-or-w10-pc-windows.md), ale stále nemáte přístup ke svému školnímu nebo pracovnímu e-mailu a souborům, zkuste tyto kroky pro řešení potíží.

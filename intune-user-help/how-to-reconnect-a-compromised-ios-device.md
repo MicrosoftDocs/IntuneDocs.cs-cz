@@ -22,6 +22,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31014635"
 ---
 # <a name="how-to-reconnect-a-compromised-ios-device"></a>Opakované připojení k ohroženému zařízení se systémem iOS
 

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 91802e78cd5014d20a828ca25a54a381d452f0f8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34216254"
 ---
 # <a name="configure-microsoft-intune-for-ios-device-single-sign-on"></a>Nakonfigurování Microsoft Intune na jednotné přihlašování pro zařízení s iOSem
 

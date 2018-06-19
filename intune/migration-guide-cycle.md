@@ -19,6 +19,7 @@ ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/16/2018
+ms.locfileid: "29926537"
 ---
 # <a name="typical-migration-cycle"></a>Typický cyklus migrace
 

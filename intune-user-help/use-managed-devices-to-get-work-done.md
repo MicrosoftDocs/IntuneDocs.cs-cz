@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30755228"
 ---
 # <a name="use-managed-devices-to-get-work-done"></a>Práce pomocí spravovaných zařízení
 Microsoft Intune je software, který organizacím umožňuje spravovat zařízení (jako jsou smartphony, tablety nebo počítače), aplikace a další firemní prostředky (například e-mail). To zaměstnancům zajistí přístup k pracovním informacím prakticky odkudkoli z jakéhokoli zařízení a současně uchová firemní data v bezpečí.

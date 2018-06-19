@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30753953"
 ---
 # <a name="install-zimperium-zips-on-your-android-device"></a>Instalace aplikace Zimperium zIPS na zařízení s Androidem
 

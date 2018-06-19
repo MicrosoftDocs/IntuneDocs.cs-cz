@@ -22,6 +22,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31019717"
 ---
 # <a name="you-need-to-enable-secure-boot"></a>Je nutné povolit zabezpečené spouštění.
 

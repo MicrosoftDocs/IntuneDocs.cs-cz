@@ -1,16 +1,16 @@
 ---
 title: Konektor Zimperium MTD s Intune
 titleSuffix: Intune on Azure
-description: "Přečtěte si o integraci Intune se službou Zimperium Mobile Threat Defense za účelem regulace přístupu mobilních zařízení k firemním prostředkům."
-keywords: 
+description: Přečtěte si o integraci Intune se službou Zimperium Mobile Threat Defense za účelem regulace přístupu mobilních zařízení k firemním prostředkům.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 12/29/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 975d8d84-792a-41ad-925a-4a7f1ae4dcaf
 ms.reviewer: heenamac
 ms.suite: ems
@@ -20,6 +20,7 @@ ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29780063"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Konektor Zimperium Mobile Threat Defense s Intune
 

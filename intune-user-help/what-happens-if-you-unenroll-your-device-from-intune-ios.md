@@ -22,6 +22,7 @@ ms.sourcegitcommit: 49dc405bb26270392ac010d4729ec88dfe1b68e4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34308887"
 ---
 # <a name="what-happens-if-you-unenroll-your-ios-or-macos-device-from-intune"></a>Co se stane, když zrušíte registraci zařízení se systémem iOS nebo macOS v Intune?
 

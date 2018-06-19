@@ -20,6 +20,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31013054"
 ---
 # <a name="accessibility-features-of-microsoft-intune"></a>Funkce usnadnění ve službě Microsoft Intune
 Kromě funkcí a nástrojů usnadnění v Microsoft Windows umožňují snadnější používání služby Microsoft Intune osobám s postižením následující funkce: Používání klávesových zkratek

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32327700"
 ---
 # <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>Odesílání chyb firemní podpoře při problémech se zařízením s iOSem
 Při používání aplikace Portál společnosti na zařízení s iOSem se někdy můžete setkat s chybou. Když se to stane, můžete podrobnosti o chybě poslat e-mailem pracovníkovi firemní podpory. Podrobnosti obsahují souvislosti potřebné k řešení problému.

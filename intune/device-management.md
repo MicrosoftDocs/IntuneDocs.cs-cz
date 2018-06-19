@@ -18,6 +18,7 @@ ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31836923"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Co je správa zařízení v Microsoft Intune?
 
