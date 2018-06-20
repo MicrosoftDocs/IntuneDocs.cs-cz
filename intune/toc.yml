@@ -672,8 +672,12 @@
           href: troubleshoot-software-updates-in-microsoft-intune.md
         - name: Řešení potíží se službou Endpoint Protection
           href: troubleshoot-endpoint-protection-in-microsoft-intune.md
-        - name: Řešení problémů se zásadami
+        - name: Řešení potíží se zásadami
           href: troubleshoot-policies-in-microsoft-intune.md
+        - name: Řešení potíží s podmíněným přístupem
+          href: troubleshoot-conditional-access.md
+        - name: Řešení problémů s konektorem Exchange
+          href: troubleshoot-exchange-connector.md
     - name: Automatizace a přizpůsobení
       items:
         - name: Konfigurace vlastních nastavení zařízení
