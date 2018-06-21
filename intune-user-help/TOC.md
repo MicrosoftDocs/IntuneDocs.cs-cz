@@ -135,6 +135,7 @@
 ### [Co se stane, když obnovíte tovární nastavení zařízení?](what-happens-if-you-reset-your-device-using-the-company-portal-windows.md)
 ### [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-windows.md)
 ### [Ruční synchronizace zařízení](sync-your-device-manually-windows.md)
+### [Vzdálené zamykání zařízení ze zařízení s Windows 10](remote-lock-your-device-cp-app.md) 
 
 ### [Řešení běžných problémů s Windows](troubleshoot-your-device-windows.md)
 ### [Řešení omezení přístupového bodu](resolve-access-point-restrictions.md)
@@ -152,7 +153,7 @@
 #### [Potřebuji povolit nástroj Řízení uživatelských účtů](you-need-to-enable-uac-windows.md)
 #### [Potřebuji aktualizovat Windows](you-need-to-update-os-build-version-windows.md)
 #### [Potřebuji zapnout Windows Defender](turn-on-defender-windows.md)
-## [Vzdálené uzamčení zařízení z aplikace Portál společnosti pro Windows](remote-lock-your-device-cp-app.md) 
+
 ## [Použití webu Portál společnosti Intune](using-the-intune-company-portal-website.md)
 ### [Vzdálené uzamčení zařízení](remote-lock-your-device-cpwebsite.md)
 ### [Přejmenování zařízení](rename-your-device-cpwebsite.md)
