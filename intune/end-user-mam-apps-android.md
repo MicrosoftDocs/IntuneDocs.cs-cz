@@ -14,12 +14,12 @@ ms.assetid: 53c8e2ad-f627-425b-9adc-39ca69dbb460
 ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 88fa0d58bc982148b44233e7486a4ce0a2e8598a
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 3e479ae9e3cd2caf6b893cb75f9af8fde2340f0c
+ms.sourcegitcommit: d786eb18147a12fbc8cb97a157467f88591f1bc5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31023032"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37133982"
 ---
 # <a name="what-to-expect-when-your-android-app-is-managed-by-app-protection-policies"></a>Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací
 
@@ -72,9 +72,9 @@ Podporované jsou následující typy souborů:
 * **Dokumenty:** PDF, PPDF
 
 
-|**pfile**|**text**|
-|----|----|
-|Pfile je obecný „obálkový“ formát pro chráněné soubory, který zapouzdřuje šifrovaný obsah a licence Azure Information Protection. Dá se použít pro ochranu libovolného typu souboru.|Textové soubory včetně souborů XML, CSV a dalších jde otvírat pro zobrazení v aplikaci, i když jsou chráněné. Typy souborů: txt, ptxt, csv, pcsv, log, plog, xml, pxml.|
+|**pfile**|
+|----|
+|Pfile je obecný „obálkový“ formát pro chráněné soubory, který zapouzdřuje šifrovaný obsah a licence Azure Information Protection. Dá se použít pro ochranu libovolného typu souboru.|
 
 ## <a name="next-steps"></a>Další kroky
 [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](end-user-mam-apps-ios.md)

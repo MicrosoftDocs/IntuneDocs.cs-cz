@@ -14,11 +14,12 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0d27648d4d5033f2c2e849b31d19403600692b4f
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: bb94c5a0941dc4f4d626c6316f79d5e4b1f4b551
+ms.sourcegitcommit: 91dc50d38be13c65e5d144d237d7c4358089f215
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "35679440"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro Android na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -124,9 +125,7 @@ Mezi osvědčené postupy pro opětovné balení patří:
 ## <a name="reusing-signing-certificates-and-wrapping-apps"></a>Opětovné použití podpisových certifikátů a balení aplikací
 Android vyžaduje, že všechny aplikace musí být podepsané platným certifikátem, aby je bylo možné nainstalovat na zařízení s Androidem.
 
-Zabalené aplikace je možné podepsat jako součást procesu zabalení nebo *po* zabalení pomocí stávajících podpisových nástrojů (veškeré podpisové informace v aplikaci budou před zabalením zahozeny).
- 
-Pokud je to možné, měly by se během balení použít podpisové informace použité již během sestavování buildu. V některých organizacích to může vyžadovat spolupráci s těmi, kdo vlastní informace o úložišti klíčů (tedy s týmem, který vytvořil build aplikace). 
+Zabalené aplikace je možné podepsat jako součást procesu zabalení nebo *po* zabalení pomocí stávajících podpisových nástrojů (veškeré podpisové informace v aplikaci budou před zabalením zahozeny). Pokud je to možné, měly by se během balení použít podpisové informace použité již během sestavování buildu. V některých organizacích to může vyžadovat spolupráci s těmi, kdo vlastní informace o úložišti klíčů (tedy s týmem, který vytvořil build aplikace). 
 
 Pokud předchozí podpisový certifikát nelze použít nebo aplikace zatím nebyla nasazena, můžete vytvořit nový podpisový certifikát podle pokynů v [Příručce pro vývojáře pro Android](https://developer.android.com/studio/publish/app-signing.html#signing-manually).
 

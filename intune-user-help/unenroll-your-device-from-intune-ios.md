@@ -17,11 +17,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 2df474e8b0a5af2ac294715135804ef0713a3015
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 0a90cace32edb33293ba0b0b89d272465ea32418
+ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34547484"
 ---
 # <a name="remove-your-ios-device-from-intune"></a>Odebrání zařízení s iOSem z Intune
 
@@ -59,6 +60,8 @@ K odebrání zařízení z Intune použijte následující postup. Můžete se t
   -   E-mailové profily společnosti jsou ze zařízení odebrané.
 
   -   V aplikaci Portál společnosti a na webu se už nebudou zobrazovat zařízení, která jsou nakonfigurovaná jenom pro použití e-mailu.
+  
+  -   Odinstalují se aplikace. Odeberou se data firemních aplikací.
 
 ## <a name="removing-data-collected-by-the-company-portal-app"></a>Odebrání dat shromažďovaných aplikací Portál společnosti
 
