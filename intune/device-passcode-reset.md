@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5783558a768e1d58087168f81ad27e5acf9aae09
-ms.sourcegitcommit: 91802e78cd5014d20a828ca25a54a381d452f0f8
+ms.openlocfilehash: 81330083830eb2e3e1fe3e36217d403a77094a65
+ms.sourcegitcommit: 8be5f29107d882c3ecf3dc0ce718a2423f91ce9a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34216305"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "36964721"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Resetování nebo odebrání hesla zařízení v Intune
 
@@ -28,13 +28,13 @@ Pokud chcete vytvořit nové heslo pro zařízení, použijte akci **Odebrat hes
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
-- Zařízení s Androidem zaregistrovaná s pracovním profilem, verze 7.0 nebo novější
+- Zařízení s Androidem zaregistrovaná s pracovním profilem, verze 8.0 nebo novější
 - Zařízení s Androidem, verze 6.0 nebo starší
 - iOS 
      
 ## <a name="unsupported-platforms"></a>Nepodporované platformy
 
-- Zařízení s Androidem zaregistrovaná s pracovním profilem, verze 6.0 nebo starší
+- Zařízení s Androidem zaregistrovaná s pracovním profilem, verze 7.0 nebo starší
 - Zařízení s Androidem, verze 7.0 nebo novější
 - macOS
 - Windows
@@ -48,7 +48,7 @@ Pokud chcete vytvořit nové heslo pro zařízení, použijte akci **Odebrat hes
 
 ## <a name="resetting-android-for-work-passcodes"></a>Resetování hesla v Androidu for Work
 
-Podporovaná zařízení s Androidem for Work obdrží nové heslo pro odemknutí spravovaného profilu nebo výzvu spravovaného profilu pro koncového uživatele. U zařízení s Androidem ve verzi 7.0 nebo novější s pracovními profily obdrží koncový uživatel oznámení s výzvou, aby ihned po dokončení registrace aktivoval svůj token pro resetování hesla. Oznámení se zobrazí, pokud je požadováno a nastaveno heslo pracovního profilu. Po zadání hesla se oznámení zavře.
+Podporovaná zařízení s Androidem for Work obdrží nové heslo pro odemknutí spravovaného profilu nebo výzvu spravovaného profilu pro koncového uživatele. U zařízení s Androidem ve verzi 8.0 nebo novější s pracovními profily obdrží koncový uživatel oznámení s výzvou, aby ihned po dokončení registrace aktivoval svůj token pro resetování hesla. Oznámení se zobrazí, pokud je požadováno a nastaveno heslo pracovního profilu. Po zadání hesla se oznámení zavře.
 
 ## <a name="resetting-ios-passcodes"></a>Resetování hesla v iOSu
 

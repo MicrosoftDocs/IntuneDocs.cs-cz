@@ -1,2 +1,2 @@
   > [!NOTE]
-  > Používejte správná hesla na správných místech. Heslo pro váš pracovní nebo školní účet může být jiné než heslo, které používáte pro přihlášení ke svému zařízení a jednotlivá zařízení můžou mít různá hesla. Pokud máte s hesly potíže, požádejte o pomoc firemní podporu.
+  > Používejte správná hesla na správných místech. Heslo pracovního nebo školního účtu se může lišit od hesla, které používáte k přihlášení do zařízení, a různá hesla můžou mít i jednotlivá zařízení. Pokud máte s hesly potíže, požádejte o pomoc firemní podporu.

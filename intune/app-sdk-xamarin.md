@@ -5,7 +5,7 @@ keywords: SDK, Xamarin, Intune
 author: Erikre
 manager: dougeby
 ms.author: erikre
-ms.date: 03/19/2018
+ms.date: 06/08/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,12 @@ ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 5c9f81761e7e24393471f44da4cf619f017e9bbd
-ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
+ms.openlocfilehash: f8f5e397c314088c7b26edba486f9cbaf9718096
+ms.sourcegitcommit: 1eddded65ae9e442dd3bebd16b9428af76a67f34
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35250940"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Xamarinové vazby sady Microsoft Intune App SDK
 
@@ -73,6 +74,9 @@ Přečtěte si [licenční podmínky](https://github.com/msintuneappsdk/intune-a
       ```csharp
        IntuneMAMEnrollmentManager.Instance.LoginAndEnrollAccount([NullAllowed] string identity);
       ```
+      
+> [!NOTE] 
+> Pro iOS není k dispozici nástroj pro přemapování. Integrace do aplikace Xamarin.Forms by měla být stejná jako u normálního projektu Xamarin.iOS. 
 
 ## <a name="enabling-intune-app-protection-policies-in-your-android-mobile-app"></a>Povolení zásad Intune App Protection v mobilní aplikaci pro Android
 
@@ -102,6 +106,7 @@ Přečtěte si [licenční podmínky](https://github.com/msintuneappsdk/intune-a
 
 > [!NOTE]
 > Tato operace znovu zapíše závislost, kterou Visual Studio používá pro automatické dokončování Intellisense, a proto možná budete muset po prvním spuštění nástroje pro přemapování restartovat Visual Studio, aby funkce Intellisense správně rozpoznala změny. 
+
 
 ## <a name="support"></a>Support
 

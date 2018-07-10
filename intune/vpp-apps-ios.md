@@ -15,11 +15,12 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 122f0b70392df65076622354722b6d546f4fe7b7
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 3afe1ed48a21c26927b3686ae9a455ed8484e282
+ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34547399"
 ---
 # <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Správa aplikací pro systém iOS nakoupených prostřednictvím programu hromadného nákupu pomocí Microsoft Intune
 
@@ -162,7 +163,7 @@ Licence by se měly aktualizovat do několika hodin od instalace nebo odinstalac
 Ano. Správce Intune může aplikaci přidělit nadměrnému počtu uživatelů nebo zařízení. A to například tehdy, když zakoupí sto licencí k aplikaci XYZ a potom ji zacílí na skupinu s pěti sty členy. Prvnímu stu členů (uživatelům nebo zařízením) se licence přiřadí a u zbylých členů se přiřazení licence nezdaří.
 
 #### <a name="i-understand-intune-automatically-syncs-app-licenses-each-day-with-apple-is-that-correct"></a>Chápu správně, že Intune automaticky synchronizuje licence aplikací s Apple každý den?
-Intune synchronizuje licence aplikací s Apple každých 15 hodin.
+Intune synchronizuje licence aplikací s Apple dvakrát denně.
 
 ## <a name="next-steps"></a>Další kroky
 

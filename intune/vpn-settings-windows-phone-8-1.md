@@ -13,11 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3572022b491439d2cf624b2ed3f1d53ffaf54d7d
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 3397c10ae572a248507f15e5145fef68898d30c4
+ms.sourcegitcommit: b47fad133ef8ef1eb65484463431c6c53f6a638a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35291440"
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-windows-phone-81"></a>Nastavení sítě VPN v Microsoft Intune pro zařízení s Windows Phone 8.1
 
@@ -56,7 +57,7 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
 - **Role** (pouze Pulse Secure) – zadejte název role uživatele, která má přístup k tomuto připojení. Role uživatele definuje osobní nastavení a možnosti a povolí nebo zakáže určité funkce přístupu.
 - **Sféra** (pouze Pulse Secure) – zadejte název sféry ověření, kterou chcete použít. Sféra ověření je seskupení prostředků ověření používaných typem připojení Pulse Secure.
 
-- **Seznam hledání přípon DNS** - **Přidejte** minimálně jednu příponu DNS. Každá zadaná přípona DNS se vyhledá při připojení k webu pomocí krátkého názvu. Zadáte například přípony DNS **domain1.contoso.com** a **domain2.contoso.com**, přejdete na adresu URL **http://mywebsite** a adresy URL **http://mywebsite.domain1.contoso.com** a **http://mywebsite.domain2.contoso.com se vyhledají**.
+- **Seznam hledání přípon DNS** - **Přidejte** minimálně jednu příponu DNS. Každá zadaná přípona DNS se vyhledá při připojení k webu pomocí krátkého názvu. Pokud zadáte například přípony DNS **domain1.contoso.com** a **domain2.contoso.com** a navštívíte adresu URL `http://mywebsite`, vyhledají se adresy URL `http://mywebsite.domain1.contoso.com` a `http://mywebsite.domain2.contoso.com`.
 
 - **Vlastní XML** – zadejte vlastní příkazy XML pro konfiguraci připojení VPN.
 

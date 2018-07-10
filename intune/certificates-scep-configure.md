@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/04/2018
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f5441bb15d6906257432afbfe51fffc6c11a6324
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 0d42500b9476e0b6c7bc9aaaba1ea4333fd136c6
+ms.sourcegitcommit: 29914cc467e69711483b9e2ccef887196e1314ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34745022"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36297901"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -36,12 +36,16 @@ Tento článek popisuje, jak pomocí Intune nakonfigurovat infrastrukturu a pak 
 - **Server NDES**: Na serveru, na kterém běží Windows Server 2012 R2 nebo novější, musíte nastavit službu zápisu síťových zařízení (NDES). Intune nepodporuje používání služby zápisu síťových zařízení, pokud běží na serveru, na kterém běží taky certifikační autorita organizace. Pokyny k tomu, jak konfigurovat Windows Server 2012 R2 k hostování služby zápisu síťových zařízení, najdete v tématu [Doprovodné materiály ke službě zápisu síťových zařízení](http://technet.microsoft.com/library/hh831498.aspx).
 Server NDES musí být připojený k doméně, která je hostitelem certifikační autority, a nesmí být na stejném serveru jako tato autorita. Další informace o nasazení serveru NDES v samostatné doménové struktuře, izolované síti nebo interní doméně najdete v tématu [Použití modulu zásad se Službou zápisu síťových zařízení](https://technet.microsoft.com/library/dn473016.aspx).
 
-- **Microsoft Intune Certificate Connector**: Prostřednictvím Azure Portalu stáhněte instalační program **Certificate Connectoru** (**ndesconnectorssetup.exe**). Pak můžete soubor **ndesconnectorssetup.exe** spustit na serveru hostujícím roli Služba zápisu síťových zařízení (NDES), na který chcete Certificate Connector nainstalovat. 
+- **Microsoft Intune Certificate Connector**: Instalační program **Certificate Connectoru** (**NDESConnectorSetup.exe**) si můžete stáhnout z webu Azure Portal. Pak můžete soubor **NDESConnectorSetup.exe** spustit na serveru hostujícím roli NDES (Network Device Enrollment Service), na který chcete nainstalovat Certificate Connector.
+
+  - Certificate Connector pro NDES také podporuje režim FIPS (Federal Information Processing Standard). Režim FIPS není povinný, ale pokud ho aktivujete, můžete vydávat a odvolávat certifikáty.
+
 - **Proxy server webových aplikací** (volitelné): Jako server služby Proxy webových aplikací (WAP) použijte server se systémem Windows Server 2012 R2 nebo novějším. Tato konfigurace:
-  -  Umožňuje zařízením získat certifikáty pomocí připojení k internetu.
-  -  Je doporučeným zabezpečením v případě, že se zařízení připojují prostřednictvím internetu za účelem příjmu a obnovení certifikátů.
+  - Umožňuje zařízením získat certifikáty pomocí připojení k internetu.
+  - Je doporučeným zabezpečením v případě, že se zařízení připojují prostřednictvím internetu za účelem příjmu a obnovení certifikátů.
 
 #### <a name="additional"></a>Další
+
 - Server, který je hostitelem WAP, [musí nainstalovat aktualizaci](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) umožňující podporu dlouhých adres URL, které používá služba zápisu síťových zařízení. Tato aktualizace je součástí [kumulativní aktualizace z prosince 2014](http://support.microsoft.com/kb/3013769)nebo jde instalovat jednotlivě z [KB3011135](http://support.microsoft.com/kb/3011135).
 - Server WAP musí mít certifikát SSL odpovídající názvu publikovanému do externích klientů a musí důvěřovat certifikátu SSL, který se používá na serveru NDES. Tyto certifikáty umožňují serveru WAP ukončit připojení protokolem SSL od klientů a vytvořit nové připojení SSL k serveru NDES.
 
@@ -71,17 +75,7 @@ Doporučujeme publikování serveru NDES prostřednictvím proxy serveru, jako j
 |**Účet služby NDES**|Zadejte účet uživatele domény, který chcete použít jako účet služby NDES.|
 
 ## <a name="configure-your-infrastructure"></a>Konfigurace infrastruktury
-Než budete moci konfigurovat profily certifikátů, proveďte následující úlohy. Tyto úlohy vyžadují znalost systému Windows Server 2012 R2 a ADCS (Active Directory Certificate Services):
-
-**Krok 1**: Vytvoření účtu služby NDES
-
-**Krok 2**: Konfigurace šablon certifikátů v certifikační autoritě
-
-**Krok 3**: Konfigurace požadavků na serveru NDES
-
-**Krok 4**: Konfigurace NDES pro použití s Intune
-
-**Krok 5**: Povolení, instalace a konfigurace Intune Certificate Connectoru
+Před konfigurací profilů certifikátů proveďte následující kroky. Pro tyto kroky je potřeba znát Windows Server 2012 R2 nebo novější verzi a službu AD CS (Active Directory Certificate Services):
 
 #### <a name="step-1---create-an-ndes-service-account"></a>Krok 1: Vytvoření účtu služby NDES
 
@@ -226,7 +220,6 @@ V této úloze:
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxFieldLength  | DWORD | 65534 (desítkově) |
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxRequestBytes | DWORD | 65534 (desítkově) |
 
-
 4. Ve správci služby IIS vyberte **Výchozí web** > **Filtrování požadavků** > **Upravit nastavení funkce**. Změňte **maximální délku adresy URL** a **maximální řetězec dotazu** na *65534*, jak je znázorněno níže:
 
     ![Maximální délka dotazu a adresy URL ve službě IIS](./media/SCEP_IIS_max_URL.png)
@@ -291,13 +284,17 @@ V této úloze:
 - Stáhnete Certificate Connector a pak ho nainstalujete a nakonfigurujete na serveru, který je hostitelem role Služba zápisu síťových zařízení (NDES) ve vašem prostředí. Pokud chcete zvýšit škálování implementace NDES, můžete nainstalovat více serverů NDES s Microsoft Intune Certificate Connectorem.
 
 ##### <a name="download-install-and-configure-the-certificate-connector"></a>Stažení, instalace a konfigurace Certificate Connectoru
+
 ![ConnectorDownload](./media/certificates-download-connector.png)
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 3. Vyberte **Konfigurace zařízení** a potom **Certifikační autorita**.
 4. Vyberte **Přidat** a **Stáhnout soubor konektoru**. Uložte stažený soubor do umístění, kam máte přístup ze serveru, na který ho budete instalovat.
-5. Po dokončení stahování spusťte stažený instalační program (**ndesconnectorssetup.exe**) na serveru, který je hostitelem role Služba zápisu síťových zařízení (NDES). Tento instalační program nainstaluje taky modul zásad pro NDES a webovou službu CRP. (Webová služba CRP, CertificateRegistrationSvc, běží ve službě ve službě IIS jako aplikace).
+5. Jakmile se soubor stáhne, přejděte na server hostující roli NDES (Network Device Enrollment Service). Další kroky:
+
+    1. Zkontrolujte, že je nainstalované rozhraní .NET 4.5 Framework, protože ho vyžaduje NDES Certificate Connector. Rozhraní .NET 4.5 Framework je automaticky součástí Windows Serveru 2012 R2 a novějších verzí.
+    2. Spusťte instalační program (**NDESConnectorSetup.exe**). Tento instalační program nainstaluje taky modul zásad pro NDES a webovou službu CRP. Webová služba CRP, která má označení CertificateRegistrationSvc, běží ve službě IIS jako aplikace.
 
     > [!NOTE]
     > Při instalaci NDES pro samostatnou službu Intune se s konektorem Certificate Connector automaticky nainstaluje služba CRP. Při použití služby Intune se Správcem konfigurace nainstalujete bod registrace certifikátu (CRP) jako samostatnou roli serveru.
@@ -305,7 +302,7 @@ V této úloze:
 6. Pokud se zobrazí výzva k zadání klientského certifikátu pro konektor Certificate Connector, klikněte na **Vybrat** a vyberte certifikát pro **ověřování klientů**, který jste nainstalovali na server NDES v úloze 3.
 
     Po vybrání certifikátu pro ověřování klientů se vrátíte na plochu **Klientský certifikát pro konektor Certificate Connector služby Microsoft Intune** . I když vybraný certifikát není zobrazený, vyberte **Další** a zobrazte vlastnosti certifikátu. Vyberte **Další** a potom **Nainstalovat**.
-    
+
     > [!IMPORTANT]
     > Intune Certificate Connector nejde zaregistrovat na zařízení s povolenou konfigurací rozšířeného zabezpečení aplikace Internet Explorer. Pokud chcete použít Intune Certificate Connector, [zakažte konfiguraci rozšířeného zabezpečení aplikace Internet Explorer](https://technet.microsoft.com/library/cc775800(v=WS.10).aspx).
 
@@ -335,13 +332,16 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
 
 `http://<FQDN_of_your_NDES_server>/certsrv/mscep/mscep.dll`
 
+> [!NOTE]
+> NDES Certificate Connector podporuje také protokol TLS 1.2. Pokud server s nainstalovaným NDES Certificate Connectorem podporuje TLS 1.2, použije se TLS 1.2. Pokud server nepodporuje TLS 1.2, použije se TLS 1.1. V současnosti se k ověřování zařízení a serveru používá protokol TLS 1.1.
+
 ## <a name="create-a-scep-certificate-profile"></a>Vytvoření profilu certifikátu SCEP
 
 1. Na portálu Azure Portal otevřete Microsoft Intune.
-2. Vyberte **Konfigurace zařízení**, **Profily** a potom **Vytvořit profil**.
+2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte **název** a **popis** profilu certifikátu SCEP.
 4. V rozevíracím seznamu **Platforma** vyberte platformu zařízení pro tento certifikát SCEP. V současné době můžete pro nastavení omezení zařízení zvolit jednu z těchto platforem:
-   - **Androidemem**
+   - **Androidem**
    - **iOS**
    - **macOS**
    - **Windows Phone 8.1**
@@ -406,12 +406,16 @@ Před přiřazením profilů certifikátů ke skupinám vezměte v úvahu násle
 
     > [!NOTE]
     > U iOSu byste měli počítat s tím, že se v profilu správy zobrazí více kopií certifikátu, pokud nasadíte více profilů prostředků, které používají stejný profil certifikátu.
-    
-Informace o tom, jak přiřadit profily, najdete v tématu [Přiřazení profilů zařízení](device-profile-assign.md).
+
+Informace o přiřazení profilů najdete v článku o [přiřazení profilů zařízení](device-profile-assign.md).
+
+## <a name="intune-connector-setup-verification-and-troubleshooting"></a>Ověření nastavení Intune Connectoru a řešení potíží
+
+Pokud chcete řešit potíže nebo ověřit nastavení Intune Connectoru, podívejte se na [ukázkové skripty certifikační autority](https://aka.ms/intuneconnectorverificationscript).
 
 ## <a name="intune-connector-events-and-diagnostic-codes"></a>Události a diagnostické kódy konektoru Intune
 
-Služba konektoru Intune od verze 6.1803.x.x zaznamenává události do **Prohlížeče událostí** (**Protokoly aplikací a služeb** > **Konektor Microsoft Intune**). Tyto události vám můžou pomoct při řešení možných problémů v konfiguraci konektoru Intune. Tyto události zaznamenávají úspěšné a neúspěšné operace a obsahují také diagnostické kódy se zprávami, které můžou správci IT usnadnit řešení problémů.
+Služba Intune Connector od verze 6.1806.x.x zaznamenává události do **Prohlížeče událostí** (**Protokoly aplikací a služeb** > **Microsoft Intune Connector**). Tyto události vám můžou pomoct při řešení možných problémů v konfiguraci konektoru Intune. Tyto události zaznamenávají úspěšné a neúspěšné operace a obsahují také diagnostické kódy se zprávami, které můžou správci IT usnadnit řešení problémů.
 
 ### <a name="event-ids-and-descriptions"></a>ID událostí a jejich popisy
 
@@ -430,10 +434,10 @@ Služba konektoru Intune od verze 6.1803.x.x zaznamenává události do **Prohl�
 | 20102 | PkcsCertIssue_Failure  | Certifikát PKCS se nepodařilo vystavit. V podrobnostech události zkontrolujte ID zařízení, ID uživatele, název certifikační autority, název šablony certifikátu a kryptografický otisk certifikátu, které se vztahují k této události. | 0x00000000, 0x00000400, 0x00000401, 0x0FFFFFFF |
 | 20200 | RevokeCert_Success  | Certifikát se úspěšně odvolal. V podrobnostech události zkontrolujte ID zařízení, ID uživatele, název certifikační autority a sériové číslo certifikátu, které se vztahují k této události. | 0x00000000, 0x0FFFFFFF |
 | 20202 | RevokeCert_Failure | Certifikát se nepovedlo odvolat. V podrobnostech události zkontrolujte ID zařízení, ID uživatele, název certifikační autority a sériové číslo certifikátu, které se vztahují k této události. Další informace najdete v protokolech SVC NDES.   | 0x00000000, 0x00000402, 0x0FFFFFFF |
-| 20300 | Download_Success | Žádost o podepsání certifikátu se úspěšně stáhla, stáhněte si klientský certifikát nebo odvolejte certifikát. V podrobnostech události zkontrolujte podrobnosti o stažení.  | 0x00000000, 0x0FFFFFFF |
-| 20302 | Download_Failure | Žádost o podepsání certifikátu se nepodařilo stáhnout, stáhněte si klientský certifikát nebo odvolejte certifikát. V podrobnostech události zkontrolujte podrobnosti o stažení. | 0x00000000, 0x0FFFFFFF |
-| 20400 | Upload_Success | Žádost o certifikát nebo údaje o odvolání certifikátu se úspěšně nahrály. V podrobnostech události zkontrolujte podrobnosti o nahrání. | 0x00000000, 0x0FFFFFFF |
-| 20402 | Upload_Failure | Žádost o certifikát nebo údaje o odvolání certifikátu se nepodařilo nahrát. V podrobnostech události zkontrolujte stav nahrávání, abyste zjistili, kde došlo k chybě.| 0x00000000, 0x0FFFFFFF |
+| 20300 | Upload_Success | Žádost o certifikát nebo údaje o odvolání certifikátu se úspěšně nahrály. V podrobnostech události zkontrolujte podrobnosti o nahrání. | 0x00000000, 0x0FFFFFFF |
+| 20302 | Upload_Failure | Žádost o certifikát nebo údaje o odvolání certifikátu se nepodařilo nahrát. V podrobnostech události zkontrolujte stav nahrávání, abyste zjistili, kde došlo k chybě.| 0x00000000, 0x0FFFFFFF |
+| 20400 | Download_Success | Žádost o podepsání certifikátu se úspěšně stáhla, stáhněte si klientský certifikát nebo odvolejte certifikát. V podrobnostech události zkontrolujte podrobnosti o stažení.  | 0x00000000, 0x0FFFFFFF |
+| 20402 | Download_Failure | Žádost o podepsání certifikátu se nepodařilo stáhnout, stáhněte si klientský certifikát nebo odvolejte certifikát. V podrobnostech události zkontrolujte podrobnosti o stažení. | 0x00000000, 0x0FFFFFFF |
 | 20500 | CRPVerifyMetric_Success  | Bod registrace certifikátu úspěšně dokončil ověřovací test klienta. | 0x00000000, 0x0FFFFFFF |
 | 20501 | CRPVerifyMetric_Warning  | Bod registrace certifikátu se dokončil, ale žádost se zamítla. Další podrobnosti poskytne diagnostický kód a zpráva. | 0x00000000, 0x00000411, 0x0FFFFFFF |
 | 20502 | CRPVerifyMetric_Failure  | Bodu registrace certifikátu se nepodařilo ověřovací test klienta úspěšně dokončit. Další podrobnosti poskytne diagnostický kód a zpráva. V podrobnostech zprávy o události vyhledejte ID zařízení, které se vztahuje k tomuto ověřovacímu testu. | 0x00000000, 0x00000408, 0x00000409, 0x00000410, 0x0FFFFFFF |

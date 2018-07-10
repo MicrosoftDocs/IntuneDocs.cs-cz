@@ -14,11 +14,12 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 93ecf7b66be25f0f93456d5419ef1f57b8ca7efe
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: ac85478abed049487c028c58637e7937876d2198
+ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34449866"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -462,7 +463,7 @@ Není třeba konfigurovat žádné další hodnoty manifestu.
 
 V případě potřeby můžete zadat pole Authority a NonBrokerRedirectURI.
 
-Tým pro sadu Intune SDK bude vyžadovat ID vaší aplikace (ID klienta). Tento údaj najdete na portálu [AzurePortal](https://portal.azure.com/) v části **Všechny aplikace** ve sloupci **ID aplikace**. Informace o registraci aplikace s AAD najdete [tady](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications). Tým pro sadu Intune SDK můžete kontaktovat na adrese msintuneappsdk@microsoft.com.
+Tým pro sadu Intune SDK bude vyžadovat ID vaší aplikace (ID klienta). Tento údaj najdete na portálu [Azure Portal](https://portal.azure.com/) v části **Všechny aplikace** ve sloupci **ID aplikace**. Informace o registraci aplikace s Azure AD najdete [tady](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications). Tým pro sadu Intune SDK můžete kontaktovat na adrese msintuneappsdk@microsoft.com.
 
 Podívejte se také na požadavky pro [podmíněný přístup](#conditional-access), které najdete níže.
 
@@ -472,22 +473,30 @@ Podívejte se také na požadavky pro [podmíněný přístup](#conditional-acce
     |--|--|
     | ClientID | ClientID aplikace (u zaregistrovaných aplikací je generuje AzureAD) |
     | SkipBroker | **True** (Pravda) |
+    
+    V případě potřeby můžete zadat pole Authority a NonBrokerRedirectURI.
 
-V případě potřeby můžete zadat pole Authority a NonBrokerRedirectURI.
 
 ### <a name="conditional-access"></a>Podmíněný přístup
-Podmíněný přístup je [funkce](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-conditional-access-developer) služby Azure Active Directory, pomocí níž je možné řídit přístup k prostředkům AAD.  [Správci Intune mohou definovat pravidla podmíněného přístupu](https://docs.microsoft.com/en-us/intune/conditional-access), která umožní přístup k prostředkům pouze ze zařízení nebo aplikací spravovaných v Intune. Pokud chcete zajistit, že aplikace bude mít v případě potřeby přístup k prostředkům, postupujte podle kroků uvedených níže. Pokud vaše aplikace nevyžaduje přístupové tokeny AAD nebo používá pouze prostředky, které nelze chránit podmíněným přístupem, můžete tento postup přeskočit.
+
+Podmíněný přístup je [funkce](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) služby Azure Active Directory, pomocí níž je možné řídit přístup k prostředkům AAD. [Správci Intune mohou definovat pravidla podmíněného přístupu](https://docs.microsoft.com/intune/conditional-access), která umožní přístup k prostředkům pouze ze zařízení nebo aplikací spravovaných v Intune. Pokud chcete zajistit, že aplikace bude mít v případě potřeby přístup k prostředkům, postupujte podle kroků uvedených níže. Pokud vaše aplikace nevyžaduje přístupové tokeny AAD nebo používá pouze prostředky, které nelze chránit podmíněným přístupem, můžete tento postup přeskočit.
 
 1. Postupujte podle [pokynů k integraci ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-android#how-to-use-this-library). 
    Zvláštní pozornost věnujte kroku 11, který se týká použití zprostředkovatele.
-2. [Zaregistrujte si aplikaci ve službě Azure Active Directory] (https://docs.microsoft.com/en-us/azure/active-directory/active-directory-app-registration). 
-   Identifikátor URI pro přesměrování najdete v pokynech k integraci ADAL uvedených výše.
+
+2. [Zaregistrujte si aplikaci ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration). Identifikátor URI pro přesměrování najdete v pokynech k integraci ADAL uvedených výše.
+
 3. Nastavte parametry metadat manifestu pro jednotlivé [běžné konfigurace ADAL](#common-adal-configurations), položka 2 výše.
-4. Otestujte, že je vše nakonfigurováno správně. Uděláte to tak, že povolíte [podmíněný přístup na základě zařízení](https://docs.microsoft.com/en-us/intune/conditional-access-intune-common-ways-use) na portálu [Azure Portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) a zkontrolujete následující:
-    - Při přihlášení k aplikaci se zobrazí výzva k instalaci registraci Portálu společnosti Intune.
-    - Po registraci se přihlášení k aplikaci úspěšně dokončí.
-5. Jakmile se integrace sady Intune APP SDK dokončí, obraťte se na tým na adrese msintuneappsdk@microsoft.com se žádostí o přidání do seznamu schválených aplikací pro [podmíněný přístup na základě aplikace](https://docs.microsoft.com/en-us/intune/conditional-access-intune-common-ways-use#app-based-conditional-access).
-6. Po přidání aplikace do seznamu schválených aplikací ji ověřte pomocí [konfigurace podmíněného přístupu na základě aplikace](https://docs.microsoft.com/en-us/intune/app-based-conditional-access-intune-create) a ujistěte se, že se přihlášení k aplikaci úspěšně dokončí.
+
+4. Otestujte, že je vše nakonfigurováno správně. Uděláte to tak, že povolíte [podmíněný přístup na základě zařízení](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use) na portálu [Azure Portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) a zkontrolujete následující:
+* Při přihlášení k aplikaci se zobrazí výzva k instalaci registraci Portálu společnosti Intune.
+* Po registraci se přihlášení k aplikaci úspěšně dokončí.
+
+5. Jakmile se integrace sady Intune APP SDK dokončí, obraťte se na tým na adrese msintuneappsdk@microsoft.com se žádostí o přidání do seznamu schválených aplikací pro [podmíněný přístup na základě aplikace](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use#app-based-conditional-access).
+
+6. Po přidání aplikace do seznamu schválených aplikací ji ověřte pomocí [konfigurace podmíněného přístupu na základě aplikace](https://docs.microsoft.com/intune/app-based-conditional-access-intune-create) a ujistěte se, že se přihlášení k aplikaci úspěšně dokončí.
+
+
 ## <a name="app-protection-policy-without-device-enrollment"></a>Zásady ochrany aplikací bez registrace zařízení
 
 ### <a name="overview"></a>Přehled
@@ -1371,7 +1380,6 @@ Vzhled zobrazení vygenerovaných sadou MAM SDK můžete upravit tak, aby lépe 
 
 ### <a name="how-to-customize"></a>Postup přizpůsobení
 Aby se změny stylu použily u zobrazení sady Intune MAM, je potřeba nejprve vytvořit soubor XML s přepsáním stylu. Tento soubor by se měl nacházet v adresáři „/res/xml“ vaší aplikace a může mít jakýkoli název. Níže je uveden příklad formátování, které by měl soubor dodržovat.
-
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <styleOverrides>
@@ -1401,7 +1409,7 @@ Níže najdete kompletní seznam povolených atributů stylu, prvků uživatelsk
 | Barva motivu | Ohraničení pole pro zadání PIN kódu při zvýraznění <br> Hypertextové odkazy |accent_color | Barva |
 | Logo aplikace | Velká ikona, která se zobrazuje na obrazovce pro zadání PIN kódu aplikace Intune | logo_image | Nákres |
 
-## <a name="working-with-app-we-service-enrollment-sdk-integrated-android-lob-app-and-adal-sso-optional"></a>Práce s registrací služby APP-WE, obchodní aplikací pro Android integrovanou se sadou SDK a jednotným přihlašováním ADAL (volitelné)
+## <a name="default-enrollment-optional"></a>Výchozí registrace (volitelná)
 <!-- Requiring user login prompt for an automatic APP-WE service enrollment, requiring Intune app protection policies in order to use your SDK-integrated Android LOB app, and enabling ADAL SSO (optional) -->
 
 Následující část obsahuje postup pro vyžadování výzvy uživateli při spuštění aplikace pro registraci služby APP-WE (v této části to označujeme jako **výchozí registraci**) a vyžadování zásad ochrany aplikací Intune, aby obchodní aplikaci pro Android, která je integrovaná se sadou SDK, mohli používat jenom uživatelé s ochranou Intune. Obsahuje také postup pro povolení jednotného přihlašování pro obchodní aplikaci pro Android, která je integrovaná se sadou SDK. Tento postup se **nepodporuje** u aplikací pro store, které můžou používat uživatelé nevyužívající službu Intune.
@@ -1413,7 +1421,7 @@ Následující část obsahuje postup pro vyžadování výzvy uživateli při s
 * Tým pro sadu Intune SDK bude vyžadovat ID vaší aplikace. Tento údaj najdete na portálu [Azure Portal](https://portal.azure.com/) v části **Všechny aplikace** ve sloupci pro **ID aplikace**. Vhodným způsobem, jak kontaktovat tým pro sadu Intune SDK, je odeslání e-mailu na adresu msintuneappsdk@microsoft.com.
 
 ### <a name="working-with-the-intune-sdk"></a>Práce se sadou Intune SDK
-Tyto pokyny se týkají všech aplikací pro Android a Xamarin, u kterých chcete při použití na zařízení koncového uživatele vyžadovat zásady ochrany aplikací Intune.
+Tyto pokyny se týkají všech vývojářů aplikací pro Android a Xamarin, kteří chtějí při použití na zařízení koncového uživatele vyžadovat zásady ochrany aplikací Intune.
 
 1. Nakonfigurujte ADAL pomocí postupu, který je uvedený v [příručce Intune SDK pro Android](https://docs.microsoft.com/intune/app-sdk-android#configure-azure-active-directory-authentication-library-adal).
    > [!NOTE] 

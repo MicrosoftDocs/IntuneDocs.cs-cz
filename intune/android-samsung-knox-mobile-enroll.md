@@ -15,12 +15,12 @@ ms.assetid: 30df0f9e-6e9e-4d75-a722-3819e33d480d
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 88cb733c688019b2fc5455a0184e968d91e77806
-ms.sourcegitcommit: b0ad42fe5b5627e5555b2f9e5bb81bb44dbff078
+ms.openlocfilehash: d5ac976e07c98fae0941168cc94b5afc5ca09616
+ms.sourcegitcommit: 8be5f29107d882c3ecf3dc0ce718a2423f91ce9a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33915807"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "36964704"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Automatická registrace zařízení s Androidem pomocí technologie Knox Mobile Enrollment od Samsungu
 
@@ -120,6 +120,8 @@ Potřebujete ještě další pomoc? Podívejte se na celou [uživatelskou přír
 - **Režim vlastníka zařízení Google:** Registrace v režimu vlastníka zařízení Google prostřednictvím KME se v této verzi Preview nepodporuje. V současné době tento scénář prozkoumáváme.
 
 - **Pole Password (Heslo) se ignoruje:** Pokud je pole s **heslem** v části **Device details** (Podrobnosti zařízení) na portálu Knox vyplněno, bude ho aplikace Portál společnosti Inture ignorovat. Aby se registrace zařízení dokončila, koncový uživatel musí heslo zadat na zařízení.
+
+- **Registrace Androidu Enterprise** prostřednictvím KME nepodporuje registraci Androidu Enterprise.
 
 ## <a name="getting-support"></a>Získání podpory
 Přečtěte si další informace o tom, [jak získat podporu pro Samsung KME](https://docs.samsungknox.com/KME-Getting-Started/Content/to-get-kme-support.htm).

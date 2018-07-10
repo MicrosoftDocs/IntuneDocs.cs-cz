@@ -2,10 +2,10 @@
 title: Řízení přístupu na základě role v Microsoft Intune
 description: Přečtěte si, jak vám řízení přístupu na základě role (RBAC) umožňuje řídit, kdo může provádět akce a změny v Microsoft Intune.
 keywords: ''
-author: ErikjeMS
-ms.author: erikje
+author: dougeby
+ms.author: dougeby
 manager: dougeby
-ms.date: 05/17/2018
+ms.date: 02/27/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,12 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8cce5da762c119ec04553d80d717fb586c962566
-ms.sourcegitcommit: 698bd1488be3a269bb88c077eb8d99df6e552a9a
+ms.openlocfilehash: 287e644e50b1f6b41f404cfd2102a8efc0fbaad9
+ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34474560"
 ---
 # <a name="role-based-administration-control-rbac-with-microsoft-intune"></a>Řízení správy na základě role (RBAC) v Microsoft Intune
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/17/2018
 
 - **Definice role**: Název role, prostředky, které spravuje, a oprávnění udělená pro jednotlivé prostředky
 - **Členové**: Skupiny uživatelů, kterým se přidělují oprávnění
-- **Obor**: Skupiny uživatelů nebo zařízení, jejichž členové mohou cílit na nasazení aplikací nebo zásad nebo provádět vzdálené úlohy
+- **Obor**: Skupiny uživatelů nebo zařízení, které můžou členové spravovat
 - **Přiřazení**: Přiřazení role po nakonfigurování definice, členů a oboru
 
 ![Příklad řízení správy na základě rolí s Intune](./media/intune-rbac-1.PNG)
@@ -59,7 +60,8 @@ Následující role jsou integrované do Intune a můžete je přiřadit ke skup
 - **Operátor helpdesku**: Provádí vzdálené úlohy u uživatelů a zařízení a může uživatelům a zařízením přiřazovat aplikace nebo zásady.
 - **Správce zásad a profilů**: Spravuje zásady dodržování předpisů, konfigurační profily, registrace Apple a identifikátory podnikových zařízení.
 - **Operátor s oprávněními pouze ke čtení**: Zobrazuje informace o uživatelích, zařízeních, registraci, konfiguraci a aplikacích. Nemůže provádět změny v Intune.
-- **Správce aplikací**: Spravuje mobilní a spravované aplikace a může číst informace o zařízeních.
+- **Správce aplikací**: Spravuje mobilní a spravované aplikace, může číst informace o zařízeních a zobrazit konfigurační profily zařízení.
+- **Správce role Intune**: Spravuje vlastní role Intune a přidává přiřazení pro předdefinované role Intune. Toto je jediná role Intune, která smí přiřazovat oprávnění správcům.
 - **Správce školy**: Spravuje zařízení s Windows 10 v [Intune for Education](introduction-intune-education.md) a může provádět následující akce: 
 
 |Oprávnění|Operace|
@@ -78,18 +80,20 @@ Následující role jsou integrované do Intune a můžete je přiřadit ke skup
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V podokně **Intune** vyberte **Role Intune** a pak **Všechny role**.
-4. V podokně **Role Intune – Všechny role** zvolte předdefinovanou roli, kterou chcete přiřadit.
+1. V podokně **Role Intune – Všechny role** zvolte předdefinovanou roli, kterou chcete přiřadit.
 
-5. V podokně <*název role*> – **Přehled** zvolte **Přiřazení** > **Přiřadit**.
+2. V podokně <*název role*> – **Přehled** zvolte **Spravovat** a pak **Přiřazení**.
 
     > [!NOTE]
     > Předdefinované role není možné odstranit ani upravit.
 
-6. V podokně **Přiřazení rolí** zadejte **Název přiřazení** a volitelný **Popis přiřazení** a pak zvolte následující:
+3. V podokně vlastní role zvolte **Přiřadit**.
+
+4. V podokně **Přiřazení rolí** zadejte **Název** a volitelný **Popis** přiřazení a pak zvolte následující:
     - **Členové** – Vyberte skupinu, která obsahuje uživatele, kterému chcete udělit oprávnění.
-    - **Obor** – Vyberte skupinu, která obsahuje uživatele, které člen výše bude moct spravovat. Můžete také nastavit obor na **Všichni uživatelé**, **Všechna zařízení** nebo **Všichni uživatelé a všechna zařízení**.
+    - **Obor** – Vyberte skupinu, která obsahuje uživatele, které člen výše bude moct spravovat.
 <br></br>
-7. Po dokončení klikněte na **OK**. Nové přiřazení se zobrazí v seznamu přiřazení.
+5. Po dokončení klikněte na **OK**. Nové přiřazení se zobrazí v seznamu přiřazení.
 
 ### <a name="intune-rbac-table"></a>Řízení správy na základě rolí s Intune
 
@@ -126,13 +130,13 @@ Můžete vytvořit vlastní roli, která zahrnuje všechna oprávnění nutná p
 
 1. V podokně **Role Intune – Všechny role** zvolte vlastní roli, kterou chcete přiřadit.
 
-2. V podokně <*název role*> – **Přehled** zvolte **Přiřazení**. V tomto podokně můžete také existující role upravovat nebo odstraňovat.
+2. V podokně <*název role*> – **Přehled** zvolte **Spravovat** a pak **Přiřazení**. V tomto podokně můžete také existující role upravovat nebo odstraňovat.
 
 3. V podokně vlastní role zvolte **Přiřadit**.
 
 4. V podokně **Přiřazení rolí** zadejte **Název** a volitelný **Popis** přiřazení a pak zvolte následující:
     - **Členové** – Vyberte skupinu, která obsahuje uživatele, kterému chcete udělit oprávnění.
-    - **Obor** – Vyberte skupinu, která obsahuje uživatele, které člen výše bude moct spravovat. Můžete také nastavit obor na **Všichni uživatelé**, **Všechna zařízení** nebo **Všichni uživatelé a všechna zařízení**.
+    - **Obor** – Vyberte skupinu, která obsahuje uživatele, které člen výše bude moct spravovat.
 <br></br>
 5. Po dokončení klikněte na **OK**. Nové přiřazení se zobrazí v seznamu přiřazení.
 
@@ -143,5 +147,3 @@ Můžete vytvořit vlastní roli, která zahrnuje všechna oprávnění nutná p
 ## <a name="see-also"></a>Viz taky
 
 [Přiřazení rolí pomocí služby Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-users-assign-role-azure-portal)
-
-

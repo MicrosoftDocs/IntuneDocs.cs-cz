@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.reviewer: ayesham
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b6ab5e4de2d3a888d6b3372b75b9a95af54a591a
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 988407d6d736b669854ef8420b71a092765162b7
+ms.sourcegitcommit: 445fcf9e2a185e5c987334cad398bce71383be03
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34745118"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843119"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>Použití funkce Umístění (ohraničení sítě) v Intune
 
@@ -35,7 +35,7 @@ Někteří zaměstnanci ve vašem výrobním závodě používají zařízení s
 2. Vytvořit zásady dodržování předpisů, který vyžadují, aby tato zařízení byla připojená k vaší firemní síti, a tyto zásady přiřadit.
 3. Pokud se zařízení octne mimo výrobní závod, bude považované za nevyhovující a nebude mít přístup k firemním prostředkům.
 
-Pomocí zásad Intune můžete poslat oznámení o nevyhovujícím zařízení a také zařízení zamknout. Až bude zařízení zpátky v místním prostředí a v síťovém umístění, může se odemknout a znovu získat přístup k firemním prostředkům.
+Kromě toho můžete přidat [akce při nedodržení předpisů](#configure-the-actions-for-noncompliance). Jakmile bude zařízení zpět v místním prostředí a v síťovém umístění, získá znovu přístup k firemním prostředkům.
 
 ## <a name="prerequisites"></a>Požadavky
 

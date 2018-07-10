@@ -13,11 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b810a9dd783f59e778f3ffcb40da8fa52acf70ff
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 2987ca7ce3a9b99249fc62fc7de5c9cca22b0b26
+ms.sourcegitcommit: d1420a5d2d2c1da40cc4dac165ca9173c22323d3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34803818"
 ---
 # <a name="microsoft-intune-ios-device-restriction-settings"></a>Nastavení omezení pro zařízení s iOSem v Microsoft Intune
 
@@ -97,7 +98,7 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
     -   **Požadovaný typ hesla** – Určuje typ hesla, který se vyžaduje, například jenom číslice nebo alfanumerické znaky.
     -   **Počet nealfanumerických znaků v hesle** – Určuje počet znaků symbolu (jako například **#** nebo **@**), které musí heslo obsahovat.
     -   **Minimální délka hesla** – Určuje minimální počet znaků v hesle.
-    -   **Počet neúspěšných přihlášení před vymazáním obsahu zařízení** – Určuje počet neúspěšných pokusů o přihlášení, než toto nastavení vymaže zařízení.
+    -   **Počet neúspěšných přihlášení před vymazáním obsahu zařízení** – Určuje počet jedinečných neúspěšných pokusů o zadání hesla, než toto nastavení vymaže zařízení.
     -   **Maximální počet minut po uzamčení obrazovky, po kterém bude nutné zadat heslo**<sup>1</sup> – Určuje, jak dlouho může zařízení zůstat nečinné, než uživatel musí znovu zadat heslo.
     -   **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**<sup>1</sup> – Určuje počet minut, než se displej zařízení vypne.
     -   **Konec platnosti hesla (dny)** – Určuje počet dní, než bude nutné změnit heslo zařízení.

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/16/2018
+ms.date: 06/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 75e36456c03cd0a769e9741606a2b70fa7e49c35
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: caed42642a87d38076f755cd356cc7ab7c6a3d8a
+ms.sourcegitcommit: 95ffcd5ddd3e5df7d68ae75218c5ff2ea076133e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744988"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36263400"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune
 
@@ -56,8 +56,8 @@ Následující tabulka obsahuje konkrétní typy aplikací a popis, jak je můž
 | Aplikace Office 365 pro macOS | Aplikace pro Store (Office 365) | V části **Sada Office 365** vyberte jako **typ aplikace** možnost **macOS** a potom vyberte sadu aplikací Office 365. |
 | Obchodní aplikace (LOB) pro Android | Obchodní aplikace | Jako **typ aplikace** vyberte **Obchodní** aplikaci, vyberte **Soubor balíčku aplikace** a pak zadejte instalační soubor pro Android s příponou **.apk**.  |
 | Obchodní aplikace pro iOS | Obchodní aplikace | Jako **typ aplikace** vyberte **Obchodní** aplikaci, vyberte **Soubor balíčku aplikace** a pak zadejte instalační soubor pro iOS s příponou **.ipa**.  |
-| Obchodní aplikace pro Windows Phone | Obchodní aplikace | Jako **typ aplikace** vyberte **Obchodní** aplikaci, vyberte **Soubor balíčku aplikace** a pak zadejte instalační soubor pro iOS s příponou **.xap**.  |
-| Obchodní aplikace pro Windows | Obchodní aplikace | Jako typ aplikace vyberte **Obchodní** aplikaci, vyberte **Soubor balíčku aplikace** a pak zadejte instalační soubor pro iOS s příponou **.msi**, **.appx** nebo **.appxbundle**. |
+| Obchodní aplikace pro Windows Phone | Obchodní aplikace | Jako **typ aplikace** vyberte **Obchodní aplikace**. Pak vyberte **Soubor balíčku aplikace** a zadejte instalační soubor pro Windows Phone s příponou **.xap**.  |
+| Obchodní aplikace pro Windows | Obchodní aplikace | Jako typ aplikace vyberte **Obchodní aplikace**. Pak vyberte **Soubor balíčku aplikace** a zadejte instalační soubor pro Windows s příponou **.msi**, **.appx** nebo **.appxbundle**. |
 | Integrovaná aplikace pro iOS  | Integrovaná aplikace | Jako **typ aplikace** vyberte **Integrovaná aplikace** a potom integrovanou aplikaci vyberte v seznamu poskytovaných aplikací.  |
 | Integrovaná aplikace pro Android  | Integrovaná aplikace | Jako **typ aplikace** vyberte **Integrovaná aplikace** a potom integrovanou aplikaci vyberte v seznamu poskytovaných aplikací.  |
 | Webové aplikace  | Webová aplikace  | Jako **typ aplikace** vyberte **Webový odkaz** a pak zadejte platnou adresu URL odkazující na webovou aplikaci.  |

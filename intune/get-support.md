@@ -15,11 +15,12 @@ ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
 ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 5a823cfb602b4847e702d54e0d8775700b01c8e9
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 08d5e94155586140ac087b9ad9d24bdbd078f59b
+ms.sourcegitcommit: 445fcf9e2a185e5c987334cad398bce71383be03
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843136"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak získat podporu pro Microsoft Intune
 
@@ -33,7 +34,8 @@ Microsoft poskytuje pro Microsoft Intune globální technickou a předprodejní 
 ## <a name="create-an-online-support-ticket"></a>Vytvoření lístku online podpory
 
 Jako správce IT můžete lístek podpory zadat na portálu Azure Portal. Tady je postup:
-
+>[!NOTE]
+>Lístek online podpory může vytvořit jen správce služby Intune nebo globální správce. Podrobnosti najdete v tématu [Přiřazení rolí správce](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal).
 1. Přihlaste se na portálu Azure Portal (<https://portal.azure.com>) pomocí svých přihlašovacích údajů správce Intune, zvolte ikonu <strong>?</strong> v pravém horním rohu portálu a pak vyberte možnost <strong>Nápověda a podpora</strong>, kterou přejdete na stránku [nápovědy a podpory Azure](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 
     ![Snímek obrazovky nápovědy a podpory na portálu Azure Portal s odkazem v podobě otazníku a se zvýrazněným odkazem Nápověda a podpora](./media/azure-get-support.png)

@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 84fc162eda25970c14ed1014b9f67ef3e782c663
-ms.sourcegitcommit: 7e80388b6223c9a632c5729bf9b157f848fe52cc
+ms.openlocfilehash: 5b5eadc4ee23a89624cde9f1246f64aafce0b06c
+ms.sourcegitcommit: 3284586d9260a66ce99029b7808e4807f8780d20
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37091723"
 ---
-# <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Odebrání zařízení pomocí obnovení továrního nastavení nebo odebrání firemních dat
+# <a name="remove-devices-by-using-factory-reset-removing-company-data-or-manually-unenrolling-the-device"></a>Odebrání zařízení obnovením továrního nastavení, odebráním dat společnosti nebo ručním zrušením registrace zařízení
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -147,7 +148,7 @@ Pokud je zařízení zapnuté a připojené, akce **Odebrat firemní data** se d
 
 Pokud chcete odebrat zařízení z portálu Intune, můžete je odstranit z podokna konkrétního zařízení. Při příštím přihlášení zařízení se z něj odeberou všechna firemní data.
 
-1. Přihlaste se k [Intune na portálu Azure Portal](https://aka.ms/intuneportal).
+1. Přihlaste se k [Intune na webu Azure Portal](https://aka.ms/intuneportal).
 2. Zvolte **Zařízení** > **Všechna zařízení** > vyberte zařízení, která chcete odstranit > **Odstranit**.
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Odstranění zařízení z portálu služby Azure Active Directory

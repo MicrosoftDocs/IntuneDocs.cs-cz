@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 5d924e216dd6d0fe13bc4c7718b5368db1d35f8c
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 4150a513e909ccfd44db23eee9b5990d97d8d670
+ms.sourcegitcommit: 91dc50d38be13c65e5d144d237d7c4358089f215
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31833344"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36329871"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Použití portálu pro řešení potíží k poskytování pomoci uživatelům ve vaší společnosti
 
@@ -234,6 +234,15 @@ Pro mobilní aplikace, které se integrují s technologiemi EMS, jsou k dispozic
 | Typ zařízení | Název typu zařízení                                                       |
 | Zásady    | Typ vlastnictví zařízení. Může být **Společnost**, **Osobní** a **Neznámý**. |
 | Poslední synchronizace   | Časové razítko poslední synchronizace zařízení s Intune.                   |
+
+## <a name="collect-available-data-from-mobile-device"></a>Shromažďování dostupných dat z mobilních zařízení
+
+Pokud chcete shromažďovat data ze zařízení při řešení potíží se zařízením uživatele, použijte následující zdroje informací:
+  - [Odeslání chyb registrace zařízení s iOSem správci IT](/intune-user-help/send-errors-to-your-it-admin-ios)
+  - [Pomoc firemní podpoře s řešením problémů zařízení pomocí podrobného protokolování](/intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android)
+  - [Odeslání protokolů Androidu firemní podpoře pomocí kabelu USB](/intune-user-help/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
+  - [Odeslání protokolů s diagnostickými daty ze zařízení s Androidem správci IT e-mailem](/intune-user-help/send-logs-to-your-it-admin-by-email-android)
+  - [Odeslání chyb registrace zařízení s Androidem správci IT](/intune-user-help/send-enrollment-errors-to-your-it-administrator-android)
 
 ## <a name="next-steps"></a>Další kroky
 

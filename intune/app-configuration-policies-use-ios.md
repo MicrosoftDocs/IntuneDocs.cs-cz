@@ -3,10 +3,10 @@ title: Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS
 titlesuffix: Microsoft Intune
 description: Přečtěte si, jak používat zásady konfigurace aplikací pro účely předání konfiguračních dat do aplikace pro iOS při jejím spuštění.
 keywords: ''
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 06/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,24 +15,25 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0b71b52ffa58f847fc0efcd2924fd04a7a16a099
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: e3e81b52f10bb94d90d5f66ca5aee13daaf4941e
+ms.sourcegitcommit: cefa84efd3003fa5a0ef0c2dce6206a6a411a1ec
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35232229"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOSem
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastavení, když uživatelé spustí aplikaci pro iOS. Tyto zásady nepřiřazujte přímo uživatelům a zařízením. Místo toho přidružíte zásadu k aplikaci a pak přiřadíte tuto aplikaci. Nastavení zásad se použijí, když je aplikace zjistí (obvykle při prvním spuštění).
+Zásady konfigurace aplikací se v Microsoft Intune používají k nastavení vlastní konfigurace u aplikací pro iOS. Konfigurační nastavení umožňují přizpůsobit aplikace na základě pokynů dodavatele. Tato nastavení (klíče a hodnoty) vám poskytne dodavatel aplikace. Při konfiguraci aplikace je zadáváte jako klíče a hodnoty, nebo jako XML, které je obsahuje. Konfigurační zásady kromě toho nepřiřazujete přímo uživatelům ani zařízením. Zásadu přidružíte k aplikaci a pak přiřazujete tuto aplikaci. Nastavení zásad konfigurace se použije, když ho aplikace zjistí (obvykle při prvním spuštění aplikace).
 
-Zásady konfigurace aplikace pro skupinu můžete přiřadit skupině uživatelů a zařízení s použitím kombinace zahrnutí a vyloučení přiřazení. Jakmile přidáte zásady konfigurace aplikace, můžete u těchto zásad konfigurace aplikací nastavit přiřazení. Když nastavíte přiřazení zásad, můžete zahrnout a vyloučit skupiny uživatelů, na které se zásady vztahují. Když zvolíte možnost zahrnout jednu nebo více skupin, můžete zahrnout konkrétní nebo integrované skupiny. Mezi integrované skupiny patří **Všichni uživatelé**, **Všechna zařízení** a **Všichni uživatelé a všechna zařízení**. 
+Jakmile přidáte zásady konfigurace aplikace, můžete u těchto zásad konfigurace aplikací nastavit přiřazení. Když nastavíte přiřazení zásad, můžete zahrnout a vyloučit skupiny uživatelů, na které se zásady vztahují. Když zvolíte možnost zahrnout jednu nebo více skupin, můžete zahrnout konkrétní nebo integrované skupiny. Mezi integrované skupiny patří **Všichni uživatelé**, **Všechna zařízení** a **Všichni uživatelé a všechna zařízení**. 
 
 >[!NOTE]
 >V Intune máte v konzole pohodlně k dispozici předem vytvořené skupiny **Všichni uživatelé** a **Všechna zařízení** s integrovanými optimalizacemi. Důrazně doporučujeme, abyste pro cílení na všechny uživatele a zařízení používali tyto skupiny a nepoužívali žádné skupiny Všichni uživatelé nebo Všechna zařízení, které byste sami vytvořili.
 
-Když máte vybrané zahrnuté skupiny pro zásady konfigurace aplikace, můžete také konkrétní skupiny vyloučit.
+Když máte vybrané zahrnuté skupiny pro zásady konfigurace aplikace, můžete také konkrétní skupiny vyloučit. Podrobnosti najdete v tématu [Zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune](apps-inc-exl-assignments.md).
 
 > [!TIP]
 > Tento typ zásad je nyní k dispozici pouze pro zařízení se systémem iOS 8.0 a novějším. Podporuje následující typy instalací aplikací:
@@ -49,18 +50,16 @@ Když máte vybrané zahrnuté skupiny pro zásady konfigurace aplikace, můžet
 3. Zvolte úlohu **Mobilní aplikace**.
 4. Ve skupině **Spravovat** zvolte **Zásady konfigurace aplikací** a pak **Přidat**.
 5. Zadejte tyto podrobnosti:
-    - **Název**<br>
-      Název profilu, který se zobrazí na portálu Azure Portal
-    - **Popis**<br>
-      Popis profilu, který se zobrazí na portálu Azure Portal
-    - **Typ registrace zařízení**<br>
-      Zvolte **Spravovaná zařízení**.
+    - **Název**: Název profilu, který se zobrazí na portálu Azure Portal
+    - **Popis**: Popis profilu, který se zobrazí na portálu Azure Portal
+    - **Typ registrace zařízení**: Zvolte **Spravovaná zařízení**.
 6. V poli **Platforma** vyberte **iOS**.
 7.  Zvolte **Přidružená aplikace**. Pak v podokně **Přidružená aplikace** zvolte spravovanou aplikaci, u které chcete použít danou konfiguraci, a vyberte **OK**.
 8.  V podokně **Přidat zásady konfigurace** zvolte **Nastavení konfigurace**.
-9. Vyberte **Formát nastavení konfigurace**. Vyberte jednu z těchto možností:
-    - **[Použít návrháře konfigurace](#use-configuration-designer)**
-    - **[Zadat XML data](#enter-xml-data)**
+9. Vyberte **Formát nastavení konfigurace**. Přidejte informace XML jedním z těchto způsobů:
+    - **Použití návrháře konfigurace**
+    - **Zadání XML dat**<br></br>
+    Podrobnosti o používání návrháře konfigurace najdete v části [Použití návrháře konfigurace](#use-configuration-designer). Podrobnosti o zadávání XML dat najdete v části [Zadání XML dat](#enter-xml-data). 
 10. Po přidání informací XML, zvolte **OK** a potom **Přidat** a přidejte zásadu konfigurace. Zobrazí se podokno s přehledem zásad konfigurace.
 11. Po výběru možnosti **Přiřazení** se zobrazí možnosti zahrnutí a vyloučení. 
 
@@ -80,17 +79,14 @@ Když máte vybrané zahrnuté skupiny pro zásady konfigurace aplikace, můžet
 
 ## <a name="use-configuration-designer"></a>Použití návrháře konfigurace
 
-Návrháře konfigurace můžete použít u aplikací jak v zařízeních, která jsou zaregistrovaná v Intune, tak i v zařízeních, která zaregistrovaná nejsou. Návrhář umožňuje nakonfigurovat konkrétní klíče a hodnoty konfigurace. Pro každou hodnotu musíte také zadat datový typ. Nastavení se aplikacím poskytne automaticky při jejich instalaci.
+Microsoft Intune poskytuje konfigurační nastavení jedinečná pro aplikaci. Návrháře konfigurace můžete použít u aplikací jak v zařízeních, která jsou zaregistrovaná v Microsoft Intune, tak i v zařízeních, která zaregistrovaná nejsou. Návrhář umožňuje nakonfigurovat konkrétní klíče a hodnoty konfigurace, které vám pomohou při vytváření základního XML. Pro každou hodnotu musíte také zadat datový typ. Nastavení se aplikacím poskytují automaticky při instalaci.
 
 ### <a name="add-a-setting"></a>Přidání nastavení
 
 1. Pro každý klíč a hodnotu v konfiguraci nastavte:
-   - **Konfigurační klíč**<br>
-     Klíč, který jedinečně identifikuje konkrétní konfiguraci nastavení
-   - **Typ hodnoty**<br>
-     Datový typ konfigurační hodnoty. Mezi typy patří integer, real, string a boolean.
-   - **Hodnota konfigurace**<br>
-     Hodnota konfigurace
+   - **Konfigurační klíč**: Klíč, který jedinečně identifikuje konkrétní konfiguraci nastavení
+   - **Typ hodnoty**: Datový typ konfigurační hodnoty Mezi typy patří integer, real, string a boolean.
+   - **Hodnota konfigurace**: Hodnota konfigurace
 2. Zvolte **OK** a nastavte tak nastavení konfigurace.
 
 ### <a name="delete-a-setting"></a>Odstranění nastavení
@@ -165,4 +161,4 @@ Intune dál v seznamu vlastností podporuje následující typy tokenů:
 
 ## <a name="next-steps"></a>Další kroky
 
-Pokračujte s [přiřazením](apps-deploy.md) a [sledováním](apps-monitor.md) aplikace jako obvykle.
+Pokračujte s [přiřazením](apps-deploy.md) a [sledováním](apps-monitor.md) aplikace.

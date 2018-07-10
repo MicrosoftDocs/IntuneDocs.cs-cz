@@ -15,12 +15,12 @@ ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 97ddb881e497c5b9e5bb5b36d19c13ab2722b538
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 75d3f9312a6f3a88706070ab29e674cb6d53bf4f
+ms.sourcegitcommit: 29eaf27323763a5a200ec64b8679397c4b988f33
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744818"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36305412"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Nastavení zásad ochrany aplikací pro Android v Microsoft Intune
 Tento článek popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem. Popsané nastavení zásad se dá [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v okně **Nastavení** na portálu Azure Portal.
@@ -69,8 +69,7 @@ Existují dvě kategorie nastavení zásad:nastavení přemístění dat a nasta
 
   |Název aplikace nebo služby | Popis | Podmínka výjimky|
   | ------ | ---- | --- |
-  | com.android.chrome | Prohlížeč Google Chrome | Prohlížeč Chrome se používá pro některé komponenty WebView na Androidu 7.0+ a není nikdy skrytý. Tok dat do aplikace a z ní je ale vždy omezený.
-  | com.skype.raider | Skype | Aplikace Skype je povolená jenom pro určité akce, jejichž výsledkem je telefonní hovor. |
+  | com.android.chrome | Prohlížeč Google Chrome | Prohlížeč Chrome se používá pro některé komponenty WebView na Androidu 7.0+ a není nikdy skrytý. Tok dat do aplikace a z ní je ale vždy omezený.  | com.skype.raider | Skype | Aplikace Skype je povolená jenom pro určité akce, jejichž výsledkem je telefonní hovor. |
   | com.android.providers.media | Poskytovatel multimediálního obsahu pro Android | Poskytovatel multimediálního obsahu je povolený jenom pro akci výběru vyzváněcího tónu. |
   | com.google.android.gms, com.google.android.gsf | Balíčky Služeb Google Play | Tyto balíčky jsou povolené pro akce Google Cloud Messaging, například pro nabízená oznámení. |
 
@@ -86,7 +85,7 @@ Další informace najdete v tématu [Výjimky zásad přenosu dat pro aplikace](
 | **Znovu zkontrolovat požadavky na přístup po (minuty)** | Proveďte konfiguraci následujících nastavení: <ul><li>**Časový limit:** Počet minut před opakovanou kontrolou požadavků na přístup (které byly dříve definovány v zásadách). Správce například v zásadách zapne kód PIN a zablokuje zařízení s rootem. Uživatel otevře aplikaci spravovanou přes Intune, musí zadat kód PIN a musí aplikaci používat na zařízení bez rootu. Při použití tohoto nastavení nemusí uživatel u žádné aplikace spravované přes Intune zadávat kód PIN ani podstupovat další kontrolu výskytu rootu dalších **30 minut** (výchozí hodnota). <br><br> **Poznámka:** Na Androidu se kód PIN sdílí mezi všemi aplikacemi spravovanými přes Intune. Časovač kódu PIN se vynuluje, když se aplikace v zařízení přestane zobrazovat na popředí. Po dobu časového limitu definovaného tímto nastavením nemusí uživatel zadávat kód PIN u žádné aplikace spravované přes Intune, která svůj kód PIN sdílí. <br><br> Tento formát nastavení zásady podporuje kladné celé číslo.<br></li><li>**Období odkladu pro offline režim:** Toto je počet minut, po které může aplikace MAM běžet offline. Zadejte dobu (v minutách) před opakovaným zkontrolováním požadavků na přístup k aplikaci. Výchozí hodnota = **720** minut (12 hodin) Aby mohla aplikace po uplynutí této doby dál běžet, vyžaduje ověření uživatele v Azure Active Directory (Azure AD).<br><br> Tento formát nastavení zásady podporuje kladné celé číslo.</li></ul>| Časový limit: 30 <br><br> Offline: 720 |
 | **Doba v offline režimu (ve dnech) před vymazáním dat** | Po tomto počtu dnů (určeném správcem) spuštění v offline režimu bude aplikace vyžadovat, aby se uživatel připojil k síti a znovu provedl ověření. Pokud je ověření uživatele úspěšné, může ke svým datům dál přistupovat a doba v offline režimu se resetuje.  Pokud se ověření uživatele nezdaří, aplikace provede selektivní vymazání uživatelova účtu a dat.  Další informace o tom, která data se selektivním vymazáním odstraní, najdete v tématu [Jak z aplikací spravovaných pomocí Intune vymazat jenom firemní data](https://docs.microsoft.com/intune/apps-selective-wipe).<br><br> Tento formát nastavení zásady podporuje kladné celé číslo. | 90 dnů |
 | **Blokovat snímek obrazovky a Android Assistant (Android 6.0+)** | Pokud chcete blokovat funkce zachytávání snímků obrazovky a **Android Assistant**, když zařízení používá tuto aplikaci, zvolte **Ano**. Možnost **Ano** navíc při používání této aplikace s pracovním nebo školním účtem rozmaže obrázek náhledu v přepínači aplikací. | Ne |
-| **Zakázat PIN kód aplikace, když je PIN kód zařízení spravovaný** | Pokud chcete zakázat PIN kód aplikace, když bude na zaregistrovaném zařízení zjištěn zámek zařízení, zvolte **Ano**. | Ne |
+| **Zakázat PIN kód aplikace, když je PIN kód zařízení spravovaný** | Pokud chcete zakázat PIN kód aplikace, když bude na zaregistrovaném zařízení zjištěn zámek zařízení, zvolte **Ano**.<br><br>**Poznámka** Intune v systému iOS neumí zjistit registraci zařízení s řešením EMM třetích stran.  | Ne |
 | **Vyžadovat minimální verzi operačního systému Android** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi operačního systému Android. Uživateli bude zablokován přístup, pokud verze Androidu v zařízení nesplňuje tento požadavek.<br><br> Tento formát nastavení zásady podporuje vlastnosti major.minor, major.minor.build a major.minor.build.revision.| Ne |
 | **Vyžadovat minimální verzi operačního systému Android (jenom upozornění)** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi operačního systému Android. Uživateli se zobrazí oznámení, pokud verze Androidu v zařízení nesplňuje tento požadavek. Toto oznámení je možné zavřít.<br><br> Tento formát nastavení zásady podporuje vlastnosti major.minor, major.minor.build a major.minor.build.revision. | Ne |
 | **Vyžadovat minimální verzi aplikace** | Zvolte **Ano**, pokud k používání této aplikace vyžadujete minimální verzi aplikace. Uživateli bude zablokován přístup, pokud verze aplikace v zařízení nesplňuje tento požadavek.<br><br>Vzhledem k tomu, že aplikace mívají často odlišná schémata verzí, vytvořte zásadu, ve které bude jedna minimální verze zacílená na jednu aplikaci (např. „Zásada verze Outlooku“). <br><br> Tento formát nastavení zásady podporuje vlastnosti major.minor, major.minor.build a major.minor.build.revision.| Ne |

@@ -5,19 +5,19 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 5/20/2018
+ms.date: 6/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: fd63fb2023b4712a3ad49838f87f5b7cc8320954
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 216c83d4158fe65b7aeb52f5477362eb57ec4242
+ms.sourcegitcommit: a52e81ab4fe24ae6410d1a1e63b4b073abc416a4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744886"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34822717"
 ---
 # <a name="manage-software-updates-in-intune"></a>Správa softwarových aktualizací v Intune
 
@@ -169,10 +169,13 @@ Je možné pozastavit příjem aktualizací funkcí nebo aktualizací kvality za
 > Kromě toho platí, že pokud je cílové zařízení při vydání příkazu k pozastavení vypnuté, může po zapnutí stáhnout a nainstalovat plánované aktualizace před tím, než se přihlásí k Intune.
 
 ### <a name="uninstall-the-latest-from-windows-10-software-updates"></a>Odinstalace nejnovější aktualizace softwaru Windows 10 
-Pokud na počítačích s Windows 10 najdete problém způsobující chybu, můžete se rozhodnout odinstalovat (vrátit zpět) nejnovější aktualizaci funkcí nebo nejnovější aktualizaci kvality. Odinstalace aktualizace funkcí nebo kvality je dostupná jenom pro kanál pro údržbu, ve kterém se dané zařízení nachází. Při odinstalaci se aktivují zásady, které na počítačích s Windows 10 obnoví předchozí aktualizaci. Konkrétně u aktualizací funkcí je možné omezit dobu 2 až 60 dnů, po kterou lze provést odinstalaci nejnovější verze. Pokud chcete nastavit možnosti odinstalace aktualizací softwaru, vyberte na webu Azure Portal v okně **Microsoft Intune** možnost **Aktualizace softwaru**. Pak v okně **Aktualizace softwaru** vyberte **Aktualizační kanály Windows 10**. Pak můžete v části **Přehled** zvolit možnost **Odinstalovat**.
+Pokud na počítačích s Windows 10 najdete problém způsobující chybu, můžete se rozhodnout odinstalovat (vrátit zpět) nejnovější aktualizaci funkcí nebo nejnovější aktualizaci kvality. Odinstalace aktualizace funkcí nebo kvality je dostupná jenom pro kanál pro údržbu, ve kterém se dané zařízení nachází. Při odinstalaci se aktivují zásady, které na počítačích s Windows 10 obnoví předchozí aktualizaci. Konkrétně u aktualizací funkcí je možné omezit dobu 2 až 60 dnů, po kterou lze provést odinstalaci nejnovější verze. Možnosti odinstalace aktualizací softwaru nastavíte takto:
+
+1. V Intune vyberte **Aktualizace softwaru**.
+2. Vyberte **Aktualizační kanály Windows 10**, vyberte existující aktualizační kanál a potom **Odinstalovat**.
 
 > [!NOTE]
-> Na počítačích s Windows 10 si po úspěšném vrácení aktualizace kvality zpět budou moct koncoví uživatelé nadále tuto aktualizaci zobrazit, když vyberou **Nastavení Windows** > **Aktualizace** > **Historie aktualizací**.
+> Poté, co se aktualizace kvality úspěšně vrátí zpět, na počítačích s Windows 10 ji koncoví uživatelé uvidí i nadále uvedenou v části **Nastavení Windows** > **Aktualizace** > **Historie aktualizací**.
 
 ## <a name="windows-holographic-for-business-support"></a>Podpora Windows Holographic for Business
 

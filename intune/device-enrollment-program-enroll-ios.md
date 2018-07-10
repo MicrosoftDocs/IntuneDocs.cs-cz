@@ -15,11 +15,12 @@ ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0f6f16bfd148e3c386aaf0ced78381e1eed8ae47
-ms.sourcegitcommit: b0ad42fe5b5627e5555b2f9e5bb81bb44dbff078
+ms.openlocfilehash: 8c0eda06c0c781f0a789034abbf5ef8799a9b45c
+ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34474442"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení s iOSem pomocí Programu registrace zařízení společnosti Apple
 
@@ -206,13 +207,17 @@ Přečtěte si téma [Registrace zařízení s iOSem v Intune pomocí programu r
 ## <a name="renew-a-dep-token"></a>Obnovení tokenu DEP  
 1. Přejděte na deploy.apple.com.  
 2. V části **Manage Servers** (Spravovat servery) zvolte server MDM přidružený k souboru tokenu, který chcete obnovit.
-3. Zvolte **Generate New Token** (Vygenerovat nový token).  
+3. Zvolte **Generate New Token** (Vygenerovat nový token).
+
+    ![Snímek obrazovky s možností Generate New Token (Vygenerovat nový token)](./media/device-enrollment-program-enroll-ios/generatenewtoken.png)
+
 4. Zvolte **Your Server Token** (Token vašeho serveru).  
-5. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení** > **Registrace zařízení Apple** > **Tokeny programu registrace**.  
-6. Vyberte token a zvolte **Obnovit token**.  
-7. Zadejte Apple ID, které jste použili k vytvoření původního tokenu.  
+5. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení** > **Registrace zařízení Apple** > **Tokeny programu registrace** a zvolte token.
+    ![Snímek obrazovky s možností Tokeny programu registrace](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
+
+6. Vyberte možnost **Obnovit token** a zadejte Apple ID, které jste použili k vytvoření původního tokenu.  
+    ![Snímek obrazovky s možností Generate New Token (Vygenerovat nový token)](./media/device-enrollment-program-enroll-ios/renewtoken.png)
+
 8. Nahrajte nově stažený token.  
 9. Zvolte **Obnovit token**. Zobrazí se potvrzení, že se token obnovil.   
-
-
-
+    ![Snímek obrazovky s potvrzením](./media/device-enrollment-program-enroll-ios/confirmation.png)

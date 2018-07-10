@@ -15,12 +15,12 @@ ms.assetid: ac77b590-a7ec-45a0-9516-ebf5243b6210
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d840bf62682621e4ec3848538a96066c0fd228fe
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 8c8fa146f01caae08f35ae824563ceb328c9d7f4
+ms.sourcegitcommit: 7daa778b3a5adb41acfe23495cb63754afda1c58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32046260"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123397"
 ---
 # <a name="what-is-mobile-threat-defense-integration-with-intune"></a>Co je integrace služby Mobile Threat Defense s Intune?
 
@@ -41,10 +41,12 @@ Pokud třeba připojená aplikace Mobile Threat Defense nahlásí dodavateli Mob
 
 ## <a name="what-data-does-intune-collect-for-mobile-threat-defense"></a>Která data Intune shromažďuje z důvodu ochrany před mobilními hrozbami?
 
-Intune shromažďuje informace o inventáři aplikací ze zařízení jak v osobním, tak i firemním vlastnictví, a zpřístupňuje je zprostředkovatelům služby ochrany před mobilními hrozbami, jako je třeba aplikace Lookout for Work. Inventář aplikací můžete shromažďovat od uživatelů zařízení s iOSem 11 a novějším.
+Pokud je to povoleno, Intune shromažďuje informace o inventáři aplikací ze zařízení jak v osobním, tak i firemním vlastnictví, a zpřístupňuje je zprostředkovatelům služby ochrany před mobilními hrozbami, jako je třeba aplikace Lookout for Work. Inventář aplikací můžete shromažďovat od uživatelů zařízení s iOSem.
+
+Tato služba vyžaduje výslovný souhlas; žádné informace inventáře aplikací se ve výchozím nastavení nesdílí. Jako správce Intune musíte v nastavení služby povolit synchronizaci aplikací pro zařízení s iOSem, než se budou informace inventáře aplikací sdílet.
 
 **Inventář aplikací**  
-Inventáře ze zařízení s iOSem 11 a novějším v osobním i firemním vlastnictví se posílají zprostředkovateli služby ochrany před mobilními hrozbami. Data v inventáři aplikací zahrnují tyto údaje:
+Pokud synchronizaci aplikací pro zařízení s iOSem povolíte, inventáře ze zařízení s iOSem v osobním i firemním vlastnictví se budou odesílat zprostředkovateli služby ochrany před mobilními hrozbami. Data v inventáři aplikací zahrnují tyto údaje:
 
  - ID aplikace
  - Verze aplikace
@@ -52,8 +54,8 @@ Inventáře ze zařízení s iOSem 11 a novějším v osobním i firemním vlast
  - Název aplikace
  - Velikost sady prostředků aplikace
  - Dynamická velikost aplikace
- - Zda je aplikace ověřena nebo ne
- - Zda je aplikace spravována nebo ne
+ - Jestli je aplikace ověřená nebo ne
+ - Jestli je aplikace spravovaná nebo ne
 
 ## <a name="sample-scenarios"></a>Ukázkové scénáře
 
@@ -76,3 +78,4 @@ Zjistěte, jak zabezpečit přístup k prostředkům společnosti na základě r
 - [Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md)
 - [Check Point SandBlast Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
 - [Zimperium](zimperium-mobile-threat-defense-connector.md)
+- [Pradeo](pradeo-mobile-threat-defense-connector.md)

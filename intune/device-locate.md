@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/05/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,11 +13,12 @@ ms.technology: ''
 ms.assetid: 3e544286-12ad-4a3a-86f8-d2cf16940b1f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 735b3323527487e231d190ffd45e9083c4f524a2
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 259cc7653f97cbb9e07ba681e142c62e42c5a124
+ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34444910"
 ---
 # <a name="locate-lost-or-stolen-ios-devices-with-intune"></a>Vyhledání ztracených nebo odcizených zařízení s iOSem přes Intune
 
@@ -45,7 +46,7 @@ Tato funkce není podporovaná pro tyto systémy:
     ![Snímek obrazovky z funkcí Najít zařízení pomocí Intune v Azure](./media/locate-device.png)
 
 >[!NOTE]
->Z důvodu ochrany osobních údajů je míra zvětšení mapy omezená.
+>Z důvodu ochrany osobních údajů je míra zvětšení mapy omezená na poloměr 300 metrů.
 
 ## <a name="activate-lost-mode-sound-alert-on-an-ios-device"></a>Aktivace zvukového upozornění v režimu ztráty na zařízení s iOSem
 
@@ -58,7 +59,7 @@ Zvuk se bude přehrávat, dokud ho uživatel na zařízení nedeaktivuje nebo se
 
 ## <a name="security-and-privacy-information-for-lost-mode-and-locate-device-actions"></a>Informace o zabezpečení a ochraně osobních údajů pro akce Režim ztráty a Najít zařízení
 - Dokud tuto akci nezapnete, neodesílají se do Intune žádné informace o poloze zařízení.
-- Když použijete akci Najít zařízení, údaje o poloze zařízení – zeměpisná šířka a délka – se odešlou do Intune a zobrazí se na portálu Azure Portal.
+- Když použijete akci Najít zařízení, můžete pomocí Graph API získat údaje o poloze zařízení (zeměpisné šířce a délce).
 - Tady tyto údaje zůstanou uložené 24 hodin a pak se odeberou. Údaje o poloze se nedají ručně odebrat.
 - Údaje o poloze jsou při uložení i při přenosu zašifrované.
 - Při konfiguraci režimu ztráty můžete přizpůsobit zprávu, která se zobrazí na zamykací obrazovce. V této zprávě určené osobě, která ztracené zařízení najde, nezapomeňte uvést konkrétní podrobnosti o vrácení ztraceného zařízení.

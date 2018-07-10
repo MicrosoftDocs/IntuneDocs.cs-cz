@@ -20,7 +20,7 @@ Aktualizace aplikace Portál společnosti pro Android zobrazuje indikátor průb
 
 Nyní můžete vytvořit zásadu podmíněného přístupu založeného na aplikacích, abyste aplikacím, na které nejsou aplikované zásady ochrany aplikací, zablokovali přístup k [SharePointu Online](/intune-classic/deploy-use/mam-ca-for-sharepoint-online). V případě podmíněného přístupu na základě aplikací můžete pomocí portálu Azure Portal určit aplikace, které mají mít přístup k SharePointu Online.
 
-#### <a name="single-sign-on-support-from-the-company-portal-for-ios-to-outlook-for-ios---834012--"></a>Podpora jednotného přihlášení z Portálu společnosti pro iOS do Outlooku pro iOS <!--834012-->
+#### <a name="single-sign-in-support-from-the-company-portal-for-ios-to-outlook-for-ios---834012--"></a>Podpora jednotného přihlášení z Portálu společnosti pro iOS do Outlooku pro iOS<!--834012-->
 Uživatelé už se nemusí přihlašovat k aplikaci Outlook, pokud jsou na stejném zařízení pomocí stejného účtu přihlášení k aplikaci Portál společnosti pro iOS. Při spuštění aplikace Outlook budou uživatelé moct zvolit svůj účet a přihlásit se automaticky. Pracujeme také na tom, abychom tuto funkci přidali i pro další aplikace Microsoftu.
 
 #### <a name="improved-status-messaging-in-the-company-portal-app-for-ios---744866--"></a>Vylepšené zprávy o stavu v aplikaci Portál společnosti pro iOS<!--744866-->
@@ -37,7 +37,7 @@ Nový indikátor průběhu najdete na stránce[Co je nového v uživatelském ro
 
 #### <a name="bulk-enroll-windows-10-devices----747607---"></a>Hromadná registrace zařízení s Windows 10 <!-- 747607 -->
 
-K Azure Active Directory a Intune můžete teď pomocí Windows Configuration Designeru (WCD) připojit velký počet zařízení s Windows 10 Creators Updatem. Pokud chcete pro svého tenanta Azure AD povolit [hromadnou registraci MDM](/intune-classic/deploy-use/bulk-enroll-windows), vytvořte zřizovací balíček, který zařízení k tenantovi Azure AD připojí pomocí Windows Configuration Designeru, a použijte balíček na zařízení ve vlastnictví firmy, která chcete hromadně zaregistrovat a spravovat. Po použití balíčku se zařízení připojí k Azure AD, zaregistrují v Intune a jsou připravená na přihlašování vašich uživatelů z Azure AD.  Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a obdrží přiřazené zásady a požadované aplikace. Samoobslužné scénáře a scénáře s Portálem společnosti v současnosti nejsou podporované.
+K Azure Active Directory a Intune můžete teď pomocí Windows Configuration Designeru (WCD) připojit velký počet zařízení s Windows 10 Creators Updatem. Pokud chcete pro svého tenanta Azure AD povolit [hromadnou registraci MDM](/intune-classic/deploy-use/bulk-enroll-windows), vytvořte zřizovací balíček, který zařízení k tenantovi Azure AD připojí pomocí Windows Configuration Designeru, a použijte balíček na zařízení ve vlastnictví firmy, která chcete hromadně zaregistrovat a spravovat. Jakmile se balíček použije na vaše zařízení, připojí se k Azure AD, zaregistrují se v Intune a budou připravena na přihlášení uživatelů z Azure AD.  Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a obdrží přiřazené zásady a požadované aplikace. Samoobslužné scénáře a scénáře s Portálem společnosti v současnosti nejsou podporované.
 
 ### <a name="whats-new-in-the-public-preview-of-the-intune-admin-experience-on-azure---736542--"></a>Co je nového ve veřejné verzi Preview prostředí pro správu Intune v Azure<!--736542-->
 
@@ -77,11 +77,11 @@ Existující role pro správu mobilních aplikací (MAM) (Přispěvatel, Vlastn�
 
 ### <a name="whats-coming"></a>Co připravujeme
 
-#### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Vylepšené přihlašování k aplikacím Portál společnosti na všech platformách <!--User Story 1132123-->
+#### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Lepší přihlašování k aplikacím Portál společnosti pro všechny platformy <!--User Story 1132123-->
 
 Avizujeme změnu, kterou uvedeme během několika nadcházejících měsíců a která vylepší přihlašování k aplikacím Portál společnosti Intune v systémech Android, iOS a Windows. Nové uživatelské prostředí se automaticky zobrazí na všech platformách pro aplikaci Portál společnosti, až Azure AD tuto změnu provede. Kromě toho se teď uživatelé můžou k Portálu společnosti přihlašovat z jiného zařízení pomocí vygenerovaného kódu na jedno použití. To se hodí hlavně v případech, kdy se uživatelé potřebují přihlásit bez přihlašovacích údajů.
 
-Snímky obrazovky předchozího způsobu přihlašování, nového způsobu přihlašování pomocí přihlašovacích údajů a nového způsobu přihlašování z jiného zařízení najdete na stránce s [novinkami v uživatelském rozhraní aplikací](/intune/whats-new-app-ui).
+Snímky obrazovky předchozího způsobu přihlašování, nového způsobu přihlašování zadáním přihlašovacích údajů a nového způsobu přihlašování z jiného zařízení najdete na stránce [novinek v uživatelském rozhraní aplikací](/intune/whats-new-app-ui).
 
 #### <a name="plan-for-change-intune-is-changing-the-intune-partner-portal-experience----1050016---"></a>Plánovaná změna: Intune mění způsob fungování portálu Intune Partner Portal<!-- 1050016 -->
 
@@ -89,7 +89,7 @@ Počínaje aktualizací služby v polovině května 2017 odstraníme stránku In
 
 Pokud jste partnerským správcem, nebude už moct stránku Intune Partner zobrazit a provádět z ní jménem vašich zákazníků kroky, ale místo toho se budete muset přihlásit k jednomu ze dvou dalších partnerských portálů Microsoftu.
 
-K účtům zákazníků, které spravujete, se budete moct přihlásit z [Partnerského centra Microsoftu](https://partnercenter.microsoft.com/) a [Centra pro partnerskou správu Office 365](https://portal.office.com/). V budoucnu jako partneři prosím ke správě svých zákazníků používejte jeden z těchto webů.
+Ke spravovaným účtům zákazníků se můžete přihlásit z [Partnerského centra Microsoftu](https://partnercenter.microsoft.com/) a z [Centra pro partnerskou správu Microsoft Office 365](https://portal.office.com/). V budoucnu jako partneři prosím ke správě svých zákazníků používejte jeden z těchto webů.
 
 
 #### <a name="apple-to-require-updates-for-application-transport-security---748318--"></a>Apple bude vyžadovat aktualizace ATS (Application Transport Security) <!--748318-->
@@ -127,7 +127,7 @@ Další podrobnosti o těchto změnách najdete v článku [Aktualizace uživate
 
 #### <a name="non-managed-devices-can-access-assigned-apps---664691--"></a>Nespravovaná zařízení mají přístup k přiřazeným aplikacím <!--664691-->
 
-Jako součást změn v návrhu na webu Portál společnosti budou moci uživatelé iOSu a Androidu na svoje nespravovaná zařízení instalovat aplikace, které mají přiřazené jako dostupné bez registrace. S použitím přihlašovacích údajů pro Intune se budou moct uživatelé přihlásit na web Portál společnosti a zobrazit seznam aplikací, které mají přiřazené. Balíčky aplikací, které jsou dostupné bez registrace, jsou k dispozici ke stažení prostřednictvím webu Portál společnosti. Aplikace, které vyžadují registraci, aby je bylo možné nainstalovat, nejsou touto změnou ovlivněny, protože když budou chtít tyto aplikace uživatelé nainstalovat, zobrazí se jim výzva k registraci.
+Jako součást změn v návrhu na webu Portál společnosti budou moci uživatelé iOSu a Androidu na svoje nespravovaná zařízení instalovat aplikace, které mají přiřazené jako dostupné bez registrace. Uživatelé se můžou pod svými přihlašovacími údaji k Intune přihlásit k webu Portál společnosti a podívat se na seznam přiřazených aplikací. Balíčky aplikací, které jsou dostupné bez registrace, jsou k dispozici ke stažení prostřednictvím webu Portál společnosti. Aplikace, které vyžadují registraci, aby je bylo možné nainstalovat, nejsou touto změnou ovlivněny, protože když budou chtít tyto aplikace uživatelé nainstalovat, zobrazí se jim výzva k registraci.
 
 #### <a name="signing-script-for-windows-10-company-portal---941642--"></a>Podepisovací skript pro Portál společnosti pro Windows 10 <!--941642-->
 
@@ -285,7 +285,7 @@ Pokud správce IT neoznačí nová zařízení jako vlastněná podnikem, Intune
 
 ### <a name="notices"></a>Sdělení
 
-__Vícefaktorové ověřování při registraci se přesouvá na Azure Portal__ <!--VSO 750545--> Dříve by správci při nastavování vícefaktorového ověřování pro registrace Intune přešli do konzoly Intune nebo do konzoly Configuration Manageru (verze dřívější než z října 2016). S touto aktualizovanou funkcí se teď budete pomocí přihlašovacích údajů Intune přihlašovat na [Microsoft Azure Portal](https://manage.windowsazure.com) a nakonfigurujete nastavení MFA pomocí služby Azure AD. Další informace o tom najdete [tady](https://aka.ms/mfa_ad).
+__Vícefaktorové ověřování při registraci se přesouvá na Azure Portal__ <!--VSO 750545--> Dříve by správci při nastavování vícefaktorového ověřování pro registrace Intune přešli do konzoly Intune nebo do konzoly Configuration Manageru (verze dřívější než z října 2016). Díky této aktualizované funkci se teď můžete přihlásit k webu [Microsoft Azure Portal](https://manage.windowsazure.com) pod přihlašovacími údaji Intune a nakonfigurovat vícefaktorové ověřování (MFA) prostřednictvím Azure AD. Další informace o tom najdete [tady](https://aka.ms/mfa_ad).
 
 __Aplikace Portál společnosti pro Android je teď dostupná v Číně__ <!--VSO 658093--> Publikujeme aplikaci Portál společnosti pro Android pro stahování v Číně. Vzhledem k absenci obchodu Google Play v Číně musí zařízení s Androidem získávat aplikace z čínských marketplace aplikací. Aplikace Portál společnosti pro Android bude dostupná ke stažení v těchto obchodech:
 * [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
@@ -306,7 +306,7 @@ Ke komunikaci se službou Microsoft Intune používá aplikace Portál společno
 
 ### <a name="deprecations"></a>Vyřazení
 
-__Firefox už nebude podporovat Silverlight__ <!--VSO TBA--> Mozilla ve verzi 52 [prohlížeče Firefox](https://www.mozilla.org/firefox) přestává podporovat Silverlight s účinností od března 2017. V důsledku toho se už pomocí Firefoxu ve verzi vyšší než 51 nebudete moct přihlásit ke stávající konzole Intune. Doporučujeme pro přístup ke konzole pro správce používat Internet Explorer 10 nebo 11 nebo [verzi Firefoxu starší než 52](https://ftp.mozilla.org/pub/firefox/releases/). Přechod Intune na Azure Portal umožní podporu celé řady [moderních prohlížečů](/azure/azure-preview-portal-supported-browsers-devices) bez závislosti na Silverlightu.
+__Firefox už nebude podporovat Silverlight__ <!--VSO TBA--> Mozilla ve verzi 52 [prohlížeče Firefox](https://www.mozilla.org/firefox) přestává podporovat Silverlight s účinností od března 2017. Proto už se nebudete moct ke stávající konzole Intune přihlásit v prohlížeči Firefox vyšší verze než 51. Doporučujeme pro přístup ke konzole pro správce používat Internet Explorer 10 nebo 11 nebo [verzi Firefoxu starší než 52](https://ftp.mozilla.org/pub/firefox/releases/). Přechod Intune na Azure Portal umožní podporu celé řady [moderních prohlížečů](/azure/azure-preview-portal-supported-browsers-devices) bez závislosti na Silverlightu.
 
 __Odebrání zásad poštovní schránky mobilních zařízení Exchange Online__ <!--770687--> Od prosince už správci nebudou moct zobrazit nebo nakonfigurovat zásady poštovní schránky mobilních zařízení Exchange Online (EAS) v konzole Intune. Tato změna se bude pro všechny tenanty Intune zavádět v průběhu prosince a ledna. Všechny stávající zásady zůstanou tak, jak jsou nakonfigurované. Ke konfiguraci nových zásad použijte prostředí Exchange Management Shell. Další informace o tom najdete [tady](https://technet.microsoft.com/library/bb123783%28v=exchg.150%29.aspx).
 

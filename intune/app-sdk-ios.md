@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 manager: dougeby
 ms.author: erikre
-ms.date: 05/18/2018
+ms.date: 06/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,12 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: ''
-ms.openlocfilehash: f8f81b4ff3bf5d17832d2f943fffb905eba52b6e
-ms.sourcegitcommit: 49dc405bb26270392ac010d4729ec88dfe1b68e4
+ms.openlocfilehash: 2effa1d63be57c938a4e5763090bce8f20f48192
+ms.sourcegitcommit: 81721ad672096298bf281dcbf21e8ce9c44cafaa
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042795"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -84,7 +85,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
    > [!NOTE]
    > Pokud tento model použijete, nezapomeňte z univerzálního modelu před odesláním aplikace do App Storu odstranit architektury simulátoru. Viz část [Odeslání aplikace do App Storu](#Submit-your-app-to-the-App-Store), kde najdete další podrobnosti.
 
-2. **Možnost 2**: Vytvořte propojení s knihovnou `libIntuneMAM.a`. Přetáhněte knihovnu `libIntuneMAM.a` do **seznamu propojených modelů a knihoven** cíle projektu.
+   **Možnost 2**: Vytvořte propojení s knihovnou `libIntuneMAM.a`. Přetáhněte knihovnu `libIntuneMAM.a` do **seznamu propojených modelů a knihoven** cíle projektu.
 
     ![Intune App SDK iOS: propojené architektury a knihovny](./media/intune-app-sdk-ios-linked-frameworks-and-libraries.png)
 
@@ -99,7 +100,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 
      ![Intune App SDK iOS: kopírování prostředků sady](./media/intune-app-sdk-ios-copy-bundle-resources.png)
 
-     Do projektu přidejte tyto modely iOS:  
+2. Do projektu přidejte tyto modely iOS:  
     * MessageUI.framework  
     * Security.framework  
     * MobileCoreServices.framework  
@@ -152,6 +153,9 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
    |- o |  (Volitelné) `<Path to the output plist>` |
 
 Pokud není parametr -o zadaný, upraví se vstupní soubor na místě. Nástroj je idempotentní a po provedení změn souboru Info.plist dané aplikace nebo nároků by se měl spustit znovu. Nejnovější verzi tohoto nástroje byste měli stáhnout a spustit také při aktualizaci Intune SDK, pokud se v nejnovější verzi změnily požadavky na konfiguraci souboru Info.plist.
+
+> [!NOTE]
+> Pokud vaše aplikace ještě FaceID nepoužívá, přesvědčte se, že klíč `NSFaceIDUsageDescription` info.plist má nakonfigurovanou výchozí zprávu. Je to důležité proto, aby systém iOS mohl informovat uživatele o tom, jakým způsobem chce aplikace FaceID používat. Nastavení zásad ochrany aplikací Intune umožňuje použití FaceID jako metody přístupu k aplikaci (když se nakonfiguruje správcem IT).
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>Konfigurace knihovny ADAL (Azure Active Directory Authentication Library)
 

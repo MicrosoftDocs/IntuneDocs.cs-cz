@@ -14,12 +14,12 @@ ms.assetid: 768b6f08-3eff-4551-b139-095b3cfd1f89
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2046a928525e974eee5f63d772d46864b21f0267
-ms.sourcegitcommit: 2061f7a442efc96c8afd5db764d11531563c7e39
+ms.openlocfilehash: eb7d8b35cb88223a3fbfa45e0ad8e2f8d2852a96
+ms.sourcegitcommit: ab801d715aa26f6d97f1a0c42a07e55146a14e6f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34583668"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35289019"
 ---
 # <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Správa powershellových skriptů v Intune u zařízení s Windows 10
 Rozšíření správy Intune umožňuje nahrát powershellové skripty do Intune, aby je bylo možné spouštět v zařízeních s Windows 10. Rozšíření správy doplňuje funkce správy mobilních zařízení (MDM) s Windows 10 a usnadňuje přechod na moderní správu.
@@ -53,6 +53,10 @@ Rozšíření správy Intune vyžaduje splnění následujících požadavků:
  
 2. Výběrem možnosti **Vybrat skupiny** zobrazte seznam dostupných skupin Azure AD. 
 3. Vyberte jednu nebo více skupin, které obsahují uživatele, jejichž zařízení skript obdrží. Kliknutím na **Vybrat** přiřaďte zásady k vybraným skupinám.
+
+> [!NOTE]
+> - Skripty PowerShell se nedají použít u skupin počítačů.
+> - Skripty PowerShell se na zařízeních spustí, jenom když je k zařízení přihlášený uživatel Azure Active Directory (AD).
 
 Rozšíření správy Intune se s Intune synchronizuje jednou za hodinu. Po přiřazení zásad ke skupinám Azure AD se powershellový skript spustí a zobrazí se výsledky spuštění. 
  

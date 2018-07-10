@@ -15,12 +15,12 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9132000f5fcf43251bcc1e9b903ea03551e0b85e
-ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
+ms.openlocfilehash: 606c173c1723d526436b9ae75d9a4085883f071b
+ms.sourcegitcommit: 29eaf27323763a5a200ec64b8679397c4b988f33
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34178158"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36305429"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Vytvoření a přiřazení zásad ochrany aplikací
 
@@ -126,6 +126,8 @@ Mnoho organizací běžně umožňuje koncovým uživatelům používat jak zař
 Vzhledem k tomu, že zásady ochrany aplikací Intune cílí na identitu uživatele, nastavení ochrany pro uživatele obvykle platí jak pro zaregistrovaná zařízení (ve správě MDM), tak i pro nezaregistrovaná zařízení (bez správy MDM). Z tohoto důvodu můžete zacílit zásady ochrany aplikací Intune jak na zařízení s iOSem nebo Androidem zaregistrovaná v Intune, tak i na nezaregistrovaná zařízení. Pro nespravovaná zařízení můžete zavést jednu zásadu ochrany, která bude používat přísné mechanismy ochrany před únikem informací, a pro zařízení spravovaná v MDM samostatnou zásadu, která bude používat mírnější mechanismy ochrany před únikem informací. 
 
 Pokud chcete vytvořit tyto zásady, přejděte v konzole Intune na **Mobilní aplikace** > **Zásady ochrany aplikací** a klikněte na **Přidat zásadu**. Můžete také upravit existující zásadu ochranu aplikací. Pokud chcete, aby zásada ochrany aplikací platila pro spravovaná i nespravovaná zařízení, zkontrolujte, že je možnost **Cílit na všechny typy aplikací** nastavena na výchozí hodnotu **Ano**. Pokud chcete zásady přiřazovat podrobněji na základě stavu správy, nastavte možnost **Cílit na všechny typy aplikací** na **Ne**. 
+
+Aby bylo možné považovat aplikace pro iOS za „spravované“, musí být nastavení zásad konfigurace **IntuneMAMUPN** nasazené pro každou aplikaci. Další informaci získáte v článku o [správě přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune](https://docs.microsoft.com/en-us/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 
 > [!NOTE]
 > Konkrétní informace o podpoře zásad ochrany aplikací pro iOS na základě stavu správy zařízení najdete v tématu [Zásady ochrany MAM zacílené podle stavu správy](whats-new.md#mam-protection-policies-targeted-based-on-management-state-).

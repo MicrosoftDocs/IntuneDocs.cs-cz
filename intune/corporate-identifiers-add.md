@@ -15,12 +15,12 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d9557c5f962390a9893109bc6f5175b1e709f7cd
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: f8517e9a9dd698e875214fe363d8e1246129b96a
+ms.sourcegitcommit: 81721ad672096298bf281dcbf21e8ce9c44cafaa
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31030881"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042707"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifikace zařízení jako vlastněných společností
 
@@ -68,6 +68,7 @@ V textovém editoru vypadá soubor .csv takhle:
 > Některá zařízení s Androidem mají více kódů IMEI. Intune dokáže přečíst jen jeden kód IMEI na každé zaregistrované zařízení. Pokud importujete kód IMEI, který ale není kódem IMEI v inventáři služby Intune, označí se zařízení jako osobní, a ne jako firemní. Pokud importujete více kódů IMEI pro jedno zařízení, zobrazí se u kódů, které nejsou v inventáři, stav registrace **Neznámý**.<br>
 >Poznámka: Sériová čísla Androidu nemusí být jedinečná nebo existovat. Pokud chcete zjistit, jestli je sériové číslo spolehlivým identifikátorem zařízení, obraťte se na dodavatele zařízení.
 >Sériová čísla, která službě Intune oznámí zařízení, se nemusí shodovat se zobrazenými identifikátory v nabídkách zařízení Nastavení/ O zařízení. Ověřte si typ sériového čísla oznámeného výrobcem zařízení.
+>Pokus o nahrání souborů se sériovými čísly, které obsahují tečky (.), způsobí selhání nahrávání. Sériová čísla s tečkami nejsou podporovaná.
 
 ### <a name="add-a-csv-list-of-corporate-identifiers"></a>Přidání seznamu podnikových identifikátorů ve formátu .csv
 
