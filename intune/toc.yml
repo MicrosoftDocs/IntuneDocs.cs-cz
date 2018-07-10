@@ -180,7 +180,13 @@
           items:
             - name: Nastavení registrace zařízení s Androidem
               href: android-enroll.md
-            - name: Správa zařízení podporujících Android for Work
+            - name: Připojení Intune k Androidu Enterprise
+              href: connect-intune-android-enterprise.md
+            - name: Nastavení registrace pracovního profilu Androidu
+              href: android-work-profile-enroll.md
+            - name: Nastavení registrace beznabídkového režimu Androidu
+              href: android-kiosk-enroll.md
+            - name: Správa zařízení s pracovním profilem Androidu
               href: android-enterprise-overview.md
             - name: Registrace mobilního zařízení Samsung Knox
               href: android-samsung-knox-mobile-enroll.md
@@ -255,7 +261,7 @@
                   items:
                     - name: Ruční přidání aplikace Portál společnosti
                       href: store-apps-company-portal-app.md
-                - name: Aplikace pro Android for Work
+                - name: Aplikace s pracovním profilem Androidu
                   href: apps-add-android-for-work.md
                 - name: Aplikace Office 365 pro Windows 10
                   href: apps-add-office365.md
@@ -326,6 +332,8 @@
                       href: app-protection-policy-settings-android.md
                     - name: Nastavení iOS
                       href: app-protection-policy-settings-ios.md
+                    - name: Akce přístupu
+                      href: app-protection-policies-access-actions.md
                     - name: Výjimky přenosu dat
                       href: app-protection-policies-exception.md
                 - name: Ověření zásad ochrany aplikací
@@ -379,7 +387,7 @@
               href: device-restrictions-windows-10-teams.md
             - name: Windows Holographic for Business
               href: device-restrictions-windows-holographic.md
-            - name: Android for Work
+            - name: Pracovní profil Androidu
               href: device-restrictions-android-for-work.md
         - name: Konfigurace služby Endpoint Protection
           href: endpoint-protection-configure.md
@@ -390,6 +398,10 @@
               href: endpoint-protection-windows-10.md
         - name: Konfigurace nastavení režimu Veřejný terminál
           href: kiosk-settings.md
+        - name: Konfigurace nastavení beznabídkového režimu Androidu
+          href: android-kiosk-settings.md
+        - name: Nastavení beznabídkového režimu Androidu Enterprise
+          href: android-enterprise-settings.md
         - name: Konfigurace nastavení e-mailů
           href: email-settings-configure.md
           items:
@@ -465,7 +477,7 @@
       items:
         - name: Vytvoření zásad pro Android
           href: compliance-policy-create-android.md
-        - name: Vytvoření zásad pro Android for Work
+        - name: Vytvoření zásady pracovního profilu Androidu
           href: compliance-policy-create-android-for-work.md
         - name: Vytvoření zásady pro povolení služeb Google Play Protect
           href: compliance-policy-create-google-play-protect.md
@@ -691,7 +703,7 @@
               href: custom-settings-windows-10.md
             - name: Windows Holographic for Business
               href: custom-settings-windows-holographic.md
-            - name: Android for Work
+            - name: Pracovní profil Androidu
               href: custom-settings-android-for-work.md
 - name: Informace pro vývojáře
   items:
