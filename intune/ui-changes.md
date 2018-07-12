@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 861be39feab15c453fd102593b0501202faa3684
-ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
+ms.openlocfilehash: 54050fd7afc58a101d956b4aee68e9b5e4011a3d
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36232932"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905372"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Kde v Azure najdu svoje funkce Intune?
 Při přesunu Intune do portálu Azure Portal jsme využili příležitost uspořádat některé úlohy logičtěji. Každé vylepšení ale přichází za cenu toho, že je potřeba se s novým uspořádáním seznámit. Tato referenční příručka je určena uživatelům, kteří znají dobře Intune na klasickém portálu a zajímá je, jak s Intune pracovat na webu Azure Portal. Pokud tento článek nepopisuje funkci, kterou hledáte, uveďte ji v poznámce na konci článku, abychom ho mohli aktualizovat.
@@ -36,7 +36,7 @@ Při přesunu Intune do portálu Azure Portal jsme využili příležitost uspo�
 |Skupiny podle IMEI (všechny platformy)| Skupiny > Všechna zařízení > Firemní předregistrovaná zařízení > Podle IMEI (všechny platformy) | [Registrace zařízení > Identifikátory podnikových zařízení ](#by-imei-all-platforms)|
 | Profil Registrace podnikového zařízení| Zásady > Registrace podnikového zařízení | [Registrace zařízení > Registrace Apple > Profily Programu registrace](#where-did-corporate-pre-enrolled-devices-go) |
 | Profil Registrace podnikového zařízení | Zásady > Registrace podnikového zařízení | [Registrace zařízení > Registrace Apple > Profily AC](#where-did-corporate-pre-enrolled-devices-go) |
-| Android for Work | Správce > Správa mobilních zařízení > Android for Work | Registrace zařízení > Registrace Androidu for Work |
+| Android for Work | Správce > Správa mobilních zařízení > Android for Work | Registrace zařízení > Registrace Androidu |
 | Podmínky a ujednání | Zásady > Podmínky a ujednání | Registrace zařízení > Podmínky a ujednání |
 Nastavení Portálu společnosti|Správce > Portál společnosti|**Správa** > Mobilní aplikace<br> **Nastavení** > Značky Portálu společnosti
 

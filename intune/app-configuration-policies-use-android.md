@@ -1,7 +1,7 @@
 ---
 title: Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem
 titlesuffix: Microsoft Intune
-description: Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastavení, když uživatelé spustí aplikaci pro Android for Work.
+description: Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastavení, když uživatelé spustí aplikaci v pracovním profilu Androidu.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -15,18 +15,18 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3011d98b73ef95d1c5a527798ab004f788c9eee9
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: c837f9a5a2cb1a6f267f85f888453725da6acb66
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34470861"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905746"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastavení aplikacím pro Android for Work. K určení nastavení konfigurace pro aplikaci musí její vývojáři zpřístupnit nastavení konfigurace spravovaných aplikací pro Android. Přiřaďte zásady konfigurace aplikací skupině uživatelů, pro kterou chcete nastavení použít.  Nastavení zásad se použijí, když je aplikace zjistí (obvykle při prvním spuštění).
+Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastavení pro aplikace v pracovním profilu Androidu. K určení nastavení konfigurace pro aplikaci musí její vývojáři zpřístupnit nastavení konfigurace spravovaných aplikací pro Android. Přiřaďte zásady konfigurace aplikací skupině uživatelů, pro kterou chcete nastavení použít.  Nastavení zásad se použijí, když je aplikace zjistí (obvykle při prvním spuštění).
 
 > [!Note]  
 > Některé aplikace konfiguraci aplikací nepodporují. Zeptejte se vývojáře, jestli vaše aplikace zásady konfigurace aplikací podporuje.
@@ -39,8 +39,8 @@ Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastav
     - **Název**: Název profilu, který se zobrazí na portálu Azure Portal
     - **Popis**: Popis profilu, který se zobrazí na portálu Azure Portal
     - **Typ registrace zařízení**: Zvolte **Spravovaná zařízení**.
-6. U možnosti **Platforma** vyberte **Android for Work**.
-7. Kliknutím na **Přidružená aplikace** přejděte na výběr aplikace, pro kterou chcete definovat zásady konfigurace aplikací. Ze seznamu vyberte některou z aplikací pro Android for Work, které jste schválili a synchronizovali s Intune.
+6. V poli **Platforma** vyberte **Android**.
+7. Kliknutím na **Přidružená aplikace** přejděte na výběr aplikace, pro kterou chcete definovat zásady konfigurace aplikací. Ze seznamu vyberte některou z aplikací v pracovním profilu Androidu, které jste schválili a synchronizovali s Intune.
 8. Vyberte **Oprávnění**. K nastavení konfigurace můžete použít:
     - [Návrhář konfigurace](#Use-the-configuration-designer)
     - [Editor JSON](#Enter-the-JSON-editor)
@@ -94,8 +94,8 @@ Předem nakonfigurovat můžete také oprávnění aplikací k přístupu k funk
     - **Název**. Název profilu, který se zobrazí na portálu Azure Portal
     - **Popis**. Popis profilu, který se zobrazí na portálu Azure Portal
     - **Typ registrace zařízení**: Vyberte **Spravovaná zařízení**.
-    - **Platforma**: Vyberte **Android for Work**.
-5. Kliknutím na **Přidružená aplikace** přejděte na výběr aplikace, pro kterou chcete definovat zásadu konfigurace. Ze seznamu vyberte některou z aplikací pro Android for Work, které jste schválili a synchronizovali s Intune.
+    - **Platforma**: Vyberte **Android**.
+5. Kliknutím na **Přidružená aplikace** přejděte na výběr aplikace, pro kterou chcete definovat zásadu konfigurace. Ze seznamu vyberte některou z aplikací v pracovním profilu Androidu, které jste schválili a synchronizovali s Intune.
 6. Klikněte na **Oprávnění** a potom na **Přidat**.
 7. Ze seznamu vyberte příslušné oprávnění aplikace a klikněte na **OK**.
 8. U každého oprávnění vyberte způsob, jakým se bude v rámci této zásady udělovat:

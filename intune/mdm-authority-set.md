@@ -15,12 +15,12 @@ ms.assetid: 8deff871-5dff-4767-9484-647428998d82
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4c1902e319a862c9ffcda5068753f917bf8f4c3f
-ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
+ms.openlocfilehash: 0f4687b3a2b1064fbfe3a9c8aa9da6cc7d336d78
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36232914"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37906035"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Nastavení autority pro správu mobilních zařízení
 
@@ -41,9 +41,11 @@ Možné konfigurace:
 
 ## <a name="set-mdm-authority-to-intune"></a>Nastavení autority MDM na Intune
 
+Pokud jste ještě nenastavili autoritu MDM, proveďte postup uvedený níže. Pokud chcete změnit jednu autoritu MDM na jinou, podívejte se níže na část [Změna autority MDM](#prepare-to-change-the-mdm-authority-to-configuration-manager).
+
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. Výběrem oranžové informační zprávy otevřete nastavení **Autorita pro správu mobilních zařízení**.
+3. Výběrem oranžové informační zprávy otevřete nastavení **Autorita pro správu mobilních zařízení**. Oranžová informační zpráva se zobrazí jenom v případě, že jste autoritu MDM ještě nenastavili.
 4. V oblasti **Autorita pro správu mobilních zařízení** zvolte některou autoritu MDM z následujících možností:
    - **Autorita MDM Intune**
    - **Autorita MDM Configuration Manageru**
@@ -57,7 +59,7 @@ Možné konfigurace:
 Pokud je povolená správa zařízení s Androidem nebo zařízení Apple, odesílá Intune informace o zařízení a uživateli, aby byla možná integrace služeb třetích stran a správa příslušných zařízení.
 
 Mezi scénáře, pro které se přidává souhlas se sdílením dat, patří:
-- Povolení Androidu for Work
+- Povolení pracovních profilů Androidu
 - Povolení a nahrání certifikátů Apple MDM Push Certificate
 - Povolení některé ze služeb Apple, jako jsou například Program registrace zařízení, School Manager a Volume Purchase Program
 

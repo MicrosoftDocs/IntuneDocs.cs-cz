@@ -10,7 +10,7 @@
   Kompletní seznam ověřených zařízení se zabezpečením Samsung Knox Standard najdete v [nastavení zásad pro Android a Samsung Knox Standard](/intune/supported-devices-browsers#supported-samsung-knox-standard-devices).
 
 
-- [Požadavky](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012) Androidu for Work
+- [Požadavky](https://support.google.com/work/android/answer/6174145?hl=en) pro Android Enterprise
 
 ### <a name="microsoft"></a>Microsoft
 

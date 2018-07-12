@@ -15,12 +15,12 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f8517e9a9dd698e875214fe363d8e1246129b96a
-ms.sourcegitcommit: 81721ad672096298bf281dcbf21e8ce9c44cafaa
+ms.openlocfilehash: 6bf9eaef010879835abb7cec57c2fbdce6aa1e0a
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042707"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905865"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifikace zařízení jako vlastněných společností
 
@@ -47,7 +47,7 @@ Jako správce Intune můžete vytvořit a naimportovat textový soubor s oddělo
 [Přečtete si, jak zjistit sériové číslo zařízení Apple](https://support.apple.com/HT204308).<br>
 [Přečtete si, jak zjistit sériové číslo zařízení s Androidem](https://support.google.com/store/answer/3333000).
 
-## <a name="add-corporate-identifiers"></a>Přidání podnikových identifikátorů
+## <a name="add-corporate-identifiers-by-using-a-csv-file"></a>Přidání podnikových identifikátorů pomocí souboru .csv
 Pokud chcete vytvořit seznam, vytvořte seznam hodnot oddělených čárkami se dvěma sloupci (.csv) bez záhlaví. Do levého sloupce přidejte kód IMEI nebo sériové číslo a v pravém sloupci uveďte podrobnosti. V rámci jednoho souboru .csv můžete importovat pouze jeden typ identifikačního čísla: buď IMEI, nebo sériové číslo. Podrobnosti jsou omezené na 128 znaků a používají se jenom pro účely správy. Na zařízení se podrobnosti nezobrazují. Současný limit jednoho souboru CSV je 5 000 řádků.
 
 **Nahráním souboru .csv se sériovými čísly** – Vytvořte seznam oddělený čárkami (.csv), který bude mít dva sloupce, a nebude mít záhlaví. Soubor .csv může obsahovat maximálně 5000 zařízení, ale jeho velikost nesmí překročit 5 MB.
@@ -70,19 +70,33 @@ V textovém editoru vypadá soubor .csv takhle:
 >Sériová čísla, která službě Intune oznámí zařízení, se nemusí shodovat se zobrazenými identifikátory v nabídkách zařízení Nastavení/ O zařízení. Ověřte si typ sériového čísla oznámeného výrobcem zařízení.
 >Pokus o nahrání souborů se sériovými čísly, které obsahují tečky (.), způsobí selhání nahrávání. Sériová čísla s tečkami nejsou podporovaná.
 
-### <a name="add-a-csv-list-of-corporate-identifiers"></a>Přidání seznamu podnikových identifikátorů ve formátu .csv
+### <a name="upload-a-csv-list-of-corporate-identifiers"></a>Nahrání seznamu podnikových identifikátorů ve formátu .csv
 
-1. V [Intune na portálu Azure Portal](https://portal.azure.com) zvolte **Registrace zařízení** > **Identifikátory podnikových zařízení** a potom klikněte na **Přidat**.
+1. V [Intune na portálu Azure Portal](https://portal.azure.com) zvolte **Registrace zařízení** > **Identifikátory podnikových zařízení** > **Přidat** > **Nahrát soubor CSV**.
 
    ![Pracovní prostor s identifikátory podnikových zařízení a zvýrazněným tlačítkem Přidat](./media/add-corp-id.png)
 
-2. V okně **Přidat identifikátory** zadejte typ identifikátoru: **IMEI** nebo **Sériové**. Můžete určit, jestli se má pro dříve importovaná čísla použít nastavení **Přepište podrobnosti u existujících identifikátorů**.
+2. V okně **Přidat identifikátory** zadejte typ identifikátoru: **IMEI** nebo **Sériové**.
 
-3. Klikněte na ikonu složky a určete cestu k seznamu, který chcete importovat. Přejděte do souboru .csv a vyberte **Přidat**. Pokud se chcete podívat na identifikátory nového zařízení, můžete kliknout na **Aktualizovat**.
+3. Klikněte na ikonu složky a určete cestu k seznamu, který chcete importovat. Přejděte do souboru .csv a zvolte **Přidat**. 
+
+4. Pokud soubor .csv obsahuje podnikové identifikátory, které už v Intune jsou, ale mají jiné podrobnosti, zobrazí se automaticky otevírané okno **Zkontrolovat duplicitní identifikátory**. Vyberte identifikátory, které chcete v Intune přepsat, a výběrem **OK** tyto identifikátory přidejte. U každého identifikátoru se porovná jenom první duplicita.
+
+## <a name="manually-enter-corporate-identifiers"></a>Ruční zadání podnikových identifikátorů
+
+1. V [Intune na portálu Azure Portal](https://portal.azure.com) zvolte **Registrace zařízení** > **Identifikátory podnikových zařízení** > **Přidat** > **Zadat ručně**.
+
+2. V okně **Přidat identifikátory** zadejte typ identifikátoru: **IMEI** nebo **Sériové**.
+
+3. Pro každý identifikátor, který chcete přidat, zadejte **Identifikátor** a **Podrobnosti**. Až zadávání identifikátorů dokončíte, zvolte **Přidat**.
+
+5. Pokud jste zadali podnikové identifikátory, které už v Intune jsou, ale mají jiné podrobnosti, zobrazí se automaticky otevírané okno **Zkontrolovat duplicitní identifikátory**. Vyberte identifikátory, které chcete v Intune přepsat, a výběrem **OK** tyto identifikátory přidejte. U každého identifikátoru se porovná jenom první duplicita.
+
+Pokud se chcete podívat na identifikátory nového zařízení, můžete kliknout na **Aktualizovat**.
 
 Importovaná zařízení nemusí být nutně zaregistrovaná. Zařízení můžou mít stav **Zaregistrované** nebo **Nekontaktované**. **Nekontaktované** znamená, že toto zařízení nikdy se službou Intune nekomunikovalo.
 
-### <a name="delete-corporate-identifiers"></a>Odstranění podnikových identifikátorů
+## <a name="delete-corporate-identifiers"></a>Odstranění podnikových identifikátorů
 
 1. V [Intune na portálu Azure Portal](https://portal.azure.com) zvolte **Registrace zařízení** > **Identifikátory podnikových zařízení**.
 2. Vyberte identifikátory zařízení, které chcete odstranit, a zvolte **Odstranit**.
@@ -90,7 +104,7 @@ Importovaná zařízení nemusí být nutně zaregistrovaná. Zařízení můžo
 
 Při odstranění podnikového identifikátoru zaregistrovaného zařízení se nezmění vlastnictví zařízení. Pokud chcete změnit vlastnictví zařízení, přejděte na **Zařízení**, vyberte zařízení, zvolte **Vlastnosti** a změňte **Vlastnictví zařízení**.
 
-### <a name="imei-specifications"></a>Specifikace IMEI
+## <a name="imei-specifications"></a>Specifikace IMEI
 Podrobné specifikace o číslech IMEI najdete na stránce [3GGPP TS 23.003](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=729).
 
 ## <a name="change-device-ownership"></a>Změna vlastnictví zařízení

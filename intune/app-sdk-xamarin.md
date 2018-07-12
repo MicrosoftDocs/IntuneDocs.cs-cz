@@ -14,12 +14,12 @@ ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f8f5e397c314088c7b26edba486f9cbaf9718096
-ms.sourcegitcommit: 1eddded65ae9e442dd3bebd16b9428af76a67f34
+ms.openlocfilehash: 421dede4b0da71fe04649e21bfcf7c15d2270507
+ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35250940"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37869351"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Xamarinové vazby sady Microsoft Intune App SDK
 
@@ -34,14 +34,12 @@ Xamarinové vazby sady Microsoft Intune App SDK umožňují začlenit do vašich
 ## <a name="whats-supported"></a>Co se podporuje
 
 ### <a name="developer-machines"></a>Počítače pro vývojáře
-* Windows
+* Windows (Visual Studio verze 15.7+)
 * macOS
-
 
 ### <a name="mobile-app-platforms"></a>Platformy pro mobilní aplikace
 * Android
 * iOS
-
 
 ### <a name="intune-mobile-application-management-scenarios"></a>Scénáře Správy mobilních aplikací Intune
 
@@ -52,6 +50,20 @@ Xamarinové vazby sady Microsoft Intune App SDK umožňují začlenit do vašich
 Xamarinové aplikace vytvořené xamarinovými vazbami sady Intune App SDK přijímají zásady ochrany aplikací Intune na zařízeních zaregistrovaných ve správě mobilních zařízení (MDM) Intune i na neregistrovaných zařízeních.
 
 ## <a name="prerequisites"></a>Požadavky
+
+* **[Jenom Android]** V zařízení musí být nainstalovaná nejnovější aplikace Portál společnosti Microsoft Intune.
+
+## <a name="get-started"></a>Začínáme
+
+1. Přečtěte si [licenční podmínky](https://components.xamarin.com/license/microsoft.intune.mam) pro komponentu Microsoft Intune MAM Xamarin.
+
+2.  Stáhněte složku komponenty Xamarin sady Intune App SDK z [GitHubu](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) nebo [Nuget.org](https://www.nuget.org/profiles/msintuneappsdk) a extrahujte ji. Oba soubory stažené v kroku 1 a 3 musí být na úrovni stejného adresáře.
+
+3.  Na příkazovém řádku jako správce spusťte `Xamarin.Component.exe install <.xam> file`.
+
+4.  Ve Visual Studiu klikněte pravým tlačítkem na **komponenty** ve dříve vytvořeném projektu Xamarinu.
+
+5.  Vyberte **Upravit komponenty** a přidejte komponentu Intune App SDK, kterou jste stáhli do počítače.
 
 Přečtěte si [licenční podmínky](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf). Vytisknout a uchovat pro své záznamy kopii licenčních podmínek. Stažením a použitím xamarinových vazeb sady Intune App SDK přijímáte tyto licenční podmínky. Pokud je nepřijímáte, software nepoužívejte.
 
@@ -79,6 +91,8 @@ Přečtěte si [licenční podmínky](https://github.com/msintuneappsdk/intune-a
 > Pro iOS není k dispozici nástroj pro přemapování. Integrace do aplikace Xamarin.Forms by měla být stejná jako u normálního projektu Xamarin.iOS. 
 
 ## <a name="enabling-intune-app-protection-policies-in-your-android-mobile-app"></a>Povolení zásad Intune App Protection v mobilní aplikaci pro Android
+
+U aplikací pro Android založených na Xamarinu, které nevyužívají architekturu uživatelského rozhraní, si přečtěte téma [Intune APP SDK pro Android – Příručka vývojáře](app-sdk-android.md) a postupujte podle něj. V aplikaci pro Android založené na Xamarinu je potřeba nahradit třídu, metody a aktivity jejich ekvivalentem MAM podle [tabulky](app-sdk-android.md#replace-classes-methods-and-activities-with-their-mam-equivalent), kterou v průvodci najdete. Pokud vaše aplikace nedefinuje třídu `android.app.Application`, budete ji muset vytvořit a zajistit, abyste dědili z `MAMApplication`.
 
 ### <a name="xamarinandroid-integration"></a>Integrace Xamarin.Android
 
@@ -110,4 +124,37 @@ Přečtěte si [licenční podmínky](https://github.com/msintuneappsdk/intune-a
 
 ## <a name="support"></a>Support
 
+Dokončili jste základní kroky pro začlenění komponenty do aplikace. Teď můžete postupovat podle kroků, které jsou součástí ukázkové aplikace Xamarin pro Android. Nabízíme dvě ukázky, jednu pro Xamarin.Forms a druhou pro Android.
+
+## <a name="requiring-intune-app-protection-policies-in-order-to-use-your-xamarin-based-android-lob-app-optional"></a>Vyžadování zásad ochrany aplikací Intune k tomu, aby bylo možné použít obchodní aplikaci pro Android, která je založená na Xamarinu (volitelné) 
+
+Následující část obsahuje postup, který zajistí, aby obchodní aplikace pro Android, které jsou založené na Xamarinu, mohli na svém zařízení používat jenom uživatelé s ochranou Intune. 
+
+### <a name="general-requirements"></a>Obecné požadavky
+* Tým pro sadu Intune SDK bude vyžadovat ID vaší aplikace. Tento údaj najdete na portálu [Azure Portal](https://portal.azure.com/) v části **Všechny aplikace** ve sloupci **ID aplikace**. Vhodným způsobem, jak kontaktovat tým pro sadu Intune SDK, je odeslání e-mailu na adresu msintuneappsdk@microsoft.com.
+     
+### <a name="working-with-the-intune-sdk"></a>Práce se sadou Intune SDK
+Tyto pokyny se týkají všech aplikací pro Android a Xamarin, u kterých chcete při použití na zařízení koncového uživatele vyžadovat zásady ochrany aplikací Intune.
+
+1. Nakonfigurujte ADAL pomocí postupu, který je uvedený v [příručce Intune SDK pro Android](https://docs.microsoft.com/en-us/intune/app-sdk-android#configure-azure-active-directory-authentication-library-adal).
+> [!NOTE] 
+> Termín „ID klienta“ je shodný s termínem „ID aplikace“ z portálu Azure Portal, který se váže na vaši aplikaci. 
+* Pokud chcete povolit jednotné přihlašování, použijte postup uvedený v části Obvyklé konfigurace ADAL v bodě 2.
+
+2. Povolte výchozí registraci tak, že do manifestu vložíte následující hodnotu: ```xml <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />```
+> [!NOTE] 
+> Musí jít o jedinou integraci MAM-WE v dané aplikaci. Pokud existují další pokusy o volání rozhraní API instance MAMEnrollmentManager, může docházet ke konfliktům.
+
+3. Povolte požadované zásady MAM tak, že do manifestu vložíte následující hodnotu: ```xml <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />```
+> [!NOTE] 
+> Tím vynutíte, aby si aplikace na zařízení stáhly Portál společnosti a před použitím provedly postup výchozí registrace.
+
+### <a name="working-with-adal"></a>Práce s ADAL
+Tyto pokyny se týkají požadavku pro aplikace .NET/Xamarin, u kterých chcete při použití na zařízení koncového uživatele vyžadovat zásady ochrany aplikací Intune.
+
+1. Proveďte všechny kroky, které jsou uvedené v dokumentaci pro ADAL v části o [zprostředkovaném ověřování pro Android](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/tree/dev/adal#brokered-authentication-for-android).
+> [!NOTE] 
+> Očekává se, že další vydaná verze .NET ADAL (3.17.4) bude obsahovat opravu, která zajistí, že toto bude fungovat.
+
 Pokud je vaše organizace stávajícím zákazníkem Intune, obraťte se na zástupce podpory Microsoft a požádejte ho o otevření lístku podpory a vytvoření problému na [stránce problémů s Githubem](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues), abychom vám mohli co nejrychleji pomoci. 
+

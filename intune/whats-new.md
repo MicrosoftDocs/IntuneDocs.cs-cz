@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/29/2018
+ms.date: 07/05/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 /ms.custom: intune-azure
-ms.openlocfilehash: 229c97723c5774b6823699c7d0b0bc9f9b194690
-ms.sourcegitcommit: d786eb18147a12fbc8cb97a157467f88591f1bc5
+ms.openlocfilehash: e6d3640d63f16b80588860c3c36aba1a81ffbe09
+ms.sourcegitcommit: 8ea2ff0941219e72477d7ceaab40a0068e53d508
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37134016"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37927025"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -41,6 +41,97 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 ### Role-based access control
 
 -->   
+## <a name="week-of-july-2-2018"></a>Týden od 2. července 2018
+
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="additional-security-settings-for-windows-installer----2282430---"></a>Nastavení dalšího zabezpečení pro Instalační službu systému Windows <!-- 2282430 -->
+Můžete uživatelům umožnit ovládání instalace aplikací. Pokud je tato možnost povolená, instalace, které by se jinak kvůli narušení zabezpečení zastavily, budou moct pokračovat. Můžete Instalační službu systému Windows nastavit tak, aby při instalaci libovolné aplikace do systému používala zvýšenou úroveň oprávnění. Dále můžete povolit, aby se položky WIP (Windows Information Protection) indexovaly a aby se metadata o nich ukládala do nešifrovaného umístění. Pokud je tato zásada zakázaná, chráněné položky WIP se neindexují a ve výsledcích v Cortaně nebo v Průzkumníkovi souborů se nezobrazují. Funkčnost těchto možností je ve výchozím nastavení zakázaná. 
+
+#### <a name="monitor-ios--app-configuration-status-per-device----880037---"></a>Monitorování stavu konfigurace aplikací pro iOS podle zařízení <!-- 880037 -->
+Jako správce Microsoft Intune můžete monitorovat stav konfigurace aplikací pro iOS pro každé spravované zařízení. V části **Microsoft Intune** na portálu Azure Portal vyberte **Zařízení** > **Všechna zařízení**. V seznamu spravovaných zařízení vyberte konkrétní zařízení a zobrazte tak okno pro toto zařízení. V okně zařízení vyberte **Konfigurace aplikace**.
+
+#### <a name="access-actions-for-app-protection-policies----1483510---"></a>Akce přístupu pro zásady ochrany aplikací <!-- 1483510 -->
+Můžete nakonfigurovat zásady ochrany aplikací tak, aby mohly explicitně vymazat, blokovat nebo upozornit zařízení, která zásady nedodržují. Akce *vymazání* odebere ze zařízení podniková data vaší společnosti. Pokud dojde k vymazání, je uživatel zařízení informován o důvodu vymazání a o postupu nápravy. U některých nastavení, jako je například minimální verze operačního systému, bude možné použít více akcí, třeba blokování a vymazání. Upozorňujeme, že tyto akce se aktivují při spuštění aplikace.
+
+#### <a name="selective-wipe-of-organizations-app-data----1507030---"></a>Selektivní vymazání dat aplikací organizace <!-- 1507030 -->
+Správci můžou nakonfigurovat selektivní vymazání dat organizace jako novou akci pro případ, že nebudou splněné podmínky nastavení Zásad ochrany aplikací (APP).  Tato funkce umožní správcům automaticky chránit a odebírat citlivá data organizace z aplikací na základě předem nakonfigurovaných kritérií.
+
+#### <a name="revoking-an-ios-app-purchased-through-vpp----1777384---"></a>Odvolání aplikace pro iOS zakoupené přes VPP <!-- 1777384 -->
+Jako správce Microsoft Intune můžete odvolat všechny licence pro vybrané aplikace pro iOS zakoupené přes Volume Purchase Program (VPP). Uživatele můžete upozornit, že už aplikaci pro licencovaného uživatele nemají přiřazenou. Odvoláním licence aplikace se příslušná aplikace VPP neodinstaluje ze zařízení. Pokud chcete odinstalovat aplikaci VPP, musíte nastavit akci přiřazení na **Odinstalovat**. Počet uvolněných licencí se v Intune projeví v uzlu **Licencované aplikace** v úloze **Aplikace**. Další informace týkající se aplikací VPP pro iOS najdete v tématu [o správě aplikací pro iOS zakoupených přes Volume Purchase Program v Microsoft Intune](vpp-apps-ios.md).
+
+#### <a name="updates-to-out-of-compliance-messages-in-company-portal-app----1832222---"></a>Aktualizace zpráv o nedodržování předpisů v aplikaci Portál společnosti <!-- 1832222 -->
+Revidovali jsme zprávy, které se zobrazují uživatelům zařízení, když zařízení nedodržuje předpisy. Zprávy si zachovávají svůj původní význam, ale jsou aktualizované tak, aby byly lépe srozumitelné a méně technické. Aktualizovali jsme také odkazy na dokumentaci a postupy pro odstranění problémů.
+Následující texty „Před“ a „Po“ jsou jedním z příkladů vylepšení zpráv, kterých si můžete všimnout:
+- **Před**: *Toto zařízení nekontaktovalo službu Intune v zadaném časovém období vyžadovaném vaším správcem IT. Pokud chcete tento problém vyřešit, otevřete prosím aplikaci Portál společnosti na svém zařízení a klikněte na tlačítko Zkontrolovat dodržování předpisů.*
+- **Po**: *Vaše zařízení se už nějakou dobu neohlásilo organizaci. Pokud chcete znovu navázat spojení, otevřete na zařízení aplikaci Portál společnosti a pro dané zařízení klepněte na Zkontrolovat nastavení.*
+
+#### <a name="revoke-ios-vpp-app-license----1863797---"></a>Odvolání licence aplikace VPP pro iOS <!-- 1863797 -->
+Jako správce můžete uvolnit licenci aplikace VPP pro iOS přiřazenou uživateli nebo zařízení. Licenci aplikace budete moct uvolnit také odinstalováním aplikace VPP pro iOS. Před odinstalací aplikace je potřeba odebrat uživatele nebo zařízení ze skupiny, na kterou daná aplikace cílí. Odebráním uživatele nebo zařízení z příslušné skupiny se vyhnete opětovné instalaci této aplikace. Po dokončení těchto kroků můžete licenci aplikace přiřadit dalšímu uživateli nebo zařízení. Další informace o licencích aplikací VPP pro iOS najdete v tématu [o správě aplikací pro iOS zakoupených přes Volume Purchase Program v Microsoft Intune](vpp-apps-ios.md).
+
+#### <a name="line-of-business-lob-app-support-for-macos----1895847---"></a>Podpora obchodních aplikací (LOB) pro macOS <!-- 1895847 -->
+Microsoft Intune umožňuje nasazovat obchodní aplikace pro macOS jako **povinné** nebo **k dispozici s registrací**. Koncoví uživatelé můžou aplikace nasazovat jako **povinné** prostřednictvím Portálu společnosti pro macOS nebo [webu Portál společnosti](https://portal.manage.microsoft.com).
+
+### <a name="device-configuration"></a>Konfigurace zařízení
+
+#### <a name="select-device-categories-by-using-the-access-work-or-school-settings----1058963-eenotready---"></a>Výběr kategorií zařízení pomocí nastavení Přístup do práce nebo do školy <!-- 1058963 eenotready --> 
+Pokud jste povolili [mapování skupin zařízení](https://docs.microsoft.com/en-us/intune/device-group-mapping), uživatelům s Windows 10 se teď po registraci prostřednictvím tlačítka **Připojit** v **Nastavení** > **Účty** > **Přístup do práce nebo do školy** zobrazí výzva k výběru kategorie zařízení. 
+
+#### <a name="use-samaccountname-as-the-account-username-for-email-profiles----1500307---"></a>Použití atributu sAMAccountName jako uživatelského jména účtu pro e-mailové profily <!-- 1500307 -->
+Můžete používat místní **sAMAccountName** jako uživatelské jméno účtu pro e-mailové profily v Androidu, iOSu a Windows 10. Můžete také získat doménu z atributu `domain` nebo `ntdomain` v Azure Active Directory (Azure AD). Nebo budete moct zadat vlastní statickou doménu.
+
+Pokud chcete tuto funkci používat, musíte atribut `sAMAccountName` synchronizovat z místního prostředí Active Directory do Azure AD.
+
+Platí pro [Android](email-settings-android.md), [iOS](email-settings-ios.md), [Windows 10 a novější](email-settings-windows-10.md).
+
+#### <a name="see-device-configuration-profiles-in-conflict----1556983---"></a>Zobrazení konfliktních konfiguračních profilů zařízení <!-- 1556983 -->
+V části **Konfigurace zařízení** se zobrazuje seznam existujících profilů. S touto aktualizací se přidá nový sloupec, který bude poskytovat podrobné informace o profilech, u kterých došlo ke konfliktu. Výběrem řádku s konfliktem můžete zobrazit nastavení a profil, u kterého se konflikt vyskytl. 
+
+Přečtěte si další informace o [správě konfiguračních profilů](device-profile-monitor.md#view-conflicts).
+
+#### <a name="new-status-for-devices-in-device-compliance----2308882---"></a>Nové stavy pro zařízení na stránce Dodržování předpisů zařízením <!-- 2308882 -->
+Na stránku **Dodržování předpisů zařízením** > **Zásady** > vyberte zásadu > **Přehled** jsou přidané následující nové stavy:
+- Úspěšné
+- Chyba
+- Konflikt
+- Čeká se na zadání
+- Nepoužitelné 
+
+Také se zobrazí obrázek, který ukazuje počet zařízení s jinou platformou. Když se třeba díváte na profil iOSu, na nové dlaždici se zobrazí počet zařízení s jiným systémem než iOS, která jsou také přiřazená k tomuto profilu. Viz [Zásady dodržování předpisů zařízením](compliance-policy-monitor.md#view-status-of-device-policies).
+
+#### <a name="device-compliance-supports-3rd-party-anti-virus-solutions----2325484---"></a>Dodržování předpisů zařízením podporuje antivirová řešení jiných výrobců <!-- 2325484 -->
+Při vytváření zásad dodržování předpisů zařízením (**Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu** > **Platforma: Windows 10 nebo novější** > **Nastavení** > **Zabezpečení systému**) jsou dostupné nové možnosti **[Zabezpečení zařízení](compliance-policy-create-windows.md#windows-10-and-later-policy-settings)**: 
+- **Antivirus:** Když je tato možnost nastavená na **Vyžadovat**, můžete dodržování předpisů kontrolovat pomocí antivirových řešení, která jsou registrovaná Centrem zabezpečení systému Windows, jako je Symantec nebo Windows Defender. 
+- **Antispyware:** Když je tato možnost nastavená na **Vyžadovat**, můžete dodržování předpisů kontrolovat pomocí antispywarových řešení, která jsou registrovaná Centrem zabezpečení systému Windows, jako je Symantec nebo Windows Defender. 
+
+Platí pro: Windows 10 a novější 
+
+### <a name="device-enrollment"></a>Registrace zařízení
+
+####  <a name="devices-without-profiles-column-in-the-list-of-enrollment-program-tokens----1853904---"></a>Sloupec Zařízení bez profilů v seznamu tokenů programu registrace <!-- 1853904 -->
+V seznamu tokenů programu registrace se nachází nový sloupec, který zobrazuje počet zařízení bez přiřazeného profilu. Pomáhá správcům při přiřazování profilů těmto zařízením před jejich přidělením uživatelům. Pokud chcete tento nový sloupec zobrazit, přejděte na **Registrace zařízení** > **Registrace Apple** > **Tokeny programu registrace**.
+
+### <a name="device-management"></a>Správa zařízení
+
+#### <a name="google-name-changes-for-android-for-work-and-play-for-work---842873---"></a>Změny názvů Android for Work a Play for Work společnosti Google <!--842873 -->
+Intune aktualizoval terminologii „Android for Work“ tak, aby odrážela změny brandingu společnosti Google. Termíny „Android for Work“ a „Play for Work“ se už nepoužívají. V závislosti na kontextu se používá jiná terminologie:
+- Termín „Android Enterprise“ označuje celkovou moderní sadu správy Androidu.
+- Termín „Pracovní profil“ nebo „Vlastník profilu“ označuje vlastní zařízení uživatelů (BYOD) spravovaná pomocí pracovních profilů.
+- Termín „Spravovaný obchod Google Play“ označuje Google App Store.
+
+#### <a name="rules-for-removing-devices----1609459---"></a>Pravidla odebírání zařízení <!-- 1609459 -->
+Jsou k dispozici nová pravidla, která vám umožňují automaticky odebrat zařízení, která se nastavený počet dnů neohlásila. Pokud chcete nové pravidlo zobrazit, přejděte do podokna **Intune** a vyberte **Zařízení** a **Pravidla čištění zařízení**.
+
+#### <a name="corporate-owned-single-cosu-use-support-for-android-devices----1630973---"></a>Podpora zařízení s Androidem ve vlastnictví firmy, pro použití s jednou aplikací (COSU) <!-- 1630973 -->
+
+Intune teď podporuje zamykatelná zařízení s beznabídkovým režimem Androidu a s vysokou úrovní správy. To správcům umožní další uzamčení použití zařízení na jednu aplikaci nebo malou sadu aplikací a zabrání uživatelům povolit na zařízení jiné aplikace nebo na něm provádět jiné akce. Pokud chcete nastavit beznabídkový režim Androidu, přejděte do Intune > **Registrace zařízení** > **Registrace Androidu** > **Beznabídkový režim a registrace zařízení úloh**. Další informace najdete v článku o [nastavení registrace zařízení s beznabídkovým režimem Androidu Enterprise](android-kiosk-enroll.md).
+
+#### <a name="per-row-review-of-duplicate-corporate-device-identifiers-uploaded----2203794--"></a>Kontrola nahraných duplicitních identifikátorů firemních (podnikových) zařízení po řádcích <!-- 2203794-->
+Při nahrávání firemních ID teď Intune poskytuje seznam duplicit a nabídne možnost nahradit nebo ponechat existující informace. Sestava se zobrazí, pokud vzniknou duplicity, když zvolíte **Registrace zařízení** > **Identifikátory podnikových zařízení** > **Přidat identifikátory**. 
+
+#### <a name="manually-add-corporate-device-identifiers----2203803---"></a>Ruční přidání identifikátorů firemních (podnikových) zařízení <!-- 2203803 -->
+Teď je možné přidat ID podnikových zařízení ručně. Zvolte **Registrace zařízení** > **Identifikátory podnikových zařízení** > **Přidat**. 
+
 ## <a name="week-of-june-25-2018"></a>Týden od 25. června 2018
 
 ### <a name="pradeo---new-mobile-threat-defense-partner----1169249---"></a>Pradeo – nový partner ochrany před mobilními hrozbami <!-- 1169249 -->
@@ -340,8 +431,7 @@ Když vytváříte nový profil VPN pro iOS, jsou teď k dispozici dvě možnost
 Verze 1.3 a 1.4 portálu společnosti macOS neregistrovaly zařízení Jamf do Intune úspěšně. Verze 1.4.2 portálu macOS tento problém řeší.
 
 
-## <a name="week-of-april-9-2018"></a>Týden od 9. dubna 2018
-
+## <a name="week-of-april-9-2018"></a>Týden od 9. dubna 2018  
 #### <a name="updated-help-experience-in-company-portal-app-for-android----1631531---"></a>Aktualizované prostředí nápovědy aplikace Portál společnosti pro Android <!-- 1631531 -->
 
 Aktualizovali jsme prostředí nápovědy v aplikaci Portál společnosti pro Android, aby bylo v souladu s osvědčenými postupy pro platformu Android. Když teď dojde k potížím s aplikací, může uživatel klepnout na **Nabídka** > **Nápověda** a:
@@ -557,10 +647,10 @@ V rámci naší snahy poskytnout koncovým uživatelům větší kontrolu nad je
 
 ## <a name="week-of-march-19-2018"></a>Týden od 19. března 2018
 
-### <a name="export-all-devices-into-csv-files-in-ie-edge-or-chrome----2258071---"></a>Export všech zařízení do souborů CSV v Internet Exploreru, Microsoft Edge a Chromu <!-- 2258071 -->
+### <a name="export-all-devices-into-csv-files-in-ie-edge-or-chrome----2258071---"></a>Export všech zařízení do souborů CSV v Internet Exploreru, Edge a Chromu <!-- 2258071 -->
 V části **Zařízení** > **Všechna zařízení** můžete **exportovat** zařízení do seznamu ve formátu CSV. Uživatelé Internet Exploreru s více než 10 000 zařízeními můžou zařízení úspěšně vyexportovat do více souborů. Každý z nich může obsahovat až 10 000 zařízení.
 
-Uživatelé prohlížečů Microsoft Edge a Chrome s více než 30 000 zařízeními můžou zařízení úspěšně vyexportovat do více souborů. Každý z nich může obsahovat až 30 000 zařízení.
+Uživatelé prohlížečů Edge a Chrome s více než 30 000 zařízeními můžou zařízení úspěšně vyexportovat do více souborů. Každý z nich může obsahovat až 30 000 zařízení.
 
 V tématu [Správa zařízení](device-management.md) se dozvíte podrobnosti o tom, co můžete se spravovanými zařízeními dělat.
 
@@ -929,6 +1019,25 @@ V Intune můžete zadat odepřené aplikace. Pokud je aplikace zakázaná, má z
 
 ## <a name="notices"></a>Sdělení
 
+### <a name="plan-for-change-intune-moving-to-support-ios-10-and-later-in-september----2454656---"></a>Plánovaná změna: Intune v září přechází na podporu iOS 10 a novějších verzí <!-- 2454656 -->
+Očekává se, že Apple v září vydá iOS 12. Krátce po jeho vydání přejde registrace Intune, Portál společnosti a spravovaný prohlížeč na podporu iOS 10 a novějších verzí.  
+
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?  
+Mobilní aplikace Office 365 jsou v iOS 10 a novějších verzích podporované, takže možná jste už svůj operační systém nebo zařízení upgradovali. V tom případě se vás tento přechod nijak nedotkne.  
+
+Pokud ale máte některé z níže uvedených zařízení nebo chcete některé z těchto zařízení zaregistrovat, mějte na paměti, že tato zařízení podporují jenom iOS 9 a dřívější verze.  Pokud chcete dále používat Portál společnosti Intune, je nutné tato zařízení do září upgradovat na zařízení podporující iOS 10 nebo novější verze:  
+
+* iPhone 4S  
+* iPod Touch  
+* iPad 2  
+* iPad (3. generace)  
+* iPad Mini (1. generace)  
+
+Od července se bude v zařízeních zaregistrovaných do MDM, která používají iOS 9 a Portál společnosti, zobrazovat výzva k upgradu jejich operačního systému nebo daného zařízení. Pokud používáte zásady ochrany aplikací, můžete také nastavit podmínku Vyžadovat minimální verzi operačního systému iOS (jenom upozornění).  
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?   
+Vyhledejte zařízení nebo uživatele ve vaší organizaci, kterých se tato změna dotkne. V Intune na portálu Azure Portal přejděte na Zařízení > Všechna zařízení a proveďte filtrování podle operačního systému.  Kliknutím na Sloupce zobrazíte podrobnosti, například verzi operačního systému. Požádejte vaše uživatele, aby do si září upgradovali zařízení na podporovanou verzi operačního systému.  
+
 ### <a name="plan-for-change-intune-moving-to-tls-12"></a>Plánovaná změna: Přechod Intune na TLS 1.2
 Od 31. října 2018 bude Intune podporovat protokol TLS (Transport Layer Security) ve verzi 1.2, který zajistí nejlepší šifrování ve své třídě, aby byla naše služba bezpečnější a v souladu s jinými službami Microsoftu, jako je Microsoft Office 365. Office tuto změnu oznámil v MC128929.
 
@@ -982,9 +1091,9 @@ Pomocí nového nastavení možnosti místního zabezpečení zařízení budete
 V dubnu představíme nový web Portál společnosti, který bude mít aktualizované uživatelské prostředí, zjednodušené pracovní postupy a lepší přístupnost. Bude zahrnovat rozšíření orientované na zákazníka, jako je sdílení aplikací a vylepšený celkový výkon, která vám přinese lepší uživatelský zážitek.
 Na základě zpětné vazby od zákazníků, jako jste vy, jsme přidali několik nových funkcí, které výrazně zlepší stávající funkčnost a použitelnost:
 
--   Vylepšení uživatelského rozhraní na celém webu
--   Možnost sdílet přímé odkazy na aplikace
-- Vylepšený výkon u velkých katalogů aplikací
+* Vylepšení uživatelského rozhraní na celém webu
+* Možnost sdílet přímé odkazy na aplikace
+* Vylepšený výkon u velkých katalogů aplikací
 
 V rámci přípravy na tuto změnu nemusíte provádět žádnou akci. Jakmile bude aktualizovaný web Portál společnosti pro vás dostupný, dáme vám vědět. Je však možné, že nakonec budete muset dokumentaci pro koncové uživatele doplnit o aktualizované snímky obrazovky. Nezapomeňte, že možná bude nutné také aktualizovat dokumentaci pro aplikaci Portál společnosti v iOSu, protože web využívá část **Aplikace** v aplikaci pro iOS. Ukázkový obrázek těchto změn najdete na stránce s [novinkami v uživatelském rozhraní aplikace](whats-new-app-ui.md).
 
