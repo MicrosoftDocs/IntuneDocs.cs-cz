@@ -15,12 +15,12 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9b17cb50ead094962196bb030c3a18e4119c6904
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 7eee5baebb8373488999a5e75db5288e483379e5
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31026325"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905814"
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
@@ -38,15 +38,15 @@ Mezi konkrétní omezení registrace, která můžete vytvořit, patří:
 
 - Maximální počet zaregistrovaných zařízení
 - Platformy zařízení, které se mohou zaregistrovat:
-  - Android.
-  - Android for Work
+  - Android
+  - Pracovní profil Androidu
   - iOS
   - macOS
   - Windows
-- Verze operačního systému platformy pro iOS, Android, Android for Work a systém Windows. (Je možné použít jenom verze Windows 10. Pokud jsou povolená Windows 8.1., nechejte prázdné.)
+- Verze operačního systému platformy pro iOS, Android, pracovní profil Androidu a Windows. (Je možné použít jenom verze Windows 10. Pokud jsou povolená Windows 8.1., nechejte prázdné.)
   - Minimální verze
   - Maximální verze
-- Omezení soukromých zařízení (jenom iOS, Android, Android for Work a macOS)
+- Omezení soukromých zařízení (jen iOS, Android, pracovní profil Androidu a macOS)
 
 ## <a name="default-restrictions"></a>Výchozí omezení
 
@@ -78,7 +78,7 @@ Nastavení omezení typu zařízení můžete změnit podle následujícího pos
 5. V části názvu omezení (u výchozího omezení se jedná o **Všichni uživatelé**) vyberte **Platformy**. U každé uvedené platformy zvolte **Povolit** nebo **Blokovat**.
 6. Vyberte **Uložit**.
 7. V části názvu omezení (u výchozího omezení se jedná o **Všichni uživatelé**) vyberte **Konfigurace platformy**. Pak vyberte minimální a maximální **Verze** pro uvedené platformy. Podporované verze zahrnují:
-    - Android a Android for Work podporují major.minor.rev.build.
+    - Pracovní profil Androidu podporuje major.minor.rev.build.
     - Systém iOS podporuje major.minor.rev.
     - Systém Windows podporuje jenom major.minor.rev.build pro Windows 10.
   Verze operačního systému se nevztahují na zařízení Apple registrovaná v Programu registrace zařízení, pomocí Apple School Manageru ani v aplikaci Apple Configurator.
@@ -88,9 +88,9 @@ Nastavení omezení typu zařízení můžete změnit podle následujícího pos
 
 
 >[!NOTE]
->- Když zablokujete registraci zařízení s Androidem v osobním vlastnictví, stále půjde zaregistrovat zařízení v osobním vlastnictví, která používají verzi Android for Work.
->- Ve výchozím nastavení jsou nastavení zařízení s Androidem for Work stejná jako nastavení zařízení s Androidem. Po změně nastavení Androidu for Work tomu už tak nebude.
->- Pokud zablokujete registraci Androidu for Work u osobních zařízení, budou se jako Android for Work moct zaregistrovat jenom firemní zařízení s Androidem.
+>- Když zablokujete registraci osobních zařízení s Androidem, stále půjde zaregistrovat osobní zařízení s pracovním profilem Androidu.
+>- Nastavení zařízení s pracovním profilem Androidu jsou stejná jako nastavení zařízení s Androidem. Po změně nastavení pracovního profilu Androidu tomu už tak nebude.
+>- Pokud zablokujete registraci pracovního profilu Androidu u osobních zařízení, budou se jako pracovní profil Androidu moci zaregistrovat jen firemní zařízení s Androidem.
 
 ## <a name="set-device-limit-restrictions"></a>Nastavení omezení limitů počtu zařízení
 

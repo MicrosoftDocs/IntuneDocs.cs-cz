@@ -15,12 +15,12 @@ ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: dougeby
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f468ff8115fde79bf92825f06c37ff8affabf125
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 938bcd352294a9875aaa3eef717ef3857211961a
+ms.sourcegitcommit: abc3d51923e55e8779a5d84f2fcab60d0a0d8645
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31033365"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37434262"
 ---
 # <a name="supported-operating-systems-and-browsers"></a>Podporované operační systémy a prohlížeče
 
@@ -28,7 +28,7 @@ ms.locfileid: "31033365"
 
 Před nastavením Microsoft Intune zkontrolujte podporované operační systémy a prohlížeče.
 
-Nápovědu k instalaci Intune na zařízení najdete v článku věnovanému [práci pomocí spravovaných zařízení](/intune-user-help/company-portal-frequently-asked-questions). Měli byste se také seznámit s [využitím šířky pásma Intune](network-bandwidth-use.md) ([klasický portál](/intune-classic/get-started/network-bandwidth-use)).
+Pokud potřebujete pomoc s instalací Intune do zařízení, přečtěte si o [práci pomocí spravovaných zařízení](/intune-user-help/company-portal-frequently-asked-questions) a [využití šířka pásma Intune](network-bandwidth-use.md) ([klasický portál](/intune-classic/get-started/network-bandwidth-use)).
 
 ## <a name="intune-supported-operating-systems"></a>Operační systémy podporované službou Intune
 
@@ -38,12 +38,12 @@ Můžete spravovat zařízení, která používají následující operační sy
 
 ### <a name="supported-samsung-knox-standard-devices"></a>Podporovaná zařízení Samsung Knox Standard
 
-Během registrace MDM se aplikace Portál společnosti pokusí aktivovat Samsung Knox jenom v případě, že je zařízení uvedené v [seznamu podporovaných zařízení Knox](https://www.samsungknox.com/knox-supported-devices/knox-workspace). To pomáhá předejít chybám aktivace Knox, které brání v registraci MDM. Zařízení, která nepodporují aktivaci Samsung Knox, se zaregistrují jako standardní zařízení s Androidem. Některá čísla modelů zařízení Samsung mohou podporovat Knox, některá nemusí. Než zařízení Samsung koupíte a nasadíte, ověřte si u prodejce, jestli je kompatibilní se systémem Knox.
+Aby při aktivaci Knox nedošlo k chybám, které brání registraci ke správě mobilních zařízení, pokusí se aplikace Portál společnosti o aktivaci Samsung Knox během registrace ke správě mobilních zařízení, jen pokud je zařízení uvedené v [seznamu podporovaných zařízení Knox](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Zařízení, která nepodporují aktivaci Samsung Knox, se zaregistrují jako standardní zařízení s Androidem. Některá čísla modelů zařízení Samsung mohou podporovat Knox, některá nemusí. Než zařízení Samsung koupíte a nasadíte, ověřte si u prodejce, jestli je kompatibilní se systémem Knox.
 
 > [!NOTE]
 > Registrace zařízení Samsung Knox může vyžadovat, abyste [povolili přístup k serverům Samsung](https://support.samsungknox.com/hc/articles/115013833108-Our-corporate-devices-are-behind-a-firewall-How-do-I-enable-Knox-Workspace-devices-to-contact-Samsung-servers). 
 
-Následující modely zařízení Samsung nepodporují Knox a aplikace Portál společnosti pro Android je nezaregistruje jako nativní zařízení s Androidem:
+Modely zařízení Samsung v následujícím seznamu nepodporují Knox. Aplikace Portál společnosti pro Android je zaregistruje jako nativní zařízení s Androidem:
 
 | **Název zařízení** | **Číslo modelu zařízení** |
 | --- | --- |
@@ -103,7 +103,7 @@ Portály podporují následující prohlížeče:
 - Microsoft Internet Explorer 11
 - Safari (nejnovější verze, jen Mac)
 - Chrome (nejnovější verze)
-- Mozilla Firefox se zapnutým doplňkem Silverlight [Další informace (verze starší než verze 52)](https://go.microsoft.com/fwlink/?linkid=836872)
+- Firefox (nejnovější verze)
 
 
 

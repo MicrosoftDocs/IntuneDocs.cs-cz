@@ -14,12 +14,12 @@ ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 89f8ddc105787bc7ff4f7cfc1e226d28589ecbbf
-ms.sourcegitcommit: 9536300a6211bac4bdc733593a40c1ae47611de3
+ms.openlocfilehash: 9329a57ee7d47cb99a7c87326bb043c0a04c6313
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2018
-ms.locfileid: "31771801"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905202"
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Konfigurace profilu certifikátu pro zařízení v Microsoft Intune
 
@@ -43,7 +43,7 @@ Každý z těchto typů certifikátů má vlastní požadované součásti a po�
     - iOS 8.0 a novější
     - macOS 10.11 a novější
     - Android 4.0 a novější
-    - Android for Work
+    - Pracovní profil Androidu
     - Windows 8.1 a vyšší
     - Windows Phone 8.1 nebo novější
     - Windows 10 a novější
@@ -52,7 +52,7 @@ Každý z těchto typů certifikátů má vlastní požadované součásti a po�
 
    - iOS 8.0 a novější
    - Android 4.0 a novější
-   - Android for Work
+   - Pracovní profil Androidu
    - Windows 10 (Desktop a Mobile) a novější
 
    Profil certifikátu **SCEP** můžete použít jenom pro zařízení s těmito platformami:
@@ -95,7 +95,7 @@ Před vytvořením profilu certifikátu SCEP nebo PKCS je potřeba vytvořit pro
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení pro tento důvěryhodný certifikát. V současné době můžete pro nastavení certifikátů zvolit jednu z následujících platforem:
 
     - **Androidemem**
-    - **Android for Work**
+    - **Android Enterprise**
     - **iOS**
     - **macOS**
     - **Windows Phone 8.1**

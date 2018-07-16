@@ -1,11 +1,11 @@
 ---
 title: Zobrazení profilů zařízení v Microsoft Intune – Azure | Microsoft Docs
-description: Zobrazte si a spravujte podrobnosti konfiguračního profilu zařízení v Microsoft Intune a zobrazte si graf počtu zařízení přiřazených k profilu a zjistěte, která zařízení mají přiřazené nebo nasazené profily.
+description: Zobrazte a spravujte podrobnosti konfiguračního profilu zařízení v Microsoft Intune, prohlédněte si graf počtu zařízení přiřazených k profilu a zjistěte, která zařízení mají přiřazené nebo nasazené profily. Můžete také vyřešit problémy s profily, které mají konfliktní nastavení.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/23/2018
+ms.date: 06/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 9deaed87-fb4b-4689-ba88-067bc61686d7
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bffb6832200379fca0221d8718afdebe06163980
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: dda53c7b21a743136bf1b16cc7bcf864c7b900fd
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744784"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905916"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Sledování profilů zařízení v Microsoft Intune
 
@@ -33,7 +33,7 @@ Intune obsahuje na portálu Azure Portal některé funkce, které pomáhají sle
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 3. Vyberte **Konfigurace zařízení** > **Profily**.
 
-Uvedené jsou všechny existující profily včetně podrobností jako platforma nebo jestli je profil přiřazený k nějakým zařízením.
+Vypíšou se všechny existující profily včetně podrobností jako je platforma, a zobrazí se, jestli je profil přiřazený k nějakým zařízením.
 
 ## <a name="view-details-on-a-profile"></a>Zobrazení podrobností profilu
 
@@ -68,6 +68,16 @@ Po vytvoření profilu zařízení Intune nabízí grafy. Tyto grafy zobrazují 
   - **Stav zařízení**: Jsou uvedená zařízení přiřazená k profilu a zobrazuje se, jestli je profil úspěšně nasazený. Můžete vybrat konkrétní zařízení a zjistit další podrobnosti, včetně nainstalovaných aplikací.
   - **Stav uživatele**: Uvádí uživatelská jména se zařízeními, na která má tento profil vliv, a jestli je profil úspěšně nasazený. Můžete vybrat konkrétního uživatele a zjistit další podrobnosti.
   - **Stav podle nastavení**: Filtruje výstup tím, že zobrazí jednotlivá nastavení v rámci profilu, a zobrazuje, jestli je toto nastavení úspěšně použité.
+
+## <a name="view-conflicts"></a>Zobrazení konfliktů
+
+V **Zařízení** > **Všechna zařízení** se zobrazují všechna nastavení, která způsobují konflikt. Při existujícím konfliktu se zobrazují také všechny konfigurační profily, které toto nastavení obsahují. Správci můžou tuto funkci použít k vyřešení všech nesrovnalostí v profilech.
+
+1. V Intune vyberte **Zařízení** > **Všechna zařízení** > vyberte existující zařízení v seznamu. Koncový uživatel může název zařízení získat z aplikace Portál společnosti.
+2. Vyberte **Konfigurace zařízení**. Zobrazí se všechny zásady konfigurace uplatněné na dané zařízení.
+3. Vyberte zásadu. Zobrazí se všechna nastavení této zásady, která se uplatňují na dané zařízení. Pokud je zařízení v **konfliktním** stavu, vyberte tento řádek. V novém okně uvidíte všechny profily a názvy profilů obsahujících nastavení, které tento konflikt způsobuje.
+
+Teď, když znáte konfliktní nastavení a zásady, které toto nastavení obsahují, by mělo být snadnější konflikt vyřešit. 
 
 ## <a name="next-steps"></a>Další kroky
 [Přiřazení profilů uživatelů a zařízení](device-profile-assign.md)  

@@ -1,6 +1,6 @@
 ---
-title: Vytvoření zásad dodržování předpisů pro Android for Work v Microsoft Intune – Azure | Microsoft Docs
-description: Vytvářejte nebo konfigurujte zásady dodržování předpisů zařízením služby Microsoft Intune pro zařízení s Androidem for Work. Rozhodněte se povolit zařízení s jailbreakem, nastavte přijatelnou úroveň hrozby, zkontrolujte Google Play, zadejte minimální a maximální verzi operačního systému, zvolte si požadavky na heslo a povolte bokem instalované aplikace.
+title: Vytvoření zásad dodržování předpisů pro pracovní profil Androidu v Microsoft Intune – Azure | Microsoft Docs
+description: Vytvářejte nebo konfigurujte zásady dodržování předpisů zařízením služby Microsoft Intune pro zařízení s pracovním profilem Androidu. Rozhodněte se povolit zařízení s jailbreakem, nastavte přijatelnou úroveň hrozby, zkontrolujte Google Play, zadejte minimální a maximální verzi operačního systému, zvolte si požadavky na heslo a povolte bokem instalované aplikace.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -14,24 +14,24 @@ ms.assetid: 9da89713-6306-4468-b211-57cfb4b51cc6
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c1d438aa7416b1629af7ab2b899afa06720e2b49
-ms.sourcegitcommit: 6a9830de768dd97a0e95b366fd5d2f93980cee05
+ms.openlocfilehash: dcd5dcc05470d8052e49354fe5d6516386ea4214
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34047981"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905083"
 ---
-# <a name="add-a-device-compliance-policy-for-android-for-work-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s Androidem for Work v Intune
+# <a name="add-a-device-compliance-policy-for-android-work-profile-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s pracovním profilem Androidu v Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Zásady dodržování předpisů Intune pro zařízení s Androidem for Work určují pravidla a nastavení, která musí tato zařízení splňovat, aby byla považována za dodržující předpisy. Pomocí těchto zásad s podmíněným přístupem můžete povolit nebo zablokovat přístup k prostředkům společnosti. Můžete také získat sestavy zařízení a provádět akce v případě nedodržování předpisů. Zásady dodržování předpisů zařízením pro různé platformy vytvoříte na portálu Intune Azure. Další informace o zásadách dodržování předpisů a případných požadavcích najdete v tématu [Začínáme s dodržováním předpisů](device-compliance-get-started.md).
+Zásady dodržování předpisů Intune pro zařízení s pracovním profilem Androidu určují pravidla a nastavení, která musí tato zařízení splňovat, aby byla považována za dodržující předpisy. Pomocí těchto zásad s podmíněným přístupem můžete povolit nebo zablokovat přístup k prostředkům společnosti. Můžete také získat sestavy zařízení a provádět akce v případě nedodržování předpisů. Zásady dodržování předpisů zařízením pro různé platformy vytvoříte na portálu Intune Azure. Další informace o zásadách dodržování předpisů a případných požadavcích najdete v tématu [Začínáme s dodržováním předpisů](device-compliance-get-started.md).
 
 Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení při použití zásad dodržování předpisů se zásadami podmíněného přístupu.
 
 --------------------------
 
-|**nastavení zásad**| **Android for Work** |
+|**nastavení zásad**| **Pracovní profil Androidu** |
 | --- | --- |
 | **Konfigurace kódu PIN nebo hesla** |  V karanténě |
 | **Šifrování zařízení** |  V karanténě |
@@ -51,7 +51,7 @@ Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení 
 ## <a name="create-a-device-compliance-policy"></a>Vytváření zásad dodržování předpisů pro zařízení
 
 [!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
-5. U možnosti **Platforma** vyberte **Android for Work**. Zvolte **Nastavení – Konfigurace** a zadejte nastavení **Stav zařízení**, **Vlastnosti zařízení** a **Zabezpečení systému**. Po dokončení zvolte **OK** a **Vytvořit**.
+5. V poli **Platforma** vyberte **Android Enterprise**. Zvolte **Nastavení – Konfigurace** a zadejte nastavení **Stav zařízení**, **Vlastnosti zařízení** a **Zabezpečení systému**. Po dokončení zvolte **OK** a **Vytvořit**.
 
 <!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant with this policy.
 5. In the **Actions for noncompliance** pane, choose **Add** to create a new action.  The action parameters pane allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
@@ -77,9 +77,9 @@ Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení 
 
 #### <a name="threat-scan-on-apps"></a>Kontrola ohrožení aplikací
 
-Na zařízeních s pracovními profily (Android for Work) je nastavení **Kontrola ohrožení aplikací** dostupné jako nastavení zásad konfigurace. Správci mohou povolit toto nastavení pro zařízení.
+Na zařízeních s pracovními profily Androidu je nastavení **Kontrola ohrožení aplikací** dostupné jako nastavení zásad konfigurace. Správci mohou povolit toto nastavení pro zařízení.
 
-Pokud vaše společnost používá pracovní profily Androidu, můžete nastavení **Kontrola ohrožení aplikací** povolit pro zaregistrovaná zařízení. Vytvořte profil zařízení a vyžadujte v něm toto nastavení zabezpečení systému. Další informace najdete v článku [Nastavení omezení pro zařízení s Androidem for Work v Intune](device-restrictions-android-for-work.md).
+Pokud vaše společnost používá pracovní profily Androidu, můžete nastavení **Kontrola ohrožení aplikací** povolit pro zaregistrovaná zařízení. Vytvořte profil zařízení a vyžadujte v něm toto nastavení zabezpečení systému. Další informace najdete v článku [Nastavení omezení pracovních zařízení v Intune](device-restrictions-android-for-work.md).
 
 ## <a name="device-property-settings"></a>Nastavení vlastností zařízení
 
@@ -106,13 +106,13 @@ Pokud vaše společnost používá pracovní profily Androidu, můžete nastaven
 
 ### <a name="encryption"></a>Šifrování
 
-- **Vyžadovat šifrování u mobilního zařízení:** Toto nastavení nemusíte konfigurovat, protože u zařízení s Androidem for Work je šifrování vynucené.
+- **Vyžadovat šifrování u mobilního zařízení**: Toto nastavení nemusíte konfigurovat, protože v zařízeních s pracovním profilem Androidu je šifrování vynucené.
 
 ### <a name="device-security"></a>Zabezpečení zařízení
 
-- **Blokovat aplikace z neznámých zdrojů:** Toto nastavení nemusíte konfigurovat, protože v zařízeních s Androidem for Work je instalace z neznámých zdrojů trvale zakázaná.
+- **Blokovat aplikace z neznámých zdrojů**: Toto nastavení nemusíte konfigurovat, protože v zařízeních s pracovním profilem Androidu je instalace z neznámých zdrojů trvale zakázaná.
 - **Integrita modulu runtime aplikace Portál společnosti**: Zkontroluje, jestli má aplikace Portál společnosti nainstalované výchozí prostředí modulu runtime, je správně podepsaná, není v režimu ladění a je nainstalovaná ze známého zdroje.
-- **Blokovat u zařízení ladění USB**: Toto nastavení nemusíte konfigurovat, protože ladění USB je na zařízeních s Androidem for Work už zakázané.
+- **Blokovat u zařízení ladění USB**: Toto nastavení nemusíte konfigurovat, protože v zařízeních s pracovním profilem Androidu je ladění USB už zakázané.
 - **Minimální úroveň opravy zabezpečení**: Vyberte nejstarší úroveň opravy zabezpečení, kterou může zařízení mít. Zařízení, která nejsou alespoň na této úrovni oprav, nebudou kompatibilní. Datum musí být zadáno ve formátu `YYYY-MM-DD`.
 
 ## <a name="assign-user-groups"></a>Přiřazení skupin uživatelů

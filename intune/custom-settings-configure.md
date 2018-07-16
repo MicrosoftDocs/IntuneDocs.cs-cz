@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ce7c263435f92a041b93dc5d34ffa912c6fa87fb
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: d917d2449e75b89db00d453b72940a93efb03321
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31021876"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37904998"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Vytvoření profilu s vlastním nastavením v Intune
 
@@ -39,7 +39,7 @@ Vlastní nastavení se konfigurují pro každou platformu jinak. Třeba k ovlád
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, na kterou chcete vlastní nastavení použít. Můžete vybrat kteroukoli z těchto platforem:
 
     - **Androidemem**
-    - **Android for Work**
+    - **Android Enterprise**
     - **iOS**
     - **macOS**
     - **Windows Phone 8.1**
@@ -55,7 +55,7 @@ Vlastní nastavení se konfigurují pro každou platformu jinak. Třeba k ovlád
     - [Nastavení Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
     - [Nastavení Windows 10](custom-settings-windows-10.md)
     - [Nastavení Windows Holographic for Business](custom-settings-windows-holographic.md)
-    - [Nastavení Androidu for Work](custom-settings-android-for-work.md)
+    - [Nastavení pracovního profilu Androidu](custom-settings-android-for-work.md)
 
 8. Až budete hotoví, vyberte **Vytvořit**.
 

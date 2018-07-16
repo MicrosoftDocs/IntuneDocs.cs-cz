@@ -15,12 +15,12 @@ ms.assetid: c59f6df5-3317-4dff-8f19-fdeec33faedf
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4a2afba3eafb32a06ff19e2cbbf3b87d27edccf0
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 1ec9a45ca09ddff5aa10cc7283444cf96c8153f6
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224659"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905406"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune
 
@@ -37,7 +37,7 @@ Při vyloučení skupin se v Intune nebere v úvahu přiřazení uživatelů k z
 >
 > V Intune máte v konzole k dispozici předem vytvořené skupiny **Všichni uživatelé** a **Všechna zařízení**. Skupiny mají integrované optimalizace, které vám usnadní práci. Důrazně doporučujeme, abyste pro cílení na všechny uživatele a zařízení používali tyto skupiny a nepoužívali skupiny Všichni uživatelé nebo Všechna zařízení, které byste sami vytvořili.  
 >
-> Android Enterprise (dříve označovaný jako Android for Work) zahrnutí a vyloučení skupin podporuje. K přiřazení aplikace Android Enterprise můžete použít integrované skupiny **Všichni uživatelé** a **Všechna zařízení**. 
+> Android Enterprise podporuje zahrnutí a vyloučení skupin. K přiřazení aplikace Android Enterprise můžete použít předdefinované skupiny **Všichni uživatelé** a **Všechna zařízení**. 
 
 
 ## <a name="include-and-exclude-groups-when-assigning-apps"></a>Zahrnutí a vyloučení skupin při přiřazování aplikací 

@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 13f93f9fcf813c2e86809d2cc20991d2fd635187
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 56ddf28bb9e81417b4b91bb18baaba14f07fbdd9
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31024613"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905049"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Konfigurace nastavení omezení zařízení v Microsoft Intune
 
@@ -56,7 +56,7 @@ Naučte se základy o profilech omezení zařízení a pak si přečtěte dalš�
     - [Nastavení Windows 10](device-restrictions-windows-10.md)
     - [Nastavení Windows 10 Team](device-restrictions-windows-10-teams.md)
     - [Nastavení Windows Holographic for Business](device-restrictions-windows-holographic.md)
-    - [Nastavení Androidu for Work](device-restrictions-android-for-work.md)
+    - [Nastavení pracovního profilu Androidu](device-restrictions-android-for-work.md)
 8. Až to budete mít, vraťte se na stránku **Vytvořit profil** a klikněte na **Vytvořit**.
 
 Profil se vytvoří a zobrazí se na stránce se seznamem profilů.

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3b67f285-229d-4a0f-ae34-0402a20b4518
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 45ab6434245c0dd412b2e9d23e394f72871a459a
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: ae114b9aec2794556a8162604a533c24c11bafba
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31829760"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905134"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>Vzdálené uzamčení zařízení přes Intune
 
@@ -31,12 +31,14 @@ Akce zařízení **Vzdálené uzamčení** uzamkne zařízení. Vlastník zaří
 **Vzdálené uzamčení** je podporované u těchto platforem:
 
 - Android
+- Zařízení s Androidem Enterprise v beznabídkovém režimu
+- Zařízení Android Enterprise s pracovním profilem
 - iOS
 - macOS
 - Windows 10 Mobile
 - Windows Phone 8.1 nebo novější
 
-**Vzdálené uzamčení** *není* podporované pro:
+**Vzdálené uzamčení** není podporované pro:
 - Stolní počítač s Windows 10
 
 > [!NOTE]

@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b71c004a165bd6d38cd1907eadc05ac20f27bd1a
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 15710f6115bb23dfe9ba899dfa01b38f315d00f0
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31834206"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905304"
 ---
 # <a name="how-to-configure-email-settings-in-microsoft-intune"></a>Jak nakonfigurovat nastavení e-mailu v Microsoft Intune
 
@@ -31,7 +31,7 @@ Na většině platforem se podporuje integrovaný poštovní klient. Většina e
 E-mailové profily můžete použít ke konfiguraci nativních e-mailových klientů na těchto typech zařízení:
 
 - Android Samsung Knox Standard 4.0 a novější
-- Android for Work
+- Zařízení s pracovním profilem Androidu
 - iOS 8.0 a novější
 - Windows Phone 8.1 a novější
 - Windows 10 (pro stolní počítače) a Windows 10 Mobile
@@ -48,7 +48,7 @@ Informace v tomto článku vás seznámí se základy konfigurace e-mailového p
 4. V podokně **Vytvořit profil** zadejte **název** a **popis** e-mailového profilu.
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete použít nastavení e-mailu. V současné době můžete pro nastavení e-mailu na zařízení zvolit jednu z následujících platforem:
     - **Android** (jenom Samsung Android Knox Standard)
-    - **Android for Work**
+    - **Android Enterprise**
     - **iOS**
     - **macOS**
     - **Windows Phone 8.1**
@@ -56,7 +56,7 @@ Informace v tomto článku vás seznámí se základy konfigurace e-mailového p
     - **Windows 10 a novější**
 6. V rozevíracím seznamu **Typ profilu** zvolte **E-mail**.
 7. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Podrobnosti o nastaveních na jednotlivých platformách najdete v následujících tématech:
-    - [Nastavení Androidu for Work a platformy Samsung Knox Standard](email-settings-android.md)
+    - [Nastavení pracovního profilu Androidu a Samsung Knox Standard](email-settings-android.md)
     - [Nastavení iOSu](email-settings-ios.md)
     - [Nastavení Windows Phone 8.1](email-settings-windows-phone-8-1.md)
     - [Nastavení Windows 10](email-settings-windows-10.md)
@@ -89,7 +89,7 @@ Pokud má už uživatel nakonfigurovaný e-mailový účet, pak výsledek přiř
 - **Windows:** Na základě názvu hostitele a e-mailové adresy se detekuje existující duplicitní e-mailový profil. Intune přepíše existující e-mailový profil vytvořený uživatelem.
 - **Android Samsung Knox Standard:** Na základě e-mailové adresy se zjistí přítomnost duplicitního e-mailového profilu, který se přepíše profilem Intune.
 Vzhledem k tomu, že Android nevyužívá k identifikaci profilu název hostitele, doporučujeme nevytvářet více e-mailových profilů pro použití se stejnou e-mailovou adresou na různých hostitelích, protože by se vzájemně přepisovaly.
-- **Android for Work:** Intune poskytuje dva e-mailové profily pro Android for Work – jeden pro každou z e-mailových aplikací Gmail a Nine Work. Tyto aplikace jsou dostupné v obchodě Google Play a můžete je nainstalovat do pracovního profilu zařízení, aby nedošlo k vytvoření duplicitních profilů. Obě aplikace podporují připojení k Exchangi. Pokud chcete umožnit připojení k e-mailu, nasaďte jednu z těchto e-mailových aplikací do zařízení uživatelů a pak vytvořte a nasaďte příslušný e-mailový profil. E-mailové aplikace, jako je Nine Work, nemusí být bezplatné. Přečtěte si podrobné informace o licencování aplikace nebo se v případě dotazů obraťte na společnost, která aplikaci vytvořila.
+- **Pracovní profily Androidu:** Intune poskytuje dva e-mailové profily pro pracovní profily Androidu, a sice pro e-mailové aplikace Gmail a Nine Work. Tyto aplikace jsou dostupné v obchodě Google Play a můžete je nainstalovat do pracovního profilu zařízení, aby nedošlo k vytvoření duplicitních profilů. Obě aplikace podporují připojení k Exchangi. Pokud chcete umožnit připojení k e-mailu, nasaďte jednu z těchto e-mailových aplikací do zařízení uživatelů a pak vytvořte a nasaďte příslušný e-mailový profil. E-mailové aplikace, jako je Nine Work, nemusí být bezplatné. Přečtěte si podrobné informace o licencování aplikace nebo se v případě dotazů obraťte na společnost, která aplikaci vytvořila.
 
 ### <a name="update-an-email-profile"></a>Aktualizace e-mailového profilu
 

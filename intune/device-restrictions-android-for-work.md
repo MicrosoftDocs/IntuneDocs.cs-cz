@@ -1,6 +1,6 @@
 ---
-title: Omezení zařízení pro Android for Work v Microsoft Intune – Azure | Microsoft Docs
-description: Na zařízeních s Androidem for Work můžete omezit některá nastavení v zařízení, včetně kopírování a vložení, zobrazování oznámení, oprávnění aplikací, sdílení dat, délky hesla, neúspěšných přihlášení, odemykání pomocí otisku prstu, opakovaného použití předchozích hesel a povolení sdílení pracovních kontaktů pomocí Bluetooth.
+title: Omezení zařízení pro pracovní profily Androidu v Microsoft Intune – Azure | Microsoft Docs
+description: Na zařízeních s pracovními profily Androidu můžete omezit některá nastavení včetně kopírování a vkládání, zobrazování oznámení, oprávnění aplikací, sdílení dat, délky hesla, neúspěšných přihlášení, odemykání pomocí otisku prstu, opakovaného použití hesel a povolení sdílení pracovních kontaktů přes Bluetooth.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -12,16 +12,16 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e1db0e98318c05c7a1a854ed1af77d9d9654cc38
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 34c66aabe8c094b67805bcf0eeae38dbbbbff627
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32046311"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905933"
 ---
 # <a name="work-device-restriction-settings-in-intune"></a>Nastavení omezení pracovních zařízení v Intune
 
-Tento článek uvádí nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s Androidem for Work.
+Tento článek uvádí nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s pracovním profilem Androidu.
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -30,7 +30,7 @@ Tento článek uvádí nastavení omezení zařízení v Microsoft Intune, kter�
 ### <a name="general-settings"></a>Obecná nastavení
 
 - **Kopírování a vkládání mezi pracovními a osobními profily**: ovládá kopírování a vkládání mezi pracovními a osobními aplikacemi. Zvolením možnosti **Blokovat** zapnete blokování. Zvolením možnosti **Nenakonfigurováno** blokování vypnete.
-- **Sdílení dat mezi pracovním a osobním profilem**: určuje, jestli aplikace v pracovním profilu můžou používat sdílení s aplikacemi v osobním profilu. Toto nastavení řídí akce sdílení v rámci aplikací (například možnost **Sdílet** v prohlížeči Chrome), nevztahuje se na chování schránky při kopírování a vkládání. Na rozdíl od [nastavení zásad ochrany aplikací](https://docs.microsoft.com/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) se nastavení omezení pro zařízení spravují na portálu Intune a k izolování spravovaných aplikací používají oddíl pracovního profilu Androidu for Work. Vybírejte z těchto možností:
+- **Sdílení dat mezi pracovním a osobním profilem**: určuje, jestli aplikace v pracovním profilu můžou používat sdílení s aplikacemi v osobním profilu. Toto nastavení řídí akce sdílení v rámci aplikací (například možnost **Sdílet** v prohlížeči Chrome), nevztahuje se na chování schránky při kopírování a vkládání. Na rozdíl od [nastavení zásad ochrany aplikací](https://docs.microsoft.com/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) se nastavení omezení zařízení spravují na portálu Intune a k izolování spravovaných aplikací používají oddíl pracovního profilu Androidu. Vybírejte z těchto možností:
   - **Výchozí omezení sdílení**: jedná se o výchozí chování zařízení při sdílení, které se liší v závislosti na verzi Androidu. Ve výchozím nastavení je povolené sdílení z osobního profilu do pracovního profilu. Ve výchozím nastavení je také blokované sdílení z pracovního profilu do osobního profilu. Toto nastavení zabraňuje sdílení dat z pracovního do osobního profilu. Google neposkytuje způsob, jak blokovat sdílení z osobního do pracovního profilu na zařízeních, která používají verze 6.0 a novější.
   - **Aplikace v pracovním profilu můžou zpracovat žádost o sdílení z osobního profilu**: povoluje integrovanou funkci Androidu, která umožňuje sdílet data z osobního do pracovního profilu. Pokud je tato možnost povolená, žádost o sdílení z aplikace v osobním profilu může sdílet data s aplikacemi v pracovním profilu. Toto nastavení je výchozí chování zařízení s Androidem, která používají verze starší než 6.0.
   - **Povolit sdílení přes hranice**: umožňuje sdílení přes hranice pracovního profilu v obou směrech. Když vyberete toto nastavení, můžou aplikace v pracovním profilu sdílet data s neoznačenými aplikacemi v osobním profilu. Toto nastavení používejte opatrně, protože povoluje spravovaným aplikacím v pracovním profilu sdílení s aplikacemi v nespravované oblasti zařízení.
@@ -48,7 +48,7 @@ Tento článek uvádí nastavení omezení zařízení v Microsoft Intune, kter�
 
    Zabrání koncovým uživatelům ručně přidávat nebo odebírat účty v pracovním profilu.
 
-   Když třeba nasadíte aplikaci Gmail do profilu Androidu for Work, můžete zabránit tomu, aby koncoví uživatelé přidávali nebo odebírali účty v tomto pracovním profilu.
+   Když do pracovního profilu Androidu nasadíte například aplikaci Gmail, můžete zabránit tomu, aby koncoví uživatelé přidávali nebo odebírali účty v tomto pracovním profilu.
 
 - **Sdílení kontaktů přes Bluetooth**: Povoluje přístup k pracovním kontaktům z jiného zařízení, například ze zařízení v autě, které je spárováno pomocí Bluetooth. Ve výchozím nastavení toto nastavení není nakonfigurováno a pracovní kontakty se nezobrazují. Vyberte **Povolit** a sdílení povolte, aby se zobrazily kontakty pracovního profilu. Toto nastavení platí pro zařízení s pracovním profilem Android v systému Android OS v6.0 a novějších. Když tuto zásadu povolíte, budou určitá zařízení Bluetooth ukládat pracovní kontakty do mezipaměti při prvním připojení. V případě jejího zakázání po počátečním zpárování/synchronizaci se pracovní kontakty ze zařízení Bluetooth nemusí odstranit.
 

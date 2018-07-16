@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fb4d9fc6f0f0609062c408fd85921c1f86bd7303
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: e2dba6e0d1c50790c8c2c2bf287695ab67fdb972
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31832302"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905323"
 ---
 # <a name="how-to-configure-wi-fi-settings-in-microsoft-intune"></a>Jak nakonfigurovat nastavení Wi-Fi v Microsoft Intune
 
@@ -37,7 +37,7 @@ Nainstalujete třeba novou síť Wi-Fi s názvem Contoso Wi-Fi a chcete nastavit
 Profily Wi-Fi podporují zařízení s následujícími platformami:
 
 - Android 4 a novější
-- Android for Work
+- Pracovní profily Androidu
 - iOS 8.0 a novější
 - macOS (Mac OS X 10.11 a novější)
 
@@ -55,7 +55,7 @@ Informace v tomto tématu vás seznámí se základy konfigurace profilu Wi-Fi. 
 4. V podokně **Vytvořit profil** zadejte **název** a **popis** profilu Wi-Fi.
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete použít nastavení Wi-Fi. V současné době můžete pro nastavení Wi-Fi na zařízení zvolit jednu z následujících platforem:
     - **Androidemem**
-    - **Android for Work**
+    - **Android Enterprise**
     - **iOS**
     - **macOS**
     - **Windows Phone 8.1**
@@ -69,7 +69,7 @@ Informace v tomto tématu vás seznámí se základy konfigurace profilu Wi-Fi. 
 
    Profil **Import Wi-Fi** (pro Windows 8.1 a novější verze) umožňuje importovat nastavení Wi-Fi jako soubor XML, který jste předtím vyexportovali z jiného zařízení.
 1. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Podrobnosti o nastaveních na jednotlivých platformách najdete v následujících tématech:
-    - [Nastavení Androidu a Androidu for Work](wi-fi-settings-android.md)
+    - [Nastavení Androidu a pracovního profilu Androidu](wi-fi-settings-android.md)
     - [Nastavení iOSu](wi-fi-settings-ios.md)
     - [Nastavení macOS](wi-fi-settings-macos.md)
     - [Nastavení Windows 8.1 a novějších verzí](wi-fi-settings-import-windows-8-1.md) (včetně Windows Holographic for Business)

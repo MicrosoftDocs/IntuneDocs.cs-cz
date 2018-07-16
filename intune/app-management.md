@@ -15,12 +15,12 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6d11de1e20f46fb6e13d6d3ef5c9f4a9ee0f98c1
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 5aa03cad0785e0d9b3d64df97a3ba6d344f0c7b5
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223777"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37906103"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 
@@ -114,8 +114,8 @@ Další informace o této části najdete v tématu [Monitorování aplikací](a
 - **Značky Portálu společnosti**: Portál společnosti můžete přizpůsobit o značku své firmy. Více informací najdete v následujících tématech:
     - [Konfigurace Portálu společnosti](company-portal-app.md)
 - **Kategorie aplikací**: Tady můžete přidat, připnout a odstranit názvy kategorií aplikací.
-- **Android for Work**: Tady můžete schválit a synchronizovat aplikace schválené pro vaši společnost. Více informací najdete v následujících tématech:
-    - [Aplikace pro Android for Work](apps-add-android-for-work.md)
+- **Pracovní profil Androidu**: Tady můžete schválit a synchronizovat aplikace schválené pro váš podnik. Více informací najdete v následujících tématech:
+    - [Aplikace v pracovním profilu Androidu](apps-add-android-for-work.md)
 
 ### <a name="help-and-support"></a>Nápověda a podpora
 - **Nápověda a podpora**: Tady můžete řešit potíže, požádat o podporu nebo zobrazit stav Intune. Více informací najdete v následujících tématech:

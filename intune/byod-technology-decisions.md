@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
 ms.suite: ems
-ms.openlocfilehash: 7fb86ae8d3163e14581ee495004b74f684d30cec
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 0a080660fcc1b285e0ed00b76a94c2f0cc1ba40a
+ms.sourcegitcommit: c78923b0d5b320322c828b1bbea2deb9062e30d2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31832763"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37844959"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Rozhodnutí o technologiích, která umožní používání vlastních zařízení uživatelů (BYOD), pomocí řešení Microsoft Enterprise Mobility + Security (EMS)
 
@@ -39,7 +39,7 @@ Nasazením zásad [podmíněného přístupu](https://docs.microsoft.com/azure/a
 **Dodržování předpisů** – Některé organizace musí dodržovat zákonné nebo jiné předpisy, které vyžadují specifické prvky MDM. MDM je například potřeba k šifrování celého zařízení nebo k vytvoření sestavy obsahující všechny aplikace na zařízení.
 
 ## <a name="common-reasons-to-only-manage-the-apps-mam"></a>Běžné situace, při kterých se provádí jenom správa aplikací (MAM)
-Používání MAM bez MDM je velmi rozšířené v organizacích, které podporují vlastní zařízení uživatelů. Nasazením zásad podmíněného přístupu na Exchangi Online můžete uživatele přimět, aby pro přístup k e-mailu používali Outlook Mobile (který podporuje ochranu MAM). Toto jsou situace, kdy je vhodné spravovat jenom aplikace na osobních zařízeních:
+Používání MAM bez MDM je velmi rozšířené v organizacích, které podporují vlastní zařízení uživatelů. Nasazením zásad podmíněného přístupu na Exchange Online můžete uživatele přimět, aby pro přístup k e-mailu používali Outlook Mobile (který podporuje ochranu MAM). Toto jsou situace, kdy je vhodné spravovat jenom aplikace na osobních zařízeních:
 
 **Uživatelské prostředí** – Součástí registrace MDM je řada výzev s upozorněními (vynucovaných příslušnou platformou), které často mají za následek to, že se uživatel nakonec rozhodne nepřistupovat k e-mailu na svém osobním zařízení. Prostředí MAM není pro uživatele tak znepokojující, protože se jim zobrazí jenom jedno automaticky otevírané okno s oznámením, že se používá ochrana MAM.
 

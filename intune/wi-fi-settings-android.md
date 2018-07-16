@@ -1,42 +1,47 @@
 ---
 title: Konfigurace nastavení Wi-Fi v Microsoft Intune pro zařízení s Androidem
 titleSuffix: ''
-description: Zjistěte, jak v Intune konfigurovat nastavení Wi-Fi pro zařízení s Androidem a Androidem for Work.
+description: Zjistěte, jak v Intune konfigurovat nastavení Wi-Fi pro zařízení s Androidem.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/5/2018
+ms.date: 7/6/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ee82da997a794bb2f65929a6fd9e0de0cc776a6e
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 0157815322488525a4ce7a3d6d2c90cbb8d3ff2a
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31831057"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905661"
 ---
-# <a name="configure-wi-fi-settings-in-microsoft-intune-for-devices-running-android-and-android-for-work"></a>Konfigurace nastavení Wi-Fi v Microsoft Intune pro zařízení s Androidem a Androidem for Work  
+# <a name="configure-wi-fi-settings-in-microsoft-intune-for-devices-running-android-android-work-profiles-and-android-kiosk-devices"></a>Konfigurace nastavení Wi-Fi v Microsoft Intune pro zařízení s Androidem, pracovní profily Androidu a zařízení s Androidem v beznabídkovém režimu
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Tento článek ukazuje nastavení Wi-Fi, která můžete nakonfigurovat v Microsoft Intune pro zařízení s Androidem a Androidem for Work.
+Tento článek ukazuje nastavení Wi-Fi, která můžete nakonfigurovat v Microsoft Intune pro zařízení s Androidem a pracovními profily Androidu.
 
 ## <a name="wi-fi-settings-for-basic-and-enterprise-profiles"></a>Nastavení Wi-Fi pro základní a podnikové profily
 
-Pro zařízení s Androidem i Androidem for Work jdou dostupná tato nastavení Wi-Fi:
+Pro zařízení s Androidem a pracovními profily Androidu jsou dostupná tato nastavení Wi-Fi:
 
 - **Název sítě** – zadejte název pro toto připojení Wi-Fi. Jedná se o název, který uživatelé na svém zařízení uvidí při procházení seznamu dostupných připojení.
 - **SSID** – zkratka pro Service Set Identifier. Jedná se o reálný název bezdrátové sítě, ke které se zařízení připojí. Název sítě, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
 - **Připojovat automaticky** – nastaví, aby se zařízení připojilo, kdykoli je v dosahu této sítě.
 - **Skrytá síť** – zabrání zobrazování této sítě v seznamu dostupných sítí na zařízení.
 
+## <a name="wi-fi-settings-available-for-enterprise-kiosk-profiles"></a>Nastavení Wi-Fi dostupná pro podnikové profily beznabídkového režimu
+- **Typ Wi-Fi**: Tato nastavení typu Wi-Fi jsou dostupná jen v případě, že zvolíte **Typ profilu** > **Jen vlastník zařízení** > **Wi-Fi**.
+    - **Otevřené (bez ověření)**
+    - **Předsdílený klíč WEP**: Do pole **Předsdílený klíč** musíte zadat heslo.
+    - **Předsdílený klíč WPA**: Do pole **Předsdílený klíč** musíte zadat heslo.
 
-## <a name="wi-fi-settings-for-enterprise-profiles-only"></a>Nastavení Wi-Fi jenom pro podnikové profily
+## <a name="wi-fi-settings-for-android-legacy-and-android-work-profiles-only"></a>Nastavení Wi-Fi dostupná jen pro zastaralý Android a pracovní profily Androidu
 
 - **Typ EAP** – zvolte typ protokolu EAP (Extensible Authentication Protocol) použitý k ověřování zabezpečených bezdrátových připojení:
     - **EAP-TLS**

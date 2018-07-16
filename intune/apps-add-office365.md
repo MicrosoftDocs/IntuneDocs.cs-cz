@@ -15,12 +15,12 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 11f1a48b5b2dcff421603dd4538ff054d174fe66
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 09c4fdc6de0368e7ba7d4bebbc3ebfbf2c5ec378
+ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223403"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37869368"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Přiřazení aplikací Office 365 k zařízením s Windows 10 pomocí Microsoft Intune
 
@@ -47,7 +47,7 @@ Tento typ aplikace vám usnadní přiřazování aplikací Office 365 na vámi s
 3. V podokně **Intune** zvolte **Mobilní aplikace**.
 4. V podokně úloh **Mobilní aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
 5. Vyberte **Přidat**.
-6. V podokně **Přidat aplikace** v seznamu **Typ aplikace** vyberte v části **Office 365 Office** možnost **Windows 10**.
+6. V podokně **Přidat aplikace** v seznamu **Typ aplikace** vyberte v oblasti **Sada Office 365** možnost **Windows 10**.
 
 Teď můžete sadu aplikací nakonfigurovat.
 
@@ -71,15 +71,15 @@ V tomto kroku zadáte informace o sadě aplikací. Tyto informace vám pomůžou
 2. V podokně **Informace o sadě aplikací** postupujte takto:
     - **Název sady**: Zadejte název sady aplikací, který se zobrazí na portálu společnosti. Názvy všech používaných sad musí být jedinečné. Pokud stejný název sady aplikací existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
     - **Popis sady**: Zadejte popis sady aplikací. Můžete například uvést aplikace, které jste vybrali pro zahrnutí.
-    - **Vydavatel**: Zadejte název vydavatele aplikace.
+    - **Vydavatel**: Jako vydavatel se zobrazí Microsoft.
     - **Kategorie**: Můžete vybrat jednu nebo několik předdefinovaných kategorií nebo kategorii, kterou jste vytvořili. Díky tomuto nastavení uživatelé dokážou sadu aplikací při procházení portálu společnosti jednodušeji najít.
     - **Zobrazit na Portálu společnosti jako vybranou aplikaci:** Vybráním této možnosti se sada aplikací zobrazí uživatelům, kteří hledají aplikace, na výrazném místě na hlavní stránce Portálu společnosti.
     - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
     - **Adresa URL informací o ochraně osobních údajů**: Volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
-    - **Vývojář**: Volitelně zadejte jméno vývojáře aplikace.
-    - **Vlastník**: Volitelně zadejte vlastníka aplikace, například *Personální oddělení*.
+    - **Vývojář**: Jako vývojář se zobrazí Microsoft.
+    - **Vlastník**: Jako vlastník se zobrazí Microsoft.
     - **Poznámky**: Zadejte jakékoli poznámky, které chcete k aplikaci přidružit.
-    - **Logo**: Nahrajte ikonu, která se zobrazí u aplikace, když uživatelé procházejí portál společnosti.
+    - **Logo**: Logo Office 365 se zobrazí u aplikace, když uživatelé procházejí Portál společnosti.
 3. Vyberte **OK**.
 
 ## <a name="configure-app-settings"></a>Konfigurace nastavení aplikace

@@ -15,12 +15,12 @@ ms.assetid: 4433000a-23e9-4cad-a818-48c28eedc1f5
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f62cb3a99a9cfd328cc041f095b0980eacc99852
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 4fc64f672a5c488848303f8d5ea5ea1467b0b195
+ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224693"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37869491"
 ---
 # <a name="add-android-store-apps-to-microsoft-intune"></a>Přidání aplikací z obchodu pro Android do Microsoft Intune
 
@@ -31,12 +31,11 @@ Před přiřazením aplikace k zařízení nebo skupině uživatelů je nejprve 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**.  
     Intune se nachází v části **Monitorování a správa**.
-1. V podokně **Intune** zvolte **Mobilní aplikace**.
-2. V podokně úloh **Mobilní aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
-3. Vyberte **Přidat**.
-4. V podokně **Přidat aplikaci** vyberte v dostupných typech **aplikací pro Store** možnost **Android**.
-5. Pokud chcete nakonfigurovat informace o aplikaci, vyberte **Konfigurovat** a zadejte následující informace.  
-    V závislosti na zvolené aplikaci můžou být některé hodnoty vyplněné automaticky.
+3. V podokně **Intune** zvolte **Mobilní aplikace**.
+4. V podokně úloh **Mobilní aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
+5. Vyberte **Přidat**.
+6. V podokně **Přidat aplikaci** vyberte v dostupných typech **aplikací pro Store** možnost **Android**.
+7. Pokud chcete nakonfigurovat informace o aplikaci, vyberte **Konfigurovat** a zadejte následující informace. U aplikací pro Android přejděte na [obchod Google Play](https://play.google.com/store) a vyhledejte aplikaci, kterou chcete nasadit. Vyberte tuto aplikaci a poznačte si její podrobnosti. V závislosti na zvolené aplikaci můžou být některé hodnoty vyplněné automaticky.
     - **Název**: Zadejte název aplikace, který se zobrazí na Portálu společnosti. Ujistěte se, že používaný název aplikace je jedinečný. Pokud je název aplikace duplicitní, zobrazí se uživatelům na Portálu společnosti pouze jeden název.
     - **Popis**: Zadejte popis aplikace. Tento popis se uživatelům zobrazí na Portálu společnosti.
     - **Vydavatel**: Zadejte název vydavatele aplikace.

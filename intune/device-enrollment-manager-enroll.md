@@ -15,12 +15,12 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0a32eb1d65710bf09d61c0846a8d949d5cd99ed2
-ms.sourcegitcommit: 91802e78cd5014d20a828ca25a54a381d452f0f8
+ms.openlocfilehash: b18a55d7bd37ab32f6b2f64eee00489389ea323d
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34216322"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905219"
 ---
 # <a name="enroll-devices-by-using-a-device-enrollment-manager-account"></a>Registrace zařízení pomocí účtu správce registrace zařízení
 
@@ -35,7 +35,7 @@ Abyste mohli uživatele přidat jako správce registrace zařízení, musí tito
 
 ## <a name="example-of-a-device-enrollment-manager-scenario"></a>Příklad scénáře využití správce registrace zařízení
 
-Restaurace chce pro své číšníky pořídit padesát tabletů POS a monitory na objednávky pro pracovníky kuchyně. Zaměstnanci nikdy nepotřebují přístup k datům společnosti a nepotřebují se přihlašovat jako uživatelé. Správce Intune vytvoří účet správce registrace zařízení a přidá vedoucího restaurace k účtu DEM. Vedoucí má teď možnosti DEM. Nadřízený nyní může zaregistrovat padesát zařízení pomocí přihlašovacích údajů DEM.
+Restaurace chce pro své číšníky pořídit padesát tabletů POS a monitory na objednávky pro pracovníky kuchyně. Zaměstnanci nikdy nepotřebují přístup k datům společnosti a nepotřebují se přihlašovat jako uživatelé. Správce Intune vytvoří nový účet správce registrace zařízení pro nadřízeného restaurace.  Tento účet je oddělený od primárního účtu nadřízeného a používá se jen pro účely registrace sdílených zařízení v Intune. Nadřízený nyní může zaregistrovat padesát zařízení pomocí přihlašovacích údajů DEM.
 
 Správci registrace zařízení můžou být jen uživatelé na portálu [Azure Portal](https://portal.azure.com). Správce registrace zařízení nemůže být správcem služby Intune.
 
@@ -54,7 +54,7 @@ Zařízení zaregistrovaná pomocí účtu správce registrace zařízení mají
   - V aplikaci nebo na webu Portál společnosti se zobrazí jenom místní zařízení.
   - Uživatelé nemůžou používat aplikace v rámci programu Apple VPP (Volume Purchase Program) s využitím uživatelských licencí, protože ke správě těchto aplikací jsou vyžadovaná Apple ID jednotlivých uživatelů.
   - (Pouze iOS) Pokud pomocí DEM zaregistrujete zařízení s iOSem, nemůžete k registraci zařízení využít Apple Configurator, Program registrace zařízení Apple (DEP) ani Apple School Manager (ASM).
-  - (Pouze Android) Počet zařízení s Androidem for Work, která lze zaregistrovat pomocí jednoho účtu DEM, je omezený. Pomocí každého účtu DEM je možné zaregistrovat maximálně 10 zařízení s pracovním profilem Androidu. Toto omezení se nevztahuje na registrace starších verzí Androidu.
+  - (Pouze Android) Počet zařízení s pracovním profilem Androidu, která lze zaregistrovat pomocí jednoho účtu DEM, je omezený. Pomocí každého účtu DEM je možné zaregistrovat maximálně 10 zařízení s pracovním profilem Androidu. Toto omezení se nevztahuje na registrace starších verzí Androidu.
   - Zařízení můžou instalovat aplikace VPP, pokud mají licence na zařízení.
   - Každé zařízení vyžaduje licenci na zařízení. Další informace o [uživatelských licencích a licencích na zařízení](licenses-assign.md#how-user-and-device-licenses-affect-access-to-services).
 

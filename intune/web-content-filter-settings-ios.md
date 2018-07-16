@@ -14,12 +14,12 @@ ms.technology: ''
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1c8eb121b3db52f0fdfc30d7d8dff7ef0f7bf97b
-ms.sourcegitcommit: f21287c66dd5559688f08bd98b6c976a0dea055d
+ms.openlocfilehash: 24be76637257a3252d6660e8912d7fd2e214dccf
+ms.sourcegitcommit: 4ef14cc543b73191862201c1e0bae44dddd7d9f6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2018
-ms.locfileid: "34456346"
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37921344"
 ---
 # <a name="web-content-filter-settings-for-ios-devices"></a>Nastavení filtru webového obsahu pro zařízení s iOSem
 
@@ -58,7 +58,7 @@ Pokud nezadáte žádné adresy URL, koncoví uživatelé nebudou mít přístup
 ## <a name="specific-websites-only"></a>Jenom konkrétní weby
 
 1. V podokně **Filtr webového obsahu** nakonfigurujte pro každý web, který chcete povolit, následující nastavení:
-    - **Adresa URL** – zadejte adresu URL webu, který chcete povolit, třeba **http://www.contoso.com**.
+    - **Adresa URL** – zadejte adresu URL webu, který chcete povolit, třeba `https://www.contoso.com`.
     - **Cesta k záložce** – zadejte cestu, kam chcete uložit záložku, třeba **/Contoso/Obchodní aplikace**. Pokud cestu nepřidáte, záložka se přidá do výchozí složky záložek na zařízení.
     - **Název** – zadejte popisný název záložky.
 2. Po zadání údajů pro jednotlivé weby klikněte na **Přidat**.

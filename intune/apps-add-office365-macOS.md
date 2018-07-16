@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 07/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,16 +15,16 @@ ms.assetid: 2372332a-7e3a-4a9c-91a9-86654e0fabe2
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 78158afeb9c12e8056f42066be78c37f962b4462
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: bffd53030c23f38f0548cb5bccf82f6dd5e85779
+ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223607"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37869490"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Přiřazení Office 365 zařízením s macOS v Microsoft Intune
 
-Typ *Aplikace pro Store* usnadňuje přiřazení aplikací Office 365 zařízením s macOS. Pomocí tohoto typu aplikace nainstalujete Word, Excel, PowerPoint, Outlook a OneNote. Tyto aplikace jsou dodávané prostřednictvím funkce Microsoft AutoUpdate (MAU). Je to kvůli jejich zabezpečení a aktuálnosti. Požadované aplikace se v seznamu aplikací v konzole Intune zobrazí jako jedna aplikace.
+Tento typ aplikace usnadňuje přiřazení aplikací Office 365 2016 zařízením s macOS. Pomocí tohoto typu aplikace nainstalujete Word, Excel, PowerPoint, Outlook a OneNote. Tyto aplikace jsou dodávané prostřednictvím funkce Microsoft AutoUpdate (MAU). Je to kvůli jejich zabezpečení a aktuálnosti. Požadované aplikace se v seznamu aplikací v konzole Intune zobrazí jako jedna aplikace.
 
 
 ## <a name="before-you-start"></a>Než začnete
@@ -70,7 +70,7 @@ V tomto kroku nakonfigurujte, jakým skupinám sadu aplikací přiřadíte.
 2. V podokně **Office 365** vyberte **Přiřazení**.
 3. Pokud chcete přidat skupinu, která použije sadu aplikací, vyberte **Přidat skupinu**.  
     Zobrazí se podokno **Přidat skupinu**.
-4. **Typ přiřazení** nastavte na **Povinné**.
+4. **Typ přiřazení** nastavte na **Povinné** nebo **K dispozici**.
 5. Přiřaďte sadu vybraným skupinám. Další informace najdete v článku [Přiřazení aplikací do skupin pomocí Microsoft Intune](apps-deploy.md).
 
     >[!Note]

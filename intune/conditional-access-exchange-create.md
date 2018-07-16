@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a1476ad4237b6355d0cb87fcc643bf0234e7f457
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: fbe55be15df9755c109ec7e8e8e23db3c27931b0
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744767"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905525"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Vytvořte zásady podmíněného přístupu pro místní Exchange a starší verze Exchange Online Dedicated
 
@@ -54,7 +54,7 @@ Než nakonfigurujete podmíněný přístup, ověřte, jestli jsou splněné tyt
 
 - **Musí splňovat** zásady dodržování předpisů, které jsou nasazené na toto zařízení.
 
-- Pokud zařízení nevyhoví nastavení podmíněného přístupu, zobrazí se uživateli po přihlášení jedna z následujících zpráv:
+- Pokud zařízení nevyhovuje nastavení podmíněného přístupu, zobrazí se uživateli po přihlášení jedna z následujících zpráv:
     - Pokud není zařízení zaregistrované v Intune nebo v Azure Active Directory, zobrazí se zpráva s pokyny k instalaci aplikace Portál společnosti, registraci zařízení a aktivaci e-mailu. Tento proces také přidruží ID protokolu Exchange ActiveSync zařízení k záznamu zařízení v Azure Active Directory.
     - Pokud zařízení není kompatibilní, zobrazí se zpráva, která uživatele přesměruje na web portálu společnosti Intune nebo na aplikaci Portál společnosti, kde může najít informace o problému a jeho řešení.
 
@@ -63,7 +63,7 @@ Než nakonfigurujete podmíněný přístup, ověřte, jestli jsou splněné tyt
 - Windows Phone 8.1 nebo novější
 - Nativní e-mailová aplikace v systému iOS
 - Poštovní klienti EAS, například Gmail v Androidu 4 a novějším
-- **Zařízení s Androidem for Work** se poštovními klienty EAS: Na zařízeních s Androidem for Work jsou v **pracovním profilu** podporované jenom aplikace **Gmail** a **Nine Work**. Aby v Androidu for Work fungoval podmíněný přístup, musíte nasadit e-mailový profil pro aplikaci Gmail nebo Nine Work a zároveň tyto aplikace nasadit jako požadovanou instalaci.
+- **Zařízení s pracovním profilem Androidu** s poštovními klienty EAS: Na zařízeních s pracovním profilem Androidu jsou v **pracovním profilu** podporované jen aplikace **Gmail** a **Nine Work**. Aby v pracovních profilech Androidu fungoval podmíněný přístup, musíte nasadit e-mailový profil pro aplikaci Gmail nebo Nine Work a zároveň tyto aplikace nasadit jako povinnou instalaci.
 
 > [!NOTE]
 > Aplikace Microsoft Outlook pro Android a iOS se nepodporuje. 

@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6753e0232548d862b46a273f1be0105ad7f16d63
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 7f52c43f8918589c1b66034ad68908f4d5ddba6d
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31831941"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905117"
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-android"></a>Nastavení sítě VPN v Microsoft Intune pro zařízení s Androidem 
 
@@ -30,7 +30,7 @@ Tento článek popisuje, jaká nastavení můžete v Intune použít ke konfigur
 Nastavení sítě VPN můžete nakonfigurovat pro tyto platformy:
 
 - [Androidemem](#android-vpn-settings)
-- [Android for Work](#android-for-work-vpn-settings)
+- [Zařízení s pracovním profilem Androidu](#android-for-work-vpn-settings)
 
 V závislosti na tom, jaká nastavení zvolíte, nebudou konfigurovatelné všechny následující hodnoty.
 
@@ -51,7 +51,7 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou konfigurovatelné všec
 - **Otisk prstu** (pouze Check Point Capsule VPN) – zadejte řetězec, například „Kód otisku prstu Contoso“, který se použije k ověření, že je možné VPN serveru důvěřovat. Otisk prstu se může odeslat klientovi, aby věděl, že může důvěřovat jakémukoli serveru, který při připojování nabízí ten samý otisk. Pokud zařízení ještě otisk prstu nemá, vyzve uživatele, aby důvěřoval VPN serveru, ke kterému se připojuje. Současně přitom zobrazuje otisk prstu (uživatel ho ručně ověří a rozhodne se důvěřovat připojení).
 - **Zadejte páry klíč-hodnota pro atributy Citrix VPN** (pouze Citrix) – zadejte páry klíče a hodnoty, které poskytl Citrix, a nakonfigurujte vlastnosti připojení VPN.
 
-## <a name="android-for-work-vpn-settings"></a>Nastavení VPN v Androidu for Work
+## <a name="android-work-profile-device-vpn-settings"></a>Nastavení sítě VPN v zařízeních s pracovním profilem Androidu
 
 **Název připojení** – zadejte název tohoto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí seznamem dostupných připojení VPN.
 - **IP adresa nebo plně kvalifikovaný název domény** – zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojí. Příklady: **192.168.1.1**, **vpn.contoso.com**.

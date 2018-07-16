@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 233b61018ad521f44ffea96f991f24649e174e3e
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 78f50bc49f9d7a1261759ec5fb9a1cd7628c998c
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744597"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905100"
 ---
 # <a name="create-vpn-profiles-in-intune"></a>Vytváření profilů sítě VPN v Intune
 
@@ -27,7 +27,7 @@ Virtuální privátní sítě (VPN) umožňují uživatelům zabezpečený vzdá
 
 Chcete třeba zřizovat všechna zařízení s iOSem s nastavením požadovaným pro připojení sdílené položky souboru v podnikové síti. Vytvoříte profil VPN, který obsahuje nastavení pro připojení k podnikové síti. Potom tento profil přiřadíte všem uživatelům využívajícím zařízení s iOSem. Uživatelé uvidí připojení VPN v seznamu dostupných sítí a můžou se připojit s minimálním úsilím.
 
-Zásady vlastní konfigurace Intune můžete použít k vytvoření profilů VPN pro tyto platformy:
+Vlastní zásady konfigurace Intune můžete použít k vytvoření profilů sítě VPN pro tyto platformy:
 
 * Android 4 a novější
 * Zaregistrovaná zařízení se systémem Windows 8.1 a novějším
@@ -40,7 +40,7 @@ Zásady vlastní konfigurace Intune můžete použít k vytvoření profilů VPN
 
 Profily VPN můžete vytvářet pomocí následujících typů připojení:
 
-|Typ připojení|Android<br>Android for Work|iOS|macOS|Windows Phone 8.1|Windows 8.1|Windows 10|
+|Typ připojení|Android<br>Pracovní profily Androidu|iOS|macOS|Windows Phone 8.1|Windows 8.1|Windows 10|
 |-|-|-|-|-|-|-|
 |Automaticky|Ne|Ne|Ne|Ne|Ne|Ano|
 |Check Point Capsule VPN|Ano|Ano|Ano|Ano|Ano|Ano|
@@ -68,21 +68,21 @@ Postup vytváření vlastních profilů VPN pomocí nastavení URI najdete v té
 3. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 4. Zadejte **název** a **popis** profilu VPN.
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete použít nastavení VPN. V současné době můžete pro nastavení VPN na zařízení zvolit jednu z následujících platforem:
-  - **Androidemem**
-  - **Android for Work**
-  - **iOS**
-  - **macOS**
-  - **Windows Phone 8.1**
-  - **Windows 8.1 a novější**
-  - **Windows 10 a novější**
+   - **Androidemem**
+   - **Android Enterprise**
+   - **iOS**
+   - **macOS**
+   - **Windows Phone 8.1**
+   - **Windows 8.1 a novější**
+   - **Windows 10 a novější**
 6. V rozevíracím seznamu **Typ profilu** zvolte **VPN**.
 7. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Podrobnosti o nastaveních na jednotlivých platformách najdete v následujících tématech:
-  - [Nastavení Androidu a Androidu for Work](vpn-settings-android.md)
-  - [Nastavení iOSu](vpn-settings-ios.md)
-  - [Nastavení macOS](vpn-settings-macos.md)
-  - [Nastavení Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
-  - [Nastavení Windows 8.1](vpn-settings-windows-8-1.md)
-  - [Nastavení Windows 10](vpn-settings-windows-10.md) (včetně Windows Holographic for Business)
+   - [Nastavení Androidu a pracovního profilu Androidu](vpn-settings-android.md)
+   - [Nastavení iOSu](vpn-settings-ios.md)
+   - [Nastavení macOS](vpn-settings-macos.md)
+   - [Nastavení Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
+   - [Nastavení Windows 8.1](vpn-settings-windows-8-1.md)
+   - [Nastavení Windows 10](vpn-settings-windows-10.md) (včetně Windows Holographic for Business)
 8. Po dokončení vyberte **Vytvořit**.
 
 Profil se vytvoří a zobrazí se v seznamu profilů. Pokud chcete přiřadit tento profil ke skupinám, podívejte se na téma [Přiřazení profilů zařízení](device-profile-assign.md).
