@@ -16,11 +16,11 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
 ms.openlocfilehash: 853b602781b221ba681d802ae0119fc184ab8d6b
-ms.sourcegitcommit: 0f1a5d6e577915d2d748d681840ca04a0a2604dd
+ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840173"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38225148"
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Povolení registrace zařízení s iOSem pomocí Apple School Manageru
 

@@ -13,17 +13,17 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 08763aa527f24ff7b357603be5e3bd4da5083b45
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: e6a71d48e81914808b9af037692a44e4f651bf55
+ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31830429"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38224757"
 ---
 # <a name="upgrade-devices-running-windows-holographic-to-windows-holographic-for-business"></a>Upgrade zařízení se softwarem Windows Holographic na Windows Holographic for Business
 
 
-Pokud chcete spravovat zařízení s Windows Holographic v Microsoft Intune, musíte zařízení upgradovat z Windows Holographic na Windows Holographic for Business. K provedení upgradu můžete vytvořit profil Upgrade edice. V případě zařízení Microsoft HoloLens můžete požadovanou licenci pro upgrade získat zakoupením edice Commercial Suite. Další informace najdete v tématu [Odblokování funkcí Windows Holographic for Business](https://docs.microsoft.com/en-us/hololens/hololens-upgrade-enterprise).
+Pokud chcete spravovat zařízení s Windows Holographic v Microsoft Intune, musíte zařízení upgradovat z Windows Holographic na Windows Holographic for Business. K provedení upgradu můžete vytvořit profil Upgrade edice. V případě zařízení Microsoft HoloLens můžete požadovanou licenci pro upgrade získat zakoupením edice Commercial Suite. Další informace najdete v tématu [Odblokování funkcí Windows Holographic for Business](https://docs.microsoft.com/hololens/hololens-upgrade-enterprise).
 
 ## <a name="to-set-up-an-edition-upgrade-device-configuration-profile"></a>Nastavení profilu konfigurace zařízení s upgradem edice
 

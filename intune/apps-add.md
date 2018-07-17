@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6a5abf774b6cb46b37d42ea1b73f653a02057528
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 2db9d991c476d89399058137adb972c06029befc
+ms.sourcegitcommit: 391755a4c8a38e3a22744516fd27d75e40438899
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905984"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028724"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune
 
@@ -51,7 +51,7 @@ Následující tabulka obsahuje konkrétní typy aplikací a popis, jak je můž
 | Aplikace pro iOS Store  | Aplikace pro Store  | Jako **typ aplikace** vyberte **iOS**, vyhledejte aplikaci a vyberte aplikaci v Intune. |
 | Aplikace pro Windows Phone 8.1 Store  | Aplikace pro Store  | Jako **typ aplikace** vyberte **Windows Phone 8.1** a zadejte adresu URL obchodu Microsoft Store pro aplikaci. |
 | Aplikace pro Microsoft Store  | Aplikace pro Store  | Jako **typ aplikace** vyberte **Windows** a zadejte adresu URL obchodu Microsoft Store pro aplikaci. |
-| Pracovní aplikace pro Android | Aplikace pro Store  | Vyhledejte a schvalte aplikaci s pracovním profilem Androidu ze spravovaného obchodu Google Play.  |
+| Aplikace s pracovním profilem Androidu | Aplikace pro Store  | Vyhledejte a schvalte aplikaci s pracovním profilem Androidu ze spravovaného obchodu Google Play.  |
 | Aplikace Office 365 pro Windows 10  | Aplikace pro Store (Office 365) | V části **Sada Office 365** vyberte jako **typ aplikace** možnost **Windows 10** a pak vyberte aplikaci Office 365, kterou chcete nainstalovat.  |
 | Aplikace Office 365 pro macOS | Aplikace pro Store (Office 365) | V části **Sada Office 365** vyberte jako **typ aplikace** možnost **macOS** a potom vyberte sadu aplikací Office 365. |
 | Obchodní aplikace (LOB) pro Android | Obchodní aplikace | Jako **typ aplikace** vyberte **Obchodní** aplikaci, vyberte **Soubor balíčku aplikace** a pak zadejte instalační soubor pro Android s příponou **.apk**.  |
