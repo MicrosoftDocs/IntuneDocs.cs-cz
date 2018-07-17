@@ -2,8 +2,8 @@
 title: Nastavení beznabídkového režimu Androidu v Microsoft Intune – Azure | Microsoft Docs
 description: Zařízení s Androidem v beznabídkovém režimu můžete nakonfigurovat jako zařízení v beznabídkovém režimu s jednou nebo více aplikacemi.
 keywords: ''
-author: ErikjeMS
-ms.author: erikje
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
 ms.date: 7/5/2018
 ms.topic: article
@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9158893b3ae2c2f70b08682a61cbba4d55b43710
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: f1aa88264ef277863f58d21baaa136c140c5c287
+ms.sourcegitcommit: e01945bff19157fa7acaa4f7975b0f2a8b3a73f0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909146"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37949539"
 ---
 # <a name="kiosk-settings-for-android-devices-in-intune"></a>Nastavení beznabídkového režimu zařízení s Androidem v Intune
 
@@ -76,7 +76,7 @@ U každé aplikace, která má být na zařízeních v beznabídkovém režimu d
 3. Zvolte **Konfigurovat** a zadejte potřebné informace. Nemusíte přidávat obrázek loga, protože se automaticky načte ze souboru favicon.ico daného webu.
 4. Zvolte **OK** > **Přidat**.
 
-Aplikaci webového prohlížeče nasaďte do zařízení v beznabídkovém režimu přes [Mobilní aplikace](apps-add.md).
+Aplikaci webového prohlížeče nasaďte do zařízení veřejného terminálu pomocí [Mobile Apps](apps-add.md).
 
 ### <a name="create-a-multi-app-kiosk-profile"></a>Vytvoření profilu beznabídkového režimu s více aplikacemi
 
