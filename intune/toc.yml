@@ -663,6 +663,8 @@
           href: help-desk-operators.md
         - name: Řešení problémů s přístupem k prostředkům společnosti
           href: troubleshoot-company-resource-access-problems.md
+        - name: Řešení problémů s instalací aplikací
+          href: troubleshoot-app-install.md
         - name: Protokoly auditu pro aktivity v Intune
           href: monitor-audit-logs.md
         - name: Kontrola protokolů ochrany aplikace
