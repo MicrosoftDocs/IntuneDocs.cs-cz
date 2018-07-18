@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 609e142551344a1ce39761280031463c8e34f1f0
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: e97d7639a73fb2d5fd13d4b893ace8eebf597e05
+ms.sourcegitcommit: e01945bff19157fa7acaa4f7975b0f2a8b3a73f0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37906018"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37949488"
 ---
 # <a name="the-early-edition-for-microsoft-intune---july-2018"></a>Časná edice Microsoft Intune – červenec 2018
 
@@ -40,6 +40,9 @@ Tato stránka se pravidelně aktualizuje. Přijďte se tedy znovu podívat, jest
 ## <a name="intune-in-the-azure-portal"></a>Intune na portálu Azure Portal
 
 <!-- 1807 start -->
+
+### <a name="more-sync-opportunities-in-the-company-portal-app-for-windows----2683177---"></a>Další možnosti synchronizace v aplikaci Portál společnosti pro Windows <!-- 2683177 -->
+Aplikace Portál společnosti pro Windows přidává akci synchronizace zařízení na hlavní panel systému Windows a do seznamů odkazů v nabídce Start. Z kteréhokoli umístění můžete kliknout a rychle synchronizovat zařízení a získat přístup k firemním prostředkům.  
 
 ### <a name="reset-device-passcodes-from-company-portal-app-for-windows-10----2101282---"></a>Resetování hesel zařízení z aplikace Portál společnosti pro Windows 10 <!-- 2101282 --> 
 Vaši zaměstnanci si už brzy budou moct resetovat PIN kód nebo heslo ke svému zařízení přímo z aplikace Portál společnosti pro Windows 10. Tato funkce bude dostupná pro vzdálená i místní zařízení spravovaná pomocí Intune, která podporují resetování hesla. V závislosti na typu zařízení se při žádosti zadané pro vzdálené zařízení buď odebere aktuální heslo k zařízení, nebo se vytvoří dočasné heslo. Uživatelé, kteří vyžadují resetování pro místní zařízení, budou přesměrováni do aplikace Nastavení daného zařízení.  

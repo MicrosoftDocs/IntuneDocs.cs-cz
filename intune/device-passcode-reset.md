@@ -13,24 +13,24 @@ ms.technology: ''
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dd743bdb0eaf2e00c50aab85c497dd00aac773ed
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: a233c62b76901d9bad00aa6d8b2a8a4dd45dea96
+ms.sourcegitcommit: 024cce10a99b12a13f32d3995b69c290743cafb8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905151"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39039297"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Resetování nebo odebrání hesla zařízení v Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Pokud chcete vytvořit nové heslo pro zařízení, použijte akci **Odebrat heslo**.
+Pokud chcete vytvořit nové heslo pro zařízení, použijte akci **Odebrat heslo**. Tato akce zobrazí výzvu k resetování PIN kódu pouze pro pracovní profil. Pracovní profily Androidu nepodporují resetování PIN kódu zařízení.
 
-## <a name="supported-platforms"></a>Podporované platformy
+## <a name="work-profile-pin-reset-supported-platforms"></a>Platformy podporující resetování PIN kódu pracovního profilu
 
-- Zařízení s Androidem zaregistrovaná s pracovním profilem, verze 8.0 nebo novější
+- Zařízení s Androidem zaregistrovaná s pracovním profilem, verze 8.0 nebo novější 
 - Zařízení s Androidem, verze 6.0 nebo starší
-- Zařízení s beznabídkovým režimem Androidu Enterprise
+- Zařízení s Androidem Enterprise v beznabídkovém režimu
 - iOS 
      
 ## <a name="unsupported-platforms"></a>Nepodporované platformy
@@ -49,7 +49,9 @@ Pokud chcete vytvořit nové heslo pro zařízení, použijte akci **Odebrat hes
 
 ## <a name="resetting-android-work-profile-passcodes"></a>Resetování hesla pracovního profilu Androidu
 
-Podporovaná zařízení s pracovním profilem Androidu obdrží nové heslo pro odemknutí spravovaného profilu nebo výzvu spravovaného profilu pro koncového uživatele. U zařízení s pracovním profilem Androidu 8.0 obdrží koncový uživatel oznámení s výzvou, aby ihned po dokončení registrace aktivoval resetování hesla. Oznámení se zobrazí, pokud je požadováno a nastaveno heslo pracovního profilu. Po zadání hesla se oznámení zavře.
+Podporovaná zařízení s pracovním profilem Androidu obdrží nové heslo pro odemknutí spravovaného profilu nebo výzvu spravovaného profilu pro koncového uživatele. 
+
+U zařízení s pracovním profilem Androidu 8.0 obdrží koncový uživatel oznámení s výzvou, aby ihned po dokončení registrace aktivoval resetování hesla. Oznámení se zobrazí, pokud je požadováno a nastaveno heslo pracovního profilu. Po zadání hesla se oznámení zavře.
 
 ## <a name="resetting-ios-passcodes"></a>Resetování hesla v iOSu
 

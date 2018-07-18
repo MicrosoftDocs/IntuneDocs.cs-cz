@@ -15,12 +15,12 @@ ms.assetid: 22a232de-ab93-44ab-b0b5-d2b3ccb007fe
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6ed6b95a11eddfeb748b21d6df55f3a5668d9e1d
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 292df171b613ada7a5f8e2cf666ba358ef26df9b
+ms.sourcegitcommit: e01945bff19157fa7acaa4f7975b0f2a8b3a73f0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31021544"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37949471"
 ---
 # <a name="get-started-managing-users"></a>Začínáme se správou uživatelů
 
@@ -31,8 +31,10 @@ Zamyslete se nad všemi různými lidmi, kteří pracují ve vaší organizaci. 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. Po otevření podokna **Microsoft Intune** vyberte **Uživatelé**. Na stránce **Všichni uživatelé** vyberte **+ Nový uživatel**.
-4. Zadejte podrobnosti o uživateli, jako je **Jméno** a **Uživatelské jméno**. Část uživatelského jména, která odpovídá názvu domény, musí být buď původní výchozí název domény „contoso.onmicrosoft.com“, nebo ověřený nefederovaný název domény, třeba „contoso.com“.
-5. V části **Skupiny** zvolte testovací skupinu, do které chcete uživatele přidat.
+4. Zadejte podrobnosti o uživateli, jako je **Jméno** a **Uživatelské jméno**. Část uživatelského jména, která odpovídá názvu domény, musí být jedna z následujících domén:
+    - počáteční výchozí název domény contoso.onmicrosoft.com, nebo
+    - ověřený nefederovaný název domény, například contoso.com.
+5. V části **Skupiny** zvolte [skupinu](get-started-groups.md), do které chcete uživatele přidat.
 6. Uložte si automaticky vygenerované heslo uživatele, abyste ho mohli použít k přihlášení do testovacího zařízení. Toto heslo musíte dát uživatelům, aby ho mohli změnit na normální heslo, které si zapamatují.
 7. V podokně **Uživatelé** vyberte **Vytvořit**.
 

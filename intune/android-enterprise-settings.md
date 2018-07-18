@@ -2,8 +2,8 @@
 title: Nastavení beznabídkového režimu Androidu v Microsoft Intune – Azure | Microsoft Docs
 description: Konfigurace zařízení s Androidem Enterprise v beznabídkovém režimu
 keywords: ''
-author: ErikjeMS
-ms.author: erikje
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
 ms.date: 7/5/2018
 ms.topic: article
@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 28eca6fa3738519602ee5b2a778bc75bde487156
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 15ac6adbcf262fd14edf11107b032aeda106a15b
+ms.sourcegitcommit: 024cce10a99b12a13f32d3995b69c290743cafb8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909095"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39039331"
 ---
 # <a name="android-enterprise-kiosk-settings-in-intune"></a>Nastavení beznabídkového režimu Androidu Enterprise v Intune
 
@@ -49,9 +49,9 @@ Profily Androidu v beznabídkovém režimu podporují následující nastavení 
     - **Odloženo**: Aktualizace se odloží na pozdější datum.
     - **Časové období údržby**: V časovém období údržby jsou uživatelé vyzváni ke schválení aktualizace.
 
-## <a name="kiosk-settings"></a>Nastavení beznabídkového režimu
+## <a name="kiosk-settings"></a>Nastavení veřejného terminálu
 
-- **Beznabídkový režim**: Definuje, jestli v zařízení může běžet jedna nebo několik aplikací. Další informace najdete v tématu o [nastavení beznabídkového režimu pro zařízení s Androidem](android-kiosk-settings.md).
+- **Beznabídkový režim**: Definuje, jestli v zařízení může běžet jedna nebo několik aplikací. Další informace najdete v článku o [nastavení beznabídkového režimu zařízení s Androidem](android-kiosk-settings.md).
     - **Veřejný terminál s jednou aplikací**: Uživatelé mají přístup jen k jedné aplikaci.
     - **Beznabídkový režim s více aplikacemi**: Uživatelé mají přístup k omezené sadě aplikací.
 

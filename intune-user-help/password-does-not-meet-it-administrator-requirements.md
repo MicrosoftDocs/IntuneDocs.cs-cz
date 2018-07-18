@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/10/2017
+ms.date: 07/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,37 +15,42 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: fd221749ced3535ed72df4fda705430bc0f1f385
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 6011e46a3176d55f35310292b55f4786d131f269
+ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31017797"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38219825"
 ---
 # <a name="your-password-does-not-meet-your-company-supports-requirements"></a>Heslo nesplňuje požadavky firemní podpory
 
-Heslo, které používáte pro přístup k prostředkům společnosti nebo školy, nesplňuje některé požadavky nastavené firemní podporou. Pokud chcete problém vyřešit, postupujte podle pokynů, které se zobrazí na vašem zařízení. Následující výčet obsahuje popis problémů.
+Vaše firemní podpora vyžaduje heslo, které pomáhá chránit vaše zařízení. V současné době heslo, které používáte pro přístup k prostředkům společnosti nebo školy, nesplňuje některé požadavky nastavené firemní podporou. Pokud chcete problém vyřešit, postupujte podle pokynů, které se zobrazí na vašem zařízení. Následující výčet obsahuje popis problémů.
 
-Pokud potřebujete postup nastavení kódu PIN nebo hesla, použijte odkaz, který odpovídá typu vašeho zařízení:
+Pokud potřebujete postup nastavení PIN kódu nebo hesla, použijte odkaz, který odpovídá typu vašeho zařízení:
 
 - [Nastavení kódu PIN nebo hesla na zařízení s Androidem](set-your-pin-or-password-android.md)
 - [Nastavení nebo změna hesla na zařízení s iOSem](set-or-change-your-passcode-ios.md)
 - [Nastavení nebo změna hesla na zařízení s Windows](set-or-change-your-password-windows.md)
 
-Popis problémů s kódem PIN nebo heslem:
+> [!NOTE]
+> Pokud máte potíže s vytvořením hesla, které by splňovalo požadavky stanovené firemní podporou, obraťte se na firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
 
-- **Heslo neobsahuje složité znaky.** Vaše firemní podpora požaduje, abyste v hesle použili složité znaky. Složité znaky jsou například, velká písmena a symboly jako $, % a #.
+## <a name="pin-or-password-issue-descriptions"></a>Popis problémů s PIN kódem nebo heslem
 
-- **Heslo je příliš jednoduché nebo není dostatečně bezpečné.** Jednoduché heslo je například 1234 nebo 1111. Pokud nevíte, jaký druh hesel je povolený, snažte se o to, aby heslo neobsahovalo čísla, která jdou za sebou nebo se opakují (jako v předchozím příkladu).
+| **Problém** | **Popis** |
+|-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Heslo neobsahuje složité znaky.** | Vaše firemní podpora požaduje, abyste v hesle použili složité znaky. Složité znaky jsou například, velká písmena a symboly jako $, % a #. |
+| **Heslo je příliš jednoduché nebo není dostatečně bezpečné.** | Jednoduché heslo je například 1234 nebo 1111. Pokud nevíte, jaký druh hesel je povolený, snažte se o to, aby heslo neobsahovalo čísla, která jdou za sebou nebo se opakují (jako v předchozím příkladu). |
+| **Platnost hesla vypršela.** | Platnost hesla vypršela, a proto musíte nastavit nové heslo, které odpovídá požadavkům nastaveným firemní podporou. |
+| **Heslo není nastavené.** | Než na svém zařízení získáte přístup k pracovnímu e-mailu a datům, musíte nastavit heslo, které odpovídá požadavkům nastaveným firemní podporou. |
+| **Heslo je příliš krátké.** | Vaše firemní podpora vyžaduje, abyste použili delší heslo, které má více znaků. |
+| **Heslo bylo použito v nedávné době.** | Firemní podpora vám zakázala používat předchozí hesla, která jste použili v minulosti. Zvolte si heslo, které jste ještě nikdy nepoužili. |
+| **Heslo není dostatečně složité a nesplňuje požadavky.** | Vaše firemní podpora požaduje, abyste v hesle použili složitější znaky. Zkuste použít třeba číslice, velká písmena a symboly jako $, % a #. Tento problém může vzniknout i u dalších účtů na vašem zařízení. Zkontrolujte proto všechny případné další pracovní účty a zajistěte, aby vaše heslo splňovalo požadavky nastavené správcem IT pro vaše zařízení. |
 
-- **Platnost hesla vypršela.** Platnost hesla vypršela, a proto musíte nastavit nové heslo, které odpovídá požadavkům nastaveným firemní podporou.
+## <a name="next-steps"></a>Další kroky
 
-- **Heslo není nastavené.** Než na svém zařízení získáte přístup k pracovnímu e-mailu a datům, musíte nastavit heslo, které odpovídá požadavkům nastaveným firemní podporou.
+Pokud potřebujete postup nastavení PIN kódu nebo hesla, použijte odkaz, který odpovídá typu vašeho zařízení:
 
-- **Heslo je příliš krátké.** Vaše firemní podpora vyžaduje, abyste použili delší heslo, které má více znaků.
-
-- **Heslo bylo použito v nedávné době.** Firemní podpora vám zakázala používat předchozí hesla, která jste použili v minulosti. Zvolte si heslo, které jste ještě nikdy nepoužili.
-
-- **Heslo není dostatečně složité a nesplňuje požadavky.** Vaše firemní podpora požaduje, abyste v hesle použili složitější znaky. Zkuste použít třeba číslice, velká písmena a symboly jako $, % a #. Tento problém může vzniknout i u dalších účtů na vašem zařízení. Zkontrolujte proto všechny případné další pracovní účty a zajistěte, aby vaše heslo splňovalo požadavky nastavené správcem IT pro vaše zařízení.
-
-Pokud máte potíže s tím, jak vytvořit heslo v souladu s požadavky, obraťte se na firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+- [Nastavení kódu PIN nebo hesla na zařízení s Androidem](set-your-pin-or-password-android.md)
+- [Nastavení nebo změna hesla na zařízení s iOSem](set-or-change-your-passcode-ios.md)
+- [Nastavení nebo změna hesla na zařízení s Windows](set-or-change-your-password-windows.md)

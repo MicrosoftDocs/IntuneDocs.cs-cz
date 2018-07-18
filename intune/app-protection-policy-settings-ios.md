@@ -15,12 +15,12 @@ ms.assetid: 0f8b08f2-504c-4b38-bea2-b8a4ef0526b8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7d0afd1f1944101b2162d9115e84ea5aaac0abf2
-ms.sourcegitcommit: 3dbd73631dd0042dd013a380f4c15dfe284576c0
+ms.openlocfilehash: 65827fe280535aa48d1d44eda9fd8482002c2c3b
+ms.sourcegitcommit: 391755a4c8a38e3a22744516fd27d75e40438899
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36882524"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028758"
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací pro iOS
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -75,7 +75,7 @@ U některých aplikací a služeb platformy, které mají výjimku, můžou zás
 | **Vyžadovat minimální verzi sady SDK zásad ochrany aplikací Intune** | Zvolte **Ano**, pokud požadujete, aby tato aplikace používala minimální verzi sady SDK zásad ochrany aplikací Intune. Uživateli bude zablokován přístup, pokud verze sady SDK zásad ochrany aplikací Intune nesplňuje tento požadavek. <br> <br> Další informace o sadě SDK se zásadami ochrany aplikací Intune najdete v článku [Přehled sady Intune App SDK](app-sdk.md). <br><br> Tento formát nastavení zásady podporuje vlastnosti major.minor, major.minor.build a major.minor.build.revision. <br><br> **Poznámka:** Vyžaduje se, aby aplikace měla verzi Intune SDK 7.0.1 nebo vyšší. | Ne |
 
 > [!NOTE]
-> Další informace o tom, jak v iOSu fungují různá nastavení Intune App Protection nakonfigurovaná v části Přístup u stejné skupiny aplikací a uživatelů, najdete v tématu [Nejčastější dotazy k Intune MAM](https://docs.microsoft.com/en-us/intune/mam-faq#app-experience-on-ios).
+> Další informace o tom, jak v iOSu fungují různá nastavení Intune App Protection nakonfigurovaná v části Přístup u stejné skupiny aplikací a uživatelů, najdete v článku věnovaném [častým otázkám k Intune MAM](https://docs.microsoft.com/en-us/intune/mam-faq#app-experience-on-ios) a v článku [Selektivní vymazání dat pomocí akcí přístupu zásad ochrany aplikací v Intune](app-protection-policies-access-actions.md).
 
 ##  <a name="add-ins-for-outlook-app"></a>Doplňky pro aplikaci Outlook
 
