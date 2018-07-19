@@ -724,8 +724,6 @@
           href: app-wrapper-prepare-android.md
         - name: Intune App SDK pro Android
           href: app-sdk-android.md
-        - name: Modul plug-in Cordova sady Intune App SDK
-          href: app-sdk-cordova.md
         - name: Xamarinové vazby sady Intune App SDK
           href: app-sdk-xamarin.md
     - name: Použití datového skladu Intune
