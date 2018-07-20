@@ -521,6 +521,7 @@
         - name: Vynucení dodržování předpisů v počítačích Mac spravovaných aplikací Jamf Pro
           href: conditional-access-assign-jamf.md
     - name: Ochrana dat zařízení
+      href: device-protect.md
       items:
         - name: Ochrana soukromí a osobní údaje
           href: privacy-personal-data.md
