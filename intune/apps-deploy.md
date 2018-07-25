@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/01/2018
+ms.date: 07/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1e6ffd31e35637cf722fc2af486be4bd9101c1db
-ms.sourcegitcommit: 413d271b42a6d4396adc2f749e31eed782aaa9da
+ms.openlocfilehash: 46ef614af39a1dd1b44f4f5ff32f53687ccb060a
+ms.sourcegitcommit: a8b544975156dd45c2bf215b57ac994415b568bc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38993747"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39164565"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
 
@@ -89,21 +89,21 @@ Někdy je tatáž aplikace přiřazena do více skupin, ale s různými záměry
 |Uživatel: K dispozici|Uživatel: Není k dispozici|Není k dispozici|
 |Uživatel: K dispozici|Uživatel: Odinstalace|Odinstalace|
 |Uživatel: Není k dispozici|Uživatel: Odinstalace|Odinstalace
-|Uživatel: Povinné|Zařízení: Povinné|Existuje obojí, zpracování bránou je povinné
-|Uživatel: Povinné|Zařízení: Odinstalace|Existuje obojí, řešení bránou je povinné
-|Uživatel: K dispozici|Zařízení: Povinné|Existuje obojí, řešení bránou je povinné (Povinné a K dispozici)
-|Uživatel: K dispozici|Zařízení: Odinstalace|Existuje obojí, řešení bránou je k dispozici.<br><br>Aplikace se zobrazí na Portálu společnosti.<br><br>Pokud je už aplikace nainstalovaná (jako požadovaná aplikace s předchozím záměrem), aplikace se odinstaluje.<br><br>Pokud ale uživatel vybere **instalaci z Portálu společnosti**, aplikace se instaluje a záměr odinstalace se nedodrží.|
+|Uživatel: Povinné|Zařízení: Povinné|Existuje obojí, Intune zpracovává Povinné.
+|Uživatel: Povinné|Zařízení: Odinstalace|Existuje obojí, Intune překládá Povinné.
+|Uživatel: K dispozici|Zařízení: Povinné|Existuje obojí, Intune překládá Povinné (Povinné a K dispozici).
+|Uživatel: K dispozici|Zařízení: Odinstalace|Existuje obojí, Intune překládá K dispozici.<br><br>Aplikace se zobrazí na Portálu společnosti.<br><br>Pokud je už aplikace nainstalovaná (jako požadovaná aplikace s předchozím záměrem), aplikace se odinstaluje.<br><br>Pokud ale uživatel vybere **instalaci z Portálu společnosti**, aplikace se instaluje a záměr odinstalace se nedodrží.|
 |Uživatel: Není k dispozici|Zařízení: Povinné|Povinné|
 |Uživatel: Není k dispozici|Zařízení: Odinstalace|Odinstalace|
-|Uživatel: Odinstalace|Zařízení: Povinné|Existuje obojí, řešení bránou je povinné|
-|Uživatel: Odinstalace|Zařízení: Odinstalace|Existuje obojí, řešení bránou prostřednictvím odinstalace|
+|Uživatel: Odinstalace|Zařízení: Povinné|Existuje obojí, Intune překládá Povinné.|
+|Uživatel: Odinstalace|Zařízení: Odinstalace|Existuje obojí, Intune překládá Odinstalaci.|
 |Zařízení: Povinné|Zařízení: Odinstalace|Povinné|
 |Uživatel: Povinné a K dispozici|Uživatel: K dispozici|Povinné a K dispozici|
 |Uživatel: Povinné a K dispozici|Uživatel: Odinstalace|Povinné a K dispozici|
 |Uživatel: Povinné a K dispozici|Uživatel: Není k dispozici|Povinné a K dispozici|
 |Uživatel: Povinné a K dispozici|Zařízení: Povinné|Existuje obojí, Povinné a K dispozici
 |Uživatel: Povinné a K dispozici|Zařízení: Není k dispozici|Povinné a K dispozici|
-|Uživatel: Povinné a K dispozici|Zařízení: Odinstalace|Existuje obojí, řešení bránou je povinné (Povinné a K dispozici)
+|Uživatel: Povinné a K dispozici|Zařízení: Odinstalace|Existuje obojí, Intune překládá Povinné (Povinné a K dispozici).
 |Uživatel: Není k dispozici|Zařízení: Není k dispozici|Není k dispozici|
 |Uživatel: K dispozici|Zařízení: Není k dispozici|K dispozici|
 |Uživatel: Povinné|Zařízení: Není k dispozici|Povinné|
