@@ -15,18 +15,18 @@ ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cd6aee30a88906c3f6ae078e338732589d88a5f0
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: d5a223834eed1b0174c56b5e33ad2140203073d0
+ms.sourcegitcommit: 5251a630fb2c7a2e6f86abd84ab887f8eabc1481
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909129"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39212031"
 ---
 # <a name="set-up-enrollment-of-android-enterprise-kiosk-devices"></a>Nastavení registrace zařízení s Androidem Enterprise v beznabídkovém režimu
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Android podporuje prostřednictvím svého řešení COSU (Corporate-Owned, Single-Use) zařízení v beznabídkovém režimu. Taková zařízení se používají k jednomu účelu, například jako zobrazovací zařízení na veřejných místech, k tisku vstupenek nebo k evidenci zásob. Správci omezí použití zařízení na omezenou sadu aplikací a webových odkazů. Uživatelé zároveň nemůžou na tomto zařízení přidávat jiné aplikace ani provádět jiné akce.
+Android podporuje prostřednictvím svého řešení „ve vlastnictví firmy, pro použití s jednou aplikací“ zařízení v beznabídkovém režimu. Taková zařízení se používají k jednomu účelu, například jako zobrazovací zařízení na veřejných místech, k tisku vstupenek nebo k evidenci zásob. Správci omezí použití zařízení na omezenou sadu aplikací a webových odkazů. Uživatelé zároveň nemůžou na tomto zařízení přidávat jiné aplikace ani provádět jiné akce.
 
 Intune vám pomůže nasadit do zařízení s Androidem v beznabídkovém režimu aplikace a nastavení. Konkrétní podrobnosti o Androidu Enterprise najdete v tématu [Požadavky na Android Enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
@@ -49,7 +49,7 @@ Správu Androidu v beznabídkovém režimu nastavíte takto:
 4. [Vytvořte skupinu zařízení](#create-a-device-group).
 5. [Zaregistrujte zařízení v beznabídkovém režimu](#enroll-the-kiosk-devices).
 
-### <a name="create-an-enrollment-profile"></a>Vytvoření registračního profilu
+### <a name="create-an-enrollment-profile"></a>Vytvoření profilu zápisu
 
 Kvůli registraci zařízení v beznabídkovém režimu musíte vytvořit registrační profil. Po vytvoření poskytne tento profil registrační token (náhodný řetězec) a kód QR. V závislosti na operačním systému Android a verzi zařízení můžete k [registraci zařízení v beznabídkovém režimu](#enroll-the-kiosk-devices) použít buď token, nebo kód QR.
 

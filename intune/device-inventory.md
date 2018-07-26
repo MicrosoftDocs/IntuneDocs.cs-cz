@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f66c0695c7e3d1f4bb7a5ca3abceeb13f6af41f2
-ms.sourcegitcommit: 3c4ea8d6809a63042705b5ed4f25ba80f522070e
+ms.openlocfilehash: 16b8067610e21652a40cb87302d8f1f3d05de342
+ms.sourcegitcommit: f5998019bbb4769fb50a7ea9bf424199516eb9ee
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34051602"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39117918"
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
 
@@ -34,7 +34,7 @@ V tomto článku se dozvíte, jak si můžete zobrazit všechna zařízení a je
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 3. Vyberte **Zařízení** > **Všechna zařízení** > výběrem zařízení uvedeného v seznamu otevřete podrobné informace o něm:
 
-   - **Přehled** zobrazuje název zařízení a uvádí některé jeho klíčové vlastnosti, včetně toho, jestli se jedná o zařízení programu Přineste si vlastní zařízení (BYOD), kdy bylo zaregistrováno a dalších informací. Když vyberte **Další**, můžete navíc:
+   - **Přehled** zobrazuje název zařízení a uvádí některé jeho klíčové vlastnosti, včetně toho, jestli se jedná o zařízení programu Přineste si vlastní zařízení (BYOD), kdy bylo zaregistrováno a dalších informací. Když vyberte **Další**, můžete:
      - Odebrání firemních dat
      - Smazat zařízení
      - Zařízení na dálku uzamknout
@@ -57,6 +57,49 @@ Intune shromažďuje seznam aplikací jenom na zařízeních vlastněných spole
 |iOS|Pouze spravované aplikace|Všechny aplikace instalované na zařízení|
 |macOS|Všechny aplikace instalované na zařízení|Všechny aplikace instalované na zařízení|  
 |Android|Pouze spravované aplikace|Všechny aplikace instalované na zařízení|  
+
+## <a name="hardware-device-details"></a>Podrobnosti o hardwarovém zařízení
+
+### <a name="windows-and-ios-device-details"></a>Podrobnosti o zařízení s Windows a iOSem:
+|Podrobnosti|Popis|  
+|--------------|----------------------|  
+|Název|Název zařízení|
+|Název správy|Název zařízení používaný jenom v konzole. Změnou tohoto názvu nedojde ke změně názvu v zařízení.|
+|UDID|Jedinečný identifikátor zařízení|
+|ID zařízení Intune|Globálně jedinečný identifikátor, který jednoznačně identifikuje zařízení|
+|Sériové číslo|Sériové číslo zařízení od výrobce|
+|Sdílené zařízení|Pokud **Ano**, je zařízení sdílené více než jedním uživatelem|
+|Registrace schválená uživatelem|Pokud **Ano**, pak má zařízení registraci schválenou uživatelem, která správcům umožňuje spravovat některá nastavení zabezpečení na zařízení|
+|Operační systém|Operační systém používaný v zařízení|
+|Verze operačního systému|Verze operačního systému v zařízení.|
+|Jazyk operačního systému|Jazyk nastavený pro operační systému v zařízení|
+|Celkové místo v úložišti|Celkové místo úložiště v zařízení (v gigabajtech)|
+|Volné místo úložiště|Nevyužité místo úložiště v zařízení (v gigabajtech)|
+
+
+### <a name="windows-ios-and-macos-device-details"></a>Podrobnosti o zařízení s Windows, iOSem a macOS
+|Podrobnosti|Popis|  
+|--------------|----------------------|  
+|IMEI|Mezinárodní identita mobilního zařízení|
+|MEID|Identifikátor mobilního zařízení|
+|Výrobce|Výrobce zařízení|
+|Model|Model zařízení|
+|Telefonní číslo|Telefonní číslo přidružené k zařízení|
+|Poskytovatel služeb pro odběratele|Bezdrátový operátor zařízení|
+|Mobilní technologie|Rádiový systém používaný zařízením|
+|Wi-Fi MAC|Adresa MAC zařízení|
+|ICCID|Identifikátor karty s integrovaným obvodem, což je jedinečné identifikační číslo SIM karty|
+|Datum zápisu|Datum a čas, kdy se zařízení zaregistrovalo v Intune|
+|Poslední kontakt|Datum a čas posledního připojení zařízení k Intune|
+|Kód pro obejití zámku aktivace|Kód, který se dá použít k obejití zámku aktivace|
+|Registrováno v Azure AD|Pokud **Ano**, zařízení je registrované v Azure Active Directory|
+|Dodržování předpisů|Stav dodržování předpisů zařízení|
+|EAS aktivované|Pokud **Ano**, pak je zařízení synchronizované s poštovní schránkou Exchange|
+|ID aktivace EAS|Identifikátor protokolu Exchange ActiveSync zařízení|
+|Pod dohledem|Pokud **Ano**, mají správci nad zařízením lepší kontrolu|
+|Šifrované|Pokud **Ano**, jsou data uložená v zařízení šifrovaná|
+
+
 
 ## <a name="next-steps"></a>Další kroky
 Podívejte se, jaké další akce [správy zařízení](device-management.md) můžete provádět pomocí Intune.

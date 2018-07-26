@@ -1,5 +1,5 @@
 ---
-title: Odeslání protokolů firemní podpoře pomocí kabelu USB | Microsoft Docs
+title: Odeslání protokolů firemní podpoře pomocí kabelu USB | Micrososft Docs
 description: Odeslání datových protokolů pomocí kabelu USB
 keywords: ''
 author: lenewsad
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: a12e0103f9eae08003d8cca6a5eb4699ced27a27
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 2a2c5c60f22aca6a9c989281ef2c5cc9e0c66911
+ms.sourcegitcommit: f5998019bbb4769fb50a7ea9bf424199516eb9ee
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31015604"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39117850"
 ---
 # <a name="send-logs-to-your-company-support-using-a-usb-cable"></a>Odeslání protokolů firemní podpoře pomocí kabelu USB
 
@@ -35,7 +35,7 @@ Pokud při použití aplikace Portál společnosti na zařízení s Androidem do
 
 2. Připojte zařízení k počítači pomocí kabelu USB. Obvykle je to stejný kabel, kterým se zařízení nabíjí ze zásuvky.
 
-3. V počítači vyhledejte adresář, který má název vašeho zařízení. V tomto adresáři najděte složku <strong>Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\</strong>.
+3. V počítači vyhledejte adresář, který má název vašeho zařízení. V tomto adresáři najděte složku <strong>Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\\</strong>.
 
 4. Vyberte soubory a připojte je k e-mailu. Tento e-mail pošlete své firemní podpoře.
 

@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 6/25/2018
+ms.date: 7/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5e9de6f1ac8bca1d65a94294d3b049dfccbe44c7
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 557bdbace1752b8680cd15d7ba190577bec23e24
+ms.sourcegitcommit: 2e849eea920dcd6ef1b78e5aee26434bb7b01bff
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905355"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39132455"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorování zásad dodržování předpisů zařízením v Intune
 
@@ -167,11 +167,11 @@ Tato funkce je zahrnutá v sestavách stavu zařízení:
 1. Vyberte **Dodržování předpisů zařízením** > **Zásady**. Zobrazí se seznam zásad včetně platformy, pokud je příslušná zásada přiřazená, a další podrobnosti.
 2. Vyberte zásadu > **Přehled**. Přiřazení zásad v tomto zobrazení zahrnuje následující stavy:
 
-  - Úspěšné
-  - Chyba
-  - Konflikt
-  - Čeká
-  - Nelze použít
+  - Úspěch: Zásada je použita.
+  - Chyba: Zásadu se nepodařilo použít. Obvykle se zobrazí s chybovým kódem, který odkazuje na vysvětlení. 
+  - Konflikt: Pro stejné zařízení jsou použita dvě nastavení a Intune nemůže vyřešit konflikt. Správce by měl provést kontrolu.
+  - Čeká na vyřízení: Zařízení se dosud nepřipojilo k Intune, aby získalo zásadu. 
+  - Není k dispozici: Zařízení nemůže zásadu získat. Zásada například aktualizuje nastavení pro iOS 11.1, ale zařízení používá iOS 10. 
 
 3. Pokud chcete zobrazit podrobnosti o zařízeních používajících tyto zásady, vyberte některý stav. Vyberte například **Úspěšné**. V dalším okně se zobrazí podrobnosti o konkrétním zařízení včetně jeho názvu a stavu nasazení.
 
@@ -181,4 +181,3 @@ Konflikty zásad můžou vzniknout, když se na zařízení použije více zása
 - Pokud konfliktní nastavení pocházejí ze zásad konfigurace a dodržování předpisů služby Intune, bude mít nastavení v zásadách dodržování předpisů přednost před nastavením v zásadách konfigurace. Platí to i v situaci, kdy je nastavení v zásadách konfigurace bezpečnější.
 
 - Pokud jste nasadili více zásad dodržování předpisů, použije Intune ty nejbezpečnější z nich.
-

@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e97d7639a73fb2d5fd13d4b893ace8eebf597e05
-ms.sourcegitcommit: e01945bff19157fa7acaa4f7975b0f2a8b3a73f0
+ms.openlocfilehash: 3aed8fcefd640e5b7df46fe1ef8cd1c973a68044
+ms.sourcegitcommit: 5251a630fb2c7a2e6f86abd84ab887f8eabc1481
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37949488"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39212133"
 ---
 # <a name="the-early-edition-for-microsoft-intune---july-2018"></a>Časná edice Microsoft Intune – červenec 2018
 
@@ -58,7 +58,7 @@ Když se správce registrace zařízení přihlásí k aplikaci Portál společn
 ### <a name="use-smime-to-encrypt-and-sign-a-users-multiple-devices-----1333642---"></a>Použití S/MIME k šifrování a podepsání více zařízení uživatele <!-- 1333642 -->
 Budoucí aktualizace bude zahrnovat šifrování S/MIME e-mailů pomocí nového profilu importovaného certifikátu (**Konfigurace zařízení** > **Profily** > **Vytvořit profil** > vyberte platformu > **Importovaný certifikát PKCS** typ profilu). V Intune můžete importovat certifikáty ve formátu PFX. Intune pak může doručit stejné certifikáty do více zařízení zaregistrovaných jedním uživatelem. To také zahrnuje:
 
-- Nativní e-mailový profil v iOS podporuje povolení šifrování S/MIME pomocí importovaných certifikátů ve formátu PFX.
+- Nativní e-mailový profil v iOSu podporuje povolení šifrování S/MIME pomocí importovaných certifikátů ve formátu PFX.
 - Nativní poštovní aplikace na zařízeních se systémem Windows Phone 10 automaticky použije certifikát S/MIME.
 - Privátní certifikáty je možné doručit na různé platformy. Některé e-mailové aplikace ale S/MIME nepodporují.
 - Na jiných platformách může být nutné ručně nakonfigurovat e-mailovou aplikaci a povolit S/MIME.  
@@ -79,8 +79,8 @@ Pokud chcete vytvořit profil, otevřete položku **Konfigurace zařízení** > 
 
 Platí pro Windows 10 a novější.
 
-###  <a name="windows-line-of-business-lob-apps-file-extension-rename----1884873---"></a>Přejmenování přípon souborů obchodních aplikací pro Windows <!-- 1884873 -->
-Přípony souborů obchodních aplikací pro Windows se přejmenují z *.appx* a *.appxbundle* na *.msix* a *.msixbundle*. Aplikaci můžete v Microsoft Intune přidat výběrem možností **Mobilní aplikace** > **Aplikace** > **Přidat**. Zobrazí se podokno **Přidat aplikaci**, které vám umožní vybrat **Typ aplikace**. Pro obchodní aplikace pro Windows vyberte jako typ aplikace **Obchodní aplikace**, vyberte **Soubor balíčku aplikace** a pak zadejte instalační soubor s příslušnou příponou.
+###  <a name="windows-line-of-business-lob-apps-file-extensions----1884873---"></a>Přípony souborů obchodních aplikací pro Windows <!-- 1884873 -->
+Přípony souborů obchodních aplikací pro Windows teď budou zahrnovat *.msi*, *.appx*, *.appxbundle*, *.msix* a *.msixbundle*. Aplikaci můžete v Microsoft Intune přidat výběrem možností **Mobilní aplikace** > **Aplikace** > **Přidat**. Zobrazí se podokno **Přidat aplikaci**, které vám umožní vybrat **Typ aplikace**. Pro obchodní aplikace pro Windows vyberte jako typ aplikace **Obchodní aplikace**, vyberte **Soubor balíčku aplikace** a pak zadejte instalační soubor s příslušnou příponou.
 
 ### <a name="windows-defender-atp-configuration-package-automatically-added-to-configuration-profile----2144658---"></a>Automatické přidání konfiguračního balíčku Ochrany ATP v programu Windows Defender do konfiguračního profilu <!-- 2144658 -->
 Když používáte [Rozšířenou ochranu před internetovými útoky (ATP) a připojujete](advanced-threat-protection.md#onboard-devices-using-a-configuration-profile) zařízení k Intune, musíte si v současné době stáhnout konfigurační balíček a přidat ho do konfiguračního profilu. V budoucí aktualizaci bude Intune automaticky načítat balíček z Centra zabezpečení v programu Windows Defender a přidávat ho do profilu za vás.

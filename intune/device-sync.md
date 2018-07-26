@@ -1,5 +1,5 @@
 ---
-title: Synchronizace zařízení pomocí Microsoft Intune – Azure | Dokumentace Microsoftu
+title: Synchronizace zařízení pomocí Microsoft Intune – Azure | Micrososft Docs
 description: Můžete synchronizovat zařízení zaregistrovaná nebo spravovaná v Microsoft Intune, abyste získali nejnovější zásady a akce. Postup zahrnuje synchronizaci pomocí portálu Azure Portal a zobrazení kódů chyb, které umožňují opakovaný pokus.
 keywords: ''
 author: ErikjeMS
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 02ad249e-f098-421f-861f-6b2ff733ac7c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fb609f0d99378e2e30b3c3a4f769781448aea1b5
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 30b4cf585edd7153ee01710ce8c572593056454f
+ms.sourcegitcommit: f5998019bbb4769fb50a7ea9bf424199516eb9ee
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31833361"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39117867"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Synchronizace zařízení s cílem načíst nejnovější zásady a akce pomocí Intune
 
@@ -43,6 +43,7 @@ Akce zařízení **Synchronizovat** vybrané zařízení donutí se okamžitě o
 4. V seznamu zařízení, která spravujete, zvolte zařízení, zvolte **Více** a pak zvolte **Synchronizovat**.
 5. Potvrďte zvolením **Ano**.
 
+Stav akce Synchronizovat zobrazíte přes **Zařízení** > **Akce zařízení**.
 
 ## <a name="retryable-error-codes"></a>Kódy chyb umožňujících opakovaný pokus
 
@@ -65,4 +66,5 @@ Když správce spustí akci zařízení **Synchronizovat**, aplikace pro iOS a A
 
 ## <a name="next-steps"></a>Další kroky
 
-- K zobrazení stavu akce Synchronizovat vyberte **Akce zařízení**. 
+Můžete [zkontrolovat podrobnosti](device-inventory.md) zařízení.
+ 

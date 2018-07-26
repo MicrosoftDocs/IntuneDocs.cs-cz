@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 5/16/2018
+ms.date: 7/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 05d93f1518427201d9d96dbc22c772967fe4fa0f
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: d35c9e32b7a0720d5d84a93a7edde6f2bd51911f
+ms.sourcegitcommit: 08e1b0d45c84eb9525a0a59f5540d41434da2814
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744563"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39146624"
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-ios"></a>Nastavení sítě VPN v Microsoft Intune pro zařízení s iOSem
 
@@ -63,10 +63,10 @@ Pokud jste jako typ připojení vybrali **Vlastní VPN**, nakonfigurujte také t
 - **Identifikátor VPN**: jedná se o identifikátor aplikace VPN, kterou používáte. Získáte ho od poskytovatele připojení VPN.
 - **Zadejte páry klíč-hodnota pro vlastní atributy VPN**: přidejte nebo naimportujte **klíče** a **hodnoty**, pomocí nichž si přizpůsobíte připojení VPN. Také tyto hodnoty vám obvykle dodá poskytovatel připojení VPN.
 
-## <a name="apps-per-app-vpn-settings"></a>Nastavení aplikací (VPN pro jednotlivé aplikace)
+## <a name="automatic-vpn-settings"></a>Automatické nastavení sítě VPN
 
-- **VPN pro jednotlivé aplikace**: Tuto možnost povolte, pokud chcete používat adresy URL, které umožňují připojení VPN, když na ně uživatel přejde v prohlížeči Safari. Pokud chcete nakonfigurovat VPN pro jednotlivé aplikace, musíte nejprve v základním nastavení sítě VPN jako metodu ověřování vybrat **Certifikáty**.
-  - **Adresy URL Safari, které aktivují tuto síť VPN**: Tuto možnost vyberte, pokud chcete přidat jednu nebo více adres URL webu. Při návštěvě těchto adres URL je aktivní připojení VPN.
+- **VPN pro aplikaci**: Výběrem této možnosti se povolí VPN pro aplikace. To umožní, aby se připojení k síti VPN automaticky aktivovalo při otevření konkrétních aplikací. Kromě výběru této možnosti musíte také přiřadit aplikace k tomuto profilu VPN. Další podrobnosti najdete v [pokynech pro nastavení VPN pro aplikaci pro iOS](vpn-setting-configure-per-app.md). 
+  - **Adresy URL Safari, které aktivují tuto síť VPN**: Tuto možnost vyberte, pokud chcete přidat jednu nebo více adres URL webu. Při návštěvě těchto adres URL pomocí prohlížeče Safari na zařízení se automaticky naváže připojení k VPN.
 
 - **Síť VPN na vyžádání**: Toto nastavení vám umožní nakonfigurovat podmíněná pravidla, která řídí, kdy se má aktivovat připojení VPN. Můžete například vytvořit podmínku, že se připojení VPN použije, pouze pokud zařízení není připojené k firemní Wi-Fi síti. Můžete také vytvořit podmínku, která zajistí, že se připojení VPN neaktivuje, pokud zařízení nemá přístup k zadané doméně hledání DNS.
 

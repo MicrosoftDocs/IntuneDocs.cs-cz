@@ -15,18 +15,18 @@ ms.assetid: 439c33a6-e80c-4da9-ba09-a51fc36f62ad
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 01523dc4c887214794d4600219ce0b77549b4734
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 545c5b26b6c908f4a9e7066d3f76cbf774c8fbea
+ms.sourcegitcommit: 08e1b0d45c84eb9525a0a59f5540d41434da2814
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31027114"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39146692"
 ---
 # <a name="enroll-ios-devices-in-intune"></a>Registrace zařízení s iOSem v Intune
 
 Intune umožňuje správu mobilních zařízení (MDM) u iPadů a iPhonů, aby mohli jejich uživatelé získat přístup k firemnímu e-mailu a aplikacím.
 
-Jako správce Intune můžete povolit registraci zařízení s iOSem. Můžete uživatelům povolit registraci osobních zařízení, která se označuje jako registrace BYOD (přineste si vlastní zařízení). Můžete povolit také registraci zařízení vlastněných firmou.
+Jako správce Intune můžete povolit registraci zařízení s iOSem. Můžete uživatelům umožnit registraci osobních zařízení, která se označuje jako registrace BYOD (přineste si vlastní zařízení). Můžete povolit také registraci zařízení vlastněných firmou.
 
 ## <a name="prerequisites-for-ios-enrollment"></a>Předpoklady pro registraci zařízení s iOSem
 Před povolením zařízení s iOSem proveďte následující kroky:
@@ -38,7 +38,7 @@ Před povolením zařízení s iOSem proveďte následující kroky:
 Uživatelům můžete umožnit, aby si zaregistrovali svoje osobní zařízení pro správu Intune. Tato možnost se označuje jako Přineste si vlastní zařízení neboli BYOD. Po splnění požadavků a přiřazení uživatelských licencí si uživatelé můžou stáhnout aplikaci Portál společnosti z App Storu a podle pokynů v aplikaci si zařízení zaregistrovat.
 
 ## <a name="company-owned-ios-devices"></a>Zařízení s iOSem patřící společnosti
-U organizací, které svým uživatelům zařízení pořizují, Intune podporuje následující způsoby registrace zařízení s iOSem patřící společnosti:
+U organizací, které svým uživatelům zařízení nakupují, Intune podporuje následující způsoby registrace zařízení s iOSem patřících společnosti:
 
 - Program registrace zařízení (DEP) společnosti Apple
 - Apple School Manager
@@ -70,25 +70,11 @@ Přidružení uživatele je nezbytné pro podporu následujících funkcí:
   - Aplikace Portál společnosti
 
 **Postup registrace zařízení s iOSem vlastněných společností s přidružením uživatele**
-1. Když uživatel zapne své zařízení, zobrazí se výzva k dokončení postupu Pomocníka s nastavením. Během nastavování se uživateli zobrazí výzva k zadání přihlašovacích údajů. Uživatel musí použít přihlašovací údaje (tj. jedinečné osobní jméno nebo hlavní název uživatele) přidružené k jeho předplatnému Intune.
-
-2. Během nastavování se uživateli zobrazí výzva k zadání Apple ID. Aby mohlo zařízení nainstalovat aplikaci Portál společnosti, musí uživatel zadat Apple ID. Po dokončení nastavení můžou ID zadat i z nabídky nastavení iOS.
-
-3. Po dokončení nastavení musí zařízení s iOSem nainstalovat aplikaci Portál společnosti z App Storu.
-
-4. Uživatel se teď může přihlásit ke službě Portál společnosti pomocí hlavního názvu uživatele, který použil při nastavování zařízení.
-
-5. Po přihlášení se uživateli zobrazí výzva k registraci zařízení. Prvním krokem je identifikace zařízení. Aplikace zobrazí seznam zařízení s iOS, která jsou už ve společnosti registrovaná a mají přiřazený účet Intune uživatele. Uživatel by měl vybrat odpovídající zařízení.
-
-   Pokud zařízení ještě není ve společnosti zaregistrované, uživatel by měl vybrat **Nové zařízení** a pokračovat standardním postupem registrace.
-
-6. Na další obrazovce musí uživatel potvrdit sériové číslo nového zařízení. Uživatel může klepnout na odkaz pro **potvrzení sériového čísla** a spustit tak pokyny pro aplikaci Nastavení, která sériové číslo ověří. Potom musí uživatel zadat poslední čtyři znaky sériového čísla do aplikace Portál společnosti.
-
-   Tento krok ověřuje, jestli se jedná o firemní zařízení zaregistrované v Intune. Pokud sériové číslo zařízení neodpovídá, znamená to, že došlo k výběru nesprávného zařízení. Uživatel se musí vrátit na předchozí obrazovku a vybrat jiné zařízení.
-
-7. Po ověření sériového čísla aplikace Portál společnosti přesměruje uživatele na web Portál společnosti, kde registraci dokončí. Potom web uživatele vyzve, aby se vrátil do aplikace.
-
-8. Registrace je u konce. Uživatel teď může zařízení používat s úplnou sadou funkcí.
+1. Když uživatel zapne své zařízení, zobrazí se výzva k dokončení postupu Pomocníka s nastavením. 
+2. Po dokončení nastavení se uživateli zobrazí výzva k zadání Apple ID. Aby mohlo zařízení nainstalovat aplikaci Portál společnosti, musí uživatel zadat Apple ID. 
+3. Zařízení s iOSem automaticky nainstaluje aplikaci Portál společnosti z App Storu.
+4. Uživatelé by měli aplikaci Portál společnosti spustit a přihlásit se pomocí přihlašovacích údajů (jako je jedinečné osobní jméno nebo hlavní název uživatele), které jsou přidružené k jejich předplatnému v Intune. 
+5. Po přihlášení se registrace dokončí. Uživatelé teď můžou na zařízení používat kompletní sadu funkcí.
 
 ### <a name="about-corporate-owned-managed-devices-with-no-user-affinity"></a>O firemních spravovaných zařízeních bez přidružení uživatele
 
