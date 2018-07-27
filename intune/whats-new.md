@@ -15,12 +15,12 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 /ms.custom: intune-azure
-ms.openlocfilehash: f2018b5a1ca2a6981b04951bcf8ecd8819eb47e2
-ms.sourcegitcommit: 024cce10a99b12a13f32d3995b69c290743cafb8
+ms.openlocfilehash: 1d56312fdf0e81406587caf352feafd745bd4353
+ms.sourcegitcommit: 5251a630fb2c7a2e6f86abd84ab887f8eabc1481
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39039416"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39212065"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -135,7 +135,7 @@ Intune aktualizoval terminologii „Android for Work“ tak, aby odrážela změ
 #### <a name="rules-for-removing-devices----1609459---"></a>Pravidla odebírání zařízení <!-- 1609459 -->
 Jsou k dispozici nová pravidla, která vám umožňují automaticky odebrat zařízení, která se nastavený počet dnů neohlásila. Pokud chcete nové pravidlo zobrazit, přejděte do podokna **Intune** a vyberte **Zařízení** a **Pravidla čištění zařízení**.
 
-#### <a name="corporate-owned-single-cosu-use-support-for-android-devices----1630973---"></a>Podpora zařízení s Androidem ve vlastnictví firmy, pro použití s jednou aplikací (COSU) <!-- 1630973 -->
+#### <a name="corporate-owned-single-use-support-for-android-devices----1630973---"></a>Podpora zařízení s Androidem ve vlastnictví firmy pro použití s jednou aplikací <!-- 1630973 -->
 
 Intune teď podporuje zamykatelná zařízení s beznabídkovým režimem Androidu a s vysokou úrovní správy. To správcům umožní další uzamčení použití zařízení na jednu aplikaci nebo malou sadu aplikací a zabrání uživatelům povolit na zařízení jiné aplikace nebo na něm provádět jiné akce. Pokud chcete nastavit beznabídkový režim Androidu, přejděte do Intune > **Registrace zařízení** > **Registrace Androidu** > **Beznabídkový režim a registrace zařízení úloh**. Další informace najdete v článku o [nastavení registrace zařízení s beznabídkovým režimem Androidu Enterprise](android-kiosk-enroll.md).
 
