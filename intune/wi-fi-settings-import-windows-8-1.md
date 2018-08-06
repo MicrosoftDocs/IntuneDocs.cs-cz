@@ -1,30 +1,35 @@
 ---
-title: Import nastavení Wi-Fi pro zařízení s Windows 8.1 a novější
-titleSuffix: Microsoft Intune
-description: Jak naimportovat nastavení Wi-Fi z Windows do profilu Wi-Fi v Intune
+title: Import nastavení Wi-Fi pro zařízení s Windows v Microsoft Intune – Azure | Microsoft Docs
+description: Exportujte nastavení Wi-Fi ze zařízení s Windows jako soubor XML pomocí nástroje netsh wlan. Potom importem tohoto souboru do Intune vytvořte profil Wi-Fi pro zařízení s Windows 8.1, Windows 10 a Windows Holographic for Business.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/02/2018
+ms.date: 07/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 157416738e4607d5022f1c3c7ed8251a8e32fe3e
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 6ce5cdd9509ed3407491714ccfa853613eb43973
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31834012"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321131"
 ---
-# <a name="import-wi-fi-settings-for-windows-81-and-later-devices-in-microsoft-intune"></a>Import nastavení Wi-Fi pro zařízení s Windows 8.1 a novější verzí v Microsoft Intune
+# <a name="import-wi-fi-settings-for-windows-devices-in-intune"></a>Import nastavení Wi-Fi pro zařízení s Windows v Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Pro zařízení s Windows 8.1, Windows 10 Desktop, Windows 10 Mobile nebo Windows Holographic for Business můžete importovat konfigurační profil Wi-Fi, který jste si předtím vyexportovali do souboru.
+Pro zařízení s Windows můžete importovat konfigurační profil Wi-Fi, který jste předtím exportovali do souboru. **Pro zařízení, na kterých běží Windows 10 a vyšší, můžete [vytvořit profil Wi-Fi](wi-fi-settings-windows.md) přímo v Intune**.
+
+Platí pro:  
+- Windows 8.1 a vyšší
+- Windows 10 a novější
+- Windows 10 Desktop nebo Mobile
+- Windows Holographic for Business
 
 ## <a name="export-wi-fi-settings-from-a-windows-device"></a>Export nastavení Wi-Fi ze zařízení s Windows
 

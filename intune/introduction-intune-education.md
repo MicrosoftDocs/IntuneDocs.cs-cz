@@ -14,12 +14,12 @@ ms.assetid: ca36589b-804d-40b8-b112-9195d8897800
 ms.reviewer: travisj
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6d8335f1bac26b1a70c4e9aeaf7c8c6d1b34fc12
-ms.sourcegitcommit: 2061f7a442efc96c8afd5db764d11531563c7e39
+ms.openlocfilehash: 776cb1e03730bbac1d6e7ed36f411eba0ab94cff
+ms.sourcegitcommit: 47b55d211534f2e52e50d6b936c9a349e99fd222
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34718008"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39236034"
 ---
 # <a name="how-is-intune-for-education-different-from-the-full-device-management-experience-in-intune"></a>Jak se Intune for Education liší od plnohodnotného prostředí pro správu zařízení v Intune?
 
@@ -27,9 +27,9 @@ Intune for Education umožňuje učitelům a studentům dosáhnout produktivní 
 
 ![Porovnání konzoly Intune for Education a konzoly Intune](./media/intune-azure-vs-intuneEDU.png)
 
-Intune for Education umožňuje spravovat zařízení s Windows 10 pomocí kompletní sady funkcí MDM dostupné v Intune. Intune dokáže spravovat také další platformy, jako je iOS a Android, a umožňuje přístup k úplné sadě zásad ze stejné konzoly.
+Intune for Education umožňuje spravovat zařízení s Windows 10 a iOSem pomocí kompletní sady funkcí MDM dostupné v Intune. Plnohodnotné prostředí pro správu zařízení umožňuje spravovat zařízení s Windows, iOSem a Androidem.  
 
-Intune for Education je možné používat samostatně nebo v kombinaci s [kompletním prostředím pro správu zařízení dostupným v Intune](introduction-intune.md). Dá se používat také společně s ostatními nástroji dostupnými v sadě [Microsoft Education](https://microsoft.com/education), což usnadňuje použití Intune for Education s jinými užitečnými vzdělávacími nástroji od Microsoftu.
+Intune for Education je možné používat samostatně nebo v kombinaci s [kompletním prostředím pro správu zařízení dostupným v Intune](introduction-intune.md). Dá se používat také společně s ostatními nástroji dostupnými v sadě [Microsoft Education](https://microsoft.com/education), což usnadňuje použití Intune for Education s jinými užitečnými vzdělávacími nástroji od Microsoftu.  
 
 > [!VIDEO https://www.youtube.com/embed/ukrnCwcLvV8]
 

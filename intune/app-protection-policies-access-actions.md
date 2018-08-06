@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/17/2018
+ms.date: 07/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: f5ca557e-a8e1-4720-b06e-837c4f0bc3ca
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 00f422b5619115b44b8d39c2d735f2163c22167f
-ms.sourcegitcommit: dc8b6f802cca7895a19ec38bec283d4b3150d213
+ms.openlocfilehash: cdd3484f002a3719410d4f801073914e7f58fc4c
+ms.sourcegitcommit: e6013abd9669ddd0d6449f5c129d5b8850ea88f3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39138692"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39254480"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Selektivní vymazání dat pomocí akcí přístupu zásad ochrany aplikací v Intune
 
@@ -44,7 +44,7 @@ S využitím těchto nastavení můžete explicitně vymazat podniková data ze 
 8. Ve sloupci **Akce** vyberte akci, která se má provést, pokud uživatelé nesplňují požadavky. V některých případech lze pro jedno nastavení nakonfigurovat více akcí. Další informace najdete v tématu [Vytvoření a přiřazení zásad ochrany aplikací](app-protection-policies.md).
 
 >[!NOTE]
-> Pokud chcete použít nastavení **Modely zařízení**, zadejte středníkem oddělený seznam identifikátorů modelů. 
+> Pokud chcete použít nastavení **Modely zařízení nebo Výrobci zařízení**, zadejte seznam identifikátorů modelů s hodnotami oddělenými středníkem. Do seznamů s více hodnotami nevkládejte mezery. U těchto hodnot se nerozlišují velká a malá písmena. 
 
 ## <a name="policy-settings"></a>Nastavení zásad 
 
@@ -83,7 +83,10 @@ Pro Android budete moci pomocí rozevíracího seznamu **Nastavení** nakonfigur
 -  Výrobci zařízení
 
 Pokud chcete použít nastavení **Výrobci zařízení**, zadejte seznam výrobců zařízení s Androidem oddělených středníkem. Výrobce zařízení s Androidem najdete v nastavení zařízení.<br>
-Příklad zadání: *Výrobce A; Výrobce B; Google* 
+Příklad zadání: *Výrobce A; Výrobce B* 
+
+>[!NOTE]
+> Toto je několik obvyklých výrobců hlášených ze zařízení používajících Intune, které lze použít pro zadání: Asus; Blackberry; Bq; Gionee; Google; Hmd global; Htc; Huawei; Infinix; Kyocera; Lemobile; Lenovo; Lge; Motorola; Oneplus; Oppo; Samsung; Sharp; Sony; Tecno; Vivo; Vodafone; Xiaomi; Zte; Zuk
 
 Na zařízeních koncových uživatelů by klient Intune provedl akci založenou na jednoduché shodě řetězců modelu zařízení zadaných v okně Intune pro zásady ochrany aplikací. Párování zcela závisí na tom, co zařízení ohlásí. Jako správci IT vám doporučujeme toto nastavení otestovat na zařízeních od různých výrobcích a na různých modelech zařízení u malé skupiny uživatelů, abyste si ověřili, že se nastavení chová, jak má. Výchozí hodnotou je **Nenakonfigurováno**.<br>
 Nastavte jednu z následujících akcí: 

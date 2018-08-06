@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/08/2018
+ms.date: 07/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: aa556b2939986759aa92e63750fd161c05afbc38
-ms.sourcegitcommit: 6a9830de768dd97a0e95b366fd5d2f93980cee05
+ms.openlocfilehash: a7c61ae0d60b2baf8bf9760297a5e35cbb5188de
+ms.sourcegitcommit: 47b55d211534f2e52e50d6b936c9a349e99fd222
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34048015"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39236051"
 ---
 # <a name="sync-your-windows-device-manually"></a>Ruční synchronizace zařízení s Windows
 
@@ -40,7 +40,7 @@ Všechna zařízení s Windows, včetně následujících, se dají synchronizov
 * [Windows 10 Mobile](#windows-10-mobile)  
 * [Windows Phone 8.1](#windows-phone-81)    
 
-## <a name="sync-from-company-portal-app-for-windows"></a>Synchronizace z aplikace Portál společnosti pro Windows
+## <a name="sync-directly-from-company-portal-app-for-windows"></a>Přímá synchronizace z aplikace Portál společnosti pro Windows
 Následující postup použijte k ruční synchronizaci jakéhokoli zařízení s Windows 10 a aktualizací Creators Update (verze 1703) nebo novější.
 
 1.  Na svém zařízení otevřete aplikaci Portál společnosti.
@@ -49,7 +49,7 @@ Následující postup použijte k ruční synchronizaci jakéhokoli zařízení 
 
     ![Snímek obrazovky s domovskou stránkou aplikace Portál společnosti a zvýrazněnou možností Nastavení](./media/RS1_homePage_settings_04.png)  
     
-    ![Snímek obrazovky stránky nastavení v aplikaci Portál společnosti a zvýrazněným tlačítkem Synchronizovat](./media/RS1_settingspage_sync05.png)    
+    ![Snímek obrazovky stránky nastavení v aplikaci Portál společnosti a zvýrazněným tlačítkem Synchronizovat](./media/RS1_settingspage_sync05.png)  
 
 ## <a name="sync-from-settings-app"></a>Synchronizace z aplikace Nastavení 
 Následující postup použijte k ruční synchronizaci zařízení se systémem Microsoft HoloLens, Windows 10 Desktop, Windows 10 Mobile nebo Windows Phone 8.1 z aplikace Nastavení.

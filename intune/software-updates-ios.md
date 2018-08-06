@@ -1,59 +1,68 @@
 ---
-title: Konfigurace zásad aktualizace softwaru iOS v Microsoft Intune
-titlesuffix: ''
-description: Zásady aktualizací pro iOS můžete nakonfigurovat tak, že donutíte zařízení s iOSem, která jsou pod dohledem, aby automaticky instalovala nejnovější dostupnou aktualizaci softwaru.
+title: Konfigurace zásad aktualizace softwaru iOS v Microsoft Intune – Azure | Microsoft Docs
+description: V Microsoft Intune můžete vytvořit nebo přidat zásady konfigurace, které omezují, kdy se na zařízení s iOSem, která spravuje Intune nebo která jsou pod dohledem, mají automaticky instalovat aktualizace softwaru. Můžete zvolit datum a čas, kdy se aktualizace nemají instalovat. Můžete tyto zásady také přiřadit skupinám, uživatelům nebo zařízením a vyhledat případné chyby instalace.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2018
+ms.date: 07/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.openlocfilehash: 1d4223ae4feb417f77909b320cd0295347b44461
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: b9cc34b2fa45ae447a015f1b3105081041bd0afe
+ms.sourcegitcommit: 0a2e737c5520c1a1dec5d732e5df52b5614b27e1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31836584"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268834"
 ---
-# <a name="configure-ios-update-policies-in-microsoft-intune"></a>Konfigurace zásad aktualizace iOS v Microsoft Intune
+# <a name="configure-ios-update-policies-in-intune"></a>Konfigurace zásad aktualizací pro iOS v Intune
 
-Zásady aktualizací softwaru vám umožňují vynutit, aby se na zařízení s iOSem 10.3 a novějším, která jsou pod dohledem, automaticky instalovala nejnovější dostupná aktualizace softwaru. Tato funkce je dostupná jenom pro zařízení pod dohledem. Máte možnost nakonfigurovat dny a časy, kdy nechcete, aby zařízení instalovala aktualizace. 
+Zásady aktualizací softwaru vám umožňují vynutit, aby se na zařízení s iOSem, která jsou pod dohledem, automaticky instalovala nejnovější dostupná aktualizace operačního systému. Tato funkce je dostupná jenom pro zařízení pod dohledem. Při konfiguraci zásad můžete přidat dny a časy, kdy nechcete, aby se na zařízení instalovala aktualizace. 
 
-Když se zařízení ohlásí a je dostupná aktualizace a není to v zakázaném čase, každých 8 hodin se zařízení pokusí stáhnout a nainstalovat nejnovější aktualizaci operačního systému. Pro aktualizaci zařízení nemusí uživatel nic udělat. Zásada nezabrání tomu, aby operační systém aktualizoval uživatel.
+Zařízení se přihlašuje k Intune přibližně každých 8 hodin. Pokud je dostupná nějaká aktualizace a není to v zakázaném čase, zařízení stáhne a nainstaluje nejnovější aktualizaci operačního systému. Pro aktualizaci zařízení nemusí uživatel nic udělat. Zásady nebrání tomu, aby uživatel aktualizoval operační systém ručně.
 
-## <a name="configure-the-ios-update-policy"></a>Konfigurace zásad aktualizací pro iOS
+Tato funkce podporuje zařízení s iOSem 10.3 a novějším.
+
+## <a name="configure-the-policy"></a>Konfigurace zásad
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Intune** zvolte **Aktualizace softwaru** > **Zásady aktualizace iOSu**.
-4. V podokně se zásadami zvolte **Vytvořit** a potom zadejte název a popis zásady.
-5. Vyberte **Nastavení** > **Konfigurovat** a zadejte podrobnosti o časech, kdy nechcete u zařízení s iOSem vynucovat instalaci nejnovějších aktualizací. Můžete nakonfigurovat dny v týdnu, časové pásmo, počáteční čas a koncový čas.
-6. Tuto konfiguraci uložíte zvolením tlačítka **OK**. A jste zpátky v podokně **Vytvořit zásady aktualizace**. Zvolením možnosti **Vytvořit** vytvoříte zásadu a uložíte své nastavení.
+2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+3. Vyberte **Aktualizace softwaru** > **Aktualizovat zásady pro iOS** > **Vytvořit**.
+4. Zadejte název a popis zásad.
+5. Vyberte **Nastavení**. 
 
-Zásada se vytvoří a zobrazí se v podokně se seznamem zásad aktualizací pro iOS. Apple MDM nepovoluje možnost vynutit, aby zařízení nainstalovalo aktualizaci do konkrétního času nebo data. 
+    Zadejte podrobnosti o časech, kdy se nemá u zařízení s iOSem vynucovat instalace nejnovějších aktualizací. Toto nastavení vytvoří časový rámec omezení. Můžete nakonfigurovat dny v týdnu, časové pásmo, počáteční čas a koncový čas.
+
+6. Výběrem **OK** uložte změny. Výběrem **Vytvořit** vytvořte tyto zásady.
+
+Profil se vytvoří a zobrazí se v seznamu zásad. Apple MDM neumožňuje vynutit, aby se aktualizace nainstalovaly na zařízení do určitého času nebo data. 
 
 ## <a name="change-the-restricted-times-for-the-policy"></a>Změna časů s omezeným přístupem u zásady
 
-1.  V okně **Aktualizace softwaru** zvolte **Zásady aktualizací pro iOS**.
-2.  Vyberte zásady, které chcete aktualizovat.
-3.  Vyberte **Vlastnosti** a upravte informaci o časech s omezeným přístupem.
-4.  Vyberte dny v týdnu.
-5.  Časové pásmo, ve kterém se tyto zásady použijí
-6.  Počáteční a koncový čas pro zakázané hodiny
+1. V části **Aktualizace softwaru** vyberte **Aktualizovat zásady pro iOS**.
+2. Zvolte existující zásady > **Vlastnosti**.
+3. Aktualizace zakázaného času:
 
-## <a name="assign-an-ios-update-policy-to-users"></a>Přiřazení zásad aktualizací pro iOS uživatelům
+    1. Vyberte dny v týdnu.
+    2. Zvolte časové pásmo, ve kterém se tyto zásady použijí.
+    3. Zadejte počáteční a koncový čas pro zakázané hodiny.
 
-Pokud chcete přiřadit zásady aktualizací pro iOS uživatelům, vyberte zásady, které jste nakonfigurovali. Existující zásady najdete v podokně **Aktualizace softwaru** > **Zásady aktualizace iOSu**.
+    > [!NOTE]
+    > Pokud jsou **počáteční čas** i **koncový čas** nastavené na 12:00, je ovládací prvek pro dobu údržby vypnutý.
 
-1. Vyberte zásady, které chcete přiřadit uživatelům, a zvolte **Přiřazení**. Otevře se podokno, kde můžete vybrat skupiny zabezpečení Azure Active Directory a přiřadit je k zásadám.
-2. Zvolte **Vybrat skupiny** a otevřete tak podokno, kde se zobrazí skupiny zabezpečení v Azure AD. Pomocí přiřazení skupin k vyloučení i zahrnutí určete, kdo má k aplikaci přístup.
-3. Volbou **Uložit** zásady nasadíte u určených uživatelů.
+## <a name="assign-the-policy-to-users"></a>Přiřazení zásad uživatelům
 
-Tím jste zásady uplatnili na uživatele nebo zařízení. U zařízení používaných uživateli, na které zásady cílí, se vyhodnotí dodržování předpisů pro aktualizace. Tyto zásady podporují také zařízení bez uživatelů.
+Existující zásady se přiřazují skupinám, uživatelům nebo zařízením. Po přiřazení začnou zásady platit.
 
-## <a name="monitor-ios-device-installation-failures"></a>Sledování selhání instalace na zařízeních s iOSem
-<!-- 1352223 -->
-Sestava **Chyby instalace pro zařízení s iOSem** je k dispozici v podokně **Aktualizace softwaru**. V sestavě můžete zobrazit seznam zařízení s iOSem pod dohledem, na která byla zacílena zásada aktualizace iOSu a která se pokusila o aktualizaci, ale aktualizovat se je nepodařilo. Pro každé zařízení můžete zobrazit stav, proč nebylo automaticky aktualizováno. Zařízení, která jsou v pořádku a aktuální, se v seznamu nezobrazí. Jako aktuální definujeme nejnovější aktualizaci, kterou může samotné zařízení podporovat.
+1. V části **Aktualizace softwaru** vyberte **Aktualizovat zásady pro iOS**.
+2. Zvolte existující zásady > **Přiřazení**. 
+3. Vyberte skupiny, uživatele nebo zařízení Azure Active Directory, které se mají zahrnout nebo vyloučit z těchto zásad.
+4. Volbou **Uložit** zásady nasadíte u určených skupin.
+
+U zařízení používaných uživateli, na které zásady cílí, se vyhodnotí dodržování předpisů pro aktualizace. Tyto zásady podporují také zařízení bez uživatelů.
+
+## <a name="monitor-device-installation-failures"></a>Monitorování chyb instalace na zařízeních
+Možnost <!-- 1352223 -->
+**Aktualizace softwaru** > **Chyby instalace pro zařízení s iOSem** zobrazuje seznam zařízení s iOSem, která jsou pod dohledem a na která zásady aktualizace cílí, na kterých se provedl pokus o aktualizaci a která se nepodařilo aktualizovat. U každého zařízení můžete zobrazit, proč se automaticky neaktualizovalo. Zařízení, která jsou v pořádku a aktuální, se v seznamu nezobrazují. „Aktuální“ zařízení obsahují nejnovější aktualizaci, kterou samotné zařízení podporuje.
 

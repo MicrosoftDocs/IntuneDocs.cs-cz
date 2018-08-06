@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/25/2018
+ms.date: 07/25/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f241c5bece72b44a6bd3c9047b5997bcd8879ec5
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 8bb03becae1f28a3f5490a53576d5183c0b3ffaa
+ms.sourcegitcommit: 0d08daa162212e6cdd8a6ee3ad7ed42c6e6824e4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905185"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335822"
 ---
 # <a name="what-are-microsoft-intune-device-profiles"></a>Co jsou profily zařízení v Microsoft Intune?
 
@@ -113,6 +113,13 @@ Tato funkce podporuje:
 - iOS
 - macOS
 - Windows 8.1 (pouze import)
+
+## <a name="esim-cellular---public-preview"></a>Mobilní profily eSIM ve verzi Public Preview
+
+[Mobilní profily eSIM](esim-device-configuration.md) vám umožňují na spravovaných zařízeních konfigurovat mobilní datové tarify pro přístup k internetu a datům.  Po získání aktivačních kódů od mobilního operátora můžete použít Intune k importování těchto aktivačních kódů a potom je můžete přiřadit k zařízením podporujícím eSIM.
+
+Tato funkce podporuje:
+- Windows 10 Fall Creators Update a novější
 
 ## <a name="education"></a>Vzdělávání
 [Nastavení vzdělávání – Windows 10](education-settings-configure.md) konfiguruje možnosti pro [aplikaci Windows Zkuste si test](https://education.microsoft.com/gettrained/win10takeatest). Když tyto možnosti nakonfigurujete, žádnou jinou aplikaci nepůjde na zařízení spustit, dokud nebude test dokončen.

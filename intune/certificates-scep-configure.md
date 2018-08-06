@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0d42500b9476e0b6c7bc9aaaba1ea4333fd136c6
-ms.sourcegitcommit: 29914cc467e69711483b9e2ccef887196e1314ef
+ms.openlocfilehash: ce017f323ebbe4095f5aa31990878afce0116573
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36297901"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321233"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -341,7 +341,7 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte **název** a **popis** profilu certifikátu SCEP.
 4. V rozevíracím seznamu **Platforma** vyberte platformu zařízení pro tento certifikát SCEP. V současné době můžete pro nastavení omezení zařízení zvolit jednu z těchto platforem:
-   - **Androidem**
+   - **Androidemem**
    - **iOS**
    - **macOS**
    - **Windows Phone 8.1**
@@ -462,4 +462,6 @@ Služba Intune Connector od verze 6.1806.x.x zaznamenává události do **Prohl�
 | 0x0FFFFFFFF | Unknown_Error  | Vaši žádost nemůžeme dokončit, protože došlo k chybě na straně serveru. Zkuste to prosím znovu. |
 
 ## <a name="next-steps"></a>Další kroky
-[Použijte certifikáty PKCS](certficates-pfx-configure.md) nebo [vystavte certifikáty PKCS z webové služby správce infrastruktury veřejných klíčů Symantec](certificates-symantec-configure.md).
+
+- [Použití certifikátů SCEP](certficates-pfx-configure.md) nebo [vydání certifikátů PKCS z webové služby správce infrastruktury veřejných klíčů Symantec](certificates-symantec-configure.md)
+- [Přidání certifikační autority třetí strany pro používání SCEP v Intune](certificate-authority-add-scep-overview.md)

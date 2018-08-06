@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3a231adf4e1f5687bc88c8c9b15241d3f89e711d
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 2d2fc7f697d03c1ffcb952cd30e29f4959f2b7e9
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905327"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321165"
 ---
 # <a name="email-profile-settings-for-ios-devices---intune"></a>Nastavení e-mailového profilu na zařízeních s iOSem – Intune
 
@@ -44,13 +44,13 @@ Pomocí nastavení e-mailového profilu můžete konfigurovat zařízení s iOSe
 - **Atribut e-mailové adresy z AAD**: Zvolte, jak se generuje e-mailová adresa uživatele. Pokud chcete jako e-mailovou adresu použít úplný hlavní název, vyberte **Hlavní název uživatele** (`user1@contoso.com` nebo `user1`). Pokud chcete pro přihlášení k Exchange použít primární adresu SMTP, vyberte **Primární adresa SMTP** (`user1@contoso.com`).
 - **Metoda ověřování**: Jako metodu ověřování používanou e-mailovým profilem vyberte buď **Uživatelské jméno a heslo**, nebo **Certifikáty**. Vícefaktorové ověřování Azure není podporované.
   - Pokud jste vybrali **Certifikát**, vyberte profil klienta SCEP nebo PKCS, který jste dříve vytvořili a který se použije k ověření připojení Exchange.
-- **SSL**: Při posílání a přijímání e-mailů a komunikaci se serverem Exchange se použije komunikace SSL (Secure Sockets Layer).
-- **S/MIME**: Odchozí e-maily se budou posílat s podpisovým certifikátem S/MIME.
-  - Pokud jste vybrali **Certifikát**, vyberte profil certifikátu PKCS, který jste dříve vytvořili za účelem ověřování připojení Exchange.
+- **SSL**: Použijte možnost **Povolit**, aby se při posílání a přijímání e-mailů a při komunikaci se serverem Exchange použila komunikace SSL (Secure Sockets Layer).
+- **S/MIME**: Použijte možnost **Povolit S/MIME**, aby se odchozí e-maily odesílaly s podpisem S/MIME. Pokud je tato možnost povolená, můžete také šifrovat e-maily pro příjemce, kteří můžou přijímat zašifrované e-maily a dešifrovat přijaté e-maily od odesílatelů.
+  - Pokud jste vybrali **Certifikát**, vyberte profil certifikátu PKCS, který jste dříve vytvořili za účelem ověřování připojení Exchange nebo šifrování e-mailové komunikace.
 - **Počet e-mailů k synchronizaci**: Zvolte počet dní, za které se mají e-maily synchronizovat. Nebo vyberte **Bez omezení**, pokud chcete synchronizovat všechny dostupné e-maily.
-- **Povolit přesouvání zpráv do jiných e-mailových účtů**: Umožňuje uživatelům přesunovat e-mailové zprávy mezi různými účty, které si na svých zařízeních nakonfigurovali.
-- **Umožnit posílání e-mailů z aplikací třetích stran**: Umožňuje uživateli, aby tento profil vybral jako výchozí účet pro posílání e-mailů, a povolí aplikacím třetích stran otevírání e-mailů v nativních e-mailových aplikacích, například k připojování souborů k e-mailům.
-- **Synchronizovat nedávno použité e-mailové adresy**: Umožňuje uživatelům synchronizovat se serverem seznam e-mailových adres, které se na zařízení nedávno používaly.
+- **Povolit přesouvání zpráv do jiných e-mailových účtů**: Možnost **Povolit** umožňuje uživatelům přesouvat e-mailové zprávy mezi různými účty, které si na svých zařízeních nakonfigurovali.
+- **Umožnit posílání e-mailů z aplikací třetích stran**: Možnost **Povolit** umožňuje uživateli, aby tento profil vybral jako výchozí účet pro posílání e-mailů, a povolí aplikacím třetích stran otevírání e-mailů v nativních e-mailových aplikacích, například k připojování souborů k e-mailům.
+- **Synchronizovat nedávno použité e-mailové adresy**: Možnost **Povolit** umožňuje uživatelům synchronizovat se serverem seznam e-mailových adres, které se na zařízení nedávno používaly.
 
 ## <a name="next-steps"></a>Další kroky
 [Konfigurace nastavení e-mailu v Intune](email-settings-configure.md)

@@ -5,7 +5,7 @@ keywords: Sada SDK
 author: Erikre
 manager: dougeby
 ms.author: erikre
-ms.date: 05/16/2018
+ms.date: 07/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ac85478abed049487c028c58637e7937876d2198
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: 87333610380ef34e1d832694a30bfe97388bcb62
+ms.sourcegitcommit: e6013abd9669ddd0d6449f5c129d5b8850ea88f3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34449866"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39254395"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -463,7 +463,20 @@ Není třeba konfigurovat žádné další hodnoty manifestu.
 
 V případě potřeby můžete zadat pole Authority a NonBrokerRedirectURI.
 
-Tým pro sadu Intune SDK bude vyžadovat ID vaší aplikace (ID klienta). Tento údaj najdete na portálu [Azure Portal](https://portal.azure.com/) v části **Všechny aplikace** ve sloupci **ID aplikace**. Informace o registraci aplikace s Azure AD najdete [tady](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications). Tým pro sadu Intune SDK můžete kontaktovat na adrese msintuneappsdk@microsoft.com.
+Pomocí následujícího postupu si aplikaci zaregistrujte v Azure AD.
+
+Na webu Azure Portal:
+1.  Přejděte do okna **Azure Active Directory**.
+2.  Vyberte pro danou aplikaci možnost **Registrace aplikace**.
+3.  V části **Nastavení** pod záhlavím **Přístup přes rozhraní API** vyberte **Požadovaná oprávnění**. 
+4.  Klikněte na **+ Přidat**.
+5.  Klikněte na **Vyberte rozhraní API**. 
+6.  Do vyhledávacího pole zadejte **Microsoft Mobile Application Management** (Správa mobilních aplikací Microsoftu).
+7.  V seznamu rozhraní API vyberte **Microsoft Mobile Application Management** (Správa mobilních aplikací Microsoftu) a kliknutím proveďte výběr.
+8.  Vyberte **Read and Write the User’s App Management Data** (Čtení a zápis dat správy uživatelských aplikací).
+9.  Klikněte na **Hotovo**.
+
+Informace o registraci aplikace s Azure AD najdete [tady](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications). 
 
 Podívejte se také na požadavky pro [podmíněný přístup](#conditional-access), které najdete níže.
 
@@ -1418,7 +1431,7 @@ Následující část obsahuje postup pro vyžadování výzvy uživateli při s
 > Mezi výhody **výchozí registrace** patří zjednodušený způsob získání zásad ze služby APP-WE pro aplikaci na daném zařízení.
 
 ### <a name="general-requirements"></a>Obecné požadavky
-* Tým pro sadu Intune SDK bude vyžadovat ID vaší aplikace. Tento údaj najdete na portálu [Azure Portal](https://portal.azure.com/) v části **Všechny aplikace** ve sloupci pro **ID aplikace**. Vhodným způsobem, jak kontaktovat tým pro sadu Intune SDK, je odeslání e-mailu na adresu msintuneappsdk@microsoft.com.
+* Pomocí postupu v [běžných konfiguracích ADAL #2](https://docs.microsoft.com/en-us/intune/app-sdk-android#common-adal-configurations) zkontrolujte, jestli je vaše aplikace zaregistrovaná ve službě Správa mobilních aplikací Intune.
 
 ### <a name="working-with-the-intune-sdk"></a>Práce se sadou Intune SDK
 Tyto pokyny se týkají všech vývojářů aplikací pro Android a Xamarin, kteří chtějí při použití na zařízení koncového uživatele vyžadovat zásady ochrany aplikací Intune.

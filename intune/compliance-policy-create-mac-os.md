@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/16/2018
+ms.date: 06/27/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a797c68ca43a6173a4bac70e914d3f763ce5e6d0
-ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
+ms.openlocfilehash: 6bbb09944db602b4b5a70c89e8089b1692c45223
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31442572"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321437"
 ---
 # <a name="add-a-device-compliance-policy-for-macos-devices-with-intune"></a>Přidání zásad dodržování předpisů pro zařízení s macOS v Intune
 
@@ -83,6 +83,13 @@ Následující tabulka popisuje, jak jsou spravovaná nevyhovující nastavení 
 ### <a name="encryption"></a>Šifrování
 
 - **Šifrování úložiště dat na zařízení**: Vyberte **Vyžadovat** a zašifrujte úložiště dat na vašich zařízeních.
+
+### <a name="device-security"></a>Zabezpečení zařízení
+Firewall chrání zařízení před neoprávněným přístupem do sítě. Pomocí firewallu můžete ovládat připojení pro jednotlivé aplikace. 
+
+- **Firewall**: **Aktivací** umožníte ochranu zařízení před neoprávněným přístupem. Aktivace této funkce vám umožní zpracovávat příchozí internetová připojení a používat neviditelný režim. Nastavení **Nenakonfigurováno** (výchozí) ponechá firewall vypnutý a síťový provoz bude povolený (neblokovaný).
+- **Příchozí připojení**: **Blokuje** všechna příchozí síťová připojení s výjimkou připojení potřebných pro základní internetové služby, jako jsou DHCP, Bonjour a IPSec. Toto nastavení blokuje také všechny služby sdílení včetně sdílení obrazovky, vzdáleného přístupu, sdílení hudby iTunes a dalších. Nastavení **Nenakonfigurováno** (výchozí) povoluje příchozí připojení a služby sdílení. 
+- **Neviditelný režim**: **Aktivací** neviditelného režimu zakážete zařízení odpovídat na zjišťovací požadavky, které můžou provádět uživatelé se zlými úmysly. Při aktivaci této možnosti bude zařízení oprávněným aplikacím dále odpovídat na příchozí požadavky. Nastavení **Nenakonfigurováno** (výchozí) ponechá neviditelný režim vypnutý.
 
 ## <a name="assign-user-groups"></a>Přiřazení skupin uživatelů
 

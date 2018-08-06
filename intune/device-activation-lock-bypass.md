@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 9ca3b0ba-e41c-45fb-af28-119dff47c59f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2a8c14e523d33c9e0994134ff1ef468b290b3992
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: f973bd36faef14232d6449c8ce9d1dc92bf32170
+ms.sourcegitcommit: 0bddd8a76201746e8835c4b792f34377b45fad60
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31022505"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39356569"
 ---
 # <a name="bypass-activation-lock-on-supervised-ios-devices-with-intune"></a>Vyřazení zámku aktivace přes Intune na zařízeních s iOSem, která jsou pod dohledem
 
@@ -66,15 +66,23 @@ Než budete moct zámek aktivace na zařízeních vyřadit, musíte ho nejdřív
 ## <a name="how-to-use-activation-lock-bypass"></a>Jak používat vyřazení zámku aktivace
 
 >[!IMPORTANT]
->Pokud je otevřená aplikace Najít iPhone, při vyřazení zámku aktivace na zařízení se automaticky použije nový zámek aktivace. Z tohoto důvodu **byste měli mít před provedením tohoto postupu zařízení fyzicky u sebe**.
+>Pokud je spuštěná aplikace Najít iPhone, při vyřazení zámku aktivace na zařízení se automaticky použije nový zámek aktivace. Z tohoto důvodu **byste měli mít před provedením tohoto postupu zařízení fyzicky u sebe**.
 
-Akce Intune se vzdáleným zařízením **Vynechat zámek aktivace** odebere zámek aktivace ze zařízení s iOSem bez použití Apple ID a hesla uživatele. Když zámek aktivace vynecháte, zařízení ho znovu zapne při spuštění aplikace Najít iPhone. Zámek aktivace vynechejte jenom v případě, že máte k zařízení fyzický přístup.
+Akce Intune se vzdáleným zařízením **Vynechat zámek aktivace** odebere zámek aktivace ze zařízení s iOSem bez vyžadování Apple ID a hesla uživatele. Po vynechání zámku aktivace ho zařízení znovu zapne při spuštění aplikace Najít iPhone. Zámek aktivace vynechejte jenom v případě, že máte k zařízení fyzický přístup.
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V okně **Intune** zvolte **Zařízení**.
-4. V okně **Zařízení** zvolte **Všechna zařízení**.
-5. V seznamu spravovaných zařízení zvolte zařízení s iOSem, které je pod dohledem, zvolte **Více** a potom zvolte akci se vzdáleným zařízením **Vynechat zámek aktivace**.
+2. Zvolte **Všechny služby** > **Intune**.
+3. V okně **Intune** vyberte **Zařízení**.
+4. V okně **Zařízení** vyberte **Všechna zařízení**.
+5. Na seznamu zařízení, která spravujete, vyberte vzdálenou akci zařízení **Vynechat zámek aktivace**.
+6. Přejděte do hardwarové části zařízení a v části **Podmíněný přístup** zkopírujte hodnotu **Kód pro překonání zámku aktivace**.
+
+    >[!NOTE]
+    >Než zařízení obnovíte do továrního nastavení, zkopírujte kód pro překonání zámku. Když nastavení zařízení obnovíte před zkopírováním kódu, kód se z Azure odebere.
+
+7.  Přejděte do okna zařízení **Přehled** a pak vyberte **Obnovení továrního nastavení**.
+8.  Jakmile se zařízení obnoví, zobrazí se výzva k zadání *Apple ID* a *hesla*. Pole *ID* nechte prázdné a jako *heslo* zadejte **kód pro překonání zámku**. Tímto se účet odebere ze zařízení. 
+
 
 ## <a name="next-steps"></a>Další kroky
 

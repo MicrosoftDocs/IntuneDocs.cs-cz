@@ -1,67 +1,76 @@
 ---
-title: Nastavení sítě VPN v Microsoft Intune pro zařízení s Androidem
-titlesuffix: ''
-description: Zjistěte, jaká nastavení můžete v Intune použít ke konfiguraci připojení VPN na zařízeních s Androidem.
+title: Konfigurace nastavení VPN pro zařízení s Androidem v Microsoft Intune – Azure | Microsoft Docs
+description: Při vytváření konfiguračního profilu VPN pro zařízení s Androidem a Androidem for Work zadejte název připojení, IP adresu nebo plně kvalifikovaný název domény serveru VPN, zvolte způsob ověřování uživatelů na serveru VPN a pak zvolte typy připojení Citrix, SonicWall, Check Point Capsule, Pulse Secure a Edge.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/2/2018
+ms.date: 7/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7f52c43f8918589c1b66034ad68908f4d5ddba6d
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: f02a76def463c4ef1c3ee24b021df3185d263ecf
+ms.sourcegitcommit: e4832ea81b9a707a6ad0699a18c8b3988413c283
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905117"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279317"
 ---
-# <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-android"></a>Nastavení sítě VPN v Microsoft Intune pro zařízení s Androidem 
+# <a name="configure-vpn-settings-for-devices-running-android-in-intune"></a>Konfigurace nastavení VPN pro zařízení s Androidem v Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Tento článek popisuje, jaká nastavení můžete v Intune použít ke konfiguraci připojení VPN na zařízeních s Androidem.
 
-
 Nastavení sítě VPN můžete nakonfigurovat pro tyto platformy:
 
 - [Androidemem](#android-vpn-settings)
-- [Zařízení s pracovním profilem Androidu](#android-for-work-vpn-settings)
+- [Android for work](#android-for-work-vpn-settings)
 
 V závislosti na tom, jaká nastavení zvolíte, nebudou konfigurovatelné všechny následující hodnoty.
 
 ## <a name="android-vpn-settings"></a>Nastavení VPN v Androidu
-**Název připojení** – zadejte název tohoto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí seznamem dostupných připojení VPN.
-- **IP adresa nebo plně kvalifikovaný název domény** – zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojí. Příklady: **192.168.1.1**, **vpn.contoso.com**.
-- **Metoda ověřování** – zvolte způsob, kterým se zařízení ověřují vůči serveru VPN:
-    - **Certifikáty** – vyberte profil certifikátu SCEP nebo PKCS, který jste vytvořili za účelem ověřování připojení. Další informace o profilech certifikátů najdete v článku [Konfigurace certifikátů](certificates-configure.md).
-    - **Uživatelé jméno a heslo** – koncoví uživatelé musí zadat uživatelské jméno a heslo, aby se mohli přihlásit k VPN serveru.
-- **Typ připojení** – z následujícího seznamu dodavatelů vyberte typ připojení VPN:
-    - **Check Point Capsule VPN**
-    - **Cisco AnyConnect**
-    - **SonicWall Mobile Connect**
-    - **F5 Edge Client**
-    - **Pulse Secure**
-    - **Citrix**
 
-- **Otisk prstu** (pouze Check Point Capsule VPN) – zadejte řetězec, například „Kód otisku prstu Contoso“, který se použije k ověření, že je možné VPN serveru důvěřovat. Otisk prstu se může odeslat klientovi, aby věděl, že může důvěřovat jakémukoli serveru, který při připojování nabízí ten samý otisk. Pokud zařízení ještě otisk prstu nemá, vyzve uživatele, aby důvěřoval VPN serveru, ke kterému se připojuje. Současně přitom zobrazuje otisk prstu (uživatel ho ručně ověří a rozhodne se důvěřovat připojení).
-- **Zadejte páry klíč-hodnota pro atributy Citrix VPN** (pouze Citrix) – zadejte páry klíče a hodnoty, které poskytl Citrix, a nakonfigurujte vlastnosti připojení VPN.
+- **Název připojení**: zadejte název tohoto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí dostupná připojení VPN.
+- **IP adresa nebo plně kvalifikovaný název domény**: zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojí. Zadejte například **192.168.1.1** nebo **vpn.contoso.com**.
 
-## <a name="android-work-profile-device-vpn-settings"></a>Nastavení sítě VPN v zařízeních s pracovním profilem Androidu
+  - **Metoda ověřování**: Zvolte způsob, kterým se zařízení ověřují vůči serveru VPN. Možnosti:
 
-**Název připojení** – zadejte název tohoto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí seznamem dostupných připojení VPN.
-- **IP adresa nebo plně kvalifikovaný název domény** – zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojí. Příklady: **192.168.1.1**, **vpn.contoso.com**.
-- **Metoda ověřování** – zvolte způsob, kterým se zařízení ověřují vůči serveru VPN:
-    - **Certifikáty** – vyberte profil certifikátu SCEP nebo PKCS, který jste vytvořili za účelem ověřování připojení. Další informace o profilech certifikátů najdete v článku [Konfigurace certifikátů](certificates-configure.md).
-    - **Uživatelé jméno a heslo** – koncoví uživatelé musí zadat uživatelské jméno a heslo, aby se mohli přihlásit k VPN serveru.
-- **Typ připojení** – z následujícího seznamu dodavatelů vyberte typ připojení VPN:
-    - **Check Point Capsule VPN**
-    - **Cisco AnyConnect**
-    - **SonicWall Mobile Connect**
-    - **F5 Edge Client**
-    - **Pulse Secure**
+    - **Certifikáty**: Vyberte existující profil certifikátu SCEP nebo PKCS pro ověřování připojení. [Konfigurace certifikátů](certificates-configure.md) obsahuje kroky pro vytvoření profilu certifikátu.
+    - **Uživatelské jméno a heslo**: Při přihlašování k serveru VPN se koncovým uživatelům zobrazí výzva k zadání uživatelského jména a hesla.
 
+- **Typ připojení**: Vyberte typ připojení VPN. Možnosti:
+
+  - **Check Point Capsule VPN**
+  - **Cisco AnyConnect**
+  - **SonicWall Mobile Connect**
+  - **F5 Edge Client**
+  - **Pulse Secure**
+  - **Citrix**
+
+- **Otisk prstu** (pouze Check Point Capsule VPN): Zadejte řetězec, například **Kód otisku prstu Contoso**, který se použije k ověření, že serveru VPN je možné důvěřovat. Otisk prstu se může odeslat klientovi, aby věděl, že může důvěřovat jakémukoli serveru, který má při připojování ten samý otisk. Pokud zařízení otisk prstu nemá, vyzve uživatele, aby danému serveru VPN důvěřoval. Současně přitom zobrazuje otisk prstu. Uživatel ho ručně ověří a zvolí důvěryhodnost připojení.
+- **Zadejte páry klíč-hodnota pro atributy Citrix VPN** (pouze Citrix): Zadejte páry klíče a hodnoty, které poskytl Citrix. Tyto hodnoty nakonfigurují vlastnosti připojení VPN.
+
+## <a name="android-for-work-vpn-settings"></a>Nastavení VPN v Androidu for Work
+
+- **Název připojení**: zadejte název tohoto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí dostupná připojení VPN.
+- **IP adresa nebo plně kvalifikovaný název domény**: zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojí. Zadejte například **192.168.1.1** nebo **vpn.contoso.com**.
+
+  - **Metoda ověřování**: Zvolte způsob, kterým se zařízení ověřují vůči serveru VPN. Možnosti:
+  
+    - **Certifikáty**: Vyberte existující profil certifikátu SCEP nebo PKCS pro ověřování připojení. [Konfigurace certifikátů](certificates-configure.md) obsahuje kroky pro vytvoření profilu certifikátu.
+    - **Uživatelské jméno a heslo**: Při přihlašování k serveru VPN se koncovým uživatelům zobrazí výzva k zadání uživatelského jména a hesla.
+
+- **Typ připojení**: Vyberte typ připojení VPN. Možnosti:
+
+  - **Check Point Capsule VPN**
+  - **Cisco AnyConnect**
+  - **SonicWall Mobile Connect**
+  - **F5 Edge Client**
+  - **Pulse Secure**
+
+## <a name="next-steps"></a>Další kroky
+[Profily VPN v Intune](vpn-settings-configure.md)

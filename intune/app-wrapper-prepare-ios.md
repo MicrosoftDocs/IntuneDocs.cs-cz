@@ -14,12 +14,12 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: edbd802b5f0482fc5dbaa801308447e2f8061189
-ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
+ms.openlocfilehash: 050660b4da609d8e6c0dbf969eb71aa79945262a
+ms.sourcegitcommit: e6013abd9669ddd0d6449f5c129d5b8850ea88f3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38224931"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39254531"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro iOS na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -339,7 +339,7 @@ Než aplikaci zabalíte, můžete jí udělit taková *oprávnění*, kterými z
 
     b.  Zapněte příslušné schopnosti. Podrobné informace o jednotlivých schopnostech a o tom, jak určit správné hodnoty, najdete v článku věnovaném [přidání schopností](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) na webu iOS Developer Library.
 
-    c.  Poznamenejte si všechna ID, která v průběhu procesu vytvoříte.
+    c.  Poznamenejte si všechna ID, která v průběhu procesu vytvoříte. Můžou se označovat také jako hodnoty `AppIdentifierPrefix`.
 
     d.  Sestavte a podepište aplikaci, kterou chcete zabalit.
 
@@ -349,7 +349,7 @@ Než aplikaci zabalíte, můžete jí udělit taková *oprávnění*, kterými z
 
     b.  Vytvořte pro svoji aplikaci profil pro zřizování. Pokyny najdete v článku věnovaném [splnění předpokladů pro nástroj Intune App Wrapping pro iOS](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/).
 
-    c.  V profilu pro zřizování povolte stejná oprávnění, jaká máte ve své aplikaci. Budete muset zadat stejná ID, která jste zadali během vývoje aplikace.
+    c.  V profilu pro zřizování povolte stejná oprávnění, jaká máte ve své aplikaci. Budete muset zadat stejná ID (hodnoty `AppIdentifierPrefix`), která jste zadali během vývoje aplikace. 
 
     d.  Dokončete průvodce zřizovacím profilem a stáhněte si soubor.
 

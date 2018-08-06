@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0152d0cb7af418b500c1ac5991f2356bd2e19965
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 1b1f54486ab2c3d98e663cfddded346eb61662ae
+ms.sourcegitcommit: e4832ea81b9a707a6ad0699a18c8b3988413c283
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909078"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279419"
 ---
 # <a name="connect-your-intune-account-to-your-android-enterprise-account"></a>Propojení účtu Intune s účtem Androidu Enterprise
 
@@ -51,7 +51,7 @@ Kvůli podpoře zařízení s pracovním profilem Androidu a zařízení s Andro
 
 ## <a name="disconnect-your-android-enterprise-administrative-account"></a>Odpojení účtu pro správu Androidu Enterprise
 
-Registraci a správu Androidu Enterprise můžete vypnout. Při zvolení příkazu **Odpojit** v konzole pro správu Intune se z registrace odeberou všechna zaregistrovaná zařízení s pracovním profilem Androidu a zařízení v beznabídkovém režimu. Zároveň se odebere vztah mezi účtem Androidu Enterprise a Intune.
+Registraci a správu Androidu Enterprise můžete vypnout. Pokud to chcete udělat, je nutné nejprve vyřadit z provozu všechna zaregistrovaná zařízení s pracovním profilem Androidu. Pak volbou příkazu **Odpojit** v konzole pro správu Intune odeberte z registrace všechna zaregistrovaná zařízení s pracovním profilem Androidu a zařízení v beznabídkovém režimu. Touto akcí se odebere také vztah mezi účtem Androidu Enterprise a Intune.
 
 1. Jako správce Intune vyberte na portálu [Azure Portal](https://portal.azure.com) možnost **Všechny služby** > **Monitorování a správa** > **Intune**.
 2. Zvolte **Registrace zařízení** > **Registrace Androidu** > **Spravovaný obchod Google Play** > **Odpojit**.

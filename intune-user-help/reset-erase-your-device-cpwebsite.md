@@ -1,11 +1,11 @@
 ---
-title: Resetování zařízení z webu Portál společnosti | Dokumentace Microsoftu
-description: ''
+title: Obnovení továrního nastavení zařízení z webu Portál společnosti | Microsoft Docs
+description: Zjistěte, jak z webu Portál společnosti obnovit své zařízení do továrního nastavení.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/02/2017
+ms.date: 07/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,36 +17,32 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: edb5f8306d728abb62b806f287a31b6a75d25cbd
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 3f9c59b1bfccabd8489cd466c645dc4a0051e97c
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31016981"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321573"
 ---
-# <a name="reset-your-device-from-the-company-portal-website"></a>Resetování zařízení z webu Portál společnosti
+# <a name="reset-your-device-from-the-company-portal-website"></a>Obnovení továrního nastavení zařízení z webu Portál společnosti
 
-V případě ztráty nebo odcizení zařízení může být vhodné restovat jeho tovární nastavení za účelem zabránění neoprávněného přístupu k vašim údajům. Můžete taky vzdáleně resetovat zařízení pomocí [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog). Web Portál společnosti je webová stránka sloužící ke správě počítačů a zařízení zaregistrovaných v Intune. Na tomto webu můžete plnit většinou stejné úkoly, jako když používáte aplikaci Portál společnosti.
+Zjistěte, jak z webu Portál společnosti můžete použité, ztracené nebo odcizené zařízení obnovit do výchozího továrního nastavení.  
 
-Pokud zařízení resetujete, nebude již uvedené na Portálu společnosti a bude restované do výchozího továrního nastavení.
+Po obnovení továrního nastavení se zařízení na webu Portál společnosti přestane zobrazovat. Aplikace a soubory z dřívějška se vymažou a zařízení se obnoví do výchozího továrního nastavení.
 
 > [!Note]
-> Následující kroky můžete také provést na jiném zaregistrovaném zařízení tak, že na něm otevřete aplikaci Portál společnosti a pomocí stejných kroků dokončíte resetování. 
+> Následující postup můžete provést i z jiného zaregistrovaného zařízení. Otevřete na daném zařízení aplikaci Portál společnosti a podobným postupem dokončete obnovení továrního nastavení zařízení.  
 
-Resetování zařízení:
+1. Otevřete [web Portál společnosti](https://portal.manage.microsoft.com/#helpdeskDeskDialog) a vyberte tlačítko __nabídky__ > __Moje zařízení__.
 
-1. Na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog) klepněte na tlačítko __nabídky__ a potom vyberte __Moje zařízení__.
+2. Vyberte zařízení, které chcete obnovit do továrního nastavení.
 
-2. Na stránce __Moje zařízení__ vyberte název zařízení, které chcete přejmenovat.
+    ![Snímek obrazovky stránky Moje zařízení se dvěma dlaždicemi, které zobrazují neznámá zařízení s obecným názvem. Šedý banner pod zařízeními vyzývá uživatele k identifikaci používaného zařízení nebo přidání nového.](./media/macOS_enroll_002_tap_here_banner.png)
 
-   ![Snímek obrazovky se stránkou Moje zařízení s několika neidentifikovanými zařízeními zobrazenými nad výzvou k registraci zařízení, která nejsou v seznamu, nebo k identifikaci neidentifikovaných zařízení](./media/macOS_enroll_002_tap_here_banner.png)
+3. Zařízení se otevře v místním okně. Vyberte **Resetovat**.  
 
-3. Zařízení se otevře v místním okně. Klepněte na tlačítko **Resetovat**.
+ ![Snímek obrazovky se stránkou Moje zařízení s několika neidentifikovanými zařízeními zobrazenými nad výzvou k registraci zařízení, která nejsou v seznamu, nebo k identifikaci neidentifikovaných zařízení](./media/macOS_enroll_002_tap_here_banner.png)
 
-   ![Všechny možnosti pro vybrané zařízení na webu Portál společnosti, včetně možnosti Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení ](./media/iwp-screen-with-all-options.png)
+4. Zobrazí se zpráva, která vás upozorní, že se chystáte vymazat veškerý obsah na zařízení. Klepnutím na **Resetovat** ji potvrďte.  
 
-4. Zobrazí se upozornění, že se chystáte vymazat veškerý obsah zařízení jeho resetováním do výchozího továrního nastavení. Klepnutím na **Resetovat** potvrďte, že to chcete provést.
-
-Zařízení se resetovalo.
-
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com/#helpdeskDeskDialog).

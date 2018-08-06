@@ -15,12 +15,12 @@ ms.assetid: 30df0f9e-6e9e-4d75-a722-3819e33d480d
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d5ac976e07c98fae0941168cc94b5afc5ca09616
-ms.sourcegitcommit: 8be5f29107d882c3ecf3dc0ce718a2423f91ce9a
+ms.openlocfilehash: 0ada3be91c3b2c15e33e51449678212286362dbf
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "36964704"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321182"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Automatická registrace zařízení s Androidem pomocí technologie Knox Mobile Enrollment od Samsungu
 
@@ -32,9 +32,8 @@ Pokud chcete povolit registraci Intune pomocí Samsung KME, použijte oba portá
     1. [Vytvoření profilu MDM](#create-mdm-profile)
     2. [Přidání zařízení](#add-devices)
     3. [Přiřazení profilu MDM zařízení](#assign-an-mdm-profile-to-devices)
-2. Na portálu Azure Portal [identifikujte zařízení jako vlastněná společností](#identify-devices-as-corporate-owned).
-3. Na portálu Knox [nakonfigurujte přihlášení koncového uživatele](#configure-how-end-users-sign-in).
-4. [Distribuujte zařízení](#distribute-devices).
+2. Na portálu Knox [nakonfigurujte přihlášení koncového uživatele](#configure-how-end-users-sign-in).
+3. [Distribuujte zařízení](#distribute-devices).
 
 
 Seznam identifikátorů zařízení (sériová čísla a čísla IMEI) se při nákupu zařízení od autorizovaných prodejců, kteří se účastní programu Knox Deployment Program, automaticky přidá na portál Knox.
@@ -79,22 +78,6 @@ Abyste mohli zařízením přiřadit profily MDM, musí být na portál Knox př
 ## <a name="assign-an-mdm-profile-to-devices"></a>Přiřazení profilu MDM k zařízením
 Přidaným zařízením na portálu Knox musíte přiřadit profil MDM dříve, než budou moct být zaregistrována. [Informace o konfiguraci zařízení najdete v uživatelské příručce pro registraci Samsung Knox](https://docs.samsungknox.com/KME-Getting-Started/Content/configure-devices.htm).
 
-## <a name="identify-devices-as-corporate-owned"></a>Identifikace zařízení jako vlastněných společností
-Zařízení zaregistrovaná pomocí KME můžete identifikovat jako zařízení vlastněná společností. Je to potřeba provést před registrací zařízení. Umožní vám to provádět další úlohy správy a sbírat další informace, třeba celé telefonní číslo a inventář aplikací.
-
-Použijte tento postup k identifikaci zařízení jako vlastněných společností:
-
-1. Seznam zařízení z portálu Knox exportujte jako soubor CSV.
-
-2. Soubor CSV naformátujte pomocí čísla IMEI nebo sériového čísla, jak je popsáno [zde](https://docs.microsoft.com/en-us/intune/corporate-identifiers-add#identify-corporate-owned-devices-with-imei-or-serial-number).
-
-3. Na portálu Azure Portal nahrajte soubor CSV do **Registrace zařízení** > **Identifikátory podnikových zařízení** > **Přidat**.
-
-Nyní se identifikovaná zařízení, která se zaregistrují, označí jako vlastněná společností.
-
-> [!NOTE]
->Intune automaticky přiřadí zařízením zaregistrovaným s účtem [Správce registrace zařízení](https://docs.microsoft.com/en-us/intune/device-enrollment-manager-enroll) stav, který označuje, že jsou ve vlastnictví společnosti.
-
 ## <a name="configure-how-end-users-sign-in"></a>Konfigurace způsobu přihlašování koncových uživatelů
 
 Pro zařízení zaregistrovaná v Intune pomocí KME můžete pomocí následujícího postupu nakonfigurovat způsob, jakým se přihlašuje koncový uživatel:
@@ -121,7 +104,7 @@ Potřebujete ještě další pomoc? Podívejte se na celou [uživatelskou přír
 
 - **Pole Password (Heslo) se ignoruje:** Pokud je pole s **heslem** v části **Device details** (Podrobnosti zařízení) na portálu Knox vyplněno, bude ho aplikace Portál společnosti Inture ignorovat. Aby se registrace zařízení dokončila, koncový uživatel musí heslo zadat na zařízení.
 
-- **Registrace Androidu Enterprise** prostřednictvím KME nepodporuje registraci Androidu Enterprise.
+- **Registrace Androidu Enterprise:** KME nepodporuje registraci Androidu Enterprise.
 
 ## <a name="getting-support"></a>Získání podpory
 Přečtěte si další informace o tom, [jak získat podporu pro Samsung KME](https://docs.samsungknox.com/KME-Getting-Started/Content/to-get-kme-support.htm).
