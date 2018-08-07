@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 07/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 09c4fdc6de0368e7ba7d4bebbc3ebfbf2c5ec378
-ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
+ms.openlocfilehash: 4455a3c26296faba8bf01cf43d8555aebc13afc6
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37869368"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321471"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Přiřazení aplikací Office 365 k zařízením s Windows 10 pomocí Microsoft Intune
 
@@ -60,9 +60,6 @@ Vyberte aplikace Office, které chcete přiřadit k zařízením.
     Kromě toho můžete nainstalovat aplikace pro klienta pro stolní počítače Microsoft Project Online a Microsoft Visio Pro for Office 365, pokud vlastníte jejich licence.
 3. Vyberte **OK**.
 
->[!IMPORTANT]
-> Vlastnosti už vytvořené sady aplikací není možné upravit. Pokud chcete nakonfigurovat jiné vlastnosti, odstraňte sadu aplikací a vytvořte novou.
-
 ## <a name="configure-app-information"></a>Konfigurace informací o aplikaci
 
 V tomto kroku zadáte informace o sadě aplikací. Tyto informace vám pomůžou sadu aplikací identifikovat v Intune a uživatelům ji pomůžou najít na portálu společnosti.
@@ -95,11 +92,8 @@ V tomto kroku nakonfigurujte možnosti instalace pro sadu aplikací. Nastavení 
         - **Půlroční**
         - **Půlroční (cílený)**
     - **Automaticky přijmout licenční smlouvu s koncovým uživatelem aplikace**: Tuto možnost vyberte, pokud nevyžadujete přijetí licenční smlouvy koncovými uživateli. Intune pak smlouvu přijme automaticky.
-    - **Použít aktivaci pro sdílené počítače**: Tuto možnost vyberte, když počítač sdílí více uživatelů. Další informace najdete v Přehledu aktivace pro sdílené počítače pro Office 365.
+    - **Použít aktivaci pro sdílené počítače**: Tuto možnost vyberte, když počítač sdílí více uživatelů. Další informace najdete v článku s [přehledem aktivace pro sdílené počítače pro Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Jazyky**: Office se automaticky nainstaluje ve všech podporovaných jazycích nainstalovaných s Windows na zařízení koncových uživatelů. Tuto možnost zvolte, pokud chcete nainstalovat se sadou aplikací další jazyky.
-
->[!IMPORTANT]
-> Vlastnosti už vytvořené sady aplikací není možné upravit. Pokud chcete nakonfigurovat jiné vlastnosti, odstraňte sadu aplikací a vytvořte novou.
 
 ## <a name="finish-up"></a>Dokončení
 
