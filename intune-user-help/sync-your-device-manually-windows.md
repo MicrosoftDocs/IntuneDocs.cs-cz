@@ -1,5 +1,5 @@
 ---
-title: Ruční synchronizace zařízení s Windows | Microsoft Docs
+title: Ruční synchronizace zařízení s Windows | Dokumentace Microsoftu
 description: ''
 keywords: ''
 author: lenewsad
@@ -17,18 +17,18 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: a7c61ae0d60b2baf8bf9760297a5e35cbb5188de
-ms.sourcegitcommit: 47b55d211534f2e52e50d6b936c9a349e99fd222
+ms.openlocfilehash: 04737d1e800094f21a8bdaf42047f8bce7f48e6a
+ms.sourcegitcommit: d3375505a5869c0392d2bc0f48b975c10366f586
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39236051"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39362020"
 ---
 # <a name="sync-your-windows-device-manually"></a>Ruční synchronizace zařízení s Windows
 
 Pokud je rychlost instalace aplikace příliš nízká, iniciujte ruční synchronizaci zařízení. Ruční synchronizace vynutí, aby se vaše zařízení spojilo s Intune za účelem nejnovějších aktualizací a komunikací. Po dokončení synchronizace zařízení se může rychlost instalace zvýšit.
 
-Intune podporuje ruční synchronizaci z aplikace Portál společnosti a z aplikace Nastavení zařízení. 
+Intune podporuje ruční synchronizaci z aplikace Portál společnosti, z hlavního panelu plochy, nabídky Start a z aplikace Nastavení zařízení. 
 
 Funkce aplikace Portál společnosti se podporuje v zařízeních se systémem Windows 10 Creators Update (1703) nebo novějším. 
 * [Synchronizace z aplikace Portál společnosti](#Sync-from-Company-Portal-app-for-Windows)  
@@ -51,8 +51,19 @@ Následující postup použijte k ruční synchronizaci jakéhokoli zařízení 
     
     ![Snímek obrazovky stránky nastavení v aplikaci Portál společnosti a zvýrazněným tlačítkem Synchronizovat](./media/RS1_settingspage_sync05.png)  
 
+## <a name="sync-from-device-taskbar-or-start-menu"></a>Synchronizace z hlavního panelu zařízení nebo z nabídky Start   
+
+K řízení synchronizace se dá dostat také mimo aplikaci, z plochy vašeho zařízení. To se hodí, pokud máte aplikaci připnutou přímo na hlavním panelu nebo v nabídce Start a chcete synchronizovat rychle.  
+
+1. Ikonu aplikace Portál společnosti najdete na hlavním panelu nebo v nabídce Start.  
+2. Když na ni kliknete pravým tlačítkem, zobrazí se její nabídka (říká se jí také seznam odkazů).  
+
+    ![Snímek obrazovky s hlavním panelem Windows na ploše zařízení. Po kliknutí na ikonu aplikace Portál společnosti se zobrazila nabídka s možnostmi Připnout na hlavní panel, Zavřít okno a Synchronizovat toto zařízení.](./media/sync-device-from-start-menu-1807.png)  
+
+3. Vyberte **Synchronizovat toto zařízení**. V aplikaci Portál společnosti se otevře stránka **Nastavení** a zahájí se synchronizace.  
+
 ## <a name="sync-from-settings-app"></a>Synchronizace z aplikace Nastavení 
-Následující postup použijte k ruční synchronizaci zařízení se systémem Microsoft HoloLens, Windows 10 Desktop, Windows 10 Mobile nebo Windows Phone 8.1 z aplikace Nastavení.
+Následující postup použijte k ruční synchronizaci zařízení se systémem Microsoft HoloLens, Windows 10 Desktop, Windows 10 Mobile nebo Windows Phone 8.1 z aplikace Nastavení.  
 
 ### <a name="windows-10-desktop"></a>Stolní počítač s Windows 10
 1. Na zařízení vyberte **Start** > **Nastavení**.

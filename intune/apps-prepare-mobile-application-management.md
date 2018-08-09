@@ -4,8 +4,8 @@ description: Informace v tomto tématu vám pomůžou rozhodnout, kdy byste měl
 keywords: ''
 author: erikre
 ms.author: erikre
-manager: angrobe
-ms.date: 05/17/2018
+manager: dougeby
+ms.date: 07/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 89a8f29e2e31cf59ed237cbfae5c557f60bd8dfa
-ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
+ms.openlocfilehash: 351282634d6c6e087456e61e9fd967b70f9cf515
+ms.sourcegitcommit: c109ea6e9b7104630cd767aa27c5f7789286a906
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38225184"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39450786"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Příprava obchodních aplikací na zásady ochrany aplikací
 
@@ -48,8 +48,8 @@ Další informace o nástroji App Wrapping Tool pro zásady ochrany aplikací na
 
 |**Nástroj App Wrapping** | **Xamarin** |**Cordova** |
 |------|----|----|
-|**iOS** |Ano|Ano|
-|**Androidemem**| Ve verzi Preview |Ano|
+|**iOS** |Ne – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|Ano|
+|**Android**|Ne – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|Ano|
 
 ## <a name="intune-app-sdk"></a>Sada Intune App SDK
 Sada App SDK je určená hlavně zákazníkům, kteří mají aplikace v App Storu nebo obchodu Google Play a chtějí mít možnost spravovat je pomocí Intune. Nicméně využít integraci sady SDK může jakákoli aplikace, i obchodní aplikace.

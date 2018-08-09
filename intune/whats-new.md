@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/23/2018
+ms.date: 07/30/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 /ms.custom: intune-azure
-ms.openlocfilehash: 53be8456b09c7775a4de827eb09680f47e8d62d7
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 2a3c4484eb80fd753d00c851d3e5dc6b5f48347a
+ms.sourcegitcommit: d3375505a5869c0392d2bc0f48b975c10366f586
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321556"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39362054"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -813,7 +813,7 @@ V okně **Řešení potíží** teď můžete zobrazit platná [omezení registr
 
 Klíčem ke správě počítačů s Windows je pochopení stavu programu Windows Defender.  Touto aktualizací Intune přidá do stavu agenta Windows Defender nové sestavy a akce. Pomocí souhrnné sestavy stavu v [úloze dodržování předpisů zařízením](compliance-policy-monitor.md) zjistíte, která zařízení vyžadují:
 - aktualizaci signatur,
-- restart,
+- Restartovat
 - ruční zásah,
 - úplnou kontrolu,
 - stavy ostatních agentů vyžadujících zásah.
@@ -1125,6 +1125,16 @@ V Intune můžete zadat odepřené aplikace. Pokud je aplikace zakázaná, má z
 
 
 ## <a name="notices"></a>Sdělení
+
+### <a name="plan-for-change-change-password-at-next-auth-added-to-intune---1873216---"></a>Plánovaná změna: Do Intune přibude nastavení Změnit heslo při příštím ověření<!-- 1873216 -->
+V zářijovém vydání služby se do Intune chystáme integrovat nové nastavení společnosti Apple **Změnit heslo při příštím ověření** určené pro zařízení s macOS ve verzi 10.13 a novější. Před uvedením tohoto nastavení nemůžou poskytovatelé řešení MDM ověřit, že heslo zařízení bylo změněno tak, aby vyhovovalo předpisům. Zásady konfigurace a dodržování předpisů v Intune pouze ověřují, zda je heslo zařízení při příští změně označeno jako vyhovující. Po přidání této nové funkce Apple obdrží uživatelé zařízení s macOS žádost o aktualizaci hesla i v případě, že jejich heslo odpovídá zásadám.
+
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+Tato změna se dotýká prostředí, kde se pomocí Intune uplatňují zásady pro zařízení s macOS, a prostředí s hybridní správou mobilních zařízení. S tímto novým nastavením **Změnit heslo při příštím ověření** od Applu teď Intune může při doručení zásady hesel vynutit od uživatelů aktualizaci hesla. Pokud blokujete firemní prostředky do doby, než bude zařízení označeno jako vyhovující, můžou mít koncoví uživatelé zablokovaný přístup k firemním prostředkům, jako je e-mail nebo sharepointové weby, dokud si neresetují heslo. V budoucnu veškeré aktualizace zásad konfigurace a dodržování předpisů týkající se hesel vynutí u cílových uživatelů aktualizaci hesla.
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
+Informujte váš tým technické podpory. Pokud tuto zásadu pro zařízení s macOS nechcete vynucovat, doporučujeme zrušit přiřazení stávajících zásad pro macOS nebo je odstranit. Z průzkumu mezi zákazníky vyplývá, že většiny z nich se tato změna nedotkne. Většina koncových uživatelů si po přijetí žádosti o registraci s heslem aktualizuje heslo, případně jej resetuje, aby vyhovovalo podmínkám.
+
 
 ### <a name="plan-for-change-intune-moving-to-support-ios-10-and-later-in-september----2454656---"></a>Plánovaná změna: Intune v září přechází na podporu iOS 10 a novějších verzí <!-- 2454656 -->
 Očekává se, že Apple v září vydá iOS 12. Krátce po jeho vydání přejde registrace Intune, Portál společnosti a spravovaný prohlížeč na podporu iOS 10 a novějších verzí.  

@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 7/23/2018
+ms.date: 8/2/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6f10e7bb7a2e7c5e1d0e8b27517a62454e8bd630
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 6db58b1b1f19f789a2163f497c1f0da4c7c034a5
+ms.sourcegitcommit: 5f6117b83f96f7d93dde3685c2ff2b67ae53740b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321695"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39481117"
 ---
 # <a name="kiosk-settings-for-windows-10-and-later-in-intune"></a>Nastavení veřejného terminálu pro Windows 10 a novější v Intune
 
@@ -25,9 +25,18 @@ Profily veřejného terminálu se používají ke konfiguraci zařízení s Wind
 
 ## <a name="kiosk-settings"></a>Nastavení veřejného terminálu
 
-1. Výběrem možnosti **Přidat** vytvořte prostředí veřejného terminálu.
-2. Zadejte **Název konfigurace veřejného terminálu** pro váš veřejný terminál. Tento název identifikuje skupinu aplikací, rozložení těchto aplikací v nabídce Start a uživatele, kteří jsou této konfiguraci veřejného terminálu přiřazení.
-3. Vyberte **Beznabídkový režim**. **Beznabídkový režim**: Určuje typ režimu veřejného terminálu podporovaného zásadami. Vaše možnosti jsou:
+1. Na webu [Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
+3. Zadejte tyto vlastnosti:
+
+   - **Název**: Zadejte popisný název nového profilu.
+   - **Popis**: Zadejte popis profilu. Není povinný, ale doporučujeme ho zadat.
+   - **Platforma**: Vyberte **Windows 10 a novější**.
+   - **Typ profilu**: Vyberte **Beznabídkový režim (Preview)**.
+   
+4. Vyberte **Veřejný terminál** > **Přidat**.
+5. Zadejte **Název konfigurace veřejného terminálu** pro váš veřejný terminál. Tento název identifikuje skupinu aplikací, rozložení těchto aplikací v nabídce Start a uživatele, kteří jsou této konfiguraci veřejného terminálu přiřazení.
+6. Vyberte **Beznabídkový režim**. **Beznabídkový režim** určuje typ režimu veřejného terminálu podporovaného zásadami. Vaše možnosti jsou:
 
     - **Není konfigurováno** (výchozí): Zásady nepovolují režim veřejného terminálu.
     - **Veřejný terminál s jednou aplikací v režimu na celou obrazovku**: Profil umožňuje, aby se zařízení spustilo jako účet jednoho uživatele, a uzamkne ho pro jednu aplikaci pro Univerzální platformu Windows (UPW). Když se uživatel přihlásí, spustí se daná aplikace. Tento režim zároveň brání uživateli v otevírání nových aplikací nebo změně spuštěné aplikace.

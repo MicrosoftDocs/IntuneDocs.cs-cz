@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/26/2018
+ms.date: 07/31/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5278b631d581c892f68e8ba08c2bc7893cd3782a
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 423bfc02edb9260adadf0a6dc67e6299639c7fbb
+ms.sourcegitcommit: 8f68cd3112a71d1cd386da6ecdae3cb014d570f2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321626"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575045"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Použití rozhraní API k přidání externích certifikačních autorit pro SCEP do Intune
 
@@ -41,11 +41,18 @@ Správci pomocí Intune vytvoří profily SCEP a potom tyto profily přiřadí z
 - důvěryhodný kořenový certifikát certifikační autority
 - atributy certifikátu a další
 
-Zařízením, která se vrátí se změnami do služby Intune, se přiřadí profil SCEP a pak se pomocí těchto parametrů nakonfigurují. Intune vytvoří dynamicky generované heslo SCEP a pak ho přiřadí k zařízení.
+Zařízením, která se vrátí se změnami do služby Intune, se přiřadí profil SCEP a pak se pomocí těchto parametrů nakonfigurují. Intune vytvoří dynamicky generovanou výzvu heslem SCEP a pak ji přiřadí k zařízení.
 
-Toto heslo obsahuje podrobnosti o parametrech očekávaných v žádosti o podepsání certifikátu, kterou zařízení vydává serveru SCEP. Heslo obsahuje také čas vypršení platnosti výzvy. Intune zašifruje informace, podepíše zašifrovaný objekt blob a potom tyto podrobnosti zabalí do hesla SCEP.
+Tato výzva obsahuje:
 
-Zařízení, která kontaktují server SCEP kvůli vyžádání certifikátu, potom toto heslo SCEP předají. Aby server SCEP certifikát do zařízení vydal, musí heslo projít ověřením. Po ověření hesla SCEP se stane následující:
+- Dynamicky generovanou výzvu heslem
+- Podrobnosti o parametrech očekávaných v žádosti o podepsání certifikátu, kterou zařízení vydává serveru SCEP
+- Dobu vypršení platnosti výzvy
+
+Intune tyto informace zašifruje, podepíše zašifrovaný objekt blob a potom tyto podrobnosti zabalí do výzvy heslem SCEP.
+
+Zařízení, která kontaktují server SCEP kvůli vyžádání certifikátu, potom tuto výzvu heslem SCEP předají. Server SCEP odešle žádost o podepsání certifikátu a šifrovanou výzvu heslem SCEP do Intune k ověření.  Aby server SCEP certifikát do zařízení vydal, musí výzva heslem a žádost o podepsání certifikátu projít ověřením. Po ověření výzvy SCEP proběhnou následující kontroly:
+
 
 - Ověří se podpis zašifrovaného objektu blob.
 - Ověří se, že nevypršela platnost výzvy.

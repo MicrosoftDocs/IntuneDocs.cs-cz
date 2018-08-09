@@ -15,12 +15,12 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f03c60c12bfd759c738de50d320787bf4b85f99d
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 3b7652c8c4f471a0a0c32da23d8ac1859e84eb13
+ms.sourcegitcommit: e8aaa0955d13fa6c9d5f35a730ad06509ce88d0b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909180"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400347"
 ---
 # <a name="enroll-android-devices"></a>Registrace zařízení s Androidem
 
@@ -38,7 +38,7 @@ Při přípravě na správu mobilních zařízení musíte nastavit autoritu pro
 
 ## <a name="set-up-android-enrollment"></a>Nastavení registrace zařízení s Androidem
 
-Standardně je služba Intune nastavená tak, aby umožňovala registraci zařízení používajících Android a Samsung Knox Standard. Po splnění tohoto předpokladu musí správci pouze [sdělit uživatelům, jak mají svá zařízení zaregistrovat](/intune-user-help/enroll-your-device-in-intune-android.md).
+Standardně je služba Intune nastavená tak, aby umožňovala registraci zařízení používajících Android a Samsung Knox Standard. Po splnění tohoto předpokladu musí správci pouze [sdělit uživatelům, jak mají svá zařízení zaregistrovat](/intune-user-help/enroll-your-device-in-intune-android).
 
 Po registraci můžete začít se správou zařízení uživatelů v Intune včetně [přiřazení zásad dodržování předpisů](compliance-policy-create-android.md), [správy aplikací](app-management.md) a dalších úloh.
 

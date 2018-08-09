@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 7/25/2018
+ms.date: 7/31/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ac3bbb4a32e86d756835d136cd3923676f022a7b
-ms.sourcegitcommit: 0d08daa162212e6cdd8a6ee3ad7ed42c6e6824e4
+ms.openlocfilehash: 45d41f02fdfff7179dbd43f4d2afdac3337f8b7f
+ms.sourcegitcommit: e8aaa0955d13fa6c9d5f35a730ad06509ce88d0b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336024"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400279"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurace mobilních profilů eSIM v Intune – verze Public Preview
 
@@ -26,7 +26,7 @@ ms.locfileid: "39336024"
 
 ## <a name="introduction"></a>Úvod
 
-Technologie eSIM je zabudovaný čip SIM, který vám na zařízení s podporou eSIM, jako je [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro), umožňuje připojit se prostřednictvím mobilního datového připojení k internetu. S technologií eSIM nepotřebujete od mobilního operátora SIM kartu a můžete snadno přepínat mezi mobilními operátory a datovými tarify.
+Technologie eSIM je zabudovaný čip SIM, který vám na zařízení s podporou eSIM, jako je [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro), umožňuje připojit se prostřednictvím mobilního datového připojení k internetu. Když využijete technologii eSIM, není nutné pořizovat SIM kartu od mobilního operátora. Při cestování po světě navíc můžete jednoduše přecházet mezi mobilními operátory a datovými tarify a zůstat v kontaktu se svými blízkými.
 
 Můžete mít například mobilní datový tarif pro práci a jiný datový tarif od jiného mobilního operátora pro osobní použití. Když cestujete, můžete přístup k internetu získat vyhledáním mobilních operátorů s datovými tarify v dané oblasti.
 
