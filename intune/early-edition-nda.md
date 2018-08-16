@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ab6c808fc860491ddece5751983071d40864c8dd
-ms.sourcegitcommit: 8f68cd3112a71d1cd386da6ecdae3cb014d570f2
+ms.openlocfilehash: 2f9849b2c327397c0b8945ee42d9fca7f9f46250
+ms.sourcegitcommit: 58cddb08b64bd60f041eff46ff215e83e13db4e6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39575079"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40001906"
 ---
 # <a name="the-early-edition-for-microsoft-intune---august-2018"></a>Časná edice Microsoft Intune – srpen 2018
 
@@ -75,7 +75,7 @@ Pokud chcete vytvořit značku oboru, vyberte **Role Intune** > **Obor (značky)
 Značku oboru přidáte k přiřazení role tak, že zvolíte **Role Intune** > **Všechny role** > **Správce zásad a profilů** > **Přiřazení** > **Obor (značky)**.
 Ke konfiguračnímu profilu přidáte značku oboru tak, zvolíte **Konfigurace zařízení** > **Profily** > vyberete profil > **Vlastnosti** > **Obor (značky)**.
 
-### <a name="assign-a-user-and-friendly-name-to-an-autopilot-device---1346521---"></a>Přiřazení uživatele a popisného názvu k zařízení AutoPilot <!--1346521 -->
+### <a name="assign-a-user-and-friendly-name-to-an-autopilot-device---1346521---"></a>Přiřazení uživatele a jednoduchého názvu zařízení Autopilot <!--1346521 -->
 Budoucí verze Public Preview umožní správcům přiřadit uživatele k jedinému zařízení AutoPilot.  Správci budou také moct dávat zařízením v programu AutoPilot popisné názvy, které uživatele při nastavování přivítají.
 
 Platí pro: Windows Insider 1809 nebo novější buildy (v období platnosti verze Preview).
@@ -99,30 +99,29 @@ Funkce je dostupná v části **Registrace zařízení** > **Omezení zařízen�
 Zapnutí tohoto omezení nijak neovlivní už zaregistrovaná zařízení.
 Po zapnutí omezení se v Intune u každého nového požadavku na registraci zařízení s Windows bude kontrolovat, zda je autorizován jako registrace ve společnosti. K registraci ve společnosti jsou povoleny následující metody:
 - Uživatel se registruje pomocí [účtu správce registrace zařízení]( device-enrollment-manager-enroll.md).
-
 - Zařízení se registruje prostřednictvím programu [Windows AutoPilot](enrollment-autopilot.md).
 - Číslo IMEI zařízení je uvedené v seznamu **Registrace zařízení** > **[Identifikátory podnikových zařízení]( corporate-identifiers-add.md)**).
 - Zařízení se registruje v rámci [balíčku hromadného zřizování](windows-bulk-enroll.md).
 - Zařízení se registruje prostřednictvím [automatické registrace z centra SCCM ke spolusprávě](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview#how-to-configure-co-management).
-Neautorizované registrace se zablokují.
-Následující registrace služba Intune sice označuje jako registrace ve společnosti, ale budou zablokovány vzhledem k tomu, že správci Intune neumožňují kontrolu na úrovni jednotlivých zařízení:
+
+Neautorizované registrace se zablokují. Následující registrace služba Intune sice označuje jako registrace ve společnosti, ale budou zablokovány vzhledem k tomu, že správci Intune neumožňují kontrolu na úrovni jednotlivých zařízení:
 - [Automatická registrace MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) s [připojením k Azure Active Directory během instalace Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx.md).
 - [Automatická registrace MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) s [připojením k Azure Active Directory z instalace Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx.md).
+
 Zablokují se také následující metody osobní registrace:
 - [Automatická registrace MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) s [přidáním pracovního účtu z nastavení Windows](https://docs.microsoft.com/azure/active-directory/user-help/device-management-azuread-registered-devices-windows10-setup).
-
 - Volba [Jen registrace MDM]( https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) v nastavení Windows.
 
-### <a name="specify-machine-name-patterns-in-an-autopilot-profile---1849855--"></a>Určení vzorů pro názvy počítačů v profilu AutoPIlot <!--1849855-->
-Budete moct zadat šablonu pro názvy počítačů, podle které se během registrace pomocí řešení AutoPilot vygeneruje a nastaví [název počítače](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp). Tuto šablonu je nutné zadat v profilu AutoPilot umístěném v části **Registrace zařízení** > **Registrace zařízení s Windows** > **Služba Windows AutoPilot Deployment** > **Profily**. Používat se můžou jenom alfanumerické znaky a spojovníky.
+### <a name="specify-machine-name-patterns-in-an-autopilot-profile---1849855--"></a>Zadání vzoru pro názvy počítačů v profilu Autopilot <!--1849855-->
+Můžete zadat šablonu pro názvy počítačů, která se použije ke generování a nastavení [názvu počítače](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) při registraci do programu AutoPilot. Tuto šablonu je potřeba zadat v profilu Autopilot v části **Registrace zařízení** > **Registrace zařízení s Windows** > **služba Windows Autopilot Deployment** > **Profily**. Používat se můžou jenom alfanumerické znaky a spojovníky.
 Platí pro: Windows Insider 1809 nebo novější buildy (v období platnosti verze Preview).
 
 ### <a name="ios-version-number-and-build-number-are-shown----1892471---"></a>Zobrazuje se číslo verze iOS a číslo buildu <!-- 1892471 -->
 V části **Dodržování předpisů zařízení** > **Dodržování předpisů zařízení** se zobrazí verze operačního systému iOS. V budoucí aktualizaci se zobrazí také číslo buildu.
 Při vydání aktualizací zabezpečení společnost Apple obvykle ponechává stávající číslo verze, ale aktualizuje číslo buildu. Když znáte číslo buildu, jednoduše ověříte, jestli je nainstalována aktualizace řešící ohrožení zabezpečení.
 
-### <a name="for-windows-autopilot-profiles-hide-the-change-account-options-on-the-company-sign-in-page-and-domain-error-page---1901669---"></a>U profilů Windows AutoPilot se na stránce firemního přihlášení a na stránce chyby domény dají skrýt volby pro změnu účtu <!--1901669 -->
-Verze Public Preview bude obsahovat nové možnosti profilů Windows AutoPilot, které správcům dovolí skrýt na stránce firemního přihlášení a na stránce chyby domény volby pro změnu účtu. Předpokladem skrytí těchto možností je, aby v Azure Active Directory byla nakonfigurována funkce Branding společnosti. Platí pro: Windows Insider 1809 nebo novější buildy (v období verze Preview).
+### <a name="for-windows-autopilot-profiles-hide-the-change-account-options-on-the-company-sign-in-page-and-domain-error-page---1901669---"></a>Skrytí volby změny účtu v profilech Windows Autopilot na přihlašovací stránce společnosti a na chybové stránce domény <!--1901669 -->
+Verze Public Preview bude obsahovat novou možnost profilu Windows AutoPilot, která správcům dovolí na přihlašovací stránce společnosti a na chybové stránce domény skrýt volbu změny účtu. Předpokladem skrytí těchto možností je, aby v Azure Active Directory byla nakonfigurována funkce Branding společnosti. Platí pro: Windows Insider 1809 nebo novější buildy (v období verze Preview).
 
 ### <a name="delay-when-ios-software-updates-are-shown-on-the-device----1949583---"></a>Zpoždění při zobrazení aktualizací softwaru iOS na zařízení <!-- 1949583 -->
 V části Intune > **Aktualizace softwaru** > **Aktualizovat zásady pro iOS** můžete nakonfigurovat dny a časy, kdy se na zařízení nemají instalovat žádné aktualizace. V budoucí aktualizaci budete moct odložit čas, kdy se aktualizace softwaru viditelně zobrazí v zařízení, o 1–90 dní. 
@@ -167,6 +166,13 @@ Platí pro:
 Zásady dodržování předpisů vytvořené na portálu Azure Classic se přestanou používat.  Až k tomu dojde, budete si moct prohlédnout existující zásady a odstranit je. Zásady nepůjde aktualizovat. Můžete je exportovat jako soubor hodnot oddělených čárkami (CSV). Podrobnosti ze souboru potom můžete využít k opětovnému vytvoření těchto zásad v Intune na portálu Azure Portal.
 > [!IMPORTANT]
 > Po vyřazení portálu Azure Classic z provozu ztratíte k zásadám přístup a nebudete je moct ani zobrazit. Proto zásady nezapomeňte exportovat a znovu vytvořit na webu Azure Portal dříve, než bude provoz portálu Azure Classic ukončen.
+
+### <a name="change-terminology-to-retire-and-wipe----2175759---"></a>Změna terminologie na „vyřazení“ a „vymazání“ <!-- 2175759 -->
+V uživatelském rozhraní Intune a v dokumentaci k Intune měníme kvůli sjednocení s Graph API následující výrazy:
+- **Odebrání firemních dat** se mění na **vyřazení**.
+- **Obnovení továrního nastavení** se mění na **vymazání**.
+
+
 
 <!-- 1807 start -->
 

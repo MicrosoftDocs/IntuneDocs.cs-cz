@@ -1,12 +1,11 @@
 ---
-title: Nastavení omezení pro zařízení s Androidem v Microsoft Intune
-titlesuffix: ''
-description: Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s Androidem.
+title: Nastavení omezení zařízení s Androidem v Microsoft Intune – Azure | Microsoft Docs
+description: Podívejte se na seznam všech nastavení zařízení s Androidem, které můžete v Microsoft Intune ovládat nebo omezit. Tato nastavení můžete použít k ovládání hesla, přístupu ke Google Play, povolení nebo zakázání aplikací, ovládání nastavení prohlížeče, blokování aplikací, zálohování do cloudu Google, ovládání zpráv, hlasového volání, datového roamingu a možností připojení k Wi-Fi nebo prostřednictvím technologie Bluetooth.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/05/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,14 +13,14 @@ ms.technology: ''
 ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 100742b378b30eab84b28c01728b2b382dd5155c
-ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
+ms.openlocfilehash: 952845ba19c52aa44a9e82ee92909b8c4f32aed6
+ms.sourcegitcommit: 0132b59e484c220338b1efcd35d03c83c285361e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190652"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39587019"
 ---
-# <a name="microsoft-intune-android-and-samsung-knox-standard-device-restriction-settings"></a>Nastavení omezení zařízení používajících Android a Samsung Knox Standard pro Microsoft Intune 
+# <a name="android-and-samsung-knox-standard-device-restriction-settings---intune"></a>Nastavení omezení pro zařízení se systémy Android a Samsung Knox Standard – Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -53,7 +52,7 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
     > Při registraci MDM zařízení Samsung Knox automaticky vyžadují 4místný číselný kód PIN. Nativní zařízení Android mohou automaticky vyžadovat kód PIN, aby vyhověla podmínkám podmíněného přístupu.
 
 - **Minimální délka hesla** – Zadejte minimální délku hesla, které uživatel musí nakonfigurovat (mezi 4 a 16 znaky).
-- **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka** – Určuje počet minut nečinnosti, než se zařízení automaticky zamkne.
+- **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka** – zadejte maximální počet minut nečinnosti, než se obrazovka zařízení zamkne. Koncový uživatel nemůže na zařízení nastavit větší časovou hodnotu, než je nakonfigurovaná v profilu. Může ale nastavit kratší časovou hodnotu. Pokud je v profilu nastaveno třeba 15 minut, může koncový uživatel nastavit 5 minut, ale nemůže nastavit 30 minut. 
 - **Počet neúspěšných přihlášení před vymazáním obsahu zařízení** – Určuje počet povolených neúspěšných přihlášení, než se zařízení vymaže.
 - **Konec platnosti hesla (dny)** – Určuje počet dní, než bude nutné změnit heslo zařízení.
 -  **Požadovaný typ hesla** – Určuje požadovanou úroveň složitosti hesla a to, jestli se můžou používat biometrická zařízení. Vybírejte z těchto možností:
