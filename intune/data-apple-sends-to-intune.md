@@ -20,6 +20,7 @@ ms.sourcegitcommit: 9536300a6211bac4bdc733593a40c1ae47611de3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/23/2018
+ms.locfileid: "31771886"
 ---
 # <a name="data-apple-sends-to-intune"></a>Data odesílaná Applem do Intune
 
