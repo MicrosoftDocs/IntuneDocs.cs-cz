@@ -98,7 +98,7 @@ Tato nastavení platí pro určité typy sítě, například pro typy **Doménov
 
 ## <a name="windows-defender-smartscreen-settings"></a>Nastavení filtru SmartScreen v programu Windows Defender
 
-Podporovaná v následujících edicích Windows 10 s nainstalovaným prohlížečem Edge:
+Podporovaná v následujících edicích Windows 10 s nainstalovaným prohlížečem Microsoft Edge:
 - Domů
 - Professional
 - Do zaměstnání

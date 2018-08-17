@@ -759,10 +759,10 @@ V rámci naší snahy poskytnout koncovým uživatelům větší kontrolu nad je
 
 ## <a name="week-of-march-19-2018"></a>Týden od 19. března 2018
 
-### <a name="export-all-devices-into-csv-files-in-ie-edge-or-chrome----2258071---"></a>Export všech zařízení do souborů CSV v Internet Exploreru, Edge a Chromu <!-- 2258071 -->
+### <a name="export-all-devices-into-csv-files-in-ie-edge-or-chrome----2258071---"></a>Export všech zařízení do souborů CSV v Internet Exploreru, Microsoft Edge a Chromu <!-- 2258071 -->
 V části **Zařízení** > **Všechna zařízení** můžete **exportovat** zařízení do seznamu ve formátu CSV. Uživatelé Internet Exploreru s více než 10 000 zařízeními můžou zařízení úspěšně vyexportovat do více souborů. Každý z nich může obsahovat až 10 000 zařízení.
 
-Uživatelé prohlížečů Edge a Chrome s více než 30 000 zařízeními můžou zařízení úspěšně vyexportovat do více souborů. Každý z nich může obsahovat až 30 000 zařízení.
+Uživatelé prohlížečů Microsoft Edge a Chrome s více než 30 000 zařízeními můžou zařízení úspěšně vyexportovat do více souborů. Každý z nich může obsahovat až 30 000 zařízení.
 
 V tématu [Správa zařízení](device-management.md) se dozvíte podrobnosti o tom, co můžete se spravovanými zařízeními dělat.
 

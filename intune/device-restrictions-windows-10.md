@@ -152,11 +152,11 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 ## <a name="edge-browser"></a>Prohlížeč Microsoft Edge
 
 -   **Prohlížeč Microsoft Edge (jenom mobilní verze)** – Povolí používání webového prohlížeče Edge na zařízení.
--   **Rozevírání panelu Adresa (jenom stolní počítače)** – Tímto nastavením zastavíte Edge, aby v rozevíracím seznamu při psaní zobrazoval seznam návrhů. Pomůžete tím minimalizovat používanou šířku pásma sítě mezi Edgem a službami Microsoftu.
+-   **Rozevírání panelu Adresa (jenom stolní počítače)** – Tímto nastavením zastavíte Microsoft Edge, aby v rozevíracím seznamu při psaní zobrazoval seznam návrhů. Pomůžete tím minimalizovat používanou šířku pásma sítě mezi Edgem a službami Microsoftu.
 -   **Synchronizovat oblíbené položky mezi prohlížeči Microsoft (jenom stolní počítače)** – Umožňuje Windows synchronizovat oblíbené položky mezi Internet Explorerem a Edgem.
--   **Odesílat hlavičky Do Not Track** – Nakonfiguruje prohlížeč Edge tak, aby se webům, které uživatelé navštíví, posílaly hlavičky DNT (Do Not Track).
+-   **Odesílat hlavičky Do Not Track** – Nakonfiguruje prohlížeč Microsoft Edge tak, aby se webům, které uživatelé navštíví, posílaly hlavičky DNT (Do Not Track).
 -   **Soubory cookie** – Umožní prohlížeči ukládat internetové soubory cookie do zařízení.
--   **JavaScript** – Umožní, aby se v prohlížeči Edge mohly spouštět skripty, třeba JavaScript.
+-   **JavaScript** – Umožní, aby se v prohlížeči Microsoft Edge mohly spouštět skripty, třeba JavaScript.
 -   **Automaticky otevíraná okna** – Blokuje automaticky otevíraná okna v prohlížeči (platí jenom pro Windows 10 Desktop).
 -   **Návrhy hledání** – Umožní, aby vám vyhledávací web při psaní hledaného textu navrhoval weby.
 -   **Odesílat intranetové přenosy do Internet Exploreru** – Umožňuje uživatelům otevírat intranetové weby v Internet Exploreru (jenom Windows 10 Desktop).
@@ -166,14 +166,14 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 -   **Vývojářské nástroje** – Zabrání koncovému uživateli v otevření vývojářských nástrojů Edge.
 -   **Rozšíření** – Povolí koncovému uživateli nainstalovat rozšíření Edge na zařízení.
 -   **Procházení InPrivate** – Zabrání koncovému uživateli v otevírání relací procházení InPrivate.
--   **Zobrazit stránku prvního spuštění** – Zastaví zobrazování úvodní stránky při prvním spuštění Edge.
+-   **Zobrazit stránku prvního spuštění** – Zastaví zobrazování úvodní stránky při prvním spuštění Microsoft Edge.
     -   **Adresa URL při prvním spuštění** – Určuje adresu URL stránky, která se uživateli zobrazí při prvním spuštění Microsoft Edge (jenom Windows 10 Mobile).
 -   **Domovské stránky** – Přidá seznam webů, které chcete v prohlížeči Microsoft Edge použít jako domovské stránky (jenom desktopové verze).
 -   **Změny domovské stránky** – Umožňuje uživatelům změnit počáteční stránky, které se zobrazí při otevření Microsoft Edge. K vytvoření stránky nebo seznamu stránek, které se otevřou při spuštění Microsoft Edge, použijte nastavení Domovské stránky.
 -   **Blokovat přístup k značkám s informacemi** – Zabrání koncovému uživateli v přístupu ke stránce about:flags v Edgi, která obsahuje vývojářské a experimentální nastavení.
 -   **IP adresa LocalHost pro WebRtc** – Zablokuje zobrazení IP adresy LocalHost uživatele při telefonování pomocí protokolu WebRTC.
 -   **Výchozí vyhledávací web** – Určuje výchozí vyhledávací web, který se má použít. Koncoví uživatelé mohou tuto hodnotu kdykoli změnit.
--   **Vymazat údaje o procházení při ukončení** – Vymaže historii a údaje o procházení, když uživatel zavře Edge.
+-   **Vymazat údaje o procházení při ukončení** – Vymaže historii a údaje o procházení, když uživatel zavře Microsoft Edge.
 -   **Shromažďování dat pro živé dlaždice** – Zastaví ve Windows shromažďování informací pro živé dlaždice, když uživatelé v Edgi připnou web k nabídce Start.
 -  **Seznam oblíbených položek** – Definuje cestu k souboru oblíbených položek. Například http://contoso.com/favorites.html.
 -  **Omezit změny oblíbených položek** – Když tuto možnost nastavíte na **Blokovat**, zabráníte tak uživatelům v přidávání, importování, řazení a úpravách seznamu oblíbených položek. 
