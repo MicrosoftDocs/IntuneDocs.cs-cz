@@ -4,8 +4,6 @@
 
 ## [Jaké informace může moje společnost vidět s Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
-## [Resetování zařízení](what-happens-if-you-reset-your-device-cpwebsite.md)
-
 ## [Aktualizace mého hesla](password-does-not-meet-it-administrator-requirements.md)
 
 ## [Přihlášení k Portálu společnosti](sign-in-to-the-company-portal.md)
@@ -105,8 +103,8 @@
 ## [Používání zařízení s macOS](using-your-macos-device-with-intune.md)
 ### [Co se stane při registraci zařízení s macOS?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
 ### [Registrace zařízení s macOS](enroll-your-device-in-intune-macos-cp.md)
-### [Zrušení registrace zařízení s macOS](unenroll-your-device-from-intune-macos.md)
-
+### [Registrace zařízení s macOS poskytovaného společností](enroll-company-device-macos.md)  
+### [Zrušení registrace zařízení s macOS](unenroll-your-device-from-intune-macos.md)  
 ### [Řešení běžných problémů s macOS](troubleshoot-your-device-macos.md)
 #### [Moje verze macOS ještě není podporovaná](your-macos-version-isnt-yet-supported.md)
 #### [Aktualizace zařízení s macOS](you-need-to-update-your-macos-device.md)
