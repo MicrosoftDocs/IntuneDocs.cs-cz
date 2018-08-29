@@ -15,21 +15,18 @@ ms.assetid: 949fddec-5318-4c9a-957e-ea260e6e05be
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9d0956f56da4fd0e93bdcd26e06c7d48aa252f9b
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 0f8e5c6319e01404500f5a31fabd1baeb3520067
+ms.sourcegitcommit: 0f8d46d644f78609fae8bf91197ae77c7af45d23
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31831205"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40251924"
 ---
 # <a name="get-ready-to-configure-app-protection-policies-for-windows-10"></a>Příprava na konfiguraci zásad ochrany aplikací pro Windows 10 
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Povolte správu mobilních aplikací (MAM) pro Windows 10 nastavením zprostředkovatele MAM v Azure AD. Nastavení poskytovatele MAM v Azure AD vám umožní definovat stav registrace při vytváření nových zásad WIP (Windows Information Protection) s Intune. Stav registrace může být MAM nebo MDM (správa mobilních zařízení).
-
-> [!NOTE]
-> Zařízení se stavem registrace MAM musí být připojená k Azure AD.
 
 ## <a name="to-configure-the-mam-provider"></a>Konfigurace poskytovatele MAM
 

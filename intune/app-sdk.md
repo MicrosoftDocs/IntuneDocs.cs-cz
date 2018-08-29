@@ -1,20 +1,27 @@
---
-# <a name="required-metadata"></a>požadovaná metadata
-
-title: Výhody sady Intune App SDK titlesuffix: Microsoft Intune description: Sada Intune App SDK je dostupná pro platformy iOS i Android a umožňuje funkce správy mobilních aplikací v Microsoft Intune.
-keywords: author: Erikre ms.author: erikre manager: dougeby ms.date: 05/15/2018 ms.topic: article ms.prod: ms.service: microsoft-intune ms.technology: ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
-
-# <a name="optional-metadata"></a>volitelná metadata
-
-#<a name="robots"></a>ROBOTS:
-#<a name="audience"></a>audience:
-#<a name="msdevlang"></a>ms.devlang:
-ms.reviewer: aanavath ms.suite: ems
-#<a name="mstgtpltfrm"></a>ms.tgt_pltfrm:
-ms.custom: intune-classic
-
 ---
-
+title: Výhody sady Intune App SDK
+titlesuffix: Microsoft Intune
+description: Sada Intune App SDK je dostupná pro platformy iOS i Android a umožňuje povolit funkce správy mobilních aplikací v Microsoft Intune.
+keywords: ''
+author: Erikre
+ms.author: erikre
+manager: dougeby
+ms.date: 05/15/2018
+ms.topic: article
+ms.prod: ''
+ms.service: microsoft-intune
+ms.technology: ''
+ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
+ms.reviewer: aanavath
+ms.suite: ems
+ms.custom: intune-classic
+ms.openlocfilehash: 19a550b9ecdee55f29b9ac9424c009bf68c25ed1
+ms.sourcegitcommit: 9f99b4a7f20ab4175d6fa5735d9f4fd6a03e0d3a
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40251803"
+---
 # <a name="intune-app-sdk-overview"></a>Přehled sady Intune App SDK
 Intune App SDK, dostupná pro iOS i Android, povoluje ve vaší aplikaci zásady ochrany aplikací Intune. Usiluje o minimalizaci nutných změn kódu, které musí vývojáře aplikace provádět. Zjistíte, že většinu funkcí sady SDK můžete povolit bez změny chování vaší aplikace. Za účelem zlepšení činnosti koncových uživatelů a správců IT můžete využít rozhraní API k přizpůsobení chování vaší aplikace pro funkce, které vyžadují zapojení vaší aplikace.
 

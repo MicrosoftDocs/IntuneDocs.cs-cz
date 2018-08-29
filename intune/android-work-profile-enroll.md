@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 095985bad8f7e35a953383fcce8296716723b8bc
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: fc1943781dcf95209b575cdb6e36d5065275626f
+ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909061"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40255070"
 ---
 # <a name="set-up-enrollment-of-android-work-profile-devices"></a>Nastavení registrace zařízení s pracovním profilem Androidu
 
@@ -34,7 +34,7 @@ Správu pracovního profilu Androidu nastavíte tímto postupem:
 2. Určete nastavení registrace pracovního profilu Androidu. Pracovní profily Androidu jsou [podporované jen na určitých zařízeních s Androidem](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012%20style=%22target=new_window%22). Jakékoli zařízení, které podporuje pracovní profily Androidu, podporuje také správu konvenčního Androidu. Intune umožňuje určit, jak se mají spravovat zařízení podporující pracovní profily Androidu v rámci [Omezení registrace](enrollment-restrictions-set.md).
     - **Blokovat (standardně nastaveno)**: Všechna zařízení s Androidem včetně zařízení podporujících pracovní profily Androidu se zaregistrují jako zařízení s konvenčním Androidem.
     - **Povolit**: Všechna zařízení podporující pracovní profily Androidu se zaregistrují jako zařízení s pracovním profilem Androidu. Jakékoli zařízení s Androidem, které nepodporuje pracovní profily Androidu, se zaregistruje jako zařízení s konvenčním Androidem.
-3. [Sdělte uživatelům, jak mají svá zařízení zaregistrovat](/intune-user-help/enroll-your-device-in-intune-android.md).
+3. [Sdělte uživatelům, jak mají svá zařízení zaregistrovat](/intune-user-help/enroll-your-device-in-intune-android).
 
 
 Pokud chcete zaregistrovat zařízení s pracovním profilem Androidu, ale tato zařízení jsou už zaregistrovaná jako zařízení s běžným Androidem, musí se registrace těchto zařízení nejprve zrušit a pak se musí znovu zaregistrovat.

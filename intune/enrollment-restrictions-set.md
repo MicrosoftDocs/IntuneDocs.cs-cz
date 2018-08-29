@@ -15,12 +15,12 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2900f7c211a675a20300a2e212b0d57bad3a597a
-ms.sourcegitcommit: 32a4b1eb6bf20da7262f27276f8e94e435803386
+ms.openlocfilehash: aa91e0c0adcd1182f82c4a09746f154302fae326
+ms.sourcegitcommit: 77ed48ab52b55e92ceaa89e9edf53b892fc62adb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39501145"
+ms.lasthandoff: 08/17/2018
+ms.locfileid: "40251959"
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
@@ -30,9 +30,6 @@ Jako správce Intune můžete vytvořit a spravovat omezení registrace definuj�
 
 >[!NOTE]
 >Omezení registrací nepatří k funkcím zabezpečení. Ohrožená zařízení mohou poskytovat zavádějící informace. Tato omezení jsou jen určitou bariérou pro uživatele bez zlých úmyslů.
-
->[!NOTE]
->Omezení registrace přiřazené skupinám a funkce priority v tomto článku se v současnosti zavádějí napříč zákaznickou základnou Intune. Než se zavedení dokončí, možná nebudete mít k funkcím skupin a priority přístup.
 
 Mezi konkrétní omezení registrace, která můžete vytvořit, patří:
 

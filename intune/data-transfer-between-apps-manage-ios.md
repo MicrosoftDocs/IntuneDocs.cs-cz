@@ -15,12 +15,12 @@ ms.assetid: d10b2d64-8c72-4e9b-bd06-ab9d9486ba5e
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c6ba08a89417222e9741a69cdf899a4889794b67
-ms.sourcegitcommit: 8ea2ff0941219e72477d7ceaab40a0068e53d508
+ms.openlocfilehash: 2991aa947a693d2eb71a355047ed266838dd92a4
+ms.sourcegitcommit: be67f8293b47cc08a46d328a44a50a7ab67c2052
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37926991"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40253133"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Správa přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune
 ## <a name="manage-ios-apps"></a>Správa aplikací pro iOS
@@ -70,7 +70,7 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) je **povinná** pro za�
 
 |Jiný poskytovatel řešení MDM| Konfigurační klíč | Typ hodnoty | Konfigurační hodnota|
 | ------- | ---- | ---- | ---- |
-|Microsoft Intune| IntuneMAMUPN | Řetězec | {UserPrincipalName}|
+|Microsoft Intune| IntuneMAMUPN | Řetězec | {{UserPrincipalName}}|
 |VMware AirWatch| IntuneMAMUPN | Řetězec | {UserPrincipalName}|
 |MobileIron | IntuneMAMUPN | Řetězec | ${userUPN} **nebo** ${userEmailAddress} |
 |Správce mobilních zařízení ManageEngine | IntuneMAMUPN | Řetězec | %upn% |
