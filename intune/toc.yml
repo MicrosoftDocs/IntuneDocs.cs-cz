@@ -675,30 +675,6 @@ items:
       href: data-apple-sends-to-intune.md
     - name: Data odesílaná Googlem do Intune
       href: data-google-sends-to-intune.md
-  - name: Monitorování a odstraňování potíží
-    items:
-    - name: Pomoc uživatelům s řešením problémů
-      href: help-desk-operators.md
-    - name: Řešení problémů s přístupem k prostředkům společnosti
-      href: troubleshoot-company-resource-access-problems.md
-    - name: Řešení problémů s instalací aplikací
-      href: troubleshoot-app-install.md
-    - name: Protokoly auditu pro aktivity v Intune
-      href: monitor-audit-logs.md
-    - name: Kontrola protokolů ochrany aplikace
-      href: app-protection-policy-settings-log.md
-    - name: Řešení potíží s e-mailovými profily
-      href: troubleshoot-email-profiles-in-microsoft-intune.md
-    - name: Řešení potíží s aktualizacemi softwaru
-      href: troubleshoot-software-updates-in-microsoft-intune.md
-    - name: Řešení potíží se službou Endpoint Protection
-      href: troubleshoot-endpoint-protection-in-microsoft-intune.md
-    - name: Řešení potíží se zásadami
-      href: troubleshoot-policies-in-microsoft-intune.md
-    - name: Řešení potíží s podmíněným přístupem
-      href: troubleshoot-conditional-access.md
-    - name: Řešení problémů s konektorem Exchange
-      href: troubleshoot-exchange-connector.md
   - name: Automatizace a přizpůsobení
     items:
     - name: Konfigurace vlastních nastavení zařízení
@@ -796,11 +772,35 @@ items:
       href: https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/intune_graph_overview
 - name: Prostředky
   items:
+  - name: Řešení problémů
+    items:
+    - name: Pomoc uživatelům s řešením problémů
+      href: help-desk-operators.md
+    - name: Řešení problémů s přístupem k prostředkům společnosti
+      href: troubleshoot-company-resource-access-problems.md
+    - name: Řešení problémů s instalací aplikací
+      href: troubleshoot-app-install.md
+    - name: Protokoly auditu pro aktivity v Intune
+      href: monitor-audit-logs.md
+    - name: Kontrola protokolů ochrany aplikace
+      href: app-protection-policy-settings-log.md
+    - name: Řešení potíží s e-mailovými profily
+      href: troubleshoot-email-profiles-in-microsoft-intune.md
+    - name: Řešení potíží s aktualizacemi softwaru
+      href: troubleshoot-software-updates-in-microsoft-intune.md
+    - name: Řešení potíží se službou Endpoint Protection
+      href: troubleshoot-endpoint-protection-in-microsoft-intune.md
+    - name: Řešení potíží se zásadami
+      href: troubleshoot-policies-in-microsoft-intune.md
+    - name: Řešení potíží s podmíněným přístupem
+      href: troubleshoot-conditional-access.md
+    - name: Řešení problémů s konektorem Exchange
+      href: troubleshoot-exchange-connector.md
   - name: Glosář
     href: intune-glossary.md
-ms.openlocfilehash: ab5b79b56ff430575cf3c9021ce33b573b4d0f22
-ms.sourcegitcommit: 973a06f4a35b74314fece2bae17dd6885b4211c3
+ms.openlocfilehash: 696173c0e1ecc8121637139ce4ada0b497ab7506
+ms.sourcegitcommit: 11cad61c565c474a8d653181675cc1109d562626
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42822946"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43241758"
