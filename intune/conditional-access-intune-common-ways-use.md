@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2d147bc5ee22718ecce102cc549b29faa17a617e
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 49fd06d4f0f75f1aeff434ce3b271284ec1a0340
+ms.sourcegitcommit: 27f365f5e67e83562883e0c1fc9fdfae8fd60ce4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31025908"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40251868"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jaké jsou běžné způsoby používání podmíněného přístupu s Intune?
 
@@ -28,6 +28,9 @@ ms.locfileid: "31025908"
 Existují dva typy podmíněného přístupu s Intune: podmíněný přístup podle zařízení a podle aplikace. K zavedení dodržování předpisů podmíněného přístupu ve vaší organizaci musíte nakonfigurovat související zásady dodržování předpisů. Podmíněný přístup se běžně používá k provádění akcí, jako je povolení nebo blokování přístupu k místnímu Exchangi, řízení přístupu k síti nebo integraci s řešením Mobile Threat Defense.
 
 Níže uvedené informace objasňují, jak se používají možnosti dodržování předpisů mobilními *zařízeními* Intune a možnosti správy mobilních *aplikací* (MAM) Intune. 
+
+> [!NOTE]
+> Podmíněný přístup je funkce Azure Active Directory, která je zahrnutá v licenci pro Azure Active Directory Premium. Intune tuto funkci vylepšuje tím, že do řešení přidává dodržování předpisů pro mobilní zařízení a správu mobilních aplikací.
 
 ## <a name="device-based-conditional-access"></a>Podmíněný přístup podle zařízení
 
@@ -122,7 +125,7 @@ Podmíněný přístup pro počítače poskytuje podobné možnosti jako pro mob
 
 #### <a name="corporate-owned"></a>Ve vlastnictví firmy
 
--   **Připojení k místní doméně AD:** Tohle je nejběžnější možnost nasazení podmíněného přístupu pro organizace, kterým vyhovuje skutečnost, že už své počítače spravují prostřednictvím zásad skupiny AD nebo pomocí System Center Configuration Manageru.
+-   **Připojení k místní doméně AD:** Tuto možnost běžně používají organizace, kterým vyhovuje, jak už svoje počítače spravují prostřednictvím zásad skupiny AD nebo System Center Configuration Manageru.
 
 -   **Připojení k doméně Azure AD a správa prostřednictvím Intune:** Tento scénář je typický pro výběr vlastního zařízení (CYOD: Choose Your Own Device) a scénáře přenosných počítačů, kdy jsou tato zařízení zřídka připojená k podnikové síti. Zařízení se připojí k Azure AD a zaregistruje v Intune, čímž se odeberou všechny závislosti na místním AD a řadičích domény. To se dá využít jako kritérium podmíněného přístupu při přístupu k podnikovým prostředkům.
 

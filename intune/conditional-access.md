@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: a1973f38-ea55-43eb-a151-505fb34a8afb
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a62166792570c5bb81391d05d1cbc3f8486543a4
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 7faba9a0bfb6f07a80c4c0af947efbca9b33ae03
+ms.sourcegitcommit: 27f365f5e67e83562883e0c1fc9fdfae8fd60ce4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31022335"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40251597"
 ---
 # <a name="whats-conditional-access"></a>Co je podmíněný přístup?
 
@@ -38,7 +38,7 @@ Můžete definovat podmínky, které omezují přístup k podnikovým datům pod
 
 ## <a name="conditional-access-with-intune"></a>Podmíněný přístup s Intune
 
-Intune v rámci podpory řešení podmíněného přístupu EMS přidává dodržování předpisů pro mobilní zařízení a zásady správy aplikací.
+Podmíněný přístup je funkce Azure Active Directory, která je zahrnutá v licenci pro Azure Active Directory Premium. Intune tuto funkci vylepšuje tím, že do řešení přidává dodržování předpisů pro mobilní zařízení a správu mobilních aplikací. 
 
 ![Intune a podmíněný přístup při používání EMS](./media/intune-with-ca-1.png)
 

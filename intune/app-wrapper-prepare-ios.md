@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 08/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 050660b4da609d8e6c0dbf969eb71aa79945262a
-ms.sourcegitcommit: e6013abd9669ddd0d6449f5c129d5b8850ea88f3
+ms.openlocfilehash: daaed6ded0c20551567a63890d324abcbaaf41d7
+ms.sourcegitcommit: 9f99b4a7f20ab4175d6fa5735d9f4fd6a03e0d3a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39254531"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40253134"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro iOS na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -27,7 +27,7 @@ ms.locfileid: "39254531"
 
 Pomocí nástroje Microsoft Intune App Wrapping Tool pro iOS můžete zapnout zásady ochrany aplikací Intune pro interní aplikace pro iOS, aniž byste museli měnit kód samotné aplikace.
 
-Tento nástroj je vlastně aplikace příkazového řádku systému Mac OS, která vytvoří obálku aplikace. Až se aplikace zpracuje, můžete její funkce změnit tak, že do ní nasadíte [zásady ochrany aplikací](/intune-classic/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console).
+Tento nástroj je vlastně aplikace příkazového řádku systému Mac OS, která vytvoří obálku aplikace (app wrapper). Až se aplikace zpracuje, můžete její funkce změnit tak, že do ní nasadíte [zásady ochrany aplikací](/intune-classic/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console).
 
 Nástroj si můžete stáhnout na stránce [Microsoft Intune App Wrapping Tool pro iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) v GitHubu.
 
@@ -172,19 +172,14 @@ K distribuci aplikací zabalených pomocí Intune budete potřebovat toto:
 
 3. Výběrem možnosti **Souhlasím** přijměte podmínky smlouvy EULA. Tím připojíte balíček k počítači.
 
-4.  Otevřete složku **IntuneMAMPackager** a uložte její obsah do počítače s macOS. Teď můžete nástroj App Wrapping spustit.
-
-> [!NOTE]
-> Intune MAM Packager se může připojit k počítači s macOS samostatně a může způsobit chybu nenalezení souboru při spuštění příkazů pro zabalení. Proto přesunutím obsahu složky IntuneMAMPackager umožníte při zabalení najít cestu k nástroji pro sestavování balíčků.
-
 ## <a name="run-the-app-wrapping-tool"></a>Spuštění nástroje App Wrapping Tool
 
 ### <a name="use-terminal"></a>Použití terminálu
 
-Otevřete okno Terminálu na počítači s macOS a přejděte do složky, do které jste uložili soubory nástroje pro zabalení aplikace. Spustitelný soubor má název IntuneMAMPackager a nachází se ve složce IntuneMAMPackager/Contents/MacOS. Spusťte následující příkaz:
+Otevřete terminál macOS a spusťte tento příkaz:
 
 ```
-./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioning profile paths>]
+/Volumes/IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioning profile paths>]
 ```
 
 > [!NOTE]
@@ -405,6 +400,29 @@ Při používání nástroje App Wrapping použijte následující doporučené 
 -   V aplikacích pro iOS s dialogovým oknem pro nahrávání souborů mohou uživatelé obejít omezení aplikace, která se vztahují na vyjmutí, kopírování a vložení. Uživatel může například pomocí dialogového okna pro nahrání souboru nahrát snímek obrazovky dat aplikace.
 
 -   Když ze zabalené aplikace monitorujete složku dokumentů v zařízení, může se zobrazit složka s názvem .msftintuneapplauncher. Pokud tuto složku změníte nebo odstraníte, může to mít vliv na správné fungování omezených aplikací.
+
+## <a name="intune-app-wrapping-tool-for-ios-with-citrix-mdx-mvpn"></a>Nástroj Intune App Wrapping pro iOS s Citrix MDX mVPN
+Tato funkce je integrací s obálkou aplikací (app wrapper) Citrix MDX pro iOS. Tato integrace je jednoduše další volitelný příznak příkazového řádku (`-citrix`) k obecným nástrojům Intune App Wrapping Tools.
+
+### <a name="requirements"></a>Požadavky
+
+Abyste mohli použít příznak `-citrix`, musíte také na stejný počítač s macOS nainstalovat [obálku aplikací (app wrapper) Citrix MDX pro iOS](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-ios.html). Soubory ke stažení najdete na webu [Citrix XenMobile Downloads](https://www.citrix.com/downloads/xenmobile/). Přístup k nim získají jenom zákazníci Citrixu po přihlášení. Zajistěte, aby se do výchozího umístění nainstalovalo toto: `/Applications/Citrix/MDXToolkit`. 
+
+> [!NOTE] 
+> Podpora integrace Intune a Citrixu je omezená jenom na zařízení s iOSem 10+.
+
+### <a name="use-the--citrix-flag"></a>Použití příznaku `-citrix`
+Jednoduše spusťte obecný příkaz pro balení aplikací s připojeným příznakem `-citrix`. Příznak `-citrix` momentálně nepřijímá žádné argumenty.
+
+**Formát použití:**
+```
+./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioing profile paths>] [-citrix]
+```
+
+**Příklad příkazu:**
+```
+./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c 12A3BC45D67EF8901A2B3CDEF4ABC5D6E7890FAB  -v true -citrix
+```
 
 ## <a name="getting-logs-for-your-wrapped-applications"></a>Získání protokolů zabalených aplikací
 Následující postup vám pomůže získat protokoly zabalených aplikací, které vám pomůžou při řešení potíží.

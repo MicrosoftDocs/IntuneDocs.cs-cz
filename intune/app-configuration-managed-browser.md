@@ -15,23 +15,23 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8b647e7b2a4d252041e60792b6fc49df8b961066
-ms.sourcegitcommit: e01945bff19157fa7acaa4f7975b0f2a8b3a73f0
+ms.openlocfilehash: d39dca2a464886ae6752450636fe25a5f5701858
+ms.sourcegitcommit: 27f365f5e67e83562883e0c1fc9fdfae8fd60ce4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37967230"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40251961"
 ---
-# <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Správa přístupu k internetu pomocí zásad aplikace Managed Browser v Microsoft Intune
+# <a name="manage-internet-access-using-protected-browser-policies-with-microsoft-intune"></a>Správa přístupu k internetu pomocí zásad chráněného prohlížeče v Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Managed Browser je aplikace k procházení webu, kterou můžete po stažení z některého z veřejných obchodů s aplikacemi využívat ve své organizaci. Po nakonfigurování se službou Intune můžete v aplikaci Managed Browser:
+Mezi chráněné prohlížeče patří Microsoft Edge a Intune Managed Browser. Edge a Managed Browser jsou aplikace k procházení webu, které můžete po stažení z některého z veřejných obchodů s aplikacemi využívat ve své organizaci. Po nakonfigurování se službou Intune můžete v chráněných prohlížečích:
 - Přistupovat k firemním webům a aplikacím SaaS jednotným přihlašováním prostřednictvím služby MyApps. Data webů přitom zůstávají chráněná.
 - Předem nakonfigurovat seznam adres URL a domén a určit tak, na jaké weby smí uživatel ve firemním prostředí přejít.
 - Předem nakonfigurovat domovskou stránku a záložky.
 
-Vzhledem k tomu, že je tato aplikace integrovaná s Intune SDK, můžete u ní také použít zásady ochrany aplikací, včetně:
+Aplikace Edge a Managed Browser jsou integrované se sadou Intune SDK, takže v nich můžete používat také zásady ochrany aplikací, včetně:
 - Řízení použití operací vyjmutí, kopírování a vložení
 - Prevence pořizování snímků obrazovky
 - Zajištění, že odkazy na obsah, na které uživatelé klikají, se otevřou jedině v ostatních spravovaných aplikacích.
@@ -45,11 +45,11 @@ Tato nastavení můžete použít na:
 - Nespravovaná zařízení
 
 Pokud si uživatelé nainstalují aplikaci Managed Browser z obchodu s aplikacemi a služba Intune ji nebude spravovat, mohou ji používat jako základní webový prohlížeč s podporou jednotného přihlašování přes web Microsoft MyApps. Uživatelé jsou přesměrováni přímo na web MyApps, kde uvidí všechny své zřízené aplikace SaaS.
-Pokud aplikace Managed Browser není spravovaná službou Intune, nemá přístup k datům jiných takto spravovaných aplikací. 
+Pokud nejsou aplikace Managed Browser nebo Edge spravované službou Intune, nemají přístup k datům jiných takto spravovaných aplikací. 
 
 Aplikace Managed Browser nepodporuje kryptografický protokol Secure Sockets Layer ve verzi 3 (SSLv3).
 
-Zásady aplikace Managed Browser můžete vytvořit pro následující typy zařízení:
+Zásady chráněného prohlížeče můžete vytvořit pro následující typy zařízení:
 
 -   Zařízení se systémem Android 4 nebo novější verzí
 
@@ -60,9 +60,9 @@ Zásady aplikace Managed Browser můžete vytvořit pro následující typy zař
 >Starší verze systému Android a iOS budou moct Managed Browser dál používat, ale nepůjde do nich nainstalovat nové verze této aplikace a nebudou mít přístup ke všem jejím možnostem. Doporučujeme vám tato zařízení aktualizovat na podporovanou verzi operačního systému.
 
 
-Intune Managed Browser podporuje otevírání webového obsahu od [partnerů nabízejících aplikace pro Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+Microsoft Edge a Intune Managed Browser podporují otevírání webového obsahu od [partnerů nabízejících aplikace pro Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
-## <a name="conditional-access-for-the-intune-managed-browser"></a>Podmíněný přístup pro aplikaci Intune Managed Browser
+## <a name="conditional-access-for-protected-browsers"></a>Podmíněný přístup pro chráněné prohlížeče
 
 Managed Browser je nově schválenou klientskou aplikací pro podmíněný přístup. To znamená, že můžete omezit přístup mobilních prohlížečů k webovým aplikacím připojeným ke službě Azure AD tak, aby uživatelé mohli používat jenom Managed Browser, a blokovat přístup ze všech ostatních nechráněných prohlížečů, například Safari nebo Chrome. Tuto ochranu můžete použít u prostředků Azure, jako jsou Exchange Online a SharePoint Online, portál Office a dokonce místní weby, k nimž mají přístup externí uživatelé přes [Proxy aplikací Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started). 
 
@@ -104,7 +104,7 @@ Jednotné přihlašování v aplikaci Intune Managed Browser vyžaduje, aby bylo
 > [!NOTE]
 > Registrace zařízení představuje jednoduché vrácení se změnami pomocí služby Azure AD. Nevyžaduje úplnou registraci zařízení a nedává pracovníkům IT žádná další oprávnění k zařízení.
 
-## <a name="create-a-managed-browser-app-configuration"></a>Vytvoření konfigurace aplikace Managed Browser
+## <a name="create-a-protected-browser-app-configuration"></a>Vytvoření konfigurace aplikace chráněného prohlížeče
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
@@ -112,7 +112,7 @@ Jednotné přihlašování v aplikaci Intune Managed Browser vyžaduje, aby bylo
 4.  V okně **Zásady konfigurace aplikací** vyberte možnost **Přidat**.
 5.  V okně **Přidat zásady konfigurace** zadejte **Název** a volitelný **Popis** nastavení konfigurace aplikace.
 6.  Jako typ **Registrace zařízení** zvolte **Spravované aplikace**.
-7.  Zvolte **Vybrat požadovanou aplikaci** a potom v okně **Cílové aplikace** zvolte **Managed Browser** pro iOS, Android nebo oba systémy.
+7.  Zvolte **Vybrat požadovanou aplikaci** a potom v okně **Cílové aplikace** zvolte **Managed Browser** nebo **Edge** pro iOS, Android nebo oba systémy.
 8.  Zvolte **OK** a vraťte se tak do okna **Přidat zásady konfigurace**.
 9.  Zvolte **Nastavení konfigurace**. V okně **Konfigurace** definujte dvojice klíč-hodnota, které budou určovat nastavení aplikace Managed Browser. Informace o různých párech klíč a hodnota, které můžete definovat, najdete v dalších částech tohoto článku.
 10. Když jste hotovi, klikněte na **OK**.
@@ -124,7 +124,7 @@ Jednotné přihlašování v aplikaci Intune Managed Browser vyžaduje, aby bylo
 
 ## <a name="assign-the-configuration-settings-you-created"></a>Přiřazení vytvořeného nastavení aplikace
 
-Nastavení přiřazujete skupinám uživatelů ve službě Azure AD. Pokud má daný uživatel aplikaci Managed Browser nainstalovanou, je spravována na základě vámi zadaného nastavení.
+Nastavení přiřazujete skupinám uživatelů ve službě Azure AD. Pokud má daný uživatel cílovou aplikaci chráněného prohlížeče nainstalovanou, spravuje se podle vámi zadaného nastavení.
 
 1. V okně **Mobilní aplikace** řídicího panelu správy mobilních aplikací Intune zvolte **Zásady konfigurace aplikací**.
 2. V seznamu konfigurací aplikací vyberte tu, kterou chcete přiřadit.
@@ -132,61 +132,64 @@ Nastavení přiřazujete skupinám uživatelů ve službě Azure AD. Pokud má d
 4. V okně **Přiřazení** vyberte skupinu uživatelů ve službě Azure AD, kterým chcete přiřadit konfiguraci aplikace, a potom zvolte **OK**.
 
 
-## <a name="how-to-configure-application-proxy-settings-for-the-managed-browser"></a>Postup konfigurace nastavení proxy aplikací pro Managed Browser
+## <a name="how-to-configure-application-proxy-settings-for-protected-browsers"></a>Postup konfigurace nastavení proxy aplikací pro chráněné prohlížeče
 
-Aplikaci Intune Managed Browser a [Proxy aplikací Azure AD]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) lze použít společně za účelem podpory následujících scénářů pro uživatele zařízení s iOSem nebo Androidem:
+Aplikace Microsoft Edge a Intune Managed Browser a [proxy aplikací Azure AD]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) lze použít společně za účelem podpory následujících scénářů pro uživatele zařízení s iOSem nebo Androidem:
 
-- Uživatel stáhne aplikaci Microsoft Outlook a přihlásí se do ní. Zásady ochrany aplikací Intune se automaticky použijí. Zašifrují uložená data a zablokují uživateli možnost přesouvat firemní soubory do nespravovaných aplikací nebo umístnění na zařízení. Když uživatel potom v Outlooku klikne na odkaz směřující na intranetový server, můžete nastavit, aby takový odkaz otevřel místo běžného prohlížeče aplikaci Managed Browser. Prohlížeč Managed Browser rozpozná, že tento intranetový server byl uživateli zpřístupněn prostřednictvím proxy aplikací. Uživatel je automaticky přesměrován prostřednictvím proxy aplikací, aby před zpřístupněním intranetového serveru provedl ověření pomocí příslušného vícefaktorového ověřování a podmíněného přístupu. Tento server, který nebylo dříve možné najít, když byl uživatel vzdálený, je nyní dostupný a odkaz v Outlooku funguje podle očekávání.
-- Vzdálený uživatel otevře prohlížeč Managed Browser a přejde na intranetový server pomocí interní adresy URL. Prohlížeč Managed Browser rozpozná, že tento intranetový server byl uživateli zpřístupněn prostřednictvím proxy aplikací. Uživatel je automaticky přesměrován prostřednictvím proxy aplikací, aby před zpřístupněním intranetového serveru provedl ověření pomocí příslušného vícefaktorového ověřování a podmíněného přístupu. Tento server, který nebylo možné najít, když byl uživatel vzdálený, je nyní dostupný.
+- Uživatel stáhne aplikaci Microsoft Outlook a přihlásí se do ní. Zásady ochrany aplikací Intune se automaticky použijí. Zašifrují uložená data a zablokují uživateli možnost přesouvat firemní soubory do nespravovaných aplikací nebo umístnění na zařízení. Když uživatel potom v Outlooku klikne na odkaz směřující na intranetový server, můžete nastavit, aby takový odkaz otevřel místo běžného prohlížeče aplikaci chráněného prohlížeče. Chráněný prohlížeč rozpozná, že tento intranetový server se uživateli zpřístupnil prostřednictvím proxy aplikací. Uživatel je automaticky přesměrován prostřednictvím proxy aplikací, aby před zpřístupněním intranetového serveru provedl ověření pomocí příslušného vícefaktorového ověřování a podmíněného přístupu. Tento server, který nebylo dříve možné najít, když byl uživatel vzdálený, je nyní dostupný a odkaz v Outlooku funguje podle očekávání.
+- Vzdálený uživatel otevře chráněný prohlížeč a přejde na intranetový server pomocí interní adresy URL. Chráněný prohlížeč rozpozná, že tento intranetový server se uživateli zpřístupnil prostřednictvím proxy aplikací. Uživatel je automaticky přesměrován prostřednictvím proxy aplikací, aby před zpřístupněním intranetového serveru provedl ověření pomocí příslušného vícefaktorového ověřování a podmíněného přístupu. Tento server, který nebylo možné najít, když byl uživatel vzdálený, je nyní dostupný.
 
 ### <a name="before-you-start"></a>Než začnete
 
 - Nastavte svoje interní aplikace prostřednictvím proxy aplikací Azure AD.
     - Postup konfigurace proxy aplikací a publikování aplikací najdete v [dokumentaci k instalaci](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#how-to-get-started). 
 - Musíte používat minimálně verzi 1.2.0 aplikace Managed Browser.
-- Uživatelé prohlížeče Managed Browser mají k této aplikaci přiřazené [zásady ochrany aplikací Intune]( app-protection-policy.md).
+- Uživatelé aplikace Managed Browser nebo Edge mají k dané aplikaci přiřazené [zásady ochrany aplikací Intune]( app-protection-policy.md).
 
     > [!NOTE]
-    > Aktualizovaným datům přesměrování proxy aplikace může trvat až 24 hodin, než se projeví v aplikaci Managed Browser.
+    > Aktualizovaným datům přesměrování proxy aplikací může trvat až 24 hodin, než se projeví v aplikaci Managed Browser nebo Edge.
 
 
-#### <a name="step-1-enable-automatic-redirection-to-the-managed-browser-from-outlook"></a>Krok 1: Zapněte automatické přesměrování z Outlooku do prohlížeče Managed Browser.
+#### <a name="step-1-enable-automatic-redirection-to-a-protected-browser-from-outlook"></a>Krok 1: Zapněte automatické přesměrování z Outlooku do chráněného prohlížeče.
 Outlook musí být nakonfigurován zásadami ochrany aplikací, které povolují nastavení **Omezit webový obsah tak, aby se spouštěl v Managed Browseru**.
 
-#### <a name="step-2-assign-an-app-configuration-policy-assigned-for-the-managed-browser"></a>Krok 2: Přiřaďte zásady konfigurace aplikací přiřazené prohlížeči Managed Browser.
-Tento postup nakonfiguruje prohlížeč Managed Browser tak, aby používal přesměrování proxy aplikací. Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser zadejte následující dvojici klíč-hodnota:
+#### <a name="step-2-assign-an-app-configuration-policy-assigned-for-the-protected-browser"></a>Krok 2: Přiřaďte zásady konfigurace aplikací pro chráněný prohlížeč.
+Tento postup nakonfiguruje aplikaci Managed Browser nebo Edge tak, aby používala přesměrování proxy aplikací. Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser nebo Edge zadejte následující dvojici klíč-hodnota:
 
 | Klíč                                                             | Hodnota    |
 |-----------------------------------------------------------------|----------|
 | **com.microsoft.intune.mam.managedbrowser.AppProxyRedirection** | **true** |
 
-Další informace o tom, jak lze aplikaci Managed Browser a Proxy aplikací Azure AD používat společně za účelem bezproblémového (a chráněného) přístupu k místním webovým aplikacím, najdete v blogovém příspěvku Enterprise Mobility + Security s názvem[Better together: Intune and Azure Active Directory team up to improve user access](https://cloudblogs.microsoft.com/enterprisemobility/2017/07/06/better-together-intune-and-azure-active-directory-team-up-to-improve-user-access) (Ve dvou se to lépe táhne: Intune a Azure Active Directory společně vylepšují uživatelský přístup).
+Další informace o tom, jak lze Managed Browser, Edge a proxy aplikací Azure AD používat společně za účelem bezproblémového (a chráněného) přístupu k místním webovým aplikacím, najdete v blogovém příspěvku Enterprise Mobility + Security s názvem [Better together: Intune and Azure Active Directory team up to improve user access](https://cloudblogs.microsoft.com/enterprisemobility/2017/07/06/better-together-intune-and-azure-active-directory-team-up-to-improve-user-access) (Ve dvou se to lépe táhne: Intune a Azure Active Directory společně vylepšují uživatelský přístup).
 
-## <a name="how-to-configure-the-homepage-for-the-managed-browser"></a>Postup konfigurace domovské stránky prohlížeče Managed Browser
+> [!NOTE]
+> Edge používá stejné dvojice klíč-hodnota jako Managed Browser. 
 
-Toto nastavení vám umožňuje nakonfigurovat domovskou stránku, kterou uživatelé uvidí, když prohlížeč Managed Browser spustí nebo když otevřou novou kartu. Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser zadejte následující dvojici klíč-hodnota:
+## <a name="how-to-configure-the-homepage-for-a-protected-browser"></a>Postup konfigurace domovské stránky chráněného prohlížeče
+
+Toto nastavení vám umožňuje nakonfigurovat domovskou stránku, kterou uživatelé uvidí, když chráněný prohlížeč spustí nebo když otevřou novou kartu. Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser nebo Edge zadejte následující dvojici klíč-hodnota:
 
 |                                Klíč                                |                                                           Hodnota                                                            |
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
 | <strong>com.microsoft.intune.mam.managedbrowser.homepage</strong> | Zadejte platnou adresu URL. Nesprávné adresy URL se z bezpečnostních důvodů blokují.<br>Příklad: `<https://www.bing.com>` |
 
-## <a name="how-to-configure-bookmarks-for-the-managed-browser"></a>Postup konfigurace záložek prohlížeče Managed Browser
+## <a name="how-to-configure-bookmarks-for-a-protected-browser"></a>Postup konfigurace záložek chráněného prohlížeče
 
-Toto nastavení vám umožňuje nakonfigurovat sadu záložek, které budou uživatelům prohlížeče Managed Browser k dispozici.
+Toto nastavení vám umožňuje nakonfigurovat sadu záložek, které budou uživatelům aplikace Edge nebo Managed Browser k dispozici.
 
 - Tyto záložky nemohou uživatelé odstranit ani upravit.
 - Tyto záložky se zobrazí v horní části seznamu. Všechny záložky vytvořené uživateli se zobrazí pod těmito záložkami.
 - Pokud jste povolili přesměrování Proxy aplikací, můžete přidat webové aplikace Proxy aplikací pomocí jejich interní nebo externí adresy URL.
 
-Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser zadejte následující dvojici klíč-hodnota:
+Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser nebo Edge zadejte následující dvojici klíč-hodnota:
 
 |                                Klíč                                 |                                                                                                                                                                                                                                                         Hodnota                                                                                                                                                                                                                                                          |
 |--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <strong>com.microsoft.intune.mam.managedbrowser.bookmarks</strong> | Hodnotou pro tuto konfiguraci je seznam záložek. Každou záložku tvoří název záložky a adresa URL záložky. Název a adresu URL oddělte znakem <strong>&#124;</strong>.<br><br>Příklad:<br> `Microsoft Bing|https://www.bing.com`<br><br>To configure multiple bookmarks, separate each pair with the double character, <strong>&#124;&#124;</strong><br><br>Example:<br> `Bing|https://www.bing.com||Contoso|https://www.contoso.com` |
 
-## <a name="how-to-specify-allowed-and-blocked-urls-for-the-managed-browser"></a>Určení povolených a blokovaných adres URL v aplikaci Managed Browser
+## <a name="how-to-specify-allowed-and-blocked-urls-for-a-protected-browser"></a>Určení povolených a blokovaných adres URL v chráněném prohlížeči
 
-Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser zadejte následující dvojici klíč-hodnota:
+Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser nebo Edge zadejte následující dvojici klíč-hodnota:
 
 |Klíč|Hodnota|
 |-|-|

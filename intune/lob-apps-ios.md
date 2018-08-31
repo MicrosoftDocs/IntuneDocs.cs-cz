@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 08/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e76e8940334e90f41fe5e5132f9210d69359f74a
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 9ee132a1b1c79e9829e5d28dc33b5cac2e52c8ac
+ms.sourcegitcommit: 27f365f5e67e83562883e0c1fc9fdfae8fd60ce4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224241"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40251729"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro iOS do Microsoft Intune
 
@@ -72,6 +72,9 @@ Informace v tomto článku vám pomůžou přidat do Microsoft Intune obchodní 
 2. Pomocí možnosti **Přidat** nahrajte aplikaci do Intune.
 
 Aplikace, kterou jste vytvořili, se nyní zobrazí v seznamu aplikací. V tomto seznamu můžete aplikace přiřadit do vybraných skupin. Nápovědu najdete v článku [Přiřazení aplikací do skupin](apps-deploy.md).
+
+> [!NOTE]
+> Zřizovací profily obchodních aplikací pro iOS mají lhůtu 30 dnů, pak jejich platnost vyprší.
 
 ## <a name="step-5-update-a-line-of-business-app"></a>Krok 5: Aktualizace obchodní aplikace
 

@@ -5,23 +5,26 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 6/20/2018
+ms.date: 8/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2d2fc7f697d03c1ffcb952cd30e29f4959f2b7e9
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 2d27e90655e54051d73989202d2bc849a66208f5
+ms.sourcegitcommit: 488be75cbee88455b33c68a3ec2acb864d461bf8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321165"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41910798"
 ---
 # <a name="email-profile-settings-for-ios-devices---intune"></a>Nastavení e-mailového profilu na zařízeních s iOSem – Intune
 
 Pomocí nastavení e-mailového profilu můžete konfigurovat zařízení s iOSem.
+
+> [!IMPORTANT]
+> Funkci S/MIME popsanou v tomto článku právě vylepšujeme. V důsledku toho je tato funkce S/MIME z Intune odebraná. Až tuto funkci uvolníme k použití, tuto poznámku odstraníme.
 
 ## <a name="email-settings"></a>Nastavení e-mailu
 

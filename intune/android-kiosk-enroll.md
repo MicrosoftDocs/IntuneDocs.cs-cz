@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d5a223834eed1b0174c56b5e33ad2140203073d0
-ms.sourcegitcommit: 5251a630fb2c7a2e6f86abd84ab887f8eabc1481
+ms.openlocfilehash: 90cd71383e8f2f82bf9fd6a3dc579c1c0a954227
+ms.sourcegitcommit: d99def6e4ceb44f3e7ca10fe7cdd7f222cf814c8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39212031"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42903139"
 ---
 # <a name="set-up-enrollment-of-android-enterprise-kiosk-devices"></a>Nastavení registrace zařízení s Androidem Enterprise v beznabídkovém režimu
 
@@ -56,7 +56,7 @@ Kvůli registraci zařízení v beznabídkovém režimu musíte vytvořit regist
 1. Přejděte na [portál Intune](https://portal.azure.com) a zvolte **Registrace zařízení** > **Registrace Androidu** > **Beznabídkový režim a registrace zařízení úloh**.
 2. Zvolte **Vytvořit** a vyplňte požadovaná pole.
     - **Název**: Zadejte název, který použijete při přiřazení tohoto profilu k dynamické skupině zařízení.
-    - **Datum vypršení platnosti tokenu**: Datum, kdy vyprší platnost tokenu. Google vynucuje maximálně 30 dnů.
+    - **Datum vypršení platnosti tokenu**: Datum, kdy vyprší platnost tokenu. Google vynucuje maximálně 90 dnů.
 3. Uložte profil pomocí tlačítka **Vytvořit**.
 
 ### <a name="create-a-device-group"></a>Vytvoření skupiny zařízení
@@ -110,7 +110,7 @@ Zařízení s Androidem 5.1 a vyšším, která podporují bezkontaktní komunik
 
 ### <a name="enroll-by-using-a-token"></a>Registrace pomocí tokenu
 
-U zařízení s Androidem 6 a vyšším můžete k registraci zařízení použít token.
+U zařízení s Androidem 6 a vyšším můžete k registraci zařízení použít token. Android 6.1 a novější verze můžou také využít skenování kódu QR při použití metody registrace **aft#setup**.
 
 1. Uveďte zařízení do režimu obnovení továrního nastavení.
 2. Na **uvítací** obrazovce vyberte svůj jazyk.
@@ -125,6 +125,9 @@ U zařízení s Androidem 6 a vyšším můžete k registraci zařízení použ�
 ### <a name="enroll-by-using-a-qr-code"></a>Registrace pomocí kódu QR
 
 Zařízení s Androidem 7 a vyšším můžete zaregistrovat naskenováním kódu QR z registračního profilu.
+
+> [!Note]
+> Zvětšení v prohlížeči může způsobit, že zařízení nebudou moct naskenovat kód QR. Tento problém se dá vyřešit zvýšením zvětšení v prohlížeči.
 
 1. Čtení kódu QR spustíte na zařízení s Androidem tak, že několikrát klepnete na první obrazovku, kterou uvidíte po obnovení továrního nastavení.
 2. U zařízení s Androidem 7 a 8 budete vyzváni k instalaci čtečky kódů QR. Zařízení s Androidem 9 a vyšším už mají čtečku kódů QR nainstalovanou.

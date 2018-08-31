@@ -14,18 +14,18 @@ ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ed58a6af9b2b4742582c92729e7324841014f31c
-ms.sourcegitcommit: 2bc3b9655517ae874c524c3a270f4fc40c448faa
+ms.openlocfilehash: f4746e2f20926c102717214304711cc9883597b8
+ms.sourcegitcommit: 1e349bcfd562f34866108e566e5b5062717e0112
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753888"
+ms.lasthandoff: 08/15/2018
+ms.locfileid: "40252580"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Nastavení virtuální privátní sítě (VPN) pro jednotlivé aplikace v Intune pro zařízení s iOSem
 
 Můžete určit, které spravované aplikace můžou používat vaši virtuální privátní síť (VPN) na zařízeních s iOSem spravovaných pomocí Intune. Když v Intune vytvoříte síť VPN pro jednotlivé aplikace, koncový uživatel se při přístupu k firemním dokumentům automaticky připojí přes vaši síť VPN.
 
-VPN pro aplikaci je v tuto chvíli k dispozici pro následující poskytovatele:
+Síť VPN pro jednotlivé aplikace je v tuto chvíli k dispozici pro následující poskytovatele:
 
  - Check Point Remote Access VPN
  - Cisco AnyConnect
@@ -35,7 +35,7 @@ VPN pro aplikaci je v tuto chvíli k dispozici pro následující poskytovatele:
  - SonicWall
  - Palo Alto Networks GlobalProtect
 
-## <a name="prerequisites-for-per-app-vpn"></a>Předpoklady sítě VPN pro aplikaci
+## <a name="prerequisites-for-per-app-vpn"></a>Předpoklady pro síť VPN pro jednotlivé aplikace
 
 > [!IMPORTANT]
 > Dodavatel sítě VPN může mít jiné zvláštní požadavky na VPN pro aplikaci, například zvláštní hardware nebo licencování. Nezapomeňte zkontrolovat jeho dokumentaci a splnit tyto požadavky dříve, než VPN pro aplikaci v Intune nastavíte.
@@ -145,21 +145,32 @@ Po přidání profilu sítě VPN přidružte aplikaci a skupinu služby Azure AD
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
-2. Zvolte **Mobilní aplikace**.
-3. Klikněte na **Aplikace**.
-4. Ze seznamu aplikací vyberte požadovanou aplikaci.
-5. Klikněte na **Přiřazení**.
-6. Klikněte na **Přidat skupinu**.
-7. Jako **Typ přiřazení** vyberte v podokně **Přidat skupinu** možnost **Povinné**.
-6. Vyberte skupinu, kterou jste definovali dříve, a vyberte **Nastavit tuto aplikaci jako povinnou**.
-8. V části **VPN** zadejte definici sítě VPN.
+3. Zvolte **Mobilní aplikace**.
+4. Klikněte na **Aplikace**.
+5. Ze seznamu aplikací vyberte požadovanou aplikaci.
+6. Klikněte na **Přiřazení**.
+7. Klikněte na **Přidat skupinu**.
+8. Jako **Typ přiřazení** vyberte v podokně **Přidat skupinu** možnost **Povinné**.
+9. Vyberte skupinu, kterou jste definovali dříve, a vyberte **Nastavit tuto aplikaci jako povinnou**.
+10. V části **VPN** zadejte definici sítě VPN.
  
     > [!NOTE]  
     > Někdy se může stát, že načtení hodnoty definice sítě VPN trvá až jednu minutu. Než kliknete na **Uložit**, počkejte tři až pět minut.
 
-9. Klikněte na **OK** a pak na **Uložit**.
+11. Klikněte na **OK** a pak na **Uložit**.
 
     ![Přidružení aplikace k síti VPN](./media/vpn-per-app-app-to-vpn.png)
+
+Přidružení aplikace k profilu se odebere během dalšího ohlášení zařízení, pokud jsou splněné následující podmínky:
+- Aplikace byla cílem záměru požadované instalace.
+- Profil a aplikace cílí na stejnou skupinu.
+- Odeberete konfiguraci sítě VPN pro jednotlivé aplikace z přiřazení aplikace.
+
+Přidružení aplikace k profilu bude dále existovat, dokud si koncový uživatel nevyžádá opětovnou instalaci z Portálu společnosti, pokud jsou splněné následující podmínky:
+- Aplikace byla cílem záměru dostupné instalace.
+- Profil a aplikace cílí na stejnou skupinu.
+- Koncový uživatel si vyžádal instalaci aplikace z Portálu společnosti, což má za následek, že aplikace a profil se nainstalují na zařízení.
+- Odeberete konfiguraci sítě VPN pro jednotlivé aplikace z přiřazení aplikace.
 
 ## <a name="verify-the-connection-on-the-ios-device"></a>Ověření připojení na zařízení s iOSem
 
@@ -191,7 +202,7 @@ Ověřte připojení na zařízení s iOSem.
 2. Klepněte na **Připojit**.  
 Síť VPN se úspěšně připojí bez dalších výzev.
 
-<!-- ## Troubleshooting the Per-App VPN
+<!-- ## Troubleshooting the per-app VPN
 
 The user experiences the feature by silently connecting to the VPN. This experience, however, can provide little information for troubleshooting. You can review the event logs crated by the iOS device.
 

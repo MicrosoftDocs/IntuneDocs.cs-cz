@@ -15,12 +15,12 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 76166fda33414c8ae3096ca12604a5edf07ad974
-ms.sourcegitcommit: a5bd08f2b6a0693fa62683aa2d3699041030269e
+ms.openlocfilehash: ce785ad7898f9e792feeadcd1623bd0989f0d6d0
+ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39203216"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40255559"
 ---
 # <a name="enroll-devices-by-using-a-device-enrollment-manager-account"></a>Registrace zařízení pomocí účtu správce registrace zařízení
 
@@ -35,7 +35,7 @@ Abyste mohli uživatele přidat jako správce registrace zařízení, musí tito
 
 ## <a name="example-of-a-device-enrollment-manager-scenario"></a>Příklad scénáře využití správce registrace zařízení
 
-Restaurace chce pro své číšníky pořídit padesát tabletů POS a monitory na objednávky pro pracovníky kuchyně. Zaměstnanci nikdy nepotřebují přístup k datům společnosti a nepotřebují se přihlašovat jako uživatelé. Správce Intune vytvoří nový účet správce registrace zařízení pro nadřízeného restaurace.  Tento účet je oddělený od primárního účtu nadřízeného a používá se jen pro účely registrace sdílených zařízení v Intune. Nadřízený nyní může zaregistrovat padesát zařízení pomocí přihlašovacích údajů DEM.
+Restaurace chce pro své číšníky pořídit padesát tabletů POS a monitory na objednávky pro pracovníky kuchyně. Zaměstnanci nikdy nepotřebují přístup k datům společnosti a nepotřebují se přihlašovat jako uživatelé. Správce Intune vytvoří nový účet správce registrace zařízení pro nadřízeného restaurace.  Tento účet je oddělený od primárního účtu nadřízeného a používá se jen k registraci sdílených zařízení v Intune. Nadřízený nyní může zaregistrovat padesát zařízení pomocí přihlašovacích údajů DEM.
 
 Správci registrace zařízení můžou být jen uživatelé na portálu [Azure Portal](https://portal.azure.com). Správce registrace zařízení nemůže být správcem služby Intune.
 
@@ -54,7 +54,7 @@ Zařízení zaregistrovaná pomocí účtu správce registrace zařízení mají
   - V aplikaci nebo na webu Portál společnosti se zobrazí jenom místní zařízení.
   - Uživatelé nemůžou používat aplikace v rámci programu Apple VPP (Volume Purchase Program) s využitím uživatelských licencí, protože ke správě těchto aplikací jsou vyžadovaná Apple ID jednotlivých uživatelů.
   - (Pouze iOS) Pokud pomocí DEM zaregistrujete zařízení s iOSem, nemůžete k registraci zařízení využít Apple Configurator, Program registrace zařízení Apple (DEP) ani Apple School Manager (ASM).
-  - (Pouze Android) Počet zařízení s pracovním profilem Androidu, která lze zaregistrovat pomocí jednoho účtu DEM, je omezený. Pomocí každého účtu DEM je možné zaregistrovat maximálně 10 zařízení s pracovním profilem Androidu. Toto omezení se nevztahuje na registrace starších verzí Androidu.
+  - (Pouze Android) Počet zařízení s pracovním profilem Androidu, která lze zaregistrovat pomocí jednoho účtu DEM, je omezený. Pro každý účet DEM je možné zaregistrovat až 10 zařízení s pracovním profilem Androidu. Toto omezení se nevztahuje na registrace starších verzí Androidu.
   - Zařízení můžou instalovat aplikace VPP, pokud mají licence na zařízení.
   - K používání DEM se nevyžaduje licence zařízení Intune. Další informace o [uživatelských licencích a licencích na zařízení](licenses-assign.md#how-user-and-device-licenses-affect-access-to-services).
 
@@ -74,25 +74,24 @@ Zařízení zaregistrovaná pomocí účtu správce registrace zařízení mají
 
 ## <a name="permissions-for-dem"></a>Oprávnění pro DEM
 
-K provádění úloh souvisejících s registrací DEM na portálu pro správu je potřebná role globálního správce nebo správce služby Intune v Azure AD. Tyto role se vyžadují také k zobrazení všech uživatelů DEM, bez ohledu na oprávnění RBAC, která jsou uvedená a dostupná v rámci vlastní role uživatele. Uživatel, který nemá přiřazenou roli globálního správce nebo správce služby Intune, ale který má oprávnění ke čtení pro roli Správci registrace zařízení, může zobrazit jenom uživatele DEM, které vytvořil. Podpora role RBAC pro tyto funkce bude oznámena v budoucnu.
+Role globálního správce nebo správce služby Intune v Azure AD je potřeba
+- k provádění úloh souvisejících s registrací DEM na Portálu pro správu,
+- k zobrazení všech uživatelů DEM, bez ohledu na oprávnění RBAC, která jsou uvedená a dostupná v rámci vlastní role uživatele.
 
-Pokud uživatel nemá přiřazenou roli globálního správce nebo správce služby Intune, ale má povolené oprávnění ke čtení pro přiřazenou roli Správci registrace zařízení, může zobrazit jenom uživatele DEM, které vytvořil.
+Uživatel, který nemá přiřazenou roli globálního správce nebo správce služby Intune, ale který má oprávnění ke čtení pro roli Správci registrace zařízení, může zobrazit jenom uživatele DEM, které vytvořil. Podpora role RBAC pro tyto funkce bude oznámena v budoucnu.
+
 
 ## <a name="remove-a-device-enrollment-manager"></a>Odebrání správce registrace zařízení
 
-Odebrání správce registrace zařízení nemá vliv na zaregistrovaná zařízení. Po odebrání správce registrace zařízení nastane tento stav:
+Po odebrání správce registrace zařízení nastane tento stav:
 
 -   Zaregistrovaná zařízení nejsou nijak ovlivněná a jsou dál plně spravovaná.
--   Přihlašovací údaje k odebranému účtu správce registrace zařízení zůstávají platné.
--   Odebraný správce registrace zařízení dál nemůže mazat nebo vyřazovat zařízení.
--   Odebraný správce registrace zařízení může registrovat počet zařízení jenom do limitu pro konkrétního uživatele, který nakonfiguroval správce Intune.
+-   Přihlašovací údaje odebraného účtu DEM jsou stále platné.
+-   Odebraný DEM nemůže stále vymazávat nebo vyřazovat zařízení.
+-   Odebraný DEM může registrovat počet zařízení jenom do limitu pro konkrétního uživatele, který nakonfiguroval správce Intune.
 
 **Odebrání správce registrace zařízení**
 
 1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení** a potom zvolte **Správci registrace zařízení**.
 2. V okně **Správci registrace zařízení** vyberte uživatele DEM a pak vyberte **Odstranit**.
 
-## <a name="view-the-properties-of-a-device-enrollment-manager"></a>Zobrazení vlastností správce registrace zařízení
-
-1. Na portálu [Azure Portal](https://portal.azure.com) zvolte **Registrace zařízení** a pak zvolte **Správci registrace zařízení**.
-2. V okně **Správci registrace zařízení** klikněte pravým tlačítkem na uživatele DEM a vyberte **Vlastnosti**.

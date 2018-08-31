@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: 216c83d4158fe65b7aeb52f5477362eb57ec4242
-ms.sourcegitcommit: a52e81ab4fe24ae6410d1a1e63b4b073abc416a4
+ms.openlocfilehash: df7e14b485fae0a70b8f0f487229b9e31ace4077
+ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34822717"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40255286"
 ---
 # <a name="manage-software-updates-in-intune"></a>Správa softwarových aktualizací v Intune
 
@@ -115,11 +115,10 @@ Nový aktualizační kanál se zobrazí v seznamu aktualizačních kanálů.
 3. Až s tím budete hotoví, zvolte **Vybrat**. Tím přiřazení dokončíte.
 
 ## <a name="update-compliance-reporting"></a>Generování sestav dodržování předpisů pro aktualizace
-Dodržování předpisů pro aktualizace můžete sledovat v Intune nebo pomocí bezplatného řešení v Operations Management Suite (OMS), které se jmenuje Update Compliance.
+Dodržování předpisů pro aktualizace můžete sledovat v Intune nebo pomocí bezplatného řešení, které se jmenuje Update Compliance.
 
 ### <a name="review-update-compliance-in-intune"></a>Kontrola dodržování předpisů pro aktualizace v Intune 
-<!-- 1352223 -->
-Zkontrolujte sestavu zásad, abyste viděli stav nasazení pro nakonfigurované aktualizační kanály Windows 10.
+<!-- 1352223 --> Zkontrolujte sestavu zásad, abyste viděli stav nasazení pro nakonfigurované aktualizační kanály Windows 10.
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
@@ -137,7 +136,7 @@ Zkontrolujte sestavu zásad, abyste viděli stav nasazení pro nakonfigurované 
       - **Stav uživatele**
 
 ### <a name="review-update-compliance-using-oms"></a>Kontrola dodržování předpisů pro aktualizace pomocí OMS
-Zavádění aktualizací Windows 10 můžete sledovat pomocí bezplatného řešení v Operations Management Suite (OMS), které se jmenuje Update Compliance. Podrobnosti najdete v článku o [monitorování aktualizací Windows pomocí Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor). Když toto řešení použijete, můžete nasadit komerční ID do libovolného z vašich zařízení s Windows 10 spravovaných pomocí Intune, pro které chcete generovat sestavy o dodržování předpisů pro aktualizace.
+Zavádění aktualizací Windows 10 můžete sledovat pomocí bezplatného řešení, které se jmenuje Update Compliance. Podrobnosti najdete v článku o [monitorování aktualizací Windows pomocí Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor). Když toto řešení použijete, můžete nasadit komerční ID do libovolného z vašich zařízení s Windows 10 spravovaných pomocí Intune, pro které chcete generovat sestavy o dodržování předpisů pro aktualizace.
 
 V konzole Intune můžete ke konfiguraci komerčního ID použít nastavení OMA-URI vlastní zásady. Podrobnosti najdete v článku [Nastavení zásad Intune pro zařízení s Windows 10 v Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/windows-10-policy-settings-in-microsoft-intune).   
 

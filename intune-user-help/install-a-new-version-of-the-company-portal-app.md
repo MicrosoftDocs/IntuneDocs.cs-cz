@@ -15,30 +15,32 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 3176f09a7565a17230aeb7a9f44b14490264b2bd
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: b939cd175f7a548b37ebec985a189d7e3119aac7
+ms.sourcegitcommit: d99def6e4ceb44f3e7ca10fe7cdd7f222cf814c8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31016437"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42903119"
 ---
 # <a name="how-to-update-the-company-portal-app"></a>Aktualizace aplikace Portál společnosti
 
-Pokud už vaše verze aplikace Portál společnosti není podporovaná nebo je dispozici její novější verze, musíte ji aktualizovat na novější verzi. Použijte postup odpovídající typu zařízení, které máte.
+Tento článek popisuje, jak aktualizovat vaši verzi aplikace Portál společnosti v případě, že:  
+* Je k dispozici novější verze aplikace Portál společnosti.
+* Vaše verze aplikace Portál společnosti už není podporovaná.
+
+Tyto kroky popisují, jak tuto aplikaci aktualizovat na zařízeních s Androidem, iOSem a Windows.    
 
 ## <a name="update-the-intune-company-portal-app-on-your-android-device"></a>Aktualizace aplikace Portál společnosti Intune na zařízení s Androidem
 
-Obchod Play vás upozorní, jakmile bude k dispozici nová verze aplikace Portál společnosti. V samotné aplikaci Portál společnosti výzvu neuvidíte. Aktualizujte zařízení podle pokynů v upozornění.
+Obchod Play vás upozorní, jakmile bude k dispozici nová verze aplikace Portál společnosti. V samotné aplikaci Portál společnosti výzvu neuvidíte. Vyberte upozornění a postupujte podle pokynů k aktualizaci zařízení.  
 
 ## <a name="update-the-intune-company-portal-app-on-your-ios-device"></a>Aktualizace aplikace Portál společnosti Intune na zařízení s iOSem
 
 Pokud je k dispozici nová verze, zobrazí se možnost aktualizace, když se na tuto aplikaci díváte v seznamu nainstalovaných aplikací.  
 
-Aktualizace aplikace Portál společnosti:
-
 1. Otevřete App Store a vyhledejte řetězec **intune**.
 
-2. Až aplikaci najdete, klepněte na tlačítko **Aktualizovat** vpravo od názvu aplikace.
+2. Až aplikaci najdete, klepněte na **Aktualizovat**.
 
 ## <a name="update-the-intune-company-portal-app-on-your-windows-device"></a>Aktualizace aplikace Portál společnosti Intune na zařízení s Windows
 

@@ -15,12 +15,12 @@ ms.assetid: ef8008ac-8b85-4bfc-86ac-1f9fcbd3db76
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c871d32fbcdfa089de88ae649c2926d2c839cce2
-ms.sourcegitcommit: 413d271b42a6d4396adc2f749e31eed782aaa9da
+ms.openlocfilehash: d527b36876adf29c12d3577f7dcd09416b4d5a37
+ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38993713"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40255470"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Přidání obchodních aplikací pro macOS do Microsoft Intune
 
@@ -28,14 +28,15 @@ ms.locfileid: "38993713"
 
 Informace v tomto článku vám pomůžou přidat do Microsoft Intune obchodní aplikace pro macOS. Než budete moct obchodní soubor nahrát do Microsoft Intune, musíte si stáhnout externí nástroj pro předběžné zpracování souborů *.pkg*. Předběžné zpracování souborů *.pkg* se musí provést v zařízení s macOS.
 
->[!NOTE]
->Uživatelé zařízení s macOS můžou odebrat některé integrované aplikace pro macOS, třeba aplikace Akcie a Mapy, ale není možné tyto aplikace s použitím Intune znovu nasadit. Když koncoví uživatelé tyto aplikace odstraní, musí přejít do App Storu a znovu si je ručně nainstalovat.
->
->K nahrání obchodních aplikací pro macOS do Microsoft Intune je možné použít jenom soubory *.pkg*. Převod jiných formátů, například z *.dmg* na *.pkg*, není podporovaný.
+> [!NOTE]
+> Uživatelé zařízení s macOS můžou odebrat některé integrované aplikace pro macOS, třeba aplikace Akcie a Mapy, ale není možné tyto aplikace s použitím Intune znovu nasadit. Když koncoví uživatelé tyto aplikace odstraní, musí přejít do App Storu a znovu si je ručně nainstalovat.
 
-## <a name="step-1---pre-process-your-software-setup-file"></a>Krok 1: Předběžné zpracování instalačního souboru softwaru
+## <a name="before-your-start"></a>Než začnete
 
-Pomocí nástroje Intune App Wrapping Tool pro Mac umožněte správu aplikací pro Mac pomocí Microsoft Intune.
+Než budete moct obchodní soubor nahrát do Microsoft Intune, musíte si stáhnout externí nástroj pro předběžné zpracování souborů *.pkg*. Předběžné zpracování souborů *.pkg* se musí provést v zařízení s macOS. Pomocí nástroje Intune App Wrapping Tool pro Mac umožněte správu aplikací pro Mac pomocí Microsoft Intune.
+
+> [!IMPORTANT]
+> K nahrání obchodních aplikací pro macOS do Microsoft Intune je možné použít jenom soubory *.pkg*. Převod jiných formátů, například z *.dmg* na *.pkg*, není podporovaný.
 
 1. Stáhněte a spusťte [Intune App Wrapping Tool pro Mac](https://github.com/msintuneappsdk/intune-app-wrapping-tool-mac).
 
@@ -55,7 +56,7 @@ Pomocí nástroje Intune App Wrapping Tool pro Mac umožněte správu aplikací 
     - `IntuneAppUtil -r <filename.intunemac> [-v]`<br>
     Tento příkaz extrahuje zjištěné parametry a verze vytvořeného souboru *.intunemac*.
 
-## <a name="step-2---specify-the-software-setup-file"></a>Krok 2: Určení instalačního souboru softwaru
+## <a name="step-1---specify-the-software-setup-file"></a>Krok 1 – určení instalačního souboru softwaru
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
@@ -64,14 +65,14 @@ Pomocí nástroje Intune App Wrapping Tool pro Mac umožněte správu aplikací 
 5. Nad seznamem aplikací zvolte **Přidat**.
 6. V podokně **Přidat aplikaci** zvolte **Obchodní aplikace**.
 
-## <a name="step-3---configure-the-app-package-file"></a>Krok 3: Konfigurace souboru balíčku aplikace
+## <a name="step-2---configure-the-app-package-file"></a>Krok 2 – konfigurace souboru balíčku aplikace
 
 1. V podokně **Přidat aplikaci** zvolte **Soubor balíčku aplikace**.
 2. V podokně **Soubor balíčku aplikace** klikněte na tlačítko Procházet a vyberte instalační soubor macOS s příponou *.intunemac*.
 3. Po dokončení zvolte **OK**.
 
 
-## <a name="step-4---configure-app-information"></a>Krok 4: Konfigurace informací o aplikaci
+## <a name="step-3---configure-app-information"></a>Krok 3 – konfigurace informací o aplikaci
 
 1. V podokně **Přidat aplikaci** zvolte **Informace o aplikaci**.
 2. V podokně **Informace o aplikaci** přidejte podrobnosti o aplikaci. V závislosti na zvolené aplikaci můžou být některé hodnoty v tomto podokně vyplněné automaticky:
@@ -89,7 +90,7 @@ Pomocí nástroje Intune App Wrapping Tool pro Mac umožněte správu aplikací 
     - **Logo** – nahrajte ikonu, která se přidruží k aplikaci. Tato ikona se u aplikace zobrazuje, když uživatelé procházejí portál společnosti.
 3. Po dokončení zvolte **OK**.
 
-## <a name="step-5---finish-up"></a>Krok 5: Dokončení
+## <a name="step-4---finish-up"></a>Krok 4 – dokončení
 
 1. V podokně **Přidat aplikaci** ověřte správnost podrobností o aplikaci.
 2. Zvolte **Přidat** a nahrajte aplikaci do Intune.
@@ -99,7 +100,7 @@ Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřadi
 > [!NOTE]
 > Pokud soubor *.pkg* obsahuje více aplikací nebo instalačních programů aplikací, pak Microsoft Intune ohlásí, že je *aplikace* úspěšně nainstalovaná, jenom když se v zařízení zjistí všechny nainstalované aplikace.
 
-## <a name="step-6---update-a-line-of-business-app"></a>Krok 6: Aktualizace obchodní aplikace
+## <a name="step-5---update-a-line-of-business-app"></a>Krok 5 – aktualizace obchodní aplikace
 
 [!INCLUDE [shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)]
 

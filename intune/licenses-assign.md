@@ -14,12 +14,12 @@ ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
 ms.reviewer: amyro
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a6a5bbdd5c8cd155dad99b3a8fcceabb2ff1f6f8
-ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
+ms.openlocfilehash: 8b132c0853bf9d591f16610f1e7a714b6288491b
+ms.sourcegitcommit: 165c1e48891e386f9f75b0ef7a6826b67695dbb7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38225404"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42751646"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Přiřazení licencí uživatelům, aby mohli zaregistrovat zařízení v Intune
 
@@ -61,7 +61,7 @@ Další informace o službě SDS najdete v článku [Přehled služby SDS (Schoo
 
 ## <a name="how-user-and-device-licenses-affect-access-to-services"></a>Vliv licencí pro uživatele a zařízení na přístup ke službám
 * Každý **uživatel**, kterému přiřadíte softwarovou licenci pro uživatele, má přístup k online službám a souvisejícímu softwaru (včetně softwaru System Center) a může je používat ke správě aplikací a až 15 zařízení.
-* Každé **zařízení**, kterému přiřadíte softwarovou licenci pro zařízení, má přístup k online službám a souvisejícímu softwaru (včetně softwaru System Center), které na zařízení může používat libovolný počet uživatelů.
+* Licence pro libovolná zařízení si můžete koupit odděleně od uživatelských licencí. Licence zařízení nemusí být přiřazené zařízením. Každé zařízení, které přistupuje k online službám a souvisejícímu softwaru (včetně softwaru System Center) a používá je, musí mít licenci zařízení.
 * Pokud zařízení používá více než jeden uživatel, bude každý potřebovat softwarovou licenci pro zařízení nebo budou všichni uživatelé potřebovat softwarovou licenci pro uživatele.
 
 ## <a name="understanding-the-type-of-licenses-you-have-purchased"></a>Porozumění typu licencí, které jste zakoupili

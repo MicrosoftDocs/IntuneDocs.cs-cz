@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2018
+ms.date: 08/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 69887fb0a9b2e447d6c6101b26ce50f733053337
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 5964ebdbac251468e3bc35c2c35f0bd2e7fddbff
+ms.sourcegitcommit: 1a8b34c7854a575bf6ce59f475c7b718fa038d66
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321284"
+ms.lasthandoff: 08/18/2018
+ms.locfileid: "40251727"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune
 
@@ -129,6 +129,9 @@ Než začnete aplikace přidávat a přiřazovat, zvažte následující body:
 - Pokud chcete přidat a přiřadit aplikaci z obchodu, musí mít uživatelé u tohoto obchodu zřízený účet, aby si aplikaci mohli nainstalovat.
 - Některé aplikace nebo položky, které přiřadíte, můžou záviset na integrovaných aplikacích pro iOS. Pokud třeba přiřadíte knihu z obchodu pro iOS, musí zařízení mít aplikaci iBooks. Pokud jste integrovanou aplikaci iBooks odebrali, nemůžete ji pomocí Intune obnovit.
 
+> [!IMPORTANT]
+> Pokud po nasazení a instalaci aplikace změníte název aplikace pomocí Intune na portálu Azure Portal, nebude už možné na tuto aplikaci cílit příkazy.
+
 ## <a name="cloud-storage-space"></a>prostor v cloudovém úložišti
 Všechny aplikace, které vytváříte pomocí instalace typu Instalační program softwaru (například obchodní aplikace), se zabalí a nahrají do cloudového úložiště Intune. Zkušební předplatné Intune zahrnuje 2 gigabajty (GB) cloudového úložiště, které se používá k ukládání spravovaných aplikací a aktualizací. Plné předplatné neomezuje celkový objem úložného prostoru.
 
@@ -170,6 +173,10 @@ Intune automaticky přeinstaluje, aktualizuje nebo odebere požadovanou aplikaci
 - Pokud se požadovanou aplikaci nepodaří nainstalovat nebo aplikace na zařízení z nějakého důvodu chybí, Intune vyhodnotí dodržování předpisů a přeinstaluje aplikaci po uplynutí naplánované doby.  
 - Správce nastaví aplikaci pro skupinu uživatelů jako dostupnou a koncoví uživatelé si ji nainstalují na zařízení z Portálu společnosti. Později správce aktualizuje aplikaci z v1 na v2. Intune aktualizuje aplikaci, jakmile uplyne naplánovaná doba, za předpokladu, že je na zařízení některá z předchozích verzí dané aplikace.
 - Pokud se správce rozhodne aplikaci odinstalovat, ale aplikaci se nepodaří ze zařízení odinstalovat, Intune vyhodnotí dodržování předpisů a odinstaluje aplikaci po uplynutí naplánované doby.   
+
+## <a name="app-installation-errors"></a>Chyby instalace aplikací
+
+Podrobnosti o chybách instalace aplikací Intune najdete v tématu [Chyby instalace aplikací](troubleshoot-app-install.md#app-installation-errors).
 
 ## <a name="next-steps"></a>Další kroky
 

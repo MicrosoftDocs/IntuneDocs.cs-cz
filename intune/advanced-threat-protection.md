@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 99d848fb1efea2ea2d557ab8d4f19881705ec991
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: d43e95b2f236dc4c03bb3f63670b2b1400243531
+ms.sourcegitcommit: 0303e3b8c510f56e191e6079e3dcdccfc841f530
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744665"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40251755"
 ---
 # <a name="enable-windows-defender-atp-with-conditional-access-in-intune"></a>Povolení Ochrany ATP v programu Windows Defender s podmíněným přístupem v Intune
 
@@ -44,7 +44,7 @@ V tomto článku se dozvíte, jak:
 
 Abyste mohli používat ATP s Intune, je potřeba mít nakonfigurované a připravené k použití následující komponenty:
 
-- Tenant s licencí pro Enterprise Mobility + Security E5 a Windows E5 (nebo Microsoft 365 Enterprise E5)
+- Tenant s licencí pro Enterprise Mobility + Security E3 a Windows E5 (nebo Microsoft 365 Enterprise E5)
 - Prostředí Microsoft Intune se zařízeními s Windows 10 [spravovanými v Intune](windows-enroll.md), která jsou zároveň připojená k Azure AD
 - [Ochrana ATP v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection) a přístup k Centru zabezpečení v programu Windows Defender (portál ATP)
 
