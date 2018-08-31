@@ -64,7 +64,7 @@
 ### [Co se stane při registraci zařízení s iOSem?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
 ### [Instalace a přihlášení do Portálu společnosti](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### [Registrace zařízení s iOSem](enroll-your-device-in-intune-ios.md)
-### [Registrace zařízení s iOSem pomocí Programu registrace zařízení (DEP)](enroll-your-device-dep-ios.md)
+### [Registrace zařízení s iOSem poskytnutého vaší organizací](enroll-your-device-dep-ios.md)
 
 ### [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-ios.md)
 ### [Nastavení nebo změna hesla](set-or-change-your-passcode-ios.md)
@@ -103,7 +103,7 @@
 ## [Používání zařízení s macOS](using-your-macos-device-with-intune.md)
 ### [Co se stane při registraci zařízení s macOS?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
 ### [Registrace zařízení s macOS](enroll-your-device-in-intune-macos-cp.md)
-### [Registrace zařízení s macOS poskytovaného společností](enroll-company-device-macos.md)  
+### [Registrace zařízení s macOS poskytnutého vaší organizací](enroll-company-device-macos.md)  
 ### [Zrušení registrace zařízení s macOS](unenroll-your-device-from-intune-macos.md)  
 ### [Řešení běžných problémů s macOS](troubleshoot-your-device-macos.md)
 #### [Moje verze macOS ještě není podporovaná](your-macos-version-isnt-yet-supported.md)
