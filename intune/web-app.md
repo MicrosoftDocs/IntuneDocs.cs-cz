@@ -15,12 +15,12 @@ ms.assetid: 5f08752f-0e87-4ad9-a34c-4991b3150775
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ff55b013d863d1676b9b83ec93e38defe222e2d7
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 26117a07e0769033dda573882c3853eb0e3921ff
+ms.sourcegitcommit: 0ac196d1d06f4f52f01610eb26060419d248168b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905236"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251546"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Přidání webových aplikací do Microsoft Intune
 
@@ -45,7 +45,11 @@ Pokud chcete přidat aplikaci do Intune v podobě zástupce aplikace na webu, po
 6. V podokně **Přidat aplikaci** vyberte v rozevíracím seznamu **Typ aplikace** typ **Webový odkaz**.
 7. Vyberte **Konfigurovat**.
 8. V podokně **Informace o aplikaci** přidejte tyto údaje:
-    - **Název**: Zadejte název aplikace, který se zobrazí na Portálu společnosti.
+    - **Název**: Zadejte název aplikace, který se zobrazí na Portálu společnosti. 
+    
+        > [!NOTE]
+        > Pokud po nasazení a instalaci aplikace změníte název aplikace pomocí Intune na portálu Azure Portal, nebude už možné na tuto aplikaci cílit příkazy.
+    
     - **Popis**: Zadejte popis aplikace. Tento popis se uživatelům zobrazí na Portálu společnosti.
     - **Vydavatel**: Zadejte název vydavatele této aplikace.
     - **Adresa URL aplikace**: Zadejte adresu URL webu hostujícího aplikaci, kterou chcete přiřadit.
