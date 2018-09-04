@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 6f85ded485c4e97e100bc9a4531b6810f4fe0b0a
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 7c0d2d4d787f29f873302765e3b6ff0c58184db7
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31017406"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149449"
 ---
 # <a name="your-macos-device-doesnt-have-the-required-minimum-operating-system-version"></a>Vaše zařízení s macOS nemá požadovanou minimální verzi operačního systému
 
@@ -30,4 +30,4 @@ ms.locfileid: "31017406"
 
 Aktualizujte svoje zařízení s macOS kliknutím na **App Store** > **Aktualizace**. Vyberte nejnovější dostupnou aktualizaci macOS a pak klikněte na tlačítko **Aktualizovat**.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

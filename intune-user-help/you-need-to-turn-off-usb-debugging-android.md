@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 2f1b71513ad5e22f62c783ac8d305acb9eac4cca
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: c377c2a4e9640443eb38a85b2e1806c9d9e64a82
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31021774"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147189"
 ---
 # <a name="you-need-to-turn-off-usb-debugging"></a>Potřebujete vypnout Ladění USB.
 
@@ -30,4 +30,4 @@ Ladění USB můžete vypnout tak, že přejdete na **Nastavení** > **Možnosti
 
 Až nastavení **Ladění USB** vypnete, počkejte pár minut a potom můžete zařízení s Androidem používat pro přístup k datům společnosti nebo školy jako obvykle.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 0a90cace32edb33293ba0b0b89d272465ea32418
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: ba0f2675bfd65f60f6f16d6be738cdc1baa3e7e5
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34547484"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148793"
 ---
 # <a name="remove-your-ios-device-from-intune"></a>Odebrání zařízení s iOSem z Intune
 
@@ -74,4 +74,4 @@ Aplikace Portál společnosti ukládá v zařízení data na třech místech.
 -   **Řetězce klíčů**: Zařízení do řetězců klíčů ukládá hesla a další informace používané k přihlášení. Aplikace Microsoftu sdílejí přihlašovací údaje mezi všemi aplikacemi, které vyvíjí Microsoft a jsou na zařízení, včetně aplikací Microsoft Outlook a Microsoft Authenticator. Stejně jako analýzu Apple můžete tyto informace odebrat jenom vrácením (tj. resetováním) zařízení zpět do továrního nastavení. Tím vymažete všechny osobní informace. Pokud chcete obnovit tovární nastavení, otevřete **Nastavení** > **Obecné** > **Obnovit** > **Smazat data a nastavení**.
 
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

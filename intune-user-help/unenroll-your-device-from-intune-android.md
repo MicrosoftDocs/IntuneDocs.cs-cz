@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ec3c0a1c8ce4e04f4d23fb01e7c2525d8f2eed5b
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 683b5ec7b07d7c270ea30ac438e7fc839b13d5fc
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31018358"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150340"
 ---
 # <a name="how-to-remove-your-android-device-from-intune"></a>Odebrání zařízení s Androidem z Intune
 
@@ -49,4 +49,4 @@ Postup odebrání všech dat, která do zařízení uložila aplikace Portál sp
 -   V Aplikacích vymažte data aplikace -> klikněte na aplikaci -> tlačítko Vymazat data.
 -   Odstraňte složku „\storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal“.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

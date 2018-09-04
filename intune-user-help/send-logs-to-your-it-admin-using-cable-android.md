@@ -1,5 +1,5 @@
 ---
-title: Odeslání protokolů firemní podpoře pomocí kabelu USB | Micrososft Docs
+title: Odeslání protokolů firemní podpoře pomocí kabelu USB | Dokumentace Microsoftu
 description: Odeslání datových protokolů pomocí kabelu USB
 keywords: ''
 author: lenewsad
@@ -17,19 +17,19 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 2a2c5c60f22aca6a9c989281ef2c5cc9e0c66911
-ms.sourcegitcommit: f5998019bbb4769fb50a7ea9bf424199516eb9ee
+ms.openlocfilehash: 89be04405f76c290c252c382fbee207176e7180d
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39117850"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150303"
 ---
 # <a name="send-logs-to-your-company-support-using-a-usb-cable"></a>Odeslání protokolů firemní podpoře pomocí kabelu USB
 
 Pokud při použití aplikace Portál společnosti na zařízení s Androidem dojde k chybě, můžete firemní podpoře pomoct potíže vyřešit tak, že jí pošlete e-mailem informace o této chybě. Tyto informace se ukládají na zařízení ve speciálním dokumentu s názvem _diagnostický protokol_.
 
 > [!Note]
-> Než začnete, ujistěte se, že máte po ruce e-mailovou adresu firemní podpory. Najdete ji na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog) nebo v aplikaci Portál společnosti.
+> Než začnete, ujistěte se, že máte po ruce e-mailovou adresu firemní podpory. Najdete ji na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980) nebo v aplikaci Portál společnosti.
 
 1. Na chybové obrazovce klepněte na **Odeslat informace**. Když se zobrazí zpráva s dotazem, jakou metodu chcete použít k odeslání protokolů, zvolte možnost, která uloží soubory do vašeho zařízení.
 
@@ -39,4 +39,4 @@ Pokud při použití aplikace Portál společnosti na zařízení s Androidem do
 
 4. Vyberte soubory a připojte je k e-mailu. Tento e-mail pošlete své firemní podpoře.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

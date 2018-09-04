@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 57c1dcfb591ceea1b85292a416d037c0b4073645
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 1e9b9908fcc48e9137c07f9a5397661d66e5be95
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31016301"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43146735"
 ---
 # <a name="send-logs-to-your-company-support-from-the-settings-app-for-windows-10"></a>Odeslání protokolů firemní podpoře z aplikace Nastavení pro Windows 10
 
@@ -38,4 +38,4 @@ Pokud dojde k chybě při použití zařízení s Windows 10 spravovaného vaš�
 
 Možná bude také potřeba odeslat [protokoly z aplikace Portál společnosti](send-logs-to-your-it-admin-cp-windows.md) a poskytnout tak firemní podpoře další pomoc při řešení potíží, které se můžou vyskytnout. 
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

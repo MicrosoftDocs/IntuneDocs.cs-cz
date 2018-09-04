@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
-ms.openlocfilehash: 1ce260b010658ade6c78361b980ca928a992d113
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 235356e88dc2ba25b789ebe262c1ae9b32840793
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30751437"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150881"
 ---
 # <a name="fix-common-issues-with-your-samsung-knox-device"></a>Řešení nejčastějších problémů se zařízením se zabezpečením Samsung Knox
 
@@ -51,4 +51,4 @@ Může se zobrazit například tato chybová zpráva:
 |---|---|
 |**Chyba při aktivaci zařízení Samsung Knox** – nepodařilo se aktivovat licenci Samsung KNOX. Příčinou může být zapnutý úsporný režim. V nastavení zařízení vypněte úsporný režim a zkuste to znovu. |Zařízení nemusí mít správně nastavené napájení, aby fungovalo s prostředky společnosti. Další informace o [nastavení úsporného režimu](power-saving-mode-android.md).|
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

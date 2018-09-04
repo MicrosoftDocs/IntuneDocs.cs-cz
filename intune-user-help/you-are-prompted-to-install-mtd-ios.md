@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 061a372c38090d74adddbfbce34505be987448e9
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 773b78b32e919b120ac8908b0b69c5514cbdadb2
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30755330"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148757"
 ---
 # <a name="install-mobile-threat-defense-on-your-ios-device"></a>Instalace Mobile Threat Defense na zařízení s iOSem
 
@@ -46,4 +46,4 @@ Ochrana před mobilními hrozbami je způsob, jak můžou společnosti zajistit,
 
 ## <a name="if-the-installation-doesnt-work"></a>Pokud instalace nefunguje
 
-V některých případech může instalace selhat kvůli technickým problémům mimo vaši kontrolu. V takovém případě se obraťte na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+V některých případech může instalace selhat kvůli technickým problémům mimo vaši kontrolu. V takovém případě se obraťte na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

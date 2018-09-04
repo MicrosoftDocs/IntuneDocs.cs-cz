@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: fb2f225d47d1589e7bccbafc4a23f3cecec12897
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 2bd36a0327472f24a3a99b7975e736c9fa5385eb
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31018766"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149059"
 ---
 # <a name="make-your-device-safer-with-the-right-password"></a>Zlepšení zabezpečení zařízení pomocí správného hesla
 
@@ -46,4 +46,4 @@ Pokud zařízení s Windows nevyhovuje zásadám definovaným firemní podporou,
 3. Do pole **Nové heslo** zadejte nové heslo a potvrďte ho v poli **Potvrdit heslo**.
 4. Zvolte **Hotovo**.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 9805dfdba67299a5a1cd9433bbc061f8bd96bc9e
-ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
+ms.openlocfilehash: 8bc441dd07191ec3eb1280330be380ca425f53cc
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190515"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150842"
 ---
 # <a name="submit-errors-to-the-right-people-for-your-managed-macos-device"></a>Odeslání chyb správným osobám pro vaše spravované zařízení s macOS
 
@@ -48,4 +48,4 @@ Protokoly odešlete do Microsoftu takto:
 2.  Klikněte na nabídku **Nápověda** > **Poslat diagnostickou sestavu**.  Po nahrání protokolů obdržíte identifikátor incidentu. Identifikátor si zkopírujte a uložte.
 3.  E-mail do Microsoftu posílejte pomocí <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Paste your incident ID and describe the incident here.">této šablony</a>.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

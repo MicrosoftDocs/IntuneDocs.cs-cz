@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ecb0729a2c6911fa15dd99ad4abe990859c912ad
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 2a5f383eef6f380711578cb79dfd8006ca6f96e1
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30755228"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150662"
 ---
 # <a name="use-managed-devices-to-get-work-done"></a>Práce pomocí spravovaných zařízení
 Microsoft Intune je software, který organizacím umožňuje spravovat zařízení (jako jsou smartphony, tablety nebo počítače), aplikace a další firemní prostředky (například e-mail). To zaměstnancům zajistí přístup k pracovním informacím prakticky odkudkoli z jakéhokoli zařízení a současně uchová firemní data v bezpečí.
@@ -36,7 +36,7 @@ Podpora vaší společnosti uvidí informace související s vaší prací, ale
 Můžete ho získat jedním ze dvou způsobů:
 
 - Nainstalováním aplikace Portál společnosti do zařízení. Aplikaci Portál společnosti získáte zpravidla v obchodě s aplikacemi pro vaše zařízení, může vám ji ale také nainstalovat firemní podpora.
-- Přechodem na [web Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog), který nastavila vaše firemní podpora.
+- Přechodem na [web Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980), který nastavila vaše firemní podpora.
 
 ## <a name="whats-the-difference-between-the-app-and-the-website"></a>Jaký je rozdíl mezi aplikací a webem?
 Mezi aplikací Portál společnosti a webem Portál společnosti jsou drobné rozdíly, u obou ale můžete provádět většinu stejných úloh. Úlohy, které můžete provést:
@@ -102,4 +102,4 @@ Microsoft doporučuje, abyste se nejprve pokusili vyřešit problém sami. Nabí
 - [Řešení běžných problémů se zařízením s macOS](troubleshoot-your-device-macos.md)
 - [Řešení běžných problémů se zařízením s Windows](troubleshoot-your-device-windows.md)
 
-Níže můžete zadat komentář, ve kterém požádáte o pomoc. Každá organizace má ovšem jiné požadavky, proto se může stát, že nebudeme moct na vaše otázky odpovědět. Obraťte se na svou firemní podporu, která vám může nejrychleji pomoct najít relevantní řešení. Příslušné kontaktní informace by měly být k dispozici na [webu Portálu společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Níže můžete zadat komentář, ve kterém požádáte o pomoc. Každá organizace má ovšem jiné požadavky, proto se může stát, že nebudeme moct na vaše otázky odpovědět. Obraťte se na svou firemní podporu, která vám může nejrychleji pomoct najít relevantní řešení. Příslušné kontaktní informace by měly být k dispozici na [webu Portálu společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

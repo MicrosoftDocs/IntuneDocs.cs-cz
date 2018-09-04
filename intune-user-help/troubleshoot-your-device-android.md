@@ -16,16 +16,16 @@ searchScope:
 ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
-ms.openlocfilehash: eb20e5c4099d51fd5afb0fbb6700fc33da53557a
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: de0afc8babe692663af9528da313cb31a9d3ff57
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30752151"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148445"
 ---
 # <a name="fix-common-issues-with-your-android-device"></a>Řešení běžných problémů se zařízením s Androidem
 
-Některé problémy se zařízením s Androidem se vám může podařit vyřešit pomocí postupu pro řešení potíží. Některé běžné problémy, na které jsme narazili a které se můžete pokusit nejprve odstranit sami, jsou uvedené níže. U složitějších problémů doporučujeme, abyste se obrátili na svou firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Některé problémy se zařízením s Androidem se vám může podařit vyřešit pomocí postupu pro řešení potíží. Některé běžné problémy, na které jsme narazili a které se můžete pokusit nejprve odstranit sami, jsou uvedené níže. U složitějších problémů doporučujeme, abyste se obrátili na svou firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
 
 - [Kontrola dodržování předpisů na zařízení s Androidem](check-compliance-on-your-device-android.md)
 - [Pomoc firemní podpoře s řešením problémů zařízení pomocí podrobného protokolování](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)

@@ -1,5 +1,5 @@
 ---
-title: Na zařízení s iOSem je potřeba si nainstalovat aplikaci Lookout for Work | Microsoft Docs
+title: Na zařízení s iOSem je potřeba si nainstalovat aplikaci Lookout for Work | Dokumentace Microsoftu
 description: Zjistěte, jak nainstalovat Lookout for Work na zařízení s iOSem.
 keywords: ''
 author: lenewsad
@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: fda95e461fe8412b26289bc601d8282588cd211c
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 94a6dff4a6dac357fcbdf475ada9894f4bc039bd
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30755432"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149294"
 ---
 # <a name="install-lookout-for-work-on-your-ios-device"></a>Instalace Lookout for Work na zařízení s iOSem
 
@@ -56,5 +56,5 @@ Než budete moct začít pracovat, vaše společnost potřebuje, abyste nainstal
 
 V některých případech může instalace selhat kvůli technickým problémům mimo vaši kontrolu. V takovém případě zkuste Lookout for Work nainstalovat [ručně z App Storu](https://itunes.apple.com/app/lookout-for-work/id997193468).
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
 

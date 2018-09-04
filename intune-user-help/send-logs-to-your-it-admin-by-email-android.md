@@ -1,5 +1,5 @@
 ---
-title: Odeslání protokolů firemní podpoře pomocí e-mailu | Microsoft Docs
+title: Odeslání protokolů firemní podpoře pomocí e-mailu | Dokumentace Microsoftu
 description: Odeslání datových protokolů zařízení s Androidem pomocí e-mailu
 keywords: ''
 author: lenewsad
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: f924ece24fe38346c1abab8964270e4abe5abf76
-ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
+ms.openlocfilehash: efe251a9a347a179e56d496d761b0ea7f28ab66f
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32327683"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149596"
 ---
 # <a name="email-logs-to-your-company-support"></a>Posílání protokolů e-mailem firemní podpoře
 
@@ -45,4 +45,4 @@ Posílání protokolů e-mailem firemní podpoře:
 3.  Klepněte na **Poslat e-mail a nahrát protokoly**.
 4.  Po nahrání protokolů klepněte na e-mailovou aplikaci. Otevře se e-mailová zpráva s vyplněným ID incidentu v poli Předmět. Do textu e-mailu popište problém, se kterým jste se setkali.  
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

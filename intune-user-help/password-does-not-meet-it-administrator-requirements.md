@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 6011e46a3176d55f35310292b55f4786d131f269
-ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
+ms.openlocfilehash: bb565cdaf200e8bf7d3836fd921b0b5893734955
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38219825"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150917"
 ---
 # <a name="your-password-does-not-meet-your-company-supports-requirements"></a>Heslo nesplňuje požadavky firemní podpory
 
@@ -33,7 +33,7 @@ Pokud potřebujete postup nastavení PIN kódu nebo hesla, použijte odkaz, kter
 - [Nastavení nebo změna hesla na zařízení s Windows](set-or-change-your-password-windows.md)
 
 > [!NOTE]
-> Pokud máte potíže s vytvořením hesla, které by splňovalo požadavky stanovené firemní podporou, obraťte se na firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+> Pokud máte potíže s vytvořením hesla, které by splňovalo požadavky stanovené firemní podporou, obraťte se na firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
 
 ## <a name="pin-or-password-issue-descriptions"></a>Popis problémů s PIN kódem nebo heslem
 

@@ -1,5 +1,5 @@
 ---
-title: Použití spravovaných aplikací na zařízení s Androidem | Microsoft Docs
+title: Použití spravovaných aplikací na zařízení s Androidem | Dokumentace Microsoftu
 description: ''
 keywords: ''
 author: lenewsad
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ebb79bc3405e9ea0dd38c24b86a4c9020760c895
-ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
+ms.openlocfilehash: 1c57c8bfa9f2727ec201acb506f5a41327fddc75
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31442471"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43146649"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Použití spravovaných aplikací na zařízení s Androidem
 
@@ -70,4 +70,4 @@ Některé běžné aplikace, které může spravovat vaše oddělení IT:
 
 -   Microsoft Word, Excel a PowerPoint
 
-Další informace o spravovaných aplikacích na vašem zařízení vám poskytne firemní podpora. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Další informace o spravovaných aplikacích na vašem zařízení vám poskytne firemní podpora. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

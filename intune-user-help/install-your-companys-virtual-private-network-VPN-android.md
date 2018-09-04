@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 86a41284b05d73e9cbf3833fa85757ca3cbf7f27
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: b1f303edec625be2b321e95952a5c8d00aa3254c
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31014006"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149963"
 ---
 # <a name="how-to-install-your-companys-virtual-private-network-vpn"></a>Instalace firemní virtuální privátní sítě (VPN)
 
@@ -35,4 +35,4 @@ Pokud firemní podpora nakonfigurovala aplikaci VPN, která vám umožní připo
 3.  Klepněte na **Instalovat profil firemní sítě VPN** a postupujte podle pokynů. Postup instalace se může mírně lišit podle toho, kterého zprostředkovatele sítě VPN vaše společnost používá.
 
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: vadona
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 4003d27bd3cbd8e0bef835df7895f7388cbd7dcd
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: ff7f076cf779c867ba730d8f048dd6a8a8f6d1af
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31014499"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147005"
 ---
 # <a name="you-need-to-update-your-ios-device-to-install-the-outlook-app"></a>Abyste si mohli nainstalovat aplikaci Outlook, musíte si aktualizovat zařízení s iOSem
 
@@ -36,4 +36,4 @@ Někdy se může stát, že se instalace aplikace nezdaří, třeba v případě
 
 Aktualizaci spustíte tak, že klepnete na **Nastavení** > **Obecné** > **Aktualizace softwaru**.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

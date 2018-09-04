@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d2412418-d91a-4767-a3d6-bc88bb29caa2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9e24f9aca0c06f69c61af6a7fab4f69afe381b6d
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: e2e81bdb3431ac8a2e0fdae6a7f3099512319aee
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31836923"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313254"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Co je správa zařízení v Microsoft Intune?
 
@@ -37,7 +37,7 @@ Jako správce IT musíte zajistit, aby spravovaná zařízení poskytovala prost
    - **Přehled** zobrazuje grafický snímek zaregistrovaných zařízení včetně informací, kolik zařízení používá jednotlivé platformy (Android, iOS a další).
    - Část **Všechna zařízení** obsahuje seznam zaregistrovaných zařízení, která spravujete.
 
-     Pomocí funkce **Export** vytvoříte seznam všech zařízení ve formátu CSV, a to v přírůstcích po 10 000 (Internet Explorer) nebo 30 000 (Microsoft Edge, Chrome).
+     Pomocí funkce **Export** vytvoříte seznam všech zařízení ve formátu CSV, a to v přírůstcích po 10 000 (Internet Explorer) nebo 30 000 (Edge, Chrome).
 
      Když vyberete libovolné zařízení, můžete o něm [zobrazit další podrobnosti](device-inventory.md), včetně podrobných informací o hardwaru, nainstalovaných aplikací, stavu zásad dodržování předpisů a dalších.
 
@@ -55,8 +55,8 @@ Dostupné akce se liší podle platformy zařízení a jeho konfigurace.
 
 - [Zobrazit inventář zařízení](device-inventory.md)
 - Spouštění akcí ve vzdáleném zařízení:
-    - [Odebrat firemní data](devices-wipe.md#remove-company-data)
-    - [Obnovení továrního nastavení](devices-wipe.md#factory-reset)
+    - [Vyřadit](devices-wipe.md#retire)
+    - [Vymazání](devices-wipe.md#wipe)
     - [Vzdálené uzamčení](device-remote-lock.md)
     - [Resetovat heslo](device-passcode-reset.md)
     - [Vynechat zámek aktivace](device-activation-lock-bypass.md) (jenom iOS)

@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 8b433a20aaa2ca25f54d051e3bed58989ef9dec7
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 9c9532cc58b392aecb821ae38e8e4d284d971b7d
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31017032"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43146295"
 ---
 # <a name="how-to-enable-user-access-control"></a>Povolení nástroje Řízení uživatelských účtů
 
@@ -34,4 +34,4 @@ Tady je postup, jak můžete změnit nastavení nástroje Řízení uživatelsk�
 2. Otevřete **Zabezpečení a údržba** > **Změnit nastavení nástroje Řízení uživatelských účtů**.
 3. Na stránce **Nastavit upozorňování na změny v počítači** přesuňte posuvník na jednu z prvních dvou pozic, které jsou nejblíže možnosti **Vždy upozornit**.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

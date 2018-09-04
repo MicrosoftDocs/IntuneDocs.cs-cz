@@ -17,15 +17,15 @@ ROBOTS: ''
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 434ed86a92956944a2c432f9f9d9c8822f043559
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 4d33cadab2c9ae7b44c72eff66f761c842105fc6
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31014635"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148535"
 ---
 # <a name="how-to-reconnect-a-compromised-ios-device"></a>Opakované připojení k ohroženému zařízení se systémem iOS
 
 Vaše firemní podpora zjistila, že používáte zařízení s jailbreakem. To, že je zařízení tzv. „jailbreakované“, znamená, že se pozměnilo, aby byl povolený neomezený přístup k určitým nezbytným souborům, což může ohrozit zabezpečení a znamenat hrozbu pro vaše podnikové prostředky. 
 
-Pokud k tomu dojde, vaše zařízení už nebude mít nadále přístup k podnikovým prostředkům a budete pravděpodobně muset obnovit zařízení do továrního nastavení. Doporučujeme, abyste požádali o pomoc podporu vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Pokud k tomu dojde, vaše zařízení už nebude mít nadále přístup k podnikovým prostředkům a budete pravděpodobně muset obnovit zařízení do továrního nastavení. Doporučujeme, abyste požádali o pomoc podporu vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

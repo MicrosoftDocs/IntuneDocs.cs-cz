@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: cf2413ee879cf4a6cb2742d34f452105057ccf59
-ms.sourcegitcommit: c1631ad8feba6c6fd03698ab20836b2e5d8a78d2
+ms.openlocfilehash: c98980cca305bef01dd91e69d00a471b10e741a8
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34073814"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147481"
 ---
 # <a name="enable-security-threat-scans-on-your-device"></a>Povolení vyhledávání bezpečnostních hrozeb na zařízení 
 Pokud nechtěně nainstalujete nebezpečnou aplikaci, můžete ohrozit data zařízení. Pokud chcete data na svém zařízení chránit, doporučujeme: 
@@ -32,4 +32,4 @@ Pokud chcete vyhledávání na zařízení povolit, přejděte na **Nastavení**
 
 Na některých zařízeních Samsung můžete toto nastavení najít v **Nastavení** > **Google** > **Zabezpečení** > **Google Play Protect**.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog). 
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980). 

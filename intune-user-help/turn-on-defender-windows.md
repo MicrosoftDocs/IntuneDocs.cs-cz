@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 9190282edb8d356d7d43a634d10991a4b4c19c16
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 3e305848ca77aef49050df382151db75c5b03e2a
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31018494"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147977"
 ---
 # <a name="turn-on-windows-defender-to-access-company-resources"></a>Zapnutí přístupu k prostředkům společnosti pro program Windows Defender
 
@@ -50,4 +50,4 @@ Zkontrolujte, jestli je zapnutá ochrana v reálném čase. Uděláte to tak, ž
 
 Zkontrolujte, jestli jsou antivirové definice aktuální. Uděláte to tak, že přejdete na **Start** a vyhledáte **Centrum zabezpečení v programu Windows Defender**. Vyberete **Aktualizace ochrany** a **Vyhledat aktualizace** a zkontrolujete tak, jestli zařízení má aktuální ochranu před viry. Pokud se tato možnost nezobrazuje, proveďte postup uvedený v části [Zapnutí ochrany v reálném čase](turn-on-defender-windows.md#turn-on-real-time-protection).
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Jeho kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Jeho kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

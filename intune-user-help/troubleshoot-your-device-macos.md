@@ -17,16 +17,16 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 38804de876a4856d4e4b6e39d16233608cf9857f
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: eeb9b04a3e8d7a5d1f96e58e3df7310d53817090
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30755398"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43146774"
 ---
 # <a name="fix-common-issues-with-your-macos-device"></a>Řešení běžných problémů se zařízením s macOS
 
-Některé problémy se zařízením s macOS se vám může podařit vyřešit pomocí postupu pro řešení potíží. Některé běžné problémy, na které jsme narazili a které se můžete pokusit nejprve odstranit sami, jsou uvedené níže. U složitějších problémů doporučujeme, abyste se obrátili na svou firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Některé problémy se zařízením s macOS se vám může podařit vyřešit pomocí postupu pro řešení potíží. Některé běžné problémy, na které jsme narazili a které se můžete pokusit nejprve odstranit sami, jsou uvedené níže. U složitějších problémů doporučujeme, abyste se obrátili na svou firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
 
 - [Moje verze macOS ještě není podporovaná](your-macos-version-isnt-yet-supported.md)
 - [Aktualizace zařízení s macOS](you-need-to-update-your-macos-device.md)

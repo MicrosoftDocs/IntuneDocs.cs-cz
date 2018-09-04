@@ -1,5 +1,5 @@
 ---
-title: Na zařízení s Androidem je potřeba nainstalovat SandBlast Mobile Protect | Microsoft Docs
+title: Na zařízení s Androidem je potřeba nainstalovat SandBlast Mobile Protect | Dokumentace Microsoftu
 description: Zjistěte, jak nainstalovat SandBlast Mobile Protect na zařízení s Androidem.
 keywords: ''
 author: lenewsad
@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: e453cf1af0d065a367d636c3e6cc8e8ddd79cfda
-ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
+ms.openlocfilehash: f667564443115ba350cf244009d3509fe8d760d0
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32327802"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148354"
 ---
 # <a name="you-need-to-install-sandblast-mobile-protect-on-your-android-device"></a>Na zařízení s Androidem je potřeba nainstalovat SandBlast Mobile Protect
 
@@ -58,4 +58,4 @@ Pokud máte s instalací potíže, zkuste provést kroky k odstranění potíž�
 
 V některých případech může instalace selhat kvůli technickým problémům mimo vaši kontrolu. V takovém případě zkuste SandBlast Mobile Protect nainstalovat [ručně z obchodu Play](https://play.google.com/store/apps/details?id=com.lacoon.security.fox).
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

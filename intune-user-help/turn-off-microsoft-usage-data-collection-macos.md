@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 64a3a4710b8841dcc80c159d0622735fdd862e7a
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 604c08e771548b9cd071ae87ba9cdcb3f9bb2d3a
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31031664"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147464"
 ---
 # <a name="how-to-turn-off-microsoft-data-collection"></a>Vypnutí shromažďování dat Microsoftem
 
@@ -30,4 +30,4 @@ Microsoft automaticky shromažďuje určitá data o našich produktech a služb�
 
 Pokud chcete vypnout shromažďování dat o využití na zařízení s macOS, otevřete aplikaci Portál společnosti a vyberte nabídku **Portál společnosti**. Otevřete **Předvolby** a v části **Poslat data o využití do Microsoftu** zrušte zaškrtnutí políčka **Povolit Microsoftu shromažďování dat o využití**.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

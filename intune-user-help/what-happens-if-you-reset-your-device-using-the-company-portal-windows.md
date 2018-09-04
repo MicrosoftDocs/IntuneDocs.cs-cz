@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: a7f10e178e88f871c297ed8bbac7ccbe9a802d0b
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: e569b69f319cb3cf2868d86db2032b93d9bd8ab8
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30755483"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149119"
 ---
 # <a name="what-happens-if-you-reset-your-windows-device-using-the-company-portal"></a>Co se stane, když resetujete zařízení s Windows pomocí Portálu společnosti?
 
@@ -34,4 +34,4 @@ Když k resetování zařízení se systémem Windows použijete aplikaci Portá
 |Zařízení má přístup jen k e-mailu společnosti |**Windows Phone 8.1**<br />Zařízení se už nebude zobrazovat na portálu společnosti a váš firemní e-mailový účet a všechny neuložené e-maily se odstraní.<br /><br />**Windows 7 nebo Windows Vista**<br />Tovární nastavení nelze obnovit v počítači s Windows 7 nebo s dřívější verzí systému, který se používá pouze pro e-mail.<br /><br />**Windows 8.1 a Windows 8**<br />Zařízení se už nebude zobrazovat na portálu společnosti a váš firemní e-mailový účet a všechny neuložené e-maily se odstraní.|
 |Stolní a přenosné počítače|**Windows 8.1 a Windows 8**<br />Tovární nastavení lze obnovit v počítači s Windows 8 nebo Windows 8.1 jedině v případě, že se používá pouze pro e-mail.<br /><br />**Windows 7 nebo Windows Vista**<br />Tovární nastavení nelze obnovit v počítači s Windows 7 nebo s dřívější verzí systému.|
 
-Pokud máte otázky, obraťte se na svou firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Pokud máte otázky, obraťte se na svou firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

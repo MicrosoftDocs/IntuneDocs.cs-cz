@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: b939cd175f7a548b37ebec985a189d7e3119aac7
-ms.sourcegitcommit: d99def6e4ceb44f3e7ca10fe7cdd7f222cf814c8
+ms.openlocfilehash: 8a83602d992ff7ea08be84272eee086ea364be0a
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42903119"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147039"
 ---
 # <a name="how-to-update-the-company-portal-app"></a>Aktualizace aplikace Portál společnosti
 
@@ -52,4 +52,4 @@ Pokud je k dispozici nová verze, zobrazí se možnost aktualizace, když se na 
     > Pokud se nemůžete do Microsoft Storu dostat, obraťte se na svou firemní podporu.
 
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

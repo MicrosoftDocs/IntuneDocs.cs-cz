@@ -17,17 +17,17 @@ ROBOTS: ''
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 663da92e11befeae1f65467e887870a52640cbeb
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 33b6199c25e9e36b65dfe2ca819640fa614e68b6
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31020567"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148219"
 ---
 # <a name="outlook-wont-sync-managed-email-when-battery-optimization-for-android-is-turned-on"></a>V Outlooku se nesynchronizují spravované e-maily, když je zapnutá optimalizace baterie pro Android
 
 > [!IMPORTANT]
-> Tento problém jsme tady popsali, protože nás o něm informuje řada zákazníků. Pokud budete mít tento problém dál, i když se ho pokusíte vyřešit podle uvedeného postupu, požádejte o další pomoc [svou firemní podporu](https://portal.manage.microsoft.com#HelpDeskDialog).
+> Tento problém jsme tady popsali, protože nás o něm informuje řada zákazníků. Pokud budete mít tento problém dál, i když se ho pokusíte vyřešit podle uvedeného postupu, požádejte o další pomoc [svou firemní podporu](https://go.microsoft.com/fwlink/?linkid=2010980).
 
 Po registraci zařízení v Intune získáte přístup k prostředkům společnosti. Jedním z nejčastěji používaných prostředků je přístup k e-mailu. K problému, který se objevuje při přístupu k e-mailu prostřednictvím Outlooku pro zařízení s Androidem, dochází po zapnutí optimalizace baterie. Optimalizace baterie se může zapnout automaticky, aby mohlo být vaše zařízení napájeno po nejdelší možnou dobu. Optimalizace baterie k tomu může částečně pomoct, protože se pokouší zastavit automatické stahování e-mailů.
 
@@ -75,4 +75,4 @@ Jako příklad dalšího způsobu, jak najít tato nastavení, je možné uvést
 2. Tap **Battery** > **Battery optimization**.
 3. Select the Company Portal and Outlook apps, then select **Don’t optimize**. Tap **Done**.-->
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Jeho kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Jeho kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

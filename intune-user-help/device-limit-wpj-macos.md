@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: da965c9309e7140b5ce0cd95960ee7a9d4ac804f
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: db5e2e19f746e3916f5edf7719fb71e4fb7d37d0
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30754310"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43146602"
 ---
 # <a name="the-limit-of-devices-you-can-register-has-been-reached"></a>Dosáhlo se limitu počtu zařízení, která můžete zaregistrovat
 
@@ -33,4 +33,4 @@ Každá společnost si určuje limit počtu zařízení, přes která můžou je
 2. Odeberte jedno ze svých zařízení z [portálu MyApps](https://myapps.microsoft.com) a v pravém horním rohu stránky vyberte **Profil**. 
 3. Obraťte se na podporu společnosti a požádejte ji, jestli by nemohla zvýšit počet zařízení, která si můžete zaregistrovat.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

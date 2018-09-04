@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 738cc313eca4c98e7cdee3dfe40f705630244a9f
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 443234bea9623ccbf5ac916d179a8fe202a392dd
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31015740"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147774"
 ---
 # <a name="installing-office-365-on-your-windows-10-device"></a>Instalace Office 365 na zařízení s Windows 10
 
@@ -32,4 +32,4 @@ Sadu Office lze na zařízení s Windows 10 nainstalovat mnoha způsoby. V závi
 
 Po zpřístupnění Office vaší společností byste si měli nainstalovat jenom jednu verzi Office. Pokud se pokusíte nainstalovat druhou verzi, verze nainstalovaná jako první se odebere.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
