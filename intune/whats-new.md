@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 08/14/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 /ms.custom: intune-azure
-ms.openlocfilehash: ff2774b76bceeeeaecec7a4dc74876b11706d574
-ms.sourcegitcommit: 56a8a3c8974f54f0f9ecc1e5b43581502ecc348e
+ms.openlocfilehash: 41c5af504bb65a661e55d09d735a78df780deb84
+ms.sourcegitcommit: 698af815f6de2c4f003f6da428bbfb0680daafa0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39614509"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43092171"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -42,12 +42,21 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 
 -->   
 
+
+## <a name="week-of-august-27-2018"></a>Týden od 27. srpna 2018
+
+### <a name="use-vpp-device-licenses-to-pre-provision-the-company-portal-during-dep-enrollment----1608345---"></a>Použití licencí zařízení z programu VPP k předběžnému zřízení portálu společnosti během registrace do programu DEP <!-- 1608345 -->
+Licence zařízení z programu VPP (Volume Purchase Program) můžete teď použít k předběžnému zřízení Portálu společnosti během registrace do programu DEP (Device Enrollment Program neboli Program registrace zařízení). Pokud to chcete udělat, zadejte při [vytváření nebo úpravě profilu registrace](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) token VPP, který chcete použít k instalaci aplikace Portál společnosti. Dbejte na to, aby tokenu nevypršela platnost a abyste měli dost licencí pro aplikaci Portál společnosti. V případech, kdy platnost tokenu vyprší nebo dojdou licence, nabídne Intune instalaci aplikace Portál společnost z App Storu (při které se zobrazí výzva k zadání Apple ID).
+
+
+## <a name="week-of-august-14-2018"></a>Týden od 14. srpna 2018
+
+### <a name="macos-support-for-apple-device-enrollment-program----747651---"></a>Podpora Programu registrace zařízení (DEP) společnosti Apple pro zařízení s macOS<!-- 747651 -->
+Intune teď podporuje registraci zařízení s macOS do Programu registrace zařízení (DEP) společnosti Apple. Další informace najdete v článku [Automatická registrace zařízení s macOS do Programu registrace zařízení Apple](device-enrollment-program-enroll-macos.md).
+
 ## <a name="week-of-july-23-2018"></a>Týden od 23. července 2018
 
 ### <a name="app-management"></a>Správa aplikací
-
-####  <a name="windows-apps-file-extensions----1884873---"></a>Přípony souborů aplikací pro Windows <!-- 1884873 -->
-Přípony souborů aplikací pro Windows teď budou zahrnovat *.msi*, *.appx*, *.appxbundle*, *.msix* a *.msixbundle*. Aplikaci můžete v Microsoft Intune přidat výběrem možností **Mobilní aplikace** > **Aplikace** > **Přidat**. Zobrazí se podokno **Přidat aplikaci**, které vám umožní vybrat **Typ aplikace**. Vyberte typ aplikace, který umožňuje nahrání souboru balíčku aplikace, vyberte **Soubor balíčku aplikace** a pak zadejte instalační soubor s příslušnou příponou.
 
 #### <a name="line-of-business-lob-app-support-for-macos----1895847---"></a>Podpora obchodních aplikací (LOB) pro macOS <!-- 1895847 -->
 Microsoft Intune umožňuje nasazovat obchodní aplikace pro macOS jako **povinné** nebo **k dispozici s registrací**. Koncoví uživatelé můžou aplikace nasazovat jako **povinné** prostřednictvím Portálu společnosti pro macOS nebo [webu Portál společnosti](https://portal.manage.microsoft.com).
@@ -77,7 +86,7 @@ Tato aktualizace zahrnuje šifrování S/MIME e-mailů pomocí nového profilu i
 
 Podporováno v systémech: Windows, Windows Phone 10, macOS, iOS, Android
 
-#### <a name="create-device-compliance-policy-using-firewall-settings-on-macos-devices----1497640---"></a>Vytváření zásad dodržování předpisů pro zařízení pomocí nastavení Firewall na zařízeních s macOSem <!-- 1497640 -->
+#### <a name="create-device-compliance-policy-using-firewall-settings-on-macos-devices----1497640---"></a>Vytváření zásad dodržování předpisů pro zařízení pomocí nastavení Firewall na zařízeních s macOS <!-- 1497640 -->
 Při vytváření nových zásad dodržování předpisů systému macOS (**Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu** > **Platforma: macOS** > **Zabezpečení systému**) jsou dostupná některá nová nastavení pro **bránu firewall**: 
 
 - **Firewall:** Umožňuje konfigurovat způsob zpracování příchozích připojení ve vašem prostředí.
@@ -207,9 +216,7 @@ Na stránku **Dodržování předpisů zařízením** > **Zásady** > vyberte z�
 - Chyba
 - Konflikt
 - Čeká se na zadání
-- Nepoužitelné 
-
-Také se zobrazí obrázek, který ukazuje počet zařízení s jinou platformou. Když se třeba díváte na profil iOSu, na nové dlaždici se zobrazí počet zařízení s jiným systémem než iOS, která jsou také přiřazená k tomuto profilu. Viz [Zásady dodržování předpisů zařízením](compliance-policy-monitor.md#view-status-of-device-policies).
+- Nepoužitelné Také se zobrazí obrázek, který ukazuje počet zařízení s jinou platformou. Když se třeba díváte na profil iOSu, na nové dlaždici se zobrazí počet zařízení s jiným systémem než iOS, která jsou také přiřazená k tomuto profilu. Viz [Zásady dodržování předpisů zařízením](compliance-policy-monitor.md#view-status-of-device-policies).
 
 #### <a name="device-compliance-supports-3rd-party-anti-virus-solutions----2325484---"></a>Dodržování předpisů zařízením podporuje antivirová řešení jiných výrobců <!-- 2325484 -->
 Při vytváření zásad dodržování předpisů zařízením (**Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu** > **Platforma: Windows 10 nebo novější** > **Nastavení** > **Zabezpečení systému**) jsou dostupné nové možnosti **[Zabezpečení zařízení](compliance-policy-create-windows.md#windows-10-and-later-policy-settings)**: 
@@ -538,7 +545,7 @@ Když vytváříte nový profil VPN pro iOS, jsou teď k dispozici dvě možnost
 > [!NOTE]
 > Tato změna platí jen pro iOS. Pro platformy Android, Android for Work a macOS bude dál existovat jenom jedna možnost Cisco AnyConnect.
 
-#### <a name="jamf-enrolled-macos-devices-can-now-register-with-intune----2370684---"></a>Zařízení s macOSem zaregistrovaná do Jamf se teď registrují do Intune <!-- 2370684 -->
+#### <a name="jamf-enrolled-macos-devices-can-now-register-with-intune----2370684---"></a>Zařízení s macOS zaregistrovaná do Jamf se teď registrují do Intune <!-- 2370684 -->
 
 Verze 1.3 a 1.4 portálu společnosti macOS neregistrovaly zařízení Jamf do Intune úspěšně. Verze 1.4.2 portálu macOS tento problém řeší.
 
@@ -759,10 +766,10 @@ V rámci naší snahy poskytnout koncovým uživatelům větší kontrolu nad je
 
 ## <a name="week-of-march-19-2018"></a>Týden od 19. března 2018
 
-### <a name="export-all-devices-into-csv-files-in-ie-edge-or-chrome----2258071---"></a>Export všech zařízení do souborů CSV v Internet Exploreru, Microsoft Edge a Chromu <!-- 2258071 -->
+### <a name="export-all-devices-into-csv-files-in-ie-edge-or-chrome----2258071---"></a>Export všech zařízení do souborů CSV v Internet Exploreru, Edge a Chromu <!-- 2258071 -->
 V části **Zařízení** > **Všechna zařízení** můžete **exportovat** zařízení do seznamu ve formátu CSV. Uživatelé Internet Exploreru s více než 10 000 zařízeními můžou zařízení úspěšně vyexportovat do více souborů. Každý z nich může obsahovat až 10 000 zařízení.
 
-Uživatelé prohlížečů Microsoft Edge a Chrome s více než 30 000 zařízeními můžou zařízení úspěšně vyexportovat do více souborů. Každý z nich může obsahovat až 30 000 zařízení.
+Uživatelé prohlížečů Edge a Chrome s více než 30 000 zařízeními můžou zařízení úspěšně vyexportovat do více souborů. Každý z nich může obsahovat až 30 000 zařízení.
 
 V tématu [Správa zařízení](device-management.md) se dozvíte podrobnosti o tom, co můžete se spravovanými zařízeními dělat.
 
@@ -1131,6 +1138,16 @@ V Intune můžete zadat odepřené aplikace. Pokud je aplikace zakázaná, má z
 
 ## <a name="notices"></a>Sdělení
 
+### <a name="take-action-please-update-your-android-device-restriction-or-compliance-policy-password-settings-in-intune"></a>Provedení akce: Aktualizujte prosím v Intune nastavení hesla v zásadách omezení nebo dodržování předpisů u zařízení s Androidem
+Intune pro zařízení s Androidem 4.4 nebo vyšším odebere dostupný typ hesla Výchozí ze zařízení (Výchozí nastavení zařízení). Vzhledem k rozdílům v platformách Android a výchozích nastaveních zařízení nakládá zařízení s těmito zásadami často jako s volitelnými. Abychom odstranili nejasnost, kdy je toto nastavení v Androidu vynucované, v nadcházející verzi toto nastavení odebereme. 
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+- Pokud máte v úmyslu vyžadovat na zařízeních heslo, doporučujeme abyste místo použití typu Výchozí ze zařízení upravili profily vaší platformy Android tak, aby jasně vyjadřovaly požadovaný typ hesla.
+- Pokud máte v úmyslu nechat koncového uživatele rozhodnout, jestli vytvořit heslo, vyberte tlačítko Nenakonfigurováno. Když toto nastavení z uživatelského rozhraní odeberete, ale je stále nastavené, při příští úpravě profilu budete vyzváni, abyste zvolili jinou hodnotu než Výchozí ze zařízení.
+Jak se mám na tuto změnu připravit?
+Zkontrolujte nastavení hesla ve vašem Androidu a v podnikových zásadách omezení a dodržování předpisů u zařízení s Androidem. Tato nastavení jsou pro Zásady dodržování předpisů uvedená v rámci Zabezpečení systému a pro Omezení zařízení v rámci nastavení Hesla zařízení nebo Pracovního profilu. Další informace obsahují odkaz na další podrobnosti a snímky obrazovek, které ukazují, kde se tato nastavení konfigurují.
+####<a name="additional-information"></a>Další informace
+https://aka.ms/PasswordSettings 
+
 ### <a name="plan-for-change-change-password-at-next-auth-added-to-intune---1873216---"></a>Plánovaná změna: Do Intune přibude nastavení Změnit heslo při příštím ověření<!-- 1873216 -->
 V zářijovém vydání služby se do Intune chystáme integrovat nové nastavení společnosti Apple **Změnit heslo při příštím ověření** určené pro zařízení s macOS ve verzi 10.13 a novější. Před uvedením tohoto nastavení nemůžou poskytovatelé řešení MDM ověřit, že heslo zařízení bylo změněno tak, aby vyhovovalo předpisům. Zásady konfigurace a dodržování předpisů v Intune pouze ověřují, zda je heslo zařízení při příští změně označeno jako vyhovující. Po přidání této nové funkce Apple obdrží uživatelé zařízení s macOS žádost o aktualizaci hesla i v případě, že jejich heslo odpovídá zásadám.
 
@@ -1173,22 +1190,6 @@ Doporučujeme vám proaktivně ve vašich prostředích rušit závislosti na pr
 
 **Další informace**: [Přechod Intune na šifrování TLS 1.2](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/)
 
-### <a name="plan-for-change-new-windows-10-setting-for-kiosk-configuration-in-intune----1560072---"></a>Plánovaná změna: Nové nastavení ve Windows 10 pro konfiguraci veřejného terminálu v Intune <!-- 1560072 -->
-Mění se způsob, jak a kde je možné nakonfigurovat plochu ve Windows 10 1709 a novějších (RS3 a novějších) na portálu Intune Azure.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená? 
-Naše záznamy ukazují, že používáte nastavení Windows 10 > Omezení zařízení > Veřejný terminál (Preview). To se v uživatelském rozhraní v květnu přejmenuje na Windows 10 > Omezení zařízení > Veřejný terminál (zastaralé), aby uživatelé věděli, že se jeho použití už nedoporučuje. I nadále bude ale fungovat až do červnové aktualizace Intune. Potom se v back-endu změní na zastaralé a přestane být funkční. Jako alternativu představíme v květnu nový profil konfigurace zařízení (Windows 10 > Veřejný terminál), který bude obsahovat nastavení pro konfiguraci veřejného terminálu na Windows 10 RS4 a novějších.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?  
-Po vydání květnové aktualizace služby Intune plánované ke konci května zveřejníme pokyny, jak si vyzkoušet a ověřit, že můžete migrovat konfiguraci veřejného terminálu z Windows 10 RS3 do Windows 10 RS4. Podle těchto pokynů můžete zařízení nakonfigurovat jako veřejné terminály s využitím nového konfiguračního profilu zařízení pro veřejné terminály.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Tato změna ovlivní jak zákazníky samostatné verze Intune, tak zákazníky hybridní verze (Intune s Configuration Managerem). Tato integrace pomůže zjednodušit práci se správou cloudu. Při správě skupin, zásad, aplikací a mobilních zařízení vám teď stačí přejít do jednoho okna v Azure, a sice do okna Intune.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-Místo okna služby Intune App Protection si do oblíbených položek přidejte Intune a seznamte se s pracovním postupem zásad ochrany aplikací v okně Mobilní aplikace v Intune. Po krátkém období přesměrování okno App Protection odebereme. Nezapomeňte, že všechny zásady ochrany aplikací jsou už přenesené do Intune a kterékoli ze zásad podmíněného přístupu můžete upravit podle dokumentace, kterou najdete zde: [https://aka.ms/azuread_ca](https://aka.ms/azuread_ca).
-
-**Další informace**: [https://aka.ms/intuneapppolicy](https://aka.ms/intuneapppolicy)
 
 ### <a name="plan-for-change-change-in-support-for-the-microsoft-intune-app-sdk-for-cordova-plugin"></a>Plánovaná změna: Změna v podpoře modulu plug-in Microsoft Intune App SDK Cordova
 Intune ukončuje od 1. května 2018 podporu [modulu plug-in Microsoft Intune App SDK Cordova](app-sdk-cordova.md). Doporučujeme místo toho použít k přípravě aplikací využívajících Cordovu pro účely správy a dostupnosti v Intune nástroj Intune App Wrapping. Až tato změna vejde v platnost, nebude se už dále modul plug-in Microsoft Intune APP SDK Cordova udržovat a nebude ani přijímat aktualizace. Vývojáři aplikací nebudou moct tento modul plug-in používat. V Intune se dále počítá s podporou aplikací vytvořených s použitím Cordovy. Všechny aplikace vytvořené s použitím modulu plug-in Microsoft Intune APP SDK Cordova ale budou mít v Intune omezené funkce. Po zabalení s pomocí nástroje Intune App Wrapping Tool bude možné nasadit aplikace koncovým uživatelům jako obvykle. Aplikace pro Android využívající Cordovu vydané do obchodu Google Play:

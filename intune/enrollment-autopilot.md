@@ -12,12 +12,12 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: c96f211f18168c8ae55f0ca2391c6c140caef649
-ms.sourcegitcommit: dc8b6f802cca7895a19ec38bec283d4b3150d213
+ms.openlocfilehash: b3c374e4ce6baeab8cc6fde3f6c45c63c48e34dd
+ms.sourcegitcommit: d99def6e4ceb44f3e7ca10fe7cdd7f222cf814c8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39138712"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42903071"
 ---
 # <a name="enroll-windows-devices-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows pomocí Windows AutoPilotu
 Windows AutoPilot zjednodušuje zřizování zařízení. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a AutoPilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s AutoPilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows AutoPilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -72,8 +72,8 @@ Profily nasazení AutoPilotu slouží ke konfiguraci zařízení s AutoPilotem.
     - **Nasazení sebou samým (Preview)**: (sestavení Windows 10 Insider Preview 17672 nebo novější) Zařízení s tímto profilem nejsou přidružená k uživateli, který je registruje. Při zřizování zařízení se nevyžadují přihlašovací údaje uživatele.
 4. V poli **Připojit k Azure AD jako** zvolte **Připojeno k Azure AD**.
 5. Vyberte **Software spouštěný při prvním zapnutí zařízení**, nakonfigurujte následující možnosti a pak zvolte **Uložit**:
-    - **Jazyk (oblast)***: Zvolte jazyk, který chcete použít pro dané zařízení. Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
-    - **Automaticky nakonfigurovat klávesnici***: Pokud je vybrána možnost **Jazyk (oblast)**, přeskočte stránku pro výběr klávesnice. Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
+    - **Jazyk (oblast)**\*: Zvolte jazyk, který chcete použít pro dané zařízení. Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
+    - **Automaticky nakonfigurovat klávesnici**\*: Pokud je vybrána možnost **Jazyk (oblast)**, přeskočte stránku pro výběr klávesnice. Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
     - **Licenční smlouva s koncovým uživatelem (EULA)**: (Windows 10 verze 1709 nebo novější) Vyberte, jestli se má uživatelům zobrazit EULA.
     - **Nastavení ochrany osobních údajů**: Vyberte, jestli se mají nebo nemají uživatelům zobrazit nastavení ochrany osobních údajů.
     - **Typ uživatelského účtu**: Vyberte, jestli je typ účtu uživatele **správce** nebo **standardní** uživatel. 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 08/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5aa03cad0785e0d9b3d64df97a3ba6d344f0c7b5
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 2c5203256a17065331f9d75c9315471e41508454
+ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37906103"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40255385"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 
@@ -38,23 +38,22 @@ Intune nabízí celou řadu funkcí, které vám pomůžou dostat požadované a
 
 ## <a name="app-management-capabilities-by-platform"></a>Funkce správy aplikací podle platformy
 
-||||||
-|-|-|-|-|-|
-| |Android|iOS|Windows Phone 8.1|Windows 10|
-|Přidání a přiřazení aplikací zařízením a uživatelům|Ano|Ano|Ano|Ano|
-|Přiřazení aplikací k zařízením nezaregistrovaným v Intune|Ano|Ano|Ne|Ne|
-|Určení chování aplikací při spuštění pomocí zásad konfigurace aplikací|Ne|Ano|Ne|Ne|
-|Obnovení aplikací s vypršenou platností pomocí zásad zřizování mobilních aplikací|Ne|Ano|Ne|Ne|
-|Ochrana firemních dat v aplikacích pomocí zásad ochrany aplikací|Ano|Ano|Ne|Ne<sup>1</sup>|
-|Odebrání pouze firemních dat z nainstalovaných aplikací (selektivní vymazání aplikací)|Ano|Ano|Ano|Ano|
-|Monitorování přiřazení aplikací|Ano|Ano|Ano|Ano|
-|Přiřazení a sledování aplikací hromadně zakoupených v obchodu s aplikacemi|Ne|Ne|Ne|Ano|
-|Nařízená instalace aplikací na zařízení (povinná)<sup>2</sup>|Ano|Ano|Ano|Ano|
-|Nepovinná instalace na zařízení z Portálu společnosti (dostupná instalace)|Ano|Ano|Ano|Ano|
-|Zástupce pro instalaci aplikace na webu (webový odkaz)|Ano|Ano|Ano|Ano|
-|Vlastní (obchodní) aplikace|Ano|Ano|Ne|Ano|
-|Aplikace z obchodu|Ano|Ano|Ano|Ano|
-|Aktualizace aplikací|Ano|Ano|Ano|Ano|
+|  | Android | iOS | macOS | Windows 10 | Windows Phone 8.1 |
+|-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
+| Přidání a přiřazení aplikací k zařízením a uživatelům | Ano | Ano | Ano | Ano | Ano |
+| Přiřazení aplikací k zařízením nezaregistrovaným v Intune | Ano | Ano | Ne | Ne | Ne |
+| Určení chování aplikací při spuštění pomocí zásad konfigurace aplikací | Ne | Ano | Ne | Ne | Ne |
+| Obnovení aplikací s vypršelou platností pomocí zásad zřizování mobilních aplikací | Ne | Ano | Ne | Ne | Ne |
+| Ochrana firemních dat v aplikacích pomocí zásad ochrany aplikací | Ano | Ano | Ne | Ne<sup>1</sup> | Ne |
+| Odebrání pouze firemních dat z nainstalovaných aplikací (selektivní vymazání aplikací) | Ano | Ano | Ne | Ano | Ano |
+| Monitorování přiřazení aplikací | Ano | Ano | Ano | Ano | Ano |
+| Přiřazení a sledování aplikací hromadně zakoupených v obchodu s aplikacemi | Ne | Ne | Ne | Ano | Ne |
+| Nařízená instalace aplikací na zařízení (povinná)<sup>2</sup> | Ano | Ano | Ano | Ano | Ano |
+| Nepovinná instalace na zařízení z Portálu společnosti (dostupná instalace) | Ano | Ano | Ano | Ano | Ano |
+| Zástupce pro instalaci aplikace na webu (webový odkaz) | Ano | Ano | Ano | Ano | Ano |
+| Vlastní (obchodní) aplikace | Ano | Ano | Ano | Ano | Ne |
+| Aplikace z obchodu | Ano | Ano | Ne | Ano | Ano |
+| Aktualizace aplikací | Ano | Ano | Ne | Ano | Ano |
 
 <sup>1</sup> Při ochraně aplikací na zařízeních s Windows 10 uvažujte o použití funkce [Windows Information Protection](windows-information-protection-configure.md).
 
@@ -95,8 +94,8 @@ Další informace o této části najdete v tématu [Správa aplikací](app-mana
 - **Licence aplikací**: Tady můžete zobrazit, přiřadit a monitorovat aplikace hromadně zakoupené v obchodech s aplikacemi. Více informací najdete v následujících tématech:
     - [Aplikace programu hromadných nákupů pro iOS](vpp-apps-ios.md)
     - [Aplikace hromadně zakoupené v Microsoft Storu pro firmy](windows-store-for-business.md)
-- **Zjištěné aplikace**: Tady můžete zobrazit všechny aplikace přiřazené přes Intune a nainstalované v zařízení.
-- **Stav instalace aplikace**: Tady můžete zobrazit stav vytvořeného přiřazení aplikace.
+- **Zjištěné aplikace**: Tady můžete zobrazit všechny aplikace přiřazené přes Intune a nainstalované v zařízení. Další informace najdete v článku [Monitorování informací a přiřazení aplikace pomocí Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
+- **Stav instalace aplikace**: Tady můžete zobrazit stav vytvořeného přiřazení aplikace. Další informace najdete v článku [Monitorování informací a přiřazení aplikace pomocí Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
 - **Stav ochrany aplikací**: Tady můžete zobrazit stav zásad ochrany aplikací pro vámi vybraného uživatele.
 - **Protokoly auditu**: Tady můžete zobrazit aktivity všech správců IT související s aplikacemi v Intune.
 
