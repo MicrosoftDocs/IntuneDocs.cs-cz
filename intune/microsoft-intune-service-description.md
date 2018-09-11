@@ -6,20 +6,20 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 05/30/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 40fa5a2e-6c0f-4150-9740-d5ddc0cdbda0
 ms.reviewer: cacamp
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: a5440a181961a1ee263b1edb50af5fde450f50a9
-ms.sourcegitcommit: 2061f7a442efc96c8afd5db764d11531563c7e39
+ms.custom: intune-classic; get-started
+ms.openlocfilehash: 48f15493d25ba431cedc76533c35c7307fd0f848
+ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34583719"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44254135"
 ---
 # <a name="microsoft-intune-service-description"></a>Popis služby Microsoft Intune
 
@@ -100,7 +100,7 @@ You can set up Intune in several ways to manage and help protect your company's 
 - **Intune with System Center Configuration Manager.** Use the Configuration Manager management console to manage computers and mobile devices in your enterprise. This configuration can help you to manage all your organization’s devices through a single console, the Configuration Manager Admin Console. Configuration Manager supports large numbers of mobile devices, servers, and computers. For more about Configuration Manager, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management). For more help deciding which approach is right for you, see [Choose between Microsoft Intune standalone and hybrid mobile device management with Configuration Manager](/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).--->
 
 ## <a name="language-support"></a>Podpora jazyků
-Intune běží na portálu Azure, který podporuje tyto jazyky: angličtina, čeština, čínština (tradiční), čínština (zjednodušená), francouzština, holandština, italština, japonština, korejština, maďarština, němčina, polština, portugalština (Brazílie), portugalština (Portugalsko), ruština, španělština, švédština a turečtina.
+Intune běží na portálu Azure, který podporuje tyto jazyky: angličtina, čeština, čínština (tradiční), čínština (zjednodušená), francouzština, nizozemština, italština, japonština, korejština, maďarština, němčina, polština, portugalština (Brazílie), portugalština (Portugalsko), ruština, španělština, švédština a turečtina.
 
 Konzola pro správu Intune a mobilní prostředí pro uživatele podporují kromě všech jazyků podporovaných webem Azure Portal také dánštinu, řečtinu, finštinu, norštinu a rumunštinu.
 
