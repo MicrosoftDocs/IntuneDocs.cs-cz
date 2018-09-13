@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 952845ba19c52aa44a9e82ee92909b8c4f32aed6
-ms.sourcegitcommit: 0132b59e484c220338b1efcd35d03c83c285361e
+ms.openlocfilehash: 731f6f5baaa150210765313ffc60133623e52923
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39587019"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313695"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings---intune"></a>Nastavení omezení pro zařízení se systémy Android a Samsung Knox Standard – Intune
 
@@ -35,7 +35,7 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
 - **Kopírování a vkládání (jenom Samsung Knox)** – povolí v zařízení funkce kopírování a vložení.
 - **Sdílení přes schránku mezi aplikacemi (jenom Samsung Knox)** – povolí použití schránky ke kopírování a vložení obsahu mezi aplikacemi.
 - **Odeslání diagnostických dat (jenom Samsung Knox)** – znemožní uživateli posílat ze zařízení diagnostická data.
-- **Obnovení továrního nastavení (jenom Samsung Knox)** – povolí uživateli obnovit v zařízení tovární nastavení.
+- **Vymazání (jen Samsung Knox)** – povolí uživateli [vymazat](devices-wipe.md) zařízení.
 - **Zeměpisná poloha (jenom Samsung Knox)** – povolí zařízení využívat informace o poloze.
 - **Vypnutí (jenom Samsung Knox)** – Povolí uživateli vypnout zařízení.<br>Pokud je tato možnost zakázaná, nepůjde nastavit ani možnost **Počet neúspěšných přihlášení před vymazáním obsahu zařízení**.
 - **Snímek obrazovky (jenom Samsung Knox)** – umožňuje uživateli zachytit obsah obrazovky v podobě obrázku.

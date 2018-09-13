@@ -15,18 +15,18 @@ ms.assetid: 5c916182-d99c-44c5-a779-3f596f261c40
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic-keep
-ms.openlocfilehash: c3b0ba5fc46ad489dcb004554abfee4044a74195
-ms.sourcegitcommit: 116be0eaa44fd5518ff34780d39569224ef4746b
+ms.openlocfilehash: 95525e66cce1e9691c60799df3da184954d6bf4b
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36310432"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312657"
 ---
 # <a name="retire-a-windows-pc"></a>Vyřazení počítače s Windows
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
-Následujícím postupem můžete vyřadit počítače, které spravujete tak, že na nich běží klientský software Intune. Při vyřazení počítače se daný počítač odebere ze správy Intune. Počítač se nedá z Intune obnovit do původního továrního nastavení.
+Následujícím postupem můžete vyřadit počítače, které spravujete tak, že na nich běží klientský software Intune. Při vyřazení počítače se daný počítač odebere ze správy Intune. Počítač nelze obnovit do původního továrního nastavení vymazáním z Intune.
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všechna zařízení** (nebo jinou skupinu obsahující počítač, který chcete vyřadit).
 

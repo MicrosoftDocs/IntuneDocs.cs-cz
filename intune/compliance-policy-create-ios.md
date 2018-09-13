@@ -14,12 +14,12 @@ ms.assetid: 3cfb8222-d05b-49e3-ae6f-36ce1a16c61d
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6f711a6bec9be0ac1fd94183931070f9988d49e3
-ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
+ms.openlocfilehash: 1ee08c77fe085ad0f238d63481dd682ea15aa5ce
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31442640"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313081"
 ---
 # <a name="add-a-device-compliance-policy-for-ios-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s iOSem v Intune
 
@@ -106,6 +106,11 @@ Podrobnosti o e-mailových profilech najdete v tématu [Konfigurace přístupu k
 - **Maximální počet minut nečinnosti, po kterém bude nutné zadat heslo**: Zadejte dobu nečinnosti, která musí uplynout, aby se po uživateli znovu požadovalo zadání hesla.
 - **Konec platnosti hesla (dny)**: Vyberte počet dní, za který skončí platnost hesla a uživatel bude muset vytvořit nové.
 - **Počet předchozích hesel, která se nesmí použít znovu**: Zadejte počet dříve použitých hesel, která se nesmí znovu použít.
+
+### <a name="restricted-applications"></a>Omezené aplikace 
+Aplikace můžete omezit přidáním jejich ID sady prostředků do zásady. Pokud si uživatel aplikaci nainstaluje na zařízení, označí se toto zařízení jako nevyhovující předpisům. 
+- **Název aplikace**: Zadejte popisný název, který vám pomůže dané ID sady prostředků identifikovat. 
+- **ID sady prostředků aplikace**: Zadejte jedinečný identifikátor sady prostředků přidělený poskytovatelem aplikace. Pokud potřebujete ID vyhledat, přečtěte si článek o [postupu nalezení ID sady prostředků aplikací pro iOS](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app).  
 
 ## <a name="assign-user-groups"></a>Přiřazení skupin uživatelů
 

@@ -15,12 +15,12 @@ ms.assetid: 4433000a-23e9-4cad-a818-48c28eedc1f5
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4fc64f672a5c488848303f8d5ea5ea1467b0b195
-ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
+ms.openlocfilehash: 2677009921a9c498f988bdc674db6342613a05d6
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37869491"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347725"
 ---
 # <a name="add-android-store-apps-to-microsoft-intune"></a>Přidání aplikací z obchodu pro Android do Microsoft Intune
 
@@ -31,8 +31,8 @@ Před přiřazením aplikace k zařízení nebo skupině uživatelů je nejprve 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**.  
     Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Intune** zvolte **Mobilní aplikace**.
-4. V podokně úloh **Mobilní aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
+3. V podokně **Intune** zvolte **Klientské aplikace**.
+4. V podokně úloh **Klientské aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
 5. Vyberte **Přidat**.
 6. V podokně **Přidat aplikaci** vyberte v dostupných typech **aplikací pro Store** možnost **Android**.
 7. Pokud chcete nakonfigurovat informace o aplikaci, vyberte **Konfigurovat** a zadejte následující informace. U aplikací pro Android přejděte na [obchod Google Play](https://play.google.com/store) a vyhledejte aplikaci, kterou chcete nasadit. Vyberte tuto aplikaci a poznačte si její podrobnosti. V závislosti na zvolené aplikaci můžou být některé hodnoty vyplněné automaticky.

@@ -15,12 +15,12 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2c5203256a17065331f9d75c9315471e41508454
-ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
+ms.openlocfilehash: aebfea2f52540b4193811121334e3cebf916175b
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40255385"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330139"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 
@@ -44,11 +44,11 @@ Intune nabízí celou řadu funkcí, které vám pomůžou dostat požadované a
 | Přiřazení aplikací k zařízením nezaregistrovaným v Intune | Ano | Ano | Ne | Ne | Ne |
 | Určení chování aplikací při spuštění pomocí zásad konfigurace aplikací | Ne | Ano | Ne | Ne | Ne |
 | Obnovení aplikací s vypršelou platností pomocí zásad zřizování mobilních aplikací | Ne | Ano | Ne | Ne | Ne |
-| Ochrana firemních dat v aplikacích pomocí zásad ochrany aplikací | Ano | Ano | Ne | Ne<sup>1</sup> | Ne |
+| Ochrana firemních dat v aplikacích pomocí zásad ochrany aplikací | Ano | Ano | Ne | Ne1 | Ne |
 | Odebrání pouze firemních dat z nainstalovaných aplikací (selektivní vymazání aplikací) | Ano | Ano | Ne | Ano | Ano |
 | Monitorování přiřazení aplikací | Ano | Ano | Ano | Ano | Ano |
 | Přiřazení a sledování aplikací hromadně zakoupených v obchodu s aplikacemi | Ne | Ne | Ne | Ano | Ne |
-| Nařízená instalace aplikací na zařízení (povinná)<sup>2</sup> | Ano | Ano | Ano | Ano | Ano |
+| Nařízená instalace aplikací na zařízení (povinná)2 | Ano | Ano | Ano | Ano | Ano |
 | Nepovinná instalace na zařízení z Portálu společnosti (dostupná instalace) | Ano | Ano | Ano | Ano | Ano |
 | Zástupce pro instalaci aplikace na webu (webový odkaz) | Ano | Ano | Ano | Ano | Ano |
 | Vlastní (obchodní) aplikace | Ano | Ano | Ano | Ano | Ne |
@@ -61,16 +61,16 @@ Intune nabízí celou řadu funkcí, které vám pomůžou dostat požadované a
 
 ## <a name="get-started"></a>Začínáme
 
-Většinu toho, co souvisí s aplikacemi, najdete v úloze **Mobilní aplikace**, ke které se dostanete takto:
+Většinu toho, co souvisí s aplikacemi, najdete v úloze **Klientské aplikace**, ke které se dostanete takto:
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**.  
     Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Microsoft Intune** vyberte **Mobilní aplikace**.
+3. V podokně **Microsoft Intune** vyberte **Klientské aplikace**.
 
     ![Podokno úloh Mobilní aplikace](./media/apps-workload.png)
 
-Další čtyři části popisují možnosti dostupné v podokně **Mobilní aplikace**.
+Další čtyři části popisují možnosti dostupné v podokně **Klientské aplikace**.
 
 ### <a name="manage"></a>Správa
 - **Aplikace**: Tuto možnost vyberte pro přidávání, zobrazení, přiřazování a monitorování aplikací používaných vašimi pracovníky. Více informací najdete v následujících tématech:

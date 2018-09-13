@@ -15,12 +15,12 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 61df998dae611eb7350fa144260780b5589afc61
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: 425dce514d9cf0288a5e84ef5fa89790e6cee8be
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34762242"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347303"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune
 
@@ -62,8 +62,8 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zása
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**.
-3. V okně **Microsoft Intune** vyberte **Mobilní aplikace**.
-4. V okně **Mobilní aplikace** vyberte **Zásady ochrany aplikací**.
+3. V okně **Microsoft Intune** vyberte **Klientské aplikace**.
+4. V okně **Klientské aplikace** vyberte **Zásady ochrany aplikací**.
 5. Vyberte **Přidat zásadu**, aby se zobrazilo okno **Přidat zásadu**.
 6. Přidejte následující hodnoty:
     - **Název:** Zadejte název nové zásady (povinné).
@@ -74,8 +74,8 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zása
 
 ## <a name="to-add-recommended-apps-to-your-protected-apps-list"></a>Přidání doporučených aplikací do seznamu chráněných aplikací
 
-1. V okně **Microsoft Intune** vyberte **Mobilní aplikace**.
-2. V okně **Mobilní aplikace** vyberte **Zásady ochrany aplikací**.
+1. V okně **Microsoft Intune** vyberte **Klientské aplikace**.
+2. V okně **Klientské aplikace** vyberte **Zásady ochrany aplikací**.
 3. V okně **Zásady ochrany aplikací** zvolte zásadu, kterou chcete upravit. Zobrazí se okno **Intune App Protection**.
 4. V okně **Intune App Protection** zvolte **Chráněné aplikace**. Otevře se okno **Chráněné aplikace** a zobrazí se v něm všechny aplikace, které už jsou obsažené v seznamu pro tuto zásadu ochrany aplikací.
 5. Vyberte **Přidat aplikace**. Informace v části **Přidat aplikace** zobrazí filtrovaný seznam aplikací. Seznam v horní části okna umožňuje změnit filtr seznamu.
@@ -86,8 +86,8 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zása
 ## <a name="add-a-store-app-to-your-protected-apps-list"></a>Přidání aplikace ze Storu do seznamu chráněných aplikací
 
 **Přidání aplikace ze Storu**
-1. V okně **Microsoft Intune** vyberte **Mobilní aplikace**.
-2. V okně **Mobilní aplikace** vyberte **Zásady ochrany aplikací**.
+1. V okně **Microsoft Intune** vyberte **Klientské aplikace**.
+2. V okně **Klientské aplikace** vyberte **Zásady ochrany aplikací**.
 3. V okně **Zásady ochrany aplikací** zvolte zásadu, kterou chcete upravit. Zobrazí se okno **Intune App Protection**.
 4. V okně **Intune App Protection** zvolte **Chráněné aplikace**. Otevře se okno **Chráněné aplikace** a zobrazí se v něm všechny aplikace, které už jsou obsažené v seznamu pro tuto zásadu ochrany aplikací.
 5. Vyberte **Přidat aplikace**. Informace v části **Přidat aplikace** zobrazí filtrovaný seznam aplikací. Seznam v horní části okna umožňuje změnit filtr seznamu.
@@ -99,8 +99,8 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zása
 ## <a name="add-a-desktop-app-to-your-protected-apps-list"></a>Přidání desktopové aplikace do seznamu chráněných aplikací
 
 **Přidání desktopové aplikace**
-1. V okně **Microsoft Intune** vyberte **Mobilní aplikace**.
-2. V okně **Mobilní aplikace** vyberte **Zásady ochrany aplikací**.
+1. V okně **Microsoft Intune** vyberte **Klientské aplikace**.
+2. V okně **Klientské aplikace** vyberte **Zásady ochrany aplikací**.
 3. V okně **Zásady ochrany aplikací** zvolte zásadu, kterou chcete upravit. Zobrazí se okno **Intune App Protection**.
 4. V okně **Intune App Protection** zvolte **Chráněné aplikace**. Otevře se okno **Chráněné aplikace** a zobrazí se v něm všechny aplikace, které už jsou obsažené v seznamu pro tuto zásadu ochrany aplikací.
 5. Vyberte **Přidat aplikace**. Informace v části **Přidat aplikace** zobrazí filtrovaný seznam aplikací. Seznam v horní části okna umožňuje změnit filtr seznamu.
@@ -116,8 +116,7 @@ Po přidání aplikací, které chcete chránit pomocí WIP, je potřeba použí
 
 Kurzy k WIP jsou sestava umožňující monitorovat vaše aplikace podporující WIP a neznámé aplikace v rámci WIP. Neznámé aplikace jsou aplikace, které nenasadilo IT oddělení vaší organizace. Můžete je ze sestavy vyexportovat a přidat do zásad WIP. Zabráníte tak přerušení produktivity po dobu, než vynutíte WIP v režimu Blokovat.
 
-<!-- 1631908 -->
-Kromě zobrazování informací o aplikacích s podporou WIP můžete zobrazit souhrn zařízení, která sdílí pracovní data s weby. Pomocí těchto informací můžete určit, které weby by se měly přidat do zásad WIP pro skupiny a uživatele. Souhrn zobrazuje adresy URL webů, ke kterým mají přístup aplikace podporující WIP.
+<!-- 1631908 --> Kromě zobrazování informací o aplikacích s podporou WIP můžete zobrazit souhrn zařízení, která sdílí pracovní data s weby. Pomocí těchto informací můžete určit, které weby by se měly přidat do zásad WIP pro skupiny a uživatele. Souhrn zobrazuje adresy URL webů, ke kterým mají přístup aplikace podporující WIP.
 
 Když pracujete s aplikacemi podporujícími WIP a s neznámými aplikacemi v rámci WIP, doporučujeme začít s režimem **Tiché** nebo **Povolit potlačení** a u malé skupiny ověřit, jestli máte v seznamu chráněných aplikací správné aplikace. Až budete hotovi, můžete režim změnit na konečnou zásadu vynucení **Blokovat**.
 
@@ -149,7 +148,7 @@ Když WIP vypnete, proběhne pokus o dešifrování všech souborů označených
 
 1. Otevřete portál [Azure Portal](https://portal.azure.com). Zvolte **Všechny služby**. Do filtru textového pole zadejte **Intune**.
 
-3. Zvolte **Intune** > **Mobilní aplikace**.
+3. Zvolte **Intune** > **Klientské aplikace**.
 
 4. Zvolte **Stav ochrany aplikace** > **Sestavy** > **Kurz k Windows Information Protection**.  
 

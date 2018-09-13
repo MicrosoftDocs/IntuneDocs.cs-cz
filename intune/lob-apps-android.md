@@ -15,12 +15,12 @@ ms.assetid: 061d793c-c724-4cd9-9240-adb0cbda5661
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: baf7ee4f1178b555a0fe311f0e3977941e1491fe
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: a49811200cd84882fe9f80708edefde7614e5cee
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905032"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347861"
 ---
 # <a name="add-an-android-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro Android do Microsoft Intune
 
@@ -35,8 +35,8 @@ Obchodní aplikace (LOB) je aplikace, kterou do Intune přidáte z instalačníh
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Intune** zvolte **Mobilní aplikace**.
-4. V úloze **Mobilní aplikace** vyberte **Spravovat** > **Aplikace**.
+3. V podokně **Intune** zvolte **Klientské aplikace**.
+4. V úloze **Klientské aplikace** vyberte **Spravovat** > **Aplikace**.
 5. Nad seznamem aplikací vyberte **Přidat**.
 6. V podokně **Přidat aplikaci** vyberte **Obchodní aplikace**.
 

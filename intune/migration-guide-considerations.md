@@ -14,20 +14,20 @@ ms.technology: ''
 ms.assetid: f29d2894-e98b-4f2c-b444-a8ccc1b7efdd
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.openlocfilehash: bd59cf3a4764cc66d0e7d1f47e69c2ff93352387
-ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
+ms.openlocfilehash: 23619048faca4cdf9d64b15b0db7c09cb958a082
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
-ms.locfileid: "29925977"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43314036"
 ---
 # <a name="special-migration-considerations"></a>Zvláštní stránky migrace
 
 V závislosti na prostředí vašeho stávajícího poskytovatele MDM se vás můžou týkat některé speciální aspekty migrace.
 
-## <a name="factory-reset-for-apples-device-enrollment-program-dep"></a>Obnovení továrního nastavení pro Program registrace zařízení Apple (DEP)
+## <a name="wipe-for-apples-device-enrollment-program-dep"></a>Vymazání pro Program registrace zařízení (DEP) společnosti Apple
 
-Program registrace zařízení Apple (DEP) nastaví konfiguraci zařízení, kterou koncový uživatel nebude moct odebrat. Pokud chcete zachovat pokročilé funkce správy DEP, je potřeba vrátit zařízení do výchozího stavu prostřednictvím obnovení továrního nastavení a pak ho zaregistrovat do Intune.
+Program registrace zařízení Apple (DEP) nastaví konfiguraci zařízení, kterou koncový uživatel nebude moct odebrat. Pokud chcete zachovat pokročilé funkce správy DEP, je potřeba vrátit zařízení do výchozího stavu prostřednictvím vymazání a pak ho zaregistrovat do Intune.
 
 Pokud chcete ke správě zařízení v Intune dále používat program DEP, [nastavte registraci zařízení s iOSem pomocí programu DEP](device-enrollment-program-enroll-ios.md).
 

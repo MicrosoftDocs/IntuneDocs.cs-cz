@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/16/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f4746e2f20926c102717214304711cc9883597b8
-ms.sourcegitcommit: 1e349bcfd562f34866108e566e5b5062717e0112
+ms.openlocfilehash: 7cf005b225dd11ca6b95dbed0a82330544575f92
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "40252580"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347470"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Nastavení virtuální privátní sítě (VPN) pro jednotlivé aplikace v Intune pro zařízení s iOSem
 
@@ -34,6 +34,7 @@ Síť VPN pro jednotlivé aplikace je v tuto chvíli k dispozici pro následují
  - Pulse Connect Secure
  - SonicWall
  - Palo Alto Networks GlobalProtect
+ - Zscaler
 
 ## <a name="prerequisites-for-per-app-vpn"></a>Předpoklady pro síť VPN pro jednotlivé aplikace
 
@@ -145,7 +146,7 @@ Po přidání profilu sítě VPN přidružte aplikaci a skupinu služby Azure AD
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
-3. Zvolte **Mobilní aplikace**.
+3. Vyberte **Klientské aplikace**.
 4. Klikněte na **Aplikace**.
 5. Ze seznamu aplikací vyberte požadovanou aplikaci.
 6. Klikněte na **Přiřazení**.
@@ -187,6 +188,10 @@ Po nastavení sítě VPN pro jednotlivé aplikace a jejím přidružení k aplik
     - F5 Access
     - Pulse Secure
     - SonicWall Mobile Connect
+    - Zscaler App
+
+    > [!NOTE]
+    > Pokud používáte aplikaci VPN Pulse Secure, můžete použít tunelování v aplikační vrstvě nebo na úrovni paketů. U tunelování v aplikační vrstvě nastavte hodnotu **ProviderType** na **app-proxy**, u tunelování na úrovni paketů na **packet-tunnel**.
 
 ### <a name="connect-using-the-per-app-vpn"></a>Připojení pomocí sítě VPN pro jednotlivé aplikace
 

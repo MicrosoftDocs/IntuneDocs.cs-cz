@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 45d41f02fdfff7179dbd43f4d2afdac3337f8b7f
-ms.sourcegitcommit: e8aaa0955d13fa6c9d5f35a730ad06509ce88d0b
+ms.openlocfilehash: 7b03c46a9095c0f300869ebd14d1a81698e294f7
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400279"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43314019"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurace mobilních profilů eSIM v Intune – verze Public Preview
 
@@ -179,7 +179,7 @@ Když odeberete zařízení ze skupiny Azure AD, odebere se i profil eSIM. Nezap
 2. Přejít do skupiny Azure AD a požadované zařízení z ní odebrat.
 3. Když odebrané zařízení kontaktuje Intune, vyhodnotí se aktualizovaná zásada a profil eSIM se odebere.
 
-Profil eSIM se také zruší, když registraci zařízení zruší uživatel nebo když na zařízení proběhne [odebrání firemních dat](devices-wipe.md#remove-company-data) nebo [vzdálené obnovení továrního nastavení zařízení](devices-wipe.md#factory-reset).
+Profil eSIM se také odebere, když se zařízení [vyřadí](devices-wipe.md#retire), uživatel zruší jeho registraci nebo když na zařízení proběhne [vzdálené obnovení továrního nastavení zařízení](devices-wipe.md#wipe).
 
 > [!NOTE]
 > Odebrání profilu nemusí ukončit účtování. Ohledně stavu fakturace za své zařízení se obraťte na mobilního operátora.

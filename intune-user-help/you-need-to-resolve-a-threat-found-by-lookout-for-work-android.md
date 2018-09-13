@@ -1,11 +1,11 @@
 ---
 title: Řešení hrozeb zjištěných aplikací Lookout for Work v Androidu | Dokumentace Microsoftu
-description: Zjistěte, jak vyřešit hrozbu, kterou objevila aplikace Lookout for Work na Androidu.
+description: Zjistěte, jak vyřešit hrozbu, kterou objevila aplikace Lookout for Work na zařízení s Androidem.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/17/2017
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,35 +15,43 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: df7055f031fb7661cc0fa3bf2d00b16fc0a082dc
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 0e8f10bac2c7ffc75f81572da60249842c8f4cc1
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31015468"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148517"
 ---
-# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Vyřešení hrozby, kterou zjistila aplikace Lookout for Work
+# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Vyřešení hrozby, kterou zjistila aplikace Lookout for Work  
 
-Aplikace Lookout for Work našla na zařízení potenciální hrozbu a tento problém je potřeba vyřešit, než budete moct znovu přistupovat ke svým firemním nebo školním e-mailům, aplikacím a souborům. Zpráva, kterou uvidíte, může vypadat takto:
+Aplikace Lookout for Work je služba ochrany před hrozbami, která na zařízeních s Androidem rozpoznává potenciální hrozby. Ty se oznamují aplikaci Portál společnosti a zobrazují jako nevyřešené problémy nevyhovující předpisům. Dokud hrozby neodstraníte, možná nebudete moci provádět tyto akce:
 
-![Lookout for Work našla v zařízení hrozbu](./media/lookout-threat-found-android.png)
+* Připojování k firemnímu e-mailu
+* Připojování k firemní Wi-Fi
+* Připojování k SharePointu Online
+* Synchronizace firemních souborů s OneDrivem
+* Přístup k firemním aplikacím
 
-Pokud chcete problém vyřešit, spusťte aplikaci Lookout for Work a postupujte podle pokynů zobrazených v aplikaci.
+V tomto článku se dozvíte, jak rozpoznat upozornění aplikace Lookout for Work na hrozby a jak je řešit. 
 
-## <a name="what-you-might-see-if-your-enrolled-device-is-blocked-from-accessing-email-or-files"></a>Informace, které se zobrazují v případě, kdy je registrovanému zařízení zablokován přístup k e-mailu nebo souborům
+## <a name="troubleshoot-virus-or-security-threat"></a>Odstraňování virových a bezpečnostních hrozeb  
+Pomocí těchto kroků získáte znovu přístup k firemním prostředkům poté, co aplikace Lookout for Work odhalila virovou nebo bezpečnostní hrozbu.  
 
-Pokud registrované zařízení obsahuje virus nebo jinou bezpečnostní hrozbu a pokusíte se o přístup k firemnímu e-mailu nebo souborům, může se zobrazit následující zpráva:
+1. Když aplikace detekuje virovou nebo bezpečnostní hrozbu, obdržíte zprávu podobnou té na snímku níže. Klepnutím na odkaz **portálu pro správu zařízení** přejděte na [web Portál společnosti](https://portal.manage.microsoft.com/devices).  
 
-![Chybová zpráva aplikace Lookout for Work s odkazem na web Portál společnosti](./media/mtd-go-to-device-management-portal-android.png)
+    ![Ukázkový snímek obrazovky s chybovou zprávou v aplikaci Lookout for Work, která obsahuje odkaz na web Portál společnosti a modré tlačítko OK](./media/mtd-go-to-device-management-portal-android.png)
 
-Klepněte na odkaz na **portál pro správu zařízení** a přejděte na [web Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog), kde se zobrazí pokyny k vyřešení problému.
+2. Vyberte své zařízení.  
+3. Přečtěte si upozornění zobrazené pod zařízením. Vyzve vás, abyste otevřeli aplikaci Lookout for Work a virovou nebo bezpečnostní hrozbu vyřešili. 
 
-## <a name="example-of-an-app-that-lookout-for-work-sees-as-a-threat"></a>Příklad aplikace, kterou Lookout for Work vnímá jako hrozbu
+    ![Ukázkový snímek obrazovky se stránkou zařízení na webu Portál společnosti zobrazující upozornění aplikace Lookout for Work.](./media/CP-lookout-virus-banner-1808.png)  
 
-Pokud jste nainstalovali aplikaci, kterou Lookout for Work považuje za hrozbu, uvidíte podobnou obrazovku:
+## <a name="troubleshoot-an-app-threat"></a>Odstraňování hrozeb od aplikací  
 
-![příklad zprávy s výstrahou aplikace Lookout for Work upozorňující na virus](./media/lookout-virus-alert-android.png)
+Když si nainstalujete aplikaci, kterou Lookout for Work vyhodnotí jako hrozbu, zobrazí se zpráva podobná té na snímku níže.  
 
-Po odinstalaci aplikace ihned znovu získáte přístup k firemnímu e-mailu a datům. Pokud budete požadavek na odinstalaci aplikace ignorovat, ztratíte přístup k e-mailu a datům až do odinstalace aplikace.
+![Ukázkový snímek obrazovky s výstrahou aplikace Lookout for Work zobrazenou přes její rozhraní. K dispozici jsou tři tlačítka: Zavřít, Další informace a Odinstalovat.](./media/lookout-virus-alert-android.png)  
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Ztracený přístup k firemnímu e-mailu a datům získáte odinstalováním sporné aplikace. Dokud je aplikace na zařízení nainstalovaná, nebudete mít k prostředkům přístup.    
+
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

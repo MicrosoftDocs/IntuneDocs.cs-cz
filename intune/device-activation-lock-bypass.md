@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 9ca3b0ba-e41c-45fb-af28-119dff47c59f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f973bd36faef14232d6449c8ce9d1dc92bf32170
-ms.sourcegitcommit: 0bddd8a76201746e8835c4b792f34377b45fad60
+ms.openlocfilehash: b37c210425fd5abf8fd0b0501966fef8196b451b
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39356569"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312617"
 ---
 # <a name="bypass-activation-lock-on-supervised-ios-devices-with-intune"></a>Vyřazení zámku aktivace přes Intune na zařízeních s iOSem, která jsou pod dohledem
 
@@ -78,9 +78,9 @@ Akce Intune se vzdáleným zařízením **Vynechat zámek aktivace** odebere zá
 6. Přejděte do hardwarové části zařízení a v části **Podmíněný přístup** zkopírujte hodnotu **Kód pro překonání zámku aktivace**.
 
     >[!NOTE]
-    >Než zařízení obnovíte do továrního nastavení, zkopírujte kód pro překonání zámku. Když nastavení zařízení obnovíte před zkopírováním kódu, kód se z Azure odebere.
+    >Před vymazáním zařízení si kód zkopírujte. Když nastavení zařízení obnovíte před zkopírováním kódu, kód se z Azure odebere.
 
-7.  Přejděte do okna zařízení **Přehled** a pak vyberte **Obnovení továrního nastavení**.
+7.  Přejděte do okna zařízení **Přehled** a pak vyberte **Vymazat**.
 8.  Jakmile se zařízení obnoví, zobrazí se výzva k zadání *Apple ID* a *hesla*. Pole *ID* nechte prázdné a jako *heslo* zadejte **kód pro překonání zámku**. Tímto se účet odebere ze zařízení. 
 
 

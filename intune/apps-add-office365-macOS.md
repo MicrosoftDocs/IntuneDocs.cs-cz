@@ -15,12 +15,12 @@ ms.assetid: 2372332a-7e3a-4a9c-91a9-86654e0fabe2
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bffd53030c23f38f0548cb5bccf82f6dd5e85779
-ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
+ms.openlocfilehash: f8b76de6e9b3a584be7ad324391c1c071140488e
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37869490"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329440"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Přiřazení Office 365 zařízením s macOS v Microsoft Intune
 
@@ -40,8 +40,8 @@ Než začnete přidávat Office 365 do zařízení s macOS, seznamte se s těmit
 Z podokna **Aplikace** přidejte Office 365.
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Vyberte **Všechny služby** > **Monitorování a správa** > **Intune**.
-3. V podokně **Intune** zvolte **Mobilní aplikace**.
-4. V podokně úloh **Mobilní aplikace** vyberte v části **Spravovat** možnost **Aplikace**. 
+3. V podokně **Intune** zvolte **Klientské aplikace**.
+4. V podokně úloh **Klientské aplikace** vyberte v části **Spravovat** možnost **Aplikace**. 
 5. Vyberte **Přidat**.
 6. V seznamu **Typ aplikace** vyberte ve skupině **Sada Office 365** **macOS**.
 7. Informace o sadě aplikací získáte vybráním možnosti **Informace o sadě aplikací**.  

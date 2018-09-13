@@ -15,12 +15,12 @@ ms.assetid: 4c35a23e-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 59449efd592f3c47bdf2350b495f81c23f442999
-ms.sourcegitcommit: 165c1e48891e386f9f75b0ef7a6826b67695dbb7
+ms.openlocfilehash: 2d099d049892d71c36e4b01fb1a8af6f7ad25df1
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42751798"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313405"
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Povolení registrace zařízení s iOSem pomocí Apple School Manageru
 
@@ -113,7 +113,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
      > [!NOTE]
      > Zařízení zaregistrované bez dohledu se dá resetovat do stavu pod dohledem jenom pomocí Apple Configuratoru. Resetování zařízení tímto způsobem vyžaduje připojení zařízení s iOSem k Macu pomocí kabelu USB. Další informace na toto téma získáte v [dokumentaci Apple Configuratoru](http://help.apple.com/configurator/mac/2.3).
 
-7. Zvolte, jestli chcete pro zařízení, která používají tento profil, uzamčenou registraci. **Uzamčená registrace** zakáže nastavení iOSu, která umožňují odebrání profilu správy z nabídky **Nastavení**. Po registraci zařízení nemůžete toto nastavení změnit bez obnovení továrního nastavení zařízení. Taková zařízení musí mít režim správy **Pod dohledem** nastavený na *Ano*. 
+7. Zvolte, jestli chcete pro zařízení, která používají tento profil, uzamčenou registraci. **Uzamčená registrace** zakáže nastavení iOSu, která umožňují odebrání profilu správy z nabídky **Nastavení**. Po registraci zařízení nemůžete toto nastavení změnit bez vymazání zařízení. Taková zařízení musí mít režim správy **Pod dohledem** nastavený na *Ano*. 
 
 8. Pokud chcete umožnit, aby se k registrovaným iPadům přihlašovalo více uživatelů pomocí spravovaného Apple ID, zvolte v části **Sdílený iPad** možnost **Ano** (tato možnost vyžaduje možnost **Zaregistrovat bez přidružení uživatele** a režim **Pod dohledem** nastavené na **Ano**). Spravovaná Apple ID se vytváří na portálu Apple School Manager. Další informace o [sdíleném iPadu](education-settings-configure-ios-shared.md) a [požadavcích Applu na sdílený iPad](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56)
 
@@ -179,4 +179,4 @@ Zařízením Apple School Manageru spravovaným v Intune musíte před registrac
 
 ## <a name="distribute-devices-to-users"></a>Distribuce zařízení uživatelům
 
-Povolili jste správu a synchronizaci mezi společností Apple a Intune a přiřadili jste profil, který umožní registraci zařízení Apple School. Teď můžete zařízení rozdělit mezi uživatele. Pokud je zařízení Apple School Manageru s iOSem zapnuté, zaregistruje se pro správu službou Intune. Pokud bylo zařízení aktivováno a používá se, nemůže být profil použit, dokud nebude zařízení obnoveno do továrního nastavení.
+Povolili jste správu a synchronizaci mezi společností Apple a Intune a přiřadili jste profil, který umožní registraci zařízení Apple School. Teď můžete zařízení rozdělit mezi uživatele. Pokud je zařízení Apple School Manageru s iOSem zapnuté, zaregistruje se pro správu službou Intune. Pokud bylo zařízení aktivováno a používá se, nelze profil použít, dokud se zařízení nevymaže.

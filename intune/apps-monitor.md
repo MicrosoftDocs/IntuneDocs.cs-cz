@@ -15,12 +15,12 @@ ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bedd1108ce0c9e173e6e9519a29d3948f1320c3a
-ms.sourcegitcommit: 1a8b34c7854a575bf6ce59f475c7b718fa038d66
+ms.openlocfilehash: a1cf7fbdee6e6dc0cb280c8f9473c48608485737
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/18/2018
-ms.locfileid: "40252742"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329900"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorování informací a přiřazení aplikace pomocí Microsoft Intune
 
@@ -30,7 +30,7 @@ Intune poskytuje několik způsobů, jak monitorovat vlastnosti spravovaných ap
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V nabídce **Intune** zvolte **Mobilní aplikace**.
+3. V nabídce **Intune** zvolte **Klientské aplikace**.
 4. V části nabídky **Spravovat** vyberte **Aplikace**.
 5. V seznamu aplikací vyberte aplikaci, která se má monitorovat. Zobrazí se podokno aplikace s přehledem stavu zařízení a uživatele.
 

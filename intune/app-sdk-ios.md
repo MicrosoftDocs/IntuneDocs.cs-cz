@@ -14,12 +14,12 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: ''
-ms.openlocfilehash: f0c35caf841729aae8ce6ccdbf1c9709258a8f5b
-ms.sourcegitcommit: 2e08887c07d29979300e80e6a40372aec6287103
+ms.openlocfilehash: ab88c99694df95eeaf4b5529faec73dacd1a208c
+ms.sourcegitcommit: 11cad61c565c474a8d653181675cc1109d562626
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39249722"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43241877"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -241,7 +241,7 @@ AccentColor | Řetězec| Určuje barvu motivu obrazovky se zadáváním kódu PI
 MAMTelemetryDisabled| Logická hodnota| Určuje, jestli SDK nebude odesílat žádná telemetrická data do back-endu.| Volitelný parametr. Výchozí hodnota je NE. |
 MAMTelemetryUsePPE | Logická hodnota | Určuje, jestli sada MAM SDK bude odesílat data do back-endu telemetrie PPE. Použijte při testování aplikací se zásadami Intune, aby se testovací telemetrická data nesmíchala se zákaznickými. | Volitelný parametr. Výchozí hodnota je NE. |
 MaxFileProtectionLevel | Řetězec | Volitelný parametr. Povoluje aplikaci určit maximální úroveň, kterou `NSFileProtectionType` může podporovat. Tato hodnota přepíše zásady odeslané službou, pokud je příslušná úroveň vyšší než ta, kterou aplikace může podporovat. Možné hodnoty: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
-OpenInActionExtension | Logická hodnota | Pro rozšíření akce Open-In se nastavuje na ANO. Další informace najdete v části Sdílení dat přes UIActivityViewController. |
+OpenInActionExtension | Logická hodnota | Pro rozšíření akce Open in se nastavuje na ANO. Další informace najdete v části Sdílení dat přes UIActivityViewController. |
 WebViewHandledURLSchemes | Pole řetězců | Určuje schémata URL zpracovávaná komponentami WebView vaší aplikace. | Povinný parametr, pokud aplikace používá komponenty WebView, které zpracovávají adresy URL prostřednictvím odkazů nebo JavaScriptu. |
 
 ## <a name="receive-app-protection-policy"></a>Příjem zásad ochrany aplikací
@@ -465,7 +465,7 @@ Od verze 8.0.2 může sada Intune App SDK filtrovat akce `UIActivityViewControll
 
 ### <a name="copy-to-actions"></a>Akce Zkopírovat do
 
-Při sdílení dokumentů přes `UIActivityViewController` a `UIDocumentInteractionController` zobrazí iOS akci Zkopírovat do pro každou aplikaci, která podporuje otevření sdíleného dokumentu. Aplikace deklarují podporované typů dokumentů prostřednictvím nastavení `CFBundleDocumentTypes` ve svém souboru Info.plist. Pokud zásady zakazují sdílení s nespravovanými aplikacemi, nebude už tento typ sdílení k dispozici. Místo toho bude potřeba přidat do aplikací rozšíření akce, které se nevztahuje k uživatelskému rozhraní, a propojit ho se sadou Intune App SDK. Rozšíření akce je jenom zástupná procedura. Sada SDK implementuje chování sdílení souborů. Postupujte podle následujících kroků:
+Při sdílení dokumentů přes `UIActivityViewController` a `UIDocumentInteractionController` zobrazí iOS akci Zkopírovat do pro každou aplikaci, která podporuje otevření sdíleného dokumentu. Aplikace deklarují podporované typů dokumentů prostřednictvím nastavení `CFBundleDocumentTypes` ve svém souboru Info.plist. Pokud zásady zakazují sdílení s nespravovanými aplikacemi, nebude už tento typ sdílení k dispozici. Místo toho bude potřeba přidat do aplikace rozšíření akce, které se nevztahuje k uživatelskému rozhraní, a propojit ho se sadou Intune App SDK. Rozšíření akce je jenom zástupná procedura. Sada SDK implementuje chování sdílení souborů. Postupujte podle následujících kroků:
 
 1. Aplikace musí mít v poli `CFBundleURLTypes` v souboru Info.plist definované aspoň jedno schéma adres URL.
 

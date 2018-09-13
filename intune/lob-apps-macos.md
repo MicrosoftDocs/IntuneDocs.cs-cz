@@ -15,12 +15,12 @@ ms.assetid: ef8008ac-8b85-4bfc-86ac-1f9fcbd3db76
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d527b36876adf29c12d3577f7dcd09416b4d5a37
-ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
+ms.openlocfilehash: f907ddb631c974a9c7626483446600eae149a12c
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40255470"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347392"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Přidání obchodních aplikací pro macOS do Microsoft Intune
 
@@ -60,8 +60,8 @@ Než budete moct obchodní soubor nahrát do Microsoft Intune, musíte si stáhn
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. Na stránce **Intune** zvolte **Mobilní aplikace**.
-4. V úloze **Mobilní aplikace** zvolte **Spravovat** > **Aplikace**.
+3. V podokně **Intune** zvolte **Klientské aplikace**.
+4. V úloze **Klientské aplikace** zvolte **Spravovat** > **Aplikace**.
 5. Nad seznamem aplikací zvolte **Přidat**.
 6. V podokně **Přidat aplikaci** zvolte **Obchodní aplikace**.
 

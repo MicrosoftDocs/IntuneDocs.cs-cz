@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/29/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,24 +15,44 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9180bf70c114a9bb1f034b51ee3a3d96bef253fa
-ms.sourcegitcommit: e4832ea81b9a707a6ad0699a18c8b3988413c283
+ms.openlocfilehash: 9f0140d532356a1ddb3f8acf19ea1dfaf6e85eb8
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279487"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347690"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 Zjistěte, jaké jsme v uživatelském rozhraní aplikací udělali změny, které koncoví uživatelé uvidí v této verzi Microsoft Intune. Pochopení těchto aktualizací vám pomůže při komunikaci s uživateli a aktualizaci vlastní dokumentace, kterou jste vytvořili za účelem podpory vašeho nasazení. Můžete také zjistit, jak lépe řešit problémy uživatelů, když požádají helpdesk o podporu pomocí Portálu společnosti.
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/account-move-rom-iwp-user-1712.png)--->
 
+## <a name="week-of-august-27-2018"></a>Týden od 27. srpna 2018  
+
+### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Nová aktualizace uživatelského prostředí pro web Portál společnosti <!--2000968 -->  
+Na základě názorů zákazníků jsme přidali na web Portál společnosti nové funkce. Na svých zařízeních zaznamenáte značné vylepšení stávající funkčnosti a použitelnosti. Oblasti webu – jako třeba podrobnosti o zařízení, váš názor a podpora a přehled zařízení – získaly nový, moderní a živý vzhled. Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](https://docs.microsoft.com/en-us/intune-user-help/using-the-intune-company-portal-website), aby tyto změny reflektovala.   
+
+Mezi nové aktualizace patří:  
+
+- Zjednodušené pracovní postupy na všech platformách zařízení
+- Vylepšené průběhy identifikace a registrace zařízení
+- Další užitečné chybové zprávy
+- Příjemnější jazyk, méně technického žargonu
+- Možnost sdílet přímé odkazy na aplikace
+- Vylepšený výkon u velkých katalogů aplikací
+- Lepší přístupnost pro všechny uživatele  
+
+|Aktualizované|Předchozí|
+|---|---|
+|![Aktualizovaná stránka zařízení zobrazuje zařízení přímo nad informacemi o zařízení a zařízení se už nezobrazuje nad celým seznamem.](./media/iwp-device-after-1803.png)|![Předchozí verze stránky zařízení](./media/iwp-device-before-1803.png)|
+|![Aktualizovaná stránka instalace aplikace zobrazuje aplikaci přímo nad popisem a různými informacemi o instalaci, jako jsou datum publikování, verze a typ aplikace.](./media/iwp-app-install-after-1803.png)|![Předchozí verze stránky instalace aplikace](./media/iwp-app-install-before-1803.png)|  
+
 ## <a name="week-of-july-16-2018"></a>Týden od 16. července 2018  
 
 ### <a name="more-opportunities-to-sync-in-the-company-portal-app-for-windows"></a>Další možnosti synchronizace v aplikaci Portál společnosti pro Windows   
 Aplikace Portál společnosti pro Windows teď umožňuje zahájit synchronizaci přímo z hlavního panelu Windows a z nabídky Start. Tato funkce je užitečná hlavně v případě, že vaším jediným úkolem je synchronizace zařízení a získání přístupu k podnikovým prostředkům. Pokud chcete tuto novou funkci použít, klikněte pravým tlačítkem na ikonu Portál společnosti, která je připnutá na hlavní panel nebo v nabídce Start. V možnostech nabídky (označuje se také jako seznam odkazů) vyberte **Synchronizovat toto zařízení**. V aplikaci Portál společnosti se otevře stránka **Nastavení** a zahájí se synchronizace.  
 
-![Snímek obrazovky s hlavním panelem Windows na ploše zařízení: Po kliknutí na ikonu aplikace Portál společnosti se zobrazila nabídka s možnostmi Připnout na hlavní panel, Zavřít okno a Synchronizovat toto zařízení.](./media/sync-device-from-start-menu-1807.png)  
+![Snímek obrazovky s hlavním panelem Windows na ploše zařízení. Po kliknutí na ikonu aplikace Portál společnosti se zobrazila nabídka s možnostmi Připnout na hlavní panel, Zavřít okno a Synchronizovat toto zařízení.](./media/sync-device-from-start-menu-1807.png)  
 
 ### <a name="new-browsing-experiences-in-the-company-portal-app-for-windows"></a>Nové možnosti procházení v aplikaci Portál společnosti pro Windows  
 
@@ -112,7 +132,7 @@ Pokud jste povolili [mapování skupin zařízení](device-group-mapping.md), ap
 Vylepšili jsme pracovní postup instalace zařízení v aplikaci Portál společnosti pro iOS. Jazyk je uživatelsky přívětivější a tam, kde to bylo možné, jsme také sjednotili obrazovky. Také jsme použitím názvu vaší společnosti všude v textu instalace upravili jazyk tak, aby více odpovídal vaší společnosti.
 
 > [!NOTE]
-> Používáme název společnosti, který jste nastavili na portálu Azure Portal v **Microsoft Intune** > **Mobilní aplikace** > **Značky Portálu společnosti**  >  **Název společnosti**. Pokud jste nenastavili tuto hodnotu, budeme používat název tenanta nastavený v **Azure Active Directory** > **Vlastnosti** > **Název**. Pokud jste nenastavili název společnosti v poli Značky Portálu společnosti a nechcete zobrazovat název tenanta, doporučujeme nastavit název společnosti na Portálu společnosti na kartě značky. Pokud nechcete, aby se tento řetězec zobrazoval v záhlaví Portálu společnosti, můžete zrušit zaškrtnutí políčka Vedle loga zobrazit název společnosti.
+> Používáme název společnosti, který jste nastavili na portálu Azure Portal v **Microsoft Intune** > **Klientské aplikace** > **Značky Portálu společnosti**  >  **Název společnosti**. Pokud jste nenastavili tuto hodnotu, budeme používat název tenanta nastavený v **Azure Active Directory** > **Vlastnosti** > **Název**. Pokud jste nenastavili název společnosti v poli Značky Portálu společnosti a nechcete zobrazovat název tenanta, doporučujeme nastavit název společnosti na Portálu společnosti na kartě značky. Pokud nechcete, aby se tento řetězec zobrazoval v záhlaví Portálu společnosti, můžete zrušit zaškrtnutí políčka Vedle loga zobrazit název společnosti.
 
 |Dříve|Nyní|
 |---|---|
@@ -458,12 +478,7 @@ Na základě zpětné vazby od zákazníků, jako jste vy, jsme přidali několi
 -   Možnost sdílet přímé odkazy na aplikace
 - Vylepšený výkon u velkých katalogů aplikací
 
-V rámci přípravy na tuto změnu nemusíte provádět žádnou akci. Jakmile bude aktualizovaný web Portál společnosti pro vás dostupný, dáme vám vědět. Je však možné, že nakonec budete muset dokumentaci pro koncové uživatele doplnit o aktualizované snímky obrazovky. Nezapomeňte, že možná bude nutné také aktualizovat dokumentaci pro aplikaci Portál společnosti v iOSu, protože web využívá část **Aplikace** v aplikaci pro iOS.
-
-|Aktualizované|Předchozí|
-|---|---|
-|![Aktualizovaná stránka zařízení zobrazuje zařízení přímo nad informacemi o zařízení a zařízení se už nezobrazuje nad celým seznamem.](./media/iwp-device-after-1803.png)|![Předchozí verze stránky zařízení](./media/iwp-device-before-1803.png)|
-|![Aktualizovaná stránka instalace aplikace zobrazuje aplikaci přímo nad popisem a různými informacemi o instalaci, jako jsou datum publikování, verze a typ aplikace.](./media/iwp-app-install-after-1803.png)|![Předchozí verze stránky instalace aplikace](./media/iwp-app-install-before-1803.png)|
+V rámci přípravy na tuto změnu nemusíte provádět žádnou akci. Jakmile bude aktualizovaný web Portál společnosti pro vás dostupný, dáme vám vědět. Je však možné, že nakonec budete muset dokumentaci pro koncové uživatele doplnit o aktualizované snímky obrazovky. Nezapomeňte, že možná bude nutné také aktualizovat dokumentaci pro aplikaci Portál společnosti v iOSu, protože web využívá část **Aplikace** v aplikaci pro iOS.  
 
 ### <a name="ui-updates-to-the-company-portal-website---1313244-part-2--"></a>Aktualizace uživatelského rozhraní webu Portál společnosti <!--1313244 part 2-->
 

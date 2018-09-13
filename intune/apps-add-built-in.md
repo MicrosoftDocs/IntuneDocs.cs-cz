@@ -15,12 +15,12 @@ ms.assetid: 0ec8de66-5a0f-4c8d-afbf-c2becc7d6eec
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5b67b50a5bd372541cf0842696e5012ca991d8b8
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: b9520343f3b631fdc2732690b462c6d8fd010c82
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224156"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329491"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Přidání integrovaných aplikací do Microsoft Intune
 
@@ -36,8 +36,8 @@ Ve starších verzích konzoly Intune bylo v Intune několik výchozích spravov
 Postup přidání integrované aplikace k aplikacím dostupným v Microsoft Intune je následující:
 1. Přihlaste se k portálu Azure Portal.
 2. Zobrazte podokno Microsoft Intune tak, že zvolíte **Další služby** > **Monitorování + správa** > **Intune**.
-3. V podokně **Intune** zvolte **Mobilní aplikace**.
-4. V podokně **Mobilní aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
+3. V podokně **Intune** zvolte **Klientské aplikace**.
+4. V podokně **Klientské aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
 5. Vyberte **Přidat**.
 6. V podokně **Přidat aplikace** vyberte v seznamu **Typ aplikace** možnost **Integrovaná aplikace**.
 7. Zvolte **Vybrat aplikaci**.

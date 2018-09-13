@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 34c66aabe8c094b67805bcf0eeae38dbbbbff627
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 51e52e26357143d214c4bcf7856dfdb75a68653c
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905933"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329765"
 ---
 # <a name="work-device-restriction-settings-in-intune"></a>Nastavení omezení pracovních zařízení v Intune
 
@@ -42,7 +42,7 @@ Tento článek uvádí nastavení omezení zařízení v Microsoft Intune, kter�
   - **Automaticky udělit**
   - **Automaticky odepřít**
 
-    Stav udělení oprávnění pro konkrétní aplikace je možné dále definovat pomocí zásad konfigurace pro jednotlivé aplikace (v části **Mobilní aplikace** > **Zásady konfigurace aplikací**).
+    Stav udělení oprávnění pro konkrétní aplikace je možné dále definovat pomocí zásad konfigurace pro jednotlivé aplikace (v části **Klientské aplikace** > **Zásady konfigurace aplikací**).
 
 - **Přidat nebo odebrat účty**
 

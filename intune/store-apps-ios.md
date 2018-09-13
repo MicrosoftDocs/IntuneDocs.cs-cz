@@ -15,12 +15,12 @@ ms.assetid: c59514d7-1256-4576-9380-e7a0b85a0378
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ac96c66dd6f09a7bd7a1b1c8c37f2f0eda24828c
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 04d7acb5aa0e1a534fb6ad31519c094123aa90bb
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223505"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347673"
 ---
 # <a name="add-ios-store-apps-to-microsoft-intune"></a>Přidání aplikací pro App Store (iOS) do Microsoft Intune
 
@@ -41,8 +41,8 @@ Pomocí této metody můžete aplikace přiřazovat jen v případě, že jsou v
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**.  
     Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Intune** zvolte **Mobilní aplikace**.
-4. V podokně úloh **Mobilní aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
+3. V podokně **Intune** zvolte **Klientské aplikace**.
+4. V podokně úloh **Klientské aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
 5. V podokně **Aplikace** vyberte **Přidat**.
 6. V seznamu **Typ aplikace** vyberte z typů **Aplikace pro Store** možnost **iOS**.
 7. Vyberte **Hledat v App Storu**.

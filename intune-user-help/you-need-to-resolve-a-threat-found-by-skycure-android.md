@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/25/2017
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,36 +15,41 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: caac4b62c141145ac976d1515e6fdc92da90e962
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: ae001eb4d85a35b587eee4fa04df5f1987b247f7
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30753086"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149803"
 ---
 # <a name="resolve-a-threat-found-by-symantec-endpoint-protection-mobile"></a>Vyřešení hrozby, kterou zjistila aplikace Symantec Endpoint Protection Mobile
 
-Aplikace Symantec Endpoint Protection Mobile našla na zařízení potenciální hrozbu a tento problém je potřeba vyřešit, než budete moct znovu přistupovat ke svým firemním nebo školním e-mailům, aplikacím a souborům. Zpráva, kterou uvidíte, může vypadat takto:
+Symantec Endpoint Protection (SEP) Mobile je mobilní služba ochrany před hrozbami, která na zařízeních s Androidem rozpoznává potenciální hrozby. Ty se oznamují aplikaci Portál společnosti a zobrazují jako nevyřešené problémy nevyhovující předpisům. Pokud aplikace vaše zařízení vyhodnotí jako nesplňující předpisy, možná nebudete moci provádět tyto akce:
 
-![Aplikace Skycure našla v zařízení hrozbu](./media/lookout-threat-found-android.png)
+* Připojování k firemnímu e-mailu
+* Připojování k firemní Wi-Fi
+* Připojování k SharePointu Online
+* Synchronizace firemních souborů s OneDrivem
+* Přístup k firemním aplikacím
 
-Pokud chcete problém vyřešit, spusťte aplikaci Symantec Endpoint Protection Mobile a postupujte podle pokynů zobrazených v aplikaci.
+V tomto článku se dozvíte, jak rozpoznat upozornění aplikace SEP Mobile na hrozby a jak je řešit. 
 
-## <a name="what-you-might-see-if-your-enrolled-device-is-blocked-from-accessing-email-or-files"></a>Informace, které se zobrazují v případě, kdy je registrovanému zařízení zablokován přístup k e-mailu nebo souborům
+## <a name="resolve-virus-or-security-threat"></a>Řešení virových a bezpečnostních hrozeb  
 
-Pokud registrované zařízení obsahuje virus nebo jinou bezpečnostní hrozbu a pokusíte se o přístup k firemnímu e-mailu nebo souborům, může se zobrazit následující zpráva:
+1. Když se pokusíte o přístup k firemnímu e-mailu nebo webu, zobrazí se zpráva podobná té na snímku níže. Klepnutím na odkaz **portálu pro správu zařízení** přejděte na [web Portál společnosti](https://portal.manage.microsoft.com/devices).
 
-![Chybová zpráva aplikace Skycure s odkazem na web Portál společnosti](./media/skycure-list-of-potential-issues-android.png)
+    ![Ukázkový snímek obrazovky s chybovou zprávou v aplikaci Lookout for Work, která obsahuje odkaz na web Portál společnosti a modré tlačítko OK](./media/mtd-go-to-device-management-portal-android.png)  
 
-Klepněte na odkaz na **portál pro správu zařízení** a přejděte na [web Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog), kde se zobrazí pokyny k vyřešení problému.
+2. Vyberte své zařízení.  
+3. Přečtěte si upozornění zobrazené pod zařízením. Vyzve vás, abyste otevřeli aplikaci SEP Mobile a virovou nebo bezpečnostní hrozbu vyřešili.     
 
-## <a name="example-of-an-app-that-symantec-endpoint-protection-mobile-sees-as-a-threat"></a>Příklad aplikace, kterou Symantec Endpoint Protection Mobile vnímá jako hrozbu
+    ![Ukázkový snímek obrazovky se stránkou zařízení na webu Portál společnosti zobrazující upozornění aplikace SEP Mobile.](./media/CP-lookout-virus-banner-1808.png)
 
-Pokud jste nainstalovali aplikaci, kterou Symantec Endpoint Protection Mobile považuje za hrozbu, uvidíte obrazovku podobnou této:
+## <a name="resolve-an-app-threat"></a>Řešení hrozeb od aplikací  
 
-![Příklad upozornění na nalezení virů aplikací Skycure](./media/skycure-virus-alert-android.png)
+Pokud si nainstalujete aplikaci, která je považována za hrozbu pro vaše zařízení, zobrazí se v aplikaci SEP Mobile oznámení. V případě, že takovou aplikaci na zařízení ponecháte, nebudete mít přístup k firemním prostředkům.  
 
-Po odinstalaci aplikace ihned znovu získáte přístup k firemnímu e-mailu a datům. Pokud budete požadavek na odinstalaci aplikace ignorovat, ztratíte přístup k e-mailu a datům až do odinstalace aplikace.
+Pokud chcete problém vyřešit, vyberete aplikaci ze seznamu hrozeb aplikace SEP Mobile. Potom ji odeberte a odinstalujte pomocí zobrazených pokynů.  
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
 

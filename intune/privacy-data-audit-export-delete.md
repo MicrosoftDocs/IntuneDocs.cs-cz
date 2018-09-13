@@ -14,12 +14,12 @@ ms.assetid: 96990be0-eb1e-43a4-a0e4-09c7dbdc2bf4
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bea51227798e239bb74154e4d97e3efd6d55f807
-ms.sourcegitcommit: cefa84efd3003fa5a0ef0c2dce6206a6a411a1ec
+ms.openlocfilehash: 8c61040223d964f6ed0eeb85cf08c29bd2880396
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35232263"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313594"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Audit, export a odstranění osobních dat v Intune
 
@@ -64,8 +64,8 @@ Když zařízení resetujete do továrního nastavení, obnoví se všechna fire
 ### <a name="user-self-removal-from-intune-management"></a>Samostatné odebrání uživatele ze správy v Intune
 Uživatelé mohou odebrat osobní zařízení se systémem [Android, Apple nebo Windows](https://docs.microsoft.com/en-us/intune-user-help/unenroll-your-device-from-intune-android.md) ze správy v Intune i bez pomoci správce.   
 
-### <a name="remove-company-data"></a>Odebrání firemních dat
-Když odeberete firemní data, Intune odebere poskytnutá data, jako jsou firemní aplikace, data o aplikacích spravovaných v Intune, nastavení zásad a e-mailové profily zřízené prostřednictvím Intune. Při této akci zůstanou v zařízení osobní data uživatele.
+### <a name="retire"></a>Vyřazení
+Když zařízení **vyřadíte**, Intune odebere poskytnutá data, jako jsou firemní aplikace, data o aplikacích spravovaných v Intune, nastavení zásad a e-mailové profily zřízené prostřednictvím Intune. Při této akci zůstanou v zařízení osobní data uživatele.
 
 ### <a name="delete-a-tenant-from-microsoft-intune"></a>Odstranění tenanta z Microsoft Intune
 

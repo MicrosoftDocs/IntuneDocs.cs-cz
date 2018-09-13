@@ -15,12 +15,12 @@ ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cf1b47b578c5abe0051b94c9f4c2127cd48f0e76
-ms.sourcegitcommit: 698af815f6de2c4f003f6da428bbfb0680daafa0
+ms.openlocfilehash: 27995fb643e4373e2fa6a34c7147c69905f9ccc0
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43092273"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312640"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení s iOSem pomocí Programu registrace zařízení společnosti Apple
 
@@ -133,13 +133,13 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
     >
     > Tato možnost není podporovaná, pokud se k ověření použije Průvodce nastavením společnosti Apple.
 
-
 6. Pokud jste pro možnost **Ověřit na portálu společnosti místo v Průvodci nastavením Applu** zvolili **Ano**, máte možnost použít token VPP (Volume Purchase Program) k automatické instalaci Portálu společnosti na zařízení bez toho, aby uživatel poskytl Apple ID. K instalaci Portálu společnosti pomocí tokenu VPP zvolte token v seznamu **Nainstalovat Portál společnosti pomocí VPP**. Dbejte na to, aby tokenu nevypršela platnost a abyste měli dost licencí zařízení pro aplikaci Portál společnosti. Pokud platnost tokenu vyprší nebo dojdou licence, bude Intune instalovat aplikaci Portál společnosti z App Storu a vyzve k zadání Apple ID.
 
     ![Snímek obrazovky s možností Nainstalovat Portál společnosti pomocí VPP](./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png)
 
+7. Pokud jste u možnosti **Nainstalovat Portál společnosti pomocí VPP** vybrali token, můžete zařízení uzamknout v režimu jedné aplikace (konkrétně Portálu společnosti) ihned po dokončení Průvodce nastavením. Tuto možnost nastavíte volbou **Ano** u položky **Spustit Portál společnosti v režimu Jedna aplikace, dokud neproběhne ověření**. Než bude uživatel moct zařízení použít, musí se nejprve ověřit přihlášením na Portálu společnosti.
 
-7. Zvolte **Nastavení správy zařízení** a vyberte, jestli mají být zařízení, která používají tento profil, pod dohledem nebo ne.
+8. Zvolte **Nastavení správy zařízení** a vyberte, jestli mají být zařízení, která používají tento profil, pod dohledem nebo ne.
 
     ![Snímek obrazovky s nastaveními správy zařízení](./media/device-enrollment-program-enroll-ios/devicemanagementsettingsblade.png)
 
@@ -153,26 +153,28 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
      > [!NOTE]
      > Zařízení zaregistrované bez dohledu se dá resetovat do stavu pod dohledem jenom pomocí Apple Configuratoru. Resetování zařízení tímto způsobem vyžaduje připojení zařízení s iOSem k Macu pomocí kabelu USB. Další informace na toto téma získáte v [dokumentaci Apple Configuratoru](http://help.apple.com/configurator/mac/2.3).
 
-8. Zvolte, jestli chcete pro zařízení, která používají tento profil, uzamčenou registraci. **Uzamčená registrace** zakáže nastavení iOSu, která umožňují odebrání profilu správy z nabídky **Nastavení**. Po registraci zařízení nemůžete toto nastavení změnit bez obnovení továrního nastavení zařízení. Taková zařízení musí mít režim správy **Pod dohledem** nastavený na *Ano*. 
+9. Zvolte, jestli chcete pro zařízení, která používají tento profil, uzamčenou registraci. **Uzamčená registrace** zakáže nastavení iOSu, která umožňují odebrání profilu správy z nabídky **Nastavení**. Po registraci zařízení nemůžete toto nastavení změnit bez vymazání zařízení. Taková zařízení musí mít režim správy **Pod dohledem** nastavený na *Ano*. 
 
-9. Zvolte, jestli chcete, aby zařízení, která používají tento profil, mohla **Synchronizovat s počítači**. Pokud vyberete **Povolit Apple Configurator podle certifikátu**, musíte zvolit certifikát v části **Certifikáty Apple Configuratoru**.
+10. Zvolte, jestli chcete, aby zařízení, která používají tento profil, mohla **Synchronizovat s počítači**. Pokud vyberete **Povolit Apple Configurator podle certifikátu**, musíte zvolit certifikát v části **Certifikáty Apple Configuratoru**.
 
-10. Pokud jste v předchozím kroku zvolili **Povolit Apple Configurator podle certifikátu**, zvolte certifikát Apple Configuratoru, který se má importovat.
+11. Pokud jste v předchozím kroku zvolili **Povolit Apple Configurator podle certifikátu**, zvolte certifikát Apple Configuratoru, který se má importovat.
 
-11. Vyberte **OK**.
+12. Vyberte **OK**.
 
-12. Zvolte **Nastavení Průvodce nastavením** a nakonfigurujte následující nastavení profilu: ![Přizpůsobení Průvodce nastavením](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png).
+13. Zvolte **Přizpůsobení Průvodce nastavením** a nakonfigurujte následující nastavení profilu: ![Přizpůsobení Průvodce nastavením](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png).
+
 
     | Nastavení oddělení | Popis |
-    |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    |---|---|
     | <strong>Název oddělení</strong> | Zobrazí se, když uživatelé klepnou při aktivaci na <strong>O konfiguraci</strong>. |
-    |    <strong>Telefon na oddělení</strong>     |                                                          Zobrazí se, když uživatel při aktivaci klikne na tlačítko <strong>Potřebuji nápovědu</strong>. |
+    |    <strong>Telefon na oddělení</strong>     | Zobrazí se, když uživatel při aktivaci klikne na tlačítko <strong>Potřebuji nápovědu</strong>. |
 
   Můžete zvolit, jestli se různé obrazovky Průvodce nastavením mají uživateli zobrazit nebo skrýt.
   - Pokud zvolíte **Skrýt**, obrazovka se při nastavování nezobrazí. Po nastavení zařízení může uživatel přejít do nabídky **Nastavení** a funkci nastavit tam.
   - Pokud zvolíte **Zobrazit**, obrazovka se při nastavování zobrazí. Uživatel může obrazovku někdy přeskočit a neudělat žádnou akci. Může ale později přejít do nabídky zařízení **Nastavení** a funkci nastavit tam. 
 
-| Nastavení na obrazovce Průvodce nastavením | Pokud zvolíte **Zobrazit**, zařízení při nastavování: |
+
+    | Nastavení na obrazovce Průvodce nastavením | Pokud zvolíte **Zobrazit**, zařízení při nastavování: |
     |------------------------------------------|------------------------------------------|
     | <strong>Heslo</strong> | Vyzve uživatele k zadání hesla. Vyžaduje vždy heslo, pokud zařízení nebude zabezpečené nebo nebude mít přístup kontrolovaný jiným způsobem (třeba pomocí celoobrazovkového režimu, který omezuje zařízení na jednu aplikaci). |
     | <strong>Zjišťování polohy</strong> | Vyzve uživatele k poskytnutí polohy. |
@@ -186,9 +188,9 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
     | <strong>Diagnostická data</strong> | Zobrazí uživateli obrazovku **Diagnostická data**. Tato obrazovka umožní uživateli poslat společnosti Apple diagnostická data. |
 
 
-13. Vyberte **OK**.
+14. Vyberte **OK**.
 
-14. Pokud chcete profil uložit, zvolte **Vytvořit**.
+15. Pokud chcete profil uložit, zvolte **Vytvořit**.
 
 ## <a name="sync-managed-devices"></a>Synchronizace spravovaných zařízení
 Teď, když má Intune oprávnění spravovat vaše zařízení, můžete synchronizovat Intune s Apple, aby se spravovaná zařízení zobrazila v Intune na portálu Azure Portal.
@@ -218,7 +220,7 @@ Můžete si vybrat výchozí profil, který se má použít pro všechna zaříz
 2. Zvolte **Nastavit výchozí profil**, v rozevíracím seznamu zvolte profil a potom zvolte **Uložit**. Tento profil se použije pro všechna zařízení, která se registrují s tímto tokenem.
 
 ## <a name="distribute-devices"></a>Distribuujte zařízení.
-Povolili jste správu a synchronizaci mezi společností Apple a Intune a přiřadili jste profil, který umožní registraci zařízení DEP. Teď můžete zařízení rozdělit mezi uživatele. U zařízení s přidruženými uživateli je potřeba, aby měl každý uživatel přiřazenu licenci Intune. Zařízení bez přidružení uživatele vyžadují licenci zařízení. Aktivované zařízení nemůže použít profil registrace, dokud se neprovede obnovení továrního nastavení zařízení.
+Povolili jste správu a synchronizaci mezi společností Apple a Intune a přiřadili jste profil, který umožní registraci zařízení DEP. Teď můžete zařízení rozdělit mezi uživatele. U zařízení s přidruženými uživateli je potřeba, aby měl každý uživatel přiřazenu licenci Intune. Zařízení bez přidružení uživatele vyžadují licenci zařízení. Aktivované zařízení nemůže použít profil registrace, dokud se zařízení nevymaže.
 
 Přečtěte si téma [Registrace zařízení s iOSem v Intune pomocí programu registrace zařízení](/intune-user-help/enroll-your-device-dep-ios).
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 5/16/2018
+ms.date: 8/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 ms.reviewer: tycast
 ms.custom: intune-azure
-ms.openlocfilehash: 61310f5baa64c43d2e818df6c61a36d232922c1c
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 0b064c6f0eaa67157c5c50ddad3a8fd863295b8b
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744733"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312846"
 ---
 # <a name="windows-10-vpn-settings-in-intune"></a>Nastavení sítě VPN Windows 10 v Intune
 
@@ -42,6 +42,8 @@ V závislosti na tom, jaká nastavení zvolíte, nemusí být všechny uvedené 
   - **Výchozí server**: povolí tento server jako výchozí server, který budou zařízení používat k navázání připojení. Jako výchozí server nastavte jenom jeden server.
   - **Importovat**: vyhledejte soubor, který obsahuje seznam serverů oddělených čárkami ve formátu popis, IP adresa nebo plně kvalifikovaný název domény, výchozí server. Pomocí **OK** servery naimportujte do seznamu **Servery**.
   - **Exportovat**: exportuje seznam serverů do textového souboru s oddělovači (CSV).
+
+- **Registrovat IP adresy v interní službě DNS**: výběrem možnosti **Povolit** nakonfigurujete profil sítě VPN s Windows 10 tak, aby dynamicky registroval IP adresy přiřazené k rozhraní sítě VPN pomocí interní služby DNS. Pokud vyberete možnost **Zakázat**, IP adresy se nebudou dynamicky registrovat.
 
 - **Typ připojení**: z následujícího seznamu dodavatelů vyberte typ připojení VPN:
 

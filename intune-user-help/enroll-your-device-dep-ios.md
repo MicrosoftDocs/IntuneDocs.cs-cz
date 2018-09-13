@@ -1,11 +1,11 @@
 ---
-title: Registrace zařízení s iOSem pomocí programu registrace zařízení | Dokumentace Microsoftu
-description: Popisuje registraci zařízení s iOSem v Intune s programem DEP.
+title: Registrace zařízení s iOSem poskytnutého vaší organizací do správy | Dokumentace Microsoftu
+description: Tento článek popisuje, jak zaregistrovat v Intune zařízení s iOSem, které zakoupila a poskytla vaše organizace.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/12/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,16 +17,26 @@ ROBOTS: ''
 ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 9d1154d942069ad69294d4235c894f88513dd848
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: b93f02011b0900b1a64ae6cb10a84a52cd40187a
+ms.sourcegitcommit: 11cad61c565c474a8d653181675cc1109d562626
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31016403"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43241792"
 ---
-# <a name="enroll-your-ios-device-in-intune-with-the-device-enrollment-program"></a>Registrace zařízení s iOSem v Intune pomocí programu registrace zařízení
+# <a name="enroll-your-organization-provided-ios-device-in-management"></a>Registrace zařízení s iOSem poskytnutého vaší organizací do správy
 
-Společnost Apple nabízí Program registrace zařízení, aby společnostem usnadnila správu velkého počtu zařízení s iOSem. Pokud vaše společnost povoluje, abyste si přinesli vlastní zařízení, postupujte podle [pokynů obvyklé registrace zařízení s iOSem](enroll-your-device-in-intune-ios.md), nikoliv podle pokynů na této stránce. Pokud vám vaše společnost poskytla zařízení s iOSem a bylo vám řečeno, že se na ně vztahuje program registrace zařízení, čtěte dál.
+Přečtěte si, jak začít spravovat nové zařízení s iOSem v Intune.  
+
+Zařízení s iOSem, která vám poskytne váš zaměstnavatel nebo škola, bývají často nakonfigurovaná předem. Když zařízení zapnete a poprvé se přihlásíte, vaše organizace do něho tato předem nakonfigurovaná nastavení pošle. Jakmile zařízení nastavení dokončí, budete mít přístup k pracovním nebo školním prostředkům.  
+
+Aby se nastavení zahájilo, zapněte zařízení a přihlaste se pomocí pracovních nebo školních přihlašovacích údajů. Zbytek tohoto článku popisuje kroky a obrazovky, které uvidíte při procházení Průvodce nastavením. 
+
+## <a name="what-is-apple-dep"></a>Co je Apple DEP?
+Je možné, že si vaše organizace zakoupila zařízení prostřednictvím programu s názvem *Program registrace zařízení Apple* (DEP). Tento program umožňuje organizacím nakupovat velká množství zařízení s iOSem nebo macOS. Organizace pak můžou zařízení konfigurovat a spravovat v rámci svého upřednostňovaného poskytovatele správy mobilních zařízení, jako je Intune. Pokud jste správce a chcete získat o programu Apple DEP další informace, podívejte se na článek [Automatická registrace zařízení s iOSem pomocí Programu registrace zařízení společnosti Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-ios).  
+
+## <a name="set-up-your-ios-device"></a>Nastavení zařízení s iOSem  
+Pokud nepoužíváte zařízení s iOSem poskytnuté organizací, ale svoje vlastní zařízení, postupujte podle pokynů k [osobním a vlastním zařízením uživatelů](enroll-your-device-in-intune-ios.md).  
 
 1. Zapněte zařízení s iOSem. 
 2. Po výběru **jazyka** připojte zařízení k Wi-Fi.
@@ -46,4 +56,4 @@ Společnost Apple nabízí Program registrace zařízení, aby společnostem usn
 6. Odsouhlaste **podmínky a ujednání** a rozhodněte se, jestli chcete posílat diagnostické informace do společnosti Apple.
 7. Po registraci může vaše zařízení zobrazit výzvu k provedení dalších akcí. Některé z těchto kroků mohou zahrnovat zadání hesla pro přístup k e-mailu nebo nastavení hesla.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

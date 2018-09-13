@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: damionw
 ms.custom: intune-azure
-ms.openlocfilehash: a1d0c445c2e6e5f2e4227d1b04ead416bf73d737
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: 937fdd2130a0ae85421a4310fe6a0dc70986d2de
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34444876"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313234"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Hromadná registrace pro zařízení s Windows
 
@@ -85,10 +85,10 @@ Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a ob
 ## <a name="troubleshooting-windows-bulk-enrollment"></a>Řešení potíží s hromadnou registrací zařízení s Windows
 
 ### <a name="provisioning-issues"></a>Problémy se zřizováním
-Zřizování se má používat na nových zařízeních s Windows. Selhání zřizování může vyžadovat tovární resetování zařízení nebo obnovení zařízení ze spouštěcí image. Tyto příklady popisují některé důvody pro selhání zřizování:
+Zřizování se má používat na nových zařízeních s Windows. Selhání zřizování může vyžadovat vymazání zařízení nebo obnovení zařízení ze spouštěcí image. Tyto příklady popisují některé důvody pro selhání zřizování:
 
 - Zřizovací balíček snažící se připojit k doméně Active Directory nebo tenantovi Azure Active Directory, který nevytváří místní účet, může způsobit, že bude zařízení nedostupné, pokud proces připojení k doméně selže kvůli chybějícímu připojení k síti.
-- Skripty spouštěné zřizovacím balíčkem se spouštějí v kontextu systému. Tyto skripty mohou v zařízení libovolně měnit systém souborů i jeho konfiguraci. Škodlivý nebo chybný skript by mohl zařízení uvést do stavu, který jde obnovit jenom pomocí obnovení z image nebo továrního resetování zařízení.
+- Skripty spouštěné zřizovacím balíčkem se spouštějí v kontextu systému. Tyto skripty mohou v zařízení libovolně měnit systém souborů i jeho konfiguraci. Škodlivý nebo chybný skript by mohl zařízení uvést do stavu, který jde obnovit jen pomocí obnovení z image nebo vymazání.
 
 ### <a name="problems-with-bulk-enrollment-and-company-portal"></a>Problémy s hromadnou registrací a Portálem společnosti
 Pokud se uživatel pokouší prostřednictvím Portálu společnosti zaregistrovat zařízení, které už bylo dříve hromadně zaregistrováno, obdrží upozornění, že u jeho zařízení jsou potřeba další kroky – buď nastavení, nebo registrace. Zařízení je zaregistrované, ale aplikace nebo webová stránka Portálu společnosti registraci nerozpoznala.

@@ -5,18 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 5/1/2018
+ms.date: 6/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 18f86580fc4c80fade7aeaa9678e9d8edac9a53e
-ms.sourcegitcommit: b57be56524ddb5026fab94f7638dc516ed118325
+ms.openlocfilehash: 825ceb1eee8f6fdd38f8a203324ce3cad7291918
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43317932"
 ---
 # <a name="customize-devices-running-windows-holographic-with-intune"></a>Přizpůsobení zařízení s Windows Holographic v Intune
 
@@ -39,7 +40,15 @@ Azure Active Directory (AD) představuje skvělý prostředek, který vám pomů
 ## <a name="company-portal"></a>Portál společnosti
 **[Konfigurace aplikace Portál společnosti](company-portal-app.md)**
 
-Součástí Intune je Portál společnosti, kde mají uživatelé přístup k firemním datům, registrují zařízení, instalují aplikace, mohou kontaktovat oddělení IT apod. Aplikaci Portál společnosti můžete přizpůsobit pro zařízení s Windows Holographic for Business.
+Intune poskytuje aplikaci Portál společnosti pro přístup uživatelů k firemním datům, registraci zařízení, instalaci aplikací, možnost kontaktovat oddělení IT apod. Aplikaci Portál společnosti můžete přizpůsobit pro zařízení s Windows Holographic for Business.
+
+Pomocí aplikace Portál společnosti můžete také provádět následující akce:
+
+- [Odebrání zařízení z Intune](/intune-user-help/unenroll-your-device-from-intune-windows) pomocí aplikace Nastavení nebo Portál společnosti
+- [Přejmenování zařízení](/intune-user-help/rename-your-device-cpapp)
+- [Instalace aplikací](/intune-user-help/install-apps-cpapp-windows) na zařízení
+- [Ruční synchronizace zařízení](/intune-user-help/sync-your-device-manually-windows) v aplikaci Nastavení nebo Portál společnosti
+
 
 ## <a name="compliance-policy"></a>zásady dodržování předpisů
 **[Vytvoření zásady dodržování předpisů pro zařízení](compliance-policy-create-windows.md)**
@@ -71,9 +80,9 @@ Intune obsahuje několik integrovaných akcí, které správcům IT umožňují 
 
 Když používáte zařízení s Windows Holographic for Business, můžete používat tyto akce: 
 
-- **[Obnovení továrního nastavení](devices-wipe.md#factory-reset)**: Akce **Obnovení továrního nastavení** odebere zařízení z Intune a obnoví ho zpět do výchozího továrního nastavení. Tuto akci použijte v případě, že zařízení dáváte novému uživateli nebo dojde ke ztrátě či odcizení zařízení.
+- **[Vymazání](devices-wipe.md#wipe)**: Akce **Vymazání** odebere zařízení z Intune a obnoví ho zpět do výchozího továrního nastavení. Tuto akci použijte v případě, že zařízení dáváte novému uživateli nebo dojde ke ztrátě či odcizení zařízení.
 
-- **[Odebrání firemních dat](devices-wipe.md#remove-company-data)**: Akce **Odebrat firemní data** odebere zařízení z Intune a odebere data a nastavení spravovaných aplikací a e-mailové profily, které mu přiřadila služba Intune. Osobní data uživatele zůstanou na zařízení.
+- **[Vyřazení](devices-wipe.md#retire)**: Akce **Vyřazení** odebere zařízení z Intune. Zároveň se odeberou i data spravovaných aplikací, nastavení a e-mailové profily přiřazené přes Intune. Osobní data uživatele zůstanou na zařízení.
 
 - **[Synchronizace zařízení za účelem získání nejnovějších zásad a akcí](device-sync.md)**: Akce **Synchronizovat** vynutí okamžité připojení zařízení k Intune. Jakmile se zařízení připojí, začne okamžitě přijímat veškeré čekající akce nebo zásady, které mu byly přiřazeny. Tato funkce vám může pomoct ověřit přiřazené zásady nebo s těmito zásadami vyřešit potíže, aniž byste čekali na další naplánované vrácení se změnami.
 
@@ -95,6 +104,10 @@ V profilech můžete k přizpůsobení některých nastavení, vytvoření omeze
 
 Pokud chcete nakonfigurovat nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier), můžete v Intune vytvořit vlastní profil. Nastavení OMA-URI se používá k ovládání různých funkcí zařízení s Windows Holographic for Business, jako je povolení VPN nebo kontrola aktualizací ve službě Microsoft Update.
 
+#### <a name="configure-kiosk-modekiosk-settingsmdwindows-holographic-for-business"></a>[Konfigurace beznabídkového režimu](kiosk-settings.md#windows-holographic-for-business)
+
+Pomocí funkcí sdíleného nebo hostovaného počítače dostupných v Intune můžete na zařízeních s Windows Holographic for Business nakonfigurovat beznabídkový režim. Na těchto zařízení může běžet jen jedna aplikace (beznabídkový režim s jednou aplikací), nebo několik aplikací (beznabídkový režim s více aplikacemi).
+
 #### <a name="device-restrictionsdevice-restrictions-windows-holographicmd"></a>[Omezení zařízení](device-restrictions-windows-holographic.md)
 
 Omezení zařízení umožňují ovládat různá nastavení a funkce zařízení, jako je povinné heslo, instalace aplikací z [Microsoft Storu](https://www.microsoft.com/store/apps/windows?icid=CNavAppsWindowsApps), zapnutí technologie Bluetooth atd. Tato omezení se vytvářejí v profilu Intune. Profil můžete použít u více zařízení, na kterých běží Windows Holographic for Business.
@@ -115,7 +128,7 @@ V Intune je funkce Aktualizační kanály zařízení s Windows 10. Tyto aktuali
 ## <a name="terms-and-conditions"></a>podmínky a ujednání
 **[Nastavení podmínek a ujednání společnosti pro přístup uživatelů](terms-and-conditions-create.md)**
 
-Před registrací zařízení a získáním přístupu k firemním aplikacím (včetně e-mailu) můžete vyžadovat, aby uživatelé přijali podmínky a ujednání společnosti. V Intune můžete definovat, jak se podmínky a ujednání zobrazí v aplikaci Portál společnosti, a také můžete tyto podmínky a ujednání přiřadit zařízením s Windows Holographic for Business.
+Před registrací zařízení a získáním přístupu k firemním aplikacím (včetně e-mailu) můžete vyžadovat, aby uživatelé přijali podmínky a ujednání společnosti. V Intune definujete, jak se podmínky a ujednání zobrazí v aplikaci Portál společnosti, a také tyto podmínky a ujednání přiřadíte zařízením s Windows Holographic for Business.
 
 ## <a name="windows-hello-for-business"></a>Windows Hello pro firmy
 **[Použití Windows Hello pro firmy](windows-hello.md)**

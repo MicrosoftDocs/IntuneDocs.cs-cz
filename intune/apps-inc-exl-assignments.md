@@ -15,12 +15,12 @@ ms.assetid: c59f6df5-3317-4dff-8f19-fdeec33faedf
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1ec9a45ca09ddff5aa10cc7283444cf96c8153f6
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 47922a30d8106c4d60b6caa43c8855195e3a0220
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905406"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330241"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune
 
@@ -44,8 +44,8 @@ Při vyloučení skupin se v Intune nebere v úvahu přiřazení uživatelů k z
 Přiřazení aplikace ke skupinám pomocí zahrnutí a vyloučení přiřazení:
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V nabídce **Intune** zvolte **Mobilní aplikace**.
-4. V podokně **Mobilní aplikace** vyberte **Aplikace**. Zobrazí se seznam přidaných aplikací.
+3. V nabídce **Intune** zvolte **Klientské aplikace**.
+4. V podokně **Klientské aplikace** vyberte **Aplikace**. Zobrazí se seznam přidaných aplikací.
 5. Vyberte aplikaci, kterou chcete přiřadit. V řídicím panelu se zobrazí informace o aplikaci. 
 6. V části nabídky **Spravovat** vyberte **Přiřazení**. 
 

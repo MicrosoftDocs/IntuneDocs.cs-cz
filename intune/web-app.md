@@ -15,12 +15,12 @@ ms.assetid: 5f08752f-0e87-4ad9-a34c-4991b3150775
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 26117a07e0769033dda573882c3853eb0e3921ff
-ms.sourcegitcommit: 0ac196d1d06f4f52f01610eb26060419d248168b
+ms.openlocfilehash: ec483218cb86426b237c40c8831a2f0880847ade
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251546"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347453"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Přidání webových aplikací do Microsoft Intune
 
@@ -39,8 +39,8 @@ Pokud chcete přidat aplikaci do Intune v podobě zástupce aplikace na webu, po
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**.  
     Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Intune** zvolte **Mobilní aplikace**.
-4. V podokně úloh **Mobilní aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
+3. V podokně **Intune** zvolte **Klientské aplikace**.
+4. V podokně úloh **Klientské aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
 5. V podokně **Aplikace** vyberte **Přidat**.
 6. V podokně **Přidat aplikaci** vyberte v rozevíracím seznamu **Typ aplikace** typ **Webový odkaz**.
 7. Vyberte **Konfigurovat**.

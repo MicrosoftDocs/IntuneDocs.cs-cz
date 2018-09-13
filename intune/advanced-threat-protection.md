@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 5/23/2018
+ms.date: 8/27/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d43e95b2f236dc4c03bb3f63670b2b1400243531
-ms.sourcegitcommit: 0303e3b8c510f56e191e6079e3dcdccfc841f530
+ms.openlocfilehash: b89ca2c4320db733f39ce9b67d275169f4cba5c6
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40251755"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313787"
 ---
 # <a name="enable-windows-defender-atp-with-conditional-access-in-intune"></a>Povolení Ochrany ATP v programu Windows Defender s podmíněným přístupem v Intune
 
@@ -71,27 +71,15 @@ Tento postup stačí obvykle provést jednou. Takže pokud už ATP v prostředc�
 
 ## <a name="onboard-devices-using-a-configuration-profile"></a>Připojení zařízení pomocí konfiguračního profilu
 
-Windows Defender zahrnuje balíček konfigurace připojení, který je nainstalovaný na zařízení. Při instalaci balíček komunikuje se [službami Ochrany ATP v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection): kontroluje soubory, detekuje hrozby a hlásí Ochraně ATP v programu Windows Defender případná rizika. V Intune můžete vytvořit konfigurační profil, který bude tento balíček konfigurace používat. Pak tento profil přiřaďte k zařízením, která připojujete poprvé.
+Když se koncový uživatel zaregistruje v Intune, můžete pomocí konfiguračního profilu odesílat do zařízení různá nastavení. To platí i pro Ochranu ATP v programu Windows Defender.
 
-Jakmile jednou připojíte zařízení pomocí konfiguračního balíčku, už to příště dělat nemusíte. Tento postup stačí obvykle provést jednou.
+Windows Defender obsahuje balíček konfigurace připojení, který s [Ochranou ATP v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection) komunikuje: kontroluje soubory, detekuje hrozby a hlásí Ochraně ATP případná rizika.
 
-Zařízení můžete připojit také pomocí [skupiny zásad nebo System Center Configuration Manageru (SCCM)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-endpoints-windows-defender-advanced-threat-protection).
+Když se připojíte, obdrží Intune z Ochrany ATP v programu Windows Defender automaticky vytvořený konfigurační balíček. Jakmile se profil odešle nebo nasadí do zařízení, odešle se do něj i tento balíček. To umožňuje Ochraně ATP v programu Windows Defender monitorovat na zařízení potenciální hrozby.
 
-Následující kroky popisují připojení pomocí Intune.
+Jakmile jednou připojíte zařízení pomocí konfiguračního balíčku, už to příště dělat nemusíte. Zařízení můžete připojit také pomocí [skupiny zásad nebo System Center Configuration Manageru (SCCM)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-endpoints-windows-defender-advanced-threat-protection).
 
-#### <a name="download-configuration-package"></a>Stažení konfiguračního balíčku
-
-1. V [Centru zabezpečení v programu Windows Defender](https://securitycenter.windows.com) zvolte **Nastavení** > **Připojování**.
-2. Zadejte následující nastavení:
-  - **Operační systém**: Windows 10
-  - **Připojení počítače** > **Metoda nasazení**: Správa mobilních zařízení nebo Microsoft Intune
-3. Vyberte **Stáhnout balíček** a uložte si soubor **WindowsDefenderATPOnboardingPackage.zip**. Soubor extrahujte.
-
-Tento soubor ZIP obsahuje soubor **WindowsDefenderATP.onboarding**, který budete potřebovat v dalších krocích.
-
-#### <a name="create-the-atp-configuration-profile"></a>Vytvoření konfiguračního profilu ATP
-
-Tento profil používá připojovací balíček, který jste stáhli v předchozím kroku.
+### <a name="create-the-configuration-profile"></a>Vytvoření konfiguračního profilu
 
 1. Na [portálu Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
@@ -100,10 +88,9 @@ Tento profil používá připojovací balíček, který jste stáhli v předchoz
 5. Jako **Typ profilu** zvolte **Rozšířená ochrana před internetovými útoky v programu Windows Defender (Windows 10 Desktop)**.
 6. Nakonfigurujte nastavení:
 
-  - **Připojení konfiguračního balíčku**: Vyhledejte soubor **WindowsDefenderATP.onboarding**, který jste stáhli. Tento soubor umožňuje nastavit zařízení tak, aby podávala hlášení službě Ochrana ATP v programu Windows Defender.
-  - **Sdílení ukázky pro všechny soubory**: Umožňuje shromažďovat ukázky a sdílet je se službou Ochrana ATP v programu Windows Defender. Pokud například uvidíte podezřelý soubor, můžete ho odeslat službě Ochrana ATP v programu Windows Defender k hloubkové analýze.
-  - **Zvýšení četnosti hlášení telemetrie**: Tuto možnost povolte pro vysoce riziková zařízení, aby hlásila telemetrii službě Ochrana ATP v programu Windows Defender častěji.
-  - **Odpojení konfiguračního balíčku**: Pokud chcete odebrat (odpojit) monitorování Ochrany ATP v programu Windows Defender, můžete si v [Centru zabezpečení v programu Windows Defender](https://securitycenter.windows.com) stáhnout balíček pro odpojení a přidat ho. V opačném případě tuto vlastnost vynechejte.
+  - **Typ balíčku konfigurace klienta Ochrany ATP v programu Windows Defender**: Pokud chcete do profilu přidat konfigurační balíček, vyberte možnost **Připojení**. Výběrem možnosti **Zrušit zprovoznění** konfigurační balíček odeberete.
+  - **Sdílení ukázky pro všechny soubory**: Možnost **Povolit** umožňuje shromažďovat ukázky a sdílet je se službou Ochrana ATP v programu Windows Defender. Pokud například uvidíte podezřelý soubor, můžete ho odeslat službě Ochrana ATP v programu Windows Defender k hloubkové analýze. Pokud nechcete sdílet ukázky s Ochranou ATP v programu Windows Defender, vyberte možnost **Nenakonfigurováno**.
+  - **Zvýšení četnosti hlášení telemetrie**: Tuto možnost **povolte** pro vysoce riziková zařízení, aby hlásila telemetrii Ochraně ATP v programu Windows Defender častěji.
 
     Další podrobnosti o těchto nastaveních Ochrany ATP v programu Windows Defender získáte v článku [Připojení počítačů s Windows 10 pomocí System Center Configuration Manageru](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-endpoints-sccm-windows-defender-advanced-threat-protection).
 

@@ -15,12 +15,12 @@ ms.assetid: 917c0eed-96d0-49d8-8db8-a6ba13ad0e1f
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 859194b364a64854922993d2d798f318b260fc80
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 4e070e80bb9575154aded12f0992d04bd7a4718f
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31836332"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329950"
 ---
 # <a name="getting-started-with-microsoft-intune-in-the-azure-portal"></a>Začínáme s Microsoft Intune na portálu Azure Portal
 
@@ -53,7 +53,7 @@ Tato možnost bude užitečnější, až si do Intune přidáte další obsah, j
 
 ## <a name="using-services"></a>Používání služeb
 
-Kdykoli v Azure otevřete Intune nebo jakoukoli jinou službu, objeví se v **podokně**. Některé z prvních úloh, které v Intune použijete, jako jsou **Uživatelé**, **Skupiny** a **Mobilní aplikace**, se zobrazí v podokně přes celou obrazovku. Při výběru úlohy se toto podokno otevře přes celou stránku. Jiná podokna se při otevření vysunou z pravé strany podokna a následně sbalí pod hlavní podokno, ze kterého pocházejí.
+Kdykoli v Azure otevřete Intune nebo jakoukoli jinou službu, objeví se v **podokně**. Některé z prvních úloh, které v Intune použijete, jako jsou **Uživatelé**, **Skupiny** a **Klientské aplikace**, se zobrazí v podokně přes celou obrazovku. Při výběru úlohy se toto podokno otevře přes celou stránku. Jiná podokna se při otevření vysunou z pravé strany podokna a následně sbalí pod hlavní podokno, ze kterého pocházejí.
 
 ## <a name="next-steps"></a>Další kroky
 

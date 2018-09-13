@@ -1,11 +1,11 @@
 ---
 title: Řešení hrozeb zjištěných aplikací Lookout for Work v iOSu | Dokumentace Microsoftu
-description: Zjistěte, jak vyřešit hrozbu, kterou objevila aplikace Lookout for Work na iOSu.
+description: Zjistěte, jak vyřešit hrozbu, kterou objevila aplikace Lookout for Work na zařízení s iOSem.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/03/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,36 +15,40 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: be7d54cdde7e82cd0e0d4820ecfddff171e5984a
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: ffa0207729a6e0855b4534d40aa598bcb04e7847
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30751964"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150197"
 ---
-# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Vyřešení hrozby, kterou zjistila aplikace Lookout for Work
+# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Vyřešení hrozby, kterou zjistila aplikace Lookout for Work  
 
-Aplikace Lookout for Work našla na zařízení potenciální hrozbu a tento problém je potřeba vyřešit, než budete moct znovu přistupovat ke svým firemním nebo školním e-mailům, aplikacím a souborům.
+Aplikace Lookout for Work je mobilní služba ochrany před hrozbami, která na zařízeních s iOSem rozpoznává potenciální hrozby. Ty se oznamují aplikaci Portál společnosti a zobrazují jako nevyřešené problémy nevyhovující předpisům. Dokud hrozby neodstraníte, možná nebudete moci provádět tyto akce:
 
-Pokud chcete problém vyřešit, spusťte aplikaci Lookout for Work a postupujte podle pokynů zobrazených v aplikaci.
+* Připojování k firemnímu e-mailu
+* Připojování k firemní Wi-Fi
+* Připojování k SharePointu Online
+* Synchronizace firemních souborů s OneDrivem
+* Přístup k firemním aplikacím
 
-## <a name="what-you-might-see-if-your-enrolled-device-is-blocked-from-accessing-email-or-files"></a>Informace, které se zobrazují v případě, kdy je registrovanému zařízení zablokován přístup k e-mailu nebo souborům
+V tomto článku se dozvíte, jak rozpoznat upozornění aplikace Lookout for Work na hrozby a jak je řešit. 
 
-Pokud registrované zařízení obsahuje virus nebo jinou bezpečnostní hrozbu a pokusíte se o přístup k firemnímu e-mailu nebo souborům, může se zobrazit následující zpráva:
+## <a name="troubleshoot-virus-or-security-threat"></a>Odstraňování virových a bezpečnostních hrozeb  
+Pomocí těchto kroků získáte znovu přístup k firemním prostředkům poté, co aplikace Lookout for Work odhalila bezpečnostní hrozbu nebo hrozbu od aplikace.  
 
-![Chybová zpráva aplikace Lookout for Work s odkazem na web Portál společnosti](./media/mtd-go-to-device-management-portal-android.png)
+1. Když aplikace detekuje virovou nebo bezpečnostní hrozbu, obdržíte zprávu podobnou té na snímku níže. Klepnutím na odkaz **portálu pro správu zařízení** přejděte na [web Portál společnosti](https://portal.manage.microsoft.com/devices).  
 
-Klepněte na odkaz na **portál pro správu zařízení** a přejděte na [web Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog), kde se zobrazí pokyny k vyřešení problému.
+    ![Ukázkový snímek obrazovky s chybovou zprávou v aplikaci Lookout for Work, která obsahuje odkaz na web Portál společnosti a modré tlačítko OK](./media/mtd-go-to-device-management-portal-android.png)  
 
-## <a name="example-of-an-app-that-lookout-for-work-sees-as-a-threat"></a>Příklad aplikace, kterou Lookout for Work vnímá jako hrozbu
+2. Vyberte své zařízení.  
+3. Přečtěte si upozornění zobrazené pod zařízením. Vyzve vás, abyste otevřeli aplikaci Lookout for Work a virovou nebo bezpečnostní hrozbu vyřešili.   
 
-Pokud jste nainstalovali aplikaci, kterou Lookout for Work považuje za hrozbu, uvidíte podobnou obrazovku:
+## <a name="troubleshoot-an-app-threat"></a>Odstraňování hrozeb od aplikací   
+Když si nainstalujete aplikaci, kterou Lookout for Work vyhodnotí jako hrozbu, zobrazí se zpráva podobná té na snímku níže.  
 
-![příklad zprávy s výstrahou aplikace Lookout for Work upozorňující na virus](./media/ios-lfw-threat-example.png)
+![Ukázkový snímek obrazovky se seznamem aktivních a vyřešených hrozeb od aplikací nalezených aplikací Lookout for Work.](./media/ios-lfw-threat-example.png)    
+Vyberte název aplikace zobrazený v horní části obrazovky. Potom ji podle pokynů odeberte a odinstalujte. Dokud je aplikace na zařízení nainstalovaná, nebudete mít k prostředkům přístup.    
 
-Pokud se něco takového zobrazí, klepněte na název aplikace v horní části obrazovky a podle pokynů hrozbu odstraňte.
-
-Po odinstalaci aplikace ihned znovu získáte přístup k e-mailu a dalším datům společnosti nebo školy. Pokud budete požadavek na odinstalaci aplikace ignorovat, ztratíte přístup k firemnímu e-mailu a datům, dokud aplikaci neodinstalujete.
-
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
 

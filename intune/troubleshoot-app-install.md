@@ -6,7 +6,7 @@ keywords: ''
 author: ErikRe
 ms.author: erikre
 manager: dougeby
-ms.date: 08/14/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: b613f364-0150-401f-b9b8-2b09470b34f4
 ms.reviewer: mghadial
 ms.custom: intune-azure
-ms.openlocfilehash: 396766d33126cebf4a583ec4324badc96e627602
-ms.sourcegitcommit: 1a8b34c7854a575bf6ce59f475c7b718fa038d66
+ms.openlocfilehash: 80b6828f4768ff79f86532ef0d39ff2100b0ef25
+ms.sourcegitcommit: 11cad61c565c474a8d653181675cc1109d562626
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/18/2018
-ms.locfileid: "40251596"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43241707"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Řešení problémů s instalací aplikací
 
@@ -43,7 +43,7 @@ Intune poskytuje podrobnosti o řešení potíží s aplikacemi nainstalovanými
 
     > [!Note]  
     > Stejná aplikace může být přiřazena k více skupinám, ale s různými zamýšlenými akcemi (záměry) pro aplikaci. Zjištěný záměr pro aplikaci bude například zobrazovat **vyloučeno**, pokud byla aplikace vyloučena pro uživatele během přiřazování aplikace. Další informace najdete v tématu [Řešení konfliktů mezi záměry aplikace](apps-deploy.md#how-conflicts-between-app-intents-are-resolved).<br><br>
-    > V současné době Intune nefiltruje aplikace podle platformy OS.
+    > Pokud dojde k chybě instalace požadované aplikace, vy nebo váš tým technické podpory bude moci synchronizovat zařízení a zopakovat pokus o instalaci.
 
 Podrobnosti o chybě při instalaci aplikace označí problém. Tyto podrobnosti můžete použít k určení nejvhodnějších kroků pro vyřešení problému. Další informace o řešení potíží s instalací aplikací najdete v článku popisujícím [chybové kódy pro řešení potíží s instalací aplikací](https://blogs.technet.microsoft.com/intunesupport/2018/05/15/error-codes-for-troubleshooting-app-installation-issues).
 
@@ -51,6 +51,8 @@ Podrobnosti o chybě při instalaci aplikace označí problém. Tyto podrobnosti
 > Do podokna **řešení potíží** se dostanete také tak, že v prohlížeči přejdete na adresu: [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
 
 ## <a name="app-installation-errors"></a>Chyby instalace aplikací
+
+V následující tabulce jsou uvedeny chybové zprávy s popisem podrobností o chybách instalace v Androidu i iOSu. 
 
 ### <a name="android-errors"></a>Chyby v Androidu
 

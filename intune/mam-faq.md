@@ -14,12 +14,12 @@ ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
 ms.reviewer: erikre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1c3d0e31520aa2f73eabfce5ebc1d55d4df73946
-ms.sourcegitcommit: 91dc50d38be13c65e5d144d237d7c4358089f215
+ms.openlocfilehash: d7207b84dacc47b567c0fc86c3215605965fda6d
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2018
-ms.locfileid: "36329922"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312794"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Časté otázky ke správě mobilních aplikací (MAM) a ochraně aplikací
 
@@ -112,10 +112,12 @@ Osobní identifikační číslo (PIN) je heslo, kterým se ověřuje, že s daty
 
     - **Kvůli větší použitelnosti se kód PIN sdílí mezi aplikacemi stejného vydavatele:** V iOSu se kód PIN jedné aplikace sdílí mezi všemi aplikacemi **stejného vydavatele**. V Androidu se kód PIN jedné aplikace sdílí mezi všemi aplikacemi.
     - **Chování „Překontrolovat požadavky na přístup za (minuty)“ po restartu zařízení:** „Časovač kódu PIN“ sleduje počet minut nečinnosti, které určí, kdy znovu zobrazit PIN aplikace Intune. V systému iOS nemá restart zařízení na časovač kódu PIN vliv. Proto restart zařízení nemá vliv na počet minut, během kterých byl uživatel v aplikaci pro iOS se zásadou pro PIN nečinný. V systému Android restartování zařízení časovač kódu PIN vynuluje. Proto aplikace pro Android se zásadou pro PIN budou pravděpodobně **po restartu zařízení** vyžadovat PIN aplikace bez ohledu na hodnotu nastavení „Překontrolovat požadavky na přístup za (minuty)“.  
-    - **Kolísavost časovače přidruženého ke kódu PIN:** Když po zadání kódu PIN pro přístup k nějaké aplikaci (aplikace A) se tato aplikace v zařízení přestane zobrazovat na popředí (hlavní fokus), vynuluje se časovač tohoto kódu PIN. Jakákoli aplikace (aplikace B), která tento kód PIN sdílí, nevyzve uživatele k jeho zadání, protože časovač se vynuloval. Tato výzva se zobrazí znovu, jakmile je opět splněna hodnota nastavení Překontrolovat požadavky na přístup za (minuty). 
+    - **Kolísavost časovače přidruženého ke kódu PIN:** Když po zadání kódu PIN pro přístup k nějaké aplikaci (aplikace A) se tato aplikace v zařízení přestane zobrazovat na popředí (hlavní fokus), vynuluje se časovač tohoto kódu PIN. Jakákoli aplikace (aplikace B), která tento kód PIN sdílí, nevyzve uživatele k jeho zadání, protože časovač se vynuloval. Tato výzva se zobrazí znovu, jakmile je opět splněna hodnota nastavení Překontrolovat požadavky na přístup za (minuty).
+
+Na zařízeních s iOSem platí, že i když stejný PIN používají aplikace od různých vydavatelů, zobrazí se výzva znovu po splnění hodnoty nastavení **Znovu zkontrolovat požadavky na přístup po (minuty)** u aplikace, která se nenachází v hlavním fokusu. Představte si například, že má uživatel aplikaci _A_ od vydavatele _X_ a aplikaci _B_ od vydavatele _Y_ a na obou se používá stejný PIN. Uživatel se zaměřuje na aplikaci _A_ (popředí), aplikace _B_ se minimalizuje. Když se splní hodnota **Znovu zkontrolovat požadavky na přístup po (minuty)** a uživatel přepne na aplikaci _B_, bude vyžadován PIN.
 
       >[!NOTE] 
-      > Kvůli častějšímu ověřování požadavků na přístup uživatele (například výzvy k zadání PINu) doporučujeme zmenšit hodnotu nastavení Překontrolovat požadavky na přístup za (minuty), a to především u často používaných aplikací. 
+      > In order to verify the user's access requirements more often (i.e. PIN prompt), especially for a frequently used app, it is recommended to reduce the value of the 'Recheck the access requirements after (minutes)' setting. 
       
 - **Jak PIN kód Intune funguje s integrovanými PIN kódy aplikace pro Outlook a OneDrive?**<br></br>
 PIN kód Intune funguje na základě nečinnosti podle časovače (neboli hodnoty „Překontrolovat požadavky na přístup za (minuty)“). Proto se výzvy PIN kódu Intune zobrazují nezávisle na výzvách integrovaných PIN kódů aplikace pro Outlook a OneDrive, které jsou většinou ve výchozím nastavení svázané se spuštěním aplikace. Pokud se uživateli zobrazí obě výzvy kódu PIN najednou, měl by mít přednost PIN kód Intune. 
@@ -137,13 +139,13 @@ Správci IT můžou nasadit zásadu ochrany aplikace, která vyžaduje šifrová
 - **Co se šifruje?**<br></br> Šifrují se jenom data označená jako podniková, a to podle zásady ochrany aplikace správce IT. Data se považují za podniková, když pocházejí z firemního umístění. U aplikací Office považuje Intune za firemní následující umístění: e-mail (Exchange) nebo cloudové úložiště (aplikace OneDrive s účtem OneDrive pro firmy). U obchodních aplikací spravovaných nástrojem Intune App Wrapping se za podniková považují všechna data aplikace.
 
 **Jak může Intune vzdáleně smazat data?**<br></br>
-Intune může data aplikace smazat třemi způsoby: úplným vymazáním zařízení, selektivním vymazáním pro MDM nebo selektivním vymazáním pro MAM. Další informace o vzdáleného vymazání pro správu mobilních zařízení (MDM) najdete v článku [Odebrání zařízení pomocí obnovení továrního nastavení nebo odebrání firemních dat](devices-wipe.md#factory-reset). Další informace o selektivním vymazání pomocí MAM najdete v části [Odebrání firemních dat](devices-wipe.md#remove-company-data) a v článku [Jak z aplikací vymazat jenom firemní data](apps-selective-wipe.md).
+Intune může data aplikace smazat třemi způsoby: úplným vymazáním zařízení, selektivním vymazáním pro MDM nebo selektivním vymazáním pro MAM. Další informace o vzdáleném vymazání pro správu mobilních zařízení najdete v článku věnovaném [odebrání zařízení pomocí vymazání nebo vyřazení](devices-wipe.md). Další informace o selektivním vymazání pomocí MAM najdete v části [Vyřazení](devices-wipe.md#retire) a v článku [Jak z aplikací vymazat jenom firemní data](apps-selective-wipe.md).
 
-- **Co je obnovení továrního nastavení?**<br></br> [Obnovení továrního nastavení](devices-wipe.md) odebere veškerá uživatelská data a nastavení ze **zařízení** pomocí obnovení výchozího továrního nastavení v zařízení. Zařízení se odebere ze služby Intune.
+- **Co je vymazání?**<br></br> [Vymazání](devices-wipe.md) odebere veškerá uživatelská data a nastavení ze **zařízení** obnovením jeho výchozího továrního nastavení. Zařízení se odebere ze služby Intune.
   >[!NOTE]
-  > Tovární nastavení se dá obnovit jenom na zařízeních zaregistrovaných ve správě mobilních zařízení (MDM) Intune.
+  > Vymazání jde dosáhnout jen na zařízeních zaregistrovaných ve správě mobilních zařízení (MDM) Intune.
 
-- **Co je selektivní vymazání pro MDM?**<br></br> V článku [Odebrání zařízení – část Odebrání firemních dat](devices-wipe.md#remove-company-data) najdete informace o odebírání firemních dat.
+- **Co je selektivní vymazání pro MDM?**<br></br> V článku [Odebrání zařízení – část Vyřazení](devices-wipe.md#retire) najdete informace o odebírání firemních dat.
 
 - **Co je selektivní vymazání pro MAM?**<br></br> Selektivní vymazání pro MAM jednoduše odebere data aplikace společnosti z aplikace. Žádost se inicializuje pomocí portálu Intune Azure Portal. Informace o zahájení žádosti o vymazání najdete v článku [Jak z aplikací vymazat jenom firemní data](apps-selective-wipe.md).
 

@@ -15,12 +15,12 @@ ms.assetid: E61C1618-79D0-41A1-B61F-4123FB6672FC
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b514efa27a2a037f2fa0492ae519e6b8c774e369
-ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
+ms.openlocfilehash: cad4e1d6bcb47981dfb40a1146a3f5148724e08a
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37869538"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330088"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Přidání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení
 
@@ -30,7 +30,7 @@ Zásady konfigurace aplikací můžete používat se spravovanými aplikacemi, k
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. Zvolte úlohu **Mobilní aplikace**.
+3. Zvolte úlohu **Klientské aplikace**.
 4. Ve skupině **Spravovat** zvolte **Zásady konfigurace aplikací** a pak **Přidat**.
 5. Zadejte tyto podrobnosti:
     - **Název**  

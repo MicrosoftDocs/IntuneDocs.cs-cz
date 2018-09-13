@@ -15,12 +15,12 @@ ms.assetid: 07241b6d-86d8-4abb-83a2-3fc5feae5788
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c7a47063631ef3d5195dec2e91523772adb4e34c
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 990226cba088585021db691753c6a3a8063927d3
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224258"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347249"
 ---
 # <a name="add-microsoft-store-apps-to-microsoft-intune"></a>Přidání aplikací z Microsoft Storu do Microsoft Intune
 
@@ -34,8 +34,8 @@ Aplikaci z Microsoft Storu můžete do Intune přidat následujícím postupem:
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**.  
     Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Intune** zvolte **Mobilní aplikace**.
-4. V podokně úloh **Mobilní aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
+3. V podokně **Intune** zvolte **Klientské aplikace**.
+4. V podokně úloh **Klientské aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
 5. V podokně **Aplikace** vyberte **Přidat**.
 6. V podokně **Přidat aplikaci** vyberte jako **Typ aplikace** možnost **Windows** a potom vyberte **Informace o aplikaci**.
 7. V podokně **Informace o aplikaci** přidejte informace o aplikaci. V závislosti na zvolené aplikaci můžou být některé hodnoty v tomto podokně vyplněné automaticky:

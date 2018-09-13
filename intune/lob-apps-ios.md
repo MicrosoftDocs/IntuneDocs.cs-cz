@@ -15,12 +15,12 @@ ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9ee132a1b1c79e9829e5d28dc33b5cac2e52c8ac
-ms.sourcegitcommit: 27f365f5e67e83562883e0c1fc9fdfae8fd60ce4
+ms.openlocfilehash: 1461089beafd6501d6ebc87ab1a89963fa4aac57
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40251729"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347769"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro iOS do Microsoft Intune
 
@@ -35,8 +35,8 @@ Informace v tomto článku vám pomůžou přidat do Microsoft Intune obchodní 
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Intune** zvolte **Mobilní aplikace**.
-4. V úloze **Mobilní aplikace** vyberte **Spravovat** > **Aplikace**.
+3. V podokně **Intune** zvolte **Klientské aplikace**.
+4. V úloze **Klientské aplikace** vyberte **Spravovat** > **Aplikace**.
 5. Nad seznamem aplikací vyberte **Přidat**.
 6. V podokně **Přidat aplikaci** vyberte **Obchodní aplikace**.
 

@@ -1,11 +1,11 @@
 ---
-title: Odebrání firemních dat ze zařízení pomocí Microsoft Intune – Azure | Microsoft Docs
-description: Pomocí Microsoft Intune můžete odebrat firemní data společnosti v zařízení nebo obnovit tovární nastavení zařízení s Androidem, pracovním profilem Androidu, iOSem, macOS nebo Windows. Můžete také odstranit zařízení z Azure Active Directory.
+title: Vyřazení nebo vymazání zařízení pomocí Microsoft Intune – Azure | Microsoft Docs
+description: Pomocí Microsoft Intune můžete vyřadit nebo vymazat zařízení s Androidem, pracovním profilem Androidu, iOSu, macOS nebo Windows. Můžete také odstranit zařízení z Azure Active Directory.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/10/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,47 +13,47 @@ ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 41d8f70dd72e845663f39e151c393f5edc0ad394
-ms.sourcegitcommit: 391755a4c8a38e3a22744516fd27d75e40438899
+ms.openlocfilehash: dfefb17a2d8b9b4041846b879297f388156fee54
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028741"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312813"
 ---
-# <a name="remove-devices-by-using-factory-reset-removing-company-data-or-manually-unenrolling-the-device"></a>Odebrání zařízení obnovením továrního nastavení, odebráním dat společnosti nebo ručním zrušením registrace zařízení
+# <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Zařízení, která už nepotřebujete, která využíváte k jinému účelu nebo která se ztratila, můžete z Intune odebrat prostřednictvím akce **Odebrání firemních dat** nebo **Obnovení továrního nastavení**. Uživatelé můžou také z Portálu společnosti Intune vydat vzdálený příkaz zařízením v osobním vlastnictví, která jsou registrovaná v Intune.
+Zařízení, která už nepotřebujete, která využíváte k jinému účelu nebo která se ztratila, můžete z Intune odebrat prostřednictvím akce **Vyřazení** nebo **Vymazání**. Uživatelé můžou také z Portálu společnosti Intune vydat vzdálený příkaz zařízením v osobním vlastnictví, která jsou registrovaná v Intune.
 
 > [!NOTE]
-> Před odebráním uživatele z Azure Active Directory (Azure AD) použijte akce **Obnovení továrního nastavení** nebo **Odebrat firemní data** pro všechna zařízení přidružená k tomuto uživateli. Pokud z Azure AD odeberete uživatele se spravovanými zařízeními, nemůže už Intune těmto zařízením vydat příkaz k obnovení továrního nastavení nebo odebrání firemních dat.
+> Před odebráním uživatele z Azure Active Directory (Azure AD) použijte akce **Vymazání** nebo **Vyřazení** u všech zařízení přidružených k tomuto uživateli. Pokud z Azure AD odeberete uživatele se spravovanými zařízeními, nemůže už Intune tato zařízení vymazat ani vyřadit.
 
-## <a name="factory-reset"></a>Obnovení továrního nastavení
+## <a name="wipe"></a>Vymazání
 
-Akce **Obnovení továrního nastavení** obnoví výchozí tovární nastavení zařízení. Data uživatele se zachovají, pokud zaškrtnete políčko **Zachovat stav registrace a uživatelský účet**. Jinak se jednotka bezpečně vymaže.
+Akce **Vymazání** obnoví výchozí tovární nastavení zařízení. Data uživatele se zachovají, pokud zaškrtnete políčko **Zachovat stav registrace a uživatelský účet**. Jinak se jednotka bezpečně vymaže.
 
-|Akce Obnovení továrního nastavení|**Zachovat stav registrace a uživatelský účet**|Odebráno ze správy v Intune|Popis|
+|Akce vymazání|**Zachovat stav registrace a uživatelský účet**|Odebráno ze správy v Intune|Popis|
 |:-------------:|:------------:|:------------:|------------|
-|**Obnovení továrního nastavení**| Není zaškrtnuto | Ano | Vymaže všechny uživatelské účty, data, zásady MDM a nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
-|**Obnovení továrního nastavení**| Zaškrtnuto | Ne | Vymaže všechny zásady MDM. Zachová uživatelské účty a data. Obnoví nastavení uživatele zpět na výchozí nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
+|**Vymazání**| Není zaškrtnuto | Ano | Vymaže všechny uživatelské účty, data, zásady MDM a nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
+|**Vymazání**| Zaškrtnuto | Ne | Vymaže všechny zásady MDM. Zachová uživatelské účty a data. Obnoví nastavení uživatele zpět na výchozí nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
 
 Pro Windows 10 verze 1709 nebo novější máte také možnost **Zachovat stav registrace a uživatelský účet**.
 
 Zásady MDM se znovu použijí při příštím připojení zařízení k Intune.
 
-Obnovení továrního nastavení je vhodné, když chcete zařízení resetovat, abyste ho mohli dát novému uživateli, nebo když došlo k jeho ztrátě nebo odcizení. Při zvolení **Obnovení továrního nastavení** buďte obezřetní. Data v zařízení není možné obnovit.
+Vymazání je vhodné, když chcete zařízení resetovat, abyste ho mohli dát novému uživateli, nebo když došlo k jeho ztrátě nebo odcizení. Volbu **vymazání** používejte velmi opatrně. Data v zařízení není možné obnovit.
 
-### <a name="factory-reset-a-device"></a>Obnovení továrního nastavení zařízení
+### <a name="wiping-a-device"></a>Vymazání zařízení
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 3. Vyberte **Zařízení** > **Všechna zařízení**.
-4. Zvolte název zařízení, jehož tovární nastavení chcete obnovit.
-5. V podokně s názvem zařízení vyberte **Obnovení továrního nastavení**.
+4. Zvolte název zařízení, které chcete vymazat.
+5. V podokně s názvem zařízení vyberte **Vymazání**.
 6. Pro Windows 10 verze 1709 nebo novější máte také možnost **Zachovat stav registrace a uživatelský účet**. 
     
-    |Zachová se při obnovení továrního nastavení|Nezachová se|
+    |Zachová se při vymazání |Nezachová se|
     | -------------|------------|
     |Uživatelské účty přidružené k zařízení|Soubory uživatele|
     |Stav počítače \(připojení k doméně, připojení k Azure AD)| Aplikace nainstalované uživatelem \(aplikace ze Storu a aplikace Win32)|
@@ -64,17 +64,17 @@ Obnovení továrního nastavení je vhodné, když chcete zařízení resetovat,
     |Automatické přihlášení uživatele|| 
     
          
-7. Kliknutím na **Ano** potvrďte obnovení továrního nastavení.
+7. Potvrďte vymazání volbou možnosti **Ano**.
 
-Pokud je zařízení zapnuté a připojené, akce **Obnovení továrního nastavení** se do všech typů zařízení rozšíří do 15 minut.
+Pokud je zařízení zapnuté a připojené, akce **Vymazání** se do všech typů zařízení rozšíří do 15 minut.
 
-## <a name="remove-company-data"></a>Odebrání firemních dat
+## <a name="retire"></a>Vyřazení
 
-Akce **Odebrat firemní data** odebere data případných spravovaných aplikací, nastavení a e-mailové profily, které byly přiřazeny přes Intune. Toto zařízení se odebere ze správy v Intune. K tomu dojde, když se zařízení příště přihlásí a přijme vzdálenou akci **Odebrat firemní data**.
+Akce **Vyřazení** odebere data případných spravovaných aplikací, nastavení a e-mailové profily, které byly přiřazeny přes Intune. Toto zařízení se odebere ze správy v Intune. K tomu dojde, když se zařízení příště přihlásí a přijme vzdálenou akci **Vyřazení**.
 
-Při **odebrání firemních dat** zůstanou v zařízení osobní data uživatele.  
+Při této akci zůstanou v zařízení osobní data uživatele.  
 
-Následující tabulky popisují, jaká data se odeberou a jaký vliv má akce **Odebrat firemní data** na zbývající data v zařízení po odebrání firemních dat.
+Následující tabulky popisují, jaká data se odeberou a jaký vliv má akce **Vyřazení** na zbývající data v zařízení po odebrání firemních dat.
 
 ### <a name="ios"></a>iOS
 
@@ -110,11 +110,11 @@ Následující tabulky popisují, jaká data se odeberou a jaký vliv má akce *
 
 ### <a name="android-work-profile"></a>Pracovní profil Androidu
 
-Při odebrání firemních dat ze zařízení s pracovním profilem Androidu se odeberou všechna data, aplikace a nastavení v pracovním profilu na tomto zařízení. Zařízení se vyřadí ze správy pomocí Intune. Pracovní profily Androidu nepodporují obnovení továrního nastavení.
+Při odebrání firemních dat ze zařízení s pracovním profilem Androidu se odeberou všechna data, aplikace a nastavení v pracovním profilu na tomto zařízení. Zařízení se vyřadí ze správy pomocí Intune. Pracovní profily Androidu nepodporují vymazání.
 
-### <a name="android-enterprise-kiosk-devices"></a>Zařízení s beznabídkovým režimem Androidu Enterprise
+### <a name="android-enterprise-kiosk-devices"></a>Zařízení s Androidem Enterprise v beznabídkovém režimu
 
-U zařízení s beznabídkovým režimem Androidu je možné jenom obnovit tovární nastavení. Ze zařízení s beznabídkovým režimem Androidu nelze odebrat firemní data.
+Zařízení s Androidem v beznabídkovém režimu můžete jen vymazat. Vyřazení u nich není možné.
 
 
 ### <a name="macos"></a>macOS
@@ -137,16 +137,16 @@ U zařízení s beznabídkovým režimem Androidu je možné jenom obnovit tová
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|Odebrány.|Není podporováno.|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty jsou odebrané a odvolané.|Certifikáty jsou odebrané a odvolané.|Není podporováno.|Certifikáty jsou odebrané a odvolané.|
 |E-mailu|Odeberou se e-maily s povoleným systémem souborů EFS. To zahrnuje e-maily a přílohy v aplikaci Pošta pro Windows.|Není podporováno.|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune. Odstraní se e-maily v mezipaměti zařízení.|Odeberou se e-maily s povoleným systémem souborů EFS. To zahrnuje e-maily a přílohy v aplikaci Pošta pro Windows. Odebere e-mailové účty, které byly zřízené Intune.|
-|Zrušení připojení k Azure AD|Ne.|Ne.|Odebere se záznam Azure AD.|Nelze použít. Ve Windows 10 není možné u zařízení připojených k Azure AD firemní data odebrat.|
+|Zrušení připojení k Azure AD|Ne.|Ne.|Odebere se záznam Azure AD.|Nelze použít. Ve Windows 10 nelze u zařízení připojených k Azure AD vyřazení provést.|
 
-### <a name="remove-company-data"></a>Odebrání firemních dat
+### <a name="retire"></a>Vyřazení
 
 1. Přihlaste se k [Intune na portálu Azure Portal](https://aka.ms/intuneportal).
 2. V podokně **Zařízení** zvolte **Všechna zařízení**.
-3. Zvolte název zařízení, ze kterého chcete odebrat firemní data.
-4. V podokně s názvem zařízení vyberte **Odebrat firemní data**. Potvrďte zvolením **Ano**.
+3. Zvolte název zařízení, které chcete vyřadit.
+4. V podokně s názvem zařízení vyberte **Vyřazení**. Potvrďte zvolením **Ano**.
 
-Pokud je zařízení zapnuté a připojené, akce **Odebrat firemní data** se do všech typů zařízení rozšíří do 15 minut.
+Pokud je zařízení zapnuté a připojené, akce **Vyřazení** se do všech typů zařízení rozšíří do 15 minut.
 
 ## <a name="delete-devices-from-the-intune-portal"></a>Odstranění zařízení z portálu Intune
 
@@ -171,7 +171,7 @@ Kvůli komunikačním problémům nebo ztraceným zařízením můžete potřebo
 1.  Přihlaste se k [Azure Active Directory na portálu Azure Portal](http://aka.ms/accessaad) pomocí přihlašovacích údajů správce. Můžete se také přihlásit k [portálu Office 365](https://portal.office.com). V nabídce vyberte **Centra pro správu** > **Azure AD**.
 2.  Pokud nemáte předplatné Azure, vytvořte ho. Pokud máte placený účet, neměli byste potřebovat platební kartu ani zadání platby (vyberte odkaz pro předplatné **Zdarma zaregistrovat službu Azure Active Directory** ).
 3.  Vyberte **Azure Active Directory** a pak vyberte svoji organizaci.
-4.  Vyberte kartu **Uživatelé** .
+4.  Vyberte kartu **Uživatelé**.
 5. Vyberte uživatele spojeného se zařízením, které chcete odstranit.
 6.  Vyberte **Zařízení**.
 7.  Odeberte zařízení podle potřeby. Můžete třeba odebrat zařízení, která už se nepoužívají, nebo zařízení s nesprávnými definicemi.
@@ -181,8 +181,8 @@ Kvůli komunikačním problémům nebo ztraceným zařízením můžete potřebo
 Pokud chcete zařízení Apple DEP zcela odebrat ze systému správy Intune, postupujte takto:
 
 1. Přihlaste se k [Intune na portálu Azure Portal](https://aka.ms/intuneportal).
-2. Zvolte **Zařízení** > **Všechna zařízení** > vyberte požadované zařízení > **Odebrat firemní data**.
-![Snímek obrazovky odebrání firemních dat](./media/devices-wipe/remove-company-data.png)
+2. Zvolte **Zařízení** > **Všechna zařízení** > vyberte požadované zařízení > **Vyřazení**.
+![Snímek obrazovky s akcí vyřazení](./media/devices-wipe/retire.png)
 3. Zvolte **Registrace zařízení** > **Registrace zařízení Apple** > **Tokeny programu registrace** > zvolte token > **Zařízení** > zaškrtněte políčko zařízení > **Odstranit** > **Ano**.
 ![Snímek obrazovky odstranění zařízení](./media/devices-wipe/delete-device.png)
 4. Přejděte na [deploy.apple.com](http://deploy.apple.com) a vyhledejte zařízení podle sériového čísla.

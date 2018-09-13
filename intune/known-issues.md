@@ -5,7 +5,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 04/18/2018
+ms.date: 08/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f49b5050f4ce182699f0955bed6224309a4d7c7c
-ms.sourcegitcommit: c1631ad8feba6c6fd03698ab20836b2e5d8a78d2
+ms.openlocfilehash: 421eea460ee7c00b79a63a014291a8abb88ddaea
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34073831"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347793"
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Známé problémy v Microsoft Intune
 
@@ -33,6 +33,13 @@ Pokud chcete nahlásit chybu, která tu není uvedená, [otevřete žádost o po
 Pokud chcete zažádat o novou funkci pro Intune, můžete nám zaslat zprávu prostřednictvím webu [Uservoice](https://microsoftintune.uservoice.com/forums/291681-ideas/category/189016-azure-admin-console).
 
 ## <a name="migration"></a>Migrace
+
+### <a name="export-azure-classic-portal-compliance-policies-to-recreate-these-policies-in-the-intune-azure-portal"></a>Export zásad dodržování předpisů z portálu Azure Classic pro jejich opětovné vytvoření na portálu Intune Azure
+
+Zásady dodržování předpisů vytvořené na portálu Azure Classic se přestanou používat. Existující zásady si můžete prohlédnout a odstranit je, nelze je ale aktualizovat. Pokud potřebujete jakékoli zásady dodržování předpisů z aktuálního portálu Intune Azure migrovat, můžete je vyexportovat do souboru hodnot oddělených čárkami (.csv). Podrobnosti ze souboru potom můžete využít k opětovnému vytvoření těchto zásad v Intune na portálu Azure Portal.
+
+> [!IMPORTANT]
+> Po vyřazení portálu Azure Classic už k zásadám nebudete mít přístup, ani si je nebudete moci prohlížet. Proto zásady nezapomeňte exportovat a znovu vytvořit na webu Azure Portal dříve, než bude provoz portálu Azure Classic ukončen.
 
 ### <a name="intune-legacy-pc-client-features-are-only-available-in-the-silverlight-console"></a>Funkce starší verze klienta Intune v osobním počítači jsou dostupné jenom v konzole Silverlight
 
@@ -52,7 +59,7 @@ Nejde zobrazit informace o stavu pro zásady, které se migrovaly z klasického 
 ### <a name="multiple-app-install-prompts-for-certain-vpp-apps"></a>Zobrazování několika výzev k instalaci aplikací u určitých aplikací VPP
 U některých aplikací VPP, které jsou už nainstalované na zařízeních koncových uživatelů, se můžete setkat s několika výzvami k instalaci aplikací. K tomuto problému dochází, pokud máte možnost **Automatické aktualizace aplikací** nastavenou na **Zapnuto** u tokenu VPP, který jste nahráli na portál Intune Azure Portal.    
 
-Tento problém vyřešíte tak, že u tokenu VPP zakážete **Automatické aktualizace aplikací**. Uděláte to tak, že na portálu Azure Portal otevřete Microsoft Intune. V Intune vyberete **Mobilní aplikace** > **Tokeny VPP pro iOS**. Dále vyberete token VPP, který nasadil ovlivněnou aplikaci, a vyberete **Upravit** > **Automatické aktualizace aplikací** > **Vypnuto** > **Uložit**. Můžete také ukončit nasazení ovlivněné aplikace jako aplikace VPP, čímž zastavíte zobrazování výzev.    
+Tento problém vyřešíte tak, že u tokenu VPP zakážete **Automatické aktualizace aplikací**. Uděláte to tak, že na portálu Azure Portal otevřete Microsoft Intune. V Intune vyberete **Klientské aplikace** > **Tokeny VPP pro iOS**. Dále vyberete token VPP, který nasadil ovlivněnou aplikaci, a vyberete **Upravit** > **Automatické aktualizace aplikací** > **Vypnuto** > **Uložit**. Můžete také ukončit nasazení ovlivněné aplikace jako aplikace VPP, čímž zastavíte zobrazování výzev.    
 
 Toto je známý problém v aktuální verzi. Připravujeme opravu, která tento problém vyřeší. Po implementaci této opravy se už uživatelům nebude zobrazovat více výzev k instalaci aplikací.
 

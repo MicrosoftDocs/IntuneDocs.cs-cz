@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5964ebdbac251468e3bc35c2c35f0bd2e7fddbff
-ms.sourcegitcommit: 1a8b34c7854a575bf6ce59f475c7b718fa038d66
+ms.openlocfilehash: cf6e7098462931000ce4cd5546390d27d68677f1
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/18/2018
-ms.locfileid: "40251727"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330156"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune
 
@@ -62,7 +62,7 @@ Následující tabulka obsahuje konkrétní typy aplikací a popis, jak je můž
 | Integrovaná aplikace pro Android  | Integrovaná aplikace | Jako **typ aplikace** vyberte **Integrovaná aplikace** a potom integrovanou aplikaci vyberte v seznamu poskytovaných aplikací.  |
 | Webové aplikace  | Webová aplikace  | Jako **typ aplikace** vyberte **Webový odkaz** a pak zadejte platnou adresu URL odkazující na webovou aplikaci.  |
 
-Aplikaci můžete v Microsoft Intune přidat výběrem možností **Mobilní aplikace** > **Aplikace** > **Přidat**. Zobrazí se podokno **Přidat aplikaci**, které vám umožní vybrat **Typ aplikace**. 
+Aplikaci můžete v Microsoft Intune přidat výběrem možností **Klientské aplikace** > **Aplikace** > **Přidat**. Zobrazí se podokno **Přidat aplikaci**, které vám umožní vybrat **Typ aplikace**. 
 
 >[!TIP]
 > Obchodní aplikace je aplikace, kterou přidáte z instalačního souboru aplikace. Když například chcete nainstalovat obchodní aplikaci pro iOS, přidáte aplikaci tak, že jako **Typ aplikace** v podokně **Přidat aplikaci** vyberete **Obchodní aplikace**. Potom vyberete soubor balíčku aplikace (má příponu .ipa). Tyto typy aplikací obvykle vznikají interně.
@@ -148,8 +148,8 @@ Když přidáte aplikaci do Intune, budete mít možnost vybrat požadovanou kat
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Intune** zvolte **Mobilní aplikace**.
-4. V podokně úloh **Mobilní aplikace** vyberte v části **Nastavení** možnost **Kategorie aplikací**.  
+3. V podokně **Intune** zvolte **Klientské aplikace**.
+4. V podokně úloh **Klientské aplikace** vyberte v části **Nastavení** možnost **Kategorie aplikací**.  
     V podokně **Kategorie aplikací** se zobrazí seznam aktuálních kategorií. 
 5. Proveďte jednu z těchto věcí:
     - Pokud chcete přidat kategorii, v podokně **Vytvořit kategorii** vyberte **Přidat** a zadejte název kategorie.  

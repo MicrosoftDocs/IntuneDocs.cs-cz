@@ -5,21 +5,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/25/2018
+ms.date: 08/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.reviewer: tycast
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8f6532c63612b806f9824f5b9ca98f1ebbbc943f
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: e15a7b034c9277fcd960e8c704f4318f0f5c1da2
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321623"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329643"
 ---
-## <a name="wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Nastavení Wi-Fi pro zařízení s Windows 10 a novější verzí v Intune
+# <a name="wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Nastavení Wi-Fi pro zařízení s Windows 10 a novější verzí v Intune
 
 Nastavení Wi-Fi se používají v konfiguračním profilu, který se vztahuje na zařízení s Windows 10 nebo novější verzí. Vaše možnosti jsou:
 
@@ -56,8 +57,8 @@ Nastavení Wi-Fi se používají v konfiguračním profilu, který se vztahuje n
 
 - **Jednotné přihlašování:** Umožňuje vám nakonfigurovat jednotné přihlašování (SSO), u kterého se přihlašovací údaje k počítači i síti Wi-Fi sdílejí. Možnosti:
   - **Zakázat:** Jednotné přihlašování se zakáže. Uživatel se musí v síti ověřit zvlášť.
-  - **Povolit dříve, než se uživatel přihlásí k zařízení:** Použití jednotného přihlašování k síti těsně předtím, než se uživatel přihlásí.
-  - **Povolit, až se uživatel přihlásí k zařízení:** Použití jednotného přihlašování k síti hned poté, co se uživatel přihlásí.
+  - **Povolit dříve, než se uživatel přihlásí k zařízení:** Použití jednotného přihlašování k síti těsně předtím, než se uživatel přihlásí
+  - **Povolit, až se uživatel přihlásí k zařízení:** Použití jednotného přihlašování k síti hned poté, co se uživatel přihlásil
   - **Maximální časový limit na ověření:** Zadejte maximální dobu, v rozmezí od 1 do 120 sekund, po kterou se bude čekat, než se provede ověření k síti.
   - **Povolit systému Windows zobrazit uživateli výzvu, aby zadal další přihlašovací údaje pro ověření:** Když zvolíte **Ano**, umožníte systému Windows vyzvat uživatele k zadání dalších přihlašovacích údajů, pokud to metoda ověřování vyžaduje. Pokud chcete tyto výzvy skrýt, zvolte **Ne**.
 
@@ -77,25 +78,36 @@ Nastavení Wi-Fi se používají v konfiguračním profilu, který se vztahuje n
   - **EAP-TTLS**
   - **Protokol PEAP** (Protected EAP)
 
-### <a name="more-options-when-you-choose-the-eap-type"></a>Více možnosti při volbě typu protokolu EAP
+    **Další nastavení EAP-TLS, EAP-TTLS a PEAP**:
+    
+    > [!NOTE]
+    > V současné době jsou při použití typu protokolu EAP podporované pouze profily certifikátů SCEP. Profily certifikátů PKCS podporované nejsou. Kdykoli je uživatel vyzván k zadání certifikátu, nezapomeňte vybrat certifikát SCEP.
 
-> [!NOTE]
-> V současné době jsou při použití typu protokolu EAP podporované pouze profily certifikátů SCEP. Profily certifikátů PKCS podporované nejsou. Kdykoli je uživatel vyzván k zadání certifikátu, nezapomeňte vybrat certifikát SCEP.
+      - **Vztah důvěryhodnosti serveru**  
 
-#### <a name="server-trust"></a>Vztah důvěryhodnosti serveru
+        **Názvy certifikačních serverů**: Použijte s protokoly typu **EAP-TLS**, **EAP-TTLS** a **PEAP**. Zadejte jeden nebo více běžných názvů použitých v certifikátech, které vystavuje vaše důvěryhodná certifikační autorita. Když tento údaj zadáte, můžete obejít dialog dynamického vztahu důvěryhodnosti, který se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.  
 
-|Název nastavení|Další informace|Kdy použít|
-|--------------|-------------|----------|
-|**Názvy certifikačních serverů**|Zadejte jeden nebo více běžných názvů použitých v certifikátech, které vystavuje vaše důvěryhodná certifikační autorita. Když tento údaj zadáte, můžete obejít dialog dynamického vztahu důvěryhodnosti, který se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.|Typ EAP je **EAP-TLS**, **EAP-TTLS** nebo **PEAP**.|
-|**Kořenový certifikát pro ověřování serveru**|Zvolte profil důvěryhodného kořenového certifikátu pro ověření připojení. |Typ EAP je **EAP-TLS**, **EAP-TTLS** nebo **PEAP**.|
-|**Ochrana identity (vnější identita)**|Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.|Typ EAP je **PEAP**.|
+        **Kořenový certifikát pro ověřování serveru**: Použijte s protokoly typu **EAP-TLS**, **EAP-TTLS** a **PEAP**. Zvolte profil důvěryhodného kořenového certifikátu pro ověření připojení.  
 
-#### <a name="client-authentication"></a>Ověření klienta
+        **Ochrana identity (vnější identita)**: Použijte s typem **PEAP**. Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.  
 
-| Název nastavení | Další informace | Kdy použít |
-|---|---|---|
-| **Klientský certifikát pro ověření klienta (certifikát identity)** |  Vyberte profil certifikátu SCEP použitý k ověření připojení. | Typ EAP je **EAP-TLS**. |
-| **Metoda ověřování** | Vyberte metodu ověřování připojení:<br><br>- **Certifikáty:** vyberte klientský certifikát SCEP, který je certifikátem identity předloženým serveru.<br><br>- **Uživatelské jméno a heslo:** Zadejte metodu ověřování **Metoda bez protokolu EAP (vnitřní identita)**. Možnosti:<br><br>- **Nezašifrované heslo (PAP)**<br>- **Protokol CHAP (Challenge Handshake)**<br>- **Protokol Microsoft CHAP (MS-CHAP)**<br>- **Protokol Microsoft CHAP verze 2 (MS-CHAP v2)**<br><br>- **Ochrana identity (vnější identita):** zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení. | Typ EAP je **EAP-TTLS**. |
+      - **Ověřování klientů**
+
+        **Klientský certifikát pro ověření klienta (certifikát identity)**: Použijte s typem **EAP-TLS**. Vyberte profil certifikátu použitý k ověření připojení.
+
+        **Metoda ověřování**: Použijte s typem **EAP-TTLS**. Vyberte metodu ověřování připojení:  
+
+          - **Certifikáty**: Vyberte klientský certifikát, který je certifikátem identity předloženým serveru.
+          - **Uživatelské jméno a heslo**: Zadejte metodu ověřování **Metoda bez protokolu EAP (vnitřní identita)**. Možnosti:
+
+            - **Nezašifrované heslo (PAP)**
+            - **Protokol CHAP (Challenge Handshake)**
+            - **Protokol Microsoft CHAP (MS-CHAP)**
+            - **Protokol Microsoft CHAP verze 2 (MS-CHAP v2)**
+
+        **Ochrana identity (vnější identita)**: Použijte s typem **EAP-TTLS**. Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
+
+- **Vynutit, aby profil Wi-Fi dodržoval standard FIPS**: Pokud chcete používat vyhodnocování proti standardu FIPS 140-2, vyberte možnost **Ano**. Tento standard se vyžaduje od všech agentur federální vlády USA, které chrání citlivé, ale ne tajné digitálně ukládané informace pomocí bezpečnostních systémů založených na kryptografii. Pokud se nemá standard FIPS dodržovat, zvolte **Ne**.
 
 ## <a name="use-an-imported-settings-file"></a>Importování souboru nastavení
 

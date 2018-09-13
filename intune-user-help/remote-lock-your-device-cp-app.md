@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/02/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,16 +16,16 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 4774cdc54a526f25b006c0c3d1a745ab96005c3a
-ms.sourcegitcommit: 2b5d88c434bda7f1cdc32d1ccacc6b341a9a399b
+ms.openlocfilehash: 5b3fbd677eea9143bf5cb297253303330129ef25
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33676626"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148574"
 ---
-# <a name="lock-your-device-from-company-portal-app-for-windows-10"></a>Uzamčení zařízení z aplikace Portál společnosti pro Windows 10
+# <a name="lock-your-device-from-the-company-portal-app-for-windows-10"></a>Uzamčení zařízení z aplikace Portál společnosti pro Windows 10
 
-Ztracené nebo odcizené zařízení můžete vzdáleně uzamknout z aplikace Portál společnosti pro Windows 10. Pokud se tato funkce na vašem zařízení podporuje, aplikace Portál společnosti uzamkne obrazovku zařízení bez ohledu na to, kde se zařízení nachází. K odemčení obrazovky bude nutné zadat heslo.
+Ztracené nebo odcizené zařízení můžete vzdáleně uzamknout z aplikace Portál společnosti pro Windows 10. Pokud se tato funkce na vašem zařízení podporuje, uzamkne toto nastavení obrazovku bez ohledu na to, kde se zařízení nachází. Než bude možné zařízení odemknout a znovu používat, musí uživatel zadat správné heslo.
 
 Vzdálené uzamčení se podporuje na zařízení s těmito systémy:
 
@@ -43,4 +43,4 @@ Vzdálené uzamčení se podporuje na zařízení s těmito systémy:
    ![Snímek obrazovky aplikace Portál společnosti a stránky Detaily zařízení s výzvou k potvrzení vzdáleného uzamčení](./media/1804_remote_lock_Windows_CPapp_06.png)  
 4. Když zařízení najdete, odemkněte ho pomocí hesla.  
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

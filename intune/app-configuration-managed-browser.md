@@ -15,12 +15,12 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d39dca2a464886ae6752450636fe25a5f5701858
-ms.sourcegitcommit: 27f365f5e67e83562883e0c1fc9fdfae8fd60ce4
+ms.openlocfilehash: 25d4bdc51f2dc12cddbfb30c82baa22aa8c4540b
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40251961"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329748"
 ---
 # <a name="manage-internet-access-using-protected-browser-policies-with-microsoft-intune"></a>Správa přístupu k internetu pomocí zásad chráněného prohlížeče v Microsoft Intune
 
@@ -108,7 +108,7 @@ Jednotné přihlašování v aplikaci Intune Managed Browser vyžaduje, aby bylo
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3.  V okně **Mobilní aplikace** v seznamu Spravovat zvolte **Zásady konfigurace aplikací**.
+3.  V okně **Klientské aplikace** v seznamu Spravovat zvolte **Zásady konfigurace aplikací**.
 4.  V okně **Zásady konfigurace aplikací** vyberte možnost **Přidat**.
 5.  V okně **Přidat zásady konfigurace** zadejte **Název** a volitelný **Popis** nastavení konfigurace aplikace.
 6.  Jako typ **Registrace zařízení** zvolte **Spravované aplikace**.
@@ -126,7 +126,7 @@ Jednotné přihlašování v aplikaci Intune Managed Browser vyžaduje, aby bylo
 
 Nastavení přiřazujete skupinám uživatelů ve službě Azure AD. Pokud má daný uživatel cílovou aplikaci chráněného prohlížeče nainstalovanou, spravuje se podle vámi zadaného nastavení.
 
-1. V okně **Mobilní aplikace** řídicího panelu správy mobilních aplikací Intune zvolte **Zásady konfigurace aplikací**.
+1. V okně **Klientské aplikace** řídicího panelu správy mobilních aplikací Intune zvolte **Zásady konfigurace aplikací**.
 2. V seznamu konfigurací aplikací vyberte tu, kterou chcete přiřadit.
 3. V dalším okně zvolte **Přiřazení**.
 4. V okně **Přiřazení** vyberte skupinu uživatelů ve službě Azure AD, kterým chcete přiřadit konfiguraci aplikace, a potom zvolte **OK**.

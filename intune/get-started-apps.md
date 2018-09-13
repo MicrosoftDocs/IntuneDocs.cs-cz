@@ -15,12 +15,12 @@ ms.assetid: a1542fc3-672e-47c1-a21f-82826a2f8ac4
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 767402326c2b87043eea776a83d58a08072cd301
-ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
+ms.openlocfilehash: 6b69934edc70e10ee01394cf5b6a4fed75334660
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37869334"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330054"
 ---
 # <a name="get-started-with-adding-apps-in-microsoft-intune"></a>Začínáme s přidáváním aplikací v Microsoft Intune
 
@@ -39,7 +39,7 @@ Intune umožňuje přidat a přiřadit k firemním zařízením tyto typy aplika
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. Vyberte **Mobilní aplikace** a pak vyberte **Aplikace**.
+3. Vyberte **Klientské aplikace** a potom **Aplikace**.
 4. Vyberte **Přidat** a potom jako **Typ aplikace** zvolte **iOS**.
 5. Zvolte **Vybrat aplikaci**, aby se zobrazilo podokno **Hledat v App Storu**.
 6. V textovém poli najděte aplikaci, kterou chcete zařízení přiřadit. Zvolte aplikaci a klikněte na **Vybrat**.

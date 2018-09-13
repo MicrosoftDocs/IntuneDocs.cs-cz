@@ -15,12 +15,12 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0ee53dd02fa008a2e885b789439e88c766205d13
-ms.sourcegitcommit: 0a2e737c5520c1a1dec5d732e5df52b5614b27e1
+ms.openlocfilehash: 3596d539319a5a91a1647555a89004683874aa06
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268868"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329457"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem
 
@@ -33,7 +33,7 @@ Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastav
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. Zvolte úlohu **Mobilní aplikace**.
+3. Zvolte úlohu **Klientské aplikace**.
 4. Ve skupině **Spravovat** zvolte **Zásady konfigurace aplikací** a pak **Přidat**.
 5. Zadejte tyto podrobnosti:
     - **Název**: Název profilu, který se zobrazí na portálu Azure Portal
@@ -88,7 +88,7 @@ Předem nakonfigurovat můžete také oprávnění aplikací k přístupu k funk
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. Zvolte **Mobilní aplikace**.
+3. Vyberte **Klientské aplikace**.
 3. V části **Spravovat** zvolte **Zásady konfigurace aplikací** a pak **Přidat**.
 4. Zadejte tyto podrobnosti:
     - **Název**. Název profilu, který se zobrazí na portálu Azure Portal

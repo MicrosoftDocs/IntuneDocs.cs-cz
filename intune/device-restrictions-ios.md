@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cee92ff36e2a199cd6cb8cf3cd5e0e839bc81584
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 71ed2458e35934de9da297140d49d6d4128b0784
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321488"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329814"
 ---
 # <a name="microsoft-intune-ios-device-restriction-settings"></a>Nastavení omezení pro zařízení s iOSem v Microsoft Intune
 
@@ -81,7 +81,7 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 - Spárování s Apple Watch 
 
 > [!NOTE]
-> Apple potvrdil, že se některá nastavení přesunou v roce 2018 pouze do režimu Pod dohledem. Doporučujeme, abyste to vzali na vědomí, pokud tato nastavení používáte a nečekáte, než je Apple přesune pouze do režimu Pod dohledem:
+> Apple potvrdil, že se některá nastavení přesunou v roce 2019 pouze do režimu Pod dohledem. Doporučujeme, abyste to vzali na vědomí, pokud tato nastavení používáte a nečekáte, než je Apple přesune pouze do režimu Pod dohledem:
 > - Instalace aplikací koncovými uživateli
 > - Odebrání aplikace
 > - FaceTime
@@ -91,6 +91,7 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 > - Dokumenty a data v iCloudu
 > - Hry pro víc hráčů
 > - Přidat přátele z herního centra
+> - Siri
 
 ## <a name="password"></a>Heslo
 -   **Heslo** – Vyžaduje, aby koncový uživatel zadal heslo pro přístup k zařízení.

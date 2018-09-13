@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f1aa88264ef277863f58d21baaa136c140c5c287
-ms.sourcegitcommit: e01945bff19157fa7acaa4f7975b0f2a8b3a73f0
+ms.openlocfilehash: cef98527ee2c281547f8046f3c6f08275d8f0807
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37949539"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329379"
 ---
 # <a name="kiosk-settings-for-android-devices-in-intune"></a>Nastavení beznabídkového režimu zařízení s Androidem v Intune
 
@@ -55,7 +55,7 @@ Následujícím postupem nastavíte u zařízení s Androidem v beznabídkovém 
 
 1. Přejděte na [stránku Managed Home Screen v obchodu Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) a přihlaste se pod stejným účtem, který používáte pro jiné aplikace ze spravovaného obchodu Google Play.
 2. Zvolte **Schválit**.
-3. Přejděte na [portál Intune](https://portal.azure.com) a zvolte **Mobilní aplikace** > **Spravovaný obchod Google Play** > **Synchronizovat**.
+3. Přejděte na [portál Intune](https://portal.azure.com) a zvolte **Klientské aplikace** > **Spravovaný obchod Google Play** > **Synchronizovat**.
 4. Zvolte **Aplikace** > **Managed Home Screen** > **Přiřazení** > **Přidat skupinu**.
 5. Jako **Typ přiřazení** zvolte **Povinné**.
 6. Zvolte **Zahrnuté skupiny** > **Vybrat skupiny, které se zahrnou** > zvolte skupinu zařízení, kterou jste vytvořili pro zařízení v beznabídkovém režimu > **Vybrat** > **OK** > **OK** > **Uložit**.
@@ -65,13 +65,13 @@ Následujícím postupem nastavíte u zařízení s Androidem v beznabídkovém 
 U každé aplikace, která má být na zařízeních v beznabídkovém režimu dostupná, postupujte takto:
 
 1. [Přidejte aplikaci do Intune](store-apps-android.md).
-2. Zvolte **Mobilní aplikace** > **Aplikace** > zvolte aplikaci > **Přiřazení** > **Přidat skupinu**.
+2. Zvolte **Klientské aplikace** > **Aplikace** > zvolte aplikaci > **Přiřazení** > **Přidat skupinu**.
 3. Jako **Typ přiřazení** zvolte **Povinné**.
 4. Zvolte **Zahrnuté skupiny** > **Vybrat skupiny, které se zahrnou** > zvolte skupinu zařízení, kterou jste vytvořili pro zařízení v beznabídkovém režimu > **Vybrat** > **OK** > **OK** > **Uložit**.
 
 ### <a name="add-web-links-that-can-be-used-in-kiosk-mode"></a>Přidání webových odkazů, které lze používat v beznabídkovém režimu
 
-1. Přejděte na [portál Intune](https://portal.azure.com) a zvolte **Mobilní aplikace** > **Aplikace** > **Přidat**.
+1. Přejděte na [portál Intune](https://portal.azure.com) a zvolte **Klientské aplikace** > **Aplikace** > **Přidat**.
 2. Jako **Typ aplikace** zvolte **Webový odkaz**.
 3. Zvolte **Konfigurovat** a zadejte potřebné informace. Nemusíte přidávat obrázek loga, protože se automaticky načte ze souboru favicon.ico daného webu.
 4. Zvolte **OK** > **Přidat**.

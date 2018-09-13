@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7aabb010baa4a5e53ad5e4264edc43e3ca111c70
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 1bd9cff2148857ab6b0ea6d6e3c940e1e731c44b
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909197"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313157"
 ---
 # <a name="what-is-device-enrollment"></a>Co je registrace zařízení?
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -34,7 +34,7 @@ Standardně se do Intune můžou registrovat zařízení pro všechny platformy.
 
 | **Metoda** |  **Vyžadováno resetování** |    [**Přidružení uživatele**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) |   **Uzamčeno** | **Podrobnosti** |
 |:---:|:---:|:---:|:---:|:---:|
-| | Během registrace se zařízení resetuje. |  Jednotlivá zařízení se přidruží k uživateli.| Uživatelé nemohou zrušit registraci zařízení.  | |
+| | Zařízení se vymažou při registraci. |  Jednotlivá zařízení se přidruží k uživateli.| Uživatelé nemohou zrušit registraci zařízení.  | |
 |**[Uživatelé s vlastním zařízením (BYOD)](#bring-your-own-device)** | Ne|   Ano |   Ne | [Další informace](./apple-mdm-push-certificate-get.md)|
 |**[DEM](#device-enrollment-manager)**| Ne |Ne |Ne  | [Další informace](./device-enrollment-program-enroll-ios.md)|
 |**[DEP](#apple-device-enrollment-program)**|   Ano |   Volitelné |  Volitelné|[Další informace](./device-enrollment-program-enroll-ios.md)|
@@ -95,7 +95,7 @@ Další informace o registraci pro iOS prostřednictvím Apple Configuratoru a P
 - [Registrace zařízení s iOSem pomocí nástroje Configurator a Průvodce nastavením](apple-configurator-setup-assistant-enroll-ios.md)
 
 ### <a name="usb-direct"></a>USB (přímo)
-U přímé registrace musí správce každé zařízení zaregistrovat ručně vytvořením zásady registrace, kterou vyexportuje do Apple Configuratoru. Zařízení vlastněná společností, která jsou připojena přes USB, se zaregistrují přímo, a nevyžadují obnovení továrního nastavení. Zařízení se spravují jako zařízení bez uživatele. Nejsou uzamčená ani pod dohledem a nepodporují podmíněný přístup, detekci jailbreaků ani správu mobilních aplikací.
+U přímé registrace musí správce každé zařízení zaregistrovat ručně vytvořením zásady registrace, kterou vyexportuje do Apple Configuratoru. Zařízení vlastněná společností, která jsou připojena přes USB, se zaregistrují přímo a nevyžadují vymazání. Zařízení se spravují jako zařízení bez uživatele. Nejsou uzamčená ani pod dohledem a nepodporují podmíněný přístup, detekci jailbreaků ani správu mobilních aplikací.
 
 Registrace iOS je podrobněji popsaná zde:
 

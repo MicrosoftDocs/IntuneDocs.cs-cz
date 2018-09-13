@@ -15,12 +15,12 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 65f249f05f389d8f05395cb46677d5f5fa53835e
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 8abaef622fcf633eecde3a2bb2ee261cb7c8fc9e
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905831"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330258"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOSem
 
@@ -47,7 +47,7 @@ Když máte vybrané zahrnuté skupiny pro zásady konfigurace aplikace, můžet
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. Zvolte úlohu **Mobilní aplikace**.
+3. Zvolte úlohu **Klientské aplikace**.
 4. Ve skupině **Spravovat** zvolte **Zásady konfigurace aplikací** a pak **Přidat**.
 5. Zadejte tyto podrobnosti:
     - **Název**: Název profilu, který se zobrazí na portálu Azure Portal
@@ -133,6 +133,8 @@ Když vytvoříte soubor konfigurace aplikací, můžete pomocí tohoto formátu
   <string>{{serialnumberlast4digits}}</string>
   <key>udidlast4digits</key>
   <string>{{udidlast4digits}}</string>
+  <key>aaddeviceid</key>
+  <string>{{aaddeviceid}}</string>
 </dict>
 ```
 ### <a name="supported-xml-plist-data-types"></a>Podporované datové typy v seznamu vlastností XML
@@ -158,6 +160,7 @@ Intune dál v seznamu vlastností podporuje následující typy tokenů:
 - \{\{username\}\} – například **John Doe**
 - \{\{serialnumber\}\} – například **F4KN99ZUG5V2** (pro zařízení s iOSem)
 - \{\{serialnumberlast4digits\}\} – například **G5V2** (pro zařízení s iOSem)
+- \{\{aaddeviceid\}\} – například **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 
 ## <a name="monitor-ios--app-configuration-status-per-device"></a>Monitorování stavu konfigurace aplikací pro iOS podle zařízení 
 Po přiřazení zásad konfigurace můžete monitorovat stav konfigurace aplikací pro iOS pro každé spravované zařízení. V části **Microsoft Intune** na portálu Azure Portal vyberte **Zařízení** > **Všechna zařízení**. V seznamu spravovaných zařízení vyberte konkrétní zařízení a zobrazte tak okno pro toto zařízení. V okně zařízení vyberte **Konfigurace aplikace**.  

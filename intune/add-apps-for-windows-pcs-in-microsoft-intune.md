@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/01/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: bc8c8be9-7f4f-4891-9224-55fc40703f0b
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic-keep
-ms.openlocfilehash: 041b31373e774c86373762a6365b913de9708b51
-ms.sourcegitcommit: 116be0eaa44fd5518ff34780d39569224ef4746b
+ms.openlocfilehash: df8b6effea08bcb03022511158cde2d4da4ca2e6
+ms.sourcegitcommit: 11cad61c565c474a8d653181675cc1109d562626
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36310500"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43241908"
 ---
 # <a name="add-apps-for-windows-pcs-that-run-the-intune-software-client"></a>Přidání aplikací pro počítače s Windows, na kterých běží softwarový klient Intune
 
@@ -33,6 +33,8 @@ V tomto tématu se dozvíte, jak přidat do Intune aplikace před tím, než je 
 
 Abyste mohli aplikace do počítačů instalovat, musí podporovat bezobslužnou instalaci – bez zásahu uživatele. Pokud tomu tak není, instalace se nezdaří.
 
+## <a name="additional-security-settings-for-windows-installer"></a>Nastavení dalšího zabezpečení pro Instalační službu systému Windows
+Můžete uživatelům umožnit ovládání instalace aplikací. Pokud je tato možnost povolená, instalace, které by se jinak kvůli narušení zabezpečení zastavily, budou moct pokračovat. Můžete Instalační službu systému Windows nastavit tak, aby při instalaci libovolné aplikace do systému používala zvýšenou úroveň oprávnění. Dále můžete povolit, aby se položky WIP (Windows Information Protection) indexovaly a aby se metadata o nich ukládala do nešifrovaného umístění. Pokud je tato zásada zakázaná, chráněné položky WIP se neindexují a ve výsledcích v Cortaně nebo v Průzkumníkovi souborů se nezobrazují. Funkčnost těchto možností je ve výchozím nastavení zakázaná. 
 
 ## <a name="add-the-app"></a>Přidání aplikace
 Pomocí Vydavatele softwaru Microsoft Intune nakonfigurujete vlastnosti aplikace a odešlete ji do svého cloudového úložiště. K tomu slouží tento postup:

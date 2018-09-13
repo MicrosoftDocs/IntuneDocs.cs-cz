@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7b913cc2f667cb2bb16d6f810d7449ce8ee752e8
-ms.sourcegitcommit: 165c1e48891e386f9f75b0ef7a6826b67695dbb7
+ms.openlocfilehash: 18b4ab35627e1ccb694104f3f5800e5fb07dd1c7
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42751730"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313422"
 ---
 # <a name="automatically-enroll-macos-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení s macOS do Programu registrace zařízení Apple
 
@@ -106,7 +106,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** > **Registrace Apple** > **Tokeny programu registrace**.
 2. Vyberte token, zvolte **Profily** a potom zvolte **Vytvořit profil**.
 
-    ![Snímek obrazovky s vytvořením profilu](./media/device-enrollment-program-enroll-ios/image04.png)
+    ![Snímek obrazovky pro vytvoření profilu](./media/device-enrollment-program-enroll-ios/image04.png)
 
 3. V části **Vytvořit profil** zadejte **Název** a **Popis** profilu pro účely správy. Uživatelům se tyto údaje nezobrazí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [dynamických skupinách Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#using-attributes-to-create-rules-for-device-objects).
 
@@ -119,7 +119,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 
     - **Zaregistrovat bez přidružení uživatele** – Tuto možnost zvolte pro zařízení nespojená s jedním uživatelem. Použijte ji pro zařízení určená k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, jako je aplikace Portál společnosti, nefungují.
 
-6. Zvolte **Nastavení správy zařízení** a vyberte, jestli chcete zařízením, která používají tento profil, povolit uzamčenou registraci. **Uzamčená registrace** zakáže nastavení macOS, která umožňují odebrání profilu správy z nabídky **Předvolby systému** nebo přes **Terminál**. Po registraci zařízení nemůžete toto nastavení změnit bez obnovení továrního nastavení zařízení.
+6. Zvolte **Nastavení správy zařízení** a vyberte, jestli chcete zařízením, která používají tento profil, povolit uzamčenou registraci. **Uzamčená registrace** zakáže nastavení macOS, která umožňují odebrání profilu správy z nabídky **Předvolby systému** nebo přes **Terminál**. Po registraci zařízení nemůžete toto nastavení změnit bez vymazání zařízení.
 
     ![Snímek obrazovky s nastaveními správy zařízení](./media/device-enrollment-program-enroll-macos/devicemanagementsettingsblade-macos.png)
  
@@ -128,13 +128,14 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 8. Zvolte **Nastavení Průvodce nastavením** a nakonfigurujte následující nastavení profilu: ![Přizpůsobení Průvodce nastavením](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png).
 
     | Nastavení oddělení | Popis |
-    |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    |---|---|
     | <strong>Název oddělení</strong> | Zobrazí se, když uživatelé klepnou při aktivaci na <strong>O konfiguraci</strong>. |
-    |    <strong>Telefon na oddělení</strong>     |                                                          Zobrazí se, když uživatel při aktivaci klikne na tlačítko <strong>Potřebuji nápovědu</strong>. |
+    | <strong>Telefon na oddělení</strong> | Zobrazí se, když uživatel při aktivaci klikne na tlačítko <strong>Potřebuji nápovědu</strong>. |
 
-    Můžete zvolit, jestli se různé obrazovky Průvodce nastavením mají uživateli zobrazit nebo skrýt.
-    - Pokud zvolíte **Skrýt**, obrazovka se při nastavování nezobrazí. Po nastavení zařízení může uživatel přejít do nabídky **Nastavení** a funkci nastavit tam.
-    - Pokud zvolíte **Zobrazit**, obrazovka se při nastavování zobrazí. Uživatel může obrazovku někdy přeskočit a neudělat žádnou akci. Může ale později přejít do nabídky zařízení **Nastavení** a funkci nastavit tam. 
+  Můžete zvolit, jestli se různé obrazovky Průvodce nastavením mají uživateli zobrazit nebo skrýt.
+  - Pokud zvolíte **Skrýt**, obrazovka se při nastavování nezobrazí. Po nastavení zařízení může uživatel přejít do nabídky **Nastavení** a funkci nastavit tam.
+  - Pokud zvolíte **Zobrazit**, obrazovka se při nastavování zobrazí. Uživatel může obrazovku někdy přeskočit a neudělat žádnou akci. Může ale později přejít do nabídky zařízení **Nastavení** a funkci nastavit tam. 
+
 
     | Nastavení na obrazovce Průvodce nastavením | Pokud zvolíte **Zobrazit**, zařízení při nastavování: |
     |------------------------------------------|------------------------------------------|
@@ -152,6 +153,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
     | <strong>Diagnostika iCloudu</strong> | Umožní uživateli poslat společnosti Apple diagnostická data iCloudu. |
     | <strong>Registrace</strong>| Vyžaduje, aby uživatel zařízení zaregistroval. |
 
+   
 
 10. Vyberte **OK**.
 
@@ -172,7 +174,7 @@ Než se můžou zařízení zaregistrovat, musíte přiřadit profil programu re
 
 1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** > **Registrace Apple** > **Tokeny Programu registrace** > zvolte token v seznamu.
 2. Zvolte **Zařízení** > zvolte zařízení v seznamu > **Přiřadit profil**.
-3. V části **Přiřadit profil** zvolte profil pro zařízení a potom zvolte **Přiřadit**.
+3. V části **Přiřadit profil** zvolte profil pro zařízení > **Přiřadit**.
 
 ### <a name="assign-a-default-profile"></a>Přiřazení výchozího profilu
 
@@ -182,7 +184,7 @@ Můžete vybrat výchozí profil macOS a iOS, který se použije u všech zaří
 2. Zvolte **Nastavit výchozí profil**, v rozevíracím seznamu zvolte profil a potom zvolte **Uložit**. Tento profil se použije pro všechna zařízení, která se registrují s tímto tokenem.
 
 ## <a name="distribute-devices"></a>Distribuujte zařízení.
-Povolili jste správu a synchronizaci mezi společností Apple a Intune a přiřadili jste profil, který umožní registraci zařízení DEP. Teď můžete zařízení rozdělit mezi uživatele. U zařízení s přidruženými uživateli je potřeba, aby měl každý uživatel přiřazenu licenci Intune. Zařízení bez přidružení uživatele vyžadují licenci zařízení. Aktivované zařízení nemůže použít profil registrace, dokud se neprovede obnovení továrního nastavení zařízení.
+Povolili jste správu a synchronizaci mezi společností Apple a Intune a přiřadili jste profil, který umožní registraci zařízení DEP. Teď můžete zařízení rozdělit mezi uživatele. U zařízení s přidruženými uživateli je potřeba, aby měl každý uživatel přiřazenu licenci Intune. Zařízení bez přidružení uživatele vyžadují licenci zařízení. Aktivované zařízení nemůže použít profil registrace, dokud se zařízení nevymaže.
 
 ## <a name="renew-a-dep-token"></a>Obnovení tokenu DEP  
 1. Přejděte na deploy.apple.com.  

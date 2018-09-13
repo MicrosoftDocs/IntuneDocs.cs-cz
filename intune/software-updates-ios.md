@@ -5,17 +5,17 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/26/2018
+ms.date: 08/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.openlocfilehash: b9cc34b2fa45ae447a015f1b3105081041bd0afe
-ms.sourcegitcommit: 0a2e737c5520c1a1dec5d732e5df52b5614b27e1
+ms.openlocfilehash: 1fe0258d3b6d9092c032184fca5fc0f8dc3f12df
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268834"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313492"
 ---
 # <a name="configure-ios-update-policies-in-intune"></a>Konfigurace zásad aktualizací pro iOS v Intune
 
@@ -32,7 +32,7 @@ Tato funkce podporuje zařízení s iOSem 10.3 a novějším.
 4. Zadejte název a popis zásad.
 5. Vyberte **Nastavení**. 
 
-    Zadejte podrobnosti o časech, kdy se nemá u zařízení s iOSem vynucovat instalace nejnovějších aktualizací. Toto nastavení vytvoří časový rámec omezení. Můžete nakonfigurovat dny v týdnu, časové pásmo, počáteční čas a koncový čas.
+    Zadejte podrobnosti o časech, kdy se nemá u zařízení s iOSem vynucovat instalace nejnovějších aktualizací. Toto nastavení vytvoří časový rámec omezení. Můžete nakonfigurovat **dny** v týdnu, **časové pásmo**, **počáteční čas**, **koncový čas** a možnost **podržet zpřístupnění aktualizací softwaru (dny)** pro uživatele. Dále můžete vybrat pozdržení aktualizací softwaru v rozsahu 1 až 90 dní. Pokud chcete pozdržení aktualizací softwaru vypnout, zadejte hodnotu 0. Tato nastavení aktualizací se uplatní jen na zařízeních s iOSem pod dohledem.
 
 6. Výběrem **OK** uložte změny. Výběrem **Vytvořit** vytvořte tyto zásady.
 

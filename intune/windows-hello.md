@@ -6,19 +6,19 @@ keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 03/02/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5220d9c2e1ba98873658631798240af9e7587758
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: ff3b482f974641dd7255dc98d3af62542d802de9
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31834766"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313730"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrace Windows Hello pro firmy s Microsoft Intune
 
@@ -31,7 +31,10 @@ Windows Hello pro firmy (dříve Microsoft Passport for Work) můžete integrova
 
 Intune se s Hello pro firmy integruje dvěma způsoby:
 
--   Pomocí zásady Intune můžete řídit, která gesta uživatel může nebo nemůže používat k přihlášení.
+-   Vytvořením zásady Intune v části **Registrace zařízení**. Tato zásada cílí na celou organizaci (celého tenanta). Podporuje program Windows AutoPilot spouštěný při prvním zapnutí a použije se při registraci zařízení. 
+-  Vytvořením profilu ochrany identit v části **Konfigurace zařízení**. Tento profil cílí na přiřazené uživatele a zařízení a použije se při ohlášení. 
+
+Pomocí tohoto článku můžete vytvořit výchozí zásadu pro službu Windows Hello pro firmy, která bude cílit na celou organizaci. Pokyny k vytváření profilů ochrany identit, které se použití u vybraných skupin uživatelů nebo zařízení, najdete v článku o [konfiguraci profilu ochrany identit](identity-protection-configure.md).  
 
 <!--- -   You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Secure resource access with certificate profiles in Microsoft Intune](secure-resource-access-with-certificate-profiles.md). --->
 
@@ -57,7 +60,7 @@ Intune se s Hello pro firmy integruje dvěma způsoby:
 
 4. V podokně **Všichni uživatelé** klikněte na **Vlastnosti** a potom zadejte **název** a volitelný **popis** pro nastavení Windows Hello pro firmy.
 
-5. V podokně **Všichni uživatelé** klikněte na **Nastavení** a pak pro možnost **Konfigurovat Windows Hello pro firmy** zvolte jednu z těchto hodnot:
+5. V podokně **Všichni uživatelé** klikněte na **Nastavení** a pak pro možnost **Konfigurovat Windows Hello pro firmy** zvolte jednu z těchto možností:
 
     - **Zakázáno**. Toto nastavení vyberte, pokud Windows Hello pro firmy nechcete používat. Všechna ostatní nastavení na obrazovce jsou nedostupná.
     - **Povoleno**. Toto nastavení vyberte, pokud chcete konfigurovat nastavení Windows Hello pro firmy.

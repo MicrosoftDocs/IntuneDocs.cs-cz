@@ -15,12 +15,12 @@ ms.assetid: f5617074-2384-4812-b913-dc94f64c0818
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c00904097986d1cf70031f1b17171221da64abc0
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 1b43e7df72e709cfdd929085b1d6718f1afcdf9f
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224796"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347348"
 ---
 # <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Správa e-knih pro iOS zakoupených v rámci multilicenčního programu pomocí Microsoft Intune
 
@@ -55,8 +55,8 @@ Než začnete, musíte od společnosti Apple získat token VPP a nahrát ho do s
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. Na stránce **Intune** zvolte **Mobilní aplikace**.
-1.  V úloze **Mobilní aplikace** zvolte **Nastavení** > **Tokeny VPP pro iOS**.
+3. V podokně **Intune** zvolte **Klientské aplikace**.
+1.  V úloze **Klientské aplikace** zvolte **Nastavení** > **Tokeny VPP pro iOS**.
 2.  V podokně se seznamem tokenů VPP klikněte na **Vytvořit**.
 3.  V podokně **Nový token VPP** zadejte tyto informace:
     - **Soubor tokenu VPP** – je potřeba se zaregistrovat v rámci programu Volume Purchase Program for Business nebo Volume Purchase Program for Education. Potom si stáhněte token Apple VPP pro svůj účet a vyberte ho tady.

@@ -15,12 +15,12 @@ ms.assetid: 2f6c06bf-e29a-4715-937b-1d2c7cf663d4
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b65daa6e098954d88c502114fc7a33ad4cf5efcd
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: faa8918441bd705875fcdc72d3717af001ab2b85
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909282"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329866"
 ---
 # <a name="assign-apps-to-android-work-profile-devices-with-intune"></a>Přiřazení aplikací k zařízením s pracovním profilem Androidu pomocí Intune
 
@@ -59,18 +59,18 @@ Ověřte, že jste v úloze **Registrace zařízení** na Azure Portalu nakonfig
 
 ## <a name="sync-a-managed-google-play-app-with-intune"></a>Synchronizace aplikace ze spravovaného obchodu Google Play s Intune
 
-Pokud jste aplikaci v tomto obchodě schválili, ale nevidíte ji v uzlu **Licencované aplikace** úlohy **Mobilní aplikace**, vynuťte tímto způsobem okamžitou synchronizaci:
+Pokud jste aplikaci v tomto obchodě schválili, ale nevidíte ji v uzlu **Licencované aplikace** úlohy **Klientské aplikace**, vynuťte tímto způsobem okamžitou synchronizaci:
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Intune** zvolte **Mobilní aplikace**.
-4. V podokně úlohy **Mobilní aplikace** vyberte **Spravovaný obchod Google Play** v oblasti **Nastavení**.
+3. V podokně **Intune** zvolte **Klientské aplikace**.
+4. V podokně úlohy **Klientské aplikace** vyberte **Spravovaný obchod Google Play** v části **Nastavení**.
 5. V podokně **Spravovaný obchod Google Play** zvolte **Aktualizovat**.  
     Stránka aktualizuje čas a stav poslední synchronizace.
-6. V podokně úloh **Mobilní aplikace** vyberte **Aplikace**.  
+6. V podokně úloh **Klientské aplikace** vyberte **Aplikace**.  
     Zobrazí se nově dostupná aplikace ze spravovaného obchodu Google Play.
 
-Když se aplikace objeví v uzlu **Licence aplikací** podokna úloh **Mobilní aplikace**, můžete ji [přiřadit stejně jako jakoukoli jinou aplikaci](/intune-azure/manage-apps/deploy-apps). Tuto aplikaci můžete přiřadit jenom skupinám uživatelů.
+Když se aplikace objeví v uzlu **Licence aplikací** podokna úloh **Klientské aplikace**, můžete ji [přiřadit stejně jako jakoukoli jinou aplikaci](/intune-azure/manage-apps/deploy-apps). Tuto aplikaci můžete přiřadit jenom skupinám uživatelů.
 
 Po přiřazení se aplikace nainstaluje na zařízení, která jste určili. Uživatel zařízení nebude požádán o schválení instalace.
 

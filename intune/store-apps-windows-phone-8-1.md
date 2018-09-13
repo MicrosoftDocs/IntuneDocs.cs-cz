@@ -15,12 +15,12 @@ ms.assetid: 4a95e575-2c63-4bfc-b9c4-f0a132eef618
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e8b3e34e72775061dcc3b40f60e75243972cedd2
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 1ae7723e29d23575314fc632c75af01eb9e59f72
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223590"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347656"
 ---
 # <a name="add-windows-phone-81-store-apps-to-microsoft-intune"></a>Přidání aplikací pro Windows Phone 8.1 ze Storu do Microsoft Intune
 
@@ -34,8 +34,8 @@ Aplikaci pro Windows Phone 8.1. ze Storu můžete přidat do Intune z portálu A
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**.  
     Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Intune** zvolte **Mobilní aplikace**.
-4. V podokně úloh **Mobilní aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
+3. V podokně **Intune** zvolte **Klientské aplikace**.
+4. V podokně úloh **Klientské aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
 5. V podokně **Aplikace** vyberte **Přidat**.
 6. V podokně **Přidat aplikaci** vyberte jako **Typ aplikace** možnost **Windows Phone 8.1** a zvolte **Informace o aplikaci**.
 7. V podokně **Informace o aplikaci** přidejte informace o aplikaci. V závislosti na zvolené aplikaci můžou být některé hodnoty v tomto podokně vyplněné automaticky:

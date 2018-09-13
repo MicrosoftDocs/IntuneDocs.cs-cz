@@ -15,12 +15,12 @@ ms.assetid: f5ca557e-a8e1-4720-b06e-837c4f0bc3ca
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cdd3484f002a3719410d4f801073914e7f58fc4c
-ms.sourcegitcommit: e6013abd9669ddd0d6449f5c129d5b8850ea88f3
+ms.openlocfilehash: a7822e9e5a0e2bc5b054ccc3e93b9aa51bca5b79
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39254480"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329406"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Selektivní vymazání dat pomocí akcí přístupu zásad ochrany aplikací v Intune
 
@@ -33,7 +33,7 @@ S využitím těchto nastavení můžete explicitně vymazat podniková data ze 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**.  
     Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Intune** vyberte **Mobilní aplikace** > **Zásady ochrany aplikací**.
+3. V podokně **Intune** vyberte **Klientské aplikace** > **Zásady ochrany aplikací**.
 4. Klikněte na **Přidat zásadu** (můžete také upravit některou existující zásadu). 
 5. Kliknutím na **Konfigurovat požadovaná nastavení** zobrazíte seznam dostupných nastavení, která se mají pro tuto zásadu konfigurovat. 
 6. Když se v podokně Nastavení posunete dolů, uvidíte oddíl s názvem **Akce přístupu** s tabulkou, kterou můžete upravit.

@@ -1,7 +1,7 @@
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).  
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.  
-3. Vyberte **Mobilní aplikace** > **Aplikace**.
+3. Vyberte **Klientské aplikace** > **Aplikace**.
 4. Na seznamu aplikací najděte svou aplikaci a vyberte ji.  
 5. V okně **Přehled** zvolte **Vlastnosti**.  
 6. Vyberte **Soubor balíčku aplikace**.  

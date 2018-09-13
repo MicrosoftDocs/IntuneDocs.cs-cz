@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 15ac6adbcf262fd14edf11107b032aeda106a15b
-ms.sourcegitcommit: 024cce10a99b12a13f32d3995b69c290743cafb8
+ms.openlocfilehash: 4e43ab0d088edc87e814ad2c4317d7b7336d34d5
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39039331"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312892"
 ---
 # <a name="android-enterprise-kiosk-settings-in-intune"></a>Nastavení beznabídkového režimu Androidu Enterprise v Intune
 
@@ -33,14 +33,14 @@ Profily Androidu v beznabídkovém režimu podporují následující nastavení 
     - **Automaticky udělit**: Oprávnění jsou udělena automaticky.
     - **Automaticky odepřít**: Oprávnění jsou odepřena automaticky.
 - **Změny hlasitosti**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit ve změně hlasitosti zařízení.
-- **Obnovení továrního nastavení**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit v obnovení továrního nastavení zařízení.
+- **Vymazat**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit ve vymazání zařízení.
 - **Bezpečné spuštění**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit v restartování zařízení do nouzového režimu.
 - **Stavový řádek**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit v přístupu ke stavovému řádku včetně oznámení a rychlých nastavení.
 - **Změny nastavení Wi-Fi**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit ve změně konfigurací Wi-Fi vytvořených vlastníkem zařízení. Uživatelé mohou vytvářet své vlastní konfigurace Wi-Fi.
 - **Konfigurace přístupového bodu Wi-Fi**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit ve vytvoření nebo úpravě jakýchkoli konfigurací Wi-Fi.
 - **Funkce ladění**: Zvolte **Povolit**, pokud chcete uživatelům umožnit použití funkcí ladění.
 - **Úprava mikrofonu**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit v nastavení hlasitosti nebo ztlumení mikrofonu.
-- **E-maily pro ochranu před resetováním do továrního nastavení**: Zvolte **E-mailové adresy účtů Google**, pokud chcete definovat e-mailové adresy (oddělené středníkem), které mohou zařízení po obnovení továrního nastavení odemknout. Pokud není e-mail zadaný, může zařízení po obnovení továrního nastavení odemknout kdokoli.
+- **E-maily pro ochranu před vymazáním**: Zvolte **E-mailové adresy účtů Google**, pokud chcete definovat e-mailové adresy (oddělené středníkem), které mohou zařízení po vymazání odemknout. Pokud není e-mail zadaný, může zařízení po vymazání odemknout kdokoli.
 - **Dočasné síťové připojení**: Zvolte **Povolit**, pokud chcete zapnout funkci dočasného síťového připojení. Pokud během spouštění nelze vytvořit připojení k síti, vyzve tato funkce uživatele k dočasnému připojení k síti kvůli aktualizaci zásad zařízení. Po uplatnění zásad se tato dočasná síť zapomene a zařízení pokračuje ve spouštění. Tím se zabrání situaci, kdy se nelze připojit k síti, pokud v posledních zásadách neexistuje žádná vhodná síť a v zařízení se spustí aplikace v zablokovaném režimu, nebo když se uživatel nemůže dostat k nastavení zařízení.
 - **Povolit instalaci z neznámých zdrojů**: Zvolte **Povolit**, pokud uživatelům chcete umožnit instalaci z neznámých zdrojů.
 - **Aktualizace systému**: Zvolením některé možnosti určete, jak má zařízení zpracovat aktualizace OTA (Over The Air):

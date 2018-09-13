@@ -1,11 +1,11 @@
 ---
 title: Řešení hrozeb zjištěných aplikací SandBlast Mobile Protect na iOSu | Dokumentace Microsoftu
-description: Zjistěte, jak vyřešit hrozbu, kterou objevila aplikace Mobile Protect na iOSu.
+description: Přečtěte si, jak vyřešit hrozbu, kterou objevila aplikace SandBlast Mobile Protect pro iOS.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/03/2017
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,29 +15,34 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: a34e73d3209453f07523d1c841e8ba578c85aa3d
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: f4725b76517bc9d3a27f07d7289f178c54a31bce
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30755963"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148027"
 ---
-# <a name="you-need-to-resolve-a-threat-found-by-sandblast-mobile-protect"></a>Potřebujete vyřešit hrozbu, kterou objevila aplikace SandBlast Mobile Protect
+# <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>Vyřešení hrozby, kterou objevila aplikace SandBlast Mobile Protect
 
-Aplikace SandBlast Mobile Protect našla na zařízení potenciální hrozbu a tento problém je potřeba vyřešit, než budete moct znovu přistupovat ke svým firemním nebo školním e-mailům, aplikacím a souborům. Zobrazená zpráva závisí na problému, který aplikace SandBlast Mobile Protect na zařízení našla.
+Aplikace SandBlast Mobile Protect je mobilní služba ochrany před hrozbami, která na zařízeních s iOSem rozpoznává a vyhodnocuje potenciální hrozby. Ty následně uživateli oznámí, aby si je mohl prohlédnout v aplikaci Portál společnosti. Zde se zobrazují jako nevyřešené problémy nevyhovující předpisům. Dokud hrozby neodstraníte, možná nebudete moci provádět tyto akce:   
 
-Pokud chcete problém vyřešit, spusťte aplikaci SandBlast Mobile Protect a postupujte podle pokynů zobrazených v aplikaci.
+* Připojování k firemnímu e-mailu
+* Připojování k firemní Wi-Fi
+* Připojování k SharePointu Online
+* Synchronizace firemních souborů s OneDrivem
+* Přístup k firemním aplikacím
 
-## <a name="what-you-might-see-if-your-enrolled-device-is-blocked-from-accessing-email-or-files"></a>Informace, které se zobrazují v případě, kdy je registrovanému zařízení zablokován přístup k e-mailu nebo souborům
+V tomto článku se dozvíte, jak rozpoznat upozornění aplikace Sandblast Mobile Protect na hrozby a jak je řešit.  
 
-Pokud registrované zařízení obsahuje virus nebo jinou bezpečnostní hrozbu a pokusíte se o přístup k firemnímu e-mailu nebo souborům, zobrazí se zpráva aplikace SandBlast Mobile Protect s výzvou k akci.
+## <a name="troubleshoot-virus-or-security-threat"></a>Odstraňování virových a bezpečnostních hrozeb  
+Když aplikace SandBlast Mobile Protect detekuje virovou nebo bezpečnostní hrozbu, provede kroky na základě zásad přístupu vaší organizace. Tyto zásady vám mohou zabránit v přístupu k pracovní síti, aplikacím a e-mailu.  
 
-Klepněte na odkaz na **portál pro správu zařízení** a přejděte na [web Portál společnosti](http://portal.manage.microsoft.com), kde můžete najít pokyny k vyřešení problému.
+Aplikace SandBlast Mobile Protect vás vyzve, abyste podnikli opatření pro opětovné získání ztraceného přístupu. Vyberte hrozbu a pomocí pokynů v aplikaci ji vyřešte.  
 
-## <a name="example-of-an-app-that-sandblast-mobile-protect-sees-as-a-threat"></a>Příklad aplikace, kterou SandBlast Mobile Protect považuje za hrozbu
+## <a name="troubleshoot-an-app-threat"></a>Odstraňování hrozeb od aplikací  
 
-Pokud jste nainstalovali aplikaci, kterou SandBlast Mobile Protect považuje za hrozbu, upozorní vás aplikace na to, že na zařízení je nainstalovaná nedůvěryhodná aplikace.
+Pokud si nainstalujete aplikaci, která je považována za hrozbu pro vaše zařízení, zobrazí se v aplikaci SandBlast Mobile Protect oznámení. V případě, že takovou aplikaci na zařízení ponecháte, nebudete mít přístup k firemním prostředkům.  
 
-Jakmile k tomu dojte, odinstalujte aplikaci, abyste ihned znovu získali přístup k firemnímu e-mailu a datům. Pokud aplikaci neodinstalujete, ztratíte přístup k e-mailu a datům až do odinstalace aplikace.
+Pokud chcete problém vyřešit, vyberete aplikaci ze seznamu hrozeb aplikace SandBlast Mobile Protect. Potom ji podle pokynů odeberte a odinstalujte.  
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](http://portal.manage.microsoft.com).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 16b8067610e21652a40cb87302d8f1f3d05de342
-ms.sourcegitcommit: f5998019bbb4769fb50a7ea9bf424199516eb9ee
+ms.openlocfilehash: a658182800f480f27097e078f28adc95c35aa3ea
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39117918"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313174"
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
 
@@ -34,11 +34,14 @@ V tomto článku se dozvíte, jak si můžete zobrazit všechna zařízení a je
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 3. Vyberte **Zařízení** > **Všechna zařízení** > výběrem zařízení uvedeného v seznamu otevřete podrobné informace o něm:
 
-   - **Přehled** zobrazuje název zařízení a uvádí některé jeho klíčové vlastnosti, včetně toho, jestli se jedná o zařízení programu Přineste si vlastní zařízení (BYOD), kdy bylo zaregistrováno a dalších informací. Když vyberte **Další**, můžete:
-     - Odebrání firemních dat
-     - Smazat zařízení
-     - Zařízení na dálku uzamknout
-     - Vymazat zařízení
+   - **Přehled** zobrazuje název zařízení a uvádí některé jeho klíčové vlastnosti, včetně toho, jestli se jedná o zařízení programu Přineste si vlastní zařízení (BYOD), kdy bylo zaregistrováno a dalších informací. Na zařízení můžete provést následující akce:
+      - [Vyřadit](devices-wipe.md#retire)
+        - [Vymazání](devices-wipe.md#wipe)
+        - [Vzdálené uzamčení](device-remote-lock.md)
+        - [Synchronizace zařízení](device-sync.md)
+        - [Resetovat heslo](device-passcode-reset.md)
+        - [Restartovat](device-restart.md) (jenom Windows)
+        - [Začít znovu](device-fresh-start.md) (jenom Windows)
      - Spustit relaci vzdálené pomoci
    - Pomocí **vlastností** můžete zařízení přiřadit [kategorii, kterou vytvoříte](device-group-mapping.md), a upravit jeho vlastnictví na osobní nebo podnikové.
    - Část **Hardware** obsahuje řadu podrobnosti o zařízení, včetně jeho ID, operačního systému a verze, úložného prostoru, modelu a výrobce, nastavení podmíněného přístupu a další.

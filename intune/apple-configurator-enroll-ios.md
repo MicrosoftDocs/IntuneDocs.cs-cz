@@ -15,20 +15,20 @@ ms.assetid: 671e4d76-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b7cff6c777de4a35aa6825d1d37fdd0c2f2d0b72
-ms.sourcegitcommit: 165c1e48891e386f9f75b0ef7a6826b67695dbb7
+ms.openlocfilehash: 5653e5fda04295041ebc549977007e7060b5508b
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42751713"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312676"
 ---
 # <a name="enroll-ios-devices-with-apple-configurator"></a>Registrace zařízení s iOSem pomocí Apple Configuratoru
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Intune podporuje registraci zařízení s iOSem pomocí [Apple Configuratoru](https://itunes.apple.com/app/apple-configurator-2/id1037126344) spuštěných na počítačích Mac. Registrace pomocí Apple Configuratoru vyžaduje, abyste každé zařízení s iOSem připojili prostřednictvím USB k počítači Mac a nastavili registraci pro podniky. Zařízení můžete do služby Intune registrovat pomocí Apple Configuratoru dvěma způsoby:
-- **Registrace Pomocníka s nastavením** – Obnoví tovární nastavení zařízení a připraví ho k registraci Pomocníka s nastavením.
-- **Přímá registrace** – Neobnoví tovární nastavení zařízení a zaregistruje ho pomoci nastavení iOSu. Tato metoda podporuje jenom **zařízení bez přidružení uživatele**.
+- **Registrace Pomocníka s nastavením** – Vymaže zařízení a připraví ho k registraci Pomocníka s nastavením.
+- **Přímá registrace** – Nevymaže zařízení a zaregistruje ho pomocí nastavení iOSu. Tato metoda podporuje jenom **zařízení bez přidružení uživatele**.
 
 Metoda registrace pomocí Apple Configuratoru se nedá použít se [Správcem registrace zařízení](device-enrollment-manager-enroll.md).
 
@@ -134,7 +134,7 @@ Zařízení jsou připravená na registraci ve společnosti. Vypněte zařízen�
 Po převzetí zařízení musí uživatelé projít postupem Pomocníka s nastavením. Zařízení nakonfigurovaná s přidružením uživatele umožňují instalaci a spuštění aplikace Portál společnosti, která slouží ke stahování aplikací a správě zařízení.
 
 ## <a name="direct-enrollment"></a>Přímá registrace
-Při přímé registraci zařízení s iOSem pomocí Apple Configuratoru můžete zařízení zaregistrovat i bez získání jeho sériového čísla. Můžete také zařízení pro potřeby identifikace pojmenovat před tím, než Intune zachytí název zařízení během registrace. U zařízení zaregistrovaných přímo není podporovaná aplikace Portál společnosti. Při této metodě není nutné resetovat zařízení do továrního nastavení.
+Při přímé registraci zařízení s iOSem pomocí Apple Configuratoru můžete zařízení zaregistrovat i bez získání jeho sériového čísla. Můžete také zařízení pro potřeby identifikace pojmenovat před tím, než Intune zachytí název zařízení během registrace. U zařízení zaregistrovaných přímo není podporovaná aplikace Portál společnosti. Pomocí této metody se zařízení nevymaže.
 
 Aplikace, které vyžadují přidruženého uživatele (včetně aplikace Portál společnosti používané k instalaci obchodních aplikací), se nedají nainstalovat.
 

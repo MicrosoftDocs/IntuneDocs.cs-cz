@@ -1,11 +1,11 @@
 ---
-title: Řešení hrozeb zjištěných aplikací Zimperium zIPS na Androidu | Dokumentace Microsoftu
-description: Zjistěte, jak opravit hrozby nalezené na zařízení s Androidem.
+title: Řešení hrozeb zjištěných aplikací Zimperium zIPS na Androidu
+description: Zjistěte, jak opravit bezpečnostní hrozby a hrozby od aplikací nalezené na zařízení s Androidem.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/25/2017
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,29 +15,40 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 081554df0deca0935c32ddef0b26004c4fd2d82f
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 6c6e31ce5c3f5f988a6c4b4ff4be71bfd5e0dd80
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30755313"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148054"
 ---
-# <a name="you-need-to-resolve-a-threat-found-by-zimperium-zips"></a>Je třeba vyřešit hrozbu, kterou objevila aplikace Zimperium zIPS
+# <a name="resolve-a-threat-found-by-zimperium-zips"></a>Řešení hrozeb zjištěných aplikací Zimperium zIPS
 
-Aplikace Zimperium zIPS našla na zařízení potenciální hrozbu a tento problém je potřeba vyřešit, než budete moct znovu přistupovat ke svým firemním nebo školním e-mailům, aplikacím a souborům. Zobrazená zpráva závisí na problému, který aplikace Zimperium zIPS na zařízení našla.
+Aplikace Zimperium zIPS je mobilní služba ochrany před hrozbami, která na zařízeních s Androidem rozpoznává potenciální hrozby. Ty se oznamují aplikaci Portál společnosti a zobrazují jako nevyřešené problémy nevyhovující předpisům. Pokud aplikace vaše zařízení vyhodnotí jako nesplňující předpisy, možná nebudete moci provádět tyto akce:
 
-Pokud chcete problém vyřešit, spusťte aplikaci Zimperium zIPS a postupujte podle pokynů zobrazených v aplikaci.
+* Připojování k firemnímu e-mailu
+* Připojování k firemní Wi-Fi
+* Připojování k SharePointu Online
+* Synchronizace firemních souborů s OneDrivem
+* Přístup k firemním aplikacím
 
-## <a name="what-you-might-see-if-your-enrolled-device-is-blocked-from-accessing-email-or-files"></a>Informace, které se zobrazují v případě, kdy je registrovanému zařízení zablokován přístup k e-mailu nebo souborům
+V tomto článku se dozvíte, jak rozpoznat upozornění aplikace Zimperium zIPS na hrozby a jak je řešit. 
 
-Pokud registrované zařízení obsahuje virus nebo jinou bezpečnostní hrozbu a vy se pokusíte o přístup k firemnímu e-mailu nebo souborům, zobrazí se zpráva aplikace Zimperium zIPS s výzvou k akci.
+## <a name="troubleshoot-virus-or-security-threat"></a>Odstraňování virových a bezpečnostních hrozeb  
+Když aplikace Zimperium zIPS detekuje virovou nebo bezpečnostní hrozbu, vynutí omezení na základě zásad přístupu vaší organizace. Tyto zásady mohou bránit v přístupu zařízení k pracovní síti, aplikacím a e-mailu.  
 
-Klepněte na odkaz na **portál pro správu zařízení** a přejděte na [web Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog), kde můžete najít pokyny k vyřešení problému.
+Aplikace Zimperium zIPS vás vyzve, abyste podnikli opatření pro opětovné získání ztraceného přístupu. Vyberte hrozbu a pomocí pokynů v aplikaci ji vyřešte.
 
-## <a name="example-of-an-app-that-zimperium-zips-sees-as-a-threat"></a>Příklad aplikace, kterou Zimperium zIPS vnímá jako hrozbu
+Vzhledem k tomu, že je aplikace integrovaná s poskytovatelem řešení MDM vaší společnosti, zobrazí se také upozornění o omezeném přístupu k aplikaci Portál společnosti. To vás vyzve k otevření aplikace Zimperium zIPS a odstranění virové nebo bezpečnostní hrozby.  
 
-Pokud jste nainstalovali aplikaci, kterou Zimperium zIPS považuje za hrozbu, upozorní vás, že je na zařízení nainstalovaná nedůvěryhodná aplikace.
+  ![Ukázkový snímek obrazovky se stránkou zařízení na webu Portál společnosti zobrazující upozornění aplikace Zimperium zIP](./media/CP-lookout-virus-banner-1808.png)  
 
-Jakmile k tomu dojte, odinstalujte aplikaci, abyste ihned znovu získali přístup k firemnímu e-mailu a datům. Pokud aplikaci neodinstalujete, ztratíte přístup k e-mailu a datům až do odinstalace aplikace.
+Vyberte upozornění zobrazené pod zařízením, kterého se výstraha týká. Zimperium zIPS se otevře a pomůže vám s eliminací hrozby.  
 
-Potřebujete ještě další pomoc? Obraťte se na správce IT. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+## <a name="resolve-an-app-threat"></a>Řešení hrozeb od aplikací
+
+Pokud si nainstalujete aplikaci, která je považována za hrozbu pro vaše zařízení, zobrazí se v aplikaci Zimperium zIPS oznámení. V případě, že takovou aplikaci na zařízení ponecháte, nebudete mít přístup k firemním prostředkům.  
+
+Pokud chcete problém vyřešit, vyberete aplikaci ze seznamu hrozeb aplikace Zimperium zIPS. Potom ji odeberte a odinstalujte pomocí zobrazených pokynů.    
+
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980). 

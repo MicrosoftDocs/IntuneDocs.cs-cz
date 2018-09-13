@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/25/2017
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,16 +15,26 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: fee3f31b4a475ed3def1ee96fcdad2f2a414ab3c
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: f209fa315d5d5c36e661a931c32c70ba5ba93d81
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30752389"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150046"
 ---
 # <a name="resolve-a-threat-found-by-a-mobile-threat-defense-app"></a>Vyřešení hrozby, kterou zjistila aplikace Mobile Threat Defense
 
-Aplikace Mobile Threat Defense našla na zařízení s iOSem potenciální hrozbu a tento problém je potřeba vyřešit, než budete moct znovu přistupovat ke svým firemním nebo školním e-mailům, aplikacím a souborům. V závislosti na tom, jak vaše společnost nastavila aplikaci Mobile Threat Defense, bude potřeba, abyste k řešení těchto problémů použili některou z následujících aplikací.
+Aplikace Mobile Threat Defense slouží k rozpoznávání potenciálních hrozeb a zobrazování výstrah na vašich zařízeních. Některé organizace integrují službu Mobile Threat Defense s poskytovatelem řešení MDM, jako je Intune. Po integraci služba Mobile Threat Defense oznámí hrozby (například podezřelé aplikace a sítě nebo ohrožení zabezpečení operačního systému) a zobrazí upozornění v aplikaci Portál společnosti. Podrobnosti o hrozbách a postupu při nápravě najdete v aplikaci Mobile Threat Defense.  
+
+Hrozby se zobrazují na Portálu společnosti jako nevyřešené problémy nevyhovující předpisům. Pokud jsou vyhodnoceny jako dostatečně rizikové, odvolá společnost váš přístup k firemním prostředkům. Dokud hrozby ze zařízení neodstraníte, možná nebudete moci provádět tyto akce:  
+
+* Připojování k firemnímu e-mailu
+* Připojování k firemní Wi-Fi
+* Připojování k SharePointu Online
+* Synchronizace firemních souborů s OneDrivem
+* Přístup k firemním aplikacím
+
+Níže najdete seznam služeb Mobile Threat Defense pro iOS, které mohla vaše organizace nastavit. Výběrem aplikace si můžete přečíst další informace o jejím chování. 
 
 
 * [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
@@ -32,13 +42,5 @@ Aplikace Mobile Threat Defense našla na zařízení s iOSem potenciální hrozb
 * [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)
 * [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
 
-Pokud chcete problém vyřešit, spusťte aplikaci Mobile Threat Defense a postupujte podle pokynů zobrazených v aplikaci.
-
-**Příklad aplikace, kterou Mobile Threat Defense považuje za hrozbu**
-
-Pokud jste nainstalovali aplikaci, kterou Mobile Threat Defense považuje za hrozbu, zobrazí se obrazovka s názvem této aplikace. Pokud se něco takového zobrazí, klepněte na název aplikace v horní části obrazovky a podle pokynů hrozbu odstraňte.
-
-Po odinstalaci aplikace ihned znovu získáte přístup k e-mailu a dalším datům společnosti nebo školy. Pokud budete požadavek na odinstalaci aplikace ignorovat, ztratíte přístup k firemnímu e-mailu a datům, dokud aplikaci neodinstalujete.
-
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
 

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/23/2017
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,57 +17,68 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 45b087b9617b783517f8296f1726891392764d5f
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 8ce71a14f9bb7e877fb31e78afdf64d5e492f4a8
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31019326"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43146685"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Resetování hesla zařízení z webu Portál společnosti
 
-Pokud ztratíte kód PIN nebo heslo zařízení, které jste zaregistrovali v Intune, můžete použít [web Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog) k jeho resetování. Web Portál společnosti se používá ke správě počítačů a zařízení, které jste zaregistrovali v Intune, a k plnění většinou stejných úkolů jako v aplikaci Portál společnosti.
+Pokud ztratíte kód PIN nebo heslo zařízení, můžete použít k jeho resetování [web Portál společnosti](https://portal.manage.microsoft.com).  
 
-> [!NOTE]
-> Je možné, že na webu Portál společnosti neuvidíte tlačítko Resetovat heslo, pokud používáte zařízení zaregistrované společností. Pokud ho nevidíte, budete muset kontaktovat svou firemní podporu, aby heslo resetovala za vás.
+Používáte-li zařízení zaregistrované firmou, nemusí se vám možnost pro resetování hesla zobrazovat. V takovém případě kontaktujte svou firemní podporu, aby heslo resetovala za vás.
 
-Resetování hesla:
-
-1. Na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog) klepněte na tlačítko __nabídky__ ![Malý obrázek tlačítka nabídky, tři vodorovné pruhy nad sebou](/intune/media/CP_hamburger_menu.png) a potom vyberte __Moje zařízení__.
-
-2. Na stránce __Moje zařízení__ vyberte název zařízení, jehož heslo chcete resetovat.
-
-   ![Snímek obrazovky se stránkou Moje zařízení s několika neidentifikovanými zařízeními zobrazenými nad výzvou k registraci zařízení, která nejsou v seznamu, nebo k identifikaci neidentifikovaných zařízení](./media/macOS_enroll_002_tap_here_banner.png)
-
-3. Zařízení se otevře v místním okně. Vyberte tlačítko **Resetovat heslo**.
-
-   ![Všechny možnosti pro vybrané zařízení na webu Portál společnosti, včetně možnosti Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení ](./media/iwp-screen-with-all-options.png)
-
-4. Zobrazí se informační zpráva s výzvou, abyste potvrdili, že chcete resetovat heslo, a s informacemi o tom, že po resetování hesla budete ze svého zařízení odhlášeni. Potom budete muset 5 minut počkat, než se budete moct znovu přihlásit.
-
-   ![Informační zpráva s upozorněním týkajícím se resetování hesla zařízení a odhlášení uživatele Tlačítka pro vstup uživatele jsou Odhlásit se a Zrušit.](./media/iwp-reset-passcode-popup.png)
-
-5. Vyberte možnost **Odhlásit se** a zobrazí se závěrečná zpráva s informacemi o odebrání hesla ze zařízení. Pokud zařízení nemáte s sebou, neodebírejte heslo, protože by se mohlo stát, že kdokoli by měl k zařízení fyzický přístup, měl by přístup k většině osobních i firemních informací, které jsou v něm uložené. 
-
-   ![Druhá informační zpráva s upozorněním týkajícím se resetování hesla zařízení a odebrání hesla ze zařízení. Obsahuje také informace o tom, jak nastavit nové heslo prostřednictvím nastavení zařízení.](./media/iwp-reset-passcode-2nd-popup.png)
-
-   Různá zařízení mají různé typy hesel.
-
-   **Android**: Odebere existující heslo a vytvoří dočasné heslo obsahující písmena i číslice. 
-  
    > [!NOTE]
-   > U hesel pro zařízení s Androidem 7.0 nebo novějším hesla resetovat nemůžete. Pokud heslo zapomenete, musíte na zařízení obnovit tovární nastavení.
+   > U hesel pro zařízení s Androidem 7.0 nebo novějším hesla resetovat nemůžete. Pokud heslo zapomenete, musíte zařízení obnovit do továrního nastavení. 
 
-   **iOS**: Odebere existující heslo a nevytvoří dočasné heslo. Pokud pro otevírání zařízení nebo nákupy používáte snímač otisku prstu Touch ID, budete si ho muset nastavit znovu.
+## <a name="reset-your-passcode"></a>Postup resetování hesla
 
-   **Windows 10 Mobile**: Odebere existující heslo a vytvoří dočasné heslo obsahující písmena i číslice. Pokud k přihlášení používáte rozpoznávání obličeje Windows Hello, bude tato technologie i nadále podporovaná.
+1.  Otevřete [web Portál společnosti](https://portal.manage.microsoft.com) a vyberte tlačítko __nabídky__ > __Zařízení__.  
+
+2. Vyberte zařízení, jehož heslo potřebujete resetovat.  
+
+    ![Snímek obrazovky stránky Zařízení se dvěma dlaždicemi, které zobrazují neznámá zařízení s obecným názvem. Šedý banner pod zařízeními vyzývá uživatele k identifikaci používaného zařízení nebo přidání nového.](./media/rename-reset-device-step2-1808.png) 
+
+3. Zvolte **Resetovat heslo**. Pokud se v horní části stránky možnost pro heslo nezobrazuje, vyberte **Více (…)** > **Resetovat heslo**.   
+
+   ![Stránka podrobností o zařízení pro vybrané zařízení na webu Portál společnosti. V horní části stránky se nacházejí odkazy Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení. ](./media/rename-reset-device-1808.png)   
+
+    ![Přiblížená ikona Více zvýrazněná červenou šipkou](./media/rename-reset-device-step3-more-1808.png)  
+
+4. Po zobrazení výzvy klikněte na **Odhlásit se**. Po zobrazení další výzvy se znovu přihlaste. Na web Portál společnosti se musíte přihlásit do pěti minut, jinak se heslo zařízení neresetuje.  
+
+   > [!NOTE]
+   > Opětovné přihlášení se vyžaduje pro potvrzení identity. Slouží jako ochrana před škodlivými pokusy o resetováním hesla.
+
+   ![Ukázkové snímky obrazovky s výzvou k odhlášení z webu Portál společnosti Tlačítka pro vstup uživatele jsou Odhlásit se a Zrušit.](./media/iwp-reset-passcode-popup-1808.png)
+
+5. Zobrazí se zpráva s upozorněním, že stávající heslo zařízení bude odebráno. Potvrďte kliknutím na **Resetovat heslo**.  
+    > [!WARNING]
+    > Po resetování hesla je většina osobních a firemních dat dostupná každému, kdo má fyzický přístup k zařízení. Pokud zařízení nemáte momentálně ve svém vlastnictví, resetování neprovádějte.  
+
+   ![Ukázkový snímek obrazovky s druhou zprávou zobrazovanou při resetování hesla. Obsahuje odkaz na dokumentaci s dalšími informacemi o nastavení nového hesla a samostatná tlačítka pro resetování a zrušení.](./media/iwp-reset-passcode-popup2-1808.png) 
+
+6. Pokud resetujete heslo zařízení s iOSem, stávající heslo se odebere. Na zařízeních s Windows a Androidem se vytvoří dočasné heslo pro odemknutí zařízení a nastavení nového. 
+
+   > [!NOTE]
+   > Dočasné heslo pro zařízení s Windows a Androidem najdete na webu Portál společnosti na stránce detailů zařízení. Pokyny pro jednotlivé operační systémy najdete v části [Nastavení nového hesla](reset-your-passcode-cpwebsite.md#set-up-a-new-passcode).  
+   
+7. Na zařízení přejděte na **Nastavení** a změňte dočasné heslo. 
+
+8. V pravé horní části webu Portál společnosti se zobrazí příznak. Kliknutím si přečtěte upozornění a potvrďte, že se heslo úspěšně resetovalo.  
+
+## <a name="set-up-a-new-passcode"></a>Nastavení nového hesla  
+
+V této části najdete chování při resetování hesla a vytvoření dočasného hesla pro jednotlivé platformy.  
+
+**Android**: Odebere stávající heslo a vytvoří dočasné heslo obsahující písmena i číslice.
+
+**iOS**: Odebere existující heslo a nevytvoří dočasné heslo. Pokud pro otevírání zařízení nebo nákupy používáte snímač otisku prstu Touch ID, je potřeba ho nastavit znovu.  
+
+**Windows 10 Mobile**: Odebere stávající heslo a vytvoří dočasné heslo obsahující písmena i číslice. Pokud je nastaveno rozpoznávání obličeje Windows Hello, bude na zařízení i nadále fungovat.
     
-   **Windows Phone 8.1**: Odebere existující heslo a vytvoří dočasné heslo obsahující číslice.
+**Windows Phone 8.1**: Odebere stávající heslo a vytvoří dočasné heslo obsahující číslice.  
 
-   U zařízení s Androidem nebo s Windows se v části **Detaily o zařízení** zobrazí dočasné heslo. 
-
-6. Odemkněte zařízení a nastavte nové heslo, nebo změňte dočasné heslo pomocí nabídky **Nastavení** v zařízení.
-
-Pokud chcete zobrazit potvrzení, že bylo heslo úspěšně resetované, klikněte na příznak oznámení v pravé horní části webu Portál společnosti.
-
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://portal.manage.microsoft.com#HelpDeskDialog).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
