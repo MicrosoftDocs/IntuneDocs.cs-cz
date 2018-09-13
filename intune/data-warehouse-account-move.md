@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 09/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: ee3ccbf9-82fc-4fbf-9d3d-8f05e431d090
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: ''
-ms.openlocfilehash: 7b13cfdcaa29edfc780126f3d1d76f5a9e46360f
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: b34bb7c3f3db9ebb3cdd89b429aaeb530d7ad796
+ms.sourcegitcommit: 8fdddb684ecf5eabf071907168413bcd89a2f702
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43330292"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44141623"
 ---
 # <a name="move-your-intune-data-warehouse-account-data"></a>Přesunutí dat účtu datového skladu Intune 
 
@@ -63,8 +63,6 @@ Některé grafy trendů ve vašem zobrazení portálu Azure Portal se resetují.
 ## <a name="device-enrollment-charts"></a>Grafy registrace zařízení
 1. Na portálu Azure Portal přejděte na **Microsoft Intune** -> **Registrace zařízení**.
 2. Pomocí [Graph exploreru](https://developer.microsoft.com/graph/graph-explorer) stáhněte podkladová data grafů.
-    - Pro stav registrace 
-    - Pro nejzávažnější chyby registrace tento týden 
     - Pro stav registrace zkopírujte tento [dotaz na stav registrace](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentFailureTrends()/content) a vložte ho do [Graf exploreru](https://developer.microsoft.com/graph/graph-explorer).
     - Pro nejzávažnější chyby registrace zkopírujte tento [dotaz na chyby registrace](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentTopFailures(period=null)/content) a vložte ho do [Graf exploreru](https://developer.microsoft.com/graph/graph-explorer).
 
