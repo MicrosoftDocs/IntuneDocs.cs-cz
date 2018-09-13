@@ -1,0 +1,1 @@
+# <a name="welcome-to-device-mgmt"></a>Vítejte ve správě zařízení!
