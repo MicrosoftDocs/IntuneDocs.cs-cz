@@ -37,7 +37,7 @@ Jako správce IT musíte zajistit, aby spravovaná zařízení poskytovala prost
    - **Přehled** zobrazuje grafický snímek zaregistrovaných zařízení včetně informací, kolik zařízení používá jednotlivé platformy (Android, iOS a další).
    - Část **Všechna zařízení** obsahuje seznam zaregistrovaných zařízení, která spravujete.
 
-     Pomocí funkce **Export** vytvoříte seznam všech zařízení ve formátu CSV, a to v přírůstcích po 10 000 (Internet Explorer) nebo 30 000 (Edge, Chrome).
+     Pomocí funkce **Export** vytvoříte seznam všech zařízení ve formátu CSV, a to v přírůstcích po 10 000 (Internet Explorer) nebo 30 000 (Microsoft Edge, Chrome).
 
      Když vyberete libovolné zařízení, můžete o něm [zobrazit další podrobnosti](device-inventory.md), včetně podrobných informací o hardwaru, nainstalovaných aplikací, stavu zásad dodržování předpisů a dalších.
 
