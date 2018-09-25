@@ -14,12 +14,12 @@ ms.assetid: 1ba77bc7-505e-4eca-a49e-dcdaa75d0043
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9bead87f80cf8d1f102f396bdd6c9573786c1b9e
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: b9efb60d169ba6f88b4765d3fc651f3a0596b230
+ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34474628"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028575"
 ---
 # <a name="view-and-correct-personal-data"></a>Zobrazení a oprava osobních údajů
 
@@ -33,7 +33,7 @@ Správci Intune mohou na základě svých přístupových oprávnění zobrazit 
 Správcům se osobní údaje koncových uživatelů zobrazují na různých listech uživatelského rozhraní služby Intune. V článcích níže se dozvíte, k jakým informacím správci mají, nebo naopak nemají přístup:
 - Článek [Zobrazení podrobností o zařízení v Intune](device-inventory.md) vysvětluje, jak zobrazit podrobnosti o zařízení koncového uživatele.
 - Článek [Monitorování informací a přiřazení aplikace](apps-monitor.md) vysvětluje, jak zobrazit podrobnosti o aplikacích nainstalovaných na zařízení koncového uživatele.
-- Článek [Jaké informace moje společnost uvidí, když si zaregistruji zařízení](https://docs.microsoft.com/en-us/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) obsahuje seznam údajů, které společnost koncového uživatele vidí nebo nevidí. Nejvhodnější je srozumitelně sdělit uživatelům, jaká data shromažďujete a proč to děláte. Prvním krokem vstříc transparentnosti může být právě tento článek.
+- Článek [Jaké informace moje společnost uvidí, když si zaregistruji zařízení](https://docs.microsoft.com/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) obsahuje seznam údajů, které společnost koncového uživatele vidí nebo nevidí. Nejvhodnější je srozumitelně sdělit uživatelům, jaká data shromažďujete a proč to děláte. Prvním krokem vstříc transparentnosti může být právě tento článek.
 
 ### <a name="who-can-view-the-data"></a>Kdo může zobrazit údaje?
 

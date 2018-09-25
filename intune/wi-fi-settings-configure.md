@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e2dba6e0d1c50790c8c2c2bf287695ab67fdb972
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: df2e2f81008c6dedf5660a8a9eff4bf2cfe2ec6b
+ms.sourcegitcommit: 77540295381a59918eb638ce9c1870209cf8af02
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905323"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46505729"
 ---
 # <a name="how-to-configure-wi-fi-settings-in-microsoft-intune"></a>Jak nakonfigurovat nastavení Wi-Fi v Microsoft Intune
 
@@ -62,8 +62,6 @@ Informace v tomto tématu vás seznámí se základy konfigurace profilu Wi-Fi. 
     - **Windows 8.1 a novější**
     - **Windows 10 a novější**
 
-   > [!IMPORTANT]
-   > Pokud chcete vytvořit profil pro zařízení se systémem Windows 10, včetně Windows Holographic for Business, musíte zvolit platformu **Windows 8.1 a novější**. Platforma **Windows 10 a novější** nezahrnuje typ profilu sítě Wi-Fi. 
 
 6. Pro zařízení Apple nebo Android vyberte v rozevíracím seznamu **Typ Wi-Fi** možnost **Základní** nebo **Enterprise**. Možnost **Základní** umožňuje nastavit základní funkce, jako je název sítě a SSID. Možnost **Enterprise** umožňuje nastavit rozšířené informace, například o protokolu EAP (Extensible Authentication Protocol), pokud ho vaše síť Wi-Fi využívá. 
 

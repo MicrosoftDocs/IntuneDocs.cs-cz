@@ -15,12 +15,12 @@ ms.assetid: E61C1618-79D0-41A1-B61F-4123FB6672FC
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cad4e1d6bcb47981dfb40a1146a3f5148724e08a
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: 084b7bead6b294cfbfa94c9b18f539dd0e5db2a8
+ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43330088"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028592"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Přidání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení
 
@@ -43,7 +43,7 @@ Zásady konfigurace aplikací můžete používat se spravovanými aplikacemi, k
 7. Pro každé nastavení konfigurace podporované aplikací zadejte položky **Název** a **Hodnota** a zvolte tři tečky (**…**).  
     Pokud chcete konfiguraci odstranit, zvolte tři tečky (**…**) a vyberte **Odstranit**.  
     
-Aplikace s povolenou sadou Intune App SDK podporují konfigurace v párech klíč-hodnota. Nahlédněte do dokumentace k jednotlivým aplikacím, kde zjistíte, které konfigurace klíč-hodnota se podporují. Připomínáme, že můžete používat tokeny, které se budou dynamicky plnit daty generovanými aplikací. Informace o nastavení zásad konfigurace aplikace Outlook pro iOS najdete v článku [Správa konfigurace aplikace Outlook pro iOS pomocí Microsoft Intune](https://technet.microsoft.com/en-us/library/mt813789(v=exchg.150).aspx).
+Aplikace s povolenou sadou Intune App SDK podporují konfigurace v párech klíč-hodnota. Nahlédněte do dokumentace k jednotlivým aplikacím, kde zjistíte, které konfigurace klíč-hodnota se podporují. Připomínáme, že můžete používat tokeny, které se budou dynamicky plnit daty generovanými aplikací. Informace o nastavení zásad konfigurace aplikace Outlook pro iOS najdete v článku [Správa konfigurace aplikace Outlook pro iOS pomocí Microsoft Intune](https://technet.microsoft.com/library/mt813789(v=exchg.150).aspx).
 
 ## <a name="configuration-values-for-using-tokens"></a>Hodnoty konfigurace pro používání tokenů
 

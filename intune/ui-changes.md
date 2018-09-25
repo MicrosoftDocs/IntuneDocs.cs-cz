@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 54050fd7afc58a101d956b4aee68e9b5e4011a3d
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 140b19ac64003f9ddf481a33e0cf4d423e106ffd
+ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905372"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028626"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Kde v Azure najdu svoje funkce Intune?
 Při přesunu Intune do portálu Azure Portal jsme využili příležitost uspořádat některé úlohy logičtěji. Každé vylepšení ale přichází za cenu toho, že je potřeba se s novým uspořádáním seznámit. Tato referenční příručka je určena uživatelům, kteří znají dobře Intune na klasickém portálu a zajímá je, jak s Intune pracovat na webu Azure Portal. Pokud tento článek nepopisuje funkci, kterou hledáte, uveďte ji v poznámce na konci článku, abychom ho mohli aktualizovat.
@@ -70,12 +70,12 @@ Nové možnosti omezení se přidají jenom do portálu Azure Portal.
 ## <a name="where-did-my-conditional-access-policies-go"></a>Kde jsou moje zásady podmíněného přístupu?
 Po migraci tenanta na web Azure Portal zůstávají zásady podmíněného přístupu vašeho tenanta dále v platnosti. Z Intune na webu Azure Portal je ale nemůžete prohlížet ani upravovat.
 
-Pokud je chcete na webu Azure Portal zobrazovat a měnit, musíte staré zásady odebrat z klasického portálu. A potom je znovu vytvořit na webu Azure Portal. Další informace o migraci zásad podmíněného přístupu najdete v článku o [migraci klasických zásad na webu Azure Portal](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-migration). 
+Pokud je chcete na webu Azure Portal zobrazovat a měnit, musíte staré zásady odebrat z klasického portálu. A potom je znovu vytvořit na webu Azure Portal. Další informace o migraci zásad podmíněného přístupu najdete v článku o [migraci klasických zásad na webu Azure Portal](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-migration). 
 
 ## <a name="where-did-my-compliance-policies-go"></a>Kde jsou moje zásady dodržování předpisů?
 Po migraci tenanta na web Azure Portal zůstávají zásady dodržování předpisů tenanta nadále v platnosti. Z Intune na webu Azure Portal je ale nemůžete prohlížet ani upravovat.
 
-Pokud chcete zásady dodržování předpisů zobrazovat a měnit na webu Azure Portal, musíte staré zásady odebrat z klasického portálu. A potom je znovu vytvořit na webu Azure Portal. Další informace o zásadách dodržování předpisů pro zařízení najdete v článku o tom, [jak začít používat zásady dodržování předpisů pro zařízení v Intune](https://docs.microsoft.com/en-us/intune/known-issues#compliance). 
+Pokud chcete zásady dodržování předpisů zobrazovat a měnit na webu Azure Portal, musíte staré zásady odebrat z klasického portálu. A potom je znovu vytvořit na webu Azure Portal. Další informace o zásadách dodržování předpisů pro zařízení najdete v článku o tom, [jak začít používat zásady dodržování předpisů pro zařízení v Intune](https://docs.microsoft.com/intune/known-issues#compliance). 
 
 ## <a name="where-did-apple-dep-go"></a>Kde najdu Program registrace zařízení (DEP) Apple?
 Na klasickém portálu jste mohli nastavit integraci Intune s Programem registrace zařízení Apple a ručně vyžádat synchronizaci se službou společnosti Apple:
