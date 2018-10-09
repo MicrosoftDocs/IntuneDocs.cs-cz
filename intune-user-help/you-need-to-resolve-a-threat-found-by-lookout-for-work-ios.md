@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 10/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: ffa0207729a6e0855b4534d40aa598bcb04e7847
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 5866314c03eff5613b4c0cc5d46d2f2eace29a13
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43150197"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828019"
 ---
 # <a name="resolve-a-threat-found-by-lookout-for-work"></a>Vyřešení hrozby, kterou zjistila aplikace Lookout for Work  
 
@@ -42,7 +42,9 @@ Pomocí těchto kroků získáte znovu přístup k firemním prostředkům poté
     ![Ukázkový snímek obrazovky s chybovou zprávou v aplikaci Lookout for Work, která obsahuje odkaz na web Portál společnosti a modré tlačítko OK](./media/mtd-go-to-device-management-portal-android.png)  
 
 2. Vyberte své zařízení.  
-3. Přečtěte si upozornění zobrazené pod zařízením. Vyzve vás, abyste otevřeli aplikaci Lookout for Work a virovou nebo bezpečnostní hrozbu vyřešili.   
+3. Přečtěte si upozornění zobrazené pod zařízením. Vyzve vás, abyste otevřeli aplikaci Lookout for Work a virovou nebo bezpečnostní hrozbu vyřešili.     
+
+    ![Ukázkový snímek obrazovky se stránkou zařízení na webu Portál společnosti zobrazující upozornění aplikace Lookout for Work.](./media/CP-lookout-virus-banner-1808.png)  
 
 ## <a name="troubleshoot-an-app-threat"></a>Odstraňování hrozeb od aplikací   
 Když si nainstalujete aplikaci, kterou Lookout for Work vyhodnotí jako hrozbu, zobrazí se zpráva podobná té na snímku níže.  
@@ -50,5 +52,5 @@ Když si nainstalujete aplikaci, kterou Lookout for Work vyhodnotí jako hrozbu,
 ![Ukázkový snímek obrazovky se seznamem aktivních a vyřešených hrozeb od aplikací nalezených aplikací Lookout for Work.](./media/ios-lfw-threat-example.png)    
 Vyberte název aplikace zobrazený v horní části obrazovky. Potom ji podle pokynů odeberte a odinstalujte. Dokud je aplikace na zařízení nainstalovaná, nebudete mít k prostředkům přístup.    
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu. Kontaktní informace správce najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).    
 

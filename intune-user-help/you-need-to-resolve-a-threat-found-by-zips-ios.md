@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 10/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 9cb87541e45591ae8c4d1e8151fdb781ebd0b364
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 8b77eeb57bb3887e28242ca845ec6e83d4e9a817
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43148136"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863061"
 ---
 # <a name="resolve-a-threat-found-by-zimperium-zips"></a>Řešení hrozeb zjištěných aplikací Zimperium zIPS
 
@@ -37,12 +37,16 @@ V tomto článku se dozvíte, jak rozpoznat upozornění aplikace Zimperium zIPS
 ## <a name="troubleshoot-virus-or-security-threat"></a>Odstraňování virových a bezpečnostních hrozeb  
 Když aplikace Zimperium zIPS detekuje virovou nebo bezpečnostní hrozbu, vynutí omezení na základě zásad přístupu vaší organizace. Tyto zásady mohou bránit v přístupu zařízení k pracovní síti, aplikacím a e-mailu.  
 
-Aplikace Zimperium zIPS vás vyzve, abyste podnikli opatření pro opětovné získání ztraceného přístupu. Vyberte hrozbu a pomocí pokynů v aplikaci ji vyřešte.  
+Aplikace Zimperium zIPS vás vyzve, abyste podnikli opatření pro opětovné získání ztraceného přístupu. Vyberte hrozbu a pomocí pokynů v aplikaci ji vyřešte.
 
-## <a name="resolve-an-app-threat"></a>Řešení hrozeb od aplikací
+Vzhledem k tomu, že je aplikace integrovaná s poskytovatelem řešení MDM vaší společnosti, zobrazí se také upozornění o omezeném přístupu k aplikaci Portál společnosti. To vás vyzve k otevření aplikace Zimperium zIPS a odstranění virové nebo bezpečnostní hrozby.  
+
+  ![Ukázkový snímek obrazovky se stránkou zařízení na webu Portál společnosti zobrazující upozornění aplikace Zimperium zIP](./media/CP-lookout-virus-banner-1808.png)  
+  
+## <a name="troubleshoot-an-app-threat"></a>Odstraňování hrozeb od aplikací
 
 Pokud si nainstalujete aplikaci, která je považována za hrozbu pro vaše zařízení, zobrazí se v aplikaci Zimperium zIPS oznámení. V případě, že takovou aplikaci na zařízení ponecháte, nebudete mít přístup k firemním prostředkům.  
 
 Pokud chcete problém vyřešit, vyberete aplikaci ze seznamu hrozeb aplikace Zimperium zIPS. Potom ji odeberte a odinstalujte pomocí zobrazených pokynů.  
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980). 
+Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu. Kontaktní informace správce najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).   
