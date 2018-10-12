@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 108382a04095330745ca82dc1d70ab48e70362e5
-ms.sourcegitcommit: 0ac196d1d06f4f52f01610eb26060419d248168b
+ms.openlocfilehash: 239c8d5dc4143ba91c78b9b5c502c7a20b101417
+ms.sourcegitcommit: 7afa90264a2098453885be3d37655ae1a32ca67d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251747"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47229071"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Použití portálu pro řešení potíží k poskytování pomoci uživatelům ve vaší společnosti
 
@@ -48,7 +48,7 @@ Zvolením možnosti **Vybrat uživatele** v podokně pro řešení potíží zob
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V podokně **Intune** zvolte **Řešení potíží**.
 4. Klikněte na **Vybrat** a vyberte uživatele, pro kterého chcete řešit potíže.
-5. Vyberte uživatele zadáním jména nebo e-mailové adresy. Klikněte na **Vybrat**. Informace o řešení potíží pro uživatele se zobrazí v podokně Řešení potíží. Informace jsou vysvětlené v následujících tabulkách.
+5. Vyberte uživatele zadáním jména nebo e-mailové adresy. Klikněte na **Vybrat**. Informace o řešení potíží pro uživatele se zobrazí v podokně Řešení potíží. Informace jsou vysvětlené v následující tabulce.
 
 > [!Note]  
 > Do podokna **řešení potíží** se dostanete také tak, že v prohlížeči přejdete na adresu: [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
@@ -64,16 +64,18 @@ V podokně **Řešení potíží** můžete zkontrolovat informace o uživateli.
 | 1.   | Stav účtu  | Zobrazuje stav aktuálního tenanta Intune, například **Aktivní** nebo **Neaktivní**.       |
 | 2.   | Výběr uživatele  | Jméno aktuálně vybraného uživatele. Kliknutím na **Změnit uživatele** zvolíte nového uživatele.       |
 | 3.   | Stav uživatele  | Zobrazí stav uživatelovy licence Intune, počet zařízení, dodržování předpisů u každého zařízení, počet aplikací a dodržování předpisů u aplikací.       |
-| 4.   | Údaje uživatele  | Pomocí seznamu můžete vybrat podrobnosti, které chcete v podokně zkontrolovat. <br>Můžete vybrat: <ul><li>Mobilní aplikace<li>Zásady ochrany aplikace<li>Zásady dodržování předpisů<li> Zásady konfigurace</ul>      |
+| 4.   | Údaje uživatele  | Pomocí seznamu můžete vybrat podrobnosti, které chcete v podokně zkontrolovat. <br>Můžete vybrat: <ul><li>Klientské aplikace<li>Zásady dodržování předpisů<li> Zásady konfigurace<li>Zásady ochrany aplikace <li>Omezení registrace</ul>      |
 | 5.   | Členství ve skupině  | Zobrazí aktuální skupiny, ve kterých je vybraný uživatel členem.       |
 
-## <a name="mobile-apps-reference"></a>Informace o mobilních aplikacích
+## <a name="client-apps-reference"></a>Informace o klientských aplikacích
 
-Aplikace, které jsou spuštěné na zařízeních, nebo zařízení, která patří uživatelům a jsou spravovaná pomocí Intune a Azure Active Directory (AD).
+Aplikace, které používají zařízení
+- spravovaná přes Intune a Azure Active Directory (AD) 
+- vlastněná uživateli spravovanými přes Intune a Azure Active Directory (AD)
 
 ### <a name="properties"></a>Vlastnosti
 
-Vlastnosti mobilních aplikací
+Vlastnosti klientských aplikací
 
 | Vlastnost      | Popis                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -91,7 +93,7 @@ Zařízení spravovaná pomocí Intune nebo uživateli, kteří jsou spravovaní
 | Název zařízení        | Název typu zařízení                                                                                                     |
 | Spravuje         | Časové razítko změny zásad                                                                                              |
 | Typ připojení ke službě Azure AD | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
-| Vlastnictví          | Typ vlastnictví zařízení. Může být **Společnost**, **Osobní** a **Neznámý**.                                               |
+| Vlastnictví          | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**)                                               |
 | Vyhovuje Intune   | Název typu zařízení                                                                                                     |
 | Vyhovuje Azure AD | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
 | Operační systém                 | Operační systém nainstalovaný v zařízení                                                                                       |
@@ -100,20 +102,20 @@ Zařízení spravovaná pomocí Intune nebo uživateli, kteří jsou spravovaní
 
 ### <a name="app-protection-status"></a>Stav ochrany aplikace
 
-Pro mobilní aplikace, které se integrují s technologiemi Enterprise Mobility Solution (EMS), jsou k dispozici zásady ochrany aplikací. Tím vzniká základ ochrany dat společnosti po jejich stažení do mobilních aplikací, včetně mobilních aplikací Office. 
+Pro mobilní aplikace, které se integrují s technologiemi Enterprise Mobility Solution (EMS), jsou k dispozici zásady ochrany aplikací. Tyto zásady poskytují základ ochrany dat společnosti po jejich stažení do mobilních aplikací, včetně mobilních aplikací Office. 
 
 | Vlastnost    | Popis                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
-| Stav      | Typ vlastnictví zařízení. Může být **Společnost**, **Osobní** a **Neznámý**. |
+| Stav      | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**) |
 | Název aplikace    | Název aplikace                                                           |
 | Název zařízení | Název typu zařízení                                                       |
 | Typ zařízení | Název typu zařízení                                                       |
-| Zásady    | Typ vlastnictví zařízení. Může být **Společnost**, **Osobní** a **Neznámý**. |
+| Zásady    | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**) |
 | Poslední synchronizace   | Časové razítko poslední synchronizace zařízení s Intune.                   |
 
 ## <a name="app-protection-policies-reference"></a>Informace o zásadách ochrany aplikací
 
-Pro mobilní aplikace, které se integrují s technologiemi EMS, jsou k dispozici zásady ochrany aplikací. Tím vzniká základ ochrany dat společnosti po jejich stažení do mobilních aplikací, včetně mobilních aplikací Office. 
+Pro mobilní aplikace, které se integrují s technologiemi EMS, jsou k dispozici zásady ochrany aplikací. Tyto zásady poskytují základ ochrany dat společnosti po jejich stažení do mobilních aplikací, včetně mobilních aplikací Office. 
 
 ### <a name="properties"></a>Vlastnosti
 
@@ -123,7 +125,7 @@ Tabulka shrnuje stav zásad ochrany aplikací pro zařízení spravovaná pomoc�
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Název        | Název aplikace                                                                                                        |
 | Nasazeno    | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
-| Platforma    | Typ vlastnictví zařízení. Může být **Společnost**, **Osobní** a **Neznámý**.                                               |
+| Platforma    | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**)                                               |
 | Registrace  | Název typu zařízení                                                                                                     |
 | Poslední aktualizace | Časové razítko změny zásad                                                                                              |
 
@@ -136,7 +138,7 @@ Zařízení spravovaná pomocí Intune nebo uživateli, kteří jsou spravovaní
 | Název zařízení        | Název typu zařízení                                                                                                     |
 | Spravuje         | Časové razítko změny zásad                                                                                              |
 | Typ připojení ke službě Azure AD | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
-| Vlastnictví          | Typ vlastnictví zařízení. Může být **Společnost**, **Osobní** a **Neznámý**.                                               |
+| Vlastnictví          | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**)                                               |
 | Vyhovuje Intune   | Název typu zařízení                                                                                                     |
 | Vyhovuje Azure AD | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
 | Vyhovuje Azure AD | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
@@ -157,7 +159,7 @@ Vlastnosti zásad dodržování předpisů.
 | Přiřazení    | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
 | Název          | Název aplikace                                                                                                        |
 | Operační systém            | Operační systém nainstalovaný v zařízení                                                                                       |
-| Typ zásad   | Typ vlastnictví zařízení. Může být **Společnost**, **Osobní** a **Neznámý**.                                               |
+| Typ zásad   | Typ vlastnictví zařízení (**Společnost**, **Osobní** a **Neznámé**)                                               |
 | Datum poslední změny | Název typu zařízení                                                                                                     |
 
 ### <a name="devices"></a>Zařízení
@@ -169,7 +171,7 @@ Zařízení spravovaná pomocí Intune nebo uživateli, kteří jsou spravovaní
 | Název zařízení        | Název typu zařízení                                                                                                     |
 | Spravuje         | Časové razítko změny zásad                                                                                              |
 | Typ připojení ke službě Azure AD | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
-| Vlastnictví          | Typ vlastnictví zařízení. Může být **Společnost**, **Osobní** a **Neznámý**.                                               |
+| Vlastnictví          | Typ vlastnictví zařízení (**Společnost**, **Osobní** a **Neznámé**)                                               |
 | Vyhovuje Intune   | Název typu zařízení                                                                                                     |
 | Vyhovuje Azure AD | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
 | Operační systém                 | Operační systém nainstalovaný v zařízení                                                                                       |
@@ -178,15 +180,15 @@ Zařízení spravovaná pomocí Intune nebo uživateli, kteří jsou spravovaní
 
 ### <a name="app-protection-policies"></a>Zásady ochrany aplikace
 
-Pro mobilní aplikace, které se integrují s technologiemi EMS, jsou k dispozici zásady ochrany aplikací. Tím vzniká základ ochrany dat společnosti po jejich stažení do mobilních aplikací, včetně mobilních aplikací Office. 
+Pro mobilní aplikace, které se integrují s technologiemi EMS, jsou k dispozici zásady ochrany aplikací. Tyto zásady poskytují základ ochrany dat společnosti po jejich stažení do mobilních aplikací, včetně mobilních aplikací Office. 
 
 | Vlastnost    | Popis                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
-| Stav      | Typ vlastnictví zařízení. Může být **Společnost**, **Osobní** a **Neznámý**. |
+| Stav      | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**) |
 | Název aplikace    | Název aplikace                                                           |
 | Název zařízení | Název typu zařízení                                                       |
 | Typ zařízení | Název typu zařízení                                                       |
-| Zásady    | Typ vlastnictví zařízení. Může být **Společnost**, **Osobní** a **Neznámý**. |
+| Zásady    | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**) |
 | Poslední synchronizace   | Časové razítko poslední synchronizace zařízení s Intune.                   |
 
 ## <a name="configuration-policies-reference"></a>Informace o zásadách konfigurace
@@ -202,7 +204,7 @@ Vlastnosti zásad konfigurace.
 | Přiřazení    | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
 | Název          | Název aplikace                                                                                                        |
 | Operační systém            | Operační systém nainstalovaný v zařízení                                                                                       |
-| Typ zásad   | Typ vlastnictví zařízení. Může být **Společnost**, **Osobní** a **Neznámý**.                                               |
+| Typ zásad   | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**)                                               |
 | Datum poslední změny | Název typu zařízení                                                                                                     |
 
 ### <a name="devices"></a>Zařízení
@@ -214,7 +216,7 @@ Zařízení spravovaná pomocí Intune nebo uživateli, kteří jsou spravovaní
 | Název zařízení        | Název typu zařízení                                                                                                     |
 | Spravuje         | Časové razítko změny zásad                                                                                              |
 | Typ připojení ke službě Azure AD | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
-| Vlastnictví          | Typ vlastnictví zařízení. Může být **Společnost**, **Osobní** a **Neznámý**.                                               |
+| Vlastnictví          | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**)                                               |
 | Vyhovuje Intune   | Název typu zařízení                                                                                                     |
 | Vyhovuje Azure AD | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
 | Operační systém                 | Operační systém nainstalovaný v zařízení                                                                                       |
@@ -224,16 +226,53 @@ Zařízení spravovaná pomocí Intune nebo uživateli, kteří jsou spravovaní
 
 ### <a name="app-protection-policies"></a>Zásady ochrany aplikace
 
-Pro mobilní aplikace, které se integrují s technologiemi EMS, jsou k dispozici zásady ochrany aplikací. Tím vzniká základ ochrany dat společnosti po jejich stažení do mobilních aplikací, včetně mobilních aplikací Office. 
+Pro mobilní aplikace, které se integrují s technologiemi EMS, jsou k dispozici zásady ochrany aplikací. Tyto zásady poskytují základ ochrany dat společnosti po jejich stažení do mobilních aplikací, včetně mobilních aplikací Office. 
 
 | Vlastnost    | Popis                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
-| Stav      | Typ vlastnictví zařízení. Může být **Společnost**, **Osobní** a **Neznámý**. |
+| Stav      | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**) |
 | Název aplikace    | Název aplikace                                                           |
 | Název zařízení | Název typu zařízení                                                       |
 | Typ zařízení | Název typu zařízení                                                       |
-| Zásady    | Typ vlastnictví zařízení. Může být **Společnost**, **Osobní** a **Neznámý**. |
+| Zásady    | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**) |
 | Poslední synchronizace   | Časové razítko poslední synchronizace zařízení s Intune.                   |
+
+## <a name="enrollment-failure-reference"></a>Informace o neúspěšných registracích
+
+Tabulka Neúspěšné registrace obsahuje neúspěšné pokusy o registraci. Zařízení uvedená v níže uvedené tabulce se mohla následně během dalšího pokusu úspěšně zaregistrovat. Některé neúspěšné pokusy nemusí být uvedené. Informace o zmírnění dopadů nejsou k dispozici pro všechny chyby.
+
+| Sloupec tabulky | Popis |
+|-------------|----------|
+| Stav registrace | Počáteční čas, kdy uživatel poprvé zahájil registraci |
+| Operační systém | Operační systém zařízení |
+| Verze operačního systému | Verze operačního systému zařízení |
+| Chyba | Důvod chyby |
+
+### <a name="failure-details"></a>Podrobnosti chyby
+
+Po výběru řádku chyby se zobrazí další podrobnosti.
+
+| Oddíl | Popis |
+|-------------|----------|
+| Podrobnosti chyby | Podrobnější vysvětlení chyby |
+| Možná náprava | Navrhovaný postup k vyřešení chyby. Pro některé chyby nemusí být náprava uvedená. |
+| Prostředky (volitelné) | Odkazy na další čtení nebo oblasti na portálu |
+
+### <a name="enrollment-errors"></a>Chyby registrace
+
+| Chyba | Podrobnosti |
+|-------------|----------|
+| Časový limit nebo chyba iOSu | Došlo k vypršení časového limitu relace mezi zařízením a Intune, protože uživateli trvala registrace moc dlouho. |
+| Uživatel se nenašel nebo nemá licenci | Uživatel nemá licenci nebo je ze služby odebraný. |
+| Zařízení je už zaregistrované | Někdo se pokusil o registraci zařízení pomocí Portálu společnosti na zařízení, které má zaregistrované jiný uživatel. |
+| Nepřipojeno k Intune | Došlo k pokusu o registraci, když nebyla nakonfigurovaná autorita správy mobilních zařízení (MDM) Intune. |
+| Ověřování registrace nebylo úspěšné | Došlo k pokusu o registraci pomocí staré verze Portálu společnosti. |
+| Zařízení se nepodporuje | Zařízení nesplňuje minimální požadavky pro registraci v Intune. |
+| Nesplnila se omezení registrace | Tato registrace se zablokovala kvůli omezení registrace, které nakonfiguroval správce. |
+| Dosažení limitu zařízení | Tato registrace se zablokovala kvůli omezení počtu zařízení, které nakonfiguroval správce. |
+| Onboarding Apple | Registrace všech zařízení s iOSem se v tuto chvíli zablokovala kvůli chybějícímu nebo prošlému certifikátu Apple MDM Push Certificate v Intune. |
+| Zařízení se nezaregistrovalo předem | Zařízení se nezaregistrovalo předem jako podnikové a správce zablokoval všechny osobní registrace. |
+| Funkce se nepodporuje | Uživatel se zřejmě pokusil o registraci prostřednictvím metody, která není kompatibilní s konfigurací Intune. |
 
 ## <a name="collect-available-data-from-mobile-device"></a>Shromažďování dostupných dat z mobilních zařízení
 

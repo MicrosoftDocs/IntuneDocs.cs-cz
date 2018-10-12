@@ -6,7 +6,7 @@ keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 06/28/2017
+ms.date: 09/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 301159ad-5f7e-4fcc-86c7-f72a71701ff4
 ms.reviewer: chrisgree
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d295ade29522a5593993b5541311eadd9e4c9528
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 4714b0bbe566589d970a5d959f1f361940e5701b
+ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31027464"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47187831"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Změna přiřazení zásad podmíněného přístupu z klasického portálu Intune do portálu Azure Portal
 
@@ -179,6 +179,9 @@ Pokud jste nastavení protokolu Exchange Active Sync nakonfigurovali na klasick�
 12. V okně zásad podmíněného přístupu **Nový** zapněte přepínací tlačítko **Povolit zásadu** a pak klikněte na **Vytvořit**.
 
     ![Obrázek ukazující srovnání uživatelského rozhraní pro povolení zásad podmíněného přístupu na portálech Intune a Azure Portal](./media/reassign-ca-17.png)
+
+> [!NOTE]
+> Pokud nakonfigurujete možnost **Platformy zařízení**, uložení zásad se nezdaří a zobrazí se chyba „Konfigurace zásad není podporovaná“. Exchange ActiveSync nemůže identifikovat platformu, kterou používá připojující se zařízení. Při vytváření zásad pro zařízení Exchange ActiveSync se proto konfigurace specifických platforem zařízení nepodporuje.
 
 ## <a name="disable-conditional-access-policies-in-the-intune-classic-portal"></a>Vypnutí zásad podmíněného přístupu na klasickém portálu Intune
 

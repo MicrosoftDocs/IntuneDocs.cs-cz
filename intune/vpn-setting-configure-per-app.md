@@ -14,12 +14,12 @@ ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7cf005b225dd11ca6b95dbed0a82330544575f92
-ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
+ms.openlocfilehash: 87c3313fd7b5fc0705460e539164ac70779bebeb
+ms.sourcegitcommit: 77540295381a59918eb638ce9c1870209cf8af02
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347470"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46505763"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Nastavení virtuální privátní sítě (VPN) pro jednotlivé aplikace v Intune pro zařízení s iOSem
 
@@ -167,11 +167,11 @@ Přidružení aplikace k profilu se odebere během dalšího ohlášení zaříz
 - Profil a aplikace cílí na stejnou skupinu.
 - Odeberete konfiguraci sítě VPN pro jednotlivé aplikace z přiřazení aplikace.
 
-Přidružení aplikace k profilu bude dále existovat, dokud si koncový uživatel nevyžádá opětovnou instalaci z Portálu společnosti, pokud jsou splněné následující podmínky:
+Přidružení aplikace k profilu zůstane, dokud koncový uživatel na portálu společnosti nepožádá o přeinstalaci. Platí to za předpokladu, že jsou splněné následující podmínky:
 - Aplikace byla cílem záměru dostupné instalace.
 - Profil a aplikace cílí na stejnou skupinu.
 - Koncový uživatel si vyžádal instalaci aplikace z Portálu společnosti, což má za následek, že aplikace a profil se nainstalují na zařízení.
-- Odeberete konfiguraci sítě VPN pro jednotlivé aplikace z přiřazení aplikace.
+- Z přiřazené aplikace jste odebrali konfiguraci sítě VPN pro aplikaci nebo jste ji změnili.
 
 ## <a name="verify-the-connection-on-the-ios-device"></a>Ověření připojení na zařízení s iOSem
 

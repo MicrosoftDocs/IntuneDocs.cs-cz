@@ -15,12 +15,12 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 76c0b96a1759caad4a1052a7233c7dcc8cecfa3b
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: de77ad92eac4aa869aec504f1762ad6f216c74d2
+ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313713"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45602142"
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
@@ -83,29 +83,31 @@ Nastavení omezení typu zařízení můžete změnit podle následujícího pos
 8. U každé uvedené platformy vyberte, zda chcete **Povolit** nebo **Blokovat**  zařízení **v osobním vlastnictví**.
 9. Vyberte **OK**.
 
-### <a name="android-device-type-restrictions"></a>Omezení typů zařízení s Androidem
+### <a name="blocking-personal-android-devices"></a>Blokování osobních zařízení s Androidem
 - Když zablokujete registraci osobních zařízení s Androidem, stále půjde zaregistrovat osobní zařízení s pracovním profilem Androidu.
 - Nastavení zařízení s pracovním profilem Androidu jsou stejná jako nastavení zařízení s Androidem. Po změně nastavení pracovního profilu Androidu tomu už tak nebude.
 - Pokud zablokujete registraci pracovního profilu Androidu u osobních zařízení, budou se jako pracovní profil Androidu moci zaregistrovat jen firemní zařízení s Androidem.
 
-### <a name="windows-device-type-restrictions"></a>Omezení typů zařízení s Windows
-Když omezení typů zařízení s Windows nastavíte na možnost **Blokovat**, Intune u každého nového požadavku na registraci zařízení s Windows bude kontrolovat, zda je autorizován jako registrace ve společnosti. Neautorizované registrace se zablokují.
+### <a name="blocking-personal-windows-devices"></a>Blokování osobních zařízení s Windows
+Když zablokujete registraci osobních zařízení s Windows, Intune u každého nového požadavku na registraci zařízení s Windows zkontroluje, jestli se autorizoval jako firemní registrace. Neautorizované registrace se zablokují.
 
 K registraci zařízení s Windows ve společnosti jsou povoleny následující metody:
  - Uživatel se registruje pomocí [účtu správce registrace zařízení]( device-enrollment-manager-enroll.md).
 - Zařízení se registruje prostřednictvím programu [Windows AutoPilot](enrollment-autopilot.md).
+- K registraci zařízení se použije Windows Autopilot, ale nejedná se o jedinou možnost registrace MDM z nastavení Windows.
 - Číslo IMEI zařízení je uvedené v seznamu **Registrace zařízení** > **[Identifikátory podnikových zařízení](corporate-identifiers-add.md)**. (Nepodporuje se ve Windows Phone 8.1.)
 - Zařízení se registruje v rámci [balíčku hromadného zřizování](windows-bulk-enroll.md).
 - Zařízení se registruje prostřednictvím [automatické registrace z centra SCCM ke spolusprávě](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview#how-to-configure-co-management.md).
  
 Následující registrace služba Intune sice označuje jako registrace ve společnosti, ale budou zablokovány vzhledem k tomu, že správci Intune neumožňují kontrolu na úrovni jednotlivých zařízení:
- - [Automatická registrace MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) s [připojením k Azure Active Directory během instalace Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx.md).
-- [Automatická registrace MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) s [připojením k Azure Active Directory z nastavení Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-setup.md)
+ - [Automatická registrace MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) s [připojením k Azure Active Directory během instalace Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx.md)\*.
+- [Automatická registrace MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) s [připojením k Azure Active Directory z nastavení Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-setup.md).*
  
 Zablokují se také následující metody osobní registrace:
-- [Automatická registrace MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) s [přidáním pracovního účtu z nastavení Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-registered-devices-windows10-setup.md).
+- [Automatická registrace MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) s [přidáním pracovního účtu z nastavení Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-registered-devices-windows10-setup.md)\*.
 - Volba [Jen registrace MDM]( https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) v nastavení Windows.
 
+\*Nezablokují se, pokud se k registraci použije Autopilot.
 
 ## <a name="set-device-limit-restrictions"></a>Nastavení omezení limitů počtu zařízení
 

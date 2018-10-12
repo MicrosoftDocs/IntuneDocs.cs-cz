@@ -15,12 +15,12 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d11356c16965e3ba7631275368c9723a2db0ecc9
-ms.sourcegitcommit: 443b4cb3390da47bf1e497b1f0c0137a5ddda7bd
+ms.openlocfilehash: eb4a80a9de03844c6fffa5e56f09c375645f9188
+ms.sourcegitcommit: a30cfdb3d3f97b6d5943db2d842011a6f60115f0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43675011"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864537"
 ---
 # <a name="manage-internet-access-using-protected-browser-policies-with-microsoft-intune"></a>Správa přístupu k internetu pomocí zásad chráněného prohlížeče v Microsoft Intune
 
@@ -53,10 +53,9 @@ Zásady chráněného prohlížeče můžete vytvořit pro následující typy z
 
 -   Zařízení se systémem Android 4 nebo novější verzí
 
--   Zařízení se systémem iOS 8.0 nebo novější verzí
+-   Zařízení se systémem iOS 10.0 nebo novější verzí
 
 >[!IMPORTANT]
->Od října 2017 aplikace Intune Managed Browser pro Android podporuje jenom zařízení se systémem Android 4.4 a novějším. Aplikace Intune Managed Browser pro iOS bude podporovat jen zařízení se systémem iOS 9.0 a novější.
 >Starší verze systému Android a iOS budou moct Managed Browser dál používat, ale nepůjde do nich nainstalovat nové verze této aplikace a nebudou mít přístup ke všem jejím možnostem. Doporučujeme vám tato zařízení aktualizovat na podporovanou verzi operačního systému.
 
 

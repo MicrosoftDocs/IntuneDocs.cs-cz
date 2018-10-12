@@ -15,19 +15,19 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 20e9d4799b9ea4329c8286f0b75ea2a7d555e07b
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
+ms.openlocfilehash: 9529560fca1fcd30fc479c0eac8bd7bc967fa952
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253755"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562846"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Jako správce IT můžete Microsoft Intune použít ke správě mobilních aplikací, které používají pracovníci vaší společnosti. Tato funkce doplňuje správu zařízení a ochranu dat. Jednou z priorit správce je zajistit, aby koncoví uživatelé měli přístup k aplikacím, které potřebují ke své práci. To může být náročné z těchto důvodů:
+Jako správce IT můžete Microsoft Intune použít ke správě klientských aplikací, které používají pracovníci vaší společnosti. Tato funkce doplňuje správu zařízení a ochranu dat. Jednou z priorit správce je zajistit, aby koncoví uživatelé měli přístup k aplikacím, které potřebují ke své práci. To může být náročné z těchto důvodů:
 - Existuje široký sortiment platforem zařízení a typů aplikací.
 - Potřebujete spravovat aplikace na firemních zařízeních i na osobních zařízeních uživatelů.
 - Musíte zajistit zabezpečení sítě a dat.
@@ -68,7 +68,7 @@ Většinu toho, co souvisí s aplikacemi, najdete v úloze **Klientské aplikace
     Intune se nachází v části **Monitorování a správa**.
 3. V podokně **Microsoft Intune** vyberte **Klientské aplikace**.
 
-    ![Podokno úloh Mobilní aplikace](./media/apps-workload.png)
+    ![Podokno úloh Klientské aplikace](./media/apps-workload.png)
 
 Další čtyři části popisují možnosti dostupné v podokně **Klientské aplikace**.
 

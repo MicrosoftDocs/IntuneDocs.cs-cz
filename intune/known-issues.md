@@ -14,12 +14,12 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 421eea460ee7c00b79a63a014291a8abb88ddaea
-ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
+ms.openlocfilehash: 4e523e4fb6505b2faaa0aa776b89454524130ba8
+ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347793"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47187848"
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Známé problémy v Microsoft Intune
 
@@ -106,6 +106,15 @@ Další informace najdete v článku [Co je dodržování předpisů zařízen�
 
 <!-- ## Enrollment -->
 
+## <a name="conditional-access"></a>podmíněný přístup
+
+### <a name="conditional-access-settings-from-intune-do-not-show-up-in-new-console"></a>Nastavení podmíněného přístupu z Intune se v nové konzole nezobrazí
+
+Po migraci tenanta na Azure Portal se nastavení podmíněného přístupu budou dále používat, avšak na portálu Azure Intune se nezobrazí. 
+
+Pokud chcete tato nastavení zobrazit a spravovat na webu Azure Portal, je potřeba stará nastavení odebrat z klasického portálu a znovu je vytvořit na webu Azure Portal. 
+
+Další informace najdete v [doporučených postupech pro podmíněný přístup v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/best-practices).
 
 ## <a name="data-protection"></a>Ochrana dat
 

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ce017f323ebbe4095f5aa31990878afce0116573
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 80b860810800ca887ac55de6fbfc41b2fded3b12
+ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321233"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028728"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -82,7 +82,7 @@ Před konfigurací profilů certifikátů proveďte následující kroky. Pro ty
 Vytvořte účet uživatele domény, který chcete použít jako účet služby NDES. Tento účet zadáte při konfiguraci šablon ve vydávající certifikační autoritě před instalací a konfigurací NDES. Ověřte, že uživatel má výchozí práva **Povolit místní přihlášení**, **Přihlásit jako službu** a **Přihlásit jako dávkovou úlohu**. Některé organizace mají zásady posílení zabezpečení, které tato práva zakazují.
 
 #### <a name="step-2---configure-certificate-templates-on-the-certification-authority"></a>Krok 2: Konfigurace šablon certifikátů v certifikační autoritě
-V této úloze:
+Činnosti uskutečněné v tomto kroku:
 
 - Konfigurujete šablonu certifikátu pro NDES
 - Publikujete šablonu certifikátu pro NDES
@@ -145,7 +145,7 @@ Konfigurace certifikační autority, aby žadateli umožňovala zadat dobu platn
 3. Ověřte, že je šablona publikovaná, jejím zobrazením ve složce **Šablony certifikátů** .
 
 #### <a name="step-3---configure-prerequisites-on-the-ndes-server"></a>Krok 3: Konfigurace požadavků na serveru NDES
-V této úloze:
+Činnosti uskutečněné v tomto kroku:
 
 - Přidáte NDES do Windows Serveru a konfigurujete službu IIS pro podporu NDES
 - Přidáte účet služby NDES do skupiny IIS_IUSR
@@ -156,7 +156,7 @@ V této úloze:
    1. V průvodci vyberte možnost **Služba AD CS (Active Directory Certificate Services)** , abyste získali přístup ke službám rolí ve službě AD CS. Vyberte **Službu zápisu síťových zařízení**, zrušte zaškrtnutí políčka **Certifikační autorita**a pak dokončete průvodce.
 
       > [!TIP]
-      > V části **Průběh instalace** nezaškrtávejte políčko **Zavřít**. Místo toho vyberte odkaz **Konfigurovat službu AD CS (Active Directory Certificate Services) na cílovém serveru**. Otevře se průvodce **konfigurací služby AD CS**, který použijete pro další krok. Po otevření Konfigurace služby AD CS můžete zavřít Průvodce přidáním rolí a funkcí.
+      > V části **Průběh instalace** nezaškrtávejte políčko **Zavřít**. Místo toho vyberte odkaz **Konfigurovat službu AD CS (Active Directory Certificate Services) na cílovém serveru**. Otevře se průvodce **Konfigurace služby AD CS**, který použijete pro další krok. Po otevření Konfigurace služby AD CS můžete zavřít Průvodce přidáním rolí a funkcí.
 
    2. Když se na server přidá NDES, průvodce nainstaluje taky službu IIS. Ujistěte se, že má služba IIS následující konfigurace:
 
@@ -181,7 +181,7 @@ V této úloze:
     `setspn –s http/Server01.contoso.com contoso\NDESService`
 
 #### <a name="step-4---configure-ndes-for-use-with-intune"></a>Krok 4: Konfigurace NDES pro použití s Intune
-V této úloze:
+Činnosti uskutečněné v tomto kroku:
 
 - Nakonfigurujete NDES pro použití s vydávající certifikační autoritou
 - Vytvoříte vazbu certifikátu serveru ověřování (SSL) ve službě IIS
@@ -190,7 +190,7 @@ V této úloze:
 1. Na serveru NDES otevřete průvodce konfigurací služby AD CS a pak proveďte následující aktualizace:
 
     > [!TIP]
-    > Pokud jste klikli na odkaz v předchozí úloze, je už tento průvodce otevřený. Jinak spusťte Správce serveru, abyste získali přístup ke konfiguraci po nasazení pro službu AD CS (Active Directory Certificate Services).
+    > Pokud jste klikli na odkaz v předchozím kroku, je už tento průvodce otevřený. Jinak spusťte Správce serveru, abyste získali přístup ke konfiguraci po nasazení pro službu AD CS (Active Directory Certificate Services).
 
    - Na stránce **Služby rolí** vyberte **Služba zápisu síťových zařízení**.
    - V části **Účet Služby zápisu síťových zařízení** zadejte účet služby NDES.
@@ -202,7 +202,7 @@ V této úloze:
 
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\`
 
-    Pokud chcete aktualizovat tento klíč, určete **účel** šablony certifikátu (najdete ho na kartě **Vyřízení žádosti**). Potom aktualizujte odpovídající položku registru tak, že existující data nahradíte názvem šablony certifikátu (nikoli zobrazovaným názvem šablony), kterou jste zadali v úloze 1. Následující tabulka mapuje účel šablony certifikátu na hodnoty v registru:
+    Pokud chcete aktualizovat tento klíč, určete **účel** šablony certifikátu (najdete ho na kartě **Vyřízení žádosti**). Potom aktualizujte odpovídající položku registru tak, že existující data nahradíte názvem šablony certifikátu (nikoli zobrazovaným názvem šablony), který jste určili v kroku 2. Následující tabulka mapuje účel šablony certifikátu na hodnoty v registru:
 
     |Účel šablony certifikátu (na kartě Vyřízení žádosti)|Upravovaná hodnota registru|Hodnota zobrazená v konzole pro správu Intune pro profil SCEP|
     |---|---|---|
@@ -229,7 +229,7 @@ V této úloze:
 
     ![Test NDES](./media/SCEP_NDES_URL.png)
 
-    Pokud se zobrazí **503 - Služba není k dispozici** , zkontrolujte prohlížeč událostí. Je pravděpodobné, že se fond aplikací zastavil kvůli chybějícímu oprávnění pro uživatele NDES. Tato práva jsou popsaná v úloze 1.
+    Pokud se zobrazí **503 - Služba není k dispozici** , zkontrolujte prohlížeč událostí. Je pravděpodobné, že se fond aplikací zastavil kvůli chybějícímu oprávnění pro uživatele NDES. Tato práva jsou popsaná v kroku 1.
 
 ##### <a name="install-and-bind-certificates-on-the-ndes-server"></a>Instalace a vytvoření vazby certifikátů na serveru NDES
 
@@ -278,7 +278,7 @@ V této úloze:
 4. Restartujte server NDES. Server je teď připravený na podporu konektoru Certificate Connector.
 
 #### <a name="step-5---enable-install-and-configure-the-intune-certificate-connector"></a>Krok 5: Povolení, instalace a konfigurace Intune Certificate Connectoru
-V této úloze:
+Činnosti uskutečněné v tomto kroku:
 
 - Povolíte podporu NDES ve službě Intune.
 - Stáhnete Certificate Connector a pak ho nainstalujete a nakonfigurujete na serveru, který je hostitelem role Služba zápisu síťových zařízení (NDES) ve vašem prostředí. Pokud chcete zvýšit škálování implementace NDES, můžete nainstalovat více serverů NDES s Microsoft Intune Certificate Connectorem.
@@ -299,7 +299,7 @@ V této úloze:
     > [!NOTE]
     > Při instalaci NDES pro samostatnou službu Intune se s konektorem Certificate Connector automaticky nainstaluje služba CRP. Při použití služby Intune se Správcem konfigurace nainstalujete bod registrace certifikátu (CRP) jako samostatnou roli serveru.
 
-6. Pokud se zobrazí výzva k zadání klientského certifikátu pro konektor Certificate Connector, klikněte na **Vybrat** a vyberte certifikát pro **ověřování klientů**, který jste nainstalovali na server NDES v úloze 3.
+6. Pokud se zobrazí výzva k zadání klientského certifikátu pro konektor Certificate Connector, klikněte na **Vybrat** a vyberte certifikát pro **ověřování klientů**, který jste nainstalovali na server NDES v kroku 4.
 
     Po vybrání certifikátu pro ověřování klientů se vrátíte na plochu **Klientský certifikát pro konektor Certificate Connector služby Microsoft Intune** . I když vybraný certifikát není zobrazený, vyberte **Další** a zobrazte vlastnosti certifikátu. Vyberte **Další** a potom **Nainstalovat**.
 
@@ -450,7 +450,7 @@ Služba Intune Connector od verze 6.1806.x.x zaznamenává události do **Prohl�
 | -------------   | -------------   | -------------      |
 | 0x00000000 | Úspěch  | Úspěch |
 | 0x00000400 | PKCS_Issue_CA_Unavailable  | Certifikační autorita není platná nebo není dostupná. Ověřte, že je certifikační autorita dostupná a že s ní váš server může komunikovat. |
-| 0x00000401 | Symantec_ClientAuthCertNotFound  | Certifikát ověřování klienta Symantec se v místním úložišti certifikátů nenašel. Další informace najdete v článku o [instalaci certifikátu RA Symantec](https://docs.microsoft.com/en-us/intune/certificates-symantec-configure#install-the-symantec-registration-authorization-certificate).  |
+| 0x00000401 | Symantec_ClientAuthCertNotFound  | Certifikát ověřování klienta Symantec se v místním úložišti certifikátů nenašel. Další informace najdete v článku o [instalaci certifikátu RA Symantec](https://docs.microsoft.com/intune/certificates-symantec-configure#install-the-symantec-registration-authorization-certificate).  |
 | 0x00000402 | RevokeCert_AccessDenied  | Zadaný účet nemá oprávnění k odvolání certifikátu z certifikační autority. V podrobnostech zprávy o události vyhledejte pole Název certifikační autority, abyste zjistili vydávající certifikační autoritu.  |
 | 0x00000403 | CertThumbprint_NotFound  | Certifikát odpovídající vašemu vstupu se nepodařilo najít. Zaregistrujte si Certificate Connector a zkuste to znovu. |
 | 0x00000404 | Certificate_NotFound  | Certifikát odpovídající zadanému vstupu se nepodařilo najít. Zaregistrujte si znovu Certificate Connector a zkuste to znovu. |

@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 7/5/2018
+ms.date: 9/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4e43ab0d088edc87e814ad2c4317d7b7336d34d5
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: f49e0bc496f176434577d42d3a372fc4e8bc22d3
+ms.sourcegitcommit: 7063072c94e43aefc6be0072780622a1da8485d5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312892"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46119099"
 ---
 # <a name="android-enterprise-kiosk-settings-in-intune"></a>Nastavení beznabídkového režimu Androidu Enterprise v Intune
 
@@ -45,9 +45,9 @@ Profily Androidu v beznabídkovém režimu podporují následující nastavení 
 - **Povolit instalaci z neznámých zdrojů**: Zvolte **Povolit**, pokud uživatelům chcete umožnit instalaci z neznámých zdrojů.
 - **Aktualizace systému**: Zvolením některé možnosti určete, jak má zařízení zpracovat aktualizace OTA (Over The Air):
     - **Výchozí ze zařízení**: Použije se výchozí nastavení zařízení.
-    - **Automaticky**: Aktualizace se nainstalují automaticky.
-    - **Odloženo**: Aktualizace se odloží na pozdější datum.
-    - **Časové období údržby**: V časovém období údržby jsou uživatelé vyzváni ke schválení aktualizace.
+    - **Automaticky**: Aktualizace se instalují automaticky bez zásahu uživatele. Po nastavení této zásady se hned nainstalují všechny čekající aktualizace.
+    - **Odloženo**: Aktualizace se odloží o 30 dní. Po 30 dnech Android uživatele vyzve k instalaci aktualizace. Výrobci zařízení nebo mobilní operátoři mohou zakázat (vyloučit) odklad důležitých aktualizací zabezpečení. Vynechaná aktualizace zobrazí uživateli zařízení zprávu systému. 
+    - **Časové období údržby**: Aktualizace se instalují automaticky během časového období údržby, které nastavíte v Intune. Pokus o instalaci se opakuje každý den po dobu 30 dní. Instalace může selhat kvůli nedostatku místa nebo slabé baterii. Po 30 dnech Android uživateli zobrazí výzvu k instalaci. Toto okno se také používá k instalaci aktualizací aplikací Play. Tato možnost se doporučuje u vyhrazených zařízení, jako jsou veřejné terminály, protože veřejné terminály s jedinou aplikací, která běží v popředí, mohou být aktualizovány. 
 
 ## <a name="kiosk-settings"></a>Nastavení veřejného terminálu
 

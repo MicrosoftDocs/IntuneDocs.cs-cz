@@ -15,12 +15,12 @@ ms.assetid: 42605e6e-5b84-44ff-b86e-346ea123b53e
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 66f26811f5021b71c62a2e994c73e2144409d199
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: 3f72747b1a30494304521b23054533b9f360b2fc
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329541"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562744"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Jak z aplikací spravovaných pomocí Intune vymazat jenom firemní data
 
@@ -44,7 +44,7 @@ Pokud chcete selektivně odebrat data firemních aplikací, vytvořte žádost o
 
     ![Snímek obrazovky s podoknem Microsoft Intune](./media/apps-selective-wipe01.png)
 
-3.  V podokně **Mobilní aplikace** zvolte **Selektivní vymazání aplikace**.
+3.  V podokně **Klientské aplikace** zvolte **Selektivní vymazání aplikace**.
 
 4.  Zvolte **Nová žádost o vymazání**. Otevře se podokno **Nová žádost o vymazání**.
 
@@ -62,7 +62,7 @@ Služba vytvoří a sleduje samostatnou žádost o vymazání pro každou chrán
 
 Můžete získat souhrnnou sestavu, která zobrazuje celkový stav žádostí o vymazání a také počet nevyřízených a neúspěšných žádostí. Další podrobnosti získáte tímto postupem:
 
-1.  V podokně **Mobilní aplikace – Selektivní vymazání aplikace** můžete zobrazit seznam žádostí seskupených podle uživatelů. Protože systém vytvoří žádost o vymazání pro každou chráněnou aplikaci spuštěnou na zařízení, může být u uživatele více žádostí. Stav označuje, jestli je žádost o vymazání **nevyřízená**, **selhala** nebo byla **úspěšná**.
+1.  V podokně **Klientské aplikace – Selektivní vymazání aplikace** si můžete prohlédnout seznam žádostí seskupených po uživatelích. Protože systém vytvoří žádost o vymazání pro každou chráněnou aplikaci spuštěnou na zařízení, může být u uživatele více žádostí. Stav označuje, jestli je žádost o vymazání **nevyřízená**, **selhala** nebo byla **úspěšná**.
 
     ![Snímek obrazovky se stavem žádosti o vymazání v podokně Selektivní vymazání aplikace](./media/wipe-request-status-1.png)
 
@@ -75,7 +75,7 @@ Uvidíte také název zařízení a jeho typ, což vám pomůže při orientaci 
 
 Vymazání v čekajícím stavu se zobrazují, dokud je ručně neodstraníte. Ruční odstranění žádosti o vymazání:
 
-1.  Přejděte do podokna **Mobilní aplikace – Selektivní vymazání aplikace**.
+1.  Přejděte do podokna **Klientské aplikace – Selektivní vymazání aplikace**.
 
 2.  V seznamu klikněte pravým tlačítkem na žádost o vymazání, kterou chcete odstranit, a zvolte **Odstranit žádost o vymazání**.
 

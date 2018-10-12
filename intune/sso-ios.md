@@ -6,19 +6,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/2/2018
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 010ed8511b042d6f764ba947f616d76521588f42
-ms.sourcegitcommit: 91802e78cd5014d20a828ca25a54a381d452f0f8
+ms.openlocfilehash: bdc7f4f8f796d04f5c709298cd654bc2cdc32d0e
+ms.sourcegitcommit: a30cfdb3d3f97b6d5943db2d842011a6f60115f0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34216254"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864604"
 ---
 # <a name="configure-microsoft-intune-for-ios-device-single-sign-on"></a>Nakonfigurování Microsoft Intune na jednotné přihlašování pro zařízení s iOSem
 
@@ -84,7 +84,7 @@ Když se uživatel připojí k některému z těchto webů, zařízení s iOSem 
 > [!NOTE]
 > V těchto adresách URL se musí používat správně naformátovaný plně kvalifikovaný název domény. Apple vyžaduje, aby tyto adresy byly ve formátu `http://<yourURL.domain>`.
 
-Odpovídající vzory adres URL musí mít na začátku `http://` nebo `https://`. Provádí se prosté ověření shody řetězců, takže předpona adresy URL `http://www.contoso.com/` neodpovídá adrese `http://www.contoso.com:80/`. V iOSu 9.0 a v novějších verzích se ale k určení všech odpovídajících hodnot může použít jeden zástupný znak \*. Například adresa `http://*.contoso.com/` odpovídá adrese `http://store.contoso.com/` i adrese `http://www.contoso.com`.
+Odpovídající vzory adres URL musí mít na začátku `http://` nebo `https://`. Provádí se prosté ověření shody řetězců, takže předpona adresy URL `http://www.contoso.com/` neodpovídá adrese `http://www.contoso.com:80/`. V iOSu 10.0 a v novějších verzích se ale k určení všech odpovídajících hodnot může použít jeden zástupný znak \*. Například adresa `http://*.contoso.com/` odpovídá adrese `http://store.contoso.com/` i adrese `http://www.contoso.com`.
 Vzory `http://.com` a `https://.com` odpovídají všem adresám URL typu HTTP a HTTPS, v uvedeném pořadí.
 
 ### <a name="apps-that-will-use-single-sign-on"></a>Aplikace, které použijí jednotné přihlašování

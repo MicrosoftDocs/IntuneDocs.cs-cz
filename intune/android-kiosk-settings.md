@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 7/5/2018
+ms.date: 9/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cef98527ee2c281547f8046f3c6f08275d8f0807
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: 0b2a31a90dc0d88386a829756116edebd28990f9
+ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329379"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45602176"
 ---
 # <a name="kiosk-settings-for-android-devices-in-intune"></a>Nastavení beznabídkového režimu zařízení s Androidem v Intune
 
@@ -27,7 +27,7 @@ Nastavením konfigurace zařízení můžete zařízení nastavit do beznabídko
 
 Pokud je profil omezení zařízení v beznabídkovém režimu nastavený na **Beznabídkový režim** = **Veřejný terminál s jednou aplikací**, mají uživatelé přístup jen k jedné aplikaci. Když se zařízení nakonfigurované v tomto režimu zapne, spustí se tato konkrétní aplikace. Uživatelé nemůžou otevírat nové aplikace ani měnit spuštěnou aplikaci.
 
-1. Zajistěte, aby aplikace, kterou chcete používat na zařízení v beznabídkovém režimu, byla [nasazená do zařízení](apps-deploy.md) a přiřazená ke skupině zařízení, kterou jste vytvořili pro zařízení v beznabídkovém režimu.
+1. Zajistěte, aby aplikace, kterou chcete na zařízení v beznabídkovém režimu používat, byla [nasazena do zařízení](apps-deploy.md) a přiřazena skupině zařízení, kterou jste pro tato zařízení vytvořili.
 2. Přejděte na [portál Intune](https://portal.azure.com) a zvolte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. V okně **Vytvořit profil** nastavte následující pole:
      - **Název**
@@ -51,7 +51,7 @@ Následujícím postupem nastavíte u zařízení s Androidem v beznabídkovém 
 2. [Přidání a přiřazení aplikací, které lze používat v beznabídkovém režimu](#add-and-assign-apps-that-can-be-used-in-kiosk-mode)
 3. (Volitelné) [Přidání webových odkazů, které lze používat v beznabídkovém režimu](#add-web-links-that-can-be-used-in-kiosk-mode)
 
-### <a name="import-and-deply-the-managed-home-screen-app"></a>Import a nasazení aplikace Managed Home Screen
+### <a name="import-and-deploy-the-managed-home-screen-app"></a>Import a nasazení aplikace Managed Home Screen
 
 1. Přejděte na [stránku Managed Home Screen v obchodu Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) a přihlaste se pod stejným účtem, který používáte pro jiné aplikace ze spravovaného obchodu Google Play.
 2. Zvolte **Schválit**.
@@ -59,6 +59,9 @@ Následujícím postupem nastavíte u zařízení s Androidem v beznabídkovém 
 4. Zvolte **Aplikace** > **Managed Home Screen** > **Přiřazení** > **Přidat skupinu**.
 5. Jako **Typ přiřazení** zvolte **Povinné**.
 6. Zvolte **Zahrnuté skupiny** > **Vybrat skupiny, které se zahrnou** > zvolte skupinu zařízení, kterou jste vytvořili pro zařízení v beznabídkovém režimu > **Vybrat** > **OK** > **OK** > **Uložit**.
+
+> [!NOTE]
+> Když přidáte aplikaci Managed Home Screen do profilu beznabídkového režimu s více aplikacemi, přidá se ikona. Ale když tuto ikonu vyberete, nic se nestane. Proto tuto aplikaci nemusíte do profilu beznabídkového režimu s více aplikacemi ani přidávat.
 
 ### <a name="add-and-assign-apps-that-can-be-used-in-kiosk-mode"></a>Přidání a přiřazení aplikací, které lze používat v beznabídkovém režimu
 
@@ -76,7 +79,7 @@ U každé aplikace, která má být na zařízeních v beznabídkovém režimu d
 3. Zvolte **Konfigurovat** a zadejte potřebné informace. Nemusíte přidávat obrázek loga, protože se automaticky načte ze souboru favicon.ico daného webu.
 4. Zvolte **OK** > **Přidat**.
 
-Aplikaci webového prohlížeče nasaďte do zařízení veřejného terminálu pomocí [Mobile Apps](apps-add.md).
+Ověřte, že jste do zařízení s beznabídkovým režimem nasadili webovou aplikaci. Další informace najdete v části [Přidání webových aplikací do Microsoft Intune](web-app.md).
 
 ### <a name="create-a-multi-app-kiosk-profile"></a>Vytvoření profilu beznabídkového režimu s více aplikacemi
 

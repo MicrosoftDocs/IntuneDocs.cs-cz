@@ -1,12 +1,11 @@
 ---
-title: Správa počítačů pomocí klientského softwaru
-titlesuffix: Microsoft Intune
+title: Správa počítačů s klientským softwarem v Microsoft Intune – Azure | Microsoft Docs
 description: Spravujte počítače s Windows pomocí instalace klientského softwaru Intune.
 keywords: ''
-author: dougeby
-ms.author: dougeby
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 01/01/2018
+ms.date: 09/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +14,12 @@ ms.assetid: 3b8d22fe-c318-4796-b760-44f1ccf34312
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic-keep
-ms.openlocfilehash: 5a248345a40cd7cfcff3883643562923f9535d3b
-ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
+ms.openlocfilehash: ef21f22a4808518ce8557b761e4181f8f6a655c3
+ms.sourcegitcommit: ed97b68f08c1a8469f0b45bc1c839a0b5f5c71e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41910633"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45978242"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Správa počítačů s Windows jako počítačů prostřednictvím softwarového klienta Intune
 
@@ -57,6 +56,9 @@ S využitím tohoto softwarového klienta můžete přes Intune spravovat až 7�
 |Oprávnění správce|Účet, který instaluje klientský software, musí mít oprávnění místního správce pro toto zařízení.|
 |Instalační služba systému Windows verze 3.1|Na počítači musí být Instalační služba systému Windows minimálně verze 3.1.<br /><br />Pokud chcete zobrazit verzi Instalační služby systému Windows na počítači:<br /><br />  Na počítači klikněte pravým tlačítkem myši na **%windir%\System32\msiexec.exe** a potom klikněte na **Vlastnosti**.<br /><br />Nejnovější verzi Instalační služby systému Windows můžete stáhnout ze stránky [Windows Installer Redistributables](http://go.microsoft.com/fwlink/?LinkID=234258) na webu Microsoft Developer Network.|
 |Odebrání nekompatibilního klientského softwaru|Před instalací klientského softwaru Intune odinstalujte z počítače tento klientský software: Configuration Manager, Operations Manager a Service Manager.|
+
+> [!WARNING]
+> Microsoft oznámil, že [podpora Windows 7 končí 14 ledna 2020](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020). K tomuto datu přestane také Intune podporovat zařízení s Windows 7. Microsoft důrazně doporučuje přechod na Windows 10, abyste zabránili přerušení služeb a podpory. 
 
 ## <a name="deploying-the-intune-software-client"></a>Nasazení softwarového klienta Intune
 Jako správce Intune můžete softwarového klienta Intune zpřístupnit uživatelům různými způsoby. Pokyny najdete v článku [Instalace softwarového klienta Intune na počítače s Windows](install-the-windows-pc-client-with-microsoft-intune.md).

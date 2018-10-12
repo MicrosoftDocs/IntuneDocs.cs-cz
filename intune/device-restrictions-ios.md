@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 71ed2458e35934de9da297140d49d6d4128b0784
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: 677b3853d1923a52572d8088c885f794175c4d52
+ms.sourcegitcommit: a13d1eafc979a9cfeb4adbdea861e2784c2b1068
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329814"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46329993"
 ---
 # <a name="microsoft-intune-ios-device-restriction-settings"></a>Nastavení omezení pro zařízení s iOSem v Microsoft Intune
 
@@ -114,7 +114,7 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 
 -   **Přístup k Řídicímu centru z uzamčeného zařízení** – Povolí uživateli přístup k aplikaci řídicího centra, když je zařízení zamknuté.
 -   **Oznámení na uzamčeném zařízení** – Povolí uživateli přístup k zobrazení oznámení bez odemknutí zařízení.
--   **Passbook na uzamčeném zařízení** – Povolí uživateli přístup k aplikaci Passbook, když je zařízení zamknuté.
+-   **Oznámení Walletu, když je zařízení zamknuté** – Povolí uživateli přístup k aplikaci Wallet, když je zařízení zamknuté.
 -   **Zobrazení Dnes na uzamčené obrazovce** – Povolí uživateli zobrazovat zobrazení Dnes, když je zařízení zamknuté.
 
 ## <a name="app-store-doc-viewing-gaming"></a>App Store, zobrazování dokumentů, hraní her

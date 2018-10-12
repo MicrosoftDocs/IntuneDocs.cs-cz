@@ -6,7 +6,7 @@ keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 08/16/2018
+ms.date: 09/14/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 4189e9357c7ed135ab219b38f22d34a09ebb5318
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
+ms.openlocfilehash: 5acdcd0a8c2fcb906f0b40e2c1ab937559c7ae01
+ms.sourcegitcommit: 445a54dc6826a549d770a9953549ae2191d391c2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253676"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45727573"
 ---
 # <a name="what-are-app-protection-policies"></a>Co jsou zásady ochrany aplikací?
 
@@ -103,7 +103,7 @@ Předchozí obrázek znázorňuje vrstvy ochrany, které řešení MDM a zásady
 
 -   Chránit před únikem firemních dat v uživatelských aplikacích a službách
 
--   Aplikovat omezení (Uložit jako, schránka, kód PIN atd.) pro mobilní aplikace
+-   Používat v klientských aplikacích omezení (Uložit jako, schránka, kód PIN apod.)
 
 -   Vymazat firemní data z aplikací bez nutnosti tyto aplikace ze zařízení odebrat
 
@@ -122,6 +122,18 @@ Je ale potřeba mít na paměti některá omezení, jako například:
 -   V těchto zařízeních nejde zřídit profily certifikátů.
 
 -   V těchto zařízeních nejde zřídit firemní sítě Wi-Fi a nastavit síť VPN.
+
+## <a name="app-protection-global-policy"></a>Globální zásada ochrany aplikací
+
+Když správce OneDrivu přejde na web **admin.office.com** a vybere **Zařízení**, může nastavit ovládací prvky **správy mobilních aplikací** pro klientské aplikace OneDrivu a SharePointu. 
+
+V tomto nastavení, které je přístupné na konzole pro správu OneDrivu, může nakonfigurovat speciální **globální** zásadu ochrany aplikací v Intune. Tato globální zásada se dá použít pro všechny uživatele v tenantovi, ale nedovoluje řídit adresování zásad. 
+
+Jakmile ji zapnete, budou aplikace OneDrivu a SharePointu pro iOS a Android automaticky chráněny vybraným nastavením. Odborník na IT může vytvořenou zásadu upravit v konzole Intune, kde může přidat další cílové aplikace a měnit její nastavení. 
+
+Implicitně smí existovat jenom jedna **globální** zásada pro tenanta. K vytvoření dalších globálních zásad pro tenanta je možné použít [rozhraní Graph API v Intune](intune-graph-apis.md). Tento postup se ale nedoporučuje. Vytvoření dalších globálních zásad se nedoporučuje kvůli možným komplikacím při řešení potíží s implementací této zásady.
+
+**Globální** zásada sice platí pro všechny uživatele v tenantovi, ale každá standardní zásada ochrany aplikací v Intune toto nastavení přepíše.
 
 
 ## <a name="multi-identity"></a>Víc identit

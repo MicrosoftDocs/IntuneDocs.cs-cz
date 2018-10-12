@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 18b4ab35627e1ccb694104f3f5800e5fb07dd1c7
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: e71f49c6a336efa5c15d8f10e664ddbf9b0579d0
+ms.sourcegitcommit: 5bfc7a1375fdb2992b9b5d4f6d1b34eec12457ae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313422"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45533655"
 ---
 # <a name="automatically-enroll-macos-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení s macOS do Programu registrace zařízení Apple
 
@@ -30,7 +30,7 @@ Tento článek vám pomůže nastavit registraci zařízení s macOS koupených 
 
 K nastavení registrace do programu DEP můžete použít portál Intune nebo portál Programu registrace zařízení Apple (DEP). Vytvoříte registrační profily DEP obsahující nastavení aplikovaná na zařízení během registrace.
 
-Registrace DEP mimochodem se [správcem registrace zařízení](device-enrollment-manager-enroll.md) nefunguje.
+Registrace DEP nefunguje se [správcem registrace zařízení](device-enrollment-manager-enroll.md) ani s [Apple School Managerem](apple-school-manager-set-up-ios.md).
 
 <!--
 **Steps to enable enrollment programs from Apple**

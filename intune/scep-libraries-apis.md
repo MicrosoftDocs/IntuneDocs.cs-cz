@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/31/2018
+ms.date: 09/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 423bfc02edb9260adadf0a6dc67e6299639c7fbb
-ms.sourcegitcommit: 8f68cd3112a71d1cd386da6ecdae3cb014d570f2
+ms.openlocfilehash: 31c083dcd2087de99830317d892750a42cc5ae6d
+ms.sourcegitcommit: ae62a269778cdbf1d207cd017de522f934b030e9
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39575045"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44700978"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Použití rozhraní API k přidání externích certifikačních autorit pro SCEP do Intune
 
@@ -125,6 +125,13 @@ Konfigurace musí obsahovat následující vlastnosti:
     - AAD_APP_KEY="klíč aplikace Azure získaný během procesu nasazení"
     - TENANT="ID tenanta získané během procesu nasazení."
     - PROVIDER_NAME_AND_VERSION="informace sloužící k identifikaci produktu a jeho verze"
+    
+Pokud vaše řešení vyžaduje proxy (s ověřováním nebo bez něj), přidejte následující vlastnosti:
+
+    - PROXY_HOST="Hostitel, který hostuje proxy."
+    - PROXY_PORT="Port, na kterém proxy naslouchá."
+    - PROXY_USER="Uživatelské jméno, které se použije, pokud proxy používá základní ověřování."
+    - PROXY_PASS="Heslo, které se použije, pokud proxy používá základní ověřování."
 
 Vyvolání výjimky:
 

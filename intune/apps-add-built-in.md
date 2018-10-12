@@ -15,12 +15,12 @@ ms.assetid: 0ec8de66-5a0f-4c8d-afbf-c2becc7d6eec
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 908135e93fd3980af9d9e80d9c5cf3b4a8abddc3
-ms.sourcegitcommit: d047a692c798e1fb61ee43a487d6332bce344610
+ms.openlocfilehash: 62a7f2f45ccd98612e56e253945974a8eb193f25
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44058741"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562710"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Přidání integrovaných aplikací do Microsoft Intune
 
@@ -48,7 +48,7 @@ Postup přidání integrované aplikace k aplikacím dostupným v Microsoft Intu
 ## <a name="configure-app-information"></a>Konfigurace informací o aplikaci
 
 Informace o integrované aplikaci můžete upravit. Tyto informace vám pomůžou identifikovat aplikaci v Intune a také pomůžou uživatelům, aby ji našli na portálu společnosti.
-1. V podokně **Mobilní aplikace – Aplikace** vyberte integrovanou aplikaci, kterou chcete upravit.  
+1. V podokně **Klientské aplikace – Aplikace** vyberte integrovanou aplikaci, kterou chcete upravit.  
     Zobrazí se podokno pro integrovanou aplikaci.
 2. V části **Spravovat** vyberte možnost **Vlastnosti**.
 3. Informace o integrované aplikaci můžete upravovat výběrem možnosti **Konfigurovat**.

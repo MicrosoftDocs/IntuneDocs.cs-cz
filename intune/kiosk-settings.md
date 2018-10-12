@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6db58b1b1f19f789a2163f497c1f0da4c7c034a5
-ms.sourcegitcommit: 5f6117b83f96f7d93dde3685c2ff2b67ae53740b
+ms.openlocfilehash: 9dd7608981da1454c1f3be29eb6ff40a5d7f3394
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39481117"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562863"
 ---
 # <a name="kiosk-settings-for-windows-10-and-later-in-intune"></a>Nastavení veřejného terminálu pro Windows 10 a novější v Intune
 
@@ -45,7 +45,7 @@ Profily veřejného terminálu se používají ke konfiguraci zařízení s Wind
 #### <a name="single-full-screen-app-kiosks"></a>Veřejné terminály s jednou aplikací v režimu na celou obrazovku
 Zadejte následující nastavení:
 
-- **Identifikátor aplikace pro Univerzální platformu Windows (UPW)**: Zadejte **ID modelu uživatele aplikace (AUMID)** aplikace veřejného terminálu. Nebo vyberte existující spravovanou aplikaci, kterou jste přidali pomocí [Mobile Apps](apps-add.md).
+- **Identifikátor aplikace pro Univerzální platformu Windows (UPW)**: Zadejte **ID modelu uživatele aplikace (AUMID)** aplikace veřejného terminálu. Nebo vyberte stávající spravovanou aplikaci, kterou jste přidali do [klientských aplikací](apps-add.md).
 
     Přečtěte si článek věnovaný [vyhledání ID modelu uživatele aplikace (AUMID) nainstalované aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
@@ -62,7 +62,7 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
 Zadejte následující nastavení:
 
 - **Přidat aplikaci Win32**: Aplikace Win32 je tradiční desktopová aplikace. Zadejte **Název aplikace** a **Identifikátor**. **Identifikátor** je plně kvalifikovaná cesta ke spustitelnému souboru, s ohledem na zařízení.
-- **Přidat spravované aplikace**: Vyberte existující spravovanou aplikaci, kterou jste přidali pomocí [Mobile Apps v Intune](apps-add.md).
+- **Přidat spravované aplikace**: Vyberte stávající spravovanou aplikaci, kterou jste přidali do Intune jako [klientskou aplikaci](apps-add.md).
 - **Přidat aplikaci podle AUMID**: Zadejte [AUMID aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (aplikace pro UPW).
 - **Hlavní panel**: Zvolte buď **Povolit**, aby se hlavní panel zobrazoval, nebo ho ponechejte **nenakonfigurovaný** (skrytý) na veřejném terminálu.
 - **Rozložení nabídky Start**: Zadejte soubor XML, který popisuje, jak se mají aplikace zobrazit v nabídce Start, včetně pořadí aplikací. V článku [Přizpůsobení a export rozložení nabídky Start](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) najdete pokyny a ukázkový soubor XML.
@@ -75,7 +75,7 @@ Zadejte následující nastavení:
 
 ## <a name="kiosk-web-browser-settings"></a>Nastavení webového prohlížeče Kiosk
 
-Tato nastavení řídí aplikaci webového prohlížeče na veřejném terminálu. Aplikaci webového prohlížeče nasaďte do zařízení veřejného terminálu pomocí [Mobile Apps](apps-add.md).
+Tato nastavení řídí aplikaci webového prohlížeče na veřejném terminálu. K nasazení aplikace webového prohlížeče do zařízení s beznabídkovým režimem použijte [klientské aplikace](apps-add.md).
 
 1. Zadejte následující nastavení:
 
@@ -115,7 +115,7 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
 
 Zadejte následující nastavení:
 
-- **Přidat spravované aplikace**: Vyberte existující spravovanou aplikaci, kterou jste přidali pomocí [Mobile Apps v Intune](apps-add.md).
+- **Přidat spravované aplikace**: Vyberte stávající spravovanou aplikaci, kterou jste přidali do Intune jako [klientskou aplikaci](apps-add.md).
 - **Přidat aplikaci podle AUMID**: Zadejte [AUMID aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (aplikace pro UPW).
 - **Rozložení nabídky Start**: Zadejte soubor XML, který popisuje, jak se mají aplikace zobrazit v nabídce Start, včetně pořadí aplikací. V článku o [přizpůsobení a exportu rozložení nabídky Start](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) najdete pokyny a ukázkový soubor XML pro zařízení s Windows Holographic for Business.
 - **Typ uživatelského účtu**: Přidejte jeden či více uživatelských účtů, které mohou přidané aplikace používat. Mezi podporované možnosti patří: 

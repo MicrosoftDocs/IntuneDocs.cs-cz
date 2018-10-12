@@ -12,12 +12,12 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: 4c268f9061ae624c1f85e386e5633b14334860b7
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: a640e6d914da6fead7a64d5235c1cdeac164ac9e
+ms.sourcegitcommit: 7c70c3e0fcae7c4fa8c9e108aafb1cebb366332d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313134"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44096533"
 ---
 # <a name="enroll-windows-devices-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows pomocí Windows AutoPilotu
 Windows AutoPilot zjednodušuje zřizování zařízení. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a AutoPilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s AutoPilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows AutoPilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -69,7 +69,7 @@ Profily nasazení AutoPilotu slouží ke konfiguraci zařízení s AutoPilotem.
 2. Zadejte **název** a volitelný **popis**.
 3. Pro **Režim nasazení** zvolte jednu z těchto dvou možností:
     - **Řízení uživatelem**: Zařízení s tímto profilem se přidruží k uživateli, který zařízení registruje. Při zřizování zařízení se musí zadat přihlašovací údaje uživatele.
-    - **Nasazení sebou samým (Preview)**: (sestavení Windows 10 Insider Preview 17672 nebo novější) Zařízení s tímto profilem nejsou přidružená k uživateli, který je registruje. Při zřizování zařízení se nevyžadují přihlašovací údaje uživatele.
+    - **Nasazení sebou samým (Preview)**: (Vyžaduje nejnovější [build Windows 10 Insider Preview](https://docs.microsoft.com/windows-insider/at-work-pro/).) Zařízení s tímto profilem nejsou přiřazená uživateli, který je registruje. Při zřizování zařízení se nevyžadují přihlašovací údaje uživatele.
 4. V poli **Připojit k Azure AD jako** zvolte **Připojeno k Azure AD**.
 5. Vyberte **Software spouštěný při prvním zapnutí zařízení**, nakonfigurujte následující možnosti a pak zvolte **Uložit**:
     - **Jazyk (oblast)***: Zvolte jazyk, který chcete použít pro dané zařízení. Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
@@ -82,7 +82,7 @@ Profily nasazení AutoPilotu slouží ke konfiguraci zařízení s AutoPilotem.
 
 6. Výběrem možnosti **Vytvořit** vytvořte profil. Profil nasazení AutoPilotu je teď možné přiřazovat zařízením.
 
-*Možnosti **Jazyk (oblast)** a **Automaticky nakonfigurovat klávesnici** jsou k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým (Preview)** (sestavení Windows 10 Insider Preview 17672 nebo novější).
+*Obě možnosti **Jazyk (oblast)** a **Automaticky nakonfigurovat klávesnici** jsou k dispozici, jen pokud v **režimu nasazení** zvolíte **Nasazení sebou samým (Preview)** (vyžaduje nejnovější [build Windows 10 Insider Preview](https://docs.microsoft.com/windows-insider/at-work-pro/)).
 
 
 ## <a name="assign-an-autopilot-deployment-profile-to-a-device-group"></a>Přiřazení profilu nasazení AutoPilotu ke skupině zařízení
@@ -113,7 +113,7 @@ Pokud chcete zobrazit upozornění na nepřiřazená zařízení, v [Intune na p
 
 K zařízení Autopilot můžete přiřadit uživatele. Díky přiřazení se během instalace systému Windows uživatel předem vyplní na přihlašovací stránce s [firemním brandingem](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding) ze služby Azure Active Directory. Také můžete nastavit vlastní uvítací název. Ten se předem nevyplňuje, ani nemění přihlašování ve Windows. Způsobem popsaným níže lze přiřadit jen uživatele s licencí pro službu Intune.
 
-Předpoklad: Byl nakonfigurován Portál společnosti ve službě Azure Active Directory.
+Předpoklady: Nakonfigurovaná služba Azure Active Directory na Portálu společnosti a nejnovější [build Windows 10 Insider Preview](https://docs.microsoft.com/windows-insider/at-work-pro/).
 
 1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) vyberte **Registrace zařízení** > **Registrace zařízení s Windows** > **Zařízení** > zvolte zařízení > **Přiřadit uživatele**.
     ![Snímek obrazovky s možností Přiřadit uživatele](media/enrollment-autopilot/assign-user.png)

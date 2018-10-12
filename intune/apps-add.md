@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cf6e7098462931000ce4cd5546390d27d68677f1
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: b92a5c7bcddbecc438aa5e72989ab2302440da7a
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43330156"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562880"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune
 
@@ -90,7 +90,7 @@ Při určování, které aplikace vaši pracovníci potřebují, zvažte různé
 
 Nejprve na základě citlivosti dat obsažených v aplikaci musíte určit skupinu, která bude mít k aplikaci přístup. Je možné, že budete muset zahrnout nebo vyloučit určité typy rolí v rámci organizace. Pro vaši prodejní skupinu se například můžou vyžadovat jenom některé obchodní aplikace, ale lidé z technického, finančního, personálního nebo právního oddělení obchodní aplikaci používat nemusí. Dále vaše prodejní skupina může na svých mobilních zařízeních potřebovat další ochranu dat a přístup k interním firemním službám. Musíte určit, jak se tato skupina bude přes aplikaci připojovat k prostředkům. Budou se data, ke kterým má aplikace přístup, uchovávat v cloudu nebo místně? Musíte také promyslet, jak se uživatelé budou přes aplikaci připojovat k prostředkům. 
 
-Intune podporuje také povolení přístupu k mobilním aplikacím, které vyžadují zabezpečený přístup k místním datům, třeba serverům obchodních aplikací. Tento typ přístupu se obvykle zajišťuje pomocí [certifikátů spravovaných službou Intune](certificates-configure.md) pro řízení přístupu v kombinaci se standardní bránou sítě VPN nebo proxy serverem v hraniční síti, například Proxy aplikací služby Azure Active Directory. [Nástroj App Wrapping a sada App SDK](apps-prepare-mobile-application-management.md) v Intune můžou pomoct zajistit, aby šlo firemní data využívat jenom v rámci dané podnikové aplikace a nešlo je předat zákaznickým aplikacím nebo službám.
+Intune podporuje také povolení přístupu pro klientské aplikace, které vyžadují zabezpečený přístup k místním datům, jako jsou servery obchodních aplikací. Tento typ přístupu se obvykle zajišťuje pomocí [certifikátů spravovaných službou Intune](certificates-configure.md) pro řízení přístupu v kombinaci se standardní bránou sítě VPN nebo proxy serverem v hraniční síti, například Proxy aplikací služby Azure Active Directory. [Nástroj App Wrapping a sada App SDK](apps-prepare-mobile-application-management.md) v Intune můžou pomoct zajistit, aby šlo firemní data využívat jenom v rámci dané podnikové aplikace a nešlo je předat zákaznickým aplikacím nebo službám.
 
 S určením, jak máte identifikovat organizační skupiny pro jednotlivé scénáře použití a dílčí použití, vám pomůže [Průvodce plánováním nasazení, návrhem a implementací Intune](planning-guide.md). Informace o přiřazení aplikací ke skupinám najdete v článku [Přiřazení aplikací do skupin pomocí Microsoft Intune](apps-deploy.md).
 
@@ -116,7 +116,7 @@ Aplikace spravované přes Intune můžou také povolit ochranu aplikací bez nu
 
 ### <a name="understanding-licensed-apps"></a>Princip licencovaných aplikací
 Kromě pochopení webových aplikací, aplikací pro Store a obchodních aplikací byste měli také něco vědět o cíli aplikací programu Volume Purchase Program a licencovaných aplikací, jako jsou: 
-- **Apple Volume Purchasing Program for Business (iOS a MacOS)**: App Store pro iOS umožňuje pro aplikace, které chcete používat ve vaší společnosti, nakoupit více licencí. Zakoupením více kopií můžete efektivně spravovat aplikace ve vaší společnosti. Další informace najdete v článku [Správa aplikací pro systém iOS nakoupených prostřednictvím programu hromadného nákupu](vpp-apps-ios.md).
+- **Apple Volume Purchasing Program for Business (iOS)**: V App Storu pro iOS můžete pro aplikaci, kterou chcete ve společnosti používat, nakoupit více licencí. Zakoupením více kopií můžete efektivně spravovat aplikace ve vaší společnosti. Další informace najdete v článku [Správa aplikací pro systém iOS nakoupených prostřednictvím programu hromadného nákupu](vpp-apps-ios.md).
 - **Pracovní profil Androidu**: Zařízením s pracovním profilem Androidu se aplikace přiřazují jiným způsobem než zařízením se standardním Androidem. Všechny aplikace, které instalujete pro pracovní profily Androidu, pocházejí ze spravovaného obchodu Google Play. Do tohoto obchodu se přihlásíte, prohlédnete si požadované aplikace a schválíte je. Aplikace se pak zobrazí v uzlu **Licencované aplikace** na portálu Azure Portal a můžete spravovat přiřazení aplikace stejně jako u jakékoli jiné aplikace.
 - **Microsoft Store pro firmy (Windows 10)**: Microsoft Store pro firmy je místo, kde můžete najít a zakoupit aplikace pro svou organizaci, a to jednotlivě i hromadně. Pokud Store propojíte s Microsoft Intune, můžete hromadně zakoupené aplikace spravovat na portálu Azure Portal. Další informace najdete v článku [Správa aplikací zakoupených v Microsoft Storu pro firmy](windows-store-for-business.md).
 

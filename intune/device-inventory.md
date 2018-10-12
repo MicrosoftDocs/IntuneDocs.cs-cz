@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a658182800f480f27097e078f28adc95c35aa3ea
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: a01bbf8e65c72b303d1474a92b93796051bfc02e
+ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313174"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47187797"
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
 
@@ -63,44 +63,38 @@ Intune shromažďuje seznam aplikací jenom na zařízeních vlastněných spole
 
 ## <a name="hardware-device-details"></a>Podrobnosti o hardwarovém zařízení
 
-### <a name="windows-and-ios-device-details"></a>Podrobnosti o zařízení s Windows a iOSem:
-|Podrobnosti|Popis|  
-|--------------|----------------------|  
-|Název|Název zařízení|
-|Název správy|Název zařízení používaný jenom v konzole. Změnou tohoto názvu nedojde ke změně názvu v zařízení.|
-|UDID|Jedinečný identifikátor zařízení|
-|ID zařízení Intune|Globálně jedinečný identifikátor, který jednoznačně identifikuje zařízení|
-|Sériové číslo|Sériové číslo zařízení od výrobce|
-|Sdílené zařízení|Pokud **Ano**, je zařízení sdílené více než jedním uživatelem|
-|Registrace schválená uživatelem|Pokud **Ano**, pak má zařízení registraci schválenou uživatelem, která správcům umožňuje spravovat některá nastavení zabezpečení na zařízení|
-|Operační systém|Operační systém používaný v zařízení|
-|Verze operačního systému|Verze operačního systému v zařízení.|
-|Jazyk operačního systému|Jazyk nastavený pro operační systému v zařízení|
-|Celkové místo v úložišti|Celkové místo úložiště v zařízení (v gigabajtech)|
-|Volné místo úložiště|Nevyužité místo úložiště v zařízení (v gigabajtech)|
-
-
-### <a name="windows-ios-and-macos-device-details"></a>Podrobnosti o zařízení s Windows, iOSem a macOS
-|Podrobnosti|Popis|  
-|--------------|----------------------|  
-|IMEI|Mezinárodní identita mobilního zařízení|
-|MEID|Identifikátor mobilního zařízení|
-|Výrobce|Výrobce zařízení|
-|Model|Model zařízení|
-|Telefonní číslo|Telefonní číslo přidružené k zařízení|
-|Poskytovatel služeb pro odběratele|Bezdrátový operátor zařízení|
-|Mobilní technologie|Rádiový systém používaný zařízením|
-|Wi-Fi MAC|Adresa MAC zařízení|
-|ICCID|Identifikátor karty s integrovaným obvodem, což je jedinečné identifikační číslo SIM karty|
-|Datum zápisu|Datum a čas, kdy se zařízení zaregistrovalo v Intune|
-|Poslední kontakt|Datum a čas posledního připojení zařízení k Intune|
-|Kód pro obejití zámku aktivace|Kód, který se dá použít k obejití zámku aktivace|
-|Registrováno v Azure AD|Pokud **Ano**, zařízení je registrované v Azure Active Directory|
-|Dodržování předpisů|Stav dodržování předpisů zařízení|
-|EAS aktivované|Pokud **Ano**, pak je zařízení synchronizované s poštovní schránkou Exchange|
-|ID aktivace EAS|Identifikátor protokolu Exchange ActiveSync zařízení|
-|Pod dohledem|Pokud **Ano**, mají správci nad zařízením lepší kontrolu|
-|Šifrované|Pokud **Ano**, jsou data uložená v zařízení šifrovaná|
+|Podrobnosti|Popis|Platforma| 
+|--------------|----------------------|----|  
+|Název|Název zařízení|Windows, iOS|
+|Název správy|Název zařízení používaný jenom v konzole. Změnou tohoto názvu nedojde ke změně názvu v zařízení.|Windows, iOS|
+|UDID|Jedinečný identifikátor zařízení|Windows, iOS|
+|ID zařízení Intune|Globálně jedinečný identifikátor, který jednoznačně identifikuje zařízení|Windows, iOS|
+|Sériové číslo|Sériové číslo zařízení od výrobce|Windows, iOS|
+|Sdílené zařízení|Pokud **Ano**, je zařízení sdílené více než jedním uživatelem|Windows, iOS|
+|Registrace schválená uživatelem|Pokud **Ano**, pak má zařízení registraci schválenou uživatelem, která správcům umožňuje spravovat některá nastavení zabezpečení na zařízení|Windows, iOS|
+|Operační systém|Operační systém používaný v zařízení|Windows, iOS|
+|Verze operačního systému|Verze operačního systému v zařízení.|Windows, iOS|
+|Jazyk operačního systému|Jazyk nastavený pro operační systému v zařízení|Windows, iOS|
+|Celkové místo v úložišti|Celkové místo úložiště v zařízení (v gigabajtech)|Windows, iOS|
+|Volné místo úložiště|Nevyužité místo úložiště v zařízení (v gigabajtech)|Windows, iOS|
+|IMEI|Mezinárodní identita mobilního zařízení|Windows, iOS, Android|
+|MEID|Identifikátor mobilního zařízení|Windows, iOS, Android|
+|Výrobce|Výrobce zařízení|Windows, iOS, Android|
+|Model|Model zařízení|Windows, iOS, Android|
+|Telefonní číslo|Telefonní číslo přidružené k zařízení|Windows, iOS, Android|
+|Poskytovatel služeb pro odběratele|Bezdrátový operátor zařízení|Windows, iOS, Android|
+|Mobilní technologie|Rádiový systém používaný zařízením|Windows, iOS, Android|
+|Wi-Fi MAC|Adresa MAC zařízení|Windows, iOS, Android|
+|ICCID|Identifikátor karty s integrovaným obvodem, což je jedinečné identifikační číslo SIM karty|Windows, iOS, Android|
+|Datum zápisu|Datum a čas, kdy se zařízení zaregistrovalo v Intune|Windows, iOS, Android|
+|Poslední kontakt|Datum a čas posledního připojení zařízení k Intune|Windows, iOS, Android|
+|Kód pro obejití zámku aktivace|Kód, který se dá použít k obejití zámku aktivace|Windows, iOS, Android|
+|Registrováno v Azure AD|Pokud **Ano**, zařízení je registrované v Azure Active Directory|Windows, iOS, Android|
+|Dodržování předpisů|Stav dodržování předpisů zařízení|Windows, iOS, Android|
+|EAS aktivované|Pokud **Ano**, pak je zařízení synchronizované s poštovní schránkou Exchange|Windows, iOS, Android|
+|ID aktivace EAS|Identifikátor protokolu Exchange ActiveSync zařízení|Windows, iOS, Android|
+|Pod dohledem|Pokud **Ano**, mají správci nad zařízením lepší kontrolu|Windows, iOS, Android|
+|Šifrované|Pokud **Ano**, jsou data uložená v zařízení šifrovaná|Windows, iOS, Android|
 
 
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/12/2018
+ms.date: 09/27/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,18 +15,18 @@ ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 02cc111f8991a855db4f05360e54598af511f28f
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 31c3e7b6d255cd99efee134f0276fd4d15dab6b9
+ms.sourcegitcommit: 2795255e89cbe97d0b17383d446cca57c7335016
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223488"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403557"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Nastavení registrace pro zařízení s Windows
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Toto téma pomáhá správcům IT zjednodušit svým uživatelům registraci zařízení s Windows. Jakmile [nastavíte Intune](setup-steps.md), mohou uživatelé registrovat svá zařízení s Windows tím, že se [přihlásí](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows) pomocí pracovního nebo školního účtu.  
+Tento článek pomáhá správcům IT zjednodušit svým uživatelům registraci zařízení s Windows. Jakmile [nastavíte Intune](setup-steps.md), mohou uživatelé registrovat svá zařízení s Windows tím, že se [přihlásí](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows) pomocí pracovního nebo školního účtu.  
 
 Jako správce Intune můžete registraci zjednodušit. Máte tyto možnosti:
 - [Povolit automatickou registraci](#enable-windows-10-automatic-enrollment) (vyžaduje Azure AD Premium)
@@ -45,13 +45,14 @@ Způsob zjednodušení registrace zařízení s Windows určují dva faktory:
 
 Organizace, které mohou používat automatickou registraci, také mohou nakonfigurovat [hromadnou registraci zařízení](windows-bulk-enroll.md) v aplikaci Windows Configuration Designer.
 
-**Podpora více uživatelů**<br>
-Zařízení se systémem Windows 10 Creators Update připojená k doméně Azure Active Directory mají teď podporu správy více uživatelů pomocí Intune. Když standardní uživatelé použijí k přihlášení přihlašovací údaje služby Azure AD, dostanou aplikace a zásady přiřazené ke svému uživatelskému jménu. Uživatelé v současnosti nemůžou používat Portál společnosti pro samoobslužné scénáře, například instalování aplikací.
+## <a name="multi-user-support"></a>Podpora více uživatelů
+
+Intune podporuje vícenásobnou správu pro zařízení s Windows 10 Creators Updatem připojená k doméně Azure Active Directory. Když standardní uživatelé použijí k přihlášení přihlašovací údaje služby Azure AD, dostanou aplikace a zásady přiřazené ke svému uživatelskému jménu. Uživatelé v současnosti nemůžou používat Portál společnosti pro samoobslužné scénáře, například instalování aplikací.
 
 [!INCLUDE [AAD-enrollment](./includes/win10-automatic-enrollment-aad.md)]
 
 ## <a name="simplify-windows-enrollment-without-azure-ad-premium"></a>Zjednodušení registrace zařízení s Windows bez služby Azure AD Premium
-Registraci můžete uživatelům zjednodušit vytvořením aliasu serveru DNS (záznamu typu CNAME), který automaticky přesměruje žádosti o registraci na servery Intune. Pokud záznam o prostředcích DNS CNAME nevytvoříte, musí uživatelé, kteří se pokouší připojit k Intune, při registraci zadat název serveru Intune.
+Pokud chcete uživatelům registraci zjednodušit, vytvořte alias serveru DNS (typu záznamu CNAME), který přesměruje žádosti o registraci na servery Intune. V opačném případě musí uživatelé, kteří se pokoušejí připojit k Intune, zadat během registrace název serveru Intune.
 
 **Krok 1: Vytvořte záznamy CNAME** (volitelné)<br>
 Vytvořte záznamy o prostředcích DNS CNAME pro doménu vaší společnosti. Pokud má třeba vaše společnost web contoso.com, vytvořili byste ve službě DNS záznam CNAME, který přesměruje adresu EnterpriseEnrollment.contoso.com na EnterpriseEnrollment-s.manage.microsoft.com.
@@ -63,7 +64,13 @@ Vytváření položek CNAME DNS není povinné, ale záznamy CNAME usnadňují u
 |CNAME|EnterpriseEnrollment.doména_společnosti.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 hodina|
 |CNAME|EnterpriseRegistration.doména_společnosti.com|EnterpriseRegistration.windows.net|1 hodina|
 
-Pokud máte více než jednu příponu UPN, musíte vytvořit jeden CNAME pro každý název domény a každý z nich odkazovat na EnterpriseEnrollment-s.manage.microsoft.com. Pokud uživatelé ve společnosti Contoso používají e-mail / hlavní název uživatele (UPN) name@contoso.com, ale používají také name@us.contoso.com a name@eu.constoso.com, měl by správce DNS společnosti Contoso vytvořit následující záznamy CNAME:
+Pokud podnik používá více než jednu příponu UPN, musíte vytvořit jeden CNAME pro každý název domény a každý z nich odkazovat na EnterpriseEnrollment-s.manage.microsoft.com. Uživatelé v Contosu například používají následující formáty jako svůj e-mail/UPN:
+
+- name@contoso.com
+- name@us.contoso.com
+- name@eu.constoso.com\
+
+Správce DNS Contosa by měl vytvořit následující záznamy CNAME:
 
 |Typ|Název hostitele|Odkazuje na|Hodnota TTL|  
 |----------|---------------|---------------|---|
@@ -73,10 +80,11 @@ Pokud máte více než jednu příponu UPN, musíte vytvořit jeden CNAME pro ka
 
 `EnterpriseEnrollment-s.manage.microsoft.com` – podporuje přesměrování do služby Intune s rozpoznáním domény z názvu domény v e-mailu.
 
-Změny záznamů DNS se mohou projevit až po 72 hodinách. Před rozšířením záznamu DNS nemůžete v Intune ověřit změny DNS.
+Změny záznamů DNS se mohou projevit až po 72 hodinách. Před rozšířením záznamu DNS nemůžete v Intune ověřit změnu DNS.
 
 **Krok 2: Ověřte záznamy CNAME** (volitelné)<br>
-Na portálu Azure Portal zvolte **Další služby** > **Monitorování a správa** > **Intune**. V okně Intune zvolte **Registrovat zařízení** > **Registrace zařízení s Windows**. Do pole **Zadejte název ověřené domény** zadejte adresu URL webu společnosti a zvolte **Test automatického zjištění**.
+1. V [Intune na webu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení** > **Registrace zařízení s Windows** > **Ověření CNAME**.
+2. Do pole **Doména** zadejte web společnosti a zvolte **Test**.
 
 ## <a name="tell-users-how-to-enroll-windows-devices"></a>Informování uživatelů, jak zařízení s Windows zaregistrovat
 Informujte uživatele, jak si mají svá zařízení s Windows zaregistrovat a co můžou očekávat od zařazení do systému správy.

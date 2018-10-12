@@ -1,11 +1,11 @@
 ---
 title: Použití zařízení s Windows v Intune | Dokumentace Microsoftu
-description: Seznam odkazů na úlohy, které můžou uživatelé provádět na svém zařízení s Windows, když je zaregistrované v Intune
+description: Odkazy pro řešení potíží nebo správu zařízení s Windows na Portálu společnosti
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/06/2017
+ms.date: 09/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,36 +17,36 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 645e87ef731cf911824ab16673c01e962c91fb70
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: c4018c73c2160a3db5d5c8b8843e803b56f2caa3
+ms.sourcegitcommit: 534efa7c5033098233b2549c2d7fc6cf33330e79
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31017253"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168960"
 ---
-# <a name="using-your-windows-device-with-intune"></a>Použití zařízení Windows s Intune
+# <a name="using-your-windows-device-with-intune-company-portal"></a>Použití zařízení s Windows na Portálu společnosti Intune
 
-Intune vám může v mnoha směrech usnadnit práci. Tady je seznam obvyklých postupů, jejichž provedení může vaše společnost vyžadovat.
+Tento článek obsahuje úlohy a informace týkající se Portálu společnosti pro Windows. Může vám pomoct při řešení potíží a správě zařízení s Windows. Kliknutím na jednotlivé odkazy zobrazíte další podrobnosti, postupy a snímky obrazovky.  
 
 ## <a name="supported-versions"></a>Podporované verze
 
-Intune aktuálně podporuje následující verze Windows.
+Portál společnosti aktuálně podporuje následující verze Windows.
 
 * Windows 10 (verze Home, Pro, Education, S a Enterprise)
 * Windows Phone 8.1 nebo novější
 * Windows 8.1 RT
 * Windows 8.1
 
-Intune také podporuje některé další verze Windows, jako je například [Windows 10 Holographic](https://www.microsoft.com/hololens). Tyto verze zde nejsou uvedené, protože slouží velmi specifickým účelům.
+Na Portálu společnosti se podporují i jiné verze Windows, například [Windows 10 Holographic](https://www.microsoft.com/hololens). Těmito verzemi se v tomto článku nezabýváme, protože jsou určené k velmi specifickým účelům.
 
-## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Registrace do Intune a instalace Portálu společnosti
+## <a name="enrolling-your-device-and-installing-the-company-portal"></a>Registrace zařízení a instalace Portálu společnosti
 
 - [Registrace zařízení s Windows v Intune](enroll-your-device-in-intune-windows.md)
 - [Co se stane, když nainstalujete aplikaci Portál společnosti a zaregistrujete zařízení v Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
 - [Jaké informace vaše společnost uvidí při registraci zařízení v Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 - [Obnovení (vymazání) ztraceného nebo odcizeného zařízení](reset-erase-your-device-cpwebsite.md)
 
-## <a name="things-you-can-do-when-your-device-is-enrolled-in-intune"></a>Kroky, které můžete provést po registraci zařízení do služby Intune
+## <a name="things-you-can-do-after-your-device-is-enrolled-in-management"></a>Kroky, které můžete provést po registraci zařízení pro správu
 
 - [Zašifrování zařízení](encrypt-your-device-windows.md)
 - [Nastavení nebo změna hesla](set-or-change-your-password-windows.md)

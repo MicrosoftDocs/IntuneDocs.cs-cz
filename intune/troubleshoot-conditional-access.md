@@ -5,8 +5,8 @@ keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 10/24/2016
-ms.topic: article
+ms.date: 09/25/2018
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -14,140 +14,66 @@ ms.assetid: 5fa59501-5f33-46b7-a5f5-75eeae9f1209
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3ef3b442c5d2cdb731fc906bb865d280729b163a
-ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
+ms.openlocfilehash: 61bc1141456294cf6d132ca5f3a682225f0207dd
+ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238155"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47187899"
 ---
 # <a name="troubleshoot-conditional-access"></a>Řešení potíží s podmíněným přístupem
 
-Obvykle se uživatel pokusí o přístup k e-mailu nebo ke službě SharePoint a obdrží výzvu k registraci. Prostřednictvím této výzvy přejde uživatele na portál společnosti.
+Pomocí Intune a podmíněného přístupu můžete chránit přístup ke službám Office 365, jako jsou Exchange Online, SharePoint Online, Online Skype pro firmy, místní Exchange, a k dalším službám. Tato funkce umožňuje zajistit, aby se přístup k podnikovým prostředkům omezil na zařízení zaregistrovaná v Intune a vyhovující pravidlům podmíněného přístupu, která jste nastavili v konzole správce Intune nebo v Azure Active Directory. Tento článek popisuje, jak postupovat, když se vašim uživatelům nedaří získat přístup k prostředkům, které jsou chráněné pomocí podmíněného přístupu, nebo když uživatelé mají přístup k chráněným prostředkům, ale měli by být blokovaní.
 
-V tomto článku se dozvíte, co dělat, když uživatelé nemůžou získat přístup k prostředkům prostřednictvím podmíněného přístupu Intune.
+## <a name="requirements-for-conditional-access"></a>Požadavky pro podmíněný přístup
 
+Aby podmíněný přístup fungoval, musí být splněné následující požadavky:
 
-## <a name="the-basics-for-success-in-conditional-access"></a>Základní informace potřebné pro úspěšné využívání podmíněného přístupu
-
-Podmíněný přístup funguje, pokud jsou splněny následující podmínky:
-
--   Zařízení musí být spravované pomocí Intune.
--   Zařízení musí být zaregistrované v Azure Active Directory (AAD). Za normálních okolností tato registrace proběhne automaticky při registraci do Intune.
--   Zařízení musí vyhovovat zásadám dodržování předpisů Intune, a to pro zařízení i pro uživatele tohoto zařízení.  Pokud neexistují žádné zásady dodržování předpisů, je registrace v Intune dostatečná.
--   V zařízení musí být aktivovaný protokol Exchange ActiveSync, pokud uživatel načítá e-mail prostřednictvím nativního poštovního klienta, a nikoli prostřednictvím aplikace Outlook. K tomu dojde automaticky pro zařízení se systémy iOS, Windows Phone a Android nebo KNOX Standard.
--   Intune Exchange Connector by měl být správně nakonfigurovaný. Další informace najdete v tématu [Odstraňování potíží Exchange Connectoru v Microsoft Intune](troubleshoot-exchange-connector.md).
+- Zařízení musí být zaregistrované a spravované pomocí Intune.
+- Uživatel i zařízení musí vyhovovat přiřazeným zásadám dodržování předpisů Intune.
+- Uživateli se standardně musí přiřadit zásady dodržování předpisů pro zařízení. To může záviset na konfiguraci nastavení **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako** v části **Dodržování předpisů zařízením** > **Nastavení zásad dodržování předpisů** na portálu pro správu Intune.
+-   Pokud uživatel nepoužívá Outlook, ale nativního poštovního klienta daného zařízení, musí být v zařízení aktivovaný protokol Exchange ActiveSync. V zařízeních se systémy iOS, Windows Phone a Android se to provede automaticky.
+-   Intune Exchange Connector musí být správně nakonfigurovaný. Další informace najdete v tématu [Odstraňování potíží Exchange Connectoru v Microsoft Intune](troubleshoot-exchange-connector.md).
 
 Tyto podmínky si můžete prohlédnout u každého zařízení na webu Azure Portal a v inventární sestavě zařízení.
 
-## <a name="enrollment-issues"></a>Problémy s registrací
+## <a name="devices-appear-compliant-but-users-are-still-blocked"></a>Zařízení se zobrazují jako kompatibilní, ale uživatelé jsou přesto blokovaní
 
- -  Zařízení není zaregistrované, takže registrace tento problém odstraní.
- -  Uživatel zařízení zaregistroval, ale selhalo připojení k pracovišti. Uživatel by měl aktualizovat registraci z portálu společnosti.
+- Zařízením s Androidem, která nepoužívají Knox, nebude udělen přístup, dokud uživatel v přijatém e-mailu o karanténě neklikne na odkaz **Get Started Now** (Začít teď). To platí i v případě, že uživatel je už zaregistrovaný v Intune. Pokud uživatel nedostane e-mail s odkazem na svůj telefon, může pro přístup k e-mailu použít počítač a pak tento e-mail přeposlat na e-mailový účet na svém zařízení.
+- Když se zařízení registruje poprvé, může registrace jeho informací o dodržování předpisů trvat nějakou dobu. Počkejte několik minut a zkuste akci zopakovat.
+- U zařízení s iOSem může stávající e-mailový profil blokovat nasazení e-mailového profilu vytvořeného správcem Intune, který byl přiřazen tomuto uživateli, a proto dané zařízení bude nekompatibilní. V tomto scénáři aplikace Portál společnosti upozorní uživatele na nekompatibilitu z důvodu ručně nakonfigurovaného e-mailového profilu a vyzve ho k odebrání tohoto profilu. Jakmile uživatel stávající e-mailový profil odebere, e-mailový profil Intune se úspěšně nasadí. Pokud chcete tomuto problému zabránit, upozorněte uživatele, aby na svém zařízení před registrací odebrali všechny stávající e-mailové profily.
+- Zařízení můžou uváznout ve stavu kontroly dodržování předpisů a bránit uživateli v inicializaci jiné kontroly. Pokud máte zařízení v tomto stavu, zkuste použít následující postup:
+  - Ujistěte se, že zařízení používá nejnovější verzi aplikace Portál společnosti.
+  - Restartujte zařízení.
+  - Zjistěte, jestli tento problém přetrvává v různých sítích (například mobilní, Wi-Fi atd.).
 
-## <a name="compliance-issues"></a>Problémy se shodou
+  Pokud problém trvá, kontaktujte podporu Microsoftu podle pokynů v tématu o [získání podpory pro Microsoft Intune](get-support.md).
+- Některá zařízení s Androidem můžou působit jako zašifrovaná, ale aplikace Portál společnosti tato zařízení rozpozná jako nezašifrovaná, a proto budou nekompatibilní. V tomto scénáři se uživateli zobrazí oznámení aplikace Portál společnosti s výzvou k nastavení hesla pro spuštění zařízení. Po klepnutí na oznámení a potvrzení stávajícího PIN kódu nebo hesla zvolte na obrazovce **Zabezpečené spuštění** možnost **Ke spuštění zařízení vyžadovat PIN kód** a pak v aplikaci Portál společnosti klepněte na tlačítko **Zkontrolovat dodržování předpisů** pro toto zařízení. Zařízení by se teď mělo rozpoznat jako zašifrované. 
+  > [!NOTE]
+  > Někteří výrobci zařízení používají k zašifrování svých zařízení místo PIN kódu nastaveného uživatelem výchozí PIN. Intune považuje zašifrování pomocí výchozího PIN kódu jako nezabezpečené, a dokud uživatel nevytvoří nový PIN, který není výchozí, označuje taková zařízení jako nedodržující předpisy.
+- Zařízení s Androidem, které je zaregistrované a vyhovující, se může i přesto zablokovat a při prvním pokusu o přístup k podnikovým prostředkům obdržet oznámení o karanténě. Pokud k tomu dojde, ujistěte se, že aplikace Portál společnosti není spuštěná, a pak kliknutím na odkaz **Get Started Now** (Začít teď) v e-mailu o karanténě aktivujte vyhodnocení. Toto by mělo být potřeba udělat jenom při prvním povolení podmíněného přístupu.
 
-- Zařízení nevyhovuje zásadám Intune. K běžným problémům patří požadavky na šifrování a heslo. Uživatel bude přesměrován na portál společnosti, kde může nakonfigurovat zařízení tak, aby vyhovovalo požadavkům.
-- Registrace informací o shodě pro zařízení může trvat nějakou dobu. Počkejte několik minut a zkuste akci zopakovat.
-- Pro zařízení s iOS:
-  - Existující e-mailový profil vytvořený uživatelem bude blokovat nasazení profilu Intune vytvořeného správcem. Tento problém se vyskytuje často, protože uživatelé s iOS většinou napřed vytvoří e-mailový profil a potom se zaregistrují. Portál společnosti upozorní uživatele, že nevyhověl kvůli ručně nakonfigurovanému e-mailovému profilu, a vyzve ho k odebrání profilu. Uživatel musí svůj e-mailový profil odebrat, aby mohl být nasazen profil Intune. Pokud chcete tomuto problému předejít, požádejte uživatele, aby se zaregistrovali bez instalace e-mailového profilu a povolili službě Intune nasadit profil.
-  - Zařízení s iOSem můžou uváznout ve stavu kontroly dodržování předpisů bránit uživateli v inicializaci jiné kontroly. Restartování Portálu společnosti může problém vyřešit a stav dodržování předpisů bude odrážet stav zařízení v Intune. Po shromáždění všech dat ze synchronizace zařízení je kontrola dodržování předpisů rychlá a trvá v průměru méně než půl sekundy.
+## <a name="devices-are-blocked-and-no-quarantine-email-is-received"></a>Zařízení jsou blokovaná, ale žádný e-mail o karanténě nepřišel
 
-    Obvyklým důvodem toho, že zařízení zůstanou v tomto stavu, jsou potíže s připojením ke službě nebo dlouhotrvající synchronizace.  Pokud potíže přetrvávají i v jiné síťové konfiguraci (mobilní, Wi-Fi, VPN), po restartu zařízení a ověření aktuálnosti zprostředkovatele zabezpečení v zařízení, obraťte se na podporu Microsoftu podle návodu v tématu [Jak získat podporu pro Microsoft Intune](get-support.md).
+- Ověřte, jestli se dané zařízení nachází v konzole pro správu Intune jako zařízení Exchange ActiveSync. Pokud ne, je pravděpodobné, že zjišťování tohoto zařízení bylo neúspěšné, zřejmě kvůli problému Exchange Connectoru. Další informace najdete v tématu [Řešení potíží s místním Intune Exchange Connectorem](troubleshoot-exchange-connector.md).
+- Než Exchange Connector začne blokovat zařízení, odešle aktivační e-mail (e-mail o karanténě). Pokud je zařízení offline, nemusí aktivační e-mail obdržet. 
+- Zkontrolujte, jestli je e-mailový klient na zařízení nakonfigurovaný tak, aby načítal e-maily pomocí metody **Push**, a ne **Poll**. Pokud ano, může to být příčina toho, že uživatel nedostal příslušný e-mail. Přepněte na **Poll** a zkontrolujte, jestli zařízení obdrží e-mail.
 
-- Zařízení s Androidem:
-   - Některá zařízení s Androidem můžou působit jako zašifrovaná, ale aplikace Portál společnosti tato zařízení rozpozná jako nezašifrovaná. 
-    
-       -   Zařízení, která jsou v tomto stavu, vyžadují, aby uživatel nastavil bezpečné heslo pro spuštění. Uživateli se zobrazí oznámení aplikace Portál společnosti s výzvou k nastavení hesla pro spuštění zařízení. Po klepnutí na oznámení a potvrzení stávajícího PIN kódu nebo hesla zvolte na obrazovce **Zabezpečené spouštění** možnost **Požadovat PIN pro spuštění zařízení**. Pak v aplikaci Portál společnosti klepněte na tlačítko **Zkontrolovat dodržování předpisů** pro dané zařízení. Zařízení by se teď mělo rozpoznat jako zašifrované.
-    
-       -   Někteří výrobci zařízení používají k zašifrování svých zařízení místo tajného PIN kódu nastaveného uživatelem výchozí PIN. Intune považuje šifrování pomocí výchozího PIN kódu jako nezabezpečené, protože tato metoda šifrování dat na zařízení představuje riziko, pokud uživatelé se zlými úmysly mají fyzický přístup k danému zařízení. V případě tohoto problému zvažte použití [zásad ochrany aplikací](app-protection-policies.md).
+## <a name="devices-are-noncompliant-but-users-are-not-blocked"></a>Zařízení nedodržují předpisy, ale uživatelé nejsou blokovaní
 
-## <a name="policy-issues"></a>problémy se zásadami;
+- Na počítačích s Windows blokuje podmíněný přístup jenom nativní e-mailovou aplikaci, Office 2013 s moderním ověřováním nebo Office 2016. Blokování dřívějších verzí Outlooku a všech e-mailových aplikací na počítačích s Windows vyžaduje konfiguraci registrace zařízení AAD a konfiguraci AD FS (Active Directory Federation Services), jak je uvedeno v tématu [Nastavení SharePointu Online a Exchange Online pro podmíněný přístup Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication). 
+- Pokud se zařízení z Intune selektivně vymaže nebo vyřadí, může mu několik hodin po vyřazení nadále zůstat možnost přístupu. Důvodem je skutečnost, že Exchange ukládá přístupová práva do mezipaměti na 6 hodin. Zvažte možnost použití jiných způsobů ochrany dat na vyřazených zařízení v tomto scénáři.
+- Zařízení Surface Hub podporují podmíněný přístup. Pro správné vyhodnocení je však nutné nasadit zásady dodržování předpisů pro skupiny zařízení (ne pro skupiny uživatelů).
+- Zkontrolujte přiřazení zásad dodržování předpisů a zásad podmíněného přístupu. Pokud není uživatel členem skupiny, pro kterou jsou přiřazené zásady, nebo je členem vylučované skupiny, nebude daný uživatel blokovaný. Dodržování předpisů se kontroluje jenom u zařízení uživatelů, kteří jsou v přiřazené skupině.
 
-Když vytvoříte zásady dodržování předpisů a propojíte je se zásadami e-mailů, musí být obojí zásady nasazeny pro téhož uživatele. Buďte proto opatrní při plánování, které zásady skupiny budou nasazeny pro které skupiny. Uživatelé s jedinou použitou zásadou pravděpodobně zjistí, že jejich zařízení nevyhovují.
-
-
-## <a name="exchange-activesync-issues"></a>Problémy protokolu Exchange ActiveSync
-
-### <a name="compliant-android-device-gets-quarantine-notice"></a>Kompatibilní zařízení s Androidem obdrží oznámení o karanténě.
-- Zařízení s Androidem, které je zaregistrované a vyhovující, může i přesto obdržet oznámení o karanténě při pokusu o přístup k podnikovým prostředkům. Před zvolením odkazu s textem **Začít** by uživatel měl ověřit, že při pokusu o přístup k prostředkům nebyl portál společnosti otevřený. Uživatelé by měli zavřít portál společnosti, znovu se pokusit o přístup k prostředkům a pak zvolit odkaz **Začít**.
-
-### <a name="retired-device-continues-to-have-access"></a>Vyřazené zařízení má nadále přístup.
-- Když používáte Exchange Online, může mít vyřazené zařízení stále přístup i několik hodin po vyřazení. Důvodem je skutečnost, že Exchange ukládá přístupová práva do mezipaměti na 6 hodin. Zvažte možnost použití jiných způsobů ochrany dat na vyřazených zařízení v tomto scénáři.
-
-### <a name="device-is-compliant-and-registered-with-aad-but-still-blocked"></a>Zařízení je zaregistrované v AAD a vyhovuje předpisům, ale je pořád blokované.
-- V některých případech je zřízení ID protokolu Exchange ActiveSync (EASID) v AAD zpožděné. Obvyklou příčinou tohoto problému je omezování, proto počkejte několik minut a zkuste akci zopakovat.
-
-### <a name="device-blocked"></a>Zařízení je blokované.
-
-Zařízení může mít zablokovaný podmíněný přístup bez přijetí aktivačního e-mailu.
-
-- Existuje výchozí pravidlo Exchange, které dává zařízení do karantény nebo je blokuje? Pokud výchozí pravidlo blokuje zařízení nebo je dává do karantény, zařízení nebudou moct přijímat aktivační e-maily Exchange Connectoru. Jedná se o účel.
-- Je účet pro oznámení správně nakonfigurovaný podle popisu v základní konfiguraci?
-- Je zařízení přítomné v konzole pro správu Intune jako zařízení protokolu Exchange ActiveSync? Pokud ne, je pravděpodobné, že je zjišťování tohoto zařízení neúspěšné, pravděpodobně kvůli problémům synchronizace Exchange Connectoru. Podívejte se do části Server Exchange nezjistil zařízení s Exchange ActiveSync.
-- V protokolech Exchange Connectoru zkontrolujte aktivitu odesílání e-mailů, jestli neobsahuje chyby. Příkladem hledaného příkazu je SendEmail z účtu pro oznámení na e-mailovou adresu uživatele.
-- Než Exchange Connector začne blokovat zařízení, odešle aktivační e-mail. Pokud je zařízení offline, nemusí aktivační e-mail obdržet. Zkontrolujte, jestli e-mailový klient v zařízení přijímá e-maily pomocí operace Push, a ne Poll, protože to může také způsobit, že uživatel nedostane e-mail. Přepněte na Poll a zkontrolujte, jestli zařízení obdrží e-mail.
-
-## <a name="noncompliant-device-not-blocked"></a>Zařízení nevyhovující předpisům není blokované
+## <a name="noncompliant-device-is-not-blocked"></a>Zařízení nevyhovující předpisům není blokované
 
 Pokud narazíte na zařízení, které nevyhovuje předpisům, ale má nadále přístup, proveďte následující kroky.
-
 - Zkontrolujte cílovou skupinu a skupinu pro vyloučení. Pokud uživatel není ve správné cílové skupině nebo je ve skupině pro vyloučení, nebude blokován. Vyhovování předpisům se kontroluje jenom u zařízení uživatelů, kteří jsou v cílové skupině.
 - Zkontrolujte, že se zařízení zjišťuje. Směřuje Exchange Connector na CAS pro Exchange 2010, zatímco je uživatel na serveru Exchange 2013? V takovém případě pokud je výchozí pravidlo Exchange nastavené na povolení, i když je uživatel v cílové skupině, Intune nemůže vědět o připojení zařízení k Exchangi.
 - Kontrola stavu existence a přístupu k zařízení v Exchangi:
-    - Pokud chcete získat seznam všech mobilních zařízení pro poštovní schránku, použijte tuto rutinu PowerShellu: Get-ActiveSyncDeviceStatistics -mailbox mbx. Pokud zařízení není v seznamu, nepřistupuje k Exchangi.
-    - Pokud zařízení je uvedené, pomocí rutiny Get-CASmailbox -identity:’upn’ | fl získejte podrobné informace o jeho stavu přístupu a předejte tyto informace podpoře Microsoftu.
+  - Pokud chcete získat seznam všech mobilních zařízení pro poštovní schránku, použijte tuto rutinu PowerShellu: Get-ActiveSyncDeviceStatistics -mailbox mbx. Pokud zařízení není v seznamu, nepřistupuje k Exchangi.
+  - Pokud zařízení je uvedené, pomocí rutiny Get-CASmailbox -identity:’upn’ | fl získejte podrobné informace o jeho stavu přístupu a předejte tyto informace podpoře Microsoftu.
 
-## <a name="before-you-open-a-support-ticket"></a>Než otevřete lístek podpory
-Pokud tyto postupy pro řešení potíží problém nevyřeší, může vás podpora Microsoftu vyzvat k poskytnutí některých informací, jako jsou protokoly poštovní schránky aplikace OWA nebo protokoly Exchange Connectoru.
-
-### <a name="collecting-owa-mailbox-logs"></a>Shromažďování protokolů poštovní schránky aplikace OWA
-
-1. Přihlaste se prostřednictvím aplikace OWA a zvolte symbol nastavení (ozubené kolečko) vedle vašeho jména v pravém horním rohu.
-2. Zvolte **Možnosti**
-3. Ve sloupci na levé straně zvolte **Telefon** (může být uvedeno **Mobilní zařízení**).
-4. V hlavní nabídce zvolte **Mobilní zařízení**.
-5. V seznamu zvolte příslušné zařízení a pak zvolte **Spustit protokolování**.
-6. Po zobrazení výzvy zvolte v místním dialogovém okně **Ano**.
-7. Proveďte akci, která způsobila problém, abyste ho znovu vyvolali.
-8. Počkejte jednu nebo dvě minuty, než přejděte zpátky na telefonní seznam v aplikaci OWA. Ověřte, že je váš telefon v seznamu vybraný, a pak z hlavní nabídky zvolte **Načíst protokol**.
-9. Nyní byste měli od sebe sama obdržet e-mail s přílohou. Při otevření lístku podpory předejte obsah e-mailu podpoře společnosti Microsoft.
-
-### <a name="exchange-connector-logs"></a>Protokoly Exchange Connectoru
-
-#### <a name="general-log-information"></a>Obecné informace o protokolech
-Pokud si chcete prohlédnout protokoly Exchange Connectoru, použijte [Prohlížeč trasování služeb](https://docs.microsoft.com/en-us/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe). Tento nástroj vyžaduje, abyste si stáhli sadu Windows Server SDK.
-
->[!NOTE]
->Protokoly jsou umístěné v adresáři C:\ProgramData\Microsoft\Windows Intune Exchange Connector\Logs. Protokoly jsou obsažené v posloupnosti 30 souborů, začínající souborem *Connector0.log* a končící souborem *Connector29.log*. Protokoly přecházejí na další po nahromadění 10 MB dat v protokolu. Jakmile se protokoly dostanou k souboru Connector29, začnou zase od Connector0 a budou přepisovat předchozí soubory protokolu.
-
-#### <a name="locating-sync-logs"></a>Vyhledání protokolů synchronizace
-
-- Vyhledejte v protokolech úplnou synchronizaci vyhledáním textu **full sync**. Začátek úplné synchronizace je označený tímto textem:
-
-  „Handling command: Getting the mobile device list without a time filter (full sync) for <number> users“
-
-  Konec protokolu úplné synchronizace vypadá takto:
-
-  „Getting the mobile device list without a time filter (full sync) for 4 users completed successfully.“ Details: Inventory command result - Devices synced: 0 Command ID: commandIDGUID' Exchange health: 'Server health 'Name: 'PowerShellExchangeServer: <Name=mymailservername>' Status: Connected','
-
-- Vyhledejte v protokolech rychlou (rozdílovou) synchronizaci vyhledáním textu **quick sync**.
-
-##### <a name="exceptions-in-get-next-command"></a>Výjimky v příkazu Get next
-Vyhledejte v protokolech Exchange Connectoru výjimky v **příkazu Get next** a poskytněte je podpoře Microsoftu.
-
-#### <a name="verbose-logging"></a>Podrobné protokolování
-
-Zapnutí podrobného protokolování:
-
-1.  Otevřete konfigurační soubor trasování Exchange Connectoru. Soubor je v následujícím umístění: %ProgramData%\Microsoft\Windows Intune Exchange Connector\TracingConfiguration.xml.
-2.  Vyhledejte TraceSourceLine s následujícím klíčem: OnPremisesExchangeConnectorService
-3.  Změňte hodnotu uzlu **SourceLevel** z **Warning ActivityTracing** (výchozí) na **Verbose ActivityTracing**, jak je uvedeno dál.
-
-    <TraceSourceLine> <Key xsi:type="xsd:string">OnPremisesExchangeConnectorService</Key> <Value xsi:type="TraceSource"> <SourceLevel>All</SourceLevel> <Listeners> <Listener> <ListenerType>CircularTraceListener</ListenerType> <SourceLevel>Verbose ActivityTracing</SourceLevel> <FileSizeQuotaInBytes>10000000</FileSizeQuotaInBytes> <FileName>Microsoft\Windows Intune Exchange Connector\Logs\Connector.svclog</FileName> <FileQuota>30</FileQuota> </Listener> </Listeners> </Value>
-    </TraceSourceLine>
-
-
-
-### <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další kroky
 Pokud vám tyto informace nepomohly, můžete také [získat podporu pro Microsoft Intune](get-support.md).

@@ -6,7 +6,7 @@ keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 02/20/2018
+ms.date: 09/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 83320c78d461981f1bfff52d2fddf4f121a88b8c
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: 45c394f3aadde63299b8397974f4547c4968c192
+ms.sourcegitcommit: 534efa7c5033098233b2549c2d7fc6cf33330e79
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329661"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169028"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Vytvoření a přiřazení zásad ochrany aplikací
 
@@ -56,24 +56,22 @@ Informace o přidání obchodních aplikací organizace do Microsoft Intune kvů
    Nastavením zásad jsou pro začátek přiřazené výchozí hodnoty. Pokud tyto výchozí hodnoty splňují vaše požadavky, nemusíte nic měnit.
 
    > [!TIP]
-   > Tato nastavení zásad se vynutí jenom při použití aplikace v pracovním kontextu. Když koncový uživatel použije aplikaci k provedení osobní úlohy, nebudou mít tyto zásady na ni vliv.
+   > Tato nastavení zásad se vynutí jenom při použití aplikace v pracovním kontextu. Když koncový uživatel použije aplikaci k provedení osobní úlohy, nebudou mít tyto zásady na ni vliv. Upozorňujeme, že když vytvoříte nový soubor, považuje se za osobní soubor. 
 
-7. Tuto konfiguraci uložíte zvolením tlačítka **OK**. A jste zpátky v podokně **Přidat zásadu**. Zvolením možnosti **Vytvořit** vytvoříte zásadu a uložíte své nastavení.
-8. Tuto konfiguraci uložíte zvolením tlačítka **OK**. A jste zpátky v okně **Přidat zásadu**.
-9. Zvolením možnosti **Vytvořit** vytvoříte zásadu a uložíte své nastavení.
+7. Tuto konfiguraci uložíte zvolením tlačítka **OK**. A jste zpátky v okně **Přidat zásadu**.
+8. Zvolením možnosti **Vytvořit** vytvoříte zásadu a uložíte své nastavení.
 
 Zásada není po vytvoření pomocí výš uvedeného postupu nasazená pro žádného uživatele. Pokud chcete nasadit zásadu, přečtěte si téma [Nasazení zásady pro uživatele](app-protection-policies.md#deploy-a-policy-to-users).
 
 ## <a name="deploy-a-policy-to-users"></a>Nasazení zásady pro uživatele
 
-
 1. V podokně **Zásady ochrany aplikací** vyberte zásadu.
 
-1. V podokně **Zásada** vyberte **Přiřazení**. Otevře se podokno **Intune App Protection – Přiřazení**. Zvolte **Vybrat skupiny, které se zahrnou** v podokně **Přiřazení** a otevřete tak podokno **Vybrat skupiny, které se zahrnou**.
+2. V podokně **Zásada** vyberte **Přiřazení**. Otevře se podokno **Intune App Protection – Přiřazení**. Zvolte **Vybrat skupiny, které se zahrnou** v podokně **Přiřazení** a otevřete tak podokno **Vybrat skupiny, které se zahrnou**.
 
    ![Snímek obrazovky podokna Přiřazení se zvýrazněnou možností nabídky Vybrat skupiny, které se zahrnou](./media/app-protection-policy-add-users.png)
 
-2.  V podokně **Přidat skupinu uživatelů** se zobrazí seznam skupin uživatelů. Je to seznam všech skupin zabezpečení v **Azure Active Directory**. Vyberte skupiny uživatelů, pro které chcete tuto zásadu použít, a pak zvolte **Vybrat**. Zvolením možnosti **Vybrat** nasadíte tuto zásadu uživatelům.
+3.  V podokně **Přidat skupinu uživatelů** se zobrazí seznam skupin uživatelů. Je to seznam všech skupin zabezpečení v **Azure Active Directory**. Vyberte skupiny uživatelů, pro které chcete tuto zásadu použít, a pak zvolte **Vybrat**. Zvolením možnosti **Vybrat** nasadíte tuto zásadu uživatelům.
 
     ![Snímek obrazovky podokna Přidat skupinu uživatelů zobrazující seznam uživatelů Azure Active Directory](./media/azure-ad-user-group-list.png)
 
@@ -127,10 +125,12 @@ Vzhledem k tomu, že zásady ochrany aplikací Intune cílí na identitu uživat
 
 Pokud chcete vytvořit tyto zásady, přejděte v konzole Intune na **Klientské aplikace** > **Zásady ochrany aplikací** a klikněte na **Přidat zásadu**. Můžete také upravit existující zásadu ochranu aplikací. Pokud chcete, aby zásada ochrany aplikací platila pro spravovaná i nespravovaná zařízení, zkontrolujte, že je možnost **Cílit na všechny typy aplikací** nastavena na výchozí hodnotu **Ano**. Pokud chcete zásady přiřazovat podrobněji na základě stavu správy, nastavte možnost **Cílit na všechny typy aplikací** na **Ne**. 
 
-Aby bylo možné považovat aplikace pro iOS za „spravované“, musí být nastavení zásad konfigurace **IntuneMAMUPN** nasazené pro každou aplikaci. Další informaci získáte v článku o [správě přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune](https://docs.microsoft.com/en-us/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
+![Snímek obrazovky s oknem Přidat zásadu a vybranou možností Cílit na všechny typy aplikací](./media/app-protection-policies-target-all.png)
+
+Aby bylo možné považovat aplikace pro iOS za „spravované“, musí být nastavení zásad konfigurace **IntuneMAMUPN** nasazené pro každou aplikaci. Další informaci získáte v článku o [správě přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune](https://docs.microsoft.com/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 
 > [!NOTE]
-> Konkrétní informace o podpoře zásad ochrany aplikací pro iOS na základě stavu správy zařízení najdete v tématu [Zásady ochrany MAM zacílené podle stavu správy](whats-new.md#mam-protection-policies-targeted-based-on-management-state-).
+> Konkrétní informace o podpoře zásad ochrany aplikací pro iOS na základě stavu správy zařízení najdete v tématu [Zásady ochrany MAM zacílené podle stavu správy](whats-new-archive.md#mam-protection-policies-targeted-based-on-management-state-).
 
 ## <a name="policy-settings"></a>Nastavení zásad
 Pokud chcete zobrazit úplný seznam nastavení zásad pro iOS a Android, vyberte jeden z následujících odkazů:

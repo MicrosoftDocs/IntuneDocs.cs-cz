@@ -2,8 +2,8 @@
 title: Řízení přístupu na základě role v Microsoft Intune
 description: Přečtěte si, jak vám řízení přístupu na základě role (RBAC) umožňuje řídit, kdo může provádět akce a změny v Microsoft Intune.
 keywords: ''
-author: dougeby
-ms.author: dougeby
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2018
 ms.topic: conceptual
@@ -14,12 +14,12 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: ad5bf36eeb81c5deabc2c3efd73cddcc3db8a70c
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
+ms.openlocfilehash: 5c75bd80e848bbd309051a9c6f3e149abd7a46ed
+ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253693"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028694"
 ---
 # <a name="role-based-administration-control-rbac-with-microsoft-intune"></a>Řízení správy na základě role (RBAC) v Microsoft Intune
 
@@ -42,6 +42,7 @@ Na novém Azure Portalu poskytuje **Azure Active Directory (Azure AD)** dvě rol
 
     > [!IMPORTANT]
     > Role Správce služby Intune neumožňuje spravovat nastavení podmíněného přístupu k Azure AD.
+    > Členové rolí Intune musí mít licenci Intune.
 
     > [!TIP]
     > V Intune jsou také tři rozšíření Azure AD: **Uživatelé**, **Skupiny** a **Podmíněný přístup** řízená prostřednictvím Azure AD RBAC. **Správce uživatelských účtů** navíc provádí jenom aktivity uživatele nebo skupiny AAD a nemá úplná oprávnění provádět všechny aktivity v Intune. Další detaily naleznete v tématu [Řízení správy na základě rolí s Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).
