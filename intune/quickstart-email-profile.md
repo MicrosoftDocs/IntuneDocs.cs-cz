@@ -3,8 +3,8 @@ title: 'Rychlý start: Vytvoření e-mailového profilu zařízení pro iOS'
 titlesuffix: Microsoft Intune
 description: Zjistěte, jak pomocí Microsoft Intune vytvořit e-mailový profil zařízení, aby se zařízení s iOSem mohla bezpečně připojovat k firemnímu e-mailu.
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 09/21/2018
 ms.topic: quickstart
@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a0c554315168147249e0842b69e3e6195ed85979
-ms.sourcegitcommit: 27eed5aba5c8bfafb079171081b68f75a6cbffaf
+ms.openlocfilehash: b797951c878dd90cbb7bb716b5108f94f48921c5
+ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581595"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48231946"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-ios"></a>Rychlý start: Vytvoření e-mailového profilu zařízení pro iOS
 
@@ -30,7 +30,7 @@ Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební úče
 
 ## <a name="sign-in-to-intune"></a>Přihlášení k Intune
 
-Přihlaste se k [Intune](https://aka.ms/intuneportal) jako globální správce nebo správce služby Intune. Intune najdete na webu Azure Portal po výběru **Všechny služby** > **Intune**.
+Přihlaste se k [Intune](https://aka.ms/intuneportal) jako globální správce nebo jako správce služby Intune. Intune najdete na webu Azure Portal po výběru **Všechny služby** > **Intune**.
 
 ## <a name="create-an-ios-email-profile"></a>Vytvoření e-mailového profilu pro iOS
 1. V Intune vyberte **Konfigurace zařízení** a pak **Profily**.
