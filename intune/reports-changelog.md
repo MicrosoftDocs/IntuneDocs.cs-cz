@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 07/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,18 +15,30 @@ ms.assetid: E85DBB2D-67BB-4E10-82D6-E43046B9C43C
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: dd9fb36bb1b8c5e66d104f530690c5d236ea25e4
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 08f5437141cc98161af740d7b8cad7c6cc1ff61c
+ms.sourcegitcommit: 443b4cb3390da47bf1e497b1f0c0137a5ddda7bd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223692"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43821184"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Protokol změn pro rozhraní API datového skladu Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Udržujte si přehled o aktualizacích datového skladu Intune.
+
+## <a name="1808"></a>1808
+_Vydáno v srpnu 2018_
+
+### <a name="v10-collections"></a>Kolekce v1.0  
+
+Nastavením parametru dotazu `api-version=v1.0` můžete teď používat verzi datového skladu Intune v1.0. Aktualizace kolekcí v datovém skladu mají aditivní povahu a nijak nenarušují existující scénáře.
+
+### <a name="enrollment-failure-collection-released-to-beta"></a>Kolekce neúspěšných registrací vydaná ve verzi beta
+
+Nová kolekce `Enrollment Failure` se vydala ve verzi beta. Můžete ji použít k pochopení průběhu registrace tím, že se zaměříte na nejběžnější chyby. 
+
 
 ## <a name="1805"></a>1805
 _Vydáno v květnu 2018_

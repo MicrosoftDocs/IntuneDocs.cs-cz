@@ -15,12 +15,12 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ce785ad7898f9e792feeadcd1623bd0989f0d6d0
-ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
+ms.openlocfilehash: 8e0d8d6aba74a37d1c07fa8445aa98adf5943be2
+ms.sourcegitcommit: 8fdddb684ecf5eabf071907168413bcd89a2f702
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40255559"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44141605"
 ---
 # <a name="enroll-devices-by-using-a-device-enrollment-manager-account"></a>Registrace zařízení pomocí účtu správce registrace zařízení
 
@@ -53,7 +53,7 @@ Zařízení zaregistrovaná pomocí účtu správce registrace zařízení mají
   - Uživatel DEM nemůže přes Portál společnosti zrušit registraci zařízení zaregistrovaného pomocí účtu DEM. Správce Intune může registraci zrušit.
   - V aplikaci nebo na webu Portál společnosti se zobrazí jenom místní zařízení.
   - Uživatelé nemůžou používat aplikace v rámci programu Apple VPP (Volume Purchase Program) s využitím uživatelských licencí, protože ke správě těchto aplikací jsou vyžadovaná Apple ID jednotlivých uživatelů.
-  - (Pouze iOS) Pokud pomocí DEM zaregistrujete zařízení s iOSem, nemůžete k registraci zařízení využít Apple Configurator, Program registrace zařízení Apple (DEP) ani Apple School Manager (ASM).
+  - (Pouze iOS) Pokud pomocí DEM zaregistrujete zařízení s iOSem, nemůžete k registraci zařízení využít Apple Configurator, Program registrace zařízení Apple (DEP) ani Apple School Manager (ASM). To znamená, že nemůžete zařízení dát do režimu dohledu, takže nebudete mít přístup k některým možnostem konfigurace.
   - (Pouze Android) Počet zařízení s pracovním profilem Androidu, která lze zaregistrovat pomocí jednoho účtu DEM, je omezený. Pro každý účet DEM je možné zaregistrovat až 10 zařízení s pracovním profilem Androidu. Toto omezení se nevztahuje na registrace starších verzí Androidu.
   - Zařízení můžou instalovat aplikace VPP, pokud mají licence na zařízení.
   - K používání DEM se nevyžaduje licence zařízení Intune. Další informace o [uživatelských licencích a licencích na zařízení](licenses-assign.md#how-user-and-device-licenses-affect-access-to-services).
