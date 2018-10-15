@@ -1,11 +1,11 @@
 ---
 title: Použití zařízení s Androidem v Intune | Dokumentace Microsoftu
-description: Seznam odkazů na úlohy, které můžou koncoví uživatelé dělat na svém mobilním zařízení s Androidem, pokud je zaregistrované v Intune
+description: Seznam odkazů pro řešení potíží a správu zařízení s Androidem, která jsou zaregistrovaná v Intune
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2017
+ms.date: 09/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,20 +17,20 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 347757a333bcfd8e649cb621f0a95c83f24cdc88
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 35c76db52db0f037427357eb5f3059a65908ae12
+ms.sourcegitcommit: 534efa7c5033098233b2549c2d7fc6cf33330e79
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31018664"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168943"
 ---
-# <a name="using-your-android-device-with-intune"></a>Použití zařízení Android s Intune
+# <a name="using-your-android-device-with-intune-company-portal"></a>Použití zařízení s Androidem na Portálu společnosti Intune
 
-Intune vám může v mnoha směrech usnadnit práci. Tady je seznam obvyklých postupů, jejichž provedení může vaše společnost vyžadovat.
+Tento článek obsahuje úlohy a informace týkající se Portálu společnosti pro Android. Může vám pomoct při řešení potíží a správě zařízení s Androidem. Kliknutím na jednotlivé odkazy zobrazíte další podrobnosti, postupy a snímky obrazovky. 
 
 ## <a name="supported-versions"></a>Podporované verze
 
-Intune aktuálně podporuje Android 4.4 a novější. Patří sem i zařízení na platformě Samsung Knox 4.4 a novější.
+Portál společnosti aktuálně podporuje Android 4.4 a novější. Součástí je také podpora pro Samsung Knox 4.4 a novější zařízení.
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Registrace do Intune a instalace Portálu společnosti
 

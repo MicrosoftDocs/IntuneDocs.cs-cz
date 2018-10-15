@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/06/2017
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,20 +17,19 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 51bca0c2aa10f15511e1644eda9ca6dd11c36f8b
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 99570a30130d35a651701749628cd918acf858e0
+ms.sourcegitcommit: a30cfdb3d3f97b6d5943db2d842011a6f60115f0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31031579"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864554"
 ---
-# <a name="using-your-ios-device-with-intune"></a>Použití zařízení iOS s Intune
-
-Intune vám může v mnoha směrech usnadnit práci. Tady je seznam obvyklých postupů, jejichž provedení může vaše společnost vyžadovat.
+# <a name="using-your-ios-device-with-intune-company-portal"></a>Použití zařízení s iOS na Portálu společnosti Intune
+Tento článek obsahuje úlohy a informace týkající se Portálu společnosti pro iOS. Může vám pomoct při řešení potíží a správě zařízení s iOS. Kliknutím na jednotlivé odkazy zobrazíte další podrobnosti, postupy a snímky obrazovky.
 
 ## <a name="supported-versions"></a>Podporované verze
 
-Intune aktuálně podporuje iOS 9.0 a novější.
+Portál společnosti pro iOS aktuálně podporuje iOS 10.0 a novější.
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Registrace do Intune a instalace Portálu společnosti
 
