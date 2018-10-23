@@ -5,7 +5,7 @@ keywords: SDK, Xamarin, Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/10/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,13 +13,13 @@ ms.technology: ''
 ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
 ms.reviewer: aanavath
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: c3ccd2db88df4e5b7a51e0aa2446a99f33256432
-ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
+ms.custom: intune
+ms.openlocfilehash: 68cc4bb576f567787e702ccd88026579b6ed5b12
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47028711"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425304"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Xamarinové vazby sady Microsoft Intune App SDK
 
@@ -27,7 +27,7 @@ ms.locfileid: "47028711"
 > Možná si budete chtít nejdřív přečíst článek [Začínáme s Intune App SDK](app-sdk-get-started.md), který vysvětluje postup přípravy integrace na jednotlivých podporovaných platformách.
 
 ## <a name="overview"></a>Přehled
-[Xamarinové vazby sady Intune App SDK](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) umožňují v aplikacích pro iOS a Android vytvořených v Xamarinu povolit [zásady ochrany aplikací Intune](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune). Tyto vazby umožňují vývojářům jednoduše do aplikací založených na Xamarinu začlenit funkce ochrany aplikace Intune.
+[Xamarinové vazby sady Intune App SDK](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) umožňují v aplikacích pro iOS a Android vytvořených v Xamarinu povolit [zásady ochrany aplikací Intune](app-protection-policy.md). Tyto vazby umožňují vývojářům jednoduše do aplikací založených na Xamarinu začlenit funkce ochrany aplikace Intune.
 
 Xamarinové vazby sady Microsoft Intune App SDK umožňují začlenit do vašich aplikací vyvíjených v Xamarinu zásady ochrany aplikací Intune (také označované jako zásady APP nebo MAM). Aplikace s povolenou funkcí MAM je integrovaná se sadou Intune App SDK. Správci IT můžou zásady ochrany aplikací nasadit do vaší mobilní aplikace, když Intune tuto aplikaci aktivně spravuje.
 
@@ -80,14 +80,14 @@ Sada SDK spoléhá na [knihovnu ADAL](https://azure.microsoft.com/documentation/
 
 ## <a name="enabling-intune-app-protection-policies-in-your-android-mobile-app"></a>Povolení zásad Intune App Protection v mobilní aplikaci pro Android
 
-U aplikací pro Android založených na Xamarinu, které nevyužívají architekturu uživatelského rozhraní, si přečtěte téma [Intune APP SDK pro Android – Příručka vývojáře](app-sdk-android.md) a postupujte podle něj. V aplikaci pro Android založené na Xamarinu je potřeba nahradit třídu, metody a aktivity jejich ekvivalentem MAM podle [tabulky](app-sdk-android.md#replace-classes-methods-and-activities-with-their-mam-equivalent), kterou v průvodci najdete. Pokud vaše aplikace nedefinuje třídu `android.app.Application`, budete ji muset vytvořit a zajistit, abyste dědili z `MAMApplication`.
+U aplikací pro Android založených na Xamarinu, které nevyužívají architekturu uživatelského rozhraní, si přečtěte téma [Intune APP SDK pro Android – Příručka vývojáře](app-sdk-android.md) a postupujte podle něj. V aplikaci pro Android založené na Xamarinu je potřeba nahradit třídu, metody a aktivity jejich ekvivalentem MAM podle [tabulky](app-sdk-android.md#class-and-method-replacements), kterou v průvodci najdete. Pokud vaše aplikace nedefinuje třídu `android.app.Application`, budete ji muset vytvořit a zajistit, abyste dědili z `MAMApplication`.
 
 ### <a name="xamarinandroid-integration"></a>Integrace Xamarin.Android
 
 1. Do svého projektu Xamarin.Android přidejte nejnovější verzi [balíčku NuGet Microsoft.Intune.MAM.Xamarin.Android](https://www.nuget.org/packages/Microsoft.Intune.MAM.Xamarin.Android). Ten vám poskytne potřebné odkazy, abyste mohli aplikaci v Intune povolit.
 
 2. Přečtěte si celou [příručku pro vývojáře, kteří používají sadu Intune App SDK pro Android](app-sdk-android.md), a zvláštní pozornost věnujte těmto částem:
-    1. [Celá část věnovaná nahrazením tříd a metod](app-sdk-android.md#replace-classes-methods-and-activities-with-their-mam-equivalent). 
+    1. [Celá část věnovaná nahrazením tříd a metod](app-sdk-android.md#class-and-method-replacements). 
     2. [Část věnovaná MAMApplication](app-sdk-android.md#mamapplication). Zkontrolujte, že podtřída je správně doplněna o atribut `[Application]` a že přepisuje konstruktor `(IntPtr, JniHandleOwnership)`.
     3. [Část věnovaná integraci ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal), pokud se vaše aplikace ověřuje ve službě AAD.
     4. [Část věnovaná registraci MAM-WE](app-sdk-android.md#app-protection-policy-without-device-enrollment), pokud plánujete, že vaše aplikace bude získávat zásady ze služby MAM.

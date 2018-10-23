@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3bb891b2a602cde4510953ce00c4e206d1135fce
-ms.sourcegitcommit: a89af1f0dad61320ab3e31cb64708f14514a5081
+ms.openlocfilehash: 83a231f41f5cf9d4488e86040c2d7e141f71d0a7
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46300455"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49424913"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Resetování nebo odebrání hesla zařízení v Intune
 
@@ -49,7 +49,6 @@ U zařízení s Androidem to znamená, že resetování hesla na úrovni zaříz
 | Zařízení s Androidem se spuštěnou verzí 7.x nebo starší | Ne |
 | iOS | Ne |
 | macOS | Ne |
-| iOS | Ne |
 
 K vytvoření nového hesla pracovního profilu použijte akci Resetovat heslo. Touto akcí vyzvete uživatele k resetování hesla a vytvoření nového, dočasného hesla, které je jenom pro pracovní profil. 
 

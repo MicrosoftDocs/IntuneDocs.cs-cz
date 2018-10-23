@@ -15,19 +15,16 @@ ms.assetid: 4b6dcbcc-4661-4463-9a36-698d673502c6
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 516e2f935225b7142c75b01967977fe97297c8e2
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: 0b4af0a638d86d32b244c3a34f8039e466394736
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232170"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49424930"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrace Jamf Pro s Intune pro dodržování předpisů
 
-|Platí pro: Intune na portálu Azure Portal |
-|--|
-|Hledáte dokumentaci k Intune na klasickému portálu? [Přejděte sem](/intune/introduction-intune?toc=/intune-classic/toc.json).|
-| |
+Platí pro: Intune na portálu Azure Portal
 
 Pokud vaše organizace používá [Jamf Pro](https://www.jamf.com) ke správě koncových uživatelů Mac, můžete použít zásady dodržování předpisů Microsoft Intune s podmíněným přístupem Azure Active Directory a zajistit, že zařízení ve vaší organizaci splňují požadavky.
 

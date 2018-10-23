@@ -15,12 +15,12 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9f0140d532356a1ddb3f8acf19ea1dfaf6e85eb8
-ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
+ms.openlocfilehash: eb1599085687c258c6853eacf269e2d1b11cbaf1
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347690"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425083"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 Zjistěte, jaké jsme v uživatelském rozhraní aplikací udělali změny, které koncoví uživatelé uvidí v této verzi Microsoft Intune. Pochopení těchto aktualizací vám pomůže při komunikaci s uživateli a aktualizaci vlastní dokumentace, kterou jste vytvořili za účelem podpory vašeho nasazení. Můžete také zjistit, jak lépe řešit problémy uživatelů, když požádají helpdesk o podporu pomocí Portálu společnosti.
@@ -30,7 +30,7 @@ Zjistěte, jaké jsme v uživatelském rozhraní aplikací udělali změny, kter
 ## <a name="week-of-august-27-2018"></a>Týden od 27. srpna 2018  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Nová aktualizace uživatelského prostředí pro web Portál společnosti <!--2000968 -->  
-Na základě názorů zákazníků jsme přidali na web Portál společnosti nové funkce. Na svých zařízeních zaznamenáte značné vylepšení stávající funkčnosti a použitelnosti. Oblasti webu – jako třeba podrobnosti o zařízení, váš názor a podpora a přehled zařízení – získaly nový, moderní a živý vzhled. Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](https://docs.microsoft.com/en-us/intune-user-help/using-the-intune-company-portal-website), aby tyto změny reflektovala.   
+Na základě názorů zákazníků jsme přidali na web Portál společnosti nové funkce. Na svých zařízeních si všimnete značného vylepšení stávající funkčnosti a použitelnosti. Oblasti webu – jako třeba podrobnosti o zařízení, váš názor a podpora a přehled zařízení – získaly nový, moderní a živý vzhled. Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](https://docs.microsoft.com/intune-user-help/using-the-intune-company-portal-website), aby tyto změny reflektovala.   
 
 Mezi nové aktualizace patří:  
 

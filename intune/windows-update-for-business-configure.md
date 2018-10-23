@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: df7e14b485fae0a70b8f0f487229b9e31ace4077
-ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
+ms.openlocfilehash: d709681519f2e68d38958d6ec2082b762e22cf60
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40255286"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425151"
 ---
 # <a name="manage-software-updates-in-intune"></a>Správa softwarových aktualizací v Intune
 
@@ -34,7 +34,7 @@ Služba Windows Update pro firmy vám zjednodušuje správu aktualizací. Nemus�
   - Windows Insider – Slow
   - Windows Insider – Release 
       
-  Podrobnosti o dostupných kanálech pro údržbu najdete v tématu [Základní informace o Windows jako službě](https://docs.microsoft.com/en-us/windows/deployment/update/waas-overview#servicing-channels).
+  Podrobnosti o dostupných kanálech pro údržbu najdete v tématu [Základní informace o Windows jako službě](https://docs.microsoft.com/windows/deployment/update/waas-overview#servicing-channels).
 - **Nastavení odložení**: Nakonfigurujte nastavení odložení aktualizací ke zpoždění instalací aktualizací pro skupiny zařízení. Tato nastavení vám umožní rozfázovat zavádění aktualizací, abyste mohli kontrolovat jeho průběh.
 - **Pozastavení**: Odložte instalaci aktualizací, pokud kdykoli během zavádění aktualizací zjistíte problém.
 - **Časové období údržby**: Konfigurujte hodiny, kdy se můžou aktualizace instalovat.
