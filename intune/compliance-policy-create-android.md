@@ -14,12 +14,12 @@ ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 85f11e3a9bfd43affde35806d9aeaf40dcbfe03d
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: ed2dcda510c455be1ad532228bfbcbeb898d971a
+ms.sourcegitcommit: b7789fd2f34528275c13a717699cf53a289ed04e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37906188"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48891025"
 ---
 # <a name="add-a-device-compliance-policy-for-android-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s Androidem v Intune
 
@@ -121,7 +121,7 @@ Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení 
   > Aplikace instalované bokem vyžadují, aby bylo povolené nastavení **Blokovat aplikace z neznámých zdrojů**. Tuto zásadu dodržování předpisů vynuťte jenom v případě, že na zařízeních neprovádíte instalaci aplikací pro Android bokem.
 
 - **Integrita modulu runtime aplikace Portál společnosti**: Zkontroluje, jestli má aplikace Portál společnosti nainstalované výchozí prostředí modulu runtime, je správně podepsaná, není v režimu ladění a je nainstalovaná ze známého zdroje.
-- **Blokovat u zařízení ladění USB** (Android 4.2 nebo novější): Vyberte, pokud chcete zabránit tomu, aby zařízení používala funkci ladění USB.
+- **Blokovat u zařízení ladění USB** (Android 4.2 nebo novější): Zvolte tuto možnost, pokud chcete zabránit tomu, aby zařízení používala funkci ladění USB.
 - **Minimální úroveň opravy zabezpečení** (Android 6.0 nebo novější): Vyberte nejstarší úroveň opravy zabezpečení, kterou může zařízení mít. Zařízení, která nejsou alespoň na této úrovni oprav, nebudou kompatibilní. Datum musí být zadáno ve formátu `YYYY-MM-DD`.
 
 ## <a name="locations"></a>Umístění

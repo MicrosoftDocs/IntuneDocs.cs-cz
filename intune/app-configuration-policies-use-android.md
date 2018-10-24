@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/04/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bdf927eff77b6a97e4c763ec0d75c7e44e4c6840
-ms.sourcegitcommit: 28262384ec94e43970cc7a33e5d9063972bdf468
+ms.openlocfilehash: e7e740d03453a437572f8f960ed21927f4fcbace
+ms.sourcegitcommit: ab08dd841f16ae11f958c43b6262a9f6a0cabdd4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48799572"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49102034"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem
 
@@ -29,7 +29,9 @@ ms.locfileid: "48799572"
 Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastavení pro aplikace v pracovním profilu Androidu. K určení nastavení konfigurace pro aplikaci musí její vývojáři zpřístupnit nastavení konfigurace spravovaných aplikací pro Android. Přiřaďte zásady konfigurace aplikací skupině uživatelů, pro kterou chcete nastavení použít.  Nastavení zásad se použijí, když je aplikace zjistí (obvykle při prvním spuštění).
 
 > [!Note]  
-> Některé aplikace konfiguraci aplikací nepodporují. Zeptejte se vývojáře, jestli vaše aplikace zásady konfigurace aplikací podporuje.
+> Některé aplikace konfiguraci aplikací nepodporují. Zeptejte se vývojáře, jestli vaše aplikace zásady konfigurace aplikací podporuje.<p></p>
+> Jako správce Microsoft Intune můžete řídit, které uživatelské účty se přidají do aplikací Microsoft Office na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty na zaregistrovaných zařízeních. Podpůrné aplikace zpracují konfiguraci aplikace a odeberou a zablokují neschválené účty.<p></p>
+> Pro Microsoft Word, Microsoft Excel a Microsoft PowerPoint je nutné použít Android 16.0.9327.1000 a novější.
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
@@ -69,6 +71,16 @@ Pokud jako typ hodnoty zvolíte proměnnou, můžete vybírat z následujících
 - ID uživatele — například **3ec2c00f-b125-4519-acf0-302ac3761822**
 - Uživatelské jméno — například **Jan Novák**
 
+### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Povolte jenom nakonfigurované účty organizace v aplikacích s více identitami 
+
+Pro zařízení s Androidem použijte následující dvojice klíč/hodnota:
+
+| **Klíč** | com.microsoft.intune.mam.AllowedAccountUPNs |
+|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Hodnoty** | <ul><li>Jeden nebo více hlavních názvů uživatele (UPN) oddělených <code>;</code>.</li><li>Jediné povolené účty jsou spravované uživatelské účty definované pomocí tohoto klíče.</li><li> Pro zařízení zaregistrovaná v Intune se může použít token <code>{{userprincipalname}}</code>, aby představoval účet zaregistrovaného uživatele.</li></ul> |
+
+   > [!NOTE]
+   > Musíte použít Outlook pro Android 2.2.222 nebo novější, když budete povolovat jenom nakonfigurované účty organizace s více identitami. 
 
 ## <a name="enter-the-json-editor"></a>Použití editoru JSON
 

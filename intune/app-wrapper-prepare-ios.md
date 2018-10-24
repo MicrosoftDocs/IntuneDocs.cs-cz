@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/13/2018
+ms.date: 10/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: daaed6ded0c20551567a63890d324abcbaaf41d7
-ms.sourcegitcommit: 9f99b4a7f20ab4175d6fa5735d9f4fd6a03e0d3a
+ms.openlocfilehash: 652157f41f0fbefa14e9f22fea01c918cb7704a1
+ms.sourcegitcommit: ae27c04a68ee893a5a6be4c56fe143263749a0d7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40253134"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169494"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro iOS na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -27,7 +27,7 @@ ms.locfileid: "40253134"
 
 Pomocí nástroje Microsoft Intune App Wrapping Tool pro iOS můžete zapnout zásady ochrany aplikací Intune pro interní aplikace pro iOS, aniž byste museli měnit kód samotné aplikace.
 
-Tento nástroj je vlastně aplikace příkazového řádku systému Mac OS, která vytvoří obálku aplikace (app wrapper). Až se aplikace zpracuje, můžete její funkce změnit tak, že do ní nasadíte [zásady ochrany aplikací](/intune-classic/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console).
+Tento nástroj je vlastně aplikace příkazového řádku systému Mac OS, která vytvoří obálku aplikace. Až se aplikace zpracuje, můžete její funkce změnit tak, že do ní nasadíte [zásady ochrany aplikací](/intune-classic/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console).
 
 Nástroj si můžete stáhnout na stránce [Microsoft Intune App Wrapping Tool pro iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) v GitHubu.
 
@@ -39,13 +39,13 @@ Než nástroj App Wrapping Tool spustíte, musíte splnit některé obecné pož
 
 * Stáhněte si nástroj [Microsoft Intune App Wrapping Tool pro iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) z GitHubu.
 
-* Potřebujete počítač s macOS, na kterém běží OS X 10.8.5 nebo novější a je na něm nainstalovaná sada nástrojů XCode verze 5 nebo novější.
+* Potřebujete počítač s macOS, na kterém běží OS X 10.8.5 nebo novější a je na něm nainstalovaná sada nástrojů Xcode verze 9 nebo novější.
 
 * Vstupní aplikaci pro iOS musí vyvinout a podepsat vaše společnost nebo nezávislý výrobce softwaru (ISV).
 
   * Soubor vstupní aplikace musí mít příponu **.ipa** nebo **.app**.
 
-  * Vstupní aplikace musí být zkompilovaná pro iOS 8.0. nebo novější.
+  * Vstupní aplikace musí být zkompilovaná pro iOS 10 nebo novější.
 
   * Vstupní aplikace nemůže být zašifrovaná.
 
@@ -404,7 +404,7 @@ Při používání nástroje App Wrapping použijte následující doporučené 
 ## <a name="intune-app-wrapping-tool-for-ios-with-citrix-mdx-mvpn"></a>Nástroj Intune App Wrapping pro iOS s Citrix MDX mVPN
 Tato funkce je integrací s obálkou aplikací (app wrapper) Citrix MDX pro iOS. Tato integrace je jednoduše další volitelný příznak příkazového řádku (`-citrix`) k obecným nástrojům Intune App Wrapping Tools.
 
-### <a name="requirements"></a>Požadavky
+### <a name="requirements"></a>požadavky
 
 Abyste mohli použít příznak `-citrix`, musíte také na stejný počítač s macOS nainstalovat [obálku aplikací (app wrapper) Citrix MDX pro iOS](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-ios.html). Soubory ke stažení najdete na webu [Citrix XenMobile Downloads](https://www.citrix.com/downloads/xenmobile/). Přístup k nim získají jenom zákazníci Citrixu po přihlášení. Zajistěte, aby se do výchozího umístění nainstalovalo toto: `/Applications/Citrix/MDXToolkit`. 
 

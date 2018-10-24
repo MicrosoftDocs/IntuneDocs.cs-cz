@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 8/27/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b89ca2c4320db733f39ce9b67d275169f4cba5c6
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 58b157cfe639651aa65e8dfb510b857d0128589a
+ms.sourcegitcommit: ab08dd841f16ae11f958c43b6262a9f6a0cabdd4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313787"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49102119"
 ---
 # <a name="enable-windows-defender-atp-with-conditional-access-in-intune"></a>Povolení Ochrany ATP v programu Windows Defender s podmíněným přístupem v Intune
 
@@ -89,6 +89,10 @@ Jakmile jednou připojíte zařízení pomocí konfiguračního balíčku, už t
 6. Nakonfigurujte nastavení:
 
   - **Typ balíčku konfigurace klienta Ochrany ATP v programu Windows Defender**: Pokud chcete do profilu přidat konfigurační balíček, vyberte možnost **Připojení**. Výběrem možnosti **Zrušit zprovoznění** konfigurační balíček odeberete.
+  
+    > [!NOTE] 
+    > Pokud jste správně navázali spojení s Ochranou ATP v programu Windows Defender, Intune automaticky **Připojí** konfigurační profil za vás.
+  
   - **Sdílení ukázky pro všechny soubory**: Možnost **Povolit** umožňuje shromažďovat ukázky a sdílet je se službou Ochrana ATP v programu Windows Defender. Pokud například uvidíte podezřelý soubor, můžete ho odeslat službě Ochrana ATP v programu Windows Defender k hloubkové analýze. Pokud nechcete sdílet ukázky s Ochranou ATP v programu Windows Defender, vyberte možnost **Nenakonfigurováno**.
   - **Zvýšení četnosti hlášení telemetrie**: Tuto možnost **povolte** pro vysoce riziková zařízení, aby hlásila telemetrii Ochraně ATP v programu Windows Defender častěji.
 

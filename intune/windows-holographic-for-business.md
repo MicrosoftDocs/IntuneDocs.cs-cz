@@ -1,46 +1,46 @@
 ---
-title: Správa zařízení s Windows Holographic v Microsoft Intune – Azure | Microsoft Docs
-description: V Microsoft Intune můžete plnit různé úkoly spojené se zařízeními se systémem Windows Holographic for Business, jako je konfigurace Portálu společnosti, vytvoření zásady dodržování předpisů, přizpůsobení nastavení OMA-URI, nasazení aplikací, zařazení zařízení do skupin, vytváření profilů, omezení zařízení, povolení aktualizací softwaru, nastavení podmínek a ujednání, konfigurace nastavení VPN a Wi-Fi a použití funkce Hello pro firmy.
+title: Použití zařízení s Windows Holographic v Microsoft Intune – Azure | Microsoft Docs
+description: V Microsoft Intune můžete spravovat a plnit různé úkoly spojené se zařízeními se systémem Windows Holographic pro firmy a HoloLens, jako je konfigurace Portálu společnosti, vytvoření zásady dodržování předpisů, přizpůsobení nastavení OMA-URI, nasazení aplikací, zařazení zařízení do skupin, vytváření profilů, omezení zařízení, povolení aktualizací softwaru, nastavení podmínek a ujednání, konfigurace nastavení VPN a Wi-Fi a použití funkce Hello pro firmy.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 6/11/2018
+ms.date: 10/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 825ceb1eee8f6fdd38f8a203324ce3cad7291918
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 81a11ce35cbf0f256f59bf26d317933977750d6e
+ms.sourcegitcommit: b33ff64514abdc5e939ff59ea722b3704cd56c78
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43317932"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49065760"
 ---
-# <a name="customize-devices-running-windows-holographic-with-intune"></a>Přizpůsobení zařízení s Windows Holographic v Intune
+# <a name="manage-and-use-windows-holographic-and-hololens-devices-with-intune"></a>Správa a používání zařízení s Windows Holographic a HoloLens přes Intune
 
-Microsoft Intune podporuje zařízení s Windows Holographic for Business, jako je například [Microsoft HoloLens](https://docs.microsoft.com/en-us/hololens/).
+Microsoft Intune zahrnuje mnoho funkcí pro usnadnění správy zařízení s Windows Holographic pro firmy, jako [Microsoft HoloLens](https://docs.microsoft.com/hololens/). Pomocí Intune můžete potvrdit, že jsou zařízení v souladu s pravidly vaší organizace, a můžete zařízení přizpůsobit tak, že přidáte profil sítě VPN nebo Wi-Fi. Další klíčovou funkcí je použití zařízení jako veřejného terminálu a spuštění konkrétní aplikace nebo konkrétní sady aplikací.
 
-Pokud chcete v Microsoft Intune spravovat zařízení, na kterých běží Windows Holographic, musíte vytvořit profil Upgrade edice. Tento aktualizační profil upgraduje zařízení z Windows Holographic na Windows Holographic for Business. V případě zařízení Microsoft HoloLens můžete požadovanou licenci pro upgrade získat zakoupením edice Commercial Suite. Další informace najdete v tématu [Upgrade zařízení s Windows Holographic na Windows Holographic for Business](holographic-upgrade.md).
+Úlohy v tomto článku vám pomůžou při správě, přizpůsobování a zabezpečování zařízení s Windows Holographic pro firmy, včetně aktualizací softwaru a použití Windows Hello pro firmy.
 
-Ke správě a přizpůsobení zařízení s Windows Holographic for Business použijte úkoly popsané v tomto článku. Můžete například spravovat softwarové aktualizace, konfigurovat nastavení VPN a provádět další úkoly.
+Pokud chcete používat zařízení s Windows Holographic v Intune, vytvořte profil Upgrade edice. Tento aktualizační profil upgraduje zařízení z Windows Holographic na Windows Holographic pro firmy. V případě zařízení Microsoft HoloLens můžete požadovanou licenci pro upgrade získat zakoupením edice Commercial Suite. Další informace najdete v tématu [Upgrade zařízení s Windows Holographic na Windows Holographic pro firmy](holographic-upgrade.md).
 
 ## <a name="azure-active-directory"></a>Azure Active Directory
 
-Azure Active Directory (AD) představuje skvělý prostředek, který vám pomůže se správou a řízením zařízení, na nichž běží Windows Holographic for Business. Pomocí Intune a Azure AD můžete: 
+Azure Active Directory (AD) představuje skvělý prostředek, který vám pomůže se správou a řízením zařízení, na nichž běží Windows Holographic pro firmy. Pomocí Intune a Azure AD můžete: 
 
-- **[Nastavit zařízení připojená k Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-setup)**: Ve službě Azure Active Directory (AD) můžete přidat zařízení s Windows 10, která jsou ve vlastnictví firmy, včetně zařízení, na nichž běží Windows Holographic for Business. Tato funkce umožňuje službě Azure AD řídit zařízení. Pomůže vám zajistit, že uživatelé používají prostředky společnosti ze zařízení, která jsou v souladu s vámi stanovenými standardy zabezpečení a dodržování předpisů.
+- **[Nastavit zařízení připojená k Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-setup)**: Ve službě Azure Active Directory (AD) můžete přidat zařízení s Windows 10, která jsou ve vlastnictví firmy, včetně zařízení, na nichž běží Windows Holographic pro firmy. Tato funkce umožňuje službě Azure AD řídit zařízení. Pomůže vám zajistit, že uživatelé používají prostředky společnosti ze zařízení, která jsou v souladu s vámi stanovenými standardy zabezpečení a dodržování předpisů.
 
   Další informace najdete v článku [Úvod ke správě zařízení ve službě Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
 
-- **[Hromadně registrovat zařízení s Windows](windows-bulk-enroll.md)**: K Azure Active Directory (AD) a Intune můžete připojit větší počet nových zařízení s Windows. Tato funkce se označuje jako hromadná registrace a využívá zřizovací balíčky. Tyto balíčky připojí zařízení s Windows Holographic for Business k tenantovi Azure AD a zaregistrují je v Intune.
+- **[Hromadně registrovat zařízení s Windows](windows-bulk-enroll.md)**: K Azure Active Directory (AD) a Intune můžete připojit větší počet nových zařízení s Windows. Tato funkce se označuje jako hromadná registrace a využívá zřizovací balíčky. Tyto balíčky připojí zařízení s Windows Holographic pro firmy k tenantovi Azure AD a zaregistrují je v Intune.
 
 ## <a name="company-portal"></a>Portál společnosti
 **[Konfigurace aplikace Portál společnosti](company-portal-app.md)**
 
-Intune poskytuje aplikaci Portál společnosti pro přístup uživatelů k firemním datům, registraci zařízení, instalaci aplikací, možnost kontaktovat oddělení IT apod. Aplikaci Portál společnosti můžete přizpůsobit pro zařízení s Windows Holographic for Business.
+Intune poskytuje aplikaci Portál společnosti pro přístup uživatelů k firemním datům, registraci zařízení, instalaci aplikací, možnost kontaktovat oddělení IT apod. Aplikaci Portál společnosti můžete přizpůsobit pro zařízení s Windows Holographic pro firmy.
 
 Pomocí aplikace Portál společnosti můžete také provádět následující akce:
 
@@ -53,32 +53,32 @@ Pomocí aplikace Portál společnosti můžete také provádět následující a
 ## <a name="compliance-policy"></a>zásady dodržování předpisů
 **[Vytvoření zásady dodržování předpisů pro zařízení](compliance-policy-create-windows.md)**
 
-Zásady dodržování předpisů jsou pravidla a nastavení, která musí zařízení dodržovat, aby vyhovovala. Pomocí zásad podmíněného přístupu můžete nevyhovujícím zařízením zablokovat přístup k prostředkům společnosti. V Intune můžete vytvářet zásady dodržování předpisů, které povolí nebo zablokují přístup zařízením s Windows Holographic for Business. Můžete třeba vytvořit zásadu, která vyžaduje zapnutý Bitlocker.
+Zásady dodržování předpisů jsou pravidla a nastavení, která musí zařízení dodržovat, aby vyhovovala. Pomocí zásad podmíněného přístupu můžete nevyhovujícím zařízením zablokovat přístup k prostředkům společnosti. V Intune můžete vytvářet zásady dodržování předpisů, které povolí nebo zablokují přístup zařízením s Windows Holographic pro firmy. Můžete třeba vytvořit zásadu, která vyžaduje zapnutý Bitlocker.
 
 Další informace najdete v tématu **[Začínáme se zásadami dodržování předpisů](device-compliance-get-started.md)**.
 
 ## <a name="deploy-and-manage-apps"></a>Nasazení a správa aplikací
 **[Přidání aplikací do Intune](apps-add.md)**
 
-V Intune můžete do zařízení s Windows Holographic for Business přidat aplikace. Existují různé způsoby nasazování aplikací:
+V Intune můžete do zařízení s Windows Holographic pro firmy přidat aplikace. Existují různé způsoby nasazování aplikací:
 
 - [Přidání aplikací z Microsoft Storu](store-apps-windows.md)
 - [Přidání vytvořených aplikací](lob-apps-windows.md)
 - [Přiřazení aplikací skupinám](apps-deploy.md)
 
-Microsoft Intune může nasadit univerzální aplikace pro Windows na zařízení Microsoft HoloLens s Windows Holographic for Business. Balíčky aplikací můžete přímo nahrát na portálu Intune Azure nebo je můžete nasadit z Microsoft Storu pro firmy. Další informace o souvisejících oblastech najdete v těchto tématech:
+Microsoft Intune může nasadit univerzální aplikace pro Windows na zařízení Microsoft HoloLens s Windows Holographic pro firmy. Balíčky aplikací můžete přímo nahrát na portálu Intune Azure nebo je můžete nasadit z Microsoft Storu pro firmy. Další informace o souvisejících oblastech najdete v těchto tématech:
 - Pokud chcete nasadit obchodní aplikace pomocí portálu Intune Azure, přečtěte si téma [Přidání obchodních aplikací pro Windows do Microsoft Intune](lob-apps-windows.md).
 - Pokud chcete nasadit aplikace pomocí Microsoft Storu pro firmy, přečtěte si téma [Správa aplikací zakoupených v Microsoft Storu pro firmy v Microsoft Intune](windows-store-for-business.md). 
 - Pokud se chcete dozvědět informace o správě aplikací v Microsoft Intune, přečtěte si téma [Co je Správa aplikací v Microsoft Intune](app-management.md).
 - Pokud se chcete dozvědět další informace o vývoji aplikací pro Microsoft HoloLens, přečtěte si téma [Aplikace hybridní reality pro Microsoft HoloLens](https://www.microsoft.com/hololens/apps). 
 
 > [!NOTE]
-> Zařízení HoloLens se systémem Windows 10 Holographic for Business 1607 nepodporují online licencované aplikace z Microsoft Storu pro firmy. Další informace najdete v tématu [Instalace aplikací na HoloLens](https://docs.microsoft.com/en-us/hololens/hololens-install-apps).
+> Zařízení HoloLens se systémem Windows 10 Holographic pro firmy 1607 nepodporují online licencované aplikace z Microsoft Storu pro firmy. Další informace najdete v tématu [Instalace aplikací na HoloLens](https://docs.microsoft.com/en-us/hololens/hololens-install-apps).
 
 ## <a name="device-actions"></a>Akce zařízení
 Intune obsahuje několik integrovaných akcí, které správcům IT umožňují provádět různé úlohy, a to buď místně na zařízení, nebo vzdáleně prostřednictvím Intune na portálu Azure Portal. Uživatelé můžou také z Portálu společnosti Intune vydat vzdálený příkaz zařízením v osobním vlastnictví, která jsou registrovaná v Intune.
 
-Když používáte zařízení s Windows Holographic for Business, můžete používat tyto akce: 
+Když používáte zařízení s Windows Holographic pro firmy, můžete používat tyto akce: 
 
 - **[Vymazání](devices-wipe.md#wipe)**: Akce **Vymazání** odebere zařízení z Intune a obnoví ho zpět do výchozího továrního nastavení. Tuto akci použijte v případě, že zařízení dáváte novému uživateli nebo dojde ke ztrátě či odcizení zařízení.
 
@@ -91,46 +91,46 @@ Když používáte zařízení s Windows Holographic for Business, můžete pou�
 ## <a name="device-categories-and-groups"></a>Kategorie a skupiny zařízení
 **[Zařazení zařízení do skupin](device-group-mapping.md)**
 
-V Intune můžete vytvářet kategorie zařízení, abyste podle nich mohli zařízení automaticky přidávat do skupin. Příklad: Prodej, Účetnictví, Lidské zdroje apod. Cílem je usnadnit správu zařízení s Windows Holographic for Business.
+V Intune můžete vytvářet kategorie zařízení, abyste podle nich mohli zařízení automaticky přidávat do skupin. Příklad: Prodej, Účetnictví, Lidské zdroje apod. Cílem je usnadnit správu zařízení s Windows Holographic pro firmy.
 
 ## <a name="device-configuration-profiles"></a>Konfigurační profily zařízení 
 **[Začínáme s konfiguračními profily](device-profiles.md) a [vytvoření vlastního profilu](device-profile-create.md)**
 
-Intune obsahuje nastavení a funkce, které můžete různým zařízením v organizaci povolit nebo zakázat. Tato nastavení a funkce se spravují pomocí profilů. Můžete třeba vytvořit profil, který povolí Cortanu nebo na zařízeních s Windows Holographic for Business používá filtr SmartScreen programu Windows Defender.
+Intune obsahuje nastavení a funkce, které můžete různým zařízením v organizaci povolit nebo zakázat. Tato nastavení a funkce se spravují pomocí profilů. Můžete třeba vytvořit profil, který povolí Cortanu nebo na zařízeních s Windows Holographic pro firmy používá filtr SmartScreen programu Windows Defender.
 
 V profilech můžete k přizpůsobení některých nastavení, vytvoření omezení pro zařízení a konfiguraci sítí VPN a Wi-Fi použít OMA-URI.
 
 #### <a name="custom-device-settingscustom-settings-windows-holographicmd"></a>[Vlastní nastavení zařízení](custom-settings-windows-holographic.md)
 
-Pokud chcete nakonfigurovat nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier), můžete v Intune vytvořit vlastní profil. Nastavení OMA-URI se používá k ovládání různých funkcí zařízení s Windows Holographic for Business, jako je povolení VPN nebo kontrola aktualizací ve službě Microsoft Update.
+Pokud chcete nakonfigurovat nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier), můžete v Intune vytvořit vlastní profil. Nastavení OMA-URI se používá k ovládání různých funkcí zařízení s Windows Holographic pro firmy, jako je povolení VPN nebo kontrola aktualizací ve službě Microsoft Update.
 
 #### <a name="configure-kiosk-modekiosk-settingsmdwindows-holographic-for-business"></a>[Konfigurace beznabídkového režimu](kiosk-settings.md#windows-holographic-for-business)
 
-Pomocí funkcí sdíleného nebo hostovaného počítače dostupných v Intune můžete na zařízeních s Windows Holographic for Business nakonfigurovat beznabídkový režim. Na těchto zařízení může běžet jen jedna aplikace (beznabídkový režim s jednou aplikací), nebo několik aplikací (beznabídkový režim s více aplikacemi).
+Pomocí funkcí sdíleného nebo hostovaného počítače dostupných v Intune můžete na zařízeních s Windows Holographic pro firmy nakonfigurovat beznabídkový režim. Na těchto zařízení může běžet jen jedna aplikace (beznabídkový režim s jednou aplikací), nebo několik aplikací (beznabídkový režim s více aplikacemi).
 
 #### <a name="device-restrictionsdevice-restrictions-windows-holographicmd"></a>[Omezení zařízení](device-restrictions-windows-holographic.md)
 
-Omezení zařízení umožňují ovládat různá nastavení a funkce zařízení, jako je povinné heslo, instalace aplikací z [Microsoft Storu](https://www.microsoft.com/store/apps/windows?icid=CNavAppsWindowsApps), zapnutí technologie Bluetooth atd. Tato omezení se vytvářejí v profilu Intune. Profil můžete použít u více zařízení, na kterých běží Windows Holographic for Business.
+Omezení zařízení umožňují ovládat různá nastavení a funkce zařízení, jako je povinné heslo, instalace aplikací z [Microsoft Storu](https://www.microsoft.com/store/apps/windows?icid=CNavAppsWindowsApps), zapnutí technologie Bluetooth atd. Tato omezení se vytvářejí v profilu Intune. Profil můžete použít u více zařízení, na kterých běží Windows Holographic pro firmy.
 
 #### <a name="configure-vpnvpn-settings-configuremd"></a>[Konfigurace VPN](vpn-settings-configure.md)
 
-Virtuální privátní sítě (VPN) umožňují uživatelům zabezpečený vzdálený přístup k firemní síti. V Intune můžete vytvořit profil VPN, ve kterém budou mít zařízení s Windows Holographic for Business určité nastavení. Můžete třeba vytvořit profil VPN, kde budou mít všechna zařízení s Windows Holographic for Business typ připojení Citrix VPN.
+Virtuální privátní sítě (VPN) umožňují uživatelům zabezpečený vzdálený přístup k firemní síti. V Intune můžete vytvořit profil VPN, ve kterém budou mít zařízení s Windows Holographic pro firmy určité nastavení. Můžete třeba vytvořit profil VPN, kde budou mít všechna zařízení s Windows Holographic pro firmy typ připojení Citrix VPN.
 
 #### <a name="configure-wi-fiwi-fi-settings-configuremd"></a>[Konfigurace Wi-Fi](wi-fi-settings-configure.md)
 
-V Intune můžete také vytvořit profil Wi-Fi, kterým zařízením s Windows Holographic for Business přiřadíte nastavení bezdrátové sítě. Když zařízení přiřadíte profil Wi-Fi, získají koncoví uživatelé přístup k firemní síti bez konfigurace. Můžete třeba vytvořit síť Wi-Fi určenou jenom zařízením s Windows Holographic for Business.
+V Intune můžete také vytvořit profil Wi-Fi, kterým zařízením s Windows Holographic pro firmy přiřadíte nastavení bezdrátové sítě. Když zařízení přiřadíte profil Wi-Fi, získají koncoví uživatelé přístup k firemní síti bez konfigurace. Můžete třeba vytvořit síť Wi-Fi určenou jenom zařízením s Windows Holographic pro firmy.
 
 ## <a name="software-updates"></a>Aktualizace softwaru
 **[Správa softwarových aktualizací](windows-update-for-business-configure.md)**
 
-V Intune je funkce Aktualizační kanály zařízení s Windows 10. Tyto aktualizační kanály zahrnují skupinu nastavení, která určují, jak se budou aktualizace instalovat. Pro instalaci aktualizací můžete třeba vytvořit časové období údržby nebo můžete zvolit, že po instalaci aktualizací chcete zařízení restartovat. Aktualizační kanál můžete použít pro více zařízení s Windows Holographic for Business.
+V Intune je funkce Aktualizační kanály zařízení s Windows 10. Tyto aktualizační kanály zahrnují skupinu nastavení, která určují, jak se budou aktualizace instalovat. Pro instalaci aktualizací můžete třeba vytvořit časové období údržby nebo můžete zvolit, že po instalaci aktualizací chcete zařízení restartovat. Aktualizační kanál můžete použít pro více zařízení s Windows Holographic pro firmy.
 
 ## <a name="terms-and-conditions"></a>podmínky a ujednání
 **[Nastavení podmínek a ujednání společnosti pro přístup uživatelů](terms-and-conditions-create.md)**
 
-Před registrací zařízení a získáním přístupu k firemním aplikacím (včetně e-mailu) můžete vyžadovat, aby uživatelé přijali podmínky a ujednání společnosti. V Intune definujete, jak se podmínky a ujednání zobrazí v aplikaci Portál společnosti, a také tyto podmínky a ujednání přiřadíte zařízením s Windows Holographic for Business.
+Před registrací zařízení a získáním přístupu k firemním aplikacím (včetně e-mailu) můžete vyžadovat, aby uživatelé přijali podmínky a ujednání společnosti. V Intune definujete, jak se podmínky a ujednání zobrazí v aplikaci Portál společnosti, a také tyto podmínky a ujednání přiřadíte zařízením s Windows Holographic pro firmy.
 
 ## <a name="windows-hello-for-business"></a>Windows Hello pro firmy
 **[Použití Windows Hello pro firmy](windows-hello.md)**
 
-Hello pro firmy je alternativní přihlašovací metoda, která k nahrazení hesla, čipové karty nebo virtuální čipové karty používá účet Azure Active Directory. Hello pro firmy umožňuje zařízením s Windows Holographic for Business používat k přihlášení PIN o minimální délce, kterou sami určíte.
+Hello pro firmy je alternativní přihlašovací metoda, která k nahrazení hesla, čipové karty nebo virtuální čipové karty používá účet Azure Active Directory. Hello pro firmy umožňuje zařízením s Windows Holographic pro firmy používat k přihlášení PIN o minimální délce, kterou sami určíte.
