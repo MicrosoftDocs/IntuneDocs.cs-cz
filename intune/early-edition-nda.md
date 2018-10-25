@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e37a45122ab4950e2a85cc1c6f6696759d429a3f
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: 72585982cd27962981f581a99f0ea361642df0ee
+ms.sourcegitcommit: ba0699cc351954960b222223c60c4ecd50edc829
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828274"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49652134"
 ---
 # <a name="the-early-edition-for-microsoft-intune---october-2018"></a>Časná edice Microsoft Intune – říjen 2018
 
@@ -44,9 +44,6 @@ Tato stránka se pravidelně aktualizuje. Přijďte se tedy znovu podívat, jest
 ### <a name="use-microsoft-recommended-settings-with-security-baselines----2055484---"></a>Použití Microsoftem doporučených nastavení se standardními hodnotami zabezpečení <!-- 2055484 -->
 Intune se integruje s dalšími službami, které se zaměřují na zabezpečení, včetně Ochrany ATP v programu Windows Defender a Ochrany ATP v Office 365. Zákazníci požadují ve službách Microsoft 365 společnou strategii a soudržnější sadu ucelených bezpečnostních pracovních postupů. Naším cílem je srovnat strategie tak, abychom mohli vytvářet řešení přemosťující operace zabezpečení a běžné úlohy správy. V Intune se snažíme tohoto cíle dosáhnout prostřednictvím publikování sady Standardních hodnot zabezpečení doporučených Microsoftem (**Intune** > **Standardní hodnoty zabezpečení**).  Správce bude moct vytvářet zásady zabezpečení přímo z těchto standardních hodnot a potom je nasazovat svým uživatelům. Doporučení osvědčených postupů může upravit tak, aby vyhovovala potřebám jeho organizace. Intune zajišťuje, že zařízení zůstávají v souladu s těmito standardními hodnotami, a upozorní správce, pokud uživatelé nebo zařízení tyto hodnoty nedodržují.
 
-### <a name="remove-ability-for-admins-to-wipe-personal-devices-and-reset-passcodes----2934699---"></a>Odebrání možnosti správců vymazat osobní zařízení a resetovat hesla <!-- 2934699 -->
-Abychom uživatele zbavili strachu, že jim podnikoví správci mohou vymazat jejich osobní zařízení, nebudou se už vzdálené akce [vymazání](devices-wipe.md#wipe) a [resetování hesla](device-passcode-reset.md) týkat osobních zařízení. Pokud chcete tyto akce povolit pro zařízení vlastněná vaší organizací, přepněte typ vlastnictví zařízení na podnikové.
-
 ### <a name="autopilot-support-for-hybrid-azure-active-directory-joined-devices----1048100---"></a>Podpora Autopilotu pro zařízení připojená k hybridní službě Azure Active Directory <!-- 1048100 -->
 Zařízení připojená k hybridní službě Azure Active Directory si budete moct nastavit pomocí Autopilotu. Zařízení musí být připojená do vaší podnikové sítě, aby mohla použít hybridní funkci Autopilotu.
 
@@ -56,7 +53,7 @@ Pokud chcete vytvořit značku oboru, vyberte **Role Intune** > **Obor (značky)
 Značku oboru přidáte k přiřazení role tak, že zvolíte **Role Intune** > **Všechny role** > **Správce zásad a profilů** > **Přiřazení** > **Obor (značky)**.
 Ke konfiguračnímu profilu přidáte značku oboru tak, zvolíte **Konfigurace zařízení** > **Profily** > vyberete profil > **Vlastnosti** > **Obor (značky)**.
 
-## <a name="tenant-health-dashboard----1124854---"></a>Řídicí panel Stav tenanta <!-- 1124854 -->
+### <a name="tenant-health-dashboard----1124854---"></a>Řídicí panel Stav tenanta <!-- 1124854 -->
 Stránka Stav tenanta v Intune vám poskytne informace o stavu tenanta na jednom místě. Stránka je rozdělená do 4 částí:  
 - **Podrobnosti o tenantovi**: obsahuje informace, jako je například autorita MDM, celkový počet zařízení zaregistrovaných ve vašem tenantovi a počet vašich licencí. Tato část také obsahuje aktuální vydanou verzi služby pro vašeho tenanta.
 - **Stav konektoru**: obsahuje informace pro nakonfigurované konektory, jako je třeba Apple VPP, Windows Store pro firmy a konektory Certificate Connectors. Na základě jejich aktuálního stavu jsou konektory označené jako *V pořádku*, *Upozornění* nebo *Není v pořádku*.

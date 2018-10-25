@@ -15,12 +15,12 @@ ms.assetid: 0f8b08f2-504c-4b38-bea2-b8a4ef0526b8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2f0680f601d59695828355496ef7b817335dc0d4
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: ac8b70cd370d0c22a615d0d0bdc215cb3a332520
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48827968"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425168"
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací pro iOS
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -78,7 +78,7 @@ U některých aplikací a služeb platformy, které mají výjimku, můžou zás
 | **Vyžadovat minimální verzi sady SDK zásad ochrany aplikací Intune** | Vyberte **Ano**, pokud požadujete, aby tato aplikace používala minimální verzi sady SDK zásad ochrany aplikací Intune. Uživateli bude zablokován přístup, pokud verze sady SDK zásad ochrany aplikací Intune nesplňuje tento požadavek. <br> <br> Další informace o sadě SDK se zásadami ochrany aplikací Intune najdete v článku [Přehled sady Intune App SDK](app-sdk.md). <br><br> Tento formát nastavení zásady podporuje vlastnosti major.minor, major.minor.build a major.minor.build.revision. <br><br> ***Poznámka:** Vyžaduje se, aby aplikace měla verzi Intune SDK 7.0.1 nebo vyšší.* <br><br>  Výchozí hodnota = **Ne** |
 
 > [!NOTE]
-> Další informace o tom, jak v iOSu fungují různá nastavení Intune App Protection nakonfigurovaná v části Přístup u stejné skupiny aplikací a uživatelů, najdete v článku věnovaném [častým otázkám k Intune MAM](https://docs.microsoft.com/en-us/intune/mam-faq#app-experience-on-ios) a v článku [Selektivní vymazání dat pomocí akcí přístupu zásad ochrany aplikací v Intune](app-protection-policies-access-actions.md).
+> Další informace o tom, jak v iOSu fungují různá nastavení Intune App Protection nakonfigurovaná v části Přístup u stejné skupiny aplikací a uživatelů, najdete v článku věnovaném [častým otázkám k Intune MAM](https://docs.microsoft.com/intune/mam-faq#app-experience-on-ios) a v článku [Selektivní vymazání dat pomocí akcí přístupu zásad ochrany aplikací v Intune](app-protection-policies-access-actions.md).
 
 ##  <a name="add-ins-for-outlook-app"></a>Doplňky pro aplikaci Outlook
 
@@ -117,9 +117,9 @@ Pokud uživatel souhlasí se sdílením dat mezi účty stejně jako u doplňků
 
 |Oprávnění Microsoft Graph  |Popis  |
 |---------|---------|
-|Oprávnění ke čtení pro možnost [Lidé](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference#people-permissions)     |Umožňuje aplikaci přístup k seznamu osob se skóre, které jsou pro přihlášeného uživatele relevantní. Seznam může obsahovat místní kontakty, kontakty ze sociálních sítí nebo adresáře vaší organizace a osoby z posledních komunikací (například z e-mailu nebo Skypu).         |
-|Oprávnění ke čtení pro možnost [Kalendáře](https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdeveloper.microsoft.com%2Fen-us%2Fgraph%2Fdocs%2Fconcepts%2Fpermissions_reference%23calendars-permissions&data=04%7C01%7CCem.Aykan%40microsoft.com%7C59705402acc347cdf0d908d5b1d82d53%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636610464378331622%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwifQ%3D%3D%7C-1&sdata=fABkrlIxqggnB%2Bc%2BR%2BbFpuenhSg7OHfBhWcbv3ahmAU%3D&reserved=0)     |Umožňuje aplikaci přístup k událostem v uživatelských kalendářích. Zahrnuje schůzky v kalendářích přihlášených uživatelů, jejich časy, umístění a účastníky.         |
-|Oprávnění ke čtení pro možnost [Profil uživatele](https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdeveloper.microsoft.com%2Fen-us%2Fgraph%2Fdocs%2Fconcepts%2Fpermissions_reference%23user-permissions&data=04%7C01%7CCem.Aykan%40microsoft.com%7C59705402acc347cdf0d908d5b1d82d53%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636610464378341626%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwifQ%3D%3D%7C-1&sdata=RcnVIpntjyR4TXafOYTV0SffZuZWpshQQWY0e2VkkXg%3D&reserved=0)     |Umožňuje uživatelům přihlásit se k aplikaci a aplikaci umožňuje přístup k profilu přihlášených uživatelů. Také aplikaci umožňuje přístup k základním informacím o společnosti u přihlášených uživatelů.         |
+|Oprávnění ke čtení pro možnost [Lidé](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#people-permissions)     |Umožňuje aplikaci přístup k seznamu osob se skóre, které jsou pro přihlášeného uživatele relevantní. Seznam může obsahovat místní kontakty, kontakty ze sociálních sítí nebo adresáře vaší organizace a osoby z posledních komunikací (například z e-mailu nebo Skypu).         |
+|Oprávnění ke čtení pro možnost [Kalendáře](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#calendars-permissions)     |Umožňuje aplikaci přístup k událostem v uživatelských kalendářích. Zahrnuje schůzky v kalendářích přihlášených uživatelů, jejich časy, umístění a účastníky.         |
+|Oprávnění ke čtení pro možnost [Profil uživatele](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#user-permissions)     |Umožňuje uživatelům přihlásit se k aplikaci a aplikaci umožňuje přístup k profilu přihlášených uživatelů. Také aplikaci umožňuje přístup k základním informacím o společnosti u přihlášených uživatelů.         |
 |Subscriptions     |Tento obor není dostupný a dosud se nepoužívá. Zahrnuje předplatná, která organizace uživatele poskytuje aplikacím a službám Microsoft, například Office 365.         |
 |Insights     |Tento obor není dostupný a dosud se nepoužívá. Zahrnuje zájmy přidružené k účtu přihlášeného uživatele podle toho, jak uživatel používá služby Microsoft.         |
 
@@ -127,6 +127,6 @@ Pokud uživatel souhlasí se sdílením dat mezi účty stejně jako u doplňků
 
 - Přečtěte si o [informacích a funkcích LinkedIn v aplikacích Microsoft](https://go.microsoft.com/fwlink/?linkid=850740).
 - Přečtěte si o možnosti připojení účtů LinkedIn na [stránce roadmapy Office 365](https://products.office.com/en-US/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc). 
-- Přečtěte si o [konfiguraci připojení účtů LinkedIn](https://docs.microsoft.com/en-us/azure/active-directory/linkedin-integration).
+- Přečtěte si o [konfiguraci připojení účtů LinkedIn](https://docs.microsoft.com/azure/active-directory/linkedin-integration).
 - Další informace o datech sdílených mezi účtem LinkedIn a pracovním nebo školním účtem Microsoft uživatele najdete v článku o [LinkedInu v aplikacích Microsoft v práci nebo ve škole](https://www.linkedin.com/help/linkedin/answer/84077).
 

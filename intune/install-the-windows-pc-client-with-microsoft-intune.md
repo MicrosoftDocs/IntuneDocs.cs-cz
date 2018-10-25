@@ -13,12 +13,12 @@ ms.assetid: ''
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune
-ms.openlocfilehash: ce977e295df3b5fa48c38b3c2e0d23035cc2f2d1
-ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
+ms.openlocfilehash: 322a60101132d5ef435752079bb5c52a7a4b3a78
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48863123"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425015"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalace klientského softwaru Intune na počítače se systémem Windows
 
@@ -46,7 +46,7 @@ Všechny způsoby (s výjimkou toho, kdy si uživatelé instalují klientský so
 
 1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) klikněte na **Správce** &gt; **Stažení klientského softwaru**.
 
-   ![Stažení počítačového klienta Intune](./media/https://docs.microsoft.com/en-us/intune/media/install-the-windows-pc-client/pc-sa-client-download.png)
+   ![Stažení počítačového klienta Intune](./media/https://docs.microsoft.com/intune/media/install-the-windows-pc-client/pc-sa-client-download.png)
 
 2. Na stránce **Stažení klientského softwaru** klikněte na **Stáhnout klientský software**. Uložte balíček **Microsoft_Intune_Setup.zip**, který obsahuje software, do zabezpečeného umístění v síti.
 
